@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5484 2013/10/01 03:16:32 phonohawk Exp $
+# $Id: Makefile,v 1.5485 2013/10/01 09:48:55 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1069,6 +1069,7 @@ SUBDIR+=	hs-hxt-relaxng
 SUBDIR+=	hs-hxt-tagsoup
 SUBDIR+=	hs-hxt-unicode
 SUBDIR+=	hs-hxt-xpath
+SUBDIR+=	hs-hxt-xslt
 SUBDIR+=	hs-iconv
 SUBDIR+=	hs-io-storage
 SUBDIR+=	hs-irc
