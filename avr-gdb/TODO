@@ -11,3 +11,15 @@ modena@makoto 20:04:25/130706(..wip/avr-gdb)% tail -12 work/gdb-7.6/gdb/testsuit
 # of untested testcases         154
 # of unresolved testcases       346
 # of unsupported tests          162
+
+NetBSD/amd64 6.1 (gdb-7.6.1, avr-gcc 4.5.3, avr-libc 1.8.0)
+                === gdb Summary ===
+# of expected passes            3907
+# of unexpected failures        1526
+# of unexpected successes       1
+# of expected failures          19
+# of known failures             10
+# of untested testcases         161
+# of unresolved testcases       108
+# of unsupported tests          188
+
