@@ -118,6 +118,16 @@ DONE
    # of unresolved testcases       7
    # of unsupported tests          159
 
+- NetBSD/i386 5.2 make test results (with 7.6.1)
+   -----
+   # of expected passes            3150
+   # of unexpected failures        4161
+   # of expected failures          19
+   # of known failures             12
+   # of untested testcases         187
+   # of unresolved testcases       513
+   # of unsupported tests          136
+
 - NetBSD/amd64 5.1 (gcc 4.1.3, gdb-7.6.1)
    -----
                 === gdb Summary ===
