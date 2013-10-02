@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/01 20:25:20 wongk Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/02 11:47:48 wongk Exp $
 
 DISTNAME=       sabnzbdplus-${DISTVERSION}
 DISTVERSION= 0.7.16
@@ -19,7 +19,8 @@ MAINTAINER=	wongk@apt.homeunix.net
 HOMEPAGE=	http://sabnzbdplus.sourceforge.net/
 DEPENDS+= ${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah \
 					${PYPKGPREFIX}-configobj-[0-9]*:../../wip/py-configobj \
-					${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+					${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3 \
+					${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
 
 COMMENT=	Web-interface based binary newsgrabber in python, with nzb support
 USE_TOOLS=	pax

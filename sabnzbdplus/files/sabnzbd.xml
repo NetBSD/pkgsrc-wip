@@ -56,6 +56,12 @@
         name='start'
 		exec='/opt/local/bin/SABnzbd.py -d -f /opt/local/sabnzbd/sabnzbd.ini'
         timeout_seconds='60'>
+        <method_context>
+	        <method_environment>
+		        <envvar name='PATH' value='/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
+		        '/>
+	        </method_environment>
+        </method_context>
     </exec_method>
  
     <exec_method
