@@ -148,6 +148,18 @@ file /export/CHROOT/usr/pkgsrc/wip/gdb/work/gdb-7.6.1/gdb/testsuite/gdb.mi/gdb25
 /export/CHROOT/usr/pkgsrc/wip/gdb/work/gdb-7.6.1/gdb/testsuite/gdb.mi/gdb2549: 
 ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for NetBSD 5.1, not stripped
 
+- NetBSD/amd64 6.1 (gcc-4.5.3)  (with gdb-7.6.1)
+   -----
+                === gdb Summary ===
+
+   # of expected passes            3255
+   # of unexpected failures        4305
+   # of expected failures          19
+   # of known failures             11
+   # of untested testcases         181
+   # of unresolved testcases       522
+   # of unsupported tests          130
+
 - NetBSD/amd64 6.99.22 (clang 3.2)  (with gdb-7.6)
    -----
                 === gdb Summary ===
