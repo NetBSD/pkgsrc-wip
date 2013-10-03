@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/03 11:17:02 makoto Exp $
+@pkgdir ${EMACS_LISPPREFIX}/emu
+@pkgdir ${EMACS_LISPPREFIX}/apel
