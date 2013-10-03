@@ -1,4 +1,5 @@
-$NetBSD: patch-libtest__lite.h,v 1.1 2013/10/03 00:37:54 genolopolis Exp $
+$NetBSD: patch-libtest__lite.h,v 1.2 2013/10/03 00:44:55 genolopolis Exp $
+alloca.h is a linux-ism
 
 --- libtest/lite.h-orig	2013-10-02 18:39:21.000000000 +0000
 +++ libtest/lite.h

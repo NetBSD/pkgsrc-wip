@@ -1,4 +1,5 @@
-$NetBSD: patch-libtest__exception.hpp,v 1.1 2013/10/03 00:37:54 genolopolis Exp $
+$NetBSD: patch-libtest__exception.hpp,v 1.2 2013/10/03 00:44:55 genolopolis Exp $
+va_args fix
 
 --- libtest/exception.hpp-orig	2013-10-02 23:53:23.000000000 +0000
 +++ libtest/exception.hpp

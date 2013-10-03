@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2013/10/03 00:37:54 genolopolis Exp $
+$NetBSD: distinfo,v 1.6 2013/10/03 00:44:55 genolopolis Exp $
 
 SHA1 (gearmand-1.0.6.tar.gz) = 872d5e13c20a29a20e45df3afa8f3981dc52d363
 RMD160 (gearmand-1.0.6.tar.gz) = 44f1caead6fbd7e6a440be3275098bd798a807d0
@@ -10,7 +10,7 @@ SHA1 (patch-examples_reverse__client.cc) = 633e3619d2a3ef53bbf74aa612a8ecf084c97
 SHA1 (patch-examples_reverse__client__bg.cc) = 16943ec508ef1a3db0894da821b37277b16e971f
 SHA1 (patch-examples_reverse__client__cb.cc) = 45576e1e5453beccfadb4c1ddb898597089e3c07
 SHA1 (patch-examples_reverse__client__epoch.cc) = f63b1eb63f3913791423f8803200f66e859334d4
-SHA1 (patch-libgearman-server__log.cc) = a76888a31cb73dc784961ca7d4b5958f0a6258e1
-SHA1 (patch-libtest__exception.hpp) = ef08ae552b3c3f920015620bf2b02fb6aa21b122
-SHA1 (patch-libtest__lite.h) = 2fea1ea7c597e9f756c1afc1c5b890128a550d06
+SHA1 (patch-libgearman-server__log.cc) = 01d953fbd569abde4c28284b395b4a2afbcfcffb
+SHA1 (patch-libtest__exception.hpp) = 4c26181e7dbf7b9ba736d36f31db8eb7d5fc07c4
+SHA1 (patch-libtest__lite.h) = e07d4a92bcaea4c8307f1fa4d9afaf220e8f9756
 SHA1 (patch-libtest_main.cc) = 6706d8a3064019a8455e1017981f11aaad4e7a99
