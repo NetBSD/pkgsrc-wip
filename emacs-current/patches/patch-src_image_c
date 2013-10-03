@@ -1,28 +1,34 @@
-$NetBSD: patch-src_image_c,v 1.1 2013/10/02 23:57:29 makoto Exp $
+$NetBSD: patch-src_image_c,v 1.2 2013/10/03 23:16:17 makoto Exp $
 
 image.c:7319:7: error: too few arguments to function 'DGifOpenFileName'
 /export/WRKOBJDIR/wip/emacs-current/work/.buildlink/include/gif_lib.h:178:14: note: declared here
 image.c:7340:7: error: too few arguments to function 'DGifOpen'
 
---- src/image.c.orig	2013-10-02 14:21:25.000000000 +0900
-+++ src/image.c	2013-10-03 00:51:17.000000000 +0900
-@@ -7316,7 +7316,8 @@ gif_load (struct frame *f, struct image 
+--- src/image.c.orig	2013-10-04 06:46:49.000000000 +0900
++++ src/image.c	2013-10-04 07:21:31.000000000 +0900
+@@ -7316,7 +7316,12 @@
  	}
  
        /* Open the GIF file.  */
--      gif = fn_DGifOpenFileName (SSDATA (file));
++#ifdef HAVE_GIF4
+       gif = fn_DGifOpenFileName (SSDATA (file));
++#else
 +	int* error;
 +      gif = fn_DGifOpenFileName (SSDATA (file), error);
++#endif
        if (gif == NULL)
  	{
  	  image_error ("Cannot open `%s'", file, Qnil);
-@@ -7337,7 +7338,8 @@ gif_load (struct frame *f, struct image 
+@@ -7337,7 +7342,12 @@
        memsrc.len = SBYTES (specified_data);
        memsrc.index = 0;
  
--      gif = fn_DGifOpen (&memsrc, gif_read_from_memory);
++#ifdef HAVE_GIF4
+       gif = fn_DGifOpen (&memsrc, gif_read_from_memory);
++#else
 +      int *error;
 +      gif = fn_DGifOpen (&memsrc, gif_read_from_memory, error);
++#endif
        if (!gif)
  	{
  	  image_error ("Cannot open memory source `%s'", img->spec, Qnil);
