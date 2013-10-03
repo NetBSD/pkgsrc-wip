@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/12 20:43:41 keckhardt Exp $
+# $NetBSD: Makefile,v 1.6 2013/10/03 09:13:47 keckhardt Exp $
 
 GCC_PKGNAME=		gcc49snapshot
 .include		"version.mk"
@@ -77,6 +77,7 @@ CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
+MAKE_ENV+=		ac_cv_func_gethostbyname_r=no
 .endif
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap

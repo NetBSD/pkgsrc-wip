@@ -25,11 +25,11 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		54400
+# of expected passes		54440
 # of unexpected failures	10
 # of expected failures		293
 # of unresolved testcases	5
-# of unsupported tests		995
+# of unsupported tests		955
 /usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20130929 (experimental) (GCC) 
 
 		=== gcc tests ===
@@ -176,21 +176,14 @@ FAIL: gcc.target/i386/float128-2.c (test for excess errors)
 UNRESOLVED: gcc.target/i386/float128-2.c compilation failed to produce executable
 FAIL: gcc.target/i386/pr36578-1.c execution test
 FAIL: gcc.target/i386/pr36578-2.c execution test
-FAIL: gcc.target/i386/pr57275.c execution test
-FAIL: gcc.target/i386/vcvtph2ps-1.c execution test
-FAIL: gcc.target/i386/vcvtph2ps-2.c execution test
-FAIL: gcc.target/i386/vcvtph2ps-3.c execution test
-FAIL: gcc.target/i386/vcvtps2ph-1.c execution test
-FAIL: gcc.target/i386/vcvtps2ph-2.c execution test
-FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		95838
-# of unexpected failures	121
+# of expected passes		95899
+# of unexpected failures	114
 # of expected failures		255
 # of unresolved testcases	26
-# of unsupported tests		1768
+# of unsupported tests		1714
 /usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130929 (experimental) (GCC) 
 
 		=== gfortran tests ===
