@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/03 11:17:02 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/04 14:33:23 makoto Exp $
 
 DISTNAME=	apel-10.8.50
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -22,14 +22,11 @@ NO_CONFIGURE=		yes
 
 .include "../../editors/emacs/modules.mk"
 
-BUILD_TARGET=		build
 TEST_TARGET=		check
 
 INSTALLATION_DIRS+=	${DOCDIR} \
 			${EMACS_LISPPREFIX:C|^${PREFIX}/||}/apel \
 			${EMACS_LISPPREFIX:C|^${PREFIX}/||}/emu
-
-TEST_TARGET=    check
 
 PLIST_SRC=	${PKGDIR}/PLIST.${EMACS_FLAVOR}
 BUILD_TARGET=	${BUILD_TARGET.${EMACS_FLAVOR}}
