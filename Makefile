@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5488 2013/10/04 15:01:43 ryo-on Exp $
+# $Id: Makefile,v 1.5489 2013/10/04 15:04:03 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1186,7 +1186,6 @@ SUBDIR+=	hs-xmobar
 SUBDIR+=	hs-yaml
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	hs-zlib
-SUBDIR+=	hsqldb18
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
