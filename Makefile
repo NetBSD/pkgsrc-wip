@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5487 2013/10/01 20:32:20 wongk Exp $
+# $Id: Makefile,v 1.5488 2013/10/04 15:01:43 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1501,7 +1501,6 @@ SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	libreoffice
-SUBDIR+=	libreoffice4
 SUBDIR+=	libreoffice-devel
 SUBDIR+=	libscscp
 SUBDIR+=	libsidplay2
