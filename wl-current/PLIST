@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/01/11 11:16:14 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/10/04 14:52:41 makoto Exp $
 info/wl-ja.info
 info/wl.info
 share/doc/wl/en/BUGS
@@ -103,8 +103,6 @@ share/emacs/site-lisp/wl/slp.el
 share/emacs/site-lisp/wl/slp.elc
 share/emacs/site-lisp/wl/ssl.el
 share/emacs/site-lisp/wl/ssl.elc
-share/emacs/site-lisp/wl/utf7.el
-share/emacs/site-lisp/wl/utf7.elc
 share/emacs/site-lisp/wl/wl-acap.el
 share/emacs/site-lisp/wl/wl-acap.elc
 share/emacs/site-lisp/wl/wl-action.el
@@ -251,4 +249,4 @@ share/wl/wl-summary-reply-with-citation-up.xpm
 share/wl/wl-summary-set-flags-up.xpm
 share/wl/wl-summary-sync-force-update-up.xpm
 share/wl/wl-write-current-folder-up.xpm
-@comment $NetBSD: PLIST,v 1.6 2013/01/11 11:16:14 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/10/04 14:52:41 makoto Exp $
