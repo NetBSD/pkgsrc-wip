@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/09/26 22:02:21 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/04 14:12:54 ryo-on Exp $
 
 VER=		4.1.1.2
 DISTNAME=	libreoffice-${VER}
@@ -12,6 +12,12 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.libreoffice.org/
 COMMENT=	Office productivity suite, 4.x branch
 LICENSE=	gnu-lgpl-v3
+
+# With -O2, when settings window is opened, soffice.bin crashes.
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
+BUILDLINK_TRANSFORM+=	rename:-O2:-O
+.endif
 
 # LibreOfice's Makefile has its own pararell build mechanism. Avoid conflict.
 MAKE_JOBS_SAFE=	no
