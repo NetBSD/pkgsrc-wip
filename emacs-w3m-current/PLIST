@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/06/19 06:12:25 makoto Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/10/04 14:43:52 makoto Exp $
 ${EMACS_INFOPREFIX}/emacs-w3m-ja.info
 ${EMACS_INFOPREFIX}/emacs-w3m.info
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
@@ -59,6 +59,7 @@ ${EMACS_LISPPREFIX}/w3m/w3m-image.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-lnum.el
 ${EMACS_LISPPREFIX}/w3m/w3m-lnum.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-load.el
+${EMACS_LISPPREFIX}/w3m/w3m-load.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-mail.el
 ${EMACS_LISPPREFIX}/w3m/w3m-mail.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-namazu.el
