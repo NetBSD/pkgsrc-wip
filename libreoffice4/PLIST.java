@@ -1,4 +1,4 @@
-@comment $NetBSD
+@comment $NetBSD: PLIST.java,v 1.3 2013/10/04 14:20:18 ryo-on Exp $
 ${PKGNAME}/program/classes/ScriptFramework.jar
 ${PKGNAME}/program/classes/ScriptProviderForBeanShell.jar
 ${PKGNAME}/program/classes/ScriptProviderForJava.jar

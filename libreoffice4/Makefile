@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/04 14:12:54 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/04 14:20:18 ryo-on Exp $
 
 VER=		4.1.1.2
 DISTNAME=	libreoffice-${VER}
@@ -135,11 +135,6 @@ HAS_CONFIGURE=		yes
 # Do not use /tmp, outside of WRKSRC.
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 
-# For developer
-# Conflict with system cppunit.
-#CONFIGURE_ARGS+=	--enable-dbgutil
-#CONFIGURE_ARGS+=	--enable-debug
-
 CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-dbus
@@ -172,7 +167,7 @@ CONFIGURE_ARGS+=	--with-external-tar=${DISTDIR}/${DIST_SUBDIR}
 CONFIGURE_ARGS+=	--with-fonts
 CONFIGURE_ARGS+=	--with-lang="ALL"
 CONFIGURE_ARGS+=	--with-myspell-dicts
-CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS}
+CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS:Q}
 CONFIGURE_ARGS+=	--with-system-clucene
 CONFIGURE_ARGS+=	--with-system-libxml
 CONFIGURE_ARGS+=	--with-system-boost
