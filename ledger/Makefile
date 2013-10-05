@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/03/02 12:35:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/05 14:32:12 slitvinov Exp $
 #
 
-DISTNAME=	ledger-2.6.1
+DISTNAME=	ledger-2.6.3
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ledger/}
 
