@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/10/20 20:17:36 ishit Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/05 21:14:19 ishit Exp $
 #
 
-DISTNAME=	sylfilter-0.7
+DISTNAME=	sylfilter-0.8
 CATEGORIES=	mail
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylfilter/src/
 

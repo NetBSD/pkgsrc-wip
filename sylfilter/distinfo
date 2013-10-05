@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/10/20 20:17:36 ishit Exp $
+$NetBSD: distinfo,v 1.2 2013/10/05 21:14:19 ishit Exp $
 
-SHA1 (sylfilter-0.7.tar.gz) = bcd09866b5e1648dc6749b5b94c07c24296316b4
-RMD160 (sylfilter-0.7.tar.gz) = 2e3d173a71bcc1baef7d956cb054a27a50272fb0
-Size (sylfilter-0.7.tar.gz) = 429230 bytes
+SHA1 (sylfilter-0.8.tar.gz) = 16588cfc96c5194f69e5ae6523039b0e4e8a659e
+RMD160 (sylfilter-0.8.tar.gz) = 3e7230b3182fadc9f78a601ba6c35d8f60dd6d1c
+Size (sylfilter-0.8.tar.gz) = 429485 bytes
