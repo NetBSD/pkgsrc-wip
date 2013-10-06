@@ -1,0 +1,81 @@
+$NetBSD: patch-ae,v 1.1 2013/10/06 09:41:41 makoto Exp $
+
+- automake-1.13 compat.
+
+- add missing AM_PROG_CC_C_O that automake wants for the yacc
+  sources.
+
+- allow a different default serial/parallel port to be specified
+  which is useful for pkgsrc (since we have defaults for various
+  platforms available and they're not the same for different
+  MACHINE_ARCH's in NetBSD).
+
+--- configure.ac.orig	2013-09-18 15:19:42.000000000 +0900
++++ configure.ac	2013-10-06 16:37:21.000000000 +0900
+@@ -190,6 +190,7 @@ AC_CHECK_HEADERS([ddk/hidsdi.h],,,[#incl
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
++AM_PROG_CC_C_O
+ AC_HEADER_TIME
+ 
+ # Checks for library functions.
+@@ -317,32 +318,44 @@ AC_SUBST(DIST_SUBDIRS_AC, $DIST_SUBDIRS_
+ # If a system doesn't have a PC style parallel, mark it as unknown.
+ case $target in
+ 	i[[3456]]86-*-linux*|x86_64-*-linux*)
+-		DEFAULT_PAR_PORT="/dev/parport0"
+-		DEFAULT_SER_PORT="/dev/ttyS0"
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"/dev/parport0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/ttyS0"}
+ 		;;
+ 	*-*-linux*)
+-		DEFAULT_PAR_PORT="unknown"
+-		DEFAULT_SER_PORT="/dev/ttyS0"
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/ttyS0"}
+ 		;;
+ 	i[[3456]]86-*-*freebsd*|amd64-*-*freebsd*)
+-		DEFAULT_PAR_PORT="/dev/ppi0"
+-		DEFAULT_SER_PORT="/dev/cuad0"
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"/dev/ppi0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuad0"}
+ 		;;
+ 	*-*-*freebsd*)
+-		DEFAULT_PAR_PORT="unknown"
+-		DEFAULT_SER_PORT="/dev/cuad0"
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuad0"}
++		;;
++	*-*-dragonfly*)
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"/dev/ppi0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/cuad0"}
++		;;
++	*-*-netbsd*)
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/tty00"}
+ 		;;
+ 	*-*-solaris*)
+-		DEFAULT_PAR_PORT="/dev/printers/0"
+-		DEFAULT_SER_PORT="/dev/term/a"
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"/dev/printers/0"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"/dev/term/a"}
++		;;
++	*-*-msdos* | *-*-mingw32* | *-*-cygwin* | *-*-windows*)
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"lpt1"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"com1"}
++		;;
++	*)
++		DEFAULT_PAR_PORT=${DEFAULT_PAR_PORT:-"unknown"}
++		DEFAULT_SER_PORT=${DEFAULT_SER_PORT:-"unknown"}
+ 		;;
+ 	*-*-msdos* | *-*-mingw32* | *-*-cygwin* | *-*-windows*)
+-		DEFAULT_PAR_PORT="lpt1"
+-		DEFAULT_SER_PORT="com1"
+ 		;;
+ 	*)
+-		DEFAULT_PAR_PORT="unknown"
+-		DEFAULT_SER_PORT="unknown"
+ 		;;
+ esac
+ 
