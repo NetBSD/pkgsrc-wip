@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/09/17 02:11:01 wongk Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/06 12:41:20 makoto Exp $
 
 DISTNAME=	netatalk-3.0.4
 CATEGORIES=	net print
@@ -19,13 +19,17 @@ USE_OLD_DES_API=	yes
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 
+
+
 BUILDLINK_TRANSFORM+=	l:db48:${BDB_TYPE}
 
+PKG_CONFIG=		yes
 PKG_SYSCONFSUBDIR=	netatalk
 EGDIR=		${PREFIX}/share/examples/netatalk
-#CONF_FILES=	${EGDIR}/afp.conf ${PKG_SYSCONFDIR}/afd.conf
-#CONF_FILES+=	${EGDIR}/extmap.conf ${PKG_SYSCONFDIR}/extmap.conf
-#CONF_FILES+=	${EGDIR}/netatalk-dbus.conf ${PKG_SYSCONFDIR}/netatalk-dbus.conf
+#CONF_FILES=	${EGDIR}/afp.conf		${PKG_SYSCONFDIR}/afd.conf
+CONF_FILES+=	${DESTDIR}${EGDIR}/afp.conf	${PKG_SYSCONFDIR}/afp.conf
+CONF_FILES+=	${EGDIR}/extmap.conf		${PKG_SYSCONFDIR}/extmap.conf
+#CONF_FILES+=	${EGDIR}/netatalk-dbus.conf	${PKG_SYSCONFDIR}/netatalk-dbus.conf
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
@@ -41,7 +45,7 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-message-dir=${PKG_SYSCONFDIR}/msg
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/netatalk
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db
 CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
@@ -87,5 +91,6 @@ post-install:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

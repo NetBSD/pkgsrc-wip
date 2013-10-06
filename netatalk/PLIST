@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/07 00:28:23 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/06 12:41:20 makoto Exp $
 bin/afpldaptest
 bin/afppasswd
 bin/afpstats
@@ -9,7 +9,6 @@ bin/dbd
 bin/macusers
 bin/netatalk-config
 bin/uniconv
-etc/netatalk/afp.conf
 include/atalk/acl.h
 include/atalk/adouble.h
 include/atalk/afp.h
@@ -65,6 +64,7 @@ man/man8/cnid_metad.8
 man/man8/netatalk.8
 share/aclocal/netatalk.m4
 share/doc/netatalk/netatalk.html
+share/examples/netatalk/afp.conf
 share/examples/netatalk/extmap.conf
-@pkgdir etc/netatalk
 @pkgdir libexec/psffilters
+@pkgdir etc/netatalk
