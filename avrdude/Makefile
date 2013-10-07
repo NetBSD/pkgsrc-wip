@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/07 09:09:37 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/07 14:06:34 makoto Exp $
 
 DISTNAME=		avrdude-6.0.1
 CATEGORIES=		cross
@@ -43,6 +43,8 @@ BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .endif
 
 .include "../../devel/libftdi/buildlink3.mk"
+.include "../../wip/libhid/buildlink3.mk"
+.include "../../wip/libftdi1/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 # elf_getshdrstrndx

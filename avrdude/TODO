@@ -4,10 +4,14 @@ Configuration summary:
 DO HAVE    libelf
 DO HAVE    libusb
 DO HAVE    libusb_1_0
-DON'T HAVE libftdi1
-DO HAVE    libftdi
+DO HAVE    libftdi1
+DO HAVE    libftdi (but prefer to use libftdi1)
 DON'T HAVE libhid
 DO HAVE    pthread
 ENABLED    doc
 DISABLED   parport
 DISABLED   linuxgpio
+
+(for DON'T HAVE libhid):
+ ...  [Define if HID support is enabled via the Win32 DDK])
+ ...  wip/libhid doesn't make it ;-(
