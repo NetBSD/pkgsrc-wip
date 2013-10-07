@@ -1,0 +1,13 @@
+Now we have:
+Configuration summary:
+----------------------
+DO HAVE    libelf
+DO HAVE    libusb
+DO HAVE    libusb_1_0
+DON'T HAVE libftdi1
+DO HAVE    libftdi
+DON'T HAVE libhid
+DO HAVE    pthread
+ENABLED    doc
+DISABLED   parport
+DISABLED   linuxgpio
