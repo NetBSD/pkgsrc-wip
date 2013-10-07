@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/07 13:21:49 makoto Exp $
+bin/libftdi1-config
+include/libftdi1/ftdi.h
+include/libftdi1/ftdi.hpp
+lib64/cmake/libftdi1/LibFTDI1Config.cmake
+lib64/cmake/libftdi1/UseLibFTDI1.cmake
+lib64/libftdi1.a
+lib64/libftdi1.so
+lib64/libftdi1.so.2
+lib64/libftdi1.so.2.0.0
+lib64/libftdipp1.a
+lib64/libftdipp1.so
+lib64/libftdipp1.so.2
+lib64/libftdipp1.so.2.0.0
+lib64/pkgconfig/libftdi1.pc
+lib64/pkgconfig/libftdipp1.pc
+lib64/python2.7/site-packages/_ftdi1.so
+lib64/python2.7/site-packages/ftdi1.py
