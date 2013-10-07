@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/07 13:21:49 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/07 13:57:13 makoto Exp $
 
 DISTNAME=	libftdi1-1.0
 CATEGORIES=	devel
@@ -25,6 +25,8 @@ PKGCONFIG_OVERRIDE+=	libftdi1.pc.in
 PKGCONFIG_OVERRIDE+=	libftdipp1.pc.in
 #PKGCONFIG_OVERRIDE+=	libusb-1.0.pc
 
+PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
+
 do-configure:
 	(cd $(WRKSRC) ; \
 	cmake \
@@ -34,6 +36,7 @@ do-configure:
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
 	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0 \
 	.)
+# -DCMAKE_INSTALL_PREFIX=${PREFIX}  converts /usr/local to ${PREFIX}
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
