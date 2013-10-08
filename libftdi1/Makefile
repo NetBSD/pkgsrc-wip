@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/07 13:57:13 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/08 01:03:53 makoto Exp $
 
 DISTNAME=	libftdi1-1.0
 CATEGORIES=	devel
@@ -17,13 +17,15 @@ USE_TOOLS+=	pkg-config cmake
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=libusb1-[0-9]*:../../devel/libusb1
+# It is better off to have doxygen, but
+# clang segfaults while packaging print/luatex
+#BUILD_DEPENDS+=doxygen-[0-9]*:../../devel/doxygen
 
 CONFIGURE_ARGS+=	--without-examples
 CONFIGURE_ARGS+=	--without-docs
 
 PKGCONFIG_OVERRIDE+=	libftdi1.pc.in
 PKGCONFIG_OVERRIDE+=	libftdipp1.pc.in
-#PKGCONFIG_OVERRIDE+=	libusb-1.0.pc
 
 PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
 
@@ -42,6 +44,8 @@ do-configure:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
