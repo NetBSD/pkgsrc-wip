@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/10/07 14:06:34 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/08 02:24:38 makoto Exp $
 
 DISTNAME=		avrdude-6.0.1
 CATEGORIES=		cross
@@ -9,9 +9,9 @@ HOMEPAGE=		http://www.nongnu.org/avrdude/
 COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
+BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 # make: make: don't know how to make ./libavrdude.a. Stop
 MAKE_JOBS_SAFE=		no
