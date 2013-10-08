@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/10/08 01:03:53 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/08 02:04:30 makoto Exp $
 
 DISTNAME=	libftdi1-1.0
 CATEGORIES=	devel
@@ -42,6 +42,7 @@ do-configure:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../wip/libconfuse/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
