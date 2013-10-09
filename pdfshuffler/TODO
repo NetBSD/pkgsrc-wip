@@ -1,0 +1,36 @@
+When run on any PDF on 6.99.23/amd64, it dumps core and I see the following backtrace:
+
+#0  0x00007f7ff7407e91 in pthread_curcpu_np () at /archive/foreign/src/lib/libpthread/pthread_specific.c:88
+88                      const int curcpu = pthread__self()->pt_lwpctl->lc_curcpu;
+(gdb) bt
+#0  0x00007f7ff7407e91 in pthread_curcpu_np () at /archive/foreign/src/lib/libpthread/pthread_specific.c:88
+#1  0x00007f7ff64b2bfc in choose_arena () at /archive/foreign/src/lib/libc/stdlib/jemalloc.c:1569
+#2  imalloc (size=3) at /archive/foreign/src/lib/libc/stdlib/jemalloc.c:2983
+#3  malloc (size=<optimized out>) at /archive/foreign/src/lib/libc/stdlib/jemalloc.c:3697
+#4  0x00007f7fe2377df5 in gmalloc () from /usr/pkg/lib/libpoppler.so.43
+#5  0x00007f7fe2378358 in copyString () from /usr/pkg/lib/libpoppler.so.43
+#6  0x00007f7fe2335b0c in Lexer::getObj(Object*, int) () from /usr/pkg/lib/libpoppler.so.43
+#7  0x00007f7fe2340429 in Parser::getObj(Object*, bool, unsigned char*, CryptAlgorithm, int, int, int, int, bool) ()
+   from /usr/pkg/lib/libpoppler.so.43
+#8  0x00007f7fe230178e in Gfx::go(bool) () from /usr/pkg/lib/libpoppler.so.43
+#9  0x00007f7fe2301bc4 in Gfx::display(Object*, bool) () from /usr/pkg/lib/libpoppler.so.43
+#10 0x00007f7fe233f471 in Page::displaySlice(OutputDev*, double, double, int, bool, bool, int, int, int, int, bool, bool (*)(void*), void*, bool (*)(Annot*, void*), void*, bool) () from /usr/pkg/lib/libpoppler.so.43
+#11 0x00007f7fe2820994 in _poppler_page_render(_PopplerPage*, _cairo*, bool, PopplerPrintFlags) ()
+   from /usr/pkg/lib/libpoppler-glib.so.8
+#12 0x00007f7fe2c09ef7 in ?? () from /usr/pkg/lib/python2.7/site-packages/poppler.so
+#13 0x00007f7ff78d1550 in PyEval_EvalFrameEx () from /usr/pkg/lib/libpython2.7.so.1.0
+#14 0x00007f7ff78d20a3 in PyEval_EvalFrameEx () from /usr/pkg/lib/libpython2.7.so.1.0
+#15 0x00007f7ff78d20a3 in PyEval_EvalFrameEx () from /usr/pkg/lib/libpython2.7.so.1.0
+#16 0x00007f7ff78d2a29 in PyEval_EvalCodeEx () from /usr/pkg/lib/libpython2.7.so.1.0
+#17 0x00007f7ff78685da in function_call () from /usr/pkg/lib/libpython2.7.so.1.0
+#18 0x00007f7ff78473ef in PyObject_Call () from /usr/pkg/lib/libpython2.7.so.1.0
+#19 0x00007f7ff785465c in instancemethod_call () from /usr/pkg/lib/libpython2.7.so.1.0
+#20 0x00007f7ff78473ef in PyObject_Call () from /usr/pkg/lib/libpython2.7.so.1.0
+#21 0x00007f7ff78cb3f0 in PyEval_CallObjectWithKeywords () from /usr/pkg/lib/libpython2.7.so.1.0
+#22 0x00007f7ff78fdc27 in t_bootstrap () from /usr/pkg/lib/libpython2.7.so.1.0
+#23 0x00007f7ff740b85d in pthread__create_tramp (cookie=0x7f7ff43bc000) at /archive/foreign/src/lib/libpthread/pthread.c:572
+#24 0x00007f7ff64835b0 in __mknod50 () from /usr/lib/libc.so.12
+Cannot access memory at address 0x7f7fe0a00000
+(gdb)
+
+-- wiz 20131009
