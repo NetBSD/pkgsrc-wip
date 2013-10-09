@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2013/03/29 13:12:00 bubuchka Exp $
+$NetBSD: distinfo,v 1.6 2013/10/09 14:20:22 bubuchka Exp $
 
-SHA1 (R/bnlearn_3.3.tar.gz) = b83229b83ca0c68ee7d37dd49ce8ecdb4610a5e9
-RMD160 (R/bnlearn_3.3.tar.gz) = 761261bff13059f0ba1675c3e856265f447b58b5
-Size (R/bnlearn_3.3.tar.gz) = 1014046 bytes
+SHA1 (R/bnlearn_3.4.tar.gz) = 0c77916352103bb932a1684308d00ba6229b8dae
+RMD160 (R/bnlearn_3.4.tar.gz) = 7bbcfbc62f7bebe9a5cc782a0cb3e8ac8c3d7099
+Size (R/bnlearn_3.4.tar.gz) = 995452 bytes

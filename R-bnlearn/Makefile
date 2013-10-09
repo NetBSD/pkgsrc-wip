@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/03/29 13:12:00 bubuchka Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/09 14:20:21 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Bayesian network structure learning, parameter learning and inference
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	bnlearn
-R_PKGVER=	3.3
+R_PKGVER=	3.4
 
 USE_LANGUAGES=	c fortran
 
