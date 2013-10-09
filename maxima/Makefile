@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/08/24 17:09:13 asau Exp $
+# $NetBSD: Makefile,v 1.36 2013/10/09 19:02:17 asau Exp $
 
 DISTNAME=		maxima-5.27.0
 # On updates, please make sure editors/TeXmacs knows about the new
@@ -41,7 +41,7 @@ SUBST_CLASSES+=			fix-version
 SUBST_STAGE.fix-version=	post-patch
 SUBST_MESSAGE.fix-version=	Fixing package version.
 SUBST_FILES.fix-version=	configure.in
-SUBST_SED.fix-version=		-e 's:AM_INIT_AUTOMAKE(maxima,[^)]*):AM_INIT_AUTOMAKE(maxima,${PKGVERSION_NOREV}):'
+SUBST_SED.fix-version=		-e 's:AC_INIT(\[maxima\], *\[.*\]):AC_INIT([maxima],[${PKGVERSION_NOREV}]):'
 
 PYTHON_FOR_BUILD_ONLY=	yes
 ALL_ENV+=	PYTHONBIN=$(PYTHONBIN:Q)
