@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/08 02:24:38 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/10 05:12:27 makoto Exp $
 
 DISTNAME=		avrdude-6.0.1
 CATEGORIES=		cross
@@ -23,7 +23,6 @@ TEXINFO_REQD=		4.9
 USE_TOOLS+=		autoconf automake autoreconf makeinfo texi2html yacc lex
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
-CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf
 CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
