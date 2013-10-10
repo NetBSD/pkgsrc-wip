@@ -1,10 +1,22 @@
-$NetBSD: patch-configure,v 1.1 2013/10/07 12:05:46 makoto Exp $
+$NetBSD: patch-configure,v 1.2 2013/10/10 00:13:41 makoto Exp $
 
+(1)
 ERROR: [check-portability.awk] => Found test ... == ...:
 ERROR: [check-portability.awk] configure:               if test "$py_version" == "None"; then
+(2)
+Add DragonflyBSD
 
---- configure~	2013-10-07 18:29:26.000000000 +0900
-+++ configure	2013-10-07 18:30:41.000000000 +0900
+--- configure.orig	2007-04-26 09:25:25.000000000 +0900
++++ configure	2013-10-10 07:33:08.485190000 +0900
+@@ -2757,7 +2757,7 @@ _ACEOF
+         { echo "$as_me:$LINENO: result: Linux" >&5
+ echo "${ECHO_T}Linux" >&6; }
+         ;;
+-      *-freebsd*|*-openbsd*|*-netbsd*|*-k*bsd*-gnu)
++      *-freebsd*|*-openbsd*|*-netbsd*|*-k*bsd*-gnu|*-dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define OS_BSD
 @@ -22774,7 +22774,7 @@ echo $ECHO_N "checking for Python librar
  		py_version=`$PYTHON -c "from distutils.sysconfig import *; \
  			from string import join; \
