@@ -1,4 +1,5 @@
-n/texmaker
+@comment $NetBSD: PLIST,v 1.4 2013/10/11 01:38:53 makoto Exp $
+bin/texmaker
 share/applications/texmaker.desktop
 share/pixmaps/texmaker.png
 share/texmaker/AUTHORS

@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.5 2013/10/11 01:38:53 makoto Exp $
 DISTNAME=	texmaker-4.0.4
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
@@ -17,6 +18,7 @@ do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
 	${QTDIR}/bin/qmake PREFIX=${PREFIX} texmaker.pro DESKTOPDIR=${PREFIX}/share/applications ICONDIR=${PREFIX}/share/pixmaps
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
