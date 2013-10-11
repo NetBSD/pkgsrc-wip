@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/08/10 14:56:23 leot1990 Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/11 06:37:26 leot1990 Exp $
 #
 
 DISTNAME=	v1.1.1
 PKGNAME=	sxiv-${DISTNAME:S/v//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/muennich/sxiv/archive/
 
@@ -33,4 +34,5 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
