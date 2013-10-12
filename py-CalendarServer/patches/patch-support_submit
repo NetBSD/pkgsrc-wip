@@ -1,0 +1,24 @@
+$NetBSD: patch-support_submit,v 1.1 2013/10/12 13:41:43 thomasklausner Exp $
+
+Fix unportable test(1) construct.
+
+--- support/submit.orig	2013-10-04 21:34:16.000000000 +0000
++++ support/submit
+@@ -54,7 +54,7 @@ usage ()
+   echo "	-p Create a package with the resulting build";
+   echo "	-f Ignore uncommitted changes";
+ 
+-  if [ "${1-}" == "-" ]; then return 0; fi;
++  if [ "${1-}" = "-" ]; then return 0; fi;
+   exit 64;
+ }
+ 
+@@ -80,7 +80,7 @@ if ! "${build}"; then
+   fi;
+ fi;
+ 
+-if [ $# == 0 ]; then usage "No releases specified"; fi;
++if [ $# = 0 ]; then usage "No releases specified"; fi;
+ releases="$@"; shift $#;
+ 
+ if [ $# != 0 ]; then usage "Unrecognized arguments:" "$@"; fi;
