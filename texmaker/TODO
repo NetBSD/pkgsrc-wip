@@ -1,0 +1,7 @@
+- Confirmed to build
+  DragonFly/i386 3.4.2
+  NetBSD/amd64 6.1 (modular)
+  NetBSD/i386 5.2 (native)
+
+- Failing to build
+  NetBSD/amd64 6.99.23 (clang 3.3) prefail with qt4-libs
