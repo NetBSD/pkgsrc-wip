@@ -1,4 +1,8 @@
-(Release Note after 4.0) 
+Bump 1.8 to 4.0.4 Based on PR pkg/48297 
+(by  Niclas Rosenvik: nicro465 at student.liu.se,
+also with PR pkg/45521 to 3.1 by kamelderouiche at yahoo.com)
+
+Release Note after 4.0 from:
   http://freecode.com/projects/qtexmaker/releases/357375
 
 4.0.4     30 Aug 2013 16:55
