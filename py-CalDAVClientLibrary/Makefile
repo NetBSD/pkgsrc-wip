@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/12 13:37:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/13 13:21:23 thomasklausner Exp $
 
 DISTNAME=	CalDAVClientLibrary-11755
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	CalDAV library for python used by CalendarServer
 
 WRKSRC=		${WRKDIR}/CalDAVClientLibrary/trunk
 USE_LANGUAGES=	# none
+EGG_NAME=	UNKNOWN-0.0.0
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

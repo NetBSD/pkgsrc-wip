@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/12 13:37:17 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/13 13:21:23 thomasklausner Exp $
 bin/runadmin.py
 bin/runshell.py
-${PYSITELIB}/UNKNOWN-0.0.0-py2.7.egg-info
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/caldavclientlibrary/__init__.py
 ${PYSITELIB}/caldavclientlibrary/__init__.pyc
 ${PYSITELIB}/caldavclientlibrary/__init__.pyo
