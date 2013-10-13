@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/16 23:20:29 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/13 08:28:03 szptvlfn Exp $
 
-DISTNAME=	conduit-1.0.7.4
+DISTNAME=	conduit-1.0.8
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
