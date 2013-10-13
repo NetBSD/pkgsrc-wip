@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2013/10/11 16:46:47 leot1990 Exp $
+# $NetBSD: hacks.mk,v 1.2 2013/10/13 21:01:15 leot1990 Exp $
 
 .if !defined(VIMB_HACKS_MK)
 VIMB_HACKS_MK=	defined
@@ -10,7 +10,7 @@ VIMB_HACKS_MK=	defined
 ### On NetBSD the LOCK_* macros in <fcntl.h> are defined if and only if is
 ### defined _NETBSD_SOURCE.
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
-CPPFLAGS+=	-D_NETBSD_SOURCE
+CFLAGS+=	-D_NETBSD_SOURCE
 .endif
 
 .endif	# VIMB_HACKS_MK

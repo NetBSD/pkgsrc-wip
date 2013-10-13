@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/10/11 16:46:47 leot1990 Exp $
+$NetBSD: distinfo,v 1.2 2013/10/13 21:01:15 leot1990 Exp $
 
-SHA1 (0.1.9.tar.gz) = a82275f0d2715a21b25c530c2d5523774702eae4
-RMD160 (0.1.9.tar.gz) = a4b30490dbf08c44e24c90136f1ee0ff0602697c
-Size (0.1.9.tar.gz) = 64290 bytes
-SHA1 (patch-src_command.c) = 52c19325249ef0b6d27e05c3b0a06a20596be6ad
+SHA1 (0.1.10.tar.gz) = e770aff6feed2adb089b3a570beea3eb2345697f
+RMD160 (0.1.10.tar.gz) = a2ecf29f1cf118bba2da29279e78134527094dc2
+Size (0.1.10.tar.gz) = 68105 bytes
