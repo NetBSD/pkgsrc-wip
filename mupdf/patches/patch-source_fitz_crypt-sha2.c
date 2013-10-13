@@ -1,0 +1,74 @@
+$NetBSD: patch-source_fitz_crypt-sha2.c,v 1.1 2013/10/13 09:47:14 leot1990 Exp $
+
+Avoid namespace conflicts with bswap(3).
+
+--- source/fitz/crypt-sha2.c.orig	2013-08-14 12:41:20.000000000 +0000
++++ source/fitz/crypt-sha2.c
+@@ -17,7 +17,7 @@ static inline int isbigendian(void)
+ 	return *(char*)&one == 0;
+ }
+ 
+-static inline unsigned int bswap32(unsigned int num)
++static inline unsigned int mup_bswap32(unsigned int num)
+ {
+ 	if (!isbigendian())
+ 	{
+@@ -29,7 +29,7 @@ static inline unsigned int bswap32(unsig
+ 	return num;
+ }
+ 
+-static inline uint64_t bswap64(uint64_t num)
++static inline uint64_t mup_bswap64(uint64_t num)
+ {
+ 	if (!isbigendian())
+ 	{
+@@ -107,7 +107,7 @@ transform256(unsigned int state[8], cons
+ 
+ 	/* ensure big-endian integers */
+ 	for (j = 0; j < 16; j++)
+-		data[j] = bswap32(data_xe[j]);
++		data[j] = mup_bswap32(data_xe[j]);
+ 
+ 	/* Copy state[] to working vars. */
+ 	memcpy(T, state, sizeof(T));
+@@ -198,12 +198,12 @@ void fz_sha256_final(fz_sha256 *context,
+ 	context->count[1] = (context->count[1] << 3) + (context->count[0] >> 29);
+ 	context->count[0] = context->count[0] << 3;
+ 
+-	context->buffer.u32[14] = bswap32(context->count[1]);
+-	context->buffer.u32[15] = bswap32(context->count[0]);
++	context->buffer.u32[14] = mup_bswap32(context->count[1]);
++	context->buffer.u32[15] = mup_bswap32(context->count[0]);
+ 	transform256(context->state, context->buffer.u32);
+ 
+ 	for (j = 0; j < 8; j++)
+-		((unsigned int *)digest)[j] = bswap32(context->state[j]);
++		((unsigned int *)digest)[j] = mup_bswap32(context->state[j]);
+ 	memset(context, 0, sizeof(fz_sha256));
+ }
+ 
+@@ -268,7 +268,7 @@ transform512(uint64_t state[8], const ui
+ 
+ 	/* ensure big-endian integers */
+ 	for (j = 0; j < 16; j++)
+-		data[j] = bswap64(data_xe[j]);
++		data[j] = mup_bswap64(data_xe[j]);
+ 
+ 	/* Copy state[] to working vars. */
+ 	memcpy(T, state, sizeof(T));
+@@ -359,12 +359,12 @@ void fz_sha512_final(fz_sha512 *context,
+ 	context->count[1] = (context->count[1] << 3) + (context->count[0] >> 29);
+ 	context->count[0] = context->count[0] << 3;
+ 
+-	context->buffer.u64[14] = bswap64(context->count[1]);
+-	context->buffer.u64[15] = bswap64(context->count[0]);
++	context->buffer.u64[14] = mup_bswap64(context->count[1]);
++	context->buffer.u64[15] = mup_bswap64(context->count[0]);
+ 	transform512(context->state, context->buffer.u64);
+ 
+ 	for (j = 0; j < 8; j++)
+-		((uint64_t *)digest)[j] = bswap64(context->state[j]);
++		((uint64_t *)digest)[j] = mup_bswap64(context->state[j]);
+ 	memset(context, 0, sizeof(fz_sha512));
+ }
+ 

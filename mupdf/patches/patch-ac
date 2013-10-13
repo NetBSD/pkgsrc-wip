@@ -1,0 +1,220 @@
+$NetBSD: patch-ac,v 1.1 2013/10/13 09:47:14 leot1990 Exp $
+
+libtool support and install target cleanup.
+
+--- Makefile.orig	2013-08-14 12:41:20.000000000 +0000
++++ Makefile
+@@ -41,22 +41,12 @@ CFLAGS += $(ZLIB_CFLAGS)
+ 
+ # --- Commands ---
+ 
+-ifeq "$(verbose)" ""
+-QUIET_AR = @ echo ' ' ' ' AR $@ ;
+-QUIET_CC = @ echo ' ' ' ' CC $@ ;
+-QUIET_CXX = @ echo ' ' ' ' CXX $@ ;
+-QUIET_GEN = @ echo ' ' ' ' GEN $@ ;
+-QUIET_LINK = @ echo ' ' ' ' LINK $@ ;
+-QUIET_MKDIR = @ echo ' ' ' ' MKDIR $@ ;
+-QUIET_RM = @ echo ' ' ' ' RM $@ ;
+-endif
+-
+-CC_CMD = $(QUIET_CC) $(CC) $(CFLAGS) -o $@ -c $<
+-CXX_CMD = $(QUIET_CXX) $(CXX) $(CFLAGS) -o $@ -c $<
+-AR_CMD = $(QUIET_AR) $(AR) cr $@ $^
+-LINK_CMD = $(QUIET_LINK) $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+-MKDIR_CMD = $(QUIET_MKDIR) mkdir -p $@
+-RM_CMD = $(QUIET_RM) rm -f $@
++CC_CMD = ${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -o $@ -c $<
++CXX_CMD = ${LIBTOOL} --mode=compile $(CXX) $(CFLAGS) -o $@ -c $<
++AR_CMD = ${LIBTOOL} --mode=link $(CC) -o $@ -version-info 0:0:0 -rpath ${PREFIX}/lib $^
++LINK_CMD = ${LIBTOOL} --mode=link $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
++MKDIR_CMD = mkdir -p $@
++RM_CMD = rm -f $@
+ 
+ # --- File lists ---
+ 
+@@ -86,14 +76,14 @@ XPS_SRC_HDR := $(wildcard source/xps/*.h
+ CBZ_SRC_HDR := $(wildcard source/cbz/*.h)
+ IMG_SRC_HDR := $(wildcard source/img/*.h)
+ 
+-FITZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(FITZ_SRC))))
+-PDF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(PDF_SRC))))
+-XPS_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(XPS_SRC))))
+-CBZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(CBZ_SRC))))
+-IMG_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(IMG_SRC))))
++FITZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(FITZ_SRC))))
++PDF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(PDF_SRC))))
++XPS_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(XPS_SRC))))
++CBZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(CBZ_SRC))))
++IMG_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(IMG_SRC))))
+ 
+-PDF_JS_V8_OBJ := $(OUT)/pdf/js/pdf-js.o $(OUT)/pdf/js/pdf-jsimp-cpp.o $(OUT)/pdf/js/pdf-jsimp-v8.o
+-PDF_JS_NONE_OBJ := $(OUT)/pdf/js/pdf-js-none.o
++PDF_JS_V8_OBJ := $(OUT)/pdf/js/pdf-js.lo $(OUT)/pdf/js/pdf-jsimp-cpp.lo $(OUT)/pdf/js/pdf-jsimp-v8.lo
++PDF_JS_NONE_OBJ := $(OUT)/pdf/js/pdf-js-none.lo
+ 
+ $(FITZ_OBJ) : $(FITZ_HDR) $(FITZ_SRC_HDR)
+ $(PDF_OBJ) : $(FITZ_HDR) $(PDF_HDR) $(PDF_SRC_HDR)
+@@ -106,14 +96,14 @@ $(PDF_JS_NONE_OBJ) :=  $(FITZ_HDR) $(PDF
+ 
+ # --- Library ---
+ 
+-MUPDF_LIB := $(OUT)/libmupdf.a
+-MUPDF_JS_NONE_LIB := $(OUT)/libmupdf-js-none.a
++MUPDF_LIB := $(OUT)/libmupdf.la
++MUPDF_JS_NONE_LIB := $(OUT)/libmupdf-js-none.la
+ 
+ $(MUPDF_LIB) : $(FITZ_OBJ) $(PDF_OBJ) $(XPS_OBJ) $(CBZ_OBJ) $(IMG_OBJ)
+ $(MUPDF_JS_NONE_LIB) : $(PDF_JS_NONE_OBJ)
+ 
+ ifeq "$(V8_PRESENT)" "yes"
+-MUPDF_JS_V8_LIB := $(OUT)/libmupdf-js-v8.a
++MUPDF_JS_V8_LIB := $(OUT)/libmupdf-js-v8.la
+ $(MUPDF_JS_V8_LIB) : $(PDF_JS_V8_OBJ)
+ endif
+ 
+@@ -124,31 +114,30 @@ INSTALL_LIBS := $(MUPDF_LIB) $(MUPDF_JS_
+ $(ALL_DIR) $(OUT) $(GEN) :
+ 	$(MKDIR_CMD)
+ 
+-$(OUT)/%.a :
++$(OUT)/%.la :
+ 	$(RM_CMD)
+ 	$(AR_CMD)
+-	$(RANLIB_CMD)
+ 
+-$(OUT)/%: $(OUT)/%.o
++$(OUT)/%: $(OUT)/%.lo
+ 	$(LINK_CMD)
+ 
+-$(OUT)/%.o : source/%.c | $(ALL_DIR)
++$(OUT)/%.lo : source/%.c | $(ALL_DIR)
+ 	$(CC_CMD)
+ 
+-$(OUT)/%.o : source/%.cpp | $(ALL_DIR)
++$(OUT)/%.lo : source/%.cpp | $(ALL_DIR)
+ 	$(CXX_CMD)
+ 
+-$(OUT)/%.o : scripts/%.c | $(OUT)
++$(OUT)/%.lo : scripts/%.c | $(OUT)
+ 	$(CC_CMD)
+ 
+-$(OUT)/platform/x11/%.o : platform/x11/%.c | $(ALL_DIR)
++$(OUT)/platform/x11/%.lo : platform/x11/%.c | $(ALL_DIR)
+ 	$(CC_CMD) $(X11_CFLAGS) $(CURL_CFLAGS)
+ 
+-$(OUT)/platform/x11/curl/%.o : platform/x11/%.c | $(ALL_DIR)
+-	mkdir -p $(OUT)/platform/x11/curl
++$(OUT)/platform/x11/curl/%.lo : platform/x11/%.c | $(ALL_DIR)
++	$(MKDIR_CMD) $(OUT)/platform/x11/curl
+ 	$(CC_CMD) $(X11_CFLAGS) $(CURL_CFLAGS) -DHAVE_CURL
+ 
+-.PRECIOUS : $(OUT)/%.o # Keep intermediates from chained rules
++.PRECIOUS : $(OUT)/%.lo # Keep intermediates from chained rules
+ 
+ # --- Generated CMAP, FONT and JAVASCRIPT files ---
+ 
+@@ -208,41 +197,41 @@ endif
+ 
+ generate: $(CMAP_GEN) $(FONT_GEN) $(JAVASCRIPT_GEN) $(ADOBECA_GEN)
+ 
+-$(OUT)/pdf/pdf-cmap-table.o : $(CMAP_GEN)
+-$(OUT)/pdf/pdf-fontfile.o : $(FONT_GEN)
+-$(OUT)/pdf/pdf-pkcs7.o : $(ADOBECA_GEN)
+-$(OUT)/pdf/js/pdf-js.o : $(JAVASCRIPT_GEN)
+-$(OUT)/cmapdump.o : source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c
++$(OUT)/pdf/pdf-cmap-table.lo : $(CMAP_GEN)
++$(OUT)/pdf/pdf-fontfile.lo : $(FONT_GEN)
++$(OUT)/pdf/pdf-pkcs7.lo : $(ADOBECA_GEN)
++$(OUT)/pdf/js/pdf-js.lo : $(JAVASCRIPT_GEN)
++$(OUT)/cmapdump.lo : source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c
+ 
+ # --- Tools and Apps ---
+ 
+ MUDRAW := $(addprefix $(OUT)/, mudraw)
+ $(MUDRAW) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS)
+-$(MUDRAW) : $(addprefix $(OUT)/tools/, mudraw.o)
++$(MUDRAW) : $(addprefix $(OUT)/tools/, mudraw.lo)
+ 	$(LINK_CMD)
+ 
+ MUTOOL := $(addprefix $(OUT)/, mutool)
+ $(MUTOOL) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS)
+-$(MUTOOL) : $(addprefix $(OUT)/tools/, mutool.o pdfclean.o pdfextract.o pdfinfo.o pdfposter.o pdfshow.o)
++$(MUTOOL) : $(addprefix $(OUT)/tools/, mutool.lo pdfclean.lo pdfextract.lo pdfinfo.lo pdfposter.lo pdfshow.lo)
+ 	$(LINK_CMD)
+ 
+ ifeq "$(V8_PRESENT)" "yes"
+ MUJSTEST_V8 := $(OUT)/mujstest-v8
+ $(MUJSTEST_V8) : $(MUPDF_LIB) $(MUPDF_JS_V8_LIB) $(THIRD_LIBS)
+-$(MUJSTEST_V8) : $(addprefix $(OUT)/platform/x11/, jstest_main.o pdfapp.o)
++$(MUJSTEST_V8) : $(addprefix $(OUT)/platform/x11/, jstest_main.lo pdfapp.lo)
+ 	$(LINK_CMD) $(V8_LIBS)
+ endif
+ 
+ ifeq "$(NOX11)" ""
+ MUVIEW_X11 := $(OUT)/mupdf-x11
+ $(MUVIEW_X11) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS)
+-$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
++$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
+ 	$(LINK_CMD) $(X11_LIBS)
+ 
+ ifeq "$(NOCURL)" ""
+ MUVIEW_X11_CURL := $(OUT)/mupdf-x11-curl
+ $(MUVIEW_X11_CURL) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS) $(CURL_LIB)
+-$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.o x11_image.o pdfapp.o curl_stream.o)
++$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.lo x11_image.lo pdfapp.lo curl_stream.lo)
+ 	$(LINK_CMD) $(X11_LIBS) $(CURL_LIBS)
+ endif
+ endif
+@@ -251,7 +240,7 @@ ifeq "$(V8_PRESENT)" "yes"
+ ifeq "$(NOX11)" ""
+ MUVIEW_X11_V8 := $(OUT)/mupdf-x11-v8
+ $(MUVIEW_X11_V8) : $(MUPDF_LIB) $(MUPDF_JS_V8_LIB) $(THIRD_LIBS)
+-$(MUVIEW_X11_V8) : $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
++$(MUVIEW_X11_V8) : $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
+ 	$(LINK_CMD) $(X11_LIBS) $(V8_LIBS)
+ endif
+ endif
+@@ -286,24 +275,26 @@ libs: $(INSTALL_LIBS)
+ apps: $(INSTALL_APPS)
+ 
+ install: libs apps
+-	install -d $(DESTDIR)$(incdir)/mupdf
+-	install -d $(DESTDIR)$(incdir)/mupdf/fitz
+-	install -d $(DESTDIR)$(incdir)/mupdf/pdf
+-	install include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
+-	install include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
+-	install include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
+-
+-	install -d $(DESTDIR)$(libdir)
+-	install $(INSTALL_LIBS) $(DESTDIR)$(libdir)
+-
+-	install -d $(DESTDIR)$(bindir)
+-	install $(INSTALL_APPS) $(DESTDIR)$(bindir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(incdir) $(DESTDIR)$(incdir)/mupdf $(DESTDIR)$(incdir)/mupdf/fitz $(DESTDIR)$(incdir)/mupdf/pdf
++	${BSD_INSTALL_DATA} include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
++	${BSD_INSTALL_DATA} include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
++	${BSD_INSTALL_DATA} include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
++
++	${BSD_INSTALL_LIB_DIR} $(DESTDIR)$(libdir)
++	for f in $(INSTALL_LIBS); do \
++		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir); \
++	done
++
++	${BSD_INSTALL_PROGRAM_DIR} $(bindir)
++	for f in $(INSTALL_APPS); do \
++		${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $$f $(DESTDIR)$(bindir); \
++	done
+ 
+-	install -d $(DESTDIR)$(mandir)/man1
+-	install docs/man/*.1 $(DESTDIR)$(mandir)/man1
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(mandir)/man1
++	${BSD_INSTALL_MAN} docs/man/*.1 $(DESTDIR)$(mandir)/man1
+ 
+-	install -d $(DESTDIR)$(docdir)
+-	install README COPYING CHANGES docs/*.txt $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} README COPYING CHANGES docs/*.txt $(DESTDIR)$(docdir)
+ 
+ tarball:
+ 	bash scripts/archive.sh

@@ -1,0 +1,29 @@
+Notes on updating mupdf to mupdf-1.3 (a not-so-a-TODO)
+======================================================
+
+o mupdf-1.3 depends on openjpeg-2.0 (previously mupdf-1.1 depended on
+  openjpeg-1.5). ${WRKSRC}/Makerules is not correct and still looks for
+  openjpeg-1.5 so patches/patch-ab was modified in order to fix this
+  behaviour. Please also note the SUBST.makerules class in Makefile.
+o mupdf should be build with "build=release" (the default is "build=debug" and
+  that may be indesiderable for the common user).
+o In order to completely disable the building of third party libraries (it is
+  better to use the ones provided/handled by pkgsrc) a brutal ${RM} -fr completely
+  remove the ${WRKSRC}/thirdparty directory. For more information please read
+  ${WRKSRC}/Makethird.
+o ${WRKSRC}/docs/thirdparty.txt may help for adding correct version of the
+  dependencies.
+
+
+What should be done before importing to print/mupdf? (and now the TODO!)
+========================================================================
+o mupdf binary should be installed as "mupdf" not as "mupdf-x11"...
+o buildlink3.mk and files/mupdf.pc may need to be updated and reviewed.
+o dependencies of mupdf (if there are any) NOT tested. If some package depends
+  on mupdf it should be tested too.
+o More cleanup... I have just two eyeballs and maybe I have missed something
+  around. Please test and improve the package!
+o NOCURL and V8_PRESENT options should go to options.mk. Actually IMHO it's
+  better to only add the curl support. v8 seems that is only in pkgsrc-wip.
+  However, adding an options.mk is the last *and* least step before importing
+  it to print/mupdf.
