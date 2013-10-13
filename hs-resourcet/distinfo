@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/09/16 23:12:49 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2013/10/13 08:23:39 szptvlfn Exp $
 
-SHA1 (resourcet-0.4.8.tar.gz) = 31de4e0b42742f5789f730a57773731cde72c1cd
-RMD160 (resourcet-0.4.8.tar.gz) = f1395f91e30214b9ed8be7c82b9308415217b960
-Size (resourcet-0.4.8.tar.gz) = 9453 bytes
+SHA1 (resourcet-0.4.9.tar.gz) = af5db451efc6fe3a9cc9dc6f735b273b51e967bb
+RMD160 (resourcet-0.4.9.tar.gz) = ee9a2b21508a421c18ed4830cd9e3ba83306f466
+Size (resourcet-0.4.9.tar.gz) = 9624 bytes

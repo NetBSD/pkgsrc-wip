@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/09/16 23:12:49 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/10/13 08:23:39 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-resourcet
 
 .if !defined(HS_RESOURCET_BUILDLINK3_MK)
 HS_RESOURCET_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-resourcet+=	hs-resourcet>=0.4.8
+BUILDLINK_API_DEPENDS.hs-resourcet+=	hs-resourcet>=0.4.9
 BUILDLINK_PKGSRCDIR.hs-resourcet?=	../../wip/hs-resourcet
 
 .include "../../wip/hs-lifted-base/buildlink3.mk"
