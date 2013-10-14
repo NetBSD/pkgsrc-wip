@@ -1,5 +1,6 @@
-$NetBSD: patch-bootstrap,v 1.1 2013/09/20 06:57:02 makoto Exp $
+$NetBSD: patch-bootstrap,v 1.2 2013/10/14 14:29:49 makoto Exp $
 
+Suppres warning from automake
 
 --- bootstrap.orig	2013-09-20 09:02:07.000000000 +0900
 +++ bootstrap	2013-09-20 15:43:13.000000000 +0900

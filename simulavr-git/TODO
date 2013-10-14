@@ -1,38 +1,18 @@
-- libiberty.a and libbfd.a by avr-binutils-2.32.2 are natively compiled
-- In configuration, seeing following message with result ... no
+- Current build status:
 
-checking for gcc option to accept ISO C89... none needed
-checking for dlopen in -ldl... no
-checking whether the shell understands "+="... no
-checking for x86_64--netbsd-objdump... no
-checking for x86_64--netbsd-ar... no
-checking for x86_64--netbsd-strip... no
-checking for x86_64--netbsd-ranlib... no
-checking if gcc supports -fno-rtti -fno-exceptions... no
-checking for /usr/lib/tclConfig.sh... no
-configure: WARNING: tclConfig.sh not found .. guessing
-configure: WARNING: prefered version wish not found
-configure: WARNING: prefered version tclsh not found
-
-checking bfd search- /usr/pkg/avr/x86_64--netbsd/avr in "include" and "lib"... no
-checking bfd search- /usr/pkg/avr/avr in "include" and "lib"... no
-checking bfd search- /usr/pkg/avr in "" and ""... no
-checking bfd search- /usr/pkg/avr in "bfd" and "bfd"... no
-checking bfd search- /usr/pkg/avr in "include" and "lib64"... no
-checking libiberty search- /usr/pkg/avr/x86_64--netbsd/avr in "lib"... no
-checking libiberty search- /usr/pkg/avr/avr in "lib"... no
-checking libiberty search- /usr/pkg/avr in ""... no
-checking libiberty search- /usr/pkg/avr in "lib64"... no
- (above should be OK, before reaching correct one)
-
-checking vpi_user.h usability... no
-checking vpi_user.h presence... no
-checking for vpi_user.h... no
-checking iverilog/vpi_user.h usability... no
-checking iverilog/vpi_user.h presence... no
-checking for iverilog/vpi_user.h... no
-checking for gtkwave... no
-checking for iverilog... no
-checking for vvp... no
-build verilog modul avr.vpi = no
+Making all in gtest
+gmake[2]: Entering directory `/export/WRKOBJDIR/wip/simulavr-git/work/simulavr/regress/gtest'
+Makefile:544: /src/.deps/gtest-death-test.Po: No such file or directory
+Makefile:545: /src/.deps/gtest-filepath.Po: No such file or directory
+Makefile:546: /src/.deps/gtest-port.Po: No such file or directory
+Makefile:547: /src/.deps/gtest-printers.Po: No such file or directory
+Makefile:548: /src/.deps/gtest-test-part.Po: No such file or directory
+Makefile:549: /src/.deps/gtest-typed-test.Po: No such file or directory
+Makefile:550: /src/.deps/gtest.Po: No such file or directory
+gmake[2]: *** No rule to make target `/src/.deps/gtest.Po'.  Stop.
+gmake[2]: Leaving directory `/export/WRKOBJDIR/wip/simulavr-git/work/simulavr/regress/gtest'
+gmake[1]: *** [all-recursive] Error 1
+gmake[1]: Leaving directory `/export/WRKOBJDIR/wip/simulavr-git/work/simulavr/regress'
+gmake: *** [all-recursive] Error 1
+*** Error code 2
 
