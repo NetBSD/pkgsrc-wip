@@ -4,3 +4,26 @@
 Bump 4.5.3 to 4.7.3
 For the changes for 4.7, see following page.
   http://gcc.gnu.org/gcc-4.7/changes.html
+
+(Picking up AVR related topic from above info):
+The AVR port's libgcc has been improved and its multilib
+structure has been enhanced. As a result, all objects
+contributing to an application must either be compiled with
+GCC versions up to 4.6.x or with GCC versions 4.7.1 or
+later. If the compiler is used with AVR Libc, you need a
+version that supports the new layout, i.e. implements #35407.
+
+The AVR port's -mshort-calls command-line option has been
+deprecated. It will be removed in the GCC 4.8 release. See
+-mrelax for a replacement.
+
+The AVR port only references startup code that clears .bss and
+the common section resp. initializes the .data and .rodata
+section provided respective sections (or subsections thereof)
+are not empty, see PR18145. 
+  Applications that put all static storage objects into
+non-standard sections and / or define all static storage
+objects in assembler modules, must reference __do_clear_bss
+resp. __do_copy_data by hand or undefine the symbol(s) by
+means of -Wl,-u,__do_clear_bss resp. -Wl,-u,__do_copy_data.
+
