@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/16 21:25:56 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/14 06:18:06 szptvlfn Exp $
 
-DISTNAME=	aeson-0.6.2.0
+DISTNAME=	aeson-0.6.2.1
 CATEGORIES=	converters
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
