@@ -3,5 +3,5 @@
   NetBSD/amd64 6.1 (modular)
   NetBSD/i386 5.2 (native)
 
-- Failing to build
-  NetBSD/amd64 6.99.23 (clang 3.3) prefail with qt4-libs
+  NetBSD/amd64 6.99.23 (clang 3.2) 
+   (tradcpp-0.4, gd-2.1.0, qt4-libs have been compiled by gcc)
