@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/22 18:46:21 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2013/10/14 10:54:17 szptvlfn Exp $
 
-SHA1 (profunctors-3.3.0.1.tar.gz) = 058e425955dbbb5e813478ea2a3935e52dc8d541
-RMD160 (profunctors-3.3.0.1.tar.gz) = 29fb49de10f4b79574a736ba85f15c1e9a15b075
-Size (profunctors-3.3.0.1.tar.gz) = 6480 bytes
+SHA1 (profunctors-4.0.1.tar.gz) = 507980ed14b97ecd3bee4da48a92f70816a8d3e1
+RMD160 (profunctors-4.0.1.tar.gz) = a1a9fe31382d1c727bf3e4941d0ab45164d93291
+Size (profunctors-4.0.1.tar.gz) = 9901 bytes

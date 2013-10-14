@@ -1,6 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/22 18:46:21 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/14 10:54:17 szptvlfn Exp $
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor.hi
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor.p_hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Collage.hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Collage.p_hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Composition.hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Composition.p_hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Rep.hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Rep.p_hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Rift.hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Rift.p_hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Trace.hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Trace.p_hi
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Unsafe.hi
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Unsafe.p_hi
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/HSprofunctors-${PKGVERSION}.o
