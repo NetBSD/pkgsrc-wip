@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/21 12:09:03 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/10/14 10:42:40 szptvlfn Exp $
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Alt.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Alt.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Apply.hi
@@ -11,14 +11,30 @@ lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Extend.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Extend.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Plus.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Plus.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Groupoid.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Groupoid.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Isomorphism.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Isomorphism.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semifunctor.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semifunctor.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semifunctor/Associative.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semifunctor/Associative.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semifunctor/Braided.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semifunctor/Braided.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup/Foldable.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup/Foldable.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup/Traversable.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup/Traversable.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Coproduct.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Coproduct.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Dual.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Dual.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Ob.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Ob.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Product.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Product.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Static.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroupoid/Static.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Traversable/Instances.hi
