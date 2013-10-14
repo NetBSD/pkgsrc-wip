@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/08/17 20:48:31 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/14 10:32:25 szptvlfn Exp $
 #
 
-DISTNAME=	distributive-0.3.1
+DISTNAME=	distributive-0.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
