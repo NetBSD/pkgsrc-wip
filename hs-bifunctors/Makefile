@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/05/21 12:35:34 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/14 10:48:50 szptvlfn Exp $
 
-DISTNAME=	bifunctors-3.2.0.1
+DISTNAME=	bifunctors-4.1.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
-HOMEPAGE=	http://github.com/ekmett/bifunctors/
-COMMENT=	Haskell 98 bifunctors
+COMMENT=	Bifunctors
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
