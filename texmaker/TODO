@@ -1,7 +1,0 @@
-- Confirmed to build
-  DragonFly/i386 3.4.2
-  NetBSD/amd64 6.1 (modular)
-  NetBSD/i386 5.2 (native)
-
-  NetBSD/amd64 6.99.23 (clang 3.2) 
-   (tradcpp-0.4, gd-2.1.0, qt4-libs have been compiled by gcc)
