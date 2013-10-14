@@ -1,37 +1,25 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 21:26:15 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/10/14 13:00:04 ryo-on Exp $
 #
 
-DISTNAME=	or1ksim-0.2.0rc3
-PKGREVISION=	1
+VER=		0.5.1rc1
+DISTNAME=	or1ksim-or1ksim-${VER}
+PKGNAME=	${DISTNAME:S/or1ksim-or1ksim-/or1ksim-/}
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.opencores.org/projects.cgi/web/or1k/
+MASTER_SITES=	-https://github.com/openrisc/or1ksim/archive/or1ksim-${VER}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.opencores.org/projects.cgi/web/or1k/architectural_simulator
-COMMENT=	OpenRISC 1000 (OR1K) architecture simulator
+HOMEPAGE=	http://opencores.org/or1k/Or1ksim
+COMMENT=	OpenRISC emulator
 
-PKG_INSTALLATION_TYPES= overwrite pkgviews
+FETCH_USING=	curl
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-execution=simple
-INSTALLATION_DIRS=	bin share/examples/or1ksim share/doc/or1ksim
+USE_TOOLS+=	gmake
 
-USE_GNU_READLINE=	yes # uses rl_event_hook
+INFO_FILES=	yes
 
-post-build:
-	mv ${WRKSRC}/sim.cfg ${WRKSRC}/or1ksim.cfg
+GNU_CONFIGURE=  yes
+CONFIGURE_ARGS+=	--target=or32
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/or1ksim ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/or1ksim.cfg ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/virtex.tim ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README.gdb ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-
+# rl_event_hook
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
