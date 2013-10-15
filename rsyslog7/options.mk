@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2013/09/11 10:01:56 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2013/10/15 14:54:32 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rsyslog
-PKG_SUPPORTED_OPTIONS=	dbi diag file gnutls gssapi guardtime libgcrypt \
+PKG_SUPPORTED_OPTIONS=	dbi file gnutls gssapi guardtime libgcrypt \
 			mail mysql pgsql snmp uuid
 PKG_SUGGESTED_OPTIONS+=	libgcrypt uuid
 
@@ -14,7 +14,7 @@ PKG_SUGGESTED_OPTIONS+=	klog
 PKG_OPTIONS_REQUIRED_GROUPS=	sysmod
 PKG_OPTIONS_GROUP.sysmod=	klog solaris
 
-PLIST_VARS+=		dbi diag file gnutls gssapi guardtime klog libgcrypt \
+PLIST_VARS+=		dbi file gnutls gssapi guardtime klog libgcrypt \
 			mail mysql pgsql snmp solaris
 
 .include "../../mk/bsd.options.mk"
@@ -77,11 +77,6 @@ PLIST.file=			yes
 CONFIGURE_ARGS+=		--enable-libdbi
 PLIST.dbi=			yes
 .include "../../databases/libdbi/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mdiag)
-CONFIGURE_ARGS+=		--enable-imdiag
-PLIST.diag=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mguardtime)

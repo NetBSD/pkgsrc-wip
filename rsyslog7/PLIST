@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/11 10:01:56 fhajny Exp $
-${PLIST.diag}lib/rsyslog/imdiag.la
+@comment $NetBSD: PLIST,v 1.2 2013/10/15 14:54:32 fhajny Exp $
+lib/rsyslog/imdiag.la
 ${PLIST.file}lib/rsyslog/imfile.la
 ${PLIST.gssapi}lib/rsyslog/imgssapi.la
 ${PLIST.klog}lib/rsyslog/imklog.la
