@@ -1,0 +1,3 @@
+This is an experiment to try and make logging more flexible and more
+consumable. Plain text logs are bullshit, let\'s emit structured and contextual
+logs. Metrics, too!
