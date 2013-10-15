@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5499 2013/10/14 04:53:20 makoto Exp $
+# $Id: Makefile,v 1.5500 2013/10/15 12:24:53 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -406,7 +406,6 @@ SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbmail
 SUBDIR+=	dbus-explorer
-SUBDIR+=	dd_rescue
 SUBDIR+=	ddate
 SUBDIR+=	deadbeef
 SUBDIR+=	debian_base
@@ -710,7 +709,7 @@ SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambas2
 SUBDIR+=	gambc
 SUBDIR+=	gambit
-SUBDIR+=	gaphor
+#SUBDIR+=	gaphor		# www/zope3 is gone
 SUBDIR+=	gappa
 SUBDIR+=	garcon
 SUBDIR+=	gauche-dbd-pg
@@ -2574,7 +2573,7 @@ SUBDIR+=	py-inflection
 SUBDIR+=	py-instant
 SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
-SUBDIR+=	py-ipython
+#SUBDIR+=	py-ipython	# www/zope3 is gone
 SUBDIR+=	py-irco
 SUBDIR+=	py-isodate
 SUBDIR+=	py-jabber-aimt
@@ -2824,6 +2823,7 @@ SUBDIR+=	py-spatialdata
 SUBDIR+=	py-spectral
 SUBDIR+=	py-speex
 SUBDIR+=	py-spfpm
+SUBDIR+=	py-sppy
 SUBDIR+=	py-spyse
 SUBDIR+=	py-sqlsoup
 SUBDIR+=	py-srpy
@@ -2882,7 +2882,7 @@ SUBDIR+=	py-utilib_math
 SUBDIR+=	py-utilib_misc
 SUBDIR+=	py-utilib_ply
 SUBDIR+=	py-uuid
-SUBDIR+=	py-van.testing
+#SUBDIR+=	py-van.testing	# www/zope3 is gone
 SUBDIR+=	py-viper
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
@@ -2911,7 +2911,7 @@ SUBDIR+=	py-xdgapp
 SUBDIR+=	py-xdress
 SUBDIR+=	py-xlutils
 SUBDIR+=	py-xlwt
-SUBDIR+=	py-xmiparser
+#SUBDIR+=	py-xmiparser	# www/zope3 is gone
 SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yaml
