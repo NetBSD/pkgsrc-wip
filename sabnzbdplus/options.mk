@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/10/01 20:25:20 wongk Exp $
+# $NetBSD: options.mk,v 1.2 2013/10/15 14:51:31 makoto Exp $
 
 # Global and legacy options
 
@@ -13,14 +13,14 @@ PKG_SUGGESTED_OPTIONS=	par2 unrar feedparser yenc openssl
 ### par2 support
 ###
 .if !empty(PKG_OPTIONS:Mpar2)
-DEPENDS+=	par2:../../archivers/par2
+DEPENDS+=	par2-[0-9]*:../../archivers/par2
 .endif
 
 ###
 ### unrar support
 ###
 .if !empty(PKG_OPTIONS:Munrar)
-DEPENDS+=	unrar:../../archivers/unrar
+DEPENDS+=	unrar-[0-9]*:../../archivers/unrar
 .endif
 
 ###
@@ -41,6 +41,6 @@ DEPENDS+=	${PYPKGPREFIX}-yenc-[0-9]*:../../wip/py-yenc
 ### openssl support
 ###
 .if !empty(PKG_OPTIONS:Mopenssl)
-DEPENDS+=	openssl:../../security/openssl
-DEPENDS+= ${PYPKGPREFIX}-OpenSSL:../../security/py-OpenSSL/
+DEPENDS+=	openssl-[0-9]*:../../security/openssl
+DEPENDS+= ${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL/
 .endif
