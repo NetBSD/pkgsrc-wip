@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/11/14 15:34:30 jtonio Exp $
-bin/i3
-bin/i3-input
-bin/i3-msg
-man/man1/i3-input.1
-man/man1/i3-msg.1
-man/man1/i3.1
-share/doc/i3/config
-share/doc/i3/welcome
