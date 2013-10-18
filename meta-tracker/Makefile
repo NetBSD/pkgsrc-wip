@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2013/06/24 09:38:15 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2013/10/18 10:53:40 makoto Exp $
 #
 
-DISTNAME=	tracker-0.8.18
+DISTNAME=	tracker-0.16.2
 PKGNAME=	meta-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/0.8/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/0.16/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.gnome.org/tracker/
@@ -18,6 +18,9 @@ USE_TOOLS+=		gmake intltool pkg-config
 USE_TOOLS+=		msgfmt
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
+# tracker_miner_fs-tracker-power-hal.o: In function `tracker_power_init':
+# tracker-power-hal.c:(.text+0x447): undefined reference to `dbus_connection_setup_with_g_main'
+LDFLAGS+=		-ldbus-glib-1
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -26,7 +29,13 @@ PKGCONFIG_OVERRIDE+=	data/tracker-miner.pc.in
 PKGCONFIG_OVERRIDE+=	data/tracker-client.pc.in
 PKGCONFIG_OVERRIDE+=	data/tracker-extract.pc.in
 
+#TRACKER_VERSION= ${PKGVERSION:C/\.[0-9]+$//}
+# strip last .digit (but not safe if it is missing)
+PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION:C/\.[0-9]+$//}
+
 .include "options.mk"
+
+#PKGCONFIG_OVERRIDE+=	dbus-glib-1.pc.in
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -34,5 +43,7 @@ PKGCONFIG_OVERRIDE+=	data/tracker-extract.pc.in
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../textproc/libunistring/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

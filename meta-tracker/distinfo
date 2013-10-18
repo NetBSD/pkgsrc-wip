@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.6 2013/06/24 09:38:16 noud4 Exp $
+$NetBSD: distinfo,v 1.7 2013/10/18 10:53:40 makoto Exp $
 
-SHA1 (tracker-0.8.18.tar.bz2) = 827102c80890c01ed3468e9015f29a8c9fdb615b
-RMD160 (tracker-0.8.18.tar.bz2) = fc2088fc91ca921c77d67835d52e57c0f407a065
-Size (tracker-0.8.18.tar.bz2) = 4707060 bytes
-SHA1 (patch-aa) = 6f72501f167ff019b78c441f4437a86e01796088
-SHA1 (patch-ad) = 66d4cce3af56b8f59f410d1b762bec93e6ca8dcf
-SHA1 (patch-ae) = cbd23a6d5e1fcbb234ae1ad3629c3dbcef263074
-SHA1 (patch-ah) = d4fe408969d55ca28a43c38700a9e22bba1eee6c
-SHA1 (patch-ai) = 5459705eee6f92e8013b59e4b8e20929523adc40
-SHA1 (patch-aj) = 58532e53dc29194b84e675834ef7a963927e09b6
+SHA1 (tracker-0.16.2.tar.xz) = 9772281e8389ae83147eea80e670587294690949
+RMD160 (tracker-0.16.2.tar.xz) = 8d2b67ad20d0227b287ce76e4f310dcbace3212f
+Size (tracker-0.16.2.tar.xz) = 5984656 bytes
+SHA1 (patch-aa) = 1ce6811b3a24b83efe68f8081c95d8168a0c9db5
+SHA1 (patch-ad) = aa00117a7092cbc3713693f9f9b591bcc1739aab
+SHA1 (patch-ae) = 7b7d2a550af8d4deae04981c06efe328cbf0e166
+SHA1 (patch-ai) = 55e9b828a9476ca404ada0dad78d491b1f470a9b
+SHA1 (patch-src_miners_fs_tracker-power-hal.c) = 01818a9cd346a76465b53aa47330217e3268287b

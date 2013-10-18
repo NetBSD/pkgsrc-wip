@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/06/24 09:39:18 noud4 Exp $
+# $NetBSD: options.mk,v 1.5 2013/10/18 10:53:40 makoto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.meta-tracker
 PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca gnome
@@ -35,10 +35,12 @@ PLIST.totem=		yes
 
 .if !empty(PKG_OPTIONS:Mdoc)
 CONFIGURE_ARGS+=	--enable-gtk-doc=yes
-PLIST_SRC+=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.doc
+# will check later
+#PLIST_SRC+=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.doc
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .endif
+PLIST_SRC+=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.doc
 
 .if !empty(PKG_OPTIONS:Mtests)
 REPLACE_PYTHON+=	tests/functional-tests/*.py \

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2013/06/24 09:38:15 noud4 Exp $
+$NetBSD: patch-aa,v 1.5 2013/10/18 10:53:40 makoto Exp $
 
---- src/libtracker-common/tracker-os-dependant-unix.c.orig	2011-04-27 08:42:28.000000000 +0000
-+++ src/libtracker-common/tracker-os-dependant-unix.c	2013-06-21 14:54:52.000000000 +0000
-@@ -40,7 +40,7 @@
- #define MEM_LIMIT 80 * 1024 * 1024
- #endif
+--- src/libtracker-common/tracker-os-dependant-unix.c.orig	2013-08-01 06:34:06.000000000 +0900
++++ src/libtracker-common/tracker-os-dependant-unix.c	2013-10-16 18:26:34.000000000 +0900
+@@ -41,7 +41,7 @@
+  */
+ #define MEM_LIMIT_MIN 256 * 1024 * 1024
  
 -#if defined(__OpenBSD__) && !defined(RLIMIT_AS)
 +#if !defined(RLIMIT_AS)
