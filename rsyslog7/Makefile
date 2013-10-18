@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/15 14:54:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/18 10:53:10 fhajny Exp $
 #
 
 DISTNAME=		rsyslog-7.4.4
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--enable-cached-man-pages
 CONFIGURE_ARGS+=	--enable-imdiag --enable-impstats --enable-omstdout
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		flex pkg-config
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
