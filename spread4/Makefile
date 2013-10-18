@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/10/18 10:16:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/18 10:53:54 fhajny Exp $
 #
 
 DISTNAME=	spread-src-4.3.0
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	net
-MASTER_SITES=	http://www.spread.org/download/noformdown/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.spread.org/
