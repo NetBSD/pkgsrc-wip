@@ -1,0 +1,14 @@
+$NetBSD: patch-docs_spread.1,v 1.1 2013/10/18 10:16:13 fhajny Exp $
+
+Use proper sysconfdir.
+--- docs/spread.1.orig	2006-02-16 21:24:20.000000000 +0000
++++ docs/spread.1
+@@ -25,7 +25,7 @@ instead of
+ .I ./spread.conf
+ .RS
+ The default config file location. 
+-.I /etc/spread.conf 
++.I @PKG_SYSCONFDIR@/spread.conf 
+ is also searched if a local file is not found.
+ .SH DIAGNOSTICS
+ The daemon will output some startup information to stdout
