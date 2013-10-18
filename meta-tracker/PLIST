@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/10/18 10:53:40 makoto Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/10/18 11:18:00 makoto Exp $
 bin/tracker-control
 bin/tracker-import
 bin/tracker-info
@@ -53,8 +53,12 @@ ${PLIST.flac}lib/${TRACKER_VERSION}/extract-modules/libextract-flac.la
 ${PLIST.html}lib/${TRACKER_VERSION}/extract-modules/libextract-html.la
 lib/${TRACKER_VERSION}/extract-modules/libextract-icon.la
 ${PLIST.jpeg}lib/${TRACKER_VERSION}/extract-modules/libextract-jpeg.la
-lib/${TRACKER_VERSION}/extract-modules/libextract-mp3.la
+${PLIST.mp3}lib/${TRACKER_VERSION}/extract-modules/libextract-mp3.a
+${PLIST.mp3}lib/${TRACKER_VERSION}/extract-modules/libextract-mp3.la
+${PLIST.mp3}lib/${TRACKER_VERSION}/extract-modules/libextract-mp3.so
+${PLIST.mplayer}lib/${TRACKER_VERSION}/extract-modules/libextract-mplayer.a
 ${PLIST.mplayer}lib/${TRACKER_VERSION}/extract-modules/libextract-mplayer.la
+${PLIST.mplayer}lib/${TRACKER_VERSION}/extract-modules/libextract-mplayer.so
 ${PLIST.gsf}lib/${TRACKER_VERSION}/extract-modules/libextract-msoffice-xml.la
 ${PLIST.gsf}lib/${TRACKER_VERSION}/extract-modules/libextract-msoffice.la
 ${PLIST.gsf}lib/${TRACKER_VERSION}/extract-modules/libextract-oasis.la
@@ -64,7 +68,9 @@ lib/${TRACKER_VERSION}/extract-modules/libextract-png.la
 lib/${TRACKER_VERSION}/extract-modules/libextract-ps.la
 lib/${TRACKER_VERSION}/extract-modules/libextract-text.la
 ${PLIST.tiff}lib/${TRACKER_VERSION}/extract-modules/libextract-tiff.la
+${PLIST.totem}lib/${TRACKER_VERSION}/extract-modules/libextract-totem.a
 ${PLIST.totem}lib/${TRACKER_VERSION}/extract-modules/libextract-totem.la
+${PLIST.totem}lib/${TRACKER_VERSION}/extract-modules/libextract-totem.so
 ${PLIST.vorbis}lib/${TRACKER_VERSION}/extract-modules/libextract-vorbis.la
 ${PLIST.xmp}lib/${TRACKER_VERSION}/extract-modules/libextract-xmp.la
 lib/${TRACKER_VERSION}/libtracker-common.la
@@ -159,24 +165,24 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/tracker.mo
 share/tracker/extract-rules/10-abw.rule
 share/tracker/extract-rules/10-dvi.rule
 share/tracker/extract-rules/10-epub.rule
-share/tracker/extract-rules/10-flac.rule
-share/tracker/extract-rules/10-html.rule
+${PLIST.flac}share/tracker/extract-rules/10-flac.rule
+${PLIST.html}share/tracker/extract-rules/10-html.rule
 share/tracker/extract-rules/10-ico.rule
-share/tracker/extract-rules/10-jpeg.rule
-share/tracker/extract-rules/10-mp3.rule
+${PLIST.jpeg}share/tracker/extract-rules/10-jpeg.rule
+${PLIST.mp3}share/tracker/extract-rules/10-mp3.rule
 share/tracker/extract-rules/10-msoffice.rule
 share/tracker/extract-rules/10-oasis.rule
-share/tracker/extract-rules/10-pdf.rule
+${PLIST.pdf}share/tracker/extract-rules/10-pdf.rule
 share/tracker/extract-rules/10-png.rule
 share/tracker/extract-rules/10-ps.rule
-share/tracker/extract-rules/10-tiff.rule
-share/tracker/extract-rules/10-vorbis.rule
-share/tracker/extract-rules/10-xmp.rule
+${PLIST.tiff}share/tracker/extract-rules/10-tiff.rule
+${PLIST.vorbis}share/tracker/extract-rules/10-vorbis.rule
+${PLIST.xmp}share/tracker/extract-rules/10-xmp.rule
 share/tracker/extract-rules/11-msoffice-xml.rule
-share/tracker/extract-rules/15-playlist.rule
+${PLIST.playlist}share/tracker/extract-rules/15-playlist.rule
 share/tracker/extract-rules/90-text-generic.rule
 share/tracker/extract-rules/93-mplayer-generic.rule
-share/tracker/extract-rules/93-totem-generic.rule
+${PLIST.totem}share/tracker/extract-rules/93-totem-generic.rule
 share/tracker/languages/stopwords.da
 share/tracker/languages/stopwords.de
 share/tracker/languages/stopwords.en
@@ -191,8 +197,8 @@ share/tracker/languages/stopwords.pt
 share/tracker/languages/stopwords.ru
 share/tracker/languages/stopwords.sv
 share/tracker/miners/tracker-miner-applications.desktop
-share/tracker/miners/tracker-miner-files.desktop
 ${PLIST.evolution}share/tracker/miners/tracker-miner-evolution.desktop
+share/tracker/miners/tracker-miner-files.desktop
 share/tracker/ontologies/10-xsd.description
 share/tracker/ontologies/10-xsd.ontology
 share/tracker/ontologies/11-rdf.description
@@ -247,9 +253,3 @@ share/vala/vapi/tracker-miner-0.16.deps
 share/vala/vapi/tracker-miner-0.16.vapi
 share/vala/vapi/tracker-sparql-0.16.deps
 share/vala/vapi/tracker-sparql-0.16.vapi
-lib/tracker-0.16/extract-modules/libextract-mplayer.a
-lib/tracker-0.16/extract-modules/libextract-mplayer.la
-lib/tracker-0.16/extract-modules/libextract-mplayer.so
-lib/tracker-0.16/extract-modules/libextract-totem.a
-lib/tracker-0.16/extract-modules/libextract-totem.la
-lib/tracker-0.16/extract-modules/libextract-totem.so

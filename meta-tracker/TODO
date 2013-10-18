@@ -1,1 +1,8 @@
-- PLIST variation by options are not checked yet.
+- PLIST variation by options are not fully checked yet.
+- Combination of options may have some constraint, but not
+  checked, for example,
+  gstreamer and playlist may not be set at the same time ?
+
+  PLIST.mplayer
+  PLIST.totem
+  are flagged by pkglint. Need check the logic also

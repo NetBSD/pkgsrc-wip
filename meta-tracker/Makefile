@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/10/18 10:53:40 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2013/10/18 11:18:00 makoto Exp $
 #
 
 DISTNAME=	tracker-0.16.2
@@ -41,6 +41,7 @@ PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION:C/\.[0-9]+$//}
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
