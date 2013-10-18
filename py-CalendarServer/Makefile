@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/12 13:41:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/18 12:00:10 thomasklausner Exp $
 
 DISTNAME=	CalendarServer-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,6 +37,8 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	bash:run
+
+EGG_NAME=	Calendar_and_Contacts_Server-4.2._r11789M_
 
 REPLACE_BASH+=	bin/caldavd
 

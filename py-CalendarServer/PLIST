@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/12 13:41:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/18 12:00:10 thomasklausner Exp $
 bin/caldavd
 bin/calendarserver_backup
 bin/calendarserver_bootstrap_database
@@ -12,7 +12,7 @@ bin/calendarserver_purge_events
 bin/calendarserver_purge_principals
 bin/calendarserver_shell
 caldavd/caldavd.plist
-${PYSITELIB}/Calendar_and_Contacts_Server-${PKGVERSION}._r11789M_-py2.7.egg-info
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/calendarserver/__init__.py
 ${PYSITELIB}/calendarserver/__init__.pyc
 ${PYSITELIB}/calendarserver/__init__.pyo
