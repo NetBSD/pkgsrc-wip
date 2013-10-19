@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5502 2013/10/18 10:58:15 thomasklausner Exp $
+# $Id: Makefile,v 1.5503 2013/10/19 12:38:26 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -898,6 +898,7 @@ SUBDIR+=	happy
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
 SUBDIR+=	haskell-mode
+SUBDIR+=	hasktags
 SUBDIR+=	hawk
 SUBDIR+=	hawknl
 SUBDIR+=	haydar-fonts
