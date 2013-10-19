@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/08/28 16:52:42 fhajny Exp $
+# $NetBSD: Makefile,v 1.24 2013/10/19 06:44:31 bubuchka Exp $
 
 DISTNAME=	mongodb-src-r2.4.6
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -112,6 +112,7 @@ post-install:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

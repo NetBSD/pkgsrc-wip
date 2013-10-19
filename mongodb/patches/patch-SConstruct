@@ -1,4 +1,4 @@
-$NetBSD: patch-SConstruct,v 1.4 2012/10/02 08:48:46 fhajny Exp $
+$NetBSD: patch-SConstruct,v 1.5 2013/10/19 06:44:31 bubuchka Exp $
 
 Add support for NetBSD/Dragonfly, fix locations.
 --- SConstruct.orig	2012-08-28 05:28:11.000000000 +0000
@@ -72,3 +72,12 @@ Add support for NetBSD/Dragonfly, fix locations.
      if use_system_version_of_library("boost"):
          if not conf.CheckCXXHeader( "boost/filesystem/operations.hpp" ):
              print( "can't find boost headers" )
+@@ -864,7 +895,7 @@ def doConfigure(myenv):
+         Exit(1)
+ 
+     # requires ports devel/libexecinfo to be installed
+-    if freebsd or openbsd:
++    if freebsd or openbsd or netbsd or dragonfly:
+         if not conf.CheckLib("execinfo"):
+             Exit(1)
+ 
