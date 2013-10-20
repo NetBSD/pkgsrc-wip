@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/10/14 10:48:50 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/10/20 18:19:25 szptvlfn Exp $
 
 DISTNAME=	bifunctors-4.1.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
 COMMENT=	Bifunctors
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-semigroupoids/buildlink3.mk"

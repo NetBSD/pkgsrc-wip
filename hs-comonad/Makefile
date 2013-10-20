@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/14 10:37:34 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/20 18:19:25 szptvlfn Exp $
 #
 
 DISTNAME=	comonad-4.0
@@ -6,7 +6,7 @@ CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Comonads
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-contravariant/buildlink3.mk"
