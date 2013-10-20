@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2009/06/17 12:53:22 marko_schuetz Exp $
-
-SHA1 (mcpp-2.7.2.tar.gz) = 703356b7c2cd30d7fb6000625bf3ccc2eb977ecb
-RMD160 (mcpp-2.7.2.tar.gz) = 05bc2c8d8e032e75b8a9b1d22f11c007d5829d1f
-Size (mcpp-2.7.2.tar.gz) = 1533457 bytes

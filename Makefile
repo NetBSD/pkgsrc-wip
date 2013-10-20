@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5503 2013/10/19 12:38:26 szptvlfn Exp $
+# $Id: Makefile,v 1.5504 2013/10/20 15:13:51 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1630,7 +1630,6 @@ SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mce
 SUBDIR+=	mcl
-SUBDIR+=	mcpp
 SUBDIR+=	mcwm
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
