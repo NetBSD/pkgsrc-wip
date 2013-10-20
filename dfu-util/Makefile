@@ -1,37 +1,30 @@
-# $NetBSD: Makefile,v 1.7 2012/09/28 21:24:35 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/20 20:16:17 noud4 Exp $
 #
 
-DISTNAME=		dfu-util-4412
+DISTNAME=		dfu-util-${SVN_TAG.dfu-util}
 CATEGORIES=		comms
-MASTER_SITES=		http://wiki.openmoko.org/
-SVN_REPOSITORY=		https://svn.openmoko.org/trunk/src/host/dfu-util/
-NO_CHECKSUM=		yes
+MASTER_SITES=		#
 
 MAINTAINER=		noud4@home.nl
 HOMEPAGE=		http://wiki.openmoko.org/wiki/Dfu-util
 COMMENT=		Host side of the USB DFU protocol
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		subversion-base>=1.4.2:../../devel/subversion-base
+SVN_REPOSITORIES=	dfu-util
+SVN_ROOT.dfu-util=	http://svn.openmoko.org/trunk/src/host/dfu-util/
+SVN_TAG.dfu-util=	4412
 
-SUBDIR=			${PKGNAME}
+SUBDIR=			dfu-util
 WRKSRC=	${WRKDIR}/${SUBDIR}
 USE_TOOLS+=		autoconf automake tar
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	-prefix=${PREFIX}
 CFLAGS+=		-lusb
 
-do-fetch:
-	if [ ! -f ${DISTDIR}/${SUBDIR:Q}.tar.gz ]; then \
-		cd ${DISTDIR:Q}; \
-		svn export -r ${PKGVERSION} ${SVN_REPOSITORY} ${SUBDIR:Q}; \
-		tar -czf ${SUBDIR:Q}.tar.gz ${SUBDIR:Q}; \
-		${RM} -r ${DISTDIR}/${SUBDIR:Q}; \
-	fi
-
 pre-configure:
 	${CHMOD} u+x ${WRKSRC}/autogen.sh
 	cd ${WRKSRC} && ./autogen.sh
 
+.include "../../wip/mk/svn-package.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
