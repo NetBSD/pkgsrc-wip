@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/10/15 14:54:32 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/10/21 08:30:23 fhajny Exp $
+${PLIST.libgcrypt}bin/rscryutil
+${PLIST.guardtime}bin/rsgtutil
 lib/rsyslog/imdiag.la
 ${PLIST.file}lib/rsyslog/imfile.la
 ${PLIST.gssapi}lib/rsyslog/imgssapi.la
@@ -31,9 +33,14 @@ lib/rsyslog/omruleset.la
 ${PLIST.snmp}lib/rsyslog/omsnmp.la
 lib/rsyslog/omstdout.la
 lib/rsyslog/omtesting.la
+${PLIST.libgcrypt}man/man1/rscryutil.1
+${PLIST.guardtime}man/man1/rsgtutil.1
 man/man5/rsyslog.conf.5
 man/man8/rsyslogd.8
+sbin/msggen
+sbin/rsyslog_diag_hostname
 sbin/rsyslogd
+sbin/zpipe
 share/examples/rc.d/rsyslogd
 ${PLIST.mysql}share/examples/rsyslog/createDB-mysql.sql
 ${PLIST.pgsql}share/examples/rsyslog/createDB-pgsql.sql

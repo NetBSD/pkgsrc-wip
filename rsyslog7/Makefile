@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/10/18 10:53:10 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/21 08:30:23 fhajny Exp $
 #
 
 DISTNAME=		rsyslog-7.4.4
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
@@ -17,6 +18,8 @@ CONFIGURE_ARGS+=	--disable-testbench
 CONFIGURE_ARGS+=	--enable-mmnormalize
 CONFIGURE_ARGS+=	--enable-cached-man-pages
 CONFIGURE_ARGS+=	--enable-imdiag --enable-impstats --enable-omstdout
+CONFIGURE_ARGS+=	--enable-diagtools --enable-usertools
+CONFIGURE_ENV+=		RST2MAN=touch
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		flex pkg-config
