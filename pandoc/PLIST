@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/19 10:48:04 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/10/21 00:02:21 szptvlfn Exp $
 bin/pandoc
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/${HASKELL_VERSION}/Paths_pandoc.hi
@@ -129,27 +129,7 @@ share/${PKGNAME}/data/dzslides/template.html
 share/${PKGNAME}/data/epub.css
 share/${PKGNAME}/data/reference.docx
 share/${PKGNAME}/data/reference.odt
-share/${PKGNAME}/data/s5/default/blank.gif
-share/${PKGNAME}/data/s5/default/bodybg.gif
-share/${PKGNAME}/data/s5/default/framing.css
-share/${PKGNAME}/data/s5/default/iepngfix.htc
-share/${PKGNAME}/data/s5/default/opera.css
-share/${PKGNAME}/data/s5/default/outline.css
-share/${PKGNAME}/data/s5/default/pretty.css
-share/${PKGNAME}/data/s5/default/print.css
-share/${PKGNAME}/data/s5/default/s5-core.css
-share/${PKGNAME}/data/s5/default/slides.css
-share/${PKGNAME}/data/s5/default/slides.js
 share/${PKGNAME}/data/sample.lua
-share/${PKGNAME}/data/slideous/slideous.css
-share/${PKGNAME}/data/slideous/slideous.js
-share/${PKGNAME}/data/slidy/graphics/fold-dim.gif
-share/${PKGNAME}/data/slidy/graphics/fold.gif
-share/${PKGNAME}/data/slidy/graphics/nofold-dim.gif
-share/${PKGNAME}/data/slidy/graphics/unfold-dim.gif
-share/${PKGNAME}/data/slidy/graphics/unfold.gif
-share/${PKGNAME}/data/slidy/scripts/slidy.js
-share/${PKGNAME}/data/slidy/styles/slidy.css
 share/${PKGNAME}/data/templates/default.asciidoc
 share/${PKGNAME}/data/templates/default.beamer
 share/${PKGNAME}/data/templates/default.context
