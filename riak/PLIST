@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2013/07/19 10:38:56 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.15 2013/10/21 13:43:32 fhajny Exp $
 man/man1/riak-admin.1
 man/man1/riak-debug.1
 man/man1/riak.1
@@ -666,8 +666,16 @@ riak/lib/lucene_parser-${VERSION.lucene_parser}/ebin/lucene_scan_test.beam
 riak/lib/lucene_parser-${VERSION.lucene_parser}/include/lucene_parser.hrl
 riak/lib/meck-${VERSION.meck}/ebin/meck.app
 riak/lib/meck-${VERSION.meck}/ebin/meck.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_args_matcher.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_code.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_code_gen.beam
 riak/lib/meck-${VERSION.meck}/ebin/meck_cover.beam
-riak/lib/meck-${VERSION.meck}/ebin/meck_mod.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_expect.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_history.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_matcher.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_proc.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_ret_spec.beam
+riak/lib/meck-${VERSION.meck}/ebin/meck_util.beam
 riak/lib/meck-${VERSION.meck}/priv/vsn.git
 riak/lib/merge_index-${VERSION.merge_index}/ebin/merge_index.app
 riak/lib/merge_index-${VERSION.merge_index}/ebin/merge_index.beam
@@ -1649,14 +1657,15 @@ riak/lib/tools-${VERSION.tools}/priv/cover.tool
 riak/lib/tools-${VERSION.tools}/priv/index.html
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine.app
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine.beam
+riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_access_log_handler.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_app.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_decision_core.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_deps.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_dispatcher.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_error.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_error_handler.beam
+riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_error_log_handler.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_log.beam
-riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_log_handler.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_logger_watcher.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_logger_watcher_sup.beam
 riak/lib/webmachine-${VERSION.webmachine}/ebin/webmachine_mochiweb.beam

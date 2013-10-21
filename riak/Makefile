@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2013/09/09 14:05:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2013/10/21 13:43:31 fhajny Exp $
 
-DISTNAME=		riak-1.4.0
+DISTNAME=		riak-1.4.2
 CATEGORIES=		databases
 MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/1.4/${PKGVERSION}/
 
