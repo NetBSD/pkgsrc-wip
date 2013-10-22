@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5504 2013/10/20 15:13:51 ryo-on Exp $
+# $Id: Makefile,v 1.5505 2013/10/22 13:41:55 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2081,6 +2081,7 @@ SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-POD2-IT
 SUBDIR+=	p5-POSIX-strptime
+SUBDIR+=	p5-Packager-Utils
 SUBDIR+=	p5-PerlIO-Layers
 SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Plucene
@@ -2311,7 +2312,6 @@ SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgconf
 SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
-SUBDIR+=	pkgsrc-status-dependencies
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
 SUBDIR+=	plod
