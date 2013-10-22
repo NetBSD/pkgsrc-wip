@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/26 12:38:21 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/10/22 07:17:23 makoto Exp $
 bin/${NIOS2_TARGET}-cpp
 bin/${NIOS2_TARGET}-gcc
 bin/${NIOS2_TARGET}-gcc-3.4.6
@@ -12,14 +12,6 @@ libexec/gcc/${NIOS2_TARGET}/3.4.6/install-tools/mkheaders
 man/man1/${NIOS2_TARGET}-cpp.1
 man/man1/${NIOS2_TARGET}-gcc.1
 man/man1/${NIOS2_TARGET}-gcov.1
-man/man7/fsf-funding.7
-man/man7/gfdl.7
-man/man7/gpl.7
-info/cpp.info
-info/cppinternals.info
-info/gcc.info
-info/gccinstall.info
-info/gccint.info
 lib/gcc/${NIOS2_TARGET}/3.4.6/crtbegin.o
 lib/gcc/${NIOS2_TARGET}/3.4.6/crtend.o
 lib/gcc/${NIOS2_TARGET}/3.4.6/crti.o
