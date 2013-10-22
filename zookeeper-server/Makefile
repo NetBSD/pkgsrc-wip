@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/19 10:31:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/22 11:48:43 fhajny Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/keeper/keeper-server/}
+PKGREVISION=		1
 COMMENT=		Highly reliable distributed coordination server
 
 USE_JAVA=		yes
@@ -54,7 +55,8 @@ INSTALLATION_DIRS+=	bin libexec sbin share/examples/zookeeper share/zookeeper
 CONF_FILES+=		share/examples/zookeeper/configuration.xsl ${PKG_SYSCONFDIR}/configuration.xsl
 CONF_FILES+=		share/examples/zookeeper/log4j.properties ${PKG_SYSCONFDIR}/log4j.properties
 CONF_FILES+=		share/examples/zookeeper/zoo.cfg ${PKG_SYSCONFDIR}/zoo.cfg
-CONF_FILES+=		share/examples/zookeeper/zookeeper-env.sh ${PKG_SYSCONFDIR}/zookeeper-env.sh
+CONF_FILES_PERMS+=	share/examples/zookeeper/zookeeper-env.sh ${PKG_SYSCONFDIR}/zookeeper-env.sh \
+			${ROOT_USER} ${ROOT_GROUP} 0755
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} JAVA_HOME=${PKG_JAVA_HOME} ant bin-package
