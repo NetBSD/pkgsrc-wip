@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/22 13:54:21 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/22 13:05:16 makoto Exp $
 
 DISTNAME=		tc-2.99.2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -29,6 +29,9 @@ INFO_FILES=		YES
 
 GIT_REPOSITORIES=	tc
 GIT_REPO.tc=		http://github.com/kanchoku/tc.git
+# fatal: unable to access 'http://github.com/kanchoku/tc.git/': SSL certificate problem: unable to get local issuer certificate
+# Add "-c http.sslVerify=false" to git command or,
+PKGSRC_SETENV=          GIT_SSL_NO_VERIFY=true
 
 CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}/${DISTNAME}
 CONFIGURE_ARGS.emacs+=	--datadir=${PREFIX}/share
@@ -76,6 +79,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf	${DESTDIR}${PREFIX}/share/tc
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.tc 	${DESTDIR}${PREFIX}/share/examples/tc
 
-.include "../../editors/emacs/modules.mk"
+.include "../../wip/emacs-current/modules.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
