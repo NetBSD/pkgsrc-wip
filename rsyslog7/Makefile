@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/10/21 08:30:23 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2013/10/23 11:10:25 fhajny Exp $
 #
 
 DISTNAME=		rsyslog-7.4.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
@@ -10,8 +10,6 @@ MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.rsyslog.com/
 COMMENT=		The enhanced syslogd for Unix
 LICENSE=		gnu-gpl-v3
-
-CONFLICTS=		rsyslog-[0-9]*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-testbench
