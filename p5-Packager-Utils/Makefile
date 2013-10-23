@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/22 13:38:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2013/10/23 19:31:59 thomasklausner Exp $
 
 DISTNAME=	p5-Packager-Utils-0.0
 CATEGORIES=	pkgtools
@@ -39,6 +39,7 @@ DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-MetaCPAN-API-[0-9]*:../../devel/p5-MetaCPAN-API
 DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+DEPENDS+=	p5-Module-Pluggable>=4.8:../../devel/p5-Module-Pluggable
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
