@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/10/20 16:23:02 rhialto Exp $
+# $NetBSD: Makefile,v 1.10 2013/10/23 21:32:28 rhialto Exp $
 
 DISTNAME=		pan2-git-2
 CATEGORIES=		news
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--with-gnutls
 # default-off
 #.include "../../sysutils/libnotify07/buildlink3.mk"		# optional
 .include "../../textproc/gtkspell/buildlink3.mk"		# optional
-.include "../../x11/gtk2/buildlink3.mk"
 
+.include "options.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
