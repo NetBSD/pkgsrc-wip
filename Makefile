@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5506 2013/10/23 18:36:57 thomasklausner Exp $
+# $Id: Makefile,v 1.5507 2013/10/25 22:04:16 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -681,6 +681,7 @@ SUBDIR+=	fribid
 SUBDIR+=	fricas
 SUBDIR+=	frobby
 SUBDIR+=	froggymicroblog
+SUBDIR+=	fs-uae
 SUBDIR+=	fs2open
 SUBDIR+=	fslsfonts
 SUBDIR+=	fstobdf
