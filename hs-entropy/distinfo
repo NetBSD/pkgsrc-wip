@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/09/08 08:50:58 szptvlfn Exp $
+$NetBSD: distinfo,v 1.3 2013/10/25 23:33:13 szptvlfn Exp $
 
-SHA1 (entropy-0.2.2.2.tar.gz) = 772087cf6a3a911268d1690e632671b8057b4ca2
-RMD160 (entropy-0.2.2.2.tar.gz) = 75c260b56c4f87d31e33a668abe4db12e37cff3c
-Size (entropy-0.2.2.2.tar.gz) = 4724 bytes
+SHA1 (entropy-0.2.2.4.tar.gz) = b8d89fe765578bf50e31c52222d9e8d7297840e9
+RMD160 (entropy-0.2.2.4.tar.gz) = 570c1502827908e44c5605748b5ce18c9bc3e049
+Size (entropy-0.2.2.4.tar.gz) = 5107 bytes
