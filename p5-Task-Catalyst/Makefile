@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/04 19:11:59 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/10/25 07:23:26 thomasklausner Exp $
 
 DISTNAME=	Task-Catalyst-1.90
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SRI/}
 
@@ -26,7 +26,6 @@ DEPENDS+=	p5-Catalyst-Plugin-Session-Store-File>=0.07:../../www/p5-Catalyst-Plug
 DEPENDS+=	p5-Catalyst-Plugin-Session-State-Cookie>=0.02:../../www/p5-Catalyst-Plugin-Session-State-Cookie
 DEPENDS+=	p5-Catalyst-Plugin-Session-State-URI>=0.02:../../wip/p5-Catalyst-Plugin-Session-State-URI
 DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.05:../../www/p5-Catalyst-Plugin-Authentication
-DEPENDS+=	p5-Catalyst-Plugin-Authentication-Store-DBIC>=0.04:../../www/p5-Catalyst-Plugin-Authentication-Store-DBIC
 DEPENDS+=	p5-Catalyst-Plugin-Authentication-Store-Htpasswd>=0.02:../../wip/p5-Catalyst-Plugin-Authentication-Store-Htpasswd
 DEPENDS+=	p5-Catalyst-Plugin-Authorization-ACL>=0.06:../../wip/p5-Catalyst-Plugin-Authorization-ACL
 DEPENDS+=	p5-Catalyst-Plugin-Authorization-Roles>=0.03:../../www/p5-Catalyst-Plugin-Authorization-Roles
