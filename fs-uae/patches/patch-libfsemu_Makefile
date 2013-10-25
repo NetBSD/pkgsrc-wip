@@ -1,0 +1,36 @@
+$NetBSD: patch-libfsemu_Makefile,v 1.1 2013/10/25 22:02:17 rhialto Exp $
+
+Add support for NetBSD.
+
+--- libfsemu/Makefile.orig	2013-06-25 19:21:16.000000000 +0000
++++ libfsemu/Makefile
+@@ -5,6 +5,8 @@ else ifneq ($(findstring Darwin,$(uname)
+     os = macosx
+ else ifneq ($(findstring FreeBSD,$(uname)),)
+     os = freebsd
++else ifneq ($(findstring NetBSD,$(uname)),)
++    os = netbsd
+ else ifneq ($(findstring OpenBSD,$(uname)),)
+     os = openbsd
+ else
+@@ -32,6 +34,11 @@ else
+ 	ar = $(AR)
+ endif
+ 
++ifeq ($(os), netbsd)
++	CFLAGS += $(X11_CFLAGS)
++	LDFLAGS += $(X11_LDFLAGS)
++endif
++
+ arch :=
+ debug := 0
+ noflags := 0
+@@ -159,6 +166,8 @@ else
+ 		cppflags += -DLINUX
+ 	else ifeq ($(os), freebsd)
+ 		cppflags += -DFREEBSD
++	else ifeq ($(os), netbsd)
++		cppflags += -DNETBSD
+ 	else ifeq ($(os), openbsd)
+ 		cppflags += -DOPENBSD
+ 	endif
