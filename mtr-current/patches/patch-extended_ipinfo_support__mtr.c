@@ -1,4 +1,4 @@
-$NetBSD: patch-extended_ipinfo_support__mtr.c,v 1.2 2013/07/06 16:28:37 yvs4sf Exp $
+$NetBSD: patch-extended_ipinfo_support__mtr.c,v 1.3 2013/10/25 11:50:20 yvs4sf Exp $
 
 extended ipinfo support (mtr.c part)
 https://bugs.launchpad.net/mtr/+bug/701514
@@ -33,11 +33,11 @@ diff -ruN mtr.c.orig mtr.c
  #else
      case 'y':
 @@ -575,7 +582,7 @@
-            "\t\t[--csv|-C] [--raw] [--split] [--mpls] [--no-dns] [--show-ips]\n"
+            "\t\t[--csv|-C] [--raw] [--xml] [--split] [--mpls] [--no-dns] [--show-ips]\n"
             "\t\t[--address interface] [--filename=FILE|-F]\n" /* BL */
  #ifdef IPINFO
 -           "\t\t[--ipinfo=item_no|-y item_no]\n"
 +           "\t\t[--ipinfo=[-orig,]no[,no...] | -y [-orig,]no[,no...] ]\n"
             "\t\t[--aslookup|-z]\n"
  #endif
-            "\t\t[--psize=bytes/-s bytes]\n"            /* ok */
+            "\t\t[--psize=bytes/-s bytes] [--order fields]\n"            /* ok */
