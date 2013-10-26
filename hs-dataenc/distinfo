@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/03/04 07:21:36 phonohawk Exp $
+$NetBSD: distinfo,v 1.8 2013/10/26 22:40:15 szptvlfn Exp $
 
-SHA1 (dataenc-0.14.0.3.tar.gz) = 5daba3d2e82800d8788e7a5bc0572831b52ad46f
-RMD160 (dataenc-0.14.0.3.tar.gz) = d746dbb1f2cee6fea95bf6c5a5f91273f4fa8fa3
-Size (dataenc-0.14.0.3.tar.gz) = 12911 bytes
+SHA1 (dataenc-0.14.0.5.tar.gz) = 583ccc82b409938875a446b23d9b09c7f03ae01c
+RMD160 (dataenc-0.14.0.5.tar.gz) = 07100901140c42532be4408628ca5bb5a9a11720
+Size (dataenc-0.14.0.5.tar.gz) = 12902 bytes
