@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2013/10/13 09:47:14 leot1990 Exp $
+$NetBSD: patch-ab,v 1.2 2013/10/26 20:46:53 leot1990 Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
 o Build and link with openjpeg-2.0
+o libcurl (www/curl) support
 
 --- Makerules.orig	2013-08-14 12:41:20.000000000 +0000
 +++ Makerules
-@@ -24,32 +24,6 @@ else
+@@ -24,52 +24,26 @@ else
  $(error unknown build setting: '$(build)')
  endif
  
@@ -38,7 +39,14 @@ o Build and link with openjpeg-2.0
  ifeq "$(shell pkg-config --exists libcrypto && echo yes)" "yes"
  SYS_OPENSSL_CFLAGS = -DHAVE_OPENSSL $(shell pkg-config --cflags libcrypto)
  SYS_OPENSSL_LIBS = $(shell pkg-config --libs libcrypto)
-@@ -62,14 +36,12 @@ SYS_X11_LIBS = $(shell pkg-config --libs
+ endif
+ 
++SYS_CURL_CFLAGS = $(shell pkg-config --cflags libcurl)
+ SYS_CURL_DEPS = -lpthread -lrt
++SYS_CURL_LIBS = $(shell pkg-config --libs libcurl)
+ 
+ SYS_X11_CFLAGS = $(shell pkg-config --cflags x11 xext)
+ SYS_X11_LIBS = $(shell pkg-config --libs x11 xext)
  
  SYS_FREETYPE_CFLAGS = $(shell pkg-config --cflags freetype2)
  SYS_FREETYPE_LIBS = $(shell pkg-config --libs freetype2)
