@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/10/26 23:21:09 thomasklausner Exp $
+
+SHA1 (patch-Makefile) = 7f1da7136af04cb4de2acbc9396ac16fcc7684a7
+SHA1 (patch-config_configure) = a7d4dcdda0a712ac18f0edab91f7fe972f1db53b
+SHA1 (patch-t_test-cat-file.sh) = d018b88135ac7a7acc74763908d36ccb4a9256fe
+SHA1 (patch-t_test-meta.sh) = 363ddab56df9109b7590c054bac89a96d0ee7c4f
