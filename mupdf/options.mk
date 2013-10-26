@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/10/26 20:48:18 leot1990 Exp $
+# $NetBSD: options.mk,v 1.2 2013/10/26 22:26:29 leot1990 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mupdf
 PKG_SUPPORTED_OPTIONS=	curl
@@ -8,9 +8,9 @@ PKG_SUPPORTED_OPTIONS=	curl
 #
 # curl support
 #
-.if !empty(PKG_OPTIONS.Mcurl)
-.  include "../../mk/pthread.buildlink3.mk"
-.  include "../../www/curl/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mcurl)
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .else
 MAKE_FLAGS+=	NOCURL=yes
 .endif
