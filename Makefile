@@ -1,5 +1,4 @@
-# $Id: Makefile,v 1.5508 2013/10/26 20:31:33 bartoszkuzma Exp $
-#
+# $Id: Makefile,v 1.5509 2013/10/26 23:22:18 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -250,6 +249,7 @@ SUBDIR+=	bsnmp
 SUBDIR+=	bss
 SUBDIR+=	bsvc
 SUBDIR+=	btscanner
+SUBDIR+=	bub-git
 SUBDIR+=	bub-n-bros
 SUBDIR+=	bunny
 SUBDIR+=	busybox
