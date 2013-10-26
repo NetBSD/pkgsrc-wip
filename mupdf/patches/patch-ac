@@ -1,6 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2013/10/13 09:47:14 leot1990 Exp $
+$NetBSD: patch-ac,v 1.2 2013/10/26 18:45:09 leot1990 Exp $
 
-libtool support and install target cleanup.
+o libtool support 
+o Install target cleanup
+o Install only one "mupdf" binary, prefer the featureful one and always
+ install it as "mupdf"
 
 --- Makefile.orig	2013-08-14 12:41:20.000000000 +0000
 +++ Makefile
@@ -152,14 +155,16 @@ libtool support and install target cleanup.
  endif
  
  ifeq "$(NOX11)" ""
- MUVIEW_X11 := $(OUT)/mupdf-x11
+-MUVIEW_X11 := $(OUT)/mupdf-x11
++MUVIEW_X11 := $(OUT)/mupdf
  $(MUVIEW_X11) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS)
 -$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
 +$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
  	$(LINK_CMD) $(X11_LIBS)
  
  ifeq "$(NOCURL)" ""
- MUVIEW_X11_CURL := $(OUT)/mupdf-x11-curl
+-MUVIEW_X11_CURL := $(OUT)/mupdf-x11-curl
++MUVIEW_X11_CURL := $(OUT)/mupdf
  $(MUVIEW_X11_CURL) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS) $(CURL_LIB)
 -$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.o x11_image.o pdfapp.o curl_stream.o)
 +$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.lo x11_image.lo pdfapp.lo curl_stream.lo)
@@ -175,7 +180,21 @@ libtool support and install target cleanup.
  	$(LINK_CMD) $(X11_LIBS) $(V8_LIBS)
  endif
  endif
-@@ -286,24 +275,26 @@ libs: $(INSTALL_LIBS)
+@@ -260,7 +249,12 @@ MUVIEW := $(MUVIEW_X11)
+ MUVIEW_V8 := $(MUVIEW_X11_V8)
+ MUVIEW_CURL := $(MUVIEW_X11_CURL)
+ 
+-INSTALL_APPS := $(MUDRAW) $(MUTOOL) $(MUVIEW) $(MUJSTEST_V8) $(MUVIEW_V8) $(MUVIEW_CURL)
++INSTALL_APPS := $(MUDRAW) $(MUTOOL)
++ifeq "$(NOCURL)" ""
++INSTALL_APPS += $(MUVIEW_CURL)
++else ifeq "$(NOX11)" ""
++INSTALL_APPS += $(MUVIEW)
++endif
+ 
+ # --- Format man pages ---
+ 
+@@ -286,24 +280,26 @@ libs: $(INSTALL_LIBS)
  apps: $(INSTALL_APPS)
  
  install: libs apps

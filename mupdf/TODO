@@ -17,7 +17,6 @@ o ${WRKSRC}/docs/thirdparty.txt may help for adding correct version of the
 
 What should be done before importing to print/mupdf? (and now the TODO!)
 ========================================================================
-o mupdf binary should be installed as "mupdf" not as "mupdf-x11"...
 o buildlink3.mk and files/mupdf.pc may need to be updated and reviewed.
 o dependencies of mupdf (if there are any) NOT tested. If some package depends
   on mupdf it should be tested too.
