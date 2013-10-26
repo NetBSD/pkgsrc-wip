@@ -17,9 +17,6 @@ o ${WRKSRC}/docs/thirdparty.txt may help for adding correct version of the
 
 What should be done before importing to print/mupdf? (and now the TODO!)
 ========================================================================
-o buildlink3.mk and files/mupdf.pc may need to be updated and reviewed.
-o dependencies of mupdf (if there are any) NOT tested. If some package depends
-  on mupdf it should be tested too.
 o More cleanup... I have just two eyeballs and maybe I have missed something
   around. Please test and improve the package!
 o NOCURL and V8_PRESENT options should go to options.mk. Actually IMHO it's
