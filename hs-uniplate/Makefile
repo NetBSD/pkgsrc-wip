@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/08/15 04:38:03 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2013/10/26 22:12:42 szptvlfn Exp $
 #
 
-DISTNAME=	uniplate-1.6.11
+DISTNAME=	uniplate-1.6.12
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
