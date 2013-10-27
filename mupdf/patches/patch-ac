@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2013/10/27 10:19:52 leot1990 Exp $
+$NetBSD: patch-ac,v 1.4 2013/10/27 11:28:55 leot1990 Exp $
 
 o libtool support 
 o Install target cleanup
@@ -163,7 +163,7 @@ o Install only one "mupdf" binary, prefer the featureful one and always
  
  ifeq "$(NOX11)" ""
 -MUVIEW_X11 := $(OUT)/mupdf-x11
-+MUVIEW_X11 := $(OUT)/mupdf
++MUVIEW_X11 := $(OUT)/platform/x11/mupdf
  $(MUVIEW_X11) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS)
 -$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
 +$(MUVIEW_X11) : $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
@@ -171,7 +171,7 @@ o Install only one "mupdf" binary, prefer the featureful one and always
  
  ifeq "$(NOCURL)" ""
 -MUVIEW_X11_CURL := $(OUT)/mupdf-x11-curl
-+MUVIEW_X11_CURL := $(OUT)/mupdf
++MUVIEW_X11_CURL := $(OUT)/platform/x11/curl/mupdf
  $(MUVIEW_X11_CURL) : $(MUPDF_LIB) $(MUPDF_JS_NONE_LIB) $(THIRD_LIBS) $(CURL_LIB)
 -$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.o x11_image.o pdfapp.o curl_stream.o)
 +$(MUVIEW_X11_CURL) : $(addprefix $(OUT)/platform/x11/curl/, x11_main.lo x11_image.lo pdfapp.lo curl_stream.lo)
