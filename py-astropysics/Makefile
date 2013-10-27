@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/11/14 00:16:12 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2013/10/27 20:38:29 jihbed Exp $
 #
 
 DISTNAME=	Astropysics-0.1.dev-r596
 PKGNAME=	${PYPKGPREFIX}-Astropysics-0.1
 PKGREVISION=	2
-CATEGORIES=	misc
+CATEGORIES=	math
 MASTER_SITES=	http://pypi.python.org/packages/source/A/Astropysics/
 
 MAINTAINER=	jihbed.research@gmail.com
