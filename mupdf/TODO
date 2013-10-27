@@ -19,7 +19,3 @@ What should be done before importing to print/mupdf? (and now the TODO!)
 ========================================================================
 o More cleanup... I have just two eyeballs and maybe I have missed something
   around. Please test and improve the package!
-o NOCURL and V8_PRESENT options should go to options.mk. Actually IMHO it's
-  better to only add the curl support. v8 seems that is only in pkgsrc-wip.
-  However, adding an options.mk is the last *and* least step before importing
-  it to print/mupdf.
