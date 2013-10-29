@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2013/06/04 07:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2013/10/29 21:15:09 jihbed Exp $
 
-VERSION=	0.22.0
+VERSION=	1.0.0
 DISTNAME=	pylint-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.logilab.org/pub/pylint/
+MASTER_SITES=	https://pypi.python.org/packages/source/p/pylint/
 
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.logilab.org/project/pylint
@@ -11,18 +11,20 @@ COMMENT=	Python code static checker
 LICENSE=    	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	${PYPKGPREFIX}-astroid>=1.0.1:../../wip/py-astroid
+
+USE_LANGUAGES=	# none
 
 DOCDIR= ${PREFIX}/share/doc/pylint
 INSTALLATION_DIRS=  ${DOCDIR} ${PKGMANDIR}/man1
 
-#USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${DOCDIR}
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../lang/python/egg.mk"
-.include "../../devel/py-logilab-astng/buildlink3.mk"
+BUILDLINK_API_DEPENDS.py-logilab-common+= ${PYPKGPREFIX}-logilab-common>=0.53.0
 .include "../../devel/py-logilab-common/buildlink3.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
