@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5510 2013/10/30 04:27:30 asau Exp $
+# $Id: Makefile,v 1.5511 2013/10/30 14:22:43 makoto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3291,6 +3291,7 @@ SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
 SUBDIR+=	texlive-texmf-minimal
+SUBDIR+=	texlive2013
 SUBDIR+=	tftp-hpa
 SUBDIR+=	thabit-ttf
 SUBDIR+=	thcrut
