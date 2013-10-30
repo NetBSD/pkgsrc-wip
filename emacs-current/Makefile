@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2013/08/27 05:25:59 obache Exp $
+# $NetBSD: Makefile,v 1.69 2013/10/30 13:51:08 obache Exp $
 #
 
 .include	"version.mk"
@@ -7,7 +7,7 @@ PKGNAME=	emacs24-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSIO
 CATEGORIES=	editors
 MASTER_SITES=	#
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
