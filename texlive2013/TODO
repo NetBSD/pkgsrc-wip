@@ -1,0 +1,66 @@
+Already done in following page (?)
+  http://www.babafou.eu.org/texlive-netbsd/
+
+TODO
+- Interpreter path
+  So many files are originally flagged in 
+     Checking for non-existent script interpreters in texlive-20130530
+  Now employing files/subst-shebang perl script to convert them
+  (And there may be many redundency in this wip package).
+
+- Does it really fit to pkgsrc ?
+- How does user use tlmgr ?
+- Conflicts to other texlive-* packages are not checked yet
+- Configure
+  Many hardcoded version name in libs
+  May have '--with-system-cairo' type configure_arg not use cairo included,
+  .. not checked in detail
+- pkglint flags as
+  WARN: PLIST:xx: The bin/ directory should not have subdirectories.
+- LICENSE= not taken care yet (texlive-license or Public Domain ?)
+- Following files are not checked yet:
+  README.config
+  -rw-r--r--   1 makoto  wheel    1196 Aug 30  2011 README.cross
+  -rw-r--r--   1 makoto  wheel    5633 Nov 14  2012 README.distro
+  -rw-r--r--   1 makoto  wheel    8229 Jan  4  2013 
+
+- I was looking for pxdvi (and platex) in TeXLive, but it is not included yet
+  (for this configuration of Makefile)
+  See 
+  http://tutimura.ath.cx/ptexlive/?tlptexlive%A5%EA%A5%DD%A5%B8%A5%C8%A5%EA
+  Also to check
+  http://www.tug.org/~preining/tlptexlive/
+
+- (Being distributed) binary for TeXLive 2013 iso sizes 2.3GB. This package 
+  produces some 500MB tgz. May be missing something.
+
+- There is a Build script to do the same thing. This has to be checked.
+
+DONE
+ - NetBSD/amd64 6.1.2  make package
+   MAKE_JOBS=4 X11_TYPE=modular
+ - NetBSD/amd64 6.1.2 make package
+   MAKE_JOBS=8 X11_TYPE=
+
+warning: . . texmf-dist/scripts/arara/arara.sh: #! without a following slash.
+warning: . . texmf-dist/scripts/arara/arara.sh: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/bibexport/bibexport.sh: #! without a following slash.
+warning: . . texmf-dist/scripts/bibexport/bibexport.sh: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/context/perl/mptopdf.pl: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/dtxgen/dtxgen: #! without a following slash.
+warning: . . texmf-dist/scripts/dtxgen/dtxgen: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/installfont/installfont-tl: #! without a following slash.
+warning: . . texmf-dist/scripts/installfont/installfont-tl: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/latexfileversion/latexfileversion: #! without a following slash.
+warning: . . texmf-dist/scripts/latexfileversion/latexfileversion: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/listbib/listbib: #! without a following slash.
+warning: . . texmf-dist/scripts/listbib/listbib: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/ltxfileinfo/ltxfileinfo: #! without a following slash.
+warning: . . texmf-dist/scripts/ltxfileinfo/ltxfileinfo: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/lua2dox/lua2dox_filter: #! without a following slash.
+warning: . . texmf-dist/scripts/lua2dox/lua2dox_filter: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/pkfix/pkfix.pl: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/pst2pdf/pst2pdf.pl: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/thumbpdf/thumbpdf.pl: executable bit is set on non-executable file.
+warning: . . texmf-dist/scripts/vpe/vpe.pl: executable bit is set on non-executable file.
+0 errors and 21 warnings.
