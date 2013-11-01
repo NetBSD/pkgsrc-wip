@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/27 09:21:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/01 23:25:09 thomasklausner Exp $
 
 DISTNAME=	bup-0.25rc3
 CATEGORIES=	sysutils
@@ -15,6 +15,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # actually a TEST_DEPENDS
 BUILD_DEPENDS+=	rsync>=3.0:../../net/rsync
+BUILD_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
 GIT_REPOSITORIES=	bup
 GIT_REPO.bup=		git://github.com/bup/bup.git
