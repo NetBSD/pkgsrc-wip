@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/10/22 07:17:23 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2013/11/01 14:06:50 makoto Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
 PKGNAME=		nios2-gcc-${PKG_VERSION}
-#PKGREVISION=		1
 CATEGORIES=		cross
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU gcc for Altera FPGA Nios2 processor
@@ -29,6 +28,7 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--host=${MACHINE_ARCH}--${LOWER_OPSYS}
 CONFIGURE_ARGS+=	--build=${MACHINE_ARCH}--${LOWER_OPSYS}
 
+# pkglint flags, but seems necessary not generating dir file
 INFO_FILES=		no
 
 #.include "../../devel/gmp/buildlink3.mk"  # 4.4 or later
@@ -37,7 +37,7 @@ INFO_FILES=		no
 # to avoid conflict with binutils (to be fixed by more sophisticated way)
 post-install:
 	${RM}  ${DESTDIR}${CROSSBASE}/lib/libiberty.a
-#  to avoid conflict wit mingw-w64-gcc-4.5.1 
+#  to avoid conflict wit mingw-w64-gcc-4.5.1
 	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/fsf-funding.7
 	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gfdl.7
 	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gpl.7
