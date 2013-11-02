@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/10/18 10:53:40 makoto Exp $
+$NetBSD: distinfo,v 1.8 2013/11/02 06:15:03 makoto Exp $
 
-SHA1 (tracker-0.16.2.tar.xz) = 9772281e8389ae83147eea80e670587294690949
-RMD160 (tracker-0.16.2.tar.xz) = 8d2b67ad20d0227b287ce76e4f310dcbace3212f
-Size (tracker-0.16.2.tar.xz) = 5984656 bytes
+SHA1 (tracker-0.16.3.tar.xz) = 0e660777973224b112d9ce459fe6fda1aa33a241
+RMD160 (tracker-0.16.3.tar.xz) = 82e5fde9d99948e871e41d88ba8091de2aa040ff
+Size (tracker-0.16.3.tar.xz) = 5995068 bytes
 SHA1 (patch-aa) = 1ce6811b3a24b83efe68f8081c95d8168a0c9db5
 SHA1 (patch-ad) = aa00117a7092cbc3713693f9f9b591bcc1739aab
 SHA1 (patch-ae) = 7b7d2a550af8d4deae04981c06efe328cbf0e166
