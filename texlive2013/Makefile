@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/10/30 14:16:18 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/02 13:01:38 makoto Exp $
 
 DISTNAME=	texlive-20130530-source
 #PKGNAME=	${DISTNAME:S/-source//}
-PKGNAME=	texlive2013-0.1
+PKGNAME=	texlive2013-0.2
 #LICENSE=	texlive-license
 #BROKEN=		Still getting ERROR: [check-interpreter.mk], and NOT fixed yet.
 
@@ -93,7 +93,6 @@ REPLACE_BASH=	\
 REPLACE_AWK=	libs/freetype2/freetype-2.4.11/builds/atari/deflinejoiner.awk
 
 # See files/swap-shebang for REPLACE_PERL equivalent
-
 SUBST_CLASSES+=		tlu
 SUBST_STAGE.tlu=	post-patch
 SUBST_MESSAGE.tlu=	Replacing /usr/bin/env texlua to ${PREFIX}/bin/texlua
@@ -113,6 +112,11 @@ SUBST_MESSAGE.wish=	Replacing /usr/bin/env wish to ${PREFIX}/bin/wish
 SUBST_FILES.wish=	texk/texlive/linked_scripts/epspdf/epspdftk.tcl
 SUBST_SED.wish=		'-e s,\#!/usr/bin/env wish,\#!${PREFIX}/bin/wish,'
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_MESSAGE.prefix=	Adding ${PREFIX}/include for configure
+SUBST_FILES.prefix=	configure texk/web2c/configure
+SUBST_SED.prefix=	'-e s,@@PREFIX@@,${PREFIX},'
 
 post-patch:
 	(cd ${WRKDIR}; ${PERL5} ${FILESDIR}/subst-sheban -P ${PREFIX} )
@@ -121,7 +125,7 @@ do-configure:
 	(if [ ! -d ${WRKDIR}/build ]; then ${MKDIR} ${VPATHWRKDIR};fi)
 	(cd ${VPATHWRKDIR}; \
 	env ${CONFIGURE_ENV} \
-	sh ${WRKSRC}/configure --prefix=${PREFIX})
+	sh ${WRKSRC}/configure --prefix=${PREFIX} ${CONFIGURE_ARGS})
 
 do-build:
 	(cd ${VPATHWRKDIR}; env ${MAKE_ENV} ${GMAKE} )
@@ -139,7 +143,7 @@ post-install:
          -t ${MACHINE_ARCH}-unknown-${OPSYSL}${OS_VERSION}/texlua \
 	 -d \
 	)
-
+.include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 # for native only
 #include "../../mk/x11.buildlink3.mk"
