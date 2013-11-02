@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/11/01 23:25:09 thomasklausner Exp $
+$NetBSD: distinfo,v 1.3 2013/11/02 00:15:37 thomasklausner Exp $
 
 SHA1 (patch-Makefile) = 7f1da7136af04cb4de2acbc9396ac16fcc7684a7
 SHA1 (patch-cmd_import-rdiff-backup-cmd.sh) = 0253b65ef21c2520633d44768254341e1275e3f2
 SHA1 (patch-config_configure) = a7d4dcdda0a712ac18f0edab91f7fe972f1db53b
-SHA1 (patch-t_test-cat-file.sh) = d018b88135ac7a7acc74763908d36ccb4a9256fe
+SHA1 (patch-t_test-cat-file.sh) = 42b7d172b89a9cbf3cc336b49e8ae39cc1fe916a
 SHA1 (patch-t_test-meta.sh) = 363ddab56df9109b7590c054bac89a96d0ee7c4f
 SHA1 (patch-t_test.sh) = 8b12e8d5d97ca6bba20c2cd33ed72fe34cee26ea
