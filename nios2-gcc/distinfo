@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/09/27 00:37:02 makoto Exp $
+$NetBSD: distinfo,v 1.3 2013/11/03 11:10:18 makoto Exp $
 
-SHA1 (nios2_gnu_gcc3_10.0.tar.gz) = db28844deb79c416d2ded7fafa9b497ff4fa355c
-RMD160 (nios2_gnu_gcc3_10.0.tar.gz) = 67f8d48eb49366154efb3fb9c177a978a7768ce5
-Size (nios2_gnu_gcc3_10.0.tar.gz) = 87391346 bytes
-SHA1 (patch-aa) = 33c61a420b37b81e85f5d9a4f4962f4ad03b41ea
-SHA1 (patch-ab) = 92c3ae871f7772553c66145cf606bcfcef4ea64d
+SHA1 (nios2_gnu_gcc4_13.0.gz) = 1df8e0ebd1f0e42ab4dd8a507c0a3dc85c1d598b
+RMD160 (nios2_gnu_gcc4_13.0.gz) = 5331366fc1ab307909bbe6a2ef1fc11d70b0f523
+Size (nios2_gnu_gcc4_13.0.gz) = 110799088 bytes
+SHA1 (patch-aa) = 523c37419fdef29355624c7d1a38e5cd61cef194
+SHA1 (patch-libjava_classpath_scripts_loc) = cb0c2e1b5e8cd3f213c4ecc6536df5587b61dc45
