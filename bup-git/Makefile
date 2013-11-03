@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/01 23:25:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/03 01:33:07 thomasklausner Exp $
 
 DISTNAME=	bup-0.25rc3
 CATEGORIES=	sysutils
@@ -89,6 +89,7 @@ REPLACE_PYTHON+=	t/mksock
 REPLACE_PYTHON+=	t/root-status
 REPLACE_PYTHON+=	t/unknown-owner
 
+REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
 REPLACE_BASH+=		t/compare-trees
 REPLACE_BASH+=		t/configure-sampledata
 REPLACE_BASH+=		t/subtree-hash
