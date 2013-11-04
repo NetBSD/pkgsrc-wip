@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/04 01:01:32 ishit Exp $
+${RUBY_VENDORLIB}/i486-netbsdelf/marisa.${RUBY_DLEXT}
