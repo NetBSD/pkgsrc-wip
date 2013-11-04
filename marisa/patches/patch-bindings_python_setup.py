@@ -1,4 +1,6 @@
-$NetBSD: patch-bindings_python_setup.py,v 1.1 2013/11/04 00:49:31 ishit Exp $
+$NetBSD: patch-bindings_python_setup.py,v 1.2 2013/11/04 00:55:12 ishit Exp $
+
+add version for egg file's file name.
 
 --- bindings/python/setup.py.orig	2011-05-14 05:20:52.000000000 +0000
 +++ bindings/python/setup.py
