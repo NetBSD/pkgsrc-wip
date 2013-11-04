@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5512 2013/11/02 13:05:15 makoto Exp $
+# $Id: Makefile,v 1.5513 2013/11/04 01:20:28 ishit Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1614,6 +1614,7 @@ SUBDIR+=	map-browse
 SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
+SUBDIR+=	marisa
 SUBDIR+=	marsyas
 SUBDIR+=	mashpodder
 SUBDIR+=	matanza
@@ -2135,6 +2136,7 @@ SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-RSS-LibXML
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-biblatex-biber
+SUBDIR+=	p5-marisa
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
 SUBDIR+=	p5-spf-policyd
@@ -2619,6 +2621,7 @@ SUBDIR+=	py-lsqfit
 SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-magic
 SUBDIR+=	py-magnitude
+SUBDIR+=	py-marisa
 SUBDIR+=	py-mark
 SUBDIR+=	py-mcint
 SUBDIR+=	py-mcview
@@ -3029,6 +3032,7 @@ SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-git
+SUBDIR+=	ruby-marisa
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-trollop
