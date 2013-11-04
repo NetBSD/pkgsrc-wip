@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5513 2013/11/04 01:20:28 ishit Exp $
+# $Id: Makefile,v 1.5514 2013/11/04 22:26:24 pettai Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1843,7 +1843,6 @@ SUBDIR+=	nostromo
 SUBDIR+=	notify-sharp
 SUBDIR+=	notmuch
 SUBDIR+=	nsc2ke
-SUBDIR+=	nsd4-svn
 SUBDIR+=	nsp
 SUBDIR+=	nspr
 SUBDIR+=	nss-pam-ldapd
