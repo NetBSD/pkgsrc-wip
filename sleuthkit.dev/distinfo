@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2009/02/19 15:53:18 fulviociriaco Exp $
-
-SHA1 (sleuthkit-3.0.1.tar.gz) = a578d02c026ccb4389fd463445d9e7d329aeeaf9
-RMD160 (sleuthkit-3.0.1.tar.gz) = 966613ef87a5523134b2d6482ee834fffb98b1ee
-Size (sleuthkit-3.0.1.tar.gz) = 814032 bytes

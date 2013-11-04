@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5514 2013/11/04 22:26:24 pettai Exp $
+# $Id: Makefile,v 1.5515 2013/11/04 22:28:17 pettai Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3120,8 +3120,6 @@ SUBDIR+=	sjg-mk-files
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slashem
 SUBDIR+=	slate
-SUBDIR+=	sleuthkit
-SUBDIR+=	sleuthkit.dev
 SUBDIR+=	slideml
 SUBDIR+=	slim
 SUBDIR+=	slime
