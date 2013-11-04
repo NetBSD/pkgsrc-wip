@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/04 00:56:50 ishit Exp $
+${PYSITELIB}/_marisa.so
+${PYSITELIB}/marisa.py
+${PYSITELIB}/marisa.pyc
+${PYSITELIB}/marisa.pyo
+${PYSITELIB}/${EGG_FILE}
