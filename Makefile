@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5515 2013/11/04 22:28:17 pettai Exp $
+# $Id: Makefile,v 1.5516 2013/11/04 22:38:24 pettai Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1655,7 +1655,6 @@ SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	mime-support
-SUBDIR+=	mimedefang
 SUBDIR+=	min12xxw
 SUBDIR+=	mingw-w64-binutils
 SUBDIR+=	mingw-w64-crt
