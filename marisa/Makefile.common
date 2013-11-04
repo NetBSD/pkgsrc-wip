@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/11/04 00:45:48 ishit Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/11/04 00:49:31 ishit Exp $
 # used by wip/p5-marisa/Makefile
 # used by wip/py-marisa/Makefile
 # used by wip/ruby-marisa/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://marisa-trie.googlecode.com/files/
 
 DISTINFO_FILE=  ${.CURDIR}/../../wip/marisa/distinfo
-#PATCHDIR=       ${.CURDIR}/../../wip/marisa/patches
+PATCHDIR=       ${.CURDIR}/../../wip/marisa/patches
 
 MAINTAINER=	ishit@users.sourceforge.net
 HOMEPAGE=	http://code.google.com/p/marisa-trie/
