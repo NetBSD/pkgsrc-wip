@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/11/05 19:00:52 jihbed Exp $
+
+SHA1 (toeplitz-0.1.tar.gz) = 804026ded6dd3aed9e2f69023066c6405af35ea6
+RMD160 (toeplitz-0.1.tar.gz) = c98371b0e4f6f89fe654c3a28ff8c6e9f062f9aa
+Size (toeplitz-0.1.tar.gz) = 20830 bytes
+SHA1 (patch-setup.py) = da022215c10d56a34c9150db785816226c651198
