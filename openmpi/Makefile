@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2013/11/05 13:37:15 asau Exp $
+# $NetBSD: Makefile,v 1.73 2013/11/05 22:34:15 asau Exp $
 
-DISTNAME=	openmpi-1.7.1
-#PKGNAME=	openmpi-1.7.1
+DISTNAME=	openmpi-1.7.4a1r29587
+PKGNAME=	openmpi-1.7.3.99.29587
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.7/downloads/ \
 		http://www.open-mpi.org/nightly/v1.7/
@@ -13,6 +13,7 @@ COMMENT=	Open source MPI-2 implementation
 
 MPI_SUBPREFIX=		openmpi
 MPI_PREFIX=		$(LOCALBASE)/$(MPI_SUBPREFIX)
+#MPI_PREFIX=		$(LOCALBASE)
 INSTALLATION_PREFIX=	$(MPI_PREFIX)
 
 .include "../../mk/bsd.prefs.mk"
