@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/08/17 08:00:20 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/05 13:16:17 szptvlfn Exp $
 
-DISTNAME=	lifted-base-0.2.1.0
+DISTNAME=	lifted-base-0.2.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
