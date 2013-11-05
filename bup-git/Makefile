@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/11/03 01:33:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/05 16:17:35 thomasklausner Exp $
 
 DISTNAME=	bup-0.25rc3
 CATEGORIES=	sysutils
@@ -88,6 +88,13 @@ REPLACE_PYTHON+=	t/id-other-than
 REPLACE_PYTHON+=	t/mksock
 REPLACE_PYTHON+=	t/root-status
 REPLACE_PYTHON+=	t/unknown-owner
+
+SUBST_CLASSES+=		python-c
+SUBST_SED.python-c+=	-e 's,python -c,${PYTHONBIN} -c,'
+SUBST_STAGE.python-c+=	pre-configure
+SUBST_FILES.python-c+=	t/lib.sh
+SUBST_FILES.python-c+=	t/test-meta.sh
+SUBST_MSG.python-c+=	Fixing python executable in tests.
 
 REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
 REPLACE_BASH+=		t/compare-trees
