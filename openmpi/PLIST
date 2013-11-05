@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2013/06/21 17:07:52 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.25 2013/11/05 13:37:15 asau Exp $
 bin/mpic++
 bin/mpicc
 bin/mpicxx
@@ -512,6 +512,8 @@ man/man7/orte_filem.7
 man/man7/orte_hosts.7
 man/man7/orte_snapc.7
 man/man7/orte_sstore.7
+share/examples/openmpi/cshrc
+share/examples/openmpi/shrc
 share/openmpi/amca-param-sets/example.conf
 share/openmpi/examples/openmpi-default-hostfile
 share/openmpi/examples/openmpi-mca-params.conf
@@ -587,5 +589,3 @@ share/openmpi/mpifort-wrapper-data.txt
 share/openmpi/openmpi-valgrind.supp
 share/openmpi/ortec++-wrapper-data.txt
 share/openmpi/ortecc-wrapper-data.txt
-etc/cshrc
-etc/shrc
