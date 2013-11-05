@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/11/05 17:46:51 jihbed Exp $
+
+SHA1 (recluse-0.3.1.tar.gz) = 710352fb0cbdc319593aa6dc07a87005538ad9af
+RMD160 (recluse-0.3.1.tar.gz) = 01f056860bf5d9effaf99251320108cd549945cc
+Size (recluse-0.3.1.tar.gz) = 460083 bytes
+SHA1 (patch-setup.py) = 207749f71253c4105925a8b91631aa6b61254ba0
