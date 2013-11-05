@@ -1,1 +1,2 @@
-Needs porting for NetBSD; and at least PLIST fixes for other platforms.
+Config file needs fixing.
+Untested.

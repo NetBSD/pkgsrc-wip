@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1 2013/11/04 00:23:47 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2013/11/05 14:56:42 thomasklausner Exp $
 
 SHA1 (torsocks/v2.0.0-rc3.tar.gz) = fe6a73a471e02b2ee58f1a4bccf93b6a06bc3c3a
 RMD160 (torsocks/v2.0.0-rc3.tar.gz) = ca7626a676dff3172f77f25ac633535c8aa8dae4
 Size (torsocks/v2.0.0-rc3.tar.gz) = 109998 bytes
-SHA1 (patch-src_common_compat.h) = d855d6144e225a1b48ff16517cacb3f81f0d35fe
+SHA1 (patch-src_common_compat.c) = 95c51dfa7117f349444434e23051c2aad97f566f
+SHA1 (patch-src_common_compat.h) = 5217e5e67986ef32cee913a35ed64a2e8adb57b9
 SHA1 (patch-src_common_ref.h) = b20d5934a2be10f98bcfe5111e2dc9e26aa7319d
+SHA1 (patch-src_lib_torsocks.h) = 0182c1858644c9df49c925ad72e50bfb3a493ccc
+SHA1 (patch-tests_utils_tap_tap.c) = 53dba971eb2d68eaff4fc2a86f55702644364fd9
