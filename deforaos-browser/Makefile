@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2013/08/22 08:50:05 obache Exp $
+# $NetBSD: Makefile,v 1.23 2013/11/06 23:20:35 khorben Exp $
 #
 
-DISTNAME=	Browser-0.4.10
-PKGNAME=	deforaos-browser-0.4.10
+DISTNAME=	Browser-0.4.12
+PKGNAME=	deforaos-browser-0.4.12
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/4010/
+MASTER_SITES=	http://www.defora.org/os/download/download/4294/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -22,6 +22,9 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/browser.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/browser.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/copy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/copy.1
@@ -34,12 +37,12 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/view.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/view.1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
