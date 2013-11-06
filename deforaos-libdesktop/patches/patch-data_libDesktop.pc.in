@@ -1,6 +1,8 @@
-$NetBSD: patch-data_libDesktop.pc.in,v 1.1 2013/01/26 01:15:40 khorben Exp $
+$NetBSD: patch-data_libDesktop.pc.in,v 1.2 2013/11/06 01:18:39 khorben Exp $
 
---- data/libDesktop.pc.in.orig	2012-10-29 01:23:26.000000000 +0000
+Build with Gtk+ 3 by default
+
+--- data/libDesktop.pc.in.orig	2013-05-12 22:01:49.000000000 +0000
 +++ data/libDesktop.pc.in
 @@ -6,6 +6,6 @@ libdir=${exec_prefix}/lib
  Name: libDesktop
