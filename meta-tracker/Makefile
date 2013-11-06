@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2013/11/02 06:15:03 makoto Exp $
+# $NetBSD: Makefile,v 1.13 2013/11/06 11:17:29 noud4 Exp $
 #
 
 DISTNAME=	tracker-0.16.3
+PKGREVISION=	1
 PKGNAME=	meta-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/0.16/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	noud4@home.nl
 HOMEPAGE=	http://projects.gnome.org/tracker/
 COMMENT=	Extract information and metadata about your personal data
 LICENSE=	gnu-gpl-v2
@@ -31,7 +32,7 @@ PKGCONFIG_OVERRIDE+=	data/tracker-extract.pc.in
 
 #TRACKER_VERSION= ${PKGVERSION:C/\.[0-9]+$//}
 # strip last .digit (but not safe if it is missing)
-PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION:C/\.[0-9]+$//}
+PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION_NOREV:C/\.[0-9]+$//}
 
 .include "options.mk"
 

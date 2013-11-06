@@ -1,18 +1,18 @@
-# $NetBSD: options.mk,v 1.6 2013/10/18 11:18:00 makoto Exp $
+# $NetBSD: options.mk,v 1.7 2013/11/06 11:17:29 noud4 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.meta-tracker
 PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca gnome
 PKG_OPTIONS_OPTIONAL_GROUPS=	video
 PKG_OPTIONS_GROUP.video=	gstreamer xine
 PKG_SUPPORTED_OPTIONS+=		pdf jpeg tiff vorbis flac html gsf playlist
-PKG_SUPPORTED_OPTIONS+=		rss evolution kmail
+PKG_SUPPORTED_OPTIONS+=		rss evolution thunderbird firefox kmail
 PKG_SUPPORTED_OPTIONS+=		nautilus
 PKG_SUPPORTED_OPTIONS+=		mp3 xmp
 
 PKG_SUGGESTED_OPTIONS+=		hal unac enca gnome
 PKG_SUGGESTED_OPTIONS+=		pdf jpeg tiff vorbis flac html gsf playlist
 PKG_SUGGESTED_OPTIONS+=		gstreamer
-PKG_SUGGESTED_OPTIONS+=		rss evolution kmail
+PKG_SUGGESTED_OPTIONS+=		rss evolution thunderbird kmail
 PKG_SUGGESTED_OPTIONS+=		nautilus
 PKG_SUGGESTED_OPTIONS+=		mp3 xmp
 
@@ -139,6 +139,16 @@ PLIST.rss=		yes
 .if !empty(PKG_OPTIONS:Mevolution)
 PLIST.evolution=	yes
 .include "../../mail/evolution/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mthunderbird)
+PLIST_SRC+=		${PKGDIR}/PLIST.thunderbird
+DEPENDS+=		thunderbird>=17.0.9:../../mail/thunderbird
+.else
+CONFIGURE_ARGS+=	--disable-miner-thunderbird
+.endif
+
+.if !empty(PKG_OPTIONS:Mfirefox)
 .endif
 
 .if !empty(PKG_OPTIONS:Mkmail)

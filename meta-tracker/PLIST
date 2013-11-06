@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/11/02 06:15:03 makoto Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/11/06 11:17:29 noud4 Exp $
 bin/tracker-control
 bin/tracker-import
 bin/tracker-info
@@ -37,8 +37,8 @@ include/${TRACKER_VERSION}/libtracker-miner/tracker-thumbnailer.h
 include/${TRACKER_VERSION}/libtracker-sparql/tracker-generated.h
 include/${TRACKER_VERSION}/libtracker-sparql/tracker-sparql.h
 include/${TRACKER_VERSION}/libtracker-sparql/tracker-version.h
-lib/evolution/2.32/plugins/liborg-freedesktop-Tracker-evolution-plugin.la
-lib/evolution/2.32/plugins/org-freedesktop-Tracker-evolution-plugin.eplug
+${PLIST.evolution}lib/evolution/2.32/plugins/liborg-freedesktop-Tracker-evolution-plugin.la
+${PLIST.evolution}lib/evolution/2.32/plugins/org-freedesktop-Tracker-evolution-plugin.eplug
 lib/libtracker-extract-0.16.la
 lib/libtracker-miner-0.16.la
 lib/libtracker-sparql-0.16.la
