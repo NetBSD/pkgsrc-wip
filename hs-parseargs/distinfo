@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/30 09:46:56 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2013/11/06 12:06:44 szptvlfn Exp $
 
-SHA1 (parseargs-0.1.2.tar.gz) = 35157e435e09b933dc794addccdd4beefc6502da
-RMD160 (parseargs-0.1.2.tar.gz) = 8dcfec203e9adc2f57199284b3fb06bed868644d
-Size (parseargs-0.1.2.tar.gz) = 9089 bytes
-SHA1 (patch-aa) = 17b716c8198291370f3d0eceeaa38051c81c6d2a
+SHA1 (parseargs-0.1.5.2.tar.gz) = 283eba9e897533048de9db3eb0a24a0822822094
+RMD160 (parseargs-0.1.5.2.tar.gz) = dd728c6cdcb9ffe37c263bfb202d6d9278031308
+Size (parseargs-0.1.5.2.tar.gz) = 10252 bytes
