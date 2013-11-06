@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/11/23 22:33:39 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2013/11/06 06:55:50 noud4 Exp $
 #
 
-DISTNAME=	grsync-0.9.3
-PKGREVISION=	1
+DISTNAME=	grsync-1.1.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.opbyte.it/release/
 
