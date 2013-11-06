@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/06/09 12:08:39 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/06 06:39:32 noud4 Exp $
 #
 
-DISTNAME=		ups-monitor-0.8.2
+DISTNAME=		ups-monitor-0.8.3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://rudd-o.com/uploads/projects/files/ups-monitor/
 
