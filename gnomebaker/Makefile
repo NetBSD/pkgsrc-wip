@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/11/13 20:09:31 othyro Exp $
+# $NetBSD: Makefile,v 1.20 2013/11/07 09:01:13 noud4 Exp $
 
 DISTNAME=	gnomebaker-0.6.4
 PKGREVISION=	3
@@ -10,8 +10,6 @@ HOMEPAGE=	http://gnomebaker.sourceforge.net/v2/
 COMMENT=	GTK2/GNOME CD/DVD burning application
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
-
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		pkg-config msgfmt intltool
 GNU_CONFIGURE=		YES
