@@ -1,1 +1,3 @@
-$NetBSD: distinfo,v 1.1 2013/06/21 01:20:26 makoto Exp $
+$NetBSD: distinfo,v 1.2 2013/11/07 03:07:52 makoto Exp $
+
+SHA1 (patch-Makefile) = 4cb3ca6f6a472cf4ef016310742788b74c18d974

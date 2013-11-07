@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/06/21 01:20:26 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/07 03:07:52 makoto Exp $
 
 DISTNAME=	magit-1.2.0.50
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magit/
-COMMENT=	Emacs client for (scm)git
+COMMENT=	Emacs client for scm Git
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	master
@@ -27,9 +27,19 @@ SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 SUBST_SED.prefix+=	-e 's,share/info,info,'
 SUBST_SED.prefix+=	-e '/50magit/s,^	install,\#	install,'
 
+SUBST_CLASSES+=		buildlink
+SUBST_MESSAGE.buildlink=Add site-lisp in buildlink dir for byte-compile
+SUBST_FILES.buildlink=	Makefile
+SUBST_STAGE.buildlink=	post-patch
+SUBST_SED.buildlink=	-e 's,@@BUILDLINK_DIR@@,${BUILDLINK_DIR},'
+
 INFO_FILES=		yes
 BUILD_TARGET=		all
 TEST_TARGET=	check
 
+post-patch:
+	(cd ${WRKSRC}; ${MAKE} VERSION=${PKGVERSION} magit-version.el)
+
 .include "../../wip/mk/git-package.mk"
+.include "../../wip/git-modes-git/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
