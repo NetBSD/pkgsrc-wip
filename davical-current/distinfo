@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/07/12 20:20:53 hfath Exp $
+$NetBSD: distinfo,v 1.4 2013/11/07 12:39:31 noud4 Exp $
 
 SHA1 (patch-aa) = 3172ea7a359e1779431d732d0f1cb106e3b4dd4e
 SHA1 (patch-ab) = d9c4c6729e7be6968306bdd96ed4269c0887a885
 SHA1 (patch-ac) = 74e9b103d502886736dff4fa659fb3e50bae5032
 SHA1 (patch-ad) = 7816ff4ee7440911e275f3152089760e82b5d180
 SHA1 (patch-ae) = e3f2b5c002c8289d40cd025a38c382d402fc659e
-SHA1 (patch-inc_caldav-REPORT.php) = 76f8f808198177280fec549823e402d52d67d453
 SHA1 (patch-scripts_build-always.sh) = 528aef5225f83908786aa1ba6ee176e87db64a15
