@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.6 2013/11/06 08:34:28 thomasklausner Exp $
+$NetBSD: distinfo,v 1.7 2013/11/07 10:16:33 thomasklausner Exp $
 
 SHA1 (patch-Makefile) = 7f1da7136af04cb4de2acbc9396ac16fcc7684a7
-SHA1 (patch-cmd_restore-cmd.py) = 29db66964d6df0c3f930b90b5875baa9e8ad155c
 SHA1 (patch-config_configure) = a7d4dcdda0a712ac18f0edab91f7fe972f1db53b
-SHA1 (patch-lib_bup_metadata.py) = f1f3e5b6efd9740f6e5e61e5e4f75ba5c2dbf427
