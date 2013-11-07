@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5518 2013/11/07 03:25:32 makoto Exp $
+# $Id: Makefile,v 1.5519 2013/11/07 18:55:35 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -674,6 +674,7 @@ SUBDIR+=	freedict-tools-xsl
 SUBDIR+=	freedup
 SUBDIR+=	freedup16
 SUBDIR+=	freefem++
+SUBDIR+=	freeimage
 SUBDIR+=	freej
 SUBDIR+=	freevo
 SUBDIR+=	freevrrpd
