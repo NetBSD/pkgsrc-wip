@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/07/12 20:18:10 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/07 12:40:27 noud4 Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -39,7 +39,7 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}/config
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.53:../../wip/php-libawl-git
+DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.53:../../devel/php-libawl
 DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=5.3.18:../../time/php-calendar
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3.18:../../www/php-curl
 DEPENDS+=	p5-YAML>=0.71:../../textproc/p5-YAML
@@ -136,6 +136,6 @@ do-install:
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../wip/php-libawl-git/Makefile.common"
+.include "../../devel/php-libawl/Makefile.common"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
