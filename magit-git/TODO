@@ -1,0 +1,6 @@
+-- In magit-version.el, the version string is empty now,
+   and also seeing folloiwing lines while byte-compiling:
+      ===> Building for magit-1.2.0.50nb20131107
+      Cannot determine Magit's version
+      Wrote /export/WRKOBJDIR/wip/magit-git/work/magit/magit.elc
+   While it is harmless for the moment, may be better off to fix.
