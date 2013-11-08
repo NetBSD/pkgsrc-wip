@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/11/01 14:10:43 makoto Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/11/08 07:36:47 makoto Exp $
 #
 # used by wip/nios2-binutils/Makefile
 # used by wip/nios2-gcc/Makefile
@@ -8,8 +8,8 @@
 NIOS2_MAKEFILECOMMON=  # yes
 
 MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
-DISTNAME=		nios2_gnu_gcc3_10.0
-#			nios2_gnu_gcc3_10.1.tgz are the exactly same, see MD5
+DISTNAME=		nios2_gnu_gcc4_13.0
+EXTRACT_SUFX=		.gz
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

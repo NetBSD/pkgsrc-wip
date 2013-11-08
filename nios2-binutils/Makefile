@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/08 07:36:08 makoto Exp $
 
 PKG_VERSION=		2.20
 PKGNAME=		nios2-binutils-${PKG_VERSION}
@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU binutils for Altera FPGA Nios2 processor
 LICENSE=		gnu-gpl-v2
 
-EXTRACT_SUFX=		.tgz
 EXTRACT_ELEMENTS=	binutils-${PKGVERSION}
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
@@ -20,7 +19,6 @@ BUILD_DEFS+=		${NIOS_INFO_DIR}
 INFO_FILES=		yes
 
 .include		"../../wip/nios2/Makefile.common"
-DISTNAME=		nios2_gnu_gcc4_11.0
 
 CONFIGURE_ARGS+=	--disable-nls
 # install libiberty by architecture
@@ -35,6 +33,9 @@ INFO_DIR?=		${NIOS_INFO_DIR}
 #  doesn't make it, will be overridden by following variables
 #  see mk/configure/gnu-configure.mk
 GNU_CONFIGURE_INFODIR=	${NIOS_INFO_DIR}
+
+do-extract:
+	(cd ${WRKDIR}; tar zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${EXTRACT_ELEMENTS} )
 
 # following file installed is reference only, not used at all for the moment
 post-install:
