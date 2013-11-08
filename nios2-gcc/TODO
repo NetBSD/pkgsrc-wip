@@ -1,23 +1,4 @@
--- Current situation --
-
-gmake[4]: Entering directory 
-`/export/WRKOBJDIR/wip/nios2-gcc/work/gcc-4.1/host-x86_64--netbsd/gcc'
-
-/export/WRKOBJDIR/wip/nios2-gcc/work/gcc-4.1/host-x86_64--netbsd/gcc/xgcc
-  -B/export/WRKOBJDIR/wip/nios2-gcc/work/gcc-4.1/host-x86_64--netbsd/gcc/
-  -B/usr/pkg/cross/nios2-elf/bin/
-  -B/usr/pkg/cross/nios2-elf/lib/ -isystem
-  /usr/pkg/cross/nios2-elf/include -isystem
-  /usr/pkg/cross/nios2-elf/sys-include -O2 -O2 -O2 -g -DIN_GCC
-  -DCROSS_COMPILE -W -Wall -Wwrite-strings -Wstrict-prototypes
-  -Wmissing-prototypes -Wold-style-definition -isystem ./include
-  -I. -I. -I../.././gcc -I../.././gcc/. -I../.././gcc/../include
-  -I../.././gcc/../libcpp/include -g0 -finhibit-size-directive
-  -fno-inline-functions -fno-exceptions
-  -fno-zero-initialized-in-bss -fno-unit-at-a-time
-  -Dinhibit_libc \
-  -c ../.././gcc/crtstuff.c -DCRT_BEGIN \
-  -o crtbegin.o
-../.././gcc/crtstuff.c: In function 'frame_dummy':
-../.././gcc/crtstuff.c:323: internal compiler error: Segmentation fault
-Please submit a full bug report,
+- Remove document generation, cross compiler may not need this
+ (Or make it optional).
+- make test
+- Report to upstream
