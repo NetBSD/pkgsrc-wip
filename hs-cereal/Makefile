@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/09/28 01:02:27 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/08 23:07:20 szptvlfn Exp $
 #
 
-DISTNAME=	cereal-0.4.0.0
+DISTNAME=	cereal-0.4.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
