@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/10/14 09:44:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2013/11/08 10:16:03 thomasklausner Exp $
 
 DISTNAME=	lilypond-2.17.28
 CATEGORIES=	print
@@ -28,11 +28,13 @@ DEPENDS+=	tex-cyrillic-[0-9]*:../../print/tex-cyrillic
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+# 1.7 coredumps when generating eps files
+DEPENDS+=	potrace>=1.8:../../graphics/potrace
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake gs:run makeinfo perl pkg-config msgfmt
+USE_TOOLS+=		bison flex gmake gs:run makeinfo perl pkg-config msgfmt
 USE_TOOLS+=		texi2html zip
 MAKE_FILE=		GNUmakefile
 
@@ -52,15 +54,8 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 REPLACE_PYTHON+= scripts/build/yyout2grammar.py
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
-# 1.7 coredumps when generating eps files
-DEPENDS+=	potrace>=1.8:../../graphics/potrace
-
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ENV+= LEX="${PREFIX}/bin/flex"
+# needs FlexLexer.h
 .include "../../devel/flex/buildlink3.mk"
-.else
-USE_TOOLS+= flex
-.endif
 
 # files were created with bison<3 and regeneration rules
 # aren't correct
