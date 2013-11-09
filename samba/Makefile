@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/07/04 15:05:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2013/11/09 16:26:00 makoto Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	4.0.7
+VERSION=	4.1.0
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 FILESDIR=		${PKGDIR}/../../net/samba/files
@@ -49,7 +49,6 @@ USE_TOOLS+=		gmake mktemp perl:run
 REPLACE_PERL=		script/findsmb.in
 
 USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
-USE_GNU_READLINE=	yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
@@ -57,7 +56,7 @@ CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
 CONFIGURE_ARGS+=	configure
 CONFIGURE_ARGS+=	--prefix=$(PREFIX:Q)
-#CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 #CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 #CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
 CONFIGURE_ARGS+=	--with-privatelibdir=${SAMBA_LIBDIR}/samba

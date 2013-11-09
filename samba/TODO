@@ -1,4 +1,5 @@
-- NetBSD/amd64 6.99.23, and some other enviroment has following problem
+- NetBSD/amd64 6.99.23(+clang), and some other enviroment has following problem
+  (NetBSD/amd64 6.1.2 has no problem)
 ..
 => Checking for missing run-time search paths in samba-4.0.7
 ERROR: lib/python2.7/site-packages/samba/samba3/libsmb_samba_internal.so: missing library: libtalloc.so.2
