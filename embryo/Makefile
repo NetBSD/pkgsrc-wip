@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2013/09/15 17:22:37 roelants Exp $
+# $NetBSD: Makefile,v 1.19 2013/11/09 14:34:47 roelants Exp $
 #
 
-DISTNAME=	embryo-1.7.8
+DISTNAME=	embryo-1.7.9
 CATEGORIES=	lang
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
