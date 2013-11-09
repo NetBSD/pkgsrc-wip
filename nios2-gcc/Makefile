@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/11/08 07:31:34 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/09 02:13:31 makoto Exp $
 PKG_VERSION=		4.1.2
 PKGNAME=		nios2-gcc-${PKG_VERSION}
 CATEGORIES=		cross
@@ -16,6 +16,13 @@ USE_GNU_CONFIGURE_HOST=	no
 EXTRACT_SUFX=		.gz
 
 DEPENDS+=		nios2-binutils-[0-9]*:../../wip/nios2-binutils
+# bin/tex is required
+BUILD_DEPENDS+=		web2c-[0-9]*:../../print/web2c
+BUILD_DEPENDS+=		tex-cm-[0-9]*:../../fonts/tex-cm
+BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+BUILD_DEPENDS+=		tex-pdftex-doc-[0-9]*:../../print/tex-pdftex-doc
+BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
 .include		"../../wip/nios2/Makefile.common"
 
@@ -50,4 +57,5 @@ post-install:
 	${RM}  ${DESTDIR}${CROSSBASE}/info/gccinstall.info
 	${RM}  ${DESTDIR}${CROSSBASE}/info/gccint.info
 
+.include "../../print/kpathsea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
