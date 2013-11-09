@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 204109
+LAST_UPDATED: Obtained from SVN: trunk revision 204338
 
 Native configuration is x86_64--netbsd
 
@@ -22,12 +22,12 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		55812
+# of expected passes		55909
 # of unexpected failures	10
 # of expected failures		292
 # of unresolved testcases	2
-# of unsupported tests		985
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20131027 (experimental) (GCC) 
+# of unsupported tests		988
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20131103 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -35,7 +35,458 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 Running target unix
 FAIL: gcc.c-torture/execute/conversion.c execution,  -O0 
 FAIL: gcc.c-torture/execute/conversion.c execution,  -Og -g 
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
+UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
+XPASS: gcc.dg/binop-xor1.c scan-tree-dump-times optimized "\\\\^" 1
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
 FAIL: gcc.dg/builtins-55.c (test for excess errors)
 FAIL: gcc.dg/builtins-57.c (test for excess errors)
@@ -55,6 +506,8 @@ FAIL: gcc.dg/nest.c (test for excess errors)
 FAIL: gcc.dg/nested-func-4.c (test for excess errors)
 FAIL: gcc.dg/pr32450.c (test for excess errors)
 FAIL: gcc.dg/pr43643.c (test for excess errors)
+FAIL: gcc.dg/uninit-pred-8_b.c bogus warning (test for bogus messages, line 20)
+FAIL: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 24)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
@@ -97,8 +550,6 @@ XPASS: gcc.dg/guality/pr41616-1.c  -O3 -fomit-frame-pointer  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -O3 -g  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -Os  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 39 c == &a[0]
 FAIL: gcc.dg/guality/pr48437.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 i == 0
 FAIL: gcc.dg/guality/pr48437.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 i == 0
 FAIL: gcc.dg/guality/pr54200.c  -Os  line 20 z == 3
@@ -122,8 +573,30 @@ FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fno-use-linker-plugin -flto-partiti
 FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
 FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
 FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
+FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-loops  line 21 x == 10 - i
+FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 21 x == 10 - i
 FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 x == 10 - i
 FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 y == 20 - 2 * i
+FAIL: gcc.dg/guality/pr58791-4.c  -O1  line pr58791-4.c:32 i == 486
+FAIL: gcc.dg/guality/pr58791-4.c  -O1  line pr58791-4.c:32 i2 == 487
+FAIL: gcc.dg/guality/pr58791-4.c  -O2  line pr58791-4.c:32 i == 486
+FAIL: gcc.dg/guality/pr58791-4.c  -O2  line pr58791-4.c:32 i2 == 487
+FAIL: gcc.dg/guality/pr58791-4.c  -O3 -fomit-frame-pointer  line pr58791-4.c:32 i == 486
+FAIL: gcc.dg/guality/pr58791-4.c  -O3 -fomit-frame-pointer  line pr58791-4.c:32 i2 == 487
+FAIL: gcc.dg/guality/pr58791-4.c  -O3 -g  line pr58791-4.c:32 i == 486
+FAIL: gcc.dg/guality/pr58791-4.c  -O3 -g  line pr58791-4.c:32 i2 == 487
+FAIL: gcc.dg/guality/pr58791-4.c  -Os  line pr58791-4.c:32 i == 486
+FAIL: gcc.dg/guality/pr58791-4.c  -Os  line pr58791-4.c:32 i2 == 487
+FAIL: gcc.dg/guality/pr58791-4.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line pr58791-4.c:32 i == 486
+FAIL: gcc.dg/guality/pr58791-4.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line pr58791-4.c:32 i2 == 487
+FAIL: gcc.dg/guality/pr58791-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line pr58791-4.c:32 i == 486
+FAIL: gcc.dg/guality/pr58791-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line pr58791-4.c:32 i2 == 487
+FAIL: gcc.dg/guality/sra-1.c  -O2  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -Os  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 43 a.j == 14
 FAIL: gcc.dg/guality/vla-1.c  -O0  line 17 sizeof (a) == 6
 FAIL: gcc.dg/guality/vla-1.c  -O0  line 24 sizeof (a) == 17 * sizeof (short)
 FAIL: gcc.dg/guality/vla-1.c  -O1  line 17 sizeof (a) == 6
@@ -280,21 +753,27 @@ FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		100468
-# of unexpected failures	179
-# of unexpected successes	39
-# of expected failures		264
-# of unresolved testcases	26
+# of expected passes		100977
+# of unexpected failures	426
+# of unexpected successes	40
+# of expected failures		263
+# of unresolved testcases	251
 # of unsupported tests		1508
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131027 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131103 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
 
 Running target unix
-FAIL: gfortran.dg/assumed_type_8.f90  -O   (test for errors, line 17)
-FAIL: gfortran.dg/assumed_type_8.f90  -O  (test for excess errors)
 FAIL: gfortran.dg/nint_2.f90  -O0  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O0  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O1  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O2  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -fomit-frame-pointer  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -fomit-frame-pointer -funroll-loops  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -g  execution test
+FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -Os  execution test
 FAIL: gfortran.dg/lto/pr45586-2 f_lto_pr45586-2_0.o-f_lto_pr45586-2_0.o link, -O0 -flto -flto-partition=none -fuse-linker-plugin (internal compiler error)
 UNRESOLVED: gfortran.dg/lto/pr45586-2 f_lto_pr45586-2_0.o-f_lto_pr45586-2_0.o execute -O0 -flto -flto-partition=none -fuse-linker-plugin
 FAIL: gfortran.dg/lto/pr45586-2 f_lto_pr45586-2_0.o-f_lto_pr45586-2_0.o link, -O0 -flto -flto-partition=1to1 -fno-use-linker-plugin  (internal compiler error)
@@ -310,12 +789,12 @@ UNRESOLVED: gfortran.dg/lto/pr45586 f_lto_pr45586_0.o-f_lto_pr45586_0.o execute 
 
 		=== gfortran Summary ===
 
-# of expected passes		44676
-# of unexpected failures	9
+# of expected passes		44700
+# of unexpected failures	15
 # of expected failures		52
 # of unresolved testcases	6
 # of unsupported tests		263
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20131027 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20131103 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -327,7 +806,7 @@ Running target unix
 # of expected passes		1441
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20131027 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20131103 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -343,7 +822,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131027 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131103 (experimental) (GCC) 
 
 		=== boehm-gc tests ===
 
@@ -383,12 +862,10 @@ Running target unix
 Running target unix
 FAIL: libgomp.c/affinity-1.c (test for excess errors)
 UNRESOLVED: libgomp.c/affinity-1.c compilation failed to produce executable
+WARNING: program timed out.
+FAIL: libgomp.c/pr29947-2.c execution test
 FAIL: libgomp.c++/affinity-1.C (test for excess errors)
 UNRESOLVED: libgomp.c++/affinity-1.C compilation failed to produce executable
-WARNING: program timed out.
-FAIL: libgomp.fortran/lib3.f  -O1  execution test
-WARNING: program timed out.
-FAIL: libgomp.fortran/omp_parse1.f90  -Os  execution test
 FAIL: libgomp.graphite/bounds.c scan-tree-dump-times graphite "0 loops carried no dependency" 1
 FAIL: libgomp.graphite/force-parallel-4.c execution test
 FAIL: libgomp.graphite/force-parallel-4.c scan-tree-dump-times graphite "2 loops carried no dependency" 1
@@ -397,8 +874,8 @@ FAIL: libgomp.graphite/pr41118.c scan-tree-dump-times optimized "loopfn" 0
 
 		=== libgomp Summary ===
 
-# of expected passes		2375
-# of unexpected failures	9
+# of expected passes		2376
+# of unexpected failures	8
 # of unresolved testcases	2
 # of unsupported tests		3
 		=== libitm tests ===
@@ -1327,17 +1804,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8408
+# of expected passes		8487
 # of unexpected failures	48
-# of expected failures		36
+# of expected failures		39
 # of unresolved testcases	2
 # of unsupported tests		675
 
-Compiler version: 4.9.0 20131027 (experimental) (GCC) 
+Compiler version: 4.9.0 20131103 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-languages='c obj-c++ objc java fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --with-ecj-jar=/usr/pkgsrc/distfiles/ecj-4.5.jar --enable-java-home --with-os-directory=netbsd --with-arch-directory=amd64 --with-jvm-root-dir=/usr/pkg/java/gcc49snapshot --with-java-home=/usr/pkg/java/gcc49snapshot --with-system-zlib --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
 EOF
-Mail -s "Results for 4.9.0 20131027 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.9.0 20131103 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
