@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2013/09/15 17:31:16 roelants Exp $
+# $NetBSD: Makefile,v 1.34 2013/11/09 14:51:44 roelants Exp $
 #
 
-DISTVERSION=	0.17.4
+DISTVERSION=	0.17.5
 DISTNAME=	enlightenment-${DISTVERSION}
 PKGNAME=	e17-${DISTVERSION:S/-//}
 CATEGORIES=	x11
