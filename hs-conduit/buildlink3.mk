@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/10/13 08:28:03 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/11/10 09:53:58 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-conduit
 
 .if !defined(HS_CONDUIT_BUILDLINK3_MK)
 HS_CONDUIT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-conduit+=	hs-conduit>=1.0.8
+BUILDLINK_API_DEPENDS.hs-conduit+=	hs-conduit>=1.0.9
 BUILDLINK_PKGSRCDIR.hs-conduit?=	../../wip/hs-conduit
 
 .include "../../wip/hs-lifted-base/buildlink3.mk"
