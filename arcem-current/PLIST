@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/11 14:06:24 ryo-on Exp $
-bin/arcem
-share/arcem/HardImage1
-share/arcem/ROM
-share/arcem/dot.arcemrc
-share/arcem/hexcmos
-@comment share/arcem/hexcmos.2
-@comment share/arcem/README
-@comment share/arcem/README.OrElse
