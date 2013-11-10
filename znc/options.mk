@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/04/29 10:52:37 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2013/11/10 13:07:07 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
@@ -76,10 +76,12 @@ PLIST_SRC+=		PLIST.tcl
 # Python support
 #
 .if !empty(PKG_OPTIONS:Mpython)
-.include		"../../lang/python32/buildlink3.mk"
-DEPENDS+=		python32>=3.2:../../lang/python32
-CONFIGURE_ARGS+=	--enable-python=python-3.2
-USE_LANGUAGES+=		python
+PYTHON_VERSIONS_INCLUDE_3X=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PY_PEP3147=	no
+.include		"../../lang/python/extension.mk"
+CONFIGURE_ARGS+=	--enable-python=python-${PYVERSSUFFIX}
+PLIST_SRC+=		PLIST.python
 .endif
 
 #
