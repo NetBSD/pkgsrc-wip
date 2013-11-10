@@ -1,0 +1,23 @@
+$NetBSD: patch-doc_CMakeLists.txt,v 1.1 2013/11/10 21:04:48 nros Exp $
+
+--- doc/CMakeLists.txt.orig	2013-05-18 08:25:06.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -81,14 +81,15 @@ if(BUILD_DOCUMENTATION)
+         # is the manpage of the command line interface with a manpage number 3,
+         # we need to exclude it when installing man3.
+         install(DIRECTORY ${EC_MANPAGE3_DIR}
+-            DESTINATION share/man
+-            PATTERN editorconfig.3 EXCLUDE)
++            DESTINATION ${PKGMANDIR}
++            PATTERN editorconfig.3 EXCLUDE
++	    REGEX ._include_. EXCLUDE)
+ 
+         set(EC_MANPAGE1_DIR ${EC_MANPAGE_DIR}/man1)
+ 
+         install(FILES
+             ${EC_MANPAGE1_DIR}/editorconfig.1
+-            DESTINATION share/man/man1)
++            DESTINATION ${PKGMANDIR}/man1)
+ 
+         # "make clean" should also clean generated docs
+         set_directory_properties(PROPERTIES

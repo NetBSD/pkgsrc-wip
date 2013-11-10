@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/11/10 21:04:48 nros Exp $
+
+SHA1 (editorconfig-core-c-0.11.5.tar.gz) = 2fe9df54d49c17d7e62c3996f4095afcd79d4d28
+RMD160 (editorconfig-core-c-0.11.5.tar.gz) = 39ccab43ec884c0c49717bff91b8ac7dcaf8da0c
+Size (editorconfig-core-c-0.11.5.tar.gz) = 80919 bytes
+SHA1 (patch-doc_CMakeLists.txt) = 8b3b88cae03bd94486ebad42afb8cff771328842
