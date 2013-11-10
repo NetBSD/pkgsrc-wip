@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/03/29 21:17:02 florian-geiges Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/10 12:38:04 obache Exp $
 #
 
 DISTNAME=		znc-1.0
 CATEGORIES=		net
-MASTER_SITES=		http://znc.in/releases/
+MASTER_SITES=		http://znc.in/releases/archive/
 
 MAINTAINER=		florian@geiges.net
 HOMEPAGE=		http://znc.in/
