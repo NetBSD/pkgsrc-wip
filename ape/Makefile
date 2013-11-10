@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/14 01:26:14 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/10 02:34:39 outpaddling Exp $
 #
 
 DISTNAME=	ape-3.5.1
@@ -9,6 +9,8 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
+
+EXTRACT_SUFX=	.tar.xz
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
