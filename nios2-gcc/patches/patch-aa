@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2013/11/03 11:10:18 makoto Exp $
+$NetBSD: patch-aa,v 1.3 2013/11/10 04:01:57 makoto Exp $
 #
-# craft FPBIT_FUNCS and DPBIT_FUNCS lists to avoid routine collision
+# (1) craft FPBIT_FUNCS and DPBIT_FUNCS lists to avoid routine collision
 # against NetBSD softfloat implementation. Following twelve are to
 # be eliminated;
 #	_addsub_df.o _addsub_sf.o _df_to_sf.o _df_to_si.o
 #	_div_df.o _div_sf.o _mul_df.o _mul_sf.o _sf_to_df.o _sf_to_si.o
 #	_si_to_df.o _si_to_sf.o
+# (2) To swith with and without documents, put @@VAR@@ type words. 
 
 --- gcc/Makefile.in.orig	2013-06-14 06:32:52.000000000 +0900
 +++ gcc/Makefile.in	2013-10-22 18:50:44.000000000 +0900
@@ -31,3 +32,21 @@ $NetBSD: patch-aa,v 1.2 2013/11/03 11:10:18 makoto Exp $
  
  TPBIT_FUNCS = _pack_tf _unpack_tf _addsub_tf _mul_tf _div_tf \
      _fpcmp_parts_tf _compare_tf _eq_tf _ne_tf _gt_tf _ge_tf \
+@@ -1216,7 +1216,7 @@
+ all.internal: start.encap rest.encap doc
+ # This is what to compile if making a cross-compiler.
+ all.cross: native gcc-cross cpp$(exeext) specs \
+-	$(LIBGCC) $(EXTRA_PARTS) lang.all.cross doc @GENINSRC@ srcextra
++	$(LIBGCC) $(EXTRA_PARTS) lang.all.cross @@DOC@@ @GENINSRC@ srcextra
+ # This is what must be made before installing GCC and converting libraries.
+ start.encap: native xgcc$(exeext) cpp$(exeext) specs \
+ 	lang.start.encap @GENINSRC@ srcextra
+@@ -3655,7 +3655,7 @@
+ # Install the driver last so that the window when things are
+ # broken is small.
+ install: install-common $(INSTALL_HEADERS) $(INSTALL_LIBGCC) \
+-    install-cpp install-man install-info install-html install-pdf \
++    install-cpp install-man install-info @@INSTALL_HTML@@ @@INSTALL_PDF@@ \
+     install-@POSUB@ lang.install-normal install-driver
+ 
+ # Handle cpp installation.

@@ -1,4 +1,2 @@
-- Remove document generation, cross compiler may not need this
- (Or make it optional).
 - make test
 - Report to upstream
