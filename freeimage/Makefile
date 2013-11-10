@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/07 18:42:17 nros Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/10 11:41:06 nros Exp $
 
 DISTNAME=	FreeImage3154
 PKGNAME=	freeimage-3.15.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://freeimage.sourceforge.net/
 COMMENT=	Image reading library
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGBASE}
+WRKSRC=		${WRKDIR}/FreeImage
 USE_TOOLS+=	gmake
 USE_LANGUAGES+= c c++
 
@@ -33,16 +33,16 @@ INSTALLATION_DIRS+= include
 INSTALLATION_DIRS+= lib
 do-install:
 	cd ${WRKSRC} && \
-	${INSTALL_DATA} Source/${PKGBASE}.h ${DESTDIR}${PREFIX}/include && \
-	${INSTALL_DATA} Wrapper/${PKGBASE}Plus/${PKGBASE}Plus.h ${DESTDIR}${PREFIX}/include && \
-	${INSTALL_DATA} libfreeimage.a ${DESTDIR}${PREFIX}/lib && \
-	${INSTALL_DATA} libfreeimageplus.a ${DESTDIR}${PREFIX}/lib && \
-	${INSTALL_LIB} libfreeimage-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib && \
-	${INSTALL_LIB} libfreeimageplus-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib && \
-	ln -sf libfreeimage-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib/libfreeimage.so.3 && \
-	ln -sf libfreeimage.so.3 ${DESTDIR}${PREFIX}/lib/libfreeimage.so && \
-	ln -sf libfreeimageplus-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib/libfreeimageplus.so.3 && \
-        ln -sf libfreeimageplus.so.3 ${DESTDIR}${PREFIX}/lib/libfreeimageplus.so
+	${INSTALL_DATA} Source/FreeImage.h ${DESTDIR}${PREFIX}/include && \
+	${INSTALL_DATA} Wrapper/FreeImagePlus/FreeImagePlus.h ${DESTDIR}${PREFIX}/include && \
+	${INSTALL_DATA} lib${PKGBASE}.a ${DESTDIR}${PREFIX}/lib && \
+	${INSTALL_DATA} lib${PKGBASE}plus.a ${DESTDIR}${PREFIX}/lib && \
+	${INSTALL_LIB} lib${PKGBASE}-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib && \
+	${INSTALL_LIB} lib${PKGBASE}plus-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib && \
+	ln -sf lib${PKGBASE}-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib/lib${PKGBASE}.so.3 && \
+	ln -sf lib${PKGBASE}.so.3 ${DESTDIR}${PREFIX}/lib/lib${PKGBASE}.so && \
+	ln -sf lib${PKGBASE}plus-${PKGVERSION}.so ${DESTDIR}${PREFIX}/lib/lib${PKGBASE}plus.so.3 && \
+        ln -sf lib${PKGBASE}plus.so.3 ${DESTDIR}${PREFIX}/lib/lib${PKGBASE}plus.so
 
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
