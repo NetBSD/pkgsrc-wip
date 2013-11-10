@@ -1,5 +1,8 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.1 2013/11/10 21:04:48 nros Exp $
-
+$NetBSD: patch-doc_CMakeLists.txt,v 1.2 2013/11/10 21:27:38 nros Exp $
+*
+* This patch makes sure the man pages are installed in PKGMANDIR
+* It also excludes man pages named _usr_pkgsrc_..._include_..
+*
 --- doc/CMakeLists.txt.orig	2013-05-18 08:25:06.000000000 +0000
 +++ doc/CMakeLists.txt
 @@ -81,14 +81,15 @@ if(BUILD_DOCUMENTATION)
