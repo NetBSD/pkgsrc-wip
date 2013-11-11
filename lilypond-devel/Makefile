@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2013/11/08 10:16:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2013/11/11 10:30:27 thomasklausner Exp $
 
-DISTNAME=	lilypond-2.17.28
+DISTNAME=	lilypond-2.17.95
 CATEGORIES=	print
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v2.17/
 
@@ -56,12 +56,6 @@ PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
 # needs FlexLexer.h
 .include "../../devel/flex/buildlink3.mk"
-
-# files were created with bison<3 and regeneration rules
-# aren't correct
-post-extract:
-	rm ${WRKSRC}/lily/out/parser.*
-
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
