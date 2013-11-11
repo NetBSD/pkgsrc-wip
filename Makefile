@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5521 2013/11/10 22:12:16 nros Exp $
+# $Id: Makefile,v 1.5522 2013/11/11 12:08:04 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1536,6 +1536,7 @@ SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
 SUBDIR+=	lighttpd
 SUBDIR+=	lilypond-devel
+SUBDIR+=	lilypond-git
 SUBDIR+=	lilyterm
 SUBDIR+=	linbox
 SUBDIR+=	lingoteach-lesson
