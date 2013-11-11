@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/11/11 22:01:13 nros Exp $
+
+SHA1 (editorconfig-core-py-0.11.1.tar.gz) = c76b4211c91a98ad8bd23734ac09d224aadfdc44
+RMD160 (editorconfig-core-py-0.11.1.tar.gz) = 68a8d1257935ee309efc30958f04102818109b06
+Size (editorconfig-core-py-0.11.1.tar.gz) = 31407 bytes
