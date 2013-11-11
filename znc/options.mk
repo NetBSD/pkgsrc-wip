@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2013/11/11 11:25:45 obache Exp $
+# $NetBSD: options.mk,v 1.7 2013/11/11 12:22:14 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
@@ -76,6 +76,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 PY_PEP3147=	no
 .include		"../../lang/python/extension.mk"
 CONFIGURE_ARGS+=	--enable-python=python-${PYVERSSUFFIX}
+USE_TOOLS+=		perl
 PLIST_SRC+=		PLIST.python
 .endif
 
