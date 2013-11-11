@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/29 21:17:02 florian-geiges Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/11 11:01:38 obache Exp $
 bin/znc
 bin/znc-buildmod
 include/znc/Buffer.h
@@ -81,8 +81,8 @@ lib/znc/simple_away.so
 lib/znc/stickychan.so
 lib/znc/watch.so
 lib/znc/webadmin.so
-man/man1/znc-buildmod.1.gz
-man/man1/znc.1.gz
+man/man1/znc-buildmod.1
+man/man1/znc.1
 share/examples/rc.d/znc
 share/znc/modules/blockuser/tmpl/blockuser_WebadminUser.tmpl
 share/znc/modules/cert/tmpl/index.tmpl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/11 10:52:02 obache Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/11 11:01:38 obache Exp $
 #
 
 DISTNAME=		znc-1.0
@@ -48,6 +48,8 @@ BUILD_DEFS+=		ZNC_GROUP
 RCD_SCRIPTS+=		znc
 
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${ZNC_USER} ${ZNC_GROUP} 0755
+
+MANCOMPRESSED=		yes
 
 .include		"./options.mk"
 .include		"../../mk/bsd.pkg.mk"
