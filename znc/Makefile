@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/11/11 12:11:56 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/11 12:14:47 obache Exp $
 #
 
 DISTNAME=		znc-1.0
@@ -22,6 +22,8 @@ PLIST_SUBST+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 PLIST_SUBST+=		PKG_PREFIX="${PREFIX}"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+PKGCONFIG_OVERRIDE+=	znc.pc.in
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
