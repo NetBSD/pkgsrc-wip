@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/11/11 10:56:53 obache Exp $
+# $NetBSD: options.mk,v 1.5 2013/11/11 11:16:45 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
@@ -50,6 +50,8 @@ PLIST_SRC+=		PLIST.openssl
 #
 .if empty(PKG_OPTIONS:Mtdns)
 CONFIGURE_ARGS+=	--disable-tdns
+.else
+.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 #
