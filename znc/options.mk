@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2013/11/11 11:16:45 obache Exp $
+# $NetBSD: options.mk,v 1.6 2013/11/11 11:25:45 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
-PKG_SUPPORTED_OPTIONS=	debug poll optimization inet6 openssl perl python tcl tdns sasl
-PKG_SUGGESTED_OPTIONS=	poll optimization inet6 openssl tdns
+PKG_SUPPORTED_OPTIONS=	debug poll inet6 openssl perl python tcl tdns sasl
+PKG_SUGGESTED_OPTIONS=	poll inet6 openssl tdns
 
 .include 		"../../mk/bsd.options.mk"
 
@@ -19,13 +19,6 @@ CONFIGURE_ARGS+=	--enable-debug
 #
 .if empty(PKG_OPTIONS:Mpoll)
 CONFIGURE_ARGS+=	--disable-poll
-.endif
-
-#
-# Non-optimized build
-#
-.if empty(PKG_OPTIONS:Moptimization)
-CONFIGURE_ARGS+=	--disable-optimization
 .endif
 
 #
