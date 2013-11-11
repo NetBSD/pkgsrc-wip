@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/11/07 10:16:33 thomasklausner Exp $
+$NetBSD: distinfo,v 1.8 2013/11/11 10:10:47 thomasklausner Exp $
 
 SHA1 (patch-Makefile) = 7f1da7136af04cb4de2acbc9396ac16fcc7684a7
 SHA1 (patch-config_configure) = a7d4dcdda0a712ac18f0edab91f7fe972f1db53b
+SHA1 (patch-t_test-restore-map-owner.sh) = f1d5d1384a43a6c15c12aad1896c5d9cd315504c
