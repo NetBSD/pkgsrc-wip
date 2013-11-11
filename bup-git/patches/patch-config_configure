@@ -1,8 +1,8 @@
-$NetBSD: patch-config_configure,v 1.1 2013/10/26 23:21:09 thomasklausner Exp $
+$NetBSD: patch-config_configure,v 1.2 2013/11/11 20:14:16 thomasklausner Exp $
 
 Use PYTHON passed through from Makefile.
 
---- config/configure.orig	2013-10-26 13:16:20.000000000 +0000
+--- config/configure.orig	2013-11-11 08:52:33.000000000 +0000
 +++ config/configure
 @@ -42,7 +42,7 @@ if [ -z "$MAKE_VERSION" ]; then
  fi
