@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2013/11/10 13:07:07 obache Exp $
+# $NetBSD: options.mk,v 1.4 2013/11/11 10:56:53 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
-PKG_SUPPORTED_OPTIONS=	debug poll optimization ipv6 openssl perl python tcl tdns cyrus
-PKG_SUGGESTED_OPTIONS=	poll optimization ipv6 openssl tdns
+PKG_SUPPORTED_OPTIONS=	debug poll optimization inet6 openssl perl python tcl tdns sasl
+PKG_SUGGESTED_OPTIONS=	poll optimization inet6 openssl tdns
 
-.include		"../../mk/bsd.prefs.mk"
 .include 		"../../mk/bsd.options.mk"
 
 #
@@ -32,7 +31,7 @@ CONFIGURE_ARGS+=	--disable-optimization
 #
 # IPv6 support
 #
-.if empty(PKG_OPTIONS:Mipv6)
+.if empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
@@ -42,6 +41,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if empty(PKG_OPTIONS:Mopenssl)
 CONFIGURE_ARGS+=	--disable-openssl
 .else
+.include "../../security/openssl/buildlink3.mk"
 PLIST_SRC+=		PLIST.openssl
 .endif
 
@@ -68,7 +68,7 @@ PLIST_SRC+=		PLIST.perl
 .if !empty(PKG_OPTIONS:Mtcl)
 .include		"../../lang/tcl/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-tcl
-CONFIGURE_ARGS+=	--with-tcl=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 PLIST_SRC+=		PLIST.tcl
 .endif
 
@@ -87,7 +87,7 @@ PLIST_SRC+=		PLIST.python
 #
 # Cyrus SASL support
 #
-.if !empty(PKG_OPTIONS:Mcyrus)
+.if !empty(PKG_OPTIONS:Msasl)
 .include		"../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cyrus
 PLIST_SRC+=		PLIST.cyrus
