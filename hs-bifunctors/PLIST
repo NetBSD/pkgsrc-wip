@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/10/14 10:48:50 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/11/12 10:33:29 szptvlfn Exp $
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Biapplicative.hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Biapplicative.p_hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifoldable.hi
@@ -11,6 +11,8 @@ lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Clown.hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Clown.p_hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Flip.hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Flip.p_hi
+lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Join.hi
+lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Join.p_hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Joker.hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Joker.p_hi
 lib/bifunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Bifunctor/Product.hi

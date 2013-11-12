@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/10/20 18:19:25 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/12 10:33:29 szptvlfn Exp $
 
-DISTNAME=	bifunctors-4.1.0.1
+DISTNAME=	bifunctors-4.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
