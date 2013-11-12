@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/01/21 20:36:04 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2013/11/12 12:26:33 othyro Exp $
 #
 
-DISTNAME=	pcsxr-1.9.92
-PKGREVISION=	2
+DISTNAME=	pcsxr-1.9.93
 CATEGORIES=	emulators
-MASTER_SITES=	http://pcsxr.codeplex.com/downloads/get/140521
+MASTER_SITES=	http://pcsxr.codeplex.com/downloads/get/722114
 EXTRACT_SUFX=	.tar.bz2
 FETCH_MESSAGE=	"Please download the file:"
 FETCH_MESSAGE+=	"    "${DISTFILES:Q}
@@ -22,7 +21,9 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		aclocal autoconf autoheader automake autoreconf gmake
-USE_TOOLS+=		msgfmt msgmerge pkg-config xgettext
+USE_TOOLS+=		intltool msgfmt msgmerge pkg-config xgettext
+
+WRKSRC=		${WRKDIR}/${PKGBASE}
 
 .include "options.mk"
 
@@ -39,6 +40,6 @@ BUILDLINK_DEPMETHOD.libXcursor=	build
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
