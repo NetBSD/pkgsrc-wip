@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 16:59:25 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/13 18:44:23 minskim Exp $
 
 DISTNAME=	tr2latex
 PKGNAME=	${DISTNAME}-2.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/}
 EXTRACT_SUFX=	.tgz
@@ -27,13 +28,13 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MAKE_FILE=	Makefile.unix
 BUILD_TARGET=	tr2latex
 PKGMANDIR?=	man  # until in pkgsrc
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/texmf/tex/latex/misc
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/texmf-dist/tex/latex/misc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tr2latex ${DESTDIR}${PREFIX}/bin/tr2latex
 	${INSTALL_MAN} ${WRKSRC}/tr2latex.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tr2latex.1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/texmf/tex/latex/misc
-	${INSTALL_DATA} ${WRKSRC}/troffman.sty ${DESTDIR}${PREFIX}/share/texmf/tex/latex/misc/
-	${INSTALL_DATA} ${WRKSRC}/troffms.sty ${DESTDIR}${PREFIX}/share/texmf/tex/latex/misc/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/misc
+	${INSTALL_DATA} ${WRKSRC}/troffman.sty ${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/misc/
+	${INSTALL_DATA} ${WRKSRC}/troffms.sty ${DESTDIR}${PREFIX}/share/texmf-dist/tex/latex/misc/
 
 .include "../../mk/bsd.pkg.mk"
