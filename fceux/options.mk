@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/01/28 12:41:42 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2013/11/13 02:28:18 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fceux
 PKG_SUPPORTED_OPTIONS=	debug gd gtk2 gtk3 lua opengl sdl x11 zlib
@@ -36,7 +36,8 @@ MAKE_ENV+=		GTK3=0
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
-#PLIST.lua=            yes
+#PLIST.lua=		yes
+LUA_VERSION_REQD=	51
 .include "../../lang/lua/buildlink3.mk"
 MAKE_ENV+=		LUA=1
 .else

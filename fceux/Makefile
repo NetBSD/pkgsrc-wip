@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/05/08 00:55:14 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/13 02:28:18 othyro Exp $
 #
 
-DISTNAME=	fceux-2.2.1.1.src
+DISTNAME=	fceux-2.2.2.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fceultra/}
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=		c c++
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
 USE_TOOLS+=		pkg-config
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/applications share/pixmaps
 
 .include "options.mk"
 
@@ -36,5 +36,6 @@ do-install:
 	cd ${WRKSRC} && \
 		${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/scons install --prefix=${DESTDIR}${PREFIX}
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

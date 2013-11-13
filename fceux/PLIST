@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2013/05/05 14:25:56 othyro Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/11/13 02:28:18 othyro Exp $
 bin/fceux
 bin/fceux-net-server
 man/man6/fceux-net-server.6
 man/man6/fceux.6
 share/fceux/auxlib.lua
+share/fceux/fceux.chm
+share/fceux/lua5.1.dll
+share/fceux/lua51.dll
 share/fceux/luaScripts/AVI-HeadsUpDisplay.lua
 share/fceux/luaScripts/BoulderDash_AmoebaAI.lua
 share/fceux/luaScripts/BugsBunnyBirthdayBlowout.lua
