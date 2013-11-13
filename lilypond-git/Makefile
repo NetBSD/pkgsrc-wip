@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.1 2013/11/11 12:02:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/13 07:26:34 thomasklausner Exp $
+MAKE_JOBS_SAFE=no
 
 DISTNAME=	lilypond-2.19.0
 CATEGORIES=	print

@@ -1,7 +1,25 @@
-$NetBSD: distinfo,v 1.1 2013/11/11 12:02:59 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2013/11/13 07:26:34 thomasklausner Exp $
 
 SHA1 (lilypond-2.17.95.tar.gz) = fb4dedb14a5616b2ac1f9031030c9a615f807548
 RMD160 (lilypond-2.17.95.tar.gz) = 651d91cf5f9b9a35458cbd5e07657f62cae3ccf2
 Size (lilypond-2.17.95.tar.gz) = 15960245 bytes
 SHA1 (patch-ab) = a1d327ab900cca18b9306846f137e1bbcfdca945
 SHA1 (patch-configure.ac) = 5a86252661bbd8cc74d04254488c7aa7ddaaee3c
+SHA1 (patch-flower_include_std-vector.hh) = ae53c5a8d48997548d34d9893770f787dc0e9a8d
+SHA1 (patch-flower_string-convert.cc) = 19aad7a33ac06d2b4af626ef397797c04265f97b
+SHA1 (patch-lily_arpeggio.cc) = 7aedbccdc876f09c987c34c0528e0300b4a4427a
+SHA1 (patch-lily_flag.cc) = ea79f663bf7a991b28219c079eaec771c46f497e
+SHA1 (patch-lily_input.cc) = 6123bcc417383486fe64e3051b9612da35f5d187
+SHA1 (patch-lily_mensural-ligature.cc) = d5c53ea0951bab43a9d1360746797f226b6ab969
+SHA1 (patch-lily_note-head.cc) = caa8cae88dc249145a2a9058967d5a8d89ffd28f
+SHA1 (patch-lily_page-turn-page-breaking.cc) = c514382e6efee53503bbe717ddfa552d56b6dc84
+SHA1 (patch-lily_paper-column-engraver.cc) = 4cf4265c7aba14c498623a6952b0982dd279fd0d
+SHA1 (patch-lily_paper-column.cc) = 9ec5abd53814fa913b94c6ad49d0ee085b76f076
+SHA1 (patch-lily_performance.cc) = aeca21dc7f8460f415c988a6f1536a606ff0cb11
+SHA1 (patch-lily_rest.cc) = 8d1888acd196451a52755729638248e235c2c452
+SHA1 (patch-lily_simultaneous-music-iterator.cc) = 95b9ed525303e69129dc3f45856bbdc9837a2c1c
+SHA1 (patch-lily_source-file.cc) = 58e66f8fe91e94504edcb9067dbe9150a7faef69
+SHA1 (patch-lily_system-start-delimiter.cc) = f084f0945fc49823c3e80fbf592de0df19296bb5
+SHA1 (patch-lily_system.cc) = a261938ef89efefa31942e30ca5d14e4e4cacbde
+SHA1 (patch-lily_time-signature.cc) = 422322765981f16a45e0e0bbf4004d9be598ce87
+SHA1 (patch-lily_volta-repeat-iterator.cc) = c5d66d198124ae5181ab007abcf144d213d4c2b4
