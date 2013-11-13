@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/06 21:52:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/11/13 23:06:47 minskim Exp $
 bin/ppower4
-share/texmf/java/ppower4/pp4p.jar
-share/texmf/tex/latex/ppower4/background.sty
-share/texmf/tex/latex/ppower4/mpmulti.sty
-share/texmf/tex/latex/ppower4/pause.sty
-share/texmf/tex/latex/ppower4/pp4link.sty
-share/texmf/tex/latex/ppower4/pp4slide.sty
-share/texmf/tex/latex/ppower4/texpause.sty
+share/texmf-dist/java/ppower4/pp4p.jar
+share/texmf-dist/tex/latex/ppower4/background.sty
+share/texmf-dist/tex/latex/ppower4/mpmulti.sty
+share/texmf-dist/tex/latex/ppower4/pause.sty
+share/texmf-dist/tex/latex/ppower4/pp4link.sty
+share/texmf-dist/tex/latex/ppower4/pp4slide.sty
+share/texmf-dist/tex/latex/ppower4/texpause.sty

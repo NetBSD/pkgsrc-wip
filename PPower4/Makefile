@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:27 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/11/13 23:06:47 minskim Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
 DISTFILES=	pp4sty.zip pp4p.jar
@@ -23,12 +24,10 @@ NO_CONFIGURE=	YES
 
 EXTRACT_ONLY=	pp4sty.zip
 
-JARDIR=		${PREFIX}/share/texmf/java/ppower4
-STYDIR=		${PREFIX}/share/texmf/tex/latex/ppower4
+JARDIR=		${PREFIX}/share/texmf-dist/java/ppower4
+STYDIR=		${PREFIX}/share/texmf-dist/tex/latex/ppower4
 
 INSTALLATION_DIRS+=	bin ${JARDIR} ${STYDIR}
-
-TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
 do-build:
 	${SED}  -e "s,@RCD_SCRIPTS_SHELL@,${RCD_SCRIPTS_SHELL},g" \
