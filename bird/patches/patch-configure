@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2013/11/14 14:01:10 kralian Exp $
+
+--- configure.orig	2013-07-28 18:57:59.000000000 +0000
++++ configure
+@@ -4442,12 +4442,8 @@ else
+ 				default_iproutedir="/etc/iproute2"
+ 				;;
+ 		ipv6:netbsd*)	sysdesc=bsd-v6
+-				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
+ 				;;
+ 		ipv4:netbsd*)	sysdesc=bsd
+-				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
+ 				;;
+ 		ipv6:freebsd*)	sysdesc=bsd-v6
+ 				;;

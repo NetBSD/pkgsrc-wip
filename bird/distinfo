@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.12 2013/11/14 14:01:10 kralian Exp $
+
+SHA1 (bird-1.3.11.tar.gz) = c0a425ff2ef85bbeb17dbdf82c97c4565ebfb903
+RMD160 (bird-1.3.11.tar.gz) = f62213b07941cac4e441e8211a37b0a32fd4601b
+Size (bird-1.3.11.tar.gz) = 1108400 bytes
+SHA1 (patch-configure) = ea93a7e90caa274632159172deb53eff9739cb4b
+SHA1 (patch-lib_lists.h) = c5af1e31b3cbeb39c30f5732ff7eef5ed2f77869
+SHA1 (patch-tools_Makefile.in) = 4ce6eab482f60aa4ac3a803c871e5ac20be37710
