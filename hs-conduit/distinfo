@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/10 09:53:58 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2013/11/14 19:49:33 szptvlfn Exp $
 
-SHA1 (conduit-1.0.9.tar.gz) = c80bb066be266ba0726e5bf824c1466f868efc8e
-RMD160 (conduit-1.0.9.tar.gz) = a7dcabab89ea9e6c33cd8ca191c64c50d4cabbaa
-Size (conduit-1.0.9.tar.gz) = 33989 bytes
+SHA1 (conduit-1.0.9.1.tar.gz) = 71177a3a3565893d47d5459f03f8e64fee76daea
+RMD160 (conduit-1.0.9.1.tar.gz) = 66412ca7b029fff447d713bb6e96f8d8fe04f710
+Size (conduit-1.0.9.1.tar.gz) = 33997 bytes
