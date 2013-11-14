@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2013/10/29 21:15:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.13 2013/11/14 13:24:32 szptvlfn Exp $
 
 VERSION=	1.0.0
 DISTNAME=	pylint-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pylint/
+FETCH_USING=	curl
 
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.logilab.org/project/pylint
