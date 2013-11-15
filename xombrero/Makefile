@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/11/15 20:06:40 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/11/15 20:11:30 asau Exp $
 #
 
 DISTNAME=	xombrero-1.3.1
@@ -21,6 +21,12 @@ MAKE_JOBS_SAFE=	no
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+= perl pkg-config
 
+SUBST_CLASSES+=			fix-prefix
+SUBST_STAGE.fix-prefix=		pre-configure
+SUBST_MESSAGE.fix-prefix=	Fixing PREFIX.
+SUBST_FILES.fix-prefix=		xombrero.h
+SUBST_SED.fix-prefix=		-e 's,/usr/local,${PREFIX},g'
+
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "DragonFly"
 BUILD_DIRS= dragonfly
@@ -29,14 +35,6 @@ BUILD_DIRS= dragonfly
 .if ${OPSYS} == "NetBSD"
 BUILD_DIRS= netbsd
 .endif
-
-
-# the path for the default config file is
-# hardcoded as /usr/local/ in xombrero.h
-do-configure:
-	cd ${WRKSRC} && \
-	sed -e "s#\\/usr\\/local#${PREFIX}#" xombrero.h \
-	> xombrero.h.new && mv xombrero.h.new xombrero.h
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../www/webkit-gtk3/buildlink3.mk"
