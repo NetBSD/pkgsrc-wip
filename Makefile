@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5523 2013/11/11 22:37:56 nros Exp $
+# $Id: Makefile,v 1.5524 2013/11/15 12:28:18 rhialto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -683,6 +683,8 @@ SUBDIR+=	fricas
 SUBDIR+=	frobby
 SUBDIR+=	froggymicroblog
 SUBDIR+=	fs-uae
+SUBDIR+=	fs-uae-dev
+SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fs2open
 SUBDIR+=	fslsfonts
 SUBDIR+=	fstobdf
@@ -2741,6 +2743,8 @@ SUBDIR+=	py-pyquante
 SUBDIR+=	py-pyrit
 SUBDIR+=	py-pysal
 SUBDIR+=	py-pysb
+SUBDIR+=	py-pyside-shiboken
+SUBDIR+=	py-pyside
 SUBDIR+=	py-pyslha
 SUBDIR+=	py-pysph
 SUBDIR+=	py-pysphere
