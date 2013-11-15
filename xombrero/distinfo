@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/09/17 08:45:16 zplay Exp $
+$NetBSD: distinfo,v 1.5 2013/11/15 19:44:29 asau Exp $
 
 SHA1 (xombrero-1.3.1.tgz) = 8b827ce0921e47e15cb9f0dd8d19168c5b7d27b1
 RMD160 (xombrero-1.3.1.tgz) = 6f25e772bd2861fea5aa0427897be438ea6f9b27
 Size (xombrero-1.3.1.tgz) = 259149 bytes
+SHA1 (patch-whitelist.c) = 5e0b8f022f583edf5ba4e0a023b5e69405140985
