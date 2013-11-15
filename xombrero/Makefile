@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/11/15 19:16:38 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/15 19:28:40 asau Exp $
 #
 
 DISTNAME=	xombrero-1.3.1
@@ -15,6 +15,8 @@ LICENSE=	isc
 ONLY_FOR_PLATFORM= DragonFly-*-* NetBSD-*-*
 
 FETCH_USING=	curl
+
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+= perl pkg-config
 
