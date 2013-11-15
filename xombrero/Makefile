@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/11/15 19:28:40 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/15 20:06:40 asau Exp $
 #
 
 DISTNAME=	xombrero-1.3.1
@@ -18,6 +18,7 @@ FETCH_USING=	curl
 
 MAKE_JOBS_SAFE=	no
 
+USE_BSD_MAKEFILE=	yes
 USE_TOOLS+= perl pkg-config
 
 .include "../../mk/bsd.prefs.mk"
