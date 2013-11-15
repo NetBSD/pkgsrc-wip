@@ -1,0 +1,20 @@
+This is a fork of UAE, the Ubiquitous Amiga Emulator, with an emulation core
+based on WinUAE. It attempts to bring many of the great features of WinUAE
+to non-Windows platforms.
+
+FS-UAE focuses on emulating Amiga games using the accurate emulation
+code from WinUAE. It also has features to emulate a high-end Amiga with
+expansions.
+
+Unique features for FS-UAE are support for online play on all supported
+platforms and an on-screen GUI controllable with keyboard and gamepad
+controllers.
+
+To make full use of FS-UAE you will need access to an image of some version
+of the Amiga Kickstart ROM (although UAE does include a ROM emulation which
+may work with some old games). The Amiga Kickstart ROMs are copyrighted
+material and may not be freely distributed (so don't ask me for a copy). If
+you don't have an Amiga from which you can legally make a ROM image, a
+selection of ROM images are available for purchase online from Cloanto
+(publishers of the Amiga Forever distribution). See
+http://www.amigaforever.com/
