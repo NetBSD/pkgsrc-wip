@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/11/15 20:11:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2013/11/15 20:26:22 asau Exp $
 
-DISTNAME=	xombrero-1.3.1
-#PKGNAME=	xombrero-1.3.1
+DISTNAME=	xombrero-1.6.3
 CATEGORIES=	www
 MASTER_SITES=	https://opensource.conformal.com/snapshots/xombrero/
 EXTRACT_SUFX=	.tgz
