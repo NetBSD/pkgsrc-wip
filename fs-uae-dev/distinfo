@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2013/11/15 12:26:23 rhialto Exp $
+
+SHA1 (fs-uae-2.3.9dev.tar.gz) = bae9b8965f984d723bfff52ab45943df5beb7618
+RMD160 (fs-uae-2.3.9dev.tar.gz) = b2e775dc4385e2ff2317abe87973ca958b5157cc
+Size (fs-uae-2.3.9dev.tar.gz) = 4554472 bytes
+SHA1 (patch-Makefile) = 81451cb963741baf20087d5de3b0834c9738eb0d
+SHA1 (patch-common.mk) = ad53cfafcdc2b4e52fdc40a3b9ff038c714524d1
+SHA1 (patch-libfsemu_Makefile) = f99590c9727658ab3b3875f286f01680f2a18071
+SHA1 (patch-libfsemu_src_emu_input.c) = af59535679d58839453c0856b7d121aa912f3d3e
+SHA1 (patch-libfsemu_src_filesys.c) = 9f560f34ace178056b37f2eabd209eabc5426ef1
+SHA1 (patch-libfsemu_src_ml_manymouse_x11__xinput2.c) = 7b982208970c44aed6b314a3f689c5f375f574f4
+SHA1 (patch-libfsemu_src_ml_ml.c) = 8c05215c5533099a93c4d47ae2dbdbb265026f82
+SHA1 (patch-libfsemu_src_ml_x11.c) = b535e9d8cbb911beb250659e9337f72dde939406
+SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = d32998ca2dfcf24fd1226abc31363d2b4eabdd7a

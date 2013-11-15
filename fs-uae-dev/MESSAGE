@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/11/15 12:26:23 rhialto Exp $
+
+This version of fs-uae has unbundled the graphical settings and launching
+program.
+
+Install wip/fs-uae-launcher if you want it, but you can still run fs-uae
+and change your settings with a text editor if you don't.
+===========================================================================
