@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/11/16 14:32:43 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/16 14:41:09 mwilhelmy Exp $
 #
 
-# Note: TclOO is included in Tcl8.6, delete this package after pkgsrc bumps Tcl
 DISTNAME=	TclOO1.0.1
 PKGNAME=	${DISTNAME:S/TclOO/tcl-tclOO-/}
 CATEGORIES=	devel
@@ -13,6 +12,9 @@ COMMENT=	Core for other TCL OO extensions and basic TCL OO framework
 LICENSE=	2-clause-bsd # with custom, non-effective terms, same as Tcl
 
 GNU_CONFIGURE=	yes
+
+# Note: TclOO is included in Tcl8.6, delete this package after pkgsrc bumps Tcl
+CONFLICTS=	tcl-9* tcl-8.[6-9].*
 
 SUBST_CLASSES+=			manpages
 SUBST_STAGE.manpages=	post-patch
