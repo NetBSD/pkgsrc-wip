@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/11/16 19:21:09 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/11/16 20:45:48 asau Exp $
 #
 
 DISTNAME=	TclOO1.0.1
@@ -15,6 +15,9 @@ LICENSE=	2-clause-bsd # with custom, non-effective terms, same as Tcl
 CONFLICTS=	tcl-9* tcl-8.[6-9].*
 
 GNU_CONFIGURE=	yes
+
+# Make sure package installs all necessary headers:
+INSTALL_TARGET=	install install-private-headers
 
 SUBST_CLASSES+=			manpages
 SUBST_STAGE.manpages=	post-patch

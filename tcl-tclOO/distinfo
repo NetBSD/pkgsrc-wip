@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/11/16 14:32:44 mwilhelmy Exp $
+$NetBSD: distinfo,v 1.5 2013/11/16 20:45:48 asau Exp $
 
 SHA1 (TclOO1.0.1.tar.gz) = b28be85ba9c29acb650164c1cabddec7f1dae83f
 RMD160 (TclOO1.0.1.tar.gz) = 8d80a3628ca33fb26e0aa4080c0c917f5799f450
 Size (TclOO1.0.1.tar.gz) = 228647 bytes
-SHA1 (patch-aa) = 010582585bd2ef4a09ae6d6f26e112f7f0f9c7f9
