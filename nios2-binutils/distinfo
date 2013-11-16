@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/11/08 07:36:08 makoto Exp $
+$NetBSD: distinfo,v 1.4 2013/11/16 13:30:11 makoto Exp $
 
-SHA1 (nios2_gnu_gcc4_13.0.gz) = 1df8e0ebd1f0e42ab4dd8a507c0a3dc85c1d598b
-RMD160 (nios2_gnu_gcc4_13.0.gz) = 5331366fc1ab307909bbe6a2ef1fc11d70b0f523
-Size (nios2_gnu_gcc4_13.0.gz) = 110799088 bytes
+SHA1 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 94a0dadc4c1370dadfacf4bc6cac591e3e47959b
+RMD160 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = de056d240a73236d6d8be4851813d8b15d16808f
+Size (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 251136787 bytes

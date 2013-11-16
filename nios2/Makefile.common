@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/11/08 07:36:47 makoto Exp $
+# $NetBSD: Makefile.common,v 1.5 2013/11/16 13:30:11 makoto Exp $  -*- Makefile -*-
 #
 # used by wip/nios2-binutils/Makefile
 # used by wip/nios2-gcc/Makefile
@@ -6,12 +6,14 @@
 # sentinel to avoid duplicate
 .if !defined(NIOS2_MAKEFILECOMMON)
 NIOS2_MAKEFILECOMMON=  # yes
-
-MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
-DISTNAME=		nios2_gnu_gcc4_13.0
-EXTRACT_SUFX=		.gz
+DISTNAME=		sourceryg++-2013.05-43-nios2-linux-gnu.src
+CATEGORIES=		cross
+MASTER_SITES=		https://sourcery.mentor.com/GNUToolchain/package11649/public/nios2-linux-gnu/
+EXTRACT_SUFX=           .tar.bz2
+FETCH_USING=            curl
 
 GNU_CONFIGURE=		yes
+INFO_FILES=		#empty
 USE_PKGLOCALEDIR=	yes
 
 NIOS2_TARGET?=		nios2-elf
@@ -22,6 +24,8 @@ BUILD_DEFS+=		CROSSBASE
 PATH:=			${CROSSBASE}/bin:${PATH}
 
 BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+# MASTER_SITES with https:// and FETCH_USING= curl
+BUILD_DEPENDS+=         curl-[0-9]*:../../www/curl
 
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS=		# reset
