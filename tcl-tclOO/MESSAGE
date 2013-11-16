@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/12/30 03:11:43 othyro Exp $
-
-The class(n) man page has been moved to tclOO-class(n) as to not conflict
-with tcl-itcl.
-
-===========================================================================
