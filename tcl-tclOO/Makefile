@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/11/16 19:15:11 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/11/16 19:21:09 asau Exp $
 #
 
 DISTNAME=	TclOO1.0.1
@@ -22,7 +22,7 @@ SUBST_MESSAGE.manpages=	Fixing manual pages
 SUBST_FILES.manpages=	doc/*.[3n]
 SUBST_SED.manpages=		-e "/^\\.so /d"
 
-pre-install:
+post-build:
 	${MV} ${WRKSRC}/doc/class.n ${WRKSRC}/doc/tclOO-class.n
 
 .include "../../lang/tcl/buildlink3.mk"
