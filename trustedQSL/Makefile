@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2013/09/24 11:35:36 makoto Exp $
+# $NetBSD: Makefile,v 1.34 2013/11/17 08:06:28 makoto Exp $
 
 DISTNAME=		tqsl-2.0
-PKGNAME=		${DISTNAME}rc6
+PKGNAME=		${DISTNAME}
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
-MASTER_SITES=		http://downloads.sourceforge.net/project/trustedqsl/TrustedQSL/v2.0-rc6/
+MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v2.0/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
@@ -28,6 +29,7 @@ do-configure:
 	(cd $(WRKSRC) ; \
 	cmake \
 	-DBDB_PREFIX=${PREFIX} \
+	-DBDB_INCLUDE_DIR=${PREFIX}/include \
 	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
