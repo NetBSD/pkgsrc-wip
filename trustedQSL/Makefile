@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2013/11/17 08:06:28 makoto Exp $
+# $NetBSD: Makefile,v 1.35 2013/11/17 08:24:15 makoto Exp $
 
 DISTNAME=		tqsl-2.0
-PKGNAME=		${DISTNAME}
 CATEGORIES=		ham
-MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v2.0/
 EXTRACT_SUFX=		.tgz
 
@@ -12,12 +10,10 @@ HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
 COMMENT=		TrustedQSL, uploading QSL Data to LoTW of ARRL
 LICENSE=		arrl-license
 
-DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_TOOLS+=		perl gmake cmake
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_CMAKE=		yes
-WRKSRC=			${WRKDIR}/${DISTNAME}
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
