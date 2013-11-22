@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2013/03/19 01:22:55 bubuchka Exp $
+# $NetBSD: Makefile,v 1.9 2013/11/22 11:41:46 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://strimmerlab.org/software/entropy/
-COMMENT=	Entropy and Mutual Information Estimation
+COMMENT=	Estimation of Entropy, Mutual Information and Related Quantities
 LICENSE=	gnu-gpl-v3
 
 R_PKGNAME=	entropy
-R_PKGVER=	1.1.7
+R_PKGVER=	1.2.0
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.10.0
+BUILDLINK_API_DEPENDS.R+=	R>=2.15.1
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
