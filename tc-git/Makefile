@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/22 13:05:16 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/22 08:30:18 makoto Exp $
 
 DISTNAME=		tc-2.99.2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \
 EMACS_MODULES=		base
 
 # Instead of USE_TOOLS+=, avoid to conflict with autoconf
-USE_TOOLS=		aclocal automake autoconf gmake
+USE_TOOLS=		aclocal automake autoconf gmake makeinfo
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
