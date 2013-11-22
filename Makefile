@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5528 2013/11/19 12:31:44 pettai Exp $
+# $Id: Makefile,v 1.5529 2013/11/22 11:12:56 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2103,7 +2103,6 @@ SUBDIR+=	p5-Sub-WrapPackages
 SUBDIR+=	p5-Syntax-Highlight-Perl-Improved
 SUBDIR+=	p5-Sys-CPU
 SUBDIR+=	p5-Sys-MemInfo
-SUBDIR+=	p5-Sys-Syslog
 SUBDIR+=	p5-Task-Catalyst
 SUBDIR+=	p5-Template-Plugin-Class
 SUBDIR+=	p5-Term-Encoding
