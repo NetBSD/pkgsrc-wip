@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 15:09:50 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2013/11/24 10:00:21 thomasklausner Exp $
 
 DISTNAME=		manatee-1.8.4.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=manatee/}
 
@@ -20,7 +19,7 @@ DEPENDS+=		p5-HTML-Template>=2.6:../../www/p5-HTML-Template
 DEPENDS+=		p5-GD>=2.07:../../graphics/p5-GD
 DEPENDS+=		p5-GDGraph>=1.33nb1:../../graphics/p5-GDGraph
 DEPENDS+=		p5-GDTextUtil>=0.80nb1:../../graphics/p5-GDTextUtil
-DEPENDS+=		p5-Storable>=2.06:../../devel/p5-Storable
+#DEPENDS+=		p5-Storable>=2.06:../../devel/p5-Storable
 DEPENDS+=		p5-Date-Manip>=5.40:../../devel/p5-Date-Manip
 DEPENDS+=		mysql-server>=5.0:../../databases/mysql5-server
 DEPENDS+=		p5-Tree-DAG_Node>=1.04:../../devel/p5-Tree-DAG_Node

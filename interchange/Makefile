@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/09/30 05:44:15 asau Exp $
-#
+# $NetBSD: Makefile,v 1.16 2013/11/24 10:00:21 thomasklausner Exp $
 
 DISTNAME=	interchange-5.2.1
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	http://ftp.icdevgroup.org/interchange/5.2/tar/
 
@@ -13,7 +13,7 @@ DEPENDS+=	p5-DBI>=1.30:../../databases/p5-DBI
 DEPENDS+=	p5-SQL-Statement>=1.000:../../databases/p5-SQL-Statement
 DEPENDS+=	p5-Safe-Hole>=0.07:../../devel/p5-Safe-Hole
 DEPENDS+=	p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
-DEPENDS+=	p5-Storable>=1.0.6:../../devel/p5-Storable
+#DEPENDS+=	p5-Storable>=1.0.6:../../devel/p5-Storable
 DEPENDS+=	p5-URI>=1.09:../../www/p5-URI
 DEPENDS+=	p5-HTML-Parser>=3.13:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Tagset>=3.03:../../www/p5-HTML-Tagset
