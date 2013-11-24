@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/10/13 08:31:30 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/11/24 12:20:08 szptvlfn Exp $
 
-DISTNAME=	yaml-0.8.5.1
+DISTNAME=	yaml-0.8.5.2
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
