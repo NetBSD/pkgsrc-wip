@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/22 20:12:30 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/24 12:26:16 szptvlfn Exp $
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/HShighlighting-kate-${PKGVERSION}.o
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Paths_highlighting_kate.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Paths_highlighting_kate.p_hi
@@ -118,6 +118,8 @@ lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Sy
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Makefile.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Mandoc.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Mandoc.p_hi
+lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Markdown.hi
+lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Markdown.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Matlab.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Matlab.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Maxima.hi
@@ -126,6 +128,8 @@ lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Sy
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Metafont.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Mips.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Mips.p_hi
+lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Modelines.hi
+lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Modelines.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Modula2.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Modula2.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Modula3.hi
