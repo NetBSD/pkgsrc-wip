@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/29 16:25:46 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/11/25 10:54:27 szptvlfn Exp $
 lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive.hi
 lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive.p_hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive/Internal.hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive/Internal.p_hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive/Unsafe.hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive/Unsafe.p_hi
 lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/HScase-insensitive-${PKGVERSION}.o
 lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/libHScase-insensitive-${PKGVERSION}.a
 lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/libHScase-insensitive-${PKGVERSION}_p.a
