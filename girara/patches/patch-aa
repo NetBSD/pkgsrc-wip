@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2012/11/11 10:56:53 zul_ Exp $
+$ NetBSD $
 
-Adapt install target to pkgsrc prerequisite
+pragma GCC diagnostic only acts on some lines.
+See http://gcc.gnu.org/bugzilla/show_bug.cgi?id=52116
 
---- config.mk.orig	2012-11-10 10:55:21.000000000 +0000
-+++ config.mk	2012-11-10 10:55:55.000000000 +0000
-@@ -16,7 +16,7 @@
- SOVERSION = ${SOMAJOR}.${SOMINOR}
+--- session.c.orig	2013-11-25 10:40:09.000000000 +0000
++++ session.c	2013-11-25 10:42:06.000000000 +0000
+@@ -18,7 +18,7 @@
+ #include "gtk2-compat.h"
+ #endif
  
- # paths
--PREFIX ?= /usr
-+PREFIX ?= ${PREFIX}
- LIBDIR ?= ${PREFIX}/lib
- INCLUDEDIR ?= ${PREFIX}/include
- # locale directory
+-#if defined(__GNUC__) || defined(__clang__)
++#if defined(__clang__)
+ #define DO_PRAGMA(x) _Pragma(#x)
+ #else
+ #define DO_PRAGMA(x)
