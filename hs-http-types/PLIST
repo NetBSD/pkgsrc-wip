@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/25 11:31:34 szptvlfn Exp $
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/HShttp-types-${PKGVERSION}.o
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types.hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types.p_hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Header.hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Header.p_hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Method.hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Method.p_hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/QueryLike.hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/QueryLike.p_hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Status.hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Status.p_hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/URI.hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/URI.p_hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Version.hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Types/Version.p_hi
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/libHShttp-types-${PKGVERSION}.a
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/libHShttp-types-${PKGVERSION}_p.a
+lib/http-types-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/http-types-${PKGVERSION}/LICENSE
