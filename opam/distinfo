@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/03/21 20:09:45 zul_ Exp $
+$NetBSD: distinfo,v 1.2 2013/11/25 09:20:25 zul_ Exp $
 
-SHA1 (1.0.0.tar.gz) = 5e126f71c7e0caff3b61a751ef09dd66892720ae
-RMD160 (1.0.0.tar.gz) = 741fae73be88cd4c6055cfafc49db8b01a5fcf2e
-Size (1.0.0.tar.gz) = 1514750 bytes
+SHA1 (opam-full-1.1.0.tar.gz) = b6bfb5ed5f23134e8b0922e3d7317920f8e8bc7c
+RMD160 (opam-full-1.1.0.tar.gz) = 7aad774cc52f35df22835bed211fa5a0c9f8c77d
+Size (opam-full-1.1.0.tar.gz) = 2271477 bytes
