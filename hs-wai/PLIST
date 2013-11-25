@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/25 11:39:41 szptvlfn Exp $
+lib/wai-${PKGVERSION}/${HASKELL_VERSION}/HSwai-${PKGVERSION}.o
+lib/wai-${PKGVERSION}/${HASKELL_VERSION}/Network/Wai.hi
+lib/wai-${PKGVERSION}/${HASKELL_VERSION}/Network/Wai.p_hi
+lib/wai-${PKGVERSION}/${HASKELL_VERSION}/libHSwai-${PKGVERSION}.a
+lib/wai-${PKGVERSION}/${HASKELL_VERSION}/libHSwai-${PKGVERSION}_p.a
+lib/wai-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/wai-${PKGVERSION}/LICENSE
