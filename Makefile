@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5529 2013/11/22 11:12:56 obache Exp $
+# $Id: Makefile,v 1.5530 2013/11/25 11:43:59 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1069,6 +1069,7 @@ SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template
 SUBDIR+=	hs-hslua
 SUBDIR+=	hs-html
+SUBDIR+=	hs-http-types
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-charproperties
 SUBDIR+=	hs-hxt-curl
@@ -1134,6 +1135,7 @@ SUBDIR+=	hs-regions
 SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-rosezipper
 SUBDIR+=	hs-rosezipper1
+SUBDIR+=	hs-safe
 SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroupoid-extras
 SUBDIR+=	hs-semigroupoids
@@ -1184,6 +1186,7 @@ SUBDIR+=	hs-vector-th-unbox
 SUBDIR+=	hs-void
 SUBDIR+=	hs-vte
 SUBDIR+=	hs-vty
+SUBDIR+=	hs-wai
 SUBDIR+=	hs-x11
 SUBDIR+=	hs-x11-extras
 SUBDIR+=	hs-x11-xft
