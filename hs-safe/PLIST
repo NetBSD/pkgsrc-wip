@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/25 11:20:27 szptvlfn Exp $
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/HSsafe-${PKGVERSION}.o
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe.hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe.p_hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe/Foldable.hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/Safe/Foldable.p_hi
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/libHSsafe-${PKGVERSION}.a
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/libHSsafe-${PKGVERSION}_p.a
+lib/safe-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/safe-${PKGVERSION}/LICENSE
