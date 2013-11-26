@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/26 23:52:59 szptvlfn Exp $
+lib/http-attoparsec-${PKGVERSION}/${HASKELL_VERSION}/HShttp-attoparsec-${PKGVERSION}.o
+lib/http-attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Attoparsec.hi
+lib/http-attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Attoparsec.p_hi
+lib/http-attoparsec-${PKGVERSION}/${HASKELL_VERSION}/libHShttp-attoparsec-${PKGVERSION}.a
+lib/http-attoparsec-${PKGVERSION}/${HASKELL_VERSION}/libHShttp-attoparsec-${PKGVERSION}_p.a
+lib/http-attoparsec-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/http-attoparsec-${PKGVERSION}/LICENSE
