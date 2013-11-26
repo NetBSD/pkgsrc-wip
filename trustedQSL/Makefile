@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/11/17 08:24:15 makoto Exp $
+# $NetBSD: Makefile,v 1.36 2013/11/26 12:22:16 makoto Exp $
 
 DISTNAME=		tqsl-2.0
 CATEGORIES=		ham
@@ -9,6 +9,9 @@ MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
 COMMENT=		TrustedQSL, uploading QSL Data to LoTW of ARRL
 LICENSE=		arrl-license
+
+# A macro _S in /usr/include/ctype.h conflicts with one in apps/tqsltrace.h
+NOT_FOR_PLATFORM+=   NetBSD-5.*
 
 USE_TOOLS+=		perl gmake cmake
 USE_LANGUAGES+=		c c++
