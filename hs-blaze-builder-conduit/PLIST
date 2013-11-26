@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/26 23:45:04 szptvlfn Exp $
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Blaze.hi
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Blaze.p_hi
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/HSblaze-builder-conduit-${PKGVERSION}.o
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-builder-conduit-${PKGVERSION}.a
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-builder-conduit-${PKGVERSION}_p.a
+lib/blaze-builder-conduit-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/blaze-builder-conduit-${PKGVERSION}/LICENSE
