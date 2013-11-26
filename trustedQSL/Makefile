@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/11/26 12:22:16 makoto Exp $
+# $NetBSD: Makefile,v 1.37 2013/11/26 12:57:16 makoto Exp $
 
 DISTNAME=		tqsl-2.0
 CATEGORIES=		ham
@@ -11,7 +11,7 @@ COMMENT=		TrustedQSL, uploading QSL Data to LoTW of ARRL
 LICENSE=		arrl-license
 
 # A macro _S in /usr/include/ctype.h conflicts with one in apps/tqsltrace.h
-NOT_FOR_PLATFORM+=   NetBSD-5.*
+# NOT_FOR_PLATFORM+=   NetBSD-5.*
 
 USE_TOOLS+=		perl gmake cmake
 USE_LANGUAGES+=		c c++
@@ -23,6 +23,25 @@ USE_CMAKE=		yes
 # an old version of pixman is found by the pkgsrc cairo.  The root
 # cause (aside from having two pixman versions installed) is ad hoc -L
 # usage in Makefile.am, without matching -R.
+
+# Following SUBST is really necessary only on NetBSD-5.*
+SUBST_CLASSES+=	macro_S
+SUBST_MESSAGE.macro_S= Replace _S with _SS to avoid conflicts on include/ctypes.h and apps/tqsltrace.h
+SUBST_STAGE.macro_S= post-patch
+SUBST_FILES.macro_S = \
+	apps/crqwiz.cpp \
+	apps/extwizard.cpp \
+	apps/getpassword.cpp \
+	apps/loadcertwiz.cpp \
+	apps/qsodatadialog.cpp \
+	apps/stationdial.cpp \
+	apps/tqsl.cpp \
+	apps/tqsl_prefs.cpp \
+	apps/tqslhelp.cpp \
+	apps/tqsltrace.h \
+	apps/tqslvalidator.cpp \
+	apps/tqslwiz.cpp
+SUBST_SED.macro_S=	-e 's,_S(,_SS(,g'
 
 do-configure:
 	(cd $(WRKSRC) ; \
