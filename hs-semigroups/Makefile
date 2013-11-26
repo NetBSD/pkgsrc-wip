@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/10/20 18:19:25 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2013/11/26 11:42:01 szptvlfn Exp $
 #
 
-DISTNAME=	semigroups-0.11
+DISTNAME=	semigroups-0.12
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
