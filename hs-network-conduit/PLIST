@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/26 23:59:09 szptvlfn Exp $
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network.hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network.p_hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network/Internal.hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network/Internal.p_hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network/UDP.hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network/UDP.p_hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network/Utils.hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network/Utils.p_hi
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/HSnetwork-conduit-${PKGVERSION}.o
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-conduit-${PKGVERSION}.a
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-conduit-${PKGVERSION}_p.a
+lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/network-conduit-${PKGVERSION}/LICENSE
