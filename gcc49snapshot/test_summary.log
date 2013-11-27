@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 204338
+LAST_UPDATED: Obtained from SVN: trunk revision 205338
 
 Native configuration is x86_64--netbsd
 
@@ -11,7 +11,8 @@ FAIL: g++.dg/cdce3.C -std=gnu++98 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C -std=gnu++98 compilation failed to produce executable
 FAIL: g++.dg/cdce3.C -std=gnu++11 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C -std=gnu++11 compilation failed to produce executable
-FAIL: g++.dg/cpp0x/udlit-general.C execution test
+FAIL: g++.dg/ext/utf8-1.C (test for excess errors)
+UNRESOLVED: g++.dg/ext/utf8-1.C compilation failed to produce executable
 FAIL: g++.dg/guality/pr55665.C  -O2  line 23 p == 40
 FAIL: g++.dg/guality/pr55665.C  -O3 -fomit-frame-pointer  line 23 p == 40
 FAIL: g++.dg/guality/pr55665.C  -O3 -g  line 23 p == 40
@@ -25,466 +26,16 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 # of expected passes		55909
 # of unexpected failures	10
 # of expected failures		292
-# of unresolved testcases	2
-# of unsupported tests		988
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20131103 (experimental) (GCC) 
+# of unresolved testcases	3
+# of unsupported tests		999
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20131124 (experimental) (GCC) 
 
 		=== gcc tests ===
 
 
 Running target unix
-FAIL: gcc.c-torture/execute/conversion.c execution,  -O0 
-FAIL: gcc.c-torture/execute/conversion.c execution,  -Og -g 
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs  compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O0 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O1 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O2 -ftree-vectorize -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -g -O3 -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -fcilkplus -g -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O0 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O1 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O2 -ftree-vectorize -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -fcilkplus -g -O3 -std=c99 -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3 -ftree-vectorize -std=c99 -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O0 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O2 -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_return.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/fib_no_sync.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawnee_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawner_inline.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/spawning_arg.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/steal_check.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/steal_check.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
-FAIL: c-c++-common/cilk-plus/CK/varargs_test.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs (test for excess errors)
-UNRESOLVED: c-c++-common/cilk-plus/CK/varargs_test.c  -O3  -flto -g -fcilkplus -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs compilation failed to produce executable
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O2  execution test
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
 XPASS: gcc.dg/binop-xor1.c scan-tree-dump-times optimized "\\\\^" 1
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
@@ -506,12 +57,17 @@ FAIL: gcc.dg/nest.c (test for excess errors)
 FAIL: gcc.dg/nested-func-4.c (test for excess errors)
 FAIL: gcc.dg/pr32450.c (test for excess errors)
 FAIL: gcc.dg/pr43643.c (test for excess errors)
+FAIL: gcc.dg/ucnid-9.c (test for excess errors)
+UNRESOLVED: gcc.dg/ucnid-9.c compilation failed to produce executable
 FAIL: gcc.dg/uninit-pred-8_b.c bogus warning (test for bogus messages, line 20)
 FAIL: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 24)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
+FAIL: gcc.dg/utf8-1.c (test for excess errors)
+UNRESOLVED: gcc.dg/utf8-1.c compilation failed to produce executable
 XPASS: gcc.dg/guality/example.c  -O0  execution test
+XPASS: gcc.dg/guality/example.c  -O1  execution test
 XPASS: gcc.dg/guality/example.c  -O2  execution test
 XPASS: gcc.dg/guality/example.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
 XPASS: gcc.dg/guality/guality.c  -O0  execution test
@@ -573,8 +129,8 @@ FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fno-use-linker-plugin -flto-partiti
 FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
 FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
 FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
-FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-loops  line 21 x == 10 - i
-FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 21 x == 10 - i
+FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-loops  line 21 i == v + 1
+FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 21 i == v + 1
 FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 x == 10 - i
 FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 y == 20 - 2 * i
 FAIL: gcc.dg/guality/pr58791-4.c  -O1  line pr58791-4.c:32 i == 486
@@ -653,6 +209,54 @@ FAIL: gcc.dg/torture/builtin-power-1.c  -O3 -fomit-frame-pointer  (test for exce
 FAIL: gcc.dg/torture/builtin-power-1.c  -O3 -g  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-power-1.c  -Os  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-power-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
 FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O0  (test for excess errors)
 UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O0  compilation failed to produce executable
 FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O1  (test for excess errors)
@@ -669,6 +273,22 @@ FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fno-use-link
 UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
 FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
 UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
 FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O0  (test for excess errors)
 UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O0  compilation failed to produce executable
 FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O1  (test for excess errors)
@@ -701,49 +321,15 @@ FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fno-use-linker-plugin
 UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
 FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
 UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -O0  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -O1  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -O2  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -O3 -fomit-frame-pointer  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -O3 -g  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -Os  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80-timode.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -O0  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -O1  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -O2  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -O3 -fomit-frame-pointer  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -O3 -g  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -Os  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/torture/fp-int-convert-float80.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -O0  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -O1  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -O2  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -O3 -fomit-frame-pointer  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -O3 -g  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -Os  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/torture/fp-int-convert-long-double.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O0  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O1  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O2  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O3 -fomit-frame-pointer  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O3 -g  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -Os  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
 FAIL: gcc.dg/tree-ssa/foldaddr-1.c scan-tree-dump-times original "return 0" 1
 FAIL: gcc.target/i386/conversion.c (test for excess errors)
-FAIL: gcc.target/i386/excess-precision-1.c execution test
-FAIL: gcc.target/i386/excess-precision-3.c execution test
 FAIL: gcc.target/i386/float128-1.c (test for excess errors)
 UNRESOLVED: gcc.target/i386/float128-1.c compilation failed to produce executable
 FAIL: gcc.target/i386/float128-2.c (test for excess errors)
 UNRESOLVED: gcc.target/i386/float128-2.c compilation failed to produce executable
-FAIL: gcc.target/i386/pr36578-1.c execution test
-FAIL: gcc.target/i386/pr36578-2.c execution test
 FAIL: gcc.target/i386/pr57275.c execution test
+FAIL: gcc.target/i386/pr59099.c (test for excess errors)
+UNRESOLVED: gcc.target/i386/pr59099.c compilation failed to produce executable
 FAIL: gcc.target/i386/vcvtph2ps-1.c execution test
 FAIL: gcc.target/i386/vcvtph2ps-2.c execution test
 FAIL: gcc.target/i386/vcvtph2ps-3.c execution test
@@ -753,18 +339,34 @@ FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		100977
-# of unexpected failures	426
-# of unexpected successes	40
-# of expected failures		263
-# of unresolved testcases	251
-# of unsupported tests		1508
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131103 (experimental) (GCC) 
+# of expected passes		100224
+# of unexpected failures	199
+# of unexpected successes	41
+# of expected failures		261
+# of unresolved testcases	61
+# of unsupported tests		1524
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131124 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
 
 Running target unix
+FAIL: gfortran.dg/erf_3.F90  -O0  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -O0  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90  -O1  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -O1  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90  -O2  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -O2  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90  -O3 -g  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -g  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90  -Os  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90  -Os  compilation failed to produce executable
 FAIL: gfortran.dg/nint_2.f90  -O0  execution test
 FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O0  execution test
 FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O1  execution test
@@ -789,12 +391,12 @@ UNRESOLVED: gfortran.dg/lto/pr45586 f_lto_pr45586_0.o-f_lto_pr45586_0.o execute 
 
 		=== gfortran Summary ===
 
-# of expected passes		44700
-# of unexpected failures	15
+# of expected passes		44751
+# of unexpected failures	23
 # of expected failures		52
-# of unresolved testcases	6
-# of unsupported tests		263
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20131103 (experimental) (GCC) 
+# of unresolved testcases	14
+# of unsupported tests		264
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20131124 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -806,7 +408,7 @@ Running target unix
 # of expected passes		1441
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20131103 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20131124 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -822,23 +424,8 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131103 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131124 (experimental) (GCC) 
 
-		=== boehm-gc tests ===
-
-
-Running target unix
-WARNING: program timed out.
-FAIL: boehm-gc.c/gctest.c -O2 execution test
-FAIL: boehm-gc.c/thread_leak_test.c -O2 (test for excess errors)
-UNRESOLVED: boehm-gc.c/thread_leak_test.c -O2 compilation failed to produce executable
-
-		=== boehm-gc Summary ===
-
-# of expected passes		9
-# of unexpected failures	2
-# of unresolved testcases	1
-# of unsupported tests		1
 		=== libatomic tests ===
 
 
@@ -847,23 +434,12 @@ Running target unix
 		=== libatomic Summary ===
 
 # of expected passes		54
-		=== libffi tests ===
-
-
-Running target unix
-
-		=== libffi Summary ===
-
-# of expected passes		1819
-# of unsupported tests		55
 		=== libgomp tests ===
 
 
 Running target unix
 FAIL: libgomp.c/affinity-1.c (test for excess errors)
 UNRESOLVED: libgomp.c/affinity-1.c compilation failed to produce executable
-WARNING: program timed out.
-FAIL: libgomp.c/pr29947-2.c execution test
 FAIL: libgomp.c++/affinity-1.C (test for excess errors)
 UNRESOLVED: libgomp.c++/affinity-1.C compilation failed to produce executable
 FAIL: libgomp.graphite/bounds.c scan-tree-dump-times graphite "0 loops carried no dependency" 1
@@ -874,8 +450,8 @@ FAIL: libgomp.graphite/pr41118.c scan-tree-dump-times optimized "loopfn" 0
 
 		=== libgomp Summary ===
 
-# of expected passes		2376
-# of unexpected failures	8
+# of expected passes		2377
+# of unexpected failures	7
 # of unresolved testcases	2
 # of unsupported tests		3
 		=== libitm tests ===
@@ -890,862 +466,6 @@ FAIL: libitm.c/clone-1.c execution test
 # of unexpected failures	1
 # of expected failures		3
 # of unsupported tests		1
-		=== libjava tests ===
-
-
-Running target unix
-FAIL: PR9577 run
-FAIL: longfield run
-FAIL: shortfield run
-FAIL: TestClosureGC run
-FAIL: libjava.jar/TestClosureGC.jar execution - gij test
-FAIL: simple run
-FAIL: libjava.jar/simple.jar execution - gij test
-FAIL: PR15133 run
-FAIL: PR18116 run
-FAIL: PR28178 run
-FAIL: bytebuffer run
-FAIL: calls run
-FAIL: cxxtest run
-FAIL: directbuffer run
-FAIL: field run
-FAIL: final_method run
-FAIL: findclass run
-FAIL: findclass2 run
-FAIL: iface run
-FAIL: init run
-FAIL: invoke run
-FAIL: jniutf run
-FAIL: martin run
-FAIL: noclass run
-FAIL: overload run
-FAIL: pr11951 run
-FAIL: pr18278 run
-FAIL: pr23739 run
-FAIL: register run
-FAIL: register2 run
-FAIL: simple_int run
-FAIL: throwit run
-FAIL: virtual run
-FAIL: PR16923 run
-FAIL: pr29812 execution - gij test
-FAIL: getargssize run
-FAIL: getlocalvartable run
-FAIL: getstacktrace run
-FAIL: events run
-FAIL: getallthreads run
-FAIL: geterrorname run
-FAIL: getmethodname run
-FAIL: ArrayStore execution - source compiled test
-FAIL: ArrayStore -findirect-dispatch execution - source compiled test
-FAIL: ArrayStore -O3 execution - source compiled test
-FAIL: ArrayStore -O3 -findirect-dispatch execution - source compiled test
-FAIL: ArrayStore2 execution - source compiled test
-FAIL: ArrayStore2 -findirect-dispatch execution - source compiled test
-FAIL: ArrayStore2 -O3 execution - source compiled test
-FAIL: ArrayStore2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Array_1 execution - source compiled test
-FAIL: Array_1 -findirect-dispatch execution - source compiled test
-FAIL: Array_1 -O3 execution - source compiled test
-FAIL: Array_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Array_2 execution - source compiled test
-FAIL: Array_2 -findirect-dispatch execution - source compiled test
-FAIL: Array_2 -O3 execution - source compiled test
-FAIL: Array_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Array_3 execution - source compiled test
-FAIL: Array_3 -findirect-dispatch execution - source compiled test
-FAIL: Array_3 -O3 execution - source compiled test
-FAIL: Array_3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Class_1 execution - source compiled test
-FAIL: Class_1 -findirect-dispatch execution - source compiled test
-FAIL: Class_1 -O3 execution - source compiled test
-FAIL: Class_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: CompareNaN execution - source compiled test
-FAIL: CompareNaN -findirect-dispatch execution - source compiled test
-FAIL: CompareNaN -O3 execution - source compiled test
-FAIL: CompareNaN -O3 -findirect-dispatch execution - source compiled test
-FAIL: Divide_1 execution - source compiled test
-FAIL: Divide_1 -findirect-dispatch execution - source compiled test
-FAIL: Divide_1 -O3 execution - source compiled test
-FAIL: Divide_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Divide_2 execution - source compiled test
-FAIL: Divide_2 -findirect-dispatch execution - source compiled test
-FAIL: Divide_2 -O3 execution - source compiled test
-FAIL: Divide_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: EvaluationOrder execution - source compiled test
-FAIL: EvaluationOrder -findirect-dispatch execution - source compiled test
-FAIL: EvaluationOrder -O3 execution - source compiled test
-FAIL: EvaluationOrder -O3 -findirect-dispatch execution - source compiled test
-FAIL: ExtraClassLoader execution - source compiled test
-FAIL: ExtraClassLoader -findirect-dispatch execution - source compiled test
-FAIL: ExtraClassLoader -O3 execution - source compiled test
-FAIL: ExtraClassLoader -O3 -findirect-dispatch execution - source compiled test
-FAIL: FileHandleGcTest execution - source compiled test
-FAIL: FileHandleGcTest -findirect-dispatch execution - source compiled test
-FAIL: FileHandleGcTest -O3 execution - source compiled test
-FAIL: FileHandleGcTest -O3 -findirect-dispatch execution - source compiled test
-FAIL: Final execution - source compiled test
-FAIL: Final -findirect-dispatch execution - source compiled test
-FAIL: Final -O3 execution - source compiled test
-FAIL: Final -O3 -findirect-dispatch execution - source compiled test
-FAIL: Float_1 execution - source compiled test
-FAIL: Float_1 -findirect-dispatch execution - source compiled test
-FAIL: Float_1 -O3 execution - source compiled test
-FAIL: Float_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Float_2 execution - source compiled test
-FAIL: Float_2 -findirect-dispatch execution - source compiled test
-FAIL: Float_2 -O3 execution - source compiled test
-FAIL: Float_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: G19990301_01 execution - source compiled test
-FAIL: G19990301_01 -findirect-dispatch execution - source compiled test
-FAIL: G19990301_01 -O3 execution - source compiled test
-FAIL: G19990301_01 -O3 -findirect-dispatch execution - source compiled test
-FAIL: G19990302_02 execution - source compiled test
-FAIL: G19990302_02 -findirect-dispatch execution - source compiled test
-FAIL: G19990302_02 -O3 execution - source compiled test
-FAIL: G19990302_02 -O3 -findirect-dispatch execution - source compiled test
-FAIL: G19990303_01 execution - source compiled test
-FAIL: G19990303_01 -findirect-dispatch execution - source compiled test
-FAIL: G19990303_01 -O3 execution - source compiled test
-FAIL: G19990303_01 -O3 -findirect-dispatch execution - source compiled test
-FAIL: G19990303_02 execution - source compiled test
-FAIL: G19990303_02 -findirect-dispatch execution - source compiled test
-FAIL: G19990303_02 -O3 execution - source compiled test
-FAIL: G19990303_02 -O3 -findirect-dispatch execution - source compiled test
-FAIL: G19990304_01 execution - source compiled test
-FAIL: G19990304_01 -findirect-dispatch execution - source compiled test
-FAIL: G19990304_01 -O3 execution - source compiled test
-FAIL: G19990304_01 -O3 -findirect-dispatch execution - source compiled test
-FAIL: G19990310_01 execution - source compiled test
-FAIL: G19990310_01 -findirect-dispatch execution - source compiled test
-FAIL: G19990310_01 -O3 execution - source compiled test
-FAIL: G19990310_01 -O3 -findirect-dispatch execution - source compiled test
-FAIL: II execution - source compiled test
-FAIL: II -findirect-dispatch execution - source compiled test
-FAIL: II -O3 execution - source compiled test
-FAIL: II -O3 -findirect-dispatch execution - source compiled test
-FAIL: InterfaceDispatch execution - source compiled test
-FAIL: InterfaceDispatch -findirect-dispatch execution - source compiled test
-FAIL: InterfaceDispatch -O3 execution - source compiled test
-FAIL: InterfaceDispatch -O3 -findirect-dispatch execution - source compiled test
-FAIL: InvokeInterface execution - source compiled test
-FAIL: InvokeInterface -findirect-dispatch execution - source compiled test
-FAIL: InvokeInterface -O3 execution - source compiled test
-FAIL: InvokeInterface -O3 -findirect-dispatch execution - source compiled test
-FAIL: InvokeReturn execution - source compiled test
-FAIL: InvokeReturn -findirect-dispatch execution - source compiled test
-FAIL: InvokeReturn -O3 execution - source compiled test
-FAIL: InvokeReturn -O3 -findirect-dispatch execution - source compiled test
-FAIL: Invoke_1 execution - source compiled test
-FAIL: Invoke_1 -findirect-dispatch execution - source compiled test
-FAIL: Invoke_1 -O3 execution - source compiled test
-FAIL: Invoke_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Invoke_2 execution - source compiled test
-FAIL: Invoke_2 -findirect-dispatch execution - source compiled test
-FAIL: Invoke_2 -O3 execution - source compiled test
-FAIL: Invoke_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: KeepInline execution - source compiled test
-FAIL: KeepInline -findirect-dispatch execution - source compiled test
-FAIL: KeepInline -O3 execution - source compiled test
-FAIL: KeepInline -O3 -findirect-dispatch execution - source compiled test
-FAIL: LargeFile execution - source compiled test
-FAIL: LargeFile -findirect-dispatch execution - source compiled test
-FAIL: LargeFile -O3 execution - source compiled test
-FAIL: LargeFile -O3 -findirect-dispatch execution - source compiled test
-FAIL: MathBuiltin execution - source compiled test
-FAIL: MathBuiltin -findirect-dispatch execution - source compiled test
-FAIL: MathBuiltin -O3 execution - source compiled test
-FAIL: MathBuiltin -O3 -findirect-dispatch execution - source compiled test
-FAIL: Matrix4f execution - source compiled test
-FAIL: Matrix4f -findirect-dispatch execution - source compiled test
-FAIL: Matrix4f -O3 execution - source compiled test
-FAIL: Matrix4f -O3 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_02 execution - source compiled test
-FAIL: N19990310_02 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_02 -O3 execution - source compiled test
-FAIL: N19990310_02 -O3 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_3 execution - source compiled test
-FAIL: N19990310_3 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_3 -O3 execution - source compiled test
-FAIL: N19990310_3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_4 execution - source compiled test
-FAIL: N19990310_4 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_4 -O3 execution - source compiled test
-FAIL: N19990310_4 -O3 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_5 execution - source compiled test
-FAIL: N19990310_5 -findirect-dispatch execution - source compiled test
-FAIL: N19990310_5 -O3 execution - source compiled test
-FAIL: N19990310_5 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Overflow execution - source compiled test
-FAIL: Overflow -findirect-dispatch execution - source compiled test
-FAIL: Overflow -O3 execution - source compiled test
-FAIL: Overflow -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR12350 execution - source compiled test
-FAIL: PR12350 -findirect-dispatch execution - source compiled test
-FAIL: PR12350 -O3 execution - source compiled test
-FAIL: PR12350 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR12416 execution - source compiled test
-FAIL: PR12416 -findirect-dispatch execution - source compiled test
-FAIL: PR12416 -O3 execution - source compiled test
-FAIL: PR12416 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR12656 execution - source compiled test
-FAIL: PR12656 -findirect-dispatch execution - source compiled test
-FAIL: PR12656 -O3 execution - source compiled test
-FAIL: PR12656 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR12915 execution - source compiled test
-FAIL: PR12915 -findirect-dispatch execution - source compiled test
-FAIL: PR12915 -O3 execution - source compiled test
-FAIL: PR12915 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR141 execution - source compiled test
-FAIL: PR141 -findirect-dispatch execution - source compiled test
-FAIL: PR141 -O3 execution - source compiled test
-FAIL: PR141 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR160 execution - source compiled test
-FAIL: PR160 -findirect-dispatch execution - source compiled test
-FAIL: PR160 -O3 execution - source compiled test
-FAIL: PR160 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR162 execution - source compiled test
-FAIL: PR162 -findirect-dispatch execution - source compiled test
-FAIL: PR162 -O3 execution - source compiled test
-FAIL: PR162 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR16867 execution - source compiled test
-FAIL: PR16867 -findirect-dispatch execution - source compiled test
-FAIL: PR16867 -O3 execution - source compiled test
-FAIL: PR16867 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR18699 execution - source compiled test
-FAIL: PR18699 -findirect-dispatch execution - source compiled test
-FAIL: PR18699 -O3 execution - source compiled test
-FAIL: PR18699 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR19870 execution - source compiled test
-FAIL: PR19870 -findirect-dispatch execution - source compiled test
-FAIL: PR19870 -O3 execution - source compiled test
-FAIL: PR19870 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR19870_2 execution - source compiled test
-FAIL: PR19870_2 -findirect-dispatch execution - source compiled test
-FAIL: PR19870_2 -O3 execution - source compiled test
-FAIL: PR19870_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR19921 execution - source compiled test
-FAIL: PR19921 -findirect-dispatch execution - source compiled test
-FAIL: PR19921 -O3 execution - source compiled test
-FAIL: PR19921 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR20056 execution - source compiled test
-FAIL: PR20056 -findirect-dispatch execution - source compiled test
-FAIL: PR20056 -O3 execution - source compiled test
-FAIL: PR20056 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR218 execution - source compiled test
-FAIL: PR218 -findirect-dispatch execution - source compiled test
-FAIL: PR218 -O3 execution - source compiled test
-FAIL: PR218 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR242 execution - source compiled test
-FAIL: PR242 -findirect-dispatch execution - source compiled test
-FAIL: PR242 -O3 execution - source compiled test
-FAIL: PR242 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR25535 execution - source compiled test
-FAIL: PR25535 -findirect-dispatch execution - source compiled test
-FAIL: PR25535 -O3 execution - source compiled test
-FAIL: PR25535 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR260 execution - source compiled test
-FAIL: PR260 -findirect-dispatch execution - source compiled test
-FAIL: PR260 -O3 execution - source compiled test
-FAIL: PR260 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR26858 execution - source compiled test
-FAIL: PR26858 -findirect-dispatch execution - source compiled test
-FAIL: PR26858 -O3 execution - source compiled test
-FAIL: PR26858 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR27908 execution - source compiled test
-FAIL: PR27908 -findirect-dispatch execution - source compiled test
-FAIL: PR27908 -O3 execution - source compiled test
-FAIL: PR27908 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR29013 execution - source compiled test
-FAIL: PR29013 -findirect-dispatch execution - source compiled test
-FAIL: PR29013 -O3 execution - source compiled test
-FAIL: PR29013 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR29495 execution - source compiled test
-FAIL: PR29495 -findirect-dispatch execution - source compiled test
-FAIL: PR29495 -O3 execution - source compiled test
-FAIL: PR29495 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR3096 execution - source compiled test
-FAIL: PR3096 -findirect-dispatch execution - source compiled test
-FAIL: PR3096 -O3 execution - source compiled test
-FAIL: PR3096 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR31264 execution - source compiled test
-FAIL: PR31264 -findirect-dispatch execution - source compiled test
-FAIL: PR31264 -O3 execution - source compiled test
-FAIL: PR31264 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR35020 execution - source compiled test
-FAIL: PR35020 -findirect-dispatch execution - source compiled test
-FAIL: PR35020 -O3 execution - source compiled test
-FAIL: PR35020 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR36252 execution - source compiled test
-FAIL: PR36252 -findirect-dispatch execution - source compiled test
-FAIL: PR36252 -O3 execution - source compiled test
-FAIL: PR36252 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR3731 execution - source compiled test
-FAIL: PR3731 -findirect-dispatch execution - source compiled test
-FAIL: PR3731 -O3 execution - source compiled test
-FAIL: PR3731 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR5057 execution - source compiled test
-FAIL: PR5057 -findirect-dispatch execution - source compiled test
-FAIL: PR5057 -O3 execution - source compiled test
-FAIL: PR5057 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR5057_2 execution - source compiled test
-FAIL: PR5057_2 -findirect-dispatch execution - source compiled test
-FAIL: PR5057_2 -O3 execution - source compiled test
-FAIL: PR5057_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR55 execution - source compiled test
-FAIL: PR55 -findirect-dispatch execution - source compiled test
-FAIL: PR55 -O3 execution - source compiled test
-FAIL: PR55 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR56 execution - source compiled test
-FAIL: PR56 -findirect-dispatch execution - source compiled test
-FAIL: PR56 -O3 execution - source compiled test
-FAIL: PR56 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR6085 execution - source compiled test
-FAIL: PR6085 -findirect-dispatch execution - source compiled test
-FAIL: PR6085 -O3 execution - source compiled test
-FAIL: PR6085 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR6204 execution - source compiled test
-FAIL: PR6204 -findirect-dispatch execution - source compiled test
-FAIL: PR6204 -O3 execution - source compiled test
-FAIL: PR6204 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR6729 execution - source compiled test
-FAIL: PR6729 -findirect-dispatch execution - source compiled test
-FAIL: PR6729 -O3 execution - source compiled test
-FAIL: PR6729 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR6820 execution - source compiled test
-FAIL: PR6820 -findirect-dispatch execution - source compiled test
-FAIL: PR6820 -O3 execution - source compiled test
-FAIL: PR6820 -O3 -findirect-dispatch execution - source compiled test
-FAIL: PR7482 execution - source compiled test
-FAIL: PR7482 -findirect-dispatch execution - source compiled test
-FAIL: PR7482 -O3 execution - source compiled test
-FAIL: PR7482 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Process_1 execution - source compiled test
-FAIL: Process_1 -findirect-dispatch execution - source compiled test
-FAIL: Process_1 -O3 execution - source compiled test
-FAIL: Process_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Process_2 execution - source compiled test
-FAIL: Process_2 -findirect-dispatch execution - source compiled test
-FAIL: Process_2 -O3 execution - source compiled test
-FAIL: Process_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Process_3 execution - source compiled test
-FAIL: Process_3 -findirect-dispatch execution - source compiled test
-FAIL: Process_3 -O3 execution - source compiled test
-FAIL: Process_3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Process_4 execution - source compiled test
-FAIL: Process_4 -findirect-dispatch execution - source compiled test
-FAIL: Process_4 -O3 execution - source compiled test
-FAIL: Process_4 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Process_5 execution - source compiled test
-FAIL: Process_5 -findirect-dispatch execution - source compiled test
-FAIL: Process_5 -O3 execution - source compiled test
-FAIL: Process_5 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Process_6 execution - source compiled test
-FAIL: Process_6 -findirect-dispatch execution - source compiled test
-FAIL: Process_6 -O3 execution - source compiled test
-FAIL: Process_6 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Process_7 execution - source compiled test
-FAIL: Process_7 -findirect-dispatch execution - source compiled test
-FAIL: Process_7 -O3 execution - source compiled test
-FAIL: Process_7 -O3 -findirect-dispatch execution - source compiled test
-FAIL: ProxyTest execution - source compiled test
-FAIL: ProxyTest -findirect-dispatch execution - source compiled test
-FAIL: ProxyTest -O3 execution - source compiled test
-FAIL: ProxyTest -O3 -findirect-dispatch execution - source compiled test
-FAIL: RH194522 execution - source compiled test
-FAIL: RH194522 -findirect-dispatch execution - source compiled test
-FAIL: RH194522 -O3 execution - source compiled test
-FAIL: RH194522 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Serialization execution - source compiled test
-FAIL: Serialization -findirect-dispatch execution - source compiled test
-FAIL: Serialization -O3 execution - source compiled test
-FAIL: Serialization -O3 -findirect-dispatch execution - source compiled test
-FAIL: Shazam execution - source compiled test
-FAIL: Shazam -findirect-dispatch execution - source compiled test
-FAIL: Shazam -O3 execution - source compiled test
-FAIL: Shazam -O3 -findirect-dispatch execution - source compiled test
-FAIL: StackTrace2 execution - source compiled test
-FAIL: StackTrace2 -findirect-dispatch execution - source compiled test
-FAIL: StackTrace2 -O3 execution - source compiled test
-FAIL: StackTrace2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: StaticConstructor execution - source compiled test
-FAIL: StaticConstructor -findirect-dispatch execution - source compiled test
-FAIL: StaticConstructor -O3 execution - source compiled test
-FAIL: StaticConstructor -O3 -findirect-dispatch execution - source compiled test
-FAIL: StringBuffer_1 execution - source compiled test
-FAIL: StringBuffer_1 -findirect-dispatch execution - source compiled test
-FAIL: StringBuffer_1 -O3 execution - source compiled test
-FAIL: StringBuffer_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: StringBuffer_overflow execution - source compiled test
-FAIL: StringBuffer_overflow -findirect-dispatch execution - source compiled test
-FAIL: StringBuffer_overflow -O3 execution - source compiled test
-FAIL: StringBuffer_overflow -O3 -findirect-dispatch execution - source compiled test
-FAIL: String_overflow execution - source compiled test
-FAIL: String_overflow -findirect-dispatch execution - source compiled test
-FAIL: String_overflow -O3 execution - source compiled test
-FAIL: String_overflow -O3 -findirect-dispatch execution - source compiled test
-FAIL: SyncGlobal execution - source compiled test
-FAIL: SyncGlobal -findirect-dispatch execution - source compiled test
-FAIL: SyncGlobal -O3 execution - source compiled test
-FAIL: SyncGlobal -O3 -findirect-dispatch execution - source compiled test
-FAIL: SyncTest execution - source compiled test
-FAIL: SyncTest -findirect-dispatch execution - source compiled test
-FAIL: SyncTest -O3 execution - source compiled test
-FAIL: SyncTest -O3 -findirect-dispatch execution - source compiled test
-FAIL: Synch execution - source compiled test
-FAIL: Synch -findirect-dispatch execution - source compiled test
-FAIL: Synch -O3 execution - source compiled test
-FAIL: Synch -O3 -findirect-dispatch execution - source compiled test
-FAIL: TLtest execution - source compiled test
-FAIL: TLtest -findirect-dispatch execution - source compiled test
-FAIL: TLtest -O3 execution - source compiled test
-FAIL: TLtest -O3 -findirect-dispatch execution - source compiled test
-FAIL: TestProxy execution - source compiled test
-FAIL: TestProxy -findirect-dispatch execution - source compiled test
-FAIL: TestProxy -O3 execution - source compiled test
-FAIL: TestProxy -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Alive execution - source compiled test
-FAIL: Thread_Alive -findirect-dispatch execution - source compiled test
-FAIL: Thread_Alive -O3 execution - source compiled test
-FAIL: Thread_Alive -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_HoldsLock execution - source compiled test
-FAIL: Thread_HoldsLock -findirect-dispatch execution - source compiled test
-FAIL: Thread_HoldsLock -O3 execution - source compiled test
-FAIL: Thread_HoldsLock -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Interrupt execution - source compiled test
-FAIL: Thread_Interrupt -findirect-dispatch execution - source compiled test
-FAIL: Thread_Interrupt -O3 execution - source compiled test
-FAIL: Thread_Interrupt -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Join execution - source compiled test
-FAIL: Thread_Join -findirect-dispatch execution - source compiled test
-FAIL: Thread_Join -O3 execution - source compiled test
-FAIL: Thread_Join -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Monitor execution - source compiled test
-FAIL: Thread_Monitor -findirect-dispatch execution - source compiled test
-FAIL: Thread_Monitor -O3 execution - source compiled test
-FAIL: Thread_Monitor -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Sleep execution - source compiled test
-FAIL: Thread_Sleep -findirect-dispatch execution - source compiled test
-FAIL: Thread_Sleep -O3 execution - source compiled test
-FAIL: Thread_Sleep -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Sleep_2 execution - source compiled test
-FAIL: Thread_Sleep_2 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Sleep_2 -O3 execution - source compiled test
-FAIL: Thread_Sleep_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Wait execution - source compiled test
-FAIL: Thread_Wait -findirect-dispatch execution - source compiled test
-FAIL: Thread_Wait -O3 execution - source compiled test
-FAIL: Thread_Wait -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Wait_2 execution - source compiled test
-FAIL: Thread_Wait_2 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Wait_2 -O3 execution - source compiled test
-FAIL: Thread_Wait_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Thread_Wait_Interrupt execution - source compiled test
-FAIL: Thread_Wait_Interrupt -findirect-dispatch execution - source compiled test
-FAIL: Thread_Wait_Interrupt -O3 execution - source compiled test
-FAIL: Thread_Wait_Interrupt -O3 -findirect-dispatch execution - source compiled test
-FAIL: Throw_1 execution - source compiled test
-FAIL: Throw_1 -findirect-dispatch execution - source compiled test
-FAIL: Throw_1 -O3 execution - source compiled test
-FAIL: Throw_1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Throw_2 execution - source compiled test
-FAIL: Throw_2 -findirect-dispatch execution - source compiled test
-FAIL: Throw_2 -O3 execution - source compiled test
-FAIL: Throw_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: Throw_3 execution - source compiled test
-FAIL: Throw_3 -findirect-dispatch execution - source compiled test
-FAIL: Throw_3 -O3 execution - source compiled test
-FAIL: Throw_3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: WalkerTest execution - source compiled test
-FAIL: WalkerTest -findirect-dispatch execution - source compiled test
-FAIL: WalkerTest -O3 execution - source compiled test
-FAIL: WalkerTest -O3 -findirect-dispatch execution - source compiled test
-FAIL: anfi execution - source compiled test
-FAIL: anfi -findirect-dispatch execution - source compiled test
-FAIL: anfi -O3 execution - source compiled test
-FAIL: anfi -O3 -findirect-dispatch execution - source compiled test
-FAIL: anon execution - source compiled test
-FAIL: anon -findirect-dispatch execution - source compiled test
-FAIL: anon -O3 execution - source compiled test
-FAIL: anon -O3 -findirect-dispatch execution - source compiled test
-FAIL: anon2 execution - source compiled test
-FAIL: anon2 -findirect-dispatch execution - source compiled test
-FAIL: anon2 -O3 execution - source compiled test
-FAIL: anon2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: anon3 execution - source compiled test
-FAIL: anon3 -findirect-dispatch execution - source compiled test
-FAIL: anon3 -O3 execution - source compiled test
-FAIL: anon3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: anon4 execution - source compiled test
-FAIL: anon4 -findirect-dispatch execution - source compiled test
-FAIL: anon4 -O3 execution - source compiled test
-FAIL: anon4 -O3 -findirect-dispatch execution - source compiled test
-FAIL: anon_ctor_itf_arg execution - source compiled test
-FAIL: anon_ctor_itf_arg -findirect-dispatch execution - source compiled test
-FAIL: anon_ctor_itf_arg -O3 execution - source compiled test
-FAIL: anon_ctor_itf_arg -O3 -findirect-dispatch execution - source compiled test
-FAIL: anonarray execution - source compiled test
-FAIL: anonarray -findirect-dispatch execution - source compiled test
-FAIL: anonarray -O3 execution - source compiled test
-FAIL: anonarray -O3 -findirect-dispatch execution - source compiled test
-FAIL: anonarray2 execution - source compiled test
-FAIL: anonarray2 -findirect-dispatch execution - source compiled test
-FAIL: anonarray2 -O3 execution - source compiled test
-FAIL: anonarray2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: anonarray3 execution - source compiled test
-FAIL: anonarray3 -findirect-dispatch execution - source compiled test
-FAIL: anonarray3 -O3 execution - source compiled test
-FAIL: anonarray3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: assign execution - source compiled test
-FAIL: assign -findirect-dispatch execution - source compiled test
-FAIL: assign -O3 execution - source compiled test
-FAIL: assign -O3 -findirect-dispatch execution - source compiled test
-FAIL: assign2 execution - source compiled test
-FAIL: assign2 -findirect-dispatch execution - source compiled test
-FAIL: assign2 -O3 execution - source compiled test
-FAIL: assign2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: bclink execution - source compiled test
-FAIL: bclink -findirect-dispatch execution - source compiled test
-FAIL: bclink -O3 execution - source compiled test
-FAIL: bclink -O3 -findirect-dispatch execution - source compiled test
-FAIL: bytearray execution - source compiled test
-FAIL: bytearray -findirect-dispatch execution - source compiled test
-FAIL: bytearray -O3 execution - source compiled test
-FAIL: bytearray -O3 -findirect-dispatch execution - source compiled test
-FAIL: direct_read execution - source compiled test
-FAIL: direct_read -findirect-dispatch execution - source compiled test
-FAIL: direct_read -O3 execution - source compiled test
-FAIL: direct_read -O3 -findirect-dispatch execution - source compiled test
-FAIL: direct_write execution - source compiled test
-FAIL: direct_write -findirect-dispatch execution - source compiled test
-FAIL: direct_write -O3 execution - source compiled test
-FAIL: direct_write -O3 -findirect-dispatch execution - source compiled test
-FAIL: emptystring execution - source compiled test
-FAIL: emptystring -findirect-dispatch execution - source compiled test
-FAIL: emptystring -O3 execution - source compiled test
-FAIL: emptystring -O3 -findirect-dispatch execution - source compiled test
-FAIL: err1 execution - source compiled test
-FAIL: err1 -findirect-dispatch execution - source compiled test
-FAIL: err1 -O3 execution - source compiled test
-FAIL: err1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err10 execution - source compiled test
-FAIL: err10 -findirect-dispatch execution - source compiled test
-FAIL: err10 -O3 execution - source compiled test
-FAIL: err10 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err11 execution - source compiled test
-FAIL: err11 -findirect-dispatch execution - source compiled test
-FAIL: err11 -O3 execution - source compiled test
-FAIL: err11 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err12 execution - source compiled test
-FAIL: err12 -findirect-dispatch execution - source compiled test
-FAIL: err12 -O3 execution - source compiled test
-FAIL: err12 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err13 execution - source compiled test
-FAIL: err13 -findirect-dispatch execution - source compiled test
-FAIL: err13 -O3 execution - source compiled test
-FAIL: err13 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err14 execution - source compiled test
-FAIL: err14 -findirect-dispatch execution - source compiled test
-FAIL: err14 -O3 execution - source compiled test
-FAIL: err14 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err2 execution - source compiled test
-FAIL: err2 -findirect-dispatch execution - source compiled test
-FAIL: err2 -O3 execution - source compiled test
-FAIL: err2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err3 execution - source compiled test
-FAIL: err3 -findirect-dispatch execution - source compiled test
-FAIL: err3 -O3 execution - source compiled test
-FAIL: err3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err4 execution - source compiled test
-FAIL: err4 -findirect-dispatch execution - source compiled test
-FAIL: err4 -O3 execution - source compiled test
-FAIL: err4 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err5 execution - source compiled test
-FAIL: err5 -findirect-dispatch execution - source compiled test
-FAIL: err5 -O3 execution - source compiled test
-FAIL: err5 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err6 execution - source compiled test
-FAIL: err6 -findirect-dispatch execution - source compiled test
-FAIL: err6 -O3 execution - source compiled test
-FAIL: err6 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err7 execution - source compiled test
-FAIL: err7 -findirect-dispatch execution - source compiled test
-FAIL: err7 -O3 execution - source compiled test
-FAIL: err7 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err8 execution - source compiled test
-FAIL: err8 -findirect-dispatch execution - source compiled test
-FAIL: err8 -O3 execution - source compiled test
-FAIL: err8 -O3 -findirect-dispatch execution - source compiled test
-FAIL: err9 execution - source compiled test
-FAIL: err9 -findirect-dispatch execution - source compiled test
-FAIL: err9 -O3 execution - source compiled test
-FAIL: err9 -O3 -findirect-dispatch execution - source compiled test
-FAIL: final_inner execution - source compiled test
-FAIL: final_inner -findirect-dispatch execution - source compiled test
-FAIL: final_inner -O3 execution - source compiled test
-FAIL: final_inner -O3 -findirect-dispatch execution - source compiled test
-FAIL: final_int execution - source compiled test
-FAIL: final_int -findirect-dispatch execution - source compiled test
-FAIL: final_int -O3 execution - source compiled test
-FAIL: final_int -O3 -findirect-dispatch execution - source compiled test
-FAIL: final_static_and_friend execution - source compiled test
-FAIL: final_static_and_friend -findirect-dispatch execution - source compiled test
-FAIL: final_static_and_friend -O3 execution - source compiled test
-FAIL: final_static_and_friend -O3 -findirect-dispatch execution - source compiled test
-FAIL: indirect execution - source compiled test
-FAIL: indirect -findirect-dispatch execution - source compiled test
-FAIL: indirect -O3 execution - source compiled test
-FAIL: indirect -O3 -findirect-dispatch execution - source compiled test
-FAIL: indirect_read execution - source compiled test
-FAIL: indirect_read -findirect-dispatch execution - source compiled test
-FAIL: indirect_read -O3 execution - source compiled test
-FAIL: indirect_read -O3 -findirect-dispatch execution - source compiled test
-FAIL: indirect_write execution - source compiled test
-FAIL: indirect_write -findirect-dispatch execution - source compiled test
-FAIL: indirect_write -O3 execution - source compiled test
-FAIL: indirect_write -O3 -findirect-dispatch execution - source compiled test
-FAIL: initexc execution - source compiled test
-FAIL: initexc -findirect-dispatch execution - source compiled test
-FAIL: initexc -O3 execution - source compiled test
-FAIL: initexc -O3 -findirect-dispatch execution - source compiled test
-FAIL: initfield execution - source compiled test
-FAIL: initfield -findirect-dispatch execution - source compiled test
-FAIL: initfield -O3 execution - source compiled test
-FAIL: initfield -O3 -findirect-dispatch execution - source compiled test
-FAIL: inline execution - source compiled test
-FAIL: inline -findirect-dispatch execution - source compiled test
-FAIL: inline -O3 execution - source compiled test
-FAIL: inline -O3 -findirect-dispatch execution - source compiled test
-FAIL: inner1 execution - source compiled test
-FAIL: inner1 -findirect-dispatch execution - source compiled test
-FAIL: inner1 -O3 execution - source compiled test
-FAIL: inner1 -O3 -findirect-dispatch execution - source compiled test
-FAIL: inner2 execution - source compiled test
-FAIL: inner2 -findirect-dispatch execution - source compiled test
-FAIL: inner2 -O3 execution - source compiled test
-FAIL: inner2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: inner3 execution - source compiled test
-FAIL: inner3 -findirect-dispatch execution - source compiled test
-FAIL: inner3 -O3 execution - source compiled test
-FAIL: inner3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: inner4 execution - source compiled test
-FAIL: inner4 -findirect-dispatch execution - source compiled test
-FAIL: inner4 -O3 execution - source compiled test
-FAIL: inner4 -O3 -findirect-dispatch execution - source compiled test
-FAIL: inner_array execution - source compiled test
-FAIL: inner_array -findirect-dispatch execution - source compiled test
-FAIL: inner_array -O3 execution - source compiled test
-FAIL: inner_array -O3 -findirect-dispatch execution - source compiled test
-FAIL: inner_interface execution - source compiled test
-FAIL: inner_interface -findirect-dispatch execution - source compiled test
-FAIL: inner_interface -O3 execution - source compiled test
-FAIL: inner_interface -O3 -findirect-dispatch execution - source compiled test
-FAIL: instance execution - source compiled test
-FAIL: instance -findirect-dispatch execution - source compiled test
-FAIL: instance -O3 execution - source compiled test
-FAIL: instance -O3 -findirect-dispatch execution - source compiled test
-FAIL: instinit execution - source compiled test
-FAIL: instinit -findirect-dispatch execution - source compiled test
-FAIL: instinit -O3 execution - source compiled test
-FAIL: instinit -O3 -findirect-dispatch execution - source compiled test
-FAIL: instinit2 execution - source compiled test
-FAIL: instinit2 -findirect-dispatch execution - source compiled test
-FAIL: instinit2 -O3 execution - source compiled test
-FAIL: instinit2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: invoke_from_inner execution - source compiled test
-FAIL: invoke_from_inner -findirect-dispatch execution - source compiled test
-FAIL: invoke_from_inner -O3 execution - source compiled test
-FAIL: invoke_from_inner -O3 -findirect-dispatch execution - source compiled test
-FAIL: invokethrow execution - source compiled test
-FAIL: invokethrow -findirect-dispatch execution - source compiled test
-FAIL: invokethrow -O3 execution - source compiled test
-FAIL: invokethrow -O3 -findirect-dispatch execution - source compiled test
-FAIL: klass execution - source compiled test
-FAIL: klass -findirect-dispatch execution - source compiled test
-FAIL: klass -O3 execution - source compiled test
-FAIL: klass -O3 -findirect-dispatch execution - source compiled test
-FAIL: md5test execution - source compiled test
-FAIL: md5test -findirect-dispatch execution - source compiled test
-FAIL: md5test -O3 execution - source compiled test
-FAIL: md5test -O3 -findirect-dispatch execution - source compiled test
-FAIL: multiple_finit execution - source compiled test
-FAIL: multiple_finit -findirect-dispatch execution - source compiled test
-FAIL: multiple_finit -O3 execution - source compiled test
-FAIL: multiple_finit -O3 -findirect-dispatch execution - source compiled test
-FAIL: negzero execution - source compiled test
-FAIL: negzero -findirect-dispatch execution - source compiled test
-FAIL: negzero -O3 execution - source compiled test
-FAIL: negzero -O3 -findirect-dispatch execution - source compiled test
-FAIL: nested_with_ctor execution - source compiled test
-FAIL: nested_with_ctor -findirect-dispatch execution - source compiled test
-FAIL: nested_with_ctor -O3 execution - source compiled test
-FAIL: nested_with_ctor -O3 -findirect-dispatch execution - source compiled test
-FAIL: newarray_overflow execution - source compiled test
-FAIL: newarray_overflow -findirect-dispatch execution - source compiled test
-FAIL: newarray_overflow -O3 execution - source compiled test
-FAIL: newarray_overflow -O3 -findirect-dispatch execution - source compiled test
-FAIL: override execution - source compiled test
-FAIL: override -findirect-dispatch execution - source compiled test
-FAIL: override -O3 execution - source compiled test
-FAIL: override -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr109 execution - source compiled test
-FAIL: pr109 -findirect-dispatch execution - source compiled test
-FAIL: pr109 -O3 execution - source compiled test
-FAIL: pr109 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr13107 execution - source compiled test
-FAIL: pr13107 -findirect-dispatch execution - source compiled test
-FAIL: pr13107 -O3 execution - source compiled test
-FAIL: pr13107 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr13107_2 execution - source compiled test
-FAIL: pr13107_2 -findirect-dispatch execution - source compiled test
-FAIL: pr13107_2 -O3 execution - source compiled test
-FAIL: pr13107_2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr13107_3 execution - source compiled test
-FAIL: pr13107_3 -findirect-dispatch execution - source compiled test
-FAIL: pr13107_3 -O3 execution - source compiled test
-FAIL: pr13107_3 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr133 execution - source compiled test
-FAIL: pr133 -findirect-dispatch execution - source compiled test
-FAIL: pr133 -O3 execution - source compiled test
-FAIL: pr133 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr16789 execution - source compiled test
-FAIL: pr16789 -findirect-dispatch execution - source compiled test
-FAIL: pr16789 -O3 execution - source compiled test
-FAIL: pr16789 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr17536 execution - source compiled test
-FAIL: pr17536 -findirect-dispatch execution - source compiled test
-FAIL: pr17536 -O3 execution - source compiled test
-FAIL: pr17536 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr179 execution - source compiled test
-FAIL: pr179 -findirect-dispatch execution - source compiled test
-FAIL: pr179 -O3 execution - source compiled test
-FAIL: pr179 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr184 execution - source compiled test
-FAIL: pr184 -findirect-dispatch execution - source compiled test
-FAIL: pr184 -O3 execution - source compiled test
-FAIL: pr184 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr21785 execution - source compiled test
-FAIL: pr21785 -findirect-dispatch execution - source compiled test
-FAIL: pr21785 -O3 execution - source compiled test
-FAIL: pr21785 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr21844 execution - source compiled test
-FAIL: pr21844 -findirect-dispatch execution - source compiled test
-FAIL: pr21844 -O3 execution - source compiled test
-FAIL: pr21844 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr24321 execution - source compiled test
-FAIL: pr24321 -findirect-dispatch execution - source compiled test
-FAIL: pr24321 -O3 execution - source compiled test
-FAIL: pr24321 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr25676 execution - source compiled test
-FAIL: pr25676 -findirect-dispatch execution - source compiled test
-FAIL: pr25676 -O3 execution - source compiled test
-FAIL: pr25676 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr26390 execution - source compiled test
-FAIL: pr26390 -findirect-dispatch execution - source compiled test
-FAIL: pr26390 -O3 execution - source compiled test
-FAIL: pr26390 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr26990 execution - source compiled test
-FAIL: pr26990 -findirect-dispatch execution - source compiled test
-FAIL: pr26990 -O3 execution - source compiled test
-FAIL: pr26990 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr27171 execution - source compiled test
-FAIL: pr27171 -findirect-dispatch execution - source compiled test
-FAIL: pr27171 -O3 execution - source compiled test
-FAIL: pr27171 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr6388 execution - source compiled test
-FAIL: pr6388 -findirect-dispatch execution - source compiled test
-FAIL: pr6388 -O3 execution - source compiled test
-FAIL: pr6388 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr83 execution - source compiled test
-FAIL: pr83 -findirect-dispatch execution - source compiled test
-FAIL: pr83 -O3 execution - source compiled test
-FAIL: pr83 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr8415 execution - source compiled test
-FAIL: pr8415 -findirect-dispatch execution - source compiled test
-FAIL: pr8415 -O3 execution - source compiled test
-FAIL: pr8415 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr8676 execution - source compiled test
-FAIL: pr8676 -findirect-dispatch execution - source compiled test
-FAIL: pr8676 -O3 execution - source compiled test
-FAIL: pr8676 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr8823 execution - source compiled test
-FAIL: pr8823 -findirect-dispatch execution - source compiled test
-FAIL: pr8823 -O3 execution - source compiled test
-FAIL: pr8823 -O3 -findirect-dispatch execution - source compiled test
-FAIL: pr8945 execution - source compiled test
-FAIL: pr8945 -findirect-dispatch execution - source compiled test
-FAIL: pr8945 -O3 execution - source compiled test
-FAIL: pr8945 -O3 -findirect-dispatch execution - source compiled test
-FAIL: private_direct_read execution - source compiled test
-FAIL: private_direct_read -findirect-dispatch execution - source compiled test
-FAIL: private_direct_read -O3 execution - source compiled test
-FAIL: private_direct_read -O3 -findirect-dispatch execution - source compiled test
-FAIL: search_outer execution - source compiled test
-FAIL: search_outer -findirect-dispatch execution - source compiled test
-FAIL: search_outer -O3 execution - source compiled test
-FAIL: search_outer -O3 -findirect-dispatch execution - source compiled test
-FAIL: shatest execution - source compiled test
-FAIL: shatest -findirect-dispatch execution - source compiled test
-FAIL: shatest -O3 execution - source compiled test
-FAIL: shatest -O3 -findirect-dispatch execution - source compiled test
-FAIL: sourcelocation execution - source compiled test
-FAIL: sourcelocation -findirect-dispatch execution - source compiled test
-FAIL: sourcelocation -O3 execution - source compiled test
-FAIL: sourcelocation -O3 -findirect-dispatch execution - source compiled test
-FAIL: stacktrace execution - source compiled test
-FAIL: stacktrace -findirect-dispatch execution - source compiled test
-FAIL: stacktrace -O3 execution - source compiled test
-FAIL: stacktrace -O3 -findirect-dispatch execution - source compiled test
-FAIL: stringconst execution - source compiled test
-FAIL: stringconst -findirect-dispatch execution - source compiled test
-FAIL: stringconst -O3 execution - source compiled test
-FAIL: stringconst -O3 -findirect-dispatch execution - source compiled test
-FAIL: stringconst2 execution - source compiled test
-FAIL: stringconst2 -findirect-dispatch execution - source compiled test
-FAIL: stringconst2 -O3 execution - source compiled test
-FAIL: stringconst2 -O3 -findirect-dispatch execution - source compiled test
-FAIL: stub execution - source compiled test
-FAIL: stub -findirect-dispatch execution - source compiled test
-FAIL: stub -O3 execution - source compiled test
-FAIL: stub -O3 -findirect-dispatch execution - source compiled test
-FAIL: test_long execution - source compiled test
-FAIL: test_long -findirect-dispatch execution - source compiled test
-FAIL: test_long -O3 execution - source compiled test
-FAIL: test_long -O3 -findirect-dispatch execution - source compiled test
-FAIL: tmi execution - source compiled test
-FAIL: tmi -findirect-dispatch execution - source compiled test
-FAIL: tmi -O3 execution - source compiled test
-FAIL: tmi -O3 -findirect-dispatch execution - source compiled test
-FAIL: tp execution - source compiled test
-FAIL: tp -findirect-dispatch execution - source compiled test
-FAIL: tp -O3 execution - source compiled test
-FAIL: tp -O3 -findirect-dispatch execution - source compiled test
-FAIL: update_outer execution - source compiled test
-FAIL: update_outer -findirect-dispatch execution - source compiled test
-FAIL: update_outer -O3 execution - source compiled test
-FAIL: update_outer -O3 -findirect-dispatch execution - source compiled test
-FAIL: utf8concat execution - source compiled test
-FAIL: utf8concat -findirect-dispatch execution - source compiled test
-FAIL: utf8concat -O3 execution - source compiled test
-FAIL: utf8concat -O3 -findirect-dispatch execution - source compiled test
-FAIL: utilTest execution - source compiled test
-FAIL: utilTest -findirect-dispatch execution - source compiled test
-FAIL: utilTest -O3 execution - source compiled test
-FAIL: utilTest -O3 -findirect-dispatch execution - source compiled test
-FAIL: verify execution - source compiled test
-FAIL: verify -findirect-dispatch execution - source compiled test
-FAIL: verify -O3 execution - source compiled test
-FAIL: verify -O3 -findirect-dispatch execution - source compiled test
-FAIL: TestEarlyGC execution - source compiled test
-FAIL: TestLeak execution - source compiled test
-FAIL: TestMultiple execution - source compiled test
-FAIL: TestParent execution - source compiled test
-
-		=== libjava Summary ===
-
-# of expected passes		881
-# of unexpected failures	846
-# of untested testcases		846
 		=== libstdc++ tests ===
 
 
@@ -1804,39 +524,33 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8487
+# of expected passes		8674
 # of unexpected failures	48
 # of expected failures		39
 # of unresolved testcases	2
-# of unsupported tests		675
+# of unsupported tests		687
 
-Compiler version: 4.9.0 20131103 (experimental) (GCC) 
+Compiler version: 4.9.0 20131124 (experimental) (GCC) 
 Platform: x86_64--netbsd
-configure flags: --enable-languages='c obj-c++ objc java fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --with-ecj-jar=/usr/pkgsrc/distfiles/ecj-4.5.jar --enable-java-home --with-os-directory=netbsd --with-arch-directory=amd64 --with-jvm-root-dir=/usr/pkg/java/gcc49snapshot --with-java-home=/usr/pkg/java/gcc49snapshot --with-system-zlib --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
+configure flags: --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
 EOF
-Mail -s "Results for 4.9.0 20131103 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.9.0 20131124 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/obj-c++/obj-c++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/obj-c++/obj-c++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/objc/objc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/objc/objc.sum.sent &&
-mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/boehm-gc/testsuite/boehm-gc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/boehm-gc/testsuite/boehm-gc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libatomic/testsuite/libatomic.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libatomic/testsuite/libatomic.sum.sent &&
-mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libffi/testsuite/libffi.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libffi/testsuite/libffi.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libgomp/testsuite/libgomp.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libgomp/testsuite/libgomp.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libitm/testsuite/libitm.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libitm/testsuite/libitm.sum.sent &&
-mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libjava/testsuite/libjava.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libjava/testsuite/libjava.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libstdc++-v3/testsuite/libstdc++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libstdc++-v3/testsuite/libstdc++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/obj-c++/obj-c++.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/obj-c++/obj-c++.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/objc/objc.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/objc/objc.log.sent &&
-mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/boehm-gc/testsuite/boehm-gc.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/boehm-gc/testsuite/boehm-gc.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libatomic/testsuite/libatomic.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libatomic/testsuite/libatomic.log.sent &&
-mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libffi/testsuite/libffi.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libffi/testsuite/libffi.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libgomp/testsuite/libgomp.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libgomp/testsuite/libgomp.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libitm/testsuite/libitm.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libitm/testsuite/libitm.log.sent &&
-mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libjava/testsuite/libjava.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libjava/testsuite/libjava.log.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libstdc++-v3/testsuite/libstdc++.log /usr/pkgsrc/wip/gcc49snapshot/work/build/./x86_64--netbsd/libstdc++-v3/testsuite/libstdc++.log.sent &&
 true
