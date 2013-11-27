@@ -1,6 +1,7 @@
 - use options framework for snmp, xml and json support
 - write a rc.d startup script for the lddpd server
 - use proper chroot dir instead of /nonexistent
+
 ------------------ Summary ------------------
  lldpd version 0.7.6
   OS.............: NetBSD
@@ -19,6 +20,6 @@
   DOT1...........: yes
   DOT3...........: yes
   XML output.....: yes
-  JSON output....: no
+  JSON output....: yes
   Oldies support.: no
 ---------------------------------------------
