@@ -1,0 +1,14 @@
+lldpd (0.7.7)
+  * Features:
+    + Use a locally administered MAC address or an arbitrary one
+      instead of null MAC address for bond devices on Linux. This is
+      configurable through `lldpcli`.
+    + Add support for "team" driver (alternative to bond devices).
+    + Preliminary support for DTrace/systemtap.
+    + Preliminary support for seccomp (for monitor process).
+    + Setup chroot inside lldpd instead of relying on init script.
+  * Fixes:
+    + Various bugs related to fixed point number handling (for
+      coordinates in LLDP-MED)
+    + Fix a regression in how MAC address of an enslaved device is
+      retrieved.
