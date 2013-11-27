@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5531 2013/11/26 23:11:30 nros Exp $
+# $Id: Makefile,v 1.5532 2013/11/27 00:21:28 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -925,6 +925,7 @@ SUBDIR+=	hijra
 SUBDIR+=	hitori
 SUBDIR+=	hlint
 SUBDIR+=	homebank
+SUBDIR+=	hoogle
 SUBDIR+=	hpoj
 SUBDIR+=	hs-Boolean
 SUBDIR+=	hs-ConfigFile
@@ -974,6 +975,7 @@ SUBDIR+=	hs-bindings-EsounD
 SUBDIR+=	hs-bindings-audiofile
 SUBDIR+=	hs-bindings-librrd
 SUBDIR+=	hs-blaze-builder
+SUBDIR+=	hs-blaze-builder-conduit
 SUBDIR+=	hs-blaze-html
 SUBDIR+=	hs-blaze-markup
 SUBDIR+=	hs-blaze-textual
@@ -1069,6 +1071,7 @@ SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template
 SUBDIR+=	hs-hslua
 SUBDIR+=	hs-html
+SUBDIR+=	hs-http-attoparsec
 SUBDIR+=	hs-http-types
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-charproperties
@@ -1103,6 +1106,7 @@ SUBDIR+=	hs-mtl
 SUBDIR+=	hs-nats
 SUBDIR+=	hs-network
 SUBDIR+=	hs-network-bytestring
+SUBDIR+=	hs-network-conduit
 SUBDIR+=	hs-non-negative
 SUBDIR+=	hs-numeric-prelude
 SUBDIR+=	hs-numeric-quest
@@ -1140,6 +1144,7 @@ SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroupoid-extras
 SUBDIR+=	hs-semigroupoids
 SUBDIR+=	hs-semigroups
+SUBDIR+=	hs-simple-sendfile
 SUBDIR+=	hs-split
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-storable-record
@@ -1187,6 +1192,7 @@ SUBDIR+=	hs-void
 SUBDIR+=	hs-vte
 SUBDIR+=	hs-vty
 SUBDIR+=	hs-wai
+SUBDIR+=	hs-warp
 SUBDIR+=	hs-x11
 SUBDIR+=	hs-x11-extras
 SUBDIR+=	hs-x11-xft
