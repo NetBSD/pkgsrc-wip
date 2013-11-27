@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2013/11/27 01:02:51 makoto Exp $
+# $NetBSD: options.mk,v 1.3 2013/11/27 01:26:59 makoto Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lldpd
 PKG_SUPPORTED_OPTIONS=	snmp xml
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	snmp xml
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msnmp)
