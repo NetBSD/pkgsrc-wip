@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2013/11/12 10:00:26 szptvlfn Exp $
+$NetBSD: distinfo,v 1.12 2013/11/28 13:23:46 szptvlfn Exp $
 
-SHA1 (happy-1.19.1.tar.gz) = 5d15175191c3e4276e5c6724489153e14223d992
-RMD160 (happy-1.19.1.tar.gz) = 2f3d5ae7de298a7b7da0c8c6c45619119d4fbb17
-Size (happy-1.19.1.tar.gz) = 159666 bytes
+SHA1 (happy-1.19.2.tar.gz) = 5bdb834e7de2c8133252e46f998272c4608b91eb
+RMD160 (happy-1.19.2.tar.gz) = 5b578c7309b346d766080cc2e37d53eb3b6ca9dd
+Size (happy-1.19.2.tar.gz) = 160831 bytes
