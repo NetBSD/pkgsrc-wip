@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/29 06:19:56 phonohawk Exp $
+man/man8/pwnat.8
+sbin/pwnat
+share/doc/pwnat/COPYING-pingtunnel
+share/doc/pwnat/Changes
+share/doc/pwnat/README
+share/doc/pwnat/README-udptunnel

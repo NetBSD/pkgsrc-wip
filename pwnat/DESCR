@@ -1,0 +1,17 @@
+pwnat, by Samy Kamkar, is a tool that allows any client behind a NAT
+to communicate with a server behind a separate NAT with *no* port
+forwarding and *no* DMZ setup on any routers in order to directly
+communicate with each other.
+
+There is no middle man, no proxy, no 3rd party, no UPnP required, no
+spoofing, no DNS tricks. The server does not need to know the client's
+IP address before connecting.
+
+More importantly, the client can then connect to any host or port on
+any remote host or to a fixed host and port decided by the server.
+
+Simply put, this is a proxy server that works behind a NAT, even when
+the client is also behind a NAT.
+
+You can read the paper published in IEEE and presented at the IEEE
+P2P'10 Conference here: http://samy.pl/pwnat/pwnat.pdf
