@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.10 2013/11/28 13:19:34 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2013/11/29 14:01:37 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hlint
 
 .if !defined(HLINT_BUILDLINK3_MK)
 HLINT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hlint+=	hlint>=1.8.54
+BUILDLINK_API_DEPENDS.hlint+=	hlint>=1.8.55
 BUILDLINK_PKGSRCDIR.hlint?=	../../wip/hlint
 
 .include "../../wip/hs-cpphs/buildlink3.mk"
