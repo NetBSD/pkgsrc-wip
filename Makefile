@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5534 2013/11/29 17:58:28 outpaddling Exp $
+# $Id: Makefile,v 1.5535 2013/11/29 21:32:15 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1539,6 +1539,7 @@ SUBDIR+=	libxc
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4ui
 SUBDIR+=	libxfce4util
+SUBDIR+=	libxshmfence
 SUBDIR+=	libzdb
 SUBDIR+=	libzn-poly
 SUBDIR+=	lidia
