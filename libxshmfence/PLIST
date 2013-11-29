@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/29 21:27:11 thomasklausner Exp $
+include/X11/xshmfence.h
+lib/libxshmfence.la
+lib/pkgconfig/xshmfence.pc

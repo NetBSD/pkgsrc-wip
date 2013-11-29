@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/11/29 21:27:11 thomasklausner Exp $
+
+SHA1 (libxshmfence-1.1.tar.bz2) = aeae8a045fda1aaad446244f56f1ed450cb242e3
+RMD160 (libxshmfence-1.1.tar.bz2) = ff714f3320e5aabad29e89c47abe4c6b0c7997a6
+Size (libxshmfence-1.1.tar.bz2) = 291347 bytes

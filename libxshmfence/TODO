@@ -1,0 +1,3 @@
+On NetBSD, two functions are missing:
+pthread_mutexattr_setpshared and pthread_condattr_setpshared.
+-- wiz 20131129
