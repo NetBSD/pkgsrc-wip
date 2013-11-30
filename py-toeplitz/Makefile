@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/05 19:00:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2013/11/30 16:08:02 jihbed Exp $
 
-DISTNAME=	toeplitz-0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	toeplitz-0.1.2
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/t/toeplitz/
 FETCH_USING=	curl
@@ -17,6 +16,8 @@ USE_LANGUAGES=	c fortran
 
 post-extract:
 	${MV} ${WRKSRC}/scripts/toeplitz-runtests ${WRKSRC}/scripts/toeplitz-runtests${PYVERSSUFFIX}
+
+
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
