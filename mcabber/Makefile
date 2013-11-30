@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 15:09:53 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/11/30 21:31:29 khorben Exp $
 #
 
-DISTNAME=	mcabber-0.10.1
+DISTNAME=	mcabber-0.10.2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.lilotux.net/~mikael/mcabber/files/
 EXTRACT_SUFX=	.tar.bz2
