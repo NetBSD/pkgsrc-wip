@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/10/24 10:04:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2013/11/30 22:40:50 thomasklausner Exp $
 
 DISTNAME=	p5-Packager-Utils-0.0
 CATEGORIES=	pkgtools
@@ -20,6 +20,7 @@ WRKSRC=			${WRKDIR}/Packager-Utils
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Packager/Utils/.packlist
 
+DEPENDS+=	p5-Alien-Packages-[0-9]*:../../devel/p5-Alien-Packages
 DEPENDS+=	p5-Module-CoreList-[0-9]*:../../devel/p5-Module-CoreList
 DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
