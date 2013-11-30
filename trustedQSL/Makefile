@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/11/26 12:57:16 makoto Exp $
+# $NetBSD: Makefile,v 1.38 2013/11/30 12:50:51 makoto Exp $
 
 DISTNAME=		tqsl-2.0
 CATEGORIES=		ham
@@ -27,7 +27,7 @@ USE_CMAKE=		yes
 # Following SUBST is really necessary only on NetBSD-5.*
 SUBST_CLASSES+=	macro_S
 SUBST_MESSAGE.macro_S= Replace _S with _SS to avoid conflicts on include/ctypes.h and apps/tqsltrace.h
-SUBST_STAGE.macro_S= post-patch
+SUBST_STAGE.macro_S= pre-configure
 SUBST_FILES.macro_S = \
 	apps/crqwiz.cpp \
 	apps/extwizard.cpp \
