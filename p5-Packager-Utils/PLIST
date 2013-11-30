@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/11/30 23:27:07 thomasklausner Exp $
+share/examples/p5-Packager-Utils/pkg_util.json
