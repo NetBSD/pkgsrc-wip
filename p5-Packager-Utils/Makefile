@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/11/30 22:40:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2013/11/30 23:26:37 thomasklausner Exp $
 
 DISTNAME=	p5-Packager-Utils-0.0
 CATEGORIES=	pkgtools
@@ -15,6 +15,8 @@ GIT_REPO.Packager-Utils=	https://github.com/rehsack/Packager-Utils.git
 # fatal: unable to access 'http://github.com/...': SSL certificate problem: unable to get local issuer certificate
 # Add "-c http.sslVerify=false" to git command or,
 PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
+
+INSTALLATION_DIRS=	share/examples/p5-Packager-Utils
 
 WRKSRC=			${WRKDIR}/Packager-Utils
 PERL5_MODULE_TYPE=	Module::Build
@@ -42,6 +44,9 @@ DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-MetaCPAN-API-[0-9]*:../../devel/p5-MetaCPAN-API
 DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-Module-Pluggable>=4.8:../../devel/p5-Module-Pluggable
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/etc/pkg_util.json ${DESTDIR}${PREFIX}/share/examples/p5-Packager-Utils
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
