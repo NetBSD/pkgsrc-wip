@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:18 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2013/11/30 18:24:18 jihbed Exp $
 
-DISTNAME=	datarray-0.0.3.tar
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
+DISTNAME=	datarray-0.0.6
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/d/datarray/
-EXTRACT_SUFX=	.gz
+MASTER_SITES=	https://pypi.python.org/packages/source/d/datarray/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/fperez/datarray
 COMMENT=	NumPy arrays with named axes and named indices
+LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-
-WRKSRC=		${WRKDIR}/datarray-0.0.3
 USE_LANGUAGES=	# none
+
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
