@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2012/11/16 05:14:45 schnoebe Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/01 20:55:20 schnoebe Exp $
 
 DISTNAME=	punjab-0.13
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
 CATEGORIES=	chat python
 # MASTER_SITES=	http://code.stanziq.com/punjab/browser/releases/
 # MASTER_SITES=	http://code.stanziq.com/punjab/export/38/releases/
-MASTER_SITES=	http://code.stanziq.com/cgit/punjab/punjab/snapshot/
+# MASTER_SITES=	http://code.stanziq.com/cgit/punjab/punjab/snapshot/
+MASTER_SITES=	https://github.com/twonds/punjab/archive/master.zip
+
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://code.stanziq.com/punjab
+HOMEPAGE=	https://github.com/twonds/punjab
 COMMENT=	HTTP XMMP client interface implementing BOSH/XEP-0124
 BROKEN=		Source tarballs have disappeared.
 
