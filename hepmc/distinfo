@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/06 14:00:14 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2013/12/02 18:59:40 jihbed Exp $
 
-SHA1 (HepMC-2.06.02.tar.gz) = ba1b11fe14eb0185d85d41823a3e0f3dad4ca98f
-RMD160 (HepMC-2.06.02.tar.gz) = e63753acc9bbbe07673c5a33a8b6a4378780dd91
-Size (HepMC-2.06.02.tar.gz) = 4589430 bytes
+SHA1 (HepMC-2.06.09.tar.gz) = ecb97190abedfe774629a1cbc961910b4d83b7d6
+RMD160 (HepMC-2.06.09.tar.gz) = bad8bf4121d186960441880f0663a6586475e125
+Size (HepMC-2.06.09.tar.gz) = 4612637 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/06 14:00:14 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/02 18:59:40 jihbed Exp $
 include/HepMC/CompareGenEvent.h
 include/HepMC/Flow.h
 include/HepMC/GenCrossSection.h
@@ -38,17 +38,26 @@ lib/libHepMCfio.la
 share/HepMC/doc/HepMC2_reference_manual.pdf
 share/HepMC/doc/HepMC2_user_manual.pdf
 share/HepMC/examples/GNUmakefile
-share/HepMC/examples/PythiaHelper.h
 share/HepMC/examples/VectorConversion.h
 share/HepMC/examples/example_BuildEventFromScratch.cc
 share/HepMC/examples/example_EventSelection.cc
-share/HepMC/examples/example_MyHerwig.cc
-share/HepMC/examples/example_MyPythia.cc
-share/HepMC/examples/example_MyPythiaOnlyToHepMC.cc
-share/HepMC/examples/example_PythiaStreamIO.cc
 share/HepMC/examples/example_UsingIterators.cc
 share/HepMC/examples/example_UsingIterators.txt
-share/HepMC/examples/initPythia.cc
-share/HepMC/examples/initpydata.f
-share/HepMC/examples/testHerwigCopies.cc
-share/HepMC/examples/testPythiaCopies.cc
+share/HepMC/examples/example_VectorConversion.cc
+share/HepMC/examples/fio/GNUmakefile
+share/HepMC/examples/fio/PythiaHelper.h
+share/HepMC/examples/fio/example_MyHerwig.cc
+share/HepMC/examples/fio/example_MyPythia.cc
+share/HepMC/examples/fio/example_MyPythiaOnlyToHepMC.cc
+share/HepMC/examples/fio/example_PythiaStreamIO.cc
+share/HepMC/examples/fio/initPythia.cc
+share/HepMC/examples/fio/initpydata.f
+share/HepMC/examples/fio/testHerwigCopies.cc
+share/HepMC/examples/fio/testPythiaCopies.cc
+share/HepMC/examples/pythia8/GNUmakefile
+share/HepMC/examples/pythia8/README
+share/HepMC/examples/pythia8/config.csh
+share/HepMC/examples/pythia8/config.sh
+share/HepMC/examples/pythia8/main31.cc
+share/HepMC/examples/pythia8/main32.cc
+share/HepMC/examples/pythia8/main32.cmnd

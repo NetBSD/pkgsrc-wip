@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/09/29 17:05:55 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/12/02 18:59:40 jihbed Exp $
 
-DISTNAME=	HepMC-2.06.02
+DISTNAME=	HepMC-2.06.09
 PKGNAME=	${DISTNAME:S/H/h/S/MC/mc/}
-CATEGORIES=	math
+CATEGORIES=	wip
 MASTER_SITES=	http://lcgapp.cern.ch/project/simu/HepMC/download/
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -11,9 +10,8 @@ HOMEPAGE=	http://lcgapp.cern.ch/project/simu/HepMC/
 COMMENT=	C++ Event Record for Monte Carlo Generators
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=NO
-
 GNU_CONFIGURE=	yes
+#USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++ fortran
 
