@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:15 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/12/02 16:06:17 jihbed Exp $
 
-DISTNAME=	pyflation-0.2.2
+DISTNAME=	pyflation-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://pyflation.ianhuston.net/files/pyflation/
 
@@ -12,12 +10,8 @@ HOMEPAGE=	http://pyflation.ianhuston.net/
 COMMENT=	Calculating cosmological perturbations during an inflationary
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-pytables>=2.2.1:../../math/py-pytables
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-USE_LANGUAGES=	c
 
 post-extract:
 	${MV} ${WRKSRC}/bin/pyflation_combine.py ${WRKSRC}/bin/pyflation_combine.py${PYVERSSUFFIX}
@@ -28,7 +22,10 @@ post-extract:
 	${MV} ${WRKSRC}/bin/pyflation_source.py ${WRKSRC}/bin/pyflation_source.py${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/bin/pyflation_srcmerge.py ${WRKSRC}/bin/pyflation_srcmerge.py${PYVERSSUFFIX}
 
+
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-pytables>=2.4.0:../../math/py-pytables
 .include "../../mk/bsd.pkg.mk"
