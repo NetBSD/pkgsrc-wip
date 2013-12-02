@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/10/26 15:46:30 noud4 Exp $
+$NetBSD: distinfo,v 1.5 2013/12/02 09:46:01 jihbed Exp $
 
-SHA1 (biopython-1.53.tar.gz) = 182c71358396261d86f8534b4a24f5d33673f80e
-RMD160 (biopython-1.53.tar.gz) = 9f49df8031cf2d60f4a77624dd6c188fb5c63418
-Size (biopython-1.53.tar.gz) = 4284683 bytes
-SHA1 (patch-aa) = e51c83b2a0412f392f2f8580403e586abf51d0c6
+SHA1 (biopython-1.63b.tar.gz) = 41d00945e5788cae19a470e31cc2181e8a33ab68
+RMD160 (biopython-1.63b.tar.gz) = f7eb4192a79fc052761e1050665abaf5ab00aa20
+Size (biopython-1.63b.tar.gz) = 11513224 bytes
