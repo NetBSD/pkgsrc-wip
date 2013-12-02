@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/03 22:59:11 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/02 09:59:25 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -45,12 +45,18 @@ ${PYSITELIB}/MDAnalysis/analysis/hbonds.pyo
 ${PYSITELIB}/MDAnalysis/analysis/helanal.py
 ${PYSITELIB}/MDAnalysis/analysis/helanal.pyc
 ${PYSITELIB}/MDAnalysis/analysis/helanal.pyo
+${PYSITELIB}/MDAnalysis/analysis/hole.py
+${PYSITELIB}/MDAnalysis/analysis/hole.pyc
+${PYSITELIB}/MDAnalysis/analysis/hole.pyo
 ${PYSITELIB}/MDAnalysis/analysis/leaflet.py
 ${PYSITELIB}/MDAnalysis/analysis/leaflet.pyc
 ${PYSITELIB}/MDAnalysis/analysis/leaflet.pyo
 ${PYSITELIB}/MDAnalysis/analysis/nuclinfo.py
 ${PYSITELIB}/MDAnalysis/analysis/nuclinfo.pyc
 ${PYSITELIB}/MDAnalysis/analysis/nuclinfo.pyo
+${PYSITELIB}/MDAnalysis/analysis/rms.py
+${PYSITELIB}/MDAnalysis/analysis/rms.pyc
+${PYSITELIB}/MDAnalysis/analysis/rms.pyo
 ${PYSITELIB}/MDAnalysis/builder/__init__.py
 ${PYSITELIB}/MDAnalysis/builder/__init__.pyc
 ${PYSITELIB}/MDAnalysis/builder/__init__.pyo
@@ -143,6 +149,10 @@ ${PYSITELIB}/MDAnalysis/core/distances.so
 ${PYSITELIB}/MDAnalysis/core/log.py
 ${PYSITELIB}/MDAnalysis/core/log.pyc
 ${PYSITELIB}/MDAnalysis/core/log.pyo
+${PYSITELIB}/MDAnalysis/core/parallel/__init__.py
+${PYSITELIB}/MDAnalysis/core/parallel/__init__.pyc
+${PYSITELIB}/MDAnalysis/core/parallel/__init__.pyo
+${PYSITELIB}/MDAnalysis/core/parallel/distances.so
 ${PYSITELIB}/MDAnalysis/core/qcprot.so
 ${PYSITELIB}/MDAnalysis/core/transformations.py
 ${PYSITELIB}/MDAnalysis/core/transformations.pyc

@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2013/02/24 18:08:09 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/12/02 09:59:25 jihbed Exp $
 
-DISTNAME=	MDAnalysis-0.7.6
-PKGNAME=	${PYPKGPREFIX}-mdanalysis-0.7.6
+DISTNAME=	MDAnalysis-0.7.7
+PKGNAME=	${PYPKGPREFIX}-mdanalysis-0.7.7
 CATEGORIES=	biology
 MASTER_SITES=	http://mdanalysis.googlecode.com/files/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/mdanalysis/
-COMMENT=Library to analyze and manipulate molecular dynamics trajectories
+COMMENT=   Library to analyze and manipulate molecular dynamics trajectories
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-biopython>=1.53:../../wip/biopython
-
 USE_LANGUAGES=	c c++
-#PYTHON_VERSIONS_INCLUDE_3X=yes	# biopython doesn't support it yet
 
-.include "../../devel/py-cython/buildlink3.mk"
-.include "../../math/py-numpy/buildlink3.mk"
+PYTHON_VERSIONS_INCLUDE_3X=yes	# biopython doesn't support it yet
+
 .include "../../lang/python/egg.mk"
+.include "../../math/py-numpy/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-biopython>=1.63:../../wip/biopython
 .include "../../mk/bsd.pkg.mk"
