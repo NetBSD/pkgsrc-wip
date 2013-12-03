@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/05/27 06:59:03 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/12/03 12:03:47 thomasklausner Exp $
 bin/extend2da.py
 bin/gemrb
 lib/gemrb/libgemrb_core.so
@@ -41,6 +41,7 @@ lib/gemrb/plugins/SPLImporter.so
 lib/gemrb/plugins/STOImporter.so
 lib/gemrb/plugins/TISImporter.so
 lib/gemrb/plugins/TLKImporter.so
+lib/gemrb/plugins/TTFImporter.so
 lib/gemrb/plugins/WAVReader.so
 lib/gemrb/plugins/WEDImporter.so
 lib/gemrb/plugins/WMPImporter.so
