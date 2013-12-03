@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 20:18:17 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/03 18:56:37 jihbed Exp $
 include/siscone/area.h
 include/siscone/circulator.h
-include/siscone/config.h
 include/siscone/defines.h
 include/siscone/geom_2d.h
 include/siscone/hash.h
