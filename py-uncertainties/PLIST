@@ -1,7 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/13 20:40:47 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/03 19:05:02 jihbed Exp $
+${PYSITELIB}/uncertainties/1to2.py
+${PYSITELIB}/uncertainties/1to2.pyc
+${PYSITELIB}/uncertainties/1to2.pyo
 ${PYSITELIB}/uncertainties/__init__.py
 ${PYSITELIB}/uncertainties/__init__.pyc
 ${PYSITELIB}/uncertainties/__init__.pyo
+${PYSITELIB}/uncertainties/lib1to2/__init__.py
+${PYSITELIB}/uncertainties/lib1to2/__init__.pyc
+${PYSITELIB}/uncertainties/lib1to2/__init__.pyo
+${PYSITELIB}/uncertainties/lib1to2/fixes/__init__.py
+${PYSITELIB}/uncertainties/lib1to2/fixes/__init__.pyc
+${PYSITELIB}/uncertainties/lib1to2/fixes/__init__.pyo
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_std_dev.py
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_std_dev.pyc
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_std_dev.pyo
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_uarray_umatrix.py
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_uarray_umatrix.pyc
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_uarray_umatrix.pyo
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_ufloat.py
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_ufloat.pyc
+${PYSITELIB}/uncertainties/lib1to2/fixes/fix_ufloat.pyo
+${PYSITELIB}/uncertainties/lib1to2/test_1to2.py
+${PYSITELIB}/uncertainties/lib1to2/test_1to2.pyc
+${PYSITELIB}/uncertainties/lib1to2/test_1to2.pyo
 ${PYSITELIB}/uncertainties/test_umath.py
 ${PYSITELIB}/uncertainties/test_umath.pyc
 ${PYSITELIB}/uncertainties/test_umath.pyo
