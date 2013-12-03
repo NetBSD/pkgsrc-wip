@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2013/02/06 00:57:58 kralian Exp $
-
-SHA1 (ansible/ansible-1.0.tar.gz) = 05c28bf696968ae8ef7779f8757b089ef4da6270
-RMD160 (ansible/ansible-1.0.tar.gz) = 6526c7588ccf53250601f76e6c3b4d5afcc1beeb
-Size (ansible/ansible-1.0.tar.gz) = 222956 bytes
-SHA1 (patch-Makefile) = 939a2f75ef1a8f63ba2a6c96fb323f5bf96e1b09
-SHA1 (patch-lib_ansible_constants.py) = 667db0f9d3fb9f3f6aea257f6a6b84088424b1da
-SHA1 (patch-library_pkgin) = 7527756bec26d3eca92889a2aa96aa72d9fb0ac3
-SHA1 (patch-setup.py) = e39de422d087268b73b197ca526f900904df9052

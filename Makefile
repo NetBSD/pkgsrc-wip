@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5536 2013/12/03 00:02:01 hubertf Exp $
+# $Id: Makefile,v 1.5537 2013/12/03 21:42:19 hubertf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -96,8 +96,6 @@ SUBDIR+=	amaya
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	ann
-SUBDIR+=	ansible
-SUBDIR+=	ansible-dev
 SUBDIR+=	anthy-dic-jis34
 SUBDIR+=	antlr3-c
 SUBDIR+=	aoeui
