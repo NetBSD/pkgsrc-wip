@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2012/03/04 07:40:02 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/04 10:22:06 phonohawk Exp $
 #
 
-DISTNAME=	terminfo-0.3.2.3
+DISTNAME=	terminfo-0.3.2.6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell bindings to the terminfo library
 LICENSE=	modified-bsd
 
-CONFIGURE_ARGS+= --extra-include-dirs=${PREFIX}/include/ncurses --extra-lib-dirs=${PREFIX}/lib
+CONFIGURE_ARGS+= --configure-option=--with-curses-includes=${PREFIX:Q}/include/ncurses
+CONFIGURE_ARGS+= --configure-option=--with-curses-libraries=${PREFIX:Q}/lib
 
 USE_NCURSES=    yes
 .include "../../wip/mk/haskell.mk"
