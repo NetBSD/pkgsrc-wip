@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/06/18 13:35:23 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/04 00:38:05 thomasklausner Exp $
 
-DISTNAME=	xf86-video-modesetting-0.8.0
+DISTNAME=	xf86-video-modesetting-0.8.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
