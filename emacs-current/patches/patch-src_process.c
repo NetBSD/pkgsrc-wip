@@ -1,4 +1,4 @@
-$NetBSD: patch-src_process.c,v 1.1 2013/06/06 15:31:07 makoto Exp $
+$NetBSD: patch-src_process.c,v 1.2 2013/12/04 12:36:17 makoto Exp $
 
 Avoid following problem:
   process.c:6169:58: error: 'WCONTINUED' undeclared (first use in this function)
@@ -18,7 +18,7 @@ This  would probably be the same as following part in in <sys/wait.h>:
 +
 +/* see include/sys/wait.h (and also emacsclient.c) */
 +# ifndef WCONTINUED
-+#  define WCONTINUED 8
++#  define WCONTINUED 0
 +# endif
  
  /* Only MS-DOS does not define `subprocesses'.  */

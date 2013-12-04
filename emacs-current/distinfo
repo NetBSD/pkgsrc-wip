@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2013/10/10 14:34:38 makoto Exp $
+$NetBSD: distinfo,v 1.34 2013/12/04 12:36:17 makoto Exp $
 
 SHA1 (patch-af) = 11453ac3bf93551ea5e486388f23edef05a4f5fc
-SHA1 (patch-src_process.c) = 32f96f901a4bdb2c43a43e010ed04e194c20fef7
+SHA1 (patch-src_process.c) = 27d17e8f40400180b6fc4d923647f2763c248143
