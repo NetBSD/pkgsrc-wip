@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2013/11/30 12:50:51 makoto Exp $
+# $NetBSD: Makefile,v 1.39 2013/12/04 01:07:15 makoto Exp $
 
 DISTNAME=		tqsl-2.0
 CATEGORIES=		ham
@@ -12,6 +12,8 @@ LICENSE=		arrl-license
 
 # A macro _S in /usr/include/ctype.h conflicts with one in apps/tqsltrace.h
 # NOT_FOR_PLATFORM+=   NetBSD-5.*
+
+DEPENDS+=		mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 USE_TOOLS+=		perl gmake cmake
 USE_LANGUAGES+=		c c++

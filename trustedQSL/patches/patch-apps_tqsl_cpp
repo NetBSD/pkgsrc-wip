@@ -1,14 +1,10 @@
-$NetBSD: patch-apps_tqsl_cpp,v 1.4 2013/11/30 12:50:51 makoto Exp $
+$NetBSD: patch-apps_tqsl_cpp,v 1.5 2013/12/04 01:07:15 makoto Exp $
 
 (1)
 Avoid following error (interim, only valid with db5)
 /usr/pkgsrc/wip/trustedQSL/work/tqsl-2.0/apps/tqsl.cpp:1133:36: error: 'DB_VERSION_STRING' was not declared in this scope
 gmake[2]: *** [apps/CMakeFiles/tqsl.dir/tqsl.cpp.o] Error 1
 gmake[1]: *** [apps/CMakeFiles/tqsl.dir/all] Error 2
-
-(2) Couldn't upload the file: CURL returned 
-"Peer certificate cannot be authenticated with given CA certificates" 
-(SSL certificate problem: self signed certificate in certificate chain)
 
 --- apps/tqsl.cpp.orig	2013-10-21 09:33:20.000000000 +0900
 +++ apps/tqsl.cpp	2013-11-30 10:39:29.000000000 +0900
@@ -21,16 +17,3 @@ gmake[1]: *** [apps/CMakeFiles/tqsl.dir/all] Error 2
  #include "tqslwiz.h"
  #include "qsodatadialog.h"
  #include "tqslerrno.h"
-@@ -2154,7 +2154,11 @@ retry_upload:
- 
- 	curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, &FileUploadHandler::recv);
- 	curl_easy_setopt(req, CURLOPT_WRITEDATA, &handler);
--	curl_easy_setopt(req, CURLOPT_SSL_VERIFYPEER, uplVerifyCA);
-+	curl_easy_setopt(req, CURLOPT_SSL_VERIFYPEER, FALSE);
-+	/* Avoid following problem, switch from       ^ uplVerifyCA to FALSE
-+	   "Peer certificate cannot be authenticated with given CA certificates" 
-+	   (SSL certificate problem: self signed certificate in certificate chain)
-+	   see http://curl.haxx.se/docs/sslcerts.html */
- 
- 	char errorbuf[CURL_ERROR_SIZE];
- 	curl_easy_setopt(req, CURLOPT_ERRORBUFFER, errorbuf);
