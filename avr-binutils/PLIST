@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/08/06 03:31:39 makoto Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/04 13:54:35 makoto Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld
@@ -97,7 +97,6 @@ avr/lib/ldscripts/avrxmega7.xn
 avr/lib/ldscripts/avrxmega7.xr
 avr/lib/ldscripts/avrxmega7.xu
 avr/lib/libbfd.la
-avr/lib/libiberty.a
 bin/avr-addr2line
 bin/avr-ar
 bin/avr-as

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/07/09 04:42:29 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/04 13:54:35 makoto Exp $
 
-DISTNAME=		binutils-2.23.2
+DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
@@ -10,7 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU binutils for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v3
 
-USE_TOOLS+=		gmake makeinfo
+# No need to use makeinfo - this package doesn't install the documentation.
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
@@ -44,15 +45,6 @@ post-install:
 	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la ${DESTDIR}${PREFIX}/avr/lib;	\
 	${INSTALL_DATA} bfd.h ${DESTDIR}${PREFIX}/avr/include;	\
 	)
-	# Rename to avoid conflict to native and other cross assembler.
-	# and clang differs its path so, (the same as h8300-elf-binutils).
-	(cd ${DESTDIR}${PREFIX};				\
-	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a;	\
-	  do if [ -f lib/$$d ]; then				\
-		${MV}	lib/$$d	 avr/lib/libiberty.a;		\
-		break;						\
-	     fi;						\
-	  done;	)
 	# emulator/simulavr wants following header files
 	(cd ${WRKSRC}/include;					\
 	for f in ansidecl.h symcat.h; do			\
@@ -60,3 +52,10 @@ post-install:
 	done;	\
 	)
 .include "../../mk/bsd.pkg.mk"
+
+# ./configure.lineno: 3239: Syntax error: Missing '}'
+# Makefile:2991: recipe for target 'configure-opcodes' failed
+# gmake[1]: *** [configure-opcodes] Error 1
+# gmake[1]: Leaving directory '/export/WRKOBJDIR/wip/avr-binutils/work/binutils-2.24'
+# see avr-binutils
+PKGSRC_MAKE_ENV+=       SH=/bin/ksh
