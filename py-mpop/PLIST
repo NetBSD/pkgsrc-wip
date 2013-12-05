@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/25 16:24:23 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/05 15:22:35 jihbed Exp $
 etc/geo_image.cfg
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -45,18 +45,12 @@ ${PYSITELIB}/mpop/instruments/__init__.pyo
 ${PYSITELIB}/mpop/instruments/modis.py
 ${PYSITELIB}/mpop/instruments/modis.pyc
 ${PYSITELIB}/mpop/instruments/modis.pyo
-${PYSITELIB}/mpop/instruments/mviri.py
-${PYSITELIB}/mpop/instruments/mviri.pyc
-${PYSITELIB}/mpop/instruments/mviri.pyo
 ${PYSITELIB}/mpop/instruments/sarx.py
 ${PYSITELIB}/mpop/instruments/sarx.pyc
 ${PYSITELIB}/mpop/instruments/sarx.pyo
 ${PYSITELIB}/mpop/instruments/seviri.py
 ${PYSITELIB}/mpop/instruments/seviri.pyc
 ${PYSITELIB}/mpop/instruments/seviri.pyo
-${PYSITELIB}/mpop/instruments/test_mviri.py
-${PYSITELIB}/mpop/instruments/test_mviri.pyc
-${PYSITELIB}/mpop/instruments/test_mviri.pyo
 ${PYSITELIB}/mpop/instruments/test_seviri.py
 ${PYSITELIB}/mpop/instruments/test_seviri.pyc
 ${PYSITELIB}/mpop/instruments/test_seviri.pyo
@@ -72,6 +66,9 @@ ${PYSITELIB}/mpop/instruments/visir.pyo
 ${PYSITELIB}/mpop/logger.py
 ${PYSITELIB}/mpop/logger.pyc
 ${PYSITELIB}/mpop/logger.pyo
+${PYSITELIB}/mpop/plugin_base.py
+${PYSITELIB}/mpop/plugin_base.pyc
+${PYSITELIB}/mpop/plugin_base.pyo
 ${PYSITELIB}/mpop/plugs.py
 ${PYSITELIB}/mpop/plugs.pyc
 ${PYSITELIB}/mpop/plugs.pyo
@@ -90,6 +87,9 @@ ${PYSITELIB}/mpop/satin/__init__.pyo
 ${PYSITELIB}/mpop/satin/aapp1b.py
 ${PYSITELIB}/mpop/satin/aapp1b.pyc
 ${PYSITELIB}/mpop/satin/aapp1b.pyo
+${PYSITELIB}/mpop/satin/ahamap_aapp1b.py
+${PYSITELIB}/mpop/satin/ahamap_aapp1b.pyc
+${PYSITELIB}/mpop/satin/ahamap_aapp1b.pyo
 ${PYSITELIB}/mpop/satin/eps1a.py
 ${PYSITELIB}/mpop/satin/eps1a.pyc
 ${PYSITELIB}/mpop/satin/eps1a.pyo
@@ -126,6 +126,9 @@ ${PYSITELIB}/mpop/satin/modis_level2.pyo
 ${PYSITELIB}/mpop/satin/msg_hdf.py
 ${PYSITELIB}/mpop/satin/msg_hdf.pyc
 ${PYSITELIB}/mpop/satin/msg_hdf.pyo
+${PYSITELIB}/mpop/satin/msg_hdf_flymake.py
+${PYSITELIB}/mpop/satin/msg_hdf_flymake.pyc
+${PYSITELIB}/mpop/satin/msg_hdf_flymake.pyo
 ${PYSITELIB}/mpop/satin/nc_reader.py
 ${PYSITELIB}/mpop/satin/nc_reader.pyc
 ${PYSITELIB}/mpop/satin/nc_reader.pyo
@@ -138,12 +141,18 @@ ${PYSITELIB}/mpop/satin/odim.pyo
 ${PYSITELIB}/mpop/satin/pps_hdf.py
 ${PYSITELIB}/mpop/satin/pps_hdf.pyc
 ${PYSITELIB}/mpop/satin/pps_hdf.pyo
+${PYSITELIB}/mpop/satin/pps_odim.py
+${PYSITELIB}/mpop/satin/pps_odim.pyc
+${PYSITELIB}/mpop/satin/pps_odim.pyo
 ${PYSITELIB}/mpop/satin/test_mipp.py
 ${PYSITELIB}/mpop/satin/test_mipp.pyc
 ${PYSITELIB}/mpop/satin/test_mipp.pyo
 ${PYSITELIB}/mpop/satin/test_plugin.py
 ${PYSITELIB}/mpop/satin/test_plugin.pyc
 ${PYSITELIB}/mpop/satin/test_plugin.pyo
+${PYSITELIB}/mpop/satin/test_viirs_sdr.py
+${PYSITELIB}/mpop/satin/test_viirs_sdr.pyc
+${PYSITELIB}/mpop/satin/test_viirs_sdr.pyo
 ${PYSITELIB}/mpop/satin/viirs_sdr.py
 ${PYSITELIB}/mpop/satin/viirs_sdr.pyc
 ${PYSITELIB}/mpop/satin/viirs_sdr.pyo
@@ -189,6 +198,9 @@ ${PYSITELIB}/mpop/scene.pyo
 ${PYSITELIB}/mpop/test_channel.py
 ${PYSITELIB}/mpop/test_channel.pyc
 ${PYSITELIB}/mpop/test_channel.pyo
+${PYSITELIB}/mpop/test_performance.py
+${PYSITELIB}/mpop/test_performance.pyc
+${PYSITELIB}/mpop/test_performance.pyo
 ${PYSITELIB}/mpop/test_projector.py
 ${PYSITELIB}/mpop/test_projector.pyc
 ${PYSITELIB}/mpop/test_projector.pyo
@@ -198,6 +210,9 @@ ${PYSITELIB}/mpop/test_scene.pyo
 ${PYSITELIB}/mpop/utils.py
 ${PYSITELIB}/mpop/utils.pyc
 ${PYSITELIB}/mpop/utils.pyo
+${PYSITELIB}/mpop/version.py
+${PYSITELIB}/mpop/version.pyc
+${PYSITELIB}/mpop/version.pyo
 share/doc/mpop/Makefile
 share/doc/mpop/conf.py
 share/doc/mpop/geo_hrit.py
