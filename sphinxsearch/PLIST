@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/31 12:56:40 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/12/05 12:49:52 fhajny Exp $
 bin/indexer
 bin/indextool
 bin/search
 bin/searchd
 bin/spelldump
+bin/wordbreaker
 include/sphinxclient.h
 lib/libsphinxclient.la
 man/man1/indexer.1
