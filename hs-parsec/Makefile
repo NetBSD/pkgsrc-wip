@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/01/15 12:06:10 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/05 03:58:51 phonohawk Exp $
 #
 
 DISTNAME=	parsec-3.1.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
