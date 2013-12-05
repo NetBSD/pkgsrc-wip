@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:56 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/05 11:26:28 noud4 Exp $
 #
 
 DISTNAME=	moeclock
-PKGNAME=	${DISTNAME}-1.2.0.1
-PKGREVISION=	1
+PKGNAME=	${DISTNAME}-1.2.0.2
 CATEGORIES=	time
 MASTER_SITES=	http://moeclock.googlecode.com/files/
 
