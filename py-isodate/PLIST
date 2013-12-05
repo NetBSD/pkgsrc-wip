@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/06 18:11:53 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/05 20:08:57 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -42,6 +42,9 @@ ${PYSITELIB}/isodate/tests/test_datetime.pyo
 ${PYSITELIB}/isodate/tests/test_duration.py
 ${PYSITELIB}/isodate/tests/test_duration.pyc
 ${PYSITELIB}/isodate/tests/test_duration.pyo
+${PYSITELIB}/isodate/tests/test_pickle.py
+${PYSITELIB}/isodate/tests/test_pickle.pyc
+${PYSITELIB}/isodate/tests/test_pickle.pyo
 ${PYSITELIB}/isodate/tests/test_strf.py
 ${PYSITELIB}/isodate/tests/test_strf.pyc
 ${PYSITELIB}/isodate/tests/test_strf.pyo
