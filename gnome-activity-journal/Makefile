@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:36 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/05 09:38:10 noud4 Exp $
 #
 
 DISTNAME=	gnome-activity-journal-0.3.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://edge.launchpad.net/gnome-activity-journal/0.3/0.3.3/+download/
+MASTER_SITES=	https://edge.launchpad.net/gnome-activity-journal/0.3/0.3.3/+download/
 
 MAINTAINER=	pkgsrc.gnome@gmail
 HOMEPAGE=	http://live.gnome.org/GnomeActivityJournal
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=1.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra>=2.15:../../wip/py-distutils-extra
 DEPENDS+=	${PYPKGPREFIX}-zeitgeist>=0.3.0:../../wip/py-zeitgeist
 
+FETCH_USING=	curl
 USE_TOOLS+=	intltool
 USE_LANGUAGES=	# none
 
