@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/05 09:36:22 noud4 Exp $
 bin/gtk-imonc
 share/gnome/apps/Internet/gtk-imonc.desktop
 share/gtk-imonc/pixmaps/docklet-inactive.png
@@ -11,3 +11,6 @@ share/gtk-imonc/pixmaps/online.png
 share/gtk-imonc/pixmaps/online.xpm
 share/gtk-imonc/pixmaps/reboot.png
 share/gtk-imonc/pixmaps/shutdown.png
+share/locale/de/LC_MESSAGES/gtk-imonc.mo
+share/pixmaps/gtk-imonc.png
+
