@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/10 13:17:32 jihbed Exp $
-bin/example.py
-bin/sparql.py
+@comment $NetBSD: PLIST,v 1.2 2013/12/05 21:07:20 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/SPARQLWrapper/KeyInsensitiveDict.py
-${PYSITELIB}/SPARQLWrapper/KeyInsensitiveDict.pyc
-${PYSITELIB}/SPARQLWrapper/KeyInsensitiveDict.pyo
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.py
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyc
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyo
 ${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.py
 ${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.pyc
 ${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.pyo

@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2012/10/16 12:38:17 jihbed Exp $
-#
+# $NetBSD: Makefile,v 1.4 2013/12/05 21:07:20 jihbed Exp $
 
-DISTNAME=	SPARQLWrapper-1.4.2
-PKGNAME=	${PYPKGPREFIX}-spaqrlwrapper-1.4.2
+DISTNAME=	SPARQLWrapper-1.5.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/S/SPARQLWrapper/
+MASTER_SITES=	http://garr.dl.sourceforge.net/project/sparql-wrapper/sparql-wrapper-python/1.5.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sparql-wrapper.sourceforge.net/
 COMMENT=	SPARQL endpoint interface to Python
+#LICENSE=	# TODO: (see mk/license.mk)
 
-DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
 
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
