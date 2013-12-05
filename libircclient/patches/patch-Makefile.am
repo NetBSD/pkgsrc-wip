@@ -1,0 +1,10 @@
+$NetBSD: patch-Makefile.am,v 1.1 2013/12/05 21:26:34 thomasklausner Exp $
+
+automake build infrastructure.
+http://sourceforge.net/p/libircclient/patches/6/
+
+--- Makefile.am.orig	2013-12-05 20:29:46.000000000 +0000
++++ Makefile.am
+@@ -0,0 +1,2 @@
++AUTOMAKE_OPTIONS = foreign
++SUBDIRS = include src examples

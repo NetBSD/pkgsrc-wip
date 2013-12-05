@@ -1,0 +1,5 @@
+libircclient is a small but powerful library, which implements
+client-server IRC protocol. It has all features needed to create
+your own IRC client or bot, including multi-threading support, sync
+and async interfaces, CTCP/DCC support, colors, SSL connections
+and so on.

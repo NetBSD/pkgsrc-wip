@@ -1,0 +1,18 @@
+$NetBSD: patch-examples_Makefile.am,v 1.1 2013/12/05 21:26:34 thomasklausner Exp $
+
+automake build infrastructure.
+http://sourceforge.net/p/libircclient/patches/6/
+
+--- examples/Makefile.am.orig	2013-12-05 20:29:46.000000000 +0000
++++ examples/Makefile.am
+@@ -0,0 +1,10 @@
++AM_CPPFLAGS=-I${top_srcdir}/include
++noinst_PROGRAMS=spammer colors irctest censor ircftp
++censor_SOURCES=censor.cpp
++censor_LDADD=${top_builddir}/src/libircclient.la
++colors_SOURCES=colors.cpp
++colors_LDADD=${top_builddir}/src/libircclient.la
++ircftp_SOURCES=ircftp.cpp
++ircftp_LDADD=${top_builddir}/src/libircclient.la
++irctest_LDADD=${top_builddir}/src/libircclient.la
++spammer_LDADD=${top_builddir}/src/libircclient.la

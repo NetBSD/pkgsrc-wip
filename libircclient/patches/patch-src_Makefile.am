@@ -1,0 +1,12 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2013/12/05 21:26:34 thomasklausner Exp $
+
+automake build infrastructure.
+http://sourceforge.net/p/libircclient/patches/6/
+
+--- src/Makefile.am.orig	2013-12-05 20:29:46.000000000 +0000
++++ src/Makefile.am
+@@ -0,0 +1,4 @@
++AM_CPPFLAGS=-I${top_srcdir}/include
++lib_LTLIBRARIES = libircclient.la
++libircclient_la_SOURCES = libircclient.c
++libircclient_la_LIBADD = -lpthread
