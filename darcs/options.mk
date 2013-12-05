@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.3 2011/01/12 05:56:33 phonohawk Exp $
+# $NetBSD: options.mk,v 1.4 2013/12/05 05:34:20 phonohawk Exp $
 #
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.darcs
+PKG_OPTIONS_VAR=	PKG_OPTIONS.darcs
 PKG_SUPPORTED_OPTIONS=	terminfo color mmap
 
-PKG_OPTIONS_OPTIONAL_GROUPS+=	http-lib
-PKG_OPTIONS_GROUP.http-lib=		curl http
+PKG_OPTIONS_REQUIRED_GROUPS+=	http-lib
+PKG_OPTIONS_GROUP.http-lib=	curl http
 
 PKG_SUGGESTED_OPTIONS=	http terminfo color mmap
 
