@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/11/25 10:54:27 szptvlfn Exp $
+$NetBSD: distinfo,v 1.7 2013/12/05 09:04:28 phonohawk Exp $
 
 SHA1 (case-insensitive-1.1.0.1.tar.gz) = 0d7abb8c3f0855adedf30ec424f185491d54e436
 RMD160 (case-insensitive-1.1.0.1.tar.gz) = a4657723d740ccbbbbb965807e7f284a5db547c0
 Size (case-insensitive-1.1.0.1.tar.gz) = 5186 bytes
+SHA1 (patch-case-insensitive.cabal) = 5e11103280832c1c813793d0c412367bd907a5f4
