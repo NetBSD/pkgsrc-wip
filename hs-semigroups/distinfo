@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/11/26 11:42:01 szptvlfn Exp $
+$NetBSD: distinfo,v 1.8 2013/12/05 08:44:04 phonohawk Exp $
 
 SHA1 (semigroups-0.12.tar.gz) = 498db887950c9556b976a2be7ca0ca4b0737cb73
 RMD160 (semigroups-0.12.tar.gz) = 90000445050c28518eb769fd995017a5fa87c2ff
 Size (semigroups-0.12.tar.gz) = 10235 bytes
+SHA1 (patch-semigroups.cabal) = 892dbb4c5fa7930fba63f98987ad73a5a1453efc

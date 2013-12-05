@@ -1,0 +1,15 @@
+$NetBSD: patch-semigroups.cabal,v 1.1 2013/12/05 08:44:04 phonohawk Exp $
+
+Relax build-depends.
+
+--- semigroups.cabal.orig	2013-11-26 01:35:23.000000000 +0000
++++ semigroups.cabal
+@@ -42,7 +42,7 @@ library
+       containers           >= 0.3  && < 0.6,
+       hashable             >= 1.1  && < 1.3,
+       nats                 >= 0.1  && < 1,
+-      text                 >= 0.10 && < 0.12,
++      text                 >= 0.10 && < 1.1,
+       unordered-containers >= 0.2  && < 0.3
+ 
+   hs-source-dirs: src
