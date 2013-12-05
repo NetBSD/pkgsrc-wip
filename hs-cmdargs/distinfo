@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/29 20:09:58 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2013/12/05 23:05:28 szptvlfn Exp $
 
-SHA1 (cmdargs-0.10.5.tar.gz) = 9e0992c2a036587ca63fdd1a53f7df4c91dfb521
-RMD160 (cmdargs-0.10.5.tar.gz) = 873fabaaffe45b60b4df8ee084ad8a50e14d844f
-Size (cmdargs-0.10.5.tar.gz) = 61293 bytes
+SHA1 (cmdargs-0.10.6.tar.gz) = 22996ae07f84a519baf344562a51c8965bfb75d7
+RMD160 (cmdargs-0.10.6.tar.gz) = b4a24137da5b2be7727f4e14d1d4280413f26c9c
+Size (cmdargs-0.10.6.tar.gz) = 61744 bytes
