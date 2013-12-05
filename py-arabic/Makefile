@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 17:13:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2013/12/05 16:15:04 jihbed Exp $
 
-DISTNAME=	PyArabic-0.3
-PKGNAME=	${PYPKGPREFIX}-arabic-0.3
+DISTNAME=	PyArabic-0.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/A/a/}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/P/PyArabic/
-EXTRACT_SUFX=	.zip#md5=377d0f5798b8bcb6b439010bbbb3e0ed
+MASTER_SITES=	https://pypi.python.org/packages/source/P/PyArabic/
+EXTRACT_SUFX=	.zip
+FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pyarabic.sourceforge.net/
