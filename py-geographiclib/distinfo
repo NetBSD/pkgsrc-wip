@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 22:51:19 jihbed Exp $
+
+SHA1 (geographiclib-1.31.tar.gz) = ab52e62258f08769ef136141b1d39718cd6d6f81
+RMD160 (geographiclib-1.31.tar.gz) = 83903c3e72e55a20d25f04f1f337e14c9e915ce8
+Size (geographiclib-1.31.tar.gz) = 21925 bytes

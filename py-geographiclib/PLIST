@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2013/12/05 22:51:19 jihbed Exp $
+${PYSITELIB}/geographiclib/__init__.py
+${PYSITELIB}/geographiclib/__init__.pyc
+${PYSITELIB}/geographiclib/__init__.pyo
+${PYSITELIB}/geographiclib/accumulator.py
+${PYSITELIB}/geographiclib/accumulator.pyc
+${PYSITELIB}/geographiclib/accumulator.pyo
+${PYSITELIB}/geographiclib/constants.py
+${PYSITELIB}/geographiclib/constants.pyc
+${PYSITELIB}/geographiclib/constants.pyo
+${PYSITELIB}/geographiclib/geodesic.py
+${PYSITELIB}/geographiclib/geodesic.pyc
+${PYSITELIB}/geographiclib/geodesic.pyo
+${PYSITELIB}/geographiclib/geodesiccapability.py
+${PYSITELIB}/geographiclib/geodesiccapability.pyc
+${PYSITELIB}/geographiclib/geodesiccapability.pyo
+${PYSITELIB}/geographiclib/geodesicline.py
+${PYSITELIB}/geographiclib/geodesicline.pyc
+${PYSITELIB}/geographiclib/geodesicline.pyo
+${PYSITELIB}/geographiclib/geomath.py
+${PYSITELIB}/geographiclib/geomath.pyc
+${PYSITELIB}/geographiclib/geomath.pyo
+${PYSITELIB}/geographiclib/polygonarea.py
+${PYSITELIB}/geographiclib/polygonarea.pyc
+${PYSITELIB}/geographiclib/polygonarea.pyo
