@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/11/25 10:59:14 szptvlfn Exp $
+$NetBSD: distinfo,v 1.6 2013/12/05 09:21:32 phonohawk Exp $
 
 SHA1 (blaze-builder-0.3.3.0.tar.gz) = c45fa0283d82cc8041f03465f473fd5cfbbe3325
 RMD160 (blaze-builder-0.3.3.0.tar.gz) = 1ee1056fd82ad2f0eb16ee60787b8f9563cf2187
 Size (blaze-builder-0.3.3.0.tar.gz) = 67373 bytes
+SHA1 (patch-blaze-builder.cabal) = faecc870d6cf3efd9d2b57037372efef6fe42b5c

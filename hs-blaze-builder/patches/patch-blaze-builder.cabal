@@ -1,0 +1,12 @@
+$NetBSD: patch-blaze-builder.cabal,v 1.1 2013/12/05 09:21:32 phonohawk Exp $
+
+Relax build-depends.
+
+--- blaze-builder.cabal.orig	2013-11-20 21:16:43.000000000 +0000
++++ blaze-builder.cabal
+@@ -75,4 +75,4 @@ Library
+   
+   build-depends:     base == 4.* ,
+                      bytestring >= 0.9 && < 1.0 ,
+-                     text >= 0.10 && < 0.13
++                     text >= 0.10 && < 1.1
