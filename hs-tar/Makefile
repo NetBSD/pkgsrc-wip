@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/01 06:58:51 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/05 03:10:15 phonohawk Exp $
 #
 
-DISTNAME=	tar-0.3.1.0
+DISTNAME=	tar-0.4.0.1
 CATEGORIES=	archivers
 
 MAINTAINER=	pho@cielonegro.org
