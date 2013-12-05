@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/12/05 21:30:19 thomasklausner Exp $
+
+SHA1 (PokerTH-1.0.1-src.tar.bz2) = 09411bd52db16af1e833b8c90cfaca1feeb4d86e
+RMD160 (PokerTH-1.0.1-src.tar.bz2) = 637ea9b662cc94f835745a3cafc3fd33186c96b6
+Size (PokerTH-1.0.1-src.tar.bz2) = 19201790 bytes
+SHA1 (patch-src_net_common_ircthread.cpp) = 85e491d01972a591bd0c86891dd552fe727e6f8f

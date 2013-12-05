@@ -1,0 +1,7 @@
+Fails building with:
+usr/pkg/include/boost/type_traits/detail/has_binary_operator.hp:50: Parse error at "BOOST_JOIN"
+
+http://stackoverflow.com/questions/15455178/qt4-cgal-parse-error-at-boost-join
+says this is a qt bug.
+
+install target and PLIST not adapted, since it doesn't finish building.
