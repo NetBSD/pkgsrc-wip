@@ -1,0 +1,3 @@
+
+mpicc bug:
+    gcc: unrecognized option '-R/home/bacon/Pkgsrc/pkg-1/openmpi/lib'
