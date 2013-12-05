@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/09/02 23:21:31 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/05 02:50:08 phonohawk Exp $
 #
 
-DISTNAME=	haskeline-0.7.0.3
+DISTNAME=	haskeline-0.7.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
