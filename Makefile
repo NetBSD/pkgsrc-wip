@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5538 2013/12/04 13:03:50 nros Exp $
+# $Id: Makefile,v 1.5539 2013/12/05 02:54:26 phonohawk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1049,7 +1049,6 @@ SUBDIR+=	hs-groupoids
 SUBDIR+=	hs-gtk
 SUBDIR+=	hs-hashable
 SUBDIR+=	hs-hashed-storage
-SUBDIR+=	hs-hashed-storage3
 SUBDIR+=	hs-hashmap
 SUBDIR+=	hs-haskeline
 SUBDIR+=	hs-haskell-lexer
