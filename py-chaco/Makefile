@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:25 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2013/12/05 16:58:03 jihbed Exp $
 
-DISTNAME=	Chaco-3.3.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/C/c/}
+DISTNAME=	chaco-4.3.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	http://www.enthought.com/repo/ETS/
+CATEGORIES=	wip
+MASTER_SITES=	https://www.enthought.com/repo/ets/
+FETCH_USING=	curl
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.enthought.com/projects/chaco/
 COMMENT=	Chaco is a Python plotting application toolkit
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-DEPENDS+=	${PYPKGPREFIX}-setupdocs>=1.0.4:../../wip/py-setupdocs
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c c++
 
