@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/08/12 12:55:13 asau Exp $
+$NetBSD: distinfo,v 1.4 2013/12/06 00:24:23 jihbed Exp $
 
-SHA1 (gevent-0.13.6.tar.gz) = 097e59b4586ce6bf099d5eae2962b830fda073eb
-RMD160 (gevent-0.13.6.tar.gz) = 989119ae9e69871c56a717149183892f321fd7df
-Size (gevent-0.13.6.tar.gz) = 289805 bytes
+SHA1 (gevent-1.0.tar.gz) = 6ec781c79cfc48a66cfb3d2910fb7ef0b163bc33
+RMD160 (gevent-1.0.tar.gz) = c42b7d6faac1f7709e93ebbfade39ba7eb48afb4
+Size (gevent-1.0.tar.gz) = 1437122 bytes

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/05/12 20:34:00 cheusov Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/12/06 00:24:23 jihbed Exp $
 
-DISTNAME=	gevent-0.13.6
+DISTNAME=	gevent-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	http://pypi.python.org/packages/source/g/gevent/
+MASTER_SITES=	https://pypi.python.org/packages/source/g/gevent/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.gevent.org/
