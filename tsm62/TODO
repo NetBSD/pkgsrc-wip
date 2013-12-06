@@ -1,4 +1,8 @@
-# $NetBSD: TODO,v 1.4 2013/12/06 16:36:31 hfath Exp $
+# $NetBSD: TODO,v 1.5 2013/12/06 22:25:45 hfath Exp $
 
 - Work out license and distribution rules
-
+- PR pkg/46917
+- PR 47806 (get patch pulled up to at least netbsd-6)
+- Since tsm 6.2 ships 32 bit as well as 64 bit binaries and libs, make sure 
+  we drop path lists into /emul/linux32, too, and run both
+  /emul/linux{,32}/sbin/ldconfig (how?)
