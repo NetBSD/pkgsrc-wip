@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:20 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/06 11:31:35 noud4 Exp $
 #
 
 DISTNAME=	pyCalverter-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//S/C/c/}
 CATEGORIES=	converters time python
 MASTER_SITES=	http://launchpad.net/pycalverter/trunk/1.5/+download/
+FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/pycalverter

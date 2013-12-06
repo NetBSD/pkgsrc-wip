@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:42 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/12/06 11:31:34 noud4 Exp $
 #
 
 DISTNAME=	gwibber-2.91.90
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://launchpad.net/gwibber/3.0/2.91.90/+download/
+FETCH_USING=	curl
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://gwibber.com/

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/06 11:31:34 noud4 Exp $
 #
 
 DISTNAME=	gnome-do-0.8.5
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/do/trunk/0.8.5/+download/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://do.davebsd.com/

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/07/15 20:26:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/06 11:31:35 noud4 Exp $
 
 DISTNAME=	libindicator-12.10.1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://launchpad.net/libindicator/12.10/12.10.1/+download/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/libindicator
