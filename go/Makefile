@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/09/29 16:10:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2013/12/06 12:54:16 bsiegert Exp $
 
-DISTNAME=	go1.2rc1.src
-PKGNAME=	go-1.2rc1
+DISTNAME=	go1.2.src
+PKGNAME=	go-1.2
 CATEGORIES=	lang
 MASTER_SITES=	https://go.googlecode.com/files/
 FETCH_USING?=	curl
@@ -53,14 +53,12 @@ REPLACE_BASH+=	misc/xcode/4/go4xcode.sh
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/clean.bash
 REPLACE_BASH+=	src/cmd/go/test.bash
-REPLACE_BASH+=	src/cmd/godoc/setup-godoc-app.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/pkg/syscall/mkall.sh
 REPLACE_BASH+=	src/pkg/syscall/mkerrors.sh
 REPLACE_BASH+=	src/pkg/syscall/mkerrors_windows.sh
 REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
-REPLACE_BASH+=	src/run.bash.orig
 REPLACE_BASH+=	src/sudo.bash
 REPLACE_BASH+=	test/bench/shootout/timing.sh
 REPLACE_BASH+=	test/run
