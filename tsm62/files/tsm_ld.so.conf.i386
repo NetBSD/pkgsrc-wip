@@ -1,6 +1,6 @@
-# $NetBSD: tsm_ld.so.conf,v 1.1 2013/03/25 15:52:51 hfath Exp $
+# $NetBSD: tsm_ld.so.conf.i386,v 1.1 2013/12/06 15:55:02 hfath Exp $
 #
-# TSM Linux ld.so load paths
+# TSM Linux i386 ld.so load paths
 
 /opt/tivoli/tsm/client/ba/bin
 /opt/tivoli/tsm/client/api/bin

@@ -1,0 +1,12 @@
+# $NetBSD: tsm_ld.so.conf.x86_64,v 1.1 2013/12/06 15:55:02 hfath Exp $
+#
+# TSM Linux x86_64 ld.so load paths
+
+/opt/tivoli/tsm/client/ba/bin
+/opt/tivoli/tsm/client/api/bin64
+/opt/tivoli/tsm/client/hsm/bin/
+/usr/local/ibm/gsk8_64/lib64
+/usr/local/ibm/gsk8_64/lib64/C/icc/icclib
+/usr/local/ibm/gsk8_64/lib64/C/icc/osslib
+/usr/local/ibm/gsk8_64/lib64/N/icc/icclib
+/usr/local/ibm/gsk8_64/lib64/N/icc/osslib

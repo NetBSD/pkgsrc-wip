@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/12/06 11:47:37 hfath Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/06 15:55:00 hfath Exp $
 
 DISTNAME=	tsm-6.2.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v6r2/Linux/LinuxX86/v624/
 DISTFILES=	6.2.4.0-TIV-TSMBAC-LinuxX86.tar
@@ -78,8 +78,8 @@ post-install:
 		${EG_DIR}
 	${INSTALL_DATA} ${FILESDIR}/tsm_daily.sh ${EG_DIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${EMULDIR}/etc/ld.so.conf.d
-	${INSTALL_DATA} ${FILESDIR}/tsm_ld.so.conf \
-		${DESTDIR}${EMULDIR}/etc/ld.so.conf.d
+	${INSTALL_DATA} ${FILESDIR}/tsm_ld.so.conf.${MACHINE_ARCH} \
+		${DESTDIR}${EMULDIR}/etc/ld.so.conf.d/tsm_ld.so.conf
 	${LN} -s /..${PKG_SYSCONFDIR}/dsm.sys \
 		${DESTDIR}${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/
 	${LN} -s /..${PKG_SYSCONFDIR}/dsm.opt \
