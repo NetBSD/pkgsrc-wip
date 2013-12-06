@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2012/10/16 09:26:16 jihbed Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/12/06 00:27:44 jihbed Exp $
 
-DISTNAME=	arxiv2bib-1.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	print python
-MASTER_SITES=	http://pypi.python.org/packages/source/a/arxiv2bib/
-EXTRACT_USING=	gtar
+DISTNAME=	arxiv2bib-1.0.5
+CPKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc python
+MASTER_SITES=	https://pypi.python.org/packages/source/a/arxiv2bib/
+EXTRACT_SUFX=	.zip
+FETCH_USING=	curl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://nathan11g.github.com/arxiv2bib
 COMMENT=	Get arXiv.org metadata in BibTeX format
 LICENSE=	2-clause-bsd
 
-WRKSRC=		${WRKDIR}/arxiv2bib-1.0.0
+PYTHON_VERSIONS_INCLUDE_3X= yes 
 
-USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE= 26
 PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
