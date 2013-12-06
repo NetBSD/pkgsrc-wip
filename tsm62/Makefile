@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/25 15:52:51 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/06 11:46:10 hfath Exp $
 
 DISTNAME=	tsm-6.2.4.0
 CATEGORIES=	sysutils
@@ -17,7 +17,7 @@ CONF_FILES+=		${EG_DIR}/dsm.opt.smp ${PKG_SYSCONFDIR}/dsm.opt
 
 PUBLIC_BINS=		dsmc
 
-EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base
 
 NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
@@ -27,17 +27,25 @@ NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 
-USE_TOOLS+=		rpm2pkg
+USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.i386.rpm \
-			${WRKDIR}/TIVsm-API.i386.rpm \
-			${WRKDIR}/TIVsm-HSM.i386.rpm \
+			${WRKDIR}/TIVsm-HSM.i386.rpm
+.if ${EMUL_PLATFORM} == "linux-i386"
+RPMFILES+=		${WRKDIR}/TIVsm-API.i386.rpm \
 			${WRKDIR}/gskcrypt32-8.0.14.6.linux.x86.rpm \
 			${WRKDIR}/gskssl32-8.0.14.6.linux.x86.rpm
+.elif ${EMUL_PLATFORM} == "linux-x86_64"
+RPMFILES+=		${WRKDIR}/TIVsm-API64.i386.rpm \
+			${WRKDIR}/gskcrypt64-8.0.14.6.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.14.6.linux.x86_64.rpm
+.endif
+
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
 RPM2PKG_STRIP=		0
+RPM2PKG_PLIST=		# none generated
 RPM2PKG_STAGE=		do-install
 
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
@@ -57,6 +65,11 @@ do-extract:
 	cd ${WRKDIR} && ${EXTRACTOR} ${DISTDIR}/${DISTFILES:Q}
 
 post-install:
+.if empty(PKG_OPTIONS:Mjava)
+	for _fff in `${SED} -e '/^[$$]{PLIST\.java}/!d' -e 's/^[$$]{PLIST\.java}//g' ${PLIST_SRC}`; do \
+	    ${RM} -f ${DESTDIR}${PREFIX}/$${_fff}; \
+	done
+.endif
 	${INSTALL_DATA_DIR} ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/NOTICES.TXT ${DOC_DIR}
 	${INSTALL_DATA_DIR} ${EG_DIR}
