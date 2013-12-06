@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/01/18 12:34:50 noud4 Exp $
+$NetBSD: distinfo,v 1.4 2013/12/06 01:16:50 jihbed Exp $
 
-SHA1 (greenlet-0.3.2.zip) = 7fa89c130dada134563e0bff0edfd9eefed07cd5
-RMD160 (greenlet-0.3.2.zip) = 1d6f30df775ead99eb4e3597388da4dfea38cb5e
-Size (greenlet-0.3.2.zip) = 50344 bytes
+SHA1 (greenlet-0.4.1.zip) = ca2f589a63322b5752ef4e0de3072a5b51f7d3b7
+RMD160 (greenlet-0.4.1.zip) = a8aac77849d51c96c46b65607f7ed7eac6723bcd
+Size (greenlet-0.4.1.zip) = 75749 bytes
