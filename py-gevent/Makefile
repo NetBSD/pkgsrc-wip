@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/12/06 00:24:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/06 01:14:19 jihbed Exp $
 
 DISTNAME=	gevent-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,4 +22,5 @@ BUILDLINK_API_DEPENDS.libevent+=libevent>=0.6
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.1:../../wip/py-greenlet
 .include "../../mk/bsd.pkg.mk"
