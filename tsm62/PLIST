@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.1 2013/12/06 11:46:10 hfath Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/12/06 16:36:31 hfath Exp $
 bin/dsmc
 ${PLIST.java}bin/dsmj
 emul/linux/etc/ld.so.conf.d/tsm_ld.so.conf
@@ -141,7 +141,7 @@ emul/linux/opt/tivoli/tsm/client/hsm/bin/dsmrm
 emul/linux/opt/tivoli/tsm/client/hsm/bin/dsmrootd
 emul/linux/opt/tivoli/tsm/client/hsm/bin/dsmscoutd
 emul/linux/opt/tivoli/tsm/client/hsm/bin/dsmsetpw
-emul/linux/opt/tivoli/tsm/client/hsm/bin/dsmsmj
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/hsm/bin/dsmsmj
 emul/linux/opt/tivoli/tsm/client/hsm/bin/dsmwatchd
 emul/linux/opt/tivoli/tsm/client/hsm/bin/hsmagent
 emul/linux/opt/tivoli/tsm/client/hsm/bin/hsmagent.opt

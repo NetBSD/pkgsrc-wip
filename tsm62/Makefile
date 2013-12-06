@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/12/06 15:55:00 hfath Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/06 16:36:31 hfath Exp $
 
 DISTNAME=	tsm-6.2.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v6r2/Linux/LinuxX86/v624/
 DISTFILES=	6.2.4.0-TIV-TSMBAC-LinuxX86.tar
@@ -31,12 +31,11 @@ BUILD_DIRS=		# empty
 USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.i386.rpm \
-			${WRKDIR}/TIVsm-HSM.i386.rpm
-.if ${EMUL_PLATFORM} == "linux-i386"
-RPMFILES+=		${WRKDIR}/TIVsm-API.i386.rpm \
+			${WRKDIR}/TIVsm-HSM.i386.rpm \
+			${WRKDIR}/TIVsm-API.i386.rpm \
 			${WRKDIR}/gskcrypt32-8.0.14.6.linux.x86.rpm \
 			${WRKDIR}/gskssl32-8.0.14.6.linux.x86.rpm
-.elif ${EMUL_PLATFORM} == "linux-x86_64"
+.if ${EMUL_PLATFORM} == "linux-x86_64"
 RPMFILES+=		${WRKDIR}/TIVsm-API64.i386.rpm \
 			${WRKDIR}/gskcrypt64-8.0.14.6.linux.x86_64.rpm \
 			${WRKDIR}/gskssl64-8.0.14.6.linux.x86_64.rpm

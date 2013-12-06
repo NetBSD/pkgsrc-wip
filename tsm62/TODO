@@ -1,6 +1,4 @@
-# $NetBSD: TODO,v 1.3 2013/12/06 11:46:10 hfath Exp $
+# $NetBSD: TODO,v 1.4 2013/12/06 16:36:31 hfath Exp $
 
 - Work out license and distribution rules
-- deinstalling on amd64 results in
-tsm-6.2.4.0: rebuilding run-time library search paths database
-[1]   Abort trap (core dumped) (/usr/pkg/emul/l...
+
