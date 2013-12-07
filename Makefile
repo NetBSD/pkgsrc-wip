@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5541 2013/12/05 21:31:20 thomasklausner Exp $
+# $Id: Makefile,v 1.5542 2013/12/07 08:50:42 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3044,7 +3044,6 @@ SUBDIR+=	rthread
 SUBDIR+=	rtpbreak
 SUBDIR+=	rubinius
 SUBDIR+=	rubrica2
-SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-bdb
 SUBDIR+=	ruby-cabin
