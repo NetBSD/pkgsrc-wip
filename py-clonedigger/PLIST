@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/16 07:15:49 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/12/07 15:28:14 jihbed Exp $
 bin/clonedigger
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -18,6 +18,8 @@ ${PYSITELIB}/clonedigger/abstract_syntax_tree.pyo
 ${PYSITELIB}/clonedigger/anti_unification.py
 ${PYSITELIB}/clonedigger/anti_unification.pyc
 ${PYSITELIB}/clonedigger/anti_unification.pyo
+${PYSITELIB}/clonedigger/antlr_runtime/antlr-3.1.1.jar
+${PYSITELIB}/clonedigger/antlr_runtime/antlr-runtime-3.1.jar
 ${PYSITELIB}/clonedigger/antlr_runtime/runtime-2008-01-10.16.jar
 ${PYSITELIB}/clonedigger/arguments.py
 ${PYSITELIB}/clonedigger/arguments.pyc
@@ -44,6 +46,19 @@ ${PYSITELIB}/clonedigger/java_antlr/MyAstNodeAdaptor.java
 ${PYSITELIB}/clonedigger/java_antlr/TreeProducer.jar
 ${PYSITELIB}/clonedigger/java_antlr/TreeProducer.java
 ${PYSITELIB}/clonedigger/java_antlr/build_jar.sh
+${PYSITELIB}/clonedigger/js_antlr.py
+${PYSITELIB}/clonedigger/js_antlr.pyc
+${PYSITELIB}/clonedigger/js_antlr.pyo
+${PYSITELIB}/clonedigger/js_antlr/JavaScript.g
+${PYSITELIB}/clonedigger/js_antlr/JavaScript.tokens
+${PYSITELIB}/clonedigger/js_antlr/JavaScriptLexer.java
+${PYSITELIB}/clonedigger/js_antlr/JavaScriptParser.java
+${PYSITELIB}/clonedigger/js_antlr/MyAstNode.java
+${PYSITELIB}/clonedigger/js_antlr/MyAstNodeAdaptor.java
+${PYSITELIB}/clonedigger/js_antlr/TreeProducer.jar
+${PYSITELIB}/clonedigger/js_antlr/TreeProducer.java
+${PYSITELIB}/clonedigger/js_antlr/build_jar.sh
+${PYSITELIB}/clonedigger/js_antlr/license.txt
 ${PYSITELIB}/clonedigger/logilab/__init__.py
 ${PYSITELIB}/clonedigger/logilab/__init__.pyc
 ${PYSITELIB}/clonedigger/logilab/__init__.pyo
@@ -233,6 +248,13 @@ ${PYSITELIB}/clonedigger/logilab/common/visitor.pyo
 ${PYSITELIB}/clonedigger/logilab/common/xmlrpcutils.py
 ${PYSITELIB}/clonedigger/logilab/common/xmlrpcutils.pyc
 ${PYSITELIB}/clonedigger/logilab/common/xmlrpcutils.pyo
+${PYSITELIB}/clonedigger/lua_antlr.py
+${PYSITELIB}/clonedigger/lua_antlr.pyc
+${PYSITELIB}/clonedigger/lua_antlr.pyo
+${PYSITELIB}/clonedigger/lua_antlr/Lua.g
+${PYSITELIB}/clonedigger/lua_antlr/TreeProducer.jar
+${PYSITELIB}/clonedigger/lua_antlr/TreeProducer.java
+${PYSITELIB}/clonedigger/lua_antlr/build_jar.sh
 ${PYSITELIB}/clonedigger/python_compiler.py
 ${PYSITELIB}/clonedigger/python_compiler.pyc
 ${PYSITELIB}/clonedigger/python_compiler.pyo
