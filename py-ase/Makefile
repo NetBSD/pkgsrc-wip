@@ -1,29 +1,36 @@
-# $NetBSD: Makefile,v 1.6 2012/10/06 17:13:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/12/07 16:05:47 jihbed Exp $
 
-DISTNAME=	python-ase-3.4.1.1765
+DISTNAME=	python-ase-3.8.1.3440
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 PKGREVISION=	2
 CATEGORIES=	biology python
 MASTER_SITES=	https://wiki.fysik.dtu.dk/ase-files/
+FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://wiki.fysik.dtu.dk/ase/
 COMMENT=	Atomic Simulation Environment
-LICENSE=	gnu-lgpl-v2.1
-
-FETCH_USING=		wget
-FETCH_BEFORE_ARGS=	--no-check-certificate
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-.include "../../devel/pango/buildlink3.mk"
+post-extract:
+	${MV} ${WRKSRC}/tools/ase-build ${WRKSRC}/tools/ase-build${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/tools/ase-info ${WRKSRC}/tools/ase-info${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/tools/ase-db ${WRKSRC}/tools/ase-db${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/tools/ase-run ${WRKSRC}/tools/ase-run${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/tools/ase-gui ${WRKSRC}/tools/ase-gui${PYVERSSUFFIX}
+
+## It is highly recommended (but not required) to install also these:
 .include "../../devel/py-gobject/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
+
+##required for basic ASE functionality
 .include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-#.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
