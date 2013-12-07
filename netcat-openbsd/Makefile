@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2013/11/21 02:27:02 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/07 21:16:43 genolopolis Exp $
 #
 
 PKGNAME=	netcat-openbsd-1
 CATEGORIES=	net
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+DISTNAME=	msporleder-netcat-openbsd-eb56dd1
+MASTER_SITES=	-https://codeload.github.com/msporleder/netcat-openbsd/legacy.tar.gz/eb56dd1
+FETCH_USING=	curl
+#FETCH_OUTPUT_ARGS=	${DISTNAME}
 LICENSE=		modified-bsd
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,21 +15,6 @@ COMMENT=	Arbitrary TCP and UDP connections and listens
 CONFLICTS=	netcat-[0-9]*
 
 NO_CONFIGURE=	yes
-
-do-extract:
-	${CP} -r ${FILESDIR} ${WRKSRC}
-
-do-build:
-	cd ${WRKSRC} \
-		&& env ${MAKE_ENV} \
-		&& ${CC} -o nc netcat.c atomicio.c socks.c strtonum.c readpassphrase.c
-
-do-install:
-	cd ${WRKSRC} \
-		&& install -d ${DESTDIR}/${PREFIX}/bin/ \
-		&& install nc ${DESTDIR}/${PREFIX}/bin/nc \
-		&& install -d ${DESTDIR}/${PREFIX}/${PKGMANDIR}/${PKGMANDIR}1/ \
-		&& install -m 0644 nc.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/${PKGMANDIR}1/nc.1
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
