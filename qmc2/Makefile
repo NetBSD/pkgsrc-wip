@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2013/03/04 17:33:01 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.2 2013/12/07 00:39:22 thomasklausner Exp $
 
-DISTNAME=	qmc2-0.38
+DISTNAME=	qmc2-0.41
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qmc2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qmc2.arcadehits.net/wordpress/
-COMMENT=	Successor of QMamecat
+COMMENT=	Multi-platform GUI front end for MAME and MESS
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
@@ -38,7 +37,7 @@ SUBST_STAGE.paths=	pre-install
 
 do-build:
 	cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} DISTCFG=1 QMAKE=${QMAKE}
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} DISTCFG=1 QMAKE=${QMAKE} EMULATOR=${EMULATOR}
 
 do-install:
 	cd ${WRKSRC} && \
