@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/16 08:25:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/08 22:59:03 noud4 Exp $
 #
 
 DISTNAME=	CouchDB-0.6
@@ -6,6 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/CouchDB/couchdb/}
 PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/C/CouchDB/
+FETCH_USING=	curl
 EXTRACT_SUFX=	.tar.gz#md5=446b8377cf2ddda94d5f2df29c4f705f
 
 MAINTAINER=	kamelderouiche@yahoo.com
