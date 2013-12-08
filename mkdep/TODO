@@ -1,7 +1,0 @@
-setup the cvs Id's in the files/
-
-I don't think the MESSAGE is needed. Maybe check if PREFIX is not /usr
-and then use
-MESSAGE_SRC=            ${.CURDIR}/MESSAGE.use
-
-check the man page

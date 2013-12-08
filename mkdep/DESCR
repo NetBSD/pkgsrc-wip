@@ -1,7 +1,0 @@
-This is a mkdep. It constructs Makefile dependency lists.
-
-Because it is a C program and does all postprocessing and file
-handling without calling any external programs, it is up to 10-percent
-faster than the original BSD mkdep shell script.
-
-This is NetBSD's version of mkdep originally coded by Matthias Scheler.

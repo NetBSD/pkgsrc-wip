@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/09/24 00:44:08 jeremy-c-reed Exp $
-
-To use this "mkdep" either use "make MKDEP=${PREFIX}/bin/mkdep ..."
-or add an assignment like this to your /etc/mk.conf file:
-
-MKDEP = ${PREFIX}/bin/mkdep
-
-===========================================================================
