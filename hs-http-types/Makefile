@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/25 11:31:34 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/08 19:05:51 szptvlfn Exp $
 
-DISTNAME=	http-types-0.8.2
+DISTNAME=	http-types-0.8.3
 CATEGORIES=	www
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
