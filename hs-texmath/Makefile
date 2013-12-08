@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/08/28 08:55:11 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/08 01:17:32 szptvlfn Exp $
 
-DISTNAME=	texmath-0.6.4
+DISTNAME=	texmath-0.6.5.2
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp

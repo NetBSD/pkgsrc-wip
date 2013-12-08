@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/08/28 08:55:12 szptvlfn Exp $
+$NetBSD: distinfo,v 1.3 2013/12/08 01:17:32 szptvlfn Exp $
 
-SHA1 (texmath-0.6.4.tar.gz) = c9dd8568797a458104c05c2b103d88a0ab25ffb4
-RMD160 (texmath-0.6.4.tar.gz) = ad9a0b3b0d8106646a803f9cdbd1b946987f0b69
-Size (texmath-0.6.4.tar.gz) = 45075 bytes
+SHA1 (texmath-0.6.5.2.tar.gz) = 98b64adff127c8db869bb81e21a54ef8272c46ad
+RMD160 (texmath-0.6.5.2.tar.gz) = e709b5078abc57e903262097d2c8019240793b5c
+Size (texmath-0.6.5.2.tar.gz) = 45441 bytes
