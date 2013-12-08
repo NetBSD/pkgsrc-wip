@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/27 00:17:14 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/08 23:21:02 szptvlfn Exp $
 bin/hoogle
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/Heap.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/Heap.p_hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/TypeMap.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/TypeMap.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Base.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Base.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/Heap.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/Heap.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/System.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/System.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/TypeMap.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/TypeMap.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Util.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Util.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Web.hi
