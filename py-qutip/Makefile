@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/08 19:06:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/08 19:07:37 jihbed Exp $
 
 DISTNAME=	QuTiP-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,5 +21,5 @@ PYDISTUTILSPKG=	yes
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
-#.include "../../x11/py-qt4/buildlink3.mk"
+.include "../../x11/py-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
