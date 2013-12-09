@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/11/12 09:57:37 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/09 22:14:43 szptvlfn Exp $
 #
 
-DISTNAME=	HTTP-4000.2.9
+DISTNAME=	HTTP-4000.2.10
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
