@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5544 2013/12/08 15:30:55 cheusov Exp $
+# $Id: Makefile,v 1.5545 2013/12/09 10:43:19 jonperkin Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3191,7 +3191,6 @@ SUBDIR+=	spidermonkey185
 SUBDIR+=	splix
 SUBDIR+=	spread4
 SUBDIR+=	spyder
-SUBDIR+=	squidview
 SUBDIR+=	squirrelmail-avelsieve
 SUBDIR+=	squirrelmail-chg_sasl_passwd
 SUBDIR+=	squirrelmail-compatibility
