@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/09/08 18:31:22 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/09 22:56:36 szptvlfn Exp $
 
-DISTNAME=	lens-3.9.1
+DISTNAME=	lens-3.10.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
@@ -11,8 +11,6 @@ LICENSE=	modified-bsd
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-bifunctors/buildlink3.mk"
 .include "../../wip/hs-comonad/buildlink3.mk"
-.include "../../wip/hs-comonad-transformers/buildlink3.mk"
-.include "../../wip/hs-comonads-fd/buildlink3.mk"
 .include "../../wip/hs-contravariant/buildlink3.mk"
 .include "../../wip/hs-distributive/buildlink3.mk"
 .include "../../wip/hs-generic-deriving/buildlink3.mk"
@@ -20,7 +18,6 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-MonadCatchIO-transformers/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parallel/buildlink3.mk"
-.include "../../wip/hs-profunctor-extras/buildlink3.mk"
 .include "../../wip/hs-profunctors/buildlink3.mk"
 .include "../../wip/hs-reflection/buildlink3.mk"
 .include "../../wip/hs-semigroupoids/buildlink3.mk"
