@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/04 13:54:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/09 09:45:28 fhajny Exp $
 #
 
 DISTNAME=	mod_authz_ldap-0.30
@@ -11,7 +11,7 @@ HOMEPAGE=	http://authzldap.othello.ch/
 COMMENT=	Apache LDAP Authorization module
 LICENSE=	apache-2.0
 
-PKG_APACHE_ACCEPTED=	apache22
+PKG_APACHE_ACCEPTED=	apache24 apache22
 
 .include "../../mk/apache.mk"
 .include "options.mk"
