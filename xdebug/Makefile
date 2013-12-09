@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 11:48:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/09 21:20:45 noud4 Exp $
 #
 
-DISTNAME=		xdebug-2.0.5
+DISTNAME=		xdebug-2.2.3
 CATEGORIES=		devel
 MASTER_SITES=		http://xdebug.org/files/
 EXTRACT_SUFX=		.tgz
@@ -31,5 +31,5 @@ pre-install:
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/Makefile.common"
-.include "../../lang/php53/buildlink3.mk"
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
