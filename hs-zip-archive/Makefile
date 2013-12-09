@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/08/21 20:42:22 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/09 22:10:52 szptvlfn Exp $
 
-DISTNAME=	zip-archive-0.1.3.4
+DISTNAME=	zip-archive-0.1.4
 CATEGORIES=	lang
 
 MAINTAINER=	zecrazytux@zecrazytux.net
