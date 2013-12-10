@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/12/10 16:03:08 hfath Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/10 16:10:32 hfath Exp $
 
 DISTNAME=	tsm-6.2.4.0
 PKGREVISION=	4
@@ -23,7 +23,7 @@ NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base
 
-# Make sure suse version equals the above 
+# Make sure suse version equals the above
 DEPENDS+=               suse32_base:../../emulators/suse121_32_base
 EMUL32DIR=		${_OPSYS_EMULDIR.linux32}
 
