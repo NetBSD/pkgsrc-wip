@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/09/12 20:11:38 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/10 21:51:15 szptvlfn Exp $
 #
 
-DISTNAME=	vault-0.3.0.2
+DISTNAME=	vault-0.3.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
-HOMEPAGE=	https://github.com/HeinrichApfelmus/vault
 COMMENT=	Persistent store for values of arbitrary types
 LICENSE=	modified-bsd
 
