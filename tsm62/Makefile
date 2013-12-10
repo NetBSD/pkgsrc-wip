@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/12/06 16:36:31 hfath Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/10 16:03:08 hfath Exp $
 
 DISTNAME=	tsm-6.2.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v6r2/Linux/LinuxX86/v624/
 DISTFILES=	6.2.4.0-TIV-TSMBAC-LinuxX86.tar
@@ -18,10 +18,14 @@ CONF_FILES+=		${EG_DIR}/dsm.opt.smp ${PKG_SYSCONFDIR}/dsm.opt
 
 PUBLIC_BINS=		dsmc
 
+NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
+
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base
 
-NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
+# Make sure suse version equals the above 
+DEPENDS+=               suse32_base:../../emulators/suse121_32_base
+EMUL32DIR=		${_OPSYS_EMULDIR.linux32}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,11 +39,6 @@ RPMFILES=		${WRKDIR}/TIVsm-BA.i386.rpm \
 			${WRKDIR}/TIVsm-API.i386.rpm \
 			${WRKDIR}/gskcrypt32-8.0.14.6.linux.x86.rpm \
 			${WRKDIR}/gskssl32-8.0.14.6.linux.x86.rpm
-.if ${EMUL_PLATFORM} == "linux-x86_64"
-RPMFILES+=		${WRKDIR}/TIVsm-API64.i386.rpm \
-			${WRKDIR}/gskcrypt64-8.0.14.6.linux.x86_64.rpm \
-			${WRKDIR}/gskssl64-8.0.14.6.linux.x86_64.rpm
-.endif
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
@@ -59,6 +58,16 @@ TSMCLIENTSUBDIR=	opt/tivoli/tsm/client
 
 MESSAGE_SUBST+=		EMULDIR=${EMULDIR:Q}
 
+.if ${EMUL_PLATFORM} == "linux-x86_64"
+RPMFILES+=		${WRKDIR}/TIVsm-API64.i386.rpm \
+			${WRKDIR}/gskcrypt64-8.0.14.6.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.14.6.linux.x86_64.rpm
+
+PLIST_SUBST+=		EMUL32DIR=${EMUL32DIR:Q}
+MESSAGE_SUBST+=		EMUL32DIR=${EMUL32DIR:Q}
+MAKE_DIRS+=		${EMUL32DIR}/etc/ld.so.conf.d
+.endif
+
 .include "options.mk"
 
 do-extract:
@@ -66,8 +75,8 @@ do-extract:
 
 post-install:
 .if empty(PKG_OPTIONS:Mjava)
-	for _fff in `${SED} -e '/^[$$]{PLIST\.java}/!d' -e 's/^[$$]{PLIST\.java}//g' ${PLIST_SRC}`; do \
-	    ${RM} -f ${DESTDIR}${PREFIX}/$${_fff}; \
+	for bb in `${SED} -e '/^[$$]{PLIST\.java}/!d' -e 's/^[$$]{PLIST\.java}//g' ${PLIST_SRC}`; do \
+	    ${RM} -f ${DESTDIR}${PREFIX}/$${bb}; \
 	done
 .endif
 	${INSTALL_DATA_DIR} ${DOC_DIR}
@@ -79,6 +88,17 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EMULDIR}/etc/ld.so.conf.d
 	${INSTALL_DATA} ${FILESDIR}/tsm_ld.so.conf.${MACHINE_ARCH} \
 		${DESTDIR}${EMULDIR}/etc/ld.so.conf.d/tsm_ld.so.conf
+.if ${EMUL_PLATFORM} == "linux-x86_64"
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${EMUL32DIR}/opt
+	${LN} -s /..${EMULDIR}/opt/tivoli/ \
+		${DESTDIR}${PREFIX}${EMUL32DIR}/opt/tivoli
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${EMUL32DIR}/usr/local/ibm
+	${LN} -s /..${EMULDIR}/usr/local/ibm/gsk8/ \
+		${DESTDIR}${PREFIX}${EMUL32DIR}/usr/local/ibm/gsk8
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${EMUL32DIR}/etc/ld.so.conf.d
+	${INSTALL_DATA} ${FILESDIR}/tsm_ld.so.conf.i386 \
+		${DESTDIR}${PREFIX}${EMUL32DIR}/etc/ld.so.conf.d/tsm_ld.so.conf
+.endif
 	${LN} -s /..${PKG_SYSCONFDIR}/dsm.sys \
 		${DESTDIR}${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/
 	${LN} -s /..${PKG_SYSCONFDIR}/dsm.opt \

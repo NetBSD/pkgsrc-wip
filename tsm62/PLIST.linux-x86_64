@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.2 2013/12/06 16:36:31 hfath Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.3 2013/12/10 16:03:09 hfath Exp $
 emul/linux/opt/tivoli/tsm/client/api/bin64/.buildDate
 emul/linux/opt/tivoli/tsm/client/api/bin64/dsm.opt.smp
 emul/linux/opt/tivoli/tsm/client/api/bin64/dsm.sys.smp
@@ -60,5 +60,10 @@ emul/linux/usr/local/ibm/gsk8_64/lib64/libgsk8p11_64.so
 emul/linux/usr/local/ibm/gsk8_64/lib64/libgsk8ssl_64.so
 emul/linux/usr/local/ibm/gsk8_64/lib64/libgsk8sys_64.so
 emul/linux/usr/local/ibm/gsk8_64/lib64/libgsk8valn_64.so
+emul/linux32/etc/ld.so.conf.d/tsm_ld.so.conf
+emul/linux32/opt/tivoli
+emul/linux32/usr/local/ibm/gsk8
 @pkgdir emul/linux/usr/local/ibm/gsk8_64/inc
 @pkgdir emul/linux/usr/local/ibm/gsk8_64/docs
+@exec ${EMUL32DIR}/sbin/ldconfig -r ${EMUL32DIR}
+@unexec ${EMUL32DIR}/sbin/ldconfig -r ${EMUL32DIR}
