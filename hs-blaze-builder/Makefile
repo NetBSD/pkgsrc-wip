@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/12/05 09:21:32 phonohawk Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/10 13:29:12 szptvlfn Exp $
 #
 
-DISTNAME=	blaze-builder-0.3.3.0
-PKGREVISION=	1
+DISTNAME=	blaze-builder-0.3.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
