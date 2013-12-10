@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/12/05 23:05:27 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/10 13:37:42 szptvlfn Exp $
 
-DISTNAME=	cmdargs-0.10.6
+DISTNAME=	cmdargs-0.10.7
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
