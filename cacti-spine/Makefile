@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/12/09 09:22:38 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.17 2013/12/10 12:04:07 obache Exp $
 #
 
-DISTNAME=	cacti-spine-${VERSION}
-#PKGREVISION=	1
+DISTNAME=	cacti-spine-0.8.8b
 CATEGORIES=	net
 MASTER_SITES=	http://www.cacti.net/downloads/spine/
 
@@ -11,21 +10,19 @@ HOMEPAGE=	http://www.cacti.net/spine_info.php
 COMMENT=	Spine is a poller for Cacti for large installations
 LICENSE=	gnu-lgpl-v2.1
 
-VERSION=0.8.8b
-WRKSRC=		${WRKDIR}/${DISTNAME}
+DEPENDS+=	cacti>=0.8.7:../../net/cacti
+
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 
-DEPENDS+=	cacti>=0.8.7:../../net/cacti
+CONFIGURE_ARGS=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 
 DOCDIR=			share/doc/cacti-spine
 EXAMPLES_DIR=		examples
 EGDIR=			${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
 CONF_FILES=		${EGDIR}/spine.conf.dist ${PKG_SYSCONFDIR}/spine.conf
-INSTALLATION_DIRS=	bin ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR} ${PKG_SYSCONFDIR}
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS=	bin ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/spine ${DESTDIR}${PREFIX}/bin
