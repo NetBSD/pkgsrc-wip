@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 12:36:14 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 #
 
-DISTNAME=	phpcpd-1.4.1
+DISTNAME=	phpcpd-1.4.3
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 

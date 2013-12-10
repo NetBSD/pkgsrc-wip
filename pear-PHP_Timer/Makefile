@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 12:13:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 #
 
-DISTNAME=	PHP_Timer-1.0.4
+DISTNAME=	PHP_Timer-1.0.5
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 12:30:42 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 #
 
-DISTNAME=	PHP_CodeCoverage-1.2.12
+DISTNAME=	PHP_CodeCoverage-1.2.13
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 

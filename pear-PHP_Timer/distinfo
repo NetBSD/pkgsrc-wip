@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/14 12:13:26 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 
-SHA1 (pear/PHP_Timer-1.0.4.tgz) = 2286dd6b247bee9d59fca4df43991ab76aad3f9c
-RMD160 (pear/PHP_Timer-1.0.4.tgz) = 11ce7b395234b2f1e0c9f7107067f2b2d3354c9d
-Size (pear/PHP_Timer-1.0.4.tgz) = 3694 bytes
+SHA1 (pear/PHP_Timer-1.0.5.tgz) = 90f802919058d194cb6bf3eade4be76706126d29
+RMD160 (pear/PHP_Timer-1.0.5.tgz) = 399de665ebd29afaf5755b15981408f1a67d5dc0
+Size (pear/PHP_Timer-1.0.5.tgz) = 3597 bytes

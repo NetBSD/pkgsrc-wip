@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/14 12:30:42 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 
-SHA1 (pear/PHP_CodeCoverage-1.2.12.tgz) = a3feb03e156a9f34e465c03902b61df71bb6fff0
-RMD160 (pear/PHP_CodeCoverage-1.2.12.tgz) = 245d5f25b0373cbaeaa9be7a62c32a52fc8baf53
-Size (pear/PHP_CodeCoverage-1.2.12.tgz) = 158796 bytes
+SHA1 (pear/PHP_CodeCoverage-1.2.13.tgz) = 1ad0daf188d096f35e5a0c6ee1d467bd0bf5c7a2
+RMD160 (pear/PHP_CodeCoverage-1.2.13.tgz) = 84ad7a1c8d57451bebfa03cb44c17ab21d9ae7a6
+Size (pear/PHP_CodeCoverage-1.2.13.tgz) = 158772 bytes

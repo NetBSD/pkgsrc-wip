@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/14 11:56:11 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 
-SHA1 (pear/PHP_CodeSniffer-1.4.5.tgz) = 718fad7d11fc34c16475c51c8f4a9629d0e5f864
-RMD160 (pear/PHP_CodeSniffer-1.4.5.tgz) = 8c9437b4a06fc9586539b8d4ef691530294aca9a
-Size (pear/PHP_CodeSniffer-1.4.5.tgz) = 377255 bytes
+SHA1 (pear/PHP_CodeSniffer-1.4.7.tgz) = 436448942bd7a12d37083f1c0838c9ba297dcb5c
+RMD160 (pear/PHP_CodeSniffer-1.4.7.tgz) = 5b6d7cd440f65af4aeb746499d65a660f641202a
+Size (pear/PHP_CodeSniffer-1.4.7.tgz) = 406387 bytes

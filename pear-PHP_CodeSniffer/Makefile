@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 11:56:11 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 
-DISTNAME=	PHP_CodeSniffer-1.4.5
+DISTNAME=	PHP_CodeSniffer-1.4.7
 CATEGORIES=	devel
 
 MAINTAINER=	noud4@home.nl

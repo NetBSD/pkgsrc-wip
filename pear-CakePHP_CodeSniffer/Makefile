@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 12:47:21 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 
-DISTNAME=	CakePHP_CodeSniffer-0.1.11
+DISTNAME=	CakePHP_CodeSniffer-0.1.18
 CATEGORIES=	www
 MASTER_SITES+=	http://pear.cakephp.org/get/
 

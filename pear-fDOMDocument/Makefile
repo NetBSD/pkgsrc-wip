@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 11:21:13 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
 #
 
-DISTNAME=	fDOMDocument-1.4.1
+DISTNAME=	fDOMDocument-1.4.2
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.netpirates.net/get/
 
