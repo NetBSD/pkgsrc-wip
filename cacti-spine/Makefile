@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/12/10 12:04:07 obache Exp $
+# $NetBSD: Makefile,v 1.18 2013/12/11 02:46:45 obache Exp $
 #
 
 DISTNAME=	cacti-spine-0.8.8b
@@ -12,21 +12,22 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	cacti>=0.8.7:../../net/cacti
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
+CONFIGURE_ARGS=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
 
 DOCDIR=			share/doc/cacti-spine
 EXAMPLES_DIR=		examples
 EGDIR=			${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
 CONF_FILES=		${EGDIR}/spine.conf.dist ${PKG_SYSCONFDIR}/spine.conf
-INSTALLATION_DIRS=	bin ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR}
+INSTALLATION_DIRS=	${DOCDIR}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/spine ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/spine.conf.dist ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
+INSTALL_MAKE_FLAGS+=	configdir=${EGDIR}
+
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/${DOCDIR}
