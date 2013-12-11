@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/10 02:34:39 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/11 17:24:04 asau Exp $
 #
 
 DISTNAME=	ape-3.5.1
@@ -11,8 +11,6 @@ COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
 
 EXTRACT_SUFX=	.tar.xz
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
