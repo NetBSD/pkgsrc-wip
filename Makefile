@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5546 2013/12/11 03:04:25 obache Exp $
+# $Id: Makefile,v 1.5547 2013/12/11 19:15:14 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1581,6 +1581,7 @@ SUBDIR+=	lldpd
 SUBDIR+=	llvm
 SUBDIR+=	lmdbg-current
 SUBDIR+=	lmfit
+SUBDIR+=	lmod
 SUBDIR+=	lmtp2nntp
 SUBDIR+=	logfmon-devel
 SUBDIR+=	logwatch
