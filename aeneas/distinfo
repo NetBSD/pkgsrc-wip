@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2009/11/22 09:10:08 gschwarz Exp $
-
-SHA1 (aeneas-1.2.tar.bz2) = fba2fc706e4f3dc73723d0686e767a3bf6be821e
-RMD160 (aeneas-1.2.tar.bz2) = f6c886f937d6e1167c563cbaa41870250fee0b07
-Size (aeneas-1.2.tar.bz2) = 2545917 bytes
-SHA1 (patch-aa) = 7b330482122610ba8f48d313598713334a6b32e8
-SHA1 (patch-ab) = c6431cd76049ed543677a948c38c8561e8b28ba5

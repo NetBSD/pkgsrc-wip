@@ -1,4 +1,0 @@
-Aeneas is the GNU package for the design and simulation of submicron
-semiconductor devices. It is a 3D Monte Carlo Semiconductor Device Simulator
-which can take into account all the relevant quantum effects, thanks to the
-implementation of the Bohm effective potential method.

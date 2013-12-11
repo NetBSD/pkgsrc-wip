@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5547 2013/12/11 19:15:14 outpaddling Exp $
+# $Id: Makefile,v 1.5548 2013/12/11 20:05:08 gschwarz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -75,7 +75,6 @@ SUBDIR+=	admsmb
 SUBDIR+=	adobe-source-sans-pro-ttf-otf
 SUBDIR+=	ae-fonts-decorative
 SUBDIR+=	aegis-devel
-SUBDIR+=	aeneas
 SUBDIR+=	aespipe
 SUBDIR+=	afflib
 SUBDIR+=	agile
