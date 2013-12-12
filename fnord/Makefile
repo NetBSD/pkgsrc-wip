@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/09/28 23:21:48 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/12 10:59:17 gschwarz Exp $
 
-DISTNAME=	fnord-1.10
+DISTNAME=	fnord-1.11
 CATEGORIES=	www
 MASTER_SITES=	http://www.fefe.de/fnord/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,9 @@ HOMEPAGE=	http://www.fefe.de/fnord/
 COMMENT=	Small HTTP server
 LICENSE=	gnu-gpl-v2
 
+# web server Gatling running at www.fefe.de is incompatible with BSD ftp
+# cf. PR#45516
+FETCH_USING=	wget
 USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
 
@@ -20,7 +23,7 @@ MAKE_ENV+=	RANLIB=${RANLIB:Q} LIBS=${LIBS:Q}
 CPPFLAGS+=	-DNEED_ALLOCA_H
 .endif
 
-LIBS.SunOS+=	-lsocket  -lnsl
+LIBS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	sbin
 
