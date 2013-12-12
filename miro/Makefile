@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 15:09:55 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/12/12 13:39:09 noud4 Exp $
 #
 
 DISTNAME=	miro-3.5.1
+PKGREVISION=	1
 CATEGORIES=	multimedia net
 MASTER_SITES=	http://ftp.osuosl.org/pub/pculture.org/miro/src/
 
@@ -26,6 +27,7 @@ SUBST_SED.fix-paths+=		-e 's,/usr/X11R6/lib,${X11BASE}/lib,g'
 
 DEPENDS=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
 DEPENDS+=	${PYPKGPREFIX}-libtorrent-rasterbar-[0-9]*:../../wip/py-libtorrent-rasterbar
+DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
 PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	linux
