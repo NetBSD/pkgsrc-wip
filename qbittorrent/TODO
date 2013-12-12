@@ -1,0 +1,10 @@
+For me this pkg works but i have to drag its window smaller
+to see the window content, giving me:
+
+QNativeImage: Unable to attach to shared memory segment. 
+X Error: BadDrawable (invalid Pixmap or Window parameter) 9
+  Major opcode: 62 (X_CopyArea)
+  Resource id:  0x0
+X Error: BadDrawable (invalid Pixmap or Window parameter) 9
+  Major opcode: 62 (X_CopyArea)
+  Resource id:  0x0
