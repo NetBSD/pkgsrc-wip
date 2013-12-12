@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/09/28 21:24:39 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/12 11:37:14 gschwarz Exp $
 
 DISTNAME=	dwepcrack-0.4
 PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	http://www.e.kth.se/~pvz/wifi/
+MASTER_SITES=	http://index-of.es/Hacking-Wireless-Networks/WEP-WPA%20Cracking%20Tools/dwepcrack/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20070322102507/http://www.dachb0den.com/projects/dwepcrack.html
