@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/19 13:47:19 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/12 22:59:41 noud4 Exp $
 #
 
 DISTNAME=		twitter-0.4.0
@@ -7,7 +7,7 @@ CATEGORIES=		chat net
 MASTER_SITES=		http://pidgin-twitterstatus.googlecode.com/files/
 EXTRACT_SUFX=		.pl
 
-MAINTAINER=		noud@home.nl
+MAINTAINER=		noud4@home.nl
 HOMEPAGE=		http://code.google.com/p/pidgin-twitterstatus/
 COMMENT=		Use your Twitter account as your Pidgin status message
 LICENSE=		gnu-gpl-v3
