@@ -1,0 +1,13 @@
+linking:
+
+  CXXLD    libtorrent-rasterbar.la
+ld: .libs/torrent.o(.text+0x18f16): unresolvable relocation against symbol `_ZNKSs5emptyEv'
+ld: final link failed: Nonrepresentable section on output
+
+probably related to:
+
+https://code.google.com/p/libtorrent/issues/detail?id=382
+http://comments.gmane.org/gmane.comp.lib.boost.build/25685
+
+patch-src_Makefile.in linking works, the lib is usable,
+and the patch should be improved.
