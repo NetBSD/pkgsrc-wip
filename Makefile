@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5552 2013/12/13 00:54:00 noud4 Exp $
+# $Id: Makefile,v 1.5553 2013/12/13 13:17:21 hfath Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2283,6 +2283,7 @@ SUBDIR+=	php-gtk2
 SUBDIR+=	php-http
 SUBDIR+=	php-igbinary
 SUBDIR+=	php-imagick
+SUBDIR+=	php-libawl-git
 SUBDIR+=	php-memcached
 SUBDIR+=	php-mongo
 SUBDIR+=	php-oauth
