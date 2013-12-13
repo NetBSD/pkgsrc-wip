@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/12/13 00:46:40 noud4 Exp $
+
+SHA1 (uthash/1.9.7/master.zip) = fdfdf982c4cae39ba65c1fbc92b3ef02bc83a7d4
+RMD160 (uthash/1.9.7/master.zip) = e7cca835efa32f6e5cb3941a514b0251ced1e5a0
+Size (uthash/1.9.7/master.zip) = 287920 bytes
