@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2013/12/14 17:02:44 outpaddling Exp $
+sbin/auto-append-line
+sbin/auto-ask
+sbin/auto-desktop-setup
+sbin/auto-install-packages
+sbin/auto-install-packages-from-source
+sbin/auto-install-pkgsrc-tree
+sbin/auto-package-installed
+sbin/auto-replace-file
+sbin/auto-select-pkgsrc-dist
