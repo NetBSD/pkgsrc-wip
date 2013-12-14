@@ -1,10 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2010/08/23 13:17:05 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/14 13:17:57 noud4 Exp $
 bin/icecat
+include/icecat/Allocator.h
+include/icecat/Assembler.h
+include/icecat/CodeAlloc.h
+include/icecat/Containers.h
+include/icecat/Fragmento.h
 include/icecat/ImageErrors.h
 include/icecat/ImageLogging.h
+include/icecat/LIR.h
+include/icecat/Native.h
+include/icecat/Nativei386.h
 include/icecat/NSReg.h
+include/icecat/RegAlloc.h
 include/icecat/VerReg.h
 include/icecat/XPCIDispatch.h
+include/icecat/avmplus.h
 include/icecat/base64.h
 include/icecat/blapit.h
 include/icecat/cert.h
@@ -108,6 +118,7 @@ include/icecat/jsautocfg.h
 include/icecat/jsautokw.h
 include/icecat/jsbit.h
 include/icecat/jsbool.h
+include/icecat/jsbuiltins.h
 include/icecat/jsclist.h
 include/icecat/jscntxt.h
 include/icecat/jscompat.h
@@ -234,6 +245,7 @@ include/icecat/mozilla/storage.h
 include/icecat/mozilla/storage/Variant.h
 include/icecat/mozilla/storage/Variant_inl.h
 include/icecat/mozpngconf.h
+include/icecat/nanojit.h
 include/icecat/necko-config.h
 include/icecat/netCore.h
 include/icecat/npapi.h
