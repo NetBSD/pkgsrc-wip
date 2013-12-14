@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:22:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/12/14 10:20:26 noud4 Exp $
 bin/arandr
 man/man1/arandr.1
 share/locale/ar/LC_MESSAGES/arandr.mo
@@ -16,3 +16,31 @@ share/locale/tr/LC_MESSAGES/arandr.mo
 share/locale/zh_CN/LC_MESSAGES/arandr.mo
 share/applications/arandr.desktop
 ${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/screenlayout/__init__.py
+${PYSITELIB}/screenlayout/__init__.pyc
+${PYSITELIB}/screenlayout/__init__.pyo
+${PYSITELIB}/screenlayout/auxiliary.py
+${PYSITELIB}/screenlayout/auxiliary.pyc
+${PYSITELIB}/screenlayout/auxiliary.pyo
+${PYSITELIB}/screenlayout/data/gpl-3.txt
+${PYSITELIB}/screenlayout/demo.py
+${PYSITELIB}/screenlayout/demo.pyc
+${PYSITELIB}/screenlayout/demo.pyo
+${PYSITELIB}/screenlayout/gui.py
+${PYSITELIB}/screenlayout/gui.pyc
+${PYSITELIB}/screenlayout/gui.pyo
+${PYSITELIB}/screenlayout/meta.py
+${PYSITELIB}/screenlayout/meta.pyc
+${PYSITELIB}/screenlayout/meta.pyo
+${PYSITELIB}/screenlayout/metacity.py
+${PYSITELIB}/screenlayout/metacity.pyc
+${PYSITELIB}/screenlayout/metacity.pyo
+${PYSITELIB}/screenlayout/snap.py
+${PYSITELIB}/screenlayout/snap.pyc
+${PYSITELIB}/screenlayout/snap.pyo
+${PYSITELIB}/screenlayout/widget.py
+${PYSITELIB}/screenlayout/widget.pyc
+${PYSITELIB}/screenlayout/widget.pyo
+${PYSITELIB}/screenlayout/xrandr.py
+${PYSITELIB}/screenlayout/xrandr.pyc
+${PYSITELIB}/screenlayout/xrandr.pyo
