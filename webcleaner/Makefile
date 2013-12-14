@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:06 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/14 09:26:56 obache Exp $
 #
 
 DISTNAME=		webcleaner-2.8
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://webcleaner.sourceforge.net/
 COMMENT=		Filtering HTTP proxy
 
-DEPENDS+=		${PYPKGPREFIX}-amkCrypto>=0:../../security/py-amkCrypto
+DEPENDS+=		${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 DEPENDS+=		${PYPKGPREFIX}-imaging>=0:../../graphics/py-imaging
 
 PKG_DESTDIR_SUPPORT=    none

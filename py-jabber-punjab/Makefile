@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/01 20:55:20 schnoebe Exp $
+# $NetBSD: Makefile,v 1.6 2013/12/14 09:26:56 obache Exp $
 
 DISTNAME=	punjab-0.13
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -21,7 +21,7 @@ BROKEN=		Source tarballs have disappeared.
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
 DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-amkCrypto>=2.0.1:../../security/py-amkCrypto
+DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0.1:../../security/py-crypto
 
 # it's a python package using the standard Python packager
 PYDISTUTILSPKG=	yes
