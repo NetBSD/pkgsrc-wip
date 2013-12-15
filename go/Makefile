@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/12/06 12:54:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2013/12/15 19:00:06 bsiegert Exp $
 
 DISTNAME=	go1.2.src
 PKGNAME=	go-1.2
@@ -90,7 +90,7 @@ do-build:
 do-install:
 	cd ${WRKSRC} && rm -f .hgignore .hgtags
 	cd ${WRKDIR} && pax -rw go ${DESTDIR}${PREFIX}
-.for cmd in go godoc gofmt
+.for cmd in go gofmt
 	cd ${DESTDIR}${PREFIX}/bin && ln -sf ../go/bin/${cmd} ${cmd}
 .endfor
 
