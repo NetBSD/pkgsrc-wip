@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/06/14 00:57:33 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/15 04:12:49 makoto Exp $
 
-DISTNAME=	hasida-table-0.7
+DISTNAME=	hasida-table-0.8
 
 CATEGORIES=     inputmethod
 MASTER_SITES=   ftp://ftp.ki.nu/pub/
