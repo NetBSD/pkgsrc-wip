@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/13 00:48:43 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/15 21:28:56 noud4 Exp $
 
 DISTNAME=	bfgminer-3.8.0
 CATEGORIES=	finance
@@ -24,7 +24,7 @@ CURSES_DEFAULT=	ncurses
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 
-.include "../../textproc/jansson/buildlink3.mk"	# TODO add to pkgsrc
+.include "../../textproc/jansson/buildlink3.mk"
 .include "../../wip/uthash/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
