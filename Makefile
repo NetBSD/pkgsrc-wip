@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5554 2013/12/14 17:03:51 outpaddling Exp $
+# $Id: Makefile,v 1.5555 2013/12/16 08:34:56 nsloss Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1546,6 +1546,7 @@ SUBDIR+=	lidia
 SUBDIR+=	light-desktop
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
+SUBDIR+=	lightspark
 SUBDIR+=	lighttpd
 SUBDIR+=	lilypond-devel
 SUBDIR+=	lilypond-git
