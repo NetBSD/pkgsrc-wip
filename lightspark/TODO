@@ -1,0 +1,4 @@
+Currently this package only works in firefox if you preload libGL
+ie: LD_PRELOAD=/usr/X11R7/lib/libGL.so firefox
+
+The stand-alone player has no problems.
