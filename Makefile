@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5555 2013/12/16 08:34:56 nsloss Exp $
+# $Id: Makefile,v 1.5556 2013/12/16 08:38:29 nsloss Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1582,6 +1582,7 @@ SUBDIR+=	lissac
 SUBDIR+=	lives
 SUBDIR+=	lldpd
 SUBDIR+=	llvm
+SUBDIR+=	llvm-rtlib
 SUBDIR+=	lmdbg-current
 SUBDIR+=	lmfit
 SUBDIR+=	lmod
