@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/08/14 01:33:35 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/16 14:06:40 outpaddling Exp $
 #
 
-DISTNAME=	libbacon-1.2.1
+DISTNAME=	libbacon-1.2.2
 CATEGORIES=	devel
 MASTER_SITES=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 
@@ -11,6 +11,7 @@ COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+EXTRACT_SUFX=	.tar.xz
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
