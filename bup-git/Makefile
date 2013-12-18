@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/12/05 07:40:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/18 23:37:09 thomasklausner Exp $
 
-DISTNAME=	bup-0.25rc3
+DISTNAME=	bup-0.25
 CATEGORIES=	sysutils
 MASTER_SITES=	#
 
