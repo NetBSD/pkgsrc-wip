@@ -58,7 +58,7 @@ endif
 
 # Build runtime libraries for x86_64.
 ifeq ($(call contains,$(SupportedArches),x86_64),true)
-Configs += full-x86_64 profile-x86_64 asan-x86_64 tsan-x86_64
+Configs += full-x86_64 profile-x86_64
 Arch.full-x86_64 := x86_64
 Arch.profile-x86_64 := x86_64
 Arch.asan-x86_64 := x86_64
