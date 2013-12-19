@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:32:50 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/12/19 12:14:16 gschwarz Exp $
 
 DISTNAME=	ozymandns_src_0.1
 PKGNAME=	${DISTNAME:S/_src_/-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.cship.info/mirror/dnstunnel/ http://beta.ivancover.com/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://localhost.lu:8081/OzymanDNS/
+HOMEPAGE=	http://dankaminsky.com/2004/07/29/51/
 COMMENT=	Tool to enable ssh tunnel over DNS using TXT records
 
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
