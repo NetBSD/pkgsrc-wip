@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.7 2012/10/29 00:53:45 othyro Exp $
+$NetBSD: distinfo,v 1.8 2013/12/19 03:25:56 othyro Exp $
 
-SHA1 (desmume-0.9.8/desmume-0.9.8.tar.gz) = de72f0a634d5904eced1491d2aeed96705168f65
-RMD160 (desmume-0.9.8/desmume-0.9.8.tar.gz) = 68ee9cf026df5a3d301f12630cceaebd7fd2caed
-Size (desmume-0.9.8/desmume-0.9.8.tar.gz) = 3677290 bytes
-SHA1 (patch-src_firmware.cpp) = 11ce0975793299e8a02a7db2d7bf0298fa3dccde
+SHA1 (desmume-0.9.10.tar.tar) = b59ba03f0e74b0da2522ac25316e8a75ef1bb361
+RMD160 (desmume-0.9.10.tar.tar) = 4ca447c8d767ead207d4abf81e63aedbd5f62d50
+Size (desmume-0.9.10.tar.tar) = 4141586 bytes
+SHA1 (patch-po_Makefile.in.in) = 8fe811daefecade4cc516de7886d5637dc8d5290
+SHA1 (patch-src_arm__jit.cpp) = 82cc48d45751628d7c20db6d95f7d7c10ab6d257
+SHA1 (patch-src_armcpu.h) = ae552eca77dd207e1bb8ad30d5f3ebf34e7c72e3
+SHA1 (patch-src_gtk_glx__3Demu.cpp) = 257b72dac55c2f497bbf2ec390e530a4126645df
+SHA1 (patch-src_utils_AsmJit_core_stringbuilder.h) = a26f185de8e4ef43f77b4b863b85fce92bf107ae
+SHA1 (patch-src_utils_task.cpp) = a0f7c66b3caeaf7c282b36df6cb853f4ffc0dc8c

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2013/04/16 11:38:21 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2013/12/19 03:25:56 othyro Exp $
 #
 
-DISTNAME=	desmume-0.9.8
-PKGREVISION=	3
+DISTNAME=	desmume-0.9.10
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
-DIST_SUBDIR=	${PKGNAME_NOREV}
+EXTRACT_SUFX=	.tar.tar
+EXTRACT_CMD=	${TAR} xzf $$extract_file
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://desmume.sourceforge.net/
@@ -13,12 +13,17 @@ COMMENT=	Nintendo DS emulator
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake intltool perl pkg-config
+USE_TOOLS+=	gmake intltool msgfmt msgmerge perl pkg-config tar xgettext
+
 USE_LANGUAGES=	c c++
 
 .include "options.mk"
 
-BUILDLINK_DEPMETHOD.libSoundTouch+=	build
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libSoundTouch+=	libSoundTouch>=1.5.0
+BUILDLINK_DEPMETHOD.libSoundTouch=	full
 .include "../../wip/libSoundTouch/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
