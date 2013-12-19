@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2011/01/18 18:11:55 gschwarz Exp $
+$NetBSD: patch-aa,v 1.8 2013/12/19 11:52:42 gschwarz Exp $
 
---- Makefile.in.orig	2011-01-18 19:02:40.000000000 +0100
-+++ Makefile.in	2011-01-18 19:05:14.000000000 +0100
+--- Makefile.in.orig	2013-12-19 12:46:11.000000000 +0100
++++ Makefile.in	2013-12-19 12:46:23.000000000 +0100
 @@ -1,11 +1,11 @@
  
  DISTNAME = $(pkgname)-$(pkgversion)
@@ -17,9 +17,9 @@ $NetBSD: patch-aa,v 1.7 2011/01/18 18:11:55 gschwarz Exp $
 -SHELL = /bin/sh
 +#SHELL = /bin/sh
  
- objs = arg_parser.o basic_buffer.o block.o buffer.o buffer_handle.o \
-        encoding.o iso_8859.o menu_file.o menu_help.o menu_opts.o \
-@@ -67,7 +67,7 @@
+ edobjs = basic_buffer.o block.o buffer.o buffer_handle.o \
+          encoding.o iso_8859.o menu_file.o menu_help.o menu_opts.o \
+@@ -71,7 +71,7 @@
  	if [ ! -d "$(DESTDIR)$(bindir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(bindir)" ; fi
  	if [ ! -d "$(DESTDIR)$(sysconfdir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(sysconfdir)" ; fi
  	$(INSTALL_PROGRAM) ./$(progname) "$(DESTDIR)$(bindir)/$(progname)"
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.7 2011/01/18 18:11:55 gschwarz Exp $
  
  install-info :
  	if [ ! -d "$(DESTDIR)$(infodir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(infodir)" ; fi
-@@ -76,7 +76,7 @@
+@@ -80,7 +80,7 @@
  
  install-man :
  	if [ ! -d "$(DESTDIR)$(mandir)/man1" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(mandir)/man1" ; fi

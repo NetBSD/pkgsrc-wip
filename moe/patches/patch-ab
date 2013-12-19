@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.4 2011/01/18 18:11:55 gschwarz Exp $
+$NetBSD: patch-ab,v 1.5 2013/12/19 11:52:42 gschwarz Exp $
 
---- configure.orig	2011-01-18 19:07:57.000000000 +0100
-+++ configure	2011-01-18 19:08:45.000000000 +0100
-@@ -26,10 +26,10 @@
- infodir='$(datadir)/info'
- mandir='$(datadir)/man'
+--- configure.orig	2013-12-19 12:48:01.000000000 +0100
++++ configure	2013-12-19 12:48:52.000000000 +0100
+@@ -24,10 +24,10 @@
+ infodir='$(datarootdir)/info'
+ mandir='$(datarootdir)/man'
  sysconfdir='$(prefix)/etc'
--CXX=
+-CXX=g++
 -CPPFLAGS=
 -CXXFLAGS='-Wall -W -O2'
 -LDFLAGS=
-+#CXX=
++#CXX=g++
 +#CPPFLAGS=
 +#CXXFLAGS='-Wall -W -O2'
 +#LDFLAGS=
  
- # Loop over all args
- while [ -n "$1" ] ; do
+ # checking whether we are using GNU C++.
+ if [ ! -x /bin/g++ ] &&
