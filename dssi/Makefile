@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/02/27 11:34:17 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/19 06:03:37 othyro Exp $
 #
 
 DISTNAME=	dssi-1.1.1
@@ -29,7 +29,7 @@ BUILDLINK_TRANSFORM=	rm:-ldl
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/ladspa/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libdssialsacompat=	build
+BUILDLINK_DEPMETHOD.libdssialsacompat=	full
 .include "../../wip/libdssialsacompat/buildlink3.mk"
 .include "../../wip/liblo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
