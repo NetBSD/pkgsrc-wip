@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/16 08:15:46 nsloss Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/19 13:32:52 nsloss Exp $
 #
 
 PKGNAME=	llvm-rtlib-3.3
@@ -41,7 +41,7 @@ TARGET=clang_netbsd
 .endif
 
 do-install:
-	${INSTALL}	${WRKSRC}/${TARGET}/full-${MACHINE_ARCH}/libcompiler_rt.a	${DESTDIR}${PREFIX}/lib
+	${INSTALL}	${WRKSRC}/${TARGET}/full*/libcompiler_rt.a	${DESTDIR}${PREFIX}/lib
 
 post-install:
 	${CHMOD}	-x ${DESTDIR}${PREFIX}/lib/lib*.a
