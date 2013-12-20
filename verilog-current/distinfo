@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/12/20 02:19:53 makoto Exp $
+$NetBSD: distinfo,v 1.2 2013/12/20 06:09:41 makoto Exp $
 
 SHA1 (verilog-20130827.tar.gz) = 926f9a26b989fad4512316bcc6573811d72369e3
 RMD160 (verilog-20130827.tar.gz) = ea7063b572b880aa96dbc135b8d992a9ddc2b650
 Size (verilog-20130827.tar.gz) = 1592719 bytes
 SHA1 (patch-ad) = 54c9b292a4b7085d287d7251fdda3b06d6ef04a4
+SHA1 (patch-vpi_Makefile.in) = 7ce1e645119fa9500cc6e153b85160dce1c738d5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/20 02:19:53 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/20 06:09:41 makoto Exp $
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
@@ -20,16 +20,49 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=		bison gmake lex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-ipal
+INSTALLATION_DIRS+=	include/iverilog
+INSTALLATION_DIRS+=	lib/ivl
+INSTALLATION_DIRS+=	lib/ivl/include
 INSTALLATION_DIRS+=	share/ivl
 
 TEST_DIRS=		.
 TEST_TARGET=		check
 
+# probably more simple fix with small patches, but interim solution:
 post-install:
 	(cd ${WRKSRC}; ${INSTALL_DATA} \
 		QUICK_START.txt \
 		README.txt      \
 	${DESTDIR}${PREFIX}/share/ivl )
+# include/iverilog
+	(cd ${WRKSRC}; ${INSTALL_DATA} \
+		acc_user.h ivl_target.h sv_vpi_user.h veriuser.h vpi_user.h \
+	${DESTDIR}${PREFIX}/include/iverilog )
+# lib/ivl
+	(cd ${WRKSRC}; ${INSTALL_DATA} \
+		tgt-blif/blif-s.conf \
+		tgt-blif/blif.conf \
+		tgt-null/null-s.conf \
+		tgt-null/null.conf \
+		tgt-pcb/pcb-s.conf \
+		tgt-pcb/pcb.conf \
+		tgt-stub/stub-s.conf \
+		tgt-stub/stub.conf \
+		tgt-vhdl/vhdl-s.conf \
+		tgt-vhdl/vhdl.conf \
+		tgt-vlog95/vlog95-s.conf \
+		tgt-vlog95/vlog95.conf \
+		vpi/system.sft \
+		vpi/v2005_math.sft \
+		vpi/v2009.sft \
+		vpi/va_math.sft \
+		vpi/vhdl_sys.sft \
+	${DESTDIR}${PREFIX}/lib/ivl )
+# lib/ivl/include
+	(cd ${WRKSRC}; ${INSTALL_DATA} \
+		constants.vams \
+		disciplines.vams \
+	${DESTDIR}${PREFIX}/lib/ivl/include )
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
