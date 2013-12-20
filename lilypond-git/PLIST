@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/11 12:02:59 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/20 10:01:35 thomasklausner Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -43,9 +43,12 @@ share/lilypond/${PKGVERSION}/fonts/otf/emmentaler-20.otf
 share/lilypond/${PKGVERSION}/fonts/otf/emmentaler-23.otf
 share/lilypond/${PKGVERSION}/fonts/otf/emmentaler-26.otf
 share/lilypond/${PKGVERSION}/fonts/otf/emmentaler-brace.otf
+share/lilypond/${PKGVERSION}/fonts/source/common-modules-and-initialization.mf
+share/lilypond/${PKGVERSION}/fonts/source/debugging-settings.mf
+share/lilypond/${PKGVERSION}/fonts/source/declare-autometric-parameters.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-accidentals.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-accordion.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet-generic.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet11.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet13.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet14.mf
@@ -54,6 +57,7 @@ share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet18.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet20.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet23.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-alphabet26.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-arrow.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-arrowheads.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-autometric.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-braces-a.mf
@@ -63,6 +67,7 @@ share/lilypond/${PKGVERSION}/fonts/source/feta-braces-d.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-braces-e.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-braces-f.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-braces-g.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-braces-generic.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-braces-h.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-braces-i.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-braces.mf
@@ -80,8 +85,9 @@ share/lilypond/${PKGVERSION}/fonts/source/feta-flags18.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-flags20.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-flags23.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-flags26.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-generic.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-flats.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-macros.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-naturals.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-noteheads-generic.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-noteheads.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-noteheads11.mf
@@ -93,17 +99,13 @@ share/lilypond/${PKGVERSION}/fonts/source/feta-noteheads20.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-noteheads23.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-noteheads26.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-numbers.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-other-generic.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-params.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-parenthesis.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-pedals.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-rests.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-scripts.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-test-generic.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-test11.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-test13.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-test16.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-test20.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-test23.mf
-share/lilypond/${PKGVERSION}/fonts/source/feta-test26.mf
+share/lilypond/${PKGVERSION}/fonts/source/feta-sharps.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-ties.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-timesignatures.mf
 share/lilypond/${PKGVERSION}/fonts/source/feta-trills.mf
@@ -120,7 +122,6 @@ share/lilypond/${PKGVERSION}/fonts/source/parmesan-clefs.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-custodes.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-dots.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-flags.mf
-share/lilypond/${PKGVERSION}/fonts/source/parmesan-generic.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-macros.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-noteheads-generic.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-noteheads.mf
@@ -132,6 +133,7 @@ share/lilypond/${PKGVERSION}/fonts/source/parmesan-noteheads18.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-noteheads20.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-noteheads23.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-noteheads26.mf
+share/lilypond/${PKGVERSION}/fonts/source/parmesan-other-generic.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-rests.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-scripts.mf
 share/lilypond/${PKGVERSION}/fonts/source/parmesan-timesignatures.mf
