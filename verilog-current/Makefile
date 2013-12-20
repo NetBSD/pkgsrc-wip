@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/20 06:09:41 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/20 15:27:35 makoto Exp $
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
@@ -27,6 +27,25 @@ INSTALLATION_DIRS+=	share/ivl
 
 TEST_DIRS=		.
 TEST_TARGET=		check
+
+SUBST_CLASSES+=		dep
+SUBST_STAGE.dep=	pre-configure
+SUBST_MESSAGE.dep=	Resolve dependency for dep directory (mkdir dep before compile)
+SUBST_FILES.dep=	tgt-null/Makefile.in \
+			tgt-vlog95/Makefile.in \
+			tgt-vvp/Makefile.in \
+			tgt-blif/Makefile.in \
+			tgt-fpga/Makefile.in \
+			tgt-null/Makefile.in \
+			tgt-pal/Makefile.in \
+			tgt-pcb/Makefile.in \
+			tgt-stub/Makefile.in \
+			tgt-verilog/Makefile.in \
+			tgt-vhdl/Makefile.in \
+			tgt-vlog95/Makefile.in \
+			tgt-vvp/Makefile.in \
+			cadpli/Makefile.in
+SUBST_SED.dep=		'-e s,%o: %c,%o: %c dep,'
 
 # probably more simple fix with small patches, but interim solution:
 post-install:
