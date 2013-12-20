@@ -9,7 +9,7 @@ Configs := full
 ###
 
 FUNCTIONS.full := $(CommonFunctions) $(ArchFunctions)
-CFLAGS := -Wall -Werror -O3 -fomit-frame-pointer
+CFLAGS := -Wall -O3 -fomit-frame-pointer
 
 CFLAGS.full := $(CFLAGS)
 
