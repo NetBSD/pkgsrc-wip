@@ -1,20 +1,20 @@
-# $NetBSD: options.mk,v 1.7 2013/11/06 11:17:29 noud4 Exp $
+# $NetBSD: options.mk,v 1.8 2013/12/21 14:44:17 noud4 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.meta-tracker
-PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca gnome
+PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca libsecret gnome
 PKG_OPTIONS_OPTIONAL_GROUPS=	video
 PKG_OPTIONS_GROUP.video=	gstreamer xine
-PKG_SUPPORTED_OPTIONS+=		pdf jpeg tiff vorbis flac html gsf playlist
-PKG_SUPPORTED_OPTIONS+=		rss evolution thunderbird firefox kmail
+PKG_SUPPORTED_OPTIONS+=		pdf xps gif jpeg tiff vorbis flac html gsf playlist
+PKG_SUPPORTED_OPTIONS+=		rss evolution thunderbird firefox
 PKG_SUPPORTED_OPTIONS+=		nautilus
-PKG_SUPPORTED_OPTIONS+=		mp3 xmp
+PKG_SUPPORTED_OPTIONS+=		mp3 taglib xmp
 
-PKG_SUGGESTED_OPTIONS+=		hal unac enca gnome
-PKG_SUGGESTED_OPTIONS+=		pdf jpeg tiff vorbis flac html gsf playlist
-PKG_SUGGESTED_OPTIONS+=		gstreamer
-PKG_SUGGESTED_OPTIONS+=		rss evolution thunderbird kmail
+PKG_SUGGESTED_OPTIONS+=		hal unac enca libsecret gnome
+PKG_SUGGESTED_OPTIONS+=		pdf xps gif jpeg tiff vorbis flac html gsf playlist
+PKG_SUGGESTED_OPTIONS+=		-gstreamer
+PKG_SUGGESTED_OPTIONS+=		rss evolution thunderbird firefox
 PKG_SUGGESTED_OPTIONS+=		nautilus
-PKG_SUGGESTED_OPTIONS+=		mp3 xmp
+PKG_SUGGESTED_OPTIONS+=		mp3 taglib xmp
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,8 +24,11 @@ PLIST.totem=		yes
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
 PLIST.gstreamer=	yes
-CONFIGURE_ARGS+=	--enable-gstreamer-tagreadbin
-CONFIGURE_ARGS+=	--enable-gstreamer-helix
+#CONFIGURE_ARGS+=	--enable-gstreamer-tagreadbin
+#CONFIGURE_ARGS+=	--enable-gstreamer-helix
+CONFIGURE_ARGS+=	--enable-generic-media-extractor=gstreamer
+CONFIGURE_ARGS+=	--with-gstreamer-backend
+
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mxine)
 PLIST.xine=		yes
@@ -68,8 +71,13 @@ CONFIGURE_ARGS+=	--disable-hal
 .include "../../textproc/enca/buildlink3.mk"
 .endif
 
+.if !empty(PKG_OPTIONS:Mlibsecret)
+.include "../../security/libsecret/buildlink3.mk"
+.endif
+
 .if !empty(PKG_OPTIONS:Mgnome)
 PLIST.gnome=		yes
+CONFIGURE_ARGS+=	--enable-icon
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../lang/vala018/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
@@ -82,11 +90,22 @@ CONFIGURE_ARGS+=	--enable-tracker-preferences=no
 
 ### Metadata Extractors:
 
+.if !empty(PKG_OPTIONS:Mxps)
+PLIST.xps=		yes
+CONFIGURE_ARGS+=	--enable-libgxps
+.include "../../print/libgxps/buildlink3.mk"
+.endif
+
 .if !empty(PKG_OPTIONS:Mpdf)
 PLIST.pdf=		yes
-CONFIGURE_ARGS+=	--enable-poppler-glib
+CONFIGURE_ARGS+=	--enable-poppler
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgif)
+PLIST.gif=		yes
+.include "../../mk/giflib.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
@@ -143,19 +162,18 @@ PLIST.evolution=	yes
 
 .if !empty(PKG_OPTIONS:Mthunderbird)
 PLIST_SRC+=		${PKGDIR}/PLIST.thunderbird
+CONFIGURE_ARGS+=	--with-thunderbird-plugin-dir=${PREFIX}/lib/thunderbird/extensions
 DEPENDS+=		thunderbird>=17.0.9:../../mail/thunderbird
 .else
 CONFIGURE_ARGS+=	--disable-miner-thunderbird
 .endif
 
 .if !empty(PKG_OPTIONS:Mfirefox)
-.endif
-
-.if !empty(PKG_OPTIONS:Mkmail)
-PLIST.kmail=		yes
-CONFIGURE_ARGS+=	--enable-miner-kmail
+PLIST_SRC+=		${PKGDIR}/PLIST.firefox
+CONFIGURE_ARGS+=	--with-firefox-plugin-dir=${PREFIX}/lib/firefox/browser/extensions
+DEPENDS+=		firefox>=24.0:../../www/firefox
 .else
-CONFIGURE_ARGS+=	--enable-miner-kmail=no
+CONFIGURE_ARGS+=	--disable-miner-firefox
 .endif
 
 ### Plugins:
@@ -170,6 +188,11 @@ PLIST.nautilus=		yes
 .if !empty(PKG_OPTIONS:Mmp3)
 PLIST.mp3=		yes
 .include "../../audio/id3lib/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mtaglib)
+PLIST.taglib=		yes
+.include "../../audio/taglib/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mxmp)

@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.thunderbird,v 1.1 2013/11/06 11:17:29 noud4 Exp $
-lib/thunderbird-addons/extensions/trackerbird@bustany.org
+@comment $NetBSD: PLIST.thunderbird,v 1.2 2013/12/21 14:44:17 noud4 Exp $
+lib/thunderbird/extensions/trackerbird@bustany.org
 share/applications/trackerbird-launcher.desktop
 share/xul-ext/trackerbird/README
 share/xul-ext/trackerbird/chrome.manifest

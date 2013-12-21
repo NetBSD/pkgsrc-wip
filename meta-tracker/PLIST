@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/11/06 11:17:29 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/12/21 14:44:17 noud4 Exp $
 bin/tracker-control
 bin/tracker-import
 bin/tracker-info
@@ -50,6 +50,7 @@ lib/${TRACKER_VERSION}/extract-modules/libextract-abw.la
 lib/${TRACKER_VERSION}/extract-modules/libextract-dvi.la
 lib/${TRACKER_VERSION}/extract-modules/libextract-epub.la
 ${PLIST.flac}lib/${TRACKER_VERSION}/extract-modules/libextract-flac.la
+${PLIST.gif}lib/${TRACKER_VERSION}/extract-modules/libextract-gif.la
 ${PLIST.html}lib/${TRACKER_VERSION}/extract-modules/libextract-html.la
 lib/${TRACKER_VERSION}/extract-modules/libextract-icon.la
 ${PLIST.jpeg}lib/${TRACKER_VERSION}/extract-modules/libextract-jpeg.la
@@ -67,11 +68,14 @@ ${PLIST.tiff}lib/${TRACKER_VERSION}/extract-modules/libextract-tiff.la
 ${PLIST.totem}lib/${TRACKER_VERSION}/extract-modules/libextract-totem.la
 ${PLIST.vorbis}lib/${TRACKER_VERSION}/extract-modules/libextract-vorbis.la
 ${PLIST.xmp}lib/${TRACKER_VERSION}/extract-modules/libextract-xmp.la
+${PLIST.xps}lib/${TRACKER_VERSION}/extract-modules/libextract-xps.la
 lib/${TRACKER_VERSION}/libtracker-common.la
 lib/${TRACKER_VERSION}/libtracker-data.la
+${PLIST.taglib}lib/${TRACKER_VERSION}/writeback-modules/libwriteback-taglib.la
 ${PLIST.xmp}lib/${TRACKER_VERSION}/writeback-modules/libwriteback-xmp.la
 libexec/tracker-extract
 libexec/tracker-miner-fs
+${PLIST.rss}libexec/tracker-miner-rss
 libexec/tracker-store
 libexec/tracker-writeback
 man/man1/tracker-control.1
@@ -79,6 +83,7 @@ man/man1/tracker-extract.1
 man/man1/tracker-import.1
 man/man1/tracker-info.1
 man/man1/tracker-miner-fs.1
+${PLIST.rss}man/man1/tracker-miner-rss.1
 man/man1/tracker-needle.1
 ${PLIST.gnome}man/man1/tracker-preferences.1
 man/man1/tracker-search.1
@@ -93,6 +98,7 @@ share/dbus-1/services/org.freedesktop.Tracker1.Extract.service
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Applications.service
 ${PLIST.evolution}share/dbus-1/services/org.freedesktop.Tracker1.Miner.EMails.service
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Files.service
+${PLIST.rss}share/dbus-1/services/org.freedesktop.Tracker1.Miner.RSS.service
 share/dbus-1/services/org.freedesktop.Tracker1.Writeback.service
 share/dbus-1/services/org.freedesktop.Tracker1.service
 share/glib-2.0/schemas/org.freedesktop.Tracker.DB.gschema.xml
@@ -104,6 +110,7 @@ share/glib-2.0/schemas/org.freedesktop.Tracker.Writeback.gschema.xml
 share/glib-2.0/schemas/org.freedesktop.Tracker.enums.xml
 share/glib-2.0/schemas/org.freedesktop.Tracker.gschema.xml
 share/gnome/autostart/tracker-miner-fs.desktop
+${PLIST.rss}share/gnome/autostart/tracker-miner-rss.desktop
 share/gnome/autostart/tracker-store.desktop
 share/gtk-doc/html/libtracker-extract/annotation-glossary.html
 share/gtk-doc/html/libtracker-extract/ch02.html
@@ -232,6 +239,7 @@ share/tracker/extract-rules/10-abw.rule
 share/tracker/extract-rules/10-dvi.rule
 share/tracker/extract-rules/10-epub.rule
 ${PLIST.flac}share/tracker/extract-rules/10-flac.rule
+${PLIST.gif}share/tracker/extract-rules/10-gif.rule
 ${PLIST.html}share/tracker/extract-rules/10-html.rule
 share/tracker/extract-rules/10-ico.rule
 ${PLIST.jpeg}share/tracker/extract-rules/10-jpeg.rule
@@ -244,6 +252,7 @@ share/tracker/extract-rules/10-ps.rule
 ${PLIST.tiff}share/tracker/extract-rules/10-tiff.rule
 ${PLIST.vorbis}share/tracker/extract-rules/10-vorbis.rule
 ${PLIST.xmp}share/tracker/extract-rules/10-xmp.rule
+${PLIST.xps}share/tracker/extract-rules/10-xps.rule
 share/tracker/extract-rules/11-msoffice-xml.rule
 ${PLIST.playlist}share/tracker/extract-rules/15-playlist.rule
 share/tracker/extract-rules/90-text-generic.rule
@@ -265,6 +274,7 @@ share/tracker/languages/stopwords.sv
 share/tracker/miners/tracker-miner-applications.desktop
 ${PLIST.evolution}share/tracker/miners/tracker-miner-evolution.desktop
 share/tracker/miners/tracker-miner-files.desktop
+${PLIST.rss}share/tracker/miners/tracker-miner-rss.desktop
 share/tracker/ontologies/10-xsd.description
 share/tracker/ontologies/10-xsd.ontology
 share/tracker/ontologies/11-rdf.description
