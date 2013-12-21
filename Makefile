@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5557 2013/12/20 14:00:26 makoto Exp $
+# $Id: Makefile,v 1.5558 2013/12/21 15:16:12 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -742,6 +742,7 @@ SUBDIR+=	getdp
 SUBDIR+=	gf2x
 SUBDIR+=	gfa
 SUBDIR+=	gfan
+SUBDIR+=	gfeedline
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	gforth
