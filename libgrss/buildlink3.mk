@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/06/18 07:16:46 noud4 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/12/21 14:24:27 noud4 Exp $
 
 BUILDLINK_TREE+=	libgrss
 
 .if !defined(LIBGRSS_BUILDLINK3_MK)
 LIBGRSS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libgrss+=	libgrss>=0.3.0
-BUILDLINK_ABI_DEPENDS.libgrss+=	libgrss>=0.3.0
+BUILDLINK_API_DEPENDS.libgrss+=	libgrss>=0.5.0
+BUILDLINK_ABI_DEPENDS.libgrss+=	libgrss>=0.5.0
 BUILDLINK_PKGSRCDIR.libgrss?=	../../wip/libgrss
 
 .include "../../devel/glib2/buildlink3.mk"

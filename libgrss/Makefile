@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/06/18 07:16:46 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/21 14:24:27 noud4 Exp $
 #
 
-DISTNAME=	libgrss-0.4.0
+DISTNAME=	libgrss-0.5.0
 CATEGORIES=	www
 MASTER_SITES=	http://gtk.mplat.es/libgrss/tarballs/
 

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/06/18 07:16:46 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2013/12/21 14:24:27 noud4 Exp $
 
-SHA1 (libgrss-0.4.0.tar.gz) = 1d0d9511f5ae2a06a84c5bb39ac84ecd746bd4fd
-RMD160 (libgrss-0.4.0.tar.gz) = adf48753da4c0523fa13de6746b7d02d3fa55028
-Size (libgrss-0.4.0.tar.gz) = 395566 bytes
+SHA1 (libgrss-0.5.0.tar.gz) = 363f3035af2e2c2ca5125ba1f16da7451bfa5b46
+RMD160 (libgrss-0.5.0.tar.gz) = 398c5b31f5f4b93b8fa26e762070eb0450f275c5
+Size (libgrss-0.5.0.tar.gz) = 439634 bytes
