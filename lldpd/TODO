@@ -1,3 +1,5 @@
+- Avoid following line in Makefile 
+  LDFLAGS+=	-L${PREFIX}/lib/perl5/5.18.0/${MACHINE_ARCH}-${OPSYS:tl}-thread-multi/CORE
 - use options framework for snmp, xml and json support
 - write a rc.d startup script for the lddpd server
 - use proper chroot dir instead of /nonexistent
