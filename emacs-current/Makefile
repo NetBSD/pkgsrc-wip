@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2013/12/21 00:32:58 makoto Exp $
+# $NetBSD: Makefile,v 1.71 2013/12/21 02:21:36 makoto Exp $
 #
 
 .include	"version.mk"
@@ -60,22 +60,9 @@ FILESDIR=	${.CURDIR}/files
 # And then add another portablity problem ?
 PKGSRC_MAKE_ENV+=       SH=/bin/ksh
 
-# Check some related libraries for inclusion.
-MESALIB_VERSION!=	\
-	(${PKG_INFO} -e MesaLib || ${ECHO} "0") | \
-	${SED} -e 's/MesaLib-//'
-
-GL_VERSION!=	\
-	(${PKG_INFO} -e gl || ${ECHO} "0") | \
-	${SED} -e 's/gl-//'
-
 post-extract:
 	# set auto-load for send-pr library
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
-# Uncomment for debug.
-#.if ${MESALIB_VERSION:R} >= 7.8
-#	@echo '  ** MesaLib version 7.8.2 or later installed.'
-#.endif
 
 pre-configure:
 	(cd ${WRKSRC}; ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ./autogen.sh)
@@ -83,18 +70,6 @@ pre-configure:
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
-.if ${MESALIB_VERSION:R} >= 7.8 || ${GL_VERSION:R} >= 7.8
-.include "../../wip/gl/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../wip/MesaLib/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
-.include "../../x11/damageproto/buildlink3.mk"
-.include "../../x11/libXdamage/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.endif
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
