@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2013/10/30 13:51:08 obache Exp $
+# $NetBSD: Makefile,v 1.70 2013/12/21 00:32:58 makoto Exp $
 #
 
 .include	"version.mk"
@@ -56,6 +56,9 @@ CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION_NOREV}
 
 FILESDIR=	${.CURDIR}/files
+# ./configure.lineno: 3555: Syntax error: Bad substitution
+# And then add another portablity problem ?
+PKGSRC_MAKE_ENV+=       SH=/bin/ksh
 
 # Check some related libraries for inclusion.
 MESALIB_VERSION!=	\
