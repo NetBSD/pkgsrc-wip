@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1 2013/12/12 20:45:11 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2013/12/21 14:53:09 noud4 Exp $
 
-SHA1 (bitcoin-0.8.5-linux.tar.gz) = f2cb0c55633cab822fb7024357aac17cf5de2b3a
-RMD160 (bitcoin-0.8.5-linux.tar.gz) = 82e99dc536a942102b5909580aa1b3cf2da0e3e0
-Size (bitcoin-0.8.5-linux.tar.gz) = 15507748 bytes
-SHA1 (patch-bitcoin-qt.pro) = 2b67cf1a336606f80bf878562bae3c8935141127
-SHA1 (patch-src_db.h) = d7cd7d356ed3a8b3105b105647f089830eefd27f
-SHA1 (patch-src_leveldb_port_port__posix.h) = d483545cd766e60207ac58ac2c5a9b2f48194856
-SHA1 (patch-src_makefile.unix) = 14821f7363d7b55719e8f9283d91bbff0c702aa6
-SHA1 (patch-src_netbase.cpp) = 2aefd38d0bd41f227d278eef310c8c71c044a0a2
+SHA1 (bitcoin-0.8.6-linux.tar.gz) = a95b20338a14bb6aa379285828fb0a13b9f6c0e4
+RMD160 (bitcoin-0.8.6-linux.tar.gz) = 7a1e4055a6e77cfaafab2f92ea0400238ea8a256
+Size (bitcoin-0.8.6-linux.tar.gz) = 15531258 bytes
+SHA1 (patch-bitcoin-qt.pro) = 62f7c8e61cc7c85c4f00710319ee5d5ffa795652
+SHA1 (patch-src_db.h) = c7462160d0d4ccda6b5b98945c4c34d45ab5180f
+SHA1 (patch-src_leveldb_port_port__posix.h) = 7277ec47ecc4b86cf65fd53322a3542ba102e016
+SHA1 (patch-src_makefile.unix) = 3dc5d36372154f8a3affc1a5b879000fd9ee8cc3
+SHA1 (patch-src_netbase.cpp) = 5a1e110f557da9fa88bd27bbfe88cb7d3b1def38

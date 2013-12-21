@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/12 20:45:11 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/12/21 14:53:09 noud4 Exp $
 bin/bitcoin-qt
 bin/bitcoind
+@comment share/examples/bitcoin/bitcoin.conf
+@comment share/examples/rc.d/bitcoind
