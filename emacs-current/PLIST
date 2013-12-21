@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.134 2013/12/14 02:48:19 makoto Exp $
+@comment $NetBSD: PLIST,v 1.135 2013/12/21 02:16:53 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1633,8 +1633,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/gv.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/gv.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/helpers.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/helpers.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mnt.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mnt.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mode.el.gz
@@ -1669,6 +1667,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/shadow.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/shadow.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/smie.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/smie.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/subr-x.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/subr-x.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/syntax.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/syntax.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tabulated-list.el.gz
