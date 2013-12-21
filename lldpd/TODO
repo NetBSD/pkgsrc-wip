@@ -3,13 +3,13 @@
 - use proper chroot dir instead of /nonexistent
 
 ------------------ Summary ------------------
- lldpd version 0.7.6
+ lldpd version 0.7.7
   OS.............: NetBSD
   Prefix.........: /usr/pkg
   C Compiler.....: gcc -std=gnu99 -O2 -I/usr/pkg/include -I/usr/include -fdiagnostics-show-option -pipe -Wall -W -Wextra -Wformat -Wformat-security -Wfatal-errors -Wcast-align -Winline -fstack-protector -D_FORTIFY_SOURCE=2 -Wno-unused-parameter -Wno-missing-field-initializers -Wno-sign-compare -I/usr/pkg/include -I/usr/include
-  Linker.........: /export/WRKOBJDIR/wip/lldpd/work/.wrapper/bin/ld -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -Wl,-z,relro -Wl,-z,now 
+  Linker.........: /export/WRKOBJDIR/wip/lldpd/work/.wrapper/bin/ld -L/usr/pkg/lib/perl5/5.18.0/x86_64-netbsd-thread-multi/CORE -Wl,-R/usr/pkg/lib/perl5/5.18.0/x86_64-netbsd-thread-multi/CORE -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -Wl,-z,relro -Wl,-z,now 
   Libevent.......: system
-  Readline.......: -ledit
+  Readline.......: -lreadline
  Optional features:
   SNMP support...: yes
   CDP............: yes
@@ -22,4 +22,5 @@
   XML output.....: yes
   JSON output....: yes
   Oldies support.: no
+  seccomp........: no
 ---------------------------------------------
