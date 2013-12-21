@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2013/03/15 14:09:50 makoto Exp $
+# $NetBSD: options.mk,v 1.30 2013/12/21 02:19:46 makoto Exp $
 #
 
 ### Set options
@@ -53,9 +53,9 @@ CONFIGURE_ARGS+=	--without-imagemagick
 ###
 ### Check non nextstep (implies x11) options  ---------------------
 ###
-### x11 is selected unless nextstep found
+### x11 is selected (as SUGGESTED above)
 ###
-.if empty(PKG_OPTIONS:Mnextstep)
+.if !empty(PKG_OPTIONS:Mx11)
 ###
 ### Support SVG
 ###
@@ -178,8 +178,9 @@ CONFIGURE_ARGS+=	--without-png
 # outline-regexp: "\\(.[ \t]*\\(if\\|endif\\|else\\|elif\\|include.*options\\|PKG_SUGGES\\)\\)\\|### .\\|# Local"
 # End:
 
-# How To Test (or the possible combinations) -- watch the result of 'make configure'
+### How To Test (or the possible combinations) -- watch the result of 'make configure'
 # Set PKG_OPTIONS.emacs_current=	result
+# ----------		----------------------------------------------------------
 # (none)		.. x11 gtk    svg gconf       xft2 dbus gnutls imagemagick
 
 #  xaw			.. x11 lucid  svg gconf xaw3d xft2 dbus gnutls imagemagick
@@ -187,9 +188,19 @@ CONFIGURE_ARGS+=	--without-png
 #  motif		.. x11 motif  svg gconf       xft2 dbus gnutls imagemagick
 
 # -x11 nextstep		.. nextstep
-# -xft2			.. x11 gtk svg gconf  		   dbus gnutls imagemagick
-# -gnutls		.. x11 gtk    svg gconf       xft2 dbus gnutls imagemagick
-# -gnutls -imagemagick -dbus .. x11 gtk svg gconf xft2
-# -x11 -svg -gconf -xaw3d -xft2 .. nox11	   dbus gnutls xml2
+# -xft2			.. x11 gtk    svg gconf		   dbus gnutls imagemagick
+# -gnutls		.. x11 gtk    svg gconf       xft2 dbus	       imagemagick
+# -gnutls -imagemagick -dbus 
+#                       .. x11 gtk    svg gconf       xft2
+# -x11 -svg -gconf -xaw3d -xft2 
+#                       .. nox11	                   dbus gnutls             xml2
 # -x11 			.. nox11			   dbus gnutls imagemagick
 #			.. nox11 but several x11 libraries built and not used
+
+### Window system options and result matrix
+#        x11 | YES  none     NO
+#   nextstep |
+#   -------- +----- -------- -------
+#        YES | --   NextStep NextStep
+#       none | X11  X11      (no Window)
+#         NO | X11  X11      (no Window)
