@@ -1,13 +1,13 @@
-$NetBSD: patch-etc_Makefile.am,v 1.2 2013/11/22 08:30:18 makoto Exp $
+$NetBSD: patch-etc_Makefile.am,v 1.3 2013/12/21 03:20:16 makoto Exp $
 
 (1) To merge sybmol.rev (if configured with --enable-symbol-rev)
 (2) To sort bushu.exand by emacs-internal-code order
 (3) Please note beginning with # line seems to be important.
     Don't remove the line without testing functionality, thanks.
 
---- etc/Makefile.am.orig	2011-04-24 20:50:27.000000000 +0900
-+++ etc/Makefile.am	2011-04-25 00:25:25.000000000 +0900
-@@ -4,11 +4,23 @@
+--- etc/Makefile.am.orig	2013-12-21 11:19:49.000000000 +0900
++++ etc/Makefile.am	2013-12-21 12:10:28.000000000 +0900
+@@ -4,11 +4,23 @@ DISTDATA = EELLLTXT EELLLTXT.tut bushu.r
  
  pkgdata_DATA = $(DISTDATA) bushu.expand bushu.index2
  EXTRA_DIST = $(DISTDATA) mk-bdic
@@ -17,6 +17,7 @@ $NetBSD: patch-etc_Makefile.am,v 1.2 2013/11/22 08:30:18 makoto Exp $
 -bushu.expand bushu.index2: bushu.rev
 -	@echo '*** compiling bushu dictionary ***'
 -	@echo '*** this may take a few minutes ***'
+-	$(EMACS) -q -no-site-file -batch -l $(srcdir)/mk-bdic
 +bushu.expand bushu.index2: bushu.rev $(BATCH_SORT)
 +	@echo ' *** Taking care bushu.rev and sorting it'
 +	@if [ .${SYMBOLREV} = ."yes" ]; then \
@@ -30,7 +31,7 @@ $NetBSD: patch-etc_Makefile.am,v 1.2 2013/11/22 08:30:18 makoto Exp $
 +#	$(EMACS) -q -no-site-file -batch -l $(BATCH_SORT) -f batch-sort-file bushu.rev.tmp bushu.rev utf-8 utf-8 
 +	@echo ' *** compiling bushu dictionary ***'
 +	@echo ' *** this may take a few minutes ***'
- 	$(EMACS) -q -no-site-file -batch -l $(srcdir)/mk-bdic
++	$(EMACS) -q -no-site-file -batch -l $(srcdir)/mk-bdic -f mk-bdic
  
  clean:
 -	$(RM) bushu.expand bushu.index2
