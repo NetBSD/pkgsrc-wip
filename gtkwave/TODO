@@ -1,0 +1,7 @@
+- shared-mime-info should be 1.1 for the moment.
+  for example:
+    cd databases/shared-mime-info; cvs update -D 2013-10-01
+    % cat databases/shared-mime-info/CVS/Tag
+    D2013.09.30.15.00.00
+  See 
+  http://gnats.netbsd.org/48300
