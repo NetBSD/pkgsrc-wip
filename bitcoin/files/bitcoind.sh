@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: bitcoind.sh,v 1.1 2013/12/21 14:53:09 noud4 Exp $
+# $NetBSD: bitcoind.sh,v 1.2 2013/12/22 22:25:59 noud4 Exp $
 #
 
 # PROVIDE: bitcoind
@@ -13,10 +13,10 @@ fi
 
 name="bitcoind"
 rcvar=$name
-command="/usr/pkg/sbin/bitcoind"
-pidfile="/var/run/bitcoind.pid"
-required_directory="/var/bitcoin"
-command_args="-daemon -pid=${pidfile} -datadir=${required_directory}"
+command="@PREFIX@/sbin/bitcoind"
+pidfile="@VARBASE@/run/bitcoind.pid"
+required_directory="@VARBASE@/bitcoin"
+command_args="-daemon -conf=@PREFIX@/etc/bitcoin.conf -pid=${pidfile} -datadir=${required_directory}"
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config $name

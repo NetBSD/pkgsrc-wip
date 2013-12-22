@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/12/21 14:53:09 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/22 22:25:59 noud4 Exp $
 
 DISTNAME=	bitcoin-0.8.6-linux
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S|-linux||}
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bitcoin/}
@@ -27,6 +28,12 @@ QMAKE_OPTIONS+=	BDB_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	OPENSSL_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	LIB_RPATH=${PREFIX}/lib
 
+RCD_SCRIPTS=	bitcoind
+OWN_DIRS=	${VARBASE}/bitcoin
+EGDIR=		${PREFIX}/share/examples/bitcoin
+CONF_FILES=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf
+CONF_FILES_PERMS=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf ${ROOT_USER} ${ROOT_GROUP} 0600
+
 do-configure:
 	(cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake "PREFIX=${PREFIX}" "QMAKE_CXXFLAGS=${CXXFLAGS}" ${QMAKE_OPTIONS} bitcoin-qt.pro)
 
@@ -36,7 +43,8 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/src/bitcoin-qt ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/src/src/bitcoind ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/src/src/bitcoind ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} -m 600 ${FILESDIR}/bitcoin.conf ${DESTDIR}${EGDIR}
 
 .include "options.mk"
 
