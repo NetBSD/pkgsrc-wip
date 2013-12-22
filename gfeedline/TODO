@@ -1,2 +1,0 @@
-chmod -R a+r /usr/pkg/share/gfeedline/html/*
-chmod -R a+r /usr/pkg/share/gfeedline/html/theme/Default/*

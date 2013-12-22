@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/12/21 15:14:08 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/22 17:04:23 noud4 Exp $
 #
 
 DISTNAME=	gfeedline-2.4.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://gfeedline.googlecode.com/files/
 
@@ -11,7 +12,6 @@ COMMENT=	Social network client for GNOME
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-gobject-[0-9]*:../../devel/py-gobject
-#gir1.2-gtk-3.0
 #gir1.2-webkit-3.0
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 #python-openssl
@@ -30,6 +30,17 @@ INSTALLATION_DIRS=	share/applications \
 			${PKGMANDIR}/man1 \
 			etc \
 			bin
+MAKE_DIRS+=		${PREFIX}/share/gfeedline/html
+MAKE_DIRS_PERMS+=	${PREFIX}/share/gfeedline/html ${ROOT_USER} ${ROOT_GROUP} 0755
+FIX_PERMS=		*.html \
+			*.css \
+			*.js \
+			*.woff \
+			theme/Default/*.html \
+			theme/Default/*.css
+DATAMODE=		0644
+
+REPLACE_PYTHON=		lib/plugins/post.py lib/plugins/twitter/dd.py
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -37,10 +48,15 @@ SUBST_FILES.prefix=	lib/utils/iconimage.py lib/utils/iconimage.py lib/constants.
 SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_MESSAGE.prefix=	Replacing pkg path.
 
-#.include "options.mk"	# TODO
+.include "options.mk"
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR}
+
+post-install:
+	for file in ${FIX_PERMS}; do \
+		${CHMOD} ${DATAMODE} ${DESTDIR}${PREFIX}/share/gfeedline/html/$$file; \
+	done
 
 .include "../../devel/dconf/buildlink3.mk"	# XXX Using the 'memory' GSettings backend(?)
 .include "../../devel/glib2/schemas.mk"
@@ -50,7 +66,3 @@ do-install:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# chmod -R a+r /usr/pkg/share/gfeedline/html/*
-# chmod -R a+r /usr/pkg/share/gfeedline/html/theme/Default/*
-
