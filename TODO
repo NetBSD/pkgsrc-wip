@@ -76,7 +76,6 @@ Suggested package updates
 	o miniupnpc-1.8
 	o miro-5.0
 	o mixxx-1.11.0
-	o moe-1.5
 	o mpgedit-0.73dev2
 	o mumble-1.2.4
 	o mupen64-0.5
@@ -121,7 +120,7 @@ Suggested package updates
 	o umurmur-0.2.10
 	o vidalia-0.2.21
 	o vidalia-devel-0.3.3
-	o virtualbox-4.3
+	o virtualbox-4.3.6
 	o xaralx-bin-0.7.1692
 	o xf86-input-synaptics-1.7.0
 	o xf86-video-geode-2.11.15
