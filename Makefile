@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5562 2013/12/24 19:02:43 noud4 Exp $
+# $Id: Makefile,v 1.5563 2013/12/24 19:42:19 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -605,6 +605,7 @@ SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
 SUBDIR+=	evolution-couchdb
 SUBDIR+=	evolution-rss
+SUBDIR+=	evolution-tray
 SUBDIR+=	ewl
 SUBDIR+=	exact-image
 SUBDIR+=	exhume
