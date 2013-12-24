@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5560 2013/12/24 15:48:57 leot1990 Exp $
+# $Id: Makefile,v 1.5561 2013/12/24 18:56:58 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2304,6 +2304,7 @@ SUBDIR+=	picasm
 SUBDIR+=	picocom
 SUBDIR+=	picosat
 SUBDIR+=	picprog
+SUBDIR+=        pidgin-evolution
 SUBDIR+=	pidgin-festival
 SUBDIR+=	pidgin-guifications
 SUBDIR+=	pidgin-rhythmbox
