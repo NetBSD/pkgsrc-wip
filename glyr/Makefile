@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/05/17 11:34:09 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/24 18:06:19 leot1990 Exp $
 #
 
-DISTNAME=	1.0.1
+DISTNAME=	1.0.2
 PKGNAME=	glyr-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/sahib/glyr/archive/
