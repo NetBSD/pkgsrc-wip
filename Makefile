@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5561 2013/12/24 18:56:58 noud4 Exp $
+# $Id: Makefile,v 1.5562 2013/12/24 19:02:43 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -348,6 +348,7 @@ SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
 SUBDIR+=	compiz-boxmenu
+SUBDIR+=	contact-lookup-applet
 SUBDIR+=	contacts
 SUBDIR+=	converttomp3
 SUBDIR+=	cops
