@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/12/25 19:08:08 szptvlfn Exp $
+$NetBSD: distinfo,v 1.5 2013/12/25 21:00:48 szptvlfn Exp $
 
-SHA1 (ansi-wl-pprint-0.6.7.tar.gz) = 50b15905743a4626215093908b071c636cbd5173
-RMD160 (ansi-wl-pprint-0.6.7.tar.gz) = 75c5515c38655d2ed510e057fa89f4ec2f166774
-Size (ansi-wl-pprint-0.6.7.tar.gz) = 14768 bytes
+SHA1 (ansi-wl-pprint-0.6.7.1.tar.gz) = 875fd2b1462943a14ee8c652c60b588bf77968d0
+RMD160 (ansi-wl-pprint-0.6.7.1.tar.gz) = 50f093c194e1abb59fbe921cebc7ad1dac282388
+Size (ansi-wl-pprint-0.6.7.1.tar.gz) = 14862 bytes
