@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/12/25 01:14:35 othyro Exp $
+
+SHA1 (pyglet-1.1.4.tar.gz) = 1c1fa4130b5e5b7aa9da2456b75742ae447d0315
+RMD160 (pyglet-1.1.4.tar.gz) = 64a70d8a87ff056f4fc912fb9f4b32b3ea4cd262
+Size (pyglet-1.1.4.tar.gz) = 2946601 bytes
