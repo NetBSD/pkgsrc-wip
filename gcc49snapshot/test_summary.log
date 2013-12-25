@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 206004
+LAST_UPDATED: Obtained from SVN: trunk revision 206168
 
 Native configuration is x86_64--netbsd
 
@@ -7,12 +7,12 @@ Native configuration is x86_64--netbsd
 
 
 Running target unix
-WARNING: program timed out.
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -g -O2 -fcilkplus execution test
 FAIL: g++.dg/cdce3.C -std=gnu++98 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C -std=gnu++98 compilation failed to produce executable
 FAIL: g++.dg/cdce3.C -std=gnu++11 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C -std=gnu++11 compilation failed to produce executable
+FAIL: g++.dg/ext/utf8-1.C (test for excess errors)
+UNRESOLVED: g++.dg/ext/utf8-1.C compilation failed to produce executable
 FAIL: g++.dg/guality/pr55665.C  -O2  line 23 p == 40
 FAIL: g++.dg/guality/pr55665.C  -O3 -fomit-frame-pointer  line 23 p == 40
 FAIL: g++.dg/guality/pr55665.C  -O3 -g  line 23 p == 40
@@ -23,12 +23,12 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		56374
+# of expected passes		56375
 # of unexpected failures	10
 # of expected failures		290
-# of unresolved testcases	2
+# of unresolved testcases	3
 # of unsupported tests		1009
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20131215 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20131222 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -36,8 +36,6 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 Running target unix
 WARNING: program timed out.
 FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O2  execution test
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O3 -fomit-frame-pointer -funroll-loops  execution test
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
 XPASS: gcc.dg/binop-xor1.c scan-tree-dump-times optimized "\\\\^" 1
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
@@ -58,11 +56,15 @@ FAIL: gcc.dg/nest.c (test for excess errors)
 FAIL: gcc.dg/nested-func-4.c (test for excess errors)
 FAIL: gcc.dg/pr32450.c (test for excess errors)
 FAIL: gcc.dg/pr43643.c (test for excess errors)
+FAIL: gcc.dg/ucnid-9.c (test for excess errors)
+UNRESOLVED: gcc.dg/ucnid-9.c compilation failed to produce executable
 FAIL: gcc.dg/uninit-pred-8_b.c bogus warning (test for bogus messages, line 20)
 FAIL: gcc.dg/uninit-pred-9_b.c bogus warning (test for bogus messages, line 24)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
+FAIL: gcc.dg/utf8-1.c (test for excess errors)
+UNRESOLVED: gcc.dg/utf8-1.c compilation failed to produce executable
 XPASS: gcc.dg/guality/example.c  -O0  execution test
 XPASS: gcc.dg/guality/example.c  -O1  execution test
 XPASS: gcc.dg/guality/example.c  -O2  execution test
@@ -321,13 +323,13 @@ FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		100755
-# of unexpected failures	182
+# of expected passes		100860
+# of unexpected failures	183
 # of unexpected successes	41
 # of expected failures		260
-# of unresolved testcases	59
-# of unsupported tests		1531
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131215 (experimental) (GCC) 
+# of unresolved testcases	61
+# of unsupported tests		1527
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131222 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -423,12 +425,12 @@ UNRESOLVED: gfortran.dg/lto/pr45586 f_lto_pr45586_0.o-f_lto_pr45586_0.o execute 
 
 		=== gfortran Summary ===
 
-# of expected passes		45077
+# of expected passes		45106
 # of unexpected failures	56
 # of expected failures		52
 # of unresolved testcases	31
 # of unsupported tests		104
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20131215 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20131222 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -440,7 +442,7 @@ Running target unix
 # of expected passes		1441
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20131215 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20131222 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -456,7 +458,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131215 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20131222 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -470,14 +472,8 @@ Running target unix
 
 
 Running target unix
-FAIL: libgomp.c/affinity-1.c (test for excess errors)
-UNRESOLVED: libgomp.c/affinity-1.c compilation failed to produce executable
 WARNING: program timed out.
-FAIL: libgomp.c/for-3.c execution test
-WARNING: program timed out.
-FAIL: libgomp.c/ordered-2.c execution test
-FAIL: libgomp.c++/affinity-1.C (test for excess errors)
-UNRESOLVED: libgomp.c++/affinity-1.C compilation failed to produce executable
+FAIL: libgomp.c/sort-1.c execution test
 FAIL: libgomp.graphite/bounds.c scan-tree-dump-times graphite "0 loops carried no dependency" 1
 FAIL: libgomp.graphite/force-parallel-4.c execution test
 FAIL: libgomp.graphite/force-parallel-4.c scan-tree-dump-times graphite "2 loops carried no dependency" 1
@@ -486,9 +482,8 @@ FAIL: libgomp.graphite/pr41118.c scan-tree-dump-times optimized "loopfn" 0
 
 		=== libgomp Summary ===
 
-# of expected passes		2375
-# of unexpected failures	9
-# of unresolved testcases	2
+# of expected passes		2382
+# of unexpected failures	6
 # of unsupported tests		3
 		=== libitm tests ===
 
@@ -507,7 +502,7 @@ FAIL: libitm.c/clone-1.c execution test
 
 Running target unix
 WARNING: program timed out.
-FAIL: 20_util/hash/chi2_quality.cc execution test
+FAIL: 20_util/hash/chi2_q_uniform_random.cc execution test
 FAIL: 22_locale/ctype_base/11844.cc execution test
 FAIL: 26_numerics/headers/cmath/c99_classification_macros_c.cc (test for excess errors)
 FAIL: 30_threads/async/42819.cc execution test
@@ -560,17 +555,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8723
+# of expected passes		8715
 # of unexpected failures	48
 # of expected failures		39
 # of unresolved testcases	2
-# of unsupported tests		679
+# of unsupported tests		687
 
-Compiler version: 4.9.0 20131215 (experimental) (GCC) 
+Compiler version: 4.9.0 20131222 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
 EOF
-Mail -s "Results for 4.9.0 20131215 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.9.0 20131222 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
