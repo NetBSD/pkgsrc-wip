@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/03/02 09:56:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/25 19:12:26 szptvlfn Exp $
 #
 
-DISTNAME=	ansi-terminal-0.6
+DISTNAME=	ansi-terminal-0.6.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
