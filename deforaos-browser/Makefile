@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2013/11/06 23:20:35 khorben Exp $
+# $NetBSD: Makefile,v 1.24 2013/12/25 19:55:07 khorben Exp $
 #
 
-DISTNAME=	Browser-0.4.12
-PKGNAME=	deforaos-browser-0.4.12
+DISTNAME=	Browser-0.4.13
+PKGNAME=	deforaos-browser-0.4.13
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/4294/
+MASTER_SITES=	http://www.defora.org/os/download/download/4310/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
-COMMENT=	DeforaOS desktop file and desktop manager
+COMMENT=	DeforaOS desktop file manager and desktop handler
 
 LICENSE=	gnu-gpl-v3
 
@@ -29,8 +29,6 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/browser.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/browser.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/copy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/copy.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/delete.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/delete.1
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/desktop.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/desktop.1
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/desktopctl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/desktopctl.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/move.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/move.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/open.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/open.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/properties.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/properties.1
