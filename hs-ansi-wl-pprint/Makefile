@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/03/02 10:37:16 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2013/12/25 19:08:08 szptvlfn Exp $
 #
 
-DISTNAME=	ansi-wl-pprint-0.6.6
+DISTNAME=	ansi-wl-pprint-0.6.7
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
