@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/03/18 19:07:47 zul_ Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/12/27 10:44:32 thomasklausner Exp $
 bin/mcabber
 include/mcabber/api.h
 include/mcabber/caps.h
@@ -29,6 +29,8 @@ include/mcabber/xmpp_iqrequest.h
 include/mcabber/xmpp_muc.h
 include/mcabber/xmpp_s10n.h
 lib/mcabber/libbeep.la
+lib/mcabber/libfifo.la
+lib/mcabber/liburlregex.la
 lib/mcabber/libxttitle.la
 lib/pkgconfig/mcabber.pc
 man/man1/mcabber.1
