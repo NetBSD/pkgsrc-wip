@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/27 18:28:53 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2013/12/27 18:31:38 christtrekker Exp $
 
 DISTNAME=	pixels-sagas-st-201312
 CATEGORIES=	fonts
@@ -30,6 +30,5 @@ NO_BUILD=	yes
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
 	${INSTALL_DATA} ${WRKSRC}/*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}
-# install doco too!
 
 .include "../../mk/bsd.pkg.mk"
