@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2012/03/18 19:07:47 zul_ Exp $
+$NetBSD: patch-aa,v 1.5 2013/12/27 22:14:48 thomasklausner Exp $
 
 Handle correctly panel on NetBSD, not sure it is correct in general
 
---- ./mcabber/screen.h.orig	2009-11-13 21:17:04.000000000 +0000
-+++ ./mcabber/screen.h
-@@ -5,14 +5,12 @@
+--- mcabber/screen.h.orig	2012-12-02 13:27:32.000000000 +0000
++++ mcabber/screen.h
+@@ -7,14 +7,12 @@
  
  #if HAVE_NCURSESW_NCURSES_H
  # include <ncursesw/ncurses.h>

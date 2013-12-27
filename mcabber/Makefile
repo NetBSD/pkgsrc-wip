@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/11/30 21:31:29 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.19 2013/12/27 22:14:48 thomasklausner Exp $
 
 DISTNAME=	mcabber-0.10.2
 CATEGORIES=	chat
@@ -25,11 +24,13 @@ post-install:
 			${DESTDIR}${PREFIX}/share/examples/mcabber
 
 CONFIGURE_ARGS+=	--disable-hgcset
+CONFIGURE_ARGS+=	--enable-otr
 
 .include "options.mk"
 
 
 .include "../../chat/loudmouth/buildlink3.mk"
+.include "../../chat/libotr/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
