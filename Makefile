@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5565 2013/12/27 04:17:04 makoto Exp $
+# $Id: Makefile,v 1.5566 2013/12/27 18:32:29 christtrekker Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2331,6 +2331,7 @@ SUBDIR+=	pike-mime
 SUBDIR+=	pilemc-svn
 SUBDIR+=	pinball
 SUBDIR+=	pinkpony
+SUBDIR+=	pixel-sagas-st
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg_conflicts
