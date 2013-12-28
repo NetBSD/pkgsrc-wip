@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2012/04/07 10:13:28 gschwarz Exp $
+$NetBSD: patch-aa,v 1.4 2013/12/28 14:42:28 imilh Exp $
+
+DESTDIR support for configuration files
 
 --- doc/Makefile.in.orig	2012-04-06 22:58:58.000000000 +0200
 +++ doc/Makefile.in	2012-04-06 22:59:04.000000000 +0200
