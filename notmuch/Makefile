@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/07/30 21:58:50 tonnerre Exp $
-#
+# $NetBSD: Makefile,v 1.4 2013/12/28 16:42:40 thomasklausner Exp $
 
-DISTNAME=	notmuch-0.15.2
+DISTNAME=	notmuch-0.16
 CATEGORIES=	mail
 MASTER_SITES=	http://notmuchmail.org/releases/
 
