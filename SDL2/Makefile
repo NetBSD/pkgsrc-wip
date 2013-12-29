@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/08/12 01:25:19 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2013/12/29 05:51:35 othyro Exp $
 #
 
-REVISION=	7628
-DISTNAME=	SDL-2.0.0-${REVISION}
-PKGNAME=	${DISTNAME:S/SDL/SDL2/1:S/0-/0./1}
+REVISION=	8054
+DISTNAME=	SDL-2.0.1-${REVISION}
+PKGNAME=	${DISTNAME:S/SDL/SDL2/1:S/1-/1./1}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/tmp/
 
@@ -12,18 +12,16 @@ HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer is a cross-platform multimedia library
 LICENSE=	zlib
 
-WRKSRC=		${WRKDIR}/SDL-2.0.0-${REVISION}
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	sdl2.pc.in
 
-.include "options.mk"
+.include "../../mk/bsd.prefs.mk"
 
-.if $(OPSYS) != "Linux"
-BUILDLINK_TRANSFORM=	rm:-ldl
+.if ${OPSYS} != "Linux"
+BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
 SUBST_CLASSES+=		prefix
@@ -31,6 +29,8 @@ SUBST_FILES.prefix=	build/cmake_install.cmake
 SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
 SUBST_STAGE.prefix=	pre-install
+
+.include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} build
@@ -47,8 +47,5 @@ do-install:
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,15 @@
-# $NetBSD: options.mk,v 1.5 2013/05/29 03:18:35 othyro Exp $
+# $NetBSD: options.mk,v 1.6 2013/12/29 05:51:35 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_SUPPORTED_OPTIONS=	alsa arts esound nas opengl oss pulseaudio x11 xcursor
 PKG_SUPPORTED_OPTIONS+=	xim xinerama xrandr xrender xscrnsaver
 PKG_SUGGESTED_OPTIONS+=	oss
+
+.if ${OPSYS} == "Darwin"
+PKG_SUGGESTED_OPTIONS+=	opengl
+.else
+PKG_SUGGESTED_OPTIONS+=	x11
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,7 +22,7 @@ CMAKE_ARGS+=		-DALSA=OFF
 
 .if !empty(PKG_OPTIONS:Marts)
 .include "../../audio/arts/buildlink3.mk"
-CMAKE_ARGS+=            -DARTS=ON
+CMAKE_ARGS+=		-DARTS=ON
 .else
 CMAKE_ARGS+=		-DARTS=OFF
 .endif
@@ -36,7 +42,9 @@ CMAKE_ARGS+=		-DNAS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
+.  if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.  endif
 CMAKE_ARGS+=		-DVIDEO_OPENGL=ON
 .else
 CMAKE_ARGS+=		-DVIDEO_OPENGL=OFF
@@ -57,6 +65,8 @@ CMAKE_ARGS+=		-DPULSEAUDIO=OFF
 
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 CMAKE_ARGS+=		-DX11_SHARED=ON -DVIDEO_X11=ON
 .else
 CMAKE_ARGS+=		-DX11_SHARED=OFF -DVIDEO_X11=OFF
