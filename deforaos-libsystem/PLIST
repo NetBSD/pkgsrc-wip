@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/12/29 16:17:59 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/12/29 16:54:48 khorben Exp $
 bin/AppBroker
 include/System.h
 include/System/appclient.h
