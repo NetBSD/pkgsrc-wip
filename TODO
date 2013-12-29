@@ -161,6 +161,7 @@ Suggested ready to import packages
 	o matiec
 	o pear-Net_URL2
 	o pnmcurve
+	o py-greenlet
 	o py-jswebkit
 	o rar4
 	o send-pr
