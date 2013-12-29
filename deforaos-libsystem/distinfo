@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/12/29 16:54:48 khorben Exp $
+$NetBSD: distinfo,v 1.8 2013/12/29 17:25:36 khorben Exp $
 
-SHA1 (libSystem-0.1.6.tar.gz) = 228108534a536e3e35739b66614bc762ff3ea1ee
-RMD160 (libSystem-0.1.6.tar.gz) = 4f85b891b3491747d5599113a5eac5838f93a40b
-Size (libSystem-0.1.6.tar.gz) = 44092 bytes
+SHA1 (libSystem-0.1.7.tar.gz) = ba80e9382694b2a08e0a067af5fad941a3ac99ab
+RMD160 (libSystem-0.1.7.tar.gz) = 807085177367067e080b92c6b37adef472c5caa1
+Size (libSystem-0.1.7.tar.gz) = 42933 bytes
