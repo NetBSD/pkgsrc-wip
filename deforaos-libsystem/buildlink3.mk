@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/09/06 23:26:04 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/12/29 16:17:59 khorben Exp $
 
 BUILDLINK_TREE+=	deforaos-libsystem
 
