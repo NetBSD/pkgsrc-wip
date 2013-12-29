@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/12/18 23:37:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2013/12/29 21:19:30 thomasklausner Exp $
 
 DISTNAME=	bup-0.25
 CATEGORIES=	sysutils
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # actually a TEST_DEPENDS
