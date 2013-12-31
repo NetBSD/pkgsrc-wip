@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/08/12 01:40:12 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/31 20:39:35 othyro Exp $
 #
 
-DISTNAME=	swe_unix_src_1.79.00
+DISTNAME=	swe_unix_src_1.80.00
 PKGNAME=	${DISTNAME:S/e_unix_src_/isseph-/1}
 CATEGORIES=	time
 MASTER_SITES=	ftp://ftp.astro.com/pub/swisseph/
