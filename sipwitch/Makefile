@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/08/21 11:44:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/31 15:06:49 othyro Exp $
 #
 
-DISTNAME=	sipwitch-1.6.1
+DISTNAME=	sipwitch-1.8.6
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.gnu.org/gnu/sipwitch/
 
@@ -29,6 +29,7 @@ SPECIAL_PERMS+=		bin/sippasswd ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555
 
 .include "../../net/libexosip/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.avahi+=	avahi>=0.3.0
 .include "../../net/avahi/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.ucommon+=	ucommon>=6.0.0
 .include "../../devel/ucommon/buildlink3.mk"
