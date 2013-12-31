@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/07/02 01:29:36 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/12/31 14:54:42 othyro Exp $
 #
 
-DISTNAME=	eventlib-0.1.3
+DISTNAME=	eventlib-0.1.5
 CATEGORIES=	net
-MASTER_SITES=	http://pypi.python.org/packages/source/e/eventlib/
+MASTER_SITES=	https://pypi.python.org/packages/source/e/eventlib/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://travis-ci.org/Yipit/eventlib/
