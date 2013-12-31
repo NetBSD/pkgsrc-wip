@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/09/21 12:19:34 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/12/31 14:32:24 othyro Exp $
 #
 
-DISTNAME=	logan-0.5.8.2
+DISTNAME=	logan-0.5.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/l/logan/
+MASTER_SITES=	https://pypi.python.org/packages/source/l/logan/
 FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

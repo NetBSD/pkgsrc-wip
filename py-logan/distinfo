@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/09/21 12:19:34 othyro Exp $
+$NetBSD: distinfo,v 1.3 2013/12/31 14:32:24 othyro Exp $
 
-SHA1 (logan-0.5.8.2.tar.gz) = 0626864f9117ecc2d667d67953e88131be509f47
-RMD160 (logan-0.5.8.2.tar.gz) = d72f6219fe7615bc2932a7f754668429693834bc
-Size (logan-0.5.8.2.tar.gz) = 6519 bytes
+SHA1 (logan-0.5.9.1.tar.gz) = 550db4d9b00bacfaf6a4b0c5195102ff4feb01ae
+RMD160 (logan-0.5.9.1.tar.gz) = 32d4366110feeb3d4e0648f3c5d9fa1b8fedb089
+Size (logan-0.5.9.1.tar.gz) = 6620 bytes
