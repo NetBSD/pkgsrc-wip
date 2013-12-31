@@ -161,11 +161,10 @@ Suggested ready to import packages
 	o matiec
 	o pear-Net_URL2
 	o pnmcurve
-	o py-greenlet
+	o py-csp # XXX import this as py-pycsp
 	o py-jswebkit
 	o rar4
 	o send-pr
-	o tcl-tclOO
 	o tqsllib
 	o truecrypt
 	o trustedQSL
