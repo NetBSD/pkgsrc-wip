@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2012/11/23 22:44:44 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/12/31 18:12:21 othyro Exp $
 #
 
 DISTNAME=	uuid-1.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://pypi.python.org/packages/source/u/uuid/
+MASTER_SITES=	https://pypi.python.org/packages/source/u/uuid/
+FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/uuid/1.30
