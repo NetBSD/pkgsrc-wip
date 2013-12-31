@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/12/11 20:42:06 jihbed Exp $
+$NetBSD: distinfo,v 1.5 2013/12/31 18:29:38 othyro Exp $
 
-SHA1 (pycsp-0.6.2.tar.gz) = 92cab283f9a0c8ac78500f1d652b0a682fc50df5
-RMD160 (pycsp-0.6.2.tar.gz) = fe2c0fa5fd5c464a78884fe5841560a887540c63
-Size (pycsp-0.6.2.tar.gz) = 39185 bytes
+SHA1 (pycsp-complete-0.9.0.tar.gz) = 239cc9c230e37cec4103c268d8ae3dff1264dd41
+RMD160 (pycsp-complete-0.9.0.tar.gz) = 96900f28ffd84784101f721e5d65b0404e9883bc
+Size (pycsp-complete-0.9.0.tar.gz) = 65998 bytes
