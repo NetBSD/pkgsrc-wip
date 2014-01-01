@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/12 01:12:32 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/01 04:57:59 othyro Exp $
 include/QtGStreamer/QGlib/Connect
 include/QtGStreamer/QGlib/Error
 include/QtGStreamer/QGlib/Global
@@ -18,9 +18,9 @@ include/QtGStreamer/QGlib/global.h
 include/QtGStreamer/QGlib/init.h
 include/QtGStreamer/QGlib/object.h
 include/QtGStreamer/QGlib/paramspec.h
+include/QtGStreamer/QGlib/qglib_signal.h
 include/QtGStreamer/QGlib/quark.h
 include/QtGStreamer/QGlib/refpointer.h
-include/QtGStreamer/QGlib/signal.h
 include/QtGStreamer/QGlib/type.h
 include/QtGStreamer/QGlib/value.h
 include/QtGStreamer/QGlib/wrap.h
@@ -33,6 +33,7 @@ include/QtGStreamer/QGst/ChildProxy
 include/QtGStreamer/QGst/Clock
 include/QtGStreamer/QGst/ClockTime
 include/QtGStreamer/QGst/ColorBalance
+include/QtGStreamer/QGst/Discoverer
 include/QtGStreamer/QGst/DoubleRange
 include/QtGStreamer/QGst/Element
 include/QtGStreamer/QGst/ElementFactory
@@ -81,6 +82,7 @@ include/QtGStreamer/QGst/childproxy.h
 include/QtGStreamer/QGst/clock.h
 include/QtGStreamer/QGst/clocktime.h
 include/QtGStreamer/QGst/colorbalance.h
+include/QtGStreamer/QGst/discoverer.h
 include/QtGStreamer/QGst/element.h
 include/QtGStreamer/QGst/elementfactory.h
 include/QtGStreamer/QGst/enums.h
@@ -104,9 +106,11 @@ include/QtGStreamer/QGst/taglist.h
 include/QtGStreamer/QGst/urihandler.h
 include/QtGStreamer/QGst/videoorientation.h
 include/QtGStreamer/QGst/xoverlay.h
-lib/QtGStreamer/QtGStreamerConfig.cmake
-lib/QtGStreamer/QtGStreamerTargets-release.cmake
-lib/QtGStreamer/QtGStreamerTargets.cmake
+lib/cmake/QtGStreamer/QtGStreamerConfig.cmake
+lib/cmake/QtGStreamer/QtGStreamerConfigCommon.cmake
+lib/cmake/QtGStreamer/QtGStreamerConfigVersion.cmake
+lib/cmake/QtGStreamer/QtGStreamerTargets-release.cmake
+lib/cmake/QtGStreamer/QtGStreamerTargets.cmake
 lib/gstreamer-0.10/libgstqtvideosink.so
 lib/libQtGLib-2.0.so
 lib/libQtGLib-2.0.so.0
@@ -124,5 +128,5 @@ lib/pkgconfig/QtGLib-2.0.pc
 lib/pkgconfig/QtGStreamer-0.10.pc
 lib/pkgconfig/QtGStreamerUi-0.10.pc
 lib/pkgconfig/QtGStreamerUtils-0.10.pc
-lib/qt4/imports/QtGStreamer/libQtGStreamerQML.so
+lib/qt4/imports/QtGStreamer/libQtGStreamerQuick1.so
 lib/qt4/imports/QtGStreamer/qmldir
