@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/01 01:08:40 othyro Exp $
+bin/zsdx
+share/solarus/zsdx/data.solarus
