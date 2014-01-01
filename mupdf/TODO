@@ -20,9 +20,3 @@ o By default now mupdf install different binaries, e.g. mupdf-x11 (previous it
   was just "mupdf"), mupdf-x11-curl, etc.. In pkgsrc we install *only* the
   featureful version of mupdf simply as "mupdf". For more information please
   give a look to patches/patch-ac.
-
-
-What should be done before importing to print/mupdf? (and now the TODO!)
-========================================================================
-o More cleanup... I have just two eyeballs and maybe I have missed something
-  around. Please test and improve the package!
