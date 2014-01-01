@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/09/08 07:36:43 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/01 08:08:28 szptvlfn Exp $
 #
 
-DISTNAME=	crypto-api-0.12.2.2
+DISTNAME=	crypto-api-0.13
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
