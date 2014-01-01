@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/01 11:50:55 cheusov Exp $
 #
 
-DISTNAME=	bmake-20111010
+DISTNAME=	bmake-20131001
 PKGNAME=	${DISTNAME:S/bmake/nbmake/}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
