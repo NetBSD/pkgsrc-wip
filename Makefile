@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5567 2013/12/31 17:25:03 thomasklausner Exp $
+# $Id: Makefile,v 1.5568 2014/01/01 01:10:29 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2588,7 +2588,6 @@ SUBDIR+=	py-gpaw
 SUBDIR+=	py-graphite-web
 SUBDIR+=	py-graphmin
 SUBDIR+=	py-graphpath
-SUBDIR+=	py-greenlet
 SUBDIR+=	py-griddata
 SUBDIR+=	py-grpy
 SUBDIR+=	py-gsl
@@ -3196,6 +3195,7 @@ SUBDIR+=	socklog
 SUBDIR+=	socnetv
 SUBDIR+=	softflowd
 SUBDIR+=	soil
+SUBDIR+=	solarus-zsdx
 SUBDIR+=	songwrite2
 SUBDIR+=	soqt
 SUBDIR+=	spade
