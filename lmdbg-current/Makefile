@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/01 23:34:14 cheusov Exp $
 #
 
 PKGNAME=	lmdbg-9
@@ -33,6 +33,8 @@ REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
 REPLACE_FILES.runawk=	scripts/lmdbg-*.in
+
+MAKE_ENV+=		AWK=${AWK:Q}
 
 post-install:
 	cd ${WRKSRC} && \
