@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/12/10 13:39:33 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2014/01/02 09:29:29 szptvlfn Exp $
 
-SHA1 (hoogle-4.2.26.tar.gz) = 738b7ee000fef95c992684bde1caf3a12eea4842
-RMD160 (hoogle-4.2.26.tar.gz) = b5b12cc2e61a2630175d17b0cdb7f66d23ccdef6
-Size (hoogle-4.2.26.tar.gz) = 124216 bytes
+SHA1 (hoogle-4.2.27.tar.gz) = 0469137734d5b2538bfed6fa49d8ca668647023b
+RMD160 (hoogle-4.2.27.tar.gz) = 920115568c759f1f1c2a057b15e440229c5ef0fd
+Size (hoogle-4.2.27.tar.gz) = 126312 bytes
