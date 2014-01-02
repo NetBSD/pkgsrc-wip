@@ -1,2 +1,0 @@
-pylibmc is a Python wrapper around the accompanying C Python extension
-_pylibmc, which is a wrapper around libmemcached from TangentOrg.

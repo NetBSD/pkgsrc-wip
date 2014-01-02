@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5569 2014/01/02 09:27:35 szptvlfn Exp $
+# $Id: Makefile,v 1.5570 2014/01/02 19:21:16 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2638,7 +2638,6 @@ SUBDIR+=	py-lapack
 SUBDIR+=	py-larry
 SUBDIR+=	py-lazr.uri
 SUBDIR+=	py-lib
-SUBDIR+=	py-libmc
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-libtextcat
