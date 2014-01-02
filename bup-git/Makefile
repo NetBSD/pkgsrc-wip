@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/12/29 21:19:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/02 02:51:46 thomasklausner Exp $
 
 DISTNAME=	bup-0.25
 CATEGORIES=	sysutils
@@ -63,30 +63,13 @@ REPLACE_PYTHON+=	cmd/tick-cmd.py
 REPLACE_PYTHON+=	cmd/version-cmd.py
 REPLACE_PYTHON+=	cmd/web-cmd.py
 REPLACE_PYTHON+=	cmd/xstat-cmd.py
-REPLACE_PYTHON+=	lib/tornado/__init__.py
-REPLACE_PYTHON+=	lib/tornado/auth.py
-REPLACE_PYTHON+=	lib/tornado/autoreload.py
-REPLACE_PYTHON+=	lib/tornado/database.py
-REPLACE_PYTHON+=	lib/tornado/escape.py
-REPLACE_PYTHON+=	lib/tornado/httpclient.py
-REPLACE_PYTHON+=	lib/tornado/httpserver.py
-REPLACE_PYTHON+=	lib/tornado/httputil.py
-REPLACE_PYTHON+=	lib/tornado/ioloop.py
-REPLACE_PYTHON+=	lib/tornado/iostream.py
-REPLACE_PYTHON+=	lib/tornado/locale.py
-REPLACE_PYTHON+=	lib/tornado/options.py
-REPLACE_PYTHON+=	lib/tornado/s3server.py
-REPLACE_PYTHON+=	lib/tornado/template.py
-REPLACE_PYTHON+=	lib/tornado/test/test_ioloop.py
-REPLACE_PYTHON+=	lib/tornado/web.py
-REPLACE_PYTHON+=	lib/tornado/websocket.py
-REPLACE_PYTHON+=	lib/tornado/wsgi.py
 REPLACE_PYTHON+=	main.py
 REPLACE_PYTHON+=	wvtest.py
 
 REPLACE_PYTHON+=	t/hardlink-sets
 REPLACE_PYTHON+=	t/id-other-than
 REPLACE_PYTHON+=	t/mksock
+REPLACE_PYTHON+=	t/ns-timestamp-resolutions
 REPLACE_PYTHON+=	t/root-status
 REPLACE_PYTHON+=	t/unknown-owner
 
