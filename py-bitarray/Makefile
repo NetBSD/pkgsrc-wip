@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:22:16 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/02 20:46:22 thomasklausner Exp $
 
-DISTNAME=	bitarray-0.3.5
+DISTNAME=	bitarray-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/b/bitarray/
@@ -11,10 +10,8 @@ HOMEPAGE=	http://pypi.python.org/pypi/bitarray
 COMMENT=	Efficient arrays of booleans -- C extension
 LICENSE=	python-software-foundation
 
-WRKSRC=	${WRKDIR}/bitarray-0.3.5
-
-PYTHON_VERSIONS_ACCEPTED= 27 26
-PYDISTUTILSPKG=	yes
+PYDISTUTILSPKG=			yes
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 do-test:
 	${RUN} cd ${WRKSRC}/bitarray; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_bitarray.py
