@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/02 09:25:42 szptvlfn Exp $
+
+SHA1 (shake-0.10.10.tar.gz) = 92f7566747826fad28b1bddb7e14387d02042085
+RMD160 (shake-0.10.10.tar.gz) = bbc128d6b3256f8ac5146c468a026a666fc430e6
+Size (shake-0.10.10.tar.gz) = 478072 bytes
