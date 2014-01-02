@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/07 00:39:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/02 19:36:06 thomasklausner Exp $
 bin/qmc2
 ${PLIST.mame}bin/qmc2-sdlmame
 ${PLIST.mess}bin/qmc2-sdlmess
@@ -35,7 +35,7 @@ share/qmc2/doc/html/fr/index.html
 share/qmc2/doc/html/fr/readme.html
 share/qmc2/doc/html/fr/todo.html
 share/qmc2/doc/html/images/ballou.png
-share/qmc2/doc/html/images/doc-bg.jpg
+share/qmc2/doc/html/images/doc-bg.png
 share/qmc2/doc/html/images/gradient1.png
 share/qmc2/doc/html/images/gradient2.png
 share/qmc2/doc/html/images/qmc2_logo.png
@@ -253,6 +253,7 @@ share/qmc2/img/circles/music.png
 share/qmc2/img/circles/next-sail.png
 share/qmc2/img/circles/next.png
 share/qmc2/img/circles/no.png
+share/qmc2/img/circles/no_sound.png
 share/qmc2/img/circles/north.png
 share/qmc2/img/circles/notes.png
 share/qmc2/img/circles/ok.png
@@ -335,6 +336,7 @@ share/qmc2/img/circles/terminate.png
 share/qmc2/img/circles/thumbnail.png
 share/qmc2/img/circles/time.png
 share/qmc2/img/circles/toggle_fullscreen.png
+share/qmc2/img/circles/toolbox.png
 share/qmc2/img/circles/trafficlight_green.png
 share/qmc2/img/circles/trafficlight_off.png
 share/qmc2/img/circles/trafficlight_red.png
@@ -507,6 +509,7 @@ share/qmc2/img/classic/music.png
 share/qmc2/img/classic/next-sail.png
 share/qmc2/img/classic/next.png
 share/qmc2/img/classic/no.png
+share/qmc2/img/classic/no_sound.png
 share/qmc2/img/classic/north.png
 share/qmc2/img/classic/notes.png
 share/qmc2/img/classic/ok.png
@@ -589,6 +592,7 @@ share/qmc2/img/classic/terminate.png
 share/qmc2/img/classic/thumbnail.png
 share/qmc2/img/classic/time.png
 share/qmc2/img/classic/toggle_fullscreen.png
+share/qmc2/img/classic/toolbox.png
 share/qmc2/img/classic/trafficlight_green.png
 share/qmc2/img/classic/trafficlight_off.png
 share/qmc2/img/classic/trafficlight_red.png
@@ -766,6 +770,7 @@ share/qmc2/img/crazy-black/music.png
 share/qmc2/img/crazy-black/next-sail.png
 share/qmc2/img/crazy-black/next.png
 share/qmc2/img/crazy-black/no.png
+share/qmc2/img/crazy-black/no_sound.png
 share/qmc2/img/crazy-black/north.png
 share/qmc2/img/crazy-black/notes.png
 share/qmc2/img/crazy-black/ok.png
@@ -848,6 +853,7 @@ share/qmc2/img/crazy-black/terminate.png
 share/qmc2/img/crazy-black/thumbnail.png
 share/qmc2/img/crazy-black/time.png
 share/qmc2/img/crazy-black/toggle_fullscreen.png
+share/qmc2/img/crazy-black/toolbox.png
 share/qmc2/img/crazy-black/trafficlight_green.png
 share/qmc2/img/crazy-black/trafficlight_off.png
 share/qmc2/img/crazy-black/trafficlight_red.png
@@ -1019,6 +1025,7 @@ share/qmc2/img/crazy/music.png
 share/qmc2/img/crazy/next-sail.png
 share/qmc2/img/crazy/next.png
 share/qmc2/img/crazy/no.png
+share/qmc2/img/crazy/no_sound.png
 share/qmc2/img/crazy/north.png
 share/qmc2/img/crazy/notes.png
 share/qmc2/img/crazy/ok.png
@@ -1101,6 +1108,7 @@ share/qmc2/img/crazy/terminate.png
 share/qmc2/img/crazy/thumbnail.png
 share/qmc2/img/crazy/time.png
 share/qmc2/img/crazy/toggle_fullscreen.png
+share/qmc2/img/crazy/toolbox.png
 share/qmc2/img/crazy/trafficlight_green.png
 share/qmc2/img/crazy/trafficlight_off.png
 share/qmc2/img/crazy/trafficlight_red.png
@@ -1272,6 +1280,7 @@ share/qmc2/img/cubes/music.png
 share/qmc2/img/cubes/next-sail.png
 share/qmc2/img/cubes/next.png
 share/qmc2/img/cubes/no.png
+share/qmc2/img/cubes/no_sound.png
 share/qmc2/img/cubes/north.png
 share/qmc2/img/cubes/notes.png
 share/qmc2/img/cubes/ok.png
@@ -1354,6 +1363,7 @@ share/qmc2/img/cubes/terminate.png
 share/qmc2/img/cubes/thumbnail.png
 share/qmc2/img/cubes/time.png
 share/qmc2/img/cubes/toggle_fullscreen.png
+share/qmc2/img/cubes/toolbox.png
 share/qmc2/img/cubes/trafficlight_green.png
 share/qmc2/img/cubes/trafficlight_off.png
 share/qmc2/img/cubes/trafficlight_red.png
@@ -1504,6 +1514,7 @@ share/qmc2/img/music.png
 share/qmc2/img/next-sail.png
 share/qmc2/img/next.png
 share/qmc2/img/no.png
+share/qmc2/img/no_sound.png
 share/qmc2/img/north.png
 share/qmc2/img/notes.png
 share/qmc2/img/ok.png
@@ -1586,6 +1597,7 @@ share/qmc2/img/terminate.png
 share/qmc2/img/thumbnail.png
 share/qmc2/img/time.png
 share/qmc2/img/toggle_fullscreen.png
+share/qmc2/img/toolbox.png
 share/qmc2/img/trafficlight_green.png
 share/qmc2/img/trafficlight_off.png
 share/qmc2/img/trafficlight_red.png

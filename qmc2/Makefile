@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/12/07 00:39:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/02 19:36:06 thomasklausner Exp $
 
-DISTNAME=	qmc2-0.41
+DISTNAME=	qmc2-0.42
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qmc2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -47,6 +47,10 @@ post-install:
 	${INSTALL_DATA} ${DESTDIR}${PKG_SYSCONFDIR}/qmc2/qmc2.ini \
 		${DESTDIR}${EGDIR}/
 	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/qmc2/qmc2.ini
+	${RM} -fr ${DESTDIR}${PREFIX}/share/qmc2/*/*/*/PaxHeaders*
+	${RM} -fr ${DESTDIR}${PREFIX}/share/qmc2/*/*/PaxHeaders*
+	${RM} -fr ${DESTDIR}${PREFIX}/share/qmc2/*/PaxHeaders*
+	${RM} -fr ${DESTDIR}${PREFIX}/share/qmc2/PaxHeaders*
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
