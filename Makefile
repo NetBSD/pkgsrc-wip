@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5573 2014/01/02 21:24:40 thomasklausner Exp $
+# $Id: Makefile,v 1.5574 2014/01/02 21:49:38 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -691,6 +691,7 @@ SUBDIR+=	fs-uae
 SUBDIR+=	fs-uae-dev
 SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fs2open
+SUBDIR+=	fsharp
 SUBDIR+=	fslsfonts
 SUBDIR+=	fstobdf
 SUBDIR+=	ftgl
