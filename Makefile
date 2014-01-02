@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5571 2014/01/02 21:13:51 thomasklausner Exp $
+# $Id: Makefile,v 1.5572 2014/01/02 21:18:50 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2603,6 +2603,7 @@ SUBDIR+=	py-helio
 SUBDIR+=	py-hfk
 SUBDIR+=	py-igraph
 SUBDIR+=	py-imgSeek
+SUBDIR+=	py-impacket
 SUBDIR+=	py-inflection
 SUBDIR+=	py-instant
 SUBDIR+=	py-iowait
