@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5568 2014/01/01 01:10:29 othyro Exp $
+# $Id: Makefile,v 1.5569 2014/01/02 09:27:35 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1151,6 +1151,7 @@ SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroupoid-extras
 SUBDIR+=	hs-semigroupoids
 SUBDIR+=	hs-semigroups
+SUBDIR+=	hs-shake
 SUBDIR+=	hs-simple-sendfile
 SUBDIR+=	hs-split
 SUBDIR+=	hs-stm
