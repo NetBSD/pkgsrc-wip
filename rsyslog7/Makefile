@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/10/23 11:10:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/02 22:32:06 fhajny Exp $
 #
 
-DISTNAME=		rsyslog-7.4.4
-PKGREVISION=		2
+DISTNAME=		rsyslog-7.4.7
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
@@ -49,7 +48,7 @@ post-install:
 .endif
 
 .include "../../wip/libee/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.libestr+=	libestr>=0.1.5
+BUILDLINK_ABI_DEPENDS.libestr+=	libestr>=0.1.9
 .include "../../wip/libestr/buildlink3.mk"
 .include "../../wip/liblognorm/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

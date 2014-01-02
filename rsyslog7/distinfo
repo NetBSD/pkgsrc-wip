@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/10/15 14:54:32 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2014/01/02 22:32:06 fhajny Exp $
 
-SHA1 (rsyslog-7.4.4.tar.gz) = 635d1ee414b84a7220835ddca3aa76f23580a748
-RMD160 (rsyslog-7.4.4.tar.gz) = d67be379cf725b4889c6f9d555530f0bc1eb1206
-Size (rsyslog-7.4.4.tar.gz) = 2910075 bytes
+SHA1 (rsyslog-7.4.7.tar.gz) = f4d6c60572bf661c7a7ea6a0f5e221e5a0fbf65a
+RMD160 (rsyslog-7.4.7.tar.gz) = c453483fa8529714ca67bceced57dea41a811ea1
+Size (rsyslog-7.4.7.tar.gz) = 2934197 bytes
 SHA1 (patch-configure) = 5b97a21a88049d4d72d472998716a161d08ec1b8
 SHA1 (patch-grammar_lexer.l) = 66e3f242dff08d33b0a8c0f46b445d606938de5f
 SHA1 (patch-runtime_typedefs.h) = 0e6b2dbe7fd2028f4e34ddcf277486d1b7b24bf8
