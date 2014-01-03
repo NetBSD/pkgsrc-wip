@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/03 05:31:52 othyro Exp $
+bin/beanstalkd
