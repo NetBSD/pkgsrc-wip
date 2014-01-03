@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/01/03 00:29:25 jihbed Exp $
+
+SHA1 (GraTeLPy-0.2.0.tar.gz) = aa3a9da030ad2c301858e9cf077ee43aebe12a7a
+RMD160 (GraTeLPy-0.2.0.tar.gz) = df35a838f4195ddef0b15de8adb3ac3f927e2eb1
+Size (GraTeLPy-0.2.0.tar.gz) = 64898 bytes
+SHA1 (patch-setup.py) = 737bfbb293e4cc24cc67f3245fd7193153068371
