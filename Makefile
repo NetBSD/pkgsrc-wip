@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5575 2014/01/03 01:05:58 othyro Exp $
+# $Id: Makefile,v 1.5576 2014/01/03 04:09:18 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2665,7 +2665,6 @@ SUBDIR+=	py-mcview
 SUBDIR+=	py-mdanalysis
 SUBDIR+=	py-mdp
 SUBDIR+=	py-mdptoolbox
-SUBDIR+=	py-memcached
 SUBDIR+=	py-metrics
 SUBDIR+=	py-mlstats
 SUBDIR+=	py-mmLib
