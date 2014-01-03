@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5576 2014/01/03 04:09:18 othyro Exp $
+# $Id: Makefile,v 1.5577 2014/01/03 04:40:41 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2927,6 +2927,7 @@ SUBDIR+=	py-utilib_math
 SUBDIR+=	py-utilib_misc
 SUBDIR+=	py-utilib_ply
 SUBDIR+=	py-uuid
+SUBDIR+=	py-uwsgitop
 #SUBDIR+=	py-van.testing	# www/zope3 is gone
 SUBDIR+=	py-viper
 SUBDIR+=	py-visionegg
