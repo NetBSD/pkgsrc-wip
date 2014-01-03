@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/12/05 12:49:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/03 08:31:20 fhajny Exp $
 #
 
-DISTNAME=	sphinx-2.1.3-release
+DISTNAME=	sphinx-2.1.4-release
 PKGNAME=	${DISTNAME:S/-/search-/:S/-release//}
 CATEGORIES=	databases textproc
 MASTER_SITES=	http://sphinxsearch.com/files/
