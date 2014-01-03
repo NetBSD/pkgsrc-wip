@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/20 10:01:35 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/03 19:07:05 thomasklausner Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -204,6 +204,7 @@ share/lilypond/${PKGVERSION}/ly/predefined-guitar-ninth-fretboards.ly
 share/lilypond/${PKGVERSION}/ly/predefined-mandolin-fretboards.ly
 share/lilypond/${PKGVERSION}/ly/predefined-ukulele-fretboards.ly
 share/lilypond/${PKGVERSION}/ly/property-init.ly
+share/lilypond/${PKGVERSION}/ly/satb.ly
 share/lilypond/${PKGVERSION}/ly/scale-definitions-init.ly
 share/lilypond/${PKGVERSION}/ly/scheme-sandbox.ly
 share/lilypond/${PKGVERSION}/ly/script-init.ly
