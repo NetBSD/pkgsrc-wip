@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/10/21 13:43:32 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/01/03 16:43:46 fhajny Exp $
 man/man1/riak-admin.1
 man/man1/riak-debug.1
 man/man1/riak.1
@@ -378,7 +378,15 @@ riak/lib/goldrush-${VERSION.goldrush}/ebin/glc_code.beam
 riak/lib/goldrush-${VERSION.goldrush}/ebin/glc_lib.beam
 riak/lib/goldrush-${VERSION.goldrush}/ebin/glc_ops.beam
 riak/lib/goldrush-${VERSION.goldrush}/ebin/goldrush.app
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_app.beam
 riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_context.beam
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_counter.beam
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_counter_sup.beam
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_manager.beam
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_manager_sup.beam
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_param.beam
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_param_sup.beam
+riak/lib/goldrush-${VERSION.goldrush}/ebin/gr_sup.beam
 riak/lib/goldrush-${VERSION.goldrush}/ebin/gre.beam
 riak/lib/goldrush-${VERSION.goldrush}/priv/vsn.git
 riak/lib/gs-${VERSION.gs}/ebin/gs.app
@@ -843,21 +851,6 @@ riak/lib/public_key-${VERSION.public_key}/ebin/public_key.beam
 riak/lib/public_key-${VERSION.public_key}/include/OTP-PUB-KEY.hrl
 riak/lib/public_key-${VERSION.public_key}/include/PKCS-FRAME.hrl
 riak/lib/public_key-${VERSION.public_key}/include/public_key.hrl
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch.app
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_acceptor.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_acceptors_sup.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_app.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_conns_sup.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_listener.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_listener_sup.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_protocol.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_server.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_ssl.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_sup.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_tcp.beam
-riak/lib/ranch-${VERSION.ranch}/ebin/ranch_transport.beam
-riak/lib/ranch-${VERSION.ranch}/priv/vsn.git
 riak/lib/riak_api-${VERSION.riak_api}/ebin/riak_api.app
 riak/lib/riak_api-${VERSION.riak_api}/ebin/riak_api_app.beam
 riak/lib/riak_api-${VERSION.riak_api}/ebin/riak_api_basic_pb_service.beam
@@ -1014,9 +1007,6 @@ riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_claim_sim.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_claim_util.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_claimant.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_config.beam
-riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_connection.beam
-riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_connection_mgr.beam
-riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_connection_mgr_stats.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_console.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_coverage_fsm.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_coverage_plan.beam
@@ -1048,7 +1038,6 @@ riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_ring_handler.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_ring_manager.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_ring_util.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_send_msg.beam
-riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_service_mgr.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_ssl_util.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_stat.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_stat_cache.beam
@@ -1077,7 +1066,6 @@ riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_web.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/riak_core_wm_urlmap.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/supervisor_pre_r14b04.beam
 riak/lib/riak_core-${VERSION.riak_core}/ebin/vclock.beam
-riak/lib/riak_core-${VERSION.riak_core}/include/riak_core_connection.hrl
 riak/lib/riak_core-${VERSION.riak_core}/include/riak_core_dtrace.hrl
 riak/lib/riak_core-${VERSION.riak_core}/include/riak_core_handoff.hrl
 riak/lib/riak_core-${VERSION.riak_core}/include/riak_core_pb.hrl
@@ -1090,6 +1078,7 @@ riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak.beam
 riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak_client.beam
 riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak_index.beam
 riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak_kv.app
+riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak_kv_2i_aae.beam
 riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak_kv_app.beam
 riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak_kv_backend.beam
 riak/lib/riak_kv-${VERSION.riak_kv}/ebin/riak_kv_backup.beam
@@ -1367,6 +1356,7 @@ riak/lib/sasl-${VERSION.sasl}/ebin/systools_rc.beam
 riak/lib/sasl-${VERSION.sasl}/ebin/systools_relup.beam
 riak/lib/sext-${VERSION.sext}/ebin/sext.app
 riak/lib/sext-${VERSION.sext}/ebin/sext.beam
+riak/lib/sext-${VERSION.sext}/priv/sext.so
 riak/lib/sext-${VERSION.sext}/priv/vsn.git
 riak/lib/sidejob-${VERSION.sidejob}/ebin/sidejob.app
 riak/lib/sidejob-${VERSION.sidejob}/ebin/sidejob.beam
