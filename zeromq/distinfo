@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.3 2014/01/03 07:23:50 makoto Exp $
+
+SHA1 (zeromq-4.0.3.tar.gz) = a363ddfff75f73976f656b3ba48f32544b214075
+RMD160 (zeromq-4.0.3.tar.gz) = 183228d912c88618ed8392f0f82bec5ac6af4b1b
+Size (zeromq-4.0.3.tar.gz) = 2169301 bytes
+SHA1 (patch-configure) = 510cfce9c62f024d18e8f2709c351a0605f475ea
+SHA1 (patch-src_platform.hpp.in) = d248fabbd2194e27f667d55f676744a2d7076c19
