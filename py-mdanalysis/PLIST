@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/02 09:59:25 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/03 21:28:42 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,6 +57,9 @@ ${PYSITELIB}/MDAnalysis/analysis/nuclinfo.pyo
 ${PYSITELIB}/MDAnalysis/analysis/rms.py
 ${PYSITELIB}/MDAnalysis/analysis/rms.pyc
 ${PYSITELIB}/MDAnalysis/analysis/rms.pyo
+${PYSITELIB}/MDAnalysis/analysis/x3dna.py
+${PYSITELIB}/MDAnalysis/analysis/x3dna.pyc
+${PYSITELIB}/MDAnalysis/analysis/x3dna.pyo
 ${PYSITELIB}/MDAnalysis/builder/__init__.py
 ${PYSITELIB}/MDAnalysis/builder/__init__.pyc
 ${PYSITELIB}/MDAnalysis/builder/__init__.pyo
@@ -69,6 +72,9 @@ ${PYSITELIB}/MDAnalysis/coordinates/CRD.pyo
 ${PYSITELIB}/MDAnalysis/coordinates/DCD.py
 ${PYSITELIB}/MDAnalysis/coordinates/DCD.pyc
 ${PYSITELIB}/MDAnalysis/coordinates/DCD.pyo
+${PYSITELIB}/MDAnalysis/coordinates/DMS.py
+${PYSITELIB}/MDAnalysis/coordinates/DMS.pyc
+${PYSITELIB}/MDAnalysis/coordinates/DMS.pyo
 ${PYSITELIB}/MDAnalysis/coordinates/GRO.py
 ${PYSITELIB}/MDAnalysis/coordinates/GRO.pyc
 ${PYSITELIB}/MDAnalysis/coordinates/GRO.pyo
@@ -90,6 +96,9 @@ ${PYSITELIB}/MDAnalysis/coordinates/TRJ.pyo
 ${PYSITELIB}/MDAnalysis/coordinates/TRR.py
 ${PYSITELIB}/MDAnalysis/coordinates/TRR.pyc
 ${PYSITELIB}/MDAnalysis/coordinates/TRR.pyo
+${PYSITELIB}/MDAnalysis/coordinates/TRZ.py
+${PYSITELIB}/MDAnalysis/coordinates/TRZ.pyc
+${PYSITELIB}/MDAnalysis/coordinates/TRZ.pyo
 ${PYSITELIB}/MDAnalysis/coordinates/XTC.py
 ${PYSITELIB}/MDAnalysis/coordinates/XTC.pyc
 ${PYSITELIB}/MDAnalysis/coordinates/XTC.pyo
@@ -190,9 +199,18 @@ ${PYSITELIB}/MDAnalysis/tests/datafiles.pyo
 ${PYSITELIB}/MDAnalysis/topology/CRDParser.py
 ${PYSITELIB}/MDAnalysis/topology/CRDParser.pyc
 ${PYSITELIB}/MDAnalysis/topology/CRDParser.pyo
+${PYSITELIB}/MDAnalysis/topology/DMSParser.py
+${PYSITELIB}/MDAnalysis/topology/DMSParser.pyc
+${PYSITELIB}/MDAnalysis/topology/DMSParser.pyo
+${PYSITELIB}/MDAnalysis/topology/ExtendedPDBParser.py
+${PYSITELIB}/MDAnalysis/topology/ExtendedPDBParser.pyc
+${PYSITELIB}/MDAnalysis/topology/ExtendedPDBParser.pyo
 ${PYSITELIB}/MDAnalysis/topology/GROParser.py
 ${PYSITELIB}/MDAnalysis/topology/GROParser.pyc
 ${PYSITELIB}/MDAnalysis/topology/GROParser.pyo
+${PYSITELIB}/MDAnalysis/topology/LAMMPSParser.py
+${PYSITELIB}/MDAnalysis/topology/LAMMPSParser.pyc
+${PYSITELIB}/MDAnalysis/topology/LAMMPSParser.pyo
 ${PYSITELIB}/MDAnalysis/topology/PDBParser.py
 ${PYSITELIB}/MDAnalysis/topology/PDBParser.pyc
 ${PYSITELIB}/MDAnalysis/topology/PDBParser.pyo
@@ -211,6 +229,9 @@ ${PYSITELIB}/MDAnalysis/topology/PrimitivePDBParser.pyo
 ${PYSITELIB}/MDAnalysis/topology/TOPParser.py
 ${PYSITELIB}/MDAnalysis/topology/TOPParser.pyc
 ${PYSITELIB}/MDAnalysis/topology/TOPParser.pyo
+${PYSITELIB}/MDAnalysis/topology/TPRParser.py
+${PYSITELIB}/MDAnalysis/topology/TPRParser.pyc
+${PYSITELIB}/MDAnalysis/topology/TPRParser.pyo
 ${PYSITELIB}/MDAnalysis/topology/__init__.py
 ${PYSITELIB}/MDAnalysis/topology/__init__.pyc
 ${PYSITELIB}/MDAnalysis/topology/__init__.pyo
@@ -220,12 +241,15 @@ ${PYSITELIB}/MDAnalysis/topology/core.pyo
 ${PYSITELIB}/MDAnalysis/topology/tables.py
 ${PYSITELIB}/MDAnalysis/topology/tables.pyc
 ${PYSITELIB}/MDAnalysis/topology/tables.pyo
-${PYSITELIB}/MDAnalysis/util/LAMMPSParser.py
-${PYSITELIB}/MDAnalysis/util/LAMMPSParser.pyc
-${PYSITELIB}/MDAnalysis/util/LAMMPSParser.pyo
-${PYSITELIB}/MDAnalysis/util/Transformation.py
-${PYSITELIB}/MDAnalysis/util/Transformation.pyc
-${PYSITELIB}/MDAnalysis/util/Transformation.pyo
-${PYSITELIB}/MDAnalysis/util/__init__.py
-${PYSITELIB}/MDAnalysis/util/__init__.pyc
-${PYSITELIB}/MDAnalysis/util/__init__.pyo
+${PYSITELIB}/MDAnalysis/topology/tpr/__init__.py
+${PYSITELIB}/MDAnalysis/topology/tpr/__init__.pyc
+${PYSITELIB}/MDAnalysis/topology/tpr/__init__.pyo
+${PYSITELIB}/MDAnalysis/topology/tpr/obj.py
+${PYSITELIB}/MDAnalysis/topology/tpr/obj.pyc
+${PYSITELIB}/MDAnalysis/topology/tpr/obj.pyo
+${PYSITELIB}/MDAnalysis/topology/tpr/setting.py
+${PYSITELIB}/MDAnalysis/topology/tpr/setting.pyc
+${PYSITELIB}/MDAnalysis/topology/tpr/setting.pyo
+${PYSITELIB}/MDAnalysis/topology/tpr/utils.py
+${PYSITELIB}/MDAnalysis/topology/tpr/utils.pyc
+${PYSITELIB}/MDAnalysis/topology/tpr/utils.pyo
