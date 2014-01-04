@@ -1,0 +1,24 @@
+# $NetBSD: Makefile.common,v 1.1 2014/01/04 18:52:27 nros Exp $
+#
+# used by print/poppler/Makefile
+# used by print/poppler-cpp/Makefile
+# used by print/poppler-glib/Makefile
+# used by print/poppler-includes/Makefile
+# used by print/poppler-qt4/Makefile
+# used by print/poppler-utils/Makefile
+
+POPPLER_VERS=		0.24.4
+DISTNAME=		poppler-${POPPLER_VERS}
+CATEGORIES=		print
+MASTER_SITES=		http://poppler.freedesktop.org/
+EXTRACT_SUFX=		.tar.xz
+
+HOMEPAGE=		http://poppler.freedesktop.org/
+LICENSE=		gnu-gpl-v2
+
+#DISTINFO_FILE=		${.CURDIR}/../../print/poppler/distinfo
+#PATCHDIR=		${.CURDIR}/../../print/poppler/patches
+
+USE_TOOLS+=		pkg-config
+USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++

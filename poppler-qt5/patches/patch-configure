@@ -1,0 +1,49 @@
+$NetBSD: patch-configure,v 1.1 2014/01/04 18:52:27 nros Exp $
+
+*fixes moc version comparison (Bug #72744) 
+
+--- configure.orig	2013-11-26 23:17:02.000000000 +0000
++++ configure
+@@ -23259,7 +23259,7 @@ fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for Qt5 moc" >&5
+ $as_echo_n "checking for Qt5 moc... " >&6; }
+   mocversion=`$MOCQT5 -v 2>&1`
+-  mocversiongrep=`echo $mocversion | grep "Qt 5"`
++  mocversiongrep=`echo $mocversion | grep "moc 5"`
+   if test x"$mocversiongrep" != x"$mocversion"; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+@@ -23359,7 +23359,7 @@ fi
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for Qt5 moc-qt5" >&5
+ $as_echo_n "checking for Qt5 moc-qt5... " >&6; }
+     mocversion=`$MOCQT52 -v 2>&1`
+-    mocversiongrep=`echo $mocversion | grep "Qt 5"`
++    mocversiongrep=`echo $mocversion | grep "moc 5"`
+     if test x"$mocversiongrep" != x"$mocversion"; then
+       if test -n "$ac_tool_prefix"; then
+   # Extract the first word of "${ac_tool_prefix}qtchooser", so it can be a program name with args.
+@@ -23457,7 +23457,7 @@ fi
+ $as_echo_n "checking for qtchooser... " >&6; }
+       qt5tooldir=`QT_SELECT=qt5 qtchooser -print-env | grep QTTOOLDIR | cut -d '=' -f 2 | cut -d \" -f 2`
+       mocversion=`$qt5tooldir/moc -v 2>&1`
+-      mocversiongrep=`echo $mocversion | grep "Qt 5"`
++      mocversiongrep=`echo $mocversion | grep "moc 5"`
+       if test x"$mocversiongrep" != x"$mocversion"; then
+         # no valid moc found
+         enable_poppler_qt5=no;
+@@ -24905,13 +24905,13 @@ if test "x$GCC" != xyes; then
+ fi
+ case "$enable_compile_warnings" in
+   no)	;;
+-  yes)	CXXFLAGS="-Wall -Woverloaded-virtual -Wnon-virtual-dtor -Wcast-align -fno-exceptions -fno-check-new -fno-common $CXXFLAGS";
++  yes)	CXXFLAGS="-Wall -Woverloaded-virtual -Wnon-virtual-dtor -Wcast-align -fno-exceptions -fno-common $CXXFLAGS";
+         CFLAGS="-Wall $CFLAGS" ;;
+   kde)	CXXFLAGS="-Wnon-virtual-dtor -Wno-long-long -Wundef \
+ 		-D_XOPEN_SOURCE=600 -D_BSD_SOURCE -Wcast-align \
+ 		-Wconversion -Wall -W -Wpointer-arith \
+ 		-Wwrite-strings -O2 -Wformat-security \
+-		-Wmissing-format-attribute -fno-exceptions -fno-check-new \
++		-Wmissing-format-attribute -fno-exceptions \
+ 		-fno-common $CXXFLAGS" ;;
+ esac
+ CXXFLAGS="-fPIC $CXXFLAGS";
