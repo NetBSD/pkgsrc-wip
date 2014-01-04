@@ -1,0 +1,5 @@
+Premake is a build script generator. It generates build scripts for
+gmake, xcode, visual studio and others. Premakes uses Lua and it's input
+files can use Lua scripting for build configuration tasks.
+Premake 4 has been rewritten since Premake 3 and put under a different
+license.

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/01/04 16:23:02 nros Exp $
+
+SHA1 (premake-4.3-src.zip) = 8f37a3599121580f18b578811162b9b49a2e122f
+RMD160 (premake-4.3-src.zip) = 8c414790cb7481809ef65f0dcac023d77ed0381d
+Size (premake-4.3-src.zip) = 514366 bytes
+SHA1 (patch-build_gmake.unix_Premake4.make) = b41153cdf99b849f0bdcf937edf1243385459501
