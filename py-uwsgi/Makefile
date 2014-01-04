@@ -1,0 +1,23 @@
+# $NetBSD: Makefile,v 1.1 2014/01/04 02:59:46 othyro Exp $
+
+DISTNAME=	uwsgi-2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	www python
+MASTER_SITES=	http://projects.unbit.it/downloads/
+
+MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://projects.unbit.it/uwsgi
+COMMENT=	Feature-rich WSGI server
+LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES=		c
+
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+EGG_NAME=	${DISTNAME:S/uwsgi/uWSGI/}
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/uwsgi ${DESTDIR}${PREFIX}/bin/uwsgi-${PYVERSSUFFIX}
+
+.include "../../lang/python/egg.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
