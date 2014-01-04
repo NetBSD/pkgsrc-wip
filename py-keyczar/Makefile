@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/12/14 09:26:56 obache Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/04 17:34:08 jihbed Exp $
 
-DISTNAME=	python-keyczar-0.6b.061709
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//S/.061709//}
-CATEGORIES= security
+DISTNAME=	keyczar-python-0.71d-09062013
+PKGNAME=	keyczar-0.7.1d-09062013
+EGG_NAME=	python_keyczar-0.71c
+CATEGORIES=	security
 MASTER_SITES=	http://keyczar.googlecode.com/files/
 
 MAINTAINER=	kamelderouiche@yahoo.com
@@ -11,16 +11,16 @@ HOMEPAGE=	http://code.google.com/p/keyczar/
 COMMENT=	Toolkit for safe and simple cryptography
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-amkCrypto
+DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.3.1:../../converters/py-simplejson
+DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.21.1:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 
-WRKSRC=		${WRKDIR}/python-keyczar-0.6b
-USE_LANGUAGES=	# none
+WRKSRC=		${WRKDIR}/keyczar-python
 
-PYDISTUTILSPKG=	yes
+USE_LANGUAGES=	# none
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} tests/keyczar/alltests.py
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
