@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5583 2014/01/04 19:03:48 thomasklausner Exp $
+# $Id: Makefile,v 1.5584 2014/01/04 19:56:34 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2364,6 +2364,7 @@ SUBDIR+=	polylib
 SUBDIR+=	polymul
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
+SUBDIR+=	poppler-qt5
 SUBDIR+=	popup-el-current
 SUBDIR+=	portaudio
 SUBDIR+=	postal2-mpdemo-bin
@@ -3344,6 +3345,7 @@ SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
 SUBDIR+=	texlive-texmf-minimal
 SUBDIR+=	texlive2013
+SUBDIR+=	texmaker
 SUBDIR+=	tftp-hpa
 SUBDIR+=	thabit-ttf
 SUBDIR+=	thcrut
