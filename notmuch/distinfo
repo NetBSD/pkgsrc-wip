@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2014/01/03 21:48:13 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2014/01/04 12:48:43 thomasklausner Exp $
 
-SHA1 (notmuch-0.16.tar.gz) = 1919277b322d7aaffa81b80a64aedbb8a1c52a2b
-RMD160 (notmuch-0.16.tar.gz) = 9c3864ea157b32ab7c2d33248e5cc83402607546
-Size (notmuch-0.16.tar.gz) = 588739 bytes
-SHA1 (patch-aa) = fd3b57c264b7fe48b36e3067989bb90df64b85de
-SHA1 (patch-lib_notmuch-private.h) = f4182527fc65c85effc3fa5402d53aa09268614e
+SHA1 (notmuch-0.17.tar.gz) = 0fe14140126a0da04754f548edf7e7b135eeec86
+RMD160 (notmuch-0.17.tar.gz) = 3bc5635dabe9987ad0535ac6d76cb160eb2413ff
+Size (notmuch-0.17.tar.gz) = 606710 bytes
+SHA1 (patch-aa) = 905585b294983e88e04274e70e817c2ddc2a3dce
 SHA1 (patch-notmuch-config.c) = 20acd3d4bfd6c028f162b6d83fa5cc17573320d5

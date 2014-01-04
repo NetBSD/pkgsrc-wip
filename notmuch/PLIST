@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2013/12/28 16:42:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/01/04 12:48:43 thomasklausner Exp $
 bin/notmuch
 include/notmuch.h
 lib/libnotmuch.so
 lib/libnotmuch.so.3
-lib/libnotmuch.so.3.0.0
+lib/libnotmuch.so.3.1.0
+man/man1/notmuch-compact.1
 man/man1/notmuch-config.1
 man/man1/notmuch-count.1
 man/man1/notmuch-dump.1
@@ -32,6 +33,7 @@ share/emacs/site-lisp/notmuch-print.el
 share/emacs/site-lisp/notmuch-query.el
 share/emacs/site-lisp/notmuch-show.el
 share/emacs/site-lisp/notmuch-tag.el
+share/emacs/site-lisp/notmuch-tree.el
 share/emacs/site-lisp/notmuch-wash.el
 share/emacs/site-lisp/notmuch.el
 share/examples/notmuch/bash_completion.d/notmuch
