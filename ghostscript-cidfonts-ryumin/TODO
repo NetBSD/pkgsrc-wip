@@ -1,53 +1,16 @@
-To fix a problem with one particular combination:
+- Test combinations
+  (1)
+  PKG_OPTIONS.gs_type=	ghostscript-gpl
+  PKG_OPTIONS.gs_type=	ghostscript-agpl
+  (2)  
+  PKG_OPTIONS.ghostscript-agpl+=	disable-compile-inits
+  PKG_OPTIONS.ghostscript-gpl+=		disable-compile-inits
+  (or not)
+  (3)
+  PKG_OPTIONS.gcr_type= ipa
+  PKG_OPTIONS.gcr_type= adobe-cidfonts
 
-The problem I was raising here turned out that
-ghostscript has a problem with TrueType font if
-option -dSAFER is designated.
-This is filed as [Bug 691780] 
-  http://bugs.ghostscript.com/show_bug.cgi?id=691780
-If -dSAFER in (/usr/pkg/bin/) ps2pdfwr is removed 
-as the patch attached, all the processing are OK.
-
-(Previous note):
-------------
-(1) the option at 
-wip/ghostscrip-cidfonts-ryumin
-set
-PKG_OPTIONS.gcr_type= ipa
-
-(2) and only if gs invoked from dvipdfmx via following sequence:
-    ps2pdf
-    ps2pdf14
-    ps2pdfwr
-    gs -sDEVICE=pdfwrite
-
-gs failed to find the font Ryumin-Light-EUC-H
-----
-
-Meaning that 
-(a) if
-PKG_OPTIONS.gcr_type= adobe-cidfonts
-set -> OK
-
-(b) 
-gs alone invoked command line, the same file 
-(included in *.eps used above (2) problem)
-can be processed successfully even if
-following line in /etc/mk.conf mentioned in (1)
-PKG_OPTIONS.gcr_type= ipa
-is set.
-------------
-(End of Previous note):
-
---- ps2pdfwr.orig       2013-01-11 22:20:51.000000000 +0900
-+++ ps2pdfwr    2013-01-11 21:52:24.000000000 +0900
-@@ -10,7 +10,7 @@
- fi
- GS_EXECUTABLE="$gs"
- 
--OPTIONS="-P- -dSAFER"
-+OPTIONS="-P- "
- while true
- do
-        case "$1" in
+- tested with following two lines in /etc/mk.conf  and (1) x 2 (2) x 2
+  PKG_OPTIONS.gcr_type= adobe-cidfonts -ipa
+  PKG_OPTIONS.gcr_type= ipa
 
