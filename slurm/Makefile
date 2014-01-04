@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/29 17:57:03 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/04 17:37:01 outpaddling Exp $
 
 DISTNAME=	slurm-2.6.4
 CATEGORIES=	parallel
@@ -54,6 +54,9 @@ CONFIGURE_ARGS+=	--with-munge=$(BUILDLINK_PREFIX.munge:Q)
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/pam.buildlink3.mk"
+# Privelege escalation vulnerabilities as of 1-4-2013
+# OpenPAM also vulnerable.
+# PAM module only needed to limit certain nodes to certain users
+#.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
