@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/03 04:39:28 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/04 15:58:32 othyro Exp $
 
 DISTNAME=	uwsgitop-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,5 +14,6 @@ COMMENT=	Command to interface with the uWSGI stats server
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
+DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
