@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5584 2014/01/04 19:56:34 nros Exp $
+# $Id: Makefile,v 1.5585 2014/01/05 11:26:45 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3704,6 +3704,7 @@ SUBDIR+=	zeromq
 SUBDIR+=	zinf
 SUBDIR+=	ziparchive
 SUBDIR+=	zipios
+SUBDIR+=	zmap
 SUBDIR+=	znc
 SUBDIR+=	zookeeper-client
 SUBDIR+=	zookeeper-server
