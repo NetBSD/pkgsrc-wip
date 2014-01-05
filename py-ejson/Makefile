@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/07 23:16:10 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/05 04:10:07 othyro Exp $
 #
 
 DISTNAME=	0.1.5
@@ -16,7 +16,8 @@ LICENSE=	gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/${PKG}-${PKGVERSION}
 USE_LANGUAGES=	# none
+EGG_NAME=	${PKG}-${DISTNAME}
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
