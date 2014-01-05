@@ -1,0 +1,15 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2014/01/05 11:25:31 thomasklausner Exp $
+
+byacc in pkgsrc is just yacc.
+
+--- src/CMakeLists.txt.orig	2013-12-16 16:34:51.000000000 +0000
++++ src/CMakeLists.txt
+@@ -79,7 +79,7 @@ add_custom_command(OUTPUT lexer.c
+ 	)
+ 
+ add_custom_command(OUTPUT parser.c
+-	COMMAND byacc -d -o parser.c parser.y
++	COMMAND yacc -d -o parser.c parser.y
+ 	)
+ 
+ add_executable(zmap ${SOURCES})
