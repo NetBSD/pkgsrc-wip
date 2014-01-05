@@ -1,4 +1,4 @@
-$NetBSD: patch-uwsgiconfig.py,v 1.3 2014/01/05 04:59:51 othyro Exp $
+$NetBSD: patch-uwsgiconfig.py,v 1.4 2014/01/05 06:21:12 othyro Exp $
 
 Disable inclusion of certain packages by default. Use options framework instead.
 
@@ -12,6 +12,15 @@ Disable inclusion of certain packages by default. Use options framework instead.
      'routing': False,
      'capabilities': False,
      'yaml': False,
+@@ -734,7 +735,7 @@ class uConf(object):
+         if 'UWSGI_PROFILE_OVERRIDE' in os.environ:
+             for item in os.environ['UWSGI_PROFILE_OVERRIDE'].split(';'):
+                 k,v = item.split('=', 2)
+-                uc.set(k, v)
++                self.set(k, v)
+ 
+         if 'UWSGI_AS_LIB' in os.environ:
+             self.set('as_shared_library', 'true')
 @@ -816,6 +817,8 @@ class uConf(object):
          if locking_mode == 'auto':
              if uwsgi_os == 'Linux' or uwsgi_os == 'SunOS':
