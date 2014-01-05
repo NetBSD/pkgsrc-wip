@@ -1,4 +1,4 @@
-$NetBSD: patch-uwsgiconfig.py,v 1.2 2014/01/05 03:37:54 othyro Exp $
+$NetBSD: patch-uwsgiconfig.py,v 1.3 2014/01/05 04:59:51 othyro Exp $
 
 Disable inclusion of certain packages by default. Use options framework instead.
 
@@ -26,7 +26,7 @@ Disable inclusion of certain packages by default. Use options framework instead.
              report['capabilities'] = True
  
 -        if self.has_include('uuid/uuid.h'):
-+        if self.get('uuid') and self.get('uuid') != 'false ' and self.has_include('uuid/uuid.h'):
++        if self.get('uuid') and self.get('uuid') != 'false' and self.has_include('uuid/uuid.h'):
              self.cflags.append("-DUWSGI_UUID")
 -            if uwsgi_os in ('Linux', 'GNU', 'GNU/kFreeBSD') or uwsgi_os.startswith('CYGWIN') or os.path.exists('/usr/lib/libuuid.so') or os.path.exists('/usr/local/lib/libuuid.so') or os.path.exists('/usr/lib64/libuuid.so') or os.path.exists('/usr/local/lib64/libuuid.so'):
 +            if uwsgi_os in ('Linux', 'GNU', 'GNU/kFreeBSD') or uwsgi_os.startswith('CYGWIN') or os.path.exists('/usr/lib/libuuid.so') or os.path.exists('/usr/local/lib/libuuid.so') or os.path.exists('/usr/lib64/libuuid.so') or os.path.exists('/usr/local/lib64/libuuid.so') or os.path.exists(os.environ['PREFIX'] + '/lib/libuuid.so'):
