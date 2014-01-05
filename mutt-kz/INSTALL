@@ -1,0 +1,8 @@
+# $NetBSD: INSTALL,v 1.1 2014/01/05 18:14:48 thomasklausner Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${RM} -f @DOCDIR@/samples
+	${LN} -sf ../../examples/mutt @DOCDIR@/samples
+	;;
+esac
