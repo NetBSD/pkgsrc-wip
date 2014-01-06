@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/11/09 16:26:00 makoto Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/06 10:55:44 jonperkin Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -78,10 +78,12 @@ CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
 CONFIGURE_ARGS+=	--bundled-libraries=tdb,com_err
 CONFIGURE_ENV+=		XSLTPROC=${FALSE} # suppress generation of man pages
 
+WAF_ENV+=		JOBS=${MAKE_JOBS:U1:Q}
+
 CHECK_PORTABILITY_SKIP=	source3/configure
 
 do-build:
-	$(RUN) cd $(WRKSRC) && $(PYTHONBIN) ./buildtools/bin/waf build -v
+	cd ${WRKSRC} && env ${WAF_ENV} ${PYTHONBIN} ./buildtools/bin/waf build -v
 
 #.include "../../net/samba/options.mk"
 
