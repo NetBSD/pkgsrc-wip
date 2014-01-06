@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/13 12:53:54 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/06 02:04:59 othyro Exp $
 bin/scrollz
 bin/${PKGNAME}
 man/man1/scrollz.1
@@ -485,6 +485,7 @@ share/scrollz/help/set/dcc_host
 share/scrollz/help/set/dcc_ports
 share/scrollz/help/set/debug
 share/scrollz/help/set/decrypt_program
+share/scrollz/help/set/default_protocol
 share/scrollz/help/set/display
 share/scrollz/help/set/display_ansi
 share/scrollz/help/set/display_encoding
@@ -598,6 +599,7 @@ share/scrollz/help/set/status_voice
 share/scrollz/help/set/status_window
 share/scrollz/help/set/suppress_server_motd
 share/scrollz/help/set/tab_max
+share/scrollz/help/set/trace
 share/scrollz/help/set/truncate_public_channel
 share/scrollz/help/set/underline_video
 share/scrollz/help/set/user_information
