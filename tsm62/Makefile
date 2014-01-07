@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/10 16:10:32 hfath Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/07 14:13:42 hfath Exp $
 
 DISTNAME=	tsm-6.2.4.0
 PKGREVISION=	4
@@ -22,10 +22,6 @@ NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base
-
-# Make sure suse version equals the above
-DEPENDS+=               suse32_base:../../emulators/suse121_32_base
-EMUL32DIR=		${_OPSYS_EMULDIR.linux32}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -63,6 +59,10 @@ RPMFILES+=		${WRKDIR}/TIVsm-API64.i386.rpm \
 			${WRKDIR}/gskcrypt64-8.0.14.6.linux.x86_64.rpm \
 			${WRKDIR}/gskssl64-8.0.14.6.linux.x86_64.rpm
 
+# Make sure suse pkg version equals the above
+DEPENDS+=               suse32_base:../../emulators/suse121_32_base
+
+EMUL32DIR=		${_OPSYS_EMULDIR.linux32}
 PLIST_SUBST+=		EMUL32DIR=${EMUL32DIR:Q}
 MESSAGE_SUBST+=		EMUL32DIR=${EMUL32DIR:Q}
 MAKE_DIRS+=		${EMUL32DIR}/etc/ld.so.conf.d
