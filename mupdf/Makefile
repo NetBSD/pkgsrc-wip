@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/26 20:46:52 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/07 14:07:26 makoto Exp $
 
 DISTNAME=	mupdf-1.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -22,10 +22,10 @@ SUBST_VARS.makerules+=		PREFIX
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
-LDFLAGS=		${COMPILER_RPATH_FLAG}${X11BASE}/lib
-MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=		V8_PRESENT=no
-MAKE_FLAGS+=		build=release
+LDFLAGS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	V8_PRESENT=no
+MAKE_FLAGS+=	build=release
 
 .include "options.mk"
 
