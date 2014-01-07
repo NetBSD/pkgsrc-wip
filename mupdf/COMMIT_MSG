@@ -1,0 +1,67 @@
+=============================================================================
+List of changes on master since MuPDF 1.2
+
+ * Windows RT viewer app for MuPDF.
+ * Library changes to support progressive loading (display PDF files as
+   they download). Windows/Linux/MacOS viewer supports this using curl.
+ * Incremental updates to PDF files are now (optionally) preserved on
+   loading/saving.
+ * Prototype support for checking PDF Digital Signatures.
+ * Initial annotation support (strike-out, underline, highlight and ink)
+   (library and android builds only).
+ * Fix operation on Android API level 8.
+ * Android redraw optimisations.
+ * Android app now supports Google Cloud Print.
+ * Android app translated into many languages.
+ * Android support for more architectures.
+ * Improvements to store (avoid collisions causing unnecessary evictions).
+ * Windows apps use Unicode filenames now.
+ * PDF function handling improved; functions can now be passed to devices
+   without 'sampling'.
+ * PDF image handling improved; images can now be passed to devices
+   without decompression.
+ * Indexed images are no longer uncompressed at load time, saving memory.
+ * Caching of rendered tiles for speed.
+ * Improved text analysis mode, capable of spotting columns/indents,
+   right-to-left text etc.
+ * HTML output mode now includes image output.
+ * PDF password encoding handling improved.
+ * MuPDF now opens Jpeg, Tiff and PNG files directly.
+ * Bug preventing OpenXPS files from being opened fixed.
+ * Initial (feature incomplete) SVG and PDF output devices.
+ * PWG raster (mono/grey/RGB) and PCL (mono) output devices.
+ * Various performance improvements (including tilings and mesh based
+   shadings).
+ * Revamped directory structure to reflect recent changes.
+ * Various potential SEGV, SoftMask and rendering fixes.
+ * Many potential crashes in Jpeg2000 and JBIG2 images fixed.
+
+List of changes on master since MuPDF 1.1
+
+ * Important API changes:
+    * fz_bbox is now fz_irect.
+    * APIs (including fz_device) now pass fz_rect/fz_matrix by reference.
+    * fz_device API is now more consistent with regards to use of
+      fz_rect rather than fz_bbox.
+ * Add support for Javascript and forms handling.
+ * Fix many SEGVs with out of spec files. Many thanks to Mateusz "j00ru"
+   Jurczyk and Gynvael Coldwind of the Google Security team, zeniko,
+   Sebastian Rasmussen and all other contributors.
+ * Add fz_open_document_with_stream to allow non-file based operation.
+ * Move to using git submodules for third party libraries.
+ * Much enhanced Android application. Now on Google Play!
+ * Oversized and stroke text clipping implemented.
+ * Change shadings to decompose at render times; massive memory savings.
+ * Renamed 'mubusy' to 'mutool'.
+ * PDF 1.7 Extension Level 8 encryption implemented.
+ * Added consts to various parts of the API to help C++ interworking.
+ * Prototype transition support.
+ * Text searching API moved to fitz.
+ * Highlight and copy text selections.
+ * Performance enhancements for color conversion and fax decompression.
+ * ARM optimisations for color conversion and bitmap scaling.
+ * Bitmap subsampling stage introduced, with ARM optimisations.
+ * Type 3 fonts; glyphs are now handled as display lists.
+ * Scan converter performance improvements.
+ * Various rendering fixes.
+=============================================================================
