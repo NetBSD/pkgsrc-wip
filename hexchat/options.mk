@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/01/06 23:05:18 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2014/01/07 00:00:45 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
 PKG_SUPPORTED_OPTIONS=	dbus gtk2 inet6 libcanberra libnotify libpci libproxy
@@ -48,6 +48,12 @@ CONFIGURE_ARGS+=	--disable-libnotify
 
 .if !empty(PKG_OPTIONS:Mlibpci)
 .include "../../sysutils/pciutils/buildlink3.mk"
+.if ${OPSYS} == "NetBSD"
+LIBS+=			-lpciutils
+.else
+LIBS+=			-lpci
+.endif
+
 PLIST.libpci=		yes
 .endif
 
