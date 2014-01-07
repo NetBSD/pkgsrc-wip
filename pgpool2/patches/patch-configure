@@ -1,7 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2013/05/02 20:02:42 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2014/01/07 15:47:07 fhajny Exp $
 
 Pick a better name for the package.
---- configure.orig	2013-04-30 11:16:09.907423424 +0000
+--- configure.orig	2013-11-29 02:35:44.000000000 +0000
 +++ configure
 @@ -3955,7 +3955,7 @@ fi
  
@@ -9,6 +9,6 @@ Pick a better name for the package.
  # Define the identity of the package.
 - PACKAGE=pgpool-II
 + PACKAGE=pgpool2
-  VERSION=3.2.4
+  VERSION=3.3.2
  
  
