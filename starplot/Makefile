@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/08 16:03:35 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/08 18:22:08 christtrekker Exp $
 
 DISTNAME=	starplot-0.95.5
-CATEGORIES=	misc
+CATEGORIES=	misc x11
 MASTER_SITES=	http://starplot.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
