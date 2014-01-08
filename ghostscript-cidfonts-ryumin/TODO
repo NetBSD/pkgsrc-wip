@@ -52,3 +52,26 @@ case 1 2 3 4
   PKG_OPTIONS.ghostscript-gpl+= disable-compile-inits
 
   PKG_OPTIONS.gcr_type= ipa
+
+(Above problem may need following patch)
+
+Index: fonts/ghostscript-cidfonts/Makefile
+===================================================================
+RCS file: /cvs/cvsroot/pkgsrc/fonts/ghostscript-cidfonts/Makefile,v
+retrieving revision 1.19
+diff -u -r1.19 Makefile
+--- fonts/ghostscript-cidfonts/Makefile	25 Dec 2013 12:12:36 -0000	1.19
++++ fonts/ghostscript-cidfonts/Makefile	8 Jan 2014 15:11:42 -0000
+@@ -26,6 +26,12 @@
+ 
+ REQD_DIRS=		${GS_RESOURCEDIR} ${GS_RESOURCEDIR}/CIDFont
+ 
++.if   !empty(PKG_OPTIONS.gs_type:Mghostscript-gpl)
++. include       "../../print/ghostscript-gpl/Makefile.common"
++.else
++. include       "../../print/ghostscript-agpl/Makefile.common"
++.endif
++
+ do-install:	# nothing
+ 
+ .include "../../mk/bsd.pkg.mk"
