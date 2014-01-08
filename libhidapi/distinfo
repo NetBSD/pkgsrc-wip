@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/01/08 12:38:44 nsloss Exp $
+
+SHA1 (hidapi-0.7.0.zip) = 7535ef41c02217a6002db91e2381ad08e6dd10ea
+RMD160 (hidapi-0.7.0.zip) = d23e70a01252a7cdb091ad94459e1c87c63245d2
+Size (hidapi-0.7.0.zip) = 1633199 bytes
+SHA1 (patch-Makefile) = 8d5bebc84f95a26fd2352f5fa089788d37a42191
+SHA1 (patch-linux_hid-libusb.c) = 908032c29cbdb0e4aef0eaa370d840a8a8696eea

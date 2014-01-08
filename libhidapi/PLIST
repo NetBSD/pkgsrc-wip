@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/08 12:38:44 nsloss Exp $
+include/hidapi/hidapi.h
+lib/libhidapi.so
+lib/libhidapi.so.0
+lib/libhidapi.so.${PKGVERSION}
