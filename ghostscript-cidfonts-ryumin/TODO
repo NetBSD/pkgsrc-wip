@@ -41,3 +41,14 @@ case 1 2 3 4
 
   PKG_OPTIONS.gcr_type= -ipa
   PKG_OPTIONS.gcr_type= adobe-cidfonts
+
+  Can't find (or can't open) font file /usr/pkg/share/ghostscript/9.10/Resource/Font/CIDFont.
+  Can't find (or can't open) font file CIDFont.
+
+- Following case WORKS
+  PKG_OPTIONS.gs_type=ghostscript-agpl
+  PKG_OPTIONS.ghostscript-agpl+=       disable-compile-inits
+  PKG_OPTIONS.ghostscript+= disable-compile-inits
+  PKG_OPTIONS.ghostscript-gpl+= disable-compile-inits
+
+  PKG_OPTIONS.gcr_type= ipa
