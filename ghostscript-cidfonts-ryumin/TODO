@@ -1,16 +1,43 @@
+(TODO)
+- Build with following test combinations and 'gs including-Japanese.ps'
 - Test combinations
-  (1)
+  (1) Select one of two below
   PKG_OPTIONS.gs_type=	ghostscript-gpl
   PKG_OPTIONS.gs_type=	ghostscript-agpl
-  (2)  
+
+  (2)  put two lines at once (or not)
   PKG_OPTIONS.ghostscript-agpl+=	disable-compile-inits
   PKG_OPTIONS.ghostscript-gpl+=		disable-compile-inits
-  (or not)
-  (3)
+
+  (3)  Select gcr_type, for example:
   PKG_OPTIONS.gcr_type= ipa
   PKG_OPTIONS.gcr_type= adobe-cidfonts
 
+- Check special case, 
+   ghostscript is NEITHER compiled nor installed
+   ghostscript is already compiled and installed without option shown above (2)
+   ghostscript is already compiled and installed with option shown above (2)
+
+(DONE)
 - tested with following two lines in /etc/mk.conf  and (1) x 2 (2) x 2
-  PKG_OPTIONS.gcr_type= adobe-cidfonts -ipa
+case 1 2 3 4
+  (and gs neither compiled nor installed)
   PKG_OPTIONS.gcr_type= ipa
 
+- Following are set and from scratch
+  PKG_OPTIONS.gs_type=	ghostscript-gpl
+
+  PKG_OPTIONS.ghostscript-agpl+=       disable-compile-inits
+  PKG_OPTIONS.ghostscript-gpl+= disable-compile-inits
+
+  PKG_OPTIONS.gcr_type= -ipa
+  PKG_OPTIONS.gcr_type= adobe-cidfonts
+
+- Following case doesn't work for now
+  PKG_OPTIONS.gs_type=ghostscript-agpl
+  PKG_OPTIONS.ghostscript-agpl+=       disable-compile-inits
+  PKG_OPTIONS.ghostscript+= disable-compile-inits
+  PKG_OPTIONS.ghostscript-gpl+= disable-compile-inits
+
+  PKG_OPTIONS.gcr_type= -ipa
+  PKG_OPTIONS.gcr_type= adobe-cidfonts
