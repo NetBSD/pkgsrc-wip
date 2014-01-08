@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/04/26 12:06:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/08 00:51:31 cheusov Exp $
 #
 
 DISTNAME=	pdsh-2.29
 CATEGORIES=	parallel
-MASTER_SITES=	https://pdsh.googlecode.com/files/
+MASTER_SITES=	http://pdsh.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	filip@joyent.com
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS=	perl:run
+USE_TOOLS+=	perl:run
 
 REPLACE_PERL+=		scripts/dshbak
 
