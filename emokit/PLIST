@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/08 12:33:23 nsloss Exp $
+bin/emokitd
+include/emokit/emokit.h
+lib/libemokit.a
