@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/22 23:39:34 pallegra Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/09 12:03:36 thomasklausner Exp $
 
 .include "../../wip/glsl/Makefile.common"
 
@@ -33,5 +32,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/glsl/glsl_compiler \
 	    ${DESTDIR}${PREFIX}/bin
 
-.include "../../wip/talloc/buildlink3.mk"
+.include "../../devel/talloc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

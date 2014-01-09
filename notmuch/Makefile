@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/04 12:48:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/09 12:03:36 thomasklausner Exp $
 
 DISTNAME=	notmuch-0.17
 CATEGORIES=	mail
@@ -18,5 +18,5 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../mail/gmime24/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
-.include "../../wip/talloc/buildlink3.mk"
+.include "../../devel/talloc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
