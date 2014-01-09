@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2014/01/08 13:16:18 makoto Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/09 01:39:59 makoto Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 DISTFILES=	# empty
 PKGREVISION=	6
 CATEGORIES=	fonts
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	makoto@ki.nu
 COMMENT=	Enable Ryumin-Light and GothicBBB for ghostscript
 LICENSE=	2-clause-bsd
 
@@ -46,7 +46,7 @@ do-install:
 .if !empty(GS_CIDFMAP)
 	${INSTALL_DATA} ${WRKSRC}/${GS_CIDFMAP} ${DESTDIR}${PREFIX}/${GS_RESOURCEDIR}/Init/cidfmap
 .endif
-	# mainly Ryumin and GothicBBB
+#  mainly Ryumin and GothicBBB
 	${INSTALL_DATA} files/${GCR_INSTALL_TYPE}/[GR]*   ${DESTDIR}${PREFIX}/${GS_RESOURCEDIR}/Font
 
 # no need to edit cidfmap
@@ -57,11 +57,14 @@ NO_BUILD=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
+# Set options for ghostscript in case the package are not built yet:
+# But for pbulk, it will override default binary package with this option (?)
+# No. Probably fails because build already done, and stops with following FAIL_REASON.
 PKG_OPTIONS.ghostscript-agpl+=	disable-compile-inits
 PKG_OPTIONS.ghostscript-gpl+=	disable-compile-inits
 .include "../../print/ghostscript/buildlink3.mk"
 
-# Following logic is flakey, for looking at PKG_OPTIONS.gs_type now NOT at build time
+# Following logic is flaky, for looking at PKG_OPTIONS.gs_type now NOT at build time
 .if   !empty(PKG_OPTIONS.gs_type:Mghostscript-gpl)
 . include	"../../print/ghostscript-gpl/Makefile.common"
 . if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits)
