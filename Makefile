@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5592 2014/01/08 16:05:04 christtrekker Exp $
+# $Id: Makefile,v 1.5593 2014/01/09 09:38:54 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1084,6 +1084,7 @@ SUBDIR+=	hs-hslua
 SUBDIR+=	hs-html
 SUBDIR+=	hs-http-attoparsec
 SUBDIR+=	hs-http-types
+SUBDIR+=	hs-husk-scheme
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-charproperties
 SUBDIR+=	hs-hxt-curl
