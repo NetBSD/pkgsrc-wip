@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/01/07 14:13:42 hfath Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/09 13:42:06 hfath Exp $
 
 DISTNAME=	tsm-6.2.4.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v6r2/Linux/LinuxX86/v624/
 DISTFILES=	6.2.4.0-TIV-TSMBAC-LinuxX86.tar
@@ -62,10 +62,13 @@ RPMFILES+=		${WRKDIR}/TIVsm-API64.i386.rpm \
 # Make sure suse pkg version equals the above
 DEPENDS+=               suse32_base:../../emulators/suse121_32_base
 
-EMUL32DIR=		${_OPSYS_EMULDIR.linux32}
+EMUL32DIR=		${PREFIX}${_OPSYS_EMULDIR.linux32}
 PLIST_SUBST+=		EMUL32DIR=${EMUL32DIR:Q}
 MESSAGE_SUBST+=		EMUL32DIR=${EMUL32DIR:Q}
 MAKE_DIRS+=		${EMUL32DIR}/etc/ld.so.conf.d
+
+LDCONFIG_ADD_CMD=	${EMULDIR}/sbin/ldconfig ; ${EMUL32DIR}/sbin/ldconfig
+LDCONFIG_REMOVE_CMD=	${LDCONFIG_ADD_CMD}
 .endif
 
 .include "options.mk"
@@ -89,15 +92,15 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/tsm_ld.so.conf.${MACHINE_ARCH} \
 		${DESTDIR}${EMULDIR}/etc/ld.so.conf.d/tsm_ld.so.conf
 .if ${EMUL_PLATFORM} == "linux-x86_64"
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${EMUL32DIR}/opt
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMUL32DIR}/opt
 	${LN} -s /..${EMULDIR}/opt/tivoli/ \
-		${DESTDIR}${PREFIX}${EMUL32DIR}/opt/tivoli
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${EMUL32DIR}/usr/local/ibm
+		${DESTDIR}${EMUL32DIR}/opt/tivoli
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMUL32DIR}/usr/local/ibm
 	${LN} -s /..${EMULDIR}/usr/local/ibm/gsk8/ \
-		${DESTDIR}${PREFIX}${EMUL32DIR}/usr/local/ibm/gsk8
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${EMUL32DIR}/etc/ld.so.conf.d
+		${DESTDIR}${EMUL32DIR}/usr/local/ibm/gsk8
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMUL32DIR}/etc/ld.so.conf.d
 	${INSTALL_DATA} ${FILESDIR}/tsm_ld.so.conf.i386 \
-		${DESTDIR}${PREFIX}${EMUL32DIR}/etc/ld.so.conf.d/tsm_ld.so.conf
+		${DESTDIR}${EMUL32DIR}/etc/ld.so.conf.d/tsm_ld.so.conf
 .endif
 	${LN} -s /..${PKG_SYSCONFDIR}/dsm.sys \
 		${DESTDIR}${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/
@@ -105,10 +108,10 @@ post-install:
 		${DESTDIR}${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/
 	${LN} -s ../../lang/EN_US \
 		${DESTDIR}${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 .for bb in ${PUBLIC_BINS}
 	${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/${bb} \
-		${DESTDIR}/${PREFIX}/bin/${bb}
+		${DESTDIR}${PREFIX}/bin/${bb}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
