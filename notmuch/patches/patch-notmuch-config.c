@@ -1,10 +1,10 @@
-$NetBSD: patch-notmuch-config.c,v 1.2 2014/01/04 13:26:14 thomasklausner Exp $
+$NetBSD: patch-notmuch-config.c,v 1.3 2014/01/09 10:27:10 thomasklausner Exp $
 
 NULL as second argument for realpath() is only supported in glibc
 and POSIX 2008. Work around this.  See BUGS section for problems:
 http://man7.org/linux/man-pages/man3/realpath.3.html
 
---- notmuch-config.c.orig	2013-08-03 11:29:40.000000000 +0000
+--- notmuch-config.c.orig	2013-12-31 00:39:25.000000000 +0000
 +++ notmuch-config.c
 @@ -23,6 +23,8 @@
  #include <pwd.h>
@@ -38,7 +38,7 @@ http://man7.org/linux/man-pages/man3/realpath.3.html
 -		g_free (data);
 -		return 1;
 -	    }
-+	    strcpy(filename, config->filename);
++	    strncpy(filename, config->filename, MAXPATHLEN);
  	} else {
  	    fprintf (stderr, "Error canonicalizing %s: %s\n", config->filename,
  		     strerror (errno));
