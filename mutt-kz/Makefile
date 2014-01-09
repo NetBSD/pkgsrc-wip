@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/05 18:14:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/09 12:24:03 thomasklausner Exp $
 
 DISTNAME=       mutt-kz-1.5.22.1-rc1
 PKGNAME=        ${DISTNAME:S/-rc/rc/}
@@ -63,7 +63,7 @@ SUBST_STAGE.paths=	pre-configure
 SPECIAL_PERMS+=	bin/mutt_dotlock ${REAL_ROOT_USER} mail 2551
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
-.include "../../wip/notmuch/buildlink3.mk"
+.include "../../mail/notmuch/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
