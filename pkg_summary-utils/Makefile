@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2013/02/09 11:50:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.67 2014/01/09 23:19:18 cheusov Exp $
 
-DISTNAME=	pkg_summary-utils-9
+DISTNAME=	pkg_summary-utils-0.62.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,13 +14,13 @@ GIT_REPOSITORIES=		pkg_summary-utils
 GIT_REPO.pkg_summary-utils=	git://github.com/cheusov/pkg_summary-utils.git
 .include "../../wip/mk/git-package.mk"
 
+DEPENDS+=	paexec>=0.19.1:../../parallel/paexec
 DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
 BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
-CONFLICTS+=	paexec<0.17.0
 CONFLICTS+=	awk-pkgsrc-dewey-[0-9]*
 CONFLICTS+=	pkg_src_summary-[0-9]*
 CONFLICTS+=	pkg_cmp_summary-[0-9]*
@@ -34,7 +34,10 @@ CONFLICTS+=	pkg_summary4view-[0-9]*
 #    bmake test TESTS='pkg_subgraph_deps pkg_bin_summary ...'
 TEST_TARGET=		test
 
-USE_LANGUAGES=		#empty
+BUILD_TARGET=		all all-doc
+INSTALL_TARGET=		install install-doc
+
+USE_LANGUAGES=		c
 USE_TOOLS+=		gzip:run
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -51,9 +54,10 @@ REPLACE_SH=	tests/test.sh pkg_digger.in pkg_digger_backend.in \
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
-REPLACE_FILES.runawk=	get_processed_pkgs.in pkg_*.in XB2bin_summary.in \
-	direct_deps.in summary2multi_variants.in enrich_summary.in \
-	makefiles2deps.in
+REPLACE_FILES.runawk=	scripts/get_processed_pkgs.in scripts/pkg_*.in \
+	scripts/XB2bin_summary.in scripts/direct_deps.in \
+	scripts/summary2multi_variants.in scripts/enrich_summary.in \
+	scripts/makefiles2deps.in
 
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
 MAKE_ENV+=	EGDIR=${EGDIR}
