@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/01 23:05:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/09 11:40:53 thomasklausner Exp $
+include/pytalloc.h
 include/talloc.h
-lib/libtalloc.a
-lib/libtalloc.so.2.0.1
+lib/libpytalloc-util.so
+lib/libpytalloc-util.so.2
+lib/libpytalloc-util.so.${PKGVERSION}
+lib/libtalloc.so
+lib/libtalloc.so.2
+lib/libtalloc.so.${PKGVERSION}
+lib/pkgconfig/pytalloc-util.pc
 lib/pkgconfig/talloc.pc
-man/man3/talloc.3
+${PYSITELIB}/talloc.so
