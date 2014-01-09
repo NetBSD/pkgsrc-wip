@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/09 01:39:59 makoto Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/09 05:56:02 makoto Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 DISTFILES=	# empty
@@ -59,21 +59,25 @@ NO_CONFIGURE=	yes
 
 # Set options for ghostscript in case the package are not built yet:
 # But for pbulk, it will override default binary package with this option (?)
-# No. Probably fails because build already done, and stops with following FAIL_REASON.
-PKG_OPTIONS.ghostscript-agpl+=	disable-compile-inits
-PKG_OPTIONS.ghostscript-gpl+=	disable-compile-inits
+# No. Probably fails because build already done, and stops with FAIL_REASON being checked below.
+## PKGSRC_MAKE_ENV+=      PKG_OPTIONS.ghostscript+=disable-compile-inits
+## PKG_OPTIONS.ghostscript+=	disable-compile-inits
+# Either above gives no effect, you need set manually on /etc/mk.conf or so
+# You may check if this option is enabled or not, by looking the string
+# 'Initialization file are compiled into the executable.' when 'gs --help |grep Init'
+# (String above shown means option is NOT selected.)
 .include "../../print/ghostscript/buildlink3.mk"
 
 # Following logic is flaky, for looking at PKG_OPTIONS.gs_type now NOT at build time
-.if   !empty(PKG_OPTIONS.gs_type:Mghostscript-gpl)
-. include	"../../print/ghostscript-gpl/Makefile.common"
-. if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits)
-PKG_FAIL_REASON+=	'(gpl) You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
-. endif
-.else
+.if   !empty(PKG_OPTIONS.gs_type:Mghostscript-agpl)
 . include	"../../print/ghostscript-agpl/Makefile.common"
 . if empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mdisable-compile-inits)
 PKG_FAIL_REASON+=	'(agpl) You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
+. endif
+.else
+. include	"../../print/ghostscript-gpl/Makefile.common"
+. if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits)
+PKG_FAIL_REASON+=	'(gpl) You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
 . endif
 .endif
 
