@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5595 2014/01/09 12:28:49 thomasklausner Exp $
+# $Id: Makefile,v 1.5596 2014/01/09 14:31:30 makoto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1775,7 +1775,6 @@ SUBDIR+=	mumble
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node
-SUBDIR+=	mupdf
 SUBDIR+=	mupen64
 SUBDIR+=	mupen64-base
 SUBDIR+=	mupen64-plugin-input
