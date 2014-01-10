@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5596 2014/01/09 14:31:30 makoto Exp $
+# $Id: Makefile,v 1.5597 2014/01/10 09:51:21 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1660,7 +1660,6 @@ SUBDIR+=	mawk-tre
 SUBDIR+=	mawk-uxre
 SUBDIR+=	maxima
 SUBDIR+=	mc-mp
-SUBDIR+=	mcabber
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mce
