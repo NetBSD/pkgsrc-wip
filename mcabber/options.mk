@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2009/11/14 11:37:23 zul_ Exp $
+# $NetBSD: options.mk,v 1.4 2014/01/10 09:48:52 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mcabber
-PKG_SUPPORTED_OPTIONS=	ssl gpgme otr aspell enchant
-PKG_SUGGESTED_OPTIONS=	gpgme ssl
+PKG_SUPPORTED_OPTIONS=	aspell enchant gpgme otr ssl
+PKG_SUGGESTED_OPTIONS=	gpgme otr ssl
 
 .include "../../mk/bsd.options.mk"
 
