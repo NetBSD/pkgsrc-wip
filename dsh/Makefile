@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:38 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/10 21:13:45 cheusov Exp $
 #
 
 DISTNAME=	dsh-0.25.10
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.netfort.gr.jp/~dancer/software/downloads/
 MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://www.netfort.gr.jp/~dancer/software/downloads/
 COMMENT=	Runs command through rsh or ssh on a cluster of machines
+LICENSE=	gnu-gpl-v2
 
 EGDIR=			${PREFIX}/share/examples/dsh
 GNU_CONFIGURE=		yes
