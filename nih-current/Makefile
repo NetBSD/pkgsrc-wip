@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2013/02/09 20:12:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/10 01:56:25 cheusov Exp $
 
-DISTNAME=	pkgnih-999
-PKGNAME=	nih-999
+DISTNAME=	pkg${PKGNAME}
+PKGNAME=	nih-0.11.0
 CATEGORIES=	pkgtools
 
 MAINTAINER=	cheusov@NetBSD.org
