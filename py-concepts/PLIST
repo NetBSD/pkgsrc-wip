@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/11 21:49:09 jihbed Exp $
+${PYSITELIB}/concepts/__init__.py
+${PYSITELIB}/concepts/__init__.pyc
+${PYSITELIB}/concepts/__init__.pyo
+${PYSITELIB}/concepts/contexts.py
+${PYSITELIB}/concepts/contexts.pyc
+${PYSITELIB}/concepts/contexts.pyo
+${PYSITELIB}/concepts/formats.py
+${PYSITELIB}/concepts/formats.pyc
+${PYSITELIB}/concepts/formats.pyo
+${PYSITELIB}/concepts/graphviz.py
+${PYSITELIB}/concepts/graphviz.pyc
+${PYSITELIB}/concepts/graphviz.pyo
+${PYSITELIB}/concepts/lattices.py
+${PYSITELIB}/concepts/lattices.pyc
+${PYSITELIB}/concepts/lattices.pyo
+${PYSITELIB}/concepts/matrices.py
+${PYSITELIB}/concepts/matrices.pyc
+${PYSITELIB}/concepts/matrices.pyo
+${PYSITELIB}/concepts/relations.py
+${PYSITELIB}/concepts/relations.pyc
+${PYSITELIB}/concepts/relations.pyo
+${PYSITELIB}/concepts/tools.py
+${PYSITELIB}/concepts/tools.pyc
+${PYSITELIB}/concepts/tools.pyo
