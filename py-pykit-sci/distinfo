@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/11 22:34:29 jihbed Exp $
+
+SHA1 (pykit-sci-0.1.6.tar.gz) = 5b221f97a1c20a5e23fb1ff44cd3d116e73438a4
+RMD160 (pykit-sci-0.1.6.tar.gz) = bb9ed4b07356b1cd5f2376d2d4b0cc6817c7e935
+Size (pykit-sci-0.1.6.tar.gz) = 249586 bytes
