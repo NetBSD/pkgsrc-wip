@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/11 21:34:46 jihbed Exp $
+${PYSITELIB}/bitsets/__init__.py
+${PYSITELIB}/bitsets/__init__.pyc
+${PYSITELIB}/bitsets/__init__.pyo
+${PYSITELIB}/bitsets/bases.py
+${PYSITELIB}/bitsets/bases.pyc
+${PYSITELIB}/bitsets/bases.pyo
+${PYSITELIB}/bitsets/combos.py
+${PYSITELIB}/bitsets/combos.pyc
+${PYSITELIB}/bitsets/combos.pyo
+${PYSITELIB}/bitsets/integers.py
+${PYSITELIB}/bitsets/integers.pyc
+${PYSITELIB}/bitsets/integers.pyo
+${PYSITELIB}/bitsets/meta.py
+${PYSITELIB}/bitsets/meta.pyc
+${PYSITELIB}/bitsets/meta.pyo
+${PYSITELIB}/bitsets/series.py
+${PYSITELIB}/bitsets/series.pyc
+${PYSITELIB}/bitsets/series.pyo

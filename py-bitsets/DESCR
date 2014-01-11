@@ -1,0 +1,2 @@
+Bitsets are ordered sets which are subsets of a predefined finite
+domain of hashable items
