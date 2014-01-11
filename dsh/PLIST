@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:33 thomasklausner Exp $
-bin/dsh
-man/ja/man1/dsh.1
-man/ja/man5/dsh.conf.5
-man/man1/dsh.1
-man/man5/dsh.conf.5
-share/examples/dsh/dsh.conf

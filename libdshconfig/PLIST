@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/09 21:07:06 shindenmorr Exp $
-include/libdshconfig.h
-lib/libdshconfig.la
