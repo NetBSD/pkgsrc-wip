@@ -1,0 +1,14 @@
+$NetBSD: patch-src_llvm_utils_lit_utils_check-sdist,v 1.1 2014/01/11 18:29:57 schmonz Exp $
+
+Shell portability fix.
+
+--- src/llvm/utils/lit/utils/check-sdist.orig	2013-09-20 01:36:02.000000000 +0000
++++ src/llvm/utils/lit/utils/check-sdist
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-if [ $# == 1 ]; then
++if [ $# = 1 ]; then
+     cd $1
+ fi
+ 
