@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/15 20:35:02 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/11 22:20:53 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,7 +8,13 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pint/__init__.py
 ${PYSITELIB}/pint/__init__.pyc
 ${PYSITELIB}/pint/__init__.pyo
+${PYSITELIB}/pint/compat.py
+${PYSITELIB}/pint/compat.pyc
+${PYSITELIB}/pint/compat.pyo
 ${PYSITELIB}/pint/constants_en.txt
+${PYSITELIB}/pint/context.py
+${PYSITELIB}/pint/context.pyc
+${PYSITELIB}/pint/context.pyo
 ${PYSITELIB}/pint/default_en.txt
 ${PYSITELIB}/pint/measurement.py
 ${PYSITELIB}/pint/measurement.pyc
@@ -19,6 +25,9 @@ ${PYSITELIB}/pint/quantity.pyo
 ${PYSITELIB}/pint/testsuite/__init__.py
 ${PYSITELIB}/pint/testsuite/__init__.pyc
 ${PYSITELIB}/pint/testsuite/__init__.pyo
+${PYSITELIB}/pint/testsuite/test_contexts.py
+${PYSITELIB}/pint/testsuite/test_contexts.pyc
+${PYSITELIB}/pint/testsuite/test_contexts.pyo
 ${PYSITELIB}/pint/testsuite/test_issues.py
 ${PYSITELIB}/pint/testsuite/test_issues.pyc
 ${PYSITELIB}/pint/testsuite/test_issues.pyo
