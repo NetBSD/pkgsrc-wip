@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2013/07/07 11:42:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/11 10:29:22 thomasklausner Exp $
 
 DISTNAME=	swift-2.0
 CATEGORIES=	chat
 MASTER_SITES=	http://swift.im/downloads/releases/swift-2.0/
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://www.swift.im/
+HOMEPAGE=	http://swift.im/
 COMMENT=	Swift XMPP Client
 LICENSE=	gnu-gpl-v3
 
