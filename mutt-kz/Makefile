@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/09 12:24:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/11 21:00:17 thomasklausner Exp $
 
 DISTNAME=       mutt-kz-1.5.22.1-rc1
 PKGNAME=        ${DISTNAME:S/-rc/rc/}
@@ -6,7 +6,7 @@ CATEGORIES=     mail
 MASTER_SITES=   ftp://redcrew.org/pub/mutt-kz/v1.5.22.1/
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.mutt.org/
+HOMEPAGE=		https://kzak.redcrew.org/doku.php?id=mutt:start
 COMMENT=		Text-based MIME mail client with notmuch, PGP & S/MIME support
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
