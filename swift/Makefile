@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/11 10:29:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/11 15:27:23 thomasklausner Exp $
 
 DISTNAME=	swift-2.0
 CATEGORIES=	chat
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	scons>=1.3:../../devel/scons
 
 USE_LANGUAGES=	c c++
-PYTHON_VERSIONS_ACCEPTED=	31 27 26
+USE_TOOLS+=	pkg-config
 
 # MAKE_ENV+= CPPPATH="${BUILDLINK_DIR}/include:${BUILDLINK_DIR}/qt4/include"
 # MAKE_ENV+= LIBPATH="${BUILDLINK_DIR}/lib:${BUILDLINK_DIR}/qt4/lib"
@@ -32,9 +32,7 @@ do-install:
 	    SWIFT_INSTALLDIR=${DESTDIR}/${PREFIX} ${DESTDIR}/${PREFIX}
 
 .include "../../lang/python/application.mk"
-# should use boost-libs from pkgsrc, but that's too new and it won't compile against it
-# so use included copy for now
-#.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
