@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/11 21:08:26 jihbed Exp $
+
+SHA1 (pykit-shared-0.1.9.tar.gz) = ac41aa240f790d6a724dda1090a02246b9410512
+RMD160 (pykit-shared-0.1.9.tar.gz) = 2345db8528e44c1d152d378ae98c424eb007106c
+Size (pykit-shared-0.1.9.tar.gz) = 64796 bytes
