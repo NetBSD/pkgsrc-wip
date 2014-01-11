@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/04 16:23:02 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/11 13:05:44 nros Exp $
 #
 
 PREMAKE4_VERSION=	4.3
@@ -15,6 +15,8 @@ LICENSE=		modified-bsd
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/premake-${PREMAKE4_VERSION}
+
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 do-build:
 	cd ${WRKSRC}/build/gmake.unix/ && ${MAKE_PROGRAM}
