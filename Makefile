@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5597 2014/01/10 09:51:21 thomasklausner Exp $
+# $Id: Makefile,v 1.5598 2014/01/11 15:31:52 cheusov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -500,7 +500,6 @@ SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
 SUBDIR+=	dscan
-SUBDIR+=	dsh
 SUBDIR+=	dssi
 SUBDIR+=	duali-data
 SUBDIR+=	duff
@@ -1453,7 +1452,6 @@ SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole
 SUBDIR+=	libdmx
 SUBDIR+=	libdoozer
-SUBDIR+=	libdshconfig
 SUBDIR+=	libdsk
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libecc
