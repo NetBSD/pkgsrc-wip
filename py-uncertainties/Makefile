@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/03 19:05:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/12 09:43:46 thomasklausner Exp $
 
 DISTNAME=	uncertainties-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 33 32 27 26
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"

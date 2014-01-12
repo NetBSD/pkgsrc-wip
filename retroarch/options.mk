@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/07/02 11:02:45 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/12 09:43:46 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
 PKG_SUPPORTED_OPTIONS=	alsa cg ffmpeg freetype jack libxml2 openal opengl oss
@@ -98,7 +98,7 @@ CONFIGURE_ARGS+=		--disable-pulse
 .if !empty(PKG_OPTIONS:Mpython)
 .include "../../lang/python/pyversion.mk"
 CONFIGURE_ARGS+=		--enable-python
-PYTHON_VERSIONS_ACCEPTED=	32 31
+PYTHON_VERSIONS_ACCEPTED=	33
 .else
 CONFIGURE_ARGS+=		--disable-python
 .endif

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/12 09:43:46 thomasklausner Exp $
 
 DISTNAME=	bind10-devel-20120329
 CATEGORIES=	net
@@ -10,7 +9,6 @@ HOMEPAGE=	http://www.isc.org/bind10
 COMMENT=	ISC Bind 10 devel-20120119 (snapshot #19)
 LICENSE=	isc
 
-PYTHON_VERSIONS_ACCEPTED=	31
 PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 PLIST_SUBST+=	PYSITELIB="${PYSITELIB}"
