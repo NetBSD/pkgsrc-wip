@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/11/10 20:15:56 airhead Exp $
+# $NetBSD: options.mk,v 1.2 2014/01/12 21:07:14 cheusov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.texlive
 PKG_OPTIONS_REQUIRED_GROUPS=	texmf
@@ -9,11 +9,11 @@ PKG_SUGGESTED_OPTIONS=		texmf-minimal
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mtexmf-full)
-DEPENDS+=	texlive-texmf-full>=[0-9]*:../../wip/texlive-texmf-full
+DEPENDS+=	texlive-texmf-full-[0-9]*:../../wip/texlive-texmf-full
 .endif
 
 .if !empty(PKG_OPTIONS:Mtexmf-minimal)
-DEPENDS+=	texlive-texmf-minimal>=[0-9]*:../../wip/texlive-texmf-minimal
+DEPENDS+=	texlive-texmf-minimal-[0-9]*:../../wip/texlive-texmf-minimal
 .endif
 
 #
@@ -21,5 +21,5 @@ DEPENDS+=	texlive-texmf-minimal>=[0-9]*:../../wip/texlive-texmf-minimal
 # I guess this means there's no matching doc package for the minimal texmf set
 #
 .if !empty(PKG_OPTIONS:Mtexmf-doc)
-DEPENDS+=	texlive-texmf-doc>=[0-9]*:../../wip/texlive-texmf-doc
+DEPENDS+=	texlive-texmf-doc-[0-9]*:../../wip/texlive-texmf-doc
 .endif
