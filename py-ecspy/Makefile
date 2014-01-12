@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/16 10:57:18 jihbed Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/12 09:45:47 thomasklausner Exp $
 
 DISTNAME=	ecspy-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-pp>=1.6.0:../../wip/py-pp
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE= 32 31
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
