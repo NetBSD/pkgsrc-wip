@@ -1,0 +1,52 @@
+(Upstream) Version 9.06 (2012-08-08)
+
+This is the sixth full release in the stable 9.x series.
+
+Highlights in this release include:
+
+  * PDF/A-2 - pdfwrite now supports the creation of PDF/A-2 files. The 'PDFA'
+    command line switch can now take a numeric parameter:
+      + 0 = not PDF/A compliant
+      + 1 = PDF/A-1b compliant
+      + 2 = PDF/A-2b compliant
+
+    Simply specifying "-dPDFA" continues to have the old behaviour of creating
+    PDF/A-1b files. For PDF/A-2 the command line should include "-dPDFA=2".
+  * pdfwrite "Server mode" - pdfwrite can now be run in "server mode" which
+    allows the device to be closed without closing the interpreter. This means
+    it is no longer necessary to terminate GS before starting a new PDF
+    conversion. This leads on to:
+  * pdfwrite now supports the "%d" format in the OutputFile switch. If this is
+    set then pdfwrite will output each page of input to an individual file.
+  * ps2write - recent exposure to a range of PostScript devices has thrown up
+    some interesting deficiencies in those devices. ps2write now emits
+    PostScript in slightly different ways in order to produce output on a wider
+    variety of devices. In some cases this also results in improved print times
+    but it is still important to set the resolution appropriately for the
+    output device, especially if the input contains transparency.
+  * Ghostscript can now use output intents defined in PDFs by using the
+    "-dUsePDFX3Profile" command line option. See ICC Color Parameters for
+    details.
+  * tiffsep/tiffsep1: support for large numbers of separations improved. The
+    previous implementation of those devices utilised a "compressed color
+    encoding" to represent the tints for all the plates in one 64 bit value. As
+    the number of plates increased, fewer bits were available for the tint for
+    each plate, ultimately resulting in an "unencodable pixels" error. These
+    revisions remove the reliance on the compressed color encoding, thus
+    ensuring that we have a consistent color bit depth, regardless of the
+    number of plates, and ensuring the "unencodable pixels" error will never
+    occur.
+
+    Also as a result of these changes, there are substantial performance
+    improvements in jobs with separations and transparency.
+  * tiffsep, psdcmyk and psdrgb now support the "downscaler" functionality.
+    This brings the "tiffscaled" style functionality to the DeviceN output
+    devices, so jobs can be rendered internally in contone and at a high
+    resolution, and the output optionally downsampled by a level specified by
+    "-dDownScaleFactor=n", and also optionally error diffused to 1bpp output.
+  * Third party libraries: libtiff, libpng, libjpeg , Freetype and zlib have
+    all be updated.
+  * clist storage, for rendering pages in bands, is now a run-time option:
+    -sBandListStorage={file|memory}.
+  * Plus the usual round of bug fixes, compatibility changes, and incremental
+    improvements.
