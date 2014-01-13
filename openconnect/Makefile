@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2012/11/16 21:07:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/13 18:50:13 jakllsch Exp $
 #
 
-DISTNAME=	openconnect-3.18
+DISTNAME=	openconnect-5.02
 CATEGORIES=	net security
-MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/ \
-		http://mirrors.rit.edu/zi/
+MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.infradead.org/openconnect.html
+HOMEPAGE=	http://www.infradead.org/openconnect/
 COMMENT=	Client for Cisco AnyConnect VPN
 LICENSE=	gnu-lgpl-v2.1
 

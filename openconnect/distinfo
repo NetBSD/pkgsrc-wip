@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/05/14 13:05:39 hfath Exp $
+$NetBSD: distinfo,v 1.4 2014/01/13 18:50:13 jakllsch Exp $
 
-SHA1 (openconnect-3.18.tar.gz) = b9d39c33a1ab6423ac7de23e838dad3362d50569
-RMD160 (openconnect-3.18.tar.gz) = 8e3f74084127d703456db160c6b8b6078e15c844
-Size (openconnect-3.18.tar.gz) = 554149 bytes
+SHA1 (openconnect-5.02.tar.gz) = 79f9cce830c22f3662332132b3443e470a52a9af
+RMD160 (openconnect-5.02.tar.gz) = 002708676ee59cc4bcfa6c5e7eb26bd4a91dcb01
+Size (openconnect-5.02.tar.gz) = 1294924 bytes
