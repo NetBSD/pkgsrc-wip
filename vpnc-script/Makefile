@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 17:41:43 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/13 18:51:09 jakllsch Exp $
 
-DISTNAME=	vpnc-script-20120514
+DISTNAME=	vpnc-script-20130311
 CATEGORIES=	net security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	pouya@san-serriffe.org
-HOMEPAGE=	http://www.infradead.org/openconnect.html
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.infradead.org/openconnect/vpnc-script.html
 COMMENT=	Improved config script for OpenConnect and vpnc
 
 NO_BUILD=	YES

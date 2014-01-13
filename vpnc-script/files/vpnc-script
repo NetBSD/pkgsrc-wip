@@ -1,6 +1,27 @@
 #!/bin/sh
+#
+# Originally part of vpnc source code:
+# © 2005-2012 Maurice Massar, Jörg Mayer, Antonio Borneo et al.
+# © 2009-2012 David Woodhouse <dwmw2@infradead.org>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+#
+################
+#
 # List of parameters passed through environment
-#* reason                       -- why this script was called, one of: pre-init connect disconnect
+#* reason                       -- why this script was called, one of: pre-init connect disconnect reconnect
 #* VPNGATEWAY                   -- vpn gateway address (always present)
 #* TUNDEV                       -- tunnel device (always present)
 #* INTERNAL_IP4_ADDRESS         -- address (always present)
@@ -68,7 +89,7 @@ if [ ! -d "/var/run/vpnc" ]; then
 fi
 
 # stupid SunOS: no blubber in /usr/local/bin ... (on stdout)
-IPROUTE="`which ip | grep '^/'`" 2> /dev/null
+IPROUTE="`which ip 2> /dev/null | grep '^/'`"
 
 if ifconfig --help 2>&1 | grep BusyBox > /dev/null; then
 	ifconfig_syntax_inet=""
@@ -100,7 +121,7 @@ if [ -r /etc/openwrt_release ] && [ -n "$OPENWRT_INTERFACE" ]; then
 	include /lib/network
 	MODIFYRESOLVCONF=modify_resolvconf_openwrt
 	RESTORERESOLVCONF=restore_resolvconf_openwrt
-elif [ -x /sbin/resolvconf ]; then # Optional tool on Debian, Ubuntu, Gentoo
+elif [ -x /sbin/resolvconf ] && [ "$OS" != "FreeBSD" ]; then # Optional tool on Debian, Ubuntu, Gentoo - but not FreeBSD, it seems to work different
 	MODIFYRESOLVCONF=modify_resolvconf_manager
 	RESTORERESOLVCONF=restore_resolvconf_manager
 elif [ -x /sbin/netconfig ]; then # tool on Suse after 11.1
@@ -147,7 +168,7 @@ do_ifconfig() {
 	# Point to point interface require a netmask of 255.255.255.255 on some systems
 	if [ -n "$IPROUTE" ]; then
 		$IPROUTE link set dev "$TUNDEV" up mtu "$MTU"
-		$IPROUTE addr add "$INTERNAL_IP4_ADDRESS/255.255.255.255" peer "$INTERNAL_IP4_ADDRESS" dev "$TUNDEV"
+		$IPROUTE addr add "$INTERNAL_IP4_ADDRESS/32" peer "$INTERNAL_IP4_ADDRESS" dev "$TUNDEV"
 	else
 		ifconfig "$TUNDEV" ${ifconfig_syntax_inet} "$INTERNAL_IP4_ADDRESS" $ifconfig_syntax_ptp "$INTERNAL_IP4_ADDRESS" netmask 255.255.255.255 mtu ${MTU} up
 	fi
@@ -177,8 +198,11 @@ do_ifconfig() {
 
 destroy_tun_device() {
 	case "$OS" in
-	NetBSD|FreeBSD) # and probably others...
+	NetBSD|OpenBSD) # and probably others...
 		ifconfig "$TUNDEV" destroy
+		;;
+	FreeBSD)
+		ifconfig "$TUNDEV" destroy > /dev/null 2>&1 &
 		;;
 	esac
 }
@@ -296,7 +320,7 @@ else # use route command
 
 	del_network_route() {
 		case "$OS" in
-		Linux|NetBSD|Darwin|SunOS) # and probably others...
+		Linux|NetBSD|OpenBSD|Darwin|SunOS) # and probably others...
 			# routes are deleted automatically on device shutdown
 			return
 			;;
@@ -572,8 +596,12 @@ do_pre_init() {
 			fi
 		fi
 	elif [ "$OS" = "FreeBSD" ]; then
-		if [ ! -e /dev/tun ]; then
+		if ! kldstat -q -m if_tun > /dev/null; then
 			kldload if_tun
+		fi
+
+		if ! ifconfig $TUNDEV > /dev/null; then
+			ifconfig $TUNDEV create
 		fi
 	elif [ "$OS" = "GNU/kFreeBSD" ]; then
 		if [ ! -e /dev/tun ]; then
@@ -582,6 +610,9 @@ do_pre_init() {
 	elif [ "$OS" = "NetBSD" ]; then
 		:
 	elif [ "$OS" = "OpenBSD" ]; then
+		if ! ifconfig $TUNDEV > /dev/null; then
+			ifconfig $TUNDEV create
+		fi
 		:
 	elif [ "$OS" = "SunOS" ]; then
 		:
