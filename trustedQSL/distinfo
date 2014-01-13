@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2013/12/04 01:07:15 makoto Exp $
+$NetBSD: distinfo,v 1.21 2014/01/13 15:51:20 makoto Exp $
 
-SHA1 (tqsl-2.0.tgz) = c132d83bb7bd2e805fe9d6df52ea235d55153153
-RMD160 (tqsl-2.0.tgz) = 7f3e3af2336e43851fb419484e7cfea0ec0089e0
-Size (tqsl-2.0.tgz) = 2626483 bytes
-SHA1 (patch-apps_CMakeLists.txt) = 6057dd58f9297b5f23158e5a959564c864d46147
-SHA1 (patch-apps_tqsl_cpp) = 7fb5072ee21ef5a04bed40f51ef7dea0b25ec217
-SHA1 (patch-src_tqslconvert_cpp) = 6a0a4e54c1f351a0bd8e0e6f8c04a87ea975330e
+SHA1 (tqsl-2.0.1RC3/tqsl-2.0.1.tar.gz) = d0aee3a14fc0a87f7451713b7049d9356d6512e6
+RMD160 (tqsl-2.0.1RC3/tqsl-2.0.1.tar.gz) = 0f70e0439f55a42ca6f990a71e2bf0b1af6c102c
+Size (tqsl-2.0.1RC3/tqsl-2.0.1.tar.gz) = 2760027 bytes
+SHA1 (patch-apps_CMakeLists.txt) = eed3a7eb926cfe6c384b10a3488f8b6e47ef3795
+SHA1 (patch-apps_tqsl_cpp) = ecfbaf1006ca0be6d20ca4047e31151d1ca1f556
+SHA1 (patch-src_tqslconvert_cpp) = 212530497270d7354d2081f2a985e266e8569896

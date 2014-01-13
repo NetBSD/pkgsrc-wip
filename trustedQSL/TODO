@@ -1,2 +1,6 @@
 - SunOS 5.11/x86_64 is saying,
   Could NOT find BDB (missing: BDB_INCLUDE_DIR)
+
+- 2.0.1 seems to include bundle-cacert, but not checked it yet.
+- 2.0.1 eats CPU when started and not functioning 
+   NetBSD/amd64 6.1.2 
