@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/08/13 23:07:16 outpaddling Exp $
+$NetBSD: distinfo,v 1.2 2014/01/14 23:58:33 outpaddling Exp $
 
-SHA1 (twintk-0.9.3.tar.gz) = b9fdf424fc965e136d2ee9a34c1df8e32f3618d9
-RMD160 (twintk-0.9.3.tar.gz) = ce76977a1440480421d94a7d77f1ba743fabb149
-Size (twintk-0.9.3.tar.gz) = 984438 bytes
+SHA1 (twintk-0.9.4.tar.gz) = 2f710e17fb6f6d9a78ea2ab0af00c156bce6bf8b
+RMD160 (twintk-0.9.4.tar.gz) = 99a0347d3d15cebf3447ca3ae43aac4ef211e072
+Size (twintk-0.9.4.tar.gz) = 982477 bytes

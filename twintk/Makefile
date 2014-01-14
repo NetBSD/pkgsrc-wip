@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/08/14 01:33:35 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/14 23:58:33 outpaddling Exp $
 #
 
-DISTNAME=	twintk-0.9.3
+DISTNAME=	twintk-0.9.4
 CATEGORIES=	devel
 MASTER_SITES=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 
