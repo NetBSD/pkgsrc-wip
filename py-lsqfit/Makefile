@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2013/08/31 20:23:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/14 15:02:49 jihbed Exp $
 
-DISTNAME=	lsqfit-4.5.1
+DISTNAME=	lsqfit-4.5.3
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/l/lsqfit/
+FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/packages/source/l/lsqfit/
 COMMENT=	Utilities for nonlinear least-squares fits
 LICENSE=	gnu-gpl-v3
-
-FETCH_USING=    curl
 
 USE_LANGUAGES=	c c++
 
