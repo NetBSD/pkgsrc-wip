@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/12/10 13:35:41 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2014/01/14 21:22:36 szptvlfn Exp $
 
-SHA1 (blaze-html-0.6.1.2.tar.gz) = 3083f51704f04740508cd7b6b4e4905b447e5a92
-RMD160 (blaze-html-0.6.1.2.tar.gz) = c31537a4e14d1b73901acaa0667a5e30d9575011
-Size (blaze-html-0.6.1.2.tar.gz) = 75673 bytes
+SHA1 (blaze-html-0.6.1.3.tar.gz) = 344625742b92decb6f04763389e12a1860da7fe8
+RMD160 (blaze-html-0.6.1.3.tar.gz) = 3b29860bec1aa853e8e9967bc112792c347d387a
+Size (blaze-html-0.6.1.3.tar.gz) = 75658 bytes
