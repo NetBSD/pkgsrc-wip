@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/14 23:11:15 jihbed Exp $
 
-DISTNAME=	anfft-0.1
+DISTNAME=	anfft-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	http://anfft.googlecode.com/files/
