@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/11/24 12:26:16 szptvlfn Exp $
+$NetBSD: distinfo,v 1.3 2014/01/14 21:25:04 szptvlfn Exp $
 
-SHA1 (highlighting-kate-0.5.5.1.tar.gz) = 797e582fea99659559498b8686f5916842697977
-RMD160 (highlighting-kate-0.5.5.1.tar.gz) = 175a8f6a24fe624aa76430e976eb242de032ed96
-Size (highlighting-kate-0.5.5.1.tar.gz) = 684350 bytes
+SHA1 (highlighting-kate-0.5.6.tar.gz) = c30f3c4bd3947c922c04d65bd3f55b4a33e25ec8
+RMD160 (highlighting-kate-0.5.6.tar.gz) = 7d461fc01a4dbda2fffd3cda3fab111f784cd6c5
+Size (highlighting-kate-0.5.6.tar.gz) = 686816 bytes

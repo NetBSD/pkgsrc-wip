@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/24 12:26:16 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/01/14 21:25:04 szptvlfn Exp $
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/HShighlighting-kate-${PKGVERSION}.o
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Paths_highlighting_kate.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Paths_highlighting_kate.p_hi
@@ -166,6 +166,8 @@ lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Sy
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/R.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Relaxngcompact.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Relaxngcompact.p_hi
+lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Restructuredtext.hi
+lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Restructuredtext.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Rhtml.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Rhtml.p_hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Text/Highlighting/Kate/Syntax/Roff.hi

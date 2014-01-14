@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/11/24 12:26:16 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/14 21:25:04 szptvlfn Exp $
 
-DISTNAME=	highlighting-kate-0.5.5.1
+DISTNAME=	highlighting-kate-0.5.6
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
