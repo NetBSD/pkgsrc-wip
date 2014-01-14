@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.67 2014/01/09 23:19:18 cheusov Exp $
-
-DISTNAME=	pkg_summary-utils-0.62.0
+# $NetBSD: Makefile,v 1.68 2014/01/14 00:45:17 cheusov Exp $
+DISTNAME=	pkg_summary-utils-0.63.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,7 +18,7 @@ DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
-BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
+BUILD_DEPENDS+=	mk-configure>=0.24.0:../../devel/mk-configure
 
 CONFLICTS+=	awk-pkgsrc-dewey-[0-9]*
 CONFLICTS+=	pkg_src_summary-[0-9]*
@@ -48,8 +47,8 @@ EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
 
 CONF_FILES=	${EGDIR}/pkg_digger.conf ${PKG_SYSCONFDIR}/pkg_digger.conf
 
-REPLACE_SH=	tests/test.sh pkg_digger.in pkg_digger_backend.in \
-		pkg_summary2build_graph.in
+REPLACE_SH=	tests/test.sh scripts/pkg_digger.in scripts/pkg_digger_backend.in \
+		scripts/pkg_summary2build_graph.in
 
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
@@ -66,7 +65,7 @@ MAKE_ENV+=	BMAKE=${MAKE:Q}
 MAKE_ENV+=	DISTDIR=${DISTDIR}
 MAKE_ENV+=	PKGSRCDIR=${PKGSRCDIR}
 MAKE_ENV+=	PKG_SUFX=${PKG_SUFX}
-MAKE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
+MAKE_ENV+=	PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}
 MAKE_ENV+=	PKG_DBDIR=${PKG_DBDIR}
 
 .include "../../devel/mk-configure/mk-c.mk"
