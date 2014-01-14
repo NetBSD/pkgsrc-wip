@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/12/15 21:28:56 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/14 02:55:31 nsloss Exp $
 
-DISTNAME=	bfgminer-3.8.0
+DISTNAME=	bfgminer-3.9.0
 CATEGORIES=	finance
 MASTER_SITES=	http://luke.dashjr.org/programs/bitcoin/files/bfgminer/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.zip
