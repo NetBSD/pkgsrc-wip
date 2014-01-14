@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/14 19:32:21 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/14 20:09:45 nros Exp $
 
 DISTNAME=	qore-0.8.8
 CATEGORIES=	lang
@@ -17,6 +17,7 @@ PTHREAD_OPTS+=	require
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 CONFIGURE_ARGS+= 	--with-doxygen=no
+INSTALL_TARGET=	install install-html-local
 
 #NetBSD 6 and lower has an stdio.h that breaks this package
 NOT_FOR_PLATFORM=       NetBSD-[0-6]*-*
