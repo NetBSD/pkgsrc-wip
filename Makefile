@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5600 2014/01/14 20:14:36 nros Exp $
+# $Id: Makefile,v 1.5601 2014/01/15 23:23:56 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1152,6 +1152,7 @@ SUBDIR+=	hs-rosezipper
 SUBDIR+=	hs-rosezipper1
 SUBDIR+=	hs-safe
 SUBDIR+=	hs-safer-file-handles
+SUBDIR+=	hs-scientific
 SUBDIR+=	hs-semigroupoid-extras
 SUBDIR+=	hs-semigroupoids
 SUBDIR+=	hs-semigroups
