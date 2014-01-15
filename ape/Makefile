@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/12/11 17:24:04 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/15 02:35:55 outpaddling Exp $
 #
 
-DISTNAME=	ape-3.5.1
+DISTNAME=	ape-3.5.2
 CATEGORIES=	editors
 MASTER_SITES=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 
@@ -13,6 +13,8 @@ COMMENT=	TODO: Short description of the package
 EXTRACT_SUFX=	.tar.xz
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
+DEPENDS+=	mcrypt:../../security/mcrypt
 
 pre-build:
 	(cd ${WRKSRC} && ${MAKE} LOCALBASE=${LOCALBASE} depend)
