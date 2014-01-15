@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/15 23:22:25 szptvlfn Exp $
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/Data/Scientific.hi
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/Data/Scientific.p_hi
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/HSscientific-${PKGVERSION}.o
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/libHSscientific-${PKGVERSION}.a
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/libHSscientific-${PKGVERSION}_p.a
+lib/scientific-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/scientific-${PKGVERSION}/LICENSE
