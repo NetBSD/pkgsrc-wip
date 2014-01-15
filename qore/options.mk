@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2014/01/14 19:29:14 nros Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/15 17:34:23 nros Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qore
-PKG_SUPPORTED_OPTIONS=	debug doc
+PKG_SUPPORTED_OPTIONS=	debug
 
 .include "../../mk/bsd.options.mk"
 
