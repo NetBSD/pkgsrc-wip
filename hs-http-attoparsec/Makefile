@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/26 23:52:59 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/15 23:28:42 szptvlfn Exp $
 
-DISTNAME=	http-attoparsec-0.1.0
+DISTNAME=	http-attoparsec-0.1.1
 CATEGORIES=	www
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
