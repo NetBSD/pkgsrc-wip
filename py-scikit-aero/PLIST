@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2014/01/15 19:58:18 jihbed Exp $
+${PYSITELIB}/skaero/__init__.py
+${PYSITELIB}/skaero/__init__.pyc
+${PYSITELIB}/skaero/__init__.pyo
+${PYSITELIB}/skaero/atmosphere/__init__.py
+${PYSITELIB}/skaero/atmosphere/__init__.pyc
+${PYSITELIB}/skaero/atmosphere/__init__.pyo
+${PYSITELIB}/skaero/atmosphere/coesa.py
+${PYSITELIB}/skaero/atmosphere/coesa.pyc
+${PYSITELIB}/skaero/atmosphere/coesa.pyo
+${PYSITELIB}/skaero/gasdynamics/__init__.py
+${PYSITELIB}/skaero/gasdynamics/__init__.pyc
+${PYSITELIB}/skaero/gasdynamics/__init__.pyo
+${PYSITELIB}/skaero/gasdynamics/isentropic.py
+${PYSITELIB}/skaero/gasdynamics/isentropic.pyc
+${PYSITELIB}/skaero/gasdynamics/isentropic.pyo
+${PYSITELIB}/skaero/gasdynamics/shocks.py
+${PYSITELIB}/skaero/gasdynamics/shocks.pyc
+${PYSITELIB}/skaero/gasdynamics/shocks.pyo
