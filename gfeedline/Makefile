@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/22 17:04:23 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/16 10:40:56 thomasklausner Exp $
 
 DISTNAME=	gfeedline-2.4.1
 PKGREVISION=	1
@@ -17,9 +16,10 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 #python-openssl
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-oauth-[0-9]*:../../security/py-oauth
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
+
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 USE_LANGUAGES=	# none
 NO_BUILD=	YES
@@ -65,4 +65,5 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

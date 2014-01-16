@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/12/26 18:10:13 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/16 10:40:56 thomasklausner Exp $
 
 # version number from setup.py
 DISTNAME=		khal-0.1.0
@@ -16,12 +16,13 @@ GIT_REPO.khal= 		git://github.com/geier/khal.git
 DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
-DEPENDS+=		${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=		${PYPKGPREFIX}-lxml>=2:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-requests>=0.10:../../devel/py-requests
 # SimpleFocusListWalker is in urwid 1.1.0
 DEPENDS+=		${PYPKGPREFIX}-urwid>=1.1.0:../../devel/py-urwid
+
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 WRKSRC=			${WRKDIR}/khal
 EGG_NAME=		${DISTNAME}.dev
@@ -39,5 +40,6 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

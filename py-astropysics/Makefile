@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/10/27 20:38:29 jihbed Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/01/16 10:40:56 thomasklausner Exp $
 
 DISTNAME=	Astropysics-0.1.dev-r596
 PKGNAME=	${PYPKGPREFIX}-Astropysics-0.1
@@ -13,8 +12,9 @@ COMMENT=	Astrophysics libraries for Python
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
+
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 #WRKSRC=		${WRKDIR}/Astropysics-0.1.dev-r596
 EGG_NAME=	${DISTNAME:S/-r596//}
@@ -24,4 +24,5 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

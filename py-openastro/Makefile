@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/20 19:23:49 kristerw Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/16 10:40:57 thomasklausner Exp $
 
 DISTNAME=	openastro-1.1.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openastro.org/
 COMMENT=	Open source astrology program, openastro.org
 LICENSE=	gnu-gpl-v3
+
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 WRKSRC=			${WRKDIR}/openastro.org-1.1.38
 USE_PKGLOCALEDIR=	yes
@@ -42,6 +43,7 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/py-pyswisseph/buildlink3.mk"
 .include "../../wip/swisseph/buildlink3.mk"
@@ -49,6 +51,5 @@ DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../x11/py-gnome2-desktop/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

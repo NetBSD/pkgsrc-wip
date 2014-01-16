@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/18 12:00:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/16 10:40:56 thomasklausner Exp $
 
 DISTNAME=	CalendarServer-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-doctor-[0-9]*:../../devel/py-doctor
 DEPENDS+=	${PYPKGPREFIX}-flakes>=0.6:../../devel/py-flakes
 DEPENDS+=	${PYPKGPREFIX}-ldap-[0-9]*:../../databases/py-ldap
@@ -34,6 +33,8 @@ DEPENDS+=	memcached-[0-9]*:../../devel/memcached
 DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
 DEPENDS+=	postgresql91-server-[0-9]*:../../databases/postgresql91-server
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
+
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	bash:run
@@ -85,5 +86,6 @@ REPLACE_PYTHON+=	txdav/common/datastore/upgrade/migrate.py
 REPLACE_PYTHON+=	txdav/common/datastore/upgrade/sql/upgrade.py
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
