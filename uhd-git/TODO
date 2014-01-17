@@ -1,0 +1,4 @@
+- Not all arguments of CMAKE command line are reviewed (do-configure:)
+- Find proper git tag to make package for RELEASE version
+- Install path for firmware, fpga and image are not checked
+  for being referenced from other packages
