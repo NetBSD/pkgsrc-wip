@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/03 19:41:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/17 23:10:28 thomasklausner Exp $
 
 SVNREV=		9935
 DISTNAME=	TracSpamFilter-0.3.2dev
@@ -12,7 +12,8 @@ HOMEPAGE=	http://trac.edgewall.org/wiki/SpamFilter
 COMMENT=	Spam Filter plugin for Trac
 
 DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
+
+PYTHON_VERSIONED_DEPENDENCIES=	dns
 
 SVN_REPOSITORIES=	spamfilter
 SVN_ROOT.spamfilter=	http://svn.edgewall.org/repos/trac/plugins/0.12/spam-filter-captcha
@@ -27,6 +28,7 @@ PRIVILEGED_STAGES+=	clean
 post-extract:
 	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"

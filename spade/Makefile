@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/12/14 09:26:56 obache Exp $
-#
+# $NetBSD: Makefile,v 1.21 2014/01/17 23:10:28 thomasklausner Exp $
 
 DISTNAME=	spade-2.0rc4
 PKGREVISION=	1
@@ -12,7 +11,6 @@ COMMENT=	SPADE is an agent platform based on the XMPP/Jabber technology
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.01:../../math/py-gmpy
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
@@ -22,6 +20,7 @@ DEPENDS+=	jython>=2.5.1:../../wip/jython
 WRKSRC=	${WRKDIR}/spade
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONED_DEPENDENCIES=	dns
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		paths
@@ -45,4 +44,5 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

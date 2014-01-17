@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 11:54:46 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/17 23:10:27 thomasklausner Exp $
 
 DISTNAME=		yahoo-transport-0.4.90
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -18,7 +18,8 @@ LICENSE=		gnu-gpl-v2
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
 DEPENDS+=	${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
-DEPENDS+=	${PYPKGPREFIX}-dns>=1.5.0:../../net/py-dns
+
+PYTHON_VERSIONED_DEPENDENCIES=	dns
 
 # Fifth paragraph - all build definitions that describe things used by
 # the package.  These include: WRKSRC, GNU_CONFIGURE,
@@ -79,5 +80,6 @@ SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
