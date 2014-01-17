@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5601 2014/01/15 23:23:56 szptvlfn Exp $
+# $Id: Makefile,v 1.5602 2014/01/17 01:15:35 makoto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3441,6 +3441,7 @@ SUBDIR+=	uebimiau
 SUBDIR+=	ufc
 SUBDIR+=	uffizi
 SUBDIR+=	uget
+SUBDIR+=	uhd-git
 SUBDIR+=	uim-chewing
 SUBDIR+=	ukncbtl
 SUBDIR+=	umix
