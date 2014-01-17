@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 00:58:52 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/17 01:11:06 makoto Exp $
 
 DISTNAME=		uhd-3.6.0
 CATEGORIES=		ham
@@ -6,7 +6,7 @@ CATEGORIES=		ham
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
-LICENSE=		gnu-gpl-v3
+LICENSE=		gnu-gpl-v2
 
 GIT_REPOSITORIES=       master
 GIT_REPO.master=        git://github.com/EttusResearch/uhd.git
