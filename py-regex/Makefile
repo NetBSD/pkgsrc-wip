@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/11/05 17:42:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/17 20:21:14 jihbed Exp $
 
-DISTNAME=	regex-2013-10-26
-PKGNAME=	${PYPKGPREFIX}-regex-20131026
+DISTNAME=	regex-2014.01.10
+PKGNAME=	${PYPKGPREFIX}-regex-20140110
 CATEGORIES=	textproc
 MASTER_SITES=	https://pypi.python.org/packages/source/r/regex/
 FETCH_USING=	curl
