@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/01/17 13:38:26 keckhardt Exp $
+
+SHA1 (frink-2.2.2p4.tar.gz) = d558dce36697b6af44253959d75bfb004302e12a
+RMD160 (frink-2.2.2p4.tar.gz) = 6891cc82ad6c28c3368b248d895580253272b812
+Size (frink-2.2.2p4.tar.gz) = 99642 bytes
+SHA1 (patch-configure) = 3a06b22ae26c2456b2eab9fb98b0f23f4dfeb588

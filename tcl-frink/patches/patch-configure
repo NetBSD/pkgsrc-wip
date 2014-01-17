@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/01/17 13:38:26 keckhardt Exp $
+
+Fix wrong CFLAG.
+
+--- configure.orig	2014-01-17 13:28:24.000000000 +0000
++++ configure
+@@ -2588,7 +2588,7 @@ CCDEPMODE=depmode=$am_cv_CC_dependencies
+ 
+ 
+ 
+-CFLAGS="-ansii -g -Wall"
++CFLAGS="-ansi -g -Wall"
+ 
+ # Find a good install program.  We prefer a C program (faster),
+ # so one script is as good as another.  But avoid the broken or
