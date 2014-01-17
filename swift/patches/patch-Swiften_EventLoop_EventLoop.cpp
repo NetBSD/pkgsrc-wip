@@ -1,33 +1,17 @@
-$NetBSD: patch-Swiften_EventLoop_EventLoop.cpp,v 1.1 2014/01/11 15:27:24 thomasklausner Exp $
+$NetBSD: patch-Swiften_EventLoop_EventLoop.cpp,v 1.2 2014/01/17 12:06:10 thomasklausner Exp $
 
-Fix build with latest boost and clang.
+Added missing lock_guard include.
+Change-Id: I1ea6c42292b7c3b5f0ecdc1395b9c8e8cf17a6b9
+
+http://swift.im/git/swift/commit/?h=swift-2.x&id=e4a3c018fe824c0c402dbc3167a113276fbe6e4e
 
 --- Swiften/EventLoop/EventLoop.cpp.orig	2012-12-22 12:23:59.000000000 +0000
 +++ Swiften/EventLoop/EventLoop.cpp
-@@ -47,7 +47,7 @@ void EventLoop::handleEvent(const Event&
+@@ -10,6 +10,7 @@
+ #include <boost/bind.hpp>
+ #include <iostream>
+ #include <cassert>
++#include <boost/thread/locks.hpp>
  
- 	bool doCallback = false;
- 	{
--		boost::lock_guard<boost::mutex> lock(eventsMutex_);
-+		std::lock_guard<boost::mutex> lock(eventsMutex_);
- 		std::list<Event>::iterator i = std::find(events_.begin(), events_.end(), event);
- 		if (i != events_.end()) {
- 			doCallback = true;
-@@ -72,7 +72,7 @@ void EventLoop::handleEvent(const Event&
- void EventLoop::postEvent(boost::function<void ()> callback, boost::shared_ptr<EventOwner> owner) {
- 	Event event(owner, callback);
- 	{
--		boost::lock_guard<boost::mutex> lock(eventsMutex_);
-+		std::lock_guard<boost::mutex> lock(eventsMutex_);
- 		event.id = nextEventID_;
- 		nextEventID_++;
- 		events_.push_back(event);
-@@ -82,7 +82,7 @@ void EventLoop::postEvent(boost::functio
- }
- 
- void EventLoop::removeEventsFromOwner(boost::shared_ptr<EventOwner> owner) {
--		boost::lock_guard<boost::mutex> lock(eventsMutex_);
-+		std::lock_guard<boost::mutex> lock(eventsMutex_);
- 		events_.remove_if(HasOwner(owner));
- }
+ #include <Swiften/Base/Log.h>
  
