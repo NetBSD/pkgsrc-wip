@@ -1,0 +1,47 @@
+$NetBSD: patch-configure,v 1.1 2014/01/18 19:13:53 fhajny Exp $
+
+Remove m4 cruft.
+Fix IOKit linking on modern OS X.
+--- configure.orig	2013-08-18 10:25:01.622558671 +0000
++++ configure
+@@ -18292,19 +18292,19 @@ $as_echo_n "checking if have htonll defi
+     have_htonll="no"
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-[
++
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #if HAVE_INTTYPES_H
+ # include <inttypes.h>
+ #endif
+-]
++
+ int
+ main ()
+ {
+-[
++
+           return htonll(0);
+-]
++
+ 
+   ;
+   return 0;
+@@ -19120,13 +19120,13 @@ fi
+ 
+ 
+ with_libiokit="no"
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for IOServiceGetMatchingServices in -lIOKit" >&5
+-$as_echo_n "checking for IOServiceGetMatchingServices in -lIOKit... " >&6; }
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for IOServiceGetMatchingServices in '-framework IOKit'" >&5
++$as_echo_n "checking for IOServiceGetMatchingServices in '-framework IOKit'... " >&6; }
+ if ${ac_cv_lib_IOKit_IOServiceGetMatchingServices+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lIOKit  $LIBS"
++LIBS="-framework IOKit  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 

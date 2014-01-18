@@ -1,27 +1,61 @@
-@comment $NetBSD: PLIST,v 1.1 2011/11/25 15:09:07 genolopolis Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/18 19:13:52 fhajny Exp $
 bin/collectd-nagios
+bin/collectd-tg
 bin/collectdctl
-etc/collectd.conf
 include/collectd/client.h
 include/collectd/lcc_features.h
+include/collectd/network.h
+include/collectd/network_buffer.h
+lib/collectd/aggregation.la
+lib/collectd/apcups.la
+${PLIST.cpu}lib/collectd/cpu.la
 lib/collectd/csv.la
-lib/collectd/df.la
+${PLIST.df}lib/collectd/df.la
+${PLIST.disk}lib/collectd/disk.la
+lib/collectd/email.la
 lib/collectd/exec.la
 lib/collectd/filecount.la
+lib/collectd/hddtemp.la
+${PLIST.interface}lib/collectd/interface.la
+${PLIST.load}lib/collectd/load.la
 lib/collectd/logfile.la
-lib/collectd/memcached.la
-lib/collectd/network.la
+lib/collectd/match_empty_counter.la
+lib/collectd/match_hashed.la
+lib/collectd/match_regex.la
+lib/collectd/match_timediff.la
+lib/collectd/match_value.la
+lib/collectd/mbmon.la
+${PLIST.memory}lib/collectd/memory.la
+${PLIST.nfs}lib/collectd/nfs.la
 lib/collectd/ntpd.la
 lib/collectd/olsrd.la
+lib/collectd/openvpn.la
+${PLIST.perl}lib/collectd/perl.la
 lib/collectd/powerdns.la
-lib/collectd/syslog.la
+${PLIST.python}lib/collectd/python.la
+lib/collectd/statsd.la
+${PLIST.swap}lib/collectd/swap.la
+${PLIST.syslog}lib/collectd/syslog.la
 lib/collectd/table.la
 lib/collectd/tail.la
+lib/collectd/tail_csv.la
+lib/collectd/target_notification.la
+lib/collectd/target_replace.la
+lib/collectd/target_scale.la
+lib/collectd/target_set.la
+lib/collectd/target_v5upgrade.la
+lib/collectd/teamspeak2.la
+lib/collectd/threshold.la
 lib/collectd/unixsock.la
-lib/collectd/uptime.la
+${PLIST.uptime}lib/collectd/uptime.la
+${PLIST.users}lib/collectd/users.la
+lib/collectd/uuid.la
+lib/collectd/write_graphite.la
+${PLIST.zfs-arc}lib/collectd/zfs_arc.la
 lib/libcollectdclient.la
 lib/pkgconfig/libcollectdclient.pc
 man/man1/collectd-nagios.1
+man/man1/collectd-tg.1
 man/man1/collectd.1
 man/man1/collectdctl.1
 man/man1/collectdmon.1
@@ -39,6 +73,5 @@ sbin/collectd
 sbin/collectdmon
 share/collectd/postgresql_default.conf
 share/collectd/types.db
-@pkgdir var/run
-@pkgdir var/log
-@pkgdir var/lib/collectd
+share/examples/collectd/collectd.conf
+share/examples/rc.d/collectd

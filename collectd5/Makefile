@@ -1,45 +1,40 @@
-# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:03 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/18 19:13:52 fhajny Exp $
 #
 
-DISTNAME=	collectd-5.0.1
-MASTER_SITES=	http://collectd.org/files/
-CATEGORIES=     net
+.include "../../wip/collectd5/Makefile.common"
 
-MAINTAINER=	msporleder@gmail.com
-HOMEPAGE=	http://collectd.org/
-COMMENT=	Statistics collection daemon - base
-LICENSE=	gnu-gpl-v2
+COMMENT=	Statistics collection daemon base
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c c++
+RCD_SCRIPTS=	collectd
 
-CONFIGURE_ARGS+=	--with-included-ltdl
-CONFIGURE_ARGS+=	--disable-all-plugins
-CONFIGURE_ARGS+=	--enable-csv
-CONFIGURE_ARGS+=	--enable-exec
-CONFIGURE_ARGS+=	--enable-logfile
-CONFIGURE_ARGS+=	--enable-filecount
-CONFIGURE_ARGS+=	--enable-df
-CONFIGURE_ARGS+=	--enable-tail
-CONFIGURE_ARGS+=	--enable-table
-CONFIGURE_ARGS+=	--enable-syslog
-CONFIGURE_ARGS+=	--enable-unixsock
-CONFIGURE_ARGS+=	--enable-memcached
-CONFIGURE_ARGS+=	--enable-network
-CONFIGURE_ARGS+=	--enable-olsrd
-CONFIGURE_ARGS+=	--enable-ntpd
-CONFIGURE_ARGS+=	--enable-powerdns
-CONFIGURE_ARGS+=	--enable-uptime
-CONFIGURE_ARGS+=	--with-perl-bindings=no
-CONFIGURE_ARGS+=	--with-libperl=no
-
-PKGCONFIG_OVERRIDE+=	src/libcollectdclient/libcollectdclient.pc.in
-
-.include "../../devel/libltdl/convenience.mk"
 .include "../../mk/bsd.prefs.mk"
+
+# Simple plugins that have no dependencies
+DEFAULT_PLUGINS+=	aggregation apcups csv email exec filecount	\
+			hddtemp logfile match_empty_counter match_hashed\
+			match_regex match_timediff match_value mbmon	\
+			ntpd olsrd openvpn powerdns statsd table tail	\
+			tail_csv target_notification target_replace	\
+			target_scale target_set	target_v5upgrade	\
+			teamspeak2 threshold unixsock uuid write_graphite
+
+.for option in ${DEFAULT_PLUGINS}
+CONFIGURE_ARGS+=	--enable-${option}
+.endfor
+
+.include "options.mk"
+
+CONF_FILES+=		share/examples/collectd/collectd.conf 		\
+			${PKG_SYSCONFDIR}/collectd.conf
+
+OWN_DIRS+=		${VARBASE}/db/collectd
+
+COLLECTD_USER?=			collectd
+COLLECTD_GROUP?=		${COLLECTD_USER}
+PKG_USERS_VARS+=		COLLECTD_USER
+PKG_GROUPS_VARS+=		COLLECTD_GROUP
+PKG_GROUPS=			${COLLECTD_GROUP}
+PKG_USERS=			${COLLECTD_USER}:${COLLECTD_GROUP}
+PKG_GECOS.${COLLECTD_USER}=	collectd unprivileged user
+
 .include "../../mk/bsd.pkg.mk"
-.include "../../lang/perl5/module.mk"
-.include "../../lang/perl5/buildlink3.mk"
-.include "../../lang/perl5/dirs.mk"
