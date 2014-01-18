@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/01/01 23:22:44 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/01/18 23:56:00 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -124,6 +124,10 @@ share/examples/mk-configure/hello_glib2/Makefile
 share/examples/mk-configure/hello_glib2/expect.out
 share/examples/mk-configure/hello_glib2/hello_glib2.c
 share/examples/mk-configure/hello_glib2/test.mk
+share/examples/mk-configure/hello_iconv/Makefile
+share/examples/mk-configure/hello_iconv/expect.out
+share/examples/mk-configure/hello_iconv/hello_iconv.c
+share/examples/mk-configure/hello_iconv/test.mk
 share/examples/mk-configure/hello_lex/Makefile
 share/examples/mk-configure/hello_lex/expect.out
 share/examples/mk-configure/hello_lex/hello_lex.l
@@ -209,6 +213,13 @@ share/examples/mk-configure/hello_strlcpy/hello.c
 share/examples/mk-configure/hello_strlcpy/input.in
 share/examples/mk-configure/hello_strlcpy/strlcpy.c
 share/examples/mk-configure/hello_strlcpy/test.mk
+share/examples/mk-configure/hello_strlcpy2/Makefile
+share/examples/mk-configure/hello_strlcpy2/expect.out
+share/examples/mk-configure/hello_strlcpy2/hello.c
+share/examples/mk-configure/hello_strlcpy2/input.in
+share/examples/mk-configure/hello_strlcpy2/missing/getline.c
+share/examples/mk-configure/hello_strlcpy2/missing/strlcpy.c
+share/examples/mk-configure/hello_strlcpy2/test.mk
 share/examples/mk-configure/hello_subdirs/Makefile
 share/examples/mk-configure/hello_subdirs/Makefile.inc
 share/examples/mk-configure/hello_subdirs/prog1/Makefile
@@ -252,6 +263,10 @@ share/examples/mk-configure/hello_yacc/calc.y
 share/examples/mk-configure/hello_yacc/expect.out
 share/examples/mk-configure/hello_yacc/input.txt
 share/examples/mk-configure/hello_yacc/test.mk
+share/examples/mk-configure/pkgconfig3/Makefile
+share/examples/mk-configure/pkgconfig3/expect.out
+share/examples/mk-configure/pkgconfig3/pkgconfig3.c
+share/examples/mk-configure/pkgconfig3/test.mk
 share/examples/mk-configure/subprojects/Makefile
 share/examples/mk-configure/subprojects/expect.out
 share/examples/mk-configure/subprojects/hello/Makefile
@@ -320,7 +335,7 @@ share/examples/mk-configure/tools2/tools/prog3/Makefile
 share/examples/mk-configure/tools2/tools/prog3/prog3.c
 share/examples/mk-configure/tools2/tools/prog4/Makefile
 share/examples/mk-configure/tools2/tools/prog4/prog4.c
-share/mk-configure/custom/endianess
+share/mk-configure/custom/endianness
 share/mk-configure/custom/prog_bison
 share/mk-configure/custom/prog_flex
 share/mk-configure/custom/prog_gawk
@@ -339,6 +354,7 @@ share/mkc-mk/mkc.subdir.mk
 share/mkc-mk/mkc.subprj.mk
 share/mkc-mk/mkc.subprjs.mk
 share/mkc-mk/mkc_imp.arch.mk
+share/mkc-mk/mkc_imp.conf-final.mk
 share/mkc-mk/mkc_imp.dep.mk
 share/mkc-mk/mkc_imp.files.mk
 share/mkc-mk/mkc_imp.final.mk
