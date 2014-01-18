@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/27 16:52:10 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/01/18 19:56:17 thomasklausner Exp $
 
 DISTNAME=	scitools-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +27,8 @@ post-extract:
 #optional dependency:
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 #DEPENDS+=	${PYPKGPREFIX}-X>=0.9:../../textproc/py-X
-#DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
+#PYTHON_VERSIONED_DEPENDENCIES=	Pmw
+#.include "../../lang/python/versioned_dependencies.mk"
 #.include "../../math/py-Numeric/buildlink3.mk"
 #.include "../../math/py-numarray/buildlink3.mk"
 #.include "../../graphics/vtk/buildlink3.mk"

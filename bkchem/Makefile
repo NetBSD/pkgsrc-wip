@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/06/04 07:45:21 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/18 19:56:17 thomasklausner Exp $
 
 DISTNAME=	bkchem-0.13.0
 PKGREVISION=	1
@@ -11,8 +10,9 @@ HOMEPAGE=	http://bkchem.zirael.org/
 COMMENT=	Python based chemical structures editor
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
+PYTHON_VERSIONED_DEPENDENCIES=	Pmw
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
@@ -32,5 +32,6 @@ post-extract:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

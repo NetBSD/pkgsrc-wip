@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 07:45:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/18 19:56:17 thomasklausner Exp $
 
 DISTNAME=	papy-1.0b1
-PKGNAME= ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	parallel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/papy/
@@ -11,10 +11,10 @@ HOMEPAGE=	http://code.google.com/p/papy/
 COMMENT=	Parallel Pipelines In Python
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-WRKSRC=		${WRKDIR}/papy-1.0b1
+PYTHON_VERSIONED_DEPENDENCIES=	Pmw
+
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
@@ -31,4 +31,5 @@ post-install:
 	cd ${WRKSRC}/doc/html && pax -rw -pp . ${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

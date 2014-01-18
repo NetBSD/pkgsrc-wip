@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/12 16:26:51 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/18 19:56:17 thomasklausner Exp $
 
 DISTNAME=	pyse-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -12,13 +11,15 @@ HOMEPAGE=	http://pyfdm.sourceforge.net/
 COMMENT=	Framework for solving PDEs with FDM using Python
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
+PYTHON_VERSIONED_DEPENDENCIES=	Pmw
+
 
 USE_LANGUAGES=	c c++
 
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../math/py-numarray/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
