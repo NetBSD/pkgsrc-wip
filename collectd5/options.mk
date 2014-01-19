@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/01/18 20:21:58 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/19 10:18:16 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.collectd
 PKG_SUPPORTED_OPTIONS=	cpu df interface load memory perl python syslog uptime
@@ -43,7 +43,7 @@ PLIST.${option}=	yes
 USE_TOOLS+=		perl
 PERL5_CONFIGURE=	no
 PERL5_PACKLIST+=	auto/Collectd/.packlist
-CONFIGURE_ARGS+=	--with-libperl=${BUILDLINK_PREFIX.perl5}
+CONFIGURE_ARGS+=	--with-libperl=${BUILDLINK_PREFIX.perl}
 CONFIGURE_ARGS+=	--with-perl-bindings=${MAKE_PARAMS:Q}
 .  include "../../lang/perl5/module.mk"
 .endif
