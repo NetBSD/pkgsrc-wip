@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5609 2014/01/19 22:27:46 thomasklausner Exp $
+# $Id: Makefile,v 1.5610 2014/01/19 22:32:04 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2956,7 +2956,6 @@ SUBDIR+=	py-xdgapp
 SUBDIR+=	py-xdress
 SUBDIR+=	py-xlutils
 #SUBDIR+=	py-xmiparser	# www/zope3 is gone
-SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-yapps2
