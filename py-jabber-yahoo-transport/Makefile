@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/17 23:10:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/19 22:31:47 thomasklausner Exp $
 
 DISTNAME=		yahoo-transport-0.4.90
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -17,7 +17,7 @@ LICENSE=		gnu-gpl-v2
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
 DEPENDS+=	${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
+DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.4.1:../../chat/py-xmpppy
 
 PYTHON_VERSIONED_DEPENDENCIES=	dns
 

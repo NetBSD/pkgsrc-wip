@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 11:54:46 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/19 22:31:47 thomasklausner Exp $
 
 DISTNAME=	jabberbot-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +10,7 @@ HOMEPAGE=	${MASTER_SITES}
 COMMENT=	Module to enable easy creation of XMPP bots in Python
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.5.0rc1:../../wip/py-xmpppy
+DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.5.0rc1:../../chat/py-xmpppy
 
 USE_LANGUAGES=	# none
 

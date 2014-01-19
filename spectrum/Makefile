@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/06/04 07:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.35 2014/01/19 22:31:48 thomasklausner Exp $
 
 DISTNAME=		spectrum-1.4.7
 CATEGORIES=		chat
@@ -9,7 +9,7 @@ HOMEPAGE=		http://spectrum.im/
 COMMENT=		XMPP transport/gateway based on libpurple
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
+DEPENDS+=		${PYPKGPREFIX}-xmpppy>=0.4.1:../../chat/py-xmpppy
 DEPENDS+=		${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 DEPENDS+=		${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
