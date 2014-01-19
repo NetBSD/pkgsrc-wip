@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/19 20:08:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/19 20:17:00 thomasklausner Exp $
 
 DISTNAME=	PyPedal-2.0.0rc7
 PKGNAME=	${PYPKGPREFIX}-pypedal-2.0.0
@@ -12,7 +12,7 @@ COMMENT=	Tools for pedigree analysis
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.0.1:../../math/py-networkx
-DEPENDS+=	${PYPKGPREFIX}-pydot>=1.0.2:../../graphics/py-pydot
+DEPENDS+=	${PYPKGPREFIX}-dot>=1.0.2:../../graphics/py-dot
 
 USE_LANGUAGES=	# none
 
