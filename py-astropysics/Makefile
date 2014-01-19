@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/16 10:40:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/19 20:34:14 thomasklausner Exp $
 
 DISTNAME=	Astropysics-0.1.dev-r596
 PKGNAME=	${PYPKGPREFIX}-Astropysics-0.1
@@ -12,7 +12,7 @@ COMMENT=	Astrophysics libraries for Python
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
+DEPENDS+=	${PYPKGPREFIX}-fits>=2.3.1:../../graphics/py-fits
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 

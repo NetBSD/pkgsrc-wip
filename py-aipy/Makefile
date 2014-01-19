@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:12 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/19 20:34:14 thomasklausner Exp $
 
 DISTNAME=	aipy-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +12,7 @@ COMMENT=	Astronomical Interferometry in Python
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.3.4:../../math/py-ephem
-DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
+DEPENDS+=	${PYPKGPREFIX}-fits>=2.3.1:../../graphics/py-fits
 
 WRKSRC=		${WRKDIR}/aipy-0.9.1
 
