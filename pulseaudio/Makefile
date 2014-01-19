@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/04/07 09:49:43 makoto Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/19 14:42:14 makoto Exp $
 
 DISTNAME=	pulseaudio-2.1
-PKGREVISION=	3
+PKGREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -27,11 +26,18 @@ CONFIGURE_ARGS+=	--disable-default-build-tests
 CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
 
+# Wrong sys/capability.h assumptions, incompatible implementation:
+.if ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=       --without-caps
+.endif
+
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		EGDIR=${EGDIR}
 
 CONFIGURE_ARGS+=	--enable-samplerate
 CONFIGURE_ARGS+=	--disable-tcpwrap
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 # Use native atomic ops on NetBSD >= 5.0, otherwise
 # fallback to libatomic_ops
@@ -42,6 +48,11 @@ CONFIGURE_ARGS+=	--disable-tcpwrap
 # Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux" && exists(/usr/include/linux/input.h)
 PLIST.evdev=		yes
+.endif
+
+# Find the appropriate SDK
+.if !empty(MACHINE_PLATFORM:MDarwin-10.*)
+CONFIGURE_ARGS+=	--with-mac-sysroot=/Developer/SDKs/MacOSX10.6.sdk
 .endif
 
 .include "options.mk"
@@ -78,7 +89,7 @@ PLIST.sun=		yes
 PLIST.hal=		yes
 PLIST.oss=		yes
 .  endif
-.else
+.elif ${OPSYS} != "Darwin"
 PLIST.hal=		yes
 PLIST.oss=		yes
 .endif
