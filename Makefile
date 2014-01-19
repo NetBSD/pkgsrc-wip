@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5610 2014/01/19 22:32:04 thomasklausner Exp $
+# $Id: Makefile,v 1.5611 2014/01/19 22:34:31 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3203,7 +3203,6 @@ SUBDIR+=	spamd-devel
 SUBDIR+=	spatt
 SUBDIR+=	spawnfcgi
 SUBDIR+=	spe
-SUBDIR+=	spectrum
 SUBDIR+=	spectrwm
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
