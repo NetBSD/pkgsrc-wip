@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/01/19 14:42:14 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/01/19 23:17:02 makoto Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -119,8 +119,6 @@ lib/pulse-${PKGVERSION}/modules/module-filter-apply.a
 lib/pulse-${PKGVERSION}/modules/module-filter-apply.so
 lib/pulse-${PKGVERSION}/modules/module-filter-heuristics.a
 lib/pulse-${PKGVERSION}/modules/module-filter-heuristics.so
-${PLIST.hal}lib/pulse-${PKGVERSION}/modules/module-hal-detect.a
-${PLIST.hal}lib/pulse-${PKGVERSION}/modules/module-hal-detect.so
 lib/pulse-${PKGVERSION}/modules/module-http-protocol-tcp.a
 lib/pulse-${PKGVERSION}/modules/module-http-protocol-tcp.so
 lib/pulse-${PKGVERSION}/modules/module-http-protocol-unix.a
@@ -247,6 +245,7 @@ share/locale/gu/LC_MESSAGES/pulseaudio.mo
 share/locale/he/LC_MESSAGES/pulseaudio.mo
 share/locale/hi/LC_MESSAGES/pulseaudio.mo
 share/locale/hu/LC_MESSAGES/pulseaudio.mo
+share/locale/id/LC_MESSAGES/pulseaudio.mo
 share/locale/it/LC_MESSAGES/pulseaudio.mo
 share/locale/ja/LC_MESSAGES/pulseaudio.mo
 share/locale/kn/LC_MESSAGES/pulseaudio.mo
