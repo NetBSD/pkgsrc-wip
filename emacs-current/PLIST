@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.135 2013/12/21 02:16:53 makoto Exp $
+@comment $NetBSD: PLIST,v 1.136 2014/01/20 04:50:35 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -31,6 +31,7 @@ info/erc.info.gz
 info/ert.info.gz
 info/eshell.info.gz
 info/eudc.info.gz
+info/eww.info.gz
 info/flymake.info.gz
 info/forms.info.gz
 info/gnus.info.gz
@@ -82,7 +83,6 @@ share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
 share/emacs/${PKGVERSION}/etc/CENSORSHIP
 share/emacs/${PKGVERSION}/etc/CONTRIBUTE
-share/emacs/${PKGVERSION}/etc/COOKIES
 share/emacs/${PKGVERSION}/etc/COPYING
 share/emacs/${PKGVERSION}/etc/DEBUG
 share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
@@ -95,14 +95,11 @@ share/emacs/${PKGVERSION}/etc/FTP
 share/emacs/${PKGVERSION}/etc/GNU
 share/emacs/${PKGVERSION}/etc/GNUS-NEWS
 share/emacs/${PKGVERSION}/etc/HELLO
-share/emacs/${PKGVERSION}/etc/INTERVIEW
 share/emacs/${PKGVERSION}/etc/JOKES
 share/emacs/${PKGVERSION}/etc/LINUX-GNU
 share/emacs/${PKGVERSION}/etc/MACHINES
-share/emacs/${PKGVERSION}/etc/MAILINGLISTS
 share/emacs/${PKGVERSION}/etc/MH-E-NEWS
 share/emacs/${PKGVERSION}/etc/MORE.STUFF
-share/emacs/${PKGVERSION}/etc/MOTIVATION
 share/emacs/${PKGVERSION}/etc/NEWS
 share/emacs/${PKGVERSION}/etc/NEWS.1-17
 share/emacs/${PKGVERSION}/etc/NEWS.18
@@ -117,12 +114,10 @@ share/emacs/${PKGVERSION}/etc/ORDERS
 share/emacs/${PKGVERSION}/etc/ORG-NEWS
 share/emacs/${PKGVERSION}/etc/PROBLEMS
 share/emacs/${PKGVERSION}/etc/README
-share/emacs/${PKGVERSION}/etc/SERVICE
 share/emacs/${PKGVERSION}/etc/TERMS
 share/emacs/${PKGVERSION}/etc/THE-GNU-PROJECT
 share/emacs/${PKGVERSION}/etc/TODO
 share/emacs/${PKGVERSION}/etc/WHY-FREE
-share/emacs/${PKGVERSION}/etc/celibacy.1
 share/emacs/${PKGVERSION}/etc/charsets/8859-10.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-11.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-13.map
@@ -256,12 +251,9 @@ share/emacs/${PKGVERSION}/etc/charsets/VSCII.map
 share/emacs/${PKGVERSION}/etc/charsets/stdenc.map
 share/emacs/${PKGVERSION}/etc/charsets/symbol.map
 share/emacs/${PKGVERSION}/etc/compilation.txt
-share/emacs/${PKGVERSION}/etc/condom.1
-share/emacs/${PKGVERSION}/etc/copying.paper
 share/emacs/${PKGVERSION}/etc/e/README
 share/emacs/${PKGVERSION}/etc/e/eterm-color
 share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
-share/emacs/${PKGVERSION}/etc/echo.msg
 share/emacs/${PKGVERSION}/etc/edt-user.el
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
 share/emacs/${PKGVERSION}/etc/emacs.desktop
@@ -916,7 +908,6 @@ share/emacs/${PKGVERSION}/etc/schema/xhtml-xstyle.rnc
 share/emacs/${PKGVERSION}/etc/schema/xhtml.rnc
 share/emacs/${PKGVERSION}/etc/schema/xslt.rnc
 share/emacs/${PKGVERSION}/etc/ses-example.ses
-share/emacs/${PKGVERSION}/etc/sex.6
 share/emacs/${PKGVERSION}/etc/spook.lines
 share/emacs/${PKGVERSION}/etc/srecode/c.srt
 share/emacs/${PKGVERSION}/etc/srecode/cpp.srt
@@ -1532,6 +1523,8 @@ share/emacs/${PKGVERSION}/lisp/edmacro.el.gz
 share/emacs/${PKGVERSION}/lisp/edmacro.elc
 share/emacs/${PKGVERSION}/lisp/ehelp.el.gz
 share/emacs/${PKGVERSION}/lisp/ehelp.elc
+share/emacs/${PKGVERSION}/lisp/elec-pair.el.gz
+share/emacs/${PKGVERSION}/lisp/elec-pair.elc
 share/emacs/${PKGVERSION}/lisp/electric.el.gz
 share/emacs/${PKGVERSION}/lisp/electric.elc
 share/emacs/${PKGVERSION}/lisp/elide-head.el.gz
@@ -3240,8 +3233,6 @@ share/emacs/${PKGVERSION}/lisp/play/landmark.el.gz
 share/emacs/${PKGVERSION}/lisp/play/landmark.elc
 share/emacs/${PKGVERSION}/lisp/play/life.el.gz
 share/emacs/${PKGVERSION}/lisp/play/life.elc
-share/emacs/${PKGVERSION}/lisp/play/meese.el.gz
-share/emacs/${PKGVERSION}/lisp/play/meese.elc
 share/emacs/${PKGVERSION}/lisp/play/morse.el.gz
 share/emacs/${PKGVERSION}/lisp/play/morse.elc
 share/emacs/${PKGVERSION}/lisp/play/mpuz.el.gz
