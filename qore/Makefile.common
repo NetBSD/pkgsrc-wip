@@ -1,6 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2014/01/14 19:27:09 nros Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/01/20 20:58:11 nros Exp $
 # used by wip/qore/Makefile
 # used by wip/qore-yaml-module/Makefile
+# used by wip/qore-xml-module/Makefile
+# used by wip/qore-json-module/Makefile
 
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
