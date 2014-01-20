@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5611 2014/01/19 22:34:31 thomasklausner Exp $
+# $Id: Makefile,v 1.5612 2014/01/20 21:03:55 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2989,6 +2989,9 @@ SUBDIR+=	qmc2
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qore
+SUBDIR+=	qore-json-module
+SUBDIR+=	qore-xml-module
+SUBDIR+=	qore-yaml-module
 SUBDIR+=	qrint
 SUBDIR+=	qrq
 SUBDIR+=	qt4-gstreamer
