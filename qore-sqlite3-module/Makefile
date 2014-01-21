@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2014/01/21 17:14:05 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/21 21:56:40 nros Exp $
 
 DISTNAME=	qore-sqlite3-module-1.0.1
 CATEGORIES=	databases
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.qore.org/
 COMMENT=	SQLite module for Qore
 LICENSE=	gnu-lgpl-v2.1
 
