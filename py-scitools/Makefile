@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/18 19:56:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/21 10:55:39 thomasklausner Exp $
 
 DISTNAME=	scitools-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://code.google.com/p/scitools/
 COMMENT=	Python library for scientific computing
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-tk>=1.1.1:../../graphics/py-matplotlib-tk
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk2>=1.1.1:../../graphics/py-matplotlib-gtk2
 
 USE_TOOLS+=	gzip
 USE_LANGUAGES=	# none
@@ -26,8 +26,7 @@ post-extract:
 
 #optional dependency:
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-#DEPENDS+=	${PYPKGPREFIX}-X>=0.9:../../textproc/py-X
-#PYTHON_VERSIONED_DEPENDENCIES=	Pmw
+#PYTHON_VERSIONED_DEPENDENCIES=	Pmw X
 #.include "../../lang/python/versioned_dependencies.mk"
 #.include "../../math/py-Numeric/buildlink3.mk"
 #.include "../../math/py-numarray/buildlink3.mk"
