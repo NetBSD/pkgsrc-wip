@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5612 2014/01/20 21:03:55 nros Exp $
+# $Id: Makefile,v 1.5613 2014/01/21 10:17:53 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2611,7 +2611,6 @@ SUBDIR+=	py-inflection
 SUBDIR+=	py-instant
 SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
-#SUBDIR+=	py-ipython	# www/zope3 is gone
 SUBDIR+=	py-irco
 SUBDIR+=	py-isodate
 SUBDIR+=	py-jabber-aimt
