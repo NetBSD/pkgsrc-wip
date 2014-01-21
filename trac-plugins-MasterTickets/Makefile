@@ -1,40 +1,34 @@
-# $NetBSD: Makefile,v 1.10 2013/02/21 19:05:40 lexort Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/21 21:39:42 lexort Exp $
 
-UPSTREAM_VERSION=	3.0.3
+UPSTREAM_VERSION=	3.0.4
 DISTNAME=	TracMasterTickets-${UPSTREAM_VESRION}
-VERSION=	${UPSTREAM_VERSION}.20111224
+VERSION=	${UPSTREAM_VERSION}.${SVN_TAG.mastertickets}
 PKGNAME=	trac-plugins-MasterTickets-${VERSION}
-# Force PKGREVISION because git-package by default sets one.
-PKGREVISION=	1
+# PKGREVISION must exist for svn, or else it will get a date
+PKGREVISION=
 CATEGORIES=	www
 MASTER_SITES=	# not defined
 
+LICENSE=	modified-bsd
+
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/MasterTicketsPlugin
-#HOMEPAGE+=	https://github.com/coderanger/trac-mastertickets/
 COMMENT=	Ticket dependency plugin for Trac
 
 EGG_NAME=	${DISTNAME}
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	{ja-,}trac>=1.0:../../www/trac
 
 EGG_NAME=	TracMasterTickets-${UPSTREAM_VERSION}
 
-GIT_REPOSITORIES=		mastertickets
-GIT_REPO.mastertickets=		git://github.com/coderanger/trac-mastertickets.git
-# It seems that the checkout is of master, not the tag.
-GIT_TAG.mastertickets=		af6c1df9
-# GIT_MODULE is
-#  1) about what the cached git tarball is called
-#  2) somehow about more, in that without this line, there is a complaint
-#  => (3b) git pull origin master from trac-plugins-MasterTickets .
-#  cd: can't cd to trac-plugins-MasterTickets
-# But, why is it no per-repository in usage?
-GIT_MODULE=		trac-mastertickets
+SVN_REPOSITORIES=		mastertickets
+SVN_ROOT.mastertickets=		http://trac-hacks.org/svn/masterticketsplugin/trunk
+# This appears to be the release, but there is no tag.
+SVN_TAG.mastertickets=		12946
 
 NO_CHECKSUM=	yes
 
-WRKSRC=		${WRKDIR}/trac-mastertickets
+WRKSRC=		${WRKDIR}/mastertickets
 
 #post-extract:
 #	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
@@ -43,5 +37,5 @@ WRKSRC=		${WRKDIR}/trac-mastertickets
 # \todo Make this optional.
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/git-package.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"

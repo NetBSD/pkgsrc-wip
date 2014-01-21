@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/01/04 23:04:42 lexort Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/01/21 21:39:42 lexort Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,11 +17,14 @@ ${PYSITELIB}/mastertickets/db_default.pyo
 ${PYSITELIB}/mastertickets/graphviz.py
 ${PYSITELIB}/mastertickets/graphviz.pyc
 ${PYSITELIB}/mastertickets/graphviz.pyo
-${PYSITELIB}/mastertickets/htdocs/disable_resolve.js
-${PYSITELIB}/mastertickets/htdocs/jquery.js
-${PYSITELIB}/mastertickets/htdocs/linkify_blockedby.js
-${PYSITELIB}/mastertickets/htdocs/linkify_blocking.js
-${PYSITELIB}/mastertickets/htdocs/ticket.css
+${PYSITELIB}/mastertickets/htdocs/css/ticket.css
+${PYSITELIB}/mastertickets/htdocs/img/caution.png
+${PYSITELIB}/mastertickets/htdocs/img/checkmark.gif
+${PYSITELIB}/mastertickets/htdocs/img/exclaim.png
+${PYSITELIB}/mastertickets/htdocs/img/x.png
+${PYSITELIB}/mastertickets/htdocs/js/disable_resolve.js
+${PYSITELIB}/mastertickets/htdocs/js/linkify_blockedby.js
+${PYSITELIB}/mastertickets/htdocs/js/linkify_blocking.js
 ${PYSITELIB}/mastertickets/model.py
 ${PYSITELIB}/mastertickets/model.pyc
 ${PYSITELIB}/mastertickets/model.pyo
