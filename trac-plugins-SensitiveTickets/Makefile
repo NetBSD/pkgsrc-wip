@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2013/02/21 19:18:03 lexort Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/21 20:40:51 lexort Exp $
 
-UPSTREAM_VERSION=	0.21
+UPSTREAM_VERSION=	0.22
 VERSION=	${UPSTREAM_VERSION}.${SVN_VERSION}
-SVN_VERSION=	11910
+SVN_VERSION=	12834
 
 DISTNAME=	TracSensitiveTickets-${VERSION}
 PKGNAME=	trac-plugins-SensitiveTickets-${VERSION}
 # Empty PKGREVISION because svn-package by default sets one.
-PKGREVISION=	2
+PKGREVISION=	
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
@@ -26,10 +26,9 @@ EGG_NAME=	sensitivetickets-${UPSTREAM_VERSION}
 SVN_REPOSITORIES=	sensitivetickets
 SVN_ROOT.sensitivetickets=	http://trac-hacks.org/svn/sensitiveticketsplugin/trunk
 SVN_TAG.sensitivetickets=	${SVN_VERSION}
+WRKSRC=		${WRKDIR}/sensitivetickets
 
 NO_CHECKSUM=	yes
-
-WRKSRC=		${WRKDIR}/sensitivetickets/trunk
 
 PRIVILEGED_STAGES+=	clean
 
