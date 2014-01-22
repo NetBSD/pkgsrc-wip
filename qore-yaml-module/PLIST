@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/20 19:23:27 nros Exp $
-lib/qore-modules/0.8.8/YamlRpcClient.qm
-lib/qore-modules/0.8.8/YamlRpcHandler.qm
+@comment $NetBSD: PLIST,v 1.2 2014/01/22 22:20:24 nros Exp $
+lib/qore-modules/${QORE_VERSION}/YamlRpcClient.qm
+lib/qore-modules/${QORE_VERSION}/YamlRpcHandler.qm
 lib/qore-modules/yaml-api-0.17.qmod
 lib/qore-modules/yaml.a
 share/qore-yaml-module/license/COPYING.LGPL

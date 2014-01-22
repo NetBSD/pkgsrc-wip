@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/20 19:23:27 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/22 22:20:24 nros Exp $
 
 DISTNAME=	qore-yaml-module-0.4
 CATEGORIES=	textproc
@@ -23,6 +23,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL ${DESTDIR}${PREFIX}/share/qore-yaml-module/license
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT ${DESTDIR}${PREFIX}/share/qore-yaml-module/license
 
+.include "../../wip/qore/plist-version.mk"
 .include "../../wip/qore/options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"

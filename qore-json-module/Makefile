@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/20 20:56:04 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/22 22:13:48 nros Exp $
 
 DISTNAME=	qore-json-module-1.4
 CATEGORIES=	wip
@@ -22,6 +22,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
 		${DESTDIR}${PREFIX}/share/qore-json-module/license
 
+.include "../../wip/qore/plist-version.mk"
 .include "../../wip/qore/options.mk"
 
 .include "../../wip/qore/buildlink3.mk"

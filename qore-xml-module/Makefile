@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/20 19:57:06 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/22 22:16:15 nros Exp $
 
 DISTNAME=	qore-xml-module-1.2
 CATEGORIES=	textproc
@@ -22,6 +22,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
 		${DESTDIR}${PREFIX}/share/qore-xml-module/license
 
+
+.include "../../wip/qore/plist-version.mk"
 .include "../../wip/qore/options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
