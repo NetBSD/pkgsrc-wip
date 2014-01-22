@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2014/01/17 07:41:33 makoto Exp $
+# $NetBSD: Makefile,v 1.42 2014/01/22 14:58:57 makoto Exp $
 
 DISTNAME=		tqsl-2.0.1
-PKGNAME=		tqsl-2.0.1RC3
+PKGNAME=		tqsl-2.0.1RC4
 CATEGORIES=		ham
 MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v2.0.1/
-DIST_SUBDIR=		tqsl-2.0.1RC3
+DIST_SUBDIR=		tqsl-2.0.1RC4
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
