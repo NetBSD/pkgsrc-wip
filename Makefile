@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5615 2014/01/23 14:48:11 thomasklausner Exp $
+# $Id: Makefile,v 1.5616 2014/01/23 16:37:02 shindenmorr Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3524,7 +3524,6 @@ SUBDIR+=	wmswallow
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
 SUBDIR+=	wordcut
-SUBDIR+=	wordpress-mu
 SUBDIR+=	wordwarvi
 SUBDIR+=	workrave
 SUBDIR+=	wpro
