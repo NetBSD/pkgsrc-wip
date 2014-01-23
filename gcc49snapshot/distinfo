@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2014/01/16 06:11:50 keckhardt Exp $
+$NetBSD: distinfo,v 1.31 2014/01/23 05:56:58 keckhardt Exp $
 
-SHA1 (gcc-4.9-20140112.tar.bz2) = e502efc2af45b55f4bfbca547539e36ae0dda36d
-RMD160 (gcc-4.9-20140112.tar.bz2) = 3445e7648f0803c1bbe632cfe1e9d194500ddc58
-Size (gcc-4.9-20140112.tar.bz2) = 84630562 bytes
+SHA1 (gcc-4.9-20140119.tar.bz2) = c1db7a1970fe0e9bf695ff6444b71a979b94900b
+RMD160 (gcc-4.9-20140119.tar.bz2) = a721ba2295538f7b56b9f8979d66f2b894511b48
+Size (gcc-4.9-20140119.tar.bz2) = 84867798 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
 SHA1 (patch-gcc_config.gcc) = 0919088f6d48c149f135828a9e6cf3bd935a3094
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
