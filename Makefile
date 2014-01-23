@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5616 2014/01/23 16:37:02 shindenmorr Exp $
+# $Id: Makefile,v 1.5617 2014/01/23 16:45:36 shindenmorr Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1359,7 +1359,6 @@ SUBDIR+=	kahakai
 SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
-SUBDIR+=	katapult
 SUBDIR+=	kawa
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
