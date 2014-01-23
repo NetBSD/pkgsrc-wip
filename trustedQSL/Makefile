@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/01/22 14:58:57 makoto Exp $
+# $NetBSD: Makefile,v 1.43 2014/01/23 05:08:47 makoto Exp $
 
 DISTNAME=		tqsl-2.0.1
 PKGNAME=		tqsl-2.0.1RC4
@@ -14,7 +14,8 @@ LICENSE=		arrl-license
 # A macro _S in /usr/include/ctype.h conflicts with one in apps/tqsltrace.h
 # NOT_FOR_PLATFORM+=   NetBSD-5.*
 
-DEPENDS+=		mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+# Seems now to have share/TrustedQSL/ca-bundle.crt (2.0.1 or later)
+#DEPENDS+=		mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 USE_TOOLS+=		perl gmake cmake
 USE_LANGUAGES+=		c c++
