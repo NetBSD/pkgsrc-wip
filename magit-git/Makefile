@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/07 03:07:52 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/24 00:22:27 makoto Exp $
 
 DISTNAME=	magit-1.2.0.50
 CATEGORIES=	devel
@@ -38,7 +38,7 @@ BUILD_TARGET=		all
 TEST_TARGET=	check
 
 post-patch:
-	(cd ${WRKSRC}; ${MAKE} VERSION=${PKGVERSION} magit-version.el)
+	(cd ${WRKSRC}; ${GMAKE} VERSION=${PKGVERSION} magit-version.el)
 
 .include "../../wip/mk/git-package.mk"
 .include "../../wip/git-modes-git/buildlink3.mk"

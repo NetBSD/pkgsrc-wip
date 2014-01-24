@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2013/11/07 03:07:52 makoto Exp $
+$NetBSD: patch-Makefile,v 1.2 2014/01/24 00:22:27 makoto Exp $
 
 (1) convert info directory
 (2) Add ${PREFIX}/share/emacs/site-lisp for magit.el when
@@ -15,9 +15,9 @@ $NetBSD: patch-Makefile,v 1.1 2013/11/07 03:07:52 makoto Exp $
  docdir  ?= $(datarootdir)/doc/magit
  execdir ?= $(PREFIX)/bin
  
-@@ -28,7 +28,7 @@ INSTALL_INFO ?= install-info
+@@ -27,7 +27,7 @@ INSTALL_INFO ?= install-info
  
- EFLAGS ?= -L ../git-modes
+ EFLAGS ?= -L ../git-modes -L ../cl-lib
  EMACS  ?= emacs
 -BATCH   = $(EMACS) $(EFLAGS) -batch -Q -L .
 +BATCH   = $(EMACS) $(EFLAGS) -batch -Q -L . -L @@BUILDLINK_DIR@@/share/emacs/site-lisp/git-modes
