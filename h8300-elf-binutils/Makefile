@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/06/16 21:13:08 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/24 12:49:50 makoto Exp $
 
-DISTNAME=	binutils-2.23.2
+DISTNAME=	binutils-2.24
 PKGNAME=	cross-h8300-elf-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
@@ -15,6 +15,13 @@ H8300_PREFIX=	${PREFIX}/cross-h8300-elf
 
 USE_TOOLS+=	gmake makeinfo
 GNU_CONFIGURE=	yes
+# PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*) && \
+        empty(MACHINE_PLATFORM:MNetBSD-6.99.*-*)
+USE_TOOLS+=             ksh
+CONFIG_SHELL=           ksh
+.endif
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
@@ -42,15 +49,6 @@ post-install:
 		 h8300-elf-strings	h8300-elf-strip ; do \
 		${LN} -s ${H8300_PREFIX}/bin/"$$f" \
 		  ${DESTDIR}${PREFIX}/bin/"$$f" || exit 1; \
-	done
-# copy libiberty.a under the different name from compiler
-# PATH differs between clang and gcc:
-	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a; do \
-		if [ -f ${DESTDIR}${H8300_PREFIX}/lib/$$d ]; then \
-			${MV} ${DESTDIR}${H8300_PREFIX}/lib/$$d \
-			      ${DESTDIR}${H8300_PREFIX}/lib/libiberty_binutils.a; \
-		break; \
-		fi; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

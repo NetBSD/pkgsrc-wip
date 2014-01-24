@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/16 21:13:08 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/24 12:49:50 makoto Exp $
 bin/h8300-elf-addr2line
 bin/h8300-elf-ar
 bin/h8300-elf-as
@@ -94,7 +94,6 @@ cross-h8300-elf/info/configure.info
 cross-h8300-elf/info/gprof.info
 cross-h8300-elf/info/ld.info
 cross-h8300-elf/info/standards.info
-cross-h8300-elf/lib/libiberty_binutils.a
 cross-h8300-elf/man/man1/h8300-elf-addr2line.1
 cross-h8300-elf/man/man1/h8300-elf-ar.1
 cross-h8300-elf/man/man1/h8300-elf-as.1
@@ -146,6 +145,7 @@ cross-h8300-elf/share/locale/fr/LC_MESSAGES/opcodes.mo
 cross-h8300-elf/share/locale/ga/LC_MESSAGES/gprof.mo
 cross-h8300-elf/share/locale/ga/LC_MESSAGES/ld.mo
 cross-h8300-elf/share/locale/ga/LC_MESSAGES/opcodes.mo
+cross-h8300-elf/share/locale/hr/LC_MESSAGES/binutils.mo
 cross-h8300-elf/share/locale/id/LC_MESSAGES/bfd.mo
 cross-h8300-elf/share/locale/id/LC_MESSAGES/binutils.mo
 cross-h8300-elf/share/locale/id/LC_MESSAGES/gas.mo
