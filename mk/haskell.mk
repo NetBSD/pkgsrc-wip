@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.28 2014/01/25 11:13:51 obache Exp $
+# $NetBSD: haskell.mk,v 1.29 2014/01/25 11:18:28 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -46,7 +46,7 @@
 #            package B was compiled. So the installed package B is
 #            completely broken at this time.
 #
-# Public variables for users:
+# User-settable variables:
 #
 #   HASKELL_COMPILER
 #       Description:
@@ -56,7 +56,7 @@
 #       Default value:
 #           ghc
 #
-# Public variables for packages:
+# Package-settable variables:
 #
 #   HASKELL_ENABLE_LIBRARY_PROFILING
 #       Description:
