@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.23 2014/01/25 09:02:54 obache Exp $
+# $NetBSD: haskell.mk,v 1.24 2014/01/25 09:11:34 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -132,7 +132,7 @@ PKGNAME?=	hs-${DISTNAME}
 # Default value of MASTER_SITES.
 _DISTBASE?=	${DISTNAME:C/-[^-]*$//}
 _DISTVERSION?=	${DISTNAME:C/^.*-//}
-MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE}${DISTNAME}/
+MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE:=${DISTNAME}/}
 
 # Default value of HOMEPAGE.
 HOMEPAGE?=	http://hackage.haskell.org/cgi-bin/hackage-scripts/package/${_DISTBASE}
