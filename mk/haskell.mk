@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.29 2014/01/25 11:18:28 obache Exp $
+# $NetBSD: haskell.mk,v 1.30 2014/01/25 11:28:22 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -88,14 +88,6 @@ HASKELL_COMPILER?=	ghc
 # Possible: ghc
 # Default: ghc
 # -----------------------------------------------------------------------------
-
-
-# To be deprecated: if HASKELL_TYPE is set, copy its value to
-# HASKELL_COMPILER. The former is an old variable name of the latter.
-.if defined(HASKELL_TYPE)
-WARNINGS+=		"HASKELL_TYPE is deprecated, please use HASKELL_COMPILER"
-HASKELL_COMPILER?=	${HASKELL_TYPE}
-.endif
 
 
 # Declare HASKELL_COMPILER as one of BUILD_DEFS variables. See
