@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 23:24:29 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:45:27 thomasklausner Exp $
 
 DISTNAME=	rssgrab-0.6.4
 PKGNAME=	gDesklets-${DISTNAME}
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 NAME=rssgrab
 GDESKLETSDIR=		${LOCALBASE}/share/gdesklets
 
-PYTHON_PATCH_SCRIPTS=	${NAME}/feedparser.py
+REPLACE_PYTHON=	${NAME}/feedparser.py
 
 post-extract:
 	${PYTHONBIN} ${WRKSRC}/Install_${NAME}_Sensor.bin --nomsg ${WRKSRC}

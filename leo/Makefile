@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/06/04 07:45:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:45:27 thomasklausner Exp $
 
 DISTNAME=		leo-4-4-2-1-final
 PKGNAME=		leo-4.4.2.1
@@ -16,7 +16,7 @@ DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=		yes
-PYTHON_PATCH_SCRIPTS=	src/leo.py scripts/LinixInstall.py
+REPLACE_PYTHON=	src/leo.py scripts/LinixInstall.py
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 

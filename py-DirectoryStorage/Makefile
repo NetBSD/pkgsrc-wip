@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/06 17:13:24 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:45:27 thomasklausner Exp $
 #
 
 DISTNAME=		DirectoryStorage_1_1_7
@@ -13,7 +13,7 @@ HOMEPAGE=		http://dirstorage.sourceforge.net/
 COMMENT=		Storage for ZODB, that uses files and directories
 
 NO_CONFIGURE=		yes
-PYTHON_PATCH_SCRIPTS=	${TOOLS}
+REPLACE_PYTHON=	${TOOLS}
 PY_PATCHPLIST=		yes
 
 AUTO_MKDIRS=		yes

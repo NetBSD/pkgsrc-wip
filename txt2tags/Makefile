@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:53 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:45:28 thomasklausner Exp $
 #
 
 DISTNAME=	txt2tags-2.5
@@ -10,7 +10,7 @@ MAINTAINER=			dbolgheroni@unifei.edu.br
 HOMEPAGE=			http://txt2tags.sourceforge.net/
 COMMENT=			Text formatting and conversion tool
 
-PYTHON_PATCH_SCRIPTS=		txt2tags
+REPLACE_PYTHON=		txt2tags
 
 USE_PKGLOCALEDIR=	yes
 NO_BUILD=			yes

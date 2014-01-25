@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/25 10:38:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.30 2014/01/25 10:45:28 thomasklausner Exp $
 
 DISTNAME=		pyicqt-0.8.1.5
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -34,10 +34,10 @@ NO_BUILD=		yes
 
 RCD_SCRIPTS=	pyicqt
 
-PYTHON_PATCH_SCRIPTS+=	PyICQt.py
-PYTHON_PATCH_SCRIPTS+=	tools/infodump.py
-PYTHON_PATCH_SCRIPTS+=	tools/managessi.py
-PYTHON_PATCH_SCRIPTS+=	tools/migrate.py
+REPLACE_PYTHON+=	PyICQt.py
+REPLACE_PYTHON+=	tools/infodump.py
+REPLACE_PYTHON+=	tools/managessi.py
+REPLACE_PYTHON+=	tools/migrate.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging
 
 TRANSPORTDIR=		${JABBER_TRANSDIR}/pyicqt

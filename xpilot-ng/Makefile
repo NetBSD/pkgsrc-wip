@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/07 20:11:10 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:45:29 thomasklausner Exp $
 
 DISTNAME=	xpilot-ng-4.7.2
 PKGREVISION=	3
@@ -11,7 +11,7 @@ COMMENT=	Enhanced version of XPilot network space battle
 
 GNU_CONFIGURE=		yes
 
-PYTHON_PATCH_SCRIPTS=	mapconvert.py
+REPLACE_PYTHON=	mapconvert.py
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/application.mk"

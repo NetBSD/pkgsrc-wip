@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:45:27 thomasklausner Exp $
 
 DISTNAME=	gtimelog-0.5.0
 CATEGORIES=	time
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_PATCH_SCRIPTS+=	src/gtimelog/main.py src/gtimelog/test_gtimelog.py scripts/*.py
+REPLACE_PYTHON+=	src/gtimelog/main.py src/gtimelog/test_gtimelog.py scripts/*.py
 PYDISTUTILSPKG= yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/01/25 10:38:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2014/01/25 10:45:28 thomasklausner Exp $
 
 DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -25,10 +25,10 @@ DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 # USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
 # EXTRACT_ONLY=		# yes
 NO_BUILD=		yes
-PYTHON_PATCH_SCRIPTS+=	PyAIMt.py
-PYTHON_PATCH_SCRIPTS+=	tools/infodump.py
-PYTHON_PATCH_SCRIPTS+=	tools/managessi.py
-PYTHON_PATCH_SCRIPTS+=	tools/migrate.py
+REPLACE_PYTHON+=	PyAIMt.py
+REPLACE_PYTHON+=	tools/infodump.py
+REPLACE_PYTHON+=	tools/managessi.py
+REPLACE_PYTHON+=	tools/migrate.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging
 
 # always include bsd.prefs.mk before any .if or .ifdef statements

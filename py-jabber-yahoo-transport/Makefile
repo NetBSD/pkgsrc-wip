@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/25 10:45:28 thomasklausner Exp $
 
 DISTNAME=		yahoo-transport-0.4.90
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -26,7 +26,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xmpppy
 # the package.  These include: WRKSRC, GNU_CONFIGURE,
 # HAS_CONFIGURE, USE_PKGLOCALEDIR, USE_INSTALL, TEXINFO_REQD, USE_JAVA,
 # USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
-PYTHON_PATCH_SCRIPTS+=	yahoo.py
+REPLACE_PYTHON+=	yahoo.py
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

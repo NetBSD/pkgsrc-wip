@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 17:13:30 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:45:27 thomasklausner Exp $
 #
 
 DISTNAME=	albatross-1.10
@@ -41,28 +41,28 @@ PKG_USERS=	${ALBATROSS_USER}:${ALBATROSS_GROUP}
 OWN_DIRS_PERMS=	${RUNTIME_DIR} ${ALBATROSS_USER} ${ALBATROSS_GROUP} 0750
 OWN_DIRS_PERMS+=${LOGDIR} ${ALBATROSS_USER} ${ALBATROSS_GROUP} 0750
 
-PYTHON_PATCH_SCRIPTS=	samples/extension/cal.py
-PYTHON_PATCH_SCRIPTS+=	samples/form4/form.py
-PYTHON_PATCH_SCRIPTS+=	samples/paginate/paginate.py
-PYTHON_PATCH_SCRIPTS+=	samples/popview1/popview.py
-PYTHON_PATCH_SCRIPTS+=	samples/popview2/popview.py
-PYTHON_PATCH_SCRIPTS+=	samples/popview3/popview.py
-PYTHON_PATCH_SCRIPTS+=	samples/popview4/popview.py
-PYTHON_PATCH_SCRIPTS+=	samples/random/random.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/content1/content.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/content2/content.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/form1/form.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/form2/form.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/form3/form.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/simple1/simple.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/simple2/simple.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/simple3/simple.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/simple4/simple.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/simple5/simple.py
-PYTHON_PATCH_SCRIPTS+=	samples/templates/stream/stream.py
-PYTHON_PATCH_SCRIPTS+=	samples/tree1/tree.py
-PYTHON_PATCH_SCRIPTS+=	samples/tree2/tree.py
-PYTHON_PATCH_SCRIPTS+=	samples/tree3/tree.py
+REPLACE_PYTHON=	samples/extension/cal.py
+REPLACE_PYTHON+=	samples/form4/form.py
+REPLACE_PYTHON+=	samples/paginate/paginate.py
+REPLACE_PYTHON+=	samples/popview1/popview.py
+REPLACE_PYTHON+=	samples/popview2/popview.py
+REPLACE_PYTHON+=	samples/popview3/popview.py
+REPLACE_PYTHON+=	samples/popview4/popview.py
+REPLACE_PYTHON+=	samples/random/random.py
+REPLACE_PYTHON+=	samples/templates/content1/content.py
+REPLACE_PYTHON+=	samples/templates/content2/content.py
+REPLACE_PYTHON+=	samples/templates/form1/form.py
+REPLACE_PYTHON+=	samples/templates/form2/form.py
+REPLACE_PYTHON+=	samples/templates/form3/form.py
+REPLACE_PYTHON+=	samples/templates/simple1/simple.py
+REPLACE_PYTHON+=	samples/templates/simple2/simple.py
+REPLACE_PYTHON+=	samples/templates/simple3/simple.py
+REPLACE_PYTHON+=	samples/templates/simple4/simple.py
+REPLACE_PYTHON+=	samples/templates/simple5/simple.py
+REPLACE_PYTHON+=	samples/templates/stream/stream.py
+REPLACE_PYTHON+=	samples/tree1/tree.py
+REPLACE_PYTHON+=	samples/tree2/tree.py
+REPLACE_PYTHON+=	samples/tree3/tree.py
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}

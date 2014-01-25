@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/04 07:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:45:28 thomasklausner Exp $
 #
 
 DISTNAME=		pypod-0.6.0
@@ -16,7 +16,7 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 
 PYDISTUTILSPKG=		yes
-PYTHON_PATCH_SCRIPTS=	*.py */*.py
+REPLACE_PYTHON=	*.py */*.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

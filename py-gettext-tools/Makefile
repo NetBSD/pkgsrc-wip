@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/07 11:54:39 asau Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:45:28 thomasklausner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gettext-tools-0
@@ -14,7 +14,7 @@ AUTO_MKDIRS=	yes
 
 EXTRACT_ELEMENTS=		${PYSUBDIR}/Tools/i18n/*
 
-PYTHON_PATCH_SCRIPTS=		Tools/i18n/msgfmt.py Tools/i18n/pygettext.py
+REPLACE_PYTHON=		Tools/i18n/msgfmt.py Tools/i18n/pygettext.py
 
 # Why the hell it is not declared in python/pyvers.mk ?!
 # 	-- tech-pkg@NetBSD.org
@@ -24,7 +24,7 @@ do-patch:
 	@echo "Patches ignored"
 
 do-install:
-	for a in ${PYTHON_PATCH_SCRIPTS}; do \
+	for a in ${REPLACE_PYTHON}; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/$$a ${DESTDIR}${PREFIX}/bin/`${BASENAME} $$a`-${PYVERSSUFFIX}; \
 	done
 

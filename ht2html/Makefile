@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/29 16:57:17 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:45:27 thomasklausner Exp $
 #
 
 DISTNAME=		ht2html-2.0
@@ -12,7 +12,7 @@ COMMENT=		Simple web page templating system
 USE_TOOLS+=		pax
 PY_PATCHPLIST=		yes
 
-PYTHON_PATCH_SCRIPTS=	ht2html.py
+REPLACE_PYTHON=	ht2html.py
 
 EGDIR=			${PREFIX}/share/examples/ht2html
 EGFILES=		BAWGenerator.py JPyLocalGenerator.py

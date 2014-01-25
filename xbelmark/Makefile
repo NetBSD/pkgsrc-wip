@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/07 19:10:21 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:45:28 thomasklausner Exp $
 #
 
 DISTNAME=		xbelmark.py
@@ -16,7 +16,7 @@ DEPENDS=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 WRKSRC=			${WRKDIR}
 NO_BUILD=		YES
 
-PYTHON_PATCH_SCRIPTS=	xbelmark.py
+REPLACE_PYTHON=	xbelmark.py
 
 do-extract:
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}

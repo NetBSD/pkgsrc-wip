@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 13:57:33 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:45:28 thomasklausner Exp $
 
 DISTNAME=	pyzor-0.5.0
 CATEGORIES=	mail
@@ -18,7 +18,7 @@ BUILD_DEFS+=	PYZOR_USE_PYZORD
 
 PYDISTUTILSPKG=	YES
 
-PYTHON_PATCH_SCRIPTS=		scripts/pyzor	\
+REPLACE_PYTHON=		scripts/pyzor	\
 				scripts/pyzord
 
 .include "../../lang/python/extension.mk"

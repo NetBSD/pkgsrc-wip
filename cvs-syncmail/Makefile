@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/12/27 01:00:47 tonnerre Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:45:27 thomasklausner Exp $
 #
 
 DISTNAME=		syncmail
@@ -14,7 +14,7 @@ COMMENT=		Automatically send cvs commit messages via mail
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 NO_BUILD=		yes
-PYTHON_PATCH_SCRIPTS=	syncmail
+REPLACE_PYTHON=	syncmail
 INSTALLATION_DIRS=	bin
 
 do-install:

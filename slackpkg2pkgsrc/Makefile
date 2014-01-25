@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 15:20:25 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:45:28 thomasklausner Exp $
 #
 
 DISTNAME=		slackpkg2pkgsrc-1.0
@@ -13,7 +13,7 @@ COMMENT=		Simple script for easy generation of Slackware binary packages
 
 PY_PATCHPLIST=		yes
 NO_BUILD=		yes
-PYTHON_PATCH_SCRIPTS=	slackpkg2pkgsrc.py
+REPLACE_PYTHON=	slackpkg2pkgsrc.py
 
 INSTALLATION_DIRS=	bin
 
