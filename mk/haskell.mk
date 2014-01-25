@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.26 2014/01/25 09:30:45 obache Exp $
+# $NetBSD: haskell.mk,v 1.27 2014/01/25 11:03:03 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -77,7 +77,7 @@
 .if !defined(HASKELL_MK)
 HASKELL_MK=	# defined
 
-
+.include "../../mk/bsd.fast.prefs.mk"
 
 # -----------------------------------------------------------------------------
 # This declaration should be placed in ../../mk/defaults/mk.conf
