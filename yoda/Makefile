@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/03 22:04:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:27 thomasklausner Exp $
 
 DISTNAME=	YODA-1.0.2
 PKGNAME=        yoda-1.0.2
@@ -30,7 +30,6 @@ BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.12.1
 .else
 CONFIGURE_ARGS+=	--disable-pyext
 .endif
-
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../lang/python/application.mk"

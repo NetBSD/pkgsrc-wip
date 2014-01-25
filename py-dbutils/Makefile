@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:20 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:17 thomasklausner Exp $
 
 DISTNAME=	DBUtils-1.0
-PKGNAME=		${PYPKGPREFIX}-dbutils-1.0
+PKGNAME=	${PYPKGPREFIX}-dbutils-1.0
 CATEGORIES=	databases
 MASTER_SITES=	http://www.webwareforpython.org/downloads/DBUtils/
 
@@ -15,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-postgresql>=4.0:../../databases/py-postgresql
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-postgresql
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

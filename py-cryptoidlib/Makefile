@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/12/14 09:26:56 obache Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:16 thomasklausner Exp $
 
 DISTNAME=	cryptoIDlib-0.3.3
 PKGNAME=	${PYPKGPREFIX}-cryptoidlib-0.3.3
@@ -11,7 +10,6 @@ HOMEPAGE=	http://www.trevp.com/cryptoID/
 COMMENT=	CryptoIDlib is a python library for working with cryptoID certChains
 #LICENSE=	# TODO: (see mk/license.mk)
 
-
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0.1:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-tlslite>=0.3.8:../../security/py-tlslite
@@ -20,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../math/py-gmpy
 
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto
 
 REPLACE_PYTHON+=	scripts/cryptoID.py scripts/cryptoIDcli.py scripts/cryptoIDsrv.py
 

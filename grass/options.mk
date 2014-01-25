@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2009/12/30 12:26:55 moubctez Exp $
+# $NetBSD: options.mk,v 1.5 2014/01/25 10:38:13 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grass
 PKG_SUPPORTED_OPTIONS=	fftw freetype gmath iodbc motif mysql
@@ -129,6 +129,7 @@ CONFIGURE_ARGS+=	--without-odbc
 .if !empty(PKG_OPTIONS:MwxWidgets)
 CONFIGURE_ARGS+=	--with-wxwidgets=${PREFIX}/bin/wx-config
 .include "../../x11/py-wxWidgets/buildlink3.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
 .else
 CONFIGURE_ARGS+=	--without-wxwidgets
 .endif

@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1 2013/01/03 13:55:49 jeremy-c-reed Exp $
-
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:09 thomasklausner Exp $
+#
 # TODO:
 # CONF_FILES etc/bind10/cmdctl-accounts.csv
 #etc/bind10/cmdctl-certfile.pem
@@ -27,8 +27,7 @@ USE_LANGUAGES+=	c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
-PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	20 21 22 23 24 25 26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

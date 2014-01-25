@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/06 00:27:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:15 thomasklausner Exp $
 
 DISTNAME=	arxiv2bib-1.0.5
 CPKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://nathan11g.github.com/arxiv2bib
 COMMENT=	Get arXiv.org metadata in BibTeX format
 LICENSE=	2-clause-bsd
-
-PYTHON_VERSIONS_INCLUDE_3X= yes 
 
 PYDISTUTILSPKG=	yes
 

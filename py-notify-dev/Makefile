@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/27 15:04:27 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	py-notify-0.3.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}/1}-dev
@@ -12,7 +11,9 @@ COMMENT=	Python bindings for libnotify - development branch
 LICENSE=	gnu-lgpl-v2.1
 
 PYDISTUTILSPKG=	yes
-CONFLICTS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+
+CONFLICTS+=	${PYPKGPREFIX}-notify-[0-9]*
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

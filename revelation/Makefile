@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/17 15:23:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:25 thomasklausner Exp $
 
 DISTNAME=	revelation-0.4.14
 CATEGORIES=	security
@@ -19,6 +19,7 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	gmake intltool pkg-config
 CONFIGURE_ARGS+=	GCONFTOOL=${GCONFTOOL2}
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
 
 GCONF_SCHEMAS=	revelation.schemas
 

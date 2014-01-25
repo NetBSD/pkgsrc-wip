@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/19 22:31:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:20 thomasklausner Exp $
 
 DISTNAME=		yahoo-transport-0.4.90
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.4.1:../../chat/py-xmpppy
 
 PYTHON_VERSIONED_DEPENDENCIES=	dns
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xmpppy
 
 # Fifth paragraph - all build definitions that describe things used by
 # the package.  These include: WRKSRC, GNU_CONFIGURE,

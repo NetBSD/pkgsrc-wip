@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:28 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
 
-DISTNAME=	Pylons-1.0.tar
-EGG_NAME=	${DISTNAME:S/.tar//}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/S/.tar//}
+DISTNAME=	Pylons-1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/P/Pylons/
-EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pylonshq.com/
@@ -19,10 +16,10 @@ DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.2:../../www/py-paste
 
-WRKSRC=			${WRKDIR}/Pylons-1.0
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=		# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-cheetah, py-paste
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests/conftest.py

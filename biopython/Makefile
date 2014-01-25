@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/12/02 09:46:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.17 2014/01/25 10:38:09 thomasklausner Exp $
 
 DISTNAME=	biopython-1.63b
 PKGNAME=	$(PYPKGPREFIX)-$(DISTNAME)
@@ -10,8 +10,8 @@ HOMEPAGE=	http://biopython.org/
 COMMENT=	Python libraries for computational molecular biology
 LICENSE=	Biopython
 
-PYTHON_VERSIONS_INCLUDE_3X=yes
 PYDISTUTILSPKG=		YES
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-reportlab
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/biopython

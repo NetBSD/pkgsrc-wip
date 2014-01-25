@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.10 2012/10/07 11:54:28 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:38:17 thomasklausner Exp $
+
 DISTNAME=	python-djvulibre-0.3.3
 EGG_NAME=	${DISTNAME:S/python-/python_/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -20,6 +20,7 @@ USE_TOOLS+=	pkg-config #gsed
 USE_LANGUAGES=	c
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
 
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	pre-configure

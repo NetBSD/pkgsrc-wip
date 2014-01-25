@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/21 10:16:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:15 thomasklausner Exp $
 
 DISTNAME=	pudb-0.92.15
 PKGNAME=	${EGG_NAME}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.1.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.0:../../textproc/py-pygments
 #DEPENDS+=	${PYPKGPREFIX}-ipython>=0.9.1:../../devel/py-ipython
+#PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ipython
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/02 16:58:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:18 thomasklausner Exp $
 
 DISTNAME=	Forthon-0.8.13
 PKGNAME=        ${PYPKGPREFIX}-forthon-0.8.13
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c fortran
 
-PYTHON_VERSIONS_INCLUDE_3X= yes
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 

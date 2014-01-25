@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/09/09 14:05:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:11 thomasklausner Exp $
 
 DISTNAME=	cvsanaly2-2.0.0
 CATEGORIES=	devel
@@ -15,6 +15,7 @@ DEPENDS+=	git>=1.7.0.5:../../devel/git
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mysqldb
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/07 16:05:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:38:15 thomasklausner Exp $
 
 DISTNAME=	python-ase-3.8.1.3440
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -16,6 +16,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 post-extract:
 	${MV} ${WRKSRC}/tools/ase-build ${WRKSRC}/tools/ase-build${PYVERSSUFFIX}

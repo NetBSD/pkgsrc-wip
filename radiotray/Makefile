@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/04/05 11:20:50 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:25 thomasklausner Exp $
 
 DISTNAME=	radiotray-0.6.3
 PKGREVISION=	1
@@ -14,10 +13,12 @@ COMMENT=	Internet radio player with a minimal GUI
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.1.5:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
+DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 # XXX notification-daemon is not a strict dependency.
 #DEPENDS+=	notification-daemon-[0-9]*:../../sysutils/notification-daemon
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-notify, py-gtk2, py-gstreamer0.10
 
 USE_TOOLS+=	xgettext
 
@@ -29,7 +30,6 @@ SUBST_FILES.fix-paths+=		src/lib/*.py
 SUBST_SED.fix-paths=		-e 's,/usr,'${PREFIX}',g'
 
 .include "../../sysutils/py-dbus/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"

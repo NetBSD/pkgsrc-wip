@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/12 15:59:50 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:13 thomasklausner Exp $
 
 DISTNAME=	gwsmhg-0.8.1
 PKGREVISION=	1
@@ -13,16 +12,18 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mercurial>=1.3.1:../../devel/mercurial
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
-DEPENDS+=	${PYPKGPREFIX}-cairo>=1.8.6:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.6.0:../../x11/gtksourceview
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.99.12:../../x11/py-gtk2
 
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

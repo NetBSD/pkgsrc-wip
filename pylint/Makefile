@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/11/14 13:24:32 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/25 10:38:24 thomasklausner Exp $
 
 VERSION=	1.0.0
 DISTNAME=	pylint-${VERSION}
@@ -14,12 +14,12 @@ LICENSE=    	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-astroid>=1.0.1:../../wip/py-astroid
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime via py-logilab-common
+
 USE_LANGUAGES=	# none
 
 DOCDIR= ${PREFIX}/share/doc/pylint
 INSTALLATION_DIRS=  ${DOCDIR} ${PKGMANDIR}/man1
-
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 \

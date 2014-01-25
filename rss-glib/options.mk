@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/06/17 12:45:13 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.5 2014/01/25 10:38:25 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rss-glib
 
@@ -11,6 +11,7 @@ PKG_SUGGESTED_OPTIONS=	python mono vala
 ### Enable python support
 ###
 .if !empty(PKG_OPTIONS:Mpython)
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 .  include "../../lang/python/extension.mk"
 .  include "../../lang/python/pyversion.mk"
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB}

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 12:25:34 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	oasa-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,10 +13,11 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test.py
 
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

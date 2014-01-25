@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/12/26 14:48:26 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:25 thomasklausner Exp $
 
 DISTNAME=	reinteract-0.5.10
 PKGREVISION=	2
@@ -16,10 +15,11 @@ GNU_CONFIGURE=	yes
 
 REPLACE_PYTHON+=	bin/reinteract.in
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/application.mk"

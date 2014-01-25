@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/09/28 23:21:49 asau Exp $
-#
+# $NetBSD: Makefile,v 1.41 2014/01/25 10:38:12 thomasklausner Exp $
 
 DISTNAME=		freevo-1.7.6
 PKGREVISION=		2
@@ -21,6 +20,7 @@ DEPENDS+=		${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
 PKG_DESTDIR_SUPPORT=    none
 
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-beautifulsoup, py-mxDateTime, py-imaging
 USE_PKGLOCALEDIR=	yes
 
 CHECK_PORTABILITY_SKIP+=	boot/freevo

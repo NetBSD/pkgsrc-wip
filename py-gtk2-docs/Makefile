@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 11:48:39 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:38:19 thomasklausner Exp $
 
 DISTNAME=		py-gtk2-docs
 PKGNAME=		py-gtk2-docs-1

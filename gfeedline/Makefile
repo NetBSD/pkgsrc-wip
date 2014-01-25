@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/16 10:40:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:12 thomasklausner Exp $
 
 DISTNAME=	gfeedline-2.4.1
 PKGREVISION=	1
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-beautifulsoup
 
 USE_LANGUAGES=	# none
 NO_BUILD=	YES

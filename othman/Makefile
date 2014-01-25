@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:48 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:14 thomasklausner Exp $
 
-VERS=	0.2.5
+VERS=		0.2.5
 DISTNAME=	othman-${VERS}
 PKGREVISION=	1
 CATEGORIES=	misc
@@ -17,6 +16,7 @@ USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../lang/python/extension.mk"

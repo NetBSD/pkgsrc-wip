@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 22:14:52 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:38:11 thomasklausner Exp $
 
 DISTNAME=	ConvertToMP3_0.6.3
 PKGNAME=	converttomp3-0.6.3
@@ -23,6 +22,7 @@ WRKSRC=				${WRKDIR}
 INSTALLATION_DIRS=	bin
 
 REPLACE_PYTHON+=	ConvertToMP3.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mutagen
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ConvertToMP3.py \

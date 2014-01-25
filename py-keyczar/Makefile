@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/04 17:34:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:21 thomasklausner Exp $
 
 DISTNAME=	keyczar-python-0.71d-09062013
 PKGNAME=	keyczar-0.7.1d-09062013
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 WRKSRC=		${WRKDIR}/keyczar-python
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} tests/keyczar/alltests.py

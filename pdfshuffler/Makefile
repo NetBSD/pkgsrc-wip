@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/09 09:49:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:15 thomasklausner Exp $
 
 DISTNAME=	pdfshuffler-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 USE_LANGUAGES=	# none
 REPLACE_PYTHON=	pdfshuffler/pdfshuffler.py pdfshuffler/pdfshuffler_iconview.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 SUBST_CLASSES+=		manpath
 SUBST_FILES.manpath+=	setup.py

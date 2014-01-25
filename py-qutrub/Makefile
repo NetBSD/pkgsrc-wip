@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/12 16:26:51 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:22 thomasklausner Exp $
 #
 
 DISTNAME=	qutrub-0.5
@@ -20,6 +20,7 @@ USE_LANGUAGES=	# none
 QUTRUB_FILES=	ar_ctype.py arabic_const.py classverb.py mosaref_main.py  conjugate.py conjugatedisplay.py  index.py verb_const.py
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sqlite2
 PY_EXEC=	${PREFIX}/bin/python${PYVERSSUFFIX}
 QUTRUBDIR=	${PREFIX}/${PYSITELIB}/py-qutrub
 

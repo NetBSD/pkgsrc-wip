@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	sexy-python-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -15,6 +14,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 BUILDLINK_PKGSRCDIR.libsexy?=	../../devel/libsexy
 .include "../../devel/libsexy/buildlink3.mk"

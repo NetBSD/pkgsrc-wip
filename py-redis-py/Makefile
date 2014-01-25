@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/09/07 13:54:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	redis-2.8.0
 PKG=		redis-py
@@ -13,8 +13,7 @@ HOMEPAGE=	http://github.com/andymccurdy/redis-py/
 COMMENT=	Redis Python client
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCLUDE_3X= yes
-
 DEPENDS+=	redis-[0-9]*:../../databases/redis
+
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

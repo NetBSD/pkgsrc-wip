@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 15:09:55 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:38:14 thomasklausner Exp $
 
-DISTNAME=			mirage-0.9.5.2
-CATEGORIES=			graphics
-MASTER_SITES=		http://download.berlios.de/mirageiv/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	mirage-0.9.5.2
+CATEGORIES=	graphics
+MASTER_SITES=	http://download.berlios.de/mirageiv/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=			netbsd@guigui2.net
-HOMEPAGE=			http://mirageiv.berlios.de/
-COMMENT=			Fast and simple image viewer
-LICENSE=			gnu-gpl-v3
+MAINTAINER=	netbsd@guigui2.net
+HOMEPAGE=	http://mirageiv.berlios.de/
+COMMENT=	Fast and simple image viewer
+LICENSE=	gnu-gpl-v3
 
 PY_PATCHPLIST=			yes
 PYDISTUTILSPKG=			yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

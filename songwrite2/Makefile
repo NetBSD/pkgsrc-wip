@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/31 23:38:01 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:26 thomasklausner Exp $
 
 DISTNAME=	Songwrite2-0.4.1
 PKGNAME=	${DISTNAME:tl}
@@ -14,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 BUILD_OPTIONS=		# blank
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 #INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/locale/en/LC_MESSAGES/
 #INSTALLATION_DIRS+=	share/locale/fr/LC_MESSAGES share/${PKGBASE}
@@ -37,7 +38,7 @@ do-install:
 .include "../../print/evince/buildlink3.mk"
 DEPENDS+=	timidity-[0-9]*:../../audio/timidity
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

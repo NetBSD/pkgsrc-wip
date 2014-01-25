@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/12/06 11:31:34 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:13 thomasklausner Exp $
 
 DISTNAME=	gwibber-2.91.90
 PKGREVISION=	1
@@ -35,6 +34,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../wip/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-oauth-[0-9]*:../../security/py-oauth
 DEPENDS+=	${PYPKGPREFIX}-gnome2-extras-[0-9]*:../../x11/py-gnome2-extras
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-mxDateTime, py-imaging, py-notify, py-gtk2
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch

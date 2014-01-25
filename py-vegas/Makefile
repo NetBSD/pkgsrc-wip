@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/14 16:14:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:23 thomasklausner Exp $
 
 DISTNAME=	vegas-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Tools for adaptive multidimensional Monte Carlo integration
 LICENSE=	gnu-gpl-v3
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCLUDE_3X= yes
 
 INSTALLATION_DIRS+= share/doc/vegas
 

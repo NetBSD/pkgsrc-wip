@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/01/17 23:10:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2014/01/25 10:38:26 thomasklausner Exp $
 
 DISTNAME=	spade-2.0rc4
 PKGREVISION=	1
@@ -22,6 +22,7 @@ WRKSRC=	${WRKDIR}/spade
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONED_DEPENDENCIES=	dns
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

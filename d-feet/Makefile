@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/28 21:24:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:38:11 thomasklausner Exp $
 
 DISTNAME=	d-feet-0.1.14
 EGG_NAME=	${DISTNAME:S|d-|d_|}
@@ -16,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/19 22:31:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/25 10:38:21 thomasklausner Exp $
 
 DISTNAME=	jabberbot-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.5.0rc1:../../chat/py-xmpppy
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xmpppy
 
 EXDIR=		${PREFIX}/share/examples/py-jabberbot
 

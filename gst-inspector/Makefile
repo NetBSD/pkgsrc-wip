@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:40 asau Exp $
-#
-
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:38:13 thomasklausner Exp $
 
 DISTNAME=	gst-inspector-0.4
 PKGREVISION=	1
@@ -18,6 +16,7 @@ USE_TOOLS+=		intltool msgfmt gettext
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gstreamer0.10
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

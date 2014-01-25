@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	pyphant-1.0b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.4:../../www/py-paste
 
-WRKSRC=		${WRKDIR}/pyphant-1.0b1
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-paste
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

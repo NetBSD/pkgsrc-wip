@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/18 19:56:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:18 thomasklausner Exp $
 
 DISTNAME=	pyse-0.3.1
 PKGNAME=	${PYPKGPREFIX}-fdm-0.3.1
@@ -11,6 +11,7 @@ COMMENT=	Framework for solving PDEs with FDM using Python
 LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONED_DEPENDENCIES=	Pmw
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric, py-numarray
 
 USE_LANGUAGES=	c c++
 

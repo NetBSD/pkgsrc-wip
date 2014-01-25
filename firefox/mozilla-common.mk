@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2013/05/24 03:28:03 makoto Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2014/01/25 10:38:12 thomasklausner Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -64,6 +64,7 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 
 PYTHON_FOR_BUILD_ONLY=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sqlite2
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
@@ -73,7 +74,7 @@ SUBST_MESSAGE.python=	Fixing path to python.
 SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
 SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
-# When MACHINAE_ARCH == "arm", libjpeg-turbo should be enabled.
+# When MACHINE_ARCH == "arm", libjpeg-turbo should be enabled.
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 CONFIGURE_ARGS+=	--enable-libjpeg-turbo

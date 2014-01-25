@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/09/09 11:18:58 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/25 10:38:14 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtask
 
@@ -11,6 +11,7 @@ PKG_SUGGESTED_OPTIONS=	python
 ### Enable python support
 ###
 .if !empty(PKG_OPTIONS:Mpython)
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 .  include "../../lang/python/extension.mk"
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
 .  include "../../devel/py-gobject/buildlink3.mk"

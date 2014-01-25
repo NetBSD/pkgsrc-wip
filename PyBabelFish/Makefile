@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 22:14:51 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/01/25 10:38:08 thomasklausner Exp $
 
 DISTNAME=		PyBabelPhish-2.0_All_Platforms
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/_All_Platforms//}
@@ -17,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 NO_CONFIGURE=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 PYFILES=	URLRead.py pybabelfish.py pyfilter.py pytheme.py \
 		pythonol_festival.py symbolbar.py

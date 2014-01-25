@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/06 11:31:35 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:14 thomasklausner Exp $
 
 DISTNAME=	monajat-2.3.1
 PKGREVISION=	2
@@ -12,6 +11,7 @@ HOMEPAGE=	https://launchpad.net/monajat
 COMMENT=	Monajat is a small application that popups Islamic prayers
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
@@ -20,6 +20,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-notify, py-gtk2
 
 INSTALLATION_DIRS+=	bin
 
@@ -27,11 +29,10 @@ REPLACE_PYTHON+=   ${WRKSRC}/monajat-applet
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

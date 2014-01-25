@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/08/13 00:22:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:26 thomasklausner Exp $
 
 DISTNAME=	spyder-2.2.1
 PKGREVISION=	2
@@ -19,6 +19,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES= c		# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ipython
 
 INSTALLATION_DIRS=     share/applications
 post-extract:

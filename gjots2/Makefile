@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/12/04 03:58:20 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/01/25 10:38:12 thomasklausner Exp $
 
 DISTNAME=	gjots2-2.3.15
 CATEGORIES=	x11
@@ -13,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 PYDISTUTILSPKG= yes
 USE_TOOLS+=	bash pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2
 
 REPLACE_BASH+=	bin/gjots2lpr
 

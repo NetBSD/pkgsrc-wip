@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 17:05:56 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:14 thomasklausner Exp $
 
 DISTNAME=	hgview-0.9.${HGVIEW_VER}
 PKGREVISION=	1
@@ -14,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	none
 NO_CHECKSUM=		yes
 PYDISTUTILSPKG=		yes
 WRKSRC=			${WRKDIR}/hgview
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 HG_REPOSITORIES=	hgview
 HG_REPO.hgview=		http://www.logilab.org/hg/hgview

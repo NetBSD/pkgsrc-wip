@@ -1,16 +1,24 @@
-# $NetBSD: Makefile,v 1.1 2013/10/01 20:29:04 wongk Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:26 thomasklausner Exp $
 
 DISTNAME=	sickbeard-${DISTVERSION}
 COMMIT_SHA=	91c428a43765a1476ec268f73cd62051a64bf4e0
 DISTVERSION= ${COMMIT_SHA:C/([a-f0-9]{7}).*/\1/}
 CATEGORIES=	news
-
-FETCH_USING= curl
-
 MASTER_SITES=	-https://github.com/midgetspy/Sick-Beard/tarball/${COMMIT_SHA}
+FETCH_USING= curl
 # DISTFILE is the the filename to save the download as
 DISTFILE= ${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	wongk@apt.homeunix.net
+HOMEPAGE=	http://sickbeard.com/
+COMMENT=	Search for TV series nzb-files via web interface
+# sickbeard, cherrypy, simplejson, jquery, gntp, tvdb_api
+LICENSE=	gnu-gpl-v3 AND modified-bsd AND mit AND unlicense
+
+DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
+DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 TEMP_DIR= midgetspy-Sick-Beard-${DISTVERSION}
 WRKSRC= ${WRKDIR}/${TEMP_DIR}
@@ -27,7 +35,8 @@ AUTO_MKDIRS=yes
 
 PY_PATCHPLIST=          yes
 PLIST_SUBST+=           PYVERSSUFFIX=${PYVERSSUFFIX}
-REPLACE_PYTHON=   *.py */*.py */*/*.py
+REPLACE_PYTHON=		*.py */*.py */*/*.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-cheetah
 
 SUBST_CLASSES+= fix-paths
 SUBST_STAGE.fix-paths=  pre-configure
@@ -43,20 +52,6 @@ do-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/sickbeard/lib/tvdb_api/tests
 	@${ECHO} ${COMMIT_SHA} > ${DESTDIR}${PREFIX}/sickbeard/version.txt
 
-MAINTAINER=	wongk@apt.homeunix.net
-
 .include "../../lang/python/application.mk"
-
-DEPENDS+= ${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah \
-          ${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree\
-          ${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
-HOMEPAGE=	http://sickbeard.com/
-COMMENT=	Search for TV series nzb-files via web interface
-
-# sickbeard, cherrypy, simplejson, jquery, gntp, tvdb_api
-LICENSE=	gnu-gpl-v3 AND modified-bsd AND mit AND unlicense
-
-# url2pkg-marker (please do not remove this line.)
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

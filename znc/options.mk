@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2013/11/11 12:22:14 obache Exp $
+# $NetBSD: options.mk,v 1.8 2014/01/25 10:38:27 thomasklausner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
@@ -71,7 +71,6 @@ PLIST_SRC+=		PLIST.tcl
 # Python support
 #
 .if !empty(PKG_OPTIONS:Mpython)
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 PY_PEP3147=	no
 .include		"../../lang/python/extension.mk"

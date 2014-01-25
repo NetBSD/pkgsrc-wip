@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/17 20:21:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	regex-2014.01.10
 PKGNAME=	${PYPKGPREFIX}-regex-20140110
@@ -11,8 +11,6 @@ HOMEPAGE=	https://code.google.com/p/mrab-regex-hg
 COMMENT=	Alternative regular expression module, to replace re
 LICENSE=	python-software-foundation
 
-
-PYTHON_VERSIONS_INCLUDE_3X=yes
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"

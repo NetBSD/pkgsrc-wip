@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/05 17:49:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:23 thomasklausner Exp $
 
 DISTNAME=	SphinxReport-2.0
 PKGNAME=        ${PYPKGPREFIX}-sphinxreport-2.0
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=1.6.2:../../wip/py-openpyxl
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCLUDE_3X=yes
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

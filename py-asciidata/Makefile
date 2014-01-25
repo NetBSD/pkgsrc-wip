@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/19 20:34:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:15 thomasklausner Exp $
 
 DISTNAME=	asciidata-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-fits>=2.3.1:../../graphics/py-fits
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-numarray
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"

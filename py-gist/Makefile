@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:18 thomasklausner Exp $
 
 DISTNAME=	pygist-1.5.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -13,6 +12,7 @@ COMMENT=	Gist is a scientific graphics library
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/extension.mk"

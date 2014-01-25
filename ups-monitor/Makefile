@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/06 06:39:32 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:26 thomasklausner Exp $
 
 DISTNAME=		ups-monitor-0.8.3
 CATEGORIES=		sysutils
@@ -14,6 +13,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		gmake
 REPLACE_PYTHON=		ups-monitor
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2
 
 SUBST_CLASSES+=		py
 SUBST_STAGE.py= 	post-patch

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/12 16:26:51 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:23 thomasklausner Exp $
 
 DISTNAME=	pysparse-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,6 +12,7 @@ COMMENT=	Sparse linear algebra extension for Python
 
 USE_LANGUAGES=	c c++ fortran77
 PYDISTUTILSPKG= yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric
 
 #.include "../../graphics/vtk-python/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"

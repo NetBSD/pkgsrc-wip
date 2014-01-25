@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:37 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:11 thomasklausner Exp $
 
 PKGNAME=	ditz-commander-0.4
 DISTNAME=	ditz-commander_0.4.orig
@@ -11,9 +10,12 @@ HOMEPAGE=	http://code.google.com/p/ditz-commander/
 COMMENT=	GUI frontend for ditz the distributed issue tracker
 LICENSE=	modified-bsd
 
+DEPENDS+=	${RUBY_PKGPREFIX}-ditz>=0.5:../../wip/ruby-ditz
+
 REPLACE_PYTHON=	ditz-commander
 
-DEPENDS+=	${RUBY_PKGPREFIX}-ditz>=0.5:../../wip/ruby-ditz
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
+
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/14 10:20:26 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:08 thomasklausner Exp $
 
 DISTNAME=	arandr-0.1.4
 PKGREVISION=	1
@@ -16,6 +15,7 @@ DEPENDS+=	xrandr>=1.2:../../x11/xrandr
 
 PY_PATCHPLIST = YES
 PYSETUP = setup.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 # Adjust setup.py
 SUBST_CLASSES+=         setup

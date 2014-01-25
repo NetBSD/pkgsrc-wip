@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:23 thomasklausner Exp $
 
 DISTNAME=	sshpt-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 
 WRKSRC=		${WRKDIR}/sshpt
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto, py-paramiko
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

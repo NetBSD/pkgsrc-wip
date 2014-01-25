@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:35 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:26 thomasklausner Exp $
 
 DISTNAME=	thwab-2.2.3
 CATEGORIES=	misc
@@ -18,6 +17,7 @@ USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON+=	Thwab Othman
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 

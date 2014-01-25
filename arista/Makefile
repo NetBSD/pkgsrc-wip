@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:38 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:08 thomasklausner Exp $
 
 DISTNAME=	arista-0.9.1
 PKGREVISION=	1
@@ -19,10 +18,11 @@ USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2, py-gstreamer0.10
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-bad/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-ugly/buildlink3.mk"
@@ -35,4 +35,5 @@ BUILDLINK_API_DEPENDS.gst-python+=	${PYPKGPREFIX}-gstreamer0.10>=0.10.5
 BUILDLINK_ABI_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.8.5nb1
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

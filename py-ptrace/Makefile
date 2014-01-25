@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/06/04 07:45:23 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	python-ptrace-0.6.4
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
@@ -16,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-x86_64  FreeBSD-*-i386 Linux-*-*
 
-PYTHON_VERSIONS_INCLUDE_3X= yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG= 	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/12/14 09:26:55 obache Exp $
+# $NetBSD: Makefile,v 1.32 2014/01/25 10:38:20 thomasklausner Exp $
 
 DISTNAME=		pymsnt-0.11.3
 PKGREVISION=		3
@@ -39,6 +39,7 @@ NO_BUILD=		yes
 RCD_SCRIPTS=	pymsnt
 
 PYTHON_PATCH_SCRIPTS+=	PyMSNt.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging
 
 TRANSPORTDIR=		${JABBER_TRANSDIR}/pymsnt
 

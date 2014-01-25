@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/05 11:26:28 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:14 thomasklausner Exp $
 
 DISTNAME=	moeclock
 PKGNAME=	${DISTNAME}-1.2.0.2
@@ -19,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
 
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure

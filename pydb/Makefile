@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/21 10:16:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:38:24 thomasklausner Exp $
 
 DISTNAME=	pydb-1.26
 CATEGORIES=	devel python
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--enable-pyreadline
 .endif
 
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ipython
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"

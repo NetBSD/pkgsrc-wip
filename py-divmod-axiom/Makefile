@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/11/23 22:44:43 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:38:17 thomasklausner Exp $
 
 AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.6:../../wip/py-divmod-epsilon
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED=	26
 REPLACE_PYTHON+=	bin/axiomatic
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sqlite2
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

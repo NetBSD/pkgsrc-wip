@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:14 thomasklausner Exp $
 
 DISTNAME=	nautilus-dropbox-1.4.0
 CATEGORIES=	sysutils
@@ -11,8 +10,8 @@ HOMEPAGE=	https://www.dropbox.com/
 COMMENT=	Dropbox nautilus integration
 #LICENSE=	gnu-gpl-v3 AND http://creativecommons.org/licenses/by-nd/3.0/
 
-DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 FETCH_USING=		curl
 
@@ -21,6 +20,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 REPLACE_PYTHON=		dropbox.in
 REPLACE_PYTHON+=	rst2man.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

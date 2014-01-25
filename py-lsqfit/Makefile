@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/14 15:02:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	lsqfit-4.5.3
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCLUDE_3X= yes
 PYDISTUTILSPKG=	yes
 
 .include "../../devel/py-cython/buildlink3.mk"

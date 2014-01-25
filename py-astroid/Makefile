@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/14 13:24:32 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:16 thomasklausner Exp $
 
 DISTNAME=	astroid-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCLUDE_3X=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime via py-logilab-common
 
 .include "../../devel/py-logilab-common/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

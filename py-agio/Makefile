@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 17:13:28 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:15 thomasklausner Exp $
 
 DISTNAME=	AIGO-0.1.0
 PKGNAME=	${PYPKGPREFIX}-aigo-0.1.0
@@ -18,6 +17,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
 
 post-extract:
 	${MV} ${WRKSRC}/bin/AIGO-gui.py ${WRKSRC}/bin/AIGO-gui.py${PYVERSSUFFIX}

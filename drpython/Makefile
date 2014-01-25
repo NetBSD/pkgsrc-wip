@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/06/04 07:45:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2014/01/25 10:38:12 thomasklausner Exp $
 
 DISTNAME=	DrPython_3.11.2
 PKGNAME=	drpython-3.11.2
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/DrPython
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
 
 PY_EXEC=${PREFIX}/bin/python${PYVERSSUFFIX}
 PY_APPAPATH=${PREFIX}/${PYSITELIB}/drpython/drpython.py

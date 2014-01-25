@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/13 20:09:35 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:24 thomasklausner Exp $
 
 DISTNAME=	PythonToolkit-12.08.18
 PKGNAME=	${DISTNAME:tl}
@@ -16,6 +15,7 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
 
 INSTALLATION_DIRS=	share/applications share/pythontoolkit/icons
 

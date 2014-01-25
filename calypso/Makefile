@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/09/27 07:53:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:11 thomasklausner Exp $
 
 DISTNAME=	calypso-1.2
 CATEGORIES=	net
@@ -17,11 +17,11 @@ GIT_REPO.calypso=	git://keithp.com/git/calypso.git
 WRKSRC=		${WRKDIR}/calypso
 
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 INSTALLATION_DIRS=	share/examples/calypso
 
 REPLACE_PYTHON=	calypso.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-vobject
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/share/examples/calypso/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/12/09 20:45:33 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:19 thomasklausner Exp $
 
 DISTNAME=	graphite-web-0.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,12 @@ HOMEPAGE=	https://launchpad.net/graphite
 COMMENT=	Enterprise scalable realtime graphing platform
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cairo>=1.8.10:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-carbon>=${PKGREVISION_NOREV}:../../wip/py-carbon
 DEPENDS+=	${PYPKGPREFIX}-django>=1.3.1:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.3.1:../../www/py-django-tagging
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,6 +42,7 @@ CONF_FILES+=		${GRAPHITE_EGDIR}/${file}.example	\
 
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
 			--install-lib=${PREFIX}/${PYSITELIB}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-django-tagging
 
 INSTALLATION_DIRS+=	share/examples/graphite
 
@@ -51,5 +52,6 @@ pre-build:
 	${MKDIR} ${WRKSRC}/graphite/webapp
 	${CP} -LR ${WRKSRC}/webapp/content ${WRKSRC}/graphite/webapp
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

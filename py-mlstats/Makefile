@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/16 23:19:39 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	mlstats-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +19,7 @@ FETCH_USING=	curl
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mysqldb
 
 post-extract:
 	${MV} ${WRKSRC}/mlstats ${WRKSRC}/mlstats${PYVERSSUFFIX}

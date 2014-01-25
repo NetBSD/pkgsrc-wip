@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/05 13:52:03 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:15 thomasklausner Exp $
 
 DISTNAME=	postr-0.12.4
 PKGREVISION=	1
@@ -16,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

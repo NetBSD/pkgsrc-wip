@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/12/12 13:39:09 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/01/25 10:38:14 thomasklausner Exp $
 
 DISTNAME=	miro-3.5.1
 PKGREVISION=	1
@@ -9,8 +8,11 @@ MASTER_SITES=	http://ftp.osuosl.org/pub/pculture.org/miro/src/
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.getmiro.com/
 COMMENT=	Miro is a integrated video downloader and player
-
 LICENSE=	gnu-gpl-v2
+
+DEPENDS=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
+DEPENDS+=	${PYPKGPREFIX}-libtorrent-rasterbar-[0-9]*:../../wip/py-libtorrent-rasterbar
+DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
@@ -25,12 +27,9 @@ SUBST_SED.fix-paths=		-e 's,/usr/share/man/man1,${PKGMANDIR}/man1,g'
 SUBST_SED.fix-paths+=		-e 's,/usr/share,${PREFIX}/share,g'
 SUBST_SED.fix-paths+=		-e 's,/usr/X11R6/lib,${X11BASE}/lib,g'
 
-DEPENDS=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
-DEPENDS+=	${PYPKGPREFIX}-libtorrent-rasterbar-[0-9]*:../../wip/py-libtorrent-rasterbar
-DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
-
 PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	linux
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex, py-gtk2
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"

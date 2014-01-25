@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:45 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:14 thomasklausner Exp $
 
 DISTNAME=	obmenu-1.0
 CATEGORIES=	wm
@@ -20,6 +19,7 @@ SUBST_SED.obmenu+=	-e 's|/usr/share|${LOCALBASE}/share|g'
 
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON=	${WRKSRC}/obmenu ${WRKSRC}/obxml.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
 
 USE_LANGUAGES=	# none
 

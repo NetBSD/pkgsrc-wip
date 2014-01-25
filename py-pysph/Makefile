@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:15 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
 
 DISTNAME=	PySPH-0.9beta
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,12 +9,12 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pysph.googlecode.com/
 COMMENT=	General purpose Smoothed Particle Hydrodynamics framework
 
-
 DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 
 WRKSRC=		${WRKDIR}/PySPH-0.9beta
 
 USE_LANGUAGES=	c c++
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # my-multiprocessing
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

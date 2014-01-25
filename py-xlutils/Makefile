@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/19 22:27:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:23 thomasklausner Exp $
 
 VERS=		1.4.1
 DISTNAME=	xlutils-${VERS}
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 DEPENDS+=      ${PYPKGPREFIX}-xlrd>=0.7.1:../../textproc/py-xlrd
 DEPENDS+=      ${PYPKGPREFIX}-xlwt>=0.7.1:../../textproc/py-xlwt
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xlwt
 
 .include "../../lang/python/egg.mk"
 .include "../../wip/py-errorhandler/buildlink3.mk"
