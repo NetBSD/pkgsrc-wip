@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.27 2014/01/25 11:03:03 obache Exp $
+# $NetBSD: haskell.mk,v 1.28 2014/01/25 11:13:51 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -66,13 +66,13 @@
 #       Default value:
 #           yes
 #
-#    HASKELL_ENABLE_HADDOCK_DOCUMENTATION
-#        Description:
-#            Whether haddock documentation should be built or not.
-#        Possible values:
-#            yes, no
-#        Default value:
-#            no
+#   HASKELL_ENABLE_HADDOCK_DOCUMENTATION
+#       Description:
+#           Whether haddock documentation should be built or not.
+#       Possible values:
+#           yes, no
+#       Default value:
+#           no
 
 .if !defined(HASKELL_MK)
 HASKELL_MK=	# defined
