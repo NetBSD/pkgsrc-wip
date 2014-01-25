@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.21 2013/09/27 12:59:19 szptvlfn Exp $
+# $NetBSD: haskell.mk,v 1.22 2014/01/25 08:57:17 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -204,18 +204,20 @@ PRINT_PLIST_AWK+= \
 
 # We might not have any working Haskell interpreter so compile
 # Setup.?hs to a binary.
-Setup:
+pre-configure: ${WRKSRC}/Setup
+
+${WRKSRC}/Setup:
 	${RUN} cd ${WRKSRC} && \
 		${_HASKELL_BIN} --make Setup
 
 # Define configure target.
-do-configure: Setup
+do-configure:
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} \
 			./Setup configure ${CONFIGURE_ARGS}
 
 # Define build target.
-do-build: Setup
+do-build:
 	${RUN} cd ${WRKSRC} && \
 		./Setup build
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
@@ -227,7 +229,7 @@ do-build: Setup
 # for package registration (if any).
 _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-description
 
-do-install: Setup
+do-install:
 	${RUN} cd ${WRKSRC} && \
 		./Setup register --gen-pkg-config=dist/package-description && \
 		if [ "${DESTDIR}" = "" ]; then \
