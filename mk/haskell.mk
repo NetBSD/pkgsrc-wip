@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.22 2014/01/25 08:57:17 obache Exp $
+# $NetBSD: haskell.mk,v 1.23 2014/01/25 09:02:54 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -154,8 +154,8 @@ HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	no
 .include "../../wip/ghc/buildlink3.mk"
 
 # Tools
-_GHC_BIN=			${PREFIX}/bin/ghc
-_GHC_PKG_BIN=		${PREFIX}/bin/ghc-pkg
+_GHC_BIN=		${BUILDLINK_PREFIX.ghc}/bin/ghc
+_GHC_PKG_BIN=		${BUILDLINK_PREFIX.ghc}/bin/ghc-pkg
 _HASKELL_BIN=		${_GHC_BIN} # Expose to the outer scope.
 _HASKELL_PKG_BIN=	${_GHC_PKG_BIN} # Expose to the outer scope.
 
@@ -186,7 +186,7 @@ PLIST.prof=		yes
 # Haddock documentations
 PLIST_VARS+=		doc
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
-CONFIGURE_ARGS+=	--with-haddock=${PREFIX}/bin/haddock
+CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc}/bin/haddock
 PLIST.doc=		yes
 .endif
 
