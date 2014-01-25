@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.25 2014/01/25 09:24:01 obache Exp $
+# $NetBSD: haskell.mk,v 1.26 2014/01/25 09:30:45 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -77,12 +77,6 @@
 .if !defined(HASKELL_MK)
 HASKELL_MK=	# defined
 
-
-# -----------------------------------------------------------------------------
-# This declaration should be placed in ../../mk/fetch/sites.mk
-#
-MASTER_SITE_HASKELL_HACKAGE?=	http://hackage.haskell.org/package/
-# -----------------------------------------------------------------------------
 
 
 # -----------------------------------------------------------------------------
