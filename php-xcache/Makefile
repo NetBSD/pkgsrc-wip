@@ -1,20 +1,26 @@
-# $NetBSD: Makefile,v 1.6 2012/11/23 22:33:51 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/26 18:41:45 mjoellnir Exp $
 #
 
 MODNAME=		xcache
-PECL_VERSION=		1.3.1
+PECL_VERSION=		3.1.0
 PKGNAME=		${MODNAME}-${PECL_VERSION}
 CATEGORIES=		www
 MASTER_SITES=		http://xcache.lighttpd.net/pub/Releases/${PECL_VERSION}/
-EXTRACT_SUFX=		.tar.gz # required, because ../../lang/php/ext.mk
-				# overrides it with .tgz
+EXTRACT_SUFX=		.tar.bz2 # required, because ../../lang/php/ext.mk
+				 # overrides it with .tgz
 
-# Original Maintainer (since dec 2010)
+LICENSE=		modified-bsd
+
+# Original Maintainer (until dec 2010)
 #MAINTAINER=		mbowie@buzmo.com
 # Maintainer from dec 2010 on
 MAINTAINER=		vs@nifelheim.info
 HOMEPAGE=		http://xcache.lighttpd.net/
 COMMENT=		Fast and stable PHP opcode cacher
+
+XCACHE_DIR=		${PREFIX}/share/xcache
+
+USE_TOOLS+=		pax
 
 PLIST_SRC+=		PLIST
 
@@ -25,35 +31,11 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}
 
 INSTALLATION_DIRS=	share/examples/xcache
 INSTALLATION_DIRS+=	share/xcache
-INSTALLATION_DIRS+=	share/xcache/admin
-INSTALLATION_DIRS+=	share/xcache/coverager
-
-ADMINFILES=		common-en.lang.php common-zh-simplified-utf-8.lang.php \
-			common-zh-traditional-utf-8.lang.php common.php \
-			config.php.example edit.php edit.tpl.php footer.tpl.php \
-			header.tpl.php help-en.lang.php \
-			help-zh-simplified-utf-8.lang.php \
-			help-zh-traditional-utf-8.lang.php help.php index.php \
-			tablesort.js xcache.css xcache.php xcache.tpl.php
-
-COVERAGERFILES=		common-en.lang.php common-zh-simplified-utf-8.lang.php \
-			common-zh-simplified-gb2312.lang.php common.php \
-			config.php.example coverager.css coverager.php \
-			coverager.tpl.php index.php
-
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/xcache.ini \
 		${DESTDIR}${PREFIX}/share/examples/xcache/
-.for f in ${ADMINFILES}
-	${INSTALL_DATA} ${WRKSRC}/admin/${f} \
-		${DESTDIR}${PREFIX}/share/xcache/admin/
-.endfor
-.for f in ${COVERAGERFILES}
-	${INSTALL_DATA} ${WRKSRC}/coverager/${f} \
-		${DESTDIR}${PREFIX}/share/xcache/coverager/
-.endfor
-
+	cd ${WRKSRC}/htdocs && ${PAX} -wr * ${DESTDIR}${XCACHE_DIR}
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
