@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/12 20:32:05 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:51 thomasklausner Exp $
 
 GOOGLESHAREVERS=	0.9
 DISTNAME=		googleshare-${GOOGLESHAREVERS}
@@ -11,14 +11,13 @@ HOMEPAGE=		http://www.googlesharing.net/
 COMMENT=		Anonymizing proxy for google searches
 LICENSE=		gnu-gpl-v3
 
-PYDISTUTILSPKG=		# yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-
-PYTHON_VERSIONS_ACCEPTED= 27 26
-REPLACE_PYTHON+=	googleshare.py
-
 DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
+
+PYDISTUTILSPKG=		# yes
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+REPLACE_PYTHON+=	googleshare.py
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 SUBST_CLASSES+=		ssl-paths
 SUBST_STAGE.ssl-paths=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=	Aesthete-0.4.1-7
 EGG_NAME=	${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.6:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging, py-gtk2, py-gobject
 
 post-extract:
 	${MV} ${WRKSRC}/bin/aesthete_ime ${WRKSRC}/bin/aesthete_ime${PYVERSSUFFIX}

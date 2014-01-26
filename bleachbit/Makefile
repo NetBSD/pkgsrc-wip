@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:38:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/26 15:49:50 thomasklausner Exp $
 
 DISTNAME=	bleachbit-0.7.2
 CATEGORIES=	sysutils python
@@ -18,7 +18,7 @@ USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gobject
 
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/01/26 15:50:00 thomasklausner Exp $
 
 DISTNAME=	radiotray-0.6.3
 PKGREVISION=	1
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 #DEPENDS+=	notification-daemon-[0-9]*:../../sysutils/notification-daemon
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-notify, py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-notify, py-gtk2, py-gstreamer0.10, py-gobject, py-xdg
 
 USE_TOOLS+=	xgettext
 

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/11 11:29:28 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/26 15:49:59 thomasklausner Exp $
 
 DISTNAME=		shtoom-0.2
 PKGNAME=		${PYPKGPREFIX}-shtoom-0.2
@@ -16,6 +15,7 @@ DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shtoom/ui/gnomeui/shtoom.glade \

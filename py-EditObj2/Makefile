@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=	EditObj2-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=         yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gobject
 
 do-test:
 	${RUN} cd ${WRKSRC}/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} regtest.py

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/06 17:22:16 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=	BIP-0.5.4
 EGG_NAME=	${DISTNAME}
@@ -21,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-openopt>=0.31:../../wip/py-openopt
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	share/doc/py-bip/html
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-multiprocess and py-gnuplot via py-liveplots
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/html/* ${DESTDIR}${PREFIX}/share/doc/py-bip/html

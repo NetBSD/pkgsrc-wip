@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:29 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/26 15:50:03 thomasklausner Exp $
 
 DISTNAME=	telepathy-logger-0.1.1
 CATEGORIES=	chat gnome
@@ -22,6 +21,8 @@ CONFIGURE_ARGS+=	--disable-channeltext
 CONFIGURE_ARGS+=	--disable-coding-style-checks
 
 PKGCONFIG_OVERRIDE+=	telepathy-logger/telepathy-logger.pc.in
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.7.18
 .include "../../chat/telepathy-glib/buildlink3.mk"

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/06 11:31:35 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.4 2014/01/26 15:49:59 thomasklausner Exp $
 
 DISTNAME=	python-xdgapp-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -17,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xdg
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

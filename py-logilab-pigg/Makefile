@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:58 thomasklausner Exp $
 
 DISTNAME=	pigg-0.2.0
 PKGNAME=	${PYPKGPREFIX}-logilab-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/extension.mk"

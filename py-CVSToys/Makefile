@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/06 17:13:24 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/26 15:49:52 thomasklausner Exp $
 #
 
 DISTNAME=	CVSToys-1.0.10
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 USE_LANGUAGES=	# none
 

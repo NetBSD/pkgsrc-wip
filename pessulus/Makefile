@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=	pessulus-2.30.0
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config gmake intltool msgfmt
 USE_LANGUAGES=	c
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

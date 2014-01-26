@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 17:17:29 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/26 15:50:00 thomasklausner Exp $
 
 DISTNAME=	telepathy-butterfly-0.5.4
 PKGREVISION=	2
@@ -20,6 +19,7 @@ USE_LANGUAGES=	# none
 PY_PATCHPLIST=	yes
 
 REPLACE_PYTHON+=	waf telepathy-butterfly
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gobject, py-papyon
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"

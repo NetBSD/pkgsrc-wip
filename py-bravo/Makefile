@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/06 17:22:16 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=		MostAwesomeDude-bravo-1.8.1-0-gf6cb5fe
 BRAVO_VERSION=		1.8.1
@@ -12,7 +12,10 @@ HOMEPAGE=		http://www.bravoserver.org/
 COMMENT=		Minecraft game server in python
 LICENSE=		mit
 
-# FETCH_USING=		wget
+DEPENDS+=		${PYPKGPREFIX}-construct>=0.4.1:../../wip/py-construct
+DEPENDS+=		${PYPKGPREFIX}-numpy>=0nb4:../../math/py-numpy
+DEPENDS+=		${PYPKGPREFIX}-twisted>=10.1:../../net/py-twisted
+
 FETCH_USING=		curl
 
 # make sure to update when updating DISTNAME.
@@ -21,15 +24,10 @@ FETCH_USING=		curl
 WRKSRC=			${WRKDIR}/MostAwesomeDude-bravo-0e9fb17
 EGG_NAME=		Bravo-${BRAVO_VERSION}
 
-DEPENDS+=		${PYPKGPREFIX}-construct>=0.4.1:../../wip/py-construct
-DEPENDS+=		${PYPKGPREFIX}-numpy>=0nb4:../../math/py-numpy
-DEPENDS+=		${PYPKGPREFIX}-twisted>=10.1:../../net/py-twisted
-
-PYTHON_VERSIONS_ACCEPTED=	27 26
-
 # REPLACE_PYTHON+=	spectrumctl/spectrumctl.py
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 .include "../../mk/bsd.prefs.mk"
 

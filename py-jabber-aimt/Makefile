@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/01/25 10:45:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2014/01/26 15:49:55 thomasklausner Exp $
 
 DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -29,7 +29,7 @@ REPLACE_PYTHON+=	PyAIMt.py
 REPLACE_PYTHON+=	tools/infodump.py
 REPLACE_PYTHON+=	tools/managessi.py
 REPLACE_PYTHON+=	tools/migrate.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging, py-twisted
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

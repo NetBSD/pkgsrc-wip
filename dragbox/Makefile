@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:38:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/26 15:49:50 thomasklausner Exp $
 
 DISTNAME=	dragbox-0.4.0
 PKGREVISION=	2
@@ -21,7 +21,7 @@ USE_TOOLS+=	automake
 
 REPLACE_PYTHON+=	dragbox
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2, py-gobject
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \

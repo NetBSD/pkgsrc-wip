@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/26 15:49:54 thomasklausner Exp $
 
 DISTNAME=	etk.docking-0.2
 PKGNAME=	${PYPKGPREFIX}-etk-docking-0.2
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8:../../wip/py-simplegeneric
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/egg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=	pydirector-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto, py-twisted
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/extension.mk"

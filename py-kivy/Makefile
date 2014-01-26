@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/26 15:49:57 thomasklausner Exp $
 
 VERSION=	1.0.9
 DISTNAME=	Kivy-1.0.9
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 USE_LANGUAGES= c
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-multiprocessing, py-imaging, py-gstreamer0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-multiprocessing, py-imaging, py-gstreamer0.10, py-gobject, py-twisted
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-game/buildlink3.mk"

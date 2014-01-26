@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/01/25 10:45:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.24 2014/01/26 15:49:59 thomasklausner Exp $
 
 DISTNAME=	quodlibet-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ BUILD_TARGET=		_trayicon.so _mmkeys.so
 
 PYDISTUTILSPKG= yes
 REPLACE_PYTHON=	exfalso.py quodlibet.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mutagen, py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mutagen, py-gtk2, py-gstreamer0.10, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

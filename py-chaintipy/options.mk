@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/01/25 10:38:16 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2014/01/26 15:49:53 thomasklausner Exp $
 
 PKG_OPTIONS_VAR =	PKG_OPTIONS.chiantipy
 PKG_SUPPORTED_OPTIONS=	wx qt
@@ -13,6 +13,6 @@ PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 .endif
 
 .if !empty(PKG_OPTIONS:Mwx)
-.  include "../../x11/py-wxWidgets/buildlink3.mk"
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+.  include "../../x11/py-wxWidgets/buildlink3.mk"
 .endif

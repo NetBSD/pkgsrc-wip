@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=	libinstpatch-1.0.0
 CATEGORIES=	audio
@@ -15,7 +15,7 @@ USE_TOOLS+=	intltool msgfmt msgmerge perl pkg-config xgettext
 
 PKGCONFIG_OVERRIDE+=	libinstpatch-1.0.pc.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gobject
 
 .include "options.mk"
 

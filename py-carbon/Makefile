@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/12 21:07:14 cheusov Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:53 thomasklausner Exp $
 
 DISTNAME=	carbon-0.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-whisper>=${PKGVERSION_NOREV}:../../wip/py-whisper
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

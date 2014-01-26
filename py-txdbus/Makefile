@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/07 15:13:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:59 thomasklausner Exp $
 
 DISTNAME=	txdbus-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,11 @@ HOMEPAGE=	https://github.com/cocagne/txdbus
 COMMENT=	Python implementation of the DBus protocol for the Twisted
 LICENSE=	mit
 
+DEPENDS+=       ${PYPKGPREFIX}-twisted>=13.1.0:../../net/py-twisted
+
 USE_LANGUAGES=	# none
 
-DEPENDS+=       ${PYPKGPREFIX}-twisted>=13.1.0:../../net/py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

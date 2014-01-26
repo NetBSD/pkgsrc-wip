@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/26 15:49:58 thomasklausner Exp $
 
 DISTNAME=	PyPedal-2.0.0rc7
 PKGNAME=	${PYPKGPREFIX}-pypedal-2.0.0
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.0.1:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-dot>=1.0.2:../../graphics/py-dot
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime, py-networkx
 
 USE_LANGUAGES=	# none
 

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 13:47:42 asau Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/01/26 15:49:59 thomasklausner Exp $
 
 DISTNAME=		visionegg-0.9.9-demo
 PKGNAME=		py-visionegg-docs-0.9.9

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/26 15:50:00 thomasklausner Exp $
 
 DISTNAME=	Songwrite2-0.4.1
 PKGNAME=	${DISTNAME:tl}
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 BUILD_OPTIONS=		# blank
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-EditObj2
 
 #INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/locale/en/LC_MESSAGES/
 #INSTALLATION_DIRS+=	share/locale/fr/LC_MESSAGES share/${PKGBASE}

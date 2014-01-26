@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/01/26 15:50:00 thomasklausner Exp $
 
 DISTNAME=	reinteract-0.5.10
 PKGREVISION=	2
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 REPLACE_PYTHON+=	bin/reinteract.in
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

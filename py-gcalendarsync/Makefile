@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/26 15:49:54 thomasklausner Exp $
 
 DISTNAME=	googlecalendarsync-0.4
 PKGNAME=	${PYPKGPREFIX}-gcalendarsync-0.4
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-vobject, py-gdata
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-vobject, py-gdata, py-elementtree
 
 DOCDIR=	${PREFIX}/share/doc/${PKGNAME}
 

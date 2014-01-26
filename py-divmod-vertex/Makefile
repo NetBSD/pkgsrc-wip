@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/11/23 22:44:44 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2014/01/26 15:49:53 thomasklausner Exp $
 
 VERTEX_VERSION=	0.2.0
 DISTNAME=	Vertex-${VERTEX_VERSION}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.0:../../wip/py-divmod-epsilon
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	26
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

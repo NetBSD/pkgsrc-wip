@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/07 16:22:56 asau Exp $
+# $NetBSD: Makefile,v 1.16 2014/01/26 15:50:00 thomasklausner Exp $
 
 DISTNAME=	sgmltools-lite-3.0.3
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://sgmltools-lite.sourceforge.net/
 COMMENT=	Friendly Python interface to SGML software
 
-DEPENDS+=	jade-[0-9]*:../../textproc/jade
+DEPENDS+=	openjade-[0-9]*:../../textproc/openjade
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 DEPENDS+=	docbook-[0-9]*:../../textproc/docbook
 DEPENDS+=	w3m-[0-9]*:../../www/w3m

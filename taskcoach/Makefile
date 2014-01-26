@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/01/26 15:50:00 thomasklausner Exp $
 
 DISTNAME=	TaskCoach-1.2.31
 PKGNAME=	${DISTNAME:tl}
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.taskcoach.org/
 COMMENT=	Task Coach is a simple open source todo manager
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	# none
-
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.9.1:../../x11/py-wxWidgets
+
+USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	YES
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets

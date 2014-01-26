@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/14 21:45:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/26 15:49:58 thomasklausner Exp $
 
 DISTNAME=	NetFlowVizu-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,8 +18,11 @@ USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
+
 post-extract:
 	${MV} ${WRKSRC}/net_flow_vizu_dia.py ${WRKSRC}/net_flow_vizu_dia.py${PYVERSSUFFIX}
+
 .include "../../lang/python/egg.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

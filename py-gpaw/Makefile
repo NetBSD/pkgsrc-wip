@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/12/07 16:17:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:55 thomasklausner Exp $
 
 DISTNAME=	gpaw-0.9.0.8965
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,13 @@ HOMEPAGE=	https://wiki.fysik.dtu.dk/gpaw/
 COMMENT=	Grid-based real-space PAW method DFT code
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-ase-[0-9]*:../../wip/py-ase
+
 USE_LANGUAGES=	c c99
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 and py-gobject via py-ase
 
 post-extract:
 	${MV} ${WRKSRC}/tools/gpaw ${WRKSRC}/tools/gpaw${PYVERSSUFFIX}
@@ -24,6 +28,4 @@ post-extract:
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-ase-[0-9]*:../../wip/py-ase
 .include "../../mk/bsd.pkg.mk"

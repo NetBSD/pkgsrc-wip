@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/26 15:49:52 thomasklausner Exp $
 
 DISTNAME=	microtetris
 PKGNAME=	${DISTNAME}-0.1
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin
 
 REPLACE_PYTHON+=        ${DISTNAME}.py
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gobject
 
 do-install:
 	${CHMOD} +x ${WRKSRC}/${DISTNAME}.py

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/24 13:01:22 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:56 thomasklausner Exp $
 
 DISTNAME=	jokosher-0.11.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,6 +26,7 @@ SUBST_SED.share=	-e 's,/usr/share/,${PREFIX}/share/,g'
 REPLACE_PYTHON+=	Jokosher/JokosherApp.py Jokosher/Profiler.py
 
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xdg
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build

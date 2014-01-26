@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/26 15:49:51 thomasklausner Exp $
 
 DISTNAME=	gwsmhg-0.8.1
 PKGREVISION=	1
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2, py-gobject
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

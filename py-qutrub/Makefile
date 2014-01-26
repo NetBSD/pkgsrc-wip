@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:22 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/01/26 15:49:58 thomasklausner Exp $
 
 DISTNAME=	qutrub-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,11 +15,11 @@ DEPENDS+=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-python>=3.3.1:../../www/ap2-python
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-
 QUTRUB_FILES=	ar_ctype.py arabic_const.py classverb.py mosaref_main.py  conjugate.py conjugatedisplay.py  index.py verb_const.py
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sqlite2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-sqlite2, ap2-python
+PKG_APACHE_ACCEPTED=	apache2 apache22 # the ap2-python package only supports these versions of apache
 PY_EXEC=	${PREFIX}/bin/python${PYVERSSUFFIX}
 QUTRUBDIR=	${PREFIX}/${PYSITELIB}/py-qutrub
 
@@ -38,7 +37,6 @@ do-install:
 	cd ${WRKSRC}/styles && pax -rw -pp . ${DESTDIR}${QUTRUBDIR}/styles
 	cd ${WRKSRC}/images && pax -rw -pp . ${DESTDIR}${QUTRUBDIR}/images
 	cd ${WRKSRC}/templates && pax -rw -pp . ${DESTDIR}${QUTRUBDIR}/templates
-
 
 .include "../../databases/py-sqlite2/buildlink3.mk"
 .include "../../lang/python/application.mk"

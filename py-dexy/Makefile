@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 23:41:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/01/26 15:49:53 thomasklausner Exp $
 
 DISTNAME=	dexy-0.9.9.5
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -9,7 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dexy.it/
 COMMENT=	Document Automation
 LICENSE=	mit
-
 
 DEPENDS+=	${PYPKGPREFIX}-chardet>=2.1.1:../../converters/py-chardet
 DEPENDS+=	ply>=3.3:../../devel/ply
@@ -26,6 +25,7 @@ DEPENDS+=    	${PYPKGPREFIX}-inflection>=0.2.0:../../wip/py-inflection
 WRKSRC=		${WRKDIR}/dexy-0.9.9.5
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-docutils
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
