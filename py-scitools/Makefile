@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2014/01/26 13:05:27 thomasklausner Exp $
 
 DISTNAME=	scitools-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,13 +12,15 @@ HOMEPAGE=	http://code.google.com/p/scitools/
 COMMENT=	Python library for scientific computing
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk2>=1.1.1:../../graphics/py-matplotlib-gtk2
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk>=1.1.1:../../graphics/py-matplotlib-gtk2
 
 USE_TOOLS+=	gzip
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-matplotlib-gtk2
 
 post-extract:
 	gzip -d ${WRKSRC}/doc/man/man1/*.gz
