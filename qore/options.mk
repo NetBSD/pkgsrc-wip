@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2014/01/24 21:13:25 nros Exp $
+# $NetBSD: options.mk,v 1.7 2014/01/26 19:09:04 nros Exp $
 # used by wip/qore/Makefile
 # used by wip/qore-json-module/Makefile
 # used by wip/qore-ssh2-module/Makefile
+# used by wip/qore-uuid-module/Makefile
 # used by wip/qore-xml-module/Makefile
 # used by wip/qore-yaml-module/Makefile
 
