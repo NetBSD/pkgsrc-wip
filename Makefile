@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5618 2014/01/24 20:07:00 nros Exp $
+# $Id: Makefile,v 1.5619 2014/01/26 10:07:43 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -720,7 +720,6 @@ SUBDIR+=	gambas2
 SUBDIR+=	gambatte-dev
 SUBDIR+=	gambc
 SUBDIR+=	gambit
-#SUBDIR+=	gaphor		# www/zope3 is gone
 SUBDIR+=	gappa
 SUBDIR+=	garcon
 SUBDIR+=	gauche-dbd-pg
@@ -2924,7 +2923,6 @@ SUBDIR+=	py-utilib_math
 SUBDIR+=	py-utilib_misc
 SUBDIR+=	py-utilib_ply
 SUBDIR+=	py-uuid
-#SUBDIR+=	py-van.testing	# www/zope3 is gone
 SUBDIR+=	py-viper
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
@@ -2952,7 +2950,6 @@ SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xdgapp
 SUBDIR+=	py-xdress
 SUBDIR+=	py-xlutils
-#SUBDIR+=	py-xmiparser	# www/zope3 is gone
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-yapps2
