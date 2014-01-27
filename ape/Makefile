@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/15 02:35:55 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/27 04:35:09 outpaddling Exp $
 #
 
 DISTNAME=	ape-3.5.2
@@ -12,7 +12,7 @@ COMMENT=	TODO: Short description of the package
 
 EXTRACT_SUFX=	.tar.xz
 
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+MAKE_ENV+=	STAGEDIR=${DESTDIR}
 
 DEPENDS+=	mcrypt:../../security/mcrypt
 
