@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/28 15:59:49 fhajny Exp $
+
+SHA1 (libv8-3.16.14.3.gem) = f13e4f6aab75ba55d9997b89ee8fa2fc9bd1b784
+RMD160 (libv8-3.16.14.3.gem) = ec7e4fae839da289018b07a65d0d9cd6e55b4867
+Size (libv8-3.16.14.3.gem) = 12187648 bytes
