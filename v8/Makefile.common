@@ -1,0 +1,87 @@
+# $NetBSD: Makefile.common,v 1.1 2014/01/28 15:40:47 fhajny Exp $
+# used by wip/v8/Makefile
+# used by wip/v8-316/Makefile
+
+CATEGORIES=		lang
+MASTER_SITES=		-https://github.com/v8/v8/archive/${PKGVERSION_NOREV}.tar.gz
+
+MAINTAINER=		msporleder@gmail.com
+COMMENT=		V8 JavaScript Engine
+HOMEPAGE=		http://code.google.com/p/v8
+LICENSE=		modified-bsd
+
+BUILD_DEPENDS+=		${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+
+PATCHDIR=		${.CURDIR}/../../wip/v8/patches
+PLIST_SRC=		${.CURDIR}/../../wip/v8/PLIST
+DESCR_SRC=		${.CURDIR}/../../wip/v8/DESCR
+
+NO_CONFIGURE=		yes
+BUILD_TARGET=		native
+
+.include "../../mk/bsd.prefs.mk"
+
+MAKE_FLAGS+=		console=readline
+MAKE_FLAGS+=		library=shared
+MAKE_FLAGS+=		werror=no
+
+CPPFLAGS.SunOS+=	-fPIC
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_MESSAGE.path=	Fix default paths
+SUBST_FILES.path=	build/common.gypi
+SUBST_FILES.path=	Makefile
+SUBST_FILES.path+=	src/d8.gyp
+SUBST_FILES.path+=	test/cctest/cctest.gyp
+SUBST_FILES.path+=	tools/gyp/v8.gyp
+SUBST_SED.path=		-e 's,python,${PYTHONBIN},'
+SUBST_SED.path+=	-e 's,/usr/pkg,${PREFIX},g'
+SUBST_SED.path+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.path+=	-e 's,build/gyp/,,'
+SUBST_SED.path+=	-e 's,^native:.*,native:,'
+
+SUBST_CLASSES+=		v8
+SUBST_STAGE.v8=		pre-build
+SUBST_MESSAGE.v8=	Fix gyp-generated Makefiles
+SUBST_FILES.v8=		out/Makefile.native
+SUBST_FILES.v8+=	out/src/d8.target.native.mk
+SUBST_FILES.v8+=	out/tools/gyp/v8.target.native.mk
+SUBST_FILES.v8+=	out/tools/gyp/v8_shell.target.native.mk
+# Remove nonstandard rpath
+SUBST_SED.v8+=		-e '/rpath/d'
+# Work around problem with thin archives
+SUBST_SED.v8+=		-e 's,crsT,crs,'
+# Prevent Makefile from being regenerated
+SUBST_SED.v8+=		-e '/do_cmd,regen_makefile/d'
+
+INSTALLATION_DIRS+=	bin include lib
+
+# Pre-make the Makefile so that we can patch it
+${WRKSRC}/out/Makefile.native:
+	cd ${WRKSRC} && ${MAKE_PROGRAM} ${MAKE_FLAGS} out/Makefile.native
+
+pre-build: ${WRKSRC}/out/Makefile.native
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/out/native/d8 ${DESTDIR}${PREFIX}/bin/d8
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+	${INSTALL_LIB} ${WRKSRC}/out/native/libv8.dylib ${DESTDIR}${PREFIX}/lib/libv8.1.dylib
+	${LN} -sf libv8.1.dylib ${DESTDIR}${PREFIX}/lib/libv8.dylib
+.else
+	${INSTALL_LIB} ${WRKSRC}/out/native/lib.target/libv8.so ${DESTDIR}${PREFIX}/lib/libv8.so.1
+	${LN} -sf libv8.so.1 ${DESTDIR}${PREFIX}/lib/libv8.so
+.endif
+	${INSTALL_DATA} ${WRKSRC}/include/v8.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/v8-debug.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/v8-preparser.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/v8-profiler.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/v8-testing.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/v8stdint.h ${DESTDIR}${PREFIX}/include
+
+.include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../mk/readline.buildlink3.mk"
