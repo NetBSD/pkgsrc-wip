@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/28 15:36:59 fhajny Exp $
+
+SHA1 (v8-3.16.14.tar.gz) = 2940c0ec6b31459d0ba724dba9e586f0de23e2c4
+RMD160 (v8-3.16.14.tar.gz) = d661b2725907e5a51531a150cf008711d41db97b
+Size (v8-3.16.14.tar.gz) = 11843231 bytes
