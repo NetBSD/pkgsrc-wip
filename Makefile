@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5623 2014/01/28 16:00:38 fhajny Exp $
+# $Id: Makefile,v 1.5624 2014/01/28 16:37:50 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2989,6 +2989,7 @@ SUBDIR+=	qore-ssh2-module
 SUBDIR+=	qore-sqlite3-module
 SUBDIR+=	qore-uuid-module
 SUBDIR+=	qore-xml-module
+SUBDIR+=	qore-xmlsec-module
 SUBDIR+=	qore-yaml-module
 SUBDIR+=	qrint
 SUBDIR+=	qrq
