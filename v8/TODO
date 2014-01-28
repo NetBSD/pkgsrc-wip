@@ -1,6 +1,0 @@
-only the build works so far.
-
-snapshot mode is not working on x86_64, probably
-because of libexecinfo
-
-When updating this package, please have a look at http://secunia.com/advisories/46636/
