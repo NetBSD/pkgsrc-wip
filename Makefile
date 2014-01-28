@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5622 2014/01/28 15:37:59 fhajny Exp $
+# $Id: Makefile,v 1.5623 2014/01/28 16:00:38 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3076,9 +3076,11 @@ SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-git
+SUBDIR+=	ruby-libv8
 SUBDIR+=	ruby-marisa
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-teamocil
+SUBDIR+=	ruby-therubyracer
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
