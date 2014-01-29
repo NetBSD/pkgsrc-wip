@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/29 21:02:19 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/29 21:12:07 christtrekker Exp $
 
 DISTNAME=	pixels-sagas-st-201312
 CATEGORIES=	fonts
@@ -18,6 +18,9 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://www.pixelsagas.com/fonts.php
 COMMENT=	Star Trek fonts from Pixel Sagas (Neale Davidson)
 LICENSE=	pixel-sagas-shareware-license
+RESTRICTED=	License prohibits 3rd parties hosting the files.
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 TTFPATH=	lib/X11/fonts/TTF
