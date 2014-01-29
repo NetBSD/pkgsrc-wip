@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2013/10/19 06:44:31 bubuchka Exp $
+$NetBSD: distinfo,v 1.16 2014/01/29 12:23:37 fhajny Exp $
 
-SHA1 (mongodb-src-r2.4.6.tar.gz) = 32066d405f3bed175c9433dc4ac455c2e0091b53
-RMD160 (mongodb-src-r2.4.6.tar.gz) = db9eb7908647ee111b1f054f98eed9e792415bdc
-Size (mongodb-src-r2.4.6.tar.gz) = 14141660 bytes
+SHA1 (mongodb-src-r2.4.9.tar.gz) = 3aa495cf32769a09ee9532827391892d96337d6b
+RMD160 (mongodb-src-r2.4.9.tar.gz) = fc83bf854feec6627dbcc531f71c6e31f1bcf30f
+Size (mongodb-src-r2.4.9.tar.gz) = 14162773 bytes
 SHA1 (patch-SConstruct) = 93e94b30c6b68a0603ac99a105541e8738299424
 SHA1 (patch-debian_mongodb.conf) = d52115eadf871ee1d68073f26ceb7ed90aeeb9ef
 SHA1 (patch-shell__dbshell.cpp) = 799b292bb21637c64682a8b4fbd54d78783165c9
