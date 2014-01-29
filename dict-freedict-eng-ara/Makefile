@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/12 15:59:47 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/01/29 17:29:20 cheusov Exp $
 #
 
 DISTNAME=	freedict-eng-ara-0.0.2
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.freedict.org/ar/
 COMMENT=	Dict package for English-Arabic Freedict dictionary
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
 BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
+DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
 
 DICTSRCNAME=	${DISTNAME:S/freedict-//S/-0.0.2//}
 
@@ -21,7 +21,7 @@ USE_TOOLS+=	gzip
 
 DICTNAME=		freedict_${DICTSRCNAME}
 DICTD_DB_DIR=		${PREFIX}/share/dictd
-FILES=			 ${DICTNAME}.index ${DICTNAME}.dict.dz
+FILES=			${DICTNAME}.index ${DICTNAME}.dict.dz
 
 INSTALLATION_DIRS=	${DICTD_DB_DIR}
 
