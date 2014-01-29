@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/12/03 14:17:39 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2014/01/29 21:40:06 christtrekker Exp $
 #
 
-DISTNAME=	classic-mac-font-pack-0.1
+DISTNAME=	classic-mac-font-pack-201401
 CATEGORIES=	fonts
 
 # Included fonts (or homages/reproductions) are the "city" fonts (Athens,
@@ -10,11 +10,11 @@ CATEGORIES=	fonts
 # This package will hit 1.0 when all of these, or reasonable facsimiles,
 # are available gratis.
 
-DISTFILES+=	alexandria.zip
-SITES.alexandria.zip=	http://www.acidfonts.com/fonts/
-# defunct	http://www.1001freefonts.com/winfonts/
-DISTFILES+=	Cairo_TTF.zip
-SITES.Cairo_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/C/
+#DISTFILES+=	alexandria.zip
+DISTFILES+=	Cairo%20Unicode.tgz
+SITES.Cairo%20Unicode.tgz=	http://christtrekker.users.sourceforge.net/fnt/
+#DISTFILES+=	Cairo_TTF.zip
+#SITES.Cairo_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/C/
 # File is invalid?
 #DISTFILES+=	Chicago_TTF.zip
 #SITES.Chicago_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/C/
@@ -40,17 +40,16 @@ SITES.MONACO.TTF=	http://www.webdevkungfu.com/files/
 # Brampton is not yet complete.
 DISTFILES+=	Brampton.tgz
 SITES.Brampton.tgz=	http://christtrekker.users.sourceforge.net/fnt/
-DISTFILES+=	genoa.zip
-SITES.genoa.zip=	http://www.searchfreefonts.com/assets/downloads/
+#DISTFILES+=	genoa.zip
 
 # This next one has Apple Garamond.
 # I don't think it is freely distributable though.
-DISTFILES+=	macfonts.tar.gz
-SITES.macfonts.tar.gz=	http://ubuntu-debs.googlecode.com/files/
+#DISTFILES+=	macfonts.tar.gz
+#SITES.macfonts.tar.gz=	http://ubuntu-debs.googlecode.com/files/
 DISTFILES+=	virtue.zip
 SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
-DISTFILES+=	Mottek.zip
-SITES.Mottek.zip=	http://www.searchfreefonts.com/assets/downloads/
+#DISTFILES+=	Mottek.zip
+#SITES.Mottek.zip=	http://www.searchfreefonts.com/assets/downloads/
 
 OWNER=		christtrekker@users.sourceforge.net
 HOMEPAGE=	http://68kmla.net/wiki/User:ChristTrekker/Choosing_Mac_fonts_for_the_web
