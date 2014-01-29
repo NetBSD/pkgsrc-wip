@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/01/07 12:28:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/01/29 22:54:44 thomasklausner Exp $
 
-DISTNAME=	lilypond-2.19.1
+DISTNAME=	lilypond-2.19.2
 CATEGORIES=	print
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v2.19/
 
@@ -58,6 +58,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 REPLACE_PYTHON+= scripts/build/yyout2grammar.py
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2014/01/28
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
