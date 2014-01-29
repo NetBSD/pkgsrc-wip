@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/12/24 09:29:24 szptvlfn Exp $
+$NetBSD: distinfo,v 1.5 2014/01/29 22:30:49 szptvlfn Exp $
 
-SHA1 (lens-3.10.1.tar.gz) = 4d8a0481058e8cc41755ddea3993b8ce6bab111f
-RMD160 (lens-3.10.1.tar.gz) = b86f55b2b556d9781441b02b815e3ea5d5297ed7
-Size (lens-3.10.1.tar.gz) = 455124 bytes
+SHA1 (lens-4.0.tar.gz) = ef6ba7112643d568073a39c8c0e155e48f0229a6
+RMD160 (lens-4.0.tar.gz) = 5d5006d952cc6a8ee7d88b55bcbf20df08581442
+Size (lens-4.0.tar.gz) = 762642 bytes

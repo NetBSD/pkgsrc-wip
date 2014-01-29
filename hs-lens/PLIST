@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/31 08:47:43 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/01/29 22:30:49 szptvlfn Exp $
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Codec/Compression/Zlib/Lens.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Codec/Compression/Zlib/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens.hi
@@ -13,8 +15,12 @@ lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Cons.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Cons.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Each.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Each.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Empty.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Empty.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Equality.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Equality.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Extras.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Extras.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Fold.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Fold.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Getter.hi
@@ -51,12 +57,16 @@ lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Magma.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Magma.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Prism.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Prism.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Reflection.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Reflection.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Review.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Review.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Setter.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Setter.p_hi
-lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Zipper.hi
-lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Zipper.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/TH.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/TH.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/TupleIxedTH.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/TupleIxedTH.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Zoom.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Internal/Zoom.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Iso.hi
@@ -79,8 +89,6 @@ lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Review.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Review.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Setter.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Setter.p_hi
-lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Simple.hi
-lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Simple.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/TH.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/TH.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Traversal.hi
@@ -91,16 +99,18 @@ lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Type.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Type.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Wrapped.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Wrapped.p_hi
-lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Zipper.hi
-lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Zipper.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Zoom.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Lens/Zoom.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error/Lens.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive/Lens.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel/Strategies/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel/Strategies/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Seq/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Control/Seq/Lens.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Aeson/Lens.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Aeson/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Array/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Array/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Bits/Lens.hi
@@ -125,6 +135,8 @@ lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split/Lens.p_hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Map/Lens.hi
+lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Map/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Sequence/Lens.hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Sequence/Lens.p_hi
 lib/lens-${PKGVERSION}/${HASKELL_VERSION}/Data/Set/Lens.hi
