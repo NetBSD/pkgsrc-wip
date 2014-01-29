@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/01/29 22:21:37 szptvlfn Exp $
+
+SHA1 (constraints-0.3.4.2.tar.gz) = 71c397b9bfc19300944952e7d16104fe4040b9ec
+RMD160 (constraints-0.3.4.2.tar.gz) = 1ea204dcda5df1fe24dbf4f69d1df6c889ad8010
+Size (constraints-0.3.4.2.tar.gz) = 4910 bytes
