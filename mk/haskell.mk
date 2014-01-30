@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.31 2014/01/25 11:39:22 obache Exp $
+# $NetBSD: haskell.mk,v 1.32 2014/01/30 08:07:17 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -230,6 +230,11 @@ do-install:
 				${INSTALL_DATA} dist/package-description ${DESTDIR}${_HASKELL_PKG_DESCR_FILE}; \
 			fi \
 		fi
+
+# Define test target.
+do-test:
+	${RUN} cd ${WRKSRC} && \
+		./Setup test
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	DISTNAME=${DISTNAME}
