@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/01/19 01:57:17 akihabara Exp $
-
-SHA1 (ecdsa-0.8.tar.gz) = 030f49f8c32c0c6f4d23942331bf70f4873736a4
-RMD160 (ecdsa-0.8.tar.gz) = aa052da745c090e68af65b6a2d3b8a6ac7c98092
-Size (ecdsa-0.8.tar.gz) = 35754 bytes
