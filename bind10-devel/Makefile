@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/01/30 15:37:24 pettai Exp $
 
 DISTNAME=	bind10-devel-20120329
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind10/devel-20120329/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.isc.org/bind10
 COMMENT=	ISC Bind 10 devel-20120119 (snapshot #19)
 LICENSE=	isc
