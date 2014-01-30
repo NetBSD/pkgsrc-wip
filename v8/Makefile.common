@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/01/28 15:40:47 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/01/30 12:36:40 fhajny Exp $
 # used by wip/v8/Makefile
 # used by wip/v8-316/Makefile
 
@@ -24,6 +24,7 @@ BUILD_TARGET=		native
 
 .include "../../mk/bsd.prefs.mk"
 
+MAKE_ENV+=		GYPFLAGS=-Dtarget_arch=${MACHINE_ARCH:S/i386/ia32/:S/x86_64/x64/}
 MAKE_FLAGS+=		console=readline
 MAKE_FLAGS+=		library=shared
 MAKE_FLAGS+=		werror=no
@@ -62,7 +63,7 @@ INSTALLATION_DIRS+=	bin include lib
 
 # Pre-make the Makefile so that we can patch it
 ${WRKSRC}/out/Makefile.native:
-	cd ${WRKSRC} && ${MAKE_PROGRAM} ${MAKE_FLAGS} out/Makefile.native
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} out/Makefile.native
 
 pre-build: ${WRKSRC}/out/Makefile.native
 
