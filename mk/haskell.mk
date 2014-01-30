@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.32 2014/01/30 08:07:17 obache Exp $
+# $NetBSD: haskell.mk,v 1.33 2014/01/30 11:58:25 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -78,16 +78,6 @@
 HASKELL_MK=	# defined
 
 .include "../../mk/bsd.fast.prefs.mk"
-
-# -----------------------------------------------------------------------------
-# This declaration should be placed in ../../mk/defaults/mk.conf
-#
-HASKELL_COMPILER?=	ghc
-# Used by haskell.mk to determine which Haskell compiler should be
-# used for building Haskell packages.
-# Possible: ghc
-# Default: ghc
-# -----------------------------------------------------------------------------
 
 
 # Declare HASKELL_COMPILER as one of BUILD_DEFS variables. See
