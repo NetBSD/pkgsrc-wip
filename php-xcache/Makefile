@@ -1,26 +1,21 @@
-# $NetBSD: Makefile,v 1.7 2014/01/26 18:41:45 mjoellnir Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/01/30 13:00:40 trontor Exp $
 
 MODNAME=		xcache
 PECL_VERSION=		3.1.0
 PKGNAME=		${MODNAME}-${PECL_VERSION}
 CATEGORIES=		www
 MASTER_SITES=		http://xcache.lighttpd.net/pub/Releases/${PECL_VERSION}/
-EXTRACT_SUFX=		.tar.bz2 # required, because ../../lang/php/ext.mk
-				 # overrides it with .tgz
+EXTRACT_SUFX=		.tar.bz2 # Override setting in "lang/php/ext.mk".
 
 LICENSE=		modified-bsd
 
-# Original Maintainer (until dec 2010)
-#MAINTAINER=		mbowie@buzmo.com
-# Maintainer from dec 2010 on
 MAINTAINER=		vs@nifelheim.info
 HOMEPAGE=		http://xcache.lighttpd.net/
 COMMENT=		Fast and stable PHP opcode cacher
 
 XCACHE_DIR=		${PREFIX}/share/xcache
 
-USE_TOOLS+=		pax
+USE_TOOLS+=		gm4 pax
 
 PLIST_SRC+=		PLIST
 
