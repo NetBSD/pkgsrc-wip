@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:14 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/01/30 18:58:01 lokivit Exp $
 #
 
-DISTNAME=	i3status-2.3
+DISTNAME=	i3status-2.8
 CATEGORIES=	sysutils wm
 MASTER_SITES=	http://i3wm.org/i3status/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,4 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/i3status.conf ${DESTDIR}${PREFIX}/share/doc/i3status/
 
 .include "../../devel/confuse/buildlink3.mk"
+.include "../../devel/yajl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
