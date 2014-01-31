@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 2014/01/31 11:47:42 lokivit Exp $
+lib/gtk-2.0/2.10.0/engines/libmurrine.la
+share/gtk-engines/murrine.xml
