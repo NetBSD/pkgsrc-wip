@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.33 2014/01/30 11:58:25 obache Exp $
+# $NetBSD: haskell.mk,v 1.34 2014/01/31 02:48:27 obache Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -209,7 +209,7 @@ _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-d
 do-install:
 	${RUN} cd ${WRKSRC} && \
 		./Setup register --gen-pkg-config=dist/package-description && \
-		if [ "${_USE_DESTDIR}" == "no" ]; then \
+		if [ "${_USE_DESTDIR}" = "no" ]; then \
 			./Setup copy && \
 			if [ -f dist/package-description ]; then \
 				${INSTALL_DATA} dist/package-description ${_HASKELL_PKG_DESCR_FILE}; \
