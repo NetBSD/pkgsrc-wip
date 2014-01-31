@@ -1,0 +1,4 @@
+- Colored word diff is not verified at the first commit
+- Probably terminal setting is important
+- Those may not be packaging/installing issue but just usage
+  (see perldoc sdif)
