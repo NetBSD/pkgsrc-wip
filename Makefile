@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5628 2014/01/31 05:40:26 makoto Exp $
+# $Id: Makefile,v 1.5629 2014/01/31 15:41:04 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2988,6 +2988,7 @@ SUBDIR+=	qn-x11
 SUBDIR+=	qore
 SUBDIR+=	qore-json-module
 SUBDIR+=	qore-openldap-module
+SUBDIR+=	qore-pgsql-module
 SUBDIR+=	qore-ssh2-module
 SUBDIR+=	qore-sqlite3-module
 SUBDIR+=	qore-uuid-module
