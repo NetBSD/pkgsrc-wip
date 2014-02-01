@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/01/02 09:29:29 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/01 10:16:35 szptvlfn Exp $
 
-DISTNAME=	hoogle-4.2.27
+DISTNAME=	hoogle-4.2.28
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel #haskell
 
