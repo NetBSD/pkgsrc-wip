@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/02 09:25:42 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/01 10:14:49 szptvlfn Exp $
 bin/shake
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake.p_hi
@@ -32,6 +32,8 @@ lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Report.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Report.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Resource.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Resource.p_hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Rule.hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Rule.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Rules/Directory.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Rules/Directory.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Rules/File.hi
@@ -64,6 +66,8 @@ lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/Binary.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/Binary.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/Intern.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/Intern.p_hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/String.hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/String.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/Timing.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/General/Timing.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/HSshake-${PKGVERSION}.o
