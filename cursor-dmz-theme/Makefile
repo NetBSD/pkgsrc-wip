@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/cursor-dmz-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $NetBSD: Makefile,v 1.2 2014/02/01 07:54:41 lokivit Exp $
 
 PKGNAME=	cursor-dmz-theme
 VERSION=	0.4
