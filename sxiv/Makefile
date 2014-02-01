@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/11 06:37:26 leot1990 Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/01 18:53:32 leot1990 Exp $
 #
 
 DISTNAME=	v1.1.1
@@ -13,8 +13,6 @@ COMMENT=	Simple (or small or suckless) X Image Viewer
 LICENSE=	gnu-gpl-v2
 
 NO_CONFIGURE=	yes
-
-FETCH_USING=	curl	# XXX: https://
 
 WRKSRC=${WRKDIR}/${PKGNAME_NOREV}
 
