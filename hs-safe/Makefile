@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/25 11:20:27 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/01 10:10:33 szptvlfn Exp $
 
-DISTNAME=	safe-0.3.3
+DISTNAME=	safe-0.3.4
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
