@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/02/01 07:54:41 lokivit Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/01 10:08:54 lokivit Exp $
 
-PKGNAME=	cursor-dmz-theme
+PKGNAME=	cursor-dmz-theme-0.4
 VERSION=	0.4
 CATEGORIES=	x11
 MASTER_SITES=	http://ponce.cc/slackware/sources/repo/
