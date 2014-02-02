@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/15 21:00:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/02 21:11:16 jihbed Exp $
 
-DISTNAME=	rasterio-0.4
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	rasterio-0.5.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/r/rasterio/
 FETCH_USING=	curl
