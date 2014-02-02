@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/06/27 06:58:49 ahp-nils Exp $
-
-SHA1 (six-1.3.0.tar.gz) = 1cb0692f22c98e49871536c74e5e1e9d701d3418
-RMD160 (six-1.3.0.tar.gz) = 699548fa476a68b8db9675d159f9d86eceaaadcb
-Size (six-1.3.0.tar.gz) = 17701 bytes
-SHA1 (patch-setup.py) = f7af4048be4a4fe4e75e0fe2ce5ffccf0699de54

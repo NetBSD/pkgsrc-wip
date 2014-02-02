@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5629 2014/01/31 15:41:04 nros Exp $
+# $Id: Makefile,v 1.5630 2014/02/02 00:13:27 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2851,7 +2851,6 @@ SUBDIR+=	py-shtoom
 SUBDIR+=	py-siginterrupt
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
-SUBDIR+=	py-six
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smmap
 SUBDIR+=	py-smop
