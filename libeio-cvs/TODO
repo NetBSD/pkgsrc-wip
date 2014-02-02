@@ -1,0 +1,2 @@
+- Fix following pkglint message
+  WARN: buildlink3.mk:8: Unknown dependency format: libeio
