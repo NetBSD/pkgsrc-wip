@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/02 20:53:54 jihbed Exp $
+
+SHA1 (bibtexparser-0.5.1.tar.gz) = dfac50cfe0a4880c467f84022aaf1d34a0cbcce1
+RMD160 (bibtexparser-0.5.1.tar.gz) = 6c0b778a8ef70c148b3a8d9ec62b6284ae1a09c1
+Size (bibtexparser-0.5.1.tar.gz) = 22434 bytes
