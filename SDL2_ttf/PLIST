@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/13 11:29:08 othyro Exp $
-include/SDL2/SDL_ttf.h
-lib/libSDL2_ttf.la
-lib/pkgconfig/SDL2_ttf.pc
