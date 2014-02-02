@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/02 13:20:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/02 13:32:17 bsiegert Exp $
 #
 
 DISTNAME=		go.text
@@ -16,7 +16,7 @@ CHECKOUT_DATE=		2014-01-16
 HG_REPOSITORIES=	${DISTNAME}
 HG_REPO.${DISTNAME}=	https://${GO_SRCPATH}
 
-BUILD_DEPENDS+=		go->=1.2:../../lang/go
+BUILD_DEPENDS+=		go>=1.2:../../lang/go
 
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS=	bin go/src/pkg
