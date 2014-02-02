@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2013/07/02 01:33:27 othyro Exp $
+# $NetBSD: options.mk,v 1.7 2014/02/02 16:23:54 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dolphin
 PKG_SUPPORTED_OPTIONS=	alsa bluez cg debug ffmpeg glew gtk2 libao openal opengl
@@ -67,7 +67,7 @@ CMAKE_ARGS+=		-DENCODE_FRAMEDUMPS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl2)
-.include "../../wip/SDL2/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msfml+)

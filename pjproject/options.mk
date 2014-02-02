@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/06/12 11:31:27 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2014/02/02 16:23:54 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pjproject
 PKG_SUPPORTED_OPTIONS=	alsa ffmpeg gsm ilbc openssl samplerate sdl2 speex v4l2
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl2)
-.include "../../wip/SDL2/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-sdl
 .endif
