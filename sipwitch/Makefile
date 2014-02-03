@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/12/31 15:06:49 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/03 11:14:07 othyro Exp $
 #
 
-DISTNAME=	sipwitch-1.8.6
+DISTNAME=	sipwitch-1.8.7
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.gnu.org/gnu/sipwitch/
 
