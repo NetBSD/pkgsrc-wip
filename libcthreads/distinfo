@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/03 09:41:37 othyro Exp $
+
+SHA1 (libcthreads-experimental-20140105.tar.gz) = 2e576a6438eea52c4c126f880a0a6d31f37006b1
+RMD160 (libcthreads-experimental-20140105.tar.gz) = 644d3d9d5a60c628ecf92803dcb357aef2711f38
+Size (libcthreads-experimental-20140105.tar.gz) = 482051 bytes
