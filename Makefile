@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5635 2014/02/03 09:42:32 othyro Exp $
+# $Id: Makefile,v 1.5636 2014/02/03 10:23:55 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2863,7 +2863,6 @@ SUBDIR+=	py-spfpm
 SUBDIR+=	py-sphinxreport
 SUBDIR+=	py-sppy
 SUBDIR+=	py-spyse
-SUBDIR+=	py-sqlsoup
 SUBDIR+=	py-srpy
 SUBDIR+=	py-ssh2
 SUBDIR+=	py-sshpt
