@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/26 17:23:34 othyro Exp $
+$NetBSD: distinfo,v 1.2 2014/02/03 10:51:00 othyro Exp $
 
-SHA1 (0.8.tar.gz) = bc60052d5dca32b7dc6954cd56c5659bdb1f9bc4
-RMD160 (0.8.tar.gz) = bd46869d9fcfcbd06b4cb28eca93fc1802ec2d1f
-Size (0.8.tar.gz) = 33806 bytes
+SHA1 (logtools-0.8.6.tar.gz) = 0b9ed82ebccd00dd08ca6b219a17b62edc8eaa1b
+RMD160 (logtools-0.8.6.tar.gz) = 56bb29e00411ea95dcb440f171d6d81cf1b884c6
+Size (logtools-0.8.6.tar.gz) = 27441 bytes

@@ -1,0 +1,3 @@
+* Requires py-dateutil>=2.1, which is limited to python33 in pkgsrc.
+* Requires py-acora, which isn't packaged and broken. Fixed upstream. Awaiting
+  new release.
