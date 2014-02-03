@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/03 21:25:31 jihbed Exp $
+
+SHA1 (sleekxmpp-1.1.11.tar.gz) = 279cba51f25df2dbb63317b3a0c348b6b1faf069
+RMD160 (sleekxmpp-1.1.11.tar.gz) = 4c810642d7aff6ae307abb53be0350fb7b299321
+Size (sleekxmpp-1.1.11.tar.gz) = 1303266 bytes
