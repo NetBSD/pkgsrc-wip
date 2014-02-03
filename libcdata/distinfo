@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/06/08 12:37:43 othyro Exp $
+$NetBSD: distinfo,v 1.2 2014/02/03 09:13:31 othyro Exp $
 
-SHA1 (libcdata-alpha-20130407.tar.gz) = 1b5448f32423cbc101d8e029279f91f6529d8c5d
-RMD160 (libcdata-alpha-20130407.tar.gz) = c28cd6c9e3d6c9218c2255f5a416fb4f529c2520
-Size (libcdata-alpha-20130407.tar.gz) = 490420 bytes
+SHA1 (libcdata-alpha-20140105.tar.gz) = 7dba2451bd5af2d88b274fe43a0069c4797027fa
+RMD160 (libcdata-alpha-20140105.tar.gz) = a3d96de9a4c305946916d4aa594a26dfede72c6d
+Size (libcdata-alpha-20140105.tar.gz) = 530665 bytes
