@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5636 2014/02/03 10:23:55 othyro Exp $
+# $Id: Makefile,v 1.5637 2014/02/03 22:07:06 christtrekker Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -282,6 +282,7 @@ SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
 SUBDIR+=	carnival
 SUBDIR+=	cartago
+SUBDIR+=	casady-fonts
 SUBDIR+=	castget
 SUBDIR+=	cb2bib
 SUBDIR+=	ccrypt
