@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2013/06/09 22:10:25 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/03 09:48:00 othyro Exp $
 #
 
-DATESTAMP=	20130609
+DATESTAMP=	20140105
 DISTNAME=	libbfio-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/alpha-//1}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://googledrive.com/host/0B3fBvzttpiiSTERGV3V4bnZ3dlk/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libbfio.sourceforge.net/
+HOMEPAGE=	http://code.google.com/p/libbfio/
 COMMENT=	Library to provide basic file input/output abstraction
 LICENSE=	gnu-lgpl-v3
 
@@ -22,6 +21,7 @@ PKGCONFIG_OVERRIDE+=	libbfio.pc.in
 
 .include "options.mk"
 
+.include "../../wip/libcthreads/buildlink3.mk"
 .include "../../wip/libcfile/buildlink3.mk"
 .include "../../wip/libuna/buildlink3.mk"
 .include "../../wip/libcpath/buildlink3.mk"

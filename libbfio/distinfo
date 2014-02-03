@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/06/09 22:10:25 othyro Exp $
+$NetBSD: distinfo,v 1.3 2014/02/03 09:48:00 othyro Exp $
 
-SHA1 (libbfio-alpha-20130609.tar.gz) = 646491f6393c9e0b59aeda5f6f1e2f18e0be3577
-RMD160 (libbfio-alpha-20130609.tar.gz) = 87e31523e6b2a1ff813d548d86378223aea6d763
-Size (libbfio-alpha-20130609.tar.gz) = 1858612 bytes
+SHA1 (libbfio-alpha-20140105.tar.gz) = c0338128c8e46892ab5d0e6ec628f85791d679eb
+RMD160 (libbfio-alpha-20140105.tar.gz) = 028534fc992ab44adb80847f08fbec598f7a2c08
+Size (libbfio-alpha-20140105.tar.gz) = 1900144 bytes

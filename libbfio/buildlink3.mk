@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/06/09 22:10:25 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/02/03 09:48:00 othyro Exp $
 
 BUILDLINK_TREE+=	libbfio
 
@@ -8,6 +8,7 @@ LIBBFIO_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libbfio+=	libbfio>=20120425
 BUILDLINK_PKGSRCDIR.libbfio?=	../../wip/libbfio
 
+.include "../../wip/libcthreads/buildlink3.mk"
 .include "../../wip/libcfile/buildlink3.mk"
 .include "../../wip/libuna/buildlink3.mk"
 .include "../../wip/libcpath/buildlink3.mk"
