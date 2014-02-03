@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/03 23:21:45 jihbed Exp $
+
+SHA1 (python-coveralls-2.4.2.tar.gz) = 82467e6effe43caa12fa16e3441b29d118e82e54
+RMD160 (python-coveralls-2.4.2.tar.gz) = 8a00e342aa5666a8f3200cb8b79e454679b65373
+Size (python-coveralls-2.4.2.tar.gz) = 6766 bytes

@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/03 23:21:45 jihbed Exp $
+bin/coveralls
+${PYSITELIB}/coveralls/__init__.py
+${PYSITELIB}/coveralls/__init__.pyc
+${PYSITELIB}/coveralls/__init__.pyo
+${PYSITELIB}/coveralls/api.py
+${PYSITELIB}/coveralls/api.pyc
+${PYSITELIB}/coveralls/api.pyo
+${PYSITELIB}/coveralls/control.py
+${PYSITELIB}/coveralls/control.pyc
+${PYSITELIB}/coveralls/control.pyo
+${PYSITELIB}/coveralls/report.py
+${PYSITELIB}/coveralls/report.pyc
+${PYSITELIB}/coveralls/report.pyo
+${PYSITELIB}/coveralls/repository.py
+${PYSITELIB}/coveralls/repository.pyc
+${PYSITELIB}/coveralls/repository.pyo
+${PYSITELIB}/coveralls/tests.py
+${PYSITELIB}/coveralls/tests.pyc
+${PYSITELIB}/coveralls/tests.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
