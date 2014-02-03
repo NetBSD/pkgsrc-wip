@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/06/09 21:26:40 othyro Exp $
+$NetBSD: distinfo,v 1.5 2014/02/03 09:10:41 othyro Exp $
 
-SHA1 (libcerror-alpha-20130609.tar.gz) = d6743b636cb6e2e598528c38b50663eac8c5cbe5
-RMD160 (libcerror-alpha-20130609.tar.gz) = a655ae18fe3d0e7e0eefb4c24490c3d573370ef1
-Size (libcerror-alpha-20130609.tar.gz) = 438595 bytes
+SHA1 (libcerror-alpha-20140105.tar.gz) = cbb2ddd1f5311bef8ed27a6a94fc44ecf6001a60
+RMD160 (libcerror-alpha-20140105.tar.gz) = 77fd7103c2ddd140bad0f5307a00f1bc79e5a6d1
+Size (libcerror-alpha-20140105.tar.gz) = 438805 bytes
