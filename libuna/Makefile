@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2013/06/09 21:49:15 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/03 09:25:39 othyro Exp $
 #
 
-DATESTAMP=	20130609
+DATESTAMP=	20140105
 DISTNAME=	libuna-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/alpha-//1}
 CATEGORIES=	converters
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSaXBjN1ZJVzVsbjQ/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libuna/
