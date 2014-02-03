@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/06/09 21:56:24 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/03 09:29:26 othyro Exp $
 
-DATESTAMP=	20130609
+DATESTAMP=	20140105
 DISTNAME=	libcfile-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/-alpha//1}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSem41RXpvQkIyZlU/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/libcfile/
