@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/03 11:08:48 othyro Exp $
 
-DISTNAME=	redis-2.8.0
-PKG=		redis-py
-PKGNAME=	${PYPKGPREFIX}-${PKG}-${DISTNAME:S/redis-//}
+DISTNAME=	redis-2.9.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-py-/1}
 CATEGORIES=	databases
 MASTER_SITES=	https://pypi.python.org/packages/source/r/redis/
-#DIST_SUBDIR=	${PKG}-${DISTNAME}
-FETCH_USING=	curl
+
+DEPENDS+=	redis-[0-9]*:../../databases/redis
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/andymccurdy/redis-py/
 COMMENT=	Redis Python client
 LICENSE=	mit
 
-DEPENDS+=	redis-[0-9]*:../../databases/redis
+EGG_NAME=	${DISTNAME}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
