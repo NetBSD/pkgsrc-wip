@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/03 23:47:29 jihbed Exp $
+
+SHA1 (epipy-0.0.2.tar.gz) = 02fb472c1a3287eb11cdc5e648debbda31d6f499
+RMD160 (epipy-0.0.2.tar.gz) = 8da9af7d60a2d38e183aa2a2c9a8043c2b7b508b
+Size (epipy-0.0.2.tar.gz) = 16023 bytes
