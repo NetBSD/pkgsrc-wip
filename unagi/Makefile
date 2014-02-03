@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/01/19 12:32:04 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/03 11:30:10 othyro Exp $
 #
 
-DISTNAME=	unagi-0.3.3
-PKGREVISION=	3
+DISTNAME=	unagi-0.3.4
 CATEGORIES=	wm
-MASTER_SITES=	https://projects.mini-dweeb.org/attachments/download/111/
-FETCH_USING=	curl
+MASTER_SITES=	https://projects.mini-dweeb.org/attachments/download/114/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://projects.mini-dweeb.org/projects/unagi
@@ -42,6 +40,7 @@ post-install:
 .include "../../x11/xcb-util/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.8
 .include "../../x11/libxcb/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.6
 BUILDLINK_DEPMETHOD.xcb-proto=	build
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../devel/confuse/buildlink3.mk"
