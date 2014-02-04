@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/19 19:30:55 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/04 20:03:41 nros Exp $
 include/yaml-cpp/anchor.h
 include/yaml-cpp/binary.h
 include/yaml-cpp/contrib/anchordict.h
@@ -36,4 +36,7 @@ include/yaml-cpp/stlemitter.h
 include/yaml-cpp/traits.h
 include/yaml-cpp/yaml.h
 lib/libyaml-cpp.a
+lib/libyaml-cpp.so
+lib/libyaml-cpp.so.0.5
+lib/libyaml-cpp.so.${PKGVERSION}
 lib/pkgconfig/yaml-cpp.pc
