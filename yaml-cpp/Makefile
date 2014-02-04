@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/04 20:22:43 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/04 20:35:26 nros Exp $
 #
 
 DISTNAME=	yaml-cpp-0.5.1
@@ -10,9 +10,10 @@ HOMEPAGE=	http://code.google.com/p/yaml-cpp/
 COMMENT=	YAML 1.2 parser and emitter in C++
 LICENSE=	mit
 
-USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 USE_LANGUAGES+=		c c++
+
+PKGCONFIG_OVERRIDE+=	yaml-cpp.pc.cmake
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
