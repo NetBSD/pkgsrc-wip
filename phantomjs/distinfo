@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/06/18 11:02:22 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2014/02/04 11:19:40 fhajny Exp $
 
-SHA1 (phantomjs-1.9.1-source.zip) = 8b287185261b37acdf8921e488b5b1e20cac2067
-RMD160 (phantomjs-1.9.1-source.zip) = 5fc74f51e945d421e18efe670fcad6888e193e0e
-Size (phantomjs-1.9.1-source.zip) = 40905258 bytes
+SHA1 (phantomjs-1.9.7-source.zip) = 124b017d493d5ccabd22afaf078d0650ac048840
+RMD160 (phantomjs-1.9.7-source.zip) = 2ed98fa736af2b9ed105a70f112ea717219aa805
+Size (phantomjs-1.9.7-source.zip) = 40687032 bytes
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_MathExtras.h) = 4e9f82758655cddecf7ed75ed8f932c0b2b0c15d
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_StringImpl.h) = ff163b0207d70a24bcfc574b73411b8efbdb5f23
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h) = 96aa2adfa3df3fee3002f4962bb014412738eee2

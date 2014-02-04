@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/06/18 11:02:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/04 11:19:40 fhajny Exp $
 #
 
-DISTNAME=	phantomjs-1.9.1-source
+DISTNAME=	phantomjs-1.9.7-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	www
-MASTER_SITES=	http://phantomjs.googlecode.com/files/
+MASTER_SITES=	http://bitbucket.org/ariya/phantomjs/downloads/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	filip@joyent.com
