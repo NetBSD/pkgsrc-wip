@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/01/29 19:53:08 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/05 17:01:59 christtrekker Exp $
 
 DISTNAME=	fontaine_svn_r57_2012.02.01
-PKGNAME=	${DISTNAME:C/svn_r[[:digit:]]*_//}
+PKGNAME=	${DISTNAME:C/svn_r[[:digit:]]*_//:S/.//g:S/_/-/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fontaine/}
 
