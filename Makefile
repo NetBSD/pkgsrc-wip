@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5639 2014/02/06 15:13:34 fhajny Exp $
+# $Id: Makefile,v 1.5640 2014/02/06 15:25:44 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2602,6 +2602,7 @@ SUBDIR+=	py-hamilton
 SUBDIR+=	py-hcluster
 SUBDIR+=	py-helio
 SUBDIR+=	py-hfk
+SUBDIR+=	py-hostlist
 SUBDIR+=	py-igraph
 SUBDIR+=	py-imgSeek
 SUBDIR+=	py-impacket
