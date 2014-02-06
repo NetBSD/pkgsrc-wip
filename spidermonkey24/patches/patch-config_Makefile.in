@@ -1,0 +1,12 @@
+$NetBSD: patch-config_Makefile.in,v 1.1 2014/02/06 15:12:18 fhajny Exp $
+
+--- config/Makefile.in.orig	2013-09-10 03:43:34.000000000 +0000
++++ config/Makefile.in
+@@ -59,6 +59,7 @@ export:: \
+   $(call mkdir_deps,system_wrappers_js) \
+   $(NULL)
+ 	$(PYTHON) $(srcdir)/Preprocessor.py $(DEFINES) $(ACDEFINES) \
++		-DMOZ_NATIVE_ICU=$(MOZ_NATIVE_ICU) \
+ 		$(srcdir)/system-headers | $(PERL) $(srcdir)/make-system-wrappers.pl system_wrappers_js
+ 	$(INSTALL) system_wrappers_js $(DIST)
+ 
