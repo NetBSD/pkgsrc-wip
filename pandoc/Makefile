@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/02/07 11:35:47 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.14 2014/02/07 11:59:51 szptvlfn Exp $
 
-DISTNAME=	pandoc-1.12.3.1
+DISTNAME=	pandoc-1.12.3.3
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 
