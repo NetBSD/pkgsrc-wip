@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/07 23:24:54 jihbed Exp $
+bin/nc3tonc4
+bin/nc4tonc3
+bin/ncinfo
+${PYSITELIB}/netCDF4.so
+${PYSITELIB}/netCDF4_utils.py
+${PYSITELIB}/netCDF4_utils.pyc
+${PYSITELIB}/netCDF4_utils.pyo
+${PYSITELIB}/netcdftime.py
+${PYSITELIB}/netcdftime.pyc
+${PYSITELIB}/netcdftime.pyo

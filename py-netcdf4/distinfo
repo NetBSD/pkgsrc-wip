@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/07 23:24:54 jihbed Exp $
+
+SHA1 (netCDF4-1.0.8.tar.gz) = 85870a0700e5e542644e04a844de89735a6b5a44
+RMD160 (netCDF4-1.0.8.tar.gz) = f87865cd2d101d4160504515a177fd396b50c8d0
+Size (netCDF4-1.0.8.tar.gz) = 552327 bytes
