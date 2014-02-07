@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:01:01 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/07 21:49:12 jihbed Exp $
 ${PYSITELIB}/sciproc/__init__.py
 ${PYSITELIB}/sciproc/__init__.pyc
 ${PYSITELIB}/sciproc/__init__.pyo
@@ -14,6 +14,9 @@ ${PYSITELIB}/sciproc/scimulti-old2.pyo
 ${PYSITELIB}/sciproc/scimulti.py
 ${PYSITELIB}/sciproc/scimulti.pyc
 ${PYSITELIB}/sciproc/scimulti.pyo
+${PYSITELIB}/sciproc/sciop.py
+${PYSITELIB}/sciproc/sciop.pyc
+${PYSITELIB}/sciproc/sciop.pyo
 ${PYSITELIB}/sciproc/scisel.py
 ${PYSITELIB}/sciproc/scisel.pyc
 ${PYSITELIB}/sciproc/scisel.pyo

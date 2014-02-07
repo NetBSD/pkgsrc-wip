@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:01:01 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2014/02/07 21:49:12 jihbed Exp $
 
-SHA1 (sciproc-0.3.1.tar.gz) = 90fd0a45adb9be9233ddaff52bf9b09152439098
-RMD160 (sciproc-0.3.1.tar.gz) = 328c84153194dd6c1c30ef68ab4dc92ca399415f
-Size (sciproc-0.3.1.tar.gz) = 7177 bytes
+SHA1 (sciproc-0.7.18.tar.gz) = edb13e80e984164ba8e59c784da7801fae7c1359
+RMD160 (sciproc-0.7.18.tar.gz) = 2e25ab9bddbe5c440afa88288fcaf46387275ab4
+Size (sciproc-0.7.18.tar.gz) = 26815 bytes
