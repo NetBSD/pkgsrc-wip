@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/07 22:35:51 jihbed Exp $
+
+SHA1 (watchdog-0.7.1.tar.gz) = 27c748fb9aa605ea533ce3622fe57089f75d9e87
+RMD160 (watchdog-0.7.1.tar.gz) = 7ea2604b6e414a5f88b8442848898fbfbce62b92
+Size (watchdog-0.7.1.tar.gz) = 83438 bytes
