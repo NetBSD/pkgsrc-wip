@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/25 14:23:09 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/07 11:35:47 szptvlfn Exp $
 
 DISTNAME=	pandoc-1.12.3.1
 PKGNAME=	${DISTNAME}
@@ -11,8 +11,9 @@ LICENSE=	gnu-gpl-v2
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/man1/pandoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/man5/pandoc_markdown.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${DESTDIR}${PREFIX}/share/man/man1/pandoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${DESTDIR}${PREFIX}/share/man/man5/pandoc_markdown.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	rm -rf ${DESTDIR}${PREFIX}/share/man
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-aeson/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2013/01/05 14:11:02 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/02/07 11:33:14 szptvlfn Exp $
 bin/xmonad
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/${HASKELL_VERSION}/XMonad.hi
@@ -20,6 +20,7 @@ lib/${PKGNAME}/${HASKELL_VERSION}/XMonad/StackSet.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}_p.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+man/man1/xmonad.1
 share/doc/${PKGNAME}/LICENSE
 share/${PKGNAME}/man/xmonad.1
 share/${PKGNAME}/man/xmonad.1.html
@@ -50,4 +51,3 @@ ${PLIST.doc}share/doc/${PKGNAME}/html/mini_XMonad-Layout.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/mini_XMonad-ManageHook.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/mini_XMonad-Operations.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/mini_XMonad-StackSet.html
-
