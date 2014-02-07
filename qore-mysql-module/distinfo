@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/07 14:17:07 nros Exp $
+
+SHA1 (qore-mysql-module-2.0.1.tar.bz2) = 4c219ce39d2fc0c025e1dc46fe7a6a8bff5f0020
+RMD160 (qore-mysql-module-2.0.1.tar.bz2) = 172c9f9ebee4b638e470e096e1537d6decff3af3
+Size (qore-mysql-module-2.0.1.tar.bz2) = 386434 bytes
