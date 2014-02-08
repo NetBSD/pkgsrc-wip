@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.30 2013/12/21 02:19:46 makoto Exp $
+# $NetBSD: options.mk,v 1.31 2014/02/08 01:29:38 makoto Exp $
 #
 
 ### Set options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
-PKG_SUPPORTED_OPTIONS=	dbus gnutls imagemagick gconf svg xaw3d xft2
+PKG_SUPPORTED_OPTIONS=	dbus gnutls imagemagick gconf svg xaw3d xml xft2
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
@@ -31,6 +31,17 @@ PKG_SUGGESTED_OPTIONS=	dbus gnutls imagemagick svg gconf xaw3d xft2 x11
 .else
 CONFIGURE_ARGS+=	--without-dbus
 .endif
+
+###
+### Support XML2
+###
+.  if !empty(PKG_OPTIONS:Mxml)
+USE_TOOLS+=             pkg-config
+BUILDLINK_API_DEPENDS.libxml2+= libxml2>=2.6.17
+.include "../../textproc/libxml2/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=        --without-xml2
+.  endif
 
 ###
 ### Support gnutls

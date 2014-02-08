@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.136 2014/01/20 04:50:35 makoto Exp $
+@comment $NetBSD: PLIST,v 1.137 2014/02/08 01:29:38 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2325,8 +2325,6 @@ share/emacs/${PKGVERSION}/lisp/isearch.el.gz
 share/emacs/${PKGVERSION}/lisp/isearch.elc
 share/emacs/${PKGVERSION}/lisp/isearchb.el.gz
 share/emacs/${PKGVERSION}/lisp/isearchb.elc
-share/emacs/${PKGVERSION}/lisp/iswitchb.el.gz
-share/emacs/${PKGVERSION}/lisp/iswitchb.elc
 share/emacs/${PKGVERSION}/lisp/jit-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/jit-lock.elc
 share/emacs/${PKGVERSION}/lisp/jka-cmpr-hook.el.gz
@@ -2902,6 +2900,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/iso-insert.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-insert.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-swed.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-swed.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/keyswap.el
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.elc
@@ -2917,6 +2917,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/lucid.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lucid.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/meese.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/meese.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/old-emacs-lock.el.gz
