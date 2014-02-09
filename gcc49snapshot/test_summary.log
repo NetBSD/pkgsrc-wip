@@ -9,6 +9,8 @@ Native configuration is x86_64--netbsd
 Running target unix
 WARNING: program timed out.
 FAIL: g++.dg/cilk-plus/CK/catch_exc.cc  -O1 -fcilkplus execution test
+WARNING: program timed out.
+FAIL: c-c++-common/cilk-plus/CK/fib.c  -g -O2 execution test
 FAIL: g++.dg/cdce3.C -std=gnu++98 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C -std=gnu++98 compilation failed to produce executable
 FAIL: g++.dg/cdce3.C -std=gnu++11 (test for excess errors)
@@ -23,11 +25,11 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		56651
-# of unexpected failures	10
+# of expected passes		56646
+# of unexpected failures	11
 # of expected failures		290
 # of unresolved testcases	2
-# of unsupported tests		1030
+# of unsupported tests		1032
 /usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20140202 (experimental) (GCC) 
 
 		=== gcc tests ===
@@ -35,11 +37,19 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 Running target unix
 WARNING: program timed out.
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -g  execution test
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O2  execution test
 WARNING: program timed out.
-FAIL: c-c++-common/cilk-plus/CK/fib_init_expr_xy.c  -O2 -std=c99  execution test
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O3 -fomit-frame-pointer  execution test
 WARNING: program timed out.
-FAIL: c-c++-common/cilk-plus/CK/fib_no_return.c  -O2 -std=c99  execution test
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O3 -fomit-frame-pointer -funroll-loops  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O3 -g  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -Os  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
 XPASS: gcc.dg/binop-xor1.c scan-tree-dump-times optimized "\\\\^" 1
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
@@ -324,12 +334,12 @@ FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		103531
-# of unexpected failures	185
+# of expected passes		103514
+# of unexpected failures	189
 # of unexpected successes	41
 # of expected failures		263
 # of unresolved testcases	58
-# of unsupported tests		1873
+# of unsupported tests		1882
 /usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20140202 (experimental) (GCC) 
 
 		=== gfortran tests ===
@@ -462,9 +472,9 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.c/thread-limit-1.c execution test
+FAIL: libgomp.c++/affinity-1.C execution test
 WARNING: program timed out.
-FAIL: libgomp.c++/cancel-taskgroup-1.C execution test
+FAIL: libgomp.fortran/vla8.f90  -Os  execution test
 FAIL: libgomp.graphite/bounds.c scan-tree-dump-times graphite "0 loops carried no dependency" 1
 FAIL: libgomp.graphite/force-parallel-4.c execution test
 FAIL: libgomp.graphite/force-parallel-4.c scan-tree-dump-times graphite "2 loops carried no dependency" 1
