@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/09 20:39:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.1 2014/02/09 20:41:05 thomasklausner Exp $
 
 DISTNAME=	quantities-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/09 20:34:18 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.1 2014/02/09 20:41:05 thomasklausner Exp $
 ${PYSITELIB}/quantities/__init__.py
 ${PYSITELIB}/quantities/__init__.pyc
 ${PYSITELIB}/quantities/__init__.pyo
