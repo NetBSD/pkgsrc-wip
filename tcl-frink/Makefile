@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/02/08 13:09:08 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/09 08:38:49 obache Exp $
 
 DISTNAME=	frink-2.2.2p4
 PKGNAME=	tcl-frink-2.2.2p4
-CATEGORIES=	lang
+CATEGORIES=	devel
 MASTER_SITES=	ftp://catless.ncl.ac.uk/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
