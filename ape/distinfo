@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2014/01/30 16:15:34 outpaddling Exp $
+$NetBSD: distinfo,v 1.12 2014/02/09 15:05:48 outpaddling Exp $
 
-SHA1 (ape-3.5.2.tar.xz) = 90b2fe9be1a08b0b064b1622c7c33fa5e376822a
-RMD160 (ape-3.5.2.tar.xz) = 89fb18cf4a6f9bac6741855b8b95f9876db816b8
-Size (ape-3.5.2.tar.xz) = 157720 bytes
+SHA1 (ape-3.5.2.tar.xz) = 29d8fbbc35a5a90dbf56c09229e44acfc895afdb
+RMD160 (ape-3.5.2.tar.xz) = a96f1f43a27c1921f6094a992c788d57923eea01
+Size (ape-3.5.2.tar.xz) = 144040 bytes
 SHA1 (patch-Makefile) = f447ca4b2cfa96b2301a3ec2d153fb22cdd01de0
