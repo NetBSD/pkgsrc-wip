@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/02/09 08:40:42 obache Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/09 09:12:06 obache Exp $
 
 DISTNAME=	frink-2.2.2p4
 CATEGORIES=	devel
@@ -13,9 +13,13 @@ RESTRICTED=	For commercial use please contact the author.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/frink
 
 WRKSRC=		${WRKDIR}/frink-2.2.2
 GNU_CONFIGURE=	yes
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/frink
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DESTDIR}${PREFIX}/share/doc/frink
 
 .include "../../mk/bsd.pkg.mk"
