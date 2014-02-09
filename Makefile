@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5642 2014/02/09 09:27:57 obache Exp $
+# $Id: Makefile,v 1.5643 2014/02/09 15:04:40 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2430,7 +2430,6 @@ SUBDIR+=	py-aipy
 SUBDIR+=	py-albatross
 SUBDIR+=	py-algebraic
 SUBDIR+=	py-algopy
-SUBDIR+=	py-altgraph
 SUBDIR+=	py-amqplib
 SUBDIR+=	py-anfft
 SUBDIR+=	py-antlr3
