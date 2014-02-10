@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5643 2014/02/09 15:04:40 othyro Exp $
+# $Id: Makefile,v 1.5644 2014/02/10 21:13:32 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2200,12 +2200,16 @@ SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pdsh
 SUBDIR+=	pear-Base
+SUBDIR+=	pear-Cache
 SUBDIR+=	pear-CakePHP_CodeSniffer
 SUBDIR+=	pear-ConsoleTools
 SUBDIR+=	pear-Crypt_Blowfish
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-FPDF
+SUBDIR+=	pear-File
+SUBDIR+=	pear-File_CSV
 SUBDIR+=	pear-File_Iterator
+SUBDIR+=	pear-File_Util
 SUBDIR+=	pear-Finder
 SUBDIR+=	pear-FinderFacade
 SUBDIR+=	pear-HTML_Table
@@ -2240,8 +2244,10 @@ SUBDIR+=	pear-Horde_Text_Flowed
 SUBDIR+=	pear-Horde_Translation
 SUBDIR+=	pear-Horde_Url
 SUBDIR+=	pear-Horde_Util
+SUBDIR+=	pear-Image_GraphViz
 SUBDIR+=	pear-Math_BigInteger
 SUBDIR+=	pear-Net_URL2
+SUBDIR+=	pear-OLE
 SUBDIR+=	pear-PHPUnit_MockObject
 SUBDIR+=	pear-PHP_CodeCoverage
 SUBDIR+=	pear-PHP_CodeSniffer
@@ -2250,6 +2256,7 @@ SUBDIR+=	pear-PHP_Invoker
 SUBDIR+=	pear-PHP_PMD
 SUBDIR+=	pear-PHP_Timer
 SUBDIR+=	pear-PHP_TokenStream
+SUBDIR+=	pear-Spreadsheet_Excel_Writer
 SUBDIR+=	pear-Swift
 SUBDIR+=	pear-Text_Template
 SUBDIR+=	pear-Version
