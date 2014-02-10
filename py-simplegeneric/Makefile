@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/11/30 17:21:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/10 21:25:10 jihbed Exp $
 
 DISTNAME=	simplegeneric-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://pypi.python.org/packages/source/s/simplegeneric/
 EXTRACT_SUFX=	.zip
 FETCH_USING=	curl
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://cheeseshop.python.org/pypi/simplegeneric
 COMMENT=	Simple generic functions for Python
 LICENSE=	zpl

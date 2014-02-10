@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/12 11:46:59 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/10 21:23:56 jihbed Exp $
 #
 
 DISTNAME=	papyros-0.2.1
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://papyros.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/papyros/
 COMMENT=	Pythonic parallel processing
 
