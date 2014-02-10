@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/13 00:48:43 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/10 21:15:30 noud4 Exp $
 bin/bfgminer
 bin/bfgminer-rpc
 bin/bitforce-firmware-flash
@@ -17,6 +17,7 @@ share/doc/bfgminer/README.ASIC
 share/doc/bfgminer/README.CPU
 share/doc/bfgminer/README.FPGA
 share/doc/bfgminer/README.RPC
+share/doc/bfgminer/README.scrypt
 share/doc/bfgminer/example.conf
 share/doc/bfgminer/rpc-examples/api-example.c
 share/doc/bfgminer/rpc-examples/api-example.php
