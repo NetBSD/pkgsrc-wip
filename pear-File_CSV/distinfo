@@ -1,0 +1,6 @@
+$Id: distinfo,v 1.1 2014/02/10 21:06:41 noud4 Exp $
+
+SHA1 (pear/File_CSV-1.0.0.tgz) = bda32b31e781938154b3c918d6f452d24938f518
+RMD160 (pear/File_CSV-1.0.0.tgz) = 6e27c4d974058f945f2782490bd1ef72a2773cfd
+Size (pear/File_CSV-1.0.0.tgz) = 20327 bytes
+SHA1 (patch-Image_GraphViz.php) = 134888a8e2d8ce718ab1433904365b0c32608a78
