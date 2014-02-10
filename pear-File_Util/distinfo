@@ -1,0 +1,6 @@
+$Id: distinfo,v 1.1 2014/02/10 21:07:56 noud4 Exp $
+
+SHA1 (pear/File_Util-1.0.0.tgz) = 6a250d9feed41abcda62dc2334fdb7e31adb3baf
+RMD160 (pear/File_Util-1.0.0.tgz) = dc2033ec5785e55728b85319e964869c8ed42815
+Size (pear/File_Util-1.0.0.tgz) = 7657 bytes
+SHA1 (patch-Image_GraphViz.php) = 134888a8e2d8ce718ab1433904365b0c32608a78
