@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/02/22 10:48:45 jonperkin Exp $
+$NetBSD: distinfo,v 1.3 2014/02/10 15:26:34 fhajny Exp $
 
 SHA1 (php-ffmpeg/ffmpeg-php-0.6.0.tbz2) = 2978b5af51af3eda0639840634297eb584b394c1
 RMD160 (php-ffmpeg/ffmpeg-php-0.6.0.tbz2) = a779b06f09fce3ff3c8326bb10db4ab8aadf425e
 Size (php-ffmpeg/ffmpeg-php-0.6.0.tbz2) = 275557 bytes
 SHA1 (patch-config.m4) = 1e8b50a71b57ac91be10d940206f329810e73aca
+SHA1 (patch-ffmpeg-php.c) = 321abff8e614d74d916ffac7f3ab61fd66dc4759
 SHA1 (patch-ffmpeg__movie.c) = cf46a71163ba22c1861744502dbc7ccfde768c47

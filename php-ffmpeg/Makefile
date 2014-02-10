@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/10 15:26:34 fhajny Exp $
 #
 
 MODNAME=	ffmpeg
 PECL_VERSION=	0.6.0
 PECL_DISTNAME=	ffmpeg-php-${PECL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg-php/}
 EXTRACT_SUFX=	.tbz2
