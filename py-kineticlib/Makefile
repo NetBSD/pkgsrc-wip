@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/02/11 23:01:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 23:04:35 jihbed Exp $
 
 DISTNAME=	kineticlib-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	wip
+CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/k/kineticlib/
 FETCH_USING=	curl
 
