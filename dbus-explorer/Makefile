@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/11 17:57:52 jihbed Exp $
 #
 
 DISTNAME=	dbus-explorer-0.5
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ndesk.org/archive/dbus-explorer/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.ndesk.org/DBusExplorer
 COMMENT=	GTK+ interface for viewing D-Bus service APIs written by C\#
 #LICENSE=	# TODO

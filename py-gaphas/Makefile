@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/11 18:21:47 jihbed Exp $
 
 DISTNAME=	gaphas-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/g/gaphas/
 FETCH_USING=	curl
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gaphor.sourceforge.net/
 COMMENT=	Gaphas is a GTK+ based diagramming widget
 LICENSE=	gnu-lgpl-v2
