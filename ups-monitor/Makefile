@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/11 21:04:10 noud4 Exp $
 
 DISTNAME=		ups-monitor-0.8.3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://rudd-o.com/uploads/projects/files/ups-monitor/
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://rudd-o.com/projects/ups-monitor/	# XXX page not found
 COMMENT=		Display UPS information in real time
 LICENSE=		gnu-gpl-v2

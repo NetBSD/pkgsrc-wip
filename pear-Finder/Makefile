@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 11:41:23 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:09 noud4 Exp $
 
 DISTNAME=	Finder-2.3.1
 CATEGORIES=	www
 MASTER_SITES+=	http://pear.symfony.com/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://symfony.com/
 COMMENT=	Symfony2 Finder Component
 LICENSE=	mit

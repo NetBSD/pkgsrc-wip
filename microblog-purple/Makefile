@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/12 22:59:41 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=		mbpurple-0.3.0
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S|mb|microblog-|}
 CATEGORIES=		chat net
 MASTER_SITES=		http://microblog-purple.googlecode.com/files/
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://code.google.com/p/microblog-purple/
 COMMENT=		Libpurple plug-in supporting microblog services like Twitter
 LICENSE=		gnu-gpl-v3

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 11:43:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:10 noud4 Exp $
 
 DISTNAME=	Yaml-2.3.1
 CATEGORIES=	www
 MASTER_SITES+=	http://pear.symfony.com/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://symfony.com/components
 COMMENT=	Symfony2 Yaml Component
 LICENSE=	mit

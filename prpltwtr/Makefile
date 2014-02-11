@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2013/12/21 15:04:48 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/11 21:04:10 noud4 Exp $
 #
 
 DISTNAME=		prpltwtr-0.12.0
 CATEGORIES=		chat net
 #MASTER_SITES=		http://prpltwtr.googlecode.com/files/
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://code.google.com/p/prpltwtr/
 COMMENT=		Treat microblogging (Twitter, etc) as IM protocols
 LICENSE=		gnu-gpl-v2

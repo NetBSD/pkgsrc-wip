@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/07/01 12:25:16 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=	logwatch-7.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=logwatch/}
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://logwatch.sourceforge.net/
 COMMENT=	Customizable log analysis system
 LICENSE=	mit

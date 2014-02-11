@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/16 13:19:58 nsloss Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/11 21:04:07 noud4 Exp $
 
 DISTNAME=	bfgminer-3.9.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	finance
 MASTER_SITES=	http://luke.dashjr.org/programs/bitcoin/files/bfgminer/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://bfgminer.org/
 COMMENT=	Modular ASIC/FPGA Bitcoin miner
 LICENSE=	gnu-gpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/11 21:04:08 noud4 Exp $
 
 GIT_PKG=		euca2ools
 GIT_LEVEL=		2.1.3
@@ -9,7 +9,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		https://github.com/eucalyptus/${GIT_PKG}/archive/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://www.eucalyptus.com/download/${GIT_PKG}
 COMMENT=		Amazon Web Services (AWS) interactor
 LICENSE=		2-clause-bsd

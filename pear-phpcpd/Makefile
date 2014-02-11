@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:10 noud4 Exp $
 #
 
 DISTNAME=	phpcpd-1.4.3
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://pear.phpunit.de/
 COMMENT=	Copy/Paste Detector (CPD) for PHP code
 LICENSE=	modified-bsd

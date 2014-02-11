@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:09 noud4 Exp $
 
 DISTNAME=	CakePHP_CodeSniffer-0.1.18
 CATEGORIES=	www
 MASTER_SITES+=	http://pear.cakephp.org/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://pear.cakephp.org/
 COMMENT=	CodeSniffer rules for checking code against the CakePHP coding standards
 LICENSE=	mit

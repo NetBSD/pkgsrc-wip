@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:09 noud4 Exp $
 
 DISTNAME=	PHP_CodeSniffer-1.4.7
 CATEGORIES=	devel
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://www.squizlabs.com/php-codesniffer
 COMMENT=	Detects PHP, JavaScript and CSS violations of coding standards
 LICENSE=	modified-bsd

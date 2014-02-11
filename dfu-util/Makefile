@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2013/10/20 20:16:17 noud4 Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/11 21:04:07 noud4 Exp $
 #
 
 DISTNAME=		dfu-util-${SVN_TAG.dfu-util}
 CATEGORIES=		comms
 MASTER_SITES=		#
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://wiki.openmoko.org/wiki/Dfu-util
 COMMENT=		Host side of the USB DFU protocol
 LICENSE=		gnu-gpl-v2

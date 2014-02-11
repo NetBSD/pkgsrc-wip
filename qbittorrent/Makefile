@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/12/12 15:33:21 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:07 noud4 Exp $
 
 DISTNAME=	qbittorrent-3.1.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qbittorrent/}
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://www.qbittorrent.org/
 COMMENT=	P2P Bittorrent client
 LICENSE=	gnu-gpl-v2

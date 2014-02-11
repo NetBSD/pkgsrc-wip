@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/09/25 06:18:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:09 noud4 Exp $
 
 DISTNAME=	FPDF-1.6.0
 CATEGORIES=	print
 MASTER_SITES+=	http://pearhub.org/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://www.pearhub.org/projects/FPDF
 COMMENT=	Unofficial PEAR FPDF-library
 LICENSE=	gnu-lgpl-v3

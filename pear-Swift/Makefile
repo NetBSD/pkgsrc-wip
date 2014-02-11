@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/08/15 09:24:40 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:10 noud4 Exp $
 
 DISTNAME=	Swift-5.0.1
 CATEGORIES=	mail
 MASTER_SITES+=	http://pear.swiftmailer.org/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://swiftmailer.org/
 COMMENT=	Free Feature-rich PHP Mailer
 LICENSE=	gnu-lgpl-v3

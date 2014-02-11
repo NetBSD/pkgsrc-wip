@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2014/01/27 19:04:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/11 21:04:07 noud4 Exp $
 
 DISTNAME=	gfeedline-2.4.1
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://gfeedline.googlecode.com/files/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://code.google.com/p/gfeedline/
 COMMENT=	Social network client for GNOME
 LICENSE=	gnu-gpl-v3

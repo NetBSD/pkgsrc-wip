@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/12/10 13:19:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=	PHP_Invoker-1.1.3
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://pear.phpunit.de/
 COMMENT=	Utility class for invoking callables with a timeout
 LICENSE=	modified-bsd

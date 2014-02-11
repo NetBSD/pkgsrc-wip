@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/12/24 18:55:31 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:11 noud4 Exp $
 #
 
 PKGNAME=		pidgin-evolution-${PIDGIN_VERSION}
 COMMENT=		Evolution plugin for the Pidgin instant messenger
 
 .include "../../chat/libpurple/Makefile.common"
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 
 USE_TOOLS+=		msgfmt perl intltool
 

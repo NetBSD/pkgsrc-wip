@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/12/21 14:24:27 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=	libgrss-0.5.0
 CATEGORIES=	www
 MASTER_SITES=	http://gtk.mplat.es/libgrss/tarballs/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://live.gnome.org/Libgrss
 COMMENT=	Easy management of RSS/Atom/Pie feeds
 LICENSE=	gnu-lgpl-v3

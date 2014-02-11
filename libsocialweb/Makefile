@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/24 18:41:04 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=	libsocialweb-0.25.20
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsocialweb/0.25/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://projects.gnome.org/	# XXX
 COMMENT=	Personal social data server
 LICENSE=	gnu-lgpl-v2.1

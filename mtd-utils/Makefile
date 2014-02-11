@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/06/13 12:00:42 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/11 21:04:07 noud4 Exp $
 #
 
 DISTNAME=	mtd-utils-1.0.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.infradead.org/pub/mtd-utils/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://www.linux-mtd.infradead.org/
 COMMENT=	Memory Technology Device Tools
 

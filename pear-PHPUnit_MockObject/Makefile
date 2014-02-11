@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 12:27:29 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=	PHPUnit_MockObject-1.2.3
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpunit.de/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://pear.phpunit.de/
 COMMENT=	Mock Object library for PHPUnit
 LICENSE=	modified-bsd

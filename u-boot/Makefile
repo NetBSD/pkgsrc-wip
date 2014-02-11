@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:17 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/11 21:04:08 noud4 Exp $
 #
 
 DISTNAME=	u-boot-1.3.2
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.denx.de/pub/u-boot/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://www.denx.de/wiki/UBoot
 COMMENT=	The mkimage utility of the u-boot bootloader
 

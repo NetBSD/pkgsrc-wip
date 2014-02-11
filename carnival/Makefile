@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:08 noud4 Exp $
 #
 
 DISTNAME=		carnival-1.03-src
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=carnival/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://carnival.sourceforge.net/
 COMMENT=		GUI for Festival
 LICENSE=		gnu-gpl-v1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/12/09 21:20:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:11 noud4 Exp $
 #
 
 DISTNAME=		xdebug-2.2.3
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://xdebug.org/files/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://xdebug.org/
 COMMENT=		PHP extension for debugging
 LICENSE=		php	# XXX based on php

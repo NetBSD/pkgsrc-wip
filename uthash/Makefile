@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/13 00:46:40 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:07 noud4 Exp $
 
 DISTNAME=		master
 PKGNAME=		uthash-1.9.7
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		https://github.com/troydhanson/uthash/archive/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://troydhanson.github.io/uthash/
 COMMENT=		Hash table, implemented in C
 #LICENSE=		bsd-revised	# TODO

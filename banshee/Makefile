@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/08/28 10:02:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:08 noud4 Exp $
 
 DISTNAME=	banshee-2.6.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/banshee/2.6/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://banshee.fm/
 COMMENT=	Media player
 LICENSE=	mit

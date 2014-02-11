@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 11:30:14 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=	PHP_PMD-1.4.1
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.phpmd.org/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://phpmd.org/
 COMMENT=	PHP Mess Detector
 LICENSE=	original-bsd

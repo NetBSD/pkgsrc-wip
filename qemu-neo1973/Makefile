@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 14:53:42 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/02/11 21:04:07 noud4 Exp $
 #
 
 DISTNAME=		qemu-neo1973-4412
@@ -7,7 +7,7 @@ MASTER_SITES=		http://wiki.openmoko.org/
 SVN_REPOSITORY=		https://svn.openmoko.org/trunk/src/host/qemu-neo1973
 #NO_CHECKSUM=		yes
 
-MAINTAINER=		noud4@home.nl
+MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://wiki.openmoko.org/wiki/OpenMoko_under_QEMU
 COMMENT=		Qemu OpenMoko Neo1973 phone emulator
 

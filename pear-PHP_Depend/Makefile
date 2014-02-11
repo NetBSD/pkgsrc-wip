@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/07/14 11:27:51 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/11 21:04:09 noud4 Exp $
 #
 
 DISTNAME=	PHP_Depend-1.1.0
 CATEGORIES=	devel
 MASTER_SITES+=	http://pear.pdepend.org/get/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE= 	http://pdepend.org/
 COMMENT=	PHP_Depend design quality metrics for PHP packages	
 LICENSE=	original-bsd
