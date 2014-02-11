@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:26 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2014/02/11 20:51:01 jihbed Exp $
 
-DISTNAME=	pp-1.6.2
+DISTNAME=	pp-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel python
 MASTER_SITES=	http://www.parallelpython.com/downloads/pp/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.parallelpython.com/
