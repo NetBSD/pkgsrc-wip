@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/11 20:47:33 jihbed Exp $
 #
 
 DISTNAME=	nightfall-1.70
 CATEGORIES=	math
 MASTER_SITES=	http://www.la-samhna.de/nightfall/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.hs.uni-hamburg.de/DE/Ins/Per/Wichmann/Nightfall.html
 COMMENT=	Application for a producing a best-fit model for a binary star
 LICENSE=	gnu-gpl-v2
