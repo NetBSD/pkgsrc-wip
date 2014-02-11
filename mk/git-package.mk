@@ -95,7 +95,7 @@ _GIT_TAG.${repo}=	${_GIT_TODAY:Q}
 
 # Cache support:
 #   cache file name
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}}.tar.gz
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}:S|/|_|}.tar.gz
 
 #   command to extract cache file
 _GIT_EXTRACT_CACHED.${repo}=	\
