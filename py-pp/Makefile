@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2014/02/11 20:51:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2014/02/12 21:48:01 jihbed Exp $
 
 DISTNAME=	pp-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel python
 MASTER_SITES=	http://www.parallelpython.com/downloads/pp/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.parallelpython.com/
 COMMENT=	Parallel and distributed programming for Python
 LICENSE=	2-clause-bsd
