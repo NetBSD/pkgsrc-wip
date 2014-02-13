@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/13 20:54:15 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/13 21:17:32 christtrekker Exp $
 lib/X11/fonts/TTF/Cairo Unicode.ttf
-share/doc/CairoUnicode/Cairo Read Me 1.txt
-share/doc/CairoUnicode/Cairo Read Me 2.txt
-share/doc/CairoUnicode/Cairo Read Me 3.txt
-share/doc/CairoUnicode/Cairo.pdf
+share/doc/CairoUnicode-ttf/Cairo Read Me 1.txt
+share/doc/CairoUnicode-ttf/Cairo Read Me 2.txt
+share/doc/CairoUnicode-ttf/Cairo Read Me 3.txt
+share/doc/CairoUnicode-ttf/Cairo.pdf
