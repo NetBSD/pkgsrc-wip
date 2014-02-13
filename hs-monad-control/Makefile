@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/11/15 20:27:43 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/13 13:00:26 szptvlfn Exp $
 #
 
-DISTNAME=	monad-control-0.3.2.2
+DISTNAME=	monad-control-0.3.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
