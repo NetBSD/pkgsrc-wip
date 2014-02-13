@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5644 2014/02/10 21:13:32 noud4 Exp $
+# $Id: Makefile,v 1.5645 2014/02/13 03:02:29 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2878,6 +2878,7 @@ SUBDIR+=	py-statgrap
 SUBDIR+=	py-stem
 SUBDIR+=	py-storm
 SUBDIR+=	py-strategies
+SUBDIR+=	py-stripe
 SUBDIR+=	py-sumatra
 SUBDIR+=	py-sunpy
 SUBDIR+=	py-swarmsdk
