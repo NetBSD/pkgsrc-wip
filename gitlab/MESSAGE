@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/02/13 03:39:33 makoto Exp $
+Now you have reached the 'A part of Step 6. GitLab Configure'
+(GITLAB_HOME is ${GITLAB_HOME}.)
+
+described in
+  https://github.com/gitlabhq/gitlabhq/blob/6-1-stable/doc/install/installation.md
+
+ Start from '5. Database' of above document.
+===========================================================================

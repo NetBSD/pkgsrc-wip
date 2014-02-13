@@ -1,0 +1,95 @@
+gitlab by itself or gitlabhq, I'm little bit confused, sorry.
+
+(Anyway)
+- HOW-TO-INSTALL:
+  https://github.com/gitlabhq/gitlabhq/blob/6-1-stable/doc/install/installation.md
+  (Index of it)
+    1.	Packages / Dependencies
+    2.	Ruby
+    3.	System Users
+    4.	GitLab shell
+*   5.	Database
+    6.	GitLab
+	Clone the Source
+	Configure it
+  ( *** Up here are done by INSTALL.script,for now *** )
+
+*	Configure GitLab DB settings
+	Install Gems
+	Initialize Database and Activate Advanced Features
+	Install Init Script
+	Check Application Status
+	Start Your GitLab Instance
+	Double-check Application Status
+    7. Nginx
+
+- Actual working directory for GitLab:
+	/home/git/
+		(git clone here)
+		/gitlab-shell/
+			      bin/install
+			      config.yml.example
+			      config.yml
+
+- Following parts (marked * above) are not covered, please do it separately
+  5. Database
+   To setup the MySQL/PostgreSQL database and dependencies please see
+   https://github.com/gitlabhq/gitlabhq/blob/6-1-stable/doc/install/databases.md
+ 
+- (Some hint for 7. Ngnix)
+  Running GitLab from a subdirectory on Apache
+  https://shanetully.com/2012/08/running-gitlab-from-a-subdirectory-on-apache/
+  http://kazuhiko.tdiary.net/20130220.html
+
+- NOW make package gives:
+  -----------------------
+  modena@makoto 13:57:38/140204(..personal-pkgsrc/gitlab)% make package
+  ===> Skipping vulnerability checks.
+  WARNING: No /var/db/pkg/pkg-vulnerabilities file found.
+  WARNING: To fix run: `/usr/pkg/sbin/pkg_admin -K /var/db/pkg fetch-pkg-vulnerabilities'.
+  ===> Invoking ``package'' after barrier for gitlabhq-1.7.1
+  ===> Installing for gitlabhq-1.7.1
+  => Generating pre-install file lists
+  PLIST_PLIST.ruby19=: not found
+  *** Error code 127
+  
+(Following change will proceed more)
+Index: lang/ruby/rubyversion.mk
+===================================================================
+RCS file: /cvs/cvsroot/pkgsrc/lang/ruby/rubyversion.mk,v
+retrieving revision 1.106
+diff -u -u -r1.106 rubyversion.mk
+--- lang/ruby/rubyversion.mk	24 Nov 2013 14:22:03 -0000	1.106
++++ lang/ruby/rubyversion.mk	5 Feb 2014 11:51:04 -0000
+@@ -441,7 +441,7 @@
+ #
+ # PLIST_VARS for x11/ruby-tk package.
+ #
+-PLIST_VARS+=		ruby19 ruby200
++PLIST_VARS+=		
+ .if ${RUBY_VER} != "18"
+ PLIST.ruby19=		yes
+ . if ${RUBY_VER} != "193"
+
+- Another problem:
+  modena@makoto 22:36:37/140211(~git/gitlab)%
+  sudo gem install charlock_holmes --version '0.6.9.4'
+  Fetching: charlock_holmes-0.6.9.4.gem (100%)
+  ERROR:  While executing gem ... (NoMethodError)
+    undefined method `empty?' for nil:NilClass
+  (This problem itself is not related to GitLab)
+
+- Current situation
+
+
+Checking out files: 100% (1060/1060), done.
+Branch 6-1-stable set up to track remote branch 6-1-stable from origin.
+Switched to a new branch '6-1-stable'
+ERROR:  While executing gem ... (NoMethodError)
+    undefined method `empty?' for nil:NilClass
+Fetching source index from https://rubygems.org/
+Installing rake (10.1.0) 
+NoMethodError: undefined method `empty?' for nil:NilClass
+An error occurred while installing rake (10.1.0), and Bundler cannot continue.
+Make sure that `gem install rake -v '10.1.0'` succeeds before bundling.
+Fetching source index from https://rubygems.org/

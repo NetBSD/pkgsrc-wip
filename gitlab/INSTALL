@@ -1,0 +1,86 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2014/02/13 03:39:32 makoto Exp $
+DESTDIR_VAR="@DESTDIR_VAR@"
+GITLAB_HOME="@GITLAB_HOME@"
+RSYNC="@RSYNC@"
+RUBY="@RUBY@"
+OPT_MYSQL="@OPT_MYSQL@"
+OPT_POSTGRES="@OPT_POSTGRES@"
+
+case ${STAGE} in
+    POST-INSTALL)
+	echo "     Running INSTALL script in POST-INSTALL $0..."
+	echo "     You may copy the file, edit and the rerun"
+# See following document where this scripts comes from:
+#   https://github.com/gitlabhq/gitlabhq/blob/6-1-stable/doc/install/installation.md
+
+	${MKDIR} ${GITLAB_HOME}
+	${RSYNC} -aH ${DESTDIR_VAR}/ ${GITLAB_HOME}/
+	(cd ${GITLAB_HOME}/gitlab-shell ; \
+ 	${RUBY} ./bin/install \
+	)
+	${CHOWN} git.gitlab ${GITLAB_HOME}
+	(cd ${GITLAB_HOME}/ ; \
+	sudo -u git -H env GIT_SSL_NO_VERIFY=true \
+		git clone https://github.com/gitlabhq/gitlabhq.git gitlab \
+ 	)
+	(cd ${GITLAB_HOME}/gitlab ; \
+	sudo -u git -H git checkout 6-1-stable; \
+	sudo -u git -H \
+		${SED} -e '/email_from:/s/gitlab@localhost/gitlab@localhost/' \
+		config/gitlab.yml.example > config/gitlab.yml ; \
+	sudo ${CHOWN} -R git log tmp; \
+	sudo ${CHMOD} -R u+rwX  log tmp; \
+	sudo -u git -H ${MKDIR} ${GITLAB_HOME}/gitlab-satellites; \
+	sudo -u git -H ${MKDIR} tmp/pids tmp/sockets; \
+	sudo ${CHMOD} -R u+rwX  tmp/pids tmp/sockets; \
+	sudo -u git -H ${MKDIR} public/uploads; \
+	sudo ${CHMOD} -R u+rwX  public/uploads; \
+	sudo -u git -H ${CP} config/unicorn.rb.example config/unicorn.rb; \
+	sudo -u git -H \
+		${SED} -e 's,/home/git,${GITLAB_HOME},' \
+		config/unicorn.rb.example > config/unicorn.rb; \
+	sudo -u git -H git config --global user.name "GitLab"; \
+	sudo -u git -H git config --global user.email "gitlab@localhot"; \
+	sudo -u git -H git config --global core.autocrlf input; \
+	sudo -u git ${CP} config/database.yml.mysql config/database.yml; \
+	sudo -u git -H ${CHMOD} o-rwx config/database.yml; \
+	sudo gem install charlock_holmes --version '0.6.9.4'; \
+	${ECHO} "     Taking care for database ..." ; \
+	# For MySQL (note, the option says "without ... postgres") \
+	${OPT_MYSQL} sudo -u git -H bundle install --deployment --without development test postgres aws;\
+	# Or for PostgreSQL (note, the option says "without ... mysql") 
+	${OPT_POSTGRES} sudo -u git -H bundle install --deployment --without development test mysql aws; \
+	sudo -u git -H bundle exec rake gitlab:setup RAILS_ENV=production; \
+	)
+esac
+#  Install Gems
+#     cd /home/git/gitlab
+#     sudo gem install charlock_holmes --version '0.6.9.4'
+# 
+#  For MySQL (note, the option says "without ... postgres")
+#     sudo -u git -H bundle install --deployment --without development test postgres aws
+# 
+#  Or for PostgreSQL (note, the option says "without ... mysql")
+#    sudo -u git -H bundle install --deployment --without development test mysql aws
+# 
+#  Initialize Database and Activate Advanced Features
+# 
+# sudo -u git -H bundle exec rake gitlab:setup RAILS_ENV=production
+# Type 'yes' to create the database.
+# When done you see 'Administrator account created:'
+# 
+#  Install Init Script
+# 
+#    Download the init script (will be /etc/init.d/gitlab):
+#    
+#    sudo cp lib/support/init.d/gitlab /etc/init.d/gitlab
+#    sudo chmod +x /etc/init.d/gitlab
+#    
+# Make GitLab start on boot:
+# 
+# sudo update-rc.d gitlab defaults 21
+# 
+#  Check Application Status
+
