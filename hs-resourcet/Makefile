@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/10/13 08:23:39 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/13 13:07:45 szptvlfn Exp $
 
-DISTNAME=	resourcet-0.4.9
+DISTNAME=	resourcet-0.4.10
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
