@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/10/04 15:33:55 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/13 09:15:44 fhajny Exp $
 #
 
-DISTNAME=	mysql-proxy-0.8.3
+DISTNAME=	mysql-proxy-0.8.4
 PKGNAME=	${DISTNAME:S/mysql/mysql${_MYSQL_VERSION}/}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Proxy/}
 
@@ -14,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+LUA_VERSIONS_ACCEPTED=		51
 MYSQL_VERSIONS_ACCEPTED=	56 55 51
 
 GNU_CONFIGURE=	yes
