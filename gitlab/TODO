@@ -129,3 +129,7 @@ Gem files will remain installed in /home/git/gitlab/vendor/bundle/ruby/2.0.0/gem
 Results logged to /home/git/gitlab/vendor/bundle/ruby/2.0.0/gems/libv8-3.11.8.17/ext/libv8/gem_make.out
 An error occurred while installing libv8 (3.11.8.17), and Bundler cannot continue.
 Make sure that `gem install libv8 -v '3.11.8.17'` succeeds before bundling.
+
+FOLLOWING command installs OK, but it is on different directory.
+I don't know the switch to locate correctly yet.
+sudo gem install libv8 -v '3.16.14.3' -- --with-system-v8
