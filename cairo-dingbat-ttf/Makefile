@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/02/13 21:17:32 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/13 21:29:12 christtrekker Exp $
 
 DISTNAME=	CairoUnicode
-PKGNAME=	${DISTNAME}-ttf-20140211
+PKGNAME=	cairo-dingbat-ttf-20140211
 CATEGORIES=	fonts
 MASTER_SITES=	http://christtrekker.users.sourceforge.net/fnt/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +14,7 @@ LICENSE=	cc-by-sa-v3.0
 WRKSRC=		${WRKDIR}/cairo
 TTFPATH=	lib/X11/fonts/TTF
 FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH}
-DOCPATH=	share/doc/${DISTNAME}-ttf	# why doesn't ${PKGBASE} work here?
+DOCPATH=	share/doc/cairo-dingbat-ttf	# why doesn't ${PKGBASE} work here?
 DOCDIR=		${PREFIX}/${DOCPATH}
 INSTALLATION_DIRS=	${TTFPATH} ${DOCPATH}
 NO_CONFIGURE=	yes
