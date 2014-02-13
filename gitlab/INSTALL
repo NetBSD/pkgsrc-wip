@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2014/02/13 03:39:32 makoto Exp $
+# $NetBSD: INSTALL,v 1.2 2014/02/13 04:15:51 makoto Exp $
 DESTDIR_VAR="@DESTDIR_VAR@"
 GITLAB_HOME="@GITLAB_HOME@"
 RSYNC="@RSYNC@"
@@ -12,7 +12,7 @@ case ${STAGE} in
     POST-INSTALL)
 	echo "     Running INSTALL script in POST-INSTALL $0..."
 	echo "     You may copy the file, edit and the rerun"
-# See following document where this scripts comes from:
+# See following document where this script comes from:
 #   https://github.com/gitlabhq/gitlabhq/blob/6-1-stable/doc/install/installation.md
 
 	${MKDIR} ${GITLAB_HOME}
