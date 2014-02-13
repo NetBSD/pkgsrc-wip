@@ -1,15 +1,13 @@
-$NetBSD: distinfo,v 1.34 2014/02/09 08:51:51 keckhardt Exp $
+$NetBSD: distinfo,v 1.35 2014/02/13 06:56:30 keckhardt Exp $
 
-SHA1 (gcc-4.9-20140202.tar.bz2) = 481ca02e2d6570a0e316205c41e2143772268257
-RMD160 (gcc-4.9-20140202.tar.bz2) = 63a4e4321b73446f32130123a0325015f8f16212
-Size (gcc-4.9-20140202.tar.bz2) = 84765295 bytes
+SHA1 (gcc-4.9-20140209.tar.bz2) = ccadc64501bc9298c5d5cc26a47d6098c3d11ff0
+RMD160 (gcc-4.9-20140209.tar.bz2) = 9c8fc8940235cd72b2557d04802de99cf521e005
+Size (gcc-4.9-20140209.tar.bz2) = 85051377 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
 SHA1 (patch-gcc_config.gcc) = 0919088f6d48c149f135828a9e6cf3bd935a3094
-SHA1 (patch-gcc_config.host) = a2c26d22b9694fe187500489561b0ceb57d4fb8c
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
 SHA1 (patch-gcc_config_dragonfly.h) = 82f549cdc7543b4bf413a44d481ef42b10f59c82
 SHA1 (patch-gcc_config_dragonfly.opt) = 92f615c73c2e94664bae5b5935ab8b09bca15f73
-SHA1 (patch-gcc_config_host-netbsd.c) = 8f13b09dd7006d456cd1c66e895be504e9537880
 SHA1 (patch-gcc_config_i386_dragonfly.h) = 0d3f785434c02beb9c4561fe59842a970e8f7896
 SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
@@ -17,6 +15,7 @@ SHA1 (patch-gcc_configure) = a4b670d0c54c410d38715b7a2a572a7048e3ec5e
 SHA1 (patch-gcc_fortran_f95-lang.c) = d8f990083a77a0f3b4be83d1f2a494414a67ae48
 SHA1 (patch-gcc_ggc-common.c) = 5fb68c2fc78193c963e212f8cb485b5051cd417f
 SHA1 (patch-gcc_ginclude_stddef.h) = 50be7c9469ac58c79e10abda5e7cfef5f91dd249
+SHA1 (patch-gcc_lto_lto.c) = e6d02c077c576eaeb57b5ef8fa9d41b1989bcaa4
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-include_libiberty.h) = ada0f0cbf0b2732b0b18db1f3daa0aa0a24cfdb3
 SHA1 (patch-libcilkrts_runtime_os-unix.c) = 0097284ef5f9a716da77947856f2ce13965e6949
