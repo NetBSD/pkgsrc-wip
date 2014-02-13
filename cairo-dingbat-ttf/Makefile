@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/13 21:29:12 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/13 21:39:20 christtrekker Exp $
 
 DISTNAME=	CairoUnicode
 PKGNAME=	cairo-dingbat-ttf-20140211
@@ -13,16 +13,16 @@ LICENSE=	cc-by-sa-v3.0
 
 WRKSRC=		${WRKDIR}/cairo
 TTFPATH=	lib/X11/fonts/TTF
-FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH}
+FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH:Q}
 DOCPATH=	share/doc/cairo-dingbat-ttf	# why doesn't ${PKGBASE} work here?
 DOCDIR=		${PREFIX}/${DOCPATH}
-INSTALLATION_DIRS=	${TTFPATH} ${DOCPATH}
+INSTALLATION_DIRS=	${TTFPATH:Q} ${DOCPATH:Q}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
-	${INSTALL_DATA} ${WRKSRC}/Cairo*.ttf ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf:Q}
+	${INSTALL_DATA} ${WRKSRC}/Cairo*.ttf ${DESTDIR}${FONTS_DIRS.ttf:Q}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Cairo*.pdf ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Cairo*.txt ${DESTDIR}${DOCDIR}
