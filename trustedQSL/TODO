@@ -1,4 +1,2 @@
 - SunOS 5.11/x86_64 is saying,
   Could NOT find BDB (missing: BDB_INCLUDE_DIR)
-
-- 2.0.1 seems to include bundle-cacert, but not checked it yet.
