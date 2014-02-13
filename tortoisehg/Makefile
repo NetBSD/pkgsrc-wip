@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/13 19:05:33 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/13 20:28:29 nros Exp $
 
 DISTNAME=		tortoisehg-2.11
 CATEGORIES=		devel
@@ -34,9 +34,6 @@ SUBST_SED.df=		-e 's:thg_logo:${PREFIX}${thg_icon}:1'
 pre-build:
 	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
 	rm ${WRKSRC}/doc/build/html/.buildinfo
-	mv ${WRKSRC}/doc/build/html ${WRKSRC}
-	mv ${WRKSRC}/contrib/mergetools.rc ${WRKSRC}
-	mv ${WRKSRC}/contrib/thg.desktop ${WRKSRC}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

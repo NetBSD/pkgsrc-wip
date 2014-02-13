@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/13 19:05:33 nros Exp $
+$NetBSD: distinfo,v 1.2 2014/02/13 20:28:29 nros Exp $
 
 SHA1 (tortoisehg-2.11.tar.gz) = f1e717c73f43a05bdc7f2b2850d8c84ba136f07e
 RMD160 (tortoisehg-2.11.tar.gz) = b4852a8de2b45556d8e2c9be953911e3343d0554
 Size (tortoisehg-2.11.tar.gz) = 7383690 bytes
-SHA1 (patch-setup.py) = e62171938bb8fc7a68a25d917cbb528fbbc15eb6
+SHA1 (patch-setup.py) = 826972c77230c751c923a9a88db85b0901e1ed2e
