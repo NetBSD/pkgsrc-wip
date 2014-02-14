@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/13 21:39:20 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/14 14:14:36 christtrekker Exp $
 
 DISTNAME=	CairoUnicode
 PKGNAME=	cairo-dingbat-ttf-20140211
@@ -6,7 +6,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	http://christtrekker.users.sourceforge.net/fnt/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	christtrekker@users.sourceforge.net
+OWNER=		christtrekker@users.sourceforge.net
 HOMEPAGE=	http://christtrekker.users.sourceforge.net/fnt/cairo.shtml
 COMMENT=	Outline version of old Macintosh font
 LICENSE=	cc-by-sa-v3.0
