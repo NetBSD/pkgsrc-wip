@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/11/18 02:59:27 jgoamakf Exp $
+$NetBSD: distinfo,v 1.3 2014/02/14 01:37:42 schmonz Exp $
 
-SHA1 (Text-VimColor-0.14.tar.gz) = 62a934bf1fa6808e4d5123bb2f6ca98b8d6de886
-RMD160 (Text-VimColor-0.14.tar.gz) = 9b537c185022383fb501db5e54f850e55e5dcde5
-Size (Text-VimColor-0.14.tar.gz) = 38480 bytes
+SHA1 (Text-VimColor-0.23.tar.gz) = b55d271d00bbd2fe62a8e52e713a5f4b5fc150e4
+RMD160 (Text-VimColor-0.23.tar.gz) = 29163456acec2f913b6ebae4611706eb0bd5e0cd
+Size (Text-VimColor-0.23.tar.gz) = 130614 bytes
