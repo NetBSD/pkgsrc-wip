@@ -1,13 +1,12 @@
-$NetBSD: patch-vpnc_disconnect,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+$NetBSD: patch-vpnc_disconnect,v 1.2 2014/02/14 12:06:46 hfath Exp $
 
---- vpnc-disconnect.orig	2012-05-23 13:52:36.000000000 +0000
+--- vpnc-disconnect.orig	2014-02-14 11:46:47.000000000 +0000
 +++ vpnc-disconnect
 @@ -1,6 +1,6 @@
--#!/bin/sh
-+#!@SH@
+ #!/bin/sh
  
--pid=/var/run/vpnc/pid
-+pid=@VARBASE@/run/vpnc/pid
+-pid=/var/run/vpnc.pid
++pid=@VARBASE@/run/vpnc.pid
  
  if [ $# -ne 0 ]; then
  	echo "Usage: $0" 1>&2

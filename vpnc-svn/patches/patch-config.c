@@ -1,8 +1,8 @@
-$NetBSD: patch-config.c,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+$NetBSD: patch-config.c,v 1.2 2014/02/14 12:06:45 hfath Exp $
 
---- config.c.orig	2012-05-23 13:52:36.000000000 +0000
+--- config.c.orig	2014-02-14 11:46:47.000000000 +0000
 +++ config.c
-@@ -187,12 +187,12 @@ static const char *config_def_app_versio
+@@ -188,12 +188,12 @@ static const char *config_def_app_versio
  
  static const char *config_def_script(void)
  {
@@ -12,12 +12,12 @@ $NetBSD: patch-config.c,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
  
  static const char *config_def_pid_file(void)
  {
--	return "/var/run/vpnc/pid";
-+	return "@VARBASE@/run/vpnc/pid";
+-	return "/var/run/vpnc.pid";
++	return "@VARBASE@/run/vpnc.pid";
  }
  
  static const char *config_def_vendor(void)
-@@ -200,6 +200,16 @@ static const char *config_def_vendor(voi
+@@ -201,6 +201,16 @@ static const char *config_def_vendor(voi
  	return "cisco";
  }
  
@@ -65,7 +65,7 @@ $NetBSD: patch-config.c,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
  	return realname;
  }
  
-@@ -696,8 +721,8 @@ void do_config(int argc, char **argv)
+@@ -716,8 +741,8 @@ void do_config(int argc, char **argv)
  	}
  
  	if (!got_conffile) {
