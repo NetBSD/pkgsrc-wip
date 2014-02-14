@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/14 21:11:10 nros Exp $
+
+SHA1 (qore-glut-module-0.0.3.tar.gz) = 59c5ba422fedff6cc53bf518c975a81cfbcd5e85
+RMD160 (qore-glut-module-0.0.3.tar.gz) = 63130c9996b4312c1d135b408848f357cdfeb686
+Size (qore-glut-module-0.0.3.tar.gz) = 383235 bytes
