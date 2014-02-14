@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/01/11 22:20:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/14 23:14:02 jihbed Exp $
 
-DISTNAME=	Pint-0.4
+DISTNAME=	Pint-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/P/Pint/

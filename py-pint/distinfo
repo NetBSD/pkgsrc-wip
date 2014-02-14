@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/01/11 22:20:53 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2014/02/14 23:14:02 jihbed Exp $
 
-SHA1 (Pint-0.4.zip) = 69c0f065ae8c4d9aa08c408230a5f99204195067
-RMD160 (Pint-0.4.zip) = 5eec15372510beb854d66533f43a6ba55a6283c9
-Size (Pint-0.4.zip) = 106672 bytes
+SHA1 (Pint-0.4.2.zip) = a91967fd9b31f02935b8ff3efcb73b09ff14c5d2
+RMD160 (Pint-0.4.2.zip) = ce68f5e43a37972a085ee5506b52d11e9bc42fc6
+Size (Pint-0.4.2.zip) = 110964 bytes
