@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/01/25 14:09:55 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/02/14 12:53:53 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-aeson
 
@@ -10,6 +10,7 @@ BUILDLINK_PKGSRCDIR.hs-aeson?=	../../wip/hs-aeson
 
 .include "../../wip/hs-attoparsec/buildlink3.mk"
 .include "../../wip/hs-blaze-builder/buildlink3.mk"
+.include "../../wip/hs-dlist/buildlink3.mk"
 .include "../../wip/hs-hashable/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-scientific/buildlink3.mk"
