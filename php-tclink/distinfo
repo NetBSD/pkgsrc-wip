@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/13 21:32:01 mbowie Exp $
+$NetBSD: distinfo,v 1.2 2014/02/15 01:50:19 mbowie Exp $
 
-SHA1 (php-tclink/tclink-3.4.4-php.tar.gz) = 4267c4db9260088940f0993e4fd94fd888588393
-RMD160 (php-tclink/tclink-3.4.4-php.tar.gz) = a11ad1fa6e813330d9928d9293798d00c003c8b2
-Size (php-tclink/tclink-3.4.4-php.tar.gz) = 73859 bytes
+SHA1 (php-tclink/tclink-4.0.2-php.tar.gz) = e3e99ea96a366d7401463020fb9bfa3814a597a3
+RMD160 (php-tclink/tclink-4.0.2-php.tar.gz) = 46b51a3f510fa89fc74b0f1af609757841566eb6
+Size (php-tclink/tclink-4.0.2-php.tar.gz) = 29587 bytes
