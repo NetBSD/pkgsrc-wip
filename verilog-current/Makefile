@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/12/20 15:27:35 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/15 13:40:19 makoto Exp $
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
@@ -6,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://icarus.com/eda/verilog/index.html
+HOMEPAGE=	http://iverilog.icarus.com/
 COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 LICENSE=	gnu-gpl-v2
 
