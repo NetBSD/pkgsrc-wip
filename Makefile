@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5648 2014/02/14 21:15:24 nros Exp $
+# $Id: Makefile,v 1.5649 2014/02/15 22:19:52 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2131,7 +2131,6 @@ SUBDIR+=	p5-Sys-MemInfo
 SUBDIR+=	p5-Task-Catalyst
 SUBDIR+=	p5-Template-Plugin-Class
 SUBDIR+=	p5-Term-Encoding
-SUBDIR+=	p5-Test-Assertions-TestScript
 SUBDIR+=	p5-Test-Unit-Lite
 SUBDIR+=	p5-Test-WWW-Mechanize-CGIApp
 SUBDIR+=	p5-Test-XML
