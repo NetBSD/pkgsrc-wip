@@ -1,0 +1,33 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/16 18:56:48 nros Exp $
+* Remove doxygen dependecy
+* Install the docs under share/qore/docs/modules
+--- Makefile.in.orig	2014-02-16 18:40:01.000000000 +0000
++++ Makefile.in
+@@ -699,7 +699,7 @@ maintainer-clean-generic:
+ 	@echo "it deletes files that may require special tools to rebuild."
+ @COND_DOXYGEN_FALSE@uninstall-local:
+ @COND_DOXYGEN_FALSE@html-local:
+-@COND_DOXYGEN_FALSE@install-html-local:
++
+ @COND_DOXYGEN_FALSE@clean-local:
+ clean: clean-recursive
+ 
+@@ -802,12 +802,12 @@ uninstall-am: uninstall-local
+ 
+ @COND_DOXYGEN_TRUE@html-local: $(DOXYGEN_OUTPUT)
+ 
+-@COND_DOXYGEN_TRUE@install-html-local:
+-@COND_DOXYGEN_TRUE@	for dox in $(DOX); do $(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/$$dox/html/search; done
+-@COND_DOXYGEN_TRUE@	for dir in $(DOXYGEN_OUTPUT); do \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir; fi; done; \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir/search; done; \
+-@COND_DOXYGEN_TRUE@	done
++install-html-local:
++	$(MKDIR_P) $(DESTDIR)$(datadir)/qore/docs/modules/uuid/html/search; done
++	for dir in docs/uuid/html; do \
++	   for f in $$dir/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/uuid/html; fi; done; \
++	   for f in $$dir/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/uuid/html/search; done; \
++	done
+ 
+ @COND_DOXYGEN_TRUE@clean-local:
+ @COND_DOXYGEN_TRUE@	$(RM) -rf $(DOXYGEN_OUTPUT)
