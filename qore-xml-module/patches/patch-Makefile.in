@@ -1,0 +1,41 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/16 19:38:23 nros Exp $
+* Remove doxygen dependecy
+* Install the docs under share/qore/docs/modules
+--- Makefile.in.orig	2013-10-05 10:23:40.000000000 +0000
++++ Makefile.in
+@@ -382,6 +382,7 @@ EXTRA_DIST = COPYING.LGPL COPYING.MIT Ch
+ 	qore-xml-module.spec $(am__append_1)
+ ACLOCAL_AMFLAGS = -I m4
+ dist_modver_DATA = $(USER_MODULES)
++PKG = xml SoapClient SoapHandler WSDL XmlRpcHandler
+ @COND_DOXYGEN_TRUE@DOX = xml SoapClient SoapHandler WSDL XmlRpcHandler
+ @COND_DOXYGEN_TRUE@DOXYGEN_OUTPUT = docs/xml/html docs/XmlRpcHandler/html docs/WSDL/html docs/SoapClient/html docs/SoapHandler/html
+ @COND_DOXYGEN_TRUE@DOXYFILES = docs/doxyfile docs/mainpage.doxygen
+@@ -809,7 +810,7 @@ maintainer-clean-generic:
+ 	@echo "it deletes files that may require special tools to rebuild."
+ @COND_DOXYGEN_FALSE@uninstall-local:
+ @COND_DOXYGEN_FALSE@html-local:
+-@COND_DOXYGEN_FALSE@install-html-local:
++
+ @COND_DOXYGEN_FALSE@clean-local:
+ clean: clean-recursive
+ 
+@@ -963,12 +964,12 @@ uninstall-am: uninstall-dist_modverDATA 
+ 
+ @COND_DOXYGEN_TRUE@html-local: $(DOXYGEN_OUTPUT)
+ 
+-@COND_DOXYGEN_TRUE@install-html-local:
+-@COND_DOXYGEN_TRUE@	for dox in $(DOX); do $(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/$$dox/html/search; done
+-@COND_DOXYGEN_TRUE@	for dir in $(DOXYGEN_OUTPUT); do \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir; fi; done; \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir/search; done; \
+-@COND_DOXYGEN_TRUE@	done
++install-html-local:
++	for pkg in $(PKG) ; do $(MKDIR_P) $(DESTDIR)$(datadir)/qore/docs/modules/$$pkg/html/search; done
++	for pkg in $(PKG); do \
++	   for f in docs/$$pkg/html/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/$$pkg/html; fi; done; \
++	   for f in docs/$$pkg/html/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/$$pkg/html/search; done; \
++	done
+ 
+ @COND_DOXYGEN_TRUE@clean-local:
+ @COND_DOXYGEN_TRUE@	$(RM) -rf $(DOXYGEN_OUTPUT)

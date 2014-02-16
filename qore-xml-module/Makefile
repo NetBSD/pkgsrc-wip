@@ -1,30 +1,35 @@
-# $NetBSD: Makefile,v 1.2 2014/01/22 22:16:15 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/16 19:38:23 nros Exp $
 
 DISTNAME=	qore-xml-module-1.2
+PKGREVISION=	1
 CATEGORIES=	textproc
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
+EXTRACT_SUFX=   .tar.bz2
 
-.include "../../wip/qore/Makefile.common"
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nros@users.sourceforge.net
 COMMENT=	XML module for Qore
+HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+PTHREAD_OPTS+=	require
+
+INSTALL_TARGET=	install install-html-local
 
 #This is needed in order to comply the with MIT license and binary distribution
-INSTALLATION_DIRS+=     share/qore-xml-module/license
+INSTALLATION_DIRS+=     share/qore/license/modules/xml
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL \
-		${DESTDIR}${PREFIX}/share/qore-xml-module/license
+		${DESTDIR}${PREFIX}/share/qore/license/modules/xml
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
-		${DESTDIR}${PREFIX}/share/qore-xml-module/license
+		${DESTDIR}${PREFIX}/share/qore/license/modules/xml
 
 
 .include "../../wip/qore/plist-version.mk"
-.include "../../wip/qore/options.mk"
+.include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
