@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/01/31 15:12:44 nros Exp $
+$NetBSD: distinfo,v 1.2 2014/02/16 17:20:26 nros Exp $
 
 SHA1 (qore-pgsql-module-2.3.tar.bz2) = 9ed915e2247af7e389b54f5e2428258a19057fb3
 RMD160 (qore-pgsql-module-2.3.tar.bz2) = 1336b32fe26d1485ed39a45e8087a6e87b1f9c11
 Size (qore-pgsql-module-2.3.tar.bz2) = 437249 bytes
+SHA1 (patch-Makefile.in) = 43dac3545ce763e3b833e668be2bc3948f754494
+SHA1 (patch-src_Makefile.in) = 89df3df6ac9804e13755e87d0c8fef1082788743
