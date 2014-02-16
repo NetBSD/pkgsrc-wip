@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2014/01/24 20:02:37 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/16 18:33:41 nros Exp $
 
 DISTNAME=	qore-ssh2-module-0.9.9
+PKGREVISION=	1
 CATEGORIES=	security
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
+EXTRACT_SUFX=   .tar.bz2
 
-.include "../../wip/qore/Makefile.common"
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nros@users.sourceforge.net
 COMMENT=	SSH2 module for Qore
+HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
@@ -15,15 +17,17 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 PTHREAD_OPTS+=	require
 
+INSTALL_TARGET=	install install-html-local
+
 #This is needed in order to comply the with MIT license and binary distribution
-INSTALLATION_DIRS+=     share/qore-ssh2-module/license
+INSTALLATION_DIRS+=     share/qore/license/modules/ssh2
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL \
-		${DESTDIR}${PREFIX}/share/qore-ssh2-module/license
+		${DESTDIR}${PREFIX}/share/qore/license/modules/ssh2
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
-		${DESTDIR}${PREFIX}/share/qore-ssh2-module/license
+		${DESTDIR}${PREFIX}/share/qore/license/modules/ssh2
 
-.include "../../wip/qore/options.mk"
+.include "options.mk"
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
