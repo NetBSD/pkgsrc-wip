@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2014/01/22 22:20:24 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/16 22:23:49 nros Exp $
 
 DISTNAME=	qore-yaml-module-0.4
+PKGREVISION=	1
 CATEGORIES=	textproc
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
+EXTRACT_SUFX=   .tar.bz2
 
-.include "../../wip/qore/Makefile.common"
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nros@users.sourceforge.net
 COMMENT=	Yaml module for Qore
+HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
@@ -15,16 +17,19 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 PTHREAD_OPTS+=	require
-CONFIGURE_ARGS+=--with-doxygen=no
+
+INSTALL_TARGET=	install install-html-local
 
 #This is needed in order to comply the with MIT license and binary distribution
-INSTALLATION_DIRS+=	share/qore-yaml-module/license
+INSTALLATION_DIRS+=	share/qore/license/modules/yaml
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL ${DESTDIR}${PREFIX}/share/qore-yaml-module/license
-	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT ${DESTDIR}${PREFIX}/share/qore-yaml-module/license
+	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL \
+		${DESTDIR}${PREFIX}/share/qore/license/modules/yaml
+	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
+		${DESTDIR}${PREFIX}/share/qore/license/modules/yaml
 
 .include "../../wip/qore/plist-version.mk"
-.include "../../wip/qore/options.mk"
+.include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
