@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/02/05 16:30:30 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/16 11:39:06 nros Exp $
 
 DISTNAME=	qore-sybase-modules-1.0.3
 PKGNAME=	${DISTNAME:S/sybase-modules/freetds-module/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
@@ -14,6 +15,13 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	require
+
+CONFIGURE_ARGS+=--with-sybase=no
+
+INSTALLATION_DIRS+=     share/qore/docs/modules/freetds
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/docs/sybase-module-doc.html \
+	${DESTDIR}${PREFIX}/share/qore/docs/modules/freetds/freetds-module-doc.html
 
 .include "options.mk"
 
