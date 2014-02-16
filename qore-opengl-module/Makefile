@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2014/02/14 21:03:03 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/16 15:56:54 nros Exp $
 
 DISTNAME=	qore-opengl-module-0.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/qore/files/module-opengl/0.0.3/
+MAINTAINER=	nros@users.sourceforge.net
+HOMEPAGE=	http://www.qore.org/
 COMMENT=	OpenGL Qore bindings
 LICENSE=	gnu-lgpl-v2.1
 
@@ -15,6 +15,11 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=--with-opengl=${BUILDLINK_PREFIX.MesaLib}
+
+INSTALLATION_DIRS+=     share/qore/docs/modules/opengl/html
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/docs/opengl-module-doc.html \
+		${DESTDIR}${PREFIX}/share/qore/docs/modules/opengl/html
 
 .include "options.mk"
 
