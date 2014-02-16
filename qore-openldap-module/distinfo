@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/01/26 21:08:58 nros Exp $
+$NetBSD: distinfo,v 1.2 2014/02/16 16:45:57 nros Exp $
 
 SHA1 (qore-openldap-module-1.0.tar.bz2) = 8aefbf1cc848cab8302df0ed4a19a8b78187c90f
 RMD160 (qore-openldap-module-1.0.tar.bz2) = 410481ac442ac4903b8e30c5d7084721b266e2da
 Size (qore-openldap-module-1.0.tar.bz2) = 398752 bytes
+SHA1 (patch-Makefile.in) = 34ca8c25c4d10600d67c565070f4c5dc500b487b
+SHA1 (patch-src_Makefile.in) = 3a21f127b0553f96c26251b3f47b28cf429fbd10
