@@ -1,0 +1,34 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/16 13:43:27 nros Exp $
+remove doxygen dependecy on the docs, its not needed since the 
+docs have already been generated.
+--- Makefile.in.orig	2013-10-05 09:58:48.000000000 +0000
++++ Makefile.in
+@@ -798,7 +798,6 @@ maintainer-clean-generic:
+ @COND_DOXYGEN_FALSE@uninstall-local:
+ @COND_DOXYGEN_FALSE@mostlyclean-local:
+ @COND_DOXYGEN_FALSE@html-local:
+-@COND_DOXYGEN_FALSE@install-html-local:
+ @COND_DOXYGEN_FALSE@clean-local:
+ clean: clean-recursive
+ 
+@@ -919,13 +918,13 @@ uninstall-am: uninstall-dist_modverDATA 
+ 
+ @COND_DOXYGEN_TRUE@html-local: $(DOXYGEN_OUTPUT)
+ 
+-@COND_DOXYGEN_TRUE@install-html-local:
+-@COND_DOXYGEN_TRUE@	for dox in $(DOX); do $(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/$$dox/html/search; done
+-@COND_DOXYGEN_TRUE@	for dir in $(DOXYGEN_OUTPUT); do \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir; fi; done; \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir/search; done; \
+-@COND_DOXYGEN_TRUE@	done
+-
++install-html-local:
++	$(MKDIR_P) $(DESTDIR)$(datadir)/qore/docs/modules/json/html/search
++	$(MKDIR_P) $(DESTDIR)$(datadir)/qore/docs/modules/JsonRpcHandler/html/search
++	for pkg in json JsonRpcHandler; do \
++	   for f in docs/$$pkg/html/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/$$pkg/html; fi; done; \
++	   for f in docs/$$pkg/html/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/$$pkg/html/search; done; \
++	done
+ @COND_DOXYGEN_TRUE@clean-local:
+ @COND_DOXYGEN_TRUE@	$(RM) -rf $(DOXYGEN_OUTPUT)
+ 
