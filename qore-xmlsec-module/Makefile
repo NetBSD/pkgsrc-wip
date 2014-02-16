@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2014/01/28 16:16:33 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/16 19:55:15 nros Exp $
 
 DISTNAME=	qore-xmlsec-module-0.0.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nros@users.sourceforge.net
 HOMEPAGE=	http://www.qore.org/
 COMMENT=	XMLSec module for Qore
 LICENSE=	gnu-lgpl-v2.1
@@ -17,6 +18,11 @@ PTHREAD_OPTS+=	require
 CONFIGURE_ARGS+=--with-xmlsec-dir=${BUILDLINK_PREFIX.xmlsec1}
 CONFIGURE_ARGS+=--with-libxml2-dir=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=--with-qore-dir=${BUILDLINK_PREFIX.qore}
+
+INSTALLATION_DIRS+=     share/qore/docs/modules/xmlsec/html
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/docs/xmlsec-module-doc.html \
+		${DESTDIR}${PREFIX}/share/qore/docs/modules/xmlsec/html
 
 .include "options.mk"
 

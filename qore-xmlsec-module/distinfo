@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/28 16:16:33 nros Exp $
+$NetBSD: distinfo,v 1.2 2014/02/16 19:55:15 nros Exp $
 
 SHA1 (qore-xmlsec-module-0.0.2.tar.gz) = fd6f72e740861630a72723b0efc7313678ff410a
 RMD160 (qore-xmlsec-module-0.0.2.tar.gz) = efec4db43d86cb14f56e3346cfcc16c2ce83ce1a
 Size (qore-xmlsec-module-0.0.2.tar.gz) = 421326 bytes
+SHA1 (patch-src_Makefile.in) = ead0a2333d6fdd413920bd8fe51683a5660b5aa7

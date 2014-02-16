@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/28 16:16:33 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/16 19:55:15 nros Exp $
 lib/qore-modules/xmlsec-api-0.14.qmod
-lib/qore-modules/xmlsec.a
-${PLIST.doc}share/qore-xmlsec-module/docs/html/xmlsec-module-doc.html
+share/qore/docs/modules/xmlsec/html/xmlsec-module-doc.html
