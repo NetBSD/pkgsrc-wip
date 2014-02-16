@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/02/07 14:17:07 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/16 15:13:55 nros Exp $
 
 DISTNAME=	qore-mysql-module-2.0.1
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +16,9 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	require
 
-.include "../../wip/qore/options.mk"
+INSTALL_TARGET=	install install-html-local
+
+.include "options.mk"
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
