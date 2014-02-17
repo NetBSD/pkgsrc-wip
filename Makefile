@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5659 2014/02/17 12:26:23 fhajny Exp $
+# $Id: Makefile,v 1.5660 2014/02/17 12:27:38 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1637,7 +1637,6 @@ SUBDIR+=	maloc
 SUBDIR+=	man
 SUBDIR+=	man-db
 SUBDIR+=	manatee
-SUBDIR+=	manifold
 SUBDIR+=	map-browse
 SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
