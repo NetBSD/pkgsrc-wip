@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/17 00:43:02 othyro Exp $
 
 DISTNAME=	epigrass-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-mysqldb>=1.2.3:../../databases/py-mysqldb
 DEPENDS+=       ${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
-DEPENDS+=       ${PYPKGPREFIX}-redis-py>=2.8.0:../../wip/py-redis-py
+DEPENDS+=       ${PYPKGPREFIX}-redis-py>=2.8.0:../../databases/py-redis-py
 
 PYTHON_VERSION_DEFAULT= 26 27
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mysqldb, py-networkx
