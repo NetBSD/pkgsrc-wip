@@ -95,7 +95,6 @@ Suggested package updates
 	o pessulus-2.30.4
 	o pike-7.8.700
 	o py-PyPE-2.9
-	o py-ejson-0.5.7
 	o py-rpyc-3.2.1
 	o py-zeitgeist-0.9
 	o pylint-0.26.0
