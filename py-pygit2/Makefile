@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/02/03 10:57:47 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/17 00:47:59 othyro Exp $
 
-DISTNAME=	pygit2-0.20.1
+DISTNAME=	pygit2-0.20.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pygit2/
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/libgit2/pygit2
 COMMENT=	Python bindings to libgit2
 LICENSE=	gnu-gpl-v2
 
-PY_PATCHPLIST=			yes
+PY_PATCHPLIST=	yes
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build
