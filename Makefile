@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5658 2014/02/17 12:24:56 fhajny Exp $
+# $Id: Makefile,v 1.5659 2014/02/17 12:26:23 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1245,7 +1245,6 @@ SUBDIR+=	ilohamail
 SUBDIR+=	imagination
 SUBDIR+=	imonc
 SUBDIR+=	info2man
-SUBDIR+=	innotop
 SUBDIR+=	interbase-docs
 #SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
 #SUBDIR+=	io			# not a package, same as jabberd bellow
