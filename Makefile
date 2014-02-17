@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5655 2014/02/17 10:46:35 thomasklausner Exp $
+# $Id: Makefile,v 1.5656 2014/02/17 12:18:57 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -117,7 +117,6 @@ SUBDIR+=	ap2-layout
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-passenger
-SUBDIR+=	ap2-xsendfile
 SUBDIR+=	ap2-zeroconf
 SUBDIR+=	ap22-authz-ldap
 SUBDIR+=	ap22-layout

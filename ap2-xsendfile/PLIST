@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/01 12:39:31 fhajny Exp $
-lib/httpd/mod_xsendfile.so
