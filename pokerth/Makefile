@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 21:30:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/17 00:02:38 thomasklausner Exp $
 
 DISTNAME=	PokerTH-1.0.1-src
 PKGNAME=	pokerth-1.0.1
@@ -42,5 +42,5 @@ do-install:
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/tinyxml/buildlink3.mk"
+.include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
