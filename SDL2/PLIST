@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/02/02 21:44:31 othyro Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/02/17 00:08:35 othyro Exp $
 bin/sdl2-config
 include/SDL2/SDL.h
 include/SDL2/SDL_assert.h
@@ -75,8 +75,8 @@ include/SDL2/SDL_video.h
 include/SDL2/begin_code.h
 include/SDL2/close_code.h
 lib/libSDL2-2.0.so
-lib/libSDL2-2.0.so.0
-lib/libSDL2-2.0.so.0.1.0
+lib/libSDL2-2.0.so.2
+lib/libSDL2-2.0.so.2.0.2
 lib/libSDL2.a
 lib/libSDL2.so
 lib/libSDL2main.a

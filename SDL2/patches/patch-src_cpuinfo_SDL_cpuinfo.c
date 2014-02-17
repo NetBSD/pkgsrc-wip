@@ -1,10 +1,10 @@
-$NetBSD: patch-src_cpuinfo_SDL_cpuinfo.c,v 1.2 2014/02/02 21:44:32 othyro Exp $
+$NetBSD: patch-src_cpuinfo_SDL_cpuinfo.c,v 1.3 2014/02/17 00:08:35 othyro Exp $
 
 Fix building on NetBSD and OpenBSD.
 
---- src/cpuinfo/SDL_cpuinfo.c.orig	2014-02-02 04:07:55.000000000 +0000
+--- src/cpuinfo/SDL_cpuinfo.c.orig	2014-02-07 21:35:46.000000000 +0000
 +++ src/cpuinfo/SDL_cpuinfo.c
-@@ -621,7 +621,7 @@ SDL_GetSystemRAM(void)
+@@ -653,7 +653,7 @@ SDL_GetSystemRAM(void)
  #endif
  #ifdef HAVE_SYSCTLBYNAME
          if (SDL_SystemRAM <= 0) {

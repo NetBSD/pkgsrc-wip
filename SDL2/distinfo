@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2014/02/02 21:44:32 othyro Exp $
+$NetBSD: distinfo,v 1.14 2014/02/17 00:08:35 othyro Exp $
 
-SHA1 (SDL-2.0.1-8147.tar.gz) = cdb749ac5dc60871cbc703d6882ecf9f4719ce1c
-RMD160 (SDL-2.0.1-8147.tar.gz) = d55738f579a1883c778663a651ebe107f9c85987
-Size (SDL-2.0.1-8147.tar.gz) = 5688170 bytes
-SHA1 (patch-CMakeLists.txt) = 788031efefe1ce1871c5996ee9023ba7fbfd0c85
-SHA1 (patch-src_cpuinfo_SDL_cpuinfo.c) = 2cf2c75776cfce1bdd24d8b53fe231302c0a4a9f
+SHA1 (SDL-2.0.2-8197.tar.gz) = 828206d7176288af873cb259d7f3c9a2b5614255
+RMD160 (SDL-2.0.2-8197.tar.gz) = c120ad16b5891525004e26453c4ed3d00e5ca67f
+Size (SDL-2.0.2-8197.tar.gz) = 5703190 bytes
+SHA1 (patch-CMakeLists.txt) = 27232dd188fff70aa44ee5ec0e1e0fa9d9cb0dc4
+SHA1 (patch-src_cpuinfo_SDL_cpuinfo.c) = 3dac0b9e8360dae4626e62be0b9c373005a67306
