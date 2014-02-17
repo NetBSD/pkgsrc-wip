@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/31 14:54:42 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/17 00:25:50 othyro Exp $
 #
 
 DISTNAME=	eventlib-0.1.5
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-ejson>=0.1.3:../../wip/py-ejson
+DEPENDS+=	${PYPKGPREFIX}-ejson>=0.1.3:../../textproc/py-ejson
 DEPENDS+=	${PYPKGPREFIX}-logan>=0.5.0:../../wip/py-logan
 DEPENDS+=	celery>=3.0.9:../../wip/celery
 DEPENDS+=	${PYPKGPREFIX}-redis-py>=2.7.1:../../wip/py-redis-py

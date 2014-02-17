@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5650 2014/02/16 23:07:43 thomasklausner Exp $
+# $Id: Makefile,v 1.5651 2014/02/17 00:25:50 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2549,7 +2549,6 @@ SUBDIR+=	py-duali
 SUBDIR+=	py-easydev
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-editorconfig-core
-SUBDIR+=	py-ejson
 SUBDIR+=	py-embedc
 SUBDIR+=	py-emmsa
 SUBDIR+=	py-enre
