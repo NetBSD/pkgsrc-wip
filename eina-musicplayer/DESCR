@@ -1,0 +1,8 @@
+Current music players are focused on managing your music collection, while using
+mandatory criteria about how they organize it.
+
+Eina does not care about it at all. If you are an organized person, chances are
+your music collection is organized too, and you won't like to spend your time
+rearranging it to follow your player's specific rules. In addition, having those
+players to arrange music that's randomly stored, named or tagged, is usually
+counterproductive.

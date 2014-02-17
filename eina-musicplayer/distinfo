@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/17 10:45:35 thomasklausner Exp $
+
+SHA1 (eina-0.14.0.tar.gz) = 2ad1c39c49fd1604c98387cef860f95d075d1a04
+RMD160 (eina-0.14.0.tar.gz) = 426787c44539ab160c56fe0503ba1ebad6f581fd
+Size (eina-0.14.0.tar.gz) = 1499195 bytes
