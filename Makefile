@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5660 2014/02/17 12:27:38 fhajny Exp $
+# $Id: Makefile,v 1.5661 2014/02/17 14:03:49 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -369,7 +369,6 @@ SUBDIR+=	crm114
 SUBDIR+=	cross-binutils
 SUBDIR+=	crossroads-io
 SUBDIR+=	crrcsim
-SUBDIR+=	crush-tools
 SUBDIR+=	cryptcat
 SUBDIR+=	csmith
 SUBDIR+=	csoap
@@ -2194,7 +2193,6 @@ SUBDIR+=	pdfshuffler
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
-SUBDIR+=	pdsh
 SUBDIR+=	pear-Base
 SUBDIR+=	pear-Cache
 SUBDIR+=	pear-CakePHP_CodeSniffer
@@ -2297,13 +2295,10 @@ SUBDIR+=	php-doc-zh
 SUBDIR+=	php-dtrace
 SUBDIR+=	php-ffmpeg
 SUBDIR+=	php-gtk2
-SUBDIR+=	php-http
 SUBDIR+=	php-igbinary
 SUBDIR+=	php-imagick
 SUBDIR+=	php-libawl-git
-SUBDIR+=	php-memcached
 SUBDIR+=	php-mongo
-SUBDIR+=	php-oauth
 SUBDIR+=	php-recode
 SUBDIR+=	php-rrd
 SUBDIR+=	php-ssh2
@@ -3010,7 +3005,6 @@ SUBDIR+=	quickie
 SUBDIR+=	quodlibet
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
-SUBDIR+=	rabbitmq-c
 SUBDIR+=	radare
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
