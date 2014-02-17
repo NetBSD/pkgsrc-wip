@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5653 2014/02/17 00:43:02 othyro Exp $
+# $Id: Makefile,v 1.5654 2014/02/17 09:13:58 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2151,6 +2151,7 @@ SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-Unicode-CheckUTF8
+SUBDIR+=	p5-WWW-YouTube-Download
 SUBDIR+=	p5-WWW-YouTube-VideoURI
 SUBDIR+=	p5-WebService-Audioscrobbler
 SUBDIR+=	p5-WebService-CIA
