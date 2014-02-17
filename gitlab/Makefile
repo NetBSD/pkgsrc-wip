@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/13 03:39:33 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/17 06:56:41 makoto Exp $
 #
 DISTNAME=	gitlab-1.7.1
 DISTFILES=	# empty
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 
 DEPENDS+=	ruby[0-9]*-posix-spawn-[0-9]*:../../devel/ruby-posix-spawn
 DEPENDS+=	ruby[0-9]*-eventmachine-[0-9]*:../../devel/ruby-eventmachine
-DEPENDS+=	ruby[0-9]*-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
+#EPENDS+=	ruby[0-9]*-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
 DEPENDS+=	ruby[0-9]*-bundler-[0-9]*:../../misc/ruby-bundler
 DEPENDS+=	py[0-9]*-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	scons-[0-9]*:../../devel/scons
@@ -40,6 +40,7 @@ GITLAB_HOME=		/home/git
 # this is pseudo directory, we will copy .destdir -> /home/git later anyway
 DEST_GITLAB_HOME=	${DESTDIR}${GITLAB_HOME}
 
+# for file: INSTALL
 FILES_SUBST+=	GITLAB_HOME=${GITLAB_HOME:Q}
 FILES_SUBST+=	DESTDIR_VAR=${DESTDIR:Q}${GITLAB_HOME:Q}
 FILES_SUBST+=	GITLAB_HOME=${GITLAB_HOME:Q}
@@ -67,10 +68,12 @@ NO_CONFIGURE=	YES
 #.include	"../../wip/mk/git-package.mk"
 .include	"options.mk"
 
+# Above include does not affect the value,
+# so the temporarily fix to MYSQL
+OPT_POSTGRES=	echo Skipping
 
-# not working for the moment
-FILES_SUBST+=	OPT_MYSQL=${OPT_MYSQL}
-FILES_SUBST+=	OPT_POSTGRES=${OPT_POSTGRES}
+FILES_SUBST+=	OPT_MYSQL=${OPT_MYSQL:Q}
+FILES_SUBST+=	OPT_POSTGRES=${OPT_POSTGRES:Q}
 
 # This is not really post-patch, but just utilize (substitute)
 # the sequence of build: (first clone to DESTDIR, and will rsync by INSTALL)
