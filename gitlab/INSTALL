@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2014/02/17 06:56:41 makoto Exp $
+# $NetBSD: INSTALL,v 1.4 2014/02/18 15:02:57 makoto Exp $
 DESTDIR_VAR="@DESTDIR_VAR@"
 GITLAB_HOME="@GITLAB_HOME@"
 RSYNC="@RSYNC@"
@@ -10,9 +10,9 @@ OPT_POSTGRES="@OPT_POSTGRES@"
 #
 case ${STAGE} in
     POST-INSTALL)
-	echo "     Running INSTALL script in POST-INSTALL $0..."
-	echo "     You may copy the file, edit and the rerun"
-	echo "	   But be carefull for cancelling by Ctrl-C may corrupt pkgdb."
+	echo "	Running INSTALL script in POST-INSTALL $0..."
+	echo "	You may copy the file, edit and the rerun"
+	echo "	But be carefull for cancelling by Ctrl-C may corrupt pkgdb."
 # See following document where this script comes from:
 #   https://github.com/gitlabhq/gitlabhq/blob/6-1-stable/doc/install/installation.md
 #
@@ -47,13 +47,20 @@ case ${STAGE} in
 	sudo -u git -H git config --global core.autocrlf input; \
 	sudo -u git ${CP} config/database.yml.mysql config/database.yml; \
 	sudo -u git -H ${CHMOD} o-rwx config/database.yml; \
+	sudo -u git -H ${MV}  Gemfile.lock Gemfile.lock.bak ; \
+	# remove libv8 (old version) line
+	sudo -u git -H \
+	     ${SED} \
+	      -e '/libv8/d' \
+	      -e '/therubyracer/d' Gemfile.lock.bak > Gemfile.lock ;\
 	# 'gem install libv8' has problem. So with the following command line options:
-	echo "     Will take a time, thanks for being patient...";\
+	echo "	Will take time, thanks for being patient...";\
 	# Following command will install the expected PATH, but be ignored by bundle ..
 	sudo -u	git -H gem install \
 		--install-root	${GITLAB_HOME}/gitlab/vendor/bundle/ruby/2.0.0 \
 		--install-dir /	libv8 -v '3.16.14.3' -- --with-system-v8 ;\
-	${ECHO} "     Taking care for database ... OPT_MYSQL:${OPT_MYSQL} OPT_POSTGRES:${OPT_POSTGRES}" ; \
+	sudo -u git -H bundle config build.libv8 --with-system-v8 ;\
+	${ECHO} "	Taking care for database ... OPT_MYSQL:${OPT_MYSQL} OPT_POSTGRES:${OPT_POSTGRES}" ; \
 	# For MySQL (note, the option says "without ... postgres") \
 	${OPT_MYSQL} sudo -u git -H bundle install --deployment --without development test postgres aws;\
 	# Or for PostgreSQL (note, the option says "without ... mysql") 

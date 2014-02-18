@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/17 06:56:41 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/18 15:02:57 makoto Exp $
 #
 DISTNAME=	gitlab-1.7.1
 DISTFILES=	# empty
@@ -29,6 +29,8 @@ DEPENDS+=	libexecinfo-[0-9]*:../../devel/libexecinfo
 # only for necessary at installation ( 'cp -r' may eliminate following line.)
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+# Does this really help ? .. not checked yet
+DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 # Following lines are too late, passwd and groups be made before this make
 PKG_GROUPS=	gitlab
