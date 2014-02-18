@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2013/08/18 18:39:27 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/18 14:27:19 szptvlfn Exp $
 #
 
-DISTNAME=		cpphs-1.17.1
+DISTNAME=		cpphs-1.18.1
 CATEGORIES=		lang
 
 MAINTAINER=		esg@sdf.lonestar.org
-HOMEPAGE=		http://haskell.org/cpphs/
 COMMENT=		Re-implementation of cpp in Haskell
 LICENSE=		gnu-lgpl-v2.1
 
