@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2014/02/18 03:19:46 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/18 03:21:41 othyro Exp $
 #
 
 DISTNAME=	celery-3.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	https://pypi.python.org/packages/source/c/celery/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
