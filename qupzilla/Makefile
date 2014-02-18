@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/01/08 14:08:46 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/18 18:34:18 nros Exp $
 
-DISTNAME=	QupZilla-1.6.0
+DISTNAME=	QupZilla-1.6.3
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	www
 MASTER_SITES=	http://qupzilla.com/uploads/

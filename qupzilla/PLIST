@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/08 14:08:46 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/02/18 18:34:18 nros Exp $
 bin/qupzilla
 lib/libQupZilla.la
 lib/qupzilla/libAccessKeysNavigation.la
@@ -16,16 +16,14 @@ share/icons/hicolor/64x64/apps/qupzilla.png
 share/pixmaps/qupzilla.png
 share/qupzilla/locale/ar_SA.qm
 share/qupzilla/locale/bg_BG.qm
-share/qupzilla/locale/bo_CN.qm
 share/qupzilla/locale/ca_ES.qm
 share/qupzilla/locale/cs_CZ.qm
-share/qupzilla/locale/da_DK.qm
 share/qupzilla/locale/de_DE.qm
 share/qupzilla/locale/el_GR.qm
-share/qupzilla/locale/es_419.qm
-share/qupzilla/locale/es_AR.qm
 share/qupzilla/locale/es_ES.qm
+share/qupzilla/locale/es_MX.qm
 share/qupzilla/locale/es_VE.qm
+share/qupzilla/locale/eu_ES.qm
 share/qupzilla/locale/fa_IR.qm
 share/qupzilla/locale/fr_FR.qm
 share/qupzilla/locale/gl_ES.qm
@@ -36,8 +34,6 @@ share/qupzilla/locale/it_IT.qm
 share/qupzilla/locale/ja_JP.qm
 share/qupzilla/locale/ka_GE.qm
 share/qupzilla/locale/lg.qm
-share/qupzilla/locale/my_MM.qm
-share/qupzilla/locale/nb_NO.qm
 share/qupzilla/locale/nl_NL.qm
 share/qupzilla/locale/nqo.qm
 share/qupzilla/locale/pl_PL.qm
@@ -80,6 +76,7 @@ share/qupzilla/locale/sr_RS.qm
 share/qupzilla/locale/sr_RS@latin.qm
 share/qupzilla/locale/sv_SE.qm
 share/qupzilla/locale/uk_UA.qm
+share/qupzilla/locale/uz@Latn.qm
 share/qupzilla/locale/zh_CN.qm
 share/qupzilla/locale/zh_TW.qm
 share/qupzilla/themes/chrome/images/blankbutton-a.png
