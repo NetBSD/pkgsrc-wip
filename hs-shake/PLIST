@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/01 10:14:49 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/02/18 14:29:41 szptvlfn Exp $
 bin/shake
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Env.hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Env.p_hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Lexer.hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Lexer.p_hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Parse.hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Parse.p_hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Type.hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Ninja/Type.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Args.hi
@@ -10,6 +18,8 @@ lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Classes.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Classes.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Command.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Command.p_hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Config.hi
+lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Config.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Core.hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Core.p_hi
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/Development/Shake/Database.hi
@@ -77,6 +87,24 @@ lib/shake-${PKGVERSION}/${HASKELL_VERSION}/libHSshake-${PKGVERSION}.a
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/libHSshake-${PKGVERSION}_p.a
 lib/shake-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/shake-${PKGVERSION}/LICENSE
+share/examples/shake-${PKGVERSION}/Makefile
+share/examples/shake-${PKGVERSION}/constants.c
+share/examples/shake-${PKGVERSION}/constants.h
+share/examples/shake-${PKGVERSION}/hellofunc.c
+share/examples/shake-${PKGVERSION}/hellomake.c
+share/examples/shake-${PKGVERSION}/hellomake.h
+share/examples/shake-${PKGVERSION}/lint.ninja
+share/examples/shake-${PKGVERSION}/list.txt
+share/examples/shake-${PKGVERSION}/main.c
+share/examples/shake-${PKGVERSION}/test1.ninja
+share/examples/shake-${PKGVERSION}/test2.ninja
+share/examples/shake-${PKGVERSION}/test3-inc.ninja
+share/examples/shake-${PKGVERSION}/test3-sub.ninja
+share/examples/shake-${PKGVERSION}/test3-unix.ninja
+share/examples/shake-${PKGVERSION}/test3-win.ninja
+share/examples/shake-${PKGVERSION}/test3.ninja
+share/examples/shake-${PKGVERSION}/test4.ninja
+share/examples/shake-${PKGVERSION}/test5.ninja
 share/shake-${PKGVERSION}/html/jquery.flot.js
 share/shake-${PKGVERSION}/html/jquery.flot.stack.js
 share/shake-${PKGVERSION}/html/jquery.js
