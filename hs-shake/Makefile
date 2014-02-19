@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/02/18 14:29:41 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/19 09:14:10 szptvlfn Exp $
 
-DISTNAME=	shake-0.11.1
+DISTNAME=	shake-0.11.2
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
@@ -8,19 +8,29 @@ COMMENT=	Build system library, like Make, but more accurate dependencies
 LICENSE=	modified-bsd
 
 INSTALLATION_DIRS=	share/examples/${DISTNAME}
+INSTALLATION_DIRS+=	share/examples/${DISTNAME}/Examples
+INSTALLATION_DIRS+=	share/examples/${DISTNAME}/Examples/C
+INSTALLATION_DIRS+=	share/examples/${DISTNAME}/Examples/MakeTutor
+INSTALLATION_DIRS+=	share/examples/${DISTNAME}/Examples/Tar
+INSTALLATION_DIRS+=	share/examples/${DISTNAME}/Examples/Ninja
 
 post-install:
-	for example in \
+	for a in \
 		${WRKSRC}/Examples/C/constants.c \
 		${WRKSRC}/Examples/C/constants.h \
-		${WRKSRC}/Examples/C/main.c      \
+		${WRKSRC}/Examples/C/main.c; do \
+		${INSTALL_DATA} "$${a}" ${DESTDIR}${PREFIX}/share/examples/${DISTNAME}/Examples/C; done
+	for b in \
 		${WRKSRC}/Examples/MakeTutor/Makefile \
 		${WRKSRC}/Examples/MakeTutor/hellofunc.c \
 		${WRKSRC}/Examples/MakeTutor/hellomake.c \
-		${WRKSRC}/Examples/MakeTutor/hellomake.h \
-		${WRKSRC}/Examples/Tar/list.txt          \
-		${WRKSRC}/Examples/Ninja/*.ninja ; do \
-		${INSTALL_DATA} "$${example}" ${DESTDIR}${PREFIX}/share/examples/${DISTNAME}; done
+		${WRKSRC}/Examples/MakeTutor/hellomake.h; do \
+		${INSTALL_DATA} "$${b}" ${DESTDIR}${PREFIX}/share/examples/${DISTNAME}/Examples/MakeTutor; done
+	${INSTALL_DATA} ${WRKSRC}/Examples/Tar/list.txt \
+		${DESTDIR}${PREFIX}/share/examples/${DISTNAME}/Examples/Tar
+	for g in \
+		${WRKSRC}/Examples/Ninja/*.ninja; do \
+		${INSTALL_DATA} "$${g}" ${DESTDIR}${PREFIX}/share/examples/${DISTNAME}/Examples/Ninja; done
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-hashable/buildlink3.mk"

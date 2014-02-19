@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/02/18 14:29:41 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2014/02/19 09:14:10 szptvlfn Exp $
 
-SHA1 (shake-0.11.1.tar.gz) = cb59edd17233c458246c4096324376a7ff4aa5ac
-RMD160 (shake-0.11.1.tar.gz) = f92f1fd86e2c4f3665dbb6b1b4e642ad96dc5973
-Size (shake-0.11.1.tar.gz) = 485918 bytes
+SHA1 (shake-0.11.2.tar.gz) = fd443d238394cf035d63ecb0e5ff13b9c9e6b877
+RMD160 (shake-0.11.2.tar.gz) = 2d1de3ea97d40a8f383a751e40d2d84b3a306b12
+Size (shake-0.11.2.tar.gz) = 485952 bytes
