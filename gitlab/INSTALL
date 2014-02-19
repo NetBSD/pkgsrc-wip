@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.5 2014/02/19 01:00:52 makoto Exp $
+# $NetBSD: INSTALL,v 1.6 2014/02/19 11:34:44 makoto Exp $
 DESTDIR_VAR="@DESTDIR_VAR@"
 GITLAB_HOME="@GITLAB_HOME@"
 RSYNC="@RSYNC@"
@@ -50,7 +50,6 @@ case ${STAGE} in
 	sudo -u git -H git config --global core.autocrlf input; \
 	sudo -u git -H ${CP} config/database.yml.mysql config/database.yml; \
 	sudo -u git -H ${CHMOD} o-rwx config/database.yml; \
-	sudo -u git -H ${MV}  Gemfile.lock Gemfile.lock.bak ; \
 #
 	# remove libv8 (old version) line
 ##	Simply editting Gemfile.lock are BAD IDEA

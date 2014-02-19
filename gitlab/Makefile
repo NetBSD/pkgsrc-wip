@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/19 01:00:52 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/19 11:34:44 makoto Exp $
 #
 DISTNAME=	gitlab-1.7.1
 DISTFILES=	# empty
@@ -34,12 +34,12 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # Following lines are too late, passwd and groups should be made before this make
 PKG_GROUPS=	gitlab
-PKG_USERS=	git:git
+PKG_USERS=	git:gitlab
 PKG_GECOS.gitlab=	GitLab
 
 # Actual install PATH (after INSTALL.script run), this can NOT be easily changed
 GITLAB_HOME=		/home/git
-# this is pseudo directory, we will copy .destdir -> /home/git later anyway
+# this is pseudo directory, we will copy .destdir -> /home/git in INSTALL script
 DEST_GITLAB_HOME=	${DESTDIR}${GITLAB_HOME}
 
 # for file: INSTALL
