@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/18 15:02:57 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/19 01:00:52 makoto Exp $
 #
 DISTNAME=	gitlab-1.7.1
 DISTFILES=	# empty
@@ -15,8 +15,8 @@ WRKSRC=		${WRKDIR}
 # Add "-c http.sslVerify=false" to git command or,
 #PKGSRC_SETENV+=		GIT_SSL_NO_VERIFY=true
 
-DEPENDS+=	ruby[0-9]*-posix-spawn-[0-9]*:../../devel/ruby-posix-spawn
-DEPENDS+=	ruby[0-9]*-eventmachine-[0-9]*:../../devel/ruby-eventmachine
+#EPENDS+=	ruby[0-9]*-posix-spawn-[0-9]*:../../devel/ruby-posix-spawn
+#EPENDS+=	ruby[0-9]*-eventmachine-[0-9]*:../../devel/ruby-eventmachine
 #EPENDS+=	ruby[0-9]*-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
 DEPENDS+=	ruby[0-9]*-bundler-[0-9]*:../../misc/ruby-bundler
 DEPENDS+=	py[0-9]*-pygments-[0-9]*:../../textproc/py-pygments
@@ -30,9 +30,9 @@ DEPENDS+=	libexecinfo-[0-9]*:../../devel/libexecinfo
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 # Does this really help ? .. not checked yet
-DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+#EPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
-# Following lines are too late, passwd and groups be made before this make
+# Following lines are too late, passwd and groups should be made before this make
 PKG_GROUPS=	gitlab
 PKG_USERS=	git:git
 PKG_GECOS.gitlab=	GitLab

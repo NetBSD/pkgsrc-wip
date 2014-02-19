@@ -133,3 +133,11 @@ Make sure that `gem install libv8 -v '3.11.8.17'` succeeds before bundling.
 FOLLOWING command installs OK, but it is on different directory.
 I don't know the switch to locate correctly yet.
 sudo gem install libv8 -v '3.16.14.3' -- --with-system-v8
+
+-- Most recent problem:
+Installing therubyracer (0.12.1) 
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+    /usr/pkg/bin/ruby200 extconf.rb 
+checking for main() in -lpthread... yes
+checking for v8.h... no
+*** extconf.rb failed ***
