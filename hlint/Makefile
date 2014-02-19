@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/11/29 14:01:37 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.16 2014/02/19 09:16:31 szptvlfn Exp $
 #
 
-DISTNAME=	hlint-1.8.55
+DISTNAME=	hlint-1.8.57
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
@@ -17,7 +17,6 @@ post-install:
 .include "../../wip/hs-cpphs/buildlink3.mk"
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
 .include "../../wip/hs-hscolour/buildlink3.mk"
-.include "../../wip/hs-text/buildlink3.mk"
 .include "../../wip/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-uniplate/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
