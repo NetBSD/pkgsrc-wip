@@ -1,11 +1,11 @@
-$NetBSD: patch-config.h,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+$NetBSD: patch-config.h,v 1.2 2014/02/20 20:53:59 hfath Exp $
 
---- config.h.orig	2012-05-23 13:52:36.000000000 +0000
+--- config.h.orig	2014-02-20 20:27:20.000000000 +0000
 +++ config.h
-@@ -59,6 +59,8 @@ enum config_enum {
- 	CONFIG_AUTH_MODE,
+@@ -60,6 +60,8 @@ enum config_enum {
  	CONFIG_CA_FILE,
  	CONFIG_CA_DIR,
+ 	CONFIG_PASSWORD_HELPER,
 +	CONFIG_DNS_UPDATE,
 +	CONFIG_TARGET_NETWORKS,
  	LAST_CONFIG

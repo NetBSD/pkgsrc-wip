@@ -1,6 +1,6 @@
-$NetBSD: patch-tunip.c,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+$NetBSD: patch-tunip.c,v 1.2 2014/02/20 20:53:59 hfath Exp $
 
---- tunip.c.orig	2012-05-23 13:52:36.000000000 +0000
+--- tunip.c.orig	2014-02-20 20:27:20.000000000 +0000
 +++ tunip.c
 @@ -177,7 +177,8 @@ static int encap_rawip_recv(struct sa_bl
  		return -1;

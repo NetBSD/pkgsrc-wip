@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.3 2014/02/14 12:06:45 hfath Exp $
+$NetBSD: distinfo,v 1.4 2014/02/20 20:53:59 hfath Exp $
 
-SHA1 (patch-config.c) = 8e1789f38bedc5d4cc136e706f6715a390cfca69
-SHA1 (patch-config.h) = 1e73b3a064cefd4e7dc7816456a664a824cf111e
-SHA1 (patch-makeman.pl) = 3b746d36f4168c74a5a23816ec14fcd710ee5c4d
-SHA1 (patch-pcf2vpnc) = 4341b3c6aed524b32a5bcc41ddba6f43e50f9d6a
-SHA1 (patch-sysdep.c) = 69bac52506c09ed4c68dcb27f6f7872ca472e2a5
-SHA1 (patch-sysdep.h) = c23e871f16f691b5a7278169b5b31b7ecc2a8676
-SHA1 (patch-tunip.c) = 157b8b54f49411da0fe2e9873e7aa1bce2cba31e
-SHA1 (patch-vpnc.c) = f7a864d2d49d81f2bec35a0118ba54db63a4966e
-SHA1 (patch-vpnc_disconnect) = 083225589698d8080f740fbfcfe7d3a71411a2a5
-SHA1 (patch-vpnc_script) = dc07f6075640f1ffbadcec5fc5347c471b175af7
+SHA1 (patch-config.c) = 313a76fa5c5784a93f06a4e31927e3b42a9a6fdf
+SHA1 (patch-config.h) = 2917b54525315d59646a1ca759138a14021ee674
+SHA1 (patch-makeman.pl) = d87e77fe71a2a37265409b5f88e53cbf1373a9b0
+SHA1 (patch-pcf2vpnc) = e04d8167c95ff89496ff4d9603adc57b6da2a457
+SHA1 (patch-sysdep.c) = 30f4122e686ccb1757cec5869d296495738e6be6
+SHA1 (patch-tunip.c) = 3bc4968d5e51577185813b033786092f8a981a90
+SHA1 (patch-vpnc.c) = 7d677152e39477202c7b57b7063e77f174859884
+SHA1 (patch-vpnc_disconnect) = a38c6f7cf978d063be0db3791b29962ceaeb5b9e
+SHA1 (patch-vpnc_script) = 1fb5b4d3d98b6a0ae67d8800d08f92876a0ea694

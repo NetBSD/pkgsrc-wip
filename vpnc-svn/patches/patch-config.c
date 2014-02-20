@@ -1,8 +1,8 @@
-$NetBSD: patch-config.c,v 1.2 2014/02/14 12:06:45 hfath Exp $
+$NetBSD: patch-config.c,v 1.3 2014/02/20 20:53:59 hfath Exp $
 
---- config.c.orig	2014-02-14 11:46:47.000000000 +0000
+--- config.c.orig	2014-02-20 20:27:20.000000000 +0000
 +++ config.c
-@@ -188,12 +188,12 @@ static const char *config_def_app_versio
+@@ -362,12 +362,12 @@ static const char *config_def_app_versio
  
  static const char *config_def_script(void)
  {
@@ -17,7 +17,7 @@ $NetBSD: patch-config.c,v 1.2 2014/02/14 12:06:45 hfath Exp $
  }
  
  static const char *config_def_vendor(void)
-@@ -201,6 +201,16 @@ static const char *config_def_vendor(voi
+@@ -375,6 +375,16 @@ static const char *config_def_vendor(voi
  	return "cisco";
  }
  
@@ -34,9 +34,9 @@ $NetBSD: patch-config.c,v 1.2 2014/02/14 12:06:45 hfath Exp $
  static const char *config_def_target_network(void)
  {
  	return "0.0.0.0/0.0.0.0";
-@@ -469,6 +479,21 @@ static const struct config_names_s {
- 		"Target network in dotted decimal or CIDR notation\n",
- 		config_def_target_network
+@@ -650,6 +660,20 @@ static const struct config_names_s {
+ 		"path to password program or helper name\n",
+ 		NULL
  	}, {
 +		CONFIG_DNS_UPDATE, 1, 1,
 +		"--dns-update",
@@ -52,11 +52,10 @@ $NetBSD: patch-config.c,v 1.2 2014/02/14 12:06:45 hfath Exp $
 +		"DEPRECATED extension from Debian",
 +		config_def_networks_list
 +	}, {
-+
  		0, 0, 0, NULL, NULL, NULL, NULL, NULL
  	}
  };
-@@ -477,7 +502,7 @@ static char *get_config_filename(const c
+@@ -658,7 +682,7 @@ static char *get_config_filename(const c
  {
  	char *realname;
  
@@ -65,7 +64,7 @@ $NetBSD: patch-config.c,v 1.2 2014/02/14 12:06:45 hfath Exp $
  	return realname;
  }
  
-@@ -716,8 +741,8 @@ void do_config(int argc, char **argv)
+@@ -894,8 +918,8 @@ void do_config(int argc, char **argv)
  	}
  
  	if (!got_conffile) {

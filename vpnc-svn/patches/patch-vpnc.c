@@ -1,6 +1,6 @@
-$NetBSD: patch-vpnc.c,v 1.2 2014/02/14 12:06:45 hfath Exp $
+$NetBSD: patch-vpnc.c,v 1.3 2014/02/20 20:54:00 hfath Exp $
 
---- vpnc.c.orig	2014-02-14 11:46:47.000000000 +0000
+--- vpnc.c.orig	2014-02-20 20:27:20.000000000 +0000
 +++ vpnc.c
 @@ -389,6 +389,8 @@ static void config_tunnel(struct sa_bloc
  {
