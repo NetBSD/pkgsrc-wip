@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/20 23:18:51 thomasklausner Exp $
 
 DISTNAME=	CalendarServer-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://trac.calendarserver.org/
 COMMENT=	Standards-compliant server implementing CalDAV and CardDAV protocols
 LICENSE=	apache-2.0
+
+# see
+# http://trac.calendarserver.org/browser/CalendarServer/trunk/README.rst
+# for instructions for running from SVN; these need to be adapted for
+# pkgsrc
 
 DEPENDS+=	${PYPKGPREFIX}-CalDAVClientLibrary-[0-9]*:../../wip/py-CalDAVClientLibrary
 DEPENDS+=	${PYPKGPREFIX}-Kerberos-[0-9]*:../../security/py-Kerberos
