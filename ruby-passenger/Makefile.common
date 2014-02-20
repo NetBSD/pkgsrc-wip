@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2013/09/05 10:55:51 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/02/20 05:51:50 makoto Exp $
 # used by wip/ap2-passenger/Makefile
 # used by wip/ruby-passenger/Makefile
 #
@@ -56,7 +56,7 @@ post-patch:
 	${RM} -f ${WRKSRC}/lib/phusion_passenger/platform_info/apache.rb.orig \
 		 ${WRKSRC}/lib/phusion_passenger/platform_info/cxx_portability.rb.orig
 
-.include "../../wip/libeio/buildlink3.mk"
+.include "../../wip/libeio-cvs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libev+=	libev>=4.11
 .include "../../devel/libev/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
