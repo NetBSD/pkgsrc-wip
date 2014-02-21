@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/21 23:53:55 jgoamakf Exp $
 
-DISTNAME=	nltk-3.0a2
+DISTNAME=	nltk-3.0a3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://nltk.org/nltk3-alpha/
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.1.2:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 REPLACE_PYTHON=			nltk/corpus/reader/knbc.py
 REPLACE_PYTHON+=		nltk/stem/rslp.py
