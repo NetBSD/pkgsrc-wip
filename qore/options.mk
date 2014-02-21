@@ -1,13 +1,5 @@
-# $NetBSD: options.mk,v 1.10 2014/02/07 14:23:07 nros Exp $
-# used by wip/qore/Makefile
-# used by wip/qore-json-module/Makefile
-# used by wip/qore-mysql-module/Makefile
-# used by wip/qore-pgsql-module/Makefile
-# used by wip/qore-openldap-module/Makefile
-# used by wip/qore-ssh2-module/Makefile
-# used by wip/qore-uuid-module/Makefile
-# used by wip/qore-xml-module/Makefile
-# used by wip/qore-yaml-module/Makefile
+# $NetBSD: options.mk,v 1.11 2014/02/21 20:38:01 nros Exp $
+#
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qore
 PKG_SUPPORTED_OPTIONS=	debug doc
