@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/02/12 14:35:43 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2014/02/21 12:27:40 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
@@ -32,7 +32,9 @@ DEPENDS+=	anthy-[0-9]*:../../inputmethod/anthy
 GIT_REPOSITORIES=	master
 GIT_MODULE.master=	egg
 GIT_REPO.master=	git://git.debian.org/git/pkg-anthy/egg.git
-_GIT_FLAGS?=		--depth 1
+# http://mail-index.netbsd.org/pkgsrc-wip-discuss/2014/01/20/msg002556.html
+# By unknown reason, tamago repository does not accept --depth=1, see TODO
+_GIT_FLAGS=	# empty	
 
 GNU_CONFIGURE=	yes
 WRKSRC=			${WRKDIR}/egg
