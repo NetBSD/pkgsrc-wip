@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.7 2013/12/23 03:13:49 makoto Exp $
+$NetBSD: distinfo,v 1.8 2014/02/21 02:05:02 makoto Exp $
 
 SHA1 (patch-BATCH-SORT) = fed628d0f512638934ca16b4b7d0906d4be650c9
 SHA1 (patch-bushu-util_bushu2canna) = 9573de81b6f9ef7a225fc954b618f7905e648821
 SHA1 (patch-bushu-util_where) = 07bd3faf178ef57b9cc0afae20f56dbf83cc1d6d
 SHA1 (patch-configure.ac) = 4174e3674e2cc7dbb6daf5de56fa76f24273edf9
-SHA1 (patch-etc_Makefile.am) = 8fde516e2e7aa481aac9679e21c073ad2cd88882
-SHA1 (patch-etc_Makefile.in) = 5d17622136ce9960dcc5dc43f4763d3e315241b1
+SHA1 (patch-etc_Makefile.am) = fa9ef1edb20bf96cc58c2d425ce4d0f71c785ca3
 SHA1 (patch-etc_bushu.rev) = 53259ef27da2b3e57ff9834957c8ee9b2fe4f833
 SHA1 (patch-etc_mk-bdic) = 37a5ed85e1bff4b06ac35ae2e3208fac977233ef
 SHA1 (patch-lisp_Makefile.am) = b80c93ae0ed60e8816a7cae452f5d300d9964781
