@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/02/07 11:59:51 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.15 2014/02/21 10:39:03 szptvlfn Exp $
 
 DISTNAME=	pandoc-1.12.3.3
 PKGNAME=	${DISTNAME}
@@ -22,7 +22,7 @@ post-install:
 .include "../../wip/hs-blaze-html/buildlink3.mk"
 .include "../../wip/hs-blaze-markup/buildlink3.mk"
 .include "../../wip/hs-data-default/buildlink3.mk"
-.include "../../wip/hs-digest/buildlink3.mk"
+.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-highlighting-kate/buildlink3.mk"
 .include "../../wip/hs-hslua/buildlink3.mk"
 .include "../../wip/hs-HTTP/buildlink3.mk"
@@ -30,7 +30,6 @@ post-install:
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-pandoc-types/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
-.include "../../wip/hs-pcre-light/buildlink3.mk"
 .include "../../wip/hs-random/buildlink3.mk"
 .include "../../wip/hs-syb/buildlink3.mk"
 .include "../../wip/hs-tagsoup/buildlink3.mk"
@@ -38,7 +37,6 @@ post-install:
 .include "../../wip/hs-texmath/buildlink3.mk"
 .include "../../wip/hs-text/buildlink3.mk"
 .include "../../wip/hs-unordered-containers/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../wip/hs-vector/buildlink3.mk"
 .include "../../wip/hs-xml/buildlink3.mk"
 .include "../../wip/hs-yaml/buildlink3.mk"

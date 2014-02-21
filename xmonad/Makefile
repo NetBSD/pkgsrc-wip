@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/02/07 11:33:14 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.13 2014/02/21 10:39:03 szptvlfn Exp $
 DISTNAME=	xmonad-${VERSION}
 PKGNAME=	xmonad-${VERSION}
 VERSION=	0.11
@@ -16,8 +16,9 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/xmonad.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../wip/hs-x11/buildlink3.mk"
-.include "../../wip/mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"

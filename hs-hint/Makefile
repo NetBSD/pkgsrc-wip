@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/09/02 21:55:42 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/21 10:39:01 szptvlfn Exp $
 #
 
 DISTNAME=	hint-0.3.3.7
@@ -10,6 +10,7 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-MonadCatchIO-mtl/buildlink3.mk"
+.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-ghc-mtl/buildlink3.mk"
 .include "../../wip/hs-ghc-paths/buildlink3.mk"
 .include "../../wip/hs-haskell-src/buildlink3.mk"
