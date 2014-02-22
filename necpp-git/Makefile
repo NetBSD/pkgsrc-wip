@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/20 17:34:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/22 04:40:06 makoto Exp $
 
 DISTNAME=		necpp-git-1
 CATEGORIES=		news
@@ -22,7 +22,7 @@ USE_TOOLS+=		automake autoreconf gmake
 MAKE_JOBS_SAFE=		no
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -fiv
+	cd ${WRKSRC} && make -f Makefile.cvs
 
 #.include "../../math/lapack/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"

@@ -1,3 +1,3 @@
-$NetBSD: distinfo,v 1.1 2013/07/20 17:34:15 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2014/02/22 04:40:06 makoto Exp $
 
-SHA1 (patch-configure.in) = 63d78c53867ee5386d3a7d87e664dd6012f942af
+SHA1 (patch-configure.in) = 774f3cf5f90b4b83262a5eca9418642bdf00ffd7

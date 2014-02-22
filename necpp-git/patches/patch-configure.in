@@ -1,10 +1,26 @@
-$NetBSD: patch-configure.in,v 1.1 2013/07/20 17:34:15 thomasklausner Exp $
+$NetBSD: patch-configure.in,v 1.2 2014/02/22 04:40:06 makoto Exp $
 
+(1)
+configure.in:2: error: 'AM_CONFIG_HEADER': this macro is obsolete.
+    You should use the 'AC_CONFIG_HEADERS' macro instead.
+/usr/pkg/share/aclocal-1.13/obsolete-err.m4:12: AM_CONFIG_HEADER is expanded from...
+configure.in:2: the top level
+autom4te: /usr/pkg/bin/gm4 failed with exit status: 1
+
+(2)
 Fix unportable test(1) construct.
 
---- configure.in.orig	2013-07-20 17:22:09.000000000 +0000
-+++ configure.in
-@@ -21,7 +21,7 @@ AS_IF([test "x$with_bounds" != xno],
+--- configure.in.orig	2014-02-22 10:22:56.000000000 +0900
++++ configure.in	2014-02-22 13:23:50.000000000 +0900
+@@ -1,6 +1,6 @@
+ AC_INIT(configure.in)
+ AC_CONFIG_MACRO_DIR([m4])
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AM_INIT_AUTOMAKE(necpp, 1.5.1)
+ 
+ LT_INIT
+@@ -21,7 +21,7 @@
  		AC_SUBST([AM_CPPFLAGS], ["-DNEC_ERROR_CHECK=1"])
  		AC_SUBST([CXXFLAGS], ["-g3 -O0"])
  ])
