@@ -1,0 +1,59 @@
+$NetBSD: patch-Makefile.in,v 1.1 2014/02/22 18:51:30 nros Exp $
+* Removes Doxygen dependency to install docs.
+--- Makefile.in.orig	2014-02-22 18:18:43.000000000 +0000
++++ Makefile.in
+@@ -919,8 +919,8 @@ EXTRA_DIST = next_build.sh WHATISQORE RE
+ 	$(LANG_QPP_SRC) $(am__append_1)
+ dist_modver_DATA = $(USER_MODULES)
+ BUILT_SOURCES = dummy
+-@COND_DOXYGEN_TRUE@MOD_OUTPUT = $(addprefix docs/modules/,$(addsuffix /html,$(USER_MODS)))
+-@COND_DOXYGEN_TRUE@DOXYGEN_OUTPUT = docs/library/html docs/lang/html $(MOD_OUTPUT)
++MOD_OUTPUT = $(addprefix docs/modules/,$(addsuffix /html,$(USER_MODS)))
++DOXYGEN_OUTPUT = docs/library/html docs/lang/html $(MOD_OUTPUT)
+ @COND_DOXYGEN_TRUE@LIB_TMP_DOXYFILES_SRC = \
+ @COND_DOXYGEN_TRUE@	doxygen/lib/Doxyfile
+ 
+@@ -1583,10 +1583,9 @@ maintainer-clean-generic:
+ 	@echo "This command is intended for maintainers to use"
+ 	@echo "it deletes files that may require special tools to rebuild."
+ 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
++@COND_DOXYGEN_FALSE@clean-local:
+ @COND_DOXYGEN_FALSE@uninstall-local:
+ @COND_DOXYGEN_FALSE@html-local:
+-@COND_DOXYGEN_FALSE@install-html-local:
+-@COND_DOXYGEN_FALSE@clean-local:
+ clean: clean-recursive
+ 
+ clean-am: clean-binPROGRAMS clean-generic clean-libtool clean-local \
+@@ -1755,15 +1754,6 @@ dummy:
+ 
+ @COND_DOXYGEN_TRUE@html-local: $(DOXYGEN_OUTPUT)
+ 
+-@COND_DOXYGEN_TRUE@install-html-local:
+-@COND_DOXYGEN_TRUE@	$(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/lang/html/search
+-@COND_DOXYGEN_TRUE@	$(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/library/html/search
+-@COND_DOXYGEN_TRUE@	for mod in $(USER_MODS); do $(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/modules/$$mod/html/search; done
+-@COND_DOXYGEN_TRUE@	for dir in $(DOXYGEN_OUTPUT); do \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir; fi; done; \
+-@COND_DOXYGEN_TRUE@	   for f in $$dir/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir/search; done; \
+-@COND_DOXYGEN_TRUE@	done
+-
+ @COND_DOXYGEN_TRUE@clean-local:
+ @COND_DOXYGEN_TRUE@	$(RM) -rf $(DOXYGEN_OUTPUT)
+ 
+@@ -1773,6 +1763,15 @@ dummy:
+ @COND_DOXYGEN_FALSE@doxygen-doc:
+ @COND_DOXYGEN_FALSE@	echo no doxygen support
+ 
++install-html-local:
++	$(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/lang/html/search
++	$(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/library/html/search
++	for mod in $(USER_MODS); do $(MKDIR_P) $(DESTDIR)$(datadir)/$(PACKAGE)/docs/modules/$$mod/html/search; done
++	for dir in $(DOXYGEN_OUTPUT); do \
++	   for f in $$dir/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir; fi; done; \
++	   for f in $$dir/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/$(PACKAGE)/$$dir/search; done; \
++	done
++
+ tar: clean
+ 	find $(top_srcdir) -name \*~ -exec rm {} \;
+ 	cd ..; tar cvf $(TAR_NAME) src && gzip $(TAR_NAME)

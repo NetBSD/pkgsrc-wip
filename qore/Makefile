@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/02/22 17:15:41 nros Exp $
+# $NetBSD: Makefile,v 1.9 2014/02/22 18:51:30 nros Exp $
 
 DISTNAME=	qore-0.8.8
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -18,6 +19,7 @@ PTHREAD_OPTS+=	require
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 
+INSTALL_TARGET=         install install-html-local
 
 #This is needed in order to comply the with MIT license and binary distribution
 INSTALLATION_DIRS+=	share/qore/license
