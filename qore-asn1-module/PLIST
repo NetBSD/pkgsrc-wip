@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/22 15:01:31 nros Exp $
+lib/qore-modules/asn1-api-${QORE_MODULE_API}.qmod
+share/qore/docs/modules/asn1/html/asn1-module-doc.html
