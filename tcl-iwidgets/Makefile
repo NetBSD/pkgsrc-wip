@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/01/07 13:30:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/02/22 08:20:57 obache Exp $
 #
 
 DISTNAME=	iwidgets-4.0.1
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://incrtcl.sourceforge.net/iwidgets
 COMMENT=	Object-oriented mega-widget set which extends Tcl/Tk
 LICENSE=	2-clause-bsd # ?
+
+DEPENDS+=	tcl>=8.6:../../lang/tcl
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
@@ -40,5 +42,4 @@ do-install:
 	${INSTALL_MAN} doc/collapsablewidget.n ${DESTDIR}${PREFIX}/${PKGMANDIR}/mann/ && \
 	${INSTALL_DATA} src/* ${DESTDIR}${PREFIX}/lib/iwidgets/incoming/
 
-.include "../../lang/tcl-itcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

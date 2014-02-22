@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/10/14 14:29:49 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/02/22 08:25:04 obache Exp $
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
@@ -70,6 +70,5 @@ pre-configure:
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"
-.include "../../lang/tcl-itcl/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
