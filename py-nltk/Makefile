@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/02/21 23:53:55 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/22 02:57:09 thomasklausner Exp $
 
 DISTNAME=	nltk-3.0a3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://nltk.org/nltk3-alpha/
+MASTER_SITES=	http://www.nltk.org/nltk3-alpha/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nltk.org/
