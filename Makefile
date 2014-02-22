@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5665 2014/02/20 00:49:47 othyro Exp $
+# $Id: Makefile,v 1.5666 2014/02/22 15:03:30 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2977,6 +2977,7 @@ SUBDIR+=	qmc2
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qore
+SUBDIR+=	qore-asn1-module
 SUBDIR+=	qore-freetds-module
 SUBDIR+=	qore-glut-module
 SUBDIR+=	qore-json-module
