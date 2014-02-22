@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.3 2014/02/22 02:59:45 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2014/02/22 12:17:46 thomasklausner Exp $
 
 SHA1 (lightspark-0.7.2.tar.gz) = f4c5fa3cf9da9c39da773640184e102ab9818ed7
 RMD160 (lightspark-0.7.2.tar.gz) = a739cb65815ef2af1b4ad9c5e3a8b9985b9a7055
 Size (lightspark-0.7.2.tar.gz) = 955952 bytes
 SHA1 (patch-CMakeLists.txt) = c2c9d57fee8d39ae685389f860110ce6ac4c7eae
 SHA1 (patch-src_CMakeLists.txt) = 786f0d60c15451b95819a9827e45815afb0224c2
+SHA1 (patch-src_backends_geometry.h) = 898cc251a11da1d9af17e9f98d7e5212263628c4
+SHA1 (patch-src_backends_graphics.h) = 915cccd1d36cc3bd6fe7930ec49eb30dd21584fe
 SHA1 (patch-src_backends_interfaces_audio_pulse_CMakeLists.txt) = 01492a6709b7297b8dc65ea8be02a3d1de76b1c8
 SHA1 (patch-src_backends_pluginmanager.cpp) = dc1ae9154b8b54dbc445caaf25898f9e8c783444
 SHA1 (patch-src_compat.cpp) = 176689e5675f663491bc9023ed71887a9978a962
@@ -12,3 +14,4 @@ SHA1 (patch-src_main.cpp) = 4a1677e85eb951078a72ab75edce8a1120a4ae8a
 SHA1 (patch-src_plugin_CMakeLists.txt) = dbdc471bc1e6608ec80ac800a8e91ac7e06c0044
 SHA1 (patch-src_scripting_abc.cpp) = 636a76804efbb1f271077fd533fb150d3209e23e
 SHA1 (patch-src_scripting_abc__codesynt.cpp) = 9b84a4779151e177a20f8532cd40b068743bc2c0
+SHA1 (patch-src_scripting_flash_utils_flashutils.h) = 16dd0bb44e5b0ab571130a70537020fe95bf18ab
