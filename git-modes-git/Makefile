@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/11/07 03:04:59 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/02/23 15:24:01 makoto Exp $
 DISTNAME=	git-modes-git-0.1
 CATEGORIES=	devel
 LICENSE=	gnu-gpl-v3
@@ -23,5 +23,6 @@ do-install:
 		${INSTALL_DATA_DIR}	${INSTALLATION_DIRS}
 		${INSTALL_DATA} ${WRKSRC}/*.el  ${WRKSRC}/*.elc ${INSTALLATION_DIRS}
 
+.include "../../wip/emacs-current/modules.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
