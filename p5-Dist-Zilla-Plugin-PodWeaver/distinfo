@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/02/18 04:06:34 jgoamakf Exp $
-
-SHA1 (Dist-Zilla-Plugin-PodWeaver-4.005.tar.gz) = fe84182119f364009b894e5ea2fc49e35aa40564
-RMD160 (Dist-Zilla-Plugin-PodWeaver-4.005.tar.gz) = 1432e774c506450f09d09ac2758e19ba010f7401
-Size (Dist-Zilla-Plugin-PodWeaver-4.005.tar.gz) = 15061 bytes
