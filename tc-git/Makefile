@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/02/21 02:05:02 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2014/02/23 15:34:48 makoto Exp $
 
 DISTNAME=		tc-2.99.3
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -44,13 +44,9 @@ CONFIGURE_ARGS.emacs+=	--datadir=${PREFIX}/share
 #.include "options.mk"
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
-SUBST_CLASSES+=		tc
-SUBST_MESSAGE.tc=	Replacing Perl PATH (@PERL@) to ${PERL5}
-SUBST_STAGE.tc=		post-configure
-SUBST_FILES.tc+=	bushu-util/bushu2canna
-SUBST_FILES.tc+=	bushu-util/where
-SUBST_FILES.tc+=	mazegaki/mkcertain.pl
-SUBST_SED.tc+=		-e s\|@PERL@\|${PERL5:Q}\|g
+REPLACE_PERL+=		bushu-util/bushu2canna
+REPLACE_PERL+=		bushu-util/where
+REPLACE_PERL+=		mazegaki/mkcertain.pl
 
 # fix hardcoded PATH, interim solution, upstream fix may differ.
 # This edit should be applied before byte compile
@@ -59,6 +55,13 @@ SUBST_MESSAGE.tc-pre=	Replacing tc-pre.el PATH /usr/loca/share to ${PREFIX}/shar
 SUBST_STAGE.tc-pre=	pre-configure
 SUBST_FILES.tc-pre+=	lisp/tc-pre.el
 SUBST_SED.tc-pre+=	-e s\|/usr/local/share\|${PREFIX}/share\|g
+
+# Usually said: Nothing changed. (but hope to help some situation ;-) 
+SUBST_CLASSES+=		texinfo
+SUBST_MESSAGE.texinfo=	Unknown problem fix at the stage of generating doc/tc.texinfo
+SUBST_STAGE.texinfo=	post-configure
+SUBST_FILES.texinfo=	doc/Makefile
+SUBST_SED.texinfo=	'-e /if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLAGS\) $$\(srcdir\)/s/ -I ./tc.texinfo/'
 
 .include "options.mk"
 
