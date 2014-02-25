@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.3 2014/02/06 18:41:15 christtrekker Exp $
+$NetBSD: distinfo,v 1.4 2014/02/25 14:21:58 christtrekker Exp $
 
 SHA1 (fontaine_svn_r57_2012.02.01.tar.gz) = 578266d09af2fcc5814a6f3551673b8cf341850b
 RMD160 (fontaine_svn_r57_2012.02.01.tar.gz) = 4329f7a15e37346ade093351be2fb100825ac797
 Size (fontaine_svn_r57_2012.02.01.tar.gz) = 1226513 bytes
 SHA1 (patch-cmake_modules_FindFreetype.cmake) = 2997fa5f251f776c5efbd9f3369d10f6e8b64639
 SHA1 (patch-src_CLP.cpp) = 2f3e8a1cd655873de882da88866220afe1db5127
-SHA1 (patch-src_FontFace.cpp) = 0f72448fbaaf367ff37b7a268eba10c02abc9ae5
+SHA1 (patch-src_FontFace.cpp) = d109b0465874cb3313357ad4883c6172597074c7
 SHA1 (patch-src_XHTMLR.cpp) = 1642ad056c9d6bf3f86b848d0a580b04333252f9
-SHA1 (patch-src_orthographies_Emoticons.h) = 51a183725fee6dff83aac1ec4e86a6f92212c25f
+SHA1 (patch-src_orthographies_Emoticons.h) = 2a2b23437254094c498b1b2f6aab22b6bf5520d3
+SHA1 (patch-src_orthographies_MathematicalOperators.h) = b68b99c6b9d8c73c600c9add79f1c3cda52c8535
 SHA1 (patch-src_orthographies_orthographies.h) = 83f89834fd33f52669867ea757ea6fbc21e359f0
