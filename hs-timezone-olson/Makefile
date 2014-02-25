@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/02/21 10:39:02 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/02/25 22:19:36 szptvlfn Exp $
 
-DISTNAME=	timezone-olson-0.1.2
+DISTNAME=	timezone-olson-0.1.3
 CATEGORIES=	time
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
