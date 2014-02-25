@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/01/25 14:15:20 szptvlfn Exp $
+$NetBSD: distinfo,v 1.8 2014/02/25 22:21:19 szptvlfn Exp $
 
-SHA1 (pandoc-types-1.12.3.1.tar.gz) = 9357cdc1865559001df266a81df57152a8807260
-RMD160 (pandoc-types-1.12.3.1.tar.gz) = 1a5c94f919136e010e72c412e391542d92a29db0
-Size (pandoc-types-1.12.3.1.tar.gz) = 18645 bytes
+SHA1 (pandoc-types-1.12.3.2.tar.gz) = 648fcbf921d2f183f870c594bbae5f044a42a6d9
+RMD160 (pandoc-types-1.12.3.2.tar.gz) = 1b10dbf0e84f07fc7217b5d5d360ca293396a221
+Size (pandoc-types-1.12.3.2.tar.gz) = 18790 bytes
