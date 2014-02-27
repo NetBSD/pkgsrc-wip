@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5667 2014/02/23 02:17:32 jgoamakf Exp $
+# $Id: Makefile,v 1.5668 2014/02/27 00:00:25 r-hansen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1469,6 +1469,7 @@ SUBDIR+=	libghemical
 SUBDIR+=	libginac
 SUBDIR+=	libgit2
 SUBDIR+=	libglade-java
+SUBDIR+=	libglobalplatform
 SUBDIR+=	libgme
 SUBDIR+=	libgnome-java
 SUBDIR+=	libgrass5
