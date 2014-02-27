@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/27 00:04:47 r-hansen Exp $
+$NetBSD: distinfo,v 1.2 2014/02/27 00:07:35 r-hansen Exp $
 
 SHA1 (gpshell-1.4.4.tar.gz) = 3efeb92263e881ff0886e73a7b790051a317df61
 RMD160 (gpshell-1.4.4.tar.gz) = cfada5b508651973e7f272d713104d0ec2787178
 Size (gpshell-1.4.4.tar.gz) = 155861 bytes
+SHA1 (patch-src_gpshell.c) = bd70f712c90dcae959d6d25bb5df0f67c8e17490
