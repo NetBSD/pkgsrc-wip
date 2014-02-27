@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/02/27 21:14:51 christtrekker Exp $
+# $NetBSD: Makefile,v 1.11 2014/02/27 22:06:24 christtrekker Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-201401
@@ -44,7 +44,7 @@ SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
 #SITES.Mottek.zip=	http://www.searchfreefonts.com/assets/downloads/
 
 OWNER=		christtrekker@users.sourceforge.net
-HOMEPAGE=	http://68kmla.org/wiki/User:ChristTrekker/Choosing_Mac_fonts_for_the_web
+HOMEPAGE=	http://68kmla.org/wiki/index.php/User:ChristTrekker/Choosing_Mac_fonts_for_the_web
 COMMENT=	Outline fonts modeled after those of the vintage 68k Macintosh era
 LICENSE=	generic-nonlicense
 RESTRICTED=	Various.
