@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5670 2014/02/27 14:47:21 thomasklausner Exp $
+# $Id: Makefile,v 1.5671 2014/02/27 14:51:57 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3230,7 +3230,6 @@ SUBDIR+=	ssu
 SUBDIR+=	st
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
-SUBDIR+=	starplot
 SUBDIR+=	stfl
 SUBDIR+=	stksolver
 SUBDIR+=	stmpclean
