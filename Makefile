@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5671 2014/02/27 14:51:57 thomasklausner Exp $
+# $Id: Makefile,v 1.5672 2014/02/27 20:26:27 r-hansen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1912,6 +1912,7 @@ SUBDIR+=	openmpi
 SUBDIR+=	openmpi163
 SUBDIR+=	openmx-openmpi
 SUBDIR+=	opennurbs
+SUBDIR+=	opensc
 SUBDIR+=	openscep
 SUBDIR+=	opensips
 SUBDIR+=	opentracker-current
