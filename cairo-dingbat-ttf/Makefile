@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/02/14 14:14:36 christtrekker Exp $
+# $NetBSD: Makefile,v 1.6 2014/02/27 19:57:29 christtrekker Exp $
 
 DISTNAME=	CairoUnicode
 PKGNAME=	cairo-dingbat-ttf-20140211
@@ -23,7 +23,7 @@ NO_BUILD=	yes
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf:Q}
 	${INSTALL_DATA} ${WRKSRC}/Cairo*.ttf ${DESTDIR}${FONTS_DIRS.ttf:Q}
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Cairo*.pdf ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Cairo*.txt ${DESTDIR}${DOCDIR}
 
