@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/02/28 08:54:50 jihbed Exp $
+${PYSITELIB}/pymarkovchain/MarkovChain.py
+${PYSITELIB}/pymarkovchain/MarkovChain.pyc
+${PYSITELIB}/pymarkovchain/MarkovChain.pyo
+${PYSITELIB}/pymarkovchain/__init__.py
+${PYSITELIB}/pymarkovchain/__init__.pyc
+${PYSITELIB}/pymarkovchain/__init__.pyo

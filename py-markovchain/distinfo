@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/02/28 08:54:50 jihbed Exp $
+
+SHA1 (PyMarkovChain-1.7.5.tar.gz) = f6f62a2249f1d8ccfa220283424b4cf208b12841
+RMD160 (PyMarkovChain-1.7.5.tar.gz) = 63b6c15898ad0a78766a26b094f9e050fe4744d6
+Size (PyMarkovChain-1.7.5.tar.gz) = 3803 bytes
