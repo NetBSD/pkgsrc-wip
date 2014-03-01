@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2014/02/27 12:49:47 makoto Exp $
+# $NetBSD: Makefile,v 1.48 2014/03/01 14:24:53 makoto Exp $
 
 DISTNAME=		tqsl-2.0.1
-PKGNAME=		tqsl-2.0.1RC8
+PKGNAME=		tqsl-2.0.1RC9
 CATEGORIES=		ham
 MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v2.0.1/
-DIST_SUBDIR=		tqsl-2.0.1RC8
+DIST_SUBDIR=		tqsl-2.0.1RC9
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
@@ -24,25 +24,6 @@ USE_CMAKE=		yes
 # an old version of pixman is found by the pkgsrc cairo.  The root
 # cause (aside from having two pixman versions installed) is ad hoc -L
 # usage in Makefile.am, without matching -R.
-
-# Following SUBST is really necessary only on NetBSD-5.*
-SUBST_CLASSES+=	macro_S
-SUBST_MESSAGE.macro_S= Replace _S with _SS to avoid conflicts on include/ctypes.h and apps/tqsltrace.h
-SUBST_STAGE.macro_S= pre-configure
-SUBST_FILES.macro_S = \
-	apps/crqwiz.cpp \
-	apps/extwizard.cpp \
-	apps/getpassword.cpp \
-	apps/loadcertwiz.cpp \
-	apps/qsodatadialog.cpp \
-	apps/stationdial.cpp \
-	apps/tqsl.cpp \
-	apps/tqsl_prefs.cpp \
-	apps/tqslhelp.cpp \
-	apps/tqsltrace.h \
-	apps/tqslvalidator.cpp \
-	apps/tqslwiz.cpp
-SUBST_SED.macro_S=	-e 's,_S(,_SS(,g'
 
 do-configure:
 	(cd $(WRKSRC) ; \
