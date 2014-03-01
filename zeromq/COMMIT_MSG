@@ -1,8 +1,0 @@
-The current stable release is v4.0.3, from 2013/11/24, (what changed?):
-
-Check your language binding and see whether it already
-supports zeroMQ v4.0. We recommend this release to anyone
-developing new applications with zeroMQ who needs strong
-encryption. The encryption mechanisms in zeroMQ v4.0 are however
-considered experimental. Release 4.0.3 is network-compatible
-with stable releases 3.2 and 2.2.

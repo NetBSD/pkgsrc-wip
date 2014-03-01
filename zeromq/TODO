@@ -1,2 +1,0 @@
-- remove following warning 
-../src/.libs/libzmq.so: warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
