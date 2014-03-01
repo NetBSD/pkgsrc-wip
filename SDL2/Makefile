@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2014/02/17 00:08:34 othyro Exp $
+# $NetBSD: Makefile,v 1.18 2014/03/01 18:55:02 othyro Exp $
 #
 
-REVISION=	8197
+REVISION=	8236
 DISTNAME=	SDL-2.0.2-${REVISION}
 PKGNAME=	${DISTNAME:S/SDL/SDL2/1:S/1-/1./1}
 CATEGORIES=	devel
