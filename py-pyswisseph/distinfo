@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/01/07 03:28:49 othyro Exp $
+$NetBSD: distinfo,v 1.2 2014/03/02 19:40:43 othyro Exp $
 
-SHA1 (pyswisseph-1.77.00-0.tar.bz2) = 8ed420f97343b7a6a7e8814461396da635834f63
-RMD160 (pyswisseph-1.77.00-0.tar.bz2) = fe653ec704fec6b70414a83f0addf887bb492937
-Size (pyswisseph-1.77.00-0.tar.bz2) = 1380519 bytes
+SHA1 (pyswisseph-2.00.00-1.tar.bz2) = 4f30baea73225d29dddf6ab8cd549b3ab5b13bfa
+RMD160 (pyswisseph-2.00.00-1.tar.bz2) = 61e2287b86ed981640a515d732f4b0fb46e3fa0d
+Size (pyswisseph-2.00.00-1.tar.bz2) = 432248 bytes

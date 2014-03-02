@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/01/08 03:31:06 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/02 19:40:43 othyro Exp $
 #
 
-DISTNAME=	pyswisseph-1.77.00-0
+DISTNAME=	pyswisseph-2.00.00-1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-0/.0/1}
 CATEGORIES=	time
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyswisseph/
