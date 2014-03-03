@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/07/06 16:40:25 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/03 01:38:03 othyro Exp $
 #
 
-DISTNAME=	Publican-v3.1.1
+DISTNAME=	Publican-v4.0.0
 PKGNAME=	p5-${DISTNAME:S/v//1}
 CATEGORIES=	textproc
 MASTER_SITES=	https://fedorahosted.org/releases/p/u/publican/
@@ -11,11 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fedorahosted.org/publican/
 COMMENT=	Single source publishing tool based on DocBook XML
 LICENSE=	gnu-gpl-v2
-
-# TODO: Look for the dependencies in Build.PL.
-
-PERL5_MODULE_TYPE=	Module::Build
-USE_LANGUAGES=		# none
 
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
@@ -48,5 +43,15 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
 DEPENDS+=	p5-File-pushd-[0-9]*:../../devel/p5-File-pushd
+DEPENDS+=	p5-Lingua-EN-Syllable-[0-9]*:../../wip/p5-Lingua-EN-Syllable
+DEPENDS+=	p5-Lingua-EN-Fathom-[0-9]*:../../wip/p5-Lingua-EN-Fathom
+DEPENDS+=	p5-Locale-Msgfmt-[0-9]*:../../devel/p5-Locale-Msgfmt
+DEPENDS+=	p5-Locale-Maketext-Lexicon-[0-9]*:../../misc/p5-Locale-Maketext-Lexicon
+
+# TODO: Look for the dependencies in Build.PL.
+
+PERL5_MODULE_TYPE=	Module::Build
+USE_LANGUAGES=		# none
+
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
