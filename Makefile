@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5674 2014/03/01 08:41:32 obache Exp $
+# $Id: Makefile,v 1.5675 2014/03/03 00:58:05 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2063,6 +2063,8 @@ SUBDIR+=	p5-JavaScript-SpiderMonkey
 SUBDIR+=	p5-KyotoCabinet
 SUBDIR+=	p5-LWP-Protocol-socks
 SUBDIR+=	p5-Libencode-Arabic
+SUBDIR+=	p5-Lingua-EN-Fathom
+SUBDIR+=	p5-Lingua-EN-Syllable
 SUBDIR+=	p5-Lingua-PT-Stemmer
 SUBDIR+=	p5-Lingua-Stem
 SUBDIR+=	p5-Lingua-Stem-Fr
