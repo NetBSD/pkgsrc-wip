@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5675 2014/03/03 00:58:05 othyro Exp $
+# $Id: Makefile,v 1.5676 2014/03/04 09:24:40 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -340,8 +340,6 @@ SUBDIR+=	cmetrics
 SUBDIR+=	codeblocks
 SUBDIR+=	coldfire
 SUBDIR+=	collectd
-SUBDIR+=	collectd5
-SUBDIR+=	collectd5-rrdtool
 SUBDIR+=	colorize
 SUBDIR+=	com_err
 SUBDIR+=	common-mml
