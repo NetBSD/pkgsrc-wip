@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2013/11/02 15:15:17 makoto Exp $
-#
+# $NetBSD: Makefile,v 1.29 2014/03/05 04:41:27 makoto Exp $
+# $Id: Makefile,v 1.29 2014/03/05 04:41:27 makoto Exp $
 
-DISTNAME=	fldigi-3.21.77
+DISTNAME=	fldigi-3.21.78
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
 MASTER_SITES+=	http://www.w1hkj.com/alpha/fldigi/v3.21/
