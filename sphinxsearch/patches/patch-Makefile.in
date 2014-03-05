@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.1 2013/02/21 12:24:13 jonperkin Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2014/03/05 10:31:09 fhajny Exp $
 
 Force pkgsrc compatible locations.
 
---- Makefile.in.orig	2012-08-15 13:58:33.000000000 +0000
+--- Makefile.in.orig	2013-11-11 19:18:55.000000000 +0000
 +++ Makefile.in
 @@ -79,7 +79,7 @@ am__nobase_list = $(am__nobase_strip_set
  am__base_list = \
@@ -13,7 +13,7 @@ Force pkgsrc compatible locations.
  DATA = $(sysconf_DATA)
  RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
    distclean-recursive maintainer-clean-recursive
-@@ -222,6 +222,7 @@ sbindir = @sbindir@
+@@ -225,6 +225,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
@@ -21,7 +21,7 @@ Force pkgsrc compatible locations.
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -290,24 +291,24 @@ sphinx-min.conf.dist: $(top_builddir)/co
+@@ -296,24 +297,24 @@ sphinx-min.conf.dist: $(top_builddir)/co
  	cd $(top_builddir) && $(SHELL) ./config.status $@
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
@@ -52,7 +52,7 @@ Force pkgsrc compatible locations.
  
  # This directory's subdirectories are mostly independent; you can cd
  # into them and run `make' without going through this Makefile.
-@@ -624,7 +625,7 @@ check: check-recursive
+@@ -630,7 +631,7 @@ check: check-recursive
  all-am: Makefile $(DATA)
  installdirs: installdirs-recursive
  installdirs-am:
@@ -61,7 +61,7 @@ Force pkgsrc compatible locations.
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-recursive
-@@ -675,7 +676,6 @@ info-am:
+@@ -681,7 +682,6 @@ info-am:
  
  install-data-am:
  	@$(NORMAL_INSTALL)
@@ -69,7 +69,7 @@ Force pkgsrc compatible locations.
  install-dvi: install-dvi-recursive
  
  install-dvi-am:
-@@ -732,7 +732,7 @@ uninstall-am: uninstall-sysconfDATA
+@@ -738,7 +738,7 @@ uninstall-am: uninstall-sysconfDATA
  	distclean distclean-generic distclean-hdr distclean-tags \
  	distcleancheck distdir distuninstallcheck dvi dvi-am html \
  	html-am info info-am install install-am install-data \
@@ -78,7 +78,7 @@ Force pkgsrc compatible locations.
  	install-exec install-exec-am install-html install-html-am \
  	install-info install-info-am install-man install-pdf \
  	install-pdf-am install-ps install-ps-am install-strip \
-@@ -742,9 +742,6 @@ uninstall-am: uninstall-sysconfDATA
+@@ -748,9 +748,6 @@ uninstall-am: uninstall-sysconfDATA
  	tags-recursive uninstall uninstall-am uninstall-sysconfDATA
  
  
