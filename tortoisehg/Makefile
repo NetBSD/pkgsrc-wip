@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/02/13 20:28:29 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/05 16:02:10 nros Exp $
 
-DISTNAME=		tortoisehg-2.11
+DISTNAME=		tortoisehg-2.11.1
 CATEGORIES=		devel
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
