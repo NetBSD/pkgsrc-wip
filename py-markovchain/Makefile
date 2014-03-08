@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/03/08 21:42:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/08 23:02:56 jihbed Exp $
 
 DISTNAME=	PyMarkovChain-1.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//:tl}
@@ -12,7 +12,7 @@ COMMENT=	Simple markov chain implementation
 #LICENSE=	# TODO: (see mk/license.mk)
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/extension.mk"
+
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
