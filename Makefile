@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5676 2014/03/04 09:24:40 fhajny Exp $
+# $Id: Makefile,v 1.5677 2014/03/08 09:22:44 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1553,7 +1553,6 @@ SUBDIR+=	light-desktop
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
 SUBDIR+=	lightspark
-SUBDIR+=	lighttpd
 SUBDIR+=	lilypond-devel
 SUBDIR+=	lilypond-git
 SUBDIR+=	lilyterm
