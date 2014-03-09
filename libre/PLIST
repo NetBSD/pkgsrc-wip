@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/10 05:09:15 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/09 13:56:51 othyro Exp $
 include/re/re.h
 include/re/re_base64.h
 include/re/re_bfcp.h
@@ -10,6 +10,7 @@ include/re/re_dns.h
 include/re/re_fmt.h
 include/re/re_hash.h
 include/re/re_hmac.h
+include/re/re_http.h
 include/re/re_httpauth.h
 include/re/re_ice.h
 include/re/re_jbuf.h
