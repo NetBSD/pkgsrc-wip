@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/28 15:59:49 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/10 15:55:23 fhajny Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -38,6 +38,7 @@ ${GEM_LIBDIR}/ext/v8/template.cc
 ${GEM_LIBDIR}/ext/v8/trycatch.cc
 ${GEM_LIBDIR}/ext/v8/v8.cc
 ${GEM_LIBDIR}/ext/v8/value.cc
+${GEM_LIBDIR}/lib/therubyracer.rb
 ${GEM_LIBDIR}/lib/v8.rb
 ${GEM_LIBDIR}/lib/v8/access.rb
 ${GEM_LIBDIR}/lib/v8/access/indices.rb

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/01/28 15:59:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/10 15:55:23 fhajny Exp $
 
-DISTNAME=	therubyracer-0.12.0
+DISTNAME=	therubyracer-0.12.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 

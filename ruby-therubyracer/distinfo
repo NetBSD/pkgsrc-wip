@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/28 15:59:49 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2014/03/10 15:55:23 fhajny Exp $
 
-SHA1 (therubyracer-0.12.0.gem) = 71801accf34200992a9a3a7a019c81da2213bf40
-RMD160 (therubyracer-0.12.0.gem) = 8633926881a86facdbf87fe527f6ba599a4c02bd
-Size (therubyracer-0.12.0.gem) = 57856 bytes
+SHA1 (therubyracer-0.12.1.gem) = 3287eba58dcd0c6bc8c2b7fa5f8b23f1db95803c
+RMD160 (therubyracer-0.12.1.gem) = 4bf46c051b20bc66c5412a6070f1517b6efdfe4b
+Size (therubyracer-0.12.1.gem) = 58880 bytes
 SHA1 (patch-ext_v8_extconf.rb) = e5f61361f67c63d0f4969a06280f54e6175b6ba4
