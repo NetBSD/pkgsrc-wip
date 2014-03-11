@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/01/01 01:54:42 othyro Exp $
+$NetBSD: distinfo,v 1.5 2014/03/11 04:03:36 othyro Exp $
 
-SHA1 (blink-0.6.0.tar.gz) = 0a4758067346b5e0560b6ffe30e22f6c64b86b10
-RMD160 (blink-0.6.0.tar.gz) = 575b4d12423ec0561174dddbb61eba87addc8ffe
-Size (blink-0.6.0.tar.gz) = 1263983 bytes
+SHA1 (blink-0.7.0.tar.gz) = 44a4abae70e4898a7eb687b9ca8f7a24e2d3f1c7
+RMD160 (blink-0.7.0.tar.gz) = 52379d7efc70b1a8cf57d3eeabaf14d291f16572
+Size (blink-0.7.0.tar.gz) = 1166894 bytes
