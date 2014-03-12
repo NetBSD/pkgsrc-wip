@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2013/11/14 19:21:51 szptvlfn Exp $
-
-SHA1 (pylint-1.0.0.tar.gz) = 307636004ff1c8d70982052b74d5e7b126d69167
-RMD160 (pylint-1.0.0.tar.gz) = 7d7f184f2f279fd07a6569eb9a446c36823d6e76
-Size (pylint-1.0.0.tar.gz) = 265952 bytes
