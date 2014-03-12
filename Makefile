@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5679 2014/03/12 01:30:02 othyro Exp $
+# $Id: Makefile,v 1.5680 2014/03/12 21:32:38 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -825,7 +825,6 @@ SUBDIR+=	gpak
 SUBDIR+=	gplbasic
 SUBDIR+=	gps
 SUBDIR+=	gpsdrive
-SUBDIR+=	gpshell
 SUBDIR+=	gpx2shp
 SUBDIR+=	grandr
 SUBDIR+=	granule
@@ -1467,7 +1466,6 @@ SUBDIR+=	libghemical
 SUBDIR+=	libginac
 SUBDIR+=	libgit2
 SUBDIR+=	libglade-java
-SUBDIR+=	libglobalplatform
 SUBDIR+=	libgme
 SUBDIR+=	libgnome-java
 SUBDIR+=	libgrass5
