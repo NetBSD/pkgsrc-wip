@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/12 23:14:11 szptvlfn Exp $
+
+SHA1 (mwc-random-0.13.1.1.tar.gz) = c1ba51ff8c87c7dcfe7d0b610c1b99e4dcb08597
+RMD160 (mwc-random-0.13.1.1.tar.gz) = d9a8d03f8c0a13b3c47425c9638c29a1c205c5ba
+Size (mwc-random-0.13.1.1.tar.gz) = 20937 bytes
