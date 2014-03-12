@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/12 23:18:50 szptvlfn Exp $
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/AmericanFlag.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/AmericanFlag.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Common.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Common.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Heap.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Heap.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Insertion.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Insertion.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Intro.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Intro.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Merge.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Merge.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Optimal.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Optimal.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Radix.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Radix.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Search.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Search.p_hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/HSvector-algorithms-${PKGVERSION}.o
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/include/vector.h
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/libHSvector-algorithms-${PKGVERSION}.a
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/libHSvector-algorithms-${PKGVERSION}_p.a
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/vector-algorithms-${PKGVERSION}/LICENSE
