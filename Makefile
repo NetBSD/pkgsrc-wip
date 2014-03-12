@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5680 2014/03/12 21:32:38 lexort Exp $
+# $Id: Makefile,v 1.5681 2014/03/12 23:21:07 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1106,6 +1106,7 @@ SUBDIR+=	hs-monads-fd
 SUBDIR+=	hs-monads-tf
 SUBDIR+=	hs-monoid-transformer
 SUBDIR+=	hs-mtl
+SUBDIR+=	hs-mwc-random
 SUBDIR+=	hs-nats
 SUBDIR+=	hs-network
 SUBDIR+=	hs-network-bytestring
@@ -1190,6 +1191,7 @@ SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
+SUBDIR+=	hs-vector-algorithms
 SUBDIR+=	hs-vector-bytestring
 SUBDIR+=	hs-vector-space
 SUBDIR+=	hs-vector-th-unbox
