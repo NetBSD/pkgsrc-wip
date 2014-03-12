@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/08 23:21:02 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/03/12 23:23:19 szptvlfn Exp $
 bin/hoogle
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Base.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Base.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/BurrowsWheeler.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/BurrowsWheeler.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/FMIndex.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/General/FMIndex.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Heap.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Heap.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/System.hi
@@ -45,6 +49,10 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase/TypeSearch/Result.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase/TypeSearch/Result.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase/TypeSearch/TypeScore.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase/TypeSearch/TypeScore.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase2/Str.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase2/Str.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase2/Type.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/DataBase2/Type.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/Language/Haskell.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/Language/Haskell.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hoogle/Query/All.hi

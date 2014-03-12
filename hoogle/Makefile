@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/02/01 10:16:35 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/12 23:23:19 szptvlfn Exp $
 
-DISTNAME=	hoogle-4.2.28
+DISTNAME=	hoogle-4.2.29
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel #haskell
 
@@ -9,12 +9,12 @@ COMMENT=	Haskell API Search
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-aeson/buildlink3.mk"
 .include "../../wip/hs-blaze-builder/buildlink3.mk"
 .include "../../wip/hs-case-insensitive/buildlink3.mk"
 .include "../../wip/hs-cmdargs/buildlink3.mk"
 .include "../../wip/hs-conduit/buildlink3.mk"
-.include "../../wip/hs-dlist/buildlink3.mk"
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
 .include "../../wip/hs-http-types/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
@@ -25,6 +25,8 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-text/buildlink3.mk"
 .include "../../wip/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-uniplate/buildlink3.mk"
+.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../wip/hs-vector-algorithms/buildlink3.mk"
 .include "../../wip/hs-wai/buildlink3.mk"
 .include "../../wip/hs-warp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
