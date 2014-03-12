@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 09:10:42 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/03/12 02:01:57 obache Exp $
 #
 
 DISTNAME=	linuxigd-0.99
@@ -14,7 +14,8 @@ PKG_DESTDIR_SUPPORT=	none
 USE_TOOLS+=	gmake pkg-config
 
 CVS_REPOSITORIES=	linux-igd
-CVS_ROOT.linux-igd=	${CVS_ROOT_SOURCEFORGE:S/%PROJECT%/linux-igd/g}
+CVS_PROJECT=		linux-igd
+CVS_ROOT.linux-igd=	${CVS_ROOT_SOURCEFORGE:Q}
 CVS_MODULE.linux-igd=	linux-igd
 
 WRKSRC=		${WRKDIR}/linux-igd
