@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/07 19:35:06 fhajny Exp $
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/requires.txt
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2014/03/13 20:20:47 fhajny Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/txamqp/__init__.py
 ${PYSITELIB}/txamqp/__init__.pyc
 ${PYSITELIB}/txamqp/__init__.pyo
