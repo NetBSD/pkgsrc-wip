@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/02/19 09:16:31 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/03/13 12:15:51 szptvlfn Exp $
 bin/hlint
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.p_hi
@@ -57,6 +57,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Idea.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Idea.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HLint.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HLint.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HLint2.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HLint2.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Parallel.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Parallel.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Paths_hlint.hi
@@ -67,8 +69,6 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Report.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Report.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Settings.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Settings.p_hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Temporary/API.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Temporary/API.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Util.hi
