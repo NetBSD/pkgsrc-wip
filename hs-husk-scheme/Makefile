@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 14:11:00 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/13 12:14:01 szptvlfn Exp $
 
-DISTNAME=	husk-scheme-3.15.2
+DISTNAME=	husk-scheme-3.16.1
 CATEGORIES=	lang
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
@@ -10,6 +10,7 @@ LICENSE=	mit
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-ghc-paths/buildlink3.mk"
 .include "../../wip/hs-haskeline/buildlink3.mk"
+.include "../../wip/hs-knob/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-transformers/buildlink3.mk"

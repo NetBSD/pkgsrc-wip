@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/01/26 14:11:00 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2014/03/13 12:14:01 szptvlfn Exp $
 
-SHA1 (husk-scheme-3.15.2.tar.gz) = 7ba0005e86a870e186cd58949385bed007290740
-RMD160 (husk-scheme-3.15.2.tar.gz) = 0195cfb8e65b41eb202b41f8934feaade86f91ab
-Size (husk-scheme-3.15.2.tar.gz) = 138384 bytes
+SHA1 (husk-scheme-3.16.1.tar.gz) = 2970932aeb79e94a9083439998e03ea8252f52e4
+RMD160 (husk-scheme-3.16.1.tar.gz) = 22629b429089fe86726fdfc816f99cde46bb6e91
+Size (husk-scheme-3.16.1.tar.gz) = 141001 bytes
