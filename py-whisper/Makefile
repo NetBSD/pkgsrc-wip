@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/03/13 20:08:47 fhajny Exp $
 #
 
-DISTNAME=	whisper-0.9.10
+DISTNAME=	whisper-0.9.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	http://launchpadlibrarian.net/106575859/
+MASTER_SITES=	-https://github.com/graphite-project/whisper/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://launchpad.net/graphite
 COMMENT=	Fixed-size database, similar in design to RRD
 LICENSE=	apache-2.0
