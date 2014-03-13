@@ -1,9 +1,9 @@
-$NetBSD: patch-setup.py,v 1.1 2012/08/07 19:41:18 fhajny Exp $
+$NetBSD: patch-setup.py,v 1.2 2014/03/13 20:47:13 fhajny Exp $
 
 Use proper paths for storage and config example files.
---- setup.py.orig	2012-05-31 20:32:28.000000000 +0000
+--- setup.py.orig	2013-08-21 16:52:35.000000000 +0000
 +++ setup.py
-@@ -12,9 +12,9 @@ else:
+@@ -13,9 +13,9 @@ else:
    setup_kwargs = dict()
  
  
@@ -13,6 +13,6 @@ Use proper paths for storage and config example files.
 +storage_dirs = [ ('@GRAPHITE_DIR@/whisper',[]), ('@GRAPHITE_DIR@/lists',[]),
 +                 ('@GRAPHITE_DIR@/log',[]), ('@GRAPHITE_DIR@/rrd',[]) ]
 +conf_files = [ ('@PREFIX@/@GRAPHITE_EGDIR@', glob('conf/*.example')) ]
- #XXX Need a way to have these work for bdist_rpm but be left alone for everything else
- #init_scripts = [ ('/etc/init.d', ['distro/redhat/init.d/carbon-cache',
- #                                  'distro/redhat/init.d/carbon-relay',
+ 
+ install_files = storage_dirs + conf_files
+ 
