@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/15 23:22:25 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2014/03/14 12:52:20 szptvlfn Exp $
 
-SHA1 (scientific-0.2.0.1.tar.gz) = be55c03ba049c5183bf9a5bbb6f1d9ddc77e98c3
-RMD160 (scientific-0.2.0.1.tar.gz) = 448b3d0f90e33e6ca0e564d607d5d0b3c450c3d7
-Size (scientific-0.2.0.1.tar.gz) = 8484 bytes
+SHA1 (scientific-0.2.0.2.tar.gz) = 4d27a20b97daf057617bac2d83c566c7629c29a1
+RMD160 (scientific-0.2.0.2.tar.gz) = fc0e643024a7e86102c136ab8ff6d186bc9cf495
+Size (scientific-0.2.0.2.tar.gz) = 8499 bytes
