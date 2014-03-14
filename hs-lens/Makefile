@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/03/08 12:30:23 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/14 12:54:01 szptvlfn Exp $
 
-DISTNAME=	lens-4.0.5
+DISTNAME=	lens-4.0.7
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
@@ -11,7 +11,6 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-aeson/buildlink3.mk"
 .include "../../wip/hs-bifunctors/buildlink3.mk"
 .include "../../wip/hs-comonad/buildlink3.mk"
-.include "../../wip/hs-constraints/buildlink3.mk"
 .include "../../wip/hs-contravariant/buildlink3.mk"
 .include "../../wip/hs-distributive/buildlink3.mk"
 .include "../../wip/hs-exceptions/buildlink3.mk"
