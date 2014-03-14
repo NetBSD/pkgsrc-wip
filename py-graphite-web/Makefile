@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/14 08:54:56 fhajny Exp $
 
-DISTNAME=	graphite-web-0.9.10
+DISTNAME=	graphite-web-0.9.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://launchpadlibrarian.net/106575888/
+MASTER_SITES=	-https://github.com/graphite-project/graphite-web/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/graphite
@@ -46,7 +45,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-django-tagging
 
 INSTALLATION_DIRS+=	share/examples/graphite
 
-PLIST_SUBST+=	THIS_EGG_FILE=${EGG_NAME:S|graphite-|graphite_|}-py${PYVERSSUFFIX}.egg-info
+EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
 pre-build:
 	${MKDIR} ${WRKSRC}/graphite/webapp
