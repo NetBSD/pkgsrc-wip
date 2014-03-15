@@ -1,0 +1,4 @@
+Bruce, the Presentation Tool is for people who are tired of fighting with
+presentation tools. Presentations are composed (edited) in plain text files.
+It allows text, code, image, interative Python sessions and video. It uses
+pyglet to render in OpenGL.
