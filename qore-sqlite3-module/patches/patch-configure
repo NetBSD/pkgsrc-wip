@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2014/03/15 21:18:57 nros Exp $
+* the test should succeed if the directory given by --with-sqlite3 exists
+--- configure.orig	2014-03-15 21:06:37.000000000 +0000
++++ configure
+@@ -14717,7 +14717,7 @@ fi
+ 
+ # Check whether --with-sqlite3 was given.
+ if test "${with_sqlite3+set}" = set; then :
+-  withval=$with_sqlite3; if test ! -d "${with_sqlite3l}"; then as_fn_error "directory ${with_sqlite3} does not exist for --with-sqlite3" "$LINENO" 5; unset with_sqlite3; fi
++  withval=$with_sqlite3; if test -d "${with_sqlite3l}"; then as_fn_error "directory ${with_sqlite3} does not exist for --with-sqlite3" "$LINENO" 5; unset with_sqlite3; fi
+ fi
+ 
+ 

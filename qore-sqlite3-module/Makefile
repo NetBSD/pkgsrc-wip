@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/16 17:55:39 nros Exp $
+# $NetBSD: Makefile,v 1.4 2014/03/15 21:18:57 nros Exp $
 
 DISTNAME=	qore-sqlite3-module-1.0.1
 PKGREVISION=	1
@@ -14,6 +14,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	require
+
+CONFIGURE_ARGS+=--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 
 INSTALLATION_DIRS+=     share/qore/docs/modules/sqlite3
 post-install:
