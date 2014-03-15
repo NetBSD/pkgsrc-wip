@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/02/21 10:39:03 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.16 2014/03/15 19:43:46 szptvlfn Exp $
 
 DISTNAME=	pandoc-1.12.3.3
 PKGNAME=	${DISTNAME}
@@ -14,6 +14,9 @@ post-install:
 	${INSTALL_MAN} ${DESTDIR}${PREFIX}/share/man/man1/pandoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${DESTDIR}${PREFIX}/share/man/man5/pandoc_markdown.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	rm -rf ${DESTDIR}${PREFIX}/share/man
+
+BUILD_DEPENDS=	alex:../../wip/alex
+BUILD_DEPENDS+=	happy:../../wip/happy
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-aeson/buildlink3.mk"
