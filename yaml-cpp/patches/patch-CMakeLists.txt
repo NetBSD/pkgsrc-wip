@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2014/02/04 20:03:41 nros Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2014/03/16 10:36:08 nros Exp $
 
 * Build both static and shared libraries
 
@@ -21,7 +21,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2014/02/04 20:03:41 nros Exp $
  
  # --> Apple
  option(APPLE_UNIVERSAL_BIN "Apple: Build universal binary" OFF)
-@@ -229,7 +232,28 @@ set(_INSTALL_DESTINATIONS
+@@ -229,7 +232,9 @@ set(_INSTALL_DESTINATIONS
  ###
  ### Library
  ###
@@ -29,6 +29,23 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2014/02/04 20:03:41 nros Exp $
 +if(YAML_CPP_BUILD_STATIC)
 +add_library(yaml-cpp-static
 +	STATIC
+ 	${sources}
+ 	${public_headers}
+ 	${private_headers}
+@@ -238,11 +243,30 @@ add_library(yaml-cpp
+ 	${contrib_private_headers}
+ )
+ 
+-set_target_properties(yaml-cpp PROPERTIES
++set_target_properties(yaml-cpp-static PROPERTIES
++	OUTPUT_NAME yaml-cpp
++	PROJECT_LABEL "yaml-cpp static"
++)
++endif()
++
++if(YAML_CPP_BUILD_SHARED)
++add_library(yaml-cpp-shared
++	SHARED
 +	${sources}
 +	${public_headers}
 +	${private_headers}
@@ -37,36 +54,18 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2014/02/04 20:03:41 nros Exp $
 +	${contrib_private_headers}
 +)
 +
-+set_target_properties(yaml-cpp-static PROPERTIES
-+	OUTPUT_NAME yaml-cpp
-+	VERSION "${YAML_CPP_VERSION}"
-+	SOVERSION "${YAML_CPP_VERSION_MAJOR}.${YAML_CPP_VERSION_MINOR}"
-+	PROJECT_LABEL "yaml-cpp ${LABEL_SUFFIX}"
-+)
-+endif()
-+
-+if(YAML_CPP_BUILD_SHARED)
-+add_library(yaml-cpp-shared
-+	SHARED
- 	${sources}
- 	${public_headers}
- 	${private_headers}
-@@ -238,11 +262,13 @@ add_library(yaml-cpp
- 	${contrib_private_headers}
- )
- 
--set_target_properties(yaml-cpp PROPERTIES
 +set_target_properties(yaml-cpp-shared PROPERTIES
 +	OUTPUT_NAME yaml-cpp
  	VERSION "${YAML_CPP_VERSION}"
  	SOVERSION "${YAML_CPP_VERSION_MAJOR}.${YAML_CPP_VERSION_MINOR}"
- 	PROJECT_LABEL "yaml-cpp ${LABEL_SUFFIX}"
+-	PROJECT_LABEL "yaml-cpp ${LABEL_SUFFIX}"
++	PROJECT_LABEL "yaml-cpp shared"
  )
 +endif()
  
  if(IPHONE)
  	set_target_properties(yaml-cpp PROPERTIES
-@@ -262,7 +288,7 @@ if(MSVC)
+@@ -262,7 +286,7 @@ if(MSVC)
  	endif()
  endif()
  
