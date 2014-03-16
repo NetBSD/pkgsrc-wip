@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/02/16 18:56:47 nros Exp $
+$NetBSD: distinfo,v 1.3 2014/03/16 11:03:59 nros Exp $
 
 SHA1 (qore-uuid-module-1.2.tar.bz2) = 815af9c3095cd82bd2075624514f391b6b8d5668
 RMD160 (qore-uuid-module-1.2.tar.bz2) = 2502622a1cdac77515efe7ee2b45f6c6489213f7
 Size (qore-uuid-module-1.2.tar.bz2) = 380672 bytes
-SHA1 (patch-Makefile.in) = 96d8a4a85e7855515a1ce9ab8ab1e587941f153a
+SHA1 (patch-Makefile.in) = d60dedeb3eebeac5d7f747408fef4453f5654e3b
 SHA1 (patch-src_Makefile.in) = 38bf96fc819c39f48a3034040bd779bf0fe05fa7
