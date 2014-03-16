@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/07/08 03:10:52 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/03/16 12:21:07 szptvlfn Exp $
 bin/cpphs
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/HScpphs-${PKGVERSION}.o
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs.hi
@@ -23,8 +23,6 @@ lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Tokenise.
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Tokenise.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Unlit.hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Unlit.p_hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/HuttonMeijer.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/HuttonMeijer.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}_p.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/package-description
