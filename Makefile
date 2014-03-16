@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5683 2014/03/16 00:55:49 schnoebe Exp $
+# $Id: Makefile,v 1.5684 2014/03/16 12:19:01 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1127,6 +1127,7 @@ SUBDIR+=	hs-pcre-light
 SUBDIR+=	hs-pointed
 SUBDIR+=	hs-pointedlist
 SUBDIR+=	hs-pointedlist03
+SUBDIR+=	hs-polyparse
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-profunctors
 SUBDIR+=	hs-punycode
