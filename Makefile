@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5684 2014/03/16 12:19:01 szptvlfn Exp $
+# $Id: Makefile,v 1.5685 2014/03/19 07:36:15 phonohawk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3341,6 +3341,7 @@ SUBDIR+=	texlive-texmf-base
 SUBDIR+=	texlive-texmf-minimal
 SUBDIR+=	texlive2013
 SUBDIR+=	texmaker
+SUBDIR+=	textile-mode
 SUBDIR+=	tftp-hpa
 SUBDIR+=	thabit-ttf
 SUBDIR+=	thcrut
