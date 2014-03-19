@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/04 23:45:12 nros Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/19 13:04:43 fhajny Exp $
 #
 
 DISTNAME=	yaml-cpp-0.5.1
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 USE_CMAKE=		yes
 USE_LANGUAGES+=		c c++
+
+MAKE_JOBS_SAFE=		no
 
 PKGCONFIG_OVERRIDE+=	yaml-cpp.pc.cmake
 
