@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5685 2014/03/19 07:36:15 phonohawk Exp $
+# $Id: Makefile,v 1.5686 2014/03/19 11:56:05 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2717,6 +2717,7 @@ SUBDIR+=	py-paragram
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
+SUBDIR+=	py-pefile
 SUBDIR+=	py-percol
 SUBDIR+=	py-pint
 SUBDIR+=	py-piquant
