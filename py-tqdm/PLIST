@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/19 21:34:46 jihbed Exp $
+${PYSITELIB}/tqdm.py
+${PYSITELIB}/tqdm.pyc
+${PYSITELIB}/tqdm.pyo

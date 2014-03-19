@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/19 21:34:46 jihbed Exp $
+
+SHA1 (tqdm-1.0.tar.gz) = 44442949d0adda2c45081dabd00da7b749c875c6
+RMD160 (tqdm-1.0.tar.gz) = d2ca1cc3e2a163146b67a2da24e87ee4891fb2e6
+Size (tqdm-1.0.tar.gz) = 1756 bytes
