@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/19 22:37:50 jihbed Exp $
+
+SHA1 (python-snappy-0.5.tar.gz) = 97d7a9865c22c524156ae116c620a320b99c43db
+RMD160 (python-snappy-0.5.tar.gz) = d146640e32d04e1749dec3e1e6d55d968b7c59ff
+Size (python-snappy-0.5.tar.gz) = 12495 bytes
