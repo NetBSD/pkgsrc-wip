@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2014/03/19 22:17:19 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mplh5canvas/__init__.py
+${PYSITELIB}/mplh5canvas/__init__.pyc
+${PYSITELIB}/mplh5canvas/__init__.pyo
+${PYSITELIB}/mplh5canvas/backend_h5canvas.py
+${PYSITELIB}/mplh5canvas/backend_h5canvas.pyc
+${PYSITELIB}/mplh5canvas/backend_h5canvas.pyo
+${PYSITELIB}/mplh5canvas/base_page.py
+${PYSITELIB}/mplh5canvas/base_page.pyc
+${PYSITELIB}/mplh5canvas/base_page.pyo
+${PYSITELIB}/mplh5canvas/management_server.py
+${PYSITELIB}/mplh5canvas/management_server.pyc
+${PYSITELIB}/mplh5canvas/management_server.pyo
+${PYSITELIB}/mplh5canvas/memorizingfile.py
+${PYSITELIB}/mplh5canvas/memorizingfile.pyc
+${PYSITELIB}/mplh5canvas/memorizingfile.pyo
+${PYSITELIB}/mplh5canvas/simple_server.py
+${PYSITELIB}/mplh5canvas/simple_server.pyc
+${PYSITELIB}/mplh5canvas/simple_server.pyo
