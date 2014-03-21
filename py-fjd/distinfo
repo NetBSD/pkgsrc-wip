@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/03/21 10:54:22 jihbed Exp $
+
+SHA1 (fjd-0.1.42.tar.gz) = c1e768ef932f2e38989937869166ba3a7855af6b
+RMD160 (fjd-0.1.42.tar.gz) = 24f02861c38533ba981ef49f0605f538be8bdd5f
+Size (fjd-0.1.42.tar.gz) = 13033 bytes
+SHA1 (patch-setup.py) = 6beceb9fbbec19ecce098b993419c2841ad994d4

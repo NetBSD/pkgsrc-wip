@@ -1,0 +1,13 @@
+fjd makes it easy to run computational jobs on many CPUs.
+
+There are several powerful tools for automatic distribution of computational
+jobs. However, for smaller use cases, the effort of installation and setup is
+too high
+
+With fjd, the hurdle to get started is very low. Installation is easy. Pushing
+jobs into the queue only requires writing small and simple files. Per default,
+all CPUs on your computer are used. New computers can be added very easily,
+too. Plus, your jobs can be written in any language.
+
+fjd works under the assumption that all CPUs are in a local network and can
+access a shared home directory.
