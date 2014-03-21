@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/21 21:00:36 jihbed Exp $
+
+SHA1 (solpy-0.2.3.tar.gz) = d21d1014b4f3a6a125f12790ab179d107eddf4ad
+RMD160 (solpy-0.2.3.tar.gz) = cbcedb01eb79688e2fade918af44874f195028c9
+Size (solpy-0.2.3.tar.gz) = 1303716 bytes
