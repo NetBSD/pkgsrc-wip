@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/26 15:49:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/21 07:23:53 thomasklausner Exp $
 
 DISTNAME=		${VERSION}
 PKGNAME=		pelican-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=		${PYPKGPREFIX}-feedgenerator>=1.5:../../wip/py-feedgenerator
 DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
-DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../wip/py-six
+DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 VERSION=		3.2.2
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
