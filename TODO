@@ -13,6 +13,7 @@ Suggested package updates
 	o cairo-java-1.0.8
 	o calligra-2.8
 	o ccrypt-1.10
+	o cde-2.2.1
 	o cinelerra-4.5
 	o d4x-2.5.7.1
 	o daphne-1.0
@@ -66,7 +67,7 @@ Suggested package updates
 	o kino-1.0.0
 	o kmymoney4-4.6.2
 	o kvirc-3.4.2
-	o libburn-1.3.6
+	o libburn-1.3.6pl1
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
 	o libzdb-3.0
