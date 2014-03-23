@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/27 19:04:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/03/23 13:58:35 thomasklausner Exp $
 
 # version number from setup.py
 DISTNAME=		khal-0.1.0
@@ -33,7 +33,10 @@ REPLACE_PYTHON+=	khal/backend.py
 REPLACE_PYTHON+=	khal/caldav.py
 REPLACE_PYTHON+=	khal/calendar_display.py
 REPLACE_PYTHON+=	khal/controllers.py
-REPLACE_PYTHON+=	khal/model.py
+REPLACE_PYTHON+=	khal/event.py
+REPLACE_PYTHON+=	khal/khalendar.py
+REPLACE_PYTHON+=	khal/ui/__init__.py
+REPLACE_PYTHON+=	khal/ui/base.py
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/khal.conf.sample ${DESTDIR}${PREFIX}/share/doc/khal
