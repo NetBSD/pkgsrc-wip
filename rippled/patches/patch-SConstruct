@@ -1,0 +1,15 @@
+$NetBSD: patch-SConstruct,v 1.1 2014/03/25 07:58:33 realzhtw Exp $
+
+--- SConstruct.orig	2014-03-24 15:28:26.000000000 +0000
++++ SConstruct
+@@ -328,7 +328,9 @@ for file in COMPILED_FILES:
+ #
+ 
+ rippled = env.Program('build/rippled', OBJECT_FILES)
+-
++idir_bin = os.environ.get('PREFIX') + '/bin'
++env.Install(idir_bin, rippled)
++env.Alias('install', idir_bin)
+ tags    = env.CTags('tags', TAG_SRCS)
+ 
+ Default(rippled, tags)
