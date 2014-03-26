@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.1 2014/03/26 12:39:00 slitvinov Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/26 13:09:38 thomasklausner Exp $
 
 DISTNAME=	ocrodjvu-0.7.17
-CATEGORIES=	grapics
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	graphics
 MASTER_SITES=	https://pypi.python.org/packages/source/o/ocrodjvu/
-FETCH_USING=	curl
 
 MAINTAINER=	slitvinov@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/o/ocrodjvu/
-COMMENT=	A wrapper for OCR systems to work with djvu files
+HOMEPAGE=	https://pypi.python.org/pypi/ocrodjvu/
+COMMENT=	Wrapper for OCR systems to work with djvu files
 LICENSE=	gnu-gpl-v2
+
 DEPENDS+=	${PYPKGPREFIX}-djvulibre-[0-9]*:../../wip/py-djvulibre
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-djvulibre
 
-# url2pkg-marker (please do not remove this line.)
+REPLACE_PYTHON+=	lib/logger.py
+
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

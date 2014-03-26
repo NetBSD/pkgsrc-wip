@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/26 12:39:00 slitvinov Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/03/26 13:09:38 thomasklausner Exp $
 bin/djvu2hocr
 bin/hocr2djvused
 bin/ocrodjvu
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ocrodjvu/__init__.py
 ${PYSITELIB}/ocrodjvu/__init__.pyc
 ${PYSITELIB}/ocrodjvu/__init__.pyo
