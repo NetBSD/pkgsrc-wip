@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 208606
+LAST_UPDATED: Obtained from SVN: trunk revision 208775
 
 Native configuration is x86_64--netbsd
 
@@ -25,12 +25,12 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++1y (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		82619
+# of expected passes		82658
 # of unexpected failures	12
 # of expected failures		439
 # of unresolved testcases	3
-# of unsupported tests		2984
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20140316 (experimental) (GCC) 
+# of unsupported tests		2997
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20140323 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -361,7 +361,6 @@ FAIL: gcc.target/i386/avx512f-ceil-sfix-vec-2.c scan-assembler vrndscalepd[^\\n]
 FAIL: gcc.target/i386/avx512f-ceil-sfix-vec-2.c scan-assembler vcvttpd2dq[^\\n]*zmm[0-9]
 FAIL: gcc.target/i386/avx512f-floor-sfix-vec-2.c scan-assembler vrndscalepd[^\\n]*zmm[0-9]
 FAIL: gcc.target/i386/avx512f-floor-sfix-vec-2.c scan-assembler vcvttpd2dq[^\\n]*zmm[0-9]
-FAIL: gcc.target/i386/excess-precision-3.c execution test
 FAIL: gcc.target/i386/float128-1.c (test for excess errors)
 UNRESOLVED: gcc.target/i386/float128-1.c compilation failed to produce executable
 FAIL: gcc.target/i386/float128-2.c (test for excess errors)
@@ -373,13 +372,13 @@ UNRESOLVED: gcc.target/i386/long-double-128-9.c compilation failed to produce ex
 
 		=== gcc Summary ===
 
-# of expected passes		103743
-# of unexpected failures	210
+# of expected passes		103768
+# of unexpected failures	209
 # of unexpected successes	40
 # of expected failures		263
 # of unresolved testcases	84
-# of unsupported tests		1892
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20140316 (experimental) (GCC) 
+# of unsupported tests		1883
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20140323 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -452,23 +451,15 @@ UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -g  compilation faile
 FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -Os  (test for excess errors)
 UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -Os  compilation failed to produce executable
 FAIL: gfortran.dg/nint_2.f90  -O0  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O0  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O1  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O2  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -fomit-frame-pointer  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -fomit-frame-pointer -funroll-loops  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -O3 -g  execution test
-FAIL: gfortran.dg/unlimited_polymorphic_13.f90  -Os  execution test
 
 		=== gfortran Summary ===
 
-# of expected passes		45404
-# of unexpected failures	50
+# of expected passes		45398
+# of unexpected failures	42
 # of expected failures		52
 # of unresolved testcases	25
 # of unsupported tests		104
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20140316 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20140323 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -480,7 +471,7 @@ Running target unix
 # of expected passes		1441
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20140316 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20140323 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -496,7 +487,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20140316 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20140323 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -510,15 +501,10 @@ Running target unix
 
 
 Running target unix
-WARNING: program timed out.
-FAIL: libgomp.c/affinity-1.c execution test
-WARNING: program timed out.
-FAIL: libgomp.c++/affinity-1.C execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		2386
-# of unexpected failures	2
+# of expected passes		2388
 # of unsupported tests		3
 		=== libitm tests ===
 
@@ -590,17 +576,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8725
+# of expected passes		8727
 # of unexpected failures	48
 # of expected failures		40
 # of unresolved testcases	2
-# of unsupported tests		680
+# of unsupported tests		682
 
-Compiler version: 4.9.0 20140316 (experimental) (GCC) 
+Compiler version: 4.9.0 20140323 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
 EOF
-Mail -s "Results for 4.9.0 20140316 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.9.0 20140323 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
