@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2014/03/03 08:12:24 nsloss Exp $
+$NetBSD: distinfo,v 1.6 2014/03/26 06:02:42 nsloss Exp $
 
 SHA1 (lightspark-0.7.2.tar.gz) = f4c5fa3cf9da9c39da773640184e102ab9818ed7
 RMD160 (lightspark-0.7.2.tar.gz) = a739cb65815ef2af1b4ad9c5e3a8b9985b9a7055
 Size (lightspark-0.7.2.tar.gz) = 955952 bytes
-SHA1 (patch-CMakeLists.txt) = c2c9d57fee8d39ae685389f860110ce6ac4c7eae
+SHA1 (patch-CMakeLists.txt) = 1cc3d3565bfb9109820ac15964d053dd7ed0cb95
 SHA1 (patch-src_CMakeLists.txt) = 786f0d60c15451b95819a9827e45815afb0224c2
 SHA1 (patch-src_allclasses.cpp) = 9a803d18bead07e7358512e9f5d3865fb2179a87
 SHA1 (patch-src_backends_geometry.h) = 898cc251a11da1d9af17e9f98d7e5212263628c4
@@ -15,7 +15,8 @@ SHA1 (patch-src_main.cpp) = 4a1677e85eb951078a72ab75edce8a1120a4ae8a
 SHA1 (patch-src_parsing_streams.h) = a749d28cf10bf6176988fe2edc8d26b41ba71419
 SHA1 (patch-src_parsing_tags__stub.cpp) = 7d82a23514a170da6f4e5f4885e17a83753737f0
 SHA1 (patch-src_plugin_CMakeLists.txt) = dbdc471bc1e6608ec80ac800a8e91ac7e06c0044
-SHA1 (patch-src_scripting_abc.cpp) = 636a76804efbb1f271077fd533fb150d3209e23e
-SHA1 (patch-src_scripting_abc__codesynt.cpp) = 9b84a4779151e177a20f8532cd40b068743bc2c0
+SHA1 (patch-src_scripting_abc.cpp) = 1d15d3dcc21bdd82d87e291ab55d09d9692227eb
+SHA1 (patch-src_scripting_abc.h) = 108b6df3cf2bdef48c9ce3a5eafe6bac0ab59613
+SHA1 (patch-src_scripting_abc__codesynt.cpp) = 24e3965d01e7373590f0c0807ed944e511457f79
 SHA1 (patch-src_scripting_class.h) = d3e32788fc4293c1e332c9eb114543def03deb6a
 SHA1 (patch-src_scripting_flash_utils_flashutils.h) = 16dd0bb44e5b0ab571130a70537020fe95bf18ab

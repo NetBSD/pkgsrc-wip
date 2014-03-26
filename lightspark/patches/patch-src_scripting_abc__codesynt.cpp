@@ -1,10 +1,11 @@
-$NetBSD: patch-src_scripting_abc__codesynt.cpp,v 1.1 2013/12/16 07:54:18 nsloss Exp $
+$NetBSD: patch-src_scripting_abc__codesynt.cpp,v 1.2 2014/03/26 06:02:43 nsloss Exp $
 
 Add definitions to compile with llvm 3.3
+Add definitions to compile with llvm 3.4.  Should work with 3.5.
 
 --- src/scripting/abc_codesynt.cpp.orig	2013-03-16 11:19:18.000000000 +0000
 +++ src/scripting/abc_codesynt.cpp
-@@ -25,18 +25,35 @@
+@@ -25,18 +25,39 @@
  #endif
  
  #include "compat.h"
@@ -16,7 +17,11 @@ Add definitions to compile with llvm 3.3
  #include <llvm/DerivedTypes.h>
 +#endif
  #include <llvm/ExecutionEngine/ExecutionEngine.h>
++#ifdef LLVM_34
++#include <llvm/IR/LegacyPassManager.h>
++#else
  #include <llvm/PassManager.h>
++#endif
 +#ifdef LLVM_33
 +#include <llvm/IR/Constants.h>
 +#else
@@ -42,7 +47,7 @@ Add definitions to compile with llvm 3.3
  #  include <llvm/DataLayout.h>
  #else
  #  include <llvm/Target/TargetData.h>
-@@ -279,7 +296,7 @@ void ABCVm::registerFunctions()
+@@ -279,7 +300,7 @@ void ABCVm::registerFunctions()
  	llvm::FunctionType* FT=NULL;
  
  	//Create types

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/03/03 08:12:24 nsloss Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/26 06:02:42 nsloss Exp $
 
 DISTNAME=	lightspark-0.7.2
 CATEGORIES=	multimedia
@@ -32,6 +32,7 @@ post-install:
 
 CONF_FILES=	${EGDIR}/xdg/lightspark.conf ${PKG_SYSCONFDIR}/xdg/lightspark.conf
 
+DEPENDS+=nasm>=2.10:../../devel/nasm
 BUILDLINK_API_DEPENDS.xz+=	xz>=5.0.5
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
