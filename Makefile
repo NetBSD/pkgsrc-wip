@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5688 2014/03/26 10:30:06 thomasklausner Exp $
+# $Id: Makefile,v 1.5689 2014/03/26 12:40:02 slitvinov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2696,6 +2696,7 @@ SUBDIR+=	py-nzmath
 SUBDIR+=	py-oak
 SUBDIR+=	py-oasa
 SUBDIR+=	py-obspy
+SUBDIR+=	py-ocrodjvu
 SUBDIR+=	py-oct2py
 SUBDIR+=	py-ontopy
 SUBDIR+=	py-openastro
