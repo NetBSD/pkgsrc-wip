@@ -1,13 +1,3 @@
-Currently this package only works in firefox if you preload libGL
-ie: LD_PRELOAD=/usr/X11R7/lib/libGL.so firefox
-
-The stand-alone player has no problems.
-
-wiz 20140216:
-doesn't build for me on NetBSD-6.99.31. Configuring fails with:
-
--- Looking for C++ include atomic
--- Looking for C++ include atomic - not found
-CMake Error at src/CMakeLists.txt:159 (INSTALL):
-  install TARGETS given no ARCHIVE DESTINATION for static library target
-  "spark".
+No need to preload libGL anymore on firefox 27 NetBSD current 6.99.36
+Lightspark now builds with clang 3.4 on NetBSD current 6.99.36
+So hopefully it is finished. (nsloss 20140327)

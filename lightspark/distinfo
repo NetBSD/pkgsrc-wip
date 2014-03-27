@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2014/03/26 06:02:42 nsloss Exp $
+$NetBSD: distinfo,v 1.7 2014/03/27 02:03:54 nsloss Exp $
 
 SHA1 (lightspark-0.7.2.tar.gz) = f4c5fa3cf9da9c39da773640184e102ab9818ed7
 RMD160 (lightspark-0.7.2.tar.gz) = a739cb65815ef2af1b4ad9c5e3a8b9985b9a7055
 Size (lightspark-0.7.2.tar.gz) = 955952 bytes
-SHA1 (patch-CMakeLists.txt) = 1cc3d3565bfb9109820ac15964d053dd7ed0cb95
+SHA1 (patch-CMakeLists.txt) = ac34d884a0618d2e98d449f72ea549813a81d7ec
 SHA1 (patch-src_CMakeLists.txt) = 786f0d60c15451b95819a9827e45815afb0224c2
 SHA1 (patch-src_allclasses.cpp) = 9a803d18bead07e7358512e9f5d3865fb2179a87
 SHA1 (patch-src_backends_geometry.h) = 898cc251a11da1d9af17e9f98d7e5212263628c4
