@@ -1,5 +1,5 @@
-* The package can be considered complete but there is no released
-  source distribution of n2n, which means n2n itself is a wip.
+* There is no released source distribution of n2n, which means n2n
+  itself is in wip.
 
 * Darwin TunTap kext should be packaged as well, just like
   net/tuntap-solaris.
@@ -14,5 +14,7 @@
 
 * tuntap_freebsd.c should create a TAP interface automatically,
   probably by using ioctl(SIOCIFCREATE).
+
+* Install gen_keyfile.py to support key-schedule file.
 
 * Untested platforms: Darwin, Linux

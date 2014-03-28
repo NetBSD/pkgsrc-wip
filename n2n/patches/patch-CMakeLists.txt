@@ -1,0 +1,23 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2014/03/28 14:10:23 phonohawk Exp $
+
+Don't install compressed man pages. This is pkgsrc specific.
+
+--- CMakeLists.txt.orig	2014-03-28 09:31:47.000000000 +0000
++++ CMakeLists.txt
+@@ -131,10 +131,10 @@ set_source_files_properties(${PROJECT_BI
+                             ${PROJECT_BINARY_DIR}/doc/n2n_v2.7.gz
+                             PROPERTIES GENERATED 1)
+ 
+-install(FILES ${PROJECT_BINARY_DIR}/doc/edge.8.gz
+-        DESTINATION /usr/share/man8)
+-install(FILES ${PROJECT_BINARY_DIR}/doc/supernode.1.gz
+-        DESTINATION /usr/share/man1)
+-install(FILES ${PROJECT_BINARY_DIR}/doc/n2n_v2.7.gz
+-        DESTINATION /usr/share/man7)
++install(FILES ${PROJECT_SOURCE_DIR}/edge.8
++        DESTINATION ${CMAKE_INSTALL_MANDIR}/man8)
++install(FILES ${PROJECT_SOURCE_DIR}/supernode.1
++        DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
++install(FILES ${PROJECT_SOURCE_DIR}/n2n_v2.7
++        DESTINATION ${CMAKE_INSTALL_MANDIR}/man7)
+ endif(DEFINED UNIX)
