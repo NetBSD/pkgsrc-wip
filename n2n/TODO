@@ -16,5 +16,3 @@
   probably by using ioctl(SIOCIFCREATE).
 
 * Install gen_keyfile.py to support key-schedule file.
-
-* Untested platforms: Linux
