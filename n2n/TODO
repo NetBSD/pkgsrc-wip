@@ -12,5 +12,7 @@
   ioctl(SIOCGLIFADDR) on a PF_LINK socket but the problem is that
   SIOC* seems not to be documented at all.
 
-* I have only tested it on NetBSD. tuntap_freebsd.c, tuntap_linux.c,
-  tuntap_osx.c might be bitrotted just like tuntap_netbsd.c.
+* tuntap_freebsd.c should create a TAP interface automatically,
+  probably by using ioctl(SIOCIFCREATE).
+
+* Untested platforms: Darwin, Linux
