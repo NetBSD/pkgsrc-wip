@@ -1,5 +1,5 @@
 #!@RCD_SCRIPTS_SHELL@
-# $NetBSD: n2n_edge.sh,v 1.3 2014/03/28 14:29:38 phonohawk Exp $
+# $NetBSD: n2n_edge.sh,v 1.4 2014/03/28 18:44:00 phonohawk Exp $
 
 # PROVIDE: n2n_edge
 # REQUIRE: DAEMON
@@ -19,7 +19,7 @@ start_precmd="edge_prestart"
 n2n_config_var() {
     eval '(
         . "$N2N_CONFIG_FILE" >/dev/null
-        echo $'$1'
+        echo "$'$1'"
     )'
 }
 
@@ -28,89 +28,89 @@ quotemeta() {
 }
 
 edge_prestart() {
-    local device=$(n2n_config_var device)
+    local device="$(n2n_config_var device)"
     if [ -n "$device" ]; then
         rc_flags="$rc_flags -d $device"
     fi
 
-    local address=$(n2n_config_var address)
+    local address="$(n2n_config_var address)"
     if [ -n "$address" ]; then
         rc_flags="$rc_flags -a $address"
     else
         err 1 "$N2N_CONFIG_FILE: address is not set."
     fi
 
-    local netmask=$(n2n_config_var netmask)
+    local netmask="$(n2n_config_var netmask)"
     if [ -n "$netmask" ]; then
         rc_flags="$rc_flags -s $netmask"
     fi
 
-    local macaddr=$(n2n_config_var macaddr)
+    local macaddr="$(n2n_config_var macaddr)"
     if [ -n "$macaddr" ]; then
         rc_flags="$rc_flags -m $macaddr"
     fi
 
-    local mtu=$(n2n_config_var mtu)
+    local mtu="$(n2n_config_var mtu)"
     if [ -n "$mtu" ]; then
         rc_flags="$rc_flags -M $mtu"
     fi
 
-    local port=$(n2n_config_var port)
+    local port="$(n2n_config_var port)"
     if [ -n "$port" ]; then
         rc_flags="$rc_flags -p $port"
     fi
 
-    local community=$(n2n_config_var community)
+    local community="$(n2n_config_var community)"
     if [ -n "$community" ]; then
         rc_flags="$rc_flags -c $(quotemeta "$community")"
     else
         err 1 "$N2N_CONFIG_FILE: community is not set."
     fi
 
-    local key=$(n2n_config_var key)
+    local key="$(n2n_config_var key)"
     if [ -n "$key" ]; then
         export N2N_KEY="$key"
     fi
 
-    local interval=$(n2n_config_var interval)
+    local interval="$(n2n_config_var interval)"
     if [ -n "$interval" ]; then
         rc_flags="$rc_flags -i $interval"
     fi
 
-    local localaddr=$(n2n_config_var localaddr)
+    local localaddr="$(n2n_config_var localaddr)"
     if [ -n "$localaddr" ]; then
         rc_flags="$rc_flags -L $localaddr"
     fi
 
-    local reresolve=$(n2n_config_var reresolve)
+    local reresolve="$(n2n_config_var reresolve)"
     if [ -n "$reresolve" ]; then
         if checkyesno reresolve; then
             rc_flags="$rc_flags -b"
         fi
     fi
 
-    local routing=$(n2n_config_var routing)
+    local routing="$(n2n_config_var routing)"
     if [ -n "$routing" ]; then
         if checkyesno routing; then
             rc_flags="$rc_flags -r"
         fi
     fi
 
-    local multicast=$(n2n_config_var multicast)
+    local multicast="$(n2n_config_var multicast)"
     if [ -n "$multicast" ]; then
         if checkyesno multicast; then
             rc_flags="$rc_flags -E"
         fi
     fi
 
-    local verbose=$(n2n_config_var verbose)
+    local verbose="$(n2n_config_var verbose)"
     if [ -n "$verbose" ]; then
         if checkyesno verbose; then
             rc_flags="$rc_flags -v"
         fi
     fi
 
-    local supernodes=$(n2n_config_var supernodes)
+    local supernodes="$(n2n_config_var supernodes)"
     set -- $supernodes
     if [ $# -gt 0 ]; then
         while [ $# -gt 0 ]; do
