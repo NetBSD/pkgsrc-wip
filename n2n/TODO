@@ -17,4 +17,4 @@
 
 * Install gen_keyfile.py to support key-schedule file.
 
-* Untested platforms: Darwin, Linux
+* Untested platforms: Linux
