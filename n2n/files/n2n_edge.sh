@@ -1,5 +1,5 @@
 #!@RCD_SCRIPTS_SHELL@
-# $NetBSD: n2n_edge.sh,v 1.1 2014/03/28 03:48:22 phonohawk Exp $
+# $NetBSD: n2n_edge.sh,v 1.2 2014/03/28 08:43:24 phonohawk Exp $
 
 # PROVIDE: n2n_edge
 # REQUIRE: DAEMON
@@ -26,11 +26,6 @@ n2n_config_var() {
 quotemeta() {
     echo "$1" | sed 's/[^0-9a-zA-Z]/\\&/g'
 }
-
-n2n_edge_key=$(n2n_config_var key)
-if [ -n "$n2n_edge_key" ]; then
-    n2n_edge_env="N2N_KEY=$(quotemeta "$n2n_edge_key")"
-fi
 
 edge_prestart() {
     local device=$(n2n_config_var device)
@@ -70,6 +65,11 @@ edge_prestart() {
         rc_flags="$rc_flags -c $(quotemeta "$community")"
     else
         err 1 "$N2N_CONFIG_FILE: community is not set."
+    fi
+
+    local key=$(n2n_config_var key)
+    if [ -n "$key" ]; then
+        export N2N_KEY="$key"
     fi
 
     local reresolve=$(n2n_config_var reresolve)
