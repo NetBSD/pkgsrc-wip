@@ -1,0 +1,16 @@
+* The package can be considered complete but there is no released
+  source distribution of n2n, which means n2n itself is a wip.
+
+* Darwin TunTap kext should be packaged as well, just like
+  net/tuntap-solaris.
+
+* Look at tuntap_netbsd.c:89:
+
+    snprintf(buf, sizeof(buf), "ifconfig %s |grep address|cut -c 11-28", tap_device);
+
+  This is... way too... fragile. We should instead use
+  ioctl(SIOCGLIFADDR) on a PF_LINK socket but the problem is that
+  SIOC* seems not to be documented at all.
+
+* I have only tested it on NetBSD. tuntap_freebsd.c, tuntap_linux.c,
+  tuntap_osx.c might be bitrotted just like tuntap_netbsd.c.

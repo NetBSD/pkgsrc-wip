@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/03/28 03:48:22 phonohawk Exp $
+
+SHA1 (patch-Makefile) = f419bb30caf510b78cad4718f09dc802e25bf2ab
+SHA1 (patch-edge.c) = 91ab529c394afd5fc60df186f757ba4ff33a86fa
+SHA1 (patch-tuntap__netbsd.c) = 18cdb4ae51d6bee6a6bd9b5edcb174432818151a
