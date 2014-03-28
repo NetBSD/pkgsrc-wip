@@ -1,5 +1,5 @@
 #!@RCD_SCRIPTS_SHELL@
-# $NetBSD: n2n_edge.sh,v 1.2 2014/03/28 08:43:24 phonohawk Exp $
+# $NetBSD: n2n_edge.sh,v 1.3 2014/03/28 14:29:38 phonohawk Exp $
 
 # PROVIDE: n2n_edge
 # REQUIRE: DAEMON
@@ -70,6 +70,16 @@ edge_prestart() {
     local key=$(n2n_config_var key)
     if [ -n "$key" ]; then
         export N2N_KEY="$key"
+    fi
+
+    local interval=$(n2n_config_var interval)
+    if [ -n "$interval" ]; then
+        rc_flags="$rc_flags -i $interval"
+    fi
+
+    local localaddr=$(n2n_config_var localaddr)
+    if [ -n "$localaddr" ]; then
+        rc_flags="$rc_flags -L $localaddr"
     fi
 
     local reresolve=$(n2n_config_var reresolve)
