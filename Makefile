@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5689 2014/03/26 12:40:02 slitvinov Exp $
+# $Id: Makefile,v 1.5690 2014/03/28 03:49:39 phonohawk Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1793,6 +1793,7 @@ SUBDIR+=	mysql-proxy
 SUBDIR+=	mysql-sphinxse
 SUBDIR+=	mysqltcl
 SUBDIR+=	mythtv
+SUBDIR+=	n2n
 SUBDIR+=	nag
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	natali
