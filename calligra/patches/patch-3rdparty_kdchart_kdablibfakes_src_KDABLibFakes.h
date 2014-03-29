@@ -1,9 +1,9 @@
-$NetBSD: patch-3rdparty_kdchart_kdablibfakes_src_KDABLibFakes.h,v 1.1 2013/12/07 13:17:13 nsloss Exp $
+$NetBSD: patch-3rdparty_kdchart_kdablibfakes_src_KDABLibFakes.h,v 1.2 2014/03/29 14:10:18 nsloss Exp $
 
 isnan() and isinf() are macros on NetBSD (C99 conformant).
 Use same workaround as for Mac OS X and Cygwin.
 
---- 3rdparty/kdchart/kdablibfakes/src/KDABLibFakes.h.orig	2013-08-18 13:17:48.000000000 +0000
+--- 3rdparty/kdchart/kdablibfakes/src/KDABLibFakes.h.orig	2013-10-12 08:17:41.000000000 +0000
 +++ 3rdparty/kdchart/kdablibfakes/src/KDABLibFakes.h
 @@ -52,7 +52,7 @@
  #include <float.h>
