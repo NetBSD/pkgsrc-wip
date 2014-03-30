@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/03/30 13:48:53 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2014/03/30 19:43:57 krytarowski Exp $
 
 DISTNAME=		tortoisehg-2.11.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -39,8 +39,6 @@ SUBST_SED.df=		-e 's:thg_logo:${PREFIX}${thg_icon}:1'
 pre-build:
 	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
 	${RUN} rm ${WRKSRC}/doc/build/html/.buildinfo
-
-.include "../../lang/python/pyversion.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
