@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/03/30 20:49:14 krytarowski Exp $
+
+SHA1 (terminator-0.97.tar.gz) = aa92a6cacd572f6a834ac1de88ae699c7b7dee69
+RMD160 (terminator-0.97.tar.gz) = 5b95e5705b0fe2bda6c70b39825f0e2381a62050
+Size (terminator-0.97.tar.gz) = 343857 bytes
+SHA1 (patch-setup.py) = 31652c9a5a4fcf740b652b60c9db43915d49b4a3
