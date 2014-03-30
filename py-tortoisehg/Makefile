@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/03/30 19:57:13 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/30 21:04:14 nros Exp $
 
 DISTNAME=		tortoisehg-2.11.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -6,14 +6,11 @@ PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
-FETCH_USING=		curl
-
 MAINTAINER=		nros@users.sourceforge.net
 HOMEPAGE=		http://tortoisehg.org/
 COMMENT=		GUI for Mercurial
 LICENSE=		gnu-gpl-v2
 
-USE_TOOLS+=		gettext
 REPLACE_PYTHON+=	thg
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.1.3:../../textproc/py-sphinx
@@ -25,7 +22,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-iniparse
 PYTHON_VERSIONS_INCOMPATIBLE+=	26 # imports modules from mercurial, so needs to be the same version
 
 pre-configure:
-		${RUN} sed	-e 's:@PREFIX@:${PREFIX}:g' \
+		${RUN} ${SED} -e 's:@PREFIX@:${PREFIX}:g' \
 			${FILESDIR}/config.py > \
 			${WRKSRC}/tortoisehg/util/config.py
 
