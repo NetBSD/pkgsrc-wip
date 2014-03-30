@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5690 2014/03/28 03:49:39 phonohawk Exp $
+# $Id: Makefile,v 1.5691 2014/03/30 20:01:12 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2895,6 +2895,7 @@ SUBDIR+=	py-thermopy
 SUBDIR+=	py-tkinter-help
 SUBDIR+=	py-toeplitz
 SUBDIR+=	py-topkapi
+SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-tracks
 SUBDIR+=	py-traits
@@ -3376,7 +3377,6 @@ SUBDIR+=	tops-bin
 SUBDIR+=	tor-dev
 SUBDIR+=	torcs
 SUBDIR+=	torsocks
-SUBDIR+=	tortoisehg
 SUBDIR+=	tortunnel
 SUBDIR+=	tpp
 SUBDIR+=	tqsllib
