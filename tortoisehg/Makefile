@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2014/03/18 20:32:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/03/30 13:48:53 krytarowski Exp $
 
 DISTNAME=		tortoisehg-2.11.1
-CATEGORIES=		devel
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
+CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
+
+FETCH_USING=		curl
 
 MAINTAINER=		nros@users.sourceforge.net
 HOMEPAGE=		http://tortoisehg.org/
@@ -10,9 +14,7 @@ COMMENT=		GUI for Mercurial
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gettext
-USE_LANGUAGES=		c
 REPLACE_PYTHON+=	thg
-PYDISTUTILSPKG=		yes
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.1.3:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
@@ -20,9 +22,10 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	mercurial>=2.8.1:../../devel/mercurial
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-iniparse
+PYTHON_VERSIONS_INCOMPATIBLE+=	26 # imports modules from mercurial, so needs to be the same version
 
 pre-configure:
-		sed 	-e 's:@PREFIX@:${PREFIX}:g' \
+		${RUN} sed	-e 's:@PREFIX@:${PREFIX}:g' \
 			${FILESDIR}/config.py > \
 			${WRKSRC}/tortoisehg/util/config.py
 
@@ -34,11 +37,13 @@ SUBST_FILES.df=		contrib/thg.desktop
 SUBST_SED.df=		-e 's:thg_logo:${PREFIX}${thg_icon}:1'
 
 pre-build:
-	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
-	rm ${WRKSRC}/doc/build/html/.buildinfo
+	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
+	${RUN} rm ${WRKSRC}/doc/build/html/.buildinfo
+
+.include "../../lang/python/pyversion.mk"
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-qt4-qscintilla/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

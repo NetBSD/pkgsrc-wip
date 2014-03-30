@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/22 18:45:15 nros Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/03/30 13:48:53 krytarowski Exp $
 bin/thg
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
 ${PYSITELIB}/tortoisehg/__init__.pyc
 ${PYSITELIB}/tortoisehg/__init__.pyo
