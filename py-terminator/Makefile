@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/03/30 20:49:14 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2014/03/30 22:21:16 krytarowski Exp $
 
 DISTNAME=	terminator-0.97
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/terminator/trunk/0.97/+download/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/terminator
