@@ -1,0 +1,3 @@
+Tested on 6.99.37/amd64:
+It starts up, but doesn't display a window and just hangs.
+-- wiz 20140331
