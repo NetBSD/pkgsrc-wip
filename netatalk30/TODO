@@ -5,10 +5,3 @@ Netatalk 3.0.8 unresolved issues
 netbsd-6:
 
 - package configure script does not recognize quota support
-
-sunos:
-
-- the pkgsrc SMF framework recommends
-     /usr/sbin/svcadm enable svc:/pkgsrc/netatalk30:default
-  but the path is network/netatalk - pkgsrc/netatalk does not appear 
-  to exist
