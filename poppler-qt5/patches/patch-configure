@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2014/01/04 18:52:27 nros Exp $
+$NetBSD: patch-configure,v 1.2 2014/04/01 11:55:48 nros Exp $
 
-*fixes moc version comparison (Bug #72744) 
+*fixes moc version comparison (Bug #72744) a fix for this is in ver 0.26
 
 --- configure.orig	2013-11-26 23:17:02.000000000 +0000
 +++ configure
