@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/03/30 03:32:48 nsloss Exp $
+# $NetBSD: Makefile,v 1.9 2014/04/01 20:28:48 thomasklausner Exp $
 
 DISTNAME=	lightspark-0.7.2
 CATEGORIES=	multimedia
@@ -40,6 +40,7 @@ BUILDLINK_API_DEPENDS.xz+=	xz>=5.0.5
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
