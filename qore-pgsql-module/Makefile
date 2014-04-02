@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/02/16 17:20:26 nros Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/02 20:02:46 nros Exp $
 
 DISTNAME=	qore-pgsql-module-2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,4 +31,5 @@ post-install:
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/qore/buildlink3.mk"
+.include "../../wip/qore/module.mk"
 .include "../../mk/bsd.pkg.mk"
