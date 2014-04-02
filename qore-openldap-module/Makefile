@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/02/16 16:45:57 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/02 19:33:26 nros Exp $
 
 DISTNAME=	qore-openldap-module-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -24,4 +24,5 @@ INSTALL_TARGET=	install install-html-local
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/qore/buildlink3.mk"
+.include "../../wip/qore/module.mk"
 .include "../../mk/bsd.pkg.mk"
