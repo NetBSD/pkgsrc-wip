@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/02 16:53:25 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/02 16:56:03 asau Exp $
 
 DISTNAME=	fjd-0.1.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-paramiko
 
-USE_TOOLS+=	bash
+USE_TOOLS+=	bash:run
 USE_LANGUAGES=	# none
 
 REPLACE_BASH+=	 fjd/scripts/bgscreen
