@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/03/21 23:12:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/02 16:53:25 asau Exp $
 
 DISTNAME=	fjd-0.1.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/nhoening/fjd/
 COMMENT=	File-based job distribution for everyone
 LICENSE=	apache-2.0
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-paramiko
 
 USE_TOOLS+=	bash
 USE_LANGUAGES=	# none
