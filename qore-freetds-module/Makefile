@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/02/16 11:39:06 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/02 18:45:22 nros Exp $
 
 DISTNAME=	qore-sybase-modules-1.0.3
 PKGNAME=	${DISTNAME:S/sybase-modules/freetds-module/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
@@ -28,4 +28,5 @@ post-install:
 .include "../../databases/freetds/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/qore/buildlink3.mk"
+.include "../../wip/qore/module.mk"
 .include "../../mk/bsd.pkg.mk"
