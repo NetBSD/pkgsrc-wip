@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/27 16:52:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/02 19:42:06 asau Exp $
 #
 
 DISTNAME=	dolo-0.4-dev
@@ -13,7 +13,7 @@ COMMENT=	Economic modelling in Python
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.1:../../math/py-sympy
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../wip/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
 WRKSRC=		${WRKDIR}/dolo-0.4-dev
 
