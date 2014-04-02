@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/04/01 22:13:25 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/04/02 18:38:12 asau Exp $
 
 DISTNAME=		manatee-1.8.4.1
 PKGREVISION=		3
@@ -25,7 +25,6 @@ DEPENDS+=		p5-Tree-DAG_Node>=1.04:../../devel/p5-Tree-DAG_Node
 DEPENDS+=		p5-DBD-Sybase>=0.94:../../databases/p5-DBD-Sybase
 
 # Depend on default MySQL server:
-.include "../../mk/bsd.prefs.mk"
 DEPENDS+=		mysql-server>=5.0:../../databases/mysql$(MYSQL_VERSION_DEFAULT)-server
 
 PKG_DESTDIR_SUPPORT=	none
@@ -41,4 +40,5 @@ pre-configure:
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../www/apache/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
