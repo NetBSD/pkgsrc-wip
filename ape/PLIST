@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/21 14:39:52 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/04/02 22:18:23 outpaddling Exp $
 bin/ape
 bin/ape_ispell
 bin/ascii
@@ -11,12 +11,12 @@ man/man1/apeascii.1
 man/man1/apekeys.1
 share/ape/Languages/AWK/language_opts
 share/ape/Languages/AWK/syntax_highlighting
-share/ape/Languages/BASH/Macros/macros
-share/ape/Languages/BASH/Macros/menu.txt
-share/ape/Languages/BASH/language_opts
-share/ape/Languages/BASH/syntax_highlighting
 share/ape/Languages/BC/language_opts
 share/ape/Languages/BC/syntax_highlighting
+share/ape/Languages/Bash/Macros/macros
+share/ape/Languages/Bash/Macros/menu.txt
+share/ape/Languages/Bash/language_opts
+share/ape/Languages/Bash/syntax_highlighting
 share/ape/Languages/C++/Macros/macros
 share/ape/Languages/C++/Macros/menu.txt
 share/ape/Languages/C++/language_opts
