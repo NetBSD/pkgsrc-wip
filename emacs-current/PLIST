@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.137 2014/02/08 01:29:38 makoto Exp $
+@comment $NetBSD: PLIST,v 1.138 2014/04/02 11:16:39 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -62,6 +62,7 @@ info/srecode.info.gz
 info/todo-mode.info.gz
 info/tramp.info.gz
 info/url.info.gz
+info/vhdl-mode.info.gz
 info/vip.info.gz
 info/viper.info.gz
 info/widget.info.gz
@@ -1620,8 +1621,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/float-sup.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/float-sup.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/generic.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/generic.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/gulp.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/gulp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/gv.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/gv.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.el.gz
@@ -1961,6 +1960,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-cache.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cache.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cite.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cite.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-cloud.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-cloud.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cus.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cus.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-delay.el.gz
@@ -2015,8 +2016,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-salt.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-salt.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-score.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-score.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-setup.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-setup.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-sieve.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-sieve.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-spec.el.gz
@@ -2894,6 +2893,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/gulp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-acc.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-acc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-insert.el.gz
@@ -3277,8 +3278,6 @@ share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/cap-words.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/cap-words.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-awk.el.gz
@@ -3517,8 +3516,6 @@ share/emacs/${PKGVERSION}/lisp/term.elc
 share/emacs/${PKGVERSION}/lisp/term/AT386.el.gz
 share/emacs/${PKGVERSION}/lisp/term/AT386.elc
 share/emacs/${PKGVERSION}/lisp/term/README
-share/emacs/${PKGVERSION}/lisp/term/apollo.el.gz
-share/emacs/${PKGVERSION}/lisp/term/apollo.elc
 share/emacs/${PKGVERSION}/lisp/term/bobcat.el.gz
 share/emacs/${PKGVERSION}/lisp/term/bobcat.elc
 share/emacs/${PKGVERSION}/lisp/term/common-win.el.gz
@@ -3551,26 +3548,8 @@ share/emacs/${PKGVERSION}/lisp/term/tvi970.el.gz
 share/emacs/${PKGVERSION}/lisp/term/tvi970.elc
 share/emacs/${PKGVERSION}/lisp/term/vt100.el.gz
 share/emacs/${PKGVERSION}/lisp/term/vt100.elc
-share/emacs/${PKGVERSION}/lisp/term/vt102.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt102.elc
-share/emacs/${PKGVERSION}/lisp/term/vt125.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt125.elc
 share/emacs/${PKGVERSION}/lisp/term/vt200.el.gz
 share/emacs/${PKGVERSION}/lisp/term/vt200.elc
-share/emacs/${PKGVERSION}/lisp/term/vt201.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt201.elc
-share/emacs/${PKGVERSION}/lisp/term/vt220.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt220.elc
-share/emacs/${PKGVERSION}/lisp/term/vt240.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt240.elc
-share/emacs/${PKGVERSION}/lisp/term/vt300.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt300.elc
-share/emacs/${PKGVERSION}/lisp/term/vt320.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt320.elc
-share/emacs/${PKGVERSION}/lisp/term/vt400.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt400.elc
-share/emacs/${PKGVERSION}/lisp/term/vt420.el.gz
-share/emacs/${PKGVERSION}/lisp/term/vt420.elc
 share/emacs/${PKGVERSION}/lisp/term/w32-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/w32-win.elc
 share/emacs/${PKGVERSION}/lisp/term/w32console.el.gz
@@ -3751,6 +3730,8 @@ share/emacs/${PKGVERSION}/lisp/url/url-proxy.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-proxy.elc
 share/emacs/${PKGVERSION}/lisp/url/url-queue.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-queue.elc
+share/emacs/${PKGVERSION}/lisp/url/url-tramp.el.gz
+share/emacs/${PKGVERSION}/lisp/url/url-tramp.elc
 share/emacs/${PKGVERSION}/lisp/url/url-util.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-util.elc
 share/emacs/${PKGVERSION}/lisp/url/url-vars.el.gz
