@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/31 23:01:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/02 17:56:03 asau Exp $
 
 DISTNAME=	bctpy-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/aestrivex/bctpy
 COMMENT=	Brain Connectivity Toolbox for Python
 LICENSE=	gnu-gpl-v3
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-networkx
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
