@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/02/21 20:42:26 nros Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/02 18:50:54 nros Exp $
 
 DISTNAME=	qore-json-module-1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wip
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
