@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5694 2014/04/03 08:38:56 thomasklausner Exp $
+# $Id: Makefile,v 1.5695 2014/04/03 09:39:43 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -12,8 +12,6 @@ SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	LabPlot
-SUBDIR+=	Mesa
-SUBDIR+=	MesaLib
 SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PHPUnit
@@ -488,7 +486,6 @@ SUBDIR+=	downtimed
 SUBDIR+=	doxygen-depend
 SUBDIR+=	dpic
 SUBDIR+=	dragbox
-SUBDIR+=	dri
 SUBDIR+=	dropbox
 SUBDIR+=	drow
 SUBDIR+=	drpython
@@ -767,7 +764,6 @@ SUBDIR+=	givaro
 SUBDIR+=	gjots2
 SUBDIR+=	gjs
 SUBDIR+=	gksu
-SUBDIR+=	gl
 SUBDIR+=	glade2-nognome
 SUBDIR+=	glfw
 SUBDIR+=	glib-java
@@ -779,12 +775,7 @@ SUBDIR+=	glista
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globulation2
-SUBDIR+=	glsl
-SUBDIR+=	glu
 SUBDIR+=	glulxe
-SUBDIR+=	glut
-SUBDIR+=	glw
-SUBDIR+=	glx-utils
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmm
 SUBDIR+=	gmp-ecm
