@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/02/21 20:45:24 nros Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/03 10:52:40 nros Exp $
 
 DISTNAME=	qore-xml-module-1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
