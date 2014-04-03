@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/04/02 22:32:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/03 01:21:22 outpaddling Exp $
 
 DISTNAME=	ape-3.5.2
 CATEGORIES=	editors
@@ -9,8 +9,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 COMMENT=	Another Programmer's Editor
 #LICENSE=	BSD license, but which one?
-
-DEPENDS+=	mcrypt-[0-9]*:../../security/mcrypt
 
 MAKE_ENV+=	STAGEDIR=${DESTDIR}
 
