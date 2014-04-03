@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/14 21:11:10 nros Exp $
-lib/qore-modules/glut-api-0.14.qmod
+@comment $NetBSD: PLIST,v 1.2 2014/04/03 13:43:01 nros Exp $
+lib/qore-modules/glut-api-${QORE_MODULE_API}.qmod

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/02/14 21:11:10 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/03 13:43:01 nros Exp $
 
 DISTNAME=	qore-glut-module-0.0.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
@@ -20,5 +21,6 @@ CONFIGURE_ARGS+=--with-glut=${BUILDLINK_PREFIX.glut}
 
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../wip/qore/module.mk"
 .include "../../wip/qore-opengl-module/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
