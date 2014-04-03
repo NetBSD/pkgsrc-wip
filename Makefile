@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5693 2014/04/02 07:36:35 othyro Exp $
+# $Id: Makefile,v 1.5694 2014/04/03 08:38:56 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3400,7 +3400,6 @@ SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
 SUBDIR+=	tcl-curl
 SUBDIR+=	tcl-iwidgets
-SUBDIR+=	tcl86
 SUBDIR+=	tcmplex-panteltje
 SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
@@ -3450,7 +3449,6 @@ SUBDIR+=	tinylogin
 SUBDIR+=	tipp10
 SUBDIR+=	tk-tkimg
 SUBDIR+=	tk85-itk
-SUBDIR+=	tk86
 SUBDIR+=	tkhtml3
 SUBDIR+=	tkpng
 SUBDIR+=	tktile
