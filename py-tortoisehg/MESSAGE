@@ -1,0 +1,7 @@
+
+Including TortoiseHG's mregetools.rc in your ~/.hgrc by putting the
+line below in it is recommended, especially if the merge tool you use is
+devel/kdiff3.
+
+%include ${PREFIX}/share/tortoisehg/mergetools.rc
+
