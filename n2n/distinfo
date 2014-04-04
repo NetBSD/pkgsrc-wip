@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/03/28 14:10:23 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2014/04/04 13:48:34 phonohawk Exp $
 
 SHA1 (patch-CMakeLists.txt) = 07e0d2887744e5265c7a69367a9ebf498445c359
 SHA1 (patch-edge.c) = 91ab529c394afd5fc60df186f757ba4ff33a86fa
-SHA1 (patch-tuntap__netbsd.c) = 18cdb4ae51d6bee6a6bd9b5edcb174432818151a
+SHA1 (patch-tuntap__freebsd.c) = 3fa4dad2bd37cbadcd13eb834567d8865bbb4de5
+SHA1 (patch-tuntap__netbsd.c) = 0ae8809bec9e366b51584ef4f29c65fae1c5eb1f
+SHA1 (patch-tuntap__osx.c) = 1526a7cd3526e8ae7851627c4a1ce2bed66f73a4

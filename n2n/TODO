@@ -1,5 +1,13 @@
 * There is no released source distribution of n2n, which means n2n
-  itself is in wip.
+  itself is in wip. We can indeed make a tarball from the git HEAD and
+  put it to LOCAL_PORTS but I'm not sure that's a right thing to do.
+
+* There are patches that should be sent to the upstream. See comments
+  on patches/*
+
+* edge(8) and supernode(1) should have a switch to create a
+  pidfile. Our rc.d scripts are currently falling back to
+  _find_processes, which is rather unsatisfactory.
 
 * Darwin TunTap kext should be packaged as well, just like
   net/tuntap-solaris.
