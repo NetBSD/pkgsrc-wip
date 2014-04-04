@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/03/31 14:04:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/04 18:09:32 thomasklausner Exp $
 
 # version number from setup.py
 DISTNAME=		khal-0.1.0
@@ -28,7 +28,6 @@ DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 WRKSRC=			${WRKDIR}/khal
-EGG_NAME=		${DISTNAME}.dev
 INSTALLATION_DIRS=	share/doc/khal
 REPLACE_PYTHON+=	khal/__init__.py
 REPLACE_PYTHON+=	khal/aux.py
