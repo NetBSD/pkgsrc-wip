@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2014/03/25 07:57:36 realzhtw Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/04 17:40:26 realzhtw Exp $
 
 DISTNAME=	rippled-0.23.0
 CATEGORIES=	finance
 MASTER_SITES=	http://umc8.ru/~a/pkgsrc/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	a@umc8.ru
+MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://github.com/ripple/rippled
 COMMENT=	Ripple peer-to-peer network daemon
 #LICENSE=	# TODO: (see mk/license.mk)
