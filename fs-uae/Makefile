@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/05 21:56:02 rhialto Exp $
 
 VERSION=	2.2.3
 DISTNAME=	fs-uae-${VERSION}
@@ -46,6 +46,7 @@ REPLACE_PYTHON+=launcher/fs_uae_launcher/netplay/oyoyo/examplebot.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
 .include "../../lang/python/application.mk"
 PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
 
 DEPENDS+=	${PYPKGPREFIX}-game>=1.8.1:../../devel/py-game
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.10:../../x11/py-wxWidgets

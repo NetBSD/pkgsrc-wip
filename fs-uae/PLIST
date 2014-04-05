@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/25 22:02:16 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/05 21:56:02 rhialto Exp $
 bin/fs-uae
 bin/fs-uae-launcher
 share/applications/fs-uae.desktop
@@ -590,8 +590,8 @@ ${PYSITELIB}/fs_uae_launcher/Archive.pyc
 ${PYSITELIB}/fs_uae_launcher/__init__.pyc
 ${PYSITELIB}/fs_uae_launcher/DeviceManager.pyc
 ${PYSITELIB}/fs_uae_launcher/FloppyManager.pyc
-${PYSITELIB}/fs_uae_launcher-2.2.3-py2.7.egg-info/requires.txt
-${PYSITELIB}/fs_uae_launcher-2.2.3-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/fs_uae_launcher-2.2.3-py2.7.egg-info/top_level.txt
-${PYSITELIB}/fs_uae_launcher-2.2.3-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/fs_uae_launcher-2.2.3-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/fs_uae_launcher-2.2.3-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/fs_uae_launcher-2.2.3-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/fs_uae_launcher-2.2.3-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/fs_uae_launcher-2.2.3-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/fs_uae_launcher-2.2.3-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
