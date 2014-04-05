@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2014/04/03 19:54:27 nros Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/05 15:55:45 nros Exp $
 
 DISTNAME=		tortoisehg-2.11.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-#PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
-MAINTAINER=		nros@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tortoisehg.org/
 COMMENT=		GUI for Mercurial
 LICENSE=		gnu-gpl-v2
