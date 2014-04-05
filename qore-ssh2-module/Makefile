@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/02/16 18:33:41 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/05 19:49:34 nros Exp $
 
 DISTNAME=	qore-ssh2-module-0.9.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -29,9 +29,8 @@ post-install:
 
 .include "options.mk"
 
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../wip/qore/buildlink3.mk"
+.include "../../wip/qore/module.mk"
 .include "../../mk/bsd.pkg.mk"
