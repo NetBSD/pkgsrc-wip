@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5698 2014/04/05 20:03:57 jgoamakf Exp $
+# $Id: Makefile,v 1.5699 2014/04/06 21:29:46 rhialto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -268,6 +268,7 @@ SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
+SUBDIR+=	calibre
 SUBDIR+=	calligra
 SUBDIR+=	callweaver
 SUBDIR+=	calypso
@@ -2431,6 +2432,7 @@ SUBDIR+=	py-amqplib
 SUBDIR+=	py-anfft
 SUBDIR+=	py-antlr3
 SUBDIR+=	py-aopython
+SUBDIR+=	py-apsw
 SUBDIR+=	py-aqopa
 SUBDIR+=	py-arabic
 SUBDIR+=	py-argh
