@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/11/11 12:02:59 thomasklausner Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/04/06 14:17:45 thomasklausner Exp $
 
 Disable c/c++ version check; it fails e.g. with clang emulating gcc.
 
---- configure.ac.orig	2013-11-11 11:21:44.000000000 +0000
+--- configure.ac.orig	2014-04-06 12:44:15.000000000 +0000
 +++ configure.ac
 @@ -109,10 +109,10 @@ STEPMAKE_PYTHON(REQUIRED, 2.4, 3.0)
  # __GNUC__, but that macro now unofficially means "the compiler
