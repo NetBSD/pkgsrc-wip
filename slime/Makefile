@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 15:23:39 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/06 16:13:01 othyro Exp $
 #
 
-DISTNAME=		slime-2.0
-PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
+DISTNAME=		v2.5
+PKGNAME=		${EMACS_PKGNAME_PREFIX}slime${DISTNAME:S/v/-/1}
 CATEGORIES=		editors
-MASTER_SITES=		http://common-lisp.net/project/slime/
-EXTRACT_SUFX=		.tgz
+MASTER_SITES=		https://github.com/slime/slime/archive/
+DIST_SUBDIR=		${PKGBASE}
 
 MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://common-lisp.net/project/slime/
 COMMENT=		Superior Lisp Interaction Mode for Emacs
+LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND mit AND public-domain # AND LLGPL
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake makeinfo
 NO_CONFIGURE=		yes
 INFO_FILES=		yes
