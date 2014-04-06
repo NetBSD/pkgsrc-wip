@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2011/02/12 15:10:22 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/06 14:25:53 khorben Exp $
 bin/editor
-share/applications/editor.desktop
+bin/filter
+share/applications/deforaos-editor.desktop
+share/doc/html/Editor/editor.html
+share/doc/html/Editor/filter.html
 share/locale/de/LC_MESSAGES/Editor.mo
 share/locale/es/LC_MESSAGES/Editor.mo
 share/locale/fr/LC_MESSAGES/Editor.mo
 share/locale/it/LC_MESSAGES/Editor.mo
+share/man/man1/editor.1
+share/man/man1/filter.1
