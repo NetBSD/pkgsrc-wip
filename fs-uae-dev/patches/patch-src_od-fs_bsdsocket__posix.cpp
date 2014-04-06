@@ -1,10 +1,10 @@
-$NetBSD: patch-src_od-fs_bsdsocket__posix.cpp,v 1.1 2013/11/15 12:26:23 rhialto Exp $
+$NetBSD: patch-src_od-fs_bsdsocket__posix.cpp,v 1.2 2014/04/06 13:33:55 rhialto Exp $
 
 u_int8_t * won't automagically become const char *.
 
---- src/od-fs/bsdsocket_posix.cpp.orig	2013-10-23 17:58:00.000000000 +0000
+--- src/od-fs/bsdsocket_posix.cpp.orig	2014-03-25 19:40:59.000000000 +0000
 +++ src/od-fs/bsdsocket_posix.cpp
-@@ -929,7 +929,7 @@ static void *bsdlib_threadfunc (void *ar
+@@ -928,7 +928,7 @@ static void *bsdlib_threadfunc (void *ar
          break;
  
          case 7: {

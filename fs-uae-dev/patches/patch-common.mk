@@ -1,10 +1,11 @@
-$NetBSD: patch-common.mk,v 1.1 2013/11/15 12:26:23 rhialto Exp $
+$NetBSD: patch-common.mk,v 1.2 2014/04/06 13:33:55 rhialto Exp $
 
 Add support for NetBSD.
+Make $(prefix) overridable.
 
---- common.mk.orig	2013-10-23 17:58:00.000000000 +0000
+--- common.mk.orig	2014-03-25 19:40:59.000000000 +0000
 +++ common.mk
-@@ -35,6 +35,14 @@ cxx = $(CXX)
+@@ -43,6 +43,14 @@ cxx = $(CXX)
  ar = $(AR)
  make = gmake
  
@@ -19,7 +20,7 @@ Add support for NetBSD.
  else ifneq ($(findstring OpenBSD,$(uname)),)
  
  os = openbsd
-@@ -56,5 +64,5 @@ debug := 0
+@@ -64,5 +72,5 @@ debug := 0
  devel := 0
  optimize := 1
  noflags := 0

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/15 12:26:23 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/06 13:33:55 rhialto Exp $
 
-VERSION=	2.3.9dev
+VERSION=	2.5.1dev
 DISTNAME=	fs-uae-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
@@ -25,6 +25,9 @@ BUILD_ENV+=	PKG_LDFLAGS=${PKG_LDFLAGS}
 
 INSTALL_ENV+=	prefix=${PREFIX}
 INSTALL_ENV+=	DESTDIR=${DESTDIR}
+
+# My notes say that building fails on NetBSD 6.0 and that 6.1 headers
+# are required.
 
 .include "../../audio/openal/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

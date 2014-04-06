@@ -1,10 +1,10 @@
-$NetBSD: patch-libfsemu_src_filesys.c,v 1.1 2013/11/15 12:26:23 rhialto Exp $
+$NetBSD: patch-libfsemu_src_filesys.c,v 1.2 2014/04/06 13:33:55 rhialto Exp $
 
 Add support for NetBSD.
 
---- libfsemu/src/filesys.c.orig	2013-10-23 17:57:59.000000000 +0000
+--- libfsemu/src/filesys.c.orig	2014-03-25 19:40:58.000000000 +0000
 +++ libfsemu/src/filesys.c
-@@ -126,7 +126,7 @@ static void file_time_to_time_val(FILETI
+@@ -128,7 +128,7 @@ static void file_time_to_time_val(FILETI
  
  #if defined(WINDOWS)
  

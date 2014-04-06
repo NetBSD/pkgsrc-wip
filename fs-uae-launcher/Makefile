@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/15 12:23:21 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/06 13:28:06 rhialto Exp $
 
-VERSION=	2.3.9dev
+VERSION=	2.5.1dev
 DISTNAME=	fs-uae-launcher-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
@@ -20,7 +20,7 @@ REPLACE_PYTHON+=fs_uae_launcher/netplay/oyoyo/examplebot.py
 PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
 
-DEPENDS+=	${PYPKGPREFIX}-pyside-qt4.8>=1.2.1:../../wip/py-pyside
+DEPENDS+=	${PYPKGPREFIX}-qt4>=4.10.2nb1:../../x11/py-qt4
 # Launcher build (actually binary package create)-only:
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.1.5:../../devel/py-setuptools
 
