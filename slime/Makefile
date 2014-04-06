@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2014/04/06 16:13:01 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2014/04/06 23:57:44 othyro Exp $
 #
 
 DISTNAME=		v2.5
 PKGNAME=		${EMACS_PKGNAME_PREFIX}slime${DISTNAME:S/v/-/1}
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		https://github.com/slime/slime/archive/
 DIST_SUBDIR=		${PKGBASE}
@@ -17,7 +18,7 @@ USE_TOOLS+=		gmake makeinfo
 NO_CONFIGURE=		yes
 INFO_FILES=		yes
 
-INSTALLATION_DIRS=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/slime
+INSTALLATION_DIRS+=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/slime/lib
 SLIME_LISPDIR=		${EMACS_LISPPREFIX}/slime
 
 do-build:
@@ -34,8 +35,10 @@ do-install:
 		${INSTALL_DATA} ChangeLog ${DESTDIR}${SLIME_LISPDIR}; \
 		${INSTALL_DATA} *.el ${DESTDIR}${SLIME_LISPDIR}; \
 		${INSTALL_DATA} *.elc ${DESTDIR}${SLIME_LISPDIR}; \
-		${INSTALL_DATA} *.lisp ${DESTDIR}${SLIME_LISPDIR}
-		${INSTALL_DATA} ${WRKSRC}/doc/slime.info ${DESTDIR}${EMACS_INFOPREFIX}
+		${INSTALL_DATA} *.lisp ${DESTDIR}${SLIME_LISPDIR}; \
+		${INSTALL_DATA} lib/*.el ${DESTDIR}${SLIME_LISPDIR}/lib
+		${INSTALL_DATA} ${WRKSRC}/doc/slime.info \
+			${DESTDIR}${EMACS_INFOPREFIX}
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

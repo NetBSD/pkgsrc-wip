@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/06 16:13:01 othyro Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/06 23:57:44 othyro Exp $
 ${EMACS_INFOPREFIX}/slime.info
 ${EMACS_LISPPREFIX}/slime/ChangeLog
+${EMACS_LISPPREFIX}/slime/lib/cl-lib.el
+${EMACS_LISPPREFIX}/slime/lib/ert-x.el
+${EMACS_LISPPREFIX}/slime/lib/ert.el
+${EMACS_LISPPREFIX}/slime/lib/hyperspec.el
 ${EMACS_LISPPREFIX}/slime/metering.lisp
 ${EMACS_LISPPREFIX}/slime/nregex.lisp
 ${EMACS_LISPPREFIX}/slime/sbcl-pprint-patch.lisp
