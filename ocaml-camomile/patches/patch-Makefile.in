@@ -1,8 +1,17 @@
-$NetBSD: patch-Makefile.in,v 1.1 2014/04/05 19:27:14 jgoamakf Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2014/04/06 17:32:40 jgoamakf Exp $
 
 Install into destdir.
 --- Makefile.in.orig	2011-10-09 19:44:48.000000000 +0900
-+++ Makefile.in	2014-03-31 14:14:14.000000000 +0900
++++ Makefile.in	2014-04-07 02:15:08.000000000 +0900
+@@ -38,7 +38,7 @@
+ OCAMLYACC = @OCAMLYACC@
+ OCAMLLEX = @OCAMLLEX@
+ OCAMLDEP = @OCAMLDEP@ -slash
+-OCAMLLIB = @OCAMLLIB@
++OCAMLLIB = @OCAMLLIB@/site-lib
+ OCAMLBEST= @OCAMLBEST@
+ OCAMLVERSION = @OCAMLVERSION@
+ CAMLP4O = -pp "@CAMLP4O@ -I $(OCAMLLIB)"
 @@ -403,6 +403,7 @@
  	if [ -f camomile.a ]; then cp -f camomile.a '$(OCAMLLIB)'; fi
  
