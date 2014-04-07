@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/04/07 22:04:15 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/07 22:25:00 rhialto Exp $
 #
 
 DISTNAME=	unnethack-5.1.0-20131208
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unnethack/}
 VER=		510
 
 MAINTAINER=	rhialto@falu.nl
-HOMEPAGE=	http://unnethack.sourceforge.net/
+HOMEPAGE=	http://sourceforge.net/apps/trac/unnethack/
 COMMENT=	Variant and further development of NetHack
 LICENSE=	nethack-license
 
