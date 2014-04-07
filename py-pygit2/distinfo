@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/02/17 00:47:59 othyro Exp $
+$NetBSD: distinfo,v 1.4 2014/04/07 04:33:26 othyro Exp $
 
-SHA1 (pygit2-0.20.2.tar.gz) = 9041d4ff6ec60e440c193398796237a1339f3b09
-RMD160 (pygit2-0.20.2.tar.gz) = f9a86e59d86fc1f731cb3ee686f9f3ae915b7514
-Size (pygit2-0.20.2.tar.gz) = 140028 bytes
+SHA1 (pygit2-0.20.3.tar.gz) = 193975a4bf16e524b1b202084da7b32380c84afc
+RMD160 (pygit2-0.20.3.tar.gz) = 0958840482103472dbe5943219083b2e36209bab
+Size (pygit2-0.20.3.tar.gz) = 146253 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/02/17 00:47:59 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/07 04:33:25 othyro Exp $
 
-DISTNAME=	pygit2-0.20.2
+DISTNAME=	pygit2-0.20.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pygit2/

@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/03 10:57:47 othyro Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/07 04:33:25 othyro Exp $
 ${PYSITELIB}/_pygit2.so
 ${PYSITELIB}/pygit2/__init__.py
 ${PYSITELIB}/pygit2/__init__.pyc
+${PYSITELIB}/pygit2/credentials.py
+${PYSITELIB}/pygit2/credentials.pyc
 ${PYSITELIB}/pygit2/repository.py
 ${PYSITELIB}/pygit2/repository.pyc
+${PYSITELIB}/pygit2/settings.py
+${PYSITELIB}/pygit2/settings.pyc
 ${PYSITELIB}/pygit2/version.py
 ${PYSITELIB}/pygit2/version.pyc
