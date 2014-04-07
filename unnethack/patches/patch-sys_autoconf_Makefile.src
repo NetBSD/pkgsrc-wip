@@ -1,9 +1,9 @@
-$NetBSD: patch-sys_autoconf_Makefile.src,v 1.2 2011/10/26 23:04:35 rhialto Exp $
+$NetBSD: patch-sys_autoconf_Makefile.src,v 1.3 2014/04/07 22:04:16 rhialto Exp $
 
 Add #defines for libraries as set in pkgsrc Makefile, and runtime
 link path for curses.
 
---- sys/autoconf/Makefile.src.orig	2011-10-08 17:52:15.000000000 +0000
+--- sys/autoconf/Makefile.src.orig	2013-12-08 15:00:26.000000000 +0000
 +++ sys/autoconf/Makefile.src
 @@ -31,7 +31,7 @@ CC = @CC@ -DAUTOCONF
  WINDRES = @WINDRES@
@@ -14,3 +14,12 @@ link path for curses.
  
  # Compile with PDCurses installed in a separate directory that doesn't
  # conflict with the system curses/ncurses library
+@@ -409,7 +409,7 @@ monstr.c: $(MAKEDEFS)
+ # makedefs -z makes both vis_tab.h and vis_tab.c, but writes the .h first
+ vis_tab.c: ../include/vis_tab.h
+ tile.c: $(srcdir)/../win/share/tilemap.c $(HACK_H)
+-	@( cd ../util ; $(MAKE) ../src/tile.c )
++	@( cd ../util ; $(MAKE) $(srcdir)/../src/tile.c )
+ 
+ $(srcdir)/../win/gnome/gn_rip.h: $(srcdir)/../win/X11/rip.xpm
+ 	cp $(srcdir)/../win/X11/rip.xpm $(srcdir)/../win/gnome/gn_rip.h

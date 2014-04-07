@@ -1,9 +1,9 @@
-$NetBSD: patch-sys_autoconf_Makefile.top,v 1.2 2011/10/26 23:04:35 rhialto Exp $
+$NetBSD: patch-sys_autoconf_Makefile.top,v 1.3 2014/04/07 22:04:16 rhialto Exp $
 
 Hefty patching for setgid (rather than setuid), $DESTDIR, and potential
 separate installation of data and executables.
 
---- sys/autoconf/Makefile.top.orig	2011-10-08 17:52:15.000000000 +0000
+--- sys/autoconf/Makefile.top.orig	2013-12-08 15:00:26.000000000 +0000
 +++ sys/autoconf/Makefile.top
 @@ -40,12 +40,12 @@ GAMEGRP  = @GROUP@
  
@@ -20,7 +20,7 @@ separate installation of data and executables.
  
  # GAMEDIR also appears in config.h as "HACKDIR".
  # VARDIR may also appear in unixconf.h as "VAR_PLAYGROUND" else GAMEDIR
-@@ -139,9 +139,12 @@ UNSHARE_DAT = $(UNSHARE_DATNODLB) $(UNSH
+@@ -142,9 +142,12 @@ UNSHARE_DAT = $(UNSHARE_DATNODLB) $(UNSH
  $(GAME): include/autoconf_paths.h
  	( cd src ; $(MAKE) )
  
@@ -34,7 +34,7 @@ separate installation of data and executables.
  # Note: many of the dependencies below are here to allow parallel make
  # to generate valid output
  
-@@ -151,46 +154,46 @@ Guidebook:
+@@ -154,48 +157,48 @@ Guidebook:
  manpages:
  	( cd doc ; $(MAKE) manpages )
  
@@ -45,6 +45,8 @@ separate installation of data and executables.
 -rumors: $(GAME)
 +rumors: # $(GAME)
  	( cd dat ; $(MAKE) rumors )
+ 
+ vaults.dat: spec_levs
  
 -oracles: $(GAME)
 +oracles: # $(GAME)
@@ -91,7 +93,7 @@ separate installation of data and executables.
  	( cd dat ; $(MAKE) UnNetHack.ad )
  
  pet_mark.xbm:
-@@ -227,7 +230,7 @@ dlb: spec_levs
+@@ -232,7 +235,7 @@ dlb: spec_levs
  
  # recover can be used when INSURANCE is defined in include/config.h
  # and the checkpoint option is true
@@ -100,16 +102,16 @@ separate installation of data and executables.
  	( cd util ; $(MAKE) recover$(EXEEXT) )
  
  dofiles:
-@@ -238,7 +241,7 @@ dofiles:
+@@ -243,7 +246,7 @@ dofiles:
  		-e '}' 					\
  	  	-e '$$s/.*/nodlb/p' < dat/@OPTIONS_FILE@` ;	\
  	$(MAKE) dofiles-$${target-nodlb}
 -	(cd src; cp $(GAME) @EXTRA_UNSHARE@ $(DESTDIR)$(FILE_AREA_UNSHARE))
-+	#(cd src; cp $(GAME) @EXTRA_UNSHARE@ $(DESTDIR)$(FILE_AREA_UNSHARE))
++	# (cd src; cp $(GAME) @EXTRA_UNSHARE@ $(DESTDIR)$(FILE_AREA_UNSHARE))
  	@HOST_MSWIN@cp $(srcdir)/sys/winnt/defaults.nh $(DESTDIR)$(FILE_AREA_UNSHARE)
+ 	@HOST_UNIX@cp $(srcdir)/sys/unix/defaults.nh $(DESTDIR)$(FILE_AREA_UNSHARE)/unnethackrc.default
  	cp util/recover$(EXEEXT) $(DESTDIR)$(FILE_AREA_UNSHARE)
- 	if test -f $(srcdir)/doc/Guidebook.txt ; then \
-@@ -251,9 +254,9 @@ dofiles:
+@@ -257,9 +260,9 @@ dofiles:
  	@HOST_UNIX@	< $(srcdir)/sys/unix/nethack.sh \
  	@HOST_UNIX@	> $(DESTDIR)$(SHELLDIR)/$(SCRIPT)
  # set up their permissions
@@ -122,7 +124,7 @@ separate installation of data and executables.
  	chmod $(EXEPERM) $(DESTDIR)$(FILE_AREA_UNSHARE)/recover$(EXEEXT)
  	-( cd $(DESTDIR)$(FILE_AREA_DOC) ; \
  			$(CHOWN) $(GAMEUID) license @GUIDEBOOK_TXT@ ; \
-@@ -299,7 +302,7 @@ update: $(GAME) recover$(EXEEXT) $(CNF_S
+@@ -305,7 +308,7 @@ update: $(GAME) recover$(EXEEXT) $(CNF_S
  # and a reminder
  	@echo You may also want to install the man pages via the doc Makefile.
  
@@ -131,7 +133,7 @@ separate installation of data and executables.
  # set up the directories
  # not all mkdirs have -p; those that don't will create a -p directory
  	-mkdir -p $(DESTDIR)$(GAMEDIR) $(DESTDIR)$(VARDIR)
-@@ -327,6 +330,13 @@ install: $(GAME) recover$(EXEEXT) $(CNF_
+@@ -330,6 +333,13 @@ install: $(GAME) recover$(EXEEXT) $(CNF_
  # and a reminder
  	@echo You may also want to reinstall the man pages via the doc Makefile.
  

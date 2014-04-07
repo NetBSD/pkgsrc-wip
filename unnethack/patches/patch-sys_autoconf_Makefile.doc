@@ -1,6 +1,6 @@
-$NetBSD: patch-sys_autoconf_Makefile.doc,v 1.1 2013/02/16 12:21:11 rhialto Exp $
+$NetBSD: patch-sys_autoconf_Makefile.doc,v 1.2 2014/04/07 22:04:16 rhialto Exp $
 
---- sys/autoconf/Makefile.doc.orig	2011-10-08 17:52:15.000000000 +0000
+--- sys/autoconf/Makefile.doc.orig	2013-12-08 15:00:26.000000000 +0000
 +++ sys/autoconf/Makefile.doc
 @@ -49,11 +49,11 @@ Guidebook.dvi:	Guidebook.tex
  #	tbl tmac.n Guidebook.mn | groff -Wall -Tdvi > Guidebook.dvi

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/27 16:39:13 rhialto Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/07 22:04:15 rhialto Exp $
 #
 
-DISTNAME=	unnethack-4.0.0-20120401
+DISTNAME=	unnethack-5.1.0-20131208
 #PKGREVISION=	0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unnethack/}
+VER=		510
 
 MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	http://unnethack.sourceforge.net/
@@ -12,23 +13,28 @@ COMMENT=	Variant and further development of NetHack
 LICENSE=	nethack-license
 
 GNU_CONFIGURE=	YES
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=	no
 
 CONFIGURE_ARGS+=--enable-wizmode=rhialto
 CONFIGURE_ARGS+=--enable-curses-graphics
 CONFIGURE_ARGS+=--enable-tty-graphics
-#CONFIGURE_ARGS+=--enable-x11-graphics	# unrecognized
-CONFIGURE_ENV+=CHOWN=true
-CONFIGURE_ENV+=CHGRP=true
-
-# For data files
-BUILD_TARGET=	datastuff
-INSTALL_TARGET=	manpages install-dat
-INSTALLATION_DIRS=	${PKGMANDIR}/man6 ${GAMEDIR}
+# Don't do the user/permission setting during build time.
+CONFIGURE_ENV+=	CHOWN=true
+CONFIGURE_ENV+=	CHGRP=true
 
 # For executable
-BUILD_TARGET+=	unnethack
-INSTALL_TARGET+=binfiles
+BUILD_TARGET=	unnethack
+INSTALL_TARGET=binfiles
+
+# For data files.
+# (BUG: building the datafiles first causes a double compile
+# of the game executable somehow)
+BUILD_TARGET+=	datastuff
+INSTALL_TARGET+=manpages install-dat
+INSTALLATION_DIRS=${PKGMANDIR}/man6 ${GAMEDIR}
+
+PLIST_SUBST+=	VER=$(VER)
+PLIST_VARS=	x11
 
 USE_LANGUAGES=	c
 USE_NCURSES=	yes
@@ -44,8 +50,8 @@ BUILD_DEFS+=		GAMES_USER GAMES_GROUP
 GAMEPERM=		${NETHACK_USER} ${NETHACK_GROUP} 2555
 
 GAMEDIR=		${PREFIX}/share/${NETHACK_DIR}
-NETHACK_DIR=		unnethackdir400
-VARDIR=			/var/games/unnethack400
+NETHACK_DIR=		unnethackdir$(VER)
+VARDIR=			/var/games/unnethack$(VER)
 #MAKE_ENV+=		GAMEDIR=${GAMEDIR:Q}
 MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man6
 #MAKE_ENV+=		VARDIR=${VARDIR:Q}
@@ -54,11 +60,6 @@ CONFIGURE_ARGS+=	--with-gamesdir=${VARDIR:Q}
 CONFIGURE_ARGS+=	--with-sharedir=${GAMEDIR:Q}
 CONFIGURE_ARGS+=	--with-unsharedir=${GAMEDIR:Q}
 
-# For X:
-#BUILD_TARGET+=	x11tiles 	# tiles seem to be broken
-#BUILD_TARGET+=	rip.xpm
-#FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
-#INSTALLATION_DIRS+=	lib/X11/app-defaults lib/X11/fonts/misc
 
 
 # Special handling for the scorefiles: we do not want to delete
@@ -92,22 +93,8 @@ CHECK_FILES_SKIP+=	${VARDIR}/logfile				\
 # For binary:
 SPECIAL_PERMS+=		${GAMEDIR}/unnethack				\
 			    ${GAMEPERM}
-# For X:
-#post-install:
-#	${INSTALL_DATA} ${WRKSRC}/dat/x11tiles \
-#	    ${DESTDIR}${GAMEDIR}
-#	${INSTALL_DATA} ${WRKSRC}/win/X11/NetHack.ad \
-#	    ${DESTDIR}${PREFIX}/lib/X11/app-defaults/UnNetHack
-#	${INSTALL_DATA} ${WRKSRC}/win/X11/nh10.bdf \
-#	    ${DESTDIR}${PREFIX}/lib/X11/fonts/misc
-#	${INSTALL_DATA} ${WRKSRC}/win/X11/ibm.bdf \
-#	    ${DESTDIR}${PREFIX}/lib/X11/fonts/misc
-#	${INSTALL_DATA} ${WRKSRC}/win/X11/nethack.rc \
-#	    ${DESTDIR}${GAMEDIR}/unnethack.x11.rc
 
+.include "options.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"	# >= 5.0
-#.include "../../x11/libXaw/buildlink3.mk"	# for X
-#.include "../../x11/libXpm/buildlink3.mk"	# for X
-#.include "../../x11/libXt/buildlink3.mk"	# for X
 .include "../../mk/bsd.pkg.mk"
