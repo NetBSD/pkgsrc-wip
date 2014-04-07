@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5700 2014/04/06 22:50:15 rhialto Exp $
+# $Id: Makefile,v 1.5701 2014/04/07 12:39:37 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2566,7 +2566,6 @@ SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
 SUBDIR+=	py-extremes
 SUBDIR+=	py-eyed3
-SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-fatiando
 SUBDIR+=	py-fdasrsf
