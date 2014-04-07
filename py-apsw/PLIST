@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/07 08:46:15 thomasklausner Exp $
-${PYSITELIB}/apsw-3.8.4.2_${PKGVERSION}-py3.3.egg-info
+@comment $NetBSD: PLIST,v 1.3 2014/04/07 09:34:55 obache Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/apsw.so

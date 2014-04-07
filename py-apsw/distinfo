@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/06 20:57:13 rhialto Exp $
+$NetBSD: distinfo,v 1.2 2014/04/07 09:34:55 obache Exp $
 
-SHA1 (py-apsw/3.8.4.2-r1.tar.gz) = 4ee5edacacca437640145c69e285bd2ce9e6babc
-RMD160 (py-apsw/3.8.4.2-r1.tar.gz) = 8a810febbc4c55410c783d18fcbc0c6ce029a6b4
-Size (py-apsw/3.8.4.2-r1.tar.gz) = 302904 bytes
+SHA1 (apsw-3.8.4.2-r1.zip) = 46177e40c16e827c81161a0e20c0202a2538728e
+RMD160 (apsw-3.8.4.2-r1.zip) = 265596cf331d15dd75b585f2a9579a6459269181
+Size (apsw-3.8.4.2-r1.zip) = 664927 bytes
