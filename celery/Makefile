@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/04/07 04:07:45 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2014/04/07 04:10:03 othyro Exp $
 #
 
 DISTNAME=	celery-3.1.10
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd # AND cc-by-nc-sa-v3.0
 
 DEPENDS+=	${PYPKGPREFIX}-anyjson-[0-9]*:../../textproc/py-anyjson
 DEPENDS+=	${PYPKGPREFIX}-billiard>=3.3.0.14:../../parallel/py-billiard
-DEPENDS+=	${PYPKGPREFIX}-kombu>=3.0.12:../../net/py-kombu
+DEPENDS+=	${PYPKGPREFIX}-kombu>=3.0.14:../../net/py-kombu
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	c
