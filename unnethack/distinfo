@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2014/04/07 22:04:16 rhialto Exp $
+$NetBSD: distinfo,v 1.6 2014/04/08 21:02:25 rhialto Exp $
 
 SHA1 (unnethack-5.1.0-20131208.tar.gz) = 8535f69eca4f510a29dd1bf869aa55d6dea4664d
 RMD160 (unnethack-5.1.0-20131208.tar.gz) = 3dab0a9427772bbacddad4dbd1251b347465f985
 Size (unnethack-5.1.0-20131208.tar.gz) = 5422521 bytes
-SHA1 (patch-configure) = d60045f0fe0d1a90a421cdccbcd0af8221791023
-SHA1 (patch-include_config.h) = a4c63602977c0237cb0e3c0b74c96bff73591366
-SHA1 (patch-sys_autoconf_Makefile.doc) = 79eafdfdce1060ac47c0aa24bba15a3b511874ef
+SHA1 (patch-configure) = d3ceae3a9ff858c585161e38ee99e04a7f481d75
+SHA1 (patch-include_config.h) = a6b583a4919dd233ba507276bd56f86b1c1810ea
+SHA1 (patch-sys_autoconf_Makefile.doc) = f54a654de70bc7e2e19fefbdebd948f49dcf6dfc
 SHA1 (patch-sys_autoconf_Makefile.src) = aed49e3157c4540304f187b4d9ea5a3011d06f87
 SHA1 (patch-sys_autoconf_Makefile.top) = 142dd5705a72662e9312a930a020890e3d23a2c9
-SHA1 (patch-sys_autoconf_acinclude.m4) = 6d90c016161c1e10f7944cb133f8fbe1be0343dd
+SHA1 (patch-sys_autoconf_acinclude.m4) = 53e1700dbe1bfa49363a1ced236c0c5d7c083e1a

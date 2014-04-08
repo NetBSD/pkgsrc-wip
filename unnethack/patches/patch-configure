@@ -1,8 +1,19 @@
-$NetBSD: patch-configure,v 1.3 2014/04/07 22:04:16 rhialto Exp $
+$NetBSD: patch-configure,v 1.4 2014/04/08 21:02:25 rhialto Exp $
 
---- configure.orig	2014-04-07 20:34:23.000000000 +0000
+If the user supplies LIBXAW_CFLAGS and LIBXAW_LIBS, *really* believe her.
+
+--- configure.orig	2013-12-08 15:00:17.000000000 +0000
 +++ configure
-@@ -3927,7 +3927,7 @@ fi
+@@ -3883,6 +3883,8 @@ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+   LIBXAW_CFLAGS="$nethack__cflags"; LIBXAW_LIBS="$nethack__libs"; { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }; nethack__succeeded=yes
++    NETHACK__LIBXAW_CFLAGS="$nethack__cflags"
++    NETHACK__LIBXAW_LIBS="$nethack__libs"
+ else
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }; nethack__succeeded=no
+@@ -3927,7 +3929,7 @@ fi
      if test $nethack__succeeded = yes; then
  
      nethack__cflags="$NETHACK__LIBXAW_CFLAGS"
@@ -11,7 +22,7 @@ $NetBSD: patch-configure,v 1.3 2014/04/07 22:04:16 rhialto Exp $
  
      case "$nethack__flag" in
  	-I*|-L*|-l*)
-@@ -3952,7 +3952,7 @@ fi
+@@ -3952,7 +3954,7 @@ fi
  
  
      nethack__libs="$NETHACK__LIBXAW_LIBS"
