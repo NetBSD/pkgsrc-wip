@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/09 00:24:09 jgoamakf Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/zed
+lib/ocaml/site-lib/zed/META
+lib/ocaml/site-lib/zed/zed.a
+lib/ocaml/site-lib/zed/zed.cma
+lib/ocaml/site-lib/zed/zed.cmxa
+lib/ocaml/site-lib/zed/zed.cmxs
+lib/ocaml/site-lib/zed/zed_cursor.cmi
+lib/ocaml/site-lib/zed/zed_cursor.cmx
+lib/ocaml/site-lib/zed/zed_cursor.mli
+lib/ocaml/site-lib/zed/zed_edit.cmi
+lib/ocaml/site-lib/zed/zed_edit.cmx
+lib/ocaml/site-lib/zed/zed_edit.mli
+lib/ocaml/site-lib/zed/zed_input.cmi
+lib/ocaml/site-lib/zed/zed_input.cmx
+lib/ocaml/site-lib/zed/zed_input.mli
+lib/ocaml/site-lib/zed/zed_lines.cmi
+lib/ocaml/site-lib/zed/zed_lines.cmx
+lib/ocaml/site-lib/zed/zed_lines.mli
+lib/ocaml/site-lib/zed/zed_macro.cmi
+lib/ocaml/site-lib/zed/zed_macro.cmx
+lib/ocaml/site-lib/zed/zed_macro.mli
+lib/ocaml/site-lib/zed/zed_re.cmi
+lib/ocaml/site-lib/zed/zed_re.cmx
+lib/ocaml/site-lib/zed/zed_re.mli
+lib/ocaml/site-lib/zed/zed_rope.cmi
+lib/ocaml/site-lib/zed/zed_rope.cmx
+lib/ocaml/site-lib/zed/zed_rope.mli
+lib/ocaml/site-lib/zed/zed_utf8.cmi
+lib/ocaml/site-lib/zed/zed_utf8.cmx
+lib/ocaml/site-lib/zed/zed_utf8.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/zed
