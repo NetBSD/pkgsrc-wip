@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/09 00:24:09 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/09 00:54:58 jgoamakf Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	zed-1.2
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/944/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/yoriyuki/Camomile/tree/master/Camomile
+HOMEPAGE=	http://forge.ocamlcore.org/projects/zed/
 COMMENT=	Zed is an abstract engine for text edition
 LICENSE=	modified-bsd
 
