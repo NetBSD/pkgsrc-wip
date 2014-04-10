@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/11/07 12:40:27 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/10 15:41:17 hfath Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -42,6 +42,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_
 DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.53:../../devel/php-libawl
 DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=5.3.18:../../time/php-calendar
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3.18:../../www/php-curl
+DEPENDS+=	p5-DBI>=1.631:../../databases/p5-DBI
 DEPENDS+=	p5-YAML>=0.71:../../textproc/p5-YAML
 DEPENDS+=	pwgen>=2.06:../../sysutils/pwgen
 DEPENDS+=	postgresql${PGSQL_VERSION}-client-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-client
