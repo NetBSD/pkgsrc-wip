@@ -1,10 +1,10 @@
-$NetBSD: patch-SConstruct,v 1.5 2013/10/19 06:44:31 bubuchka Exp $
+$NetBSD: patch-SConstruct,v 1.6 2014/04/10 11:46:42 fhajny Exp $
 
 Add support for NetBSD/Dragonfly, fix locations.
---- SConstruct.orig	2012-08-28 05:28:11.000000000 +0000
+--- SConstruct.orig	2014-04-07 00:36:57.000000000 +0000
 +++ SConstruct
-@@ -257,7 +257,9 @@ linux = False
- linux64  = False
+@@ -59,7 +59,9 @@ nix = False
+ linux = False
  darwin = False
  windows = False
 +dragonfly = False
@@ -12,67 +12,59 @@ Add support for NetBSD/Dragonfly, fix locations.
 +netbsd = False
  openbsd = False
  solaris = False
- force32 = has_option( "force32" ) 
-@@ -530,6 +532,14 @@ elif "sunos5" == os.sys.platform:
+ 
+@@ -71,8 +73,12 @@ elif platform.startswith("linux"):
+     platform = "linux"
+ elif "sunos5" == platform:
+     solaris = True
++elif platform.startswith( "dragonfly" ):
++    dragonfly = True
+ elif platform.startswith( "freebsd" ):
+     freebsd = True
++elif platform.startswith( "netbsd" ):
++    netbsd = True
+ elif platform.startswith( "openbsd" ):
+     openbsd = True
+ elif "win32" == platform:
+@@ -677,6 +683,12 @@ elif solaris:
       env.Append( CPPDEFINES=[ "__sunos__" ] )
       env.Append( LIBS=["socket","resolv"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
-+    nix = True
-+    dragonfly = True
 +    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
 +    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
 +
- elif os.sys.platform.startswith( "freebsd" ):
-     nix = True
-     freebsd = True
-@@ -539,6 +549,14 @@ elif os.sys.platform.startswith( "freebs
+ elif freebsd:
+     env.Append( LIBS=[ "kvm" ] )
+     env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
+@@ -684,6 +696,12 @@ elif freebsd:
      env.Append( CPPDEFINES=[ "__freebsd__" ] )
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
-+    nix = True
-+    netbsd = True
 +    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
 +    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__netbsd__" ] )
 +
- elif os.sys.platform.startswith( "openbsd" ):
-     nix = True
-     openbsd = True
-@@ -690,8 +708,11 @@ if nix:
-             env.Append( CCFLAGS=["-fno-builtin-memcmp"] ) # glibc's memcmp is faster than gcc's
+ elif openbsd:
+     env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
+     env.Append( EXTRALIBPATH=[ "/usr/local/lib" ] )
+@@ -822,8 +840,11 @@ if nix:
+         env.Append( CCFLAGS=["-Werror", "-pipe"] )
  
      env.Append( CPPDEFINES=["_FILE_OFFSET_BITS=64"] )
 +    env.Append( CPPDEFINES=["XP_UNIX=1"] )
      env.Append( CXXFLAGS=["-Wnon-virtual-dtor", "-Woverloaded-virtual"] )
 +    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
-     env.Append( LINKFLAGS=["-fPIC", "-pthread",  "-rdynamic"] )
+     env.Append( LINKFLAGS=["-fPIC", "-pthread"] )
 +    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
-     env.Append( LIBS=[] )
  
-     #make scons colorgcc friendly
-@@ -790,6 +811,16 @@ def doConfigure(myenv):
-             print( "c++ compiler not installed!" )
-             Exit(1)
- 
-+    if use_system_version_of_library("pcre"):
-+        if not conf.CheckLib("pcrecpp"):
-+            Exit(1)
-+        if not conf.CheckLib("pcre"):
-+            Exit(1)
-+
-+    if use_system_version_of_library("snappy"):
-+        if not conf.CheckLib("snappy"):
-+            Exit(1)
-+
-     if use_system_version_of_library("boost"):
-         if not conf.CheckCXXHeader( "boost/filesystem/operations.hpp" ):
-             print( "can't find boost headers" )
-@@ -864,7 +895,7 @@ def doConfigure(myenv):
+     # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
+     # startup.
+@@ -1395,7 +1416,7 @@ def doConfigure(myenv):
          Exit(1)
  
      # requires ports devel/libexecinfo to be installed

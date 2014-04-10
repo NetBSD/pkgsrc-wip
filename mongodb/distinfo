@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.16 2014/01/29 12:23:37 fhajny Exp $
+$NetBSD: distinfo,v 1.17 2014/04/10 11:46:42 fhajny Exp $
 
-SHA1 (mongodb-src-r2.4.9.tar.gz) = 3aa495cf32769a09ee9532827391892d96337d6b
-RMD160 (mongodb-src-r2.4.9.tar.gz) = fc83bf854feec6627dbcc531f71c6e31f1bcf30f
-Size (mongodb-src-r2.4.9.tar.gz) = 14162773 bytes
-SHA1 (patch-SConstruct) = 93e94b30c6b68a0603ac99a105541e8738299424
-SHA1 (patch-debian_mongodb.conf) = d52115eadf871ee1d68073f26ceb7ed90aeeb9ef
-SHA1 (patch-shell__dbshell.cpp) = 799b292bb21637c64682a8b4fbd54d78783165c9
-SHA1 (patch-src_mongo_base_initializer.h) = 408aae3c53c5db843218c7938ca83589ee9971fd
-SHA1 (patch-src_mongo_db_db.cpp) = 2164aa92e3c33952a9da9d6018a2a806ff3fc1bf
-SHA1 (patch-src_mongo_platform_random.cpp) = 51aaf952664cb9be63c41198606e0c38cdad5546
-SHA1 (patch-src_mongo_shell_shell__utils__launcher.h) = 9402bce2d5ec0671953c89a76bc21a5fe99152f5
-SHA1 (patch-src_mongo_util_time__support.h) = d42c4f22a980b77166f6a22616b7cbc7ac7d8e0b
-SHA1 (patch-src_third__party_s2_s2.cc) = 59079e2841ff0156ce7283917be3b85f10a9f41f
-SHA1 (patch-src_third__party_s2_s2polygonbuilder.cc) = f88bfabb69685412948ecd5c04dcf0a52520e134
-SHA1 (patch-util__file_allocator.cpp) = 6eee5f3bbe126bbf813eac24658bdd09c2a9447b
+SHA1 (mongodb-src-r2.6.0.tar.gz) = 35f8efe61d992f4b71c9205a9dbcab50e745c9a3
+RMD160 (mongodb-src-r2.6.0.tar.gz) = b5cdda65c44b14443248b04b1ffe9c804b4248f6
+Size (mongodb-src-r2.6.0.tar.gz) = 14411946 bytes
+SHA1 (patch-SConstruct) = 4ab771ef562fc2c890a4f5af8ec04eb7d64bdf83
+SHA1 (patch-debian_mongod.conf) = 35f3d7e7da4f573458bef0fe742c1790adec8200
+SHA1 (patch-src_mongo_base_initializer.h) = add32c5940c922a98122d0e6883eb3ad52dc25c5
+SHA1 (patch-src_mongo_db_exec_working__set.cpp) = f3520f5167a696ff9333ee421565a0515704963e
+SHA1 (patch-src_mongo_db_pipeline_document__source__cursor.cpp) = b9dec1013821573e9a4f4a533e131ec079c21975
+SHA1 (patch-src_mongo_db_pipeline_document__source__sort.cpp) = 956e03a6a2edb0d21f871207dddfa081fc539356
+SHA1 (patch-src_mongo_platform_random.cpp) = cf44302102618d32a8c6427500482c26e7b08b58
+SHA1 (patch-src_mongo_s_chunk__manager__targeter.cpp) = 05441130c715c947edd00fad542635e98efc254b
+SHA1 (patch-src_mongo_shell_dbshell.cpp) = c60ecb69a5c40e55eb602c5838dcf9d82008446e
+SHA1 (patch-src_third__party_s2_s2.cc) = 953e9d9870d7c7d7fb0c8d7f228192416bf7efbe
+SHA1 (patch-src_third__party_s2_s2polygonbuilder.cc) = a1e3c5120522a7ced38e51671478acfa0ca7a6de

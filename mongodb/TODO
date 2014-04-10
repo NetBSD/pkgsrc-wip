@@ -1,3 +1,0 @@
-mongodb currently doesn't build if boost-libs were built with -std=c++0x,
-as is the case with devel/boost-lib as of 2013Q4. This may potentially
-only be fixed in 2.5.x which should be c++11 compliant.
