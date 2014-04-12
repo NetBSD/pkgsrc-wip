@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 16:23:18 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/04/12 17:54:47 thomasklausner Exp $
 
-DISTNAME=	swfmill-0.2.11
-PKGREVISION=	1
+DISTNAME=	swfmill-0.3.3
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://swfmill.org/releases/
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://swfmill.org/
 COMMENT=	Collection of SWF manipulation and creation utilities
-
-PKG_DESTDIR_SUPPORT=	none
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 

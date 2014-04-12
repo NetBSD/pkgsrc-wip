@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2014/04/12 17:54:47 thomasklausner Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2013-10-31 22:34:13.000000000 +0000
++++ configure
+@@ -16520,7 +16520,7 @@ fi
+ 
+ 
+ 
+-if test "x${XSLTPROC}" == "x"; then
++if test "x${XSLTPROC}" = "x"; then
+ 	as_fn_error $? "Please install xsltproc before trying to build swfmill" "$LINENO" 5
+ fi
+ 
