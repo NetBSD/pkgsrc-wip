@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/09/06 14:48:03 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/13 14:23:12 tnn2 Exp $
 #
 
-DISTNAME=	libzdb-2.12
+DISTNAME=	libzdb-3.0
 CATEGORIES=	databases
 MASTER_SITES=	http://www.tildeslash.com/libzdb/dist/
 

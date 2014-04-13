@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/09/06 14:48:03 tnn2 Exp $
+$NetBSD: distinfo,v 1.4 2014/04/13 14:23:12 tnn2 Exp $
 
-SHA1 (libzdb-2.12.tar.gz) = 4d34be255afddbd025b2f60c5cd11b4389b5c88c
-RMD160 (libzdb-2.12.tar.gz) = 1838d7b7058db6a7dae155bd89912f660380818a
-Size (libzdb-2.12.tar.gz) = 599160 bytes
+SHA1 (libzdb-3.0.tar.gz) = bcf14c11cfcd0c05ecc8740f43cd0d6170406dc1
+RMD160 (libzdb-3.0.tar.gz) = 951c2db724f17c54f951d0afb7866496d3654e8a
+Size (libzdb-3.0.tar.gz) = 700284 bytes
