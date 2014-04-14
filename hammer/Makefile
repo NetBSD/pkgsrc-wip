@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/14 09:58:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/14 10:03:05 thomasklausner Exp $
 
 VERSION=		1.0.0-rc3
 DISTNAME=		hammer-${VERSION}
@@ -17,6 +17,7 @@ BUILD_DEPENDS+=         scons-[0-9]*:../../devel/scons
 USE_LANGUAGES=		c c++
 DIST_SUBDIR=		hammer
 EXTRACT_USING=		bsdtar
+PKGCONFIG_OVERRIDE=	libhammer.pc.in
 
 SCONS_ARGS=		--variant=opt DESTDIR=${DESTDIR} prefix=${PREFIX}
 
