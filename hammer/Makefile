@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/14 09:58:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/14 09:58:50 thomasklausner Exp $
 
 VERSION=		1.0.0-rc3
 DISTNAME=		hammer-${VERSION}
@@ -14,7 +14,6 @@ LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=         scons-[0-9]*:../../devel/scons
 
-#USE_TOOLS+=		gtar
 USE_LANGUAGES=		c c++
 DIST_SUBDIR=		hammer
 EXTRACT_USING=		bsdtar
