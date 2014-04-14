@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/04/14 11:31:24 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/14 11:41:58 obache Exp $
 
 VERSION=		1.0.0-rc3
 DISTNAME=		hammer-${VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=		http://github.com/UpstandingHackers/hammer
 COMMENT=		Parser combinator library in C
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=         scons-[0-9]*:../../devel/scons
+BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
 
 USE_LANGUAGES=		c c++
 EXTRACT_USING=		bsdtar
