@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/14 21:25:04 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/15 10:59:41 szptvlfn Exp $
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/HShighlighting-kate-${PKGVERSION}.o
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Paths_highlighting_kate.hi
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/Paths_highlighting_kate.p_hi
@@ -218,3 +218,26 @@ lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/libHShighlighting-kate-${
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/libHShighlighting-kate-${PKGVERSION}_p.a
 lib/highlighting-kate-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/highlighting-kate-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/Text-Highlighting-Kate-Format-HTML.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/Text-Highlighting-Kate-Format-LaTeX.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/Text-Highlighting-Kate-Styles.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/Text-Highlighting-Kate-Syntax.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/Text-Highlighting-Kate-Types.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/Text-Highlighting-Kate.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/highlighting-kate.haddock
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/mini_Text-Highlighting-Kate-Format-HTML.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/mini_Text-Highlighting-Kate-Format-LaTeX.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/mini_Text-Highlighting-Kate-Styles.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/mini_Text-Highlighting-Kate-Syntax.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/mini_Text-Highlighting-Kate-Types.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/mini_Text-Highlighting-Kate.html
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/highlighting-kate-${PKGVERSION}/html/synopsis.png

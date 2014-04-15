@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/01/15 09:04:32 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/15 10:59:41 szptvlfn Exp $
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive.hi
@@ -25,3 +25,30 @@ lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/libHSprimitive-${PKGVERSION}.a
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/libHSprimitive-${PKGVERSION}_p.a
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/primitive-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Control-Monad-Primitive.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Data-Primitive-Addr.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Data-Primitive-Array.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Data-Primitive-ByteArray.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Data-Primitive-MachDeps.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Data-Primitive-MutVar.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Data-Primitive-Types.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Data-Primitive.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Control-Monad-Primitive.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Data-Primitive-Addr.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Data-Primitive-Array.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Data-Primitive-ByteArray.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Data-Primitive-MachDeps.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Data-Primitive-MutVar.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Data-Primitive-Types.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/mini_Data-Primitive.html
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/primitive.haddock
+${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/synopsis.png

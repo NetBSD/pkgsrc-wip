@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/10 23:19:24 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/15 10:59:40 szptvlfn Exp $
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/Data/Default.hi
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/Data/Default.p_hi
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-${PKGVERSION}.o
@@ -6,3 +6,16 @@ lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-${PKGVERSION
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-${PKGVERSION}_p.a
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/data-default-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/Data-Default.html
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/data-default.haddock
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/mini_Data-Default.html
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/data-default-${PKGVERSION}/html/synopsis.png

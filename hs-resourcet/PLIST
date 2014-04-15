@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/16 23:12:49 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/15 10:59:41 szptvlfn Exp $
 lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Resource.hi
 lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Resource.p_hi
 lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Resource/Internal.hi
@@ -8,3 +8,18 @@ lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/libHSresourcet-${PKGVERSION}.a
 lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/libHSresourcet-${PKGVERSION}_p.a
 lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/resourcet-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/Control-Monad-Trans-Resource-Internal.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/Control-Monad-Trans-Resource.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/mini_Control-Monad-Trans-Resource-Internal.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/mini_Control-Monad-Trans-Resource.html
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/resourcet.haddock
+${PLIST.doc}share/doc/resourcet-${PKGVERSION}/html/synopsis.png

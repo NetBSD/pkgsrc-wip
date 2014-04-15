@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/08/21 18:47:59 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/15 10:59:40 szptvlfn Exp $
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64.hi
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64.p_hi
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64/Internal.hi
@@ -14,3 +14,22 @@ lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSbase64-bytestring-${
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSbase64-bytestring-${PKGVERSION}_p.a
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/base64-bytestring-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/Data-ByteString-Base64-Lazy.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/Data-ByteString-Base64-URL-Lazy.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/Data-ByteString-Base64-URL.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/Data-ByteString-Base64.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/base64-bytestring.haddock
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/mini_Data-ByteString-Base64-Lazy.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/mini_Data-ByteString-Base64-URL-Lazy.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/mini_Data-ByteString-Base64-URL.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/mini_Data-ByteString-Base64.html
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/base64-bytestring-${PKGVERSION}/html/synopsis.png

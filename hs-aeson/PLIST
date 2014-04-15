@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/25 14:09:55 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/15 10:59:40 szptvlfn Exp $
 lib/aeson-${PKGVERSION}/${HASKELL_VERSION}/Data/Aeson.hi
 lib/aeson-${PKGVERSION}/${HASKELL_VERSION}/Data/Aeson.p_hi
 lib/aeson-${PKGVERSION}/${HASKELL_VERSION}/Data/Aeson/Encode.hi
@@ -28,3 +28,26 @@ lib/aeson-${PKGVERSION}/${HASKELL_VERSION}/libHSaeson-${PKGVERSION}.a
 lib/aeson-${PKGVERSION}/${HASKELL_VERSION}/libHSaeson-${PKGVERSION}_p.a
 lib/aeson-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/aeson-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/Data-Aeson-Encode.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/Data-Aeson-Generic.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/Data-Aeson-Parser.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/Data-Aeson-TH.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/Data-Aeson-Types.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/Data-Aeson.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/aeson.haddock
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/mini_Data-Aeson-Encode.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/mini_Data-Aeson-Generic.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/mini_Data-Aeson-Parser.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/mini_Data-Aeson-TH.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/mini_Data-Aeson-Types.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/mini_Data-Aeson.html
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/aeson-${PKGVERSION}/html/synopsis.png

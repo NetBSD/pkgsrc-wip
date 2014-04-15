@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/08 21:42:32 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/15 10:59:41 szptvlfn Exp $
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/HStexmath-${PKGVERSION}.o
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath.hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath.p_hi
@@ -20,3 +20,30 @@ lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/libHStexmath-${PKGVERSION}.a
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/libHStexmath-${PKGVERSION}_p.a
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/texmath-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath-Macros.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath-MathML.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath-OMML.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath-Pandoc.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath-Parser.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath-ToUnicode.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath-Types.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/Text-TeXMath.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath-Macros.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath-MathML.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath-OMML.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath-Pandoc.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath-Parser.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath-ToUnicode.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath-Types.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/mini_Text-TeXMath.html
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/texmath-${PKGVERSION}/html/texmath.haddock

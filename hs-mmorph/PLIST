@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/01 08:01:39 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/15 10:59:41 szptvlfn Exp $
 lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Morph.hi
 lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Morph.p_hi
 lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Compose.hi
@@ -8,3 +8,18 @@ lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/libHSmmorph-${PKGVERSION}.a
 lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/libHSmmorph-${PKGVERSION}_p.a
 lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/mmorph-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/Control-Monad-Morph.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/Control-Monad-Trans-Compose.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/mini_Control-Monad-Morph.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/mini_Control-Monad-Trans-Compose.html
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/mmorph.haddock
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/mmorph-${PKGVERSION}/html/synopsis.png

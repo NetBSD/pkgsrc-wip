@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/02/23 14:34:04 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/15 10:59:40 szptvlfn Exp $
 lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec.hi
 lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec.p_hi
 lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/ByteString.hi
@@ -40,3 +40,38 @@ lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/libHSattoparsec-${PKGVERSION}.a
 lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/libHSattoparsec-${PKGVERSION}_p.a
 lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/attoparsec-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-ByteString-Char8.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-ByteString-Lazy.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-ByteString.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Char8.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Combinator.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Lazy.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Number.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Text-Lazy.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Text.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Types.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec-Zepto.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/Data-Attoparsec.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/attoparsec.haddock
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-ByteString-Char8.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-ByteString-Lazy.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-ByteString.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Char8.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Combinator.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Lazy.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Number.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Text-Lazy.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Text.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Types.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec-Zepto.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/mini_Data-Attoparsec.html
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/attoparsec-${PKGVERSION}/html/synopsis.png

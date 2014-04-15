@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/16 23:20:29 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/15 10:59:40 szptvlfn Exp $
 lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit.hi
 lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit.p_hi
 lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Binary.hi
@@ -20,3 +20,28 @@ lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSconduit-${PKGVERSION}.a
 lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSconduit-${PKGVERSION}_p.a
 lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/conduit-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/Data-Conduit-Binary.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/Data-Conduit-Internal.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/Data-Conduit-Lazy.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/Data-Conduit-List.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/Data-Conduit-Text.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/Data-Conduit-Util.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/Data-Conduit.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/conduit.haddock
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/mini_Data-Conduit-Binary.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/mini_Data-Conduit-Internal.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/mini_Data-Conduit-Lazy.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/mini_Data-Conduit-List.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/mini_Data-Conduit-Text.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/mini_Data-Conduit-Util.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/mini_Data-Conduit.html
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/conduit-${PKGVERSION}/html/synopsis.png

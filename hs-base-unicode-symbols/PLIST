@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/11/02 16:28:59 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/15 10:59:40 szptvlfn Exp $
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Applicative/Unicode.hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Applicative/Unicode.p_hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/Unicode.hi
@@ -28,3 +28,38 @@ lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/libHSbase-unicode-symb
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/libHSbase-unicode-symbols-${PKGVERSION}_p.a
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/base-unicode-symbols-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Control-Applicative-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Control-Arrow-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Control-Category-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Control-Monad-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Data-Bool-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Data-Eq-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Data-Foldable-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Data-Function-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Data-List-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Data-Monoid-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Data-Ord-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/Prelude-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/base-unicode-symbols.haddock
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Control-Applicative-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Control-Arrow-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Control-Category-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Control-Monad-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Data-Bool-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Data-Eq-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Data-Foldable-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Data-Function-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Data-List-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Data-Monoid-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Data-Ord-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/mini_Prelude-Unicode.html
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/base-unicode-symbols-${PKGVERSION}/html/synopsis.png

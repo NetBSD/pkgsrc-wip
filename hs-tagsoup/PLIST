@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/08/21 15:44:27 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/15 10:59:41 szptvlfn Exp $
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/HStagsoup-${PKGVERSION}.o
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/TagSoup.hi
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/TagSoup.p_hi
@@ -30,3 +30,24 @@ lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/libHStagsoup-${PKGVERSION}.a
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/libHStagsoup-${PKGVERSION}_p.a
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/tagsoup-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/Text-HTML-TagSoup-Entity.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/Text-HTML-TagSoup-Match.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/Text-HTML-TagSoup-Tree.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/Text-HTML-TagSoup.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/Text-StringLike.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/mini_Text-HTML-TagSoup-Entity.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/mini_Text-HTML-TagSoup-Match.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/mini_Text-HTML-TagSoup-Tree.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/mini_Text-HTML-TagSoup.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/mini_Text-StringLike.html
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/tagsoup-${PKGVERSION}/html/tagsoup.haddock

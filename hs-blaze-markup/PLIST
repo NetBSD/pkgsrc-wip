@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/22 19:46:23 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/15 10:59:40 szptvlfn Exp $
 lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/HSblaze-markup-${PKGVERSION}.o
 lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze.hi
 lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze.p_hi
@@ -16,3 +16,26 @@ lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-markup-${PKGVERSION
 lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-markup-${PKGVERSION}_p.a
 lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/blaze-markup-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/Text-Blaze-Internal.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/Text-Blaze-Renderer-Pretty.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/Text-Blaze-Renderer-String.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/Text-Blaze-Renderer-Text.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/Text-Blaze-Renderer-Utf8.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/Text-Blaze.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/blaze-markup.haddock
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/mini_Text-Blaze-Internal.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/mini_Text-Blaze-Renderer-Pretty.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/mini_Text-Blaze-Renderer-String.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/mini_Text-Blaze-Renderer-Text.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/mini_Text-Blaze-Renderer-Utf8.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/mini_Text-Blaze.html
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/blaze-markup-${PKGVERSION}/html/synopsis.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/02/21 20:17:40 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/15 10:59:42 szptvlfn Exp $
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Array.hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Array.p_hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Base.hi
@@ -20,3 +20,20 @@ lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/libHSunordered-contain
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/libHSunordered-containers-${PKGVERSION}_p.a
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/unordered-containers-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/Data-HashMap-Lazy.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/Data-HashMap-Strict.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/Data-HashSet.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/mini_Data-HashMap-Lazy.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/mini_Data-HashMap-Strict.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/mini_Data-HashSet.html
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/unordered-containers-${PKGVERSION}/html/unordered-containers.haddock
