@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5707 2014/04/15 18:59:01 thomasklausner Exp $
+# $Id: Makefile,v 1.5708 2014/04/16 17:17:24 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2435,7 +2435,6 @@ SUBDIR+=	py-amqplib
 SUBDIR+=	py-anfft
 SUBDIR+=	py-antlr3
 SUBDIR+=	py-aopython
-SUBDIR+=	py-apsw
 SUBDIR+=	py-aqopa
 SUBDIR+=	py-arabic
 SUBDIR+=	py-argh
