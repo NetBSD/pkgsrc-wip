@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/08 09:51:57 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/16 22:16:27 szptvlfn Exp $
 lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/GHC/Paths.hi
 lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/GHC/Paths.p_hi
 lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/HSghc-paths-${PKGVERSION}.o
@@ -6,3 +6,16 @@ lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-paths-${PKGVERSION}.a
 lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-paths-${PKGVERSION}_p.a
 lib/ghc-paths-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/ghc-paths-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/GHC-Paths.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/ghc-paths.haddock
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/mini_GHC-Paths.html
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/ghc-paths-${PKGVERSION}/html/synopsis.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/03/13 12:15:51 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/04/16 22:16:27 szptvlfn Exp $
 bin/hlint
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.p_hi
@@ -78,6 +78,21 @@ lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}_p.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
 man/man1/hlint.1
 share/doc/${PKGNAME}/LICENSE
+${PLIST.doc}share/doc/${PKGNAME}/html/Language-Haskell-HLint.html
+${PLIST.doc}share/doc/${PKGNAME}/html/Language-Haskell-HLint2.html
+${PLIST.doc}share/doc/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${PKGNAME}/html/frames.html
+${PLIST.doc}share/doc/${PKGNAME}/html/haddock-util.js
+${PLIST.doc}share/doc/${PKGNAME}/html/hlint.haddock
+${PLIST.doc}share/doc/${PKGNAME}/html/hslogo-16.png
+${PLIST.doc}share/doc/${PKGNAME}/html/index-frames.html
+${PLIST.doc}share/doc/${PKGNAME}/html/index.html
+${PLIST.doc}share/doc/${PKGNAME}/html/mini_Language-Haskell-HLint.html
+${PLIST.doc}share/doc/${PKGNAME}/html/mini_Language-Haskell-HLint2.html
+${PLIST.doc}share/doc/${PKGNAME}/html/minus.gif
+${PLIST.doc}share/doc/${PKGNAME}/html/ocean.css
+${PLIST.doc}share/doc/${PKGNAME}/html/plus.gif
+${PLIST.doc}share/doc/${PKGNAME}/html/synopsis.png
 share/${PKGNAME}/Default.hs
 share/${PKGNAME}/Dollar.hs
 share/${PKGNAME}/Generalise.hs

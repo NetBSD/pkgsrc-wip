@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/16 12:21:07 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/16 22:16:27 szptvlfn Exp $
 bin/cpphs
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/HScpphs-${PKGVERSION}.o
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs.hi
@@ -27,3 +27,18 @@ lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}_p.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/cpphs-${PKGVERSION}/LICENCE-LGPL
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/Language-Preprocessor-Cpphs.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/Language-Preprocessor-Unlit.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/cpphs.haddock
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/mini_Language-Preprocessor-Cpphs.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/mini_Language-Preprocessor-Unlit.html
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/synopsis.png
