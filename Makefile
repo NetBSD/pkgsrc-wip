@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5708 2014/04/16 17:17:24 thomasklausner Exp $
+# $Id: Makefile,v 1.5709 2014/04/16 17:24:09 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -268,7 +268,6 @@ SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
-SUBDIR+=	calibre
 SUBDIR+=	calligra
 SUBDIR+=	callweaver
 SUBDIR+=	calypso
