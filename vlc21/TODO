@@ -1,6 +1,5 @@
 This version removes OSSv3 support.
-Either bring it back (using code from previous version)
-or fix NetBSD to provide it -- or import it anyway and use
+Either add OSSv4 support to NetBSD or import it anyway and use
 a different sound system.
 
 Compiles & packages, not runtime tested yet.
