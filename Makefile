@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5710 2014/04/17 00:34:54 thomasklausner Exp $
+# $Id: Makefile,v 1.5711 2014/04/17 11:04:29 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1878,6 +1878,7 @@ SUBDIR+=	obmenu
 SUBDIR+=	ocaml-camomile
 SUBDIR+=	ocaml-zed
 SUBDIR+=	ocamlgraph
+SUBDIR+=	ocamlmod
 SUBDIR+=	ocamlweb
 SUBDIR+=	oclock
 SUBDIR+=	octave
