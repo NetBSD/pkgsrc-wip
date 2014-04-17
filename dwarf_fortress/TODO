@@ -1,0 +1,2 @@
+Doesn't start for me on NetBSD-6.99.40:
+Gives "libpng: bad parameters to zlib" during startup.
