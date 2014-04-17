@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2014/04/15 18:52:52 thomasklausner Exp $
+$NetBSD: patch-af,v 1.2 2014/04/17 06:46:46 thomasklausner Exp $
 
---- modules/gui/qt4/input_manager.cpp.orig	2012-07-04 22:14:09.000000000 +0000
+--- modules/gui/qt4/input_manager.cpp.orig	2014-02-21 13:59:56.000000000 +0000
 +++ modules/gui/qt4/input_manager.cpp
-@@ -407,7 +407,7 @@ void InputManager::UpdatePosition()
+@@ -402,7 +402,7 @@ void InputManager::UpdatePosition()
  {
      /* Update position */
      int i_length;
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1 2014/04/15 18:52:52 thomasklausner Exp $
      float f_pos;
      i_length = var_GetTime(  p_input , "length" ) / CLOCK_FREQ;
      i_time = var_GetTime(  p_input , "time");
-@@ -902,21 +902,21 @@ void InputManager::setAtoB()
+@@ -935,21 +935,21 @@ void InputManager::setAtoB()
      {
          timeB = var_GetTime( THEMIM->getInput(), "time"  );
          var_SetTime( THEMIM->getInput(), "time" , timeA );
@@ -36,5 +36,5 @@ $NetBSD: patch-af,v 1.1 2014/04/15 18:52:52 thomasklausner Exp $
 -void InputManager::AtoBLoop( float, int64_t i_time, int )
 +void InputManager::AtoBLoop( float, putime_t i_time, int )
  {
-     if( timeB )
-     {
+     if( timeB && i_time >= timeB )
+         var_SetTime( THEMIM->getInput(), "time" , timeA );
