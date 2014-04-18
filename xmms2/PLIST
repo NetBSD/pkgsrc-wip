@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2013/01/19 08:26:06 othyro Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/04/18 16:18:22 thomasklausner Exp $
 ${PLIST.readline}bin/nyxmms2
-bin/xmms2
 bin/xmms2-et
 ${PLIST.avahi}bin/xmms2-find-avahi
 bin/xmms2-launcher
 ${PLIST.avahi}bin/xmms2-mdns-avahi
+bin/xmms2-mdns-dnssd
 bin/xmms2-mlib-updater
 bin/xmms2d
 include/xmms2/xmms/xmms_bindata.h
@@ -64,7 +64,7 @@ include/xmms2/xmmsclient/xmmsclient++/stats.h
 include/xmms2/xmmsclient/xmmsclient++/typedefs.h
 include/xmms2/xmmsclient/xmmsclient++/xform.h
 include/xmms2/xmmsclient/xmmsclient-cf.h
-${PLIST.ecore}include/xmms2/xmmsclient/xmmsclient-ecore.h
+include/xmms2/xmmsclient/xmmsclient-ecore.h
 include/xmms2/xmmsclient/xmmsclient-glib.h
 include/xmms2/xmmsclient/xmmsclient-qt.h
 include/xmms2/xmmsclient/xmmsclient.h
@@ -94,15 +94,15 @@ ${PLIST.ecore}lib/pkgconfig/xmms2-client-ecore.pc
 lib/pkgconfig/xmms2-client-glib.pc
 lib/pkgconfig/xmms2-client.pc
 lib/pkgconfig/xmms2-plugin.pc
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/__init__.py
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/collections.py
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/consts.py
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/glib.py
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/propdict.py
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/qt3.py
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/sync.py
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/xmmsapi.so
-${PLIST.pyrex}${PYSITELIB}/xmmsclient/xmmsvalue.so
+${PYSITELIB}/xmmsclient/__init__.py
+${PYSITELIB}/xmmsclient/collections.py
+${PYSITELIB}/xmmsclient/consts.py
+${PYSITELIB}/xmmsclient/glib.py
+${PYSITELIB}/xmmsclient/propdict.py
+${PYSITELIB}/xmmsclient/qt3.py
+${PYSITELIB}/xmmsclient/sync.py
+${PYSITELIB}/xmmsclient/xmmsapi.so
+${PYSITELIB}/xmmsclient/xmmsvalue.so
 ${PLIST.ruby}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}/xmmsclient_ext.so
 ${PLIST.ruby}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}/xmmsclient_glib.so
 ${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient.rb
@@ -110,7 +110,6 @@ ${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient/async.rb
 ${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient/sync.rb
 ${PLIST.faad}lib/xmms2/libxmms_faad.so
 ${PLIST.libao}lib/xmms2/libxmms_ao.so
-lib/xmms2/libxmms_airplay.so
 lib/xmms2/libxmms_apefile.so
 lib/xmms2/libxmms_asf.so
 lib/xmms2/libxmms_asx.so
@@ -125,7 +124,7 @@ ${PLIST.faad}lib/xmms2/libxmms_faad.so
 ${PLIST.flac}lib/xmms2/libxmms_flac.so
 lib/xmms2/libxmms_flv.so
 ${PLIST.libgme}lib/xmms2/libxmms_gme.so
-${PLIST.gnomevfs}lib/xmms2/libxmms_gvfs.so
+lib/xmms2/libxmms_gvfs.so
 lib/xmms2/libxmms_html.so
 ${PLIST.shout}lib/xmms2/libxmms_ices.so
 lib/xmms2/libxmms_icymetaint.so
@@ -138,7 +137,7 @@ ${PLIST.libmms}lib/xmms2/libxmms_mms.so
 ${PLIST.modplug}lib/xmms2/libxmms_modplug.so
 lib/xmms2/libxmms_mp4.so
 ${PLIST.libmpg123}lib/xmms2/libxmms_mpg123.so
-${PLIST.mpcdec}lib/xmms2/libxmms_musepack.so
+${PLIST.musepack}lib/xmms2/libxmms_musepack.so
 lib/xmms2/libxmms_normalize.so
 lib/xmms2/libxmms_null.so
 lib/xmms2/libxmms_nulstripper.so
@@ -148,12 +147,11 @@ lib/xmms2/libxmms_pls.so
 ${PLIST.pulseaudio}lib/xmms2/libxmms_pulse.so
 lib/xmms2/libxmms_replaygain.so
 lib/xmms2/libxmms_rss.so
-${PLIST.sndfile}lib/xmms2/libxmms_sndfile.so
+lib/xmms2/libxmms_sndfile.so
 ${PLIST.speex}lib/xmms2/libxmms_speex.so
 lib/xmms2/libxmms_sun.so
 ${PLIST.tremor}lib/xmms2/libxmms_tremor.so
 lib/xmms2/libxmms_tta.so
-lib/xmms2/libxmms_vocoder.so
 ${PLIST.vorbis}lib/xmms2/libxmms_vorbis.so
 lib/xmms2/libxmms_wave.so
 ${PLIST.wavpack}lib/xmms2/libxmms_wavpack.so
@@ -162,7 +160,6 @@ lib/xmms2/libxmms_xspf.so
 ${PLIST.avahi}man/man1/xmms2-mdns-avahi.1
 man/man1/xmms2-et.1
 man/man1/xmms2-launcher.1
-man/man1/xmms2.1
 man/man1/xmms2d.1
 share/pixmaps/xmms2-128.png
 share/pixmaps/xmms2-16.png

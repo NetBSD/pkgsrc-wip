@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/01/19 08:26:06 othyro Exp $
+# $NetBSD: Makefile,v 1.25 2014/04/18 16:18:22 thomasklausner Exp $
 #
 
 DISTNAME=	xmms2-0.8DrO_o
@@ -13,6 +13,8 @@ HOMEPAGE=	http://xmms2.org/wiki/Main_Page
 COMMENT=	Audio player featuring a client-server model
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 AND modified-bsd # possibly more?
 
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		perl:build pkg-config
 USE_LANGUAGES=		c c++
@@ -24,9 +26,9 @@ WITHOUT_PLUGINS=	nms sc68 # XXX Someone, package these!
 
 PLIST_SUBST+=		PERL5_SUB_INSTALLSITEARCHLIB=${PERL5_SUB_INSTALLARCHLIB:S|perl5/|perl5/site_perl/|1}
 
+PY_PATCHPLIST=          yes
 
 .include "options.mk"
-
 
 do-configure:
 	cd ${WRKSRC:Q} && \
@@ -48,9 +50,9 @@ do-install:
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-# just used for waf
-BUILDLINK_DEPMETHOD.python=	build
+.include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

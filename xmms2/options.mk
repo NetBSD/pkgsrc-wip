@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.14 2014/01/25 10:38:27 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.15 2014/04/18 16:18:22 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	alsa avahi boost curl ecore faad ffmpeg flac fftw gamin
 PKG_SUPPORTED_OPTIONS+=	gnomevfs jack libao libcdio libdiscid libgme libmms
-PKG_SUPPORTED_OPTIONS+=	libmpg123 libofa libvisual mad modplug mpcdec pyrex ruby
+PKG_SUPPORTED_OPTIONS+=	libmpg123 libofa libvisual mad modplug musepack pyrex ruby
 PKG_SUPPORTED_OPTIONS+=	pulseaudio python readline samba shout sidplay
 PKG_SUPPORTED_OPTIONS+=	sndfile speex tremor valgrind vorbis wavpack
 PKG_SUGGESTED_OPTIONS=	flac mad vorbis
@@ -172,9 +172,9 @@ PLIST.modplug=		yes
 WITHOUT_PLUGINS+=	modplug
 .endif
 
-.if !empty(PKG_OPTIONS:Mmpcdec)
-.include "../../audio/libmpcdec/buildlink3.mk"
-PLIST.mpcdec=		yes
+.if !empty(PKG_OPTIONS:Mmusepack)
+.include "../../audio/musepack/buildlink3.mk"
+PLIST.musepack=		yes
 .else
 WITHOUT_PLUGINS+=	musepack
 .endif
@@ -187,7 +187,6 @@ WITHOUT_PLUGINS+=	pulse
 .endif
 
 .if !empty(PKG_OPTIONS:Mpyrex)
-PY_PATCHPLIST=		yes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
 .include "../../lang/python/extension.mk"
