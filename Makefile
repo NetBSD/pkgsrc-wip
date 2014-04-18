@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5715 2014/04/18 21:36:34 thomasklausner Exp $
+# $Id: Makefile,v 1.5716 2014/04/18 22:28:50 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1340,6 +1340,7 @@ SUBDIR+=	jpgtn
 SUBDIR+=	jpicedt
 SUBDIR+=	jruby
 SUBDIR+=	jsl
+SUBDIR+=	jsoncpp-svn
 SUBDIR+=	jumpnbump
 SUBDIR+=	junit
 SUBDIR+=	jupp
