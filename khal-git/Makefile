@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/04/04 18:09:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/04/18 19:37:22 thomasklausner Exp $
 
 # version number from setup.py
-DISTNAME=		khal-0.1.0
+DISTNAME=		khal-0.2.0
+EGG_NAME=		${DISTNAME}.dev
 CATEGORIES=		time net
 MASTER_SITES=		https://github.com/geier/khal
 
@@ -29,16 +30,8 @@ PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 WRKSRC=			${WRKDIR}/khal
 INSTALLATION_DIRS=	share/doc/khal
-REPLACE_PYTHON+=	khal/__init__.py
-REPLACE_PYTHON+=	khal/aux.py
-REPLACE_PYTHON+=	khal/backend.py
-REPLACE_PYTHON+=	khal/caldav.py
-REPLACE_PYTHON+=	khal/calendar_display.py
-REPLACE_PYTHON+=	khal/controllers.py
-REPLACE_PYTHON+=	khal/event.py
-REPLACE_PYTHON+=	khal/khalendar.py
-REPLACE_PYTHON+=	khal/ui/__init__.py
-REPLACE_PYTHON+=	khal/ui/base.py
+REPLACE_PYTHON+=	khal/*/*.py
+REPLACE_PYTHON+=	khal/*.py
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/khal.conf.sample ${DESTDIR}${PREFIX}/share/doc/khal
