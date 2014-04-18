@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5711 2014/04/17 11:04:29 jgoamakf Exp $
+# $Id: Makefile,v 1.5712 2014/04/18 09:53:45 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3764,7 +3764,6 @@ SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	xxdiff
 SUBDIR+=	yafray
-SUBDIR+=	yajl
 SUBDIR+=	yakuake
 SUBDIR+=	yaml-cpp
 SUBDIR+=	yaml-mode
