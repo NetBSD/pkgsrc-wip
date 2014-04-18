@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2012/11/14 00:15:59 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.38 2014/04/18 16:02:39 thomasklausner Exp $
 
 DISTNAME=	audacious-plugins-3.2.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--disable-amidiplug --disable-gnomeshortcuts
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
-.include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
