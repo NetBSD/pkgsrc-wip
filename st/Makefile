@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/08/14 12:49:19 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/18 21:29:04 leot1990 Exp $
 
-DISTNAME=	st-0.4.1
+DISTNAME=	st-0.5
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/st/
 
