@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5713 2014/04/18 13:22:08 thomasklausner Exp $
+# $Id: Makefile,v 1.5714 2014/04/18 21:25:58 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2768,6 +2768,7 @@ SUBDIR+=	py-path.py
 SUBDIR+=	py-pathtools
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-pdef
+SUBDIR+=	py-pdfposter
 SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
 SUBDIR+=	py-pefile
