@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/04/19 08:20:31 thomasklausner Exp $
+
+SHA1 (patch-Makefile) = da552759c9eac90e8870d2f721775e25b7a85b9f
+SHA1 (patch-src_api.cpp) = cf611078ead7e73aaff8d72463abe93f6819df84
+SHA1 (patch-src_downloader.cpp) = b0d1fc0fb4a56b692f4a77ae0ca13fd30d58830b
