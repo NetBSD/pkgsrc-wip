@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/19 07:54:25 jgoamakf Exp $
+bin/ocamlify
+@pkgdir lib/ocaml/site-lib
