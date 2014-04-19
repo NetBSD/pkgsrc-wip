@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5717 2014/04/19 07:55:53 jgoamakf Exp $
+# $Id: Makefile,v 1.5718 2014/04/19 08:22:26 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1403,6 +1403,7 @@ SUBDIR+=	ledger
 SUBDIR+=	leim-current
 SUBDIR+=	leo
 SUBDIR+=	leveldb
+SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
