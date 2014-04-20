@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/04/16 19:49:04 jihbed Exp $
+$NetBSD: distinfo,v 1.5 2014/04/20 12:35:40 obache Exp $
 
-SHA1 (pywebkitgtk-1.1.7.tar.bz2) = 397dc92d1354727f45434f4cb1bb3a5d8751e11f
-RMD160 (pywebkitgtk-1.1.7.tar.bz2) = f1f076eb56d5fdf4dbbd85bcd4d86af73ae00d95
-Size (pywebkitgtk-1.1.7.tar.bz2) = 274927 bytes
+SHA1 (pywebkitgtk-1.1.8.tar.bz2) = b7005c8bedd215032498dec543d937dd323d35da
+RMD160 (pywebkitgtk-1.1.8.tar.bz2) = d953c956ab34923d80189c54471dd5ca9ee95544
+Size (pywebkitgtk-1.1.8.tar.bz2) = 277013 bytes
