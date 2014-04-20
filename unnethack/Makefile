@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/04/07 22:25:00 rhialto Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/20 14:53:47 rhialto Exp $
 #
 
 DISTNAME=	unnethack-5.1.0-20131208
@@ -52,8 +52,9 @@ GAMEPERM=		${NETHACK_USER} ${NETHACK_GROUP} 2555
 GAMEDIR=		${PREFIX}/share/${NETHACK_DIR}
 NETHACK_DIR=		unnethackdir$(VER)
 VARDIR=			/var/games/unnethack$(VER)
+MAN6DIR=		${PREFIX}/${PKGMANDIR}/man6
 #MAKE_ENV+=		GAMEDIR=${GAMEDIR:Q}
-MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man6
+MAKE_ENV+=		MANDIR=${MAN6DIR:Q}
 #MAKE_ENV+=		VARDIR=${VARDIR:Q}
 MAKE_ENV+=		CURSESLIBDIR=${BUILDLINK_PREFIX.ncurses:Q}/lib
 CONFIGURE_ARGS+=	--with-gamesdir=${VARDIR:Q}
@@ -93,6 +94,12 @@ CHECK_FILES_SKIP+=	${VARDIR}/logfile				\
 # For binary:
 SPECIAL_PERMS+=		${GAMEDIR}/unnethack				\
 			    ${GAMEPERM}
+
+# The distribution tarball has all files unreadable for "others".
+# When installing such a file this will remain so.
+# So fix it.
+post-extract:
+	${CHMOD} -R go+r ${WRKSRC}
 
 .include "options.mk"
 

@@ -1,0 +1,23 @@
+===========================================================================
+$NetBSD: MESSAGE.x11,v 1.1 2014/04/20 14:53:47 rhialto Exp $
+
+You can run the X11 UnNetHack by typing
+"NETHACKOPTIONS=windowtype:x11 nethack" or by putting that option in
+your ~/.unnethackrc file. Other windowtypes are curses and tty.
+
+Two fonts were installed for NetHack.  You must add
+${PREFIX}/lib/X11/fonts/misc to fontpath and set one of
+
+NetHack*map*font: nh10
+NetHack*map*font: -misc-fixed-medium-r-normal-ibmpc-14-120-75-75-c-80-iso8859-1
+
+in ${PREFIX}/share/unnethackdir510/UnNetHack.ad to use it.
+Tiled mode is enabled by:
+
+NetHack.tile_file: x11tiles
+
+Also see ${PREFIX}/share/unnethackdir510/nethack.x11.rc for inspiration.
+
+Note that the X11 version is prone to crashing!
+
+===========================================================================

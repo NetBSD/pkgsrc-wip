@@ -1,4 +1,4 @@
-$NetBSD: patch-sys_autoconf_Makefile.doc,v 1.3 2014/04/08 21:02:25 rhialto Exp $
+$NetBSD: patch-sys_autoconf_Makefile.doc,v 1.4 2014/04/20 14:53:48 rhialto Exp $
 
 DESTDIR support and other configurability.
 
@@ -28,10 +28,10 @@ DESTDIR support and other configurability.
 -	-$(RCVRMANCREATE) $(MANDIR)/recover.$(MANEXT)
 -	-$(DLBMANCREATE) $(MANDIR)/dlb.$(MANEXT)
 +	-$(GAMEMANCREATE) $(DESTDIR)/$(MANDIR)/$(GAME).$(MANEXT)
-+	-$(LEVMANCREATE) $(DESTDIR)/$(MANDIR)/lev_comp.$(MANEXT)
-+	-$(DGNMANCREATE) $(DESTDIR)/$(MANDIR)/dgn_comp.$(MANEXT)
-+	-$(RCVRMANCREATE) $(DESTDIR)/$(MANDIR)/recover.$(MANEXT)
-+	-$(DLBMANCREATE) $(DESTDIR)/$(MANDIR)/dlb.$(MANEXT)
++	-$(LEVMANCREATE) $(DESTDIR)/$(MANDIR)/$(GAME)_lev_comp.$(MANEXT)
++	-$(DGNMANCREATE) $(DESTDIR)/$(MANDIR)/$(GAME)_dgn_comp.$(MANEXT)
++	-$(RCVRMANCREATE) $(DESTDIR)/$(MANDIR)/$(GAME)_recover.$(MANEXT)
++	-$(DLBMANCREATE) $(DESTDIR)/$(MANDIR)/$(GAME)_dlb.$(MANEXT)
  
  # manual creation for distribution
  DISTRIB = Guidebook.txt $(GAME).txt lev_comp.txt dgn_comp.txt recover.txt dlb.txt
