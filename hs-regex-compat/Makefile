@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/06/05 22:11:21 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/21 09:13:34 szptvlfn Exp $
 #
 
 DISTNAME=	regex-compat-0.95.1
@@ -6,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Replaces/Enhances Haskell Text.Regex
+LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-regex-base/buildlink3.mk"
