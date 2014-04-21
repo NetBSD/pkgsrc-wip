@@ -1,4 +1,4 @@
-$NetBSD: patch-ar,v 1.1 2014/04/15 18:52:52 thomasklausner Exp $
+$NetBSD: patch-ar,v 1.2 2014/04/21 09:09:38 thomasklausner Exp $
 
 --- modules/misc/inhibit/xdg.c.orig	2013-06-24 18:00:38.000000000 +0000
 +++ modules/misc/inhibit/xdg.c
@@ -54,8 +54,8 @@ $NetBSD: patch-ar,v 1.1 2014/04/15 18:52:52 thomasklausner Exp $
 +#if defined(_POSIX_SPAWN) && (_POSIX_SPAWN >= 0)
          posix_spawnattr_setsigdefault (&p_sys->attr, &set);
          posix_spawnattr_setflags (&p_sys->attr, POSIX_SPAWN_SETSIGDEF
-+#endif
                                                | POSIX_SPAWN_SETSIGMASK);
++#endif
      }
  
      ih->p_sys = p_sys;
