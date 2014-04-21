@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/26 23:59:09 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/21 09:11:38 szptvlfn Exp $
 lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network.hi
 lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network.p_hi
 lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Network/Internal.hi
@@ -12,3 +12,20 @@ lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-conduit-${PKGV
 lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-conduit-${PKGVERSION}_p.a
 lib/network-conduit-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/network-conduit-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/Data-Conduit-Network-Internal.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/Data-Conduit-Network-UDP.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/Data-Conduit-Network.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/mini_Data-Conduit-Network-Internal.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/mini_Data-Conduit-Network-UDP.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/mini_Data-Conduit-Network.html
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/network-conduit.haddock
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/network-conduit-${PKGVERSION}/html/synopsis.png

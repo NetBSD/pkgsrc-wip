@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/10/14 10:54:17 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/04/21 09:11:38 szptvlfn Exp $
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor.hi
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor.p_hi
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Collage.hi
@@ -18,3 +18,28 @@ lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/libHSprofunctors-${PKGVERSION}.
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/libHSprofunctors-${PKGVERSION}_p.a
 lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/profunctors-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/Data-Profunctor-Collage.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/Data-Profunctor-Composition.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/Data-Profunctor-Rep.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/Data-Profunctor-Rift.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/Data-Profunctor-Trace.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/Data-Profunctor-Unsafe.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/Data-Profunctor.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/mini_Data-Profunctor-Collage.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/mini_Data-Profunctor-Composition.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/mini_Data-Profunctor-Rep.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/mini_Data-Profunctor-Rift.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/mini_Data-Profunctor-Trace.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/mini_Data-Profunctor-Unsafe.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/mini_Data-Profunctor.html
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/profunctors.haddock
+${PLIST.doc}share/doc/profunctors-${PKGVERSION}/html/synopsis.png

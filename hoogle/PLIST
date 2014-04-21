@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/12 23:23:19 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/21 09:11:37 szptvlfn Exp $
 bin/hoogle
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Base.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/General/Base.p_hi
@@ -105,6 +105,19 @@ lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}_p.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
 share/doc/${PKGNAME}/LICENSE
+${PLIST.doc}share/doc/${PKGNAME}/html/Hoogle.html
+${PLIST.doc}share/doc/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${PKGNAME}/html/frames.html
+${PLIST.doc}share/doc/${PKGNAME}/html/haddock-util.js
+${PLIST.doc}share/doc/${PKGNAME}/html/hoogle.haddock
+${PLIST.doc}share/doc/${PKGNAME}/html/hslogo-16.png
+${PLIST.doc}share/doc/${PKGNAME}/html/index-frames.html
+${PLIST.doc}share/doc/${PKGNAME}/html/index.html
+${PLIST.doc}share/doc/${PKGNAME}/html/mini_Hoogle.html
+${PLIST.doc}share/doc/${PKGNAME}/html/minus.gif
+${PLIST.doc}share/doc/${PKGNAME}/html/ocean.css
+${PLIST.doc}share/doc/${PKGNAME}/html/plus.gif
+${PLIST.doc}share/doc/${PKGNAME}/html/synopsis.png
 share/${PKGNAME}/resources/favicon.ico
 share/${PKGNAME}/resources/favicon.png
 share/${PKGNAME}/resources/favicon57.png

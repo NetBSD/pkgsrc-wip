@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/02/11 03:35:33 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/21 09:11:39 szptvlfn Exp $
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/HSunix-compat-${PKGVERSION}.o
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat.hi
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat.p_hi
@@ -21,3 +21,30 @@ lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/libHSunix-compat-${PKGVERSION}.
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/libHSunix-compat-${PKGVERSION}_p.a
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/unix-compat-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat-Extensions.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat-Files.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat-Temp.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat-Time.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat-Types.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat-Unistd.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat-User.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/System-PosixCompat.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat-Extensions.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat-Files.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat-Temp.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat-Time.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat-Types.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat-Unistd.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat-User.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/mini_System-PosixCompat.html
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/unix-compat-${PKGVERSION}/html/unix-compat.haddock

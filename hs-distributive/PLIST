@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/01 16:18:18 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/21 09:11:37 szptvlfn Exp $
 lib/distributive-${PKGVERSION}/${HASKELL_VERSION}/Data/Distributive.hi
 lib/distributive-${PKGVERSION}/${HASKELL_VERSION}/Data/Distributive.p_hi
 lib/distributive-${PKGVERSION}/${HASKELL_VERSION}/HSdistributive-${PKGVERSION}.o
@@ -6,3 +6,16 @@ lib/distributive-${PKGVERSION}/${HASKELL_VERSION}/libHSdistributive-${PKGVERSION
 lib/distributive-${PKGVERSION}/${HASKELL_VERSION}/libHSdistributive-${PKGVERSION}_p.a
 lib/distributive-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/distributive-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/Data-Distributive.html
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/distributive.haddock
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/mini_Data-Distributive.html
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/distributive-${PKGVERSION}/html/synopsis.png

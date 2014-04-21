@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/21 09:11:38 szptvlfn Exp $
 lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/HSregex-base-${PKGVERSION}.o
 lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Base.hi
 lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Base.p_hi
@@ -12,3 +12,22 @@ lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/libHSregex-base-${PKGVERSION}.a
 lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/libHSregex-base-${PKGVERSION}_p.a
 lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/regex-base-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/Text-Regex-Base-Context.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/Text-Regex-Base-Impl.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/Text-Regex-Base-RegexLike.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/Text-Regex-Base.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/mini_Text-Regex-Base-Context.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/mini_Text-Regex-Base-Impl.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/mini_Text-Regex-Base-RegexLike.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/mini_Text-Regex-Base.html
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/regex-base.haddock
+${PLIST.doc}share/doc/regex-base-${PKGVERSION}/html/synopsis.png

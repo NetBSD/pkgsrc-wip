@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/03/09 22:32:47 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/04/21 09:11:38 szptvlfn Exp $
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM.hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM.p_hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TArray.hi
@@ -24,3 +24,32 @@ lib/stm-${PKGVERSION}/${HASKELL_VERSION}/libHSstm-${PKGVERSION}.a
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/libHSstm-${PKGVERSION}_p.a
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/stm-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM-TArray.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM-TBQueue.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM-TChan.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM-TMVar.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM-TQueue.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM-TSem.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM-TVar.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Concurrent-STM.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/Control-Monad-STM.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM-TArray.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM-TBQueue.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM-TChan.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM-TMVar.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM-TQueue.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM-TSem.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM-TVar.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Concurrent-STM.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/mini_Control-Monad-STM.html
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/stm.haddock
+${PLIST.doc}share/doc/stm-${PKGVERSION}/html/synopsis.png

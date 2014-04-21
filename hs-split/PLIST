@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 08:15:51 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/21 09:11:38 szptvlfn Exp $
 lib/split-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split.hi
 lib/split-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split.p_hi
 lib/split-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split/Internals.hi
@@ -8,3 +8,18 @@ lib/split-${PKGVERSION}/${HASKELL_VERSION}/libHSsplit-${PKGVERSION}.a
 lib/split-${PKGVERSION}/${HASKELL_VERSION}/libHSsplit-${PKGVERSION}_p.a
 lib/split-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/split-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/Data-List-Split-Internals.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/Data-List-Split.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/mini_Data-List-Split-Internals.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/mini_Data-List-Split.html
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/split.haddock
+${PLIST.doc}share/doc/split-${PKGVERSION}/html/synopsis.png

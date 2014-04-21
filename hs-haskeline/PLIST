@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/02 23:21:31 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/21 09:11:37 szptvlfn Exp $
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/HShaskeline-${PKGVERSION}.o
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline.p_hi
@@ -58,3 +58,24 @@ lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/libHShaskeline-${PKGVERSION}.a
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/libHShaskeline-${PKGVERSION}_p.a
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/haskeline-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/System-Console-Haskeline-Completion.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/System-Console-Haskeline-History.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/System-Console-Haskeline-IO.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/System-Console-Haskeline-MonadException.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/System-Console-Haskeline.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/haskeline.haddock
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/mini_System-Console-Haskeline-Completion.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/mini_System-Console-Haskeline-History.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/mini_System-Console-Haskeline-IO.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/mini_System-Console-Haskeline-MonadException.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/mini_System-Console-Haskeline.html
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/haskeline-${PKGVERSION}/html/synopsis.png
