@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/04/03 11:27:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2014/04/22 14:20:39 fhajny Exp $
 #
 
 DISTNAME=		siege-2.78
@@ -26,6 +26,8 @@ SUBST_SED.siege+=	-e "s|@EGDIR@|${EGDIR}|g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
+
+INSTALLATION_DIRS+=	${EGDIR}
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
