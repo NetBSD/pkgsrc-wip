@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2014/04/07 04:07:45 othyro Exp $
-
-SHA1 (celery-3.1.10.tar.gz) = 9dab8852d755f72aa37837bcb27da605f9db3cd5
-RMD160 (celery-3.1.10.tar.gz) = 51e0fb61968c7477dd11866b0680a55f39e175cb
-Size (celery-3.1.10.tar.gz) = 1287618 bytes
