@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2014/04/22 07:44:37 jgoamakf Exp $
+lib/ocaml/site-lib/type_conv/META
+lib/ocaml/site-lib/type_conv/pa_type_conv.a
+lib/ocaml/site-lib/type_conv/pa_type_conv.cma
+lib/ocaml/site-lib/type_conv/pa_type_conv.cmi
+lib/ocaml/site-lib/type_conv/pa_type_conv.cmx
+lib/ocaml/site-lib/type_conv/pa_type_conv.cmxa
+lib/ocaml/site-lib/type_conv/pa_type_conv.cmxs
+lib/ocaml/site-lib/type_conv/pa_type_conv.mli
