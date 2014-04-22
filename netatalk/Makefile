@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/30 13:30:56 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/22 14:38:17 fhajny Exp $
 
 DISTNAME=	netatalk-3.1.0
 CATEGORIES=	net print
@@ -80,7 +80,7 @@ PLIST.ea=		yes
 
 .include "options.mk"
 
-INSTALLATION_DIRS=	libexec/psffilters etc/netatalk
+INSTALLATION_DIRS=	libexec/psffilters etc/netatalk ${EGDIR}
 
 .if !empty(PKG_OPTIONS:Mpam)
 post-install:
