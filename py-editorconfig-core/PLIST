@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/11 22:01:13 nros Exp $
-bin/editorconfig.py
+@comment $NetBSD: PLIST,v 1.2 2014/04/23 19:50:38 nros Exp $
 ${PYSITELIB}/EditorConfig-${PKGVERSION}-py2.7.egg-info/PKG-INFO
 ${PYSITELIB}/EditorConfig-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
 ${PYSITELIB}/EditorConfig-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/EditorConfig-${PKGVERSION}-py2.7.egg-info/entry_points.txt
 ${PYSITELIB}/EditorConfig-${PKGVERSION}-py2.7.egg-info/top_level.txt
 ${PYSITELIB}/editorconfig/__init__.py
 ${PYSITELIB}/editorconfig/__init__.pyc
