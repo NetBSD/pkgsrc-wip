@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/24 12:45:50 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/04/24 11:26:20 ahp-nils Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -136,6 +136,9 @@ ${PYSITELIB}/pysphere/resources/vi_exception.pyo
 ${PYSITELIB}/pysphere/version.py
 ${PYSITELIB}/pysphere/version.pyc
 ${PYSITELIB}/pysphere/version.pyo
+${PYSITELIB}/pysphere/vi_managed_entity.py
+${PYSITELIB}/pysphere/vi_managed_entity.pyc
+${PYSITELIB}/pysphere/vi_managed_entity.pyo
 ${PYSITELIB}/pysphere/vi_mor.py
 ${PYSITELIB}/pysphere/vi_mor.pyc
 ${PYSITELIB}/pysphere/vi_mor.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/24 12:45:50 ahp-nils Exp $
+$NetBSD: distinfo,v 1.2 2014/04/24 11:26:20 ahp-nils Exp $
 
-SHA1 (pysphere-0.1.7.zip) = 111b6984ef905b88761197b3bc1a25244821c0e2
-RMD160 (pysphere-0.1.7.zip) = 5e8660437581c79caa4e5f61884ca40e61fd8fed
-Size (pysphere-0.1.7.zip) = 516848 bytes
+SHA1 (pysphere-0.1.8.zip) = 4106dc393c742a452cebf4cbdc254ad3e523aee9
+RMD160 (pysphere-0.1.8.zip) = 3c1817ba711486fee17b014c57a84fe2e8834686
+Size (pysphere-0.1.8.zip) = 538857 bytes

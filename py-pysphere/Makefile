@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/08/03 21:13:42 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/24 11:26:20 ahp-nils Exp $
 
-DISTNAME=	pysphere-0.1.7
+DISTNAME=	pysphere-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pysphere.googlecode.com/files/
