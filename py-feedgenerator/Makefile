@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/03/21 07:23:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/24 10:47:58 ahp-nils Exp $
 
-DISTNAME=		feedgenerator-1.6
+DISTNAME=		feedgenerator-1.7
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		https://pypi.python.org/packages/source/f/feedgenerator/
