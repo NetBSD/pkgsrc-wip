@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/24 09:31:41 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2014/04/24 22:16:46 thomasklausner Exp $
 
-SHA1 (xfburn-0.5.0.tar.bz2) = def2ced9a74b5112e992149ce901f3a5a73f20d9
-RMD160 (xfburn-0.5.0.tar.bz2) = cab88e0c941602160ee7001d70ad9bf92974735a
-Size (xfburn-0.5.0.tar.bz2) = 745720 bytes
+SHA1 (xfburn-0.5.2.tar.bz2) = d0a39b331353ccbc73b027a09c87bcbc45d9a312
+RMD160 (xfburn-0.5.2.tar.bz2) = a2851c4eeb3fe191bec120d643670f652d62ca70
+Size (xfburn-0.5.2.tar.bz2) = 760833 bytes
 SHA1 (patch-configure) = d5f632f7b2cc6e69fa2e6218936c2c42f8a74dbd
