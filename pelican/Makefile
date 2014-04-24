@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/03/21 07:23:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/24 11:02:01 ahp-nils Exp $
 
 DISTNAME=		${VERSION}
 PKGNAME=		pelican-${DISTNAME}
@@ -20,12 +20,27 @@ DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-VERSION=		3.2.2
+USE_TOOLS+=		bash:run
+VERSION=		3.3.0
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 FETCH_USING=		curl
 
-PYTHON_VERSIONS_INCOMPATIBLE=26 33 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=26 32 # py-docutils
+
+SUBST_CLASSES+=				fix-python
+SUBST_STAGE.fix-python=		pre-configure
+SUBST_MESSAGE.fix-python=	Fixing dynamic python
+SUBST_FILES.fix-python+=	pelican/tools/pelican_import.py
+SUBST_FILES.fix-python+=	pelican/tools/pelican_quickstart.py
+SUBST_FILES.fix-python+=	pelican/tools/pelican_themes.py
+SUBST_FILES.fix-python+=	pelican/tools/templates/pelicanconf.py.in
+SUBST_FILES.fix-python+=	pelican/tools/templates/publishconf.py.in
+SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+
+REPLACE_INTERPRETER+=		bash
+REPLACE.bash.old=			/usr/bin/env bash
+REPLACE.bash.new=			${TOOLS_PATH.bash}
+REPLACE_FILES.bash=			pelican/tools/templates/develop_server.sh.in
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/08/06 14:39:51 ahp-nils Exp $
+$NetBSD: distinfo,v 1.3 2014/04/24 11:02:01 ahp-nils Exp $
 
-SHA1 (3.2.2.zip) = 784b00f436ad6cf71ab09924a256d6704a460605
-RMD160 (3.2.2.zip) = e81d49bffcd5d8d195d46f6e3746a4fd968b3af0
-Size (3.2.2.zip) = 744507 bytes
+SHA1 (3.3.0.zip) = 40ad9f50e22332425abdb87ae2c296022eb6af33
+RMD160 (3.3.0.zip) = 7d12e81a1c0051c77629372f8a86bafd0473c910
+Size (3.3.0.zip) = 786369 bytes
