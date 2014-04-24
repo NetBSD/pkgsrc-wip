@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/07/12 17:06:45 ryo-on Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/04/24 09:11:59 thomasklausner Exp $
 
-DISTNAME=	libisoburn-1.3.0
+DISTNAME=	libisoburn-1.3.6.pl01
+PKGNAME=	${DISTNAME:S/.pl/pl/}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
 
@@ -10,10 +10,10 @@ HOMEPAGE=	http://libburnia-project.org/wiki/Libisoburn
 COMMENT=	This is the libisoburn library and xorriso commands
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/.pl00//}
-
 DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 DEPENDS+=	tk-[0-9]*:../../x11/tk
+
+WRKSRC=		${WRKDIR}/${DISTNAME:C/.pl[0-9]*//}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
