@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5723 2014/04/24 09:33:03 thomasklausner Exp $
+# $Id: Makefile,v 1.5724 2014/04/24 19:15:27 christtrekker Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1664,6 +1664,7 @@ SUBDIR+=	mediawiki-mode
 SUBDIR+=	meep
 SUBDIR+=	meep-mpi
 SUBDIR+=	meep-openmpi
+SUBDIR+=	megaglest
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
