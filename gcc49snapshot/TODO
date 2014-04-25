@@ -1,6 +1,4 @@
-1) Add latest fix from lamg/gcc48/patches/patches-patch-gcc_ginclude_stddef.h.
-
-2) Fix cilkplus errors in the teststuite. Snapshot 20140323 was fine and
+1) Fix cilkplus errors in the teststuite. Snapshot 20140323 was fine and
 then massive changes were introduced upstream for the 4.9.0 release. Now
 all cilkplus execution tests fail like this:
 
@@ -10,5 +8,5 @@ spawn /usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc -B/usr/pkgsrc/wip/gcc49s
 collect2: error: ld returned 1 exit status
 compiler exited with status 1
 
-3) lang/gcc48 has been changed to a meta package. Mabey this should be used
+2) lang/gcc48 has been changed to a meta package. Mabey this should be used
 for a new start on lang/gcc410.

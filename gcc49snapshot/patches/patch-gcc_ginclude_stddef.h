@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_ginclude_stddef.h,v 1.1 2013/03/24 10:15:20 keckhardt Exp $
+$NetBSD: patch-gcc_ginclude_stddef.h,v 1.2 2014/04/25 05:42:24 keckhardt Exp $
 
 --- gcc/ginclude/stddef.h.orig	2013-01-10 20:38:27.000000000 +0000
 +++ gcc/ginclude/stddef.h
@@ -49,7 +49,7 @@ $NetBSD: patch-gcc_ginclude_stddef.h,v 1.1 2013/03/24 10:15:20 keckhardt Exp $
  #define _GCC_SIZE_T
  #define _SIZET_
  #if (defined (__FreeBSD__) && (__FreeBSD__ >= 5)) \
-+  || defined(__DragonFly__)
++  || defined(__DragonFly__) \
    || defined(__FreeBSD_kernel__)
  /* __size_t is a typedef on FreeBSD 5, must not trash it. */
  #elif defined (__VMS__)
