@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/04/22 14:38:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/25 16:57:41 jonperkin Exp $
 
 DISTNAME=	netatalk-3.1.0
 CATEGORIES=	net print
@@ -72,7 +72,10 @@ SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\
 # PLIST.rcd=		yes
 # .endif
 
-PLIST_VARS+=		ea
+PLIST_VARS+=		ad ea
+.if ${OPSYS} == "SunOS"
+PLIST.ad=		yes
+.endif
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || \
 	(${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-6].[0-8]*))
 PLIST.ea=		yes
@@ -84,7 +87,7 @@ INSTALLATION_DIRS=	libexec/psffilters etc/netatalk ${EGDIR}
 
 .if !empty(PKG_OPTIONS:Mpam)
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk.pam ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/config/pam/netatalk ${DESTDIR}${EGDIR}/netatalk.pam
 .endif
 
 .include "../../databases/mysql55-client/buildlink3.mk"
