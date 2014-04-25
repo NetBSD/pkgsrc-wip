@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/24 21:32:53 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2014/04/25 21:19:24 thomasklausner Exp $
 
 DISTNAME=	${VERS}
 PKGNAME=	megaglest-${VERS}
@@ -11,9 +11,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://megaglest.org/
 COMMENT=	Cross-platform 3D real-time-strategy game with seven factions
 LICENSE=	gnu-gpl-v3
+
 WRKSRC=		${WRKDIR}/megaglest-source-${VERS}
-USE_TOOLS+=	cmake bash autoconf automake jam
+USE_TOOLS+=	cmake bash autoconf automake pkg-config
 REPLACE_BASH=	build-mg.sh
+USE_LANGUAGES=	c c++
+
+EXTRACT_USING=	bsdtar
 
 #Does not extract clean by itself. Upon fail, extract manually, uncomment
 #this, and make again.
@@ -39,5 +43,4 @@ do-build:
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
