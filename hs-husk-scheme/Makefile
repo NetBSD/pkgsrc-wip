@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/03/13 12:14:01 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/25 13:31:07 szptvlfn Exp $
 
-DISTNAME=	husk-scheme-3.16.1
+DISTNAME=	husk-scheme-3.17
 CATEGORIES=	lang
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
