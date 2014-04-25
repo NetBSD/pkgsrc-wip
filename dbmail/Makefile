@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/04/13 14:28:42 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2014/04/25 09:50:24 fhajny Exp $
 
 DISTNAME=	dbmail-3.1.13
 CATEGORIES=	mail
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--enable-manpages
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-zdb=${BUILDLINK_PREFIX.libzdb}
+
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 BUILD_DEFS+=		VARBASE
 
