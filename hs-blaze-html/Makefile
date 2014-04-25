@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/01/14 21:22:36 szptvlfn Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/04/25 13:22:47 szptvlfn Exp $
 
-DISTNAME=	blaze-html-0.6.1.3
+DISTNAME=	blaze-html-0.7.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

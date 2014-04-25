@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2013/12/10 13:35:41 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/04/25 13:22:47 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-blaze-html
 
 .if !defined(HS_BLAZE_HTML_BUILDLINK3_MK)
 HS_BLAZE_HTML_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-blaze-html+=	hs-blaze-html>=0.6.1
+BUILDLINK_API_DEPENDS.hs-blaze-html+=	hs-blaze-html>=0.7.0
 BUILDLINK_PKGSRCDIR.hs-blaze-html?=	../../wip/hs-blaze-html
 
 .include "../../wip/hs-blaze-builder/buildlink3.mk"
