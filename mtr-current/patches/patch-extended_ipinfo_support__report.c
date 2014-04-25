@@ -1,12 +1,6 @@
-$NetBSD: patch-extended_ipinfo_support__report.c,v 1.2 2013/07/06 16:28:37 yvs4sf Exp $
-
-extended ipinfo support (report.c part)
-https://bugs.launchpad.net/mtr/+bug/701514
-
-diff -ruN report.c.orig report.c
---- report.c.orig	2013-07-06 08:38:48.000000000 +0300
-+++ report.c	2013-07-06 18:51:33.000000000 +0300
-@@ -112,15 +112,8 @@
+--- report.c.orig	2014-01-29 08:21:13.000000000 +0200
++++ report.c	2014-04-25 11:11:04.000000000 +0300
+@@ -113,15 +113,8 @@
    
  #ifdef IPINFO
    int len_tmp = len_hosts;

@@ -1,11 +1,5 @@
-$NetBSD: patch-extended_ipinfo_support__asn.h,v 1.2 2013/07/06 16:28:36 yvs4sf Exp $
-
-extended ipinfo support (asn.h part)
-https://bugs.launchpad.net/mtr/+bug/701514
-
-diff -ruN asn.h.orig asn.h
---- asn.h.orig	2013-07-06 08:38:48.000000000 +0300
-+++ asn.h	2013-07-06 18:37:36.000000000 +0300
+--- asn.h.orig	2014-01-29 08:21:13.000000000 +0200
++++ asn.h	2014-04-25 11:10:23.000000000 +0300
 @@ -16,6 +16,9 @@
      Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
@@ -33,8 +27,7 @@ diff -ruN asn.h.orig asn.h
  char *fmt_ipinfo(ip_t *addr);
  int get_iiwidth(void);
  int is_printii(void);
-+void parse_iiarg(char *arg);
++void ii_parse(char *arg);
  
--#endif
-+#endif	// NO_IPINFO
-+#endif	// ASN_H
+ #endif
++#endif

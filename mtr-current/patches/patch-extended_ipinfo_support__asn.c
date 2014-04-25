@@ -1,21 +1,12 @@
-$NetBSD: patch-extended_ipinfo_support__asn.c,v 1.1 2013/06/20 07:25:59 yvs4sf Exp $
-
-extended ipinfo support (asn.c part)
-https://bugs.launchpad.net/mtr/+bug/701514
-
-diff -ruN asn.c.orig asn.c
---- asn.c.orig	2013-05-15 12:11:37.000000000 +0300
-+++ asn.c	2013-05-15 12:27:09.000000000 +0300
-@@ -46,27 +46,41 @@
+--- asn.c.orig	2014-01-29 08:21:13.000000000 +0200
++++ asn.c	2014-04-25 11:09:34.000000000 +0300
+@@ -47,27 +47,40 @@
  #endif
  */
  
 -#define IIHASH_HI	128
 -#define ITEMSMAX	15
 -#define ITEMSEP	'|'
-+#define II_HASH_HI	128	// l.e. default ttl in various systems,
-+				// value will not result in functional harm, although
-+				// a libc-hash-performance degradation may occur (if hops g.t. II_HASH_HI)
 +#define II_ITEM_SEP	'|'
 +#define II_ARGS_SEP	','
  #define NAMELEN	127
@@ -26,13 +17,15 @@ diff -ruN asn.c.orig asn.c
  int  ipinfo_max = -1;
  int  iihash = 0;
 -char fmtinfo[32];
+-extern int af;                  /* address family of remote target */
 +char fmtinfo[NAMELEN + 1];
- extern int af;                  /* address family of remote target */
  
 -// items width: ASN, Route, Country, Registry, Allocated 
 -int iiwidth[] = { 6, 19, 4, 8, 11};	// item len + space
 -int iiwidth_len = sizeof(iiwidth)/sizeof((iiwidth)[0]);
--
++extern int af;                  /* address family of remote target */
++extern int maxTTL;
+ 
 -typedef char* items_t[ITEMSMAX + 1];
 +typedef char* items_t[II_ITEM_MAX + 1];
  items_t items_a;		// without hash: items
@@ -58,39 +51,32 @@ diff -ruN asn.c.orig asn.c
  
  char *ipinfo_lookup(const char *domain) {
      unsigned char answer[PACKETSZ],  *pt;
-@@ -145,18 +159,40 @@
+@@ -146,18 +159,30 @@
      return txt;
  }
  
 -char* trimsep(char *s) {
-+char* trimsep(char *s, char sep) {
-     int l;
-     char *p = s;
+-    int l;
+-    char *p = s;
 -    while (*p == ' ' || *p == ITEMSEP)
-+    while (*p == ' ' || *p == sep)
-         *p++ = '\0';
+-        *p++ = '\0';
 -    for (l = strlen(p)-1; p[l] == ' ' || p[l] == ITEMSEP; l--)
-+    for (l = strlen(p)-1; p[l] == ' ' || p[l] == sep; l--)
-         p[l] = '\0';
-     return p;
- }
- 
--// originX.asn.cymru.com txtrec:    ASN | Route | Country | Registry | Allocated
--char* split_txtrec(char *txtrec) {
+-        p[l] = '\0';
+-    return p;
 +int split_with_sep(items_t* it, char sep) {
 +    if (!it)
 +	return -1;
 +    if (!(*it))
 +	return -1;
 +
-+    char* prev = (*it)[0] = trimsep((*it)[0], sep);
++    char* prev = (*it)[0] = trim((*it)[0]);
 +    char* next;
 +    int i = 0, j;
 +
 +    while ((next = strchr(prev, sep)) && (i < II_ITEM_MAX)) {
 +        *next++ = '\0';
-+        (*it)[i++] = trimsep(prev, sep);
-+        (*it)[i] = prev = trimsep(next, sep);
++        (*it)[i++] = trim(prev);
++        (*it)[i] = prev = trim(next);
 +    }
 +    if (i < II_ITEM_MAX)
 +        i++;
@@ -98,13 +84,15 @@ diff -ruN asn.c.orig asn.c
 +        (*it)[j] = NULL;
 +
 +    return i;
-+}
-+
+ }
+ 
+-// originX.asn.cymru.com txtrec:    ASN | Route | Country | Registry | Allocated
+-char* split_txtrec(char *txtrec) {
 +char* split_txtrec(char *txtrec, int ndx) {
      if (!txtrec)
  	return NULL;
      if (iihash) {
-@@ -172,28 +208,44 @@
+@@ -173,28 +198,44 @@
          }
      }
  
@@ -166,7 +154,7 @@ diff -ruN asn.c.orig asn.c
  }
  
  #ifdef ENABLE_IPV6
-@@ -207,7 +259,7 @@
+@@ -208,7 +249,7 @@
  }
  #endif
  
@@ -175,7 +163,7 @@ diff -ruN asn.c.orig asn.c
      if (!addr)
          return NULL;
  
-@@ -216,18 +268,22 @@
+@@ -217,18 +258,22 @@
  
      if (af == AF_INET6) {
  #ifdef ENABLE_IPV6
@@ -200,7 +188,7 @@ diff -ruN asn.c.orig asn.c
              return NULL;
      }
  
-@@ -241,10 +297,10 @@
+@@ -242,7 +287,7 @@
          item.key = key;;
          ENTRY *found_item;
          if ((found_item = hsearch(item, FIND))) {
@@ -208,12 +196,8 @@ diff -ruN asn.c.orig asn.c
 +            if (!(val = (*((items_t*)found_item->data))[ipinfo_nos[ndx]]))
                  val = (*((items_t*)found_item->data))[0];
  #ifdef IIDEBUG
--        syslog(LOG_INFO, "Found (hashed): %s", val);
-+            syslog(LOG_INFO, "Found (hashed): %s", val);
- #endif
-         }
-     }
-@@ -253,7 +309,7 @@
+         syslog(LOG_INFO, "Found (hashed): %s", val);
+@@ -254,7 +299,7 @@
  #ifdef IIDEBUG
          syslog(LOG_INFO, "Lookup: %s", key);
  #endif
@@ -222,7 +206,7 @@ diff -ruN asn.c.orig asn.c
  #ifdef IIDEBUG
              syslog(LOG_INFO, "Looked up: %s", key);
  #endif
-@@ -262,7 +318,16 @@
+@@ -263,7 +308,16 @@
                      item.data = items;
                      hsearch(item, ENTER);
  #ifdef IIDEBUG
@@ -240,7 +224,7 @@ diff -ruN asn.c.orig asn.c
  #endif
                  }
          }
-@@ -271,28 +336,57 @@
+@@ -272,15 +326,44 @@
      return val;
  }
  
@@ -290,43 +274,45 @@ diff -ruN asn.c.orig asn.c
      return fmtinfo;
  }
  
- int is_printii(void) {
--    return ((ipinfo_no >= 0) && (ipinfo_no != ipinfo_max));
-+    return ((ipinfo_nos[0] >= 0) && (ipinfo_nos[0] != ipinfo_max));
- }
- 
+@@ -291,9 +374,9 @@
  void asn_open(void) {
--    if (ipinfo_no >= 0) {
-+    if (ipinfo_nos[0] >= 0) {
+     if (ipinfo_no >= 0) {
  #ifdef IIDEBUG
 -        syslog(LOG_INFO, "hcreate(%d)", IIHASH_HI);
-+        syslog(LOG_INFO, "hcreate(%d)", II_HASH_HI);
++        syslog(LOG_INFO, "hcreate(%d)", maxTTL);
  #endif
 -        if (!(iihash = hcreate(IIHASH_HI)))
-+        if (!(iihash = hcreate(II_HASH_HI)))
++        if (!(iihash = hcreate(maxTTL)))
              perror("ipinfo hash");
      }
  }
-@@ -307,3 +401,25 @@
+@@ -308,3 +391,32 @@
      }
  }
  
-+void parse_iiarg(char *arg) {
++void ii_parse(char *arg) {
 +    int i, j;
 +    for (i = 0; i <= II_ITEM_MAX; i++)
 +	ipinfo_nos[i] = -1;
 +    items_a[0] = strdup(arg);
 +    split_with_sep(&items_a, II_ARGS_SEP);
-+    for (i = j = 0; (i <= II_ITEM_MAX) && items_a[i]; i++, j++) {
-+        int no = atoi(items_a[i]);
-+        if (no >= 0)
-+            ipinfo_nos[j] = no;
-+        else {
-+            if (-no < (sizeof(ii_origins)/sizeof(ii_origins[0])))
-+                ii_zone_no = -no;
-+            j--;
-+        }
++
++    int no;
++    if (items_a[0]) {
++        no = atoi(items_a[0]) -1;
++        if ((no >= 0) && (no < (sizeof(ii_origins)/sizeof(ii_origins[0]))))
++        ii_zone_no = no;
 +    }
++	if (ii_zone_no < 0)
++		ii_zone_no = 0;
++
++    for (i = 1, j = 0; (i <= II_ITEM_MAX) && items_a[i]; i++) {
++        no = atoi(items_a[i]) -1;
++        if (no >= 0)
++            ipinfo_nos[j++] = no;
++    }
++	if (ipinfo_no < 0)
++		ipinfo_no = 0;
 +    free(items_a[0]);
 +#ifdef IIDEBUG
 +    syslog(LOG_INFO, "ii origin: \"%s\" \"%s\"", ii_origins[ii_zone_no].ip4zone, ii_origins[ii_zone_no].ip6zone);
