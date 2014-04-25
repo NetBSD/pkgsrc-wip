@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/01/05 11:25:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/25 13:12:48 ahp-nils Exp $
 
-DISTNAME=	v1.1.1
+DISTNAME=	v1.2.0
 PKGNAME=	${DISTNAME:S/v/zmap-/}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/zmap/zmap/archive/
@@ -20,4 +20,6 @@ USE_CMAKE=	yes
 USE_TOOLS+=	yacc
 
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../net/libdnet/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
