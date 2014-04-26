@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/01/21 02:58:05 othyro Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/26 19:58:01 noud4 Exp $
 bin/gurlchecker
 man/man1/gurlchecker.1
 share/applications/gurlchecker.desktop
@@ -27,8 +27,11 @@ ${PLIST.doc}share/gtk-doc/html/gurlchecker/gurlchecker-web-site.html
 ${PLIST.doc}share/gtk-doc/html/gurlchecker/home.png
 ${PLIST.doc}share/gtk-doc/html/gurlchecker/index.html
 ${PLIST.doc}share/gtk-doc/html/gurlchecker/index.sgml
+${PLIST.doc}share/gtk-doc/html/gurlchecker/left-insensitive.png
 ${PLIST.doc}share/gtk-doc/html/gurlchecker/left.png
+${PLIST.doc}share/gtk-doc/html/gurlchecker/right-insensitive.png
 ${PLIST.doc}share/gtk-doc/html/gurlchecker/right.png
+${PLIST.doc}share/gtk-doc/html/gurlchecker/up-insensitive.png
 ${PLIST.doc}share/gtk-doc/html/gurlchecker/up.png
 share/gurlchecker/stylesheets/uc_html.xsl
 share/gurlchecker/ui/empty_icon.png
