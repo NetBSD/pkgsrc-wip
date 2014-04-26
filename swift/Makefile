@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/04/26 10:54:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/04/26 11:36:21 thomasklausner Exp $
 
 DISTNAME=	swift-2.0
 CATEGORIES=	chat
@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
-SUBST_SED.path+=	-e "s,/usr/local/share/,${PREFIX}/share,"
+SUBST_SED.path+=	-e "s,/usr/local/share/,${PREFIX}/share/,"
 SUBST_FILES.path+=	SwifTools/Application/UnixApplicationPathProvider.cpp
 SUBST_MESSAGE.path=	Fixing path to support files.
 
