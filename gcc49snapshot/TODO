@@ -1,12 +1,4 @@
-1) Fix cilkplus errors in the teststuite. Snapshot 20140323 was fine and
-then massive changes were introduced upstream for the 4.9.0 release. Now
-all cilkplus execution tests fail like this:
-
-spawn /usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc -B/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/ /usr/pkgsrc/wip/gcc49snapshot/work/gcc-4.9-20140416/gcc/testsuite/c-c++-common/cilk-plus/PS/reduction-1.c -B/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/ -L/usr/pkgsrc/wip/gcc49snapshot/work/build/x86_64--netbsd/./libcilkrts/.libs -fno-diagnostics-show-caret -fdiagnostics-color=never -ftree-vectorize -fcilkplus -std=c99 -O3 -fcilkplus -lm -o ./reduction-1.exe
-/usr/bin/ld: ./reduction-1.exe: hidden symbol `__cpu_model' in /usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/libgcc.a(cpuinfo.o) is referenced by DSO
-/usr/bin/ld: final link failed: Bad value
-collect2: error: ld returned 1 exit status
-compiler exited with status 1
-
-2) lang/gcc48 has been changed to a meta package. Mabey this should be used
-for a new start on lang/gcc410.
+1) Test on different platforms before creating lang/gcc49.
+2) Help adding missing long double and complex support in NetBSD.
+3) lang/gcc48 has been changed to a meta package. Mabey this should be used
+for lang/gcc410snapshot as well.

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2014/04/25 05:42:24 keckhardt Exp $
+$NetBSD: distinfo,v 1.45 2014/04/27 06:10:58 keckhardt Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -21,6 +21,7 @@ SHA1 (patch-gcc_ginclude_stddef.h) = 220ec23aecffca81337ae4c06afc18051da89b9a
 SHA1 (patch-gcc_lto_lto.c) = 95c77948dea332299ed097e83f84c09ecd56fc4a
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-include_libiberty.h) = ada0f0cbf0b2732b0b18db1f3daa0aa0a24cfdb3
+SHA1 (patch-libcilkrts_configure) = 6fab9bb51a6d8fabf72fa8852d30cbdacdbb940c
 SHA1 (patch-libcilkrts_runtime_os-unix.c) = 0097284ef5f9a716da77947856f2ce13965e6949
 SHA1 (patch-libdecnumber_decNumber.c) = cec90e49c829bfc6ba1ec605d2fac7daaad62762
 SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
