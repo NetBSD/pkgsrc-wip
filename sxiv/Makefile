@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/02/01 18:53:32 leot1990 Exp $
+# $NetBSD: Makefile,v 1.6 2014/04/27 11:59:44 leot1990 Exp $
 #
 
-DISTNAME=	v1.1.1
+DISTNAME=	v1.2
 PKGNAME=	sxiv-${DISTNAME:S/v//}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/muennich/sxiv/archive/
 
