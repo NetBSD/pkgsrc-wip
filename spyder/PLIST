@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/02/07 23:48:19 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/04/27 20:57:48 jihbed Exp $
 bin/spyder
 bin/spyder_win_post_install.py
 ${PYSITELIB}/spyderlib/__init__.py
@@ -83,6 +83,7 @@ ${PYSITELIB}/spyderlib/doc/_static/plus.png
 ${PYSITELIB}/spyderlib/doc/_static/pygments.css
 ${PYSITELIB}/spyderlib/doc/_static/searchtools.js
 ${PYSITELIB}/spyderlib/doc/_static/sphinxdoc.css
+${PYSITELIB}/spyderlib/doc/_static/spyder_bbg.png
 ${PYSITELIB}/spyderlib/doc/_static/underscore.js
 ${PYSITELIB}/spyderlib/doc/_static/up-pressed.png
 ${PYSITELIB}/spyderlib/doc/_static/up.png
@@ -272,6 +273,7 @@ ${PYSITELIB}/spyderlib/images/filetypes/css.png
 ${PYSITELIB}/spyderlib/images/filetypes/cxx.png
 ${PYSITELIB}/spyderlib/images/filetypes/diff.png
 ${PYSITELIB}/spyderlib/images/filetypes/doc.png
+${PYSITELIB}/spyderlib/images/filetypes/enaml.png
 ${PYSITELIB}/spyderlib/images/filetypes/exe.png
 ${PYSITELIB}/spyderlib/images/filetypes/f.png
 ${PYSITELIB}/spyderlib/images/filetypes/f77.png
@@ -285,6 +287,7 @@ ${PYSITELIB}/spyderlib/images/filetypes/html.png
 ${PYSITELIB}/spyderlib/images/filetypes/hxx.png
 ${PYSITELIB}/spyderlib/images/filetypes/inf.png
 ${PYSITELIB}/spyderlib/images/filetypes/ini.png
+${PYSITELIB}/spyderlib/images/filetypes/jl.png
 ${PYSITELIB}/spyderlib/images/filetypes/jpeg.png
 ${PYSITELIB}/spyderlib/images/filetypes/jpg.png
 ${PYSITELIB}/spyderlib/images/filetypes/js.png
@@ -482,6 +485,7 @@ ${PYSITELIB}/spyderlib/utils/codeanalysis.pyo
 ${PYSITELIB}/spyderlib/utils/debug.py
 ${PYSITELIB}/spyderlib/utils/debug.pyc
 ${PYSITELIB}/spyderlib/utils/debug.pyo
+${PYSITELIB}/spyderlib/utils/defaults-2.4.0.ini
 ${PYSITELIB}/spyderlib/utils/dochelpers.py
 ${PYSITELIB}/spyderlib/utils/dochelpers.pyc
 ${PYSITELIB}/spyderlib/utils/dochelpers.pyo
@@ -723,15 +727,24 @@ ${PYSITELIB}/spyderlib/utils/inspector/static/css/pygments.css
 ${PYSITELIB}/spyderlib/utils/inspector/templates/layout.html
 ${PYSITELIB}/spyderlib/utils/inspector/templates/usage.html
 ${PYSITELIB}/spyderlib/utils/inspector/templates/warning.html
+${PYSITELIB}/spyderlib/utils/introspection/__init__.py
+${PYSITELIB}/spyderlib/utils/introspection/__init__.pyc
+${PYSITELIB}/spyderlib/utils/introspection/__init__.pyo
+${PYSITELIB}/spyderlib/utils/introspection/base.py
+${PYSITELIB}/spyderlib/utils/introspection/base.pyc
+${PYSITELIB}/spyderlib/utils/introspection/base.pyo
+${PYSITELIB}/spyderlib/utils/introspection/module_completion.py
+${PYSITELIB}/spyderlib/utils/introspection/module_completion.pyc
+${PYSITELIB}/spyderlib/utils/introspection/module_completion.pyo
+${PYSITELIB}/spyderlib/utils/introspection/rope_plugin.py
+${PYSITELIB}/spyderlib/utils/introspection/rope_plugin.pyc
+${PYSITELIB}/spyderlib/utils/introspection/rope_plugin.pyo
 ${PYSITELIB}/spyderlib/utils/iofuncs.py
 ${PYSITELIB}/spyderlib/utils/iofuncs.pyc
 ${PYSITELIB}/spyderlib/utils/iofuncs.pyo
 ${PYSITELIB}/spyderlib/utils/misc.py
 ${PYSITELIB}/spyderlib/utils/misc.pyc
 ${PYSITELIB}/spyderlib/utils/misc.pyo
-${PYSITELIB}/spyderlib/utils/module_completion.py
-${PYSITELIB}/spyderlib/utils/module_completion.pyc
-${PYSITELIB}/spyderlib/utils/module_completion.pyo
 ${PYSITELIB}/spyderlib/utils/programs.py
 ${PYSITELIB}/spyderlib/utils/programs.pyc
 ${PYSITELIB}/spyderlib/utils/programs.pyo
