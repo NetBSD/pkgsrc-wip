@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.8 2014/04/27 10:05:23 leot1990 Exp $
+
+SHA1 (webkitgtk-2.4.1.tar.xz) = da83c4e7b36917e307155ebe3ae93621e4802d83
+RMD160 (webkitgtk-2.4.1.tar.xz) = 0cc7fa02fe2867da2e86acd47e8f24c23403af04
+Size (webkitgtk-2.4.1.tar.xz) = 9836352 bytes
+SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 69221390dd5fdac55abf341c5ae3a03267e38ae6
+SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = fdd31fcf6c745394499570397c82fe3dfce02e1d
+SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 67f66ca254f958c0650249485a64982b40f92621
+SHA1 (patch-Source_ThirdParty_ANGLE_src_compiler_glslang.y) = 3b1e06446bed8fb1d3d90fb64e0dba1f9221c252
+SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = f1eee7f9d3012edee1915234c837cff820f97092
+SHA1 (patch-Source_WTF_wtf_Platform.h) = 5ff82e77d1d5dea5514adbeede14fd4a8923dc9c
+SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 2835657e04cdbc0cc7be8a6793061f0b98f84224
+SHA1 (patch-Source_autotools_FindDependencies.m4) = f8c20b3bc868a607a26ae7856c418107a1932a6a
+SHA1 (patch-Tools_DumpRenderTree_gtk_DumpRenderTree.cpp) = 994d1671ff2d8e3a961b9b7ed34f69215ed46f91
+SHA1 (patch-ai) = 8e174c68e4ba06fdd6edd64fd6df3328faf9055f
+SHA1 (patch-aj) = d35a4b26e2104cdf7f3be81b020aabb4779dfaad
+SHA1 (patch-ak) = 477fd5c05abee8f47842a6ad5aba00e3e4628c45
+SHA1 (patch-al) = 7f177fe4966c0316079f0ce6a6b5b7cee65cf37c
+SHA1 (patch-am) = e0a350feb14d739010000e3887971bd535a647a7
+SHA1 (patch-configure) = 8407abfc5617f4476633fdd78ca79975bb55edaa

@@ -1,0 +1,576 @@
+$NetBSD: patch-configure,v 1.1 2014/04/27 10:05:23 leot1990 Exp $
+
+--- configure.orig	2014-04-14 12:24:43.000000000 +0000
++++ configure
+@@ -714,6 +714,7 @@ MAINT
+ MAINTAINER_MODE_FALSE
+ MAINTAINER_MODE_TRUE
+ AM_BACKSLASH
++AM_DEFAULT_VERBOSITY
+ AM_DEFAULT_V
+ AM_V
+ am__fastdepCXX_FALSE
+@@ -747,26 +748,8 @@ VERSION
+ PACKAGE
+ CYGPATH_W
+ am__isrc
+-GTK_DOC_USE_REBASE_FALSE
+-GTK_DOC_USE_REBASE_TRUE
+-GTK_DOC_USE_LIBTOOL_FALSE
+-GTK_DOC_USE_LIBTOOL_TRUE
+-GTK_DOC_BUILD_PDF_FALSE
+-GTK_DOC_BUILD_PDF_TRUE
+-GTK_DOC_BUILD_HTML_FALSE
+-GTK_DOC_BUILD_HTML_TRUE
+ ENABLE_GTK_DOC_FALSE
+ ENABLE_GTK_DOC_TRUE
+-HAVE_GTK_DOC_FALSE
+-HAVE_GTK_DOC_TRUE
+-AM_DEFAULT_VERBOSITY
+-GTKDOC_DEPS_LIBS
+-GTKDOC_DEPS_CFLAGS
+-HTML_DIR
+-GTKDOC_MKPDF
+-GTKDOC_REBASE
+-GTKDOC_CHECK_PATH
+-GTKDOC_CHECK
+ LLVM_LIBS
+ LLVM_CFLAGS
+ llvm_config
+@@ -1016,10 +999,6 @@ enable_opcode_stats
+ enable_introspection
+ enable_glibtest
+ enable_schemas_compile
+-with_html_dir
+-enable_gtk_doc
+-enable_gtk_doc_html
+-enable_gtk_doc_pdf
+ enable_dependency_tracking
+ enable_silent_rules
+ enable_maintainer_mode
+@@ -1099,9 +1078,7 @@ GTK2_LIBS
+ GTK_UNIX_PRINTING_CFLAGS
+ GTK_UNIX_PRINTING_LIBS
+ ATSPI2_CFLAGS
+-ATSPI2_LIBS
+-GTKDOC_DEPS_CFLAGS
+-GTKDOC_DEPS_LIBS'
++ATSPI2_LIBS'
+ 
+ 
+ # Initialize some variables set by options.
+@@ -1772,9 +1749,6 @@ Optional Features:
+   --disable-glibtest      do not try to compile and run a test GLIB program
+   --disable-schemas-compile
+                           Disable regeneration of gschemas.compiled on install
+-  --enable-gtk-doc        use gtk-doc to build documentation [[default=no]]
+-  --enable-gtk-doc-html   build documentation in html format [[default=yes]]
+-  --enable-gtk-doc-pdf    build documentation in pdf format [[default=no]]
+   --enable-dependency-tracking
+                           do not reject slow dependency extractors
+   --disable-dependency-tracking
+@@ -1794,7 +1768,6 @@ Optional Packages:
+   --with-sysroot=DIR Search for dependent libraries within DIR
+                         (or the compiler's sysroot if not specified).
+   --with-gtk=2.0|3.0      the GTK+ version to use (default: 3.0)
+-  --with-html-dir=PATH    path to installed docs
+ 
+ Some influential environment variables:
+   CC          C compiler command
+@@ -1921,10 +1894,6 @@ Some influential environment variables:
+   ATSPI2_CFLAGS
+               C compiler flags for ATSPI2, overriding pkg-config
+   ATSPI2_LIBS linker flags for ATSPI2, overriding pkg-config
+-  GTKDOC_DEPS_CFLAGS
+-              C compiler flags for GTKDOC_DEPS, overriding pkg-config
+-  GTKDOC_DEPS_LIBS
+-              linker flags for GTKDOC_DEPS, overriding pkg-config
+ 
+ Use these variables to override the choices made by `configure' or to help
+ it to find libraries and programs with nonstandard names/locations.
+@@ -4703,7 +4672,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4749,7 +4718,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4773,7 +4742,7 @@ rm -f core conftest.err conftest.$ac_obj
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4818,7 +4787,7 @@ else
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -4842,7 +4811,7 @@ rm -f core conftest.err conftest.$ac_obj
+     We can't simply define LARGE_OFF_T to be 9223372036854775807,
+     since some C++ compilers masquerading as C compilers
+     incorrectly reject 9223372036854775807.  */
+-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
++#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
+ 		       && LARGE_OFF_T % 2147483647 == 1)
+ 		      ? 1 : -1];
+@@ -17312,10 +17281,13 @@ int
+ main ()
+ {
+   unsigned int major, minor, micro;
++  char *tmp_version;
+ 
+   fclose (fopen ("conf.glibtest", "w"));
+ 
+-  if (sscanf("$min_glib_version", "%u.%u.%u", &major, &minor, &micro) != 3) {
++  /* HP/UX 9 (%@#!) writes to sscanf strings */
++  tmp_version = g_strdup("$min_glib_version");
++  if (sscanf(tmp_version, "%u.%u.%u", &major, &minor, &micro) != 3) {
+      printf("%s, bad version string\n", "$min_glib_version");
+      exit(1);
+    }
+@@ -21110,7 +21082,7 @@ fi
+ 
+ 
+     # On some Linux/Unix platforms, shm_* may only be available if linking against librt
+-    if test "$os_win32" = "no"; then
++    if test "$os_win32" = "no" && test "$os_openbsd" = "no" && test "$os_netbsd" = "no"; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing shm_open" >&5
+ $as_echo_n "checking for library containing shm_open... " >&6; }
+ if ${ac_cv_search_shm_open+:} false; then :
+@@ -21411,336 +21383,7 @@ $as_echo "$as_me: WARNING: LLVM >= 3.4 i
+ fi
+ 
+ 
+-
+-
+-
+-  gtk_doc_requires="gtk-doc >= 1.10"
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtk-doc" >&5
+-$as_echo_n "checking for gtk-doc... " >&6; }
+-  if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$gtk_doc_requires\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "$gtk_doc_requires") 2>&5
+-  ac_status=$?
+-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  test $ac_status = 0; }; then
+-  have_gtk_doc=yes
+-else
+-  have_gtk_doc=no
+-fi
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $have_gtk_doc" >&5
+-$as_echo "$have_gtk_doc" >&6; }
+-
+-  if test "$have_gtk_doc" = "no"; then
+-      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING:
+-  You will not be able to create source packages with 'make dist'
+-  because $gtk_doc_requires is not found." >&5
+-$as_echo "$as_me: WARNING:
+-  You will not be able to create source packages with 'make dist'
+-  because $gtk_doc_requires is not found." >&2;}
+-  fi
+-
+-            # Extract the first word of "gtkdoc-check", so it can be a program name with args.
+-set dummy gtkdoc-check; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_prog_GTKDOC_CHECK+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  if test -n "$GTKDOC_CHECK"; then
+-  ac_cv_prog_GTKDOC_CHECK="$GTKDOC_CHECK" # Let the user override the test.
+-else
+-as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_prog_GTKDOC_CHECK="gtkdoc-check.test"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-fi
+-fi
+-GTKDOC_CHECK=$ac_cv_prog_GTKDOC_CHECK
+-if test -n "$GTKDOC_CHECK"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $GTKDOC_CHECK" >&5
+-$as_echo "$GTKDOC_CHECK" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-  # Extract the first word of "gtkdoc-check", so it can be a program name with args.
+-set dummy gtkdoc-check; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_path_GTKDOC_CHECK_PATH+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  case $GTKDOC_CHECK_PATH in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_GTKDOC_CHECK_PATH="$GTKDOC_CHECK_PATH" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_path_GTKDOC_CHECK_PATH="$as_dir/$ac_word$ac_exec_ext"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-GTKDOC_CHECK_PATH=$ac_cv_path_GTKDOC_CHECK_PATH
+-if test -n "$GTKDOC_CHECK_PATH"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $GTKDOC_CHECK_PATH" >&5
+-$as_echo "$GTKDOC_CHECK_PATH" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-  for ac_prog in gtkdoc-rebase
+-do
+-  # Extract the first word of "$ac_prog", so it can be a program name with args.
+-set dummy $ac_prog; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_path_GTKDOC_REBASE+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  case $GTKDOC_REBASE in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_GTKDOC_REBASE="$GTKDOC_REBASE" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_path_GTKDOC_REBASE="$as_dir/$ac_word$ac_exec_ext"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-GTKDOC_REBASE=$ac_cv_path_GTKDOC_REBASE
+-if test -n "$GTKDOC_REBASE"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $GTKDOC_REBASE" >&5
+-$as_echo "$GTKDOC_REBASE" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-  test -n "$GTKDOC_REBASE" && break
+-done
+-test -n "$GTKDOC_REBASE" || GTKDOC_REBASE="true"
+-
+-  # Extract the first word of "gtkdoc-mkpdf", so it can be a program name with args.
+-set dummy gtkdoc-mkpdf; ac_word=$2
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+-$as_echo_n "checking for $ac_word... " >&6; }
+-if ${ac_cv_path_GTKDOC_MKPDF+:} false; then :
+-  $as_echo_n "(cached) " >&6
+-else
+-  case $GTKDOC_MKPDF in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_GTKDOC_MKPDF="$GTKDOC_MKPDF" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-    for ac_exec_ext in '' $ac_executable_extensions; do
+-  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_path_GTKDOC_MKPDF="$as_dir/$ac_word$ac_exec_ext"
+-    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-  done
+-IFS=$as_save_IFS
+-
+-  ;;
+-esac
+-fi
+-GTKDOC_MKPDF=$ac_cv_path_GTKDOC_MKPDF
+-if test -n "$GTKDOC_MKPDF"; then
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $GTKDOC_MKPDF" >&5
+-$as_echo "$GTKDOC_MKPDF" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-
+-
+-
+-
+-# Check whether --with-html-dir was given.
+-if test "${with_html_dir+set}" = set; then :
+-  withval=$with_html_dir;
+-else
+-  with_html_dir='${datadir}/gtk-doc/html'
+-fi
+-
+-  HTML_DIR="$with_html_dir"
+-
+-
+-    # Check whether --enable-gtk-doc was given.
+-if test "${enable_gtk_doc+set}" = set; then :
+-  enableval=$enable_gtk_doc;
+-else
+-  enable_gtk_doc=no
+-fi
+-
+-
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build gtk-doc documentation" >&5
+-$as_echo_n "checking whether to build gtk-doc documentation... " >&6; }
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $enable_gtk_doc" >&5
+-$as_echo "$enable_gtk_doc" >&6; }
+-
+-  if test "x$enable_gtk_doc" = "xyes" && test "$have_gtk_doc" = "no"; then
+-    as_fn_error $? "
+-  You must have $gtk_doc_requires installed to build documentation for
+-  $PACKAGE_NAME. Please install gtk-doc or disable building the
+-  documentation by adding '--disable-gtk-doc' to '$0'." "$LINENO" 5
+-  fi
+-
+-    if test "x$PACKAGE_NAME" != "xglib"; then
+-
+-pkg_failed=no
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTKDOC_DEPS" >&5
+-$as_echo_n "checking for GTKDOC_DEPS... " >&6; }
+-
+-if test -n "$GTKDOC_DEPS_CFLAGS"; then
+-    pkg_cv_GTKDOC_DEPS_CFLAGS="$GTKDOC_DEPS_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0") 2>&5
+-  ac_status=$?
+-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  test $ac_status = 0; }; then
+-  pkg_cv_GTKDOC_DEPS_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+-else
+-  pkg_failed=yes
+-fi
+- else
+-    pkg_failed=untried
+-fi
+-if test -n "$GTKDOC_DEPS_LIBS"; then
+-    pkg_cv_GTKDOC_DEPS_LIBS="$GTKDOC_DEPS_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0") 2>&5
+-  ac_status=$?
+-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  test $ac_status = 0; }; then
+-  pkg_cv_GTKDOC_DEPS_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+-else
+-  pkg_failed=yes
+-fi
+- else
+-    pkg_failed=untried
+-fi
+-
+-
+-
+-if test $pkg_failed = yes; then
+-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-
+-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+-        _pkg_short_errors_supported=yes
+-else
+-        _pkg_short_errors_supported=no
+-fi
+-        if test $_pkg_short_errors_supported = yes; then
+-	        GTKDOC_DEPS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>&1`
+-        else
+-	        GTKDOC_DEPS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>&1`
+-        fi
+-	# Put the nasty error message in config.log where it belongs
+-	echo "$GTKDOC_DEPS_PKG_ERRORS" >&5
+-
+-	:
+-elif test $pkg_failed = untried; then
+-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-	:
+-else
+-	GTKDOC_DEPS_CFLAGS=$pkg_cv_GTKDOC_DEPS_CFLAGS
+-	GTKDOC_DEPS_LIBS=$pkg_cv_GTKDOC_DEPS_LIBS
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-
+-fi
+-  fi
+-
+-    # Check whether --enable-gtk-doc-html was given.
+-if test "${enable_gtk_doc_html+set}" = set; then :
+-  enableval=$enable_gtk_doc_html;
+-else
+-  enable_gtk_doc_html=yes
+-fi
+-
+-    # Check whether --enable-gtk-doc-pdf was given.
+-if test "${enable_gtk_doc_pdf+set}" = set; then :
+-  enableval=$enable_gtk_doc_pdf;
+-else
+-  enable_gtk_doc_pdf=no
+-fi
+-
+-
+-  if test -z "$GTKDOC_MKPDF"; then
+-    enable_gtk_doc_pdf=no
+-  fi
+-
+-  if test -z "$AM_DEFAULT_VERBOSITY"; then
+-    AM_DEFAULT_VERBOSITY=1
+-  fi
+-
+-
+-   if test x$have_gtk_doc = xyes; then
+-  HAVE_GTK_DOC_TRUE=
+-  HAVE_GTK_DOC_FALSE='#'
+-else
+-  HAVE_GTK_DOC_TRUE='#'
+-  HAVE_GTK_DOC_FALSE=
+-fi
+-
+-   if test x$enable_gtk_doc = xyes; then
++ if false; then
+   ENABLE_GTK_DOC_TRUE=
+   ENABLE_GTK_DOC_FALSE='#'
+ else
+@@ -21748,39 +21391,6 @@ else
+   ENABLE_GTK_DOC_FALSE=
+ fi
+ 
+-   if test x$enable_gtk_doc_html = xyes; then
+-  GTK_DOC_BUILD_HTML_TRUE=
+-  GTK_DOC_BUILD_HTML_FALSE='#'
+-else
+-  GTK_DOC_BUILD_HTML_TRUE='#'
+-  GTK_DOC_BUILD_HTML_FALSE=
+-fi
+-
+-   if test x$enable_gtk_doc_pdf = xyes; then
+-  GTK_DOC_BUILD_PDF_TRUE=
+-  GTK_DOC_BUILD_PDF_FALSE='#'
+-else
+-  GTK_DOC_BUILD_PDF_TRUE='#'
+-  GTK_DOC_BUILD_PDF_FALSE=
+-fi
+-
+-   if test -n "$LIBTOOL"; then
+-  GTK_DOC_USE_LIBTOOL_TRUE=
+-  GTK_DOC_USE_LIBTOOL_FALSE='#'
+-else
+-  GTK_DOC_USE_LIBTOOL_TRUE='#'
+-  GTK_DOC_USE_LIBTOOL_FALSE=
+-fi
+-
+-   if test -n "$GTKDOC_REBASE"; then
+-  GTK_DOC_USE_REBASE_TRUE=
+-  GTK_DOC_USE_REBASE_FALSE='#'
+-else
+-  GTK_DOC_USE_REBASE_TRUE='#'
+-  GTK_DOC_USE_REBASE_FALSE=
+-fi
+-
+-
+ 
+ 
+ # Use C99 as the language standard for C code.
+@@ -23159,7 +22769,6 @@ END
+   fi
+ fi
+ 
+-
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable maintainer-specific portions of Makefiles" >&5
+ $as_echo_n "checking whether to enable maintainer-specific portions of Makefiles... " >&6; }
+     # Check whether --enable-maintainer-mode was given.
+@@ -23776,30 +23385,10 @@ LIBOBJS=$ac_libobjs
+ LTLIBOBJS=$ac_ltlibobjs
+ 
+ 
+-if test -z "${HAVE_GTK_DOC_TRUE}" && test -z "${HAVE_GTK_DOC_FALSE}"; then
+-  as_fn_error $? "conditional \"HAVE_GTK_DOC\" was never defined.
+-Usually this means the macro was only invoked conditionally." "$LINENO" 5
+-fi
+ if test -z "${ENABLE_GTK_DOC_TRUE}" && test -z "${ENABLE_GTK_DOC_FALSE}"; then
+   as_fn_error $? "conditional \"ENABLE_GTK_DOC\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+ fi
+-if test -z "${GTK_DOC_BUILD_HTML_TRUE}" && test -z "${GTK_DOC_BUILD_HTML_FALSE}"; then
+-  as_fn_error $? "conditional \"GTK_DOC_BUILD_HTML\" was never defined.
+-Usually this means the macro was only invoked conditionally." "$LINENO" 5
+-fi
+-if test -z "${GTK_DOC_BUILD_PDF_TRUE}" && test -z "${GTK_DOC_BUILD_PDF_FALSE}"; then
+-  as_fn_error $? "conditional \"GTK_DOC_BUILD_PDF\" was never defined.
+-Usually this means the macro was only invoked conditionally." "$LINENO" 5
+-fi
+-if test -z "${GTK_DOC_USE_LIBTOOL_TRUE}" && test -z "${GTK_DOC_USE_LIBTOOL_FALSE}"; then
+-  as_fn_error $? "conditional \"GTK_DOC_USE_LIBTOOL\" was never defined.
+-Usually this means the macro was only invoked conditionally." "$LINENO" 5
+-fi
+-if test -z "${GTK_DOC_USE_REBASE_TRUE}" && test -z "${GTK_DOC_USE_REBASE_FALSE}"; then
+-  as_fn_error $? "conditional \"GTK_DOC_USE_REBASE\" was never defined.
+-Usually this means the macro was only invoked conditionally." "$LINENO" 5
+-fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking that generated files are newer than configure" >&5
+ $as_echo_n "checking that generated files are newer than configure... " >&6; }
+    if test -n "$am_sleep_pid"; then
