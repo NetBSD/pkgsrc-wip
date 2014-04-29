@@ -1,7 +1,0 @@
-Finished.
-Needs commiting to pkgsrc-current.
-
-Then commiting to pkgsrc-current Makefile.common 
-should be deleted and ../../print/poppler/Makefile.common
-should be included instead, the patch files moved
-to ../../print/poppler/patches. distinfo should also not be imported.
