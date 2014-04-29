@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/06/19 11:26:04 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/04/29 16:02:06 thomasklausner Exp $
 
-DISTNAME=	yelp-tools-3.6.1
+DISTNAME=	yelp-tools-3.12.1
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-tools/3.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-tools/3.12/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
