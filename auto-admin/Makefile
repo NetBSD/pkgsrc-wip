@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/14 17:02:43 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2014/04/29 20:12:31 outpaddling Exp $
 #
 
 DISTNAME=	auto-admin-0.3.3
@@ -20,7 +20,11 @@ do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/Common/* \
 		${DESTDIR}${PREFIX}/sbin
-.if exists(${WRKSRC}/Scripts/${OPSYS})
+	echo ${OPSYS}
+	ls ${WRKSRC}/Scripts/${OPSYS}
+# Why doesn't this work?
+#.if exists(${WRKSRC}/Scripts/${OPSYS})
+.if ${OPSYS} == NetBSD
 	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/${OPSYS}/* \
 		${DESTDIR}${PREFIX}/sbin
 .endif
