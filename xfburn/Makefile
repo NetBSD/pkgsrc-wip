@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/29 20:08:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/04/29 20:09:29 thomasklausner Exp $
 
 DISTNAME=	xfburn-0.5.2
 CATEGORIES=	sysutils
@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake intltool pkg-config
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libburn/buildlink3.mk"
-.include "../../wip/libisofs/buildlink3.mk"
+.include "../../sysutils/libisofs/buildlink3.mk"
 .include "../../wip/libxfce4ui/buildlink3.mk"
 .include "../../wip/xfce4-exo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
