@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/04 19:19:46 nros Exp $
+# $NetBSD: Makefile,v 1.10 2014/04/29 12:46:10 nros Exp $
 
 DISTNAME=	texmaker-4.1.1
 CATEGORIES=	editors
@@ -23,6 +23,6 @@ do-configure:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
-.include "../../wip/poppler-qt5/buildlink3.mk"
+.include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
