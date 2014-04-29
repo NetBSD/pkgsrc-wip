@@ -1,0 +1,3 @@
+1) Help adding missing long double and complex support in NetBSD.
+2) lang/gcc48 has been changed to a meta package. Mabey this should be used
+for lang/gcc410snapshot as well.
