@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.3 2014/04/29 10:23:55 khorben Exp $
+lib/php/.channels/.alias/pear.txt
+lib/php/.channels/.alias/pecl.txt
+lib/php/.channels/.alias/phpdocs.txt
+lib/php/.channels/__uri.reg
+lib/php/.channels/doc.php.net.reg
+lib/php/.channels/pear.php.net.reg
+lib/php/.channels/pecl.php.net.reg
+lib/php/.depdb
+lib/php/.depdblock
+lib/php/.filemap
+lib/php/.lock
+lib/php/.registry/mail_mime.reg
+lib/php/Mail/mime.php
+lib/php/Mail/mimePart.php
+lib/php/doc/Mail_Mime/scripts/phail.php
+lib/php/test/Mail_Mime/tests/class-filename.phpt
+lib/php/test/Mail_Mime/tests/encoding_case.phpt
+lib/php/test/Mail_Mime/tests/headers_with_mbstring.phpt
+lib/php/test/Mail_Mime/tests/headers_without_mbstring.phpt
+lib/php/test/Mail_Mime/tests/sleep_wakeup_EOL-bug3488-part1.phpt
+lib/php/test/Mail_Mime/tests/sleep_wakeup_EOL-bug3488-part2.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_10596_1.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_10816_1.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_11731.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_12411.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_13444.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_13962.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_14529.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_14779.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_14780.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_15320.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_17025.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_17175.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_18083.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_3513_1.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_3513_2.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_3513_3.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_7561_1.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_8386_1.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_8541_1.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_9558_1.phpt
+lib/php/test/Mail_Mime/tests/test_Bug_9722_1.phpt
+@pkgdir lib/php/.registry/.channel.pecl.php.net
+@pkgdir lib/php/.registry/.channel.doc.php.net
+@pkgdir lib/php/.registry/.channel.__uri

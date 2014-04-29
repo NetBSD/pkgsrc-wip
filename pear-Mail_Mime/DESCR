@@ -1,0 +1,3 @@
+The Mail_Mime class provides an OO interface to create MIME enabled email
+messages. This way you can create emails that contain plain-text bodies, HTML
+bodies, attachments, inline images and specific headers.
