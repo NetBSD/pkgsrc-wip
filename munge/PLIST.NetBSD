@@ -1,2 +1,3 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.5 2014/04/29 19:38:51 outpaddling Exp $
 share/examples/init.d/munge
 share/examples/default/munge
