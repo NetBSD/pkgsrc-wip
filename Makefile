@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5726 2014/04/29 08:05:46 thomasklausner Exp $
+# $Id: Makefile,v 1.5727 2014/04/29 08:10:21 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1961,7 +1961,6 @@ SUBDIR+=	p5-Algorithm-Cluster
 SUBDIR+=	p5-Algorithm-Combinatorics
 SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-Apache2-ModSSL
-SUBDIR+=	p5-App-cpanminus
 SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Astro-SpaceTrack
 SUBDIR+=	p5-AxKit
@@ -2590,6 +2589,7 @@ SUBDIR+=	py-fjd
 SUBDIR+=	py-formex
 SUBDIR+=	py-forthon
 SUBDIR+=	py-fs
+SUBDIR+=	py-functions
 SUBDIR+=	py-fuzzpy
 SUBDIR+=	py-fwarp
 SUBDIR+=	py-fyzz
@@ -2631,6 +2631,7 @@ SUBDIR+=	py-hfk
 SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-hostlist
 SUBDIR+=	py-hurry-filesize
+SUBDIR+=	py-hyperspy
 SUBDIR+=	py-igraph
 SUBDIR+=	py-imgSeek
 SUBDIR+=	py-impacket
@@ -2882,6 +2883,7 @@ SUBDIR+=	py-scikit-aero
 SUBDIR+=	py-scikit-monaco
 SUBDIR+=	py-scikit-nano
 SUBDIR+=	py-scikits-bvp_solver
+SUBDIR+=	py-scikits-learn
 SUBDIR+=	py-scikits_ann
 SUBDIR+=	py-scikits_bvp1lg
 SUBDIR+=	py-scikits_datasmooth
@@ -3591,6 +3593,7 @@ SUBDIR+=	wang-ttf
 SUBDIR+=	wbox
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
+SUBDIR+=	webkit-gtk
 SUBDIR+=	webkit-sharp
 SUBDIR+=	weland
 SUBDIR+=	weplab
