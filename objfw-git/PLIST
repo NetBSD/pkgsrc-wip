@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/30 20:34:58 midar Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/04/30 22:44:30 midar Exp $
 bin/objfw-compile
 bin/objfw-config
+bin/ofzip
 include/ObjFW/OFAcceptFailedException.h
 include/ObjFW/OFAddressTranslationFailedException.h
 include/ObjFW/OFAllocFailedException.h
@@ -9,6 +10,7 @@ include/ObjFW/OFApplication.h
 include/ObjFW/OFArray.h
 include/ObjFW/OFArray_subarray.h
 include/ObjFW/OFAutoreleasePool.h
+include/ObjFW/OFBigDataArray.h
 include/ObjFW/OFBindFailedException.h
 include/ObjFW/OFBlock.h
 include/ObjFW/OFChangeCurrentDirectoryPathFailedException.h
@@ -23,7 +25,7 @@ include/ObjFW/OFConditionStillWaitingException.h
 include/ObjFW/OFConditionWaitFailedException.h
 include/ObjFW/OFConnectionFailedException.h
 include/ObjFW/OFConstantString.h
-include/ObjFW/OFCopyFileFailedException.h
+include/ObjFW/OFCopyItemFailedException.h
 include/ObjFW/OFCountedSet.h
 include/ObjFW/OFCreateDirectoryFailedException.h
 include/ObjFW/OFCreateSymbolicLinkFailedException.h
@@ -31,6 +33,8 @@ include/ObjFW/OFDataArray+Hashing.h
 include/ObjFW/OFDataArray+MessagePackValue.h
 include/ObjFW/OFDataArray.h
 include/ObjFW/OFDate.h
+include/ObjFW/OFDeflate64Stream.h
+include/ObjFW/OFDeflateStream.h
 include/ObjFW/OFDictionary.h
 include/ObjFW/OFEnumerationMutationException.h
 include/ObjFW/OFEnumerator.h
@@ -43,6 +47,8 @@ include/ObjFW/OFHTTPResponse.h
 include/ObjFW/OFHTTPServer.h
 include/ObjFW/OFHash.h
 include/ObjFW/OFHashAlreadyCalculatedException.h
+include/ObjFW/OFINICategory.h
+include/ObjFW/OFINIFile.h
 include/ObjFW/OFInitializationFailedException.h
 include/ObjFW/OFIntrospection.h
 include/ObjFW/OFInvalidArgumentException.h
@@ -51,6 +57,7 @@ include/ObjFW/OFInvalidFormatException.h
 include/ObjFW/OFInvalidJSONException.h
 include/ObjFW/OFInvalidServerReplyException.h
 include/ObjFW/OFJSONRepresentation.h
+include/ObjFW/OFKernelEventObserver.h
 include/ObjFW/OFLinkFailedException.h
 include/ObjFW/OFList.h
 include/ObjFW/OFListenFailedException.h
@@ -62,6 +69,7 @@ include/ObjFW/OFMapTable.h
 include/ObjFW/OFMemoryNotPartOfObjectException.h
 include/ObjFW/OFMessagePackExtension.h
 include/ObjFW/OFMessagePackRepresentation.h
+include/ObjFW/OFMoveItemFailedException.h
 include/ObjFW/OFMutableArray.h
 include/ObjFW/OFMutableDictionary.h
 include/ObjFW/OFMutableSet.h
@@ -74,6 +82,7 @@ include/ObjFW/OFNumber.h
 include/ObjFW/OFObject+Serialization.h
 include/ObjFW/OFObject.h
 include/ObjFW/OFOpenFileFailedException.h
+include/ObjFW/OFOptionsParser.h
 include/ObjFW/OFOutOfMemoryException.h
 include/ObjFW/OFOutOfRangeException.h
 include/ObjFW/OFPlugin.h
@@ -82,7 +91,6 @@ include/ObjFW/OFReadFailedException.h
 include/ObjFW/OFReadOrWriteFailedException.h
 include/ObjFW/OFRecursiveMutex.h
 include/ObjFW/OFRemoveItemFailedException.h
-include/ObjFW/OFRenameItemFailedException.h
 include/ObjFW/OFRunLoop.h
 include/ObjFW/OFSHA1Hash.h
 include/ObjFW/OFSeekFailedException.h
@@ -94,7 +102,6 @@ include/ObjFW/OFSortedList.h
 include/ObjFW/OFStdIOStream.h
 include/ObjFW/OFStillLockedException.h
 include/ObjFW/OFStream.h
-include/ObjFW/OFStreamObserver.h
 include/ObjFW/OFStreamSocket.h
 include/ObjFW/OFString+Hashing.h
 include/ObjFW/OFString+JSONValue.h
@@ -113,6 +120,7 @@ include/ObjFW/OFThreadStartFailedException.h
 include/ObjFW/OFThreadStillRunningException.h
 include/ObjFW/OFTimer.h
 include/ObjFW/OFTruncatedDataException.h
+include/ObjFW/OFUDPSocket.h
 include/ObjFW/OFURL.h
 include/ObjFW/OFUnboundNamespaceException.h
 include/ObjFW/OFUnboundPrefixException.h
@@ -143,7 +151,9 @@ include/ObjFW/macros.h
 include/ObjFW/objfw-defs.h
 include/ObjFW/of_asprintf.h
 include/ObjFW/of_strptime.h
+include/ObjFW/resolver.h
 include/ObjFW/runtime.h
+include/ObjFW/socket.h
 include/ObjFW/threading.h
 include/ObjFW/unicode.h
 lib/libobjfw.a
