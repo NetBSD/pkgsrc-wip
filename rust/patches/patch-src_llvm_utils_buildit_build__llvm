@@ -1,10 +1,10 @@
-$NetBSD: patch-src_llvm_utils_buildit_build__llvm,v 1.1 2014/01/11 18:29:56 schmonz Exp $
+$NetBSD: patch-src_llvm_utils_buildit_build__llvm,v 1.2 2014/04/30 17:02:47 schmonz Exp $
 
 Shell portability fix.
 
---- src/llvm/utils/buildit/build_llvm.orig	2014-01-03 03:07:25.000000000 +0000
+--- src/llvm/utils/buildit/build_llvm.orig	2014-04-03 00:04:26.000000000 +0000
 +++ src/llvm/utils/buildit/build_llvm
-@@ -222,7 +222,7 @@ cd $DIR/obj-llvm || exit 1
+@@ -227,7 +227,7 @@ cd $DIR/obj-llvm || exit 1
  
  # Install the tree into the destination directory.
  make $JOBS_FLAG $COMMON_MAKEFLAGS UNIVERSAL_ARCH="$HOSTS" install
