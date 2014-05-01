@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2013/01/15 06:46:48 makoto Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/01 01:29:06 makoto Exp $
 
-DISTNAME=		audacity-minsrc-2.0.2
+DISTNAME=		audacity-minsrc-2.0.5
 PKGNAME=		${DISTNAME:S/-minsrc-/-/}
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -60,6 +60,8 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+# pkglint says: PLIST:68: Please .include it in the Makefile
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 
 # XXX Internal compiler error with -O2
 .if ${MACHINE_ARCH} == "alpha"

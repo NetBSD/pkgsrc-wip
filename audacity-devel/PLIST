@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/01/08 22:37:27 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/05/01 01:29:06 makoto Exp $
 bin/audacity
 man/man1/audacity.1
 share/applications/audacity.desktop
@@ -45,6 +45,8 @@ share/audacity/nyquist/xlinit.lsp
 share/audacity/nyquist/xm.lsp
 share/audacity/plug-ins/SilenceMarker.ny
 share/audacity/plug-ins/SoundFinder.ny
+share/audacity/plug-ins/StudioFadeOut.ny
+share/audacity/plug-ins/adjustable-fade.ny
 share/audacity/plug-ins/beat.ny
 share/audacity/plug-ins/clicktrack.ny
 share/audacity/plug-ins/clipfix.ny
@@ -91,6 +93,7 @@ share/locale/ga/LC_MESSAGES/audacity.mo
 share/locale/gl/LC_MESSAGES/audacity.mo
 share/locale/he/LC_MESSAGES/audacity.mo
 share/locale/hi/LC_MESSAGES/audacity.mo
+share/locale/hr/LC_MESSAGES/audacity.mo
 share/locale/hu/LC_MESSAGES/audacity.mo
 share/locale/id/LC_MESSAGES/audacity.mo
 share/locale/it/LC_MESSAGES/audacity.mo
