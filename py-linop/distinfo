@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/12/05 11:00:42 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2014/05/02 23:07:56 jihbed Exp $
 
-SHA1 (linop-0.5.tar.gz) = 31cab275c6df4a205c7cab7232732ae448f51f42
-RMD160 (linop-0.5.tar.gz) = f8b6c2f90f75603fd4321adc43ac089c32f08e99
-Size (linop-0.5.tar.gz) = 155402 bytes
+SHA1 (linop-0.8.2.tar.gz) = cf981bd7e37f19fbb5516c93143b5ba9327b951a
+RMD160 (linop-0.8.2.tar.gz) = 37f4836ff869aa3ce29a0b8ef7767dc430442a90
+Size (linop-0.8.2.tar.gz) = 17157 bytes

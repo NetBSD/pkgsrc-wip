@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/12/05 11:00:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/02 23:07:56 jihbed Exp $
 
-DISTNAME=	linop-0.5
+DISTNAME=	linop-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/l/linop/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ghisvail/linop
