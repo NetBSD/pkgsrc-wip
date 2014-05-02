@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/05/02 09:00:34 ahp-nils Exp $
+$NetBSD: distinfo,v 1.2 2014/05/02 12:08:06 ahp-nils Exp $
 
-SHA1 (0.4.tar.gz) = 2b23728417386ad788f2dc3dc8f468e8d0689294
-RMD160 (0.4.tar.gz) = 3ee768adb0a2cd3448dd7e92ec53dae5273316e9
-Size (0.4.tar.gz) = 25444 bytes
-SHA1 (patch-setup.py) = ecc19f48e098472e0d6d8bdc2e5d42fc9a1397b0
+SHA1 (pyqueue-0.4/0.4.tar.gz) = 2b23728417386ad788f2dc3dc8f468e8d0689294
+RMD160 (pyqueue-0.4/0.4.tar.gz) = 3ee768adb0a2cd3448dd7e92ec53dae5273316e9
+Size (pyqueue-0.4/0.4.tar.gz) = 25444 bytes
