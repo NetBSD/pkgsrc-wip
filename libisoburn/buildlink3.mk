@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2011/11/22 17:11:04 ryo-on Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/05/03 19:01:56 thomasklausner Exp $
 
 BUILDLINK_TREE+=	libisoburn
 
@@ -8,8 +8,8 @@ LIBISOBURN_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libisoburn+=	libisoburn>=1.1.8
 BUILDLINK_PKGSRCDIR.libisoburn?=	../../wip/libisoburn
 
-.include "../../wip/libisofs/buildlink3.mk"
-.include "../../wip/libburn/buildlink3.mk"
+.include "../../sysutils/libisofs/buildlink3.mk"
+.include "../../sysutils/libburn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .endif	# LIBISOBURN_BUILDLINK3_MK
 
