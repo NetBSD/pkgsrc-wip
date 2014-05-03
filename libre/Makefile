@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/03/09 13:56:51 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/03 19:14:31 othyro Exp $
 
-DISTNAME=	re-0.4.7
+DISTNAME=	re-0.4.8
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www.creytiv.com/pub/
