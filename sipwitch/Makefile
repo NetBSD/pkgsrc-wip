@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/03/11 04:06:42 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/03 23:21:33 othyro Exp $
 #
 
-DISTNAME=	sipwitch-1.9.0
+DISTNAME=	sipwitch-1.9.1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.gnu.org/gnu/sipwitch/
 
@@ -22,9 +22,9 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-configure
 SUBST_MESSAGE.files=	Fixing paths and permissions.
 SUBST_FILES.files=	cmake_install.cmake server/cmake_install.cmake
-SUBST_SED.files=	-e 's,lib64,lib,g'
 SUBST_SED.files+=	-e 's|SETUID|SETUID OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE|1'
 
+CMAKE_ARGS+=	-DINSTALL_LIBDIR:STRING=lib -DINSTALL_MANDIR:STRING=${PKGMANDIR}
 SPECIAL_PERMS+=		bin/sippasswd ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555
 
 .include "../../net/libexosip/buildlink3.mk"
