@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 04:03:36 othyro Exp $
-bin/blink
+@comment $NetBSD: PLIST,v 1.5 2014/05/03 19:02:32 othyro Exp $
+bin/blink${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/blink/__init__.py
 ${PYSITELIB}/blink/__init__.pyc
@@ -34,6 +34,9 @@ ${PYSITELIB}/blink/contacts.pyo
 ${PYSITELIB}/blink/event.py
 ${PYSITELIB}/blink/event.pyc
 ${PYSITELIB}/blink/event.pyo
+${PYSITELIB}/blink/filetransferwindow.py
+${PYSITELIB}/blink/filetransferwindow.pyc
+${PYSITELIB}/blink/filetransferwindow.pyo
 ${PYSITELIB}/blink/google/__init__.py
 ${PYSITELIB}/blink/google/__init__.pyc
 ${PYSITELIB}/blink/google/__init__.pyo
@@ -160,6 +163,8 @@ share/blink/audio_session.ui
 share/blink/blink.ui
 share/blink/chat/styles/Smooth_Operator/Classic.style
 share/blink/chat/styles/Smooth_Operator/Dark.style
+share/blink/chat/styles/Smooth_Operator/Dim Icon-Time.style
+share/blink/chat/styles/Smooth_Operator/Dim Time-Icon.style
 share/blink/chat/styles/Smooth_Operator/Icon-Time.style
 share/blink/chat/styles/Smooth_Operator/Time-Icon.style
 share/blink/chat/styles/Smooth_Operator/css/topic.css
@@ -222,25 +227,32 @@ share/blink/conference_dialog.ui
 share/blink/contact.ui
 share/blink/contact_editor.ui
 share/blink/contact_group.ui
+share/blink/filetransfer_dialog.ui.bak
+share/blink/filetransfer_item.ui
+share/blink/filetransfer_window.ui
 share/blink/google_contacts_dialog.ui
 share/blink/icons/accounts.png
 share/blink/icons/advanced-settings.png
-share/blink/icons/alerts.png
 share/blink/icons/application-exit.png
+share/blink/icons/arrow-inward-blue.svg
+share/blink/icons/arrow-inward-red.svg
+share/blink/icons/arrow-outward-green.svg
+share/blink/icons/arrow-outward-red.svg
 share/blink/icons/audio-auto-rejected.png
 share/blink/icons/audio-rejected.png
 share/blink/icons/audio.png
+share/blink/icons/avatar-nate.png
+share/blink/icons/avatar-ruby.png
 share/blink/icons/avatar.png
 share/blink/icons/bell-off.svg
 share/blink/icons/bell-on.svg
-share/blink/icons/bell.png
+share/blink/icons/bell.svg
 share/blink/icons/blink-logo.png
 share/blink/icons/blink.ico
 share/blink/icons/blink.png
 share/blink/icons/blink48.png
 share/blink/icons/blink64.png
 share/blink/icons/blue-lock.png
-share/blink/icons/bonjour.png
 share/blink/icons/camera12.svg
 share/blink/icons/cancel.png
 share/blink/icons/chat-auto-rejected.png
@@ -248,6 +260,10 @@ share/blink/icons/chat-rejected.png
 share/blink/icons/chat.png
 share/blink/icons/chat.svg
 share/blink/icons/chat12.svg
+share/blink/icons/circle-dot.svg
+share/blink/icons/circle-grey.svg
+share/blink/icons/circle-progress.svg
+share/blink/icons/clock.svg
 share/blink/icons/cog.svg
 share/blink/icons/composing12.svg
 share/blink/icons/configure.png
@@ -256,7 +272,10 @@ share/blink/icons/delete.svg
 share/blink/icons/display.png
 share/blink/icons/display18.png
 share/blink/icons/downloads16.svg
+share/blink/icons/file-broken.png
 share/blink/icons/file-transfer.png
+share/blink/icons/folder-downloads.png
+share/blink/icons/folder-uploads.png
 share/blink/icons/green-dot.svg
 share/blink/icons/green-handset.png
 share/blink/icons/grey-dot.svg
@@ -275,10 +294,9 @@ share/blink/icons/mic-off.png
 share/blink/icons/mic-off.svg
 share/blink/icons/mic-on.png
 share/blink/icons/mic-on.svg
-share/blink/icons/mic.png
+share/blink/icons/microphone.svg
 share/blink/icons/minus.svg
 share/blink/icons/minus18.svg
-share/blink/icons/missed-calls.png
 share/blink/icons/mwi-0.png
 share/blink/icons/mwi-1.png
 share/blink/icons/mwi-10.png
@@ -298,11 +316,9 @@ share/blink/icons/pause.svg
 share/blink/icons/paused.png
 share/blink/icons/paused.svg
 share/blink/icons/paused12.svg
-share/blink/icons/placed-calls.png
 share/blink/icons/plus.svg
 share/blink/icons/plus18.svg
 share/blink/icons/quick-settings.png
-share/blink/icons/received-calls.png
 share/blink/icons/record.png
 share/blink/icons/record.svg
 share/blink/icons/recording.png
@@ -310,13 +326,14 @@ share/blink/icons/recording.svg
 share/blink/icons/red-dot.svg
 share/blink/icons/red-handset.png
 share/blink/icons/refresh.png
+share/blink/icons/retry.svg
 share/blink/icons/screen12.svg
 share/blink/icons/screensharing-auto-rejected.png
 share/blink/icons/screensharing-rejected.png
 share/blink/icons/screensharing.png
 share/blink/icons/search.svg
 share/blink/icons/servertools-spinner.mng
-share/blink/icons/speaker.png
+share/blink/icons/speaker.svg
 share/blink/icons/speaker12.svg
 share/blink/icons/state-available.svg
 share/blink/icons/state-away.svg
@@ -333,6 +350,8 @@ share/blink/icons/vuc-conference.png
 share/blink/icons/wizard.png
 share/blink/icons/yellow-dot.svg
 share/blink/incoming_dialog.ui
+share/blink/incoming_dialog.ui.~0~
+share/blink/incoming_filetransfer_dialog.ui
 share/blink/pending_watcher.ui
 share/blink/preferences.ui
 share/blink/server_tools.ui
@@ -353,9 +372,11 @@ share/blink/sounds/dtmf_B_tone.wav
 share/blink/sounds/dtmf_C_tone.wav
 share/blink/sounds/dtmf_D_tone.wav
 share/blink/sounds/dtmf_star_tone.wav
+share/blink/sounds/file_transfer.wav
 share/blink/sounds/hangup_tone.wav
 share/blink/sounds/hold_tone.wav
 share/blink/sounds/inbound_ringtone.wav
+share/blink/sounds/message_received.wav
 share/blink/sounds/outbound_ringtone.wav
 share/blink/tls/ca.crt
 share/blink/tls/default.crt
