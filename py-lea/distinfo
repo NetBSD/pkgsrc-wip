@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/05/04 00:27:26 jihbed Exp $
+
+SHA1 (lea-1.2.tar.gz) = 9800c60919b656c95c135f424c3cc18f42de2e65
+RMD160 (lea-1.2.tar.gz) = 6f7e592fbf45fe173d6c33baf2b6892f195897b6
+Size (lea-1.2.tar.gz) = 27989 bytes
+SHA1 (patch-setup.py) = 446b64c32ec5c6c9cbdfa30aeac9e4d5e9407bbd

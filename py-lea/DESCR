@@ -1,0 +1,8 @@
+Lea is a Python package aiming at working with discrete probability
+distributions in an intuitive way. It allows you to model a broad range of
+random phenomenons, like dice throwing, coin tossing, cards hands, gambling,
+lottery, ? with fair or unfair characteristics More generally, Lea may be used
+for any finite set of discrete values having known probability: numbers,
+boolean variables (true/false), date/times, symbols, ... Each distribution
+is modelled as a plain object, which can be named, displayed, queried or
+processed to produce new distribution objects
