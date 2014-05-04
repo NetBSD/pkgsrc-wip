@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2014/03/11 03:47:37 othyro Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/04 00:10:41 othyro Exp $
 #
 
-REVISION=	8297
-DISTNAME=	SDL-2.0.2-${REVISION}
+REVISION=	8746
+DISTNAME=	SDL-2.0.3-${REVISION}
 PKGNAME=	${DISTNAME:S/SDL/SDL2/1:S/1-/1./1}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/tmp/
