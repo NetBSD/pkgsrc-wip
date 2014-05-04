@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/04 17:38:21 ahp-nils Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pyqueue.py
+${PYSITELIB}/pyqueue.pyc
+${PYSITELIB}/pyqueue.pyo
+${PYSITELIB}/pyqueueshell.py
+${PYSITELIB}/pyqueueshell.pyc
+${PYSITELIB}/pyqueueshell.pyo

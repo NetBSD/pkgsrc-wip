@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/04 17:38:21 ahp-nils Exp $
+
+SHA1 (pyqueue/0.4.tar.gz) = 2b23728417386ad788f2dc3dc8f468e8d0689294
+RMD160 (pyqueue/0.4.tar.gz) = 3ee768adb0a2cd3448dd7e92ec53dae5273316e9
+Size (pyqueue/0.4.tar.gz) = 25444 bytes
