@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5741 2014/05/04 14:17:48 othyro Exp $
+# $Id: Makefile,v 1.5742 2014/05/04 17:40:15 ahp-nils Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2782,7 +2782,6 @@ SUBDIR+=	py-pyphant
 SUBDIR+=	py-pypol
 SUBDIR+=	py-pyqu
 SUBDIR+=	py-pyquante
-SUBDIR+=	py-pyqueue
 SUBDIR+=	py-pyrit
 SUBDIR+=	py-pysal
 SUBDIR+=	py-pysb
@@ -2806,6 +2805,7 @@ SUBDIR+=	py-qitensor
 SUBDIR+=	py-qmath
 SUBDIR+=	py-quantities
 SUBDIR+=	py-quaternionarray
+SUBDIR+=	py-queue
 SUBDIR+=	py-quepy
 SUBDIR+=	py-qutip
 SUBDIR+=	py-qutrub
