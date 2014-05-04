@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2008/12/03 20:43:54 shattered Exp $
-
-SHA1 (scite177.tgz) = 9e49b13ada9aba10bed9db6ecdf5925f957caac5
-RMD160 (scite177.tgz) = 1aabe4899a2d7b57a397c0fdec961d0fdc05169e
-Size (scite177.tgz) = 1520037 bytes
-SHA1 (patch-ag) = d1d27b08b20c499b8aa01cd510da9aa4340e3949
-SHA1 (patch-ah) = 7debe846df1a4ca77a3d4e399f7a5516e0fba4ea

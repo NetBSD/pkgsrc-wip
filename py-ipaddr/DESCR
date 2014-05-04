@@ -1,6 +1,0 @@
-The ipaddr library is used to create/poke/manipulate IPv4 and IPv6
-addresses and prefixes. It was developed by Google for internal
-use, and is now open source.
-
-Being source of ipaddr implementation in Python 3.1 standard library,
-it still very useful for earlier Python versions.

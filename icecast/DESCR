@@ -1,8 +1,0 @@
-Icecast is an Internet based broadcasting system based on the Mpeg
-Layer III streaming technology. It is, however, not limited to
-streaming mp3 files.  It was originally inspired by Nullsoft's
-Shoutcast and also mp3serv by Scott Man ley.
-
-This version implements two security fixes ( >= patches/patch-af )
-written by <pancake AT phreaker DOT net>. For more information
-please visit: http://pancake.host.sk/altres/src/

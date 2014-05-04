@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:35 thomasklausner Exp $
-include/eventlog/evtlog.h
-include/eventlog/evtmaps.h
-lib/libevtlog.la
-lib/pkgconfig/eventlog.pc

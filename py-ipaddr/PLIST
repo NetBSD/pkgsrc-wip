@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/18 12:44:34 jihbed Exp $
-${PYSITELIB}/ipaddr.py
-${PYSITELIB}/ipaddr.pyc
-${PYSITELIB}/ipaddr.pyo

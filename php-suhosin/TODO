@@ -1,8 +1,0 @@
-tested on
-* NetBSD 4.0_BETA
-* apache-2.0.59nb1
-* php-5.1.6
-
-* NetBSD 4.0_STABLE
-* lighttpd-1.4.18nb1
-* php-5.2.5nb1

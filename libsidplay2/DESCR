@@ -1,6 +1,0 @@
-Sidplay is SID-chip emulator for playing Commodore 64 music.
-
-This is a snapshot from libSIDPlay2 CVS combined with some
-portability fixes and patches to make sure it builds at least
-on various Linux distributions, Solaris 9 (you need gcc3, etc)
-and NetBSD. These improvements made by ccr/TNSP.

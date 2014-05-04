@@ -1,3 +1,0 @@
-A new API to format and send structured log messages. It supports multiple
-message representations (plain, XML attributes and XML tags) and multiple
-output methods (local syslogd).
