@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5739 2014/05/03 19:41:25 thomasklausner Exp $
+# $Id: Makefile,v 1.5740 2014/05/04 03:17:24 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1411,6 +1411,7 @@ SUBDIR+=	libXaw3d
 SUBDIR+=	libXprintAppUtil
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
+SUDBIR+=	libarchive
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libavc1394
