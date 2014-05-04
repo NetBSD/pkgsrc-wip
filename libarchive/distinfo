@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/04 03:15:21 othyro Exp $
+
+SHA1 (libarchive-3.1.2.tar.gz) = 6a991777ecb0f890be931cec4aec856d1a195489
+RMD160 (libarchive-3.1.2.tar.gz) = 77c42598b754996481c1fa45c71eca5a428a094c
+Size (libarchive-3.1.2.tar.gz) = 4527540 bytes
