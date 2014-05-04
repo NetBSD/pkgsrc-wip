@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/02/11 13:47:36 othyro Exp $
+$NetBSD: distinfo,v 1.4 2014/05/04 03:25:15 othyro Exp $
 
-SHA1 (nestopia-1.44.tgz) = 09b6d50f45aee0137b94e8c30c98f388e3f2d20e
-RMD160 (nestopia-1.44.tgz) = b59f2dc24cb3410650026489fc877ee5fb0434dc
-Size (nestopia-1.44.tgz) = 1954849 bytes
-SHA1 (patch-Makefile) = a4d513805cad9fad9760f8be73780611a5d0ce87
-SHA1 (patch-source_core_NstMemory.hpp) = 9adaf4bbbbf1c07c2f8d60071da4d914343cf8ab
+SHA1 (nestopia-1.45.tgz) = a399e7c0462e0872a23e1d245fa2ccd85f790902
+RMD160 (nestopia-1.45.tgz) = 58215a4c012263b848255da084fa8ec489ca4b55
+Size (nestopia-1.45.tgz) = 1883793 bytes
+SHA1 (patch-Makefile) = 8916b612c6017d0850714c317b76bd1bb66986f0
+SHA1 (patch-source_core_NstMemory.hpp) = 7bbf7dc7ea6439af24447a8ceed5bcc1eec11fae
