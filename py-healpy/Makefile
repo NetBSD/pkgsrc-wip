@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2014/03/22 10:47:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 19:40:34 jihbed Exp $
 
 DISTNAME=	healpy-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	
+CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/h/healpy/
 
-MAINTAINER=	jihbed.research@ŋmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/healpy
 COMMENT=	Healpix tools package for Python
 LICENSE=	gnu-gpl-v2
