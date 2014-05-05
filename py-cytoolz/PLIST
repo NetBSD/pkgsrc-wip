@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/05 23:50:47 jihbed Exp $
+${PYSITELIB}/cytoolz/__init__.pxd
+${PYSITELIB}/cytoolz/__init__.py
+${PYSITELIB}/cytoolz/__init__.pyc
+${PYSITELIB}/cytoolz/__init__.pyo
+${PYSITELIB}/cytoolz/_version.py
+${PYSITELIB}/cytoolz/_version.pyc
+${PYSITELIB}/cytoolz/_version.pyo
+${PYSITELIB}/cytoolz/compatibility.py
+${PYSITELIB}/cytoolz/compatibility.pyc
+${PYSITELIB}/cytoolz/compatibility.pyo
+${PYSITELIB}/cytoolz/cpython.pxd
+${PYSITELIB}/cytoolz/curried.py
+${PYSITELIB}/cytoolz/curried.pyc
+${PYSITELIB}/cytoolz/curried.pyo
+${PYSITELIB}/cytoolz/curried_exceptions.so
+${PYSITELIB}/cytoolz/dicttoolz.pxd
+${PYSITELIB}/cytoolz/dicttoolz.so
+${PYSITELIB}/cytoolz/functoolz.pxd
+${PYSITELIB}/cytoolz/functoolz.so
+${PYSITELIB}/cytoolz/itertoolz.pxd
+${PYSITELIB}/cytoolz/itertoolz.so
+${PYSITELIB}/cytoolz/recipes.pxd
+${PYSITELIB}/cytoolz/recipes.so
+${PYSITELIB}/cytoolz/utils.py
+${PYSITELIB}/cytoolz/utils.pyc
+${PYSITELIB}/cytoolz/utils.pyo

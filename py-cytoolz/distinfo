@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/05 23:50:47 jihbed Exp $
+
+SHA1 (cytoolz-0.6.1.tar.gz) = 5b99c4166b73f2aecf97fa08a9499dc74bbef674
+RMD160 (cytoolz-0.6.1.tar.gz) = 6eafa7c483a4155a315d4f84f1f65db3736901c6
+Size (cytoolz-0.6.1.tar.gz) = 188308 bytes
