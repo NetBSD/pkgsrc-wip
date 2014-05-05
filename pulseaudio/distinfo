@@ -1,13 +1,17 @@
-$NetBSD: distinfo,v 1.8 2014/01/19 23:17:02 makoto Exp $
+$NetBSD: distinfo,v 1.9 2014/05/05 23:57:07 ryo-on Exp $
 
-SHA1 (pulseaudio-3.0.tar.xz) = 87d7d1bc0e07dcf1c9c38413b59343f0126e45df
-RMD160 (pulseaudio-3.0.tar.xz) = 4d33bab77af202eae3ee6a360491b3d480d4e3f0
-Size (pulseaudio-3.0.tar.xz) = 1367468 bytes
-SHA1 (patch-aa) = 2fb8b36669e34f3ca0108176171be567a9eeda44
-SHA1 (patch-configure) = 8754fc3493e43baef14c99a6b9a24bbb2800b2ea
-SHA1 (patch-src_Makefile.in) = 21daf6069ae067dd235de6d43a013e4e70bbca78
-SHA1 (patch-src_pulsecore_semaphore-osx.c) = f9b1962a700932434e05471b2d4df4a5ff5c1b00
-SHA1 (patch-src_pulsecore_svolume__mmx.c) = f733464e238766768bc907cc8793cfe051e527d1
-SHA1 (patch-src_pulsecore_svolume__sse.c) = b5ffc9347f5e561b9678a6a6cc0e882168391c1d
-SHA1 (patch-src_tests_once-test.c) = 9dfc113ab11aba21c22972ab4cd8016bc7a3537f
-SHA1 (patch-src_tests_rtstutter.c) = e6d1627cb8a150cc5a106bb98ed31147ce8689d2
+SHA1 (pulseaudio-5.0.tar.xz) = e420931a0b9cf37331cd06e30ba415046317ab85
+RMD160 (pulseaudio-5.0.tar.xz) = 4ba13e92c58f8ada4542d521131094a55e3b6991
+Size (pulseaudio-5.0.tar.xz) = 1455428 bytes
+SHA1 (patch-aa) = c8bd0e5b6e4c4068d8706aea62ce248bb79184d7
+SHA1 (patch-configure.ac) = 16cfad7d7e20e6fe1fc45649f5537032a763380c
+SHA1 (patch-src_Makefile.am) = 8bd43d3f177cec197b4520e7eab577a9570954f9
+SHA1 (patch-src_daemon_caps.c) = 5b804bc109108cd631db9ccdc63abf8cc642d40a
+SHA1 (patch-src_daemon_main.c) = 948c48c3a94986e72ef44d05a90afd691da8f054
+SHA1 (patch-src_modules_module-detect.c) = d7ab3a76be34a929679343acab4fcf67e2a2153d
+SHA1 (patch-src_modules_oss_module-oss.c) = e6730e2162a05294852c2a2d8b74c0c866c22f38
+SHA1 (patch-src_pulsecore_sample-util.h) = 47c209fb0f81fece444d50fd81ee8fa7cb4ef663
+SHA1 (patch-src_pulsecore_svolume__mmx.c) = b500530bcc9792b97050c7fa6e47639ac8e261a2
+SHA1 (patch-src_pulsecore_svolume__sse.c) = 07da6faa8529d7308d8a6a9f11958ef9faf46409
+SHA1 (patch-src_tests_mult-s16-test.c) = 1171740c755f9245051dadac9cfceef9acbfe864
+SHA1 (patch-src_tests_rtpoll-test.c) = 74f1475f718da024bbb63a3b256959f98cbf371f

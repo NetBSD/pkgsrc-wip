@@ -1,0 +1,21 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2014/05/05 23:57:08 ryo-on Exp $
+
+--- src/Makefile.am.orig	2014-02-14 13:45:45.000000000 +0000
++++ src/Makefile.am
+@@ -27,14 +27,14 @@ pulseincludedir=$(includedir)/pulse
+ pulsecoreincludedir=$(includedir)/pulsecore
+ pulselibexecdir=$(libexecdir)/pulse
+ if HAVE_X11
+-xdgautostartdir=$(sysconfdir)/xdg/autostart
++xdgautostartdir= ${EGDIR}
+ endif
+ if HAVE_ALSA
+ alsaprofilesetsdir=$(datadir)/pulseaudio/alsa-mixer/profile-sets
+ alsapathsdir=$(datadir)/pulseaudio/alsa-mixer/paths
+ endif
+ if HAVE_DBUS
+-dbuspolicydir=$(sysconfdir)/dbus-1/system.d
++dbuspolicydir=${EGDIR}
+ endif
+ 
+ ###################################

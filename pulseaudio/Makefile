@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/01/19 23:17:02 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/05 23:57:07 ryo-on Exp $
 
-DISTNAME=	pulseaudio-3.0
+DISTNAME=	pulseaudio-5.0
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake gm4 intltool msgfmt pkg-config
+USE_TOOLS+=	automake gmake gm4 intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
@@ -80,16 +80,14 @@ CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
 
-PLIST_VARS+=		evdev hal oss sun
+PLIST_VARS+=		evdev oss sun
 
 .if ${OPSYS} == "SunOS"
 PLIST.sun=		yes
 .  if ${OS_VERSION} == "5.11"
-PLIST.hal=		yes
 PLIST.oss=		yes
 .  endif
 .elif ${OPSYS} != "Darwin"
-PLIST.hal=		yes
 PLIST.oss=		yes
 .endif
 
@@ -97,6 +95,10 @@ PKG_GROUPS=		${PULSE_GROUP}
 PKG_GROUPS+=		${PULSE_GROUP_REALTIME}
 PKG_GROUPS+=		${PULSE_GROUP_ACCESS}
 PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .if ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
@@ -111,7 +113,6 @@ PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/hal/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
