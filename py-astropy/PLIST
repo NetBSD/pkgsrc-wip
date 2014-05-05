@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/04 16:34:06 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/05 20:10:35 jihbed Exp $
 bin/fitscheck
 bin/fitsdiff
 bin/volint
@@ -190,6 +190,9 @@ ${PYSITELIB}/astropy/coordinates/tests/test_matching.pyo
 ${PYSITELIB}/astropy/coordinates/tests/test_name_resolve.py
 ${PYSITELIB}/astropy/coordinates/tests/test_name_resolve.pyc
 ${PYSITELIB}/astropy/coordinates/tests/test_name_resolve.pyo
+${PYSITELIB}/astropy/coordinates/tests/test_pickle.py
+${PYSITELIB}/astropy/coordinates/tests/test_pickle.pyc
+${PYSITELIB}/astropy/coordinates/tests/test_pickle.pyo
 ${PYSITELIB}/astropy/coordinates/tests/test_transformations.py
 ${PYSITELIB}/astropy/coordinates/tests/test_transformations.pyc
 ${PYSITELIB}/astropy/coordinates/tests/test_transformations.pyo
@@ -365,12 +368,18 @@ ${PYSITELIB}/astropy/io/ascii/tests/test_ipac_definitions.pyo
 ${PYSITELIB}/astropy/io/ascii/tests/test_read.py
 ${PYSITELIB}/astropy/io/ascii/tests/test_read.pyc
 ${PYSITELIB}/astropy/io/ascii/tests/test_read.pyo
+${PYSITELIB}/astropy/io/ascii/tests/test_read_unicode.py
+${PYSITELIB}/astropy/io/ascii/tests/test_read_unicode.pyc
+${PYSITELIB}/astropy/io/ascii/tests/test_read_unicode.pyo
 ${PYSITELIB}/astropy/io/ascii/tests/test_types.py
 ${PYSITELIB}/astropy/io/ascii/tests/test_types.pyc
 ${PYSITELIB}/astropy/io/ascii/tests/test_types.pyo
 ${PYSITELIB}/astropy/io/ascii/tests/test_write.py
 ${PYSITELIB}/astropy/io/ascii/tests/test_write.pyc
 ${PYSITELIB}/astropy/io/ascii/tests/test_write.pyo
+${PYSITELIB}/astropy/io/ascii/tests/test_write_unicode.py
+${PYSITELIB}/astropy/io/ascii/tests/test_write_unicode.pyc
+${PYSITELIB}/astropy/io/ascii/tests/test_write_unicode.pyo
 ${PYSITELIB}/astropy/io/ascii/ui.py
 ${PYSITELIB}/astropy/io/ascii/ui.pyc
 ${PYSITELIB}/astropy/io/ascii/ui.pyo
@@ -688,6 +697,9 @@ ${PYSITELIB}/astropy/modeling/tests/irafutil.pyo
 ${PYSITELIB}/astropy/modeling/tests/test_constraints.py
 ${PYSITELIB}/astropy/modeling/tests/test_constraints.pyc
 ${PYSITELIB}/astropy/modeling/tests/test_constraints.pyo
+${PYSITELIB}/astropy/modeling/tests/test_core.py
+${PYSITELIB}/astropy/modeling/tests/test_core.pyc
+${PYSITELIB}/astropy/modeling/tests/test_core.pyo
 ${PYSITELIB}/astropy/modeling/tests/test_fitters.py
 ${PYSITELIB}/astropy/modeling/tests/test_fitters.pyc
 ${PYSITELIB}/astropy/modeling/tests/test_fitters.pyo
@@ -703,6 +715,9 @@ ${PYSITELIB}/astropy/modeling/tests/test_models.pyo
 ${PYSITELIB}/astropy/modeling/tests/test_parameters.py
 ${PYSITELIB}/astropy/modeling/tests/test_parameters.pyc
 ${PYSITELIB}/astropy/modeling/tests/test_parameters.pyo
+${PYSITELIB}/astropy/modeling/tests/test_polynomial.py
+${PYSITELIB}/astropy/modeling/tests/test_polynomial.pyc
+${PYSITELIB}/astropy/modeling/tests/test_polynomial.pyo
 ${PYSITELIB}/astropy/modeling/tests/test_projections.py
 ${PYSITELIB}/astropy/modeling/tests/test_projections.pyc
 ${PYSITELIB}/astropy/modeling/tests/test_projections.pyo
@@ -769,6 +784,9 @@ ${PYSITELIB}/astropy/sphinx/ext/docscrape.pyo
 ${PYSITELIB}/astropy/sphinx/ext/docscrape_sphinx.py
 ${PYSITELIB}/astropy/sphinx/ext/docscrape_sphinx.pyc
 ${PYSITELIB}/astropy/sphinx/ext/docscrape_sphinx.pyo
+${PYSITELIB}/astropy/sphinx/ext/doctest.py
+${PYSITELIB}/astropy/sphinx/ext/doctest.pyc
+${PYSITELIB}/astropy/sphinx/ext/doctest.pyo
 ${PYSITELIB}/astropy/sphinx/ext/edit_on_github.py
 ${PYSITELIB}/astropy/sphinx/ext/edit_on_github.pyc
 ${PYSITELIB}/astropy/sphinx/ext/edit_on_github.pyo
@@ -878,6 +896,9 @@ ${PYSITELIB}/astropy/table/tests/test_np_utils.pyo
 ${PYSITELIB}/astropy/table/tests/test_operations.py
 ${PYSITELIB}/astropy/table/tests/test_operations.pyc
 ${PYSITELIB}/astropy/table/tests/test_operations.pyo
+${PYSITELIB}/astropy/table/tests/test_pickle.py
+${PYSITELIB}/astropy/table/tests/test_pickle.pyc
+${PYSITELIB}/astropy/table/tests/test_pickle.pyo
 ${PYSITELIB}/astropy/table/tests/test_pprint.py
 ${PYSITELIB}/astropy/table/tests/test_pprint.pyc
 ${PYSITELIB}/astropy/table/tests/test_pprint.pyo
@@ -1074,9 +1095,9 @@ ${PYSITELIB}/astropy/utils/collections.pyo
 ${PYSITELIB}/astropy/utils/compat/__init__.py
 ${PYSITELIB}/astropy/utils/compat/__init__.pyc
 ${PYSITELIB}/astropy/utils/compat/__init__.pyo
-${PYSITELIB}/astropy/utils/compat/_argparse_py2/__init__.py
-${PYSITELIB}/astropy/utils/compat/_argparse_py2/__init__.pyc
-${PYSITELIB}/astropy/utils/compat/_argparse_py2/__init__.pyo
+${PYSITELIB}/astropy/utils/compat/_argparse/__init__.py
+${PYSITELIB}/astropy/utils/compat/_argparse/__init__.pyc
+${PYSITELIB}/astropy/utils/compat/_argparse/__init__.pyo
 ${PYSITELIB}/astropy/utils/compat/_fractions_py2/__init__.py
 ${PYSITELIB}/astropy/utils/compat/_fractions_py2/__init__.pyc
 ${PYSITELIB}/astropy/utils/compat/_fractions_py2/__init__.pyo
@@ -1178,6 +1199,9 @@ ${PYSITELIB}/astropy/utils/tests/odict_support.pyo
 ${PYSITELIB}/astropy/utils/tests/test_collections.py
 ${PYSITELIB}/astropy/utils/tests/test_collections.pyc
 ${PYSITELIB}/astropy/utils/tests/test_collections.pyo
+${PYSITELIB}/astropy/utils/tests/test_compat.py
+${PYSITELIB}/astropy/utils/tests/test_compat.pyc
+${PYSITELIB}/astropy/utils/tests/test_compat.pyo
 ${PYSITELIB}/astropy/utils/tests/test_console.py
 ${PYSITELIB}/astropy/utils/tests/test_console.pyc
 ${PYSITELIB}/astropy/utils/tests/test_console.pyo
@@ -1317,15 +1341,18 @@ ${PYSITELIB}/astropy/wcs/setup_package.pyo
 ${PYSITELIB}/astropy/wcs/tests/__init__.py
 ${PYSITELIB}/astropy/wcs/tests/__init__.pyc
 ${PYSITELIB}/astropy/wcs/tests/__init__.pyo
+${PYSITELIB}/astropy/wcs/tests/data/2wcses.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/3d_cd.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/defunct_keywords.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/dist.fits
 ${PYSITELIB}/astropy/wcs/tests/data/header_newlines.fits
+${PYSITELIB}/astropy/wcs/tests/data/invalid_header.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/locale.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/nonstandard_units.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/outside_sky.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/sip.fits
 ${PYSITELIB}/astropy/wcs/tests/data/sip2.fits
+${PYSITELIB}/astropy/wcs/tests/data/sub-segfault.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/too_many_pv.hdr
 ${PYSITELIB}/astropy/wcs/tests/data/validate.fits
 ${PYSITELIB}/astropy/wcs/tests/data/validate.txt
