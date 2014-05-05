@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/05 21:21:58 jihbed Exp $
+
+SHA1 (raven-4.2.1.tar.gz) = ac5b256da89633e60edac180ed6a4dabb4f973ab
+RMD160 (raven-4.2.1.tar.gz) = 6da012e9e2905439d264aea1b9c09fc204047b49
+Size (raven-4.2.1.tar.gz) = 218623 bytes
