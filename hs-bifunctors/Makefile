@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/04/25 13:24:09 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/05 00:03:03 szptvlfn Exp $
 
 DISTNAME=	bifunctors-4.1.1.1
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Bifunctors
 LICENSE=	2-clause-bsd
 

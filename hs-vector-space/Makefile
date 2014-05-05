@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/05/24 22:16:19 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:06 szptvlfn Exp $
 
 DISTNAME=	vector-space-0.8.6
 CATEGORIES=	math
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Vector & affine spaces, linear maps, and derivatives
 LICENSE=	modified-bsd
 

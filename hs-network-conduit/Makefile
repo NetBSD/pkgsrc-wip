@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/11/26 23:59:09 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:05 szptvlfn Exp $
 
 DISTNAME=	network-conduit-1.0.0
 CATEGORIES=	net
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Stream socket data using conduits
 LICENSE=	modified-bsd
 

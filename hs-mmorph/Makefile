@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/02/13 13:03:19 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/05 00:03:05 szptvlfn Exp $
 
 DISTNAME=	mmorph-1.0.2
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Monad morphisms
 LICENSE=	modified-bsd
 

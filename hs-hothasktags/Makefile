@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/03/09 03:44:31 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:04 szptvlfn Exp $
 #
 
 DISTNAME=	hothasktags-0.3.1
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 HOMEPAGE=	http://github.com/luqui/hothasktags
 COMMENT=	Generates ctags for Haskell
 LICENSE=	modified-bsd

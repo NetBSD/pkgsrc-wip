@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/03/07 12:40:24 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/05 00:03:06 szptvlfn Exp $
 
 DISTNAME=	temporary-1.2.0.1
 CATEGORIES=	sysutils
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Portable temporary file and directory support
 LICENSE=	modified-bsd
 

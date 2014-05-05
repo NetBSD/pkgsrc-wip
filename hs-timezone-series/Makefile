@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/04/05 21:30:15 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:06 szptvlfn Exp $
 
 DISTNAME=	timezone-series-0.1.2
 CATEGORIES=	time
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 HOMEPAGE=	http://projects.haskell.org/time-ng/
 COMMENT=	Enhanced timezone handling for Data.Time
 LICENSE=	modified-bsd

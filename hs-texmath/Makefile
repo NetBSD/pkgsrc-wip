@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/01/08 21:42:30 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/05 00:03:06 szptvlfn Exp $
 
 DISTNAME=	texmath-0.6.6
 CATEGORIES=	textproc
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Conversion of LaTeX math formulas to MathML or OMML
 LICENSE=	gnu-gpl-v2
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/09/17 23:37:03 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:04 szptvlfn Exp $
 
 DISTNAME=	data-default-class-0.0.1
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Class for types with a default value
 LICENSE=	modified-bsd
 

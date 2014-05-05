@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/09/16 21:17:11 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:06 szptvlfn Exp $
 
 DISTNAME=	stringable-0.1.2
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Stringable type class, in the spirit of Foldable and Traversable
 LICENSE=	mit
 

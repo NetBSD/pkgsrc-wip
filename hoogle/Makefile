@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/03/12 23:23:19 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/05 00:03:01 szptvlfn Exp $
 
 DISTNAME=	hoogle-4.2.29
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel #haskell
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Haskell API Search
 LICENSE=	modified-bsd
 

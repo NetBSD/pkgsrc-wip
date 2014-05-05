@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/08/31 07:09:06 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:03 szptvlfn Exp $
 
 DISTNAME=	comonads-fd-3.0.3
 CATEGORIES=	math
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Comonad transformers using functional dependencies
 LICENSE=	modified-bsd
 

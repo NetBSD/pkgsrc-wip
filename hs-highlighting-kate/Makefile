@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/04/25 13:25:46 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/05 00:03:04 szptvlfn Exp $
 
 DISTNAME=	highlighting-kate-0.5.6.1
 CATEGORIES=	textproc
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Syntax highlighting
 LICENSE=	gnu-gpl-v2
 

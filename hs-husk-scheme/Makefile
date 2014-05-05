@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/04/25 13:31:07 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/05 00:03:05 szptvlfn Exp $
 
 DISTNAME=	husk-scheme-3.17
 CATEGORIES=	lang
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	R5RS Scheme interpreter, compiler, and library
 LICENSE=	mit
 

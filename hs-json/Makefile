@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/08/21 16:45:22 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:05 szptvlfn Exp $
 
 DISTNAME=	json-0.7
 CATEGORIES=	converters
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Support for serialising Haskell to and from JSON
 LICENSE=	modified-bsd
 

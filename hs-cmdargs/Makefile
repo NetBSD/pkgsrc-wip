@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/12/10 13:37:42 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/05 00:03:03 szptvlfn Exp $
 
 DISTNAME=	cmdargs-0.10.7
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Command line argument processing
 LICENSE=	modified-bsd
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/05/24 21:46:56 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:01 szptvlfn Exp $
 
 DISTNAME=	MemoTrie-0.6.1
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 HOMEPAGE=	http://haskell.org/haskellwiki/MemoTrie
 COMMENT=	Trie-based memo functions
 LICENSE=	modified-bsd

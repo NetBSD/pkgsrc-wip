@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/09/05 20:46:37 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:03 szptvlfn Exp $
 
 DISTNAME=	categories-1.0.6
 CATEGORIES=	math
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Categories
 LICENSE=	modified-bsd
 

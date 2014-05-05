@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/03/12 23:18:50 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:06 szptvlfn Exp $
 
 DISTNAME=	vector-algorithms-0.6.0.1
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Efficient algorithms for vector arrays
 LICENSE=	modified-bsd
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/12/08 19:05:51 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/05 00:03:05 szptvlfn Exp $
 
 DISTNAME=	http-types-0.8.3
 CATEGORIES=	www
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Generic HTTP types for Haskell (for both client and server code)
 LICENSE=	modified-bsd
 

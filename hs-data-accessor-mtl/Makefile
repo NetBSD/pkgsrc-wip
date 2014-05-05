@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/01/14 08:53:07 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:04 szptvlfn Exp $
 #
 
 DISTNAME=	data-accessor-mtl-0.2.0.3
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Use Accessor to access state in mtl State monad class
 LICENSE=	modified-bsd
 

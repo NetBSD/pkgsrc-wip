@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2014/03/14 12:55:59 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/05 00:03:07 szptvlfn Exp $
 
 DISTNAME=	xmobar-0.20.1
 CATEGORIES=	sysutils
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Xmobar is a minimalistic text based status bar
 LICENSE=	modified-bsd
 

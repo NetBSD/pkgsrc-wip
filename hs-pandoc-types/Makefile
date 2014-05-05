@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/02/25 22:21:19 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/05 00:03:05 szptvlfn Exp $
 
 DISTNAME=	pandoc-types-1.12.3.2
 CATEGORIES=	textproc
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Types for representing a structured document
 LICENSE=	gnu-gpl-v2
 

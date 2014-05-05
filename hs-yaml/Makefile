@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 14:12:56 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/05 00:03:07 szptvlfn Exp $
 
 DISTNAME=	yaml-0.8.5.3
 CATEGORIES=	textproc
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Support for parsing and rendering YAML document
 LICENSE=	modified-bsd
 

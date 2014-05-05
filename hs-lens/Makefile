@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/03/14 12:54:01 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/05 00:03:05 szptvlfn Exp $
 
 DISTNAME=	lens-4.0.7
 CATEGORIES=	devel
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Lenses, Folds and Traversals
 LICENSE=	modified-bsd
 

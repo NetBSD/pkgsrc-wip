@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/05/05 22:09:01 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/05 00:03:03 szptvlfn Exp $
 #
 
 DISTNAME=	cgi-3001.1.8.4
 CATEGORIES=	net
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 HOMEPAGE=	http://andersk.mit.edu/haskell/cgi/
 COMMENT=	Library for writing CGI programs
 LICENSE=	modified-bsd

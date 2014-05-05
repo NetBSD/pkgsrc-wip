@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/08/31 08:27:00 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:06 szptvlfn Exp $
 
 DISTNAME=	semigroupoid-extras-3.0.1
 CATEGORIES=	math
 
-MAINTAINER=	szptvlfn@a-net.email.ne.jp
+MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Semigroupoids requiring Haskell extensions
 LICENSE=	modified-bsd
 
