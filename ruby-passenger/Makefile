@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/05 10:55:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/06 13:40:30 fhajny Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 
@@ -7,11 +7,17 @@ COMMENT=		Modules for running Ruby on Rails and Rack applications
 .include "Makefile.common"
 
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
-DEPENDS+=		${RUBY_PKGPREFIX}-daemon_controller>=1.1.0:../../devel/ruby-daemon_controller
+DEPENDS+=		${RUBY_PKGPREFIX}-daemon_controller>=1.2.0:../../devel/ruby-daemon_controller
 DEPENDS+=		${RUBY_PKGPREFIX}-rack-[0-9]*:../../www/ruby-rack
 .if ${RUBY_VERSION_DEFAULT} == 18
 DEPENDS+=		${RUBY_PKGPREFIX}-rubygems>=1.2.0:../../misc/rubygems
 .endif
+
+INSTALL_ENV+=		FS_PREFIX=${PREFIX}
+INSTALL_ENV+=		FS_DOCDIR=${PREFIX}/share/doc
+INSTALL_ENV+=		RUBYLIBDIR=${PREFIX}/${RUBY_VENDORLIB_BASE}
+INSTALL_ENV+=		RUBYARCHDIR=${PREFIX}/${RUBY_ARCHLIB}
+INSTALL_ENV+=		APACHE2_MODULE_PATH=${PREFIX}/lib/httpd
 
 do-build:
 	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${RAKE} common:clean agents

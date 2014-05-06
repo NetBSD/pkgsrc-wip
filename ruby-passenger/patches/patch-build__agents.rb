@@ -1,9 +1,9 @@
-$NetBSD: patch-build__agents.rb,v 1.2 2013/09/05 10:55:51 fhajny Exp $
+$NetBSD: patch-build__agents.rb,v 1.3 2014/05/06 13:40:31 fhajny Exp $
 
 Add a simple target to skip the Apache/Nginx binaries.
---- build/agents.rb.orig	2013-08-27 13:09:37.803991263 +0000
+--- build/agents.rb.orig	2013-10-26 22:00:00.000000000 +0000
 +++ build/agents.rb
-@@ -179,3 +179,13 @@ end
+@@ -184,3 +184,13 @@ end
  task 'common:clean' do
  	sh "rm -rf #{AGENT_OUTPUT_DIR}"
  end

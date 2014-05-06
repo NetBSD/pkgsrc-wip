@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2014/02/20 14:50:08 makoto Exp $
+# $NetBSD: Makefile.common,v 1.9 2014/05/06 13:40:30 fhajny Exp $
 # used by wip/ap2-passenger/Makefile
 # used by wip/ruby-passenger/Makefile
 #
-DISTNAME=		passenger-4.0.14
+DISTNAME=		passenger-4.0.41
 CATEGORIES=		www
 
 MASTER_SITES=		http://s3.amazonaws.com/phusion-passenger/releases/
@@ -18,7 +18,7 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/ruby-passenger/distinfo
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_SYSCONFSUBDIR=	${PKGBASE}
+PKG_SYSCONFSUBDIR=	passenger
 
 REPLACE_RUBY=		bin/passenger
 REPLACE_RUBY+=		bin/passenger-config
@@ -30,6 +30,7 @@ REPLACE_RUBY+=		helper-scripts/backtrace-sanitizer.rb
 REPLACE_RUBY+=		helper-scripts/classic-rails-loader.rb
 REPLACE_RUBY+=		helper-scripts/classic-rails-preloader.rb
 REPLACE_RUBY+=		helper-scripts/download_binaries/extconf.rb
+REPLACE_RUBY+=		helper-scripts/meteor-loader.rb
 REPLACE_RUBY+=		helper-scripts/prespawn
 REPLACE_RUBY+=		helper-scripts/rack-loader.rb
 REPLACE_RUBY+=		helper-scripts/rack-preloader.rb
