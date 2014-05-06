@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/15 10:59:40 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/05/06 23:51:11 szptvlfn Exp $
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/HSQuickCheck-${PKGVERSION}.o
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck.p_hi
@@ -12,6 +12,8 @@ lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Function.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Function.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Gen.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Gen.p_hi
+lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Gen/Unsafe.hi
+lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Gen/Unsafe.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Modifiers.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Modifiers.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Monadic.hi
@@ -20,6 +22,8 @@ lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Poly.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Poly.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Property.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Property.p_hi
+lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Random.hi
+lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Random.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/State.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/State.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Test.hi
@@ -33,12 +37,15 @@ share/doc/QuickCheck-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/QuickCheck.haddock
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-All.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Arbitrary.html
+${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Exception.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Function.html
+${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Gen-Unsafe.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Gen.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Modifiers.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Monadic.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Poly.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Property.html
+${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Random.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-State.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Test.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/Test-QuickCheck-Text.html
@@ -78,12 +85,15 @@ ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/index-frames.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-All.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Arbitrary.html
+${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Exception.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Function.html
+${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Gen-Unsafe.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Gen.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Modifiers.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Monadic.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Poly.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Property.html
+${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Random.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-State.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Test.html
 ${PLIST.doc}share/doc/QuickCheck-${PKGVERSION}/html/mini_Test-QuickCheck-Text.html
