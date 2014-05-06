@@ -1,4 +1,4 @@
-$NetBSD: patch-include_libiberty.h,v 1.1 2013/02/23 10:04:12 keckhardt Exp $
+$NetBSD: patch-include_libiberty.h,v 1.2 2014/05/06 21:24:22 keckhardt Exp $
 
 --- include/libiberty.h.orig	2011-09-28 19:04:30.000000000 +0000
 +++ include/libiberty.h

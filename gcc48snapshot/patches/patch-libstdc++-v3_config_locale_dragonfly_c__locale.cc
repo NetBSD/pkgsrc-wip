@@ -1,4 +1,4 @@
-$NetBSD: patch-libstdc++-v3_config_locale_dragonfly_c__locale.cc,v 1.1 2013/02/23 10:04:13 keckhardt Exp $
+$NetBSD: patch-libstdc++-v3_config_locale_dragonfly_c__locale.cc,v 1.2 2014/05/06 21:24:22 keckhardt Exp $
 
 --- libstdc++-v3/config/locale/dragonfly/c_locale.cc.orig	2012-06-22 10:35:30.000000000 +0000
 +++ libstdc++-v3/config/locale/dragonfly/c_locale.cc

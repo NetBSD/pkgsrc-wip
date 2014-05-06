@@ -1,4 +1,4 @@
-$NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__configure__char.cc,v 1.1 2013/02/23 10:04:13 keckhardt Exp $
+$NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__configure__char.cc,v 1.2 2014/05/06 21:24:22 keckhardt Exp $
 
 --- libstdc++-v3/config/os/bsd/dragonfly/ctype_configure_char.cc.orig	2012-06-22 10:35:30.000000000 +0000
 +++ libstdc++-v3/config/os/bsd/dragonfly/ctype_configure_char.cc
