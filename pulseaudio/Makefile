@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/06 11:42:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/06 12:10:24 thomasklausner Exp $
 
 DISTNAME=	pulseaudio-5.0
 CATEGORIES=	audio
@@ -36,6 +36,8 @@ CONFIGURE_ARGS+=       --without-caps
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		EGDIR=${EGDIR}
+
+MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 
 CONFIGURE_ARGS+=	--enable-samplerate
 CONFIGURE_ARGS+=	--disable-tcpwrap

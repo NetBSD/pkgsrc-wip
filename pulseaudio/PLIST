@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/05/06 11:42:54 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/05/06 12:10:24 thomasklausner Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -13,7 +13,6 @@ ${PLIST.x11}bin/pax11publish
 bin/pulseaudio
 ${PLIST.x11}bin/start-pulseaudio-kde
 ${PLIST.x11}bin/start-pulseaudio-x11
-etc/bash_completion.d/pulseaudio-bash-completion.sh
 include/pulse/cdecl.h
 include/pulse/channelmap.h
 include/pulse/context.h
@@ -229,6 +228,7 @@ man/man5/default.pa.5
 man/man5/pulse-cli-syntax.5
 man/man5/pulse-client.conf.5
 man/man5/pulse-daemon.conf.5
+share/bash-completion/completions/pulseaudio-bash-completion.sh
 share/examples/pulseaudio/client.conf
 share/examples/pulseaudio/daemon.conf
 share/examples/pulseaudio/default.pa
