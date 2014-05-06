@@ -1,4 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/05/05 23:57:08 ryo-on Exp $
+$NetBSD: patch-configure.ac,v 1.2 2014/05/06 12:13:56 thomasklausner Exp $
+
+* Fix NetBSD detection for libatomics_ops check.
+* Fix unportable test(1) construct.
+* Adapt /var-paths for pkgsrc defaults.
+* Install default config files in example directory; pkgsrc config
+  file framework will install them in the right place.
 
 --- configure.ac.orig	2014-02-15 08:33:32.000000000 +0000
 +++ configure.ac
