@@ -1,4 +1,6 @@
-$NetBSD: patch-src_modules_oss_module-oss.c,v 1.1 2014/05/05 23:57:08 ryo-on Exp $
+$NetBSD: patch-src_modules_oss_module-oss.c,v 1.2 2014/05/06 11:47:25 thomasklausner Exp $
+
+Set proper sound device default on NetBSD.
 
 --- src/modules/oss/module-oss.c.orig	2014-01-23 18:57:55.000000000 +0000
 +++ src/modules/oss/module-oss.c

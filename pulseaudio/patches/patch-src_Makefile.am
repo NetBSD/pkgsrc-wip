@@ -1,4 +1,7 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2014/05/05 23:57:08 ryo-on Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2014/05/06 11:47:25 thomasklausner Exp $
+
+Install files into pkgsrc example paths; will be correctly
+installed by pkgsrc configuration file framework.
 
 --- src/Makefile.am.orig	2014-02-14 13:45:45.000000000 +0000
 +++ src/Makefile.am

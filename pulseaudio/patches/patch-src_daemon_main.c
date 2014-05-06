@@ -1,4 +1,6 @@
-$NetBSD: patch-src_daemon_main.c,v 1.1 2014/05/05 23:57:08 ryo-on Exp $
+$NetBSD: patch-src_daemon_main.c,v 1.2 2014/05/06 11:47:25 thomasklausner Exp $
+
+Only display Linux-specific warning on Linux.
 
 --- src/daemon/main.c.orig	2014-02-25 14:01:58.000000000 +0000
 +++ src/daemon/main.c
