@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2014/05/06 12:13:56 thomasklausner Exp $
+$NetBSD: patch-configure.ac,v 1.3 2014/05/06 15:05:39 ryo-on Exp $
 
 * Fix NetBSD detection for libatomics_ops check.
 * Fix unportable test(1) construct.
@@ -69,12 +69,15 @@ $NetBSD: patch-configure.ac,v 1.2 2014/05/06 12:13:56 thomasklausner Exp $
  AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
  
  PA_BINARY=${bindir}/pulseaudio${EXEEXT}
-@@ -1248,7 +1249,7 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+@@ -1248,8 +1249,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
  AC_SUBST(PA_SOEXT, [.so])
  AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
  
 -AC_SUBST(pulseconfdir, ["${sysconfdir}/pulse"])
+-AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdir, [Location of configuration files])
++AC_SUBST(pulseconfdirreal, ["${sysconfdir}/pulse"])
 +AC_SUBST(pulseconfdir, ["${EGDIR}"])
- AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdir, [Location of configuration files])
++AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdirreal, [Location of configuration files])
  
  #### Mac OSX specific stuff #####
+ 
