@@ -1,4 +1,6 @@
-$NetBSD: patch-src_pulsecore_sample-util.h,v 1.1 2014/05/05 23:57:08 ryo-on Exp $
+$NetBSD: patch-src_pulsecore_sample-util.h,v 1.2 2014/05/06 11:55:39 thomasklausner Exp $
+
+Define glibc-specific (?) __WORDSIZE.
 
 --- src/pulsecore/sample-util.h.orig	2014-01-23 18:57:55.000000000 +0000
 +++ src/pulsecore/sample-util.h
