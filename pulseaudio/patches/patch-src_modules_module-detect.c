@@ -1,28 +1,31 @@
-$NetBSD: patch-src_modules_module-detect.c,v 1.2 2014/05/06 11:47:25 thomasklausner Exp $
+$NetBSD: patch-src_modules_module-detect.c,v 1.3 2014/05/06 12:45:00 ryo-on Exp $
 
 Hack to set proper sound device on NetBSD.
 
 --- src/modules/module-detect.c.orig	2014-01-23 18:57:55.000000000 +0000
 +++ src/modules/module-detect.c
-@@ -122,6 +122,7 @@ static int detect_oss(pa_core *c, int ju
+@@ -122,6 +122,17 @@ static int detect_oss(pa_core *c, int ju
      FILE *f;
      int n = 0, b = 0;
  
-+#if !defined(__NetBSD__)
-     if (!(f = pa_fopen_cloexec("/dev/sndstat", "r")) &&
-         !(f = pa_fopen_cloexec("/proc/sndstat", "r")) &&
-         !(f = pa_fopen_cloexec("/proc/asound/oss/sndstat", "r"))) {
-@@ -173,6 +174,14 @@ static int detect_oss(pa_core *c, int ju
-     }
- 
-     fclose(f);
-+#else
-+/* dummy */
++#if defined(__NetBSD__)
++/*
++ * Assume primary sound device is used (/dev/sound).
++ * And only primary sound device will be used (n=1).
++ */
 +    char args[64];
 +    pa_snprintf(args, sizeof(args), "device=/dev/sound");
 +    if (!pa_module_load(c, "module-oss", args))
 +	exit(1);
 +    n = 1;
++#else /* __linux__ or __FreeBSD__ */
+     if (!(f = pa_fopen_cloexec("/dev/sndstat", "r")) &&
+         !(f = pa_fopen_cloexec("/proc/sndstat", "r")) &&
+         !(f = pa_fopen_cloexec("/proc/asound/oss/sndstat", "r"))) {
+@@ -173,6 +184,7 @@ static int detect_oss(pa_core *c, int ju
+     }
+ 
+     fclose(f);
 +#endif
      return n;
  }
