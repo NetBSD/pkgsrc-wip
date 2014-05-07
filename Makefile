@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5745 2014/05/07 15:23:58 khorben Exp $
+# $Id: Makefile,v 1.5746 2014/05/07 23:43:37 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2632,6 +2632,7 @@ SUBDIR+=	py-lazr.uri
 SUBDIR+=	py-lib
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
+SUBDIR+=	py-libtaxii
 SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
 SUBDIR+=	py-libtunepimp
