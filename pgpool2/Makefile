@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/01/07 15:47:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/07 09:19:27 fhajny Exp $
 #
 
-DISTNAME=	pgpool-II-3.3.2
+DISTNAME=	pgpool-II-3.3.3
 PKGNAME=	postgresql${PGSQL_VERSION}-pgpool2-${DISTNAME:S/pgpool-II-//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
@@ -60,9 +60,11 @@ SUBST_VARS.path=	PGPOOL_PIDDIR
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-CONF_FILES+=	${EGDIR}/pcp.conf.sample ${PKG_SYSCONFDIR}/pcp.conf
-CONF_FILES+=	${EGDIR}/pgpool.conf.sample ${PKG_SYSCONFDIR}/pgpool.conf
-CONF_FILES+=	${EGDIR}/pool_hba.conf.sample ${PKG_SYSCONFDIR}/pool_hba.conf
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/${EGDIR}
+
+CONF_FILES+=		${EGDIR}/pcp.conf.sample ${PKG_SYSCONFDIR}/pcp.conf
+CONF_FILES+=		${EGDIR}/pgpool.conf.sample ${PKG_SYSCONFDIR}/pgpool.conf
+CONF_FILES+=		${EGDIR}/pool_hba.conf.sample ${PKG_SYSCONFDIR}/pool_hba.conf
 CONF_FILES_PERMS+=	${EGDIR}/pool_passwd ${PKG_SYSCONFDIR}/pool_passwd \
 			${PGPOOL_USER} ${PGGROUP} 0640
 
