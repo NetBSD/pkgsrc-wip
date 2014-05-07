@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5743 2014/05/06 23:48:40 szptvlfn Exp $
+# $Id: Makefile,v 1.5744 2014/05/07 15:14:54 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2475,6 +2475,7 @@ SUBDIR+=	py-csp
 SUBDIR+=	py-cvf
 SUBDIR+=	py-cvxopt
 SUBDIR+=	py-cxnet
+SUBDIR+=	py-cybox
 SUBDIR+=	py-cythongsl
 SUBDIR+=	py-dana
 SUBDIR+=	py-datarray
