@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/05/06 13:40:30 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/05/08 13:11:38 fhajny Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -38,6 +38,7 @@ ${RUBY_VENDORLIB_BASE}/phusion_passenger/classic_rails/cgi_fixed.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/classic_rails/thread_handler_extension.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/common_library.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/about_command.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/config/build_native_support_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/detach_process_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/main.rb

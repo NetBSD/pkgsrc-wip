@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2014/05/06 13:40:30 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.10 2014/05/08 13:11:38 fhajny Exp $
 # used by wip/ap2-passenger/Makefile
 # used by wip/ruby-passenger/Makefile
 #
-DISTNAME=		passenger-4.0.41
+DISTNAME=		passenger-4.0.42
 CATEGORIES=		www
 
 MASTER_SITES=		http://s3.amazonaws.com/phusion-passenger/releases/
@@ -54,7 +54,8 @@ MAKE_ENV+=		USE_VENDORED_LIBEIO=no
 MAKE_ENV+=		USE_VENDORED_LIBEV=no
 
 post-patch:
-	${RM} -f ${WRKSRC}/lib/phusion_passenger/platform_info/apache.rb.orig \
+	${RM} -f ${WRKSRC}/lib/phusion_passenger/packaging.rb.orig			\
+		 ${WRKSRC}/lib/phusion_passenger/platform_info/apache.rb.orig		\
 		 ${WRKSRC}/lib/phusion_passenger/platform_info/cxx_portability.rb.orig
 
 .include "../../wip/libeio/buildlink3.mk"
