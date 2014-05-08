@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2013/01/05 13:15:00 szptvlfn Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/05/08 00:29:55 szptvlfn Exp $
 
-DISTNAME=	mtl-2.1.2
+DISTNAME=	mtl-2.2.0.1
 CATEGORIES=	devel
-LICENSE=	modified-bsd
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Monad classes using functional dependencies
+LICENSE=	modified-bsd
 
-.include "../../wip/mk/haskell.mk"
+.include "../../mk/haskell.mk"
 .include "../../wip/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
