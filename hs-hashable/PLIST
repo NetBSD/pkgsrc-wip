@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/05/08 00:37:34 szptvlfn Exp $
 lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable.hi
-lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable.p_hi
 lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable/Class.hi
-lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable/Class.p_hi
 lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable/Generic.hi
-lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable/Generic.p_hi
 lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/HShashable-${PKGVERSION}.o
 lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/libHShashable-${PKGVERSION}.a
-lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/libHShashable-${PKGVERSION}_p.a
 lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/hashable-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/hashable-${PKGVERSION}/html/Data-Hashable.html
