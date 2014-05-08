@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/05/08 00:35:38 szptvlfn Exp $
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/List/NonEmpty.hi
-lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/List/NonEmpty.p_hi
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup.hi
-lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup.p_hi
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/HSsemigroups-${PKGVERSION}.o
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/libHSsemigroups-${PKGVERSION}.a
-lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/libHSsemigroups-${PKGVERSION}_p.a
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/semigroups-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/semigroups-${PKGVERSION}/html/Data-List-NonEmpty.html
