@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/09 23:00:49 jihbed Exp $
+${PYSITELIB}/blosc/__init__.py
+${PYSITELIB}/blosc/__init__.pyc
+${PYSITELIB}/blosc/__init__.pyo
+${PYSITELIB}/blosc/blosc_extension.so
+${PYSITELIB}/blosc/test.py
+${PYSITELIB}/blosc/test.pyc
+${PYSITELIB}/blosc/test.pyo
+${PYSITELIB}/blosc/toplevel.py
+${PYSITELIB}/blosc/toplevel.pyc
+${PYSITELIB}/blosc/toplevel.pyo
+${PYSITELIB}/blosc/version.py
+${PYSITELIB}/blosc/version.pyc
+${PYSITELIB}/blosc/version.pyo
