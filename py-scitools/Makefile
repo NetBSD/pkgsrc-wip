@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/01/26 13:05:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	scitools-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-matplotlib-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 34 # py-gtk2 via py-matplotlib-gtk2
 
 post-extract:
 	gzip -d ${WRKSRC}/doc/man/man1/*.gz
@@ -30,9 +30,9 @@ post-extract:
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 #PYTHON_VERSIONED_DEPENDENCIES=	Pmw X
 #.include "../../lang/python/versioned_dependencies.mk"
-#PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric
+#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 34 # py-Numeric
 #.include "../../math/py-Numeric/buildlink3.mk"
-#PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-numarray
+#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 34 34 # py-numarray
 #.include "../../math/py-numarray/buildlink3.mk"
 #.include "../../graphics/vtk/buildlink3.mk"
 

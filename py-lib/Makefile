@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/26 15:49:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	py-1.0.2
 PKGNAME=	${PYPKGPREFIX}-lib-1.0.2
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 REPLACE_PYTHON+=	py/cmdline/pycleanup.py
 REPLACE_PYTHON+=	py/cmdline/pycountloc.py
 REPLACE_PYTHON+=	py/cmdline/pylookup.py

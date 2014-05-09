@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:47 thomasklausner Exp $
 
 DISTNAME=	pygsl-0.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,7 @@ COMMENT=	Python interface for the GNU scientific library
 LICENSE=	gnu-gpl-v3
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric, py-numarray
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric, py-numarray
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_test.py

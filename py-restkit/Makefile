@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	restkit-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ REPLACE_PYTHON+=	restkit/contrib/webob_api.py
 DOCDIR=			share/doc/${PKGBASE:S/${PYPKGPREFIX}/py/1}
 INSTALLATION_DIRS+=	${DOCDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-socketpool
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-socketpool
 
 post-install:
 	${INSTALL_DATA} ${DESTDIR}${PREFIX}/restkit/README.rst \

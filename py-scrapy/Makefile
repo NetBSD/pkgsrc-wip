@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	Scrapy-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.1:../../textproc/py-lxml
 REPLACE_PYTHON=	${WRKSRC}/*.py
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

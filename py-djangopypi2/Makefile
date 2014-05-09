@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/18 20:50:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:46 thomasklausner Exp $
 
 DISTNAME=	djangopypi2-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.9:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:45 thomasklausner Exp $
 
 DISTNAME=	AQoPA-0.5.3
 PKGNAME=	${PYPKGPREFIX}-aqopa-0.5.3
@@ -12,7 +12,7 @@ COMMENT=	Automated Quality of Protection Analysis Tool for QoP-ML models
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/28 07:51:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/09 07:38:42 thomasklausner Exp $
 
 DISTNAME=	gemrb-0.8.0.1
 PKGREVISION=	1
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 REPLACE_PYTHON=	admin/extend2da.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 0.8.0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.8.0.1
 
 CMAKE_ARGS+=		-DDISABLE_WERROR=1
 CMAKE_ARGS+=		-DINSOURCEBUILD=1

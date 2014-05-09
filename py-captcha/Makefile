@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:46 thomasklausner Exp $
 
 DISTNAME=	pycaptcha-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	 33 # py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	 33 34 # py-imaging
 
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../lang/python/extension.mk"

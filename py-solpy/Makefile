@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/01 22:19:11 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:50 thomasklausner Exp $
 
 DISTNAME=	solpy-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/nrcharles/solpy
 COMMENT=	Solar Performance and Design library
 LICENSE=	gnu-lgpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.5.1:../../math/py-ephem
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy

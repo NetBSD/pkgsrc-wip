@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2014/04/18 16:18:22 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.16 2014/05/09 07:38:52 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	alsa avahi boost curl ecore faad ffmpeg flac fftw gamin
@@ -188,7 +188,7 @@ WITHOUT_PLUGINS+=	pulse
 
 .if !empty(PKG_OPTIONS:Mpyrex)
 BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-pyrex
 .include "../../lang/python/extension.mk"
 PY_PATCHPLIST=		yes
 PLIST.pyrex=		yes

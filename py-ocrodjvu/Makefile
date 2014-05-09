@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/03/26 13:09:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	ocrodjvu-0.7.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-djvulibre-[0-9]*:../../wip/py-djvulibre
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-djvulibre
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-djvulibre
 
 REPLACE_PYTHON+=	lib/logger.py
 

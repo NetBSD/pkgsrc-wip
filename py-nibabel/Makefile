@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	nibabel-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-dicom>=0.9.8:../../wip/py-dicom
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-fuse-bindings
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-fuse-bindings
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"

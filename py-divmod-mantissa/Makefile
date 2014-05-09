@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/25 10:38:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/09 07:38:46 thomasklausner Exp $
 
 MANTISSA_VERSION=	0.6.1
 DISTNAME=	Mantissa-${MANTISSA_VERSION}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-divmod-vertex>=0.2.0:../../wip/py-divmod-vertex
 
 PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_ACCEPTED=	26
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted, py-xml via py-nevow
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

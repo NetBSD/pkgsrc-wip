@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:51 thomasklausner Exp $
 
 DISTNAME=	PythonCAD-DS1-R37
 PKGNAME=	${PYPKGPREFIX}-pythoncad-37
@@ -22,7 +22,7 @@ DEPENDS=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON=	${WRKSRC}/gtkpycad.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 SUBST_CLASSES+=			fix-img
 SUBST_STAGE.fix-img=		pre-configure

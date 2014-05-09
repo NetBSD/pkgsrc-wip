@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/26 15:49:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:46 thomasklausner Exp $
 
 DISTNAME=	dexy-0.9.9.5
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ DEPENDS+=    	${PYPKGPREFIX}-inflection>=0.2.0:../../wip/py-inflection
 WRKSRC=		${WRKDIR}/dexy-0.9.9.5
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

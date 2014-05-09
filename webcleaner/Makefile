@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTNAME=		webcleaner-2.8
 CATEGORIES=		www
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-imaging
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}

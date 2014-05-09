@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	Model-Builder-0.4.6
 EGG_NAME=	Model_Builder-0.4.6
@@ -12,7 +12,7 @@ COMMENT=	Graphical ODE simulator
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
 
 USE_LANGUAGES=	# none
 

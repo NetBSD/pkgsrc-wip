@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/04/22 12:54:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/09 07:38:43 thomasklausner Exp $
 
 DISTNAME=	lilypond-2.19.6
 CATEGORIES=	print
@@ -58,7 +58,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 REPLACE_PYTHON+= scripts/build/yyout2grammar.py
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # not yet ported as of 2014/01/28
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2014/01/28
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh

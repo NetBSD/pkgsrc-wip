@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:38:44 thomasklausner Exp $
 
 DISTNAME=	noor-1.2.1
 PKGREVISION=	1
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/26 15:49:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:38:47 thomasklausner Exp $
 
 DISTNAME=	gpaw-0.9.0.8965
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-ase-[0-9]*:../../wip/py-ase
 USE_LANGUAGES=	c c99
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 and py-gobject via py-ase
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2 and py-gobject via py-ase
 
 post-extract:
 	${MV} ${WRKSRC}/tools/gpaw ${WRKSRC}/tools/gpaw${PYVERSSUFFIX}

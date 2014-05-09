@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:42 thomasklausner Exp $
 
 DISTNAME=	flyback_0.4.0
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -17,7 +17,7 @@ DEPENDS+=	rsync-[0-9]*:../../net/rsync
 WRKSRC=		${WRKDIR}/flyback
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-sqlite2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-sqlite2
 
 INSTALLATION_DIRS=	bin share/flyback
 

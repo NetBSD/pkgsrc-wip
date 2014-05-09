@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/26 15:49:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/09 07:38:51 thomasklausner Exp $
 
 DISTNAME=		visionegg-contrib-0.9.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=		Additional modules for py-visionegg package
 NO_BUILD=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric and py-OpenGL via py-visionegg
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric and py-OpenGL via py-visionegg
 
 PY_VC_FILES_LABVIEW=	"Edit Grating C.vi" \
 			"Grating C to A.vi" \

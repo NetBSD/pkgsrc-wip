@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:51 thomasklausner Exp $
 
 DISTNAME=	Wally-0.6.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Wally/wally/}
@@ -13,7 +13,7 @@ COMMENT=	Tool for managing desktop backgrounds
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 .include "../../lang/python/egg.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

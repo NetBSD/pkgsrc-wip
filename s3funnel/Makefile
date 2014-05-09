@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/26 15:50:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTNAME=	s3funnel-0.5.2
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-workerpool-[0-9]*:../../wip/py-workerpool
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-filechunkio via py-boto
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-filechunkio via py-boto
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

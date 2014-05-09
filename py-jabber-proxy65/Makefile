@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/01/26 15:49:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	Proxy65-1.2.0
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME:S/P/p/}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 
 # it's a python package using the standard Python packager
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

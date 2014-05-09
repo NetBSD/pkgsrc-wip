@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	liveplots-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-gnuplot-[0-9]*:../../graphics/py-gnuplot
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gnuplot, py-multiprocessing
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gnuplot, py-multiprocessing
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

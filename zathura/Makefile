@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/04/29 21:16:21 leot1990 Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTNAME=	zathura-0.2.7
 CATEGORIES=	print
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 .include "../../lang/python/pyversion.mk"
 .include "../../graphics/cairo/buildlink3.mk"

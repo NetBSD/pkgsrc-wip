@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:38:46 thomasklausner Exp $
 
 DISTNAME=	CLICS-src-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/CLICS/clics/S/-src//}
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/CLICS-d93a40ceebaa
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
 
 INSTALLATION_DIRS=	# blank
 

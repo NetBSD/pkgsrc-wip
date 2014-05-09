@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/25 10:38:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/09 07:38:50 thomasklausner Exp $
 
 DISTNAME=		pySpeex-0.2
 PKGNAME=		${PYPKGPREFIX}-speex-0.2
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0:../../lang/py-pyrex
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-pyrex
 
 .include "../../lang/python/extension.mk"
 .include "../../audio/speex/buildlink3.mk"

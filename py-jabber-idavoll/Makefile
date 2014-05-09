@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/26 15:49:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	idavoll-0.9.1
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0.1:../../security/py-crypto
 
 # it's a python package using the standard Python packager
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

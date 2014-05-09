@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTNAME=	wicd-1.6.2.2
 EGG_NAME=	${DISTNAME:S|w|W|}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-urwid>=0.9.9:../../devel/py-urwid
 
 PY_PATCHPLIST = YES
 PYSETUP = setup.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 USE_TOOLS+=	pkg-config

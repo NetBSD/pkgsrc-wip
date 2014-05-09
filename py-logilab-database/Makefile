@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	logilab-database-1.1.0
 EGG_NAME=	logilab_database-1.1.0
@@ -12,7 +12,7 @@ COMMENT=	Logilab utilities for database manipulation
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mxDateTime
 
 .include "options.mk"
 

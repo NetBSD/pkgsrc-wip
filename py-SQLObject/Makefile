@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/09 07:38:44 thomasklausner Exp $
 
 DISTNAME=	SQLObject-1.3.1.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 PLIST_SUBST+=		EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mxDateTime
 
 .include "options.mk"
 

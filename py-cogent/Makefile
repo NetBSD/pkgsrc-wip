@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:46 thomasklausner Exp $
 
 DISTNAME=	cogent-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.5.6:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-pyrex
 
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} runtests.py )

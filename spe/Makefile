@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/25 10:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTNAME=	spe-0.8.4.h-wx2.6.1.0
 PKGNAME=	${DISTNAME:C/\.[a-z]+.*//}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-checker-[0-9]*:../../devel/py-checker
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-[a-z]+.*//}
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
 
 REPLACE_PYTHON=	_spe/SPE.py _spe/SPE_DEBUG.py
 

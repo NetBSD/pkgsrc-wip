@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:50 thomasklausner Exp $
 
 DISTNAME=	swiginac-1.5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	cpl-1.0
 
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric
 
 do-test:
 	${RUN} cd ${WRKSRC}/tests/Symbolic; ${SETENV} ${TEST_ENV} ${PYTHONBIN} SymbolicTests.py

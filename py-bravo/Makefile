@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/26 15:49:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/09 07:38:45 thomasklausner Exp $
 
 DISTNAME=		MostAwesomeDude-bravo-1.8.1-0-gf6cb5fe
 BRAVO_VERSION=		1.8.1
@@ -27,7 +27,7 @@ EGG_NAME=		Bravo-${BRAVO_VERSION}
 # REPLACE_PYTHON+=	spectrumctl/spectrumctl.py
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
 
 .include "../../mk/bsd.prefs.mk"
 

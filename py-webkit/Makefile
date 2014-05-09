@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/04/20 12:35:40 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/09 07:38:51 thomasklausner Exp $
 
 DISTNAME=	pywebkitgtk-1.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 PKGCONFIG_OVERRIDE+=	pywebkitgtk.pc.in
 

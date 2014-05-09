@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:51 thomasklausner Exp $
 
 DISTNAME=	WebHelpers-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/W/w/S/H/h/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pylons>=0.1:../../wip/py-pylons
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-cheetah and py-paste via py-pylons
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-cheetah and py-paste via py-pylons
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

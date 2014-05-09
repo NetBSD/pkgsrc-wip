@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:50 thomasklausner Exp $
 
 DISTNAME=	smop-0.1.5
 CATEGORIES=	math
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.2:../../math/py-networkx
 WRKSRC=		${WRKDIR}/smop-0.1.5
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-networkx
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

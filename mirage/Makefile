@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/25 10:38:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/09 07:38:44 thomasklausner Exp $
 
 DISTNAME=	mirage-0.9.5.2
 CATEGORIES=	graphics
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 PY_PATCHPLIST=			yes
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

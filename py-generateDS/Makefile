@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/01/26 15:49:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/09 07:38:47 thomasklausner Exp $
 #
 
 DISTNAME=	generateDS-1.6a
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	none
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
 
 REPLACE_PYTHON=	generateDS.py
 

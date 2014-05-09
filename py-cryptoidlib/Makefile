@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:46 thomasklausner Exp $
 
 DISTNAME=	cryptoIDlib-0.3.3
 PKGNAME=	${PYPKGPREFIX}-cryptoidlib-0.3.3
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../math/py-gmpy
 
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-m2crypto
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-m2crypto
 
 REPLACE_PYTHON+=	scripts/cryptoID.py scripts/cryptoIDcli.py scripts/cryptoIDsrv.py
 

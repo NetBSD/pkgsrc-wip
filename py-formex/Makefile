@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:47 thomasklausner Exp $
 
 DISTNAME=	pyformex-0.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-OpenGL>=3.0.1:../../graphics/py-OpenGL
 USE_TOOLS+=	bash
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric via py-OpenGL
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric via py-OpenGL
 
 REPLACE_BASH+=	pyformex-search
 

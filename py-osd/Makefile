@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/26 15:49:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=		pyosd-0.2.14
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../net/py-twisted
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
 
 .include "../../x11/xosd/buildlink3.mk"
 .include "../../lang/python/extension.mk"

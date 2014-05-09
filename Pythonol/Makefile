@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/01/25 10:38:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/09 07:38:42 thomasklausner Exp $
 
 DISTNAME=		Pythonol-2.0_i586
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/_i586//}
@@ -17,7 +17,7 @@ DEPENDS+=		${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
 PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
 TARGET_DIR=		${PREFIX}/${PYSITELIB}/Pythonol
 SCRIPTNAME=		${PREFIX}/bin/pythonol

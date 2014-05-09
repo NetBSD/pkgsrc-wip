@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	obspy-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.3:../../textproc/py-lxml
 
 USE_LANGUAGES=	c fortran
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-suds
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-suds
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

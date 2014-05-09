@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	pythia-0.8.1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ipython>=0.10.2:../../devel/py-ipython
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ipython
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ipython
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 

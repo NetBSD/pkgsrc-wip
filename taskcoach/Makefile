@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/26 15:50:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTNAME=	TaskCoach-1.2.31
 PKGNAME=	${DISTNAME:tl}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.9.1:../../x11/py-wxWidgets
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
 
 SUBST_CLASSES+=		fix-cdll
 SUBST_STAGE.fix-cdll=	pre-configure

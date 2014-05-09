@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/26 15:49:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	papyon-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gstreamer0.10, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gstreamer0.10, py-gobject
 
 do-test:
 	( cd ${WRKSRC} &&  ${PYTHONBIN} test.py }

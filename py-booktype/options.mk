@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/01/25 10:38:16 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.4 2014/05/09 07:38:45 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.booktype
 PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite3
@@ -10,7 +10,7 @@ PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-mysqldb
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mysqldb
 PLIST.mysql=	yes
 .endif
 

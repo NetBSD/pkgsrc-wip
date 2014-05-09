@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	openastro-1.1.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Open source astrology program, openastro.org
 LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONED_DEPENDENCIES=	cairo dateutil
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-gtk2
 
 WRKSRC=			${WRKDIR}/openastro.org-1.1.38
 USE_PKGLOCALEDIR=	yes

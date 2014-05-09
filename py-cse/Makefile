@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/26 15:49:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:46 thomasklausner Exp $
 
 DISTNAME=	pycse-1.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -20,7 +20,7 @@ FETCH_USING= curl
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 post-extract:
 	${MV} ${WRKSRC}/pycse/publish.py ${WRKSRC}/pycse/publish.py${PYVERSSUFFIX}

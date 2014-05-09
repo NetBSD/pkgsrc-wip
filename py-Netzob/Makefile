@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/26 15:49:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:44 thomasklausner Exp $
 
 DISTNAME=	Netzob-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 REPLACE_PYTHON=	src/netzob/ExternalLibs/xdot.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gobject
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"

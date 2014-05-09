@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/02/20 23:18:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:38:44 thomasklausner Exp $
 
 DISTNAME=	CalendarServer-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -41,7 +41,7 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted, py-xml via py-nevow, py-psutil, py-Kerberos, py-ldap
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-psutil, py-Kerberos, py-ldap
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	bash:run

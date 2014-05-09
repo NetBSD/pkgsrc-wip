@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/25 10:45:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/09 07:38:47 thomasklausner Exp $
 
 DISTNAME=		imgSeek-0.8.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=		Photo collection manager and viewer
 USE_LANGUAGES=		c c++
 PYDISTUTILSPKG=		yes
 REPLACE_PYTHON=	*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-qt3-modules, py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-qt3-modules, py-imaging
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-qt3-modules/buildlink3.mk"

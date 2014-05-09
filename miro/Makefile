@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/01/26 15:49:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/09 07:38:44 thomasklausner Exp $
 
 DISTNAME=	miro-3.5.1
 PKGREVISION=	1
@@ -29,7 +29,7 @@ SUBST_SED.fix-paths+=		-e 's,/usr/X11R6/lib,${X11BASE}/lib,g'
 
 PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	linux
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-pyrex, py-gtk2, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-pyrex, py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"

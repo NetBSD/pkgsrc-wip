@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:38:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:48 thomasklausner Exp $
 
 VERSION=	0.21
 DISTNAME=	PyLapack
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES= fortran77
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric
 
 INSTALLATION_DIRS=	share/doc/py-lapack
 

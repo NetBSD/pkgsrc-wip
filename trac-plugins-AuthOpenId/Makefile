@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/26 15:50:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTVERS=	0.3.4
 DISTNAME=	TracAuthOpenId-${DISTVERS}
@@ -16,7 +16,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-openid>=2.2.4:../../security/py-openid
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-openid
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-openid
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

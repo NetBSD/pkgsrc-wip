@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	quaternionarray-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 #DEPENDS+=	${PYPKGPREFIX}-docutils>=0.6:../../textproc/py-docutils
 
 USE_LANGUAGES=	# none
-#PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-docutils
+#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

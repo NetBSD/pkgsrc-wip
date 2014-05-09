@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:43 thomasklausner Exp $
 
 DISTNAME=	googlecl-0.9.13
 CATEGORIES=	net
@@ -14,7 +14,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gdata
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gdata
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/google.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

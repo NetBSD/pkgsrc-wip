@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/26 15:49:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/09 07:38:43 thomasklausner Exp $
 
 DISTNAME=	labyrinth_0.4.1
 PKGNAME=	labyrinth-0.4.1
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 
 PY_PATCHPLIST=		yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-gobject
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

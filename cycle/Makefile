@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:38:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:42 thomasklausner Exp $
 
 DISTNAME=	cycle-0.3.1
 PKGREVISION=	3
@@ -11,7 +11,7 @@ MAINTAINER=	ckoeni@gmail.com
 HOMEPAGE=	http://cycle.sourceforge.net/
 COMMENT=	Cycle is a fertility calendar program for women
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
 REPLACE_PYTHON=	cycle.py
 
 INSTALLATION_DIRS= lib/cycle lib/cycle/bitmaps \

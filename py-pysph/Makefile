@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	PySPH-0.9beta
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 WRKSRC=		${WRKDIR}/PySPH-0.9beta
 
 USE_LANGUAGES=	c c++
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # my-multiprocessing
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # my-multiprocessing
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

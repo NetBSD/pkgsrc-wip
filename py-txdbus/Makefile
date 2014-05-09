@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/26 15:49:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:50 thomasklausner Exp $
 
 DISTNAME=	txdbus-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=       ${PYPKGPREFIX}-twisted>=13.1.0:../../net/py-twisted
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

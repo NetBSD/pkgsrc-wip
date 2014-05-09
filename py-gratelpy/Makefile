@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/26 15:49:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:47 thomasklausner Exp $
 
 DISTNAME=	GraTeLPy-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-networkx
 
 post-extract:
 	${MV} ${WRKSRC}/bin/gratelpy_benchmark ${WRKSRC}/bin/gratelpy_benchmark${PYVERSSUFFIX}

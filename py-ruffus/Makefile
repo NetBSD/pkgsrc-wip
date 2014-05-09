@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	ruffus-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=  ${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessin
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-multiprocessing
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-multiprocessing
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

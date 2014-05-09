@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/26 15:49:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:48 thomasklausner Exp $
 
 DISTNAME=	python-jswebkit-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c
 
 PLIST_SUBST+=	THIS_EGG_FILE=${EGG_NAME:S|python-|python_|}-py${PYVERSSUFFIX}.egg-info
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-gtk2 via py-webkit
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2 via py-webkit
 
 BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.13
 .include "../../devel/py-cython/buildlink3.mk"

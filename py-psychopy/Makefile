@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/01/26 15:49:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/05/09 07:38:49 thomasklausner Exp $
 
 DISTNAME=	PsychoPy-1.61.01
 EGG_NAME=	${DISTNAME}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://code.google.com/p/psychopy/
 COMMENT=	Psychology and neuroscience software in python
 
 #DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
-#PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric via py-OpenGL
+#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric via py-OpenGL
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:38:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/09 07:38:45 thomasklausner Exp $
 
 DISTNAME=	biskit-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ REPLACE_PYTHON+=	scripts/Biskit/bis2.6 Biskit/data/pdb/remediator_python.1.56.08
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric
 
 post-extract:
 	${MV} ${WRKSRC}/scripts/Biskit/bis.py ${WRKSRC}/scripts/Biskit/bis${PYVERSSUFFIX}

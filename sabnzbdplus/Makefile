@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/01/26 15:50:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:52 thomasklausner Exp $
 
 DISTNAME=       sabnzbdplus-${DISTVERSION}
 DISTVERSION= 0.7.16
@@ -20,7 +20,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/SABnzbd-${DISTVERSION}
 USE_TOOLS=	pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-cheetah, py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-cheetah, py-xml
 
 .include "options.mk"
 

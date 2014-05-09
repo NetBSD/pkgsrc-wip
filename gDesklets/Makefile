@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/01/25 10:45:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.38 2014/05/09 07:38:42 thomasklausner Exp $
 
 DISTNAME=	gdesklets-0.36
 PKGNAME=	gDesklets-0.36
@@ -23,7 +23,7 @@ GCONF_SCHEMAS=		gdesklets-display-thumbnail.schemas
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 REPLACE_PYTHON=		gdesklets
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-gtk2
 
 SUBST_CLASSES+=		python
 SUBST_MESSAGE.python=	Fixing Python command name.
