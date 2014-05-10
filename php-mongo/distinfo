@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/10/26 20:43:14 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.5 2014/05/10 13:56:02 bartoszkuzma Exp $
 
-SHA1 (php-mongo/mongo-1.4.4.tgz) = c60f457b740ed876d0adc9cec252df1f04ddfccc
-RMD160 (php-mongo/mongo-1.4.4.tgz) = 3a74cac0489f6663121bd17b0d3dd61225ec621c
-Size (php-mongo/mongo-1.4.4.tgz) = 141242 bytes
+SHA1 (php-mongo/mongo-1.5.2.tgz) = 27dade820e336a50d0e18b7a680c966ccf291efe
+RMD160 (php-mongo/mongo-1.5.2.tgz) = 983587cc89808eeb0988e62fcea533e7624d1958
+Size (php-mongo/mongo-1.5.2.tgz) = 190546 bytes
