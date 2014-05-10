@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5746 2014/05/07 23:43:37 khorben Exp $
+# $Id: Makefile,v 1.5747 2014/05/10 06:56:40 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3423,7 +3423,6 @@ SUBDIR+=	tortunnel
 SUBDIR+=	tpp
 SUBDIR+=	tqsllib
 SUBDIR+=	tr2latex
-SUBDIR+=	trac
 SUBDIR+=	trac-plugins-AccountManager
 SUBDIR+=	trac-plugins-AuthOpenId
 SUBDIR+=	trac-plugins-FullBlog

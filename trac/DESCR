@@ -1,7 +1,0 @@
-Trac is a minimalistic web-based software project management and bug/issue
-tracking system.  It provides an interface to the Subversion revision control
-systems, an integrated wiki, flexible issue tracking and convenient report
-facilities.
-
-This package is very similar to www/ja-trac.  (Ideally www/trac and
-www/ja-trac would be more similar and this package no longer needed.)
