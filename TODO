@@ -70,11 +70,11 @@ Suggested package updates
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
 	o lives-2.2.4
-	o llvm-3.4
+	o llvm-3.4.1
 	o lucene-4.5.0
 	o man-1.6f
 	o mcwm-20130209.2
-	o meta-tracker-1.0.0
+	o meta-tracker-1.0.1
 	o miniupnpc-1.9.20140401
 	o miro-5.0
 	o mixxx-1.11.0
