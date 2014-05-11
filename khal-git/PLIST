@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2014/04/18 19:37:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.10 2014/05/11 09:00:00 thomasklausner Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/khal/__init__.py
@@ -15,6 +16,9 @@ ${PYSITELIB}/khal/aux.pyo
 ${PYSITELIB}/khal/calendar_display.py
 ${PYSITELIB}/khal/calendar_display.pyc
 ${PYSITELIB}/khal/calendar_display.pyo
+${PYSITELIB}/khal/cli.py
+${PYSITELIB}/khal/cli.pyc
+${PYSITELIB}/khal/cli.pyo
 ${PYSITELIB}/khal/controllers.py
 ${PYSITELIB}/khal/controllers.pyc
 ${PYSITELIB}/khal/controllers.pyo

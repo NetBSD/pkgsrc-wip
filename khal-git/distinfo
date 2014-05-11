@@ -1,1 +1,2 @@
-$NetBSD: distinfo,v 1.1 2013/09/02 12:09:14 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2014/05/11 09:00:00 thomasklausner Exp $
+SHA1 (patch-khal_khalendar_backend.py) = 1273e1b37304df9e7f0b3d22cdc17a495350c756
