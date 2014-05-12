@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/02/02 21:15:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/12 21:59:10 jihbed Exp $
 
-DISTNAME=	lsqfit-4.6.1
+DISTNAME=	lsqfit-4.8
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/l/lsqfit/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	  https://github.com/gplepage/lsqfit.git
