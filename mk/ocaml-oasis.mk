@@ -5,7 +5,7 @@ _OCAML_OASIS_MK= # defined
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/ocaml/buildlink3.mk"
-.include "../../devel/ocaml-findlib/buildlink3.mk"
+#.include "../../devel/ocaml-findlib/buildlink3.mk"
 
 USE_LANGUAGES=  c
 HAS_CONFIGURE=  yes
@@ -28,6 +28,6 @@ pre-install:
 	${MKDIR} ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib
 
 do-install:
-	cd ${WRKSRC} && ocaml setup.ml -install
+	cd ${WRKSRC} && ocaml setup.ml -install 
 
 .endif  # OCAML_OASIS
