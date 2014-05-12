@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/15 07:10:41 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/12 06:22:36 jgoamakf Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	zed-1.2
@@ -10,5 +10,6 @@ HOMEPAGE=	http://forge.ocamlcore.org/projects/zed/
 COMMENT=	Zed is an abstract engine for text edition
 LICENSE=	modified-bsd
 
+.include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../wip/mk/ocaml-oasis.mk"
 .include "../../mk/bsd.pkg.mk"
