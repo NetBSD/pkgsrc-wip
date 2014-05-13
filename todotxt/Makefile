@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2014/05/13 11:43:34 ttys Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/13 13:00:11 ttys Exp $
 
 PKGNAME=	todotxt-2.10
 CATEGORIES=	misc
-MASTER_SITES=	https://github.com/ginatrapani/todo.txt-cli/archive/
+MASTER_SITES=	https://github.com/ginatrapani/todo.txt-cli
 
 COMMENT=	Simple and extensible shell script for managing your todo.txt file
 LICENSE=	gnu-gpl-v3
 
-GIT_REPOSITORIES=	todotxt
-GIT_REPO.todotxt=	git://github.com/ginatrapani/todo.txt-cli.git
+GIT_REPOSITORIES=	todo.txt-cli
+GIT_REPO.todo.txt-cli=	git://github.com/ginatrapani/todo.txt-cli.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://todotxt.com/
