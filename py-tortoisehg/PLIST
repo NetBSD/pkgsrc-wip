@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/30 19:57:13 krytarowski Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/05/13 11:09:30 nros Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
@@ -76,9 +76,6 @@ ${PYSITELIB}/tortoisehg/hgqt/fileencoding.pyo
 ${PYSITELIB}/tortoisehg/hgqt/filelistview.py
 ${PYSITELIB}/tortoisehg/hgqt/filelistview.pyc
 ${PYSITELIB}/tortoisehg/hgqt/filelistview.pyo
-${PYSITELIB}/tortoisehg/hgqt/filerevmodel.py
-${PYSITELIB}/tortoisehg/hgqt/filerevmodel.pyc
-${PYSITELIB}/tortoisehg/hgqt/filerevmodel.pyo
 ${PYSITELIB}/tortoisehg/hgqt/fileview.py
 ${PYSITELIB}/tortoisehg/hgqt/fileview.pyc
 ${PYSITELIB}/tortoisehg/hgqt/fileview.pyo
@@ -130,9 +127,6 @@ ${PYSITELIB}/tortoisehg/hgqt/lfprompt.pyo
 ${PYSITELIB}/tortoisehg/hgqt/license.py
 ${PYSITELIB}/tortoisehg/hgqt/license.pyc
 ${PYSITELIB}/tortoisehg/hgqt/license.pyo
-${PYSITELIB}/tortoisehg/hgqt/logcolumns.py
-${PYSITELIB}/tortoisehg/hgqt/logcolumns.pyc
-${PYSITELIB}/tortoisehg/hgqt/logcolumns.pyo
 ${PYSITELIB}/tortoisehg/hgqt/manifestmodel.py
 ${PYSITELIB}/tortoisehg/hgqt/manifestmodel.pyc
 ${PYSITELIB}/tortoisehg/hgqt/manifestmodel.pyo
@@ -157,9 +151,6 @@ ${PYSITELIB}/tortoisehg/hgqt/mqutil.pyo
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.py
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.pyc
 ${PYSITELIB}/tortoisehg/hgqt/p4pending.pyo
-${PYSITELIB}/tortoisehg/hgqt/partialcommit.py
-${PYSITELIB}/tortoisehg/hgqt/partialcommit.pyc
-${PYSITELIB}/tortoisehg/hgqt/partialcommit.pyo
 ${PYSITELIB}/tortoisehg/hgqt/pbranch.py
 ${PYSITELIB}/tortoisehg/hgqt/pbranch.pyc
 ${PYSITELIB}/tortoisehg/hgqt/pbranch.pyo
@@ -346,12 +337,18 @@ ${PYSITELIB}/tortoisehg/util/menuthg.pyo
 ${PYSITELIB}/tortoisehg/util/obsoleteutil.py
 ${PYSITELIB}/tortoisehg/util/obsoleteutil.pyc
 ${PYSITELIB}/tortoisehg/util/obsoleteutil.pyo
+${PYSITELIB}/tortoisehg/util/partialcommit.py
+${PYSITELIB}/tortoisehg/util/partialcommit.pyc
+${PYSITELIB}/tortoisehg/util/partialcommit.pyo
 ${PYSITELIB}/tortoisehg/util/patchctx.py
 ${PYSITELIB}/tortoisehg/util/patchctx.pyc
 ${PYSITELIB}/tortoisehg/util/patchctx.pyo
 ${PYSITELIB}/tortoisehg/util/paths.py
 ${PYSITELIB}/tortoisehg/util/paths.pyc
 ${PYSITELIB}/tortoisehg/util/paths.pyo
+${PYSITELIB}/tortoisehg/util/pipeui.py
+${PYSITELIB}/tortoisehg/util/pipeui.pyc
+${PYSITELIB}/tortoisehg/util/pipeui.pyo
 ${PYSITELIB}/tortoisehg/util/shlib.py
 ${PYSITELIB}/tortoisehg/util/shlib.pyc
 ${PYSITELIB}/tortoisehg/util/shlib.pyo
@@ -370,6 +367,9 @@ ${PYSITELIB}/tortoisehg/util/version.pyo
 ${PYSITELIB}/tortoisehg/util/wconfig.py
 ${PYSITELIB}/tortoisehg/util/wconfig.pyc
 ${PYSITELIB}/tortoisehg/util/wconfig.pyo
+${PYSITELIB}/tortoisehg/util/win32ill.py
+${PYSITELIB}/tortoisehg/util/win32ill.pyc
+${PYSITELIB}/tortoisehg/util/win32ill.pyo
 share/applications/thg.desktop
 share/doc/tortoisehg/COPYING.txt
 share/doc/tortoisehg/html/_images/archive.png
