@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2014/05/13 11:43:34 ttys Exp $
+
+SHA1 (patch-todo.cfg) = 4a0581adad6901ab3d09ae7ab1ba0995c5bc352c
+SHA1 (patch-todo.sh) = f4e893c51d551122a410b091929f6e3939aa930c
