@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2014/05/10 08:18:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/05/14 13:33:50 thomasklausner Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
 lib/bup/bup/_version.py
 lib/bup/bup/bloom.py
 lib/bup/bup/client.py
-lib/bup/bup/config.py
 lib/bup/bup/csetup.py
 lib/bup/bup/drecurse.py
 lib/bup/bup/git.py
