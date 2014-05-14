@@ -1,33 +1,35 @@
-# $NetBSD: Makefile,v 1.4 2014/04/02 19:42:06 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/05/14 21:57:06 jihbed Exp $
 
-DISTNAME=	dolo-0.4-dev
+DISTNAME=	dolo-0.4.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	finance python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/dolo/
+MASTER_SITES=	https://pypi.python.org/packages/source/d/dolo/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://albop.github.com/dolo/
 COMMENT=	Economic modelling in Python
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.1:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
-
-WRKSRC=		${WRKDIR}/dolo-0.4-dev
 
 USE_LANGUAGES=	# none
 
+PY_PATCHPLIST=         yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PLIST_SUBST+=	THIS_EGG_INFODIR=${EGG_NAME:S|-dev|_dev|}-py${PYVERSSUFFIX}.egg-info
 
 post-extract:
-	${MV} ${WRKSRC}/src/bin/dolo-recs.py \
-			${WRKSRC}/src/bin/dolo-recs.py${PYVERSSUFFIX}
-	${MV} ${WRKSRC}/src/bin/dolo-matlab.py \
-			${WRKSRC}/src/bin/dolo-matlab.py${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/dolo \
+			${WRKSRC}/bin/dolo${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/dolo-julia \
+			${WRKSRC}/bin/dolo-julia${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/dolo-recs \
+			${WRKSRC}/bin/dolo-recs${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/dolo-matlab \
+			${WRKSRC}/bin/dolo-matlab${PYVERSSUFFIX}
 
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
