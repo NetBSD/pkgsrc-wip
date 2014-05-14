@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.22 2014/05/06 21:24:22 keckhardt Exp $
+$NetBSD: distinfo,v 1.23 2014/05/14 13:42:43 keckhardt Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-4.8-20140501.tar.bz2) = e64e6e34e7b07f99bbc3deb7351f931f18484f33
-RMD160 (gcc-4.8-20140501.tar.bz2) = 51e53209dc9bd81c0c9834af991d089ddba11e69
-Size (gcc-4.8-20140501.tar.bz2) = 82007182 bytes
-SHA1 (patch-gcc-config-vax-constraints.md) = e6cea7a5334b5b124ca3e8b62eba45423e788e55
-SHA1 (patch-gcc-config-vax-vax.c) = 02e389ec418a0fee1431ecd61d65b7f8d7629785
+SHA1 (gcc-4.8-20140508.tar.bz2) = f9d62e5c221af565cbcf24864741a8f0dc63c10d
+RMD160 (gcc-4.8-20140508.tar.bz2) = ee31501c6fef99c51901ccc293cd1fdf63f22861
+Size (gcc-4.8-20140508.tar.bz2) = 81974775 bytes
 SHA1 (patch-gcc-config-vax-vax.md) = e06696be85641cbe9131ecc10bb28c45a465916d
 SHA1 (patch-gcc_Makefile.in) = 3706889f55dac4f2847301340d95fc11645108eb
 SHA1 (patch-gcc_config.gcc) = ac175c5eecf3dd53508479b30bf5c59cc0a5fca9
