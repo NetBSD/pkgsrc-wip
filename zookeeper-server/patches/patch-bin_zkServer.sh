@@ -1,7 +1,7 @@
-$NetBSD: patch-bin_zkServer.sh,v 1.1.1.1 2012/04/19 10:31:37 fhajny Exp $
+$NetBSD: patch-bin_zkServer.sh,v 1.2 2014/05/14 09:51:07 fhajny Exp $
 
 Use awk instead of grep/sed, and Bash echo for better portability.
---- bin/zkServer.sh.orig	2012-02-06 10:48:39.000000000 +0000
+--- bin/zkServer.sh.orig	2014-02-20 10:14:08.000000000 +0000
 +++ bin/zkServer.sh
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env bash
@@ -12,13 +12,13 @@ Use awk instead of grep/sed, and Bash echo for better portability.
 @@ -81,7 +81,7 @@ fi
  echo "Using config: $ZOOCFG" >&2
  
- if [ -z $ZOOPIDFILE ]; then
--    ZOO_DATADIR=$(grep "^[[:space:]]*dataDir" "$ZOOCFG" | sed -e 's/.*=//')
-+    ZOO_DATADIR=$(awk -F= '{ if ($1=="dataDir") print $2}' "$ZOOCFG")
+ if [ -z "$ZOOPIDFILE" ]; then
+-    ZOO_DATADIR="$(grep "^[[:space:]]*dataDir" "$ZOOCFG" | sed -e 's/.*=//')"
++    ZOO_DATADIR="$(awk -F= '{ if ($1=="dataDir") print $2}' "$ZOOCFG")"
      if [ ! -d "$ZOO_DATADIR" ]; then
          mkdir -p "$ZOO_DATADIR"
      fi
-@@ -106,7 +106,7 @@ start)
+@@ -110,7 +110,7 @@ start)
      -cp "$CLASSPATH" $JVMFLAGS $ZOOMAIN "$ZOOCFG" > "$_ZOO_DAEMON_OUT" 2>&1 < /dev/null &
      if [ $? -eq 0 ]
      then
@@ -27,12 +27,18 @@ Use awk instead of grep/sed, and Bash echo for better portability.
        then
          sleep 1
          echo STARTED
-@@ -155,7 +155,7 @@ status)
+@@ -161,12 +161,12 @@ restart)
+     ;;
+ status)
      # -q is necessary on some versions of linux where nc returns too quickly, and no stat result is output
-     STAT=`$JAVA "-Dzookeeper.log.dir=${ZOO_LOG_DIR}" "-Dzookeeper.root.logger=${ZOO_LOG4J_PROP}" \
-              -cp "$CLASSPATH" $JVMFLAGS org.apache.zookeeper.client.FourLetterWordMain localhost \
--             $(grep "^[[:space:]]*clientPort" "$ZOOCFG" | sed -e 's/.*=//') srvr 2> /dev/null    \
-+             $(awk -F= '{if ($1=="clientPort") print $2}' "$ZOOCFG") srvr 2> /dev/null    \
-           | grep Mode`
-     if [ "x$STAT" = "x" ]
+-    clientPortAddress=`grep "^[[:space:]]*clientPortAddress[^[:alpha:]]" "$ZOOCFG" | sed -e 's/.*=//'`
++    clientPortAddress=`awk -F= '{if ($1=="clientPortAddress") print $2}' "$ZOOCFG"`
+     if ! [ $clientPortAddress ]
      then
+ 	clientPortAddress="localhost"
+     fi
+-    clientPort=`grep "^[[:space:]]*clientPort[^[:alpha:]]" "$ZOOCFG" | sed -e 's/.*=//'`
++    clientPort=`awk -F= '{if ($1=="clientPort") print $2}' "$ZOOCFG"`
+     STAT=`"$JAVA" "-Dzookeeper.log.dir=${ZOO_LOG_DIR}" "-Dzookeeper.root.logger=${ZOO_LOG4J_PROP}" \
+              -cp "$CLASSPATH" $JVMFLAGS org.apache.zookeeper.client.FourLetterWordMain \
+              $clientPortAddress $clientPort srvr 2> /dev/null    \

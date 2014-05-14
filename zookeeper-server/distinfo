@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.3 2013/05/24 09:26:35 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2014/05/14 09:51:07 fhajny Exp $
 
-SHA1 (zookeeper-3.4.5.tar.gz) = fd921575e02478909557034ea922de871926efc7
-RMD160 (zookeeper-3.4.5.tar.gz) = 3ee0066330eed4843f39d5244def5f9fef37df00
-Size (zookeeper-3.4.5.tar.gz) = 16402010 bytes
-SHA1 (patch-bin_zkEnv.sh) = 466e208d0e8f95c50c7db79a590b08a951a911f0
-SHA1 (patch-bin_zkServer.sh) = fc70c58523c59c8f2958cb114bf142410c711360
-SHA1 (patch-conf__zoo_sample.cfg) = 0437737ace30850eb41a51e26fa01227ef74db40
-SHA1 (patch-include_recordio.h) = 589bc9939141e8b53f9dda3c5cd9effe10c5e510
-SHA1 (patch-src__zk_log.c) = 50f825b48f23cefa116c361cf0d041065a1a890f
-SHA1 (patch-src_packages_templates_conf_zookeeper-env.sh) = 15d665159d85ce7185c4ef2aec6053287aaa101c
-SHA1 (patch-src_recordio.c) = e18966df139f6581ae3485431af245add972ddec
+SHA1 (zookeeper-3.4.6.tar.gz) = 2a9e53f5990dfe0965834a525fbcad226bf93474
+RMD160 (zookeeper-3.4.6.tar.gz) = d9fadf07a40a85b8fd5a7e04e7200c74fd7393ce
+Size (zookeeper-3.4.6.tar.gz) = 17699306 bytes
+SHA1 (patch-bin_zkEnv.sh) = 210b94572a221cc46898750da0a822c90708ef9f
+SHA1 (patch-bin_zkServer.sh) = 2fd1d6c37aac2ee473b62de1ebf21ea8ad57ed75
+SHA1 (patch-conf__zoo_sample.cfg) = 74885bea53e5b9b723fb1564db362a08d7b47705
+SHA1 (patch-include_recordio.h) = ab07325a556eee1f6b595de241e9f7c7084c8065
+SHA1 (patch-src__zk_log.c) = 9dc6e801f53a96bf8b3ec1bac429f83a0ff2cae4
+SHA1 (patch-src_packages_templates_conf_zookeeper-env.sh) = 5abb72f885a5ac884dfcfa480438ce82d544d489
+SHA1 (patch-src_recordio.c) = 6c3082fba3d48d891276636aea400ad631fc5997

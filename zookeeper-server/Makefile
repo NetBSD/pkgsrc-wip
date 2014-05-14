@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/22 11:48:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/14 09:51:07 fhajny Exp $
 #
 
 .include "Makefile.common"
@@ -9,6 +9,7 @@ COMMENT=		Highly reliable distributed coordination server
 
 USE_JAVA=		yes
 USE_JAVA2=		yes
+USE_TOOLS+=		bash:run
 
 BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
 BUILD_DEPENDS+=		apache-ivy-[0-9]*:../../devel/apache-ivy

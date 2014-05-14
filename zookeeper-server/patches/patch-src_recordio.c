@@ -1,7 +1,7 @@
-$NetBSD: patch-src_recordio.c,v 1.1.1.1 2012/04/19 10:31:37 fhajny Exp $
+$NetBSD: patch-src_recordio.c,v 1.2 2014/05/14 09:51:07 fhajny Exp $
 
 SunOS has had htonll since OpenSolaris.
---- src/c/src/recordio.c.orig	2012-02-06 10:48:40.000000000 +0000
+--- src/c/src/recordio.c.orig	2014-02-20 10:14:08.000000000 +0000
 +++ src/c/src/recordio.c
 @@ -80,6 +80,7 @@ int oa_serialize_int(struct oarchive *oa
      priv->off+=sizeof(i);
