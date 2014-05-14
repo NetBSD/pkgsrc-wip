@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/05/14 07:23:03 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/14 07:32:44 jgoamakf Exp $
 
 DISTNAME=	ocaml-data-notation-0.0.11
+PKGNAME=	ocaml-odn-0.0.11
 CATEGORIES=	devel
 MASTER_SITES=	https://forge.ocamlcore.org/frs/download.php/1310/
 
