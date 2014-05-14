@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/05/14 09:51:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/14 09:59:27 fhajny Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/keeper/keeper-server/}
-PKGREVISION=		1
 COMMENT=		Highly reliable distributed coordination server
 
 USE_JAVA=		yes
