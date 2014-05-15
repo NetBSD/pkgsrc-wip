@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/07/08 08:38:18 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/05/15 21:49:07 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-data-accessor-monads-fd
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.hs-data-accessor-monads-fd?=	../../wip/hs-data-accessor-mona
 
 .include "../../wip/hs-data-accessor/buildlink3.mk"
 .include "../../wip/hs-monads-fd/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_DATA_ACCESSOR_MONADS_FD_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-data-accessor-monads-fd

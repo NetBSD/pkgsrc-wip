@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/05 00:03:05 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/15 21:49:08 szptvlfn Exp $
 
 DISTNAME=	husk-scheme-3.17
 CATEGORIES=	lang
@@ -13,6 +13,6 @@ LICENSE=	mit
 .include "../../wip/hs-knob/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2011/05/10 23:38:03 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/05/15 21:49:10 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-safer-file-handles
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.hs-safer-file-handles?=	../../wip/hs-safer-file-handles
 .include "../../wip/hs-pathtype/buildlink3.mk"
 .include "../../wip/hs-regional-pointers/buildlink3.mk"
 .include "../../wip/hs-regions/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_SAFER_FILE_HANDLES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-safer-file-handles

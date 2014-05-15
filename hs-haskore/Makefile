@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/22 09:19:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/15 21:49:08 szptvlfn Exp $
 #
 
 DISTNAME=	haskore-0.1.0.2
@@ -17,6 +17,6 @@ LICENSE=	gnu-gpl-v3
 .include "../../wip/hs-midi/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-utility-ht/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

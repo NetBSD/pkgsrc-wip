@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/08 00:30:49 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/15 21:49:06 szptvlfn Exp $
 
 DISTNAME=	comonad-4.2
 CATEGORIES=	math
@@ -13,5 +13,5 @@ LICENSE=	2-clause-bsd
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-semigroups/buildlink3.mk"
 .include "../../wip/hs-tagged/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

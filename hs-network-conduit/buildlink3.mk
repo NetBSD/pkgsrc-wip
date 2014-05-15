@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/11/26 23:59:09 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/05/15 21:49:09 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-network-conduit
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hs-network-conduit?=	../../wip/hs-network-conduit
 .include "../../wip/hs-lifted-base/buildlink3.mk"
 .include "../../wip/hs-monad-control/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_NETWORK_CONDUIT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-network-conduit

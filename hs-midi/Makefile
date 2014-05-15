@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/04 08:48:21 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/15 21:49:09 szptvlfn Exp $
 #
 
 DISTNAME=	midi-0.1.7.1
@@ -15,5 +15,5 @@ LICENSE=	gnu-gpl-v3
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../wip/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-random/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

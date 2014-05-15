@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/01 16:44:37 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/15 21:49:10 szptvlfn Exp $
 #
 
 DISTNAME=	pointed-2.0.3
@@ -14,5 +14,5 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-data-default/buildlink3.mk"
 .include "../../wip/hs-semigroupoids/buildlink3.mk"
 .include "../../wip/hs-stm/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

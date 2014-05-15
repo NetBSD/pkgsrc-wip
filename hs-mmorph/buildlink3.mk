@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/02/13 13:03:19 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/05/15 21:49:09 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-mmorph
 
@@ -8,7 +8,7 @@ HS_MMORPH_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-mmorph+=	hs-mmorph>=1.0.2
 BUILDLINK_PKGSRCDIR.hs-mmorph?=	../../wip/hs-mmorph
 
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_MMORPH_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-mmorph

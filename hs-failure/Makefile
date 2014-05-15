@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/23 14:59:56 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/15 21:49:08 szptvlfn Exp $
 #
 
 DISTNAME=	failure-0.2.0.1
@@ -9,5 +9,5 @@ COMMENT=	Simple type class for success/failure computations
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

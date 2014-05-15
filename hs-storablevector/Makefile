@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/10 12:43:13 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/15 21:49:10 szptvlfn Exp $
 #
 
 DISTNAME=	storablevector-0.2.7.2
@@ -12,6 +12,6 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../wip/hs-syb/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-utility-ht/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

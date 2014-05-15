@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/08 00:31:52 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/15 21:49:11 szptvlfn Exp $
 
 DISTNAME=	transformers-compat-0.3
 CATEGORIES=	devel
@@ -9,5 +9,5 @@ LICENSE=	modified-bsd
 
 
 .include "../../mk/haskell.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/10/20 18:19:25 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/15 21:49:10 szptvlfn Exp $
 #
 
 DISTNAME=	semigroupoids-4.0
@@ -13,5 +13,5 @@ LICENSE=	2-clause-bsd
 .include "../../wip/hs-contravariant/buildlink3.mk"
 .include "../../wip/hs-distributive/buildlink3.mk"
 .include "../../wip/hs-semigroups/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

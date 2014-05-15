@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/02/21 10:39:01 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/05/15 21:49:05 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-MonadCatchIO-transformers
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.hs-MonadCatchIO-transformers?=	../../wip/hs-MonadCatchIO-tra
 
 .include "../../wip/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-monads-tf/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_MONADCATCHIO_TRANSFORMERS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-MonadCatchIO-transformers

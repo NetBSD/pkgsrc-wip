@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/08/31 06:56:55 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/05/15 21:49:06 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-comonad-transformers
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-comonad-transformers?=	../../wip/hs-comonad-transformers
 .include "../../wip/hs-distributive/buildlink3.mk"
 .include "../../wip/hs-semigroupoids/buildlink3.mk"
 .include "../../wip/hs-semigroups/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_COMONAD_TRANSFORMERS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-comonad-transformers

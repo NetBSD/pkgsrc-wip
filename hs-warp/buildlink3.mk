@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/11/27 00:09:39 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/05/15 21:49:11 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-warp
 
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.hs-warp?=	../../wip/hs-warp
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-network-conduit/buildlink3.mk"
 .include "../../wip/hs-simple-sendfile/buildlink3.mk"
-.include "../../wip/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-unix-compat/buildlink3.mk"
 .include "../../wip/hs-void/buildlink3.mk"
 .include "../../wip/hs-wai/buildlink3.mk"
