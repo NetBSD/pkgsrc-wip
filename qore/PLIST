@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/15 11:40:29 nros Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/05/15 12:17:41 nros Exp $
 bin/qdx
 bin/qore
 bin/qpp
@@ -69,7 +69,7 @@ include/qore/macros-i386.h
 include/qore/macros-ia64.h
 include/qore/macros-powerpc.h
 include/qore/macros-sparc.h
-include/qore/macros-amd64.h
+include/qore/macros-x86_64.h
 include/qore/macros.h
 include/qore/node_types.h
 include/qore/params.h
