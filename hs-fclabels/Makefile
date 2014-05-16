@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/15 21:49:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/16 20:47:09 szptvlfn Exp $
 #
 
 DISTNAME=	fclabels-1.0.4
@@ -9,6 +9,6 @@ COMMENT=	First class accessor labels implemented as lenses
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

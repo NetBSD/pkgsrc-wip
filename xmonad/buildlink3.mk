@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/02/21 10:39:03 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2014/05/16 20:47:11 szptvlfn Exp $
 
 BUILDLINK_TREE+=	xmonad
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.xmonad?=	../../wip/xmonad
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../wip/hs-extensible-exceptions/buildlink3.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../wip/hs-x11/buildlink3.mk"
 .endif	# XMONAD_BUILDLINK3_MK

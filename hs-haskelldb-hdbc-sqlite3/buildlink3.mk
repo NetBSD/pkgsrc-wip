@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/05/14 05:20:30 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/05/16 20:47:10 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-haskelldb-hdbc-sqlite3
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hs-haskelldb-hdbc-sqlite3?=	../../wip/hs-haskelldb-hdbc-sqli
 .include "../../wip/hs-haskelldb-hdbc/buildlink3.mk"
 .include "../../wip/hs-HDBC/buildlink3.mk"
 .include "../../wip/hs-HDBC-sqlite3/buildlink3.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .endif	# HS_HASKELLDB_HDBC_SQLITE3_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-haskelldb-hdbc-sqlite3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/01 04:28:57 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/16 20:47:08 szptvlfn Exp $
 #
 
 DISTNAME=	MissingH-1.1.0.1
@@ -12,7 +12,7 @@ COMMENT=	Library of utility functions for Haskell programmers
 .include "../../wip/hs-QuickCheck1/buildlink3.mk"
 .include "../../wip/hs-hslogger/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-regex-compat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/10 07:31:39 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/16 20:47:11 szptvlfn Exp $
 #
 
 DISTNAME=	mkcabal-0.4.2
@@ -10,7 +10,7 @@ COMMENT=	Generate cabal files for a Haskell project
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-extensible-exceptions/buildlink3.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-pcre-light/buildlink3.mk"
 .include "../../wip/hs-readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

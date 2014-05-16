@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/10/01 04:41:27 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/05/16 20:47:08 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-HSH
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.hs-HSH?=	../../wip/hs-HSH
 
 .include "../../wip/hs-MissingH/buildlink3.mk"
 .include "../../wip/hs-hslogger/buildlink3.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-regex-base/buildlink3.mk"
 .include "../../wip/hs-regex-compat/buildlink3.mk"
 .include "../../wip/hs-regex-posix/buildlink3.mk"

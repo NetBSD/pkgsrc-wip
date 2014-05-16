@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2013/09/30 16:34:37 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/05/16 20:47:08 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-HsSVN
 
@@ -8,7 +8,7 @@ HS_HSSVN_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-HsSVN+=	hs-HsSVN>=0.4.3
 BUILDLINK_PKGSRCDIR.hs-HsSVN?=	../../wip/hs-HsSVN
 
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-stm/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
 .endif	# HS_HSSVN_BUILDLINK3_MK

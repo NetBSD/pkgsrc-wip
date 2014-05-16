@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/12/01 02:33:53 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/16 20:47:09 szptvlfn Exp $
 #
 
 DISTNAME=	convertible-1.0.11.0
@@ -11,6 +11,6 @@ LICENSE=	modified-bsd
 CONFIGURE_ARGS+=	-fsplitBase -ftime_gte_113
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/11/10 03:35:09 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/05/16 20:47:07 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-HCL
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-HCL+=	hs-HCL>=1.4
 BUILDLINK_PKGSRCDIR.hs-HCL?=	../../wip/hs-HCL
 
 .include "../../wip/hs-QuickCheck1/buildlink3.mk"
-.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
 .endif	# HS_HCL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-HCL
