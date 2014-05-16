@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5752 2014/05/16 02:25:39 jgoamakf Exp $
+# $Id: Makefile,v 1.5753 2014/05/16 14:35:59 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3118,6 +3118,7 @@ SUBDIR+=	rsyslog7
 SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtpbreak
+SUBDIR+=	rtspdump
 SUBDIR+=	rubinius
 SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
