@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/16 02:23:11 jgoamakf Exp $
+lib/ocaml/site-lib/bin_prot/META
+lib/ocaml/site-lib/bin_prot/bin_prot.a
+lib/ocaml/site-lib/bin_prot/bin_prot.cma
+lib/ocaml/site-lib/bin_prot/bin_prot.cmi
+lib/ocaml/site-lib/bin_prot/bin_prot.cmx
+lib/ocaml/site-lib/bin_prot/bin_prot.cmxa
+lib/ocaml/site-lib/bin_prot/bin_prot.cmxs
+lib/ocaml/site-lib/bin_prot/binable.ml
+lib/ocaml/site-lib/bin_prot/common.mli
+lib/ocaml/site-lib/bin_prot/dllbin_prot_stubs.so
+lib/ocaml/site-lib/bin_prot/libbin_prot_stubs.a
+lib/ocaml/site-lib/bin_prot/nat0.mli
+lib/ocaml/site-lib/bin_prot/pa_bin_prot.a
+lib/ocaml/site-lib/bin_prot/pa_bin_prot.cma
+lib/ocaml/site-lib/bin_prot/pa_bin_prot.cmi
+lib/ocaml/site-lib/bin_prot/pa_bin_prot.cmx
+lib/ocaml/site-lib/bin_prot/pa_bin_prot.cmxa
+lib/ocaml/site-lib/bin_prot/pa_bin_prot.cmxs
+lib/ocaml/site-lib/bin_prot/pa_bin_prot.mli
+lib/ocaml/site-lib/bin_prot/read.mli
+lib/ocaml/site-lib/bin_prot/size.mli
+lib/ocaml/site-lib/bin_prot/std.ml
+lib/ocaml/site-lib/bin_prot/type_class.mli
+lib/ocaml/site-lib/bin_prot/utils.mli
+lib/ocaml/site-lib/bin_prot/write.mli
