@@ -1,0 +1,13 @@
+rtspdump is a program which downloads multimedia stream (such as
+live broadcasts) from a Microsoft WMServer.
+
+Are you stumped by error messages from all open source video playing
+tools when you try to access a MMS or RTSP form URL?
+
+You are probably trying to access a Windows Media Server that
+nowadays only supports RTSP traffic; the old MMS protocol is
+discarded.
+
+The catch is, being Microsoft, they have used a RTSP-like
+implementation, which is modified with Microsoft's own quirks. So
+it is not standard form anymore.
