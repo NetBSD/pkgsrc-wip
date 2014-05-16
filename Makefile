@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5753 2014/05/16 14:35:59 thomasklausner Exp $
+# $Id: Makefile,v 1.5754 2014/05/16 15:21:03 hfath Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1228,6 +1228,7 @@ SUBDIR+=	ile
 SUBDIR+=	ilohamail
 SUBDIR+=	imagination
 SUBDIR+=	imonc
+SUBDIR+=	inetdxtra
 SUBDIR+=	info2man
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
