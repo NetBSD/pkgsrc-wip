@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gif2swf.c,v 1.1 2013/07/06 22:24:17 thomasklausner Exp $
+$NetBSD: patch-src_gif2swf.c,v 1.2 2014/05/16 11:51:15 thomasklausner Exp $
 
 Fix build with giflib-5.x.
 
@@ -46,6 +46,15 @@ Fix build with giflib-5.x.
          return t;
      }
  
+@@ -455,7 +467,7 @@ TAG *MovieAddFrame(SWF * swf, TAG * t, c
+ 
+     free(pal);
+     free(imagedata);
+-    DGifCloseFile(gft);
++    DGifCloseFile(gft, NULL);
+ 
+     return t;
+ }
 @@ -465,6 +477,7 @@ int CheckInputFile(char *fname, char **r
      FILE *fi;
      char *s = malloc(strlen(fname) + 5);
@@ -72,3 +81,12 @@ Fix build with giflib-5.x.
          return -1;
      }
      // After DGifSlurp() call, gft->ImageCount become available
+@@ -518,7 +531,7 @@ int CheckInputFile(char *fname, char **r
+             fprintf(stderr, "frame: %u, delay: %.3f sec\n", i + 1, getGifDelayTime(gft, i) / 100.0);
+     }
+ 
+-    DGifCloseFile(gft);
++    DGifCloseFile(gft, NULL);
+ 
+     return 0;
+ }
