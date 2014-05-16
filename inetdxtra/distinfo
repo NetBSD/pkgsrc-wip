@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2014/05/16 15:19:19 hfath Exp $
+
+SHA1 (inetdxtra-20130516_src.tar.gz) = 6d2f2c055d502cb85f2a23d5f7bd592b7f91ce7a
+RMD160 (inetdxtra-20130516_src.tar.gz) = 136a5f948b2b3b477354dba7ad963573a319e98c
+Size (inetdxtra-20130516_src.tar.gz) = 56675 bytes
+SHA1 (patch-Makefile) = 88aa58b5ccc35cfcf7deb7b50f673e78f653c838
+SHA1 (patch-in.ctcs_in.ctcs.c) = dcee3fcec2cd6e5e2590a305fe7230b1dd3e2d89
+SHA1 (patch-in.dhcp_in.dhcp.c) = 649efcc08849fa15913ffcde33ab38a324c0ac6c
+SHA1 (patch-in.dns_in.dns.c) = 421c2bfbf29d24182a2fd062f86c76a25570d789
+SHA1 (patch-in.jabberd_in.jabberd.c) = 86c752940bd9a3f0d7bac41daeedf4d7d93e412a
+SHA1 (patch-in.mvp_in.mvp.c) = e9ec692d268d85f52b2f06c910cee75185e72ea2
+SHA1 (patch-in.www_in.www.c) = fc1a58223adc4401cec773bd331e21d7198cf5f5

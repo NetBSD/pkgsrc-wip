@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/16 15:19:19 hfath Exp $
+libexec/inetdxtra/in.ctcs
+libexec/inetdxtra/in.dhcp
+libexec/inetdxtra/in.dns
+libexec/inetdxtra/in.jabberd
+libexec/inetdxtra/in.mvp
+libexec/inetdxtra/in.proxy
+libexec/inetdxtra/in.smtp
+libexec/inetdxtra/in.www
+share/doc/inetdxtra/README
+share/doc/inetdxtra/README.ctcs
+share/doc/inetdxtra/README.dhcp
+share/doc/inetdxtra/README.dns
+share/doc/inetdxtra/README.jabberd
+share/doc/inetdxtra/README.mvp
+share/doc/inetdxtra/README.proxy
+share/doc/inetdxtra/README.smtp
+share/doc/inetdxtra/README.www
+share/examples/inetdxtra/in.dhcp.conf.sample
+share/examples/inetdxtra/inetd.conf.sample
