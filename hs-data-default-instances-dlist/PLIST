@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/17 20:30:33 szptvlfn Exp $
 lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Instances/DList.hi
-lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Instances/DList.p_hi
 lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-instances-dlist-${PKGVERSION}.o
 lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-instances-dlist-${PKGVERSION}.a
-lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-instances-dlist-${PKGVERSION}_p.a
 lib/data-default-instances-dlist-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/data-default-instances-dlist-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/data-default-instances-dlist-${PKGVERSION}/html/Data-Default-Instances-DList.html

@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/15 10:59:40 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/17 20:30:33 szptvlfn Exp $
 lib/data-default-instances-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Instances/Containers.hi
-lib/data-default-instances-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Instances/Containers.p_hi
 lib/data-default-instances-containers-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-instances-containers-${PKGVERSION}.o
 lib/data-default-instances-containers-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-instances-containers-${PKGVERSION}.a
-lib/data-default-instances-containers-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-instances-containers-${PKGVERSION}_p.a
 lib/data-default-instances-containers-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/data-default-instances-containers-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/data-default-instances-containers-${PKGVERSION}/html/Data-Default-Instances-Containers.html

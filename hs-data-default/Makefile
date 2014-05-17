@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/18 00:03:29 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/17 20:30:33 szptvlfn Exp $
 #
 
 DISTNAME=	data-default-0.5.3
@@ -8,7 +8,7 @@ MAINTAINER=	pho@cielonegro.org
 COMMENT=	Class for types with a default value
 LICENSE=	modified-bsd
 
-.include "../../wip/mk/haskell.mk"
+.include "../../mk/haskell.mk"
 .include "../../wip/hs-data-default-class/buildlink3.mk"
 .include "../../wip/hs-data-default-instances-base/buildlink3.mk"
 .include "../../wip/hs-data-default-instances-containers/buildlink3.mk"
