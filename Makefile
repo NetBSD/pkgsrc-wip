@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5755 2014/05/16 20:50:01 szptvlfn Exp $
+# $Id: Makefile,v 1.5756 2014/05/17 16:15:18 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2476,7 +2476,6 @@ SUBDIR+=	py-csp
 SUBDIR+=	py-cvf
 SUBDIR+=	py-cvxopt
 SUBDIR+=	py-cxnet
-SUBDIR+=	py-cybox
 SUBDIR+=	py-cythongsl
 SUBDIR+=	py-dana
 SUBDIR+=	py-datarray
@@ -2633,7 +2632,6 @@ SUBDIR+=	py-lazr.uri
 SUBDIR+=	py-lib
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
-SUBDIR+=	py-libtaxii
 SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
 SUBDIR+=	py-libtunepimp
@@ -2904,7 +2902,6 @@ SUBDIR+=	py-ssp
 SUBDIR+=	py-statgrap
 SUBDIR+=	py-stem
 SUBDIR+=	py-stevedore
-SUBDIR+=	py-stix
 SUBDIR+=	py-storm
 SUBDIR+=	py-strategies
 SUBDIR+=	py-sumatra
