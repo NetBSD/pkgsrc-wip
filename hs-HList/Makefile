@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/16 20:47:07 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/17 21:00:05 szptvlfn Exp $
 
 DISTNAME=	HList-0.3.4.1
 CATEGORIES=	devel
@@ -9,5 +9,5 @@ LICENSE=	mit
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-tagged/buildlink3.mk"
+.include "../../devel/hs-tagged/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
