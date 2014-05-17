@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/17 20:28:32 szptvlfn Exp $
 lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/DList.hi
-lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/DList.p_hi
 lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/HSdlist-${PKGVERSION}.o
 lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdlist-${PKGVERSION}.a
-lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdlist-${PKGVERSION}_p.a
 lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/dlist-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/dlist-${PKGVERSION}/html/Data-DList.html
