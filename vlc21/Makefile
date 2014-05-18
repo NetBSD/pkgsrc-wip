@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/04/18 14:04:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/18 08:15:35 thomasklausner Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		1
@@ -40,6 +40,12 @@ CONFIGURE_ARGS+=	--disable-lua
 CFLAGS+=		-fPIC
 CXXFLAGS+=		-fPIC
 
+# which platforms support OSSv4?
+.if ${MACHINE_PLATFORM:MNetBSD-6.99.4*-*}
+PLIST.oss=		yes
+.include "../../mk/oss.buildlink3.mk"
+.endif
+
 # Build optimalized modules
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PLIST.x86simd=		yes
@@ -50,9 +56,6 @@ CONFIGURE_ARGS+=	--enable-mmx \
 PLIST.altivec=		yes
 CONFIGURE_ARGS+=	--enable-altivec
 .endif
-
-# needs OSSv4 which noone supports
-CONFIGURE_ARGS+=	--disable-oss
 
 # Enable when cleanly builds
 .if exists(/usr/include/linux/videodev2.h) # || exists(/usr/include/sys/videoio.h)
@@ -157,7 +160,5 @@ BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .if "${OPSYS}" == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
-# needs OSS version 4
-#.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
