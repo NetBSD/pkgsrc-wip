@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/02/09 08:51:51 keckhardt Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/18 21:49:29 keckhardt Exp $
 
 GCC_PKGNAME=		gcc49snapshot
 .include		"version.mk"
@@ -73,6 +73,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-libssp
+CONFIGURE_ARGS+=	--enable-libquadmath
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 .if ${OPSYS} == "NetBSD"
