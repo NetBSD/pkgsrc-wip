@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5759 2014/05/18 11:49:56 leot1990 Exp $
+# $Id: Makefile,v 1.5760 2014/05/18 21:20:54 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1997,7 +1997,6 @@ SUBDIR+=	p5-Class-DBI-Plugin-Type
 SUBDIR+=	p5-Class-DBI-SQLite
 SUBDIR+=	p5-Class-DBI-Sweet
 SUBDIR+=	p5-Class-Date
-SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBIx-Easy
@@ -2084,7 +2083,6 @@ SUBDIR+=	p5-Publican
 SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-Spread
 SUBDIR+=	p5-Startup
-SUBDIR+=	p5-String-Similarity
 SUBDIR+=	p5-Sub-Recursive
 SUBDIR+=	p5-Sub-WrapPackages
 SUBDIR+=	p5-Subtitles
