@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/08 00:37:34 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/18 21:33:28 szptvlfn Exp $
 
 DISTNAME=	hashable-1.2.1.0
 CATEGORIES=	devel
@@ -8,5 +8,5 @@ COMMENT=	Class for types that can be converted to a hash value
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

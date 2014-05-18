@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 14:00:39 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/18 21:33:25 szptvlfn Exp $
 #
 
 DISTNAME=	HsHyperEstraier-0.4
@@ -14,5 +14,5 @@ CONFIGURE_ARGS=
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

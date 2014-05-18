@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2013/11/25 10:59:14 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/05/18 21:33:25 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-blaze-builder
 
@@ -8,7 +8,7 @@ HS_BLAZE_BUILDER_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-blaze-builder+=	hs-blaze-builder>=0.3.3
 BUILDLINK_PKGSRCDIR.hs-blaze-builder?=	../../wip/hs-blaze-builder
 
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .endif	# HS_BLAZE_BUILDER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-blaze-builder

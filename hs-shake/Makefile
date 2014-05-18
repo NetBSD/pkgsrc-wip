@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/15 21:49:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/18 21:33:29 szptvlfn Exp $
 
 DISTNAME=	shake-0.11.4
 CATEGORIES=	devel
@@ -37,5 +37,5 @@ post-install:
 .include "../../wip/hs-random/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-unordered-containers/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

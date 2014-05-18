@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/05/16 20:47:11 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2014/05/18 21:33:29 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-husk-scheme
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.hs-husk-scheme?=	../../wip/hs-husk-scheme
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
 .endif	# HS_HUSK_SCHEME_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-husk-scheme

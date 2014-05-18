@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/05/16 20:47:07 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.30 2014/05/18 21:33:25 szptvlfn Exp $
 
 DISTNAME=	darcs-2.8.4
 PKGNAME=	${DISTNAME}
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+= --extra-lib-dirs=${PREFIX:Q}/lib
 .include "../../wip/hs-random/buildlink3.mk"
 .include "../../wip/hs-regex-compat/buildlink3.mk"
 .include "../../wip/hs-tar/buildlink3.mk"
-.include "../../wip/hs-text/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../wip/hs-vector/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

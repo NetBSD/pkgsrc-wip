@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/16 05:56:00 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/18 21:33:26 szptvlfn Exp $
 #
 
 DISTNAME=	convertible-text-0.4.0.1
@@ -10,5 +10,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-attempt/buildlink3.mk"
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

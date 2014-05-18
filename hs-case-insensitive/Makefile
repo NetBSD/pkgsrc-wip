@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/14 21:17:52 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/18 21:33:26 szptvlfn Exp $
 #
 
 DISTNAME=	case-insensitive-1.1.0.3
@@ -10,5 +10,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-hashable/buildlink3.mk"
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/16 20:47:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/18 21:33:28 szptvlfn Exp $
 #
 
 DISTNAME=	hint-0.4.0.0
@@ -15,5 +15,5 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-ghc-paths/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-random/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

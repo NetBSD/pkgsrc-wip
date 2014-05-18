@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/08/21 17:12:22 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/18 21:33:30 szptvlfn Exp $
 #
 
 DISTNAME=	xml-1.3.13
@@ -9,5 +9,5 @@ COMMENT=	Simple XML library
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

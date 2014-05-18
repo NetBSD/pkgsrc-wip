@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:11 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/18 21:33:31 szptvlfn Exp $
 #
 
 DISTNAME=	yi-0.6.3.0
@@ -40,5 +40,5 @@ CONFIGURE_ARGS+= \
 .include "../../wip/hs-split/buildlink3.mk"
 .include "../../wip/hs-uniplate/buildlink3.mk"
 .include "../../wip/hs-unix-compat/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

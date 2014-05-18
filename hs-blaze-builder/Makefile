@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/10 13:29:12 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/18 21:33:25 szptvlfn Exp $
 #
 
 DISTNAME=	blaze-builder-0.3.3.2
@@ -9,5 +9,5 @@ COMMENT=	Efficient buffered output
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

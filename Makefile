@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5760 2014/05/18 21:20:54 othyro Exp $
+# $Id: Makefile,v 1.5761 2014/05/18 21:33:25 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1005,7 +1005,6 @@ SUBDIR+=	hs-data-accessor-monads-fd
 SUBDIR+=	hs-data-accessor-mtl
 SUBDIR+=	hs-data-accessor-template
 SUBDIR+=	hs-data-default
-SUBDIR+=	hs-data-default-class
 SUBDIR+=	hs-data-default-instances-base
 SUBDIR+=	hs-data-default-instances-containers
 SUBDIR+=	hs-data-default-instances-dlist
@@ -1015,7 +1014,6 @@ SUBDIR+=	hs-dependent-sum
 SUBDIR+=	hs-derive
 SUBDIR+=	hs-digest
 SUBDIR+=	hs-distributive
-SUBDIR+=	hs-dlist
 SUBDIR+=	hs-double-conversion
 SUBDIR+=	hs-dyre
 SUBDIR+=	hs-entropy
@@ -1159,7 +1157,6 @@ SUBDIR+=	hs-test-framework
 SUBDIR+=	hs-test-framework-hunit
 SUBDIR+=	hs-test-framework-quickcheck2
 SUBDIR+=	hs-texmath
-SUBDIR+=	hs-text
 SUBDIR+=	hs-text-icu
 SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-tfp
@@ -1174,7 +1171,6 @@ SUBDIR+=	hs-uconv
 SUBDIR+=	hs-uniplate
 SUBDIR+=	hs-unix-compat
 SUBDIR+=	hs-unordered-containers
-SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector

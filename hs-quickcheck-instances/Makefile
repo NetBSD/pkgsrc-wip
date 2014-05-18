@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/25 23:07:53 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/18 21:33:29 szptvlfn Exp $
 #
 
 DISTNAME=	quickcheck-instances-0.3.2
@@ -10,5 +10,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-QuickCheck/buildlink3.mk"
-.include "../../wip/hs-text/buildlink3.mk"
+.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
