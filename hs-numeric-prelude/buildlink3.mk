@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/23 11:52:42 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/05/19 21:28:49 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-numeric-prelude
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-numeric-prelude+=	hs-numeric-prelude>=0.1.2
 BUILDLINK_PKGSRCDIR.hs-numeric-prelude?=	../../wip/hs-numeric-prelude
 
 .include "../../wip/hs-non-negative/buildlink3.mk"
-.include "../../wip/hs-parsec/buildlink3.mk"
+.include "../../textproc/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-QuickCheck1/buildlink3.mk"
 .include "../../wip/hs-storable-record/buildlink3.mk"
 .include "../../wip/hs-utility-ht/buildlink3.mk"

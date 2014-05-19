@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/03/04 08:59:45 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/05/19 21:28:47 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-core
 
@@ -8,7 +8,7 @@ HS_CORE_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-core+=	hs-core>=0.5
 BUILDLINK_PKGSRCDIR.hs-core?=	../../wip/hs-core
 
-.include "../../wip/hs-parsec/buildlink3.mk"
+.include "../../textproc/hs-parsec/buildlink3.mk"
 .endif	# HS_CORE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-core

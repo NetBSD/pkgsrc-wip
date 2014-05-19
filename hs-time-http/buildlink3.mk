@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/10/01 10:12:25 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/05/19 21:28:50 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-time-http
 
@@ -8,7 +8,7 @@ HS_TIME_HTTP_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-time-http+=	hs-time-http>=0.1.0
 BUILDLINK_PKGSRCDIR.hs-time-http?=	../../wip/hs-time-http
 
-.include "../../wip/hs-parsec/buildlink3.mk"
+.include "../../textproc/hs-parsec/buildlink3.mk"
 .endif	# HS_TIME_HTTP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-time-http
