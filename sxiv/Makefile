@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/04/27 11:59:44 leot1990 Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/19 16:49:27 leot1990 Exp $
 #
 
-DISTNAME=	v1.2
-PKGNAME=	sxiv-${DISTNAME:S/v//}
+DISTNAME=	sxiv-1.2
+PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	https://github.com/muennich/sxiv/archive/
+MASTER_SITES=	-https://github.com/muennich/sxiv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://github.com/muennich/sxiv
@@ -12,8 +12,6 @@ COMMENT=	Simple (or small or suckless) X Image Viewer
 LICENSE=	gnu-gpl-v2
 
 NO_CONFIGURE=	yes
-
-WRKSRC=${WRKDIR}/${PKGNAME_NOREV}
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
