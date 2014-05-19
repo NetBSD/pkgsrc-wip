@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/03/03 01:38:03 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/19 01:08:19 othyro Exp $
 #
 
-DISTNAME=	Publican-v4.0.0
+DISTNAME=	Publican-v4.1.2
 PKGNAME=	p5-${DISTNAME:S/v//1}
 CATEGORIES=	textproc
 MASTER_SITES=	https://fedorahosted.org/releases/p/u/publican/
@@ -22,7 +22,7 @@ DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-Text-CSV_XS-[0-9]*:../../textproc/p5-Text-CSV_XS
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Syntax-Highlight-Engine-Kate-[0-9]*:../../textproc/p5-Syntax-Highlight-Engine-Kate
-DEPENDS+=	p5-String-Similarity-[0-9]*:../../wip/p5-String-Similarity
+DEPENDS+=	p5-String-Similarity-[0-9]*:../../textproc/p5-String-Similarity
 DEPENDS+=	p5-Sort-Versions-[0-9]*:../../devel/p5-Sort-Versions
 DEPENDS+=	p5-Locale-PO-[0-9]*:../../devel/p5-Locale-PO
 DEPENDS+=	p5-Locale-Maketext-Gettext-[0-9]*:../../textproc/p5-Locale-Maketext-Gettext
@@ -37,7 +37,7 @@ DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-DateTime-Format-DateParse-[0-9]*:../../time/p5-DateTime-Format-DateParse
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-Config-Simple-[0-9]*:../../wip/p5-Config-Simple
+DEPENDS+=	p5-Config-Simple-[0-9]*:../../sysutils/p5-Config-Simple
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
