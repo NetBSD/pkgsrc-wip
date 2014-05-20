@@ -1,31 +1,19 @@
-@comment $NetBSD: PLIST,v 1.7 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/05/20 21:22:06 szptvlfn Exp $
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/HSnetwork-${PKGVERSION}.o
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/BSD.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/BSD.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/IOVec.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/IOVec.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Internal.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Internal.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Lazy.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Lazy.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/MsgHdr.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/MsgHdr.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Internal.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Internal.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Types.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Types.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/URI.hi
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/URI.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/include/HsNet.h
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/include/HsNetworkConfig.h
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-${PKGVERSION}.a
-lib/network-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-${PKGVERSION}_p.a
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/network-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/network-${PKGVERSION}/html/Network-BSD.html
