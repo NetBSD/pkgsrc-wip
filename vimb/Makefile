@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/05/19 17:13:02 leot1990 Exp $
+# $NetBSD: Makefile,v 1.9 2014/05/20 22:21:09 leot1990 Exp $
 
-DISTNAME=	vimb-2.3
-PKGREVISION=	1
+DISTNAME=	vimb-2.4
 CATEGORIES=	www
 MASTER_SITES=	-https://github.com/fanglingsu/vimb/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 

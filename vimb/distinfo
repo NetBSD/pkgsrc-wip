@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2014/05/19 17:13:02 leot1990 Exp $
+$NetBSD: distinfo,v 1.8 2014/05/20 22:21:09 leot1990 Exp $
 
-SHA1 (vimb-2.3.tar.gz) = d34091cd9cc17dc14313bfcfff8d5415237a3d40
-RMD160 (vimb-2.3.tar.gz) = 75e59c5ee25faf64e486ec5773cd7f08b1065783
-Size (vimb-2.3.tar.gz) = 88664 bytes
+SHA1 (vimb-2.4.tar.gz) = 7bb8860430c79a471eddfa098c9acb635a98f9b0
+RMD160 (vimb-2.4.tar.gz) = 01f2f7e7135312a1bbb155807555b4a948758ebd
+Size (vimb-2.4.tar.gz) = 89135 bytes
