@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/18 21:33:31 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/20 21:23:20 szptvlfn Exp $
 
 DISTNAME=	xmonad-contrib-0.11.2
 PKGNAME=	${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
+.include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-random/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"

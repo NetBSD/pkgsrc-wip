@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/15 21:49:11 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/20 21:23:20 szptvlfn Exp $
 #
 
 DISTNAME=	transformers-abort-0.4
@@ -9,7 +9,7 @@ COMMENT=	Better error monad transformer
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-data-default/buildlink3.mk"
+.include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../wip/hs-failure/buildlink3.mk"
 .include "../../wip/hs-monad-control/buildlink3.mk"
 .include "../../wip/hs-pointed/buildlink3.mk"

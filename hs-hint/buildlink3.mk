@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/05/18 21:33:28 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/05/20 21:23:19 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-hint
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-hint+=	hs-hint>=0.4.0
 BUILDLINK_PKGSRCDIR.hs-hint?=	../../wip/hs-hint
 
 .include "../../wip/hs-exceptions/buildlink3.mk"
-.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
+.include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-ghc-mtl/buildlink3.mk"
 .include "../../wip/hs-ghc-paths/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"

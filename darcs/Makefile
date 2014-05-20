@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/05/19 21:28:46 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.32 2014/05/20 21:23:18 szptvlfn Exp $
 
 DISTNAME=	darcs-2.8.4
 PKGNAME=	${DISTNAME}
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+= --extra-lib-dirs=${PREFIX:Q}/lib
 
 .include "../../wip/mk/haskell.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
+.include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-hashed-storage/buildlink3.mk"
 .include "../../wip/hs-haskeline/buildlink3.mk"
 .include "../../wip/hs-html/buildlink3.mk"

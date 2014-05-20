@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2014/05/19 21:28:46 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2014/05/20 21:23:18 szptvlfn Exp $
 
 BUILDLINK_TREE+=	darcs
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.darcs+=	darcs>=2.8.4
 BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
+.include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-hashed-storage/buildlink3.mk"
 .include "../../wip/hs-haskeline/buildlink3.mk"
 .include "../../wip/hs-html/buildlink3.mk"

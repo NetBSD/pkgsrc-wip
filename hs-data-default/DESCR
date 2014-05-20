@@ -1,3 +1,0 @@
-This module defines a class for types with a default value. Instances
-are provided for '()', Set, Map, Int, Integer, Float, Double, Ratio,
-Maybe, '[]', '->' and IO.

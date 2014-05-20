@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/19 21:28:50 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.20 2014/05/20 21:23:20 szptvlfn Exp $
 
 DISTNAME=	pandoc-1.12.3.3
 PKGNAME=	${DISTNAME}
@@ -24,8 +24,8 @@ BUILD_DEPENDS+=	happy:../../wip/happy
 .include "../../wip/hs-base64-bytestring/buildlink3.mk"
 .include "../../wip/hs-blaze-html/buildlink3.mk"
 .include "../../wip/hs-blaze-markup/buildlink3.mk"
-.include "../../wip/hs-data-default/buildlink3.mk"
-.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
+.include "../../devel/hs-data-default/buildlink3.mk"
+.include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-highlighting-kate/buildlink3.mk"
 .include "../../wip/hs-hslua/buildlink3.mk"
 .include "../../wip/hs-HTTP/buildlink3.mk"
