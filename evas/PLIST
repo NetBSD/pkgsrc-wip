@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2012/12/30 19:28:50 roelants Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/05/20 08:37:11 rsmarples Exp $
+bin/evas_cserve
+bin/evas_cserve_tool
 include/evas-1/Evas.h
 include/evas-1/Evas_Engine_Buffer.h
 include/evas-1/Evas_GL.h
