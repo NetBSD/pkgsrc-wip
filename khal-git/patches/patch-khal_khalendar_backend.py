@@ -1,4 +1,6 @@
-$NetBSD: patch-khal_khalendar_backend.py,v 1.1 2014/05/11 09:00:00 thomasklausner Exp $
+$NetBSD: patch-khal_khalendar_backend.py,v 1.2 2014/05/20 14:06:47 thomasklausner Exp $
+
+Python-3.x compatibility.
 
 --- khal/khalendar/backend.py.orig	2014-05-11 08:49:28.000000000 +0000
 +++ khal/khalendar/backend.py
