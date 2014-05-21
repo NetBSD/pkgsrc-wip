@@ -1,3 +1,15 @@
-1) Help adding missing long double and complex support in NetBSD.
-2) lang/gcc48 has been changed to a meta package. Mabey this should be used
+1) No longer build graphite by default. The necessary isl from pkgsrc
+is incompatible. This can be resolved by using isl/cloog in source
+downloaded from gcc/infrastructure. But right now this only works
+with --disable-bootstrap on NetBSD. In my opinion graphite is
+obsolete. I once got a reduction of runtime from 6 hours to
+4 hours by using -ftree-loop-linear from graphite with a big simulation
+code. The runtime of some loops were reduced by a factor of ten by
+reordering the loops into fortran order. But you only get this speedups
+with bad fortran code. Using profiling or -fopt-info-missed would quickly
+detect the slow loops as well. 
+ 
+2) Help adding missing long double and complex support in NetBSD.
+
+3) lang/gcc48 has been changed to a meta package. Mabey this should be used
 for lang/gcc410snapshot as well.

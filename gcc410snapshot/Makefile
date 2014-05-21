@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/29 14:14:33 keckhardt Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/21 14:27:21 keckhardt Exp $
 
 GCC_PKGNAME=		gcc410snapshot
 .include		"version.mk"
@@ -65,6 +65,17 @@ BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
+.include "options.mk"
+
+## For graphite support.
+.if !empty(PKG_OPTIONS:Mgcc-graphite)
+post-extract: 
+	${TAR} -jxf ${DISTDIR}/${ISL12}.tar.bz2 -C ${WRKSRC}
+	${MV} ${WRKSRC}/${ISL12} ${WRKSRC}/isl
+	${TAR} -zxf ${DISTDIR}/${CLOOG18}.tar.gz -C ${WRKSRC}
+	${MV} ${WRKSRC}/${CLOOG18} ${WRKSRC}/cloog
+.endif
+
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
@@ -76,6 +87,7 @@ CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 .if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-bootstrap
 CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
@@ -95,7 +107,6 @@ CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 CONFIGURE_ARGS+=	--with-arch=nocona --with-tune=nocona --with-fpmath=sse
 .endif
 
-.include "options.mk"
 
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not

@@ -1,11 +1,17 @@
-$NetBSD: distinfo,v 1.3 2014/05/13 20:04:42 keckhardt Exp $
+$NetBSD: distinfo,v 1.4 2014/05/21 14:27:21 keckhardt Exp $
 
+SHA1 (cloog-0.18.1.tar.gz) = 2dc70313e8e2c6610b856d627bce9c9c3f848077
+RMD160 (cloog-0.18.1.tar.gz) = 5c4a182efc0d42e7d5c30e6fcca5832776a2e69a
+Size (cloog-0.18.1.tar.gz) = 3857324 bytes
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-4.10-20140511.tar.bz2) = f44f8cfb57b83b8387745f20eedac3dd8d84068a
-RMD160 (gcc-4.10-20140511.tar.bz2) = c06160ccca69ef6a3c200064a0eb2564c0077e1e
-Size (gcc-4.10-20140511.tar.bz2) = 85594376 bytes
+SHA1 (gcc-4.10-20140518.tar.bz2) = 8ee022d6f7c804ff025065f16020c1d4e9dee469
+RMD160 (gcc-4.10-20140518.tar.bz2) = 0268bcc376437d028b19c51ced158443c9c8385e
+Size (gcc-4.10-20140518.tar.bz2) = 85628613 bytes
+SHA1 (isl-0.12.2.tar.bz2) = ca98a91e35fb3ded10d080342065919764d6f928
+RMD160 (isl-0.12.2.tar.bz2) = e8fb6bad4b579865a6a31c160fc21a0c9ad1e7b8
+Size (isl-0.12.2.tar.bz2) = 1319434 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
 SHA1 (patch-gcc_config.gcc) = 0919088f6d48c149f135828a9e6cf3bd935a3094
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
@@ -31,7 +37,7 @@ SHA1 (patch-libgcc_config_i386_dragonfly-unwind.h) = 9d77252dd982495e90f95b82706
 SHA1 (patch-libgcc_crtstuff.c) = 88500ea895cd683608f8f2b7177149f11947e3b4
 SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 770f04f3cbeb0d794fa297b328f06f6e687419c0
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
-SHA1 (patch-libjava_boehm.cc) = b18bc9d410a62543583c77e011f50b86f41ca18a
+SHA1 (patch-libjava_boehm.cc) = bf5564261b02523927685340f59ce8faf7f84ace
 SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
 SHA1 (patch-libsanitizer_configure.tgt) = 71be515a8bbf2476d3376416d5b4a4b9db55fe39

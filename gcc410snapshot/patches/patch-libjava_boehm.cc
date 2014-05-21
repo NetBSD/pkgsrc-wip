@@ -1,27 +1,22 @@
-$NetBSD: patch-libjava_boehm.cc,v 1.1 2014/04/29 14:14:34 keckhardt Exp $
+$NetBSD: patch-libjava_boehm.cc,v 1.2 2014/05/21 14:27:21 keckhardt Exp $
 
-Disable GC_register_my_thread and GC_unregister_my_thread on NetBSD as
-the version of boehm-gc bundled with gcc does not support NetBSD threads.
-
---- libjava/boehm.cc.orig	2007-10-22 21:24:35.000000000 +0000
+--- libjava/boehm.cc.orig	2014-05-20 18:02:20.000000000 +0000
 +++ libjava/boehm.cc
-@@ -747,7 +747,8 @@ _Jv_GCAttachThread ()
-   // The registration interface is only defined on posixy systems and
+@@ -748,7 +748,7 @@ _Jv_GCAttachThread ()
    // only actually works if pthread_getattr_np is defined.
    // FIXME: until gc7 it is simpler to disable this on solaris.
--#if defined(HAVE_PTHREAD_GETATTR_NP) && !defined(GC_SOLARIS_THREADS)
-+#if defined(HAVE_PTHREAD_GETATTR_NP) && !defined(GC_SOLARIS_THREADS) \
-+    && !defined(__NetBSD__)
+ #if defined(HAVE_PTHREAD_GETATTR_NP) && !defined(GC_SOLARIS_THREADS) \
+-    && !defined(GC_WIN32_THREADS)
++    && !defined(__NetBSD__) && !defined(GC_WIN32_THREADS)
    GC_register_my_thread ();
  #endif
  }
-@@ -755,7 +756,8 @@ _Jv_GCAttachThread ()
- void
+@@ -757,7 +757,7 @@ void
  _Jv_GCDetachThread ()
  {
--#if defined(HAVE_PTHREAD_GETATTR_NP) && !defined(GC_SOLARIS_THREADS)
-+#if defined(HAVE_PTHREAD_GETATTR_NP) && !defined(GC_SOLARIS_THREADS) \
-+    && !defined(__NetBSD__)
+ #if defined(HAVE_PTHREAD_GETATTR_NP) && !defined(GC_SOLARIS_THREADS) \
+-    && !defined(GC_WIN32_THREADS)
++    && !defined(__NetBSD__) && !defined(GC_WIN32_THREADS)
    GC_unregister_my_thread ();
  #endif
  }
