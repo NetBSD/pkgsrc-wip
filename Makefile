@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5764 2014/05/21 09:07:55 jgoamakf Exp $
+# $Id: Makefile,v 1.5765 2014/05/21 14:35:55 ttys Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3398,6 +3398,7 @@ SUBDIR+=	tmuni-ttf
 SUBDIR+=	tmva
 SUBDIR+=	tmw
 SUBDIR+=	tnt
+SUBDIR+=	todotxt
 SUBDIR+=	tome
 SUBDIR+=	tome2
 SUBDIR+=	tops-bin
