@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/19 21:28:50 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/21 21:04:46 szptvlfn Exp $
 
 DISTNAME=	xmobar-0.20.1
 CATEGORIES=	sysutils
@@ -18,5 +18,5 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-stm/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
-.include "../../wip/hs-x11/buildlink3.mk"
+.include "../../x11/hs-X11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

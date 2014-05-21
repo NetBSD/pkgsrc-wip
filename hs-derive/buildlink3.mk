@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2014/05/15 21:49:08 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2014/05/21 21:04:43 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-derive
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-derive+=	hs-derive>=2.5.15
 BUILDLINK_PKGSRCDIR.hs-derive?=	../../wip/hs-derive
 
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
-.include "../../wip/hs-syb/buildlink3.mk"
+.include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-uniplate/buildlink3.mk"
 .endif	# HS_DERIVE_BUILDLINK3_MK

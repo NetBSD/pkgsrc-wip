@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/19 21:28:50 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/21 21:04:45 szptvlfn Exp $
 
 DISTNAME=	texmath-0.6.6
 CATEGORIES=	textproc
@@ -11,6 +11,6 @@ LICENSE=	gnu-gpl-v2
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-pandoc-types/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
-.include "../../wip/hs-syb/buildlink3.mk"
+.include "../../devel/hs-syb/buildlink3.mk"
 .include "../../wip/hs-xml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

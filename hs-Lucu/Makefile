@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/05/16 20:47:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/21 21:04:43 szptvlfn Exp $
 #
 
 DISTNAME=	Lucu-0.7.0.3
@@ -16,7 +16,7 @@ LICENSE=	public-domain
 .include "../../wip/hs-haskell-src/buildlink3.mk"
 .include "../../wip/hs-hxt/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-network/buildlink3.mk"
+.include "../../net/hs-network/buildlink3.mk"
 .include "../../wip/hs-stm/buildlink3.mk"
 .include "../../wip/hs-time-http/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"

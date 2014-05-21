@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2013/01/09 23:20:44 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/05/21 21:04:42 szptvlfn Exp $
 
 BUILDLINK_TREE+=	gtk2hs-buildtools
 
@@ -8,7 +8,7 @@ GTK2HS_BUILDTOOLS_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.gtk2hs-buildtools+=	gtk2hs-buildtools>=0.12.3
 BUILDLINK_PKGSRCDIR.gtk2hs-buildtools?=	../../wip/gtk2hs-buildtools
 
-.include "../../wip/hs-random/buildlink3.mk"
+.include "../../devel/hs-random/buildlink3.mk"
 .endif	# GTK2HS_BUILDTOOLS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gtk2hs-buildtools

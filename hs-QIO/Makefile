@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/16 20:47:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/21 21:04:43 szptvlfn Exp $
 #
 
 DISTNAME=	QIO-1.2
@@ -11,5 +11,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-random/buildlink3.mk"
+.include "../../devel/hs-random/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

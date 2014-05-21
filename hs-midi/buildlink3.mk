@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/05/15 21:49:09 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/05/21 21:04:44 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-midi
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-midi?=	../../wip/hs-midi
 .include "../../wip/hs-monoid-transformer/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../wip/hs-QuickCheck/buildlink3.mk"
-.include "../../wip/hs-random/buildlink3.mk"
+.include "../../devel/hs-random/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_MIDI_BUILDLINK3_MK
 

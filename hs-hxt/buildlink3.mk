@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2014/05/19 21:28:48 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2014/05/21 21:04:44 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-hxt
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hs-hxt?=	../../wip/hs-hxt
 .include "../../wip/hs-hxt-regex-xmlschema/buildlink3.mk"
 .include "../../wip/hs-hxt-unicode/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-network/buildlink3.mk"
+.include "../../net/hs-network/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
 .endif	# HS_HXT_BUILDLINK3_MK
 

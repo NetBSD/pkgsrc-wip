@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/05/20 21:23:20 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/05/21 21:04:45 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-test-framework
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hs-test-framework?=	../../wip/hs-test-framework
 .include "../../wip/hs-ansi-wl-pprint/buildlink3.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-hostname/buildlink3.mk"
-.include "../../wip/hs-random/buildlink3.mk"
+.include "../../devel/hs-random/buildlink3.mk"
 .include "../../wip/hs-regex-posix/buildlink3.mk"
 .include "../../wip/hs-xml/buildlink3.mk"
 .endif	# HS_TEST_FRAMEWORK_BUILDLINK3_MK

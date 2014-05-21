@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5765 2014/05/21 14:35:55 ttys Exp $
+# $Id: Makefile,v 1.5766 2014/05/21 21:04:42 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1087,7 +1087,6 @@ SUBDIR+=	hs-monads-tf
 SUBDIR+=	hs-monoid-transformer
 SUBDIR+=	hs-mwc-random
 SUBDIR+=	hs-nats
-SUBDIR+=	hs-network
 SUBDIR+=	hs-network-bytestring
 SUBDIR+=	hs-network-conduit
 SUBDIR+=	hs-newtype
@@ -1110,7 +1109,6 @@ SUBDIR+=	hs-profunctors
 SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
 SUBDIR+=	hs-quickcheck-instances
-SUBDIR+=	hs-random
 SUBDIR+=	hs-readline
 SUBDIR+=	hs-reflection
 SUBDIR+=	hs-regex-base
@@ -1140,7 +1138,6 @@ SUBDIR+=	hs-strict-io
 SUBDIR+=	hs-stringable
 SUBDIR+=	hs-stringsearch
 SUBDIR+=	hs-stringtable-atom
-SUBDIR+=	hs-syb
 SUBDIR+=	hs-system-filepath
 SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-tar
@@ -1176,7 +1173,6 @@ SUBDIR+=	hs-vte
 SUBDIR+=	hs-vty
 SUBDIR+=	hs-wai
 SUBDIR+=	hs-warp
-SUBDIR+=	hs-x11
 SUBDIR+=	hs-x11-extras
 SUBDIR+=	hs-x11-xft
 SUBDIR+=	hs-xdg-basedir

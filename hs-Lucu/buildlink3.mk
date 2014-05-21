@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2014/05/16 20:47:08 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2014/05/21 21:04:43 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-Lucu
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.hs-Lucu?=	../../wip/hs-Lucu
 .include "../../wip/hs-haskell-src/buildlink3.mk"
 .include "../../wip/hs-hxt/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-network/buildlink3.mk"
+.include "../../net/hs-network/buildlink3.mk"
 .include "../../wip/hs-stm/buildlink3.mk"
 .include "../../wip/hs-time-http/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"

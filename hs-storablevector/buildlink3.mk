@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/05/15 21:49:10 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/05/21 21:04:45 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-storablevector
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.hs-storablevector?=	../../wip/hs-storablevector
 
 .include "../../wip/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
-.include "../../wip/hs-syb/buildlink3.mk"
+.include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-utility-ht/buildlink3.mk"
 .endif	# HS_STORABLEVECTOR_BUILDLINK3_MK

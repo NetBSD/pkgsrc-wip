@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/05/20 21:23:20 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.21 2014/05/21 21:04:46 szptvlfn Exp $
 
 DISTNAME=	pandoc-1.12.3.3
 PKGNAME=	${DISTNAME}
@@ -30,11 +30,11 @@ BUILD_DEPENDS+=	happy:../../wip/happy
 .include "../../wip/hs-hslua/buildlink3.mk"
 .include "../../wip/hs-HTTP/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-network/buildlink3.mk"
+.include "../../net/hs-network/buildlink3.mk"
 .include "../../wip/hs-pandoc-types/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
-.include "../../wip/hs-random/buildlink3.mk"
-.include "../../wip/hs-syb/buildlink3.mk"
+.include "../../devel/hs-random/buildlink3.mk"
+.include "../../devel/hs-syb/buildlink3.mk"
 .include "../../wip/hs-tagsoup/buildlink3.mk"
 .include "../../wip/hs-temporary/buildlink3.mk"
 .include "../../wip/hs-texmath/buildlink3.mk"

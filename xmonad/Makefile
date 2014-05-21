@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/05/20 21:23:20 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/21 21:04:46 szptvlfn Exp $
 DISTNAME=	xmonad-${VERSION}
 PKGNAME=	xmonad-${VERSION}
 VERSION=	0.11
@@ -20,5 +20,5 @@ post-install:
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
-.include "../../wip/hs-x11/buildlink3.mk"
+.include "../../x11/hs-X11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
