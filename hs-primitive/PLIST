@@ -1,28 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/05/22 21:31:26 szptvlfn Exp $
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Addr.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Addr.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Array.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Array.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/ByteArray.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/ByteArray.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Internal/Compat.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Internal/Compat.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Internal/Operations.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Internal/Operations.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MachDeps.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MachDeps.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MutVar.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MutVar.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Types.hi
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Types.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/HSprimitive-${PKGVERSION}.o
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/include/primitive-memops.h
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/libHSprimitive-${PKGVERSION}.a
-lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/libHSprimitive-${PKGVERSION}_p.a
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/primitive-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/primitive-${PKGVERSION}/html/Control-Monad-Primitive.html

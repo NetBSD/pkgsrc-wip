@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2013/09/25 13:09:44 szptvlfn Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/05/22 21:31:26 szptvlfn Exp $
 
-DISTNAME=	primitive-0.5.1.0
+DISTNAME=	primitive-0.5.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Wrappers for primitive operations
 LICENSE=	modified-bsd
 
-.include "../../wip/mk/haskell.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
