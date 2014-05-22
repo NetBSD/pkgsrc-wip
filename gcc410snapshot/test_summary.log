@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 210315
+LAST_UPDATED: Obtained from SVN: trunk revision 210592
 
 Native configuration is x86_64--netbsd
 
@@ -25,12 +25,12 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++1y (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		83242
+# of expected passes		81028
 # of unexpected failures	12
 # of expected failures		440
 # of unresolved testcases	3
-# of unsupported tests		3044
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.10.0 20140511 (experimental) (GCC) 
+# of unsupported tests		3052
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.10.0 20140518 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -74,6 +74,34 @@ XPASS: gcc.dg/guality/inline-params.c  -O3 -fomit-frame-pointer  execution test
 XPASS: gcc.dg/guality/inline-params.c  -O3 -g  execution test
 XPASS: gcc.dg/guality/inline-params.c  -Os  execution test
 XPASS: gcc.dg/guality/inline-params.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/guality/pr36728-1.c  -O1  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O1  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O2  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O2  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O3 -fomit-frame-pointer  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O3 -fomit-frame-pointer  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O3 -g  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O3 -g  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -Os  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -Os  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O1  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O1  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O2  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O2  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O3 -fomit-frame-pointer  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O3 -fomit-frame-pointer  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O3 -g  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O3 -g  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -Os  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -Os  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg7 == 30
 XPASS: gcc.dg/guality/pr41353-1.c  -O0  line 28 j == 28 + 37
 XPASS: gcc.dg/guality/pr41447-1.c  -O0  execution test
 XPASS: gcc.dg/guality/pr41447-1.c  -O1  execution test
@@ -90,6 +118,10 @@ XPASS: gcc.dg/guality/pr41616-1.c  -O3 -fomit-frame-pointer  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -O3 -g  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -Os  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 34 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 34 c == &a[0]
+FAIL: gcc.dg/guality/pr45882.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 d == 112
+FAIL: gcc.dg/guality/pr45882.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 e == 142
 FAIL: gcc.dg/guality/pr48437.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 i == 0
 FAIL: gcc.dg/guality/pr48437.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 i == 0
 FAIL: gcc.dg/guality/pr54200.c  -Os  line 20 z == 3
@@ -363,13 +395,13 @@ UNRESOLVED: gcc.target/i386/long-double-128-9.c compilation failed to produce ex
 
 		=== gcc Summary ===
 
-# of expected passes		104051
-# of unexpected failures	207
+# of expected passes		104067
+# of unexpected failures	239
 # of unexpected successes	33
 # of expected failures		262
 # of unresolved testcases	84
-# of unsupported tests		1912
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140511 (experimental) (GCC) 
+# of unsupported tests		1914
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140518 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -446,12 +478,12 @@ FAIL: gfortran.dg/wextra_1.f  -O   (test for warnings, line 4)
 
 		=== gfortran Summary ===
 
-# of expected passes		45530
+# of expected passes		45533
 # of unexpected failures	43
 # of expected failures		38
 # of unresolved testcases	25
 # of unsupported tests		102
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.10.0 20140511 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.10.0 20140518 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -460,10 +492,10 @@ Running target unix
 
 		=== obj-c++ Summary ===
 
-# of expected passes		1441
+# of expected passes		1439
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.10.0 20140511 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.10.0 20140518 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -475,11 +507,11 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 
 		=== objc Summary ===
 
-# of expected passes		2985
+# of expected passes		3001
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140511 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140518 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -493,13 +525,10 @@ Running target unix
 
 
 Running target unix
-WARNING: program timed out.
-FAIL: libgomp.c++/pr43893.C execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		2600
-# of unexpected failures	1
+# of expected passes		2601
 # of unsupported tests		4
 		=== libitm tests ===
 
@@ -548,6 +577,7 @@ FAIL: 30_threads/packaged_task/members/invoke3.cc execution test
 FAIL: 30_threads/packaged_task/members/invoke4.cc execution test
 FAIL: 30_threads/packaged_task/members/invoke5.cc execution test
 FAIL: 30_threads/packaged_task/members/reset2.cc execution test
+FAIL: 30_threads/promise/60966.cc execution test
 FAIL: 30_threads/promise/cons/alloc.cc execution test
 FAIL: 30_threads/promise/cons/move.cc execution test
 FAIL: 30_threads/promise/cons/move_assign.cc execution test
@@ -577,17 +607,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8767
-# of unexpected failures	51
+# of expected passes		8775
+# of unexpected failures	52
 # of expected failures		68
 # of unresolved testcases	5
 # of unsupported tests		686
 
-Compiler version: 4.10.0 20140511 (experimental) (GCC) 
+Compiler version: 4.10.0 20140518 (experimental) (GCC) 
 Platform: x86_64--netbsd
-configure flags: --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc410snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc410snapshot/include/c++/ --prefix=/usr/pkg/gcc410snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc410snapshot/info --mandir=/usr/pkg/gcc410snapshot/man
+configure flags: --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc410snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc410snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --prefix=/usr/pkg/gcc410snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc410snapshot/info --mandir=/usr/pkg/gcc410snapshot/man
 EOF
-Mail -s "Results for 4.10.0 20140511 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.10.0 20140518 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
