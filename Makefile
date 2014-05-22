@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5767 2014/05/22 08:46:48 jgoamakf Exp $
+# $Id: Makefile,v 1.5768 2014/05/22 21:41:47 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -979,7 +979,6 @@ SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
 SUBDIR+=	hs-chunks
 SUBDIR+=	hs-citeproc-hs
-SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-collections-api
 SUBDIR+=	hs-collections-base-instances
 SUBDIR+=	hs-colorize-haskell
@@ -1174,7 +1173,6 @@ SUBDIR+=	hs-vty
 SUBDIR+=	hs-wai
 SUBDIR+=	hs-warp
 SUBDIR+=	hs-x11-extras
-SUBDIR+=	hs-x11-xft
 SUBDIR+=	hs-xdg-basedir
 SUBDIR+=	hs-xhtml
 SUBDIR+=	hs-xml
@@ -3675,7 +3673,6 @@ SUBDIR+=	xmms-skin-maXMMS
 SUBDIR+=	xmms-skin-nixamp
 SUBDIR+=	xmms-skins
 SUBDIR+=	xmms2
-SUBDIR+=	xmonad
 SUBDIR+=	xmonad-contrib
 SUBDIR+=	xmoto
 SUBDIR+=	xombrero

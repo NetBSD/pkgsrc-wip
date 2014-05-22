@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2014/05/15 21:49:04 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.19 2014/05/22 21:41:47 szptvlfn Exp $
 #
 
 DISTNAME=	hlint-1.8.58
@@ -14,7 +14,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/data/hlint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-cmdargs/buildlink3.mk"
+.include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../wip/hs-cpphs/buildlink3.mk"
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
 .include "../../wip/hs-hscolour/buildlink3.mk"
