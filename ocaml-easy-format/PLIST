@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/05/22 08:45:46 jgoamakf Exp $
+lib/ocaml/site-lib/easy-format/META
+lib/ocaml/site-lib/easy-format/easy_format.cmi
+lib/ocaml/site-lib/easy-format/easy_format.cmo
+lib/ocaml/site-lib/easy-format/easy_format.mli
