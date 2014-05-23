@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/23 21:44:50 szptvlfn Exp $
 lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Catch.hi
-lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Catch.p_hi
 lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Catch/Pure.hi
-lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Catch/Pure.p_hi
 lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/HSexceptions-${PKGVERSION}.o
 lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/libHSexceptions-${PKGVERSION}.a
-lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/libHSexceptions-${PKGVERSION}_p.a
 lib/exceptions-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/exceptions-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/exceptions-${PKGVERSION}/html/Control-Monad-Catch-Pure.html
