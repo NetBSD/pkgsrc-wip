@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/22 05:21:41 keckhardt Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/23 05:02:49 keckhardt Exp $
 
 GCC_PKGNAME=		gcc410snapshot
 .include		"version.mk"
@@ -69,7 +69,6 @@ BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-CONFIGURE_ARGS+=	--disable-bootstrap
 
 post-extract: 
 	${TAR} -jxf ${DISTDIR}/${ISL12}.tar.bz2 -C ${WRKSRC}

@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2014/05/22 05:21:41 keckhardt Exp $
+# $NetBSD: options.mk,v 1.4 2014/05/23 05:02:49 keckhardt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 			gcc-go gcc-objc gcc-objc++ gcc-graphite gcc-java
-PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++
+PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
+			gcc-graphite gcc-inplace-math
 
 .if ${OPSYS} == "NetBSD" 
 PKG_SUGGESTED_OPTIONS+=	nls
