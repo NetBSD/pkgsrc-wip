@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/04 07:51:42 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/23 21:49:03 szptvlfn Exp $
 #
 
 DISTNAME=	dyre-0.8.6
@@ -10,7 +10,7 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-executable-path/buildlink3.mk"
-.include "../../wip/hs-ghc-paths/buildlink3.mk"
+.include "../../devel/hs-ghc-paths/buildlink3.mk"
 .include "../../wip/hs-io-storage/buildlink3.mk"
 .include "../../wip/hs-xdg-basedir/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
