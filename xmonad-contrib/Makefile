@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.15 2014/05/22 21:41:48 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.16 2014/05/23 21:45:34 szptvlfn Exp $
 
-DISTNAME=	xmonad-contrib-0.11.2
+DISTNAME=	xmonad-contrib-0.11.3
 PKGNAME=	${DISTNAME}
 CATEGORIES=	wm
 
 MAINTAINER=	degroote@NetBSD.org
-HOMEPAGE=	http://xmonad.org/
 COMMENT=	Third party extensions for xmonad
 LICENSE=	modified-bsd
 
 .include "options.mk"
 
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../wip/mk/haskell.mk"
+.include "../../mk/haskell.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
