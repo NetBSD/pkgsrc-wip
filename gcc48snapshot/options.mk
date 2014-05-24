@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2013/03/24 08:06:54 keckhardt Exp $
+# $NetBSD: options.mk,v 1.3 2014/05/24 04:44:34 keckhardt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
 			gcc-go gcc-objc gcc-objc++ gcc-graphite
-PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ gcc-graphite
+PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++\
+			gcc-graphite gcc-inplace-math
 
 .if ${OPSYS} == "NetBSD" 
 PKG_SUGGESTED_OPTIONS+=	nls
@@ -81,10 +82,12 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-CONFIGURE_ARGS+=	--with-cloog=${BUILDLINK_PREFIX.cloog}
-CONFIGURE_ARGS+=	--enable-cloog-backend=isl
-.include "../../math/cloog/buildlink3.mk"
-.include "../../math/isl/buildlink3.mk"
+ISL12 = isl-0.12.2
+SITES.${ISL12}.tar.bz2 = ${MASTER_SITE_GNU:=gcc/infrastructure/}
+DISTFILES += ${ISL12}.tar.bz2
+CLOOG18 = cloog-0.18.1
+SITES.${CLOOG18}.tar.gz = ${MASTER_SITE_GNU:=gcc/infrastructure/}
+DISTFILES += ${CLOOG18}.tar.gz
 .endif
 
 ###
