@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/05/24 09:33:54 obache Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/24 09:49:32 obache Exp $
 #
 
 .include "../../wip/marisa/Makefile.common"
 
-#CATEGORIES+=	ruby
+CATEGORIES+=	ruby
 
 COMMENT=	MARISA ruby module
 
