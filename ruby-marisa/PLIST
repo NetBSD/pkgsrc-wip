@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/04 01:01:32 ishit Exp $
-${RUBY_VENDORLIB}/i486-netbsdelf/marisa.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.2 2014/05/24 09:29:02 obache Exp $
+${RUBY_VENDORARCHLIB}/marisa.${RUBY_DLEXT}
