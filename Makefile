@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5769 2014/05/23 21:49:03 szptvlfn Exp $
+# $Id: Makefile,v 1.5770 2014/05/24 10:26:17 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1600,7 +1600,6 @@ SUBDIR+=	map-browse
 SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
-SUBDIR+=	marisa
 SUBDIR+=	marsyas
 SUBDIR+=	mashpodder
 SUBDIR+=	matanza
@@ -2106,7 +2105,6 @@ SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-RSS-LibXML
 SUBDIR+=	p5-XML-Writer-Simple
-SUBDIR+=	p5-marisa
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
 SUBDIR+=	p5-spf-policyd
@@ -2632,7 +2630,6 @@ SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-magic
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
-SUBDIR+=	py-marisa
 SUBDIR+=	py-mark
 SUBDIR+=	py-markovchain
 SUBDIR+=	py-mcint
@@ -3107,7 +3104,6 @@ SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-libv8
-SUBDIR+=	ruby-marisa
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-therubyracer
