@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/24 09:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/24 09:50:21 obache Exp $
 #
 
 .include "../../wip/marisa/Makefile.common"
@@ -11,8 +11,6 @@ COMMENT=	MARISA python module
 USE_LANGUAGES=	c c++
 
 PYSETUPSUBDIR=	bindings/python
-
-#EGG_NAME=	${DISTNAME:S/-/_python-/}
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
