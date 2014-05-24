@@ -1,4 +1,4 @@
-$NetBSD: patch-bindings_python_setup.py,v 1.2 2013/11/04 00:55:12 ishit Exp $
+$NetBSD: patch-bindings_python_setup.py,v 1.3 2014/05/24 09:42:33 obache Exp $
 
 add version for egg file's file name.
 
@@ -8,6 +8,6 @@ add version for egg file's file name.
                            libraries=["marisa"])
  
  setup(name = "marisa",
-+      version = "0.2.4",
++      version = "@VERSION@",
        ext_modules = [marisa_module],
        py_modules = ["marisa"])
