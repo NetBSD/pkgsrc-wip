@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5770 2014/05/24 10:26:17 obache Exp $
+# $Id: Makefile,v 1.5771 2014/05/24 22:04:37 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -895,7 +895,6 @@ SUBDIR+=	hawk
 SUBDIR+=	hawknl
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
-SUBDIR+=	hdevtools
 SUBDIR+=	hdhomerun_config
 SUBDIR+=	hdparm
 SUBDIR+=	heimdall
@@ -1012,7 +1011,6 @@ SUBDIR+=	hs-double-conversion
 SUBDIR+=	hs-dyre
 SUBDIR+=	hs-entropy
 SUBDIR+=	hs-event-list
-SUBDIR+=	hs-exceptions
 SUBDIR+=	hs-executable-path
 SUBDIR+=	hs-explicit-exception
 SUBDIR+=	hs-explicit-iomodes
