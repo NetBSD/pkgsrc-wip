@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/21 21:04:45 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.10 2014/05/25 21:59:30 szptvlfn Exp $
 
 DISTNAME=	shake-0.11.4
 CATEGORIES=	devel
@@ -33,7 +33,7 @@ post-install:
 		${INSTALL_DATA} "$${g}" ${DESTDIR}${PREFIX}/share/examples/${DISTNAME}/Examples/Ninja; done
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-hashable/buildlink3.mk"
+.include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-unordered-containers/buildlink3.mk"

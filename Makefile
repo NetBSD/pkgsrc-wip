@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5771 2014/05/24 22:04:37 szptvlfn Exp $
+# $Id: Makefile,v 1.5772 2014/05/25 21:59:28 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1026,7 +1026,6 @@ SUBDIR+=	hs-glib
 SUBDIR+=	hs-gnuplot
 SUBDIR+=	hs-groupoids
 SUBDIR+=	hs-gtk
-SUBDIR+=	hs-hashable
 SUBDIR+=	hs-hashed-storage
 SUBDIR+=	hs-hashmap
 SUBDIR+=	hs-haskeline
@@ -1100,7 +1099,6 @@ SUBDIR+=	hs-pointed
 SUBDIR+=	hs-pointedlist
 SUBDIR+=	hs-pointedlist03
 SUBDIR+=	hs-polyparse
-SUBDIR+=	hs-primitive
 SUBDIR+=	hs-profunctors
 SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
@@ -1125,7 +1123,6 @@ SUBDIR+=	hs-semigroups
 SUBDIR+=	hs-shake
 SUBDIR+=	hs-simple-sendfile
 SUBDIR+=	hs-split
-SUBDIR+=	hs-stm
 SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-storablevector
 SUBDIR+=	hs-stream-fusion

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2014/05/21 21:04:45 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2014/05/25 21:59:30 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-uniplate
 
@@ -8,7 +8,7 @@ HS_UNIPLATE_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-uniplate+=	hs-uniplate>=1.6.12
 BUILDLINK_PKGSRCDIR.hs-uniplate?=	../../wip/hs-uniplate
 
-.include "../../wip/hs-hashable/buildlink3.mk"
+.include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 .include "../../wip/hs-unordered-containers/buildlink3.mk"
 .endif	# HS_UNIPLATE_BUILDLINK3_MK

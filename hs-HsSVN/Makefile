@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/16 20:47:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/25 21:59:28 szptvlfn Exp $
 #
 
 DISTNAME=	HsSVN-0.4.3.3
@@ -13,6 +13,6 @@ CONFIGURE_ARGS+= \
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-stm/buildlink3.mk"
+.include "../../devel/hs-stm/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
