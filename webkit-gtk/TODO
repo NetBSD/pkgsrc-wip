@@ -1,42 +1,6 @@
 o I have just updated the patches and tryed to build it solving various
-  issues during the build process but this package is still NOT buildable
-  (at least on NetBSD/i386 6.1.3). At the moment it is intended only for
-  MAINTAINERs.
-
-o To be more precise the build fails here:
-
-XXLD    libwebkitgtk-1.0.la
-./.libs/libWebCore.a(libWebCore_la-GResourceBundle.o): In function `read':
-GResourceBundle.c:(.text+0x0): multiple definition of `read'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0x0): first defined here
-./.libs/libWebCore.a(libWebCore_la-GResourceBundle.o): In function `readlink':
-GResourceBundle.c:(.text+0x40): multiple definition of `readlink'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0x40): first defined here
-./.libs/libWebCore.a(libWebCore_la-GResourceBundle.o): In function `getcwd':
-GResourceBundle.c:(.text+0x80): multiple definition of `getcwd'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0x80): first defined here
-./.libs/libWebCoreGtk.a(libWebCoreGtk_la-gtk2xtbin.o): In function `read':
-gtk2xtbin.c:(.text+0x890): multiple definition of `read'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0x0): first defined here
-./.libs/libWebCoreGtk.a(libWebCoreGtk_la-gtk2xtbin.o): In function `readlink':
-gtk2xtbin.c:(.text+0x8d0): multiple definition of `readlink'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0x40): first defined here
-./.libs/libWebCoreGtk.a(libWebCoreGtk_la-gtk2xtbin.o): In function `getcwd':
-gtk2xtbin.c:(.text+0x910): multiple definition of `getcwd'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0x80): first defined here
-./.libs/libWebCoreGtk.a(libWebCoreGtk_la-gtk2xtbin.o): In function `gets':
-gtk2xtbin.c:(.text+0x940): multiple definition of `gets'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0xb0): first defined here
-./.libs/libWebCoreGtk.a(libWebCoreGtk_la-gtk2xtbin.o): In function `fgets':
-gtk2xtbin.c:(.text+0x970): multiple definition of `fgets'
-./.libs/libPlatformGtk.a(libPlatformGtk_la-GtkVersioning.o):GtkVersioning.c:(.text+0xe0): first defined here
-collect2: error: ld returned 1 exit status
-GNUmakefile:40295: recipe for target 'libwebkitgtk-1.0.la' failed
-gmake[1]: *** [libwebkitgtk-1.0.la] Error 1
-gmake[1]: Leaving directory '/tmp/pkgsrc/www/webkit-gtk/work/webkitgtk-2.4.1'
-GNUmakefile:25678: recipe for target 'all' failed
-gmake: *** [all] Error 2
-*** Error code 2
-
+  issues during the build process.
+  At the moment it is intended only for MAINTAINERs (e.g. PLIST is not
+  updated nor I succesfully built it at the moment).
 o Change the GCC_REQD replacing with ONLY_FOR_COMPILER or similar if it is
   possible.
