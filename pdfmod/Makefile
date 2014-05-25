@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/08/20 11:11:53 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/05/25 22:32:03 thomasklausner Exp $
 
 DISTNAME=	pdfmod-0.9.1
 PKGREVISION=	1
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pdfmod/0.9/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://live.gnome.org/PdfMod
+HOMEPAGE=	https://wiki.gnome.org/Apps/PdfMod
 COMMENT=	PDF Mod is a simple tool for modifying PDF documents
 LICENSE=	gnu-gpl-v2
 
