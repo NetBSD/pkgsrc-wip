@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/06/17 12:45:11 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/05/26 09:04:31 thomasklausner Exp $
 
 DISTNAME=	hyena-0.5
 PKGREVISION=	1
