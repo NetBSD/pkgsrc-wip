@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/25 21:59:29 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2014/05/26 22:08:04 szptvlfn Exp $
 
 DISTNAME=	mwc-random-0.13.1.1
 CATEGORIES=	math
@@ -9,5 +9,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
-.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

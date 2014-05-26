@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/05/25 21:59:30 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/05/26 22:08:05 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-vector-algorithms
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.hs-vector-algorithms?=	../../wip/hs-vector-algorithms
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-mwc-random/buildlink3.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
-.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .endif	# HS_VECTOR_ALGORITHMS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-vector-algorithms

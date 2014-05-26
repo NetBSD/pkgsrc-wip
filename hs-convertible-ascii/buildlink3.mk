@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/05/18 21:33:26 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/05/26 22:08:04 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-convertible-ascii
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.hs-convertible-ascii?=	../../wip/hs-convertible-ascii
 
 .include "../../wip/hs-ascii/buildlink3.mk"
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
-.include "../../wip/hs-blaze-builder/buildlink3.mk"
+.include "../../devel/hs-blaze-builder/buildlink3.mk"
 .include "../../wip/hs-convertible-text/buildlink3.mk"
 .include "../../wip/hs-failure/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"

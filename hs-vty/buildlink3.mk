@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/05/19 21:28:50 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/05/26 22:08:05 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-vty
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-vty?=	../../wip/hs-vty
 .include "../../textproc/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-terminfo/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
-.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .endif	# HS_VTY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-vty

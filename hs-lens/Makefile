@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/05/25 21:59:29 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.16 2014/05/26 22:08:04 szptvlfn Exp $
 
 DISTNAME=	lens-4.0.7
 CATEGORIES=	devel
@@ -30,7 +30,7 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-transformers-compat/buildlink3.mk"
 .include "../../wip/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
-.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .include "../../wip/hs-void/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

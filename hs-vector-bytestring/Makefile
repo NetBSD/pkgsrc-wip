@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/25 21:59:30 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/26 22:08:05 szptvlfn Exp $
 #
 
 DISTNAME=	vector-bytestring-0.0.0.1
@@ -11,5 +11,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
-.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

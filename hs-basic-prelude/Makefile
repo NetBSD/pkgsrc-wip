@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/25 21:59:29 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/26 22:08:03 szptvlfn Exp $
 
 DISTNAME=	basic-prelude-0.3.5.0
 CATEGORIES=	devel
@@ -15,5 +15,5 @@ LICENSE=	mit
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-unordered-containers/buildlink3.mk"
-.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5774 2014/05/26 09:36:29 thomasklausner Exp $
+# $Id: Makefile,v 1.5775 2014/05/26 22:08:03 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -961,7 +961,6 @@ SUBDIR+=	hs-bindings-DSL
 SUBDIR+=	hs-bindings-EsounD
 SUBDIR+=	hs-bindings-audiofile
 SUBDIR+=	hs-bindings-librrd
-SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-blaze-builder-conduit
 SUBDIR+=	hs-blaze-html
 SUBDIR+=	hs-blaze-markup
@@ -1148,15 +1147,12 @@ SUBDIR+=	hs-time-w3c
 SUBDIR+=	hs-timezone-olson
 SUBDIR+=	hs-timezone-series
 SUBDIR+=	hs-transformers-abort
-SUBDIR+=	hs-transformers-base
-SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uconv
 SUBDIR+=	hs-uniplate
 SUBDIR+=	hs-unix-compat
 SUBDIR+=	hs-unordered-containers
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-vault
-SUBDIR+=	hs-vector
 SUBDIR+=	hs-vector-algorithms
 SUBDIR+=	hs-vector-bytestring
 SUBDIR+=	hs-vector-space

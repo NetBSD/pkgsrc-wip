@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/21 21:04:46 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/05/26 22:08:06 szptvlfn Exp $
 
 DISTNAME=	warp-1.3.10.1
 CATEGORIES=	www
@@ -8,7 +8,7 @@ COMMENT=	Fast, light-weight web server for WAI applications
 LICENSE=	mit
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-blaze-builder/buildlink3.mk"
+.include "../../devel/hs-blaze-builder/buildlink3.mk"
 .include "../../wip/hs-blaze-builder-conduit/buildlink3.mk"
 .include "../../wip/hs-case-insensitive/buildlink3.mk"
 .include "../../wip/hs-conduit/buildlink3.mk"

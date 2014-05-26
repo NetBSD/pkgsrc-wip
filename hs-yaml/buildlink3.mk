@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/05/20 21:23:20 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/05/26 22:08:06 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-yaml
 
@@ -16,7 +16,7 @@ BUILDLINK_PKGSRCDIR.hs-yaml?=	../../wip/hs-yaml
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../wip/hs-unordered-containers/buildlink3.mk"
-.include "../../wip/hs-vector/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
 .endif	# HS_YAML_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-yaml
