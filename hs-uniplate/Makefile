@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/25 21:59:30 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/27 21:38:23 szptvlfn Exp $
 #
 
 DISTNAME=	uniplate-1.6.12
@@ -11,5 +11,5 @@ LICENSE=	modified-bsd
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
-.include "../../wip/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

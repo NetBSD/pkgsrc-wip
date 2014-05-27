@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/25 21:59:29 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.14 2014/05/27 21:38:23 szptvlfn Exp $
 
 DISTNAME=	semigroups-0.13.0.1
 CATEGORIES=	math
@@ -11,5 +11,5 @@ LICENSE=	2-clause-bsd
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../wip/hs-nats/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
-.include "../../wip/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

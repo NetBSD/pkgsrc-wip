@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/26 22:08:03 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.12 2014/05/27 21:38:22 szptvlfn Exp $
 
 DISTNAME=	aeson-0.7.0.2
 CATEGORIES=	converters
@@ -16,6 +16,6 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-scientific/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
-.include "../../wip/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
