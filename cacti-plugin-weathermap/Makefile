@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/02/18 09:55:06 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/27 11:54:23 ahp-nils Exp $
 #
 
-DISTNAME=		php-weathermap-0.97a
-PKGNAME=		cacti-plugin-weathermap-0.97a
+DISTNAME=		php-weathermap-0.97c
+PKGNAME=		cacti-plugin-weathermap-0.97c
 CATEGORIES=		net
 MASTER_SITES=		http://www.network-weathermap.com/files/
 EXTRACT_SUFX=		.zip
