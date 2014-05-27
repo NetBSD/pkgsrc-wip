@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5775 2014/05/26 22:08:03 szptvlfn Exp $
+# $Id: Makefile,v 1.5776 2014/05/27 10:48:48 ahp-nils Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3186,6 +3186,7 @@ SUBDIR+=	slideml
 SUBDIR+=	slim
 SUBDIR+=	slime
 SUBDIR+=	sloccount
+SUBDIR+=	slowhttptest
 SUBDIR+=	slrn-devel
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
