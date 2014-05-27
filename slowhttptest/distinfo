@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/05/27 10:47:32 ahp-nils Exp $
+
+SHA1 (slowhttptest-1.6.tar.gz) = f5a64365b987083015ac98f6c20746021176292e
+RMD160 (slowhttptest-1.6.tar.gz) = 93dbf351ffba48ffa20d14ebc7dd7ef48d08239d
+Size (slowhttptest-1.6.tar.gz) = 109829 bytes
