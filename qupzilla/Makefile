@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/02/18 18:34:18 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/05/28 19:08:35 nros Exp $
 
-DISTNAME=	QupZilla-1.6.3
+DISTNAME=	QupZilla-1.6.6
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	www
-MASTER_SITES=	http://qupzilla.com/uploads/
+MASTER_SITES=	https://github.com/QupZilla/qupzilla/releases/download/v${PKGVERSION}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qupzilla.com/

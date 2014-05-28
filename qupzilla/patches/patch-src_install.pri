@@ -1,9 +1,9 @@
-$NetBSD: patch-src_install.pri,v 1.1 2014/01/08 14:08:46 nros Exp $
+$NetBSD: patch-src_install.pri,v 1.2 2014/05/28 19:08:35 nros Exp $
 
  Don't install bash completion files since they install outside 
  localbase. 
 
---- src/install.pri.orig	2014-01-01 19:55:33.000000000 +0000
+--- src/install.pri.orig	2014-04-18 14:12:04.000000000 +0000
 +++ src/install.pri
 @@ -41,11 +41,11 @@ mac {
      ico256.files = $$PWD/../linux/hicolor/256x256/apps/qupzilla.png

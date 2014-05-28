@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/18 18:34:18 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/05/28 19:08:35 nros Exp $
 bin/qupzilla
 lib/libQupZilla.la
 lib/qupzilla/libAccessKeysNavigation.la
+lib/qupzilla/libAutoScroll.la
 lib/qupzilla/libGreaseMonkey.la
 lib/qupzilla/libMouseGestures.la
 lib/qupzilla/libPIM.la
@@ -34,6 +35,7 @@ share/qupzilla/locale/it_IT.qm
 share/qupzilla/locale/ja_JP.qm
 share/qupzilla/locale/ka_GE.qm
 share/qupzilla/locale/lg.qm
+share/qupzilla/locale/lv_LV.qm
 share/qupzilla/locale/nl_NL.qm
 share/qupzilla/locale/nqo.qm
 share/qupzilla/locale/pl_PL.qm
