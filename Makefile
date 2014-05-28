@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5777 2014/05/27 21:38:22 szptvlfn Exp $
+# $Id: Makefile,v 1.5778 2014/05/28 22:05:59 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1079,7 +1079,6 @@ SUBDIR+=	hs-monads-fd
 SUBDIR+=	hs-monads-tf
 SUBDIR+=	hs-monoid-transformer
 SUBDIR+=	hs-mwc-random
-SUBDIR+=	hs-nats
 SUBDIR+=	hs-network-bytestring
 SUBDIR+=	hs-network-conduit
 SUBDIR+=	hs-newtype
@@ -1139,7 +1138,6 @@ SUBDIR+=	hs-test-framework-hunit
 SUBDIR+=	hs-test-framework-quickcheck2
 SUBDIR+=	hs-texmath
 SUBDIR+=	hs-text-icu
-SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-tfp
 SUBDIR+=	hs-time-http
 SUBDIR+=	hs-time-w3c
