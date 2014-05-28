@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/06 23:05:18 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/28 13:50:29 thomasklausner Exp $
 
 DISTNAME=	hexchat-2.9.6.1
 CATEGORIES=	chat
@@ -6,7 +6,7 @@ MASTER_SITES=	http://dl.hexchat.net/hexchat/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dl.hexchat.net/hexchat/
+HOMEPAGE=	http://hexchat.github.io/
 COMMENT=	IRC client based on XChat
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit
 
