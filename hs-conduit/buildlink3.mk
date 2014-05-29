@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/05/18 21:33:26 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/05/29 22:11:20 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-conduit
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-conduit+=	hs-conduit>=1.0.9
 BUILDLINK_PKGSRCDIR.hs-conduit?=	../../wip/hs-conduit
 
 .include "../../wip/hs-lifted-base/buildlink3.mk"
-.include "../../wip/hs-mmorph/buildlink3.mk"
+.include "../../devel/hs-mmorph/buildlink3.mk"
 .include "../../wip/hs-monad-control/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-resourcet/buildlink3.mk"

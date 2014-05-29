@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/03/16 12:21:07 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/29 22:11:20 szptvlfn Exp $
 #
 
 DISTNAME=		cpphs-1.18.3
@@ -9,5 +9,5 @@ COMMENT=		Re-implementation of cpp in Haskell
 LICENSE=		gnu-lgpl-v2.1
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-polyparse/buildlink3.mk"
+.include "../../textproc/hs-polyparse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
