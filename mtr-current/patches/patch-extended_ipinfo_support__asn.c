@@ -1,57 +1,101 @@
---- asn.c.orig	2014-01-29 08:21:13.000000000 +0200
-+++ asn.c	2014-04-25 11:09:34.000000000 +0300
-@@ -47,27 +47,40 @@
+--- asn.c.orig	2014-05-29 12:31:51.000000000 +0300
++++ asn.c	2014-05-29 13:59:44.000000000 +0300
+@@ -47,34 +47,47 @@
  #endif
  */
  
 -#define IIHASH_HI	128
 -#define ITEMSMAX	15
 -#define ITEMSEP	'|'
-+#define II_ITEM_SEP	'|'
+-#define NAMELEN	127
 +#define II_ARGS_SEP	','
- #define NAMELEN	127
++#define II_ITEM_SEP	'|'
++#define II_ITEM_MAX	5
++#define NAMELEN	128
  #define UNKN	"???"
  
 -int  ipinfo_no = -1;
-+int  ipinfo_nos[II_ITEM_MAX + 1] = {-1};
- int  ipinfo_max = -1;
- int  iihash = 0;
+-int  ipinfo_max = -1;
+-int  iihash = 0;
 -char fmtinfo[32];
--extern int af;                  /* address family of remote target */
-+char fmtinfo[NAMELEN + 1];
+ extern int af;                  /* address family of remote target */
++extern int maxTTL;
  
 -// items width: ASN, Route, Country, Registry, Allocated 
 -int iiwidth[] = { 6, 19, 4, 8, 11};	// item len + space
 -int iiwidth_len = sizeof(iiwidth)/sizeof((iiwidth)[0]);
-+extern int af;                  /* address family of remote target */
-+extern int maxTTL;
- 
+-
 -typedef char* items_t[ITEMSMAX + 1];
-+typedef char* items_t[II_ITEM_MAX + 1];
- items_t items_a;		// without hash: items
- char txtrec[NAMELEN + 1];	// without hash: txtrec
- items_t* items = &items_a;
+-items_t items_a;		// without hash: items
+-char txtrec[NAMELEN + 1];	// without hash: txtrec
+-items_t* items = &items_a;
++int enable_ipinfo;
  
++static int hash;
++static int origin_no;
++static int ipinfo_no[II_ITEM_MAX] = {-1};
++static int ipinfo_max;
++
++typedef char* items_t[II_ITEM_MAX];
++static items_t* items;
++
 +typedef struct {
 +    char* ip4zone;
 +    char* ip6zone;
 +    int as_prfx_ndx;
-+    int width_len;
++    int fields;
 +    int width[II_ITEM_MAX];
-+} ii_origin_t;
-+ii_origin_t ii_origins[] = {
++} origin_t;
++static origin_t origins[] = {
 +// ASN [ASN ..] | Route | CC | Registry | Allocated
-+    { "origin.asn.cymru.com", "origin6.asn.cymru.com", 0, 5, { 6, 19, 4, 8, 11 } },
++    { "origin.asn.cymru.com", "origin6.asn.cymru.com", 0, 5, { 6, 17, 4, 8, 11 } },
 +// ASN
 +    { "asn.routeviews.org", NULL, 0, 1, { 6 } },
 +// Route | "AS"ASN | Organization | Allocated | CC
-+    { "origin.asn.spameatingmonkey.net", NULL, -1, 5, { 19, 8, 19, 11, 4 } },
++    { "origin.asn.spameatingmonkey.net", NULL, -1, 5, { 17, 8, 17, 11, 4 } },
 +};
-+int ii_zone_no = 0;
  
  char *ipinfo_lookup(const char *domain) {
      unsigned char answer[PACKETSZ],  *pt;
-@@ -146,18 +159,30 @@
+     char host[128];
+     char *txt;
+     int len, exp, size, txtlen, type;
+-
++    static char txtrec[NAMELEN];
+ 
+     if(res_init() < 0) {
+         fprintf(stderr,"@res_init failed\n");
+@@ -84,10 +97,10 @@
+     memset(answer, 0, PACKETSZ);
+     if((len = res_query(domain, C_IN, T_TXT, answer, PACKETSZ)) < 0) {
+ #ifdef IIDEBUG
+-        if (iihash)
++        if (hash)
+             syslog(LOG_INFO, "Malloc-txt: %s", UNKN);
+ #endif
+-        return (iihash)?strdup(UNKN):UNKN;
++        return (hash)?strdup(UNKN):UNKN;
+     }
+ 
+     pt = answer + sizeof(HEADER);
+@@ -128,7 +141,7 @@
+     if (txtlen > NAMELEN)
+         txtlen = NAMELEN;
+ 
+-    if (iihash) {
++    if (hash) {
+         if (!(txt = malloc(txtlen + 1)))
+             return NULL;
+     } else
+@@ -139,62 +152,92 @@
+     txt[txtlen] = 0;
+ 
+ #ifdef IIDEBUG
+-    if (iihash)
++    if (hash)
+         syslog(LOG_INFO, "Malloc-txt(%p): %s", txt, txt);
+ #endif
+ 
      return txt;
  }
  
@@ -63,39 +107,44 @@
 -    for (l = strlen(p)-1; p[l] == ' ' || p[l] == ITEMSEP; l--)
 -        p[l] = '\0';
 -    return p;
-+int split_with_sep(items_t* it, char sep) {
-+    if (!it)
-+	return -1;
-+    if (!(*it))
++int split_with_sep(char** args, int max, char sep) {
++    if (!args)
 +	return -1;
 +
-+    char* prev = (*it)[0] = trim((*it)[0]);
-+    char* next;
-+    int i = 0, j;
-+
-+    while ((next = strchr(prev, sep)) && (i < II_ITEM_MAX)) {
-+        *next++ = '\0';
-+        (*it)[i++] = trim(prev);
-+        (*it)[i] = prev = trim(next);
-+    }
-+    if (i < II_ITEM_MAX)
-+        i++;
-+    for (j = i;  j <= II_ITEM_MAX; j++)
-+        (*it)[j] = NULL;
++    int i;
++    char *p = *args, **a = args + 1;
++    for (i = 0; (p = strchr(p, sep)) && (i < max); i++, *a++ = p)
++        *p++ = 0;
++	for (i = 0; i < max; i++)
++		if (args[i])
++			args[i] = trim(args[i]);
 +
 +    return i;
  }
  
 -// originX.asn.cymru.com txtrec:    ASN | Route | Country | Registry | Allocated
 -char* split_txtrec(char *txtrec) {
-+char* split_txtrec(char *txtrec, int ndx) {
-     if (!txtrec)
+-    if (!txtrec)
++char* split_rec(char *rec, int ndx) {
++    if (!rec)
  	return NULL;
-     if (iihash) {
-@@ -173,28 +198,44 @@
+-    if (iihash) {
++    if (hash) {
+ #ifdef IIDEBUG
+-        syslog(LOG_INFO, "Malloc-tbl: %s", txtrec);
++        syslog(LOG_INFO, "Malloc-tbl: %s", rec);
+ #endif
+         if (!(items = malloc(sizeof(*items)))) {
+ #ifdef IIDEBUG
+-            syslog(LOG_INFO, "Free-txt(%p)", txtrec);
++            syslog(LOG_INFO, "Free-txt(%p)", rec);
+ #endif
+-            free(txtrec);
++            free(rec);
+             return NULL;
          }
-     }
- 
+-    }
+-
 -    char* prev = (*items)[0] = trimsep(txtrec);
 -    char* next;
 -    int i = 0, j;
@@ -109,8 +158,17 @@
 -        i++;
 -    for (j = i;  j <= ITEMSMAX; j++)
 -        (*items)[j] = NULL;
-+    (*items)[0] = txtrec;
-+    int i = split_with_sep(items, II_ITEM_SEP);
++    } else {
++#ifdef IIDEBUG
++        syslog(LOG_INFO, "Not hashed: %s", rec);
++#endif
++		static items_t nothashed_items;
++		items = &nothashed_items;
++	}
++
++	memset(items, 0, sizeof(*items));
++    (*items)[0] = rec;
++    int i = split_with_sep((char**)items, II_ITEM_MAX, II_ITEM_SEP);
  
      if (i > ipinfo_max)
          ipinfo_max = i;
@@ -119,42 +177,50 @@
 -            ipinfo_no = 0;
 +
 +    // special cases
-+    if (ii_zone_no == 0) 	{	// cymru.com: MultiAS
-+        char *pj = (*items)[ii_origins[ii_zone_no].as_prfx_ndx];
-+        if (pj) {
-+            char *p;
-+            while ((p=strchr(pj, ' ')))
-+                *p = '/';
-+        }
-+    } else if (ii_zone_no == 1) {	// originviews.org: unknown AS
++	switch (origin_no) {
++      case 0: {	// cymru.com: MultiAS
++        char *p = (*items)[origins[0].as_prfx_ndx];
++        if (p) {
++            char *last = p + strnlen(p, NAMELEN) - 1;
++            while ((p = strchr(p, ' ')))
++                if (p != last)
++                    *p = '/';
++                else
++                    break;
++		}
++      } break;
++      case 1: {	// originviews.org: unknown AS
 +#define S_UINT32_MAX "4294967295"
-+        int j = 0;
-+        while ((j < II_ITEM_MAX) && ((*items)[j])) {
++        int j;
++        for (j = 0; (j < II_ITEM_MAX) && (*items)[j]; j++)
 +            if (!strncmp((*items)[j], S_UINT32_MAX, sizeof(S_UINT32_MAX)))
 +                (*items)[j] = UNKN;
-+            j++;
-+        }
-+    } else if (ii_zone_no == 2) {	// spameatingmonkey.net: unknown info
++      } break;
++      case 2: {	// spameatingmonkey.net: unknown info
 +#define Unknown "Unknown"
-+        int j = 0;
-+        while ((j < II_ITEM_MAX) && ((*items)[j])) {
++        int j;
++        for (j = 0; (j < II_ITEM_MAX) && (*items)[j]; j++)
 +            if (!strncmp((*items)[j], Unknown, sizeof(Unknown)))
 +                (*items)[j] = UNKN;
-+            j++;
-+        }
++      } break;
 +    }
 +
-+    if (ipinfo_nos[ndx] >= i) {
-+        if (ipinfo_nos[ndx] >= ipinfo_max)
-+            ipinfo_nos[ndx] = 0;
++    if (ipinfo_no[ndx] >= i) {
++        if (ipinfo_no[ndx] >= ipinfo_max)
++            ipinfo_no[ndx] = 0;
  	return (*items)[0];
      } else
 -	return (*items)[ipinfo_no];
-+	return (*items)[ipinfo_nos[ndx]];
++	return (*items)[ipinfo_no[ndx]];
  }
  
  #ifdef ENABLE_IPV6
-@@ -208,7 +249,7 @@
+@@ -204,11 +247,11 @@
+     char *b = buff;
+     for (i=(sizeof(*addr)/2-1); i>=0; i--, b+=4) // 64b portion
+         sprintf(b, "%x.%x.", addr->s6_addr[i] & 0xf, addr->s6_addr[i] >> 4);
+-    buff[strlen(buff) - 1] = '\0';
++    buff[strlen(buff) - 1] = 0;
  }
  #endif
  
@@ -163,84 +229,87 @@
      if (!addr)
          return NULL;
  
-@@ -217,18 +258,22 @@
+@@ -217,32 +260,36 @@
  
      if (af == AF_INET6) {
  #ifdef ENABLE_IPV6
-+        if (!ii_origins[ii_zone_no].ip6zone)
++        if (!origins[origin_no].ip6zone)
 +            return NULL;
          reverse_host6(addr, key);
 -        if (snprintf(lookup_key, NAMELEN, "%s.origin6.asn.cymru.com", key) >= NAMELEN)
-+        if (snprintf(lookup_key, NAMELEN, "%s.%s", key, ii_origins[ii_zone_no].ip6zone) >= NAMELEN)
++        if (snprintf(lookup_key, NAMELEN, "%s.%s", key, origins[origin_no].ip6zone) >= NAMELEN)
              return NULL;
  #else
  	return NULL;
  #endif
      } else {
-+        if (!ii_origins[ii_zone_no].ip4zone)
++        if (!origins[origin_no].ip4zone)
 +            return NULL;
          unsigned char buff[4];
          memcpy(buff, addr, 4);
          if (snprintf(key, NAMELEN, "%d.%d.%d.%d", buff[3], buff[2], buff[1], buff[0]) >= NAMELEN)
              return NULL;
 -        if (snprintf(lookup_key, NAMELEN, "%s.origin.asn.cymru.com", key) >= NAMELEN)
-+        if (snprintf(lookup_key, NAMELEN, "%s.%s", key, ii_origins[ii_zone_no].ip4zone) >= NAMELEN)
++        if (snprintf(lookup_key, NAMELEN, "%s.%s", key, origins[origin_no].ip4zone) >= NAMELEN)
              return NULL;
      }
  
-@@ -242,7 +287,7 @@
-         item.key = key;;
+     char *val = NULL;
+     ENTRY item;
+ 
+-    if (iihash) {
++    if (hash) {
+ #ifdef IIDEBUG
+         syslog(LOG_INFO, ">> Search: %s", key);
+ #endif
+-        item.key = key;;
++        item.key = key;
          ENTRY *found_item;
          if ((found_item = hsearch(item, FIND))) {
 -            if (!(val = (*((items_t*)found_item->data))[ipinfo_no]))
-+            if (!(val = (*((items_t*)found_item->data))[ipinfo_nos[ndx]]))
++            if (!(val = (*((items_t*)found_item->data))[ipinfo_no[ndx]]))
                  val = (*((items_t*)found_item->data))[0];
  #ifdef IIDEBUG
          syslog(LOG_INFO, "Found (hashed): %s", val);
-@@ -254,7 +299,7 @@
+@@ -254,16 +301,24 @@
  #ifdef IIDEBUG
          syslog(LOG_INFO, "Lookup: %s", key);
  #endif
 -        if ((val = split_txtrec(ipinfo_lookup(lookup_key)))) {
-+        if ((val = split_txtrec(ipinfo_lookup(lookup_key), ndx))) {
++        if ((val = split_rec(ipinfo_lookup(lookup_key), ndx))) {
  #ifdef IIDEBUG
              syslog(LOG_INFO, "Looked up: %s", key);
  #endif
-@@ -263,7 +308,16 @@
+-            if (iihash)
++            if (hash)
+                 if ((item.key = strdup(key))) {
                      item.data = items;
                      hsearch(item, ENTER);
  #ifdef IIDEBUG
 -                    syslog(LOG_INFO, "Insert into hash: %s", key);
 +                    {
-+                        char *p, buff[NAMELEN + 1] = {'\0'};
-+                        int i = 0;
-+                        while ((p = (*items)[i++])) {
-+                            char it[NAMELEN + 1];
-+                            snprintf(it, sizeof(it), "\"%s\" ", p);
-+                            strncat(buff, it, sizeof(buff) - strlen(buff) -1);
-+                        }
++                        char buff[NAMELEN] = {0};
++                        int i, len = 0;
++				        for (i = 0; (i < II_ITEM_MAX) && (*items)[i]; i++) {
++	                      	snprintf(buff + len, sizeof(buff) - len, "\"%s\" ", (*items)[i]);
++							len = strnlen(buff, sizeof(buff));
++   	                    }
 +                        syslog(LOG_INFO, "Insert into hash: \"%s\" => %s", key, buff);
 +                    }
  #endif
                  }
          }
-@@ -272,15 +326,44 @@
+@@ -272,39 +327,110 @@
      return val;
  }
  
-+int get_width(int iino) {
-+    int no = iino;
-+    if (no >= ii_origins[ii_zone_no].width_len)
-+        no %= ii_origins[ii_zone_no].width_len;
-+    return ii_origins[ii_zone_no].width[no];
-+}
-+
- int get_iiwidth(void) {
+-int get_iiwidth(void) {
 -    return (ipinfo_no < iiwidth_len) ? iiwidth[ipinfo_no] : iiwidth[ipinfo_no % iiwidth_len];
++int ii_getwidth(void) {
 +    int i, l = 0;
-+    for (i = 0; (i <= II_ITEM_MAX) && (ipinfo_nos[i] >= 0); i++) {
-+        l += get_width(ipinfo_nos[i]);
-+        if (ipinfo_nos[i] == ii_origins[ii_zone_no].as_prfx_ndx)
++    for (i = 0; (i < II_ITEM_MAX) && (ipinfo_no[i] >= 0); i++) {
++        l += origins[origin_no].width[ipinfo_no[i]];
++        if (ipinfo_no[i] == origins[origin_no].as_prfx_ndx)
 +            l += 2; // AS prfx
 +    }
 +    return l;
@@ -251,71 +320,108 @@
 -    char fmt[8];
 -    snprintf(fmt, sizeof(fmt), "%s%%-%ds", ipinfo_no?"":"AS", get_iiwidth());
 -    snprintf(fmtinfo, sizeof(fmtinfo), fmt, ipinfo?ipinfo:UNKN);
++    static char fmtinfo[NAMELEN];
++    int len = 0;
 +    int i;
-+    fmtinfo[0] = '\0';
-+    for (i = 0; (i <= II_ITEM_MAX) && (ipinfo_nos[i] >= 0); i++) {
++    for (i = 0; (i < II_ITEM_MAX) && (ipinfo_no[i] >= 0); i++) {
 +        char *ipinfo = get_ipinfo(addr, i);
-+
-+        char fmt[8], buff[NAMELEN+1];
-+        int width = get_width(ipinfo_nos[i]);
-+        if (ipinfo_nos[i] != ipinfo_max) {
++        char fmt[8];
++        int width = origins[origin_no].width[ipinfo_no[i]];
++        if (ipinfo_no[i] != ipinfo_max) {
 +          if (ipinfo)
 +            if (strnlen(ipinfo, NAMELEN) >= width)
-+              width = strnlen(ipinfo, NAMELEN) + 1;
++              width = strnlen(ipinfo, NAMELEN) + 1;	// +1 for space
 +          snprintf(fmt, sizeof(fmt), "%s%%-%ds",
-+              (ipinfo_nos[i] != ii_origins[ii_zone_no].as_prfx_ndx)?"":"AS", width);
-+          snprintf(buff, sizeof(buff), fmt, ipinfo?ipinfo:UNKN);
++              (ipinfo_no[i] == origins[origin_no].as_prfx_ndx) ? "AS" : "", width);
++          snprintf(fmtinfo + len, sizeof(fmtinfo) - len, fmt, ipinfo ? ipinfo : UNKN);
++		  len = strnlen(fmtinfo, sizeof(fmtinfo));
 +        } else {	// empty item
 +          snprintf(fmt, sizeof(fmt), "  %%-%ds", width);
-+          snprintf(buff, sizeof(buff), fmt, "");
++          snprintf(fmtinfo + len, sizeof(fmtinfo) - len, fmt, "");
++		  len = strnlen(fmtinfo, sizeof(fmtinfo));
 +        }
-+        strncat(fmtinfo, buff, sizeof(fmtinfo) - strlen(fmtinfo) -1);
 +    }
      return fmtinfo;
  }
  
-@@ -291,9 +374,9 @@
+-int is_printii(void) {
+-    return ((ipinfo_no >= 0) && (ipinfo_no != ipinfo_max));
+-}
+-
  void asn_open(void) {
-     if (ipinfo_no >= 0) {
+-    if (ipinfo_no >= 0) {
++    if (!hash) {
  #ifdef IIDEBUG
 -        syslog(LOG_INFO, "hcreate(%d)", IIHASH_HI);
 +        syslog(LOG_INFO, "hcreate(%d)", maxTTL);
  #endif
 -        if (!(iihash = hcreate(IIHASH_HI)))
-+        if (!(iihash = hcreate(maxTTL)))
++        if (!(hash = hcreate(maxTTL)))
              perror("ipinfo hash");
      }
  }
-@@ -308,3 +391,32 @@
+ 
+ void asn_close(void) {
+-    if (iihash) {
++    if (hash) {
+ #ifdef IIDEBUG
+         syslog(LOG_INFO, "hdestroy()");
+ #endif
+         hdestroy();
+-        iihash = 0;
++        hash = enable_ipinfo = 0;
      }
  }
  
-+void ii_parse(char *arg) {
++void ii_parsearg(char *arg) {
++    if (!hash)
++        asn_open();
++
++	char* args[II_ITEM_MAX + 1];
++	memset(args, 0, sizeof(args));
++	args[0] = strdup(arg);
++    split_with_sep((char**)&args, II_ITEM_MAX + 1, II_ARGS_SEP);
++
++    if (args[0]) {
++        int no = atoi(args[0]);
++        if ((no > 0) && (no <= (sizeof(origins)/sizeof(origins[0]))))
++            origin_no = no - 1;
++    }
++
 +    int i, j;
-+    for (i = 0; i <= II_ITEM_MAX; i++)
-+	ipinfo_nos[i] = -1;
-+    items_a[0] = strdup(arg);
-+    split_with_sep(&items_a, II_ARGS_SEP);
++    for (i = 1, j = 0; (j < II_ITEM_MAX) && (i <= II_ITEM_MAX); i++)
++		if (args[i]) {
++    	    int no = atoi(args[i]);
++       	    if ((no > 0) && (no <= origins[origin_no].fields))
++       	        ipinfo_no[j++] = no - 1;
++    	}
++    for (i = j; i < II_ITEM_MAX; i++)
++        ipinfo_no[i] = -1;
++	if (ipinfo_no[0] < 0)
++		ipinfo_no[0] = 0;
 +
-+    int no;
-+    if (items_a[0]) {
-+        no = atoi(items_a[0]) -1;
-+        if ((no >= 0) && (no < (sizeof(ii_origins)/sizeof(ii_origins[0]))))
-+        ii_zone_no = no;
-+    }
-+	if (ii_zone_no < 0)
-+		ii_zone_no = 0;
-+
-+    for (i = 1, j = 0; (i <= II_ITEM_MAX) && items_a[i]; i++) {
-+        no = atoi(items_a[i]) -1;
-+        if (no >= 0)
-+            ipinfo_nos[j++] = no;
-+    }
-+	if (ipinfo_no < 0)
-+		ipinfo_no = 0;
-+    free(items_a[0]);
++    free(args[0]);
++	enable_ipinfo = 1;
 +#ifdef IIDEBUG
-+    syslog(LOG_INFO, "ii origin: \"%s\" \"%s\"", ii_origins[ii_zone_no].ip4zone, ii_origins[ii_zone_no].ip6zone);
++    syslog(LOG_INFO, "ii origin: \"%s\" \"%s\"", origins[origin_no].ip4zone, origins[origin_no].ip6zone);
 +#endif
++}
++
++void ii_action(int action_asn) {
++	if (!hash)
++		asn_open();
++
++	if (ipinfo_no[0] >= 0) {
++		int i;
++		for (i = 0; (i < II_ITEM_MAX) && (ipinfo_no[i] >= 0); i++) {
++			ipinfo_no[i]++;
++			if (ipinfo_no[i] > ipinfo_max)
++				ipinfo_no[i] = 0;
++		}
++        enable_ipinfo = (ipinfo_no[0] != ipinfo_max) ? 1 : 0;
++	} else	// init
++		ii_parsearg(action_asn ? "2" : "");
++		// action asn:	origin 2:	asn.routeviews.org
++		// action ipinfo:	default origin:	origin.asn.cymru.com
 +}
 +

@@ -1,6 +1,6 @@
---- select.c.orig	2014-04-20 21:28:39.000000000 +0300
-+++ select.c	2014-04-22 20:44:05.000000000 +0300
-@@ -239,17 +239,27 @@
+--- select.c.orig	2014-05-29 12:31:51.000000000 +0300
++++ select.c	2014-05-14 11:15:04.000000000 +0300
+@@ -239,19 +239,13 @@
  	}
  	break;
  #ifdef IPINFO
@@ -16,26 +16,13 @@
 -          ipinfo_no = ipinfo_no?0:ipinfo_max;
 -	break;
 +	case ActionII:
-+		if (ipinfo_no >= 0) {
-+			int i;
-+			for (i = 0; (i <= II_ITEM_MAX) && (ipinfo_nos[i] >= 0); i++) {
-+				ipinfo_nos[i]++;
-+				if (ipinfo_nos[i] > ipinfo_max)
-+					ipinfo_nos[i] = 0;
-+			}
-+		} else {
-+			ii_parse("");	// origin: origin.asn.cymru.com
-+			asn_open();
-+		}
++		ii_action(0);
 +		break;
 +	case ActionAS:
-+		if (ipinfo_no >= 0)
-+			ipinfo_no = ipinfo_no?0:ipinfo_max;
-+		else {
-+			ii_parse("2");	// origin: asn.routeviews.org
-+			asn_open();
-+		}
++		ii_action(1);
 +		break;
  #endif
- 
+-
        case ActionScrollDown:
+         display_offset += 5;
+ 	break;

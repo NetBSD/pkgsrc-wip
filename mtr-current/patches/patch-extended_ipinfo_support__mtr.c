@@ -1,5 +1,5 @@
---- mtr.c.orig	2014-04-20 21:28:39.000000000 +0300
-+++ mtr.c	2014-04-22 21:39:25.000000000 +0300
+--- mtr.c.orig	2014-05-29 12:31:51.000000000 +0300
++++ mtr.c	2014-05-29 14:21:02.000000000 +0300
 @@ -291,8 +291,8 @@
      { "inet", 0, 0, '4' },	/* IPv4 only */
      { "inet6", 0, 0, '6' },	/* IPv6 only */
@@ -11,27 +11,34 @@
  #endif
      { 0, 0, 0, 0 }
    };
-@@ -458,12 +458,12 @@
+@@ -458,17 +458,15 @@
  #endif
  #ifdef IPINFO
      case 'y':
 -      ipinfo_no = atoi (optarg);
-+      ii_parse(optarg);
-       if (ipinfo_no < 0)
-         ipinfo_no = 0;
+-      if (ipinfo_no < 0)
+-        ipinfo_no = 0;
++      ii_parsearg(optarg);
        break;
      case 'z':
 -      ipinfo_no = 0;
-+      ii_parse("2,1"); // routeviews.org origin
++      ii_parsearg("2");	// routeviews.org origin
        break;
  #else
      case 'y':
-@@ -577,7 +577,7 @@
+     case 'z':
+-      fprintf( stderr, "IPINFO not enabled.\n" );
++      fprintf(stderr, "IPINFO not enabled.\n");
+       break;
+ #endif
+     }
+@@ -577,8 +575,7 @@
             "\t\t[--csv|-C] [--raw] [--xml] [--split] [--mpls] [--no-dns] [--show-ips]\n"
             "\t\t[--address interface] [--filename=FILE|-F]\n" /* BL */
  #ifdef IPINFO
 -           "\t\t[--ipinfo=item_no|-y item_no]\n"
-+           "\t\t[--ipinfo|-y origin,fields]\n"
-            "\t\t[--aslookup|-z]\n"
+-           "\t\t[--aslookup|-z]\n"
++           "\t\t[--aslookup|-z] [--ipinfo|-y origin,fields]\n"
  #endif
             "\t\t[--psize=bytes/-s bytes] [--order fields]\n"            /* ok */
+            "\t\t[--report-wide|-w] [--inet] [--inet6] [--max-ttl=NUM] [--first-ttl=NUM]\n"
