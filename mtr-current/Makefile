@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2014/04/25 09:16:54 yvs4sf Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/29 10:56:49 yvs4sf Exp $
 
 CATEGORIES=	net
 PKGBASE=	mtr
 PKGVERSION=	0.85.99
-PKGREVISION=	9
+PKGREVISION=	10
 #
 PKGNAME=	${PKGBASE}-${PKGVERSION}
 DISTNAME=	${PKGBASE}-${GITVERSION}
 #
-# non-successive package versions workaround:
-#
-# nb6:	git:51dafca
+# git:9e14fed
 #	+ patch https://bugs.launchpad.net/mtr/+bug/701514
 #	+ fix https://bugs.launchpad.net/mtr/+bug/1189221
 #
@@ -18,7 +16,7 @@ MASTER_SITES=	https://github.com/${GITHUB_USER}/${PKGBASE}/tarball/${GITVERSION}
 FETCH_USING=	curl
 WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITVERSION}
 
-GITVERSION=	b46c559
+GITVERSION=	9e14fed
 GITHUB_USER=	traviscross
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
