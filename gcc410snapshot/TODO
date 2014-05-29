@@ -1,14 +1,4 @@
-1) Option gcc-graphite is no longer set as default. The necessary isl
-from pkgsrc is incompatible. This has been resolved by using isl/cloog
-in source downloaded from gcc/infrastructure. But right now this only works
-with --disable-bootstrap on NetBSD. Make this work for a full bootstrap.
-  In my opinion graphite is obsolete. I once got a reduction of runtime
-from 6 hours to 4 hours by using -ftree-loop-linear from graphite for a big
-simulation code. The runtime of some loops were reduced by a factor of ten
-by reordering the loops into fortran order. But you only get this speedups
-with bad fortran code. Using profiling or -fopt-info-missed would quickly
-detect the slow loops as well. The picture might change with the simd
-option of OpenMP 4.0, available for C and partly added for gfortran. 
+1) Send patches upstream.
  
 2) Help adding missing long double and complex support in NetBSD.
 
