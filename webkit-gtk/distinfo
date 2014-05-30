@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2014/05/15 20:21:38 leot1990 Exp $
+$NetBSD: distinfo,v 1.11 2014/05/30 19:16:00 leot1990 Exp $
 
-SHA1 (webkitgtk-2.4.2.tar.xz) = 74faecd6b0a82cd8f92b571e593c95c5afae5e2c
-RMD160 (webkitgtk-2.4.2.tar.xz) = a7e40b85f5eab408288d2099e9dc62f1cd7c83a1
-Size (webkitgtk-2.4.2.tar.xz) = 9837440 bytes
+SHA1 (webkitgtk-2.4.3.tar.xz) = 4eeced5e4334e8243b6bbedeb5c1af1a735b0704
+RMD160 (webkitgtk-2.4.3.tar.xz) = ed3ef22ddabc5328234af2c6365d5a5fe1866564
+Size (webkitgtk-2.4.3.tar.xz) = 9841564 bytes
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 69221390dd5fdac55abf341c5ae3a03267e38ae6
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = fdd31fcf6c745394499570397c82fe3dfce02e1d
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 67f66ca254f958c0650249485a64982b40f92621
@@ -14,6 +14,5 @@ SHA1 (patch-Tools_DumpRenderTree_gtk_DumpRenderTree.cpp) = 994d1671ff2d8e3a961b9
 SHA1 (patch-ai) = 8e174c68e4ba06fdd6edd64fd6df3328faf9055f
 SHA1 (patch-aj) = d35a4b26e2104cdf7f3be81b020aabb4779dfaad
 SHA1 (patch-ak) = 477fd5c05abee8f47842a6ad5aba00e3e4628c45
-SHA1 (patch-al) = 7f177fe4966c0316079f0ce6a6b5b7cee65cf37c
 SHA1 (patch-am) = e0a350feb14d739010000e3887971bd535a647a7
-SHA1 (patch-configure) = 8407abfc5617f4476633fdd78ca79975bb55edaa
+SHA1 (patch-configure) = 37322b62ab8f42ecf230c4be8cc27d453c8d688f
