@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5780 2014/05/30 11:22:16 fhajny Exp $
+# $Id: Makefile,v 1.5781 2014/05/31 14:28:53 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3443,7 +3443,6 @@ SUBDIR+=	ufc
 SUBDIR+=	uffizi
 SUBDIR+=	uget
 SUBDIR+=	uhd-git
-SUBDIR+=	uim-chewing
 SUBDIR+=	ukncbtl
 SUBDIR+=	umix
 SUBDIR+=	umurmur
