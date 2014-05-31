@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2014/05/25 21:59:28 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2014/05/31 21:36:31 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-Lucu
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.hs-Lucu?=	../../wip/hs-Lucu
 
 .include "../../wip/hs-HsOpenSSL/buildlink3.mk"
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
-.include "../../wip/hs-base64-bytestring/buildlink3.mk"
+.include "../../converters/hs-base64-bytestring/buildlink3.mk"
 .include "../../wip/hs-haskell-src/buildlink3.mk"
 .include "../../wip/hs-hxt/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"

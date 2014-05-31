@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5781 2014/05/31 14:28:53 obache Exp $
+# $Id: Makefile,v 1.5782 2014/05/31 21:36:31 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -953,7 +953,6 @@ SUBDIR+=	hs-ascii
 SUBDIR+=	hs-attempt
 SUBDIR+=	hs-attoparsec
 SUBDIR+=	hs-base-unicode-symbols
-SUBDIR+=	hs-base64-bytestring
 SUBDIR+=	hs-basic-prelude
 SUBDIR+=	hs-bifunctors
 SUBDIR+=	hs-binary-strict
@@ -1111,7 +1110,6 @@ SUBDIR+=	hs-rosezipper
 SUBDIR+=	hs-rosezipper1
 SUBDIR+=	hs-safe
 SUBDIR+=	hs-safer-file-handles
-SUBDIR+=	hs-scientific
 SUBDIR+=	hs-semigroupoid-extras
 SUBDIR+=	hs-semigroupoids
 SUBDIR+=	hs-semigroups

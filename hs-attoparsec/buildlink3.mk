@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/05/18 21:33:25 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/05/31 21:36:31 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-attoparsec
 
@@ -8,7 +8,7 @@ HS_ATTOPARSEC_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-attoparsec+=	hs-attoparsec>=0.11.1
 BUILDLINK_PKGSRCDIR.hs-attoparsec?=	../../wip/hs-attoparsec
 
-.include "../../wip/hs-scientific/buildlink3.mk"
+.include "../../math/hs-scientific/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
 .endif	# HS_ATTOPARSEC_BUILDLINK3_MK
 
