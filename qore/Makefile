@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/31 11:42:04 nros Exp $
+# $NetBSD: Makefile,v 1.13 2014/05/31 19:12:07 nros Exp $
 
 DISTNAME=	qore-0.8.10
 CATEGORIES=	lang
@@ -31,6 +31,7 @@ post-install:
 .include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
