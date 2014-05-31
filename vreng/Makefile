@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/07 17:41:44 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/05/31 15:57:20 thomasklausner Exp $
 
 #DISTNAME=	vreng-6.8.3
 DISTNAME=	vreng-6.8.12
@@ -41,7 +41,7 @@ LIBS.SunOS+=		-R${LOCALBASE}/lib/mysql
 .include "../../wip/ubit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 #.include "../../lang/ocaml/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

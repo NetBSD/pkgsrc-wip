@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/11/21 19:08:56 absd Exp $
+# $NetBSD: Makefile,v 1.15 2014/05/31 15:57:19 thomasklausner Exp $
 #
 
 .include "../../wip/kaffe/Makefile.common"
@@ -33,7 +33,7 @@ pre-build:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../wip/kaffe/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

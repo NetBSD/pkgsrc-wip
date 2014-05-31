@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/19 16:49:27 leot1990 Exp $
+# $NetBSD: Makefile,v 1.8 2014/05/31 15:57:20 thomasklausner Exp $
 #
 
 DISTNAME=	sxiv-1.2
@@ -29,5 +29,5 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

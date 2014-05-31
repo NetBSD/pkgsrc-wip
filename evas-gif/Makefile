@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 19:29:59 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2014/05/31 15:57:19 thomasklausner Exp $
 
 PKGNAME=	evas-gif-${EVAS_VERSION}
 
@@ -15,5 +15,5 @@ MAKE_FLAGS+=	module_la_DEPENDENCIES= \
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

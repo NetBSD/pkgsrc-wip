@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:34 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/05/31 15:57:19 thomasklausner Exp $
 #
 
 DISTNAME=		gfontview-0.5.0
@@ -18,6 +18,6 @@ CONFIGURE_ARGS+=	--with-fontdir=${LOCALBASE}/share/ghostscript/fonts
 
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../graphics/freetype-lib/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

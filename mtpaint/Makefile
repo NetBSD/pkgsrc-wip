@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/12/27 12:40:35 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/05/31 15:57:20 thomasklausner Exp $
 #
 
 DISTNAME=	mtpaint-3.40
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

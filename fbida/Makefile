@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/04/04 18:10:05 rhialto Exp $
+# $NetBSD: Makefile,v 1.16 2014/05/31 15:57:19 thomasklausner Exp $
 #
 
 DISTNAME=		fbida-2.09
@@ -32,7 +32,7 @@ post-extract:
 .include "../../graphics/png/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/motif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

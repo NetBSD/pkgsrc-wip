@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/05/12 13:18:11 othyro Exp $
+# $NetBSD: options.mk,v 1.4 2014/05/31 15:57:20 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5-libs
 PKG_SUPPORTED_OPTIONS=	alsa cups dbus debug directfb fontconfig gif glib gstreamer gtk2 iconv icu jpeg mysql opengl openssl pgsql png pulseaudio sqlite sqlite3 tds tests x11 xcb xcursor xext xfixes xim xinerama xrandr xrender xvideo
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	-no-fontconfig
 .endif
 
 .if !empty(PKG_OPTIONS:Mgif)
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	-no-gif
 .endif

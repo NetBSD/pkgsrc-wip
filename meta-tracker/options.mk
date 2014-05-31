@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2013/12/21 14:44:17 noud4 Exp $
+# $NetBSD: options.mk,v 1.9 2014/05/31 15:57:20 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.meta-tracker
 PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca libsecret gnome
@@ -105,7 +105,7 @@ CONFIGURE_ARGS+=	--enable-poppler
 
 .if !empty(PKG_OPTIONS:Mgif)
 PLIST.gif=		yes
-.include "../../mk/giflib.buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
