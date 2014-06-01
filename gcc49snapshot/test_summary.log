@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: branches/gcc-4_9-branch revision 210728
+LAST_UPDATED: Obtained from SVN: branches/gcc-4_9-branch revision 211035
 
 Native configuration is x86_64--netbsd
 
@@ -25,17 +25,23 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++1y (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		83074
+# of expected passes		83092
 # of unexpected failures	12
 # of expected failures		445
 # of unresolved testcases	3
 # of unsupported tests		3029
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.1 20140521 (prerelease) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.1 20140528 (prerelease) (GCC) 
 
 		=== gcc tests ===
 
 
 Running target unix
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O1  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O2  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O3 -fomit-frame-pointer -funroll-loops  execution test
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
 FAIL: gcc.dg/builtins-55.c (test for excess errors)
@@ -370,13 +376,13 @@ UNRESOLVED: gcc.target/i386/long-double-128-9.c compilation failed to produce ex
 
 		=== gcc Summary ===
 
-# of expected passes		104048
-# of unexpected failures	207
+# of expected passes		104096
+# of unexpected failures	210
 # of unexpected successes	40
 # of expected failures		263
 # of unresolved testcases	84
 # of unsupported tests		1884
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.1 20140521 (prerelease) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.1 20140528 (prerelease) (GCC) 
 
 		=== gfortran tests ===
 
@@ -457,7 +463,7 @@ FAIL: gfortran.dg/nint_2.f90  -O0  execution test
 # of expected failures		52
 # of unresolved testcases	25
 # of unsupported tests		104
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.1 20140521 (prerelease) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.1 20140528 (prerelease) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -469,7 +475,7 @@ Running target unix
 # of expected passes		1441
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.1 20140521 (prerelease) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.1 20140528 (prerelease) (GCC) 
 
 		=== objc tests ===
 
@@ -485,7 +491,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.1 20140521 (prerelease) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.1 20140528 (prerelease) (GCC) 
 
 		=== libatomic tests ===
 
@@ -500,16 +506,12 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.c++/cancel-parallel-2.C execution test
-WARNING: program timed out.
-FAIL: libgomp.fortran/do2.f90  -Os  execution test
-WARNING: program timed out.
-FAIL: libgomp.graphite/force-parallel-6.c execution test
+FAIL: libgomp.c++/affinity-1.C execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		2421
-# of unexpected failures	3
+# of expected passes		2423
+# of unexpected failures	1
 # of unsupported tests		3
 		=== libitm tests ===
 
@@ -588,17 +590,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8735
+# of expected passes		8739
 # of unexpected failures	52
 # of expected failures		40
 # of unresolved testcases	5
 # of unsupported tests		682
 
-Compiler version: 4.9.1 20140521 (prerelease) (GCC) 
+Compiler version: 4.9.1 20140528 (prerelease) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-nls --with-libiconv-prefix=/usr --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-libquadmath --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
 EOF
-Mail -s "Results for 4.9.1 20140521 (prerelease) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.9.1 20140528 (prerelease) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
