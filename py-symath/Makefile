@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/26 21:46:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:47 thomasklausner Exp $
 
 DISTNAME=	symath-0.1.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://github.com/bniemczyk/symbolic
 COMMENT=	symbolic mathematics for python
 LICENSE=	2-clause-bsd
 
-FETCH_USING=    curl
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:29 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:35 thomasklausner Exp $
 #
 
 DISTNAME=	elementary-icon-theme-2.7.1
@@ -11,7 +11,6 @@ COMMENT=	Simple and appealing Tango-styled icon theme
 #LICENSE=	# TODO: (see mk/license.mk)
 
 # Needed for launchpad
-FETCH_USING=	curl
 
 WRKSRC=		${WRKDIR}/elementary-icon-theme
 NO_BUILD=	yes

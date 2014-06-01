@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/11/15 18:51:53 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:36 thomasklausner Exp $
 #
 
 DISTNAME=	libdbusmenu-12.10.2
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://launchpad.net/dbusmenu/12.10/12.10.2/+download/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/dbusmenu/

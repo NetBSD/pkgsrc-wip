@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/12/06 11:31:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 12:49:43 thomasklausner Exp $
 #
 
 DISTNAME=	mocker-1.1
@@ -6,7 +6,6 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	https://launchpad.net/mocker/trunk/1.1/+download/
-FETCH_USING=	curl
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com

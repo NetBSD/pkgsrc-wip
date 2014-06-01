@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 12:49:43 thomasklausner Exp $
 
 DISTNAME=	mlstats-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG=	yes

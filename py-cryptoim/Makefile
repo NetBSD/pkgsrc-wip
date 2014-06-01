@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/02/03 23:31:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:40 thomasklausner Exp $
 
 DISTNAME=	CryptoIM-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	security
 MASTER_SITES=	https://pypi.python.org/packages/source/C/CryptoIM/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/CryptoIM/

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/02/03 21:25:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:46 thomasklausner Exp $
 
 DISTNAME=	sleekxmpp-1.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat  python
 MASTER_SITES=	https://pypi.python.org/packages/source/s/sleekxmpp/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/fritzy/SleekXMPP

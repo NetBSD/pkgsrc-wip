@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/01/14 10:50:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:47 thomasklausner Exp $
 
 DISTNAME=	pytmatrix-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/jleinonen/pytmatrix/releases/download/0.2.1/
 EXTRACT_SUFX=	.zip
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/jleinonen/pytmatrix

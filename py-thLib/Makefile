@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/11/05 15:48:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:47 thomasklausner Exp $
 
 DISTNAME=	thLib-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/t/thLib/
 EXTRACT_SUFX=	.zip#md5=4539622094282799aec58c3470923e8a
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://work.thaslwanter.at/

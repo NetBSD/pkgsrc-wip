@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/01/11 21:34:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:38 thomasklausner Exp $
 
 DISTNAME=	bitsets-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	wip
 MASTER_SITES=	https://pypi.python.org/packages/source/b/bitsets/
 EXTRACT_SUFX=	.zip
-FETCH_USING=	curl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/xflr6/bitsets	

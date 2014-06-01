@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/04/25 21:19:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 12:49:37 thomasklausner Exp $
 
 DISTNAME=	${VERS}
 PKGNAME=	megaglest-${VERS}
 VERS=		3.9.1
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/MegaGlest/megaglest-source/archive/
-FETCH_USING=	wget
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://megaglest.org/

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2013/12/06 11:31:34 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/01 12:49:35 thomasklausner Exp $
 #
 
 DISTNAME=	bibliographer-0.1.3
 PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://launchpad.net/bibliographer/trunk/0.1.3/+download/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://launchpad.net/bibliographer

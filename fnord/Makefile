@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/12/12 10:59:17 gschwarz Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/01 12:49:35 thomasklausner Exp $
 
 DISTNAME=	fnord-1.11
 CATEGORIES=	www
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 # web server Gatling running at www.fefe.de is incompatible with BSD ftp
 # cf. PR#45516
-FETCH_USING=	wget
 USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/12/05 09:38:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:46 thomasklausner Exp $
 #
 
 DISTNAME=	storm-0.16.0
@@ -13,7 +13,6 @@ HOMEPAGE=	https://storm.canonical.com/
 COMMENT=	Object-relational mapper (ORM) for Python
 LICENSE=	gnu-lgpl-v2.1
 
-FETCH_USING=	curl
 
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} test )

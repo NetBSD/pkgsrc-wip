@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/01 12:49:41 thomasklausner Exp $
 
 DISTNAME=	dreampie-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://launchpad.net/dreampie/trunk/1.1/+download/
-FETCH_USING=	curl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://dreampie.sourceforge.net/

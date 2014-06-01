@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/09/01 16:23:40 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/01 12:49:35 thomasklausner Exp $
 
 DISTNAME=	v${PORTVERSION}
 DIST_SUBDIR=	bowtie
@@ -17,7 +17,6 @@ USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake perl:run
 
 # FETCH_ARGS+=	-F
-FETCH_USING=	curl
 
 INSTALLATION_DIRS=	bin share/bowtie
 

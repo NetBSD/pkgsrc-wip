@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/01 18:39:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:40 thomasklausner Exp $
 
 DISTNAME=	pycountry-0.19
 PKGNAME=        ${PYPKGPREFIX}-country-0.19
@@ -11,7 +11,6 @@ HOMEPAGE=	https://pypi.python.org/packages/source/p/pycountry/
 COMMENT=	ISO country, subdivision, language, currency and script
 LICENSE=	gnu-lgpl-v2.1
 
-FETCH_USING=	curl
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none

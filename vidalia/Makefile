@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/01/24 23:35:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/01 12:49:49 thomasklausner Exp $
 #
 
 DISTNAME=	vidalia-0.2.12
@@ -11,7 +11,6 @@ HOMEPAGE=	https://www.torproject.org/vidalia/
 COMMENT=	Graphical Tor controller based on Qt 4.x
 LICENSE=	gnu-gpl-v2
 
-FETCH_USING=		wget
 FETCH_BEFORE_ARGS=	--no-check-certificate
 
 USE_CMAKE=	yes

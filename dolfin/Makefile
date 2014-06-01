@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/06/14 18:43:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2014/06/01 12:49:35 thomasklausner Exp $
 #
 
 DISTNAME=	dolfin-${MMVERSION}.0
@@ -54,7 +54,6 @@ CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
 
 PKGCONFIG_OVERRIDE+=	cmake/templates/dolfin.pc.in
 
-FETCH_USING=		curl
 
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/06/14 18:43:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/01 12:49:47 thomasklausner Exp $
 #
 
 DISTNAME=	ufl-${MMVERSION}.0
@@ -10,7 +10,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/ufl
 COMMENT=	Unified Form Language for finite element discretizations
 
-FETCH_USING=	curl
 
 LICENSE=	gnu-lgpl-v3
 

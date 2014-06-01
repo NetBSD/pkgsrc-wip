@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/03/04 21:58:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 12:49:48 thomasklausner Exp $
 #
 
 DISTNAME=	rstudio-rstudio-v0.95.264-0-ge31bd49
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=		gin-1.5:../../wip/gin
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 EXTRACT_USING=	gtar
 

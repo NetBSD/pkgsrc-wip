@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/19 20:34:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 12:49:46 thomasklausner Exp $
 
 DISTNAME=	sunpy-0.3.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-fits>=2.4.0:../../graphics/py-fits
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.11.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 
-FETCH_USING=	curl
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 

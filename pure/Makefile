@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/03/07 16:26:40 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/01 12:49:38 thomasklausner Exp $
 #
 
 DISTNAME=	pure-0.59
 CATEGORIES=	lang
 MASTER_SITES=	https://bitbucket.org/purelang/pure-lang/downloads/
-FETCH_USING=	curl
 
 MAINTAINER=	jan.smydke@jh-inst.cas.cz
 HOMEPAGE=	http://purelang.bitbucket.org/

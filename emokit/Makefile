@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/08 12:33:23 nsloss Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:35 thomasklausner Exp $
 DISTNAME=	emokit-0.5
 EXTRACT_SUFX=	.zip
 CATEGORIES=	devel
@@ -9,7 +9,6 @@ HOMEPAGE=	https://www.openyou.org
 MASTER_SITES=	-https://github.com/openyou/emokit/archive/0.5.zip
 COMMENT=	Emotive EPOC EEG development library
 
-FETCH_USING=	curl
 AUTO_MKDIRS=	yes
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

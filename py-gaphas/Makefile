@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/01 12:49:41 thomasklausner Exp $
 
 DISTNAME=	gaphas-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/g/gaphas/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gaphor.sourceforge.net/

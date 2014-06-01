@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/01 12:49:43 thomasklausner Exp $
 
 DISTNAME=	pymongo-2.6.3
 PKGNAME=	${PYPKGPREFIX}-mongo-2.6.3
 CATEGORIES=	databases devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pymongo/
-FETCH_USING=	curl
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://docs.mongodb.org/ecosystem/drivers/python/

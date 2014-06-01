@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/21 16:30:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:44 thomasklausner Exp $
 #
 
 DISTNAME=	pyface-4.2.0
@@ -11,7 +11,6 @@ HOMEPAGE=	https://www.enthought.com/repo/ets/
 COMMENT=	Traits-capable windowing framewor
 LICENSE=	modified-bsd
 
-FETCH_USING=	curl
 
 USE_LANGUAGES=	# none
 

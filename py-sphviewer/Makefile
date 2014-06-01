@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/01/14 10:37:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:46 thomasklausner Exp $
 
 DISTNAME=	py-sphviewer-0.88
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	graphics math python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/py-sphviewer/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://code.google.com/p/py-sphviewer/

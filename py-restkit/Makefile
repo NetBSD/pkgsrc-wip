@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/01 12:49:45 thomasklausner Exp $
 
 DISTNAME=	restkit-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	https://pypi.python.org/packages/source/r/restkit/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/benoitc/restkit/

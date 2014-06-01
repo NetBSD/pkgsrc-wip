@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/12/06 11:31:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 12:49:43 thomasklausner Exp $
 #
 
 DISTNAME=	lazr.uri-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://launchpad.net/lazr.uri/trunk/1.0.2/+download/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/lazr.uri

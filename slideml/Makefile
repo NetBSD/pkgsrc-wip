@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/03 19:41:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 12:49:48 thomasklausner Exp $
 
 DISTNAME=	slideml-1.1.0
 CATEGORIES=	graphics
@@ -22,7 +22,6 @@ INSTALLATION_DIRS=		bin
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 DATA_DIR =		${DESTDIR}${PREFIX}/share/slideml
 DOC_DIR =		${DESTDIR}${PREFIX}/share/doc/slideml

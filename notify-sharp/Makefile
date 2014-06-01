@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/06/17 12:45:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/01 12:49:37 thomasklausner Exp $
 #
 
 DISTNAME=	notify-sharp_0.4.0~r3032.orig
@@ -6,7 +6,6 @@ PKGNAME=	${DISTNAME:S/_/-/1:S/~//1:S/.orig//1}
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://launchpad.net/ubuntu/+archive/primary/+files/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.ndesk.org/NotifySharp

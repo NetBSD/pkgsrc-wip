@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2012/12/26 16:40:34 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:35 thomasklausner Exp $
 #
 
 DISTNAME=	v2.12.9
 PKGNAME=	emesene${DISTNAME:S/v/-/1}
 CATEGORIES=	chat
 MASTER_SITES=	https://github.com/emesene/emesene/archive/
-FETCH_USING=	curl
 EXTRACT_USING=	gtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/02/07 22:17:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:44 thomasklausner Exp $
 
 DISTNAME=	pathtools-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pathtools/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/gorakhargosh/pathtools

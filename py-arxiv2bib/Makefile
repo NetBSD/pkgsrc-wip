@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/01 12:49:38 thomasklausner Exp $
 
 DISTNAME=	arxiv2bib-1.0.5
 CPKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	https://pypi.python.org/packages/source/a/arxiv2bib/
 EXTRACT_SUFX=	.zip
-FETCH_USING=	curl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://nathan11g.github.com/arxiv2bib

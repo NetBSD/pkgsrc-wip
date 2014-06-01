@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 21:48:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:47 thomasklausner Exp $
 
 DISTNAME=	tardis-sn-0.9rc1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=	tardis_sn-0.9rc1
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/t/tardis-sn/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://tardis.readthedocs.org/

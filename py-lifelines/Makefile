@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 16:32:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:43 thomasklausner Exp $
 
 DISTNAME=	lifelines-0.2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/l/lifelines/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/packages/source/l/lifelines/

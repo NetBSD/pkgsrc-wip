@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/02/05 21:14:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:44 thomasklausner Exp $
 
 DISTNAME=	oset-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/o/oset/
-FETCH_USING=	curl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://gitorious.com/sleipnir/python-oset

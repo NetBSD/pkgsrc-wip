@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 17:17:31 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/01 12:49:48 thomasklausner Exp $
 #
 
 DISTNAME=	termit-2.9.1
@@ -16,7 +16,6 @@ USE_TOOLS+=	gmake
 USE_CMAKE=	yes
 
 # fetch from https - fails with ftp
-FETCH_USING=	curl
 
 ## vars to handle config files
 EGDIR=				${PREFIX}/share/examples/termit

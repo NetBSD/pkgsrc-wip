@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/01/15 19:58:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:45 thomasklausner Exp $
 
 DISTNAME=	scikit-aero-v0.1.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/v//}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-aero/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/Pybonacci/scikit-aero

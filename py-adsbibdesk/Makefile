@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/05/01 17:58:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:38 thomasklausner Exp $
 
 DISTNAME=	adsbibdesk-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	https://pypi.python.org/packages/source/a/adsbibdesk/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.jonathansick.ca/adsbibdesk/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2013/05/02 11:14:00 imilh Exp $
+# $NetBSD: Makefile,v 1.68 2014/06/01 12:49:38 thomasklausner Exp $
 #
 
 VERSION=		6b6f6d20dffc46d809098951db87950a950eaf86
@@ -6,7 +6,6 @@ DISTNAME=		${VERSION}
 PKGNAME=		pkgin-20130502
 CATEGORIES=		pkgtools
 MASTER_SITES=		https://github.com/NetBSDfr/pkgin/archive/
-FETCH_USING=		curl
 
 MAINTAINER=		imil@home.imil.net
 HOMEPAGE=		http://pkgin.net/

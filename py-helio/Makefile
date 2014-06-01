@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/09/13 23:32:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:42 thomasklausner Exp $
 
 DISTNAME=	helio-1.0.0b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://pypi.python.org/packages/source/h/helio/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/yellowpagesgroup/Helio

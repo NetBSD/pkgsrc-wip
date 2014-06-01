@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:38:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 12:49:46 thomasklausner Exp $
 
 DISTNAME=	SphinxReport-2.0
 PKGNAME=        ${PYPKGPREFIX}-sphinxreport-2.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://pypi.python.org/packages/source/S/SphinxReport/
-FETCH_USING=    curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/sphinx-report/

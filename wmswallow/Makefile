@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/19 12:39:53 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/01 12:49:49 thomasklausner Exp $
 #
 
 DISTNAME=	wmswallow
@@ -7,7 +7,6 @@ PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://dockapps.windowmaker.org/download.php/id/141/
 EXTRACT_SUFX=	.tar.Z
-FETCH_USING=	wget
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dockapps.windowmaker.org/file.php/id/102

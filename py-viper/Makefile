@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/23 15:03:23 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/01 12:49:47 thomasklausner Exp $
 #
 
 DISTNAME=	viper-${MMVERSION}.1
@@ -11,7 +11,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/fenics-viper
 COMMENT=	Scientific plotter and run-time visualization module
 
-FETCH_USING=	curl
 
 LICENSE=	gnu-lgpl-v3
 

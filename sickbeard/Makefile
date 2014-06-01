@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:38:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 12:49:48 thomasklausner Exp $
 
 DISTNAME=	sickbeard-${DISTVERSION}
 COMMIT_SHA=	91c428a43765a1476ec268f73cd62051a64bf4e0
 DISTVERSION= ${COMMIT_SHA:C/([a-f0-9]{7}).*/\1/}
 CATEGORIES=	news
 MASTER_SITES=	-https://github.com/midgetspy/Sick-Beard/tarball/${COMMIT_SHA}
-FETCH_USING= curl
 # DISTFILE is the the filename to save the download as
 DISTFILE= ${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tgz

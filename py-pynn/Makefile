@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/09/20 10:12:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:44 thomasklausner Exp $
 
 DISTNAME=	PyNN-0.7.5
 PKGNAME=	${PYPKGPREFIX}-pynn-0.7.5
 CATEGORIES=	biology
 MASTER_SITES=	https://pypi.python.org/packages/source/P/PyNN/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://neuralensemble.org/trac/PyNN/wiki

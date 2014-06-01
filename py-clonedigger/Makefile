@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2013/12/07 15:28:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/01 12:49:39 thomasklausner Exp $
 
 DISTNAME=	clonedigger-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/c/clonedigger/
-FETCH_USING=	curl
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://clonedigger.sourceforge.net/

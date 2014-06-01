@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/22 17:01:46 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:37 thomasklausner Exp $
 #
 
 DISTNAME=	macro11-2013.2
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/shattered/macro11/
 COMMENT=	Portable replacement of MACRO-11 (PDP-11 assembler)
 #LICENSE=	# TODO: (see mk/license.mk)
 
-FETCH_USING=	curl
 WRKSRC=		${WRKDIR}/macro11-${DISTNAME}
 NO_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/08/20 19:38:30 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:37 thomasklausner Exp $
 #
 
 DISTNAME=	58d69ab3cdb242d7fe4e29e85dbae9183e25d821
@@ -10,7 +10,6 @@ WRKSRC=		${WRKDIR}/OpenXcom-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	https://github.com/SupSuper/OpenXcom/archive/
-FETCH_USING=	curl
 
 MAINTAINER=	airhead@users.sourceforge.net
 HOMEPAGE=	http://www.openxcom.org/

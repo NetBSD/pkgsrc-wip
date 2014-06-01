@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/10 11:16:07 nsloss Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:38 thomasklausner Exp $
 
 DISTNAME=	plasma-widget-menubar-0.2.0
 CATEGORIES=	x11
@@ -10,7 +10,6 @@ MAINTAINER=	nathanialsloss@yahoo.com.au
 
 MASTER_SITES=	-https://launchpad.net/plasma-widget-menubar/trunk/0.2.0/+download/plasma-widget-menubar-0.2.0.tar.bz2
 EXTRACT_SUFX=	.tar.bz2
-FETCH_USING=	curl
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl

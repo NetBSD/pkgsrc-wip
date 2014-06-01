@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/10/09 12:18:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/01 12:49:35 thomasklausner Exp $
 
 DISTNAME=	fcgiwrap-1.1.0
 CATEGORIES=	www
@@ -9,7 +9,6 @@ HOMEPAGE=	http://nginx.localdomain.pl/wiki/FcgiWrap
 COMMENT=	FastCGI wrapper for plain CGI scripts
 LICENSE=	mit
 
-FETCH_USING=	curl
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	automake autoreconf pkg-config

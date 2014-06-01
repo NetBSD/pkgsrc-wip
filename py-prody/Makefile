@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/12/01 20:24:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 12:49:44 thomasklausner Exp $
 
 DISTNAME=	ProDy-1.4.10
 PKGNAME=	${PYPKGPREFIX}-prody-1.4.10
 CATEGORIES=	biology
 MASTER_SITES=	https://pypi.python.org/packages/source/P/ProDy/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.csb.pitt.edu/ProDy

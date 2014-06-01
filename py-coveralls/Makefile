@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/02/03 23:21:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:40 thomasklausner Exp $
 
 DISTNAME=	python-coveralls-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 EGG_NAME=	python_coveralls-2.4.2
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/python-coveralls/
-FETCH_USING=	curl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/z4r/python-coveralls

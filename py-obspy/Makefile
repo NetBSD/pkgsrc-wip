@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:44 thomasklausner Exp $
 
 DISTNAME=	obspy-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/o/obspy/
 EXTRACT_SUFX=	.zip#md5=9da79d3a0604d433085ad4dc0e430100
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.obspy.org/

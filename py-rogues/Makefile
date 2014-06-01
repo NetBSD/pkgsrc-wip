@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/12/08 16:11:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 12:49:45 thomasklausner Exp $
 
 DISTNAME=	rogues-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/r/rogues/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/rogues

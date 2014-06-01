@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/05/04 20:45:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:45 thomasklausner Exp $
 
 DISTNAME=	sciproc-0.7.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/s/sciproc/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.nowebsite.com

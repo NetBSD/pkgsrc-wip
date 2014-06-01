@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2013/12/03 18:39:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/01 12:49:43 thomasklausner Exp $
 
 DISTNAME=	nodepy-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/n/nodepy/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://numerics.kaust.edu.sa/nodepy/

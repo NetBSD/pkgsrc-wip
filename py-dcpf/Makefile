@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/02/14 23:59:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:40 thomasklausner Exp $
 
 DISTNAME=	pydcpf-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S//py/}
 CATEGORIES=	comms python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pydcpf/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/packages/source/p/pydcpf/

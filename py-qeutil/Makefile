@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/01/17 21:51:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:45 thomasklausner Exp $
 
 DISTNAME=	qeutil-0.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/q/qeutil/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/jochym/qe-util

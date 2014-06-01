@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/12/29 06:17:34 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 12:49:45 thomasklausner Exp $
 #
 
 DISTNAME=	python-gnutls-1.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	https://pypi.python.org/packages/source/p/python-gnutls/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ag-projects.com/

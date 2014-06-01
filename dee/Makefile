@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/01/20 12:46:22 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:35 thomasklausner Exp $
 #
 
 DISTNAME=	dee-1.0.14
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/dee/1.0/1.0.14/+download/
-FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://launchpad.net/dee

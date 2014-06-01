@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/01/14 22:17:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:42 thomasklausner Exp $
 
 DISTNAME=	pykrylov-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pykrylov/
-FETCH_USING=	curl
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/dpo/pykrylov/tree/master

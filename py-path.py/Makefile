@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/01/14 22:34:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:44 thomasklausner Exp $
 
 DISTNAME=	path.py-5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/path.py/
 EXTRACT_SUFX=	.zip
-FETCH_USING=	curl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/jaraco/path.py

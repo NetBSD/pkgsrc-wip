@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/10/14 13:00:04 ryo-on Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/01 12:49:37 thomasklausner Exp $
 #
 
 VER=		0.5.1rc1
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opencores.org/or1k/Or1ksim
 COMMENT=	OpenRISC emulator
 
-FETCH_USING=	curl
 
 USE_TOOLS+=	gmake
 

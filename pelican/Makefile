@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/04/24 11:02:01 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/01 12:49:37 thomasklausner Exp $
 
 DISTNAME=		${VERSION}
 PKGNAME=		pelican-${DISTNAME}
@@ -23,7 +23,6 @@ DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 USE_TOOLS+=		bash:run
 VERSION=		3.3.0
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-FETCH_USING=		curl
 
 PYTHON_VERSIONS_INCOMPATIBLE=26 32 # py-docutils
 
