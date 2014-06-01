@@ -1,6 +1,4 @@
-o I have just updated the patches and tryed to build it solving various
-  issues during the build process.
-  At the moment it is intended only for MAINTAINERs (e.g. PLIST is not
-  updated nor I succesfully built it at the moment).
 o Change the GCC_REQD replacing with ONLY_FOR_COMPILER or similar if it is
   possible.
+o More testing needed... I see several performance issues when javascript is
+  on.
