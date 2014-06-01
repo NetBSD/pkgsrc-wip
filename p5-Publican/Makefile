@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/05/19 01:08:19 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/01 00:11:22 othyro Exp $
 #
 
-DISTNAME=	Publican-v4.1.2
+DISTNAME=	Publican-v4.1.3
 PKGNAME=	p5-${DISTNAME:S/v//1}
 CATEGORIES=	textproc
 MASTER_SITES=	https://fedorahosted.org/releases/p/u/publican/
