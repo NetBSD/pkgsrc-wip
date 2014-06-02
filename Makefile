@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5782 2014/05/31 21:36:31 szptvlfn Exp $
+# $Id: Makefile,v 1.5783 2014/06/02 00:16:38 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2609,7 +2609,6 @@ SUBDIR+=	py-louie
 SUBDIR+=	py-lsqfit
 SUBDIR+=	py-luminous
 SUBDIR+=	py-lxmlproc
-SUBDIR+=	py-magic
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
 SUBDIR+=	py-mark
