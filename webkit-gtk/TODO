@@ -2,3 +2,23 @@ o Change the GCC_REQD replacing with ONLY_FOR_COMPILER or similar if it is
   possible.
 o More testing needed... I see several performance issues when javascript is
   on.
+o The webkit-jit (also problematic in the past versions for i386 and amd64 and
+  thus disabled for these ports) option stop the building in NetBSD/i386 with:
+
+[...]
+CXX      Source/JavaScriptCore/interpreter/libjavascriptcoregtk_1_0_la-Interpreter.lo
+Source/JavaScriptCore/interpreter/Interpreter.cpp: In member function 'JSC::JSValue JSC::Interpreter::executeCall(JSC::CallFrame*, JSC::JSObject*, JSC::CallType, const JSC::CallData&, JSC::JSValue, const JSC::ArgList&)':
+Source/JavaScriptCore/interpreter/Interpreter.cpp:972:168: error: 'callToNativeFunction' was not declared in this scope
+             result = JSValue::decode(callToNativeFunction(reinterpret_cast<void*>(callData.native.function), &vm.topCallFrame, &protoCallFrame, m_stack.getTopOfStack()));
+                                                                                                                                                                        ^
+Source/JavaScriptCore/interpreter/Interpreter.cpp: In member function 'JSC::JSObject* JSC::Interpreter::executeConstruct(JSC::CallFrame*, JSC::JSObject*, JSC::ConstructType, const JSC::ConstructData&, const JSC::ArgList&)':
+Source/JavaScriptCore/interpreter/Interpreter.cpp:1040:173: error: 'callToNativeFunction' was not declared in this scope
+             result = JSValue::decode(callToNativeFunction(reinterpret_cast<void*>(constructData.native.function), &vm.topCallFrame, &protoCallFrame, m_stack.getTopOfStack()));
+                                                                                                                                                                             ^
+GNUmakefile:71596: recipe for target 'Source/JavaScriptCore/interpreter/libjavascriptcoregtk_1_0_la-Interpreter.lo' failed
+gmake[1]: *** [Source/JavaScriptCore/interpreter/libjavascriptcoregtk_1_0_la-Interpreter.lo] Error 1
+gmake[1]: Leaving directory '/usr/pkgsrc/wip/webkit-gtk/work/webkitgtk-2.4.3'
+GNUmakefile:25693: recipe for target 'all' failed
+gmake: *** [all] Error 2
+*** Error code 2
+[...]
