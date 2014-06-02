@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2014/06/02 10:27:50 leot1990 Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/06/02 10:39:53 leot1990 Exp $
 # used by wip/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.4.3
@@ -23,9 +23,8 @@ PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
 MAKE_FILE=	GNUmakefile
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--with-target=x11 \
-			--with-font-backend=freetype
-CONFIGURE_ARGS+=	--disable-geolocation \
+CONFIGURE_ARGS+=	--enable-x11-target \
+			--disable-geolocation \
 			--disable-optimizations \
 			--disable-gtk-doc-html
 
