@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.1 2014/02/21 20:38:00 nros Exp $
+# $NetBSD: application.mk,v 1.2 2014/06/02 16:35:07 nros Exp $
 #
 # Replace the #! interpreter for Qore scripts.
 #
@@ -11,12 +11,10 @@
 #	A list of Qore scripts to be installed, relative to ${WRKSRC}.
 #
 #
-# Keywords: python
-#
 
 .if defined(REPLACE_QORE)
 REPLACE_INTERPRETER+=	qore
 REPLACE.qore.old=	.*qore[^ ]*
 REPLACE.qore.new=	${PREFIX}/bin/qore
-REPLACE_FILES.qore=	 ${REPLACE_QORE}
+REPLACE_FILES.qore=	${REPLACE_QORE}
 .endif

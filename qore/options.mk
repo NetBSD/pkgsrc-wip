@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2014/02/22 18:51:30 nros Exp $
+# $NetBSD: options.mk,v 1.13 2014/06/02 16:35:08 nros Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qore
@@ -10,5 +10,3 @@ CONFIGURE_ARGS+=        --enable-debug
 .else
 CONFIGURE_ARGS+=        --disable-debug
 .endif
-
-
