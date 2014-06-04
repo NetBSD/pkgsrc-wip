@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2014/06/02 10:27:50 leot1990 Exp $
+# $NetBSD: options.mk,v 1.4 2014/06/04 09:08:09 leot1990 Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
 PKG_SUPPORTED_OPTIONS=	debug enchant opengl webkit-jit
-PKG_SUGGESTED_OPTIONS=	enchant
+PKG_SUGGESTED_OPTIONS=	enchant opengl
 
 .include "../../mk/bsd.prefs.mk"
 
