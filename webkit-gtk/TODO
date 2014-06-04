@@ -22,3 +22,24 @@ GNUmakefile:25693: recipe for target 'all' failed
 gmake: *** [all] Error 2
 *** Error code 2
 [...]
+
+o The opengl option stop the building with the following error:
+
+[...]
+  CXX      DerivedSources/WebCore/libWebCoreSVG_la-JSSVGPathSegClosePath.lo
+  CXX      DerivedSources/WebCore/libWebCoreSVG_la-JSSVGPatternElement.lo
+  CXX      DerivedSources/WebCore/libWebCoreSVG_la-JSSVGSVGElement.lo
+  CXX      DerivedSources/WebCore/libWebCoreSVG_la-JSSVGTextElement.lo
+  CXXLD    libWebCoreSVG.la
+  CXXLD    libwebkitgtk-1.0.la
+Source/autotools/install-sh -c -d ./.deps/DerivedSources
+  CCLD     Programs/GtkLauncher
+/usr/pkgsrc/wip/webkit-gtk/work/webkitgtk-2.4.3/.libs/libwebkitgtk-1.0.so: undefined reference to `_ZN3JSC21GenericTypedArrayViewINS_14Float32AdaptorEE6createEj'
+collect2: error: ld returned 1 exit status
+GNUmakefile:40541: recipe for target 'Programs/GtkLauncher' failed
+gmake[1]: *** [Programs/GtkLauncher] Error 1
+gmake[1]: Leaving directory '/usr/pkgsrc/wip/webkit-gtk/work/webkitgtk-2.4.3'
+GNUmakefile:25693: recipe for target 'all' failed
+gmake: *** [all] Error 2
+*** Error code 2
+[...]
