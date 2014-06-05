@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5786 2014/06/05 21:27:41 leot1990 Exp $
+# $Id: Makefile,v 1.5787 2014/06/05 22:36:39 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3251,6 +3251,7 @@ SUBDIR+=	sudoscript
 SUBDIR+=	suitesparse
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
+SUBDIR+=	supercat
 SUBDIR+=	superchic
 SUBDIR+=	supermodel
 SUBDIR+=	supertux
