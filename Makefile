@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5785 2014/06/05 21:26:22 yrmt Exp $
+# $Id: Makefile,v 1.5786 2014/06/05 21:27:41 leot1990 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -334,6 +334,7 @@ SUBDIR+=	clustalx
 SUBDIR+=	clustershell
 SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
+SUBDIR+=	cmusfm
 SUBDIR+=	codeblocks
 SUBDIR+=	coldfire
 SUBDIR+=	collectd
