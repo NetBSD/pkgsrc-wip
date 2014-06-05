@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/05 23:11:23 yrmt Exp $
+bin/bspc
+bin/bspwm
+man/man1/bspc.1
+man/man1/bspwm.1
+share/bash-completion/completions/bspc
+share/zsh/site-functions/_bspc
