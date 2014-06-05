@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5787 2014/06/05 22:36:39 yrmt Exp $
+# $Id: Makefile,v 1.5788 2014/06/05 23:12:42 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -242,6 +242,7 @@ SUBDIR+=	bsdbuild
 SUBDIR+=	bsfilter
 SUBDIR+=	bsh
 SUBDIR+=	bsnmp
+SUBDIR+=	bspwm
 SUBDIR+=	bss
 SUBDIR+=	bsvc
 SUBDIR+=	btscanner
