@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/05 22:35:33 yrmt Exp $
+
+SHA1 (supercat-0.5.5.tar.gz) = e7d1f0f5b4bb50171fd6c7d2bc3e28492ff54848
+RMD160 (supercat-0.5.5.tar.gz) = 9d6f441dbd2532a250682de5446a662c963ef4e9
+Size (supercat-0.5.5.tar.gz) = 103545 bytes
