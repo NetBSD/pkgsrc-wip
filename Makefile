@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5789 2014/06/05 23:37:17 yrmt Exp $
+# $Id: Makefile,v 1.5790 2014/06/05 23:57:38 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -906,6 +906,7 @@ SUBDIR+=	heimdall
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
+SUBDIR+=	herbstluftwm
 SUBDIR+=	heroes
 SUBDIR+=	herwig
 SUBDIR+=	hexchat
