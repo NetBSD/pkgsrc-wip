@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/06/05 21:26:12 leot1990 Exp $
+
+SHA1 (cmusfm-0.2.0.tar.gz) = c7b8c4456ac256d6e8719ddad4e1e31f9990ad99
+RMD160 (cmusfm-0.2.0.tar.gz) = 2c9d5791b650413c2d3b24a77812c381ca13ce29
+Size (cmusfm-0.2.0.tar.gz) = 26036 bytes
+SHA1 (patch-src_server.c) = 5da49e932b453c1a378581042df6b604d8eb006d
