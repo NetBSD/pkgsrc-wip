@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5788 2014/06/05 23:12:42 yrmt Exp $
+# $Id: Makefile,v 1.5789 2014/06/05 23:37:17 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -726,6 +726,7 @@ SUBDIR+=	gdvb
 SUBDIR+=	geant
 SUBDIR+=	gecko-sharp
 SUBDIR+=	gecode
+SUBDIR+=	geekcode
 SUBDIR+=	gemrb
 SUBDIR+=	genus2reduction
 SUBDIR+=	gerris
