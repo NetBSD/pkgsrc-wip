@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 210914
+LAST_UPDATED: Obtained from SVN: trunk revision 211120
 
 Native configuration is x86_64--netbsd
 
@@ -25,21 +25,17 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++1y (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		81186
+# of expected passes		81246
 # of unexpected failures	12
 # of expected failures		440
 # of unresolved testcases	3
-# of unsupported tests		3068
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.10.0 20140525 (experimental) (GCC) 
+# of unsupported tests		3073
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.10.0 20140601 (experimental) (GCC) 
 
 		=== gcc tests ===
 
 
 Running target unix
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -Os  execution test
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
 FAIL: gcc.dg/builtins-55.c (test for excess errors)
@@ -122,8 +118,70 @@ XPASS: gcc.dg/guality/pr41616-1.c  -O3 -fomit-frame-pointer  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -O3 -g  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -Os  execution test
 XPASS: gcc.dg/guality/pr41616-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 34 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 34 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43177.c  -O2  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O2  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O2  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O2  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -Os  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -Os  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -Os  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -Os  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 x == 7
 FAIL: gcc.dg/guality/pr45882.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 d == 112
 FAIL: gcc.dg/guality/pr45882.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 e == 142
 FAIL: gcc.dg/guality/pr48437.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 i == 0
@@ -139,11 +197,14 @@ FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partiti
 FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 z == 6
 FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 y == 117
 FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 z == 8
+FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 x == 36
 FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 y == 25
 FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 z == 6
+FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 x == 98
 FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 y == 117
 FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 z == 8
 FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 x == 6
 FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
 FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
 FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
@@ -151,11 +212,29 @@ FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-loops  line 
 FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 21 i == v + 1
 FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 x == 10 - i
 FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 y == 20 - 2 * i
+FAIL: gcc.dg/guality/sra-1.c  -O2  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c  -O2  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O2  line 43 a.i == 4
 FAIL: gcc.dg/guality/sra-1.c  -O2  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 43 a.i == 4
 FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 43 a.i == 4
 FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -Os  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c  -Os  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -Os  line 43 a.i == 4
 FAIL: gcc.dg/guality/sra-1.c  -Os  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 43 a.i == 4
 FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 43 a.i == 4
 FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 43 a.j == 14
 FAIL: gcc.dg/guality/vla-1.c  -O0  line 17 sizeof (a) == 6
 FAIL: gcc.dg/guality/vla-1.c  -O0  line 24 sizeof (a) == 17 * sizeof (short)
@@ -399,13 +478,13 @@ UNRESOLVED: gcc.target/i386/long-double-128-9.c compilation failed to produce ex
 
 		=== gcc Summary ===
 
-# of expected passes		104413
-# of unexpected failures	241
+# of expected passes		104418
+# of unexpected failures	322
 # of unexpected successes	33
 # of expected failures		266
 # of unresolved testcases	84
-# of unsupported tests		1921
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140525 (experimental) (GCC) 
+# of unsupported tests		1938
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140601 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -482,12 +561,12 @@ FAIL: gfortran.dg/wextra_1.f  -O   (test for warnings, line 4)
 
 		=== gfortran Summary ===
 
-# of expected passes		45675
+# of expected passes		45707
 # of unexpected failures	43
 # of expected failures		52
 # of unresolved testcases	25
 # of unsupported tests		104
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.10.0 20140525 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.10.0 20140601 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -499,7 +578,7 @@ Running target unix
 # of expected passes		1439
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.10.0 20140525 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.10.0 20140601 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -515,7 +594,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140525 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140601 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -530,15 +609,19 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.c++/affinity-1.C execution test
+FAIL: libgomp.c/loop-5.c execution test
 WARNING: program timed out.
-FAIL: libgomp.graphite/force-parallel-8.c execution test
+FAIL: libgomp.c++/loop-8.C execution test
+WARNING: program timed out.
+FAIL: libgomp.fortran/do2.f90  -O2  execution test
+WARNING: program timed out.
+FAIL: libgomp.graphite/force-parallel-6.c execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		2650
-# of unexpected failures	2
-# of unsupported tests		4
+# of expected passes		2630
+# of unexpected failures	4
+# of unsupported tests		20
 		=== libitm tests ===
 
 
@@ -616,17 +699,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8779
+# of expected passes		8781
 # of unexpected failures	52
 # of expected failures		68
 # of unresolved testcases	5
 # of unsupported tests		686
 
-Compiler version: 4.10.0 20140525 (experimental) (GCC) 
+Compiler version: 4.10.0 20140601 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-nls --with-libiconv-prefix=/usr --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc410snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc410snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --prefix=/usr/pkg/gcc410snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc410snapshot/info --mandir=/usr/pkg/gcc410snapshot/man
 EOF
-Mail -s "Results for 4.10.0 20140525 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.10.0 20140601 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
