@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5790 2014/06/05 23:57:38 yrmt Exp $
+# $Id: Makefile,v 1.5791 2014/06/07 09:12:50 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3381,7 +3381,6 @@ SUBDIR+=	todotxt
 SUBDIR+=	tome
 SUBDIR+=	tome2
 SUBDIR+=	tops-bin
-SUBDIR+=	tor-dev
 SUBDIR+=	torcs
 SUBDIR+=	torsocks
 SUBDIR+=	tortunnel
