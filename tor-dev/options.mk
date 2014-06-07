@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2010/03/12 12:50:18 athaba Exp $
+# $NetBSD: options.mk,v 1.3 2014/06/07 09:02:50 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
-PKG_SUPPORTED_OPTIONS=	threads asciidoc
-PKG_SUGGESTED_OPTIONS+=	asciidoc
+PKG_SUPPORTED_OPTIONS=	threads doc
+PKG_SUGGESTED_OPTIONS+=	doc
 
 .if !empty(PTHREAD_TYPE:Mnative)
 PKG_SUGGESTED_OPTIONS+=	threads
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS+=	threads
 ### at build time, which comes with a tail of dependencies and
 ### may not be wanted under certain circumstances.
 ###
-.if !empty(PKG_OPTIONS:Masciidoc)
+.if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=		asciidoc>=8.3.3:../../textproc/asciidoc
 CONFIGURE_ARGS+=	--enable-asciidoc
 .else
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--enable-eventdns
 CONFIGURE_ARGS+=	--enable-threads
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
-USE_FEATURES.openssl+=	threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
 .endif
