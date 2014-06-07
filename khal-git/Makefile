@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/04/18 19:37:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/06/07 08:52:23 thomasklausner Exp $
 
 # version number from setup.py
 DISTNAME=		khal-0.2.0
@@ -27,6 +27,7 @@ DEPENDS+=		${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 20140604
 
 WRKSRC=			${WRKDIR}/khal
 INSTALLATION_DIRS=	share/doc/khal
