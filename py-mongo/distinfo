@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2013/10/20 20:38:58 bubuchka Exp $
-
-SHA1 (pymongo-2.6.3.tar.gz) = b838d6bc6d9cf05d7a6cd45d266e917dc3267bc5
-RMD160 (pymongo-2.6.3.tar.gz) = 4e0d72f01991bc4213f055f8811e694cb48cef15
-Size (pymongo-2.6.3.tar.gz) = 324241 bytes
