@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5795 2014/06/08 22:57:44 othyro Exp $
+# $Id: Makefile,v 1.5796 2014/06/08 23:41:22 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2430,7 +2430,6 @@ SUBDIR+=	py-control
 SUBDIR+=	py-corebio
 SUBDIR+=	py-corrfitter
 SUBDIR+=	py-cosmolopy
-SUBDIR+=	py-couchdb
 SUBDIR+=	py-country
 SUBDIR+=	py-coveralls
 SUBDIR+=	py-cracklib
