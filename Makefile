@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5794 2014/06/08 22:44:50 othyro Exp $
+# $Id: Makefile,v 1.5795 2014/06/08 22:57:44 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2384,7 +2384,6 @@ SUBDIR+=	py-async
 SUBDIR+=	py-atpy
 SUBDIR+=	py-automata
 SUBDIR+=	py-bctpy
-SUBDIR+=	py-beanstalkc
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bibtexparser3
 SUBDIR+=	py-bidict
