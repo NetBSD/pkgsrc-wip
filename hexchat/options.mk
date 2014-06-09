@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.3 2014/06/09 02:47:20 othyro Exp $
+# $NetBSD: options.mk,v 1.4 2014/06/09 03:34:24 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
 PKG_SUPPORTED_OPTIONS=	dbus gtk2 inet6 libcanberra libnotify libpci libproxy
-PKG_SUPPORTED_OPTIONS+=	nls ntlm openssl perl python tests themes xft2
-PKG_SUGGESTED_OPTIONS+=	gtk2 inet6 libproxy libsexy nls openssl xft2
+PKG_SUPPORTED_OPTIONS+=	ntlm openssl perl python tests themes xft2
+PKG_SUGGESTED_OPTIONS+=	gtk2 inet6 libproxy libsexy openssl xft2
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	spell
 PKG_OPTIONS_GROUP.spell=	libsexy gtkspell
 
-PLIST_VARS+=		dbus gtk2 libpci nls perl python
+PLIST_VARS+=		dbus gtk2 libpci perl python
 
 .include "../../mk/bsd.options.mk"
 
@@ -60,14 +60,6 @@ PLIST.libpci=		yes
 .include "../../www/libproxy/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libproxy
-.endif
-
-.if !empty(PKG_OPTIONS:Mnls)
-.include "../../devel/gettext-lib/buildlink3.mk"
-USE_TOOLS+=		intltool msgfmt xgettext
-PLIST.nls=		yes
-.else
-CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 .if !empty(PKG_OPTIONS:Mntlm)

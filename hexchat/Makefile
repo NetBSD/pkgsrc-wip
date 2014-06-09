@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/06/09 02:47:20 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2014/06/09 03:34:24 othyro Exp $
 
 DISTNAME=	hexchat-2.10.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://dl.hexchat.net/hexchat/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison gmake pkg-config
+USE_TOOLS+=	bison gmake intltool msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	share/pkgconfig/hexchat-plugin.pc.in
