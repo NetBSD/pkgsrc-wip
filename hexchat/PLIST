@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/06 23:05:18 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/09 02:47:20 othyro Exp $
 ${PLIST.gtk2}bin/hexchat
 bin/hexchat-text
 include/hexchat-plugin.h
@@ -12,6 +12,7 @@ lib/pkgconfig/hexchat-plugin.pc
 man/man1/hexchat.1
 ${PLIST.gtk2}share/appdata/hexchat.appdata.xml
 ${PLIST.gtk2}share/applications/hexchat.desktop
+${PLIST.dbus}share/dbus-1/services/org.hexchat.service.service
 ${PLIST.gtk2}share/icons/hicolor/48x48/apps/hexchat.png
 ${PLIST.gtk2}share/icons/hicolor/scalable/apps/hexchat.svg
 ${PLIST.nls}share/locale/af/LC_MESSAGES/hexchat.mo
@@ -37,7 +38,7 @@ ${PLIST.nls}share/locale/hi/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/hu/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/id/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/hexchat.mo
-${PLIST.nls}share/locale/ja/LC_MESSAGES/hexchat.mo
+${PLIST.nls}share/locale/ja_JP/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/kn/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/lt/LC_MESSAGES/hexchat.mo
@@ -58,8 +59,10 @@ ${PLIST.nls}share/locale/sk/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/sl/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/sq/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/sr/LC_MESSAGES/hexchat.mo
+${PLIST.nls}share/locale/sr@latin/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/th/LC_MESSAGES/hexchat.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/hexchat.mo
 ${PLIST.nls}share/locale/wa/LC_MESSAGES/hexchat.mo

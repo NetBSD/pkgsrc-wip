@@ -1,9 +1,3 @@
-(*) dbus options stalls here:
-
-Making all in dbus
-/bin/sh ../../../libtool --mode=execute /usr/pkgsrc/pkg/bin/glib-genmarshal  --header --body  > marshallers.h
-^Cbmake: *** marshallers.h removed
-
 (*) themes option fails like this:
 
    /usr/pkgsrc/dev/wip/hexchat/work/hexchat-2.9.6.1/src/htm/Main.cs(30,17):

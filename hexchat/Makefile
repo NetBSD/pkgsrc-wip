@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2014/05/28 13:50:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/09 02:47:20 othyro Exp $
 
-DISTNAME=	hexchat-2.9.6.1
+DISTNAME=	hexchat-2.10.0
 CATEGORIES=	chat
 MASTER_SITES=	http://dl.hexchat.net/hexchat/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hexchat.github.io/
+HOMEPAGE=	http://dl.hexchat.net/hexchat/
 COMMENT=	IRC client based on XChat
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison pkg-config
+USE_TOOLS+=	bison gmake pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	share/pkgconfig/hexchat-plugin.pc.in
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-xlib
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
 
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
