@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/10 06:10:25 jgoamakf Exp $
+lib/ocaml/site-lib/fieldslib/META
+lib/ocaml/site-lib/fieldslib/field.mli
+lib/ocaml/site-lib/fieldslib/fieldslib.a
+lib/ocaml/site-lib/fieldslib/fieldslib.cma
+lib/ocaml/site-lib/fieldslib/fieldslib.cmi
+lib/ocaml/site-lib/fieldslib/fieldslib.cmxa
+lib/ocaml/site-lib/fieldslib/fieldslib.cmxs
+lib/ocaml/site-lib/fieldslib/pa_fields_conv.a
+lib/ocaml/site-lib/fieldslib/pa_fields_conv.cma
+lib/ocaml/site-lib/fieldslib/pa_fields_conv.cmi
+lib/ocaml/site-lib/fieldslib/pa_fields_conv.cmx
+lib/ocaml/site-lib/fieldslib/pa_fields_conv.cmxa
+lib/ocaml/site-lib/fieldslib/pa_fields_conv.cmxs
+lib/ocaml/site-lib/fieldslib/pa_fields_conv.mli
