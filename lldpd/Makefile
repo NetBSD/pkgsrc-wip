@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/11/27 04:12:35 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/11 13:25:17 makoto Exp $
 
-DISTNAME=		lldpd-0.7.7
+DISTNAME=		lldpd-0.7.9
 CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
@@ -19,16 +19,20 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
+# run/lldpd.socket is created under this directory
+# (the default is ${PRERIX}/var)
+CONFIGURE_ARGS+=       --localstatedir=${VARBASE}
 BUILD_DEFS+=		VARBASE
 
 # to find -lperl, should be portable and simpler, please correct
 .include "../../mk/bsd.prefs.mk"
 # This PATH is sometimes defined with SITEARCHEXP
-LDFLAGS+=		-L${PREFIX}/lib/perl5/5.18.0/${MACHINE_ARCH}-${OPSYS:tl}-thread-multi/CORE
+LDFLAGS+=		-L${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
 
 # ERROR: sbin/lldpd: missing library: libperl.so
 # both COMPILER_RPATH_FLAG LINKER_RPATH_FLAG doesn't make it.
-LDFLAGS+=		-Wl,-R${PREFIX}/lib/perl5/5.18.0/${MACHINE_ARCH}-${OPSYS:tl}-thread-multi/CORE
+LDFLAGS+=		-Wl,-R${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
+
 RCD_SCRIPTS=		lldpd
 PKG_GROUPS=		_lldpd
 PKG_USERS=		_lldpd:_lldpd
@@ -46,3 +50,4 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
 .include "../../mk/readline.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
+
