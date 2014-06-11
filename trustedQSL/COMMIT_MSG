@@ -1,0 +1,68 @@
+(commit log draft for ham/trustedQSL, 2.0 to 2.0.2RC4)
+---------------
+Date below is when the time wip side was committed, not upstream date
+This file is compiled from commit log of wip/trustedQSL/Makefile by mef@
+Sorry for typo/inconsistency.
+
+2.0.2RC4 2014/06/08
+ - No popup when batch mode
+ - If QSO database is corrupted and can not be repaired, delete it
+2.0.2RC3 2014/05/09
+ - Ensure station locations added 
+ - restore from .tbk to restore multiple pending callsign
+   certificates for a given callsign
+ - correct message when callsign cert. is uploaded
+ - Delete any older version, when renewed callsign is installed
+ - Correct the behaviour for non ascii directory name on Windows
+ - Correct the number of QSO in some case when signing
+   (ignoring might have shown negative number)
+2.0.2RC2 2014/04/22
+ - Windows only
+2.0.2RC1 2014/04/17
+ - OpenSSL update (Heartbleed). no practical attack anyway
+   (Windows only)
+2.0.1RC9 2014/03/01
+ - Avoid application crash when database conversion for Open/Close
+ - Faster convertion of database
+2.0.1RC8 2014/02/27
+ - limit the number of copies of application run
+   (multiple run might have database corrution)
+2.0.1RC7 2014/02/13
+ - A callsign cert is about expire (within 60 days), TQSL
+   warns. But even after user submitted renewal, it continued.
+ - Correct the automatic backup directory (By from preference pane)
+ - Search Log files .ADI, .ADIF also
+2.0.1RC6 2014/02/05
+ - Copyright notice / date (only)
+2.0.1RC5 2014/01/29
+ - Avoid crash at starting if certifiacate status file is empty
+ - Corrected for checking for new release even with -RC change
+2.0.1RC4 2014/01/22
+ - Canadian province PQ/QC issue
+ - Correct start-up threads management
+ - (OpenSuSE Linux) for pending callsign requests
+ - Validate Callsign based on location
+ - Correct hang if command line argument is wrong.
+ - Update message during callsign certificate creation
+ 
+2.0.1RC3, 2014/01/13 (but hangs when reading cert_status.xml)
+Two additional changes in TQSL 2.0 RC3:
+  -------------
+  A. Because new modes may not yet be specified in ADIF, and because
+  LoTW may not accept all modes specified in ADIF, TQSL enables you to
+  "map" a new mode to a mode or mode group recognized by LoTW; this
+  most often takes the form of mapping a new digital mode to the DATA
+  mode group. Versions of TQSL prior to 2.0 would allow you to map
+  modes accepted by LoTW. This version of TQSL will refuse to map a
+  mode that is accepted by LoTW. Any existing mappings of modes
+  accepted by LoTW will be automatically removed on startup; you will
+  be notified if this happens.
+  
+  B. When submitting log files in Cabrillo format, previous versions of
+  TQSL submitted FM and PH modes as PHONE. TQSL 2.0 RC2 submits FM mode
+  as FM, and PH mode as SSB.
+  ----------------------------
+2.0.1RC2 2013/09/01
+  Contest name recognition is corrected (Re: JIDX)
+---------------
+2.0 Release 2013/11/17
