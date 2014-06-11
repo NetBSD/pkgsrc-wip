@@ -1,7 +1,0 @@
-Netatalk 3.0.8 unresolved issues
-
-- provide dbus support?
-
-netbsd-6:
-
-- package configure script does not recognize quota support

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5797 2014/06/10 06:18:07 jgoamakf Exp $
+# $Id: Makefile,v 1.5798 2014/06/11 12:16:40 hfath Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1773,7 +1773,6 @@ SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
 SUBDIR+=	netatalk
-SUBDIR+=	netatalk30
 SUBDIR+=	netbsd-awk
 SUBDIR+=	netbsd-icon-theme
 SUBDIR+=	netbsd-light-desktop-artwork
