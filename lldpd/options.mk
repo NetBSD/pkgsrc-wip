@@ -1,8 +1,13 @@
-# $NetBSD: options.mk,v 1.4 2013/11/27 01:52:36 makoto Exp $
+# $NetBSD: options.mk,v 1.5 2014/06/11 13:55:20 makoto Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lldpd
-PKG_SUPPORTED_OPTIONS=	snmp xml json
-PKG_SUGGESTED_OPTIONS=	snmp xml json
+PKG_SUPPORTED_OPTIONS=	json snmp xml
+PKG_SUGGESTED_OPTIONS=	json snmp xml
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mjson)
+.	include "../../textproc/jansson/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-json
+.endif
 
 .if !empty(PKG_OPTIONS:Msnmp)
 .	include "../../net/net-snmp/buildlink3.mk"
@@ -15,9 +20,4 @@ CONFIGURE_ARGS+=	--with-snmp
 .if !empty(PKG_OPTIONS:Mxml)
 .	include "../../textproc/libxml2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xml
-.endif
-
-.if !empty(PKG_OPTIONS:Mjson)
-.	include "../../textproc/jansson/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-json
 .endif

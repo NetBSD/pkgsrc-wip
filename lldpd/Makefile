@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/06/11 13:25:17 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/11 13:55:19 makoto Exp $
 
 DISTNAME=		lldpd-0.7.9
 CATEGORIES=		net
@@ -14,6 +14,8 @@ LICENSE=		isc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+# interfaces-bsd.c:45:34: error: net/agr/if_agrioctl.h: No such file or directory
+NOT_FOR_PLATFORM=	NetBSD-5*-*
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
@@ -31,7 +33,7 @@ LDFLAGS+=		-L${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
 
 # ERROR: sbin/lldpd: missing library: libperl.so
 # both COMPILER_RPATH_FLAG LINKER_RPATH_FLAG doesn't make it.
-LDFLAGS+=		-Wl,-R${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
 
 RCD_SCRIPTS=		lldpd
 PKG_GROUPS=		_lldpd
@@ -50,4 +52,3 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
 .include "../../mk/readline.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
-
