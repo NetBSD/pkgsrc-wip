@@ -1,37 +1,43 @@
 (commit log draft for ham/trustedQSL, 2.0 to 2.0.2RC4)
+(pkgsrc):
+  - DEPENDS+= mozilla-rootcerts are removed
+  - Deleted SUBST_CLASSES+= macro_S to avoid name (_S) conflicts on NetBSD-5.*
+    (The probelm no longer exists)
+  - Correct MESSAGE (but this is to be committed separately)
+ 
+(Upstream): Bump version 2.0 to 2.0.2RC4
 ---------------
-Date below is when the time wip side was committed, not upstream date
-This file is compiled from commit log of wip/trustedQSL/Makefile by mef@
-Sorry for typo/inconsistency.
+This commit log compiled from that of wip/trustedQSL/Makefile by mef@
+Sorry iftypo or too compact.
 
-2.0.2RC4 2014/06/08
- - No popup when batch mode
+2.0.2RC4 2014/06/07
+ - No pop up when prompting user for password when batch mode
  - If QSO database is corrupted and can not be repaired, delete it
 2.0.2RC3 2014/05/09
- - Ensure station locations added 
- - restore from .tbk to restore multiple pending callsign
+ - Ensure station locations added (sign a log -> list of stn loc.)
+ - Restore from .tbk to restore multiple pending callsign
    certificates for a given callsign
- - correct message when callsign cert. is uploaded
+ - Correct message when callsign cert. is uploaded
  - Delete any older version, when renewed callsign is installed
  - Correct the behaviour for non ascii directory name on Windows
  - Correct the number of QSO in some case when signing
    (ignoring might have shown negative number)
 2.0.2RC2 2014/04/22
  - Windows only
-2.0.2RC1 2014/04/17
+2.0.2RC1 2014/04/16
  - OpenSSL update (Heartbleed). no practical attack anyway
    (Windows only)
 2.0.1RC9 2014/03/01
  - Avoid application crash when database conversion for Open/Close
- - Faster convertion of database
+ - Faster conversion of database
 2.0.1RC8 2014/02/27
- - limit the number of copies of application run
+ - Limit the number of copies of application running
    (multiple run might have database corrution)
 2.0.1RC7 2014/02/13
- - A callsign cert is about expire (within 60 days), TQSL
-   warns. But even after user submitted renewal, it continued.
- - Correct the automatic backup directory (By from preference pane)
- - Search Log files .ADI, .ADIF also
+ - When a callsign cert is about to expire (within 60 days), TQSL
+   warns. But even after user submitted renewal, it continued
+ - Correct the automatic backup directory (by from preference pane)
+ - Search Log files with .ADI, .ADIF also
 2.0.1RC6 2014/02/05
  - Copyright notice / date (only)
 2.0.1RC5 2014/01/29
@@ -41,8 +47,8 @@ Sorry for typo/inconsistency.
  - Canadian province PQ/QC issue
  - Correct start-up threads management
  - (OpenSuSE Linux) for pending callsign requests
- - Validate Callsign based on location
- - Correct hang if command line argument is wrong.
+ - Accept valid callsign only based on location
+ - Correct hang if command line argument is wrong
  - Update message during callsign certificate creation
  
 2.0.1RC3, 2014/01/13 (but hangs when reading cert_status.xml)
