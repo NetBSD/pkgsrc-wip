@@ -1,0 +1,6 @@
+Pa_compare is a camlp4 syntax extension that derives comparison
+functions from type representations. The scaffolded functions are
+usually much faster than ocaml's Pervasives.compare. Scaffolding
+functions also gives you more flexibilty by allowing you to override
+them for a specific type and more safety by making sure that you only
+compare comparable values.

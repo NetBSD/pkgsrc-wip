@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/06/12 07:58:58 jgoamakf Exp $
+
+SHA1 (comparelib-109.60.00.tar.gz) = 6f939f1b4733f72c573e7603cbb4fa15fd47e4ed
+RMD160 (comparelib-109.60.00.tar.gz) = da080d1cb9bd95439fd6e251bc68f82aab9bf993
+Size (comparelib-109.60.00.tar.gz) = 56707 bytes
