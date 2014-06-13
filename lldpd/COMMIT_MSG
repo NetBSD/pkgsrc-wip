@@ -5,7 +5,7 @@ Bump 0.7.6 to 0.7.9
 - Drop NetBSD-5, net/agr/if_agrioctl.h is missing
 - Add options.mk and support json, snmp, xml selection,
   those were missing in configured list
-- Now include readline.buildlink3.mk
+- Now includes readline.buildlink3.mk
 
 (upstream)
 lldpd (0.7.9)
