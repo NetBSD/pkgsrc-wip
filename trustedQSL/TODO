@@ -1,2 +1,13 @@
-- SunOS 5.11/x86_64 is saying,
-  Could NOT find BDB (missing: BDB_INCLUDE_DIR)
+Naming issue, are these confusing ?
+
+(ARRL)
+command name   		tqsl
+tar archive		tqsl
+MASTER_SITE directory	TrustedQSL
+In LICENSE.txt		TrustedQSL developers
+help directory		share/TrustedQSL/help
+
+(pkgsrc)
+pkgname			tqsl
+pkgsrc directory 	ham/trustedQSL
+LICENSE.txt is installd share/TrustedQSL

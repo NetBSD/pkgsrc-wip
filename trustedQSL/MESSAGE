@@ -1,11 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.13 2013/12/04 01:07:15 makoto Exp $
-If you see following,
-"Peer certificate cannot be authenticated with given CA certificates"
-(SSL certificate problem: self signed certificate in certificate chain)
-please see the info by:
-   pkg_info -D  mozilla-rootcerts
-
+$NetBSD: MESSAGE,v 1.14 2014/06/13 09:54:43 makoto Exp $
 To start the application, just type tqsl in shell. You will see
 the icons for operations (with Window facility).
 
