@@ -1,3 +1,6 @@
+- socket file (/var/run/lldpd.socket) left unremoved when
+  lldpd stops by receiving SIGHUP (reported upstream at least).
+
 - (seccomp is secure computing mode for Linux )
 
 ------------------ Summary ------------------
