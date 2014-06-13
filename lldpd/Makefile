@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/06/11 13:55:19 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/13 00:12:59 makoto Exp $
 
 DISTNAME=		lldpd-0.7.9
 CATEGORIES=		net
@@ -26,14 +26,13 @@ CONFIGURE_ARGS+=	--with-privsep-chroot=${PKG_HOME._lldpd}
 CONFIGURE_ARGS+=       --localstatedir=${VARBASE}
 BUILD_DEFS+=		VARBASE
 
-# to find -lperl, should be portable and simpler, please correct
-.include "../../mk/bsd.prefs.mk"
-# This PATH is sometimes defined with SITEARCHEXP
+#  CCLD     lldpd
+#  ld: cannot find -lperl
 LDFLAGS+=		-L${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
 
+# .include "../../mk/bsd.prefs.mk"
 # ERROR: sbin/lldpd: missing library: libperl.so
-# both COMPILER_RPATH_FLAG LINKER_RPATH_FLAG doesn't make it.
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
+# LINKER_RPATH_FLAG=	${COMPILER_RPATH_FLAG}${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/CORE
 
 RCD_SCRIPTS=		lldpd
 PKG_GROUPS=		_lldpd
