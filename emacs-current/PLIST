@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.139 2014/05/15 23:17:56 makoto Exp $
+@comment $NetBSD: PLIST,v 1.140 2014/06/14 23:36:38 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1681,8 +1681,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/warnings.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/warnings.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lock.elc
-share/emacs/${PKGVERSION}/lisp/emulation/crisp.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/crisp.elc
 share/emacs/${PKGVERSION}/lisp/emulation/cua-base.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/cua-base.elc
 share/emacs/${PKGVERSION}/lisp/emulation/cua-gmrk.el.gz
@@ -1701,16 +1699,6 @@ share/emacs/${PKGVERSION}/lisp/emulation/edt.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/edt.elc
 share/emacs/${PKGVERSION}/lisp/emulation/keypad.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/keypad.elc
-share/emacs/${PKGVERSION}/lisp/emulation/tpu-edt.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/tpu-edt.elc
-share/emacs/${PKGVERSION}/lisp/emulation/tpu-extras.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/tpu-extras.elc
-share/emacs/${PKGVERSION}/lisp/emulation/tpu-mapper.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/tpu-mapper.elc
-share/emacs/${PKGVERSION}/lisp/emulation/vi.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/vi.elc
-share/emacs/${PKGVERSION}/lisp/emulation/vip.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/vip.elc
 share/emacs/${PKGVERSION}/lisp/emulation/viper-cmd.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/viper-cmd.elc
 share/emacs/${PKGVERSION}/lisp/emulation/viper-ex.el.gz
@@ -1727,8 +1715,6 @@ share/emacs/${PKGVERSION}/lisp/emulation/viper-util.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/viper-util.elc
 share/emacs/${PKGVERSION}/lisp/emulation/viper.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/viper.elc
-share/emacs/${PKGVERSION}/lisp/emulation/ws-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/ws-mode.elc
 share/emacs/${PKGVERSION}/lisp/env.el.gz
 share/emacs/${PKGVERSION}/lisp/env.elc
 share/emacs/${PKGVERSION}/lisp/epa-dired.el.gz
@@ -2885,6 +2871,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/complete.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/complete.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/crisp.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/crisp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cust-print.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cust-print.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.el.gz
@@ -2965,8 +2953,20 @@ share/emacs/${PKGVERSION}/lisp/obsolete/sym-comp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sym-comp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/terminal.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/terminal.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/tpu-edt.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/tpu-edt.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/tpu-extras.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/tpu-extras.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/vi.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/vi.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/vip.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/vip.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/xesam.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/xesam.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/yow.el.gz
