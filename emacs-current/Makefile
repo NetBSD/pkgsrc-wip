@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2013/12/21 02:21:36 makoto Exp $
+# $NetBSD: Makefile,v 1.72 2014/06/15 08:35:28 makoto Exp $
 #
 
 .include	"version.mk"
@@ -19,6 +19,7 @@ AUTOCONF_REQD=	2.65
 CONFLICTS+=	emacs-nox11-[0-9]*
 
 BUILD_TARGET=	bootstrap
+MAKE_JOBS_SAFE= no
 
 GIT_REPOSITORIES=	master
 GIT_MODULE.master=	emacs
