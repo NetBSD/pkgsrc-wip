@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/01/09 14:10:56 makoto Exp $
+$NetBSD: distinfo,v 1.4 2014/06/15 13:29:21 makoto Exp $
 
-SHA1 (mu-cite-201202272330.tar.gz) = d66d2001a5a3bd48700182940c3bc8515b28bb1c
-RMD160 (mu-cite-201202272330.tar.gz) = f4895531987b34e083ed2c6ad9aac2d105ca0a54
-Size (mu-cite-201202272330.tar.gz) = 19212 bytes
+SHA1 (mu-cite-201406091013.tar.gz) = b1c385f76678bc4e448bf2130ddc89ec3056769d
+RMD160 (mu-cite-201406091013.tar.gz) = 56b8b6df0b9571e08bd66796529c3c033cb79023
+Size (mu-cite-201406091013.tar.gz) = 19434 bytes
 SHA1 (patch-Makefile) = a443e9688bc14a632728276e134553a5bcfd0353

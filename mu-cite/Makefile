@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:59 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/15 13:29:21 makoto Exp $
 
-DISTNAME=	mu-cite-201202272330
+DISTNAME=	mu-cite-201406091013
 CATEGORIES=	mail
 MASTER_SITES=	http://www.jpl.org/elips/mu/snapshots/
 
