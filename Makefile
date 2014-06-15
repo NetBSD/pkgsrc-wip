@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5800 2014/06/12 12:12:47 outpaddling Exp $
+# $Id: Makefile,v 1.5801 2014/06/15 10:29:32 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1471,6 +1471,7 @@ SUBDIR+=	libpar2
 SUBDIR+=	libpare
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
+SUBDIR+=	libpgf
 SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
