@@ -1,11 +1,1 @@
-(pkgsrc)
-(upstream)
-Bump Version 2.23.2 to 2.24
-(From binutils-2.24/binutils/NEWS)
----------------------------
-Changes in 2.24:
-
-* Objcopy now supports wildcard characters in command line options that take
-  section names.
-
-* Add support for Altera Nios II.
+(empty now)
