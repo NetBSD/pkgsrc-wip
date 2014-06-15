@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2014/05/31 15:57:19 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.33 2014/06/15 08:30:47 makoto Exp $
 #
 
 ### Set options
@@ -201,9 +201,9 @@ CONFIGURE_ARGS+=	--without-png
 # -x11 nextstep		.. nextstep
 # -xft2			.. x11 gtk    svg gconf		   dbus gnutls imagemagick
 # -gnutls		.. x11 gtk    svg gconf       xft2 dbus	       imagemagick
-# -gnutls -imagemagick -dbus 
+# -gnutls -imagemagick -dbus
 #                       .. x11 gtk    svg gconf       xft2
-# -x11 -svg -gconf -xaw3d -xft2 
+# -x11 -svg -gconf -xaw3d -xft2
 #                       .. nox11	                   dbus gnutls             xml2
 # -x11 			.. nox11			   dbus gnutls imagemagick
 #			.. nox11 but several x11 libraries built and not used
