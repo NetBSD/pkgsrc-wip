@@ -1,35 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 17:55:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/06/16 00:22:39 jihbed Exp $
 
-DISTNAME=	cvxopt-1.1.2.tar
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
-CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/C/CVXOPT/
-EXTRACT_SUFX=	.gz#md5=211a31494991bcd75b4790a3c5806e18
+DISTNAME=	1.1.7
+PKGNAME=	${PYPKGPREFIX}-cvxopt-${DISTNAME}
+EGG_NAME=	cvxopt-${DISTNAME}
+CATEGORIES=	math
+MASTER_SITES=	https://github.com/cvxopt/cvxopt/archive/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://abel.ee.ucla.edu/cvxopt/
+HOMEPAGE=	http://cvxopt.org/
 COMMENT=	Python software for convex optimization
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/cvxopt-1.1.2/src
+WRKSRC=		${WRKDIR}/cvxopt-1.1.7
 
-USE_TOOLS+=	pax
-USE_LANGUAGES=	c fortran77
+USE_LANGUAGES=	c fortran
 
-PYDISTUTILSPKG= yes
-
-DOCDIR=	${PREFIX}/share/doc/py-cvxopt
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	cd ${WRKDIR}/${DISTNAME:S/.tar//}/doc/build/html && pax -rwpe . \
-		${DESTDIR}${PREFIX}/share/doc/py-cvxopt
-
+.include "../../lang/python/egg.mk"
 .include "../../math/blas/buildlink3.mk"
-.include "../../math/fftw/buildlink3.mk"
 .include "../../math/glpk/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
