@@ -1,110 +1,114 @@
-$NetBSD: patch-src_image_c,v 1.5 2014/06/17 01:53:00 makoto Exp $
+$NetBSD: patch-src_image_c,v 1.6 2014/06/17 23:02:35 makoto Exp $
 
 mage.c:7417:7: error: too few arguments to function 'DGifCloseFile'
 emacs-current/work/.buildlink/include/gif_lib.h:183:9:
 note: declared here
 
---- src/image.c.orig	2014-06-15 09:25:05.000000000 +0900
-+++ src/image.c	2014-06-17 08:46:30.000000000 +0900
-@@ -7410,12 +7410,20 @@ gif_load (struct frame *f, struct image 
- #endif
-     }
+--- src/image.c	2014-05-04 18:51:32 +0000
++++ src/image.c	2014-06-17 14:50:54 +0000
+@@ -7255,7 +7255,11 @@ gif_image_p (Lisp_Object object)
+ #ifdef WINDOWSNT
  
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)  
-+  int * return_value_p;
+ /* GIF library details.  */
++#if 5 < GIFLIB_MAJOR + (1 <= GIFLIB_MINOR)
++DEF_IMGLIB_FN (int, DGifCloseFile, (GifFileType *, int *));
++#else
+ DEF_IMGLIB_FN (int, DGifCloseFile, (GifFileType *));
 +#endif
-   /* Before reading entire contents, check the declared image size. */
+ DEF_IMGLIB_FN (int, DGifSlurp, (GifFileType *));
+ #if GIFLIB_MAJOR < 5
+ DEF_IMGLIB_FN (GifFileType *, DGifOpen, (void *, InputFunc));
+@@ -7325,6 +7329,19 @@ gif_read_from_memory (GifFileType *file,
+   return len;
+ }
+ 
++static int
++gif_close (GifFileType *gif, int *err)
++{
++  int retval;
++
++#if 5 < GIFLIB_MAJOR + (1 <= GIFLIB_MINOR)
++  retval = fn_DGifCloseFile (gif, err);
++#else
++  retval = fn_DGifCloseFile (gif);
++  if (err)
++    *err = gif->Error;
++#endif
++}
+ 
+ /* Load GIF image IMG for use on frame F.  Value is true if
+    successful.  */
+@@ -7419,7 +7436,7 @@ gif_load (struct frame *f, struct image 
    if (!check_image_size (f, gif->SWidth, gif->SHeight))
      {
        image_error ("Invalid image size (see `max-image-size')", Qnil, Qnil);
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)
-+      fn_DGifCloseFile (gif, return_value_p);
-+      return *return_value_p;
-+#else
-       fn_DGifCloseFile (gif);
+-      fn_DGifCloseFile (gif);
++      gif_close (gif, NULL);
        return 0;
-+#endif
      }
  
-   /* Read entire contents.  */
-@@ -7423,8 +7431,13 @@ gif_load (struct frame *f, struct image 
+@@ -7428,7 +7445,7 @@ gif_load (struct frame *f, struct image 
    if (rc == GIF_ERROR || gif->ImageCount <= 0)
      {
        image_error ("Error reading `%s'", img->spec, Qnil);
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)
-+      fn_DGifCloseFile (gif, return_value_p);
-+      return *return_value_p;
-+#else
-       fn_DGifCloseFile (gif);
+-      fn_DGifCloseFile (gif);
++      gif_close (gif, NULL);
        return 0;
-+#endif
      }
  
-   /* Which sub-image are we to display?  */
-@@ -7435,8 +7448,13 @@ gif_load (struct frame *f, struct image 
+@@ -7440,7 +7457,7 @@ gif_load (struct frame *f, struct image 
        {
  	image_error ("Invalid image number `%s' in image `%s'",
  		     image_number, img->spec);
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)
-+      fn_DGifCloseFile (gif, return_value_p);
-+      return *return_value_p;
-+#else
- 	fn_DGifCloseFile (gif);
+-	fn_DGifCloseFile (gif);
++	gif_close (gif, NULL);
  	return 0;
-+#endif
        }
    }
- 
-@@ -7453,8 +7471,13 @@ gif_load (struct frame *f, struct image 
+@@ -7458,7 +7475,7 @@ gif_load (struct frame *f, struct image 
    if (!check_image_size (f, width, height))
      {
        image_error ("Invalid image size (see `max-image-size')", Qnil, Qnil);
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)
-+      fn_DGifCloseFile (gif, return_value_p);
-+      return *return_value_p;
-+#else
-       fn_DGifCloseFile (gif);
+-      fn_DGifCloseFile (gif);
++      gif_close (gif, NULL);
        return 0;
-+#endif
      }
  
-   /* Check that the selected subimages fit.  It's not clear whether
-@@ -7471,16 +7494,26 @@ gif_load (struct frame *f, struct image 
+@@ -7476,7 +7493,7 @@ gif_load (struct frame *f, struct image 
  	     && 0 <= subimg_left && subimg_left <= width - subimg_width))
  	{
  	  image_error ("Subimage does not fit in image", Qnil, Qnil);
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)
-+	  fn_DGifCloseFile (gif, return_value_p);
-+	  return *return_value_p;
-+#else
- 	  fn_DGifCloseFile (gif);
+-	  fn_DGifCloseFile (gif);
++	  gif_close (gif, NULL);
  	  return 0;
-+#endif
  	}
      }
- 
+@@ -7484,7 +7501,7 @@ gif_load (struct frame *f, struct image 
    /* Create the X image and pixmap.  */
    if (!image_create_x_image_and_pixmap (f, img, width, height, 0, &ximg, 0))
      {
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)
-+      fn_DGifCloseFile (gif, return_value_p);
-+      return *return_value_p;
-+#else
-       fn_DGifCloseFile (gif);
+-      fn_DGifCloseFile (gif);
++      gif_close (gif, NULL);
        return 0;
-+#endif
      }
  
-   /* Clear the part of the screen image not covered by the image.
-@@ -7650,7 +7683,11 @@ gif_load (struct frame *f, struct image 
+@@ -7655,7 +7672,18 @@ gif_load (struct frame *f, struct image 
  			    Fcons (make_number (gif->ImageCount),
  				   img->lisp_data));
  
-+#if (GIFLIB_MAJOR == 5) && (GIFLIB_MINOR > 0)
-+  fn_DGifCloseFile (gif, return_value_p);
+-  fn_DGifCloseFile (gif);
++  if (gif_close (gif, &gif_err) == GIF_ERROR)
++    {
++#if 5 <= GIFLIB_MAJOR
++      char *error_text = fn_GifErrorString (gif_err);
++
++      if (error_text)
++	image_error ("Error closing `%s': %s",
++		     img->spec, build_string (error_text));
 +#else
-   fn_DGifCloseFile (gif);
++      image_error ("Error closing `%s'", img->spec);
 +#endif
++    }
  
    /* Maybe fill in the background field while we have ximg handy. */
    if (NILP (image_spec_value (img->spec, QCbackground, NULL)))
