@@ -1,1 +1,26 @@
-(nothing to be described now)
+tqsl-2.0.2RC4 to 2.0.2RC5 change:
+----------
+This release fixes a pair of related defects that have been there
+since TQSL 1.x
+
+When you create a station location, you associate it with a callsign
+certificate. When you sign a log, you select a location for signing,
+which then uses the callsign to select the right callsign certificate.
+
+The problems happen when you do unexpected things with those
+certificates.
+
+If you create a station location for K1MU, then delete all of the
+certificates for K1MU, then signing a log would cause an "Invalid
+Argument" error. TQSL has been corrected to now display an error that
+there are no valid callsign certificates.
+
+Similarly, if you create a station location and then let the
+associated callsign certificate to expire, trying to sign using that
+location would also give an unhelpful "Invalid Argument" message.
+
+When there were no matching certificates, displaying the properties of
+a station location would display an incorrect callsign.
+
+These defects have been corrected in RC5 so that useful error messages
+are displayed for these cases.
