@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/15 10:25:39 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/06/18 14:08:01 nros Exp $
 
 DISTNAME=	libpgf-src-6.14.12
 PKGNAME=	${DISTNAME:S/-src//}
@@ -16,8 +16,12 @@ USE_TOOLS+=	aclocal autoconf automake pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
+BUILD_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
+
+pre-patch:
+	${RUN} dos2unix ${WRKSRC}/configure.ac
+
 pre-configure:
-	${RUN} cp files/configure.ac ${WRKSRC}
 	${RUN} cd ${WRKSRC} && ./autogen.sh
 
 PKGCONFIG_OVERRIDE+=	libpgf.pc.in

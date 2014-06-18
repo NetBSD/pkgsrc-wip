@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/06/15 10:25:39 nros Exp $
+$NetBSD: distinfo,v 1.2 2014/06/18 14:08:01 nros Exp $
 
 SHA1 (libpgf-src-6.14.12.tar.gz) = bba68ebc8a4f275e56a7615cd1e6a252c59ca613
 RMD160 (libpgf-src-6.14.12.tar.gz) = 8ac4922959c31bb02b406165499e82417d0f6b1d
 Size (libpgf-src-6.14.12.tar.gz) = 91154 bytes
+SHA1 (patch-configure.ac) = b5a0a04d435f55a7ab61d3650f6691a9d66d8b7e
 SHA1 (patch-doc_Makefile.am) = 8a8b7862dedf9db3774f9a6d60b206a64cf9926b
