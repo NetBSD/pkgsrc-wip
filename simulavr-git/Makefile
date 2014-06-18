@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/02/22 08:25:04 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/18 02:21:52 makoto Exp $
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
@@ -57,15 +57,29 @@ SUBST_SED.build-dir=	-e 's,--build-dir.*-o,-o,g'
 ## gcc 2.95 gives warnings that it cannot inline all functions.
 #BUILDLINK_TRANSFORM+=	rm:-Werror
 
+## # See post-install: also for following SUBST
+## SUBST_CLASSES+=		python
+## SUBST_MESSAGE.python=	** Work around not building adc.elf etc
+## SUBST_STAGE.python=	post-configure
+## SUBST_FILES.python=	examples/python/Makefile
+## SUBST_SED.python=	-e '/EXAMPLE/s/^\#//'
+
 pre-configure:
 	(cd ${WRKSRC}; ./bootstrap)
 
+# example/python won't be installed as default
+post-install:
+	(cd ${WRKSRC}/examples/python; DESTDIR=${DESTDIR} ${GMAKE} install)
+
 .include "../../wip/mk/git-package.mk"
 
+# binutils-2.24
 .include "../../cross/avr-binutils/buildlink3.mk"
-.include "../../cross/avr-gcc/buildlink3.mk"
+# gcc-4.8.3
+.include "../../wip/avr-gcc/buildlink3.mk"
 #.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
+# See above BUILD_DEPENDS
 #.include "../../wip/avr-libc/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/pyversion.mk"

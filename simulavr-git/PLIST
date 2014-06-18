@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/08 05:41:38 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/18 02:21:52 makoto Exp $
 bin/simulavr
 include/simulavr/adcpin.h
 include/simulavr/application.h
@@ -21,6 +21,18 @@ include/simulavr/avrreadelf.h
 include/simulavr/avrsignature.h
 include/simulavr/decoder.h
 include/simulavr/dumpargs.h
+include/simulavr/elf_types.hpp
+include/simulavr/elfio.hpp
+include/simulavr/elfio_dump.hpp
+include/simulavr/elfio_dynamic.hpp
+include/simulavr/elfio_header.hpp
+include/simulavr/elfio_note.hpp
+include/simulavr/elfio_relocation.hpp
+include/simulavr/elfio_section.hpp
+include/simulavr/elfio_segment.hpp
+include/simulavr/elfio_strings.hpp
+include/simulavr/elfio_symbols.hpp
+include/simulavr/elfio_utils.hpp
 include/simulavr/externalirq.h
 include/simulavr/externaltype.h
 include/simulavr/extpin.h
@@ -137,26 +149,26 @@ share/doc/simulavr/examples/kbd.xbm
 share/doc/simulavr/examples/python/Makefile
 share/doc/simulavr/examples/python/README
 share/doc/simulavr/examples/python/adc.c
-share/doc/simulavr/examples/python/adc.elf
 share/doc/simulavr/examples/python/adc.py
 share/doc/simulavr/examples/python/ex_pinout.c
-share/doc/simulavr/examples/python/ex_pinout.elf
 share/doc/simulavr/examples/python/ex_pinout.py
 share/doc/simulavr/examples/python/ex_utils.py
 share/doc/simulavr/examples/python/example.c
-share/doc/simulavr/examples/python/example.elf
 share/doc/simulavr/examples/python/example.py
 share/doc/simulavr/examples/python/example_io.c
-share/doc/simulavr/examples/python/example_io.elf
 share/doc/simulavr/examples/python/example_io.py
 share/doc/simulavr/examples/python/example_pin.py
 share/doc/simulavr/examples/python/multicore.c
 share/doc/simulavr/examples/python/multicore.py
-share/doc/simulavr/examples/python/multicore_a.elf
-share/doc/simulavr/examples/python/multicore_b.elf
 share/doc/simulavr/examples/simple_ex1/README
 share/doc/simulavr/examples/simple_ex1/fred.c
 share/doc/simulavr/examples/simple_ex1/fred.elf
+share/doc/simulavr/examples/simple_serial/README
+share/doc/simulavr/examples/simple_serial/main.c
+share/doc/simulavr/examples/simple_serial/serial.c
+share/doc/simulavr/examples/simple_serial/serial.h
+share/doc/simulavr/examples/simple_serial/simple_serial.elf
+share/doc/simulavr/examples/simple_serial/simple_serial.hex
 share/doc/simulavr/examples/simulavr.tcl
 share/doc/simulavr/examples/spi/README
 share/doc/simulavr/examples/spi/anadata

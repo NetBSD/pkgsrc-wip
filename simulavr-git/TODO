@@ -1,4 +1,16 @@
-- Current build status:
+- Current build status: 2014-06-18
+  adc.elf etc. are not installed.
+  The reason for that is: in example/python/Makefile,
+  all the related lines are commented out probably due to
+  USE_AVR_CROSS_TRUE='#' set up. See
+     cvs diff -r 1.1  -r 1.2 PLIST |grep \\.elf
+  and it will tell the difference.
+
+  (Also, the chunk starting with following line was some
+  trial to fix above, but it then failed to create simulavr.pdf)
+  ## SUBST_CLASSES+=             python
+
+- Current build status: 2013-10-15
 
 Making all in gtest
 gmake[2]: Entering directory `/export/WRKOBJDIR/wip/simulavr-git/work/simulavr/regress/gtest'
