@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/05 00:29:27 gregschenzel Exp $
+$NetBSD: patch-aa,v 1.2 2014/06/18 21:01:42 gregschenzel Exp $
 
---- Makefile.orig	2008-11-04 10:13:20.000000000 -0700
+--- Makefile.orig	2014-06-18 20:44:43.000000000 +0000
 +++ Makefile
-@@ -3,12 +3,15 @@ VERSION=1.4
- 
- # CC = gcc
- CPPFLAGS=-DVERSION_STR=\"$(VERSION)\" -DUUCP_LOCK_DIR=\"/var/lock\"
+@@ -7,12 +7,15 @@ UUCP_LOCK_DIR=/var/lock
+ CPPFLAGS=-DVERSION_STR=\"$(VERSION)\" \
+          -DUUCP_LOCK_DIR=\"$(UUCP_LOCK_DIR)\" \
+          -DHIGH_BAUD
 -CFLAGS = -Wall -g
 +CFLAGS = -Wall -g -I$(PREFIX)/include
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/05 00:29:27 gregschenzel Exp $
  picocom : picocom.o term.o
  #	$(LD) $(LDFLAGS) -o $@ $+ $(LDLIBS)
  
-@@ -17,6 +20,12 @@ term.o : term.c term.h
+@@ -21,6 +24,12 @@ term.o : term.c term.h
  
  doc : picocom.8 picocom.8.html picocom.8.ps
  
