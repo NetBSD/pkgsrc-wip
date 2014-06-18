@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2013/07/06 10:16:25 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/06/18 06:30:42 makoto Exp $
 
 DISTNAME=		avr-libc-1.8.0
+PKGREVISION=		4
 CATEGORIES=		cross
 MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		wennmach@NetBSD.org
+MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 LICENSE=		modified-bsd
 
-BUILD_DEPENDS+=		doxygen>=1.6.3nb1:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.8.7:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
@@ -37,14 +38,21 @@ SUBST_MESSAGE.demo=	Add cross/bin on PATH for OBJCOPY (avr-objcopy) etc
 SUBST_FILES.demo=	doc/Makefile.in
 SUBST_SED.demo=		-e 's|@@@PATH@@@|${PREFIX}/bin:${PATH:Q}|g'
 
+post-extract:
+	${MKDIR} ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/largedemo/largedemo-setup.jpg ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/largedemo/largedemo-wiring.jpg ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/largedemo/largedemo-wiring2.jpg ${WRKSRC}/doc/api/latex_src
+	${LN} -s ../../examples/stdiodemo/stdiodemo-setup.jpg ${WRKSRC}/doc/api/latex_src
+
 post-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/LICENSE \
 		${WRKSRC}/AUTHORS \
 		${DESTDIR}${PREFIX}/share/doc/avr-libc
-	## delete following or similar files
-	##_export_CHROOT_usr_pkgsrc_wip_avr-libc_work_avr-libc-1.8.0_libc_string_.3
-	(cd ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3; ${RM} -f *${PKGVERSION}*)
+	## delete following or similar files, which includes PATH at build time.
+	##_usr_pkgsrc_cross_avr-libc_work_avr-libc-1.8.0_libc_string_.3
+	(cd ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3; ${RM} -f *${PKGVERSION_NOREV}*)
 	set -e;	\
 	for f in Makefile demo.c demo.bin demo.hex demo.pdf \
 		demo.srec;\
@@ -53,7 +61,7 @@ post-install:
 			${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo; \
 	done
 
-.include "../../wip/avr-binutils/buildlink3.mk"
+.include "../../cross/avr-binutils/buildlink3.mk"
 .include "../../wip/avr-gcc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
