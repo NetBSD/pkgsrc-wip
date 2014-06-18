@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/06/18 21:01:42 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/18 21:47:56 gregschenzel Exp $
 
 DISTNAME=	picocom-1.7
 PKGREVISION=	1
@@ -9,6 +9,7 @@ MASTER_SITES=   http://picocom.googlecode.com/files/
 
 HOMEPAGE=       https://code.google.com/p/picocom/
 COMMENT=        Dumb Terminal Emulator
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=             gmake
 BUILD_TARGET=		picocom
