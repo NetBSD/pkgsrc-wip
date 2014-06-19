@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/05/07 08:39:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.29 2014/06/19 11:17:24 fhajny Exp $
 
 DISTNAME=	mongodb-src-r2.6.1
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -100,7 +100,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} \
-		--full --prefix ${DESTDIR}${PREFIX} install
+		--full --prefix=${DESTDIR}${PREFIX} install
 
 do-test:
 	cd ${WRKSRC} && ./test
