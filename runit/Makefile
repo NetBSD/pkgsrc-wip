@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/06/11 12:47:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2014/06/19 11:22:34 fhajny Exp $
 
 DISTNAME=	runit-2.0.0
 CATEGORIES=	sysutils
@@ -34,7 +34,7 @@ SUBST_FILES.static=	src/Makefile
 SUBST_SED.static=	-e 's/-static//'
 .endif
 
-INSTALLATION_DIRS=	${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
+INSTALLATION_DIRS+=	${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
 
 do-install:
 	${INSTALL_PROGRAM} ${CMDDIR}/* ${DESTDIR}${PREFIX}/sbin
