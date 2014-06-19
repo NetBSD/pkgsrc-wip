@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/09/05 10:55:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2014/06/19 11:13:15 fhajny Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
 
@@ -9,7 +9,7 @@ BUILDLINK_DEPMETHOD.libev=	build
 BUILDLINK_DEPMETHOD.curl=	build
 .include "../../wip/ruby-passenger/Makefile.common"
 
-PKG_APACHE_ACCEPTED=	apache24 apache22 apache2
+PKG_APACHE_ACCEPTED=	apache24 apache22
 APACHE_MODULE=		YES
 USE_APR=		YES
 
