@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/04/03 10:52:40 nros Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/19 15:00:38 nros Exp $
 
 DISTNAME=	qore-xml-module-1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -20,12 +20,12 @@ PTHREAD_OPTS+=	require
 INSTALL_TARGET=	install install-html-local
 
 #This is needed in order to comply the with MIT license and binary distribution
-INSTALLATION_DIRS+=     share/qore/license/modules/xml
+INSTALLATION_DIRS+=     share/doc/${PKGBASE}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL \
-		${DESTDIR}${PREFIX}/share/qore/license/modules/xml
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
-		${DESTDIR}${PREFIX}/share/qore/license/modules/xml
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 
 .include "../../wip/qore/module.mk"

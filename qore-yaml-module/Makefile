@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/04/03 13:11:03 nros Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/19 15:00:38 nros Exp $
 
 DISTNAME=	qore-yaml-module-0.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -21,12 +21,12 @@ PTHREAD_OPTS+=	require
 INSTALL_TARGET=	install install-html-local
 
 #This is needed in order to comply the with MIT license and binary distribution
-INSTALLATION_DIRS+=	share/qore/license/modules/yaml
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL \
-		${DESTDIR}${PREFIX}/share/qore/license/modules/yaml
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
-		${DESTDIR}${PREFIX}/share/qore/license/modules/yaml
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../wip/qore/module.mk"
 .include "options.mk"

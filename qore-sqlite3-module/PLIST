@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/02 20:06:48 nros Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/06/19 15:00:38 nros Exp $
 lib/qore-modules/sqlite3-api-${QORE_MODULE_API}.qmod
-share/qore/docs/modules/sqlite3/sqlite3-module-doc.html
+share/doc/${PKGBASE}/sqlite3-module-doc.html

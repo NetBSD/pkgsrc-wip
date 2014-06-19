@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2014/02/16 13:43:27 nros Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2014/06/19 15:00:37 nros Exp $
 remove doxygen dependecy on the docs, its not needed since the 
 docs have already been generated.
 --- Makefile.in.orig	2013-10-05 09:58:48.000000000 +0000
@@ -23,11 +23,11 @@ docs have already been generated.
 -@COND_DOXYGEN_TRUE@	done
 -
 +install-html-local:
-+	$(MKDIR_P) $(DESTDIR)$(datadir)/qore/docs/modules/json/html/search
-+	$(MKDIR_P) $(DESTDIR)$(datadir)/qore/docs/modules/JsonRpcHandler/html/search
++	$(MKDIR_P) $(DESTDIR)$(docdir)/json/html/search
++	$(MKDIR_P) $(DESTDIR)$(docdir)/JsonRpcHandler/html/search
 +	for pkg in json JsonRpcHandler; do \
-+	   for f in docs/$$pkg/html/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/$$pkg/html; fi; done; \
-+	   for f in docs/$$pkg/html/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(datadir)/qore/docs/modules/$$pkg/html/search; done; \
++	   for f in docs/$$pkg/html/*; do if [ -f $$f ]; then $(INSTALL_DATA) $$f $(DESTDIR)$(docdir)/$$pkg/html; fi; done; \
++	   for f in docs/$$pkg/html/search/*; do $(INSTALL_DATA) $$f $(DESTDIR)$(docdir)/$$pkg/html/search; done; \
 +	done
  @COND_DOXYGEN_TRUE@clean-local:
  @COND_DOXYGEN_TRUE@	$(RM) -rf $(DOXYGEN_OUTPUT)
