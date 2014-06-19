@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/10/18 10:53:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2014/06/19 11:23:17 fhajny Exp $
 #
 
 DISTNAME=	spread-src-4.3.0
@@ -40,7 +40,7 @@ MAKE_FLAGS+=		LD=${CC:Q}
 RCD_SCRIPTS=		spread
 DOCSDIR=		${PREFIX}/share/doc/spread
 EXAMPLEDIR=		${PREFIX}/share/examples/spread
-INSTALLATION_DIRS=	${DOCSDIR} ${EXAMPLEDIR}
+INSTALLATION_DIRS+=	${DOCSDIR} ${EXAMPLEDIR}
 
 CONF_FILES=	${EXAMPLEDIR}/spread.access_ip ${PKG_SYSCONFDIR}/spread.access_ip
 CONF_FILES+=	${EXAMPLEDIR}/spread.conf ${PKG_SYSCONFDIR}/spread.conf
