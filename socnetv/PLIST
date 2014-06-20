@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 21:00:52 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/06/20 09:26:26 jihbed Exp $
 bin/socnetv
-man/man1/socnetv.1.gz
+man/man1/socnetv.1
 share/applications/socnetv.desktop
 share/doc/socnetv/AUTHORS
 share/doc/socnetv/COPYING
