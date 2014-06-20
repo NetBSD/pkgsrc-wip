@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/02/22 08:25:04 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/20 13:00:38 makoto Exp $
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
@@ -15,6 +15,8 @@ BUILD_DEPENDS+=		avr-libc-[0-9]*:../../wip/avr-libc
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-python=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr
+CONFIGURE_ARGS+=	--with-libiberty=${PREFIX}/lib/gcc/avr
+
 # Following line does not work yet (examples/python directory)
 #CONFIGURE_ENV+=	az_python_use=true
 #MAKE_ENV+=		az_python_use=true
@@ -80,8 +82,7 @@ SUBST_SED.makeinfo=	-e 's,@MAKEINFO@,${PREFIX}/bin/makeinfo,g'
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../cross/avr-binutils/buildlink3.mk"
-.include "../../cross/avr-gcc/buildlink3.mk"
-#.include "../../wip/avr-libc/buildlink3.mk"
+.include "../../wip/avr-gcc/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
