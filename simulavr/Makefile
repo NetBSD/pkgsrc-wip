@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/06/20 13:00:38 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/20 14:33:28 makoto Exp $
 #
 DISTNAME=		simulavr-1.0.0
+PKGREVISION=		0.1
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/simulavr/
 
