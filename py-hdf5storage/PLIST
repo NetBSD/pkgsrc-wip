@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/20 10:58:13 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/hdf5storage/Marshallers.py
+${PYSITELIB}/hdf5storage/Marshallers.pyc
+${PYSITELIB}/hdf5storage/Marshallers.pyo
+${PYSITELIB}/hdf5storage/__init__.py
+${PYSITELIB}/hdf5storage/__init__.pyc
+${PYSITELIB}/hdf5storage/__init__.pyo
+${PYSITELIB}/hdf5storage/lowlevel.py
+${PYSITELIB}/hdf5storage/lowlevel.pyc
+${PYSITELIB}/hdf5storage/lowlevel.pyo
+${PYSITELIB}/hdf5storage/utilities.py
+${PYSITELIB}/hdf5storage/utilities.pyc
+${PYSITELIB}/hdf5storage/utilities.pyo
