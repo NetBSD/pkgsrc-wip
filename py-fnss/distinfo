@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/06/20 18:20:42 jihbed Exp $
+
+SHA1 (fnss-0.5.0.tar.gz) = f7102b3e6ce28556c880c5b9f6d16468704e6c00
+RMD160 (fnss-0.5.0.tar.gz) = ecdf226ce5709226d0a5491fd0501ae1b1d92ac0
+Size (fnss-0.5.0.tar.gz) = 424945 bytes
+SHA1 (patch-setup.py) = ca2ce111a186d0660c86e1d7bbc14418e3567372
