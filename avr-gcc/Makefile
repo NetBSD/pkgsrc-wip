@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/06/18 05:08:59 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/20 01:18:06 makoto Exp $
 
 DISTNAME=		gcc-4.8.3
 PKGNAME=		${DISTNAME:C/^/avr-/}
@@ -50,7 +50,7 @@ pre-configure:
 # To avoid the conflict with other cross and native compiler
 post-install:
 	(cd ${DESTDIR}${PREFIX}/lib; \
-	 ${MV} libiberty.a gcc/avr/${PKGVERSION}/ )
+	 ${MV} libiberty.a gcc/avr/ )
 
 CONFIGURE_DIRS=		${WRKDIR}/obj
 CONFIGURE_SCRIPT=	${WRKSRC}/configure

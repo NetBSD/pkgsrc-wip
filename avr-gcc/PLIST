@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/06/18 05:08:59 makoto Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/06/20 01:18:06 makoto Exp $
 avr/bin/c++
 avr/bin/g++
 avr/bin/gcc
@@ -63,7 +63,7 @@ lib/gcc/avr/${PKGVERSION}/install-tools/macro_list
 lib/gcc/avr/${PKGVERSION}/install-tools/mkheaders.conf
 lib/gcc/avr/${PKGVERSION}/libgcc.a
 lib/gcc/avr/${PKGVERSION}/libgcov.a
-lib/gcc/avr/${PKGVERSION}/libiberty.a
+lib/gcc/avr/libiberty.a
 lib/gcc/avr/${PKGVERSION}/plugin/gtype.state
 lib/gcc/avr/${PKGVERSION}/plugin/include/ada/gcc-interface/ada-tree.def
 lib/gcc/avr/${PKGVERSION}/plugin/include/alias.h
