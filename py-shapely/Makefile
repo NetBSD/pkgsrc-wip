@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/05/04 21:39:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/20 10:40:28 jihbed Exp $
 
-DISTNAME=	Shapely-1.3.1
+DISTNAME=	Shapely-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/S/Shapely/
