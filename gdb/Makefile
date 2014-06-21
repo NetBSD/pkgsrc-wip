@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/10/01 15:47:03 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/21 04:01:01 thomasklausner Exp $
 #
 
 DISTNAME=	gdb-7.6.1
@@ -24,6 +24,8 @@ INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 AUTO_MKDIRS=		yes
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
