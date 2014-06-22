@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5803 2014/06/22 19:54:12 thomasklausner Exp $
+# $Id: Makefile,v 1.5804 2014/06/22 19:58:08 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -128,7 +128,6 @@ SUBDIR+=	apache-commons-logging
 SUBDIR+=	apache-commons-pool
 SUBDIR+=	apache-log4j
 SUBDIR+=	apache-velocity
-SUBDIR+=	apachebench2
 SUBDIR+=	ape
 SUBDIR+=	apel-git
 SUBDIR+=	apstget
