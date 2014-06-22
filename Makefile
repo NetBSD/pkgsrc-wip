@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5801 2014/06/15 10:29:32 nros Exp $
+# $Id: Makefile,v 1.5802 2014/06/22 19:50:52 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3248,7 +3248,6 @@ SUBDIR+=	stonx
 SUBDIR+=	structure
 SUBDIR+=	stumpwm
 SUBDIR+=	stunnel3
-SUBDIR+=	subversion17-base
 SUBDIR+=	sudo
 SUBDIR+=	sudoscript
 SUBDIR+=	suitesparse
