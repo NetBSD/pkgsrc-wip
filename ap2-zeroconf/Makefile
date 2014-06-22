@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:36 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/06/22 19:57:10 thomasklausner Exp $
 
 DISTNAME=	mod_zeroconf-0.3
 PKGNAME=	ap2-zeroconf-0.3
@@ -29,6 +29,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_zeroconf
 	cd ${WRKSRC} && ${INSTALL_DATA} README.txt ${PREFIX}/share/doc/mod_zeroconf/
 
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../net/howl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.8 2012/09/24 16:56:36 asau Exp $
-# $NetBSD: Makefile,v 1.8 2012/09/24 16:56:36 asau Exp $
+# $Id: Makefile,v 1.9 2014/06/22 19:57:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/22 19:57:10 thomasklausner Exp $
 
 DISTNAME=	mod_auth_imap2-2.2.0
 PKGNAME=	ap2-auth-imap-2.2.0
@@ -30,6 +30,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/examples/htaccess-example ${PREFIX:Q}/share/examples/ap2-auth-imap
 	${INSTALL_DATA} ${WRKSRC:Q}/examples/httpd.conf-append-example ${PREFIX:Q}/share/examples/ap2-auth-imap
 
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

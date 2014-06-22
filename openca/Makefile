@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:32:46 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/22 19:57:10 thomasklausner Exp $
 
 DISTNAME=	openca-0.9.2.5
 PKGREVISION=	3
@@ -163,6 +163,6 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR}
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

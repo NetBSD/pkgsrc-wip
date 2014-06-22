@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/24 16:56:36 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/22 19:57:10 thomasklausner Exp $
 
 DISTNAME=	mod_layout-4.1
 PKGNAME=	${DISTNAME:S/mod_/ap2-/}
@@ -25,5 +25,5 @@ do-install:
 		${WRKSRC}/mod_layout.la \
 		${DESTDIR}${PREFIX}/lib/httpd
 
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
