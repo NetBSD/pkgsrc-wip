@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/09 07:38:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/06/22 21:09:03 leot1990 Exp $
 
 DISTNAME=	zathura-0.2.7
 CATEGORIES=	print
@@ -9,7 +9,7 @@ HOMEPAGE=	http://pwmt.org/projects/zathura/
 COMMENT=	PDF viewer with vi-like keybindings
 #LICENSE=	# TODO: (see mk/license.mk)
 
-DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 USE_TOOLS+=	pkg-config gettext gmake groff
 USE_LIBTOOL=	yes
