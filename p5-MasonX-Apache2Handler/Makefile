@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/04 18:42:21 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/06/22 19:54:49 thomasklausner Exp $
 # p5-HTML-MasonX-Apache2Handler
 # http://search.cpan.org/CPAN/authors/id/B/BE/BEAU/MasonX-Apache2Handler-0.05.tar.gz
 # modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/MasonX
@@ -22,8 +22,6 @@ PKG_DESTDIR_SUPPORT=	none
 BUILDLINK_API_DEPENDS.perl=	perl>=5.8.4
 
 PERL5_PACKLIST=		auto/MasonX/Apache2Handler/.packlist
-
-PKG_APACHE_ACCEPTED=	apache2 apache22
 
 .include "../../mk/apache.mk"
 .include "../../lang/perl5/module.mk"

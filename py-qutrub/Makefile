@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 07:38:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/06/22 19:54:49 thomasklausner Exp $
 
 DISTNAME=	qutrub-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,6 @@ QUTRUB_FILES=	ar_ctype.py arabic_const.py classverb.py mosaref_main.py  conjugat
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-sqlite2
-PKG_APACHE_ACCEPTED=	apache2 apache22 apache24 # the ap2-python package only supports these versions of apache
 PY_EXEC=	${PREFIX}/bin/python${PYVERSSUFFIX}
 QUTRUBDIR=	${PREFIX}/${PYSITELIB}/py-qutrub
 

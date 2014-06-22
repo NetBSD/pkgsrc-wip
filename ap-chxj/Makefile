@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/24 16:56:35 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/22 19:54:49 thomasklausner Exp $
 #
 
 DISTNAME=	mod-chxj_0.12.12.src
@@ -18,7 +18,6 @@ USE_LIBTOOL=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
 PKG_SYSCONFSUBDIR=	httpd/chxj
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
