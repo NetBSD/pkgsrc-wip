@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5802 2014/06/22 19:50:52 thomasklausner Exp $
+# $Id: Makefile,v 1.5803 2014/06/22 19:54:12 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -103,7 +103,6 @@ SUBDIR+=	aolserver4
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-choke
 SUBDIR+=	ap-chxj
-SUBDIR+=	ap-evasive
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap2-auth-imap
