@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/09/24 16:56:36 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/06/22 19:53:41 thomasklausner Exp $
 
-PKG_DESTDIR_SUPPORT=	none
-
-.include "../../wip/ap-evasive/Makefile.common"
+.include "../../wip/ap2-evasive/Makefile.common"
 
 PKGNAME=		ap2-evasive-1.10.1
 PKGREVISION=		3
-PKG_APACHE_ACCEPTED=	apache2
 
 APACHE_MODULE=		yes
 APACHE_MODULE_NAME=	${DISTNAME:C|_[^_]*$||}20.so
@@ -28,5 +24,5 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${APXS} -i -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_LA}
 
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
