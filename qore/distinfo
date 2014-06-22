@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2014/06/19 15:00:36 nros Exp $
+$NetBSD: distinfo,v 1.8 2014/06/22 10:07:43 nros Exp $
 
-SHA1 (qore-0.8.10.tar.bz2) = fa4067c01b9fca09f97ccbe57727574cb7a36514
-RMD160 (qore-0.8.10.tar.bz2) = 2bbdc29b72dca0f62e87eea690ae54137bdb3611
-Size (qore-0.8.10.tar.bz2) = 16232919 bytes
+SHA1 (qore-0.8.11.tar.bz2) = 010fdce12a2c0e39ffd38cd02ba97a10672621a3
+RMD160 (qore-0.8.11.tar.bz2) = 64b705e36c1627a79e96fe32c6ffd7507685a10a
+Size (qore-0.8.11.tar.bz2) = 19548511 bytes
 SHA1 (patch-Makefile.in) = 0639d273905d6d21add8ead94733e19a2900e440
 SHA1 (patch-include_qore_QoreFile.h) = 934e3aaca3b3f1610f6ed662921b7b0550f5e8cb

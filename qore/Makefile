@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/06/19 15:00:36 nros Exp $
+# $NetBSD: Makefile,v 1.15 2014/06/22 10:07:43 nros Exp $
 
-DISTNAME=	qore-0.8.10
-PKGREVISION=	1
+DISTNAME=	qore-0.8.11
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake flex bison
+USE_TOOLS+=	bison flex gmake pkg-config
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	require
 
@@ -34,7 +33,6 @@ post-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
