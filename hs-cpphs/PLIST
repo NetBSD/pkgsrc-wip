@@ -1,30 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2014/04/16 22:16:27 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/06/26 22:00:18 szptvlfn Exp $
 bin/cpphs
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/HScpphs-${PKGVERSION}.o
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/CppIfdef.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/CppIfdef.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/HashDefine.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/HashDefine.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/MacroPass.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/MacroPass.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Options.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Options.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Position.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Position.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/ReadFirst.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/ReadFirst.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/RunCpphs.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/RunCpphs.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/SymTab.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/SymTab.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Tokenise.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Tokenise.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Unlit.hi
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Unlit.p_hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}.a
-lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}_p.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/cpphs-${PKGVERSION}/LICENCE-LGPL
 ${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/Language-Preprocessor-Cpphs.html
