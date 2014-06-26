@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.7 2012/10/14 20:43:28 khorben Exp $
+$NetBSD: distinfo,v 1.8 2014/06/26 12:24:32 khorben Exp $
 
-SHA1 (Locker-0.2.1.tar.gz) = b78288b7a45212dc2b89361539c7b63c85f7ee83
-RMD160 (Locker-0.2.1.tar.gz) = 81d96bcff075eac749027841f2194351940f9a55
-Size (Locker-0.2.1.tar.gz) = 49812 bytes
-SHA1 (patch-src_auth_Makefile) = dbad9612918cdb0e3d3b52f6116aea5632a89792
+SHA1 (Locker-0.2.2.tar.gz) = cf780abf63f9dc56345dff1723202b3a3956ed9b
+RMD160 (Locker-0.2.2.tar.gz) = 415d3410ddcb98dda57f866887e5cbbaccae0664
+Size (Locker-0.2.2.tar.gz) = 53643 bytes
+SHA1 (patch-src_auth_Makefile) = b7302ac2566f06a3abbfc9ba5439d631ce023a57
+SHA1 (patch-src_demos_Makefile) = 3aeabfd13eb89729988b7202aaf76255db0641af
+SHA1 (patch-src_plugins_Makefile) = 77a27df343429244b225d6f3e6a212c00bd2871a
+SHA1 (patch-tools_Makefile) = 8591622b2a078e3469922858c979c96b8cbbb675

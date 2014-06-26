@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/14 20:43:28 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2014/06/26 12:24:32 khorben Exp $
 
-DISTNAME=	Locker-0.2.1
-PKGNAME=	deforaos-locker-0.2.1
+DISTNAME=	Locker-0.2.2
+PKGNAME=	deforaos-locker-0.2.2
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/3703/
+MASTER_SITES=	http://www.defora.org/os/download/download/4329/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -24,7 +24,10 @@ AUTO_MKDIRS=	yes
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/locker.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/locker.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/lockerctl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/lockerctl.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/locker.html ${DESTDIR}${PREFIX}/share/doc/html/Locker/locker.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/lockerctl.html ${DESTDIR}${PREFIX}/share/doc/html/Locker/lockerctl.html
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 
 .include "options.mk"
