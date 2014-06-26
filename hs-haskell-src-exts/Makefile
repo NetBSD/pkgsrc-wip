@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/03/16 12:23:01 szptvlfn Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/06/26 22:00:39 szptvlfn Exp $
 
-DISTNAME=	haskell-src-exts-1.14.0.1
+DISTNAME=	haskell-src-exts-1.15.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,6 +9,6 @@ LICENSE=	modified-bsd
 
 BUILD_DEPENDS=	happy:../../wip/happy
 
-.include "../../wip/mk/haskell.mk"
+.include "../../mk/haskell.mk"
 .include "../../wip/hs-cpphs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
