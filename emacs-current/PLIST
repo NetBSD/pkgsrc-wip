@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.140 2014/06/14 23:36:38 makoto Exp $
+@comment $NetBSD: PLIST,v 1.141 2014/06/27 05:13:47 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1532,8 +1532,6 @@ share/emacs/${PKGVERSION}/lisp/elide-head.el.gz
 share/emacs/${PKGVERSION}/lisp/elide-head.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/authors.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/authors.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/autoload.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/autoload.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/avl-tree.el.gz
