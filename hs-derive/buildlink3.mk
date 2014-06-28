@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.10 2014/05/21 21:04:43 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2014/06/28 22:09:37 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-derive
 
 .if !defined(HS_DERIVE_BUILDLINK3_MK)
 HS_DERIVE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-derive+=	hs-derive>=2.5.15
+BUILDLINK_API_DEPENDS.hs-derive+=	hs-derive>=2.5.16
 BUILDLINK_PKGSRCDIR.hs-derive?=	../../wip/hs-derive
 
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
