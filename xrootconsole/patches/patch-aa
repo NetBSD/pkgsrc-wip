@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/04 23:41:34 gregschenzel Exp $
+$NetBSD: patch-aa,v 1.2 2014/06/28 10:56:31 cheusov Exp $
 
---- Makefile.orig	2004-02-20 14:53:28.000000000 -0700
+--- Makefile.orig	2004-02-20 21:53:28.000000000 +0000
 +++ Makefile
 @@ -35,5 +35,5 @@
  EXEC = xrootconsole
@@ -24,3 +24,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/04 23:41:34 gregschenzel Exp $
 -LIBS = -L/usr/X11R6/lib -lX11 -lutil
 +LIBS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11 -lutil
  
+@@ -78,3 +78,3 @@ realclean:
+ install: $(EXEC)
+-	cp $(EXEC) $(BINDIR)
+-	cp $(MANFILE) $(MANDIR)
++	cp $(EXEC) $(DESTDIR)$(BINDIR)
++	cp $(MANFILE) $(DESTDIR)$(MANDIR)
