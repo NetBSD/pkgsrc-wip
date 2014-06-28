@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2014/06/28 20:20:37 jihbed Exp $
+bin/cerridwen
+bin/cerridwen-server
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cerridwen/__init__.py
+${PYSITELIB}/cerridwen/__init__.pyc
+${PYSITELIB}/cerridwen/__init__.pyo
+${PYSITELIB}/cerridwen/api_server.py
+${PYSITELIB}/cerridwen/api_server.pyc
+${PYSITELIB}/cerridwen/api_server.pyo
+${PYSITELIB}/cerridwen/cerridwen.py
+${PYSITELIB}/cerridwen/cerridwen.pyc
+${PYSITELIB}/cerridwen/cerridwen.pyo
+${PYSITELIB}/cerridwen/cli.py
+${PYSITELIB}/cerridwen/cli.pyc
+${PYSITELIB}/cerridwen/cli.pyo
+${PYSITELIB}/cerridwen/tests.py
+${PYSITELIB}/cerridwen/tests.pyc
+${PYSITELIB}/cerridwen/tests.pyo
