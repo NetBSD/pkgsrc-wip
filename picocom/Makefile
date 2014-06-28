@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2014/06/18 21:47:56 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.7 2014/06/28 10:37:03 cheusov Exp $
 
 DISTNAME=	picocom-1.7
 PKGREVISION=	1
 CATEGORIES=	comms
+MASTER_SITES=	http://picocom.googlecode.com/files/
 
 MAINTAINER=	inittab@unixdev.net
-MASTER_SITES=   http://picocom.googlecode.com/files/
-
-HOMEPAGE=       https://code.google.com/p/picocom/
-COMMENT=        Dumb Terminal Emulator
+HOMEPAGE=	https://code.google.com/p/picocom/
+COMMENT=	Dumb Terminal Emulator
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=             gmake
+USE_TOOLS+=		gmake
 BUILD_TARGET=		picocom
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/picocom ${DESTDIR}${PREFIX}/bin
