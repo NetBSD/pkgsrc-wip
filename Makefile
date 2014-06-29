@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5805 2014/06/24 21:02:05 szptvlfn Exp $
+# $Id: Makefile,v 1.5806 2014/06/29 10:57:21 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1889,6 +1889,7 @@ SUBDIR+=	ossp-sa
 SUBDIR+=	ossp-str
 SUBDIR+=	ossp-val
 SUBDIR+=	ossp-var
+SUBDIR+=	osxinfo
 SUBDIR+=	othman
 SUBDIR+=	outguess
 SUBDIR+=	overgod
