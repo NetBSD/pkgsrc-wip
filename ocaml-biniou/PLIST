@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/07/02 05:06:57 jgoamakf Exp $
+lib/ocaml/site-lib/biniou/META
+lib/ocaml/site-lib/biniou/bi_dump.cmi
+lib/ocaml/site-lib/biniou/bi_dump.cmo
+lib/ocaml/site-lib/biniou/bi_inbuf.cmi
+lib/ocaml/site-lib/biniou/bi_inbuf.cmo
+lib/ocaml/site-lib/biniou/bi_inbuf.mli
+lib/ocaml/site-lib/biniou/bi_io.cmi
+lib/ocaml/site-lib/biniou/bi_io.cmo
+lib/ocaml/site-lib/biniou/bi_io.mli
+lib/ocaml/site-lib/biniou/bi_outbuf.cmi
+lib/ocaml/site-lib/biniou/bi_outbuf.cmo
+lib/ocaml/site-lib/biniou/bi_outbuf.mli
+lib/ocaml/site-lib/biniou/bi_share.cmi
+lib/ocaml/site-lib/biniou/bi_share.cmo
+lib/ocaml/site-lib/biniou/bi_share.mli
+lib/ocaml/site-lib/biniou/bi_stream.cmi
+lib/ocaml/site-lib/biniou/bi_stream.cmo
+lib/ocaml/site-lib/biniou/bi_stream.mli
+lib/ocaml/site-lib/biniou/bi_util.cmi
+lib/ocaml/site-lib/biniou/bi_util.cmo
+lib/ocaml/site-lib/biniou/bi_util.mli
+lib/ocaml/site-lib/biniou/bi_vint.cmi
+lib/ocaml/site-lib/biniou/bi_vint.cmo
+lib/ocaml/site-lib/biniou/bi_vint.mli
+lib/ocaml/site-lib/biniou/biniou.cma
