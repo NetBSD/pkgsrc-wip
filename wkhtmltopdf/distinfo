@@ -1,5 +1,13 @@
-$NetBSD: distinfo,v 1.3 2011/10/16 11:06:41 ryo-on Exp $
+$NetBSD: distinfo,v 1.4 2014/07/02 21:20:08 fhajny Exp $
 
-SHA1 (wkhtmltopdf-0.11.0_rc1.tar.bz2) = db03922d281856e503b3d562614e3936285728c7
-RMD160 (wkhtmltopdf-0.11.0_rc1.tar.bz2) = e37e090eda708fa8fdc715a7ef9fcbfc5394df8a
-Size (wkhtmltopdf-0.11.0_rc1.tar.bz2) = 97589 bytes
+SHA1 (wkhtmltox-0.12.1.tar.bz2) = a4b7c5a2b6ab082776de423fac8d7687b60c3fa1
+RMD160 (wkhtmltox-0.12.1.tar.bz2) = 17e32620d5d3cd5a673bbed4176f8dd16bb206d0
+Size (wkhtmltox-0.12.1.tar.bz2) = 36186476 bytes
+SHA1 (patch-qt_mkspecs_solaris-g++-64_qmake.conf) = d61da21fe0ae9ed29a8f9fefb8e46a8dc7fd6fe3
+SHA1 (patch-qt_src_3rdparty_sqlite_sqlite3.c) = 6c32831ef77792b532c701d8cd049b4743d689a4
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 11f8fc8e810c368487be1a4602793efa980bab09
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp) = d48814456e8ed635de9a541b7d733d07bf320cd2
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_MathExtras.h) = a35e8ecd2f6d2651744c7a6907744e5aaa8081ee
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_Platform.h) = f8eed33ca51748bbaade830ff7e9bb098833a0df
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_StringImpl.h) = 71bad3d443a195af66961bcb0ebda982d608ddd8
+SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h) = b2569015db79d0ba002444dc799143243cc32fa9

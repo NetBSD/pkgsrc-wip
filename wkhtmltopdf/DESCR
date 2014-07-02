@@ -1,2 +1,4 @@
-Converts a HTML web page to a beautiful PDF or an image thanks to the Webkit
-rendering engine.
+wkhtmltopdf and wkhtmltoimage are open source (LGPL) command line
+tools to render HTML into PDF and various image formats using the
+QT Webkit rendering engine. These run entirely "headless" and do
+not require a display or display service.
