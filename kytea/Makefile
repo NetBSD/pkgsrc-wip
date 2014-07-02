@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/08/01 01:51:25 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2014/07/02 12:38:38 obache Exp $
 #
 
 DISTNAME=	kytea-0.4.6
@@ -11,10 +11,10 @@ COMMENT=	Kyoto Text Analysis Toolkit
 LICENSE=	apache-2.0
 
 RESTRICTED=	Included model is not re-distributed without prior permission.
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKGCONFIG_OVERRIDE+=	kytea.pc.in
 
