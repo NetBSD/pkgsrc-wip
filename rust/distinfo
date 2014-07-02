@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/04/30 17:02:47 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2014/07/02 21:27:09 schmonz Exp $
 
-SHA1 (rust-0.10.tar.gz) = 20460730047ca6694eeb780d990f566572c32c43
-RMD160 (rust-0.10.tar.gz) = 5ef28883ac3803ae271373cacf1e37d1a14607ec
-Size (rust-0.10.tar.gz) = 19538709 bytes
-SHA1 (patch-src_llvm_utils_buildit_build__llvm) = 9cd864f2e0a48b25a10bfcb1d8024e05f5234f01
-SHA1 (patch-src_llvm_utils_lit_utils_check-coverage) = be10d8f799a92f5da6a624e20d752f98f7163a6e
-SHA1 (patch-src_llvm_utils_lit_utils_check-sdist) = 526d1f471425d7aac6b4cf3a1620c318eb99eb74
+SHA1 (rust-0.11.0.tar.gz) = f849e16e03b474143c575503ae82da7577a2170f
+RMD160 (rust-0.11.0.tar.gz) = 09f2fd0f5da3a7851b1984602d2acd0304764618
+Size (rust-0.11.0.tar.gz) = 21555837 bytes
+SHA1 (patch-src_jemalloc_configure) = fc620c770fefe7e50da62ab7170562aa30513b5d
+SHA1 (patch-src_llvm_utils_buildit_build__llvm) = 05a49ef5249ca610948fa9f7359de04c8a79c1e7

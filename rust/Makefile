@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/04/30 17:02:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/02 21:27:08 schmonz Exp $
 
-DISTNAME=	rust-0.10
+DISTNAME=	rust-0.11.0
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
