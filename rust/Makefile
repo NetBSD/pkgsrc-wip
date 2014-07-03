@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/07/02 21:27:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2014/07/03 03:11:31 schmonz Exp $
 
 DISTNAME=	rust-0.11.0
 CATEGORIES=	lang
@@ -13,6 +13,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--mandir=${PREFIX}/${PKGMANDIR}
 USE_LANGUAGES=	c c++
+GCC_REQD=	4.7 4.8
 USE_TOOLS+=	gmake perl
 
 # XXX problem with libtool wrapper
