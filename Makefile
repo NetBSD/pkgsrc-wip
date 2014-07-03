@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5808 2014/07/02 05:37:10 jgoamakf Exp $
+# $Id: Makefile,v 1.5809 2014/07/03 14:46:20 darcycain Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1862,6 +1862,7 @@ SUBDIR+=	opencascade
 SUBDIR+=	openconnect
 SUBDIR+=	opendchub
 SUBDIR+=	opendesktop-fonts
+SUBDIR+=	openerp-server
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openmpi163
