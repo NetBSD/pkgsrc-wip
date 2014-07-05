@@ -1,8 +1,32 @@
-(pkgsrc)
- 
 (upstream)
-Bump 4.5.3 to 4.7.3
-For the changes for 4.7, see following page.
+4.7.3 to 4.8.3  -- From grepping 'avr' from NEWS file:
+--------------
+   On AVR, the configure option --with-avrlibc supported since GCC 4.7.2
+   is turned on per default for all non-RTEMS configurations. This option
+   arranges for a better integration of [3]AVR Libc with avr-gcc. For
+   technical details, see [4]PR54461. To turn off the option in non-RTEMS
+   configurations, use --with-avrlibc=no. If the compiler is configured
+   for RTEMS, the option is always turned off.
+
+     * Support has been added for the AVR-specific configure option
+       --with-avrlibc=yes in order to arrange for better integration of
+       [3]AVR-Libc. This configure option is supported in avr-gcc 4.7.2
+       and newer and will only take effect in non-RTEMS configurations. If
+       avr-gcc is configured for RTEMS, the option will be ignored which
+       is the same as specifying --with-avrlibc=no. See [4]PR54461 for
+       more technical details.
+
+   3. http://www.nongnu.org/avr-libc/
+   4. http://gcc.gnu.org/PR54461
+
+#include <avr/io.h> /* Port Definitions from AVR-LibC */
+
+     * [297]14064 [avr-elf] -fdata-sections triggers ICE
+     * [302]16884 [avr-elf] [fweb related] bug while initializing
+
+4.5.3 to 4.7.3
+--------------
+ For the changes for 4.7, see following page.
   http://gcc.gnu.org/gcc-4.7/changes.html
 
 (Picking up AVR related topic from above info):
@@ -26,4 +50,3 @@ non-standard sections and / or define all static storage
 objects in assembler modules, must reference __do_clear_bss
 resp. __do_copy_data by hand or undefine the symbol(s) by
 means of -Wl,-u,__do_clear_bss resp. -Wl,-u,__do_copy_data.
-
