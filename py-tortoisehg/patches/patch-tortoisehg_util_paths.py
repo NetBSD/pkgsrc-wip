@@ -1,5 +1,7 @@
-$NetBSD: patch-tortoisehg_util_paths.py,v 1.1 2014/03/30 19:57:14 krytarowski Exp $
+$NetBSD: patch-tortoisehg_util_paths.py,v 1.2 2014/07/05 15:30:01 thomasklausner Exp $
+
 * include doc_path in paths
+
 --- tortoisehg/util/paths.py.orig	2014-03-05 15:40:47.000000000 +0000
 +++ tortoisehg/util/paths.py
 @@ -7,9 +7,9 @@

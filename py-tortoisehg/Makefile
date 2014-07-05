@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/06/09 12:40:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/07/05 15:30:01 thomasklausner Exp $
 
 DISTNAME=		tortoisehg-3.0.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=2.8.1:../../devel/py-mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-iniparse
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-iniparse, py-mercurial
 
 pre-configure:
 		${RUN} ${SED} -e 's:@PREFIX@:${PREFIX}:g' \

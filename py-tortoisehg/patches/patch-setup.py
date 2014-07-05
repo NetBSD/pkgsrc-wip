@@ -1,7 +1,9 @@
-$NetBSD: patch-setup.py,v 1.1 2014/03/30 19:57:14 krytarowski Exp $
+$NetBSD: patch-setup.py,v 1.2 2014/07/05 15:30:01 thomasklausner Exp $
+
 * nautilus-python is not available in pkgsrc so don't install
-* the nautilus extention.
+  the nautilus extension.
 * Install html documention, desktop file and license file.
+
 --- setup.py.orig	2013-11-16 07:12:03.000000000 +0000
 +++ setup.py
 @@ -11,6 +11,7 @@ import time
