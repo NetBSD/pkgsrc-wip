@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5809 2014/07/03 14:46:20 darcycain Exp $
+# $Id: Makefile,v 1.5810 2014/07/05 15:35:04 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2899,7 +2899,6 @@ SUBDIR+=	py-tmux
 SUBDIR+=	py-toeplitz
 SUBDIR+=	py-topkapi
 SUBDIR+=	py-toro
-SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-tqdm
 SUBDIR+=	py-tracks
