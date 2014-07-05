@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/06/20 14:33:28 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2014/07/05 12:43:56 makoto Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		0.1
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--with-libiberty=${PREFIX}/lib/gcc/avr
 # Following line does not work yet (examples/python directory)
 #CONFIGURE_ENV+=	az_python_use=true
 #MAKE_ENV+=		az_python_use=true
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		makeinfo gmake
 USE_LIBTOOL=		yes
