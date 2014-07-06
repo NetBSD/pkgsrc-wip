@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/06/22 10:07:43 nros Exp $
+# $NetBSD: Makefile,v 1.16 2014/07/06 20:06:29 nros Exp $
 
 DISTNAME=	qore-0.8.11
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -12,11 +13,13 @@ LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison flex gmake pkg-config
+USE_TOOLS+=	bison flex gmake
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	require
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
+
+REPLACE_QORE+=		doxygen/qdx
 
 INSTALL_TARGET=         install install-html-local
 
@@ -29,6 +32,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT ${DESTDIR}${PREFIX}/${licensedir}
 	${INSTALL_DATA} ${WRKSRC}/README-LICENSE ${DESTDIR}${PREFIX}/${licensedir}
 
+.include "application.mk"
 .include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"

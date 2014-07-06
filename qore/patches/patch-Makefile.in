@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.3 2014/06/19 15:00:37 nros Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2014/07/06 20:06:29 nros Exp $
 * Removes Doxygen dependency to install docs.
---- Makefile.in.orig	2014-05-31 10:25:08.000000000 +0000
+* Install docs in docdir.
+--- Makefile.in.orig	2014-07-06 11:47:12.000000000 +0000
 +++ Makefile.in
 @@ -933,8 +933,8 @@ EXTRA_DIST = next_build.sh WHATISQORE RE
  	$(LANG_DOXYFILES_SRC) $(LANG_QPP_SRC) $(am__append_1)
@@ -13,16 +14,17 @@ $NetBSD: patch-Makefile.in,v 1.3 2014/06/19 15:00:37 nros Exp $
  @COND_DOXYGEN_TRUE@LIB_TMP_DOXYFILES_SRC = \
  @COND_DOXYGEN_TRUE@	doxygen/lib/Doxyfile
  
-@@ -1629,8 +1629,6 @@ maintainer-clean-generic:
+@@ -1621,9 +1621,7 @@ maintainer-clean-generic:
+ 	@echo "it deletes files that may require special tools to rebuild."
  	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
- @COND_DOXYGEN_FALSE@uninstall-local:
  @COND_DOXYGEN_FALSE@html-local:
--@COND_DOXYGEN_FALSE@install-html-local:
 -@COND_DOXYGEN_FALSE@clean-local:
+ @COND_DOXYGEN_FALSE@uninstall-local:
+-@COND_DOXYGEN_FALSE@install-html-local:
  clean: clean-recursive
  
  clean-am: clean-binPROGRAMS clean-generic clean-libtool clean-local \
-@@ -1804,14 +1802,14 @@ dummy:
+@@ -1797,14 +1795,14 @@ dummy:
  
  @COND_DOXYGEN_TRUE@html-local: $(DOXYGEN_OUTPUT)
  
