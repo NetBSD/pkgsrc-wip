@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2014/05/16 20:47:07 szptvlfn Exp $
-#
+# $NetBSD: Makefile,v 1.16 2014/07/09 19:23:25 szptvlfn Exp $
 
-DISTNAME=	happy-1.19.2
+DISTNAME=	happy-1.19.4
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
+
 MAINTAINER=	esg@sdf.lonestar.org
-HOMEPAGE=	http://www.haskell.org/happy/
 COMMENT=	LALR(1) parser generator for the functional language Haskell
 LICENSE=	modified-bsd
 
