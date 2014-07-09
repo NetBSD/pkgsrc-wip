@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2014/07/09 00:18:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2014/07/09 04:30:00 thomasklausner Exp $
 
 # version number from setup.py
 DISTNAME=		khal-0.3.0
-#EGG_NAME=		${DISTNAME}.dev
-EGG_NAME=		${DISTNAME}.devc63
+EGG_NAME=		${DISTNAME}.dev
 CATEGORIES=		time net
 MASTER_SITES=		https://github.com/geier/khal
 
