@@ -1,0 +1,3 @@
+This library defines a syntax extension allowing you to automatically
+produce a list of all values of a type (for a type which only has
+finitely many values).
