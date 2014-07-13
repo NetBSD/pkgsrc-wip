@@ -1,0 +1,2 @@
+NetBSD fails: arc4randomforktest
+  treat same as Darwin and Solaris and need crypto/compat/getentropy_netbsd.c?
