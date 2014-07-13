@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.2 2014/04/05 21:56:02 rhialto Exp $
+$NetBSD: distinfo,v 1.3 2014/07/13 17:18:39 rhialto Exp $
 
-SHA1 (fs-uae-2.2.3.tar.gz) = 9c776d6688376920bb6e3fc1c57b0e92c80ad29e
-RMD160 (fs-uae-2.2.3.tar.gz) = 124606321a536a05d96a2be47c2ca195466e5dd4
-Size (fs-uae-2.2.3.tar.gz) = 4660376 bytes
-SHA1 (patch-Makefile) = c014eca971c73b2f345f429d7e501af7edcd60a5
+SHA1 (fs-uae-2.4.1.tar.gz) = 7a2e0723789b12d1cafc4f19202238403289018a
+RMD160 (fs-uae-2.4.1.tar.gz) = 0965b9281e72eb35d3d1fd7ca1d111ad7e4f775b
+Size (fs-uae-2.4.1.tar.gz) = 4393812 bytes
+SHA1 (patch-Makefile) = 7f54cd3982bcb61f8250e0957c4363f4c56b888d
 SHA1 (patch-common.mk) = eed577f604cc5e99b31f850eaf6c3a24790cc718
 SHA1 (patch-libfsemu_Makefile) = a195c62ad50f6113e92f27bb9d37fbd4800abaa5
 SHA1 (patch-libfsemu_src_emu_input.c) = f29ddb4b15213a52acabdc46234765ffef37d380
 SHA1 (patch-libfsemu_src_filesys.c) = 2db4fb1c6459d36656205fdebc978ac1203b06e6
+SHA1 (patch-libfsemu_src_ml_manymouse_x11__xinput2.c) = 905dea1c7bc604b126abf1a6c3268c5b33554f78
 SHA1 (patch-libfsemu_src_ml_ml.c) = c68ae38054a2920a5c628d6b9682911340b3d9f5
 SHA1 (patch-libfsemu_src_ml_x11.c) = 9ca726ee11c475b44b0c25a1e1e6eb157547eb32
 SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = a66abde2441715094c413d7498947ff8eb5d0b8a

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/07/13 17:18:39 rhialto Exp $
 
-VERSION=	2.2.3
+VERSION=	2.4.1
 DISTNAME=	fs-uae-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/stable/${VERSION}/
@@ -38,23 +38,5 @@ INSTALL_ENV+=	DESTDIR=${DESTDIR}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libX11/buildlink3.mk"
-
-# Stuff below here is for fs-uae-launcher.
-
-REPLACE_PYTHON+=launcher/fs_uae_launcher/netplay/oyoyo/examplebot.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-wxWidgets
-.include "../../lang/python/application.mk"
-PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
-
-DEPENDS+=	${PYPKGPREFIX}-game>=1.8.1:../../devel/py-game
-DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.10:../../x11/py-wxWidgets
-# Launcher build (actually binary package create)-only:
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.1.5:../../devel/py-setuptools
-
-# Install the launcher after the main program,
-post-install:
-	cd ${WRKSRC}/launcher; ${PYTHONBIN} setup.py install --prefix=${PREFIX:Q} --root=${DESTDIR:Q}
 
 .include "../../mk/bsd.pkg.mk"
