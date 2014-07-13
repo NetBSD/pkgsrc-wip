@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5811 2014/07/11 00:50:40 jgoamakf Exp $
+# $Id: Makefile,v 1.5812 2014/07/13 12:32:20 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1478,6 +1478,7 @@ SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	libreoffice
 SUBDIR+=	libreoffice-devel
+SUBDIR+=	libressl
 SUBDIR+=	libscscp
 SUBDIR+=	libslab
 SUBDIR+=	libsnappy
