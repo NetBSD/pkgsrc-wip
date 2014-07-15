@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/06/19 11:17:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.30 2014/07/15 13:38:28 fhajny Exp $
 
 DISTNAME=	mongodb-src-r2.6.1
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -87,7 +87,7 @@ MONGODB_MAN_FILES=	bsondump.1 mongo.1 mongod.1 mongodump.1 mongoexport.1	\
 
 RCD_SCRIPTS=		mongodb
 
-INSTALLATION_DIRS=	share/doc/mongodb share/examples/mongodb ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/doc/mongodb share/examples/mongodb ${PKGMANDIR}/man1
 
 CONF_FILES+=		share/examples/mongodb/mongod.conf \
 			${PKG_SYSCONFDIR}/mongod.conf
