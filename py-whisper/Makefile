@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/03/13 20:08:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/07/15 13:37:03 fhajny Exp $
 #
 
 DISTNAME=	whisper-0.9.12
@@ -12,6 +12,8 @@ COMMENT=	Fixed-size database, similar in design to RRD
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
