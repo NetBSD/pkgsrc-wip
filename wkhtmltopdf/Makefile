@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/07/02 21:20:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2014/07/17 20:47:10 fhajny Exp $
 
 DISTNAME=	wkhtmltox-0.12.1
 PKGNAME=	${DISTNAME:S/tox/topdf/}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wkhtmltopdf/}
 EXTRACT_SUFX=	.tar.bz2
@@ -59,7 +60,7 @@ CONFIGURE_ARGS+=	\
 	-no-sql-ibase -no-sql-mysql -no-sql-odbc -no-sql-psql -no-sql-sqlite	\
 	-no-sql-sqlite2 -no-sse -no-sse2 -no-sse3 -no-sse4.1 -no-sse4.2		\
 	-no-ssse3 -no-stl -no-xcursor -no-xfixes -no-xinerama -no-xinput	\
-	-no-xkb -no-xrandr -no-xshape -no-xsync
+	-no-xkb -no-xrandr -no-xshape -no-xsync -no-javascript-jit
 
 # Bits we don't build
 CONFIGURE_ARGS+=	\
