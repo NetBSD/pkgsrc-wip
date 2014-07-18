@@ -1,4 +1,4 @@
-Naming issue, are these confusing ?
+- Naming issue, are these confusing ?
 
 (ARRL)
 command name   		tqsl
@@ -11,3 +11,7 @@ help directory		share/TrustedQSL/help
 pkgname			tqsl
 pkgsrc directory 	ham/trustedQSL
 LICENSE.txt is installd share/TrustedQSL
+
+- Fix build by clang (NetBSD/6.99.47 and probably on FreeBSD)
+For example:
+http://ftp.netbsd.org/pub/pkgsrc/misc/joerg/20140716.1202/tqsl-2.0.2RC4/build.log
