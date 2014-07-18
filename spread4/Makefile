@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/06/19 11:23:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/07/18 11:10:22 fhajny Exp $
 #
 
-DISTNAME=	spread-src-4.3.0
+DISTNAME=	spread-src-4.4.0
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
