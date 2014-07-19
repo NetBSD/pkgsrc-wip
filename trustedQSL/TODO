@@ -15,3 +15,6 @@ LICENSE.txt is installd share/TrustedQSL
 - Fix build by clang (NetBSD/6.99.47 and probably on FreeBSD)
 For example:
 http://ftp.netbsd.org/pub/pkgsrc/misc/joerg/20140716.1202/tqsl-2.0.2RC4/build.log
+ 
+FYI, FreeBSD has fix (with naturally clang)
+http://svnweb.freebsd.org/ports?view=revision&revision=362230
