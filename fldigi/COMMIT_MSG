@@ -1,53 +1,9 @@
-(Upstream update 3.21.79 to 3.21.82)
-=Version 3.21.82=
+(Upstream update 3.21.82 to 3.21.83)
+=Version 3.21.83=
+2014-06-26  Robert Stiles  <kk5vd@yahoo.com>
+        10acfb7: Doxygen Inclusion
 
-2014-04-30  David Freese  <w1hkj@w1hkj.com>
-
-        92a7d01: hash-fix
-        b0db34c: RnA Analysis
-        fa9e10a: Phase accumulator
-        b7ce1cd: Base Directories
-        c9c6f28: WF Height/Speed
-        ca61d3f: RX Only
-        43fbe22: RTTY mem leak
-        f470ce3: Olivia/Contestia custom
-        b87e664: ARQ abort
-        a9818aa: RTTY Custom Shift
-
-=Version 3.21.81=
-
-        134221e: TX monitor
-        922c16f: Spotter seg fault
-        dbe4181: Audio selectors for PORTAUDIO
-        9771f4b: M4 tr1 detect
-        03643a6: ttyACMxx identification
-        cfe6f87: Olivia critical section
-        a60d6f7: MT63 critical section
-        c97043c: Logbook fields
-        3bc4f31: Hamlib selector
-        d33b7e7: Combobox
-        6f71f12: RTTY macro
-        ac671da: clang compatibility
-
-=Version 3.21.80=
-
-2014-03-19  David Freese  <w1hkj at w1hkj.com>
-		 FreeBSD nitems
-		 Cabrillo time off
-		 Change Fl_ListBox
-		 Restore Fl_Choice
-		 Olivia select fix
-		 ComboBox
-		 fluid update
-(pkgsrc)
- Upstream now includes following patches:
- (with slightly different code, say, #ifdef __clang__ etc),
- thus deleted:
-   patch-src_include_logsupport.h
-   patch-src_include_strutil.h
-   patch-src_logbook_logsupport.cxx
-   patch-src_misc_dxcc.cxx
-   patch-src_misc_re.cxx
-   patch-src_spot_notify.cxx
-   patch-src_spot_pskrep.cxx
-   patch-src_spot_spot.cxx
+2014-06-16  David Freese  <w1hkj@w1hkj.com>
+        03b141a: ARQ stx handshake
+        ba246eb: Virtual ports
+        1c38c93: New User Exit Behavior
