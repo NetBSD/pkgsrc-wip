@@ -9,4 +9,5 @@
 * ? Provide a more sane default config
 
 * This package has known vulnerabilities, please investigate and fix
-  if possible. (see: CVE-2012-5642, CVE-2013-7176, CVE-2013-7177, CVE-2013-2178)
+  if possible. (see: CVE-2012-5642, CVE-2013-7176, CVE-2013-7177, CVE-2013-2178,
+  CVE-2013-7176, CVE-2013-7177)
