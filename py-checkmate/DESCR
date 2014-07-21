@@ -1,0 +1,7 @@
+CheckMATE (Check Models At Terascale Energies) is a program package which
+accepts simulated event files in many formats for any given model.
+The program then determines whether the model is excluded or not at 95% C.L.
+by comparing to many recent experimental analyses. Furthermore the program
+can calculate confidence limits and provide detailed information about signal
+regions of interest. It is simple to use and the program structure allows for
+easy extensions to upcoming LHC results in the future.
