@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5813 2014/07/13 13:38:35 rhialto Exp $
+# $Id: Makefile,v 1.5814 2014/07/21 10:42:11 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1449,7 +1449,9 @@ SUBDIR+=	libjingle
 SUBDIR+=	liblbxutil
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
+SUBDIR+=	liblogging
 SUBDIR+=	liblognorm
+SUBDIR+=	liblognorm1
 SUBDIR+=	libmpg123
 SUBDIR+=	libmusclecard
 SUBDIR+=	libncl
@@ -3079,6 +3081,7 @@ SUBDIR+=	rstudio
 SUBDIR+=	rsyslog5
 SUBDIR+=	rsyslog6
 SUBDIR+=	rsyslog7
+SUBDIR+=	rsyslog8
 SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtpbreak
