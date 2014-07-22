@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/18 14:08:01 nros Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/22 17:28:45 thomasklausner Exp $
 
 DISTNAME=	libpgf-src-6.14.12
 PKGNAME=	${DISTNAME:S/-src//}
@@ -16,6 +16,7 @@ USE_TOOLS+=	aclocal autoconf automake pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
+# https://sourceforge.net/p/libpgf/bugs/7/
 BUILD_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 
 pre-patch:
