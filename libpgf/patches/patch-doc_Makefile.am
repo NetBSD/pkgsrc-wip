@@ -1,6 +1,6 @@
-$NetBSD: patch-doc_Makefile.am,v 1.1 2014/06/15 10:25:39 nros Exp $
+$NetBSD: patch-doc_Makefile.am,v 1.2 2014/07/22 17:13:50 thomasklausner Exp $
 
-* install mapages in mandir
+* install manpages in mandir
 * do not install _usr_...3 manpage files
 --- doc/Makefile.am.orig	2013-10-25 11:24:17.000000000 +0000
 +++ doc/Makefile.am
