@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.1 2013/09/11 10:01:57 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2014/07/22 07:44:55 fhajny Exp $
 
 Portability.
---- configure.orig	2013-09-03 10:32:49.000000000 +0000
+--- configure.orig	2014-03-25 20:39:50.000000000 +0000
 +++ configure
-@@ -18601,7 +18601,7 @@ $as_echo "no" >&6; }
+@@ -19002,7 +19002,7 @@ $as_echo "no" >&6; }
  fi
  
  
