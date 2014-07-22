@@ -1,7 +1,11 @@
-$NetBSD: patch-doc_Makefile.am,v 1.2 2014/07/22 17:13:50 thomasklausner Exp $
+$NetBSD: patch-doc_Makefile.am,v 1.3 2014/07/22 17:34:03 thomasklausner Exp $
 
 * install manpages in mandir
+https://sourceforge.net/p/libpgf/patches/9/
+
 * do not install _usr_...3 manpage files
+https://sourceforge.net/p/libpgf/patches/10/
+
 --- doc/Makefile.am.orig	2013-10-25 11:24:17.000000000 +0000
 +++ doc/Makefile.am
 @@ -11,6 +11,6 @@ html/index.html: Doxyfile
