@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/04/29 21:16:21 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/07/23 12:02:11 leot1990 Exp $
 bin/zathura
 include/zathura/document.h
 include/zathura/links.h
@@ -25,6 +25,7 @@ share/locale/he/LC_MESSAGES/zathura.mo
 share/locale/hr/LC_MESSAGES/zathura.mo
 share/locale/id_ID/LC_MESSAGES/zathura.mo
 share/locale/it/LC_MESSAGES/zathura.mo
+share/locale/lt/LC_MESSAGES/zathura.mo
 share/locale/no/LC_MESSAGES/zathura.mo
 share/locale/pl/LC_MESSAGES/zathura.mo
 share/locale/pt_BR/LC_MESSAGES/zathura.mo
