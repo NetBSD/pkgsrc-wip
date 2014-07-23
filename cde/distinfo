@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.3 2012/10/04 04:57:03 jellehermsen Exp $
+$NetBSD: distinfo,v 1.4 2014/07/23 10:07:43 obache Exp $
 
-SHA1 (cde.tar.gz) = f6227064d2c621e1b9db5b35d220587c5eb46cc9
-RMD160 (cde.tar.gz) = ac91cee9c476c421a9e4a10e93b2dd58eea11f5d
-Size (cde.tar.gz) = 63641254 bytes
+SHA1 (cde-src-2.2.1.tar.gz) = b3e09e4609f49ec42cda0d6b97967fc19f804aa4
+RMD160 (cde-src-2.2.1.tar.gz) = 0ad437dcce1840a1114bc60c78b7ffb2d1130fdb
+Size (cde-src-2.2.1.tar.gz) = 60596534 bytes
 SHA1 (patch-lib_tt_lib_tttk_tttk.h) = d384af24fbdc8987cf68667dcc45ff2a736303c2
-SHA1 (patch-programs_dtlogin_dm.c) = 169d5e166820c7d36e214a1c16c329329c82165b
+SHA1 (patch-programs_dtlogin_dm.c) = 46a4312cac388a4484b6791297eb51fd29053afe
 SHA1 (patch-programs_dtlogin_dm.h) = 6b7aa8a5dcd105a0f07da509e02d6cf64cf16118
-SHA1 (patch-programs_dtmail_libDtMail_Common_Session.C) = 7bedfd99e0b1810b4aa5e5031cd8c82f085d8c9d
-SHA1 (patch-programs_dtmail_libDtMail_RFC_RFCBodyPart.C) = eb95248f4a9623ce4d45de2e97d331cd48fa1be5
-SHA1 (patch-programs_dtprintinfo_libUI_MotifUI_Debug.c) = a0cb0c69742d898c1dece9d4e879584ad9faf728
+SHA1 (patch-programs_dtmail_libDtMail_Common_Session.C) = 9806e5ed33c05923a72dcae8c86dbd687a8f54cc
+SHA1 (patch-programs_dtmail_libDtMail_RFC_RFCBodyPart.C) = c521649e21f8636184ef9e50a453036457e67a6c
+SHA1 (patch-programs_dtprintinfo_libUI_MotifUI_Debug.c) = 829d03b1854a8c88fb88f1fcde53f298e5850f1c
 SHA1 (patch-programs_dtprintinfo_objects_PrintObj_ParseJobs.C) = 48538d434c9274a24aac5a1793e31d15a4d85f32
-SHA1 (patch-programs_dtsearchpath_libCliSrv_UnixEnv.C) = c596ad21e9eba5c2a717cd151d10b72455a76f87
+SHA1 (patch-programs_dtsearchpath_libCliSrv_UnixEnv.C) = 6201314f1b092817124b9902632d6f7da9adbcac

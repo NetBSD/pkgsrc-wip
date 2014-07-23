@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/07/23 09:34:58 obache Exp $
+# $NetBSD: Makefile,v 1.6 2014/07/23 10:07:43 obache Exp $
 #
-DISTNAME=	cde-2.2.0b
+DISTNAME=	cde-src-2.2.1
+PKGNAME=	${DISTNAME:S/-src-/-/}
 CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/}
 
 MAINTAINER=	jelle@jellehermsen.nl
 HOMEPAGE=	http://cdesktopenv.sourceforge.net/
@@ -19,11 +21,8 @@ DEPENDS+= libSM-[0-9]*:../../x11/libSM
 DEPENDS+= libICE-[0-9]*:../../x11/libICE
 DEPENDS+= libXp-[0-9]*:../../x11/libXp
 
-GIT_REPOSITORIES=   cdesktopenv-code
-GIT_REPO.cdesktopenv-code = git://git.code.sf.net/p/cdesktopenv/code
-WRKSRC=$(WRKDIR)/code/cde
+WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
-.include "../../wip/mk/git-package.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 # url2pkg-marker (please do not remove this line.)
