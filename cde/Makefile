@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:26 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/07/23 09:34:58 obache Exp $
 #
-# CDE - The Common Desktop Environment
 DISTNAME=	cde-2.2.0b
 CATEGORIES=	x11
 
 MAINTAINER=	jelle@jellehermsen.nl
 HOMEPAGE=	http://cdesktopenv.sourceforge.net/
-COMMENT=	CDE is a classic UNIX desktop
+COMMENT=	Common Desktop Environment
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++
