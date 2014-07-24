@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/06/26 22:00:18 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/07/24 21:55:23 szptvlfn Exp $
 bin/cpphs
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/HScpphs-${PKGVERSION}.o
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs.hi
@@ -14,6 +14,7 @@ lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Tokenise.
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Unlit.hi
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/package-description
+man/man1/cpphs.1
 share/doc/cpphs-${PKGVERSION}/LICENCE-LGPL
 ${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/Language-Preprocessor-Cpphs.html
 ${PLIST.doc}share/doc/cpphs-${PKGVERSION}/html/Language-Preprocessor-Unlit.html
