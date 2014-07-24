@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2014/05/09 07:38:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/07/24 00:17:49 jihbed Exp $
 
-DISTNAME=	bleachbit-0.7.2
+DISTNAME=	bleachbit-1.2
 CATEGORIES=	sysutils python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bleachbit/}
+MASTER_SITES=	http://sourceforge.net/projects/bleachbit/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
@@ -12,41 +12,28 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
-DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.14.1:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-notify>=0.2.1:../../sysutils/py-notify
 
-USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2, py-gobject
 
-ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-*
-
+PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON+=	bleachbit.py
 
-INSTALLATION_DIRS+=  bin share/applications share/pixmaps share/examples/bleachbit \
-				share/doc/bleachbit share/bleachbit/cleaners
+INSTALLATION_DIRS+=  bin share/applications share/pixmaps
 
-post-extract:
-	${RM} ${WRKSRC}/cleaners/Makefile
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bleachbit.py \
-		${DESTDIR}${PREFIX}/bin/bleachbit
-	cd ${WRKSRC}/cleaners && pax -rw -pp . \
-		${DESTDIR}${PREFIX}/share/bleachbit/cleaners
-	${INSTALL_DATA} ${WRKSRC}/doc/* \
-		${DESTDIR}${PREFIX}/share/examples/bleachbit
+	${INSTALL_SCRIPT} ${WRKSRC}/bleachbit.py  \
+			${DESTDIR}${PREFIX}/bin/bleachbit${PYVERSSUFFIX}
 	${INSTALL_DATA} ${WRKSRC}/bleachbit.desktop \
 		${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/bleachbit.png \
 		${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKSRC}/COPYING \
-		${DESTDIR}${PREFIX}/share/doc/bleachbit
-
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
