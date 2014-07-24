@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/12/05 05:34:20 phonohawk Exp $
+# $NetBSD: options.mk,v 1.5 2014/07/24 21:20:38 szptvlfn Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.darcs
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+= -fcurl -f-http
 .include "../../www/curl/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mhttp)
 CONFIGURE_ARGS+= -f-curl -fhttp
-.include "../../wip/hs-HTTP/buildlink3.mk"
+.include "../../www/hs-HTTP/buildlink3.mk"
 .endif
 
 #
