@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/11/09 16:26:00 makoto Exp $
+$NetBSD: distinfo,v 1.9 2014/07/24 23:55:41 makoto Exp $
 
-SHA1 (samba-4.1.0.tar.gz) = 8472f70a30baee330c4f023b0fc4088a856951c8
-RMD160 (samba-4.1.0.tar.gz) = 9d48264f021167cf1fb7fc94d241e33735f0cd4a
-Size (samba-4.1.0.tar.gz) = 23149430 bytes
+SHA1 (samba-4.1.9.tar.gz) = 1b7dfbf1c43ccb0dc348889d3a54fca74fd46102
+RMD160 (samba-4.1.9.tar.gz) = dbd045b2d2a12445591eacfe59af6c6ded69c387
+Size (samba-4.1.9.tar.gz) = 23192788 bytes
 SHA1 (patch-source4_scripting_wsript_build) = 91c99acc8cbadbd8d19400d466491c1da3e42527
 SHA1 (patch-testprogs_blackbox_dbcheck-oldrelease.sh) = c651014e5e703041a5bcf83f71a1d36c3f5f3309

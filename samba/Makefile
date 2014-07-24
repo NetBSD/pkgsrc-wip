@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.18 2014/01/06 10:55:44 jonperkin Exp $
+# $NetBSD: Makefile,v 1.19 2014/07/24 23:55:41 makoto Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
+# http://www.samba.org/samba/ftp/stable/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	4.1.0
+VERSION=	4.1.9
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 FILESDIR=		${PKGDIR}/../../net/samba/files
