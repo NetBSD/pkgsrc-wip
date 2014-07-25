@@ -1,17 +1,17 @@
-$NetBSD: patch-config.sh,v 1.1 2013/05/19 19:52:00 airhead Exp $
+$NetBSD: patch-config.sh,v 1.2 2014/07/25 08:31:44 airhead Exp $
 
 Remove overly "smart" detection script for ncurses.  This doesn't work on NetBSD.
 If libstfl is linked against the system-wide curses, you can't later link against
 ncurses.  Newsbeuter can use the ncursesw compat offered by NetBSD 6.x native curses.
 
---- config.sh.orig	2013-03-19 10:58:39.000000000 +0000
-+++ config.sh
-@@ -103,6 +103,8 @@ check_pkg "json" || fail "json"
+--- config.sh.orig	2014-07-25 09:01:09.000000000 +0200
++++ config.sh	2014-07-25 09:01:21.000000000 +0200
+@@ -109,6 +109,8 @@
  
  if [ `uname -s` = "Darwin" ]; then
  	check_custom "ncurses5.4" "ncurses5.4-config" || fail "ncurses5.4"
 +elif [ `uname -s` = "NetBSD" ]; then
-+	echo "Assuming native NetBSD curses should be used"
- else 
- 	check_custom "ncursesw5" "ncursesw5-config" || fail "ncursesw5"
++       echo "Assuming native NetBSD curses should be used"
+ elif [ `uname -s` != "OpenBSD" ]; then
+ 	check_custom "ncursesw5" "ncursesw5-config" ||  fail "ncursesw"
  fi

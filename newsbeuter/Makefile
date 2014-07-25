@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2013/06/11 13:41:20 jonperkin Exp $
+# $NetBSD: Makefile,v 1.19 2014/07/25 08:31:44 airhead Exp $
 
-DISTNAME=	newsbeuter-2.6
+DISTNAME=	newsbeuter-2.8
 CATEGORIES=	news
 MASTER_SITES=	http://www.newsbeuter.org/downloads/
 
@@ -30,6 +30,7 @@ SUBST_SED.makefile=	-e 's/^ifneq.*//; s/^endif.*//'
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
