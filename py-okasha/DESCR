@@ -1,0 +1,13 @@
+ Almost do-nothing web framework that features:
+
+ * WSGI-enabled ie. can be used with mod_wsgi, mod_python, Fast CGI, CGI, with
+   paste or even without even a server
+ * light weight
+ * can be tuned to be suitable for desktop apps or public web servers
+ * no extra dependencies
+ * very simple
+ * Contains a module to add support for XSLT-based templates (requires
+   python-lxml package)
+ * Contains a module to add support for Kid-based templates (requires
+   python-kid package)
+ * Contains a module to add support for Bottle-based templates
