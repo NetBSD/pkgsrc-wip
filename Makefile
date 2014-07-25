@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5818 2014/07/24 21:20:38 szptvlfn Exp $
+# $Id: Makefile,v 1.5819 2014/07/25 10:54:48 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -995,7 +995,6 @@ SUBDIR+=	hs-convertible
 SUBDIR+=	hs-convertible-ascii
 SUBDIR+=	hs-convertible-text
 SUBDIR+=	hs-core
-SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-crypto-api
 SUBDIR+=	hs-cryptohash
 SUBDIR+=	hs-curl
