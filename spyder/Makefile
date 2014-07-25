@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2014/04/27 20:57:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.15 2014/07/25 08:35:08 jihbed Exp $
 
-DISTNAME=	spyder-2.3.0beta4
+DISTNAME=	spyder-2.3.0
 PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	https://bitbucket.org/spyder-ide/spyderlib/downloads/

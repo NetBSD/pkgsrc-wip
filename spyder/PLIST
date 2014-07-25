@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/04/27 20:57:48 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/07/25 08:35:08 jihbed Exp $
 bin/spyder
 bin/spyder_win_post_install.py
 ${PYSITELIB}/spyderlib/__init__.py
@@ -13,6 +13,9 @@ ${PYSITELIB}/spyderlib/cli_options.pyo
 ${PYSITELIB}/spyderlib/config.py
 ${PYSITELIB}/spyderlib/config.pyc
 ${PYSITELIB}/spyderlib/config.pyo
+${PYSITELIB}/spyderlib/defaults/Readme.txt
+${PYSITELIB}/spyderlib/defaults/defaults-2.4.0.ini
+${PYSITELIB}/spyderlib/defaults/defaults-3.0.0.ini
 ${PYSITELIB}/spyderlib/dependencies.py
 ${PYSITELIB}/spyderlib/dependencies.pyc
 ${PYSITELIB}/spyderlib/dependencies.pyo
@@ -194,7 +197,7 @@ ${PYSITELIB}/spyderlib/images/console/history24.png
 ${PYSITELIB}/spyderlib/images/console/ipython_console.png
 ${PYSITELIB}/spyderlib/images/console/ipython_console_t.png
 ${PYSITELIB}/spyderlib/images/console/kill.png
-${PYSITELIB}/spyderlib/images/console/loading.gif
+${PYSITELIB}/spyderlib/images/console/loading_sprites.png
 ${PYSITELIB}/spyderlib/images/console/prompt.png
 ${PYSITELIB}/spyderlib/images/console/python.png
 ${PYSITELIB}/spyderlib/images/console/python_t.png
@@ -204,11 +207,13 @@ ${PYSITELIB}/spyderlib/images/console/syspath.png
 ${PYSITELIB}/spyderlib/images/console/terminate.png
 ${PYSITELIB}/spyderlib/images/console/terminated.png
 ${PYSITELIB}/spyderlib/images/dictedit.png
+${PYSITELIB}/spyderlib/images/editor/blockcomment.png
 ${PYSITELIB}/spyderlib/images/editor/breakpoint_big.png
 ${PYSITELIB}/spyderlib/images/editor/breakpoint_cond_big.png
 ${PYSITELIB}/spyderlib/images/editor/breakpoint_cond_small.png
 ${PYSITELIB}/spyderlib/images/editor/breakpoint_small.png
 ${PYSITELIB}/spyderlib/images/editor/bug.png
+${PYSITELIB}/spyderlib/images/editor/cell.png
 ${PYSITELIB}/spyderlib/images/editor/class.png
 ${PYSITELIB}/spyderlib/images/editor/close_panel.png
 ${PYSITELIB}/spyderlib/images/editor/comment.png
@@ -485,7 +490,6 @@ ${PYSITELIB}/spyderlib/utils/codeanalysis.pyo
 ${PYSITELIB}/spyderlib/utils/debug.py
 ${PYSITELIB}/spyderlib/utils/debug.pyc
 ${PYSITELIB}/spyderlib/utils/debug.pyo
-${PYSITELIB}/spyderlib/utils/defaults-2.4.0.ini
 ${PYSITELIB}/spyderlib/utils/dochelpers.py
 ${PYSITELIB}/spyderlib/utils/dochelpers.pyc
 ${PYSITELIB}/spyderlib/utils/dochelpers.pyo
@@ -742,6 +746,9 @@ ${PYSITELIB}/spyderlib/utils/introspection/rope_plugin.pyo
 ${PYSITELIB}/spyderlib/utils/iofuncs.py
 ${PYSITELIB}/spyderlib/utils/iofuncs.pyc
 ${PYSITELIB}/spyderlib/utils/iofuncs.pyo
+${PYSITELIB}/spyderlib/utils/ipython/templates/blank.html
+${PYSITELIB}/spyderlib/utils/ipython/templates/kernel_error.html
+${PYSITELIB}/spyderlib/utils/ipython/templates/loading.html
 ${PYSITELIB}/spyderlib/utils/misc.py
 ${PYSITELIB}/spyderlib/utils/misc.pyc
 ${PYSITELIB}/spyderlib/utils/misc.pyo
