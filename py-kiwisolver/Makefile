@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/06/28 22:07:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/26 13:57:08 jihbed Exp $
 
-DISTNAME=	kiwisolver-0.1.2
+DISTNAME=	kiwisolver-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/k/kiwisolver/

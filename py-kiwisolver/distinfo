@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/28 22:07:16 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2014/07/26 13:57:08 jihbed Exp $
 
-SHA1 (kiwisolver-0.1.2.zip) = b264a3ebbbccd11c8012e8ef6e26c9f169ac0000
-RMD160 (kiwisolver-0.1.2.zip) = dbd18a921d39a11d0a2d563411a6a5238fd98bd6
-Size (kiwisolver-0.1.2.zip) = 48346 bytes
+SHA1 (kiwisolver-0.1.3.zip) = 169af1dc15060025efa78b35c6096b1ec9a9bfba
+RMD160 (kiwisolver-0.1.3.zip) = 0fd77d9fd046447f07d17134099d3efb60981e0d
+Size (kiwisolver-0.1.3.zip) = 48696 bytes
