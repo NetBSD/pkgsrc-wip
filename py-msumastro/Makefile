@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/26 20:00:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/26 20:05:13 jihbed Exp $
 
 DISTNAME=	msumastro-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/mwcraig/msumastro
 COMMENT=	Process FITS files
 LICENSE=	modified-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
 
 USE_LANGUAGES=	# none
 
