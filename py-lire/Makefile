@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/26 12:38:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/26 12:39:03 jihbed Exp $
 
 DISTNAME=	pylire-0.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://pypi.python.org/packages/source/p/pylire/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/fish2000/pylire/
 COMMENT=	Python/Cython port of Lire image processing algorithms
-LICENSE=	modified-bsd
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-h5py>=2.2.1:../../devel/py-h5py
 
