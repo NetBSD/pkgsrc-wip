@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 211120
+LAST_UPDATED: Obtained from SVN: trunk revision 212879
 
 Native configuration is x86_64--netbsd
 
@@ -7,30 +7,32 @@ Native configuration is x86_64--netbsd
 
 
 Running target unix
-FAIL: g++.dg/cdce3.C -std=gnu++98 (test for excess errors)
-UNRESOLVED: g++.dg/cdce3.C -std=gnu++98 compilation failed to produce executable
-FAIL: g++.dg/cdce3.C -std=gnu++11 (test for excess errors)
-UNRESOLVED: g++.dg/cdce3.C -std=gnu++11 compilation failed to produce executable
-FAIL: g++.dg/cdce3.C -std=gnu++1y (test for excess errors)
-UNRESOLVED: g++.dg/cdce3.C -std=gnu++1y compilation failed to produce executable
-FAIL: g++.dg/guality/pr55665.C  -O2  line 23 p == 40
-FAIL: g++.dg/guality/pr55665.C  -O3 -fomit-frame-pointer  line 23 p == 40
-FAIL: g++.dg/guality/pr55665.C  -O3 -g  line 23 p == 40
-FAIL: g++.old-deja/g++.eh/badalloc1.C -std=c++98 execution test
-FAIL: g++.old-deja/g++.eh/badalloc1.C -std=c++11 execution test
-FAIL: g++.old-deja/g++.eh/badalloc1.C -std=c++1y execution test
-FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++98 (test for excess errors)
-FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
-FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++1y (test for excess errors)
+FAIL: g++.dg/cdce3.C  -std=gnu++98 (test for excess errors)
+UNRESOLVED: g++.dg/cdce3.C  -std=gnu++98 compilation failed to produce executable
+FAIL: g++.dg/cdce3.C  -std=gnu++11 (test for excess errors)
+UNRESOLVED: g++.dg/cdce3.C  -std=gnu++11 compilation failed to produce executable
+FAIL: g++.dg/cdce3.C  -std=gnu++1y (test for excess errors)
+UNRESOLVED: g++.dg/cdce3.C  -std=gnu++1y compilation failed to produce executable
+FAIL: g++.dg/cpp0x/static_assert9.C  -std=c++11 (test for excess errors)
+FAIL: g++.dg/cpp0x/static_assert9.C  -std=c++1y (test for excess errors)
+FAIL: g++.dg/guality/pr55665.C   -O2  line 23 p == 40
+FAIL: g++.dg/guality/pr55665.C   -O3 -fomit-frame-pointer  line 23 p == 40
+FAIL: g++.dg/guality/pr55665.C   -O3 -g  line 23 p == 40
+FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++11 execution test
+FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++1y execution test
+FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++98 (test for excess errors)
+FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++11 (test for excess errors)
+FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++1y (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		81246
-# of unexpected failures	12
+# of expected passes		81919
+# of unexpected failures	14
 # of expected failures		440
 # of unresolved testcases	3
-# of unsupported tests		3073
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.10.0 20140601 (experimental) (GCC) 
+# of unsupported tests		3120
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.10.0 20140720 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -54,414 +56,416 @@ FAIL: gcc.dg/nest.c (test for excess errors)
 FAIL: gcc.dg/nested-func-4.c (test for excess errors)
 FAIL: gcc.dg/pr32450.c (test for excess errors)
 FAIL: gcc.dg/pr43643.c (test for excess errors)
+UNRESOLVED: gcc.dg/pr44024.c scan-tree-dump-not ccp1 "foo"
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
-XPASS: gcc.dg/guality/example.c  -O0  execution test
-XPASS: gcc.dg/guality/example.c  -O1  execution test
-XPASS: gcc.dg/guality/example.c  -O2  execution test
-XPASS: gcc.dg/guality/example.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-XPASS: gcc.dg/guality/guality.c  -O0  execution test
-XPASS: gcc.dg/guality/guality.c  -O1  execution test
-XPASS: gcc.dg/guality/guality.c  -O2  execution test
-XPASS: gcc.dg/guality/guality.c  -O3 -fomit-frame-pointer  execution test
-XPASS: gcc.dg/guality/guality.c  -O3 -g  execution test
-XPASS: gcc.dg/guality/guality.c  -Os  execution test
-XPASS: gcc.dg/guality/guality.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-XPASS: gcc.dg/guality/guality.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-XPASS: gcc.dg/guality/inline-params.c  -O2  execution test
-XPASS: gcc.dg/guality/inline-params.c  -O3 -fomit-frame-pointer  execution test
-XPASS: gcc.dg/guality/inline-params.c  -O3 -g  execution test
-XPASS: gcc.dg/guality/inline-params.c  -Os  execution test
-XPASS: gcc.dg/guality/inline-params.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/guality/pr36728-1.c  -O1  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O1  line 18 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O2  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O2  line 18 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O3 -fomit-frame-pointer  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O3 -fomit-frame-pointer  line 18 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O3 -g  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O3 -g  line 18 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -Os  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -Os  line 18 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 18 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 18 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O1  line 14 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O1  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O2  line 14 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O2  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O3 -fomit-frame-pointer  line 14 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O3 -fomit-frame-pointer  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O3 -g  line 14 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O3 -g  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -Os  line 14 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -Os  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg7 == 30
-FAIL: gcc.dg/guality/pr36728-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg7 == 30
-XPASS: gcc.dg/guality/pr41353-1.c  -O0  line 28 j == 28 + 37
-XPASS: gcc.dg/guality/pr41447-1.c  -O0  execution test
-XPASS: gcc.dg/guality/pr41447-1.c  -O1  execution test
-XPASS: gcc.dg/guality/pr41447-1.c  -O2  execution test
-XPASS: gcc.dg/guality/pr41447-1.c  -O3 -fomit-frame-pointer  execution test
-XPASS: gcc.dg/guality/pr41447-1.c  -O3 -g  execution test
-XPASS: gcc.dg/guality/pr41447-1.c  -Os  execution test
-XPASS: gcc.dg/guality/pr41447-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-XPASS: gcc.dg/guality/pr41447-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-XPASS: gcc.dg/guality/pr41616-1.c  -O0  execution test
-XPASS: gcc.dg/guality/pr41616-1.c  -O1  execution test
-XPASS: gcc.dg/guality/pr41616-1.c  -O2  execution test
-XPASS: gcc.dg/guality/pr41616-1.c  -O3 -fomit-frame-pointer  execution test
-XPASS: gcc.dg/guality/pr41616-1.c  -O3 -g  execution test
-XPASS: gcc.dg/guality/pr41616-1.c  -Os  execution test
-XPASS: gcc.dg/guality/pr41616-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O2  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O3 -g  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -Os  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 35 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 36 e == &a[1]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 39 c == &a[0]
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 40 v == 1
-FAIL: gcc.dg/guality/pr43051-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 41 e == &a[1]
-FAIL: gcc.dg/guality/pr43177.c  -O2  line 15 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O2  line 15 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O2  line 24 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O2  line 24 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 15 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 15 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 24 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O3 -fomit-frame-pointer  line 24 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 15 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 15 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 24 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O3 -g  line 24 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -Os  line 15 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -Os  line 15 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -Os  line 24 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -Os  line 24 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 15 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 15 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 15 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 15 x == 7
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 l == 10
-FAIL: gcc.dg/guality/pr43177.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 x == 7
-FAIL: gcc.dg/guality/pr45882.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 d == 112
-FAIL: gcc.dg/guality/pr45882.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 e == 142
-FAIL: gcc.dg/guality/pr48437.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 i == 0
-FAIL: gcc.dg/guality/pr48437.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 i == 0
-FAIL: gcc.dg/guality/pr54200.c  -Os  line 20 z == 3
-FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 y == 25
-FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 z == 6
-FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 y == 117
-FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 z == 8
-FAIL: gcc.dg/guality/pr54519-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
-FAIL: gcc.dg/guality/pr54519-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 y == 25
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 z == 6
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 y == 117
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 z == 8
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 x == 36
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 y == 25
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 z == 6
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 x == 98
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 y == 117
-FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 z == 8
-FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
-FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 x == 6
-FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
-FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
-FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
-FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-loops  line 21 i == v + 1
-FAIL: gcc.dg/guality/pr54693-2.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 21 i == v + 1
-FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 x == 10 - i
-FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 y == 20 - 2 * i
-FAIL: gcc.dg/guality/sra-1.c  -O2  line 21 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O2  line 21 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O2  line 43 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O2  line 43 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 21 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 21 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 43 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O3 -fomit-frame-pointer  line 43 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 21 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 21 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 43 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O3 -g  line 43 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -Os  line 21 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -Os  line 21 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -Os  line 43 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -Os  line 43 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 21 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 21 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 43 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 43 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 21 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 21 a.j == 14
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 43 a.i == 4
-FAIL: gcc.dg/guality/sra-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 43 a.j == 14
-FAIL: gcc.dg/guality/vla-1.c  -O0  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -O0  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-1.c  -O1  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -O1  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-1.c  -O2  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -O2  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-1.c  -O3 -fomit-frame-pointer  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -O3 -fomit-frame-pointer  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-1.c  -O3 -g  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -O3 -g  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-1.c  -Os  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -Os  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 sizeof (a) == 6
-FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 sizeof (a) == 17 * sizeof (short)
-FAIL: gcc.dg/guality/vla-2.c  -O0  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O0  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O1  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O1  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O2  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O2  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O3 -fomit-frame-pointer  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O3 -fomit-frame-pointer  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O3 -g  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O3 -g  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -Os  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -Os  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 sizeof (a) == 5 * sizeof (int)
-FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 25 sizeof (a) == 6 * sizeof (int)
-FAIL: gcc.dg/torture/builtin-convert-1.c  -O1  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-1.c  -O2  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-1.c  -O3 -fomit-frame-pointer  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-1.c  -O3 -g  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-1.c  -Os  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-2.c  -O1  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-2.c  -O2  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-2.c  -O3 -fomit-frame-pointer  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-2.c  -O3 -g  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-2.c  -Os  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-3.c  -O1  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-3.c  -O2  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-3.c  -O3 -fomit-frame-pointer  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-3.c  -O3 -g  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-3.c  -Os  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-math-7.c  -O0  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O1  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O2  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O3 -fomit-frame-pointer  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O3 -fomit-frame-pointer -funroll-loops  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O3 -g  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -Os  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
-FAIL: gcc.dg/torture/builtin-math-7.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-FAIL: gcc.dg/torture/builtin-power-1.c  -O1  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-power-1.c  -O2  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-power-1.c  -O3 -fomit-frame-pointer  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-power-1.c  -O3 -g  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-power-1.c  -Os  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-power-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-div-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-extend-nan.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-mul-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncdf-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/float128-truncsf-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O0  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O0  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O1  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O1  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O2  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O2  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O3 -g  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O3 -g  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -Os  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -Os  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
-FAIL: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+XPASS: gcc.dg/guality/example.c   -O0  execution test
+XPASS: gcc.dg/guality/example.c   -O1  execution test
+XPASS: gcc.dg/guality/example.c   -O2  execution test
+XPASS: gcc.dg/guality/example.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+XPASS: gcc.dg/guality/guality.c   -O0  execution test
+XPASS: gcc.dg/guality/guality.c   -O1  execution test
+XPASS: gcc.dg/guality/guality.c   -O2  execution test
+XPASS: gcc.dg/guality/guality.c   -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/guality.c   -O3 -g  execution test
+XPASS: gcc.dg/guality/guality.c   -Os  execution test
+XPASS: gcc.dg/guality/guality.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+XPASS: gcc.dg/guality/guality.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+XPASS: gcc.dg/guality/inline-params.c   -O2  execution test
+XPASS: gcc.dg/guality/inline-params.c   -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/inline-params.c   -O3 -g  execution test
+XPASS: gcc.dg/guality/inline-params.c   -Os  execution test
+XPASS: gcc.dg/guality/inline-params.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/guality/pr36728-1.c   -O1  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O1  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O2  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O2  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O3 -fomit-frame-pointer  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O3 -fomit-frame-pointer  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O3 -g  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O3 -g  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -Os  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -Os  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 18 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O1  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O1  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O2  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O2  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O3 -fomit-frame-pointer  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O3 -fomit-frame-pointer  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O3 -g  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O3 -g  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -Os  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -Os  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg7 == 30
+FAIL: gcc.dg/guality/pr36728-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg7 == 30
+XPASS: gcc.dg/guality/pr41353-1.c   -O0  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41447-1.c   -O0  execution test
+XPASS: gcc.dg/guality/pr41447-1.c   -O1  execution test
+XPASS: gcc.dg/guality/pr41447-1.c   -O2  execution test
+XPASS: gcc.dg/guality/pr41447-1.c   -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/pr41447-1.c   -O3 -g  execution test
+XPASS: gcc.dg/guality/pr41447-1.c   -Os  execution test
+XPASS: gcc.dg/guality/pr41447-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+XPASS: gcc.dg/guality/pr41447-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+XPASS: gcc.dg/guality/pr41616-1.c   -O0  execution test
+XPASS: gcc.dg/guality/pr41616-1.c   -O1  execution test
+XPASS: gcc.dg/guality/pr41616-1.c   -O2  execution test
+XPASS: gcc.dg/guality/pr41616-1.c   -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/pr41616-1.c   -O3 -g  execution test
+XPASS: gcc.dg/guality/pr41616-1.c   -Os  execution test
+XPASS: gcc.dg/guality/pr41616-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/guality/pr43051-1.c   -O2  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O2  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O2  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-loops  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-loops  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-loops  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-loops  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-loops  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -g  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -g  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -g  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -g  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O3 -g  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -Os  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -Os  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -Os  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -Os  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -Os  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 35 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 36 e == &a[1]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 40 v == 1
+FAIL: gcc.dg/guality/pr43051-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 41 e == &a[1]
+FAIL: gcc.dg/guality/pr43177.c   -O2  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O2  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O2  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O2  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O3 -fomit-frame-pointer  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O3 -fomit-frame-pointer  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O3 -fomit-frame-pointer  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O3 -fomit-frame-pointer  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O3 -g  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O3 -g  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O3 -g  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O3 -g  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -Os  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -Os  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -Os  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -Os  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 15 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 15 x == 7
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 l == 10
+FAIL: gcc.dg/guality/pr43177.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 x == 7
+FAIL: gcc.dg/guality/pr45003-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 10 a == 0x8078
+FAIL: gcc.dg/guality/pr45882.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 d == 112
+FAIL: gcc.dg/guality/pr45882.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 e == 142
+FAIL: gcc.dg/guality/pr48437.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 i == 0
+FAIL: gcc.dg/guality/pr48437.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 i == 0
+FAIL: gcc.dg/guality/pr54200.c   -Os  line 20 z == 3
+FAIL: gcc.dg/guality/pr54519-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 y == 25
+FAIL: gcc.dg/guality/pr54519-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 z == 6
+FAIL: gcc.dg/guality/pr54519-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 y == 117
+FAIL: gcc.dg/guality/pr54519-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 z == 8
+FAIL: gcc.dg/guality/pr54519-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 y == 25
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 z == 6
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 y == 117
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 z == 8
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 x == 36
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 y == 25
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 z == 6
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 x == 98
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 y == 117
+FAIL: gcc.dg/guality/pr54519-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 z == 8
+FAIL: gcc.dg/guality/pr54519-4.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 x == 6
+FAIL: gcc.dg/guality/pr54519-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-5.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-5.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
+FAIL: gcc.dg/guality/pr54693-2.c   -O3 -fomit-frame-pointer -funroll-loops  line 21 i == v + 1
+FAIL: gcc.dg/guality/pr54693-2.c   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 21 i == v + 1
+FAIL: gcc.dg/guality/pr54693-2.c   -Os  line 21 x == 10 - i
+FAIL: gcc.dg/guality/pr54693-2.c   -Os  line 21 y == 20 - 2 * i
+FAIL: gcc.dg/guality/sra-1.c   -O2  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O2  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O2  line 43 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O2  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O3 -fomit-frame-pointer  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O3 -fomit-frame-pointer  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O3 -fomit-frame-pointer  line 43 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O3 -fomit-frame-pointer  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O3 -g  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O3 -g  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O3 -g  line 43 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O3 -g  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -Os  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -Os  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -Os  line 43 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -Os  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 43 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 43 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 21 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 21 a.j == 14
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 43 a.i == 4
+FAIL: gcc.dg/guality/sra-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 43 a.j == 14
+FAIL: gcc.dg/guality/vla-1.c   -O0  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -O0  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c   -O1  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -O1  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c   -O2  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -O2  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c   -O3 -fomit-frame-pointer  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -O3 -fomit-frame-pointer  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c   -O3 -g  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -O3 -g  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c   -Os  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -Os  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-2.c   -O0  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O0  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O1  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O1  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O2  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O2  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O3 -fomit-frame-pointer  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O3 -fomit-frame-pointer  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O3 -g  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O3 -g  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -Os  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -Os  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/torture/builtin-convert-1.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-1.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-1.c   -O3 -fomit-frame-pointer  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-1.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-2.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-2.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-2.c   -O3 -fomit-frame-pointer  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-2.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-2.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-3.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-3.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-3.c   -O3 -fomit-frame-pointer  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-3.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-3.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-convert-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-math-7.c   -O0  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O1  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O2  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O3 -fomit-frame-pointer  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O3 -fomit-frame-pointer -funroll-loops  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -Os  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/builtin-math-7.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/builtin-power-1.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-power-1.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-power-1.c   -O3 -fomit-frame-pointer  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-power-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-power-1.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-power-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-cmp-invalid.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-cmp-invalid.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-div-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-div-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-extend-nan.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-extend-nan.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-mul-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-mul-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncdf-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncdf-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/float128-truncsf-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/float128-truncsf-underflow.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128-timode.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128-timode.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O0  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O0  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O1  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O1  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O2  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O2  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O3 -g  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O3 -g  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -Os  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -Os  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  compilation failed to produce executable
+FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
+UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
 FAIL: gcc.dg/tree-ssa/foldaddr-1.c scan-tree-dump-times original "return 0" 1
 FAIL: gcc.target/i386/avx512f-ceil-sfix-vec-2.c scan-assembler vrndscalepd[^\\n]*zmm[0-9]
 FAIL: gcc.target/i386/avx512f-ceil-sfix-vec-2.c scan-assembler vcvttpd2dq[^\\n]*zmm[0-9]
@@ -478,95 +482,94 @@ UNRESOLVED: gcc.target/i386/long-double-128-9.c compilation failed to produce ex
 
 		=== gcc Summary ===
 
-# of expected passes		104418
-# of unexpected failures	322
+# of expected passes		105183
+# of unexpected failures	323
 # of unexpected successes	33
-# of expected failures		266
-# of unresolved testcases	84
-# of unsupported tests		1938
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140601 (experimental) (GCC) 
+# of expected failures		268
+# of unresolved testcases	85
+# of unsupported tests		1953
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140720 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
 
 Running target unix
-FAIL: gfortran.dg/default_format_2.f90  -O0  execution test
-FAIL: gfortran.dg/default_format_2.f90  -O1  execution test
-FAIL: gfortran.dg/default_format_2.f90  -O2  execution test
-FAIL: gfortran.dg/default_format_2.f90  -O3 -fomit-frame-pointer  execution test
-FAIL: gfortran.dg/default_format_2.f90  -O3 -fomit-frame-pointer -funroll-loops  execution test
-FAIL: gfortran.dg/default_format_2.f90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
-FAIL: gfortran.dg/default_format_2.f90  -O3 -g  execution test
-FAIL: gfortran.dg/default_format_2.f90  -Os  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -O0  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -O1  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -O2  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -O3 -fomit-frame-pointer  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -O3 -fomit-frame-pointer -funroll-loops  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -O3 -g  execution test
-FAIL: gfortran.dg/default_format_denormal_2.f90  -Os  execution test
-FAIL: gfortran.dg/erf_3.F90  -O0  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -O0  compilation failed to produce executable
-FAIL: gfortran.dg/erf_3.F90  -O1  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -O1  compilation failed to produce executable
-FAIL: gfortran.dg/erf_3.F90  -O2  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -O2  compilation failed to produce executable
-FAIL: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
-FAIL: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
-FAIL: gfortran.dg/erf_3.F90  -O3 -g  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -O3 -g  compilation failed to produce executable
-FAIL: gfortran.dg/erf_3.F90  -Os  (test for excess errors)
-UNRESOLVED: gfortran.dg/erf_3.F90  -Os  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -O0  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -O0  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -O1  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -O1  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -O2  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -O2  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -O3 -g  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -O3 -g  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_2.F90  -Os  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_2.F90  -Os  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_3.F90  -O0  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_3.F90  -O0  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -O0  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O0  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -O1  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O1  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -O2  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O2  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -fomit-frame-pointer  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -fomit-frame-pointer  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -g  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -O3 -g  compilation failed to produce executable
-FAIL: gfortran.dg/large_real_kind_form_io_1.f90  -Os  (test for excess errors)
-UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90  -Os  compilation failed to produce executable
-FAIL: gfortran.dg/nint_2.f90  -O0  execution test
-FAIL: gfortran.dg/wextra_1.f  -O   (test for warnings, line 4)
+FAIL: gfortran.dg/default_format_2.f90   -O0  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O1  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O2  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O3 -fomit-frame-pointer  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O3 -fomit-frame-pointer -funroll-loops  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
+FAIL: gfortran.dg/default_format_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/default_format_2.f90   -Os  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O0  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O1  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O2  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -fomit-frame-pointer  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -fomit-frame-pointer -funroll-loops  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -g  execution test
+FAIL: gfortran.dg/default_format_denormal_2.f90   -Os  execution test
+FAIL: gfortran.dg/erf_3.F90   -O0  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O0  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O1  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O1  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O2  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O2  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -g  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -g  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -Os  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -Os  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -O0  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -O0  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -O1  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -O1  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -O2  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -O2  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -O3 -g  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -O3 -g  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_2.F90   -Os  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_2.F90   -Os  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_3.F90   -O0  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_3.F90   -O0  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -O0  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -O0  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -O1  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -O1  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -O2  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -O2  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -g  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -O3 -g  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_form_io_1.f90   -Os  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_form_io_1.f90   -Os  compilation failed to produce executable
+FAIL: gfortran.dg/nint_2.f90   -O0  execution test
 
 		=== gfortran Summary ===
 
-# of expected passes		45707
-# of unexpected failures	43
+# of expected passes		46365
+# of unexpected failures	42
 # of expected failures		52
 # of unresolved testcases	25
 # of unsupported tests		104
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.10.0 20140601 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.10.0 20140720 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -578,7 +581,7 @@ Running target unix
 # of expected passes		1439
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.10.0 20140601 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.10.0 20140720 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -594,7 +597,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140601 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc410snapshot/work/build/gcc/xgcc  version 4.10.0 20140720 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -609,19 +612,15 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.c/loop-5.c execution test
+FAIL: libgomp.c++/affinity-1.C execution test
 WARNING: program timed out.
-FAIL: libgomp.c++/loop-8.C execution test
-WARNING: program timed out.
-FAIL: libgomp.fortran/do2.f90  -O2  execution test
-WARNING: program timed out.
-FAIL: libgomp.graphite/force-parallel-6.c execution test
+FAIL: libgomp.c++/cancel-parallel-2.C execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		2630
-# of unexpected failures	4
-# of unsupported tests		20
+# of expected passes		3257
+# of unexpected failures	2
+# of unsupported tests		22
 		=== libitm tests ===
 
 
@@ -699,17 +698,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8781
+# of expected passes		8838
 # of unexpected failures	52
 # of expected failures		68
 # of unresolved testcases	5
-# of unsupported tests		686
+# of unsupported tests		688
 
-Compiler version: 4.10.0 20140601 (experimental) (GCC) 
+Compiler version: 4.10.0 20140720 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-nls --with-libiconv-prefix=/usr --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc410snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc410snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --prefix=/usr/pkg/gcc410snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc410snapshot/info --mandir=/usr/pkg/gcc410snapshot/man
 EOF
-Mail -s "Results for 4.10.0 20140601 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.10.0 20140720 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc410snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
