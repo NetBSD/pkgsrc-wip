@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/06/28 22:09:37 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.12 2014/07/26 21:52:51 szptvlfn Exp $
 
 DISTNAME=	derive-2.5.16
 CATEGORIES=	devel
@@ -11,5 +11,5 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
-.include "../../wip/hs-uniplate/buildlink3.mk"
+.include "../../devel/hs-uniplate/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

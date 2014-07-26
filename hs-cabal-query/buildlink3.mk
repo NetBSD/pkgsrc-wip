@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/05/16 20:47:09 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/07/26 21:52:51 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-cabal-query
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-cabal-query?=	../../wip/hs-cabal-query
 .include "../../wip/hs-derive/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-tar/buildlink3.mk"
-.include "../../wip/hs-uniplate/buildlink3.mk"
+.include "../../devel/hs-uniplate/buildlink3.mk"
 .endif	# HS_CABAL_QUERY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-cabal-query

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2014/07/25 10:54:49 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2014/07/26 21:52:51 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hlint
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hlint?=	../../wip/hlint
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
 .include "../../wip/hs-hscolour/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
-.include "../../wip/hs-uniplate/buildlink3.mk"
+.include "../../devel/hs-uniplate/buildlink3.mk"
 .endif	# HLINT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hlint
