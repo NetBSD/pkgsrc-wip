@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/07/26 13:14:46 jihbed Exp $
+
+SHA1 (pylzma-0.4.4.tar.gz) = 703818c6bbba96dd843b583c3725b07f64ed6e73
+RMD160 (pylzma-0.4.4.tar.gz) = a57c7e6a145cd19424b9bbb0ce4da4d20439ada3
+Size (pylzma-0.4.4.tar.gz) = 106537 bytes
