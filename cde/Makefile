@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/07/27 02:44:19 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/07/27 05:27:58 obache Exp $
 #
 DISTNAME=	cde-src-2.2.1
 PKGNAME=	${DISTNAME:S/-src-/-/}
@@ -29,13 +29,25 @@ IMAKE_DEFINES+=		-DLibraryCplusplusCmd=${CXX}
 IMAKE_DEFINES+=		-DX11ProjectRoot=${X11BASE}
 IMAKE_DEFINES+=		-DProjectRoot=${PREFIX}
 IMAKE_DEFINES+=		-DTopMotifInclude=${MOTIFBASE}/include
-IMAKE_DEFINES+=		-DCdeConfigurationTop=${PKG_SYSFONFDIR}
+IMAKE_DEFINES+=		-DCDEProjectRoot=${PREFIX}/cde
+IMAKE_DEFINES+=		-DCdeInstallationTop=${PREFIX}/cde
+IMAKE_DEFINES+=		-DCdeConfigurationTop=${PKG_SYSCONFDIR}
+IMAKE_DEFINES+=		-DCdeLogfileTop=${VARBASE}/cde
 #IMAKE_DEFINES+=		-DTclLibrary=${BUILDLINK_PREFIX.tcl}/lib
 IMAKE_DEFINES+=		-DUseInstalledX11=YES
 #IMAKE_DEFINES+=	-DKornShell=${TOOLS_PATH.ksh}
 BUILD_MAKE_FLAGS+=	BOOTSTRAPCFLAGS=${CFLAGS:Q}
 BUILD_MAKE_FLAGS+=	IMAKE_DEFINES=${IMAKE_DEFINES:Q}
 #MAKE_ENV+=		MFLAGS=KORNSHELL=${TOOLS_PATH.ksh}
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	pre-configure
+SUBST_FILES.destdir=	admin/IntegTools/dbTools/installCDE.src
+SUBST_SED.destdir=	-e 's,-D / ,-D $$DESTDIR ,'
+
+do-install:
+	${RUN}cd ${WRKSRC}/admin/IntegTools/dbTools; \
+	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ./installCDE -s ${WRKSRC}
 
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
