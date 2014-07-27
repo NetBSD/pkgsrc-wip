@@ -2,6 +2,7 @@
 
 - Segmentation Fault on NetBSD modena 6.1.4 NetBSD 6.1.4 (GENERIC) amd64
 
+---------------------
 modena@makoto 17:32:00/140727(/tmp)% sudo rtl_test                          
 Found 1 device(s):
   0:  Realtek, RTL2838UHIDIR, SN: 00000001
@@ -38,3 +39,15 @@ Program terminated with signal 11, Segmentation fault.
 #1  0x00007f7ff7805dbf in rtlsdr_read_async () from /usr/pkg/lib/librtlsdr.so.0
 #2  0x000000000040226f in main ()
 (gdb) 
+---------------------
+You will get following if devel/libusb1 is packaged with
+CFLAGS+=       -g
+---------------------
+#0  0x00007f7ff7404892 in libusb_cancel_transfer (transfer=0x7f7ff7715220) at io.c:1357
+1357                            usbi_err(TRANSFER_CTX(transfer),
+(gdb) bt
+#0  0x00007f7ff7404892 in libusb_cancel_transfer (transfer=0x7f7ff7715220) at io.c:1357
+#1  0x00007f7ff7805dbf in rtlsdr_read_async () from /usr/pkg/lib/librtlsdr.so.0
+#2  0x000000000040226f in main ()
+(gdb) 
+---------------------
