@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/27 06:15:46 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/07/27 06:28:21 makoto Exp $
 #
 DISTNAME=		ninja-1.5.1
 CATEGORIES=		devel
@@ -10,7 +10,6 @@ COMMENT=		Ninja is a small build system with a focus on speed
 LICENSE=		apache-2.0
 
 BUILD_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
-BUILD_DEPENDS+=		python27-[0-9]*:../../lang/python27
 
 GIT_REPOSITORIES=	ninja
 GIT_MODULE.ninja=	ninja
@@ -20,21 +19,18 @@ GIT_FLAGS?=		--depth 1
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		cmake
-USE_LIBTOOL=		yes
+AUTO_MKDIRS=		yes
 
-INFO_FILES=		yes
-USE_PKGLOCALEDIR=	yes
 WRKSRC=			${WRKDIR}/${PKGBASE}
 
 pre-configure:
 	(cd ${WRKSRC}; ./bootstrap.py)
 
-# example/python won't be installed as default
 do-install:
-#	(cd ${WRKSRC}/; ./ninja -h)
 	(cd ${WRKSRC};	\
-	install -d ${DESTDIR}${PREFIX}/bin;	\
-	install ninja  ${DESTDIR}${PREFIX}/bin )
+	${INSTALL} ninja  ${DESTDIR}${PREFIX}/bin )
+
+# ${PREFIX}/bin/ninja -h for help
 
 do-build:
 	${NADA}
