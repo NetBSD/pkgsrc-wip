@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/07/27 07:42:49 obache Exp $
+# $NetBSD: Makefile,v 1.12 2014/07/27 08:35:20 obache Exp $
 #
 DISTNAME=	cde-src-2.2.1
 PKGNAME=	${DISTNAME:S/-src-/-/}
@@ -43,6 +43,7 @@ BUILD_MAKE_FLAGS+=	IMAKE_DEFINES=${IMAKE_DEFINES:Q}
 
 BUILD_DEFS+=		VARBASE
 OWN_DIRS+=		${VARBASE}/dt
+BUILDLINK_PASSTHRU_DIRS+=${PREFIX}/dt/lib
 
 SUBST_CLASSES+=		destdir
 SUBST_STAGE.destdir=	pre-configure
@@ -53,6 +54,11 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	databases/*.udb databases/*.src
 SUBST_SED.paths=	-e 's,/usr/dt,${PREFIX}/dt,g'
+
+SUBST_CLASSES+=		dtksh
+SUBST_STAGE.dtksh=	pre-configure
+SUBST_FILES.dtksh=	programs/dthelp/dthelpgen/dthelpgen.dtsh
+SUBST_SED.dtksh=	-e 's,/usr/dt/bin/dtksh,${PREFIX}/dt/bin/dtksh,g'
 
 do-install:
 	${RUN}cd ${WRKSRC}/admin/IntegTools/dbTools; \
