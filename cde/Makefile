@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/07/27 08:53:45 obache Exp $
+# $NetBSD: Makefile,v 1.14 2014/07/27 09:39:21 obache Exp $
 #
 DISTNAME=	cde-src-2.2.1
 PKGNAME=	${DISTNAME:S/-src-/-/}
@@ -68,7 +68,7 @@ do-install:
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtprintinfo ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtsession ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtterm ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtapppg ${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtapppgather ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtmail ${REAL_ROOT_USER} mail 2511
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtmailpr ${REAL_ROOT_USER} mail 2511
 
