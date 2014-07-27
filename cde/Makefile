@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/07/27 01:59:12 obache Exp $
+# $NetBSD: Makefile,v 1.8 2014/07/27 02:44:19 obache Exp $
 #
 DISTNAME=	cde-src-2.2.1
 PKGNAME=	${DISTNAME:S/-src-/-/}
@@ -30,7 +30,7 @@ IMAKE_DEFINES+=		-DX11ProjectRoot=${X11BASE}
 IMAKE_DEFINES+=		-DProjectRoot=${PREFIX}
 IMAKE_DEFINES+=		-DTopMotifInclude=${MOTIFBASE}/include
 IMAKE_DEFINES+=		-DCdeConfigurationTop=${PKG_SYSFONFDIR}
-IMAKE_DEFINES+=		-DTclLibrary=${BUILDLINK_PREFIX.tcl}/lib
+#IMAKE_DEFINES+=		-DTclLibrary=${BUILDLINK_PREFIX.tcl}/lib
 IMAKE_DEFINES+=		-DUseInstalledX11=YES
 #IMAKE_DEFINES+=	-DKornShell=${TOOLS_PATH.ksh}
 BUILD_MAKE_FLAGS+=	BOOTSTRAPCFLAGS=${CFLAGS:Q}
@@ -40,6 +40,6 @@ BUILD_MAKE_FLAGS+=	IMAKE_DEFINES=${IMAKE_DEFINES:Q}
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../lang/tcl/buildlink3.mk"
+#.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
