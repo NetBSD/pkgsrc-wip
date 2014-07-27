@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/07/27 06:28:21 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/07/27 07:42:37 makoto Exp $
 #
 DISTNAME=		ninja-1.5.1
+PKGNAME=		${DISTNAME:C/-/-devel-/}
 CATEGORIES=		devel
 MASTER_SITES=		https://github.com/martine/ninja
 
@@ -17,11 +18,20 @@ GIT_TAG.ninja=		release
 GIT_REPO.ninja=		https://github.com/martine/ninja
 GIT_FLAGS?=		--depth 1
 
+# following is effective only after do-install (?)
+# REPLACE_PYTHON=		bootstrap.py
+
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		cmake
 AUTO_MKDIRS=		yes
 
-WRKSRC=			${WRKDIR}/${PKGBASE}
+SUBST_CLASSES+=		python
+SUBST_MESSAGE.python=	Replace shebang before bootstrap
+SUBST_FILES.python=	bootstrap.py
+SUBST_STAGE.python=	pre-configure
+SUBST_SED.python=	's|/usr/bin/env python|${PREFIX}/bin/python${PYVERSSUFFIX}|'
+
+WRKSRC=			${WRKDIR}/ninja
 
 pre-configure:
 	(cd ${WRKSRC}; ./bootstrap.py)
