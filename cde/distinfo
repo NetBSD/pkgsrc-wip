@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/07/27 07:44:56 obache Exp $
+$NetBSD: distinfo,v 1.7 2014/07/28 13:56:46 obache Exp $
 
-SHA1 (cde-src-2.2.1.tar.gz) = b3e09e4609f49ec42cda0d6b97967fc19f804aa4
-RMD160 (cde-src-2.2.1.tar.gz) = 0ad437dcce1840a1114bc60c78b7ffb2d1130fdb
-Size (cde-src-2.2.1.tar.gz) = 60596534 bytes
+SHA1 (cde-src-2.2.2.tar.gz) = ae6621e5fd8612b6e97ae96679acfa6596c5efd1
+RMD160 (cde-src-2.2.2.tar.gz) = df07b4c43fcfd0bdb3d3e4b95affbaced948fc94
+Size (cde-src-2.2.2.tar.gz) = 60675335 bytes
 SHA1 (patch-lib_DtHelp_HelpXlate.c) = 225d9c31aacb316cc8f1241a60303a4fecd07e02
 SHA1 (patch-programs_dtlogin_dm.c) = 46a4312cac388a4484b6791297eb51fd29053afe
 SHA1 (patch-programs_dtlogin_dm.h) = 6b7aa8a5dcd105a0f07da509e02d6cf64cf16118
@@ -12,4 +12,3 @@ SHA1 (patch-programs_dtpdmd_manager.c) = c8b58c76744499b604d45249925f45746b61183
 SHA1 (patch-programs_dtprintinfo_libUI_MotifUI_Debug.c) = 829d03b1854a8c88fb88f1fcde53f298e5850f1c
 SHA1 (patch-programs_dtprintinfo_objects_PrintObj_ParseJobs.C) = 48538d434c9274a24aac5a1793e31d15a4d85f32
 SHA1 (patch-programs_dtsearchpath_libCliSrv_UnixEnv.C) = 6201314f1b092817124b9902632d6f7da9adbcac
-SHA1 (patch-programs_localized_util_merge.c) = 9a9679b006b2f6151b64dd1c4d9dee4c29e08c38
