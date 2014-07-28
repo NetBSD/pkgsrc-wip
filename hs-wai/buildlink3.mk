@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/05/26 22:08:06 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/07/28 21:05:56 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-wai
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.hs-wai?=	../../wip/hs-wai
 .include "../../net/hs-network/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
-.include "../../wip/hs-vault/buildlink3.mk"
+.include "../../devel/hs-vault/buildlink3.mk"
 .endif	# HS_WAI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-wai

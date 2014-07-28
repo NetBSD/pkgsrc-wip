@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/26 22:08:06 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2014/07/28 21:05:56 szptvlfn Exp $
 
 DISTNAME=	wai-1.4.1
 CATEGORIES=	www
@@ -14,5 +14,5 @@ LICENSE=	mit
 .include "../../net/hs-network/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
-.include "../../wip/hs-vault/buildlink3.mk"
+.include "../../devel/hs-vault/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
