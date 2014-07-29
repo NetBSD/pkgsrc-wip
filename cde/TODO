@@ -1,3 +1,14 @@
+Built on NetBSD-6.1.4-i386 with X11_TYPE=modular and modified x11/motif
+(enable printing support).
+* many hard coded /usr/dt remains (workaround: ln -s /usr/pkg/dt /usr/dt)
+* many hard coded /usr/pkg
+* need to add some entries to /etc/services /etc/inetd.conf and /etc/rpc (How?)
+* installCDE IS DANGER!!!
+  some `cd' may be failed, but not stopped and continue to modify files in
+  current directory, maybe from / and recursively....
+
+followins are original TODO by the first importer:
+======================================================================
 As of 2012-10-03 CDE doesn't build yet. I (Jelle Hermsen) am almost done
 adding most basic NetBSD compatibility. I've made this preliminary pkgsrc
 package.
