@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/07/28 13:56:46 obache Exp $
+# $NetBSD: Makefile,v 1.16 2014/07/29 13:14:55 obache Exp $
 #
 DISTNAME=	cde-src-2.2.2
 PKGNAME=	${DISTNAME:S/-src-/-/}
@@ -11,7 +11,7 @@ COMMENT=	Common Desktop Environment
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=     bison bdftopcf mkfontdir ksh
+USE_TOOLS+=     bison bdftopcf mkfontdir ksh awk:run
 BUILD_TARGET=	World
 
 MAKE_JOBS_SAFE=	no
@@ -43,6 +43,15 @@ BUILD_MAKE_FLAGS+=	IMAKE_DEFINES=${IMAKE_DEFINES:Q}
 
 BUILD_DEFS+=		VARBASE
 OWN_DIRS+=		${VARBASE}/dt
+OWN_DIRS+=		${VARBASE}/dt/tmp
+OWN_DIRS+=		${VARBASE}/dt/appconfig/appmanager
+.for i in appmanager help icons types
+.  for j in C de_DE.ISO8859-1 es_ES.ISO8859-1 fr_FR.ISO8859-1 it_IT.ISO8859-1
+OWN_DIRS+=		${PKG_SYSCONFDIR}/appconfig/${i}/${j}
+.  endfor
+.endfor
+OWN_DIRS+=		${PKG_SYSCONFDIR}/config
+OWN_DIRS+=		${PKG_SYSCONFDIR}/config/Xsession.d
 BUILDLINK_PASSTHRU_DIRS+=${PREFIX}/dt/lib
 
 SUBST_CLASSES+=		destdir
@@ -60,11 +69,22 @@ SUBST_STAGE.dtksh=	pre-configure
 SUBST_FILES.dtksh=	programs/dthelp/dthelpgen/dthelpgen.dtsh
 SUBST_SED.dtksh=	-e 's,/usr/dt/bin/dtksh,${PREFIX}/dt/bin/dtksh,g'
 
+SUBST_CLASSES+=		awk
+SUBST_STAGE.awk=	pre-configure
+SUBST_FILES.awk=	programs/dtlogin/config/Xreset.src
+SUBST_SED.awk=		-e 's, /bin/awk , ${AWK} ,g'
+
 RCD_SCRIPTS=		dtlogin
 
 do-install:
 	${RUN}cd ${WRKSRC}/admin/IntegTools/dbTools; \
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ./installCDE -s ${WRKSRC}
+
+# LinkOtherIcons in confiRun
+#post-install:
+#.for i fphelp.t.pm help.t.pm paint.l.pm paint.m.pm paint.t.pm penpad.t.pm term.t.pm
+#	${LN} -s $i ${DESTDIR}${PREFIX}/dt/appconfig/icons/C/F${i}
+#.endfor
 
 # from databases/CDE-RUN.*
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtprintinfo ${SETUID_ROOT_PERMS}
