@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/10/14 10:42:40 szptvlfn Exp $
+$NetBSD: distinfo,v 1.5 2014/07/29 21:37:24 szptvlfn Exp $
 
-SHA1 (semigroupoids-4.0.tar.gz) = 33a58405de81ecc4c02ae2798ca285db0a5bf049
-RMD160 (semigroupoids-4.0.tar.gz) = dd26064f89865d2f16187ce676cd62145dc67a04
-Size (semigroupoids-4.0.tar.gz) = 15824 bytes
+SHA1 (semigroupoids-4.0.4.tar.gz) = fc92d77b49c08fddda81d9ee1c9cde307be62bf6
+RMD160 (semigroupoids-4.0.4.tar.gz) = 8ee0872b7b75bb447f3d4ee9a8585864c985a8dc
+Size (semigroupoids-4.0.4.tar.gz) = 16194 bytes
