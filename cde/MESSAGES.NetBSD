@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGES.NetBSD,v 1.1 2014/07/30 08:51:32 obache Exp $
+
+You must register following information by hand.
+
+/etc/services:
+dtspc		6112/tcp		# subprocess control
+
+/etc/inetd.conf:
+dtspc		stream	tcp nowait	root	${PREFIX}/dt/bin/dtspcd dtspcd
+cmsd/2-5	dgram	rpc/udp wait	root	${PREFIX}/dt/bin/rpc.cmsd rpc.cmsd
+ttdbserver/1	stream	rpc/tcp wait	root	${PREFIX}/dt/bin/rpc.ttdbserver	rpc.ttdbserver
+
+/etc/rpc:
+cmsd		100068	dtcalendar
+ttdbserver	100083	ttooltalk
+===========================================================================
