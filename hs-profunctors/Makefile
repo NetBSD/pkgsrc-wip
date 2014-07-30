@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2014/07/29 21:37:04 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/07/30 21:34:05 szptvlfn Exp $
 
-DISTNAME=	profunctors-4.2
+DISTNAME=	profunctors-4.2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
