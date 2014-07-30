@@ -1,4 +1,4 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.2 2013/11/10 21:27:38 nros Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.3 2014/07/30 16:33:00 nros Exp $
 *
 * This patch makes sure the man pages are installed in PKGMANDIR
 * It also excludes man pages named _usr_pkgsrc_..._include_..
@@ -11,7 +11,7 @@ $NetBSD: patch-doc_CMakeLists.txt,v 1.2 2013/11/10 21:27:38 nros Exp $
          install(DIRECTORY ${EC_MANPAGE3_DIR}
 -            DESTINATION share/man
 -            PATTERN editorconfig.3 EXCLUDE)
-+            DESTINATION ${PKGMANDIR}
++            DESTINATION ${CMAKE_INSTALL_MANDIR}
 +            PATTERN editorconfig.3 EXCLUDE
 +	    REGEX ._include_. EXCLUDE)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-doc_CMakeLists.txt,v 1.2 2013/11/10 21:27:38 nros Exp $
          install(FILES
              ${EC_MANPAGE1_DIR}/editorconfig.1
 -            DESTINATION share/man/man1)
-+            DESTINATION ${PKGMANDIR}/man1)
++            DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
  
          # "make clean" should also clean generated docs
          set_directory_properties(PROPERTIES
