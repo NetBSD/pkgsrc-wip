@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2014/04/15 10:59:41 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/07/31 21:47:56 szptvlfn Exp $
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Chan/Lifted.hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Chan/Lifted.p_hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Lifted.hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Lifted.p_hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/MVar/Lifted.hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/MVar/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSem/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSem/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSemN/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSemN/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/SampleVar/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/SampleVar/Lifted.p_hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Lifted.hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Lifted.p_hi
 lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Data/IORef/Lifted.hi
@@ -21,6 +27,9 @@ share/doc/lifted-base-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Control-Concurrent-Chan-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Control-Concurrent-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Control-Concurrent-MVar-Lifted.html
+${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Control-Concurrent-QSem-Lifted.html
+${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Control-Concurrent-QSemN-Lifted.html
+${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Control-Concurrent-SampleVar-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Control-Exception-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Data-IORef-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/Foreign-Marshal-Utils-Lifted.html
@@ -35,6 +44,9 @@ ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/lifted-base.haddock
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Control-Concurrent-Chan-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Control-Concurrent-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Control-Concurrent-MVar-Lifted.html
+${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Control-Concurrent-QSem-Lifted.html
+${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Control-Concurrent-QSemN-Lifted.html
+${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Control-Concurrent-SampleVar-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Control-Exception-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Data-IORef-Lifted.html
 ${PLIST.doc}share/doc/lifted-base-${PKGVERSION}/html/mini_Foreign-Marshal-Utils-Lifted.html
