@@ -24,7 +24,3 @@ ERROR: lib/samba/libsmbpasswdparser.so: missing library: libtalloc.so.2
 /usr/pkgsrc/wip/samba/work/samba-4.0.7/bin/shared/private/libauth4.so: undefined reference to `wbcErrorString@WBCLIENT_0.9'
 /usr/pkgsrc/wip/samba/work/samba-4.0.7/bin/shared/private/libauth4.so: undefined reference to `wbcAuthenticateUserEx@WBCLIENT_0.9'
 Waf: Leaving directory `/usr/pkgsrc/wip/samba/work/samba-4.0.7/bin'
-
-- Resolve following security issues:
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4496
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6442
