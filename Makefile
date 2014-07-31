@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5822 2014/07/30 21:36:36 szptvlfn Exp $
+# $Id: Makefile,v 1.5823 2014/07/31 06:15:11 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1828,6 +1828,7 @@ SUBDIR+=	ocaml-enumerate
 SUBDIR+=	ocaml-fieldslib
 SUBDIR+=	ocaml-herelib
 SUBDIR+=	ocaml-odn
+SUBDIR+=	ocaml-ounit
 SUBDIR+=	ocaml-sexplib
 SUBDIR+=	ocaml-type_conv
 SUBDIR+=	ocaml-zed
