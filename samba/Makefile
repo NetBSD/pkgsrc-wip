@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/07/24 23:55:41 makoto Exp $
+# $NetBSD: Makefile,v 1.20 2014/07/31 14:11:57 makoto Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -126,6 +126,7 @@ MAKE_DIRS=	${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
 OWN_DIRS=	${SAMBA_ETCDIR} ${SAMBA_LOCKDIR} ${SAMBA_STATEDIR}
 OWN_DIRS_PERMS=	${SAMBA_PRIVATE} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 RCD_SCRIPTS+=	samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
+LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib/samba
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
