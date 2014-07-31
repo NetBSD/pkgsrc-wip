@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2013/01/20 09:04:14 obache Exp $
+# $NetBSD: Makefile,v 1.15 2014/07/31 02:51:41 obache Exp $
 
-DISTNAME=	accountmanagerplugin_0.11-r${SVN_REV}
-PKGNAME=	trac-plugins-AccountManager-0.4.2
-EGG_NAME=	TracAccountManager-0.4.2
+DISTNAME=	${SVN_MOD}_tags_${SVN_TAG}-${SVN_REV}
+PKGNAME=	trac-plugins-AccountManager-0.4.4
+EGG_NAME=	TracAccountManager-0.4.4
 CATEGORIES=	www
-MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}/tags/${SVN_TAG}?old_path=%2F&old=${SVN_REV}&format=zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	obache@NetBSD.org
@@ -16,9 +16,21 @@ DEPENDS+=	{,ja-}trac>=0.12:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
 DEPENDS+=	${PYPKGPREFIX}-babel>=0.9.5:../../devel/py-babel
 
-SVN_REV=	12517
-SVN_MOD=	accountmanagerplugin/0.11
-WRKSRC=		${WRKDIR}/${SVN_MOD}
+SVN_TAG=	acct_mgr-0.4.4
+SVN_REV=	13806
+SVN_MOD=	accountmanagerplugin
+WRKSRC=		${WRKDIR}/${SVN_MOD}/tags/${SVN_TAG}
+
+# Unwanted "/" in archive. 
+EXTRACT_OPTS+=		-x
+EXTRACT_ELEMENTS=	/
+
+.include "../../mk/bsd.prefs.mk"
+
+# and NetBSD's buitlin unzip cannot handled well it.
+.if !empty(OPSYS:MNetBSD)
+_TOOLS_USE_PKGSRC.unzip=	yes
+.endif
 
 post-extract:
 	find ${WRKSRC} -type f -print | xargs chmod +r
