@@ -1,15 +1,14 @@
-$NetBSD: patch-GNUmakefile.in,v 1.1 2014/08/01 23:35:12 lexort Exp $
+$NetBSD: patch-GNUmakefile.in,v 1.2 2014/08/01 23:54:24 lexort Exp $
 
 Discussed upstream before release; will try again.
 
 
---- GNUmakefile.in.orig	2012-03-21 20:32:29.000000000 +0000
+--- GNUmakefile.in.orig	2012-06-11 18:29:44.000000000 +0000
 +++ GNUmakefile.in
-@@ -19,6 +19,13 @@ all install uninstall noop clean distcle
+@@ -19,6 +19,12 @@ all install uninstall noop clean distcle
  		echo "PostGIS was built successfully. Ready to install."; \
  	fi
  
-+
 +# Upstream does not provide a way to build both the main code
 +# and the docs with one target.
 +alldocs: all docs
@@ -18,4 +17,4 @@ Discussed upstream before release; will try again.
 +
  all: postgis_svn_revision.h
  
- install: all
+ ifneq ($(XSLTPROC),)

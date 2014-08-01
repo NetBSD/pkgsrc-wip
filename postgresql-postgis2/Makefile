@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2014/08/01 23:35:12 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/01 23:54:24 lexort Exp $
 
-DISTNAME=	postgis-2.0.0
+DISTNAME=	postgis-2.0.6
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases geography
-MASTER_SITES=	http://postgis.refractions.net/download/
+MASTER_SITES=	http://download.osgeo.org/postgis/source/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://postgis.refractions.net/
+HOMEPAGE=	http://postgis.net/
 COMMENT=	Spatial database capabilities for PostgreSQL
 
 LICENSE=	gnu-gpl-v2
@@ -43,7 +43,9 @@ SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
+REPLACE_PERL+=		utils/postgis_restore.pl
 #MAKE_ENV+=		PERL5=${PERL5:Q}
+
 INSTALL_ENV+=		mkinstalldirs=${INSTALL_DATA_DIR:Q}
 
 TEST_TARGET=		check
