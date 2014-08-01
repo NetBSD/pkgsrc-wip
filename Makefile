@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5826 2014/08/01 09:10:47 thomasklausner Exp $
+# $Id: Makefile,v 1.5827 2014/08/01 12:12:09 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -955,7 +955,6 @@ SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
 SUBDIR+=	hs-aeson
-SUBDIR+=	hs-ansi-terminal
 SUBDIR+=	hs-ansi-wl-pprint
 SUBDIR+=	hs-arrow-list
 SUBDIR+=	hs-ascii
@@ -1129,7 +1128,6 @@ SUBDIR+=	hs-stream-fusion
 SUBDIR+=	hs-strict
 SUBDIR+=	hs-strict-io
 SUBDIR+=	hs-stringable
-SUBDIR+=	hs-stringsearch
 SUBDIR+=	hs-stringtable-atom
 SUBDIR+=	hs-system-filepath
 SUBDIR+=	hs-tagsoup
