@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/05/31 15:57:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/08/01 03:40:30 leot1990 Exp $
 #
 
 DISTNAME=	sxiv-1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	-https://github.com/muennich/sxiv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
