@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5825 2014/08/01 08:47:43 thomasklausner Exp $
+# $Id: Makefile,v 1.5826 2014/08/01 09:10:47 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3656,7 +3656,6 @@ SUBDIR+=	xf86-input-mutouch
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel-old
-SUBDIR+=	xf86-video-intel27
 SUBDIR+=	xf86-video-modesetting
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv-current

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/01 08:44:52 thomasklausner Exp $
-lib/xorg/modules/drivers/intel_drv.la
-man/man4/intel.4

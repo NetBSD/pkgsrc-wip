@@ -1,4 +1,0 @@
-Does not build.
-
-xf86Resources.h can be removed without successor.
-xf86RAC.h is missing, but symbols from it are needed.
