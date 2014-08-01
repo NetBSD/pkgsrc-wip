@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/01 21:23:32 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mando/__init__.py
+${PYSITELIB}/mando/__init__.pyc
+${PYSITELIB}/mando/__init__.pyo
+${PYSITELIB}/mando/core.py
+${PYSITELIB}/mando/core.pyc
+${PYSITELIB}/mando/core.pyo
+${PYSITELIB}/mando/tests/__init__.py
+${PYSITELIB}/mando/tests/__init__.pyc
+${PYSITELIB}/mando/tests/__init__.pyo
+${PYSITELIB}/mando/tests/run.py
+${PYSITELIB}/mando/tests/run.pyc
+${PYSITELIB}/mando/tests/run.pyo
+${PYSITELIB}/mando/tests/test_core.py
+${PYSITELIB}/mando/tests/test_core.pyc
+${PYSITELIB}/mando/tests/test_core.pyo
+${PYSITELIB}/mando/tests/test_utils.py
+${PYSITELIB}/mando/tests/test_utils.pyc
+${PYSITELIB}/mando/tests/test_utils.pyo
+${PYSITELIB}/mando/utils.py
+${PYSITELIB}/mando/utils.pyc
+${PYSITELIB}/mando/utils.pyo
