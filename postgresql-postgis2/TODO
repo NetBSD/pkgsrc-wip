@@ -1,0 +1,5 @@
+Fix make->$(MAKE) in Makefiles (doc, doc/html/images).
+
+Use 'gmake comments-install' instead of hand copy.
+
+Figure out -lpq RPATH.
