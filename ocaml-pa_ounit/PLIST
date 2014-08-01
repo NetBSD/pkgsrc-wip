@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/01 01:51:14 jgoamakf Exp $
+lib/ocaml/site-lib/pa_ounit/META
+lib/ocaml/site-lib/pa_ounit/pa_ounit.cmi
+lib/ocaml/site-lib/pa_ounit/pa_ounit.cmx
+lib/ocaml/site-lib/pa_ounit/pa_ounit.ml
+lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.a
+lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cma
+lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cmi
+lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cmxa
+lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cmxs
+lib/ocaml/site-lib/pa_ounit/pa_ounit_syntax.a
+lib/ocaml/site-lib/pa_ounit/pa_ounit_syntax.cma
+lib/ocaml/site-lib/pa_ounit/pa_ounit_syntax.cmxa
+lib/ocaml/site-lib/pa_ounit/pa_ounit_syntax.cmxs
+lib/ocaml/site-lib/pa_ounit/runtime.mli
