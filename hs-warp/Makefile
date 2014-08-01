@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/26 22:08:06 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/08/01 21:00:43 szptvlfn Exp $
 
 DISTNAME=	warp-1.3.10.1
 CATEGORIES=	www
@@ -14,7 +14,7 @@ LICENSE=	mit
 .include "../../wip/hs-conduit/buildlink3.mk"
 .include "../../wip/hs-http-attoparsec/buildlink3.mk"
 .include "../../wip/hs-http-types/buildlink3.mk"
-.include "../../wip/hs-lifted-base/buildlink3.mk"
+.include "../../devel/hs-lifted-base/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
 .include "../../wip/hs-network-conduit/buildlink3.mk"
 .include "../../wip/hs-simple-sendfile/buildlink3.mk"

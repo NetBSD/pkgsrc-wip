@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/08/01 12:12:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/01 21:00:38 szptvlfn Exp $
 
 DISTNAME=	cgrep-6.4.3.1
 CATEGORIES=	textproc
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../wip/hs-regex-posix/buildlink3.mk"
 .include "../../wip/hs-safe/buildlink3.mk"
-.include "../../wip/hs-split/buildlink3.mk"
+.include "../../devel/hs-split/buildlink3.mk"
 .include "../../devel/hs-stm/buildlink3.mk"
 .include "../../textproc/hs-stringsearch/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5827 2014/08/01 12:12:09 szptvlfn Exp $
+# $Id: Makefile,v 1.5828 2014/08/01 21:00:36 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1071,7 +1071,6 @@ SUBDIR+=	hs-knob
 SUBDIR+=	hs-largeword
 SUBDIR+=	hs-lazy-io
 SUBDIR+=	hs-lens
-SUBDIR+=	hs-lifted-base
 SUBDIR+=	hs-magic
 SUBDIR+=	hs-markov-chain
 SUBDIR+=	hs-midi
@@ -1105,7 +1104,6 @@ SUBDIR+=	hs-pureMD5
 SUBDIR+=	hs-quickcheck-instances
 SUBDIR+=	hs-readline
 SUBDIR+=	hs-reflection
-SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-compat
 SUBDIR+=	hs-regex-posix
 SUBDIR+=	hs-regex-tdfa
@@ -1121,7 +1119,6 @@ SUBDIR+=	hs-semigroupoids
 SUBDIR+=	hs-semigroups
 SUBDIR+=	hs-shake
 SUBDIR+=	hs-simple-sendfile
-SUBDIR+=	hs-split
 SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-storablevector
 SUBDIR+=	hs-stream-fusion

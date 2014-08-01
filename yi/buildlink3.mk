@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/07/26 21:52:51 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/08/01 21:00:43 szptvlfn Exp $
 
 BUILDLINK_TREE+=	yi
 
@@ -22,10 +22,10 @@ BUILDLINK_PKGSRCDIR.yi?=	../../wip/yi
 .include "../../wip/hs-monads-fd/buildlink3.mk"
 .include "../../wip/hs-pointedlist03/buildlink3.mk"
 .include "../../wip/hs-pureMD5/buildlink3.mk"
-.include "../../wip/hs-regex-base/buildlink3.mk"
+.include "../../textproc/hs-regex-base/buildlink3.mk"
 .include "../../wip/hs-regex-tdfa/buildlink3.mk"
 .include "../../wip/hs-rosezipper1/buildlink3.mk"
-.include "../../wip/hs-split/buildlink3.mk"
+.include "../../devel/hs-split/buildlink3.mk"
 .include "../../devel/hs-uniplate/buildlink3.mk"
 .include "../../wip/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
