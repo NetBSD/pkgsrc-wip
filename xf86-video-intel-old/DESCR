@@ -10,4 +10,8 @@ Support hardware includes the following chipsets:
   - i945
   - i965
 
-An older version of the Intel driver is available in x11/xf86-video-i810.
+This package contains an older version of this driver for non-KMS
+systems.
+
+An even older version of the Intel driver is available in
+x11/xf86-video-i810.
