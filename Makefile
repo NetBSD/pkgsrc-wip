@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5830 2014/08/02 14:34:00 khorben Exp $
+# $Id: Makefile,v 1.5831 2014/08/02 16:15:20 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3355,6 +3355,7 @@ SUBDIR+=	swftools
 SUBDIR+=	swisseph
 SUBDIR+=	sword
 SUBDIR+=	sxemacs
+SUBDIR+=	sxhkd
 SUBDIR+=	sxid
 SUBDIR+=	sxiv
 SUBDIR+=	sylfilter
