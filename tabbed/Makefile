@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:21 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/02 08:48:54 amoibos Exp $
 
-DISTNAME=	tabbed-0.3
+DISTNAME=	tabbed-0.6
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/tools/
 
