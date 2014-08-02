@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/01 23:35:12 lexort Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/02 00:06:38 lexort Exp $
 bin/pgsql2shp
 bin/raster2pgsql
 bin/shp2pgsql
@@ -7,6 +7,7 @@ lib/liblwgeom.la
 lib/postgresql/postgis-2.0.so
 lib/postgresql/rtpostgis-2.0.so
 share/postgresql/contrib/postgis-2.0/legacy.sql
+share/postgresql/contrib/postgis-2.0/legacy_gist.sql
 share/postgresql/contrib/postgis-2.0/legacy_minimal.sql
 share/postgresql/contrib/postgis-2.0/postgis.sql
 share/postgresql/contrib/postgis-2.0/postgis_comments.sql
@@ -24,34 +25,28 @@ share/postgresql/contrib/postgis-2.0/uninstall_legacy.sql
 share/postgresql/contrib/postgis-2.0/uninstall_postgis.sql
 share/postgresql/contrib/postgis-2.0/uninstall_rtpostgis.sql
 share/postgresql/contrib/postgis-2.0/uninstall_topology.sql
+share/postgresql/extension/postgis--2.0.0--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.0beta4--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.0rc1--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.0rc2--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.1--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.3--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.4--${PKGVERSION}.sql
+share/postgresql/extension/postgis--2.0.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}alpha1--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}alpha2--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}alpha3--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}alpha4--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}alpha5--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}alpha6--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}beta1--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}beta2--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}beta3--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}beta4--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}rc1--${PKGVERSION}.sql
-share/postgresql/extension/postgis--${PKGVERSION}rc2--${PKGVERSION}.sql
 share/postgresql/extension/postgis--unpackaged--${PKGVERSION}.sql
 share/postgresql/extension/postgis.control
+share/postgresql/extension/postgis_topology--2.0.0--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.0beta4--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.0rc1--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.0rc2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.1--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.3--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.4--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--2.0.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}alpha1--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}alpha2--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}alpha3--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}alpha4--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}alpha5--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}alpha6--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}beta1--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}beta2--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}beta3--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}beta4--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}rc1--${PKGVERSION}.sql
-share/postgresql/extension/postgis_topology--${PKGVERSION}rc2--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--unpackaged--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology.control
 @pkgdir share/doc/postgis/images
