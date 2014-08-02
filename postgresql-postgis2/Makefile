@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/08/01 23:54:24 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/02 00:15:27 lexort Exp $
 
 DISTNAME=	postgis-2.0.6
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -43,7 +43,7 @@ SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
-REPLACE_PERL+=		utils/postgis_restore.pl
+REPLACE_PERL+=		utils/postgis_restore.pl.in
 #MAKE_ENV+=		PERL5=${PERL5:Q}
 
 INSTALL_ENV+=		mkinstalldirs=${INSTALL_DATA_DIR:Q}
