@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/08/01 21:00:41 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/02 21:45:01 szptvlfn Exp $
 #
 
 DISTNAME=	regex-compat-0.95.1
@@ -10,5 +10,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../textproc/hs-regex-base/buildlink3.mk"
-.include "../../wip/hs-regex-posix/buildlink3.mk"
+.include "../../textproc/hs-regex-posix/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

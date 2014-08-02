@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/07/29 21:37:04 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/08/02 21:45:01 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-profunctors
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-profunctors+=	hs-profunctors>=4.2
 BUILDLINK_PKGSRCDIR.hs-profunctors?=	../../wip/hs-profunctors
 
 .include "../../wip/hs-comonad/buildlink3.mk"
-.include "../../wip/hs-distributive/buildlink3.mk"
+.include "../../math/hs-distributive/buildlink3.mk"
 .include "../../wip/hs-semigroupoids/buildlink3.mk"
 .include "../../devel/hs-tagged/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"

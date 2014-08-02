@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5831 2014/08/02 16:15:20 yrmt Exp $
+# $Id: Makefile,v 1.5832 2014/08/02 21:44:59 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1010,7 +1010,6 @@ SUBDIR+=	hs-dataenc
 SUBDIR+=	hs-dependent-sum
 SUBDIR+=	hs-derive
 SUBDIR+=	hs-digest
-SUBDIR+=	hs-distributive
 SUBDIR+=	hs-double-conversion
 SUBDIR+=	hs-dyre
 SUBDIR+=	hs-entropy
@@ -1105,14 +1104,12 @@ SUBDIR+=	hs-quickcheck-instances
 SUBDIR+=	hs-readline
 SUBDIR+=	hs-reflection
 SUBDIR+=	hs-regex-compat
-SUBDIR+=	hs-regex-posix
 SUBDIR+=	hs-regex-tdfa
 SUBDIR+=	hs-regional-pointers
 SUBDIR+=	hs-regions
 SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-rosezipper
 SUBDIR+=	hs-rosezipper1
-SUBDIR+=	hs-safe
 SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroupoid-extras
 SUBDIR+=	hs-semigroupoids
