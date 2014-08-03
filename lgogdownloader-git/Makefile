@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/07/25 23:35:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/03 22:16:57 thomasklausner Exp $
 
 DISTNAME=	lgogdownloader-2.15
 CATEGORIES=	games
@@ -21,7 +21,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.boost-libs}/lib
 
 SUBST_CLASSES+=		json
 SUBST_SED.json+=	-e 's,jsoncpp/json/json.h,json/json.h,'
-SUBST_FILES.json+=	src/api.cpp src/downloader.cpp
+SUBST_FILES.json+=	src/api.cpp src/downloader.cpp src/util.cpp
 SUBST_STAGE.json=	post-configure
 SUBST_MESSAGE.json=	Fixing path to jsoncpp headers.
 
