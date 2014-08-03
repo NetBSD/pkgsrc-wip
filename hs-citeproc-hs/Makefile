@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/21 21:04:43 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/03 21:35:40 szptvlfn Exp $
 
 DISTNAME=	citeproc-hs-0.3.8
 CATEGORIES=	textproc
@@ -15,5 +15,5 @@ LICENSE=	modified-bsd
 .include "../../textproc/hs-parsec/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
-.include "../../wip/hs-xml/buildlink3.mk"
+.include "../../textproc/hs-xml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

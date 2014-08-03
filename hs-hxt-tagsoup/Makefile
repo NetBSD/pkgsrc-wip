@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/10/01 03:14:27 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/03 21:35:40 szptvlfn Exp $
 #
 
 DISTNAME=	hxt-tagsoup-9.1.1
@@ -12,5 +12,5 @@ LICENSE=	mit
 .include "../../wip/hs-hxt/buildlink3.mk"
 .include "../../wip/hs-hxt-charproperties/buildlink3.mk"
 .include "../../wip/hs-hxt-unicode/buildlink3.mk"
-.include "../../wip/hs-tagsoup/buildlink3.mk"
+.include "../../textproc/hs-tagsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
