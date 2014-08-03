@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/08/02 21:44:59 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/03 11:09:49 szptvlfn Exp $
 
-DISTNAME=	cgrep-6.4.3.1
+DISTNAME=	cgrep-6.4.5
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org

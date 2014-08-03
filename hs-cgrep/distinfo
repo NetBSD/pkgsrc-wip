@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/24 21:00:39 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2014/08/03 11:09:49 szptvlfn Exp $
 
-SHA1 (cgrep-6.4.3.1.tar.gz) = bf1068127cc634189ebf3d24315496a1c2dae23a
-RMD160 (cgrep-6.4.3.1.tar.gz) = e53af776738c1a80582c5a391c7a9e0323cf96fc
-Size (cgrep-6.4.3.1.tar.gz) = 30721 bytes
+SHA1 (cgrep-6.4.5.tar.gz) = 48600323a3b5cb970c2463b55294d488c64b7342
+RMD160 (cgrep-6.4.5.tar.gz) = 4d864f320d841638b3aaf6a020fb0f3d2ba3d9b9
+Size (cgrep-6.4.5.tar.gz) = 30823 bytes
