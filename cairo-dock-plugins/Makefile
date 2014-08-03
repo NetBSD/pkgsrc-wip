@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/15 20:27:37 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/03 22:16:38 thomasklausner Exp $
 
 DISTNAME=	cairo-dock-plugins-3.2.1
 CATEGORIES=	x11
@@ -22,7 +22,7 @@ USE_TOOLS+=	gmake pkg-config
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/cairo-dock/buildlink3.mk"
 .include "../../wip/libindicator/buildlink3.mk"

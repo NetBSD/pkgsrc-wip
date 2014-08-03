@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/03 16:58:38 roelants Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/03 22:16:38 thomasklausner Exp $
 #
 
 DISTNAME=	fancy-0.9.15
@@ -21,6 +21,6 @@ USE_PKGLOCALEDIR=	yes
 #.include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

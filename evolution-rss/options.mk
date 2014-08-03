@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/12/23 20:24:39 noud4 Exp $
+# $NetBSD: options.mk,v 1.3 2014/08/03 22:16:38 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution-rss
 PKG_SUPPORTED_OPTIONS=	webkit dbus gecko
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-gecko
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebkit )
-.   include "../../www/webkit-gtk/buildlink3.mk"
+.   include "../../www/webkit1-gtk/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webkit
 .else
 CONFIGURE_ARGS+=	--disable-webkit

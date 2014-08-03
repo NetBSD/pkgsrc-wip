@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/12/07 14:51:25 christtrekker Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/08/03 22:16:38 thomasklausner Exp $
 
 DISTNAME=	surf-0.5
 CATEGORIES=	www
@@ -18,6 +17,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/surf ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/surf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:39 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/08/03 22:16:38 thomasklausner Exp $
 
 DISTNAME=	gtask-0.1.2
 PKGNAME=	lib${DISTNAME}
@@ -25,5 +24,5 @@ BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.14.3
 .include "../../lang/vala/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../wip/rss-glib/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

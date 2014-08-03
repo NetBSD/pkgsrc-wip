@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/06/17 12:45:13 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/08/03 22:16:39 thomasklausner Exp $
 
 DISTNAME=	webkit-sharp-0.3
 PKGREVISION=	2
@@ -22,6 +21,6 @@ PKGCONFIG_OVERRIDE+=	sources/webkit-sharp.pc.in
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/mono2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=1.1.3
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

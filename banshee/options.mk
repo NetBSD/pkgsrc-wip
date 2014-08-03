@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/06/26 22:34:17 noud4 Exp $
+# $NetBSD: options.mk,v 1.2 2014/08/03 22:16:38 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.banshee
 PKG_SUPPORTED_OPTIONS+=		gnome		# XXX complains in runtime
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-mtp
 
 .if !empty(PKG_OPTIONS:Mweb)
 PLIST.web=		yes
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit1-gtk/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mboo)

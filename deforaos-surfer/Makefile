@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/06/26 15:44:08 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2014/08/03 22:16:38 thomasklausner Exp $
 
 DISTNAME=	Surfer-0.2.6
 PKGNAME=	deforaos-surfer-0.2.6
@@ -31,7 +31,7 @@ post-install:
 .include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/webkit-gtk3/buildlink3.mk"
+.include "../../www/webkit1-gtk3/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
