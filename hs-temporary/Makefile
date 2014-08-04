@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/05/24 22:04:38 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2014/08/04 21:01:45 szptvlfn Exp $
 
-DISTNAME=	temporary-1.2.0.1
+DISTNAME=	temporary-1.2.0.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	szptvlfn@NetBSD.org
