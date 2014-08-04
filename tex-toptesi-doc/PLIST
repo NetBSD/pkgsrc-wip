@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/04 16:37:36 leot1990 Exp $
+share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.pdf
+share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.tex
+share/texmf-dist/doc/latex/toptesi/LPPL.tex
+share/texmf-dist/doc/latex/toptesi/LoghiFinti.pdf
+share/texmf-dist/doc/latex/toptesi/LoghiFinti.tex
+share/texmf-dist/doc/latex/toptesi/README
+share/texmf-dist/doc/latex/toptesi/README.TEXLIVE
+share/texmf-dist/doc/latex/toptesi/manifest.txt
+share/texmf-dist/doc/latex/toptesi/topfront-example.pdf
+share/texmf-dist/doc/latex/toptesi/topfront-example.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-doc-xetex-Acrobat.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-doc-xetex-a.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-doc-xetex-def.ps
+share/texmf-dist/doc/latex/toptesi/toptesi-doc-xetex.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-doc-xetex.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-example-Acrobat.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-example-xetex.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-example-xetex.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-example.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-example.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-example.xmpdata
+share/texmf-dist/doc/latex/toptesi/toptesi.pdf
