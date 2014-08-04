@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5834 2014/08/03 22:35:03 thomasklausner Exp $
+# $Id: Makefile,v 1.5835 2014/08/04 16:41:57 leot1990 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3417,6 +3417,8 @@ SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-feynmf
 SUBDIR+=	tex-feynmf-doc
+SUBDIR+=	tex-toptesi
+SUBDIR+=	tex-toptesi-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
