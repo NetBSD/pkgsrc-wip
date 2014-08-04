@@ -69,6 +69,7 @@ Suggested package updates
 	o libgme-0.6.0
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
+	o libressl-2.0.4
 	o lives-2.2.4
 	o llvm-3.4.2
 	o lucene-4.5.0
