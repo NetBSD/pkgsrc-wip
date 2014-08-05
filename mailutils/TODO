@@ -1,0 +1,42 @@
+- PLIST:10: The bin/ directory should not have subdirectories.
+  .. but this should be intention of original authors, I believe.
+- License: gnu-gpl-v3 and gnu-lgpl-v3
+- (configure)
+*******************************************************************
+GNU Mailutils configured with the following settings:
+
+Default mailbox scheme ........ mbox
+Use PAM ....................... yes
+Use -ltdl ..................... no
+Use DBM ....................... no
+Use GNU TLS ................... no
+Use GSASL ..................... no
+Use GSSAPI .................... no
+Use TCP wrappers .............. yes
+Pthread support ............... yes
+Readline support .............. yes
+MySQL support ................. no
+PostgreSQL support ............ no
+LDAP support .................. yes
+Radius support ................ no
+Support for virtual domains ... yes
+
+Interfaces:
+
+Guile ......................... no
+C++ ........................... yes
+Python ........................ no
+
+Mailbox formats:
+
+IMAP .......................... yes
+POP ........................... yes
+MH ............................ yes
+maildir ....................... yes
+
+Mailers:
+
+SMTP .......................... yes
+Sendmail ...................... yes
+
+*******************************************************************
