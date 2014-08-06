@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5835 2014/08/04 16:41:57 leot1990 Exp $
+# $Id: Makefile,v 1.5836 2014/08/06 21:00:32 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1568,6 +1568,7 @@ SUBDIR+=	macro11
 SUBDIR+=	magit-git
 SUBDIR+=	mago
 SUBDIR+=	mailfilter
+SUBDIR+=	mailutils
 SUBDIR+=	majordomo-devel
 SUBDIR+=	makedict
 SUBDIR+=	makepp
@@ -1686,6 +1687,7 @@ SUBDIR+=	mplus-bitmap-fonts
 SUBDIR+=	mplus-outline-fonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
+SUBDIR+=	mpv
 SUBDIR+=	msworkbench
 SUBDIR+=	mtd-utils
 SUBDIR+=	mtf
@@ -2369,6 +2371,7 @@ SUBDIR+=	py-amqplib
 SUBDIR+=	py-anfft
 SUBDIR+=	py-antlr3
 SUBDIR+=	py-aopython
+SUBDIR+=	py-applpy
 SUBDIR+=	py-aqopa
 SUBDIR+=	py-arabic
 SUBDIR+=	py-argh
@@ -2436,6 +2439,7 @@ SUBDIR+=	py-cocos2d
 SUBDIR+=	py-codepy
 SUBDIR+=	py-cogapp
 SUBDIR+=	py-cogent
+SUBDIR+=	py-colorama
 SUBDIR+=	py-colorpy
 SUBDIR+=	py-complexsystems
 SUBDIR+=	py-concepts
@@ -2658,6 +2662,7 @@ SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-lzma
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
+SUBDIR+=	py-mando
 SUBDIR+=	py-mark
 SUBDIR+=	py-markovchain
 SUBDIR+=	py-mathjspy
@@ -2834,6 +2839,7 @@ SUBDIR+=	py-quepy
 SUBDIR+=	py-queue
 SUBDIR+=	py-qutip
 SUBDIR+=	py-qutrub
+SUBDIR+=	py-radontea
 SUBDIR+=	py-raphrase
 SUBDIR+=	py-rasterio
 SUBDIR+=	py-raven
