@@ -1,5 +1,11 @@
-Fix make->$(MAKE) in Makefiles (doc, doc/html/images).
+Fix make->$(MAKE) in doc/html/image_src/Makefile.
 
-Use 'gmake comments-install' instead of hand copy.
+Check to make sure that "comments" are getting installed.  (In previous
+versions, they needed hand copying.)
 
-Figure out -lpq RPATH.
+Figure out -lpq RPATH and whether it needs help.
+
+Avoid build commands at install time.  This is an upstream issue, to
+be fixed upstream:
+  http://trac.osgeo.org/postgis/ticket/2872
+
