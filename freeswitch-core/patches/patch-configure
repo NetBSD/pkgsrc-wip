@@ -1,0 +1,61 @@
+$NetBSD: patch-configure,v 1.1 2014/08/07 17:40:11 darcycain Exp $
+
+Remove references to xmlrpc-c and spidermonkey
+
+--- configure.orig	2012-11-15 15:56:19.000000000 +0000
++++ configure
+@@ -3586,8 +3586,6 @@ am__tar='$${TAR-tar} chof - "$$tardir"' 
+ 
+ ac_config_headers="$ac_config_headers src/include/switch_private.h"
+ 
+-ac_config_headers="$ac_config_headers libs/xmlrpc-c/xmlrpc_amconfig.h"
+-
+ 
+ 
+ # AC_PREFIX_DEFAULT does not get expanded until too late so we need to do this to use prefix in this script
+@@ -20146,9 +20144,6 @@ then
+ $as_echo "#define USE_SCHED_SETSCHEDULER 1" >>confdefs.h
+ 
+ fi
+-#
+-# xmlrpc-c checks
+-#
+ 
+ for ac_func in setenv strtoll strtoull strtoq strtouq __strtoll __strtoull
+ do :
+@@ -22880,7 +22875,7 @@ fi
+ 
+ 
+ 
+-ac_config_files="$ac_config_files Makefile build/Makefile src/Makefile src/mod/Makefile src/mod/applications/mod_expr/Makefile src/mod/applications/mod_spandsp/Makefile src/mod/applications/mod_osp/Makefile src/mod/applications/mod_stress/Makefile src/mod/applications/mod_hash/Makefile src/mod/codecs/mod_com_g729/Makefile src/mod/endpoints/mod_html5/Makefile src/mod/endpoints/mod_portaudio/Makefile src/mod/endpoints/mod_skinny/Makefile src/mod/endpoints/mod_skypopen/Makefile src/mod/endpoints/mod_sofia/Makefile src/mod/formats/mod_portaudio_stream/Makefile src/mod/asr_tts/mod_unimrcp/Makefile src/mod/languages/mod_java/Makefile src/mod/languages/mod_lua/Makefile src/mod/languages/mod_python/Makefile src/mod/languages/mod_spidermonkey/Makefile src/mod/event_handlers/mod_erlang_event/Makefile src/include/switch_am_config.h build/getsounds.sh build/getlib.sh build/getg729.sh build/freeswitch.pc build/modmake.rules libs/xmlrpc-c/xmlrpc_config.h libs/xmlrpc-c/config.mk libs/xmlrpc-c/srcdir.mk libs/xmlrpc-c/stamp-h scripts/gentls_cert"
++ac_config_files="$ac_config_files Makefile build/Makefile src/Makefile src/mod/Makefile src/mod/applications/mod_expr/Makefile src/mod/applications/mod_spandsp/Makefile src/mod/applications/mod_osp/Makefile src/mod/applications/mod_stress/Makefile src/mod/applications/mod_hash/Makefile src/mod/codecs/mod_com_g729/Makefile src/mod/endpoints/mod_html5/Makefile src/mod/endpoints/mod_portaudio/Makefile src/mod/endpoints/mod_skinny/Makefile src/mod/endpoints/mod_skypopen/Makefile src/mod/endpoints/mod_sofia/Makefile src/mod/formats/mod_portaudio_stream/Makefile src/mod/asr_tts/mod_unimrcp/Makefile src/mod/languages/mod_java/Makefile src/mod/languages/mod_lua/Makefile src/mod/languages/mod_python/Makefile src/mod/event_handlers/mod_erlang_event/Makefile src/include/switch_am_config.h build/getsounds.sh build/getlib.sh build/getg729.sh build/freeswitch.pc build/modmake.rules scripts/gentls_cert"
+ 
+ 
+  if test `uname -s` = Linux; then
+@@ -24160,7 +24155,6 @@ do
+   case $ac_config_target in
+     "src/include/switch_version.h.in") CONFIG_FILES="$CONFIG_FILES src/include/switch_version.h.in:src/include/switch_version.h.template" ;;
+     "src/include/switch_private.h") CONFIG_HEADERS="$CONFIG_HEADERS src/include/switch_private.h" ;;
+-    "libs/xmlrpc-c/xmlrpc_amconfig.h") CONFIG_HEADERS="$CONFIG_HEADERS libs/xmlrpc-c/xmlrpc_amconfig.h" ;;
+     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+     "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
+     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+@@ -24183,7 +24177,6 @@ do
+     "src/mod/languages/mod_java/Makefile") CONFIG_FILES="$CONFIG_FILES src/mod/languages/mod_java/Makefile" ;;
+     "src/mod/languages/mod_lua/Makefile") CONFIG_FILES="$CONFIG_FILES src/mod/languages/mod_lua/Makefile" ;;
+     "src/mod/languages/mod_python/Makefile") CONFIG_FILES="$CONFIG_FILES src/mod/languages/mod_python/Makefile" ;;
+-    "src/mod/languages/mod_spidermonkey/Makefile") CONFIG_FILES="$CONFIG_FILES src/mod/languages/mod_spidermonkey/Makefile" ;;
+     "src/mod/event_handlers/mod_erlang_event/Makefile") CONFIG_FILES="$CONFIG_FILES src/mod/event_handlers/mod_erlang_event/Makefile" ;;
+     "src/include/switch_am_config.h") CONFIG_FILES="$CONFIG_FILES src/include/switch_am_config.h" ;;
+     "build/getsounds.sh") CONFIG_FILES="$CONFIG_FILES build/getsounds.sh" ;;
+@@ -24191,10 +24184,6 @@ do
+     "build/getg729.sh") CONFIG_FILES="$CONFIG_FILES build/getg729.sh" ;;
+     "build/freeswitch.pc") CONFIG_FILES="$CONFIG_FILES build/freeswitch.pc" ;;
+     "build/modmake.rules") CONFIG_FILES="$CONFIG_FILES build/modmake.rules" ;;
+-    "libs/xmlrpc-c/xmlrpc_config.h") CONFIG_FILES="$CONFIG_FILES libs/xmlrpc-c/xmlrpc_config.h" ;;
+-    "libs/xmlrpc-c/config.mk") CONFIG_FILES="$CONFIG_FILES libs/xmlrpc-c/config.mk" ;;
+-    "libs/xmlrpc-c/srcdir.mk") CONFIG_FILES="$CONFIG_FILES libs/xmlrpc-c/srcdir.mk" ;;
+-    "libs/xmlrpc-c/stamp-h") CONFIG_FILES="$CONFIG_FILES libs/xmlrpc-c/stamp-h" ;;
+     "scripts/gentls_cert") CONFIG_FILES="$CONFIG_FILES scripts/gentls_cert" ;;
+     "hacklibtool") CONFIG_COMMANDS="$CONFIG_COMMANDS hacklibtool" ;;
+ 
