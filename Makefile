@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5838 2014/08/07 09:11:22 thomasklausner Exp $
+# $Id: Makefile,v 1.5839 2014/08/07 17:43:02 darcycain Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -672,6 +672,7 @@ SUBDIR+=	freedup16
 SUBDIR+=	freefem++
 SUBDIR+=	freeimage
 SUBDIR+=	freej
+SUBDIR+=	freeswitch-core
 SUBDIR+=	freevo
 SUBDIR+=	freevrrpd
 SUBDIR+=	fribid
