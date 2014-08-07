@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.1 2014/08/06 20:53:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/07 01:55:56 leot1990 Exp $
 
-DISTNAME=	mpv-${VERSION}
-VERSION=	0.4.2
+DISTNAME=	mpv-0.4.2
 CATEGORIES=	multimedia
-MASTER_SITES=	-https://codeload.github.com/mpv-player/mpv/zip/v${VERSION}
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	-https://github.com/mpv-player/mpv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mpv.io/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Video player based on MPlayer and mplayer2
 LICENSE=	gnu-gpl-v2
 
-WAF_ENV=	PATH=${PATH} CC=${CC:Q} CXX=${CXX:Q} PREFIX=${PREFIX:Q} \
-		CFLAGS=${CFLAGS:Q} CXXFLAGS=${CXXFLAGS:Q} \
-		LINKFLAGS=${LDFLAGS:Q} DESTDIR=${DESTDIR:Q}
+BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+
+# XXX: MANDIR variable is ignored and so it should be specified via --mandir
+WAF_ENV=	PATH=${PATH:Q} CC=${CC:Q} CXX=${CXX:Q} PREFIX=${PREFIX} \
+		MANDIR=${PREFIX}/${PKGMANDIR} CFLAGS=${CFLAGS:Q} \
+		CXXFLAGS=${CXXFLAGS:Q} LINKFLAGS=${LDFLAGS:Q} DESTDIR=${DESTDIR}
+WAF_ARGS=	--mandir=${PREFIX}/${PKGMANDIR}
+
+PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 REPLACE_PYTHON=	waf
 USE_TOOLS+=	perl pkg-config
@@ -22,14 +27,15 @@ USE_TOOLS+=	perl pkg-config
 WAF_ENV+=	JOBS=${MAKE_JOBS:Q}
 .endif
 
+
 SUBST_CLASSES+=		audio
 SUBST_SED.audio+=	-e "s,/dev/dsp,${DEVOSSAUDIO},"
 SUBST_FILES.audio+=	stream/audio_in.c waftools/checks/custom.py wscript
 SUBST_STAGE.audio=	pre-configure
 SUBST_MESSAGE.audio=	Fixing path to audio device.
 
-#SUBST_CLASSES+=		etc
-#SUBST_SED.etc+=		-e "s,etc/,share/examples/mpv,"
+#SUBST_CLASSES+=	etc
+#SUBST_SED.etc+=	-e "s,etc/,share/examples/mpv,"
 #SUBST_FILES.etc+=	wscript_build.py
 #SUBST_STAGE.etc=	post-configure
 #SUBST_MESSAGE.etc=	Fixing configuration file installation path.
@@ -40,17 +46,17 @@ post-extract:
 	chmod 555 ${WRKSRC}/waf
 
 do-configure:
-	cd ${WRKSRC} && env ${WAF_ENV} ./waf configure
+	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} configure
 
 do-build:
-	cd ${WRKSRC} && env ${WAF_ENV} ./waf
+	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS}
 
 do-install:
-	cd ${WRKSRC} && env ${WAF_ENV} ./waf install
+	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} install
 
-.include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"

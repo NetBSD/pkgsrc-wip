@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/06 20:53:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/07 01:55:56 leot1990 Exp $
 bin/mpv
 etc/mpv/encoding-profiles.conf
+man/man1/mpv.1
 share/applications/mpv.desktop
 share/icons/hicolor/16x16/apps/mpv.png
 share/icons/hicolor/32x32/apps/mpv.png
