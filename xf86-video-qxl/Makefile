@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/12/29 04:48:23 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/07 03:00:12 othyro Exp $
 
-DISTNAME=	xf86-video-qxl-0.1.1
+DISTNAME=	xf86-video-qxl-0.1.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
