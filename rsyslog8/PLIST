@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/21 10:33:53 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/07 20:29:32 fhajny Exp $
 ${PLIST.libgcrypt}bin/rscryutil
 ${PLIST.guardtime}bin/rsgtutil
 lib/rsyslog/imdiag.la
@@ -23,12 +23,14 @@ lib/rsyslog/lmstrmsrv.la
 lib/rsyslog/lmtcpclt.la
 lib/rsyslog/lmtcpsrv.la
 lib/rsyslog/lmzlibw.la
+lib/rsyslog/mmjsonparse.la
 lib/rsyslog/mmnormalize.la
 ${PLIST.gssapi}lib/rsyslog/omgssapi.la
 ${PLIST.dbi}lib/rsyslog/omlibdbi.la
 ${PLIST.mail}lib/rsyslog/ommail.la
 ${PLIST.mysql}lib/rsyslog/ommysql.la
 ${PLIST.pgsql}lib/rsyslog/ompgsql.la
+${PLIST.rabbitmq}lib/rsyslog/omrabbitmq.la
 ${PLIST.snmp}lib/rsyslog/omsnmp.la
 lib/rsyslog/omstdout.la
 lib/rsyslog/omtesting.la

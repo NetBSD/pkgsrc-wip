@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/07/28 10:59:10 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2014/08/07 20:29:32 fhajny Exp $
 #
 
 DISTNAME=		rsyslog-8.2.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-testbench
-CONFIGURE_ARGS+=	--enable-mmnormalize
+CONFIGURE_ARGS+=	--enable-mmjsonparse --enable-mmnormalize
 CONFIGURE_ARGS+=	--enable-cached-man-pages
 CONFIGURE_ARGS+=	--enable-imdiag --enable-impstats --enable-omstdout
 CONFIGURE_ARGS+=	--enable-diagtools --enable-usertools
