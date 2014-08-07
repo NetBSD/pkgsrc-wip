@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5836 2014/08/06 21:00:32 thomasklausner Exp $
+# $Id: Makefile,v 1.5837 2014/08/07 02:54:48 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -887,7 +887,6 @@ SUBDIR+=	gwsmhg
 SUBDIR+=	gwyddion
 SUBDIR+=	gxconsole
 SUBDIR+=	gxmms2
-SUBDIR+=	gyp
 SUBDIR+=	h323plus
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	habak
