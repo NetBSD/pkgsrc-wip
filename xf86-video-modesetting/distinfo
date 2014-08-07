@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/12/04 00:38:05 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2014/08/07 03:03:20 othyro Exp $
 
-SHA1 (xf86-video-modesetting-0.8.1.tar.bz2) = 49da63b1b9ca945300b1dc4fbf9aa7f1423f04f4
-RMD160 (xf86-video-modesetting-0.8.1.tar.bz2) = 4659ce03e269cca7b77e3a911bd56eb3a2e17c6a
-Size (xf86-video-modesetting-0.8.1.tar.bz2) = 306379 bytes
+SHA1 (xf86-video-modesetting-0.9.0.tar.bz2) = 982e5140ad81051d51c6370d065f3033ee4ad24b
+RMD160 (xf86-video-modesetting-0.9.0.tar.bz2) = 3b94767bbe02febd0e9d7f57f32918d11caa8412
+Size (xf86-video-modesetting-0.9.0.tar.bz2) = 304351 bytes
