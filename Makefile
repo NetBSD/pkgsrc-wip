@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5837 2014/08/07 02:54:48 obache Exp $
+# $Id: Makefile,v 1.5838 2014/08/07 09:11:22 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1665,6 +1665,7 @@ SUBDIR+=	mopac7
 SUBDIR+=	mopher
 SUBDIR+=	moregroupware
 SUBDIR+=	moto4lin
+SUBDIR+=	mozjpeg
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
@@ -2464,6 +2465,7 @@ SUBDIR+=	py-cubicweb
 SUBDIR+=	py-cvf
 SUBDIR+=	py-cvxopt
 SUBDIR+=	py-cxnet
+SUBDIR+=	py-cxvpy
 SUBDIR+=	py-cythongsl
 SUBDIR+=	py-cytoolz
 SUBDIR+=	py-dana
@@ -2545,6 +2547,7 @@ SUBDIR+=	py-fjd
 SUBDIR+=	py-fnss
 SUBDIR+=	py-formex
 SUBDIR+=	py-forthon
+SUBDIR+=	py-fortpy
 SUBDIR+=	py-fs
 SUBDIR+=	py-functions
 SUBDIR+=	py-fuzzpy
@@ -2688,6 +2691,7 @@ SUBDIR+=	py-mox
 SUBDIR+=	py-mpi4py
 SUBDIR+=	py-mplh5canvas
 SUBDIR+=	py-mpop
+SUBDIR+=	py-msdas
 SUBDIR+=	py-msumastro
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-mvpoly
