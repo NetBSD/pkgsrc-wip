@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2014/06/09 02:47:20 othyro Exp $
+$NetBSD: distinfo,v 1.3 2014/08/07 03:09:28 othyro Exp $
 
-SHA1 (hexchat-2.10.0.tar.xz) = 07d710ee403f3de368a8e31f945f5fd62a011ce4
-RMD160 (hexchat-2.10.0.tar.xz) = 1659bf55bbc9db9d04bddd248d5fb61d4fba2486
-Size (hexchat-2.10.0.tar.xz) = 1607360 bytes
+SHA1 (hexchat-2.10.1.tar.xz) = 3ad562ec76323ba9d0f279d36201a333594c755b
+RMD160 (hexchat-2.10.1.tar.xz) = e2ee87c0cd34055268b6a39059f49aeb2e6dbe25
+Size (hexchat-2.10.1.tar.xz) = 1618372 bytes
 SHA1 (patch-osx_launcher.sh) = 7493430921809182898aca2ebb8fd1f493dbd9d3
 SHA1 (patch-plugins_sysinfo_parse.c) = f27c7a14e61210e512e433e833e33d6603b49525
 SHA1 (patch-plugins_sysinfo_pci.c) = ddea8c85640eae7d05fee4a6cff42b368f462b9f
