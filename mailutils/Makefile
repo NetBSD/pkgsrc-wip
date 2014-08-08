@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/08/05 05:37:59 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/08 12:20:06 makoto Exp $
 DISTNAME=	mailutils-2.2
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.gnu.org/gnu/mailutils
+MASTER_SITES=	ftp://ftp.gnu.org/gnu/mailutils/
+#MASTER_SITES=	http://ftp.gnu.org/gnu/mailutils/
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
