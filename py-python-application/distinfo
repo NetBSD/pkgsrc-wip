@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/06/07 21:17:15 othyro Exp $
+$NetBSD: distinfo,v 1.2 2014/08/08 02:07:37 othyro Exp $
 
-SHA1 (python-application-1.4.0.tar.gz) = 2ca276bba0f1d4ab25e0027375b361cb3c2bd5df
-RMD160 (python-application-1.4.0.tar.gz) = 6364637b94ba165ac7c753893792178faadf7d8a
-Size (python-application-1.4.0.tar.gz) = 42672 bytes
+SHA1 (python-application-1.4.1.tar.gz) = 0d7fa66f8a59e0c371708e3b5f6d70576042404f
+RMD160 (python-application-1.4.1.tar.gz) = a3a233cade42d0bfafc61101ca0ce08964fe7394
+Size (python-application-1.4.1.tar.gz) = 42715 bytes
