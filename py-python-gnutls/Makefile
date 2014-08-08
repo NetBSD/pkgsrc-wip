@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/06/01 12:49:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/08 02:38:31 othyro Exp $
 #
 
-DISTNAME=	python-gnutls-1.2.5
+DISTNAME=	python-gnutls-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	https://pypi.python.org/packages/source/p/python-gnutls/
@@ -20,6 +20,7 @@ SUBST_STAGE.gnutls=	post-patch
 
 EGG_NAME=	${DISTNAME:S/-/_/1}
 
+BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.1.4
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

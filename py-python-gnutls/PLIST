@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/02 10:28:49 othyro Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/08/08 02:38:31 othyro Exp $
 ${PYSITELIB}/gnutls/__init__.py
 ${PYSITELIB}/gnutls/__init__.pyc
 ${PYSITELIB}/gnutls/__init__.pyo
@@ -23,7 +23,6 @@ ${PYSITELIB}/gnutls/interfaces/twisted/__init__.pyo
 ${PYSITELIB}/gnutls/library/__init__.py
 ${PYSITELIB}/gnutls/library/__init__.pyc
 ${PYSITELIB}/gnutls/library/__init__.pyo
-${PYSITELIB}/gnutls/library/_init.so
 ${PYSITELIB}/gnutls/library/constants.py
 ${PYSITELIB}/gnutls/library/constants.pyc
 ${PYSITELIB}/gnutls/library/constants.pyo
