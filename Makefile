@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5839 2014/08/07 17:43:02 darcycain Exp $
+# $Id: Makefile,v 1.5840 2014/08/08 12:02:06 chybz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1740,6 +1740,8 @@ SUBDIR+=	mysqltcl
 SUBDIR+=	mythtv
 SUBDIR+=	n2n
 SUBDIR+=	nag
+SUBDIR+=	nanomsg
+SUBDIR+=	nanomsgxx
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
