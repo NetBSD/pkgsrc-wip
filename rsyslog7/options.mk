@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2013/10/15 14:54:32 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2014/08/08 08:03:08 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rsyslog
 PKG_SUPPORTED_OPTIONS=	dbi file gnutls gssapi guardtime libgcrypt \
-			mail mysql pgsql snmp uuid
+			mail mysql pgsql rabbitmq snmp uuid
 PKG_SUGGESTED_OPTIONS+=	libgcrypt uuid
 
 .if ${OPSYS} == "SunOS"
@@ -15,7 +15,7 @@ PKG_OPTIONS_REQUIRED_GROUPS=	sysmod
 PKG_OPTIONS_GROUP.sysmod=	klog solaris
 
 PLIST_VARS+=		dbi file gnutls gssapi guardtime klog libgcrypt \
-			mail mysql pgsql snmp solaris
+			mail mysql pgsql rabbitmq snmp solaris
 
 .include "../../mk/bsd.options.mk"
 
@@ -100,4 +100,12 @@ CONFIGURE_ARGS+=		--enable-uuid
 .include "../../devel/libuuid/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=		--disable-uuid
+.endif
+
+.if !empty(PKG_OPTIONS:Mrabbitmq)
+CONFIGURE_ARGS+=		--enable-omrabbitmq
+PLIST.rabbitmq=			yes
+.include "../../net/rabbitmq-c/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=		--disable-omrabbitmq
 .endif
