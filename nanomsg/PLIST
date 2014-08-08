@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/08 11:56:44 chybz Exp $
+bin/nanocat
+bin/nn_bus
+bin/nn_pair
+bin/nn_pub
+bin/nn_pull
+bin/nn_push
+bin/nn_rep
+bin/nn_req
+bin/nn_respondent
+bin/nn_sub
+bin/nn_surveyor
+include/nanomsg/bus.h
+include/nanomsg/inproc.h
+include/nanomsg/ipc.h
+include/nanomsg/nn.h
+include/nanomsg/pair.h
+include/nanomsg/pipeline.h
+include/nanomsg/pubsub.h
+include/nanomsg/reqrep.h
+include/nanomsg/survey.h
+include/nanomsg/tcp.h
+lib/libnanomsg.la
+lib/pkgconfig/libnanomsg.pc
