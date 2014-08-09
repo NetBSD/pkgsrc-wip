@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/08/07 01:36:22 obache Exp $
+$NetBSD: distinfo,v 1.5 2014/08/09 01:21:56 obache Exp $
 
-SHA1 (libressl-2.0.4.tar.gz) = 3c67c951787d8e8e2264d703b6d82c41781c1de9
-RMD160 (libressl-2.0.4.tar.gz) = b877715d6ffd38f085c618c7b71bb90385c8866f
-Size (libressl-2.0.4.tar.gz) = 2680841 bytes
+SHA1 (libressl-2.0.5.tar.gz) = 8e665071b05cc40c054ce406b27ce110465d961d
+RMD160 (libressl-2.0.5.tar.gz) = a6b26722a73cb859b7987050794de2cace740ab0
+Size (libressl-2.0.5.tar.gz) = 2679116 bytes
