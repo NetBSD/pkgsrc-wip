@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.16 2012/10/07 20:11:10 asau Exp $
+# $NetBSD: Makefile,v 1.17 2014/08/09 18:33:51 nros Exp $
 
 PKGNAME=		xmoto-${VERSION}
 DISTNAME=		xmoto-${VERSION}-src
 CATEGORIES=		games
-MASTER_SITES=		http://download.tuxfamily.org/xmoto/xmoto/0.5.3/ \
+MASTER_SITES=		http://download.tuxfamily.org/xmoto/xmoto/${VERSION}/ \
 			${MASTER_SITE_SOURCEFORGE:=xmoto/}
-VERSION=		0.5.3
+VERSION=		0.5.11
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xmoto.sourceforge.net/
-COMMENT=		2D motocross plateform game
+HOMEPAGE=		http://xmoto.tuxfamily.org/
+COMMENT=		2D motocross platform game
+LICENSE=		gnu-gpl-v2
+
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		msgfmt autoconf automake gmake pkg-config
+USE_TOOLS+=		autoconf gmake pkg-config
 USE_LANGUAGES=		c c++
-CONFIGURE_ENV+=		LIBS="-lGL -lm -pthread"
-
 GNU_CONFIGURE=		yes
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+PTHREAD_OPTS+=		require
 
-INSTALLATION_DIRS+=	share/applications
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,36 +28,40 @@ INSTALLATION_DIRS+=	share/applications
 GCC_REQD+=		3.4
 .endif
 
-# Change the desktop file icon.
-SUBST_CLASSES+=			desktop
-SUBST_STAGE.desktop=		post-install
-SUBST_MESSAGE.desktop=		Fixing the icon location in desktop entry.
-SUBST_FILES.desktop=		${DESTDIR}${PREFIX}/share/applications/xmoto.desktop
-SUBST_SED.desktop=		-e 's,@DATADIR@,${DESTDIR}${PREFIX}/share/xmoto/,'
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
-pre-install:
-	${INSTALL_DATA} ${FILESDIR}/xmoto.desktop ${DESTDIR}${PREFIX}/share/applications
+INSTALLATION_DIRS+= share/applications share/pixmaps
 
-.include "../../x11/libxdg-basedir/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
-.include "../../graphics/aalib/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/extra/xmoto.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/extra/xmoto.xpm ${DESTDIR}${PREFIX}/share/pixmaps
+
+.include "options.mk"
+
 .include "../../audio/libmikmod/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../multimedia/smpeg/buildlink3.mk"
-.include "../../wip/ode/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../net/SDL_net/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/aalib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/smpeg/buildlink3.mk"
+.include "../../net/SDL_net/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../wip/ode/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/libxdg-basedir/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
