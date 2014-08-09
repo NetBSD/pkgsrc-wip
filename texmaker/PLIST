@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/01/04 19:19:46 nros Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/08/09 17:59:17 nros Exp $
 bin/texmaker
 share/applications/texmaker.desktop
 share/pixmaps/texmaker.png
@@ -125,6 +125,7 @@ share/texmaker/texmaker_sr.qm
 share/texmaker/texmaker_uk.qm
 share/texmaker/texmaker_zh_CN.qm
 share/texmaker/texmaker_zh_TW.qm
+share/texmaker/titlecase.tms
 share/texmaker/usermanual_en.html
 share/texmaker/usermanual_fr.html
 share/texmaker/usermanual_hu.html
