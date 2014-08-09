@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5842 2014/08/09 21:55:58 thomasklausner Exp $
+# $Id: Makefile,v 1.5843 2014/08/09 23:36:19 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2393,6 +2393,7 @@ SUBDIR+=	py-async
 SUBDIR+=	py-atmark
 SUBDIR+=	py-atom
 SUBDIR+=	py-atpy
+SUBDIR+=	py-attic
 SUBDIR+=	py-automata
 SUBDIR+=	py-bctpy
 SUBDIR+=	py-behaviour
