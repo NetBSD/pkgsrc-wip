@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5841 2014/08/09 16:45:19 thomasklausner Exp $
+# $Id: Makefile,v 1.5842 2014/08/09 21:55:58 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2721,7 +2721,6 @@ SUBDIR+=	py-notify-dev
 SUBDIR+=	py-ntch
 SUBDIR+=	py-numdifftools
 SUBDIR+=	py-numericalunits
-SUBDIR+=	py-numpydoc
 SUBDIR+=	py-nupic
 SUBDIR+=	py-nzmath
 SUBDIR+=	py-oak
