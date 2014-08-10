@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/03 10:04:24 othyro Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/08/10 11:27:44 thomasklausner Exp $
 include/git2.h
 include/git2/attr.h
 include/git2/blame.h
@@ -6,6 +6,7 @@ include/git2/blob.h
 include/git2/branch.h
 include/git2/buffer.h
 include/git2/checkout.h
+include/git2/cherrypick.h
 include/git2/clone.h
 include/git2/commit.h
 include/git2/common.h
@@ -38,6 +39,7 @@ include/git2/refspec.h
 include/git2/remote.h
 include/git2/repository.h
 include/git2/reset.h
+include/git2/revert.h
 include/git2/revparse.h
 include/git2/revwalk.h
 include/git2/signature.h
@@ -48,8 +50,10 @@ include/git2/strarray.h
 include/git2/submodule.h
 include/git2/sys/commit.h
 include/git2/sys/config.h
+include/git2/sys/diff.h
 include/git2/sys/filter.h
 include/git2/sys/index.h
+include/git2/sys/mempack.h
 include/git2/sys/odb_backend.h
 include/git2/sys/refdb_backend.h
 include/git2/sys/reflog.h
@@ -63,6 +67,6 @@ include/git2/tree.h
 include/git2/types.h
 include/git2/version.h
 lib/libgit2.so
-lib/libgit2.so.0
-lib/libgit2.so.${PKGVERSION}
+lib/libgit2.so.0.21.0
+lib/libgit2.so.21
 lib/pkgconfig/libgit2.pc
