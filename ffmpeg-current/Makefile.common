@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/05/04 10:39:12 shattered Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/08/10 15:14:40 thomasklausner Exp $
 # used by multimedia/ffplay/Makefile
 # used by multimedia/ffmpeg/Makefile
 
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.ffmpeg.org/releases/
 
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
-PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg/patches
+PATCHDIR=	${.CURDIR}/../../wip/ffmpeg-current/patches
 
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
