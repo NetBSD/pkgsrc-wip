@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/06/05 23:11:23 yrmt Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/10 12:53:16 yrmt Exp $
 
-PKGNAME=	bspwm-0.8.8
+PKGNAME=	bspwm-0.8.9
 CATEGORIES=	wm
-GHCOMMIT=	ff26c3426bda8fb1f88e25ec46f7516dcfb7427f
+GHCOMMIT=	1e0a7c826e5f82e31b18bf4c6173add2ea9306bd
 DISTNAME=	${GHCOMMIT}
 MASTER_SITES=	https://github.com/baskerville/bspwm/archive/
 
@@ -21,7 +21,6 @@ SUBST_MESSAGE.makefile= Fixing makefile
 SUBST_FILES.makefile=   Makefile
 SUBST_SED.makefile=    -e 's,share/man,${PKGMANDIR},g'
 
-.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

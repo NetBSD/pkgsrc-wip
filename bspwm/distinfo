@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/06/05 23:11:23 yrmt Exp $
+$NetBSD: distinfo,v 1.2 2014/08/10 12:53:16 yrmt Exp $
 
-SHA1 (bspwm/ff26c3426bda8fb1f88e25ec46f7516dcfb7427f.tar.gz) = abf1ce2084cd8cac9b82d91e35c9b4c32c96b072
-RMD160 (bspwm/ff26c3426bda8fb1f88e25ec46f7516dcfb7427f.tar.gz) = c8e6b65fcf12bfe18f787af85cbdb778c373660f
-Size (bspwm/ff26c3426bda8fb1f88e25ec46f7516dcfb7427f.tar.gz) = 65633 bytes
+SHA1 (bspwm/1e0a7c826e5f82e31b18bf4c6173add2ea9306bd.tar.gz) = fab90a2403d7db2b10363b1ac299269513645933
+RMD160 (bspwm/1e0a7c826e5f82e31b18bf4c6173add2ea9306bd.tar.gz) = 6759b99b18edbaae0eae798418b12e312d65e01a
+Size (bspwm/1e0a7c826e5f82e31b18bf4c6173add2ea9306bd.tar.gz) = 62090 bytes
