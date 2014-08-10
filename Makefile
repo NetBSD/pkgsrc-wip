@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5845 2014/08/10 00:26:32 thomasklausner Exp $
+# $Id: Makefile,v 1.5846 2014/08/10 11:23:24 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1316,6 +1316,7 @@ SUBDIR+=	kplayer
 SUBDIR+=	krusader
 SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
+SUBDIR+=	kup
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
 SUBDIR+=	kyotocabinet
