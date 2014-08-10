@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5844 2014/08/10 00:07:39 thomasklausner Exp $
+# $Id: Makefile,v 1.5845 2014/08/10 00:26:32 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -190,6 +190,7 @@ SUBDIR+=	bagel
 SUBDIR+=	bakery
 SUBDIR+=	baler
 SUBDIR+=	banshee
+SUBDIR+=	baresip
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
 SUBDIR+=	beads
