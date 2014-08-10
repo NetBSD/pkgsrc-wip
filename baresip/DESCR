@@ -1,0 +1,15 @@
+Baresip is a portable and modular SIP User-Agent with audio and
+video support.
+
+Features
+
+* Audio codecs: AMR, BV32, Celt, G.711, G.722, G.722.1, G.726, GSM,
+  iLBC, iSAC, L16, OPUS, Silk, Speex
+* Video codecs: H.263, H.264, MPEG4, VP8
+* Audio drivers: Alsa, Coreaudio, Gstreamer, Symbian MDA, OpenSLES,
+  OSS, Portaudio, Windows wave
+* Video sources: FFmpeg avformat, MacOSX qtcapture, MacOSX quicktime,
+  Video4Linux and Video4Linux2, X11 Grabber
+* Video output modules: OpenGL, SDL/SDL2, X11, DirectFB
+* NAT Traversal modules: STUN, TURN, ICE, NAT-PMP
+* Media encryption modules: SRTP, DTLS-SRTP, ZRTP

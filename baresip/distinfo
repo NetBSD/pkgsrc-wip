@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/10 00:26:01 thomasklausner Exp $
+
+SHA1 (baresip-0.4.11.tar.gz) = 0f2212e065f3d44addea6c5b80a25a0a849b011b
+RMD160 (baresip-0.4.11.tar.gz) = e2c880fa8983093f8c0fa5edecccd927445836ae
+Size (baresip-0.4.11.tar.gz) = 366207 bytes

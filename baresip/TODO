@@ -1,0 +1,7 @@
+Builds and packages, but doesn't run:
+
+baresip v0.4.11 Copyright (C) 2010 - 2014 Alfred E. Heggestad et al.
+config: creating config template /home/wiz/.baresip/config
+/usr/pkg/lib/baresip/modules: detected 21 modules
+_res is not supported for multi-threaded programs.
+zsh: abort (core dumped)  baresip
