@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5848 2014/08/11 12:51:47 thomasklausner Exp $
+# $Id: Makefile,v 1.5849 2014/08/11 13:11:17 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2236,7 +2236,6 @@ SUBDIR+=	php-doc-ru
 SUBDIR+=	php-doc-tr
 SUBDIR+=	php-doc-zh
 SUBDIR+=	php-dtrace
-SUBDIR+=	php-ffmpeg
 SUBDIR+=	php-gtk2
 SUBDIR+=	php-igbinary
 SUBDIR+=	php-imagick
