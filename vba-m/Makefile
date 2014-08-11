@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/02/03 23:24:56 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.9 2014/08/11 23:10:14 thomasklausner Exp $
 
 VERSION=	1159
 DISTNAME=	vbam-r${VERSION}-src
 PKGNAME=	vba-m-1.8.0.${VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vbam/}
 EXTRACT_SUFX=	.tar.bz2

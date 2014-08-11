@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/05/24 06:12:13 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/08/11 23:10:13 thomasklausner Exp $
 
 DISTNAME=	etoile-0.4.1
 PKGNAME=	${DISTNAME:S/-/-core-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	gnustep
 MASTER_SITES=	http://download.gna.org/etoile/
 
@@ -35,7 +34,7 @@ DEPENDS+=	lemon>=1.0.0:../../devel/lemon
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../textproc/oniguruma/buildlink3.mk"

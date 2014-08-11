@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2014/04/18 16:02:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.39 2014/08/11 23:10:12 thomasklausner Exp $
 
 DISTNAME=	audacious-plugins-3.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--disable-amidiplug --disable-gnomeshortcuts
 
 .include "../../wip/audacious/buildlink3.mk"
 .include "../../wip/libmpg123/buildlink3.mk"
-#.include "../../multimedia/ffmpeg/buildlink3.mk"
+#.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"

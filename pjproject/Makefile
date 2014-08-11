@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/06/12 11:31:27 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/11 23:10:14 thomasklausner Exp $
 
 DISTNAME=	pjproject-2.1
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://www.pjsip.org/release/2.1/
 EXTRACT_SUFX=	.tar.bz2

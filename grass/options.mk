@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/05/09 07:38:43 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.8 2014/08/11 23:10:13 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grass
 PKG_SUPPORTED_OPTIONS=	fftw freetype gmath iodbc motif mysql
@@ -16,7 +16,7 @@ PKG_SUGGESTED_OPTIONS+= opengl pgsql python sqlite
 CONFIGURE_ARGS+=	--with-ffmpeg
 CONFIGURE_ARGS+=	--with-ffmpeg-includes=${PREFIX}/include/libavcodec
 CONFIGURE_ARGS+=	--with-ffmpeg-libs=${PREFIX}/lib
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ffmpeg
 .endif

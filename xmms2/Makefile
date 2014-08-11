@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2014/04/18 16:18:22 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.26 2014/08/11 23:10:14 thomasklausner Exp $
 
 DISTNAME=	xmms2-0.8DrO_o
 PKGNAME=	${DISTNAME:S/DrO_o//1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmms2/}
 EXTRACT_SUFX=	.tar.bz2

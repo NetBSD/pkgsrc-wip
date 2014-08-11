@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/04/21 17:37:43 kristerw Exp $
-#
+# $NetBSD: Makefile,v 1.15 2014/08/11 23:10:13 thomasklausner Exp $
 
 #DISTNAME=	cinelerra-1.2.0-src
 DISTNAME=	hvirtual_1.2.0-2cvs20040814
 PKGNAME=	cinelerra-1.2.0-2cvs20040814
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 # unofficial source is here
 MASTER_SITES=	http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/
@@ -38,7 +37,7 @@ USE_LIBTOOL=		yes
 #.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"

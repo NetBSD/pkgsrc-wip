@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/01/12 09:43:46 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.4 2014/08/11 23:10:14 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
 PKG_SUPPORTED_OPTIONS=	alsa cg ffmpeg freetype jack libxml2 openal opengl oss
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=		--disable-cg
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 CONFIGURE_ARGS+=		--enable-ffmpeg
 .else
 CONFIGURE_ARGS+=		--disable-ffmpeg

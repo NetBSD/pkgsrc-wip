@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2012/11/13 20:09:33 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.18 2014/08/11 23:10:13 thomasklausner Exp $
 
 # XXX You must update MASTER_SITES download number when updating
 # XXX or you will download old file with new filename.
 DISTNAME=		kino-0.7.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		multimedia
 MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/42/
 
@@ -26,7 +25,7 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 # Use FFMPEG libavcodec for DV video decoding instead of libdv.
 # XXX maybe should be an option
 #CONFIGURE_ARGS+=	--with-avcodec
-#.include "../../multimedia/ffmpeg/buildlink3.mk"
+#.include "../../multimedia/ffmpeg1/buildlink3.mk"
 
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

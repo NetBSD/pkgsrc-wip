@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/03/21 16:43:49 phonohawk Exp $
+# $NetBSD: options.mk,v 1.4 2014/08/11 23:10:14 thomasklausner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.synfig
@@ -63,7 +63,7 @@ PRINT_PLIST_AWK+= \
 	/^lib\/synfig\/modules\/libmod_ffmpeg\.la$$/ { print "$${PLIST.ffmpeg}" $$0; next; }
 PLIST_VARS+=	ffmpeg
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 PLIST.ffmpeg=	yes
 .endif
 

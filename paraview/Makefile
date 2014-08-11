@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2013/07/22 12:19:55 slitvinov Exp $
-#
+# $NetBSD: Makefile,v 1.11 2014/08/11 23:10:13 thomasklausner Exp $
 
 VER=4.0.1
 PKGNAME=	paraview-${VER}
 DISTNAME=	ParaView-v${VER}-source
-EXTRACT_SUFX=	.tgz
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://paraview.org/files/v4.0/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://www.paraview.org/
@@ -73,7 +73,7 @@ do-test:
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

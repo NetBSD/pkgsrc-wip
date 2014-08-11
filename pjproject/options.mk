@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/02/02 16:23:54 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2014/08/11 23:10:14 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pjproject
 PKG_SUPPORTED_OPTIONS=	alsa ffmpeg gsm ilbc openssl samplerate sdl2 speex v4l2
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	ffmpeg gsm ilbc openssl samplerate sdl2 speex x264
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ffmpeg
 .endif

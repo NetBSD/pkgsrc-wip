@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/08/11 23:10:14 thomasklausner Exp $
 
 DISTNAME=	retroarch-0.9.7
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://themaister.net/retroarch-dl/
 

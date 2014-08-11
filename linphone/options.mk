@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:34 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.6 2014/08/11 23:10:13 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linphone
 PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui linphone-video gsm
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-video=no
 .else
 CONFIGURE_ARGS+=	--enable-video=yes
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgsm)

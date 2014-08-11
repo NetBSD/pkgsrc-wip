@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/05/08 02:42:58 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/08/11 23:10:13 thomasklausner Exp $
 
 DISTNAME=	dolphin-3.5-src
 PKGNAME=	${DISTNAME:S/-src//1}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://dolphin-emu.googlecode.com/files/
 EXTRACT_SUFX=	.zip

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2014/05/09 07:38:52 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.17 2014/08/11 23:10:14 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	alsa avahi boost curl ecore faad ffmpeg flac fftw gamin
@@ -59,7 +59,7 @@ WITHOUT_PLUGINS+=	faad
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 CFLAGS+=		${BUILDLINK_PREFIX.ffmpeg}/include
 PLIST.ffmpeg=		yes
 .else

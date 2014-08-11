@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/13 23:05:23 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/08/11 23:10:13 thomasklausner Exp $
 
 DISTNAME=	gpac-0.4.6
 PKGNAME=	${DISTNAME}pre${_SVN_PKGVERSION:S/.//g}
@@ -16,7 +15,7 @@ SVN_REPOSITORIES=	gpac
 SVN_ROOT.gpac=		http://gpac.svn.sourceforge.net/svnroot/gpac/trunk/gpac
 
 WRKSRC=		${WRKDIR}/gpac
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 # not really GNU configure, but close enough
 GNU_CONFIGURE=	yes
@@ -36,7 +35,7 @@ pre-install:
 .include "../../graphics/png/buildlink3.mk"
 # doesn't work yet
 #.include "../../lang/spidermonkey/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

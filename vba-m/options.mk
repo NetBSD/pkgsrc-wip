@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/12/02 02:20:01 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2014/08/11 23:10:14 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vba-m
 PKG_SUPPORTED_OPTIONS=	debug ffmpeg gtk lirc nls sdl
@@ -14,7 +14,7 @@ CMAKE_ARGS+=	-DENABLE_DEBUGGER=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_FFMPEG=ON
 .else
 CMAKE_ARGS+=	-DENABLE_FFMPEG=OFF
