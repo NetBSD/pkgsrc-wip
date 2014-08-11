@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/02/02 16:23:54 othyro Exp $
+# $NetBSD: options.mk,v 1.8 2014/08/11 13:54:07 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dolphin
 PKG_SUPPORTED_OPTIONS=	alsa bluez cg debug ffmpeg glew gtk2 libao openal opengl
@@ -28,7 +28,7 @@ CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg1/buildlink3.mk"
 CMAKE_ARGS+=		-DENCODE_FRAMEDUMPS=ON
 .else
 CMAKE_ARGS+=		-DENCODE_FRAMEDUMPS=OFF
@@ -55,7 +55,7 @@ CMAKE_ARGS+=		-DENCODE_FRAMEDUMPS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
-.include "../../wip/portaudio/buildlink3.mk"
+.include "../../audio/portaudio-devel/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
