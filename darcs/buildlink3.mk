@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2014/05/26 22:08:03 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2014/08/12 21:24:14 szptvlfn Exp $
 
 BUILDLINK_TREE+=	darcs
 
@@ -21,7 +21,7 @@ BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
-.include "../../wip/hs-zlib/buildlink3.mk"
+.include "../../archivers/hs-zlib/buildlink3.mk"
 .endif	# DARCS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-darcs
