@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5850 2014/08/12 21:24:14 szptvlfn Exp $
+# $Id: Makefile,v 1.5851 2014/08/12 21:37:52 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -351,6 +351,7 @@ SUBDIR+=	compiz-boxmenu
 SUBDIR+=	contact-lookup-applet
 SUBDIR+=	contacts
 SUBDIR+=	converttomp3
+SUBDIR+=	cool-old-term-git
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	couchdb-glib
@@ -891,6 +892,7 @@ SUBDIR+=	gxconsole
 SUBDIR+=	gxmms2
 SUBDIR+=	h323plus
 SUBDIR+=	h8300-elf-binutils
+SUBDIR+=	h8300-elf-gcc
 SUBDIR+=	habak
 SUBDIR+=	haddock
 SUBDIR+=	hammer
