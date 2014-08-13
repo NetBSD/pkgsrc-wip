@@ -1,35 +1,29 @@
-$NetBSD: patch-CPU.xs,v 1.1 2013/06/30 13:43:59 noud4 Exp $
+$NetBSD: patch-CPU.xs,v 1.2 2014/08/13 20:17:40 thomasklausner Exp $
 
-thanks to
-http://svnweb.freebsd.org/ports/head/devel/p5-Sys-Cpu/files/patch-CPU.xs?revision=300896&view=markup
+Add NetBSD support.
 
---- CPU.xs.orig	2012-11-13 04:47:34.000000000 +0000
+--- CPU.xs.orig	2013-11-27 22:40:07.000000000 +0000
 +++ CPU.xs
-@@ -40,6 +40,11 @@
+@@ -40,7 +40,7 @@
   #define _have_cpu_clock
   #define _have_cpu_type
  #endif
+-#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#include <sys/sysctl.h>
-+#define _have_cpu_type
-+#define _have_cpu_clock
-+#endif
- #ifdef WINDOWS
- /* Registry Functions */
- 
-@@ -329,6 +334,19 @@ CODE:
-     int value = proc_cpuinfo_clock();
-     if (value) clock = value;
+  #include <sys/sysctl.h>
+  #define _have_cpu_type
+  #define _have_cpu_clock
+@@ -345,6 +345,17 @@ CODE:
+     size_t len = sizeof(clock);
+     sysctlbyname("hw.clockrate", &clock, &len, NULL, 0);
  #endif
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#ifdef __NetBSD__
 +    size_t len = sizeof(clock);
 +    char const *name;
 +
-+    if(sysctlbyname("hw.clockrate", NULL, &len, NULL, 0) == 0)
-+        name = "hw.clockrate";
-+    else if(sysctlbyname("machdep.powernow.frequency.current", NULL, &len, NULL, 0) == 0)
++    if (sysctlbyname("machdep.powernow.frequency.current", NULL, &len, NULL, 0) == 0)
 +        name = "machdep.powernow.frequency.current";
-+    else if(sysctlbyname("machdep.est.frequency.current", NULL, &len, NULL, 0) == 0)
++    else if (sysctlbyname("machdep.est.frequency.current", NULL, &len, NULL, 0) == 0)
 +        name = "machdep.est.frequency.current";
 +
 +    sysctlbyname(name, &clock, &len, NULL, 0);
@@ -37,16 +31,14 @@ http://svnweb.freebsd.org/ports/head/devel/p5-Sys-Cpu/files/patch-CPU.xs?revisio
  #ifdef WINDOWS
      char *clock_str = malloc(MAX_IDENT_SIZE);
      /*!! untested !!*/
-@@ -366,6 +375,12 @@ cpu_type()
- CODE:
- {
--    char *value = NULL;
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
-+    char *value = malloc(MAX_IDENT_SIZE);
+@@ -394,6 +405,11 @@ CODE:
+     size_t len = MAX_IDENT_SIZE;
+     sysctlbyname("hw.model", value, &len, NULL, 0);
+ #endif
++#ifdef __NetBSD__
++    value = malloc(MAX_IDENT_SIZE);
 +    size_t len = MAX_IDENT_SIZE;
 +    sysctlbyname("hw.model", value, &len, NULL, 0);
-+#else
-+    char *value = NULL;
 +#endif
  #ifdef __linux__
  #if defined __s390__ || defined __s390x__
