@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/08/13 20:13:03 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/08/13 20:27:52 rhialto Exp $
 @comment :4,$s=py3.4=py${PYVERSSUFFIX}=
 @comment :4,$s=cpython-34=cpython-${PYVERS}=
 bin/fs-uae-launcher
@@ -4232,7 +4232,7 @@ share/fs-uae-launcher/OpenGL/raw/osmesa/mesa.py
 share/fs-uae-launcher/OpenGL/version.py
 share/fs-uae-launcher/OpenGL/wrapper.py
 share/fs-uae-launcher/fs-uae-launcher
-share/fs-uae-launcher/fs_uae_launcher-2.5.8dev-py${PYVERSSUFFIX}.egg-info
+share/fs-uae-launcher/fs_uae_launcher-2.5.10dev-py${PYVERSSUFFIX}.egg-info
 share/fs-uae-launcher/fs_uae_launcher/CDManager.py
 share/fs-uae-launcher/fs_uae_launcher/Config.py
 share/fs-uae-launcher/fs_uae_launcher/ConfigChecker.py

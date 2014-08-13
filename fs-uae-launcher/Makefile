@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/08/13 20:13:03 rhialto Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/13 20:27:52 rhialto Exp $
 
-VERSION=	2.5.8dev
+VERSION=	2.5.10dev
 DISTNAME=	fs-uae-launcher-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
