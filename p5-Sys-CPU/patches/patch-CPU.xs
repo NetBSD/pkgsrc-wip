@@ -1,6 +1,7 @@
-$NetBSD: patch-CPU.xs,v 1.2 2014/08/13 20:17:40 thomasklausner Exp $
+$NetBSD: patch-CPU.xs,v 1.3 2014/08/13 20:18:34 thomasklausner Exp $
 
 Add NetBSD support.
+https://rt.cpan.org/Public/Bug/Display.html?id=98004
 
 --- CPU.xs.orig	2013-11-27 22:40:07.000000000 +0000
 +++ CPU.xs
