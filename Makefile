@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5852 2014/08/13 10:53:30 fhajny Exp $
+# $Id: Makefile,v 1.5853 2014/08/13 19:27:36 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -60,6 +60,7 @@ SUBDIR+=	StepTalk
 SUBDIR+=	Terminal
 SUBDIR+=	TextEdit
 SUBDIR+=	Typewriter
+SUBDIR+=	VASSAL
 SUBDIR+=	WEPCrack
 SUBDIR+=	a2ps-sharatype
 SUBDIR+=	acpiclient
