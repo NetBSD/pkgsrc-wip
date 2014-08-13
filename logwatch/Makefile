@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/11 21:04:09 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/13 20:21:06 thomasklausner Exp $
 #
 
 DISTNAME=	logwatch-7.4.0
@@ -11,7 +11,7 @@ COMMENT=	Customizable log analysis system
 LICENSE=	mit
 
 DEPENDS=	p5-MIME-Base64>=3.13:../../converters/p5-MIME-Base64
-DEPENDS+=	p5-Sys-CPU>=0.54:../../wip/p5-Sys-CPU
+DEPENDS+=	p5-Sys-CPU>=0.54:../../sysutils/p5-Sys-CPU
 DEPENDS+=	p5-Sys-MemInfo>=0.91:../../wip/p5-Sys-MemInfo
 
 NO_BUILD=		yes
