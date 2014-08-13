@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/05/26 22:08:04 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/13 21:34:15 szptvlfn Exp $
 
-DISTNAME=	mwc-random-0.13.1.1
+DISTNAME=	mwc-random-0.13.2.0
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org
