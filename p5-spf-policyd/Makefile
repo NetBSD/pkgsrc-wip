@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/11/16 19:27:36 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/13 20:02:17 shindenmorr Exp $
 #
 
-DISTNAME=	postfix-policyd-spf-perl-2.007
-PKGNAME=	p5-policyd-spf-2.007
-CATEGORIES=	mail
-MASTER_SITES=	http://launchpad.net/postfix-policyd-spf-perl/trunk/2.007/+download/
+DISTNAME=      postfix-policyd-spf-perl-2.010
+PKGNAME=       p5-policyd-spf-2.010
+CATEGORIES=    mail
+MASTER_SITES=  http://launchpad.net/postfix-policyd-spf-perl/trunk/release2.010/+download/
 
 MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://launchpad.net/postfix-policyd-spf-perl/
