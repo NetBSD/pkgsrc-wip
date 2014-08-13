@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/08/13 19:52:09 rhialto Exp $
+$NetBSD: distinfo,v 1.5 2014/08/13 20:22:15 rhialto Exp $
 
-SHA1 (fs-uae-2.5.8dev6.tar.gz) = c2e1325e7a18159960da35b6e3ad087176c1226c
-RMD160 (fs-uae-2.5.8dev6.tar.gz) = 4667a1b5794eedc45b9fae110d24ee9c519b988f
-Size (fs-uae-2.5.8dev6.tar.gz) = 4401003 bytes
-SHA1 (patch-libfsemu_src_ml_manymouse_x11__xinput2.c) = 90b2746e0ab863385f6a7ec7b634fecf4202a6fd
+SHA1 (fs-uae-2.5.10dev.tar.gz) = f2adcca27470ea162376df5d28bd1803d53e106f
+RMD160 (fs-uae-2.5.10dev.tar.gz) = 24914c0530a08cab35074e7e2a333fa3ddb1ed96
+Size (fs-uae-2.5.10dev.tar.gz) = 4480170 bytes
 SHA1 (patch-libfsemu_src_ml_x11.c) = 577b41ae15381faf28c217df52163081e3333083
+SHA1 (patch-manymouse_x11__xinput2.c) = 17faf92f7cbd9e6b928f73fe80b856dcd4a3a6bc
 SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = cac0860d4e412996d780698be30528deb561e625
