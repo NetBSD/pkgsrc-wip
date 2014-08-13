@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.2 2014/07/28 10:59:10 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2014/08/13 10:51:04 fhajny Exp $
 
 SHA1 (rsyslog-8.2.2.tar.gz) = 7b4eb04ddf96bdfed54dcc647831bbb5b8b051f1
 RMD160 (rsyslog-8.2.2.tar.gz) = e9246a3c81a0235b6c99db4860a8d0cb9ae527d1
 Size (rsyslog-8.2.2.tar.gz) = 1943594 bytes
 SHA1 (patch-grammar_lexer.l) = 59ff7907e8b61613ba51f31d790d2b3c427dcf89
-SHA1 (patch-platform_redhat_rsyslog.conf) = c9b79763279f6af39c5c7c1d6dc52786bd2d40fb
-SHA1 (patch-plugins_imuxsock_imuxsock.c) = 924598664fc31993d7fa12a7ed3db92c8c34429d
+SHA1 (patch-platform_redhat_rsyslog.conf) = fbc52ae7c902dde785679ef687757af3148485c3
+SHA1 (patch-plugins_imuxsock_imuxsock.c) = 831d5224b818cd1ccfa3a33ab1ad6d2ba2168c06
+SHA1 (patch-tools_rsyslogd.c) = b57c2f08de111644372abaaaff741172428c8865
+SHA1 (patch-tools_syslogd.c) = ab3986c2a2da60ff5b85e209366c3875baa206ea

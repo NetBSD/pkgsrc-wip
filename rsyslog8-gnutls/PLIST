@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/08/13 10:51:04 fhajny Exp $
+lib/rsyslog/lmnsd_gtls.la
