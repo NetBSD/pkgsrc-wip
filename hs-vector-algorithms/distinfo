@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/03/12 23:18:50 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2014/08/15 21:06:40 szptvlfn Exp $
 
-SHA1 (vector-algorithms-0.6.0.1.tar.gz) = 6c05f8aaaeaa93ba5381fee41af6c787f3e6893a
-RMD160 (vector-algorithms-0.6.0.1.tar.gz) = 675e15e91a10bfcc586b5937898023e8d2556520
-Size (vector-algorithms-0.6.0.1.tar.gz) = 20273 bytes
+SHA1 (vector-algorithms-0.6.0.3.tar.gz) = 9835fe3e61d1e0c658bdfdfdaa289d2f89f94c1c
+RMD160 (vector-algorithms-0.6.0.3.tar.gz) = f0b3a1b2854a2b0adefeed8066bcd28796dc2894
+Size (vector-algorithms-0.6.0.3.tar.gz) = 20273 bytes
