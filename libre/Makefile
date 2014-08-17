@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/08/09 23:56:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/08/17 10:57:07 thomasklausner Exp $
 
 DISTNAME=	re-0.4.9
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.creytiv.com/pub/
 
