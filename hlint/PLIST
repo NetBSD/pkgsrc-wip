@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/06/27 21:28:54 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/08/17 21:46:06 szptvlfn Exp $
 bin/hlint
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.p_hi
@@ -29,6 +29,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Hint/All.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/All.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Bracket.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Bracket.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Comment.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Comment.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Duplicate.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Duplicate.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Extensions.hi
@@ -69,14 +71,16 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Report.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Report.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Settings.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Settings.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/All.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/All.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/Annotations.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/Annotations.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/InputOutput.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/InputOutput.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/Proof.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/Proof.p_hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Test/Standard.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Test/Standard.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/Translate.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/Translate.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/Util.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/Util.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Util.hi
@@ -105,6 +109,8 @@ share/${PKGNAME}/Default.hs
 share/${PKGNAME}/Dollar.hs
 share/${PKGNAME}/Generalise.hs
 share/${PKGNAME}/HLint.hs
+share/${PKGNAME}/HLint_QuickCheck.hs
+share/${PKGNAME}/HLint_TypeCheck.hs
 share/${PKGNAME}/Test.hs
 share/${PKGNAME}/hlint.1
 share/${PKGNAME}/hlint.ghci
