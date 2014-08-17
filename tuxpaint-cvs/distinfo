@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2014/08/17 10:28:55 thomasklausner Exp $
+
+SHA1 (patch-Makefile) = 41a616923954b48fdce176021978b03fba81bce4
+SHA1 (patch-src_tuxpaint.c) = af8b323cfaffa8dc344d04e6cb4e2c27e4dc18a4
