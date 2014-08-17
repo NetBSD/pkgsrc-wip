@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5856 2014/08/16 22:25:40 szptvlfn Exp $
+# $Id: Makefile,v 1.5857 2014/08/17 10:29:42 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2436,6 +2436,7 @@ SUBDIR+=	py-clics
 SUBDIR+=	py-cliff
 SUBDIR+=	py-clnum
 SUBDIR+=	py-clonedigger
+SUBDIR+=	py-clonedigger-jl
 SUBDIR+=	py-cma
 SUBDIR+=	py-cmd2
 SUBDIR+=	py-cocos2d
@@ -2557,6 +2558,7 @@ SUBDIR+=	py-fuzzpy
 SUBDIR+=	py-fwarp
 SUBDIR+=	py-fwm-ensayo
 SUBDIR+=	py-fyzz
+SUBDIR+=	py-gammafit
 SUBDIR+=	py-gaphas
 SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-gccxml
@@ -2714,6 +2716,7 @@ SUBDIR+=	py-nibabel
 SUBDIR+=	py-nimfa
 SUBDIR+=	py-nipy
 SUBDIR+=	py-nipy-data
+SUBDIR+=	py-nlib
 SUBDIR+=	py-nltk
 SUBDIR+=	py-nodepy
 SUBDIR+=	py-nose-senario
@@ -3516,6 +3519,7 @@ SUBDIR+=	tutos
 SUBDIR+=	tuxanci
 SUBDIR+=	tuxanci-server
 SUBDIR+=	tuxguitar
+SUBDIR+=	tuxpaint-cvs
 SUBDIR+=	tuxtype2
 SUBDIR+=	tvmet
 SUBDIR+=	tw_cli
