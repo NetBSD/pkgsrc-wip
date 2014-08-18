@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5858 2014/08/18 03:04:38 obache Exp $
+# $Id: Makefile,v 1.5859 2014/08/18 03:49:12 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3182,6 +3182,7 @@ SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-libv8
 SUBDIR+=	ruby-passenger
+SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-therubyracer
 SUBDIR+=	ruby-trollop
