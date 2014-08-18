@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5857 2014/08/17 10:29:42 thomasklausner Exp $
+# $Id: Makefile,v 1.5858 2014/08/18 03:04:38 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1526,7 +1526,6 @@ SUBDIR+=	linux24-kernel
 SUBDIR+=	linux24-kernel-headers
 SUBDIR+=	linuxdcpp
 SUBDIR+=	linuxigd
-SUBDIR+=	linuxigd-current
 SUBDIR+=	linuxtv-dvb-apps
 SUBDIR+=	lire
 SUBDIR+=	lissac
