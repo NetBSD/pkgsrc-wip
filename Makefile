@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5862 2014/08/18 09:54:23 thomasklausner Exp $
+# $Id: Makefile,v 1.5863 2014/08/18 21:22:47 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1012,7 +1012,6 @@ SUBDIR+=	hs-data-accessor-template
 SUBDIR+=	hs-dataenc
 SUBDIR+=	hs-dependent-sum
 SUBDIR+=	hs-derive
-SUBDIR+=	hs-digest
 SUBDIR+=	hs-double-conversion
 SUBDIR+=	hs-dyre
 SUBDIR+=	hs-entropy
@@ -1048,7 +1047,6 @@ SUBDIR+=	hs-hint
 SUBDIR+=	hs-hopenssl
 SUBDIR+=	hs-hostname
 SUBDIR+=	hs-hothasktags
-SUBDIR+=	hs-hscolour
 SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template
 SUBDIR+=	hs-hslua
