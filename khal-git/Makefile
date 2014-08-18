@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/07/09 04:30:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2014/08/18 11:52:36 thomasklausner Exp $
 
 # version number from setup.py
 DISTNAME=		khal-0.3.0
@@ -14,12 +14,16 @@ LICENSE=		mit
 GIT_REPOSITORIES=	khal
 GIT_REPO.khal= 		git://github.com/geier/khal.git
 
-DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
+DEPENDS+=		${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+DEPENDS+=		${PYPKGPREFIX}-docopt-[0-9]*:../../devel/py-docopt
 DEPENDS+=		${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
-DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=		${PYPKGPREFIX}-lxml>=2:../../textproc/py-lxml
+DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-requests>=0.10:../../devel/py-requests
+DEPENDS+=		${PYPKGPREFIX}-requests-toolbelt-[0-9]*:../../devel/py-requests-toolbelt
+DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=		${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
+DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 # SimpleFocusListWalker is in urwid 1.1.0
 DEPENDS+=		${PYPKGPREFIX}-urwid>=1.1.0:../../devel/py-urwid
 # not needed, but recommended, so let's just depend on them
