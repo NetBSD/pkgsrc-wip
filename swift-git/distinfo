@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2014/08/18 08:25:24 thomasklausner Exp $
+
+SHA1 (patch-3rdParty_LibMiniUPnPc_src_miniupnpc_connecthostport.c) = 0b376d3289684962afd468a6a8166bad9856cb8e
+SHA1 (patch-Swiften_Client_ClientSession.cpp) = cbd284f648b67d8fc51821bd249a95e912879f9c
+SHA1 (patch-Swiften_FileTransfer_IBBReceiveSession.cpp) = 1b30c24f5d225d233339e0b86e586d8024522e74
+SHA1 (patch-Swiften_FileTransfer_IncomingFileTransferManager.cpp) = 51e8b185be2557b11578c0ecb120e0697f0658b6
+SHA1 (patch-Swiften_Jingle_JingleResponder.cpp) = 2b6d1d04638e84ee2379b632fcfdb1d1b6e45e81
+SHA1 (patch-Swiften_Parser_PayloadParsers_JingleS5BTransportMethodPayloadParser.cpp) = fd41cdbc6a8730131206c37c9d6cb3ca7449b014
+SHA1 (patch-Swiften_Serializer_PayloadSerializers_JingleContentPayloadSerializer.cpp) = 5145f8ff242411644617aec44feb10d37c0af88f

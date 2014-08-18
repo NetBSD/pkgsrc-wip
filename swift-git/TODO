@@ -1,0 +1,7 @@
+Doesn't link with boost-1.56:
+Swiften/libSwiften.a(CombinedAvatarProvider.o): In function `Swift::CombinedAvatarProvider::handleAvatarChanged(Swift::JID const&)':
+work/swift/Swiften/Avatars/CombinedAvatarProvider.cpp:43: undefined reference to `std::basic_ostream<char, std::char_traits<char> >& boost::operator<< <char, std::char_traits<char>, std::string>(std::basic_ostream<char, std::char_traits<char> >&, boost::optional<std::string> const&)'
+Swiften/libSwiften.a(CombinedAvatarProvider.o): In function `Swift::CombinedAvatarProvider::getCombinedAvatarAndCache(Swift::JID const&) const':
+work/swift/Swiften/Avatars/CombinedAvatarProvider.cpp:53: undefined reference to `std::basic_ostream<char, std::char_traits<char> >& boost::operator<< <char, std::char_traits<char>, std::string>(std::basic_ostream<char, std::char_traits<char> >&, boost::optional<std::string> const&)'
+Swiften/libSwiften.a(StreamResumeSerializer.o): In function `bool boost::detail::lexical_istream_limited_src<char, std::char_traits<char>, true, 2ul>::shl_input_streamable<boost::optional<unsigned int> const>(boost::optional<unsigned int> const&)':
+work/.buildlink/include/boost/lexical_cast.hpp:1408: undefined reference to `std::basic_ostream<char, std::char_traits<char> >& boost::operator<< <char, std::char_traits<char>, unsigned int>(std::basic_ostream<char, std::char_traits<char> >&, boost::optional<unsigned int> const&)'
