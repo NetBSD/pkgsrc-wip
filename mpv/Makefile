@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/08/12 20:50:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/20 00:36:11 leot1990 Exp $
 
 DISTNAME=	mpv-0.5.0
 CATEGORIES=	multimedia
@@ -46,7 +46,7 @@ post-extract:
 	chmod 555 ${WRKSRC}/waf
 
 do-configure:
-	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} configure
+	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} ${WAF_CONFIGURE_ARGS} configure
 
 do-build:
 	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS}
@@ -54,6 +54,7 @@ do-build:
 do-install:
 	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} install
 
+.include "options.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/application.mk"
