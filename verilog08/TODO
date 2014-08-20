@@ -1,0 +1,3 @@
+- Verilog 0.8 revived. Newer version said dropped the
+  synthesis capability.
+- But no co-existing mechnism with Verilog-0.9 (yet)
