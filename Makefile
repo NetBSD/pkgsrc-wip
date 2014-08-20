@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5863 2014/08/18 21:22:47 szptvlfn Exp $
+# $Id: Makefile,v 1.5864 2014/08/20 13:28:30 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3019,7 +3019,6 @@ SUBDIR+=	py-weberror
 SUBDIR+=	py-webflash
 SUBDIR+=	py-webhelpers
 SUBDIR+=	py-webkit
-SUBDIR+=	py-webob
 SUBDIR+=	py-websocket
 SUBDIR+=	py-whisper
 SUBDIR+=	py-wifite

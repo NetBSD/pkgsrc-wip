@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/06/01 12:49:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/08/20 13:28:30 thomasklausner Exp $
 
 DISTNAME=	restkit-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=       ${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 DEPENDS+=       ${PYPKGPREFIX}-pygments>=1.3.1:../../textproc/py-pygments
 DEPENDS+=       ${PYPKGPREFIX}-eventlet>=0.9.7:../../wip/py-eventlet
 DEPENDS+=       ${PYPKGPREFIX}-gevent>=0.13.0:../../wip/py-gevent
-DEPENDS+=       ${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
+DEPENDS+=       ${PYPKGPREFIX}-WebOb>=0.9.8:../../www/py-WebOb
 
 USE_LANGUAGES=	# none
 

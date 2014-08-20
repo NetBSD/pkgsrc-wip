@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/08/20 13:28:30 thomasklausner Exp $
 
 DISTNAME=	ToscaWidgets-0.9.9
 EGG_NAME=	${DISTNAME}
@@ -14,7 +13,7 @@ COMMENT=	Web widget creation toolkit based on TurboGears widgets
 LICENSE=  	mit
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
+DEPENDS+=	${PYPKGPREFIX}-WebOb>=0.9.8:../../www/py-WebOb
 
 WRKSRC=		${WRKDIR}/ToscaWidgets-0.9.9
 USE_LANGUAGES=	# none
