@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/01/03 10:40:07 thomasklausner Exp $
+$NetBSD: distinfo,v 1.6 2014/08/21 20:23:59 yrmt Exp $
 
-SHA1 (mcwm-20111124.tar.bz2) = bdcc3c33ea9ef452eafccd67d6dd1315babeabe1
-RMD160 (mcwm-20111124.tar.bz2) = 3c4de8b0c392d1a4f3bb389ad7bf25d94ad33a5d
-Size (mcwm-20111124.tar.bz2) = 27982 bytes
-SHA1 (patch-aa) = 870e7162e43a94f2f9219304c578d79dbe199860
+SHA1 (mcwm-20130209.tar.bz2) = 2a29a5d99ed5019b620f4d50338065bc5852a8ea
+RMD160 (mcwm-20130209.tar.bz2) = 71341536b25b0f843c58e655b9bdf37efaae32df
+Size (mcwm-20130209.tar.bz2) = 31429 bytes

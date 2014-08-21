@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:53 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/08/21 20:23:59 yrmt Exp $
 #
 
-DISTNAME=	mcwm-20111124
+DISTNAME=	mcwm-20130209
 CATEGORIES=	wm
 MASTER_SITES=	http://www.hack.org/mc/hacks/mcwm/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,12 +13,6 @@ LICENSE=	isc
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-SUBST_CLASSES+=		rpath
-SUBST_SED.rpath=	-e "s,@@PREFIX@@,${BUILDLINK_PREFIX.libxcb},"
-SUBST_FILES.rpath=	Makefile
-SUBST_STAGE.rpath=	pre-build
-SUBST_MESSAGE.rpath=	Fixing path to xcb.
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mcwm ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/mcwm.man \
@@ -26,4 +20,6 @@ do-install:
 
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/xcb-util-wm/buildlink3.mk"
+.include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
