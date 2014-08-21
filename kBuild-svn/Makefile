@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/21 10:18:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/21 10:30:22 thomasklausner Exp $
 
 DISTNAME=		kBuild
 PKGNAME=		kBuild-0.1.5
@@ -10,12 +10,10 @@ HOMEPAGE=		https://www.virtualbox.org/wiki/kBuild
 COMMENT=		Build framework based on GNU make
 LICENSE=		gnu-gpl-v3
 
-#BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
 SVN_REPOSITORIES=	kBuild
 SVN_ROOT.kBuild=	http://svn.netlabs.org/repos/kbuild/trunk/
-#WRKSRC=			${WRKDIR}/kBuild
 
 USE_TOOLS+=		autoreconf autoconf automake gmake
 
