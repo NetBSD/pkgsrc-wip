@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5864 2014/08/20 13:28:30 thomasklausner Exp $
+# $Id: Makefile,v 1.5865 2014/08/21 10:19:59 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1288,6 +1288,7 @@ SUBDIR+=	jupp
 SUBDIR+=	just
 SUBDIR+=	jython
 SUBDIR+=	kBuild
+SUBDIR+=	kBuild-svn
 SUBDIR+=	kacst-ttf
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
@@ -3571,6 +3572,7 @@ SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vee
 SUBDIR+=	verilog-current
+SUBDIR+=	verilog08
 SUBDIR+=	vidalia
 SUBDIR+=	vidalia-devel
 SUBDIR+=	vidrioclock
