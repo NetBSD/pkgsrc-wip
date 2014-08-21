@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2014/05/28 22:06:01 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.16 2014/08/21 21:43:10 szptvlfn Exp $
 
-DISTNAME=	semigroups-0.13.0.1
+DISTNAME=	semigroups-0.15.2
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Haskell 98 semigroups
+COMMENT=	Anything that associates
 LICENSE=	2-clause-bsd
 
 .include "../../mk/haskell.mk"
