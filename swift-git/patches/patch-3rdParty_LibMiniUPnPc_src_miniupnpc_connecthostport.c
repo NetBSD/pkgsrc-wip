@@ -1,4 +1,4 @@
-$NetBSD: patch-3rdParty_LibMiniUPnPc_src_miniupnpc_connecthostport.c,v 1.1 2014/08/18 08:25:25 thomasklausner Exp $
+$NetBSD: patch-3rdParty_LibMiniUPnPc_src_miniupnpc_connecthostport.c,v 1.2 2014/08/22 21:43:41 thomasklausner Exp $
 
 Include missing header for struct timeval.
 
@@ -8,7 +8,7 @@ Include missing header for struct timeval.
  #ifndef USE_GETHOSTBYNAME
  #include <sys/types.h>
  #include <sys/socket.h>
-+#include <sys/time.h>
++#include <sys/select.h>
  #endif /* #ifndef USE_GETHOSTBYNAME */
  #endif /* #else WIN32 */
  
