@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/08/03 21:05:32 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/08/22 20:29:13 thomasklausner Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -49,6 +49,17 @@ ${PYSITELIB}/khal/khalendar/khalendar.pyo
 ${PYSITELIB}/khal/log.py
 ${PYSITELIB}/khal/log.pyc
 ${PYSITELIB}/khal/log.pyo
+${PYSITELIB}/khal/settings/__init__.py
+${PYSITELIB}/khal/settings/__init__.pyc
+${PYSITELIB}/khal/settings/__init__.pyo
+${PYSITELIB}/khal/settings/default.khal
+${PYSITELIB}/khal/settings/khal.spec
+${PYSITELIB}/khal/settings/settings.py
+${PYSITELIB}/khal/settings/settings.pyc
+${PYSITELIB}/khal/settings/settings.pyo
+${PYSITELIB}/khal/settings/utils.py
+${PYSITELIB}/khal/settings/utils.pyc
+${PYSITELIB}/khal/settings/utils.pyo
 ${PYSITELIB}/khal/terminal.py
 ${PYSITELIB}/khal/terminal.pyc
 ${PYSITELIB}/khal/terminal.pyo
