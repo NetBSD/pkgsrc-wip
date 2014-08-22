@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/18 21:26:21 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2014/08/22 21:57:16 jihbed Exp $
 
-SHA1 (hyperspy-0.7.tar.gz) = 4704f4f4a132650a8388e2171c9edd9b454908ea
-RMD160 (hyperspy-0.7.tar.gz) = ae2ded5858c346b27583b6ec1ba1b23c208d5ffc
-Size (hyperspy-0.7.tar.gz) = 1065409 bytes
+SHA1 (hyperspy-0.7.2.tar.gz) = 14b4fff540ca52a115e7fdb7c5e459fa4b4e6f73
+RMD160 (hyperspy-0.7.2.tar.gz) = 35d26a35104c6ea50e08cc12bf3ae511a046bb96
+Size (hyperspy-0.7.2.tar.gz) = 965443 bytes
 SHA1 (patch-setup.py) = 10d8973fd05d3da5495b30b643cbbc0002f176b3

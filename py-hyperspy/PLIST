@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/18 21:26:21 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/08/22 21:57:16 jihbed Exp $
 bin/hyperspy2.7
 ${PYSITELIB}/hyperspy/Release.py
 ${PYSITELIB}/hyperspy/Release.pyc
@@ -335,9 +335,6 @@ ${PYSITELIB}/hyperspy/misc/ipython_tools.pyo
 ${PYSITELIB}/hyperspy/misc/machine_learning/__init__.py
 ${PYSITELIB}/hyperspy/misc/machine_learning/__init__.pyc
 ${PYSITELIB}/hyperspy/misc/machine_learning/__init__.pyo
-${PYSITELIB}/hyperspy/misc/machine_learning/fastica.py
-${PYSITELIB}/hyperspy/misc/machine_learning/fastica.pyc
-${PYSITELIB}/hyperspy/misc/machine_learning/fastica.pyo
 ${PYSITELIB}/hyperspy/misc/machine_learning/import_sklearn.py
 ${PYSITELIB}/hyperspy/misc/machine_learning/import_sklearn.pyc
 ${PYSITELIB}/hyperspy/misc/machine_learning/import_sklearn.pyo
@@ -559,9 +556,15 @@ ${PYSITELIB}/hyperspy/tests/model/__init__.pyo
 ${PYSITELIB}/hyperspy/tests/model/test_chi_squared.py
 ${PYSITELIB}/hyperspy/tests/model/test_chi_squared.pyc
 ${PYSITELIB}/hyperspy/tests/model/test_chi_squared.pyo
+${PYSITELIB}/hyperspy/tests/model/test_component.py
+${PYSITELIB}/hyperspy/tests/model/test_component.pyc
+${PYSITELIB}/hyperspy/tests/model/test_component.pyo
 ${PYSITELIB}/hyperspy/tests/model/test_components.py
 ${PYSITELIB}/hyperspy/tests/model/test_components.pyc
 ${PYSITELIB}/hyperspy/tests/model/test_components.pyo
+${PYSITELIB}/hyperspy/tests/model/test_eelsmodel.py
+${PYSITELIB}/hyperspy/tests/model/test_eelsmodel.pyc
+${PYSITELIB}/hyperspy/tests/model/test_eelsmodel.pyo
 ${PYSITELIB}/hyperspy/tests/model/test_fit_component.py
 ${PYSITELIB}/hyperspy/tests/model/test_fit_component.pyc
 ${PYSITELIB}/hyperspy/tests/model/test_fit_component.pyo
