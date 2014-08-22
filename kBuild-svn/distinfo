@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1 2014/08/21 10:18:18 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2014/08/22 09:24:56 thomasklausner Exp $
 
+SHA1 (patch-Config.kmk) = 1cc54c3229c258e2b834d51faadb76fa0fdfe7cc
+SHA1 (patch-kBuild_header.kmk) = f6c67be12caf67aeb5b75e62d288f8c60e9bc5e3
 SHA1 (patch-src_kash_Makefile.kmk) = eff4dcad1c2a912b19eea097ece393969b2995a4
+SHA1 (patch-src_kash_shell.h) = f5c677df6b5a9ca5e2b7d32490f5ad6fd77d9686
 SHA1 (patch-src_kmk_Makefile.kmk) = 0503c792ede0baae54ff26725118ad2a1fb0ab04
 SHA1 (patch-src_kmk_kmkbuiltin_osdep.c) = be60566eddf05e2d91db07848349f40af1b622a6
 SHA1 (patch-src_sed_Makefile.kmk) = afa038eae8fb27a85eb1f1d095777ce8ef87c1e9
