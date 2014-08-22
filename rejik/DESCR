@@ -1,3 +1,0 @@
-REJIK is a redirector_program for Squid proxy.  It looks up incoming
-URLs in one or more 'ban lists' and replaces them with a reference to
-empty GIF image, null JavaScript code, etc.

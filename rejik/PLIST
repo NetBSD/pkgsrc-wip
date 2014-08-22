@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2013/02/12 18:22:47 shattered Exp $
-bin/rejik
-bin/rejik-make-cache
-libexec/rejik/IN.gz
-libexec/rejik/benchmark
-libexec/rejik/check-redirector
-libexec/rejik/kill-cache
-libexec/rejik/set-permissions
-share/examples/rejik/redirector.conf.dist
