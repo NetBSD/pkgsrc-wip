@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/17 10:28:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/23 21:15:03 thomasklausner Exp $
 
 DISTNAME=	tuxpaint-0.9.21
 CATEGORIES=	graphics
@@ -62,16 +62,15 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/tuxpaint/fonts/locale/zh_tw_docs/tuxpaintsubset.pe
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
-BUILDLINK_API_DEPENDS.SDL_ttf+=	SDL_ttf>=2.0.7
-BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.4
-
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_Pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL_ttf+=	SDL_ttf>=2.0.7
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.4
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
