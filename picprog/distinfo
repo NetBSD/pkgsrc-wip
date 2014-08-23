@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
+$NetBSD: distinfo,v 1.3 2014/08/23 23:07:16 leot1990 Exp $
 
-SHA1 (picprog-1.1.tar.gz) = a8298b23ee8ea87033d373a865a7db4f8cfd6b4b
-RMD160 (picprog-1.1.tar.gz) = 1ea58d69b5477d39a9c827f6e82dfc88bd12061a
-Size (picprog-1.1.tar.gz) = 44377 bytes
-SHA1 (patch-aa) = 1f81bdae45b621b58366da04341c2c0a20c3858b
-SHA1 (patch-ab) = dac2991b57c5cd60b5d5eee8e86d25fb69bef439
+SHA1 (picprog-1.9.1.tar.gz) = 7956eabb6ff9a8427ad65e3186ef17a172c31620
+RMD160 (picprog-1.9.1.tar.gz) = 63293485f27e88a6de684bc10bbeb52c85681a53
+Size (picprog-1.9.1.tar.gz) = 76452 bytes
+SHA1 (patch-Makefile) = 81774a72092ae41343095ab9e87ab6c44a623b1b
+SHA1 (patch-picport.cc) = c8472c19dba42ad95d72f4a3d63e3cebe6c6f102
+SHA1 (patch-testport.cc) = 0c37cc5230a991d1f13dc4e50b50d724164f85b4
