@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2014/06/23 09:00:16 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.4 2014/08/23 17:44:12 heidnes Exp $
 # used by wip/v8/Makefile
 # used by wip/v8-316/Makefile
 
 CATEGORIES=		lang
-MASTER_SITES=		-https://github.com/v8/v8/archive/${PKGVERSION_NOREV}.tar.gz
+MASTER_SITES=		-http://gsdview.appspot.com/chromium-browser-official/v8-${PKGVERSION_NOREV}.tar.bz2
 
 MAINTAINER=		msporleder@gmail.com
 COMMENT=		V8 JavaScript Engine
@@ -13,7 +13,7 @@ LICENSE=		modified-bsd
 BUILD_DEPENDS+=		${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake:run
 
 PATCHDIR=		${.CURDIR}/../../wip/v8/patches
 PLIST_SRC=		${.CURDIR}/../../wip/v8/PLIST
@@ -34,41 +34,95 @@ CPPFLAGS.SunOS+=	-fPIC
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_MESSAGE.path=	Fix default paths
-SUBST_FILES.path=	build/common.gypi
-SUBST_FILES.path=	Makefile
-SUBST_FILES.path+=	src/d8.gyp
-SUBST_FILES.path+=	test/cctest/cctest.gyp
 SUBST_FILES.path+=	tools/gyp/v8.gyp
-SUBST_SED.path=		-e 's,python,${PYTHONBIN},'
 SUBST_SED.path+=	-e 's,/usr/pkg,${PREFIX},g'
 SUBST_SED.path+=	-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.path+=	-e 's,build/gyp/,,'
-SUBST_SED.path+=	-e 's,^native:.*,native:,'
+
+REPLACE_PYTHON+=	tools/android-run.py
+REPLACE_PYTHON+=	tools/concatenate-files.py
+REPLACE_PYTHON+=	tools/disasm.py
+REPLACE_PYTHON+=	tools/external-reference-check.py
+REPLACE_PYTHON+=	tools/gc-nvp-trace-processor.py
+REPLACE_PYTHON+=	tools/gen-postmortem-metadata.py
+REPLACE_PYTHON+=	tools/generate-runtime-tests.py
+REPLACE_PYTHON+=	tools/generate_shim_headers/generate_shim_headers.py
+REPLACE_PYTHON+=	tools/grokdump.py
+REPLACE_PYTHON+=	tools/gyp/v8.gyp
+REPLACE_PYTHON+=	tools/js2c.py
+REPLACE_PYTHON+=	tools/ll_prof.py
+REPLACE_PYTHON+=	tools/mingw-generate-makefiles.sh
+REPLACE_PYTHON+=	tools/nacl-run.py
+REPLACE_PYTHON+=	tools/presubmit.py
+REPLACE_PYTHON+=	tools/process-heap-prof.py
+REPLACE_PYTHON+=	tools/push-to-trunk/auto_push.py
+REPLACE_PYTHON+=	tools/push-to-trunk/auto_roll.py
+REPLACE_PYTHON+=	tools/push-to-trunk/auto_tag.py
+REPLACE_PYTHON+=	tools/push-to-trunk/bump_up_version.py
+REPLACE_PYTHON+=	tools/push-to-trunk/chromium_roll.py
+REPLACE_PYTHON+=	tools/push-to-trunk/common_includes.py
+REPLACE_PYTHON+=	tools/push-to-trunk/git_recipes.py
+REPLACE_PYTHON+=	tools/push-to-trunk/merge_to_branch.py
+REPLACE_PYTHON+=	tools/push-to-trunk/push_to_trunk.py
+REPLACE_PYTHON+=	tools/push-to-trunk/releases.py
+REPLACE_PYTHON+=	tools/push-to-trunk/script_test.py
+REPLACE_PYTHON+=	tools/push-to-trunk/test_scripts.py
+REPLACE_PYTHON+=	tools/run-deopt-fuzzer.py
+REPLACE_PYTHON+=	tools/run-tests.py
+REPLACE_PYTHON+=	tools/run-valgrind.py
+REPLACE_PYTHON+=	tools/run.py
+REPLACE_PYTHON+=	tools/run_benchmarks.py
+REPLACE_PYTHON+=	tools/stats-viewer.py
+REPLACE_PYTHON+=	tools/test-server.py
+REPLACE_PYTHON+=	tools/testrunner/local/pool.py
+REPLACE_PYTHON+=	tools/testrunner/local/pool_unittest.py
+REPLACE_PYTHON+=	tools/testrunner/local/utils.py
+REPLACE_PYTHON+=	tools/testrunner/server/daemon.py
+REPLACE_PYTHON+=	tools/unittests/run_benchmarks_test.py
+REPLACE_PYTHON+=	third_party/icu/source/test/depstest/dependencies.py
+REPLACE_PYTHON+=	third_party/icu/source/test/depstest/depstest.py
+REPLACE_PYTHON+=	third_party/icu/source/tools/icu-svnprops-check.py
 
 SUBST_CLASSES+=		v8
 SUBST_STAGE.v8=		pre-build
 SUBST_MESSAGE.v8=	Fix gyp-generated Makefiles
-SUBST_FILES.v8=		out/Makefile.native
+
+# Makefile regeneration:
+SUBST_FILES.v8+=	out/Makefile.native
+# rpath
 SUBST_FILES.v8+=	out/samples/lineprocessor.target.native.mk
+# rpath
 SUBST_FILES.v8+=	out/samples/process.target.native.mk
+# rpath
 SUBST_FILES.v8+=	out/samples/shell.target.native.mk
+# rpath
 SUBST_FILES.v8+=	out/src/d8.target.native.mk
-SUBST_FILES.v8+=	out/tools/gyp/v8.target.native.mk
-SUBST_FILES.v8+=	out/tools/gyp/v8_shell.target.native.mk
+
 # Remove nonstandard rpath
 SUBST_SED.v8+=		-e '/rpath/d'
-# Work around problem with thin archives
-SUBST_SED.v8+=		-e 's,crsT,crs,'
 # Prevent Makefile from being regenerated
 SUBST_SED.v8+=		-e '/do_cmd,regen_makefile/d'
 
 INSTALLATION_DIRS+=	bin include lib
 
+INSTALL_INCLUDES=	v8-debug.h v8-platform.h v8-profiler.h
+INSTALL_INCLUDES+=	v8-testing.h v8-util.h v8.h
+INSTALL_INCLUDES+=	v8config.h v8stdint.h
+
+# This reveals the actual commands run under gyp/make control
+MAKE_ENV+=	V=1
+
+TEST_TARGET=	native.check
+
 # Pre-make the Makefile so that we can patch it
 ${WRKSRC}/out/Makefile.native:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} out/Makefile.native
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} out/Makefile.native
 
 pre-build: ${WRKSRC}/out/Makefile.native
+
+do-configure:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} configure
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out/native/d8 ${DESTDIR}${PREFIX}/bin/d8
@@ -79,13 +133,13 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/out/native/lib.target/libv8.so ${DESTDIR}${PREFIX}/lib/libv8.so.1
 	${LN} -sf libv8.so.1 ${DESTDIR}${PREFIX}/lib/libv8.so
 .endif
-	${INSTALL_DATA} ${WRKSRC}/include/v8.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-debug.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-preparser.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-profiler.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-testing.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8stdint.h ${DESTDIR}${PREFIX}/include
+.for inc in ${INSTALL_INCLUDES}
+	${INSTALL_DATA} ${WRKSRC}/include/${inc} ${DESTDIR}${PREFIX}/include
+.endfor
 
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
+.include "../../devel/gyp/tool.mk"

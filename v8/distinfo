@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.4 2014/01/28 15:34:49 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2014/08/23 17:44:12 heidnes Exp $
 
-SHA1 (v8-3.21.17.tar.gz) = 762dacc85a896e23a311eaed1e182f535677f4d6
-RMD160 (v8-3.21.17.tar.gz) = c449ba2ca62cdf0a372713718fdf855244f83236
-Size (v8-3.21.17.tar.gz) = 13537887 bytes
+SHA1 (v8-3.28.62.tar.gz) = ad7210ec42f4d928df1c5d6b1b24d1aa0f93f7e2
+RMD160 (v8-3.28.62.tar.gz) = 681aca6e5a8a47a62b8103f08f54d71dcb549cfe
+Size (v8-3.28.62.tar.gz) = 53481675 bytes
+SHA1 (patch-Makefile) = 6acd2556504232d89a99f2d1a37c0870d99b606e
+SHA1 (patch-Makefile.nacl) = 10487166db16c9c960ae092f4f916610b5b45c16
+SHA1 (patch-src_base_platform_platform-posix.cc) = c38321123f18594a59630a4dd0d0c3717080c740
+SHA1 (patch-third__party_icu_icu.gyp) = ddae206a86ce68cbea9d189e12a6aeef43697f50
