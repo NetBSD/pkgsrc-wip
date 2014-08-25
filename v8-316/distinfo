@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/28 15:36:59 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2014/08/25 13:22:01 fhajny Exp $
 
-SHA1 (v8-3.16.14.tar.gz) = 2940c0ec6b31459d0ba724dba9e586f0de23e2c4
-RMD160 (v8-3.16.14.tar.gz) = d661b2725907e5a51531a150cf008711d41db97b
-Size (v8-3.16.14.tar.gz) = 11843231 bytes
+SHA1 (v8-3.16.14.tar.bz2) = 911f601572c74777394bab684c91c567770a6f5a
+RMD160 (v8-3.16.14.tar.bz2) = b47198ce4fb9ef685611db1120463cd6f75615a4
+Size (v8-3.16.14.tar.bz2) = 10453532 bytes
+SHA1 (patch-Makefile) = ec51c1eee5d0ad09c6399eb032641b25f45ca48a
