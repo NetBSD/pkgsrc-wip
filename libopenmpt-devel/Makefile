@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/26 11:16:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/26 11:26:29 thomasklausner Exp $
 
-DISTNAME=	libopenmpt-0.2.4213
+DISTNAME=	libopenmpt-0.2.4214
 CATEGORIES=	audio
 MASTER_SITES=	http://buildbot.openmpt.org/builds/auto/src/
 
@@ -19,7 +19,7 @@ USE_TOOLS=	gmake pkg-config
 # http://bugs.openmpt.org/view.php?id=581
 MAKE_FLAGS+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 MAKE_FLAGS+=	INSTALL_DATA=${INSTALL_DATA:Q}
-MAKE_FLAGS+=	PKGMANDIR=${PKGMANDIR:Q}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 INSTALLATION_DIRS=	bin include/libopenmpt lib/pkgconfig ${PKGMANDIR}/man1 share/doc/libopenmpt/examples
 
 .include "options.mk"
