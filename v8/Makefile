@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/08/25 13:22:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2014/08/27 09:12:05 heidnes Exp $
 
 DISTNAME=		v8-3.28.62
 CATEGORIES=		lang

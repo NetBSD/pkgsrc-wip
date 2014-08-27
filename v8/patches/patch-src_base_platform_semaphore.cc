@@ -1,4 +1,4 @@
-$NetBSD: patch-src_base_platform_semaphore.cc,v 1.1 2014/08/26 10:37:49 heidnes Exp $
+$NetBSD: patch-src_base_platform_semaphore.cc,v 1.2 2014/08/27 09:12:06 heidnes Exp $
 
 Copy over workaround for missing sem_timedwait() in NetBSD < 6.99.4
 from the openjdk7 package.
@@ -11,7 +11,7 @@ from the openjdk7 package.
  
 +#if defined(__NetBSD__) && (__NetBSD_Version__ < 699000400)
 +static inline int
-+sem_timedwait(sem_t *sem, struct timespec *ts) {
++sem_timedwait(sem_t *sem, const struct timespec *ts) {
 +  struct timespec onems = { 0, 1000000 };
 +  struct timespec total = { 0, 0 };
 +  struct timespec unslept;
