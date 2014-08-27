@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2014/08/26 13:50:32 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2014/08/27 10:40:43 thomasklausner Exp $
 
-SHA1 (libopenmpt-0.2.4217.tar.gz) = 699cfff350172e9a3c1612fc4ecb6dec8ce8b51e
-RMD160 (libopenmpt-0.2.4217.tar.gz) = 05601fa29d23f6c625642431faa6683543eedac5
-Size (libopenmpt-0.2.4217.tar.gz) = 820847 bytes
+SHA1 (libopenmpt-0.2.4218.tar.gz) = 5df98c1b131bad8c477c9985b07d7751a2e8e20a
+RMD160 (libopenmpt-0.2.4218.tar.gz) = d85cd08616a4444beeb086964277e2d2dbeed5d1
+Size (libopenmpt-0.2.4218.tar.gz) = 821534 bytes
