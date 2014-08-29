@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/08/08 01:00:51 othyro Exp $
+$NetBSD: distinfo,v 1.6 2014/08/29 01:54:35 othyro Exp $
 
-SHA1 (Publican-v4.1.4.tar.gz) = ea578cf8639871c6ab85c5492ec621c16f666106
-RMD160 (Publican-v4.1.4.tar.gz) = 8c82df72dd2fa058853da57088116bb815b07c91
-Size (Publican-v4.1.4.tar.gz) = 3108843 bytes
+SHA1 (Publican-v4.2.0.tar.gz) = b0c90e081793adc26d96c07313df88ebf1f489ef
+RMD160 (Publican-v4.2.0.tar.gz) = 56a90452510584898d71571b7ee4a3fc1d6d9f05
+Size (Publican-v4.2.0.tar.gz) = 3276125 bytes
