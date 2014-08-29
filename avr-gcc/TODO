@@ -1,3 +1,0 @@
-- Fix following
-WARN: PLIST:226: Info pages should be installed into info/, not share/info/.
-WARN: PLIST:227: Info pages should be installed into info/, not share/info/.
