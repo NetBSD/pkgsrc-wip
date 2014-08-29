@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2014/06/20 01:18:06 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2014/08/29 09:15:42 makoto Exp $
 
-DISTNAME=		gcc-4.8.3
+DISTNAME=		gcc-4.9.1
 PKGNAME=		${DISTNAME:C/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/releases/${DISTNAME}/}
@@ -49,8 +49,7 @@ pre-configure:
 
 # To avoid the conflict with other cross and native compiler
 post-install:
-	(cd ${DESTDIR}${PREFIX}/lib; \
-	 ${MV} libiberty.a gcc/avr/ )
+	(cd  ${WRKDIR}/obj ; ${INSTALL} libiberty/libiberty.a ${DESTDIR}${PREFIX}/lib/gcc/avr)
 
 CONFIGURE_DIRS=		${WRKDIR}/obj
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
