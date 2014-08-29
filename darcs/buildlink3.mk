@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2014/08/12 21:24:14 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2014/08/29 14:09:59 szptvlfn Exp $
 
 BUILDLINK_TREE+=	darcs
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	darcs
 DARCS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.darcs+=	darcs>=2.8.4
+BUILDLINK_ABI_DEPENDS.darcs+=	darcs>=2.8.4
 BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
 
 .include "../../converters/libiconv/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2014/08/12 21:24:14 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2014/08/29 14:10:14 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-hashed-storage
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-hashed-storage
 HS_HASHED_STORAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hashed-storage+=	hs-hashed-storage>=0.5.10
+BUILDLINK_ABI_DEPENDS.hs-hashed-storage+=	hs-hashed-storage>=0.5.10
 BUILDLINK_PKGSRCDIR.hs-hashed-storage?=	../../wip/hs-hashed-storage
 
 .include "../../wip/hs-dataenc/buildlink3.mk"

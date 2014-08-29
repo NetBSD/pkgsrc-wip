@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/05/16 20:47:10 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/08/29 14:10:16 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-haskelldb
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-haskelldb
 HS_HASKELLDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-haskelldb+=	hs-haskelldb>=0.12
+BUILDLINK_ABI_DEPENDS.hs-haskelldb+=	hs-haskelldb>=0.12
 BUILDLINK_PKGSRCDIR.hs-haskelldb?=	../../wip/hs-haskelldb
 
 .include "../../devel/hs-mtl/buildlink3.mk"

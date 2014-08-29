@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/05/16 20:47:10 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/08/29 14:10:23 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-hslogger-template
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-hslogger-template
 HS_HSLOGGER_TEMPLATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hslogger-template+=	hs-hslogger-template>=1.0.0
+BUILDLINK_ABI_DEPENDS.hs-hslogger-template+=	hs-hslogger-template>=1.0.0
 BUILDLINK_PKGSRCDIR.hs-hslogger-template?=	../../wip/hs-hslogger-template
 
 .include "../../wip/hs-hslogger/buildlink3.mk"

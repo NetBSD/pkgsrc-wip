@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2014/05/27 21:38:23 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2014/08/29 14:10:28 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-shake
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-shake
 HS_SHAKE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-shake+=	hs-shake>=0.11.4
+BUILDLINK_ABI_DEPENDS.hs-shake+=	hs-shake>=0.11.4
 BUILDLINK_PKGSRCDIR.hs-shake?=	../../wip/hs-shake
 
 .include "../../devel/hs-hashable/buildlink3.mk"

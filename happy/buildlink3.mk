@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2014/07/09 19:23:25 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2014/08/29 14:09:59 szptvlfn Exp $
 
 BUILDLINK_TREE+=	happy
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	happy
 HAPPY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.happy+=	happy>=1.19.4
+BUILDLINK_ABI_DEPENDS.happy+=	happy>=1.19.4
 BUILDLINK_PKGSRCDIR.happy?=	../../wip/happy
 
 .include "../../devel/hs-mtl/buildlink3.mk"

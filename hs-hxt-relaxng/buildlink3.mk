@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/05/21 21:04:44 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/08/29 14:10:25 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-hxt-relaxng
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-hxt-relaxng
 HS_HXT_RELAXNG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hxt-relaxng+=	hs-hxt-relaxng>=9.1.4
+BUILDLINK_ABI_DEPENDS.hs-hxt-relaxng+=	hs-hxt-relaxng>=9.1.4
 BUILDLINK_PKGSRCDIR.hs-hxt-relaxng?=	../../wip/hs-hxt-relaxng
 
 .include "../../wip/hs-hxt/buildlink3.mk"

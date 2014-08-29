@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2014/05/27 21:38:24 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2014/08/29 14:10:30 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-yaml
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-yaml
 HS_YAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-yaml+=	hs-yaml>=0.8.5
+BUILDLINK_ABI_DEPENDS.hs-yaml+=	hs-yaml>=0.8.5.3
 BUILDLINK_PKGSRCDIR.hs-yaml?=	../../wip/hs-yaml
 
 .include "../../wip/hs-aeson/buildlink3.mk"

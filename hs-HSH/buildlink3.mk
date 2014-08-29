@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/08/02 21:44:59 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/08/29 14:10:00 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-HSH
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-HSH
 HS_HSH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-HSH+=	hs-HSH>=2.0.3
+BUILDLINK_ABI_DEPENDS.hs-HSH+=	hs-HSH>=2.0.3
 BUILDLINK_PKGSRCDIR.hs-HSH?=	../../wip/hs-HSH
 
 .include "../../wip/hs-MissingH/buildlink3.mk"

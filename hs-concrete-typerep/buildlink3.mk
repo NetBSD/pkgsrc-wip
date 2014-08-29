@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/05/25 21:59:29 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/08/29 14:10:10 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-concrete-typerep
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-concrete-typerep
 HS_CONCRETE_TYPEREP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-concrete-typerep+=	hs-concrete-typerep>=0.1.0
+BUILDLINK_ABI_DEPENDS.hs-concrete-typerep+=	hs-concrete-typerep>=0.1.0.2
 BUILDLINK_PKGSRCDIR.hs-concrete-typerep?=	../../wip/hs-concrete-typerep
 
 .include "../../devel/hs-hashable/buildlink3.mk"

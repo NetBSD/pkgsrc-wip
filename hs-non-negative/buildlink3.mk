@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/11/02 16:07:11 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/08/29 14:10:27 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-non-negative
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-non-negative
 HS_NON_NEGATIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-non-negative+=	hs-non-negative>=0.1
+BUILDLINK_ABI_DEPENDS.hs-non-negative+=	hs-non-negative>=0.1
 BUILDLINK_PKGSRCDIR.hs-non-negative?=	../../wip/hs-non-negative
 
 .include "../../wip/hs-QuickCheck/buildlink3.mk"

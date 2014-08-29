@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/05/21 21:04:44 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/08/29 14:10:26 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-midi
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-midi
 HS_MIDI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-midi+=	hs-midi>=0.1.7
+BUILDLINK_ABI_DEPENDS.hs-midi+=	hs-midi>=0.1.7.1
 BUILDLINK_PKGSRCDIR.hs-midi?=	../../wip/hs-midi
 
 .include "../../wip/hs-event-list/buildlink3.mk"

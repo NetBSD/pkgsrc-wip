@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/04/05 21:30:15 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/08/29 14:10:29 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-timezone-series
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-timezone-series
 HS_TIMEZONE_SERIES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-timezone-series+=	hs-timezone-series>=0.1.2
+BUILDLINK_ABI_DEPENDS.hs-timezone-series+=	hs-timezone-series>=0.1.2
 BUILDLINK_PKGSRCDIR.hs-timezone-series?=	../../wip/hs-timezone-series
 .endif	# HS_TIMEZONE_SERIES_BUILDLINK3_MK
 

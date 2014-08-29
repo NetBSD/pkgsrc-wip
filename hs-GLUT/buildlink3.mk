@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/22 14:20:30 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/08/29 14:10:00 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-GLUT
 
 .if !defined(HS_GLUT_BUILDLINK3_MK)
 HS_GLUT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-GLUT+=	hs-GLUT>=2.2.2.0
+BUILDLINK_API_DEPENDS.hs-GLUT+=	hs-GLUT>=2.2.2
+BUILDLINK_ABI_DEPENDS.hs-GLUT+=	hs-GLUT>=2.2.2.0
 BUILDLINK_PKGSRCDIR.hs-GLUT?=	../../wip/hs-GLUT
 
 .include "../../wip/hs-OpenGL/buildlink3.mk"

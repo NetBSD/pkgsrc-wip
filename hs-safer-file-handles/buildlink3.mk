@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/07/30 21:36:37 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/08/29 14:10:28 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-safer-file-handles
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-safer-file-handles
 HS_SAFER_FILE_HANDLES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-safer-file-handles+=	hs-safer-file-handles>=0.10
+BUILDLINK_ABI_DEPENDS.hs-safer-file-handles+=	hs-safer-file-handles>=0.10
 BUILDLINK_PKGSRCDIR.hs-safer-file-handles?=	../../wip/hs-safer-file-handles
 
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"

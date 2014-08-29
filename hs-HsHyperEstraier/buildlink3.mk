@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/05/21 21:04:42 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/08/29 14:10:01 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-HsHyperEstraier
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-HsHyperEstraier
 HS_HSHYPERESTRAIER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-HsHyperEstraier+=	hs-HsHyperEstraier>=0.4
+BUILDLINK_ABI_DEPENDS.hs-HsHyperEstraier+=	hs-HsHyperEstraier>=0.4
 BUILDLINK_PKGSRCDIR.hs-HsHyperEstraier?=	../../wip/hs-HsHyperEstraier
 
 .include "../../textproc/hyperestraier/buildlink3.mk"

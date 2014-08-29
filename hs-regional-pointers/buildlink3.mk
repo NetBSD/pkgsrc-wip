@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/07/30 21:36:37 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/08/29 14:10:28 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-regional-pointers
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-regional-pointers
 HS_REGIONAL_POINTERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-regional-pointers+=	hs-regional-pointers>=0.6
+BUILDLINK_ABI_DEPENDS.hs-regional-pointers+=	hs-regional-pointers>=0.6
 BUILDLINK_PKGSRCDIR.hs-regional-pointers?=	../../wip/hs-regional-pointers
 
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"

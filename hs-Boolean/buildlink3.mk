@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/05/24 22:01:52 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/08/29 14:09:59 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-Boolean
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-Boolean
 HS_BOOLEAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-Boolean+=	hs-Boolean>=0.2
+BUILDLINK_ABI_DEPENDS.hs-Boolean+=	hs-Boolean>=0.2
 BUILDLINK_PKGSRCDIR.hs-Boolean?=	../../wip/hs-Boolean
 .endif	# HS_BOOLEAN_BUILDLINK3_MK
 

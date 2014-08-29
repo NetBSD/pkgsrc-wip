@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2014/08/18 21:22:47 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2014/08/29 14:09:59 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hlint
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hlint
 HLINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hlint+=	hlint>=1.9.3
+BUILDLINK_ABI_DEPENDS.hlint+=	hlint>=1.9.3
 BUILDLINK_PKGSRCDIR.hlint?=	../../wip/hlint
 
 .include "../../devel/hs-cmdargs/buildlink3.mk"

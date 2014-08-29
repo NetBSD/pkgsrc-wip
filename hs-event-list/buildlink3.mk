@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/05/15 21:49:08 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/08/29 14:10:12 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-event-list
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-event-list
 HS_EVENT_LIST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-event-list+=	hs-event-list>=0.1
+BUILDLINK_ABI_DEPENDS.hs-event-list+=	hs-event-list>=0.1
 BUILDLINK_PKGSRCDIR.hs-event-list?=	../../wip/hs-event-list
 
 .include "../../wip/hs-QuickCheck/buildlink3.mk"

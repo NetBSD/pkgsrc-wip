@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/23 06:53:04 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/08/29 14:10:27 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-monoid-transformer
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-monoid-transformer
 HS_MONOID_TRANSFORMER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-monoid-transformer+=	hs-monoid-transformer>=0.0.2
+BUILDLINK_ABI_DEPENDS.hs-monoid-transformer+=	hs-monoid-transformer>=0.0.2
 BUILDLINK_PKGSRCDIR.hs-monoid-transformer?=	../../wip/hs-monoid-transformer
 .endif	# HS_MONOID_TRANSFORMER_BUILDLINK3_MK
 

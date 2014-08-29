@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/05/16 20:47:10 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/08/29 14:10:14 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-gtk
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-gtk
 HS_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-gtk+=	hs-gtk>=0.12.3
+BUILDLINK_ABI_DEPENDS.hs-gtk+=	hs-gtk>=0.12.3
 BUILDLINK_PKGSRCDIR.hs-gtk?=	../../wip/hs-gtk
 
 .include "../../wip/hs-cairo/buildlink3.mk"

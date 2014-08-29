@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/05/20 21:23:18 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/08/29 14:10:01 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-MonadCatchIO-mtl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-MonadCatchIO-mtl
 HS_MONADCATCHIO_MTL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-MonadCatchIO-mtl+=	hs-MonadCatchIO-mtl>=0.3.0
+BUILDLINK_ABI_DEPENDS.hs-MonadCatchIO-mtl+=	hs-MonadCatchIO-mtl>=0.3.0.4
 BUILDLINK_PKGSRCDIR.hs-MonadCatchIO-mtl?=	../../wip/hs-MonadCatchIO-mtl
 
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"

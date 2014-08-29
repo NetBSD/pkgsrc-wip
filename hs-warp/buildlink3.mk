@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/08/01 21:00:43 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/08/29 14:10:30 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-warp
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-warp
 HS_WARP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-warp+=	hs-warp>=1.3.10
+BUILDLINK_ABI_DEPENDS.hs-warp+=	hs-warp>=1.3.10.1
 BUILDLINK_PKGSRCDIR.hs-warp?=	../../wip/hs-warp
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"

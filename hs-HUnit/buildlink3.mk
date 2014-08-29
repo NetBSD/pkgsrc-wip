@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2013/03/02 11:18:57 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/08/29 14:10:00 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-HUnit
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-HUnit
 HS_HUNIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-HUnit+=	hs-HUnit>=1.2.5
+BUILDLINK_ABI_DEPENDS.hs-HUnit+=	hs-HUnit>=1.2.5.2
 BUILDLINK_PKGSRCDIR.hs-HUnit?=	../../wip/hs-HUnit
 .endif	# HS_HUNIT_BUILDLINK3_MK
 

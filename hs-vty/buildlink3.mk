@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/05/26 22:08:05 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/08/29 14:10:30 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-vty
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-vty
 HS_VTY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-vty+=	hs-vty>=4.7.0
+BUILDLINK_ABI_DEPENDS.hs-vty+=	hs-vty>=4.7.0.10
 BUILDLINK_PKGSRCDIR.hs-vty?=	../../wip/hs-vty
 
 .include "../../devel/hs-mtl/buildlink3.mk"

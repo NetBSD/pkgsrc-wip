@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/11/02 16:56:21 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/08/29 14:10:27 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-pathtype
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-pathtype
 HS_PATHTYPE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pathtype+=	hs-pathtype>=0.5.2
+BUILDLINK_ABI_DEPENDS.hs-pathtype+=	hs-pathtype>=0.5.2
 BUILDLINK_PKGSRCDIR.hs-pathtype?=	../../wip/hs-pathtype
 
 .include "../../wip/hs-QuickCheck/buildlink3.mk"

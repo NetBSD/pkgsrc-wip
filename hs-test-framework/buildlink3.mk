@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/08/03 21:35:40 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2014/08/29 14:10:29 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-test-framework
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-test-framework
 HS_TEST_FRAMEWORK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-test-framework+=	hs-test-framework>=0.8
+BUILDLINK_ABI_DEPENDS.hs-test-framework+=	hs-test-framework>=0.8
 BUILDLINK_PKGSRCDIR.hs-test-framework?=	../../wip/hs-test-framework
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"

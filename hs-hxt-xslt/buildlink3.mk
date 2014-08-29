@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/05/19 21:28:49 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2014/08/29 14:10:25 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-hxt-xslt
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-hxt-xslt
 HS_HXT_XSLT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hxt-xslt+=	hs-hxt-xslt>=9.1.1
+BUILDLINK_ABI_DEPENDS.hs-hxt-xslt+=	hs-hxt-xslt>=9.1.1
 BUILDLINK_PKGSRCDIR.hs-hxt-xslt?=	../../wip/hs-hxt-xslt
 
 .include "../../wip/hs-hxt/buildlink3.mk"

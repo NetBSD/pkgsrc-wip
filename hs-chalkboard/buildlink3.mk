@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/22 13:00:23 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/08/29 14:10:09 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-chalkboard
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-chalkboard
 HS_CHALKBOARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-chalkboard+=	hs-chalkboard>=0.2
+BUILDLINK_ABI_DEPENDS.hs-chalkboard+=	hs-chalkboard>=0.2
 BUILDLINK_PKGSRCDIR.hs-chalkboard?=	../../wip/hs-chalkboard
 .endif	# HS_CHALKBOARD_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/07/30 21:36:37 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/08/29 14:10:29 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-transformers-abort
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-transformers-abort
 HS_TRANSFORMERS_ABORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-transformers-abort+=	hs-transformers-abort>=0.4
+BUILDLINK_ABI_DEPENDS.hs-transformers-abort+=	hs-transformers-abort>=0.4
 BUILDLINK_PKGSRCDIR.hs-transformers-abort?=	../../devel/hs-transformers-abort
 
 .include "../../devel/hs-data-default/buildlink3.mk"

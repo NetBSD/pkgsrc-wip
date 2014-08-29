@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/07/30 21:36:37 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/08/29 14:10:28 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-regions
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-regions
 HS_REGIONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-regions+=	hs-regions>=0.9
+BUILDLINK_ABI_DEPENDS.hs-regions+=	hs-regions>=0.9
 BUILDLINK_PKGSRCDIR.hs-regions?=	../../wip/hs-regions
 
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2013/02/23 12:24:07 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2014/08/29 14:09:59 szptvlfn Exp $
 
 BUILDLINK_TREE+=	ghc
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ghc
 GHC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ghc+=	ghc>=7.6.2
+BUILDLINK_ABI_DEPENDS.ghc+=	ghc>=7.6.2
 BUILDLINK_PKGSRCDIR.ghc?=	../../wip/ghc
 
 .include "../../converters/libiconv/buildlink3.mk"

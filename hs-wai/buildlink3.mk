@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/07/28 21:05:56 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/08/29 14:10:30 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-wai
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-wai
 HS_WAI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-wai+=	hs-wai>=1.4.1
+BUILDLINK_ABI_DEPENDS.hs-wai+=	hs-wai>=1.4.1
 BUILDLINK_PKGSRCDIR.hs-wai?=	../../wip/hs-wai
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"

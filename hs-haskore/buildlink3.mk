@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/05/19 21:28:48 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/08/29 14:10:18 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-haskore
 
 .if !defined(HS_HASKORE_BUILDLINK3_MK)
 HS_HASKORE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-haskore+=	hs-haskore>=0.1.0.2
+BUILDLINK_API_DEPENDS.hs-haskore+=	hs-haskore>=0.1.0
+BUILDLINK_ABI_DEPENDS.hs-haskore+=	hs-haskore>=0.1.0.2
 BUILDLINK_PKGSRCDIR.hs-haskore?=	../../wip/hs-haskore
 
 .include "../../wip/hs-data-accessor/buildlink3.mk"

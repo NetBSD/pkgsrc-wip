@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/05/18 21:33:29 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2014/08/29 14:10:28 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-quickcheck-instances
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-quickcheck-instances
 HS_QUICKCHECK_INSTANCES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-quickcheck-instances+=	hs-quickcheck-instances>=0.3.2
+BUILDLINK_ABI_DEPENDS.hs-quickcheck-instances+=	hs-quickcheck-instances>=0.3.2
 BUILDLINK_PKGSRCDIR.hs-quickcheck-instances?=	../../wip/hs-quickcheck-instances
 
 .include "../../wip/hs-QuickCheck/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/05/18 21:33:28 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2014/08/29 14:10:12 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-double-conversion
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-double-conversion
 HS_DOUBLE_CONVERSION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-double-conversion+=	hs-double-conversion>=0.2.0
+BUILDLINK_ABI_DEPENDS.hs-double-conversion+=	hs-double-conversion>=0.2.0.6
 BUILDLINK_PKGSRCDIR.hs-double-conversion?=	../../wip/hs-double-conversion
 
 .include "../../devel/hs-text/buildlink3.mk"

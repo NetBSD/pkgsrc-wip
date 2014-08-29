@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/08/02 21:45:01 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2014/08/29 14:10:27 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-profunctors
 
 .if !defined(HS_PROFUNCTORS_BUILDLINK3_MK)
 HS_PROFUNCTORS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-profunctors+=	hs-profunctors>=4.2
+BUILDLINK_API_DEPENDS.hs-profunctors+=	hs-profunctors>=4.2.0
+BUILDLINK_ABI_DEPENDS.hs-profunctors+=	hs-profunctors>=4.2.0.1
 BUILDLINK_PKGSRCDIR.hs-profunctors?=	../../wip/hs-profunctors
 
 .include "../../wip/hs-comonad/buildlink3.mk"

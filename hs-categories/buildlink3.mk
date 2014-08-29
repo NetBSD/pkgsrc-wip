@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/09/05 20:46:38 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/08/29 14:10:09 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-categories
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hs-categories
 HS_CATEGORIES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-categories+=	hs-categories>=1.0.6
+BUILDLINK_ABI_DEPENDS.hs-categories+=	hs-categories>=1.0.6
 BUILDLINK_PKGSRCDIR.hs-categories?=	../../wip/hs-categories
 
 .endif	# HS_CATEGORIES_BUILDLINK3_MK
