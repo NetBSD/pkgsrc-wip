@@ -1,0 +1,22 @@
+Bump version 7.6 to 7.6.1
+ -------
+GDB 7.6.1 provides the following fixes and improvements to GDB 7.6:
+
+  * PR tdep/15420 (Cannot debug threaded programs on newer versions
+    of x86-solaris - Solaris 10, Update 10 or later)
+  * PR remote/15455 (QTro remote packet broken)
+  * PR build/15476 (Build failure due to incomplete enum type in utils.h)
+  * PR server/15594 (tls support in 64x32 x86 gdbserver doesn't extend
+    address to 64 bit)
+  * PR server/15075 (dprintf inteferes with "next")
+  * PR server/15434 (dprintf uses a synchronous 'continue' even in
+    non-stop mode)
+  * PR tui/14880 (in split register layouts, up results in assertion
+    failure in value.c)
+  * PR c++/15519 (GDB 7.6 is 94x slower than GDB 7.5.1 using a certain
+    core file)
+  * PR gdb/15837 (GDB prints entry values for local variables)
+  * PR gdb/15415 (gdb resolves symbolic links when passing argv[0])
+  * PR cli/15603 (CTRL-C can no longer interrupt inferior)
+  * PR gdb/15604 (gdbserver socket leak 7.5 regression)
+ -------
