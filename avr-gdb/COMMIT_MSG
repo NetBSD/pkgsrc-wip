@@ -1,22 +1,104 @@
-Bump version 7.6 to 7.6.1
- -------
-GDB 7.6.1 provides the following fixes and improvements to GDB 7.6:
+GDB 7.8
+---------------------------
+July 29th, 2014: GDB 7.8 Released!
+  The latest version of GDB, version 7.8, is available for download.
+  Changes in this release include:
+      Guile scripting support.
+      Python scripting enhancements.
+      New commands, options, convenience variables/options.
+      Remote Protocol and GDBserver enhancements.
+      New target configurations (PowerPC64 GNU/Linux little-endian).
+      btrace enhancements.
+      ISO C99 variable length automatic arrays support.
+      The "compare-sections" command now works on all targets.
+      The "target native" command now connects to the native target. 
 
-  * PR tdep/15420 (Cannot debug threaded programs on newer versions
-    of x86-solaris - Solaris 10, Update 10 or later)
-  * PR remote/15455 (QTro remote packet broken)
-  * PR build/15476 (Build failure due to incomplete enum type in utils.h)
-  * PR server/15594 (tls support in 64x32 x86 gdbserver doesn't extend
-    address to 64 bit)
-  * PR server/15075 (dprintf inteferes with "next")
-  * PR server/15434 (dprintf uses a synchronous 'continue' even in
-    non-stop mode)
-  * PR tui/14880 (in split register layouts, up results in assertion
-    failure in value.c)
-  * PR c++/15519 (GDB 7.6 is 94x slower than GDB 7.5.1 using a certain
-    core file)
-  * PR gdb/15837 (GDB prints entry values for local variables)
-  * PR gdb/15415 (gdb resolves symbolic links when passing argv[0])
-  * PR cli/15603 (CTRL-C can no longer interrupt inferior)
-  * PR gdb/15604 (gdbserver socket leak 7.5 regression)
- -------
+GDB 7.7
+---------------------------
+GDB 7.7 brings new targets, features and improvements, including:
+  * C++:
+
+    ** GDB now implements the 'typeid' operator.
+    ** Exception Catchpoints can now filter by type.
+
+  * Python scripting:
+    ** Frame filters and frame decorators have been added.
+    ** Temporary breakpoints are now supported.
+    ** Line tables representation has been added.
+    ** New attribute 'parent_type' for gdb.Field objects.
+    ** gdb.Field objects can be used as subscripts on gdb.Value objects.
+    ** New attribute 'name' for gdb.Type objects.
+
+  * New commands:
+    ** show configuration
+    ** catch rethrow
+    ** info exceptions [REGEXP]
+    ** remove-symbol-file [FILENAME | -a ADDRESS]
+    ** maint check-psymtabs
+    ** maint check-symtabs
+    ** maint expand-symtabs
+    ** maint set|show per-command [space | time | symtab]
+
+  * New options:
+    ** set|show debug symfile off|on
+    ** set|show print raw frame-arguments
+    ** set|show remote trace-status-packet
+    ** set|show debug nios2
+    ** set|show range-stepping
+    ** set|show startup-with-shell
+    ** set|show code-cache
+
+    For all options that interpret 0 or -1 as meaning "unlimited",
+    the literal 'unlimited' can ot be used.
+
+  * New convenience variables/functions:
+    ** $_exception
+    ** $_exitsignal
+    ** $_isvoid
+
+  * GDB/MI:
+    ** All MI commands now accept an optional "--language" option.
+    ** "undefined-command" error code provided in "^error" result
+       records when trying to run a non-existing command.
+    ** New commands -catch-assert and -catch-exceptions
+    ** New command -info-ada-exceptions
+    ** New command -info-gdb-mi-command
+    ** New command -dprintf-insert
+    ** New command -trace-frame-collected
+    ** -trace-save CTF (Common Trace Format) support.
+    ** -data-list-register-values, -stack-list-locals, -stack-list-arguments
+       and -stack-list-variables optional "--skip-unavailable" option.
+    ** -exec-run optional "--start" option.
+
+  * Remote Protocol:
+    ** Target-assigned range stepping support.
+       GDBserver implements this feature on x86/x86_64 GNU/Linux targets.
+    ** vCont new 'r' action.
+    ** qXfer:libraries-svr4:read's annex used to pass argument list.
+
+  * New target configurations:
+    ** Nios II ELF                     nios2*-*-elf
+    ** Nios II GNU/Linux               nios2*-*-linux
+    ** Texas Instruments MSP430        msp430*-*-elf
+
+  * GDB Windows x64 unwinding data support.
+
+  * SystemTap SDT probes support on AArch64 GNU/Linux.
+
+  * The 'tsave' command now supports CTF (Common Trace Format).
+
+  * New script gcore, installed in $prefix/bin
+
+  * New script contrib/gdb-add-index.sh for adding .gdb_index sections
+    to binaries.
+
+  * Improve arm*-linux record/replay support.
+
+  * Removed support for a.out NetBSD and OpenBSD obsolete configurations.
+    ELF variants of these configurations are kept supported.
+
+  * The "set|show remotebaud" commands are deprecated. Use "show|show serial
+    baud" instead.
+
+For a complete list and more details on each item, please see the
+gdb/NEWS file.
