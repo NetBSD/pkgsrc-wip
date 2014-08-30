@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5870 2014/08/26 11:17:42 thomasklausner Exp $
+# $Id: Makefile,v 1.5871 2014/08/30 12:47:56 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -269,6 +269,7 @@ SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
+SUBDIR+=	calibre
 SUBDIR+=	calligra
 SUBDIR+=	callweaver
 SUBDIR+=	calypso
@@ -2833,6 +2834,7 @@ SUBDIR+=	py-qeutil
 SUBDIR+=	py-qit
 SUBDIR+=	py-qitensor
 SUBDIR+=	py-qmath
+SUBDIR+=	py-qt5
 SUBDIR+=	py-quantities
 SUBDIR+=	py-quaternionarray
 SUBDIR+=	py-quepy
