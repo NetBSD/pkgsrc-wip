@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/08/30 12:42:30 thomasklausner Exp $
+
+SHA1 (PyQt-gpl-5.2.1.tar.gz) = 7d72ec27bfe547223b4b11db8a90603fe4796530
+RMD160 (PyQt-gpl-5.2.1.tar.gz) = 180727e07b730486705ea76f0919bd3b0a11e711
+Size (PyQt-gpl-5.2.1.tar.gz) = 3536719 bytes
+SHA1 (patch-configure.py) = 482e3dbafdc4c901583d85655a4b734078c85a3b
