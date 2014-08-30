@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/30 17:32:03 jihbed Exp $
+
+SHA1 (rpaths-0.8.tar.gz) = 8b718bebb7ca645efd8ec57fe79ebbd0010e0bac
+RMD160 (rpaths-0.8.tar.gz) = 5e5b1e120baec753c4a43293bb1fbb46b06c1b99
+Size (rpaths-0.8.tar.gz) = 10139 bytes
