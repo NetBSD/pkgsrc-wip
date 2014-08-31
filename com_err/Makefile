@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:55 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/08/31 11:10:43 thomasklausner Exp $
 
 DISTNAME=	${E2FSPROGS_DISTNAME}
 PKGREVISION=	1
@@ -23,5 +23,5 @@ do-configure:
 	cd ${WRKSRC}/../../ && \
 		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 
-.include "../../wip/e2fsprogs/Makefile.common"
+.include "../../sysutils/e2fsprogs/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
