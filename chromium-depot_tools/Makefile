@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2014/08/31 17:10:46 heidnes Exp $
+# $NetBSD: Makefile,v 1.2 2014/08/31 17:23:04 heidnes Exp $
 
 SVN_REVISION=	291592
 DIST_VERSION=	0.1
 ORIG_NAME=	depot_tools
-DISTNAME=	${ORIG_NAME}-${DIST_VERSION}pre-${SVN_REVISION}
+DISTNAME=	${ORIG_NAME}-${DIST_VERSION}pre${SVN_REVISION}
 PKGNAME=	chromium-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dev.chromium.org/developers/how-tos/install-depot-tools
 COMMENT=	Chromium depot tools
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run tar
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	.*bash[^ ]*
@@ -64,7 +63,7 @@ REPLACE_FILES.bash+=	update_depot_tools
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing pkg path
-SUBST_STATE.path=	pre-build
+SUBST_STAGE.path=	pre-build
 SUBST_FILES.path+=	man/src/make_docs.sh
 SUBST_FILES.path+=	third_party/boto/services/sonofmmm.py
 SUBST_SED.path+=	-e 's:/usr/local/:${PREFIX}/:'
