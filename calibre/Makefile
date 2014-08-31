@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/08/30 12:49:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/08/31 23:26:22 thomasklausner Exp $
 
 DISTNAME=	calibre-2.1.0
 CATEGORIES=	misc
@@ -150,8 +150,7 @@ BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.8.2
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
-BUILDLINK_API_DEPENDS.poppler-qt4+=	poppler-qt4>=0.12.0
-.include "../../print/poppler-qt4/buildlink3.mk"
+.include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
