@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/08/31 17:10:47 heidnes Exp $
+
+SHA1 (depot_tools-0.1pre-291592.tar.gz) = ed48d83044b6cfc7aa85b8db69ad1acd3984ca0e
+RMD160 (depot_tools-0.1pre-291592.tar.gz) = 6ffd2582111920c8d4376f7639e021eece26a756
+Size (depot_tools-0.1pre-291592.tar.gz) = 15419152 bytes
