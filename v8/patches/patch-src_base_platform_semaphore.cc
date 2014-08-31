@@ -1,11 +1,21 @@
-$NetBSD: patch-src_base_platform_semaphore.cc,v 1.2 2014/08/27 09:12:06 heidnes Exp $
+$NetBSD: patch-src_base_platform_semaphore.cc,v 1.3 2014/08/31 19:55:49 heidnes Exp $
 
 Copy over workaround for missing sem_timedwait() in NetBSD < 6.99.4
 from the openjdk7 package.
 
 --- src/base/platform/semaphore.cc.orig	2014-08-08 13:04:31.000000000 +0000
 +++ src/base/platform/semaphore.cc
-@@ -104,6 +104,33 @@ void Semaphore::Wait() {
+@@ -9,6 +9,9 @@
+ #include <mach/task.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
+ #include <errno.h>
+ 
+ #include "src/base/logging.h"
+@@ -104,6 +107,33 @@ void Semaphore::Wait() {
    }
  }
  

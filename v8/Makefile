@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2014/08/27 09:12:05 heidnes Exp $
+# $NetBSD: Makefile,v 1.12 2014/08/31 19:55:49 heidnes Exp $
 
 DISTNAME=		v8-3.28.62
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://gsdview.appspot.com/chromium-browser-official/
 EXTRACT_SUFX=		.tar.bz2
@@ -19,10 +20,14 @@ NO_CONFIGURE=		yes
 BUILD_TARGET=		native
 TEST_TARGET=		native.check
 
+MAKE_ENV+=		GYP_DEFINES=${GYP_DEFINES:Q}
+GYP_DEFINES+=		use_system_icu=1
+
 .include "../../mk/bsd.prefs.mk"
 
 # This reveals the actual commands run under gyp/make control
-MAKE_ENV+=		V=1
+#MAKE_ENV+=		V=1
+
 MAKE_ENV+=		GYPFLAGS=-Dtarget_arch=${MACHINE_ARCH:S/i386/ia32/:S/x86_64/x64/}
 
 MAKE_FLAGS+=		console=readline
@@ -30,6 +35,14 @@ MAKE_FLAGS+=		library=shared
 MAKE_FLAGS+=		werror=no
 
 CPPFLAGS.SunOS+=	-fPIC
+
+.if ${OPSYS} == "NetBSD"
+.  if ${MACHINE_ARCH} == "i386"
+.    if !empty(CC_VERSION:Mgcc-4.[2345]*)
+CFLAGS+=		-mstackrealign -mpreferred-stack-boundary=4
+.    endif
+.  endif
+.endif
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -47,6 +60,11 @@ INSTALLATION_DIRS+=	bin include lib
 INSTALL_INCLUDES=	v8-debug.h v8-platform.h v8-profiler.h
 INSTALL_INCLUDES+=	v8-testing.h v8-util.h v8.h
 INSTALL_INCLUDES+=	v8config.h v8stdint.h
+
+UNLIMIT_RESOURCES+=	datasize
+
+pre-test:
+	cd ${WRKSRC}/out; ln -s native native.release
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out/native/d8 ${DESTDIR}${PREFIX}/bin/d8
@@ -67,4 +85,5 @@ do-install:
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../wip/chromium-depot_tools/tool.mk"
 .include "../../mk/bsd.pkg.mk"
