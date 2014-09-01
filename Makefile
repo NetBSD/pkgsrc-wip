@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5872 2014/09/01 20:56:05 shattered Exp $
+# $Id: Makefile,v 1.5873 2014/09/01 22:00:49 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -302,6 +302,7 @@ SUBDIR+=	chicken
 SUBDIR+=	choosefont
 SUBDIR+=	chora
 SUBDIR+=	chromium
+SUBDIR+=	chromium-depot_tools
 SUBDIR+=	chrsh
 SUBDIR+=	cinelerra
 SUBDIR+=	cinelerra-cv
@@ -809,6 +810,8 @@ SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnupod
+SUBDIR+=	gnuradio
+SUBDIR+=	gnuradio-core
 SUBDIR+=	go
 SUBDIR+=	go-text
 SUBDIR+=	goattracker
@@ -1781,6 +1784,7 @@ SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
 SUBDIR+=	netlogo
+SUBDIR+=	netpbm
 SUBDIR+=	netrik
 SUBDIR+=	netwib
 SUBDIR+=	netwmpager
@@ -2860,6 +2864,7 @@ SUBDIR+=	py-rf
 SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-rogues
 SUBDIR+=	py-ropemode
+SUBDIR+=	py-rpaths
 SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rpyc
 SUBDIR+=	py-rql
