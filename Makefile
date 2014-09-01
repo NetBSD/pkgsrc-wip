@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5871 2014/08/30 12:47:56 thomasklausner Exp $
+# $Id: Makefile,v 1.5872 2014/09/01 20:56:05 shattered Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1388,7 +1388,6 @@ SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole
 SUBDIR+=	libdmx
 SUBDIR+=	libdoozer
-SUBDIR+=	libdsk
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libecc
 SUBDIR+=	libee
