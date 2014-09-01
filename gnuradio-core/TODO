@@ -1,12 +1,28 @@
 -  (May be) redundent lines in cmake options in Makefile
-    -DCMAKE_INCLUDE_PATH="${PREFIX}/include/portaudio2;${PREFIX}/include/libusb-1.0" \
+    -DCMAKE_INCLUDE_PATH="${PREFIX}/include/portaudio2 \
     -DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2 \
+    -DCMAKE_INCLUDE_DIR="${PREFIX}/include/libusb-1.0 \
  
       pkg-config --cflags portaudio-2.0
       pkg-config --libs   portaudio-2.0
       pkg-config --cflags libusb-1.0
-   may return values but not utilized now
-   
+   may return (correct) values but not utilized now
+
+-  gr_filter_design wants following packages to run, add to DEPENDS or set
+   them in options.mk ?
+     math/py-scipy
+     x11/py-qt4
+        /pyqwt5   http://pyqwt.sourceforge.net/
+	/qt-mt   (?)
+
+- If swig-1.* is installed, get confused to use (undesired) this version 1
+  (swig2 is really necessary, I believe)
+
+- On some systems, getting following problem:
+  [ 65%] Building CXX object
+  gr-digital/swig/CMakeFiles/_digital_swig.dir/digital_swigPYTHON_wrap.cxx.o
+  g++: Internal error: Killed (program cc1plus received signal 9)
+
 -  patches/patch-gnuradio_runtime_lib_high__res__timer.cc
     is a joke, should be corrected
 - FreeBSD ports has many patches for 3.7.2.1
@@ -22,7 +38,7 @@ diff -N devel/py-cheetah/buildlink3.mk
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ devel/py-cheetah/buildlink3.mk	31 Aug 2014 13:46:46 -0000
 @@ -0,0 +1,14 @@
-+# $NetBSD: TODO,v 1.3 2014/09/01 07:00:59 makoto Exp $
++# $NetBSD: TODO,v 1.4 2014/09/01 12:09:20 makoto Exp $
 +
 +BUILDLINK_TREE+=	cheetah
 +
