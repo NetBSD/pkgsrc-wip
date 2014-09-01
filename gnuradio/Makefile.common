@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/08/31 14:20:09 makoto Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/09/01 07:00:59 makoto Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
@@ -36,7 +36,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake automake autoconf pkg-config
 
-MAKE_JOBS_SAFE=	no
+#AKE_JOBS_SAFE=	no
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/gnuradio/patches

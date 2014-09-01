@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/08/31 15:51:42 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/01 07:00:59 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -9,7 +9,7 @@ LDFLAGS.SunOS+=		-lboost_system
 PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # not yet ported as of 3.3.0
 .include "../../wip/gnuradio/Makefile.common"
 
-USE_TOOLS+=             perl gmake cmake
+USE_TOOLS+=             perl gmake cmake pkg-config
 USE_LANGUAGES+=         c c++
 USE_LIBTOOL=            yes
 USE_CMAKE=              yes
@@ -27,11 +27,12 @@ do-configure:
 	cmake \
 	-Wno-dev \
 	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
+	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/portaudio2 \
+	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2 \
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
-	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include \
-	-DLIBUSB_LIBRARIES=${PREFIX}/lib \
+	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0 \
 	../; \
 	)
 
@@ -44,10 +45,9 @@ do-install:
 post-install:
 	(cd ${WRKSRC}/build)
 
-.include "../../audio/portaudio/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/py-cheetah/buildlink3.mk"
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
