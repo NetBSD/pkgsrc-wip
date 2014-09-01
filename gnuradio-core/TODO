@@ -15,6 +15,11 @@
         /pyqwt5   http://pyqwt.sourceforge.net/
 	/qt-mt   (?)
 
+- gr_plot* wants:
+   Please install Matplotlib to run this script (http://matplotlib.sourceforge.net/)
+   But after graphics/py-matplotlib (1.4.0 in wip) installed, getting
+   the same message
+
 - If swig-1.* is installed, get confused to use (undesired) this version 1
   (swig2 is really necessary, I believe)
 
@@ -38,7 +43,7 @@ diff -N devel/py-cheetah/buildlink3.mk
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ devel/py-cheetah/buildlink3.mk	31 Aug 2014 13:46:46 -0000
 @@ -0,0 +1,14 @@
-+# $NetBSD: TODO,v 1.4 2014/09/01 12:09:20 makoto Exp $
++# $NetBSD: TODO,v 1.5 2014/09/01 14:04:15 makoto Exp $
 +
 +BUILDLINK_TREE+=	cheetah
 +
