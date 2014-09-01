@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/01 07:00:59 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/01 07:22:21 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -40,7 +40,7 @@ do-build:
 	(cd ${WRKSRC}/build; ${GMAKE})
 
 do-install:
-	(cd ${WRKSRC}/build; ${GMAKE} install)
+	(cd ${WRKSRC}/build; env DESTDIR=${DESTDIR} ${GMAKE} install)
 
 post-install:
 	(cd ${WRKSRC}/build)
