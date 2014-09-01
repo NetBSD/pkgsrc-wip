@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/08/27 10:40:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/01 17:35:10 thomasklausner Exp $
 
-DISTNAME=	libopenmpt-0.2.4218
+DISTNAME=	libopenmpt-0.2.4231
 CATEGORIES=	audio
 MASTER_SITES=	http://buildbot.openmpt.org/builds/auto/src/
 
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	INSTALL_LIB=${INSTALL_LIB:Q}
 
 PKGCONFIG_OVERRIDE=		bin/libopenmpt.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
