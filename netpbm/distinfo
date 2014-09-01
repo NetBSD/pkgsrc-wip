@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/09/01 21:59:50 thomasklausner Exp $
+
+SHA1 (netpbm-10.67.03.tgz) = b22dfa9f18e336e9e3999058c3458c49cc0e1ef4
+RMD160 (netpbm-10.67.03.tgz) = bca7cd6ed349ec455c16ab8c3884e464cfcf709d
+Size (netpbm-10.67.03.tgz) = 2698057 bytes
+SHA1 (patch-buildtools_installosf) = 03f6bf84e9f8294c0b33d2f8789d74d6fd58b768
+SHA1 (patch-converter_other_pstopnm.c) = fde8c6da48a419867e5aed4cb1210d4ec1157b26
