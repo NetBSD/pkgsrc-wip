@@ -34,3 +34,12 @@
   http://svnweb.freebsd.org/ports/head/comms/gnuradio/files/
 - To be packaged more,
   now only trying for gnuradio-core. Ham directory has many gnuradio-*
+
+- Following lines in PLIST are flagged by pkglint: 
+  25:etc/gnuradio/conf.d/gnuradio-runtime.conf
+  26:etc/gnuradio/conf.d/gr-audio-oss.conf
+  27:etc/gnuradio/conf.d/gr-audio-portaudio.conf
+  28:etc/gnuradio/conf.d/gr-audio.conf
+  29:etc/gnuradio/conf.d/modtool.conf
+    ERROR: PLIST:25: Configuration files must not be registered in the PLIST. 
+    Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
