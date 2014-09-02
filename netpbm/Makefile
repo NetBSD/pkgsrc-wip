@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/01 21:59:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/02 18:22:55 thomasklausner Exp $
 
 DISTNAME=	netpbm-10.67.03
 CATEGORIES=	graphics
@@ -33,9 +33,6 @@ REPLACE_PERL+=	manweb
 STAGEDIR=	${WRKDIR}/staging
 WRKSRC=		${WRKDIR}/netpbm
 
-LIBS.SunOS+=	-lsocket -lnsl
-MAKE_ENV+=	NETWORKLD=${LIBS:Q}
-
 WRAPPER_REORDER_CMDS+=	reorder:l:rle:netpbm
 
 # Several of the netpbm shell scripts use bashisms, so force using
@@ -69,19 +66,12 @@ PLIST.fiasco=	yes
 .endif
 
 .if ${OPSYS} == "Darwin"
-MAKE_ENV+=	NETPBMLIBTYPE="dylib" NETPBMLIBSUFFIX="dylib"
-.elif ${OPSYS} == "HPUX" && ${OBJECT_FMT} == "SOM"
-MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="sl"
-.else
-MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
-.endif
-
-.if ${OS_VARIANT} == "SCOOSR5"
-LDFLAGS.SCO_SV+=	-lsocket
-.endif
-
-.if !empty(PKGSRC_COMPILER:Mido)
-CPPFLAGS+=	-DSGI_IDO_CC
+MAKE_ENV+=	LDSHLIB=-dynamiclib
+.elif ${OPSYS} == "SunOS"
+MAKE_ENV+=	LDSHLIB=-shared
+MAKE_ENV+=	NETWORKLD="-lsocket -lnsl"
+.elif ${OS_VARIANT} == "SCOOSR5"
+MAKE_ENV+=	NETWORKLD="-lsocket -lresolv"
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/netpbm
