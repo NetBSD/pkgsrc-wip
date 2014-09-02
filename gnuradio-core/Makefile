@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/01 07:22:21 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/02 15:09:13 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -9,10 +9,11 @@ LDFLAGS.SunOS+=		-lboost_system
 PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # not yet ported as of 3.3.0
 .include "../../wip/gnuradio/Makefile.common"
 
+BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
+
 USE_TOOLS+=             perl gmake cmake pkg-config
 USE_LANGUAGES+=         c c++
 USE_LIBTOOL=            yes
-USE_CMAKE=              yes
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
@@ -48,7 +49,6 @@ post-install:
 .include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
-.include "../../devel/py-cheetah/buildlink3.mk"
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
