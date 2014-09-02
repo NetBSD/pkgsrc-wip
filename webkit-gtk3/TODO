@@ -1,0 +1,274 @@
+Build stops on NetBSD 7.99.1/amd64:
+
+  CXXLD    Programs/WebKitPluginProcess
+Source/WebKit2/PluginProcess/Programs_WebKitPluginProcess-PluginControllerProxy.o: In function `_ZN6WebKit21PluginControllerProxy5paintEv':
+PluginControllerProxy.cpp:(.text+0x7b7): undefined reference to `_ZN7WebCore9FloatRectC1ERKNS_7IntRectE'
+PluginControllerProxy.cpp:(.text+0x7d2): undefined reference to `_ZN7WebCore15GraphicsContext9clearRectERKNS_9FloatRectE'
+Source/WebKit2/PluginProcess/Programs_WebKitPluginProcess-PluginControllerProxy.o: In function `_ZN6WebKit21PluginControllerProxy10invalidateERKN7WebCore7IntRectE':
+PluginControllerProxy.cpp:(.text+0x93b): undefined reference to `_ZN7WebCore7IntRect9intersectERKS0_'
+PluginControllerProxy.cpp:(.text+0x952): undefined reference to `_ZN7WebCore7IntRect5uniteERKS0_'
+Source/WebKit2/PluginProcess/Programs_WebKitPluginProcess-PluginControllerProxy.o: In function `_ZN6WebKit21PluginControllerProxy24streamDidReceiveResponseEmRKN3WTF6StringEjjS4_S4_':
+PluginControllerProxy.cpp:(.text+0x1479): undefined reference to `_ZN7WebCore3URLC1ENS_18ParsedURLStringTagERKN3WTF6StringE'
+Source/WebKit2/PluginProcess/Programs_WebKitPluginProcess-PluginControllerProxy.o: In function `_ZN6WebKit21PluginControllerProxy30manualStreamDidReceiveResponseERKN3WTF6StringEjjS4_S4_':
+PluginControllerProxy.cpp:(.text+0x1679): undefined reference to `_ZN7WebCore3URLC1ENS_18ParsedURLStringTagERKN3WTF6StringE'
+Source/WebKit2/PluginProcess/Programs_WebKitPluginProcess-PluginControllerProxy.o: In function `_ZNKSt14default_deleteIN7WebCore15GraphicsContextEEclEPS1_':
+PluginControllerProxy.cpp:(.text._ZNKSt14default_deleteIN7WebCore15GraphicsContextEEclEPS1_[_ZNKSt14default_deleteIN7WebCore15GraphicsContextEEclEPS1_]+0x1e): undefined reference to `_ZN7WebCore15GraphicsContextD1Ev'
+Source/WebKit2/PluginProcess/Programs_WebKitPluginProcess-PluginCreationParameters.o: In function `_ZN7WebCore3URLC2Ev':
+PluginCreationParameters.cpp:(.text._ZN7WebCore3URLC2Ev[_ZN7WebCore3URLC5Ev]+0x20): undefined reference to `_ZN7WebCore3URL10invalidateEv'
+Source/WebKit2/PluginProcess/Programs_WebKitPluginProcess-PluginProcess.o: In function `_ZN6WebKit13PluginProcess17initializeProcessERKNS_36ChildProcessInitializationParametersE':
+PluginProcess.cpp:(.text+0x34a): undefined reference to `_ZN7WebCore21memoryPressureHandlerEv'
+PluginProcess.cpp:(.text+0x35c): undefined reference to `_ZN7WebCore21memoryPressureHandlerEv'
+PluginProcess.cpp:(.text+0x364): undefined reference to `_ZN7WebCore21MemoryPressureHandler7installEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-ChildProcess.o: In function `_ZN6WebKit12ChildProcessC2Ev':
+ChildProcess.cpp:(.text+0xe1): undefined reference to `_ZN7WebCore12UserActivityC1EPKc'
+ChildProcess.cpp:(.text+0xf8): undefined reference to `_ZN7WebCore12UserActivityC1EPKc'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-ChildProcess.o: In function `_ZN6WebKit12ChildProcess28setProcessSuppressionEnabledEb':
+ChildProcess.cpp:(.text+0x443): undefined reference to `_ZN7WebCore12UserActivity11endActivityEv'
+ChildProcess.cpp:(.text+0x457): undefined reference to `_ZN7WebCore12UserActivity13beginActivityEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-ChildProcess.o: In function `_ZN6WebKit12ChildProcess24incrementActiveTaskCountEv':
+ChildProcess.cpp:(.text+0x478): undefined reference to `_ZN7WebCore12UserActivity13beginActivityEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-ChildProcess.o: In function `_ZN6WebKit12ChildProcess24decrementActiveTaskCountEv':
+ChildProcess.cpp:(.text+0x498): undefined reference to `_ZN7WebCore12UserActivity11endActivityEv'
+Source/WebKit2/Shared/Plugins/Programs_WebKitPluginProcess-NPIdentifierData.o: In function `_ZNK6WebKit16NPIdentifierData18createNPIdentifierEv':
+NPIdentifierData.cpp:(.text+0xf9): undefined reference to `_ZN7WebCore13IdentifierRep3getEPKc'
+NPIdentifierData.cpp:(.text+0x109): undefined reference to `_ZN7WebCore13IdentifierRep3getEi'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore23AuthenticationChallengeEE6encodeERNS_15ArgumentEncoderERKS2_':
+WebCoreArgumentCoders.cpp:(.text+0x5d1): undefined reference to `_ZNK7WebCore27AuthenticationChallengeBase5errorEv'
+WebCoreArgumentCoders.cpp:(.text+0x5e0): undefined reference to `_ZNK7WebCore27AuthenticationChallengeBase15failureResponseEv'
+WebCoreArgumentCoders.cpp:(.text+0x5ef): undefined reference to `_ZNK7WebCore27AuthenticationChallengeBase20previousFailureCountEv'
+WebCoreArgumentCoders.cpp:(.text+0x5fe): undefined reference to `_ZNK7WebCore27AuthenticationChallengeBase18proposedCredentialEv'
+WebCoreArgumentCoders.cpp:(.text+0x60d): undefined reference to `_ZNK7WebCore27AuthenticationChallengeBase15protectionSpaceEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore23AuthenticationChallengeEE6decodeERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCoders.cpp:(.text+0x683): undefined reference to `_ZN7WebCore15ProtectionSpaceC1Ev'
+WebCoreArgumentCoders.cpp:(.text+0x6bb): undefined reference to `_ZN7WebCore10CredentialC1Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore15ProtectionSpaceEE6encodeERNS_15ArgumentEncoderERKS2_':
+WebCoreArgumentCoders.cpp:(.text+0x843): undefined reference to `_ZNK7WebCore15ProtectionSpace5realmEv'
+WebCoreArgumentCoders.cpp:(.text+0x852): undefined reference to `_ZNK7WebCore15ProtectionSpace4portEv'
+WebCoreArgumentCoders.cpp:(.text+0x861): undefined reference to `_ZNK7WebCore15ProtectionSpace4hostEv'
+WebCoreArgumentCoders.cpp:(.text+0x899): undefined reference to `_ZNK7WebCore15ProtectionSpace20authenticationSchemeEv'
+WebCoreArgumentCoders.cpp:(.text+0x8b5): undefined reference to `_ZNK7WebCore15ProtectionSpace10serverTypeEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore15ProtectionSpaceEE6decodeERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCoders.cpp:(.text+0x9da): undefined reference to `_ZN7WebCore15ProtectionSpaceC1ERKN3WTF6StringEiNS_25ProtectionSpaceServerTypeES4_NS_35ProtectionSpaceAuthenticationSchemeE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore10CredentialEE6encodeERNS_15ArgumentEncoderERKS2_':
+WebCoreArgumentCoders.cpp:(.text+0xa89): undefined reference to `_ZNK7WebCore10Credential8passwordEv'
+WebCoreArgumentCoders.cpp:(.text+0xa98): undefined reference to `_ZNK7WebCore10Credential4userEv'
+WebCoreArgumentCoders.cpp:(.text+0xac1): undefined reference to `_ZNK7WebCore10Credential11persistenceEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore10CredentialEE6decodeERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCoders.cpp:(.text+0xb8d): undefined reference to `_ZN7WebCore10CredentialC1ERKN3WTF6StringES4_NS_21CredentialPersistenceE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPCL11encodeImageERNS_15ArgumentEncoderEPN7WebCore5ImageE':
+WebCoreArgumentCoders.cpp:(.text+0xd09): undefined reference to `_ZN7WebCore15GraphicsContext9drawImageEPNS_5ImageENS_10ColorSpaceERKNS_8IntPointENS_17CompositeOperatorENS_27ImageOrientationDescriptionE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore6CursorEE6decodeERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCoders.cpp:(.text+0x1018): undefined reference to `_ZN7WebCore6Cursor8fromTypeENS0_4TypeE'
+WebCoreArgumentCoders.cpp:(.text+0x1032): undefined reference to `_ZNK7WebCore6Cursor14platformCursorEv'
+WebCoreArgumentCoders.cpp:(.text+0x1057): undefined reference to `_ZN7WebCore6CursoraSERKS0_'
+WebCoreArgumentCoders.cpp:(.text+0x10a8): undefined reference to `_ZN7WebCore5Image9nullImageEv'
+WebCoreArgumentCoders.cpp:(.text+0x10be): undefined reference to `_ZN7WebCore6CursorC1EPNS_5ImageERKNS_8IntPointE'
+WebCoreArgumentCoders.cpp:(.text+0x10d4): undefined reference to `_ZN7WebCore6CursoraSERKS0_'
+WebCoreArgumentCoders.cpp:(.text+0x10e0): undefined reference to `_ZN7WebCore6CursorD1Ev'
+WebCoreArgumentCoders.cpp:(.text+0x11b8): undefined reference to `_ZN7WebCore6CursorC1EPNS_5ImageERKNS_8IntPointE'
+WebCoreArgumentCoders.cpp:(.text+0x11ce): undefined reference to `_ZN7WebCore6CursoraSERKS0_'
+WebCoreArgumentCoders.cpp:(.text+0x11da): undefined reference to `_ZN7WebCore6CursorD1Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore15ResourceRequestEE6encodeERNS_15ArgumentEncoderERKS2_':
+WebCoreArgumentCoders.cpp:(.text+0x1232): undefined reference to `_ZNK7WebCore19ResourceRequestBase3urlEv'
+WebCoreArgumentCoders.cpp:(.text+0x1258): undefined reference to `_ZNK7WebCore19ResourceRequestBase10httpMethodEv'
+WebCoreArgumentCoders.cpp:(.text+0x1276): undefined reference to `_ZNK7WebCore19ResourceRequestBase16httpHeaderFieldsEv'
+WebCoreArgumentCoders.cpp:(.text+0x1294): undefined reference to `_ZNK7WebCore19ResourceRequestBase8httpBodyEv'
+WebCoreArgumentCoders.cpp:(.text+0x12d0): undefined reference to `_ZNK7WebCore8FormData15flattenToStringEv'
+WebCoreArgumentCoders.cpp:(.text+0x131e): undefined reference to `_ZNK7WebCore19ResourceRequestBase20firstPartyForCookiesEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore15ResourceRequestEE6decodeERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCoders.cpp:(.text+0x13e6): undefined reference to `_ZN7WebCore3URLC1ERKS0_RKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x13ff): undefined reference to `_ZN7WebCore19ResourceRequestBase6setURLERKNS_3URLE'
+WebCoreArgumentCoders.cpp:(.text+0x1474): undefined reference to `_ZN7WebCore19ResourceRequestBase13setHTTPMethodERKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x1483): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+WebCoreArgumentCoders.cpp:(.text+0x14cb): undefined reference to `_ZN7WebCore19ResourceRequestBase19addHTTPHeaderFieldsERKNS_13HTTPHeaderMapE'
+WebCoreArgumentCoders.cpp:(.text+0x157e): undefined reference to `_ZN7WebCore8FormData6createERKN3WTF7CStringE'
+WebCoreArgumentCoders.cpp:(.text+0x1597): undefined reference to `_ZN7WebCore19ResourceRequestBase11setHTTPBodyEN3WTF10PassRefPtrINS_8FormDataEEE'
+WebCoreArgumentCoders.cpp:(.text+0x1686): undefined reference to `_ZN7WebCore3URLC1ERKS0_RKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x169f): undefined reference to `_ZN7WebCore19ResourceRequestBase23setFirstPartyForCookiesERKNS_3URLE'
+WebCoreArgumentCoders.cpp:(.text+0x1732): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore16ResourceResponseEE6encodeERNS_15ArgumentEncoderERKS2_':
+WebCoreArgumentCoders.cpp:(.text+0x187f): undefined reference to `_ZNK7WebCore20ResourceResponseBase3urlEv'
+WebCoreArgumentCoders.cpp:(.text+0x18a5): undefined reference to `_ZNK7WebCore20ResourceResponseBase14httpStatusCodeEv'
+WebCoreArgumentCoders.cpp:(.text+0x18c7): undefined reference to `_ZNK7WebCore20ResourceResponseBase16httpHeaderFieldsEv'
+WebCoreArgumentCoders.cpp:(.text+0x18e5): undefined reference to `_ZNK7WebCore20ResourceResponseBase8mimeTypeEv'
+WebCoreArgumentCoders.cpp:(.text+0x1903): undefined reference to `_ZNK7WebCore20ResourceResponseBase16textEncodingNameEv'
+WebCoreArgumentCoders.cpp:(.text+0x1921): undefined reference to `_ZNK7WebCore20ResourceResponseBase21expectedContentLengthEv'
+WebCoreArgumentCoders.cpp:(.text+0x1944): undefined reference to `_ZNK7WebCore20ResourceResponseBase14httpStatusTextEv'
+WebCoreArgumentCoders.cpp:(.text+0x1962): undefined reference to `_ZNK7WebCore20ResourceResponseBase17suggestedFilenameEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore16ResourceResponseEE6decodeERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCoders.cpp:(.text+0x1abc): undefined reference to `_ZN7WebCore3URLC1ERKS0_RKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x1ad5): undefined reference to `_ZN7WebCore20ResourceResponseBase6setURLERKNS_3URLE'
+WebCoreArgumentCoders.cpp:(.text+0x1b39): undefined reference to `_ZN7WebCore20ResourceResponseBase17setHTTPStatusCodeEi'
+WebCoreArgumentCoders.cpp:(.text+0x1b48): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+WebCoreArgumentCoders.cpp:(.text+0x1c27): undefined reference to `_ZN7WebCore20ResourceResponseBase18setHTTPHeaderFieldERKN3WTF12AtomicStringERKNS1_6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x1caa): undefined reference to `_ZN7WebCore20ResourceResponseBase11setMimeTypeERKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x1d01): undefined reference to `_ZN7WebCore20ResourceResponseBase19setTextEncodingNameERKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x1d49): undefined reference to `_ZN7WebCore20ResourceResponseBase24setExpectedContentLengthEx'
+WebCoreArgumentCoders.cpp:(.text+0x1da0): undefined reference to `_ZN7WebCore20ResourceResponseBase17setHTTPStatusTextERKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x1df4): undefined reference to `_ZN7WebCore20ResourceResponseBase20setSuggestedFilenameERKN3WTF6StringE'
+WebCoreArgumentCoders.cpp:(.text+0x1f28): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore3URLEE6decodeERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCoders.cpp:(.text+0x364e): undefined reference to `_ZN7WebCore3URLC1ENS_18ParsedURLStringTagERKN3WTF6StringE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore20ResourceResponseBaseD2Ev':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore20ResourceResponseBaseD2Ev[_ZN7WebCore20ResourceResponseBaseD5Ev]+0x4b): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore16ResourceResponseC2Ev':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore16ResourceResponseC2Ev[_ZN7WebCore16ResourceResponseC5Ev]+0x14): undefined reference to `_ZN7WebCore20ResourceResponseBaseC2Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZNK7WebCore17ResourceErrorBase6domainEv':
+WebCoreArgumentCoders.cpp:(.text._ZNK7WebCore17ResourceErrorBase6domainEv[_ZNK7WebCore17ResourceErrorBase6domainEv]+0x14): undefined reference to `_ZNK7WebCore17ResourceErrorBase8lazyInitEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZNK7WebCore17ResourceErrorBase9errorCodeEv':
+WebCoreArgumentCoders.cpp:(.text._ZNK7WebCore17ResourceErrorBase9errorCodeEv[_ZNK7WebCore17ResourceErrorBase9errorCodeEv]+0x14): undefined reference to `_ZNK7WebCore17ResourceErrorBase8lazyInitEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZNK7WebCore17ResourceErrorBase10failingURLEv':
+WebCoreArgumentCoders.cpp:(.text._ZNK7WebCore17ResourceErrorBase10failingURLEv[_ZNK7WebCore17ResourceErrorBase10failingURLEv]+0x14): undefined reference to `_ZNK7WebCore17ResourceErrorBase8lazyInitEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZNK7WebCore17ResourceErrorBase20localizedDescriptionEv':
+WebCoreArgumentCoders.cpp:(.text._ZNK7WebCore17ResourceErrorBase20localizedDescriptionEv[_ZNK7WebCore17ResourceErrorBase20localizedDescriptionEv]+0x14): undefined reference to `_ZNK7WebCore17ResourceErrorBase8lazyInitEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore23AuthenticationChallengeC2ERKNS_15ProtectionSpaceERKNS_10CredentialEjRKNS_16ResourceResponseERKNS_13ResourceErrorE':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore23AuthenticationChallengeC2ERKNS_15ProtectionSpaceERKNS_10CredentialEjRKNS_16ResourceResponseERKNS_13ResourceErrorE[_ZN7WebCore23AuthenticationChallengeC5ERKNS_15ProtectionSpaceERKNS_10CredentialEjRKNS_16ResourceResponseERKNS_13ResourceErrorE]+0x40): undefined reference to `_ZN7WebCore27AuthenticationChallengeBaseC2ERKNS_15ProtectionSpaceERKNS_10CredentialEjRKNS_16ResourceResponseERKNS_13ResourceErrorE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore6LengthD2Ev':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore6LengthD2Ev[_ZN7WebCore6LengthD5Ev]+0x24): undefined reference to `_ZNK7WebCore6Length22decrementCalculatedRefEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore6Length14initFromLengthERKS0_':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore6Length14initFromLengthERKS0_[_ZN7WebCore6Length14initFromLengthERKS0_]+0x40): undefined reference to `_ZNK7WebCore6Length22incrementCalculatedRefEv'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore24ReferenceFilterOperation6createERKN3WTF6StringES4_NS_15FilterOperation13OperationTypeE':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore24ReferenceFilterOperation6createERKN3WTF6StringES4_NS_15FilterOperation13OperationTypeE[_ZN7WebCore24ReferenceFilterOperation6createERKN3WTF6StringES4_NS_15FilterOperation13OperationTypeE]+0x37): undefined reference to `_ZN7WebCore24ReferenceFilterOperationC1ERKN3WTF6StringES4_NS_15FilterOperation13OperationTypeE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore31BasicColorMatrixFilterOperationC1EdNS_15FilterOperation13OperationTypeE':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore31BasicColorMatrixFilterOperationC2EdNS_15FilterOperation13OperationTypeE[_ZN7WebCore31BasicColorMatrixFilterOperationC5EdNS_15FilterOperation13OperationTypeE]+0x2c): undefined reference to `_ZTVN7WebCore31BasicColorMatrixFilterOperationE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore37BasicComponentTransferFilterOperationC1EdNS_15FilterOperation13OperationTypeE':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore37BasicComponentTransferFilterOperationC2EdNS_15FilterOperation13OperationTypeE[_ZN7WebCore37BasicComponentTransferFilterOperationC5EdNS_15FilterOperation13OperationTypeE]+0x2c): undefined reference to `_ZTVN7WebCore37BasicComponentTransferFilterOperationE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore19BlurFilterOperationC1ENS_6LengthENS_15FilterOperation13OperationTypeE':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore19BlurFilterOperationC2ENS_6LengthENS_15FilterOperation13OperationTypeE[_ZN7WebCore19BlurFilterOperationC5ENS_6LengthENS_15FilterOperation13OperationTypeE]+0x2b): undefined reference to `_ZTVN7WebCore19BlurFilterOperationE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore25DropShadowFilterOperationC1ERKNS_8IntPointEiNS_5ColorENS_15FilterOperation13OperationTypeE':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore25DropShadowFilterOperationC2ERKNS_8IntPointEiNS_5ColorENS_15FilterOperation13OperationTypeE[_ZN7WebCore25DropShadowFilterOperationC5ERKNS_8IntPointEiNS_5ColorENS_15FilterOperation13OperationTypeE]+0x33): undefined reference to `_ZTVN7WebCore25DropShadowFilterOperationE'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore19ResourceRequestBaseC2ERKNS_3URLENS_26ResourceRequestCachePolicyE':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore19ResourceRequestBaseC2ERKNS_3URLENS_26ResourceRequestCachePolicyE[_ZN7WebCore19ResourceRequestBaseC5ERKNS_3URLENS_26ResourceRequestCachePolicyE]+0x29): undefined reference to `_ZN7WebCore19ResourceRequestBase24s_defaultTimeoutIntervalE'
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore19ResourceRequestBaseC2ERKNS_3URLENS_26ResourceRequestCachePolicyE[_ZN7WebCore19ResourceRequestBaseC5ERKNS_3URLENS_26ResourceRequestCachePolicyE]+0x79): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN7WebCore19ResourceRequestBaseD2Ev':
+WebCoreArgumentCoders.cpp:(.text._ZN7WebCore19ResourceRequestBaseD2Ev[_ZN7WebCore19ResourceRequestBaseD5Ev]+0x5f): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3WTF7GRefPtrI10_GdkCursorED1Ev':
+WebCoreArgumentCoders.cpp:(.text._ZN3WTF7GRefPtrI10_GdkCursorED2Ev[_ZN3WTF7GRefPtrI10_GdkCursorED5Ev]+0x26): undefined reference to `_ZN3WTF9derefGPtrI10_GdkCursorEEvPT_'
+Source/WebKit2/Shared/Programs_WebKitPluginProcess-WebCoreArgumentCoders.o: In function `_ZN3WTF10RefCountedIN7WebCore8FormDataEE5derefEv':
+WebCoreArgumentCoders.cpp:(.text._ZN3WTF10RefCountedIN7WebCore8FormDataEE5derefEv[_ZN3WTF10RefCountedIN7WebCore8FormDataEE5derefEv]+0x2b): undefined reference to `_ZN7WebCore8FormDataD1Ev'
+Source/WebKit2/Shared/gtk/Programs_WebKitPluginProcess-ProcessExecutablePathGtk.o: In function `_ZN6WebKitL17getExecutablePathEv':
+ProcessExecutablePathGtk.cpp:(.text+0x44): undefined reference to `_ZN7WebCore16filenameToStringEPKc'
+ProcessExecutablePathGtk.cpp:(.text+0x57): undefined reference to `_ZN7WebCore13directoryNameERKN3WTF6StringE'
+Source/WebKit2/Shared/gtk/Programs_WebKitPluginProcess-ProcessExecutablePathGtk.o: In function `_ZN6WebKitL17findWebKitProcessEPKc':
+ProcessExecutablePathGtk.cpp:(.text+0x13f): undefined reference to `_ZN7WebCore16filenameToStringEPKc'
+ProcessExecutablePathGtk.cpp:(.text+0x15f): undefined reference to `_ZN7WebCore24pathByAppendingComponentERKN3WTF6StringES3_'
+ProcessExecutablePathGtk.cpp:(.text+0x1d2): undefined reference to `_ZN7WebCore10fileExistsERKN3WTF6StringE'
+ProcessExecutablePathGtk.cpp:(.text+0x2c9): undefined reference to `_ZN7WebCore24pathByAppendingComponentERKN3WTF6StringES3_'
+ProcessExecutablePathGtk.cpp:(.text+0x30a): undefined reference to `_ZN7WebCore10fileExistsERKN3WTF6StringE'
+ProcessExecutablePathGtk.cpp:(.text+0x39c): undefined reference to `_ZN7WebCore16filenameToStringEPKc'
+ProcessExecutablePathGtk.cpp:(.text+0x3bc): undefined reference to `_ZN7WebCore24pathByAppendingComponentERKN3WTF6StringES3_'
+Source/WebKit2/Shared/gtk/Programs_WebKitPluginProcess-WebEventFactory.o: In function `_ZN6WebKit15WebEventFactory22createWebKeyboardEventEPK9_GdkEventRKN7WebCore18CompositionResultsE':
+WebEventFactory.cpp:(.text+0x5c8): undefined reference to `_ZN7WebCore21PlatformKeyboardEvent21singleCharacterStringEj'
+WebEventFactory.cpp:(.text+0x5ed): undefined reference to `_ZN7WebCore21PlatformKeyboardEvent27windowsKeyCodeForGdkKeyCodeEj'
+WebEventFactory.cpp:(.text+0x66a): undefined reference to `_ZN7WebCore21PlatformKeyboardEvent26keyIdentifierForGdkKeyCodeEj'
+Source/WebKit2/Shared/cairo/Programs_WebKitPluginProcess-ShareableBitmapCairo.o: In function `_ZN6WebKit15ShareableBitmap21createGraphicsContextEv':
+ShareableBitmapCairo.cpp:(.text+0x100): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+ShareableBitmapCairo.cpp:(.text+0x145): undefined reference to `_ZN3WTF14derefIfNotNullI6_cairoEEvPT_'
+ShareableBitmapCairo.cpp:(.text+0x174): undefined reference to `_ZN3WTF14derefIfNotNullI6_cairoEEvPT_'
+ShareableBitmapCairo.cpp:(.text+0x180): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+Source/WebKit2/Shared/cairo/Programs_WebKitPluginProcess-ShareableBitmapCairo.o: In function `_ZN6WebKit15ShareableBitmap5paintERN7WebCore15GraphicsContextERKNS1_8IntPointERKNS1_7IntRectE':
+ShareableBitmapCairo.cpp:(.text+0x1fc): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+ShareableBitmapCairo.cpp:(.text+0x222): undefined reference to `_ZN7WebCore9FloatSizeC1ERKNS_7IntSizeE'
+ShareableBitmapCairo.cpp:(.text+0x238): undefined reference to `_ZN7WebCore10FloatPointC1ERKNS_8IntPointE'
+ShareableBitmapCairo.cpp:(.text+0x265): undefined reference to `_ZN7WebCore9FloatRectC1ERKNS_7IntRectE'
+ShareableBitmapCairo.cpp:(.text+0x283): undefined reference to `_ZNK7WebCore15GraphicsContext15platformContextEv'
+ShareableBitmapCairo.cpp:(.text+0x2a0): undefined reference to `_ZN7WebCore20PlatformContextCairo20drawSurfaceToContextEP14_cairo_surfaceRKNS_9FloatRectES5_PNS_15GraphicsContextE'
+ShareableBitmapCairo.cpp:(.text+0x2ac): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+Source/WebKit2/Shared/cairo/Programs_WebKitPluginProcess-ShareableBitmapCairo.o: In function `_ZN6WebKit15ShareableBitmap18createCairoSurfaceEv':
+ShareableBitmapCairo.cpp:(.text+0x369): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+ShareableBitmapCairo.cpp:(.text+0x3b6): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+Source/WebKit2/Shared/cairo/Programs_WebKitPluginProcess-ShareableBitmapCairo.o: In function `_ZN6WebKit15ShareableBitmap11createImageEv':
+ShareableBitmapCairo.cpp:(.text+0x41e): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+ShareableBitmapCairo.cpp:(.text+0x4b3): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+Source/WebKit2/Shared/cairo/Programs_WebKitPluginProcess-ShareableBitmapCairo.o:ShareableBitmapCairo.cpp:(.text+0x4bf): more undefined references to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_' follow
+Source/WebKit2/Shared/cairo/Programs_WebKitPluginProcess-ShareableBitmapCairo.o: In function `_ZN7WebCore11BitmapImage6createEN3WTF10PassRefPtrI14_cairo_surfaceEEPNS_13ImageObserverE':
+ShareableBitmapCairo.cpp:(.text._ZN7WebCore11BitmapImage6createEN3WTF10PassRefPtrI14_cairo_surfaceEEPNS_13ImageObserverE[_ZN7WebCore11BitmapImage6createEN3WTF10PassRefPtrI14_cairo_surfaceEEPNS_13ImageObserverE]+0x49): undefined reference to `_ZN7WebCore11BitmapImageC1EN3WTF10PassRefPtrI14_cairo_surfaceEEPNS_13ImageObserverE'
+ShareableBitmapCairo.cpp:(.text._ZN7WebCore11BitmapImage6createEN3WTF10PassRefPtrI14_cairo_surfaceEEPNS_13ImageObserverE[_ZN7WebCore11BitmapImage6createEN3WTF10PassRefPtrI14_cairo_surfaceEEPNS_13ImageObserverE]+0x64): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+Source/WebKit2/Shared/cairo/Programs_WebKitPluginProcess-ShareableBitmapCairo.o: In function `_ZSt11make_uniqueIN7WebCore15GraphicsContextEIP6_cairoEENSt10_Unique_ifIT_E14_Single_objectEDpOT0_':
+ShareableBitmapCairo.cpp:(.text._ZSt11make_uniqueIN7WebCore15GraphicsContextEIP6_cairoEENSt10_Unique_ifIT_E14_Single_objectEDpOT0_[_ZSt11make_uniqueIN7WebCore15GraphicsContextEIP6_cairoEENSt10_Unique_ifIT_E14_Single_objectEDpOT0_]+0x36): undefined reference to `_ZN7WebCore15GraphicsContextC1EP6_cairo'
+Source/WebKit2/Shared/soup/Programs_WebKitPluginProcess-WebCoreArgumentCodersSoup.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore13ResourceErrorEE18encodePlatformDataERNS_15ArgumentEncoderERKS2_':
+WebCoreArgumentCodersSoup.cpp:(.text+0x459): undefined reference to `_ZN7WebCore15CertificateInfoC1ERKNS_13ResourceErrorE'
+WebCoreArgumentCodersSoup.cpp:(.text+0x478): undefined reference to `_ZN7WebCore15CertificateInfoD1Ev'
+Source/WebKit2/Shared/soup/Programs_WebKitPluginProcess-WebCoreArgumentCodersSoup.o: In function `_ZN3IPC13ArgumentCoderIN7WebCore13ResourceErrorEE18decodePlatformDataERNS_15ArgumentDecoderERS2_':
+WebCoreArgumentCodersSoup.cpp:(.text+0x497): undefined reference to `_ZN7WebCore15CertificateInfoC1Ev'
+WebCoreArgumentCodersSoup.cpp:(.text+0x502): undefined reference to `_ZN7WebCore15CertificateInfoD1Ev'
+Source/WebKit2/UIProcess/Plugins/unix/Programs_WebKitPluginProcess-PluginProcessProxyUnix.o: In function `_ZN6WebKit18PluginProcessProxy10scanPluginERKN3WTF6StringERNS_17RawPluginMetaDataE':
+PluginProcessProxyUnix.cpp:(.text+0xbf): undefined reference to `_ZN7WebCore24fileSystemRepresentationERKN3WTF6StringE'
+PluginProcessProxyUnix.cpp:(.text+0x104): undefined reference to `_ZN7WebCore24fileSystemRepresentationERKN3WTF6StringE'
+Source/WebKit2/WebProcess/Plugins/Programs_WebKitPluginProcess-Plugin.o: In function `_ZN6WebKit6Plugin10Parameters6decodeERN3IPC15ArgumentDecoderERS1_':
+Plugin.cpp:(.text+0xf5): undefined reference to `_ZN7WebCore3URLC1ENS_18ParsedURLStringTagERKN3WTF6StringE'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL23parseRFC822HeaderFieldsEPKcj':
+NetscapeBrowserFuncs.cpp:(.text+0x33c): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+NetscapeBrowserFuncs.cpp:(.text+0x43e): undefined reference to `_ZNK7WebCore13HTTPHeaderMap3getERKN3WTF12AtomicStringE'
+NetscapeBrowserFuncs.cpp:(.text+0x7f0): undefined reference to `_ZNK7WebCore13HTTPHeaderMap3getERKN3WTF12AtomicStringE'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL15parsePostBufferEbPKcjbRN7WebCore13HTTPHeaderMapERN3WTF6VectorIhLm0ENS5_15CrashOnOverflowEEE':
+NetscapeBrowserFuncs.cpp:(.text+0xaf4): undefined reference to `_ZN7WebCore12SharedBuffer24createWithContentsOfFileERKN3WTF6StringE'
+NetscapeBrowserFuncs.cpp:(.text+0xb92): undefined reference to `_ZNK7WebCore12SharedBuffer4dataEv'
+NetscapeBrowserFuncs.cpp:(.text+0xba5): undefined reference to `_ZNK7WebCore12SharedBuffer4sizeEv'
+NetscapeBrowserFuncs.cpp:(.text+0xc44): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+NetscapeBrowserFuncs.cpp:(.text+0xc6f): undefined reference to `_ZNK7WebCore13HTTPHeaderMap3getEPKc'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL10NPN_GetURLEP4_NPPPKcS3_':
+NetscapeBrowserFuncs.cpp:(.text+0xf78): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+NetscapeBrowserFuncs.cpp:(.text+0x1090): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL11NPN_PostURLEP4_NPPPKcS3_jS3_h':
+NetscapeBrowserFuncs.cpp:(.text+0x1121): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+NetscapeBrowserFuncs.cpp:(.text+0x133e): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL16NPN_GetURLNotifyEP4_NPPPKcS3_Pv':
+NetscapeBrowserFuncs.cpp:(.text+0x172a): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+NetscapeBrowserFuncs.cpp:(.text+0x183f): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL17NPN_PostURLNotifyEP4_NPPPKcS3_jS3_hPv':
+NetscapeBrowserFuncs.cpp:(.text+0x18d0): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+NetscapeBrowserFuncs.cpp:(.text+0x1adb): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL23NPN_GetStringIdentifierEPKc':
+NetscapeBrowserFuncs.cpp:(.text+0x2127): undefined reference to `_ZN7WebCore13IdentifierRep3getEPKc'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL20NPN_GetIntIdentifierEi':
+NetscapeBrowserFuncs.cpp:(.text+0x21b5): undefined reference to `_ZN7WebCore13IdentifierRep3getEi'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL25initializeProtectionSpaceEPKcS1_iS1_S1_RN7WebCore15ProtectionSpaceE':
+NetscapeBrowserFuncs.cpp:(.text+0x367e): undefined reference to `_ZN7WebCore15ProtectionSpaceC1ERKN3WTF6StringEiNS_25ProtectionSpaceServerTypeES4_NS_35ProtectionSpaceAuthenticationSchemeE'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN6WebKitL25NPN_GetAuthenticationInfoEP4_NPPPKcS3_iS3_S3_PPcPjS5_S6_':
+NetscapeBrowserFuncs.cpp:(.text+0x3797): undefined reference to `_ZN7WebCore15ProtectionSpaceC1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapeBrowserFuncs.o: In function `_ZN3WTF10RefCountedIN7WebCore12SharedBufferEE5derefEv':
+NetscapeBrowserFuncs.cpp:(.text._ZN3WTF10RefCountedIN7WebCore12SharedBufferEE5derefEv[_ZN3WTF10RefCountedIN7WebCore12SharedBufferEE5derefEv]+0x2b): undefined reference to `_ZN7WebCore12SharedBufferD1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePlugin.o: In function `_ZN6WebKit14NetscapePluginC1EN3WTF10PassRefPtrINS_20NetscapePluginModuleEEE':
+NetscapePlugin.cpp:(.text+0x1bc): undefined reference to `_ZN7WebCore15AffineTransformC1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePlugin.o: In function `_ZN6WebKit14NetscapePlugin10initializeERKNS_6Plugin10ParametersE':
+NetscapePlugin.cpp:(.text+0x215f): undefined reference to `_ZN7WebCore13HTTPHeaderMapC1Ev'
+NetscapePlugin.cpp:(.text+0x2245): undefined reference to `_ZN7WebCore13HTTPHeaderMapD1Ev'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePlugin.o: In function `_ZN6WebKit14NetscapePlugin8snapshotEv':
+NetscapePlugin.cpp:(.text+0x24d8): undefined reference to `_ZN7WebCore15GraphicsContext5scaleERKNS_9FloatSizeE'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePlugin.o: In function `_ZN6WebKit14NetscapePlugin17geometryDidChangeERKN7WebCore7IntSizeERKNS1_7IntRectERKNS1_15AffineTransformE':
+NetscapePlugin.cpp:(.text+0x2769): undefined reference to `_ZNK7WebCore15AffineTransform8mapPointERKNS_8IntPointE'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePlugin.o: In function `_ZNK6WebKit14NetscapePlugin17convertToRootViewERKN7WebCore8IntPointE':
+NetscapePlugin.cpp:(.text+0x3096): undefined reference to `_ZNK7WebCore15AffineTransform8mapPointERKNS_8IntPointE'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePlugin.o: In function `_ZN6WebKit14NetscapePlugin19convertFromRootViewERKN7WebCore8IntPointERS2_':
+NetscapePlugin.cpp:(.text+0x30be): undefined reference to `_ZNK7WebCore15AffineTransform12isInvertibleEv'
+NetscapePlugin.cpp:(.text+0x30e5): undefined reference to `_ZNK7WebCore15AffineTransform7inverseEv'
+NetscapePlugin.cpp:(.text+0x30f8): undefined reference to `_ZNK7WebCore15AffineTransform8mapPointERKNS_8IntPointE'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePluginStream.o: In function `_ZN6WebKit20NetscapePluginStream17deliverDataToFileEPKci':
+NetscapePluginStream.cpp:(.text+0xc1e): undefined reference to `_ZN7WebCore17openTemporaryFileERKN3WTF6StringERP14_GFileIOStream'
+NetscapePluginStream.cpp:(.text+0xcd5): undefined reference to `_ZN7WebCore11writeToFileEP14_GFileIOStreamPKci'
+NetscapePluginStream.cpp:(.text+0xcf0): undefined reference to `_ZN7WebCore9closeFileERP14_GFileIOStream'
+Source/WebKit2/WebProcess/Plugins/Netscape/Programs_WebKitPluginProcess-NetscapePluginStream.o: In function `_ZN6WebKit20NetscapePluginStream4stopEs':
+NetscapePluginStream.cpp:(.text+0xe25): undefined reference to `_ZN7WebCore9closeFileERP14_GFileIOStream'
+NetscapePluginStream.cpp:(.text+0xea1): undefined reference to `_ZN7WebCore9closeFileERP14_GFileIOStream'
+NetscapePluginStream.cpp:(.text+0xeb1): undefined reference to `_ZN7WebCore10deleteFileERKN3WTF6StringE'
+Source/WebKit2/Shared/Plugins/Netscape/x11/Programs_WebKitPluginProcess-NetscapePluginModuleX11.o: In function `_ZN6WebKit20NetscapePluginModule13getPluginInfoERKN3WTF6StringERNS_16PluginModuleInfoE':
+NetscapePluginModuleX11.cpp:(.text+0x6f6): undefined reference to `_ZN7WebCore15pathGetFileNameERKN3WTF6StringE'
+Source/WebKit2/WebProcess/Plugins/Netscape/x11/Programs_WebKitPluginProcess-NetscapePluginX11.o: In function `_ZN6WebKit14NetscapePlugin13platformPaintEPN7WebCore15GraphicsContextERKNS1_7IntRectEb':
+NetscapePluginX11.cpp:(.text+0x79c): undefined reference to `_ZNK7WebCore15GraphicsContext16paintingDisabledEv'
+NetscapePluginX11.cpp:(.text+0x964): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+NetscapePluginX11.cpp:(.text+0x973): undefined reference to `_ZNK7WebCore15GraphicsContext15platformContextEv'
+NetscapePluginX11.cpp:(.text+0xa66): undefined reference to `_ZN3WTF14derefIfNotNullI14_cairo_surfaceEEvPT_'
+DerivedSources/WebKit2/Programs_WebKitPluginProcess-PluginControllerProxyMessageReceiver.o: In function `_ZNSt10_Head_baseILm2EN7WebCore15AffineTransformELb0EEC2Ev':
+PluginControllerProxyMessageReceiver.cpp:(.text._ZNSt10_Head_baseILm2EN7WebCore15AffineTransformELb0EEC2Ev[_ZNSt10_Head_baseILm2EN7WebCore15AffineTransformELb0EEC5Ev]+0x14): undefined reference to `_ZN7WebCore15AffineTransformC1Ev'
+GNUmakefile:41461: recipe for target 'Programs/WebKitPluginProcess' failed
+gmake[1]: *** [Programs/WebKitPluginProcess] Error 1
+gmake[1]: *** Waiting for unfinished jobs....
+*** [buildlink3] Warning: libtool replaced -lwebkit2gtk-3.0 with ./libwebkit2gtk-3.0.la
+*** [buildlink3] Warning: libtool replaced -ljavascriptcoregtk-3.0 with ./libjavascriptcoregtk-3.0.la
+gmake[1]: Leaving directory '/scratch/www/webkit-gtk3/work/webkitgtk-2.4.5'
+GNUmakefile:25649: recipe for target 'all' failed
+gmake: *** [all] Error 2
+*** Error code 2
+
+PLIST not up-to-date yet for that reason.
