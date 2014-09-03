@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/09/02 21:00:54 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/03 21:16:18 szptvlfn Exp $
 
-DISTNAME=	semigroupoids-4.0.4
+DISTNAME=	semigroupoids-4.2
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
