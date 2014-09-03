@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/08/01 21:00:38 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.14 2014/09/03 21:19:08 szptvlfn Exp $
 
 DISTNAME=	conduit-1.0.9.3
 CATEGORIES=	devel
@@ -16,5 +16,5 @@ LICENSE=	mit
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../devel/hs-transformers-base/buildlink3.mk"
-.include "../../wip/hs-void/buildlink3.mk"
+.include "../../devel/hs-void/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

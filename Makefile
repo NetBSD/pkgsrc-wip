@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5875 2014/09/02 21:00:51 szptvlfn Exp $
+# $Id: Makefile,v 1.5876 2014/09/03 21:19:08 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1147,7 +1147,6 @@ SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-vector-bytestring
 SUBDIR+=	hs-vector-space
 SUBDIR+=	hs-vector-th-unbox
-SUBDIR+=	hs-void
 SUBDIR+=	hs-vte
 SUBDIR+=	hs-vty
 SUBDIR+=	hs-wai

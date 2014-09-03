@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/05 00:03:01 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/03 21:19:08 szptvlfn Exp $
 
 DISTNAME=	MemoTrie-0.6.1
 CATEGORIES=	devel
@@ -10,5 +10,5 @@ LICENSE=	modified-bsd
 
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-void//buildlink3.mk"
+.include "../../devel/hs-void//buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
