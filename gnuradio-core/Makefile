@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/09/02 15:09:13 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/03 11:18:06 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -15,12 +15,8 @@ USE_TOOLS+=             perl gmake cmake pkg-config
 USE_LANGUAGES+=         c c++
 USE_LIBTOOL=            yes
 
-# There is an unresolved build failure, where -R for /usr/pkg/lib does
-# not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
-# an old version of pixman is found by the pkgsrc cairo.  The root
-# cause (aside from having two pixman versions installed) is ad hoc -L
-# usage in Makefile.am, without matching -R.
-
+# See  http://gnuradio.org/redmine/projects/gnuradio/wiki/BuildGuide
+#      http://gnuradio.org/redmine/projects/gnuradio/wiki/CygwinInstallMain
 do-configure:
 	(cd ${WRKSRC}; \
 	${MKDIR} build; \
@@ -34,6 +30,14 @@ do-configure:
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
 	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0 \
+	-DENABLE_DEFAULT=False \
+	-DENABLE_VOLK=True \
+	-DENABLE_GNURADIO_RUNTIME=True \
+	-DENABLE_GR_BLOCKS=True \
+	-DENABLE_GR_FFT=True \
+	-DENABLE_GR_FILTER=True \
+	-DENABLE_GR_ANALOG=True \
+	-DENABLE_GR_AUDIO=True \
 	../; \
 	)
 
@@ -60,4 +64,5 @@ BUILDLINK_DEPMETHOD.guile=	build
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+
 .include "../../mk/bsd.pkg.mk"
