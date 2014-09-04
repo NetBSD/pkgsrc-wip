@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/04 21:46:49 outpaddling Exp $
+
+SHA1 (samtools-0.1.19.tar.bz2) = ff3f4cf40612d4c2ad26e6fcbfa5f8af84cbe881
+RMD160 (samtools-0.1.19.tar.bz2) = 4e74858d3762f785452d1c9507bd127de9791894
+Size (samtools-0.1.19.tar.bz2) = 514507 bytes
