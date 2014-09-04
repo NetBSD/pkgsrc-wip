@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5880 2014/09/04 21:39:43 szptvlfn Exp $
+# $Id: Makefile,v 1.5881 2014/09/04 21:47:57 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3198,6 +3198,7 @@ SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
 SUBDIR+=	samba
 SUBDIR+=	samhain
+SUBDIR+=	samtools
 SUBDIR+=	sara
 SUBDIR+=	sarf
 SUBDIR+=	sbcl
