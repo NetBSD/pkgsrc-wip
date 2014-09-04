@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST.fec,v 1.1 2014/09/04 16:35:39 makoto Exp $
+etc/gnuradio/conf.d/gr-wxgui.conf
+include/gnuradio/fec/api.h
+include/gnuradio/fec/decode_ccsds_27_fb.h
+include/gnuradio/fec/encode_ccsds_27_bb.h
+include/gnuradio/fec/rs.h
+include/gnuradio/fec/viterbi.h
+include/gnuradio/swig/fec_swig.i
+include/gnuradio/swig/fec_swig_doc.i
+lib/libgnuradio-digital.so.${PKGVERSION}
+lib/libgnuradio-fec.so
+lib/libgnuradio-fec.so.${PKGVERSION}
+lib/pkgconfig/gnuradio-fec.pc
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fec/__init__.py
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fec/__init__.pyc
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fec/__init__.pyo
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fec/_fec_swig.so
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fec/fec_swig.py
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fec/fec_swig.pyc
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fec/fec_swig.pyo
+share/doc/gnuradio-${PKGVERSION}/README.fec
+share/gnuradio/grc/blocks/fec_block_tree.xml
+share/gnuradio/grc/blocks/fec_decode_ccsds_27_bb.xml
+share/gnuradio/grc/blocks/fec_decode_ccsds_27_fb.xml
