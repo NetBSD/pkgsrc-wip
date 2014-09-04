@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5876 2014/09/03 21:19:08 szptvlfn Exp $
+# $Id: Makefile,v 1.5877 2014/09/04 10:28:25 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2667,6 +2667,9 @@ SUBDIR+=	py-mando
 SUBDIR+=	py-mark
 SUBDIR+=	py-markovchain
 SUBDIR+=	py-mathjspy
+SUBDIR+=	py-matplotlib
+SUBDIR+=	py-matplotlib-gtk2
+SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-matplottheme
 SUBDIR+=	py-mcerp
 SUBDIR+=	py-mcint
@@ -3330,6 +3333,7 @@ SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	stfl
 SUBDIR+=	stksolver
+SUBDIR+=	stmd-git
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
 SUBDIR+=	structure
