@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/12 14:03:38 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/09/04 22:15:08 mwdavies Exp $
+bin/Xvnc
 bin/vncconfig
 bin/vncpasswd
 bin/vncserver
 bin/vncviewer
 bin/x0vncserver
+lib/xorg/modules/extensions/libvnc.la
+man/man1/Xvnc.1
 man/man1/vncconfig.1
 man/man1/vncpasswd.1
 man/man1/vncserver.1
 man/man1/vncviewer.1
 man/man1/x0vncserver.1
-share/doc/LICENCE.TXT
-share/doc/README.txt
+share/doc/${PKGNAME}/LICENCE.TXT
+share/doc/${PKGNAME}/README.txt
 share/locale/de/LC_MESSAGES/tigervnc.mo
 share/locale/fr/LC_MESSAGES/tigervnc.mo
 share/locale/pl/LC_MESSAGES/tigervnc.mo
