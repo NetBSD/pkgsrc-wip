@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/01/14 21:17:52 szptvlfn Exp $
+$NetBSD: distinfo,v 1.9 2014/09/04 21:32:55 szptvlfn Exp $
 
-SHA1 (case-insensitive-1.1.0.3.tar.gz) = bc7e42cd8f3e459b68cc4067b592f6dade5891e9
-RMD160 (case-insensitive-1.1.0.3.tar.gz) = 351ebf0ae84c4c580b910dbd3ed0828b309874c7
-Size (case-insensitive-1.1.0.3.tar.gz) = 5188 bytes
+SHA1 (case-insensitive-1.2.0.0.tar.gz) = 39607bacad6ff6d5af0f6ebe8bc98aced7c5ae5d
+RMD160 (case-insensitive-1.2.0.0.tar.gz) = c063d05ce7d1cc6b623b67b717f1e7d22352d02e
+Size (case-insensitive-1.2.0.0.tar.gz) = 5195 bytes
