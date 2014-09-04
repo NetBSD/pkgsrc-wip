@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2013/06/09 12:48:36 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/09/04 07:58:47 thomasklausner Exp $
 
-DISTNAME=	xf86-video-nouveau-0.0.10
-PKGREVISION=	1
+DISTNAME=	xf86-video-nouveau-1.0.11
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
+MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	New (or nouveau) NVidia driver for modular X.org
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-# XXX
-CFLAGS+=	-I${BUILDLINK_PREFIX.glproto}/include
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,7 +19,6 @@ CFLAGS+=	-I${BUILDLINK_PREFIX.glproto}/include
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
-# or server in wip
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
