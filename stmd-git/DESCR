@@ -1,0 +1,6 @@
+Standard markdown is a specification of markdown syntax, together
+with BSD3-licensed implementations (stmd) in C and javascript.
+
+The C implementation provides both a library and a standalone
+program stmd that converts markdown to HTML. It is written in
+standard C99 and has no library dependencies.

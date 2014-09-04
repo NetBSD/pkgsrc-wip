@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/04 10:21:07 thomasklausner Exp $
+bin/stmd
+share/doc/stmd/spec.txt
