@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/08/13 10:51:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/04 09:33:08 fhajny Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -7,7 +7,7 @@ BUILDLINK_DEPMETHOD.libuuid=	full
 
 .include "../../wip/rsyslog8/Makefile.common"
 
-PKGREVISION=		3
+PKGREVISION=		4
 COMMENT=		The enhanced syslogd for Unix
 
 #.include "options.mk"
