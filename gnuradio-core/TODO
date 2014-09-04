@@ -84,44 +84,6 @@
  ENABLE_TESTING
 *ENABLE_VOLK
 
-(with qtgui): OH no
-- ######################################################
--- # Gnuradio enabled components                         
--- ######################################################
---   * volk
---   * gnuradio-runtime
---   * gr-blocks
---   * gr-fft
---   * gr-filter
---   * gr-analog
---   * gr-audio
--- 
--- ######################################################
--- # Gnuradio disabled components                        
--- ######################################################
---   * python-support
---   * testing-support
---   * doxygen
---   * sphinx
---   * gr-ctrlport
---   * gnuradio-companion
---   * gr-fec
---   * gr-digital
---   * gr-atsc
---   * gr-comedi
---   * gr-channels
---   * gr-noaa
---   * gr-pager
---   * gr-qtgui
---   * gr-trellis
---   * gr-uhd
---   * gr-utils
---   * gr-video-sdl
---   * gr-vocoder
---   * gr-fcd
---   * gr-wavelet
---   * gr-wxgui
-
 
 to be listed in (REPLACE_PYTHON)
 lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/constellation_map_generator.py
@@ -147,4 +109,44 @@ lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/pubsub.py
 lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/scopesink_nongl.py
 lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/slider.py
 lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/waterfallsink_nongl.py
+
+
+(if ENABLE_DEFAULT=True with current other environment)
+-- ######################################################
+-- # Gnuradio enabled components                         
+-- ######################################################
+--   * python-support
+--   * testing-support
+--   * volk
+--   * doxygen
+--   * gnuradio-runtime
+--   * gr-blocks
+--   * gnuradio-companion
+--   * gr-fec
+--   * gr-fft
+--   * gr-filter
+--   * gr-analog
+--   * gr-digital
+--   * gr-atsc
+--   * gr-audio
+--   * gr-channels
+--   * gr-noaa
+--   * gr-pager
+--   * gr-trellis
+--   * gr-utils
+--   * gr-vocoder
+--   * gr-fcd
+--   * gr-wavelet
+--   * gr-wxgui
+-- 
+-- ######################################################
+-- # Gnuradio disabled components                        
+-- ######################################################
+--   * sphinx
+--   * gr-ctrlport
+--   * gr-comedi
+--   * gr-qtgui
+--   * gr-uhd
+--   * gr-video-sdl
+-- 
 
