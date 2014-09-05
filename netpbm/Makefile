@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/02 18:22:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/05 09:37:20 thomasklausner Exp $
 
 DISTNAME=	netpbm-10.67.03
 CATEGORIES=	graphics
@@ -16,7 +16,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	bash:run gmake lex pax perl
 USE_FEATURES=	snprintf
-USE_GCC_RUNTIME=yes
 
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
@@ -57,21 +56,20 @@ SUBST_SED.rgb_txt+=	-e 's,@@PREFIX@@,${PREFIX},'
 
 .include "../../mk/bsd.prefs.mk"
 
-# Fiasco fails to compile on Darwin-8.x.
-PLIST_VARS+=	fiasco
-.if !empty(MACHINE_PLATFORM:MDarwin-8.*-*)
-MAKE_ENV+=	BUILD_FIASCO=N
-.else
-PLIST.fiasco=	yes
-.endif
+# only used if NEED_RUNTIME_PATH is set, so set it unconditionally
+MAKE_FLAGS+=	NETPBMLIB_RUNTIME_PATH=${PREFIX}
 
-.if ${OPSYS} == "Darwin"
-MAKE_ENV+=	LDSHLIB=-dynamiclib
+.if ${OPSYS} == "NetBSD"
+MAKE_FLAGS+=	NEED_RUNTIME_PATH=Y
+.elif ${OPSYS} == "Darwin"
+MAKE_FLAGS+=	NETPBMLIBTYPE=dylib
+MAKE_FLAGS+=	NETPBMLIBSUFFIX=dylib
 .elif ${OPSYS} == "SunOS"
-MAKE_ENV+=	LDSHLIB=-shared
-MAKE_ENV+=	NETWORKLD="-lsocket -lnsl"
+MAKE_FLAGS+=	LDSHLIB=-shared
+MAKE_FLAGS+=	NEED_RUNTIME_PATH=Y
+MAKE_FLAGS+=	NETWORKLD="-lsocket -lnsl"
 .elif ${OS_VARIANT} == "SCOOSR5"
-MAKE_ENV+=	NETWORKLD="-lsocket -lresolv"
+MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/netpbm
@@ -79,6 +77,9 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/netpbm
 post-extract:
 	cd ${WRKSRC} && ${CP} config.mk.in config.mk
 	${ECHO} "CFLAGS_SHLIB = -fPIC" >> ${WRKSRC}/config.mk
+.if ${OPSYS} == "Darwin"
+	${ECHO} 'LDSHLIB=-dynamiclib -install_name $$(PREFIX)/lib/libnetpbm.$$(MAJ).dylib -compatibility_version $$(MAJ) -current_version $$(MAJ).$$(MIN)' >> ${WRKSRC}/config.mk
+.endif
 
 pre-install:
 	${RM} -fr ${STAGEDIR}

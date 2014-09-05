@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/01 21:59:49 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/09/05 09:37:20 thomasklausner Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -15,7 +15,7 @@ bin/ddbugtopbm
 bin/doc.url
 bin/escp2topbm
 bin/eyuvtoppm
-${PLIST.fiasco}bin/fiascotopnm
+bin/fiascotopnm
 bin/fitstopnm
 bin/fstopgm
 bin/g3topbm
@@ -236,7 +236,7 @@ bin/pnmsplit
 bin/pnmstitch
 bin/pnmtile
 bin/pnmtoddif
-${PLIST.fiasco}bin/pnmtofiasco
+bin/pnmtofiasco
 bin/pnmtofits
 bin/pnmtojbig
 bin/pnmtopalm
@@ -387,7 +387,7 @@ man/man1/cmuwmtopbm.1
 man/man1/ddbugtopbm.1
 man/man1/escp2topbm.1
 man/man1/eyuvtoppm.1
-${PLIST.fiasco}man/man1/fiascotopnm.1
+man/man1/fiascotopnm.1
 man/man1/fitstopnm.1
 man/man1/fstopgm.1
 man/man1/g3topbm.1
@@ -591,7 +591,7 @@ man/man1/pnmsmooth.1
 man/man1/pnmstitch.1
 man/man1/pnmtile.1
 man/man1/pnmtoddif.1
-${PLIST.fiasco}man/man1/pnmtofiasco.1
+man/man1/pnmtofiasco.1
 man/man1/pnmtojbig.1
 man/man1/pnmtopalm.1
 man/man1/pnmtopclxl.1
