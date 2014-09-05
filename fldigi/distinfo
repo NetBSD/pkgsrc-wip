@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.32 2014/07/19 01:36:09 makoto Exp $
+$NetBSD: distinfo,v 1.33 2014/09/05 10:39:25 makoto Exp $
 
-SHA1 (fldigi-3.21.83.tar.gz) = 59a9278dd2add4dfa56a85bb4fb324ea7d81bd8d
-RMD160 (fldigi-3.21.83.tar.gz) = 7923a1ec6f169ba9ae629a068be9cba6c944ca99
-Size (fldigi-3.21.83.tar.gz) = 2654359 bytes
+SHA1 (fldigi-3.22.0CM.tar.gz) = 97a69bb14ddcf030d61755b099bf94dc3b8f5d8a
+RMD160 (fldigi-3.22.0CM.tar.gz) = 1df6a71061df18c998f5911b1cd9c1494fa88636
+Size (fldigi-3.22.0CM.tar.gz) = 2656585 bytes
 SHA1 (patch-src_dominoex_dominoex.cxx) = 39d2d2e75497ec5264148bc4927278df5adaa84d
 SHA1 (patch-src_include_qrunner.h) = 5dac7e9fd52f10c66978a854963bd03d39a729d0
 SHA1 (patch-src_misc_configuration.cxx) = 4f1940b0ff9d51418b37d01636c1a45f9a392943
