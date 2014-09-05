@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5882 2014/09/04 21:52:11 outpaddling Exp $
+# $Id: Makefile,v 1.5883 2014/09/05 07:27:11 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3315,7 +3315,6 @@ SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	sphinx3
 SUBDIR+=	sphinxbase
-SUBDIR+=	sphinxsearch
 SUBDIR+=	sphinxtrain
 SUBDIR+=	spidermonkey185
 SUBDIR+=	spidermonkey24
