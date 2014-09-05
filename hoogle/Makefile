@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/08/16 22:25:41 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.18 2014/09/05 21:39:09 szptvlfn Exp $
 
 DISTNAME=	hoogle-4.2.29
 PKGNAME=	${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
-.include "../../wip/hs-case-insensitive/buildlink3.mk"
+.include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../wip/hs-conduit/buildlink3.mk"
 .include "../../wip/hs-haskell-src-exts/buildlink3.mk"
