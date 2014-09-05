@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/09/02 08:49:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/09/05 20:51:03 thomasklausner Exp $
 
 DISTNAME=	lgogdownloader-2.17
 CATEGORIES=	games
@@ -17,10 +17,10 @@ GIT_REPO.lgogdownloader=	git://github.com/Sude-/lgogdownloader.git
 WRKSRC=		${WRKDIR}/lgogdownloader
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake gunzip
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.boost-libs}/lib
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
-MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	MANPREFIX=${PREFIX}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 SUBST_CLASSES+=		json
 SUBST_SED.json+=	-e 's,jsoncpp/json/json.h,json/json.h,'
