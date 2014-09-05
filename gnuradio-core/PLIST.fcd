@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST.fcd,v 1.1 2014/09/05 16:36:11 makoto Exp $
+include/gnuradio/fcd/api.h
+include/gnuradio/fcd/source_c.h
+include/gnuradio/swig/fcd_swig.i
+include/gnuradio/swig/fcd_swig_doc.i
+lib/libgnuradio-fcd.so
+lib/libgnuradio-fcd.so.${PKGVERSION}
+lib/pkgconfig/gnuradio-fcd.pc
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fcd/__init__.py
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fcd/__init__.pyc
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fcd/__init__.pyo
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fcd/_fcd_swig.so
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fcd/fcd_swig.py
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fcd/fcd_swig.pyc
+lib/python${PYVERSSUFFIX}/site-packages/gnuradio/fcd/fcd_swig.pyo
+share/doc/gnuradio-${PKGVERSION}/README.fcd
+share/gnuradio/examples/fcd/fcd_apt_rx.grc
+share/gnuradio/examples/fcd/fcd_fft_wx.grc
+share/gnuradio/examples/fcd/fcd_nfm_rx
+share/gnuradio/examples/fcd/fcd_nfm_rx.grc
+share/gnuradio/grc/blocks/fcd_source_c.xml

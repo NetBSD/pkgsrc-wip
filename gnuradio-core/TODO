@@ -85,32 +85,6 @@
 *ENABLE_VOLK
 
 
-to be listed in (REPLACE_PYTHON)
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/constellation_map_generator.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/ofdm.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/ofdm_receiver.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/ofdm_sync_fixed.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/ofdm_sync_ml.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/ofdm_sync_pn.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/ofdm_sync_pnac.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/psk_constellations.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/qam_constellations.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/soft_dec_lut_gen.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/utils/__init__.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/utils/alignment.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/utils/gray_code.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/utils/mod_codes.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/digital/utils/tagged_streams.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/fftsink_nongl.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/form.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/plotter/gltext.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/powermate.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/pubsub.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/scopesink_nongl.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/slider.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/waterfallsink_nongl.py
-
-
 (if ENABLE_DEFAULT=True with current other environment)
 -- ######################################################
 -- # Gnuradio enabled components                         
@@ -119,6 +93,7 @@ lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/waterfallsink_nongl.py
 --   * testing-support
 --   * volk
 --   * doxygen
+--   * sphinx
 --   * gnuradio-runtime
 --   * gr-blocks
 --   * gnuradio-companion
@@ -133,6 +108,7 @@ lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/waterfallsink_nongl.py
 --   * gr-noaa
 --   * gr-pager
 --   * gr-trellis
+--   * gr-uhd
 --   * gr-utils
 --   * gr-vocoder
 --   * gr-fcd
@@ -142,11 +118,7 @@ lib/python${PYVERSSUFFIX}/site-packages/gnuradio/wxgui/waterfallsink_nongl.py
 -- ######################################################
 -- # Gnuradio disabled components                        
 -- ######################################################
---   * sphinx
 --   * gr-ctrlport
 --   * gr-comedi
 --   * gr-qtgui
---   * gr-uhd
 --   * gr-video-sdl
--- 
-

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.fec,v 1.1 2014/09/04 16:35:39 makoto Exp $
-etc/gnuradio/conf.d/gr-wxgui.conf
+@comment $NetBSD: PLIST.fec,v 1.2 2014/09/05 16:36:11 makoto Exp $
 include/gnuradio/fec/api.h
 include/gnuradio/fec/decode_ccsds_27_fb.h
 include/gnuradio/fec/encode_ccsds_27_bb.h
@@ -7,7 +6,6 @@ include/gnuradio/fec/rs.h
 include/gnuradio/fec/viterbi.h
 include/gnuradio/swig/fec_swig.i
 include/gnuradio/swig/fec_swig_doc.i
-lib/libgnuradio-digital.so.${PKGVERSION}
 lib/libgnuradio-fec.so
 lib/libgnuradio-fec.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-fec.pc

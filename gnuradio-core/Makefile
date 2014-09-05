@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/09/04 16:35:39 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2014/09/05 16:36:11 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -31,20 +31,11 @@ GR_ENABLE_LIST=	\
 	-DENABLE_PYTHON=True \
 	-DENABLE_GNURADIO_RUNTIME=True \
 
-# Following are not working at this moment:
-
-REPLACE_PYTHON=		volk/python/volk_modtool/cfg.py
-REPLACE_PYTHON+=	volk/python/volk_modtool/__init__.py
-
-REPLACE_PYTHON+=	gr-blocks/python/blocks/parse_file_metadata.py
-REPLACE_PYTHON+=	gr-filter/python/filter/pfb.py
-REPLACE_PYTHON+=	gnuradio-runtime/python/gnuradio/gr/pubsub.py
-REPLACE_PYTHON+=	gnuradio-runtime/python/gnuradio/gr_unittest.py
-REPLACE_PYTHON+=	gnuradio-runtime/python/gnuradio/gru/freqz.py
-REPLACE_PYTHON+=	gnuradio-runtime/python/gnuradio/gru/gnuplot_freqz.py
+#CONF_FILES= ${ETCDIR}/gnuaudio-runtime.conf hoge
+# REPLACE_PYTHON is some 600 files
+.include "files/REPLACE_PYTHON"
 
 PLIST_SRC=	${PKGDIR}/PLIST
-PLIST_SRC+=		${PKGDIR}/PLIST.python
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
@@ -52,9 +43,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST.python
 
 PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-
-# too long list of files
-# .include "SUBST.mk"
 
 # See  http://gnuradio.org/redmine/projects/gnuradio/wiki/BuildGuide
 #      http://gnuradio.org/redmine/projects/gnuradio/wiki/CygwinInstallMain
