@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/10 00:26:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/05 08:06:00 thomasklausner Exp $
 
 DISTNAME=	baresip-0.4.11
 CATEGORIES=	net audio
@@ -15,6 +15,7 @@ NO_CONFIGURE=	yes
 MAKE_FLAGS+=	LFLAGS=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libre}/lib
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	SYSROOT=${BUILDLINK_PREFIX.libre}
+MAKE_FLAGS+=	USE_STDIO=1 USE_OSS=1
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	Makefile
