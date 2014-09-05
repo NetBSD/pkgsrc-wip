@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/17 01:11:06 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/05 02:41:03 makoto Exp $
 
 DISTNAME=		uhd-3.6.0
 CATEGORIES=		ham
@@ -20,6 +20,7 @@ USE_TOOLS=		cmake
 WRKSRC=			${WRKDIR}/uhd/host
 
 REPLACE_PYTHON=	\
+        uhd-firmware/x300/bin_to_coe.py \
 	utils/uhd_images_downloader.py.in \
 	utils/usrp2_card_burner.py \
 	utils/usrp2_card_burner_gui.py \
@@ -43,26 +44,28 @@ REPLACE_PYTHON=	\
 	uhd-fpga/usrp1/toplevel/mrfm/mrfm_fft.py \
 	uhd-fpga/usrp2/sdr_lib/gen_cordic_consts.py \
 	uhd-fpga/usrp2/top/extract_usage.py \
-	uhd-fpga/usrp2/top/impactor.sh \
 	uhd-fpga/usrp2/top/python/check_inout.py \
 	uhd-fpga/usrp2/top/python/check_timing.py \
-	uhd-fpga/usrp3/top/impactor.sh \
 	uhd-fpga/usrp3/top/python/bit_to_zynq_bin.py \
 	uhd-fpga/usrp3/top/python/check_inout.py \
 	uhd-fpga/usrp3/top/python/check_timing.py \
-	uhd-fpga/usrp3/top/python/make_lvbitx.py \
+        uhd-fpga/usrp3/lib/io_port2/create-lvbitx.py \
+
 
 REPLACE_PERL=	uhd-fpga/usrp1/tb/makesine.pl
-REPLACE_BASH=	uhd-fpga/usrp2/top/impactor.sh
-REPLACE_BASH+=	uhd-fpga/usrp3/top/impactor.sh
+
+REPLACE_BASH=	\
+	uhd-fpga/usrp2/top/impactor.sh \
+	uhd-fpga/usrp3/top/impactor.sh \
+        uhd-fpga/usrp3/top/python/batch-build \
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
 
-# Move upper directory files (which will be handled at post-install)
-# to receive REPLACE_PYTHON conversion
+# Copy (too) upper directory files (which should be handled at post-install)
+# to receive REPLACE_PYTHON conversion ( otherwise above the range )
 post-patch:
 	(cd ${WRKDIR}; \
 	for i in firmware fpga images ; do \
