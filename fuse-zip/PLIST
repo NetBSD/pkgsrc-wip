@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/06 22:35:35 thomasklausner Exp $
+bin/fuse-zip
+man/man1/fuse-zip.1
+share/doc/fuse-zip/README
+share/doc/fuse-zip/changelog
