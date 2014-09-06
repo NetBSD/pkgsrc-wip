@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/09/06 09:50:48 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2014/09/06 11:22:51 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -41,7 +41,6 @@ PLIST_SRC=	${PKGDIR}/PLIST
 .include "../../lang/python/application.mk"
 .include "options.mk"
 
-PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 # See  http://gnuradio.org/redmine/projects/gnuradio/wiki/BuildGuide

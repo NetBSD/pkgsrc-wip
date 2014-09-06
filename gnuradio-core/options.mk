@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/09/06 09:50:48 makoto Exp $
+# $NetBSD: options.mk,v 1.4 2014/09/06 11:22:51 makoto Exp $
 ### Set options
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio-core
 PKG_SUPPORTED_OPTIONS=  ctrlport digital doxygen qtgui runtime utils wxgui
@@ -17,8 +17,8 @@ PKG_SUGGESTED_OPTIONS=  	 	          	             wxgui
 # not wholly checked yet
 # linux only, not checked
 #KG_SUGGESTED_OPTIONS=           comedi
-# ICE_FOUND=
-PKG_SUGGESTED_OPTIONS=	ctrlport                                              
+# ICE_FOUND= (empty) Ice-3.5.1 at http://doc.zeroc.com/display/Ice/Home
+#KG_SUGGESTED_OPTIONS=	ctrlport
 # packaged:
 PKG_SUGGESTED_OPTIONS=  digital fec wxgui
 PKG_SUGGESTED_OPTIONS=  digital fec wxgui                            uhd
@@ -30,8 +30,8 @@ PKG_SUGGESTED_OPTIONS=                                 pager
 PKG_SUGGESTED_OPTIONS=                                       trellis
 PKG_SUGGESTED_OPTIONS=                                               uhd
 PKG_SUGGESTED_OPTIONS=  fcd
-#PKG_SUGGESTED_OPTIONS=       wavelet
-#KG_SUGGESTED_OPTIONS=                  vocoder
+PKG_SUGGESTED_OPTIONS=       wavelet
+PKG_SUGGESTED_OPTIONS=                  vocoder
 PKG_SUGGESTED_OPTIONS= 				 	      utils
 #KG_SUGGESTED_OPTIONS= 				qtgui
 # no effect now (default ?)
@@ -41,6 +41,7 @@ PKG_SUGGESTED_OPTIONS= 				video-sdl
 PKG_SUGGESTED_OPTIONS= 				             audio-companion
 # this 'default' is of upstream definition
 PKG_SUGGESTED_OPTIONS=	default
+
 .include	"../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Matsc)
@@ -156,11 +157,15 @@ PLIST_SRC+=		${PKGDIR}/PLIST.video-sdl
 .if !empty(PKG_OPTIONS:Mvocoder)
 GR_ENABLE_LIST+=	-DENABLE_GR_VOCODER=True
 PLIST_SRC+=		${PKGDIR}/PLIST.vocoder
+.include 	"../../audio/alsa-lib/buildlink3.mk"
+.include 	"../../audio/jack/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mwavelet)
 GR_ENABLE_LIST+=	-DENABLE_GR_WAVELET=True
 PLIST_SRC+=		${PKGDIR}/PLIST.wavelet
+.include 	"../../audio/alsa-lib/buildlink3.mk"
+.include 	"../../audio/jack/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
 .endif
 
@@ -200,6 +205,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.trellis
 PLIST_SRC+=		${PKGDIR}/PLIST.uhd
 PLIST_SRC+=		${PKGDIR}/PLIST.utils
 PLIST_SRC+=		${PKGDIR}/PLIST.video-sdl
+PLIST_SRC+=		${PKGDIR}/PLIST.vocoder
+PLIST_SRC+=		${PKGDIR}/PLIST.wavelet
 PLIST_SRC+=		${PKGDIR}/PLIST.wxgui
 PLIST_SRC+=		${PKGDIR}/PLIST.default
 .endif
