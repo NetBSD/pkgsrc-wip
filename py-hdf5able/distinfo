@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/09/06 21:09:16 jihbed Exp $
+
+SHA1 (hdf5able-0.3.0.tar.gz) = bc6d55e51c8ca2376f15030612a83f1d0c9b013b
+RMD160 (hdf5able-0.3.0.tar.gz) = 201b9e340dff13e6cffb99a43066fb98e5b057ec
+Size (hdf5able-0.3.0.tar.gz) = 15447 bytes
