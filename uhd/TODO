@@ -1,0 +1,28 @@
+
+- Not all arguments of CMAKE command line are reviewed (do-configure:)
+
+- Install path for firmware, fpga and image are not checked
+  for being referenced from other packages
+
+(for commit log)
+[USRP-users] [UHD-3.7.2-rc1] Release Candidate Announcement
+http://lists.ettus.com/pipermail/usrp-users_lists.ettus.com/2014-July/010219.html
+
+- Following patch is applied to wip/mk/git-packages.mkIndex: mk/git-package.mk
+===================================================================
+RCS file: /cvsroot/pkgsrc-wip/wip/mk/git-package.mk,v
+retrieving revision 1.17
+diff -u -r1.17 git-package.mk
+--- mk/git-package.mk	11 Feb 2014 21:54:09 -0000	1.17
++++ mk/git-package.mk	6 Sep 2014 05:18:22 -0000
+@@ -124,7 +124,9 @@
+ 		${_GIT_CMD} clone					\
+ 			${_GIT_FLAGS}		 			\
+ 			${GIT_REPO.${_repo_}:Q};			\
+-	${_GIT_CREATE_CACHE.${_repo_}}
++	${_GIT_CREATE_CACHE.${_repo_}};					\
++	(cd ${WRKSRC};							\
++	${_GIT_CMD} checkout ${_GIT_TAG.${_repo_}})
+ .endfor
+ 
+ .endif
