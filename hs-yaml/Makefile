@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/27 21:38:24 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.11 2014/09/06 21:23:36 szptvlfn Exp $
 
 DISTNAME=	yaml-0.8.5.3
 CATEGORIES=	textproc
@@ -9,7 +9,7 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-aeson/buildlink3.mk"
-.include "../../wip/hs-attoparsec/buildlink3.mk"
+.include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../wip/hs-conduit/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../wip/hs-resourcet/buildlink3.mk"

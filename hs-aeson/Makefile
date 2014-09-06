@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/09/06 13:32:00 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.15 2014/09/06 21:23:35 szptvlfn Exp $
 
 DISTNAME=	aeson-0.7.0.6
 CATEGORIES=	converters
@@ -8,7 +8,7 @@ COMMENT=	Fast JSON parsing and encoding
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-attoparsec/buildlink3.mk"
+.include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
