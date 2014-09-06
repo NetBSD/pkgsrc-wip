@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/05/31 21:36:31 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.14 2014/09/06 13:32:00 szptvlfn Exp $
 
-DISTNAME=	aeson-0.7.0.2
+DISTNAME=	aeson-0.7.0.6
 CATEGORIES=	converters
 
 MAINTAINER=	szptvlfn@NetBSD.org
@@ -9,7 +9,6 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-attoparsec/buildlink3.mk"
-.include "../../devel/hs-blaze-builder/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
