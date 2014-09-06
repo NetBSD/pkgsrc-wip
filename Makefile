@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5886 2014/09/06 21:23:35 szptvlfn Exp $
+# $Id: Makefile,v 1.5887 2014/09/06 21:39:14 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3363,6 +3363,7 @@ SUBDIR+=	suse121_32_libgpg-error
 SUBDIR+=	suse121_libgcrypt
 SUBDIR+=	suse121_libgpg-error
 SUBDIR+=	svgalib
+SUBDIR+=	svnup
 SUBDIR+=	svrcore
 SUBDIR+=	swami
 SUBDIR+=	swarp
