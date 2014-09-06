@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.1 2014/09/06 05:23:28 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/06 15:02:46 makoto Exp $
 
-DISTNAME=		uhd-3.7.2rc1
-# not to add 'nb'
-PKGREVISION=
+DISTNAME=		003_007_002_rc1
+PKGNAME=		uhd-3.7.2rc1
 CATEGORIES=		ham
+MASTER_SITE=		https://github.com/EttusResearch/uhd/archive/
+EXTRACT_SUFX=		.zip
+DIST_SUBDIR=		uhd
+FETCH_USING=		curl
+
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
-
-GIT_REPOSITORIES=       master
-GIT_REPO.master=        git://github.com/EttusResearch/uhd.git
-GIT_MODULE.master=      uhd
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake
 
 # Please note DISTribution has many stuff under uhd/, but build itself
 # needs under host/ only. Others will be installed separately.
-WRKSRC=			${WRKDIR}/uhd/host
+WRKSRC=			${WRKDIR}/uhd-${DISTNAME}/host
 
 REPLACE_PYTHON=	\
         uhd-firmware/x300/bin_to_coe.py \
@@ -65,13 +65,19 @@ INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
 
+#do-fetch:
+#	if [ ! -d ${DISTDIR}/${DIST_SUBDIR} ]; then \
+#	mkdir -f ${DISTDIR}/${DIST_SUBDIR}; fi; 
+#	(cd      ${DISTDIR}/${DIST_SUBDIR}; \
+#	wget ${MASTER_SITE}/${DISTNAME:C/rc*//}${EXTRACT_SUFX} )
+
 # Copy (too) upper directory files (which should be handled at post-install)
 # to receive REPLACE_PYTHON conversion ( otherwise above the range )
 post-patch:
 	(cd ${WRKDIR}; \
 	for i in firmware fpga images ; do \
 	  ${MKDIR} ${WRKSRC}/uhd-$$i ;\
-	${CP} -r ${WRKDIR}/uhd/$$i/* ${WRKSRC}/uhd-$$i ;\
+	${CP} -r ${WRKDIR}/uhd-${DISTNAME}/$$i/* ${WRKSRC}/uhd-$$i ;\
 	done)
 
 do-configure:
@@ -92,12 +98,5 @@ post-install:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
 
 .include "../../mk/bsd.pkg.mk"
-_GIT_TAG.master= 003_007_002_rc1
-_GIT_FLAGS=
-# mk/git-repository.mk not to add nb
-PKGVERSION=3.7.2rc1
-# erase the string mk/git-repository.mk assigns
-PKGREVISION=
