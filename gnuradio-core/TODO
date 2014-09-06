@@ -45,44 +45,44 @@
     Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
   
 - To implement following sub function
-  Marked * are included in minumum one
+  Marked . are included in minumum one
          + are now in options.mk
 	 - are failed to build with single option
 
-*ENABLE_GR_ANALOG
- ENABLE_GR_ATSC
-*ENABLE_GR_AUDIO
-*ENABLE_GR_BLOCKS
- ENABLE_GR_CHANNELS
+.ENABLE_GR_ANALOG
++ENABLE_GR_ATSC
+.ENABLE_GR_AUDIO
+.ENABLE_GR_BLOCKS
++ENABLE_GR_CHANNELS
  ENABLE_GR_COMEDI
 -ENABLE_GR_CTRLPORT .. wants rpcmanager::get()
 +ENABLE_GR_DIGITAL
- ENABLE_GR_FCD
- ENABLE_GR_FEC
-*ENABLE_GR_FFT
-*ENABLE_GR_FILTER
++ENABLE_GR_FCD
++ENABLE_GR_FEC
+.ENABLE_GR_FFT
+.ENABLE_GR_FILTER
  ENABLE_GR_LOG
- ENABLE_GR_NOAA
- ENABLE_GR_PAGER
++ENABLE_GR_NOAA
++ENABLE_GR_PAGER
 +ENABLE_GR_QTGUI
- ENABLE_GR_TRELLIS
- ENABLE_GR_UHD
++ENABLE_GR_TRELLIS
++ENABLE_GR_UHD
  ENABLE_GR_UTILS
- ENABLE_GR_VIDEO_SDL
- ENABLE_GR_VOCODER
- ENABLE_GR_WAVELET
++ENABLE_GR_VIDEO_SDL
++ENABLE_GR_VOCODER
++ENABLE_GR_WAVELET
 +ENABLE_GR_WXGUI
 
  ENABLE_BAD_BOOST
 :ENABLE_DEFAULT
 +ENABLE_DOXYGEN
-*ENABLE_GNURADIO_RUNTIME
+.ENABLE_GNURADIO_RUNTIME
  ENABLE_PERFORMANCE_COUNTERS
 +ENABLE_PYTHON
 +ENABLE_RUNTIME
  ENABLE_SPHINX
  ENABLE_TESTING
-*ENABLE_VOLK
+.ENABLE_VOLK
 
 
 (if ENABLE_DEFAULT=True with current other environment)
@@ -112,6 +112,7 @@
 --   * gr-utils
 --   * gr-vocoder
 --   * gr-fcd
+--   * gr-video-sdl
 --   * gr-wavelet
 --   * gr-wxgui
 -- 
@@ -121,4 +122,3 @@
 --   * gr-ctrlport
 --   * gr-comedi
 --   * gr-qtgui
---   * gr-video-sdl

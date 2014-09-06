@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/08/31 14:17:43 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2014/09/06 09:50:48 makoto Exp $
 
 BUILDLINK_TREE+=	gnuradio-core
 
@@ -13,7 +13,7 @@ BUILDLINK_CPPFLAGS.gnuradio-core+=    -I${BUILDLINK_PREFIX.gnuradio-core}/includ
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
-.include "../../devel/swig/buildlink3.mk"
+.include "../../devel/swig2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/09/05 16:36:11 makoto Exp $
+# $NetBSD: options.mk,v 1.3 2014/09/06 09:50:48 makoto Exp $
 ### Set options
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio-core
 PKG_SUPPORTED_OPTIONS=  ctrlport digital doxygen qtgui runtime utils wxgui
@@ -37,52 +37,12 @@ PKG_SUGGESTED_OPTIONS= 				 	      utils
 # no effect now (default ?)
 #PKG_SUGGESTED_OPTIONS= 				      runtime
 PKG_SUGGESTED_OPTIONS=	doxygen
-# Dependency SDL_FOUND = FALSE
-#KG_SUGGESTED_OPTIONS= 				video-sdl
+PKG_SUGGESTED_OPTIONS= 				video-sdl
+PKG_SUGGESTED_OPTIONS= 				             audio-companion
+# this 'default' is of upstream definition
 PKG_SUGGESTED_OPTIONS=	default
 .include	"../../mk/bsd.options.mk"
 
-# ---------------- MINIMUM configuration -------------------
-.if !empty(PKG_OPTIONS:Mvolk)
-GR_ENABLE_LIST+=	-DENABLE_VOLK=True
-PLIST_SRC+=		${PKGDIR}/PLIST.volk
-.endif
-
-.if !empty(PKG_OPTIONS:Maudio)
-GR_ENABLE_LIST+=	-DENABLE_GR_AUDIO=True
-PLIST_SRC+=		${PKGDIR}/PLIST.audio
-.endif
-
-.if !empty(PKG_OPTIONS:Mblocks)
-GR_ENABLE_LIST+=	-DENABLE_GR_BLOCKS=True
-PLIST_SRC+=		${PKGDIR}/PLIST.blocks
-.endif
-
-.if !empty(PKG_OPTIONS:Mfft)
-GR_ENABLE_LIST+=	-DENABLE_GR_FFT=True
-PLIST_SRC+=		${PKGDIR}/PLIST.fft
-.endif
-
-.if !empty(PKG_OPTIONS:Mfilter)
-GR_ENABLE_LIST+=	-DENABLE_GR_FILTER=True
-PLIST_SRC+=		${PKGDIR}/PLIST.filter
-.endif
-
-.if !empty(PKG_OPTIONS:Mpython)
-GR_ENABLE_LIST+=	-DENABLE_PYTHON=True
-PLIST_SRC+=		${PKGDIR}/PLIST.python
-.endif
-
-.if !empty(PKG_OPTIONS:Manalog)
-GR_ENABLE_LIST+=	-DENABLE_GR_ANALOG=True
-PLIST_SRC+=		${PKGDIR}/PLIST.analog
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnuaudio_runtime)
-GR_ENABLE_LIST+=	-DENABLE_GNUAUDIO_RUNTIME=True
-PLIST_SRC+=		${PKGDIR}/PLIST.gnuaudio_runtime
-.endif
-# ---------------- MINIMUM configuration -------------------
 .if !empty(PKG_OPTIONS:Matsc)
 GR_ENABLE_LIST+=	-DENABLE_GR_ATSC=True
 GR_ENABLE_LIST+=	-DENABLE_GR_FEC=True
@@ -91,10 +51,10 @@ PLIST_SRC+=		${PKGDIR}/PLIST.fec
 .endif
 
 .if !empty(PKG_OPTIONS:Maudio-companion)
-GR_ENABLE_LIST+=	-DENABLE_AUDIO_COMPANION=True
+GR_ENABLE_LIST+=	-DENABLE_GRC=True
 PLIST_SRC+=		${PKGDIR}/PLIST.audio-companion
 .include 	"../../audio/jack/buildlink3.mk"
-.include 	"../../audio/alsa-libx/buildlink3.mk"
+.include 	"../../audio/alsa-lib/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mchannels)
@@ -171,7 +131,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.trellis
 .if !empty(PKG_OPTIONS:Muhd)
 GR_ENABLE_LIST+=	-DENABLE_GR_UHD=True
 PLIST_SRC+=		${PKGDIR}/PLIST.uhd
-.include	"../../wip/uhd-git/buildlink3.mk"
+.include	"../../wip/uhd/buildlink3.mk"
 .include	"../../devel/cppunit/buildlink3.mk"
 .include	"../../devel/libusb1/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
@@ -188,8 +148,9 @@ PLIST_SRC+=		${PKGDIR}/PLIST.utils
 .endif
 
 .if !empty(PKG_OPTIONS:Mvideo-sdl)
-GR_ENABLE_LIST+=	-DENABLE_GR_VIDEO-SDL=True
+GR_ENABLE_LIST+=	-DENABLE_GR_VIDEO_SDL=True
 PLIST_SRC+=		${PKGDIR}/PLIST.video-sdl
+.include	"../../devel/SDL/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mvocoder)
@@ -210,15 +171,19 @@ PLIST_SRC+=		${PKGDIR}/PLIST.wxgui
 .endif
 
 .if !empty(PKG_OPTIONS:Mdefault)
-# please note note +=, but =
+# please note NOT +=, but =
 GR_ENABLE_LIST=		-DENABLE_DEFAULT=True
-.include	"../../wip/uhd-git/buildlink3.mk"
+.include	"../../wip/uhd/buildlink3.mk"
+.include	"../../devel/SDL/buildlink3.mk"
 .include	"../../devel/cppunit/buildlink3.mk"
 .include	"../../devel/libusb1/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
+.include 	"../../audio/jack/buildlink3.mk"
+.include 	"../../audio/alsa-lib/buildlink3.mk"
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 PLIST_SRC+=		${PKGDIR}/PLIST.atsc
+PLIST_SRC+=		${PKGDIR}/PLIST.audio-companion
 PLIST_SRC+=		${PKGDIR}/PLIST.channels
 PLIST_SRC+=		${PKGDIR}/PLIST.comedi
 PLIST_SRC+=		${PKGDIR}/PLIST.ctrlport
@@ -234,6 +199,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.runtime
 PLIST_SRC+=		${PKGDIR}/PLIST.trellis
 PLIST_SRC+=		${PKGDIR}/PLIST.uhd
 PLIST_SRC+=		${PKGDIR}/PLIST.utils
+PLIST_SRC+=		${PKGDIR}/PLIST.video-sdl
 PLIST_SRC+=		${PKGDIR}/PLIST.wxgui
 PLIST_SRC+=		${PKGDIR}/PLIST.default
 .endif

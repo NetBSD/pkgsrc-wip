@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.default,v 1.2 2014/09/06 09:50:48 makoto Exp $
 share/doc/gnuradio-${PKGVERSION}/html/dir_000105_000085.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000105_000107.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000106_000024.html
@@ -97,5 +98,3 @@ share/gnuradio/grc/freedesktop/grc-icon-256.png
 share/gnuradio/grc/freedesktop/grc-icon-32.png
 share/gnuradio/grc/freedesktop/grc-icon-48.png
 share/gnuradio/grc/freedesktop/grc-icon-64.png
-
-

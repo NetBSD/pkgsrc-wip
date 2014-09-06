@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/09/05 16:36:11 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/06 09:50:48 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -61,6 +61,7 @@ do-configure:
 	-DGR_LIBRARY_DIR=${DESTDIR}${PREFIX}/lib \
 	-DGR_PREFSDIR=${DESTDIR}${PREFIX}/share/ \
 	${GR_ENABLE_LIST} \
+	-DSDL_INCLUDE_DIR=${PREFIX}/include/SDL \
 	../; \
 	)
 
@@ -74,7 +75,7 @@ do-install:
 .include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 #.include "../../devel/libusb1/buildlink3.mk"
-#.include "../../devel/swig2/buildlink3.mk"
+.include "../../devel/swig2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 #.include "../../devel/cppunit/buildlink3.mk"
