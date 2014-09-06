@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5887 2014/09/06 21:39:14 thomasklausner Exp $
+# $Id: Makefile,v 1.5888 2014/09/06 22:23:13 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -57,6 +57,7 @@ SUBDIR+=	SDL-intro-ru
 SUBDIR+=	SDL2
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
+SUBDIR+=	SuperCollider
 SUBDIR+=	Terminal
 SUBDIR+=	TextEdit
 SUBDIR+=	Typewriter
@@ -2586,6 +2587,7 @@ SUBDIR+=	py-gvar
 SUBDIR+=	py-hamilton
 SUBDIR+=	py-hcluster
 SUBDIR+=	py-hddm
+SUBDIR+=	py-hdf5able
 SUBDIR+=	py-hdf5storage
 SUBDIR+=	py-healpy
 SUBDIR+=	py-helio
@@ -3543,6 +3545,7 @@ SUBDIR+=	uebimiau
 SUBDIR+=	ufc
 SUBDIR+=	uffizi
 SUBDIR+=	uget
+SUBDIR+=	uhd
 SUBDIR+=	uhd-git
 SUBDIR+=	ukncbtl
 SUBDIR+=	umix
