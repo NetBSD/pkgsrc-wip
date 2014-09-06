@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2014/09/04 22:15:08 mwdavies Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/06 12:05:43 thomasklausner Exp $
 
 DISTNAME=	tigervnc-1.3.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tigervnc/}
-_XORG_SERVER=	xorg-server-1.12.4
-SITES.${_XORG_SERVER}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${_XORG_SERVER}.tar.bz2
+XORG_SERVER_FILE=	xorg-server-1.12.4
+SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tigervnc.org
+HOMEPAGE=	http://tigervnc.org/
 COMMENT=	High-performance, platform-neutral VNC client/server
 LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
+BUILD_DEPENDS+=	font-util-[0-9]*:../../fonts/font-util
 
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	msgmerge perl:run autoconf automake autoreconf pkg-config gmake bash
+USE_TOOLS+=	msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 
@@ -34,8 +37,8 @@ SUBST_VARS.hpath+=	PREFIX X11BASE
 REPLACE_PERL+=	unix/vncserver
 
 post-extract:
-	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${_XORG_SERVER}.tar.bz2
-	cp -r ${WRKDIR}/${_XORG_SERVER}/* ${WRKSRC}/unix/xserver
+	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${XORG_SERVER_FILE}.tar.bz2
+	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
 
 post-patch:
 	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver112.patch
@@ -52,7 +55,6 @@ pre-configure:
 	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} CONFIG_SHELL=${BASH}	\
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}	\
 			./configure ${XORG_CONFIGURE_ARGS}
-	
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
