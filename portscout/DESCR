@@ -1,0 +1,4 @@
+portscout is an automated system designed to search for new versions
+of software available in the FreeBSD ports tree. It is primarily
+designed for use by FreeBSD port maintainers, who can avoid trailing
+around dozens of websites looking for updates.
