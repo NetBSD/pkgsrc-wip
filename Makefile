@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5890 2014/09/06 23:12:23 thomasklausner Exp $
+# $Id: Makefile,v 1.5891 2014/09/07 08:50:59 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2300,6 +2300,7 @@ SUBDIR+=	polymul
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	popup-el-current
+SUBDIR+=	portscout
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postfix-logwatch
 SUBDIR+=	postgresql-postgis2
