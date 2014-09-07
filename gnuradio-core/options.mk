@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2014/09/06 11:22:51 makoto Exp $
+# $NetBSD: options.mk,v 1.5 2014/09/07 00:45:08 makoto Exp $
 ### Set options
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio-core
 PKG_SUPPORTED_OPTIONS=  ctrlport digital doxygen qtgui runtime utils wxgui
@@ -51,11 +51,13 @@ PLIST_SRC+=		${PKGDIR}/PLIST.atsc
 PLIST_SRC+=		${PKGDIR}/PLIST.fec
 .endif
 
+# in the configure log, it is said gnuradio-companion
 .if !empty(PKG_OPTIONS:Maudio-companion)
 GR_ENABLE_LIST+=	-DENABLE_GRC=True
 PLIST_SRC+=		${PKGDIR}/PLIST.audio-companion
 .include 	"../../audio/jack/buildlink3.mk"
 .include 	"../../audio/alsa-lib/buildlink3.mk"
+.include 	"../../x11/py-gtk2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mchannels)
