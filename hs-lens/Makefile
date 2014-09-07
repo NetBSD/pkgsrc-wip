@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/09/03 21:19:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.24 2014/09/07 21:10:04 szptvlfn Exp $
 
 DISTNAME=	lens-4.0.7
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ COMMENT=	Lenses, Folds and Traversals
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-aeson/buildlink3.mk"
+.include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../wip/hs-bifunctors/buildlink3.mk"
 .include "../../wip/hs-comonad/buildlink3.mk"
 .include "../../wip/hs-contravariant/buildlink3.mk"
