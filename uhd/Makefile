@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/07 05:13:42 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/07 05:20:01 makoto Exp $
 
 DISTNAME=		003_007_002_rc1
 #DISTNAME=		uhd-images_003.007.002-rc1
@@ -23,8 +23,8 @@ USE_TOOLS=		cmake wget pkg-config
 # needs under host/ only. Others will be installed separately.
 WRKSRC=			${WRKDIR}/uhd-${DISTNAME}/host
 
+# The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON=	\
-        uhd-firmware/x300/bin_to_coe.py \
 	utils/uhd_images_downloader.py.in \
 	utils/usrp2_card_burner.py \
 	utils/usrp2_card_burner_gui.py \
@@ -34,6 +34,7 @@ REPLACE_PYTHON=	\
 	uhd-firmware/fx2/utils/edit-gpif-b100.py \
 	uhd-firmware/fx2/utils/edit-gpif.py \
 	uhd-firmware/fx2/utils/generate_regs.py \
+        uhd-firmware/x300/bin_to_coe.py \
 	uhd-firmware/zpu/bin/bin_to_mif.py \
 	uhd-firmware/zpu/bin/bin_to_ram_macro_init.py \
 	uhd-firmware/zpu/bin/divisors.py \
