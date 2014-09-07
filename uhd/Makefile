@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/09/06 15:02:46 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/07 04:07:18 makoto Exp $
 
 DISTNAME=		003_007_002_rc1
 PKGNAME=		uhd-3.7.2rc1
 CATEGORIES=		ham
-MASTER_SITE=		https://github.com/EttusResearch/uhd/archive/
+MASTER_SITE=		https://github.com/EttusResearch/uhd/archive
 EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		uhd
 FETCH_USING=		curl
@@ -13,8 +13,10 @@ HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
 
+
+BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 USE_LANGUAGES=		c c++
-USE_TOOLS=		cmake
+USE_TOOLS=		cmake wget pkg-config
 
 # Please note DISTribution has many stuff under uhd/, but build itself
 # needs under host/ only. Others will be installed separately.
@@ -65,11 +67,13 @@ INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
 
-#do-fetch:
-#	if [ ! -d ${DISTDIR}/${DIST_SUBDIR} ]; then \
-#	mkdir -f ${DISTDIR}/${DIST_SUBDIR}; fi; 
-#	(cd      ${DISTDIR}/${DIST_SUBDIR}; \
-#	wget ${MASTER_SITE}/${DISTNAME:C/rc*//}${EXTRACT_SUFX} )
+# FETCH_USING at /etc/mk.conf doesn't good, (sorry), put work around for the target
+do-fetch:
+	if [   ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ] ; then \
+	  if [ ! -d ${DISTDIR}/${DIST_SUBDIR} ] ; then \
+	   mkdir -f ${DISTDIR}/${DIST_SUBDIR}; fi; \
+	  cd      ${DISTDIR}/${DIST_SUBDIR}; \
+	  wget --no-check-certificate --quiet ${MASTER_SITE}/${DISTNAME}${EXTRACT_SUFX} ;fi
 
 # Copy (too) upper directory files (which should be handled at post-install)
 # to receive REPLACE_PYTHON conversion ( otherwise above the range )
@@ -83,11 +87,30 @@ post-patch:
 do-configure:
 	(cd $(WRKSRC) ; \
 	cmake \
-	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
+	-DCMAKE_BUILD_WITH_INSTALL_RPATH=True \
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
+	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0 \
+	-DENABLE_LIBUHD=True \
+	-DENABLE_USB=True \
+	-DENABLE_LIBUHD=True \
+	-DENABLE_EXAMPLES=True \
+	-DENABLE_UTILS=True \
+	-DENABLE_TESTS=True \
+	-DENABLE_MANUAL=True \
+	-DENABLE_DOXYGEN=True \
+	-DENABLE_MAN_PAGES=True \
+	-DENABLE_ORC=True \
+	-DENABLE_USB=True \
+	-DENABLE_USRP1=True \
+	-DENABLE_USRP2=True \
+	-DENABLE_B100=True \
+	-DENABLE_E100=True \
+	-DENABLE_B200=True \
+	-DENABLE_X300=True \
 	.)
+# E100 above seems Linux only
 
 post-install:
 	for i in firmware fpga images ; do \
