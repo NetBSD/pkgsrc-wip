@@ -80,7 +80,7 @@
  ENABLE_PERFORMANCE_COUNTERS
 +ENABLE_PYTHON
 +ENABLE_RUNTIME
- ENABLE_SPHINX
++ENABLE_SPHINX
  ENABLE_TESTING
 .ENABLE_VOLK
 
@@ -122,3 +122,24 @@
 --   * gr-ctrlport
 --   * gr-comedi
 --   * gr-qtgui
+
+
+-- Configuring done
+WARNING: Target "gnuradio-uhd" requests linking to directory "/usr/pkg/lib".  Targets may link only to libraries.  CMake is dropping the item.
+WARNING: Target "tags_demo" requests linking to directory "/usr/pkg/lib".  Targets may link only to libraries.  CMake is dropping the item.
+WARNING: Target "gnuradio-uhd" requests linking to directory "/usr/pkg/lib".  Targets may link only to libraries.  CMake is dropping the item.
+WARNING: Target "_uhd_swig" requests linking to directory "/usr/pkg/lib".  Targets may link only to libraries.  CMake is dropping the item.
+-- Generating done
+
+
+z87@makoto 19:11:34/140907(..work/gnuradio-3.7.2.1)% cat -n ./gr-uhd/examples/c++/CMakeLists.txt |sed -n 34,38p
+    34  ########################################################################
+    35  # Build executable
+    36  ########################################################################
+    37  add_executable(tags_demo tags_demo.cc)
+    38  target_link_libraries(tags_demo gnuradio-uhd)
+
+z87@makoto 19:13:07/140907(..work/gnuradio-3.7.2.1)% cat -n ./gr-uhd/lib/CMakeLists.txt |sed -n 76,78p
+    76  add_library(gnuradio-uhd SHARED ${gr_uhd_sources})
+    77  target_link_libraries(gnuradio-uhd ${uhd_libs})
+    78  GR_LIBRARY_FOO(gnuradio-uhd RUNTIME_COMPONENT "uhd_runtime" DEVEL_COMPONENT "uhd_devel")

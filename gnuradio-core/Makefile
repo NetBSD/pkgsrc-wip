@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/09/06 11:22:51 makoto Exp $
+# $NetBSD: Makefile,v 1.12 2014/09/07 10:50:07 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -55,12 +55,14 @@ do-configure:
 	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2 \
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2 \
-	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
+	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE \
 	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0 \
 	-DGR_LIBRARY_DIR=${DESTDIR}${PREFIX}/lib \
 	-DGR_PREFSDIR=${DESTDIR}${PREFIX}/share/ \
-	${GR_ENABLE_LIST} \
 	-DSDL_INCLUDE_DIR=${PREFIX}/include/SDL \
+	-DUHD_LIBRARIES=${PREFIX}/lib/libuhd.so \
+	-DUHD_INCLUDE_DIRS=${PREFIX}/include \
+	${GR_ENABLE_LIST} \
 	../; \
 	)
 
@@ -73,15 +75,12 @@ do-install:
 
 .include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
-#.include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/swig2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-#.include "../../devel/cppunit/buildlink3.mk"
 #BUILDLINK_DEPMETHOD.guile=	build
 #.include "../../lang/guile/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
-#.include "../../math/gsl/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
