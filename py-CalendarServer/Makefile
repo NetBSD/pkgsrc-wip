@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/05/09 07:38:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/07 21:08:09 thomasklausner Exp $
 
-DISTNAME=	CalendarServer-4.2
+DISTNAME=	CalendarServer-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time net
 MASTER_SITES=	# manually packaged from release branch in SVN
@@ -46,10 +46,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-psutil
 USE_LANGUAGES=	c
 USE_TOOLS+=	bash:run
 
-EGG_NAME=	Calendar_and_Contacts_Server-4.2._r11789M_
+EGG_NAME=	Calendar_and_Contacts_Server-5.2._r13943M_
 
 REPLACE_BASH+=	bin/caldavd
 
+REPLACE_PYTHON+=	calendarserver/tools/agent.py
 REPLACE_PYTHON+=	calendarserver/tools/ampnotifications.py
 REPLACE_PYTHON+=	calendarserver/tools/anonymize.py
 REPLACE_PYTHON+=	calendarserver/tools/backup.py
@@ -59,9 +60,8 @@ REPLACE_PYTHON+=	calendarserver/tools/calverify_diff.py
 REPLACE_PYTHON+=	calendarserver/tools/changeip_calendar.py
 REPLACE_PYTHON+=	calendarserver/tools/config.py
 REPLACE_PYTHON+=	calendarserver/tools/dbinspect.py
-REPLACE_PYTHON+=	calendarserver/tools/doublequotefix.py
+REPLACE_PYTHON+=	calendarserver/tools/dkimtool.py
 REPLACE_PYTHON+=	calendarserver/tools/export.py
-REPLACE_PYTHON+=	calendarserver/tools/fixcalendardata.py
 REPLACE_PYTHON+=	calendarserver/tools/gateway.py
 REPLACE_PYTHON+=	calendarserver/tools/loadaugmentdb.py
 REPLACE_PYTHON+=	calendarserver/tools/managepostgres.py
@@ -77,12 +77,7 @@ REPLACE_PYTHON+=	calendarserver/tools/shell/test/test_cmd.py
 REPLACE_PYTHON+=	calendarserver/tools/shell/test/test_vfs.py
 REPLACE_PYTHON+=	calendarserver/tools/upgrade.py
 REPLACE_PYTHON+=	calendarserver/tools/validcalendardata.py
-REPLACE_PYTHON+=	calendarserver/tools/warmup.py
-REPLACE_PYTHON+=	contrib/certupdate/calendarcertupdate.py
-REPLACE_PYTHON+=	contrib/migration/calendarcommonextra.py
-REPLACE_PYTHON+=	contrib/migration/calendardemotion.py
-REPLACE_PYTHON+=	contrib/migration/calendarmigrator.py
-REPLACE_PYTHON+=	contrib/migration/calendarpromotion.py
+REPLACE_PYTHON+=	calendarserver/tools/workitems.py
 REPLACE_PYTHON+=	contrib/performance/stackedbar.py
 REPLACE_PYTHON+=	twext/python/memcacheclient.py
 REPLACE_PYTHON+=	twext/python/test/pullpipe.py
