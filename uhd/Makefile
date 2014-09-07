@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/09/07 05:20:01 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/07 09:43:34 makoto Exp $
 
 DISTNAME=		003_007_002_rc1
 #DISTNAME=		uhd-images_003.007.002-rc1
@@ -69,6 +69,8 @@ INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
 
+# is it default ? and redundent ?
+PLIST_SRC=	${PKGDIR}/PLIST
 .include "options.mk"
 # FETCH_USING at /etc/mk.conf doesn't good, (sorry), put work around for the target
 do-fetch:
