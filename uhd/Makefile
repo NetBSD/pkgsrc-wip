@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2014/09/07 04:07:18 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/07 05:13:42 makoto Exp $
 
 DISTNAME=		003_007_002_rc1
+#DISTNAME=		uhd-images_003.007.002-rc1
 PKGNAME=		uhd-3.7.2rc1
 CATEGORIES=		ham
 MASTER_SITE=		https://github.com/EttusResearch/uhd/archive
+#MASTER_SITE+=		http://files.ettus.com/binaries/maint_images/archive
 EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		uhd
 FETCH_USING=		curl
@@ -12,7 +14,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 COMMENT=		USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=		gnu-gpl-v2
-
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 USE_LANGUAGES=		c c++
@@ -67,6 +68,7 @@ INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
 
+.include "options.mk"
 # FETCH_USING at /etc/mk.conf doesn't good, (sorry), put work around for the target
 do-fetch:
 	if [   ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ] ; then \
@@ -112,10 +114,14 @@ do-configure:
 	.)
 # E100 above seems Linux only
 
+# (1) move back the files to original location after REPLACE_PYTHON handled
+# (2) suppress warning at intallation, "non executable files get +x bit set".
 post-install:
 	for i in firmware fpga images ; do \
 	  ${CP} -r ${WRKSRC}/uhd-$$i/* ${DESTDIR}${PREFIX}/share/uhd/$$i/;\
-	done	
+	  ${FIND} ${DESTDIR}${PREFIX}/share/uhd/$$i -type f -exec \
+	          ${CHMOD} -x '{}' \; ;\
+		done	
 
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
