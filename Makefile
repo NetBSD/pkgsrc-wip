@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5894 2014/09/08 20:31:48 thomasklausner Exp $
+# $Id: Makefile,v 1.5895 2014/09/08 21:26:13 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1783,7 +1783,6 @@ SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
 SUBDIR+=	netlogo
-SUBDIR+=	netpbm
 SUBDIR+=	netrik
 SUBDIR+=	netwib
 SUBDIR+=	netwmpager
