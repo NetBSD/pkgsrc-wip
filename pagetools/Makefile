@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/09/08 15:12:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/08 21:24:08 thomasklausner Exp $
 
 DISTNAME=	pagetools-0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pagetools/}
 
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.netpbm}/lib
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.netpbm}/include/netpbm
 
 INSTALLATION_DIRS+=	bin
 

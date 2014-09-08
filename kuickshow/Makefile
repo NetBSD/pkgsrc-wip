@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/01 21:57:43 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/09/08 21:24:08 thomasklausner Exp $
 #
 
 DISTNAME=	kuickshow-0.9.1-kde4.4.0
 PKGNAME=	${DISTNAME:S/-kde/./}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=extragear/}
 EXTRACT_SUFX=	.tar.bz2
