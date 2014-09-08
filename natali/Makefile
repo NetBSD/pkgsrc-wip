@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 18:15:31 asau Exp $
+# $NetBSD: Makefile,v 1.11 2014/09/08 12:37:30 thomasklausner Exp $
 
 DISTNAME=	natali-1.25
 PKGREVISION=	1
@@ -24,5 +24,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pap.h ${DESTDIR}/${PREFIX}/include/at
 	${INSTALL_DATA} ${WRKSRC}/libnatali.a ${DESTDIR}/${PREFIX}/lib
 
-.include "../../net/netatalk/buildlink3.mk"
+.include "../../net/netatalk22/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
