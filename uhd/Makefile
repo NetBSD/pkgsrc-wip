@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/09/07 09:43:34 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2014/09/08 04:29:33 makoto Exp $
 
 DISTNAME=		003_007_002_rc1
 #DISTNAME=		uhd-images_003.007.002-rc1
@@ -8,7 +8,6 @@ MASTER_SITE=		https://github.com/EttusResearch/uhd/archive
 #MASTER_SITE+=		http://files.ettus.com/binaries/maint_images/archive
 EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		uhd
-FETCH_USING=		curl
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
@@ -19,8 +18,8 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake wget pkg-config
 
-# Please note DISTribution has many stuff under uhd/, but build itself
-# needs under host/ only. Others will be installed separately.
+# Please note distribution has many stuff under uhd/, but build itself
+# needs under host/ only.  Those uhd/ stuff will be handled post-{patch,install}:
 WRKSRC=			${WRKDIR}/uhd-${DISTNAME}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
@@ -56,7 +55,6 @@ REPLACE_PYTHON=	\
 	uhd-fpga/usrp3/top/python/check_timing.py \
         uhd-fpga/usrp3/lib/io_port2/create-lvbitx.py \
 
-
 REPLACE_PERL=	uhd-fpga/usrp1/tb/makesine.pl
 
 REPLACE_BASH=	\
@@ -69,6 +67,13 @@ INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
 
+SUBST_CLASSES+=		man
+SUBST_MESSAGE.man=	Convert share/man to man
+SUBST_STAGE.man=	pre-configure
+SUBST_FILES.man=	docs/CMakeLists.txt
+SUBST_SED.man=		-e '/UHD_INSTALL/s,$${PKG_MAN_DIR},${PREFIX}/${PKGMANDIR}/man1,'
+# UHD_INSTALL(FILES ${gzfile} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
+
 # is it default ? and redundent ?
 PLIST_SRC=	${PKGDIR}/PLIST
 .include "options.mk"
@@ -80,7 +85,7 @@ do-fetch:
 	  cd      ${DISTDIR}/${DIST_SUBDIR}; \
 	  wget --no-check-certificate --quiet ${MASTER_SITE}/${DISTNAME}${EXTRACT_SUFX} ;fi
 
-# Copy (too) upper directory files (which should be handled at post-install)
+# Copy (beyond) upper directory files (which should be handled at post-install)
 # to receive REPLACE_PYTHON conversion ( otherwise above the range )
 post-patch:
 	(cd ${WRKDIR}; \
@@ -98,8 +103,6 @@ do-configure:
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
 	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0 \
 	-DENABLE_LIBUHD=True \
-	-DENABLE_USB=True \
-	-DENABLE_LIBUHD=True \
 	-DENABLE_EXAMPLES=True \
 	-DENABLE_UTILS=True \
 	-DENABLE_TESTS=True \
@@ -111,14 +114,17 @@ do-configure:
 	-DENABLE_USRP1=True \
 	-DENABLE_USRP2=True \
 	-DENABLE_B100=True \
-	-DENABLE_E100=True \
-	-DENABLE_B200=True \
 	-DENABLE_X300=True \
+	-DENABLE_B200=True \
+	-DENABLE_E100=True \
 	.)
-# E100 above seems Linux only
+# E100 above is Linux only
 
 # (1) move back the files to original location after REPLACE_PYTHON handled
 # (2) suppress warning at intallation, "non executable files get +x bit set".
+#
+#  Converting ${CP} into ${INTALL_DATA_DIR} and ${INSTALL_DATA} as pkglint
+#  flags are not easy, sorry for that.
 post-install:
 	for i in firmware fpga images ; do \
 	  ${CP} -r ${WRKSRC}/uhd-$$i/* ${DESTDIR}${PREFIX}/share/uhd/$$i/;\

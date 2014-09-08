@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.manual,v 1.2 2014/09/08 04:29:33 makoto Exp $
 share/doc/uhd/manual/html/build.html
 share/doc/uhd/manual/html/calibration.html
 share/doc/uhd/manual/html/coding.html
@@ -45,5 +46,3 @@ share/doc/uhd/manual/rst/usrp_b200.rst
 share/doc/uhd/manual/rst/usrp_e1x0.rst
 share/doc/uhd/manual/rst/usrp_x3x0.rst
 share/doc/uhd/manual/rst/usrp_x3x0_config.rst
-
-

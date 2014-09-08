@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/09/07 09:43:34 makoto Exp $
+# $NetBSD: options.mk,v 1.3 2014/09/08 04:29:33 makoto Exp $
 ### Set options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uhd
 PKG_SUPPORTED_OPTIONS=	doxygen manual
@@ -15,4 +15,3 @@ PLIST_SRC+=		${PKGDIR}/PLIST.doxygen
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 PLIST_SRC+=		${PKGDIR}/PLIST.manual
 .endif
-
