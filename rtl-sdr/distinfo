@@ -1,3 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/18 13:33:23 makoto Exp $
+$NetBSD: distinfo,v 1.2 2014/09/08 14:00:29 makoto Exp $
 
+SHA1 (rtl-sdr/v0.5.3.zip) = 305d286a440d9feb02ee9f929200aab9cbfaccb5
+RMD160 (rtl-sdr/v0.5.3.zip) = d314ce3515aa25c1fe1c6dc5686fff700f247641
+Size (rtl-sdr/v0.5.3.zip) = 148189 bytes
 SHA1 (patch-src_rtl__fm_c) = 5e37c1491a51778861f4d6a4ba373c9f76f47f0d
