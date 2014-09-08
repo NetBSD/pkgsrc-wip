@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/08 14:17:23 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/08 15:07:35 makoto Exp $
 #
 DISTNAME=		v0.5.3
 PKGNAME=		rtl-sdr-${DISTNAME:C/v//}
@@ -18,7 +18,7 @@ DIST_SUBDIR=		rtl-sdr
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		cmake gmake
 USE_CMAKE=		yes
-WRKSRC=			${WRKDIR}/librtlsdr
+WRKSRC=			${WRKDIR}/librtlsdr-${DISTNAME:C/v//}
 AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		destdir
@@ -27,17 +27,15 @@ SUBST_FILES.destdir=	build/cmake_install.cmake
 SUBST_STAGE.destdir=	pre-install
 SUBST_SED.destdir=	-e 's|\$${CMAKE_INSTALL_PREFIX}|${DESTDIR}\$${CMAKE_INSTALL_PREFIX}|'
 
-do-configure:
-	(cd ${WRKSRC}; \
-	${MKDIR} build; \
-	cd build; \
-	cmake \
-	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
-	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
-	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
-	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
-	../; \
-	)
+CONFIGURE_DIRS=		${WRKSRC}/build
+CONFIGURE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
+CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CONFIGURE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib
+CONFIGURE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE
+CMAKE_ARG_PATH= 	../
+
+pre-configure:
+	(cd ${WRKSRC}; ${MKDIR} build;)
 
 do-build:
 	(cd ${WRKSRC}/build; ${GMAKE})
