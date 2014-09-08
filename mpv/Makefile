@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/08/20 00:36:11 leot1990 Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/08 11:32:16 thomasklausner Exp $
 
-DISTNAME=	mpv-0.5.0
+DISTNAME=	mpv-0.5.1
 CATEGORIES=	multimedia
 MASTER_SITES=	-https://github.com/mpv-player/mpv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
@@ -10,23 +10,26 @@ COMMENT=	Video player based on MPlayer and mplayer2
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+# ${WRKSRC}/bootstrap.py mentions needed version
+BUILD_DEPENDS+=	waf>=1.7.16:../../devel/waf
 
-# XXX: MANDIR variable is ignored and so it should be specified via --mandir
 WAF_ENV=	PATH=${PATH:Q} CC=${CC:Q} CXX=${CXX:Q} PREFIX=${PREFIX} \
-		MANDIR=${PREFIX}/${PKGMANDIR} CFLAGS=${CFLAGS:Q} \
+		CFLAGS=${CFLAGS:Q} \
 		CXXFLAGS=${CXXFLAGS:Q} LINKFLAGS=${LDFLAGS:Q} DESTDIR=${DESTDIR}
 WAF_ARGS=	--mandir=${PREFIX}/${PKGMANDIR}
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
-REPLACE_PYTHON=	waf
 USE_TOOLS+=	perl pkg-config
 
 .if defined(MAKE_JOBS)
 WAF_ENV+=	JOBS=${MAKE_JOBS:Q}
 .endif
 
+MAKE_DIRS=		${PKG_SYSCONFDIR}/mpv
+INSTALLATION_DIRS=	share/examples/mpv
+CONF_FILES+=		share/examples/mpv/encoding-profiles.conf ${PKG_SYSCONFDIR}/mpv/encoding-profiles.conf
 
 SUBST_CLASSES+=		audio
 SUBST_SED.audio+=	-e "s,/dev/dsp,${DEVOSSAUDIO},"
@@ -34,16 +37,8 @@ SUBST_FILES.audio+=	stream/audio_in.c waftools/checks/custom.py wscript
 SUBST_STAGE.audio=	pre-configure
 SUBST_MESSAGE.audio=	Fixing path to audio device.
 
-#SUBST_CLASSES+=	etc
-#SUBST_SED.etc+=	-e "s,etc/,share/examples/mpv,"
-#SUBST_FILES.etc+=	wscript_build.py
-#SUBST_STAGE.etc=	post-configure
-#SUBST_MESSAGE.etc=	Fixing configuration file installation path.
-
 post-extract:
-	#cd ${WRKSRC} && ${PYTHONBIN} bootstrap.py
-	cp ${FILESDIR}/waf ${WRKSRC}
-	chmod 555 ${WRKSRC}/waf
+	cp ${PREFIX}/bin/waf ${WRKSRC}
 
 do-configure:
 	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} ${WAF_CONFIGURE_ARGS} configure
@@ -53,6 +48,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && env ${WAF_ENV} ./waf ${WAF_ARGS} install
+	cd ${DESTDIR}${PREFIX} && ${MV} etc/mpv/encoding-profiles.conf share/examples/mpv
 
 .include "options.mk"
 .include "../../devel/zlib/buildlink3.mk"

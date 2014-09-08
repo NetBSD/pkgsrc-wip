@@ -1,3 +1,0 @@
-* make waf a DISTFILE instead of files/waf
-* use pkgsrc config file framework
-* find out why playing videos on NetBSD is too slow and audio is distorted
