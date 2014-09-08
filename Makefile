@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5892 2014/09/07 21:10:01 szptvlfn Exp $
+# $Id: Makefile,v 1.5893 2014/09/08 11:40:15 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1691,7 +1691,6 @@ SUBDIR+=	mplus-bitmap-fonts
 SUBDIR+=	mplus-outline-fonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
-SUBDIR+=	mpv
 SUBDIR+=	msworkbench
 SUBDIR+=	mtd-utils
 SUBDIR+=	mtf
