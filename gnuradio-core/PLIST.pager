@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pager,v 1.2 2014/09/06 09:50:48 makoto Exp $
+@comment $NetBSD: PLIST.pager,v 1.3 2014/09/09 07:48:44 makoto Exp $
 bin/usrp_flex
 bin/usrp_flex_all
 bin/usrp_flex_band
@@ -13,19 +13,19 @@ include/gnuradio/swig/pager_swig_doc.i
 lib/libgnuradio-pager.so
 lib/libgnuradio-pager.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-pager.pc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/__init__.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/__init__.pyc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/__init__.pyo
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/_pager_swig.so
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/flex_demod.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/flex_demod.pyc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/flex_demod.pyo
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/pager_swig.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/pager_swig.pyc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/pager_swig.pyo
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/pager_utils.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/pager_utils.pyc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/pager/pager_utils.pyo
+${PYSITELIB}/gnuradio/pager/__init__.py
+${PYSITELIB}/gnuradio/pager/__init__.pyc
+${PYSITELIB}/gnuradio/pager/__init__.pyo
+${PYSITELIB}/gnuradio/pager/_pager_swig.so
+${PYSITELIB}/gnuradio/pager/flex_demod.py
+${PYSITELIB}/gnuradio/pager/flex_demod.pyc
+${PYSITELIB}/gnuradio/pager/flex_demod.pyo
+${PYSITELIB}/gnuradio/pager/pager_swig.py
+${PYSITELIB}/gnuradio/pager/pager_swig.pyc
+${PYSITELIB}/gnuradio/pager/pager_swig.pyo
+${PYSITELIB}/gnuradio/pager/pager_utils.py
+${PYSITELIB}/gnuradio/pager/pager_utils.pyc
+${PYSITELIB}/gnuradio/pager/pager_utils.pyo
 share/gnuradio/grc/blocks/pager_flex_deinterleave.xml
 share/gnuradio/grc/blocks/pager_flex_sync.xml
 share/gnuradio/grc/blocks/pager_slicer_fb.xml

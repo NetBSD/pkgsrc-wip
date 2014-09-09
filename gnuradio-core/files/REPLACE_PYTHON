@@ -55,7 +55,6 @@ REPLACE_PYTHON = \
 	grc/gui/ActionHandler.py \
 	grc/gui/Block.py \
 	gr-filter/python/filter/qa_hilbert.py \
-	gr-filter/python/filter/qa_adaptive_fir_filter.py \
 	gr-filter/python/filter/qa_pfb_arb_resampler.py \
 	gr-filter/python/filter/qa_filter_delay_fc.py \
 	gr-filter/python/filter/qa_rational_resampler.py \
@@ -363,7 +362,6 @@ REPLACE_PYTHON = \
 	gnuradio-runtime/python/gnuradio/gru/gnuplot_freqz.py \
 	gnuradio-runtime/python/gnuradio/gr/exceptions.py \
 	gnuradio-runtime/python/gnuradio/gr/qa_feval.py \
-	gnuradio-runtime/python/gnuradio/gr/prefs.py \
 	gnuradio-runtime/python/gnuradio/gr/gr_threading.py \
 	gnuradio-runtime/python/gnuradio/gr/tag_utils.py \
 	gnuradio-runtime/python/gnuradio/gr/gr_threading_23.py \
@@ -425,7 +423,6 @@ REPLACE_PYTHON = \
 	gr-blocks/python/blocks/qa_head.py \
 	gr-blocks/python/blocks/qa_unpack_k_bits.py \
 	gr-blocks/python/blocks/qa_stream_to_tagged_stream.py \
-	gr-blocks/python/blocks/qa_hier_block2.py \
 	gr-blocks/python/blocks/qa_repack_bits_bb.py \
 	gr-blocks/python/blocks/qa_tag_gate.py \
 	gr-blocks/python/blocks/qa_endian_swap.py \
@@ -443,7 +440,6 @@ REPLACE_PYTHON = \
 	gr-blocks/python/blocks/qa_conjugate.py \
 	gr-blocks/python/blocks/qa_threshold.py \
 	gr-blocks/python/blocks/qa_delay.py \
-	gr-blocks/python/blocks/qa_cpp_py_binding_set.py \
 	gr-blocks/python/blocks/qa_udp_source_sink.py \
 	gr-blocks/python/blocks/qa_repeat.py \
 	gr-blocks/python/blocks/qa_multiply_conjugate.py \
@@ -461,7 +457,6 @@ REPLACE_PYTHON = \
 	gr-blocks/python/blocks/qa_keep_one_in_n.py \
 	gr-blocks/python/blocks/qa_pack_k_bits.py \
 	gr-blocks/python/blocks/qa_peak_detector2.py \
-	gr-blocks/python/blocks/qa_cpp_py_binding.py \
 	gr-blocks/python/blocks/qa_message_tags.py \
 	gr-blocks/python/blocks/qa_vco.py \
 	gr-blocks/python/blocks/qa_type_conversions.py \
@@ -620,4 +615,6 @@ REPLACE_PYTHON = \
 	gr-atsc/python/atsc/atsc_rx.py \
 	gr-atsc/python/atsc/__init__.py \
 	gr-atsc/python/atsc/qa_atsc.py \
-	gr-atsc/lib/gen_encoder.py
+	gr-atsc/lib/gen_encoder.py \
+        gr-filter/freq_xlating_fft_filter.py \
+	gnuradio-runtime/python/digital/packet_utils.py

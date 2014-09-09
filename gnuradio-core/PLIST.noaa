@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.noaa,v 1.1 2014/09/05 16:36:11 makoto Exp $
+@comment $NetBSD: PLIST.noaa,v 1.2 2014/09/09 07:48:44 makoto Exp $
 include/gnuradio/noaa/api.h
 include/gnuradio/noaa/hrpt.h
 include/gnuradio/noaa/hrpt_decoder.h
@@ -9,13 +9,13 @@ include/gnuradio/swig/noaa_swig_doc.i
 lib/libgnuradio-noaa.so
 lib/libgnuradio-noaa.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-noaa.pc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/noaa/__init__.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/noaa/__init__.pyc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/noaa/__init__.pyo
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/noaa/_noaa_swig.so
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/noaa/noaa_swig.py
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/noaa/noaa_swig.pyc
-lib/python${PYVERSSUFFIX}/site-packages/gnuradio/noaa/noaa_swig.pyo
+${PYSITELIB}/gnuradio/noaa/__init__.py
+${PYSITELIB}/gnuradio/noaa/__init__.pyc
+${PYSITELIB}/gnuradio/noaa/__init__.pyo
+${PYSITELIB}/gnuradio/noaa/_noaa_swig.so
+${PYSITELIB}/gnuradio/noaa/noaa_swig.py
+${PYSITELIB}/gnuradio/noaa/noaa_swig.pyc
+${PYSITELIB}/gnuradio/noaa/noaa_swig.pyo
 share/gnuradio/examples/noaa/file_rx_hrpt.grc
 share/gnuradio/examples/noaa/hrpt_decode.grc
 share/gnuradio/examples/noaa/hrpt_demod.grc

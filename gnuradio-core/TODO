@@ -143,3 +143,39 @@ z87@makoto 19:13:07/140907(..work/gnuradio-3.7.2.1)% cat -n ./gr-uhd/lib/CMakeLi
     76  add_library(gnuradio-uhd SHARED ${gr_uhd_sources})
     77  target_link_libraries(gnuradio-uhd ${uhd_libs})
     78  GR_LIBRARY_FOO(gnuradio-uhd RUNTIME_COMPONENT "uhd_runtime" DEVEL_COMPONENT "uhd_devel")
+
+
+
+
+
+=> Checking for non-existent script interpreters in gnuradio-core-3.7.5
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/bercurve_generator.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/bitflip.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/capillary_threaded_decoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/capillary_threaded_encoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_async_encoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_decoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_encoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_tagged_decoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_tagged_encoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/fec_test.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/threaded_decoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/threaded_encoder.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/filter/freq_xlating_fft_filter.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/gr/packet_utils.py" is not allowed.
+
+
+Following module can be easily separeted package (no overwrap on PLIST)
+atsc
+channels
+ctlport
+fcd
+fec
+noaa
+pager
+runtime
+trellis
+uhd
+utils
+wxgui
+
