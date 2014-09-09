@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/02 21:55:42 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/09/09 21:16:07 szptvlfn Exp $
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/HShint-${PKGVERSION}.o
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Annotations.hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Annotations.p_hi
@@ -48,3 +48,24 @@ lib/hint-${PKGVERSION}/${HASKELL_VERSION}/libHShint-${PKGVERSION}.a
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/libHShint-${PKGVERSION}_p.a
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/hint-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/Language-Haskell-Interpreter-Extension.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/Language-Haskell-Interpreter-GHC-Unsafe.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/Language-Haskell-Interpreter-GHC.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/Language-Haskell-Interpreter-Unsafe.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/Language-Haskell-Interpreter.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/hint.haddock
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/mini_Language-Haskell-Interpreter-Extension.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/mini_Language-Haskell-Interpreter-GHC-Unsafe.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/mini_Language-Haskell-Interpreter-GHC.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/mini_Language-Haskell-Interpreter-Unsafe.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/mini_Language-Haskell-Interpreter.html
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/hint-${PKGVERSION}/html/synopsis.png
