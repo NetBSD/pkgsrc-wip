@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/12/03 22:50:30 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.2 2014/09/10 09:01:41 thomasklausner Exp $
 
 DISTNAME=	yaupspe-r38
+PKGNAME=	${DISTNAME:S/-r/-/}
 CATEGORIES=	emulators
 MASTER_SITES=	http://yaupspe.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
