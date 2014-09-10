@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/10 01:49:06 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/10 01:50:31 makoto Exp $
 
 DISTNAME=		gr-osmosdr-0.1.4
 CATEGORIES=		ham
@@ -25,15 +25,11 @@ USE_CMAKE=		yes
 # /usr/include/g++/cmath:111:11: error: '::acos' has not been declared
 # CXXFLAGS+=	-I/usr/include/g++/tr1
 
-
-# Please note DISTribution has many stuff under uhd/, but build itself
-# needs under host/ only. Others will be installed separately.
 WRKSRC=			${WRKDIR}/gr-osmosdr
 
 # Supress warning for developer
 CMAKE_ARGS+=	-Wno-dev
 # --   * Ettus USRP Devices
-#MAKE_ARGS+=	-DGNURADIO_UHD_LIBRARIES=${PREFIX}/lib
 CMAKE_ARGS+=	-DGNURADIO_UHD_INCLUDE_DIRS=${PREFIX}/include/uhd
 
 .include "../../wip/mk/git-package.mk"
