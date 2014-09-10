@@ -1,0 +1,26 @@
+(How to build)
+http://sdr.osmocom.org/trac/wiki/GrOsmoSDR#Buildprocess
+
+(current configure result)
+-- ######################################################
+-- # Gnuradio enabled components                         
+-- ######################################################
+--   * Python support
+--   * IQ File Source
+--   * Osmocom RTLSDR
+--   * RTLSDR TCP Client
+--   * Ettus USRP Devices
+--   * RFSPACE Receivers
+-- 
+-- ######################################################
+-- # Gnuradio disabled components                        
+-- ######################################################
+--   * Osmocom IQ Imbalance Correction
+--   * sysmocom OsmoSDR
+--   * FUNcube Dongle
+--   * FUNcube Dongle Pro+
+--   * Osmocom MiriSDR
+--   * HackRF Jawbreaker
+--   * nuand bladeRF
+--   * AIRSPY Receiver
+
