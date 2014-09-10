@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/09/28 21:24:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/10 09:12:45 thomasklausner Exp $
 
-DISTNAME=		debugger-git
+DISTNAME=		debugger-git-0.0
 CATEGORIES=		devel
 MASTER_SITES=		https://github.com/path64/debugger
 

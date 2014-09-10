@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:44 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/09/10 09:12:46 thomasklausner Exp $
 
-DISTNAME=	rpki-svn
-PKGNAME=	rpki-svn-
+DISTNAME=	rpki-0.0
 CATEGORIES=	net security
 MASTER_SITES=	# not defined
 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/09/30 20:34:58 midar Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/09/10 09:12:45 thomasklausner Exp $
 
-DISTNAME=	objfw-git
+DISTNAME=	objfw-0.0
 CATEGORIES=	devel
 
 COMMENT=	Portable, lightweight framework for the Objective-C language

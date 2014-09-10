@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/07/13 17:27:01 genolopolis Exp $
-#
+# $NetBSD: Makefile,v 1.6 2014/09/10 09:12:45 thomasklausner Exp $
 
 DISTNAME=	stone_soup-0.12.2-nodeps
-PKGNAME=	dungeon-crawl-stone-soup
+PKGNAME=	dungeon-crawl-stone-soup-0.12.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crawl-ref/}
 EXTRACT_SUFX=	.tar.xz

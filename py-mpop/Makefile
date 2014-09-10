@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/12/05 15:22:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/10 09:12:46 thomasklausner Exp $
 
 DISTNAME=	mpop-v1.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-v/-/}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/m/mpop/
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/09/10 09:12:46 thomasklausner Exp $
 
 DISTNAME=	t3m
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}-20120616
 CATEGORIES=	math python
 MASTER_SITES=	ftp://ftp.math.uic.edu/pub/t3m/
 EXTRACT_SUFX=	.tgz

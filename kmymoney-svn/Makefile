@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/10/01 21:57:40 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/09/10 09:12:45 thomasklausner Exp $
 
-DISTNAME=	kmymoney
-PKGREVISION=	1
+DISTNAME=	kmymoney-0.0
 CATEGORIES=	finance kde
 MASTER_SITES=	#
 
