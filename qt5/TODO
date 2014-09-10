@@ -1,5 +1,0 @@
-* Split into two packages like qtX-{libs|tools}
-Fails here:
-
-ld:/usr/pkgsrc/dev/wip/qt5/work/qt-everywhere-opensource-src-5.0.2/qtbase/src/corelib/QtCore.dynlist: file format not recognized; treating as linker script
-ld:/usr/pkgsrc/dev/wip/qt5/work/qt-everywhere-opensource-src-5.0.2/qtbase/src/corelib/QtCore.dynlist:1: syntax error
