@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/09/09 07:48:44 makoto Exp $
+# $NetBSD: options.mk,v 1.8 2014/09/10 06:19:08 makoto Exp $
 ### Set options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
 
@@ -36,7 +36,6 @@ PKG_SUPPORTED_OPTIONS+=	default
 
 # next line means really fully available
 PKG_SUGGESTED_OPTIONS=	default
-PKG_SUGGESTED_OPTIONS=  doxygen
 
 .include	"../../mk/bsd.options.mk"
 
