@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2014/09/09 21:16:07 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2014/09/10 21:42:25 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-hint
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.hs-hint?=	../../wip/hs-hint
 
 .include "../../devel/hs-exceptions/buildlink3.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
-.include "../../wip/hs-ghc-mtl/buildlink3.mk"
+.include "../../devel/hs-ghc-mtl/buildlink3.mk"
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"

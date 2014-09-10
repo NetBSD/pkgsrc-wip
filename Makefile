@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5898 2014/09/10 21:27:49 szptvlfn Exp $
+# $Id: Makefile,v 1.5899 2014/09/10 21:42:25 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1029,7 +1029,6 @@ SUBDIR+=	hs-fclabels
 SUBDIR+=	hs-filemanip
 SUBDIR+=	hs-fingertree
 SUBDIR+=	hs-generic-deriving
-SUBDIR+=	hs-ghc-mtl
 SUBDIR+=	hs-ghc-syb-utils
 SUBDIR+=	hs-gio
 SUBDIR+=	hs-glib
@@ -1133,7 +1132,6 @@ SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-test-framework
 SUBDIR+=	hs-test-framework-hunit
 SUBDIR+=	hs-test-framework-quickcheck2
-SUBDIR+=	hs-texmath
 SUBDIR+=	hs-text-icu
 SUBDIR+=	hs-tfp
 SUBDIR+=	hs-time-http
