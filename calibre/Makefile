@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/08/31 23:26:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/10 06:45:40 thomasklausner Exp $
 
-DISTNAME=	calibre-2.1.0
+DISTNAME=	calibre-2.2.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -44,6 +44,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	dateutil dns
 EXTRACT_USING=  bsdtar
 
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config pax
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not ported as of 2.1.0; also: py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
