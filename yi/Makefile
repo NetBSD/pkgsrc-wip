@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/08/01 21:00:43 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2014/09/11 22:01:51 szptvlfn Exp $
 #
 
 DISTNAME=	yi-0.6.3.0
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+= \
 .include "../../wip/hs-dyre/buildlink3.mk"
 .include "../../wip/hs-fingertree/buildlink3.mk"
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
-.include "../../wip/hs-hint/buildlink3.mk"
+.include "../../devel/hs-hint/buildlink3.mk"
 .include "../../wip/hs-monads-fd/buildlink3.mk"
 .include "../../wip/hs-pointedlist03/buildlink3.mk"
 .include "../../wip/hs-pureMD5/buildlink3.mk"

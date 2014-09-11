@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/08/29 14:10:30 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2014/09/11 22:01:51 szptvlfn Exp $
 
 BUILDLINK_TREE+=	yi
 
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.yi?=	../../wip/yi
 .include "../../wip/hs-dyre/buildlink3.mk"
 .include "../../wip/hs-fingertree/buildlink3.mk"
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
-.include "../../wip/hs-hint/buildlink3.mk"
+.include "../../devel/hs-hint/buildlink3.mk"
 .include "../../wip/hs-monads-fd/buildlink3.mk"
 .include "../../wip/hs-pointedlist03/buildlink3.mk"
 .include "../../wip/hs-pureMD5/buildlink3.mk"

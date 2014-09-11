@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5901 2014/09/11 16:44:48 tnn2 Exp $
+# $Id: Makefile,v 1.5902 2014/09/11 22:01:49 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1046,7 +1046,6 @@ SUBDIR+=	hs-haskelldb-hdbc-sqlite3
 SUBDIR+=	hs-haskore
 SUBDIR+=	hs-highlighting-kate
 SUBDIR+=	hs-hinstaller
-SUBDIR+=	hs-hint
 SUBDIR+=	hs-hopenssl
 SUBDIR+=	hs-hostname
 SUBDIR+=	hs-hothasktags
@@ -1126,7 +1125,6 @@ SUBDIR+=	hs-stringable
 SUBDIR+=	hs-stringtable-atom
 SUBDIR+=	hs-system-filepath
 SUBDIR+=	hs-tar
-SUBDIR+=	hs-temporary
 SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-test-framework
 SUBDIR+=	hs-test-framework-hunit
