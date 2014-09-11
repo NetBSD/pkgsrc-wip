@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2014/04/25 09:50:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2014/09/11 18:03:56 tnn2 Exp $
 
-DISTNAME=	dbmail-3.1.13
+DISTNAME=	dbmail-3.2.0
 CATEGORIES=	mail
-MASTER_SITES=	http://www.dbmail.org/download/3.1/
+MASTER_SITES=	http://www.dbmail.org/download/3.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dbmail.org/
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake perl pax pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -46,16 +46,16 @@ MESSAGE_SUBST+=		DATADIR=${DATADIR}
 REPLACE_PERL+=		man/fixsp.pl
 
 INSTALLATION_DIRS=	lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${DOCSDIR} ${EGDIR}
-INSTALLATION_DIRS+=	${DATADIR}/sql/mysql ${DATADIR}/sql/postgresql ${DATADIR}/sql/sqlite
+INSTALLATION_DIRS+=	${DATADIR}/sql
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dbmail.conf ${DESTDIR}${EGDIR}
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCSDIR}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/sql/mysql/* ${DESTDIR}${DATADIR}/sql/mysql
-	${INSTALL_DATA} ${WRKSRC}/sql/postgresql/* ${DESTDIR}${DATADIR}/sql/postgresql
-	${INSTALL_DATA} ${WRKSRC}/sql/sqlite/* ${DESTDIR}${DATADIR}/sql/sqlite
+.for f in mysql postgresql sqlite
+	cd ${WRKSRC}/sql && pax -rw ${f} ${DESTDIR}${DATADIR}/sql/.
+.endfor
 
 .include "options.mk"
 
