@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/08/15 17:09:10 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/12 20:24:42 christtrekker Exp $
 #
 
 DISTNAME=	atque-1.1.2
@@ -21,5 +21,15 @@ DEPENDS+=	boost-libs>=1.33:../../devel/boost-libs
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
