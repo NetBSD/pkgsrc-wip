@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2014/09/07 21:10:04 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2014/09/12 21:13:29 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-yaml
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-yaml?=	../../wip/hs-yaml
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../wip/hs-conduit/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
-.include "../../wip/hs-resourcet/buildlink3.mk"
+.include "../../devel/hs-resourcet/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
