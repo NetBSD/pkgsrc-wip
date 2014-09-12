@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/12 20:24:42 christtrekker Exp $
-#
+# $NetBSD: Makefile,v 1.5 2014/09/12 21:18:33 thomasklausner Exp $
 
 DISTNAME=	atque-1.1.2
 CATEGORIES=	games editors
@@ -22,7 +21,6 @@ DEPENDS+=	boost-libs>=1.33:../../devel/boost-libs
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
@@ -31,5 +29,5 @@ DEPENDS+=	boost-libs>=1.33:../../devel/boost-libs
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
-
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
