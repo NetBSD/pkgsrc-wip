@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5903 2014/09/12 21:13:28 szptvlfn Exp $
+# $Id: Makefile,v 1.5904 2014/09/12 23:20:28 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -160,7 +160,6 @@ SUBDIR+=	ati-xfree86-bin-unstable
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
 SUBDIR+=	atool
-SUBDIR+=	atque
 SUBDIR+=	auctex-current
 SUBDIR+=	audacious
 SUBDIR+=	audacious-plugins
