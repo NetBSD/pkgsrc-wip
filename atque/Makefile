@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/09/12 21:18:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/12 22:02:59 christtrekker Exp $
 
 DISTNAME=	atque-1.1.2
 CATEGORIES=	games editors
@@ -14,9 +14,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake gmake
 USE_LANGUAGES=	c c++
 
-BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.31
 .include "../../devel/boost-headers/buildlink3.mk"
-DEPENDS+=	boost-libs>=1.33:../../devel/boost-libs
+BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.31
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
