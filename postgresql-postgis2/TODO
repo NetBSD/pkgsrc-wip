@@ -1,5 +1,0 @@
-File ticket upstream about make->$(MAKE) in doc/html/image_src/Makefile.
-
-Update to upstream with fixes for:
-  http://trac.osgeo.org/postgis/ticket/2872
-  http://trac.osgeo.org/postgis/ticket/2909

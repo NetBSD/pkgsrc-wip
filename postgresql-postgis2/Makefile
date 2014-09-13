@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/08/06 17:03:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/13 01:04:14 lexort Exp $
 
 DISTNAME=	postgis-2.1.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -14,6 +14,12 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
 CONFLICTS=		postgis-[0-9]*
+
+# TODO section
+# 1. File ticket upstream about make->$(MAKE) in doc/html/image_src/Makefile.
+# 2. Update to upstream with fixes for:
+@      http://trac.osgeo.org/postgis/ticket/2872
+#      http://trac.osgeo.org/postgis/ticket/2909
 
 # gmake complains about adding + to parent rule
 MAKE_JOBS_SAFE=		no
