@@ -1,11 +1,5 @@
-Fix make->$(MAKE) in doc/html/image_src/Makefile.
+File ticket upstream about make->$(MAKE) in doc/html/image_src/Makefile.
 
-Check to make sure that "comments" are getting installed.  (In previous
-versions, they needed hand copying.)
-
-Figure out -lpq RPATH and whether it needs help.
-
-Avoid build commands at install time.  This is an upstream issue, to
-be fixed upstream:
+Update to upstream with fixes for:
   http://trac.osgeo.org/postgis/ticket/2872
-
+  http://trac.osgeo.org/postgis/ticket/2909
