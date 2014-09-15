@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/08/13 20:22:15 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/15 22:16:19 rhialto Exp $
 
-VERSION=	2.5.10dev
+VERSION=	2.5.14dev
 DISTNAME=	fs-uae-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
@@ -46,7 +46,7 @@ INSTALL_ENV+=	DESTDIR=${DESTDIR}
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/libmpeg2/buildlink3.mk"
+#.include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libX11/buildlink3.mk"
 

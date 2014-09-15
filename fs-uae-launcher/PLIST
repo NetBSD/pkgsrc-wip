@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/08/13 20:27:52 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/09/15 22:15:34 rhialto Exp $
 @comment :4,$s=py3.4=py${PYVERSSUFFIX}=
 @comment :4,$s=cpython-34=cpython-${PYVERS}=
 bin/fs-uae-launcher
@@ -4232,7 +4232,7 @@ share/fs-uae-launcher/OpenGL/raw/osmesa/mesa.py
 share/fs-uae-launcher/OpenGL/version.py
 share/fs-uae-launcher/OpenGL/wrapper.py
 share/fs-uae-launcher/fs-uae-launcher
-share/fs-uae-launcher/fs_uae_launcher-2.5.10dev-py${PYVERSSUFFIX}.egg-info
+share/fs-uae-launcher/fs_uae_launcher-2.5.14dev-py${PYVERSSUFFIX}.egg-info
 share/fs-uae-launcher/fs_uae_launcher/CDManager.py
 share/fs-uae-launcher/fs_uae_launcher/Config.py
 share/fs-uae-launcher/fs_uae_launcher/ConfigChecker.py
@@ -4398,7 +4398,6 @@ share/fs-uae-launcher/fs_uae_launcher/res/README.txt
 share/fs-uae-launcher/fs_uae_launcher/res/__init__.py
 share/fs-uae-launcher/fs_uae_launcher/res/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fs_uae_launcher/res/add_button.png
-share/fs-uae-launcher/fs_uae_launcher/res/adf.dat
 share/fs-uae-launcher/fs_uae_launcher/res/adf_extended.dat
 share/fs-uae-launcher/fs_uae_launcher/res/adf_game_16.png
 share/fs-uae-launcher/fs_uae_launcher/res/amiga_forever_group.png
@@ -5135,6 +5134,7 @@ share/fs-uae-launcher/fsgs/refreshratetool.py
 share/fs-uae-launcher/fsgs/res/__init__.py
 share/fs-uae-launcher/fsgs/res/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/res/amiga/adf_save_disk.dat
+share/fs-uae-launcher/fsgs/res/amiga/adf.dat
 share/fs-uae-launcher/fsgs/res/input/03000000300f00001201000010010000/jess_tech_dual_analog_pad_12_4_1_0_linux.conf
 share/fs-uae-launcher/fsgs/res/input/03000000300f00001201000010010000/names.txt
 share/fs-uae-launcher/fsgs/res/input/030000004c0500006802000011010000/names.txt
@@ -5226,6 +5226,8 @@ share/fs-uae-launcher/fsgs/res/input/wisegroup_ltd/mp_8866_dual_usb_joypad.ini
 share/fs-uae-launcher/fsgs/res/input/wisegroup_ltd/tigergame_ps_ps2_game_controller_adapter.ini
 share/fs-uae-launcher/fsgs/res/input/xgaming/x_arcade.ini
 share/fs-uae-launcher/fsgs/res/input/xgaming/x_arcade_right.ini
+share/fs-uae-launcher/fsgs/res/input/xinput_controller_15_6_0_0_windows.conf
+share/fs-uae-launcher/fsgs/res/input/xinput_controller_1_15_6_0_0_windows.conf
 share/fs-uae-launcher/fsgs/runner.py
 share/fs-uae-launcher/fsgs/util/GameNameUtil.py
 share/fs-uae-launcher/fsgs/util/__init__.py
