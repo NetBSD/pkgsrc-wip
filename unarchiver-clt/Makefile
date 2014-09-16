@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/07/11 19:33:17 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/16 18:48:02 christtrekker Exp $
 
-DISTNAME=	unar1.7_src
-PKGNAME=	unar-1.7
+DISTNAME=	unar1.8.1_src
+PKGNAME=	unarchiver-1.8.1
 CATEGORIES=	archivers
 MASTER_SITES=	http://theunarchiver.googlecode.com/files/
 EXTRACT_SUFX=	.zip
