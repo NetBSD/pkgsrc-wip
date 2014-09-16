@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5904 2014/09/12 23:20:28 thomasklausner Exp $
+# $Id: Makefile,v 1.5905 2014/09/16 09:21:20 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -346,7 +346,6 @@ SUBDIR+=	coldfire
 SUBDIR+=	collectd
 SUBDIR+=	colorfull
 SUBDIR+=	colorize
-SUBDIR+=	com_err
 SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
@@ -830,6 +829,7 @@ SUBDIR+=	gplbasic
 SUBDIR+=	gps
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
+SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	grandr
 SUBDIR+=	granule
 SUBDIR+=	graphite2
@@ -1683,6 +1683,7 @@ SUBDIR+=	mplus-bitmap-fonts
 SUBDIR+=	mplus-outline-fonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
+SUBDIR+=	mpv-git
 SUBDIR+=	msworkbench
 SUBDIR+=	mtd-utils
 SUBDIR+=	mtf
@@ -2471,6 +2472,7 @@ SUBDIR+=	py-dcpf
 SUBDIR+=	py-debacl
 SUBDIR+=	py-decimalpy
 SUBDIR+=	py-decoratortools
+SUBDIR+=	py-delay
 SUBDIR+=	py-delny
 SUBDIR+=	py-descartes
 SUBDIR+=	py-dexml
