@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/18 03:43:28 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/18 05:16:17 makoto Exp $
 
 PKGNAME=	gnuradio-default-${VERSION}
 COMMENT=	Full package of gnuradio
@@ -39,10 +39,10 @@ CONFLICTS+=	gnuradio-wavelet-[0-9]*
 CONFLICTS+=	gnuradio-wxgui-[0-9]*
 
 
-CONF_FILES+=	${EGDIR}/gr-qtgui.conf		gr-qtgui.conf
-CONF_FILES+=	${EGDIR}/modtool.conf		modtool.conf
-CONF_FILES+=	${EGDIR}/gr-wxgui.conf		gr-wxgui.conf
-CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	gnuradio-runtime.conf
+CONF_FILES+=	${EGDIR}/gr-qtgui.conf		${PKG_SYSCONFSUBDIR}/gr-qtgui.conf
+CONF_FILES+=	${EGDIR}/modtool.conf		${PKG_SYSCONFSUBDIR}/modtool.conf
+CONF_FILES+=	${EGDIR}/gr-wxgui.conf		${PKG_SYSCONFSUBDIR}/gr-wxgui.conf
+CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFSUBDIR}/gnuradio-runtime.conf
 
 BUILD_DEPENDS+=    ${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=       ${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/

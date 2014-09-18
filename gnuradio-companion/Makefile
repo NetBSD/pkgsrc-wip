@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:30 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/18 05:16:16 makoto Exp $
 
 PKGNAME=	gnuradio-companion-${VERSION}
 COMMENT=	Gnuradio-companion, user interface entry
-CONF_FILES+=	${EGDIR}/grc.conf grc.conf
+
+CONF_FILES+=	${EGDIR}/grc.conf	${PKG_SYSCONFSUBDIR}/grc.conf
 
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
 
