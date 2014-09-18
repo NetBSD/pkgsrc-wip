@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/09/18 05:16:17 makoto Exp $
+# $NetBSD: Makefile,v 1.17 2014/09/18 09:52:22 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
@@ -10,12 +10,12 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 # gnuradio-companion wants:
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
 
-CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFSUBDIR}/gnuradio-runtime.conf
-CONF_FILES+=	${EGDIR}/gr-audio-alsa.conf	${PKG_SYSCONFSUBDIR}/gr-audio-alsa.conf
-CONF_FILES+=	${EGDIR}/gr-audio-jack.conf	${PKG_SYSCONFSUBDIR}/gr-audio-jack.conf
-CONF_FILES+=	${EGDIR}/gr-audio-oss.conf	${PKG_SYSCONFSUBDIR}/gr-audio-oss.conf
-CONF_FILES+=	${EGDIR}/gr-audio-portaudio.conf ${PKG_SYSCONFSUBDIR}/gr-audio-portaudio.conf
-CONF_FILES+=	${EGDIR}/gr-audio.conf		${PKG_SYSCONFSUBDIR}/gr-audio.conf
+CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFDIR}/gnuradio-runtime.conf
+CONF_FILES+=	${EGDIR}/gr-audio-alsa.conf	${PKG_SYSCONFDIR}/gr-audio-alsa.conf
+CONF_FILES+=	${EGDIR}/gr-audio-jack.conf	${PKG_SYSCONFDIR}/gr-audio-jack.conf
+CONF_FILES+=	${EGDIR}/gr-audio-oss.conf	${PKG_SYSCONFDIR}/gr-audio-oss.conf
+CONF_FILES+=	${EGDIR}/gr-audio-portaudio.conf ${PKG_SYSCONFDIR}/gr-audio-portaudio.conf
+CONF_FILES+=	${EGDIR}/gr-audio.conf		${PKG_SYSCONFDIR}/gr-audio.conf
 
 # set default as minimum
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False

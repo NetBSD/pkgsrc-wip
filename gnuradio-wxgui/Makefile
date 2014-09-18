@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/18 05:16:17 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/18 09:52:22 makoto Exp $
 
 PKGNAME=	gnuradio-wxgui-${VERSION}
 COMMENT=	WxGTK Toolkit module of GNU Radio
@@ -6,7 +6,7 @@ COMMENT=	WxGTK Toolkit module of GNU Radio
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
-CONF_FILES+=	${EGDIR}/gr-wxgui.conf	${PKG_SYSCONFSUBDIR}/gr-wxgui.conf
+CONF_FILES+=	${EGDIR}/gr-wxgui.conf	${PKG_SYSCONFDIR}/gr-wxgui.conf
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_GR_WXGUI=True
