@@ -1,15 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2014/09/09 07:48:44 makoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/09/18 00:43:30 makoto Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
 bin/volk_modtool
 bin/volk_profile
-etc/gnuradio/conf.d/gnuradio-runtime.conf
-etc/gnuradio/conf.d/gr-audio-alsa.conf
-etc/gnuradio/conf.d/gr-audio-jack.conf
-etc/gnuradio/conf.d/gr-audio-oss.conf
-etc/gnuradio/conf.d/gr-audio-portaudio.conf
-etc/gnuradio/conf.d/gr-audio.conf
 include/gnuradio/analog/agc.h
 include/gnuradio/analog/agc2.h
 include/gnuradio/analog/agc2_cc.h
@@ -884,6 +878,12 @@ share/doc/gnuradio-${PKGVERSION}/README.blocks
 share/doc/gnuradio-${PKGVERSION}/README.fft
 share/doc/gnuradio-${PKGVERSION}/README.filter
 share/doc/gnuradio-${PKGVERSION}/README.hacking
+share/examples/gnuradio/conf.d/gnuradio-runtime.conf
+share/examples/gnuradio/conf.d/gr-audio-alsa.conf
+share/examples/gnuradio/conf.d/gr-audio-jack.conf
+share/examples/gnuradio/conf.d/gr-audio-oss.conf
+share/examples/gnuradio/conf.d/gr-audio-portaudio.conf
+share/examples/gnuradio/conf.d/gr-audio.conf
 share/gnuradio/examples/analog/fmtest.py
 share/gnuradio/examples/audio/audio_copy.py
 share/gnuradio/examples/audio/audio_fft.py
@@ -1131,3 +1131,4 @@ share/gnuradio/grc/blocks/filter_rational_resampler_xxx.xml
 share/gnuradio/grc/blocks/filter_root_raised_cosine_filter.xml
 share/gnuradio/grc/blocks/filter_single_pole_iir_filter_xx.xml
 @pkgdir include/volk/asm/neon
+@pkgdir etc/gnuradio/conf.d

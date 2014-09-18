@@ -1,0 +1,2 @@
+- Remove redundent lines in Makefile (defined already in Makefile.common)
+- Or the other away around, strip Makefile.common side

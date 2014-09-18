@@ -1,0 +1,162 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/18 00:43:32 makoto Exp $
+include/gnuradio/swig/trellis_swig.i
+include/gnuradio/swig/trellis_swig_doc.i
+include/gnuradio/trellis/api.h
+include/gnuradio/trellis/base.h
+include/gnuradio/trellis/calc_metric.h
+include/gnuradio/trellis/constellation_metrics_cf.h
+include/gnuradio/trellis/core_algorithms.h
+include/gnuradio/trellis/encoder_bb.h
+include/gnuradio/trellis/encoder_bi.h
+include/gnuradio/trellis/encoder_bs.h
+include/gnuradio/trellis/encoder_ii.h
+include/gnuradio/trellis/encoder_si.h
+include/gnuradio/trellis/encoder_ss.h
+include/gnuradio/trellis/fsm.h
+include/gnuradio/trellis/interleaver.h
+include/gnuradio/trellis/metrics_c.h
+include/gnuradio/trellis/metrics_f.h
+include/gnuradio/trellis/metrics_i.h
+include/gnuradio/trellis/metrics_s.h
+include/gnuradio/trellis/pccc_decoder_b.h
+include/gnuradio/trellis/pccc_decoder_combined_cb.h
+include/gnuradio/trellis/pccc_decoder_combined_ci.h
+include/gnuradio/trellis/pccc_decoder_combined_cs.h
+include/gnuradio/trellis/pccc_decoder_combined_fb.h
+include/gnuradio/trellis/pccc_decoder_combined_fi.h
+include/gnuradio/trellis/pccc_decoder_combined_fs.h
+include/gnuradio/trellis/pccc_decoder_i.h
+include/gnuradio/trellis/pccc_decoder_s.h
+include/gnuradio/trellis/pccc_encoder_bb.h
+include/gnuradio/trellis/pccc_encoder_bi.h
+include/gnuradio/trellis/pccc_encoder_bs.h
+include/gnuradio/trellis/pccc_encoder_ii.h
+include/gnuradio/trellis/pccc_encoder_si.h
+include/gnuradio/trellis/pccc_encoder_ss.h
+include/gnuradio/trellis/permutation.h
+include/gnuradio/trellis/quicksort_index.h
+include/gnuradio/trellis/sccc_decoder_b.h
+include/gnuradio/trellis/sccc_decoder_combined_cb.h
+include/gnuradio/trellis/sccc_decoder_combined_ci.h
+include/gnuradio/trellis/sccc_decoder_combined_cs.h
+include/gnuradio/trellis/sccc_decoder_combined_fb.h
+include/gnuradio/trellis/sccc_decoder_combined_fi.h
+include/gnuradio/trellis/sccc_decoder_combined_fs.h
+include/gnuradio/trellis/sccc_decoder_i.h
+include/gnuradio/trellis/sccc_decoder_s.h
+include/gnuradio/trellis/sccc_encoder_bb.h
+include/gnuradio/trellis/sccc_encoder_bi.h
+include/gnuradio/trellis/sccc_encoder_bs.h
+include/gnuradio/trellis/sccc_encoder_ii.h
+include/gnuradio/trellis/sccc_encoder_si.h
+include/gnuradio/trellis/sccc_encoder_ss.h
+include/gnuradio/trellis/siso_combined_f.h
+include/gnuradio/trellis/siso_f.h
+include/gnuradio/trellis/siso_type.h
+include/gnuradio/trellis/viterbi_b.h
+include/gnuradio/trellis/viterbi_combined_cb.h
+include/gnuradio/trellis/viterbi_combined_ci.h
+include/gnuradio/trellis/viterbi_combined_cs.h
+include/gnuradio/trellis/viterbi_combined_fb.h
+include/gnuradio/trellis/viterbi_combined_fi.h
+include/gnuradio/trellis/viterbi_combined_fs.h
+include/gnuradio/trellis/viterbi_combined_ib.h
+include/gnuradio/trellis/viterbi_combined_ii.h
+include/gnuradio/trellis/viterbi_combined_is.h
+include/gnuradio/trellis/viterbi_combined_sb.h
+include/gnuradio/trellis/viterbi_combined_si.h
+include/gnuradio/trellis/viterbi_combined_ss.h
+include/gnuradio/trellis/viterbi_i.h
+include/gnuradio/trellis/viterbi_s.h
+lib/libgnuradio-trellis.so
+lib/libgnuradio-trellis.so.${PKGVERSION}
+lib/pkgconfig/gnuradio-trellis.pc
+${PYSITELIB}/gnuradio/trellis/__init__.py
+${PYSITELIB}/gnuradio/trellis/__init__.pyc
+${PYSITELIB}/gnuradio/trellis/__init__.pyo
+${PYSITELIB}/gnuradio/trellis/_trellis_swig.so
+${PYSITELIB}/gnuradio/trellis/trellis_swig.py
+${PYSITELIB}/gnuradio/trellis/trellis_swig.pyc
+${PYSITELIB}/gnuradio/trellis/trellis_swig.pyo
+share/doc/gnuradio-${PKGVERSION}/xml/test_tcm.py.xml
+share/doc/gnuradio-${PKGVERSION}/xml/test_viterbi_equalization1.py.xml
+share/gnuradio/examples/trellis/README
+share/gnuradio/examples/trellis/fsm_files/awgn1o2_128.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn1o2_16.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn1o2_4.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn1o2_8.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn2o3_16.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn2o3_4.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn2o3_4_msb.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn2o3_4_msbG.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn2o3_8.fsm
+share/gnuradio/examples/trellis/fsm_files/awgn2o4_4.fsm
+share/gnuradio/examples/trellis/fsm_files/disconnected.fsm
+share/gnuradio/examples/trellis/fsm_files/rep3.fsm
+share/gnuradio/examples/trellis/fsm_files/rep5.fsm
+share/gnuradio/examples/trellis/fsm_files/simple.fsm
+share/gnuradio/examples/trellis/fsm_utils.py
+share/gnuradio/examples/trellis/interference_cancellation.grc
+share/gnuradio/examples/trellis/pccc.grc
+share/gnuradio/examples/trellis/pccc1.grc
+share/gnuradio/examples/trellis/readme.txt
+share/gnuradio/examples/trellis/sccc.grc
+share/gnuradio/examples/trellis/sccc1.grc
+share/gnuradio/examples/trellis/test_sccc_hard.py
+share/gnuradio/examples/trellis/test_sccc_soft.py
+share/gnuradio/examples/trellis/test_sccc_turbo.py
+share/gnuradio/examples/trellis/test_tcm.py
+share/gnuradio/examples/trellis/test_tcm_combined.py
+share/gnuradio/examples/trellis/test_tcm_parallel.py
+share/gnuradio/examples/trellis/test_turbo_equalization.py
+share/gnuradio/examples/trellis/test_turbo_equalization1.py
+share/gnuradio/examples/trellis/test_turbo_equalization2.py
+share/gnuradio/examples/trellis/test_viterbi_equalization.py
+share/gnuradio/examples/trellis/test_viterbi_equalization1.py
+share/gnuradio/grc/blocks/trellis_encoder_xx.xml
+share/gnuradio/grc/blocks/trellis_metrics_x.xml
+share/gnuradio/grc/blocks/trellis_pccc_decoder_combined_xx.xml
+share/gnuradio/grc/blocks/trellis_pccc_decoder_x.xml
+share/gnuradio/grc/blocks/trellis_pccc_encoder_xx.xml
+share/gnuradio/grc/blocks/trellis_permutation.xml
+share/gnuradio/grc/blocks/trellis_sccc_decoder_combined_xx.xml
+share/gnuradio/grc/blocks/trellis_sccc_decoder_x.xml
+share/gnuradio/grc/blocks/trellis_sccc_encoder_xx.xml
+share/gnuradio/grc/blocks/trellis_siso_combined_f.xml
+share/gnuradio/grc/blocks/trellis_siso_f.xml
+share/gnuradio/grc/blocks/trellis_viterbi_combined_xx.xml
+share/gnuradio/grc/blocks/trellis_viterbi_x.xml
+@pkgdir share/gnuradio/examples/volk_benchmark
+@pkgdir share/gnuradio/examples/tags
+@pkgdir share/gnuradio/examples/network
+@pkgdir share/gnuradio/examples/mp-sched
+@pkgdir share/gnuradio/examples/metadata
+@pkgdir share/gnuradio/examples/filter
+@pkgdir share/gnuradio/examples/digital/ofdm
+@pkgdir share/gnuradio/examples/digital/narrowband
+@pkgdir share/gnuradio/examples/digital/demod
+@pkgdir share/gnuradio/examples/audio
+@pkgdir share/gnuradio/examples/analog
+@pkgdir lib/python2.7/site-packages/volk_modtool
+@pkgdir lib/python2.7/site-packages/pmt
+@pkgdir lib/python2.7/site-packages/gnuradio/gru
+@pkgdir lib/python2.7/site-packages/gnuradio/gr
+@pkgdir lib/python2.7/site-packages/gnuradio/filter
+@pkgdir lib/python2.7/site-packages/gnuradio/fft
+@pkgdir lib/python2.7/site-packages/gnuradio/digital/utils
+@pkgdir lib/python2.7/site-packages/gnuradio/blocks
+@pkgdir lib/python2.7/site-packages/gnuradio/audio
+@pkgdir lib/python2.7/site-packages/gnuradio/analog
+@pkgdir lib/cmake/volk
+@pkgdir lib/cmake/gnuradio
+@pkgdir include/volk/asm/neon
+@pkgdir include/pmt
+@pkgdir include/gnuradio/thread
+@pkgdir include/gnuradio/messages
+@pkgdir include/gnuradio/filter
+@pkgdir include/gnuradio/fft
+@pkgdir include/gnuradio/digital
+@pkgdir include/gnuradio/blocks
+@pkgdir include/gnuradio/audio
+@pkgdir include/gnuradio/analog
+@pkgdir etc/gnuradio/conf.d

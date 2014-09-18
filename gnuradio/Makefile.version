@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.version,v 1.2 2014/09/09 07:48:43 makoto Exp $
-
-VERSION=        3.7.5

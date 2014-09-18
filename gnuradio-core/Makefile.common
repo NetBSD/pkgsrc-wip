@@ -1,0 +1,155 @@
+# $NetBSD: Makefile.common,v 1.1 2014/09/18 00:43:30 makoto Exp $
+# This Makefile fragment is included at the top of package Makefiles for
+# GNU Radio distributed packages (they all share common configure and build
+# settings).
+# used by wip/gnuradio-atsc/Makefile
+# used by wip/gnuradio-channels/Makefile
+# used by wip/gnuradio-companion/Makefile
+# used by wip/gnuradio-core/Makefile
+# used by wip/gnuradio-ctrlport/Makefile
+
+# used by wip/gnuradio-default/Makefile
+# used by wip/gnuradio-digital/Makefile
+# used by wip/gnuradio-doxygen/Makefile
+# used by wip/gnuradio-dtv/Makefile
+# used by wip/gnuradio-fcd/Makefile
+
+# used by wip/gnuradio-fec/Makefile
+# used by wip/gnuradio-fcd/Makefile
+# used by wip/gnuradio-noaa/Makefile
+# used by wip/gnuradio-pager/Makefile
+# used by wip/gnuradio-qtgui/Makefile
+
+# used by wip/gnuradio-trellis/Makefile
+# used by wip/gnuradio-uhd/Makefile
+# used by wip/gnuradio-utils/Makefile
+# used by wip/gnuradio-video-sdl/Makefile
+# used by wip/gnuradio-vocoder/Makefile
+# used by wip/gnuradio-wavelet/Makefile
+
+# used by wip/gnuradio-wxgui/Makefile
+
+.include        "../../wip/gnuradio-core/Makefile.version"
+
+DISTNAME?=	gnuradio-${VERSION}
+CATEGORIES+=	ham
+MASTER_SITES?=	http://gnuradio.org/releases/gnuradio/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
+LICENSE=	gnu-gpl-v3
+
+USE_LANGUAGES=	c c++
+USE_TOOLS=	perl gmake cmake pkg-config
+USE_CMAKE=	yes
+
+DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
+
+.if !empty(PKG_OPTION:Mninja)
+BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+.endif
+
+#AKE_JOBS_SAFE=	no
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/gnuradio-core/patches
+
+PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # not yet ported as of 3.3.0
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PY_PATCHPLIST=	yes
+
+CONFIGURE_DIRS=	build
+
+EGDIR=			share/examples/gnuradio/conf.d
+PKG_SYSCONFSUBDIR=	gnuradio/conf.d
+
+LDFLAGS.DragonFly+=	-lboost_system
+LDFLAGS.SunOS+=		-lboost_system
+
+# --------       R E S E T  CMAKE_ARGS  H E R E  -------------
+CMAKE_ARGS=
+
+# set default as minimum (and adding at options.mk)
+# See  http://gnuradio.org/redmine/projects/gnuradio/wiki/BuildGuide
+#      http://gnuradio.org/redmine/projects/gnuradio/wiki/CygwinInstallMain
+.if !empty(PKG_OPTION:Mninja)
+CMAKE_ARGS+=	-GNinja
+.endif
+CMAKE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
+CMAKE_ARGS+=	-DENABLE_GR_ANALOG=ON
+CMAKE_ARGS+=	-DENABLE_GR_AUDIO=ON
+CMAKE_ARGS+=	-DENABLE_GR_BLOCKS=ON
+CMAKE_ARGS+=	-DENABLE_GR_FFT=ON
+CMAKE_ARGS+=	-DENABLE_GR_FILTER=ON
+CMAKE_ARGS+=	-DENABLE_PYTHON=ON
+CMAKE_ARGS+=	-DENABLE_VOLK=ON
+
+# Default setting (for pkgsrc)
+CMAKE_ARGS+=	-Wno-dev
+CMAKE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
+CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/portaudio2
+CMAKE_ARGS+=	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2
+CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
+CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
+CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
+
+CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${DESTDIR}${PREFIX}/lib
+CMAKE_ARGS+=	-DGR_PREFSDIR=${DESTDIR}${PREFIX}/share/
+
+CMAKE_ARGS+=	-DSDL_INCLUDE_DIR=${PREFIX}/include/SDL
+CMAKE_ARGS+=	-DUHD_LIBRARIES=${PREFIX}/lib/libuhd.so
+CMAKE_ARGS+=	-DUHD_INCLUDE_DIRS=${PREFIX}/include/uhd/usrp
+
+CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
+CMAKE_ARG_PATH=		../
+
+#CONF_FILES= ${ETCDIR}/gnuaudio-runtime.conf hoge
+# REPLACE_PYTHON is some 600 files
+.include	"../../wip/gnuradio-core/files/REPLACE_PYTHON"
+
+#.if empty(PKGBASE:Mgnuradio-core)
+
+pre-configure:
+	(${MKDIR} ${WRKSRC}/build;)
+
+.if !empty(PKG_OPTION:Mninja)
+do-build:
+	(cd ${WRKSRC}/build; ninja)
+.else
+do-build:
+	(cd ${WRKSRC}/build; ${GMAKE})
+.endif
+
+do-install:
+#	(cd ${WRKSRC}/build; env DESTDIR=${DESTDIR} ${GMAKE} package)
+	(cd ${WRKSRC}/build; ${GMAKE} DESTDIR=${DESTDIR} install)
+
+
+# .include "../../x11/qt4-libs/buildlink3.mk"
+
+.include	"../../audio/alsa-lib/buildlink3.mk"
+.include	"../../audio/gsm/buildlink3.mk"
+.include	"../../audio/jack/buildlink3.mk"
+.include	"../../audio/portaudio-devel/buildlink3.mk"
+
+#include	"../../devel/SDL/buildlink3.mk"
+.include	"../../devel/boost-headers/buildlink3.mk"
+.include	"../../devel/boost-libs/buildlink3.mk"
+.include	"../../devel/cppunit/buildlink3.mk"
+.include	"../../devel/libusb1/buildlink3.mk"
+.include	"../../devel/orc/buildlink3.mk"
+.include	"../../devel/swig2/buildlink3.mk"
+
+#include	"../../ham/uhd/buildlink3.mk"
+.include	"../../lang/python/application.mk"
+.include	"../../lang/python/extension.mk"
+.include	"../../math/fftwf/buildlink3.mk"
+.include	"../../math/gsl/buildlink3.mk"
+.include	"../../math/py-numpy/buildlink3.mk"
+
+#include	"../../net/zeromq/buildlink3.mk"
+
+.include	"../../x11/py-gtk2/buildlink3.mk"
+#include	"../../x11/py-wxWidgets/buildlink3.mk"
+.include	"../../x11/qwt-qt4/buildlink3.mk"
+#include	"../../x11/wxGTK28/buildlink3.mk"

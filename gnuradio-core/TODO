@@ -1,3 +1,28 @@
+- Unknown message at pbulk
+   [210/231] Starting build of  gnuradio-fec-3.7.5
+   X11 connection rejected because of wrong authentication.
+
+   at the time around these configure lines ?
+   | -- Found ALSA 1.0.27.2
+   | -- checking for module 'jack'
+   | --   found jack, version 0.121.3
+   | -- Found jack: /WRKOBJDIR/wip/gnuradio-fec/work/.buildlink/lib/libjack.so
+   | -- Looking for C++ include AudioUnit/AudioUnit.h
+   | -- Looking for C++ include AudioUnit/AudioUnit.h - not found
+   | -- Looking for C++ include AudioToolbox/AudioToolbox.h
+   | -- Looking for C++ include AudioToolbox/AudioToolbox.h - not found
+   | -- checking for module 'portaudio-2.0'
+   | --   found portaudio-2.0, version 19
+   | -- Performing Test PORTAUDIO2_FOUND
+   | -- Performing Test PORTAUDIO2_FOUND - Success
+   | -- Found PORTAUDIO: /usr/pkg/include/portaudio2  
+   | -- checking for module 'comedilib'
+   | --   package 'comedilib' not found
+   | -- 
+   | -- Configuring gr-comedi support...
+
+- Adjust (reduce) including buildlink3.mk (at common)
+
 -  (May be) redundent lines in cmake options in Makefile
     -DCMAKE_INCLUDE_PATH="${PREFIX}/include/portaudio2 \
     -DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2 \
@@ -31,22 +56,12 @@
 
 -  patches/patch-gnuradio_runtime_lib_high__res__timer.cc
     is a joke, should be corrected
+
 - FreeBSD ports has many patches for 3.7.2.1
   http://svnweb.freebsd.org/ports/head/comms/gnuradio/files/
 
-- Following lines in PLIST are flagged by pkglint: 
-  25:etc/gnuradio/conf.d/gnuradio-runtime.conf
-  26:etc/gnuradio/conf.d/gr-audio-oss.conf
-  27:etc/gnuradio/conf.d/gr-audio-portaudio.conf
-  28:etc/gnuradio/conf.d/gr-audio.conf
-  29:etc/gnuradio/conf.d/modtool.conf
-    ERROR: PLIST:25: Configuration files must not be registered in the PLIST. 
-    Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
-  
-- To implement following sub function
-  Marked . are included in minumum one
-         + are now in options.mk
-	 - are failed to build with single option
+- Sub function status
+  Marked . are included in minumum one (-core)
 
 .ENABLE_GR_ANALOG
 +ENABLE_GR_ATSC
@@ -66,7 +81,7 @@
 +ENABLE_GR_QTGUI
 +ENABLE_GR_TRELLIS
 +ENABLE_GR_UHD
- ENABLE_GR_UTILS
++ENABLE_GR_UTILS
 +ENABLE_GR_VIDEO_SDL
 +ENABLE_GR_VOCODER
 +ENABLE_GR_WAVELET
@@ -83,17 +98,14 @@
  ENABLE_TESTING
 .ENABLE_VOLK
 
-
 (if ENABLE_DEFAULT=True with current other environment)
--- ######################################################
--- # Gnuradio enabled components                         
--- ######################################################
 --   * python-support
 --   * testing-support
 --   * volk
 --   * doxygen
 --   * sphinx
 --   * gnuradio-runtime
+--   * gr-ctrlport
 --   * gr-blocks
 --   * gnuradio-companion
 --   * gr-fec
@@ -101,56 +113,28 @@
 --   * gr-filter
 --   * gr-analog
 --   * gr-digital
+--   * gr-dtv
 --   * gr-atsc
 --   * gr-audio
+--   * * alsa
+--   * * oss
+--   * * jack
+--   * * portaudio
 --   * gr-channels
 --   * gr-noaa
 --   * gr-pager
+--   * gr-qtgui
 --   * gr-trellis
 --   * gr-uhd
 --   * gr-utils
+--   * gr-video-sdl
 --   * gr-vocoder
 --   * gr-fcd
---   * gr-video-sdl
 --   * gr-wavelet
 --   * gr-wxgui
+--   * gr-zeromq
 -- 
 -- ######################################################
 -- # Gnuradio disabled components                        
 -- ######################################################
---   * gr-ctrlport
 --   * gr-comedi
---   * gr-qtgui
-
-
-=> Checking for non-existent script interpreters in gnuradio-core-3.7.5
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/bercurve_generator.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/bitflip.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/capillary_threaded_decoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/capillary_threaded_encoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_async_encoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_decoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_encoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_tagged_decoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/extended_tagged_encoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/fec_test.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/threaded_decoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/fec/threaded_encoder.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/filter/freq_xlating_fft_filter.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/export/WRKOBJDIR/wip/gnuradio-core/work/.destdir/usr/pkg/lib/python2.7/site-packages/gnuradio/gr/packet_utils.py" is not allowed.
-
-
-Following module can be easily separeted package (no overwrap on PLIST)
-atsc
-channels
-ctlport
-fcd
-fec
-noaa
-pager
-runtime
-trellis
-uhd
-utils
-wxgui
-
