@@ -1,3 +1,27 @@
+- OPTIONS.gnuradio= ninja
+
+- Starting gnuradio gives  wxPython/wxWidgets release number mismatch")
+   |  modena@makoto 10:31:52/140919(..packages/All)% gnuradio-companion   
+       .....
+   |  <<< Welcome to GNU Radio Companion 3.7.5 >>>
+   |  
+   |  Preferences file: /home/makoto/.grc
+   |  Block paths:
+   |          /usr/pkg/share/gnuradio/grc/blocks
+   |          /home/makoto/.grc_gnuradio
+   |  /usr/pkg/lib/python2.7/site-packages/wx-2.8-gtk2-unicode/wx/_core.py:14486: UserWarning: wxPython/wxWidgets release number mismatch
+   |    warnings.warn("wxPython/wxWidgets release number mismatch")
+   |  
+   |  Showing: ""
+  (After replacing py27-wxWidgets-2.8.10.1nb27 with py27-wxWidgets-2.8.12.0, 
+   the message is gone)
+      
+modena@makoto 11:05:51/140919(..packages/All)% pkg_info |grep -i wx
+      wxGTK28-2.8.12nb7   GTK-based implementation of the wxWidgets GUI library
+      wxGTK28-contrib-2.8.12nb3 Contrib libraries for wxWidgets GTK
+      py27-wxWidgets-2.8.10.1nb27 Python bindings for wxWidgets
+      gnuradio-wxgui-3.7.5 WxGTK Toolkit module of GNU Radio
+
 - Unknown message at pbulk
    [210/231] Starting build of  gnuradio-fec-3.7.5
    X11 connection rejected because of wrong authentication.

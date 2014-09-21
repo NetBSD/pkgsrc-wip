@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2014/09/18 00:43:30 makoto Exp $
+# $NetBSD: Makefile.common,v 1.2 2014/09/21 01:08:27 makoto Exp $
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -45,10 +45,6 @@ USE_CMAKE=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 
-.if !empty(PKG_OPTION:Mninja)
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-.endif
-
 #AKE_JOBS_SAFE=	no
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
@@ -69,12 +65,10 @@ LDFLAGS.SunOS+=		-lboost_system
 # --------       R E S E T  CMAKE_ARGS  H E R E  -------------
 CMAKE_ARGS=
 
-# set default as minimum (and adding at options.mk)
+# set default as minimum
 # See  http://gnuradio.org/redmine/projects/gnuradio/wiki/BuildGuide
 #      http://gnuradio.org/redmine/projects/gnuradio/wiki/CygwinInstallMain
-.if !empty(PKG_OPTION:Mninja)
-CMAKE_ARGS+=	-GNinja
-.endif
+
 CMAKE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
 CMAKE_ARGS+=	-DENABLE_GR_ANALOG=ON
 CMAKE_ARGS+=	-DENABLE_GR_AUDIO=ON
@@ -103,6 +97,7 @@ CMAKE_ARGS+=	-DUHD_INCLUDE_DIRS=${PREFIX}/include/uhd/usrp
 CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 CMAKE_ARG_PATH=		../
 
+.include "options.mk"
 #CONF_FILES= ${ETCDIR}/gnuaudio-runtime.conf hoge
 # REPLACE_PYTHON is some 600 files
 .include	"../../wip/gnuradio-core/files/REPLACE_PYTHON"
@@ -112,13 +107,6 @@ CMAKE_ARG_PATH=		../
 pre-configure:
 	(${MKDIR} ${WRKSRC}/build;)
 
-.if !empty(PKG_OPTION:Mninja)
-do-build:
-	(cd ${WRKSRC}/build; ninja)
-.else
-do-build:
-	(cd ${WRKSRC}/build; ${GMAKE})
-.endif
 
 do-install:
 #	(cd ${WRKSRC}/build; env DESTDIR=${DESTDIR} ${GMAKE} package)
