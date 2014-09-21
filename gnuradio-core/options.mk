@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2014/09/21 01:08:27 makoto Exp $
+# $NetBSD: options.mk,v 1.11 2014/09/21 12:30:23 makoto Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=  ninja
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=  ninja
 # FAILED: cd /PATH/wip/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
 # : permission denied
 
-PKG_SUGGESTED_OPTIONS=  
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
