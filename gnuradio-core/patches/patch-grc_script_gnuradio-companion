@@ -1,0 +1,14 @@
+$NetBSD: patch-grc_script_gnuradio-companion,v 1.1 2014/09/21 12:26:50 makoto Exp $
+
+Add message for NetBSD when failed to import gnuradio
+
+--- grc/scripts/gnuradio-companion.orig	2014-07-31 05:39:51.000000000 +0900
++++ grc/scripts/gnuradio-companion	2014-09-21 21:17:44.000000000 +0900
+@@ -32,6 +32,7 @@
+ 
+ Is the library path environment variable set correctly?
+     Linux: LD_LIBRARY_PATH
++    NetBSD: LD_LIBRARY_PATH
+     Windows: PATH
+     MacOSX: DYLD_LIBRARY_PATH
+ """)
