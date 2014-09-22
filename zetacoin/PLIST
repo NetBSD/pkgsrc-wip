@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:23:59 othyro Exp $
+bin/zetacoin-cli
+${PLIST.qt}bin/zetacoin-qt
+sbin/zetacoind
+share/examples/zetacoin/zetacoin.conf
+share/examples/rc.d/zetacoind
