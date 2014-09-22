@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2014/09/22 11:22:56 othyro Exp $
+
+SHA1 (quarkcoin/v0.8.3.25.tar.gz) = 326e9436fe2feb54a04ce1666ea5489a6f284a16
+RMD160 (quarkcoin/v0.8.3.25.tar.gz) = 77206f871c3645155adc0c4023d35e940e03e685
+Size (quarkcoin/v0.8.3.25.tar.gz) = 3917670 bytes
+SHA1 (patch-quarkcoin-qt.pro) = 24aba174da78b9fabc1d0a23572e4c4cab627758
+SHA1 (patch-src_db.h) = 8786ca0bdcc50118477346a40b462ba94e42b128
+SHA1 (patch-src_makefile.unix) = 5d3049213721d9a0eed8a6406a400de97e5e911f
+SHA1 (patch-src_netbase.cpp) = 96c960ac9077ffce08562f1c2e117dbcf215fc8d
+SHA1 (patch-src_walletdb.cpp) = 48a8f6de2beaaf4338e25b82d6ab644bb9214849
