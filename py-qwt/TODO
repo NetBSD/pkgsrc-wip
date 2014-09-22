@@ -1,0 +1,19 @@
+If the varible QTDIR in /usr/pkg/qt4/mkspecs/netbsd-g++/qmake.conf
+is set to ${PREFIX}/qt5. It would be nice
+
+Who (and when) assign its value ?
+
+
+libtool --silent --mode=compile c++ -c -O2 -I/usr/pkg/include
+-I/usr/include -I/usr/pkg/qt4/include
+-I/usr/X11R7/include/freetype2 -I/usr/X11R7/include
+-I/usr/X11R7/include/libdrm -DQ_TRAILING_DIR_SEP -D_REENTRANT
+-DQT_NO_DEBUG -DQT_CORE_LIB -I/usr/pkg/qt4/mkspecs/netbsd-g++
+-I. -I/include/QtCore -I/include -I../qwt-5.2/src
+-I/usr/pkg/include/python2.7
+-I/usr/pkg/lib/python2.7/site-packages/numpy/core/include
+-I. -I/usr/pkg/include -o qwt_version_info.lo
+qwt_version_info.cpp qwt_version_info.cpp:1:19: fatal error:
+qfile.h: No such file or directory compilation terminated.
+*** Error code 1
+

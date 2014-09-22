@@ -1,0 +1,21 @@
+$NetBSD: patch-configfure_configure_py,v 1.1 2014/09/22 07:13:49 makoto Exp $
+
+If the varible QTDIR in /usr/pkg/qt4/mkspecs/netbsd-g++/qmake.conf
+is set to ${PREFIX}/qt5, this patch won't be necessary.
+
+Try following:
+ (cd /export/WRKOBJDIR/wip/py-qwt/work/PyQwt-5.2.0/configure/;  /usr/pkg/qt4/bin/qmake -spec /usr/pkg/qt4/mkspecs/netbsd-g++   -o qwt_version_info.mak qwt_version_info.pro) 
+
+--- configure/configure.py.orig	2009-08-01 16:28:33.000000000 +0900
++++ configure/configure.py	2014-09-22 14:10:45.000000000 +0900
+@@ -510,8 +510,8 @@
+             pass
+ 
+     code = (
+-'''#include <qfile.h>
+-#include <qtextstream.h>
++'''#include <QtCore/qfile.h>
++#include <QtCore/qtextstream.h>
+ #include <qwt_global.h>
+ 
+ int main(int, char **)
