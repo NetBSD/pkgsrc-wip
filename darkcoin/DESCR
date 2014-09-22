@@ -1,0 +1,10 @@
+Secure, decentralized, and anonymous digital currency. Darkcoin details:
+
+* 0.00000% Pre-mined
+* Super secure hashing algorithm: 11 rounds of scientific hashing functions
+  (blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo)
+* Block reward: controlled by 2222222/(((Difficulty+2600)/9)^2)
+* Block generation: 2.5 minutes
+* Difficulty: retargets every minute using Dark Gravity Wave
+* Supply: estimated 22 million maximum coins
+* Superior transaction anonymity using Darksend: RC3 testing on MainNet

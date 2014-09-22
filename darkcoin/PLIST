@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:17:11 othyro Exp $
+bin/darkcoin-qt
+sbin/darkcoind
+share/examples/darkcoin/darkcoin.conf
+share/examples/rc.d/darkcoind
