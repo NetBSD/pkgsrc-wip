@@ -1,3 +1,11 @@
+- This packages is purely experimental, mainly gnuradio-companion to work.
+  I was told mixing qt5 and qt4 was bad thing, (don't to that), but
+  after I've confirmed gnuradion-companion works, I will pursue qt4 or qt5
+  only version, thanks. 
+
+  (By the way, asking for this package is noticed after you 'Execute'
+  on gnuradio-companion with wxGUI widgets or so).
+
 - If the varible QTDIR in /usr/pkg/qt4/mkspecs/netbsd-g++/qmake.conf
   is set to ${PREFIX}/qt4. It would be nice.
   Who (and when, or how to) assign its value ?
