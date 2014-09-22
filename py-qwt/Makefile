@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/22 07:43:06 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/09/22 07:44:53 makoto Exp $
 
 DISTNAME=	PyQwt-5.2.0
 CATEGORIES=	x11
@@ -9,7 +9,7 @@ HOMEPAGE=	http://pyqwt.sourceforge.net/
 COMMENT=	Set of Python bindings for the Qwt C++ class library
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-.if 0
+.if 1
 # qt3-libs or qt5-libs may seem to provide qfile.h but qt4-libs not:
 # x11/qt5-qtbase/PLIST:qt5/include/QtCore/qfile.h
 # See also TODO, thanks
