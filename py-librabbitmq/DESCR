@@ -1,0 +1,2 @@
+Python bindings to the RabbitMQ C-library rabbitmq-c. Supported by Kombu and
+Celery.
