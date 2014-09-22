@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/22 11:23:59 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/22 11:29:53 othyro Exp $
 
 DISTNAME=	v0.9.2.2
 PKGNAME=	zetacoin-${DISTNAME:S/v//1}
@@ -8,7 +8,7 @@ DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://zetacoin.com/
-COMMENT=	Open source peer-to-peer digital currency, favored by Shiba Inus
+COMMENT=	Secure and fast digital cryptocurrency
 LICENSE=	mit
 
 HAS_CONFIGURE=	yes
