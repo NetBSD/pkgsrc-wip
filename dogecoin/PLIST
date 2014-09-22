@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:18:54 othyro Exp $
+bin/dogecoin-cli
+${PLIST.qt}bin/dogecoin-qt
+sbin/dogecoind
+share/examples/dogecoin/dogecoin.conf
