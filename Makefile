@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5907 2014/09/22 11:34:03 othyro Exp $
+# $Id: Makefile,v 1.5908 2014/09/22 18:54:33 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2298,7 +2298,6 @@ SUBDIR+=	popup-el-current
 SUBDIR+=	portscout
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postfix-logwatch
-SUBDIR+=	postgresql-postgis2
 SUBDIR+=	postoffice
 SUBDIR+=	postr
 SUBDIR+=	povray
