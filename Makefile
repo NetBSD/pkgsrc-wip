@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5905 2014/09/16 09:21:20 thomasklausner Exp $
+# $Id: Makefile,v 1.5906 2014/09/22 01:35:04 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2639,6 +2639,7 @@ SUBDIR+=	py-lib
 SUBDIR+=	py-liblzma
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
+SUBDIR+=	py-librabbitmq
 SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
 SUBDIR+=	py-libtunepimp
