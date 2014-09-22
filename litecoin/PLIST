@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:20:28 othyro Exp $
+bin/litecoin-qt
+sbin/litecoind
+share/examples/litecoin/litecoin.conf
+share/examples/rc.d/litecoind

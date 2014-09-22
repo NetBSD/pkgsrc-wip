@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2014/09/22 11:20:28 othyro Exp $
+
+SHA1 (v0.8.7.2.tar.gz) = b8d6923ebbdfe281c5ee6b23fe8467ea0b23253c
+RMD160 (v0.8.7.2.tar.gz) = 20c48002ed33bc4c626753142520c9a4eeacdbe1
+Size (v0.8.7.2.tar.gz) = 4808488 bytes
+SHA1 (patch-bitcoin-qt.pro) = 03120113e411980457c28afe3ba6b223481103c9
+SHA1 (patch-src_db.h) = ad2523f17c9025492875bc275b28fcf8f12fcb98
+SHA1 (patch-src_makefile.unix) = 8d3d90394d39c4153d28af528e7b5d434a9391ed
+SHA1 (patch-src_netbase.cpp) = 16d5c1133fbba972e9b8bee07571a2a6d85ea6ff
+SHA1 (patch-src_walletdb.cpp) = d6bf080791d64371c4aad6c1ff2bab0b640f3798
