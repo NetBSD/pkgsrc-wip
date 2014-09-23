@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/09/18 11:29:12 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/09/23 22:07:17 thomasklausner Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -31,12 +31,12 @@ ${PYSITELIB}/khal/exceptions.pyo
 ${PYSITELIB}/khal/khalendar/__init__.py
 ${PYSITELIB}/khal/khalendar/__init__.pyc
 ${PYSITELIB}/khal/khalendar/__init__.pyo
+${PYSITELIB}/khal/khalendar/aux.py
+${PYSITELIB}/khal/khalendar/aux.pyc
+${PYSITELIB}/khal/khalendar/aux.pyo
 ${PYSITELIB}/khal/khalendar/backend.py
 ${PYSITELIB}/khal/khalendar/backend.pyc
 ${PYSITELIB}/khal/khalendar/backend.pyo
-${PYSITELIB}/khal/khalendar/datetimehelper.py
-${PYSITELIB}/khal/khalendar/datetimehelper.pyc
-${PYSITELIB}/khal/khalendar/datetimehelper.pyo
 ${PYSITELIB}/khal/khalendar/event.py
 ${PYSITELIB}/khal/khalendar/event.pyc
 ${PYSITELIB}/khal/khalendar/event.pyo
