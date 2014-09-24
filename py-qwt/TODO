@@ -1,3 +1,6 @@
+- Add buildlink3.mk file.
+
+
 - This packages is purely experimental, mainly for gnuradio-companion to work.
   I was told mixing qt5 and qt4 was bad thing, (don't to that), but
   after I've confirmed gnuradion-companion works, I will pursue qt4 or qt5
