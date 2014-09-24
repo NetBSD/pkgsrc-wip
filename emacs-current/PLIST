@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.141 2014/06/27 05:13:47 makoto Exp $
+@comment $NetBSD: PLIST,v 1.142 2014/09/24 12:06:33 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -79,6 +79,7 @@ man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
 man/man1/grep-changelog.1
+share/appdata/emacs.appdata.xml
 share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
@@ -119,6 +120,7 @@ share/emacs/${PKGVERSION}/etc/TERMS
 share/emacs/${PKGVERSION}/etc/THE-GNU-PROJECT
 share/emacs/${PKGVERSION}/etc/TODO
 share/emacs/${PKGVERSION}/etc/WHY-FREE
+share/emacs/${PKGVERSION}/etc/emacs.appdata.xml
 share/emacs/${PKGVERSION}/etc/charsets/8859-10.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-11.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-13.map
