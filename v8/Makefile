@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2014/08/31 19:55:49 heidnes Exp $
+# $NetBSD: Makefile,v 1.13 2014/09/24 07:58:30 heidnes Exp $
 
-DISTNAME=		v8-3.28.62
-PKGREVISION=		1
+DISTNAME=		v8-3.29.9.1
 CATEGORIES=		lang
 MASTER_SITES=		http://gsdview.appspot.com/chromium-browser-official/
 EXTRACT_SUFX=		.tar.bz2
@@ -64,7 +63,12 @@ INSTALL_INCLUDES+=	v8config.h v8stdint.h
 UNLIMIT_RESOURCES+=	datasize
 
 pre-test:
-	cd ${WRKSRC}/out; ln -s native native.release
+	cd ${WRKSRC}/out; \
+		rm -f native.release; \
+		ln -s native native.release
+
+failing-tests:
+	cd ${WRKSRC}; ${GMAKE} failing-tests
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out/native/d8 ${DESTDIR}${PREFIX}/bin/d8
