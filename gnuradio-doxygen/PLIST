@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/18 00:43:31 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/09/25 23:49:59 makoto Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -4328,7 +4328,6 @@ share/doc/gnuradio-${PKGVERSION}/html/functions_m.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_n.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_o.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_p.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_prop.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_q.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_r.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_rela.html
@@ -4369,9 +4368,6 @@ share/doc/gnuradio-${PKGVERSION}/html/functions_vars_u.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_vars_v.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_vars_w.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_w.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_x.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_y.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_z.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_~.html
 share/doc/gnuradio-${PKGVERSION}/html/fxpt_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/fxpt_8h__dep__incl.map
@@ -7224,8 +7220,6 @@ share/doc/gnuradio-${PKGVERSION}/html/search/all_19.html
 share/doc/gnuradio-${PKGVERSION}/html/search/all_19.js
 share/doc/gnuradio-${PKGVERSION}/html/search/all_1a.html
 share/doc/gnuradio-${PKGVERSION}/html/search/all_1a.js
-share/doc/gnuradio-${PKGVERSION}/html/search/all_1b.html
-share/doc/gnuradio-${PKGVERSION}/html/search/all_1b.js
 share/doc/gnuradio-${PKGVERSION}/html/search/all_2.html
 share/doc/gnuradio-${PKGVERSION}/html/search/all_2.js
 share/doc/gnuradio-${PKGVERSION}/html/search/all_3.html
@@ -7593,24 +7587,6 @@ share/doc/gnuradio-${PKGVERSION}/html/search/pages_e.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_e.js
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_f.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_f.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_1.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_1.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_2.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_2.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_3.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_3.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_4.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_4.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_5.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_5.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_6.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_6.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_7.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_7.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_8.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_8.js
 share/doc/gnuradio-${PKGVERSION}/html/search/related_0.html
 share/doc/gnuradio-${PKGVERSION}/html/search/related_0.js
 share/doc/gnuradio-${PKGVERSION}/html/search/related_1.html
@@ -11264,34 +11240,34 @@ share/doc/gnuradio-${PKGVERSION}/xml/xor__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ss_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/zeromq_8dox.xml
-@pkgdir share/gnuradio/grc/blocks
-@pkgdir share/gnuradio/examples/volk_benchmark
-@pkgdir share/gnuradio/examples/tags
-@pkgdir share/gnuradio/examples/network
-@pkgdir share/gnuradio/examples/mp-sched
-@pkgdir share/gnuradio/examples/metadata
-@pkgdir share/gnuradio/examples/filter
-@pkgdir share/gnuradio/examples/audio
-@pkgdir share/gnuradio/examples/analog
-@pkgdir lib/python2.7/site-packages/volk_modtool
-@pkgdir lib/python2.7/site-packages/pmt
-@pkgdir lib/python2.7/site-packages/gnuradio/gru
-@pkgdir lib/python2.7/site-packages/gnuradio/gr
-@pkgdir lib/python2.7/site-packages/gnuradio/filter
-@pkgdir lib/python2.7/site-packages/gnuradio/fft
-@pkgdir lib/python2.7/site-packages/gnuradio/blocks
-@pkgdir lib/python2.7/site-packages/gnuradio/audio
-@pkgdir lib/python2.7/site-packages/gnuradio/analog
-@pkgdir lib/cmake/volk
-@pkgdir lib/cmake/gnuradio
-@pkgdir include/volk/asm/neon
-@pkgdir include/pmt
-@pkgdir include/gnuradio/thread
-@pkgdir include/gnuradio/swig
-@pkgdir include/gnuradio/messages
-@pkgdir include/gnuradio/filter
-@pkgdir include/gnuradio/fft
-@pkgdir include/gnuradio/blocks
-@pkgdir include/gnuradio/audio
-@pkgdir include/gnuradio/analog
 @pkgdir etc/gnuradio/conf.d
+@pkgdir include/gnuradio/analog
+@pkgdir include/gnuradio/audio
+@pkgdir include/gnuradio/blocks
+@pkgdir include/gnuradio/fft
+@pkgdir include/gnuradio/filter
+@pkgdir include/gnuradio/messages
+@pkgdir include/gnuradio/swig
+@pkgdir include/gnuradio/thread
+@pkgdir include/pmt
+@pkgdir include/volk/asm/neon
+@pkgdir lib/cmake/gnuradio
+@pkgdir lib/cmake/volk
+@pkgdir ${PYSITELIB}/gnuradio/analog
+@pkgdir ${PYSITELIB}/gnuradio/audio
+@pkgdir ${PYSITELIB}/gnuradio/blocks
+@pkgdir ${PYSITELIB}/gnuradio/fft
+@pkgdir ${PYSITELIB}/gnuradio/filter
+@pkgdir ${PYSITELIB}/gnuradio/gr
+@pkgdir ${PYSITELIB}/gnuradio/gru
+@pkgdir ${PYSITELIB}/pmt
+@pkgdir ${PYSITELIB}/volk_modtool
+@pkgdir share/gnuradio/examples/analog
+@pkgdir share/gnuradio/examples/audio
+@pkgdir share/gnuradio/examples/filter
+@pkgdir share/gnuradio/examples/metadata
+@pkgdir share/gnuradio/examples/mp-sched
+@pkgdir share/gnuradio/examples/network
+@pkgdir share/gnuradio/examples/tags
+@pkgdir share/gnuradio/examples/volk_benchmark
+@pkgdir share/gnuradio/grc/blocks

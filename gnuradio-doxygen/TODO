@@ -1,0 +1,53 @@
+- By some condition, getting following diff.
+  Did not find its condition yet.
+
+Index: PLIST
+===================================================================
+RCS file: /cvsroot/pkgsrc-wip/wip/gnuradio-doxygen/PLIST,v
+retrieving revision 1.1
+diff -u -r1.1 PLIST
+--- PLIST	18 Sep 2014 00:43:31 -0000	1.1
++++ PLIST	25 Sep 2014 22:16:22 -0000
+@@ -7593,42 +7593,6 @@
+ share/doc/gnuradio-${PKGVERSION}/html/search/pages_e.js
+ share/doc/gnuradio-${PKGVERSION}/html/search/pages_f.html
+ share/doc/gnuradio-${PKGVERSION}/html/search/pages_f.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_1.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_1.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_2.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_2.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_3.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_3.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_4.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_4.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_5.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_5.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_6.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_6.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_7.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_7.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_8.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/properties_8.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_0.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_0.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_1.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_1.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_2.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_2.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_3.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_3.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_4.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_4.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_5.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_5.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_6.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_6.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_7.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_7.js
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_8.html
+-share/doc/gnuradio-${PKGVERSION}/html/search/related_8.js
+ share/doc/gnuradio-${PKGVERSION}/html/search/related_9.html
+ share/doc/gnuradio-${PKGVERSION}/html/search/related_9.js
+ share/doc/gnuradio-${PKGVERSION}/html/search/search.css

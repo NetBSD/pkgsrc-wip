@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:31 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/25 23:49:59 makoto Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
 COMMENT=	Doxygen documentation of GNU Radio
@@ -11,5 +11,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON
+CMAKE_ARGS+=	-DENABLE_SPHINX=ON
 
 .include	"../../mk/bsd.pkg.mk"
