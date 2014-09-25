@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/25 14:05:46 yvs4sf Exp $
+man/man8/mtr.8
+sbin/mtr
+share/doc/mtr/SECURITY

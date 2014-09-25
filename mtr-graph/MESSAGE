@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2014/09/25 14:05:46 yvs4sf Exp $
+
+	${PREFIX}/sbin/mtr is setuid "root".
+
+        Please read about potential security issues in
+		${PREFIX}/share/doc/mtr/SECURITY
+
+===========================================================================
