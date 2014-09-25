@@ -1,0 +1,72 @@
+- Add buildlink3.mk file.
+
+
+- This packages is purely experimental, mainly for gnuradio-companion to work.
+  I was told mixing qt5 and qt4 was bad thing, (don't to that), but
+  after I've confirmed gnuradion-companion works, I will pursue qt4 or qt5
+  only version, thanks. 
+
+  (By the way, asking for this package is noticed after you 'Execute'
+  on gnuradio-companion with wxGUI widgets or so).
+
+- If the varible QTDIR in /usr/pkg/qt4/mkspecs/netbsd-g++/qmake.conf
+  is set to ${PREFIX}/qt4. It would be nice.
+  Who (and when, or how to) assign its value ?
+
+- If manually change the file above (as attached), this is packaged.
+
+- Is pkgname (and directory name) pyqwt or py-qwt or PyQwt ?
+
+You may see following problem
++-----------------
+| libtool --silent --mode=compile c++ -c -O2 -I/usr/pkg/include
+| -I/usr/include -I/usr/pkg/qt4/include
+| -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include
+| -I/usr/X11R7/include/libdrm -DQ_TRAILING_DIR_SEP -D_REENTRANT
+| -DQT_NO_DEBUG -DQT_CORE_LIB -I/usr/pkg/qt4/mkspecs/netbsd-g++
+| -I. -I/include/QtCore -I/include -I../qwt-5.2/src
+| -I/usr/pkg/include/python2.7
+| -I/usr/pkg/lib/python2.7/site-packages/numpy/core/include
+| -I. -I/usr/pkg/include -o qwt_version_info.lo
+| qwt_version_info.cpp qwt_version_info.cpp:1:19: fatal error:
+| qfile.h: No such file or directory compilation terminated.
+| *** Error code 1
++-----------------
+
+--- /usr/pkg/qt4/mkspecs/netbsd-g++/qmake.conf.orig	2014-06-15 11:50:48.000000000 +0900
++++ /usr/pkg/qt4/mkspecs/netbsd-g++/qmake.conf	2014-09-22 16:16:57.000000000 +0900
+@@ -40,8 +40,8 @@
+ QMAKE_LIBDIR		= /usr/pkg/lib
+ QMAKE_INCDIR_X11	= /usr/X11R7/include
+ QMAKE_LIBDIR_X11	= /usr/X11R7/lib
+-QMAKE_INCDIR_QT		= $(QTDIR)/include
+-QMAKE_LIBDIR_QT		= $(QTDIR)/lib
++QMAKE_INCDIR_QT		= /usr/pkg/qt4/include
++QMAKE_LIBDIR_QT		= /usr/pkg/qt4/lib
+ QMAKE_INCDIR_OPENGL	= /usr/pkg/include
+ QMAKE_LIBDIR_OPENGL	= /usr/pkg/lib
+ 
+@@ -50,7 +50,7 @@
+ QMAKE_LINK_C		= gcc
+ QMAKE_LINK_C_SHLIB	= gcc
+ QMAKE_LINK_SHLIB_CMD	= $$QMAKE_LINK_SHLIB $$QMAKE_LFLAGS_SHLIB $(LFLAGS) $$QMAKE_LFLAGS -o $(TARGETD) $(OBJECTS) $(OBJMOC) $(LIBS)
+-QMAKE_LFLAGS		= $(LDFLAGS) -L$(QTDIR)/lib
++QMAKE_LFLAGS		= $(LDFLAGS) -L/usr/pkg/qt4/lib
+ QMAKE_LFLAGS_RELEASE	=
+ QMAKE_LFLAGS_DEBUG	=
+ QMAKE_LFLAGS_SHLIB	= -shared
+@@ -68,10 +68,10 @@
+ QMAKE_LIBS_OPENGL_QT	= -lGL -lXmu
+ QMAKE_LIBS_THREAD	= 
+ 
+-QMAKE_MOC		= $(QTDIR)/bin/moc
+-QMAKE_UIC		= $(QTDIR)/bin/uic
+-QMAKE_UIC3		= $(QTDIR)/bin/uic3
+-QMAKE_RCC		= $(QTDIR)/bin/rcc
++QMAKE_MOC		= /usr/pkg/qt4/bin/moc
++QMAKE_UIC		= /usr/pkg/qt4/bin/uic
++QMAKE_UIC3		= /usr/pkg/qt4/bin/uic3
++QMAKE_RCC		= /usr/pkg/qt4/bin/rcc
+ 
+ QMAKE_AR		= ar ru
+ #QMAKE_OBJCOPY		= objcopy
