@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/25 02:35:17 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/25 02:52:20 makoto Exp $
 
 DISTNAME=	PyQwt-5.2.0
+PKGNAME=	${PYPKGPREFIX}-qwt-qt4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqwt/}
 
