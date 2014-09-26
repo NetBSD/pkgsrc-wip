@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/25 02:55:22 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/26 23:26:31 makoto Exp $
 
 DISTNAME=	PyQwt-5.2.0
 PKGNAME=	${PYPKGPREFIX}-qwt-qt4-${DISTNAME:S/PyQwt-//}
@@ -15,7 +15,12 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 BUILD_DIRS=	configure
+
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+# Following line rescues from 'Unresolved dependency with pbulk'
+PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # py-Numeric
 
 REPLACE_PYTHON+=qt4lib/PyQt4/Qwt5/grace.py
 REPLACE_PYTHON+=qt4lib/PyQt4/Qwt5/qplt.py
@@ -26,9 +31,11 @@ do-configure:
 	 configure.py -Q ../qwt-5.2)
 
 .include "../../lang/python/application.mk"
+
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-numarray/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
+
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qwt-qt4/buildlink3.mk"

@@ -1,9 +1,3 @@
 - Just a FYI, this package is required by following condition:
   (By the way, asking for this package is noticed after you 'Execute'
   on gnuradio-companion with wxGUI widgets or so).
-- With pbulk, having following problem:
-  Resolving...
-  Unresolvable dependencies found, exiting:
-    math/py-numarray
-    math/py-Numeric
-  (repeated 4 times)
