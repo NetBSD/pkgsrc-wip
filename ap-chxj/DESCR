@@ -1,6 +1,0 @@
-CHTML to HDML,XHTML,JHTML convert module.
-The contents conversion middleware for domestic main carrying (three careers)
-is made as a module for Apache2.0. UserAgent is seen when contents made with
-CHTML are output and it converts it into HDML, XHTML, and JHTML (The image :
-to JPG, GIF, JPG, GIF from PNG, and PNG and BMP). With QR code generation
-function.

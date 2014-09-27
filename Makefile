@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5918 2014/09/27 02:41:37 obache Exp $
+# $Id: Makefile,v 1.5919 2014/09/27 12:36:01 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -103,7 +103,6 @@ SUBDIR+=	aolserver
 SUBDIR+=	aolserver4
 SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-choke
-SUBDIR+=	ap-chxj
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap2-auth-imap
