@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/29 09:10:28 obache Exp $
-bin/clips
-share/doc/clips/clips.hlp
