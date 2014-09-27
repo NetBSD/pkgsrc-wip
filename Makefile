@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5910 2014/09/25 17:48:37 nros Exp $
+# $Id: Makefile,v 1.5911 2014/09/27 02:22:57 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -112,12 +112,10 @@ SUBDIR+=	ap2-auth-pam
 SUBDIR+=	ap2-encoding
 SUBDIR+=	ap2-evasive
 SUBDIR+=	ap2-jk2
-SUBDIR+=	ap2-layout
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-passenger
 SUBDIR+=	ap2-zeroconf
-SUBDIR+=	ap22-layout
 SUBDIR+=	apache-commons-beanutils
 SUBDIR+=	apache-commons-codec
 SUBDIR+=	apache-commons-collections
