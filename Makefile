@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5911 2014/09/27 02:22:57 obache Exp $
+# $Id: Makefile,v 1.5912 2014/09/27 02:26:23 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -109,7 +109,6 @@ SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap2-auth-imap
 SUBDIR+=	ap2-auth-pam
-SUBDIR+=	ap2-encoding
 SUBDIR+=	ap2-evasive
 SUBDIR+=	ap2-jk2
 SUBDIR+=	ap2-limitipconn
