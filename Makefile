@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5920 2014/09/27 12:40:37 obache Exp $
+# $Id: Makefile,v 1.5921 2014/09/27 12:42:59 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3623,7 +3623,6 @@ SUBDIR+=	wmsupermon
 SUBDIR+=	wmswallow
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
-SUBDIR+=	wordcut
 SUBDIR+=	wordwarvi
 SUBDIR+=	workrave
 SUBDIR+=	wpro
