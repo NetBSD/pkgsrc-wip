@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5917 2014/09/27 02:39:41 obache Exp $
+# $Id: Makefile,v 1.5918 2014/09/27 02:41:37 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3169,7 +3169,6 @@ SUBDIR+=	rtspdump
 SUBDIR+=	rubinius
 SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
-SUBDIR+=	ruby-bdb
 SUBDIR+=	ruby-cabin
 SUBDIR+=	ruby-diaspora
 SUBDIR+=	ruby-ditz
