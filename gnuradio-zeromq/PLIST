@@ -1,0 +1,66 @@
+@comment $NetBSD: PLIST,v 1.1 2014/09/27 17:07:39 makoto Exp $
+include/gnuradio/swig/zeromq_swig.i
+include/gnuradio/swig/zeromq_swig_doc.i
+include/gnuradio/zeromq/api.h
+include/gnuradio/zeromq/pub_sink.h
+include/gnuradio/zeromq/pull_source.h
+include/gnuradio/zeromq/push_sink.h
+include/gnuradio/zeromq/rep_sink.h
+include/gnuradio/zeromq/req_source.h
+include/gnuradio/zeromq/sub_source.h
+lib/libgnuradio-zeromq.so
+lib/libgnuradio-zeromq.so.${PKGVERSION}
+lib/pkgconfig/gnuradio-zeromq.pc
+${PYSITELIB}/gnuradio/zeromq/__init__.py
+${PYSITELIB}/gnuradio/zeromq/__init__.pyc
+${PYSITELIB}/gnuradio/zeromq/__init__.pyo
+${PYSITELIB}/gnuradio/zeromq/_zeromq_swig.so
+${PYSITELIB}/gnuradio/zeromq/probe_manager.py
+${PYSITELIB}/gnuradio/zeromq/probe_manager.pyc
+${PYSITELIB}/gnuradio/zeromq/probe_manager.pyo
+${PYSITELIB}/gnuradio/zeromq/rpc_manager.py
+${PYSITELIB}/gnuradio/zeromq/rpc_manager.pyc
+${PYSITELIB}/gnuradio/zeromq/rpc_manager.pyo
+${PYSITELIB}/gnuradio/zeromq/zeromq_swig.py
+${PYSITELIB}/gnuradio/zeromq/zeromq_swig.pyc
+${PYSITELIB}/gnuradio/zeromq/zeromq_swig.pyo
+share/gnuradio/examples/zeromq/zeromq_pubsub.grc
+share/gnuradio/examples/zeromq/zeromq_pushpull.grc
+share/gnuradio/examples/zeromq/zeromq_reqrep.grc
+share/gnuradio/grc/blocks/zeromq_pub_sink.xml
+share/gnuradio/grc/blocks/zeromq_pull_source.xml
+share/gnuradio/grc/blocks/zeromq_push_sink.xml
+share/gnuradio/grc/blocks/zeromq_rep_sink.xml
+share/gnuradio/grc/blocks/zeromq_req_source.xml
+share/gnuradio/grc/blocks/zeromq_sub_source.xml
+@pkgdir share/gnuradio/examples/volk_benchmark
+@pkgdir share/gnuradio/examples/tags
+@pkgdir share/gnuradio/examples/network
+@pkgdir share/gnuradio/examples/mp-sched
+@pkgdir share/gnuradio/examples/metadata
+@pkgdir share/gnuradio/examples/filter
+@pkgdir share/gnuradio/examples/audio
+@pkgdir share/gnuradio/examples/analog
+@pkgdir share/examples/gnuradio/conf.d
+@pkgdir share/doc/gnuradio-${PKGVERSION}
+@pkgdir lib/python2.7/site-packages/volk_modtool
+@pkgdir lib/python2.7/site-packages/pmt
+@pkgdir lib/python2.7/site-packages/gnuradio/gru
+@pkgdir lib/python2.7/site-packages/gnuradio/gr
+@pkgdir lib/python2.7/site-packages/gnuradio/filter
+@pkgdir lib/python2.7/site-packages/gnuradio/fft
+@pkgdir lib/python2.7/site-packages/gnuradio/blocks
+@pkgdir lib/python2.7/site-packages/gnuradio/audio
+@pkgdir lib/python2.7/site-packages/gnuradio/analog
+@pkgdir lib/cmake/volk
+@pkgdir lib/cmake/gnuradio
+@pkgdir include/volk/asm/neon
+@pkgdir include/pmt
+@pkgdir include/gnuradio/thread
+@pkgdir include/gnuradio/messages
+@pkgdir include/gnuradio/filter
+@pkgdir include/gnuradio/fft
+@pkgdir include/gnuradio/blocks
+@pkgdir include/gnuradio/audio
+@pkgdir include/gnuradio/analog
+@pkgdir etc/gnuradio/conf.d
