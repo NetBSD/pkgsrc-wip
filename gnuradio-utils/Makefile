@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/18 09:52:22 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/27 08:17:45 makoto Exp $
 
 PKGNAME=	gnuradio-utils-${VERSION}
 COMMENT=	Utilities in GNU Radio
@@ -6,6 +6,7 @@ COMMENT=	Utilities in GNU Radio
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 CONF_FILES+=	${EGDIR}/modtool.conf	${PKG_SYSCONFDIR}/modtool.conf
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
