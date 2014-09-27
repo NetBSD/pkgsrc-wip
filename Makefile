@@ -1,11 +1,10 @@
-# $Id: Makefile,v 1.5915 2014/09/27 02:34:00 obache Exp $
+# $Id: Makefile,v 1.5916 2014/09/27 02:35:16 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	2bwm
 SUBDIR+=	389-ds-base
 SUBDIR+=	BitchX
-SUBDIR+=	Box2D
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
 SUBDIR+=	FontManager
