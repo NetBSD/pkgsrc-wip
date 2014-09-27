@@ -1,4 +1,9 @@
-- OPTIONS.gnuradio= ninja
+- OPTIONS.gnuradio= ninja doesn't package with error:
+  # Adding ninja to following line (now) stops
+  # [164/850] cd /PATH/wip/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
+  # FAILED: cd /PATH/wip/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
+  # : permission denied
+  (updating cmake 3.0.2 in wip doesn't help)
 
 - Starting gnuradio gives  wxPython/wxWidgets release number mismatch")
    |  modena@makoto 10:31:52/140919(..packages/All)% gnuradio-companion   
@@ -56,27 +61,6 @@ modena@makoto 11:05:51/140919(..packages/All)% pkg_info |grep -i wx
       pkg-config --libs   portaudio-2.0
       pkg-config --cflags libusb-1.0
    may return (correct) values but not utilized now
-
--  gr_filter_design wants following packages to run, add to DEPENDS or set
-   them in options.mk ?
-     math/py-scipy
-     x11/py-qt4
-        /pyqwt5   http://pyqwt.sourceforge.net/
-	/qt-mt   (?)
-
-- gr_plot* wants:
-   Please install Matplotlib to run this script (http://matplotlib.sourceforge.net/)
-   But after graphics/py-matplotlib (1.4.0 in wip) installed, getting
-   the same message
-
-- If swig-1.* is installed, get confused to use (undesired) this version 1
-  (swig2 is really necessary, I believe)
-
-- On some systems, getting following problem:
-  [ 65%] Building CXX object
-  gr-digital/swig/CMakeFiles/_digital_swig.dir/digital_swigPYTHON_wrap.cxx.o
-  g++: Internal error: Killed (program cc1plus received signal 9)
-  ... Just physical memory is short (with WRKOBJDIR is on tmpfs)
 
 -  patches/patch-gnuradio_runtime_lib_high__res__timer.cc
     is a joke, should be corrected
