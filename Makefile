@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5916 2014/09/27 02:35:16 obache Exp $
+# $Id: Makefile,v 1.5917 2014/09/27 02:39:41 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3101,7 +3101,6 @@ SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
 SUBDIR+=	rapidxml
 SUBDIR+=	rar4
-SUBDIR+=	rast
 SUBDIR+=	raster3d
 SUBDIR+=	ratpoints
 SUBDIR+=	ratproxy
