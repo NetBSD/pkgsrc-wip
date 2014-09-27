@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:30 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/27 23:57:38 makoto Exp $
 
 PKGNAME=	gnuradio-atsc-${VERSION}
 COMMENT=	Advanced Television Systems Committee, ATSC module of gnuradio
@@ -7,8 +7,8 @@ COMMENT=	Advanced Television Systems Committee, ATSC module of gnuradio
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
-CMAKE_ARGS+=    -DENABLE_GR_ATSC=ON
-CMAKE_ARGS+=    -DENABLE_GR_FEC=ON
+CMAKE_ARGS+=	-DENABLE_GR_ATSC=ON
+CMAKE_ARGS+=	-DENABLE_GR_FEC=ON
 
 DEPENDS+=	gnuradio-fec-[0-9]*:../../wip/gnuradio-fec
 
