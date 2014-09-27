@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/09/18 03:43:28 makoto Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/09/27 03:37:45 makoto Exp $
 bin/gnuradio-companion
 bin/gnuradio-config-info
 bin/gr_constellation_plot
@@ -6372,7 +6372,6 @@ share/doc/gnuradio-${PKGVERSION}/html/functions_m.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_n.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_o.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_p.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_prop.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_q.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_r.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_rela.html
@@ -6413,9 +6412,6 @@ share/doc/gnuradio-${PKGVERSION}/html/functions_vars_u.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_vars_v.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_vars_w.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_w.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_x.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_y.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_z.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_~.html
 share/doc/gnuradio-${PKGVERSION}/html/fxpt_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/fxpt_8h__dep__incl.map
@@ -9268,8 +9264,6 @@ share/doc/gnuradio-${PKGVERSION}/html/search/all_19.html
 share/doc/gnuradio-${PKGVERSION}/html/search/all_19.js
 share/doc/gnuradio-${PKGVERSION}/html/search/all_1a.html
 share/doc/gnuradio-${PKGVERSION}/html/search/all_1a.js
-share/doc/gnuradio-${PKGVERSION}/html/search/all_1b.html
-share/doc/gnuradio-${PKGVERSION}/html/search/all_1b.js
 share/doc/gnuradio-${PKGVERSION}/html/search/all_2.html
 share/doc/gnuradio-${PKGVERSION}/html/search/all_2.js
 share/doc/gnuradio-${PKGVERSION}/html/search/all_3.html
@@ -9637,24 +9631,6 @@ share/doc/gnuradio-${PKGVERSION}/html/search/pages_e.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_e.js
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_f.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_f.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_1.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_1.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_2.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_2.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_3.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_3.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_4.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_4.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_5.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_5.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_6.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_6.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_7.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_7.js
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_8.html
-share/doc/gnuradio-${PKGVERSION}/html/search/properties_8.js
 share/doc/gnuradio-${PKGVERSION}/html/search/related_0.html
 share/doc/gnuradio-${PKGVERSION}/html/search/related_0.js
 share/doc/gnuradio-${PKGVERSION}/html/search/related_1.html
