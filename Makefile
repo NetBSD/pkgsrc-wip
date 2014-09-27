@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5914 2014/09/27 02:32:35 obache Exp $
+# $Id: Makefile,v 1.5915 2014/09/27 02:34:00 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3619,7 +3619,6 @@ SUBDIR+=	wings
 SUBDIR+=	winwrangler
 SUBDIR+=	wireless-tools
 SUBDIR+=	wise2
-SUBDIR+=	wkf
 SUBDIR+=	wkhtmltopdf
 SUBDIR+=	wl-current
 SUBDIR+=	wmc2d

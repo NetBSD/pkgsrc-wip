@@ -1,7 +1,0 @@
-wkf stands for "WALL's Kanji Filter," and it's a program used to
-convert between various encodings used for Japanese character sets. It
-handles ISO-2022-JP, Shift_JIS, EUC-JP. As well, it can do MIME decoding.
-It also can try to guess the input encoding so that you don't have to
-specify it and you can use it just to determine encoding.
-Not only program but also include C API for Kanji code converter,
-base64/quoted-printable encoder/decoder.

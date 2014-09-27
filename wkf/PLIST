@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/06 00:43:51 obache Exp $
-bin/wkf
-include/wkf.h
-lib/libwkf.a
-lib/libwkf.so
-lib/libwkf13.so.1
-man/ja/man1/wkf.1
