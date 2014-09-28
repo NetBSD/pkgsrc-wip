@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2014/09/28 14:20:08 thomasklausner Exp $
+
+SHA1 (nss-3.16.5.tar.gz) = bec488835954698e7b19149a15205db299cd13de
+RMD160 (nss-3.16.5.tar.gz) = 19630a0815d69ee5959b562d7849d35d677c6329
+Size (nss-3.16.5.tar.gz) = 6429830 bytes
+SHA1 (patch-cmd_shlibsign_sign.sh) = 14a0547a04195f3ab2ffed31bb66dee72adf4dd1
+SHA1 (patch-coreconf_DragonFly.mk) = a066f9a762f5a9787eb4df24bd2c348b6ce119f7
+SHA1 (patch-coreconf_OpenBSD.mk) = ce7200f441592661fe65203f127a2cfd340dec2f
+SHA1 (patch-coreconf_SunOS5.mk) = d1dafae5e61a14a73333f151c4bf125cb732132d
+SHA1 (patch-coreconf_arch.mk) = c62b76cdcce37f452d3692d92cc1a003d448a9cc
+SHA1 (patch-coreconf_config.mk) = e40999b05a0844bcf0c361947e192881f249dbf5
+SHA1 (patch-lib_Makefile) = 2e56b00deeec888dcb01281c96b6506a4cd26c77
+SHA1 (patch-lib_freebl_Makefile) = 8216da5a1ef5d728d611bf7cfb4593f0fc17b5b7
+SHA1 (patch-lib_freebl_blapi.h) = e206ae48849f833b6095ae9dbfbff3baf8f58eac
+SHA1 (patch-lib_freebl_config.mk) = fe3d99b9e6697ec7b05e0c06788abcb785f60b09
+SHA1 (patch-lib_freebl_sha-fast-amd64-sun.s) = 6bad2d54e80d4ce5fbf05e5025e6dd22a83cf98f
+SHA1 (patch-lib_softoken_config.mk) = eeecef9027ed9c8b916c7073b6f50b17da243286
+SHA1 (patch-tests_libpkix_libpkix.sh) = ad5e5711d751ea3bbd0251ac007177124845d421
+SHA1 (patch-tests_multinit_multinit.sh) = c31b04eda2411afb45460d72602e3c1c55e2026e
