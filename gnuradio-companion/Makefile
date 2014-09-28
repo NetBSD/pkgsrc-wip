@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/18 09:52:22 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/28 00:40:28 makoto Exp $
 
 PKGNAME=	gnuradio-companion-${VERSION}
 COMMENT=	Gnuradio-companion, user interface entry
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GRC=ON
 
+.include	"../../x11/py-gtk2/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
 
 # -- Configuring gnuradio-companion support...

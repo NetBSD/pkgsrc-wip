@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/18 00:22:32 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/28 00:40:28 makoto Exp $
 
 META_PACKAGE=	yes
 
@@ -37,6 +37,6 @@ DEPENDS+=	gnuradio-utils-[0-9]*:../../wip/gnuradio-utils
 DEPENDS+=	gnuradio-video-sdl-[0-9]*:../../wip/gnuradio-video-sdl
 DEPENDS+=	gnuradio-vocoder-[0-9]*:../../wip/gnuradio-vocoder
 DEPENDS+=	gnuradio-wavelet-[0-9]*:../../wip/gnuradio-wavelet
-DEPENDS+=	gnuradio-wxgui-[0-9]*:../../wip/gnuradio-wxgui
+#EPENDS+=	gnuradio-zeromq-[0-9]*:../../wip/gnuradio-zeromq
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:32 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/28 00:40:28 makoto Exp $
 
 PKGNAME=	gnuradio-wavelet-${VERSION}
 COMMENT=	Implementing various digital television standards of GNU Radio
@@ -9,4 +9,5 @@ COMMENT=	Implementing various digital television standards of GNU Radio
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_GR_WAVELET=True
 
+.include	"../../math/gsl/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"

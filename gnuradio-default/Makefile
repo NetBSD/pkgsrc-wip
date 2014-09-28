@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/18 09:52:22 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/09/28 00:40:28 makoto Exp $
 
 PKGNAME=	gnuradio-default-${VERSION}
 COMMENT=	Full package of gnuradio
@@ -11,6 +11,7 @@ post-install:
 	                    ${DESTDIR}${PREFIX}/${EGDIR}/
 
 .include	"../../wip/gnuradio-core/Makefile.common"
+CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 
 CONFLICTS=	gnuradio-[0-9]*
 CONFLICTS+=	gnuradio-atsc-[0-9]*
@@ -37,27 +38,24 @@ CONFLICTS+=	gnuradio-vocoder-[0-9]*
 CONFLICTS+=	gnuradio-wavelet-[0-9]*
 
 CONFLICTS+=	gnuradio-wxgui-[0-9]*
-
+CONFLICTS+=	gnuradio-zeromq-[0-9]*
 
 CONF_FILES+=	${EGDIR}/gr-qtgui.conf		${PKG_SYSCONFDIR}/gr-qtgui.conf
 CONF_FILES+=	${EGDIR}/modtool.conf		${PKG_SYSCONFDIR}/modtool.conf
 CONF_FILES+=	${EGDIR}/gr-wxgui.conf		${PKG_SYSCONFDIR}/gr-wxgui.conf
 CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFDIR}/gnuradio-runtime.conf
 
-BUILD_DEPENDS+=    ${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-DEPENDS+=       ${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
+DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../wip/py-qwt-qt4
 
-# --------       R E S E T    H E R E  -------------
+# --------	 R E S E T    H E R E  -------------
 CMAKE_ARGS+=	-DENABLE_DEFAULT=True
-
-# .include "../../x11/qt4-libs/buildlink3.mk"
-.include	"../../audio/alsa-lib/buildlink3.mk"
-.include	"../../audio/gsm/buildlink3.mk"
-.include	"../../audio/jack/buildlink3.mk"
 
 .include	"../../devel/SDL/buildlink3.mk"
 .include	"../../devel/cppunit/buildlink3.mk"
 .include	"../../devel/libusb1/buildlink3.mk"
+.include	"../../devel/orc/buildlink3.mk"
 
 .include	"../../ham/uhd/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
@@ -66,7 +64,7 @@ CMAKE_ARGS+=	-DENABLE_DEFAULT=True
 
 .include	"../../x11/py-gtk2/buildlink3.mk"
 .include	"../../x11/py-qt4/buildlink3.mk"
-.include	"../../x11/py-wxWidgets/buildlink3.mk"
+.include	"../../wip/py-wxWidgets/buildlink3.mk"
 .include	"../../x11/qt4-libs/buildlink3.mk"
 .include	"../../x11/qwt-qt4/buildlink3.mk"
 .include	"../../x11/wxGTK28/buildlink3.mk"

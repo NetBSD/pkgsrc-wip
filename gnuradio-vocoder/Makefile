@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:32 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/09/28 00:40:28 makoto Exp $
 
 PKGNAME=	gnuradio-vocoder-${VERSION}
 COMMENT=	All available vocoders in GNU Radio
@@ -8,5 +8,7 @@ COMMENT=	All available vocoders in GNU Radio
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_GR_VOCODER=True
+
+.include	"../../devel/libusb1/buildlink3.mk"
 
 .include	"../../mk/bsd.pkg.mk"

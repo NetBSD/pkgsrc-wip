@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2014/09/21 15:04:55 makoto Exp $
+# $NetBSD: Makefile,v 1.20 2014/09/28 00:40:28 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
 COMMENT=	Runtime system and DSP blocks for GNU Radio
 
 PLIST_MINUS=	# empty
 .include	"../../wip/gnuradio-core/Makefile.common"
-
-BUILD_DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
-# gnuradio-companion wants:
-DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml/
 
 CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFDIR}/gnuradio-runtime.conf
 CONF_FILES+=	${EGDIR}/gr-audio-alsa.conf	${PKG_SYSCONFDIR}/gr-audio-alsa.conf
