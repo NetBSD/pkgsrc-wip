@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2014/09/28 14:14:58 thomasklausner Exp $
+
+SHA1 (nspr-4.10.6.tar.gz) = 9f3f278f7f31574b2cdbb99d9703c58e51cd3e1c
+RMD160 (nspr-4.10.6.tar.gz) = cee6015cb94f6a8c399b290f22e986fc3b1d6799
+Size (nspr-4.10.6.tar.gz) = 1131328 bytes
+SHA1 (patch-configure.in) = 747a5958c9cf3f10678215b6f113a7b608091adc
+SHA1 (patch-pr_include_md___dragonfly.cfg) = 3defbc776d68ed266132b3482e00adf2890a219f
+SHA1 (patch-pr_include_md___freebsd.h) = 3296dee0bd9f51599a926071c6840f5ce27280f4
+SHA1 (patch-pr_include_md___netbsd.h) = 1105ee74607715fbf8404090405ace36d09e578f
+SHA1 (patch-pr_include_md___pth.h) = d7ece395ef7004107f82a87512b9178f9bcfac53
+SHA1 (patch-pr_include_md_prosdep.h) = ada684d4a73a2fb37a28746eaf66d294d30993f3
+SHA1 (patch-pr_include_private_pprthred.h) = 7ce609a2ef7873d74483275e0bcc8804762c3a12
+SHA1 (patch-pr_src_md_unix_uxrng.c) = 773748a622a95fb21e62ec0b2c45c749f1026d35
+SHA1 (patch-pr_src_misc_prnetdb.c) = 808695cf026da5832c58836f60defa6b133cd5e3
+SHA1 (patch-pr_src_pthreads_ptio.c) = df7f2c19b8753d262f5172aed75245486bff0fe2
+SHA1 (patch-pr_src_pthreads_ptsynch.c) = 1f4e0569d3dee982727747b3f835b49e7641c8fe
+SHA1 (patch-pr_src_pthreads_ptthread.c) = 195d500ae29a670ce88fd621a442c4fe45325c7e
