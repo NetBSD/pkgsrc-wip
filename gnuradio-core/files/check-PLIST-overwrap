@@ -1,5 +1,6 @@
 #!/usr/pkg/bin/perl
 # Check the duplication on gnuradio-*/PLIST  (except gnuradio-default)
+# Check if whole meta-pkgs/gnuradio PLIST convers the one of gnuradio-default (use -m)
 # use -h for usage.
 
 use strict;
@@ -12,9 +13,11 @@ my ($PKGSRC)	='/usr/pkgsrc';
 my ($CATEGORY)	='wip';
 my (@LIST);	# list of gnuradio-*/PLIST files
 my (%WORDS);
+my (%CHECKED);
 my (%count);
 my (%FULL); 	# full list from gnuradio-default
 my ($DEFAULT) = 'gnuradio-default';
+my ($verbose) = 0;
 
 sub usage() {
     print <<HELP;
@@ -26,21 +29,23 @@ Where:
     -c  CATEGORY (wip)
     -m  print missing file instead of dupes
     -p  pkgsrc directory (/usr/pkgsrc)
+    -v  verbose
     (parenthesis) shows default value
 HELP
 }
 
-getopts("hc:mp:", \%opts);
+getopts("hc:mp:v", \%opts);
 if ($opts{'h'}) { usage(); exit;}
 if ($opts{'c'}) { $CATEGORY = $opts{'c'};}
 if ($opts{'p'}) { $PKGSRC   = $opts{'p'};}
+if ($opts{'v'}) { $verbose = 1;          }
 my ($WORK)	= $PKGSRC.'/'.$CATEGORY;
 
-print "(Category) $CATEGORY (pkgsrc) $PKGSRC \n";
+print "(Category) $CATEGORY, (pkgsrc) $PKGSRC \n";
     
 chdir $WORK;
 print 'Changing to directory: ', $WORK,"\n";
-opendir(DIR, $WORK) || die "Problem opening directory ($WORK)\n";
+opendir(DIR, $WORK) || die " *** Problem opening directory ($WORK), use [-p DIR] to change.\n";
 
 my ($dir) = 1;
 while ($dir) {
@@ -56,7 +61,8 @@ while ($dir) {
 }
 foreach my $d (0..$#LIST) {
     my $file = $LIST[$d];
-    open (FILE, $file) || print "problem opening $file: $!\n";
+    print "      Reading $file \n" if $verbose;
+    open (FILE, $file) || print " *** Problem opening $file: $!\n";
     while(<FILE>) {
 	chomp();
 	if (/\@comment/) { next;}
@@ -70,8 +76,9 @@ foreach my $d (0..$#LIST) {
     }
     close(FILE);
 }
-if ($opts{'m'}) {
-    my ($file) = $DEFAULT.'/PLIST'; 
+sub show_missing() {
+    my ($file) = $DEFAULT.'/PLIST';
+    print " (-m) Reading $file \n" if $verbose;
     open (FILE, $file) || print "problem opening $file: $!\n";
     while (<FILE>) {
 	chomp();
@@ -85,10 +92,18 @@ if ($opts{'m'}) {
     }
     close(FILE);
     foreach my $key (sort keys %FULL){
-	if ($WORDS{$key} ) { next;}
+	if ($WORDS{$key} ) {
+	    $CHECKED{$key}++;
+	    next;}
 	else {
 	    printf ("missing: %30s\t\n", $key);
 	}	    
+    }
+    foreach my $file (keys %WORDS) {
+	if ( $CHECKED{$file} ) { next;}
+	else {
+	    printf ("extra: %30s\n", $file);
+	}
     }
 }
 
@@ -98,9 +113,6 @@ sub show_dupe() {
 	    printf ("%30s\t->%s\n", $key, $WORDS{$key});
 	}
     }    
-}
-
-sub show_missing() {
 }
 
 if ($opts{'m'}) { show_missing();}
