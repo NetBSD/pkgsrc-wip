@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/09/28 00:40:28 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2014/09/28 14:41:18 makoto Exp $
 
 PKGNAME=	gnuradio-default-${VERSION}
 COMMENT=	Full package of gnuradio
@@ -52,6 +52,9 @@ DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../wip/py-qwt-qt4
 # --------	 R E S E T    H E R E  -------------
 CMAKE_ARGS+=	-DENABLE_DEFAULT=True
 
+post-patch:
+	${CP}  ${PKGDIR}/../gnuradio-zeromq/files/zmq.hpp ${WRKSRC}/gr-zeromq/include/
+
 .include	"../../devel/SDL/buildlink3.mk"
 .include	"../../devel/cppunit/buildlink3.mk"
 .include	"../../devel/libusb1/buildlink3.mk"
@@ -60,7 +63,7 @@ CMAKE_ARGS+=	-DENABLE_DEFAULT=True
 .include	"../../ham/uhd/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
 # gr-zeromq/lib/pub_sink_impl.h:27:19: fatal error: zmq.hpp: No such file..
-#include	"../../net/zeromq/buildlink3.mk"
+.include	"../../net/zeromq/buildlink3.mk"
 
 .include	"../../x11/py-gtk2/buildlink3.mk"
 .include	"../../x11/py-qt4/buildlink3.mk"

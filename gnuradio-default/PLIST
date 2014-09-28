@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/09/27 03:37:45 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/09/28 14:41:19 makoto Exp $
 bin/gnuradio-companion
 bin/gnuradio-config-info
 bin/gr_constellation_plot
@@ -788,6 +788,8 @@ include/gnuradio/swig/wavelet_swig.i
 include/gnuradio/swig/wavelet_swig_doc.i
 include/gnuradio/swig/wxgui_swig.i
 include/gnuradio/swig/wxgui_swig_doc.i
+include/gnuradio/swig/zeromq_swig.i
+include/gnuradio/swig/zeromq_swig_doc.i
 include/gnuradio/sync_block.h
 include/gnuradio/sync_decimator.h
 include/gnuradio/sync_interpolator.h
@@ -905,6 +907,13 @@ include/gnuradio/wxgui/oscope_guts.h
 include/gnuradio/wxgui/oscope_sink_f.h
 include/gnuradio/wxgui/oscope_sink_x.h
 include/gnuradio/wxgui/trigger_mode.h
+include/gnuradio/zeromq/api.h
+include/gnuradio/zeromq/pub_sink.h
+include/gnuradio/zeromq/pull_source.h
+include/gnuradio/zeromq/push_sink.h
+include/gnuradio/zeromq/rep_sink.h
+include/gnuradio/zeromq/req_source.h
+include/gnuradio/zeromq/sub_source.h
 include/pmt/api.h
 include/pmt/pmt.h
 include/pmt/pmt_pool.h
@@ -1086,6 +1095,8 @@ lib/libgnuradio-wavelet.so
 lib/libgnuradio-wavelet.so.${PKGVERSION}
 lib/libgnuradio-wxgui.so
 lib/libgnuradio-wxgui.so.${PKGVERSION}
+lib/libgnuradio-zeromq.so
+lib/libgnuradio-zeromq.so.${PKGVERSION}
 lib/libvolk.so
 lib/libvolk.so.0.0.0
 lib/pkgconfig/gnuradio-analog.pc
@@ -1108,6 +1119,7 @@ lib/pkgconfig/gnuradio-uhd.pc
 lib/pkgconfig/gnuradio-video-sdl.pc
 lib/pkgconfig/gnuradio-vocoder.pc
 lib/pkgconfig/gnuradio-wavelet.pc
+lib/pkgconfig/gnuradio-zeromq.pc
 lib/pkgconfig/gr-wxgui.pc
 lib/pkgconfig/volk.pc
 ${PYSITELIB}/gnuradio/__init__.py
@@ -1982,6 +1994,19 @@ ${PYSITELIB}/gnuradio/wxgui/waterfallsink_nongl.pyo
 ${PYSITELIB}/gnuradio/wxgui/wxgui_swig.py
 ${PYSITELIB}/gnuradio/wxgui/wxgui_swig.pyc
 ${PYSITELIB}/gnuradio/wxgui/wxgui_swig.pyo
+${PYSITELIB}/gnuradio/zeromq/__init__.py
+${PYSITELIB}/gnuradio/zeromq/__init__.pyc
+${PYSITELIB}/gnuradio/zeromq/__init__.pyo
+${PYSITELIB}/gnuradio/zeromq/_zeromq_swig.so
+${PYSITELIB}/gnuradio/zeromq/probe_manager.py
+${PYSITELIB}/gnuradio/zeromq/probe_manager.pyc
+${PYSITELIB}/gnuradio/zeromq/probe_manager.pyo
+${PYSITELIB}/gnuradio/zeromq/rpc_manager.py
+${PYSITELIB}/gnuradio/zeromq/rpc_manager.pyc
+${PYSITELIB}/gnuradio/zeromq/rpc_manager.pyo
+${PYSITELIB}/gnuradio/zeromq/zeromq_swig.py
+${PYSITELIB}/gnuradio/zeromq/zeromq_swig.pyc
+${PYSITELIB}/gnuradio/zeromq/zeromq_swig.pyo
 ${PYSITELIB}/grc_gnuradio/__init__.py
 ${PYSITELIB}/grc_gnuradio/__init__.pyc
 ${PYSITELIB}/grc_gnuradio/__init__.pyo
@@ -13515,6 +13540,9 @@ share/gnuradio/examples/volk_benchmark/volk_math.py
 share/gnuradio/examples/volk_benchmark/volk_plot.py
 share/gnuradio/examples/volk_benchmark/volk_test_funcs.py
 share/gnuradio/examples/volk_benchmark/volk_types.py
+share/gnuradio/examples/zeromq/zeromq_pubsub.grc
+share/gnuradio/examples/zeromq/zeromq_pushpull.grc
+share/gnuradio/examples/zeromq/zeromq_reqrep.grc
 share/gnuradio/grc/blocks/analog_agc2_xx.xml
 share/gnuradio/grc/blocks/analog_agc3_xx.xml
 share/gnuradio/grc/blocks/analog_agc_xx.xml
@@ -13932,6 +13960,12 @@ share/gnuradio/grc/blocks/wxgui_termsink.xml
 share/gnuradio/grc/blocks/wxgui_waterfallsink2.xml
 share/gnuradio/grc/blocks/xmlrpc_client.xml
 share/gnuradio/grc/blocks/xmlrpc_server.xml
+share/gnuradio/grc/blocks/zeromq_pub_sink.xml
+share/gnuradio/grc/blocks/zeromq_pull_source.xml
+share/gnuradio/grc/blocks/zeromq_push_sink.xml
+share/gnuradio/grc/blocks/zeromq_rep_sink.xml
+share/gnuradio/grc/blocks/zeromq_req_source.xml
+share/gnuradio/grc/blocks/zeromq_sub_source.xml
 share/gnuradio/grc/freedesktop/gnuradio-grc.desktop
 share/gnuradio/grc/freedesktop/gnuradio-grc.xml
 share/gnuradio/grc/freedesktop/grc-icon-128.png
