@@ -1,4 +1,6 @@
-$NetBSD: patch-pr_src_pthreads_ptsynch.c,v 1.1 2014/09/28 14:14:59 thomasklausner Exp $
+$NetBSD: patch-pr_src_pthreads_ptsynch.c,v 1.2 2014/09/28 14:29:41 thomasklausner Exp $
+
+DragonFly support.
 
 --- pr/src/pthreads/ptsynch.c.orig	2014-09-28 14:07:42.000000000 +0000
 +++ pr/src/pthreads/ptsynch.c

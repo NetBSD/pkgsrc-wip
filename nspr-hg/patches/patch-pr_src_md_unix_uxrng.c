@@ -1,4 +1,6 @@
-$NetBSD: patch-pr_src_md_unix_uxrng.c,v 1.1 2014/09/28 14:14:59 thomasklausner Exp $
+$NetBSD: patch-pr_src_md_unix_uxrng.c,v 1.2 2014/09/28 14:29:41 thomasklausner Exp $
+
+DragonFly support.
 
 --- pr/src/md/unix/uxrng.c.orig	2014-09-28 14:07:42.000000000 +0000
 +++ pr/src/md/unix/uxrng.c

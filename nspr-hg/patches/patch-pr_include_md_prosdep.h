@@ -1,4 +1,6 @@
-$NetBSD: patch-pr_include_md_prosdep.h,v 1.1 2014/09/28 14:14:58 thomasklausner Exp $
+$NetBSD: patch-pr_include_md_prosdep.h,v 1.2 2014/09/28 14:29:41 thomasklausner Exp $
+
+DragonFly support.
 
 --- pr/include/md/prosdep.h.orig	2014-09-28 14:07:42.000000000 +0000
 +++ pr/include/md/prosdep.h
