@@ -6,30 +6,34 @@
 use strict;
 use Getopt::Std;
 
+# option related
 our(%opts);
 our(@ARGV);
+my ($verbose) = 0;
 
 my ($PKGSRC)	='/usr/pkgsrc';
 my ($CATEGORY)	='wip';
-my (@LIST);	# list of gnuradio-*/PLIST files
-my (%WORDS);
-my (%CHECKED);
-my (%count);
-my (%FULL); 	# full list from gnuradio-default
 my ($DEFAULT) = 'gnuradio-default';
-my ($verbose) = 0;
+
+my (@LIST);	# list of gnuradio-*/PLIST files
+
+my (%WORDS);	# list of files in the PLIST (other than -default)
+my (%count);	# number of appearance of files in the PLIST (other than -default)
+
+my (%CHECKED);	# list of files found (in the -default) in the PLIST
+my (%FULL); 	# full list from gnuradio-default
 
 sub usage() {
     print <<HELP;
 $0
 Synopsys:
-    check-PLIST-overwrap [-h] [-c CATEGORY] [-m] [-p PATH] 
+    check-PLIST-overwrap [-h] [-c CATEGORY] [-m] [-p PATH] [-v]
 Where:
     -h	show this help
-    -c  CATEGORY (wip)
-    -m  print missing file instead of dupes
-    -p  pkgsrc directory (/usr/pkgsrc)
-    -v  verbose
+    -c	CATEGORY (wip)
+    -m	print missing file instead of dupes
+    -p	pkgsrc directory (/usr/pkgsrc)
+    -v	verbose
     (parenthesis) shows default value
 HELP
 }
