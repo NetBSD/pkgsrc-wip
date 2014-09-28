@@ -1,4 +1,10 @@
-$NetBSD: patch-pr_src_misc_prnetdb.c,v 1.1 2014/09/28 14:14:59 thomasklausner Exp $
+$NetBSD: patch-pr_src_misc_prnetdb.c,v 1.2 2014/09/28 14:33:59 thomasklausner Exp $
+
+chunk 1: improve NetBSD support.
+chunk 2: add Dragonfly support.
+chunk 3: add Dragonfly support.
+chunk 4: improve NetBSD support.
+chunk 5: improve NetBSD support.
 
 --- pr/src/misc/prnetdb.c.orig	2014-09-28 14:07:42.000000000 +0000
 +++ pr/src/misc/prnetdb.c

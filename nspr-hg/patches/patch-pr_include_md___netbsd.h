@@ -1,4 +1,6 @@
-$NetBSD: patch-pr_include_md___netbsd.h,v 1.1 2014/09/28 14:14:58 thomasklausner Exp $
+$NetBSD: patch-pr_include_md___netbsd.h,v 1.2 2014/09/28 14:33:59 thomasklausner Exp $
+
+Improve NetBSD support, add NetBSD/amd64 support.
 
 --- pr/include/md/_netbsd.h.orig	2014-09-28 14:07:42.000000000 +0000
 +++ pr/include/md/_netbsd.h

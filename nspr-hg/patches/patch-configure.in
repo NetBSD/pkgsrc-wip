@@ -1,4 +1,12 @@
-$NetBSD: patch-configure.in,v 1.1 2014/09/28 14:14:58 thomasklausner Exp $
+$NetBSD: patch-configure.in,v 1.2 2014/09/28 14:33:59 thomasklausner Exp $
+
+chunk 1: add rpath for pkgsrc
+chunk 2: Dragonfly support
+chunk 3: TODO
+chunk 4: TODO
+chunk 5: Dragonfly support
+chunk 6: Dragonfly support
+chunk 7: Dragonfly support
 
 --- configure.in.orig	2014-09-28 14:07:42.000000000 +0000
 +++ configure.in
