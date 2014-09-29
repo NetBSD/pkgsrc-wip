@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5923 2014/09/29 10:47:40 thomasklausner Exp $
+# $Id: Makefile,v 1.5924 2014/09/29 15:23:22 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3356,6 +3356,7 @@ SUBDIR+=	suse100_glut
 SUBDIR+=	suse100_gmp4
 SUBDIR+=	suse121_32_libgcrypt
 SUBDIR+=	suse121_32_libgpg-error
+SUBDIR+=	suse121_libbz2
 SUBDIR+=	suse121_libgcrypt
 SUBDIR+=	suse121_libgpg-error
 SUBDIR+=	svgalib
