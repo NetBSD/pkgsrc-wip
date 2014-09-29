@@ -1,0 +1,15 @@
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
+
+Don't assume cocoa toolkit just because OS_TARGET is Darwin.
+
+--- media/libcubeb/src/moz.build.orig	2014-09-28 08:30:01.000000000 +0000
++++ media/libcubeb/src/moz.build
+@@ -31,7 +31,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
+     ]
+     DEFINES['USE_SNDIO'] = True
+ 
+-if CONFIG['OS_TARGET'] == 'Darwin':
++if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
+     SOURCES += [
+         'cubeb_audiounit.c',
+         'cubeb_osx_run_loop.c'

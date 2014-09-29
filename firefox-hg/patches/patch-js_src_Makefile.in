@@ -1,0 +1,21 @@
+$NetBSD: patch-js_src_Makefile.in,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
+
+--- js/src/Makefile.in.orig	2014-09-28 08:30:05.000000000 +0000
++++ js/src/Makefile.in
+@@ -16,7 +16,6 @@ TOPLEVEL_BUILD := 1
+ 
+ run_for_side_effects := $(shell echo 'MAKE: $(MAKE)')
+ 
+-DIST_INSTALL = 1
+ NO_EXPAND_LIBS = 1
+ 
+ ifdef JS_HAS_CTYPES
+@@ -295,7 +294,7 @@ endif
+ 
+ ifdef HAVE_DTRACE
+ $(CURDIR)/javascript-trace.h: $(srcdir)/devtools/javascript-trace.d
+-	dtrace -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
++	dtrace -x nolibs -h -s $(srcdir)/devtools/javascript-trace.d -o javascript-trace.h.in
+ 	sed -e 's/if _DTRACE_VERSION/ifdef INCLUDE_MOZILLA_DTRACE/' \
+ 	    -e '/const/!s/char \*/const char */g' \
+ 	    javascript-trace.h.in > javascript-trace.h

@@ -1,0 +1,306 @@
+$NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
+
+* The profiler does not support Darwin/PPC so don't try to enable it
+  on that platform.
+
+* Cocoa gamepad backend can only be used if the toolkit is cocoa too.
+
+* The preprocessor macro XP_MACOSX is misused everywhere. They tend to
+  say "#if defined(XP_MACOSX)" to actually mean
+  "#if defined(MOZ_WIDGET_COCOA)". It's okay to equate XP_MACOSX with
+  XP_DARWIN but equating it with MOZ_WIDGET_COCOA is just wrong. As a
+  result, cairo-gtk2 build on Darwin is completely broken and needs
+  heavy patching. Ideally they should be fixed individually but that
+  will be an extremely hard work, so don't define XP_MACOSX for now.
+
+--- configure.in.orig	2014-09-28 08:30:07.000000000 +0000
++++ configure.in
+@@ -1668,7 +1668,13 @@ Linux)
+         MOZ_ENABLE_PROFILER_SPS=
+     esac
+     ;;
+-WINNT|Darwin) ;;
++WINNT|Darwin)
++    case "${CPU_ARCH}" in
++    x86 | x86_64) ;;
++    *)
++        MOZ_ENABLE_PROFILER_SPS=
++    esac
++    ;;
+ *)
+     MOZ_ENABLE_PROFILER_SPS=
+     ;;
+@@ -1772,7 +1778,7 @@ case "$host" in
+     ;;
+ 
+ *-darwin*)
+-    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX -DXP_MACOSX -DNO_X11"
++    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX"
+     HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
+     HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
+     ;;
+@@ -1904,7 +1910,6 @@ case "$target" in
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
+     else
+-        AC_DEFINE(XP_MACOSX)
+         AC_DEFINE(XP_DARWIN)
+         _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
+         # The ExceptionHandling framework is needed for Objective-C exception
+@@ -3555,6 +3560,14 @@ if test -n "$YASM"; then
+   _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
+ fi
+ 
++if test -n "${LIBXUL_SDK_DIR}"; then
++    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
++    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags nspr`"
++    NSPR_LIBS="`pkg-config --libs nspr`"
++    NSS_CFLAGS="`pkg-config --cflags nss`"
++    NSS_LIBS="`pkg-config --libs nss`"
++fi
++
+ if test -z "$SKIP_LIBRARY_CHECKS"; then
+ dnl system JPEG support
+ dnl ========================================================
+@@ -3582,11 +3595,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+                      #include <jpeglib.h> ],
+                    [ #if JPEG_LIB_VERSION < $MOZJPEG
+                      #error "Insufficient JPEG library version ($MOZJPEG required)."
+-                     #endif
+-                     #ifndef JCS_EXTENSIONS
+-                     #error "libjpeg-turbo JCS_EXTENSIONS required"
+-                     #endif
+-                     ],
++                     #endif ],
+                    MOZ_NATIVE_JPEG=1,
+                    AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
+ fi
+@@ -4266,6 +4275,10 @@ cairo-gonk)
+ 
+ esac
+ 
++if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
++   AC_DEFINE(XP_MACOSX)
++fi
++
+ AC_SUBST(MOZ_PDF_PRINTING)
+ if test "$MOZ_PDF_PRINTING"; then
+    PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
+@@ -4998,6 +5011,9 @@ if test -n "$MOZ_WEBRTC"; then
+     MOZ_VPX=1
+     MOZ_VPX_ERROR_CONCEALMENT=1
+ 
++    dnl with libv4l2 we can support more cameras
++    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
++
+ dnl enable once Signaling lands
+     MOZ_WEBRTC_SIGNALING=1
+     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
+@@ -5101,6 +5117,57 @@ if test "${ac_cv_c_attribute_aligned}" !
+ fi
+ 
+ dnl ========================================================
++dnl Check for libogg
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-ogg,
++[  --with-system-ogg       Use system libogg (located with pkgconfig)],
++MOZ_NATIVE_OGG=1,
++MOZ_NATIVE_OGG=)
++
++if test -n "$MOZ_NATIVE_OGG"; then
++    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
++
++    _SAVE_LIBS=$LIBS
++    LIBS="$LIBS $MOZ_OGG_LIBS"
++    AC_CHECK_FUNC(ogg_set_mem_functions, [],
++      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
++    LIBS=$_SAVE_LIBS
++fi
++
++AC_SUBST(MOZ_NATIVE_OGG)
++
++dnl ========================================================
++dnl Check for libvorbis
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-vorbis,
++[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
++MOZ_NATIVE_VORBIS=1,
++MOZ_NATIVE_VORBIS=)
++
++if test -n "$MOZ_NATIVE_VORBIS"; then
++    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.4)
++fi
++
++AC_SUBST(MOZ_NATIVE_VORBIS)
++
++dnl ========================================================
++dnl Check for integer-only libvorbis aka tremor
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-tremor,
++[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
++MOZ_NATIVE_TREMOR=1,
++MOZ_NATIVE_TREMOR=)
++
++if test -n "$MOZ_NATIVE_TREMOR"; then
++    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
++fi
++
++AC_SUBST(MOZ_NATIVE_TREMOR)
++
++dnl ========================================================
+ dnl = Disable Opus audio codec support
+ dnl ========================================================
+ MOZ_ARG_DISABLE_BOOL(opus,
+@@ -5109,6 +5176,89 @@ MOZ_ARG_DISABLE_BOOL(opus,
+     MOZ_OPUS=1)
+ 
+ dnl ========================================================
++dnl Check for libopus
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-opus,
++[  --with-system-opus      Use system libopus (located with pkgconfig)],
++MOZ_NATIVE_OPUS=1,
++MOZ_NATIVE_OPUS=)
++
++if test -n "$MOZ_NATIVE_OPUS"; then
++    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
++else
++    MOZ_OPUS_CFLAGS='-I$(topsrcdir)/media/libopus/include'
++fi
++
++AC_SUBST(MOZ_NATIVE_OPUS)
++
++dnl ========================================================
++dnl Check for libtheora
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-theora,
++[  --with-system-theora    Use system libtheora (located with pkgconfig)],
++MOZ_NATIVE_THEORA=1,
++MOZ_NATIVE_THEORA=)
++
++if test -n "$MOZ_NATIVE_THEORA"; then
++    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
++fi
++
++AC_SUBST(MOZ_NATIVE_THEORA)
++
++dnl ========================================================
++dnl Check for libspeex resampler
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-speex,
++[  --with-system-speex     Use system libspeex (located with pkgconfig)],
++MOZ_NATIVE_SPEEX=1,
++MOZ_NATIVE_SPEEX=)
++
++if test -n "$MOZ_NATIVE_SPEEX"; then
++    PKG_CHECK_MODULES(MOZ_SPEEX, speexdsp >= 1.2)
++fi
++
++AC_SUBST(MOZ_NATIVE_SPEEX)
++
++dnl ========================================================
++dnl Check for libsoundtouch
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-soundtouch,
++[  --with-system-soundtouch Use system libsoundtouch (located with pkgconfig)],
++MOZ_NATIVE_SOUNDTOUCH=1,
++MOZ_NATIVE_SOUNDTOUCH=)
++
++if test -n "$MOZ_NATIVE_SOUNDTOUCH"; then
++    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.8.0)
++
++    AC_LANG_SAVE
++    AC_LANG_CPLUSPLUS
++    _SAVE_CXXFLAGS=$CXXFLAGS
++    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
++    AC_CACHE_CHECK(for soundtouch sample type,
++                   ac_cv_soundtouch_sample_type,
++                   [AC_TRY_COMPILE([#include <SoundTouch.h>
++                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
++                                    #error soundtouch expects float samples
++                                    #endif],
++                                   [],
++                                   [ac_cv_soundtouch_sample_type=short],
++                                   [ac_cv_soundtouch_sample_type=float])])
++    CXXFLAGS=$_SAVE_CXXFLAGS
++    AC_LANG_RESTORE
++
++    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
++         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
++        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
++    fi
++fi
++
++AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
++
++dnl ========================================================
+ dnl = Disable VP8 decoder support
+ dnl ========================================================
+ MOZ_ARG_DISABLE_BOOL(webm,
+@@ -5902,7 +6052,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+ if test "$MOZ_GAMEPAD"; then
+     case "$OS_TARGET" in
+     Darwin)
+-        MOZ_GAMEPAD_BACKEND=cocoa
++        if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
++            MOZ_GAMEPAD_BACKEND=cocoa
++        fi
+         ;;
+     WINNT)
+         case "$MOZ_WINSDK_MAXVER" in
+@@ -8028,6 +8180,48 @@ if test "$USE_FC_FREETYPE"; then
+ fi
+ 
+ dnl ========================================================
++dnl Check for harfbuzz
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-harfbuzz,
++[  --with-system-harfbuzz  Use system harfbuzz (located with pkgconfig)],
++MOZ_NATIVE_HARFBUZZ=1,
++MOZ_NATIVE_HARFBUZZ=)
++
++if test -n "$MOZ_NATIVE_HARFBUZZ"; then
++    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.25)
++fi
++
++AC_SUBST(MOZ_NATIVE_HARFBUZZ)
++
++dnl ========================================================
++dnl Check for graphite2
++dnl ========================================================
++MOZ_ARG_WITH_BOOL(system-graphite2,
++[  --with-system-graphite2 Use system graphite2 (located with pkgconfig)],
++MOZ_NATIVE_GRAPHITE2=1,
++MOZ_NATIVE_GRAPHITE2=)
++
++if test -n "$MOZ_NATIVE_GRAPHITE2"; then
++    PKG_CHECK_MODULES(MOZ_GRAPHITE2, graphite2)
++
++    dnl graphite2.pc has bogus version, check manually
++    AC_TRY_COMPILE([ #include <graphite2/Font.h>
++                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
++                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
++                               * 100 + GR2_VERSION_BUGFIX >= \
++                               (major) * 10000 + (minor) * 100 + (bugfix) )
++                   ], [
++                     #if !GR2_VERSION_REQUIRE(1,2,4)
++                     #error "Insufficient graphite2 version."
++                     #endif
++                   ], [],
++                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
++fi
++
++AC_SUBST(MOZ_NATIVE_GRAPHITE2)
++
++dnl ========================================================
+ dnl Check for pixman and cairo
+ dnl ========================================================
+ 

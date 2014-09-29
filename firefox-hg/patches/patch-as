@@ -1,0 +1,32 @@
+$NetBSD: patch-as,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
+
+Treat DragonFly like FreeBSD.
+
+--- js/src/configure.in.orig	2014-09-28 08:30:06.000000000 +0000
++++ js/src/configure.in
+@@ -3018,7 +3018,7 @@ if test "$MOZ_MEMORY"; then
+   *-darwin*)
+     AC_DEFINE(MOZ_MEMORY_DARWIN)
+     ;;
+-  *-*freebsd*)
++  *-*freebsd*|*-*dragonfly*)
+     AC_DEFINE(MOZ_MEMORY_BSD)
+     ;;
+   *-android*|*-linuxandroid*)
+@@ -3912,6 +3912,16 @@ MOZ_SUBCONFIGURE_ICU()
+ dnl ========================================================
+ dnl JavaScript shell
+ dnl ========================================================
++ICU_LIB_NAMES=
++MOZ_NATIVE_ICU=
++MOZ_ARG_WITH_BOOL(system-icu,
++[  --with-system-icu
++                          Use system icu (located with pkgconfig)],
++    MOZ_NATIVE_ICU=1)
++
++if test -n "$MOZ_NATIVE_ICU"; then
++    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
++fi
+ 
+ AC_CHECK_HEADERS(malloc.h malloc/malloc.h)
+ AC_CHECK_FUNCS(setlocale localeconv malloc_size malloc_usable_size)
