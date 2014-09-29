@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/09/24 07:58:30 heidnes Exp $
+# $NetBSD: Makefile,v 1.14 2014/09/29 15:25:22 heidnes Exp $
 
 DISTNAME=		v8-3.29.9.1
 CATEGORIES=		lang
@@ -16,8 +16,12 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake:run
 
 NO_CONFIGURE=		yes
-BUILD_TARGET=		native
-TEST_TARGET=		native.check
+#BUILD_TARGET=		native
+#TEST_TARGET=		native.check
+BUILD_TARGET=		ia32.debug
+TEST_TARGET=		ia32.debug.check
+
+MAKE_ENV+=		TESTFLAGS="--no-presubmit --quickcheck --report --progress=verbose"
 
 MAKE_ENV+=		GYP_DEFINES=${GYP_DEFINES:Q}
 GYP_DEFINES+=		use_system_icu=1
