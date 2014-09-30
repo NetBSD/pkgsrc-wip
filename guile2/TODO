@@ -1,0 +1,9 @@
+Fails for me on 7.99.1/amd64 with:
+gmake[3]: Entering directory '/scratch/wip/guile2/work/guile-2.0.11/libguile'
+  GEN      guile-procedures.texi
+GC_is_visible test failed
+[1]   Broken pipe             cat alist.doc ar... |
+      Abort trap (core dumped) GUILE_INSTALL_LO...
+Makefile:3732: recipe for target 'guile-procedures.texi' failed
+
+-- wiz 20140930
