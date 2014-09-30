@@ -6,10 +6,12 @@ http://sdr.osmocom.org/trac/wiki/GrOsmoSDR#Buildprocess
 -- # Gnuradio enabled components                         
 -- ######################################################
 --   * Python support
+--   * FUNcube Dongle
 --   * IQ File Source
 --   * Osmocom RTLSDR
 --   * RTLSDR TCP Client
 --   * Ettus USRP Devices
+--   * Osmocom MiriSDR
 --   * RFSPACE Receivers
 -- 
 -- ######################################################
@@ -17,42 +19,10 @@ http://sdr.osmocom.org/trac/wiki/GrOsmoSDR#Buildprocess
 -- ######################################################
 --   * Osmocom IQ Imbalance Correction
 --   * sysmocom OsmoSDR
---   * FUNcube Dongle
 --   * FUNcube Dongle Pro+
---   * Osmocom MiriSDR
 --   * HackRF Jawbreaker
 --   * nuand bladeRF
 --   * AIRSPY Receiver
-
-
-(current build failure)
-
-[  3%] Building CXX object lib/CMakeFiles/gnuradio-osmosdr.dir/source_impl.cc.o
-In file included from /export/WRKOBJDIR/wip/gr-osmosdr-git/work/.buildlink/include/gnuradio/math.h:30:0,
-                 from /usr/include/g++/cmath:46,
-                 from /usr/include/g++/complex:46,
-                 from /export/WRKOBJDIR/wip/gr-osmosdr-git/work/.buildlink/include/gnuradio/gr_complex.h:26,
-                 from /export/WRKOBJDIR/wip/gr-osmosdr-git/work/.buildlink/include/gnuradio/types.h:31,
-                 from /export/WRKOBJDIR/wip/gr-osmosdr-git/work/.buildlink/include/gnuradio/runtime_types.h:27,
-                 from /export/WRKOBJDIR/wip/gr-osmosdr-git/work/.buildlink/include/gnuradio/io_signature.h:27,
-                 from /export/WRKOBJDIR/wip/gr-osmosdr-git/work/gr-osmosdr/lib/source_impl.cc:30:
-/usr/include/g++/cmath:111:11: error: '::acos' has not been declared
-/usr/include/g++/cmath:127:11: error: '::asin' has not been declared
-
-
-( work around for above problem is following patch on /usr/include/g++/cmath
---- /usr/include/g++/cmath.orig	2014-08-09 01:58:29.000000000 +0900
-+++ /usr/include/g++/cmath	2014-09-18 11:32:44.000000000 +0900
-@@ -43,7 +43,7 @@
- #include <bits/c++config.h>
- #include <bits/cpp_type_traits.h>
- #include <ext/type_traits.h>
--#include <math.h>
-+#include "/usr/include/math.h"
- 
- #ifndef _GLIBCXX_CMATH
- #define _GLIBCXX_CMATH 1
-
 
 (Other OS build info)
 Mac Ports 
