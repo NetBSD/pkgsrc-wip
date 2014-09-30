@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/30 00:49:22 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/30 01:14:26 makoto Exp $
 
 DISTNAME=	libmirisdr-0.1
 CATEGORIES=	ham
@@ -15,7 +15,7 @@ GIT_MODULE.master=	libmirisdr
 WRKSRC=		${WRKDIR}/libmirisdr
 
 USE_LANGUAGES=	c c++
-USE_TOOLS=	cmake
+USE_TOOLS=	cmake pkg-config
 USE_CMAKE=	yes
 
 # Supress warning for developer
