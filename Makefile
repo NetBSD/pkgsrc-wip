@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5924 2014/09/29 15:23:22 khorben Exp $
+# $Id: Makefile,v 1.5925 2014/09/30 09:50:09 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3354,6 +3354,7 @@ SUBDIR+=	suse100_devel
 SUBDIR+=	suse100_gdb
 SUBDIR+=	suse100_glut
 SUBDIR+=	suse100_gmp4
+SUBDIR+=	suse121_32_libbz2
 SUBDIR+=	suse121_32_libgcrypt
 SUBDIR+=	suse121_32_libgpg-error
 SUBDIR+=	suse121_libbz2
