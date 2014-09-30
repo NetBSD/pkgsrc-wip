@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/18 03:00:28 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/09/30 00:11:52 makoto Exp $
 
 DISTNAME=		gr-osmosdr-0.1.4
 CATEGORIES=		ham
@@ -7,13 +7,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdr.osmocom.org/trac/wiki/GrOsmoSDR
 COMMENT=		SDR Hardware support for OsmoSDR and so many more
 LICENSE=		gnu-gpl-v2
-
-.if 1
-PKG_FAIL_REASON= ' *** Currently /usr/include/g++/cmath patch is necessary. See TODO. Why ?'
-.else
-# Just for debugging purpose
-MAKE_JOBS_SAFE=		no
-.endif
 
 GIT_REPOSITORIES=       master
 GIT_REPO.master=        git://git.osmocom.org/gr-osmosdr
