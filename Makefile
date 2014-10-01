@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5928 2014/10/01 11:14:53 obache Exp $
+# $Id: Makefile,v 1.5929 2014/10/01 11:23:14 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3621,7 +3621,6 @@ SUBDIR+=	wput
 SUBDIR+=	wqy-microhei-ttf
 SUBDIR+=	wqy-zenhei-ttf
 SUBDIR+=	wrcs
-SUBDIR+=	writrecogn
 SUBDIR+=	wsmake
 SUBDIR+=	wtf
 SUBDIR+=	wvstreams
