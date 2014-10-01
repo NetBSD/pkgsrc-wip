@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5931 2014/10/01 11:52:23 obache Exp $
+# $Id: Makefile,v 1.5932 2014/10/01 12:03:02 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3505,7 +3505,6 @@ SUBDIR+=	tuxguitar
 SUBDIR+=	tuxpaint-cvs
 SUBDIR+=	tuxtype2
 SUBDIR+=	tvmet
-SUBDIR+=	tw_cli
 SUBDIR+=	twinkle
 SUBDIR+=	twintk
 SUBDIR+=	twitim
