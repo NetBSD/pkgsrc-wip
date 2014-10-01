@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/04 09:13:19 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/01 10:40:52 thomasklausner Exp $
 
 DISTNAME=	Apache-AuthenNTLM-2.10
 PKGNAME=	p5-${DISTNAME}
@@ -16,5 +16,5 @@ PKG_DESTDIR_SUPPORT=	none
 PERL5_PACKLIST=	auto/Apache/AuthenNTLM/.packlist
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/ap-perl/buildlink3.mk"
+.include "../../www/ap-perl2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

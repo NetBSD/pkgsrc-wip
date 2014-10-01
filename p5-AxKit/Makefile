@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/04 09:13:21 asau Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/01 10:40:52 thomasklausner Exp $
 #
 
 DISTNAME=	AxKit-1.6.2
@@ -29,7 +29,7 @@ PKG_DESTDIR_SUPPORT=	none
 
 .include "../../lang/perl5/module.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/ap-perl/buildlink3.mk"
+.include "../../www/ap-perl2/buildlink3.mk"
 
 PERL5_PACKLIST=		auto/AxKit/.packlist
 
