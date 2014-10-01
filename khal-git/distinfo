@@ -1,3 +1,3 @@
-$NetBSD: distinfo,v 1.6 2014/07/09 04:30:00 thomasklausner Exp $
+$NetBSD: distinfo,v 1.7 2014/10/01 06:37:49 thomasklausner Exp $
 
-SHA1 (patch-setup.py) = 718ab69d09e2896dcbfc868afe3afc187ac52a9a
+SHA1 (patch-version.py) = 2157216499563b04a3e17f3dd550c52d8f22e25b
