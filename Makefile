@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5927 2014/10/01 11:12:06 obache Exp $
+# $Id: Makefile,v 1.5928 2014/10/01 11:14:53 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1675,8 +1675,6 @@ SUBDIR+=	mplayer-mt
 SUBDIR+=	mplayer-share
 SUBDIR+=	mplayer-snapshot
 SUBDIR+=	mplayer-snapshot-share
-SUBDIR+=	mplus-bitmap-fonts
-SUBDIR+=	mplus-outline-fonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
 SUBDIR+=	mpv-git
