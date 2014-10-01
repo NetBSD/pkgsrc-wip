@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5926 2014/10/01 01:53:51 jgoamakf Exp $
+# $Id: Makefile,v 1.5927 2014/10/01 11:12:06 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1314,7 +1314,6 @@ SUBDIR+=	kxmleditor
 SUBDIR+=	kyotocabinet
 SUBDIR+=	kyototycoon
 SUBDIR+=	kyra2
-SUBDIR+=	kytea
 SUBDIR+=	l2tpd
 SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
@@ -1528,7 +1527,6 @@ SUBDIR+=	llvm-rtlib
 SUBDIR+=	lmdbg-current
 SUBDIR+=	lmfit
 SUBDIR+=	lmod
-SUBDIR+=	lmtp2nntp
 SUBDIR+=	logfmon-devel
 SUBDIR+=	logwatch
 SUBDIR+=	lorder
@@ -1877,12 +1875,6 @@ SUBDIR+=	orion
 SUBDIR+=	oslc
 SUBDIR+=	osmo
 SUBDIR+=	osmose
-SUBDIR+=	ossp-ex
-SUBDIR+=	ossp-l2
-SUBDIR+=	ossp-sa
-SUBDIR+=	ossp-str
-SUBDIR+=	ossp-val
-SUBDIR+=	ossp-var
 SUBDIR+=	osxinfo
 SUBDIR+=	outguess
 SUBDIR+=	overgod
