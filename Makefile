@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5930 2014/10/01 11:37:46 obache Exp $
+# $Id: Makefile,v 1.5931 2014/10/01 11:52:23 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2274,7 +2274,6 @@ SUBDIR+=	polarssl11
 SUBDIR+=	polipo
 SUBDIR+=	polylib
 SUBDIR+=	polymul
-SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	popup-el-current
 SUBDIR+=	portscout

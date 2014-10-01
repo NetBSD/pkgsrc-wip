@@ -1,2 +1,0 @@
-The pop-before-smtp project is a simple daemon written in Perl, to allow email
-relay control based on successful POP or IMAP logins.
