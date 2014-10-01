@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2014/09/27 06:05:02 makoto Exp $
-bin/cmakexbuild
