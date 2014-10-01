@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5929 2014/10/01 11:23:14 obache Exp $
+# $Id: Makefile,v 1.5930 2014/10/01 11:37:46 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3352,7 +3352,6 @@ SUBDIR+=	svrcore
 SUBDIR+=	swami
 SUBDIR+=	swarp
 SUBDIR+=	swfmill
-SUBDIR+=	swftools
 SUBDIR+=	swift-git
 SUBDIR+=	swisseph
 SUBDIR+=	sword
