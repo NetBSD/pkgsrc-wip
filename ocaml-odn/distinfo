@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/05/14 07:23:03 jgoamakf Exp $
-
-SHA1 (ocaml-data-notation-0.0.11.tar.gz) = d0d45b1e8310969e4211fa0bcb534fee236b802e
-RMD160 (ocaml-data-notation-0.0.11.tar.gz) = a2fa6b3b91d0034350b84e5248c138b4360280be
-Size (ocaml-data-notation-0.0.11.tar.gz) = 63968 bytes
