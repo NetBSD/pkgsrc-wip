@@ -1,0 +1,13 @@
+$Id: TODO,v 1.9 2014/10/02 09:31:55 thomasklausner Exp $
+* many tools core dumped on NetBSD 2.0/i386
+  need to check with recent NetBSD release.
+* 0.9.2 uses fmax(3) unconditionally
+  failed to build on NetBSD<5.1 (and others lacking of fmax(3)).
+* Failed to build with poppler instead of builtin xpdf.
+  It is better using poppler for security reason, but need to catch up
+  poppler API changes.
+* add dependency on math/fftwf
+  but on 0.9.2, it result in no feature enhancement due to following commit:
+    http://wiki.swftools.org/viewgit/?a=commitdiff&p=swftools-git%20&h=9dff415641fd3de8e8c4cfd572db43c087eb99a7
+    (gfximage_rescale)
+  I'm not sure whether it is consciously or not.
