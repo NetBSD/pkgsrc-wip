@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2014/10/02 09:36:40 nros Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/02 11:33:35 nros Exp $
 #
 
 DISTNAME=	Tie-Cycle-1.20
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	time
+CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
+HOMEPAGE=	http://search.cpan.org/dist/Tie-Cycle/lib/Tie/Cycle.pm
 COMMENT=	Perl5 module to cycle through a list of values
 LICENSE=	${PERL5_LICENSE}
 
