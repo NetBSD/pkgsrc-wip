@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/09/08 16:35:01 genolopolis Exp $
+$NetBSD: distinfo,v 1.2 2014/10/02 09:36:40 nros Exp $
 
-SHA1 (Tie-Cycle-1.17.tar.gz) = 075cfdc32f721ba5821cfeeb9a65e0bb78c7839b
-RMD160 (Tie-Cycle-1.17.tar.gz) = 7087a20cf6d4511ed4b44ff408884fc189dcfd66
-Size (Tie-Cycle-1.17.tar.gz) = 3912 bytes
+SHA1 (Tie-Cycle-1.20.tar.gz) = 968bf8e3d6bc26d5e549fcbbaa3b9448b003d440
+RMD160 (Tie-Cycle-1.20.tar.gz) = fed5fd41a6438401567f16e6ee85842eda37f448
+Size (Tie-Cycle-1.20.tar.gz) = 4938 bytes
