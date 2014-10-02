@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2013/03/22 13:57:12 outpaddling Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/02 15:31:38 uccwen Exp $
 
-DISTNAME=	armadillo-3.${DIST_MINOR}.1
-PKGNAME=	armadillo-3.${PKG_MINOR}.1
+DISTNAME=	armadillo-4.${DIST_MINOR}.2
+PKGNAME=	armadillo-4.${PKG_MINOR}.2
 CATEGORIES=	math
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=arma/}
 
@@ -15,7 +15,7 @@ USE_CMAKE=	yes
 
 # OS X cannot handle components > 255 in a library version, so strip
 # the last digit from Aramdillo's 3-digit minor version.
-PKG_MINOR=	80
+PKG_MINOR=	45
 DIST_MINOR=	${PKG_MINOR}0
 
 CMAKE_ARGS+=	-DINSTALL_LIB_DIR=${PREFIX}/lib
