@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:12 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/02 09:57:54 nros Exp $
 #
 
 DISTNAME=	Business-ISSN-0.91
@@ -8,8 +8,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Perl5 extention for International Standard Serial Numbers
+LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Business/ISSN/.packlist
 USE_LANGUAGES=	# none
