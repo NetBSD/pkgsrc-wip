@@ -1,0 +1,5 @@
+This module provides functions for wavenumber calibration of Raman
+spectrometers. Currently it works only with binary SPE files, produced,
+for example, by winspec (Princeton Instruments software). Supported
+substances so far are polystyrene and cyclohexan (or any other,
+if you have a table with Raman shifts and 15 minutes of time).
