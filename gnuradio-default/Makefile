@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/09/28 14:41:18 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/03 13:50:41 makoto Exp $
 
 PKGNAME=	gnuradio-default-${VERSION}
 COMMENT=	Full package of gnuradio
@@ -67,7 +67,7 @@ post-patch:
 
 .include	"../../x11/py-gtk2/buildlink3.mk"
 .include	"../../x11/py-qt4/buildlink3.mk"
-.include	"../../wip/py-wxWidgets/buildlink3.mk"
+.include	"../../x11/py-wxWidgets/buildlink3.mk"
 .include	"../../x11/qt4-libs/buildlink3.mk"
 .include	"../../x11/qwt-qt4/buildlink3.mk"
 .include	"../../x11/wxGTK28/buildlink3.mk"
