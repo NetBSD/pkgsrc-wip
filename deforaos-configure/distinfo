@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2009/11/01 18:36:11 khorben Exp $
+$NetBSD: distinfo,v 1.2 2014/10/03 15:49:51 khorben Exp $
 
-SHA1 (configure-0.0.7.tar.gz) = eccc48af2ed1533f977c0add17232d5a3b6e84fa
-RMD160 (configure-0.0.7.tar.gz) = c546101f7b0fcd2606fc184e70ba73d6fd8a12e7
-Size (configure-0.0.7.tar.gz) = 26104 bytes
+SHA1 (configure-0.1.0.tar.gz) = b1bd5403882653633f8c2db24cb677e8302805de
+RMD160 (configure-0.1.0.tar.gz) = 5174f88bdf66ab265ef08b7e11350d8f6ef4eb76
+Size (configure-0.1.0.tar.gz) = 34559 bytes
