@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/01 06:28:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/03 09:36:45 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -254,6 +254,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/conversation.html
 lib/firefox/browser/chrome/browser/content/browser/loop/js/client.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/contacts.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/conversation.js
+lib/firefox/browser/chrome/browser/content/browser/loop/js/conversationViews.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/otconfig.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/panel.js
 lib/firefox/browser/chrome/browser/content/browser/loop/libs/l10n.js
@@ -304,10 +305,14 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-sig
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-signout-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/video-inverse-14x14.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/video-inverse-14x14@2x.png
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/actions.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/conversationStore.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/dispatcher.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackApiClient.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/models.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/utils.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/validate.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/views.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/websocket.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/backbone-1.1.2.js
