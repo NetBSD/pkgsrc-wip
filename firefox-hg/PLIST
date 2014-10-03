@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/03 09:36:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/10/03 14:07:38 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -1504,6 +1504,7 @@ lib/firefox/browser/modules/devtools/webide/utils.js
 lib/firefox/browser/modules/distribution.js
 lib/firefox/browser/modules/experiments/Experiments.jsm
 lib/firefox/browser/modules/loop/CardDavImporter.jsm
+lib/firefox/browser/modules/loop/GoogleImporter.jsm
 lib/firefox/browser/modules/loop/LoopContacts.jsm
 lib/firefox/browser/modules/loop/LoopStorage.jsm
 lib/firefox/browser/modules/loop/MozLoopAPI.jsm
