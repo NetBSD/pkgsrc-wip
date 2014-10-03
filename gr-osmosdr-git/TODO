@@ -6,7 +6,9 @@ http://sdr.osmocom.org/trac/wiki/GrOsmoSDR#Buildprocess
 -- # Gnuradio enabled components                         
 -- ######################################################
 --   * Python support
+--   * sysmocom OsmoSDR
 --   * FUNcube Dongle
+--   * FUNcube Dongle Pro+
 --   * IQ File Source
 --   * Osmocom RTLSDR
 --   * RTLSDR TCP Client
@@ -18,8 +20,6 @@ http://sdr.osmocom.org/trac/wiki/GrOsmoSDR#Buildprocess
 -- # Gnuradio disabled components                        
 -- ######################################################
 --   * Osmocom IQ Imbalance Correction
---   * sysmocom OsmoSDR
---   * FUNcube Dongle Pro+
 --   * HackRF Jawbreaker
 --   * nuand bladeRF
 --   * AIRSPY Receiver
