@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/09/28 00:40:28 makoto Exp $
+# $NetBSD: Makefile.common,v 1.5 2014/10/04 05:28:53 makoto Exp $
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -46,9 +46,7 @@ USE_CMAKE=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 # gr_filter_design in gnuradio-core ask for:
-DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../wip/py-qwt-qt4
-
-#AKE_JOBS_SAFE=	no
+DEPENDS+=	${PYPKGPREFIX}-qwt-qt4-[0-9]*:../../x11/py-qwt-qt4
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/gnuradio-core/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/gnuradio-core/patches
@@ -117,6 +115,8 @@ do-install:
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
+# VOLK needs orc.h, so in the common
+.include	"../../devel/orc/buildlink3.mk"
 .include	"../../devel/swig2/buildlink3.mk"
 
 .include	"../../lang/python/application.mk"

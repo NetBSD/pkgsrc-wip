@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/27 23:57:38 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/04 05:28:53 makoto Exp $
 
 PKGNAME=	gnuradio-zeromq-${VERSION}
 COMMENT=	All of the zeromq blocks, utilities, and examples
@@ -23,6 +23,5 @@ CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 post-patch:
 	${CP}	${PKGDIR}/files/zmq.hpp ${WRKSRC}/gr-zeromq/include/
 
-.include	"../../devel/orc/buildlink3.mk"
 .include	"../../net/zeromq/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
