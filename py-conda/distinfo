@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2014/10/04 21:41:46 jihbed Exp $
+
+SHA1 (conda-3.5.0.tar.gz) = e268e6e606cb781d6039cb5c9a5ec700aec8a3b4
+RMD160 (conda-3.5.0.tar.gz) = ed0550d580147ae15aaf58b09e96935a6b13f5e1
+Size (conda-3.5.0.tar.gz) = 128909 bytes
+SHA1 (patch-setup.py) = 9492862d1658e11bb8a458acb02979361c89b89d
