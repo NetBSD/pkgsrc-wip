@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/10/04 08:30:47 jihbed Exp $
+
+SHA1 (QNET-1.1.9.tar.gz) = 8871ce2bf7eb31924662a91c3415cf38fd33d52e
+RMD160 (QNET-1.1.9.tar.gz) = b6abe7b085aff2c69c1bad06521be31e2c68b583
+Size (QNET-1.1.9.tar.gz) = 664429 bytes
