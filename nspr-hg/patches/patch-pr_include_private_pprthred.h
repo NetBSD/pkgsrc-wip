@@ -1,4 +1,7 @@
-$NetBSD: patch-pr_include_private_pprthred.h,v 1.1 2014/09/28 14:14:58 thomasklausner Exp $
+$NetBSD: patch-pr_include_private_pprthred.h,v 1.2 2014/10/04 11:54:48 thomasklausner Exp $
+
+pthread_t is too big for PRUint32.
+https://bugzilla.mozilla.org/show_bug.cgi?id=953413
 
 --- pr/include/private/pprthred.h.orig	2014-09-28 14:07:42.000000000 +0000
 +++ pr/include/private/pprthred.h

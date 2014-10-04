@@ -1,9 +1,10 @@
-$NetBSD: patch-configure.in,v 1.2 2014/09/28 14:33:59 thomasklausner Exp $
+$NetBSD: patch-configure.in,v 1.3 2014/10/04 11:54:48 thomasklausner Exp $
 
 chunk 1: add rpath for pkgsrc
 chunk 2: Dragonfly support
-chunk 3: TODO
-chunk 4: TODO
+chunk 3: NetBSD support, see 
+https://bugzilla.mozilla.org/show_bug.cgi?id=871280
+chunk 4: Probably: Sync PLIST for pkgsrc on OpenBSD
 chunk 5: Dragonfly support
 chunk 6: Dragonfly support
 chunk 7: Dragonfly support
