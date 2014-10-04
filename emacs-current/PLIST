@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.142 2014/09/24 12:06:33 makoto Exp $
+@comment $NetBSD: PLIST,v 1.143 2014/10/04 09:10:31 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -110,6 +110,7 @@ share/emacs/${PKGVERSION}/etc/NEWS.20
 share/emacs/${PKGVERSION}/etc/NEWS.21
 share/emacs/${PKGVERSION}/etc/NEWS.22
 share/emacs/${PKGVERSION}/etc/NEWS.23
+share/emacs/${PKGVERSION}/etc/NEWS.24
 share/emacs/${PKGVERSION}/etc/NEXTSTEP
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
 share/emacs/${PKGVERSION}/etc/ORDERS
@@ -120,7 +121,6 @@ share/emacs/${PKGVERSION}/etc/TERMS
 share/emacs/${PKGVERSION}/etc/THE-GNU-PROJECT
 share/emacs/${PKGVERSION}/etc/TODO
 share/emacs/${PKGVERSION}/etc/WHY-FREE
-share/emacs/${PKGVERSION}/etc/emacs.appdata.xml
 share/emacs/${PKGVERSION}/etc/charsets/8859-10.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-11.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-13.map
@@ -259,6 +259,7 @@ share/emacs/${PKGVERSION}/etc/e/eterm-color
 share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
 share/emacs/${PKGVERSION}/etc/edt-user.el
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
+share/emacs/${PKGVERSION}/etc/emacs.appdata.xml
 share/emacs/${PKGVERSION}/etc/emacs.desktop
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/enriched.txt
@@ -833,6 +834,7 @@ share/emacs/${PKGVERSION}/etc/nxml/test-valid.xml
 share/emacs/${PKGVERSION}/etc/org/OrgOdtContentTemplate.xml
 share/emacs/${PKGVERSION}/etc/org/OrgOdtStyles.xml
 share/emacs/${PKGVERSION}/etc/org/README
+share/emacs/${PKGVERSION}/etc/package-keyring.gpg
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
 share/emacs/${PKGVERSION}/etc/publicsuffix.txt
@@ -3336,6 +3338,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/ebnf2ps.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ebnf2ps.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ebrowse.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ebrowse.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/elisp-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/elisp-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/etags.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/etags.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/executable.el.gz
