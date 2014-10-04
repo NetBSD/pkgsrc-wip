@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/03 14:07:38 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/10/04 15:36:21 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -968,7 +968,6 @@ lib/firefox/browser/chrome/icons/default/default16.png
 lib/firefox/browser/chrome/icons/default/default32.png
 lib/firefox/browser/chrome/icons/default/default48.png
 lib/firefox/browser/chrome/pdfjs/LICENSE
-lib/firefox/browser/chrome/pdfjs/README.mozilla
 lib/firefox/browser/chrome/pdfjs/content/PdfJs.jsm
 lib/firefox/browser/chrome/pdfjs/content/PdfJsTelemetry.jsm
 lib/firefox/browser/chrome/pdfjs/content/PdfRedirector.jsm
@@ -2524,6 +2523,7 @@ lib/firefox/modules/Http.jsm
 lib/firefox/modules/ISO8601DateUtils.jsm
 lib/firefox/modules/IndexedDBHelper.jsm
 lib/firefox/modules/InlineSpellChecker.jsm
+lib/firefox/modules/InlineSpellCheckerContent.jsm
 lib/firefox/modules/InsecurePasswordUtils.jsm
 lib/firefox/modules/InterAppCommService.jsm
 lib/firefox/modules/Keyboard.jsm
@@ -2672,7 +2672,6 @@ lib/firefox/modules/commonjs/method/core.js
 lib/firefox/modules/commonjs/method/test/browser.js
 lib/firefox/modules/commonjs/method/test/common.js
 lib/firefox/modules/commonjs/node/os.js
-lib/firefox/modules/commonjs/sdk/addon-page.js
 lib/firefox/modules/commonjs/sdk/addon/events.js
 lib/firefox/modules/commonjs/sdk/addon/host.js
 lib/firefox/modules/commonjs/sdk/addon/installer.js
