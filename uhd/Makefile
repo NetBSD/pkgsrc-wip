@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2014/10/04 10:11:20 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/04 12:40:17 makoto Exp $
 
-DISTNAME=		uhd-release_003_007_002
-PKGNAME=		uhd-3.7.2
-CATEGORIES=		ham
-MASTER_SITES=		-https://github.com/EttusResearch/uhd/archive/${DISTNAME:S/uhd-//}${EXTRACT_SUFX}
-EXTRACT_SUFX=		.zip
+DISTNAME=               003_007_003_rc1
+#DISTNAME=              uhd-images_003.007.003-rc1
+PKGNAME=                uhd-3.7.3rc1
+CATEGORIES=             ham
+MASTER_SITE=            https://github.com/EttusResearch/uhd/archive
+#MASTER_SITE+=          http://files.ettus.com/binaries/maint_images/archive
+EXTRACT_SUFX=           .zip
+DIST_SUBDIR=            uhd
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
@@ -19,7 +22,8 @@ USE_CMAKE=		yes
 
 # Please note distribution has many stuff under uhd/, but build itself
 # needs under host/ only.  Those uhd/ stuff will be handled post-{patch,install}:
-WRKSRC=			${WRKDIR}/${DISTNAME}/host
+WRKSRC=                 ${WRKDIR}/uhd-${DISTNAME}/host
+
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON=	\
@@ -83,8 +87,14 @@ post-patch:
 	(cd ${WRKDIR}; \
 	for i in firmware fpga images ; do \
 	  ${MKDIR} ${WRKSRC}/uhd-$$i ;\
-	${CP} -r ${WRKDIR}/${DISTNAME}/$$i/* ${WRKSRC}/uhd-$$i ;\
+	${CP} -r ${WRKDIR}/uhd-${DISTNAME}/$$i/* ${WRKSRC}/uhd-$$i ;\
 	done)
+.include	"options.mk"
+PKG_OPTIONS_VAR=        PKG_OPTIONS.uhd
+PKG_SUPPORTED_OPTIONS=	build-ninja
+PKG_SUGGESTED_OPTIONS=	
+
+.include		"../../mk/bsd.options.mk"
 
 # (1) move back the files to original location after REPLACE_PYTHON handled
 # (2) suppress warning at intallation, "non executable files get +x bit set".

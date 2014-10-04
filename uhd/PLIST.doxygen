@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST.doxygen,v 1.1 2014/09/07 05:13:42 makoto Exp $
 share/doc/uhd/doxygen/html/algorithm_8hpp.html
 share/doc/uhd/doxygen/html/algorithm_8hpp_source.html
 share/doc/uhd/doxygen/html/annotated.html
@@ -446,6 +445,8 @@ share/doc/uhd/doxygen/html/search/defines_3.html
 share/doc/uhd/doxygen/html/search/defines_3.js
 share/doc/uhd/doxygen/html/search/defines_4.html
 share/doc/uhd/doxygen/html/search/defines_4.js
+share/doc/uhd/doxygen/html/search/defines_5.html
+share/doc/uhd/doxygen/html/search/defines_5.js
 share/doc/uhd/doxygen/html/search/enums_0.html
 share/doc/uhd/doxygen/html/search/enums_0.js
 share/doc/uhd/doxygen/html/search/enums_1.html
