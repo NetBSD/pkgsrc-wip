@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:31 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/05 12:47:43 makoto Exp $
 
 PKGNAME=	gnuradio-dtv-${VERSION}
-COMMENT=	Implementing various digital television standards of GNU Radio
+COMMENT=	Various digital television standards of GNU Radio
 
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"

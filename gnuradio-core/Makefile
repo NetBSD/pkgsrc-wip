@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2014/10/03 03:39:58 makoto Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/05 12:47:43 makoto Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
-COMMENT=	Runtime system and DSP blocks for GNU Radio
+COMMENT=	Core part of GNU Radio, all others need this
 
 PLIST_MINUS=	# empty
 .include	"../../wip/gnuradio-core/Makefile.common"
@@ -23,7 +23,7 @@ post-install:
 
 # NetBSD/amd64 7.99.1
 # build/volk/lib/volk_32f_sqrt_32f_a_orc_impl.c:79:21: fatal error: orc/orc.h: No such file or directory
-# NetBSD/i386 7.99.1 
+# NetBSD/i386 7.99.1
 ## ../lib/libgnuradio-runtime.so.3.7.5: undefined reference to `shm_unlink'
 ## ../lib/libgnuradio-runtime.so.3.7.5: undefined reference to `shm_open'
 .include	"../../devel/orc/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:32 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/05 12:47:44 makoto Exp $
 
 PKGNAME=	gnuradio-pager-${VERSION}
-COMMENT=	Full package of gnuradio
+COMMENT=	FLEX radiopager receiver/demodulator of GNU Radio
 
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"

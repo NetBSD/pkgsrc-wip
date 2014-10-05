@@ -3,3 +3,5 @@ allows the construction of radios where the actual waveforms transmitted and
 received are defined by software. What this means is that it turns the digital
 modulation schemes used in today's high performance wireless devices into
 software problems.
+
+This module provides Wavelet transform of GNU Radio.
