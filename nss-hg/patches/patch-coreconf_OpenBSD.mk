@@ -1,4 +1,6 @@
-$NetBSD: patch-coreconf_OpenBSD.mk,v 1.1 2014/09/28 14:20:09 thomasklausner Exp $
+$NetBSD: patch-coreconf_OpenBSD.mk,v 1.2 2014/10/05 20:12:38 thomasklausner Exp $
+
+PLIST unification (see nspr)?
 
 --- coreconf/OpenBSD.mk.orig	2014-09-28 13:54:02.000000000 +0000
 +++ coreconf/OpenBSD.mk

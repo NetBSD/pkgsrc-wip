@@ -1,4 +1,7 @@
-$NetBSD: patch-coreconf_config.mk,v 1.1 2014/09/28 14:20:09 thomasklausner Exp $
+$NetBSD: patch-coreconf_config.mk,v 1.2 2014/10/05 20:12:38 thomasklausner Exp $
+
+chunk 1: Support DragonFly
+chunk 2: Set proper dynamic library runtime search path
 
 --- coreconf/config.mk.orig	2014-09-28 13:54:02.000000000 +0000
 +++ coreconf/config.mk

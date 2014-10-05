@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_freebl_config.mk,v 1.1 2014/09/28 14:20:09 thomasklausner Exp $
+$NetBSD: patch-lib_freebl_config.mk,v 1.2 2014/10/05 20:12:38 thomasklausner Exp $
+
+No idea, probably bogus (delete?)
 
 --- lib/freebl/config.mk.orig	2014-09-28 13:54:02.000000000 +0000
 +++ lib/freebl/config.mk

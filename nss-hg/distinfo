@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.2 2014/10/01 08:24:20 thomasklausner Exp $
+$NetBSD: distinfo,v 1.3 2014/10/05 20:12:38 thomasklausner Exp $
 
 SHA1 (nss-3.16.5.tar.gz) = bec488835954698e7b19149a15205db299cd13de
 RMD160 (nss-3.16.5.tar.gz) = 19630a0815d69ee5959b562d7849d35d677c6329
 Size (nss-3.16.5.tar.gz) = 6429830 bytes
-SHA1 (patch-cmd_shlibsign_sign.sh) = 14a0547a04195f3ab2ffed31bb66dee72adf4dd1
-SHA1 (patch-coreconf_DragonFly.mk) = a066f9a762f5a9787eb4df24bd2c348b6ce119f7
-SHA1 (patch-coreconf_OpenBSD.mk) = ce7200f441592661fe65203f127a2cfd340dec2f
-SHA1 (patch-coreconf_SunOS5.mk) = d1dafae5e61a14a73333f151c4bf125cb732132d
-SHA1 (patch-coreconf_arch.mk) = c62b76cdcce37f452d3692d92cc1a003d448a9cc
-SHA1 (patch-coreconf_config.mk) = e40999b05a0844bcf0c361947e192881f249dbf5
-SHA1 (patch-lib_Makefile) = 2e56b00deeec888dcb01281c96b6506a4cd26c77
-SHA1 (patch-lib_freebl_Makefile) = 8216da5a1ef5d728d611bf7cfb4593f0fc17b5b7
-SHA1 (patch-lib_freebl_blapi.h) = e206ae48849f833b6095ae9dbfbff3baf8f58eac
-SHA1 (patch-lib_freebl_config.mk) = fe3d99b9e6697ec7b05e0c06788abcb785f60b09
-SHA1 (patch-lib_freebl_sha-fast-amd64-sun.s) = 6bad2d54e80d4ce5fbf05e5025e6dd22a83cf98f
-SHA1 (patch-lib_softoken_config.mk) = eeecef9027ed9c8b916c7073b6f50b17da243286
-SHA1 (patch-lib_softoken_pkcs11.c) = 0c76fdad8b7c0167d01a05ca6cac512360966107
-SHA1 (patch-tests_libpkix_libpkix.sh) = ad5e5711d751ea3bbd0251ac007177124845d421
-SHA1 (patch-tests_multinit_multinit.sh) = c31b04eda2411afb45460d72602e3c1c55e2026e
+SHA1 (patch-cmd_shlibsign_sign.sh) = 9be9719d9e4cc212d9503616a1145b8c68b97a6a
+SHA1 (patch-coreconf_DragonFly.mk) = 328c0f3d4f03ab6d0efcfec3461d97da1c3e387a
+SHA1 (patch-coreconf_OpenBSD.mk) = ca38900a3af42a28848b64abe382a3b596849d0b
+SHA1 (patch-coreconf_SunOS5.mk) = db81e955db52ccccc2dbdae364449870b9724e15
+SHA1 (patch-coreconf_arch.mk) = 5462c0620564a2ad4a0deb9d71c427e8c0d426eb
+SHA1 (patch-coreconf_config.mk) = 0fdcd3fea51ea2c250ab88197b79ae2b91f27ef5
+SHA1 (patch-lib_Makefile) = cd6f58c0ed02a93b7e6ef75c2763ee3633e453eb
+SHA1 (patch-lib_freebl_Makefile) = aedfd6f12872bc94256e1c6be4628334f363c2bb
+SHA1 (patch-lib_freebl_blapi.h) = 00e0dcfe1f6a54bffa97c4852f9f9fcb5ab783e1
+SHA1 (patch-lib_freebl_config.mk) = ade7f656b900f93f1fdaa036a733529af132d2ca
+SHA1 (patch-lib_freebl_sha-fast-amd64-sun.s) = 6feb56632584f04c5259dcb72e330e13d485b50a
+SHA1 (patch-lib_softoken_config.mk) = b835109162af986a6802fc535b19ba52b6b82322
+SHA1 (patch-lib_softoken_pkcs11.c) = 32d48642ea677afc017476b326959ba3c89c8884
+SHA1 (patch-tests_libpkix_libpkix.sh) = 4df0e877ab59637fcc4b54c29b14408c73ff5105
+SHA1 (patch-tests_multinit_multinit.sh) = 97f6895c693a2606f9d178c10886bd20cc9187ed

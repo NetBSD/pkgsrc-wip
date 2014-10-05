@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_softoken_pkcs11.c,v 1.1 2014/10/01 08:24:20 thomasklausner Exp $
+$NetBSD: patch-lib_softoken_pkcs11.c,v 1.2 2014/10/05 20:12:38 thomasklausner Exp $
+
+Support for pre c99 compilers - should probably be deleted.
 
 Fix
 pkcs11.c: In function 'sftk_handlePublicKeyObject':

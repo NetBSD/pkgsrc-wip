@@ -1,4 +1,8 @@
-$NetBSD: patch-lib_softoken_config.mk,v 1.1 2014/09/28 14:20:09 thomasklausner Exp $
+$NetBSD: patch-lib_softoken_config.mk,v 1.2 2014/10/05 20:12:38 thomasklausner Exp $
+
+Use pkg-config to find the proper sqlite3 (when not using the version
+distributed with firefox - might not need upstreaming and stay as local
+patch)
 
 --- lib/softoken/config.mk.orig	2014-09-28 13:54:02.000000000 +0000
 +++ lib/softoken/config.mk

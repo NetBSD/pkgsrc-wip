@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_freebl_sha-fast-amd64-sun.s,v 1.1 2014/09/28 14:20:09 thomasklausner Exp $
+$NetBSD: patch-lib_freebl_sha-fast-amd64-sun.s,v 1.2 2014/10/05 20:12:38 thomasklausner Exp $
+
+Rename global symbol SHA1_Update to avoid namespace collision
 
 --- lib/freebl/sha-fast-amd64-sun.s.orig	2014-09-28 13:54:02.000000000 +0000
 +++ lib/freebl/sha-fast-amd64-sun.s
