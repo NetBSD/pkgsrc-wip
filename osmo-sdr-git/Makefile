@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/06 13:20:22 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/06 13:31:51 makoto Exp $
 
 DISTNAME=		osmo-sdr-0.1
 CATEGORIES=		ham
@@ -17,7 +17,7 @@ USE_TOOLS=		cmake tar
 USE_CMAKE=		yes
 
 WRKSRC=			${WRKDIR}/osmo-sdr
-# Supress warning for developer
+# Suppress warning for developer
 CMAKE_ARGS+=		-Wno-dev
 
 REPLACE_PERL+=		utils/e4000_distance.pl

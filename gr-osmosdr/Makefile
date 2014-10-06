@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/06 08:14:38 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/06 13:31:51 makoto Exp $
 
 DISTNAME=		gr-osmosdr-0.1.3
 CATEGORIES=		ham
@@ -13,7 +13,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake
 USE_CMAKE=		yes
 
-# Supress warning for developer
+# Suppress warning for developer
 CMAKE_ARGS+=	-Wno-dev
 # --   * Ettus USRP Devices
 CMAKE_ARGS+=	-DGNURADIO_UHD_INCLUDE_DIRS=${PREFIX}/include/uhd

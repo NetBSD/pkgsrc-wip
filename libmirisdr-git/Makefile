@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/06 12:56:07 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/06 13:31:51 makoto Exp $
 
 DISTNAME=	libmirisdr-0.1
 CATEGORIES=	ham
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS=	cmake pkg-config
 USE_CMAKE=	yes
 
-# Supress warning for developer
+# Suppress warning for developer
 CMAKE_ARGS+=	-Wno-dev
 
 .include	"../../wip/mk/git-package.mk"
