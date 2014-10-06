@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.1 2014/10/03 08:00:44 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/06 13:53:20 makoto Exp $
 
 DISTNAME=		hackrf-2014.08.1
 CATEGORIES=		ham
+MASTER_SITES=		http://sourceforge.net/projects/hackrf/files/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.kickstarter.com/projects/mossmann/hackrf-an-open-source-sdr-platform
 HOMEPAGE=		http://greatscottgadgets.com/hackrf/
+#OMEPAGE=		https://www.kickstarter.com/projects/mossmann/hackrf-an-open-source-sdr-platform
 COMMENT=		HackRF, an open source SDR hardware platform
 LICENSE=		gnu-gpl-v2
-MASTER_SITES=		http://sourceforge.net/projects/hackrf/files/
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake tar
 USE_CMAKE=		yes
 
-# Supress warning for developer
+# Suppress warning for developer
 CMAKE_ARGS+=		-Wno-dev
 
 CONFIGURE_DIRS=		host
