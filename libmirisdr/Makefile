@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/06 12:49:08 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/06 12:54:15 makoto Exp $
 
 DISTNAME=	libmirisdr-master
 PKGNAME=	libmirisdr-0.1
@@ -9,6 +9,7 @@ HOMEPAGE=	http://cgit.osmocom.org/libmirisdr/
 COMMENT=	Osmocom Mirics MSi2500 + MSi001 SDR library
 LICENSE=	gnu-gpl-v2
 MASTER_SITES+=	http://cgit.osmocom.org/libmirisdr/snapshot/
+DIST_SUBDIR=	${PKGBASE}-2013-06-08
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
