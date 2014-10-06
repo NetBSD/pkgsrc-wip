@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/06 07:45:43 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/06 14:46:39 makoto Exp $
 
 DISTNAME=		gr-fcdproplus-0.1
 CATEGORIES=		ham
@@ -11,7 +11,6 @@ LICENSE=		gnu-gpl-v2
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://github.com/dl1ksv/gr-fcdproplus
 GIT_MODULE.master=	gr-fcdproplus
-MAKE_ENV+=		GIT_SSL_NO_VERIFY=true
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake
