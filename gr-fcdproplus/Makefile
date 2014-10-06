@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2014/10/06 14:46:39 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/06 15:03:40 makoto Exp $
 
-DISTNAME=		gr-fcdproplus-0.1
+DISTNAME=		gr-fcdproplus_3.7.11.orig
+PKGNAME=		${DISTNAME:S/_/-/S/.orig//}
 CATEGORIES=		ham
+MASTER_SITES+=		${MASTER_SITE_DEBIAN:=pool/main/g/gr-fcdproplus/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/dl1ksv/gr-fcdproplus
 COMMENT=		Addon for funcube dongle pro+ to GNU Radio
 LICENSE=		gnu-gpl-v2
 
-GIT_REPOSITORIES=	master
-GIT_REPO.master=	https://github.com/dl1ksv/gr-fcdproplus
-GIT_MODULE.master=	gr-fcdproplus
-
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake
 USE_CMAKE=		yes
 
-WRKSRC=			${WRKDIR}/gr-fcdproplus
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CXXFLAGS+=		-I${PREFIX}/include/libusb-1.0
 
 # Suppress warning for developer
@@ -29,11 +28,6 @@ SUBST_FILES.libusb+=	CMakeLists.txt
 SUBST_STAGE.libusb=	pre-configure
 SUBST_SED.libusb=	-e 's,@@PREFIX@@,${PREFIX},'
 SUBST_MESSAGE.libusb=	Fix for "libusb.h not found"
-
-.include	"../../wip/mk/git-package.mk"
-# you need place after above line for now.
-_GIT_FLAGS=		# set empty, --depth 1 seems harmfull
-_GIT_ENV+=		GIT_SSL_NO_VERIFY=true
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
