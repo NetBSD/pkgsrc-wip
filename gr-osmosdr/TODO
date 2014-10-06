@@ -1,0 +1,12 @@
+Convert following prerequisite into non git package:
+
+.include	"../../wip/rtl-sdr/buildlink3.mk"    -> OK
+.include	"../../wip/libmirisdr/buildlink3.mk"
+.include	"../../wip/osmo-sdr/buildlink3.mk"
+.include	"../../wip/gr-fcdproplus/buildlink3.mk"
+
+-- # Gnuradio disabled components                        
+--   * Osmocom IQ Imbalance Correction
+--   * HackRF Jawbreaker
+--   * nuand bladeRF
+--   * AIRSPY Receiver
