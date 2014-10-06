@@ -1,0 +1,6 @@
+- rtl_fm is tested fine on NetBSD/amd64 6.1.4 with the command 
+  rtl_fm -f 80.7M  | sudo env AUDIODEV=/dev/audio1 play -t raw -r 24k -es -b 16 -c 1 -V1 -
+  (Select frequency instead of 80.7M, and audio device.  The 'play' is a part of audio/sox)
+
+- shared-lib suffix (now 0 and 0.5git) should be parameterized
+
