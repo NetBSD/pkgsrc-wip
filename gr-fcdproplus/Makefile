@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/04 07:28:59 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/06 07:45:43 makoto Exp $
 
 DISTNAME=		gr-fcdproplus-0.1
 CATEGORIES=		ham
@@ -34,6 +34,7 @@ SUBST_MESSAGE.libusb=	Fix for "libusb.h not found"
 .include	"../../wip/mk/git-package.mk"
 # you need place after above line for now.
 _GIT_FLAGS=		# set empty, --depth 1 seems harmfull
+_GIT_ENV+=		GIT_SSL_NO_VERIFY=true
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
