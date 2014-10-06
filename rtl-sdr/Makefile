@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/06 08:49:59 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/06 08:54:01 makoto Exp $
 #
 DISTNAME=		v0.5.3
 PKGNAME=		rtl-sdr-${DISTNAME:S/v//}
@@ -41,8 +41,5 @@ do-build:
 do-install:
 	(cd ${WRKSRC}/build; ${GMAKE} install)
 
-.include "../../lang/python/pyversion.mk"
-.include "../../lang/${PYPACKAGE}/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
