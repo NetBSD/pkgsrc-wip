@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/09/06 10:56:11 yvs4sf Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/06 13:23:11 yvs4sf Exp $
 
 MODNAME=	rrd
-PECL_VERSION=	1.1.1
+PECL_VERSION=	1.1.3
 PECL_LEGACY_VERSION_SCHEME=	yes
 CATEGORIES+=	databases
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/09/06 10:56:11 yvs4sf Exp $
+$NetBSD: distinfo,v 1.3 2014/10/06 13:23:11 yvs4sf Exp $
 
-SHA1 (php-rrd/rrd-1.1.1.tgz) = c123d9c0a1861f4df4a92c6c2768decb4fdc7c27
-RMD160 (php-rrd/rrd-1.1.1.tgz) = 5639740f11b5bf6816ae4626cb026395fd2fc676
-Size (php-rrd/rrd-1.1.1.tgz) = 18823 bytes
+SHA1 (php-rrd/rrd-1.1.3.tgz) = ae140021a49c387647f3c12cd3e343a101d42305
+RMD160 (php-rrd/rrd-1.1.3.tgz) = dbef0cf56fc081f768f85d46fd185a750a42cef5
+Size (php-rrd/rrd-1.1.3.tgz) = 19229 bytes
