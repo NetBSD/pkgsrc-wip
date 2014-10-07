@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.143 2014/10/04 09:10:31 makoto Exp $
+@comment $NetBSD: PLIST,v 1.144 2014/10/07 13:23:26 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3832,8 +3832,6 @@ share/emacs/${PKGVERSION}/lisp/vt-control.el.gz
 share/emacs/${PKGVERSION}/lisp/vt-control.elc
 share/emacs/${PKGVERSION}/lisp/vt100-led.el.gz
 share/emacs/${PKGVERSION}/lisp/vt100-led.elc
-share/emacs/${PKGVERSION}/lisp/w32-common-fns.el.gz
-share/emacs/${PKGVERSION}/lisp/w32-common-fns.elc
 share/emacs/${PKGVERSION}/lisp/w32-fns.el.gz
 share/emacs/${PKGVERSION}/lisp/w32-fns.elc
 share/emacs/${PKGVERSION}/lisp/w32-vars.el.gz
