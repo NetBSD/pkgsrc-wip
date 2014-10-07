@@ -1,17 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.3 2014/06/19 15:00:38 nros Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2014/10/07 14:18:53 nros Exp $
 * Remove doxygen dependecy
---- Makefile.in.orig	2013-02-27 11:30:57.000000000 +0000
+--- Makefile.in.orig	2014-10-07 13:22:14.000000000 +0000
 +++ Makefile.in
-@@ -699,7 +699,7 @@ maintainer-clean-generic:
- 	@echo "it deletes files that may require special tools to rebuild."
- @COND_DOXYGEN_FALSE@uninstall-local:
- @COND_DOXYGEN_FALSE@html-local:
--@COND_DOXYGEN_FALSE@install-html-local:
-+
- @COND_DOXYGEN_FALSE@clean-local:
- clean: clean-recursive
- 
-@@ -802,12 +802,12 @@ uninstall-am: uninstall-local
+@@ -839,12 +839,12 @@ uninstall-am: uninstall-local
  
  @COND_DOXYGEN_TRUE@html-local: $(DOXYGEN_OUTPUT)
  
