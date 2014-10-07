@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2014/10/03 13:48:56 thomasklausner Exp $
+$NetBSD: distinfo,v 1.3 2014/10/07 22:46:24 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -24,7 +24,7 @@ SHA1 (patch-build_gyp.mozbuild) = 2842da0783d344dd12e86adde447f7cda6191518
 SHA1 (patch-build_pgo_profileserver.py) = 8666187258e47c037f2065a19a5b38946fdc0f6c
 SHA1 (patch-config_Makefile.in) = 296bd3bc33346cfcfa658fe641c2ee2ac67549f1
 SHA1 (patch-config_baseconfig.mk) = 07c295fbfbaeb969b336def32d8924729e332075
-SHA1 (patch-config_external_moz.build) = 5634265afe8d980c5923ed62e2fecf0562b61ca5
+SHA1 (patch-config_external_moz.build) = 5c8c9bb44914483679a4f74e4dc046377dc9102b
 SHA1 (patch-config_rules.mk) = 69e02dc3b17f06c3c37d8d4cea8f602ffb6fd263
 SHA1 (patch-config_system-headers) = 1c8c7dd30a60d447f668e3052e04aeeb70deaa6b
 SHA1 (patch-content_base_src_moz.build) = 5ab6dada84bf727fb55a4c919a2e908d63205410
@@ -95,7 +95,6 @@ SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
 SHA1 (patch-security_manager_ssl_src_nsNSSComponent.cpp) = 6788dbd5084727dbf54e1996faa7a9aaae508293
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 6b926ccd793391ad7bd7101635f4b3eefe3db130
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = 3118d30646fafa30a621567b3b5d8260c6c567f7
-SHA1 (patch-toolkit_library_libxul.mk) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-toolkit_library_moz.build) = f0937fa86058a5c16fc261ad182df73b6533cb81
 SHA1 (patch-toolkit_toolkit.mozbuild) = a92b9f5114c3eab2c8e9f1d0eb21926235d2203a
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 6ee6fba04a3ecc6596f8aed67f752a1075901fa8
