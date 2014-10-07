@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/04 15:36:21 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/10/07 22:52:59 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -311,6 +311,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/dispatcher.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackApiClient.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/models.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/otSdkDriver.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/utils.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/validate.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/views.js
@@ -810,6 +811,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/tabview/search.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabview/stack-expander.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabview/tabview.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabview/tabview.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/theme-switcher-icon.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/translating-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/translating-16@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/translation-16.png
