@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5934 2014/10/03 16:19:19 khorben Exp $
+# $Id: Makefile,v 1.5935 2014/10/07 14:29:44 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1768,6 +1768,7 @@ SUBDIR+=	navigatrix
 SUBDIR+=	nbfc
 SUBDIR+=	ncbi
 SUBDIR+=	ncbi-bin
+SUBDIR+=	ncbi-blast
 SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncp
