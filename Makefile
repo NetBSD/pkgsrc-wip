@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5935 2014/10/07 14:29:44 outpaddling Exp $
+# $Id: Makefile,v 1.5936 2014/10/08 09:58:33 obache Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2150,7 +2150,6 @@ SUBDIR+=	pear-Finder
 SUBDIR+=	pear-FinderFacade
 SUBDIR+=	pear-HTML_Table
 SUBDIR+=	pear-HTTP_Client
-SUBDIR+=	pear-HTTP_Request2
 SUBDIR+=	pear-Horde_ActiveSync
 SUBDIR+=	pear-Horde_Alarm
 SUBDIR+=	pear-Horde_Auth
@@ -2181,7 +2180,6 @@ SUBDIR+=	pear-Horde_Translation
 SUBDIR+=	pear-Horde_Url
 SUBDIR+=	pear-Horde_Util
 SUBDIR+=	pear-Image_GraphViz
-SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-OLE
 SUBDIR+=	pear-PHPUnit_MockObject
 SUBDIR+=	pear-PHP_CodeCoverage
