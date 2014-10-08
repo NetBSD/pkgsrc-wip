@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/01/24 00:22:27 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/08 04:20:15 makoto Exp $
 
 DISTNAME=	magit-1.2.0.50
 CATEGORIES=	devel
@@ -41,5 +41,7 @@ post-patch:
 	(cd ${WRKSRC}; ${GMAKE} VERSION=${PKGVERSION} magit-version.el)
 
 .include "../../wip/mk/git-package.mk"
+# for "SSL certificate problem: unable to get local issuer certificate"
+_GIT_ENV+=	GIT_SSL_NO_VERIFY=true
 .include "../../wip/git-modes-git/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
