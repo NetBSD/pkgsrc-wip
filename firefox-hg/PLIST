@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/10/07 22:52:59 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/10/08 21:23:27 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -617,7 +617,6 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/noise.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch-checked.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler.css
-lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/projecteditor/file-icons-sheet@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/projecteditor/projecteditor.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/responsive-horizontal-resizer.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/responsive-horizontal-resizer@2x.png
