@@ -1,4 +1,4 @@
-$NetBSD: patch-etc_Makefile.am,v 1.4 2014/02/21 02:05:02 makoto Exp $
+$NetBSD: patch-etc_Makefile.am,v 1.5 2014/10/08 03:57:37 makoto Exp $
 
 (1) To merge sybmol.rev (if configured with --enable-symbol-rev)
 (2) To sort bushu.exand by emacs-internal-code order
@@ -22,7 +22,7 @@ $NetBSD: patch-etc_Makefile.am,v 1.4 2014/02/21 02:05:02 makoto Exp $
 +	echo ' *** symbol.rev will be included in bushu.rev ***'; \
 +	else \
 +	mv bushu.rev bushu.rev.tmp ;\
-+	@echo ' *** symbol.rev will NOT be included in bushu.rev ***'; \
++	echo ' *** symbol.rev will NOT be included in bushu.rev ***'; \
 +	fi
 +	$(EMACS) -q -no-site-file -batch -l $(BATCH_SORT) -f batch-sort-file bushu.rev.tmp bushu.rev utf-8 utf-8 
 +#	$(EMACS) -q -no-site-file -batch -l $(BATCH_SORT) -f batch-sort-file bushu.rev.tmp bushu.rev utf-8 utf-8 
