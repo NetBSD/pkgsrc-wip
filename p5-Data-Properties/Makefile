@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/09 13:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 14:06:29 thomasklausner Exp $
 #
 
 DISTNAME=	Data-Properties-0.02
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Data-Properties/
 COMMENT=	Perl version of Java's java.util.Properties
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/Properties/.packlist

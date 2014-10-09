@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/31 13:41:37 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:31 thomasklausner Exp $
 
 DISTNAME=	unzip610b
 PKGNAME=	unzip-6.10b
@@ -10,8 +10,6 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 LICENSE=	info-zip
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_SH=	unix/zipgrep
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/09 13:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:29 thomasklausner Exp $
 
 DISTNAME=		Petal-2.20
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=		Perl Template Attribute Language
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-MKDoc-XML>=0.75:../../wip/p5-MKDoc-XML
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Petal/.packlist
 

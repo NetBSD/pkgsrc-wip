@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:26 thomasklausner Exp $
 #
 
 DISTNAME=		clustalx-2.0.12
@@ -10,8 +10,6 @@ MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://bips.u-strasbg.fr/fr/Documentation/ClustalX/
 COMMENT=	General purpose multiple alignment program for DNA or proteins (X11)
 LICENSE=	clustal-license
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES+=		c++
 MESSAGE_SUBST+=		PREFIX=${PREFIX}

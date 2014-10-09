@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 19:47:05 asau Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:32 thomasklausner Exp $
 #
 
 DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
@@ -16,7 +16,6 @@ USE_TOOLS+=		perl:run
 REPLACE_PERL=		xmlformat.pl
 
 NO_BUILD=		yes
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/xmlformat-docs/distinfo
 DESCR_SRC=		${.CURDIR}/../../wip/xmlformat-docs/DESCR.common \

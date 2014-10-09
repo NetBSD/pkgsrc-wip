@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:49 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:31 thomasklausner Exp $
 
 DISTNAME=	tscreen-0.4.9
 CATEGORIES=	misc shells
@@ -8,8 +8,6 @@ MAINTAINER=	ishit@users.sourceforge.jp
 HOMEPAGE=	http://www.steve.org.uk/Software/tscreen/
 COMMENT=	Multi-screen window manager
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/23 18:22:25 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/09 14:06:27 thomasklausner Exp $
 
 DISTNAME=		fftw-3.3
 PKGNAME=		fftw-mpich-3.3
@@ -10,8 +10,6 @@ MAINTAINER=		jwbacon@tds.net
 HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
 LICENSE=		gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_PREFIX=	$(BUILDLINK_PREFIX.mpich:Q)
 

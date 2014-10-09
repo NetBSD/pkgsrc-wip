@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2013/09/12 21:23:27 asau Exp $
+# $NetBSD: Makefile,v 1.43 2014/10/09 14:06:30 thomasklausner Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.55
@@ -18,7 +18,6 @@ COMMENT=		SBCL, a Common Lisp implementation
 # 2) make fetch && make makesum && make package
 
 USE_TOOLS+=		gmake gtar:run patch
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -52,7 +51,6 @@ UNLIMIT_RESOURCES=	datasize
 # Get bootstrap version:
 BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
 .endif
-
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -91,7 +89,6 @@ PLIST_SUBST+=	SUFX64=-64
 .else
 PLIST_SUBST+=	SUFX64=
 .endif
-
 
 GIT_REPOSITORIES=	sbcl
 GIT_REPO.sbcl=		git://git.code.sf.net/p/sbcl/sbcl

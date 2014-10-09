@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/05/29 22:37:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:27 thomasklausner Exp $
 
 DISTNAME=	libdmx-1.1.3
 CATEGORIES=	x11
@@ -9,14 +9,11 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/proto/
 COMMENT=	Distributed, multi-headed X protocol headers from modular X.org
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	dmx.pc.in
-
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../wip/dmxproto/buildlink3.mk"

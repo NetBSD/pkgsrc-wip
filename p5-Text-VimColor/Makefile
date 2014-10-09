@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/10/09 13:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:30 thomasklausner Exp $
 
 DISTNAME=		Text-VimColor-0.23
 PKGNAME=		p5-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=		p5-Path-Class>=0.02:../../devel/p5-Path-Class
 DEPENDS+=		p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
 #DEPENDS+=		p5-Term-ANSIColor>=3:../../devel/p5-Term-ANSIColor
 DEPENDS+=		vim{,-gtk,gtk2,-kde,-motif,-xaw}-[0-9]*:../../editors/vim
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Text/VimColor/.packlist
 

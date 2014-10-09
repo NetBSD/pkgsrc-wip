@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/31 15:57:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:32 thomasklausner Exp $
 
 #DISTNAME=	vreng-6.8.3
 DISTNAME=	vreng-6.8.12
@@ -14,7 +14,6 @@ HOMEPAGE=	http://vreng.enst.fr/
 COMMENT=	Virtual Reality Engine interactive distributed 3D application
 
 PKG_DESTDIR_SUPPORT=	none
-#PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
@@ -29,7 +28,6 @@ CFLAGS+=	-D_POSIX_PTHREAD_SEMANTICS
 #CONFIGURE_ARGS+= --enable-ocaml
 CONFIGURE_ARGS+=	--with-GL-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		PERLPATH=${LOCALBASE}/bin/perl
-
 
 #mpeg
 #java

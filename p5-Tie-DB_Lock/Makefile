@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 19:12:00 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:30 thomasklausner Exp $
 
 DISTNAME=		Tie-DB_Lock-0.07
 PKGNAME=		p5-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=		http://search.cpan.org/dist/Tie-DB_Lock/
 COMMENT=		Ties hashes to databases using shared and exclusive locks
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Tie/DB_Lock/.packlist
 

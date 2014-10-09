@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 19:44:57 asau Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/09 14:06:32 thomasklausner Exp $
 #
 
 DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.kitebird.com/software/xmlformat/
 COMMENT=		Configurable XML formatter, documentation files
 
 NO_BUILD=		yes
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DESCR_SRC=		${.CURDIR}/DESCR.common ${.CURDIR}/DESCR
 

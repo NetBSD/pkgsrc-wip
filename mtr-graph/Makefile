@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/26 09:51:23 yvs4sf Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:28 thomasklausner Exp $
 
 CATEGORIES=	net
 PKGBASE=	mtr
@@ -19,8 +19,6 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	mtr-[0-9]*
 CONFLICTS+=	mtr-current-[0-9]*
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		autoconf autoreconf automake

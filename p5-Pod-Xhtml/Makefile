@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:58 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:29 thomasklausner Exp $
 #
 
 DISTNAME=	Pod-Xhtml-1.61
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Pod-Parser>=0:../../textproc/p5-Pod-Parser
 DEPENDS+=	p5-Test-Assertions>=1.054:../../devel/p5-Test-Assertions
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Pod/Xhtml/.packlist
 USE_LANGUAGES=	# none

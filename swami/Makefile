@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/07 16:23:18 asau Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:31 thomasklausner Exp $
 #
 
 DISTNAME=		swami-0.9.2
@@ -11,7 +11,6 @@ HOMEPAGE=		http://swami.sourceforge.net/
 COMMENT=		SoundFont2 instrument editor
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LOCALEDIR=		YES
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/25 11:12:46 roelants Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:29 thomasklausner Exp $
 #
 
 DISTNAME=		Encode-compat-0.07
@@ -10,8 +10,6 @@ LICENSE=		${PERL5_LICENSE}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Encode.pm emulation layer
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Encode/compat/.packlist

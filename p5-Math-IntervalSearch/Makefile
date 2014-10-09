@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/13 22:25:40 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:29 thomasklausner Exp $
 
 DISTNAME=	Math-Interpolate-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,6 @@ MAINTAINER=	charlie@rubberduck.com
 COMMENT=	Contains several useful routines for interpolating data sets
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Math/Interpolate/.packlist
 

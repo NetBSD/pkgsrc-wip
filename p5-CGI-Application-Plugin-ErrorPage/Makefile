@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:24 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:28 thomasklausner Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-ErrorPage-1.20
@@ -13,8 +13,6 @@ COMMENT=	Simple error page plugin for CGI::Application
 DEPENDS+=       p5-CGI-Application>=4.01:../../www/p5-CGI-Application
 DEPENDS+=       p5-Params-Validate>0:../../devel/p5-Params-Validate
 DEPENDS+=       p5-Module-Build>0:../../devel/p5-Module-Build
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/ErrorPage/.packlist

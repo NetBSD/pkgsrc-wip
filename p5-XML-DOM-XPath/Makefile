@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 19:12:05 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:30 thomasklausner Exp $
 
 DISTNAME=	XML-DOM-XPath-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ DEPENDS+=	p5-XML-DOM>=1.43:../../textproc/p5-XML-DOM
 DEPENDS+=	p5-XML-XPath>=1.13:../../textproc/p5-XML-XPath
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/XML/DOM/XPath/.packlist
 

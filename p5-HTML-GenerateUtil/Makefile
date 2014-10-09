@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/03/30 20:53:30 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:29 thomasklausner Exp $
 
 DISTNAME=		HTML-GenerateUtil-1.11
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/HTML-GenerateUtil/
 COMMENT=		Routines useful when generating HTML output
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/HTML/GenerateUtil/.packlist
 

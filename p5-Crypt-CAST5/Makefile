@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:29 thomasklausner Exp $
 
 DISTNAME=	Crypt-CAST5-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Crypt-CAST5/
 COMMENT=	Perl5 CAST5 block cipher implementation
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CRYPTO=		YES
 PERL5_PACKLIST=	auto/Crypt/CAST5/.packlist

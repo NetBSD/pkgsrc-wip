@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/04 18:42:21 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:29 thomasklausner Exp $
 #
 
 DISTNAME=	Net-PcapUtils-0.01
@@ -13,7 +13,6 @@ COMMENT=	Utility routines for Net::Pcap module
 DEPENDS+=	p5-Net-Pcap>=0.3:../../net/p5-Net-Pcap
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Net/PcapUtils/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:27 thomasklausner Exp $
 #
 
 DISTNAME=	fstobdf-1.0.5
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Reads a font from a font server and writes bdf-format output
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

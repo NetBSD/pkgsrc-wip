@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 17:14:38 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:26 thomasklausner Exp $
 #
 
 DISTNAME=	bonnie++-1.96
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.coker.com.au/bonnie++/experimental/
 COMMENT=	Enhanced performance Test of Filesystem I/O
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES

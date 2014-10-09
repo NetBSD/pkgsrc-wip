@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/11/09 14:29:45 roelants Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:27 thomasklausner Exp $
 #
 
 DISTNAME=	eet-1.7.9
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Data encode/decode and storage library
 
 LICENSE=	2-clause-bsd
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES

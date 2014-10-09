@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:57 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:29 thomasklausner Exp $
 
 DISTNAME=	POSIX-strptime-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-XSLoader-[0-9]*:../../devel/p5-XSLoader
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=	c
 
 PERL5_PACKLIST=		auto/POSIX/strptime/.packlist

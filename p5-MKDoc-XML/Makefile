@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/09 13:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:29 thomasklausner Exp $
 
 DISTNAME=		MKDoc-XML-0.75
 PKGNAME=		p5-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=		http://search.cpan.org/dist/MKDoc-XML/
 COMMENT=		Suite of low level XML processing modules
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/MKDoc/XML/.packlist
 

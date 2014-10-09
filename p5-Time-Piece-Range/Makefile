@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/04 19:12:00 asau Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:30 thomasklausner Exp $
 
 DISTNAME=	Time-Piece-Range-1.2
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
 DEPENDS+=	p5-Date-Range>=1.2:../../wip/p5-Date-Range
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Time/Piece/Range/.packlist
 

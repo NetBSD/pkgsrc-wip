@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:19 asau Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:28 thomasklausner Exp $
 
 DISTNAME=	Algorithm-Combinatorics-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Algorithm-Combinatorics/
 COMMENT=	Efficient generation of combinatorial sequences
 LICENSE=	${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Algorithm/Combinatorics/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/05/18 15:42:39 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:30 thomasklausner Exp $
 #
 
 DISTNAME=		showfont-1.0.4
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Displays font data from an X font server
 LICENSE=		x11 # XXX and others
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

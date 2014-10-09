@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/23 17:19:31 outpaddling Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 14:06:27 thomasklausner Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-openmpi-2.1.5
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
 LICENSE=		gnu-gpl-v1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/09/04 13:02:15 yvs4sf Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:28 thomasklausner Exp $
 
 CATEGORIES=	net
 PKGBASE=	mtr
@@ -17,8 +17,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		autoconf autoreconf automake

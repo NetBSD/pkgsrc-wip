@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/02/05 05:05:06 uccwen Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:30 thomasklausner Exp $
 
 DISTNAME=		URI-Title-1.88
 PKGNAME=		p5-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=		p5-File-Type>=0.22:../../devel/p5-File-Type
 DEPENDS+=		p5-MP3-Info>=1.01:../../audio/p5-MP3-Info
 DEPENDS+=		p5-Image-Size>=1.01:../../graphics/p5-Image-Size
 DEPENDS+=		p5-libwww>=5.805:../../www/p5-libwww
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 REPLACE_PERL=		title.pl
 

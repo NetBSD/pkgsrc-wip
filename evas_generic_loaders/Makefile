@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/11/09 14:32:06 roelants Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:27 thomasklausner Exp $
 #
 
 DISTNAME=	evas_generic_loaders-1.7.9
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Extra loaders for GPL loaders and unstable libraries
 
 LICENSE=	gnu-gpl-v2
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config

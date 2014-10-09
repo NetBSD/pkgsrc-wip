@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 13:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/09 14:06:30 thomasklausner Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -22,7 +22,6 @@ CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*			\
 		spamassassin-[1-9]*
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 EXTRACT_SUFX?=	.tar.bz2
 NO_CHECKSUM=	YES

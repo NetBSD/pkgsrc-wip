@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/13 12:49:18 fhajny Exp $
+# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:32 thomasklausner Exp $
 
 DISTNAME=	zabbix-1.8.5
 CATEGORIES=	net
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
 MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
 HOMEPAGE=	http://www.zabbix.com/
 COMMENT=	Network monitoring tool
-
-#PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
 MAKE_JOBS_SAFE=		no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:26 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:29 thomasklausner Exp $
 #
 
 DISTNAME=	CGI-Application-Server-0.060
@@ -20,7 +20,6 @@ DEPENDS+=       p5-Test-WWW-Mechanize>=0:../../www/p5-Test-WWW-Mechanize
 DEPENDS+=       p5-HTTP-Server-Simple-Static>=0:../../www/p5-HTTP-Server-Simple-Static
 
 PKG_DESTDIR_SUPPORT=    none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/CGI/Application/Server/.packlist
 USE_LANGUAGES=		# none

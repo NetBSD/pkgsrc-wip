@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/11/27 13:21:39 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:27 thomasklausner Exp $
 
 DISTNAME=	Joomla_1.5.15-Stable-Full_Package
 PKGNAME=	joomla-1.5.15
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.10:../../archivers/php-zlib
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}

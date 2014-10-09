@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 13:45:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:28 thomasklausner Exp $
 
 DISTNAME=		libpcap-0.8.3
 CATEGORIES=		net
@@ -9,7 +9,6 @@ HOMEPAGE=		http://www.tcpdump.org/
 COMMENT=		System-independent interface for user-level packet capture
 
 PKG_DESTDIR_SUPPORT=	none
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		flex bison gm4

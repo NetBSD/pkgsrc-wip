@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/09/24 17:14:38 asau Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/09 14:06:26 thomasklausner Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -9,8 +9,6 @@ MAINTAINER?=		brook@nmsu.edu
 HOMEPAGE?=		http://www.boost.org/
 COMMENT?=		Run the Boost test suite
 LICENSE=		boost-license
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		ftp pax patch
 

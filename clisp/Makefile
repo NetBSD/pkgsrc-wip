@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:26 thomasklausner Exp $
 #
 
 DISTNAME=		clisp-2.49
@@ -19,8 +19,6 @@ WRKSRC=			${WRKDIR}/clisp
 # http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
 NOT_FOR_PLATFORM=	*-*-sparc64
 NOT_FOR_PLATFORM+=	*-*-arm
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 MAKE_JOBS_SAFE=		no
 

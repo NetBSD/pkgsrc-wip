@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/28 21:36:21 asau Exp $
+# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:27 thomasklausner Exp $
 #
 
 DISTNAME=		eciadsl-usermode-0.10
@@ -9,8 +9,6 @@ MAINTAINER=		imil@gcu.info
 COMMENT=		Driver for Globespan chipset-based ADSL USB modems
 
 BUILD_DEPENDS+=		userppp>=001107:../../net/userppp
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 

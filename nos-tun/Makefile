@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 17:55:08 asau Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:28 thomasklausner Exp $
 #
 
 DISTNAME=	nos-tun
@@ -9,8 +9,6 @@ MASTER_SITES=	http://imil.net/NetBSD/
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://imil.net/NetBSD/
 COMMENT=	The nos-tun utility is used to establish an nos style tunnel
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 

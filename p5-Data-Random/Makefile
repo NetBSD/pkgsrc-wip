@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/17 02:10:49 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:29 thomasklausner Exp $
 
 DISTNAME=		Data-Random-0.08
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		phil@cs.wwu.edu
 HOMEPAGE=		http://search.cpan.org/dist/Data-Random/
 COMMENT=		Perl module to generate random data
 LICENSE=		${PERL5_LICENSE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		p5-GD>=1.18:../../graphics/p5-GD
 DEPENDS+=		p5-Date-Calc>=5.4:../../devel/p5-Date-Calc

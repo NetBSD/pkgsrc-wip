@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/28 21:24:37 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:26 thomasklausner Exp $
 #
 
 DISTNAME=	dmxproto-2.3.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/proto/
 COMMENT=	Distributed Multi-headed X protocol headers from modular X.org
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
