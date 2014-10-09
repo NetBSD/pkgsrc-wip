@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/08 12:44:35 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/09 08:51:37 fhajny Exp $
 bin/blast_formatter
 bin/blastdb_aliastool
 bin/blastdbcheck
@@ -3082,7 +3082,7 @@ include/ncbi-tools++/objmgr/impl/seq_table_info.hpp
 include/ncbi-tools++/objmgr/impl/seq_table_setter.hpp
 include/ncbi-tools++/objmgr/impl/seq_table_setters.hpp
 include/ncbi-tools++/objmgr/impl/seq_vector_cvt.hpp
-include/ncbi-tools++/objmgr/impl/seq_vector_cvt_gcc_${MACHINE_ARCH}.hpp
+include/ncbi-tools++/objmgr/impl/seq_vector_cvt_gcc_i386.hpp
 include/ncbi-tools++/objmgr/impl/seq_vector_cvt_gen.hpp
 include/ncbi-tools++/objmgr/impl/snp_annot_info.hpp
 include/ncbi-tools++/objmgr/impl/snp_info.hpp

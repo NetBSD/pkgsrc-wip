@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/09 06:42:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/09 08:51:37 fhajny Exp $
 
 DISTNAME=	ncbi-blast-${PKGVERSION_NOREV}+-src
 PKGNAME=	blast-2.2.30
@@ -34,6 +34,9 @@ CONFIGURE_ARGS+=	AR="ar cr" \
 
 # amq -w hangs on BSD, not needed
 CONFIGURE_ENV+=		ncbi_cv_prog_amq_w=no
+
+# statfs tends to be found on NetBSD erroneously
+CONFIGURE_ENV+=		ac_cv_func_statfs=no
 
 # Default behavior patched so that all 3rd party support disable
 # by default, then enabled one by one
