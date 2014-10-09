@@ -1,4 +1,4 @@
-$NetBSD: patch-src_build-system_Makefile.in.top,v 1.1 2014/10/08 12:44:36 fhajny Exp $
+$NetBSD: patch-src_build-system_Makefile.in.top,v 1.2 2014/10/09 16:51:53 outpaddling Exp $
 
 Add DESTDIR support.
 --- src/build-system/Makefile.in.top.orig	2014-08-01 18:43:59.000000000 +0000
@@ -24,7 +24,8 @@ Add DESTDIR support.
 +	-rm -f $(DESTDIR)$(libdir)/lib*-static.a
 +	cd $(DESTDIR)$(libdir)  && \
  	    for x in *.a; do \
- 	        $(LN_S) "$$x" "`/usr/bin/basename \"$$x\" .a`-static.a"; \
+-	        $(LN_S) "$$x" "`/usr/bin/basename \"$$x\" .a`-static.a"; \
++	        $(LN_S) "$$x" "`basename \"$$x\" .a`-static.a"; \
  	    done
  	cd $(includedir0) && find * -name CVS -prune -o -print |\
 -            cpio -pd $(pincludedir)

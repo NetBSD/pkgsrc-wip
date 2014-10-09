@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/10/08 12:44:35 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2014/10/09 16:51:53 outpaddling Exp $
 
 SHA1 (ncbi-blast-2.2.30+-src.tar.gz) = 376376b98684d48fcef16970923199326cac600e
 RMD160 (ncbi-blast-2.2.30+-src.tar.gz) = 5e114a2190e6799a2a9194a8abc97914210c148d
 Size (ncbi-blast-2.2.30+-src.tar.gz) = 18937894 bytes
-SHA1 (patch-src_build-system_Makefile.in.top) = 170de8bdf975040952dc7ce4bac231aea04c1ee4
+SHA1 (patch-src_build-system_Makefile.in.top) = 1948585a8609045bafb7c6e2e4a6444836e10c83
 SHA1 (patch-src_build-system_configure) = baaae57d26c746f10deba91bd4e2ccd9539e8cb9
