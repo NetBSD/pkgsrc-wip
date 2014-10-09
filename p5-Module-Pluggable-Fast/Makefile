@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/04/06 02:26:04 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/09 13:45:24 thomasklausner Exp $
 
 DISTNAME=	Module-Pluggable-Fast-0.19
 PKGNAME=	p5-${DISTNAME}
-SVR4_PKGNAME=	p5mpf
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 

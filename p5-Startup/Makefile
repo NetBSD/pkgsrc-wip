@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2014/07/19 14:26:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/09 13:45:24 thomasklausner Exp $
 
 DISTNAME=		Startup-0.103
 PKGNAME=		p5-${DISTNAME}
-SVR4_PKGNAME=		p5stu
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Unicode/MSCHWARTZ/}
 

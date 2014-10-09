@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:21 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/09 13:45:24 thomasklausner Exp $
 
 DISTNAME=		MKDoc-XML-0.75
 PKGNAME=		p5-${DISTNAME}
-SVR4_PKGNAME=		p5mkx
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BP/BPOSTLE/}
 

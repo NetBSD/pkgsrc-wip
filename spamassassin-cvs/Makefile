@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2013/03/02 10:43:36 trontor Exp $
+# $NetBSD: Makefile,v 1.19 2014/10/09 13:45:24 thomasklausner Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
 PKGREVISION=	2
-SVR4_PKGNAME=	sa
 CATEGORIES=	mail
 MASTER_SITES=	http://www.spamassassin.org/devel/		\
 		http://eu.spamassassin.org/devel/		\
