@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/06/01 12:49:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/10 14:40:06 jonperkin Exp $
 #
 
 DISTNAME=	configobj-4.7.2
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # "except Exception, e:" SyntaxError
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
