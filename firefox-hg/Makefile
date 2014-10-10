@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/01 21:12:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/10 13:12:21 thomasklausner Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	35.0a1
@@ -42,6 +42,8 @@ ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 BUILDLINK_TRANSFORM+=	rm:-fdata-sections
 BUILDLINK_TRANSFORM+=	rm:-ffunction-sections
 .endif
+BUILDLINK_TRANSFORM+=	rm:-Werror
+BUILDLINK_TRANSFORM+=	rm:-Werror=[A-z0-9_-]*
 
 LDFLAGS.DragonFly=	-lplc4 -lnspr4
 LDFLAGS.FreeBSD=	-lplc4 -lnspr4

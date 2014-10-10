@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/10/08 21:23:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/10/10 13:12:21 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -2304,6 +2304,7 @@ lib/firefox/components/ChromeNotifications.js
 lib/firefox/components/ColorAnalyzer.js
 lib/firefox/components/ConsoleAPIStorage.js
 lib/firefox/components/ContactManager.js
+lib/firefox/components/ContentProcessSingleton.js
 lib/firefox/components/DataReportingService.js
 lib/firefox/components/DataStoreImpl.js
 lib/firefox/components/DownloadLegacy.js
@@ -2314,6 +2315,7 @@ lib/firefox/components/FormHistoryStartup.js
 lib/firefox/components/InterAppCommService.js
 lib/firefox/components/InterAppConnection.js
 lib/firefox/components/InterAppMessagePort.js
+lib/firefox/components/MainProcessSingleton.js
 lib/firefox/components/MozKeyboard.js
 lib/firefox/components/NetworkGeolocationProvider.js
 lib/firefox/components/NotificationStorage.js
