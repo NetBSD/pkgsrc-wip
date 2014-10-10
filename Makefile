@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5937 2014/10/09 16:03:58 tnn2 Exp $
+# $Id: Makefile,v 1.5938 2014/10/10 20:41:51 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -760,6 +760,7 @@ SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	ghostscript-gpl
 SUBDIR+=	giggle
 SUBDIR+=	gimmie
+SUBDIR+=	gimp-dds
 SUBDIR+=	gin
 SUBDIR+=	girara
 SUBDIR+=	git
