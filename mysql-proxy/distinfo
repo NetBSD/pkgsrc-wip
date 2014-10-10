@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/02/13 09:15:44 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2014/10/10 14:06:04 fhajny Exp $
 
-SHA1 (mysql-proxy-0.8.4.tar.gz) = 626cea599306f6cfb3a632a024ed034df08cf1b9
-RMD160 (mysql-proxy-0.8.4.tar.gz) = 02388f19c41cc0023373a48dbc5543b3f19b822e
-Size (mysql-proxy-0.8.4.tar.gz) = 952125 bytes
+SHA1 (mysql-proxy-0.8.5.tar.gz) = e8599ef16bc7d16daffa654368e02ba73182bfbc
+RMD160 (mysql-proxy-0.8.5.tar.gz) = 23ffdff778327dfcdd33bd243500413b17c8f690
+Size (mysql-proxy-0.8.5.tar.gz) = 957742 bytes
 SHA1 (patch-CMakeLists.txt) = 33e95c24fc40af1438d6f2acb49da592beb5c844
 SHA1 (patch-config.h.cmake) = 96fc34ee0b8d22df80faf5eb05282ec699371750

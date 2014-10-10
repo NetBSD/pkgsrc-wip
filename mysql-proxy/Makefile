@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/02/13 09:15:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/10 14:06:04 fhajny Exp $
 #
 
-DISTNAME=	mysql-proxy-0.8.4
+DISTNAME=	mysql-proxy-0.8.5
 PKGNAME=	${DISTNAME:S/mysql/mysql${_MYSQL_VERSION}/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Proxy/}
