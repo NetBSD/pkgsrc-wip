@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/10 14:03:21 thomasklausner Exp $
 #
 
 DISTNAME=	alt-ergo-0.93
@@ -18,5 +18,5 @@ USE_LANGUAGES=	c
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../wip/ocamlgraph/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
-.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

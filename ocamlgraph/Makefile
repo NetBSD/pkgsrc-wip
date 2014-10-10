@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:45 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/10 14:03:21 thomasklausner Exp $
 #
 
 DISTNAME=	ocamlgraph-1.7
@@ -27,5 +27,5 @@ post-install:
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
-.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
