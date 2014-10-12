@@ -1,4 +1,6 @@
-(pkgsrc) Update 3.3.0 (2010-09-15) to 3.7.5
+(pkgsrc) Update GNU Radio 3.3.0 (2010-09-15) to 3.7.5
+  See the thread for modularity issues etc:
+  http://mail-index.netbsd.org/pkgsrc-users/2014/09/07/msg020346.html
 
 (upstream)
 Release of 3.7.5  2014-09-05  http://gnuradio.org/redmine/news/43
@@ -6,11 +8,15 @@ Release of 3.7.5  2014-09-05  http://gnuradio.org/redmine/news/43
   http://gnuradio.org/redmine/projects/gnuradio/wiki/ChangeLogV3_7_5
 Release of 3.7.4  2014-07-15  http://gnuradio.org/redmine/news/38
 Release of 3.7.3  2014-03-16  http://gnuradio.org/redmine/news/35
+
 Release of 3.7.2  2013-11-10  http://gnuradio.org/redmine/news/30
 Release of 3.7.1  2013-08-29  http://gnuradio.org/redmine/news/26
 Release of 3.7.0  2013-07-03  http://gnuradio.org/redmine/news/25
+
 Release of 3.6.0  2012-04-21  http://gnuradio.org/redmine/news/13
 Release of 3.5.0  2011-12-08  http://gnuradio.org/redmine/news/6
 Release of 3.4.0  2011-10-09  http://gnuradio.org/redmine/news/2
+
+Release of 3.3.0  2010-06-03  ftp://ftp.gnu.org/gnu/gnuradio/
 Release of 3.3.0-rc0
                   2010-05-13  http://gnuradio.org/redmine/news/1
