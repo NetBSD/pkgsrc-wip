@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/06 13:53:20 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/12 12:13:25 makoto Exp $
 
 DISTNAME=		hackrf-2014.08.1
 CATEGORIES=		ham
@@ -17,6 +17,7 @@ USE_CMAKE=		yes
 
 # Suppress warning for developer
 CMAKE_ARGS+=		-Wno-dev
+CMAKE_ARGS+=		-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 
 CONFIGURE_DIRS=		host
 AUTO_MKDIRS=		yes
