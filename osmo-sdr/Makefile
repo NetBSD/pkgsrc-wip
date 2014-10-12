@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/06 13:17:55 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/12 12:12:39 makoto Exp $
 
 DISTNAME=		osmo-sdr-0.1
 CATEGORIES=		ham
@@ -10,7 +10,7 @@ COMMENT=		Small form-factor inexpensive SDR (Software Defined Radio)
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS=		cmake tar
+USE_TOOLS=		cmake perl pkg-config tar
 USE_CMAKE=		yes
 
 #WRKSRC=		${WRKDIR}/osmo-sdr-0.1
