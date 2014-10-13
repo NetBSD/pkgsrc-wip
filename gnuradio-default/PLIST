@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/07 06:30:31 makoto Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/10/13 00:46:25 makoto Exp $
 bin/gnuradio-companion
 bin/gnuradio-config-info
 bin/gr_constellation_plot
@@ -14640,5 +14640,3 @@ share/gnuradio/modtool/gr-newmod/python/build_utils.py
 share/gnuradio/modtool/gr-newmod/python/build_utils_codes.py
 share/gnuradio/modtool/gr-newmod/swig/CMakeLists.txt
 share/gnuradio/modtool/gr-newmod/swig/howto_swig.i
-@pkgdir etc/gnuradio/conf.d
-@pkgdir include/volk/asm/neon

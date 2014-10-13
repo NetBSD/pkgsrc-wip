@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/18 00:43:30 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/13 00:46:25 makoto Exp $
 include/gnuradio/channels/api.h
 include/gnuradio/channels/channel_model.h
 include/gnuradio/channels/channel_model2.h
@@ -68,32 +68,3 @@ share/gnuradio/grc/blocks/channels_phase_noise_gen.xml
 share/gnuradio/grc/blocks/channels_quantizer.xml
 share/gnuradio/grc/blocks/channels_selective_fading_model.xml
 share/gnuradio/grc/blocks/channels_sro_model.xml
-@pkgdir share/gnuradio/examples/volk_benchmark
-@pkgdir share/gnuradio/examples/tags
-@pkgdir share/gnuradio/examples/network
-@pkgdir share/gnuradio/examples/mp-sched
-@pkgdir share/gnuradio/examples/metadata
-@pkgdir share/gnuradio/examples/filter
-@pkgdir share/gnuradio/examples/audio
-@pkgdir share/gnuradio/examples/analog
-@pkgdir lib/python2.7/site-packages/volk_modtool
-@pkgdir lib/python2.7/site-packages/pmt
-@pkgdir lib/python2.7/site-packages/gnuradio/gru
-@pkgdir lib/python2.7/site-packages/gnuradio/gr
-@pkgdir lib/python2.7/site-packages/gnuradio/filter
-@pkgdir lib/python2.7/site-packages/gnuradio/fft
-@pkgdir lib/python2.7/site-packages/gnuradio/blocks
-@pkgdir lib/python2.7/site-packages/gnuradio/audio
-@pkgdir lib/python2.7/site-packages/gnuradio/analog
-@pkgdir lib/cmake/volk
-@pkgdir lib/cmake/gnuradio
-@pkgdir include/volk/asm/neon
-@pkgdir include/pmt
-@pkgdir include/gnuradio/thread
-@pkgdir include/gnuradio/messages
-@pkgdir include/gnuradio/filter
-@pkgdir include/gnuradio/fft
-@pkgdir include/gnuradio/blocks
-@pkgdir include/gnuradio/audio
-@pkgdir include/gnuradio/analog
-@pkgdir etc/gnuradio/conf.d

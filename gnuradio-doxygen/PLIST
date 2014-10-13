@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/09/25 23:49:59 makoto Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/10/13 00:46:25 makoto Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -11240,34 +11240,3 @@ share/doc/gnuradio-${PKGVERSION}/xml/xor__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/xor__ss_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/zeromq_8dox.xml
-@pkgdir etc/gnuradio/conf.d
-@pkgdir include/gnuradio/analog
-@pkgdir include/gnuradio/audio
-@pkgdir include/gnuradio/blocks
-@pkgdir include/gnuradio/fft
-@pkgdir include/gnuradio/filter
-@pkgdir include/gnuradio/messages
-@pkgdir include/gnuradio/swig
-@pkgdir include/gnuradio/thread
-@pkgdir include/pmt
-@pkgdir include/volk/asm/neon
-@pkgdir lib/cmake/gnuradio
-@pkgdir lib/cmake/volk
-@pkgdir ${PYSITELIB}/gnuradio/analog
-@pkgdir ${PYSITELIB}/gnuradio/audio
-@pkgdir ${PYSITELIB}/gnuradio/blocks
-@pkgdir ${PYSITELIB}/gnuradio/fft
-@pkgdir ${PYSITELIB}/gnuradio/filter
-@pkgdir ${PYSITELIB}/gnuradio/gr
-@pkgdir ${PYSITELIB}/gnuradio/gru
-@pkgdir ${PYSITELIB}/pmt
-@pkgdir ${PYSITELIB}/volk_modtool
-@pkgdir share/gnuradio/examples/analog
-@pkgdir share/gnuradio/examples/audio
-@pkgdir share/gnuradio/examples/filter
-@pkgdir share/gnuradio/examples/metadata
-@pkgdir share/gnuradio/examples/mp-sched
-@pkgdir share/gnuradio/examples/network
-@pkgdir share/gnuradio/examples/tags
-@pkgdir share/gnuradio/examples/volk_benchmark
-@pkgdir share/gnuradio/grc/blocks
