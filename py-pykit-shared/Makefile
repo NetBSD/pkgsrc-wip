@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/11 21:08:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/13 15:23:55 jonperkin Exp $
 
 DISTNAME=	pykit-shared-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Collection of modules shared amongst my other projects
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-configobj as of 4.7.2
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
