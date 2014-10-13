@@ -1,4 +1,4 @@
-$NetBSD: patch-src_build-system_configure,v 1.2 2014/10/13 15:10:44 fhajny Exp $
+$NetBSD: patch-src_build-system_configure,v 1.3 2014/10/13 17:11:52 fhajny Exp $
 
 Fix --infodir/--mandir support. Add fake --with-libiconv-prefix and
 --with-libintl-prefix options.
@@ -9,7 +9,7 @@ Change logic to disable all 3rd party support and enable one by one.
        | --with-universal=* | --with-tcheck=* \
        | --cache-file=* | --build=* | --host=* | --prefix=* | --exec-prefix=* \
        | --libdir=* | --bindir=* | --includedir=* | --srcdir=* \
-+      | --infodir=* | --mandir=* | --with-libiconv-prefix=* | --with-libintl-prefix= \
++      | --infodir=* | --mandir=* | --with-libiconv-prefix=* | --with-libintl-prefix=* \
        | [A-Z]*=* \
        | --with-z=* | --with-bz2=* | --with-lzo=* \
        | --with-pcre=* | --with-ncbi-c=* | --with-sss=* \
