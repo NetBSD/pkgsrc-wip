@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/02/04 11:19:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/13 15:26:12 jonperkin Exp $
 #
 
 DISTNAME=	phantomjs-1.9.7-source
@@ -23,6 +23,7 @@ CHECK_PORTABILITY_SKIP+=src/breakpad/src/third_party/protobuf/protobuf/post_proc
 
 NOT_FOR_PLATFORM+=	SunOS-*-x86_64
 
+CONFIGURE_ARGS+=	--qt-config -no-rpath
 CONFIGURE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH}
 
 CFLAGS.SunOS+=	-D_XPG6
