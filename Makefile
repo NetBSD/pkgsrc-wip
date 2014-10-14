@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5941 2014/10/14 16:21:21 thomasklausner Exp $
+# $Id: Makefile,v 1.5942 2014/10/14 16:43:16 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -639,10 +639,8 @@ SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
-SUBDIR+=	firefox-bin
 SUBDIR+=	firefox-hg
 SUBDIR+=	firefox-wrapper
-SUBDIR+=	firefox3-bin
 SUBDIR+=	firehose
 SUBDIR+=	flam3-svn
 SUBDIR+=	flasm
