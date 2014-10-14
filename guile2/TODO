@@ -23,4 +23,17 @@ Backtrace is:
 #11 0x000000000040105d in main ()
 (gdb)
 
+Worked around by using --disable-shared, now I see:
+
+gmake[2]: Entering directory '/disk/3/archive/obj/wip/guile2/work/guile-2.0.11/module'
+  GUILEC ice-9/eval.go
+Backtrace:
+In unknown file:
+   ?: 3 [apply-smob/1 #<boot-closure 876ba0 (_ _ _)> #t ...]
+   ?: 2 [apply-smob/1 #<catch-closure 10242a0>]
+   ?: 1 [primitive-eval ((@ # %) (begin # # #))]
+   ?: 0 [scm-error misc-error #f "~A ~S" ("invalid target" "x86_64--netbsd") #f]
+
+ERROR: Makefile:2167: recipe for target 'ice-9/eval.go' failed
+
 -- wiz 20140930

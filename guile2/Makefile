@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/09/30 10:36:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2014/10/14 16:00:40 thomasklausner Exp $
 
 DISTNAME=	guile-2.0.11
 CATEGORIES=	lang
@@ -15,6 +15,7 @@ USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config
 # not until boehm-gc is threaded
 CONFIGURE_ARGS+=	--without-threads
+CONFIGURE_ARGS+=	--disable-shared
 
 PKGCONFIG_OVERRIDE+=	meta/guile-2.0.pc.in
 
