@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/10/10 13:12:21 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/10/14 16:42:08 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -22,6 +22,7 @@ lib/firefox/browser/chrome/browser/content/browser/aboutDialog.xul
 lib/firefox/browser/chrome/browser/content/browser/aboutNetError.xhtml
 lib/firefox/browser/chrome/browser/content/browser/aboutPrivateBrowsing.css
 lib/firefox/browser/chrome/browser/content/browser/aboutPrivateBrowsing.xhtml
+lib/firefox/browser/chrome/browser/content/browser/aboutProviderDirectory.xhtml
 lib/firefox/browser/chrome/browser/content/browser/aboutRobots-icon.png
 lib/firefox/browser/chrome/browser/content/browser/aboutRobots-widget-left.png
 lib/firefox/browser/chrome/browser/content/browser/aboutRobots.xhtml
@@ -283,6 +284,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/css/reset.css
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/audio-call-avatar.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/audio-inverse-14x14.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/audio-inverse-14x14@2x.png
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/beta-ribbon.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/dropdown-inverse.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/dropdown-inverse@2x.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/facemute-14x14.png
@@ -312,6 +314,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackApiCli
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/models.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/otSdkDriver.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/roomListStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/utils.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/validate.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/views.js
@@ -319,7 +322,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/websocket.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/backbone-1.1.2.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/jquery-2.1.0.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/lodash-2.4.1.js
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/react-0.11.1.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/react-0.11.2.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/Firefox-Long.ogg
 lib/firefox/browser/chrome/browser/content/browser/microsoft-translator-attribution.png
 lib/firefox/browser/chrome/browser/content/browser/migration/migration.js
@@ -460,6 +463,7 @@ lib/firefox/browser/chrome/browser/content/browser/web-panels.xul
 lib/firefox/browser/chrome/browser/content/browser/webrtcIndicator.js
 lib/firefox/browser/chrome/browser/content/browser/webrtcIndicator.xul
 lib/firefox/browser/chrome/browser/default_permissions
+lib/firefox/browser/chrome/browser/skin/classic/browser/aboutProviderDirectory.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/Geolocation-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/Geolocation-64.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/Info.png
@@ -507,6 +511,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/customizableui/whimsy-bw
 lib/firefox/browser/chrome/browser/skin/classic/browser/customizableui/whimsy-bw@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/customizableui/whimsy.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/customizableui/whimsy@2x.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devedition.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/alerticon-warning.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/alerticon-warning@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/app-manager/add.svg
@@ -2522,6 +2527,7 @@ lib/firefox/modules/FxAccountsProfileClient.jsm
 lib/firefox/modules/GMPInstallManager.jsm
 lib/firefox/modules/Geometry.jsm
 lib/firefox/modules/HealthReport.jsm
+lib/firefox/modules/History.jsm
 lib/firefox/modules/Http.jsm
 lib/firefox/modules/ISO8601DateUtils.jsm
 lib/firefox/modules/IndexedDBHelper.jsm
