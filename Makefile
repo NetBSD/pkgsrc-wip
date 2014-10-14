@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5939 2014/10/10 21:54:50 nros Exp $
+# $Id: Makefile,v 1.5940 2014/10/14 06:13:31 makoto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -849,6 +849,7 @@ SUBDIR+=	gplbasic
 SUBDIR+=	gps
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
+SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	grandr
 SUBDIR+=	granule
@@ -1456,7 +1457,7 @@ SUBDIR+=	liblo
 SUBDIR+=	liblogging
 SUBDIR+=	liblognorm
 SUBDIR+=	liblognorm1
-SUBDIR+=	libmirisdr
+SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmpg123
 SUBDIR+=	libmusclecard
 SUBDIR+=	libncl
@@ -1899,6 +1900,7 @@ SUBDIR+=	org-caldav-git
 SUBDIR+=	orion
 SUBDIR+=	oslc
 SUBDIR+=	osmo
+SUBDIR+=	osmo-sdr-git
 SUBDIR+=	osmose
 SUBDIR+=	osxinfo
 SUBDIR+=	outguess
@@ -3176,7 +3178,7 @@ SUBDIR+=	rsyslog8-rabbitmq
 SUBDIR+=	rsyslog8-snmp
 SUBDIR+=	rte
 SUBDIR+=	rthread
-SUBDIR+=	rtl-sdr
+SUBDIR+=	rtl-sdr-git
 SUBDIR+=	rtpbreak
 SUBDIR+=	rtspdump
 SUBDIR+=	rubinius
