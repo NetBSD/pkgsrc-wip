@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2014/10/06 12:54:15 makoto Exp $
-
-SHA1 (libmirisdr-2013-06-08/libmirisdr-master.tar.gz) = 0f35bb91bc7976aa2feeeddd1a4d974a5963e324
-RMD160 (libmirisdr-2013-06-08/libmirisdr-master.tar.gz) = 299ded85f7bec8cd500cd7936bcba22c3782a1eb
-Size (libmirisdr-2013-06-08/libmirisdr-master.tar.gz) = 45818 bytes

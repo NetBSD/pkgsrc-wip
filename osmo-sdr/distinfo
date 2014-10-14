@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/10/06 13:17:55 makoto Exp $
-
-SHA1 (osmo-sdr-0.1.tar.gz) = 5b37357dc9bab99f4f829ccd1cfab1e562c20ace
-RMD160 (osmo-sdr-0.1.tar.gz) = c344e1d592cdc413a6c3952bb6574821daee2a76
-Size (osmo-sdr-0.1.tar.gz) = 29823289 bytes
