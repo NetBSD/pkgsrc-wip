@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/14 16:00:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/10/14 18:44:43 thomasklausner Exp $
 
 DISTNAME=	guile-2.0.11
 CATEGORIES=	lang
@@ -9,15 +9,24 @@ HOMEPAGE=	ftp://ftp.gnu.org/gnu/guile/
 COMMENT=	Official extension language for the GNU operating system
 LICENSE=	gnu-lgpl-v3
 
-GNU_CONFIGURE=	yes
-# On NetBSD 5, -C is not recognized by /usr/bin/make
-USE_TOOLS+=	gmake
-USE_TOOLS+=	pkg-config
+# guile does not like the --build and --host triplets on NetBSD
+HAS_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--disable-shared
 # not until boehm-gc is threaded
 CONFIGURE_ARGS+=	--without-threads
-CONFIGURE_ARGS+=	--disable-shared
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
+
+INFO_FILES=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	meta/guile-2.0.pc.in
+TEST_TARGET=		check
+
+# XXX: less tests would fail if we made libunistring use GNU iconv too
+#USE_GNU_ICONV=		yes
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
