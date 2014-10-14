@@ -69,6 +69,7 @@ Suggested package updates
 	o libgme-0.6.0
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
+	o libressl-2.1.0
 	o lives-2.2.4
 	o llvm-3.4.2
 	o lucene-4.5.0
@@ -107,7 +108,7 @@ Suggested package updates
 	o retroarch-0.9.8
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o rygel-0.24.0
+	o rygel-0.24.1
 	o samhain-3.1.1
 	o scantailor-0.9.11.1
 	o sflphoned-0.7.2
