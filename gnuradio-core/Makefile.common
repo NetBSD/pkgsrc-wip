@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/10/04 05:28:53 makoto Exp $
+# $NetBSD: Makefile.common,v 1.6 2014/10/14 14:40:37 makoto Exp $
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -108,7 +108,6 @@ pre-configure:
 do-install:
 	(cd ${WRKSRC}/build; ${GMAKE} DESTDIR=${DESTDIR} install)
 
-.include	"../../audio/alsa-lib/buildlink3.mk"
 .include	"../../audio/gsm/buildlink3.mk"
 .include	"../../audio/jack/buildlink3.mk"
 .include	"../../audio/portaudio-devel/buildlink3.mk"
@@ -121,3 +120,4 @@ do-install:
 
 .include	"../../lang/python/application.mk"
 .include	"../../math/fftwf/buildlink3.mk"
+.include	"../../mk/pthread.builtin.mk"
