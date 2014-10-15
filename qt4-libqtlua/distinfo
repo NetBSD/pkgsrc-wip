@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2014/10/15 17:53:35 nros Exp $
+
+SHA1 (libqtlua-2.0.tar.gz) = 2553c8c30c2154143fe47278e91d3d26719b06e2
+RMD160 (libqtlua-2.0.tar.gz) = 8176172897c2c74ed6510158443f6383eb85a220
+Size (libqtlua-2.0.tar.gz) = 1084803 bytes
+SHA1 (patch-CMakeLists.txt) = 4d054bf8f72621146a5154206de47587ad96ed75
+SHA1 (patch-src_CMakeLists.txt) = 5d293a1fa53bcb46bb1309bd0282ad77452bd6ac
+SHA1 (patch-tools_qtlua_CMakeLists.txt) = 5620632d05caa3264c93d391111607e5fb90ad60
+SHA1 (patch-tools_uic_CMakeLists.txt) = e68ba05a87296efa58a390ab1bc4ea9399518ad0
