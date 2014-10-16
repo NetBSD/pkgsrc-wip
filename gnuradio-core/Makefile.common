@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2014/10/14 14:40:37 makoto Exp $
+# $NetBSD: Makefile.common,v 1.7 2014/10/16 13:40:33 makoto Exp $
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -98,6 +98,14 @@ CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 CMAKE_ARG_PATH=	../
 
 .include "options.mk"
+
+# disable/enable ALSA, see also patches/patch-gr-audio_lib_CMakeLists.txt
+SUBST_CLASSES+=		alsa
+SUBST_MESSAGE.alsa=	Arrange the patched line depepending on alsa is in PKG_OPTIONS or not
+SUBST_FILES.alsa+=	gr-audio/lib/CMakeLists.txt
+## $ALSA_ENABLED is '#' or ''
+SUBST_SED.alsa=		-e 's,@@ALSA@@,${ALSA_ENABLED},'
+SUBST_STAGE.alsa=	post-patch
 
 # REPLACE_PYTHON is some 600 files
 .include	"../../wip/gnuradio-core/files/REPLACE_PYTHON"
