@@ -1,0 +1,7 @@
+HOPE is a specialized method-at-a-time JIT compiler written in Python for
+translating Python source code into C++ and compiles this at runtime
+In contrast to other existing JIT compliers, which are designed for general
+purpose, we have focused our development of the subset of the Python language
+that is most relevant for astrophysical calculations.
+By concentrating on this subset, HOPE is able to achieve the highest possible
+performance
