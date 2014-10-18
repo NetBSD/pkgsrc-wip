@@ -1,0 +1,5 @@
+Ncpol2sdpa is a set of scripts to convert a polynomial optimization problem
+of either commutative or noncommutative variables to a sparse semidefinite
+programming (SDP) problem that can be processed by the SDPA family of solvers
+The optimization problem can be unconstrained or constrained by equalities
+and inequalities.
