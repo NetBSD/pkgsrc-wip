@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/07/25 08:35:08 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/10/18 21:15:04 jihbed Exp $
 bin/spyder
 bin/spyder_win_post_install.py
 ${PYSITELIB}/spyderlib/__init__.py
@@ -376,9 +376,6 @@ ${PYSITELIB}/spyderlib/ipythonconfig.pyc
 ${PYSITELIB}/spyderlib/ipythonconfig.pyo
 ${PYSITELIB}/spyderlib/locale/es/LC_MESSAGES/spyderlib.mo
 ${PYSITELIB}/spyderlib/locale/fr/LC_MESSAGES/spyderlib.mo
-${PYSITELIB}/spyderlib/mpl_patch.py
-${PYSITELIB}/spyderlib/mpl_patch.pyc
-${PYSITELIB}/spyderlib/mpl_patch.pyo
 ${PYSITELIB}/spyderlib/otherplugins.py
 ${PYSITELIB}/spyderlib/otherplugins.pyc
 ${PYSITELIB}/spyderlib/otherplugins.pyo
@@ -517,7 +514,9 @@ ${PYSITELIB}/spyderlib/utils/inspector/__init__.pyo
 ${PYSITELIB}/spyderlib/utils/inspector/conf.py
 ${PYSITELIB}/spyderlib/utils/inspector/conf.pyc
 ${PYSITELIB}/spyderlib/utils/inspector/conf.pyo
+${PYSITELIB}/spyderlib/utils/inspector/js/collapse_sections.js
 ${PYSITELIB}/spyderlib/utils/inspector/js/copy_button.js
+${PYSITELIB}/spyderlib/utils/inspector/js/fix_image_paths.js
 ${PYSITELIB}/spyderlib/utils/inspector/js/jquery.js
 ${PYSITELIB}/spyderlib/utils/inspector/js/math_config.js
 ${PYSITELIB}/spyderlib/utils/inspector/js/mathjax/MathJax.js
@@ -722,15 +721,25 @@ ${PYSITELIB}/spyderlib/utils/inspector/js/mathjax/jax/output/SVG/fonts/TeX/Typew
 ${PYSITELIB}/spyderlib/utils/inspector/js/mathjax/jax/output/SVG/fonts/TeX/fontdata-extra.js
 ${PYSITELIB}/spyderlib/utils/inspector/js/mathjax/jax/output/SVG/fonts/TeX/fontdata.js
 ${PYSITELIB}/spyderlib/utils/inspector/js/mathjax/jax/output/SVG/jax.js
+${PYSITELIB}/spyderlib/utils/inspector/js/move_outline.js
 ${PYSITELIB}/spyderlib/utils/inspector/js/utils.js
 ${PYSITELIB}/spyderlib/utils/inspector/sphinxify.py
 ${PYSITELIB}/spyderlib/utils/inspector/sphinxify.pyc
 ${PYSITELIB}/spyderlib/utils/inspector/sphinxify.pyo
 ${PYSITELIB}/spyderlib/utils/inspector/static/css/default.css
 ${PYSITELIB}/spyderlib/utils/inspector/static/css/pygments.css
+${PYSITELIB}/spyderlib/utils/inspector/static/images/collapse_expand.png
+${PYSITELIB}/spyderlib/utils/inspector/static/images/debug-continue.png
+${PYSITELIB}/spyderlib/utils/inspector/static/images/debug-step-in.png
+${PYSITELIB}/spyderlib/utils/inspector/static/images/debug-step-out.png
+${PYSITELIB}/spyderlib/utils/inspector/static/images/debug-step-over.png
+${PYSITELIB}/spyderlib/utils/inspector/static/images/spyder-hello-docstring.png
+${PYSITELIB}/spyderlib/utils/inspector/static/images/spyder-nice-docstring-rendering.png
+${PYSITELIB}/spyderlib/utils/inspector/static/images/spyder-sympy-example.png
 ${PYSITELIB}/spyderlib/utils/inspector/templates/layout.html
 ${PYSITELIB}/spyderlib/utils/inspector/templates/usage.html
 ${PYSITELIB}/spyderlib/utils/inspector/templates/warning.html
+${PYSITELIB}/spyderlib/utils/inspector/tutorial.rst
 ${PYSITELIB}/spyderlib/utils/introspection/__init__.py
 ${PYSITELIB}/spyderlib/utils/introspection/__init__.pyc
 ${PYSITELIB}/spyderlib/utils/introspection/__init__.pyo
@@ -788,6 +797,9 @@ ${PYSITELIB}/spyderlib/widgets/colors.pyo
 ${PYSITELIB}/spyderlib/widgets/comboboxes.py
 ${PYSITELIB}/spyderlib/widgets/comboboxes.pyc
 ${PYSITELIB}/spyderlib/widgets/comboboxes.pyo
+${PYSITELIB}/spyderlib/widgets/dataframeeditor.py
+${PYSITELIB}/spyderlib/widgets/dataframeeditor.pyc
+${PYSITELIB}/spyderlib/widgets/dataframeeditor.pyo
 ${PYSITELIB}/spyderlib/widgets/dependencies.py
 ${PYSITELIB}/spyderlib/widgets/dependencies.pyc
 ${PYSITELIB}/spyderlib/widgets/dependencies.pyo
@@ -836,9 +848,6 @@ ${PYSITELIB}/spyderlib/widgets/externalshell/start_ipython_kernel.pyo
 ${PYSITELIB}/spyderlib/widgets/externalshell/systemshell.py
 ${PYSITELIB}/spyderlib/widgets/externalshell/systemshell.pyc
 ${PYSITELIB}/spyderlib/widgets/externalshell/systemshell.pyo
-${PYSITELIB}/spyderlib/widgets/figureoptions.py
-${PYSITELIB}/spyderlib/widgets/figureoptions.pyc
-${PYSITELIB}/spyderlib/widgets/figureoptions.pyo
 ${PYSITELIB}/spyderlib/widgets/findinfiles.py
 ${PYSITELIB}/spyderlib/widgets/findinfiles.pyc
 ${PYSITELIB}/spyderlib/widgets/findinfiles.pyo

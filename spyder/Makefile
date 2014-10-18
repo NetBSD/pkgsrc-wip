@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/07/25 08:35:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.16 2014/10/18 21:15:04 jihbed Exp $
 
-DISTNAME=	spyder-2.3.0
-PKGREVISION=	2
-CATEGORIES=	devel python
+DISTNAME=	spyder-2.3.1
+CATEGORIES=	wip
 MASTER_SITES=	https://bitbucket.org/spyder-ide/spyderlib/downloads/
 EXTRACT_SUFX=	.zip
 
@@ -24,7 +23,8 @@ post-extract:
 	${CP} ${FILESDIR}/spyder.desktop ${WRKSRC}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/spyder.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/spyder.desktop  \
+		${DESTDIR}${PREFIX}/share/applications
 
 .include "options.mk"
 
