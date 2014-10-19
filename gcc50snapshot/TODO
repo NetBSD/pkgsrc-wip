@@ -1,0 +1,22 @@
+TODO
+====
+
+1) On NetBSD a working cabsl function must be present in libm to build gfortran.
+This has been added to -current on 2014/10/10 and to NetBSD7 on 2014/10/13. For
+older systems the cabsl.c from NetBSD7 could be backported in gcc50snapshot, but
+in my opinion the broken cabsl in NetBSD6 should be replaced (it is defined in
+complex.h but missing from libm).
+
+2) This package and the lang/gcc4x need a cleanup or a complete new start. I
+think that SUBST_VARS could handle the platform dependencies in a much cleaner
+ way.
+
+3) There are many undocumented hacks in the Makefile and patches. And yes, I
+am guilty ;-) 
+
+4) I have not tested building and bmake test on systems besides NetBSD current.
+ 
+
+Have fun,
+
+Kai-Uwe
