@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/17 13:45:13 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2014/10/19 17:42:27 nros Exp $
 
-SHA1 (glfw-2.7.tar.bz2) = 3138f6f760ea5837a177c7d3a03023e06d7ca984
-RMD160 (glfw-2.7.tar.bz2) = cb68685b7b72ca76d761fb123179ed676abad7d0
-Size (glfw-2.7.tar.bz2) = 899607 bytes
-SHA1 (patch-aa) = d80ded4c9ddeab26c129b0a12eeaad3b6caddef3
+SHA1 (glfw-2.7.9.tar.bz2) = 50ffcbfa1fb47d23aa6ad1245da329bd21bbaeca
+RMD160 (glfw-2.7.9.tar.bz2) = 13e54430bb6ddeb7fdc87139bc6b4d353df8eec7
+Size (glfw-2.7.9.tar.bz2) = 946924 bytes
+SHA1 (patch-compile.sh) = 2f80796c3945ca0734d9f370271014b4e9391bfb
+SHA1 (patch-lib_x11_Makefile.x11.in) = b687efed6d56f36de4513733b7bf435543d342e7

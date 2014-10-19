@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/17 13:45:13 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/10/19 17:42:27 nros Exp $
 include/GL/glfw.h
 lib/libglfw.a
+lib/libglfw.so
 lib/pkgconfig/libglfw.pc
