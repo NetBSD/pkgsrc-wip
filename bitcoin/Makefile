@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/20 09:49:29 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/20 11:15:57 noud4 Exp $
 
 DISTNAME=	bitcoin-0.8.6-linux
 PKGREVISION=	2
@@ -36,7 +36,7 @@ CONF_FILES_PERMS=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf ${ROOT_US
 
 SUBST_CLASSES+= 	pkg
 SUBST_STAGE.pkg= 	post-patch
-SUBST_FILES.pkg+=	src/contrib/debian/bitcoin-qt.desktop
+SUBST_FILES.pkg+=	contrib/debian/bitcoin-qt.desktop
 SUBST_SED.pkg=		-e "s|/usr/|${PREFIX}/|g"
 SUBST_MESSAGE.pkg=	"Fixing dirs."
 
