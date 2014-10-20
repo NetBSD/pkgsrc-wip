@@ -4,3 +4,4 @@
 * If both Qt4 and Qt5 are installed, package will default to Qt4;
 * Check documentation for other package options;
 * Fix configure/build/install phases for latest version;
+* Fix SUBST_CLASS
