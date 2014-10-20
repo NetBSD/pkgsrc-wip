@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/05/09 07:38:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/20 13:09:05 thomasklausner Exp $
 
 DISTNAME=	dir2ogg-0.11.8
 CATEGORIES=	audio
@@ -14,7 +14,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	${WRKSRC}/dir2ogg
 NO_BUILD=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mutagen
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.11.8
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dir2ogg ${DESTDIR}${PREFIX}/bin
