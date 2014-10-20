@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2012/11/04 16:14:24 othyro Exp $
-
-SHA1 (quodlibet-2.4.1.tar.gz) = 4db812f0b447805a27ae8f25517623205712b75e
-RMD160 (quodlibet-2.4.1.tar.gz) = 9c8b9d29827d036930abd85e7b069df420cfba55
-Size (quodlibet-2.4.1.tar.gz) = 1115254 bytes
-SHA1 (patch-aa) = da2b3e11c02444a73667c987453fd75d0058d4f3
