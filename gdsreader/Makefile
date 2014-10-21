@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/21 13:08:47 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/21 13:22:00 makoto Exp $
 #
 
 DISTNAME=	GDSreader.0.3.2
@@ -24,7 +24,7 @@ do-install:
 post-install:
 	for i in			\
 		README			\
-		README.povery		\
+		README.povray		\
 		layers.config		\
 		layers.config.5AM.4ML	\
 		layers.config.7HP.5ML	\

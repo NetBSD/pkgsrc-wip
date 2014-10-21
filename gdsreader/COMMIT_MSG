@@ -1,0 +1,25 @@
+(pkgsrc)
+   - Convert MASTER_SITES to distcache of FreeBSD
+(upstream)
+   - Update GDSreader 0.3 to 0.3.2
+-------------------------------
+New feature for gdsreader-0.3.2 
+
+  Generation of POVRAY scene files.
+
+Quick Overview:
+
+GDS2, (or "Calma"), files contain 2D shape data, and each shape has
+a specific layer number, (gdsno), and a datatype number.  To  make
+any sort of 3D model, these two integer numbers must be  "mapped"
+to a corresponding thickness and depth parameter, and  also to a
+color specification.   This  is handled by the user-created
+"layers.config" file.  A  layers.config file needs to be made for
+each technology you wish to convert.  A process which differs only
+in the number of metal layers used is considered a different
+technology.  The layers.config file is also used in the generation
+of postscript and HPGL output, so several of the parameters in 
+a layers.config file do not necessarily apply to POVRAY output.
+
+.. (more to read) share/examples/gdsreader/README.povray
+
