@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2014/09/05 10:39:25 makoto Exp $
-# $Id: Makefile,v 1.34 2014/09/05 10:39:25 makoto Exp $
+# $NetBSD: Makefile,v 1.35 2014/10/21 15:42:04 makoto Exp $
+# $Id: Makefile,v 1.35 2014/10/21 15:42:04 makoto Exp $
 
-DISTNAME=	fldigi-3.22.0CM
+DISTNAME=	fldigi-3.22.01
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
-MASTER_SITES=	http://www.w1hkj.com/alpha/fldigi/v3.22/
+#ASTER_SITES=	http://www.w1hkj.com/alpha/fldigi/v3.22/
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	makoto@ki.nu
