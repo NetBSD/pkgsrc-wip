@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2014/10/21 21:57:35 khorben Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/21 22:02:24 khorben Exp $
 #
 
 DISTNAME=	Phone-0.4.0
 PKGNAME=	deforaos-phone-0.4.0
+PKGREVISION=	1
 CATEGORIES=	comms net
 MASTER_SITES=	http://www.defora.org/os/download/download/4334/
 
@@ -35,7 +36,7 @@ post-install:
 .endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/sofia-sip/buildlink3.mk"
 .include "../../wip/deforaos-locker/buildlink3.mk"
