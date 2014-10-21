@@ -1,17 +1,22 @@
-# $NetBSD: Makefile,v 1.1 2014/06/10 06:10:25 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/21 06:28:09 jgoamakf Exp $
 
-PKGNAME=	ocaml-${DISTNAME}
-DISTNAME=	fieldslib-109.19.00
+DISTNAME=	fieldslib-${VERS}
+VERS=		109.19.00
 CATEGORIES=	devel
-MASTER_SITES=   https://ocaml.janestreet.com/ocaml-core/109.19.00/individual/
+MASTER_SITES=	https://github.com/janestreet/fieldslib/archive/
+DISTFILES=	${VERS}${EXTRACT_SUFX}
+DIST_SUBDIR=	ocaml-fieldslib
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/fieldslib/
 COMMENT=	Define first class values representing record fields
 LICENSE=	apache-2.0
 
-DEPENDS+=	ocaml-type_conv-[0-9]*:../../wip/ocaml-type_conv
+WRKSRC=         ${WRKDIR}/fieldslib-${VERS}
+USE_TOOLS+=     gmake
 
-.include "../../devel/ocaml-findlib/buildlink3.mk"
-.include "../../wip/mk/ocaml-oasis.mk"
+OCAML_USE_OASIS=      yes
+
+.include "../../devel/ocaml-type_conv/buildlink3.mk"
+.include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
