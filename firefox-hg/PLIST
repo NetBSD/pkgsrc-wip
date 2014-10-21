@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/10/15 20:58:12 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.11 2014/10/21 21:54:37 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -258,6 +258,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/js/conversation.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/conversationViews.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/otconfig.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/panel.js
+lib/firefox/browser/chrome/browser/content/browser/loop/js/roomViews.js
 lib/firefox/browser/chrome/browser/content/browser/loop/libs/l10n.js
 lib/firefox/browser/chrome/browser/content/browser/loop/libs/sdk.js
 lib/firefox/browser/chrome/browser/content/browser/loop/panel.html
@@ -311,6 +312,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/actions.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/conversationStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/dispatcher.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackApiClient.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/localRoomStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/models.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/otSdkDriver.js
@@ -619,6 +621,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/newtab-inverted
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/newtab.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/newtab@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/noise.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/performance.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch-checked.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler.css
@@ -1175,6 +1178,7 @@ lib/firefox/browser/chrome/pdfjs/content/web/images/grab.cur
 lib/firefox/browser/chrome/pdfjs/content/web/images/grabbing.cur
 lib/firefox/browser/chrome/pdfjs/content/web/images/loading-icon.gif
 lib/firefox/browser/chrome/pdfjs/content/web/images/loading-small.png
+lib/firefox/browser/chrome/pdfjs/content/web/images/loading-small@2x.png
 lib/firefox/browser/chrome/pdfjs/content/web/images/secondaryToolbarButton-documentProperties.png
 lib/firefox/browser/chrome/pdfjs/content/web/images/secondaryToolbarButton-documentProperties@2x.png
 lib/firefox/browser/chrome/pdfjs/content/web/images/secondaryToolbarButton-firstPage.png
@@ -1330,6 +1334,7 @@ lib/firefox/browser/icons/mozicon128.png
 lib/firefox/browser/modules/AboutHome.jsm
 lib/firefox/browser/modules/BrowserNewTabPreloader.jsm
 lib/firefox/browser/modules/BrowserUITelemetry.jsm
+lib/firefox/browser/modules/CastingApps.jsm
 lib/firefox/browser/modules/Chat.jsm
 lib/firefox/browser/modules/ContentClick.jsm
 lib/firefox/browser/modules/ContentLinkHandler.jsm
@@ -1801,7 +1806,9 @@ lib/firefox/chrome/toolkit/content/global/aboutSupport.xhtml
 lib/firefox/chrome/toolkit/content/global/aboutTelemetry.css
 lib/firefox/chrome/toolkit/content/global/aboutTelemetry.js
 lib/firefox/chrome/toolkit/content/global/aboutTelemetry.xhtml
-lib/firefox/chrome/toolkit/content/global/aboutWebrtc.xhtml
+lib/firefox/chrome/toolkit/content/global/aboutwebrtc/aboutWebrtc.css
+lib/firefox/chrome/toolkit/content/global/aboutwebrtc/aboutWebrtc.js
+lib/firefox/chrome/toolkit/content/global/aboutwebrtc/aboutWebrtc.xhtml
 lib/firefox/chrome/toolkit/content/global/accessibility/AccessFu.css
 lib/firefox/chrome/toolkit/content/global/accessibility/clicked.ogg
 lib/firefox/chrome/toolkit/content/global/accessibility/content-script.js
@@ -2200,6 +2207,7 @@ lib/firefox/chrome/toolkit/skin/classic/global/scrollbar/slider.gif
 lib/firefox/chrome/toolkit/skin/classic/global/scrollbars.css
 lib/firefox/chrome/toolkit/skin/classic/global/scrollbox.css
 lib/firefox/chrome/toolkit/skin/classic/global/spinbuttons.css
+lib/firefox/chrome/toolkit/skin/classic/global/spinner.png
 lib/firefox/chrome/toolkit/skin/classic/global/splitter.css
 lib/firefox/chrome/toolkit/skin/classic/global/splitter/grip-bottom.gif
 lib/firefox/chrome/toolkit/skin/classic/global/splitter/grip-left.gif
@@ -2253,7 +2261,6 @@ lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/experimentGeneric.png
 lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/extensionGeneric-16.png
 lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/extensionGeneric.png
 lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/extensions.css
-lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/extensions.svg
 lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/heart.png
 lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/localeGeneric.png
 lib/firefox/chrome/toolkit/skin/classic/mozapps/extensions/navigation.png
@@ -2530,6 +2537,7 @@ lib/firefox/modules/HealthReport.jsm
 lib/firefox/modules/History.jsm
 lib/firefox/modules/Http.jsm
 lib/firefox/modules/ISO8601DateUtils.jsm
+lib/firefox/modules/ImportExport.jsm
 lib/firefox/modules/IndexedDBHelper.jsm
 lib/firefox/modules/InlineSpellChecker.jsm
 lib/firefox/modules/InlineSpellCheckerContent.jsm
@@ -2557,6 +2565,7 @@ lib/firefox/modules/NotificationDB.jsm
 lib/firefox/modules/OfflineCacheInstaller.jsm
 lib/firefox/modules/OperatorApps.jsm
 lib/firefox/modules/PageMenu.jsm
+lib/firefox/modules/PageThumbUtils.jsm
 lib/firefox/modules/PageThumbs.jsm
 lib/firefox/modules/PageThumbsWorker.js
 lib/firefox/modules/Payment.jsm

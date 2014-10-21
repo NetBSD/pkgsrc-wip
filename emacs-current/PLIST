@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.144 2014/10/07 13:23:26 makoto Exp $
+@comment $NetBSD: PLIST,v 1.145 2014/10/21 21:54:37 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -593,6 +593,8 @@ share/emacs/${PKGVERSION}/etc/images/newsticker/next-feed.xpm
 share/emacs/${PKGVERSION}/etc/images/newsticker/next-item.xpm
 share/emacs/${PKGVERSION}/etc/images/newsticker/prev-feed.xpm
 share/emacs/${PKGVERSION}/etc/images/newsticker/prev-item.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/rss-feed.png
+share/emacs/${PKGVERSION}/etc/images/newsticker/rss-feed.svg
 share/emacs/${PKGVERSION}/etc/images/newsticker/update.xpm
 share/emacs/${PKGVERSION}/etc/images/next-node.pbm
 share/emacs/${PKGVERSION}/etc/images/next-node.xpm
@@ -2291,6 +2293,7 @@ share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.elc
 share/emacs/${PKGVERSION}/lisp/international/ucs-normalize.el.gz
 share/emacs/${PKGVERSION}/lisp/international/ucs-normalize.elc
 share/emacs/${PKGVERSION}/lisp/international/uni-bidi.el
+share/emacs/${PKGVERSION}/lisp/international/uni-brackets.el
 share/emacs/${PKGVERSION}/lisp/international/uni-category.el
 share/emacs/${PKGVERSION}/lisp/international/uni-combining.el
 share/emacs/${PKGVERSION}/lisp/international/uni-comment.el
@@ -2869,6 +2872,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/assoc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/awk-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.el
+share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/complete.el.gz
@@ -3286,8 +3291,6 @@ share/emacs/${PKGVERSION}/lisp/progmodes/cc-bytecomp.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-bytecomp.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-cmds.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-cmds.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/cc-compat.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/cc-compat.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-defs.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-defs.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-engine.el.gz
