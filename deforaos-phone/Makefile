@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2013/08/22 08:50:06 obache Exp $
+# $NetBSD: Makefile,v 1.18 2014/10/21 17:37:14 khorben Exp $
 #
 
-DISTNAME=	Phone-0.3.11
-PKGNAME=	deforaos-phone-0.3.11
+DISTNAME=	Phone-0.3.12
+PKGNAME=	deforaos-phone-0.3.12
 CATEGORIES=	comms net
-MASTER_SITES=	http://www.defora.org/os/download/download/3721/
+MASTER_SITES=	http://www.defora.org/os/download/download/4296/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -17,8 +17,17 @@ USE_TOOLS+=	xgettext
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
+AUTO_MKDIRS=	yes
 
-.include "options.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/phone.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/phone.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/phonectl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/phonectl.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
