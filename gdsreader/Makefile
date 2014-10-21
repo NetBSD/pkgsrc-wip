@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/21 12:52:27 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/21 13:08:47 makoto Exp $
 #
 
 DISTNAME=	GDSreader.0.3.2
@@ -7,15 +7,14 @@ CATEGORIES=	cad
 MASTER_SITES=	http://distcache.FreeBSD.org/local-distfiles/hrs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.netcom.com/~serbanp/
+HOMEPAGE=	# empty, former one not available now
 COMMENT=	GDS-II stream file to Postscript and HP/GL converter
 LICENSE=	gnu-gpl-v2
 
-EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAME}
+EXAMPLESDIR=	${PREFIX}/share/examples/${PKGBASE}
 
-INSTALLATION_DIRS=	bin ${EXAMPLESDIR}
-MANINSTALL=	maninstall
 AUTO_MKDIRS=	yes
+INSTALLATION_DIRS=	bin ${EXAMPLESDIR}
 
 do-install:
 	for i in gdsreader maptolayer; do \
@@ -23,10 +22,20 @@ do-install:
 	done
 
 post-install:
-	for i in test.gds layers.config README; do \
+	for i in			\
+		README			\
+		README.povery		\
+		layers.config		\
+		layers.config.5AM.4ML	\
+		layers.config.7HP.5ML	\
+		test.gds		\
+		; do			\
 	${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${EXAMPLESDIR} ;\
 	done
-	for i in gdsreader.1 maptolayer.1; do \
+	for i in			\
+		gdsreader.1		\
+		maptolayer.1		\
+		; do			\
 	${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1;\
 	done
 
