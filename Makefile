@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5947 2014/10/20 22:16:56 outpaddling Exp $
+# $Id: Makefile,v 1.5948 2014/10/21 17:57:50 christtrekker Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1577,6 +1577,7 @@ SUBDIR+=	lxtask
 SUBDIR+=	lxterminal
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
+SUBDIR+=	mac-icon-standard
 SUBDIR+=	mac-robber
 SUBDIR+=	macaulay2
 SUBDIR+=	macro11
