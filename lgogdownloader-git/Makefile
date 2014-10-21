@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/02 09:27:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/21 21:59:05 thomasklausner Exp $
 
 DISTNAME=	lgogdownloader-2.18
 CATEGORIES=	games
@@ -24,6 +24,7 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 SUBST_CLASSES+=		json
 SUBST_SED.json+=	-e 's,jsoncpp/json/json.h,json/json.h,'
+SUBST_FILES.json+=	include/downloader.h include/gamedetails.h include/gamefile.h
 SUBST_FILES.json+=	src/api.cpp src/downloader.cpp src/util.cpp
 SUBST_STAGE.json=	post-configure
 SUBST_MESSAGE.json=	Fixing path to jsoncpp headers.
