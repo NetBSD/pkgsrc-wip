@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/10/21 05:44:14 noud4 Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/21 07:37:52 noud4 Exp $
 
 DISTNAME=	bitcoin-0.8.6-linux
 PKGREVISION=	2
@@ -46,6 +46,10 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE_OPTIONS} ${GMAKE};	\
 	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} CFLAGS+=-Iobj ${QMAKE_OPTIONS} ${GMAKE} -f makefile.unix
+
+pre-install:
+	${CHMOD} a+r ${WRKSRC}/share/pixmaps/bitcoin128.png
+	${CHMOD} a+r ${WRKSRC}/contrib/debian/bitcoin-qt.desktop
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/bin
