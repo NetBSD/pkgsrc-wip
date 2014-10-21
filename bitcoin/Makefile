@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/20 11:15:57 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/21 05:44:14 noud4 Exp $
 
 DISTNAME=	bitcoin-0.8.6-linux
 PKGREVISION=	2
@@ -48,14 +48,14 @@ do-build:
 	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} CFLAGS+=-Iobj ${QMAKE_OPTIONS} ${GMAKE} -f makefile.unix
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/bin
-	${MKDIR} ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/bitcoin-qt ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/bitcoind ${DESTDIR}${PREFIX}/sbin
-	${MKDIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} -m 600 ${FILESDIR}/bitcoin.conf ${DESTDIR}${EGDIR}
-	${MKDIR} ${DESTDIR}${PREFIX}/share/pixmaps
-	${MKDIR} ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} -m 600 ${WRKSRC}/share/pixmaps/bitcoin128.png ${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} -m 600 ${WRKSRC}/contrib/debian/bitcoin-qt.desktop ${DESTDIR}${PREFIX}/share/applications/
 
