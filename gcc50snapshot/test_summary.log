@@ -41,11 +41,11 @@ FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++1y (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		83233
+# of expected passes		83239
 # of unexpected failures	9
 # of expected failures		257
 # of unresolved testcases	22
-# of unsupported tests		3222
+# of unsupported tests		3219
 /usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/g++/../../xg++  version 5.0.0 20141012 (experimental) (GCC) 
 
 		=== gcc tests ===
@@ -59,16 +59,6 @@ FAIL: gcc.c-torture/execute/20030125-1.c   -O3 -g  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -Os  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -O1  execution test
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -O3 -fomit-frame-pointer  execution test
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -O3 -g  execution test
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -Os  execution test
-WARNING: program timed out.
-FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
 FAIL: gcc.dg/builtins-55.c (test for excess errors)
@@ -494,8 +484,8 @@ UNRESOLVED: gcc.target/i386/long-double-128-9.c compilation failed to produce ex
 
 		=== gcc Summary ===
 
-# of expected passes		103781
-# of unexpected failures	311
+# of expected passes		103766
+# of unexpected failures	306
 # of unexpected successes	33
 # of expected failures		266
 # of unresolved testcases	90
@@ -594,18 +584,14 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.c/simd-14.c execution test
+FAIL: libgomp.fortran/cancel-parallel-3.f90   -O3 -g  execution test
 WARNING: program timed out.
-FAIL: libgomp.fortran/nestedfn5.f90   -O3 -fomit-frame-pointer  execution test
-WARNING: program timed out.
-FAIL: libgomp.fortran/target1.f90   -O3 -fomit-frame-pointer -funroll-loops  execution test
-WARNING: program timed out.
-FAIL: libgomp.fortran/udr6.f90   -O2  execution test
+FAIL: libgomp.fortran/taskgroup1.f90   -O  execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		3271
-# of unexpected failures	4
+# of expected passes		3273
+# of unexpected failures	2
 # of unsupported tests		22
 		=== libitm tests ===
 
@@ -626,6 +612,7 @@ Running target unix
 WARNING: program timed out.
 FAIL: 20_util/hash/chi2_q_uniform_random.cc execution test
 FAIL: 22_locale/ctype_base/11844.cc execution test
+FAIL: 25_algorithms/push_heap/complexity.cc execution test
 FAIL: 26_numerics/complex/13450.cc (test for excess errors)
 UNRESOLVED: 26_numerics/complex/13450.cc compilation failed to produce executable
 FAIL: 26_numerics/headers/cmath/c99_classification_macros_c.cc (test for excess errors)
@@ -684,8 +671,8 @@ UNRESOLVED: tr1/5_numerical_facilities/special_functions/22_sph_legendre/check_n
 
 		=== libstdc++ Summary ===
 
-# of expected passes		9062
-# of unexpected failures	52
+# of expected passes		9061
+# of unexpected failures	53
 # of expected failures		68
 # of unresolved testcases	5
 # of unsupported tests		639
