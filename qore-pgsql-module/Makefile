@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/06/19 15:00:38 nros Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/23 19:02:11 nros Exp $
 
 DISTNAME=	qore-pgsql-module-2.3
 PKGREVISION=	3
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-PTHREAD_OPTS+=	require
+PTHREAD_OPTS+=	native
 
 INSTALL_TARGET=	install install-html-local
 
