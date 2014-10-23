@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2014/10/21 22:16:52 khorben Exp $
+# $NetBSD: Makefile,v 1.22 2014/10/23 18:36:21 khorben Exp $
 #
 
 DISTNAME=	Phone-0.4.1
 PKGNAME=	deforaos-phone-0.4.1
+PKGREVISION=	1
 CATEGORIES=	comms net
 MASTER_SITES=	http://www.defora.org/os/download/download/4336/
 
@@ -14,6 +15,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
+
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
@@ -34,10 +38,10 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
 
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/sofia-sip/buildlink3.mk"
 .include "../../wip/deforaos-locker/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

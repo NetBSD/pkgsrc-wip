@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/10/21 21:57:35 khorben Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/10/23 18:36:21 khorben Exp $
 bin/gprs
 bin/phone
 bin/phonectl
@@ -85,6 +85,11 @@ share/sounds/Phone/6.wav
 share/sounds/Phone/7.wav
 share/sounds/Phone/8.wav
 share/sounds/Phone/9.wav
+share/sounds/Phone/a.wav
+share/sounds/Phone/b.wav
+share/sounds/Phone/busy.wav
+share/sounds/Phone/c.wav
+share/sounds/Phone/d.wav
 share/sounds/Phone/hash.wav
 share/sounds/Phone/keytone.wav
 share/sounds/Phone/ringback.wav
