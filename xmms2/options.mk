@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2014/08/11 23:10:14 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.18 2014/10/23 09:23:36 noud4 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	alsa avahi boost curl ecore faad ffmpeg flac fftw gamin
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS+=	gnomevfs jack libao libcdio libdiscid libgme libmms
 PKG_SUPPORTED_OPTIONS+=	libmpg123 libofa libvisual mad modplug musepack pyrex ruby
 PKG_SUPPORTED_OPTIONS+=	pulseaudio python readline samba shout sidplay
 PKG_SUPPORTED_OPTIONS+=	sndfile speex tremor valgrind vorbis wavpack
-PKG_SUGGESTED_OPTIONS=	flac mad vorbis
+PKG_SUGGESTED_OPTIONS=	curl flac mad vorbis
 
 #PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS:S/ruby//1:S/gamin//1:S/samba//1:S/valgrind//1:S/alsa//1} # for testing
 

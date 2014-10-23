@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/04/18 16:18:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/10/23 09:23:36 noud4 Exp $
 ${PLIST.readline}bin/nyxmms2
 bin/xmms2-et
 ${PLIST.avahi}bin/xmms2-find-avahi
@@ -110,6 +110,7 @@ ${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient/async.rb
 ${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient/sync.rb
 ${PLIST.faad}lib/xmms2/libxmms_faad.so
 ${PLIST.libao}lib/xmms2/libxmms_ao.so
+lib/xmms2/libxmms_airplay.so
 lib/xmms2/libxmms_apefile.so
 lib/xmms2/libxmms_asf.so
 lib/xmms2/libxmms_asx.so
@@ -147,7 +148,6 @@ lib/xmms2/libxmms_pls.so
 ${PLIST.pulseaudio}lib/xmms2/libxmms_pulse.so
 lib/xmms2/libxmms_replaygain.so
 lib/xmms2/libxmms_rss.so
-lib/xmms2/libxmms_sndfile.so
 ${PLIST.speex}lib/xmms2/libxmms_speex.so
 lib/xmms2/libxmms_sun.so
 ${PLIST.tremor}lib/xmms2/libxmms_tremor.so
