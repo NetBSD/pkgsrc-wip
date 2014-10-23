@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/10/23 09:23:36 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.20 2014/10/23 11:25:58 noud4 Exp $
 ${PLIST.readline}bin/nyxmms2
 bin/xmms2-et
 ${PLIST.avahi}bin/xmms2-find-avahi
@@ -148,6 +148,7 @@ lib/xmms2/libxmms_pls.so
 ${PLIST.pulseaudio}lib/xmms2/libxmms_pulse.so
 lib/xmms2/libxmms_replaygain.so
 lib/xmms2/libxmms_rss.so
+@comment lib/xmms2/libxmms_sndfile.so
 ${PLIST.speex}lib/xmms2/libxmms_speex.so
 lib/xmms2/libxmms_sun.so
 ${PLIST.tremor}lib/xmms2/libxmms_tremor.so
