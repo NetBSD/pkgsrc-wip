@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/06/19 15:00:37 nros Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/23 18:47:56 nros Exp $
 
 DISTNAME=	qore-sybase-modules-1.0.3
 PKGNAME=	${DISTNAME:S/sybase-modules/freetds-module/}
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nros@users.sourceforge.net
 HOMEPAGE=	http://www.qore.org/
 COMMENT=	Freetds DB driver for qore
 LICENSE=	gnu-lgpl-v2.1
