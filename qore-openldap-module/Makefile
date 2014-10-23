@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/06/19 15:00:37 nros Exp $
+# $NetBSD: Makefile,v 1.5 2014/10/23 19:00:47 nros Exp $
 
 DISTNAME=	qore-openldap-module-1.0
 PKGREVISION=	3
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-PTHREAD_OPTS+=	require
+PTHREAD_OPTS+=	native
 
 INSTALL_TARGET=	install install-html-local
 
