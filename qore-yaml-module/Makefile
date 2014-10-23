@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/19 15:00:38 nros Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/23 19:08:49 nros Exp $
 
 DISTNAME=	qore-yaml-module-0.4
 PKGREVISION=	3
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-PTHREAD_OPTS+=	require
+PTHREAD_OPTS+=	native
 
 INSTALL_TARGET=	install install-html-local
 

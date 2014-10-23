@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/07 14:18:53 nros Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/23 19:08:49 nros Exp $
 
 DISTNAME=	qore-uuid-module-1.3
 CATEGORIES=	devel
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-PTHREAD_OPTS+=	require
+PTHREAD_OPTS+=	native
 
 INSTALL_TARGET=	install install-html-local
 
