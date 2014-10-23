@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/07/06 20:06:29 nros Exp $
+# $NetBSD: Makefile,v 1.17 2014/10/23 18:45:31 nros Exp $
 
 DISTNAME=	qore-0.8.11
 PKGREVISION=	1
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex gmake
 USE_LANGUAGES=	c c++
-PTHREAD_OPTS+=	require
+PTHREAD_OPTS+=	native
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 
