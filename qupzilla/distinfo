@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/10/12 17:12:13 nros Exp $
+$NetBSD: distinfo,v 1.6 2014/10/23 20:05:06 nros Exp $
 
-SHA1 (QupZilla-1.8.2.tar.xz) = 14dc37546f81b9cfaa26391d4e0dfed9e88b01db
-RMD160 (QupZilla-1.8.2.tar.xz) = 700c5d4bc9c48416419162f675718387b59fa694
-Size (QupZilla-1.8.2.tar.xz) = 3092572 bytes
+SHA1 (QupZilla-1.8.3.tar.xz) = f44897b74ad592dc64929d743d3727ec3c8b337b
+RMD160 (QupZilla-1.8.3.tar.xz) = 3f03debddd7fc8aa696ddc36052a5a60b8dfc1ac
+Size (QupZilla-1.8.3.tar.xz) = 3093840 bytes
 SHA1 (patch-src_install.pri) = 79b9806acdcb4da6339d5a38844295ee3ba3243f
