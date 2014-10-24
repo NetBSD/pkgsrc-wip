@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2014/10/24 01:29:27 makoto Exp $
+lib/java/flexdock/lib/LICENSE.txt
+lib/java/flexdock/lib/jmf/doc/readme.html
+lib/java/flexdock/lib/jmf/lib/customizer.jar
+lib/java/flexdock/lib/jmf/lib/jmf.jar
+lib/java/flexdock/lib/jmf/lib/jmf.properties
+lib/java/flexdock/lib/jmf/lib/mediaplayer.jar
+lib/java/flexdock/lib/jmf/lib/multiplayer.jar
+lib/java/flexdock/lib/looks-2.1.1.jar
+lib/java/flexdock/lib/skinlf.jar
+share/examples/flexdock/flexdock.sh
