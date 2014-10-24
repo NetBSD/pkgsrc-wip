@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/10/24 14:42:11 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2014/10/24 14:45:22 noud4 Exp $
 
 SHA1 (cgminer-2.9.7.tar.bz2) = 26925f8ed926060b9258eb89942e6268c36c89a2
 RMD160 (cgminer-2.9.7.tar.bz2) = 4fa056afcbddde8651a406571418a48c33b8e3c8
 Size (cgminer-2.9.7.tar.bz2) = 5506018 bytes
-SHA1 (patch-Makefile.am) = 51363bec0a0c71c4eb7606b99d2ba20ae53d06f2
-SHA1 (patch-Makefile.in) = 500e4c8900d296319bf58a31b2e2153f8b307495
-SHA1 (patch-cgminer.c) = 34d51eef7f3b2fa98f4578af99d04fba6bbc430d
+SHA1 (patch-Makefile.am) = 8c0d7edd5a9f9ea405ca4f2a4555a0ca4e79c448
+SHA1 (patch-Makefile.in) = 16e468222ea67f80dbdcbce665845d47c9e0940b
+SHA1 (patch-cgminer.c) = db037b6f8a4a3fa2e8495a1db5bfe1aed64ba4ec
