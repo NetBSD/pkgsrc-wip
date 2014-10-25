@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/19 15:00:37 nros Exp $
-lib/qore-modules/openldap-api-${QORE_LATEST_MODULE_API}.qmod
+@comment $NetBSD: PLIST,v 1.5 2014/10/25 14:54:07 nros Exp $
+${QORE_MODULE_DIR}/openldap-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-openldap-module/html/QC__LdapClient_8dox_8h_source.html
 share/doc/qore-openldap-module/html/annotated.html
 share/doc/qore-openldap-module/html/annotated.js
