@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/19 15:00:37 nros Exp $
-lib/qore-modules/${QORE_VERSION}/JsonRpcHandler.qm
-lib/qore-modules/json-api-${QORE_LATEST_MODULE_API}.qmod
+@comment $NetBSD: PLIST,v 1.6 2014/10/25 14:35:57 nros Exp $
+${QORE_MODULE_DIR}/${QORE_VERSION}/JsonRpcHandler.qm
+${QORE_MODULE_DIR}/json-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-json-module/JsonRpcHandler/html/_json_rpc_handler_8qm_8dox_8h_source.html
 share/doc/qore-json-module/JsonRpcHandler/html/annotated.html
 share/doc/qore-json-module/JsonRpcHandler/html/annotated.js
