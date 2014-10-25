@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/07 14:18:53 nros Exp $
-lib/qore-modules/uuid-api-${QORE_LATEST_MODULE_API}.qmod
+@comment $NetBSD: PLIST,v 1.6 2014/10/25 16:47:40 nros Exp $
+${QORE_MODULE_DIR}/uuid-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-uuid-module/html/annotated.html
 share/doc/qore-uuid-module/html/annotated.js
 share/doc/qore-uuid-module/html/bc_s.png
@@ -124,5 +124,5 @@ share/doc/qore-uuid-module/html/tab_b.png
 share/doc/qore-uuid-module/html/tab_h.png
 share/doc/qore-uuid-module/html/tab_s.png
 share/doc/qore-uuid-module/html/tabs.css
-share/doc/qore-uuid-module/license/COPYING.LGPL
-share/doc/qore-uuid-module/license/COPYING.MIT
+share/doc/qore-uuid-module/COPYING.LGPL
+share/doc/qore-uuid-module/COPYING.MIT

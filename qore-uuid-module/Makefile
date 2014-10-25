@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/10/23 19:08:49 nros Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/25 16:47:40 nros Exp $
 
 DISTNAME=	qore-uuid-module-1.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -16,16 +17,16 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 PTHREAD_OPTS+=	native
 
-INSTALL_TARGET=	install install-html-local
-
 #This is needed in order to comply the with MIT license and binary distribution
-licensedir=		share/doc/${PKGBASE}/license
-INSTALLATION_DIRS+=	${licensedir}
+#Install docs
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL \
-		${DESTDIR}${PREFIX}/${licensedir}
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
-		${DESTDIR}${PREFIX}/${licensedir}
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${CP} -R ${WRKSRC}/docs/uuid/html \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "options.mk"
 
