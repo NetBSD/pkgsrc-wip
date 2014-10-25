@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5949 2014/10/24 16:53:13 noud4 Exp $
+# $Id: Makefile,v 1.5950 2014/10/25 14:13:13 cheusov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -373,6 +373,7 @@ SUBDIR+=	csp2b
 SUBDIR+=	cspchecker
 SUBDIR+=	csstidy
 SUBDIR+=	csv-mode
+SUBDIR+=	csvkit
 SUBDIR+=	cubature
 SUBDIR+=	cufflinks
 SUBDIR+=	cup
