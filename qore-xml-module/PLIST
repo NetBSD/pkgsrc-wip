@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/19 15:00:38 nros Exp $
-lib/qore-modules/${QORE_VERSION}/SoapClient.qm
-lib/qore-modules/${QORE_VERSION}/SoapHandler.qm
-lib/qore-modules/${QORE_VERSION}/WSDL.qm
-lib/qore-modules/${QORE_VERSION}/XmlRpcHandler.qm
-lib/qore-modules/xml-api-${QORE_LATEST_MODULE_API}.qmod
+@comment $NetBSD: PLIST,v 1.6 2014/10/25 17:11:24 nros Exp $
+${QORE_MODULE_DIR}/${QORE_VERSION}/SoapClient.qm
+${QORE_MODULE_DIR}/${QORE_VERSION}/SoapHandler.qm
+${QORE_MODULE_DIR}/${QORE_VERSION}/WSDL.qm
+${QORE_MODULE_DIR}/${QORE_VERSION}/XmlRpcHandler.qm
+${QORE_MODULE_DIR}/xml-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-xml-module/COPYING.LGPL
 share/doc/qore-xml-module/COPYING.MIT
 share/doc/qore-xml-module/SoapClient/html/_soap_client_8qm_8dox_8h_source.html
