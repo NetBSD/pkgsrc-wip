@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/06/19 15:00:37 nros Exp $
+$NetBSD: distinfo,v 1.4 2014/10/25 14:42:11 nros Exp $
 
 SHA1 (qore-json-module-1.4.tar.bz2) = 390162afdda04297d8d2e2c23133727b952bc194
 RMD160 (qore-json-module-1.4.tar.bz2) = 446416809cea1f3b745a787a6f8b70ded990d6dd
 Size (qore-json-module-1.4.tar.bz2) = 454869 bytes
-SHA1 (patch-Makefile.in) = e775765e38504a3b138e18d776ea53416cbb1fe7
 SHA1 (patch-src_Makefile.in) = 507bee586498fec0c244d005b5708365ae74b7e5
