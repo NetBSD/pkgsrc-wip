@@ -1,5 +1,6 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2014/02/16 17:55:39 nros Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2014/10/25 15:17:00 nros Exp $
 * don't install .a file
+http://sourceforge.net/p/qore/code/6290/
 --- src/Makefile.in.orig	2014-02-16 17:29:57.000000000 +0000
 +++ src/Makefile.in
 @@ -545,7 +545,7 @@ uninstall-am: uninstall-libLTLIBRARIES
