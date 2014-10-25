@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/19 15:00:38 nros Exp $
-lib/qore-modules/ssh2-api-${QORE_LATEST_MODULE_API}.qmod
+@comment $NetBSD: PLIST,v 1.5 2014/10/25 15:36:07 nros Exp $
+${QORE_MODULE_DIR}/ssh2-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-ssh2-module/COPYING.LGPL
 share/doc/qore-ssh2-module/COPYING.MIT
 share/doc/qore-ssh2-module/html/annotated.html
