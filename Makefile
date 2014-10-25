@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5950 2014/10/25 14:13:13 cheusov Exp $
+# $Id: Makefile,v 1.5951 2014/10/25 22:41:30 cheusov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2745,7 +2745,6 @@ SUBDIR+=	py-okasha
 SUBDIR+=	py-ontopy
 SUBDIR+=	py-openastro
 SUBDIR+=	py-openopt
-SUBDIR+=	py-openpyxl
 SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-operators
