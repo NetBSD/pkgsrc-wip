@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/10/26 14:52:38 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/26 18:25:41 noud4 Exp $
 
 DISTNAME=	v3.6.2
 PKGNAME=	multiminer-${DISTNAME:S|v||}
-CATEGORIES=	Bitcoin
+CATEGORIES=	finance
 MASTER_SITES=	https://github.com/nwoolls/MultiMiner/archive/
 FETCH_USING=	curl
 
