@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2014/06/19 15:00:38 nros Exp $
-lib/qore-modules/${QORE_VERSION}/YamlRpcClient.qm
-lib/qore-modules/${QORE_VERSION}/YamlRpcHandler.qm
-lib/qore-modules/yaml-api-${QORE_LATEST_MODULE_API}.qmod
+@comment $NetBSD: PLIST,v 1.6 2014/10/26 14:32:04 nros Exp $
+${QORE_MODULE_DIR}/${QORE_VERSION}/YamlRpcClient.qm
+${QORE_MODULE_DIR}/${QORE_VERSION}/YamlRpcHandler.qm
+${QORE_MODULE_DIR}/yaml-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-yaml-module/COPYING.LGPL
 share/doc/qore-yaml-module/COPYING.MIT
 share/doc/qore-yaml-module/YamlRpcClient/html/_yaml_rpc_client_8qm_8dox_8h_source.html
