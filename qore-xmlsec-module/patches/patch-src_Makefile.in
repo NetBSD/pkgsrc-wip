@@ -1,5 +1,6 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2014/02/16 19:55:15 nros Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2014/10/26 14:14:40 nros Exp $
 * don't install .a files
+http://sourceforge.net/p/qore/code/6294/
 --- src/Makefile.in.orig	2014-02-16 19:44:48.000000000 +0000
 +++ src/Makefile.in
 @@ -490,7 +490,7 @@ libtool: $(LIBTOOL_DEPS)
