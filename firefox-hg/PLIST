@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/10/23 07:03:49 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.13 2014/10/26 07:44:17 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -800,6 +800,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/alltabs-inver
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/alltabs.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/connecting.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/loading.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/pendingpaint.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-active-middle.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-arrow-left-inverted.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-arrow-left.png
@@ -1515,7 +1516,9 @@ lib/firefox/browser/modules/distribution.js
 lib/firefox/browser/modules/experiments/Experiments.jsm
 lib/firefox/browser/modules/loop/CardDavImporter.jsm
 lib/firefox/browser/modules/loop/GoogleImporter.jsm
+lib/firefox/browser/modules/loop/LoopCalls.jsm
 lib/firefox/browser/modules/loop/LoopContacts.jsm
+lib/firefox/browser/modules/loop/LoopRooms.jsm
 lib/firefox/browser/modules/loop/LoopStorage.jsm
 lib/firefox/browser/modules/loop/MozLoopAPI.jsm
 lib/firefox/browser/modules/loop/MozLoopPushHandler.jsm
@@ -2207,7 +2210,6 @@ lib/firefox/chrome/toolkit/skin/classic/global/scrollbar/slider.gif
 lib/firefox/chrome/toolkit/skin/classic/global/scrollbars.css
 lib/firefox/chrome/toolkit/skin/classic/global/scrollbox.css
 lib/firefox/chrome/toolkit/skin/classic/global/spinbuttons.css
-lib/firefox/chrome/toolkit/skin/classic/global/spinner.png
 lib/firefox/chrome/toolkit/skin/classic/global/splitter.css
 lib/firefox/chrome/toolkit/skin/classic/global/splitter/grip-bottom.gif
 lib/firefox/chrome/toolkit/skin/classic/global/splitter/grip-left.gif
