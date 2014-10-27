@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/05 19:27:13 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/27 04:03:11 jgoamakf Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	camomile-0.8.4
@@ -19,5 +19,6 @@ USE_LANGUAGES=  c
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir="${DESTDIR}${PREFIX}/lib/ocaml/site-lib"
 
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
