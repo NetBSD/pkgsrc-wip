@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/08/01 01:51:14 jgoamakf Exp $
+$NetBSD: distinfo,v 1.2 2014/10/27 08:02:13 jgoamakf Exp $
 
-SHA1 (pa_ounit-109.36.00.tar.gz) = f934254c777fc43686a7aeb093c6fa8a0c49febe
-RMD160 (pa_ounit-109.36.00.tar.gz) = 01996b19b06434df66fc95b964f9722eb291fab9
-Size (pa_ounit-109.36.00.tar.gz) = 51228 bytes
+SHA1 (ocaml-pa_ounit/109.36.00.tar.gz) = f934254c777fc43686a7aeb093c6fa8a0c49febe
+RMD160 (ocaml-pa_ounit/109.36.00.tar.gz) = 01996b19b06434df66fc95b964f9722eb291fab9
+Size (ocaml-pa_ounit/109.36.00.tar.gz) = 51228 bytes
