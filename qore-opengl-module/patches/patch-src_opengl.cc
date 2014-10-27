@@ -1,17 +1,15 @@
-$NetBSD: patch-src_opengl.cc,v 1.1 2014/02/14 21:03:04 nros Exp $
+$NetBSD: patch-src_opengl.cc,v 1.2 2014/10/27 14:06:36 nros Exp $
 
-* alloca is in stdlib.h on most systems 
-
+* alloca is in stdlib.h on bsd systems 
+http://sourceforge.net/p/qore/code/6300/
 --- src/opengl.cc.orig	2009-09-21 11:55:18.000000000 +0000
 +++ src/opengl.cc
-@@ -22,7 +22,11 @@
+@@ -22,7 +22,9 @@
  
  #include "qore-opengl.h"
  
-+#if defined(__linux__) || defined(__sgi) || defined(__QNX__)
++#ifdef HAVE_ALLOCA_H
  #include <alloca.h>
-+#else
-+#include <stdlib.h>
 +#endif
  
  static QoreStringNode *opengl_module_init();

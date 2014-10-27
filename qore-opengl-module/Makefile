@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/10/23 18:59:18 nros Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/27 14:06:35 nros Exp $
 
 DISTNAME=	qore-opengl-module-0.0.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
@@ -13,8 +13,12 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	autoconf automake gmake
 PTHREAD_OPTS+=	native
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 CONFIGURE_ARGS+=--with-opengl=${BUILDLINK_PREFIX.MesaLib}
 
