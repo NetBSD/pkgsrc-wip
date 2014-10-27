@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/12/04 13:54:35 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/10/27 08:56:17 makoto Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld

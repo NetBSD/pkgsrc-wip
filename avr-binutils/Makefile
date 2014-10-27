@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/12/04 13:54:35 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2014/10/27 08:56:17 makoto Exp $
 
 DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -16,6 +16,13 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(OPSYS:MNetBSD)
+# ./configure.lineno: 3239: Syntax error: Missing '}'
+# Makefile:2991: recipe for target 'configure-opcodes' failed
+CONFIG_SHELL=		ksh
+.endif
 
 CONFIGURE_ARGS+=	--disable-werror --target=avr --disable-nls
 
@@ -52,10 +59,3 @@ post-install:
 	done;	\
 	)
 .include "../../mk/bsd.pkg.mk"
-
-# ./configure.lineno: 3239: Syntax error: Missing '}'
-# Makefile:2991: recipe for target 'configure-opcodes' failed
-# gmake[1]: *** [configure-opcodes] Error 1
-# gmake[1]: Leaving directory '/export/WRKOBJDIR/wip/avr-binutils/work/binutils-2.24'
-# see avr-binutils
-PKGSRC_MAKE_ENV+=       SH=/bin/ksh
