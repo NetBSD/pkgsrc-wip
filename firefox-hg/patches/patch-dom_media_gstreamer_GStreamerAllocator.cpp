@@ -1,7 +1,7 @@
-$NetBSD: patch-content_media_gstreamer_GStreamerAllocator.cpp,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
+$NetBSD: patch-dom_media_gstreamer_GStreamerAllocator.cpp,v 1.1 2014/10/27 22:53:23 thomasklausner Exp $
 
---- content/media/gstreamer/GStreamerAllocator.cpp.orig	2014-05-29 23:30:33.000000000 +0000
-+++ content/media/gstreamer/GStreamerAllocator.cpp
+--- dom/media/gstreamer/GStreamerAllocator.cpp.orig	2014-10-27 20:46:32.000000000 +0000
++++ dom/media/gstreamer/GStreamerAllocator.cpp
 @@ -51,7 +51,6 @@ typedef struct
  #pragma GCC diagnostic ignored "-Wunused-function"
  G_DEFINE_TYPE(MozGfxMemoryAllocator, moz_gfx_memory_allocator, GST_TYPE_ALLOCATOR);

@@ -1,7 +1,7 @@
-$NetBSD: patch-content_media_AudioStream.cpp,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
+$NetBSD: patch-dom_media_AudioStream.cpp,v 1.1 2014/10/27 22:53:23 thomasklausner Exp $
 
---- content/media/AudioStream.cpp.orig	2014-09-28 08:30:00.000000000 +0000
-+++ content/media/AudioStream.cpp
+--- dom/media/AudioStream.cpp.orig	2014-10-27 20:46:32.000000000 +0000
++++ dom/media/AudioStream.cpp
 @@ -14,7 +14,6 @@
  #include "mozilla/Mutex.h"
  #include <algorithm>

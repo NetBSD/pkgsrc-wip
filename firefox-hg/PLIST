@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/10/26 07:44:17 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.14 2014/10/27 22:53:23 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -82,6 +82,7 @@ lib/firefox/browser/chrome/browser/content/browser/browser.xul
 lib/firefox/browser/chrome/browser/content/browser/certerror/aboutCertError.css
 lib/firefox/browser/chrome/browser/content/browser/certerror/aboutCertError.xhtml
 lib/firefox/browser/chrome/browser/content/browser/chatWindow.xul
+lib/firefox/browser/chrome/browser/content/browser/content-UITour.js
 lib/firefox/browser/chrome/browser/content/browser/content-sessionStore.js
 lib/firefox/browser/chrome/browser/content/browser/content.js
 lib/firefox/browser/chrome/browser/content/browser/customizableui/aboutCustomizing.xul

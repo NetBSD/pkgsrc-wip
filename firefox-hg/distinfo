@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2014/10/07 22:46:24 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2014/10/27 22:53:23 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -27,10 +27,10 @@ SHA1 (patch-config_baseconfig.mk) = 07c295fbfbaeb969b336def32d8924729e332075
 SHA1 (patch-config_external_moz.build) = 5c8c9bb44914483679a4f74e4dc046377dc9102b
 SHA1 (patch-config_rules.mk) = 69e02dc3b17f06c3c37d8d4cea8f602ffb6fd263
 SHA1 (patch-config_system-headers) = 1c8c7dd30a60d447f668e3052e04aeeb70deaa6b
-SHA1 (patch-content_base_src_moz.build) = 5ab6dada84bf727fb55a4c919a2e908d63205410
-SHA1 (patch-content_media_AudioStream.cpp) = 4519aaf30fe21452a7484966b9f9bd8cb965ad44
-SHA1 (patch-content_media_AudioStream.h) = c3d9f05e4a53058d3c27064131da1354e9691215
-SHA1 (patch-content_media_gstreamer_GStreamerAllocator.cpp) = 524a669e411189926e142912b6d94d3d8dbdb0eb
+SHA1 (patch-dom_base_moz.build) = c0d68528c487a9f06fed2a886ceafd7d904cc8a5
+SHA1 (patch-dom_media_AudioStream.cpp) = d2aa504c022f3b924b6c4fbbac97076ac22cd2e3
+SHA1 (patch-dom_media_AudioStream.h) = 4e11be1fe76d878726d0bf2576301e939e7a4624
+SHA1 (patch-dom_media_gstreamer_GStreamerAllocator.cpp) = 66b2d775a2a4faae027edc459a37145318f0fe3f
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 69b0a51d733cd52e7d200052362e0faf4ec918f1
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae6195406657453578453e
 SHA1 (patch-dom_plugins_ipc_PluginProcessChild.cpp) = 5ab28cc0398b72cb5e1b0586406845495b9f87e4
