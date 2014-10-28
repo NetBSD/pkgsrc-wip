@@ -1,13 +1,6 @@
-* Install default config files in $PREFIX/share/examples
-
-* Install a copy in $PREFIX/etc/fail2ban
-
-* Use above for config
-
 * deal with /var/run/fail2ban not existing somehow
 
-* ? Provide a more sane default config
+* Provide a more sane default config with a paths-netbsd.conf
 
-* This package has known vulnerabilities, please investigate and fix
-  if possible. (see: CVE-2012-5642, CVE-2013-7176, CVE-2013-7177, CVE-2013-2178,
-  CVE-2013-7176, CVE-2013-7177)
+* Some stuff might be worth packaging (plugins for other
+  softwares)
