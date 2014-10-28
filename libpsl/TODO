@@ -1,2 +1,0 @@
-qsort_r does not exist on NetBSD, breaking the build.
-https://github.com/rockdaboot/libpsl/issues/17
