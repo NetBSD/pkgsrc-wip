@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/26 14:32:04 nros Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/28 13:15:11 nros Exp $
 
 DISTNAME=	qore-yaml-module-0.4
 PKGREVISION=	4
@@ -27,6 +27,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${CP} -R ${WRKSRC}/docs/* \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../wip/qore/module.mk"

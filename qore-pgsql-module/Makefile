@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/10/25 15:07:46 nros Exp $
+# $NetBSD: Makefile,v 1.8 2014/10/28 13:15:11 nros Exp $
 
 DISTNAME=	qore-pgsql-module-2.3
 PKGREVISION=	4
@@ -26,6 +26,9 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${CP} -R ${WRKSRC}/docs/pgsql/html \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+
 
 .include "options.mk"
 

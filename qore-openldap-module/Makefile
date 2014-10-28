@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/25 14:54:07 nros Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/28 13:15:11 nros Exp $
 
 DISTNAME=	qore-openldap-module-1.0
 PKGREVISION=	4
@@ -22,6 +22,9 @@ INSTALLATION_DIRS+=share/doc/${PKGBASE}
 post-install:
 	${CP} -R ${WRKSRC}/docs/openldap/html \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	
 
 .include "options.mk"
 

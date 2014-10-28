@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/25 17:11:24 nros Exp $
+# $NetBSD: Makefile,v 1.9 2014/10/28 13:15:11 nros Exp $
 
 DISTNAME=	qore-xml-module-1.2
 PKGREVISION=	4
@@ -27,6 +27,9 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${CP} -R ${WRKSRC}/docs/* \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+
 
 .include "../../wip/qore/module.mk"
 .include "options.mk"
