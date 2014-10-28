@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.23 2014/10/24 06:14:03 makoto Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/10/28 16:02:36 makoto Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
 lib/audacious/Container/m3u.so
 lib/audacious/Container/pls.so
 lib/audacious/Container/xspf.so
+lib/audacious/Effect/bs2b.so
 lib/audacious/Effect/compressor.so
 lib/audacious/Effect/crossfade.so
 lib/audacious/Effect/crystalizer.so

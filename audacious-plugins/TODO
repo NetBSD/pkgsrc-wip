@@ -50,7 +50,7 @@ Configuration:
   Status Icon:                            yes
   Audacious OSD:                          yes
     -> X Composite support:               yes
-  libnotify OSD:                          no
+  libnotify OSD:                          yes
   Global Hotkey Plugin:                   yes
   Gnome Shortcuts Plugin:                 no
   Scrobbler 2.0:                          yes
@@ -65,7 +65,7 @@ Configuration:
   Extra Stereo:                           yes
   LADSPA Host:                            yes
   Voice Removal:                          yes
-  Bauer stereophonic-to-binaural (bs2b):  no
+  Bauer stereophonic-to-binaural (bs2b):  yes
   Sample Rate Converter (resample):       yes
   Speed and Pitch:                        yes
   SoX Resampler:                          no
@@ -96,4 +96,3 @@ Configuration:
   ----------
   GTK (gtkui):                            yes
   Winamp Classic (skins):                 yes
-

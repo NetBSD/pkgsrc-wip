@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/10/24 06:18:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.44 2014/10/28 16:02:36 makoto Exp $
 
 DISTNAME=	audacious-plugins-3.5.2
 CATEGORIES=	audio
@@ -81,6 +81,7 @@ PLIST.oss=	yes
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
+#include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
@@ -97,6 +98,7 @@ PLIST.oss=	yes
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/libmms/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../wip/libbs2b/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 
