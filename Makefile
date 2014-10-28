@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5953 2014/10/28 11:44:10 thomasklausner Exp $
+# $Id: Makefile,v 1.5954 2014/10/28 12:58:55 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1411,7 +1411,6 @@ SUBDIR+=	libeio
 SUBDIR+=	libeio-cvs
 SUBDIR+=	libepc
 SUBDIR+=	libestr
-SUBDIR+=	libffi
 SUBDIR+=	libfm
 SUBDIR+=	libfplll
 SUBDIR+=	libfs
