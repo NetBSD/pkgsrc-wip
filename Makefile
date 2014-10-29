@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5955 2014/10/29 09:30:54 bartoszkuzma Exp $
+# $Id: Makefile,v 1.5956 2014/10/29 17:13:28 cheusov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1490,7 +1490,6 @@ SUBDIR+=	libreoffice
 SUBDIR+=	libreoffice-devel
 SUBDIR+=	libressl
 SUBDIR+=	libscscp
-SUBDIR+=	libshorttext
 SUBDIR+=	libslab
 SUBDIR+=	libsnappy
 SUBDIR+=	libsocialweb
