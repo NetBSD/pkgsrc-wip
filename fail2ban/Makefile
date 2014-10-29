@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/10/28 19:49:09 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.6 2014/10/29 12:54:56 ahp-nils Exp $
 #
 
-#DISTNAME=	fail2ban-0.8.4
-#PKGREVISION=	2
 CATEGORIES=	security
 GHCOMMIT=	a0115ee4582e0befbcd7664989b6ab87f8d226a2
 DISTNAME=	${GHCOMMIT}
@@ -48,9 +46,7 @@ post-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/config/*.conf ${DESTDIR}${EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/config/action.d/* ${DESTDIR}${EGDIR}/action.d/
-	#${INSTALL_DATA} ${WRKSRC}/config/action.d/* ${DESTDIR}${PKG_SYSCONFDIR}/action.d/
 	${INSTALL_DATA} ${WRKSRC}/config/filter.d/* ${DESTDIR}${EGDIR}/filter.d/
-	#${INSTALL_DATA} ${WRKSRC}/config/filter.d/* ${DESTDIR}${PKG_SYSCONFDIR}/filter.d/
 
 .include "options.mk"
 
