@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/06 13:40:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2014/10/29 12:59:17 fhajny Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 
@@ -29,6 +29,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/passenger-config.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/passenger-memory-stats.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/man/passenger-status.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/man/passenger-stress-test.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

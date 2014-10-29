@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/05/08 13:11:38 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2014/10/29 12:59:17 fhajny Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -32,7 +32,6 @@ ${RUBY_VENDORLIB_BASE}/phusion_passenger/active_support3_extensions/init.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/admin_tools.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/admin_tools/memory_stats.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/admin_tools/server_instance.rb
-${RUBY_VENDORLIB_BASE}/phusion_passenger/analytics_logger.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/apache2/config_options.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/classic_rails/cgi_fixed.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/classic_rails/thread_handler_extension.rb
@@ -41,8 +40,10 @@ ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/about_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/build_native_support_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/detach_process_command.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/config/list_instances_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/main.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/restart_app_command.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/config/system_metrics_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/utils.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/config/validate_install_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/console_text_template.rb
@@ -87,7 +88,6 @@ ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/config_file.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/help_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/main.rb
-${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/package_runtime_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/runtime_installer.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/runtime_locator.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/start_command.rb
@@ -95,25 +95,29 @@ ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/status_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/stop_command.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/utils.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/standalone/version_command.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/union_station/connection.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/union_station/core.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/union_station/transaction.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/ansi_colors.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/download.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/file_system_watcher.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/hosts_file_parser.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/json.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/lock.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/native_support_utils.rb
+${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/shellwords.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/tee_input.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/terminal_choice_menu.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/tmpdir.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/tmpio.rb
 ${RUBY_VENDORLIB_BASE}/phusion_passenger/utils/unseekable_socket.rb
 man/man1/passenger-config.1
-man/man1/passenger-stress-test.1
 man/man8/passenger-memory-stats.8
 man/man8/passenger-status.8
 sbin/passenger-memory-stats
 sbin/passenger-status
-share/doc/passenger/Architectural overview.html
+share/doc/passenger/Design and Architecture.html
 share/doc/passenger/Packaging.html
 share/doc/passenger/Security of user switching support.html
 share/doc/passenger/Users guide Apache.html
@@ -121,10 +125,12 @@ share/doc/passenger/Users guide Nginx.html
 share/doc/passenger/Users guide Standalone.html
 share/doc/passenger/Users guide.html
 share/doc/passenger/images/by_sa.png
+share/doc/passenger/images/code_walkthrough.jpg
 share/doc/passenger/images/direct_spawning.png
 share/doc/passenger/images/direct_spawning.svg
 share/doc/passenger/images/glyphicons-halflings-white.png
 share/doc/passenger/images/glyphicons-halflings.png
+share/doc/passenger/images/helper_agent_core_architecture.png
 share/doc/passenger/images/icons/README
 share/doc/passenger/images/icons/callouts/1.png
 share/doc/passenger/images/icons/callouts/10.png
@@ -154,14 +160,17 @@ share/doc/passenger/images/icons/warning.png
 share/doc/passenger/images/many_web_framework_protocols.png
 share/doc/passenger/images/passenger_architecture.png
 share/doc/passenger/images/passenger_architecture.svg
+share/doc/passenger/images/passenger_architecture_overview.png
 share/doc/passenger/images/passenger_nodejs_architecture.svg
 share/doc/passenger/images/phusion_banner.png
 share/doc/passenger/images/phusion_banner_small.png
 share/doc/passenger/images/rack.png
-share/doc/passenger/images/smart.png
-share/doc/passenger/images/smart.svg
+share/doc/passenger/images/smart_spawning.png
+share/doc/passenger/images/smart_spawning.svg
 share/doc/passenger/images/spawn_server_architecture.png
 share/doc/passenger/images/spawn_server_architecture.svg
+share/doc/passenger/images/spawning_preparation_work.png
+share/doc/passenger/images/startup_sequence.png
 share/doc/passenger/images/typical_isolated_web_application.png
 share/doc/passenger/images/typical_isolated_web_application.svg
 share/passenger/helper-scripts/backtrace-sanitizer.rb
@@ -173,9 +182,7 @@ share/passenger/helper-scripts/node-loader.js
 share/passenger/helper-scripts/prespawn
 share/passenger/helper-scripts/rack-loader.rb
 share/passenger/helper-scripts/rack-preloader.rb
-share/passenger/helper-scripts/system-memory-stats.py
 share/passenger/helper-scripts/wsgi-loader.py
-share/passenger/helper-scripts/wsgi-preloader.py
 share/passenger/include/common/AgentsStarter.h
 share/passenger/include/common/ApplicationPool2/AppTypes.h
 share/passenger/include/common/Constants.h
@@ -202,10 +209,7 @@ share/passenger/ngx_http_passenger_module/StaticContentHandler.h
 share/passenger/ngx_http_passenger_module/config
 share/passenger/ngx_http_passenger_module/ngx_http_passenger_module.c
 share/passenger/ngx_http_passenger_module/ngx_http_passenger_module.h
-share/passenger/node/phusion_passenger/httplib_emulation.js
 share/passenger/node/phusion_passenger/line_reader.js
-share/passenger/node/phusion_passenger/request_handler.js
-share/passenger/node/phusion_passenger/session_protocol_parser.js
 share/passenger/oss-binaries.phusionpassenger.com.crt
 share/passenger/release.txt
 share/passenger/ruby_extension_source/extconf.rb

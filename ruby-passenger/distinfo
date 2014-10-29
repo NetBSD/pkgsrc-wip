@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2014/05/08 13:11:38 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2014/10/29 12:59:17 fhajny Exp $
 
-SHA1 (passenger-4.0.42.tar.gz) = cdc20111ed0bc01e13c6e56f6a6febf54a55b476
-RMD160 (passenger-4.0.42.tar.gz) = 04e3178f9b4c90aa0c01f669d6549160cfb23130
-Size (passenger-4.0.42.tar.gz) = 3910485 bytes
-SHA1 (patch-build__agents.rb) = a8ab809327eaee4f0163e6e67470502f6e653212
-SHA1 (patch-build__packaging.rb) = e52ba6133a1edd42b430bcb94eec4f80a981a098
-SHA1 (patch-build_common__library.rb) = 97ee1c9658ea64c35fbca03f7daa763ae6fc2e9b
-SHA1 (patch-lib__phusion_passenger.rb) = 25547c50100cc64eb0797a17c7d9fc8abc54dcd9
+SHA1 (passenger-4.0.53.tar.gz) = dce2a83e66abb1fac1cd3cdc2ef284f098bc9390
+RMD160 (passenger-4.0.53.tar.gz) = 5c9004866bce65adc17ee3381210dbec1460568a
+Size (passenger-4.0.53.tar.gz) = 4447609 bytes
+SHA1 (patch-build__agents.rb) = 82c7263c8aac1915a50fedd2fe7d03257b1bfd47
+SHA1 (patch-build__packaging.rb) = 83e7246f7a28b384cf697829b32fc5c3a09f0358
+SHA1 (patch-build_common__library.rb) = b0e04a8656d6cbf1e8b7a4402e0af1f660a8140c
+SHA1 (patch-lib__phusion_passenger.rb) = 681242e1e785e8b2d34dac2e2dde3f3f8c56704e
 SHA1 (patch-lib_phusion__passenger_packaging.rb) = 1a263b387f72aa9e4bc623afac9694253350c54a
 SHA1 (patch-lib_phusion__passenger_platform__info_cxx__portability.rb) = 1921aa9a836793caad650bafe483ae214bbc247a
