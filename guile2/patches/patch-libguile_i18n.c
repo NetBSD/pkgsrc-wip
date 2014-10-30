@@ -1,6 +1,7 @@
-$NetBSD: patch-libguile_i18n.c,v 1.1 2014/09/30 10:36:47 thomasklausner Exp $
+$NetBSD: patch-libguile_i18n.c,v 1.2 2014/10/30 07:44:13 thomasklausner Exp $
 
 NetBSD provides newlocale and strcoll_l, but not uselocale.
+http://debbugs.gnu.org/cgi/bugreport.cgi?bug=18898
 
 --- libguile/i18n.c.orig	2014-01-21 21:25:11.000000000 +0000
 +++ libguile/i18n.c
