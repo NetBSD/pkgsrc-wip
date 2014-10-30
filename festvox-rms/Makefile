@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/10/30 13:25:37 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/30 13:26:31 noud4 Exp $
 #
 
 DISTNAME=	festvox_nitech_us_rms_arctic_hts-2.0.1
 PKGNAME=	festvox-rms-2.0.1
-CATEGORIES=	TTS
+CATEGORIES=	audio
 MASTER_SITES=	http://hts.sp.nitech.ac.jp/archives/2.0.1/
 EXTRACT_SUFX=	.tar.bz2
 
