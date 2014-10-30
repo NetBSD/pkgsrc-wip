@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.4 2014/10/25 13:18:36 nros Exp $
+# $NetBSD: module.mk,v 1.5 2014/10/30 16:16:53 nros Exp $
 #
 # This file should be included in the makefile of packages that install
 # Qore modules.
@@ -12,7 +12,7 @@
 # 			 modules that uses the compatible module api
 #			 version.
 #
-# QORE_MODULE_DIR	 The directory where binary modules are 
+# QORE_MODULE_DIR	 The directory where binary modules are
 #			 installed relative to ${PREFIX}.
 #
 #
