@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5956 2014/10/29 17:13:28 cheusov Exp $
+# $Id: Makefile,v 1.5957 2014/10/30 13:35:06 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -629,6 +629,17 @@ SUBDIR+=	fcgiwrap
 SUBDIR+=	fdk-aac
 SUBDIR+=	fdm
 SUBDIR+=	feathercoin
+SUBDIR+=	festvox-awb
+SUBDIR+=	festvox-bdl
+SUBDIR+=	festvox-clb
+SUBDIR+=	festvox-em
+SUBDIR+=	festvox-hl
+SUBDIR+=	festvox-jmk
+SUBDIR+=	festvox-ks
+SUBDIR+=	festvox-mv
+SUBDIR+=	festvox-rms
+SUBDIR+=	festvox-slt
+SUBDIR+=	festvox-tp
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg-current
