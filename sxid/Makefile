@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:18 asau Exp $
+# $Id: Makefile,v 1.6 2014/10/30 08:54:37 bartoszkuzma Exp $
 #
 
-DISTNAME=		sxid-4.2
+DISTNAME=		sxid-4.20130802
 CATEGORIES=		sysutils
 MASTER_SITES=		http://linukz.org/download/
 
@@ -15,15 +15,10 @@ GNU_CONFIGURE=		yes
 EGDIR=			share/examples/sxid
 CONF_FILES=		${EGDIR}/sxid.conf ${PKG_SYSCONFDIR}/sxid.conf
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
+INSTALLATION_DIRS=	${EGDIR}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/source/sxid ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/sxid.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/docs/sxid.conf.5 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA} ${WRKSRC}/docs/sxid.conf.example \
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/examples/sxid.conf \
 		${DESTDIR}${PREFIX}/${EGDIR}/sxid.conf
 
 .include "../../mk/bsd.pkg.mk"
