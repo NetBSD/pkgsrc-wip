@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/30 13:17:55 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/30 13:32:45 noud4 Exp $
 #
 
 DISTNAME=	festvox_hllpc10k
@@ -6,7 +6,7 @@ PKGNAME=	festvox-hl-1.1.1
 CATEGORIES=	audio
 MASTER_SITES=	http://festvox.org/packed/voices/welsh/
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://festvox.org/packed/voices/welsh/
 COMMENT=	Welsh voice for the festival speech synthesis system
 #LICENSE=	# TODO: (see mk/license.mk)

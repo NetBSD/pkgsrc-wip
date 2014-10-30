@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/30 13:14:13 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/30 13:32:45 noud4 Exp $
 #
 
 DISTNAME=	festvox_nitech_us_clb_arctic_hts-2.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://hts.sp.nitech.ac.jp/archives/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://hts.sp.nitech.ac.jp/archives/${PKGVERSION_NOREV}/
 COMMENT=	US English female voice for the festival speech synthesis system
 #LICENSE=	# TODO: (see mk/license.mk)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/30 13:22:59 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2014/10/30 13:32:45 noud4 Exp $
 #
 
 DISTNAME=	hy_fi_mv_diphone-20041119
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.ling.helsinki.fi/suopuhe/download/ \
 		http://festvox.org/packed/voices/finnish/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	noud4@home.nl
+MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://www.ling.helsinki.fi/suopuhe/
 COMMENT=	Finnish voice for the festival speech synthesis system
 #LICENSE=	# TODO: (see mk/license.mk) Gnu Lesser General Public License
