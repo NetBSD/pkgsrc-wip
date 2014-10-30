@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/30 08:17:01 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/10/30 08:53:34 makoto Exp $
 #
 
 DISTNAME=	flexdock-1.2.4
@@ -37,8 +37,6 @@ JMF_LIB_FILES=				\
 	lib/jmf/lib/mediaplayer.jar	\
 	lib/jmf/lib/multiplayer.jar	\
 	lib/jmf/lib/jmf.properties
-
-PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 do-build:
 	${MKDIR} ${WRKSRC}
