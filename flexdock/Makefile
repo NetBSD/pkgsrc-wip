@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/24 02:22:51 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/10/30 08:17:01 makoto Exp $
 #
 
 DISTNAME=	flexdock-1.2.4
@@ -55,6 +55,10 @@ do-install:
 	for i in ${JMF_LIB_FILES} ;do \
 	  ${INSTALL_DATA} $${i} ${DESTDIR}${PREFIX}/lib/java/flexdock/lib/jmf/lib/${i}; done;\
 	)
+	# for example, math/scilab wants the name without version
+	(cd ${DESTDIR}${PREFIX}/lib/java/; \
+	  ${LN} -f flexdock/flexdock-${PKGVERSION_NOREV}.jar \
+	        flexdock/flexdock.jar )
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
