@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/10/27 22:53:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.15 2014/10/30 14:38:02 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -689,7 +689,6 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/allDownloadsVi
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/buttons.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/contentAreaDownloadsView.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/download-glow-menuPanel.png
-lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/download-glow.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/download-notification-finish.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/download-notification-start.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/download-summary.png
