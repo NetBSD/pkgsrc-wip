@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/10/30 14:38:02 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.16 2014/10/31 08:43:15 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -303,6 +303,8 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/loading-icon.
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/mute-inverse-14x14.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/mute-inverse-14x14@2x.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/sad.png
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/checkmark-16x16.svg
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/copy-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-account-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-settings-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-signin-16x16.svg
