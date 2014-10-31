@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5959 2014/10/31 10:25:55 bartoszkuzma Exp $
+# $Id: Makefile,v 1.5960 2014/10/31 12:24:40 bartoszkuzma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2722,6 +2722,7 @@ SUBDIR+=	py-mplh5canvas
 SUBDIR+=	py-mpop
 SUBDIR+=	py-msdas
 SUBDIR+=	py-msumastro
+SUBDIR+=	py-mssql2
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-mvpoly
 SUBDIR+=	py-mwavepy
