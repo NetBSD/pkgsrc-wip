@@ -1,8 +1,0 @@
-libASSA is an object-oriented C++ networking library based on Adaptive
-Communication Patterns. It features a simplistic implementation of the
-set of communication patterns such as Service Configurator, Reactor,
-Acceptor, Connector, and others described in various papers published by
-Dr. D. C. Schmidt. For details see at http://www.cs.wustl.edu/~schmidt/ACE.html.
-
-libASSA happily co-exists with other frameworks such as GUI toolkits
-and various CORBA implementations.
