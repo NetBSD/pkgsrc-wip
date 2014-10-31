@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/10/28 13:15:11 nros Exp $
+# $NetBSD: Makefile,v 1.20 2014/10/31 09:18:49 nros Exp $
 
 DISTNAME=	qore-0.8.11
 PKGREVISION=	2
@@ -16,9 +16,9 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex gmake
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	native
+FLEX_REQD=	2.5.31
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
-
 REPLACE_QORE=		doxygen/qdx
 
 #This is needed in order to comply the with MIT license and binary distribution
