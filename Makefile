@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5958 2014/10/31 10:01:46 bartoszkuzma Exp $
+# $Id: Makefile,v 1.5959 2014/10/31 10:25:55 bartoszkuzma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2017,7 +2017,6 @@ SUBDIR+=	p5-Gtk2-Spell
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
-SUBDIR+=	p5-HTML-TableContentParser
 SUBDIR+=	p5-HTML-TagCloud
 SUBDIR+=	p5-HTML-WebMake
 SUBDIR+=	p5-HTML-Widget
