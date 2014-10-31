@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5957 2014/10/30 13:35:06 noud4 Exp $
+# $Id: Makefile,v 1.5958 2014/10/31 10:01:46 bartoszkuzma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -863,7 +863,6 @@ SUBDIR+=	gpx2shp
 SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	grandr
-SUBDIR+=	granule
 SUBDIR+=	graphite2
 SUBDIR+=	graphmonkey
 SUBDIR+=	grass
@@ -1383,7 +1382,6 @@ SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
 SUBDIR+=	libarchive
 SUBDIR+=	libargp
-SUBDIR+=	libassa
 SUBDIR+=	libavc1394
 SUBDIR+=	libbacon
 SUBDIR+=	libbfio
@@ -1466,7 +1464,6 @@ SUBDIR+=	liblbxutil
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblogging
-SUBDIR+=	liblognorm
 SUBDIR+=	liblognorm1
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmpg123

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2008/12/09 21:42:35 bartoszkuzma Exp $
-
-SHA1 (granule-1.4.0-7.tar.gz) = 005381d71a57546b7064d3504481028658fedb3e
-RMD160 (granule-1.4.0-7.tar.gz) = 01dc116e3cecc4487a00961ae42ea1a38f7255c3
-Size (granule-1.4.0-7.tar.gz) = 677428 bytes
-SHA1 (patch-aa) = 809d18d952efb658c79297ad7b30b16210fb8ba8
