@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/09/28 21:24:37 asau Exp $
+# $Id: Makefile,v 1.8 2014/10/31 12:45:46 bartoszkuzma Exp $
 #
 
-DISTNAME=	downtimed-0.5
+DISTNAME=	downtimed-0.6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dist.epipe.com/downtimed/
 
@@ -12,8 +12,8 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 
-BUILD_DEFS+=            VARBASE
-OWN_DIRS+=         ${VARBASE}/db/downtimed ${ROOT_USER} ${ROOT_GROUP}
+BUILD_DEFS+=	VARBASE
+OWN_DIRS+=	${VARBASE}/db/downtimed ${ROOT_USER} ${ROOT_GROUP}
 RCD_SCRIPTS+=	downtimed
 
 .include "../../mk/bsd.pkg.mk"
