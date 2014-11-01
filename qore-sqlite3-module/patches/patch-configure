@@ -1,9 +1,18 @@
-$NetBSD: patch-configure,v 1.3 2014/10/25 15:17:00 nros Exp $
+$NetBSD: patch-configure,v 1.4 2014/11/01 15:59:36 nros Exp $
+* pkgsarc doesn't use lib64 so don't set it (fixes build on linux)
 * fix typo so that --with-sqlite3 works correctly
 http://sourceforge.net/p/qore/code/6348/
 --- configure.orig	2010-06-20 09:09:23.000000000 +0000
 +++ configure
-@@ -14717,7 +14717,7 @@ fi
+@@ -14259,7 +14259,6 @@ if test "$enable_64bit" = "yes"; then
+       *linux*)	if test "$GXX" = "yes"; then
+ 		   CXXFLAGS="$CXXFLAGS -m64"
+ 		fi
+-		LIBSUFFIX=64
+ 
+ 		;;
+       *hpux*)	if test "$host_cpu" = "ia64"; then
+@@ -14717,7 +14716,7 @@ fi
  
  # Check whether --with-sqlite3 was given.
  if test "${with_sqlite3+set}" = set; then :

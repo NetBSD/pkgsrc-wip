@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2014/11/01 15:59:35 nros Exp $
+pkgsrc doesn't use lib64 so don't set it.
+fixes build on linux.
+--- configure.orig	2014-10-31 21:39:07.454693733 +0000
++++ configure
+@@ -15331,14 +15331,6 @@ if test "$enable_64bit" = "yes"; then
+       *linux*)	if test "$GXX" = "yes"; then
+ 		   CXXFLAGS="$CXXFLAGS -m64"
+ 		fi
+-		# only set LIBSUFFIX=64 if /usr/lib64 exists
+-		if test -d /usr/lib64; then
+-		   LIBSUFFIX=64
+-                fi
+-		target="${host_cpu}-${host_os}"
+-                if test -d /usr/lib/$target; then
+-                   LIBSUFFIX=/$target
+-                fi
+ 
+ 		;;
+       *hpux*)	if test "$host_cpu" = "ia64"; then
