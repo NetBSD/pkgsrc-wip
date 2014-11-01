@@ -1,2 +1,0 @@
-XML::DOM::XPath allows you to use XML::XPath methods to query a DOM.
-This is often much easier than relying only on getElementsByTagName.
