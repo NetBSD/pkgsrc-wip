@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2014/10/29 17:17:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2014/11/01 13:23:20 thomasklausner Exp $
 
 DISTNAME=	guile-2.0.11
+PKGNAME=	${DISTNAME:S/guile/guile20/}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
@@ -9,14 +10,19 @@ HOMEPAGE=	ftp://ftp.gnu.org/gnu/guile/
 COMMENT=	Official extension language for the GNU operating system
 LICENSE=	gnu-lgpl-v3
 
+GUILE_PREFIX=	${PREFIX}/guile/2.0
+
 # guile does not like the --build and --host triplets on NetBSD
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-shared
 # not until boehm-gc is threaded
 CONFIGURE_ARGS+=	--without-threads
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
+CONFIGURE_ARGS+=	--prefix=${GUILE_PREFIX}
+CONFIGURE_ARGS+=	--mandir=${GUILE_PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--infodir=${GUILE_PREFIX}/${PKGINFODIR}
+
+BUILDLINK_PASSTHRU_DIRS+=	${GUILE_PREFIX}
+LDFLAGS+=			${COMPILER_RPATH_FLAG}${GUILE_PREFIX}/lib
 
 INFO_FILES=	yes
 USE_LIBTOOL=	yes
