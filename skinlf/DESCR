@@ -1,0 +1,9 @@
+This is SkinLF (Skin Look And Feel) version 1.2.3.
+SkinLF allows Java developers to write skinnable applications using
+the Swing toolkit.
+
+SkinLF currently supports skin files created for GTK and KDE.
+Only image themes are supported (engine image).
+
+The official web site is:
+        http://www.L2FProd.com/software/skinlf/index.html
