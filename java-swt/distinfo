@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:23 rillig Exp $
+$NetBSD: distinfo,v 1.5 2014/11/02 09:31:17 makoto Exp $
 
-SHA1 (swt-2.1.3-linux-gtk.zip) = 27ff6de84be3e15db180103b06e28b24799194ec
-RMD160 (swt-2.1.3-linux-gtk.zip) = c97afa79aaa819098cf32cc423e696a7132845a6
-Size (swt-2.1.3-linux-gtk.zip) = 1624024 bytes
-SHA1 (patch-aa) = 23616c17c0bbe9a0953e0a4102d5c03ccafbbdc6
-SHA1 (patch-ab) = 0fb926a4f59d3f50ee01af03a43c4f504b3ee460
-SHA1 (patch-ac) = 07adedd016b323ab52e4dedfa945d5007498ae87
+SHA1 (swt-4.4-gtk-linux-x86_64.zip) = bf36b22c7ae0ccaf9e4c0ab1cc654bc0f16e53ed
+RMD160 (swt-4.4-gtk-linux-x86_64.zip) = d9cfd466dc30bda2abd5fab32e036d86d5a11f26
+Size (swt-4.4-gtk-linux-x86_64.zip) = 6131592 bytes
+SHA1 (patch-aa) = 55913cb3e9b37bde3828fab3b51c349252986d76
+SHA1 (patch-build_sh) = 4930f5a38e4ea0b6e998e4e93296642327c525f5
+SHA1 (patch-make__netbsd_mak) = 97e3de82b26e9f65be119c973f6017c143ddca0e
