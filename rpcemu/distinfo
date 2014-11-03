@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/28 14:55:43 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2014/11/03 22:01:04 ryo-on Exp $
 
-SHA1 (rpcemu-0.8.8.tar.gz) = 4475f3ae8aaee813ebeb1633e24d0b4b9764870d
-RMD160 (rpcemu-0.8.8.tar.gz) = 30a79776ad799bcc153fcf046ccc2d8d49046144
-Size (rpcemu-0.8.8.tar.gz) = 330091 bytes
-SHA1 (patch-hostfs.c) = 3db471aa30bdca479045fb9ea333ca9818c4b9ec
-SHA1 (patch-romload.c) = 2b1cb2d8310d80f7b4cc6d5d8c96e962bc472e37
-SHA1 (patch-rpc-machdep.c) = 062bc3793a095156a687142cbc2b5af0c6265829
-SHA1 (patch-rpcemu.h) = e040ccf638a0be4ac50b1acdb729ec0533733caa
+SHA1 (rpcemu-0.8.12.tar.gz) = d3b8221bacbc97e1c5c9deaf56654d9b7a425c81
+RMD160 (rpcemu-0.8.12.tar.gz) = 6a9a1a25f7199bd52516d9c0aa285ef63e0a7f93
+Size (rpcemu-0.8.12.tar.gz) = 379785 bytes
+SHA1 (patch-rpc-machdep.c) = 82a8fbc4ee55e8b7b3dfc848f094077da117e590
+SHA1 (patch-rpcemu.h) = a1e7a81fb95263c5f3cec0d37515ca8c37c78cba
