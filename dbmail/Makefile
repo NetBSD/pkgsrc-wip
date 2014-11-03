@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/09/11 18:03:56 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2014/11/03 07:16:21 tnn2 Exp $
 
-DISTNAME=	dbmail-3.2.0
+DISTNAME=	dbmail-3.2.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.dbmail.org/download/3.2/
 
