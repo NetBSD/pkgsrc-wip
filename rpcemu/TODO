@@ -1,1 +1,1 @@
-* Not works properly for me, on NetBSD/i386 5.99.55 --ryoon 2011-09-28
+* It seems that hostfs does not work for me under NetBSD/amd64 7.99.1.
