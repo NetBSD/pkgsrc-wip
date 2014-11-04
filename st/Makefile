@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/04/18 21:29:04 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/04 19:08:46 khorben Exp $
 
 DISTNAME=	st-0.5
 CATEGORIES=	x11
@@ -36,4 +36,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
