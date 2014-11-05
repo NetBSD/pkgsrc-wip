@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/10/31 08:43:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.17 2014/11/05 17:16:25 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -256,6 +256,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/conversation.html
 lib/firefox/browser/chrome/browser/content/browser/loop/js/client.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/contacts.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/conversation.js
+lib/firefox/browser/chrome/browser/content/browser/loop/js/conversationAppStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/conversationViews.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/otconfig.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/panel.js
@@ -303,8 +304,6 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/loading-icon.
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/mute-inverse-14x14.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/mute-inverse-14x14@2x.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/sad.png
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/checkmark-16x16.svg
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/copy-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-account-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-settings-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-signin-16x16.svg
@@ -517,6 +516,8 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/customizableui/whimsy-bw
 lib/firefox/browser/chrome/browser/skin/classic/browser/customizableui/whimsy.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/customizableui/whimsy@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devedition.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/devedition/search.svg
+lib/firefox/browser/chrome/browser/skin/classic/browser/devedition/urlbar-history-dropmarker.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/alerticon-warning.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/alerticon-warning@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/app-manager/add.svg
@@ -2558,6 +2559,7 @@ lib/firefox/modules/LoginImport.jsm
 lib/firefox/modules/LoginManagerContent.jsm
 lib/firefox/modules/LoginManagerParent.jsm
 lib/firefox/modules/LoginStore.jsm
+lib/firefox/modules/ManifestProcessor.jsm
 lib/firefox/modules/MessagePortBase.jsm
 lib/firefox/modules/MessagePortWorker.js
 lib/firefox/modules/Metrics.jsm
