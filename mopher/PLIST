@@ -1,17 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/11 00:39:42 pebog Exp $
-${PLIST.bdb}lib/mopher/bdb.so
+@comment $NetBSD: PLIST,v 1.3 2014/11/06 17:25:53 pebog Exp $
 ${PLIST.mysql}lib/mopher/sakila.so
 ${PLIST.spf}lib/mopher/spf.so
+lib/mopher/bdb.so
 lib/mopher/cast.so
 lib/mopher/counter.so
-lib/mopher/list.so
+lib/mopher/dblog.so
+lib/mopher/dnsbl.so
 lib/mopher/memdb.so
-lib/mopher/rbl.so
-lib/mopher/regex.so
+lib/mopher/random.so
 lib/mopher/spamd.so
 lib/mopher/string.so
-sbin/moco
+sbin/mopherctl
 sbin/mopherd
-share/examples/mopher/mail.acl.example
+share/examples/mopher/effective_tld_names.dat
+share/examples/mopher/mopherd.acl
+share/examples/mopher/mopherd.acl.example
 share/examples/mopher/mopherd.conf.example
-share/examples/rc.d/mopherd
+share/man/man5/mopherd.acl.5
+share/man/man5/mopherd.conf.5
+share/man/man7/mopher.7
+share/man/man8/mopherctl.8
+share/man/man8/mopherd.8

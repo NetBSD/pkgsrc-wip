@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mopherd.sh,v 1.2 2012/12/11 00:39:45 pebog Exp $
+# $NetBSD: mopherd.sh,v 1.3 2014/11/06 17:25:53 pebog Exp $
 #
 # PROVIDE: mopherd
 # REQUIRE: DAEMON
@@ -11,7 +11,7 @@ $_rc_subr_loaded . /etc/rc.subr
 name=mopherd
 rcvar=mopherd
 pidfile=@MOPHER_RUN@/mopherd.pid
-start_precmd=${name}_precmd
+start_precmd=mopherd_precmd
 command=@PREFIX@/sbin/mopherd
 command_args="-p $pidfile"
 

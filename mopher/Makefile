@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2013/04/13 02:44:40 pebog Exp $
+# $NetBSD: Makefile,v 1.6 2014/11/06 17:25:53 pebog Exp $
 
-DISTNAME=		mopher-0.4.1
+DISTNAME=		mopher-0.5.0
 CATEGORIES=		mail
-MASTER_SITES=		http://smokva.net/src/
+MASTER_SITES=		http://mopher.org/download/
 
 OWNER=			petar@smokva.net
-HOMEPAGE=		https://github.com/badzong/mopher
+HOMEPAGE=		http://mopher.org
 COMMENT=		Versatile mail filter
 LICENSE=		mit
 
@@ -30,13 +30,18 @@ CONFIGURE_ARGS+=	--localstatedir=${MOPHER_HOME}
 .include "options.mk"
 
 BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
+BUILD_TARGET=		build
 
 PKG_SYSCONFSUBDIR=	mopher
-INSTALLATION_DIRS+=	sbin ${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 EGDIR=			${PREFIX}/share/examples/mopher
 CONF_FILES+=		${EGDIR}/mopherd.conf.example
-CONF_FILES+=		${EGDIR}/mail.acl.example
-MAKE_ENV+=		CONFIG_INST=${EGDIR}
+CONF_FILES+=		${PKG_SYSCONFDIR}/mopherd.conf.example
+CONF_FILES+=		${EGDIR}/mopherd.acl.example
+CONF_FILES+=		${PKG_SYSCONFDIR}/mopherd.acl.example
+CONF_FILES+=		${EGDIR}/mopherd.acl
+CONF_FILES+=		${PKG_SYSCONFDIR}/mopherd.acl
+MAKE_ENV+=		CONFIG_XPATH=${EGDIR}
 
 PKG_GROUPS=		${MOPHER_USER}
 PKG_USERS=		${MOPHER_USER}:${MOPHER_GROUP}
@@ -44,5 +49,6 @@ OWN_DIRS_PERMS+=	${MOPHER_HOME} ${MOPHER_USER} ${MOPHER_GROUP} 2755
 RCD_SCRIPTS+=		mopherd
 
 .include "../../mail/libmilter/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
