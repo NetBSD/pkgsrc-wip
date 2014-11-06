@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/06 06:51:27 makoto Exp $
+bin/blbump
+bin/finddepends
+bin/replace-commonbump
+bin/revbump
+man/man1/blbump.1
+man/man1/finddepends.1
+man/man1/revbump.1

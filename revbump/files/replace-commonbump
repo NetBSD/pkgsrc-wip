@@ -1,0 +1,137 @@
+#!@PERL@ -w
+# The process is two steps
+# (1)
+# Travers all the files (with some filtering) over /usr/pkgsrc
+# pick up referenced -> referer relation and store them to %HASH
+# (2)
+# read input (usually commonbump), and expand one line into
+# replacement lines, which are referenced  -> referer relation.
+
+use strict;
+use Getopt::Std;
+use File::Find;
+
+my(%HASH);	  		# refereced -> referer relation hash, refere is delitted by ;
+my($PKGSRCDIR) = '/usr/pkgsrc';	# /usr/pkgsrc path, usually /usr/pkgsrc
+
+my($TABLE) = 'commonbump';	# name of file, list-of-files to check
+my(@TABLE);			# contents of file above
+
+my($debug) = 0;
+my($prefix) ;	# A part of path, top to pkgsrc, typically /usr/pkgsrc
+
+my($common_bump) = 0;
+my(%opts);
+our(@ARGV);
+
+my($replaced) = 'commonbump.replaced';
+
+sub usage() {
+    print <<HELP;
+$0:
+    Show referenced files if the file is included in each of them.
+Synopsys:      $0 [-h] [-p pkgsrc_directory] [-T list_file]
+   Where:
+   -h            Show this help
+   -p directory  pkgsrc directory (default $PKGSRCDIR)
+   -T            the filename containing list of files (default commonbump)
+HELP
+}
+
+sub GenerateHash ($) {
+    my ($pkgsrc) = shift;
+
+    my ($wanted_closure) = sub () {
+	my $dir   = $File::Find::dir ;
+	my $fname = "$File::Find::dir/$_" ;
+# skip these directories and files
+	if ($dir =~ m|CVS$| )		{$File::Find::prune = 1; next}
+	if ($dir =~ m|mk$| )		{$File::Find::prune = 1; next}
+	if ($dir =~ m|work$| )		{$File::Find::prune = 1; next}
+	if ($dir =~ m|patches$| )	{$File::Find::prune = 1; next}
+	if ($dir =~ m|/bootstrap$| )	{$File::Find::prune = 1; next}
+	if ($dir =~ m|pkgsrc/[^/]$| )	{$File::Find::prune = 1; next}
+	if ($_ =~ m|^\.\#| )		{                        next}
+	if ($_ =~ m|~$| )		{                        next}
+	if ($_ =~ m|buildlink3.mk$| )	{                        next}
+	if ($_ =~ m|builtin.mk$| )	{                        next}
+# pick only Makefile.* and .mk
+	if ($_ =~ m|Makefile| ||
+	    $_ =~ m|\.mk$|          )	{
+	    print STDERR __LINE__, ' ', $fname,' ', `pwd`, "\n" if $debug;
+	    open(FNAME, $fname) || print STDERR __LINE__, " Problem opening file $fname:$!\n";
+	    while (<FNAME>){
+# pick ".include .. "  or ". include ..  " line
+		if ( m|\.\s*include\s+\"\.\./\.\./(.*)\"|  ||
+		     m|\.\s*include\s+\"(.*)\"|                ) {
+		    my ($include) = $1;
+		    if ($include =~ m|^mk| ) { next;}
+		    my($shortname) = $fname;
+		    $shortname =~ s|$prefix/||;
+		    print STDERR __LINE__ , ' ', $shortname, ' -> ', $include,"\n" if $debug;
+		    if ( ! $HASH{$include} ) {
+			$HASH{$include} =  $shortname;
+		    } else {
+			$HASH{$include} .= ';'. $shortname;
+		    }
+		}
+	    }
+	    close(FNAME);
+	}
+    };
+    find($wanted_closure, $pkgsrc);
+}
+sub ReadTable($) {
+    my ($table) = shift;
+    if ($table eq '-') {
+	@TABLE = <>;
+    } else {
+	open(TABLE, $table) || print STDERR "Problem reading file $table: $!\n";
+	@TABLE = <TABLE>;
+	close(TABLE);
+	}
+    }
+
+sub ShowResults() {
+    my (%TO_EDIT);
+    open(REPLACED, "> $replaced") || die "problem open to write: $replaced: $!\n";
+    foreach my $file (@TABLE) {
+	chomp($file);
+#	print STDERR $file, "\n";
+	if (grep $file, $HASH{$file} > 0) {
+	    my(@list) = split ';', $HASH{$file};
+	    foreach my $i (0..$#list) {	    
+		print REPLACED "$list[$i]\n";
+	    }
+	}
+    }
+}
+
+sub CheckTopMakefile($){
+    my ($pkgsrc) =	shift;
+    my ($Makefile) =	$pkgsrc. '/Makefile';
+    print STDERR __LINE__, " Checking if $Makefile can be opened.\n" if $debug;
+    if (!  -f $Makefile ) {
+	die " *** Can't open Top level Makefile, check pkgsrc tree.\n";
+    }
+}
+
+sub main() {
+    getopts('hp:T:', \%opts);
+
+    if ($opts{'h'}) { usage(); exit 0;}
+    if ($opts{'p'}) { $PKGSRCDIR = $opts{'p'};}
+    if ($opts{'T'}) { $TABLE = $opts{'T'};}
+
+    $prefix = $PKGSRCDIR;
+    $prefix =~ s|.*/pkgsrc/(.*)|$1|;
+    CheckTopMakefile($PKGSRCDIR);
+    GenerateHash($PKGSRCDIR);
+    ReadTable($TABLE);
+    ShowResults();
+}
+
+main();
+
+exit;
+__END__
