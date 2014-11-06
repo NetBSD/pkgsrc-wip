@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.1 2014/11/06 06:51:27 makoto Exp $
+.\"	$NetBSD: revbump.1,v 1.2 2014/11/06 07:06:25 makoto Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013, 2014 The NetBSD Foundation, Inc.
 .\"
@@ -101,7 +101,7 @@ cvs diff `cat makebump` | less
  local tree, and fix them]
 cvs diff `cat bl3bump makebump` | less
 cvs commit `cat bl3bump makebump`
-rm allbump bl3bump* makebump* commonbump
+rm allbump bl3bump* makebump* commonbump*
 .Ed
 .Sh SEE ALSO
 .Xr blbump 1 ,

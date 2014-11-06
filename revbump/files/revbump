@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: revbump,v 1.1 2014/11/06 06:51:27 makoto Exp $
+# $NetBSD: revbump,v 1.2 2014/11/06 07:06:25 makoto Exp $
 #
 # Copyright (c) 2003, 2004 The NetBSD Foundation, Inc.
 #
@@ -99,6 +99,10 @@ sub revbump {
 	} elsif ($done == 0 && /^COMMENT=([ \t]+)/) {
 	    push (@NEW2, $_);
 	    push (@NEW2,"PKGREVISION=${1}1\n");
+	    $done = 1;
+	} elsif ($done == 0 && /^.\s*include=([ \t]+)/) {
+	    push (@NEW2,"PKGREVISION=${1}1\n");
+	    push (@NEW2, $_);
 	    $done = 1;
 	} else {
 	    push (@NEW2, $_);
