@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/05/17 21:00:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/06 13:02:51 szptvlfn Exp $
 
-DISTNAME=	reflection-1.4
+DISTNAME=	reflection-1.5.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
