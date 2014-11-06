@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2014/10/30 13:54:23 thomasklausner Exp $
+$NetBSD: distinfo,v 1.7 2014/11/06 15:47:24 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -25,7 +25,7 @@ SHA1 (patch-build_pgo_profileserver.py) = 8666187258e47c037f2065a19a5b38946fdc0f
 SHA1 (patch-config_Makefile.in) = 296bd3bc33346cfcfa658fe641c2ee2ac67549f1
 SHA1 (patch-config_baseconfig.mk) = 07c295fbfbaeb969b336def32d8924729e332075
 SHA1 (patch-config_external_moz.build) = 5c8c9bb44914483679a4f74e4dc046377dc9102b
-SHA1 (patch-config_rules.mk) = ba046c4d5c92955649b759e1325207a1f756be34
+SHA1 (patch-config_rules.mk) = debd5acd52f4f7593ea4e54dd0fdad91eeb46839
 SHA1 (patch-config_system-headers) = 1c8c7dd30a60d447f668e3052e04aeeb70deaa6b
 SHA1 (patch-dom_base_moz.build) = c0d68528c487a9f06fed2a886ceafd7d904cc8a5
 SHA1 (patch-dom_media_AudioStream.cpp) = d2aa504c022f3b924b6c4fbbac97076ac22cd2e3
@@ -63,7 +63,7 @@ SHA1 (patch-ipc_ipdl_ipdl_cxx_ast.py) = 047b7012dffdcfc2b07d2d249fb3523e7d4643f8
 SHA1 (patch-ipc_ipdl_ipdl_cxx_cgen.py) = d7f7dc85b1ff26c6d7e902f94c0ac09f04497105
 SHA1 (patch-ipc_ipdl_ipdl_lower.py) = 2ef9504e462d0e3db16f9b0a6303ea5971b9c2a2
 SHA1 (patch-js__src__vm__SPSProfiler.cpp) = 989ba25e4c5308d21d07baa802decce13609a475
-SHA1 (patch-js_src_Makefile.in) = 9d3fc2ac8c5d2aa5383ece408d6cf860911b72a4
+SHA1 (patch-js_src_Makefile.in) = 6c904e5439ffdaf2fd065fe8109b5270f1f3cea6
 SHA1 (patch-js_src_ctypes_CTypes.h) = 768a084239f92a424c1c7dc9eaaf9be9456ca9f0
 SHA1 (patch-js_src_frontend_ParseMaps.cpp) = c00117d79b78904bc50a1d664a8fc0e4e339bfbc
 SHA1 (patch-js_src_gc_Memory.cpp) = 68315aaaf3ec20da8d674097dac5eb56627d02bf
@@ -90,7 +90,6 @@ SHA1 (patch-netwerk_dns_Makefile.in) = b6bd9814d909dd6f7cff10dbeac3bedd79c2508e
 SHA1 (patch-ostream) = 593a114a31a0117af6c00cd12e3aed4565571288
 SHA1 (patch-pb) = 97c9b2e4cefd524dc6ba825f71c3da2a761aa1f4
 SHA1 (patch-pc) = 8b2baa88f0983a2fef4f801cf6b1ae425f6c813a
-SHA1 (patch-probes_Makefile.in) = 9a8d48556daaaa17996133a6183b1d27f0510361
 SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
 SHA1 (patch-security_manager_ssl_src_nsNSSComponent.cpp) = 6788dbd5084727dbf54e1996faa7a9aaae508293
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 6b926ccd793391ad7bd7101635f4b3eefe3db130

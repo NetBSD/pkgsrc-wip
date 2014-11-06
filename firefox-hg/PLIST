@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/11/05 17:16:25 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/11/06 15:47:24 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -178,6 +178,9 @@ lib/firefox/browser/chrome/browser/content/browser/devtools/fontinspector/font-i
 lib/firefox/browser/chrome/browser/content/browser/devtools/fontinspector/font-inspector.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/fontinspector/font-inspector.xhtml
 lib/firefox/browser/chrome/browser/content/browser/devtools/frame-script-utils.js
+lib/firefox/browser/chrome/browser/content/browser/devtools/framework/dev-edition-logo.png
+lib/firefox/browser/chrome/browser/content/browser/devtools/framework/dev-edition-promo.css
+lib/firefox/browser/chrome/browser/content/browser/devtools/framework/dev-edition-promo.xul
 lib/firefox/browser/chrome/browser/content/browser/devtools/framework/options-panel.css
 lib/firefox/browser/chrome/browser/content/browser/devtools/framework/toolbox-options.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/framework/toolbox-options.xul
@@ -311,14 +314,14 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-sig
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/video-inverse-14x14.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/video-inverse-14x14@2x.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/actions.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/activeRoomStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/conversationStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/dispatcher.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackApiClient.js
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/localRoomStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/models.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/otSdkDriver.js
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/roomListStore.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/roomStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/utils.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/validate.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/views.js
@@ -467,7 +470,6 @@ lib/firefox/browser/chrome/browser/content/browser/web-panels.xul
 lib/firefox/browser/chrome/browser/content/browser/webrtcIndicator.js
 lib/firefox/browser/chrome/browser/content/browser/webrtcIndicator.xul
 lib/firefox/browser/chrome/browser/default_permissions
-lib/firefox/browser/chrome/browser/skin/classic/browser/aboutProviderDirectory.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/Geolocation-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/Geolocation-64.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/Info.png
@@ -483,6 +485,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/aboutCertError_sectionCo
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutCertError_sectionExpanded.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutNetError.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutNetError_info.svg
+lib/firefox/browser/chrome/browser/skin/classic/browser/aboutProviderDirectory.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutSessionRestore-window-icon.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutSessionRestore.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutSocialError.css
@@ -580,6 +583,8 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-pause.
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-pause@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-play.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-play@2x.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-prettyprint.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-prettyprint@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-step-in.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-step-in@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/debugger-step-out.png
@@ -1462,6 +1467,7 @@ lib/firefox/browser/modules/devtools/scratchpad/scratchpad-panel.js
 lib/firefox/browser/modules/devtools/shadereditor/panel.js
 lib/firefox/browser/modules/devtools/shared/autocomplete-popup.js
 lib/firefox/browser/modules/devtools/shared/d3.js
+lib/firefox/browser/modules/devtools/shared/doorhanger.js
 lib/firefox/browser/modules/devtools/shared/frame-script-utils.js
 lib/firefox/browser/modules/devtools/shared/inplace-editor.js
 lib/firefox/browser/modules/devtools/shared/observable-object.js
@@ -2596,6 +2602,7 @@ lib/firefox/modules/Preferences.jsm
 lib/firefox/modules/PrivateBrowsingUtils.jsm
 lib/firefox/modules/Promise-backend.js
 lib/firefox/modules/Promise.jsm
+lib/firefox/modules/PromiseUtils.jsm
 lib/firefox/modules/PromiseWorker.jsm
 lib/firefox/modules/PropertyListUtils.jsm
 lib/firefox/modules/PushService.jsm
