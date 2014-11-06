@@ -2,25 +2,26 @@
 # The process is two steps
 # (1)
 # Travers all the files (with some filtering) over /usr/pkgsrc
-# pick up referenced -> referer relation and store them to %HASH
+# pick up referenced -> referer relation and store them to %HASH 
+#  (multiple files are concaticated by ';' )
 # (2)
-# read input (usually commonbump), and expand one line into
-# replacement lines, which are referenced  -> referer relation.
+# read input (usually named commonbump), and expand one line into
+# replacement referer lines, which are referenced  -> referer relation.
 
 use strict;
 use Getopt::Std;
 use File::Find;
 
-my(%HASH);	  		# refereced -> referer relation hash, refere is delitted by ;
+my(%HASH);	  		# refereced -> referer relation hash, referer is delimitted by ;
 my($PKGSRCDIR) = '/usr/pkgsrc';	# /usr/pkgsrc path, usually /usr/pkgsrc
 
-my($TABLE) = 'commonbump';	# name of file, list-of-files to check
+my($TABLE) = 'commonbump';	# name of file, list-of-files to process
 my(@TABLE);			# contents of file above
 
 my($debug) = 0;
 my($prefix) ;	# A part of path, top to pkgsrc, typically /usr/pkgsrc
 
-my($common_bump) = 0;
+my($common_bump) = 0;		# count, not used for now (yet)
 my(%opts);
 our(@ARGV);
 
@@ -41,31 +42,32 @@ HELP
 sub GenerateHash ($) {
     my ($pkgsrc) = shift;
 
+    # ----------------------------------------------------------------
     my ($wanted_closure) = sub () {
 	my $dir   = $File::Find::dir ;
 	my $fname = "$File::Find::dir/$_" ;
 # skip these directories and files
-	if ($dir =~ m|CVS$| )		{$File::Find::prune = 1; next}
-	if ($dir =~ m|mk$| )		{$File::Find::prune = 1; next}
-	if ($dir =~ m|work$| )		{$File::Find::prune = 1; next}
-	if ($dir =~ m|patches$| )	{$File::Find::prune = 1; next}
-	if ($dir =~ m|/bootstrap$| )	{$File::Find::prune = 1; next}
-	if ($dir =~ m|pkgsrc/[^/]$| )	{$File::Find::prune = 1; next}
-	if ($_ =~ m|^\.\#| )		{                        next}
-	if ($_ =~ m|~$| )		{                        next}
-	if ($_ =~ m|buildlink3.mk$| )	{                        next}
-	if ($_ =~ m|builtin.mk$| )	{                        next}
-# pick only Makefile.* and .mk
+	if ($dir =~ m|CVS$| )		{$File::Find::prune = 1; return;}
+	if ($dir =~ m|mk$| )		{$File::Find::prune = 1; return;}
+	if ($dir =~ m|work$| )		{$File::Find::prune = 1; return;}
+	if ($dir =~ m|patches$| )	{$File::Find::prune = 1; return;}
+	if ($dir =~ m|/bootstrap$| )	{$File::Find::prune = 1; return;}
+	if ($dir =~ m|pkgsrc/[^/]$| )	{$File::Find::prune = 1; return;}
+	if ($_ =~ m|^\.\#| )		{                        return;}
+	if ($_ =~ m|~$| )		{                        return;}
+	if ($_ =~ m|buildlink3.mk$| )	{                        return;}
+	if ($_ =~ m|builtin.mk$| )	{                        return;}
+	# pick only Makefile.* and .mk
 	if ($_ =~ m|Makefile| ||
 	    $_ =~ m|\.mk$|          )	{
 	    print STDERR __LINE__, ' ', $fname,' ', `pwd`, "\n" if $debug;
 	    open(FNAME, $fname) || print STDERR __LINE__, " Problem opening file $fname:$!\n";
 	    while (<FNAME>){
-# pick ".include .. "  or ". include ..  " line
+		# pick ".include .. "  or ". include ..  " line
 		if ( m|\.\s*include\s+\"\.\./\.\./(.*)\"|  ||
 		     m|\.\s*include\s+\"(.*)\"|                ) {
 		    my ($include) = $1;
-		    if ($include =~ m|^mk| ) { next;}
+		    if ($include =~ m|^mk| ) { return;}
 		    my($shortname) = $fname;
 		    $shortname =~ s|$prefix/||;
 		    print STDERR __LINE__ , ' ', $shortname, ' -> ', $include,"\n" if $debug;
@@ -75,12 +77,15 @@ sub GenerateHash ($) {
 			$HASH{$include} .= ';'. $shortname;
 		    }
 		}
-	    }
+	    } # end while
 	    close(FNAME);
-	}
-    };
+	} # if of (major) 	if ($_ =~ m|Makefile| || 
+    };  # end of my ($wanted_closure) = sub () {
+    # ----------------------------------------------------------------    
     find($wanted_closure, $pkgsrc);
 }
+
+# Table is assumed to contain list of files to process, set up it here.
 sub ReadTable($) {
     my ($table) = shift;
     if ($table eq '-') {
@@ -93,12 +98,13 @@ sub ReadTable($) {
     }
 
 sub ShowResults() {
-    my (%TO_EDIT);
+#   my (%TO_EDIT);
     open(REPLACED, "> $replaced") || die "problem open to write: $replaced: $!\n";
     foreach my $file (@TABLE) {
 	chomp($file);
+	if ($file =~ /^\s*$/  ) { next; }	# skip empty line in case
 #	print STDERR $file, "\n";
-	if (grep $file, $HASH{$file} > 0) {
+	if (grep ($file, $HASH{$file}) > 0) {
 	    my(@list) = split ';', $HASH{$file};
 	    foreach my $i (0..$#list) {	    
 		print REPLACED "$list[$i]\n";
