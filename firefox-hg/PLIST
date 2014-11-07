@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/11/06 15:47:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/11/07 21:45:07 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -330,7 +330,11 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/backbone-1.1
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/jquery-2.1.0.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/lodash-2.4.1.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/react-0.11.2.js
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/Firefox-Long.ogg
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/connected.ogg
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/connecting.ogg
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/failure.ogg
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/ringtone.ogg
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/terminated.ogg
 lib/firefox/browser/chrome/browser/content/browser/microsoft-translator-attribution.png
 lib/firefox/browser/chrome/browser/content/browser/migration/migration.js
 lib/firefox/browser/chrome/browser/content/browser/migration/migration.xul
@@ -610,6 +614,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/filters.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/floating-scrollbars-light.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/floating-scrollbars.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/font-inspector.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/highlighter.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/inspector.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/itemArrow-dark-ltr.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/itemArrow-dark-rtl.svg
@@ -1371,7 +1376,6 @@ lib/firefox/browser/modules/PluginContent.jsm
 lib/firefox/browser/modules/RecentWindow.jsm
 lib/firefox/browser/modules/RemotePrompt.jsm
 lib/firefox/browser/modules/ScrollbarSampler.jsm
-lib/firefox/browser/modules/SharedFrame.jsm
 lib/firefox/browser/modules/SignInToWebsite.jsm
 lib/firefox/browser/modules/SitePermissions.jsm
 lib/firefox/browser/modules/Social.jsm
@@ -1418,7 +1422,6 @@ lib/firefox/browser/modules/devtools/framework/target.js
 lib/firefox/browser/modules/devtools/framework/toolbox-highlighter-utils.js
 lib/firefox/browser/modules/devtools/framework/toolbox-hosts.js
 lib/firefox/browser/modules/devtools/framework/toolbox-options.js
-lib/firefox/browser/modules/devtools/framework/toolbox-process-window.js
 lib/firefox/browser/modules/devtools/framework/toolbox.js
 lib/firefox/browser/modules/devtools/gDevTools.jsm
 lib/firefox/browser/modules/devtools/inspector/breadcrumbs.js
@@ -2374,6 +2377,7 @@ lib/firefox/components/contentAreaDropListener.js
 lib/firefox/components/crypto-SDR.js
 lib/firefox/components/interfaces.xpt
 lib/firefox/components/jsconsole-clhandler.js
+lib/firefox/components/remoteTagService.js
 ${PLIST.gnome}lib/firefox/components/libdbusservice.so
 lib/firefox/components/libmozgnome.so
 ${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
@@ -2699,6 +2703,7 @@ lib/firefox/modules/commonjs/diffpatcher/test/index.js
 lib/firefox/modules/commonjs/diffpatcher/test/patch.js
 lib/firefox/modules/commonjs/diffpatcher/test/tap.js
 lib/firefox/modules/commonjs/framescript/FrameScriptManager.jsm
+lib/firefox/modules/commonjs/framescript/LoaderHelper.jsm
 lib/firefox/modules/commonjs/framescript/tab-events.js
 lib/firefox/modules/commonjs/method/core.js
 lib/firefox/modules/commonjs/method/test/browser.js
@@ -2723,6 +2728,8 @@ lib/firefox/modules/commonjs/sdk/content/mod.js
 lib/firefox/modules/commonjs/sdk/content/sandbox.js
 lib/firefox/modules/commonjs/sdk/content/thumbnail.js
 lib/firefox/modules/commonjs/sdk/content/utils.js
+lib/firefox/modules/commonjs/sdk/content/worker-child.js
+lib/firefox/modules/commonjs/sdk/content/worker-parent.js
 lib/firefox/modules/commonjs/sdk/content/worker.js
 lib/firefox/modules/commonjs/sdk/context-menu.js
 lib/firefox/modules/commonjs/sdk/core/disposable.js
@@ -2894,7 +2901,6 @@ lib/firefox/modules/commonjs/sdk/util/collection.js
 lib/firefox/modules/commonjs/sdk/util/contract.js
 lib/firefox/modules/commonjs/sdk/util/deprecate.js
 lib/firefox/modules/commonjs/sdk/util/dispatcher.js
-lib/firefox/modules/commonjs/sdk/util/iteration.js
 lib/firefox/modules/commonjs/sdk/util/list.js
 lib/firefox/modules/commonjs/sdk/util/match-pattern.js
 lib/firefox/modules/commonjs/sdk/util/object.js
@@ -2921,6 +2927,7 @@ lib/firefox/modules/commonjs/sdk/worker/utils.js
 lib/firefox/modules/commonjs/sdk/zip/utils.js
 lib/firefox/modules/commonjs/test.js
 lib/firefox/modules/commonjs/toolkit/loader.js
+lib/firefox/modules/commonjs/toolkit/require.js
 lib/firefox/modules/ctypes.jsm
 lib/firefox/modules/debug.js
 lib/firefox/modules/devtools/Console.jsm
