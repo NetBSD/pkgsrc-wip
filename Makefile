@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5964 2014/11/03 22:02:40 ryo-on Exp $
+# $Id: Makefile,v 1.5965 2014/11/07 13:10:27 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1132,7 +1132,6 @@ SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
 SUBDIR+=	hs-quickcheck-instances
 SUBDIR+=	hs-readline
-SUBDIR+=	hs-reflection
 SUBDIR+=	hs-regex-compat
 SUBDIR+=	hs-regex-tdfa
 SUBDIR+=	hs-regional-pointers
