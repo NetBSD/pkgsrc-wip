@@ -1,0 +1,2 @@
+Supports easy switching of the current ruby interpreter.
+Like RVM but written in shell and very small. ~90 LOC
