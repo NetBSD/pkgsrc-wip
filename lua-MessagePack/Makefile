@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.1 2014/11/07 19:20:13 jonthn Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/08 08:49:01 jonthn Exp $
 
-DISTNAME=	0.3.1
-PKGNAME=	${LUA_PKGPREFIX}-MessagePack-${DISTNAME}
+DISTNAME=	lua-MessagePack-0.3.1
+PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}/1}
 CATEGORIES=	devel
-MASTER_SITES=   https://github.com/fperrad/lua-MessagePack/archive/
+MASTER_SITES=   -https://github.com/fperrad/lua-MessagePack/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 HOMEPAGE=	http://fperrad.github.io/lua-MessagePack
 COMMENT=	MessagePack library for Lua
 LICENSE=	mit
 
-WRKSRC=         ${WRKDIR}/lua-MessagePack-${DISTNAME}
 NO_BUILD=       yes
 NO_CONFIGURE=	yes
 
-.include "../../lang/lua/luaversion.mk"
 INSTALLATION_DIRS+=	${LUA_LDIR}
 
+.include "../../lang/lua/luaversion.mk"
 # Just link src dir src{version} to simplify install target
 post-extract:
 	${LN} -s ${WRKSRC}/src ${WRKSRC}/src5.1
