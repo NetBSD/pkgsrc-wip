@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.145 2014/10/21 21:54:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.146 2014/11/10 12:15:06 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -849,6 +849,7 @@ share/emacs/${PKGVERSION}/etc/refcards/cs-survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/de-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/emacsver.tex
+share/emacs/${PKGVERSION}/etc/refcards/emacsver.tex.in
 share/emacs/${PKGVERSION}/etc/refcards/fr-dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/fr-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/fr-survival.tex
@@ -1178,10 +1179,14 @@ share/emacs/${PKGVERSION}/lisp/cedet/ede/autoconf-edit.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/autoconf-edit.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/base.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/base.elc
+share/emacs/${PKGVERSION}/lisp/cedet/ede/config.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/ede/config.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/cpp-root.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/cpp-root.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/custom.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/custom.elc
+share/emacs/${PKGVERSION}/lisp/cedet/ede/detect.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/ede/detect.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/dired.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/dired.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/emacs.el.gz
