@@ -1,10 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mopherd.sh,v 1.3 2014/11/06 17:25:53 pebog Exp $
+# $NetBSD: mopherd.sh,v 1.4 2014/11/10 21:25:56 pebog Exp $
 #
 # PROVIDE: mopherd
 # REQUIRE: DAEMON
 # BEFORE:  mail
+# KEYWORD: shutdown
 
 $_rc_subr_loaded . /etc/rc.subr
 
