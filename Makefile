@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5966 2014/11/07 19:25:35 steven43126 Exp $
+# $Id: Makefile,v 1.5967 2014/11/10 11:33:55 ahp-nils Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -148,6 +148,7 @@ SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
+SUBDIR+=	asql
 SUBDIR+=	aten
 SUBDIR+=	atftp
 SUBDIR+=	ati-xfree86-bin
