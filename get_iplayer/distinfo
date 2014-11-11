@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2013/07/06 14:17:50 shattered Exp $
-
-SHA1 (get_iplayer-2.82.tar.gz) = bfc207172fb3460ab7bb8cabe28169889fee17e7
-RMD160 (get_iplayer-2.82.tar.gz) = 0b6d70211d7190005c3b9931e6499829627580fe
-Size (get_iplayer-2.82.tar.gz) = 248177 bytes
-SHA1 (patch-aa) = a1bb6c1f59006657e76e3975ec83879f284d840d
-SHA1 (patch-windows_get_iplayer_setup.cgi) = 1f87f0bb74c5883e875cb7676dfd61461dc2cbd0
