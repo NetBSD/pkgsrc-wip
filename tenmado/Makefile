@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.10 2014/11/11 20:11:23 blef Exp $
 
-DISTNAME=		tenmado-0.6
-PKGREVISION=		3
+DISTNAME=		tenmado-0.10
 CATEGORIES=		games
 MASTER_SITES=		http://www.interq.or.jp/libra/oohara/tenmado/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.interq.or.jp/libra/oohara/tenmado/
 COMMENT=		Vertical scrolling shoot'em-up game
-
-PKG_DESTDIR_SUPPORT=	none
+LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
