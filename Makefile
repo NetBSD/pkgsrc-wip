@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5968 2014/11/11 21:53:58 shattered Exp $
+# $Id: Makefile,v 1.5969 2014/11/12 18:45:16 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -670,7 +670,6 @@ SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace
 SUBDIR+=	flv2mpeg4
 SUBDIR+=	flvmeta
-SUBDIR+=	flvstreamer
 SUBDIR+=	flyback
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
