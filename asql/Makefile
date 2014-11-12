@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/11/10 11:33:05 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/12 09:01:38 ahp-nils Exp $
 
-DISTNAME=	release-${VERSION}
-PKGNAME=	asql-${VERSION}
+DISTNAME=	asql-${VERSION}
 CATEGORIES=	www databases
-MASTER_SITES=	http://git.steve.org.uk/skx/asql/archive/
+MASTER_SITES=	http://www.steve.org.uk/Software/asql/
 
 MAINTAINER=	ahp-nils@users.sourceforge.net
 HOMEPAGE=	http://www.steve.org.uk/Software/asql/
