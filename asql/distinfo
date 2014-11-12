@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/11/10 13:27:30 ahp-nils Exp $
+$NetBSD: distinfo,v 1.3 2014/11/12 09:23:24 ahp-nils Exp $
 
-SHA1 (release-1.7.tar.gz) = d0356a3c57f878441d063910c8d93aa5948065ea
-RMD160 (release-1.7.tar.gz) = 2132c69376ea858fea7b398c7b8e9ffbb3c0beaf
-Size (release-1.7.tar.gz) = 17093 bytes
+SHA1 (asql-1.7.tar.gz) = 48df040c125996f2398ba14e3ade2981cc172c5f
+RMD160 (asql-1.7.tar.gz) = 16a28ddcb89b4c011e4a1b1d02a0778a644d3947
+Size (asql-1.7.tar.gz) = 17096 bytes
