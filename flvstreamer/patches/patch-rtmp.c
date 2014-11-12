@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2014/11/12 17:48:51 khorben Exp $
+$NetBSD: patch-rtmp.c,v 1.1 2014/11/12 17:53:45 khorben Exp $
 
 Fix build on NetBSD
 
