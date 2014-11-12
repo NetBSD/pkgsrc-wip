@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/06 22:56:13 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/11/12 10:27:13 thomasklausner Exp $
 share/doc/auto-complete/Makefile
 share/doc/auto-complete/ac-fuzzy.png
 share/doc/auto-complete/ac-isearch.png
@@ -18,7 +18,7 @@ ${EMACS_LISPPREFIX}/auto-complete/ac-dict/erlang-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/go-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/haskell-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/java-mode
-${EMACS_LISPPREFIX}/auto-complete/ac-dict/javascript-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/js-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/lua-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/php-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/python-mode
