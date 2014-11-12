@@ -12,9 +12,11 @@ way.
 am guilty ;-) 
 
 4) Tested on:
-a) NetBSD current (7.99.1) amd64 (see test_summary.log).
+a) NetBSD 7.0_BETA amd64 (see test_summary.log).
+
+b) NetBSD 7.99.1 amd64 (see last test_summary.log).
  
-b) Debian jessie amd64, where it fails with the same error message
+c) Debian jessie amd64, where it fails with the same error message
 as lang/gcc49:
 
 /bin/bash ../../../../gcc-5-20141026/libgcc/../mkinstalldirs 32

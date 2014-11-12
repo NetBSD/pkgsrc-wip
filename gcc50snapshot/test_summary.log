@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 216720
+LAST_UPDATED: Obtained from SVN: trunk revision 217269
 
 Native configuration is x86_64--netbsd
 
@@ -11,26 +11,26 @@ FAIL: g++.dg/cdce3.C  -std=gnu++98 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C  -std=gnu++98 compilation failed to produce executable
 FAIL: g++.dg/cdce3.C  -std=gnu++11 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C  -std=gnu++11 compilation failed to produce executable
-FAIL: g++.dg/cdce3.C  -std=gnu++1y (test for excess errors)
-UNRESOLVED: g++.dg/cdce3.C  -std=gnu++1y compilation failed to produce executable
+FAIL: g++.dg/cdce3.C  -std=gnu++14 (test for excess errors)
+UNRESOLVED: g++.dg/cdce3.C  -std=gnu++14 compilation failed to produce executable
 FAIL: g++.dg/ipa/devirt-42.C  -std=gnu++98  scan-tree-dump-times optimized "return 2" 2
 FAIL: g++.dg/ipa/devirt-42.C  -std=gnu++11  scan-tree-dump-times optimized "return 2" 2
-FAIL: g++.dg/ipa/devirt-42.C  -std=gnu++1y  scan-tree-dump-times optimized "return 2" 2
+FAIL: g++.dg/ipa/devirt-42.C  -std=gnu++14  scan-tree-dump-times optimized "return 2" 2
 FAIL: g++.dg/guality/pr55665.C   -O2  line 23 p == 40
 FAIL: g++.dg/guality/pr55665.C   -O3 -fomit-frame-pointer  line 23 p == 40
 FAIL: g++.dg/guality/pr55665.C   -O3 -g  line 23 p == 40
 FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++98 (test for excess errors)
 FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++11 (test for excess errors)
-FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++1y (test for excess errors)
+FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++14 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		83369
+# of expected passes		83465
 # of unexpected failures	12
-# of expected failures		257
+# of expected failures		247
 # of unresolved testcases	3
-# of unsupported tests		3226
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/g++/../../xg++  version 5.0.0 20141026 (experimental) (GCC) 
+# of unsupported tests		3239
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/g++/../../xg++  version 5.0.0 20141109 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -43,6 +43,14 @@ FAIL: gcc.c-torture/execute/20030125-1.c   -O3 -g  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -Os  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -O3 -fomit-frame-pointer  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -O3 -g  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -Os  execution test
+WARNING: program timed out.
+FAIL: gcc.dg/atomic/c11-atomic-exec-5.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
 FAIL: gcc.dg/20021014-1.c (test for excess errors)
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
 FAIL: gcc.dg/builtins-55.c (test for excess errors)
@@ -440,6 +448,14 @@ FAIL: gcc.dg/torture/fp-int-convert-float128.c   -O2 -flto -fuse-linker-plugin -
 UNRESOLVED: gcc.dg/torture/fp-int-convert-float128.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
 UNRESOLVED: gcc.dg/tree-prof/peel-1.c scan-rtl-dump loop2_unroll "Considering simply peeling loop"
 FAIL: gcc.dg/tree-ssa/foldaddr-1.c scan-tree-dump-times original "return 0" 1
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _i8_v1 _int8_t\$
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _i16_v1 _int16_t\$
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _i32_v1 _int32_t\$
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _i64_v1 _int64_t\$
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _ui8_v1 _uint8_t\$
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _iu16_v1 _uint16_t\$
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _iu32_v1 _uint32_t\$
+FAIL: gcc.misc-tests/godump-1.c scan-file (?n)^var _iu64_v1 _uint64_t\$
 FAIL: gcc.target/i386/avx512f-ceil-sfix-vec-2.c scan-assembler vrndscalepd[^\\n]*zmm[0-9]
 FAIL: gcc.target/i386/avx512f-ceil-sfix-vec-2.c scan-assembler vcvttpd2dq[^\\n]*zmm[0-9]
 FAIL: gcc.target/i386/avx512f-floor-sfix-vec-2.c scan-assembler vrndscalepd[^\\n]*zmm[0-9]
@@ -457,36 +473,18 @@ UNRESOLVED: gcc.target/i386/pr63618.c compilation failed to produce executable
 
 		=== gcc Summary ===
 
-# of expected passes		104010
-# of unexpected failures	293
+# of expected passes		107124
+# of unexpected failures	305
 # of unexpected successes	33
-# of expected failures		266
+# of expected failures		272
 # of unresolved testcases	92
-# of unsupported tests		2047
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20141026 (experimental) (GCC) 
+# of unsupported tests		2550
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20141109 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
 
 Running target unix
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 55)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 57)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 59)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 61)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 63)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 65)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 67)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 69)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 71)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 73)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 75)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 77)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 79)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 81)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 83)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 87)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O   (test for errors, line 89)
-FAIL: gfortran.dg/coarray_collectives_14.f90   -O  (test for excess errors)
 FAIL: gfortran.dg/default_format_2.f90   -O0  execution test
 FAIL: gfortran.dg/default_format_2.f90   -O1  execution test
 FAIL: gfortran.dg/default_format_2.f90   -O2  execution test
@@ -527,12 +525,12 @@ FAIL: gfortran.dg/graphite/pr42393.f90   -O  (test for excess errors)
 
 		=== gfortran Summary ===
 
-# of expected passes		46740
-# of unexpected failures	45
+# of expected passes		46757
+# of unexpected failures	27
 # of expected failures		52
 # of unresolved testcases	9
 # of unsupported tests		106
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 5.0.0 20141026 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 5.0.0 20141109 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -544,7 +542,7 @@ Running target unix
 # of expected passes		1439
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 5.0.0 20141026 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 5.0.0 20141109 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -560,7 +558,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20141026 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20141109 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -574,13 +572,10 @@ Running target unix
 
 
 Running target unix
-WARNING: program timed out.
-FAIL: libgomp.c++/affinity-1.C execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		3274
-# of unexpected failures	1
+# of expected passes		3275
 # of unsupported tests		22
 		=== libitm tests ===
 
@@ -601,9 +596,20 @@ Running target unix
 WARNING: program timed out.
 FAIL: 20_util/hash/chi2_q_uniform_random.cc execution test
 FAIL: 22_locale/ctype_base/11844.cc execution test
+FAIL: 23_containers/deque/allocator/move_assign.cc execution test
+FAIL: 23_containers/deque/requirements/dr438/assign_neg.cc  (test for errors, line 1859)
+FAIL: 23_containers/deque/requirements/dr438/assign_neg.cc (test for excess errors)
+FAIL: 23_containers/deque/requirements/dr438/constructor_1_neg.cc  (test for errors, line 1792)
+FAIL: 23_containers/deque/requirements/dr438/constructor_1_neg.cc (test for excess errors)
+FAIL: 23_containers/deque/requirements/dr438/constructor_2_neg.cc  (test for errors, line 1792)
+FAIL: 23_containers/deque/requirements/dr438/constructor_2_neg.cc (test for excess errors)
+FAIL: 23_containers/deque/requirements/dr438/insert_neg.cc  (test for errors, line 1943)
+FAIL: 23_containers/deque/requirements/dr438/insert_neg.cc (test for excess errors)
 FAIL: 26_numerics/complex/13450.cc (test for excess errors)
 UNRESOLVED: 26_numerics/complex/13450.cc compilation failed to produce executable
 FAIL: 26_numerics/headers/cmath/c99_classification_macros_c.cc (test for excess errors)
+FAIL: 28_regex/traits/char/isctype.cc execution test
+FAIL: 28_regex/traits/wchar_t/isctype.cc execution test
 FAIL: 30_threads/async/42819.cc execution test
 FAIL: 30_threads/async/49668.cc execution test
 FAIL: 30_threads/async/54297.cc execution test
@@ -650,26 +656,20 @@ FAIL: 30_threads/shared_future/members/wait_for.cc execution test
 FAIL: 30_threads/shared_future/members/wait_until.cc execution test
 FAIL: tr1/5_numerical_facilities/special_functions/08_cyl_bessel_i/check_nan.cc (test for excess errors)
 UNRESOLVED: tr1/5_numerical_facilities/special_functions/08_cyl_bessel_i/check_nan.cc compilation failed to produce executable
-FAIL: tr1/5_numerical_facilities/special_functions/09_cyl_bessel_j/check_nan.cc (test for excess errors)
-UNRESOLVED: tr1/5_numerical_facilities/special_functions/09_cyl_bessel_j/check_nan.cc compilation failed to produce executable
-FAIL: tr1/5_numerical_facilities/special_functions/11_cyl_neumann/check_nan.cc (test for excess errors)
-UNRESOLVED: tr1/5_numerical_facilities/special_functions/11_cyl_neumann/check_nan.cc compilation failed to produce executable
-FAIL: tr1/5_numerical_facilities/special_functions/22_sph_legendre/check_nan.cc (test for excess errors)
-UNRESOLVED: tr1/5_numerical_facilities/special_functions/22_sph_legendre/check_nan.cc compilation failed to produce executable
 
 		=== libstdc++ Summary ===
 
-# of expected passes		9094
-# of unexpected failures	52
+# of expected passes		9117
+# of unexpected failures	60
 # of expected failures		67
-# of unresolved testcases	5
+# of unresolved testcases	2
 # of unsupported tests		641
 
-Compiler version: 5.0.0 20141026 (experimental) (GCC) 
+Compiler version: 5.0.0 20141109 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-nls --with-libiconv-prefix=/usr --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc50snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc50snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --prefix=/usr/pkg/gcc50snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc50snapshot/info --mandir=/usr/pkg/gcc50snapshot/man
 EOF
-Mail -s "Results for 5.0.0 20141026 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 5.0.0 20141109 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
