@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2014/11/10 10:03:26 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/11/12 09:05:51 ahp-nils Exp $
 bin/fail2ban-client
 bin/fail2ban-regex
 bin/fail2ban-server
 bin/fail2ban-testcases
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${PKGNAME}-py2.7.egg-info
 ${PYSITELIB}/fail2ban/__init__.py
 ${PYSITELIB}/fail2ban/__init__.pyc
 ${PYSITELIB}/fail2ban/__init__.pyo
