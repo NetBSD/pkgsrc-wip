@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5969 2014/11/12 18:45:16 khorben Exp $
+# $Id: Makefile,v 1.5970 2014/11/13 15:05:25 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1965,6 +1965,7 @@ SUBDIR+=	p5-Catalyst-Model-LDAP
 SUBDIR+=	p5-Catalyst-Plugin-Authentication-CDBI
 SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-Htpasswd
 SUBDIR+=	p5-Catalyst-Plugin-Cache-FileCache
+SUBDIR+=	p5-Catalyst-Plugin-Compress-Zlib
 SUBDIR+=	p5-Catalyst-Plugin-DefaultEnd
 SUBDIR+=	p5-Catalyst-Plugin-Email
 SUBDIR+=	p5-Catalyst-Plugin-FillInForm
