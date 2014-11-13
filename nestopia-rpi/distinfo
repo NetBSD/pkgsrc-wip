@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2014/11/02 08:36:13 nsloss Exp $
+$NetBSD: distinfo,v 1.2 2014/11/13 22:45:39 nsloss Exp $
 
 SHA1 (Nestopia140src.zip) = ef85771132cc8652456727278df36f7068d238e0
 RMD160 (Nestopia140src.zip) = caecb991dfd459093b88b2abb84ac9bbd95ced63
@@ -13,6 +13,6 @@ SHA1 (patch-source_core_NstMemory.hpp) = 85fd117d18a5665b90f0127471d499560d90f5a
 SHA1 (patch-source_linux_auxio.cpp) = 96893246075b9f89f5535f56a10fc90071706bb0
 SHA1 (patch-source_linux_interface.c) = c9045559909d74eae9196e6c756c15c32e72ce18
 SHA1 (patch-source_linux_main.cpp) = 871cb54bba386be0ad97cbd88fefbf809f41cba6
-SHA1 (patch-source_linux_oss.cpp) = 08c4f9f3480f06f0e48cd92e19df9011744a328d
+SHA1 (patch-source_linux_oss.cpp) = ab581d834d7eeb6563831d1ddc470d4c49ef8515
 SHA1 (patch-source_linux_settings.cpp) = 2a807e039b83d8c6bfcf3365b16943a9326ab122
 SHA1 (patch-source_linux_settings.h) = c94bdae5d97923fd42c96720cc67857a9d4c7e41

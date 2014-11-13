@@ -1,8 +1,8 @@
-$NetBSD: patch-source_linux_oss.cpp,v 1.1 2014/11/02 08:36:13 nsloss Exp $
+$NetBSD: patch-source_linux_oss.cpp,v 1.2 2014/11/13 22:45:39 nsloss Exp $
 
 Remove dependancy on alsa.
 Set oss_nw flag for better performance.
-usleep from 50 milliseconds to 1 milliseconds for better performance on RPI
+Remove usleep for better performance on RPI
 --- source/linux/oss.cpp.orig	2008-06-25 14:33:29.000000000 +0000
 +++ source/linux/oss.cpp
 @@ -12,9 +12,11 @@
@@ -61,7 +61,7 @@ usleep from 50 milliseconds to 1 milliseconds for better performance on RPI
  	}
  
 -	usleep(50);
-+	usleep(1);
++	//usleep(50);
  #endif
  }
  
