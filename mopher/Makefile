@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2014/11/10 16:13:53 pebog Exp $
+# $NetBSD: Makefile,v 1.8 2014/11/13 13:38:45 pebog Exp $
 
 DISTNAME=		mopher-0.5.1
 CATEGORIES=		mail
 MASTER_SITES=		http://mopher.org/download/
 
 OWNER=			petar@smokva.net
-HOMEPAGE=		http://mopher.org
+HOMEPAGE=		http://mopher.org/
 COMMENT=		Versatile mail filter
 LICENSE=		mit
 
@@ -22,6 +22,7 @@ FILES_SUBST+=		MOPHER_HOME=${MOPHER_HOME}
 FILES_SUBST+=		MOPHER_RUN=${MOPHER_RUN}
 FILES_SUBST+=		INSTALL=${INSTALL}
 
+USE_LANGUAGES=		c
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
