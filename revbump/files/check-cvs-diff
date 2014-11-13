@@ -15,7 +15,8 @@ sub usage(){
 
 sub main() {
     getopts('hv',\%opts);
-    my ($FILE) = $ARGV[0];
+    my ($FILE)  = 'cvs-diff';
+    if ($ARGV[0]) { $FILE = $ARGV[0]}
     my ($file_to_edit);
     my ($stay, $mod) = (0,0);
     my ($Makefile, $buildlink3, $other);
