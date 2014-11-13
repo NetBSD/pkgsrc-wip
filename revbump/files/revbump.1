@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.2 2014/11/06 07:06:25 makoto Exp $
+.\"	$NetBSD: revbump.1,v 1.3 2014/11/13 06:20:46 makoto Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013, 2014 The NetBSD Foundation, Inc.
 .\"
@@ -90,18 +90,15 @@ grep buildlink3.mk allbump | sed 's/.buildlink3.mk//' \*[Gt] bl3bump
 grep -e Makefile.common -e mk$ allbump | grep -v -e buildlink3.mk -e options.mk > commonbump
 replace-commonbump
 cat allbump commonbump.replaced | sed 's,/[^/]*$,,' | sort -u \*[Gt] makebump
-revbump \*[Lt] makebump \*[Gt] makebump.manual
+revbump \*[Lt] makebump | tee makebump.manual
 [if a package is listed in makebump.manual, handle the PKGREVISION bump manually]
-blbump \*[Lt] bl3bump \*[Gt] bl3bump.manual
+blbump \*[Lt] bl3bump | tee bl3bump.manual
 [handle the *ABI_DEPENDS* bumps in bl3bump.manual manually, usually none]
-cvs diff `cat makebump` | less
-[look for PYPKGPREFIX -\*[Gt] py27
- and RUBY_PKGPREFIX -\*[Gt] ruby200 expansions
- in buildlink files and any unrelated diffs you have in your
- local tree, and fix them]
+cvs diff -u `cat makebump` > cvs-diff
+check-cvs-diff 
 cvs diff `cat bl3bump makebump` | less
 cvs commit `cat bl3bump makebump`
-rm allbump bl3bump* makebump* commonbump*
+rm allbump bl3bump* makebump* commonbump* cvs-diff
 .Ed
 .Sh SEE ALSO
 .Xr blbump 1 ,

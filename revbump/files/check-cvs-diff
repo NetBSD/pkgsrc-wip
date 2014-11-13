@@ -1,0 +1,60 @@
+#!@PERL@ -w
+# -*- perl -*-
+#
+# read output of (cd /usr/pkgsrc; cvs diff -u ) and check if
+# py27 and ruby200 string are left in buildlink3.mk.
+# They are then modified to Variable representation.
+#"
+use strict;
+use Getopt::Std;
+our(@ARGV);
+my (%opts);
+
+sub usage(){
+}    
+
+sub main() {
+    getopts('hv',\%opts);
+    my ($FILE) = $ARGV[0];
+    my ($file_to_edit);
+    my ($stay, $mod) = (0,0);
+    my ($Makefile, $buildlink3, $other);
+    
+    open(FILE, $FILE) || die "Problem opening file $FILE: $!\n";
+    while(<FILE>){
+	# Looking for the +++ filename line in cvs diff (supposed to use 'cvs diff -u')
+	$file_to_edit = '';
+	if ( /^\+\+\+ (\S+)/) {
+	    $file_to_edit = $1; }
+	if ( $file_to_edit && -f $file_to_edit ) {
+	    if    ( $file_to_edit =~ /Makefile$/ )      { $Makefile++;}
+	    elsif ( $file_to_edit =~ /buildlink3.mk$/ ) { $buildlink3++;
+		#	    print __LINE__, ' ', $file_to_edit,"\n";
+		my ($new_file) = $file_to_edit. '.new';
+		my ($edit) = 0;
+		open(NEW,  "> $new_file" ) || print "Problem to write $edit: $! \n";
+		open(EDIT, $file_to_edit ) || print "Problem opening file $file_to_edit: $! \n";
+		while(<EDIT>) {
+		    if ( /^BUILDLINK.*py27/ )    {  $_=~    s/py27/\${PYPKGPREFIX}/   ; $edit++;}
+		    if ( /^BUILDLINK.*ruby200/ ) {  $_=~ s/ruby200/\${RUBY_PKGPREFIX}/ ; $edit++;}
+		    print NEW $_;
+		}
+		close(EDIT);
+		close(NEW);
+		if ($edit) { unlink $file_to_edit; rename $new_file, $file_to_edit; $mod++;}
+		else {$stay++; };
+	    } else  { $other++; print $file_to_edit,"\n"}
+	    }
+        }
+	close(FILE);
+	print STDERR "Makefile:       $Makefile\n";
+	print STDERR "buildlink3.mk:  $buildlink3\n";
+	print STDERR "Others:         $other\n";
+
+	print STDERR "Modified:       $mod\n";
+	print STDERR "Untouched:      $stay\n";
+}
+
+main();
+
+exit;

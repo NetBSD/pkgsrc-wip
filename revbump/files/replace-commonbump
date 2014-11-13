@@ -1,4 +1,5 @@
 #!@PERL@ -w
+# -*- perl -*-
 # The process has two steps
 # (1)
 # Travers all the files (with some filtering) over /usr/pkgsrc
@@ -46,7 +47,7 @@ sub show_var($$){
     my($varname) = shift;
     my($pkgdir)  = shift;
     my($value);
-    chdir $pkgdir;
+    #chdir $pkgdir;
     open(MAKE, '-|', "cd $PKGSRCDIR/$pkgdir ; make show-var VARNAME=$varname");
     $value = <MAKE>;
     close(MAKE);
@@ -145,8 +146,9 @@ sub ShowResults() {
     open(REPLACED, "> $replaced") || die "problem open to write: $replaced: $!\n";
     foreach my $file (@TABLE) {
 	chomp($file);
-	if ($file =~ /^\s*$/  ) { next; }	# skip empty line, in case
-	if (grep ($file, $HASH{$file}) > 0) {	# refere found ( separated with ';')
+	if ($file =~ /^\s*$/  ) { next; }	# Skip empty line, in case
+	if ($HASH{$file} && 			# To avoid 'Use of uninitialized value in split at ..'
+	    grep ($file, $HASH{$file}) > 0) {	# referer found ( separated with ';')
 	    my(@list) = split ';', $HASH{$file};
 	    foreach my $i (0..$#list) {	    
 		print REPLACED "$list[$i]\n";	# write the list into REPLACED handle

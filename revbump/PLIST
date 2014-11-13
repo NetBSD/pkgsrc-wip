@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/06 06:51:27 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/13 06:20:45 makoto Exp $
 bin/blbump
+bin/check-cvs-diff
 bin/finddepends
 bin/replace-commonbump
 bin/revbump

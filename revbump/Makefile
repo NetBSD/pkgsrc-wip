@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/11/11 14:29:43 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/13 06:20:45 makoto Exp $
 
-PKGNAME=		revbump-2.10rc00
+PKGNAME=		revbump-2.10rc01
 CATEGORIES=		pkgtools
 
 MAINTAINER=		wiz@NetBSD.org
@@ -16,22 +16,19 @@ USE_LANGUAGES=	# empty
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
+.for  i in  blbump finddepends revbump replace-commonbump check-cvs-diff
 	${SED} -e "s!@PERL@!${PERL5}!g" -e "s! make ! ${MAKE} !g" \
-		${FILESDIR}/blbump > ${WRKDIR}/blbump
-	${SED} -e "s!@PERL@!${PERL5}!g" -e "s! make ! ${MAKE} !g" \
-		${FILESDIR}/finddepends > ${WRKDIR}/finddepends
-	${SED} -e "s!@PERL@!${PERL5}!g"  -e "s! make ! ${MAKE} !g" \
-		${FILESDIR}/revbump > ${WRKDIR}/revbump
-	${SED} -e "s!@PERL@!${PERL5}!g"  -e "s! make ! ${MAKE} !g" \
-		${FILESDIR}/replace-commonbump > ${WRKDIR}/replace-commonbump
+		${FILESDIR}/$i > ${WRKDIR}/$i
+.endfor
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/blbump ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/blbump.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKDIR}/finddepends ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/finddepends.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKDIR}/revbump ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/revbump.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKDIR}/replace-commonbump ${DESTDIR}${PREFIX}/bin/replace-commonbump
+.for  i in  blbump finddepends revbump 
+	${INSTALL_SCRIPT} ${WRKDIR}/$i ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${FILESDIR}/${i}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endfor
+
+.for  i in  replace-commonbump check-cvs-diff
+	${INSTALL_SCRIPT} ${WRKDIR}/$i ${DESTDIR}${PREFIX}/bin
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
