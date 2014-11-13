@@ -1,5 +1,6 @@
-$NetBSD: patch-configure,v 1.4 2014/11/01 15:59:36 nros Exp $
+$NetBSD: patch-configure,v 1.5 2014/11/13 15:44:20 nros Exp $
 * pkgsarc doesn't use lib64 so don't set it (fixes build on linux)
+http://sf.net/p/qore/code/6817/
 * fix typo so that --with-sqlite3 works correctly
 http://sourceforge.net/p/qore/code/6348/
 --- configure.orig	2010-06-20 09:09:23.000000000 +0000

@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2014/11/01 15:59:36 nros Exp $
+$NetBSD: patch-configure,v 1.2 2014/11/13 15:44:20 nros Exp $
 pkgsrc doesn't use lib64 or target dirs so don't set them.
 fixes build on linux.
+http://sf.net/p/qore/code/6817/
 --- configure.orig	2014-10-31 21:56:41.605684184 +0000
 +++ configure
 @@ -15876,14 +15876,6 @@ if test "$enable_64bit" = "yes"; then
