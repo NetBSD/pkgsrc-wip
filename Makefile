@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5971 2014/11/13 17:43:52 noud4 Exp $
+# $Id: Makefile,v 1.5972 2014/11/13 20:01:54 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -614,6 +614,7 @@ SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
 SUBDIR+=	faast
 SUBDIR+=	fail2ban
+SUBDIR+=	fairymax
 SUBDIR+=	fakenes
 SUBDIR+=	fala
 SUBDIR+=	farsi-ttf

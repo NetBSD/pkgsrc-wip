@@ -1,0 +1,4 @@
+Fairy-Max is an AI, also called 'engine', for playing Chess variants.
+It is free open-source software. It was created for the purpose of empirically
+evaluating fairy pieces, by allowing those to participate amongst orthodox
+Chess pieces in Chess games aimed at checkmating an opponent royal piece.
