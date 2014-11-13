@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5970 2014/11/13 15:05:25 noud4 Exp $
+# $Id: Makefile,v 1.5971 2014/11/13 17:43:52 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2003,6 +2003,7 @@ SUBDIR+=	p5-Data-Random
 SUBDIR+=	p5-Data-Types
 SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Devel-Profiler
+SUBDIR+=	p5-Egg-Plugin-Crypt-CBC
 SUBDIR+=	p5-Email-AddressParser
 SUBDIR+=	p5-Encode-IMAPUTF7
 SUBDIR+=	p5-Encode-compat
