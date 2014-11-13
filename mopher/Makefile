@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/11/13 13:38:45 pebog Exp $
+# $NetBSD: Makefile,v 1.9 2014/11/13 17:13:17 pebog Exp $
 
 DISTNAME=		mopher-0.5.1
 CATEGORIES=		mail
@@ -27,7 +27,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--localstatedir=${MOPHER_HOME}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 .include "options.mk"
 
@@ -50,11 +50,19 @@ PKG_USERS=		${MOPHER_USER}:${MOPHER_GROUP}
 OWN_DIRS_PERMS+=	${MOPHER_HOME} ${MOPHER_USER} ${MOPHER_GROUP} 2755
 RCD_SCRIPTS+=		mopherd
 
-post-install:
+# FIXME: sent upstream; remove this on next upgrade
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_MESSAGE.conf=	Adding custom mopherd.conf
+SUBST_FILES.conf=	config/Makefile.in
+SUBST_SED.conf=		-e 's,mopherd.acl$$,& mopherd.conf,'
+
+# FIXME: sent upstream; remove this on next upgrade
+pre-build:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/mopherd.conf \
-		>${DESTDIR}${EGDIR}/mopherd.conf
+		>${WRKSRC}/config/mopherd.conf
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/mopherd.acl \
-		>${DESTDIR}${EGDIR}/mopherd.acl
+		>${WRKSRC}/config/mopherd.acl
 
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
