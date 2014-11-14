@@ -108,7 +108,7 @@ sub GenerateHash ($$) {
 		    my($value) = show_var($varname, $shortdir);
 		    $included =~ s/\${[^}]+}/$value/;
 		    if ($value eq '') {
-			print STDERR __LINE__ , ' ', $varname, ' -> ', $value, ' at ', $shortdir, "\n";
+			print STDERR __LINE__ , ' Value is empty ', $varname, ' -> ', $value, ' at ', $shortdir, "\n";
 		    }
 		}
 		print STDERR __LINE__ , ' ', $shortname, ' -> ', $included,': ',$_ ,"\n" if $debug;

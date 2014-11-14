@@ -9,14 +9,16 @@ use strict;
 use Getopt::Std;
 our(@ARGV);
 my (%opts);
+my ($PKGSRCDIR) =  '/usr/pkgsrc';
 
 sub usage(){
 }    
 
 sub main() {
-    getopts('hv',\%opts);
+    getopts('hvp:',\%opts);
     my ($FILE)  = 'cvs-diff';
     if ($ARGV[0]) { $FILE = $ARGV[0]}
+    if ($opts{'p'}) { $PKGSRCDIR = $opts{'p'}; }
     my ($file_to_edit);
     my ($stay, $mod) = (0,0);
     my ($Makefile, $buildlink3, $other);
@@ -37,25 +39,34 @@ sub main() {
 		open(EDIT, $file_to_edit ) || print "Problem opening file $file_to_edit: $! \n";
 		while(<EDIT>) {
 		    if ( /^BUILDLINK.*py27/ )    {  $_=~    s/py27/\${PYPKGPREFIX}/   ; $edit++;}
+    		    if ( /^BUILDLINK.*py34/ )    {  $_=~    s/py34/\${PYPKGPREFIX}/   ;
+						    print STDERR "py34 found at $file_to_edit\n";
+						    ; $edit++;}
 		    if ( /^BUILDLINK.*ruby200/ ) {  $_=~ s/ruby200/\${RUBY_PKGPREFIX}/ ; $edit++;}
 		    print NEW $_;
 		}
 		close(EDIT);
 		close(NEW);
-		if ($edit) { unlink $file_to_edit; rename $new_file, $file_to_edit; $mod++;}
-		else {$stay++; };
+		if ($edit) { unlink $file_to_edit; 
+			     rename $new_file, $file_to_edit;
+			     $mod++;}
+		else {
+		    $stay++;
+		    unlink $new_file; };
 	    } else  { $other++; print $file_to_edit,"\n"}
 	    }
         }
 	close(FILE);
-	print STDERR "Makefile:       $Makefile\n";
-	print STDERR "buildlink3.mk:  $buildlink3\n";
-	print STDERR "Others:         $other\n";
+    printf STDERR "Makefile:      %4d\n", $Makefile;
+    printf STDERR "buildlink3.mk: %4d\n", $buildlink3;
+    printf STDERR "  Modified:    %4d\n", $mod;
+    printf STDERR "  Untouched:   %4d\n", $stay;
+    printf STDERR "Others:        %4d\n", $other;
 
-	print STDERR "Modified:       $mod\n";
-	print STDERR "Untouched:      $stay\n";
 }
 
+# for using rename, unlink 
+chdir $PKGSRCDIR;
 main();
 
 exit;
