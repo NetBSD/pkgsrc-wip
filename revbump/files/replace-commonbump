@@ -26,6 +26,9 @@ my($common_bump) = 0;		# count, not used for now (yet)
 my(%opts);
 our(@ARGV);
 
+my ($FILE)	= __FILE__;
+    $FILE	=~ s,.*/([^/]+),$1,;	# pick leafname from __FILE__
+
 my($replaced) = 'commonbump.replaced';
 
 sub usage() {
@@ -52,6 +55,7 @@ sub show_var($$){
     $value = <MAKE>;
     close(MAKE);
     chomp($value);
+    if ($value =~ /know how to make/ ) { print STDERR $value, '(', $pkgdir,')',"\n";}
     return $value
 }
 
@@ -108,7 +112,8 @@ sub GenerateHash ($$) {
 		    my($value) = show_var($varname, $shortdir);
 		    $included =~ s/\${[^}]+}/$value/;
 		    if ($value eq '') {
-			print STDERR __LINE__ , ' Value is empty ', $varname, ' -> ', $value, ' at ', $shortdir, "\n";
+			print STDERR 
+$FILE, ': ', __LINE__, ' Value ${', $varname, '} is emtpy at ', $shortdir, "\n";
 		    }
 		}
 		print STDERR __LINE__ , ' ', $shortname, ' -> ', $included,': ',$_ ,"\n" if $debug;

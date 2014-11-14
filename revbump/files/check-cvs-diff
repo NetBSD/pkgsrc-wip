@@ -2,29 +2,46 @@
 # -*- perl -*-
 #
 # read output of (cd /usr/pkgsrc; cvs diff -u ) and check if
-# py27 and ruby200 string are left in buildlink3.mk.
+# py{27,34} and ruby200 string are left in buildlink3.mk.
 # They are then modified to Variable representation.
 #"
 use strict;
 use Getopt::Std;
 our(@ARGV);
 my (%opts);
-my ($PKGSRCDIR) =  '/usr/pkgsrc';
 
 sub usage(){
+    print <<HELP;
+    $0: Read cvs diff -u output (of named file) and substitute
+	if py27, py34 or ruby200 is found.
+    Synopsys:
+        $0  [-h] [-p pkgsrc_dir] [-v] [cvs-diff-u_output_file]
+    Where:
+        -h  Show this help
+        -p  pkgsrc directory other than /usr/pkgsrc
+        -v  verbose (not actually implemented yet)
+        cvs-diff-u_output_file The name of the file 'cvs diff -u' 
+        output (default cvs-diff) 
+HELP
 }    
 
 sub main() {
-    getopts('hvp:',\%opts);
-    my ($FILE)  = 'cvs-diff';
-    if ($ARGV[0]) { $FILE = $ARGV[0]}
-    if ($opts{'p'}) { $PKGSRCDIR = $opts{'p'}; }
+    my ($PKGSRCDIR) =  '/usr/pkgsrc';
+    my ($CVS_DIFF)  = 'cvs-diff';
     my ($file_to_edit);
     my ($stay, $mod) = (0,0);
     my ($Makefile, $buildlink3, $other);
+
+    getopts('hvp:',\%opts);
+    if ($ARGV[0])   { $CVS_DIFF = $ARGV[0]}
+    if ($opts{'p'}) { $PKGSRCDIR = $opts{'p'}; }
+    if ($opts{'h'}) { usage() ; exit ;}
+
+   # for using rename, unlink 
+    chdir $PKGSRCDIR;
     
-    open(FILE, $FILE) || die "Problem opening file $FILE: $!\n";
-    while(<FILE>){
+    open(CVS_DIFF, $CVS_DIFF) || die "Problem opening file $CVS_DIFF: $!\n";
+    while(<CVS_DIFF>){
 	# Looking for the +++ filename line in cvs diff (supposed to use 'cvs diff -u')
 	$file_to_edit = '';
 	if ( /^\+\+\+ (\S+)/) {
@@ -35,12 +52,12 @@ sub main() {
 		#	    print __LINE__, ' ', $file_to_edit,"\n";
 		my ($new_file) = $file_to_edit. '.new';
 		my ($edit) = 0;
-		open(NEW,  "> $new_file" ) || print "Problem to write $edit: $! \n";
-		open(EDIT, $file_to_edit ) || print "Problem opening file $file_to_edit: $! \n";
+		open(NEW,  "> $new_file" ) || print STDERR "Problem to write $edit: $! \n";
+		open(EDIT, $file_to_edit ) || print STDERR "Problem opening file $file_to_edit: $! \n";
 		while(<EDIT>) {
 		    if ( /^BUILDLINK.*py27/ )    {  $_=~    s/py27/\${PYPKGPREFIX}/   ; $edit++;}
     		    if ( /^BUILDLINK.*py34/ )    {  $_=~    s/py34/\${PYPKGPREFIX}/   ;
-						    print STDERR "py34 found at $file_to_edit\n";
+						    print STDERR "   py34 found at $file_to_edit\n";
 						    ; $edit++;}
 		    if ( /^BUILDLINK.*ruby200/ ) {  $_=~ s/ruby200/\${RUBY_PKGPREFIX}/ ; $edit++;}
 		    print NEW $_;
@@ -53,20 +70,17 @@ sub main() {
 		else {
 		    $stay++;
 		    unlink $new_file; };
-	    } else  { $other++; print $file_to_edit,"\n"}
+	    } else  { $other++; print STDERR "  (other) ", $file_to_edit,"\n"}
 	    }
         }
-	close(FILE);
+	close(CVS_DIFF);
     printf STDERR "Makefile:      %4d\n", $Makefile;
     printf STDERR "buildlink3.mk: %4d\n", $buildlink3;
     printf STDERR "  Modified:    %4d\n", $mod;
     printf STDERR "  Untouched:   %4d\n", $stay;
-    printf STDERR "Others:        %4d\n", $other;
-
+    printf STDERR "Other:         %4d\n", $other;
 }
 
-# for using rename, unlink 
-chdir $PKGSRCDIR;
 main();
-
 exit;
+
