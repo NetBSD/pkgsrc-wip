@@ -1,0 +1,2 @@
+Catalyst::Component::InstancePerContext - Return a new instance a component
+on each request.

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5977 2014/11/14 10:25:55 noud4 Exp $
+# $Id: Makefile,v 1.5978 2014/11/14 14:37:56 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1958,6 +1958,7 @@ SUBDIR+=	p5-CGI-Untaint-email
 SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Catalyst-Action-REST
+SUBDIR+=	p5-Catalyst-Component-InstancePerContext
 SUBDIR+=	p5-Catalyst-Engine-Apache
 SUBDIR+=	p5-Catalyst-Helper-Model-Email
 SUBDIR+=	p5-Catalyst-Log-Log4perl
