@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/04/29 20:12:31 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/14 17:39:54 outpaddling Exp $
 #
 
-DISTNAME=	auto-admin-0.3.3
+DISTNAME=	auto-admin-0.3.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
@@ -9,6 +9,7 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Automate common systems administration tasks
 #LICENSE=	original-bsd
+EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	# none
 

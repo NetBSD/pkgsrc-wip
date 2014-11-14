@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2013/12/14 17:02:44 outpaddling Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2014/11/14 17:39:55 outpaddling Exp $
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-insert-line
 sbin/auto-ldap-client-setup
+sbin/auto-register-dhcp-hostname
 sbin/auto-replace-file
+sbin/auto-ssh-authorize
