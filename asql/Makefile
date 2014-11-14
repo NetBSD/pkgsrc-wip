@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/12 09:01:38 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/14 18:21:13 ahp-nils Exp $
 
 DISTNAME=	asql-${VERSION}
 CATEGORIES=	www databases
@@ -21,10 +21,6 @@ WRKSRC=		${WRKDIR}/asql-${VERSION}
 
 REPLACE_PERL+=	bin/asql
 REPLACE_PERL+=	bin/make-cmds
-
-do-extract:
-	${MKDIR} ${WRKDIR}/${PKGNAME}
-	tar xzf ${DISTDIR}/${DISTNAME}.tar.gz -C ${WRKDIR}/${PKGNAME}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/asql ${DESTDIR}${PREFIX}/bin/asql
