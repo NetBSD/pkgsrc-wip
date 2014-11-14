@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/11/13 17:35:51 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/14 08:07:41 noud4 Exp $
 
 DISTNAME=	Catalyst-Plugin-Compress-Zlib-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MS/MSTROUT/}
 
 MAINTAINER=	noud4@users.sourceforge.net
-HOMEPAGE=	http://search.cpan.org/~mstrout/Catalyst-Plugin-Compress-Zlib-0.06/
+HOMEPAGE=	http://search.cpan.org/~mstrout/Catalyst-Plugin-Compress-Zlib/
 COMMENT=	Gzip compress response if client supports it.
 
 DEPENDS+=	p5-IO-Compress>=0:../../devel/p5-IO-Compress
