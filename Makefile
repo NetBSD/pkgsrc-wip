@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5981 2014/11/15 09:33:24 noud4 Exp $
+# $Id: Makefile,v 1.5982 2014/11/15 09:48:13 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2038,6 +2038,7 @@ SUBDIR+=	p5-IO-Lambda
 SUBDIR+=	p5-IO-Socket-Socks
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
+SUBDIR+=	p5-Iterator
 SUBDIR+=	p5-JavaScript-SpiderMonkey
 SUBDIR+=	p5-KyotoCabinet
 SUBDIR+=	p5-LWP-Protocol-socks
