@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/06/01 12:49:37 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2014/11/15 18:12:01 ahp-nils Exp $
 
-DISTNAME=		${VERSION}
-PKGNAME=		pelican-${DISTNAME}
+DISTNAME=		pelican-3.5.0
 CATEGORIES=		www textproc
-MASTER_SITES=		https://github.com/getpelican/pelican/archive/
+MASTER_SITES=		-https://github.com/getpelican/pelican/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		ahp-nils@users.sourceforge.net
@@ -20,9 +19,9 @@ DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-USE_TOOLS+=		bash:run
-VERSION=		3.3.0
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+USE_TOOLS+=		bash:run make:build
 
 PYTHON_VERSIONS_INCOMPATIBLE=26 32 # py-docutils
 
@@ -40,6 +39,28 @@ REPLACE_INTERPRETER+=		bash
 REPLACE.bash.old=			/usr/bin/env bash
 REPLACE.bash.new=			${TOOLS_PATH.bash}
 REPLACE_FILES.bash=			pelican/tools/templates/develop_server.sh.in
+
+DOCDIR=			${PREFIX}/share/doc/pelican
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1/ ${DOCDIR}
+MANPAGES=		pelican-themes.1 pelican-theming.1 pelican.1
+
+TXTDOCFILES=		changelog.txt content.txt contribute.txt faq.txt \
+			importer.txt index.txt install.txt internals.txt \
+			pelican-themes.txt plugins.txt publish.txt quickstart.txt \
+			report.txt settings.txt themes.txt tips.txt
+
+AUTO_MKDIRS=		yes
+
+post-build:
+	cd ${WRKSRC}/docs/ && make text man
+
+post-install:
+.for f in ${MANPAGES}
+	${INSTALL_DATA} ${WRKSRC}/docs/_build/man/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+.endfor
+.for i in ${TXTDOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/docs/_build/text/${i} ${DESTDIR}${DOCDIR}/
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

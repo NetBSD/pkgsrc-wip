@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2014/04/24 11:02:01 ahp-nils Exp $
+$NetBSD: distinfo,v 1.4 2014/11/15 18:12:01 ahp-nils Exp $
 
-SHA1 (3.3.0.zip) = 40ad9f50e22332425abdb87ae2c296022eb6af33
-RMD160 (3.3.0.zip) = 7d12e81a1c0051c77629372f8a86bafd0473c910
-Size (3.3.0.zip) = 786369 bytes
+SHA1 (pelican-3.5.0.zip) = 289ede08326f587b79dc53c58dad13633c6414aa
+RMD160 (pelican-3.5.0.zip) = 1d4c5849847bf97237363a1835479b44c0f70874
+Size (pelican-3.5.0.zip) = 1068553 bytes
