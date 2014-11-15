@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5984 2014/11/15 10:11:04 noud4 Exp $
+# $Id: Makefile,v 1.5985 2014/11/15 10:33:14 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2006,6 +2006,7 @@ SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBIx-Easy
 SUBDIR+=	p5-DBIx-Simple
 SUBDIR+=	p5-Dancer-Plugin-Database
+SUBDIR+=	p5-Data-DPath
 SUBDIR+=	p5-Data-Dumper
 SUBDIR+=	p5-Data-ObjectDriver
 SUBDIR+=	p5-Data-Properties
