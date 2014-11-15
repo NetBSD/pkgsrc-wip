@@ -1,5 +1,6 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2014/02/16 16:45:58 nros Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2014/11/15 10:44:50 nros Exp $
 * remove .a file
+http://sf.net/p/qore/code/6288/
 --- src/Makefile.in.orig	2013-01-07 10:21:11.000000000 +0000
 +++ src/Makefile.in
 @@ -279,6 +279,7 @@ AM_CPPFLAGS = $(QORE_CPPFLAGS)

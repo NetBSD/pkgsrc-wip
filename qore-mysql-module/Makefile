@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/25 14:49:09 nros Exp $
+# $NetBSD: Makefile,v 1.7 2014/11/15 10:44:50 nros Exp $
 
 DISTNAME=	qore-mysql-module-2.0.1
 PKGREVISION=	4
@@ -14,12 +14,13 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
 #install docs
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 post-install:
-	${CP} -R ${WRKSRC}/docs/mysql/html \
+	cd ${WRKSRC}/docs/mysql && ${PAX} -wr * \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "options.mk"

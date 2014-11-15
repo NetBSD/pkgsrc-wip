@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/28 17:48:26 nros Exp $
+# $NetBSD: Makefile,v 1.9 2014/11/15 10:44:50 nros Exp $
 
 DISTNAME=	qore-openldap-module-1.0
 PKGREVISION=	4
@@ -14,13 +14,13 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
 #install docs
 INSTALLATION_DIRS+=share/doc/${PKGBASE}
 post-install:
-	${CP} -R ${WRKSRC}/docs/openldap/html \
+	cd ${WRKSRC}/docs/openldap && ${PAX} -wr * \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}

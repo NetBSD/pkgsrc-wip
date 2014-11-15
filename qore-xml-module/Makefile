@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/28 13:15:11 nros Exp $
+# $NetBSD: Makefile,v 1.10 2014/11/15 10:44:50 nros Exp $
 
 DISTNAME=	qore-xml-module-1.2
 PKGREVISION=	4
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
 #This is needed in order to comply the with MIT license and binary distribution
@@ -25,7 +25,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${CP} -R ${WRKSRC}/docs/* \
+	cd ${WRKSRC}/docs && ${PAX} -wr * \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
