@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5989 2014/11/15 12:09:57 noud4 Exp $
+# $Id: Makefile,v 1.5990 2014/11/15 16:09:42 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1349,6 +1349,7 @@ SUBDIR+=	kyotocabinet
 SUBDIR+=	kyototycoon
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
+SUBDIR+=	labltk
 SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
 SUBDIR+=	lasi
