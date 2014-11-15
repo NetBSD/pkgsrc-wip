@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.5 2014/10/30 16:16:53 nros Exp $
+# $NetBSD: module.mk,v 1.6 2014/11/15 12:15:05 nros Exp $
 #
 # This file should be included in the makefile of packages that install
 # Qore modules.
@@ -21,9 +21,8 @@
 #			 version.
 #
 
-.PHONY: qore-module
-qore-module: post-install
-qore-version=${PKG_INFO} -E qore | ${SED} -e s/qore-// -e s/nb.//
+qore-module: post-install .PHONY
+qore-version=qore --short-version | ${SED} -e s/-.*//
 qore-module-api=qore --module-api
 qore-module-dir=qore --module-dir
 qore-latest-module-api=qore --latest-module-api
