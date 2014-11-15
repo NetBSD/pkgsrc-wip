@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/15 11:44:48 noud4 Exp $
+
+SHA1 (Data-DPath-Validator-0.093411.tar.gz) = 21e64879db5b9625d904820c9f1f241d0ae83bb8
+RMD160 (Data-DPath-Validator-0.093411.tar.gz) = e218bf848c681fdcb6cd183fa06c691ecaa34484
+Size (Data-DPath-Validator-0.093411.tar.gz) = 12336 bytes
