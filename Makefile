@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5985 2014/11/15 10:33:14 noud4 Exp $
+# $Id: Makefile,v 1.5986 2014/11/15 11:12:51 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2064,6 +2064,7 @@ SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-Module-Starter-Plugin-CGIApp
 SUBDIR+=	p5-MongoDB
+SUBDIR+=	p5-MooseX-Iterator
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-DBus-GLib
 SUBDIR+=	p5-Net-Delicious
