@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5983 2014/11/15 09:56:38 noud4 Exp $
+# $Id: Makefile,v 1.5984 2014/11/15 10:11:04 noud4 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2088,6 +2088,7 @@ SUBDIR+=	p5-Pod-Xhtml
 SUBDIR+=	p5-Proc-Fork
 SUBDIR+=	p5-Publican
 SUBDIR+=	p5-RTF-Writer
+SUBDIR+=	p5-Safe
 SUBDIR+=	p5-Spread
 SUBDIR+=	p5-Startup
 SUBDIR+=	p5-Sub-Recursive
