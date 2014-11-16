@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/11/16 22:59:08 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/16 23:44:02 jgoamakf Exp $
 
 DISTNAME=	herelib-${VERS}
 VERS=		109.35.02
@@ -12,10 +12,7 @@ HOMEPAGE=	https://github.com/janestreet/herelib/
 COMMENT=	Syntax extension for inserting the current location
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/herelib-${VERS}
-USE_TOOLS+=	gmake
-
-OCAML_USE_FINDLIB=	yes
+OCAML_USE_OASIS=	yes
 
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/ocaml.mk"

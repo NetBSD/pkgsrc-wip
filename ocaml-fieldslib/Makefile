@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/21 06:28:09 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/16 23:40:53 jgoamakf Exp $
 
 DISTNAME=	fieldslib-${VERS}
 VERS=		109.19.00
@@ -11,9 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/fieldslib/
 COMMENT=	Define first class values representing record fields
 LICENSE=	apache-2.0
-
-WRKSRC=         ${WRKDIR}/fieldslib-${VERS}
-USE_TOOLS+=     gmake
 
 OCAML_USE_OASIS=      yes
 

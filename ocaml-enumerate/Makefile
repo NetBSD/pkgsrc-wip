@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/21 02:36:49 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/16 23:34:26 jgoamakf Exp $
 
 DISTNAME=	enumerate-${VERS}
 VERS=		111.08.00
@@ -12,10 +12,11 @@ HOMEPAGE=	https://github.com/janestreet/enumerate/
 COMMENT=	Quotation expanders for enumerating finite types
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/enumerate-${VERS}
-USE_TOOLS+=	gmake
+#WRKSRC=		${WRKDIR}/enumerate-${VERS}
+#USE_TOOLS+=	gmake
 
-OCAML_USE_FINDLIB=	yes
+#OCAML_USE_FINDLIB=	yes
+OCAML_USE_OASIS=	yes
 
 .include "../../devel/ocaml-type_conv/buildlink3.mk"
 .include "../../mk/ocaml.mk"
