@@ -1,0 +1,8 @@
+Re:VIEW is a set of tools which converts easy-to-read text
+format into various formats. The input format is similar to
+either EWB, RD or Wiki. The output may be one of
+ * EPUB
+ * LaTeX(ptexlive)
+ * InDesign(IDGXML)
+ * plain text(TOPBuilder Text Markup Language)
+ * Inao(gihyo.jp original markup)
