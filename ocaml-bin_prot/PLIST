@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/16 02:23:11 jgoamakf Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/11/16 22:46:18 jgoamakf Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/bin_prot
 lib/ocaml/site-lib/bin_prot/META
 lib/ocaml/site-lib/bin_prot/bin_prot.a
 lib/ocaml/site-lib/bin_prot/bin_prot.cma
@@ -24,3 +25,4 @@ lib/ocaml/site-lib/bin_prot/std.ml
 lib/ocaml/site-lib/bin_prot/type_class.mli
 lib/ocaml/site-lib/bin_prot/utils.mli
 lib/ocaml/site-lib/bin_prot/write.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/bin_prot
