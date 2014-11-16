@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/21 06:29:08 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/16 22:59:08 jgoamakf Exp $
 
 DISTNAME=	herelib-${VERS}
 VERS=		109.35.02
@@ -17,5 +17,6 @@ USE_TOOLS+=	gmake
 
 OCAML_USE_FINDLIB=	yes
 
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
