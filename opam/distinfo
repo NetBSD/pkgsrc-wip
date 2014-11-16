@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/11/25 09:20:25 zul_ Exp $
-
-SHA1 (opam-full-1.1.0.tar.gz) = b6bfb5ed5f23134e8b0922e3d7317920f8e8bc7c
-RMD160 (opam-full-1.1.0.tar.gz) = 7aad774cc52f35df22835bed211fa5a0c9f8c77d
-Size (opam-full-1.1.0.tar.gz) = 2271477 bytes
