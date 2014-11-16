@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/11/16 22:46:18 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.5 2014/11/16 23:12:34 jgoamakf Exp $
 
 DISTNAME=	bin_prot-${VERS}
 VERS=		112.01.00
@@ -12,10 +12,6 @@ HOMEPAGE=	https://github.com/janestreet/bin_prot/
 COMMENT=	Read and write OCaml-values in a type-safe binary protocol
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/bin_prot-${VERS}
-USE_TOOLS+=	gmake
-
-#OCAML_USE_FINDLIB=	yes
 OCAML_USE_OASIS=	yes
 
 .include "../../devel/ocaml-type_conv/buildlink3.mk"
