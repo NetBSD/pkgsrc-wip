@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/27 08:20:58 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/17 01:25:53 jgoamakf Exp $
 
 DISTNAME=	sexplib-${VERS}
 VERS=		112.01.00
@@ -12,8 +12,8 @@ HOMEPAGE=	https://github.com/janestreet/sexplib/
 COMMENT=	S-Expressions with Type Converters for OCaml
 LICENSE=	modified-bsd AND apache-2.0
 
-WRKSRC=		${WRKDIR}/sexplib-${VERS}
-USE_TOOLS+=	gmake
+#WRKSRC=		${WRKDIR}/sexplib-${VERS}
+#USE_TOOLS+=	gmake
 
 #OCAML_USE_FINDLIB=	yes
 OCAML_USE_OASIS=	yes
