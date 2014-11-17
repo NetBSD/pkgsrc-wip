@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/02 05:06:57 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/17 11:48:22 jgoamakf Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	biniou-1.0.9
@@ -10,10 +10,10 @@ HOMEPAGE=	http://mjambon.com/biniou.html
 COMMENT=	Extensible binary serialization format
 LICENSE=	modified-bsd
 
-DEPENDS+=	ocaml-easy-format-[0-9]*:../../wip/ocaml-easy-format
-
 USE_TOOLS+=	gmake
 
-.include "../../lang/ocaml/buildlink3.mk"
-.include "../../devel/ocaml-findlib/buildlink3.mk"
+OCAML_USE_FINDLIB=	yes
+
+.include "../../wip/ocaml-easy-format/buildlink3.mk"
+.include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
