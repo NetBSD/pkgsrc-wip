@@ -1,4 +1,4 @@
-$NetBSD: patch-gr-audio_lib_CMakeLists.txt,v 1.1 2014/10/14 14:40:37 makoto Exp $
+$NetBSD: patch-gr-audio_lib_CMakeLists.txt,v 1.2 2014/11/17 13:51:06 makoto Exp $
 
 Patch and SUBST to disable/enable ALSA depending on PKGOPTIONS.
 

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:32 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/17 13:51:06 makoto Exp $
 
 PKGNAME=	gnuradio-trellis-${VERSION}
 COMMENT=	Trellis-based encoding and decoding algorithms for GNU Radio
 
-# (acutually, redundent for now)
-PKG_OPTIONS.gnuradio=
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 

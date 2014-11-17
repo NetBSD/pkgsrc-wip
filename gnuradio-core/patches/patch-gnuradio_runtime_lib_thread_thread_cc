@@ -1,4 +1,4 @@
-$NetBSD: patch-gnuradio_runtime_lib_thread_thread_cc,v 1.1 2014/09/18 00:43:30 makoto Exp $
+$NetBSD: patch-gnuradio_runtime_lib_thread_thread_cc,v 1.2 2014/11/17 13:51:06 makoto Exp $
 
 Extending for BSD
 
@@ -9,7 +9,7 @@ Extending for BSD
  
  #elif defined(macintosh) || defined(__APPLE__) || defined(__APPLE_CC__) || \
 -    defined(__FreeBSD__)
-+    defined(__FreeBSD__) || defined(__NetBSD__)
++    defined(__FreeBSD__) || defined(__NetBSD__) || defined(__solaris__)
  
  namespace gr {
    namespace thread {

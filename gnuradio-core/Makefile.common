@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.8 2014/10/16 13:48:01 makoto Exp $
-# This Makefile fragment is included at the top of package Makefiles for
+# $NetBSD: Makefile.common,v 1.9 2014/11/17 13:51:06 makoto Exp $
+# This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
 # used by wip/gnuradio-atsc/Makefile
@@ -63,6 +63,7 @@ PKG_SYSCONFSUBDIR=	gnuradio/conf.d
 
 LDFLAGS.DragonFly+=	-lboost_system
 LDFLAGS.SunOS+=		-lboost_system
+CXXFLAGS.SunOS+=	-pthreads
 
 INSTALLATION_DIRS+=	${EGDIR}
 
@@ -128,4 +129,3 @@ do-install:
 
 .include	"../../lang/python/application.mk"
 .include	"../../math/fftwf/buildlink3.mk"
-.include	"../../mk/pthread.builtin.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2014/10/14 14:40:37 makoto Exp $
+# $NetBSD: options.mk,v 1.16 2014/11/17 13:51:06 makoto Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=  ninja-build filter-design alsa
@@ -6,8 +6,8 @@ PKG_SUPPORTED_OPTIONS=  ninja-build filter-design alsa
 # alas        is said supported, but not good on NetBSD
 
 # Adding ninja-build to following line (now) stops
-# [164/850] cd /PATH/wip/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
-# FAILED: cd /PATH/wip/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
+# [164/850] cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
+# FAILED: cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
 # : permission denied
 
 PKG_SUGGESTED_OPTIONS= filter-design
@@ -34,7 +34,7 @@ DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 PLIST_SRC+=	${PKGDIR}/PLIST
 .if !empty(PKG_OPTIONS:Malsa)
 .include	"../../audio/alsa-lib/buildlink3.mk"
-ALSA_ENABLED=	
+ALSA_ENABLED=
 CONF_FILES+=	${EGDIR}/gr-audio-alsa.conf	${PKG_SYSCONFDIR}/gr-audio-alsa.conf
 PLIST_SRC+=	${PKGDIR}/PLIST.alsa
 .else

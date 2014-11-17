@@ -4,4 +4,5 @@ received are defined by software. What this means is that it turns the digital
 modulation schemes used in today's high performance wireless devices into
 software problems.
 
-This package provide WxGTK Toolkit module of GNU Radio.
+This module contains the graphical user interface framework based on wxPython.
+It includes blocks for displaying realtime FFT and oscilloscope.

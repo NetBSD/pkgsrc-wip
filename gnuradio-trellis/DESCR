@@ -4,4 +4,4 @@ received are defined by software. What this means is that it turns the digital
 modulation schemes used in today's high performance wireless devices into
 software problems.
 
-Blocks and utilities for trellis coding and related.
+Blocks and utilities for trellis-based encoding and decoding algorithms.
