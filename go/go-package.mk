@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.1 2014/02/02 14:01:59 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.2 2014/11/18 21:32:36 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 # The compiled Go code is tied to a specific compiler version, and the
@@ -6,26 +6,38 @@
 #
 # 1. Compile everything.
 # 2. Install binaries into bin/.
-# 3. Install the source code into the Go tree.
-
+# 3. Install source code and packages into a separate gopkg tree.
+#
+# In the future, we may implement buildlink by creating a separate tree during
+# the build and linking only the packages explicitly mentioned in dependencies
+# there.
+#
+# All packages build-depend on the "master" Go release. Go packages
+# need to be revbumped when lang/go is updated.
+#
 # Packages using this should set GO_SRCPATH to the path that could
 # be used with "go get" (usually the URL without the leading protocol).
 
+.include "../../lang/go/version.mk"
+
+GO_DIST_BASE?=		${GO_SRCPATH}
+GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
+
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
 
-BUILD_DEPENDS+=		go>=1.2:../../lang/go
+BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
 
 MAKE_JOBS_SAFE=		no
-INSTALLATION_DIRS=	bin go/src/pkg
+INSTALLATION_DIRS=	bin gopkg
 
 post-extract:
 	${MKDIR} ${WRKSRC}
-	${RM} -fr ${WRKDIR}/`basename ${GO_SRCPATH}`/.hg
-	${MV} ${WRKDIR}/`basename ${GO_SRCPATH}` `dirname ${WRKSRC}`
+	${RM} -fr ${WRKDIR}/`basename ${GO_DIST_BASE}`/.hg
+	${MV} ${WRKDIR}/`basename ${GO_DIST_BASE}`/* ${WRKSRC}
 
 do-build:
-	env GOPATH=${WRKDIR} go install -v ${GO_SRCPATH}/...
+	env GOPATH=${WRKDIR}:${PREFIX}/gopkg go install -v ${GO_BUILD_PATTERN}
 
 do-install:
-	cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}/${PREFIX}
-	cd ${WRKDIR}/src && ${PAX} -rw * ${DESTDIR}/${PREFIX}/go/src/pkg
+	-cd ${WRKDIR} && [ -d bin ] && ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	-cd ${WRKDIR} && [ -d pkg ] && ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
