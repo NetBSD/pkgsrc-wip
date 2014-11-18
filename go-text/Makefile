@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/02/02 14:01:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/18 21:39:23 bsiegert Exp $
 #
 
-DISTNAME=		go.text
+DISTNAME=		go-text
 CATEGORIES=		devel
 
 MAINTAINER=		bsiegert@NetBSD.org
@@ -9,12 +9,13 @@ HOMEPAGE=		http://golang.org/
 COMMENT=		Supplementary text processing libraries for Go
 LICENSE=		modified-bsd
 
-GO_SRCPATH=		code.google.com/p/go.text
+GO_SRCPATH=		golang.org/x/text
+GO_DIST_BASE=		go.text
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
 
-CHECKOUT_DATE=		2014-01-16
+CHECKOUT_DATE=		2014-11-18
 HG_REPOSITORIES=	${DISTNAME}
-HG_REPO.${DISTNAME}=	https://${GO_SRCPATH}
+HG_REPO.${DISTNAME}=	https://code.google.com/p/go.text
 
 .include "../../wip/go/go-package.mk"
 .include "../../wip/mk/hg-package.mk"
