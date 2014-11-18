@@ -1,21 +1,19 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.3 2014/07/30 16:33:00 nros Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.4 2014/11/18 12:24:49 nros Exp $
 *
 * This patch makes sure the man pages are installed in PKGMANDIR
-* It also excludes man pages named _usr_pkgsrc_..._include_..
 *
---- doc/CMakeLists.txt.orig	2013-05-18 08:25:06.000000000 +0000
+--- doc/CMakeLists.txt.orig	2014-11-18 13:07:36.000000000 +0000
 +++ doc/CMakeLists.txt
-@@ -81,14 +81,15 @@ if(BUILD_DOCUMENTATION)
+@@ -81,7 +81,7 @@ if(BUILD_DOCUMENTATION)
          # is the manpage of the command line interface with a manpage number 3,
          # we need to exclude it when installing man3.
          install(DIRECTORY ${EC_MANPAGE3_DIR}
 -            DESTINATION share/man
--            PATTERN editorconfig.3 EXCLUDE)
 +            DESTINATION ${CMAKE_INSTALL_MANDIR}
-+            PATTERN editorconfig.3 EXCLUDE
-+	    REGEX ._include_. EXCLUDE)
+             PATTERN editorconfig.3 EXCLUDE
+             REGEX ._include_. EXCLUDE)
  
-         set(EC_MANPAGE1_DIR ${EC_MANPAGE_DIR}/man1)
+@@ -89,7 +89,7 @@ if(BUILD_DOCUMENTATION)
  
          install(FILES
              ${EC_MANPAGE1_DIR}/editorconfig.1
