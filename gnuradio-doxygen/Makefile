@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/11/17 13:51:06 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/18 05:27:27 makoto Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
 COMMENT=	Doxygen documentation of GNU Radio
@@ -13,6 +13,6 @@ CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON
 CMAKE_ARGS+=	-DENABLE_SPHINX=ON
 
-MAKE_JOBS_SAFE=	no
+#MAKE_JOBS_SAFE=	no
 
 .include	"../../mk/bsd.pkg.mk"
