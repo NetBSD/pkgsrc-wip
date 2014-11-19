@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/04/23 19:50:38 nros Exp $
+# $NetBSD: Makefile,v 1.4 2014/11/19 20:12:29 nros Exp $
 
-DISTNAME=	editorconfig-core-py-0.11.4
+DISTNAME=	editorconfig-core-py-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-py//1}
 CATEGORIES=	devel
 MASTER_SITES=	-https://github.com/editorconfig/editorconfig-core-py/archive/v${PKGVERSION}.tar.gz
