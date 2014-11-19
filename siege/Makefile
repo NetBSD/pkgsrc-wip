@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/11/15 16:39:06 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.9 2014/11/19 21:23:14 ahp-nils Exp $
 #
 
 DISTNAME=		siege-3.0.8
@@ -16,6 +16,8 @@ USE_TOOLS+=		autoconf
 
 .include "options.mk"
 
+BUILD_DEFS+=		VARBASE
+PKG_SYSCONFSUBDIR=	siege
 EGDIR=			${PREFIX}/share/examples/siege
 DOCDIR=			${PREFIX}/share/doc/siege
 CONF_FILES=		${EGDIR}/urls.txt ${PKG_SYSCONFDIR}/urls.txt
@@ -33,6 +35,7 @@ SUBST_FILES.install=	${WRKSRC}/doc/Makefile
 SUBST_SED.install=	-e 's,${PREFIX}/etc,${EGDIR},g'
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
 INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
