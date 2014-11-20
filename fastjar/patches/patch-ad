@@ -1,0 +1,62 @@
+$NetBSD: patch-ad,v 1.1 2014/11/20 05:36:33 makoto Exp $
+
+     
+--- jartool.c.orig	2007-02-06 12:32:14.000000000 +0900
++++ jartool.c	2014-11-20 14:26:00.000000000 +0900
+@@ -173,8 +173,6 @@ jartool.c - main functions for fastjar u
+ static char version_string[] = VERSION;
+ static char rcsid[] = "$Id: patch-ad,v 1.1 2014/11/20 05:36:33 makoto Exp $";
+ 
+-extern int errno;
+-
+ void usage(char*);
+ void add_entry(struct zipentry *);
+ void init_headers();
+@@ -1152,7 +1150,32 @@ int add_file_to_jar(int jfd, int ffd, ch
+     return 0;
+   }
+ 
+-  int extract_jar(int fd, char **files, int file_num){
++static void canonical_filename(char *filename)
++{
++    char *iterator, *iterator2;
++
++    for (;;) {
++	if (*filename == '/')
++	    memmove(filename, filename + 1, strlen(filename));
++	else if (filename[0] == '.' && filename[1] == '/')
++	    memmove(filename, filename + 2, strlen(filename) - 1);
++	else if (filename[0] == '.' && filename[1] == '.' && filename[2] == '/')
++	    memmove(filename, filename + 3, strlen(filename) - 2);
++	else if ((iterator = strstr(filename, "//")) != NULL)
++	    memmove(iterator, iterator + 1, strlen(iterator));
++	else if ((iterator = strstr(filename, "/./")) != NULL)
++	    memmove(iterator, iterator + 2, strlen(iterator) - 1);
++	else if ((iterator = strstr(filename, "/../")) != NULL) {
++	    for (iterator2 = iterator - 1; iterator2 > filename && *iterator2 != '/'; --iterator2)
++		continue;
++	    /* iterator2 >= filename, handle the initial slash above, if necessary */
++	    memmove(iterator2, iterator + 3, strlen(iterator) - 2);
++	} else
++	    break;
++    }
++}
++
++ int extract_jar(int fd, char **files, int file_num){
+     int rdamt;
+     int out_a, in_a;
+     ub4 signature;
+@@ -1260,6 +1283,13 @@ int add_file_to_jar(int jfd, int ffd, ch
+       pb_read(&pbf, filename, fnlen);
+       filename[fnlen] = '\0';
+ 
++     canonical_filename(filename);
++
++     if (*filename == '\0') {
++        fprintf(stderr, "Error extracting JAR archive, empty file name!\n");
++        exit(1);
++      }
++
+ #ifdef DEBUG    
+       printf("filename is %s\n", filename);
+ #endif

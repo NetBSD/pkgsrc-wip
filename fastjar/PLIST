@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2014/11/20 05:36:32 makoto Exp $
+bin/fastjar
+bin/grepjar
+man/man1/fastjar.1
+man/man1/grepjar.1

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/11/20 05:36:32 makoto Exp $
+
+SHA1 (fastjar-0.94/download) = 2b54b558bed1acef63455b27827b69e83c823f8d
+RMD160 (fastjar-0.94/download) = af6b4ea20a07abde3184c49c30f620695525bec0
+Size (fastjar-0.94/download) = 77399 bytes
+SHA1 (patch-aa) = cdb20f779b32f423a49bcf3a7c64901aef5228c8
+SHA1 (patch-ab) = da635a3a6ce6c3f3406371e02a376e1d728f8b7e
+SHA1 (patch-ad) = 443cd9262339796eed15b1b58c2001556c7b6f61
