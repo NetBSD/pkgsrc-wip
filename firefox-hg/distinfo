@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2014/11/16 11:59:27 thomasklausner Exp $
+$NetBSD: distinfo,v 1.9 2014/11/20 12:43:56 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -13,7 +13,7 @@ SHA1 (patch-b2g_installer_package-manifest.in) = 3dc99c6d5d1d04749f6046e50f66c40
 SHA1 (patch-bf) = 75c971043e9f693203d6bd670b2c20c4952a7756
 SHA1 (patch-bg) = d6c02294765265d9e85cf49c22320d88573c2e25
 SHA1 (patch-browser_app_nsBrowserApp.cpp) = 00914f7656fff6785d737ce6e569a97fe39aafe8
-SHA1 (patch-browser_installer_package-manifest.in) = 83a0073525c607e05414688aa07035cc3f08e50a
+SHA1 (patch-browser_installer_package-manifest.in) = d8452d5a13c840d2908aa8b7875c4685a73693a6
 SHA1 (patch-build_autoconf_compiler-opts.m4) = ccdc06a2b07b7664f9cb91bcc4fb29052dda8b07
 SHA1 (patch-build_autoconf_nss.m4) = bf65db126705a3a1ba294418b9380683ea401fc7
 SHA1 (patch-build_gyp.mozbuild) = 2842da0783d344dd12e86adde447f7cda6191518
@@ -34,7 +34,7 @@ SHA1 (patch-dom_system_OSFileConstants.cpp) = fec01c3c2c1b7e1c57abe9ec269067ee98
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = a2a0652d0eac018fda06e729bf5ba786dd8a3866
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
-SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = e5df11499b1ec14e1d4c9a1408c0611d1c4e0574
+SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = 3a46f20353ddb7a2a01ccc71e5367425e68a6d2f
 SHA1 (patch-intl_hyphenation_hnjalloc.h) = e0ede6202d3f2ec370c729923f63ee8a455d5054
 SHA1 (patch-ios) = 6bd3450174c58c67ca8e091745412b1ebc69e069
 SHA1 (patch-ipc_chromium_Makefile.in) = edd85b79cd3879f7595b932442bb0e93505d5506
