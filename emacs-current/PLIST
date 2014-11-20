@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.146 2014/11/10 12:15:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.147 2014/11/20 11:38:12 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -839,7 +839,7 @@ share/emacs/${PKGVERSION}/etc/org/README
 share/emacs/${PKGVERSION}/etc/package-keyring.gpg
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
-share/emacs/${PKGVERSION}/etc/publicsuffix.txt
+share/emacs/${PKGVERSION}/etc/publicsuffix.txt.gz
 share/emacs/${PKGVERSION}/etc/refcards/Makefile
 share/emacs/${PKGVERSION}/etc/refcards/README
 share/emacs/${PKGVERSION}/etc/refcards/calccard.tex
