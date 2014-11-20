@@ -1,0 +1,48 @@
+$NetBSD: patch-ak,v 1.1 2014/11/20 15:00:34 makoto Exp $
+
+--- src/mkid.c.orig	2012-01-31 21:22:05.000000000 +0900
++++ src/mkid.c	2014-11-20 23:17:41.000000000 +0900
+@@ -28,7 +28,6 @@
+ #include <sys/stat.h>
+ #include <limits.h>
+ 
+-#include "alloca.h"
+ #include "argv-iter.h"
+ #include "closeout.h"
+ #include "dirname.h"
+@@ -484,11 +483,21 @@ assert_writeable (char const *filename)
+     {
+       if (errno == ENOENT)
+ 	{
+-	  char *dirname = dir_name (filename);
+-	  if (access (dirname, 06) < 0)
+-	    error (EXIT_FAILURE, errno, _("can't create `%s' in `%s'"),
+-		   base_name (filename), dirname);
+-	  free(dirname);
++	  char *dir_copy, *dir_name = strrchr (filename, '/');
++	  if (dir_name)
++	    {
++	      while (*--dir_name == '/')
++		continue;
++	      dir_name++;
++	      dir_copy = strdup(filename);
++	      dir_copy[dir_name - filename] = '\0';
++	    }
++	  else
++	    dir_copy = strdup(".");
++	  if (access (dir_copy, 06) < 0)
++	    error (1, errno, _("can't create `%s' in `%s'"),
++		   base_name (filename), dir_copy);
++	  free(dir_copy);
+ 	}
+       else
+ 	error (EXIT_FAILURE, errno, _("can't modify `%s'"), filename);
+@@ -562,7 +571,7 @@ scan_member_file (struct member_file con
+   source_FILE = fopen (flink->fl_name, "r");
+   if (source_FILE)
+     {
+-      char *file_name = alloca (PATH_MAX);
++      char file_name[PATH_MAX];
+       if (statistics_flag)
+ 	{
+ 	  if (fstat (fileno (source_FILE), &st) < 0)

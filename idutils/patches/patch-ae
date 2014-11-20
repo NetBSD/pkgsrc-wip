@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2014/11/20 15:00:34 makoto Exp $
+
+--- src/fnid.c.orig	2012-01-01 18:16:06.000000000 +0900
++++ src/fnid.c	2014-11-20 23:05:37.000000000 +0900
+@@ -23,7 +23,6 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <errno.h>
+-#include <alloca.h>
+ #include <xalloc.h>
+ #include <pathmax.h>
+ #include <error.h>
+@@ -166,7 +165,7 @@ main (int argc, char **argv)
+     char **patv_0 = xmalloc (sizeof(char *) * (argc * 2));
+     char **patv_N;
+     char **patv = patv_0;
+-    char *file_name = alloca (PATH_MAX);
++    char file_name[PATH_MAX];
+ 
+     for ( ; argc; argc--, argv++)
+       {

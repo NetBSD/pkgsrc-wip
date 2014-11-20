@@ -1,0 +1,71 @@
+$NetBSD: patch-aj,v 1.1 2014/11/20 15:00:34 makoto Exp $
+
+--- src/lid.c.orig	2012-01-31 21:22:05.000000000 +0900
++++ src/lid.c	2014-11-20 23:12:39.000000000 +0900
+@@ -32,7 +32,6 @@
+ #include <dirname.h>
+ #include <unistd.h>
+ #include <termios.h>
+-#include <alloca.h>
+ #include <regex.h>
+ #include <xalloc.h>
+ #include <pathmax.h>
+@@ -562,10 +561,11 @@ report_filenames (char const *name, stru
+ static void
+ report_grep (char const *name, struct file_link **flinkv)
+ {
+-  char line[1<<020];
++  char *line = xmalloc(BUFSIZ);
++  size_t line_len = BUFSIZ;
+   char const *pattern = 0;
+   regex_t compiled;
+-  char *file_name = alloca (PATH_MAX);
++  char file_name[PATH_MAX];
+ 
+   if (key_style == ks_pattern)
+     {
+@@ -597,8 +597,17 @@ report_grep (char const *name, struct fi
+ 	  continue;
+ 	}
+ 
+-      while (fgets (line + 1, sizeof (line) - 1, source_FILE))
++      while (fgets (line + 1, line_len - 1, source_FILE))
+ 	{
++	  size_t len;
++	  while ((len = strlen(line)) == line_len - 1 &&
++		 line[line_len - 2] != '\n')
++	    {
++	      line = xrealloc(line, line_len + BUFSIZ);
++	      line_len += BUFSIZ;
++	      if (fgets(line + len, BUFSIZ, source_FILE) == NULL)
++		break;
++	    }
+ 	  line_number++;
+ 	  if (pattern)
+ 	    {
+@@ -614,6 +623,7 @@ report_grep (char const *name, struct fi
+ 	}
+       fclose (source_FILE);
+     }
++  free(line);
+ }
+ 
+ static char **
+@@ -826,7 +836,7 @@ search_flinkv (struct file_link **flinkv
+ {
+   char pattern[BUFSIZ];
+   unsigned int count;
+-  char *file_name = alloca (PATH_MAX);
++  char file_name[PATH_MAX];
+   char *eol;
+ 
+   if (fgets (pattern, sizeof (pattern), stdin) == 0)
+@@ -1305,7 +1315,7 @@ word_match (char const *name_0, char con
+ 	  continue;
+ 	}
+       /* march down both strings as long as we match */
+-      while (*++name == *++line)
++      while (*name != '\0' && *++name == *++line)
+ 	;
+       /* is this the end of `name', is there a word delimiter ?? */
+       if (*name == '\0' && !IS_ALNUM (*line))
