@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/18 21:39:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/20 10:53:47 bsiegert Exp $
 #
 
 DISTNAME=		go-net
@@ -10,7 +10,7 @@ COMMENT=		Supplementary network libraries for Go
 LICENSE=		modified-bsd
 
 GO_SRCPATH=		golang.org/x/net
-GO_DIST_BASE=		go.net
+GO_DIST_BASE=		${DISTNAME}
 
 CHECKOUT_DATE=		2014-11-18
 HG_REPOSITORIES=	${DISTNAME}
