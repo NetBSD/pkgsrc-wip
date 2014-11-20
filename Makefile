@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5994 2014/11/19 10:51:38 khorben Exp $
+# $Id: Makefile,v 1.5995 2014/11/20 12:10:33 bsiegert Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -849,9 +849,13 @@ SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	go
+SUBDIR+=	go-net
 SUBDIR+=	go-text
+SUBDIR+=	go-tools
 SUBDIR+=	goattracker
+SUBDIR+=	goauth2
 SUBDIR+=	godura
+SUBDIR+=	google-api-go-client
 SUBDIR+=	google-perftools
 SUBDIR+=	googlecl
 SUBDIR+=	googlesharing
