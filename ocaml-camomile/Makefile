@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/27 04:03:11 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/21 06:14:26 jgoamakf Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	camomile-0.8.4
@@ -11,14 +11,13 @@ HOMEPAGE=	https://github.com/yoriyuki/Camomile/tree/master/Camomile
 COMMENT=	Unicode library for ocaml
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=       ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-
 USE_TOOLS+=     gmake
 
-USE_LANGUAGES=  c
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir="${DESTDIR}${PREFIX}/lib/ocaml/site-lib"
 
+OCAML_USE_FINDLIB=yes
+
 .include "../../lang/camlp4/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
+.include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
