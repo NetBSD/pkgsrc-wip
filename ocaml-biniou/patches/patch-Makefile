@@ -1,0 +1,14 @@
+--- Makefile.orig	2014-01-19 17:18:17.000000000 +0900
++++ Makefile	2014-11-18 12:13:42.000000000 +0900
+@@ -76,8 +76,9 @@
+ 	ocamlfind ocamldoc -d doc -html -package easy-format $(MLI)
+ 
+ install: META
+-	test ! -f bdump || cp bdump $(BINDIR)/
+-	test ! -f bdump.exe || cp bdump.exe $(BINDIR)/
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	test ! -f bdpmp || $(BSD_INSTALL_PROGRAM) bdump $(DESTDIR)$(BINDIR)/
++	test ! -f bdump.exe || $(BSD_INSTALL_PROGRAM) bdump.exe $(DESTDIR)$(BINDIR)/
+ 	ocamlfind install biniou META \
+           $$(ls $(MLI) $(CMI) $(CMO) $(CMX) $(O) \
+              biniou.cma biniou.cmxa biniou.cmxs biniou.a)
