@@ -1,0 +1,14 @@
+Following packages to be verified also
+
+(..audio/libdiscid)% finddepends audio/libdiscid
+
+audio/libdiscid/buildlink3.mk
+audio/libmusicbrainz/buildlink3.mk
+
+audio/flactag/Makefile
+audio/libmusicbrainz/Makefile
+audio/py-musicbrainz/Makefile
+audio/rhythmbox/Makefile
+audio/sound-juicer/Makefile
+multimedia/kscd/Makefile
+multimedia/gnome-mplayer/options.mk
