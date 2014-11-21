@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/11/21 14:21:27 makoto Exp $
-
-SHA1 (libdiscid-0.6.1.tar.gz) = 4e682d24bceeb35c19800f9141348d77eae133f2
-RMD160 (libdiscid-0.6.1.tar.gz) = f5e73d00adccab87037786b9c22dff98f9cb6705
-Size (libdiscid-0.6.1.tar.gz) = 366393 bytes
