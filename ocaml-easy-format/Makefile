@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/17 11:46:14 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/21 05:51:07 jgoamakf Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	easy-format-1.0.2
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	gmake
 
 OCAML_USE_FINDLIB=yes
+BUILD_TARGET+=	opt
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
