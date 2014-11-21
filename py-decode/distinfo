@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/21 22:07:25 jihbed Exp $
+
+SHA1 (pydecode-0.2.12.tar.gz) = 5bdb5b86ddfb5a7985e8edf53598af43a083a05e
+RMD160 (pydecode-0.2.12.tar.gz) = a0d7cf151c6f5c8cba52b96e7008b4dec6c92161
+Size (pydecode-0.2.12.tar.gz) = 2247860 bytes
