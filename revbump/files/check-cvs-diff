@@ -30,7 +30,7 @@ sub main() {
     my ($CVS_DIFF)  = 'cvs-diff';
     my ($file_to_edit);
     my ($stay, $mod) = (0,0);
-    my ($Makefile, $buildlink3, $other);
+    my ($Makefile, $buildlink3, $other) = (0, 0, 0);
 
     getopts('hvp:',\%opts);
     if ($ARGV[0])   { $CVS_DIFF = $ARGV[0]}
