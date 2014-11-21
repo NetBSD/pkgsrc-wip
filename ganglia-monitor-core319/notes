@@ -1,0 +1,6 @@
+
+Linux:
+
+cp /usr/pkg-1/share/examples/rc.d/gmond.init /etc/init.d/gmond
+chkconfig --add gmond
+
