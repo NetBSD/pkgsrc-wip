@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.147 2014/11/20 11:38:12 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.148 2014/11/21 16:04:35 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3826,6 +3826,8 @@ share/emacs/${PKGVERSION}/lisp/vc/vc-rcs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc/vc-rcs.elc
 share/emacs/${PKGVERSION}/lisp/vc/vc-sccs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc/vc-sccs.elc
+share/emacs/${PKGVERSION}/lisp/vc/vc-src.el.gz
+share/emacs/${PKGVERSION}/lisp/vc/vc-src.elc
 share/emacs/${PKGVERSION}/lisp/vc/vc-svn.el.gz
 share/emacs/${PKGVERSION}/lisp/vc/vc-svn.elc
 share/emacs/${PKGVERSION}/lisp/vc/vc.el.gz
