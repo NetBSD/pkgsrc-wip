@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2014/11/21 21:10:01 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.22 2014/11/22 19:53:07 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -345,9 +345,9 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/connected.
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/connecting.ogg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/failure.ogg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/ringtone.ogg
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/room-joined-in.org
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/room-joined-in.ogg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/room-joined.ogg
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/room-left.org
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/room-left.ogg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/terminated.ogg
 lib/firefox/browser/chrome/browser/content/browser/microsoft-translator-attribution.png
 lib/firefox/browser/chrome/browser/content/browser/migration/migration.js
