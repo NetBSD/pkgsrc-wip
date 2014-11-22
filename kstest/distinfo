@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/22 09:27:03 jihbed Exp $
+
+SHA1 (kstest-2.0.0.tar.gz) = cd1a38cad892261608d33d5e3c79d4e71962eb4b
+RMD160 (kstest-2.0.0.tar.gz) = eaa71e01d1280d4b6daa9d805dc8e4b201ab3e82
+Size (kstest-2.0.0.tar.gz) = 345746 bytes

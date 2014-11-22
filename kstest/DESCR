@@ -1,0 +1,7 @@
+The KSTest package is, basically, a C++ adaptation and autotools
+repackaging of the code that accompanies the article Computing the
+Two-Sided Kolmogorov-Smirnov Distribution by Richard Simard and
+Pierre L'Ecuyer in the Journal of Statistical Software, vol 39,
+issue 11, pp 1-18 (2011). It calculates, with high precision,
+the cumulative probability and the exceedance (complementary
+cumulative probability) of the Kolmogorov-Smirnov test statistic
