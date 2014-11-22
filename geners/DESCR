@@ -1,0 +1,13 @@
+The geners package is designed to address the problem of C++ object persistence
+in situations where the most typical data access pattern is write once read man
+(WORM). This access pattern is very common in scientific projects ? a data
+recording device or a simulation program creates the original set of objects
+which is later reused (typically, for the purposes of data analysis and
+presentation of results) by other programs. Geners is, more or less, a set of
+tools and conventions which allows its users to develop C++ classes that can be
+converted to and from a storable stream of bytes in a well-organized and
+type-safe manner. Serialization of STL containers is supported, including the
+ones added in the C++11 standard. Independent versioning of each class
+definition is allowed. Geners code depends only on the standard C++ facilities
+and on two well-established portable data compression libraries, zlib and
+bzip2
