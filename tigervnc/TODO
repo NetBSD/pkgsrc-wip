@@ -1,2 +1,4 @@
 This does not build Xvnc; thus, vncserver is not usable.
 vncclient and x0vncserver are, though.
+
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0011
