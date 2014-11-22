@@ -1,0 +1,10 @@
+Neovim is a project that seeks to aggressively refactor Vim in order to:
+
+  + Enable the implementation of new/modern user interfaces without any
+      modifications to the core source
+  + Improve extensibility with a new plugin architecture
+  + Simplify maintenance and encourage contributions
+  + Split the work between multiple developers
+
+The changes implemented should have little impact on vim's editing model or
+vimscript in general. Most vimscript plugins should continue to work normally.
