@@ -1,0 +1,153 @@
+1.0.2		2009/02/04
+	LIBDK: Fix bug in error message generation which could cause
+		crashes with very large error messages.  Code copied
+		from dkim-milter.
+
+1.0.1		2008/09/04
+	Set up required callbacks for OpenSSL thread-safety.  Code copied
+		from dkim-milter.
+	LIBDK: Fix bug in relaxed canonicalization mode when dealing with
+		very large input lines with cached blank lines.
+		Problem reported by Mark Martinec.
+
+1.0.0		2008/03/13
+	Use the current Authentication-Results: format (the -13 draft).
+		Patch from S. Moonesamy of Eland Systems.
+	Add improved mlfi_negotiate() function code, copied from dkim-milter,
+		which does things like symbol requesting and more intelligent
+		option negotiation.  Patch from S. Moonesamy of Eland Systems.
+	Add hash buffering, copied from libdkim.  Patch from S. Moonesamy
+		of Eland Systems.
+	Fix bug #SF1736559: in_addr_t is not universal.  Problem reported
+		by Terry White.
+	Fix bug #SF1763715: Fix string management in mlfi_eoh() with respect
+		to mctx_domain, which could be left pointing to garbage when
+		using domain wildcarding.  Problem noted by Ronald Huizer.
+	Activate _FFR_MULTIPLE_KEYS.
+	LIBDK: Copy the library options structure from libdkim.
+	LIBDK: Add dk_close().
+	LIBDK: Feature request #SF1872270: Rename parameters called "new"
+		in dk.h so that C++ compilers don't complain.  Requested
+		by Paul Macintosh.
+	LIBAR: Eliminate a possible race condition in ar_dispatcher().
+	LIBAR: Timeouts passed to select() can't be bigger than 10^8.
+		Problem noted by S. Moonesamy of Eland Systems.
+	LIBAR: Fix bug #SF1852618: Handle default case of no "nameserver"
+		lines in /etc/resolv.conf.  Problem noted by Mike Markley
+		of Bank of America.
+	LIBAR: Plug descriptor and memory leaks in ar_shutdown().
+	BUILD: Copy the unit test structure from libdkim and add a few basic
+		unit tests.
+
+0.6.0		2007/05/31
+	Fix bug #SF1728696: Repair message corruption occurring when a
+		message body spams multiple milter writes.  Reported
+		by Eric Singer.
+	Patch #SF1705006: Fix X-header malformation.
+	LIBAR: Fix bug #SF1537457: Add proper support for IPv6 nameservers.
+		Reported by Mark Martinec.
+	BUILD: Copy the consolidated build system from the dkim-milter
+		package.
+	Activate the following FFRs:
+		_FFR_LOG_SSL_ERRORS
+		_FFR_QUARANTINE
+		_FFR_REPORTINFO
+
+0.5.0		2007/04/10
+	Copy several enhancements from the latest dkim-milter update:
+		o Support for 8.14 (milter v2) and the leading space patch from
+		  dkim-milter.
+		o Fixes/enhancements under POPAUTH.
+		o Pass the correct length variable to RSA_sign() so that
+		  the value returned is sane on 64-bit platforms.
+		o _FFR_ANTICIPATE_SENDMAIL_MUNGE
+		o Feature request #SF1497801: _FFR_QUARANTINE
+	Fix bug #SF1541450: Correct header selection in dk_hdrsigned().
+		Reported by Mark Martinec.
+	LIBDK: Fix bug #SF1537918: Add dk_geterror() to retrieve additional
+		diagnostic data from the API when a function call returns
+		DK_STAT_INTERNAL or something else whose cause isn't
+		readily apparent.  Copied from libdkim.
+	LIBAR: Block signals that should be caught and handled elsewhere,
+		such as in libmilter.
+
+0.4.2		2007/03/13
+	Fix bug #SF1509093, SF1611082: Set group ID as well as user ID when
+		"-u" is used on the command line.  Patch from Vincent
+		Rivellino.
+	Fix bug #SF1514447: Re-query for the job ID in mlfi_eom() to
+		accomodate postfix's milter implementation.  Copied from
+		dkim-filter; requested by Jakob Schlyter.
+	Fix bug #SF1541439: Fix mis-canonicalization of skipped headers
+		in "nofws" mode.  Reported by Mark Martinec.
+	Fix bug #SF1541789: Stop spurious syntax errors on unsigned messages.
+		Problem reported by S. Moonesamy of Eland Systems.
+
+0.4.1		2006/06/14
+	LIBDK: Properly handle key and policy records that don't have
+		whitespace after semicolons.
+	LIBDK: In dk_eom(), return DK_STAT_SYNTAX if dk_skipbody is set.
+		Failing to do so means a message with a signature header
+		below which there is no sender header will report a bogus
+		success status.  Problem noted by Lennert Buytenhek.
+
+0.4.0		2006/05/19
+	Remove spurious CRLFs injected into canonicalization when multiple
+		body chunks arrive from the MTA.  Patch from Suzuki Takahiko
+		of Internet Initiative Japan, Inc.
+	If _FFR_REPORTINFO is enabled, don't call dkf_report() if no DomainKeys
+		context was ever created for a message.
+	Simplify dk_sterilize() a little, and handle failures from it.
+		Problem reported by Fredrik Pettai.
+	RFC2822 doesn't require any recipient headers, so remove those checks
+		inside _FFR_REQUIRED_HEADERS.
+	Fix bug #SF1485119: Canonicalize in the correct order when not using
+		"-H" on the command line.  Problem noted by S. Moonesamy of
+		Eland Systems.
+	Activate _FFR_MACRO_LIST and _FFR_EXTERNAL_IGNORE_LIST.
+	LIBDK: New flag DK_OPTS_HDRLIST for dk_options().
+
+0.3.4		2006/05/02
+	If _FFR_REPORTINFO is enabled, send reports on all failures, not just
+		those which aren't in test mode.
+	Ignore unknown tags in keys and policies, rather than returning an
+		error.
+	LIBDK: Return an error if the signing function returned success but
+		also reported a zero-length signature.  Reported by
+		S. Moonesamy of Eland Systems.
+	LIBAR: Add a timeout to the I/O wait so that retransmissions
+		actually get done while waiting for activity.
+
+0.3.3		2006/03/13
+	Fix test mode check at the end of mlfi_eom(), which was overriding
+		any configuration settings from the command line.
+		Reported by Arkadi Poliakevitch of Invidi Technologies.
+	Copy the value of -C before parsing it so the output of "ps" doesn't
+		get munged.  Reported by Arkadi Poliakevitch of Invidi
+		Technologies.
+	Fix "-o", which wasn't actually working at all.  Reported by Ben
+		Lentz.
+	Add _FFR_LOG_SSL_ERRORS which sends to syslog errors reported by
+		the OpenSSL libraries.
+
+0.3.2		2005/12/12
+	Patch a small but definite memory leak.  Reported by Ray Krebs
+		of eBay.
+
+0.3.1		2005/12/02
+	Tolerate "b=" in signature headers at places other than the end
+		of the signature (and, in fact, other things at the end
+		of the signature).  Reported by Jason Long.  (Bug SF1234164)
+	Don't reject or report about messages which fail verification
+		when the sending domain advertises that it's in test mode.
+		Patch from Adrian Havill.
+	Fixes to POPAUTH compilation from S. Moonesamy of Eland Systems.
+	Allow "-d" to specify a list from which domains should be read,
+		and allow wildcarding in domain names.  Requested by
+		Ray Krebs of eBay.  (Feature request SF1312453)
+	Add "-o" command line option to allow certain headers to be omitted
+		from signing operations.  Suggested by Ben Lentz.
+		(Feature request SF1314350)
+	LIBAR: Fix a build issue introduced in the last release.
+
+0.3.0		2005/04/28
