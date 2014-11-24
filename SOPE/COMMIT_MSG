@@ -1,0 +1,131 @@
+Date:   Thu Nov 20 09:42:42 2014 -0500
+    Revert "Fix crash when decoding a = at end of the data"
+    This reverts commit 1544d178c4cf56ee8358f06475c4b3e45dddc11c.
+M	sope-core/NGExtensions/NGQuotedPrintableCoding.m
+
+Date:   Tue Nov 18 10:52:22 2014 -0500
+    Improved last commit after more Outlook's brain damange findings
+M	sope-core/NGExtensions/NGBase64Coding.m
+M	sope-mime/NGMime/NGMimePartGenerator.m
+
+Date:   Tue Nov 18 09:06:37 2014 -0500
+    Disable original and broken padding.
+M	sope-core/NGExtensions/NGBase64Coding.m
+
+Date:   Mon Nov 17 21:04:01 2014 -0500
+    Pad the output buffer to avoid Outlook corruption
+M	sope-core/NGExtensions/NGBase64Coding.m
+
+Date:   Fri Nov 14 11:37:04 2014 +0100
+    - Fix crash when decoding a = at end of the data
+    - In decoding a quoted printable mail. There is a buffer overflow
+       as we are always parsing two bytes instead of one.
+    - See the full backtrace at:
+    https://gist.github.com/sixstone-qq/cb8099b66c2911e8aaf2
+M	sope-core/NGExtensions/NGQuotedPrintableCoding.m
+
+Date:   Wed Nov 12 11:22:21 2014 -0500
+    Avoid failures on non-RHEL7 distros
+M	packaging/rhel/sope.spec
+
+Date:   Mon Nov 10 16:07:55 2014 -0500
+    Adjust the GNUstep makefiles path on EL7
+M	packaging/rhel/sope.spec
+
+Date:   Mon Nov 10 13:40:08 2014 -0500
+    spec file improvements, disabled Oracle support for now
+M	packaging/rhel/sope.spec
+
+Date:   Sat Feb 22 09:00:47 2014 -0500
+    WOCompountElement: the array of children was not properly allocated, leading to a buffer overflow
+M	sope-appserver/NGObjWeb/DynamicElements/WOCompoundElement.h
+M	sope-appserver/NGObjWeb/DynamicElements/WOCompoundElement.m
+
+Date:   Mon Oct 13 11:49:54 2014 +0200
+    Add support for arm64
+M	sope-gdl1/GDLAccess/EOSQLQualifier.m
+M	sope-gdl1/GDLAccess/FoundationExt/PrintfFormatScanner.m
+
+Date:   Wed Oct 15 16:21:51 2014 -0400
+    Small fix on RHEL7		M	packaging/rhel/sope.spec
+
+Date:   Wed Oct 15 16:12:31 2014 -0400
+    Fixed unused dependancy	M	packaging/rhel/sope.spec
+
+Date:   Wed Oct 15 16:03:52 2014 -0400
+    Disabled Oracle support on RHEL7	M	packaging/rhel/sope.spec
+
+Date:   Wed Oct 15 15:50:29 2014 -0400
+    Initial work on RHEL 7	M	packaging/rhel/sope.spec
+
+Date:   Mon Oct 6 13:54:11 2014 -0400
+    Fix BrazilianPortuguese language mapping
+M	sope-appserver/NGObjWeb/Languages.plist
+
+Date:   Mon Sep 15 15:46:45 2014 -0400
+    Handle sync-token during PROPFIND calls
+M	sope-appserver/NGObjWeb/DAVPropMap.plist
+
+Date:   Fri Aug 15 09:09:31 2014 -0400
+    Allow link with no parameter
+M	sope-appserver/NGObjWeb/DynamicElements/WOHyperlinkInfo.m
+
+Date:   Wed Aug 13 15:26:25 2014 -0400
+    Remove requirement of a link href attribute
+M	sope-appserver/NGObjWeb/DynamicElements/WOHyperlinkInfo.m
+M	sope-appserver/NGObjWeb/DynamicElements/_WOComplexHyperlink.m
+M	sope-appserver/NGObjWeb/DynamicElements/_WOTemporaryHyperlink.m
+
+Date:   Thu Aug 7 15:29:54 2014 -0400
+    Fix support for templates themes
+M	sope-appserver/NGObjWeb/WOResourceManager.m
+
+Date:   Thu Aug 7 15:29:12 2014 -0400
+    Remove requirement of a form action attribute
+M	sope-appserver/NGObjWeb/DynamicElements/WOForm.m
+
+Date:   Tue Jul 22 16:09:48 2014 -0400
+    Silenced annoying warning.
+M	sope-ldap/NGLdap/NGLdapAttribute.m
+
+Date:   Tue Jun 17 07:07:02 2014 -0400
+    Add support for the url input type of HTML5
+M	sope-appserver/NGObjWeb/DynamicElements/WOxHTMLElemBuilder.m
+
+Date:   Tue Jul 15 07:09:42 2014 -0400
+    Fixed broken merged pull request.
+M	sope-mime/NGImap4/NGImap4Client.m
+
+Date:   Fri Jul 4 23:11:54 2014 +0200
+    Sends "simple" passwords with command
+    This is necessary for some old IMAP servers, e.g. SmarterMail
+M	sope-mime/NGImap4/NGImap4Client.m
+
+Date:   Wed Jun 25 15:31:03 2014 -0400
+    Applied patch for bug #2814
+M	sope-appserver/NGObjWeb/Associations/WOKeyPathAssociation.m
+
+Date:   Thu Jun 19 16:12:47 2014 -0400
+    Avoid compilation failures
+M	sope-appserver/NGObjWeb/WebDAV/SaxDAVHandler.m
+
+Date:   Mon Jun 16 15:32:22 2014 -0400
+    Fix for bug #2736
+
+M	sope-appserver/NGObjWeb/WebDAV/SaxDAVHandler.m
+M	sope-xml/STXSaxDriver/STXSaxDriver.m
+M	sope-xml/SaxObjC/SaxDefaultHandler+NSXML.m
+M	sope-xml/SaxObjC/SaxObjectDecoder.m
+M	sope-xml/libxmlSAXDriver/libxmlDocSAXDriver.m
+M	sope-xml/libxmlSAXDriver/libxmlHTMLSAXDriver.m
+
+Date:   Mon Jun 16 15:17:31 2014 -0400
+    Add support for the email input type of HTML5
+
+M	sope-appserver/NGObjWeb/DynamicElements/WOInput.h
+M	sope-appserver/NGObjWeb/DynamicElements/WOInput.m
+M	sope-appserver/NGObjWeb/DynamicElements/WOTextField.api
+M	sope-appserver/NGObjWeb/DynamicElements/WOTextField.m
+M	sope-appserver/NGObjWeb/DynamicElements/WOxHTMLElemBuilder.m
+
+Date:   Thu May 29 11:19:59 2014 -0400
