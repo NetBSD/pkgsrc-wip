@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5999 2014/11/24 09:19:13 thomasklausner Exp $
+# $Id: Makefile,v 1.6000 2014/11/24 21:26:48 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1170,8 +1170,6 @@ SUBDIR+=	hs-text-icu
 SUBDIR+=	hs-tfp
 SUBDIR+=	hs-time-http
 SUBDIR+=	hs-time-w3c
-SUBDIR+=	hs-timezone-olson
-SUBDIR+=	hs-timezone-series
 SUBDIR+=	hs-transformers-abort
 SUBDIR+=	hs-uconv
 SUBDIR+=	hs-unix-compat

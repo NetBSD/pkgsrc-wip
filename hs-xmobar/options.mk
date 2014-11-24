@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/05/22 21:41:48 szptvlfn Exp $
+# $NetBSD: options.mk,v 1.3 2014/11/24 21:26:48 szptvlfn Exp $
 
 PKG_OPTIONS_VAR=    PKG_OPTIONS.hs-xmobar
 PKG_SUPPORTED_OPTIONS= xft2 datezone
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=    --flags="with_xft"
 # Support for other timezones.
 .if !empty(PKG_OPTIONS:Mdatezone)
 CONFIGURE_ARGS+=    --flags="with_datezone"
-.include "../../wip/hs-timezone-olson/buildlink3.mk"
-.include "../../wip/hs-timezone-series/buildlink3.mk"
+.include "../../time/hs-timezone-olson/buildlink3.mk"
+.include "../../time/hs-timezone-series/buildlink3.mk"
 .else
 .endif
