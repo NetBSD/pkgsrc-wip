@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2014/11/22 19:53:07 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.23 2014/11/24 11:57:05 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -2502,7 +2502,6 @@ lib/firefox/modules/BinarySearch.jsm
 lib/firefox/modules/BookmarkHTMLUtils.jsm
 lib/firefox/modules/BookmarkJSONUtils.jsm
 lib/firefox/modules/Bookmarks.jsm
-lib/firefox/modules/BrowserElementParent.jsm
 lib/firefox/modules/BrowserElementPromptService.jsm
 lib/firefox/modules/BrowserUtils.jsm
 lib/firefox/modules/CertUtils.jsm
