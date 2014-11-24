@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/08/29 14:10:29 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2014/11/24 14:00:16 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-timezone-olson
 
 .if !defined(HS_TIMEZONE_OLSON_BUILDLINK3_MK)
 HS_TIMEZONE_OLSON_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-timezone-olson+=	hs-timezone-olson>=0.1.3
-BUILDLINK_ABI_DEPENDS.hs-timezone-olson+=	hs-timezone-olson>=0.1.3
+BUILDLINK_API_DEPENDS.hs-timezone-olson+=	hs-timezone-olson>=0.1.4
+BUILDLINK_ABI_DEPENDS.hs-timezone-olson+=	hs-timezone-olson>=0.1.4
 BUILDLINK_PKGSRCDIR.hs-timezone-olson?=	../../wip/hs-timezone-olson
 
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
