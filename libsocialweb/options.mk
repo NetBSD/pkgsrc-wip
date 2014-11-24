@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2013/06/18 07:35:25 noud4 Exp $
+# $NetBSD: options.mk,v 1.2 2014/11/24 16:27:03 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libsocialweb
 PKG_SUPPORTED_OPTIONS+=		facebook flickr lastfm photobucket plurk smugmug
 PKG_SUPPORTED_OPTIONS+=		twitter vimeo youtube sina myspace
-PKG_SUPPORTED_OPTIONS+=		vala	# XXX experimental
+#PKG_SUPPORTED_OPTIONS+=		vala	# XXX broken
 
 PKG_SUGGESTED_OPTIONS+=		facebook flickr lastfm photobucket plurk smugmug
 PKG_SUGGESTED_OPTIONS+=		twitter vimeo youtube sina myspace
@@ -72,10 +72,12 @@ PLIST.myspace=		yes
 .endif
 
 ### Vala	# XXX broke and needed for libfolks
+# does not build with either vala 0.12, 0.14, 0.18,
+# 0.20, nor 0.26
 
 .if !empty(PKG_OPTIONS:Mvala)
 CONFIGURE_ARGS=		--enable-introspection=yes
 CONFIGURE_ARGS=		--enable-vala-bindings
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../lang/vala020/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .endif
