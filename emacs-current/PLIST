@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.149 2014/11/22 19:52:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.150 2014/11/24 11:56:06 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2753,6 +2753,8 @@ share/emacs/${PKGVERSION}/lisp/net/newst-treeview.el.gz
 share/emacs/${PKGVERSION}/lisp/net/newst-treeview.elc
 share/emacs/${PKGVERSION}/lisp/net/newsticker.el.gz
 share/emacs/${PKGVERSION}/lisp/net/newsticker.elc
+share/emacs/${PKGVERSION}/lisp/net/nsm.el.gz
+share/emacs/${PKGVERSION}/lisp/net/nsm.elc
 share/emacs/${PKGVERSION}/lisp/net/ntlm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/ntlm.elc
 share/emacs/${PKGVERSION}/lisp/net/quickurl.el.gz
