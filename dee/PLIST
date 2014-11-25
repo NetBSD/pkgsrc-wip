@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/01/20 12:46:22 othyro Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/11/25 12:28:53 thomasklausner Exp $
 bin/dee-tool
 include/dee-1.0/dee-analyzer.h
 include/dee-1.0/dee-client.h
@@ -65,10 +65,13 @@ share/gtk-doc/html/dee-1.0/dee-1.0.devhelp2
 share/gtk-doc/html/dee-1.0/home.png
 share/gtk-doc/html/dee-1.0/index.html
 share/gtk-doc/html/dee-1.0/index.sgml
+share/gtk-doc/html/dee-1.0/left-insensitive.png
 share/gtk-doc/html/dee-1.0/left.png
 share/gtk-doc/html/dee-1.0/object-tree.html
+share/gtk-doc/html/dee-1.0/right-insensitive.png
 share/gtk-doc/html/dee-1.0/right.png
 share/gtk-doc/html/dee-1.0/style.css
+share/gtk-doc/html/dee-1.0/up-insensitive.png
 share/gtk-doc/html/dee-1.0/up.png
 share/vala/vapi/dee-1.0.deps
 share/vala/vapi/dee-1.0.vapi

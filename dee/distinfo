@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/01/20 12:46:21 othyro Exp $
+$NetBSD: distinfo,v 1.3 2014/11/25 12:28:53 thomasklausner Exp $
 
-SHA1 (dee-1.0.14.tar.gz) = 738406e1e8c95afc84dfc4ec228c33f722cdb83e
-RMD160 (dee-1.0.14.tar.gz) = 3957780c381224c5bc7c542fc0d5588c9d577c79
-Size (dee-1.0.14.tar.gz) = 681061 bytes
+SHA1 (dee-1.2.7.tar.gz) = def3383ac4aa750f2c40a3cb05fd2204428afe2c
+RMD160 (dee-1.2.7.tar.gz) = 1fb66184be6209e0ba8207f515e6ed812edf71fa
+Size (dee-1.2.7.tar.gz) = 712167 bytes
