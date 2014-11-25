@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/03 20:51:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2014/11/25 13:33:44 thomasklausner Exp $
 #
 
 DISTNAME=	rygel-0.16.3
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-tracker-plugin
 .include "../../devel/glib2/buildlink3.mk"
 # conflicts with net/gupnp/buildlink3.mk
 #.include "../../devel/libuuid/buildlink3.mk"
-.include "../../lang/vala018/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../net/gssdp/buildlink3.mk"
 .include "../../net/gupnp/buildlink3.mk"
 .include "../../net/gupnp-av/buildlink3.mk"
