@@ -1,18 +1,18 @@
-# $NetBSD: options.mk,v 1.9 2014/05/31 15:57:20 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.10 2014/11/25 13:20:15 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.meta-tracker
 PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca libsecret gnome
 PKG_OPTIONS_OPTIONAL_GROUPS=	video
 PKG_OPTIONS_GROUP.video=	gstreamer xine
 PKG_SUPPORTED_OPTIONS+=		pdf xps gif jpeg tiff vorbis flac html gsf playlist
-PKG_SUPPORTED_OPTIONS+=		rss evolution thunderbird firefox
+PKG_SUPPORTED_OPTIONS+=		rss evolution firefox # thunderbird -- broken?
 PKG_SUPPORTED_OPTIONS+=		nautilus
 PKG_SUPPORTED_OPTIONS+=		mp3 taglib xmp
 
 PKG_SUGGESTED_OPTIONS+=		hal unac enca libsecret gnome
 PKG_SUGGESTED_OPTIONS+=		pdf xps gif jpeg tiff vorbis flac html gsf playlist
 PKG_SUGGESTED_OPTIONS+=		-gstreamer
-PKG_SUGGESTED_OPTIONS+=		rss evolution thunderbird firefox
+PKG_SUGGESTED_OPTIONS+=		rss evolution firefox # thunderbird
 PKG_SUGGESTED_OPTIONS+=		nautilus
 PKG_SUGGESTED_OPTIONS+=		mp3 taglib xmp
 
@@ -33,8 +33,8 @@ CONFIGURE_ARGS+=	--with-gstreamer-backend
 .elif !empty(PKG_OPTIONS:Mxine)
 PLIST.xine=		yes
 .include "../../multimedia/xine-lib/buildlink3.mk"
-PLIST.mplayer=		# empty
-PLIST.totem=		# empty
+PLIST.mplayer=		yes
+PLIST.totem=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
@@ -79,7 +79,7 @@ CONFIGURE_ARGS+=	--disable-hal
 PLIST.gnome=		yes
 CONFIGURE_ARGS+=	--enable-icon
 .include "../../devel/libgee/buildlink3.mk"
-.include "../../lang/vala018/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
