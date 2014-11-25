@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.firefox,v 1.2 2014/11/25 13:14:12 thomasklausner Exp $
 lib/firefox/browser/extensions/trackerfox@bustany.org
 share/xul-ext/trackerfox/COPYRIGHT
 share/xul-ext/trackerfox/README
