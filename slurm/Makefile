@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/04 17:37:01 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2014/11/25 20:06:37 outpaddling Exp $
 
 DISTNAME=	slurm-2.6.4
 CATEGORIES=	parallel
@@ -48,7 +48,7 @@ post-install:
 
 CONFIGURE_ARGS+=	--with-munge=$(BUILDLINK_PREFIX.munge:Q)
 
-.include "../../security/munge/buildlink3.mk" # optional
+.include "../../wip/munge/buildlink3.mk" # optional
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
