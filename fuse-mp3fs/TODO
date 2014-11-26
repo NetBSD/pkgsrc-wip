@@ -1,0 +1,10 @@
+Multiple problems on NetBSD:
+* does not parse options correctly:
+  "-b 128", "--bitrate=128" not recognized
+  "-h", "-V" cause core dumps
+* does not handle two path arguments like usage suggests
+  mp3fs /a /b
+  errors out; one of the patches works around this, but that's
+  not a solution and I don't know how it's supposed to work
+* after working around these problems, does not transcode
+  files -- just copies flac files
