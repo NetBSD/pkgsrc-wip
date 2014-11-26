@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2014/11/24 11:57:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.24 2014/11/26 07:33:13 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -314,6 +314,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/sad.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/spinner.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/spinner@2x.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-account-16x16.svg
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-help-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-settings-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-signin-16x16.svg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-signout-16x16.svg
@@ -328,6 +329,8 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/activeRoomStor
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/conversationStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/dispatcher.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackApiClient.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackStore.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackViews.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/models.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/otSdkDriver.js
@@ -1527,6 +1530,7 @@ lib/firefox/browser/modules/devtools/tilt/tilt-visualizer-style.js
 lib/firefox/browser/modules/devtools/tilt/tilt-visualizer.js
 lib/firefox/browser/modules/devtools/tilt/tilt.js
 lib/firefox/browser/modules/devtools/timeline/global.js
+lib/firefox/browser/modules/devtools/timeline/marker-details.js
 lib/firefox/browser/modules/devtools/timeline/markers-overview.js
 lib/firefox/browser/modules/devtools/timeline/memory-overview.js
 lib/firefox/browser/modules/devtools/timeline/panel.js
