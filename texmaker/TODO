@@ -1,6 +1,1 @@
-- Told next release in end of November (2014)
-- This package is partly broken because building qt5-qtwebkit breaks 
-NetBSD 6. The reason is that NetBSD 6 does not have execinfo.h but 
-NetBSD current have this. This package does build and run on 
-NetBSD 6 if execinfo.h is not included in the file 
-qtwebkit/Source/WTF/wtf/Assertions.cpp in qt5-qtwebkit.
+- Import version 4.4.1 to pkgsrc-current.
