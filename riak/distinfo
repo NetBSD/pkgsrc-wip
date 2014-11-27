@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2014/11/27 10:35:45 fhajny Exp $
+$NetBSD: distinfo,v 1.20 2014/11/27 13:14:48 fhajny Exp $
 
 SHA1 (riak-2.0.2.tar.gz) = 48278dee1a3070d7f3f31479aebf04e3ea4a0dfa
 RMD160 (riak-2.0.2.tar.gz) = cf678016183547328ef0f0497ccb33a4d968eb4d
 Size (riak-2.0.2.tar.gz) = 16511741 bytes
 SHA1 (patch-deps__erlang_js__c_src__Makefile) = a49481f9cb0ae9130a96102b3d540a828b8ec5f7
-SHA1 (patch-deps_eleveldb_c__src_eleveldb.cc) = ad6711260dedd2f2ea7586cb393a15266922170d
+SHA1 (patch-deps_eleveldb_c__src_eleveldb.cc) = 2e21a560c3f990ff9ac7dd604de00404644e7a5a
 SHA1 (patch-deps_node__package_priv_base_env.sh) = 975ea9dec9bafa87d6d3dd77890b0effff76db9a
 SHA1 (patch-rel__vars.config) = 72309c19974a9f55553adabbf31df2f19e9139e4

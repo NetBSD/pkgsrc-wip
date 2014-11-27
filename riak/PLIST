@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/11/27 10:35:45 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2014/11/27 13:14:48 fhajny Exp $
 man/man1/riak-admin.1
 man/man1/riak-debug.1
 man/man1/riak.1
@@ -44,12 +44,12 @@ riak/erts-${VERSION.erts}/include/internal/gcc/ethr_atomic.h
 riak/erts-${VERSION.erts}/include/internal/gcc/ethr_dw_atomic.h
 riak/erts-${VERSION.erts}/include/internal/gcc/ethr_membar.h
 riak/erts-${VERSION.erts}/include/internal/gcc/ethread.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/atomic.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/ethr_dw_atomic.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/ethr_membar.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/ethread.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/rwlock.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/spinlock.h
+riak/erts-${VERSION.erts}/include/internal/i386/atomic.h
+riak/erts-${VERSION.erts}/include/internal/i386/ethr_dw_atomic.h
+riak/erts-${VERSION.erts}/include/internal/i386/ethr_membar.h
+riak/erts-${VERSION.erts}/include/internal/i386/ethread.h
+riak/erts-${VERSION.erts}/include/internal/i386/rwlock.h
+riak/erts-${VERSION.erts}/include/internal/i386/spinlock.h
 riak/erts-${VERSION.erts}/include/internal/libatomic_ops/ethr_atomic.h
 riak/erts-${VERSION.erts}/include/internal/libatomic_ops/ethr_membar.h
 riak/erts-${VERSION.erts}/include/internal/libatomic_ops/ethread.h

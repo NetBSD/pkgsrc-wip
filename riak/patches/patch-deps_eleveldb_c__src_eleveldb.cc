@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_eleveldb_c__src_eleveldb.cc,v 1.1 2014/11/27 10:35:46 fhajny Exp $
+$NetBSD: patch-deps_eleveldb_c__src_eleveldb.cc,v 1.2 2014/11/27 13:14:48 fhajny Exp $
 
 At least on SunOS, 32bit size_t will be unsigned int, breaking expectations here.
 --- deps/eleveldb/c_src/eleveldb.cc.orig	2014-11-05 19:41:07.000000000 +0000
@@ -8,7 +8,7 @@ At least on SunOS, 32bit size_t will be unsigned int, breaking expectations here
          if (option[0] == eleveldb::ATOM_TOTAL_LEVELDB_MEM)
          {
 -            size_t memory_sz;
-+            ulong_t memory_sz;
++            unsigned long memory_sz;
              if (enif_get_ulong(env, option[1], &memory_sz))
              {
                  if (memory_sz != 0)
@@ -17,7 +17,7 @@ At least on SunOS, 32bit size_t will be unsigned int, breaking expectations here
          else if (option[0] == eleveldb::ATOM_BLOCK_CACHE_THRESHOLD)
          {
 -            size_t memory_sz;
-+            ulong_t memory_sz;
++            unsigned long memory_sz;
              if (enif_get_ulong(env, option[1], &memory_sz))
              {
                  if (memory_sz != 0)
