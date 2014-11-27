@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2014/11/26 07:33:13 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.25 2014/11/27 23:19:11 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -414,6 +414,8 @@ lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/main.j
 lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/preferences.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/preferences.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/privacy.js
+lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/search.css
+lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/search.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/security.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/subdialogs.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/in-content/sync.js
@@ -423,11 +425,15 @@ lib/firefox/browser/chrome/browser/content/browser/preferences/main.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/main.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/permissions.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/permissions.xul
+lib/firefox/browser/chrome/browser/content/browser/preferences/preferences.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/preferences.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/privacy.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/privacy.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/sanitize.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/sanitize.xul
+lib/firefox/browser/chrome/browser/content/browser/preferences/search.css
+lib/firefox/browser/chrome/browser/content/browser/preferences/search.js
+lib/firefox/browser/chrome/browser/content/browser/preferences/search.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/security.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/security.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/selectBookmark.js
@@ -518,6 +524,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-blocked-16.p
 lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-blocked-64.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-unblocked-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-unblocked-64.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/badge-add-engine.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/browser-lightweightTheme.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/browser.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/click-to-play-warning-stripes.png
@@ -800,6 +807,10 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/preferences.
 lib/firefox/browser/chrome/browser/skin/classic/browser/privatebrowsing-mask.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/reload-stop-go.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/sanitizeDialog.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/search-engine-placeholder.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/search-indicator-add-engine.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/search-indicator.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/search-pref.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/searchbar.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/setDesktopBackground.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/slowStartup-16.png
@@ -1594,6 +1605,7 @@ lib/firefox/browser/modules/translation/cld-worker.js.mem
 lib/firefox/browser/modules/webrtcUI.jsm
 lib/firefox/browser/searchplugins/amazondotcom.xml
 lib/firefox/browser/searchplugins/bing.xml
+lib/firefox/browser/searchplugins/ddg.xml
 lib/firefox/browser/searchplugins/eBay.xml
 lib/firefox/browser/searchplugins/google.xml
 lib/firefox/browser/searchplugins/twitter.xml
