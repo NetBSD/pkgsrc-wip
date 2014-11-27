@@ -1,6 +1,10 @@
 TODO
 ====
 
+0) Work on gcc should happen upstream. Pkgsrc should only contain patches
+waiting for acceptance or those that won't be accepted upstream due to missing
+standard compliance like the broken cabs of NetBSD.  
+
 1) On NetBSD a working cabsl function must be present in libm to build gfortran.
 This has been added to -current on 2014/10/10 and to NetBSD7 on 2014/10/13. Before this date it was defined in complex.h but missing from libm in current and 7.I didn't find a solution for NetBSD 6.
  
