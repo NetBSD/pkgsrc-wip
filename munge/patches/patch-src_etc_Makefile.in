@@ -1,6 +1,5 @@
-$NetBSD: patch-src_etc_Makefile.in,v 1.4 2014/04/29 19:38:51 outpaddling Exp $
+$NetBSD: patch-src_etc_Makefile.in,v 1.5 2014/11/27 13:16:20 outpaddling Exp $
 
-# Move default scripts and config files to standard examples dir
 --- src/etc/Makefile.in.orig	2013-08-27 18:35:31.000000000 +0000
 +++ src/etc/Makefile.in
 @@ -242,6 +242,7 @@ sbindir = @sbindir@
