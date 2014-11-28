@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/11/27 13:14:48 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.19 2014/11/28 20:38:31 fhajny Exp $
 man/man1/riak-admin.1
 man/man1/riak-debug.1
 man/man1/riak.1
@@ -848,10 +848,7 @@ riak/lib/os_mon-${VERSION.os_mon}/ebin/os_mon_mib.beam
 riak/lib/os_mon-${VERSION.os_mon}/ebin/os_mon_sysinfo.beam
 riak/lib/os_mon-${VERSION.os_mon}/ebin/os_sup.beam
 riak/lib/os_mon-${VERSION.os_mon}/include/OTP-OS-MON-MIB.hrl
-riak/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
-riak/lib/os_mon-${VERSION.os_mon}/priv/bin/ferrule
 riak/lib/os_mon-${VERSION.os_mon}/priv/bin/memsup
-riak/lib/os_mon-${VERSION.os_mon}/priv/bin/mod_syslog
 riak/lib/os_mon-${VERSION.os_mon}/priv/mibs/OTP-OS-MON-MIB.bin
 riak/lib/otp_mibs-${VERSION.otp_mibs}/ebin/otp_mib.beam
 riak/lib/otp_mibs-${VERSION.otp_mibs}/ebin/otp_mibs.app
