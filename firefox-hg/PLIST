@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2014/11/27 23:19:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.26 2014/11/28 11:44:42 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -721,6 +721,8 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/webconsole.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/webconsole@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/webconsole_networkpanel.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/widgets.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/dots.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/dots@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/allDownloadsViewOverlay.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/buttons.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/downloads/contentAreaDownloadsView.css
@@ -983,6 +985,7 @@ lib/firefox/browser/chrome/en-US/locale/browser/preferences/permissions.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/preferences/preferences.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/preferences/preferences.properties
 lib/firefox/browser/chrome/en-US/locale/browser/preferences/privacy.dtd
+lib/firefox/browser/chrome/en-US/locale/browser/preferences/search.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/preferences/security.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/preferences/selectBookmark.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/preferences/sync.dtd
