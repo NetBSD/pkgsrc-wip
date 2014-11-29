@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2014/11/28 11:44:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.27 2014/11/29 19:53:16 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -751,6 +751,8 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/identity.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/loop/menuPanel.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/loop/toolbar-inverted.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/loop/toolbar.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/magnifier.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/magnifier@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/mask.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/mask@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/menuPanel-customize.png
