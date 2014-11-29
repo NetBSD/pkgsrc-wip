@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/11/29 16:22:45 nros Exp $
+
+SHA1 (gflags-2.1.1.tar.gz) = 59b37548b10daeaa87a3093a11d13c2442ac6849
+RMD160 (gflags-2.1.1.tar.gz) = 5b28a31004674a7a7c2585d9025222b8a99a71a2
+Size (gflags-2.1.1.tar.gz) = 102015 bytes
