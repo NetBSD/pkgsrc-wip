@@ -1,0 +1,26 @@
+$NetBSD: patch-libgfortran_configure,v 1.1 2014/11/29 23:40:17 keckhardt Exp $
+
+--- libgfortran/configure.orig	2014-11-23 22:34:00.000000000 +0000
++++ libgfortran/configure
+@@ -2606,9 +2606,9 @@ as_fn_append ac_func_list " mkostemp"
+ as_fn_append ac_func_list " strnlen"
+ as_fn_append ac_func_list " strndup"
+ as_fn_append ac_func_list " strtok_r"
+-as_fn_append ac_func_list " newlocale"
+-as_fn_append ac_func_list " freelocale"
+-as_fn_append ac_func_list " uselocale"
++#as_fn_append ac_func_list " newlocale"
++#as_fn_append ac_func_list " freelocale"
++#as_fn_append ac_func_list " uselocale"
+ as_fn_append ac_func_list " strerror_l"
+ as_fn_append ac_header_list " math.h"
+ # Check that the precious variables saved in the cache have kept the same
+@@ -26418,7 +26418,7 @@ $as_echo "#define SUPPORTS_WEAK 1" >>con
+ 
+   fi
+   case "$host" in
+-    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* )
++    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* | *-*-netbsd* )
+ 
+ $as_echo "#define GTHREAD_USE_WEAK 0" >>confdefs.h
+ 
