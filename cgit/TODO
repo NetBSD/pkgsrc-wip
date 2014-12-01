@@ -1,7 +1,0 @@
-This package is basically finished, note however that it needs to download git while building.
-Maybe there is a nicer solution, or maybe git will have a shared library in the future?
-
-Security issue: please see http://secunia.com/advisories/43633/
- http://secunia.com/advisories/45358/
- http://secunia.com/advisories/50734/
- http://secunia.com/advisories/53542/

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2013/03/03 15:25:19 ryo-on Exp $
-libexec/cgi-bin/cgit.cgi
-libexec/cgit/filters/commit-links.sh
-libexec/cgit/filters/syntax-highlighting.sh
-share/examples/cgitrc
-share/httpd/htdocs/cgit/cgit.css
-share/httpd/htdocs/cgit/cgit.png

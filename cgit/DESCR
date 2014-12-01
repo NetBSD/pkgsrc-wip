@@ -1,2 +1,0 @@
-cgit is a cgi application implemented in C. It is non-forking, uses an internal
-cache to speed things up. Also, it features virtual URLs (unlike gitweb).
