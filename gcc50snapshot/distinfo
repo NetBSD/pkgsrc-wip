@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2014/11/29 23:40:17 keckhardt Exp $
+$NetBSD: distinfo,v 1.7 2014/12/01 17:51:26 keckhardt Exp $
 
 SHA1 (cloog-0.18.1.tar.gz) = 2dc70313e8e2c6610b856d627bce9c9c3f848077
 RMD160 (cloog-0.18.1.tar.gz) = 5c4a182efc0d42e7d5c30e6fcca5832776a2e69a
@@ -6,9 +6,9 @@ Size (cloog-0.18.1.tar.gz) = 3857324 bytes
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-5-20141123.tar.bz2) = 99e64f067daf1096dcc4bb69acb99720dcd63c7d
-RMD160 (gcc-5-20141123.tar.bz2) = f0b13e083250d15794cd6b5457938d63d36e3256
-Size (gcc-5-20141123.tar.bz2) = 88534858 bytes
+SHA1 (gcc-5-20141130.tar.bz2) = 9ba3ef22e0a6c4df3eddc7fa145c463ad141279f
+RMD160 (gcc-5-20141130.tar.bz2) = fd6c17fe61b9897b628159b320db91e894d404ad
+Size (gcc-5-20141130.tar.bz2) = 88611865 bytes
 SHA1 (isl-0.12.2.tar.bz2) = ca98a91e35fb3ded10d080342065919764d6f928
 RMD160 (isl-0.12.2.tar.bz2) = e8fb6bad4b579865a6a31c160fc21a0c9ad1e7b8
 Size (isl-0.12.2.tar.bz2) = 1319434 bytes
