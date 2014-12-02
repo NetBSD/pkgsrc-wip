@@ -1,0 +1,10 @@
+SCIM is a spreadsheet program that is based on SC.
+
+A spreadsheet is an interactive computer application program for
+organization and analysis of data in tabular form. Spreadsheets
+are developed as computerized simulations of paper accounting
+worksheets. The program operates on data represented as cells of
+an array, organized in rows and columns. Each cell of the array is
+a model-view-controller element that can containn either numeric or
+text data, or the results of formulas that automatically calculate
+and display a value based on the contents of other cells.
