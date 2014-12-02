@@ -1,6 +1,12 @@
-update 4.3. to 4.4.1
+This commit is based on wip/texmaker by Niclas Rosenvik, thanks.
+(pkgsrc)
+Now option qt5 or qt4 is at PKG_OPTIONS_REQUIRED_GROUPS= qt so that
+one of those two should be selected.
 
+(upstream)
+update 4.3. to 4.4.1 
 ( Release note at http://www.xm1math.net/texmaker/log.html )
+
 version 4.4 -> 4.4.1 :
 Bugs fixed :
 - a crash if the "% !TEX encoding=" meta tag is not valid has been fixed
