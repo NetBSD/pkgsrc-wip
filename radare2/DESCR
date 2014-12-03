@@ -1,9 +1,11 @@
-radare2 (r2) is a rewrite from scratch of radare in order to provide
-a set of libraries and tools to work with binary files.
+radare2 is an advanced commandline hexadecimal editor
+with a set of tools for working with binary files.
 
-Radare project started as a forensics tool, a scriptable commandline
-hexadecimal editor able to open disk files, but later support for analyzing
-binaries, disassembling code, debugging programs, attaching to remote gdb
-servers, ..
+Most of tools that come with radare2 have been designed
+for reverse engineering file formats, firmwares, programs,
+libraries, etc.
 
-radare2 is portable.
+Radare2 project started as a forensics tool, a scriptable
+commandline hexadecimal editor able to open disk files,
+but later support for analyzing binaries, disassembling
+code, debugging programs, attaching to remote gdb servers..
