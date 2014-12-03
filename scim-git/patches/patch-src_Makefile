@@ -1,0 +1,20 @@
+$NetBSD: patch-src_Makefile,v 1.1 2014/12/03 07:59:39 thomasklausner Exp $
+
+Add DESTDIR support.
+
+--- src/Makefile.orig	2014-12-03 06:57:16.000000000 +0000
++++ src/Makefile
+@@ -168,10 +168,11 @@ OBJS := $(patsubst %.c, %.o, $(wildcard 
+ all : $(name)
+ 
+ install :
+-	install scim $(prefix)/bin/scim
++	install -d $(DESTDIR)$(prefix)/bin
++	install scim $(DESTDIR)$(prefix)/bin/scim
+ 
+ uninstall :
+-	-rm $(prefix)/bin/scim
++	-rm $(DESTDIR)$(prefix)/bin/scim
+ 
+ $(name) : $(OBJS)
+ 	$(CC) $(LDFLAGS) $^ -o $@ $(LDLIBS)

@@ -1,2 +1,0 @@
-Doesn't build, usually due to problems with yacc:
-Makefile:187: recipe for target 'gram.c' failed
