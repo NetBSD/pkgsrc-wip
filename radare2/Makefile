@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/12/03 20:55:31 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/03 20:57:34 krytarowski Exp $
 
 DISTNAME=	radare2-0.9.8
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--with-sysmagic
+PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
 USE_TOOLS+=	gmake
 
 # Hack to walkaround INSTALL_LIB issues
