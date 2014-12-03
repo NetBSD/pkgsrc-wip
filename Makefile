@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6006 2014/12/01 12:33:11 thomasklausner Exp $
+# $Id: Makefile,v 1.6007 2014/12/03 00:00:35 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -54,6 +54,7 @@ SUBDIR+=	SDL-intro-jp
 SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
 SUBDIR+=	SDL2
+SUBDIR+=	SOPE
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	SuperCollider
@@ -3172,6 +3173,7 @@ SUBDIR+=	qupzilla
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
 SUBDIR+=	radare
+SUBDIR+=	radare2
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
 SUBDIR+=	rapidxml
@@ -3276,6 +3278,7 @@ SUBDIR+=	scantailor
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
 SUBDIR+=	schur
+SUBDIR+=	scim-git
 SUBDIR+=	scimark
 SUBDIR+=	scm
 SUBDIR+=	scmail
