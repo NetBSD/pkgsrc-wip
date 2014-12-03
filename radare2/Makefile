@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/03 20:47:44 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/03 20:55:31 krytarowski Exp $
 
 DISTNAME=	radare2-0.9.8
 CATEGORIES=	devel
@@ -14,6 +14,16 @@ HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--with-sysmagic
 USE_TOOLS+=	gmake
+
+# Hack to walkaround INSTALL_LIB issues
+#
+# radare2 invented scripts for package build ("acr")
+# Shared libraries are installed without +x permission and it's not obvious
+# how to fix it properly.
+# Go for chmod hack, being encouraged by usage of it in radare2.spec bundled
+# with the upstream version of this software.
+post-install:
+	${RUN}${FIND} ${DESTDIR} -type f -name '*.so*' -exec ${CHMOD} 0755 {} \;
 
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
