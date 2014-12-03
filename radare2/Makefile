@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/12/03 22:32:17 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/03 23:49:52 krytarowski Exp $
 
 DISTNAME=	radare2-0.9.8
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--with-sysmagic
+CONFIGURE_ARGS+=	--with-syscapstone
 PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
 USE_TOOLS+=	gmake
 
@@ -28,5 +29,6 @@ USE_TOOLS+=	gmake
 post-install:
 	${RUN}${FIND} ${DESTDIR} -type f -name '*.so*' -exec ${CHMOD} 0755 {} \;
 
+.include "../../wip/capstone/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
