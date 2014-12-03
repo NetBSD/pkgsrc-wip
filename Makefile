@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6008 2014/12/03 00:01:07 thomasklausner Exp $
+# $Id: Makefile,v 1.6009 2014/12/03 21:58:54 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -570,7 +570,6 @@ SUBDIR+=	embryo
 SUBDIR+=	emelfm2
 SUBDIR+=	emerald
 SUBDIR+=	emerald-themes
-SUBDIR+=	emesene
 SUBDIR+=	emirror
 SUBDIR+=	emokit
 SUBDIR+=	emovix
