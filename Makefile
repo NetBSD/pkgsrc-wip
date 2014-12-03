@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6007 2014/12/03 00:00:35 thomasklausner Exp $
+# $Id: Makefile,v 1.6008 2014/12/03 00:01:07 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -789,8 +789,8 @@ SUBDIR+=	gitlab
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
 SUBDIR+=	gjs
-SUBDIR+=	gksu
 SUBDIR+=	gflags
+SUBDIR+=	gksu
 SUBDIR+=	glade2-nognome
 SUBDIR+=	glfw
 SUBDIR+=	glib-java
