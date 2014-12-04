@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/04/07 04:33:25 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/04 23:44:45 othyro Exp $
 
-DISTNAME=	pygit2-0.20.3
+DISTNAME=	pygit2-0.21.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pygit2/
@@ -10,15 +10,17 @@ HOMEPAGE=	https://github.com/libgit2/pygit2
 COMMENT=	Python bindings to libgit2
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
+
+USE_LANGUAGES=	c
 PY_PATCHPLIST=	yes
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR} --prefix=${PREFIX}
+#do-install:
+#	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR} --prefix=${PREFIX}
 
 .include "../../wip/libgit2/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
+#.include "../../lang/python/application.mk"
+#.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
