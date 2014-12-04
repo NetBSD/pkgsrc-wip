@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/12 17:12:13 nros Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/12/04 15:51:25 nros Exp $
 bin/qupzilla
 lib/libQupZilla.la
 lib/qupzilla/libAccessKeysNavigation.la
@@ -7,8 +7,8 @@ lib/qupzilla/libGreaseMonkey.la
 lib/qupzilla/libMouseGestures.la
 lib/qupzilla/libPIM.la
 lib/qupzilla/libStatusBarIcons.la
-${PLIST.qt5}lib/qupzilla/libTestPlugin.la
 share/applications/qupzilla.desktop
+share/bash-completion/completions/qupzilla
 share/icons/hicolor/128x128/apps/qupzilla.png
 share/icons/hicolor/16x16/apps/qupzilla.png
 share/icons/hicolor/256x256/apps/qupzilla.png
@@ -289,3 +289,4 @@ share/qupzilla/themes/windows/theme.info
 share/qupzilla/themes/windows/theme.license
 share/qupzilla/themes/windows/theme.png
 share/qupzilla/themes/windows/windows.css
+share/zsh/site-functions/_qupzilla
