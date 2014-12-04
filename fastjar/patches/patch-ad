@@ -1,17 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2014/11/20 05:36:33 makoto Exp $
+$NetBSD: patch-ad,v 1.2 2014/12/04 14:51:35 makoto Exp $
 
      
 --- jartool.c.orig	2007-02-06 12:32:14.000000000 +0900
 +++ jartool.c	2014-11-20 14:26:00.000000000 +0900
-@@ -173,8 +173,6 @@ jartool.c - main functions for fastjar u
- static char version_string[] = VERSION;
- static char rcsid[] = "$Id: patch-ad,v 1.1 2014/11/20 05:36:33 makoto Exp $";
- 
--extern int errno;
--
- void usage(char*);
- void add_entry(struct zipentry *);
- void init_headers();
 @@ -1152,7 +1150,32 @@ int add_file_to_jar(int jfd, int ffd, ch
      return 0;
    }
