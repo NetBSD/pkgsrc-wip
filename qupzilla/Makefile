@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/12/04 15:51:25 nros Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/04 23:54:41 nros Exp $
 
 DISTNAME=	QupZilla-1.8.4
 PKGNAME=	${DISTNAME:tl}
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	https://github.com/QupZilla/qupzilla/releases/download/v${PKGVERSION}/
+MASTER_SITES=	https://github.com/QupZilla/qupzilla/releases/download/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,8 +16,6 @@ USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	yes
 MAKE_ENV+=	QUPZILLA_PREFIX=${PREFIX}
-#MAKE_ENV+=	DISABLE_DBUS=${TRUE}
-
 MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
