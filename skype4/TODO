@@ -1,0 +1,5 @@
+1) Make this stop crashing a few seconds after execution;
+2) Use the latest SuSE emulation packages instead of 12.1.
+   If those aren't in pkgsrc, import them;
+3) Add PulseAudio as a PKG_OPTION, defaulting to enabled;
+4) Figure out where skype.conf in the ${DISTFILE} goes during install;
