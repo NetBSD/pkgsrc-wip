@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/04 05:47:32 makoto Exp $
+bin/dadd
+bin/dconv
+bin/ddiff
+bin/dgrep
+bin/dround
+bin/dseq
+bin/dsort
+bin/dtest
+bin/dzone
+bin/strptime
+info/dateutils.info
+man/man1/dadd.1
+man/man1/dateutils.1
+man/man1/dconv.1
+man/man1/ddiff.1
+man/man1/dgrep.1
+man/man1/dround.1
+man/man1/dseq.1
+man/man1/dsort.1
+man/man1/dtest.1
+man/man1/dzone.1
+man/man1/strptime.1
+share/doc/dateutils/README.md
+@pkgdir share/dateutils
