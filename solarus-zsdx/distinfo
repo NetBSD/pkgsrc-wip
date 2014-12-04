@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/01/01 01:08:40 othyro Exp $
+$NetBSD: distinfo,v 1.2 2014/12/04 23:58:22 othyro Exp $
 
-SHA1 (zsdx-1.7.1.tar.gz) = b794fa6a5a37a0e745183644ebfb5e3c6f52a6fa
-RMD160 (zsdx-1.7.1.tar.gz) = decd674c94e8ff41b862527ad22b5382f403d5f5
-Size (zsdx-1.7.1.tar.gz) = 22987929 bytes
+SHA1 (zsdx-1.9.0.tar.gz) = ae80e921fd803b942c51b3244249be2f69ba81a1
+RMD160 (zsdx-1.9.0.tar.gz) = b1ce989ddb957b70f2daa06e2d0e1187f9cdd1f1
+Size (zsdx-1.9.0.tar.gz) = 20760682 bytes
