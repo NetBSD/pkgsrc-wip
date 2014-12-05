@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/04 18:30:16 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/05 11:49:14 thomasklausner Exp $
 
 DISTNAME=	capstone-3.0
 CATEGORIES=	devel
@@ -13,5 +13,6 @@ LICENSE=	modified-bsd
 PKGCONFIG_OVERRIDE+=	capstone.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 USE_TOOLS+=	gmake
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
