@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6013 2014/12/04 23:06:12 othyro Exp $
+# $Id: Makefile,v 1.6014 2014/12/05 14:58:38 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2492,7 +2492,6 @@ SUBDIR+=	py-cocos2d
 SUBDIR+=	py-codepy
 SUBDIR+=	py-cogapp
 SUBDIR+=	py-cogent
-SUBDIR+=	py-colorama
 SUBDIR+=	py-colorpy
 SUBDIR+=	py-complexsystems
 SUBDIR+=	py-concepts
