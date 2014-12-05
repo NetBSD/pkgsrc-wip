@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-system,v 1.4 2008/07/05 20:00:30 adrian_p Exp $
+# $NetBSD: audit-system,v 1.5 2014/12/05 14:31:49 schmonz Exp $
 #
 # Copyright (c) 2008 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -200,7 +200,7 @@ fi
 # check for old vulnerabilities file if we're being verbose
 if [ "x${verbose}" = "xyes" ]; then
         if [ -n "$(${FIND} ${vuls} -ctime +7)" ]; then
-		echo "WARNING: system vulnerabilites file is more than a week old"
+		echo "WARNING: system vulnerabilities file is more than a week old"
 	fi
 fi
 
