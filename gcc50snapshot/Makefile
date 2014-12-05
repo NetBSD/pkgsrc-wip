@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/10/19 10:50:56 keckhardt Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/05 06:33:46 keckhardt Exp $
 
 GCC_PKGNAME=		gcc50snapshot
 .include		"version.mk"
@@ -103,7 +103,7 @@ CONFIGURE_ARGS+=	--disable-bootstrap
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-amd64) || !empty(MACHINE_PLATFORM:MLinux-*-amd64)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
 CONFIGURE_ARGS+=	--with-arch=nocona --with-tune=nocona --with-fpmath=sse
 .endif
 
