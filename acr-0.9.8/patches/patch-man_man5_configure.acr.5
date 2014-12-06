@@ -1,8 +1,6 @@
-$NetBSD: patch-man_man5_configure.acr.5,v 1.1 2014/12/05 22:41:00 krytarowski Exp $
+$NetBSD: patch-man_man5_configure.acr.5,v 1.2 2014/12/06 02:57:33 krytarowski Exp $
 
-* WIth this patch, configure.acr(5) is rendered properly with mdocml.
-
---- man/man5/configure.acr.5.orig	2011-08-04 10:24:58.000000000 +0000
+--- man/man5/configure.acr.5.orig	2013-12-21 22:54:48.000000000 +0000
 +++ man/man5/configure.acr.5
 @@ -33,14 +33,13 @@ generation of .acr files with SUBDIRS an
  .El
@@ -14,13 +12,13 @@ $NetBSD: patch-man_man5_configure.acr.5,v 1.1 2014/12/05 22:41:00 krytarowski Ex
  This means that each word must be separated with space, tab or new-lines.
  The ';' separator to terminate strings must be also a separated word.
  .Pp
--.Bl -bold -tag -width indent
+-.Bl -tag -width indent
  Each word is called "keyword", there are these types:
-+.Bl -bold -tag -width indent
++.Bl -tag -width indent
  .It Miscelaneous-Keys:
  { } ;
  .It Command:
-@@ -208,8 +207,8 @@ Checks the existence of the target user 
+@@ -210,8 +209,8 @@ Checks the existence of the target user 
  .El
  .\"
  .Sh DEFINITIONS
