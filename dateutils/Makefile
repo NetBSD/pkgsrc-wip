@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/06 04:57:53 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/06 10:03:08 nros Exp $
 
 DISTNAME=	v0.3.1
 PKGNAME=	${DISTNAME:S/^v/dateutils-/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config automake autoreconf gmake makeinfo bison
+USE_TOOLS+=	pkg-config automake autoreconf gmake makeinfo bison flex
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libdut.pc.in
