@@ -1,6 +1,0 @@
-* deal with /var/run/fail2ban not existing somehow
-
-* Provide a more sane default config with a paths-netbsd.conf
-
-* Some stuff might be worth packaging (plugins for other
-  softwares)
