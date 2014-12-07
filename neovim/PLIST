@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/22 22:58:46 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/07 22:03:05 jonthn Exp $
 bin/nvim
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
@@ -55,8 +55,13 @@ share/nvim/runtime/autoload/netrwSettings.vim
 share/nvim/runtime/autoload/netrw_gitignore.vim
 share/nvim/runtime/autoload/paste.vim
 share/nvim/runtime/autoload/phpcomplete.vim
+share/nvim/runtime/autoload/provider/clipboard.vim
+share/nvim/runtime/autoload/provider/python.vim
+share/nvim/runtime/autoload/provider/script_host.py
 share/nvim/runtime/autoload/python3complete.vim
 share/nvim/runtime/autoload/pythoncomplete.vim
+share/nvim/runtime/autoload/remote/define.vim
+share/nvim/runtime/autoload/remote/host.vim
 share/nvim/runtime/autoload/rubycomplete.vim
 share/nvim/runtime/autoload/spellfile.vim
 share/nvim/runtime/autoload/sqlcomplete.vim
@@ -236,6 +241,7 @@ share/nvim/runtime/doc/motion.txt
 share/nvim/runtime/doc/msgpack_rpc.txt
 share/nvim/runtime/doc/nvim_clipboard.txt
 share/nvim/runtime/doc/nvim_intro.txt
+share/nvim/runtime/doc/nvim_provider.txt
 share/nvim/runtime/doc/nvim_python.txt
 share/nvim/runtime/doc/options.txt
 share/nvim/runtime/doc/os_dos.txt
@@ -257,6 +263,7 @@ share/nvim/runtime/doc/quickref.txt
 share/nvim/runtime/doc/quotes.txt
 share/nvim/runtime/doc/recover.txt
 share/nvim/runtime/doc/remote.txt
+share/nvim/runtime/doc/remote_plugin.txt
 share/nvim/runtime/doc/repeat.txt
 share/nvim/runtime/doc/rileft.txt
 share/nvim/runtime/doc/russian.txt
@@ -712,6 +719,7 @@ share/nvim/runtime/plugin/getscriptPlugin.vim
 share/nvim/runtime/plugin/gzip.vim
 share/nvim/runtime/plugin/matchparen.vim
 share/nvim/runtime/plugin/netrwPlugin.vim
+share/nvim/runtime/plugin/rplugin.vim
 share/nvim/runtime/plugin/rrhelper.vim
 share/nvim/runtime/plugin/spellfile.vim
 share/nvim/runtime/plugin/tarPlugin.vim
@@ -751,7 +759,6 @@ share/nvim/runtime/print/ks_roman.ps
 share/nvim/runtime/print/latin1.ps
 share/nvim/runtime/print/mac-roman.ps
 share/nvim/runtime/print/prolog.ps
-share/nvim/runtime/python_setup.vim
 share/nvim/runtime/rgb.txt
 share/nvim/runtime/scripts.vim
 share/nvim/runtime/synmenu.vim
