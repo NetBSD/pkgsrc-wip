@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6016 2014/12/06 15:21:53 othyro Exp $
+# $Id: Makefile,v 1.6017 2014/12/07 00:25:12 jonthn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1568,6 +1568,7 @@ SUBDIR+=	lire
 SUBDIR+=	lissac
 SUBDIR+=	litecoin
 SUBDIR+=	lives
+SUBDIR+=	livestreamer
 SUBDIR+=	lldpd
 SUBDIR+=	llvm
 SUBDIR+=	llvm-rtlib
@@ -2604,6 +2605,7 @@ SUBDIR+=	py-forthon
 SUBDIR+=	py-fortpy
 SUBDIR+=	py-fs
 SUBDIR+=	py-functions
+SUBDIR+=	py-futures
 SUBDIR+=	py-fuzzpy
 SUBDIR+=	py-fwarp
 SUBDIR+=	py-fwm-ensayo
@@ -2977,6 +2979,7 @@ SUBDIR+=	py-siginterrupt
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
+SUBDIR+=	py-singledispatch
 SUBDIR+=	py-sleekxmpp
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smcp
