@@ -10,18 +10,26 @@ use Getopt::Std;
 our(@ARGV);
 my (%opts);
 
+my($my_name) = $0;
+$my_name =~ s#(.*)/##;
+
 sub usage(){
     print <<HELP;
-    $0: Read cvs diff -u output (of named file) and substitute
-	if py27, py34 or ruby200 is found.
-    Synopsys:
-        $0  [-h] [-p pkgsrc_dir] [-v] [cvs-diff-u_output_file]
-    Where:
-        -h  Show this help
-        -p  pkgsrc directory other than /usr/pkgsrc
-        -v  verbose (not actually implemented yet)
-        cvs-diff-u_output_file The name of the file 'cvs diff -u' 
+$my_name: 
+    Read cvs diff -u output (of named file) and substitute
+    if the string py27, py34 or ruby200 is found in the corresponding
+    changes in diff.
+Synopsys:
+    $my_name  [-h] [-p pkgsrc_dir] [-v] [cvs-diff-u_output_file]
+Where:
+    -h  Show this help
+    -p  pkgsrc directory other than /usr/pkgsrc
+    -v  verbose (not actually implemented yet)
+    cvs-diff-u_output_file:
+        The name of input. Usually the file including 'cvs diff -u' 
         output (default cvs-diff) 
+See Also:
+    revbump(1) for how to use it.
 HELP
 }    
 

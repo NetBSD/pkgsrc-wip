@@ -31,17 +31,30 @@ my ($FILE)	= __FILE__;
 
 my($replaced) = 'commonbump.replaced';
 
+my($my_name) = $0;
+$my_name =~ s#(.*)/##;
+
 sub usage() {
     print <<HELP;
-$0:
-    Show referenced files if the file is included in each of them.
-Synopsys:      $0 [-h] [-p pkgsrc_directory] [-T list_file]
-   Where:
-   -a		Check All, disregard to -T option, check All the files 
-		if "# used by" is included.
-   -h		Show this help
-   -p directory	pkgsrc directory (default $PKGSRCDIR)
-   -T		the filename containing list of files (default commonbump)
+$my_name:
+  This is a part of revbump and intended for pkgsrc developers.
+  (1) Read entire pkgsrc tree and have referenced <- referer relation table
+      inside.
+  (2) Then read another file, named $TABLE or other file with -T, which
+      usually lists Makefile.common or *common.mk files to expand.
+  (3) Then expands those list of files into package names which refer those
+      files listed in (2).
+Synopsys:
+    $my_name [-a ] [-h] [-p pkgsrc_directory] [-T list_file] 
+Where:
+   -a	Check all, disregard to -T option. If "# used by" is 
+    	included or not.
+   -h	Show this help
+   -p directory	
+        pkgsrc directory to process (default $PKGSRCDIR)
+   -T	the filename containing list of files (default commonbump)
+See Also:
+    revbump(1) for how to use it.
 HELP
 }
 
