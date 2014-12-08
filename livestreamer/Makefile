@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/07 00:19:03 jonthn Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/08 08:59:20 thomasklausner Exp $
 
 DISTNAME=	v1.10.2
 PKGNAME=	livestreamer-${DISTNAME:C/v//1}
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 
 .if ${_PYTHON_VERSION} == 26
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
@@ -27,6 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../wip/py-singledispatch
 .endif
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+EGG_NAME=	${PKGNAME_NOREV}
 
 REPLACE_PYTHON+= src/livestreamer/packages/flashmedia/flv.py
 REPLACE_PYTHON+= src/livestreamer/packages/flashmedia/tag.py
@@ -37,5 +38,4 @@ REPLACE_PYTHON+= src/livestreamer/packages/flashmedia/f4v.py
 REPLACE_PYTHON+= src/livestreamer/packages/flashmedia/util.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/07 00:19:03 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/08 08:59:20 thomasklausner Exp $
 bin/livestreamer
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/entry_points.txt
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/requires.txt
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/livestreamer/__init__.py
 ${PYSITELIB}/livestreamer/__init__.pyc
 ${PYSITELIB}/livestreamer/__init__.pyo
