@@ -1,10 +1,10 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
 
---- media/libcubeb/src/cubeb_alsa.c.orig	2013-10-25 22:27:33.000000000 +0000
+--- media/libcubeb/src/cubeb_alsa.c.orig	2014-12-03 19:51:04.000000000 +0000
 +++ media/libcubeb/src/cubeb_alsa.c
-@@ -6,6 +6,9 @@
-  */
+@@ -7,6 +7,9 @@
  #undef NDEBUG
+ #define _DEFAULT_SOURCE
  #define _BSD_SOURCE
 +#if defined(__NetBSD__)
 +#define _NETBSD_SOURCE

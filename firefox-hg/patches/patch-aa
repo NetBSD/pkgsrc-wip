@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2014-09-28 08:30:07.000000000 +0000
+--- configure.in.orig	2014-12-03 19:51:08.000000000 +0000
 +++ configure.in
-@@ -1668,7 +1668,13 @@ Linux)
+@@ -1766,7 +1766,13 @@ Linux)
          MOZ_ENABLE_PROFILER_SPS=
      esac
      ;;
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1772,7 +1778,7 @@ case "$host" in
+@@ -1870,7 +1876,7 @@ case "$host" in
      ;;
  
  *-darwin*)
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
      HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
      ;;
-@@ -1904,7 +1910,6 @@ case "$target" in
+@@ -2002,7 +2008,6 @@ case "$target" in
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
      else
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -3555,6 +3560,14 @@ if test -n "$YASM"; then
+@@ -3636,6 +3641,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -62,7 +62,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3582,11 +3595,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3663,11 +3676,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -75,7 +75,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4266,6 +4275,10 @@ cairo-gonk)
+@@ -4381,6 +4390,10 @@ cairo-gonk)
  
  esac
  
@@ -86,7 +86,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -4998,6 +5011,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5121,6 +5134,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -96,10 +96,10 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5101,6 +5117,57 @@ if test "${ac_cv_c_attribute_aligned}" !
- fi
- 
- dnl ========================================================
+@@ -5207,6 +5223,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
+     [ac_cv_c_attribute_aligned],
+     [ac_cv_c_attribute_aligned=0
+      CFLAGS_save="${CFLAGS}"
 +dnl Check for libogg
 +dnl ========================================================
 +
@@ -151,11 +151,11 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
 +AC_SUBST(MOZ_NATIVE_TREMOR)
 +
 +dnl ========================================================
- dnl = Disable Opus audio codec support
- dnl ========================================================
- MOZ_ARG_DISABLE_BOOL(opus,
-@@ -5109,6 +5176,89 @@ MOZ_ARG_DISABLE_BOOL(opus,
-     MOZ_OPUS=1)
+      CFLAGS="${CFLAGS} -Werror"
+      for ac_cv_c_attr_align_try in 64 32 16 8; do
+        echo "trying $ac_cv_c_attr_align_try"
+@@ -5224,6 +5291,89 @@ if test "${ac_cv_c_attribute_aligned}" !
+ fi
  
  dnl ========================================================
 +dnl Check for libopus
@@ -244,7 +244,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5902,7 +6052,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -6020,7 +6170,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -255,7 +255,7 @@ $NetBSD: patch-aa,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
          ;;
      WINNT)
          case "$MOZ_WINSDK_MAXVER" in
-@@ -8028,6 +8180,48 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8069,6 +8221,48 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================

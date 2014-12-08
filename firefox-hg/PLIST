@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2014/11/29 19:53:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.28 2014/12/08 11:52:34 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -521,6 +521,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/aboutTabCrashed.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutWelcomeBack.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/actionicon-tab.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-blocked-16.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-blocked-16@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-blocked-64.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-unblocked-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/bad-content-unblocked-64.png
@@ -659,6 +660,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/newtab.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/newtab@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/noise.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/performance.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/performance-icons.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch-checked.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/profiler.css
@@ -3097,6 +3099,7 @@ lib/firefox/modules/devtools/pretty-fast.js
 lib/firefox/modules/devtools/qrcode/decoder/index.js
 lib/firefox/modules/devtools/qrcode/encoder/index.js
 lib/firefox/modules/devtools/qrcode/index.js
+lib/firefox/modules/devtools/security/socket.js
 lib/firefox/modules/devtools/server/actors/actor-registry.js
 lib/firefox/modules/devtools/server/actors/call-watcher.js
 lib/firefox/modules/devtools/server/actors/canvas.js
