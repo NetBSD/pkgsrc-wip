@@ -37,13 +37,15 @@ $my_name =~ s#(.*)/##;
 sub usage() {
     print <<HELP;
 $my_name:
-  This is a part of revbump and intended for pkgsrc developers.
-  (1) Read entire pkgsrc tree and have referenced <- referer relation table
-      inside.
-  (2) Then read another file, named $TABLE or other file with -T, which
+  This command is a part of revbump package and intended for pkgsrc developers.
+  (1) Read entire pkgsrc tree and check referer -> referenced relation,
+      then internally keeps (opposite) referenced -> referer relation table.
+  (2) Read another file, named '$TABLE' or other name with -T, which
       usually lists Makefile.common or *common.mk files to expand.
-  (3) Then expands those list of files into package names which refer those
-      files listed in (2).
+  (3) Now expands those list in '$TABLE' into list of Makefiles by
+      referenced -> refer relation. By default, it outputs to the file
+      '$replaced' (currently the name is fixed).
+
 Synopsys:
     $my_name [-a ] [-h] [-p pkgsrc_directory] [-T list_file] 
 Where:
