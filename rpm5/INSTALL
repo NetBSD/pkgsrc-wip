@@ -1,0 +1,18 @@
+# $NetBSD: INSTALL,v 1.1 2014/12/09 22:47:31 krytarowski Exp $
+
+RPM="${PKG_PREFIX}/bin/rpm"
+RPMDIR="@RPMDIR@"
+
+case ${STAGE} in
+POST-INSTALL)
+	${MKDIR} ${RPMDIR}
+	${TOUCH} ${RPMDIR}/.pre-timestamp
+	sleep 1
+	if ! ${RPM} -qa 2>/dev/null; then
+		${ECHO} "${PKGNAME}: initializing the RPM database..."
+		${RPM} --initdb
+	fi
+	sleep 1
+	${TOUCH} ${RPMDIR}/.post-timestamp
+	;;
+esac
