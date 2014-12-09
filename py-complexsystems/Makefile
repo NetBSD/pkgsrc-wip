@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:29 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/12/09 21:11:33 jihbed Exp $
 
-DISTNAME=	ComplexSystems-0.3.0.5
-PKGNAME=	${PYPKGPREFIX}-complexsystems-0.3.0.5
-CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/C/ComplexSystems/
+DISTNAME=	ComplexSystems-0.3.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	devel python
+MASTER_SITES=	https://pypi.python.org/packages/source/C/ComplexSystems/
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	 http://bitbucket.org/vgauthier/complex-systems/
-COMMENT=	Toolbox for Complex Sytems
-LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/ComplexSystems-0.3.0.5
+MAINTAINER= jihbed.research@gmail.com
+HOMEPAGE= http://bitbucket.org/vgauthier/complex-systems/
+COMMENT= Toolbox for Complex Sytems
+LICENSE= mit
 
 USE_LANGUAGES=	# none
 
