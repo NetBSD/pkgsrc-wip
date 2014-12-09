@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/09/07 20:59:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/09 10:05:40 thomasklausner Exp $
 
-DISTNAME=	CalDAVClientLibrary-13824
+DISTNAME=	CalDAVClientLibrary-14161
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time net
 MASTER_SITES=	# manually packaged from SVN
@@ -10,7 +10,7 @@ HOMEPAGE=	http://trac.calendarserver.org/
 COMMENT=	CalDAV library for python used by CalendarServer
 #LICENSE=	# TODO: (see mk/license.mk)
 
-WRKSRC=		${WRKDIR}/CalDAVClientLibrary/trunk
+WRKSRC=		${WRKDIR}/CalDAVClientLibrary
 USE_LANGUAGES=	# none
 EGG_NAME=	UNKNOWN-0.0.0
 

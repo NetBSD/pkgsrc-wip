@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/09/07 20:59:24 thomasklausner Exp $
+$NetBSD: distinfo,v 1.3 2014/12/09 10:05:41 thomasklausner Exp $
 
-SHA1 (CalDAVClientLibrary-13824.tar.gz) = 974e6955646b69138b04dd2e52ae4516d77649af
-RMD160 (CalDAVClientLibrary-13824.tar.gz) = dd5362cd37c735814541aaac02b17f28de6ffc8c
-Size (CalDAVClientLibrary-13824.tar.gz) = 2639236 bytes
+SHA1 (CalDAVClientLibrary-14161.tar.gz) = 1ca4da6e87edb4411448d5850ee448adb4b610c3
+RMD160 (CalDAVClientLibrary-14161.tar.gz) = 1fa17b231a24bb365ad8c2cdb2d3e32a0a71c4c7
+Size (CalDAVClientLibrary-14161.tar.gz) = 2712023 bytes
