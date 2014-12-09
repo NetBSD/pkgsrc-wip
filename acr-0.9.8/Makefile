@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/06 02:57:33 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/09 22:29:16 krytarowski Exp $
 #
 
 VERSION=		0.9.8
@@ -12,9 +12,9 @@ HOMEPAGE=		https://github.com/radare/acr
 COMMENT=		Autoconf replacement
 LICENSE=		gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # Only defined the install target
-NO_BUILD=
+NO_BUILD=		yes
 
 GNU_CONFIGURE=		yes
 
