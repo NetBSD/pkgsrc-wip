@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/14 22:17:46 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/09 22:05:04 jihbed Exp $
 ${PYSITELIB}/pykrylov/__init__.py
 ${PYSITELIB}/pykrylov/__init__.pyc
 ${PYSITELIB}/pykrylov/__init__.pyo
@@ -117,6 +117,9 @@ ${PYSITELIB}/pykrylov/tools/eps.pyo
 ${PYSITELIB}/pykrylov/tools/setup.py
 ${PYSITELIB}/pykrylov/tools/setup.pyc
 ${PYSITELIB}/pykrylov/tools/setup.pyo
+${PYSITELIB}/pykrylov/tools/types.py
+${PYSITELIB}/pykrylov/tools/types.pyc
+${PYSITELIB}/pykrylov/tools/types.pyo
 ${PYSITELIB}/pykrylov/tools/utils.py
 ${PYSITELIB}/pykrylov/tools/utils.pyc
 ${PYSITELIB}/pykrylov/tools/utils.pyo
