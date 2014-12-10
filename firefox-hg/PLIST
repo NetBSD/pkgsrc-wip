@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2014/12/08 11:52:34 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.29 2014/12/10 14:45:39 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -1430,6 +1430,7 @@ lib/firefox/browser/modules/devtools/DOMHelpers.jsm
 lib/firefox/browser/modules/devtools/DeveloperToolbar.jsm
 lib/firefox/browser/modules/devtools/FloatingScrollbars.jsm
 lib/firefox/browser/modules/devtools/Graphs.jsm
+lib/firefox/browser/modules/devtools/GraphsWorker.js
 lib/firefox/browser/modules/devtools/Jsbeautify.jsm
 lib/firefox/browser/modules/devtools/Parser.jsm
 lib/firefox/browser/modules/devtools/SideMenuWidget.jsm
@@ -3206,6 +3207,7 @@ lib/firefox/modules/services-common/tokenserverclient.js
 lib/firefox/modules/services-common/utils.js
 lib/firefox/modules/services-crypto/WeaveCrypto.js
 lib/firefox/modules/services-crypto/utils.js
+lib/firefox/modules/services-sync/FxaMigrator.jsm
 lib/firefox/modules/services-sync/addonsreconciler.js
 lib/firefox/modules/services-sync/addonutils.js
 lib/firefox/modules/services-sync/browserid_identity.js
