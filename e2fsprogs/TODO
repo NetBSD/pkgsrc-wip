@@ -1,0 +1,9 @@
+- Following patch containing __NetBSD__
+  patches/patch-lib_ext2fs_bitops.c
+  It doesn't seem to be correct.
+
+- In the man page of blkid and 
+  the path don't exist, would user create that file ?
+
+  e2fsck.conf(5)   /usr/pkg/etc/e2fsck.conf
+  blkid(8)         /usr/pkg/etc/blkid.tab
