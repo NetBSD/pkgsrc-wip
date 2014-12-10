@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/05 06:33:46 keckhardt Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/10 06:10:46 keckhardt Exp $
 
 GCC_PKGNAME=		gcc50snapshot
 .include		"version.mk"
@@ -71,10 +71,8 @@ BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 
 post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL12}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL12} ${WRKSRC}/isl
-	${TAR} -zxf ${DISTDIR}/${CLOOG18}.tar.gz -C ${WRKSRC}
-	${MV} ${WRKSRC}/${CLOOG18} ${WRKSRC}/cloog
+	${TAR} -jxf ${DISTDIR}/${ISL14}.tar.bz2 -C ${WRKSRC}
+	${MV} ${WRKSRC}/${ISL14} ${WRKSRC}/isl
 .endif
 
 ## For target librarys and libjava programs.
@@ -92,6 +90,9 @@ CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 MAKE_ENV+=		ac_cv_func_gethostbyname_r=no
+MAKE_ENV+=		ac_cv_func_freelocale=no
+MAKE_ENV+=		ac_cv_func_newlocale=no
+MAKE_ENV+=		ac_cv_func_uselocale=no
 .endif
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
