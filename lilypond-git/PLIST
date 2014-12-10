@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/03 19:07:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2014/12/10 09:59:19 thomasklausner Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -334,6 +334,7 @@ share/lilypond/${PKGVERSION}/scm/standalone.scm
 share/lilypond/${PKGVERSION}/scm/stencil.scm
 share/lilypond/${PKGVERSION}/scm/tablature.scm
 share/lilypond/${PKGVERSION}/scm/text.scm
+share/lilypond/${PKGVERSION}/scm/time-signature.scm
 share/lilypond/${PKGVERSION}/scm/time-signature-settings.scm
 share/lilypond/${PKGVERSION}/scm/titling.scm
 share/lilypond/${PKGVERSION}/scm/to-xml.scm
