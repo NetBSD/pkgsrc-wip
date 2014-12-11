@@ -69,13 +69,13 @@ Suggested package updates
 	o libgme-0.6.0
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
-	o libressl-2.1.1
+	o libressl-2.1.2
 	o lives-2.2.4
 	o llvm-3.4.2
 	o lucene-4.5.0
 	o man-1.6f
 	o mcwm-20130209.2
-	o meta-tracker-1.2.4
+	o meta-tracker-1.2.5
 	o miniupnpc-1.9.20140401
 	o miro-5.0
 	o mixxx-1.11.0
@@ -122,7 +122,7 @@ Suggested package updates
 	o vidalia-0.2.21
 	o vidalia-devel-0.3.3
 	o vimprobable2-1.4.0
-	o virtualbox-4.3.16
+	o virtualbox-4.3.20
 	o xaralx-bin-0.7.1692
 	o xf86-input-synaptics-1.8.0
 	o xf86-video-geode-2.11.16
