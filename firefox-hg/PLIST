@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2014/12/10 14:45:39 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.30 2014/12/12 15:23:14 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -902,6 +902,7 @@ lib/firefox/browser/chrome/en-US/locale/browser/aboutPrivateBrowsing.properties
 lib/firefox/browser/chrome/en-US/locale/browser/aboutRobots.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/aboutSessionRestore.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/aboutSyncTabs.dtd
+lib/firefox/browser/chrome/en-US/locale/browser/accounts.properties
 lib/firefox/browser/chrome/en-US/locale/browser/appstrings.properties
 lib/firefox/browser/chrome/en-US/locale/browser/baseMenuOverlay.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/browser.dtd
@@ -1385,7 +1386,6 @@ lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
 lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 lib/firefox/browser/icons/mozicon128.png
 lib/firefox/browser/modules/AboutHome.jsm
-lib/firefox/browser/modules/BrowserNewTabPreloader.jsm
 lib/firefox/browser/modules/BrowserUITelemetry.jsm
 lib/firefox/browser/modules/CastingApps.jsm
 lib/firefox/browser/modules/Chat.jsm
@@ -2204,11 +2204,11 @@ lib/firefox/chrome/toolkit/skin/classic/global/icons/webapps-16.png
 lib/firefox/chrome/toolkit/skin/classic/global/icons/webapps-64.png
 lib/firefox/chrome/toolkit/skin/classic/global/icons/windowControls.png
 lib/firefox/chrome/toolkit/skin/classic/global/icons/wrap.png
-lib/firefox/chrome/toolkit/skin/classic/global/in-content/check.png
-lib/firefox/chrome/toolkit/skin/classic/global/in-content/check@2x.png
+lib/firefox/chrome/toolkit/skin/classic/global/in-content/check.svg
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/common.css
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/dropdown.svg
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/help-glyph.svg
+lib/firefox/chrome/toolkit/skin/classic/global/in-content/radio.svg
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/sorter.png
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/sorter@2x.png
 lib/firefox/chrome/toolkit/skin/classic/global/inContentUI.css
@@ -3096,12 +3096,15 @@ lib/firefox/modules/devtools/jsbeautify/beautify.js
 lib/firefox/modules/devtools/jsbeautify/sanitytest.js
 lib/firefox/modules/devtools/jsbeautify/urlencode_unpacker.js
 lib/firefox/modules/devtools/output-parser.js
+lib/firefox/modules/devtools/path.js
 lib/firefox/modules/devtools/pretty-fast.js
 lib/firefox/modules/devtools/qrcode/decoder/index.js
 lib/firefox/modules/devtools/qrcode/encoder/index.js
 lib/firefox/modules/devtools/qrcode/index.js
+lib/firefox/modules/devtools/security/cert.js
 lib/firefox/modules/devtools/security/socket.js
 lib/firefox/modules/devtools/server/actors/actor-registry.js
+lib/firefox/modules/devtools/server/actors/animation.js
 lib/firefox/modules/devtools/server/actors/call-watcher.js
 lib/firefox/modules/devtools/server/actors/canvas.js
 lib/firefox/modules/devtools/server/actors/child-process.js
