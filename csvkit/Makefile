@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/10/25 23:54:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/13 06:58:29 obache Exp $
 
 DISTNAME=	0.9.0
 PKGNAME=	csvkit-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-nose>=1.1.2:../../devel/py-nose \
 		${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx \
 		${PYPKGPREFIX}-coverage>=1.0.7:../../devel/py-coverage \
 		${PYPKGPREFIX}-openpyxl>=2.0.3:../../textproc/py-openpyxl \
-		${PYPKGPREFIX}-ordereddict>=1.1:../../devel/py-ordereddict \
 		${PYPKGPREFIX}-jdcal>=0.9.3:../../time/py-jdcal \
 		${PYPKGPREFIX}-simplejson>=3.6.3:../../converters/py-simplejson \
 		${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
@@ -33,4 +32,7 @@ EGG_NAME=	${PKGNAME}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.if ${PYPKGPREFIX} == "py26"
+DEPENDS+=	${PYPKGPREFIX}-ordereddict>=1.1:../../devel/py-ordereddict
+.endif
 .include "../../mk/bsd.pkg.mk"
