@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/08/11 23:10:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/13 11:15:14 thomasklausner Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
 PKGREVISION=		1
@@ -41,7 +41,7 @@ CFLAGS+=		-fPIC
 CXXFLAGS+=		-fPIC
 
 # which platforms support OSSv4?
-.if ${MACHINE_PLATFORM:MNetBSD-6.99.4*-*}
+.if ${MACHINE_PLATFORM:MNetBSD-[789]*-*}
 PLIST.oss=		yes
 .include "../../mk/oss.buildlink3.mk"
 .endif
