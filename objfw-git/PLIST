@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2014/04/30 22:44:30 midar Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/12/14 17:45:11 midar Exp $
 bin/objfw-compile
 bin/objfw-config
+bin/ofhash
 bin/ofzip
 include/ObjFW/OFAcceptFailedException.h
 include/ObjFW/OFAddressTranslationFailedException.h
@@ -87,17 +88,25 @@ include/ObjFW/OFOutOfMemoryException.h
 include/ObjFW/OFOutOfRangeException.h
 include/ObjFW/OFPlugin.h
 include/ObjFW/OFProcess.h
+include/ObjFW/OFRIPEMD160Hash.h
 include/ObjFW/OFReadFailedException.h
 include/ObjFW/OFReadOrWriteFailedException.h
 include/ObjFW/OFRecursiveMutex.h
 include/ObjFW/OFRemoveItemFailedException.h
 include/ObjFW/OFRunLoop.h
 include/ObjFW/OFSHA1Hash.h
+include/ObjFW/OFSHA224Hash.h
+include/ObjFW/OFSHA224Or256Hash.h
+include/ObjFW/OFSHA256Hash.h
+include/ObjFW/OFSHA384Hash.h
+include/ObjFW/OFSHA384Or512Hash.h
+include/ObjFW/OFSHA512Hash.h
 include/ObjFW/OFSeekFailedException.h
 include/ObjFW/OFSeekableStream.h
 include/ObjFW/OFSerialization.h
 include/ObjFW/OFSet.h
 include/ObjFW/OFSetOptionFailedException.h
+include/ObjFW/OFSettings.h
 include/ObjFW/OFSortedList.h
 include/ObjFW/OFStdIOStream.h
 include/ObjFW/OFStillLockedException.h
@@ -124,6 +133,7 @@ include/ObjFW/OFUDPSocket.h
 include/ObjFW/OFURL.h
 include/ObjFW/OFUnboundNamespaceException.h
 include/ObjFW/OFUnboundPrefixException.h
+include/ObjFW/OFUnknownXMLEntityException.h
 include/ObjFW/OFUnlockFailedException.h
 include/ObjFW/OFUnsupportedProtocolException.h
 include/ObjFW/OFUnsupportedVersionException.h
@@ -141,7 +151,6 @@ include/ObjFW/OFXMLProcessingInstructions.h
 include/ObjFW/OFZIPArchive.h
 include/ObjFW/OFZIPArchiveEntry.h
 include/ObjFW/ObjFW.h
-include/ObjFW/asprintf.h
 include/ObjFW/atomic.h
 include/ObjFW/autorelease.h
 include/ObjFW/base64.h
