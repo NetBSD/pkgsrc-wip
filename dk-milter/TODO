@@ -1,6 +1,4 @@
-$NetBSD: TODO,v 1.5 2007/08/12 06:32:18 jukka Exp $
-
-- Are the pkglint(1) warnings for options.mk safe to ignore?
+$NetBSD: TODO,v 1.6 2014/12/14 12:09:41 makoto Exp $
 
 - Run unprivileged by default?
 
@@ -10,3 +8,8 @@ $NetBSD: TODO,v 1.5 2007/08/12 06:32:18 jukka Exp $
 
 - Test the package and have it tested by others. I'm using it with
   Postfix 2.4.3 on NetBSD/i386 and so far it seems to work fine.
+
+-  The shell script, mentioned installed file /usr/pkg/share/doc/dk-milter/INSTALL,
+  as
+  (a) Run the script gentxt.csh.  This will generate a public and private
+  is not installed.
