@@ -20,7 +20,7 @@ $my_name:
     if the string py27, py34 or ruby200 is found in the corresponding
     changes in diff.
 Synopsys:
-    $my_name  [-h] [-p pkgsrc_dir] [-v] [cvs-diff-u_output_file]
+    $my_name  [-h] [-p pkgsrc_dir] [-v] [cvs-diff-u_output-file]
 Where:
     -h  Show this help
     -p  pkgsrc directory other than /usr/pkgsrc

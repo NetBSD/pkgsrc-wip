@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/12/08 09:36:20 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/14 03:04:23 makoto Exp $
 
-PKGNAME=		revbump-2.10rc04
+PKGNAME=		revbump-2.10rc05
 CATEGORIES=		pkgtools
 
 MAINTAINER=		wiz@NetBSD.org
@@ -22,13 +22,9 @@ do-build:
 .endfor
 
 do-install:
-.for  i in  blbump finddepends revbump 
+.for  i in  blbump finddepends revbump replace-commonbump check-cvs-diff
 	${INSTALL_SCRIPT} ${WRKDIR}/$i ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${FILESDIR}/${i}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.endfor
-
-.for  i in  replace-commonbump check-cvs-diff
-	${INSTALL_SCRIPT} ${WRKDIR}/$i ${DESTDIR}${PREFIX}/bin
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
