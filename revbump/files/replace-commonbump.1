@@ -1,4 +1,4 @@
-.\"	$NetBSD: replace-commonbump.1,v 1.1 2014/12/14 03:04:23 makoto Exp $
+.\"	$NetBSD: replace-commonbump.1,v 1.2 2014/12/14 08:28:58 makoto Exp $
 .\"
 .\" Copyright (c) 2014 The NetBSD Foundation, Inc.
 .\"
@@ -91,16 +91,16 @@ then internally keeps (opposite)
 relation table.
 
 .item
-(2) Read another file, named `commonbump' or other name given with -T, which
+(2) Read a file, named `commonbump' or the other name given with -T, which
 usually lists Makefile.common or *common.mk files to be expanded.
 
 .item
-(3) Now expands the filename listed in `commonbump' into the list of Makefile by
+(3) Now expands the filename listed in `commonbump' into the list of packagename/Makefile by
 referenced -> referer relation. It then outputs to the file
 `commonbump.replaced' (currently the name is fixed).
 
 .Sh SEE ALSO
+.Xr revbump 1 ,
 .Xr blbump 1 ,
-.Xr finddepends 1 ,
-.Xr check-cvs-diff 1,
-.Xr revbump 1
+.Xr check-cvs-diff 1 ,
+.Xr finddepends 1
