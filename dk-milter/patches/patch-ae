@@ -1,4 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2008/12/01 00:16:21 pettai Exp $
+$NetBSD: patch-ae,v 1.2 2014/12/14 09:35:17 makoto Exp $
+
+http://gnats.netbsd.org/38983
+sendmail doesn't compile on i386-current
+
 --- /dev/null	2008-10-16 17:49:30.000000000 +1300
 +++ include/sm/os/sm_os_netbsd.h
 @@ -0,0 +1,23 @@
