@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2014/12/14 16:26:32 krytarowski Exp $
+
+SHA1 (ltp-full-20140828.tar.xz) = 38cb1fa7f1126d7ae089b3dda79327fbd66138b0
+RMD160 (ltp-full-20140828.tar.xz) = 91c94f78686a8a9b8264b0f644db31b01a08c787
+Size (ltp-full-20140828.tar.xz) = 3067224 bytes
