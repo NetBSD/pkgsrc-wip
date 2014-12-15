@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.155 2014/12/12 15:22:56 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.156 2014/12/15 00:37:57 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
 bin/${DISTNAME}
 bin/emacsclient
 bin/etags
-bin/grep-changelog
 info/ada-mode.info.gz
 info/auth.info.gz
 info/autotype.info.gz
@@ -78,7 +77,6 @@ man/man1/ebrowse.1
 man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
-man/man1/grep-changelog.1
 share/appdata/emacs.appdata.xml
 share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
