@@ -1,19 +1,2 @@
 - Missing following files (compare to time/dateutils)
-
-include/dateutils/boops.h
-include/dateutils/date-core-strpf.h
-include/dateutils/date-core.h
-include/dateutils/dt-core-strpf.h
-include/dateutils/dt-core-tz-glue.h
-include/dateutils/dt-core.h
-include/dateutils/generics.h
-include/dateutils/leaps.h
-include/dateutils/leapseconds.def
-include/dateutils/nifty.h
-include/dateutils/strops.h
-include/dateutils/time-core-strpf.h
-include/dateutils/time-core.h
-include/dateutils/token.h
-include/dateutils/tzraw.h
-lib/libdut.a
 lib/pkgconfig/libdut.pc

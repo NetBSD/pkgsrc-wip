@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/04 05:47:32 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/15 08:19:54 makoto Exp $
 bin/dadd
 bin/dconv
 bin/ddiff
@@ -9,7 +9,27 @@ bin/dsort
 bin/dtest
 bin/dzone
 bin/strptime
+include/dateutils/boops.h
+include/dateutils/date-core-strpf.h
+include/dateutils/date-core.h
+include/dateutils/dt-core-strpf.h
+include/dateutils/dt-core-tz-glue.h
+include/dateutils/dt-core.h
+include/dateutils/generics.h
+include/dateutils/gmtime.h
+include/dateutils/leaps.h
+include/dateutils/leapseconds.def
+include/dateutils/leapseconds.h
+include/dateutils/nifty.h
+include/dateutils/strops.h
+include/dateutils/time-core-strpf.h
+include/dateutils/time-core.h
+include/dateutils/token.h
+include/dateutils/tzmap.h
+include/dateutils/tzraw.h
+include/dateutils/version.h
 info/dateutils.info
+lib/libdut.a
 man/man1/dadd.1
 man/man1/dateutils.1
 man/man1/dconv.1
