@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2014/12/05 08:15:12 obache Exp $
+$NetBSD: distinfo,v 1.4 2014/12/15 09:49:33 makoto Exp $
 
-SHA1 (fastjar-0.94.tar.gz) = 2b54b558bed1acef63455b27827b69e83c823f8d
-RMD160 (fastjar-0.94.tar.gz) = af6b4ea20a07abde3184c49c30f620695525bec0
-Size (fastjar-0.94.tar.gz) = 77399 bytes
+SHA1 (fastjar-0.98.tar.gz) = c240a9e2115aad486329360d9166514261149af2
+RMD160 (fastjar-0.98.tar.gz) = 593ed2dfcc02599a3540028a0f0b5c77d6be7071
+Size (fastjar-0.98.tar.gz) = 717984 bytes
 SHA1 (patch-aa) = cdb20f779b32f423a49bcf3a7c64901aef5228c8
 SHA1 (patch-ab) = da635a3a6ce6c3f3406371e02a376e1d728f8b7e
-SHA1 (patch-ad) = 6de7af2085dd48f6e324aab8f917503b558b8c31
+SHA1 (patch-ad) = bdb8f3c1affbcf3cc373f7b5d731b8122eaf4018
