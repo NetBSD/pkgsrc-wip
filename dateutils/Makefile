@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/15 08:19:54 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/15 08:22:58 makoto Exp $
 
 DISTNAME=	v0.3.1
 PKGNAME=	${DISTNAME:S/^v/dateutils-/}
@@ -16,7 +16,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config automake autoreconf gmake makeinfo bison flex
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE+=	libdut.pc.in
 INFO_FILES=		yes
 TEST_TARGET=		check
 INCLUDEDIR=		include/${PKGBASE}
