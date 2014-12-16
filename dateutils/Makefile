@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2014/12/15 08:22:58 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/16 13:44:40 makoto Exp $
 
-DISTNAME=	v0.3.1
-PKGNAME=	${DISTNAME:S/^v/dateutils-/}
+DISTNAME=	dateutils-0.3.1
 CATEGORIES=	time
-MASTER_SITES=	http://github.com/hroptatyr/dateutils/archive/
-DIST_SUBDIR=	dateutils
+MASTER_SITES=	https://github.com/hroptatyr/dateutils/releases/download/v0.3.1/
+MASTER_SITES+=	https://bitbucket.org/hroptatyr/dateutils/downloads/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fresse.org/dateutils/
@@ -13,16 +13,14 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config automake autoreconf gmake makeinfo bison flex
+USE_TOOLS+=	pkg-config gmake makeinfo bison flex
 USE_LIBTOOL=	yes
+MAKE_JOBS_SAFE= no
 
 INFO_FILES=		yes
 TEST_TARGET=		check
 INCLUDEDIR=		include/${PKGBASE}
 AUTO_MKDIRS=		YES
-
-pre-configure:
-	(cd ${WRKSRC}; autoreconf -i )
 
 post-build:
 	(cd ${WRKSRC}/lib; ${GMAKE})

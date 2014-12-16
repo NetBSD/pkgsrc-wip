@@ -1,2 +1,2 @@
-- Missing following files (compare to time/dateutils)
-lib/pkgconfig/libdut.pc
+- Submit patch to upstream with minor improvement over existing
+  time/dateutils 0.31
