@@ -1,0 +1,11 @@
+The AGFL formalism for the syntactic description of Natural Languages
+has been developed by the Computer Science Department of the Radboud
+University of Nijmegen.  It is a formalism in which large context free
+grammars can be described in a compact way. AGFLs belong to the family
+of two level grammars, along with attribute grammars: a first,
+context-free level is augmented with set-valued features for expressing
+agreement between parts of speech.
+
+The AGFL parser generation system for Natural Languages generates
+efficient parsers from AGFL grammars. It includes a lexicon system
+suitable for the large lexica needed in real-life NLP applications.

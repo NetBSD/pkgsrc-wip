@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/12/17 22:02:10 rhialto Exp $
+
+SHA1 (agfl-3.2/agfl-3.2.tar.gz) = f54890a9bb698447344f2a30d04dadb1a9e9c020
+RMD160 (agfl-3.2/agfl-3.2.tar.gz) = 6b464dd6caeee1c91b43fb236e92f59fed8873b3
+Size (agfl-3.2/agfl-3.2.tar.gz) = 7960575 bytes
+SHA1 (patch-doc_userdoc_Makefile.am) = fc86bbd28056e02352fce974b7d3532bca5bece6
+SHA1 (patch-doc_userdoc_Makefile.in) = e51efe8abe019dd069887171473a6eaa57c7b9c9
