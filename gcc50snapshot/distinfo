@@ -1,21 +1,24 @@
-$NetBSD: distinfo,v 1.8 2014/12/10 06:10:46 keckhardt Exp $
+$NetBSD: distinfo,v 1.9 2014/12/17 21:51:01 keckhardt Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-5-20141207.tar.bz2) = 4f8de6499c8a9f28f68b271dad044300cbb575fc
-RMD160 (gcc-5-20141207.tar.bz2) = aa27f5ac0a2ff9b8dddf3f838b37dced01507068
-Size (gcc-5-20141207.tar.bz2) = 88526207 bytes
+SHA1 (gcc-5-20141214.tar.bz2) = 2ae1fb79ebae527558f9a9eefa52f833b0d1e140
+RMD160 (gcc-5-20141214.tar.bz2) = ed319cde98b5db2ac6c32960bb4b21c7a85309a1
+Size (gcc-5-20141214.tar.bz2) = 88858768 bytes
 SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
 RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
 Size (isl-0.14.tar.bz2) = 1399896 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
-SHA1 (patch-gcc_config.gcc) = fd7e90c7f0c720ae88d2c84a32e8084ad9348074
+SHA1 (patch-gcc_config.gcc) = bfa3897de6afa573ee44a60973611c4e9024f497
+SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
 SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
+SHA1 (patch-gcc_config_netbsd.c) = 07ccccd1fdaf9f3ab1f248ff72b671a7f7492404
+SHA1 (patch-gcc_config_netbsd.h) = b722614a3822e9800a2a8f65a87e56927d05a1b1
+SHA1 (patch-gcc_config_t-netbsd) = 802ad5706aa7ca9629f8e237f08fbb1569d28846
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = fc96c9e150e4c28fb937cc01256d1f958fe59f30
-SHA1 (patch-gcc_fortran_f95-lang.c) = d8f990083a77a0f3b4be83d1f2a494414a67ae48
-SHA1 (patch-gcc_ggc-common.c) = 5fb68c2fc78193c963e212f8cb485b5051cd417f
+SHA1 (patch-gcc_ggc-common.c) = a317abc62196b2aa88af6649c04347e3f5dfae6b
 SHA1 (patch-gcc_lto_lto.c) = 95c77948dea332299ed097e83f84c09ecd56fc4a
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-libcilkrts_configure) = 72a18f311d78d4b88a55441d76c10ddd85b28360
