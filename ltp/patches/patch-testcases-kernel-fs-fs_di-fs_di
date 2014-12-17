@@ -1,0 +1,122 @@
+$NetBSD: patch-testcases-kernel-fs-fs_di-fs_di,v 1.1 2014/12/17 22:04:53 krytarowski Exp $
+
+--- testcases/kernel/fs/fs_di/fs_di.orig	2014-12-17 10:25:13.847904058 +0000
++++ testcases/kernel/fs/fs_di/fs_di
+@@ -57,6 +57,7 @@ export PATH=$PATH:$TCbin:../../../bin
+ export TCID=$TC
+ export TST_TOTAL=1
+ export TST_COUNT=1
++random_seed=`echo|awk 'srand(systime()) {print int(rand() * 32767)}'`
+ 
+ # If CLEANUP is not set; set it to "ON"
+ CLEANUP=${CLEANUP:="ON"}
+@@ -80,6 +81,12 @@ usage()
+ exit 0
+ }
+ 
++get_random()
++{
++	random_seed=`echo|awk "srand($random_seed) {print int(rand() * 32767)}"`
++	return $random_seed
++}
++
+ #=============================================================================
+ # FUNCTION NAME:        end_testcase
+ #
+@@ -149,7 +156,7 @@ $trace_logic
+ 	   exit 0;;
+        esac
+     done
+-    if [ $TMPBASE = "0" ]; then
++    if [ $TMPBASE -eq 0 ]; then
+       tst_resm TBROK "You must specify the target directory [-d]"
+       exit 1
+     fi
+@@ -188,22 +195,22 @@ $trace_logic
+   while [ $loopcount -lt $LOOPS ]
+     do
+ 	if [ $RANDOM_SIZE -eq 1 ]; then
+-  	  SIZE=$RANDOM
++  	  SIZE=get_random()
+ 	  let "SIZE %= 500"
+ 	  while [ $SIZE -lt 10 ]
+ 	    do
+-              SIZE=$RANDOM
++              SIZE=get_random()
+               let "SIZE %= 500"
+  	    done
+       	fi
+   	create_datafile $SIZE $TCtmp/testfile >/dev/null
+-	  if [ $? != 0 ]; then
++	  if [ $? -ne 0 ]; then
+ 		end_testcase "Could not create testfile of size ${SIZE}Mb"
+ 	  fi
+-	RANDOM_DEPTH=$RANDOM
++	RANDOM_DEPTH=get_random()
+ 	: $(( RANDOM_DEPTH %= 500 ))
+ 
+-	RANDOM_LENGTH=$RANDOM
++	RANDOM_LENGTH=get_random()
+ 	: $(( RANDOM_LENGTH %= 500 ))
+ 	RANDOM_LENGTH=$(( $RANDOM_LENGTH / 10 ))
+ 
+@@ -227,13 +234,13 @@ $trace_logic
+ 	cp $TCtmp/testfile ${TESTFS}/${FILEPATH}
+ 	cmp $TCtmp/testfile ${TESTFS}/${FILEPATH}/testfile
+ 	retval=$?
+-	if [ "$retval" != 0 ]; then
++	if [ $retval -ne 0 ]; then
+ 		end_testcase "Error in loop $loopcount: cmp after write FAILED"
+ 	fi
+ 	cp ${TESTFS}/${FILEPATH}/testfile $TCtmp/testfile_copy
+ 	cmp $TCtmp/testfile $TCtmp/testfile_copy
+ 	retval=$?
+-	if [ "$retval" != 0 ]; then
++	if [ $retval -ne 0 ]; then
+ 		end_testcase "Error in loop $loopcount: cmp after read FAILED"
+ 	fi
+ 	rm -rf ${TESTFS}/${FILEPATH}
+@@ -241,23 +248,23 @@ $trace_logic
+ 	loopcount=$(( $loopcount + 1 ))
+ 	tst_resm TINFO "Completed Loop $loopcount"
+     done
+-    if [ "$DISK_SIZE" != 0 ]; then
++    if [ $DISK_SIZE -ne 0 ]; then
+     #Create a datafile of size half of the disk size
+     tst_resm TINFO "Creating fragmented files. Please wait..."
+     DISK_SIZE=$(( $DISK_SIZE / 2 ))
+-	if [ "$DISK_SIZE" == 0 ]; then
++	if [ $DISK_SIZE -eq 0 ]; then
+ 		DISK_SIZE=1
+ 	fi
+     create_datafile $DISK_SIZE $TCtmp/testfile >/dev/null
+     retval=$?
+-    if [ "$retval" != 0 ]; then
++    if [ $retval -ne 0 ]; then
+         end_testcase "Error in creating data file"
+     fi
+ 
+     #Invoke frag to create 2 fragmented files and copy data file to both the files
+     frag $TCtmp/testfile $TMPBASE
+     retval=$?
+-    if [ "$retval" != 0 ]; then
++    if [ $retval -ne 0 ]; then
+         end_testcase "Error in creating frag files"
+     fi
+     tst_resm TINFO "Created fragmented files"
+@@ -265,10 +272,13 @@ $trace_logic
+     #Compare both frag files with data file
+     cmp $TCtmp/testfile $TMPBASE/frag1
+     retval=$?
+-    if [ "$retval" != 0 ]; then
++    if [ $retval -ne 0 ]; then
+         end_testcase "frag1 and datafile are not matching"
+     fi
+-    if [ "$retval" != 0 ]; then
++
++    cmp $TCtmp/testfile $TMPBASE/frag2
++    retval=$?
++    if [ $retval -ne 0 ]; then
+        end_testcase "frag2 and datafile are not matching"
+     fi
+ 
