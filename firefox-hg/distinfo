@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2014/12/17 22:14:00 thomasklausner Exp $
+$NetBSD: distinfo,v 1.14 2014/12/18 13:02:58 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -65,7 +65,6 @@ SHA1 (patch-js_src_gc_Memory.cpp) = 68315aaaf3ec20da8d674097dac5eb56627d02bf
 SHA1 (patch-js_src_jsmath.cpp) = 7d4993ae91e9b5e6820358165603819aefb586f9
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 57650470a96312fb1c4a2634711ede69e36666ff
 SHA1 (patch-media_libcubeb_src_moz.build) = 06eb3b475816862fe9ac269dac85167898b28a20
-SHA1 (patch-media_webrtc_trunk_webrtc_build_common.gypi) = 4ff5796e15d9aa6adb8495d6f2e5a7f0445a0fac
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__coding_codecs_opus_opus.gypi) = ae0fcc32f7d146d2a494b42a58a9fcbb73c2a74c
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 9ff1dcf200feaf67bf576f07beb612e0ec91d7d1
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = ffc1d956e826a0005b76285596ba24a2f4a3806c
