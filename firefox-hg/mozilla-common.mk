@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2014/11/20 12:43:56 thomasklausner Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2014/12/18 13:34:29 thomasklausner Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -114,12 +114,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-sqlite2
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 #BUILD_MAKE_FLAGS+=		MOZ_WEBRTC_IN_LIBXUL=1
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Fixing path to python.
-SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
-SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
