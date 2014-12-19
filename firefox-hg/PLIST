@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2014/12/12 15:23:14 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.31 2014/12/19 09:31:05 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -331,9 +331,11 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/dispatcher.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackApiClient.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/feedbackViews.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/fxOSActiveRoomStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/models.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/otSdkDriver.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/roomStates.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/roomStore.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/store.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/utils.js
@@ -431,7 +433,6 @@ lib/firefox/browser/chrome/browser/content/browser/preferences/privacy.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/privacy.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/sanitize.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/sanitize.xul
-lib/firefox/browser/chrome/browser/content/browser/preferences/search.css
 lib/firefox/browser/chrome/browser/content/browser/preferences/search.js
 lib/firefox/browser/chrome/browser/content/browser/preferences/search.xul
 lib/firefox/browser/chrome/browser/content/browser/preferences/security.js
@@ -803,13 +804,17 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/Options.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/aboutPermissions.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/alwaysAsk.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/applications.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/check.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/check@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/dialog.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/favicon.ico
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/icons.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/icons@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/preferences.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/search.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/mail.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/preferences.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/search.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/privatebrowsing-mask.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/reload-stop-go.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/sanitizeDialog.css
@@ -1517,6 +1522,7 @@ lib/firefox/browser/modules/devtools/shared/inplace-editor.js
 lib/firefox/browser/modules/devtools/shared/observable-object.js
 lib/firefox/browser/modules/devtools/shared/telemetry.js
 lib/firefox/browser/modules/devtools/shared/theme-switching.js
+lib/firefox/browser/modules/devtools/shared/theme.js
 lib/firefox/browser/modules/devtools/shared/undo.js
 lib/firefox/browser/modules/devtools/shared/widgets/CubicBezierWidget.js
 lib/firefox/browser/modules/devtools/shared/widgets/FastListWidget.js
@@ -1642,6 +1648,7 @@ lib/firefox/chrome/en-US/locale/en-US/global/about.dtd
 lib/firefox/chrome/en-US/locale/en-US/global/aboutAbout.dtd
 lib/firefox/chrome/en-US/locale/en-US/global/aboutNetworking.dtd
 lib/firefox/chrome/en-US/locale/en-US/global/aboutRights.dtd
+lib/firefox/chrome/en-US/locale/en-US/global/aboutReader.properties
 lib/firefox/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/firefox/chrome/en-US/locale/en-US/global/aboutSupport.properties
 lib/firefox/chrome/en-US/locale/en-US/global/aboutTelemetry.dtd
@@ -1963,6 +1970,7 @@ lib/firefox/chrome/toolkit/content/global/nsUserSettings.js
 lib/firefox/chrome/toolkit/content/global/platformHTMLBindings.xml
 lib/firefox/chrome/toolkit/content/global/plugins.css
 lib/firefox/chrome/toolkit/content/global/plugins.html
+lib/firefox/chrome/toolkit/content/global/post-fork-preload.js
 lib/firefox/chrome/toolkit/content/global/preload.js
 lib/firefox/chrome/toolkit/content/global/printPageSetup.js
 lib/firefox/chrome/toolkit/content/global/printPageSetup.xul
@@ -1976,6 +1984,11 @@ lib/firefox/chrome/toolkit/content/global/printdialog.js
 lib/firefox/chrome/toolkit/content/global/printdialog.xul
 lib/firefox/chrome/toolkit/content/global/printjoboptions.js
 lib/firefox/chrome/toolkit/content/global/printjoboptions.xul
+lib/firefox/chrome/toolkit/content/global/reader/JSDOMParser.js
+lib/firefox/chrome/toolkit/content/global/reader/Readability.js
+lib/firefox/chrome/toolkit/content/global/reader/aboutReader.html
+lib/firefox/chrome/toolkit/content/global/reader/aboutReader.js
+lib/firefox/chrome/toolkit/content/global/reader/readerWorker.js
 lib/firefox/chrome/toolkit/content/global/remote-test-ipc.js
 lib/firefox/chrome/toolkit/content/global/resetProfile.css
 lib/firefox/chrome/toolkit/content/global/resetProfile.js
@@ -2092,6 +2105,7 @@ lib/firefox/chrome/toolkit/skin/classic/global/about.css
 lib/firefox/chrome/toolkit/skin/classic/global/aboutCache.css
 lib/firefox/chrome/toolkit/skin/classic/global/aboutCacheEntry.css
 lib/firefox/chrome/toolkit/skin/classic/global/aboutMemory.css
+lib/firefox/chrome/toolkit/skin/classic/global/aboutReader.css
 lib/firefox/chrome/toolkit/skin/classic/global/aboutSupport.css
 lib/firefox/chrome/toolkit/skin/classic/global/alerts/alert.css
 lib/firefox/chrome/toolkit/skin/classic/global/alerts/notification-48.png
@@ -2651,6 +2665,7 @@ lib/firefox/modules/PromiseUtils.jsm
 lib/firefox/modules/PromiseWorker.jsm
 lib/firefox/modules/PropertyListUtils.jsm
 lib/firefox/modules/PushService.jsm
+lib/firefox/modules/ReaderMode.jsm
 lib/firefox/modules/RemoteAddonsChild.jsm
 lib/firefox/modules/RemoteAddonsParent.jsm
 lib/firefox/modules/RemoteController.jsm
@@ -2696,6 +2711,7 @@ lib/firefox/modules/UITelemetry.jsm
 lib/firefox/modules/UpdateChannel.jsm
 lib/firefox/modules/UserAgentOverrides.jsm
 lib/firefox/modules/UserAgentUpdates.jsm
+lib/firefox/modules/UserCustomizations.jsm
 lib/firefox/modules/WebChannel.jsm
 lib/firefox/modules/WebappOSUtils.jsm
 lib/firefox/modules/Webapps.jsm
