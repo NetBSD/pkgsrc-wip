@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/19 22:24:39 nros Exp $
+qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.la
