@@ -1,6 +1,7 @@
-$NetBSD: patch-xpcom_reflect_xptcall_src_md_unix_moz.build,v 1.3 2014/12/19 00:00:22 thomasklausner Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_src_md_unix_moz.build,v 1.4 2014/12/19 00:06:23 thomasklausner Exp $
 
-* Support NetBSD/amd64 and DragonFly/amd64.
+* Support NetBSD/amd64.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1113374
 
 --- xpcom/reflect/xptcall/md/unix/moz.build.orig	2014-10-28 02:19:12.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/moz.build
