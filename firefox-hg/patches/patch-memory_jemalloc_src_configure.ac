@@ -1,31 +1,13 @@
-$NetBSD: patch-memory_jemalloc_src_configure.ac,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
+$NetBSD: patch-memory_jemalloc_src_configure.ac,v 1.2 2014/12/19 00:01:37 thomasklausner Exp $
 
---- memory/jemalloc/src/configure.ac.orig	2014-09-28 08:29:59.000000000 +0000
+--- memory/jemalloc/src/configure.ac.orig	2014-12-18 09:28:50.000000000 +0000
 +++ memory/jemalloc/src/configure.ac
-@@ -887,7 +887,7 @@ fi
- dnl Check whether the BSD/SUSv1 sbrk() exists.  If not, disable DSS support.
- AC_CHECK_FUNC([sbrk], [have_sbrk="1"], [have_sbrk="0"])
- if test "x$have_sbrk" = "x1" ; then
--  if test "x$sbrk_deprecated" == "x1" ; then
-+  if test "x$sbrk_deprecated" = "x1" ; then
-     AC_MSG_RESULT([Disabling dss allocation because sbrk is deprecated])
-     enable_dss="0"
-   else
-@@ -1180,7 +1180,7 @@ JE_COMPILABLE([a program using __builtin
- 		printf("%d\n", rv);
- 	}
- ], [je_cv_gcc_builtin_ffsl])
--if test "x${je_cv_gcc_builtin_ffsl}" == "xyes" ; then
-+if test "x${je_cv_gcc_builtin_ffsl}" = "xyes" ; then
-   AC_DEFINE([JEMALLOC_INTERNAL_FFSL], [__builtin_ffsl])
-   AC_DEFINE([JEMALLOC_INTERNAL_FFS], [__builtin_ffs])
- else
-@@ -1194,7 +1194,7 @@ else
- 		printf("%d\n", rv);
- 	}
-   ], [je_cv_function_ffsl])
--  if test "x${je_cv_function_ffsl}" == "xyes" ; then
-+  if test "x${je_cv_function_ffsl}" = "xyes" ; then
-     AC_DEFINE([JEMALLOC_INTERNAL_FFSL], [ffsl])
-     AC_DEFINE([JEMALLOC_INTERNAL_FFS], [ffs])
-   else
+@@ -989,7 +989,7 @@ fi
+ AC_ARG_WITH([lg_page],
+   [AS_HELP_STRING([--with-lg-page=<lg-page>], [Base 2 log of system page size])],
+   [LG_PAGE="$with_lg_page"], [LG_PAGE="detect"])
+-if test "x$LG_PAGE" == "xdetect"; then
++if test "x$LG_PAGE" = "xdetect"; then
+   AC_CACHE_CHECK([LG_PAGE],
+                [je_cv_lg_page],
+                AC_RUN_IFELSE([AC_LANG_PROGRAM(
