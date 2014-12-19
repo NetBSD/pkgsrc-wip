@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/19 13:57:28 heidnes Exp $
+bin/zabbix_get
+bin/zabbix_sender
+etc/zabbix/zabbix_agent.conf
+etc/zabbix/zabbix_agentd.conf
+man/man1/zabbix_get.1
+man/man1/zabbix_sender.1
+man/man8/zabbix_agentd.8
+sbin/zabbix_agent
+sbin/zabbix_agentd

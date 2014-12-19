@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2014/12/19 13:57:28 heidnes Exp $
+
+SHA1 (zabbix-2.4.2.tar.gz) = 627ed5196b81a1f4e36690695dfbcaa1803890e3
+RMD160 (zabbix-2.4.2.tar.gz) = 77a3df522f0062f80610858e5b44cb67580b3826
+Size (zabbix-2.4.2.tar.gz) = 14803538 bytes
+SHA1 (patch-aa) = c121368ac12fad545c454d0e66c42f07e9899751
+SHA1 (patch-ab) = fb95f65ae21cac1eead7d3c87a490296a93f4348
