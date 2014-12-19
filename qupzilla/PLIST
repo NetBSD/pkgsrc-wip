@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/12/04 15:51:25 nros Exp $
+@comment $NetBSD: PLIST,v 1.6 2014/12/19 16:07:27 nros Exp $
 bin/qupzilla
 lib/libQupZilla.la
 lib/qupzilla/libAccessKeysNavigation.la
@@ -182,6 +182,7 @@ share/qupzilla/themes/default/theme.png
 share/qupzilla/themes/default/windows.css
 share/qupzilla/themes/linux/images/flash.png
 share/qupzilla/themes/linux/images/flashstart.png
+share/qupzilla/themes/linux/images/goto.png
 share/qupzilla/themes/linux/images/key.png
 share/qupzilla/themes/linux/images/library-bg-left.png
 share/qupzilla/themes/linux/images/library-bg-top-right.png

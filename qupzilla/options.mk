@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/12/14 14:17:53 nros Exp $
+# $NetBSD: options.mk,v 1.4 2014/12/19 16:07:27 nros Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qupzilla
@@ -24,7 +24,7 @@ MAKE_ENV+= DISABLE_DBUS=${TRUE}
 .include "../../x11/qt4-tools/buildlink3.mk"
 DEPENDS+=qt4-sqlite3>=4.7:../../x11/qt4-sqlite3
 .if !empty(PKG_OPTIONS:Mdbus)
-.include "../../x11/qt4-dbus/buildlink3.mk"
+.include "../../x11/qt4-qdbus/buildlink3.mk"
 .else
 MAKE_ENV+= DISABLE_DBUS=${TRUE}
 .endif
