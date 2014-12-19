@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6021 2014/12/19 14:01:00 heidnes Exp $
+# $Id: Makefile,v 1.6022 2014/12/19 22:28:44 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -195,6 +195,7 @@ SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
 SUBDIR+=	bfgminer
+SUBDIR+=	bibletime
 SUBDIR+=	bibliographer
 SUBDIR+=	bicho
 SUBDIR+=	bigdft
@@ -3159,6 +3160,7 @@ SUBDIR+=	qrint
 SUBDIR+=	qrq
 SUBDIR+=	qt4-gstreamer
 SUBDIR+=	qt4-libqtlua
+SUBDIR+=	qt5-ibus
 SUBDIR+=	qt5-libqtlua
 SUBDIR+=	qt5-qscintilla
 SUBDIR+=	qtcreator
