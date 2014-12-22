@@ -1,0 +1,11 @@
+This package might crash with a core.
+
+Please give it a look.
+
+It crashes on my Lenovo X61, but other users have offered
+a more optimistic feedback, see:
+
+
+http://mail-index.netbsd.org/tech-pkg/2014/12/17/msg013933.html
+
+Ottavio Caruso

@@ -1,0 +1,3 @@
+- Write an options.mk file
+- Test package on main platforms
+- Write a CONFLICT with abiword-plugins (or not?)
