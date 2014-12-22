@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/22 22:19:24 ocr Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/22 22:23:54 ocr Exp $
 
 DISTNAME=	abiword-3.0.0
 CATEGORIES=	editors
@@ -42,3 +42,5 @@ PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+
+SUBDIR+=abiword
