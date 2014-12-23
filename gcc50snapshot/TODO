@@ -2,39 +2,44 @@ TODO
 ====
 
 0) Work on gcc should happen upstream as far as possible. I have sent
-some patches upstream recently:
+some patches upstream recently. Let's hope for some progress.
 
 PR 64271, the minimal patch set to bootstrap, extracted from pkgsrc.
 Jonathan Wakely is working on the libstdc++ patches involved.
 Without acceptance of patches for PR 64271, no other patches
 will be accepted upstream.
 
-PR 39570, this bug causes all gfortran run tests to fail. I have
-developed the necessary patches and will send them upstream in
-a few days. They are now part of gcc50snapshot. It replaces a
-short patch by a bunch of complex patches, but they are gcc conforming
-and can be reused for other patches as well.
+PR 39570, this bug causes all gfortran run tests to fail. I have developed
+the necessary patches and sent them upstream. For gcc50snapshot it means
+replacing a short patch by a bunch of complex patches, but they are gcc
+conforming and can be reused for other patches as well.
 
 PR 48244, for iso_c_binding support in gfortran. The patches are
 there but it is delayed by PR 64271.
 
 1) On NetBSD a working cabsl function must be present in libm to build gfortran.
-This has been added to -current on 2014/10/10 and to NetBSD7 on 2014/10/13. Before this date it was defined in complex.h but missing from libm in current and 7.I didn't find a solution for NetBSD 6.
+This has been added to -current on 2014/10/10 and to NetBSD7 on 2014/10/13. Before this date it was defined in complex.h but missing from libm in current and 7.I am working on a solution for older systems.
  
 2) This package and the lang/gcc4x need a cleanup or a complete new start. I
 think that SUBST_VARS could handle the platform dependencies in a much cleaner
 way.
 
 3) There are many undocumented hacks in the Makefile and patches. And yes, I
-am guilty ;-) 
+am guilty ;-)  I itend to document patches 
 
-4) Tested on:
-a) NetBSD 7.0_BETA amd64 (see test_summary.log).
+4) I run tests on 7.0 and 7.99 regularly, see test_summary.log at different 
+times. Build status on different platforms:
 
-b) NetBSD 7.99.1 amd64 (see last test_summary.log).
+a) NetBSD 7.99.1 amd64: Builds and tests OK
+
+b) NetBSD 7.0 amd64: Builds and tests OK
+
+c) NetBSD 7.0 i386: Builds (testsuite run not done yet)
+
+d) NetBSD 6.0 i386: Build fails in gcc/sreal.c due to ambigious overloading
+of __int64_t.
  
-c) Debian jessie amd64, where it fails with the same error message
-as lang/gcc49:
+e) Debian jessie amd64: fails with the same error message as lang/gcc49:
 
 /bin/bash ../../../../gcc-5-20141026/libgcc/../mkinstalldirs 32
 mkdir -p -- 32
