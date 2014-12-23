@@ -1,3 +1,9 @@
-- Write an options.mk file
+- Write an options.mk file FIXED!
 - Test package on main platforms
 - Write a CONFLICT with abiword-plugins (or not?)
+- dependecies are missing for some plugins
+  the wordperfect plugin need libwpd-stream
+  mathview plugin needs gtkmathview
+  inter7eps needs http://www.inter7.com/eps-email-processor
+  
+- librsvg is not needed when using gtk3 but needed when using gtk2 
