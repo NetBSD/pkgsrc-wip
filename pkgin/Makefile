@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.68 2014/06/01 12:49:38 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.69 2014/12/23 09:35:19 imilh Exp $
 
-VERSION=		6b6f6d20dffc46d809098951db87950a950eaf86
-DISTNAME=		${VERSION}
-PKGNAME=		pkgin-20130502
+GHCOMMIT=		0fbbedc4565b5188c134ca111caa918a7d77e97a
+DISTNAME=		${GHCOMMIT}
+PKGNAME=		pkgin-20141223
 CATEGORIES=		pkgtools
 MASTER_SITES=		https://github.com/NetBSDfr/pkgin/archive/
 
-MAINTAINER=		imil@home.imil.net
+MAINTAINER=		imil@NetBSD.org
 HOMEPAGE=		http://pkgin.net/
 COMMENT=		Apt / yum like tool for managing pkgsrc binary packages
 LICENSE=		modified-bsd
@@ -17,9 +16,11 @@ CONF_FILES=		${EGDIR}/repositories.conf.example		\
 			${PKG_SYSCONFDIR}/${PKGBASE}/repositories.conf
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${EGDIR}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 ${EGDIR}
 
-WRKSRC=			${WRKDIR}/pkgin-${VERSION}
+WRKSRC=			${WRKDIR}/pkgin-${GHCOMMIT}
+
+BUILD_DEFS+=		PKGIN_REPOSITORY_URL
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
@@ -34,18 +35,30 @@ SUBST_SED.path+=	-e "s|!=.*uname -p|=	${MACHINE_ARCH}|g"
 GNU_CONFIGURE=		yes
 USE_FEATURES=		nbcompat
 USE_TOOLS+=		nroff
-CFLAGS+=		-g
-
-MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
-
-DEPENDS+=		pkg_install>=20110215:../../pkgtools/pkg_install
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		osrel
+SUBST_STAGE.osrel=	pre-configure
+SUBST_MESSAGE.osrel=	Adjusting repository OS release
+SUBST_FILES.osrel=	REPOSITORIES
+SUBST_SED.osrel=	-e "s|@OSREL@|${OS_VERSION:C/_.*//}|"
+.endif
+
+CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
+
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+
+DEPENDS+=		pkg_install>=20130901:../../pkgtools/pkg_install
+
 # those have official repositories
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Minix"
+.if !empty(PKGIN_REPOSITORY_URL)
 pre-install:
-	${GREP} -i ${OPSYS} ${WRKSRC}/REPOSITORIES >> 		\
+	echo ${PKGIN_REPOSITORY_URL} >> ${WRKSRC}/repositories.conf
+.elif ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Minix"
+pre-install:
+	${GREP} -i ${OPSYS} ${WRKSRC}/REPOSITORIES >> 			\
 		${WRKSRC}/repositories.conf
 .endif
 
@@ -53,6 +66,15 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgin ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pkgin.1				\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.if !empty(MANINSTALL:Mcatinstall)
+.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+	${INSTALL_MAN} ${WRKSRC}/pkgin.cat1				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/pkgin.1
+.  else
+	${INSTALL_MAN} ${WRKSRC}/pkgin.cat1				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/pkgin.0
+.  endif
+.endif
 	${INSTALL_DATA} ${WRKSRC}/repositories.conf			\
 		${DESTDIR}${EGDIR}/repositories.conf.example
 
@@ -64,5 +86,6 @@ do-install:
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../net/libfetch/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
