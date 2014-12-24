@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/09/15 22:16:19 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.5 2014/12/24 20:17:47 rhialto Exp $
 bin/fs-uae
 bin/fs-uae-device-helper
 share/applications/fs-uae.desktop
@@ -85,6 +85,7 @@ share/fs-uae/input/microsoft/x_box_360_pad.ini
 share/fs-uae/input/microsoft/xbox_360_for_windows_controller.ini
 share/fs-uae/input/microsoft/xbox_360_wireless_receiver.ini
 share/fs-uae/input/microsoft/xbox_360_wireless_receiver_for_windows_controller.ini
+share/fs-uae/input/microsoft_x_box_one_pad_11_6_1_0_linux.conf
 share/fs-uae/input/mosic/a_speed_link_competition_pro.ini
 share/fs-uae/input/mosic/speed_link_competition_pro.ini
 share/fs-uae/input/mosic/usb_2a4k_gamepad.ini
@@ -100,6 +101,7 @@ share/fs-uae/input/saitek/p880.ini
 share/fs-uae/input/sony/computer_entertainment_wireless_inputdevice.ini
 share/fs-uae/input/sony/playstation_r_3_controller.ini
 share/fs-uae/input/sony/playstation_r_3_inputdevice.ini
+share/fs-uae/input/sony_computer_entertainment_wireless_controller_14_10_1_0_linux.conf
 share/fs-uae/input/speed_link_competition_pro_4_2_0_0_windows.conf
 share/fs-uae/input/speedlink_strike_2_gamepad_12_5_1_0_windows.conf
 share/fs-uae/input/thrustmaster/2_in_1_dt.ini
@@ -111,8 +113,8 @@ share/fs-uae/input/wisegroup_ltd/tigergame_ps_ps2_game_controller_adapter.ini
 share/fs-uae/input/xgaming/x_arcade.ini
 share/fs-uae/input/xgaming/x_arcade_right.ini
 share/fs-uae/input/xinput_controller_15_6_0_0_windows.conf
-share/fs-uae/input/xinput_controller_1_15_6_0_0_windows.conf
 share/fs-uae/item_background.png
+share/fs-uae/input/wireless_controller_14_6_1_0_macosx.conf
 share/fs-uae/led-bars-edge/audio_led_1.png
 share/fs-uae/led-bars-edge/audio_led_2.png
 share/fs-uae/led-bars-edge/audio_led_3.png

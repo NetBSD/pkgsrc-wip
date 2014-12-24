@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/09/15 22:15:34 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.7 2014/12/24 20:18:46 rhialto Exp $
 @comment :4,$s=py3.4=py${PYVERSSUFFIX}=
 @comment :4,$s=cpython-34=cpython-${PYVERS}=
 bin/fs-uae-launcher
@@ -4232,7 +4232,7 @@ share/fs-uae-launcher/OpenGL/raw/osmesa/mesa.py
 share/fs-uae-launcher/OpenGL/version.py
 share/fs-uae-launcher/OpenGL/wrapper.py
 share/fs-uae-launcher/fs-uae-launcher
-share/fs-uae-launcher/fs_uae_launcher-2.5.14dev-py${PYVERSSUFFIX}.egg-info
+share/fs-uae-launcher/fs_uae_launcher-${VERSION}-py${PYVERSSUFFIX}.egg-info
 share/fs-uae-launcher/fs_uae_launcher/CDManager.py
 share/fs-uae-launcher/fs_uae_launcher/Config.py
 share/fs-uae-launcher/fs_uae_launcher/ConfigChecker.py
@@ -5227,7 +5227,6 @@ share/fs-uae-launcher/fsgs/res/input/wisegroup_ltd/tigergame_ps_ps2_game_control
 share/fs-uae-launcher/fsgs/res/input/xgaming/x_arcade.ini
 share/fs-uae-launcher/fsgs/res/input/xgaming/x_arcade_right.ini
 share/fs-uae-launcher/fsgs/res/input/xinput_controller_15_6_0_0_windows.conf
-share/fs-uae-launcher/fsgs/res/input/xinput_controller_1_15_6_0_0_windows.conf
 share/fs-uae-launcher/fsgs/runner.py
 share/fs-uae-launcher/fsgs/util/GameNameUtil.py
 share/fs-uae-launcher/fsgs/util/__init__.py
@@ -5239,6 +5238,11 @@ share/fs-uae-launcher/fsgs/vice/__init__.py
 share/fs-uae-launcher/fsgs/vice/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/vice/__pycache__/commodore_64.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/vice/commodore_64.py
+share/fs-uae-launcher/fsgs/amiga/__pycache__/roms.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fsgs/amiga/roms.py
+share/fs-uae-launcher/fsgs/res/input/microsoft_x_box_one_pad_11_6_1_0_linux.conf
+share/fs-uae-launcher/fsgs/res/input/sony_computer_entertainment_wireless_controller_14_10_1_0_linux.conf
+share/fs-uae-launcher/fsgs/res/input/wireless_controller_14_6_1_0_macosx.conf
 share/fs-uae-launcher/fsui/__init__.py
 share/fs-uae-launcher/fsui/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsui/common/__init__.py
@@ -5562,22 +5566,16 @@ share/fs-uae-launcher/game_center/res/top_logo_e.png
 share/fs-uae-launcher/game_center/res/top_logo_selected.png
 share/fs-uae-launcher/game_center/res/update.py
 share/fs-uae-launcher/game_center/resources.py
-share/fs-uae-launcher/lhafile/__init__.py
-share/fs-uae-launcher/lhafile/__pycache__/__init__.cpython-${PYVERS}.pyc
-share/fs-uae-launcher/lhafile/__pycache__/lhafile.cpython-${PYVERS}.pyc
-share/fs-uae-launcher/lhafile/lhafile.py
-share/fs-uae-launcher/lhafile/lzhlib.c
-share/fs-uae-launcher/lhafile/tests/archive_lhaca.lzh
-share/fs-uae-launcher/lhafile/tests/archive_lhaplus.lzh
-share/fs-uae-launcher/lhafile/tests/archive_lhaunix_lh5.lzh
-share/fs-uae-launcher/lhafile/tests/archive_lhaunix_lh6.lzh
-share/fs-uae-launcher/lhafile/tests/archive_lhaunix_lh7.lzh
 share/fs-uae-launcher/share-dir
 share/fs-uae-launcher/six/__init__.py
 share/fs-uae-launcher/six/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/six/__pycache__/six.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/six/six.py
 share/fs-uae-launcher/splash.png
+share/fs-uae-launcher/typing/__init__.py
+share/fs-uae-launcher/typing/__pycache__/__init__.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/typing/__pycache__/typing.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/typing/typing.py
 share/icons/hicolor/128x128/apps/fs-uae-launcher.png
 share/icons/hicolor/16x16/apps/fs-uae-launcher.png
 share/icons/hicolor/256x256/apps/fs-uae-launcher.png
