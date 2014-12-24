@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/24 05:03:43 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/24 05:08:48 obache Exp $
 #
 
 DISTNAME=	libslab-2.30.0
@@ -12,9 +12,10 @@ HOMEPAGE=	http://code.google.com/p/libslab/
 COMMENT=	Slab memory allocator in application layer
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config intltool msgfmt
+USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	libslab.pc.in
 
