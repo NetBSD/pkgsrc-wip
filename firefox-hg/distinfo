@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2014/12/19 00:10:50 thomasklausner Exp $
+$NetBSD: distinfo,v 1.20 2014/12/24 10:37:44 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -100,7 +100,6 @@ SHA1 (patch-xpcom_build_PoisonIOInterposer.h) = ac0b22ec20d1bcf76d6d00e4ff07a419
 SHA1 (patch-xpcom_ds_TimeStamp.h) = 8b64a0e4371c9c9562e1a6c28c7f539309dafb57
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__asm__mips.S) = 17becf7433af427289ee1e25c16600df468e2540
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__gcc__x86__unix.cpp) = 4d93c465be5fb5e6aaf0b12707a116c6b3ed4be8
-SHA1 (patch-xpcom_reflect_xptcall_src_md_unix_moz.build) = d40588f9e880f16eb1dceb4b5a8be594ae8620ac
 SHA1 (patch-xptcinvoke__sparc64__netbsd.cpp) = a292378e1a882b273616f2b749d7785fda2ddf54
 SHA1 (patch-xptcstubs__asm__sparc64__netbsd.s) = 6df4c709e79320562c0fb544421fe53176da6b48
 SHA1 (patch-xulrunner_installer_Makefile.in) = 9d32ff87d0962c0406ed38de995c0350dd372e49

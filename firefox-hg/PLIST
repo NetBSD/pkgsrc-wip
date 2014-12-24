@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2014/12/19 09:31:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.32 2014/12/24 10:37:44 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -818,8 +818,10 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/search.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/privatebrowsing-mask.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/reload-stop-go.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/sanitizeDialog.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/search-history-icon.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/search-engine-placeholder.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/search-indicator-add-engine.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/search-indicator-badge-add.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/search-indicator.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/search-pref.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/searchbar.css
@@ -2428,6 +2430,7 @@ lib/firefox/components/amWebInstallListener.js
 lib/firefox/components/components.manifest
 lib/firefox/components/contentAreaDropListener.js
 lib/firefox/components/crypto-SDR.js
+lib/firefox/components/htmlMenuBuilder.js
 lib/firefox/components/interfaces.xpt
 lib/firefox/components/jsconsole-clhandler.js
 ${PLIST.gnome}lib/firefox/components/libdbusservice.so
@@ -3149,6 +3152,8 @@ lib/firefox/modules/devtools/server/actors/styles.js
 lib/firefox/modules/devtools/server/actors/stylesheets.js
 lib/firefox/modules/devtools/server/actors/timeline.js
 lib/firefox/modules/devtools/server/actors/tracer.js
+lib/firefox/modules/devtools/server/actors/utils/ScriptStore.js
+lib/firefox/modules/devtools/server/actors/utils/automation-timeline.js
 lib/firefox/modules/devtools/server/actors/utils/make-debugger.js
 lib/firefox/modules/devtools/server/actors/utils/map-uri-to-addon-id.js
 lib/firefox/modules/devtools/server/actors/webapps.js
