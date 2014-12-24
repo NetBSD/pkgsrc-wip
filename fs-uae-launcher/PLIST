@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2014/12/24 20:18:46 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.8 2014/12/24 21:33:52 rhialto Exp $
 @comment :4,$s=py3.4=py${PYVERSSUFFIX}=
 @comment :4,$s=cpython-34=cpython-${PYVERS}=
+bin/fs-uae-arcade
 bin/fs-uae-launcher
 share/applications/fs-uae-launcher.desktop
 share/doc/fs-uae-launcher/COPYING
