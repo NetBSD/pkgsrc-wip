@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6025 2014/12/25 15:20:44 nros Exp $
+# $Id: Makefile,v 1.6026 2014/12/25 15:52:35 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1405,6 +1405,7 @@ SUBDIR+=	libcdata
 SUBDIR+=	libcerror
 SUBDIR+=	libcfile
 SUBDIR+=	libcgi
+SUBDIR+=	libchamplain012
 SUBDIR+=	libcli
 SUBDIR+=	libclocale
 SUBDIR+=	libcm
