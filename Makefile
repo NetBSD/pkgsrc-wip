@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6024 2014/12/24 09:58:01 krytarowski Exp $
+# $Id: Makefile,v 1.6025 2014/12/25 15:20:44 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -148,6 +148,7 @@ SUBDIR+=	arpdig
 SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
+SUBDIR+=	asio
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
@@ -1478,6 +1479,7 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblogging
 SUBDIR+=	liblognorm1
+SUBDIR+=	libmemphis02
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmpg123
 SUBDIR+=	libmusclecard
