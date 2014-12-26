@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6026 2014/12/25 15:52:35 nros Exp $
+# $Id: Makefile,v 1.6027 2014/12/26 16:53:41 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -806,6 +806,7 @@ SUBDIR+=	glkterm
 SUBDIR+=	globulation2
 SUBDIR+=	glulxe
 SUBDIR+=	gmc2mid
+SUBDIR+=	gmetadom
 SUBDIR+=	gmm
 SUBDIR+=	gmp-ecm
 SUBDIR+=	gmpc-lyricsplugin
@@ -1879,6 +1880,7 @@ SUBDIR+=	ocaml-comparelib
 SUBDIR+=	ocaml-easy-format
 SUBDIR+=	ocaml-enumerate
 SUBDIR+=	ocaml-fieldslib
+SUBDIR+=	ocaml-gmetadom
 SUBDIR+=	ocaml-herelib
 SUBDIR+=	ocaml-ounit
 SUBDIR+=	ocaml-pa_ounit
