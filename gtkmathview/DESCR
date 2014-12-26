@@ -1,0 +1,10 @@
+GtkMathView is a C++ rendering engine for MathML documents. It provides
+an interactive view that can be used for browsing and editing MathML
+markup.
+GtkMathView reads MathML documents by means of a frontend whose purpose
+is to traverse the MathML document (or part of it) and to appropriately
+instantiate GtkMathView's internal data structures that are suitable for
+rendering it.
+GtkMathView renders MathML documents through a backend whose purpose is
+to provide an abstraction of the platform-specific capabilities
+(available fonts, drawing drawing primitives, and so on).
