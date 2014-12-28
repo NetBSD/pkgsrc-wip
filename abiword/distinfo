@@ -1,5 +1,16 @@
-$NetBSD: distinfo,v 1.2 2014/12/23 20:56:06 nros Exp $
+$NetBSD: distinfo,v 1.3 2014/12/28 15:57:09 nros Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
 Size (abiword-3.0.1.tar.gz) = 11144990 bytes
+SHA1 (patch-plugin-configure.m4) = a8b8db3bdbd69339e32eefec1de7b1b59467db40
+SHA1 (patch-plugins_wordperfect_xp_Makefile.am) = e5cba76cfdba5caca672b801fa222b277a7522c1
+SHA1 (patch-plugins_wordperfect_xp_ie__imp__WordPerfect.cpp) = 10a6d88e21f98e743b4443a09cd73ab8b7812fc9
+SHA1 (patch-plugins_wordperfect_xp_ie__imp__WordPerfect.h) = 6e1e264506edabf0e1cb359f664ed455d16fa05e
+SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.cpp) = c87bc227eebcfcc2ab11ee6b5237ef8fcc47c0bc
+SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.h) = 0a75276dc0d1d99b97155f61d9f98de7126fb0a3
+SHA1 (patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp) = 14c889c0f7c30129716eb66d2c1571cf7861e5ab
+SHA1 (patch-src_Makefile.am) = 343f73f326ee026e460c73da413ca2badfb8d3e5
+SHA1 (patch-src_af_util_xp_ut__endian.h) = e73aef0db6ddef0316cca3f7a77fd4c71c870637
+SHA1 (patch-src_af_util_xp_ut__iconv.h) = bbcfa2098ea77d393feb50d69de9ae29fcce302f
+SHA1 (patch-src_af_util_xp_ut__misc.cpp) = f552ecbb87490355d8e74218dd59fd3961f1af5d

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/23 20:56:06 nros Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/28 15:57:09 nros Exp $
 
 DISTNAME=	abiword-3.0.1
 CATEGORIES=	editors
@@ -13,7 +13,7 @@ CONFLICTS=      abiword-plugins-[0-9]* abiword-personal-[0-9]* abiword2-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	autoconf automake gmake pkg-config
 USE_LANGUAGES=	c c++
 
 # All configure_args here
@@ -24,6 +24,10 @@ CONFIGURE_ARGS+=	--enable-plugins	#build all plugins
 CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
 
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
+
+pre-configure:
+	cd ${WRKSRC}; \
+	autoreconf --force --install
 
 .include "options.mk"
 
@@ -48,12 +52,11 @@ PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../chat/loudmouth/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
-.include "../../databases/libgda/buildlink3.mk"
+#.include "../../databases/libgda/buildlink3.mk"
 #.include "../../databases/libgnomedb/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../misc/goffice0.10/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
@@ -64,6 +67,9 @@ PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 .include "../../textproc/rasqal/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../www/tidy/buildlink3.mk"
+.include "../../wip/asio/buildlink3.mk"
+.include "../../wip/gtkmathview/buildlink3.mk"
+.include "../../wip/libchamplain012/buildlink3.mk"
 .include "../../wip/ots/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

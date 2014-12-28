@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/23 20:56:06 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2014/12/28 15:57:09 nros Exp $
 bin/abiword
 include/abiword-3.0/abiwidget.h
 include/abiword-3.0/libabiword.h
@@ -26,6 +26,7 @@ lib/abiword-3.0/plugins/iscii.la
 lib/abiword-3.0/plugins/kword.la
 lib/abiword-3.0/plugins/latex.la
 lib/abiword-3.0/plugins/loadbindings.la
+lib/abiword-3.0/plugins/mathview.la
 lib/abiword-3.0/plugins/mht.la
 lib/abiword-3.0/plugins/mif.la
 lib/abiword-3.0/plugins/mswrite.la
@@ -47,12 +48,15 @@ lib/abiword-3.0/plugins/urldict.la
 lib/abiword-3.0/plugins/wikipedia.la
 lib/abiword-3.0/plugins/wmf.la
 lib/abiword-3.0/plugins/wml.la
+lib/abiword-3.0/plugins/wordperfect.la
+lib/abiword-3.0/plugins/wpg.la
 lib/abiword-3.0/plugins/xslfo.la
 lib/libAiksaurusGtk3.la
 lib/libabiword-3.0.la
 lib/pkgconfig/abiword-3.0.pc
 man/man1/abiword.1
 share/abiword-3.0/Presentation.xml
+share/abiword-3.0/certs/cacert.pem
 share/abiword-3.0/mime-info/abiword.keys
 share/abiword-3.0/omml_xslt/mml2omml.xsl
 share/abiword-3.0/omml_xslt/omml2mml.xsl
@@ -300,6 +304,8 @@ share/abiword-3.0/ui/ap_UnixDialog_FormatFootnotes.ui
 share/abiword-3.0/ui/ap_UnixDialog_FormatFrame.ui
 share/abiword-3.0/ui/ap_UnixDialog_FormatTOC.ui
 share/abiword-3.0/ui/ap_UnixDialog_FormatTable.ui
+share/abiword-3.0/ui/ap_UnixDialog_GenericInput.ui
+share/abiword-3.0/ui/ap_UnixDialog_GenericProgress.ui
 share/abiword-3.0/ui/ap_UnixDialog_Goto.ui
 share/abiword-3.0/ui/ap_UnixDialog_HdrFtr.ui
 share/abiword-3.0/ui/ap_UnixDialog_InsertTable.ui
