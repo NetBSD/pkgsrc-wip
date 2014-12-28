@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2014/12/24 10:37:44 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.33 2014/12/28 11:27:35 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -804,8 +804,6 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/Options.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/aboutPermissions.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/alwaysAsk.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/applications.css
-lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/check.png
-lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/check@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/dialog.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/favicon.ico
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/in-content/icons.png
