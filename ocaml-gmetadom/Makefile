@@ -1,6 +1,8 @@
 .include "../../wip/gmetadom/Makefile.common"
 
 PKGNAME=		ocaml-${DISTNAME}
+COMMENT=		OCaml bindings for GDome2 DOM implementation
+
 CONFIGURE_ARGS+=	--with-modules=gdome_caml
 OCAML_USE_FINDLIB=	yes
 MAKE_JOBS_SAFE=		no

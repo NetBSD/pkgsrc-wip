@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/12/26 15:39:45 nros Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/28 14:33:47 nros Exp $
 
 .include "Makefile.common"
 
-COMMENT=
+COMMENT=C++ bindings for GDome2 DOM implementaion
 
 CONFIGURE_ARGS+=	--with-modules=gdome_cpp_smart
 PKGCONFIG_OVERRIDE+=	gdome2-cpp-smart.pc.in
