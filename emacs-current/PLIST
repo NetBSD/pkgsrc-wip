@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.157 2014/12/18 08:07:28 makoto Exp $
+@comment $NetBSD: PLIST,v 1.158 2014/12/28 11:28:23 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3447,6 +3447,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/which-func.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/which-func.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/xref.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/xref.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/xscheme.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/xscheme.elc
 share/emacs/${PKGVERSION}/lisp/ps-bdf.el.gz
