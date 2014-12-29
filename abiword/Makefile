@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/12/28 15:57:09 nros Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/29 20:31:15 nros Exp $
 
 DISTNAME=	abiword-3.0.1
 CATEGORIES=	editors
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake pkg-config
 USE_LANGUAGES=	c c++
+
+#MAKE_JOBS_SAFE=no
 
 # All configure_args here
 # TODO: an options.mk file
@@ -56,6 +58,7 @@ pre-configure:
 #.include "../../databases/libgnomedb/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../misc/goffice0.10/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
@@ -70,6 +73,7 @@ pre-configure:
 .include "../../wip/asio/buildlink3.mk"
 .include "../../wip/gtkmathview/buildlink3.mk"
 .include "../../wip/libchamplain012/buildlink3.mk"
+.include "../../wip/libeps/buildlink3.mk"
 .include "../../wip/ots/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

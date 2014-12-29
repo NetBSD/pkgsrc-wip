@@ -1,7 +1,7 @@
-$NetBSD: patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp,v 1.1 2014/12/28 15:57:09 nros Exp $
+$NetBSD: patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp,v 1.2 2014/12/29 20:31:15 nros Exp $
 * adapt wordperfect plugins to dependecies available in pkgsrc 
   from abiword svn date 2014-12-27
---- plugins/wpg/xp/ie_impGraphic_WPG.cpp.orig	2014-12-27 21:17:27.000000000 +0000
+--- plugins/wpg/xp/ie_impGraphic_WPG.cpp.orig	2013-04-07 13:53:03.000000000 +0000
 +++ plugins/wpg/xp/ie_impGraphic_WPG.cpp
 @@ -31,37 +31,43 @@
  #include <gsf/gsf-input-memory.h>
