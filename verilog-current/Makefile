@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/09 14:06:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/29 10:56:18 makoto Exp $
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
@@ -11,7 +11,7 @@ COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	verilog-[0-9]*
-SNAPDATE=		20130827
+SNAPDATE=	20141205
 
 GCC_REQD+=	3.0
 USE_LANGUAGES=	c c++

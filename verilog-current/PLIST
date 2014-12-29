@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/20 02:19:53 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/29 10:56:18 makoto Exp $
 bin/iverilog
 bin/iverilog-vpi
 bin/vvp
@@ -22,6 +22,9 @@ lib/ivl/null.tgt
 lib/ivl/pcb-s.conf
 lib/ivl/pcb.conf
 lib/ivl/pcb.tgt
+lib/ivl/sizer-s.conf
+lib/ivl/sizer.conf
+lib/ivl/sizer.tgt
 lib/ivl/stub-s.conf
 lib/ivl/stub.conf
 lib/ivl/stub.tgt
