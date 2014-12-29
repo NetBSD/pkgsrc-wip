@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2014/12/29 19:14:53 nros Exp $
+include/eps/address.h
+include/eps/base64.h
+include/eps/boundary.h
+include/eps/buffer.h
+include/eps/content.h
+include/eps/date.h
+include/eps/email.h
+include/eps/eps.h
+include/eps/fold.h
+include/eps/header.h
+include/eps/int_buffer.h
+include/eps/int_stream.h
+include/eps/interface.h
+include/eps/line.h
+include/eps/mime.h
+include/eps/misc.h
+include/eps/qp.h
+include/eps/rfc2822.h
+include/eps/unfold.h
+lib/libeps.a
+lib/libeps.so
