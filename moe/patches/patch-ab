@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2013/12/19 11:52:42 gschwarz Exp $
+$NetBSD: patch-ab,v 1.6 2014/12/29 19:51:22 gschwarz Exp $
 
---- configure.orig	2013-12-19 12:48:01.000000000 +0100
-+++ configure	2013-12-19 12:48:52.000000000 +0100
-@@ -24,10 +24,10 @@
+--- configure.orig	2014-05-20 01:13:29.000000000 +0200
++++ configure	2014-12-29 20:33:55.000000000 +0100
+@@ -22,10 +22,10 @@
  infodir='$(datarootdir)/info'
  mandir='$(datarootdir)/man'
  sysconfdir='$(prefix)/etc'
@@ -16,4 +16,4 @@ $NetBSD: patch-ab,v 1.5 2013/12/19 11:52:42 gschwarz Exp $
 +#LDFLAGS=
  
  # checking whether we are using GNU C++.
- if [ ! -x /bin/g++ ] &&
+ ${CXX} --version > /dev/null 2>&1
