@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/12/30 17:31:36 nros Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/30 19:40:19 nros Exp $
 
 DISTNAME=	abiword-3.0.1
 CATEGORIES=	editors
@@ -21,9 +21,62 @@ USE_LANGUAGES=	c c++
 # All configure_args here
 # TODO: an options.mk file
 #CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
-CONFIGURE_ARGS+=	--enable-plugins	#build all plugins
+#CONFIGURE_ARGS+=	--enable-plugins	#build all plugins
 #CONFIGURE_ARGS+=	 --enable-builtin-plugins      ="foo bar baz" # list of plugins to link statically
 CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
+
+# Disabled plugins: gda rsvg
+# rsvg is not needed with gtk and we don't have libgnomedb
+CONFIGURE_ARGS+=	--enable-plugins="\
+	aiksaurus \
+	applix \
+	babelfish \
+	bmp \
+	clarisworks \
+	collab \
+	command \
+	docbook \
+	eml \
+	epub \
+	freetranslation \
+	garble \
+	gdict \
+	gimp \
+	goffice \
+	google \
+	grammar \
+	hancom \
+	hrtext \
+	iscii \
+	kword \
+	latex \
+	loadbindings \
+	mathview \
+	mht \
+	mif \
+	mswrite \
+	opendocument \
+	openwriter \
+	openxml \
+	opml \
+	ots \
+	paint \
+	passepartout \
+	pdb \
+	pdf \
+	presentation \
+	psion \
+	s5 \
+	sdw \
+	t602 \
+	urldict \
+	wikipedia \
+	wmf \
+	wml \
+	wordperfect \
+	wpg \
+	xslfo"
+
 
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 
