@@ -1,3 +1,0 @@
-MySQL driver for Qores DBI system that allows Qore programs to MySQL
-Databases through the Datasource, DatasourcePool and SQLStatement
-classes.

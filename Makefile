@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6029 2014/12/29 20:11:06 nros Exp $
+# $Id: Makefile,v 1.6030 2014/12/30 16:06:28 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3148,21 +3148,6 @@ SUBDIR+=	qinx
 SUBDIR+=	qmc2
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
-SUBDIR+=	qore
-SUBDIR+=	qore-asn1-module
-SUBDIR+=	qore-freetds-module
-SUBDIR+=	qore-glut-module
-SUBDIR+=	qore-json-module
-SUBDIR+=	qore-mysql-module
-SUBDIR+=	qore-opengl-module
-SUBDIR+=	qore-openldap-module
-SUBDIR+=	qore-pgsql-module
-SUBDIR+=	qore-sqlite3-module
-SUBDIR+=	qore-ssh2-module
-SUBDIR+=	qore-uuid-module
-SUBDIR+=	qore-xml-module
-SUBDIR+=	qore-xmlsec-module
-SUBDIR+=	qore-yaml-module
 SUBDIR+=	qrint
 SUBDIR+=	qrq
 SUBDIR+=	qt4-gstreamer

@@ -1,3 +1,0 @@
-PostgreSQL driver for Qore. It makes it possible for Qore programs to
-access PostgreSQL database through the Datasource, DatasourcePool and
-SQLStatement classes.
