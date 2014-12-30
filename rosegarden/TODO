@@ -1,0 +1,36 @@
+-- Current package problem is:
+  
+  c++ -c -O2 -I/usr/pkg/include -I/usr/include
+  -I/usr/include/krb5 -I/usr/X11R7/include
+  -I/usr/pkg/qt4/include -I/usr/X11R7/include/freetype2
+  -I/usr/X11R7/include/libdrm -Ig++/tr1_impl -DNDEBUG
+  -DQT_NO_DEBUG -DBUILD_RELEASE -DNO_TIMING -DHAVE_LIBJACK
+  -DHAVE_LIBSNDFILE -I/usr/pkg/qt4/include/QtGui
+  -I/usr/pkg/qt4/include/QtXml -I/usr/pkg/qt4/include/QtNetwork
+  -I/usr/pkg/qt4/include/QtCore -I/usr/pkg/qt4/include
+  -I/usr/pkg/include -pthread -I/usr/pkg/include
+  -I/usr/pkg/include/raptor2 -I/usr/pkg/include
+  -I/usr/pkg/include -I/usr/pkg/include -I/usr/pkg/include
+  -Isrc/sound/dssi-compatibility -DLITTLE_ENDIAN=1
+  -D'VERSION="14.12"' -D'CODENAME="Magic Carpet"' -DSTABLE=1
+  -Isrc -D'BUILDKEY="4e0c3af3e5"' src/base/RulerScale.cpp -o
+  src/base/RulerScale.o
+  
+  
+  src/base/RulerScale.cpp: In member function 'virtual
+  Rosegarden::timeT
+  Rosegarden::RulerScale::getTimeForX(double) const':
+  
+  
+  src/base/RulerScale.cpp:113:81: error: 'nearbyint' was not declared in this scope
+  
+  src/base/RulerScale.cpp: In member function 'virtual
+  Rosegarden::timeT
+  Rosegarden::SimpleRulerScale::getTimeForX(double) const':
+  
+  src/base/RulerScale.cpp:221:65: error: 'nearbyint' was not declared in this scope
+  Makefile:112: recipe for target 'src/base/RulerScale.o' failed
+  gmake: *** [src/base/RulerScale.o] Error 1
+  *** Error code 2
+  
+  
