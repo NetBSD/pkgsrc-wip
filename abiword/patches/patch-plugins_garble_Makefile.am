@@ -1,0 +1,13 @@
+$NetBSD: patch-plugins_garble_Makefile.am,v 1.1 2014/12/30 17:31:36 nros Exp $
+GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
+to the linker.  Prefix with "-Wl," to fix build.
+--- plugins/garble/Makefile.am.orig	2011-11-15 21:25:46.000000000 +0000
++++ plugins/garble/Makefile.am
+@@ -11,6 +11,7 @@ garble_la_LIBADD = \
+ 	$(GARBLE_LIBS) $(PNG_LIBS) -ljpeg
+ 
+ garble_la_LDFLAGS = \
++	-Wl, \
+ 	-avoid-version \
+ 	-module \
+ 	-no-undefined

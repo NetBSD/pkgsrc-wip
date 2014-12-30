@@ -1,0 +1,13 @@
+$NetBSD: patch-plugins_collab_Makefile.am,v 1.1 2014/12/30 17:31:36 nros Exp $
+GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
+to the linker.  Prefix with "-Wl," to fix build.
+--- plugins/collab/Makefile.am.orig	2011-11-15 21:25:46.000000000 +0000
++++ plugins/collab/Makefile.am
+@@ -20,6 +20,7 @@ collab_la_LIBADD = \
+ 	$(SYSTEM_LIBS)
+ 
+ collab_la_LDFLAGS = \
++	-Wl, \
+ 	-avoid-version \
+ 	-module \
+ 	-no-undefined

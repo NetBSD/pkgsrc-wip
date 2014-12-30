@@ -1,0 +1,13 @@
+$NetBSD: patch-plugins_wordperfect_Makefile.am,v 1.1 2014/12/30 17:31:37 nros Exp $
+GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
+to the linker.  Prefix with "-Wl," to fix build.
+--- plugins/wordperfect/Makefile.am.orig	2011-11-15 21:25:46.000000000 +0000
++++ plugins/wordperfect/Makefile.am
+@@ -9,6 +9,7 @@ wordperfect_la_LIBADD = \
+ 	$(WORDPERFECT_LIBS)
+ 
+ wordperfect_la_LDFLAGS = \
++	-Wl, \
+ 	-avoid-version \
+ 	-module \
+ 	-no-undefined

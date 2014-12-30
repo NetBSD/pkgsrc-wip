@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/12/29 20:31:15 nros Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/30 17:31:36 nros Exp $
 
 DISTNAME=	abiword-3.0.1
 CATEGORIES=	editors
@@ -61,6 +61,7 @@ pre-configure:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../misc/goffice0.10/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
