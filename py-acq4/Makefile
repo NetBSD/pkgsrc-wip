@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/30 17:09:59 thomasklausner Exp $
 
 DISTNAME=	acq4-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE = mit
 
 #DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.2.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-h5py>=2.2.1:../../wip/py-h5py
+DEPENDS+=	${PYPKGPREFIX}-h5py>=2.2.1:../../devel/py-h5py
 
 USE_LANGUAGES=	# none
 
