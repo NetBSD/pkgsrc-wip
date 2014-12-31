@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2014/12/11 20:01:58 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 01:30:30 obache Exp $
 #
 
-VERSION=		0.9.8
-DISTNAME=		${VERSION}
-PKGNAME=		acr-${VERSION}
+DISTNAME=		acr-0.9.8
 CATEGORIES=		devel
-MASTER_SITES=		https://github.com/radare/${PKGBASE}/archive/
+MASTER_SITES=		-https://github.com/radare/${PKGBASE}/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
-DIST_SUBDIR=		${PKGBASE}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/radare/acr
 COMMENT=		Autoconf replacement
 LICENSE=		gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # Only defined the install target
 NO_BUILD=		yes
 
