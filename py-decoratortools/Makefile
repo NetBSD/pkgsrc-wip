@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:20 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/12/31 13:58:25 thomasklausner Exp $
 
 DISTNAME=	DecoratorTools-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/D/d/S/T/t/}
@@ -12,6 +11,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/DecoratorTools
 COMMENT=	Class, function, and metaclass decorators
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.8
 
 DOCDIR=	${PREFIX}/share/doc/py-decoratortools
 

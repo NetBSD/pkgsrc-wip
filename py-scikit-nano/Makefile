@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/09/30 10:47:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:58:42 thomasklausner Exp $
 
 DISTNAME=	scikit-nano-0.2.25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	${DISTNAME:S/-/_/}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-nano/
 

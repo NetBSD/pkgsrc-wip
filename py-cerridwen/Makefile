@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/28 20:20:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:23 thomasklausner Exp $
 
 DISTNAME=	cerridwen-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,12 +10,13 @@ HOMEPAGE=	http://cerridwen.viridian-project.de/
 COMMENT=	Accurate solar system data for everyone
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/cerridwen-1.3.1
+DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-pyswisseph-[0-9]*:../../wip/py-pyswisseph
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-astropy
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
-DEPENDS+=	${PYPKGPREFIX}-pyswisseph-[0-9]*:../../wip/py-pyswisseph
 .include "../../mk/bsd.pkg.mk"

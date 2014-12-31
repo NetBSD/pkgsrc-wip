@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/31 13:58:41 thomasklausner Exp $
 
 DISTNAME=	scikit-monaco-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	scikit_monaco-${PKGVERSION}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-monaco/
 

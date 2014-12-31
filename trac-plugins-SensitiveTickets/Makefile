@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/01/21 20:40:51 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2014/12/31 13:58:47 thomasklausner Exp $
 
 UPSTREAM_VERSION=	0.22
 VERSION=	${UPSTREAM_VERSION}.${SVN_VERSION}
@@ -8,7 +8,6 @@ DISTNAME=	TracSensitiveTickets-${VERSION}
 PKGNAME=	trac-plugins-SensitiveTickets-${VERSION}
 # Empty PKGREVISION because svn-package by default sets one.
 PKGREVISION=	
-EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
 

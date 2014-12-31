@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 07:38:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/31 13:58:23 thomasklausner Exp $
 
 DISTNAME=		buildbot-slave-0.8.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=		2
-EGG_NAME=		${DISTNAME:S|t-|t_|:Q}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=buildbot/}
 

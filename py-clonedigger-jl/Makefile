@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/08/14 18:52:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:23 thomasklausner Exp $
 
 DISTNAME=	clonedigger-jl-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	clonedigger_jl-1.0.7
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/c/clonedigger-jl/
 

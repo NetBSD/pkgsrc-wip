@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/20 10:45:21 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/31 13:58:44 thomasklausner Exp $
 ${PYSITELIB}/tablib/__init__.py
 ${PYSITELIB}/tablib/__init__.pyc
 ${PYSITELIB}/tablib/__init__.pyo
@@ -660,7 +660,7 @@ ${PYSITELIB}/tablib/packages/yaml/serializer.pyo
 ${PYSITELIB}/tablib/packages/yaml/tokens.py
 ${PYSITELIB}/tablib/packages/yaml/tokens.pyc
 ${PYSITELIB}/tablib/packages/yaml/tokens.pyo
-${PYSITELIB}/tablib_garetjax-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/tablib_garetjax-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/tablib_garetjax-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/tablib_garetjax-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

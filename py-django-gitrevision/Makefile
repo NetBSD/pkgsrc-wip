@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:38:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2014/12/31 13:58:27 thomasklausner Exp $
 
 DISTNAME=	django-gitrevision-0.1.4
-EGG_NAME=	${DISTNAME:S|o-|o_|:Q}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	devel python
@@ -15,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-git-[0-9]*:../../wip/py-git
 
-WRKSRC=		${WRKDIR}/django-gitrevision-0.1.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-git
 
 USE_LANGUAGES=	# none
 

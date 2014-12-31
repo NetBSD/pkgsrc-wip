@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/07/26 20:05:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2014/12/31 13:58:34 thomasklausner Exp $
 
 DISTNAME=	msumastro-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Process FITS files
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-astropy
 
 USE_LANGUAGES=	# none
 

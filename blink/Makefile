@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/03 19:02:32 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/31 13:58:18 thomasklausner Exp $
 #
 
 DISTNAME=	blink-0.8.1
@@ -21,6 +21,8 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	resources/chat/styles/Smooth\ Operator/test/view.py
 REPLACE_PYTHON+=	resources/chat/styles/Stockholm/test/view.py
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-python-application, py-python-gnutls
+
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:

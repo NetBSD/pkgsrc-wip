@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/24 15:01:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:41 thomasklausner Exp $
 
 DISTNAME=	scikit-learn-0.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	${DISTNAME:S/-/_/}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-learn/
 

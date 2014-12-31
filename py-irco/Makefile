@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/12/06 16:36:47 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2014/12/31 13:58:32 thomasklausner Exp $
 
 DISTNAME=	irco-0.9.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-raven>=4.2.1:../../wip/py-raven
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-networkx, py-tablib-garetjax
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2014/05/09 07:38:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2014/12/31 13:58:20 thomasklausner Exp $
 
 DISTNAME=	d-feet-0.1.14
-EGG_NAME=	${DISTNAME:S|d-|d_|}
 PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/d-feet/0.1/}

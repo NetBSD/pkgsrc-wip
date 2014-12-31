@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/08/08 02:38:31 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.8 2014/12/31 13:58:39 thomasklausner Exp $
 
 DISTNAME=	python-gnutls-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +17,7 @@ SUBST_SED.gnutls=	-e 's/26/28/g'
 SUBST_SED.gnutls+=	-e "s|/usr/local/lib']|${PREFIX}/lib']|1"
 SUBST_STAGE.gnutls=	post-patch
 
-EGG_NAME=	${DISTNAME:S/-/_/1}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.0.1
 
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.1.4
 .include "../../security/gnutls/buildlink3.mk"

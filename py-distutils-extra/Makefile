@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/04/14 08:48:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2014/12/31 13:58:27 thomasklausner Exp $
 
 DISTNAME=	python-distutils-extra-2.38
-EGG_NAME=	${DISTNAME:S/python-distutils-/python_distutils_/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://launchpad.net/python-distutils-extra/trunk/2.38/+download/

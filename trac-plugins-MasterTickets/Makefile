@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2014/01/23 14:07:03 lexort Exp $
+# $NetBSD: Makefile,v 1.13 2014/12/31 13:58:47 thomasklausner Exp $
 
 UPSTREAM_VERSION=	3.0.4
-DISTNAME=	TracMasterTickets-${UPSTREAM_VESRION}
+DISTNAME=	TracMasterTickets-${UPSTREAM_VERSION}
 VERSION=	${UPSTREAM_VERSION}.${SVN_TAG.mastertickets}
 PKGNAME=	trac-plugins-MasterTickets-${VERSION}
 # PKGREVISION must exist for svn, or else it will get a date
@@ -9,17 +9,14 @@ PKGREVISION=
 CATEGORIES=	www
 MASTER_SITES=	# not defined
 
-LICENSE=	modified-bsd
-
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/MasterTicketsPlugin
 COMMENT=	Ticket dependency plugin for Trac
-
-EGG_NAME=	${DISTNAME}
+LICENSE=	modified-bsd
 
 DEPENDS+=	{ja-,}trac>=1.0:../../www/trac
 
-EGG_NAME=	TracMasterTickets-${UPSTREAM_VERSION}
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.0.4/r12946
 
 SVN_REPOSITORIES=		mastertickets
 SVN_ROOT.mastertickets=		http://trac-hacks.org/svn/masterticketsplugin/trunk

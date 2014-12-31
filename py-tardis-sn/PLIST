@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/17 21:48:13 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2014/12/31 13:58:45 thomasklausner Exp $
 bin/README.rst
 bin/tardis
 ${PYSITELIB}/tardis/__init__.py
@@ -67,9 +67,9 @@ ${PYSITELIB}/tardis/util.pyo
 ${PYSITELIB}/tardis/version.py
 ${PYSITELIB}/tardis/version.pyc
 ${PYSITELIB}/tardis/version.pyo
-${PYSITELIB}/tardis_sn-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/tardis_sn-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/tardis_sn-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/tardis_sn-${PKGVERSION}-py2.7.egg-info/not-zip-safe
-${PYSITELIB}/tardis_sn-${PKGVERSION}-py2.7.egg-info/requires.txt
-${PYSITELIB}/tardis_sn-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

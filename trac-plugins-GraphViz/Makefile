@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/21 22:13:15 lexort Exp $
+# $NetBSD: Makefile,v 1.8 2014/12/31 13:58:47 thomasklausner Exp $
 
 SVNVERSION=		13275
 UPSTREAM_VERSION=	0.7.7
@@ -7,7 +7,6 @@ DISTNAME=	TracGraphViz-${VERSION}
 PKGNAME=	trac-plugins-GraphViz-${VERSION}
 # Empty to avoid default setting.
 PKGREVISION=	1
-EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
 
@@ -17,11 +16,13 @@ COMMENT=	Graphviz plugin for Trac
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 
-EGG_NAME=	graphviz-${UPSTREAM_VERSION}dev
+EGG_NAME=	graphviz-${UPSTREAM_VERSION}dev_r0
 
 SVN_REPOSITORIES=	graphviz
 SVN_ROOT.graphviz=	http://trac-hacks.org/svn/graphvizplugin/trunk
 SVN_TAG.graphviz=	${SVNVERSION}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 13275/0.7.7
 
 NO_CHECKSUM=	yes
 

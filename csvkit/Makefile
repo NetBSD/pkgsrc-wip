@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/30 17:18:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:58:18 thomasklausner Exp $
 
 DISTNAME=	0.9.0
 PKGNAME=	csvkit-${DISTNAME}
@@ -12,11 +12,11 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.1.2:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-xlrd>=0.9.2:../../textproc/py-xlrd
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.2:../../time/py-dateutil2
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.3:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-coverage>=1.0.7:../../devel/py-coverage
-DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.0.3:../../wip/py-openpyxl
+DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.0.3:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-jdcal>=0.9.3:../../time/py-jdcal
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.6.3:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six

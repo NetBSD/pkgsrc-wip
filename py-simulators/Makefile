@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/05 20:26:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:43 thomasklausner Exp $
 
 DISTNAME=	pysimulators-0.8.dev26-g93d2e
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//S/-g93d2e//}
@@ -12,6 +12,8 @@ COMMENT=	Tools to build an instrument model
 
 DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-operators>=0.11.1:../../wip/py-operators
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-astropy
 
 USE_LANGUAGES=	c fortran
 

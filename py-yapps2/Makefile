@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/12/31 13:58:47 thomasklausner Exp $
 
 VERS=	2.1.1
 DISTNAME=	yapps${VERS}
@@ -14,6 +13,8 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/Yapps-2.1.1
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.1.1
 
 PYDISTUTILSPKG= yes
 

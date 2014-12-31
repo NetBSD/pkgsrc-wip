@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:58:40 thomasklausner Exp $
 #
 
 DISTNAME=	qecalc-0.2.3
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-diffpy-structure-[0-9]*:../../wip/py-diffpy-structure
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-yapps2 via py-pycifrw via py-diffpy-structure
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

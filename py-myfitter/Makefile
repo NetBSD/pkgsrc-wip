@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/11/22 13:42:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:35 thomasklausner Exp $
 
 DISTNAME=	myFitter-python-0.1.3
-EGG_NAME=	myFitter_python-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//:tl}
 CATEGORIES=	math python
 MASTER_SITES=	http://www.hepforge.org/archive/myfitter/
@@ -12,6 +11,8 @@ COMMENT=	Maximum Likelihood Fits in Python
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.1.3
 
 USE_LANGUAGES=	# none
 

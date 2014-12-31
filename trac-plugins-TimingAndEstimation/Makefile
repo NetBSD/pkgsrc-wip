@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/01/06 22:09:20 mlresnick Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/31 13:58:47 thomasklausner Exp $
 
 SVNVERSION=	11739
 # Eggs do not have the same name and do not include the SVN revision.
@@ -17,6 +17,8 @@ HOMEPAGE=	http://trac-hacks.org/wiki/TimingAndEstimationPlugin
 COMMENT=	TimingAndEstimation plugin for Trac
 
 DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2.8/11739
 
 SVN_REPOSITORIES=	plugin
 SVN_ROOT.plugin=	http://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12

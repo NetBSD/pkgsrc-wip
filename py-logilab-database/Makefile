@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:38:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:58:34 thomasklausner Exp $
 
 DISTNAME=	logilab-database-1.1.0
-EGG_NAME=	logilab_database-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	http://pypi.python.org/packages/source/l/logilab-database/

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:21 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2014/12/31 13:58:27 thomasklausner Exp $
 
 VERS=	1.0-r3067-20090410
 DISTNAME=	diffpy.Structure-${VERS}
@@ -15,6 +14,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pycifrw>=3.1.4:../../wip/py-pycifrw
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-yapps2 via py-pycifrw
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

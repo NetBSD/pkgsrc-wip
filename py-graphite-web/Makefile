@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/05/09 07:38:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2014/12/31 13:58:32 thomasklausner Exp $
 
 DISTNAME=	graphite-web-0.9.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -53,8 +53,6 @@ PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-django-tagging
 
 INSTALLATION_DIRS+=	share/examples/graphite
-
-EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
 pre-build:
 	${MKDIR} ${WRKSRC}/graphite/webapp

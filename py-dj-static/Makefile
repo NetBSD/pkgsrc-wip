@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/05/05 22:17:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:27 thomasklausner Exp $
 
 DISTNAME=	dj-static-0.0.5
-EGG_NAME=	dj_static-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	https://pypi.python.org/packages/source/d/dj-static/

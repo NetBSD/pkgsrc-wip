@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/10/06 23:06:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:27 thomasklausner Exp $
 
 DISTNAME=	django-mathjax-0.0.5
-EGG_NAME=	django_mathjax-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math www python
 MASTER_SITES=	https://pypi.python.org/packages/source/d/django-mathjax/

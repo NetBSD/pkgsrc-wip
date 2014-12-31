@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/09/10 09:12:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2014/12/31 13:58:36 thomasklausner Exp $
 
 DISTNAME=	${PYPKGPREFIX}-pyprop-0.0
-#EGG_NAME=	pydec-1.0.0.dev14
 CATEGORIES=	math
 
 MAINTAINER=	jihbed.research@gmail.com

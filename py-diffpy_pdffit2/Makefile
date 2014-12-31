@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/04 07:45:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2014/12/31 13:58:27 thomasklausner Exp $
 #
 
 DISTNAME=	diffpy.pdffit2-${VERSION}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 VERSION=	1.0-r3067-20090410
 USE_LANGUAGES=	c c++
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-yapps2 via py-pycifrw via py-diffpy-structure
 
 .include "../../lang/python/egg.mk"
 .include "../../math/gsl/buildlink3.mk"
