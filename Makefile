@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6030 2014/12/30 16:06:28 thomasklausner Exp $
+# $Id: Makefile,v 1.6031 2014/12/31 11:50:00 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -857,7 +857,6 @@ SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
-SUBDIR+=	go
 SUBDIR+=	go-net
 SUBDIR+=	go-text
 SUBDIR+=	go-tools
