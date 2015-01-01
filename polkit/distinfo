@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/01/01 07:45:49 obache Exp $
+
+SHA1 (polkit-0.103.tar.gz) = 024e213dde0b96e1fc94524e21e0706462a87892
+RMD160 (polkit-0.103.tar.gz) = 50aad2a95649771727b8fc42e8bbbe2ad5f7b5e8
+Size (polkit-0.103.tar.gz) = 1065419 bytes
+SHA1 (patch-data_org.freedesktop.PolicyKit1.service.in) = 1f10d4938b3749e96b0a814ab4f9537dd4fa0abf
+SHA1 (patch-src_polkitbackend_Makefile.in) = e834f8edf13c26b3ffcdac0d11008bac6f81e888
