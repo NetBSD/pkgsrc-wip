@@ -1,0 +1,20 @@
+The 'gnome-main-menu' is a set of three  utilities, a mate-panel applet
+similar to the traditional main-menu, but with a few additions:
+
+  * it does  not provide  direct access to all the applications on the
+    system, but rather  displays user specified 'favorites' and recent
+    launched applications[1].
+
+  * access to  all the  applications is made  through the  application
+    browser, a larger format application than main-menu managed by the
+    window manager to allow resizing, etc.
+
+  * the final utility is gnome-control-center which is laid out exactly
+    as the application browser, but providing access to all the system
+    configuration utilties.
+
+Both the application-browser and the gnome-control-center are accesible
+directly from the main-menu.
+
+As from 28th  November 2012 this component is maintained for usage with
+the MATE Desktop, see http://www.mate-desktop.org.
