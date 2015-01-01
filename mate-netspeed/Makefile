@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1 2015/01/01 08:43:09 obache Exp $
+
+DISTNAME=	mate-netspeed-1.8.0
+CATEGORIES=	net sysutils
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	obache@NetBSD.org
+HOMEPAGE=	http://www.mate-desktop.org/
+COMMENT=	MATE little applet for network traffic information
+LICENSE=	gnu-gpl-v2
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+
+.include "../../devel/glib2/schemas.mk"
+
+.include "../../wip/mate-panel/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../sysutils/libgtop/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
