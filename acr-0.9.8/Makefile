@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/12/31 01:30:30 obache Exp $
-#
+# $NetBSD: Makefile,v 1.6 2015/01/01 18:58:41 thomasklausner Exp $
 
-DISTNAME=		acr-0.9.8
+DISTNAME=		acr-0.9.9
 CATEGORIES=		devel
 MASTER_SITES=		-https://github.com/radare/${PKGBASE}/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
