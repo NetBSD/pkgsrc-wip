@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/01/01 08:37:20 obache Exp $
+
+* prevent to depend on GNU cp
+
+--- Makefile.in.orig	2014-03-01 13:07:17.000000000 +0000
++++ Makefile.in
+@@ -555,9 +555,9 @@ uninstall-hook:
+ 
+ install-data-hook:
+ 	$(mkdir_p) $(DESTDIR)$(datadir)/icons
+-	cp -raf --no-preserve=ownership matefaenza $(DESTDIR)$(datadir)/icons
+-	cp -raf --no-preserve=ownership matefaenzadark $(DESTDIR)$(datadir)/icons
+-	cp -raf --no-preserve=ownership matefaenzagray $(DESTDIR)$(datadir)/icons
++	pax -rwpp matefaenza $(DESTDIR)$(datadir)/icons
++	pax -rwpp matefaenzadark $(DESTDIR)$(datadir)/icons
++	pax -rwpp matefaenzagray $(DESTDIR)$(datadir)/icons
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
