@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/19 22:24:39 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/01 07:06:06 nros Exp $
+qt5/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake
 qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.la
