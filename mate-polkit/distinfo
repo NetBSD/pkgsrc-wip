@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/01 08:48:09 obache Exp $
+
+SHA1 (mate-polkit-1.8.0.tar.xz) = 8b74b8d270a0392b9b54ae12693df2bdea1f429a
+RMD160 (mate-polkit-1.8.0.tar.xz) = a8a7ff638f0f0e3dcac8a71e1811a945a3cafff2
+Size (mate-polkit-1.8.0.tar.xz) = 324960 bytes
