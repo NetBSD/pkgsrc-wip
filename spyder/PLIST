@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/10/18 21:15:04 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/01/01 17:35:49 jihbed Exp $
 bin/spyder
 bin/spyder_win_post_install.py
 ${PYSITELIB}/spyderlib/__init__.py
@@ -204,7 +204,6 @@ ${PYSITELIB}/spyderlib/images/console/python_t.png
 ${PYSITELIB}/spyderlib/images/console/restart.png
 ${PYSITELIB}/spyderlib/images/console/run_small.png
 ${PYSITELIB}/spyderlib/images/console/syspath.png
-${PYSITELIB}/spyderlib/images/console/terminate.png
 ${PYSITELIB}/spyderlib/images/console/terminated.png
 ${PYSITELIB}/spyderlib/images/dictedit.png
 ${PYSITELIB}/spyderlib/images/editor/blockcomment.png
@@ -436,6 +435,9 @@ ${PYSITELIB}/spyderlib/plugins/workingdirectory.pyo
 ${PYSITELIB}/spyderlib/py3compat.py
 ${PYSITELIB}/spyderlib/py3compat.pyc
 ${PYSITELIB}/spyderlib/py3compat.pyo
+${PYSITELIB}/spyderlib/pygments_patch.py
+${PYSITELIB}/spyderlib/pygments_patch.pyc
+${PYSITELIB}/spyderlib/pygments_patch.pyo
 ${PYSITELIB}/spyderlib/pyplot.py
 ${PYSITELIB}/spyderlib/pyplot.pyc
 ${PYSITELIB}/spyderlib/pyplot.pyo
