@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/01/01 08:04:00 obache Exp $
+
+SHA1 (atril-1.8.1.tar.xz) = 2051be961a84d118ad0a278ec22bf48ca5d3fc35
+RMD160 (atril-1.8.1.tar.xz) = 45311521fc7758e6d9e75dd5d3e28b73ee40a975
+Size (atril-1.8.1.tar.xz) = 1577776 bytes
+SHA1 (patch-libdocument_Makefile.am) = 898b46cc15a8df6ba0b34bb6387c28e573510def
+SHA1 (patch-libdocument_Makefile.in) = 56b1f03d014b2e718a404b3f2bebee9439156b0b
