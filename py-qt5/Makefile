@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/08/30 12:42:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/02 00:35:32 thomasklausner Exp $
 
 DISTNAME=	PyQt-gpl-${PYQT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-qt5-${PYQT_VERSION}
-PYQT_VERSION=	5.2.1
+PYQT_VERSION=	5.4
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 

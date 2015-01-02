@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/30 12:42:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/02 00:35:32 thomasklausner Exp $
 bin/pylupdate5
 bin/pyrcc5
 bin/pyuic5
@@ -60,8 +60,8 @@ ${PYSITELIB}/PyQt5/uic/pyuic.py
 ${PYSITELIB}/PyQt5/uic/uiparser.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qaxcontainer.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qscintilla.py
-${PYSITELIB}/PyQt5/uic/widget-plugins/qtdeclarative.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtprintsupport.py
+${PYSITELIB}/PyQt5/uic/widget-plugins/qtquickwidgets.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtwebkit.py
 qt5/plugins/PyQt5/libpyqt5qmlplugin.la
 qt5/plugins/designer/libpyqt5.la
@@ -107,6 +107,10 @@ share/sip/PyQt5/QtCore/qhistorystate.sip
 share/sip/PyQt5/QtCore/qidentityproxymodel.sip
 share/sip/PyQt5/QtCore/qiodevice.sip
 share/sip/PyQt5/QtCore/qitemselectionmodel.sip
+share/sip/PyQt5/QtCore/qjsonarray.sip
+share/sip/PyQt5/QtCore/qjsondocument.sip
+share/sip/PyQt5/QtCore/qjsonobject.sip
+share/sip/PyQt5/QtCore/qjsonvalue.sip
 share/sip/PyQt5/QtCore/qlibrary.sip
 share/sip/PyQt5/QtCore/qlibraryinfo.sip
 share/sip/PyQt5/QtCore/qline.sip
@@ -137,8 +141,8 @@ share/sip/PyQt5/QtCore/qpycore_qlist.sip
 share/sip/PyQt5/QtCore/qpycore_qmap.sip
 share/sip/PyQt5/QtCore/qpycore_qpair.sip
 share/sip/PyQt5/QtCore/qpycore_qset.sip
-share/sip/PyQt5/QtCore/qpycore_qstringlist.sip
 share/sip/PyQt5/QtCore/qpycore_qvector.sip
+share/sip/PyQt5/QtCore/qpycore_virtual_error_handler.sip
 share/sip/PyQt5/QtCore/qreadwritelock.sip
 share/sip/PyQt5/QtCore/qrect.sip
 share/sip/PyQt5/QtCore/qregexp.sip
@@ -158,7 +162,9 @@ share/sip/PyQt5/QtCore/qsortfilterproxymodel.sip
 share/sip/PyQt5/QtCore/qstandardpaths.sip
 share/sip/PyQt5/QtCore/qstate.sip
 share/sip/PyQt5/QtCore/qstatemachine.sip
+share/sip/PyQt5/QtCore/qstorageinfo.sip
 share/sip/PyQt5/QtCore/qstring.sip
+share/sip/PyQt5/QtCore/qstringlist.sip
 share/sip/PyQt5/QtCore/qstringlistmodel.sip
 share/sip/PyQt5/QtCore/qsysinfo.sip
 share/sip/PyQt5/QtCore/qsystemsemaphore.sip
@@ -262,8 +268,12 @@ share/sip/PyQt5/QtGui/qopengltexture.sip
 share/sip/PyQt5/QtGui/qopengltimerquery.sip
 share/sip/PyQt5/QtGui/qopenglversionfunctions.sip
 share/sip/PyQt5/QtGui/qopenglvertexarrayobject.sip
+share/sip/PyQt5/QtGui/qopenglwindow.sip
 share/sip/PyQt5/QtGui/qpagedpaintdevice.sip
+share/sip/PyQt5/QtGui/qpagelayout.sip
+share/sip/PyQt5/QtGui/qpagesize.sip
 share/sip/PyQt5/QtGui/qpaintdevice.sip
+share/sip/PyQt5/QtGui/qpaintdevicewindow.sip
 share/sip/PyQt5/QtGui/qpaintengine.sip
 share/sip/PyQt5/QtGui/qpainter.sip
 share/sip/PyQt5/QtGui/qpainterpath.sip
@@ -271,6 +281,7 @@ share/sip/PyQt5/QtGui/qpalette.sip
 share/sip/PyQt5/QtGui/qpdfwriter.sip
 share/sip/PyQt5/QtGui/qpen.sip
 share/sip/PyQt5/QtGui/qpicture.sip
+share/sip/PyQt5/QtGui/qpixelformat.sip
 share/sip/PyQt5/QtGui/qpixmap.sip
 share/sip/PyQt5/QtGui/qpixmapcache.sip
 share/sip/PyQt5/QtGui/qpolygon.sip
@@ -278,6 +289,7 @@ share/sip/PyQt5/QtGui/qpygui_qlist.sip
 share/sip/PyQt5/QtGui/qpygui_qpair.sip
 share/sip/PyQt5/QtGui/qpygui_qvector.sip
 share/sip/PyQt5/QtGui/qquaternion.sip
+share/sip/PyQt5/QtGui/qrasterwindow.sip
 share/sip/PyQt5/QtGui/qrawfont.sip
 share/sip/PyQt5/QtGui/qregion.sip
 share/sip/PyQt5/QtGui/qrgb.sip
@@ -332,6 +344,7 @@ share/sip/PyQt5/QtMultimedia/qcameraexposure.sip
 share/sip/PyQt5/QtMultimedia/qcamerafocus.sip
 share/sip/PyQt5/QtMultimedia/qcameraimagecapture.sip
 share/sip/PyQt5/QtMultimedia/qcameraimageprocessing.sip
+share/sip/PyQt5/QtMultimedia/qcamerainfo.sip
 share/sip/PyQt5/QtMultimedia/qmediabindableinterface.sip
 share/sip/PyQt5/QtMultimedia/qmediacontent.sip
 share/sip/PyQt5/QtMultimedia/qmediacontrol.sip
@@ -445,10 +458,14 @@ share/sip/PyQt5/QtQuick/QtQuickmod.sip
 share/sip/PyQt5/QtQuick/qquickframebufferobject.sip
 share/sip/PyQt5/QtQuick/qquickimageprovider.sip
 share/sip/PyQt5/QtQuick/qquickitem.sip
+share/sip/PyQt5/QtQuick/qquickitemgrabresult.sip
 share/sip/PyQt5/QtQuick/qquickpainteditem.sip
+share/sip/PyQt5/QtQuick/qquickrendercontrol.sip
 share/sip/PyQt5/QtQuick/qquicktextdocument.sip
 share/sip/PyQt5/QtQuick/qquickview.sip
 share/sip/PyQt5/QtQuick/qquickwindow.sip
+share/sip/PyQt5/QtQuick/qsgabstractrenderer.sip
+share/sip/PyQt5/QtQuick/qsgengine.sip
 share/sip/PyQt5/QtQuick/qsgflatcolormaterial.sip
 share/sip/PyQt5/QtQuick/qsggeometry.sip
 share/sip/PyQt5/QtQuick/qsgmaterial.sip
@@ -459,12 +476,15 @@ share/sip/PyQt5/QtQuick/qsgtexture.sip
 share/sip/PyQt5/QtQuick/qsgtexturematerial.sip
 share/sip/PyQt5/QtQuick/qsgtextureprovider.sip
 share/sip/PyQt5/QtQuick/qsgvertexcolormaterial.sip
+share/sip/PyQt5/QtQuickWidgets/QtQuickWidgetsmod.sip
+share/sip/PyQt5/QtQuickWidgets/qquickwidget.sip
 share/sip/PyQt5/QtSensors/QtSensorsmod.sip
 share/sip/PyQt5/QtSensors/qaccelerometer.sip
 share/sip/PyQt5/QtSensors/qaltimeter.sip
 share/sip/PyQt5/QtSensors/qambientlightsensor.sip
 share/sip/PyQt5/QtSensors/qambienttemperaturesensor.sip
 share/sip/PyQt5/QtSensors/qcompass.sip
+share/sip/PyQt5/QtSensors/qdistancesensor.sip
 share/sip/PyQt5/QtSensors/qgyroscope.sip
 share/sip/PyQt5/QtSensors/qholstersensor.sip
 share/sip/PyQt5/QtSensors/qirproximitysensor.sip
@@ -593,6 +613,7 @@ share/sip/PyQt5/QtWidgets/qmenu.sip
 share/sip/PyQt5/QtWidgets/qmenubar.sip
 share/sip/PyQt5/QtWidgets/qmessagebox.sip
 share/sip/PyQt5/QtWidgets/qmouseeventtransition.sip
+share/sip/PyQt5/QtWidgets/qopenglwidget.sip
 share/sip/PyQt5/QtWidgets/qplaintextedit.sip
 share/sip/PyQt5/QtWidgets/qprogressbar.sip
 share/sip/PyQt5/QtWidgets/qprogressdialog.sip
@@ -640,6 +661,9 @@ share/sip/PyQt5/QtWidgets/qwhatsthis.sip
 share/sip/PyQt5/QtWidgets/qwidget.sip
 share/sip/PyQt5/QtWidgets/qwidgetaction.sip
 share/sip/PyQt5/QtWidgets/qwizard.sip
+share/sip/PyQt5/QtXml/QtXmlmod.sip
+share/sip/PyQt5/QtXml/qdom.sip
+share/sip/PyQt5/QtXml/qxml.sip
 share/sip/PyQt5/QtXmlPatterns/QtXmlPatternsmod.sip
 share/sip/PyQt5/QtXmlPatterns/qabstractmessagehandler.sip
 share/sip/PyQt5/QtXmlPatterns/qabstracturiresolver.sip
