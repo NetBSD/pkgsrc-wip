@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/01/02 06:20:56 obache Exp $
+
+SHA1 (mate-themes-1.8.1.tar.xz) = 1e03cf7adc35a115d73ec76194f3bc98d0101d88
+RMD160 (mate-themes-1.8.1.tar.xz) = e204133a073613dc646e2d0b859e9bf0662e67cd
+Size (mate-themes-1.8.1.tar.xz) = 2896520 bytes
+SHA1 (patch-common_mkiconlinks.sh) = 0302959fb13ef09dbfb471568b4c39cb7307b420
