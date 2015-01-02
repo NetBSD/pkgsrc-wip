@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/01 08:25:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/02 05:09:47 obache Exp $
 include/mate-settings-daemon/mate-settings-client.h
 include/mate-settings-daemon/mate-settings-plugin.h
 lib/mate-settings-daemon/a11y-keyboard.mate-settings-plugin
@@ -31,10 +31,13 @@ lib/mate-settings-daemon/xrdb.mate-settings-plugin
 lib/mate-settings-daemon/xsettings.mate-settings-plugin
 lib/pkgconfig/mate-settings-daemon.pc
 libexec/mate-settings-daemon
+${PLIST.polkit}libexec/msd-datetime-mechanism
 libexec/msd-locate-pointer
 man/man1/mate-settings-daemon.1
 share/MateConf/gsettings/mate-settings-daemon.convert
 share/dbus-1/services/org.mate.SettingsDaemon.service
+${PLIST.polkit}share/dbus-1/system-services/org.mate.SettingsDaemon.DateTimeMechanism.service
+${PLIST.polkit}share/examples/mate-settings-daemon/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf
 share/examples/mate-settings-daemon/xdg/autostart/mate-settings-daemon.desktop
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.a11y-keyboard.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.background.gschema.xml
@@ -180,3 +183,4 @@ share/mate-settings-daemon/xrdb/General.ad
 share/mate-settings-daemon/xrdb/Motif.ad
 share/mate-settings-daemon/xrdb/Tk.ad
 share/mate-settings-daemon/xrdb/Xaw.ad
+${PLIST.polkit}share/polkit-1/actions/org.mate.settingsdaemon.datetimemechanism.policy
