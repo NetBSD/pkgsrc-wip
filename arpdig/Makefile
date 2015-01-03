@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:38 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/03 14:14:32 gschwarz Exp $
 #
 
-DISTNAME=	arpdig-0.5.2
+DISTNAME=	arpdig-0.5.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arpdig/}
 
