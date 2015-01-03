@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/01/03 07:10:32 obache Exp $
+
+SHA1 (liboobs-2.32.0.tar.bz2) = b88b46fbdc1d93326758ef9fb66694d9fc7b6f98
+RMD160 (liboobs-2.32.0.tar.bz2) = c9628dd1aae3206b55829cce133018283fe7cc16
+Size (liboobs-2.32.0.tar.bz2) = 368347 bytes
+SHA1 (patch-ac) = 48491b7cbcc34e897b762f7fcafa7eb3c5aff5e0
