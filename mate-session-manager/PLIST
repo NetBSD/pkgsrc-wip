@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/01 08:51:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/03 16:08:11 jihbed Exp $
 bin/mate-session
 bin/mate-session-properties
 bin/mate-session-save
@@ -9,6 +9,7 @@ man/man1/mate-session.1
 man/man1/mate-wm.1
 share/MateConf/gsettings/mate-session.convert
 share/applications/mate-session-properties.desktop
+share/doc/mate-session-manager/dbus/mate-session.html
 share/glib-2.0/schemas/org.mate.session.gschema.xml
 share/icons/hicolor/16x16/apps/mate-session-properties.png
 share/icons/hicolor/22x22/apps/mate-session-properties.png
