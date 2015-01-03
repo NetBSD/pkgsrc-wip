@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2014/11/09 21:02:12 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.2 2015/01/03 09:55:20 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mu
-PKG_SUPPORTED_OPTIONS=	mu-emacs
-PKG_SUGGESTED_OPTIONS=	mu-emacs
+PKG_SUPPORTED_OPTIONS=	mu-emacs guile
+PKG_SUGGESTED_OPTIONS=	mu-emacs guile
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,4 +19,9 @@ PLIST_SRC+=	PLIST.emacs
 .if !empty(PKG_OPTIONS:Mgtk)
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mguile)
+.include "../../lang/guile20/buildlink3.mk"
+PLIST_SRC+=	PLIST.guile
 .endif
