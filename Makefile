@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6031 2014/12/31 11:50:00 thomasklausner Exp $
+# $Id: Makefile,v 1.6032 2015/01/03 12:35:17 jonthn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3061,6 +3061,7 @@ SUBDIR+=	py-traits
 SUBDIR+=	py-traitsgui
 SUBDIR+=	py-tranquil
 SUBDIR+=	py-transaction
+SUBDIR+=	py-trollius
 SUBDIR+=	py-tsgeom
 SUBDIR+=	py-ttk
 SUBDIR+=	py-turbojson
