@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/01/03 06:32:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/03 06:47:00 obache Exp $
 #
 
-DISTNAME=		system-tools-backends-2.8.3
+DISTNAME=		system-tools-backends-2.10.2
 CATEGORIES=		sysutils
-MASTER_SITES=		http://system-tools-backends.freedesktop.org/downloads/2.8/
+MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/system-tools-backends/2.10/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://system-tools-backends.freedesktop.org/
