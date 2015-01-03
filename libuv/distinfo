@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/07 21:55:50 jonthn Exp $
+$NetBSD: distinfo,v 1.2 2015/01/03 13:49:47 jonthn Exp $
 
-SHA1 (v1.0.1.tar.gz) = be4edcca18a518153b5e249a17621f2674d7654d
-RMD160 (v1.0.1.tar.gz) = 0d931a06643cb0dc596b2b02dfe9b82a8e2e9890
-Size (v1.0.1.tar.gz) = 1007397 bytes
+SHA1 (v1.1.0.tar.gz) = 0c5d68bbfecd0bf2a6331403d375f791e34c298d
+RMD160 (v1.1.0.tar.gz) = fb027efef760d03da4f9b756154fdba95919b70d
+Size (v1.1.0.tar.gz) = 1010640 bytes
 SHA1 (patch-autogen.sh) = 55a344c1c4d32b2b95f86cdfb294441a040adcde
