@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6032 2015/01/03 12:35:17 jonthn Exp $
+# $Id: Makefile,v 1.6033 2015/01/03 12:41:41 jonthn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2776,6 +2776,7 @@ SUBDIR+=	py-naftawayh
 SUBDIR+=	py-ncomb
 SUBDIR+=	py-ncpol2sdpa
 SUBDIR+=	py-neo
+SUBDIR+=	py-neovim
 SUBDIR+=	py-netcdf
 SUBDIR+=	py-netcdf4
 SUBDIR+=	py-netflowvizu
