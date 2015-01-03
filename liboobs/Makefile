@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/03 07:10:32 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/03 07:21:16 obache Exp $
 #
 
 DISTNAME=		liboobs-2.32.0
@@ -19,4 +19,6 @@ USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 
 .include "../../wip/system-tools-backends/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
