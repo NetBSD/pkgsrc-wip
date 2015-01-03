@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2014/12/28 11:27:35 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.34 2015/01/03 08:49:50 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -878,6 +878,8 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/translation-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/translation-16@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/undoCloseTab.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/urlbar-arrow.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/warning16.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/warning16@2x.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/webRTC-camera-white-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/webRTC-indicator.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/webRTC-microphone-white-16.png
@@ -1568,6 +1570,7 @@ lib/firefox/browser/modules/devtools/webconsole/network-panel.js
 lib/firefox/browser/modules/devtools/webconsole/panel.js
 lib/firefox/browser/modules/devtools/webconsole/webconsole.js
 lib/firefox/browser/modules/devtools/webide/addons.js
+lib/firefox/browser/modules/devtools/webide/build.js
 lib/firefox/browser/modules/devtools/webide/app-manager.js
 lib/firefox/browser/modules/devtools/webide/remote-resources.js
 lib/firefox/browser/modules/devtools/webide/runtimes.js
@@ -3154,6 +3157,7 @@ lib/firefox/modules/devtools/server/actors/utils/ScriptStore.js
 lib/firefox/modules/devtools/server/actors/utils/automation-timeline.js
 lib/firefox/modules/devtools/server/actors/utils/make-debugger.js
 lib/firefox/modules/devtools/server/actors/utils/map-uri-to-addon-id.js
+lib/firefox/modules/devtools/server/actors/utils/stack.js
 lib/firefox/modules/devtools/server/actors/webapps.js
 lib/firefox/modules/devtools/server/actors/webaudio.js
 lib/firefox/modules/devtools/server/actors/webbrowser.js
