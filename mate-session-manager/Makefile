@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/04 11:37:41 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/04 11:47:03 obache Exp $
 
 DISTNAME=	mate-session-manager-1.8.1
 CATEGORIES=	x11
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE session manager
 LICENSE=	gnu-gpl-v2
 
-#TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 GNU_CONFIGURE=		yes
