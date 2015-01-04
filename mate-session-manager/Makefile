@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:51:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/04 11:37:41 obache Exp $
 
 DISTNAME=	mate-session-manager-1.8.1
 CATEGORIES=	x11
@@ -23,6 +23,7 @@ USE_PKGLOCALEDIR=	yes
 .include "../../devel/glib2/schemas.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
