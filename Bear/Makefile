@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/05 22:41:29 jonthn Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/06 19:18:36 jonthn Exp $
 
 DISTNAME=	Bear-1.4.3
 CATEGORIES=	devel
@@ -17,6 +17,14 @@ USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	${EGDIR}
 CONF_FILES=	${EGDIR}/bear.conf ${PKG_SYSCONFDIR}/bear.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+PLIST_SUBST+=   LIBEXT=dylib
+.else
+PLIST_SUBST+=   LIBEXT=so
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/bear.conf ${DESTDIR}${EGDIR}

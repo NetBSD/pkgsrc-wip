@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/05 22:41:29 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/06 19:18:36 jonthn Exp $
 bin/bear
-lib/libear.dylib
+lib/libear.${LIBEXT}
 man/man1/bear.1
 share/doc/bear/COPYING
 share/doc/bear/ChangeLog.md
