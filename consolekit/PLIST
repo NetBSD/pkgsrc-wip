@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/01/06 09:30:10 obache Exp $
+bin/ck-history
+bin/ck-launch-session
+bin/ck-list-sessions
+include/ConsoleKit/ck-connector/ck-connector.h
+lib/ConsoleKit/scripts/ck-system-restart
+lib/ConsoleKit/scripts/ck-system-stop
+lib/libck-connector.la
+lib/pkgconfig/ck-connector.pc
+libexec/ck-collect-session-info
+libexec/ck-get-x11-display-device
+libexec/ck-get-x11-server-pid
+sbin/ck-log-system-restart
+sbin/ck-log-system-start
+sbin/ck-log-system-stop
+sbin/console-kit-daemon
+share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Manager.xml
+share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Seat.xml
+share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Session.xml
+share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
+share/examples/consolekit/00-primary.seat
+share/examples/consolekit/ConsoleKit.conf
+share/polkit-1/actions/org.freedesktop.consolekit.policy

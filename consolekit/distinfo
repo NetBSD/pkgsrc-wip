@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2015/01/06 09:30:10 obache Exp $
+
+SHA1 (ConsoleKit-0.4.5.tar.bz2) = 6f090c1ce0d459dd6904854532554323755bdeca
+RMD160 (ConsoleKit-0.4.5.tar.bz2) = 2eba158e321778a4c17bf765d0106d214b93fe53
+Size (ConsoleKit-0.4.5.tar.bz2) = 425423 bytes
+SHA1 (patch-aa) = baafe5aa4c99279d85edb0e4bc76491e80314950
+SHA1 (patch-ab) = 24036207cc59ccd97f8ed9a53cc588ff94b8c2fe
+SHA1 (patch-ac) = 3ef09f16ee039da7cea0c020c2aeccfe5d88c57c
+SHA1 (patch-ad) = c0cf170a85e04e2dadfd490f303a40e8d62cc626
+SHA1 (patch-ae) = dcb689861f8ee425b94a8acf1cb344a782b4328b
+SHA1 (patch-af) = 9c7febd3a1e995060e5755b205c5d4a7217bc1b8
