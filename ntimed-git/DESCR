@@ -1,0 +1,23 @@
+This is a preview/early-acces/alpha/buzzword-of-the-times release
+of a new FOSS project written to gradually take over the world of
+networked timekeeping.
+
+The first step is a NTP protocol client daemon, 'Ntimed-client',
+which will synchronize a systems clock to some set of NTP servers
+
+If this catches on, support for slave servers, refclocks and other
+protocols, such as PTP, can be added, subject to interest, skill,
+time and money.
+
+The overall architectural goals are the same as every other FOSS
+project claims to follow: Simplicity, Quality, Security etc. etc.
+but I tend to think that we stick a little bit more closely to
+them.
+
+This work is sponsored by Linux Foundation, partly in response to
+the HeartBleed fiasco, and after studying the 300,000+ lines of
+source-code in NTPD. I concluded that while it could be salvaged,
+it would be more economical, much faster and far more efficient to
+start from scratch.
+
+Ntimed is the result.

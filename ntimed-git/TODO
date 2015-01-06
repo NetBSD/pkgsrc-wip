@@ -1,0 +1,2 @@
+Does not build on NetBSD, see
+https://github.com/bsdphk/Ntimed/issues/23
