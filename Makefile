@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6033 2015/01/03 12:41:41 jonthn Exp $
+# $Id: Makefile,v 1.6034 2015/01/06 11:50:02 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3156,6 +3156,8 @@ SUBDIR+=	qt4-libqtlua
 SUBDIR+=	qt5-ibus
 SUBDIR+=	qt5-libqtlua
 SUBDIR+=	qt5-qscintilla
+SUBDIR+=	qt5-qtwebchannel
+SUBDIR+=	qt5-qtwebsockets
 SUBDIR+=	qtcreator
 SUBDIR+=	qtcurve-gtk2
 SUBDIR+=	qtnotifydaemon
