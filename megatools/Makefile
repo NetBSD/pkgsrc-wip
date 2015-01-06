@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/11/19 12:44:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/06 12:47:22 thomasklausner Exp $
 
-DISTNAME=	megatools-1.9.93
+DISTNAME=	megatools-1.9.94
 CATEGORIES=	filesystems security
 MASTER_SITES=	http://megatools.megous.com/builds/
 
