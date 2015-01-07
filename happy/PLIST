@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/01/07 13:20:55 szptvlfn Exp $
 bin/happy
+man/man1/happy.1
 share/doc/${PKGNAME}/LICENSE
 share/${PKGNAME}/GLR_Base
 share/${PKGNAME}/GLR_Lib
