@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2015/01/03 08:49:50 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.35 2015/01/07 22:47:26 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -257,6 +257,8 @@ lib/firefox/browser/chrome/browser/content/browser/hiddenWindow.xul
 lib/firefox/browser/chrome/browser/content/browser/history/history-panel.xul
 lib/firefox/browser/chrome/browser/content/browser/license.html
 lib/firefox/browser/chrome/browser/content/browser/loop/conversation.html
+lib/firefox/browser/chrome/browser/content/browser/loop/css/contacts.css
+lib/firefox/browser/chrome/browser/content/browser/loop/css/panel.css
 lib/firefox/browser/chrome/browser/content/browser/loop/js/client.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/contacts.js
 lib/firefox/browser/chrome/browser/content/browser/loop/js/conversation.js
@@ -284,9 +286,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/sdk-content/images/rtc/s
 lib/firefox/browser/chrome/browser/content/browser/loop/sdk-content/images/rtc/speaker-on.png
 lib/firefox/browser/chrome/browser/content/browser/loop/sdk-content/js/dynamic_config.min.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/css/common.css
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/css/contacts.css
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/css/conversation.css
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/css/panel.css
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/css/reset.css
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/02.png
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/img/02@2x.png
@@ -345,7 +345,7 @@ lib/firefox/browser/chrome/browser/content/browser/loop/shared/js/websocket.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/backbone-1.1.2.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/jquery-2.1.0.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/lodash-2.4.1.js
-lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/react-0.11.2.js
+lib/firefox/browser/chrome/browser/content/browser/loop/shared/libs/react-0.12.2.js
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/connected.ogg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/connecting.ogg
 lib/firefox/browser/chrome/browser/content/browser/loop/shared/sounds/failure.ogg
@@ -685,6 +685,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/shadereditor.cs
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/splitview.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/storage.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/styleeditor.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/timeline-filter.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/timeline.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/toggle-tools.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/toggle-tools@2x.png
@@ -1501,6 +1502,7 @@ lib/firefox/browser/modules/devtools/projecteditor/plugins/image-view/image-edit
 lib/firefox/browser/modules/devtools/projecteditor/plugins/image-view/plugin.js
 lib/firefox/browser/modules/devtools/projecteditor/plugins/logging/logging.js
 lib/firefox/browser/modules/devtools/projecteditor/plugins/new/new.js
+lib/firefox/browser/modules/devtools/projecteditor/plugins/rename/rename.js
 lib/firefox/browser/modules/devtools/projecteditor/plugins/save/save.js
 lib/firefox/browser/modules/devtools/projecteditor/plugins/status-bar/plugin.js
 lib/firefox/browser/modules/devtools/projecteditor/project.js
@@ -2662,6 +2664,7 @@ lib/firefox/modules/PlacesUtils.jsm
 lib/firefox/modules/PluralForm.jsm
 lib/firefox/modules/PopupNotifications.jsm
 lib/firefox/modules/Preferences.jsm
+lib/firefox/modules/Prefetcher.jsm
 lib/firefox/modules/PrivateBrowsingUtils.jsm
 lib/firefox/modules/Promise-backend.js
 lib/firefox/modules/Promise.jsm
@@ -3154,6 +3157,7 @@ lib/firefox/modules/devtools/server/actors/stylesheets.js
 lib/firefox/modules/devtools/server/actors/timeline.js
 lib/firefox/modules/devtools/server/actors/tracer.js
 lib/firefox/modules/devtools/server/actors/utils/ScriptStore.js
+lib/firefox/modules/devtools/server/actors/utils/actor-registry-utils.js
 lib/firefox/modules/devtools/server/actors/utils/automation-timeline.js
 lib/firefox/modules/devtools/server/actors/utils/make-debugger.js
 lib/firefox/modules/devtools/server/actors/utils/map-uri-to-addon-id.js
