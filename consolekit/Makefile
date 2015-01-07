@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/06 09:30:10 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/07 04:46:57 obache Exp $
 
 DISTNAME=		ConsoleKit-0.4.5
 PKGNAME=		${DISTNAME:tl}
@@ -18,9 +18,9 @@ EGDIR=		${PREFIX}/share/examples/consolekit
 CONF_FILES+=	${EGDIR}/00-primary.seat ${PKG_SYSCONFDIR}/seats.d/00-primary.seat
 CONF_FILES+=	${EGDIR}/ConsoleKit.conf ${PKG_SYSCONFBASE}/dbus-1/system.d/ConsoleKit.conf
 
-OWN_DIRS+=	${PREFIX}lib/ConsoleKit/run-session.d
+OWN_DIRS+=	${PREFIX}/lib/ConsoleKit/run-session.d
 OWN_DIRS+=	${PREFIX}/lib/ConsoleKit/run-seat.d
-OWN_DIRS=	${PKG_SYSCONFDIR}/seats.d
+OWN_DIRS+=	${PKG_SYSCONFDIR}/seats.d
 OWN_DIRS+=	${PKG_SYSCONFDIR}/run-seat.d
 
 BUILD_DEFS+=		VARBASE
@@ -34,10 +34,8 @@ USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-
-# TODO
-#CONFIGURE_ARGS+=	--enable-pam-module
-#.include "../../mk/pam.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-pam-module
+CONFIGURE_ARGS+=	--with-pam-module-dir=${PREFIX}/lib/security
 
 post-extract:
 	${CP} ${FILESDIR}/ck-sysdeps-netbsd.c ${WRKSRC}/src/
@@ -59,9 +57,13 @@ post-install:
 CONFIGURE_ARGS+=	--enable-rbac-shutdown=solaris.system.shutdown
 .endif
 
+OWN_DIRS+=	${VARBASE}/log/ConsoleKit
+CONF_FILES+=	/dev/null ${VARBASE}/log/ConsoleKit/history
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
