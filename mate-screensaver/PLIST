@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/02 05:44:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/07 09:02:36 obache Exp $
 bin/mate-screensaver
 bin/mate-screensaver-command
 bin/mate-screensaver-preferences
@@ -32,6 +32,7 @@ share/dbus-1/services/org.mate.ScreenSaver.service
 share/desktop-directories/mate-screensaver.directory
 share/examples/mate-screensaver/xdg/autostart/mate-screensaver.desktop
 share/examples/mate-screensaver/xdg/menus/mate-screensavers.menu
+share/examples/pam.d/mate-screensaver
 share/glib-2.0/schemas/org.mate.screensaver.gschema.xml
 share/locale/am/LC_MESSAGES/mate-screensaver.mo
 share/locale/ar/LC_MESSAGES/mate-screensaver.mo
@@ -126,4 +127,3 @@ share/mate-screensaver/lock-dialog-default.ui
 share/mate-screensaver/mate-screensaver-preferences.ui
 share/pixmaps/gnome-logo-white.svg
 share/pixmaps/mate-logo-white.svg
-@pkgdir etc/pam.d

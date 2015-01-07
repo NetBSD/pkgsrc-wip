@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/02 05:44:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/07 09:02:36 obache Exp $
 
 DISTNAME=	mate-screensaver-1.8.1
 CATEGORIES=	x11
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Screen saver and locker for the MATE desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+DEPENDS+=	consolekit-[0-9]*:../../wip/consolekit
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -18,8 +20,11 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 PKGCONFIG_OVERRIDE+=	data/mate-screensaver.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-console-kit=yes
+CONFIGURE_ARGS+=	--with-systemd=no
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/${PKGBASE}
+INSTALL_MAKE_FLAGS+=	PAM_PREFIX=${PREFIX}/share/examples/pam.d
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/menus
@@ -27,6 +32,25 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-screensaver/xdg/autostart/mate-screen
 		${PKG_SYSCONFDIR}/xdg/autostart/mate-screensaver.desktop
 CONF_FILES+=	${PREFIX}/share/examples/mate-screensaver/xdg/menus/mate-screensavers.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/mate-screensavers.menu
+
+DEPENDS+=	pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
+INSTALLATION_DIRS+=	${PREFIX}/share/examples/pam.d
+
+post-extract:
+	${CP} ${FILESDIR}/mate-screensaver.pam ${WRKDIR}
+
+SUBST_CLASSES+=		pam-conf
+SUBST_STAGE.pam-conf=	post-configure
+SUBST_FILES.pam-conf=	${WRKDIR}/mate-screensaver.pam
+SUBST_VARS.pam-conf=	PREFIX
+
+post-install:
+	${TEST} -f ${DESTDIR}${PREFIX}/share/examples/pam.d/mate-screensaver || \
+		${INSTALL_DATA} ${WRKDIR}/mate-screensaver.pam ${DESTDIR}${PREFIX}/share/examples/pam.d/mate-screensaver
+
+MAKE_DIRS+=	/etc/pam.d
+CONF_FILES+=	${PREFIX}/share/examples/pam.d/mate-screensaver \
+		/etc/pam.d/mate-screensaver
 
 .include "../../devel/glib2/schemas.mk"
 
@@ -40,4 +64,5 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-screensaver/xdg/menus/mate-screensave
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
