@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/07 05:53:52 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/07 07:44:17 obache Exp $
 #
 
 DISTNAME=	polkit-0.112
@@ -39,6 +39,7 @@ PKG_USERS_VARS+=	POLKITD_USER
 REPLACE_PERL+=		src/polkitbackend/toarray.pl
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/polkit
+INSTALL_MAKE_FLAGS+=	pamdir=${PREFIX}/share/examples/pam.d
 
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/polkit-1/rules.d \
 			${POLKITD_USER} ${POLKITD_GROUP} 700
@@ -51,6 +52,10 @@ CONF_FILES+=	${PREFIX}/share/examples/polkit/dbus-1/system.d/org.freedesktop.Pol
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
 CONF_FILES+=	${PREFIX}/share/examples/polkit/polkit-1/rules.d/50-default.rules \
 		${PKG_SYSCONFDIR}/polkit-1/rules.d/50-default.rules
+
+MAKE_DIRS+=	/etc/pam.d
+CONF_FILES+=	${PREFIX}/share/examples/pam.d/polkit-1 \
+		/etc/pam.d/polkit-1
 
 .include "options.mk"
 
