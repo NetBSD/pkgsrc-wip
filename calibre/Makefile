@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/09/10 06:45:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/07 22:58:53 thomasklausner Exp $
 
-DISTNAME=	calibre-2.2.0
+DISTNAME=	calibre-2.15.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -160,8 +160,7 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
-# actually, qt5 >= 5.3.2
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-# actually, py-qt5 >= 5.3.1
+BUILDLINK_API_DEPENDS.py-qt5+=	${PYPKGPREFIX}-qt5>=5.4
 .include "../../wip/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

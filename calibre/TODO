@@ -1,5 +1,3 @@
-README claims qt5-5.3.x and py-qt5-5.3.x are needed, pkgsrc contains 5.2.x.
-
 ebook-viewer dumps core for me:
 
 #0  0x00007f7fe3dcfca0 in JSC::Yarr::checkSyntax(WTF::String const&) () from /usr/pkg/qt5/lib/libQt5Qml.so.5
@@ -34,4 +32,37 @@ ebook-viewer dumps core for me:
    from /usr/pkg/qt5/lib/libJavaScriptCore.so.1
 #19 0x00007f7fd9c91c5d in bool JSC::Parser<JSC::Lexer<unsigned short> >::parseFunctionInfo<(JSC::FunctionRequirements)0, false, JSC::ASTBuilder>(JSC::ASTBuilder&, JSC::Identifier const*&, JSC::ASTBuilder::FormalParameterList&, JSC::ASTBuilder::FunctionBody&, unsigned int&, unsigned int&, int&, unsigned int&) () from /usr/pkg/qt5/lib/libJavaScriptCore.so.1
 
-Side effect of the above?
+Could be related to not building in the first try but only the second one, with:
+####### Building extension magick #######
+Compiling magick
+Traceback (most recent call last):
+  File "setup.py", line 99, in <module>
+    sys.exit(main())
+  File "setup.py", line 85, in main
+    command.run_all(opts)
+  File "/scratch/wip/calibre/work/calibre-2.15.0/setup/__init__.py", line 181, in run_all
+    self.run_cmd(self, opts)
+  File "/scratch/wip/calibre/work/calibre-2.15.0/setup/__init__.py", line 178, in run_cmd
+    cmd.run(opts)
+  File "/scratch/wip/calibre/work/calibre-2.15.0/setup/extensions.py", line 412, in run
+    self.build(ext, dest)
+  File "/scratch/wip/calibre/work/calibre-2.15.0/setup/extensions.py", line 456, in build
+    if not parallel_build(jobs, self.info):
+  File "/scratch/wip/calibre/work/calibre-2.15.0/setup/parallel_build.py", line 32, in parallel_build
+    p = Pool(cpu_count)
+  File "/usr/pkg/lib/python2.7/multiprocessing/dummy/__init__.py", line 151, in Pool
+    return ThreadPool(processes, initializer, initargs)
+  File "/usr/pkg/lib/python2.7/multiprocessing/pool.py", line 718, in __init__
+    Pool.__init__(self, processes, initializer, initargs)
+  File "/usr/pkg/lib/python2.7/multiprocessing/pool.py", line 159, in __init__
+    self._repopulate_pool()
+  File "/usr/pkg/lib/python2.7/multiprocessing/pool.py", line 223, in _repopulate_pool
+    w.start()
+  File "/usr/pkg/lib/python2.7/multiprocessing/dummy/__init__.py", line 75, in start
+    threading.Thread.start(self)
+  File "/usr/pkg/lib/python2.7/threading.py", line 745, in start
+    _start_new_thread(self.__bootstrap, ())
+thread.error: can't start new thread
+*** Error code 1
+
+
