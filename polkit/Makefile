@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/07 05:38:31 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/07 05:53:52 obache Exp $
 #
 
 DISTNAME=	polkit-0.112
@@ -53,6 +53,12 @@ CONF_FILES+=	${PREFIX}/share/examples/polkit/polkit-1/rules.d/50-default.rules \
 		${PKG_SYSCONFDIR}/polkit-1/rules.d/50-default.rules
 
 .include "options.mk"
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	docs/man/pkexec.xml
+SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.policy.in
+SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 
 .include "../../wip/spidermonkey17/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
