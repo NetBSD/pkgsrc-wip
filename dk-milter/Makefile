@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2012/11/13 22:25:29 othyro Exp $
+# $NetBSD: Makefile,v 1.23 2015/01/07 13:50:38 makoto Exp $
 
 DISTNAME=	dk-milter-1.0.2
-#PKGREVISION=	1
 PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dk-milter/}
@@ -40,6 +39,14 @@ SUBST_FILES.rename=	dk-filter/dk-filter.8
 SUBST_SED.rename=	-e 's|dk-filter|dk-milter|g'
 SUBST_MESSAGE.rename=	Renaming dk-filter to dk-milter
 
+SUBST_CLASSES+=		gentxt
+SUBST_STAGE.gentxt=	post-build
+SUBST_FILES.gentxt=	INSTALL
+SUBST_SED.gentxt=	-e '/Run the script/s,gentxt.csh,dk-milter-gentxt.csh,'
+SUBST_SED.gentxt+=	-e '/DNS system/s,published.,published (dk-milter-gentxt.csh is in ${PREFIX}/sbin).,'
+SUBST_SED.gentxt+=	-e 's/dk-filter/dk-milter/g'
+SUBST_MESSAGE.gentxt=	Modify PATH and name of gentxt.csh
+
 INSTALLATION_DIRS=	lib ${PKGMANDIR}/man8 sbin share/doc/dk-milter/libdk
 
 pre-configure:
@@ -51,15 +58,15 @@ do-build:
 do-install:
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`; \
 	${INSTALL_PROGRAM} dk-filter/dk-filter ${DESTDIR}${PREFIX}/sbin/dk-milter; \
+	${INSTALL_SCRIPT} ${WRKSRC}/dk-filter/gentxt.csh ${DESTDIR}${PREFIX}/sbin/dk-milter-gentxt.csh; \
 	${INSTALL_LIB} libdk/libdk.a ${DESTDIR}${PREFIX}/lib
+# man pages
 	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-filter.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/dk-milter.8
-	${INSTALL_DATA} ${WRKSRC}/FEATURES ${DESTDIR}${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${DESTDIR}${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DESTDIR}${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/rfc4870.txt ${DESTDIR}${PREFIX}/share/doc/dk-milter
+# documents in source
+	cd ${WRKSRC} ;\
+	for f in FEATURES INSTALL KNOWNBUGS LICENSE README RELEASE_NOTES rfc4870.txt; do \
+	  ${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/dk-milter ;\
+	done 
 	cd ${WRKSRC}/libdk/docs; for file in *.html; do \
 	${INSTALL_DATA} $$file ${DESTDIR}${PREFIX}/share/doc/dk-milter/libdk; done
 
