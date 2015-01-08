@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2013/02/20 13:10:34 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/01/08 11:56:33 szptvlfn Exp $
 bin/alex
+man/man1/alex.1
 share/${PKGNAME}/AlexTemplate
 share/${PKGNAME}/AlexTemplate-debug
 share/${PKGNAME}/AlexTemplate-ghc
