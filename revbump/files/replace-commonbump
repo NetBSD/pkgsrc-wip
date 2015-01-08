@@ -47,10 +47,11 @@ $my_name:
       '$replaced' (currently the name is fixed).
 
 Synopsys:
-    $my_name [-a ] [-h] [-p pkgsrc_directory] [-T list_file] 
+    $my_name [-a ] [-c file_to_check] [-h] [-p pkgsrc_directory] [-T list_file] 
 Where:
    -a	Check all, disregard to -T option. If "# used by" is 
     	included or not.
+   -c	(debug) see if the file is defined in \%HASH
    -h	Show this help
    -p directory	
         pkgsrc directory to process (default $PKGSRCDIR)
@@ -122,11 +123,11 @@ sub GenerateHash ($$) {
 		if ( $included =~ m|enigmail.mk| )	{ next;}
 
 		$included =~ s,\${.CURDIR},$shortname,;
-		if ($included =~ /\${([^}]+)}/ ) { 
+		if ($included =~ /\${([^}]+)}/ ) { 	# If it is with ${..} type VARIABLE,
 		    my($varname) = $1;
 		    my($value) = show_var($varname, $shortdir);
-		    $included =~ s/\${[^}]+}/$value/;
-		    if ($value eq '') {
+		    $included =~ s/\${[^}]+}/$value/;	# Replace it with the value
+		    if ($value eq '') {			# if the $value is empty, issue message
 			print STDERR 
 $FILE, ': ', __LINE__, ' Value ${', $varname, '} is emtpy at ', $shortdir, "\n";
 		    }
@@ -134,12 +135,12 @@ $FILE, ': ', __LINE__, ' Value ${', $varname, '} is emtpy at ', $shortdir, "\n";
 		print STDERR __LINE__ , ' ', $shortname, ' -> ', $included,': ',$_ ,"\n" if $debug;
 		if ( $included eq '') 	   		{ next;}	# not include line, look at next line
 		print STDERR __LINE__ , ' ', $shortname, ' -> ', $included,"\n" if $debug;
-		if ( ! $HASH{$included} ) {
-		    $HASH{$included} =  $shortname;
-		} else {
-		    my(@registered) = split ';',  $HASH{$included};
-		    if (grep (/^$shortname$/, @registered) == 0 ) {
-			$HASH{$included} .= ';'. $shortname;
+		if ( ! $HASH{$included} ) {				# If is not registered yet,
+		    $HASH{$included} =  $shortname;			# Just define
+		} else {						# If it has any value,
+		    my(@registered) = split ';',  $HASH{$included};	# Get what is defined
+		    if (grep (/^$shortname$/, @registered) == 0 ) {	# and if it is not in there
+			$HASH{$included} .= ';'. $shortname;		# Add onto the hash
 			}
 		}
 	    } # end while
@@ -208,12 +209,20 @@ sub CheckAll() {
     	if ($#referer >  $number) { print $#referer . ' ? ' . $number .' .. ', $i,' <- ', $HASH{$i}, ' ... >', "\n";}	
     }
 }
+sub CheckHash($$) {
+    my ($pkgsrc) = shift;
+    my ($check_hash) = shift;
+    print STDERR __LINE__,' ', $check_hash, ' -> ', $HASH{"$check_hash"}, "\n";
+}
 sub main() {
     my($check_all) = 0;
     my($prefix);
-    getopts('ahp:T:', \%opts);
+    my($CheckHashFile) = 0;
+    getopts('ac:hp:T:', \%opts);
 
     if ($opts{'a'}) { $check_all = 1;  }
+    if ($opts{'c'}) { 
+	$CheckHashFile = $opts{'c'}; }
     if ($opts{'h'}) { usage(); exit 0;}
     if ($opts{'p'}) { $PKGSRCDIR = $opts{'p'};}
     if ($opts{'T'}) { $TABLE = $opts{'T'};}
@@ -222,6 +231,9 @@ sub main() {
     $prefix =~ s|.*/pkgsrc/(.*)|$1|;
     CheckPkgsrcTree($PKGSRCDIR);
     GenerateHash($PKGSRCDIR, $prefix);
+	# Check the first half, 
+    CheckHash($PKGSRCDIR, $CheckHashFile) if $CheckHashFile;
+    
     ReadTable($TABLE);
     if ($check_all) { CheckAll(); }
     else            { ShowResults();}
