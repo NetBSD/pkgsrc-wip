@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:04:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/08 05:02:51 obache Exp $
 
 DISTNAME=	atril-1.8.1
 CATEGORIES=	print
@@ -9,6 +9,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Simple multi-page document viewer for the MATE environment
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
