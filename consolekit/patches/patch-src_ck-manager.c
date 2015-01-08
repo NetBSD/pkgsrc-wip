@@ -1,4 +1,4 @@
-$NetBSD: patch-src_ck-manager.c,v 1.2 2015/01/08 07:34:23 obache Exp $
+$NetBSD: patch-src_ck-manager.c,v 1.3 2015/01/08 07:41:56 obache Exp $
 
 XXX revert 4f88228f31a63c026c424a92827f26ad7535275c
 The Kit people assume the world runs Linux and PAM, see
@@ -186,7 +186,7 @@ Fix deprecated use of polkit_authority_get().
          open_session_for_leader (manager,
                                   leader,
                                   parameters,
-@@ -2423,7 +2261,14 @@ register_manager (CkManager *manager)
+@@ -2423,10 +2261,16 @@ register_manager (CkManager *manager)
          GError *error = NULL;
  
  #ifdef HAVE_POLKIT
@@ -201,4 +201,7 @@ Fix deprecated use of polkit_authority_get().
 +        }
  #endif
  
-         error = NULL;
+-        error = NULL;
+         manager->priv->connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
+         if (manager->priv->connection == NULL) {
+                 if (error != NULL) {
