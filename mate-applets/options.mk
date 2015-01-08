@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2015/01/01 08:27:02 obache Exp $
+# $NetBSD: options.mk,v 1.2 2015/01/08 02:10:42 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-applets
-PKG_SUPPORTED_OPTIONS=	hal inet6
-PKG_SUGGESTED_OPTIONS+=	hal inet6
+PKG_SUPPORTED_OPTIONS=	hal inet6 polkit upower
+PKG_SUGGESTED_OPTIONS+=	hal inet6 polkit upower
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,4 +17,18 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--with-hal
 .else
 CONFIGURE_ARGS+=	--without-hal
+.endif
+
+.if !empty(PKG_OPTIONS:Mpolkit)
+.include "../../wip/polkit/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-polkit
+.else
+CONFIGURE_ARGS+=	--disable-polkit
+.endif
+
+.if !empty(PKG_OPTIONS:Mupower)
+.include "../../wip/upower/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-upower
+.else
+CONFIGURE_ARGS+=	--without-upower
 .endif
