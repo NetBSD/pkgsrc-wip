@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.3 2015/01/08 17:30:41 thomasklausner Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2014-12-03 19:51:08.000000000 +0000
+--- configure.in.orig	2015-01-08 13:43:53.000000000 +0000
 +++ configure.in
-@@ -1766,7 +1766,13 @@ Linux)
+@@ -1758,7 +1758,13 @@ Linux)
          MOZ_ENABLE_PROFILER_SPS=
      esac
      ;;
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1870,7 +1876,7 @@ case "$host" in
+@@ -1862,7 +1868,7 @@ case "$host" in
      ;;
  
  *-darwin*)
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
      HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
      ;;
-@@ -2002,7 +2008,6 @@ case "$target" in
+@@ -1994,7 +2000,6 @@ case "$target" in
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
      else
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -3636,6 +3641,14 @@ if test -n "$YASM"; then
+@@ -3634,6 +3639,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -62,7 +62,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3663,11 +3676,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3661,11 +3674,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -75,7 +75,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4381,6 +4390,10 @@ cairo-gonk)
+@@ -4378,6 +4387,10 @@ cairo-gonk)
  
  esac
  
@@ -86,7 +86,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -5121,6 +5134,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5123,6 +5136,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -96,7 +96,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5207,6 +5223,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
+@@ -5209,6 +5225,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
      [ac_cv_c_attribute_aligned],
      [ac_cv_c_attribute_aligned=0
       CFLAGS_save="${CFLAGS}"
@@ -154,7 +154,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
       CFLAGS="${CFLAGS} -Werror"
       for ac_cv_c_attr_align_try in 64 32 16 8; do
         echo "trying $ac_cv_c_attr_align_try"
-@@ -5224,6 +5291,89 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5226,6 +5293,89 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -244,7 +244,7 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -6020,7 +6170,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
+@@ -6022,7 +6172,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
  if test "$MOZ_GAMEPAD"; then
      case "$OS_TARGET" in
      Darwin)
@@ -254,8 +254,8 @@ $NetBSD: patch-aa,v 1.2 2014/12/08 11:52:34 thomasklausner Exp $
 +        fi
          ;;
      WINNT)
-         case "$MOZ_WINSDK_MAXVER" in
-@@ -8069,6 +8221,48 @@ if test "$USE_FC_FREETYPE"; then
+         MOZ_GAMEPAD_BACKEND=windows
+@@ -8048,6 +8200,48 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
