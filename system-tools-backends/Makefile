@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/03 06:47:00 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/08 04:51:35 obache Exp $
 #
 
 DISTNAME=		system-tools-backends-2.10.2
@@ -40,10 +40,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 INSTALL_MAKE_FLAGS+=	systemddir=${EGDIR}
 
-DEPENDS+=	p5-XML-Twig>=3.32:../../textproc/p5-XML-Twig
 DEPENDS+=	p5-Net-DBus>=0.33.6:../../net/p5-Net-DBus
-DEPENDS+=	p5-libwww>=5.820:../../www/p5-libwww
-DEPENDS+=	p5-URI>=1.37:../../www/p5-URI
 
 REPLACE_PERL+=	SystemToolsBackends.pl.in
 REPLACE_PERL+=	Utils/*.pm
