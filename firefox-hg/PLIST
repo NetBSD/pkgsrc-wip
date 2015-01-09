@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2015/01/07 22:47:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.36 2015/01/09 09:06:03 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -2529,6 +2529,7 @@ lib/firefox/hyphenation/hyph_tr.dic
 lib/firefox/hyphenation/hyph_uk.dic
 lib/firefox/libmozalloc.so
 lib/firefox/libxul.so
+lib/firefox/modules/AboutReader.jsm
 lib/firefox/modules/ActivitiesService.jsm
 lib/firefox/modules/ActivitiesServiceFilter.jsm
 lib/firefox/modules/AddonManager.jsm
