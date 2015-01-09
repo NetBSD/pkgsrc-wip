@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:26:53 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/09 10:13:30 obache Exp $
 
 DISTNAME=	mate-applets-1.8.1
 CATEGORIES=	x11
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-applets
 
