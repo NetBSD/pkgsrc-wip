@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:32:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/09 09:06:35 obache Exp $
 
 DISTNAME=	mate-control-center-1.8.3
 CATEGORIES=	sysutils
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/${PKGBASE}
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}xdg/menus
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/menus
 CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/menus/matecc.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/matecc.menu
 
