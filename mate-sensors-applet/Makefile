@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/09 10:50:16 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/09 10:52:52 obache Exp $
 
 DISTNAME=	mate-sensors-applet-1.8.0
 CATEGORIES=	sysutils
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE Sensors applets
 LICENSE=	gnu-gpl-v2 AND cc-by-sa-v3.0
 
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		yes

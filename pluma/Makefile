@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/09 10:50:17 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/09 10:52:53 obache Exp $
 
 DISTNAME=	pluma-1.8.1
 CATEGORIES=	editors
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Small and lightweight UTF-8 text editor for the MATE
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		yes
