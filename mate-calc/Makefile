@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:29:23 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/09 10:42:29 obache Exp $
 
 DISTNAME=	mate-calc-1.8.0
 CATEGORIES=	math
@@ -9,6 +9,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Calculator application for MATE desktop
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

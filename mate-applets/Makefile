@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/09 10:13:30 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/09 10:36:50 obache Exp $
 
 DISTNAME=	mate-applets-1.8.1
 CATEGORIES=	x11
@@ -9,6 +9,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE panel applets
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
