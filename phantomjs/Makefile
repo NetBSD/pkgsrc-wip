@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/10/13 15:26:12 jonperkin Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/09 14:03:41 fhajny Exp $
 #
 
-DISTNAME=	phantomjs-1.9.7-source
+DISTNAME=	phantomjs-1.9.8-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	www
 MASTER_SITES=	http://bitbucket.org/ariya/phantomjs/downloads/
@@ -23,19 +23,17 @@ CHECK_PORTABILITY_SKIP+=src/breakpad/src/third_party/protobuf/protobuf/post_proc
 
 NOT_FOR_PLATFORM+=	SunOS-*-x86_64
 
-CONFIGURE_ARGS+=	--qt-config -no-rpath
-CONFIGURE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH}
+CONFIGURE_ARGS+=	--qt-config -no-rpath --jobs ${MAKE_JOBS}
+CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
-CFLAGS.SunOS+=	-D_XPG6
+CFLAGS.SunOS+=		-D_XPG6
 
 MAKE_ENV+=		QTDIR=${WRKSRC}/src/qt
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/doc/phantomjs share/examples/phantomjs
 
 post-extract:
-	${MKDIR} -p ${WRKSRC}/src/qt/mkspecs/solaris-g++ ${WRKSRC}/src/qt/mkspecs/solaris-g++-64
-	${INSTALL_DATA} ${FILESDIR}/qmake.conf ${WRKSRC}/src/qt/mkspecs/solaris-cc
+	${MKDIR} -p ${WRKSRC}/src/qt/mkspecs/solaris-g++
 	${INSTALL_DATA} ${FILESDIR}/qplatformdefs.h ${WRKSRC}/src/qt/mkspecs/solaris-g++
-	${INSTALL_DATA} ${FILESDIR}/qplatformdefs.h ${WRKSRC}/src/qt/mkspecs/solaris-g++-64
 
 pre-configure:
 	sed	-e 's:@LOCALBASE@:${LOCALBASE}:g' \
@@ -66,19 +64,24 @@ pre-configure:
 do-configure:
 	cd ${WRKSRC}/src/qt && ${SETENV} ${CONFIGURE_ENV} ./preconfig.sh ${CONFIGURE_ARGS}
 
-do-build: ${WRKDIR}/.build_phantom_done
+do-build: ${WRKDIR}/.build_qt_done
+	cd ${WRKSRC} && ./src/qt/bin/qmake
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
 
 ${WRKDIR}/.build_qt_done:
 	cd ${WRKSRC}/src/qt && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
 	cd ${WRKSRC}/src/qt/src/plugins/codecs && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
-	cd ${WRKSRC} && ./src/qt/bin/qmake
 	${TOUCH} ${WRKDIR}/.build_qt_done
 
-${WRKDIR}/.build_phantom_done: ${WRKDIR}/.build_qt_done
-	cd ${WRKSRC} && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
-
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} bin/phantomjs ${DESTDIR}${PREFIX}/bin/
+	cd ${WRKSRC} && (\
+		${INSTALL_PROGRAM} bin/phantomjs \
+			${DESTDIR}${PREFIX}/bin/; \
+		${INSTALL_DATA} examples/* \
+			${DESTDIR}${PREFIX}/share/examples/phantomjs; \
+		${INSTALL_DATA} ChangeLog LICENSE.BSD README.md third-party.txt \
+			${DESTDIR}${PREFIX}/share/doc/phantomjs \
+		)
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
