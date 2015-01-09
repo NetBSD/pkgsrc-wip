@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2015/01/09 11:15:11 thomasklausner Exp $
+
+Do not try to build man page on NetBSD.
+
+--- configure.orig	2015-01-09 11:02:14.000000000 +0000
++++ configure
+@@ -96,6 +96,7 @@ if $BSD ; then
+ 	done
+ 
+ 	echo 'NO_MAN	=	not_yet'
++	echo 'MAN	=	'
+ 	echo 'LDADD	+=	-lm'
+ 	echo 'WARNS	?=	6'
+ 	echo '.include <bsd.prog.mk>'

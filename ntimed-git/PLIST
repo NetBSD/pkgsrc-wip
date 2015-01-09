@@ -1,1 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/06 16:59:59 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/09 11:15:11 thomasklausner Exp $
+sbin/ntimed-client
+share/doc/ntimed/README.rst
+share/doc/ntimed/plotgen.py
