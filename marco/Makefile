@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/01/09 08:47:41 obache Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/09 08:59:36 obache Exp $
 
 DISTNAME=	marco-1.8.2
 CATEGORIES=	wm
@@ -28,11 +28,12 @@ PKGCONFIG_OVERRIDE+=	src/libmarco-private.pc.in
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
