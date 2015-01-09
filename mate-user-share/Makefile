@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/04 03:06:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/09 10:50:17 obache Exp $
 
 DISTNAME=	mate-user-share-1.8.0
 CATEGORIES=	sysutils
@@ -11,6 +11,7 @@ COMMENT=	MATE user-leve file shareing
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-dnssd>=0.6:../../www/ap22-dnssd
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

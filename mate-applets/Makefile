@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/09 10:36:50 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/09 10:50:16 obache Exp $
 
 DISTNAME=	mate-applets-1.8.1
 CATEGORIES=	x11
@@ -11,6 +11,7 @@ COMMENT=	MATE panel applets
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

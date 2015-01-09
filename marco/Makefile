@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/01/09 08:59:36 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/09 10:50:16 obache Exp $
 
 DISTNAME=	marco-1.8.2
 CATEGORIES=	wm
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=		gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
 DEPENDS+=		mate-dialogs-[0-9]*:../../wip/mate-dialogs
 TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

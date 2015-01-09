@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/08 05:11:30 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/09 10:50:16 obache Exp $
 
 DISTNAME=	atril-1.8.1
 CATEGORIES=	print
@@ -11,6 +11,7 @@ COMMENT=	Simple multi-page document viewer for the MATE environment
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

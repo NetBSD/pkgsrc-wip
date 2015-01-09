@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/04 06:26:37 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/09 10:50:17 obache Exp $
 
 DISTNAME=	mate-utils-1.8.1
 CATEGORIES=	misc
@@ -9,6 +9,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Utiltiles for MATE Desktop
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
