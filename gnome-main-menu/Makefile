@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:18:51 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/09 08:21:53 obache Exp $
 
 DISTNAME=	gnome-main-menu-1.8.0
 CATEGORIES=	x11
@@ -17,10 +17,9 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 .include "../../devel/glib2/schemas.mk"
 
-# NetworkManager
 .include "../../wip/mate-panel/buildlink3.mk"
 .include "../../wip/mate-desktop/buildlink3.mk"
-#.include "../../wip/mate-control-center/buildlink3.mk"
+.include "../../wip/mate-control-center/buildlink3.mk"
 .include "../../wip/caja/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
