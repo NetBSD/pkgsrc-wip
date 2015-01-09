@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.158 2014/12/28 11:28:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.159 2015/01/09 08:46:11 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1603,6 +1603,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-generic.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-generic.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-opt.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-opt.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-speedbar.el.gz
