@@ -1,31 +1,25 @@
-$NetBSD: patch-js_src_ctypes_CTypes.h,v 1.2 2014/12/19 00:07:06 thomasklausner Exp $
+$NetBSD: patch-js_src_ctypes_CTypes.h,v 1.3 2015/01/09 10:01:41 thomasklausner Exp $
 
-Workaround build problem on NetBSD.
+Fix build on NetBSD
 https://bugzilla.mozilla.org/show_bug.cgi?id=1113379
 
---- js/src/ctypes/CTypes.h.orig	2014-02-12 21:29:02.000000000 +0000
+--- js/src/ctypes/CTypes.h.orig	2015-01-09 02:12:41.000000000 +0000
 +++ js/src/ctypes/CTypes.h
-@@ -14,6 +14,23 @@
+@@ -9,6 +9,7 @@
+ #include "ffi.h"
+ #include "jsalloc.h"
+ #include "prlink.h"
++#include "typedefs.h"
+ 
+ #include "js/HashTable.h"
  #include "js/Vector.h"
- #include "vm/String.h"
- 
-+#if defined(__NetBSD__)
-+#include <stdint.h>
-+/* XXX why do we have those funky __ #defines in stdint.h? */
-+#warning this is a retarded workaround
-+#define uint8_t uint8_t
-+#define uint16_t uint16_t
-+#define uint32_t uint32_t
-+#define uint64_t uint64_t
-+#define int8_t int8_t
-+#define int16_t int16_t
-+#define int32_t int32_t
-+#define int64_t int64_t
-+#define intptr_t intptr_t
-+#define uintptr_t uintptr_t
-+#define off_t off_t
-+#endif
-+
- namespace js {
- namespace ctypes {
- 
+@@ -224,7 +225,8 @@ enum ABICode {
+ enum TypeCode {
+   TYPE_void_t,
+ #define DEFINE_TYPE(name, type, ffiType) TYPE_##name,
+-#include "ctypes/typedefs.h"
++  CTYPES_FOR_EACH_TYPE(DEFINE_TYPE)
++#undef DEFINE_TYPE
+   TYPE_pointer,
+   TYPE_function,
+   TYPE_array,
