@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/01/08 06:09:33 obache Exp $
+# $NetBSD: options.mk,v 1.3 2015/01/09 08:08:35 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eog
 PKG_SUPPORTED_OPTIONS=	dbus exif jpeg lcms python rsvg xmp
@@ -57,4 +57,3 @@ CONFIGURE_ARGS+=	--with-xmp
 .else
 CONFIGURE_ARGS+=	--without-xmp
 .endif
-
