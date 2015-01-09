@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/09 08:41:03 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/09 08:42:03 obache Exp $
 
 DISTNAME=	marco-1.8.2
 CATEGORIES=	wm
@@ -11,7 +11,7 @@ COMMENT=	MATE Marco is a fork of GNOME Metacity
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=		gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
-DEPENDS+=		mate-dialogs-[0-9]*:../../mate/mate-dialogs
+DEPENDS+=		mate-dialogs-[0-9]*:../../wip/mate-dialogs
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
