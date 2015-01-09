@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/12/06 13:06:04 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/09 09:48:44 ahp-nils Exp $
 #
 
 DISTNAME=	fail2ban-0.9.1
@@ -55,6 +55,7 @@ SUBST_MESSAGE.paths=	Substituting paths variables.
 SUBST_VARS.paths+=	VARBASE
 SUBST_FILES.paths=	${WRKSRC}/bin/fail2ban-client
 SUBST_FILES.paths+=	${WRKSRC}/fail2ban/client/configreader.py
+SUBST_FILES.paths+=	${WRKSRC}/fail2ban/tests/utils.py
 SUBST_FILES.paths+=	${WRKSRC}/man/fail2ban-client.1
 SUBST_FILES.paths+=	${WRKSRC}/man/fail2ban-client.h2m
 SUBST_FILES.paths+=	${WRKSRC}/setup.py
