@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/08/11 23:10:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/10 20:16:08 thomasklausner Exp $
 
 DISTNAME=	gpac-0.4.6
-PKGNAME=	${DISTNAME}pre${_SVN_PKGVERSION:S/.//g}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpac/}
 
