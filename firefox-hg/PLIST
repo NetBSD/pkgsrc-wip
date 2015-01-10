@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/01/09 09:06:03 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.37 2015/01/10 19:34:33 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -512,6 +512,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/aboutCertError_sectionCo
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutCertError_sectionCollapsed.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutCertError_sectionExpanded.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutNetError.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/aboutNetError_alert.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutNetError_info.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutProviderDirectory.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/aboutSessionRestore-window-icon.png
