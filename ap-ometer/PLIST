@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/08 01:54:35 xtraeme Exp $
-lib/httpd/mod_ometer.so

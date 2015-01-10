@@ -1,2 +1,0 @@
-Apache module implementing server-side decompression of bzip2 compressed
-documents. Makes use of libbzip2 functionality.
