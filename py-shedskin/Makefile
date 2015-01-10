@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/02/11 20:31:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/10 20:22:03 thomasklausner Exp $
 
 DISTNAME=	shedskin-0.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1	
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://shedskin.googlecode.com/files/
 EXTRACT_SUFX=	.tgz

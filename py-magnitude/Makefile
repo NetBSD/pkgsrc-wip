@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/11/16 23:12:07 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.4 2015/01/10 20:21:14 thomasklausner Exp $
 
 DISTNAME=	magnitude-0.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1	
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://magnitude.googlecode.com/files/
 

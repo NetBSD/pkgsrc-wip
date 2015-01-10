@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/11/16 23:27:26 noud4 Exp $
-#
+# $NetBSD: Makefile,v 1.7 2015/01/10 20:22:03 thomasklausner Exp $
 
 DISTNAME=	pyslha-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1	
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyslha/
 
