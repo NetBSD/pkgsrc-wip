@@ -1,8 +1,6 @@
 # $ NetBSD $
-#
 
 DISTNAME=	msgpack-0.5.9
-PKGNAME=	msgpack-git
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/msgpack/msgpack-c/releases/download/cpp-${PKGVERSION_NOREV}/
 

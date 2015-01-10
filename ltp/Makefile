@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/12/17 22:04:53 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/10 20:19:03 thomasklausner Exp $
 
-DISTNAME=		ltp-git
+DISTNAME=		ltp-0.0
 CATEGORIES=		devel
 GIT_REPOSITORIES=	ltp
 GIT_REPO.ltp=		git@github.com:linux-test-project/ltp.git
