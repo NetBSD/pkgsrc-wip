@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/01/10 09:41:23 thomasklausner Exp $
+
+SHA1 (libbpg-0.9.4.tar.gz) = 6c1c950c0ff9a051e4f48bf2ff63f73bc859830d
+RMD160 (libbpg-0.9.4.tar.gz) = c9874f328431f4f5e4f43d55c85788b487181396
+Size (libbpg-0.9.4.tar.gz) = 942330 bytes
+SHA1 (patch-Makefile) = 2b2538efa60b993bdf8877ed14488ebc0ebdd943
+SHA1 (patch-bpgenc.c) = c0bfaf19ac3250590d3f4ff768a07ac54c38c926
