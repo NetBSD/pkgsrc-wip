@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/11/13 16:45:34 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/10 20:17:34 thomasklausner Exp $
 #
 
 DISTNAME=	HawkNL17b1src
-PKGNAME=	${DISTNAME:tl:S/17b1src/-1.7beta1/1}
+PKGNAME=	hawknl-1.7beta1
 CATEGORIES=	net
 MASTER_SITES=	http://hawksoft.com/download/files/
 EXTRACT_SUFX=	.zip

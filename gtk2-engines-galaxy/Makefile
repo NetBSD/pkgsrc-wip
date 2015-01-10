@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2013/01/21 02:06:05 othyro Exp $
+# $NetBSD: Makefile,v 1.19 2015/01/10 20:17:05 thomasklausner Exp $
 
 DISTNAME=	GTK2-Galaxy
-PKGNAME=	${DISTNAME:tl:S/-/-engines-/1}-0.2
+PKGNAME=	gtk2-engines-galaxy-0.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=teams/art.gnome.org/archive/themes/gtk2/}
 
