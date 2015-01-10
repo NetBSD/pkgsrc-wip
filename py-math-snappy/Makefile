@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/10/04 23:34:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/10 20:41:36 thomasklausner Exp $
 
 VERSION=	2.2
 DISTNAME=	SnapPy
-PKGNAME=	${PYPKGPREFIX}-math-${DISTNAME:tl}-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-math-snappy-${VERSION}
 EGG_NAME=	${DISTNAME:tl}-${VERSION}
 CATEGORIES=	math python
 MASTER_SITES=	http://snappy.computop.org/get/
