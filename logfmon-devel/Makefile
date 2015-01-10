@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:42 asau Exp $
-#
+# $NetBSD: Makefile,v 1.7 2015/01/10 20:18:36 thomasklausner Exp $
 
 DISTNAME=	logfmon
 CATEGORIES=	sysutils
-
 MASTER_SITES=	#
 DISTFILES=	#
 
@@ -38,5 +36,5 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	INSTALLBIN=${INSTALL_PROGRAM:Q}
 INSTALL_MAKE_FLAGS+=	INSTALLMAN=${INSTALL_MAN:Q}
 
-.include "../../mk/bsd.pkg.mk"
 .include "../../wip/mk/cvs-package.mk"
+.include "../../mk/bsd.pkg.mk"
