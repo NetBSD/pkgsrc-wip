@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6036 2015/01/08 11:53:16 szptvlfn Exp $
+# $Id: Makefile,v 1.6037 2015/01/10 09:42:32 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1411,6 +1411,7 @@ SUBDIR+=	libargp
 SUBDIR+=	libavc1394
 SUBDIR+=	libbacon
 SUBDIR+=	libbfio
+SUBDIR+=	libbpg
 SUBDIR+=	libbrahe
 SUBDIR+=	libbs2b
 SUBDIR+=	libbsd
@@ -3254,6 +3255,7 @@ SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	resin
 SUBDIR+=	retroarch
+SUBDIR+=	revbump
 SUBDIR+=	revelation
 SUBDIR+=	rhapsody
 SUBDIR+=	riak
