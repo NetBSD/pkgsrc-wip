@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/02/19 22:42:28 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/10 20:48:35 thomasklausner Exp $
 
-DISTNAME=	suse_libgcrypt-${SUSE_VERSION}
+PKGNAME=	suse_libgcrypt-${SUSE_VERSION}
 CATEGORIES=	emulators
 RPMPKGS+=	libgcrypt11-1.5.0-2.1.2.${SUSE_ARCH}
 

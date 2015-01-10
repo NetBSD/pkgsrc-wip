@@ -1,6 +1,6 @@
 # $NetBSD $
 
-DISTNAME=	suse_gmp4-${SUSE_VERSION}
+PKGNAME=	suse_gmp4-${SUSE_VERSION}
 CATEGORIES=	emulators
 DISTFILES=	gmp-4.1.4-6.${SUSE_ARCH}.rpm
 

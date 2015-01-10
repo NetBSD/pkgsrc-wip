@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/07/30 15:49:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/10 20:53:32 thomasklausner Exp $
 
-DISTNAME=		suse_SDL-${SUSE_VERSION}
+PKGNAME=		suse_SDL-${SUSE_VERSION}
 PKGREVISION=		1
 CATEGORIES=		emulators
 DISTFILES=		SDL-1.2.8-8.${SUSE_ARCH}.rpm			\

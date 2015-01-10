@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2007/07/31 21:14:42 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/10 20:53:32 thomasklausner Exp $
 
-DISTNAME=		suse_gdb-${SUSE_VERSION}
+PKGNAME=		suse_gdb-${SUSE_VERSION}
 PKGREVISION=		1
 CATEGORIES=		emulators
 DISTFILES=		gdb-6.3-20.${SUSE_ARCH}.rpm

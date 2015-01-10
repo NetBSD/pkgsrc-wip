@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/02/16 14:39:37 hfath Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/10 20:53:32 thomasklausner Exp $
 
-DISTNAME=		suse_devel-${SUSE_VERSION}
+PKGNAME=		suse_devel-${SUSE_VERSION}
 PKGREVISION=		1
 CATEGORIES=		emulators
 DISTFILES=		binutils-2.16.91.0.2-8.2.${SUSE_ARCH}.rpm \
