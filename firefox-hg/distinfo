@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2015/01/09 10:01:41 thomasklausner Exp $
+$NetBSD: distinfo,v 1.25 2015/01/10 17:44:42 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -75,7 +75,7 @@ SHA1 (patch-memory_jemalloc_src_configure) = 749c10436fb86d7c70946f00aa61e1736fd
 SHA1 (patch-memory_jemalloc_src_configure.ac) = 7385007023ddb255009322ed90b1ea0bd41a8e08
 SHA1 (patch-memory_mozalloc_mozalloc__abort.cpp) = 4939f0fde58cb62e61ee03b7f2f1301a8adca256
 SHA1 (patch-mfbt_Alignment.h) = 9ebc9892fd11eba7105974979b54f4f8759b7749
-SHA1 (patch-mfbt_Attributes.h) = f991afd9d5b22edd301811ebeb9705ae35063115
+SHA1 (patch-mfbt_Attributes.h) = 8edc1b34ffb9ac2095044d3f87d83452f559de41
 SHA1 (patch-mfbt_Poison.cpp) = e35d30cf7baced22520e5648d50b3fefd26cd81a
 SHA1 (patch-mobile_android_installer_Makefile.in) = b2ea844a0145f4c15ef1b350dde6b000bd231fa5
 SHA1 (patch-mobile_android_installer_package-manifest.in) = 9664858fe3b4593eb29dd0180d5a2df3cd245bb2
