@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/06 22:19:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/11 22:37:37 thomasklausner Exp $
 
 DISTNAME=	PyQt-gpl-${PYQT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-qt5-${PYQT_VERSION}
@@ -61,6 +61,7 @@ do-configure:
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS}
 
 .include "../../lang/python/extension.mk"
+.include "../../sysutils/dbus-python-common/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.16.4
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-dbus/buildlink3.mk"
