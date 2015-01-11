@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/11 23:37:24 jihbed Exp $
+
+SHA1 (sima-0.3.2.tar.gz) = b58ae425fc7c19fffd4c7a6fec8cbbb2218fdf95
+RMD160 (sima-0.3.2.tar.gz) = 3971ccf236030d1c61357524fa725fa5933c632a
+Size (sima-0.3.2.tar.gz) = 2548146 bytes

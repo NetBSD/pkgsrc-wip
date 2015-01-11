@@ -1,0 +1,14 @@
+SIMA (Sequential IMage Analysis) is an Open Source package for analysis of
+time-series imaging data arising from fluorescence microscopy.
+The functionality of this package includes:
+
+correction of motion artifacts
+segmentation of imaging fields into regions of interest (ROIs)
+extraction of dynamic signals from ROIs
+
+The included ROI Buddy software provides a graphical user interface (GUI)
+supporting the following functionality:
+
+manual creation of ROIs
+editing of ROIs resulting from automated segmentation
+registration of ROIs across separate imaging sessions
