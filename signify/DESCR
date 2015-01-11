@@ -1,0 +1,2 @@
+Signify is a tool to sign and verify files using the Ed25519 crypto algorithm,
+using very small keys which make them easy to work with.
