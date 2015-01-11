@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/07 22:58:53 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/01/11 22:56:40 thomasklausner Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1036,6 +1036,7 @@ lib/calibre/calibre/gui2/tweak_book/editor/smarts/css.py
 lib/calibre/calibre/gui2/tweak_book/editor/smarts/html.py
 lib/calibre/calibre/gui2/tweak_book/editor/smarts/python.py
 lib/calibre/calibre/gui2/tweak_book/editor/smarts/utils.py
+lib/calibre/calibre/gui2/tweak_book/editor/snippets.py
 lib/calibre/calibre/gui2/tweak_book/editor/syntax/__init__.py
 lib/calibre/calibre/gui2/tweak_book/editor/syntax/base.py
 lib/calibre/calibre/gui2/tweak_book/editor/syntax/css.py
@@ -1060,7 +1061,6 @@ lib/calibre/calibre/gui2/tweak_book/preferences.py
 lib/calibre/calibre/gui2/tweak_book/preview.py
 lib/calibre/calibre/gui2/tweak_book/save.py
 lib/calibre/calibre/gui2/tweak_book/search.py
-lib/calibre/calibre/gui2/tweak_book/snippets.py
 lib/calibre/calibre/gui2/tweak_book/spell.py
 lib/calibre/calibre/gui2/tweak_book/templates.py
 lib/calibre/calibre/gui2/tweak_book/toc.py
@@ -1340,7 +1340,6 @@ lib/calibre/routes/mapper.py
 lib/calibre/routes/middleware.py
 lib/calibre/routes/route.py
 lib/calibre/routes/util.py
-lib/calibre/six.py
 lib/calibre/templite/__init__.py
 lib/calibre/tinycss/__init__.py
 lib/calibre/tinycss/color3.py
@@ -1723,6 +1722,7 @@ share/calibre/recipes/aftenposten.recipe
 share/calibre/recipes/agrogerila.recipe
 share/calibre/recipes/aif_ru.recipe
 share/calibre/recipes/air_force_times.recipe
+share/calibre/recipes/ajans_firat.recipe
 share/calibre/recipes/ajc.recipe
 share/calibre/recipes/ajiajin.recipe
 share/calibre/recipes/aksiyon_derigisi.recipe
@@ -2079,6 +2079,7 @@ share/calibre/recipes/economist_free.recipe
 share/calibre/recipes/ecotrend.recipe
 share/calibre/recipes/ecuisine.recipe
 share/calibre/recipes/edebistan.recipe
+share/calibre/recipes/edebiyat_haber.recipe
 share/calibre/recipes/edge_conversations.recipe
 share/calibre/recipes/editor_and_publisher.recipe
 share/calibre/recipes/editoriali.recipe
