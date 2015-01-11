@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/01/06 12:50:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/11 21:12:55 thomasklausner Exp $
 
-DISTNAME=	xpra-0.14.15
+DISTNAME=	xpra-0.14.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	http://xpra.org/src/
