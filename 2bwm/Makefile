@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/06/05 13:15:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/11 23:31:13 yrmt Exp $
 
-PKGNAME=	2bwm-0.1
+VERSION=	2014-8
+PKGNAME=	2bwm-${VERSION}
 CATEGORIES=	wm
-GHCOMMIT=	52a097ca644eb571b22a135951c945fcca57a25c
+GHCOMMIT=	10195c7f9452e37605fd63061b1421c6dcbc425e
 DISTNAME=	${GHCOMMIT}
 MASTER_SITES=	https://github.com/venam/2bwm/archive/
 
