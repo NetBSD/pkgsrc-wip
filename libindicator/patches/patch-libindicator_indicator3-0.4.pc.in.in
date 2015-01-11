@@ -1,4 +1,4 @@
-$NetBSD: patch-libindicator_indicator3-0.4.pc.in.in,v 1.1 2015/01/01 07:52:40 obache Exp $
+$NetBSD: patch-libindicator_indicator3-0.4.pc.in.in,v 1.1 2015/01/11 08:12:32 obache Exp $
 
 * fixes missing -L
 
