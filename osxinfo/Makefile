@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/06/29 10:55:13 yrmt Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/11 22:17:01 yrmt Exp $
 
 PKGNAME=	osxinfo-0.1
 CATEGORIES=	misc
-GHCOMMIT=	de74b8960f27844f7b264697d124411f81a1eab6
+GHCOMMIT=	56b6a5eed42948340037bad222694b0df5eee117
 DISTNAME=	${GHCOMMIT}
 MASTER_SITES=	https://github.com/yrmt/osxinfo/archive/
 
@@ -16,5 +16,4 @@ ONLY_FOR_PLATFORM= Darwin-*-*
 DIST_SUBDIR=	osxinfo
 WRKSRC=		${WRKDIR}/osxinfo-${GHCOMMIT}
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
