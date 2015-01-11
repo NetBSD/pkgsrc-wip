@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:38:51 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/11 08:13:54 obache Exp $
 
 DISTNAME=	mate-indicator-applet-1.8.0
 CATEGORIES=	x11
@@ -16,7 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 .include "../../wip/mate-panel/buildlink3.mk"
-.include "../../wip/libindicator-gtk2/buildlink3.mk"
+.include "../../wip/libindicator/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
