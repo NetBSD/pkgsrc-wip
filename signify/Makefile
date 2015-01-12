@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/01/11 23:24:19 yrmt Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/12 23:00:52 yrmt Exp $
 
 PKGNAME=	signify-0.1
 CATEGORIES=	security
-GHCOMMIT=	d5cd8fea8131606e53337c1ade62052d104cc41f
+GHCOMMIT=	ce5f56307017d36267fab4bf86a073a852b05989
 DISTNAME=	${GHCOMMIT}
 MASTER_SITES=	https://github.com/yrmt/signify/archive/
 
@@ -13,5 +13,7 @@ LICENSE=	isc
 
 DIST_SUBDIR=	signify
 WRKSRC=		${WRKDIR}/signify-${GHCOMMIT}
+
+GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"
