@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/01/12 02:31:43 obache Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/12 02:49:32 obache Exp $
 #
 
 DISTNAME=	libdbusmenu-12.10.2
@@ -22,18 +22,15 @@ PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk3-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	tests/dbusmenu-jsonloader-0.4.pc.in
 
+CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ENV+=		HAVE_VALGRIND_TRUE=
+CONFIGURE_ENV+=		HAVE_VALGRIND_FALSE='\#'
+
 REPLACE_PYTHON+=	tools/dbusmenu-bench
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
-.endif
 
 .include "../../lang/python/application.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../textproc/json-glib/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.libX11+=	libX11>=1.3
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

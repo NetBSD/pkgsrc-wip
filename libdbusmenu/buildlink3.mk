@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/01/12 02:28:49 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2015/01/12 02:49:32 obache Exp $
 
 BUILDLINK_TREE+=	libdbusmenu
 
@@ -8,7 +8,6 @@ LIBDBUSMENU_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libdbusmenu+=	libdbusmenu>=12.10.2
 BUILDLINK_PKGSRCDIR.libdbusmenu?=	../../wip/libdbusmenu
 
-.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
