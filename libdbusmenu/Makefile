@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/01/12 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/12 05:13:24 obache Exp $
 #
 
 DISTNAME=	libdbusmenu-12.10.2
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake msgfmt msgmerge intltool perl pkg-config xgettext
+USE_TOOLS+=	gmake msgfmt msgmerge intltool pkg-config xgettext
 
 PKGCONFIG_OVERRIDE+=	libdbusmenu-glib/dbusmenu-glib-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk3-0.4.pc.in
