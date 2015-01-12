@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/01/12 05:13:24 obache Exp $
+# $NetBSD: Makefile,v 1.11 2015/01/12 05:37:52 obache Exp $
 #
 
 DISTNAME=	libdbusmenu-12.10.2
@@ -12,6 +12,7 @@ COMMENT=	Small library created by pulling some code from indicator-applet
 LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
