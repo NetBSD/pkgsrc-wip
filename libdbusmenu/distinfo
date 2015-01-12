@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2012/10/04 15:47:40 othyro Exp $
+$NetBSD: distinfo,v 1.2 2015/01/12 02:23:56 obache Exp $
 
 SHA1 (libdbusmenu-12.10.2.tar.gz) = 067b77564f90633aa58494e54b99d733a21f3142
 RMD160 (libdbusmenu-12.10.2.tar.gz) = bf424925750549d44d6fc2563caf37e73f21db3d
 Size (libdbusmenu-12.10.2.tar.gz) = 735730 bytes
+SHA1 (patch-tools_dbusmenu-dumper.c) = 976f05d6d578877341f816c51c69b04d2fc5ea5d
+SHA1 (patch-tools_testapp_main.c) = 0b13481fd8de4faa6846546de065469ab76e9007
