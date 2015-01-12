@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/01/12 02:20:40 obache Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/12 02:28:49 obache Exp $
 #
 
 DISTNAME=	libdbusmenu-12.10.2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/dbusmenu/
 COMMENT=	Small library created by pulling some code from indicator-applet
 LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
+
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -33,7 +35,6 @@ BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
 .endif
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
