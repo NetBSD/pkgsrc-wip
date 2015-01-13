@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/02 02:49:14 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/13 07:52:17 obache Exp $
 
 DISTNAME=	mate-panel-1.8.1
 CATEGORIES=	x11
@@ -18,6 +18,9 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	libmate-panel-applet/libmatepanelapplet-4.0.pc.in
 
 CONFIGURE_ARGS+=	--with-in-process-applets=all
+
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/python/tool.mk"
 
 .include "options.mk"
 
