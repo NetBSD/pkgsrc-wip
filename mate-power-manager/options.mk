@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2015/01/01 08:49:46 obache Exp $
+# $NetBSD: options.mk,v 1.2 2015/01/13 07:54:33 obache Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-power-manager
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-power-manager
 PKG_SUPPORTED_OPTIONS=	keyring
 PKG_SUGGESTED_OPTIONS=	keyring
 
