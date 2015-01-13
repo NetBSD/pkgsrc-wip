@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/07 09:02:36 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/13 08:57:24 obache Exp $
 
 DISTNAME=	mate-screensaver-1.8.1
 CATEGORIES=	x11
@@ -63,6 +63,8 @@ CONF_FILES+=	${PREFIX}/share/examples/pam.d/mate-screensaver \
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/libXxf86misc/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
