@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/01 08:32:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/13 01:36:09 obache Exp $
 bin/mate-about-me
 bin/mate-appearance-properties
 bin/mate-at-properties
@@ -11,6 +11,7 @@ bin/mate-keyboard-properties
 bin/mate-mouse-properties
 bin/mate-network-properties
 bin/mate-thumbnail-font
+bin/mate-typing-monitor
 bin/mate-window-properties
 include/libslab/app-resizer.h
 include/libslab/app-shell.h
@@ -396,8 +397,10 @@ share/icons/hicolor/24x24/apps/mate-preferences-desktop-display.png
 share/icons/hicolor/32x32/apps/mate-network-properties.png
 share/icons/hicolor/32x32/apps/mate-preferences-desktop-display.png
 share/icons/hicolor/48x48/apps/mate-network-properties.png
+share/icons/hicolor/48x48/apps/mate-typing-monitor.png
 share/icons/hicolor/scalable/apps/mate-network-properties.svg
 share/icons/hicolor/scalable/apps/mate-preferences-desktop-display.svg
+share/icons/hicolor/scalable/apps/mate-typing-monitor.svg
 share/locale/af/LC_MESSAGES/mate-control-center.mo
 share/locale/am/LC_MESSAGES/mate-control-center.mo
 share/locale/ar/LC_MESSAGES/mate-control-center.mo
@@ -500,6 +503,10 @@ share/mate-control-center/keybindings/00-multimedia-key.xml
 share/mate-control-center/keybindings/01-desktop-key.xml
 share/mate-control-center/pixmaps/at-startup.png
 share/mate-control-center/pixmaps/at-support.png
+share/mate-control-center/pixmaps/bar-disabled.png
+share/mate-control-center/pixmaps/bar-green.png
+share/mate-control-center/pixmaps/bar-red.png
+share/mate-control-center/pixmaps/bar.png
 share/mate-control-center/pixmaps/double-click-maybe.png
 share/mate-control-center/pixmaps/double-click-off.png
 share/mate-control-center/pixmaps/double-click-on.png
@@ -519,6 +526,7 @@ share/mate-control-center/pixmaps/mouse-cursor-normal-large.png
 share/mate-control-center/pixmaps/mouse-cursor-normal.png
 share/mate-control-center/pixmaps/mouse-cursor-white-large.png
 share/mate-control-center/pixmaps/mouse-cursor-white.png
+share/mate-control-center/pixmaps/ocean-stripes.png
 share/mate-control-center/pixmaps/print_error.png
 share/mate-control-center/pixmaps/print_error.svg
 share/mate-control-center/pixmaps/print_ok.png

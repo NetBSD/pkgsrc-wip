@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/09 09:06:35 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/13 01:36:09 obache Exp $
 
 DISTNAME=	mate-control-center-1.8.3
 CATEGORIES=	sysutils
@@ -29,7 +29,7 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/menus/matecc.menu \
 
 .include "../../devel/glib2/schemas.mk"
 
-# XXX appindicator
+.include "../../wip/libappindicator/buildlink3.mk"
 .include "../../wip/libmatekbd/buildlink3.mk"
 .include "../../wip/mate-desktop/buildlink3.mk"
 .include "../../wip/mate-menus/buildlink3.mk"
@@ -47,6 +47,9 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/menus/matecc.menu \
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXxf86misc/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
