@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/08 05:15:18 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/13 02:51:24 obache Exp $
 
 DISTNAME=	caja-1.8.2
 CATEGORIES=	sysutils
@@ -31,6 +31,10 @@ PKGCONFIG_OVERRIDE+=	libcaja-extension/libcaja-extension.pc.in
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
