@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2012/11/03 18:55:45 ftigeot Exp $
+$NetBSD: patch-lib_Munin_Common_Defaults.pm,v 1.1 2015/01/13 15:36:05 fhajny Exp $
 
 Initialize default paths for all Munin components.
 
---- lib/Munin/Common/Defaults.pm.orig	2012-10-02 22:46:50.000000000 +0000
-+++ lib/Munin/Common/Defaults.pm
+--- common/lib/Munin/Common/Defaults.pm.orig	2014-11-24 21:46:24.000000000 +0000
++++ common/lib/Munin/Common/Defaults.pm
 @@ -18,25 +18,25 @@ my $COMPONENT_ROOT = dirname(__FILE__) .
  our $DROPDOWNLIMIT     = 1;
  

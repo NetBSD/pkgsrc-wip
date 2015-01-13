@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/11/03 16:39:31 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/01/13 15:36:06 fhajny Exp $
 bin/munindoc
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -204,8 +204,8 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Plugin/SNMP.pm
 man/man1/munin-node-configure.1
 man/man1/munin-node.1
 man/man1/munin-run.1
-man/man1/munindoc.1
 man/man1/munin-sched.1
+man/man1/munindoc.1
 man/man3/Munin::Node::Config.3
 man/man3/Munin::Node::Configure::Debug.3
 man/man3/Munin::Node::Configure::History.3

@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2011/03/03 13:53:56 ftigeot Exp $
+$NetBSD: patch-Build.PL,v 1.1 2015/01/13 15:36:02 fhajny Exp $
 
 Add missing module_name so that Munin::Common becomes a valid Perl Module.
 
---- Build.PL.orig	2009-04-15 06:58:10.000000000 +0000
-+++ Build.PL
+--- common/Build.PL.orig	2014-11-24 21:46:24.000000000 +0000
++++ common/Build.PL
 @@ -1,6 +1,7 @@
  use Module::Build;
  

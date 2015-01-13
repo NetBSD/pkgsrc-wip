@@ -1,35 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2012/11/03 18:55:44 ftigeot Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/13 15:35:54 fhajny Exp $
 #
 
-DISTNAME=	munin-${VERSION}
-PKGNAME=	munin-common-${VERSION}
-VERSION=	2.0.7
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://munin-monitoring.org/
+PKGNAME=	${DISTNAME:S/munin/munin-common/}
 COMMENT=	Common components between a munin node and master
-LICENSE=	gnu-gpl-v2
 
-DEPENDS=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
+.include "../../wip/munin-common/Makefile.common"
 
-.include "../../mk/bsd.prefs.mk"
+# Adjust WRKSRC for the Perl module framework, but keep the same
+# patch base directory
+WRKSRC=			${WRKDIR}/${DISTNAME}/common
+PATCH_ARGS=		-d ${WRKSRC}/.. --forward -E ${PATCH_STRIP}
 
-USE_TOOLS+=	gmake perl:run
-
-WRKSRC=				${WRKDIR}/${DISTNAME}/common
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Munin/Common/.packlist
-
-BUILD_DEFS+=	VARBASE
-
-MUNIN_DBDIR?=		${VARBASE}/munin
-MUNIN_LIBDIR=		${PREFIX}/lib/munin
-MUNIN_LOGDIR?=		${VARBASE}/log/munin
-MUNIN_SPOOLDIR?=	${VARBASE}/spool/munin
-MUNIN_STATEDIR?=	${VARBASE}/run/munin
-MUNIN_WWWDIR?=		${PREFIX}/www
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
