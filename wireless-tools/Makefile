@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/01/13 05:16:03 obache Exp $
+# $NetBSD: Makefile,v 1.9 2015/01/13 05:18:55 obache Exp $
 #
 
 DISTNAME=		wireless_tools.27
@@ -9,6 +9,7 @@ MASTER_SITES=		http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
 COMMENT=		Tools for manipulating Linux Wireless Extensions
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT= 	none
 
