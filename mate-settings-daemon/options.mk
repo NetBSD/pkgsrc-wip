@@ -1,14 +1,22 @@
-# $NetBSD: options.mk,v 1.2 2015/01/02 05:09:47 obache Exp $
+# $NetBSD: options.mk,v 1.3 2015/01/13 11:06:14 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-settings-daemon
-PKG_SUPPORTED_OPTIONS=	polkit
+PKG_SUPPORTED_OPTIONS=	nss polkit
 PKG_OPTIONS_OPTIONAL_GROUPS+=	audio
 PKG_OPTIONS_GROUP.audio=	pulseaudio gstreamer
-PKG_SUGGESTED_OPTIONS=	polkit gstreamer
+PKG_SUGGESTED_OPTIONS=	nss polkit gstreamer
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	polkit
+PLIST_VARS+=	nss polkit
+
+.if !empty(PKG_OPTIONS:Mnss)
+.include "../../devel/nss/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-smartcard-support
+PLIST.nss=	yes
+.else
+CONFIGURE_ARGS+=	--disable-smartcard-support
+.endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
