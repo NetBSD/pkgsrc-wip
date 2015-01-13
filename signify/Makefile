@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/01/12 23:00:52 yrmt Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/13 00:48:53 yrmt Exp $
 
 PKGNAME=	signify-0.1
 CATEGORIES=	security
 GHCOMMIT=	ce5f56307017d36267fab4bf86a073a852b05989
 DISTNAME=	${GHCOMMIT}
 MASTER_SITES=	https://github.com/yrmt/signify/archive/
+FETCH_USING=	curl
 
 MAINTAINER=	youri.mout@gmail.com
 HOMEPAGE=	http://github.com/yrmt/signify
