@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2015/01/05 11:45:32 fhajny Exp $
+$NetBSD: distinfo,v 1.23 2015/01/13 09:11:17 fhajny Exp $
 
 SHA1 (mongodb-src-r2.6.5.tar.gz) = f5a68505a0de1152b534d62a8f0147d258d503a0
 RMD160 (mongodb-src-r2.6.5.tar.gz) = dc556c3ee743e7ef412f46d15f2e2ec5a6a0b948
@@ -13,5 +13,3 @@ SHA1 (patch-src_mongo_platform_random.cpp) = cf44302102618d32a8c6427500482c26e7b
 SHA1 (patch-src_mongo_s_chunk__manager__targeter.cpp) = 05441130c715c947edd00fad542635e98efc254b
 SHA1 (patch-src_mongo_shell_dbshell.cpp) = c60ecb69a5c40e55eb602c5838dcf9d82008446e
 SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = 28632f33b0ab972f765fb3c5c515cfd0d6012d3e
-SHA1 (patch-src_third__party_s2_s2.cc) = 953e9d9870d7c7d7fb0c8d7f228192416bf7efbe
-SHA1 (patch-src_third__party_s2_s2polygonbuilder.cc) = a1e3c5120522a7ced38e51671478acfa0ca7a6de
