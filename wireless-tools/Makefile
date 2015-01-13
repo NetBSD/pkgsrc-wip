@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/01/13 05:18:55 obache Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/13 05:24:16 obache Exp $
 #
 
 DISTNAME=		wireless_tools.27
-PKGNAME=		wireless-tools-27
+PKGNAME=		${DISTNAME:S/./-/:S/_/-/}
 CATEGORIES=		net linux
 MASTER_SITES=		http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/
 
