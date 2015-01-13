@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/01/13 01:14:07 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/01/13 01:31:35 obache Exp $
 
 BUILDLINK_TREE+=	libappindicator
 
@@ -8,13 +8,10 @@ LIBAPPINDICATOR_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libappindicator+=	libappindicator>=12.10.0
 BUILDLINK_PKGSRCDIR.libappindicator?=	../../wip/libappindicator
 
-#.include "../../wip/libindicator/buildlink3.mk"
+.include "../../wip/libindicator/buildlink3.mk"
 .include "../../wip/libdbusmenu-gtk/buildlink3.mk"
-#.include "../../devel/glib2/buildlink3.mk"
-#.include "../../devel/py-gobject/buildlink3.mk"
-#.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-#.include "../../x11/py-gtk2/buildlink3.mk"
 .endif	# LIBAPPINDICATOR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libappindicator
