@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/01/13 02:41:49 pbhenson Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/13 20:52:20 pbhenson Exp $
 #
 
 DISTNAME=	tenshi-0.15
@@ -11,10 +11,7 @@ COMMENT=	Log monitoring program to watch and report on log files
 LICENSE=	isc
 
 USE_TOOLS+=		perl:run
-REPLACE_INTERPRETER+=	perl
-REPLACE.perl.old=	.*/bin/perl
-REPLACE.perl.new=	${PREFIX}/bin/perl
-REPLACE_FILES.perl=	tenshi
+REPLACE_PERL=		tenshi
 EGDIR=			share/examples/${PKGBASE}
 CONF_FILES=		${PREFIX}/${EGDIR}/tenshi.conf ${PKG_SYSCONFDIR}/tenshi/tenshi.conf
 BUILD_DEFS+=		VARBASE
