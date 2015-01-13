@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:32 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2015/01/13 05:16:03 obache Exp $
 #
 
 DISTNAME=		wireless_tools.27
 PKGNAME=		wireless-tools-27
 CATEGORIES=		net linux
-MASTER_SITES=		http://pcmcia-cs.sourceforge.net/ftp/contrib/
+MASTER_SITES=		http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pcmcia-cs.sourceforge.net/ftp/contrib/
+HOMEPAGE=		http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
 COMMENT=		Tools for manipulating Linux Wireless Extensions
 
 PKG_DESTDIR_SUPPORT= 	none
