@@ -1,35 +1,38 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 16:41:34 asau Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/13 02:41:49 pbhenson Exp $
 #
 
-DISTNAME=	tenshi-0.11
+DISTNAME=	tenshi-0.15
 CATEGORIES=	sysutils
-MASTER_SITES=	http://dev.inversepath.com/tenshi/
+MASTER_SITES=	http://dev.inversepath.com/download/tenshi/
 
-MAINTAINER=	jessepeterson@users.sourceforge.net
-HOMEPAGE=	http://dev.inversepath.com/trac/tenshi
-COMMENT=	Tenshi is a log monitoring program
+MAINTAINER=	henson@acm.org
+HOMEPAGE=	http://www.inversepath.com/tenshi.html
+COMMENT=	Log monitoring program to watch and report on log files
+LICENSE=	isc
+
+USE_TOOLS+=		perl:run
+REPLACE_INTERPRETER+=	perl
+REPLACE.perl.old=	.*/bin/perl
+REPLACE.perl.new=	${PREFIX}/bin/perl
+REPLACE_FILES.perl=	tenshi
+EGDIR=			share/examples/${PKGBASE}
+CONF_FILES=		${PREFIX}/${EGDIR}/tenshi.conf ${PKG_SYSCONFDIR}/tenshi/tenshi.conf
+BUILD_DEFS+=		VARBASE
+
+DEPENDS+=	p5-IO-BufferedSelect>=1.0:../../sysutils/p5-IO-BufferedSelect
+
+SUBST_CLASSES+= 	tenshi
+SUBST_STAGE.tenshi=	pre-build
+SUBST_FILES.tenshi=	tenshi tenshi.conf tenshi.8
+SUBST_SED.tenshi=	-e 's,/etc/tenshi/tenshi.conf,${PKG_SYSCONFDIR}/tenshi.conf,g'
+SUBST_SED.tenshi+=	-e 's,/var/run/tenshi.pid,${VARBASE}/lib/tenshi/tenshi.pid,g'
+
+PKG_GROUPS=		tenshi
+PKG_USERS=		tenshi:tenshi
+PKG_HOME.tenshi=	${VARBASE}/lib/tenshi
+OWN_DIRS_PERMS+=	${VARBASE}/lib/tenshi tenshi tenshi 0700
+OWN_DIRS+=		${PKG_SYSCONFDIR}/tenshi
 
 USE_LANGUAGES=	# none
-
-USE_TOOLS+=	perl:run
-NO_BUILD=	yes
-PKG_GROUPS=	tenshi
-PKG_USERS=	tenshi:tenshi
-EGDIR=		share/examples/${PKGBASE}
-CONF_FILES=	${PREFIX}/${EGDIR}/tenshi.conf ${PKG_SYSCONFDIR}/tenshi.conf
-BUILD_DEFS+=	VARBASE
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${EGDIR}
-
-SUBST_CLASSES+=	tenshi
-SUBST_STAGE.tenshi=	do-configure
-SUBST_FILES.tenshi=	tenshi
-SUBST_SED.tenshi=	-e 's,/usr/bin/perl,${PERL5},g'
-SUBST_SED.tenshi+=	-e 's,/etc/tenshi/tenshi.conf,${PKG_SYSCONFDIR}/tenshi.conf,g'
-SUBST_SED.tenshi+=	-e 's,/var/run/tenshi.pid,${VARBASE}/run/tenshi.pid,g'
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tenshi ${DESTDIR}${PREFIX}/bin/tenshi
-	${INSTALL_MAN} ${WRKSRC}/tenshi.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/tenshi.8
-	${INSTALL_DATA} ${WRKSRC}/tenshi.conf ${DESTDIR}${PREFIX}/${EGDIR}/tenshi.conf
 
 .include "../../mk/bsd.pkg.mk"
