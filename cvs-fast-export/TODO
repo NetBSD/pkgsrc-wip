@@ -1,0 +1,6 @@
+Does not compile on NetBSD-7.99.4/amd64 due to:
+revcvs.c:80:43: error: 'PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP' undeclared here (not in a function)
+ static pthread_mutex_t dir_bucket_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
+                                           ^
+
+-- wiz 20150114
