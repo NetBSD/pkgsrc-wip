@@ -1,0 +1,70 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/01/14 17:40:24 thomasklausner Exp $
+
+Use LIBTOOL.
+
+--- Makefile.in.orig	2014-06-07 06:15:01.000000000 +0000
++++ Makefile.in
+@@ -15,13 +15,13 @@ MKDIR_P = @MKDIR_P@
+ OPT_ASM_NETTLE_SOURCES = @OPT_ASM_NETTLE_SOURCES@
+ OPT_ASM_HOGWEED_SOURCES = @OPT_ASM_HOGWEED_SOURCES@
+ 
+-SUBDIRS = tools testsuite examples
++SUBDIRS = tools testsuite
+ 
+ include config.make
+ 
+ PRE_CPPFLAGS = -I.
+ # FIXME: Add configuration of LIBEXT?
+-LIBTARGETS = @IF_STATIC@ libnettle.a @IF_HOGWEED@ libhogweed.a
++LIBTARGETS = @IF_STATIC@ libnettle.la @IF_HOGWEED@ libhogweed.la
+ SHLIBTARGETS = @IF_SHARED@ $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
+ 
+ getopt_SOURCES = getopt.c getopt1.c
+@@ -215,20 +215,20 @@ nettle_PURE_OBJS = $(nettle_OBJS:.$(OBJE
+ hogweed_OBJS = $(hogweed_SOURCES:.c=.$(OBJEXT)) $(OPT_ASM_HOGWEED_SOURCES:.asm=.$(OBJEXT))
+ hogweed_PURE_OBJS = $(hogweed_OBJS:.$(OBJEXT)=.p$(OBJEXT))
+ 
+-libnettle.a: $(nettle_OBJS)
+-	-rm -f $@
+-	$(AR) $(ARFLAGS) $@ $(nettle_OBJS)
+-	$(RANLIB) $@
++libnettle.la: $(nettle_OBJS)
++	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libnettle.la \
++		${nettle_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info ${LIBNETTLE_MAJOR}:${LIBNETTLE_MINOR}
+ 	echo nettle > libnettle.stamp
+ 
+-libhogweed.a: $(hogweed_OBJS)
+-	-rm -f $@
+-	$(AR) $(ARFLAGS) $@ $(hogweed_OBJS)
+-	$(RANLIB) $@
++libhogweed.la: $(hogweed_OBJS)
++	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libhogweed.la \
++		${hogweed_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info ${LIBHOGWEED_MAJOR}:${LIBHOGWEED_MINOR}
+ 	echo hogweed > libhogweed.stamp
+ 
+ .c.$(OBJEXT):
+-	$(COMPILE) $(CCPIC_MAYBE) -c $< \
++	${LIBTOOL} --mode=compile --tag=CC $(COMPILE) $(CCPIC_MAYBE) -c $< \
+ 	&& $(DEP_PROCESS)
+ 
+ # Rules building shared libraries.
+@@ -363,7 +363,7 @@ ecc-521.p$(OBJEXT): ecc-521.h
+ 	&& test -s $@T && mv -f $@T $@
+ 
+ .s.$(OBJEXT):
+-	$(COMPILE) $(CCPIC_MAYBE) -c $<
++	${LIBTOOL} --mode=compile $(COMPILE) $(CCPIC_MAYBE) -c $<
+ 	@echo > $@.d
+ 
+ .s.p$(OBJEXT):
+@@ -434,7 +434,7 @@ install-here: install-doc install-header
+ install-static: $(LIBTARGETS)
+ 	$(MKDIR_P) $(DESTDIR)$(libdir)
+ 	for f in $(LIBTARGETS); do \
+-	  $(INSTALL_DATA) $$f $(DESTDIR)$(libdir) ; \
++	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir) ; \
+ 	done
+ 
+ install-dll-nettle:
