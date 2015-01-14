@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/02 06:20:56 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/14 12:15:39 obache Exp $
 share/icons/ContrastHigh-SVG/48x48/animations/gnome-spinner-rest.png
 share/icons/ContrastHigh-SVG/48x48/animations/gnome-spinner.png
 share/icons/ContrastHigh-SVG/48x48/animations/process-idle.png
@@ -3039,7 +3039,7 @@ share/themes/ContrastHigh/metacity-1/metacity-theme-3.xml
 share/themes/ContrastHighInverse/gtk-2.0/gtkrc
 share/themes/ContrastHighInverse/index.theme
 share/themes/ContrastHighLargePrint/gtk-2.0/gtkrc
-share/themes/ContrastHighLargePrint/index.theme.disabled
+share/themes/ContrastHighLargePrint/index.theme
 share/themes/ContrastHighLargePrint/pixmaps/double-click-maybe.png
 share/themes/ContrastHighLargePrint/pixmaps/double-click-off.png
 share/themes/ContrastHighLargePrint/pixmaps/double-click-on.png
@@ -3169,7 +3169,7 @@ share/themes/ContrastHighLargePrint/pixmaps/volume-min.png
 share/themes/ContrastHighLargePrint/pixmaps/volume-mute.png
 share/themes/ContrastHighLargePrint/pixmaps/volume-zero.png
 share/themes/ContrastHighLargePrintInverse/gtk-2.0/gtkrc
-share/themes/ContrastHighLargePrintInverse/index.theme.disabled
+share/themes/ContrastHighLargePrintInverse/index.theme
 share/themes/ContrastHighLargePrintInverse/pixmaps/double-click-maybe.png
 share/themes/ContrastHighLargePrintInverse/pixmaps/double-click-off.png
 share/themes/ContrastHighLargePrintInverse/pixmaps/double-click-on.png
@@ -3299,9 +3299,9 @@ share/themes/ContrastHighLargePrintInverse/pixmaps/volume-min.png
 share/themes/ContrastHighLargePrintInverse/pixmaps/volume-mute.png
 share/themes/ContrastHighLargePrintInverse/pixmaps/volume-zero.png
 share/themes/ContrastLow/gtk-2.0/gtkrc
-share/themes/ContrastLow/index.theme.disabled
+share/themes/ContrastLow/index.theme
 share/themes/ContrastLowLargePrint/gtk-2.0/gtkrc
-share/themes/ContrastLowLargePrint/index.theme.disabled
+share/themes/ContrastLowLargePrint/index.theme
 share/themes/ContrastLowLargePrint/pixmaps/double-click-maybe.png
 share/themes/ContrastLowLargePrint/pixmaps/double-click-off.png
 share/themes/ContrastLowLargePrint/pixmaps/double-click-on.png
@@ -3774,7 +3774,7 @@ share/themes/Menta/xfwm4/top-right-active-shaded.xpm
 share/themes/Menta/xfwm4/top-right-active.xpm
 share/themes/Menta/xfwm4/top-right-inactive.xpm
 share/themes/PrintLarge/gtk-2.0/gtkrc
-share/themes/PrintLarge/index.theme.disabled
+share/themes/PrintLarge/index.theme
 share/themes/Quid/index.theme
 share/themes/Quid/metacity-1/active-above-button.png
 share/themes/Quid/metacity-1/active-border-top-left-border.png

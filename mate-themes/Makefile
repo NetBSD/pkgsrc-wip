@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/14 12:02:28 obache Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/14 12:15:39 obache Exp $
 
 DISTNAME=	mate-themes-1.8.1
 CATEGORIES=	graphics
@@ -16,6 +16,8 @@ DEPENDS+=	gtk2-engines-murrine>=0.98.0:../../x11/gtk2-engines-murrine
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+
+CONFIGURE_ARGS+=	--enable-all-themes
 
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gdk-pixbuf2+=	build
