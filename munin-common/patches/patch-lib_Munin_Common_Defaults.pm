@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Munin_Common_Defaults.pm,v 1.1 2015/01/13 15:36:05 fhajny Exp $
+$NetBSD: patch-lib_Munin_Common_Defaults.pm,v 1.2 2015/01/14 11:18:14 fhajny Exp $
 
 Initialize default paths for all Munin components.
 
@@ -9,7 +9,7 @@ Initialize default paths for all Munin components.
  
  our $MUNIN_PREFIX     = '';
 -our $MUNIN_CONFDIR    = "$COMPONENT_ROOT/t/config/";
-+our $MUNIN_CONFDIR    = '@PKG_SYSCONFDIR@/munin/';
++our $MUNIN_CONFDIR    = '@PKG_SYSCONFDIR@/';
  our $MUNIN_BINDIR     = '';
  our $MUNIN_SBINDIR    = '';
  our $MUNIN_DOCDIR     = '';
