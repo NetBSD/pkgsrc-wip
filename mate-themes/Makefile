@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/08 04:28:09 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/14 12:02:28 obache Exp $
 
 DISTNAME=	mate-themes-1.8.1
 CATEGORIES=	graphics
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Icons and themes for MATE desktop
 LICENSE=	gnu-lgpl-v2.1
 
+DEPENDS+=	gtk2-engines-[0-9]*:../../x11/gtk2-engines
 DEPENDS+=	gtk2-engines-murrine>=0.98.0:../../x11/gtk2-engines-murrine
 
 GNU_CONFIGURE=		yes
