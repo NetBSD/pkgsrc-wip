@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6040 2015/01/11 23:26:23 yrmt Exp $
+# $Id: Makefile,v 1.6041 2015/01/14 05:20:23 jlmuir0 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2433,6 +2433,7 @@ SUBDIR+=	pt-ttf
 SUBDIR+=	ptpd
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
+SUBDIR+=	publicfile-run
 SUBDIR+=	pudb
 SUBDIR+=	pulseaudio
 SUBDIR+=	pure
