@@ -55,9 +55,9 @@ Where:
    -h	Show this help
    -p directory	
         pkgsrc directory to process (default $PKGSRCDIR)
-   -T	the filename containing list of files (default commonbump)
+   -T	the filename containing list of files (default: commonbump)
 See Also:
-    revbump(1) for how to use it.
+    revbump(1) for how to use it (and replace-commonbump(1)).
 HELP
 }
 

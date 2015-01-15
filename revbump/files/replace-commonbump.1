@@ -1,4 +1,4 @@
-.\"	$NetBSD: replace-commonbump.1,v 1.4 2015/01/08 15:32:10 makoto Exp $
+.\"	$NetBSD: replace-commonbump.1,v 1.5 2015/01/15 01:54:37 makoto Exp $
 .\"
 .\" Copyright (c) 2014 The NetBSD Foundation, Inc.
 .\"
@@ -42,6 +42,7 @@
 .Op Fl ah
 .Op Fl p Ar pkgsrcdir
 .Op Fl T Ar list_file
+.Op Fl c Ar directory/package/Makefile.common
 .Sh DESCRIPTION
 .Nm
 is a perl script for pkgsrc developers.
@@ -85,6 +86,15 @@ is given,
 is used instead of the default
 .Pa commonbump .
 .Pp
+If
+.Fl c
+.Ar directory/package/Makefile.common
+is given,
+it shows the result of first half of the processing,
+meaning that 
+the particular Makefile.common is referenced from Makefiles of the other packages.
+
+.Pp
 .Nm
 prints the package name
 (in
@@ -120,6 +130,12 @@ then outputs to the file
 .Pa commonbump.replaced
 (currently the name is fixed).
 .El
+.Sh BUGS
+.Nm replace-commonbump
+employs Perl Module File::Find, and 'follow' option of it is NOT used,
+.Nm replace-commonbump
+does not follow the symbolic link.
+mount(8) -t null may be alternative to get similar link.
 .Sh SEE ALSO
 .Xr blbump 1 ,
 .Xr check-cvs-diff 1 ,

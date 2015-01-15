@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/01/08 15:45:27 makoto Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/15 01:54:37 makoto Exp $
 
 PKGNAME=		revbump-2.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		pkgtools
 
 MAINTAINER=		wiz@NetBSD.org
