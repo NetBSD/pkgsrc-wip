@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/12/31 13:58:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2015/01/15 09:29:38 fhajny Exp $
 
 DISTNAME=	graphite-web-0.9.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-carbon>=${PKGREVISION_NOREV}:../../wip/py-carbon
 DEPENDS+=	${PYPKGPREFIX}-django>=1.3.1:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.3.1:../../www/py-django-tagging
+
+EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
