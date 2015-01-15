@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:39 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/15 00:25:55 lexort Exp $
 #
 
-DISTNAME=	IO-Socket-Socks-0.51
+DISTNAME=	IO-Socket-Socks-0.66
 PKGNAME=	p5-${DISTNAME}
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
@@ -12,7 +12,6 @@ HOMEPAGE=	http://search.cpan.org/~oleg/IO-Socket-Socks-0.51/lib/IO/Socket/Socks.
 COMMENT=	Create SOCKS v4/v5 client or server
 LICENSE=	${PERL5_LICENSE}
 
-.include "../../lang/perl5/module.mk"
 PERL5_PACKLIST=	auto/IO/Socket/Socks/.packlist
 USE_LANGUAGES=	# none
 
