@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/28 17:58:59 leot1990 Exp $
+# $NetBSD: Makefile,v 1.15 2015/01/15 15:34:15 leot1990 Exp $
 
 DISTNAME=	vimb-2.8
 CATEGORIES=	www
@@ -15,6 +15,6 @@ USE_TOOLS+=	gmake pkg-config
 MAKE_ENV+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 
 .include "../../net/libsoup24/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
