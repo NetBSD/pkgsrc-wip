@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/01/07 04:46:57 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/15 11:27:56 obache Exp $
 
 DISTNAME=		ConsoleKit-0.4.5
 PKGNAME=		${DISTNAME:tl}
@@ -34,8 +34,8 @@ USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--enable-pam-module
-CONFIGURE_ARGS+=	--with-pam-module-dir=${PREFIX}/lib/security
+
+.include "options.mk"
 
 post-extract:
 	${CP} ${FILESDIR}/ck-sysdeps-netbsd.c ${WRKSRC}/src/
