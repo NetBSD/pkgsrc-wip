@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/11/14 11:15:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/16 11:52:43 obache Exp $
 
-DISTNAME=	libressl-2.1.1
+DISTNAME=	libressl-2.1.2
 CATEGORIES=	security
 MASTER_SITES=	http://ftp.openbsd.org/pub/OpenBSD/LibreSSL/
 
