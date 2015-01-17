@@ -1,0 +1,9 @@
+Features:
+---------
+                       Examples: no
+                  Parallel safe: yes
+                    Thread safe: yes
+                 Enable GTK-doc: no
+                        dmalloc: no
+         Function Stack Tracing: no
+       Large File Support (LFS): yes
