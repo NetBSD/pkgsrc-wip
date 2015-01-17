@@ -1,39 +1,7 @@
-2014-10-21 GnuRadio 3.7.5.1 is available
-  http://gnuradio.org/redmine/projects/gnuradio/wiki/ChangeLogV3_7_5_1
+GNU Radio releases 3.7.6 and 3.7.5.2 are available for download:
 
-audio: Fixes string format bug in ALSA error messages.
-blocks: Added callback to vector source GRC bindings
-blocks: benchmark scripts using wrong includes.
-blocks: convert asserts to throwing runtime errors in keep_m_in_n ctor.
-blocks: fixed relative rate in keep_m_in_n. It's m-in-n, not n-in-m.
-blocks: fixed up keem_m_in_n to handle relative rate and correct number of items in calls to work.
-blocks: removed use of 'and', 'or', and 'not' for &&, ||, and !.
-cmake: Additional search path for QWT include files.
-cmake: OSS is not for APPLE or WINDOWS.
-cmake: Use APPLE, not matching Darwin
-cmake: modtool: On Apple only, set install name and use rpath correctly.
-cmake: modtool: allow the use of a MODULES_DIR to specify where cmake modules are installed.
-cmake: modtool: make sure our local CMake Modules path comes first.
-cmake: modtool: update copyright date.
-digital: adapt clock recovery QA
-digital: applying same fix of the complex M&M clock recovery block as the float vrsion.
-digital: clock recovery delete unused variables
-digital: clock recovery fix relative limit
-digital: clock recovery more verbose documentation
-docs: Make explicit we only support Qt4
-dtv: fix internal GR component dependencies
-fec: qa: fix use of Bool type to be actual boolean Python values
-fec: removed ber_tools; unnecessary and not exported. Replaced compber with call to VOLK's popcount.
-filter: Fixes setting sample delay declaration for PFB synthesizer in GRC.
-filter: Fixes setting sample delay declaration for the PFB channelizer and in GRC.
-grc: disable port type caching on init
-grc: fix lagging drag and drop
-grc: fix missing xterm (Bug #725)
-grc: fix search entry box for old PyGTK versions
-grc: no icon in search entry box for old PyGTK versions
-grc: update all flowgraphs when hiding port labels
-grc: yet another py26 incompatibility
-qtgui: fixed an issue with the number sink mistreating non-float inputs.
-qtgui: increased max tabs from 5 to 20 in tab widget
-runtime: fix installation location of the gr_log_default.conf log configuration file.
-uhd: removed use of 'and', 'or', and 'not' for &&, ||, and !.
+   ( several tens of lines omitted for URL and List of contributors)
+
+Release 3.7.5.2 is a bug-fix only maintenance patch following 3.7.5.1,
+and will be the last one for the 3.7.5 release.  Release 3.7.6
+incorporates all these fixes and adds significant new features.
