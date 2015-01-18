@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/01/18 23:00:27 jihbed Exp $
+
+SHA1 (mochi-0.1.5.tar.gz) = b43d10043cd3e19739e96dac6cc0dcee675d68cf
+RMD160 (mochi-0.1.5.tar.gz) = 6e2222a04fd0029233745143753786b2f3270350
+Size (mochi-0.1.5.tar.gz) = 34991 bytes
