@@ -1,0 +1,9 @@
+New in 1.2 - 2014-11-21
+-----------------------
+* Support for FT230X devices (Uwe Bonnes)
+* ftdi_usb_get_strings(): Don't try to open an already open device (Denis Sirotkin)
+* Support for finding devices bricked by the Windows driver (Forest Crossman)
+* cmake build system: New LibFTDI1ConfigVersion.cmake file (xantares09)
+* Fix a typo in the MPSSE command CLK_BYTES_OR_LOW (Benjamin Vanheuverzwijn)
+* Minor fixes for MSVC++ (Andrei Errapart)
+* Various small code improvements (Florian Preinstorfer, Jochen Sprickerhof, xantares09)
