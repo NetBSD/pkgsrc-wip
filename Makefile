@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6044 2015/01/14 17:41:07 thomasklausner Exp $
+# $Id: Makefile,v 1.6045 2015/01/18 07:00:31 makoto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1426,7 +1426,6 @@ SUBDIR+=	libcm
 SUBDIR+=	libcmis
 SUBDIR+=	libcmt
 SUBDIR+=	libcnotify
-SUBDIR+=	libconfuse
 SUBDIR+=	libcouchbase
 SUBDIR+=	libcpath
 SUBDIR+=	libcpu
