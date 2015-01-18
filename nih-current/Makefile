@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/11/25 12:54:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.20 2015/01/18 18:58:17 cheusov Exp $
 
 DISTNAME=	pkg${PKGNAME}
-PKGNAME=	nih-0.12.0
+PKGNAME=	nih-0.13.0
 CATEGORIES=	pkgtools
 
 MAINTAINER=	cheusov@NetBSD.org
@@ -14,7 +14,7 @@ GIT_REPOSITORIES=	pkgnih
 GIT_REPO.pkgnih=	git://github.com/cheusov/pkgnih.git
 .include "../../wip/mk/git-package.mk"
 
-DEPENDS+=	pkg_summary-utils>=0.60.0:../../pkgtools/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.65.2:../../pkgtools/pkg_summary-utils
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 DEPENDS+=	pkg_install>=20100915:../../pkgtools/pkg_install
 
@@ -41,8 +41,6 @@ REPLACE_FILES.runawk=	nih/pkg_update_plan.in nih/cmp2hr.in \
     nih/pkg_create_fake.in nih/analyse_conflicts.in
 
 MAKE_ENV+=		VERSION=${_GIT_PKGVERSION:S/.//}
-MAKE_ENV+=		PKGSRCDIR=${PKGSRCDIR}
-MAKE_ENV+=		PACKAGES=${PACKAGES}
 MAKE_ENV+=		PKG_DBDIR=${PKG_DBDIR}
 MAKE_ENV+=		REAL_ROOT_USER=${REAL_ROOT_USER}
 MAKE_ENV+=		REAL_ROOT_GROUP=${REAL_ROOT_GROUP}
@@ -57,9 +55,9 @@ FTP_CMD=${PREFIX}/bin/ftp
 DEPENDS+=	tnftp-[0-9]*:../../net/tnftp
 .endif
 
-MAKE_ENV+= FTP=${FTP_CMD:Q}
+MAKE_ENV+= FTP=${FTP_CMD:Q} PKG_TOOLS_BIN=${PKG_TOOLS_BIN}
 
-.if ${OPSYS} =="SunOS" && empty(OS_VERSION:M5.11*)
+.if ${OPSYS} =="SunOS" #&& empty(OS_VERSION:M5.11*)
 REPLACE_SH+=	nih/nih.in nih/pkg_status.in
 .endif
 
