@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2015/01/10 19:34:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.38 2015/01/19 12:33:47 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -112,6 +112,9 @@ lib/firefox/browser/chrome/browser/content/browser/defaultthemes/5.header.png
 lib/firefox/browser/chrome/browser/content/browser/defaultthemes/5.icon.jpg
 lib/firefox/browser/chrome/browser/content/browser/defaultthemes/5.preview.jpg
 lib/firefox/browser/chrome/browser/content/browser/devtools/NetworkPanel.xhtml
+lib/firefox/browser/chrome/browser/content/browser/devtools/animationinspector/animation-controller.js
+lib/firefox/browser/chrome/browser/content/browser/devtools/animationinspector/animation-inspector.xhtml
+lib/firefox/browser/chrome/browser/content/browser/devtools/animationinspector/animation-panel.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/app-manager/connection-footer.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/app-manager/connection-footer.xhtml
 lib/firefox/browser/chrome/browser/content/browser/devtools/app-manager/device.js
@@ -230,8 +233,10 @@ lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor.xul
 lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/controller.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/includes.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/models.js
+lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/views/automation.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/views/context.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/views/inspector.js
+lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/views/properties.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/webaudioeditor/views/utils.js
 lib/firefox/browser/chrome/browser/content/browser/devtools/webconsole.xul
 lib/firefox/browser/chrome/browser/content/browser/devtools/widgets.css
@@ -554,6 +559,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/devedition/search.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devedition/urlbar-history-dropmarker.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/alerticon-warning.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/alerticon-warning@2x.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/animationinspector.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/app-manager/add.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/app-manager/connection-footer.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/devtools/app-manager/default-app-icon.png
@@ -918,6 +924,8 @@ lib/firefox/browser/chrome/en-US/locale/browser/browser.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/browser.properties
 lib/firefox/browser/chrome/en-US/locale/browser/customizableui/customizableWidgets.properties
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/VariablesView.dtd
+lib/firefox/browser/chrome/en-US/locale/browser/devtools/animationinspector.dtd
+lib/firefox/browser/chrome/en-US/locale/browser/devtools/animationinspector.properties
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/app-manager.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/app-manager.properties
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/appcacheutils.properties
@@ -1360,12 +1368,10 @@ lib/firefox/browser/chrome/webide/skin/throbber.svg
 lib/firefox/browser/chrome/webide/skin/webide.css
 lib/firefox/browser/components/ChromeProfileMigrator.js
 lib/firefox/browser/components/DownloadsStartup.js
-lib/firefox/browser/components/DownloadsUI.js
 lib/firefox/browser/components/ExperimentsService.js
 lib/firefox/browser/components/FeedConverter.js
 lib/firefox/browser/components/FeedWriter.js
 lib/firefox/browser/components/FirefoxProfileMigrator.js
-lib/firefox/browser/components/PlacesProtocolHandler.js
 lib/firefox/browser/components/ProfileMigrator.js
 lib/firefox/browser/components/SelfSupportService.js
 lib/firefox/browser/components/WebContentConverter.js
@@ -1421,6 +1427,7 @@ lib/firefox/browser/modules/PanelFrame.jsm
 lib/firefox/browser/modules/PanelWideWidgetTracker.jsm
 lib/firefox/browser/modules/PlacesUIUtils.jsm
 lib/firefox/browser/modules/PluginContent.jsm
+lib/firefox/browser/modules/ProcessHangMonitor.jsm
 lib/firefox/browser/modules/RecentWindow.jsm
 lib/firefox/browser/modules/RemotePrompt.jsm
 lib/firefox/browser/modules/ScrollbarSampler.jsm
@@ -1437,6 +1444,7 @@ lib/firefox/browser/modules/devtools/Chart.jsm
 lib/firefox/browser/modules/devtools/Curl.jsm
 lib/firefox/browser/modules/devtools/DOMHelpers.jsm
 lib/firefox/browser/modules/devtools/DeveloperToolbar.jsm
+lib/firefox/browser/modules/devtools/FlameGraph.jsm
 lib/firefox/browser/modules/devtools/FloatingScrollbars.jsm
 lib/firefox/browser/modules/devtools/Graphs.jsm
 lib/firefox/browser/modules/devtools/GraphsWorker.js
@@ -1525,6 +1533,7 @@ lib/firefox/browser/modules/devtools/shared/doorhanger.js
 lib/firefox/browser/modules/devtools/shared/frame-script-utils.js
 lib/firefox/browser/modules/devtools/shared/inplace-editor.js
 lib/firefox/browser/modules/devtools/shared/observable-object.js
+lib/firefox/browser/modules/devtools/shared/options-view.js
 lib/firefox/browser/modules/devtools/shared/telemetry.js
 lib/firefox/browser/modules/devtools/shared/theme-switching.js
 lib/firefox/browser/modules/devtools/shared/theme.js
@@ -1864,6 +1873,7 @@ lib/firefox/chrome/toolkit/content/global/about.xhtml
 lib/firefox/chrome/toolkit/content/global/aboutAbout.js
 lib/firefox/chrome/toolkit/content/global/aboutAbout.xhtml
 lib/firefox/chrome/toolkit/content/global/aboutCache.js
+lib/firefox/chrome/toolkit/content/global/aboutCompartments.js
 lib/firefox/chrome/toolkit/content/global/aboutCompartments.xhtml
 lib/firefox/chrome/toolkit/content/global/aboutMemory.css
 lib/firefox/chrome/toolkit/content/global/aboutMemory.js
@@ -2411,8 +2421,11 @@ lib/firefox/components/PaymentFlowInfo.js
 lib/firefox/components/PermissionSettings.js
 lib/firefox/components/PhoneNumberService.js
 lib/firefox/components/PlacesCategoriesStarter.js
+lib/firefox/components/PresentationDeviceInfoManager.js
 lib/firefox/components/Push.js
 lib/firefox/components/PushServiceLauncher.js
+lib/firefox/components/RequestSyncManager.js
+lib/firefox/components/RequestSyncScheduler.js
 lib/firefox/components/SettingsManager.js
 lib/firefox/components/SiteSpecificUserAgent.js
 lib/firefox/components/SlowScriptDebug.js
@@ -2450,7 +2463,6 @@ lib/firefox/components/nsContentPrefService.js
 lib/firefox/components/nsCrashMonitor.js
 lib/firefox/components/nsDOMIdentity.js
 lib/firefox/components/nsDefaultCLH.js
-lib/firefox/components/nsDownloadManagerUI.js
 lib/firefox/components/nsFilePicker.js
 lib/firefox/components/nsFormAutoComplete.js
 lib/firefox/components/nsFormHistory.js
@@ -2623,6 +2635,7 @@ lib/firefox/modules/InlineSpellCheckerContent.jsm
 lib/firefox/modules/InsecurePasswordUtils.jsm
 lib/firefox/modules/InterAppCommService.jsm
 lib/firefox/modules/Keyboard.jsm
+lib/firefox/modules/Langpacks.jsm
 lib/firefox/modules/LightweightThemeConsumer.jsm
 lib/firefox/modules/LightweightThemeManager.jsm
 lib/firefox/modules/LoadContextInfo.jsm
@@ -2667,6 +2680,7 @@ lib/firefox/modules/PluralForm.jsm
 lib/firefox/modules/PopupNotifications.jsm
 lib/firefox/modules/Preferences.jsm
 lib/firefox/modules/Prefetcher.jsm
+lib/firefox/modules/PresentationDeviceInfoManager.jsm
 lib/firefox/modules/PrivateBrowsingUtils.jsm
 lib/firefox/modules/Promise-backend.js
 lib/firefox/modules/Promise.jsm
@@ -2683,6 +2697,9 @@ lib/firefox/modules/RemoteSecurityUI.jsm
 lib/firefox/modules/RemoteWebNavigation.jsm
 lib/firefox/modules/RemoteWebProgress.jsm
 lib/firefox/modules/RequestAutocompleteUI.jsm
+lib/firefox/modules/RequestSyncApp.jsm
+lib/firefox/modules/RequestSyncService.jsm
+lib/firefox/modules/RequestSyncTask.jsm
 lib/firefox/modules/ResetProfile.jsm
 lib/firefox/modules/ResourceStatsDB.jsm
 lib/firefox/modules/ResourceStatsService.jsm
@@ -3307,7 +3324,6 @@ lib/firefox/res/fonts/mathfontStandardSymbolsL.properties
 lib/firefox/res/fonts/mathfontUnicode.properties
 lib/firefox/res/grabber.gif
 lib/firefox/res/html/folder.png
-lib/firefox/res/langGroups.properties
 lib/firefox/res/language.properties
 lib/firefox/res/svg.css
 lib/firefox/res/table-add-column-after-active.gif

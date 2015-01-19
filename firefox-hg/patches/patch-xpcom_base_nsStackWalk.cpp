@@ -1,11 +1,11 @@
-$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.1 2014/09/29 10:46:26 thomasklausner Exp $
+$NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.2 2015/01/19 12:33:47 thomasklausner Exp $
 
 * Replace XP_MACOSX with XP_DARWIN as the former is not defined when
   the toolkit is not cocoa.
 
---- xpcom/base/nsStackWalk.cpp.orig	2014-09-28 08:30:06.000000000 +0000
+--- xpcom/base/nsStackWalk.cpp.orig	2015-01-19 12:03:20.000000000 +0000
 +++ xpcom/base/nsStackWalk.cpp
-@@ -30,12 +30,12 @@ static CriticalAddress gCriticalAddress;
+@@ -34,12 +34,12 @@ static CriticalAddress gCriticalAddress;
  #define _GNU_SOURCE
  #endif
  
@@ -21,7 +21,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.1 2014/09/29 10:46:26 thomasklausn
     (defined(__i386) || defined(__ppc__) || defined(HAVE__UNWIND_BACKTRACE)))
  
  #define NSSTACKWALK_SUPPORTS_LINUX \
-@@ -43,7 +43,7 @@ static CriticalAddress gCriticalAddress;
+@@ -47,7 +47,7 @@ static CriticalAddress gCriticalAddress;
     ((defined(__GNUC__) && (defined(__i386) || defined(PPC))) || \
      defined(HAVE__UNWIND_BACKTRACE)))
  
@@ -30,7 +30,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.1 2014/09/29 10:46:26 thomasklausn
  #include <pthread.h>
  #include <CoreServices/CoreServices.h>
  
-@@ -860,7 +860,7 @@ NS_FormatCodeAddressDetails(void* aPC, c
+@@ -836,7 +836,7 @@ NS_DescribeCodeAddress(void* aPC, nsCode
  }
  
  // i386 or PPC Linux stackwalking code
@@ -39,7 +39,7 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.1 2014/09/29 10:46:26 thomasklausn
  
  #include <stdlib.h>
  #include <string.h>
-@@ -931,7 +931,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -907,7 +907,7 @@ FramePointerStackWalk(NS_WalkStackCallba
          (long(next) & 3)) {
        break;
      }
@@ -48,12 +48,12 @@ $NetBSD: patch-xpcom_base_nsStackWalk.cpp,v 1.1 2014/09/29 10:46:26 thomasklausn
      // ppc mac or powerpc64 linux
      void* pc = *(bp + 2);
      bp += 3;
-@@ -961,7 +961,7 @@ FramePointerStackWalk(NS_WalkStackCallba
+@@ -937,7 +937,7 @@ FramePointerStackWalk(NS_WalkStackCallba
  }
  
  #define X86_OR_PPC (defined(__i386) || defined(PPC) || defined(__ppc__))
 -#if X86_OR_PPC && (NSSTACKWALK_SUPPORTS_MACOSX || NSSTACKWALK_SUPPORTS_LINUX) // i386 or PPC Linux or Mac stackwalking code
 +#if X86_OR_PPC && (NSSTACKWALK_SUPPORTS_DARWIN || NSSTACKWALK_SUPPORTS_LINUX) // i386 or PPC Linux or Mac stackwalking code
  
- EXPORT_XPCOM_API(nsresult)
+ XPCOM_API(nsresult)
  NS_StackWalk(NS_WalkStackCallback aCallback, uint32_t aSkipFrames,
