@@ -1,5 +1,7 @@
-$NetBSD: patch-src_cw.c,v 1.1 2014/06/05 21:24:37 yrmt Exp $
+$NetBSD: patch-src_cw.c,v 1.2 2015/01/20 14:26:01 yrmt Exp $
+
 fprintf requires the format.
+
 --- src/cw.c.orig	2010-06-20 04:39:51.000000000 +0000
 +++ src/cw.c
 @@ -643,7 +643,7 @@ void sighandler(signed int sig){

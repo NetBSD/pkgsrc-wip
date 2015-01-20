@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/05 21:24:37 yrmt Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/20 14:26:01 yrmt Exp $
 
 DISTNAME=	cw-1.0.16
 CATEGORIES=	sysutils
@@ -11,6 +11,5 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-CHECK_INTERPRETER=	no
 
 .include "../../mk/bsd.pkg.mk"
