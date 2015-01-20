@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2015/01/19 12:33:47 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.39 2015/01/20 23:28:15 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -822,6 +822,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/mail.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/preferences.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/preferences/search.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/privatebrowsing-mask.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/reader-mode-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/reload-stop-go.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/sanitizeDialog.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/search-history-icon.svg
@@ -1428,6 +1429,7 @@ lib/firefox/browser/modules/PanelWideWidgetTracker.jsm
 lib/firefox/browser/modules/PlacesUIUtils.jsm
 lib/firefox/browser/modules/PluginContent.jsm
 lib/firefox/browser/modules/ProcessHangMonitor.jsm
+lib/firefox/browser/modules/ReaderParent.jsm
 lib/firefox/browser/modules/RecentWindow.jsm
 lib/firefox/browser/modules/RemotePrompt.jsm
 lib/firefox/browser/modules/ScrollbarSampler.jsm
