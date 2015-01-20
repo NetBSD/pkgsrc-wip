@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/04/25 13:12:48 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/20 12:02:10 ahp-nils Exp $
 
-DISTNAME=	v1.2.0
+DISTNAME=	v1.2.1
 PKGNAME=	${DISTNAME:S/v/zmap-/}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/zmap/zmap/archive/
