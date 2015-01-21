@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2014/12/19 13:57:28 heidnes Exp $
+$NetBSD: patch-src_zabbix__server_server.c,v 1.1 2015/01/21 22:56:43 heidnes Exp $
 
 Move PID dirs and use @PREFIX@ for fping / fping6.
 

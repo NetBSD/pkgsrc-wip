@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2014/12/19 13:57:28 heidnes Exp $
+$NetBSD: patch-src_zabbix__agent_zabbix__agentd.c,v 1.1 2015/01/21 22:56:43 heidnes Exp $
 
-Make it possible to tweak the zabbox conf drive/directory on Windows.
+Make it possible to tweak the zabbix conf drive/directory on Windows.
 
 --- src/zabbix_agent/zabbix_agentd.c.orig	2014-11-05 08:01:42.000000000 +0000
 +++ src/zabbix_agent/zabbix_agentd.c

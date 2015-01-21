@@ -1,38 +1,30 @@
-# $NetBSD: Makefile.common,v 1.1 2014/12/19 13:57:28 heidnes Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/01/21 22:56:43 heidnes Exp $
 # used by wip/zabbix-server/Makefile
 # used by wip/zabbix-agent/Makefile
+# used by wip/zabbix-server-pgsql/Makefile
+# used by wip/zabbix-server-mysql/Makefile
 
-VER=		2.4.2
-DISTNAME=	zabbix-${VER}
-CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
+VER=			2.4.3
+DISTNAME=		zabbix-${VER}
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zabbix/}
 
-MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
-HOMEPAGE=	http://www.zabbix.com/
-COMMENT=	Network monitoring tool
-LICENSE=	gnu-gpl-v2
+MAINTAINER=		pkgsrc-wip-discuss@lists.sourceforge.net
+HOMEPAGE=		http://www.zabbix.com/
+COMMENT=		Network monitoring tool
+LICENSE=		gnu-gpl-v2
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		makeinfo pax
 
-PATCHDIR= 	${.CURDIR}/../zabbix/patches
+PATCHDIR= 		${.CURDIR}/../zabbix/patches
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-#CONFIGURATION_FILES=	zabbix_agent.conf zabbix_agentd.conf zabbix_proxy.conf zabbix_server.conf
-
 PKG_SYSCONFSUBDIR=	zabbix
 EGDIR=			share/examples/${PKG_SYSCONFSUBDIR}
-#CONF_FILES=		${EGDIR}/... ${PKG_SYSCONFDIR}/...
 
-# These are moved out to separate sub-package dirs:
-#CONF_FILES=		${EGDIR}/zabbix_agent.conf ${PKG_SYSCONFDIR}/zabbix_agent.conf
-#CONF_FILES+=		${EGDIR}/zabbix_agentd.conf ${PKG_SYSCONFDIR}/zabbix_agentd.conf
-#CONF_FILES+=		${EGDIR}/zabbix_proxy.conf ${PKG_SYSCONFDIR}/zabbix_trapper.conf
-#CONF_FILES+=		${EGDIR}/zabbix_server.conf ${PKG_SYSCONFDIR}/zabbix_server.conf
-#INSTALLATION_DIRS+=	share
-#INSTALLATION_DIRS+=	share/examples
 INSTALLATION_DIRS+=	${EGDIR}
 
 # ZABBIX user account
@@ -53,53 +45,64 @@ PKG_GECOS.${ZBXUSER}=	ZABBIX monitoring pseudo-user
 PKG_HOME.${ZBXUSER}=	${ZBXHOME}
 PKG_SHELL.${ZBXUSER}=	${SH}
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		post-patch
-SUBST_MESSAGE.fix-paths=	Fixing absolute pathes.
-SUBST_FILES.fix-paths=		src/zabbix_server/server.c src/zabbix_agent/zabbix_agent.c
-SUBST_SED.fix-paths=		-e 's,"@PREFIX@,"${PREFIX},g'
-SUBST_SED.fix-paths+=		-e 's,"@HOMEDIR@,"${ZBXHOME},g'
-SUBST_SED.fix-paths+=		-e 's,"@CONFDIR@,"${PKG_SYSCONFDIR},g'
-SUBST_SED.fix-paths+=		-e 's,"@SCRIPTDIR@,"${PREFIX}/libexec/${PKGNAME_NOREV},g'
-SUBST_SED.fix-paths+=		-e 's,"@PIDDIR@,"${VARBASE}/run,g'
+SUBST_CLASSES+=		fix-paths
+SUBST_STAGE.fix-paths=	post-patch
+SUBST_MESSAGE.fix-paths=Fixing absolute pathes.
+SUBST_FILES.fix-paths=	src/zabbix_server/server.c src/zabbix_agent/zabbix_agent.c
+SUBST_SED.fix-paths=	-e 's,"@PREFIX@,"${PREFIX},g'
+SUBST_SED.fix-paths+=	-e 's,"@HOMEDIR@,"${ZBXHOME},g'
+SUBST_SED.fix-paths+=	-e 's,"@CONFDIR@,"${PKG_SYSCONFDIR},g'
+SUBST_SED.fix-paths+=	-e 's,"@SCRIPTDIR@,"${PREFIX}/libexec/${PKGNAME_NOREV},g'
+SUBST_SED.fix-paths+=	-e 's,"@PIDDIR@,"${VARBASE}/run,g'
 
-OWN_DIRS+=	share/zabbix share/zabbix/data share/zabbix/schema share/examples/zabbix share/doc/zabbix
-
-# ?!?
-#RCD_SCRIPTS=	zabbix_agentd zabbix_server
-#.for script in ${RCD_SCRIPTS}
-#RCD_SCRIPT_SRC.${script}=	${WRKSRC}/misc/init.d/freebsd/${script}
-#.endfor
+OWN_DIRS+=	share/zabbix share/zabbix/data
+OWN_DIRS+=	share/zabbix/schema share/examples/zabbix share/doc/zabbix
 
 # necessary SQL scripts
 SQL_SCRIPTS_DIR=	${WRKSRC}/database/
 .for dbtype in postgresql mysql oracle sqlite3 ibm_db2
-SQL_SCRIPTS+=	${dbtype}/schema.sql
-SQL_SCRIPTS+=	${dbtype}/images.sql
-SQL_SCRIPTS+=	${dbtype}/data.sql
-OWN_DIRS+=	share/zabbix/${dbtype}
+SQL_SCRIPTS+=		${dbtype}/schema.sql
+SQL_SCRIPTS+=		${dbtype}/images.sql
+SQL_SCRIPTS+=		${dbtype}/data.sql
+OWN_DIRS+=		share/zabbix/${dbtype}
 .endfor
 
-#CHECK_INTERPRETER_SKIP=	share/zabbix/upgrades/dbpatches/1.8/mysql/upgrade
-#CHECK_WRKREF_SKIP=	share/zabbix/upgrades/Makefile
+INSTALLATION_DIRS+=	${OWN_DIRS}
 
-post-install:
-.for d in ${OWN_DIRS}
-	mkdir ${DESTDIR}${PREFIX}/$d
-.endfor
-# documentation
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/zabbix/
-.for f in ${CONFIGURATION_FILES}
-	${INSTALL_DATA} ${WRKSRC}/conf/$f ${DESTDIR}${EGDIR}/$f
-.endfor
-.for f in ${SQL_SCRIPTS}
-	${INSTALL_DATA} ${SQL_SCRIPTS_DIR}/$f \
-		${DESTDIR}${PREFIX}/share/zabbix/$f
-.endfor
-.for f in AUTHORS COPYING INSTALL NEWS README
-	${INSTALL_DATA} ${WRKSRC}/$f ${DESTDIR}${PREFIX}/share/doc/zabbix/$f
-.endfor
-	cd ${WRKSRC}; pax -rw frontends upgrades \
-		${DESTDIR}${PREFIX}/share/zabbix/
+USE_TOOLS+=		bash:run
+REPLACE_BASH+=		upgrades/dbpatches/1.8/mysql/upgrade
+REPLACE_BASH+=		upgrades/dbpatches/2.0/mysql/upgrade
+REPLACE_BASH+=		frontends/php/locale/add_new_language.sh
+REPLACE_BASH+=		frontends/php/locale/make_mo.sh
+REPLACE_BASH+=		frontends/php/locale/update_po.sh
+
+USE_TOOLS+=		makeinfo:run
+
+MAKEINFO=		${PREFIX}/bin/makeinfo
+
+SUBST_CLASSES+=		makeinfo
+SUBST_STAGE.makeinfo=	post-configure
+SUBST_MESSAGE.makeinfo=	Replacing tools makeinfo path
+SUBST_FILES.makeinfo=	upgrades/Makefile
+SUBST_SED.makeinfo=	-e "s,^MAKEINFO.*,MAKEINFO = ${MAKEINFO},"
+
+USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config:run
+
+PKGCONFIG=		${PREFIX}/bin/pkg-config
+
+SUBST_CLASSES+=		pkgconfig
+SUBST_STAGE.pkgconfig=	post-configure
+SUBST_MESSAGE.pkgconfig=Replacing tools pkg-config path
+SUBST_FILES.pkgconfig=	upgrades/Makefile
+SUBST_SED.pkgconfig=	-e "s,^PKG_CONFIG.*,PKG_CONFIG = ${PKGCONFIG},"
+
+SUBST_CLASSES+=		libssh2
+SUBST_STAGE.libssh2=	pre-configure
+SUBST_MESSAGE.libssh2=	Fixing libssh2 test
+SUBST_FILES.libssh2=	configure
+SUBST_SED.libssh2=	-e "s,/usr/local/include/libssh2.h,${PREFIX}/include/libssh2.h,"
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/zabbix/distinfo
 
 .include "../../wip/zabbix/options.mk"

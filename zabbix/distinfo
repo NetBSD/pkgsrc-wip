@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.8 2014/12/19 13:57:28 heidnes Exp $
+$NetBSD: distinfo,v 1.9 2015/01/21 22:56:43 heidnes Exp $
 
-SHA1 (zabbix-1.8.5.tar.gz) = 655f5c7381139ec97d23df4cce0469e1e032c54d
-RMD160 (zabbix-1.8.5.tar.gz) = 200e1cdddb0f7149c7cfb62237a46a563054f95e
-Size (zabbix-1.8.5.tar.gz) = 4184672 bytes
-SHA1 (patch-aa) = c121368ac12fad545c454d0e66c42f07e9899751
-SHA1 (patch-ab) = fb95f65ae21cac1eead7d3c87a490296a93f4348
-SHA1 (patch-src_zabbix__server_Makefile) = 17865e811d504f2f35ed24d0a78e609da680381c
+SHA1 (zabbix-2.4.3.tar.gz) = 2173ef62bd0cd499677eae235d803956f4f72d0c
+RMD160 (zabbix-2.4.3.tar.gz) = d73625884dd96939707a3e9556d75fdefad202ab
+Size (zabbix-2.4.3.tar.gz) = 14712892 bytes
+SHA1 (patch-src_zabbix__agent_Makefile.in) = 8d39a7f74ebd4964f3405ed6a317ab4bafa341e2
+SHA1 (patch-src_zabbix__agent_zabbix__agentd.c) = 959bc02cd67167001c11ba532be1e4f0971144b8
+SHA1 (patch-src_zabbix__proxy_Makefile.in) = 1ffa8c704666f6f4c754fcfc32ee6d5cf102aac8
+SHA1 (patch-src_zabbix__server_Makefile.in) = 2e4698e6803a6693ba4a0dafaafdb15885cb4c6b
+SHA1 (patch-src_zabbix__server_server.c) = fb95f65ae21cac1eead7d3c87a490296a93f4348
