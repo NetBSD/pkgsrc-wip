@@ -1,7 +1,7 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 219175
+LAST_UPDATED: Obtained from SVN: trunk revision 219827
 
-Native configuration is x86_64--netbsd  # 7.99.4
+Native configuration is x86_64--netbsd
 
 		=== g++ tests ===
 
@@ -19,18 +19,15 @@ FAIL: g++.dg/guality/pr55665.C   -O3 -g  line 23 p == 40
 FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++98 execution test
 FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++11 execution test
 FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++14 execution test
-FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++98 (test for excess errors)
-FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++11 (test for excess errors)
-FAIL: g++.old-deja/g++.law/profile1.C  -std=gnu++14 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		84166
-# of unexpected failures	12
-# of expected failures		246
+# of expected passes		84842
+# of unexpected failures	9
+# of expected failures		267
 # of unresolved testcases	3
-# of unsupported tests		3386
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/g++/../../xg++  version 5.0.0 20150104 (experimental) (GCC) 
+# of unsupported tests		3490
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/g++/../../xg++  version 5.0.0 20150118 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -43,7 +40,6 @@ FAIL: gcc.c-torture/execute/20030125-1.c   -O3 -g  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -Os  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
 FAIL: gcc.c-torture/execute/20030125-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-FAIL: gcc.dg/20021014-1.c (test for excess errors)
 FAIL: gcc.dg/binop-xor1.c scan-tree-dump-times optimized "\\\\^" 1
 FAIL: gcc.dg/binop-xor3.c scan-tree-dump-times optimized "\\\\^" 1
 FAIL: gcc.dg/builtins-20.c (test for excess errors)
@@ -58,12 +54,6 @@ FAIL: gcc.dg/builtins-61.c scan-tree-dump optimized "cos"
 FAIL: gcc.dg/builtins-61.c scan-tree-dump optimized "return 0.0"
 FAIL: gcc.dg/builtins-62.c scan-tree-dump-times optimized "cexpi" 3
 FAIL: gcc.dg/builtins-65.c (test for excess errors)
-FAIL: gcc.dg/nest.c (test for excess errors)
-FAIL: gcc.dg/nested-func-4.c (test for excess errors)
-FAIL: gcc.dg/pr32450.c (test for excess errors)
-FAIL: gcc.dg/pr43643.c (test for excess errors)
-FAIL: gcc.dg/pr44194-1.c scan-rtl-dump dse1 "global deletions = (2|3)"
-FAIL: gcc.dg/pr44194-1.c scan-rtl-dump-not final "insn[: ][^\\n]*set \\\\(mem(?![^\\n]*scratch)"
 UNRESOLVED: gcc.dg/superblock.c scan-rtl-dump-times sched2 "ADVANCING TO" 2
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
@@ -489,17 +479,16 @@ FAIL: gcc.target/i386/long-double-128-9.c (test for excess errors)
 UNRESOLVED: gcc.target/i386/long-double-128-9.c compilation failed to produce executable
 FAIL: gcc.target/i386/pr63618.c (test for excess errors)
 UNRESOLVED: gcc.target/i386/pr63618.c compilation failed to produce executable
-FAIL: gcc.target/i386/pr64291-1.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		107998
-# of unexpected failures	329
+# of expected passes		108219
+# of unexpected failures	321
 # of unexpected successes	33
-# of expected failures		272
+# of expected failures		277
 # of unresolved testcases	92
-# of unsupported tests		2687
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150104 (experimental) (GCC) 
+# of unsupported tests		2717
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150118 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -533,11 +522,11 @@ FAIL: gfortran.dg/nint_2.f90   -O0  execution test
 
 		=== gfortran Summary ===
 
-# of expected passes		46986
+# of expected passes		47816
 # of unexpected failures	25
-# of expected failures		61
-# of unsupported tests		108
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 5.0.0 20150104 (experimental) (GCC) 
+# of expected failures		76
+# of unsupported tests		111
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 5.0.0 20150118 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -549,7 +538,7 @@ Running target unix
 # of expected passes		1445
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 5.0.0 20150104 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 5.0.0 20150118 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -565,7 +554,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150104 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150118 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -580,15 +569,19 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.fortran/cancel-parallel-1.f90   -O3 -fomit-frame-pointer  execution test
+FAIL: libgomp.c/affinity-1.c execution test
 WARNING: program timed out.
-FAIL: libgomp.fortran/target4.f90   -O0  execution test
+FAIL: libgomp.fortran/examples-4/e.51.3.f90   -O3 -fomit-frame-pointer  execution test
+FAIL: libgomp.fortran/pr25162.f   -O3 -fomit-frame-pointer  execution test
+FAIL: libgomp.fortran/pr25162.f   -O3 -fomit-frame-pointer -funroll-loops  execution test
+FAIL: libgomp.fortran/pr25162.f   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
+FAIL: libgomp.fortran/pr25162.f   -O3 -g  execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		3739
-# of unexpected failures	2
-# of unsupported tests		86
+# of expected passes		4665
+# of unexpected failures	6
+# of unsupported tests		206
 		=== libitm tests ===
 
 
@@ -607,6 +600,7 @@ FAIL: libitm.c/clone-1.c execution test
 Running target unix
 WARNING: program timed out.
 FAIL: 20_util/hash/chi2_q_uniform_random.cc execution test
+FAIL: 22_locale/conversions/string/2.cc execution test
 FAIL: 22_locale/ctype_base/11844.cc execution test
 FAIL: 22_locale/locale/cons/6.cc execution test
 FAIL: 22_locale/num_get/get/char/11.cc execution test
@@ -701,24 +695,22 @@ FAIL: tr1/5_numerical_facilities/special_functions/08_cyl_bessel_i/check_nan.cc 
 UNRESOLVED: tr1/5_numerical_facilities/special_functions/08_cyl_bessel_i/check_nan.cc compilation failed to produce executable
 FAIL: tr1/5_numerical_facilities/special_functions/09_cyl_bessel_j/check_nan.cc (test for excess errors)
 UNRESOLVED: tr1/5_numerical_facilities/special_functions/09_cyl_bessel_j/check_nan.cc compilation failed to produce executable
-FAIL: tr1/5_numerical_facilities/special_functions/11_cyl_neumann/check_nan.cc (test for excess errors)
-UNRESOLVED: tr1/5_numerical_facilities/special_functions/11_cyl_neumann/check_nan.cc compilation failed to produce executable
 FAIL: tr1/5_numerical_facilities/special_functions/22_sph_legendre/check_nan.cc (test for excess errors)
 UNRESOLVED: tr1/5_numerical_facilities/special_functions/22_sph_legendre/check_nan.cc compilation failed to produce executable
 
 		=== libstdc++ Summary ===
 
-# of expected passes		9134
+# of expected passes		9162
 # of unexpected failures	95
-# of expected failures		67
-# of unresolved testcases	4
+# of expected failures		64
+# of unresolved testcases	3
 # of unsupported tests		646
 
-Compiler version: 5.0.0 20150104 (experimental) (GCC) 
+Compiler version: 5.0.0 20150118 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-nls --with-libiconv-prefix=/usr --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc50snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc50snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --with-arch=nocona --with-tune=nocona --with-fpmath=sse --prefix=/usr/pkg/gcc50snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc50snapshot/info --mandir=/usr/pkg/gcc50snapshot/man
 EOF
-Mail -s "Results for 5.0.0 20150104 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 5.0.0 20150118 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&

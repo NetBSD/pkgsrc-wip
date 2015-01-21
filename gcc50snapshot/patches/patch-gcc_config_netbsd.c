@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_config_netbsd.c,v 1.1 2014/12/17 21:51:02 keckhardt Exp $
+$NetBSD: patch-gcc_config_netbsd.c,v 1.2 2015/01/21 14:58:48 keckhardt Exp $
 
---- /dev/null	2014-12-17 06:10:54.000000000 +0000
+--- /dev/null	2015-01-20 20:33:39.000000000 +0000
 +++ gcc/config/netbsd.c
-@@ -0,0 +1,106 @@
+@@ -0,0 +1,122 @@
 +/* Functions for generic NetBSD as target machine for GNU C compiler.
 +   Copyright (C) 1989-2014 Free Software Foundation, Inc.
 +   Contributed by Apple Computer Inc.
@@ -23,6 +23,7 @@ $NetBSD: patch-gcc_config_netbsd.c,v 1.1 2014/12/17 21:51:02 keckhardt Exp $
 +along with GCC; see the file COPYING3.  If not see
 +<http://www.gnu.org/licenses/>.  */
 +
++
 +#include "config.h"
 +#include "system.h"
 +#include "coretypes.h"
@@ -36,18 +37,33 @@ $NetBSD: patch-gcc_config_netbsd.c,v 1.1 2014/12/17 21:51:02 keckhardt Exp $
 +#include "output.h"
 +#include "insn-attr.h"
 +#include "flags.h"
++#include "hash-set.h"
++#include "machmode.h"
++#include "vec.h"
++#include "double-int.h"
++#include "input.h"
++#include "alias.h"
++#include "symtab.h"
++#include "wide-int.h"
++#include "inchash.h"
 +#include "tree.h"
++#include "fold-const.h"
 +#include "stringpool.h"
 +#include "varasm.h"
 +#include "stor-layout.h"
++#include "hashtab.h"
++#include "function.h"
++#include "statistics.h"
++#include "real.h"
++#include "fixed-value.h"
++#include "expmed.h"
++#include "dojump.h"
++#include "explow.h"
++#include "calls.h"
++#include "emit-rtl.h"
++#include "stmt.h"
 +#include "expr.h"
 +#include "reload.h"
-+#include "hashtab.h"
-+#include "hash-set.h"
-+#include "vec.h"
-+#include "machmode.h"
-+#include "input.h"
-+#include "function.h"
 +#include "ggc.h"
 +#include "langhooks.h"
 +#include "target.h"
