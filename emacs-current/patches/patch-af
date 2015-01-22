@@ -1,6 +1,8 @@
-$NetBSD: patch-af,v 1.1 2011/02/16 02:40:20 makoto Exp $
-  To avoid the check:
-    ERROR: [check-portability.awk]
+$NetBSD: patch-af,v 1.2 2015/01/22 23:25:48 thomasklausner Exp $
+
+Fix unportable test(1) operator.
+http://debbugs.gnu.org/cgi/bugreport.cgi?bug=19658
+
 --- test/indent/shell.sh.orig	2011-02-16 02:00:00.000000000 +0000
 +++ test/indent/shell.sh
 @@ -70,7 +70,7 @@ help2
