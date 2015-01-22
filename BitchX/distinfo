@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.3 2013/06/13 09:51:06 noud4 Exp $
+$NetBSD: distinfo,v 1.4 2015/01/22 13:47:29 noud4 Exp $
 
-SHA1 (BitchX-1.2-final.tar.gz) = a2162a18d3a96ade7d2410f6a560e43f7d6b8763
-RMD160 (BitchX-1.2-final.tar.gz) = ed86b2a8033593f9bf85c8035b1377ad98d70467
-Size (BitchX-1.2-final.tar.gz) = 2609717 bytes
+SHA1 (bitchx-1.2.1.tar.gz) = 48ca956d43d6d62e32040bddfae49e88c1188927
+RMD160 (bitchx-1.2.1.tar.gz) = 0bf85169f26297fe517b2886f8b9693c360f32f7
+Size (bitchx-1.2.1.tar.gz) = 2549182 bytes
 SHA1 (patch-aa) = 8476070f4b820163d94f353651ad276bbf967da9
-SHA1 (patch-ac) = ba59735707ca8758d62e78b7756330aa933f2de7
 SHA1 (patch-ae) = 90c7e0a19c81e710392c675be650c57e64ee65b3
-SHA1 (patch-af) = c480f8a1e3e3d92341b30873cb5b465f8fe53c72
-SHA1 (patch-ag) = 9fdc2861365350d804527f5a5800f5628c1e21ad
+SHA1 (patch-af) = 05b604d075f6156a3596013e3e17c4ba21a88359
+SHA1 (patch-ag) = b0b06ac91a2cbfd4b16c7f15966860f17f38e4f4
 SHA1 (patch-ao) = 74f5ce5ecfc40c88fa579b386b0253d4ad9d802f
 SHA1 (patch-ap) = 7cc6162de323bf07e52cbad7d4b4b54ac01d105e
 SHA1 (patch-ar) = 09286c5e21c6b8f6d35ab53146297c2e4f44ad55
