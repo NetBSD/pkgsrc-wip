@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2015/01/19 12:33:47 thomasklausner Exp $
+$NetBSD: distinfo,v 1.27 2015/01/22 08:01:26 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -33,7 +33,7 @@ SHA1 (patch-dom_system_OSFileConstants.cpp) = fec01c3c2c1b7e1c57abe9ec269067ee98
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = a2a0652d0eac018fda06e729bf5ba786dd8a3866
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
-SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = 3a46f20353ddb7a2a01ccc71e5367425e68a6d2f
+SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = 0bf625a4654092d294f9eb91d07d9c88ba1efb4d
 SHA1 (patch-intl_hyphenation_hnjalloc.h) = e0ede6202d3f2ec370c729923f63ee8a455d5054
 SHA1 (patch-ios) = 6bd3450174c58c67ca8e091745412b1ebc69e069
 SHA1 (patch-ipc_chromium_Makefile.in) = edd85b79cd3879f7595b932442bb0e93505d5506
