@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6045 2015/01/18 07:00:31 makoto Exp $
+# $Id: Makefile,v 1.6046 2015/01/22 22:46:53 schnoebe Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3917,6 +3917,7 @@ SUBDIR+=	xtraceroute
 SUBDIR+=	xtrap
 SUBDIR+=	xtreemfs-client
 SUBDIR+=	xtreemfs-server
+SUBDIR+=	xtrackcad
 SUBDIR+=	xtrlock
 SUBDIR+=	xvmware
 SUBDIR+=	xwelltris
