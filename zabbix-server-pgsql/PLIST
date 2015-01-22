@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/21 22:56:44 heidnes Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/22 13:59:51 heidnes Exp $
 man/man8/zabbix_server.8
 sbin/zabbix_server
 share/doc/zabbix/AUTHORS
@@ -46,5 +46,4 @@ share/zabbix/upgrades/dbpatches/2.2/README
 @pkgdir share/zabbix/externalscripts
 @pkgdir share/zabbix/data
 @pkgdir share/zabbix/alertscripts
-@pkgdir share/doc/zabbix
 @pkgdir etc/zabbix/zabbix_server.conf.d
