@@ -1,5 +1,5 @@
 --- src/FontFace.cpp.orig	2012-06-26 10:46:34.000000000 -0500
-+++ src/FontFace.cpp	2015-01-22 16:42:19.000000000 -0600
++++ src/FontFace.cpp	2015-01-23 11:57:18.000000000 -0600
 @@ -341,7 +341,7 @@
  	// Spot check using "key" value first
  	// to avoid wasting time:
@@ -40,7 +40,7 @@
  	// Indic:
  	//
  	_checkOrthography(Bengali::pData);
-@@ -601,6 +595,18 @@
+@@ -601,6 +595,21 @@
  	_checkOrthography(TaiViet::pData);
  	
  	_checkOrthography(OldSouthArabian::pData);
@@ -55,6 +55,9 @@
 +	_checkOrthography(ChessSymbols::pData);
 +	_checkOrthography(Emoticons::pData);
 +	_checkOrthography(Food::pData);
++	_checkOrthography(MathematicalGreek::pData);
++	_checkOrthography(MathematicalLatin::pData);
++	_checkOrthography(MathematicalNumerals::pData);
 +	_checkOrthography(MathematicalOperators::pData);
  	
  	
