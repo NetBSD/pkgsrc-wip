@@ -1,7 +1,7 @@
-$NetBSD: patch-plugins_t602_Makefile.am,v 1.1 2014/12/30 17:31:37 nros Exp $
+$NetBSD: patch-plugins_t602_Makefile.am,v 1.2 2015/01/23 14:30:11 nros Exp $
 GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
 to the linker.  Prefix with "-Wl," to fix build.
---- plugins/t602/Makefile.am.orig	2014-12-30 17:42:12.000000000 +0000
+--- plugins/t602/Makefile.am.orig	2011-11-15 21:25:46.000000000 +0000
 +++ plugins/t602/Makefile.am
 @@ -16,6 +16,7 @@ t602_la_LIBADD = \
  	$(T602_LIBS)

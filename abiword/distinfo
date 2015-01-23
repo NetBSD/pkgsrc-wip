@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2014/12/30 17:31:36 nros Exp $
+$NetBSD: distinfo,v 1.6 2015/01/23 14:30:11 nros Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
@@ -20,6 +20,7 @@ SHA1 (patch-plugins_garble_Makefile.am) = 335b8855b80ed86a62357ec5b37fd7cdf8cade
 SHA1 (patch-plugins_gda_Makefile.am) = 4ea9e69150d7c4cfff2498f22c7b3c43a0bad8dd
 SHA1 (patch-plugins_gdict_Makefile.am) = 3d5ea2123738ed9afb3ad654273986586955c87e
 SHA1 (patch-plugins_gimp_Makefile.am) = 7dd9aa0d9780589ce51f931890b11d868fc6864a
+SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = dcb7631619430517fb7f59541e7e2ea585750cbf
 SHA1 (patch-plugins_goffice_Makefile.am) = 21da00c3c9d45a66f40f3c4a4d55f36cb90efbca
 SHA1 (patch-plugins_google_Makefile.am) = 76ec78f5fc70ffe42726abeb6faaee08841a08d8
 SHA1 (patch-plugins_grammar_Makefile.am) = 7c05113565bb895542c0fcb257c1a048c3850b38
@@ -30,6 +31,8 @@ SHA1 (patch-plugins_kword_Makefile.am) = 64c45ea653d1444303b7602db74558f38320606
 SHA1 (patch-plugins_latex_Makefile.am) = dcc01cd9c2882b8cebe14ee2c24a5fa81e826fce
 SHA1 (patch-plugins_loadbindings_Makefile.am) = 807cc2a445579d0bfaf24845ec34e37756f221e1
 SHA1 (patch-plugins_mathview_Makefile.am) = c0860d9f8b6bbc55df57bcc6570ed9930dc45dd1
+SHA1 (patch-plugins_mathview_xp_AbiMathView.cpp) = 9029ba37ccd80c18b62a8135c13bbf19e9c861e1
+SHA1 (patch-plugins_mathview_xp_Makefile.am) = bf734c44422d863721b03582c6ff4667046ec07e
 SHA1 (patch-plugins_mht_Makefile.am) = b2b3db039c26f21627d59862ceb666430edddfc4
 SHA1 (patch-plugins_mht_xp_ie__imp__MHT.cpp) = d1e037678651cccf85a4d4c8fe42ada3f93e7fc7
 SHA1 (patch-plugins_mif_Makefile.am) = 4a53accbad7ab940eba914a3ef48b1558fc1703f
@@ -40,6 +43,8 @@ SHA1 (patch-plugins_openxml_Makefile.am) = f1ee30f62fed5b7eab223127706f0f3cdfc46
 SHA1 (patch-plugins_opml_Makefile.am) = 9d4e84b60290f65056753c35f5f082863d322254
 SHA1 (patch-plugins_ots_Makefile.am) = a674a0b2a222ba8d2acc8de002bf6d618c206573
 SHA1 (patch-plugins_paint_Makefile.am) = 5439c7f68f580eb3395f6a608e7e3282319942be
+SHA1 (patch-plugins_paint_xp_AbiGeneric.cpp) = 0c29c7ddf0dbd55d4bb6ab90311e40f2cff7130b
+SHA1 (patch-plugins_paint_xp_AbiPaint.cpp) = bf1ea7eb25fb384014523554f7ca55e6507bcbe6
 SHA1 (patch-plugins_passepartout_Makefile.am) = 0710f4bd03b6dd6f91bd0ff02343087cf899af1c
 SHA1 (patch-plugins_pdb_Makefile.am) = 21919d37f48f98e7975512758c0fe6f189338c38
 SHA1 (patch-plugins_pdf_Makefile.am) = 7d3fc29f3cb1ea72210ea04fb05a2428e3869e09
@@ -48,7 +53,7 @@ SHA1 (patch-plugins_psion_Makefile.am) = ccedae23c331676eea206c552825aa15a75da12
 SHA1 (patch-plugins_rsvg_Makefile.am) = 7a9cea6804ae5e8d715980ab6c3bdf1af4298cac
 SHA1 (patch-plugins_s5_Makefile.am) = 992a7cee915585326264dfefccfa3f486b3cb9ca
 SHA1 (patch-plugins_sdw_Makefile.am) = ff0b0ef3da754bf5a90ffdd94dd09304eba9eb81
-SHA1 (patch-plugins_t602_Makefile.am) = 00ce959bc442aceaeb8e5ac26b01f46c176a309f
+SHA1 (patch-plugins_t602_Makefile.am) = 98f8d0e655d9d001d647e4313d87feee9e1852ff
 SHA1 (patch-plugins_urldict_Makefile.am) = cdb8aa1b70acd82c35c73e974558ff39e701bc8d
 SHA1 (patch-plugins_wikipedia_Makefile.am) = c00cc17cd460164133b9989585581336208cc21b
 SHA1 (patch-plugins_wmf_Makefile.am) = d881fc6a01dddd52d54da080ec9d164d75f60bb9
