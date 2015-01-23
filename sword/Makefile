@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/01/23 23:14:48 nros Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/23 23:33:15 nros Exp $
 #
 
 DISTNAME=	sword-1.7.4
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-clucene=${BUILDLINK_PREFIX.libclucene}
 PKGCONFIG_OVERRIDE+=	sword.pc.in
 
 INSTALLATION_DIRS+=share/examples/sword
-INSTALL_TARGET+=install_config
+INSTALL_TARGET= install install_config
 REQD_FILES=	${PREFIX}/share/examples/sword/sword.conf \
 		${PKG_SYSCONFDIR}/sword.conf
 
