@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/01/07 07:44:17 obache Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/24 01:36:38 obache Exp $
 #
 
 DISTNAME=	polkit-0.112
@@ -20,12 +20,6 @@ PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-os-type=freebsd
-.endif
 
 POLKITD_USER?=		polkitd
 POLKITD_GROUP?=		polkitd
