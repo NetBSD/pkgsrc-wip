@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2015/01/22 08:01:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.41 2015/01/24 22:12:04 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -1344,6 +1344,8 @@ lib/firefox/browser/chrome/webide/content/details.js
 lib/firefox/browser/chrome/webide/content/details.xhtml
 lib/firefox/browser/chrome/webide/content/devicepreferences.js
 lib/firefox/browser/chrome/webide/content/devicepreferences.xhtml
+lib/firefox/browser/chrome/webide/content/devicesettings.js
+lib/firefox/browser/chrome/webide/content/devicesettings.xhtml
 lib/firefox/browser/chrome/webide/content/monitor.js
 lib/firefox/browser/chrome/webide/content/monitor.xhtml
 lib/firefox/browser/chrome/webide/content/newapp.js
@@ -1357,9 +1359,9 @@ lib/firefox/browser/chrome/webide/content/runtimedetails.xhtml
 lib/firefox/browser/chrome/webide/content/webide.js
 lib/firefox/browser/chrome/webide/content/webide.xul
 lib/firefox/browser/chrome/webide/skin/addons.css
+lib/firefox/browser/chrome/webide/skin/config-view.css
 lib/firefox/browser/chrome/webide/skin/deck.css
 lib/firefox/browser/chrome/webide/skin/details.css
-lib/firefox/browser/chrome/webide/skin/devicepreferences.css
 lib/firefox/browser/chrome/webide/skin/icons.png
 lib/firefox/browser/chrome/webide/skin/monitor.css
 lib/firefox/browser/chrome/webide/skin/newapp.css
@@ -1585,8 +1587,9 @@ lib/firefox/browser/modules/devtools/webconsole/network-panel.js
 lib/firefox/browser/modules/devtools/webconsole/panel.js
 lib/firefox/browser/modules/devtools/webconsole/webconsole.js
 lib/firefox/browser/modules/devtools/webide/addons.js
-lib/firefox/browser/modules/devtools/webide/build.js
 lib/firefox/browser/modules/devtools/webide/app-manager.js
+lib/firefox/browser/modules/devtools/webide/build.js
+lib/firefox/browser/modules/devtools/webide/config-view.js
 lib/firefox/browser/modules/devtools/webide/remote-resources.js
 lib/firefox/browser/modules/devtools/webide/runtimes.js
 lib/firefox/browser/modules/devtools/webide/tab-store.js
@@ -3172,6 +3175,7 @@ lib/firefox/modules/devtools/server/actors/pretty-print-worker.js
 lib/firefox/modules/devtools/server/actors/profiler.js
 lib/firefox/modules/devtools/server/actors/root.js
 lib/firefox/modules/devtools/server/actors/script.js
+lib/firefox/modules/devtools/server/actors/settings.js
 lib/firefox/modules/devtools/server/actors/storage.js
 lib/firefox/modules/devtools/server/actors/string.js
 lib/firefox/modules/devtools/server/actors/styleeditor.js
