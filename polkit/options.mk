@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/01/24 01:36:38 obache Exp $
+# $NetBSD: options.mk,v 1.3 2015/01/24 05:57:19 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.polkit
 PKG_SUPPORTED_OPTIONS=	introspection pam
@@ -26,6 +26,9 @@ PLIST.pam=	yes
 .  if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-pam-include=system
 .  endif
+MAKE_DIRS+=	/etc/pam.d
+CONF_FILES+=	${PREFIX}/share/examples/pam.d/polkit-1 \
+		/etc/pam.d/polkit-1
 .else
 CONFIGURE_ARGS+=	--with-authfw=shadow
 CONFIGURE_ARGS+=	--disable-pam-module

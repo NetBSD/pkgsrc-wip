@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/01/24 01:36:38 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/01/24 05:57:19 obache Exp $
 #
 
 DISTNAME=	polkit-0.112
@@ -46,10 +46,6 @@ CONF_FILES+=	${PREFIX}/share/examples/polkit/dbus-1/system.d/org.freedesktop.Pol
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
 CONF_FILES+=	${PREFIX}/share/examples/polkit/polkit-1/rules.d/50-default.rules \
 		${PKG_SYSCONFDIR}/polkit-1/rules.d/50-default.rules
-
-MAKE_DIRS+=	/etc/pam.d
-CONF_FILES+=	${PREFIX}/share/examples/pam.d/polkit-1 \
-		/etc/pam.d/polkit-1
 
 .include "options.mk"
 
