@@ -1,0 +1,27 @@
+Linking CXX shared library ../../lib/libjavascriptcoregtk-4.0.so
+CMakeFiles/JavaScriptCore.dir/runtime/FunctionExecutableDump.cpp.o: In function `JSC::FunctionExecutableDump::dump(WTF::PrintStream&) const':
+FunctionExecutableDump.cpp:(.text+0x29): undefined reference to `JSC::JSCell::structure() const'
+FunctionExecutableDump.cpp:(.text+0x31): undefined reference to `JSC::JSCell::structure() const'
+FunctionExecutableDump.cpp:(.text+0x3c): undefined reference to `JSC::JSCell::structure() const'
+FunctionExecutableDump.cpp:(.text+0x44): undefined reference to `JSC::JSCell::structure() const'
+FunctionExecutableDump.cpp:(.text+0x4c): undefined reference to `JSC::JSCell::structure() const'
+FunctionExecutableDump.cpp:(.text+0x84): undefined reference to `JSC::JSCell::inherits(JSC::ClassInfo const*) const'
+CMakeFiles/JavaScriptCore.dir/llint/LLIntEntrypoint.cpp.o: In function `JSC::LLInt::setEntrypoint(JSC::VM&, JSC::CodeBlock*)':
+LLIntEntrypoint.cpp:(.text+0x6c): undefined reference to `JSC::JSCell::structure() const'
+LLIntEntrypoint.cpp:(.text+0x74): undefined reference to `JSC::JSCell::structure() const'
+LLIntEntrypoint.cpp:(.text+0x7f): undefined reference to `JSC::JSCell::structure() const'
+LLIntEntrypoint.cpp:(.text+0x87): undefined reference to `JSC::JSCell::structure() const'
+LLIntEntrypoint.cpp:(.text+0x8f): undefined reference to `JSC::JSCell::structure() const'
+LLIntEntrypoint.cpp:(.text+0xc7): undefined reference to `JSC::JSCell::inherits(JSC::ClassInfo const*) const'
+Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/build.make:13201: recipe for target 'lib/libjavascriptcoregtk-4.0.so.18.0.9' failed
+gmake[2]: *** [lib/libjavascriptcoregtk-4.0.so.18.0.9] Error 1
+CMakeFiles/Makefile2:344: recipe for target 'Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/all' failed
+gmake[1]: *** [Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/all] Error 2
+Makefile:137: recipe for target 'all' failed
+gmake: *** [all] Error 2
+*** Error code 2
+Stop.
+
+make[1]: stopped in /usr/pkgsrc/wip/webkit-gtk
+*** Error code 1
+Stop.
