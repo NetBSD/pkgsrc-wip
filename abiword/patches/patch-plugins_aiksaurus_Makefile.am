@@ -1,13 +1,23 @@
-$NetBSD: patch-plugins_aiksaurus_Makefile.am,v 1.1 2014/12/30 17:31:36 nros Exp $
+$NetBSD: patch-plugins_aiksaurus_Makefile.am,v 1.2 2015/01/24 21:41:38 nros Exp $
 GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
 to the linker.  Prefix with "-Wl," to fix build.
 --- plugins/aiksaurus/Makefile.am.orig	2014-03-21 23:51:31.000000000 +0000
 +++ plugins/aiksaurus/Makefile.am
-@@ -26,6 +26,7 @@ aiksaurus_la_LIBADD = \
- 	$(AIKSAURUS_LIBS)
+@@ -4,7 +4,7 @@ if TOOLKIT_GTK
  
+ if WITH_BUILTIN_AIKSAURUS_GTK
+ SUBDIRS += aiksaurusgtk3
+-platform_lib = aiksaurusgtk3/libAiksaurusGtk3.la
++platform_lib = aiksaurusgtk3/libAiksaurusGtk3.la -lstdc++
+ endif
+ 
+ endif
+@@ -28,7 +28,7 @@ aiksaurus_la_LIBADD = \
  aiksaurus_la_LDFLAGS = \
-+	-Wl, \
  	-avoid-version \
  	-module \
- 	-no-undefined
+-	-no-undefined
++	-Wl,-no-undefined
+ 
+ aiksaurus_la_SOURCES = 
+ 

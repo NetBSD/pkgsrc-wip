@@ -1,13 +1,20 @@
-$NetBSD: patch-plugins_psion_Makefile.am,v 1.1 2014/12/30 17:31:37 nros Exp $
+$NetBSD: patch-plugins_psion_Makefile.am,v 1.2 2015/01/24 21:41:39 nros Exp $
 GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
 to the linker.  Prefix with "-Wl," to fix build.
 --- plugins/psion/Makefile.am.orig	2011-11-15 21:25:46.000000000 +0000
 +++ plugins/psion/Makefile.am
-@@ -9,6 +9,7 @@ psion_la_LIBADD = \
+@@ -6,12 +6,13 @@ plugin_LTLIBRARIES = psion.la
+ 
+ psion_la_LIBADD = \
+ 	xp/libxp.la \
++	-lstdc++ \
  	$(PSION_LIBS)
  
  psion_la_LDFLAGS = \
-+	-Wl, \
  	-avoid-version \
  	-module \
- 	-no-undefined
+-	-no-undefined
++	-Wl,-no-undefined
+ 
+ psion_la_SOURCES = 
+ 
