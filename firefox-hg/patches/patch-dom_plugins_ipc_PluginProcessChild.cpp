@@ -1,14 +1,14 @@
-$NetBSD: patch-dom_plugins_ipc_PluginProcessChild.cpp,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
+$NetBSD: patch-dom_plugins_ipc_PluginProcessChild.cpp,v 1.2 2015/01/24 16:49:32 thomasklausner Exp $
 
 Just because OS_ARCH is Darwin does not mean
 libplugin_child_interpose.dylib is used.
 
---- dom/plugins/ipc/PluginProcessChild.cpp.orig	2014-05-06 22:55:25.000000000 +0000
+--- dom/plugins/ipc/PluginProcessChild.cpp.orig	2015-01-24 04:25:00.000000000 +0000
 +++ dom/plugins/ipc/PluginProcessChild.cpp
-@@ -42,7 +42,7 @@ namespace plugins {
- bool
- PluginProcessChild::Init()
+@@ -56,7 +56,7 @@ PluginProcessChild::Init()
  {
+     nsDebugImpl::SetMultiprocessMode("NPAPI");
+ 
 -#if defined(XP_MACOSX)
 +#if defined(MOZ_WIDGET_COCOA)
      // Remove the trigger for "dyld interposing" that we added in
