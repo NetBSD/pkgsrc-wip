@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/01/13 15:36:01 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/01/24 10:57:29 fhajny Exp $
 #
 # used by wip/munin-common/Makefile
 # used by wip/munin-master/Makefile
@@ -21,6 +21,7 @@ PATCHDIR=	${.CURDIR}/../../wip/munin-common/patches
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_LANGUAGES=		# none
 USE_TOOLS+=		gmake bash:run perl:run
 
 BUILD_DEFS+=		VARBASE
