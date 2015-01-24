@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.76 2015/01/23 17:18:34 imilh Exp $
+$NetBSD: distinfo,v 1.77 2015/01/24 08:52:57 imilh Exp $
 
-SHA1 (1f60fd4ca73d8bb8ae5ce805233fcc3c5ca115d5.tar.gz) = 3681722afbed1c12617d29274f706500a533e1dc
-RMD160 (1f60fd4ca73d8bb8ae5ce805233fcc3c5ca115d5.tar.gz) = 4bc91cfa52e0589f3643d9d37c26e480b5b9b593
-Size (1f60fd4ca73d8bb8ae5ce805233fcc3c5ca115d5.tar.gz) = 190072 bytes
+SHA1 (d2343cccbacb46159de5e3bf20f6985ed2d7e5a7.tar.gz) = 192bc7d2c116a9bebe817eb351b0772c57c36869
+RMD160 (d2343cccbacb46159de5e3bf20f6985ed2d7e5a7.tar.gz) = b80b602250d19de12b916e1f2b78a456f3d29d29
+Size (d2343cccbacb46159de5e3bf20f6985ed2d7e5a7.tar.gz) = 190406 bytes
