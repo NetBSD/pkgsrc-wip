@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.15 2015/01/24 01:33:07 leot1990 Exp $
+
+SHA1 (webkitgtk-2.6.5.tar.xz) = 1db3894f1c20d49550a2a064686afc944aa10dbb
+RMD160 (webkitgtk-2.6.5.tar.xz) = f38051dce253ef1cbc295d9e9fd83af20da24eb7
+Size (webkitgtk-2.6.5.tar.xz) = 10000124 bytes
+SHA1 (patch-Source_JavaScriptCore_ForwardingHeaders_JavaScriptCore_JSCallbackFunction.h) = 874cf0c507d199787d2ad745519d5d3abd7a860c
+SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = bee908e10d7480c28e1a2b62f514b9e1e70fb1ba
+SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = dc642247bbaab0365547454d4482ad6d73b48e34
+SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = b5c3e540769da651d7bde197e426b6b66ab8e560
+SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 0f0366355a14a221aa49e5d06da2b2ddc8f3b341
+SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = f1eee7f9d3012edee1915234c837cff820f97092
+SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 14796910c3ff76545bc4826fa8d7b09863cf2b02
+SHA1 (patch-Source_WTF_wtf_Platform.h) = bff658eb090c6738454e38f16c6635f45582b57a
+SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 02f5d9c2289c8eb1038bdf1cc73e14dac3cd76c4
+SHA1 (patch-ai) = 4b02898c650564fbf7b586652a13a1775a4d4748
+SHA1 (patch-aj) = 8d317673070f621a2aa9ac9c6de7d5bdf1ca9079
+SHA1 (patch-am) = f3371113b4b633200cee2f96aea574421584d7fd
