@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/11/14 17:39:54 outpaddling Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/25 19:59:53 outpaddling Exp $
 #
 
 DISTNAME=	auto-admin-0.3.4
@@ -19,10 +19,8 @@ NO_BUILD=	yes
 
 do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/Common/* \
+	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
-	echo ${OPSYS}
-	ls ${WRKSRC}/Scripts/${OPSYS}
 # Why doesn't this work?
 #.if exists(${WRKSRC}/Scripts/${OPSYS})
 .if ${OPSYS} == NetBSD
@@ -30,7 +28,7 @@ do-install:
 		${DESTDIR}${PREFIX}/sbin
 .endif
 .if exists(/etc/redhat-release)
-	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/Redhat/* \
+	${INSTALL_SCRIPT} ${WRKSRC}/CentOS/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
 .endif
 
