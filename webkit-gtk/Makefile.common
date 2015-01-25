@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2015/01/24 01:33:07 leot1990 Exp $
+# $NetBSD: Makefile.common,v 1.11 2015/01/25 15:59:25 leot1990 Exp $
 # used by www/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.6.5
@@ -56,7 +56,7 @@ CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
-CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=1	# XXX: not completely sure (was --disable-fast-malloc)
+CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=ON	# XXX: not completely sure (was --disable-fast-malloc)
 .endif
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
