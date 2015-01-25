@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2015/01/25 17:30:04 leot1990 Exp $
+# $NetBSD: Makefile.common,v 1.13 2015/01/25 20:41:38 leot1990 Exp $
 # used by wip/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.6.5
@@ -20,8 +20,9 @@ USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 # GCC >= 4.8 (for std::this_thread::yield() at least) or Clang >= 3.3
 GCC_REQD+=	4.8
 
-# XXX: new location or no more here?
-#PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
+PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk.pc.in
+PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk-web-extension.pcin
 
 CMAKE_ARGS+=		-DPORT=GTK
 
