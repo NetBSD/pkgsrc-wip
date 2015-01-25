@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/01/03 13:59:15 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/01/25 15:24:30 jonthn Exp $
 bin/nvim
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
@@ -204,28 +204,22 @@ share/nvim/runtime/doc/job_control.txt
 share/nvim/runtime/doc/makehtml.awk
 share/nvim/runtime/doc/maketags.awk
 share/nvim/runtime/doc/manpages/de/vim-de.1
-share/nvim/runtime/doc/manpages/evim.1
-share/nvim/runtime/doc/manpages/fr/evim-fr.1
 share/nvim/runtime/doc/manpages/fr/vim-fr.1
 share/nvim/runtime/doc/manpages/fr/vimdiff-fr.1
 share/nvim/runtime/doc/manpages/fr/vimtutor-fr.1
 share/nvim/runtime/doc/manpages/fr/xxd-fr.1
-share/nvim/runtime/doc/manpages/it/evim-it.1
 share/nvim/runtime/doc/manpages/it/vim-it.1
 share/nvim/runtime/doc/manpages/it/vimdiff-it.1
 share/nvim/runtime/doc/manpages/it/vimtutor-it.1
 share/nvim/runtime/doc/manpages/it/xxd-it.1
-share/nvim/runtime/doc/manpages/ja/evim-ja.1
 share/nvim/runtime/doc/manpages/ja/vim-ja.1
 share/nvim/runtime/doc/manpages/ja/vimdiff-ja.1
 share/nvim/runtime/doc/manpages/ja/vimtutor-ja.1
 share/nvim/runtime/doc/manpages/ja/xxd-ja.1
-share/nvim/runtime/doc/manpages/pl/evim-pl.1
 share/nvim/runtime/doc/manpages/pl/vim-pl.1
 share/nvim/runtime/doc/manpages/pl/vimdiff-pl.1
 share/nvim/runtime/doc/manpages/pl/vimtutor-pl.1
 share/nvim/runtime/doc/manpages/pl/xxd-pl.1
-share/nvim/runtime/doc/manpages/ru/evim-ru.1
 share/nvim/runtime/doc/manpages/ru/vim-ru.1
 share/nvim/runtime/doc/manpages/ru/vimdiff-ru.1
 share/nvim/runtime/doc/manpages/ru/vimtutor-ru.1
@@ -319,7 +313,6 @@ share/nvim/runtime/doc/various.txt
 share/nvim/runtime/doc/vi_diff.txt
 share/nvim/runtime/doc/visual.txt
 share/nvim/runtime/doc/windows.txt
-share/nvim/runtime/evim.vim
 share/nvim/runtime/filetype.vim
 share/nvim/runtime/ftoff.vim
 share/nvim/runtime/ftplugin.vim
@@ -364,6 +357,7 @@ share/nvim/runtime/ftplugin/dictdconf.vim
 share/nvim/runtime/ftplugin/diff.vim
 share/nvim/runtime/ftplugin/dircolors.vim
 share/nvim/runtime/ftplugin/docbk.vim
+share/nvim/runtime/ftplugin/dockerfile.vim
 share/nvim/runtime/ftplugin/dosbatch.vim
 share/nvim/runtime/ftplugin/dosini.vim
 share/nvim/runtime/ftplugin/dtd.vim
@@ -888,6 +882,7 @@ share/nvim/runtime/syntax/dnsmasq.vim
 share/nvim/runtime/syntax/docbk.vim
 share/nvim/runtime/syntax/docbksgml.vim
 share/nvim/runtime/syntax/docbkxml.vim
+share/nvim/runtime/syntax/dockerfile.vim
 share/nvim/runtime/syntax/dosbatch.vim
 share/nvim/runtime/syntax/dosini.vim
 share/nvim/runtime/syntax/dot.vim
