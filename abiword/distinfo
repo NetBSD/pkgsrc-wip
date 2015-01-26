@@ -1,27 +1,27 @@
-$NetBSD: distinfo,v 1.7 2015/01/24 21:41:38 nros Exp $
+$NetBSD: distinfo,v 1.8 2015/01/26 09:44:42 nros Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
 Size (abiword-3.0.1.tar.gz) = 11144990 bytes
 SHA1 (patch-plugin-configure.m4) = a8b8db3bdbd69339e32eefec1de7b1b59467db40
-SHA1 (patch-plugins_aiksaurus_Makefile.am) = 5d156fdb5fa712d8815d3862c72b72bc71f885ef
+SHA1 (patch-plugins_aiksaurus_Makefile.am) = e859a0af2b436616b1dae45f3be8593cf917c87d
 SHA1 (patch-plugins_aiksaurus_aiksaurusgtk3_Makefile.am) = 2790a45fa4590f8f5ac27ec6e1b0e9eacc5c7c6e
 SHA1 (patch-plugins_applix_Makefile.am) = d579e6620189bcdd5cb9286edb77936893d66727
 SHA1 (patch-plugins_babelfish_Makefile.am) = 9a14d52b882824a344e4189b210ea05f15cd5dc4
 SHA1 (patch-plugins_bmp_Makefile.am) = 9919326323259fdb717f1cc1b63be7b5fecb4d85
 SHA1 (patch-plugins_clarisworks_Makefile.am) = 20b149e4ccba72e54421e59f62cee8823737af5d
 SHA1 (patch-plugins_collab_Makefile.am) = 268b976c687e300326f1af9933cea7c060ecef90
-SHA1 (patch-plugins_command_Makefile.am) = da9f167bf5d86873874ab6a2d4fd7b60387fa038
+SHA1 (patch-plugins_command_Makefile.am) = 42bf4af0905f83faf21ceabfbf20756c39d9d268
 SHA1 (patch-plugins_docbook_Makefile.am) = 73ef7476c0eae93a79ffd1571081b545a7cf5f0b
 SHA1 (patch-plugins_eml_Makefile.am) = 23bccc8e3aa62275f441635675a2a34f53c5d118
 SHA1 (patch-plugins_epub_Makefile.am) = 0d4f2bca4e2a40d3f0c34f1c5b37284190979d48
 SHA1 (patch-plugins_freetranslation_Makefile.am) = f494b16bdd2d8cb484bec09a61c6e3e0d8f78b44
 SHA1 (patch-plugins_garble_Makefile.am) = b6c3f68a390c0b4a4e5e5d626a7532f4542b5e9f
 SHA1 (patch-plugins_gda_Makefile.am) = 73a112eb3118c6769bef00c5f4c3ad50a735b54a
-SHA1 (patch-plugins_gdict_Makefile.am) = 6c9dbc729297edac6136a098ba0de3cb3dbccb55
+SHA1 (patch-plugins_gdict_Makefile.am) = 16e6fc9134bf96e8b924c8ef5f6f57988531684b
 SHA1 (patch-plugins_gimp_Makefile.am) = 0c284afb8e168dff87da0d4ae70936c8759b8cb5
 SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = dcb7631619430517fb7f59541e7e2ea585750cbf
-SHA1 (patch-plugins_goffice_Makefile.am) = 0c554d326153463d2f9d432992a6b08ddb7e4d10
+SHA1 (patch-plugins_goffice_Makefile.am) = 5b4f4a1f006fc67cbd33c0beca6ebc8fd5542eab
 SHA1 (patch-plugins_google_Makefile.am) = ae883071f847b641ded349e5cb2ac3c126942d8d
 SHA1 (patch-plugins_grammar_Makefile.am) = 0c651d09ae690a22ce70f93fd091ceabb18a44d0
 SHA1 (patch-plugins_hancom_Makefile.am) = 93e6b69160438a254a6c68b81a6385456d328999
@@ -49,7 +49,7 @@ SHA1 (patch-plugins_passepartout_Makefile.am) = c048ef9cdfab149394a6ecb02f7d5faf
 SHA1 (patch-plugins_pdb_Makefile.am) = a01b5ed0ee10d3f72cf6fa2d20b96628844c8217
 SHA1 (patch-plugins_pdf_Makefile.am) = 68fd361019ab4f2a3bd9bc0ea9e5b2d697e13e45
 SHA1 (patch-plugins_presentation_Makefile.am) = 463c2bd628d4cdad9cee89ae1c10c56b0343366d
-SHA1 (patch-plugins_psion_Makefile.am) = 69948f3cc2e6eac7ef3b0c910991f136784f13dd
+SHA1 (patch-plugins_psion_Makefile.am) = 1f8836ea23aa38ad6716461fa4f0c6db1ec6eba0
 SHA1 (patch-plugins_rsvg_Makefile.am) = f844ee15921547e769da8dd5acfb64b57958b33f
 SHA1 (patch-plugins_s5_Makefile.am) = 4cf5ee72bd6878c5e3801141023c1e0ec5ec9002
 SHA1 (patch-plugins_sdw_Makefile.am) = b9a756c639225e7d57543f83d6db6e93be3d411e
