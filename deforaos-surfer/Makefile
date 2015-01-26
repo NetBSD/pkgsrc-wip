@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2014/08/03 22:16:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2015/01/26 23:51:24 khorben Exp $
 
-DISTNAME=	Surfer-0.2.6
-PKGNAME=	deforaos-surfer-0.2.6
+DISTNAME=	Surfer-0.2.7
+PKGNAME=	deforaos-surfer-0.2.7
 CATEGORIES=	www
-MASTER_SITES=	http://www.defora.org/os/download/download/3709/
+MASTER_SITES=	http://www.defora.org/os/download/download/4345/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -22,9 +22,13 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
 
 post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/download.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/download.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/helper.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/helper.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/surfer.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/surfer.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/download.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/download.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/helper.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/helper.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/surfer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/surfer.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 
