@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/07/23 12:02:11 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/01/26 01:10:08 leot1990 Exp $
 bin/zathura
 include/zathura/document.h
 include/zathura/links.h
@@ -10,6 +10,7 @@ include/zathura/version.h
 lib/pkgconfig/zathura.pc
 man/man1/zathura.1
 man/man5/zathurarc.5
+share/appdata/zathura.appdata.xml
 share/applications/zathura.desktop
 share/dbus-1/interfaces/org.pwmt.zathura.xml
 share/locale/ca/LC_MESSAGES/zathura.mo
