@@ -1,31 +1,28 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/01/26 21:21:52 jihbed Exp $
 
-DISTNAME=	Theano-0.3.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/}
-CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/T/Theano/
+DISTNAME=	Theano-0.6.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	math python
+MASTER_SITES=	https://pypi.python.org/packages/source/T/Theano/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://deeplearning.net/software/theano/
-COMMENT= Optimizing compiler for evaluating mathematical expressions on CPU/GPU
+COMMENT= 	Optimizing compiler for evaluating mathematical expressions
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
+WRKSRC=	${WRKDIR}/Theano-0.6.0
 
-WRKSRC=		${WRKDIR}/Theano-0.3.0
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-USE_TOOLS+=	pax
-USE_LANGUAGES=	# none
-
-INSTALLATION_DIRS=	share/doc/py-theano
+post-extract:
+	${MV} ${WRKSRC}/bin/theano-cache ${WRKSRC}/bin/theano-cache${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/theano-nose ${WRKSRC}/bin/theano-nose${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/theano-test ${WRKSRC}/bin/theano-test${PYVERSSUFFIX}
 
 do-test:
-	${RUN} cd ${WRKSRC}/theano/tests ; ${SETENV} ${TEST_ENV} ${PYTHONBIN}  main.py
-
-post-install:
-	cd ${WRKSRC}/doc && pax -rw -pp . ${DESTDIR}${PREFIX}/share/doc/py-theano
+	${RUN} cd {WRKSRC}/theano/tests ; ${SETENV} {TEST_ENV} ${PYTHONBIN} main.py
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"
