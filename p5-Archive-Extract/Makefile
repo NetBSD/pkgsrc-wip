@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/01/26 05:58:58 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/26 06:51:22 makoto Exp $
 
 DISTNAME=	Archive-Extract-0.74
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	archivers perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive-Extract/}
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BI/BINGOS/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~bingos/Archive-Extract/
