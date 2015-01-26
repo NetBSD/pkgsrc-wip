@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6047 2015/01/24 01:37:34 leot1990 Exp $
+# $Id: Makefile,v 1.6048 2015/01/26 09:25:58 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -276,7 +276,7 @@ SUBDIR+=	calcurse
 SUBDIR+=	calibre
 SUBDIR+=	calligra
 SUBDIR+=	callweaver
-SUBDIR+=	calypso
+SUBDIR+=	calypso-git
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
