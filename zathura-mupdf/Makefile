@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/04/29 22:42:45 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/26 01:12:28 leot1990 Exp $
 #
 
-VERSION=	0.2.6
+VERSION=	0.2.7
 PKGNAME=	zathura-mupdf-${VERSION}
 DISTNAME=	zathura-pdf-mupdf-${VERSION}
 CATEGORIES=	print

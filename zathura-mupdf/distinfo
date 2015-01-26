@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/29 22:42:45 leot1990 Exp $
+$NetBSD: distinfo,v 1.2 2015/01/26 01:12:28 leot1990 Exp $
 
-SHA1 (zathura-pdf-mupdf-0.2.6.tar.gz) = da25c48da6e119dfc454807486c6fbd3dec0aaf3
-RMD160 (zathura-pdf-mupdf-0.2.6.tar.gz) = ad0dfb2a3cf9ecae932086edfe69b9566f20aa75
-Size (zathura-pdf-mupdf-0.2.6.tar.gz) = 9094 bytes
+SHA1 (zathura-pdf-mupdf-0.2.7.tar.gz) = f78b534028819312dec1e04c94c6c17141ea7069
+RMD160 (zathura-pdf-mupdf-0.2.7.tar.gz) = 06ccad365ad54bc26f10caa25a7b5e3fd5defaf8
+Size (zathura-pdf-mupdf-0.2.7.tar.gz) = 9357 bytes
