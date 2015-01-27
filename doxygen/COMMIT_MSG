@@ -1,0 +1,19 @@
+Release 1.8.9.1
+(release date 04-01-2015)
+  - Fixed a couple of cases where sharing string data could lead to corruption [view]
+  - Various VHDL related fixes [view]
+  - Bug 742151 - Bogus warning: citelist: Unexpected new line character [view]
+  - Bug 742230 - @todo paragraphs incorrectly placed in rtf output [view]
+  - Bug 742235 - Bogus message with addtogroup [view]
+  - Documentation HTML Header, Footer, and Stylesheet changes [view]
+  - Documenting RESULT variable of Fortran FUNCTION [view]
+  - Fix potential null pointer dereference in src/context.cpp [view]
+  - Fixed compilation issue on Windows [view]
+  - Fortran FUNCTION source code [view]
+  - Fortran: code color GOTO as flow keyword. [view]
+  - Help message regarding layout file [view]
+  - Remove unused local and static global variables [view]
+  - Suggestion to use stripPrefix has been implemented for
+    RESULT. For consistency also implemented for
+    arguments. [view]
+  - Switched back to version 6.2 of JavaCC for VHDL parser generation. [view]

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/01/27 05:46:22 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/01/27 06:30:16 makoto Exp $
 bin/doxygen
 man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
@@ -634,7 +634,6 @@ ${PLIST.latex}share/doc/doxygen/examples/manual/html/functions_func.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/functions_vars.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/globals.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/globals_func.html
-${PLIST.latex}share/doc/doxygen/examples/manual/html/globals_vars.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/hierarchy.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/index.html
 ${PLIST.latex}share/doc/doxygen/examples/manual/html/jquery.js

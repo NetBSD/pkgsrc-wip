@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/01/14 08:29:50 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/27 06:30:16 makoto Exp $
 
-DISTNAME=	doxygen-1.8.9.src
+DISTNAME=	doxygen-1.8.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
