@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2015/01/14 08:29:50 makoto Exp $
+$NetBSD: patch-aa,v 1.2 2015/01/27 05:46:22 makoto Exp $
+
+Make build honor PKGSRC_CFLAGS
 
 --- tmake/lib/netbsd-g++/tmake.conf.orig	2006-07-21 19:54:13.000000000 +0000
 +++ tmake/lib/netbsd-g++/tmake.conf
