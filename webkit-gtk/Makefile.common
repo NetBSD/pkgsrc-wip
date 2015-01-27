@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2015/01/25 20:41:38 leot1990 Exp $
+# $NetBSD: Makefile.common,v 1.14 2015/01/27 03:12:53 leot1990 Exp $
 # used by wip/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.6.5
@@ -75,7 +75,7 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-introspection
+CMAKE_ARGS+=	-DENABLE_INTROSPECTION=ON
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
