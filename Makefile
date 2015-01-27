@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6048 2015/01/26 09:25:58 thomasklausner Exp $
+# $Id: Makefile,v 1.6049 2015/01/27 00:10:05 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -440,7 +440,6 @@ SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init
 SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-libdesktop
-SUBDIR+=	deforaos-libsystem
 SUBDIR+=	deforaos-locker
 SUBDIR+=	deforaos-mailer
 SUBDIR+=	deforaos-mixer

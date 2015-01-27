@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/12/25 19:43:13 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2015/01/27 00:10:05 khorben Exp $
 #
 
 DISTNAME=	libDesktop-0.1.0
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
-.include "../../wip/deforaos-libsystem/buildlink3.mk"
+.include "../../devel/deforaos-libsystem/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

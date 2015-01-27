@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/27 00:10:10 khorben Exp $
 
 DISTNAME=	Probe-0.0.2
 PKGNAME=	deforaos-probe-0.0.2
@@ -29,5 +29,5 @@ SUBST_FILES.fix-paths+=	../DaMon
 SUBST_FILES.fix-paths+=	../Probe
 SUBST_SED.fix-paths=	-e 's,"/usr/local,"${PREFIX},g'
 
-.include "../../wip/deforaos-libsystem/buildlink3.mk"
+.include "../../devel/deforaos-libsystem/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

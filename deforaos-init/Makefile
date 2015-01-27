@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:34 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/27 00:10:05 khorben Exp $
 
 
 DISTNAME=	Init-0.0.0
@@ -23,5 +23,5 @@ SUBST_MESSAGE.fix-path=	Fixing absolute paths.
 SUBST_FILES.fix-paths+=	../Init
 SUBST_SED.fix-paths=	-e 's,"/usr/local,"${PREFIX},g'
 
-.include "../../wip/deforaos-libsystem/buildlink3.mk"
+.include "../../devel/deforaos-libsystem/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

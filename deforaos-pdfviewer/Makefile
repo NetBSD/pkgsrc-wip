@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/12/17 01:53:08 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2015/01/27 00:10:10 khorben Exp $
 #
 
 DISTNAME=	PDFViewer-0.0.1
@@ -19,7 +19,7 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
 .include "options.mk"
 
-.include "../../wip/deforaos-libsystem/buildlink3.mk"
+.include "../../devel/deforaos-libsystem/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/27 00:10:05 khorben Exp $
 
 DISTNAME=	cpp-0.0.1
 PKGNAME=	deforaos-cpp-0.0.1
@@ -16,5 +16,5 @@ USE_TOOLS+=	pkg-config
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
-.include "../../wip/deforaos-libsystem/buildlink3.mk"
+.include "../../devel/deforaos-libsystem/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
