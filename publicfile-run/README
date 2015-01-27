@@ -1,6 +1,0 @@
-Credits
--------
-
-This package started out as a copy of the net/djbdns-run package written by
-Amitai Schlair (schmonz@).  Many things, especially the rc.d scripts, are just
-slightly modified versions of the originals.
