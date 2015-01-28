@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2015/01/24 22:12:04 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.42 2015/01/28 19:24:45 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -754,6 +754,9 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/feeds/subscribe.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/feeds/videoFeedIcon.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/feeds/videoFeedIcon16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/fullscreen-darknoise.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/heartbeat-icon.svg
+lib/firefox/browser/chrome/browser/skin/classic/browser/heartbeat-star-lit.svg
+lib/firefox/browser/chrome/browser/skin/classic/browser/heartbeat-star-off.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/identity-icons-generic.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/identity-icons-https-ev.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/identity-icons-https-mixed-active.png
@@ -833,6 +836,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/search-indicator-badge-a
 lib/firefox/browser/chrome/browser/skin/classic/browser/search-indicator.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/search-pref.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/searchbar.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/session-restore.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/setDesktopBackground.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/slowStartup-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/social/chat-icons.svg
@@ -858,6 +862,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/syncProgress-toolbar.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/syncProgress.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/syncQuota.css
 lib/firefox/browser/chrome/browser/skin/classic/browser/syncSetup.css
+lib/firefox/browser/chrome/browser/skin/classic/browser/tab-crashed.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/alltabs-inverted.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/alltabs.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/tabbrowser/connecting.png
@@ -903,6 +908,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/webRTC-shareScreen-64.pn
 lib/firefox/browser/chrome/browser/skin/classic/browser/webRTC-sharingDevice-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/webRTC-sharingMicrophone-16.png
 lib/firefox/browser/chrome/browser/skin/classic/browser/webRTC-sharingScreen-16.png
+lib/firefox/browser/chrome/browser/skin/classic/browser/welcome-back.svg
 lib/firefox/browser/chrome/browser/skin/classic/communicator/communicator.css
 lib/firefox/browser/chrome/chrome.manifest
 lib/firefox/browser/chrome/en-US/locale/branding/brand.dtd
@@ -2241,10 +2247,12 @@ lib/firefox/chrome/toolkit/skin/classic/global/icons/webapps-16.png
 lib/firefox/chrome/toolkit/skin/classic/global/icons/webapps-64.png
 lib/firefox/chrome/toolkit/skin/classic/global/icons/windowControls.png
 lib/firefox/chrome/toolkit/skin/classic/global/icons/wrap.png
+lib/firefox/chrome/toolkit/skin/classic/global/in-content/check-partial.svg
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/check.svg
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/common.css
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/dropdown.svg
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/help-glyph.svg
+lib/firefox/chrome/toolkit/skin/classic/global/in-content/info-pages.css
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/radio.svg
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/sorter.png
 lib/firefox/chrome/toolkit/skin/classic/global/in-content/sorter@2x.png
@@ -3150,7 +3158,9 @@ lib/firefox/modules/devtools/pretty-fast.js
 lib/firefox/modules/devtools/qrcode/decoder/index.js
 lib/firefox/modules/devtools/qrcode/encoder/index.js
 lib/firefox/modules/devtools/qrcode/index.js
+lib/firefox/modules/devtools/security/auth.js
 lib/firefox/modules/devtools/security/cert.js
+lib/firefox/modules/devtools/security/prompt.js
 lib/firefox/modules/devtools/security/socket.js
 lib/firefox/modules/devtools/server/actors/actor-registry.js
 lib/firefox/modules/devtools/server/actors/animation.js
