@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/01/28 16:44:31 outpaddling Exp $
+
+SHA1 (trinityrnaseq_r20140413p1.tar.gz) = d916cc7099a6a45de923e20bba85bb7949420395
+RMD160 (trinityrnaseq_r20140413p1.tar.gz) = f62a9830fef47d0ad3b85b65c365994e8e684447
+Size (trinityrnaseq_r20140413p1.tar.gz) = 156313571 bytes
+SHA1 (patch-PerlLib-HTC-SLURM_handler.pm) = fc978425c6c9a2894e8a08e3914bf85b4916c707
+SHA1 (patch-PerlLib_HTC_FarmIt.pm) = a3a1b8542ad11c609d89fccce6a65b7e843544f5
+SHA1 (patch-Trinity) = bfba1122d8bbae8bc533b4a7e2abd95ee37caa32
