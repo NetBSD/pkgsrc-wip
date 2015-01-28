@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6050 2015/01/28 16:38:40 outpaddling Exp $
+# $Id: Makefile,v 1.6051 2015/01/28 16:42:00 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2227,6 +2227,7 @@ SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pandoc
 SUBDIR+=	paperbox
+SUBDIR+=	parafly
 SUBDIR+=	paraview
 SUBDIR+=	parcellite
 SUBDIR+=	parted
