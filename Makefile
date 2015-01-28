@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6052 2015/01/28 16:45:44 outpaddling Exp $
+# $Id: Makefile,v 1.6053 2015/01/28 18:49:31 szptvlfn Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1093,7 +1093,6 @@ SUBDIR+=	hs-hashmap
 SUBDIR+=	hs-haskeline
 SUBDIR+=	hs-haskell-lexer
 SUBDIR+=	hs-haskell-src
-SUBDIR+=	hs-haskell-src-exts
 SUBDIR+=	hs-haskelldb
 SUBDIR+=	hs-haskelldb-hdbc
 SUBDIR+=	hs-haskelldb-hdbc-sqlite3
