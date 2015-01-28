@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6049 2015/01/27 00:10:05 khorben Exp $
+# $Id: Makefile,v 1.6050 2015/01/28 16:38:40 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1319,6 +1319,7 @@ SUBDIR+=	jbmgen
 SUBDIR+=	jc
 SUBDIR+=	jdk15
 SUBDIR+=	jdk16
+SUBDIR+=	jellyfish
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
