@@ -1,32 +1,27 @@
-# $NetBSD: Makefile,v 1.20 2014/05/09 07:38:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2015/01/28 19:10:23 lexort Exp $
 #
 
-DISTNAME=	generateDS-1.6a
+DISTNAME=	generateDS-2.14a
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.rexx.com/~dkuhlman/
+MASTER_SITES=	https://pypi.python.org/packages/source/g/generateDS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rexx.com/~dkuhlman/
+HOMEPAGE=	http://www.davekuhlman.org/generateDS.html
 COMMENT=	Python XML data binding library
 
-PKG_DESTDIR_SUPPORT=	none
+LICENSE=	mit
 
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+# TODO: explain
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
 
 REPLACE_PYTHON=	generateDS.py
 
-# set up a convenience link
-post-install:
-	${CHMOD} 0755 ${PREFIX}/${PYSITELIB}/generateDS.py
-	${LN} -sf ${PREFIX}/${PYSITELIB}/generateDS.py \
-		${PREFIX}/bin/generateDS${PYVERSSUFFIX}
-
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+# TODO: Explain why this is commented out and present.
 #.include "../../textproc/py-xml/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
