@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2014/12/19 16:07:27 nros Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/01/28 15:19:52 nros Exp $
 bin/qupzilla
 lib/libQupZilla.la
 lib/qupzilla/libAccessKeysNavigation.la
 lib/qupzilla/libAutoScroll.la
+lib/qupzilla/libFlashCookieManager.la
 lib/qupzilla/libGreaseMonkey.la
 lib/qupzilla/libMouseGestures.la
 lib/qupzilla/libPIM.la
 lib/qupzilla/libStatusBarIcons.la
+lib/qupzilla/libTabManager.la
 share/applications/qupzilla.desktop
 share/bash-completion/completions/qupzilla
 share/icons/hicolor/128x128/apps/qupzilla.png

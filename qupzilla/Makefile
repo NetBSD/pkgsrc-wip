@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2014/12/19 16:07:27 nros Exp $
+# $NetBSD: Makefile,v 1.10 2015/01/28 15:19:52 nros Exp $
 
-DISTNAME=	QupZilla-1.8.5
+DISTNAME=	QupZilla-1.8.6
 PKGNAME=	${DISTNAME:tl}
 
 CATEGORIES=	www
