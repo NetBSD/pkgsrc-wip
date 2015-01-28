@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6053 2015/01/28 18:49:31 szptvlfn Exp $
+# $Id: Makefile,v 1.6054 2015/01/28 19:34:15 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2682,7 +2682,6 @@ SUBDIR+=	py-gammafit
 SUBDIR+=	py-gaphas
 SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-gccxml
-SUBDIR+=	py-generateDS
 SUBDIR+=	py-genesis
 SUBDIR+=	py-geographiclib
 SUBDIR+=	py-geopy
