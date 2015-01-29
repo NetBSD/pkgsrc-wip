@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2015/01/29 10:42:07 thomasklausner Exp $
+$NetBSD: distinfo,v 1.31 2015/01/29 11:23:33 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -28,7 +28,6 @@ SHA1 (patch-dom_media_AudioStream.h) = 4e11be1fe76d878726d0bf2576301e939e7a4624
 SHA1 (patch-dom_media_gstreamer_GStreamerAllocator.cpp) = 66b2d775a2a4faae027edc459a37145318f0fe3f
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 03dc5bd5f6e67507d5572329e3888f7d528d0a7f
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae6195406657453578453e
-SHA1 (patch-dom_system_OSFileConstants.cpp) = dda1cb6740bd9e14b2f8991a1fd7ed44e83b7e43
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = a2a0652d0eac018fda06e729bf5ba786dd8a3866
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
@@ -77,8 +76,6 @@ SHA1 (patch-pb) = 97c9b2e4cefd524dc6ba825f71c3da2a761aa1f4
 SHA1 (patch-pc) = 8b2baa88f0983a2fef4f801cf6b1ae425f6c813a
 SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
 SHA1 (patch-security_manager_ssl_src_nsNSSComponent.cpp) = 6788dbd5084727dbf54e1996faa7a9aaae508293
-SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 6b926ccd793391ad7bd7101635f4b3eefe3db130
-SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = 3118d30646fafa30a621567b3b5d8260c6c567f7
 SHA1 (patch-toolkit_library_moz.build) = f0937fa86058a5c16fc261ad182df73b6533cb81
 SHA1 (patch-toolkit_toolkit.mozbuild) = a92b9f5114c3eab2c8e9f1d0eb21926235d2203a
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 6ee6fba04a3ecc6596f8aed67f752a1075901fa8
