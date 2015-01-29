@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.2 2015/01/29 10:42:08 thomasklausner Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.3 2015/01/29 11:25:08 thomasklausner Exp $
 
---- ipc/chromium/src/base/platform_thread_posix.cc.orig	2014-05-06 22:55:41.000000000 +0000
+--- ipc/chromium/src/base/platform_thread_posix.cc.orig	2015-01-29 11:02:17.000000000 +0000
 +++ ipc/chromium/src/base/platform_thread_posix.cc
 @@ -9,8 +9,12 @@
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.2 2015/01/29
  #elif defined(OS_LINUX)
  #include <sys/syscall.h>
  #include <sys/prctl.h>
-@@ -114,19 +116,20 @@ void PlatformThread::SetName(const char*
+@@ -114,7 +118,8 @@ void PlatformThread::SetName(const char*
    pthread_setname_np(pthread_self(), "%s", (void *)name);
  #elif defined(OS_BSD) && !defined(__GLIBC__)
    pthread_set_name_np(pthread_self(), name);
@@ -25,15 +25,3 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.2 2015/01/29
  #endif
  }
  #endif // !OS_MACOSX
- 
- namespace {
- 
- bool CreateThread(size_t stack_size, bool joinable,
-                   PlatformThread::Delegate* delegate,
-                   PlatformThreadHandle* thread_handle) {
- #if defined(OS_MACOSX)
-   base::InitThreading();
- #endif  // OS_MACOSX
- 
-   bool success = false;
-   pthread_attr_t attributes;
