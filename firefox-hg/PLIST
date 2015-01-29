@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/01/28 19:24:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.43 2015/01/29 12:12:49 thomasklausner Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -960,6 +960,7 @@ lib/firefox/browser/chrome/en-US/locale/browser/devtools/scratchpad.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/scratchpad.properties
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/shadereditor.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/shadereditor.properties
+lib/firefox/browser/chrome/en-US/locale/browser/devtools/shared.properties
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/sourceeditor.dtd
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/sourceeditor.properties
 lib/firefox/browser/chrome/en-US/locale/browser/devtools/storage.properties
