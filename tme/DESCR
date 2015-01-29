@@ -1,5 +1,5 @@
 The Machine Emulator, or tme, is a program that provides a general-
-purpose framework for computer emulation.  New in this package,
-Sparc Ultra1 can be emulated when compiled when debug is turned on.
-In addition, this package has been updated to GTK3, and includes a new
-tap element with automatic NAT configuration with NPF, if available.
+purpose framework for computer emulation.  This is a fork of the original,
+with all applicable patches rolled in.  New in this release, the graphical
+display is updated to GTK3, and a new tap element is introduced with
+automatic NAT configuration using NPF or an equavalent packet filter.
