@@ -1,7 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
-
-* Just because OS_ARCH is Darwin does not mean MacOS X specific
-  implementation should be used.
+$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.2 2015/01/29 10:42:08 thomasklausner Exp $
 
 --- ipc/chromium/src/base/file_util_posix.cc.orig	2014-05-06 22:55:41.000000000 +0000
 +++ ipc/chromium/src/base/file_util_posix.cc
@@ -32,20 +29,3 @@ $NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.1 2014/09/29 10:46
    // XXX Need ftsless impl for bionic
    return false;
  #else
-@@ -435,7 +435,7 @@ bool SetCurrentDirectory(const FilePath&
-   return !ret;
- }
- 
--#if !defined(OS_MACOSX)
-+#if !defined(MOZ_WIDGET_COCOA)
- bool GetTempDir(FilePath* path) {
-   const char* tmp = getenv("TMPDIR");
-   if (tmp)
-@@ -499,6 +499,6 @@ bool CopyFile(const FilePath& from_path,
- 
-   return result;
- }
--#endif // !defined(OS_MACOSX)
-+#endif // !defined(MOZ_WIDGET_COCOA)
- 
- } // namespace file_util

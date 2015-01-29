@@ -1,9 +1,6 @@
-$NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
+$NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.2 2015/01/29 10:42:07 thomasklausner Exp $
 
 * NetBSD 5 does not support posix_spawn(3)
-
-* Replace XP_MACOSX with XP_DARWIN as the former is not defined when
-  the toolkit is not cocoa.
 
 --- dom/system/OSFileConstants.cpp.orig	2014-05-29 23:30:40.000000000 +0000
 +++ dom/system/OSFileConstants.cpp
@@ -18,18 +15,6 @@ $NetBSD: patch-dom_system_OSFileConstants.cpp,v 1.1 2014/09/29 10:46:24 thomaskl
  #if defined(XP_UNIX)
  #include "unistd.h"
  #include "dirent.h"
-@@ -26,9 +30,9 @@
- #include <linux/fadvise.h>
- #endif // defined(XP_LINUX)
- 
--#if defined(XP_MACOSX)
-+#if defined(XP_DARWIN)
- #include "copyfile.h"
--#endif // defined(XP_MACOSX)
-+#endif // defined(XP_DARWIN)
- 
- #if defined(XP_WIN)
- #include <windows.h>
 @@ -533,10 +537,10 @@ static const dom::ConstantSpec gLibcProp
    // The size of |fsblkcnt_t|.
    { "OSFILE_SIZEOF_FSBLKCNT_T", INT_TO_JSVAL(sizeof (fsblkcnt_t)) },

@@ -1,17 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2015/01/08 17:30:41 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.4 2015/01/29 10:42:07 thomasklausner Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
 
 * Cocoa gamepad backend can only be used if the toolkit is cocoa too.
-
-* The preprocessor macro XP_MACOSX is misused everywhere. They tend to
-  say "#if defined(XP_MACOSX)" to actually mean
-  "#if defined(MOZ_WIDGET_COCOA)". It's okay to equate XP_MACOSX with
-  XP_DARWIN but equating it with MOZ_WIDGET_COCOA is just wrong. As a
-  result, cairo-gtk2 build on Darwin is completely broken and needs
-  heavy patching. Ideally they should be fixed individually but that
-  will be an extremely hard work, so don't define XP_MACOSX for now.
 
 --- configure.in.orig	2015-01-08 13:43:53.000000000 +0000
 +++ configure.in
@@ -30,23 +22,6 @@ $NetBSD: patch-aa,v 1.3 2015/01/08 17:30:41 thomasklausner Exp $
  *)
      MOZ_ENABLE_PROFILER_SPS=
      ;;
-@@ -1862,7 +1868,7 @@ case "$host" in
-     ;;
- 
- *-darwin*)
--    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX -DXP_MACOSX -DNO_X11"
-+    HOST_CFLAGS="$HOST_CFLAGS -DXP_UNIX"
-     HOST_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
-     HOST_OPTIMIZE_FLAGS="${HOST_OPTIMIZE_FLAGS=-O3}"
-     ;;
-@@ -1994,7 +2000,6 @@ case "$target" in
-         AC_DEFINE(XP_DARWIN)
-         _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
-     else
--        AC_DEFINE(XP_MACOSX)
-         AC_DEFINE(XP_DARWIN)
-         _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
-         # The ExceptionHandling framework is needed for Objective-C exception
 @@ -3634,6 +3639,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
@@ -75,17 +50,6 @@ $NetBSD: patch-aa,v 1.3 2015/01/08 17:30:41 thomasklausner Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4378,6 +4387,10 @@ cairo-gonk)
- 
- esac
- 
-+if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
-+   AC_DEFINE(XP_MACOSX)
-+fi
-+
- AC_SUBST(MOZ_PDF_PRINTING)
- if test "$MOZ_PDF_PRINTING"; then
-    PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
 @@ -5123,6 +5136,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
