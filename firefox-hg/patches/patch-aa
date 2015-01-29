@@ -1,27 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2015/01/29 10:42:07 thomasklausner Exp $
-
-* The profiler does not support Darwin/PPC so don't try to enable it
-  on that platform.
-
-* Cocoa gamepad backend can only be used if the toolkit is cocoa too.
+$NetBSD: patch-aa,v 1.5 2015/01/29 11:38:54 thomasklausner Exp $
 
 --- configure.in.orig	2015-01-08 13:43:53.000000000 +0000
 +++ configure.in
-@@ -1758,7 +1758,13 @@ Linux)
-         MOZ_ENABLE_PROFILER_SPS=
-     esac
-     ;;
--WINNT|Darwin) ;;
-+WINNT|Darwin)
-+    case "${CPU_ARCH}" in
-+    x86 | x86_64) ;;
-+    *)
-+        MOZ_ENABLE_PROFILER_SPS=
-+    esac
-+    ;;
- *)
-     MOZ_ENABLE_PROFILER_SPS=
-     ;;
 @@ -3634,6 +3639,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
@@ -208,17 +188,6 @@ $NetBSD: patch-aa,v 1.4 2015/01/29 10:42:07 thomasklausner Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -6022,7 +6172,9 @@ MOZ_ARG_DISABLE_BOOL(gamepad,
- if test "$MOZ_GAMEPAD"; then
-     case "$OS_TARGET" in
-     Darwin)
--        MOZ_GAMEPAD_BACKEND=cocoa
-+        if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
-+            MOZ_GAMEPAD_BACKEND=cocoa
-+        fi
-         ;;
-     WINNT)
-         MOZ_GAMEPAD_BACKEND=windows
 @@ -8048,6 +8200,48 @@ if test "$USE_FC_FREETYPE"; then
  fi
  

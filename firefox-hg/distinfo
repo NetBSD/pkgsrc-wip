@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.35 2015/01/29 11:35:46 thomasklausner Exp $
+$NetBSD: distinfo,v 1.36 2015/01/29 11:38:54 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
 Size (firefox-31.0.source.tar.bz2) = 147507120 bytes
-SHA1 (patch-aa) = 95058850a71afcf12e76d532a35da737298e84f1
+SHA1 (patch-aa) = cb9fbc7a0db9ec1c825868dfc50d7df5042c0dac
 SHA1 (patch-ak) = a8e56e5fa0842069cb7c634d200fbcb2e3cff874
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
 SHA1 (patch-ao) = ca7e6723a10b9f6e3306cd12557e1856727edee9
@@ -12,7 +12,6 @@ SHA1 (patch-b2g_installer_package-manifest.in) = 3dc99c6d5d1d04749f6046e50f66c40
 SHA1 (patch-bf) = 87cd1a9a1d7503e0748569028a3d693124d43208
 SHA1 (patch-browser_app_nsBrowserApp.cpp) = 085977d5ed4d63b6b420bf8e72927645ef251375
 SHA1 (patch-browser_installer_package-manifest.in) = d8452d5a13c840d2908aa8b7875c4685a73693a6
-SHA1 (patch-build_autoconf_compiler-opts.m4) = ccdc06a2b07b7664f9cb91bcc4fb29052dda8b07
 SHA1 (patch-build_autoconf_nss.m4) = bf65db126705a3a1ba294418b9380683ea401fc7
 SHA1 (patch-build_gyp.mozbuild) = 2842da0783d344dd12e86adde447f7cda6191518
 SHA1 (patch-build_pgo_profileserver.py) = 8666187258e47c037f2065a19a5b38946fdc0f6c
@@ -55,7 +54,6 @@ SHA1 (patch-js_src_frontend_ParseMaps.cpp) = c00117d79b78904bc50a1d664a8fc0e4e33
 SHA1 (patch-js_src_gc_Memory.cpp) = 68315aaaf3ec20da8d674097dac5eb56627d02bf
 SHA1 (patch-js_src_jsmath.cpp) = 7d4993ae91e9b5e6820358165603819aefb586f9
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 57650470a96312fb1c4a2634711ede69e36666ff
-SHA1 (patch-media_libcubeb_src_moz.build) = 06eb3b475816862fe9ac269dac85167898b28a20
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__coding_codecs_opus_opus.gypi) = ae0fcc32f7d146d2a494b42a58a9fcbb73c2a74c
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 9ff1dcf200feaf67bf576f07beb612e0ec91d7d1
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = ffc1d956e826a0005b76285596ba24a2f4a3806c
@@ -79,7 +77,6 @@ SHA1 (patch-toolkit_library_moz.build) = f0937fa86058a5c16fc261ad182df73b6533cb8
 SHA1 (patch-toolkit_toolkit.mozbuild) = a92b9f5114c3eab2c8e9f1d0eb21926235d2203a
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 6ee6fba04a3ecc6596f8aed67f752a1075901fa8
 SHA1 (patch-unwind.h) = c7a606c83cb60d0d6bcc7babad8157097d9036a8
-SHA1 (patch-webapprt_moz.build) = 50efe26124e3b04e33a6e2a11fae4912626fc286
 SHA1 (patch-xg) = 2b472858270a109c2b317bb08698c12717174510
 SHA1 (patch-xl) = 337960ba518f1f142b45ae91d3f122ee5e0c9da3
 SHA1 (patch-xm) = 85000d412a7e7aa9ea8c337c9bc72b55d9e7ca63
