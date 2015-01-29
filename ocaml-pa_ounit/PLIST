@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/01 01:51:14 jgoamakf Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/29 07:48:04 jgoamakf Exp $
 lib/ocaml/site-lib/pa_ounit/META
 lib/ocaml/site-lib/pa_ounit/pa_ounit.cmi
 lib/ocaml/site-lib/pa_ounit/pa_ounit.cmx
@@ -6,6 +6,7 @@ lib/ocaml/site-lib/pa_ounit/pa_ounit.ml
 lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.a
 lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cma
 lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cmi
+lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cmx
 lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cmxa
 lib/ocaml/site-lib/pa_ounit/pa_ounit_lib.cmxs
 lib/ocaml/site-lib/pa_ounit/pa_ounit_syntax.a
