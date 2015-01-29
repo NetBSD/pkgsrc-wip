@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/01/29 03:11:35 makoto Exp $
-# $Id: Makefile,v 1.3 2015/01/29 03:11:35 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/29 07:40:59 makoto Exp $
+# $Id: Makefile,v 1.4 2015/01/29 07:40:59 makoto Exp $
 
-DISTNAME=	doxygen-dependent-1.00
+DISTNAME=	doxygen-dependent-1.01
 CATEGORIES=	meta-pkgs
 LICENSE=	generic-nonlicense
 
@@ -12,53 +12,55 @@ META_PACKAGE=	YES
 
 .include "../../mk/bsd.pkg.mk"
 
-DEPENDS+=	dar-[0-9]*:../../archivers/dar
-DEPENDS+=	darkice-[0-9]*:../../audio/darkice
-DEPENDS+=	meanwhile-[0-9]*:../../chat/meanwhile
-DEPENDS+=	gammu-[0-9]*:../../comms/gammu
-DEPENDS+=	libcdr-[0-9]*:../../converters/libcdr
-DEPENDS+=	libvisio-[0-9]*:../../converters/libvisio
-#EPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
-DEPENDS+=	libpqxx-doc-[0-9]*:../../databases/libpqxx-doc
+#EPENDS+=	dar-[0-9]*:../../archivers/dar	# disabled by configure
+DEPENDS+=	darkice-[0-9]*:../../audio/darkice	# not known yet
+#EPENDS+=	meanwhile-[0-9]*:../../chat/meanwhile	# disabled by configure
+#EPENDS+=	gammu-[0-9]*:../../comms/gammu	# used to be BUILD_DEPENDS
+DEPENDS+=	openobex-[0-9]*:../../comms/openobex	# YES explicit
+#EPENDS+=	libcdr-[0-9]*:../../converters/libcdr	# disabled by configure
+DEPENDS+=	libvisio-[0-9]*:../../converters/libvisio # YES (as of 201501)
+DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
+DEPENDS+=	libpqxx-doc-[0-9]*:../../databases/libpqxx-doc # unknown
 
-DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	cppunit-[0-9]*:../../devel/cppunit
-DEPENDS+=	kdevelop-base-[0-9]*:../../devel/kdevelop-base
-DEPENDS+=	log4cxx-[0-9]*:../../devel/log4cxx
-DEPENDS+=	log4shib-[0-9]*:../../devel/log4shib
-DEPENDS+=	lutok-[0-9]*:../../devel/lutok
-DEPENDS+=	qof-[0-9]*:../../devel/qof
+DEPENDS+=	bison-[0-9]*:../../devel/bison		# unknown
+DEPENDS+=	cppunit-[0-9]*:../../devel/cppunit	# unknown
+DEPENDS+=	kdevelop-base-[0-9]*:../../devel/kdevelop-base # YES
+#EPENDS+=	log4cxx-[0-9]*:../../devel/log4cxx	# disabled by configure
+#EPENDS+=	log4shib-[0-9]*:../../devel/log4shib	# disabled by configure
+#EPENDS+=	lutok-[0-9]*:../../devel/lutok		# disabled by configure
+DEPENDS+=	qof-[0-9]*:../../devel/qof		# YES
 
-DEPENDS+=	simulavr-[0-9]*:../../emulators/simulavr
-DEPENDS+=	yabause-[0-9]*:../../emulators/yabause
-DEPENDS+=	yabause-[0-9]*:../../emulators/yabause
+DEPENDS+=	simulavr-[0-9]*:../../emulators/simulavr # YES
+DEPENDS+=	yabause-[0-9]*:../../emulators/yabause	# unknown
 
-DEPENDS+=	aqsis-[0-9]*:../../graphics/aqsis
-DEPENDS+=	gnuradio-doxygen-[0-9]*:../../ham/gnuradio-doxygen
-DEPENDS+=	ibus-qt-[0-9]*:../../inputmethod/ibus-qt
+DEPENDS+=	aqsis-[0-9]*:../../graphics/aqsis	# unknown
+DEPENDS+=	gnuradio-doxygen-[0-9]*:../../ham/gnuradio-doxygen # YES
+DEPENDS+=	ibus-qt-[0-9]*:../../inputmethod/ibus-qt # TOOLS_NOOP= doxygen
 
 DEPENDS+=	gcc44-[0-9]*:../../lang/gcc44
 DEPENDS+=	gcc45-[0-9]*:../../lang/gcc45
 DEPENDS+=	gcc46-[0-9]*:../../lang/gcc46
 
-DEPENDS+=	blitz++-[0-9]*:../../math/blitz++
-DEPENDS+=	libcarddav-[0-9]*:../../misc/libcarddav
-DEPENDS+=	libtheora-docs-[0-9]*:../../multimedia/libtheora-docs
-DEPENDS+=	libvdpau-[0-9]*:../../multimedia/libvdpau
+#EPENDS+=	blitz++-[0-9]*:../../math/blitz++	# disabled by configure
+DEPENDS+=	libcarddav-[0-9]*:../../misc/libcarddav	# unknown
+DEPENDS+=	libtheora-docs-[0-9]*:../../multimedia/libtheora-docs # YES
+#EPENDS+=	libvdpau-[0-9]*:../../multimedia/libvdpau # Probably NO
 
-DEPENDS+=	avahi-[0-9]*:../../net/avahi
-DEPENDS+=	libtrace-[0-9]*:../../net/libtrace
+#EPENDS+=	avahi-[0-9]*:../../net/avahi		# disabled by configure
+#DEPENDS+=	libtrace-[0-9]*:../../net/libtrace	# disabled by CONFIGURE_ENV
+DEPENDS+=	libktorrent-[0-9]*:../../net/libktorrent
 
-DEPENDS+=	opensaml-[0-9]*:../../security/opensaml
+#EPENDS+=	opensaml-[0-9]*:../../security/opensaml	# disabled by configure
 
-DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
-DEPENDS+=	dbus-glib-[0-9]*:../../sysutils/dbus-glib
-DEPENDS+=	gnome-vfsmm-[0-9]*:../../sysutils/gnome-vfsmm
+DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus		# YES
+#EPENDS+=	dbus-glib-[0-9]*:../../sysutils/dbus-glib	# disabled by configure
+#EPENDS+=	gnome-vfsmm-[0-9]*:../../sysutils/gnome-vfsmm	# NO
 
-DEPENDS+=	xmltooling-[0-9]*:../../textproc/xmltooling
+#EPENDS+=	xmltooling-[0-9]*:../../textproc/xmltooling	# disabled by configure
 DEPENDS+=	awesome-[0-9]*:../../wm/awesome
-DEPENDS+=	tidy-[0-9]*:../../www/tidy
+DEPENDS+=	tidy-[0-9]*:../../www/tidy		# YES
 
-DEPENDS+=	gnome-mag-[0-9]*:../../x11/gnome-mag
-DEPENDS+=	kdelibdocs-[0-9]*:../../x11/kdelibdocs3
-DEPENDS+=	libxcb-[0-9]*:../../x11/libxcb
+#EPENDS+=	gnome-mag-[0-9]*:../../x11/gnome-mag	# disabled by SUBST
+DEPENDS+=	kdelibdocs-[0-9]*:../../x11/kdelibdocs3	# YES
+#EPENDS+=	libxcb-[0-9]*:../../x11/libxcb		# disabled by configure
+DEPENDS+=	razorqt-[0-9]*:../../x11/razor-qt	# YES
