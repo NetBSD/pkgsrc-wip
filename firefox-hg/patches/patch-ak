@@ -1,4 +1,9 @@
-$NetBSD: patch-ak,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
+$NetBSD: patch-ak,v 1.2 2015/01/29 11:34:41 thomasklausner Exp $
+
+Handle NetBSD/powerpc the same as FreeBSD and OpenBSD.
+
+Sent to libffi upstream as:
+https://github.com/atgreen/libffi/pull/176
 
 --- js/src/ctypes/libffi/configure.orig	2014-09-28 08:30:06.000000000 +0000
 +++ js/src/ctypes/libffi/configure
