@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/11/21 06:24:55 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/29 07:36:46 jgoamakf Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	yojson-1.1.8
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mjambon.com/yojson.html
 COMMENT=	JSON parsing and printing library for OCaml
 LICENSE=	modified-bsd
+
+DEPENDS+=	ocaml-cppo-[0-9]*:../../wip/ocaml-cppo
 
 USE_TOOLS+=	gmake
 BUILD_TARGET+=	all opt
