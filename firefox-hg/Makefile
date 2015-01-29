@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/10 13:12:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/29 10:40:19 thomasklausner Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	35.0a1
@@ -16,7 +16,7 @@ HG_REPO.mozilla=	https://hg.mozilla.org/mozilla-central
 
 WRKSRC=		${WRKDIR}/mozilla
 
-MAINTAINER=	ryoon@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions (hg version)
 LICENSE=	mpl-1.1
