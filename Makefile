@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6054 2015/01/28 19:34:15 lexort Exp $
+# $Id: Makefile,v 1.6055 2015/01/29 01:16:42 lexort Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -755,7 +755,6 @@ SUBDIR+=	gcc48snapshot
 SUBDIR+=	gcc49snapshot
 SUBDIR+=	gcc50snapshot
 SUBDIR+=	gconf-cleaner
-SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
 SUBDIR+=	gdb
