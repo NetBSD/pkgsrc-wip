@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2014/02/27 12:55:47 obache Exp $
-# $Id: Makefile,v 1.2 2014/02/27 12:55:47 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/29 03:11:35 makoto Exp $
+# $Id: Makefile,v 1.3 2015/01/29 03:11:35 makoto Exp $
 
 DISTNAME=	doxygen-dependent-1.00
 CATEGORIES=	meta-pkgs
@@ -24,7 +24,6 @@ DEPENDS+=	libpqxx-doc-[0-9]*:../../databases/libpqxx-doc
 DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	cppunit-[0-9]*:../../devel/cppunit
 DEPENDS+=	kdevelop-base-[0-9]*:../../devel/kdevelop-base
-DEPENDS+=	kyua-cli-[0-9]*:../../devel/kyua-cli
 DEPENDS+=	log4cxx-[0-9]*:../../devel/log4cxx
 DEPENDS+=	log4shib-[0-9]*:../../devel/log4shib
 DEPENDS+=	lutok-[0-9]*:../../devel/lutok
@@ -35,8 +34,7 @@ DEPENDS+=	yabause-[0-9]*:../../emulators/yabause
 DEPENDS+=	yabause-[0-9]*:../../emulators/yabause
 
 DEPENDS+=	aqsis-[0-9]*:../../graphics/aqsis
-DEPENDS+=	gnuradio-core-docs-[0-9]*:../../ham/gnuradio-core-docs
-DEPENDS+=	usrp-docs-[0-9]*:../../ham/usrp-docs
+DEPENDS+=	gnuradio-doxygen-[0-9]*:../../ham/gnuradio-doxygen
 DEPENDS+=	ibus-qt-[0-9]*:../../inputmethod/ibus-qt
 
 DEPENDS+=	gcc44-[0-9]*:../../lang/gcc44
