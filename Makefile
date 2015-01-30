@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6055 2015/01/29 01:16:42 lexort Exp $
+# $Id: Makefile,v 1.6056 2015/01/30 13:09:36 makoto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2195,7 +2195,6 @@ SUBDIR+=	p5-Text-Quote
 SUBDIR+=	p5-Text-Trim
 SUBDIR+=	p5-Text-VimColor
 SUBDIR+=	p5-TheSchwartz
-SUBDIR+=	p5-Tie-Cycle
 SUBDIR+=	p5-Tie-DB_Lock
 SUBDIR+=	p5-Time-Piece-Range
 SUBDIR+=	p5-Tk-TableMatrix
