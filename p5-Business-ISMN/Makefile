@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/10/02 11:30:25 nros Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/30 12:41:52 makoto Exp $
 #
 
-DISTNAME=	Business-ISMN-1.11
+DISTNAME=	Business-ISMN-1.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
