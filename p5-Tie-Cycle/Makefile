@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/10/02 11:33:35 nros Exp $
+# $NetBSD: Makefile,v 1.7 2015/01/30 11:55:38 makoto Exp $
 #
 
-DISTNAME=	Tie-Cycle-1.20
+DISTNAME=	Tie-Cycle-1.21
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
