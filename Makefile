@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6056 2015/01/30 13:09:36 makoto Exp $
+# $Id: Makefile,v 1.6057 2015/01/30 14:34:46 makoto Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2013,8 +2013,6 @@ SUBDIR+=	p5-Astro-SpaceTrack
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-Bit-Vector-Minimal
-SUBDIR+=	p5-Business-ISMN
-SUBDIR+=	p5-Business-ISSN
 SUBDIR+=	p5-CGI-Application-Dispatch
 SUBDIR+=	p5-CGI-Application-Plugin-AutoRunmode
 SUBDIR+=	p5-CGI-Application-Plugin-ConfigAuto
