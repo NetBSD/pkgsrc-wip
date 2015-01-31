@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/31 17:12:20 jihbed Exp $
 
-DISTNAME=	path.py-5.0
+DISTNAME=	path.py-7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/p/path.py/
