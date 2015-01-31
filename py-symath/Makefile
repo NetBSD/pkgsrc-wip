@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2015/01/31 22:33:20 jihbed Exp $
 
-DISTNAME=	symath-0.1.20
+DISTNAME=	symath-0.1.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/s/symath/
@@ -10,9 +10,13 @@ HOMEPAGE=	http://github.com/bniemczyk/symbolic
 COMMENT=	symbolic mathematics for python
 LICENSE=	2-clause-bsd
 
+WRKSRC=		${WRKDIR}/symath-0.1.22
 
 USE_LANGUAGES=	# none
 
+
+DPENDS+=        ${PYPKGPREFIX}-pyparsing>=2.0.2:../../devel/py-pyparsing
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+DPENDS+=        ${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"

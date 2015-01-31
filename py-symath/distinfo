@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/07/26 21:46:56 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2015/01/31 22:33:20 jihbed Exp $
 
-SHA1 (symath-0.1.20.tar.gz) = cb9228a9ef26e451fd70837d564be2d2258ea402
-RMD160 (symath-0.1.20.tar.gz) = 5de5b8ec0c166f2f058e4cd41cd6d28ce4ff9640
-Size (symath-0.1.20.tar.gz) = 11904 bytes
+SHA1 (symath-0.1.22.tar.gz) = 83af56d7f49f508fe96974167d1dc3beb45fb567
+RMD160 (symath-0.1.22.tar.gz) = 37d5366727404c157ff1195af910405c3360abc7
+Size (symath-0.1.22.tar.gz) = 18562 bytes
