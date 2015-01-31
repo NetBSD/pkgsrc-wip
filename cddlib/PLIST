@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/24 10:05:59 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/01/31 20:03:00 jihbed Exp $
 bin/adjacency
 bin/adjacency_gmp
 bin/allfaces
@@ -32,6 +32,6 @@ include/cddmp_f.h
 include/cddtypes.h
 include/cddtypes_f.h
 include/setoper.h
-lib/libcdd.a
-lib/libcddgmp.a
+lib/libcdd.la
+lib/libcddgmp.la
 share/doc/cddlib/cddlibman.pdf

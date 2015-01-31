@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/01/31 20:03:00 jihbed Exp $
 
-DISTNAME=	cddlib-094f
-PKGNAME=	cddlib-0.94
-CATEGORIES=	math
+DISTNAME=	cddlib-094g
+CATEGORIES=	wip
 MASTER_SITES=	ftp://ftp.ifor.math.ethz.ch/pub/fukuda/cdd/
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.ifor.math.ethz.ch/~fukuda/cdd_home/
-COMMENT=	Library for finding vertices of convex polytopes
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+HOMEPAGE=	ftp://ftp.ifor.math.ethz.ch/pub/fukuda/cdd/
+COMMENT=	TODO: Short description of the package
+#LICENSE=	# TODO: (see mk/license.mk)
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS+=	share/doc/cddlib
 
