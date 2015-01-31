@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2015/01/30 01:30:08 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.45 2015/01/31 09:12:06 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -2743,6 +2743,7 @@ lib/firefox-${VERSION}/modules/Task.jsm
 lib/firefox-${VERSION}/modules/TelemetryFile.jsm
 lib/firefox-${VERSION}/modules/TelemetryLog.jsm
 lib/firefox-${VERSION}/modules/TelemetryPing.jsm
+lib/firefox-${VERSION}/modules/TelemetrySession.jsm
 lib/firefox-${VERSION}/modules/TelemetryStopwatch.jsm
 lib/firefox-${VERSION}/modules/TelemetryTimestamps.jsm
 lib/firefox-${VERSION}/modules/ThirdPartyCookieProbe.jsm
