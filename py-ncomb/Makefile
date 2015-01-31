@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:25 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/01/31 21:41:28 jihbed Exp $
 #
 
 DISTNAME=	pyncomb-1.0.2
@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyncomb/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.site.uottawa.ca/~mraap046
+HOMEPAGE=	https://pypi.python.org/pypi/pyncomb/
 COMMENT=	Python combinatorics library
 LICENSE=	apache-2.0
 
