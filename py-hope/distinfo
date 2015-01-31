@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/10/18 19:31:55 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2015/01/31 19:33:16 jihbed Exp $
 
-SHA1 (hope-0.3.0.tar.gz) = b7a4a68963c97795150025f6338de15e611962f9
-RMD160 (hope-0.3.0.tar.gz) = 8372358e40cca7844c3875e2fc02585b45a3625d
-Size (hope-0.3.0.tar.gz) = 297369 bytes
+SHA1 (hope-0.3.1.tar.gz) = 725e69063508dfd3eb9abc8fe65eb41d66a79e1c
+RMD160 (hope-0.3.1.tar.gz) = be9066936d6e0fd24833e363a8c024520e62dcfb
+Size (hope-0.3.1.tar.gz) = 302853 bytes

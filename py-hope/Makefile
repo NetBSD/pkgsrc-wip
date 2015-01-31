@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/10/18 19:31:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/01/31 19:33:16 jihbed Exp $
 
-DISTNAME=	hope-0.3.0
+DISTNAME=	hope-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/h/hope/
@@ -13,4 +13,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../math/py-numpy/buildlink3.mk"
+DEPENDS+=      ${PYPKGPREFIX}-sympy>=0.7.4.1:../../math/py-sympy
 .include "../../mk/bsd.pkg.mk"
