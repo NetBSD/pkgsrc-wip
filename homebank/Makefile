@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2012/09/29 17:05:56 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2015/01/31 23:12:52 jihbed Exp $
 
-DISTNAME=	homebank-4.1
-PKGREVISION=	1
+DISTNAME=	homebank_4.4.orig
+PKGNAME=        homebank-4.4
 CATEGORIES=	finance
-MASTER_SITES=	http://homebank.free.fr/public/
+MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/h/homebank/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://homebank.free.fr/
 COMMENT=	HomeBank is to manage your personal accounts at home
 LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/homebank-4.4
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=   yes
@@ -28,9 +29,8 @@ BUILDLINK_API_DEPENDS.libofx+=	libofx>=0.8.0
 CONFIGURE_ARGS+=	--without-libofx
 .endif
 
-.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
