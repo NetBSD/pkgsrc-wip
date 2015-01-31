@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/31 12:15:24 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2015/01/31 23:41:28 jihbed Exp $
 
-SHA1 (roban-CosmoloPy-68c52f0.tar.gz) = 11edf80a52e968b3cbd23625b199148903d11751
-RMD160 (roban-CosmoloPy-68c52f0.tar.gz) = e5761fdfd5ce86ad47b54dde1502ce124d8600e8
-Size (roban-CosmoloPy-68c52f0.tar.gz) = 247887 bytes
+SHA1 (CosmoloPy-0.1.104.tar.gz) = 4e7592c4aa8476db94be9a22d919d9b30ccf9b33
+RMD160 (CosmoloPy-0.1.104.tar.gz) = 44e05618b1e44879b530a4573a1ffd21903a8c89
+Size (CosmoloPy-0.1.104.tar.gz) = 65162 bytes
