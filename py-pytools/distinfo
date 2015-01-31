@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/09/20 09:50:35 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2015/01/31 23:09:55 jihbed Exp $
 
-SHA1 (pytools-2013.5.6.tar.gz) = d6f49f51d792d415dc781ccbf89237469fd756c0
-RMD160 (pytools-2013.5.6.tar.gz) = 295d30e025fdae08a495da2bbd076d86fce898f4
-Size (pytools-2013.5.6.tar.gz) = 42765 bytes
+SHA1 (pytools-2014.3.5.tar.gz) = b29aa4b572f25a3f0e2c183fd1e4c5bc6a2124c9
+RMD160 (pytools-2014.3.5.tar.gz) = 1de9b44634aecac641560b884492b81b6a4503c0
+Size (pytools-2014.3.5.tar.gz) = 47522 bytes
