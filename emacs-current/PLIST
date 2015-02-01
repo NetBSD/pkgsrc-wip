@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.162 2015/01/28 19:22:53 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.163 2015/02/01 11:42:57 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1699,6 +1699,13 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/warnings.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/warnings.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lock.elc
+share/emacs/${PKGVERSION}/lisp/emacs-parallel/README.org
+share/emacs/${PKGVERSION}/lisp/emacs-parallel/parallel-remote.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-parallel/parallel-remote.elc
+share/emacs/${PKGVERSION}/lisp/emacs-parallel/parallel-xwidget.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-parallel/parallel-xwidget.elc
+share/emacs/${PKGVERSION}/lisp/emacs-parallel/parallel.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-parallel/parallel.elc
 share/emacs/${PKGVERSION}/lisp/emulation/cua-base.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/cua-base.elc
 share/emacs/${PKGVERSION}/lisp/emulation/cua-gmrk.el.gz
@@ -3887,6 +3894,8 @@ share/emacs/${PKGVERSION}/lisp/xml.el.gz
 share/emacs/${PKGVERSION}/lisp/xml.elc
 share/emacs/${PKGVERSION}/lisp/xt-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
+share/emacs/${PKGVERSION}/lisp/xwidget.el.gz
+share/emacs/${PKGVERSION}/lisp/xwidget.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
 share/icons/hicolor/128x128/apps/emacs.png
