@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/10 09:59:19 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/01 11:46:06 thomasklausner Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -216,6 +216,7 @@ share/lilypond/${PKGVERSION}/ly/text-replacements.ly
 share/lilypond/${PKGVERSION}/ly/titling-init.ly
 share/lilypond/${PKGVERSION}/ly/toc-init.ly
 share/lilypond/${PKGVERSION}/ly/vlaams.ly
+share/lilypond/${PKGVERSION}/ps/encodingdefs.ps
 share/lilypond/${PKGVERSION}/ps/lilyponddefs.ps
 share/lilypond/${PKGVERSION}/ps/music-drawing-routines.ps
 share/lilypond/${PKGVERSION}/python/book_base.py
