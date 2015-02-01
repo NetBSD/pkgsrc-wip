@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/02/01 08:36:42 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/01 13:51:29 makoto Exp $
 
 DISTNAME=	CPANPLUS-0.9152
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	${PERL5_LICENSE}
 
 INSTALL_TARGET=	pure_install
 
+DEPENDS+=	p5-Log-Message-[0-9]*:../../wip/p5-Log-Message
+DEPENDS+=	p5-Object-Accessor-[0-9]*:../../wip/p5-Object-Accessor
 DEPENDS+=	p5-Test-Reporter-[0-9]*:../../devel/p5-Test-Reporter
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 
