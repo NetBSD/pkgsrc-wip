@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/01/11 22:56:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/02/01 20:29:40 thomasklausner Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -446,6 +446,7 @@ lib/calibre/calibre/ebooks/oeb/polish/opf.py
 lib/calibre/calibre/ebooks/oeb/polish/parsing.py
 lib/calibre/calibre/ebooks/oeb/polish/pretty.py
 lib/calibre/calibre/ebooks/oeb/polish/replace.py
+lib/calibre/calibre/ebooks/oeb/polish/report.py
 lib/calibre/calibre/ebooks/oeb/polish/spell.py
 lib/calibre/calibre/ebooks/oeb/polish/split.py
 lib/calibre/calibre/ebooks/oeb/polish/stats.py
@@ -1059,6 +1060,7 @@ lib/calibre/calibre/gui2/tweak_book/plugin.py
 lib/calibre/calibre/gui2/tweak_book/polish.py
 lib/calibre/calibre/gui2/tweak_book/preferences.py
 lib/calibre/calibre/gui2/tweak_book/preview.py
+lib/calibre/calibre/gui2/tweak_book/reports.py
 lib/calibre/calibre/gui2/tweak_book/save.py
 lib/calibre/calibre/gui2/tweak_book/search.py
 lib/calibre/calibre/gui2/tweak_book/spell.py
@@ -1485,6 +1487,7 @@ share/calibre/images/connect_share.png
 share/calibre/images/connect_share_on.png
 share/calibre/images/console.png
 share/calibre/images/convert.png
+share/calibre/images/copy-to-library.png
 share/calibre/images/cover_flow.png
 share/calibre/images/cover_texture.png
 share/calibre/images/debug.png
@@ -1638,6 +1641,7 @@ share/calibre/images/publisher.png
 share/calibre/images/random.png
 share/calibre/images/rating.png
 share/calibre/images/reader.png
+share/calibre/images/reports.png
 share/calibre/images/resize.png
 share/calibre/images/rotate-right.png
 share/calibre/images/save.png
@@ -1650,6 +1654,7 @@ share/calibre/images/search_copy_saved.png
 share/calibre/images/search_delete_saved.png
 share/calibre/images/series.png
 share/calibre/images/smarten-punctuation.png
+share/calibre/images/snippets.png
 share/calibre/images/spell-check.png
 share/calibre/images/store.png
 share/calibre/images/subset-fonts.png
@@ -1754,6 +1759,7 @@ share/calibre/recipes/apcom.recipe
 share/calibre/recipes/apod.recipe
 share/calibre/recipes/app_funds.recipe
 share/calibre/recipes/apple_daily.recipe
+share/calibre/recipes/appledaily_tw.recipe
 share/calibre/recipes/applefobia.recipe
 share/calibre/recipes/aprospect.recipe
 share/calibre/recipes/ara_info.recipe
@@ -1775,6 +1781,7 @@ share/calibre/recipes/astroflesz.recipe
 share/calibre/recipes/astronomia_pl.recipe
 share/calibre/recipes/athens_news.recipe
 share/calibre/recipes/atlantic.recipe
+share/calibre/recipes/atlantic_com.recipe
 share/calibre/recipes/attac_es.recipe
 share/calibre/recipes/auto.recipe
 share/calibre/recipes/auto_blog.recipe
@@ -3080,6 +3087,7 @@ share/calibre/recipes/thairath.recipe
 share/calibre/recipes/the_age.recipe
 share/calibre/recipes/the_budget_fashionista.recipe
 share/calibre/recipes/the_clinic_online.recipe
+share/calibre/recipes/the_conversation.recipe
 share/calibre/recipes/the_daily_news_egypt.recipe
 share/calibre/recipes/the_escapist.recipe
 share/calibre/recipes/the_feature.recipe
