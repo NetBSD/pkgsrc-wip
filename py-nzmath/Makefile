@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2012/11/12 16:26:49 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.6 2015/02/01 22:53:37 jihbed Exp $
 
-DISTNAME=	NZMATH-0.90.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/NZMATH/nzmath/}
+DISTNAME=	NZMATH-1.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nzmath/}
+MASTER_SITES=	http://heanet.dl.sourceforge.net/project/nzmath/nzmath/NZMATH-1.2.0/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://tnt.math.metro-u.ac.jp/nzmath/
 COMMENT=	Number theory oriented calculation system
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
