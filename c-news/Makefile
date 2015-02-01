@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/09/24 18:26:51 asau Exp $
+# $NetBSD: Makefile,v 1.27 2015/02/01 21:01:33 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -33,6 +33,8 @@ LICENSE_FILE=	c-news-license
 
 # Not yet 64 bit time_t safe
 NOT_FOR_PLATFORM=	NetBSD-5.99.*-* NetBSD-[6-9]*-*
+
+MAKE_JOBS_SAFE=		no
 
 PKG_DESTDIR_SUPPORT=	none
 
@@ -108,8 +110,8 @@ pre-configure:
 	${CP}  ${FILESDIR:Q}/makefile.notebook ${WRKDIR:Q}/notebook/makefile
 
 # One of the regression tests does not work correctly if we are in
-# a union-mounted directory. In that case, build with something like
-# "env WRKOBJDIR=/var/tmp make".
+# a union-mounted directory. In that case, build outside the union-mounted
+# tree with something like "env WRKOBJDIR=/var/tmp make".
 post-build:     build-doc
 
 .PHONY: regression
