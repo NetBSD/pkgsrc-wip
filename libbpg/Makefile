@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/01/10 09:41:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/02 13:13:26 thomasklausner Exp $
 
-DISTNAME=	libbpg-0.9.4
+DISTNAME=	libbpg-0.9.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://bellard.org/bpg/
 
@@ -15,6 +15,11 @@ MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 INSTALLATION_DIRS=	bin
 
+post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bpgview ${DESTDIR}${PREFIX}/bin/
+
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
