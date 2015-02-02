@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2015/01/27 03:12:53 leot1990 Exp $
+# $NetBSD: Makefile.common,v 1.15 2015/02/02 16:41:32 leot1990 Exp $
 # used by wip/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.6.5
@@ -25,6 +25,7 @@ PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk-web-extension.pcin
 
 CMAKE_ARGS+=		-DPORT=GTK
+CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
 
 .include "options.mk"
 
