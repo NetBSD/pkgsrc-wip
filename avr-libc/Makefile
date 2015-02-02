@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/06/18 06:30:42 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/02 01:48:24 makoto Exp $
 
-DISTNAME=		avr-libc-1.8.0
-PKGREVISION=		4
+DISTNAME=		avr-libc-1.8.1
 CATEGORIES=		cross
 MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +10,7 @@ HOMEPAGE=		http://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 LICENSE=		modified-bsd
 
-BUILD_DEPENDS+=		doxygen>=1.8.7:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.8.8:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
@@ -23,6 +22,8 @@ CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--host=avr
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--disable-versioned-doc
+CONFIGURE_ARGS+=	CC=${PREFIX}/bin/avr-gcc
+CONFIGURE_ARGS+=	CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/avr/include"
 
 #   In doc/examples/demo directory, we have sample Makefile both for
 #   generating *.hex file at pkg installation time, and for installing
@@ -52,22 +53,15 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/avr-libc
 	## delete following or similar files, which includes PATH at build time.
 	##_usr_pkgsrc_cross_avr-libc_work_avr-libc-1.8.0_libc_string_.3
-	(cd ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3; ${RM} -f *${PKGVERSION_NOREV}*)
-	set -e;	\
-	for f in Makefile demo.c demo.bin demo.hex demo.pdf \
-		demo.srec;\
-	do \
-		${INSTALL_DATA} ${WRKSRC}/doc/examples/demo/$$f \
-			${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo; \
-	done
+	${RM} ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3/*${PKGVERSION_NOREV}*
+.for f in Makefile demo.c demo.bin demo.hex demo.pdf demo.srec
+	${INSTALL_DATA} ${WRKSRC}/doc/examples/demo/${f} \
+		${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo
+.endfor
 
 .include "../../cross/avr-binutils/buildlink3.mk"
-.include "../../wip/avr-gcc/buildlink3.mk"
+.include "../../cross/avr-gcc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
-# XXX: very evil hack to override CC, doing it via CONFIGURE_ENV doesn't work.
-#MAKE_ENV+=		CC=${PREFIX}/bin/avr-gcc
-#MAKE_ENV is overwritten by CC=gcc in ALL_ENV
-ALL_ENV+= CC=${PREFIX}/bin/avr-gcc
 # Not to be overridden as --mandir=${PREFIX}, put the line here.
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/doc/avr-libc/man
