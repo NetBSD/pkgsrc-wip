@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2015/01/31 09:12:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.46 2015/02/02 20:12:16 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -30,6 +30,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutRobots.xhtml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutSessionRestore.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutSessionRestore.xhtml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutSocialError.xhtml
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutTabCrashed.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutTabCrashed.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutTabCrashed.xhtml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutWelcomeBack.xhtml
@@ -866,6 +867,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tab-crashed.s
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/alltabs-inverted.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/alltabs.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/connecting.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/crashed.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/loading.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/pendingpaint.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-active-middle.png
@@ -925,6 +927,7 @@ lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/aboutPrivateBrowsing.
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/aboutRobots.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/aboutSessionRestore.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/aboutSyncTabs.dtd
+lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/aboutTabCrashed.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/accounts.properties
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/appstrings.properties
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/baseMenuOverlay.dtd
