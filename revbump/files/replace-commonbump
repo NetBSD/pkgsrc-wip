@@ -148,7 +148,8 @@ $FILE, ': ', __LINE__, ' Value ${', $varname, '} is emtpy at ', $shortdir, "\n";
 	} # if of (major process) ... starting with: if ($_ =~ m|Makefile| || 
     };  # end of my ($wanted_closure) = sub () {
     # ----------------------------------------------------------------    
-    find($wanted_closure, $pkgsrc);
+    find({ wanted => $wanted_closure, follow => 1 }, $pkgsrc);
+    
 }
 
 # Table is assumed to contain list of files to process, set up it in @TABLE here.

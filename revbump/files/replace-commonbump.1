@@ -1,4 +1,4 @@
-.\"	$NetBSD: replace-commonbump.1,v 1.6 2015/01/15 06:58:43 thomasklausner Exp $
+.\"	$NetBSD: replace-commonbump.1,v 1.7 2015/02/03 11:25:19 makoto Exp $
 .\"
 .\" Copyright (c) 2014 The NetBSD Foundation, Inc.
 .\"
@@ -134,11 +134,3 @@ then outputs to the file
 .Xr check-cvs-diff 1 ,
 .Xr finddepends 1 ,
 .Xr revbump 1
-.Sh BUGS
-.Nm replace-commonbump
-employs the Perl Module File::Find, and its 'follow' option is NOT used, so
-.Nm replace-commonbump
-does not follow symbolic links.
-.Xr mount 8
-.Fl t Ar null
-may be an alternative to get similar link.
