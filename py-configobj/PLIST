@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/16 20:10:32 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/04 10:04:08 thomasklausner Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/_version.py
+${PYSITELIB}/_version.pyc
+${PYSITELIB}/_version.pyo
 ${PYSITELIB}/configobj.py
 ${PYSITELIB}/configobj.pyc
 ${PYSITELIB}/configobj.pyo
