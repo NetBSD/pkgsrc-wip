@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/08/04 16:37:36 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/04 23:49:09 leot1990 Exp $
 
 DISTNAME=	toptesi.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-5.76
-TEXLIVE_REV=	32081
+PKGNAME=	tex-${DISTNAME:S/./-/}-5.86f
+TEXLIVE_REV=	35916
 
 MAINTAINER=	leot1990@users.sourceforge.net
 COMMENT=	Documentation for tex-toptesi
