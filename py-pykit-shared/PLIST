@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/11 21:08:26 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/04 11:23:39 thomasklausner Exp $
 bin/analyze_txtlog
 bin/change_ext
 bin/mkbkupcp
@@ -6,6 +6,13 @@ bin/tachyon_render
 bin/tga2png
 bin/timestamp_frames
 bin/txtlog2xlsx
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pkshared/__init__.py
 ${PYSITELIB}/pkshared/__init__.pyc
 ${PYSITELIB}/pkshared/__init__.pyo
@@ -102,6 +109,9 @@ ${PYSITELIB}/pkshared/tools/datautils/_dataset.pyo
 ${PYSITELIB}/pkshared/tools/datautils/_loggenerator.py
 ${PYSITELIB}/pkshared/tools/datautils/_loggenerator.pyc
 ${PYSITELIB}/pkshared/tools/datautils/_loggenerator.pyo
+${PYSITELIB}/pkshared/tools/datautils/_logparser.py
+${PYSITELIB}/pkshared/tools/datautils/_logparser.pyc
+${PYSITELIB}/pkshared/tools/datautils/_logparser.pyo
 ${PYSITELIB}/pkshared/tools/fiofuncs/__init__.py
 ${PYSITELIB}/pkshared/tools/fiofuncs/__init__.pyc
 ${PYSITELIB}/pkshared/tools/fiofuncs/__init__.pyo
@@ -126,6 +136,9 @@ ${PYSITELIB}/pkshared/tools/mpltools/__init__.pyo
 ${PYSITELIB}/pkshared/tools/mpltools/_argparser.py
 ${PYSITELIB}/pkshared/tools/mpltools/_argparser.pyc
 ${PYSITELIB}/pkshared/tools/mpltools/_argparser.pyo
+${PYSITELIB}/pkshared/tools/mpltools/_cmaps.py
+${PYSITELIB}/pkshared/tools/mpltools/_cmaps.pyc
+${PYSITELIB}/pkshared/tools/mpltools/_cmaps.pyo
 ${PYSITELIB}/pkshared/tools/mpltools/_filters.py
 ${PYSITELIB}/pkshared/tools/mpltools/_filters.pyc
 ${PYSITELIB}/pkshared/tools/mpltools/_filters.pyo
@@ -180,10 +193,3 @@ ${PYSITELIB}/pkshared/tools/strfuncs/_strfuncs.pyo
 ${PYSITELIB}/pkshared/version.py
 ${PYSITELIB}/pkshared/version.pyc
 ${PYSITELIB}/pkshared/version.pyo
-${PYSITELIB}/pykit_shared-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/pykit_shared-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/pykit_shared-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/pykit_shared-${PKGVERSION}-py2.7.egg-info/entry_points.txt
-${PYSITELIB}/pykit_shared-${PKGVERSION}-py2.7.egg-info/not-zip-safe
-${PYSITELIB}/pykit_shared-${PKGVERSION}-py2.7.egg-info/requires.txt
-${PYSITELIB}/pykit_shared-${PKGVERSION}-py2.7.egg-info/top_level.txt
