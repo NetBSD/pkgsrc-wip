@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:38:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/04 10:10:53 thomasklausner Exp $
 
 DISTNAME=       sabnzbdplus-${DISTVERSION}
 DISTVERSION= 0.7.16
@@ -12,7 +12,7 @@ COMMENT=	Web-interface based binary newsgrabber in python, with nzb support
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd AND mit
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
-DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../wip/py-configobj
+DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/05/09 07:38:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2015/02/04 10:10:50 thomasklausner Exp $
 
 DISTNAME=	gtg-0.1.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	GTG is a personal organizer for the GNOME
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
-DEPENDS+=	${PYPKGPREFIX}-configobj>=4.6.0:../../wip/py-configobj
+DEPENDS+=	${PYPKGPREFIX}-configobj>=4.6.0:../../devel/py-configobj
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
