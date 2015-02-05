@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/05 23:58:03 makoto Exp $
+bin/connect
+share/doc/connect/manual.html
+share/doc/connect/manual.txt
