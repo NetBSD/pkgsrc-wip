@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/05 01:39:42 jgoamakf Exp $
+lib/ocaml/site-lib/pa_test/META
+lib/ocaml/site-lib/pa_test/pa_test.cmi
+lib/ocaml/site-lib/pa_test/pa_test.cmx
+lib/ocaml/site-lib/pa_test/pa_test.mli
+lib/ocaml/site-lib/pa_test/pa_test_lib.a
+lib/ocaml/site-lib/pa_test/pa_test_lib.cma
+lib/ocaml/site-lib/pa_test/pa_test_lib.cmi
+lib/ocaml/site-lib/pa_test/pa_test_lib.cmx
+lib/ocaml/site-lib/pa_test/pa_test_lib.cmxa
+lib/ocaml/site-lib/pa_test/pa_test_lib.cmxs
+lib/ocaml/site-lib/pa_test/pa_test_syntax.a
+lib/ocaml/site-lib/pa_test/pa_test_syntax.cma
+lib/ocaml/site-lib/pa_test/pa_test_syntax.cmxa
+lib/ocaml/site-lib/pa_test/pa_test_syntax.cmxs
+lib/ocaml/site-lib/pa_test/runtime.mli
