@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/02/02 01:48:24 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/06 02:32:27 makoto Exp $
 
 DISTNAME=		avr-libc-1.8.1
 CATEGORIES=		cross
@@ -10,9 +10,23 @@ HOMEPAGE=		http://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 LICENSE=		modified-bsd
 
-BUILD_DEPENDS+=		doxygen>=1.8.8:../../devel/doxygen
+BROKEN=			'Undefined control sequence.l.303 \backmatter, see TODO. Thank you.'
+
+BUILD_DEPENDS+=		doxygen>=1.8.9.1:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
+
+BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
+BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../wip/tex-adjustbox
+BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../wip/tex-collectbox
+BUILD_DEPENDS+=		tex-ydoc-[0-9]*:../../wip/tex-ydoc
+
+# formatting refman.pdf needs tools
+BUILD_DEPENDS+=		web2c-[0-9]*:../../print/web2c
+# tex not found
+BUILD_DEPENDS+=		tex-tetex-[0-9]*:../../print/tex-tetex
+# mkfmt tex.fmt not found
+BUILD_DEPENDS+=		teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
@@ -59,6 +73,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo
 .endfor
 
+#include "../../print/kpathsea/buildlink3.mk"
 .include "../../cross/avr-binutils/buildlink3.mk"
 .include "../../cross/avr-gcc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

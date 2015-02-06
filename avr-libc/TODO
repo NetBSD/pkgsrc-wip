@@ -1,3 +1,44 @@
 - Now fails with the message
-Makefile:6: recipe for target 'refman.pdf' failed 
-gmake[4]: *** [refman.pdf] Error 1
+
+  Makefile:6: recipe for target 'refman.pdf' failed 
+  gmake[4]: *** [refman.pdf] Error 1
+
+- If you look at refman.log at WRKOBJDIR, you will find
+  following message.
+    -----------------------
+    ) (./util_2twi_8h.tex [334]) (./wdt_8h.tex)
+    ! Undefined control sequence.
+    l.303 \backmatter
+    -----------------------                 
+  But if you invoke pdflatex there, it will finish successfully.
+     ------------------------
+    h87@makoto 11:24:16/150206(..wip/avr-libc)% \
+    (cd /export/WRKOBJDIR/wip/avr-libc/work/avr-libc-1.8.1/doc/api/latex_src; \
+    pdflatex refman.tex)
+    
+    This is pdfTeX, Version 3.1415926-2.5-1.40.14 (Web2C 2013)
+     restricted \write18 enabled.
+    entering extended mode
+    (./refman.tex
+    LaTeX2e <2011/06/27>
+    Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ba
+    sque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, estonian, 
+    finnish, french, german, ngerman, monogreek, greek, hungarian, icelandic, indon
+    esian, irish, italian, latin, bokmal, nynorsk, polish, portuguese, romanian, ru
+    ssian, serbian, slovak, slovenian, spanish, swedish, turkish, ukrainian, loaded
+    .
+    
+    
+    h87@makoto 11:24:50/150206(..wip/avr-libc)% \
+    (cd /export/WRKOBJDIR/wip/avr-libc/work/avr-libc-1.8.1/doc/api/latex_src; \
+    ls -la refman.*)
+    
+    -rw-r--r--  1 makoto  wheel   151259 Feb  6 11:24 refman.aux
+    -rw-r--r--  1 makoto  wheel   224993 Feb  6 11:24 refman.idx
+    -rw-r--r--  1 makoto  wheel   245014 Feb  6 11:24 refman.log
+    -rw-r--r--  1 makoto  wheel    81192 Feb  6 11:24 refman.out
+    -rw-r--r--  1 makoto  wheel  1595768 Feb  6 11:24 refman.pdf
+    -rw-r--r--  1 makoto  wheel     7415 Feb  5 10:05 refman.tex
+    -rw-r--r--  1 makoto  wheel   539317 Feb  6 11:24 refman.toc
+    h87@makoto 11:25:05/150206(..wip/avr-libc)% 
+    ------------------------
