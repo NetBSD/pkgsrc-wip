@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.46 2015/02/02 20:12:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.47 2015/02/06 09:45:24 thomasklausner Exp $
+${PLIST.gnome}lib/firefox-${VERSION}/components/libdbusservice.so
+${PLIST.gnome}lib/firefox-${VERSION}/components/libnkgnomevfs.so
+${PLIST.nobranding}lib/firefox-${VERSION}/browser/chrome/browser/content/branding/about-background.png
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
 lib/firefox-${VERSION}/browser/chrome.manifest
-${PLIST.nobranding}lib/firefox-${VERSION}/browser/chrome/browser/content/branding/about-background.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/branding/about-logo.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/branding/about-logo@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/branding/about-wordmark.svg
@@ -668,8 +670,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/newt
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/newtab.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/newtab@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/noise.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/performance.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/performance-icons.svg
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/performance.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/power.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch-checked.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/profiler-stopwatch.svg
@@ -830,8 +832,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/privatebrowsi
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/reader-mode-16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/reload-stop-go.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sanitizeDialog.css
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/search-history-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/search-engine-placeholder.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/search-history-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/search-indicator-add-engine.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/search-indicator-badge-add.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/search-indicator.png
@@ -1321,25 +1323,22 @@ lib/firefox-${VERSION}/browser/chrome/pdfjs/content/web/viewer.html
 lib/firefox-${VERSION}/browser/chrome/pdfjs/content/web/viewer.js
 lib/firefox-${VERSION}/browser/chrome/pdfjs/pdfjs.manifest
 lib/firefox-${VERSION}/browser/chrome/shumway/LICENSE
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/RtmpUtils.jsm
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/SpecialInflate.jsm
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/bootstrap-content.js
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/content.js
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/viewer.wrapper.html
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/viewerWrapper.js
+lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayBootstrapUtils.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayStreamConverter.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayTelemetry.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayUtils.jsm
-lib/firefox-${VERSION}/browser/chrome/shumway/content/avm2/generated/avm1lib/avm1lib.abc
 lib/firefox-${VERSION}/browser/chrome/shumway/content/avm2/generated/builtin/builtin.abc
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/blurh.frag
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/blurv.frag
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/canvas.vert
 lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/combined.frag
 lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/combined.vert
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/curve.frag
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/solid-fill.frag
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/solid-fill.vert
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/texture-fill.frag
-lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/texture-fill.vert
 lib/firefox-${VERSION}/browser/chrome/shumway/content/playerglobal/playerglobal.abcs
 lib/firefox-${VERSION}/browser/chrome/shumway/content/playerglobal/playerglobal.json
 lib/firefox-${VERSION}/browser/chrome/shumway/content/shumway.gfx.js
-lib/firefox-${VERSION}/browser/chrome/shumway/content/shumway.parser.js
 lib/firefox-${VERSION}/browser/chrome/shumway/content/shumway.player.js
 lib/firefox-${VERSION}/browser/chrome/shumway/content/version.txt
 lib/firefox-${VERSION}/browser/chrome/shumway/content/web/viewer.html
@@ -1381,7 +1380,6 @@ lib/firefox-${VERSION}/browser/chrome/webide/skin/runtimedetails.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/throbber.svg
 lib/firefox-${VERSION}/browser/chrome/webide/skin/webide.css
 lib/firefox-${VERSION}/browser/components/ChromeProfileMigrator.js
-lib/firefox-${VERSION}/browser/components/DownloadsStartup.js
 lib/firefox-${VERSION}/browser/components/ExperimentsService.js
 lib/firefox-${VERSION}/browser/components/FeedConverter.js
 lib/firefox-${VERSION}/browser/components/FeedWriter.js
@@ -1678,8 +1676,8 @@ lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/AccessFu.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/about.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutAbout.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutNetworking.dtd
-lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutRights.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutReader.properties
+lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutRights.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutSupport.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutTelemetry.dtd
@@ -1803,7 +1801,6 @@ lib/firefox-${VERSION}/chrome/en-US/locale/en-US/passwordmgr/passwordManager.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/passwordmgr/passwordmgr.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/pipnss/nsserrors.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/pipnss/pipnss.properties
-lib/firefox-${VERSION}/chrome/en-US/locale/en-US/pipnss/security.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/pippki/certManager.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/pippki/deviceManager.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/pippki/pippki.dtd
@@ -2378,7 +2375,7 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/stripes-wa
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/themeGeneric-16.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/themeGeneric.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/update.css
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/utilities.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/utilities.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/formautofill/requestAutocomplete.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/handling/handling.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/passwordmgr/key-16.png
@@ -2469,9 +2466,7 @@ lib/firefox-${VERSION}/components/crypto-SDR.js
 lib/firefox-${VERSION}/components/htmlMenuBuilder.js
 lib/firefox-${VERSION}/components/interfaces.xpt
 lib/firefox-${VERSION}/components/jsconsole-clhandler.js
-${PLIST.gnome}lib/firefox-${VERSION}/components/libdbusservice.so
 lib/firefox-${VERSION}/components/libmozgnome.so
-${PLIST.gnome}lib/firefox-${VERSION}/components/libnkgnomevfs.so
 lib/firefox-${VERSION}/components/marionettecomponent.js
 lib/firefox-${VERSION}/components/messageWakeupService.js
 lib/firefox-${VERSION}/components/multiprocessShims.js
@@ -2807,12 +2802,17 @@ lib/firefox-${VERSION}/modules/commonjs/diffpatcher/test/patch.js
 lib/firefox-${VERSION}/modules/commonjs/diffpatcher/test/tap.js
 lib/firefox-${VERSION}/modules/commonjs/framescript/FrameScriptManager.jsm
 lib/firefox-${VERSION}/modules/commonjs/framescript/LoaderHelper.jsm
+lib/firefox-${VERSION}/modules/commonjs/framescript/context-menu.js
 lib/firefox-${VERSION}/modules/commonjs/framescript/contextmenu-events.js
+lib/firefox-${VERSION}/modules/commonjs/framescript/manager.js
 lib/firefox-${VERSION}/modules/commonjs/framescript/tab-events.js
+lib/firefox-${VERSION}/modules/commonjs/framescript/util.js
+lib/firefox-${VERSION}/modules/commonjs/index.js
 lib/firefox-${VERSION}/modules/commonjs/method/core.js
 lib/firefox-${VERSION}/modules/commonjs/method/test/browser.js
 lib/firefox-${VERSION}/modules/commonjs/method/test/common.js
 lib/firefox-${VERSION}/modules/commonjs/node/os.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/addon/bootstrap.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/addon/events.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/addon/host.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/addon/installer.js
@@ -2834,9 +2834,12 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/content/sandbox.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/content/thumbnail.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/content/utils.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/content/worker-child.js
-lib/firefox-${VERSION}/modules/commonjs/sdk/content/worker-parent.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/content/worker.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/context-menu.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/context-menu/context.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/context-menu/core.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/context-menu/readers.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/context-menu@2.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/core/disposable.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/core/heritage.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/core/namespace.js
@@ -2852,6 +2855,7 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/light-traits.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/list.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/memory.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/symbiont.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/sync-worker.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/traits-worker.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/traits.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/deprecated/traits/core.js
@@ -2914,7 +2918,6 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/page-worker.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/panel.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/panel/events.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/panel/utils.js
-lib/firefox-${VERSION}/modules/commonjs/sdk/panel/window.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/passwords.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/passwords/utils.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/places/bookmarks.js
@@ -2953,6 +2956,7 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/system/process.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/system/runtime.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/system/unload.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/system/xul-app.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/system/xul-app.jsm
 lib/firefox-${VERSION}/modules/commonjs/sdk/tab/events.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/tabs.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/tabs/common.js
@@ -2983,6 +2987,7 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/ui/button/contract.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/button/toggle.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/button/view.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/button/view/events.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/ui/component.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/frame.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/frame/model.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/frame/view.html
@@ -2999,9 +3004,11 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/ui/state/events.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/toolbar.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/toolbar/model.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/ui/toolbar/view.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/uri/resource.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/url.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/url/utils.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/array.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/util/bond.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/collection.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/contract.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/deprecate.js
@@ -3009,7 +3016,6 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/util/dispatcher.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/list.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/match-pattern.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/object.js
-lib/firefox-${VERSION}/modules/commonjs/sdk/util/registry.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/rules.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/sequence.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/util/uuid.js
@@ -3024,7 +3030,6 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/windows.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/windows/dom.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/windows/fennec.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/windows/firefox.js
-lib/firefox-${VERSION}/modules/commonjs/sdk/windows/loader.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/windows/observer.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/windows/tabs-fennec.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/windows/tabs-firefox.js
@@ -3266,7 +3271,6 @@ lib/firefox-${VERSION}/modules/osfile/ospath_win.jsm
 lib/firefox-${VERSION}/modules/reflect.jsm
 lib/firefox-${VERSION}/modules/sdk/bootstrap.js
 lib/firefox-${VERSION}/modules/sdk/system/Startup.js
-lib/firefox-${VERSION}/modules/sdk/system/XulApp.js
 lib/firefox-${VERSION}/modules/services-common/async.js
 lib/firefox-${VERSION}/modules/services-common/bagheeraclient.js
 lib/firefox-${VERSION}/modules/services-common/hawkclient.js
