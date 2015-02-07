@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/10/15 14:51:31 makoto Exp $
+# $NetBSD: options.mk,v 1.3 2015/02/07 22:08:46 tnn2 Exp $
 
 # Global and legacy options
 
@@ -42,5 +42,5 @@ DEPENDS+=	${PYPKGPREFIX}-yenc-[0-9]*:../../wip/py-yenc
 ###
 .if !empty(PKG_OPTIONS:Mopenssl)
 DEPENDS+=	openssl-[0-9]*:../../security/openssl
-DEPENDS+= ${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL/
+DEPENDS+= ${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 .endif
