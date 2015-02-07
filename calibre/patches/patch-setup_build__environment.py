@@ -1,4 +1,6 @@
-Build stops with:
+$NetBSD: patch-setup_build__environment.py,v 1.1 2015/02/07 16:20:20 thomasklausner Exp $
+
+Avoid problem on NetBSD:
 
 ####### Building extension magick #######
 Compiling magick
@@ -32,4 +34,21 @@ Traceback (most recent call last):
 thread.error: can't start new thread
 *** Error code 1
 
-but retrying makes it package and work.
+(The same chunk works fine in the interactive shell, not sure why
+it so reliably breaks. -- wiz 20150207)
+
+--- setup/build_environment.py.orig	2015-02-07 14:26:27.000000000 +0000
++++ setup/build_environment.py
+@@ -43,11 +43,7 @@ if iswindows:
+     import win32api
+     cpu_count = win32api.GetSystemInfo()[5]
+ else:
+-    from multiprocessing import cpu_count
+-    try:
+-        cpu_count = cpu_count()
+-    except NotImplementedError:
+-        cpu_count = 1
++    cpu_count = 1
+ 
+ def run_pkgconfig(name, envvar, default, flag, prefix):
+     ans = []
