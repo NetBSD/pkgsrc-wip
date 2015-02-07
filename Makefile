@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6066 2015/02/05 02:16:01 jgoamakf Exp $
+# $Id: Makefile,v 1.6067 2015/02/07 09:10:22 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2108,7 +2108,6 @@ SUBDIR+=	p5-File-Map
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Getopt-GUI-Long
-SUBDIR+=	p5-Git-Repository-Plugin-AUTOLOAD
 SUBDIR+=	p5-Gtk2-Spell
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
