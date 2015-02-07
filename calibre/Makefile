@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/02/01 20:29:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/07 16:32:13 thomasklausner Exp $
 
 DISTNAME=	calibre-2.18.0
 CATEGORIES=	misc
@@ -33,14 +33,6 @@ DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
 # dns>=1.6.0
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil dns
 
-# We also need the distfile for qt4-libs to extract some private header files
-# If QTVERSION changes, the distinfo file needs to be updated too.
-# QTVERSION=	4.8.5	# from ../../x11/qt4/Makefile.common
-# Including that file to avoid hardcoding the version number won't work,
-# since it will occur in the distinfo anyway.
-#QTNAME=		qt-everywhere-opensource-src-${QTVERSION}
-#DISTFILES+=	${QTNAME}.tar.gz
-#MASTER_SITES+=	http://releases.qt-project.org/qt4/source/
 EXTRACT_USING=  bsdtar
 
 USE_LANGUAGES=	c c++
@@ -162,5 +154,5 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-qt5+=	${PYPKGPREFIX}-qt5>=5.4
-.include "../../wip/py-qt5/buildlink3.mk"
+.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
