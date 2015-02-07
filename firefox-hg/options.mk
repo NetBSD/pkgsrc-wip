@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.2 2015/02/07 09:43:30 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc gnome pulseaudio webrtc
-PLIST_VARS+=		gnome jemalloc debug
+
+PLIST_SRC+=	PLIST
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc
@@ -32,14 +33,13 @@ CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus --enable-gnomeui
 CONFIGURE_ARGS+=	--enable-libnotify
 CONFIGURE_ARGS+=	--enable-extensions=gnomevfs
-PLIST.gnome=		yes
+PLIST_SRC+=		PLIST.gnome
 .else
 CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
 CONFIGURE_ARGS+=	--disable-libnotify
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
-PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
@@ -58,7 +58,6 @@ O0TRACKING=-fvar-tracking-assignments -fvar-tracking
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}" --enable-debug-symbols --disable-optimize
 CONFIGURE_ARGS+=	--disable-install-strip
-PLIST.debug=		yes
 .else
 .if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
@@ -78,19 +77,16 @@ CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 # XXX end
 
-PLIST_VARS+=		branding nobranding
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
 LICENSE=		mozilla-trademark-license
 RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-PLIST.branding=		yes
 .else
-PLIST.nobranding=	yes
+PLIST_SRC+=		PLIST.nobranding
 .endif
 
-PLIST_VARS+=		webrtc
 .if !empty(PKG_OPTIONS:Mwebrtc)
 .include "../../graphics/libv4l/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webrtc

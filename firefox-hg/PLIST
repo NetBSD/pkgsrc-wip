@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2015/02/06 09:45:24 thomasklausner Exp $
-${PLIST.gnome}lib/firefox-${VERSION}/components/libdbusservice.so
-${PLIST.gnome}lib/firefox-${VERSION}/components/libnkgnomevfs.so
-${PLIST.nobranding}lib/firefox-${VERSION}/browser/chrome/browser/content/branding/about-background.png
+@comment $NetBSD: PLIST,v 1.48 2015/02/07 09:43:30 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -746,6 +743,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/downloads/dow
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/downloads/download-notification-start.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/downloads/download-summary.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/downloads/downloads.css
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/drm-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/e10s-64@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/engineManager.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/audioFeedIcon.png
@@ -1367,6 +1365,8 @@ lib/firefox-${VERSION}/browser/chrome/webide/content/runtimedetails.js
 lib/firefox-${VERSION}/browser/chrome/webide/content/runtimedetails.xhtml
 lib/firefox-${VERSION}/browser/chrome/webide/content/webide.js
 lib/firefox-${VERSION}/browser/chrome/webide/content/webide.xul
+lib/firefox-${VERSION}/browser/chrome/webide/content/wifi-auth.js
+lib/firefox-${VERSION}/browser/chrome/webide/content/wifi-auth.xhtml
 lib/firefox-${VERSION}/browser/chrome/webide/skin/addons.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/config-view.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/deck.css
@@ -1379,6 +1379,7 @@ lib/firefox-${VERSION}/browser/chrome/webide/skin/prefs.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/runtimedetails.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/throbber.svg
 lib/firefox-${VERSION}/browser/chrome/webide/skin/webide.css
+lib/firefox-${VERSION}/browser/chrome/webide/skin/wifi-auth.css
 lib/firefox-${VERSION}/browser/components/ChromeProfileMigrator.js
 lib/firefox-${VERSION}/browser/components/ExperimentsService.js
 lib/firefox-${VERSION}/browser/components/FeedConverter.js
@@ -1397,7 +1398,6 @@ lib/firefox-${VERSION}/browser/components/nsBrowserGlue.js
 lib/firefox-${VERSION}/browser/components/nsSessionStartup.js
 lib/firefox-${VERSION}/browser/components/nsSessionStore.js
 lib/firefox-${VERSION}/browser/components/nsSetDefaultBrowser.js
-lib/firefox-${VERSION}/browser/components/nsSidebar.js
 lib/firefox-${VERSION}/browser/components/webideCli.js
 lib/firefox-${VERSION}/browser/defaults/preferences/firefox-branding.js
 lib/firefox-${VERSION}/browser/defaults/preferences/firefox-l10n.js
@@ -1418,6 +1418,7 @@ lib/firefox-${VERSION}/browser/modules/CastingApps.jsm
 lib/firefox-${VERSION}/browser/modules/Chat.jsm
 lib/firefox-${VERSION}/browser/modules/ContentClick.jsm
 lib/firefox-${VERSION}/browser/modules/ContentLinkHandler.jsm
+lib/firefox-${VERSION}/browser/modules/ContentObservers.jsm
 lib/firefox-${VERSION}/browser/modules/ContentSearch.jsm
 lib/firefox-${VERSION}/browser/modules/ContentWebRTC.jsm
 lib/firefox-${VERSION}/browser/modules/CustomizableUI.jsm
@@ -1860,7 +1861,6 @@ lib/firefox-${VERSION}/chrome/pippki/content/pippki/escrowWarn.js
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/escrowWarn.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/exceptionDialog.js
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/exceptionDialog.xul
-lib/firefox-${VERSION}/chrome/pippki/content/pippki/getp12password.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/getpassword.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/load_device.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/password.js
@@ -2494,6 +2494,7 @@ lib/firefox-${VERSION}/components/nsPlacesExpiration.js
 lib/firefox-${VERSION}/components/nsPrompter.js
 lib/firefox-${VERSION}/components/nsSearchService.js
 lib/firefox-${VERSION}/components/nsSearchSuggestions.js
+lib/firefox-${VERSION}/components/nsSidebar.js
 lib/firefox-${VERSION}/components/nsTaggingService.js
 lib/firefox-${VERSION}/components/nsTerminatorTelemetry.js
 lib/firefox-${VERSION}/components/nsURLFormatter.js
@@ -2635,6 +2636,7 @@ lib/firefox-${VERSION}/modules/FxAccounts.jsm
 lib/firefox-${VERSION}/modules/FxAccountsClient.jsm
 lib/firefox-${VERSION}/modules/FxAccountsCommon.js
 lib/firefox-${VERSION}/modules/FxAccountsOAuthClient.jsm
+lib/firefox-${VERSION}/modules/FxAccountsOAuthGrantClient.jsm
 lib/firefox-${VERSION}/modules/FxAccountsProfileClient.jsm
 lib/firefox-${VERSION}/modules/GMPInstallManager.jsm
 lib/firefox-${VERSION}/modules/Geometry.jsm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/01/30 01:30:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/07 09:43:30 thomasklausner Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	38.0a1
@@ -30,6 +30,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firefox-${MOZ_BRANCH} ${COMPILER_
 LDFLAGS.SunOS+=		-lm
 
 PLIST_SUBST+=	VERSION=${MOZ_BRANCH}
+PRINT_PLIST_AWK+=	{ gsub(/${MOZ_BRANCH}/, "$${VERSION}") }
 
 ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 

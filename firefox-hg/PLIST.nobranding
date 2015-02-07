@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.nobranding,v 1.1 2015/02/07 09:43:30 thomasklausner Exp $
+lib/firefox-${VERSION}/browser/chrome/browser/content/branding/about-background.png
