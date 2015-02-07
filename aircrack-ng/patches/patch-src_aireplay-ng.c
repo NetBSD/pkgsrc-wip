@@ -1,10 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2013/06/12 17:45:49 moubctez Exp $
+$NetBSD: patch-src_aireplay-ng.c,v 1.1 2015/02/07 01:35:39 tnn2 Exp $
 
-Set ap channel to iface channel
-
---- src/aireplay-ng.c.orig	2013-05-25 22:53:50.000000000 +0000
+--- src/aireplay-ng.c.orig	2014-10-21 02:13:52.000000000 +0000
 +++ src/aireplay-ng.c
-@@ -743,7 +743,7 @@ int attack_check(uchar* bssid, char* ess
+@@ -743,7 +743,7 @@ int attack_check(unsigned char* bssid, c
          if((ap_chan != iface_chan) && (iface_chan != -1 || !opt.ignore_negative_one))
          {
              PCT; printf("%s is on channel %d, but the AP uses channel %d\n", wi_get_ifname(wi), iface_chan, ap_chan);

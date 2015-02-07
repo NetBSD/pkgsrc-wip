@@ -1,6 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2013/06/12 17:45:49 moubctez Exp $
-
-Replace install with BSD_INSTALL_MAN
+$NetBSD: patch-manpages_Makefile,v 1.1 2015/02/07 01:35:39 tnn2 Exp $
 
 --- manpages/Makefile.orig	2013-01-26 19:12:24.000000000 +0000
 +++ manpages/Makefile

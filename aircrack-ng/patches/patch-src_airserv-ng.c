@@ -1,8 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2012/08/20 13:23:18 imilh Exp $
+$NetBSD: patch-src_airserv-ng.c,v 1.1 2015/02/07 01:35:39 tnn2 Exp $
 
-Add sys/select.h
-
---- src/airserv-ng.c.orig	2009-06-06 02:18:38.000000000 +0200
+--- src/airserv-ng.c.orig	2013-05-25 23:06:24.000000000 +0000
 +++ src/airserv-ng.c
 @@ -24,6 +24,7 @@
  

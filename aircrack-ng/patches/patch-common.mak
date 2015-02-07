@@ -1,10 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2013/06/12 17:45:49 moubctez Exp $
+$NetBSD: patch-common.mak,v 1.1 2015/02/07 01:35:39 tnn2 Exp $
 
-Paths fixes
-
---- common.mak.orig	2013-05-25 21:49:08.000000000 +0000
+--- common.mak.orig	2014-07-24 23:39:05.000000000 +0000
 +++ common.mak
-@@ -110,11 +110,11 @@ OPTFLAGS        = -D_FILE_OFFSET_BITS=64
+@@ -121,11 +121,11 @@ OPTFLAGS        = -D_FILE_OFFSET_BITS=64
  CFLAGS          ?= -g -W -Wall -O3
  CFLAGS          += $(OPTFLAGS) $(REVFLAGS) $(COMMON_CFLAGS)
  

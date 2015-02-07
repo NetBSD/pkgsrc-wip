@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2013/06/12 17:45:49 moubctez Exp $
+$NetBSD: patch-src_osdep_byteorder.h,v 1.1 2015/02/07 01:35:39 tnn2 Exp $
 
-Add NetBSD for machine/endian.h inclusion
-
---- src/osdep/byteorder.h.orig	2009-08-13 20:51:18.000000000 +0200
+--- src/osdep/byteorder.h.orig	2013-03-04 17:32:55.000000000 +0000
 +++ src/osdep/byteorder.h
 @@ -222,7 +222,7 @@
  

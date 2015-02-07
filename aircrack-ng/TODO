@@ -1,5 +1,0 @@
-1.2 Beta 3 and earlier has the following vulnerabilities:
-gps_tracer stack overflow CVE-2014-8321
-tcp_test length parameter inconsistency CVE-2014-8322
-buddy-ng missing check in data format CVE-2014-8323
-net_get missing check for invalid values CVE-2014-8324
