@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/01/03 13:49:47 jonthn Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/08 22:17:12 jonthn Exp $
 #
 
-DISTNAME=	v1.1.0
+DISTNAME=	v1.3.0
 PKGNAME=	libuv-${DISTNAME:S/v//1}
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libuv/libuv/archive/
