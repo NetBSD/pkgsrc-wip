@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 17:13:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/08 22:11:58 jihbed Exp $
 #
 
 VERSION= 0.3.1.dev-20120112
@@ -10,7 +10,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/p/python-algebraic/
 EXTRACT_SUFX=	.zip#md5=cbf55e6cefe57b36cdb962a2d5926a45
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://github.com/rzoz/python-algebraic
+HOMEPAGE=	https://pypi.python.org/pypi/python-algebraic/
 COMMENT=	Algebraic modeling system for Python
 LICENSE=	2-clause-bsd
 
