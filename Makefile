@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6072 2015/02/08 21:18:28 tnn2 Exp $
+# $Id: Makefile,v 1.6073 2015/02/08 22:06:02 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3610,7 +3610,6 @@ SUBDIR+=	thawab
 SUBDIR+=	thcrut
 SUBDIR+=	theama
 SUBDIR+=	thepeg
-SUBDIR+=	tigervnc
 SUBDIR+=	tilda
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
