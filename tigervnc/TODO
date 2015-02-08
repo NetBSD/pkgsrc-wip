@@ -1,2 +1,0 @@
-This does not build Xvnc; thus, vncserver is not usable.
-vncclient and x0vncserver are, though.
