@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6071 2015/02/08 09:08:34 thomasklausner Exp $
+# $Id: Makefile,v 1.6072 2015/02/08 21:18:28 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1316,8 +1316,6 @@ SUBDIR+=	java-vorbisspi
 SUBDIR+=	java-xmlrpc
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
-SUBDIR+=	jdk15
-SUBDIR+=	jdk16
 SUBDIR+=	jellyfish
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
