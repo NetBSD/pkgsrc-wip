@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/01/30 07:53:01 noud4 Exp $
+$NetBSD: distinfo,v 1.3 2015/02/08 21:45:50 jihbed Exp $
 
-SHA1 (OpenOpt.zip) = 9aebe551ce799620ee1e88f9a2f8fc77a9196d00
-RMD160 (OpenOpt.zip) = 46ae0e544664985257b2eba91a14498172ebe220
-Size (OpenOpt.zip) = 351018 bytes
+SHA1 (openopt-0.5404.tar.gz) = 7f891b376fe91ebd90d1b99e5de5da1e8efa9979
+RMD160 (openopt-0.5404.tar.gz) = bc825c6ff7ce03fc75531d52a465c4db93c2c312
+Size (openopt-0.5404.tar.gz) = 265944 bytes
