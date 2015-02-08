@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2011/01/17 10:08:40 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/02/08 21:19:52 jihbed Exp $
 bin/givaro-config
 bin/givaro-makefile
 include/givaro-config.h
@@ -13,6 +13,7 @@ include/givaro/givarrayfixed.h
 include/givaro/givbasictype.h
 include/givaro/givbits.h
 include/givaro/givbits.inl
+include/givaro/givcaster.h
 include/givaro/givcategory.h
 include/givaro/givconfig.h
 include/givaro/givcra.h
@@ -34,6 +35,8 @@ include/givaro/givindeter.h
 include/givaro/givinit.h
 include/givaro/givinteger.h
 include/givaro/givinterp.h
+include/givaro/givinterpgeom-multip.h
+include/givaro/givinterpgeom.h
 include/givaro/givintfactor.h
 include/givaro/givintfactor.inl
 include/givaro/givintnumtheo.h
@@ -95,6 +98,9 @@ include/givaro/givref_count.h
 include/givaro/givrns.h
 include/givaro/givrnsconvert.inl
 include/givaro/givrnscstor.inl
+include/givaro/givrnsfixed.h
+include/givaro/givrnsfixed.inl
+include/givaro/givspyinteger.h
 include/givaro/givstack.h
 include/givaro/givstack.inl
 include/givaro/givstorage.h
@@ -121,17 +127,20 @@ include/givaro/givzpz32uns.h
 include/givaro/givzpz32uns.inl
 include/givaro/givzpz64std.h
 include/givaro/givzpz64std.inl
+include/givaro/givzpzGen.h
+include/givaro/givzpzGen.inl
 include/givaro/givzpzInt.h
 include/givaro/givzpzInt.inl
-include/gmp++/gmp++.C
+include/givaro/givzpztypes.h
 include/gmp++/gmp++.h
-include/gmp++/gmp++_int.C
 include/gmp++/gmp++_int.h
-include/gmp++/gmp++_int.inl
+include/gmp++/gmp++_int_rand.inl
+include/gmp++/gmp++_rat.h
+include/gmp++/gmp++_rat.inl
 lib/libgivaro.la
-share/examples/givaro/FiniteField/ChineseRemaindering.C
 share/examples/givaro/FiniteField/GF128.C
 share/examples/givaro/FiniteField/GFirreducible.C
+share/examples/givaro/FiniteField/GaloisFields.C
 share/examples/givaro/FiniteField/Test_Extension.C
 share/examples/givaro/FiniteField/all_field.C
 share/examples/givaro/FiniteField/domain_to_operatorstyle.C
@@ -165,6 +174,7 @@ share/examples/givaro/Integer/primitiveelement.C
 share/examples/givaro/Integer/primitiveroot.C
 share/examples/givaro/Integer/probable_primroot.C
 share/examples/givaro/Polynomial/PolynomialCRT.C
+share/examples/givaro/Polynomial/highorder.C
 share/examples/givaro/Polynomial/interpolate.C
 share/examples/givaro/Polynomial/isirred.C
 share/examples/givaro/Polynomial/isprimitive.C

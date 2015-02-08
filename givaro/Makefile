@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/09/29 00:50:35 asau Exp $
-#
+# $NetBSD: Makefile,v 1.13 2015/02/08 21:19:52 jihbed Exp $
 
-DISTNAME=	givaro-3.3.4
+DISTNAME=	givaro-3.8.0
 CATEGORIES=	math
-MASTER_SITES=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/Downloads/
+MASTER_SITES=	https://forge.imag.fr/frs/download.php/592/
 
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/
@@ -11,10 +10,7 @@ COMMENT=	C++ library for arithmetic and algebraic computations
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-
-CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
@@ -32,5 +28,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/Rational/*.C \
 		${DESTDIR}${EGDIR}/Rational
 
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
