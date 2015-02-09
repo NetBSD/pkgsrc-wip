@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6073 2015/02/08 22:06:02 thomasklausner Exp $
+# $Id: Makefile,v 1.6074 2015/02/09 15:47:34 ahp-nils Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -625,7 +625,6 @@ SUBDIR+=	expiretable
 SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
 SUBDIR+=	faast
-SUBDIR+=	fail2ban
 SUBDIR+=	fairymax
 SUBDIR+=	fakenes
 SUBDIR+=	fala
