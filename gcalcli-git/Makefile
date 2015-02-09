@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/11/26 15:05:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/09 15:44:25 thomasklausner Exp $
 
-DISTNAME=	gcalcli-3.1
+DISTNAME=	gcalcli-3.2
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/insanum/gcalcli/
 
