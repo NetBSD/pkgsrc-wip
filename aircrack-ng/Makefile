@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/02/07 01:35:37 tnn2 Exp $
+# $NetBSD: Makefile,v 1.21 2015/02/09 17:28:42 leot1990 Exp $
 
 DISTNAME=	aircrack-ng-1.2-rc1
 PKGNAME=	aircrack-ng-1.2rc1
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 USE_TOOLS+=		bash gmake
-REPLACE_BASH+=		scripts/airdriver-ng
 REPLACE_BASH+=		scripts/airodump-ng-oui-update
 
 SUBST_CLASSES+=		paths
