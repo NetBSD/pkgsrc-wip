@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6074 2015/02/09 15:47:34 ahp-nils Exp $
+# $Id: Makefile,v 1.6075 2015/02/09 18:46:10 leot1990 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1884,6 +1884,7 @@ SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
 SUBDIR+=	netlogo
 SUBDIR+=	netrik
+SUBDIR+=	netsurf
 SUBDIR+=	nettle3
 SUBDIR+=	netwib
 SUBDIR+=	netwmpager
