@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/02/09 18:48:28 leot1990 Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/09 22:24:32 leot1990 Exp $
 #
 
 DISTNAME=	netsurf-all-3.2
@@ -9,6 +9,7 @@ MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netsurf-browser.org/
 COMMENT=	Web browser for RISC OS and UNIX-like platforms
+LICENSE=	gnu-gpl-v2 AND mit
 
 BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
 BUILD_DEPENDS+=	re2c>=0.12:../../devel/re2c
