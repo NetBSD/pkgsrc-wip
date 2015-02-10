@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2015/01/29 07:40:59 makoto Exp $
-# $Id: Makefile,v 1.4 2015/01/29 07:40:59 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/10 05:13:42 makoto Exp $
+# $Id: Makefile,v 1.5 2015/02/10 05:13:42 makoto Exp $
 
 DISTNAME=	doxygen-dependent-1.01
 CATEGORIES=	meta-pkgs
@@ -12,15 +12,38 @@ META_PACKAGE=	YES
 
 .include "../../mk/bsd.pkg.mk"
 
-#EPENDS+=	dar-[0-9]*:../../archivers/dar	# disabled by configure
+#EPENDS+=	dar-[0-9]*:../../archivers/dar		# disabled by configure
 DEPENDS+=	darkice-[0-9]*:../../audio/darkice	# not known yet
+DEPENDS+=	libfishsound-[0-9]*:../../audio/libfishsound
+DEPENDS+=	libopus-[0-9]*:../../audio/libopus
+DEPENDS+=	libvorbis-[0-9]*:../../audio/libvorbis
+DEPENDS+=	sphinx3-[0-9]*:../../audio/sphinx3
+DEPENDS+=	twolame-[0-9]*:../../audio/twolame
+
+DEPENDS+=	nelma-[0-9]*:../../cad/boolean
+DEPENDS+=	nelma-[0-9]*:../../cad/nelma
+
 #EPENDS+=	meanwhile-[0-9]*:../../chat/meanwhile	# disabled by configure
-#EPENDS+=	gammu-[0-9]*:../../comms/gammu	# used to be BUILD_DEPENDS
+
+#EPENDS+=	gammu-[0-9]*:../../comms/gammu		# used to be BUILD_DEPENDS
+DEPENDS+=	asterisk-[0-9]*:../../comms/asterisk
+DEPENDS+=	asterisk10-[0-9]*:../../comms/asterisk10
+DEPENDS+=	asterisk18-[0-9]*:../../comms/asterisk18
+
 DEPENDS+=	openobex-[0-9]*:../../comms/openobex	# YES explicit
 #EPENDS+=	libcdr-[0-9]*:../../converters/libcdr	# disabled by configure
 DEPENDS+=	libvisio-[0-9]*:../../converters/libvisio # YES (as of 201501)
 DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 DEPENDS+=	libpqxx-doc-[0-9]*:../../databases/libpqxx-doc # unknown
+
+DEPENDS+=	freetds-[0-9]*:../../databases/freetds
+DEPENDS+=	kyotocabinet-[0-9]*:../../databases/kyotocabinet
+DEPENDS+=	libpqxx-doc-[0-9]*:../../databases/libpqxx-doc
+DEPENDS+=	qdbm-plus-[0-9]*:../../databases/qdbm-plus
+DEPENDS+=	qore-mysql-module-[0-9]*:../../databases/qore-mysql-module
+DEPENDS+=	qore-openldap-module-[0-9]*:../../databases/qore-openldap-module
+DEPENDS+=	qore-pgsql-module-[0-9]*:../../databases/qore-pgsql-module
+DEPENDS+=	sqlrelay-[0-9]*:../../databases/sqlrelay
 
 DEPENDS+=	bison-[0-9]*:../../devel/bison		# unknown
 DEPENDS+=	cppunit-[0-9]*:../../devel/cppunit	# unknown
