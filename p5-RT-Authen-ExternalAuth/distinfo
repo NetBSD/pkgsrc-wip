@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/10 08:29:03 thomasklausner Exp $
+
+SHA1 (RT-Authen-ExternalAuth-0.25.tar.gz) = cbd019339255e9ee9e578a849584702993e13e26
+RMD160 (RT-Authen-ExternalAuth-0.25.tar.gz) = 819c3750581384f812305ca732c5ac279ecb44a0
+Size (RT-Authen-ExternalAuth-0.25.tar.gz) = 79297 bytes

@@ -1,0 +1,21 @@
+Needs to be root.
+
+Does not install into destdir, but also outside.
+
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth.pm
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth/DBI.pm
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth/LDAP.pm
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth/DBI/Cookie.pm
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/man/man3/RT::Authen::ExternalAuth.3
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/man/man3/RT::Authen::ExternalAuth::DBI.3
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/man/man3/RT::Authen::ExternalAuth::DBI::Cookie.3
+Installing /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/var/rt4/man/man3/RT::Authen::ExternalAuth::LDAP.3
+Appending installation info to /scratch/nih/p5-RT-Authen-ExternalAuth/work/.destdir/usr/pkg/lib/perl5/5.20.0/x86_64-netbsd-thread-multi/perllocal.pod
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/html/Callbacks/ExternalAuth/autohandler/Auth
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/html/Callbacks/ExternalAuth/autohandler/Session
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/html/Callbacks/ExternalAuth/Elements/Header/Head
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/html/Elements/DoAuth
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth.pm
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth/DBI.pm
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth/LDAP.pm
+Installing /var/rt4/plugins/RT-Authen-ExternalAuth/lib/RT/Authen/ExternalAuth/DBI/Cookie.pm
