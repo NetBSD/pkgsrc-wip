@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pmacctd.sh,v 1.1 2015/02/09 19:50:28 mbowie Exp $
+# $NetBSD: pmacctd.sh,v 1.2 2015/02/10 00:21:42 mbowie Exp $
 #
 
 # PROVIDE: pmacctd
@@ -13,7 +13,7 @@ rcvar=${name}
 command=@PREFIX@/sbin/${name}
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 pidfile="/var/run/${name}.pid"
-command_args="-p ${pidfile} -f ${required_files}"
+command_args="-F ${pidfile} -f ${required_files}"
 
 load_rc_config $name
 
