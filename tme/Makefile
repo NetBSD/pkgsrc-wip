@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/27 21:22:03 phabrics Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/10 05:59:21 phabrics Exp $
 
 DISTNAME=	tme-1.0beta_6
 CATEGORIES=	emulators
@@ -20,6 +20,36 @@ CONFLICTS=	tme-[0-9]*
 
 .if (${MACHINE_ARCH} == "x86_64")
 CONFIGURE_ARGS+=	--disable-recode
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-tautological-compare \
+			-Wno-sometimes-uninitialized \
+			-Wno-unused-function \
+			-Wno-unused-parameter \
+			-Wno-unused-variable \
+			-Wno-sign-compare \
+			-Wno-incompatible-pointer-types \
+			-Wno-absolute-value
+CWRAPPERS_APPEND.cc+=	-Wno-tautological-compare \
+			-Wno-sometimes-uninitialized \
+			-Wno-unused-function \
+			-Wno-unused-parameter \
+			-Wno-unused-variable \
+			-Wno-sign-compare \
+			-Wno-incompatible-pointer-types \
+			-Wno-absolute-value
+.elif !empty(CC_VERSION:Mgcc-4.8.*)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-unused-but-set-variable \
+	-Wno-array-bounds \
+	-Wno-type-limits \
+	-fno-strict-aliasing
+CWRAPPERS_APPEND.cc+=	-Wno-unused-but-set-variable \
+	-Wno-array-bounds \
+	-Wno-type-limits \
+	-fno-strict-aliasing
+
 .endif
 
 .include "../../devel/libltdl/convenience.mk"
