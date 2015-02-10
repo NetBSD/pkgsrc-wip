@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/02/06 02:32:27 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/10 04:58:12 makoto Exp $
 
 DISTNAME=		avr-libc-1.8.1
 CATEGORIES=		cross
@@ -17,9 +17,9 @@ BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
 BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
-BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../wip/tex-adjustbox
-BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../wip/tex-collectbox
-BUILD_DEPENDS+=		tex-ydoc-[0-9]*:../../wip/tex-ydoc
+BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../print/tex-adjustbox
+BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
+BUILD_DEPENDS+=		tex-ydoc-[0-9]*:../../print/tex-ydoc
 
 # formatting refman.pdf needs tools
 BUILD_DEPENDS+=		web2c-[0-9]*:../../print/web2c
