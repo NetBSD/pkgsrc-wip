@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/12/24 20:17:47 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/02/10 13:59:53 moubctez Exp $
 bin/fs-uae
 bin/fs-uae-device-helper
 share/applications/fs-uae.desktop
@@ -96,8 +96,10 @@ share/fs-uae/input/p880_12_4_1_0_windows.conf
 share/fs-uae/input/playstation_r_3_controller_19_4_0_0_macosx.conf
 share/fs-uae/input/ps3_usb_cordless_gamepad_13_4_1_0_macosx.conf
 share/fs-uae/input/ps3_usb_cordless_gamepad_13_4_1_0_windows.conf
+share/fs-uae/input/retrolink/usb_gamepad_10_2_0_0_linux.ini
 share/fs-uae/input/saitek/dual_analog_gamepad.ini
 share/fs-uae/input/saitek/p880.ini
+share/fs-uae/input/saitek/x52_flight_control_system.ini
 share/fs-uae/input/sony/computer_entertainment_wireless_inputdevice.ini
 share/fs-uae/input/sony/playstation_r_3_controller.ini
 share/fs-uae/input/sony/playstation_r_3_inputdevice.ini
@@ -106,15 +108,17 @@ share/fs-uae/input/speed_link_competition_pro_4_2_0_0_windows.conf
 share/fs-uae/input/speedlink_strike_2_gamepad_12_5_1_0_windows.conf
 share/fs-uae/input/thrustmaster/2_in_1_dt.ini
 share/fs-uae/input/thrustmaster/t_mini_wireless.ini
+share/fs-uae/input/thrustmaster/top_gun_fox_2_pro.ini
 share/fs-uae/input/universal_gamepad.ini
 share/fs-uae/input/unknown.ini
+share/fs-uae/input/wireless_controller_14_6_1_0_macosx.conf
 share/fs-uae/input/wisegroup_ltd/mp_8866_dual_usb_joypad.ini
 share/fs-uae/input/wisegroup_ltd/tigergame_ps_ps2_game_controller_adapter.ini
 share/fs-uae/input/xgaming/x_arcade.ini
 share/fs-uae/input/xgaming/x_arcade_right.ini
 share/fs-uae/input/xinput_controller_15_6_0_0_windows.conf
+share/fs-uae/input/zeemote/steelseries_free.ini
 share/fs-uae/item_background.png
-share/fs-uae/input/wireless_controller_14_6_1_0_macosx.conf
 share/fs-uae/led-bars-edge/audio_led_1.png
 share/fs-uae/led-bars-edge/audio_led_2.png
 share/fs-uae/led-bars-edge/audio_led_3.png
