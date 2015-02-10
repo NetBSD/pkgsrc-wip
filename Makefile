@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6075 2015/02/09 18:46:10 leot1990 Exp $
+# $Id: Makefile,v 1.6076 2015/02/10 08:29:31 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -354,6 +354,7 @@ SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
 SUBDIR+=	compiz-boxmenu
+SUBDIR+=	connect
 SUBDIR+=	consolekit
 SUBDIR+=	contact-lookup-applet
 SUBDIR+=	contacts
@@ -2123,6 +2124,7 @@ SUBDIR+=	p5-Iterator
 SUBDIR+=	p5-Iterator-Util
 SUBDIR+=	p5-JavaScript-SpiderMonkey
 SUBDIR+=	p5-KyotoCabinet
+SUBDIR+=	p5-LDAP
 SUBDIR+=	p5-LWP-Protocol-socks
 SUBDIR+=	p5-Libencode-Arabic
 SUBDIR+=	p5-Lingua-EN-Fathom
@@ -2174,6 +2176,7 @@ SUBDIR+=	p5-Pod-Constants
 SUBDIR+=	p5-Pod-Xhtml
 SUBDIR+=	p5-Proc-Fork
 SUBDIR+=	p5-Publican
+SUBDIR+=	p5-RT-Authen-ExternalAuth
 SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-Safe
 SUBDIR+=	p5-Spread
@@ -2399,6 +2402,7 @@ SUBDIR+=	plod
 SUBDIR+=	plplot
 SUBDIR+=	plugger
 SUBDIR+=	pluma
+SUBDIR+=	pmacct
 SUBDIR+=	pmars
 SUBDIR+=	pmk
 SUBDIR+=	png2ico
@@ -2641,6 +2645,7 @@ SUBDIR+=	py-dsltools
 SUBDIR+=	py-duali
 SUBDIR+=	py-dubins
 SUBDIR+=	py-easydev
+SUBDIR+=	py-ecos
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-embedc
