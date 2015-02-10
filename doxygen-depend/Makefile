@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2015/02/10 05:13:42 makoto Exp $
-# $Id: Makefile,v 1.5 2015/02/10 05:13:42 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/10 08:56:25 makoto Exp $
+# $Id: Makefile,v 1.6 2015/02/10 08:56:25 makoto Exp $
 
 DISTNAME=	doxygen-dependent-1.01
 CATEGORIES=	meta-pkgs
@@ -27,8 +27,8 @@ DEPENDS+=	nelma-[0-9]*:../../cad/nelma
 
 #EPENDS+=	gammu-[0-9]*:../../comms/gammu		# used to be BUILD_DEPENDS
 DEPENDS+=	asterisk-[0-9]*:../../comms/asterisk
-DEPENDS+=	asterisk10-[0-9]*:../../comms/asterisk10
-DEPENDS+=	asterisk18-[0-9]*:../../comms/asterisk18
+DEPENDS+=	asterisk-10.[0-9]*:../../comms/asterisk10
+DEPENDS+=	asterisk-1.8.[0-9]*:../../comms/asterisk18
 
 DEPENDS+=	openobex-[0-9]*:../../comms/openobex	# YES explicit
 #EPENDS+=	libcdr-[0-9]*:../../converters/libcdr	# disabled by configure
