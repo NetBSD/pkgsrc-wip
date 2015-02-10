@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/06 00:06:03 makoto Exp $
-share/texmf-dist/tex/latex/ydoc/ydoc-code.sty
-share/texmf-dist/tex/latex/ydoc/ydoc-desc.sty
-share/texmf-dist/tex/latex/ydoc/ydoc-doc.sty
-share/texmf-dist/tex/latex/ydoc/ydoc-expl.sty
-share/texmf-dist/tex/latex/ydoc/ydoc.cls
-share/texmf-dist/tex/latex/ydoc/ydocincl.tex
-share/texmf-dist/tex/latex/ydoc/ydocstrip.tex
