@@ -1,0 +1,13 @@
+$NetBSD: snappy-libtool.patch,v 1.1 2015/02/11 14:11:55 fhajny Exp $
+
+--- configure.orig	2011-09-15 19:29:20.000000000 +0000
++++ configure
+@@ -7117,7 +7117,7 @@ fi
+ LIBTOOL_DEPS="$ltmain"
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL='$(SHELL) libtool'
+ 
+ 
+ 

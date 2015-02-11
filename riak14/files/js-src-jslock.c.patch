@@ -1,0 +1,20 @@
+--- c_src/js/src/jslock.c.orig	2008-03-29 13:38:28.000000000 +0000
++++ c_src/js/src/jslock.c	2012-06-23 09:01:27.971682329 +0000
+@@ -979,7 +979,7 @@
+     js_ResumeThread(tl);
+ }
+ 
+-JS_INLINE void
++void
+ js_Lock(JSThinLock *tl, jsword me)
+ {
+     JS_ASSERT(CURRENT_THREAD_IS_ME(me));
+@@ -993,7 +993,7 @@
+ #endif
+ }
+ 
+-JS_INLINE void
++void
+ js_Unlock(JSThinLock *tl, jsword me)
+ {
+     JS_ASSERT(CURRENT_THREAD_IS_ME(me));
