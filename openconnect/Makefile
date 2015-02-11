@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/01/13 18:50:13 jakllsch Exp $
+# $NetBSD: Makefile,v 1.8 2015/02/11 18:52:11 keckhardt Exp $
 #
 
-DISTNAME=	openconnect-5.02
+DISTNAME=	openconnect-7.04
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/
 
