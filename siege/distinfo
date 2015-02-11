@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2014/11/15 16:39:06 ahp-nils Exp $
+$NetBSD: distinfo,v 1.6 2015/02/11 16:37:58 ahp-nils Exp $
 
-SHA1 (siege-3.0.8.tar.gz) = f824c8c917fc7ecdb378102f04f6d60004c0bc22
-RMD160 (siege-3.0.8.tar.gz) = f63d87b886caa9eb3599a50fbf850f7a3867b6d1
-Size (siege-3.0.8.tar.gz) = 496412 bytes
+SHA1 (siege-3.0.9.tar.gz) = e002571e7f8e42360950e8930151cf61b9bd620c
+RMD160 (siege-3.0.9.tar.gz) = 9a1698d770c7521110259c6ed58f27cc6216e24d
+Size (siege-3.0.9.tar.gz) = 524125 bytes
