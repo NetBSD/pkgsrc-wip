@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.15 2015/02/05 15:55:38 keckhardt Exp $
+$NetBSD: distinfo,v 1.16 2015/02/11 16:24:38 keckhardt Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-5-20150201.tar.bz2) = 0558cb236c982b5e1931ed18fc06967b3da1cd99
-RMD160 (gcc-5-20150201.tar.bz2) = c2adb03f0bb56272c3f7af874fe7462e6fffe6b9
-Size (gcc-5-20150201.tar.bz2) = 89749171 bytes
+SHA1 (gcc-5-20150208.tar.bz2) = f7a31e4a67f98d4c648146d56b38ca0ef83421da
+RMD160 (gcc-5-20150208.tar.bz2) = 00b352fd3e1f0f1b2ee712569ce3fcd52449787e
+Size (gcc-5-20150208.tar.bz2) = 89692570 bytes
 SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
 RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
 Size (isl-0.14.tar.bz2) = 1399896 bytes
