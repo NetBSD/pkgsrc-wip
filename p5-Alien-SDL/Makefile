@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/12 05:20:41 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/12 05:57:59 makoto Exp $
 
 DISTNAME=	Alien-SDL-1.444
 PKGNAME=	p5-${DISTNAME}
@@ -55,3 +55,4 @@ PERL5_PACKLIST_DIR=	${PERL5_INSTALLVENDORARCH:S/vendor_perl/site_perl/}
 .include	"../../mk/jpeg.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
+DEPENDS+=	p5-Tie-Simple-[0-9]*:../../wip/p5-Tie-Simple
