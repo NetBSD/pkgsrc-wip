@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2015/02/08 12:11:32 thomasklausner Exp $
+$NetBSD: distinfo,v 1.47 2015/02/12 13:51:13 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -42,7 +42,6 @@ SHA1 (patch-memory_jemalloc_src_configure.ac) = 7385007023ddb255009322ed90b1ea0b
 SHA1 (patch-mfbt_Alignment.h) = 9ebc9892fd11eba7105974979b54f4f8759b7749
 SHA1 (patch-mfbt_Attributes.h) = 8edc1b34ffb9ac2095044d3f87d83452f559de41
 SHA1 (patch-netwerk_dns_Makefile.in) = b6bd9814d909dd6f7cff10dbeac3bedd79c2508e
-SHA1 (patch-netwerk_protocol_http_Http2Session.cpp) = 77b3f2c2019ad778fb9ab8b5fd1ac63f228f4e6b
 SHA1 (patch-ostream) = 593a114a31a0117af6c00cd12e3aed4565571288
 SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
 SHA1 (patch-toolkit_library_moz.build) = f0937fa86058a5c16fc261ad182df73b6533cb81
