@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/12 06:13:50 makoto Exp $
+
+SHA1 (SDL-2.544.tar.gz) = c6dd3073f1318a9008e0886cf5734ca9b605a13c
+RMD160 (SDL-2.544.tar.gz) = d4dd21edf50fbfba3e7675363b0785e911808e48
+Size (SDL-2.544.tar.gz) = 2487263 bytes
