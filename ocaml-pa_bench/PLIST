@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/12 08:02:01 jgoamakf Exp $
+lib/ocaml/site-lib/pa_bench/META
+lib/ocaml/site-lib/pa_bench/benchmark_accumulator.mli
+lib/ocaml/site-lib/pa_bench/pa_bench.cmi
+lib/ocaml/site-lib/pa_bench/pa_bench.cmx
+lib/ocaml/site-lib/pa_bench/pa_bench.ml
+lib/ocaml/site-lib/pa_bench/pa_bench_lib.a
+lib/ocaml/site-lib/pa_bench/pa_bench_lib.cma
+lib/ocaml/site-lib/pa_bench/pa_bench_lib.cmi
+lib/ocaml/site-lib/pa_bench/pa_bench_lib.cmx
+lib/ocaml/site-lib/pa_bench/pa_bench_lib.cmxa
+lib/ocaml/site-lib/pa_bench/pa_bench_lib.cmxs
+lib/ocaml/site-lib/pa_bench/pa_bench_syntax.a
+lib/ocaml/site-lib/pa_bench/pa_bench_syntax.cma
+lib/ocaml/site-lib/pa_bench/pa_bench_syntax.cmxa
+lib/ocaml/site-lib/pa_bench/pa_bench_syntax.cmxs
