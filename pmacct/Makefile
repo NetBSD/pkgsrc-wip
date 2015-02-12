@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/09 19:50:28 mbowie Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/12 19:06:40 mbowie Exp $
 #
 
 DISTNAME=	pmacct-1.5.0
@@ -21,6 +21,7 @@ PKG_SYSCONFSUBDIR=	pmacct
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	${DOCDIR}
 INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}/sql
 
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
@@ -30,5 +31,6 @@ MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/*.* ${DESTDIR}${EGDIR};
+	${INSTALL_DATA} ${WRKSRC}/sql/* ${DESTDIR}${EGDIR}/sql;
 
 .include "../../mk/bsd.pkg.mk"

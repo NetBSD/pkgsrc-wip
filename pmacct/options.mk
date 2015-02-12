@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/02/09 19:50:28 mbowie Exp $
+# $NetBSD: options.mk,v 1.2 2015/02/12 19:06:40 mbowie Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pmacct
 PKG_SUPPORTED_OPTIONS=	geoip inet6 json pgsql
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-jansson
 
 PLIST_VARS+=		pgsql
 .if !empty(PKG_OPTIONS:Mpgsql)
-.  include "../../databases/postgresql91-client/buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pgsql
 PLIST.pgsql=		yes
 .else
