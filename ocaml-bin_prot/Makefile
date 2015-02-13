@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/11/16 23:12:34 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/13 08:54:40 jgoamakf Exp $
 
 DISTNAME=	bin_prot-${VERS}
-VERS=		112.01.00
+VERS=		112.17.00
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/janestreet/bin_prot/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
