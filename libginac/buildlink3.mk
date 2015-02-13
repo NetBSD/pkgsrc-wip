@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2011/03/08 10:48:53 jihbed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/02/13 22:07:36 jihbed Exp $
 
 BUILDLINK_TREE+=	libginac
 
@@ -8,7 +8,7 @@ LIBGINAC_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libginac+=	libginac>=1.5.8
 BUILDLINK_PKGSRCDIR.libginac?=	../../wip/libginac
 
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../math/cln/buildlink3.mk"
 .endif	# LIBGINAC_BUILDLINK3_MK
 
