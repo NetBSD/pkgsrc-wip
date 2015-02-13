@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/13 22:10:14 jihbed Exp $
 #
 
 DISTNAME=	nestedsums-1.4.12
@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://wwwthep.physik.uni-mainz.de/~stefanw/download/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~stefanw/download/
+HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~stefanw/nestedsums/
 COMMENT=	Library for the expansion of transcendental functions
 LICENSE=	gnu-gpl-v2
 
