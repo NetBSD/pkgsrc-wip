@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6080 2015/02/12 08:06:31 jgoamakf Exp $
+# $Id: Makefile,v 1.6081 2015/02/13 05:38:38 jgoamakf Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1944,6 +1944,8 @@ SUBDIR+=	ocaml-pa_bench
 SUBDIR+=	ocaml-pa_ounit
 SUBDIR+=	ocaml-pa_test
 SUBDIR+=	ocaml-pipebang
+SUBDIR+=	ocaml-typerep
+SUBDIR+=	ocaml-variantslib
 SUBDIR+=	ocaml-yojson
 SUBDIR+=	ocaml-zed
 SUBDIR+=	ocamlweb
