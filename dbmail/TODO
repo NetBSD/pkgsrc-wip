@@ -4,3 +4,14 @@ crypt(3).
 
 You can fix this by applying mhash.diff to pkgsrc/security/mhash/Makefile
 and reinstalling it.
+
+The imap server sometimes gets wedged due to some libevent issue.
+Causing random file descriptor activity is enough to unwedge it.
+I keep a script running in the background for now:
+
+#! /bin/sh
+while :; do
+(while :; do echo A1 CAPABILITY; sleep 1; done) | nc localhost 143
+sleep 1
+done
+
