@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/05/05 23:57:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/14 09:24:01 jihbed Exp $
 
-DISTNAME=	toolz-0.6.0
+DISTNAME=	toolz-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
+CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/t/toolz/
 
 MAINTAINER=	kamelderouiche@yahoo.com

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/05/05 23:57:31 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2015/02/14 09:24:01 jihbed Exp $
 
-SHA1 (toolz-0.6.0.tar.gz) = 3f9adfaf8b9f3069170eea022979d3bab16327e2
-RMD160 (toolz-0.6.0.tar.gz) = c101519c2a194e3bf03e8cedbfea42aa0ef2a652
-Size (toolz-0.6.0.tar.gz) = 15751 bytes
+SHA1 (toolz-0.7.1.tar.gz) = 1ce99d10eab9a32dbd027f1270aadc4aac6c689f
+RMD160 (toolz-0.7.1.tar.gz) = fc334ea5c4c00342d303b435d0977f9121ca63de
+Size (toolz-0.7.1.tar.gz) = 19283 bytes
