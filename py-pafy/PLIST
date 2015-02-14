@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/14 10:58:25 jihbed Exp $
+bin/ytdl2.7
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pafy/__init__.py
+${PYSITELIB}/pafy/__init__.pyc
+${PYSITELIB}/pafy/__init__.pyo
+${PYSITELIB}/pafy/pafy.py
+${PYSITELIB}/pafy/pafy.pyc
+${PYSITELIB}/pafy/pafy.pyo
