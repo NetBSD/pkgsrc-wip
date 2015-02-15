@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/02/15 16:45:02 nros Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/15 16:46:38 nros Exp $
 #
 
-DISTNAME=	autovivification-0.14	
+DISTNAME=	autovivification-0.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/V/VP/VPIT/
