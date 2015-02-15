@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/02/15 18:35:36 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/02/15 20:27:10 jihbed Exp $
 bin/cloog
 include/cloog/block.h
 include/cloog/clast.h
@@ -87,6 +87,6 @@ lib/cloog-isl/cloog-isl-config.cmake
 lib/isl/isl-config.cmake
 lib/libcloog-isl.la
 lib/libisl.la
-lib/libisl.so.14.0-gdb.py
+lib/libisl.so.13.1.0-gdb.py
 lib/pkgconfig/cloog-isl.pc
 lib/pkgconfig/isl.pc
