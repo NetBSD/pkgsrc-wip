@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/02/15 18:35:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/15 20:24:56 jihbed Exp $
 
 DISTNAME=	cloog-0.18.3
 CATEGORIES=	math
@@ -14,6 +14,5 @@ USE_LIBTOOL= yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
 
-BUILDLINK_API_DEPENDS.gmp+=             gmp>=4.2.1
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
