@@ -1,8 +1,8 @@
-$NetBSD: patch-libpkg_pkg__jobs.c,v 1.1 2015/02/15 18:40:36 khorben Exp $
+$NetBSD: patch-libpkg_pkg__jobs.c,v 1.2 2015/02/15 19:23:41 khorben Exp $
 
 --- libpkg/pkg_jobs.c.orig	2015-02-13 19:35:03.000000000 +0000
 +++ libpkg/pkg_jobs.c
-@@ -32,6 +32,12 @@
+@@ -32,11 +32,19 @@
  #include <sys/mount.h>
  #include <sys/types.h>
  
@@ -15,7 +15,14 @@ $NetBSD: patch-libpkg_pkg__jobs.c,v 1.1 2015/02/15 18:40:36 khorben Exp $
  #include <archive.h>
  #include <archive_entry.h>
  #include <assert.h>
-@@ -1995,9 +2001,8 @@ pkg_jobs_fetch(struct pkg_jobs *j)
+ #include <errno.h>
++#ifdef HAVE_LIBUTIL_H
+ #include <libutil.h>
++#endif
+ #include <stdbool.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -1995,9 +2003,8 @@ pkg_jobs_fetch(struct pkg_jobs *j)
  {
  	struct pkg *p = NULL;
  	struct pkg_solved *ps;
@@ -26,7 +33,7 @@ $NetBSD: patch-libpkg_pkg__jobs.c,v 1.1 2015/02/15 18:40:36 khorben Exp $
  	const char *cachedir = NULL;
  	char cachedpath[MAXPATHLEN];
  	bool mirror = (j->flags & PKG_FLAG_FETCH_MIRROR) ? true : false;
-@@ -2032,6 +2037,8 @@ pkg_jobs_fetch(struct pkg_jobs *j)
+@@ -2032,6 +2039,8 @@ pkg_jobs_fetch(struct pkg_jobs *j)
  	if (dlsize == 0)
  		return (EPKG_OK);
  
@@ -35,7 +42,7 @@ $NetBSD: patch-libpkg_pkg__jobs.c,v 1.1 2015/02/15 18:40:36 khorben Exp $
  	while (statfs(cachedir, &fs) == -1) {
  		if (errno == ENOENT) {
  			if (mkdirs(cachedir) != EPKG_OK)
-@@ -2041,14 +2048,27 @@ pkg_jobs_fetch(struct pkg_jobs *j)
+@@ -2041,15 +2050,35 @@ pkg_jobs_fetch(struct pkg_jobs *j)
  			return (EPKG_FATAL);
  		}
  	}
@@ -59,10 +66,18 @@ $NetBSD: patch-libpkg_pkg__jobs.c,v 1.1 2015/02/15 18:40:36 khorben Exp $
 +	if (fs_avail != -1 && dlsize > fs_avail) {
  		char dlsz[9], fsz[9];
  
++#if defined(HN_IEC_PREFIXES)
  		humanize_number(dlsz, sizeof(dlsz), dlsize, "B",
  		    HN_AUTOSCALE, HN_IEC_PREFIXES);
 -		humanize_number(fsz, sizeof(fsz), fsize, "B",
 +		humanize_number(fsz, sizeof(fsz), fs_avail, "B",
  		    HN_AUTOSCALE, HN_IEC_PREFIXES);
++#else
++		humanize_number(dlsz, sizeof(dlsz), dlsize, "B",
++		    HN_AUTOSCALE, 0);
++		humanize_number(fsz, sizeof(fsz), fs_avail, "B",
++		    HN_AUTOSCALE, 0);
++#endif
  		pkg_emit_error("Not enough space in %s, needed %s available %s",
  		    cachedir, dlsz, fsz);
+ 		return (EPKG_FATAL);
