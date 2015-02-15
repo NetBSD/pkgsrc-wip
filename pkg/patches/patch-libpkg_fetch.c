@@ -1,4 +1,4 @@
-$NetBSD: patch-libpkg_fetch.c,v 1.1 2015/02/15 23:32:45 khorben Exp $
+$NetBSD: patch-libpkg_fetch.c,v 1.2 2015/02/15 23:36:04 khorben Exp $
 
 --- libpkg/fetch.c.orig	2015-02-13 19:35:03.000000000 +0000
 +++ libpkg/fetch.c
@@ -16,3 +16,15 @@ $NetBSD: patch-libpkg_fetch.c,v 1.1 2015/02/15 23:32:45 khorben Exp $
  	if ((linelen = getline(&line, &linecap, repo->ssh)) > 0) {
  		if (line[linelen -1 ] == '\n')
  			line[linelen -1 ] = '\0';
+@@ -509,7 +514,11 @@ pkg_fetch_file_to_fd(struct pkg_repo *re
+ 
+ 	u = fetchParseURL(url);
+ 	if (t != NULL)
++#if defined(__NetBSD__)
++		u->last_modified = *t;
++#else
+ 		u->ims_time = *t;
++#endif
+ 
+ 	if (repo != NULL && strcmp(u->scheme, "ssh") == 0) {
+ 		if ((retcode = start_ssh(repo, u, &sz)) != EPKG_OK)
