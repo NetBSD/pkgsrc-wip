@@ -1,9 +1,0 @@
-(*) themes option fails like this:
-
-   /usr/pkgsrc/dev/wip/hexchat/work/hexchat-2.9.6.1/src/htm/Main.cs(30,17):
-   error CS0234: The type or namespace name `Packaging' does not exist in the
-   namespace `System.IO'. Are you missing an assembly reference?
-
-(*) libpci option doesn't seem to allow other plugins to load. Without this
-option, one can see the list of plugins loading upon execution. With the plugin,
-that display is absent, even in the Plugins dialogue window.
