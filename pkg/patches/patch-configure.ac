@@ -1,0 +1,39 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/02/15 18:40:36 khorben Exp $
+
+--- configure.ac.orig	2015-02-13 19:35:03.000000000 +0000
++++ configure.ac
+@@ -73,8 +73,6 @@ AC_CHECK_HEADERS_ONCE([sys/endian.h])
+ AC_CHECK_HEADERS_ONCE([fcntl.h])
+ AC_CHECK_HEADERS_ONCE([dlfcn.h])
+ AC_CHECK_HEADERS_ONCE([memory.h])
+-AC_CHECK_HEADERS_ONCE([sys/types.h])
+-AC_CHECK_HEADERS_ONCE([sys/stat.h])
+ AC_CHECK_HEADERS_ONCE([stdlib.h])
+ AC_CHECK_HEADERS_ONCE([string.h])
+ AC_CHECK_HEADERS_ONCE([memory.h])
+@@ -116,13 +114,14 @@ AC_CHECK_FUNCS_ONCE([posix_fallocate])
+ AC_CHECK_FUNCS_ONCE([usleep])
+ AC_CHECK_FUNCS_ONCE([localtime_r])
+ AC_CHECK_FUNCS_ONCE([gmtime_r])
++AC_CHECK_FUNCS_ONCE([statfs])
+ AC_CHECK_FUNCS_ONCE([strerror_r])
+ 
+ PKG_PROG_PKG_CONFIG
+ 
+ AC_DEFUN([AC_PROG_GIT], [AC_CHECK_PROG(GITBIN,git,yes)])
+ AC_PROG_GIT
+-if test x"${GITBIN}" == x"yes" ; then
++if test x"${GITBIN}" = x"yes" ; then
+ 	AC_MSG_CHECKING([for git head])
+ 	if test -d "${GIT_DIR:-${ac_top_srcdir:-./}/.git}" ; then
+ 		GIT_HEAD=`git rev-parse --short HEAD`
+@@ -206,6 +205,9 @@ AS_IF([test "x$with_ldns" = "xyes"], [
+    ])
+ ])
+ 
++AC_CHECK_HEADERS_ONCE([sys/statfs.h])
++AC_CHECK_HEADERS_ONCE([sys/statvfs.h])
++
+ AC_CHECK_HEADER([sys/capability.h], [
+         AC_CHECK_LIB(c, cap_sandboxed, [
+                 AC_DEFINE(HAVE_CAPSICUM, 1, [Define 1 if you have 'capsicum'.])

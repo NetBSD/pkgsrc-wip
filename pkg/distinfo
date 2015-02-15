@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/02/15 18:40:36 khorben Exp $
+
+SHA1 (pkg-1.4.12.tar.gz) = 8941a16e48c80059a40874306ba369f0fc6bee77
+RMD160 (pkg-1.4.12.tar.gz) = 8d8b3b94b3c51dd34147c12a0c4d37c8a1271a4c
+Size (pkg-1.4.12.tar.gz) = 2820658 bytes
+SHA1 (patch-configure.ac) = 861d49a79eb875c34940762696b50c5c58ab50ec
+SHA1 (patch-libpkg_pkg__jobs.c) = ee100b8805c1c47484e738a4566eacff9f815b76
+SHA1 (patch-libpkg_pkgdb.c) = 783d8404d8cc5784d63e52156aaf72698f8fbd02
+SHA1 (patch-libpkg_repo_binary_init.c) = 7534f7530b7720dd6fbb6c59000437d1b570bc49
