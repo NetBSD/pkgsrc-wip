@@ -1,11 +1,9 @@
-$NetBSD: patch-simd_Makefile.am,v 1.1 2014/08/07 09:06:08 thomasklausner Exp $
-
+$NetBSD: patch-simd_Makefile.in,v 1.1 2015/02/15 11:35:30 nros Exp $
 Add libtool --tag so libtool knows what kind of stuff it compiles.
-
---- simd/Makefile.am.orig	2014-07-29 14:12:48.000000000 +0000
-+++ simd/Makefile.am
-@@ -67,7 +67,7 @@ endif
- AM_CPPFLAGS = -I$(top_srcdir) 
+--- simd/Makefile.in.orig	2014-12-30 07:47:16.000000000 +0000
++++ simd/Makefile.in
+@@ -819,7 +819,7 @@ uninstall-am:
+ @SIMD_I386_TRUE@jdmerge-sse2.lo:  jdmrgext-sse2.asm
  
  .asm.lo:
 -	$(AM_V_GEN) $(LIBTOOL) $(AM_V_lt) --mode=compile $(srcdir)/nasm_lt.sh $(AM_V_lt) $(NASM) $(NAFLAGS) -I$(srcdir) -I. $< -o $@

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/07 09:06:08 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2015/02/15 11:35:30 nros Exp $
 
-SHA1 (mozjpeg-2.1.tar.gz) = 07f8df93cd54adbec37869833de987eb12ce7062
-RMD160 (mozjpeg-2.1.tar.gz) = c1981cc4b25dff6a4f8ead93b87d4eea3cd890d2
-Size (mozjpeg-2.1.tar.gz) = 1051543 bytes
-SHA1 (patch-simd_Makefile.am) = b686783ae53d82cbbfd5bb11ae8a82ca58633a1c
+SHA1 (mozjpeg-3.0-release-source.tar.gz) = 9b56af77ce376300e1f6de78b52b2ce9b6f19596
+RMD160 (mozjpeg-3.0-release-source.tar.gz) = 2debaee44b78b5338ab0745b7bd849b2602a7c2a
+Size (mozjpeg-3.0-release-source.tar.gz) = 1527512 bytes
+SHA1 (patch-simd_Makefile.in) = 88e0a07c8d12751705dee4af361079658ea6e6b3
