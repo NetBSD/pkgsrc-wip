@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/02/15 16:46:38 nros Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/02/16 11:37:36 thomasklausner Exp $
 
 DISTNAME=	autovivification-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/autovivification/.packlist
 USE_LANGUAGES=	c
-
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
