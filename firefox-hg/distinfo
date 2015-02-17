@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.47 2015/02/12 13:51:13 thomasklausner Exp $
+$NetBSD: distinfo,v 1.48 2015/02/17 12:46:07 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
 Size (firefox-31.0.source.tar.bz2) = 147507120 bytes
 SHA1 (patch-aa) = 548c338a5dd2d2c761d03360afddc11807ebc26a
-SHA1 (patch-ak) = 3ec01a72a295f921a449d85dd4074d2104529009
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
 SHA1 (patch-ao) = ca7e6723a10b9f6e3306cd12557e1856727edee9
 SHA1 (patch-bf) = 87cd1a9a1d7503e0748569028a3d693124d43208
@@ -43,7 +42,7 @@ SHA1 (patch-mfbt_Alignment.h) = 9ebc9892fd11eba7105974979b54f4f8759b7749
 SHA1 (patch-mfbt_Attributes.h) = 8edc1b34ffb9ac2095044d3f87d83452f559de41
 SHA1 (patch-netwerk_dns_Makefile.in) = b6bd9814d909dd6f7cff10dbeac3bedd79c2508e
 SHA1 (patch-ostream) = 593a114a31a0117af6c00cd12e3aed4565571288
-SHA1 (patch-rc) = 2733724442a2cb49c5091146fd7e6001af686121
+SHA1 (patch-rc) = 86817d5b746b1d18cb6430cf38bdeffdb288dc1b
 SHA1 (patch-toolkit_library_moz.build) = f0937fa86058a5c16fc261ad182df73b6533cb81
 SHA1 (patch-toolkit_toolkit.mozbuild) = a92b9f5114c3eab2c8e9f1d0eb21926235d2203a
 SHA1 (patch-unwind.h) = c7a606c83cb60d0d6bcc7babad8157097d9036a8
