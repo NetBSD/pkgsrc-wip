@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/02/01 15:03:14 leot1990 Exp $
+# $NetBSD: Makefile,v 1.7 2015/02/17 17:42:24 leot1990 Exp $
 
-DISTNAME=	mpv-0.7.3
+DISTNAME=	mpv-0.8.0
 CATEGORIES=	multimedia
 MASTER_SITES=	-https://github.com/mpv-player/mpv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
-BUILD_DEPENDS+=	waf>=1.8.1:../../devel/waf
+BUILD_DEPENDS+=	waf>=1.8.4:../../devel/waf
 
 GIT_REPOSITORIES=	mpv
 GIT_REPO.mpv=		git://github.com/mpv-player/mpv.git
