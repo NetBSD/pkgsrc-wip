@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2014/01/25 10:45:28 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.13 2015/02/17 08:12:29 thomasklausner Exp $
 
-PKGNAME=	${PYPKGPREFIX}-gettext-tools-0
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-gettext-tools-${PY_DISTVERSION}
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
