@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.164 2015/02/02 16:38:19 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.165 2015/02/17 11:55:26 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2162,8 +2162,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/rfc2045.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2045.elc
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2047.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2047.elc
-share/emacs/${PKGVERSION}/lisp/gnus/rfc2104.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/rfc2104.elc
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2231.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2231.elc
 share/emacs/${PKGVERSION}/lisp/gnus/rtree.el.gz
@@ -2772,8 +2770,12 @@ share/emacs/${PKGVERSION}/lisp/net/quickurl.el.gz
 share/emacs/${PKGVERSION}/lisp/net/quickurl.elc
 share/emacs/${PKGVERSION}/lisp/net/rcirc.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rcirc.elc
+share/emacs/${PKGVERSION}/lisp/net/rfc2104.el.gz
+share/emacs/${PKGVERSION}/lisp/net/rfc2104.elc
 share/emacs/${PKGVERSION}/lisp/net/rlogin.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rlogin.elc
+share/emacs/${PKGVERSION}/lisp/net/sasl-cram-rfc.el.gz
+share/emacs/${PKGVERSION}/lisp/net/sasl-cram-rfc.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-cram.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl-cram.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-digest.el.gz
