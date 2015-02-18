@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/01/11 22:17:01 yrmt Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/18 16:54:49 yrmt Exp $
 
 PKGNAME=	osxinfo-0.1
 CATEGORIES=	misc
-GHCOMMIT=	56b6a5eed42948340037bad222694b0df5eee117
+GHCOMMIT=	1ddf9b35cfaa4accbf43347332b6b8298a829233
 DISTNAME=	${GHCOMMIT}
 MASTER_SITES=	https://github.com/yrmt/osxinfo/archive/
 
@@ -12,6 +12,12 @@ COMMENT=	Small Mac OS X Info Program
 LICENSE=	isc
 
 ONLY_FOR_PLATFORM= Darwin-*-*
+
+SUBST_CLASSES+=	path
+SUBST_STAGE.path=	pre-build
+SUBST_MESSAGE.path=	Adjusting path.
+SUBST_FILES.path=	Makefile
+SUBST_SED.path=		-e "s|/var|${VARBASE}|g"
 
 DIST_SUBDIR=	osxinfo
 WRKSRC=		${WRKDIR}/osxinfo-${GHCOMMIT}
