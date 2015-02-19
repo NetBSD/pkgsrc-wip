@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/19 21:21:12 jihbed Exp $
+include/cinnamon-menus-3.0/gmenu-tree.h
+lib/libcinnamon-menu-3.la
+lib/pkgconfig/libcinnamon-menu-3.0.pc
