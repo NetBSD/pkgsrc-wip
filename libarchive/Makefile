@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/04 03:15:21 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/19 00:44:03 kirussel Exp $
 
 DISTNAME=	libarchive-3.1.2
 CATEGORIES=	archivers
@@ -13,6 +13,7 @@ CONFLICTS+=	bsdtar-[0-9]*
 CONFLICTS+=	libarchive<=3.1.2
 
 GNU_CONFIGURE=	yes
+TEST_TARGET=	test
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
