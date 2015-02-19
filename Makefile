@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6086 2015/02/15 18:41:34 khorben Exp $
+# $Id: Makefile,v 1.6087 2015/02/19 13:14:39 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2016,7 +2016,6 @@ SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-Apache2-ModSSL
 SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Astro-SpaceTrack
-SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Application-Dispatch
