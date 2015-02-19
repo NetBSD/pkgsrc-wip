@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.165 2015/02/17 11:55:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.166 2015/02/19 16:02:41 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2774,14 +2774,14 @@ share/emacs/${PKGVERSION}/lisp/net/rfc2104.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rfc2104.elc
 share/emacs/${PKGVERSION}/lisp/net/rlogin.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rlogin.elc
-share/emacs/${PKGVERSION}/lisp/net/sasl-cram-rfc.el.gz
-share/emacs/${PKGVERSION}/lisp/net/sasl-cram-rfc.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-cram.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl-cram.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-digest.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl-digest.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-ntlm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl-ntlm.elc
+share/emacs/${PKGVERSION}/lisp/net/sasl-scram-rfc.el.gz
+share/emacs/${PKGVERSION}/lisp/net/sasl-scram-rfc.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl.elc
 share/emacs/${PKGVERSION}/lisp/net/secrets.el.gz
