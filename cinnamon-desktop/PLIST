@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/19 17:04:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/19 17:53:08 jihbed Exp $
 include/cinnamon-desktop/libcinnamon-desktop/cdesktop-enums.h
 include/cinnamon-desktop/libcinnamon-desktop/gnome-bg-crossfade.h
 include/cinnamon-desktop/libcinnamon-desktop/gnome-bg.h
@@ -10,9 +10,13 @@ include/cinnamon-desktop/libcinnamon-desktop/gnome-rr-labeler.h
 include/cinnamon-desktop/libcinnamon-desktop/gnome-rr.h
 include/cinnamon-desktop/libcinnamon-desktop/gnome-wall-clock.h
 include/cinnamon-desktop/libcinnamon-desktop/gnome-xkb-info.h
+lib/girepository-1.0/CDesktopEnums-3.0.typelib
+lib/girepository-1.0/CinnamonDesktop-3.0.typelib
 lib/libcinnamon-desktop.la
 lib/pkgconfig/cinnamon-desktop.pc
 libexec/cinnamon-rr-debug
+share/gir-1.0/CDesktopEnums-3.0.gir
+share/gir-1.0/CinnamonDesktop-3.0.gir
 share/glib-2.0/schemas/org.cinnamon.desktop.a11y.applications.gschema.xml
 share/glib-2.0/schemas/org.cinnamon.desktop.a11y.keyboard.gschema.xml
 share/glib-2.0/schemas/org.cinnamon.desktop.a11y.magnifier.gschema.xml
