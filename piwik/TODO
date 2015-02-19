@@ -1,0 +1,180 @@
+------------------------------------------------------------
+- T H I S    P A C K A G E   I S   N O T   R E A D Y   Y E T
+  (In the sense you need many more work to run piwik)
+------------------------------------------------------------
+
+- php version selection is not clear (to me)
+-  [check-interpreter.mk] 
+
+"/usr/bin/env" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/console" is not allowed.
+"-e" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/misc/cron/archive.sh" does not exist.
+"/usr/bin/env" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-1.17.1/bin/_mocha" is not allowed.
+"/usr/bin/env" of "wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-1.17.1/bin/mocha" is not allowed.
+
+- more work after pkg_add, where to note or document
+  (if MESSAGES is not the place)
+- Currently installing under ${PREFIX}/share/piwik
+ and several (many) files will be added there, should be on /var instead ?
+------------------------------------------------------------------------
+(index)
+- 1. (piwik)  make package-install 
+- 2. (php)    /usr/pkg/etc/php.ini
+- 3. (httpd server)
+     (apache) /usr/pkg/etc/httpd.conf
+- 4. (mysql)  
+- 5. (composer)
+------------------------------------------------------------------------
+(textbody)
+
+- 1. make package-install
+
+- 2. /usr/pkg/etc/php.ini setup
+
+@@ -901,6 +884,18 @@
+ ;extension=php_pspell.dll
+ ;extension=php_shmop.dll
+ 
++extension=mysql.so
++extension=json.so
++extension=dom.so
++extension=curl.so
++extension=gd.so
++extension=geoip.so
++extension=zlib.so
++extension=pdo.so
++extension=iconv.so
++extension=pdo_mysql.so
++extension=mbstring.so
++
+ ; The MIBS data available in the PHP distribution must be installed. 
+ ; See http://www.php.net/manual/en/snmp.installation.php 
+ ;extension=php_snmp.dll
+
+
+- 3. apache setup to browse
+     (/usr/pkg/share/piwik)
+
+--- /usr/pkg/share/examples/httpd/httpd.conf	2014-06-14 17:47:23.000000000 +0900
++++ /usr/pkg/etc/httpd/httpd.conf	2015-02-19 10:16:59.000000000 +0900
+@@ -125,6 +125,8 @@
+ LoadModule userdir_module lib/httpd/mod_userdir.so
+ LoadModule alias_module lib/httpd/mod_alias.so
+ LoadModule rewrite_module lib/httpd/mod_rewrite.so
++LoadModule php5_module lib/httpd/mod_php5.so
++AddHandler application/x-httpd-php .php
+ 
+ <IfModule !mpm_netware_module>
+ <IfModule !mpm_winnt_module>
+@@ -176,6 +178,7 @@
+ # symbolic links and aliases may be used to point to other locations.
+ #
+ DocumentRoot "/usr/pkg/share/httpd/htdocs"
++DocumentRoot "/usr/pkg/share/piwik"
+ 
+ #
+ # Each directory to which Apache has access can be configured with respect
+@@ -202,7 +205,8 @@
+ #
+ # This should be changed to whatever you set DocumentRoot to.
+ #
+-<Directory "/usr/pkg/share/httpd/htdocs">
++#Directory "/usr/pkg/share/httpd/htdocs">
++<Directory "/usr/pkg/share/piwik">
+     #
+     # Possible values for the Options directive are "None", "All",
+     # or any combination of:
+
+
+  ( try access http://localhost/piwik.php )
+
+
+- 4. mysql database setup
+     (database name, userid, password)
+
+- 5. (composer)
+
+    ------------------------
+    cd /usr/pkg/share/piwik 
+    sudo -s
+    curl -sS https://getcomposer.org/installer | php 
+    php composer.phar install
+    ------------------------
+
+    --------------------
+    t-105@makoto 10:30:25/150219(..share/piwik)% sudo -s
+    t-105#  curl -sS https://getcomposer.org/installer | php 
+    #!/usr/bin/env php
+    All settings correct for using Composer
+    Downloading...
+    
+    Composer successfully installed to: /usr/pkg/share/piwik/composer.phar
+    Use it: php composer.phar
+    t-105#
+    --------------------
+
+    ------------------------------
+    t-105#  php composer.phar install
+    Loading composer repositories with package information
+    Installing dependencies (including require-dev) from lock file
+      - Installing doctrine/lexer (v1.0)
+        Downloading: connection...    Downloading: 0%
+        Downloading: 80%
+        Downloading: 100%
+        ....
+    sebastian/global-state suggests installing ext-uopz (*)
+    phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+    phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+    phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+    symfony/var-dumper suggests installing ext-symfony_debug ()
+    Generating autoload files
+    sh: misc/composer/build-xhprof.sh: permission denied
+    t-105#
+    ------------------------------
+
+t-105# chmod +x  misc/composer/build-xhprof.sh
+
+(TO BE CONTINUED) ..
+
+
+--- misc/composer/build-xhprof.sh.orig	2015-02-19 11:00:59.000000000 +0900
++++ misc/composer/build-xhprof.sh	2015-02-19 11:23:37.000000000 +0900
+@@ -1,14 +1,12 @@
+-#!
++#!/bin/sh
+ 
+ if ! type phpize &> /dev/null; then
+     echo "phpize missing, skipping build"
+     echo "If you installed PHP via Aptitude, you can install phpize w/ 'sudo apt-get install php5-dev'"
+-    exit
+ fi
+ 
+ if ! type make &> /dev/null; then
+     echo "make missing, skipping build"
+-    exit
+ fi
+ 
+ if ! [ -d "vendor/facebook/xhprof/extension" ]; then
+@@ -22,9 +20,8 @@
+ 
+ echo "Building xhprof..."
+ 
+-if ! phpize &> ../../../../tmp/xhprof-logs/phpize.log; then
++if ! /usr/pkg/bin/phpize &> ../../../../tmp/xhprof-logs/phpize.log; then
+     echo "Fatal error: phpize failed! View tmp/xhprof-logs/phpize.log for more info."
+-    exit 1
+ fi
+ 
+ # Execute aclocal and autoconf only if Gentoo is used.
+@@ -45,9 +42,9 @@
+     exit 2
+ fi
+ 
+-if ! make &> ../../../../tmp/xhprof-logs/make.log; then
++if ! gmake &> ../../../../tmp/xhprof-logs/make.log; then
+     echo "Fatal error: could not build extension (make failed)! View tmp/xhprof-logs/make.log for more info."
+     exit 3
+ fi
+ 
+-echo "Done."
+\ No newline at end of file
++echo "Done."
