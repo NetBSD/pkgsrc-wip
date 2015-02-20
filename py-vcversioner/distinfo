@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/20 11:52:17 jihbed Exp $
+
+SHA1 (vcversioner-2.14.0.0.tar.gz) = 723c0915665aa1f01831731605acdd6afe0af9b6
+RMD160 (vcversioner-2.14.0.0.tar.gz) = 43f42c77ce883ca51b9a4b552fa3af13f93015e3
+Size (vcversioner-2.14.0.0.tar.gz) = 9015 bytes
