@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6088 2015/02/20 13:26:57 yrmt Exp $
+# $Id: Makefile,v 1.6089 2015/02/20 13:33:19 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2391,6 +2391,7 @@ SUBDIR+=	pinkpony
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg
+SUBDIR+=	pkg15
 SUBDIR+=	pkg_conflicts
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)
