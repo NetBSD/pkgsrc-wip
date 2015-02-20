@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:11 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/20 11:57:26 obache Exp $
 #
 
 DISTNAME=	xvmware-20100627
@@ -6,7 +6,7 @@ CATEGORIES=	x11 sysutils
 MASTER_SITES=	http://www.hi-matic.org/distfiles/citrus/NetBSD/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	obache@users.sourceforge.net
 HOMEPAGE=	http://www.hi-matic.org/diary/?20090124#24-1
 COMMENT=	VMware support tools for clipboard and seamless mouse movement
 LICENSE=	2-clause-bsd

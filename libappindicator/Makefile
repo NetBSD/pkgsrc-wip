@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/01/13 01:14:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/20 11:57:20 obache Exp $
 
 DISTNAME=	libappindicator-12.10.0
 CATEGORIES=	devel
 MASTER_SITES=	https://launchpad.net/libappindicator/12.10/12.10.0/+download/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	obache@users.sourceforge.net
 HOMEPAGE=	https://launchpad.net/libappindicator/
 COMMENT=	Allow applications to export a menu into the panel
 LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1
