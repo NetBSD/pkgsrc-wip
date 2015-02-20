@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/02/20 13:30:16 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/20 13:45:43 yrmt Exp $
 #
 
 GHCOMMIT=	d7d7a7f532ce90d41f7c146b209b5c34808f8b09
 DISTNAME=	${GHCOMMIT}
+PKGREVISION=	1
 PKGNAME=	pkg15-1.4.99.11.20150220
 CATEGORIES=	pkgtools
 MASTER_SITES=	https://github.com/freebsd/pkg/archive/
@@ -29,8 +30,6 @@ pre-configure:
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/pkg.conf.sample ${DESTDIR}${PREFIX}/share/doc/pkg/pkg.conf.sample
 
-.include "../../archivers/bzip2/buildlink3.mk"
-#.include "../../archivers/lzmalib/buildlink3.mk"
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/libelf/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
