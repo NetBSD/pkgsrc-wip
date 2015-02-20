@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/20 16:43:35 jihbed Exp $
+
+SHA1 (fedmsg-0.12.2.tar.gz) = 7eead0c5c7c3ee51d38f4ef6ed06872ee11a0d2f
+RMD160 (fedmsg-0.12.2.tar.gz) = 1705cd4df9af825b4a9f96213c2469d5079c3ba2
+Size (fedmsg-0.12.2.tar.gz) = 507326 bytes
