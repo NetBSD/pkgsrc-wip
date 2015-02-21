@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2015/02/08 22:17:12 jonthn Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/21 16:15:06 jonthn Exp $
 #
 
-DISTNAME=	v1.3.0
-PKGNAME=	libuv-${DISTNAME:S/v//1}
+DISTNAME=	libuv-1.4.0
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/libuv/libuv/archive/
+MASTER_SITES=	-https://github.com/libuv/libuv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
-HOMEPAGE=	http://nikhilm.github.com/uvbook/
+HOMEPAGE=	https://github.com/libuv/libuv
 COMMENT=	Asynchronous event library, platform layer of node.js
 LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
-
-WRKSRC=		${WRKDIR}/libuv-${DISTNAME:S/v//1}
 
 USE_TOOLS+=     autoconf automake aclocal gmake
 USE_LANGUAGES=	c c++
