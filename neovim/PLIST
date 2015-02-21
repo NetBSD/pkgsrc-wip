@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/01/25 15:24:30 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/02/21 16:29:03 jonthn Exp $
 bin/nvim
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
@@ -205,27 +205,21 @@ share/nvim/runtime/doc/makehtml.awk
 share/nvim/runtime/doc/maketags.awk
 share/nvim/runtime/doc/manpages/de/vim-de.1
 share/nvim/runtime/doc/manpages/fr/vim-fr.1
-share/nvim/runtime/doc/manpages/fr/vimdiff-fr.1
 share/nvim/runtime/doc/manpages/fr/vimtutor-fr.1
 share/nvim/runtime/doc/manpages/fr/xxd-fr.1
 share/nvim/runtime/doc/manpages/it/vim-it.1
-share/nvim/runtime/doc/manpages/it/vimdiff-it.1
 share/nvim/runtime/doc/manpages/it/vimtutor-it.1
 share/nvim/runtime/doc/manpages/it/xxd-it.1
 share/nvim/runtime/doc/manpages/ja/vim-ja.1
-share/nvim/runtime/doc/manpages/ja/vimdiff-ja.1
 share/nvim/runtime/doc/manpages/ja/vimtutor-ja.1
 share/nvim/runtime/doc/manpages/ja/xxd-ja.1
 share/nvim/runtime/doc/manpages/pl/vim-pl.1
-share/nvim/runtime/doc/manpages/pl/vimdiff-pl.1
 share/nvim/runtime/doc/manpages/pl/vimtutor-pl.1
 share/nvim/runtime/doc/manpages/pl/xxd-pl.1
 share/nvim/runtime/doc/manpages/ru/vim-ru.1
-share/nvim/runtime/doc/manpages/ru/vimdiff-ru.1
 share/nvim/runtime/doc/manpages/ru/vimtutor-ru.1
 share/nvim/runtime/doc/manpages/ru/xxd-ru.1
 share/nvim/runtime/doc/manpages/vim.1
-share/nvim/runtime/doc/manpages/vimdiff.1
 share/nvim/runtime/doc/manpages/vimtutor.1
 share/nvim/runtime/doc/manpages/xxd.1
 share/nvim/runtime/doc/map.txt
