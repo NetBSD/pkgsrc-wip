@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/02/21 16:46:10 jihbed Exp $
+bin/ird
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/imreg_dft/__init__.py
+${PYSITELIB}/imreg_dft/__init__.pyc
+${PYSITELIB}/imreg_dft/__init__.pyo
+${PYSITELIB}/imreg_dft/cli.py
+${PYSITELIB}/imreg_dft/cli.pyc
+${PYSITELIB}/imreg_dft/cli.pyo
+${PYSITELIB}/imreg_dft/imreg.py
+${PYSITELIB}/imreg_dft/imreg.pyc
+${PYSITELIB}/imreg_dft/imreg.pyo
+${PYSITELIB}/imreg_dft/loader.py
+${PYSITELIB}/imreg_dft/loader.pyc
+${PYSITELIB}/imreg_dft/loader.pyo
+${PYSITELIB}/imreg_dft/utils.py
+${PYSITELIB}/imreg_dft/utils.pyc
+${PYSITELIB}/imreg_dft/utils.pyo
