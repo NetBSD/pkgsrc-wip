@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/02/22 22:01:11 jihbed Exp $
+
+SHA1 (alembic-0.7.4.tar.gz) = 0160e0715d0d9926229d8bea693a1c30577f7ceb
+RMD160 (alembic-0.7.4.tar.gz) = ff10da061abc84f5e72d0c8bc93613a905582db2
+Size (alembic-0.7.4.tar.gz) = 604836 bytes
