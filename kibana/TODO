@@ -1,0 +1,3 @@
+Need to make sure we can compartmentalize node build tools. Pretty sure they're
+doing stuff outside the pkgsrc env.
+

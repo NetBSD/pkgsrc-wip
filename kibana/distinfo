@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/02/22 20:10:34 mbowie Exp $
+
+SHA1 (v4.0.0.tar.gz) = 84036d374d2ed4b1b73b113388591c248eac01f8
+RMD160 (v4.0.0.tar.gz) = a326eefef37101ebd027ceb84da5a42575b1528c
+Size (v4.0.0.tar.gz) = 2599881 bytes
+SHA1 (patch-Gruntfile.js) = d6f3e7b28be9615b851bb00391d8043233b9bf6d
+SHA1 (patch-package.json) = 4ea7093670d4545f91a9e730de13be992edc5fb1
+SHA1 (patch-tasks_build.js) = 7af94f18bb89e0b3478059d261c3b3acbaa2a143

@@ -1,0 +1,21 @@
+$NetBSD: patch-package.json,v 1.1 2015/02/22 20:10:34 mbowie Exp $
+We have to install the devDependencies to build, but some of them require binary targets, which aren't available for NetBSD
+
+--- package.json.orig	2015-02-20 16:18:38.000000000 +0000
++++ package.json	2015-02-20 16:18:51.000000000 +0000
+@@ -73,7 +73,6 @@
+     "grunt-contrib-requirejs": "~0.4.4",
+     "grunt-contrib-watch": "~0.5.3",
+     "grunt-esvm": "~0.3.2",
+-    "grunt-mocha": "~0.4.10",
+     "grunt-replace": "^0.7.9",
+     "grunt-run": "^0.2.3",
+     "grunt-s3": "~0.2.0-alpha.3",
+@@ -81,7 +80,6 @@
+     "grunt-simple-mocha": "^0.4.0",
+     "html-entities": "^1.1.1",
+     "http-proxy": "~1.8.1",
+-    "husky": "~0.6.0",
+     "istanbul": "~0.2.4",
+     "load-grunt-config": "~0.7.0",
+     "lodash": "~2.4.1",

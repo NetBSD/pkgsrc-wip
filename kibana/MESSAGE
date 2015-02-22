@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/02/22 20:10:34 mbowie Exp $
+
+Once started, kibana will listen for HTTP requests on :5601
+
+Please consider placing it behind a proxy for production use.
+===========================================================================
