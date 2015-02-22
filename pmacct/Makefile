@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/02/12 19:06:40 mbowie Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/22 23:47:58 mbowie Exp $
 #
 
-DISTNAME=	pmacct-1.5.0
+DISTNAME=	pmacct-1.5.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.pmacct.net/
 
