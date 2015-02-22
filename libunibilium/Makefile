@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/02/21 16:20:18 jonthn Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/22 13:46:26 jonthn Exp $
 
-DISTNAME=	libunibilium-1.1.1
+DISTNAME=	libunibilium-1.1.2
 CATEGORIES=	devel
 MASTER_SITES=	-https://github.com/mauke/unibilium/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
