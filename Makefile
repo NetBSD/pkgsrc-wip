@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6089 2015/02/20 13:33:19 khorben Exp $
+# $Id: Makefile,v 1.6090 2015/02/22 15:51:46 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3299,6 +3299,7 @@ SUBDIR+=	rippled
 SUBDIR+=	ristretto
 SUBDIR+=	rk
 SUBDIR+=	rnc-mode
+SUBDIR+=	rng-tools
 SUBDIR+=	rolo
 SUBDIR+=	rootcheck
 SUBDIR+=	rope
