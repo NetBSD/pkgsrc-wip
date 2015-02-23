@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/02/02 12:41:09 yvs4sf Exp $
+$NetBSD: distinfo,v 1.4 2015/02/23 09:45:33 yvs4sf Exp $
 
-Size (mtr-8c4005a.tar.gz) = 100321 bytes
-SHA1 (mtr-8c4005a.tar.gz) = ae3408f3b4d6995767c1f470986df80b2eac8410
-RMD160 (mtr-8c4005a.tar.gz) = cb0e78350852a1f022986d28805a5c7b204cac37
+Size (mtr-4fa13db.tar.gz) = 2200744 bytes
+SHA1 (mtr-4fa13db.tar.gz) = 2e866366c2b469e89c53b0ea955b82e62ae2454b
+RMD160 (mtr-4fa13db.tar.gz) = 505f3013cbf3d0910770f395e9620168bb33e168
