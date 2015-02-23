@@ -1,0 +1,4 @@
+PhantomJS is a headless WebKit with JavaScript API. It has fast and native
+support for various web standards: DOM handling, CSS selector, JSON, Canvas,
+SVG. PhantomJS is an optimal solution for fast headless testing, site
+scraping, pages capture, network monitoring and many other use cases.
