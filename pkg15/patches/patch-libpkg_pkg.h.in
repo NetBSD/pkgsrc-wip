@@ -1,0 +1,16 @@
+$NetBSD: patch-libpkg_pkg.h.in,v 1.1 2015/02/23 18:24:21 khorben Exp $
+
+--- libpkg/pkg.h.in.orig	2015-02-20 00:10:44.000000000 +0000
++++ libpkg/pkg.h.in
+@@ -68,6 +68,11 @@
+ #undef OSMAJOR
+ #endif
+ 
++/* For NetBSD */
++#ifdef __NetBSD_Version__
++#define OSMAJOR __NetBSD_Version__
++#endif
++
+ #ifndef __DECONST
+ #define __DECONST(type, var)    ((type)(uintptr_t)(const void *)(var))
+ #endif

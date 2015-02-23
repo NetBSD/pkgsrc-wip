@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.2 2015/02/21 12:20:59 khorben Exp $
+$NetBSD: distinfo,v 1.3 2015/02/23 18:24:20 khorben Exp $
 
 SHA1 (d7d7a7f532ce90d41f7c146b209b5c34808f8b09.tar.gz) = fc71ff2152995ded9d991821e093ae0fe69b83d2
 RMD160 (d7d7a7f532ce90d41f7c146b209b5c34808f8b09.tar.gz) = 0989322de74d5a11f8b5c4519594b886e8110ebd
 Size (d7d7a7f532ce90d41f7c146b209b5c34808f8b09.tar.gz) = 2928523 bytes
+SHA1 (patch-compat_bsd__compat.h) = d35f32e97e471aa77e73d0b71f20865073b62224
+SHA1 (patch-compat_file__at.c) = 430ed0d9f1a8f0c8cc6a85c56dec6f71d22687ed
+SHA1 (patch-libpkg_pkg.h.in) = 880728301aaf3801c253207904a5bfaeaed770c4
 SHA1 (patch-libpkg_pkg__elf.c) = a016bb435c62ad2102cc958b7dc11b539928a03f
 SHA1 (patch-libpkg_pkg__status.c) = 8cb9625e1650b3a9bceabf8932aedb7665a84698
 SHA1 (patch-libpkg_private_elf__tables.h) = 31950c9cd29bda488f4e6ac28e558e8a5286cb45
