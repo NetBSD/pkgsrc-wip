@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/08 08:59:20 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/02/23 22:35:55 jonthn Exp $
 bin/livestreamer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -81,6 +81,9 @@ ${PYSITELIB}/livestreamer/plugin/api/__init__.pyo
 ${PYSITELIB}/livestreamer/plugin/api/http_session.py
 ${PYSITELIB}/livestreamer/plugin/api/http_session.pyc
 ${PYSITELIB}/livestreamer/plugin/api/http_session.pyo
+${PYSITELIB}/livestreamer/plugin/api/mapper.py
+${PYSITELIB}/livestreamer/plugin/api/mapper.pyc
+${PYSITELIB}/livestreamer/plugin/api/mapper.pyo
 ${PYSITELIB}/livestreamer/plugin/api/support_plugin.py
 ${PYSITELIB}/livestreamer/plugin/api/support_plugin.pyc
 ${PYSITELIB}/livestreamer/plugin/api/support_plugin.pyo
@@ -183,9 +186,6 @@ ${PYSITELIB}/livestreamer/plugins/goodgame.pyo
 ${PYSITELIB}/livestreamer/plugins/hitbox.py
 ${PYSITELIB}/livestreamer/plugins/hitbox.pyc
 ${PYSITELIB}/livestreamer/plugins/hitbox.pyo
-${PYSITELIB}/livestreamer/plugins/ilive.py
-${PYSITELIB}/livestreamer/plugins/ilive.pyc
-${PYSITELIB}/livestreamer/plugins/ilive.pyo
 ${PYSITELIB}/livestreamer/plugins/letontv.py
 ${PYSITELIB}/livestreamer/plugins/letontv.pyc
 ${PYSITELIB}/livestreamer/plugins/letontv.pyo
@@ -204,6 +204,9 @@ ${PYSITELIB}/livestreamer/plugins/mlgtv.pyo
 ${PYSITELIB}/livestreamer/plugins/nhkworld.py
 ${PYSITELIB}/livestreamer/plugins/nhkworld.pyc
 ${PYSITELIB}/livestreamer/plugins/nhkworld.pyo
+${PYSITELIB}/livestreamer/plugins/npo.py
+${PYSITELIB}/livestreamer/plugins/npo.pyc
+${PYSITELIB}/livestreamer/plugins/npo.pyo
 ${PYSITELIB}/livestreamer/plugins/nrk.py
 ${PYSITELIB}/livestreamer/plugins/nrk.pyc
 ${PYSITELIB}/livestreamer/plugins/nrk.pyo
@@ -228,6 +231,9 @@ ${PYSITELIB}/livestreamer/plugins/stream.pyo
 ${PYSITELIB}/livestreamer/plugins/streamingvideoprovider.py
 ${PYSITELIB}/livestreamer/plugins/streamingvideoprovider.pyc
 ${PYSITELIB}/livestreamer/plugins/streamingvideoprovider.pyo
+${PYSITELIB}/livestreamer/plugins/streamlive.py
+${PYSITELIB}/livestreamer/plugins/streamlive.pyc
+${PYSITELIB}/livestreamer/plugins/streamlive.pyo
 ${PYSITELIB}/livestreamer/plugins/svtplay.py
 ${PYSITELIB}/livestreamer/plugins/svtplay.pyc
 ${PYSITELIB}/livestreamer/plugins/svtplay.pyo
@@ -249,6 +255,9 @@ ${PYSITELIB}/livestreamer/plugins/veetle.pyo
 ${PYSITELIB}/livestreamer/plugins/vgtv.py
 ${PYSITELIB}/livestreamer/plugins/vgtv.pyc
 ${PYSITELIB}/livestreamer/plugins/vgtv.pyo
+${PYSITELIB}/livestreamer/plugins/viagame.py
+${PYSITELIB}/livestreamer/plugins/viagame.pyc
+${PYSITELIB}/livestreamer/plugins/viagame.pyo
 ${PYSITELIB}/livestreamer/plugins/viasat.py
 ${PYSITELIB}/livestreamer/plugins/viasat.pyc
 ${PYSITELIB}/livestreamer/plugins/viasat.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/12/07 00:19:03 jonthn Exp $
+$NetBSD: distinfo,v 1.2 2015/02/23 22:35:55 jonthn Exp $
 
-SHA1 (v1.10.2.tar.gz) = dab12412664d2a748d97894a4b71b38868b0d735
-RMD160 (v1.10.2.tar.gz) = 416dcd50f8613b01016dc57143c6ebd79c7557be
-Size (v1.10.2.tar.gz) = 859350 bytes
+SHA1 (livestreamer-1.11.1.tar.gz) = d68940d683658a1dc4b6befd6b994c48e9d688ba
+RMD160 (livestreamer-1.11.1.tar.gz) = ef29060634e7652f7a1dec449421d6fc24cb9165
+Size (livestreamer-1.11.1.tar.gz) = 864035 bytes
