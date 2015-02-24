@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/01/25 19:59:53 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2015/02/24 16:54:33 outpaddling Exp $
 #
 
-DISTNAME=	auto-admin-0.3.4
+DISTNAME=	auto-admin-0.3.5
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
