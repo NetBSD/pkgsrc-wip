@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/11 14:11:55 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/24 17:51:19 fhajny Exp $
 man/man1/riak-admin.1
 man/man1/riak-debug.1
 man/man1/riak.1
@@ -1316,7 +1316,6 @@ riak/lib/runtime_tools-${VERSION.runtime_tools}/include/observer_backend.hrl
 riak/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/dyntrace.so
 riak/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/trace_file_drv.so
 riak/lib/runtime_tools-${VERSION.runtime_tools}/priv/lib/trace_ip_drv.so
-${PLIST.dtrace}riak/lib/runtime_tools-${VERSION.runtime_tools}/priv/obj/dtrace_user.o
 riak/lib/runtime_tools-${VERSION.runtime_tools}/priv/obj/dyntrace.o
 riak/lib/sasl-${VERSION.sasl}/ebin/alarm_handler.beam
 riak/lib/sasl-${VERSION.sasl}/ebin/erlsrv.beam
