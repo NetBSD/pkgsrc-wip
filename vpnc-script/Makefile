@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/02/17 19:55:37 keckhardt Exp $
+# $NetBSD: Makefile,v 1.10 2015/02/24 10:51:11 thomasklausner Exp $
 
 DISTNAME=	vpnc-script-20130311
 CATEGORIES=	net security
@@ -7,6 +7,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.infradead.org/openconnect/vpnc-script.html
+# see also http://git.infradead.org/users/dwmw2/vpnc-scripts.git
 COMMENT=	Improved config script for OpenConnect and vpnc
 LICENSE=	gnu-gpl-v2
 
