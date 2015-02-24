@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2015/02/19 21:08:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.50 2015/02/24 08:38:42 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -450,6 +450,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/tabs.j
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/tabs.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/translation.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/translation.xul
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/readinglist/sidebar.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/readinglist/sidebar.xhtml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/report-phishing-overlay.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/safeMode.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/safeMode.js
@@ -825,6 +827,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/p
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/search.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/privatebrowsing-mask.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/reader-mode-16.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/readinglist-icon.svg
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/sidebar.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/reload-stop-go.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sanitizeDialog.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/search-engine-placeholder.png
@@ -1449,6 +1453,7 @@ lib/firefox-${VERSION}/browser/modules/ReaderParent.jsm
 lib/firefox-${VERSION}/browser/modules/RecentWindow.jsm
 lib/firefox-${VERSION}/browser/modules/RemotePrompt.jsm
 lib/firefox-${VERSION}/browser/modules/ScrollbarSampler.jsm
+lib/firefox-${VERSION}/browser/modules/SelfSupportBackend.jsm
 lib/firefox-${VERSION}/browser/modules/SignInToWebsite.jsm
 lib/firefox-${VERSION}/browser/modules/SitePermissions.jsm
 lib/firefox-${VERSION}/browser/modules/Social.jsm
@@ -1623,6 +1628,7 @@ lib/firefox-${VERSION}/browser/modules/loop/MozLoopPushHandler.jsm
 lib/firefox-${VERSION}/browser/modules/loop/MozLoopService.jsm
 lib/firefox-${VERSION}/browser/modules/loop/MozLoopWorker.js
 lib/firefox-${VERSION}/browser/modules/offlineAppCache.jsm
+lib/firefox-${VERSION}/browser/modules/readinglist/ReadingList.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/ContentRestore.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/DocShellCapabilities.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/FrameTree.jsm
@@ -3239,6 +3245,7 @@ lib/firefox-${VERSION}/modules/devtools/server/child.js
 lib/firefox-${VERSION}/modules/devtools/server/content-globals.js
 lib/firefox-${VERSION}/modules/devtools/server/main.js
 lib/firefox-${VERSION}/modules/devtools/server/protocol.js
+lib/firefox-${VERSION}/modules/devtools/shared/async-storage.js
 lib/firefox-${VERSION}/modules/devtools/source-map.js
 lib/firefox-${VERSION}/modules/devtools/styleinspector/css-logic.js
 lib/firefox-${VERSION}/modules/devtools/tern/browser.js
@@ -3270,7 +3277,7 @@ lib/firefox-${VERSION}/modules/identity/Sandbox.jsm
 lib/firefox-${VERSION}/modules/identity/jwcrypto.jsm
 lib/firefox-${VERSION}/modules/jsdebugger.jsm
 lib/firefox-${VERSION}/modules/mcc_iso3166_table.jsm
-lib/firefox-${VERSION}/modules/media/IdpProxy.jsm
+lib/firefox-${VERSION}/modules/media/IdpSandbox.jsm
 lib/firefox-${VERSION}/modules/media/PeerConnectionIdp.jsm
 lib/firefox-${VERSION}/modules/media/RTCStatsReport.jsm
 lib/firefox-${VERSION}/modules/nsFormAutoCompleteResult.jsm
