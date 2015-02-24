@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/08 16:29:22 jonthn Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/24 19:15:16 jonthn Exp $
 
-DISTNAME=	Bear-2.0.1
+DISTNAME=	Bear-2.0.2
 CATEGORIES=	devel
 MASTER_SITES=	-https://github.com/rizsotto/Bear/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake
 PYTHON_VERSIONS_INCOMPATIBLE=       26
 
 SUBST_CLASSES+=			   py_interpreter
-SUBST_STAGE.py_interpreter=        pre-build
+SUBST_STAGE.py_interpreter=        post-extract
 SUBST_FILES.py_interpreter+=       bear/main.py.in
 SUBST_SED.py_interpreter=          -e "s,/usr/bin/env python,${PYTHONBIN},g"
 
