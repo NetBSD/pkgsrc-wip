@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/01/10 20:22:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/02/24 17:25:10 blef Exp $
 
 DISTNAME=	SFML-1.6-sdk-linux-64
 PKGNAME=	sfml+-1.6
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sfml/}
+MASTER_SITES=	http://www.sfml-dev.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sfml-dev.org/
