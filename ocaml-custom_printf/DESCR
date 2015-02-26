@@ -1,0 +1,2 @@
+This library defines a syntax extension that allows the use of
+user-defined string conversion functions in format strings.
