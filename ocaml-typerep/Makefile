@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/02/13 05:28:28 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/26 16:14:20 jgoamakf Exp $
 
 DISTNAME=	typerep-${VERS}
-VERS=		111.17.00
+VERS=		112.17.00
 CATEGORIES=	devel
 MASTER_SITES=   https://github.com/janestreet/typerep/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
