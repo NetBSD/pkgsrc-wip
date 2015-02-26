@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/02/13 05:31:32 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/26 16:16:22 jgoamakf Exp $
 
 DISTNAME=	variantslib-${VERS}
-VERS=		109.10.00
+VERS=		109.15.03
 CATEGORIES=	devel
 MASTER_SITES=   https://github.com/janestreet/variantslib/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
