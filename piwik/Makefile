@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/02/19 02:48:09 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/26 06:49:15 makoto Exp $
 
-DISTNAME=		2.11.0
+DISTNAME=		2.11.1
 PKGNAME=		piwik-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		https://github.com/piwik/piwik/archive/

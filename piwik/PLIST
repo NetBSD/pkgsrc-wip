@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/19 02:48:09 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/26 06:49:15 makoto Exp $
 share/piwik/.bowerrc
 share/piwik/.coveralls.yml
 share/piwik/.gitignore
@@ -401,9 +401,10 @@ share/piwik/core/Updates/2.10.0-b4.php
 share/piwik/core/Updates/2.10.0-b5.php
 share/piwik/core/Updates/2.10.0-b7.php
 share/piwik/core/Updates/2.10.0-b8.php
-share/piwik/core/Updates/${PKGVERSION}-b2.php
-share/piwik/core/Updates/${PKGVERSION}-b4.php
-share/piwik/core/Updates/${PKGVERSION}-b5.php
+share/piwik/core/Updates/2.11.0-b2.php
+share/piwik/core/Updates/2.11.0-b4.php
+share/piwik/core/Updates/2.11.0-b5.php
+share/piwik/core/Updates/2.11.1-b4.php
 share/piwik/core/Updates/2.2.0-b15.php
 share/piwik/core/Updates/2.2.3-b6.php
 share/piwik/core/Updates/2.3.0-rc2.php
@@ -1784,6 +1785,9 @@ share/piwik/plugins/Contents/lang/nb.json
 share/piwik/plugins/Contents/lang/nl.json
 share/piwik/plugins/Contents/lang/pl.json
 share/piwik/plugins/Contents/lang/pt.json
+share/piwik/plugins/Contents/lang/ru.json
+share/piwik/plugins/Contents/lang/sl.json
+share/piwik/plugins/Contents/lang/sv.json
 share/piwik/plugins/Contents/lang/tl.json
 share/piwik/plugins/Contents/lang/tr.json
 share/piwik/plugins/Contents/plugin.json
@@ -2289,6 +2293,7 @@ share/piwik/plugins/CoreVisualizations/CoreVisualizations.php
 share/piwik/plugins/CoreVisualizations/JqplotDataGenerator.php
 share/piwik/plugins/CoreVisualizations/JqplotDataGenerator/Chart.php
 share/piwik/plugins/CoreVisualizations/JqplotDataGenerator/Evolution.php
+share/piwik/plugins/CoreVisualizations/Metrics/Formatter/Numeric.php
 share/piwik/plugins/CoreVisualizations/Visualizations/Cloud.php
 share/piwik/plugins/CoreVisualizations/Visualizations/Cloud/Config.php
 share/piwik/plugins/CoreVisualizations/Visualizations/Graph.php
@@ -2844,6 +2849,7 @@ share/piwik/plugins/DevicesDetection/images/browsers/TZ.gif
 share/piwik/plugins/DevicesDetection/images/browsers/UC.gif
 share/piwik/plugins/DevicesDetection/images/browsers/UN.gif
 share/piwik/plugins/DevicesDetection/images/browsers/UNK.gif
+share/piwik/plugins/DevicesDetection/images/browsers/VI.gif
 share/piwik/plugins/DevicesDetection/images/browsers/WE.gif
 share/piwik/plugins/DevicesDetection/images/browsers/WO.gif
 share/piwik/plugins/DevicesDetection/images/browsers/WP.gif
@@ -3009,7 +3015,12 @@ share/piwik/plugins/Ecommerce/lang/da.json
 share/piwik/plugins/Ecommerce/lang/de.json
 share/piwik/plugins/Ecommerce/lang/el.json
 share/piwik/plugins/Ecommerce/lang/en.json
+share/piwik/plugins/Ecommerce/lang/fr.json
 share/piwik/plugins/Ecommerce/lang/it.json
+share/piwik/plugins/Ecommerce/lang/nb.json
+share/piwik/plugins/Ecommerce/lang/nl.json
+share/piwik/plugins/Ecommerce/lang/ru.json
+share/piwik/plugins/Ecommerce/lang/sv.json
 share/piwik/plugins/Ecommerce/plugin.json
 share/piwik/plugins/Ecommerce/templates/ecommerceLog.twig
 share/piwik/plugins/Ecommerce/templates/products.twig
@@ -4482,6 +4493,7 @@ share/piwik/plugins/Referrers/images/searchEngines/www.teoma.com.png
 share/piwik/plugins/Referrers/images/searchEngines/www.tixuma.de.png
 share/piwik/plugins/Referrers/images/searchEngines/www.toile.com.png
 share/piwik/plugins/Referrers/images/searchEngines/www.toolbarhome.com.png
+share/piwik/plugins/Referrers/images/searchEngines/www.toppreise.ch.png
 share/piwik/plugins/Referrers/images/searchEngines/www.trouvez.com.png
 share/piwik/plugins/Referrers/images/searchEngines/www.trovarapido.com.png
 share/piwik/plugins/Referrers/images/searchEngines/www.trusted-search.com.png
