@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/11/16 23:40:53 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2015/02/26 15:59:56 jgoamakf Exp $
 
 DISTNAME=	fieldslib-${VERS}
-VERS=		109.19.00
+VERS=		109.20.03
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/janestreet/fieldslib/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}

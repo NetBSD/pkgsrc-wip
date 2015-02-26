@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2014/10/21 06:28:09 jgoamakf Exp $
+$NetBSD: distinfo,v 1.3 2015/02/26 15:59:56 jgoamakf Exp $
 
-SHA1 (ocaml-fieldslib/109.19.00.tar.gz) = 736f01e9be314b9d7617bdcabbd7357f159b1680
-RMD160 (ocaml-fieldslib/109.19.00.tar.gz) = 53fd0dc8f213847d96e0341bf1160fb3ca9387ff
-Size (ocaml-fieldslib/109.19.00.tar.gz) = 53007 bytes
+SHA1 (ocaml-fieldslib/109.20.03.tar.gz) = 2438b560dfc9b2cb77c5eae527812313cd5205ec
+RMD160 (ocaml-fieldslib/109.20.03.tar.gz) = 1a889757958389c2b2e2fea4d7746d34a9d46a22
+Size (ocaml-fieldslib/109.20.03.tar.gz) = 55847 bytes
