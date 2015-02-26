@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/05 01:39:42 jgoamakf Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/02/26 16:11:05 jgoamakf Exp $
 lib/ocaml/site-lib/pa_test/META
+lib/ocaml/site-lib/pa_test/pa_test.annot
 lib/ocaml/site-lib/pa_test/pa_test.cmi
+lib/ocaml/site-lib/pa_test/pa_test.cmt
+lib/ocaml/site-lib/pa_test/pa_test.cmti
 lib/ocaml/site-lib/pa_test/pa_test.cmx
 lib/ocaml/site-lib/pa_test/pa_test.mli
 lib/ocaml/site-lib/pa_test/pa_test_lib.a
 lib/ocaml/site-lib/pa_test/pa_test_lib.cma
 lib/ocaml/site-lib/pa_test/pa_test_lib.cmi
+lib/ocaml/site-lib/pa_test/pa_test_lib.cmt
 lib/ocaml/site-lib/pa_test/pa_test_lib.cmx
 lib/ocaml/site-lib/pa_test/pa_test_lib.cmxa
 lib/ocaml/site-lib/pa_test/pa_test_lib.cmxs
@@ -13,4 +17,7 @@ lib/ocaml/site-lib/pa_test/pa_test_syntax.a
 lib/ocaml/site-lib/pa_test/pa_test_syntax.cma
 lib/ocaml/site-lib/pa_test/pa_test_syntax.cmxa
 lib/ocaml/site-lib/pa_test/pa_test_syntax.cmxs
+lib/ocaml/site-lib/pa_test/runtime.annot
+lib/ocaml/site-lib/pa_test/runtime.cmt
+lib/ocaml/site-lib/pa_test/runtime.cmti
 lib/ocaml/site-lib/pa_test/runtime.mli

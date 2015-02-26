@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/02/05 01:39:41 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/26 16:11:05 jgoamakf Exp $
 
 DISTNAME=	pa_test-${VERS}
-VERS=		111.08.00
+VERS=		111.08.01
 CATEGORIES=	devel
 MASTER_SITES=   https://github.com/janestreet/pa_test/archive/
 DISTFILES=	${VERS}${EXTRACT_SUFX}
