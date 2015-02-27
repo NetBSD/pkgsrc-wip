@@ -1,0 +1,4 @@
+iESD allows the customisation of OS X InstallESD images and conversion to
+BaseSystem images. Useful for generating flattened images for use with
+virtualisation when the default multipartition InstallESD images are not
+useable.
