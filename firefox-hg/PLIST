@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2015/02/24 08:38:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.51 2015/02/27 15:18:16 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -129,6 +129,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/app-manag
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/app-manager/utils.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/canvasdebugger.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/canvasdebugger.xul
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/canvasdebugger/callslist.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/canvasdebugger/snapshotslist.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/codemirror/activeline.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/codemirror/brace-fold.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/codemirror/clike.js
@@ -1328,20 +1330,23 @@ lib/firefox-${VERSION}/browser/chrome/shumway/chrome/RtmpUtils.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/SpecialInflate.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/bootstrap-content.js
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/content.js
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/pingpong.js
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/viewer.wrapper.html
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/viewerDebugger.js
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/viewerWrapper.js
 lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayBootstrapUtils.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayStreamConverter.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayTelemetry.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/content/ShumwayUtils.jsm
-lib/firefox-${VERSION}/browser/chrome/shumway/content/avm2/generated/builtin/builtin.abc
 lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/combined.frag
 lib/firefox-${VERSION}/browser/chrome/shumway/content/gfx/gl/shaders/combined.vert
+lib/firefox-${VERSION}/browser/chrome/shumway/content/libs/builtin.abc
 lib/firefox-${VERSION}/browser/chrome/shumway/content/playerglobal/playerglobal.abcs
 lib/firefox-${VERSION}/browser/chrome/shumway/content/playerglobal/playerglobal.json
 lib/firefox-${VERSION}/browser/chrome/shumway/content/shumway.gfx.js
 lib/firefox-${VERSION}/browser/chrome/shumway/content/shumway.player.js
 lib/firefox-${VERSION}/browser/chrome/shumway/content/version.txt
+lib/firefox-${VERSION}/browser/chrome/shumway/content/web/noflv.mp4
 lib/firefox-${VERSION}/browser/chrome/shumway/content/web/viewer.html
 lib/firefox-${VERSION}/browser/chrome/shumway/content/web/viewer.js
 lib/firefox-${VERSION}/browser/chrome/shumway/content/web/viewer.player.html
@@ -2319,6 +2324,8 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Add-24x24.sv
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Close-24x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Close-hover-24x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Delete-24x24.svg
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Minus-24x24.svg
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Plus-24x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Reading-List-24x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Type-Controls-24x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Type-Controls-Arrow.svg
@@ -2584,6 +2591,7 @@ lib/firefox-${VERSION}/modules/AboutReader.jsm
 lib/firefox-${VERSION}/modules/ActivitiesService.jsm
 lib/firefox-${VERSION}/modules/ActivitiesServiceFilter.jsm
 lib/firefox-${VERSION}/modules/AddonManager.jsm
+lib/firefox-${VERSION}/modules/AddonWatcher.jsm
 lib/firefox-${VERSION}/modules/AlarmDB.jsm
 lib/firefox-${VERSION}/modules/AlarmService.jsm
 lib/firefox-${VERSION}/modules/AppDownloadManager.jsm
@@ -2763,6 +2771,7 @@ lib/firefox-${VERSION}/modules/Sqlite.jsm
 lib/firefox-${VERSION}/modules/StoreTrustAnchor.jsm
 lib/firefox-${VERSION}/modules/SystemMessagePermissionsChecker.jsm
 lib/firefox-${VERSION}/modules/Task.jsm
+lib/firefox-${VERSION}/modules/TelemetryEnvironment.jsm
 lib/firefox-${VERSION}/modules/TelemetryFile.jsm
 lib/firefox-${VERSION}/modules/TelemetryLog.jsm
 lib/firefox-${VERSION}/modules/TelemetryPing.jsm
@@ -3232,6 +3241,7 @@ lib/firefox-${VERSION}/modules/devtools/server/actors/timeline.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/tracer.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/ScriptStore.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/actor-registry-utils.js
+lib/firefox-${VERSION}/modules/devtools/server/actors/utils/audionodes.json
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/automation-timeline.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/make-debugger.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/map-uri-to-addon-id.js
@@ -3303,6 +3313,7 @@ lib/firefox-${VERSION}/modules/services-common/async.js
 lib/firefox-${VERSION}/modules/services-common/bagheeraclient.js
 lib/firefox-${VERSION}/modules/services-common/hawkclient.js
 lib/firefox-${VERSION}/modules/services-common/hawkrequest.js
+lib/firefox-${VERSION}/modules/services-common/logmanager.js
 lib/firefox-${VERSION}/modules/services-common/observers.js
 lib/firefox-${VERSION}/modules/services-common/rest.js
 lib/firefox-${VERSION}/modules/services-common/storageservice.js
