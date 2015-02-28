@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/14 17:37:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/28 10:29:18 ryo-on Exp $
 
 DISTNAME=	cvs-fast-export-1.29
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	flex yacc
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-REPLACE_PYTHON+=	cvssync
+REPLACE_PYTHON+=	cvsconvert cvssync
 USE_TOOLS+=	gmake # for srcdir
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PKGMANDIR}
