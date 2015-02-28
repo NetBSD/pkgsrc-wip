@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2015/02/27 15:18:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.52 2015/02/28 21:49:43 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -1634,6 +1634,7 @@ lib/firefox-${VERSION}/browser/modules/loop/MozLoopService.jsm
 lib/firefox-${VERSION}/browser/modules/loop/MozLoopWorker.js
 lib/firefox-${VERSION}/browser/modules/offlineAppCache.jsm
 lib/firefox-${VERSION}/browser/modules/readinglist/ReadingList.jsm
+lib/firefox-${VERSION}/browser/modules/readinglist/Scheduler.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/ContentRestore.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/DocShellCapabilities.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/FrameTree.jsm
@@ -2441,6 +2442,7 @@ lib/firefox-${VERSION}/components/ActivityWrapper.js
 lib/firefox-${VERSION}/components/AlarmsManager.js
 lib/firefox-${VERSION}/components/AppsService.js
 lib/firefox-${VERSION}/components/BrowserElementParent.js
+lib/firefox-${VERSION}/components/CSSUnprefixingService.js
 lib/firefox-${VERSION}/components/ChromeNotifications.js
 lib/firefox-${VERSION}/components/ColorAnalyzer.js
 lib/firefox-${VERSION}/components/ConsoleAPIStorage.js
