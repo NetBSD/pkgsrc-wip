@@ -1,4 +1,5 @@
 # $FreeBSD: 372832 $
+# $NetBSD: Makefile,v 1.2 2015/02/28 21:47:24 tnn2 Exp $
 
 SRCS+= adb.c
 SRCS+= adb_client.c
