@@ -1,5 +1,5 @@
 # $FreeBSD: 372832 $
-# $NetBSD: Makefile,v 1.2 2015/02/28 21:47:24 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2015/02/28 22:03:25 tnn2 Exp $
 
 SRCS+= adb.c
 SRCS+= adb_client.c
@@ -8,9 +8,15 @@ SRCS+= commandline.c
 SRCS+= console.c
 SRCS+= file_sync_client.c
 SRCS+= fdevent.c
-#SRCS+= get_my_path_freebsd.c
-# XXX do we need NetBSD implementation or is using /proc for this OK?
+ifeq ("${OPSYS}", "FreeBSD")
+SRCS+= get_my_path_freebsd.c
+else ifeq ("${OPSYS}", "DragonFly")
+SRCS+= get_my_path_freebsd.c
+else ifeq ("${OPSYS}", "Darwin")
+SRCS+= get_my_path_darwin.c
+else
 SRCS+= get_my_path_linux.c
+endif
 SRCS+= services.c
 SRCS+= sockets.c
 SRCS+= transport.c
