@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/02/26 09:49:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/02/28 11:59:48 thomasklausner Exp $
 
-DISTNAME=	mpv-0.8.0
+DISTNAME=	mpv-0.8.2
 CATEGORIES=	multimedia
 MASTER_SITES=	-https://github.com/mpv-player/mpv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
