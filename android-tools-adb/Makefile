@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/28 18:09:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2015/02/28 21:46:37 tnn2 Exp $
 
 DISTNAME=	android-5.0.2_r1
 PKGNAME=	android-tools-adb-5.0.2
@@ -11,7 +11,6 @@ COMMENT=	Android debug bridge command line tool
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/platform_system_core-android-5.0.2_r1/adb
-USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 MAKE_JOBS_SAFE=	no
