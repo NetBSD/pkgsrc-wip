@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2015/03/01 14:57:08 makoto Exp $
+
+NetBSD editline keeps header files in "readline", not "editline".
+Same applies to DragonFly.
+FreeBSD requires additional header file to get access to history.
+
+--- src/gp_hist.h.orig	2011-02-21 07:56:57.000000000 +0000
++++ src/gp_hist.h
+@@ -70,7 +70,10 @@ extern long int gnuplot_history_size;
+  * (almost) compatible readline replacement
+  */
+ #if defined(HAVE_LIBEDITLINE)
+-# include <editline/readline.h>
++# if defined(__FreeBSD__)
++#   include <readline/history.h>
++# endif
++# include <readline/readline.h>
+ #endif
+ 
+ #if defined(READLINE) && !defined(HAVE_LIBREADLINE) && !defined(HAVE_LIBEDITLINE)
