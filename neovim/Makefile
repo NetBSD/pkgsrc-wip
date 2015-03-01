@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/21 16:29:03 jonthn Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/01 15:46:52 jonthn Exp $
 
 PKGNAME=	neovim-0.0.0
 CATEGORIES=	editors
@@ -35,5 +35,6 @@ REPLACE_AWK+=	runtime/tools/mve.awk
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../wip/libunibilium/buildlink3.mk"
 .include "../../wip/libtermkey/buildlink3.mk"
+.include "../../wip/libvterm/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
