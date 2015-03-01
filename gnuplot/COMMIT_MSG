@@ -1,0 +1,138 @@
+(pkgsrc)
+  - Two targets added, post-build: and post-install:, 
+    to build gnuplot.pdf (which was in 4.6.6 PLIST),     
+  
+(upstream)
+  - Update 4.6.6 to 5.0.0
+---------------------
+		GNUPLOT Version 5.0 Release Notes
+		=================================
+
+Gnuplot version 5 contains significant new capabilities and enhancements.
+The most recent previous release was 4.6 patchlevel 6 (4.6.6).
+Please see the NEWS file for bugfixes and minor changes to version 5.0
+applied after feedback on release candidates -rc1, -rc2, and -rc3.
+
+Release Notes date: 31 December 2014
+
+NOTABLE NEW FEATURES
+====================
+
+* New plot styles "with parallelaxes" and labeled contours.
+
+* New coordinate system (Degrees, Minutes, Seconds) "set xdata geographic".
+
+* The "fit" command can now handle functions with up to 12 variables, and
+  can take into account errors on x as well as errors on dependent variables.
+  Final covariance terms are stored in user-accessible variables.
+  Fitting options are now controlled by the command "set fit ..." rather than
+  by environmental variables.
+
+* The interpretation of columns in a "fit" command depends on new keywords
+  "error", "xyerror", "zerror".  In most cases the program can also recognize
+  version 4 syntax (no error keyword but last column contains zerror).
+  
+* The dot/dash pattern of a line can now be controlled independently
+  from other line properties using the keyword "dashtype".
+
+* The default color of individual line types can be changed using 
+  "set linetype" (introduced in 4.6). In version 5 a default overall color
+  sequence can be selected using "set colors {default|classic|podo}".
+  The "classic" sequence is red/green/blue/magenta/cyan/yellow as used by
+  older gnuplot versions.  The default and podo colors are chosen to be
+  more easily distinguished in print and in particular by people with color
+  vision problems.
+
+* Text markup now supports bold and italic font settings in addition to
+  the subscript, superscript, font size and other options previously
+  provided by the "enhanced text" mode.  This mode is now the default.
+
+* Command scripts may place in-line data in a named data block for
+  repeated plotting.
+
+* Bit shift operators << and >>
+
+* RGB colors can include an alpha-channel for transparency.
+       # ARGBcolor = (Alpha << 24) + (Red << 16) + (Green << 8) + Blue
+
+* Secondary axes (x2, y2) can be locked to the primary axis via a mapping
+  function.  In the simplest case this guarantees that the primary and
+  secondary axis ranges are identical.  In the general case it allows you
+  to define a non-linear axis, something that previously was only possible
+  for the special case of log scaling.
+
+* The "import" command attaches a user-defined function name to a 
+  function provided by an extenal shared object (i.e. a plugin library).
+
+* Previous commands in the history list of an interactive session can be
+  reexecuted by number.  For example "history !5" will reexecute the 
+  command numbered 5 in the list reported by "history".
+
+* Hypertext labels in the interactive terminals including web display
+  using the HTML canvas or svg terminals.
+
+Many other additions are described in the "New Features" section of the
+documentation.
+
+
+CHANGES
+=======
+
+Gnuplot development assigns very high priority to backward compatibility
+with earlier versions.  For example any command script that worked in
+version 4.0 is expected to continue to work for all version 4 releases
+including the most recent one (4.6.6).  However changes introduced in
+version 5 can affect the operation of some version 4 scripts. 
+
+A brief summary of potentially incompatible changes is given here.
+
+* Earlier versions of gnuplot used the keyword "linetype" to mean both
+  the color and the solid/dot/dash pattern of a line.  Version 5 has
+  separate keywords "linecolor" and "dashtype".  You can use these keywords
+  directly in a plot command or assign any desired color and a dash pattern
+  to a linetype.  The program now provides a default set of 8 linetypes, all solid.
+  You can change these or add new linetypes as you please. You do not need
+  to change the current terminal or terminal mode in order to use dashed lines.
+
+* The handling of input data containing NaN, Inf, an inconsistent number of
+  data columns, or other unexpected content has changed. See documentation
+  under "missing" for examples and figures. 
+
+* Time coordinates are stored internally as the number of seconds relative
+  to the standard unix epoch 1-Jan-1970.  Earlier versions of gnuplot used
+  a different epoch internally (1-Jan-2000). This change resolves
+  inconsistencies introduced when time in seconds was generated externally.
+  The epoch convention used by a particular gnuplot installation can be
+  determined using the command `print strftime("%F",0)`.
+  Time is now stored to at least millisecond precision.
+
+* The function `timecolumn(N,"timeformat")` now has 2 parameters.
+  Because the second parameter is not associated with any particular data axis,
+  this allows using the `timecolumn` function to read time data for reasons
+  other than specifying the x or y coordinate.  Use of time formats
+  to generate axis tick labels is now controlled by "set {xy}tics time" rather
+  than by "set {xy}data time".  Thus prior calls to `set xdata time` or
+  `set timefmt x` are unnecessary for either input or output.
+  These older commands still work, but are deprecated.
+
+* The "reverse" keyword (e.g. "set xrange [*:*] reverse") now affects only
+  autoscaling.  It has no effect on explicit ranges. 
+  "set xrange [0:1] reverse" is _not_ the same as "set xrange [1:0]".
+
+* Options to the "fit" command are now given by "set fit ..." rather than
+  by setting environmental variables.  Fit can handle up to MAX_NUM_VAR
+  independent variables (currently 12).  Variables other than the first
+  two (x, y) have been dissociated from axis names.  This means, for example,
+  "set urange [U1:U2]" has no effect on fitting because "u" is not a fit
+  variable.  Use the command "set dummy ..." to assign names to fit variables
+  3 ... 12.
+
+* The `call` command is implemented by providing a set of variables ARGC,
+  ARG0, ..., ARG9. ARG0 holds the name of the script file being executed.
+  ARG1 to ARG9 are string variables and thus may either be referenced directly
+  or expanded as macros, e.g. @ARG1.  The older convention for referencing
+  call parameters as tokens $0 ... $9 is deprecated.
+
+* "unset xrange" (and other axis ranges) restores the default range.
+
+* "unset terminal" restores the original terminal of the current session.
