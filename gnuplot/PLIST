@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/01 14:57:08 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/01 15:17:30 makoto Exp $
 bin/gnuplot
 ${PLIST.qt4}libexec/gnuplot/${API_VERSION}/gnuplot_qt
 ${PLIST.x11}libexec/gnuplot/${API_VERSION}/gnuplot_x11
@@ -43,4 +43,3 @@ share/gnuplot/${API_VERSION}/js/textzoom.png
 share/gnuplot/${API_VERSION}/lua/gnuplot-tikz.lua
 ${PLIST.qt4}share/gnuplot/${API_VERSION}/qt/qtgnuplot_fr.qm
 ${PLIST.qt4}share/gnuplot/${API_VERSION}/qt/qtgnuplot_ja.qm
-share/texmf/tex/latex/gnuplot/gnuplot.cfg
