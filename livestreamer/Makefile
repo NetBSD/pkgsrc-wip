@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/02/23 22:35:55 jonthn Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/01 20:07:29 jonthn Exp $
 
-DISTNAME=	livestreamer-1.11.1
+DISTNAME=	livestreamer-1.12.0
 CATEGORIES=	multimedia python
 MASTER_SITES=	-https://github.com/chrippa/livestreamer/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
