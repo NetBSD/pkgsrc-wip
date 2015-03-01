@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/01 15:44:34 jonthn Exp $
+bin/unterm
+bin/vterm-ctrl
+bin/vterm-dump
+include/vterm.h
+include/vterm_keycodes.h
+lib/libvterm.la
+lib/pkgconfig/vterm.pc
