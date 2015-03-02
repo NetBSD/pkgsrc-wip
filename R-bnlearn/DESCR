@@ -1,20 +1,15 @@
-Bayesian network structure learning (via constraint-based, score-based
-and hybrid algorithms), parameter learning (via ML and Bayesian
-estimators) and inference.
+Bayesian network structure learning, parameter learning and inference.
 
-This package implements the Grow-Shrink (GS) algorithm, the
-Incremental Association (IAMB) algorithm, the Interleaved-IAMB
-(Inter-IAMB) algorithm, the Fast-IAMB (Fast-IAMB) algorithm, the
-Max-Min Parents and Children (MMPC) algorithm, the Hiton-PC algorithm,
-the ARACNE and Chow-Liu algorithms, the Hill-Climbing (HC) greedy
-search algorithm, the Tabu Search (TABU) algorithm, the Max-Min
-Hill-Climbing (MMHC) algorithm and the two-stage Restricted
-Maximization (RSMAX2) algorithm for both discrete and Gaussian
-networks, along with many score functions and conditional independence
-tests. The Naive Bayes and the Tree-Augmented Naive Bayes (TAN)
-classifiers are also implemented.
+This package implements constraint-based (GS, IAMB, Inter-IAMB,
+Fast-IAMB, MMPC, Hiton-PC), pairwise (ARACNE and Chow-Liu),
+score-based (Hill-Climbing and Tabu Search) and hybrid (MMHC and
+RSMAX2) structure learning algorithms for discrete, Gaussian and
+conditional Gaussian networks, along with many score functions and
+conditional independence tests. The Naive Bayes and the Tree-Augmented
+Naive Bayes (TAN) classifiers are also implemented.
 
 Some utility functions (model comparison and manipulation, random
 data generation, arc orientation testing, simple and advanced plots)
-are included, as well as support for parameter estimation and
-inference, conditional probability queries and cross-validation.
+are included, as well as support for parameter estimation (maximum
+likelihood and Bayesian) and inference, conditional probability
+queries and cross-validation.
