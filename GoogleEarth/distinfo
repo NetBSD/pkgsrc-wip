@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2013/03/30 12:00:16 othyro Exp $
+$NetBSD: distinfo,v 1.12 2015/03/02 19:59:26 tnn2 Exp $
 
-SHA1 (GoogleEarth-5.2.1.1588/GoogleEarthLinux.bin) = 75a458be01c331ac6d4dcd29f91d562fc3dfc604
-RMD160 (GoogleEarth-5.2.1.1588/GoogleEarthLinux.bin) = 181ed85cb057a2c2eca97f28c07bcda40a2fa0da
-Size (GoogleEarth-5.2.1.1588/GoogleEarthLinux.bin) = 31406473 bytes
+SHA1 (GoogleEarth-7.1.2.204/google-earth-stable_current_amd64.deb) = 141cadc0b13c7c586558864930232a2e7f37806a
+RMD160 (GoogleEarth-7.1.2.204/google-earth-stable_current_amd64.deb) = d04d85bc8178f112f49ed6b5c099dd84a33fcdfc
+Size (GoogleEarth-7.1.2.204/google-earth-stable_current_amd64.deb) = 46544886 bytes
