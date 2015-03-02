@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2015/02/24 10:51:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/02 14:56:11 keckhardt Exp $
 
-DISTNAME=	vpnc-script-20130311
+DISTNAME=	vpnc-script-20140805
 CATEGORIES=	net security
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/HEAD:/
+DISTFILES=	vpnc-script
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.infradead.org/openconnect/vpnc-script.html
