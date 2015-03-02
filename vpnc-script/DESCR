@@ -1,3 +1,0 @@
-This package provides David Woodhouse's modified vpnc config script
-with IPv6 support and bug fixes.  It can be used in conjunction
-with net/vpnc and/or net/openconnect.

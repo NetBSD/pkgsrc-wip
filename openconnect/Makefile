@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/02/24 10:51:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/02 15:25:56 thomasklausner Exp $
 
 DISTNAME=	openconnect-7.04
 CATEGORIES=	net security
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-DEPENDS+=	vpnc-script-[0-9]*:../../wip/vpnc-script
+DEPENDS+=	vpnc-script-[0-9]*:../../net/vpnc-script
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-vpnc-script=${PKG_SYSCONFDIR}/vpnc-script
