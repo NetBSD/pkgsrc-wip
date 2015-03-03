@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/03/03 16:58:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.19 2015/03/03 17:45:35 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.0-rc3
 PKGNAME=	MesaLib-10.5.0rc3
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/10.5.0/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	ftp://ftp.freedesktop.org/pub/mesa/10.5.0/
+HOMEPAGE=	http://www.mesa3d.org/
 COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 
@@ -29,15 +29,13 @@ PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
 
+.include "options.mk"
+
 # XXX fix pypkgprefix
 PYTHON_FOR_BUILD_ONLY=	yes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 CONFIGURE_ENV+=		PYTHON2=${PYTHONBIN}
 .include "../../lang/python/application.mk"
-
-# XXX: for libLLVM. You should turn the shlib PKG_OPTION on for now.
-DEPENDS+=		clang>=3.6.0:../../lang/clang
-.include "../../lang/clang/buildlink3.mk"
 
 #.include "../../multimedia/libva/buildlink3.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
