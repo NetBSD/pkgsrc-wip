@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/03/03 17:45:35 tnn2 Exp $
+# $NetBSD: Makefile,v 1.20 2015/03/03 19:02:12 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.0-rc3
 PKGNAME=	MesaLib-10.5.0rc3
@@ -28,6 +28,18 @@ PKGCONFIG_OVERRIDE+=	src/mapi/vgapi/vg.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/osmesa/osmesa.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
+
+# Work around a buildlink and/or libtool bug:
+# In the libtool install/relink stage, if we want to link with two static
+# archives named libglapi.la but in different directories, bad things happen.
+SUBST_CLASSES+=			wrapper-bug
+SUBST_STAGE.wrapper-bug=	pre-configure
+SUBST_MESSAGE.wrapper-bug=	Renaming glapi-shared/libglapi in Makefiles
+SUBST_FILES.wrapper-bug=	src/gbm/Makefile.in
+SUBST_FILES.wrapper-bug+=	src/glx/Makefile.in
+SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.in
+SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapis.la,g'
+SUBST_SED.wrapper-bug+=		-e 's,shared_glapi_libglapi_la,shared_glapi_libglapis_la,g'
 
 .include "options.mk"
 
