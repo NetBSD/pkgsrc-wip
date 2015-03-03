@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2015/02/28 21:49:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.53 2015/03/03 07:15:16 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -1901,6 +1901,7 @@ lib/firefox-${VERSION}/chrome/toolkit/content/formautofill/requestAutocomplete.x
 lib/firefox-${VERSION}/chrome/toolkit/content/global/BrowserElementChild.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/BrowserElementChildPreload.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/BrowserElementPanning.js
+lib/firefox-${VERSION}/chrome/toolkit/content/global/BrowserElementPanningAPZDisabled.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/XPCNativeWrapper.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/about.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/about.xhtml
