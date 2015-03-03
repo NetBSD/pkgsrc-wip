@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/03/03 12:45:07 thomasklausner Exp $
+
+SHA1 (unicorn5hc-5.7/unicorn5hc.tgz) = 7ad6ed2282e50e2c513165cc207410626b00178c
+RMD160 (unicorn5hc-5.7/unicorn5hc.tgz) = 4850b3359ff3f69653b152c2582f3710eec466d9
+Size (unicorn5hc-5.7/unicorn5hc.tgz) = 1278640 bytes
+SHA1 (patch-Makefile) = ca0d81fec4d61b5003a9c5afdb3366eb4e067265
+SHA1 (patch-header.h) = 6c741f31b76c4539b2fe6d4bf21fb44139e06ca6

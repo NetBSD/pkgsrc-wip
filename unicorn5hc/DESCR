@@ -1,0 +1,7 @@
+Quest for the Unicorn is a rogue-like game built with a graphical
+interface instead of pure text. The inspriation for its creation
+came from games like Rogue, Hack, and Moria.  For those more hardcore
+rogueists out there I have created the HC (hard core) version of
+Quest for the Unicorn. In this version the interface has been
+replaced by a pure text interface instead of the graphic tileset
+and permadeath has been implemented.
