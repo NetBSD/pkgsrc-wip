@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/08/11 23:10:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2015/03/04 18:33:06 tnn2 Exp $
 
 DISTNAME=	etoile-0.4.1
 PKGNAME=	${DISTNAME:S/-/-core-/}
@@ -38,7 +38,7 @@ DEPENDS+=	lemon>=1.0.0:../../devel/lemon
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../textproc/oniguruma/buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/libLLVM/buildlink3.mk"
 .include "../../x11/gnustep-gui/buildlink3.mk"
 # OSS   http://www.opensound.com/
 

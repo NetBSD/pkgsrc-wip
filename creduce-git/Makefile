@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/09/06 21:13:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/04 18:38:19 tnn2 Exp $
 
-DISTNAME=	creduce-2.1.0
+DISTNAME=	creduce-2.2.1
 CATEGORIES=	devel
 MASTER_SITES=	http://embed.cs.utah.edu/creduce/
 
@@ -27,7 +27,10 @@ GIT_REPOSITORIES=	creduce
 GIT_REPO.creduce=	git://github.com/csmith-project/creduce.git
 WRKSRC=			${WRKDIR}/creduce
 
-.include "../../lang/clang/buildlink3.mk"
+pre-configure:
+	${LN} -s ${LLVM_CONFIG_PATH} ${TOOLS_DIR}/bin/llvm-config
+
+.include "../../lang/libLLVM/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
