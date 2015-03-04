@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:37 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/04 17:33:48 tnn2 Exp $
 #
 
-DISTNAME=	# SVN package
+DISTNAME=	# git package
 PKGNAME=	libcpu-0
 CATEGORIES=	devel
-MASTER_SITES=	# SVN package
+MASTER_SITES=	# git package
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libcpu.org/
+HOMEPAGE=	https://github.com/libcpu/libcpu
 COMMENT=	Anything-to-anything binary translation library
 
 USE_TOOLS+=	gmake flex bison
@@ -16,12 +16,13 @@ WRKSRC=		${WRKDIR}/libcpu
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-SVN_REPOSITORIES=	libcpu
-SVN_ROOT.libcpu=	https://svn.libcpu.org/libcpu/trunk/
-SVN_MODULE.libcpu=	libcpu
-SVN_CERTS=		${FILESDIR}/7ca4b79223f0e21f5a54209fea0d32f7
+GIT_REPOSITORIES=	libcpu
+GIT_REPO.libcpu=	git://github.com/libcpu/libcpu.git
 
-.include "../../wip/mk/svn-package.mk"
+pre-configure:
+	${LN} -s ${LLVM_CONFIG_PATH} ${TOOLS_DIR}/bin/llvm-config
+
+.include "../../wip/mk/git-package.mk"
 .include "../../devel/cmake/buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/libLLVM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
