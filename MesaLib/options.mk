@@ -1,15 +1,35 @@
-# $NetBSD: options.mk,v 1.17 2015/03/04 16:27:39 tnn2 Exp $
+# $NetBSD: options.mk,v 1.18 2015/03/04 23:48:48 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
-PKG_SUPPORTED_OPTIONS=		llvm
-PKG_SUGGESTED_OPTIONS=		llvm
+PKG_SUPPORTED_OPTIONS=		llvm dri
+PKG_SUGGESTED_OPTIONS=
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-[789].*-*)
+PKG_SUGGESTED_OPTIONS+=		llvm
+PKG_SUGGESTED_OPTIONS+=		dri
+.endif
+
+.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
+	${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" ||	\
+	${OPSYS} == "SunOS")
+PKG_SUGGESTED_OPTIONS+=		dri
+.endif
 
 .include "../../mk/bsd.options.mk"
 
 # gallium
 PLIST_VARS+=		swrast svga ilo i915 i965 r300 r600 radeonsi
 # classic DRI
-PLIST_VARS+=		swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
+PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
+
+.if !empty(PKG_OPTIONS:Mdri)
+PLIST.dri=	yes
+.include "../../sysutils/libpciaccess/buildlink3.mk"
+.include "../../graphics/MesaLib/dri.mk"
+
+.if ${OPSYS} == "Linux"
+.include "../../multimedia/libva/buildlink3.mk"
+.endif
 
 DRI_DRIVERS=		#
 PLIST.swrast_dri=	yes
@@ -79,7 +99,14 @@ CONFIGURE_ARGS+=	--enable-gallium-llvm
 CONFIGURE_ARGS+=	--enable-r600-llvm-compiler
 .include "../../lang/libLLVM/buildlink3.mk"
 CONFIGURE_ENV+=		ac_cv_path_ac_pt_LLVM_CONFIG=${LLVM_CONFIG_PATH}
-.else
+.else # !llvm
 CONFIGURE_ARGS+=	--disable-gallium-llvm
 CONFIGURE_ARGS+=	--disable-r600-llvm-compiler
+.endif # llvm
+.else # !dri
+CONFIGURE_ARGS+=	--with-gallium-drivers=
+CONFIGURE_ARGS+=	--with-dri-drivers=
+CONFIGURE_ARGS+=	--disable-dri
+CONFIGURE_ARGS+=	--disable-dri3
+CONFIGURE_ARGS+=	--enable-xlib-glx
 .endif

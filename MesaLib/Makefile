@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/03/04 17:11:59 tnn2 Exp $
+# $NetBSD: Makefile,v 1.24 2015/03/04 23:48:48 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.0-rc3
 PKGNAME=	MesaLib-10.5.0rc3
@@ -38,10 +38,12 @@ SUBST_MESSAGE.wrapper-bug=	Renaming glapi-shared/libglapi in Makefiles
 SUBST_FILES.wrapper-bug=	src/gbm/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/glx/Makefile.in
 SUBST_FILES.wrapper-bug+=	src/mapi/Makefile.in
+SUBST_FILES.wrapper-bug+=	src/mesa/drivers/x11/Makefile.in
 SUBST_SED.wrapper-bug=		-e 's,shared-glapi/libglapi.la,shared-glapi/libglapi_shared.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_static.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi_shared.la,libglapi.la,g'
 
+.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 PYTHON_FOR_BUILD_ONLY=	yes
@@ -55,15 +57,8 @@ CONFIGURE_ARGS+=	--with-sha1=libc
 CONFIGURE_ARGS+=	--with-sha1=libnettle
 .endif
 
-#.include "../../multimedia/libva/buildlink3.mk"
-.include "../../sysutils/libpciaccess/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
-.include "../../x11/libXdamage/buildlink3.mk"
-.include "../../x11/libXfixes/buildlink3.mk"
+
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
