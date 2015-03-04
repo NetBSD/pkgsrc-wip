@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.166 2015/02/19 16:02:41 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.167 2015/03/04 12:52:20 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1631,6 +1631,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/find-func.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/find-func.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/float-sup.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/float-sup.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/generator.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/generator.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/generic.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/generic.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/gv.el.gz
