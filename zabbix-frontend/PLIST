@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/21 22:56:43 heidnes Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/04 10:50:12 heidnes Exp $
 share/zabbix/frontends/php/acknow.php
 share/zabbix/frontends/php/actionconf.php
 share/zabbix/frontends/php/adm.gui.php
@@ -426,6 +426,8 @@ share/zabbix/frontends/php/include/classes/validators/CColorValidator.php
 share/zabbix/frontends/php/include/classes/validators/CDecimalStringValidator.php
 share/zabbix/frontends/php/include/classes/validators/CDecimalValidator.php
 share/zabbix/frontends/php/include/classes/validators/CFunctionValidator.php
+share/zabbix/frontends/php/include/classes/validators/CIPRangeValidator.php
+share/zabbix/frontends/php/include/classes/validators/CIPValidator.php
 share/zabbix/frontends/php/include/classes/validators/CIdValidator.php
 share/zabbix/frontends/php/include/classes/validators/CLdapAuthValidator.php
 share/zabbix/frontends/php/include/classes/validators/CLimitedSetValidator.php
