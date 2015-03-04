@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/03/04 10:54:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.23 2015/03/04 17:11:59 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.0-rc3
 PKGNAME=	MesaLib-10.5.0rc3
@@ -47,6 +47,13 @@ SUBST_SED.wrapper-bug+=		-e 's,libglapi_shared.la,libglapi.la,g'
 PYTHON_FOR_BUILD_ONLY=	yes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 .include "../../lang/python/tool.mk"
+
+.if !empty(OPSYS:M*BSD)
+CONFIGURE_ARGS+=	--with-sha1=libc
+.else
+.include "../../security/nettle/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sha1=libnettle
+.endif
 
 #.include "../../multimedia/libva/buildlink3.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
