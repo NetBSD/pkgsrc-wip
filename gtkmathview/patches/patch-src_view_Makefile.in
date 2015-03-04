@@ -1,0 +1,33 @@
+$NetBSD: patch-src_view_Makefile.in,v 1.1 2015/03/04 13:54:26 nros Exp $
+Don't link stdc++ (this is done anyway). Fixes build on FreeBSD with clang.
+--- src/view/Makefile.in.orig	2007-10-15 07:06:24.000000000 +0000
++++ src/view/Makefile.in
+@@ -305,28 +305,24 @@ libmathview_frontend_custom_reader_la_LI
+   $(top_builddir)/src/frontend/libxml2_reader/libfrontend_libxml2_reader.la \
+   $(top_builddir)/src/frontend/custom_reader/libfrontend_custom_reader.la \
+   $(top_builddir)/src/libmathview.la \
+-  -lstdc++ \
+   $(NULL)
+ 
+ libmathview_frontend_libxml2_reader_la_LIBADD = \
+   $(XML_LIBS) \
+   $(top_builddir)/src/frontend/libxml2_reader/libfrontend_libxml2_reader.la \
+   $(top_builddir)/src/libmathview.la \
+-  -lstdc++ \
+   $(NULL)
+ 
+ libmathview_frontend_libxml2_la_LIBADD = \
+   $(XML_LIBS) \
+   $(top_builddir)/src/frontend/libxml2/libfrontend_libxml2.la \
+   $(top_builddir)/src/libmathview.la \
+-  -lstdc++ \
+   $(NULL)
+ 
+ libmathview_frontend_gmetadom_la_LIBADD = \
+   $(DOM_LIBS) \
+   $(top_builddir)/src/frontend/gmetadom/libfrontend_gmetadom.la \
+   $(top_builddir)/src/libmathview.la \
+-  -lstdc++ \
+   $(NULL)
+ 
+ libmathview_frontend_custom_reader_la_CPPFLAGS = -DGMV_FrontEnd_DLL
