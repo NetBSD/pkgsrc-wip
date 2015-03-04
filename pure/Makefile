@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/03/04 18:31:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/04 19:43:31 tnn2 Exp $
 #
 
 DISTNAME=	pure-0.64
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE=	pure.pc.in
 pre-configure:
 	${LN} -s ${LLVM_CONFIG_PATH} ${TOOLS_DIR}/bin/llvm-config
 
-.include "../../lang/libLLVM/buildlink3.mk"
+.include "../../lang/libLLVM34/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
