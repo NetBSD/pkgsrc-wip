@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/04/01 20:28:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2015/03/04 17:47:05 tnn2 Exp $
 
 DISTNAME=	lightspark-0.7.2
 CATEGORIES=	multimedia
@@ -26,6 +26,9 @@ CXXFLAGS+=	-stdlib=libc++
 CXXFLAGS+=	-std=c++0x
 .endif
 
+pre-configure:
+	${LN} -s ${LLVM_CONFIG_PATH} ${TOOLS_DIR}/bin/llvm-config
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/xdg ${DESTDIR}${EGDIR} && \
 	${RMDIR} ${DESTDIR}${PREFIX}/etc
@@ -43,7 +46,7 @@ BUILDLINK_API_DEPENDS.xz+=	xz>=5.0.5
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/libLLVM/buildlink3.mk"
 .include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../net/rtmpdump/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
