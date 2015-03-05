@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2015/03/03 07:15:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.54 2015/03/05 20:49:32 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -1030,7 +1030,6 @@ lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/sync.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/tabs.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/translation.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/quitDialog.properties
-lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/readerMode.properties
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/safeMode.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/safebrowsing/phishing-afterload-warning-message.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/safebrowsing/report-phishing.dtd
@@ -1876,12 +1875,10 @@ lib/firefox-${VERSION}/chrome/pippki/content/pippki/downloadcert.js
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/downloadcert.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/editcacert.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/editcerts.js
-lib/firefox-${VERSION}/chrome/pippki/content/pippki/editemailcert.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/escrowWarn.js
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/escrowWarn.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/exceptionDialog.js
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/exceptionDialog.xul
-lib/firefox-${VERSION}/chrome/pippki/content/pippki/getpassword.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/load_device.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/password.js
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/pippki.js
