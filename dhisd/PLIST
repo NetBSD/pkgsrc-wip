@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/05 15:52:27 makoto Exp $
+bin/dhisd
+bin/dhisd-genkeys
+share/doc/dhisd/CONTRIBUTORS
+share/doc/dhisd/COPYRIGHT
+share/doc/dhisd/INSTALL
+share/doc/dhisd/README
+share/examples/dhisd/dhis.db.sample
