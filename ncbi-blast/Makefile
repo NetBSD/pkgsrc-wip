@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/10/09 08:51:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/05 22:31:07 outpaddling Exp $
 
 DISTNAME=	ncbi-blast-${PKGVERSION_NOREV}+-src
 PKGNAME=	blast-2.2.30
@@ -13,6 +13,8 @@ LICENSE=	public-domain
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl:run
 
+DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
+
 GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/c++
@@ -26,7 +28,7 @@ CHECK_PORTABILITY_SKIP=	compilers/xcode30_prj/configure \
 			src/app/oligofar/tests/set1/test-oligofar.sh
 
 # The configure script forces symbol stripping
-CONFIGURE_SCRIPT=	./configure.orig
+# CONFIGURE_SCRIPT=	./configure.orig
 
 CONFIGURE_ARGS+=	AR="ar cr" \
 			--prefix=${PREFIX} --with-build-root=${WRKSRC}/Release \
