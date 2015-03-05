@@ -1,10 +1,3 @@
-MD5 user authentication currently duesn't work on NetBSD
-because libmhash.so (security/mhash) pollutes the libc namespace which breaks
-crypt(3).
-
-You can fix this by applying mhash.diff to pkgsrc/security/mhash/Makefile
-and reinstalling it.
-
 The imap server sometimes gets wedged due to some libevent issue.
 Causing random file descriptor activity is enough to unwedge it.
 I keep a script running in the background for now:
