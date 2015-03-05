@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2015/03/05 20:41:52 tnn2 Exp $
 share/themes/MurrinaFancySky/gtk-2.0/0
 share/themes/MurrinaFancySky/gtk-2.0/1
 share/themes/MurrinaFancySky/gtk-2.0/2
