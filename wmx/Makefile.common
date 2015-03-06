@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2014/10/09 14:06:32 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/03/06 12:25:20 ishit Exp $
 # used by wip/wmx/Makefile
 # used by wip/wmx-gnome/Makefile
 
-DISTNAME=	wmx-7
-WMX_VERS=	7.0
+DISTNAME=	wmx-8
+WMX_VERS=	8.0
 CATEGORIES+=	x11 wm
 MASTER_SITES=	http://www.all-day-breakfast.com/wmx/
 

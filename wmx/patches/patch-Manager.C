@@ -1,8 +1,8 @@
-$NetBSD: patch-Manager.C,v 1.1.1.1 2011/05/05 13:07:00 ishit Exp $
+$NetBSD: patch-Manager.C,v 1.2 2015/03/06 12:25:20 ishit Exp $
 
---- Manager.C.orig	2009-01-09 11:18:03.000000000 +0000
+--- Manager.C.orig	2014-11-16 19:34:19.000000000 +0000
 +++ Manager.C
-@@ -61,6 +61,12 @@ Boolean ignoreBadWindowErrors;
+@@ -65,6 +65,12 @@ Boolean ignoreBadWindowErrors;
  
  implementPList(ClientList, Client);
  

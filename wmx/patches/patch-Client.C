@@ -1,6 +1,6 @@
-$NetBSD: patch-Client.C,v 1.1.1.1 2011/05/05 13:07:00 ishit Exp $
+$NetBSD: patch-Client.C,v 1.2 2015/03/06 12:25:20 ishit Exp $
 
---- Client.C.orig	2009-01-09 11:18:03.000000000 +0000
+--- Client.C.orig	2014-11-16 19:34:19.000000000 +0000
 +++ Client.C
 @@ -6,9 +6,7 @@
  #include <X11/Xutil.h>

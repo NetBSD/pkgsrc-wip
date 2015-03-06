@@ -1,6 +1,6 @@
-$NetBSD: patch-General.h,v 1.1.1.1 2011/05/05 13:07:00 ishit Exp $
+$NetBSD: patch-General.h,v 1.2 2015/03/06 12:25:20 ishit Exp $
 
---- General.h.orig	2009-01-09 11:18:03.000000000 +0000
+--- General.h.orig	2014-11-16 19:34:19.000000000 +0000
 +++ General.h
 @@ -12,7 +12,7 @@
  #undef _POSIX_SOURCE
