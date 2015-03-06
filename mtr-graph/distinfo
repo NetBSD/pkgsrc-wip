@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2015/03/02 13:18:39 yvs4sf Exp $
+$NetBSD: distinfo,v 1.7 2015/03/06 10:35:31 yvs4sf Exp $
 
-Size (mtr-93eddb8.tar.gz) = 102991 bytes
-SHA1 (mtr-93eddb8.tar.gz) = 260d73cd7964ad8592f79e8ade3b9f760951c9bc
-RMD160 (mtr-93eddb8.tar.gz) = 625339525d753dd628909daaaf7238fba860251b
+Size (mtr-cbb1851.tar.gz) = 103166 bytes
+SHA1 (mtr-cbb1851.tar.gz) = bcc833cd13189203c46ed0739dff0d10a901238a
+RMD160 (mtr-cbb1851.tar.gz) = ab18ff28c9ec11f4e5b066cdf80d60f7a82be352
