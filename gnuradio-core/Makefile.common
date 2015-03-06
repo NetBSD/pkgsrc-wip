@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2015/01/17 04:39:57 makoto Exp $
+# $NetBSD: Makefile.common,v 1.11 2015/03/06 15:07:57 makoto Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -108,6 +108,12 @@ SUBST_FILES.alsa+=	gr-audio/lib/CMakeLists.txt
 ## The value of ${ALSA_ENABLED} is either '#' or '' by options.mk.
 SUBST_SED.alsa=		-e 's,@@ALSA@@,${ALSA_ENABLED},'
 SUBST_STAGE.alsa=	post-patch
+
+SUBST_CLASSES+=		pyvers
+SUBST_FILES.pyvers=	cmake/Modules/FindSphinx.cmake
+SUBST_MESSAGE.pyvers=	Fix SPHINX_EXECUTABLE NAMES(sphinx-build)
+SUBST_VARS.pyvers+=	PYVERSSUFFIX
+SUBST_STAGE.pyvers=	pre-configure
 
 # REPLACE_PYTHON is some 600 files
 .include	"../../wip/gnuradio-core/files/REPLACE_PYTHON"
