@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/01/24 05:19:14 obache Exp $
-
-SHA1 (caja-1.8.2.tar.xz) = a9422adf5f5d2428287e9c326145cea1ede6e617
-RMD160 (caja-1.8.2.tar.xz) = f50758158bb01b5927f2a31e9b0aaac1f62755e0
-Size (caja-1.8.2.tar.xz) = 3596308 bytes
-SHA1 (patch-libcaja-private_caja-undostack-manager.c) = 6db2e94def2a1ae48c16bca0499199d385230232

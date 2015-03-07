@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/01/04 11:07:53 obache Exp $
-
-SHA1 (python-caja-1.8.1.tar.xz) = a0fe173e9935c7a550c0c47a751b0d6217bb2760
-RMD160 (python-caja-1.8.1.tar.xz) = c9d22604b486761fe9db91e65f0fc9b476974211
-Size (python-caja-1.8.1.tar.xz) = 250224 bytes

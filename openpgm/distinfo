@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/01/25 09:13:35 obache Exp $
-
-SHA1 (libpgm-5.2.122.tar.gz) = 13b014523fb53feb4e88e0560dd340862bc25ca8
-RMD160 (libpgm-5.2.122.tar.gz) = bbf52e84cd53d716ba46f0cc5450e29f4d3a73f5
-Size (libpgm-5.2.122.tar.gz) = 1026254 bytes
-SHA1 (patch-openpgm_pgm_include_impl_sockaddr.h) = 0c0091e28f0d246414f4783da4f7815b0b91dc8d
-SHA1 (patch-openpgm_pgm_include_pgm_packet.h) = e4cf5a0da53993ae77e8c0d1fb6f2495775a5660
-SHA1 (patch-openpgm_pgm_time.c) = 1f81c0470d6e44cbb38bd9a6dd75b98219c93d26

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/01/03 04:23:01 obache Exp $
-
-SHA1 (mate-system-monitor-1.8.0.tar.xz) = a8f652340613154fac994cdc060bae95460c1d6f
-RMD160 (mate-system-monitor-1.8.0.tar.xz) = cc558ca52b17d12f2384cd81be5dfeeaee94f4d7
-Size (mate-system-monitor-1.8.0.tar.xz) = 2099600 bytes
-SHA1 (patch-src_openfiles.cpp) = 6ca54d29baeb8acba30aa46fb46c169bf6378e8d

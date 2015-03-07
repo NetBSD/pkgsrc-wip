@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/01/01 08:11:23 obache Exp $
-
-SHA1 (engrampa-1.8.1.tar.xz) = 2f3e655c2e4ac5a972c06591085557906748ac6f
-RMD160 (engrampa-1.8.1.tar.xz) = 7ea1cae1ea30c029bd68243e3ef59ce14abd9bbc
-Size (engrampa-1.8.1.tar.xz) = 1367088 bytes
-SHA1 (patch-src_fr-command-lrzip.c) = 0409d41ab993ca67c71c6896083f848919fc8be8
