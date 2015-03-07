@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/03/07 16:28:33 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/07 21:39:40 tnn2 Exp $
 
-DISTNAME=	${GH_PROJECT}-${GH_TAGNAME}
+MASTER_SITES=	https://github.com/android/
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	android-tools-adb-5.0.2
 CATEGORIES=	devel
-USE_GITHUB=	yes
-GH_ACCOUNT=	android
-GH_PROJECT=	platform_system_core
-GH_TAGNAME=	android-5.0.2_r1
+GITHUB_PROJECT=	platform_system_core
+GITHUB_TAG=	android-5.0.2_r1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.android.com/tools/help/adb.html
