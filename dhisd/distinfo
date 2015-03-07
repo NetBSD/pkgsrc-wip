@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/03/05 15:52:27 makoto Exp $
+$NetBSD: distinfo,v 1.2 2015/03/07 02:44:37 makoto Exp $
 
 SHA1 (dhisd-5.5.tar.gz) = 0bbd230d3947f3d21505db43db4dfd2281a04a86
 RMD160 (dhisd-5.5.tar.gz) = 48053e9627490fcd8a5b2de706ca4333a3e4be02
 Size (dhisd-5.5.tar.gz) = 26221 bytes
-SHA1 (patch-ab) = 5cd7c1c7a928d4c3b778831c35a41e55886e5d4f
+SHA1 (patch-README) = b6ebc61ce419f89da44cfca00715bc65ef26a56d
+SHA1 (patch-ab) = f5a4315245cbf32aac88e183b3c2a86100ec3e08

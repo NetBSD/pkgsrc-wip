@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/03/05 15:52:27 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/07 02:44:37 makoto Exp $
 #
 
 DISTNAME=	dhisd-5.5
@@ -21,12 +21,18 @@ SUBST_MESSAGE.prefix=	Convert /usr/local to ${PREFIX}
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|;'
 SUBST_SED.prefix+=	-e '/LFLAGS/s|${PREFIX}|${PREFIX}/lib -Wl,-rpath=${PREFIX}|;'
 
+SUBST_CLASSES+=		varbase
+SUBST_FILES.varbase=	dhisd.h README
+SUBST_STAGE.varbase=	pre-configure
+SUBST_MESSAGE.varbase=	Adapt VARBASE and PREFIX
+SUBST_VARS.varbase+=	VARBASE PREFIX
+
 SPECIAL_PERMS+=         bin/dhisd-genkeys ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700 \
                         bin/dhisd	  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
 do-install:
 		${INSTALL_DATA} \
-			${WRKSRC}/*db.sample \
+			${WRKSRC}/*.sample \
 			${DESTDIR}${PREFIX}/share/examples/dhisd
 		${INSTALL_DATA} \
 			${WRKSRC}/CONTRIBUTORS  \

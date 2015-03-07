@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2015/03/05 15:52:27 makoto Exp $
+$NetBSD: patch-ab,v 1.2 2015/03/07 02:44:37 makoto Exp $
+
+Adjust PATH to pkgsrc, see SUBST in Makefile
 
 --- dhisd.h.orig	2008-05-22 21:47:51.000000000 +0900
 +++ dhisd.h	2015-03-05 23:55:32.000000000 +0900
@@ -9,7 +11,7 @@ $NetBSD: patch-ab,v 1.1 2015/03/05 15:52:27 makoto Exp $
 -#define	DHISD_CONF_FILE		"/usr/local/etc/dhisd.conf"
 -#define	DHISD_DB_FILE		"/usr/local/etc/dhis.db"
 +#define	DHISD_CONF_FILE		"${PREFIX}/etc/dhisd.conf"
-+#define	DHISD_DB_FILE		"/var/db/dhis.db"
++#define	DHISD_DB_FILE		"@VARBASE@/db/dhis.db"
  
  #define	DHISD_PID		"/var/run/dhis/dhisd.pid"
  #define	DHISD_LOG		"/var/log/dhis/dhisd.log"
