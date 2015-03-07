@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/07 12:11:21 krytarowski Exp $
+
+SHA1 (acpica-unix-20090625.tar.gz) = d5906ce8695173916c1c586111fcc6b40ade60c2
+RMD160 (acpica-unix-20090625.tar.gz) = 5e5299f3d93e0259e16346861f0c66651f6fbfd9
+Size (acpica-unix-20090625.tar.gz) = 933277 bytes
