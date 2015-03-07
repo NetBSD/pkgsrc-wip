@@ -1,5 +1,3 @@
-$NetBSD: distinfo,v 1.1 2015/03/07 12:11:21 krytarowski Exp $
-
-SHA1 (acpica-unix-20090625.tar.gz) = d5906ce8695173916c1c586111fcc6b40ade60c2
-RMD160 (acpica-unix-20090625.tar.gz) = 5e5299f3d93e0259e16346861f0c66651f6fbfd9
-Size (acpica-unix-20090625.tar.gz) = 933277 bytes
+SHA1 (patch-generate-unix-Makefile.config) = 7a700d393a2d761634b9592f61a15e934f608804
+SHA1 (patch-generate-unix-acpidump-Makefile) = d30cc9f4ce13ff8eb214d3cff51d8c4b15a07b58
+SHA1 (patch-source-os_specific-service_layers-osnetbsdtbl.c) = b8037918ccf5b27081c165e0df8c2a1b5a94f666

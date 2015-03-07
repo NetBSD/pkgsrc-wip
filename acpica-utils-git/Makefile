@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2015/03/07 12:11:21 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/07 12:46:17 krytarowski Exp $
 #
 
-DISTNAME=	acpica-unix-${ACPICA_UTILS_VERSION}
-PKGNAME=	acpica-utils-${ACPICA_UTILS_VERSION}
-PKGREVISION=	1
+GIT_REPOSITORIES=	acpica-utils
+GIT_REPO.acpica-utils=	git@github.com:acpica/acpica.git
+
+DISTNAME=	acpica
+PKGNAME=	acpica-utils-git
 CATEGORIES=	devel
 MASTER_SITES=	http://www.acpica.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.acpica.org/
 COMMENT=	Intel ACPI CA Unix utilities
-
-ACPICA_UTILS_VERSION=	20090625
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -30,26 +30,5 @@ LICENSE=	gnu-gpl-v2 # OR intel-acpica-license
 CFLAGS.NetBSD+=	-DACPI_USE_ALTERNATE_TIMEOUT
 CFLAGS.DragonFly+=	-DACPI_USE_ALTERNATE_TIMEOUT
 
-do-build:
-	cd ${WRKSRC}/tools/acpiexec && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-	cp -f ${WRKSRC}/tools/acpiexec/acpiexec ${WRKSRC}
-	cd ${WRKSRC}/tools/acpiexec && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} clean
-	cd ${WRKSRC}/compiler && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-	cd ${WRKSRC}/tools/acpisrc && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-	cd ${WRKSRC}/tools/acpixtract && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/compiler/iasl \
-		${DESTDIR}${PREFIX}/bin/iasl
-	ln -s iasl ${DESTDIR}${PREFIX}/bin/acpi-iasl
-	${INSTALL_PROGRAM} ${WRKSRC}/acpiexec ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/acpixtract/acpixtract \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/acpisrc/acpisrc \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README \
-		${DESTDIR}${PREFIX}/share/doc/acpica-utils
-	${INSTALL_DATA} ${FILESDIR}/LICENSE \
-		${DESTDIR}${PREFIX}/share/doc/acpica-utils
-
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
