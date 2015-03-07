@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/07 17:27:18 ishit Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/chawan.rb
+${GEM_LIBDIR}/lib/chawan/analyzers.rb
+${GEM_LIBDIR}/lib/chawan/analyzers/abstract_analyzer.rb
+${GEM_LIBDIR}/lib/chawan/analyzers/chasen_analyzer.rb
+${GEM_LIBDIR}/lib/chawan/analyzers/manager.rb
+${GEM_LIBDIR}/lib/chawan/analyzers/mecab_analyzer.rb
+${GEM_LIBDIR}/lib/chawan/commands.rb
+${GEM_LIBDIR}/lib/chawan/node.rb
+${GEM_LIBDIR}/lib/chawan/nodes.rb
+${GEM_LIBDIR}/spec/analyzer_spec.rb
+${GEM_LIBDIR}/spec/api_spec.rb
+${GEM_LIBDIR}/spec/chasen_spec.rb
+${GEM_LIBDIR}/spec/fixtures/example1.txt
+${GEM_LIBDIR}/spec/fixtures/example2.txt
+${GEM_LIBDIR}/spec/fixtures/example3.txt
+${GEM_LIBDIR}/spec/mecab_spec.rb
+${GEM_LIBDIR}/spec/node_spec.rb
+${GEM_LIBDIR}/spec/nodes_spec.rb
+${GEM_LIBDIR}/spec/provide_helper.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
