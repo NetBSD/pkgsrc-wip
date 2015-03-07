@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/02/25 19:02:44 ishit Exp $
+$NetBSD: distinfo,v 1.6 2015/03/07 18:22:04 ishit Exp $
 
-SHA1 (mathopd-1.5p8.tar.gz) = 6a8dbd6e31908201a1e0ce9e26a5a0b30ac04ab1
-RMD160 (mathopd-1.5p8.tar.gz) = 90e5fc28aa5fa00e424038b16eb0c27e1514968c
-Size (mathopd-1.5p8.tar.gz) = 59690 bytes
+SHA1 (mathopd-1.6b15.tar.gz) = aeb7e8bc8eed17cd722720a8771f49be5c295e02
+RMD160 (mathopd-1.6b15.tar.gz) = 828871b6625e424d265159623059748327697fe4
+Size (mathopd-1.6b15.tar.gz) = 59663 bytes
 SHA1 (patch-aa) = 39819119c06a926d5e4de1520109af3d01927262
 SHA1 (patch-ab) = b877690a98423d554541e28d4b2e629c1de14153

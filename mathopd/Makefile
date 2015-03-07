@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 15:09:52 asau Exp $
+# $NetBSD: Makefile,v 1.13 2015/03/07 18:22:04 ishit Exp $
 
-DISTNAME=	mathopd-1.5p8
+DISTNAME=	mathopd-1.6b15
 CATEGORIES=	www
 MASTER_SITES=	http://www.mathopd.org/dist/
 
