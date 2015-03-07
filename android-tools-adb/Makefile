@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2015/02/28 21:46:37 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/07 16:28:33 tnn2 Exp $
 
-DISTNAME=	android-5.0.2_r1
+DISTNAME=	${GH_PROJECT}-${GH_TAGNAME}
 PKGNAME=	android-tools-adb-5.0.2
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/android/platform_system_core/archive/
+USE_GITHUB=	yes
+GH_ACCOUNT=	android
+GH_PROJECT=	platform_system_core
+GH_TAGNAME=	android-5.0.2_r1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.android.com/tools/help/adb.html
 COMMENT=	Android debug bridge command line tool
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/platform_system_core-android-5.0.2_r1/adb
+WRKSRC=		${WRKDIR}/${DISTNAME}/adb
 USE_TOOLS+=	gmake
 
 MAKE_JOBS_SAFE=	no
