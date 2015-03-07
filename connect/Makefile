@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/02/05 23:58:03 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/07 16:25:27 makoto Exp $
 
 DISTNAME=	1.104
 PKGNAME=	connect-1.104
 CATEGORIES=	net security
-MASTER_SITES=   -https://bitbucket.org/gotoh/connect/get/1.104.tar.bz2
+MASTER_SITES=   http://bitbucket.org/gotoh/connect/get/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/gotoh/connect/wiki/Home
@@ -13,13 +13,16 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=	azara-[0-9]*
 
 DIST_SUBDIR=	${PKGBASE}
-WRKSRC=		${WRKDIR}/gotoh-connect-fd6f352325d4
+WRKSRC=		${WRKDIR}/gotoh-${PKGNAME_NOREV}
 USE_TOOLS=	gmake
 
 LIBS.Darwin+=	-lresolv
 LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/doc/connect
+
+post-patch:
+	(cd ${WRKDIR}; ${MV} gotoh-connect-* gotoh-${PKGNAME_NOREV})
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/connect ${DESTDIR}${PREFIX}/bin
