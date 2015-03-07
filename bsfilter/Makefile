@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/09/24 17:14:40 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/07 18:25:08 ishit Exp $
 
-DISTNAME=	bsfilter-1.0.17
+DISTNAME=	bsfilter-1.0.19
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=bsfilter/49795/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=bsfilter/59804/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ura@jp.netbsd.org
@@ -10,9 +10,15 @@ HOMEPAGE=	http://sourceforge.jp/projects/bsfilter/
 COMMENT=	Bayesian spam filter written in Ruby
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
+.include "../../lang/ruby/rubyversion.mk"
 
-RUBY_VERSION_SUPPORTED=	18
+DEPENDS+=	${RUBY_PKGPREFIX}-gdbm>=0:../../databases/ruby-gdbm
+DEPENDS+=	${RUBY_PKGPREFIX}-qdbm>=0:../../databases/ruby-qdbm
+DEPENDS+=	${RUBY_PKGPREFIX}-mecab>=0:../../textproc/ruby-mecab
+DEPENDS+=	${RUBY_PKGPREFIX}-kakasi>=1.0.2:../../wip/ruby-kakasi
+#DEPENDS+=	${RUBY_PKGPREFIX}-chasen>=0:../../wip/ruby-chasen
+
+RUBY_VERSION_SUPPORTED=	193 200
 
 NO_BUILD=	yes
 REPLACE_RUBY=	bsfilter/bsfilter
@@ -35,6 +41,5 @@ do-install:
         done
 .endfor
 
-.include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
