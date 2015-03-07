@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/01/31 23:26:31 jihbed Exp $
+$NetBSD: distinfo,v 1.5 2015/03/07 22:18:24 jihbed Exp $
 
-SHA1 (lea-2.0.0-beta.6.zip) = 169cb220bc2f6464cf553c63558561cee2f1290e
-RMD160 (lea-2.0.0-beta.6.zip) = 1aa81083bdb4f43462600ed25c6aa302f9003aff
-Size (lea-2.0.0-beta.6.zip) = 59676 bytes
-SHA1 (patch-setup.py) = e8999f0201436b823a9e7bf409964601632f75c9
+SHA1 (lea-2.1.0.zip) = b056ec5e3cfbc410721a7a947433b0f9e4658c5d
+RMD160 (lea-2.1.0.zip) = 521d2d0cae6675f23889ce4a142f44ee696433c3
+Size (lea-2.1.0.zip) = 60685 bytes
+SHA1 (patch-setup.py) = 32b8d51f04b55a14b4de472acf4895364f50bef9
