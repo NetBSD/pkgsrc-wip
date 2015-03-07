@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/01/01 08:07:04 obache Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/07 02:58:23 obache Exp $
 
 DISTNAME=	caja-dropbox-1.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obach@NetBSD.org
+MAINTAINER=	obache@users.sourceforge.net
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Dropbox Caja extension
 LICENSE=	cc-by-nd-v3.0-license AND gnu-gpl-v3
