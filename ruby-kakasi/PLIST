@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/07 17:46:25 ishit Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/kakasi-config/extconf.rb
+${GEM_LIBDIR}/kakasi.gemspec
+${GEM_LIBDIR}/lib/kakasi.rb
+${GEM_LIBDIR}/lib/kakasi/config.rb
+${GEM_LIBDIR}/lib/kakasi/dl.rb
+${GEM_LIBDIR}/lib/kakasi/ffi.rb
+${GEM_LIBDIR}/lib/kakasi/fiddle.rb
+${GEM_LIBDIR}/lib/kakasi/platform.rb
+${GEM_LIBDIR}/lib/kakasi/version.rb
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_kakasi.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.0.0/build_info
