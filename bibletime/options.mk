@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/12/19 21:26:27 nros Exp $
+# $NetBSD: options.mk,v 1.2 2015/03/08 18:29:18 nros Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bibletime
@@ -12,6 +12,6 @@ PKG_SUGGESTED_OPTIONS=	qt4
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt4)
-.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .endif
