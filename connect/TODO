@@ -1,7 +1,0 @@
-- Some warning, but it is better than failing to patch
-  gmake: ver: Command not found
-
-- MASTER_SITES flagged by pkglint, but this is only to
-  succeed 'make fetch' (as far as I know).
-
-- hacks.mk is currently not used
