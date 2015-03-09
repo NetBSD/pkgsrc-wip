@@ -1,4 +1,0 @@
-cwdiff is a part of cj-overlay, and it wraps wdiff to support
-directories and colorize the output.
-  cwdiff -h or cwdiff --help
-will tell you how to use it.
