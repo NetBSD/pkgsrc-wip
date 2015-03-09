@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2015/03/05 00:31:45 tnn2 Exp $
+# $NetBSD: options.mk,v 1.20 2015/03/09 20:00:34 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -28,6 +28,7 @@ PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 
 .if !empty(PKG_OPTIONS:Mdri)
 PLIST.dri=	yes
+BUILDLINK_DEPMETHOD.libpciaccess=      full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../graphics/MesaLib/dri.mk"
 
