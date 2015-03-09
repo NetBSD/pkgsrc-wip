@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.26 2013/08/16 11:47:35 makoto Exp $
+$NetBSD: distinfo,v 1.27 2015/03/09 23:11:46 tnn2 Exp $
 
-SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
-RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
-Size (xorg-server-1.12.4.tar.bz2) = 5444761 bytes
-SHA1 (patch-configure) = 031bc0accf1dd71ed687e7aac3fcc9498cb06784
-SHA1 (patch-hw_xfree86_common_compiler.h) = 88de747715b80b22f448869ab32dce1641bcb6db
-SHA1 (patch-hw_xfree86_os-support_xf86__OSlib.h) = 7c2760509610b44915da077b22899bef9c338cc1
+SHA1 (xorg-server-1.17.1.tar.bz2) = 490118810a54e91c8814245c99d6285caf4985dd
+RMD160 (xorg-server-1.17.1.tar.bz2) = 425a3a1f60d68750812d8cb3a341f27a8ff2e1be
+Size (xorg-server-1.17.1.tar.bz2) = 5852385 bytes
+SHA1 (patch-configure) = 0dd7b81199a9b0d7b23eb938cdebfeaf0e961558
+SHA1 (patch-exa_exa__render.c) = 4e144b977797d9cdc7e08c286aaedb303f1a1aa8
+SHA1 (patch-hw_xfree86_common_compiler.h) = c6f2a1ec352e3577dcd46acc8c9c45d81a0c3964
+SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
+SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = f2c72562a40c0e3109991453aff9c2c082526b1b

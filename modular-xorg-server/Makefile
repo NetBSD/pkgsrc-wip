@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2013/08/16 11:47:35 makoto Exp $
-#
+# $NetBSD: Makefile,v 1.30 2015/03/09 23:11:46 tnn2 Exp $
 
-DISTNAME=	xorg-server-1.12.4
+DISTNAME=	xorg-server-1.17.1
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,13 +9,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X11 server from modular X.org
+LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
 
 SPECIAL_PERMS+=		bin/Xorg ${SETUID_ROOT_PERMS}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES+=	c99
+USE_LANGUAGES=	c c++ # XXX does it really need C++, url2pkg suggested it ...
 
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 SHLIBTOOL_OVERRIDE=	# empty
@@ -56,15 +55,15 @@ CONFIGURE_ARGS+=	--enable-xorg
 
 CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts/X11
 
-LEGACY_FONT_PATH=
-DEFAULT_FONT_PATH=
+LEGACY_FONT_PATHS=
+DEFAULT_FONT_PATHS=
 .for f in misc TTF OTF Type1 100dpi 75dpi cyrillic
-DEFAULT_FONT_PATH+=	${PREFIX}/share/fonts/X11/${f}
-LEGACY_FONT_PATH+=	${PREFIX}/lib/X11/fonts/${f}
+DEFAULT_FONT_PATHS+=	${PREFIX}/share/fonts/X11/${f}
+LEGACY_FONT_PATHS+=	${PREFIX}/lib/X11/fonts/${f}
 .endfor
-FONT_PATH=		${DEFAULT_FONT_PATH} ${LEGACY_FONT_PATH}
+FONT_PATHS=		${DEFAULT_FONT_PATHS} ${LEGACY_FONT_PATHS}
 
-CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATH:ts,:Q}
+CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATHS:ts,:Q}
 
 CONFIGURE_ARGS+=	--disable-config-hal
 CONFIGURE_ARGS+=	--disable-dmx
@@ -105,17 +104,17 @@ INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.8.0
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=5.0
-BUILDLINK_API_DEPENDS.damageproto+=     damageproto>=1.1
-BUILDLINK_API_DEPENDS.xcmiscproto+=     xcmiscproto>=1.2.0
-BUILDLINK_API_DEPENDS.xtrans+=      	xtrans>=1.2.2
-BUILDLINK_API_DEPENDS.bigreqsproto+=    bigreqsproto>=1.1.0
-BUILDLINK_API_DEPENDS.xproto+=      	xproto>=7.0.22
-BUILDLINK_API_DEPENDS.xextproto+=      	xextproto>=7.1.99
-BUILDLINK_API_DEPENDS.recordproto+=     recordproto>=1.13.99.1
-BUILDLINK_API_DEPENDS.scrnsaverproto+=  scrnsaverproto>=1.1
-BUILDLINK_API_DEPENDS.resourceproto+=   resourceproto>=1.2.0
-BUILDLINK_API_DEPENDS.dri+=      	dri>=7.8
-BUILDLINK_API_DEPENDS.xfont+=      	xfont>=1.4.2
+BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1
+BUILDLINK_API_DEPENDS.xcmiscproto+=	xcmiscproto>=1.2.0
+BUILDLINK_API_DEPENDS.xtrans+=		xtrans>=1.2.2
+BUILDLINK_API_DEPENDS.bigreqsproto+=	bigreqsproto>=1.1.0
+BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.22
+BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.1.99
+BUILDLINK_API_DEPENDS.recordproto+=	recordproto>=1.13.99.1
+BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1
+BUILDLINK_API_DEPENDS.resourceproto+=	resourceproto>=1.2.0
+BUILDLINK_API_DEPENDS.dri+=		dri>=7.8
+BUILDLINK_API_DEPENDS.xfont+=		xfont>=1.4.2
 BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.16
 BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.1.99.6
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
@@ -125,17 +124,24 @@ BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.11
 BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
 BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.1.0
 
+# XXX check if this is still needed
 BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "options.mk"
 
+## XXX even for disable dri?
+.include "../../wip/libepoxy/buildlink3.mk"
+
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
+# XXX not sure if needed; forcing wip version for now
+BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=10
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
+BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
@@ -161,6 +167,7 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
+.include "../../x11/presentproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/recordproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"

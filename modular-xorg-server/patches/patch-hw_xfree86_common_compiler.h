@@ -1,8 +1,8 @@
-$NetBSD: patch-hw_xfree86_common_compiler.h,v 1.1 2013/08/16 11:47:36 makoto Exp $
+$NetBSD: patch-hw_xfree86_common_compiler.h,v 1.2 2015/03/09 23:11:46 tnn2 Exp $
 
---- hw/xfree86/common/compiler.h.orig	2013-05-21 17:33:57.000000000 +0000
+--- hw/xfree86/common/compiler.h.orig	2015-01-17 23:42:52.000000000 +0000
 +++ hw/xfree86/common/compiler.h
-@@ -1392,26 +1392,26 @@ inl(unsigned short port)
+@@ -972,26 +972,26 @@ inl(unsigned PORT_SIZE port)
  static __inline__ void
  outb(unsigned short port, unsigned char val)
  {
@@ -33,7 +33,7 @@ $NetBSD: patch-hw_xfree86_common_compiler.h,v 1.1 2013/08/16 11:47:36 makoto Exp
  
      return ret;
  }
-@@ -1420,7 +1420,7 @@ static __inline__ unsigned int
+@@ -1000,7 +1000,7 @@ static __inline__ unsigned int
  inw(unsigned short port)
  {
      unsigned short ret;
@@ -42,7 +42,7 @@ $NetBSD: patch-hw_xfree86_common_compiler.h,v 1.1 2013/08/16 11:47:36 makoto Exp
  
      return ret;
  }
-@@ -1429,7 +1429,7 @@ static __inline__ unsigned int
+@@ -1009,7 +1009,7 @@ static __inline__ unsigned int
  inl(unsigned short port)
  {
      unsigned int ret;

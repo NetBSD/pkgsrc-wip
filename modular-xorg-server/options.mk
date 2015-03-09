@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2013/08/16 11:47:35 makoto Exp $
+# $NetBSD: options.mk,v 1.14 2015/03/09 23:11:46 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug dtrace
@@ -13,6 +13,8 @@ PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-aiglx
+# XXX needs libepoxy
+#CONFIGURE_ARGS+=	--enable-glamor
 .else
 ###
 ### XXX Perhaps we should allow for a built-in glx without dri enabled?
@@ -31,7 +33,6 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--enable-debug
 CFLAGS+=		-ggdb
 .endif
-
 
 .if !empty(PKG_OPTIONS:Mdtrace)
 PLIST.dtrace=		yes
