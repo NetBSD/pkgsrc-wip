@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/08/09 06:33:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/09 22:36:41 thomasklausner Exp $
 
 DISTNAME=	bup-0.26
 CATEGORIES=	sysutils
@@ -42,6 +42,7 @@ REPLACE_PYTHON+=	cmd/fsck-cmd.py
 REPLACE_PYTHON+=	cmd/ftp-cmd.py
 REPLACE_PYTHON+=	cmd/fuse-cmd.py
 REPLACE_PYTHON+=	cmd/help-cmd.py
+REPLACE_PYTHON+=	cmd/import-duplicity-cmd.py
 REPLACE_PYTHON+=	cmd/index-cmd.py
 REPLACE_PYTHON+=	cmd/init-cmd.py
 REPLACE_PYTHON+=	cmd/join-cmd.py
