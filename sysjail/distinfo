@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/02/15 19:25:04 lkundrak Exp $
-
-SHA1 (sysjail-1.0.4.tar.gz) = 93b28856abefb606343230f5f6b4b8093b9dfb26
-RMD160 (sysjail-1.0.4.tar.gz) = 5ee656aed9456962f412f7eedf07711722b23a59
-Size (sysjail-1.0.4.tar.gz) = 581030 bytes
-SHA1 (patch-aq) = b46d1dd80d1d1fedeba9af6fc01a149317cff505
-SHA1 (patch-ar) = 09c40402f1e80bdc7677f0c5706adfe3350df3cc
