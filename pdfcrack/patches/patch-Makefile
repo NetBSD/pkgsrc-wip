@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile,v 1.1 2015/03/10 23:33:26 leot1990 Exp $
+
+Get rid of all GNU make-ism.
+
+--- Makefile.orig	2014-08-30 22:57:00.000000000 +0000
++++ Makefile
+@@ -1,13 +1,16 @@
+ CFLAGS += -Wall -Wextra -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -O3 -g
+ 
++OBJS = main.o sha256.o rc4.o md5.o pdfcrack.o pdfparser.o passwords.o common.o \
++	benchmark.o
++OBJS_PDFREADER = pdfparser.o pdfreader.o common.o
++
+ all: pdfcrack
+ 
+-pdfcrack: main.o sha256.o rc4.o md5.o pdfcrack.o pdfparser.o passwords.o common.o \
+-	benchmark.o
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $+
++pdfcrack: $(OBJS)
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $(OBJS)
+ 
+-pdfreader: pdfparser.o pdfreader.o common.o
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $+
++pdfreader: $(OBJS_PDFREADER)
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $(OBJS_PDFREADER)
+ 
+ clean:
+ 	rm -f pdfcrack pdfreader testreader *.o
