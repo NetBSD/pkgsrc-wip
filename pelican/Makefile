@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/11/15 18:12:01 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/11 20:56:06 ahp-nils Exp $
 
 DISTNAME=		pelican-3.5.0
+PKGREVISION=		1
 CATEGORIES=		www textproc
 MASTER_SITES=		-https://github.com/getpelican/pelican/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
@@ -20,7 +21,7 @@ DEPENDS+=		${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 USE_TOOLS+=		bash:run make:build
 
 PYTHON_VERSIONS_INCOMPATIBLE=26 32 # py-docutils
@@ -52,7 +53,7 @@ TXTDOCFILES=		changelog.txt content.txt contribute.txt faq.txt \
 AUTO_MKDIRS=		yes
 
 post-build:
-	cd ${WRKSRC}/docs/ && make text man
+	cd ${WRKSRC}/docs/ && make SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX} text man
 
 post-install:
 .for f in ${MANPAGES}
