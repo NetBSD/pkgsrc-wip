@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2015/03/05 20:49:32 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.55 2015/03/11 14:19:33 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -1326,7 +1326,9 @@ lib/firefox-${VERSION}/browser/chrome/pdfjs/content/web/viewer.js
 lib/firefox-${VERSION}/browser/chrome/pdfjs/pdfjs.manifest
 lib/firefox-${VERSION}/browser/chrome/shumway/LICENSE
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/RtmpUtils.jsm
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/ShumwayCom.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/SpecialInflate.jsm
+lib/firefox-${VERSION}/browser/chrome/shumway/chrome/SpecialStorage.jsm
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/bootstrap-content.js
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/content.js
 lib/firefox-${VERSION}/browser/chrome/shumway/chrome/pingpong.js
@@ -1370,6 +1372,9 @@ lib/firefox-${VERSION}/browser/chrome/webide/content/permissionstable.js
 lib/firefox-${VERSION}/browser/chrome/webide/content/permissionstable.xhtml
 lib/firefox-${VERSION}/browser/chrome/webide/content/prefs.js
 lib/firefox-${VERSION}/browser/chrome/webide/content/prefs.xhtml
+lib/firefox-${VERSION}/browser/chrome/webide/content/project-listing.js
+lib/firefox-${VERSION}/browser/chrome/webide/content/project-listing.xhtml
+lib/firefox-${VERSION}/browser/chrome/webide/content/project-panel.js
 lib/firefox-${VERSION}/browser/chrome/webide/content/runtimedetails.js
 lib/firefox-${VERSION}/browser/chrome/webide/content/runtimedetails.xhtml
 lib/firefox-${VERSION}/browser/chrome/webide/content/webide.js
@@ -1386,6 +1391,7 @@ lib/firefox-${VERSION}/browser/chrome/webide/skin/monitor.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/newapp.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/permissionstable.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/prefs.css
+lib/firefox-${VERSION}/browser/chrome/webide/skin/project-listing.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/runtimedetails.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/throbber.svg
 lib/firefox-${VERSION}/browser/chrome/webide/skin/webide.css
@@ -1613,6 +1619,7 @@ lib/firefox-${VERSION}/browser/modules/devtools/webide/addons.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/app-manager.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/build.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/config-view.js
+lib/firefox-${VERSION}/browser/modules/devtools/webide/project-list.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/remote-resources.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/runtimes.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/simulator-process.js
@@ -1633,6 +1640,7 @@ lib/firefox-${VERSION}/browser/modules/loop/MozLoopService.jsm
 lib/firefox-${VERSION}/browser/modules/loop/MozLoopWorker.js
 lib/firefox-${VERSION}/browser/modules/offlineAppCache.jsm
 lib/firefox-${VERSION}/browser/modules/readinglist/ReadingList.jsm
+lib/firefox-${VERSION}/browser/modules/readinglist/SQLiteStore.jsm
 lib/firefox-${VERSION}/browser/modules/readinglist/Scheduler.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/ContentRestore.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/DocShellCapabilities.jsm
@@ -2032,11 +2040,8 @@ lib/firefox-${VERSION}/chrome/toolkit/content/global/printdialog.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/printdialog.xul
 lib/firefox-${VERSION}/chrome/toolkit/content/global/printjoboptions.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/printjoboptions.xul
-lib/firefox-${VERSION}/chrome/toolkit/content/global/reader/JSDOMParser.js
-lib/firefox-${VERSION}/chrome/toolkit/content/global/reader/Readability.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/reader/aboutReader.html
 lib/firefox-${VERSION}/chrome/toolkit/content/global/reader/aboutReader.js
-lib/firefox-${VERSION}/chrome/toolkit/content/global/reader/readerWorker.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/remote-test-ipc.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/resetProfile.css
 lib/firefox-${VERSION}/chrome/toolkit/content/global/resetProfile.js
@@ -2274,8 +2279,6 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/in-content/dropdown.sv
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/in-content/help-glyph.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/in-content/info-pages.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/in-content/radio.svg
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/in-content/sorter.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/in-content/sorter@2x.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/inContentUI.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/inContentUI/background-texture.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/linkTree.css
@@ -2505,14 +2508,12 @@ lib/firefox-${VERSION}/components/nsBlocklistService.js
 lib/firefox-${VERSION}/components/nsContentDispatchChooser.js
 lib/firefox-${VERSION}/components/nsContentPrefService.js
 lib/firefox-${VERSION}/components/nsCrashMonitor.js
-lib/firefox-${VERSION}/components/nsDOMIdentity.js
 lib/firefox-${VERSION}/components/nsDefaultCLH.js
 lib/firefox-${VERSION}/components/nsFilePicker.js
 lib/firefox-${VERSION}/components/nsFormAutoComplete.js
 lib/firefox-${VERSION}/components/nsFormHistory.js
 lib/firefox-${VERSION}/components/nsHandlerService.js
 lib/firefox-${VERSION}/components/nsHelperAppDlg.js
-lib/firefox-${VERSION}/components/nsIDService.js
 lib/firefox-${VERSION}/components/nsINIProcessor.js
 lib/firefox-${VERSION}/components/nsInputListAutoComplete.js
 lib/firefox-${VERSION}/components/nsLivemarkService.js
@@ -2585,7 +2586,6 @@ lib/firefox-${VERSION}/hyphenation/hyph_sl.dic
 lib/firefox-${VERSION}/hyphenation/hyph_sv.dic
 lib/firefox-${VERSION}/hyphenation/hyph_tr.dic
 lib/firefox-${VERSION}/hyphenation/hyph_uk.dic
-lib/firefox-${VERSION}/libmozalloc.so
 lib/firefox-${VERSION}/libxul.so
 lib/firefox-${VERSION}/modules/AboutReader.jsm
 lib/firefox-${VERSION}/modules/ActivitiesService.jsm
@@ -2594,6 +2594,7 @@ lib/firefox-${VERSION}/modules/AddonManager.jsm
 lib/firefox-${VERSION}/modules/AddonWatcher.jsm
 lib/firefox-${VERSION}/modules/AlarmDB.jsm
 lib/firefox-${VERSION}/modules/AlarmService.jsm
+lib/firefox-${VERSION}/modules/AppConstants.jsm
 lib/firefox-${VERSION}/modules/AppDownloadManager.jsm
 lib/firefox-${VERSION}/modules/AppsServiceChild.jsm
 lib/firefox-${VERSION}/modules/AppsUtils.jsm
@@ -2633,7 +2634,6 @@ lib/firefox-${VERSION}/modules/ContentPrefStore.jsm
 lib/firefox-${VERSION}/modules/ContentPrefUtils.jsm
 lib/firefox-${VERSION}/modules/CrashMonitor.jsm
 lib/firefox-${VERSION}/modules/Credentials.jsm
-lib/firefox-${VERSION}/modules/DOMIdentity.jsm
 lib/firefox-${VERSION}/modules/DOMRequestHelper.jsm
 lib/firefox-${VERSION}/modules/DataStoreChangeNotifier.jsm
 lib/firefox-${VERSION}/modules/DataStoreCursorImpl.jsm
@@ -2668,6 +2668,7 @@ lib/firefox-${VERSION}/modules/FxAccountsClient.jsm
 lib/firefox-${VERSION}/modules/FxAccountsCommon.js
 lib/firefox-${VERSION}/modules/FxAccountsOAuthClient.jsm
 lib/firefox-${VERSION}/modules/FxAccountsOAuthGrantClient.jsm
+lib/firefox-${VERSION}/modules/FxAccountsProfileChannel.jsm
 lib/firefox-${VERSION}/modules/FxAccountsProfileClient.jsm
 lib/firefox-${VERSION}/modules/GMPInstallManager.jsm
 lib/firefox-${VERSION}/modules/Geometry.jsm
@@ -2705,6 +2706,7 @@ lib/firefox-${VERSION}/modules/NotificationDB.jsm
 lib/firefox-${VERSION}/modules/OfflineCacheInstaller.jsm
 lib/firefox-${VERSION}/modules/OperatorApps.jsm
 lib/firefox-${VERSION}/modules/PageMenu.jsm
+lib/firefox-${VERSION}/modules/PageMetadata.jsm
 lib/firefox-${VERSION}/modules/PageThumbUtils.jsm
 lib/firefox-${VERSION}/modules/PageThumbs.jsm
 lib/firefox-${VERSION}/modules/PageThumbsWorker.js
@@ -2729,6 +2731,7 @@ lib/firefox-${VERSION}/modules/Preferences.jsm
 lib/firefox-${VERSION}/modules/Prefetcher.jsm
 lib/firefox-${VERSION}/modules/PresentationDeviceInfoManager.jsm
 lib/firefox-${VERSION}/modules/PrivateBrowsingUtils.jsm
+lib/firefox-${VERSION}/modules/ProfileAge.jsm
 lib/firefox-${VERSION}/modules/Promise-backend.js
 lib/firefox-${VERSION}/modules/Promise.jsm
 lib/firefox-${VERSION}/modules/PromiseUtils.jsm
@@ -3212,6 +3215,7 @@ lib/firefox-${VERSION}/modules/devtools/server/actors/call-watcher.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/canvas.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/child-process.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/childtab.js
+lib/firefox-${VERSION}/modules/devtools/server/actors/chrome.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/common.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/csscoverage.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/device.js
@@ -3306,6 +3310,10 @@ lib/firefox-${VERSION}/modules/osfile/osfile_win_front.jsm
 lib/firefox-${VERSION}/modules/osfile/ospath.jsm
 lib/firefox-${VERSION}/modules/osfile/ospath_unix.jsm
 lib/firefox-${VERSION}/modules/osfile/ospath_win.jsm
+lib/firefox-${VERSION}/modules/reader/JSDOMParser.js
+lib/firefox-${VERSION}/modules/reader/Readability.js
+lib/firefox-${VERSION}/modules/reader/ReaderWorker.js
+lib/firefox-${VERSION}/modules/reader/ReaderWorker.jsm
 lib/firefox-${VERSION}/modules/reflect.jsm
 lib/firefox-${VERSION}/modules/sdk/bootstrap.js
 lib/firefox-${VERSION}/modules/sdk/system/Startup.js
