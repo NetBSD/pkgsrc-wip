@@ -1,0 +1,152 @@
+$NetBSD: patch-al,v 1.1 2015/03/11 05:15:11 makoto Exp $
+
+
+--- smtp.c.orig	2015-02-17 23:00:08.000000000 +0900
++++ smtp.c	2015-03-11 13:52:50.000000000 +0900
+@@ -49,8 +49,14 @@ static	time_t Now;
+ static	int FirstRead, FirstWrite;
+ static	int Terminate, NewTransCheck, NeedTrimDomain, MoreFreeSlot;
+ 
++static void sig_alarm P((int));
++static void sig_int P((int));
++static void sig_hup P((int));
++static void sig_term P((int));
++static void smtp P((void));
++
+ static void
+-sig_alarm()
++sig_alarm(int dummy)
+ {
+ 	errno = ETIMEDOUT;
+ 	if (cnf.debug & DEBUG_EVENT)
+@@ -58,21 +64,21 @@ sig_alarm()
+ }
+ 
+ static void
+-sig_int()
++sig_int(int dummy)
+ {
+ 	logg(LOG_INFO, "SIGINT received: internal states dumped");
+ 	dump_internal();
+ }
+ 
+ static void
+-sig_hup()
++sig_hup(int dummy)
+ {
+ 	logg(LOG_INFO, "SIGHUP received: graceful termination");
+ 	forced_terminate();
+ }
+ 
+ static void
+-sig_term()
++sig_term(int dummy)
+ {
+ 	logg(LOG_INFO, "SIGTERM received: semi graceful termination");
+ 	markstatus(env.rcpt_list, SMTP_TEMPFAIL(51),
+@@ -207,15 +213,53 @@ deliver()
+ 	resource_usage("finalstatus done");
+ }
+ 
+-static int smtp_connected(), smtp_greeted(), smtp_flush();
+-static int smtp_helo_r(), smtp_helo_r();
+-static int smtp_mail_r(), smtp_rcpt_r(), smtp_rcpt_s();
+-static int smtp_data_r(), smtp_data_body(), smtp_data_t();
+-static int smtp_rset_r(), smtp_quit_r();
++static int smtp_connected P((struct connection *));
++static int smtp_flush P((struct connection *));
++static int smtp_greeted P((struct connection *));
++static int smtp_helo_r P((struct connection *));
++static int smtp_mail_r P((struct connection *));
++static int smtp_rcpt_r P((struct connection *));
++static int smtp_data_r P((struct connection *));
++static int smtp_data_body P((struct connection *));
++static int smtp_data_t P((struct connection *));
++static int smtp_rset_r P((struct connection *));
++static int smtp_quit_r P((struct connection *));
++
++static int smtp_helo_s P((struct connection *));
++static int smtp_mail_s P((struct connection *));
++static int smtp_rcpt_s P((struct connection *));
++static int smtp_data_s P((struct connection *));
++static int smtp_rset_s P((struct connection *));
++static int smtp_quit_s P((struct connection *));
++
++static int new_transaction P((void));
++static void process_connection P((fd_set *, fd_set *, int, int));
++static void markstatus P((struct recipient *, int, char *, int));
++static struct connection *open_transaction P((struct recipient *));
++static void close_transaction P((struct connection *, int));
++static void trim_rcpts P((struct domain *));
++static int trim_domain P((void));
++static void forced_terminate P((void));
++
++static int smtp_connect P((struct connection *));
++void smtp_close P((int));
++static int smtp_read P((struct connection *, char *, int, int *));
++static int smtp_write P((struct connection *, char *, int, int));
++static int smtp_get_reply P((struct connection *,
++			     void (*) P((struct connection *, char *)),
++			     char *, int, int *));
++static int smtp_send_command P((struct connection *, char *, int, int));
++static void esmtp_check P((struct connection *, char *));
++static void ehlo_opt P((struct connection *, char *));
++static char *skipaddr P((char *, char *addr));
++static int may_be_reused P((struct connection *));
++static int smtp_timeout P((struct connection *));
++static void dump_internal P((void));
++static char *smtpstrerror P((int));
+ 
+ static struct	{
+-	int (*recv)();
+-	int (*send)();
++	int (*recv) P((struct connection *));
++	int (*send) P((struct connection *));
+ 	time_t tout;
+ 	char *name;
+ } state_tbl[] = {
+@@ -1434,7 +1478,7 @@ int next;	/* true: forward MX for next t
+ 	num_trans--;
+ }
+ 
+-void
++static void
+ trim_rcpts(domp)
+ struct domain *domp;
+ {
+@@ -1474,7 +1518,7 @@ struct domain *domp;
+ 		NeedTrimDomain = 1;
+ }
+ 
+-int
++static int
+ trim_domain()
+ {
+ 	struct domain *domp, *domtmp;
+@@ -1515,7 +1559,7 @@ trim_domain()
+ 	return 0;
+ }
+ 
+-void
++static void
+ forced_terminate()
+ {
+ 	struct recipient *rcptp;
+@@ -1956,7 +2000,7 @@ struct connection *conn;
+ {
+ 	SockAddr cin;
+ 	int len = sizeof(SockAddr);
+-	const char *errmsg;
++	char *errmsg;
+ 
+ 	if (getpeername(conn->socket, (struct sockaddr *)&cin, &len) < 0)
+ 	{
+@@ -2261,7 +2305,7 @@ struct connection *conn;
+ static int
+ smtp_get_reply(conn, func, firstline, size, rest)
+ struct connection *conn;
+-void (*func)();
++void (*func) P((struct connection *, char *));
+ char firstline[];
+ int size;
+ int *rest;
