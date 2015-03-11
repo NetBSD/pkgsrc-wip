@@ -1,0 +1,36 @@
+$NetBSD: patch-ai,v 1.1 2015/03/11 05:07:02 makoto Exp $
+
+--- main.c.orig	2002-03-15 11:12:59.000000000 +0900
++++ main.c
+@@ -46,7 +46,10 @@
+ # define MAIN	1
+ # include "extern.h"
+ 
+-void
++static void usage P((char *));
++static void sig_quit P((int));
++
++static void
+ usage(progname)
+ char *progname;
+ {
+@@ -96,7 +99,8 @@
+ }
+ 
+ static void
+-sig_quit()
++sig_quit(dummy)
++	int dummy;
+ {
+ 	exit(EX_TEMPFAIL);
+ }
+@@ -155,7 +159,9 @@
+         else
+                 cnf.dst_port = 25;
+ 
++#if SPT_TYPE != SPT_BUILTIN
+ 	initsetproctitle(argc, argv, envp);
++#endif
+ 
+ 	opterr = 0;
+ #ifdef INET6

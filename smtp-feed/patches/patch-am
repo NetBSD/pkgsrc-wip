@@ -1,0 +1,26 @@
+$NetBSD: patch-am,v 1.1 2015/03/11 05:07:02 makoto Exp $
+
+
+--- util.c.orig	2012-06-07 16:51:49.000000000 +0900
++++ util.c	2015-03-11 13:54:18.000000000 +0900
+@@ -42,6 +42,11 @@ static char *_id_ = "$Id: util.c,v 1.23 
+ # include "common.h"
+ # include "extern.h"
+ 
++static void tv_sub P((struct timeval *, struct timeval *, struct timeval *));
++static int hash_func P((char *));
++struct dns_stat *hash_query_lookup P((char *, struct dns_stat ***));
++static void hash_map_enter P((char *, struct host_map *));
++
+ char *
+ newstr(str)
+ char *str;
+@@ -435,7 +440,7 @@ struct host_map ***ptr;
+ 	return NULL;
+ }
+ 
+-void
++static void
+ hash_map_enter(name, newmapp)
+ char *name;
+ struct host_map *newmapp;
