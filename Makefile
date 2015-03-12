@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6107 2015/03/09 22:53:08 tnn2 Exp $
+# $Id: Makefile,v 1.6108 2015/03/12 14:03:25 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3156,6 +3156,7 @@ SUBDIR+=	py-validictory
 SUBDIR+=	py-vanity
 SUBDIR+=	py-varify
 SUBDIR+=	py-vcversioner
+SUBDIR+=	py-vdirsyncer-git
 SUBDIR+=	py-vegas
 SUBDIR+=	py-version-control-tools
 SUBDIR+=	py-viper
