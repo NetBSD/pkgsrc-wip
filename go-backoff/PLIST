@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/12 21:15:31 tnn2 Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/cenkalti/backoff.a
+gopkg/src/github.com/cenkalti/backoff/LICENSE
+gopkg/src/github.com/cenkalti/backoff/README.md
+gopkg/src/github.com/cenkalti/backoff/backoff.go
+gopkg/src/github.com/cenkalti/backoff/backoff_test.go
+gopkg/src/github.com/cenkalti/backoff/exponential.go
+gopkg/src/github.com/cenkalti/backoff/exponential_test.go
+gopkg/src/github.com/cenkalti/backoff/retry.go
+gopkg/src/github.com/cenkalti/backoff/retry_test.go
+gopkg/src/github.com/cenkalti/backoff/ticker.go
+gopkg/src/github.com/cenkalti/backoff/ticker_test.go

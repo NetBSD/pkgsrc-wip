@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/12 21:15:31 tnn2 Exp $
+
+SHA1 (go-backoff-20141124-9831e1e25c.tar.gz) = 53cbfc1097e0422ad33899b345c6b9c570f75323
+RMD160 (go-backoff-20141124-9831e1e25c.tar.gz) = 8bbeb91dbc34a5dc549514aa9640437d58059507
+Size (go-backoff-20141124-9831e1e25c.tar.gz) = 6418 bytes
