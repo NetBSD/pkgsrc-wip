@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6108 2015/03/12 14:03:25 thomasklausner Exp $
+# $Id: Makefile,v 1.6109 2015/03/12 14:25:43 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -198,7 +198,6 @@ SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
 SUBDIR+=	bfgminer
-SUBDIR+=	bibletime
 SUBDIR+=	bibliographer
 SUBDIR+=	bicho
 SUBDIR+=	bigdft
@@ -3528,7 +3527,6 @@ SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	swift-git
 SUBDIR+=	swisseph
-SUBDIR+=	sword
 SUBDIR+=	sxemacs
 SUBDIR+=	sxhkd
 SUBDIR+=	sxid
