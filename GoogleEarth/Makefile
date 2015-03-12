@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/03/02 20:04:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.21 2015/03/12 21:45:08 tnn2 Exp $
 
 DISTNAME=		google-earth-stable_${GE_VERSION}_amd64.deb
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -38,12 +38,6 @@ post-extract:
 	cd ${WRKDIR} && mkdir -p ${WRKSRC} && ${LZCAT} data.tar.lzma | ${TAR} -C ${WRKSRC} -xf -
 
 do-build:
-#	cd ${WRKSRC} && ${MKDIR} GoogleEarth && cd GoogleEarth && \
-#	pax -r -f ../googleearth-linux-x86.tar && \
-#	pax -r -f ../googleearth-data.tar && \
-#	${CP} ../*.xpm ../*.png ../bin/googleearth . && \
-#	${FIND} . -type f | ${XARGS} ${CHMOD} -x && \
-#	${CHMOD} +x googleearth googleearth-bin *.so*
 	printf '#! /bin/sh\nLD_LIBRARY_PATH=${PREFIX}/share/google/earth/free exec ${PREFIX}/share/google/earth/free/googleearth-bin "$$@"\n' > \
 	${WRKDIR}/google-earth
 
