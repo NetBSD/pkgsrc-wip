@@ -1,3 +1,0 @@
-SHA1 (patch-generate-unix-Makefile.config) = 7a700d393a2d761634b9592f61a15e934f608804
-SHA1 (patch-generate-unix-acpidump-Makefile) = d30cc9f4ce13ff8eb214d3cff51d8c4b15a07b58
-SHA1 (patch-source-os_specific-service_layers-osnetbsdtbl.c) = b8037918ccf5b27081c165e0df8c2a1b5a94f666
