@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/02/27 22:45:18 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/12 20:32:06 tnn2 Exp $
 
 DISTNAME=	syncthing-0.10.23
 CATEGORIES=	net
-MASTER_SITES=	-https://github.com/syncthing/syncthing/archive/v${PKGVERSION_NOREV}.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://syncthing.net/
