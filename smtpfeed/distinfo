@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/03/11 14:37:02 makoto Exp $
+$NetBSD: distinfo,v 1.3 2015/03/12 01:05:05 makoto Exp $
 
 SHA1 (smtpfeed-1.23.tar.gz) = 42b3f7ce55dc9f932de8573477d3497b4670e7b1
 RMD160 (smtpfeed-1.23.tar.gz) = 5411b3a363673052e92fbbc218ac55469cc4b061
@@ -12,5 +12,4 @@ SHA1 (patch-ak) = 206286eb6872876fc4b67a6ad413229124b8bb80
 SHA1 (patch-al) = de258d0109b70bf86b5ad3bcb10bce8c8bfd6d5d
 SHA1 (patch-am) = 56241227527f674bc1237bb3ac2c5ffb3f76db37
 SHA1 (patch-configure) = 61f92773f797660e7b51f6b70ea88f3f949c5191
-SHA1 (patch-dns.c) = a1d5cb3aecdc7c715681550cfc2bd7ff79cca012
-SHA1 (patch-extern.h) = 93602953cd418856035e51420bc1452297eee96b
+SHA1 (patch-dns.c) = 054540406ff96001e8f77bea9149012e88b6b3d5
