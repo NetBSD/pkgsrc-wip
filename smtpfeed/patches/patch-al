@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2015/03/11 05:15:11 makoto Exp $
+$NetBSD: patch-al,v 1.2 2015/03/12 02:34:30 makoto Exp $
 
 
 --- smtp.c.orig	2015-02-17 23:00:08.000000000 +0900
-+++ smtp.c	2015-03-11 13:52:50.000000000 +0900
++++ smtp.c	2015-03-12 11:30:45.000000000 +0900
 @@ -49,8 +49,14 @@ static	time_t Now;
  static	int FirstRead, FirstWrite;
  static	int Terminate, NewTransCheck, NeedTrimDomain, MoreFreeSlot;
@@ -74,7 +74,7 @@ $NetBSD: patch-al,v 1.1 2015/03/11 05:15:11 makoto Exp $
 +
 +static int new_transaction P((void));
 +static void process_connection P((fd_set *, fd_set *, int, int));
-+static void markstatus P((struct recipient *, int, char *, int));
++static void markstatus P((struct recipient *, int, const char *, int));
 +static struct connection *open_transaction P((struct recipient *));
 +static void close_transaction P((struct connection *, int));
 +static void trim_rcpts P((struct domain *));
@@ -105,6 +105,46 @@ $NetBSD: patch-al,v 1.1 2015/03/11 05:15:11 makoto Exp $
  	time_t tout;
  	char *name;
  } state_tbl[] = {
+@@ -338,7 +382,7 @@ smtp()
+ 	int i, fds, rc, in_use, burst, true_terminate;
+ 	int all_done = 0;
+ 	int bad_state = 0;
+-	char *msg;
++	const char *msg;
+ 
+ 	/* initialize work pointers */
+ 	for (rcptp = env.rcpt_list; rcptp != NULL; rcptp = rcptp->next)
+@@ -645,7 +689,7 @@ new_transaction()
+ 		}
+ 		if (domp->curmx == NULL)
+ 		{
+-			char *msg = domp->response;
++			const char *msg = domp->response;
+ 
+ 			if (msg == NULL)
+ 				if (no_addr)
+@@ -869,15 +913,15 @@ int timeout_only, true_term;
+ }
+ 
+ static void
+-markstatus(rcptp, rcode, response, tracechain)
+-struct recipient *rcptp;
+-int rcode;
+-char *response;
+-int tracechain;
++markstatus (struct recipient *rcptp,
++	    int rcode,
++	    const char *response,
++	    int tracechain)
+ {
+ 	char hbuf[MAXLINE], rbuf[MAXLINE], pbuf[64];
+ 	char addrbuf[SYSLOG_BUFSIZE];
+-	char *hostname, *proto, *responsep;
++	char *hostname, *proto;
++	const char *responsep;
+ 	struct host *hostp;
+ 	int delay, addrlen, estconst, estlen, n;
+ 	static int PrevPCT = -1;
 @@ -1434,7 +1478,7 @@ int next;	/* true: forward MX for next t
  	num_trans--;
  }
