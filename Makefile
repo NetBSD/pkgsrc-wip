@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6109 2015/03/12 14:25:43 nros Exp $
+# $Id: Makefile,v 1.6110 2015/03/12 21:28:50 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -870,6 +870,8 @@ SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	go
+SUBDIR+=	go-backoff
+SUBDIR+=	go-fsnotify
 SUBDIR+=	go-net
 SUBDIR+=	go-text
 SUBDIR+=	go-tools
@@ -3544,6 +3546,7 @@ SUBDIR+=	synce-kde
 SUBDIR+=	synce-orange
 SUBDIR+=	syncthing
 SUBDIR+=	syncthing-gtk
+SUBDIR+=	syncthing-inotify
 SUBDIR+=	synfig
 SUBDIR+=	synfigstudio
 SUBDIR+=	sysklogd
