@@ -1,23 +1,42 @@
-$NetBSD: patch-dns.c,v 1.2 2015/03/12 01:05:05 makoto Exp $
+$NetBSD: patch-dns.c,v 1.3 2015/03/12 02:01:47 makoto Exp $
 
 show_query() returning nothing
 
 --- dns.c.orig	2015-02-17 23:01:03.000000000 +0900
-+++ dns.c	2015-03-12 10:02:48.000000000 +0900
-@@ -42,6 +42,8 @@ static char *_id_ = "$Id: dns.c,v 1.90 2
- # include "common.h"
- # include "extern.h"
++++ dns.c	2015-03-12 10:59:35.000000000 +0900
+@@ -48,6 +48,13 @@ static char *_id_ = "$Id: dns.c,v 1.90 2
+ #define MAXPACKET	1024
+ #endif
  
-+void show_query(u_char* t, u_char* b, u_char* e);
++union answer_t {
++	HEADER  qb1;
++	const char    qb2[MAXPACKET];
++};
++void show_query(u_char* t, union answer_t* b, union answer_t* e);
 +
- #if PACKETSZ > 1024
- #define MAXPACKET	PACKETSZ
- #else
-@@ -2222,6 +2224,7 @@ long opt;	/* option described in map fil
++
+ #ifdef ultrix
+ #define NSADDR_LIST(x)	_res.ns_list[x].addr	/* ultrix implementation is strange */
+ #endif
+@@ -585,10 +592,7 @@ int sync;
+ 	static int nsent = 0;
+ 	static fd_set dsmask;
+         int max, n, fromlen, resplen, ns;
+-	union {
+-		HEADER  qb1;
+-		char    qb2[MAXPACKET];
+-	} answer;
++	union answer_t answer;
+ 	int anssiz;
+         HEADER *qp, *hp;
+ 	u_char *eom, *ap;
+@@ -2222,8 +2226,7 @@ long opt;	/* option described in map fil
  	return 0;
  }
  
-+void
- show_query(t, b, e)
- u_char *t, *b, *e;
+-show_query(t, b, e)
+-u_char *t, *b, *e;
++void show_query(u_char* t, union answer_t* b, union answer_t* e)
  {
+ 	char nbuf[MAXDNAME+1];
+ 	register int n;
