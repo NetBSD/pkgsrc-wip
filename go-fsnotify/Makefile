@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/03/12 21:06:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/12 21:11:14 tnn2 Exp $
 #
 
 DISTNAME=		go-fsnotify-1.2.0
 GITHUB_PROJECT=         fsnotify
-CATEGORIES=             sysutils
+CATEGORIES=             devel
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=go-fsnotify/}
 GITHUB_TAG=             v${PKGVERSION_NOREV}
 
