@@ -6,5 +6,5 @@ managing hardware and events. The following utilities are provided:
     * ACPI Simulator (AcpiExec)
     * ACPI Table Extractor (AcpiXtract)
     * ACPI Help (AcpiHelp)
-    * ACPI Soure Code Converter (AcpiSrc)
+    * ACPI Source Code Converter (AcpiSrc)
     * ACPI Example Namespace Dump (AcpiNames)
