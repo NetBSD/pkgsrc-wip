@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/12 22:57:54 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/13 01:30:15 krytarowski Exp $
 #
 
 GIT_REPOSITORIES=	acpica-utils
@@ -13,7 +13,23 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.acpica.org/
 COMMENT=	Intel ACPI CA Unix utilities
 
-USE_TOOLS+=	bison flex gm4 gmake
+USE_TOOLS+=	bison flex gm4 gmake bash
+
+REPLACE_BASH+=	tests/aapits/bin/aapitsrun
+REPLACE_BASH+=	tests/aapits/bin/cadir
+REPLACE_BASH+=	tests/aapits/bin/run1
+REPLACE_BASH+=	tests/aslts.sh
+REPLACE_BASH+=	tests/aslts/bin/Do
+REPLACE_BASH+=	tests/aslts/bin/asltsdiffres
+REPLACE_BASH+=	tests/aslts/bin/asltsrun
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemosconc
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemossum
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemostabs
+REPLACE_BASH+=	tests/aslts/bin/bugstate/parsebuglist
+REPLACE_BASH+=	tests/aslts/bin/common
+REPLACE_BASH+=	tests/aslts/bin/diffproc
+REPLACE_BASH+=	tests/aslts/bin/settings
+REPLACE_BASH+=	tests/templates/templates.sh
 
 LICENSE=	gnu-gpl-v2 # OR intel-acpica-license
 # According to https://acpica.org/faq
@@ -21,6 +37,9 @@ LICENSE=	gnu-gpl-v2 # OR intel-acpica-license
 #      ACPICA can be licensed under the GNU General Public License or via a
 #      separate license that may be more favorable to commercial OSVs. Please
 #      see the source code license header for specifics.
+
+do-test:
+	cd tests ; ./aslts.sh || exit 1
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
