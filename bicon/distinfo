@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/03/05 16:37:14 mbowie Exp $
+$NetBSD: distinfo,v 1.2 2015/03/13 19:44:55 mbowie Exp $
 
 SHA1 (master.zip) = be66b23b5064487629afdc7ef0624a332917e25d
 RMD160 (master.zip) = 80de719365b60d25e2d2f5e9b47fd1b6b55f75a3
 Size (master.zip) = 144676 bytes
-SHA1 (patch-bicon_pty__spawn.c) = 7706eea9afef34d5fc437207bb6c22d8c9c7a7bd
-SHA1 (patch-font_Makefile.am) = 4e8abce8560be854a3ff3787c4916e94f3e8ce35
-SHA1 (patch-font_fonts.mk) = 2c967a8279c004fca25389b572d399434d8c38e6
+SHA1 (patch-bicon_pty__spawn.c) = 59e93fc48ef7dde69729812b75d722dcc2d8544a
+SHA1 (patch-font_Makefile.am) = dcab4f6354e6a57a393fd3e2839e9e4915710ab2
+SHA1 (patch-font_fonts.mk) = 2365873124c3b871233983394a40a306478ab262
