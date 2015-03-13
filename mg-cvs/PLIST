@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/13 22:08:52 krytarowski Exp $
+bin/mg
+man/man1/mg.1
+share/doc/mg/tutorial
