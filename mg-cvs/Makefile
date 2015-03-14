@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/13 23:46:20 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/14 00:14:43 krytarowski Exp $
 #
 
 DISTNAME=	mg
@@ -7,7 +7,7 @@ CVS_REPOSITORIES=	mg
 CVS_ROOT.mg=		anoncvs@anoncvs.openbsd.org:/cvs/src/usr.bin
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openbsd.org
+HOMEPAGE=	http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/mg/
 COMMENT=	Small, fast, public domain EMACS style editor
 
 USE_NCURSES=	yes # Uses NCURSES internals
