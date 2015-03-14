@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/14 00:14:43 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/14 02:09:54 krytarowski Exp $
 #
 
 DISTNAME=	mg
@@ -11,12 +11,13 @@ HOMEPAGE=	http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/mg/
 COMMENT=	Small, fast, public domain EMACS style editor
 
 USE_NCURSES=	yes # Uses NCURSES internals
-USE_TOOLS+=	install
-MAKE_ENV+=	prefix=${PREFIX}
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CONFLICTS+=	mg2a-[0-9]*
+
+USE_BSD_MAKEFILE=	yes
+USE_FEATURES=		nbcompat
+
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-openbsd-source
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
