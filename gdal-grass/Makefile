@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:34 asau Exp $
+# $NetBSD: Makefile,v 1.11 2015/03/14 18:42:48 lexort Exp $
 #
 
 DISTNAME=		gdal-grass-1.3.1.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gdal.org/dl/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:40 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/14 18:42:48 lexort Exp $
 #
 
 DISTNAME=	gpx2shp-0.69
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=gpx2shp/13458/}
 
