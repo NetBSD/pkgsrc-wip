@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/03/12 21:25:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/14 08:35:32 thomasklausner Exp $
 
 DISTNAME=	syncthing-inotify-0.5
 CATEGORIES=	net
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/syncthing/syncthing-inotify
 COMMENT=	Inotify file watcher intended for use with Syncthing
 LICENSE=	mpl-2.0
+
+BUILD_DEPENDS+=	go-[0-9]*:../../lang/go
 
 MAKE_ENV+=	GOPATH=${PREFIX}/gopkg
 
