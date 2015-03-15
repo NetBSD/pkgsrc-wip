@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST.common,v 1.5 2013/07/11 05:55:38 makoto Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2015/03/15 14:22:19 bsiegert Exp $
 bin/gdb
 include/gdb/jit-reader.h
 info/annotate.info
 info/bfd.info
-info/configure.info
 info/gdb.info
-info/gdbint.info
 info/stabs.info
 lib/charset.alias
-lib/gdb/libiberty.a
 man/man1/gdb.1
 share/gdb/python/gdb/__init__.py
 share/gdb/python/gdb/command/__init__.py

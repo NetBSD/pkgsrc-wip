@@ -1,4 +1,4 @@
-$NetBSD: patch-gdb_bsd-kvm.c,v 1.2 2013/06/02 13:14:55 makoto Exp $
+$NetBSD: patch-gdb_bsd-kvm.c,v 1.3 2015/03/15 14:22:20 bsiegert Exp $
 
 (1) (unknown yet)
 (2) +#include <sys/signal.h> part:
@@ -8,11 +8,11 @@ from bsd-kvm.c:36:
 /usr/include/sys/signalvar.h:59: error: 'NSIG' undeclared here (not in a function)
 gmake[2]: *** [bsd-kvm.o] Error 1
 
---- ./work/gdb-7.5.1/gdb/bsd-kvm.c.orig	2012-01-04 17:16:59.000000000 +0900
-+++ gdb/bsd-kvm.c	2013-06-02 20:59:26.000000000 +0900
-@@ -29,7 +29,12 @@
+--- gdb/bsd-kvm.c.orig	2015-02-19 11:58:07.000000000 +0000
++++ gdb/bsd-kvm.c
+@@ -28,7 +28,12 @@
+ #include "gdbthread.h"
  
- #include "gdb_assert.h"
  #include <fcntl.h>
 +#include <stddef.h>
  #include <kvm.h>
@@ -23,7 +23,7 @@ gmake[2]: *** [bsd-kvm.o] Error 1
  #ifdef HAVE_NLIST_H
  #include <nlist.h>
  #endif
-@@ -37,6 +42,7 @@
+@@ -36,6 +41,7 @@
  #include "readline/readline.h"
  #include <sys/param.h>
  #include <sys/proc.h>
