@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/12/04 23:37:57 othyro Exp $
+$NetBSD: distinfo,v 1.7 2015/03/15 14:37:03 othyro Exp $
 
-SHA1 (re-0.4.10.tar.gz) = f1682563241f53ccf5b0363d0234acefe5630abb
-RMD160 (re-0.4.10.tar.gz) = 2fe38f9a5ddb4a9d795cb08db044ea8e1db434c8
-Size (re-0.4.10.tar.gz) = 292883 bytes
+SHA1 (re-0.4.11.tar.gz) = 6e04f8e30eaa273134c47433b41bcffadfca194c
+RMD160 (re-0.4.11.tar.gz) = e775e371292b4fb4cb266c76e73693844f9a3e88
+Size (re-0.4.11.tar.gz) = 295558 bytes
 SHA1 (patch-src_dns_res.c) = 62245c05b3017a1a16ece093c6d435ea78e6ecf5
