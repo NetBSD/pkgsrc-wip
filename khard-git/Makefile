@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/02/04 12:38:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/15 20:12:32 thomasklausner Exp $
 
-DISTNAME=		khard-0.2.1
+DISTNAME=		khard-0.2.2
 CATEGORIES=		time net
 MASTER_SITES=		https://github.com/scheibler/khard/
 
