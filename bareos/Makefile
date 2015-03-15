@@ -1,7 +1,7 @@
-DISTNAME=	bareos-bareos-14.2
-PKG_NAME=	${DISTNAME:S/bareos-//}
+DISTNAME=	bareos-Release-14.2.3
+PKGNAME=	bareos-14.2.3
 CATEGORIES=	sysutils
-MASTER_SITES=	-https://github.com/bareos/bareos/archive/${DISTNAME:S/bareos-//}.zip
+MASTER_SITES=	-https://github.com/bareos/bareos/archive/Release/${DISTNAME:S/bareos-Release-//}.zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	paul@paulbsd.com
@@ -10,7 +10,7 @@ COMMENT?=	Open Source data protection
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
+USE_LIBTOOL=		no
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes

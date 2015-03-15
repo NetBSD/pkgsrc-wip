@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/03/15 18:08:34 plecuq Exp $
+$NetBSD: distinfo,v 1.2 2015/03/15 19:44:42 plecuq Exp $
 
-SHA1 (bareos-bareos-14.2.zip) = 9ed93b598411a8bfc68cfdcae346e4087fccfbcc
-RMD160 (bareos-bareos-14.2.zip) = b4ce5c740d21a522f84e39ba6a694e5b21a303c8
-Size (bareos-bareos-14.2.zip) = 4746309 bytes
+SHA1 (bareos-Release-14.2.3.zip) = 3e9a75efab4471532ef864ba57afbd8d78c6154b
+RMD160 (bareos-Release-14.2.3.zip) = 9e151194db453c30114e28b99efbaede4b2e0232
+Size (bareos-Release-14.2.3.zip) = 4748346 bytes
+SHA1 (patch-aa) = 76abb289826e6162d0f8e7764fddaa846d1754d1
