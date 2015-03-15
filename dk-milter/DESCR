@@ -1,4 +1,0 @@
-dk-milter consists of two parts: A milter-based application
-(dk-filter) which plugs in to Sendmail to provide DomainKeys
-service, and a library (libdk) which can be used to build
-DomainKeys-compliant applications or MTAs.
