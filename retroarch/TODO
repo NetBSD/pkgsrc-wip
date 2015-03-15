@@ -1,3 +1,0 @@
-*) ALSA and OSS audio support is broken. Cg is support is also broken.
-*) jack and python support is untested.
-*) Add RoarAudio support (this involves packaging RoarAudio first ;)).

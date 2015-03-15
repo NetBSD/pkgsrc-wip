@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6112 2015/03/14 18:58:45 othyro Exp $
+# $Id: Makefile,v 1.6113 2015/03/15 21:02:18 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3271,7 +3271,6 @@ SUBDIR+=	remctl
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	resin
-SUBDIR+=	retroarch
 SUBDIR+=	revbump
 SUBDIR+=	revelation
 SUBDIR+=	rhapsody
