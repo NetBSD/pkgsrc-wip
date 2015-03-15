@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2012/11/11 19:04:00 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2015/03/15 21:03:23 thomasklausner Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
+PKG_OPTIONS_VAR=	PKG_OPTIONS.rsound
 PKG_SUPPORTED_OPTIONS=	alsa jack libao openal oss portaudio pulseaudio
 PKG_SUPPORTED_OPTIONS+=	samplerate syslog
 PKG_SUGGESTED_OPTIONS=	libao openal oss pulseaudio samplerate
