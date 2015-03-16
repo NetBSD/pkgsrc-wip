@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/03/16 16:19:28 adanbsd Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/16 20:59:35 adanbsd Exp $
+
+SUBDIR+= dnscrypt-proxy
 
 DISTNAME=	dnscrypt-proxy-1.4.3
 CATEGORIES=	security
 MASTER_SITES=	http://download.dnscrypt.org/dnscrypt-proxy/
+
 
 MAINTAINER=	ada@netbsdfr.org
 HOMEPAGE=	http://dnscrypt.org/
