@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/16 16:19:28 adanbsd Exp $
+
+SHA1 (dnscrypt-proxy-1.4.3.tar.gz) = d553b48cfe9c6d56223cf0e91cd0634853894917
+RMD160 (dnscrypt-proxy-1.4.3.tar.gz) = 5cea5878331b11df09c36890df86382fe595841e
+Size (dnscrypt-proxy-1.4.3.tar.gz) = 1560345 bytes

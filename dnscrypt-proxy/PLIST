@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/03/16 16:19:28 adanbsd Exp $
+bin/hostip
+man/man8/dnscrypt-proxy.8
+man/man8/hostip.8
+sbin/dnscrypt-proxy
+share/dnscrypt-proxy/dnscrypt-resolvers.csv
