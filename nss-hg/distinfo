@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2014/10/12 11:18:17 makoto Exp $
+$NetBSD: distinfo,v 1.5 2015/03/17 14:28:41 thomasklausner Exp $
 
 SHA1 (nss-3.16.5.tar.gz) = bec488835954698e7b19149a15205db299cd13de
 RMD160 (nss-3.16.5.tar.gz) = 19630a0815d69ee5959b562d7849d35d677c6329
@@ -14,6 +14,6 @@ SHA1 (patch-lib_freebl_Makefile) = aedfd6f12872bc94256e1c6be4628334f363c2bb
 SHA1 (patch-lib_freebl_blapi.h) = 00e0dcfe1f6a54bffa97c4852f9f9fcb5ab783e1
 SHA1 (patch-lib_freebl_config.mk) = ade7f656b900f93f1fdaa036a733529af132d2ca
 SHA1 (patch-lib_freebl_sha-fast-amd64-sun.s) = 6feb56632584f04c5259dcb72e330e13d485b50a
-SHA1 (patch-lib_softoken_config.mk) = b835109162af986a6802fc535b19ba52b6b82322
+SHA1 (patch-lib_softoken_config.mk) = c1262775ba60facae1b00324b668dfab0eecc6c3
 SHA1 (patch-tests_libpkix_libpkix.sh) = 4df0e877ab59637fcc4b54c29b14408c73ff5105
 SHA1 (patch-tests_multinit_multinit.sh) = 97f6895c693a2606f9d178c10886bd20cc9187ed
