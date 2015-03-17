@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/15 22:51:56 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/17 15:23:06 tnn2 Exp $
 
 DISTNAME=	syncthing-0.10.27
 CATEGORIES=	net
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://syncthing.net/
 COMMENT=	Keeps directories in sync across hosts
-LICENSE=	gnu-gpl-v3
+LICENSE=	mpl-2.0
 
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 
