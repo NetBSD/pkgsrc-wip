@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/03/18 12:07:53 adanbsd Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/18 12:09:58 adanbsd Exp $
+
+SUBDIR+= apinger
 
 DISTNAME=	apinger-0.6.1
 CATEGORIES=	net
