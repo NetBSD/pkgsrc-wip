@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/18 12:07:53 adanbsd Exp $
+
+SHA1 (apinger-0.6.1.tar.gz) = 2c76d8eecabb5fcef42cf89b010f8b78615b8132
+RMD160 (apinger-0.6.1.tar.gz) = 9b2b86b4d0e079d900bddfb966b38201894cf9d4
+Size (apinger-0.6.1.tar.gz) = 134127 bytes
