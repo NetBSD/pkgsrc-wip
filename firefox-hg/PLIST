@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2015/03/14 08:31:54 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.57 2015/03/18 15:24:43 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -206,8 +206,19 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/netmonito
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/netmonitor-view.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/netmonitor.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/netmonitor.xul
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/profiler.js
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/profiler.xul
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance.xul
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/performance-controller.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/performance-view.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-js-call-tree.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-js-flamegraph.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-memory-call-tree.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-memory-flamegraph.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-subview.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-waterfall.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/overview.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/recordings.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/toolbar.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/projecteditor-loader.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/projecteditor-loader.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/projecteditor-test.xul
@@ -227,10 +238,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/storage.x
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/styleeditor.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/styleeditor.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/theme-switching.js
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/timeline/timeline.js
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/timeline/timeline.xul
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/ui-profile.js
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/ui-recordings.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/webaudioeditor.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/webaudioeditor/controller.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/webaudioeditor/includes.js
@@ -829,6 +836,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/p
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/search.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/privatebrowsing-mask.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/reader-mode-16.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/icons.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/readinglist-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/sidebar.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/reload-stop-go.png
@@ -1524,8 +1532,12 @@ lib/firefox-${VERSION}/browser/modules/devtools/main.js
 lib/firefox-${VERSION}/browser/modules/devtools/markupview/html-editor.js
 lib/firefox-${VERSION}/browser/modules/devtools/markupview/markup-view.js
 lib/firefox-${VERSION}/browser/modules/devtools/netmonitor/panel.js
-lib/firefox-${VERSION}/browser/modules/devtools/profiler/panel.js
-lib/firefox-${VERSION}/browser/modules/devtools/profiler/shared.js
+lib/firefox-${VERSION}/browser/modules/devtools/performance/compatibility.js
+lib/firefox-${VERSION}/browser/modules/devtools/performance/front.js
+lib/firefox-${VERSION}/browser/modules/devtools/performance/io.js
+lib/firefox-${VERSION}/browser/modules/devtools/performance/panel.js
+lib/firefox-${VERSION}/browser/modules/devtools/performance/recording-model.js
+lib/firefox-${VERSION}/browser/modules/devtools/performance/recording-utils.js
 lib/firefox-${VERSION}/browser/modules/devtools/projecteditor/editors.js
 lib/firefox-${VERSION}/browser/modules/devtools/projecteditor/helpers/event.js
 lib/firefox-${VERSION}/browser/modules/devtools/projecteditor/helpers/file-picker.js
@@ -1609,7 +1621,6 @@ lib/firefox-${VERSION}/browser/modules/devtools/tilt/tilt-utils.js
 lib/firefox-${VERSION}/browser/modules/devtools/tilt/tilt-visualizer-style.js
 lib/firefox-${VERSION}/browser/modules/devtools/tilt/tilt-visualizer.js
 lib/firefox-${VERSION}/browser/modules/devtools/tilt/tilt.js
-lib/firefox-${VERSION}/browser/modules/devtools/timeline/panel.js
 lib/firefox-${VERSION}/browser/modules/devtools/webaudioeditor/panel.js
 lib/firefox-${VERSION}/browser/modules/devtools/webconsole/console-commands.js
 lib/firefox-${VERSION}/browser/modules/devtools/webconsole/console-output.js
@@ -2040,6 +2051,7 @@ lib/firefox-${VERSION}/chrome/toolkit/content/global/printdialog.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/printdialog.xul
 lib/firefox-${VERSION}/chrome/toolkit/content/global/printjoboptions.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/printjoboptions.xul
+lib/firefox-${VERSION}/chrome/toolkit/content/global/process-content.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/reader/aboutReader.html
 lib/firefox-${VERSION}/chrome/toolkit/content/global/reader/aboutReader.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/remote-test-ipc.js
@@ -2692,6 +2704,7 @@ lib/firefox-${VERSION}/modules/LoginHelper.jsm
 lib/firefox-${VERSION}/modules/LoginImport.jsm
 lib/firefox-${VERSION}/modules/LoginManagerContent.jsm
 lib/firefox-${VERSION}/modules/LoginManagerParent.jsm
+lib/firefox-${VERSION}/modules/LoginRecipes.jsm
 lib/firefox-${VERSION}/modules/LoginStore.jsm
 lib/firefox-${VERSION}/modules/ManifestProcessor.jsm
 lib/firefox-${VERSION}/modules/MessagePortBase.jsm
@@ -2743,6 +2756,7 @@ lib/firefox-${VERSION}/modules/RemoteAddonsChild.jsm
 lib/firefox-${VERSION}/modules/RemoteAddonsParent.jsm
 lib/firefox-${VERSION}/modules/RemoteController.jsm
 lib/firefox-${VERSION}/modules/RemoteFinder.jsm
+lib/firefox-${VERSION}/modules/RemotePageManager.jsm
 lib/firefox-${VERSION}/modules/RemoteSecurityUI.jsm
 lib/firefox-${VERSION}/modules/RemoteWebNavigation.jsm
 lib/firefox-${VERSION}/modules/RemoteWebProgress.jsm
@@ -2978,6 +2992,7 @@ lib/firefox-${VERSION}/modules/commonjs/sdk/private-browsing.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/private-browsing/utils.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/querystring.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/remote/child.js
+lib/firefox-${VERSION}/modules/commonjs/sdk/remote/core.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/remote/parent.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/remote/utils.js
 lib/firefox-${VERSION}/modules/commonjs/sdk/request.js
@@ -3424,6 +3439,18 @@ lib/firefox-${VERSION}/res/table-remove-column.gif
 lib/firefox-${VERSION}/res/table-remove-row-active.gif
 lib/firefox-${VERSION}/res/table-remove-row-hover.gif
 lib/firefox-${VERSION}/res/table-remove-row.gif
+lib/firefox-${VERSION}/res/text_caret.png
+lib/firefox-${VERSION}/res/text_caret@1.5x.png
+lib/firefox-${VERSION}/res/text_caret@2.25x.png
+lib/firefox-${VERSION}/res/text_caret@2x.png
+lib/firefox-${VERSION}/res/text_caret_tilt_left.png
+lib/firefox-${VERSION}/res/text_caret_tilt_left@1.5x.png
+lib/firefox-${VERSION}/res/text_caret_tilt_left@2.25x.png
+lib/firefox-${VERSION}/res/text_caret_tilt_left@2x.png
+lib/firefox-${VERSION}/res/text_caret_tilt_right.png
+lib/firefox-${VERSION}/res/text_caret_tilt_right@1.5x.png
+lib/firefox-${VERSION}/res/text_caret_tilt_right@2.25x.png
+lib/firefox-${VERSION}/res/text_caret_tilt_right@2x.png
 lib/firefox-${VERSION}/run-mozilla.sh
 lib/firefox-${VERSION}/webapprt-stub
 lib/firefox-${VERSION}/webapprt/chrome.manifest
