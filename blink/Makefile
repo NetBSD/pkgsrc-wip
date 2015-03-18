@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2014/12/31 13:58:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/18 01:52:34 othyro Exp $
 #
 
-DISTNAME=	blink-0.8.1
+DISTNAME=	blink-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://download.ag-projects.com/BlinkQt/
@@ -15,8 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-python-gnutls-[0-9]*:../../wip/py-python-gnutls
 DEPENDS+=	${PYPKGPREFIX}-eventlib-[0-9]*:../../net/py-eventlib
 DEPENDS+=	${PYPKGPREFIX}-python-application-[0-9]*:../../wip/py-python-application
 DEPENDS+=	${PYPKGPREFIX}-qt4-[0-9]*:../../x11/py-qt4
+DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 REPLACE_PYTHON+=	resources/chat/styles/Smooth\ Operator/test/view.py
 REPLACE_PYTHON+=	resources/chat/styles/Stockholm/test/view.py
@@ -29,11 +30,12 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/blink \
 		${DESTDIR}${PREFIX}/bin/blink${PYVERSSUFFIX}
 	${MV} ${DESTDIR}${PREFIX}/share/blink/chat/styles/Smooth\ Operator \
-		${DESTDIR}${PREFIX}/share/blink/chat/styles/Smooth_Operator; \
+		${DESTDIR}${PREFIX}/share/blink/chat/styles/Smooth_Operator
 	for i in ${DESTDIR}${PREFIX}/share/blink/chat/styles/Stockholm/*.style; do \
 		${MV} "$$i" `${ECHO} "$$i" | ${SED} -e 's/ //g'`; \
 	done
 
+.include "../../net/libvncserver/buildlink3.mk"
 .include "../../textproc/py-cjson/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../lang/python/application.mk"
