@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2015/03/18 15:24:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.58 2015/03/19 13:08:25 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -650,6 +650,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/edit
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/editor-debug-location@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/editor-error.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/eyedropper.css
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/fast-forward.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/fast-forward@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/filetype-dir-close.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/filetype-dir-open.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/filetype-globe.svg
@@ -698,6 +700,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/resp
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/responsiveui-screenshot@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/responsiveui-touch.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/responsiveui-touch@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/rewind.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/rewind@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/ruleview.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/scratchpad.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/shadereditor.css
