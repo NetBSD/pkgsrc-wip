@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 12:08:48 jihbed Exp $
-bin/olsccli
+@comment $NetBSD: PLIST,v 1.2 2015/03/19 22:44:57 jihbed Exp $
+bin/oslccli
+bin/oslcgui
 lib/java/oslc/LICENSE.txt
 lib/java/oslc/README.txt
 lib/java/oslc/activation.jar

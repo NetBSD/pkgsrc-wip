@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:48 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/19 22:44:57 jihbed Exp $
 #
 
 DISTNAME=	oslc3.0
@@ -12,13 +12,20 @@ HOMEPAGE=	https://wiki.objectweb.org/oslcv3/
 COMMENT=	Open Source License Checker
 LICENSE=	gnu-gpl-v2
 
+#DEPENDS+=	itext>=5.3.4:../../wip/itext
+
 WRKSRC=		${WRKDIR}
 
 USE_JAVA=	run
-USE_TOOLS+=	pax
+USE_TOOLS+=	bash pax perl
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=							\
+REPLACE_BASH+=	licenses/test.sh licenses/create_template.sh  \
+    licenses/buildall.sh     licenses/create_meta.sh
+
+REPLACE_PERL+=          licenses/add_compatible.pl
+
+INSTALLATION_DIRS=						\
 						bin					\
 						share/applications		\
 						lib/java/oslc			\
@@ -26,9 +33,9 @@ INSTALLATION_DIRS=							\
 						lib/java/oslc/licenses 	\
 						lib/java/oslc/resources
 do-build:
-	${ECHO} "Create jpicedit.desktop:"
+	${ECHO} "Create oslc.desktop:"
 	${ECHO} "[Desktop Entry]" > ${WRKSRC}/oslc.desktop
-	${ECHO} "GenericName=Interactive picture editor for LaTeX and PSTricks" >> ${WRKSRC}/oslc.desktop
+	${ECHO} "GenericName=Open Source License Checker" >> ${WRKSRC}/oslc.desktop
 	${ECHO} "Exec= ${PREFIX}/lib/java/oslc/oslcgui" >> ${WRKSRC}/oslc.desktop
 	${ECHO} "Terminal=false" >> ${WRKSRC}/oslc.desktop
 	${ECHO} "X-MultipleArgs=false" >> ${WRKSRC}/oslc.desktop
@@ -36,12 +43,13 @@ do-build:
 	${ECHO} "Categories=Development;" >> ${WRKSRC}/oslc.desktop
 	${ECHO} "Encoding=UTF-8" >> ${WRKSRC}/oslc.desktop
 	${ECHO} "StartupNotify=true" >> ${WRKSRC}/oslc.desktop
-	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -Xms512M -Xmx512M -jar oslc.jar \n" > ${WRKSRC}/oslcgui
+	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -Xms512M -Xmx512M -jar ${PREFIX}/lib/java/oslc/oslc.jar \n" > ${WRKSRC}/oslcgui
 	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -Xms512M -Xmx512M -jar ${PREFIX}/lib/java/oslc/oslc.jar --$@\n" > ${WRKSRC}/oslccli
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/oslcgui ${DESTDIR}${PREFIX}/lib/java/oslc
 	${INSTALL_SCRIPT} ${WRKSRC}/oslccli ${DESTDIR}${PREFIX}/lib/java/oslc
+	${LN} -sf ${DESTDIR}${PREFIX}/lib/java/oslc/oslcgui ${DESTDIR}${PREFIX}/bin/oslcgui
 	${LN} -sf ${DESTDIR}${PREFIX}/lib/java/oslc/oslccli ${DESTDIR}${PREFIX}/bin/oslccli
 	${INSTALL_DATA} ${WRKSRC}/oslc.desktop  ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${PREFIX}/lib/java/oslc
