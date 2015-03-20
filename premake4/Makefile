@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2014/01/11 13:05:44 nros Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/03/20 17:56:08 nros Exp $
 
 PREMAKE4_VERSION=	4.3
 DISTNAME=		premake-${PREMAKE4_VERSION}-src
 PKGNAME=		premake4-${PREMAKE4_VERSION}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=premake/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://industriousone.com/premake/
+HOMEPAGE=		http://premake.bitbucket.org/
 COMMENT=		Build script generator
 LICENSE=		modified-bsd
 
@@ -18,14 +18,12 @@ WRKSRC=			${WRKDIR}/premake-${PREMAKE4_VERSION}
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
-do-build:
-	cd ${WRKSRC}/build/gmake.unix/ && ${MAKE_PROGRAM}
+BUILD_DIRS+=		build/gmake.unix
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/release/premake4 ${DESTDIR}${PREFIX}/bin/
 
-.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
