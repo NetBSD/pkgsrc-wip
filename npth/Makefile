@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/03/20 15:09:57 adanbsd Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/20 15:12:34 adanbsd Exp $
+
+SUBDIR+=npth
 
 DISTNAME=	npth-1.1
 CATEGORIES=	devel
