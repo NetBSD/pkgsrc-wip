@@ -1,0 +1,3 @@
+Test on platforms that uses libdl.
+Add use_premake5.mk so that pkgsrc packages that use premake5 can 
+include this file in a similar way to USE_CMAKE=yes
