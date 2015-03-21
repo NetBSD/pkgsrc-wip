@@ -1,3 +1,5 @@
+/* $NetBSD: libfakesyscall.c,v 1.2 2015/03/21 23:59:25 tnn2 Exp $ */
+
 #define _GNU_SOURCE
 #include <sys/syscall.h>
 #include <dlfcn.h>

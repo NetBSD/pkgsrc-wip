@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/03/21 23:37:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/21 23:59:25 tnn2 Exp $
 
 DISTNAME=	debootstrap_1.0.67
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -62,7 +62,7 @@ post-extract:
 	mkdir ${WRKDIR}/${keyring_deb:S/.deb//}
 	cd ${WRKDIR}/${keyring_deb:S/.deb//} && ${XZCAT} ../data.tar.xz | ${TAR} xf -
 .endfor
-	cp ${FILESDIR}/* ${WRKDIR}
+	cp ${FILESDIR}/[a-z]* ${WRKDIR}
 	set -e; cd ${WRKDIR}; for uue in *.uue; do uudecode $$uue; done
 
 post-build:
