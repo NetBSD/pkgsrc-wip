@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/02/21 16:15:06 jonthn Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/21 14:49:27 jonthn Exp $
 #
 
-DISTNAME=	libuv-1.4.0
+DISTNAME=	libuv-1.4.2
 CATEGORIES=	devel
-MASTER_SITES=	-https://github.com/libuv/libuv/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libuv/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://github.com/libuv/libuv
 COMMENT=	Asynchronous event library, platform layer of node.js
