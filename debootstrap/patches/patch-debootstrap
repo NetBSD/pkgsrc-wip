@@ -1,0 +1,58 @@
+$NetBSD: patch-debootstrap,v 1.1 2015/03/21 23:37:22 tnn2 Exp $
+
+--- debootstrap.orig	2014-09-25 04:44:06.000000000 +0000
++++ debootstrap
+@@ -14,7 +14,7 @@ if [ -z "$DEBOOTSTRAP_DIR" ]; then
+ 	if [ -x /debootstrap/debootstrap ]; then
+ 		DEBOOTSTRAP_DIR=/debootstrap
+ 	else
+-		DEBOOTSTRAP_DIR=/usr/share/debootstrap
++		DEBOOTSTRAP_DIR=@PREFIX@/share/debootstrap
+ 	fi
+ fi
+ 
+@@ -29,7 +29,7 @@ KEYRING=""
+ DISABLE_KEYRING=""
+ VARIANT=""
+ ARCH=""
+-HOST_ARCH=""
++HOST_ARCH="$(uname -m)"
+ HOST_OS=""
+ KEEP_DEBOOTSTRAP_DIR=""
+ USE_DEBIANINSTALLER_INTERACTION=""
+@@ -407,7 +407,7 @@ elif in_path udpkg && \
+ elif [ -e $DEBOOTSTRAP_DIR/arch ]; then
+ 	HOST_ARCH=`cat $DEBOOTSTRAP_DIR/arch`
+ fi
+-HOST_OS="$HOST_ARCH"
++#HOST_OS="$HOST_ARCH"
+ # basic host OS guessing for non-Debian systems
+ if [ -z "$HOST_OS" ]; then
+ 	case `uname` in
+@@ -423,6 +423,9 @@ if [ -z "$HOST_OS" ]; then
+ 		FreeBSD*)
+ 			HOST_OS=freebsd
+ 		;;
++		NetBSD)
++			HOST_OS=netbsd
++		;;
+ 	esac
+ fi
+ 
+@@ -454,7 +457,7 @@ elif doing_variant scratchbox; then
+ 	[ "x$SB2_TARGET" != "x" ] || error 1 SBOXTARGETREQ "No scratchbox target configured for $TARGET"
+ 	CHROOT_CMD="sb2 -eR -t $SB2_TARGET"
+ else
+-	CHROOT_CMD="chroot $TARGET"
++	CHROOT_CMD="chroot $TARGET /usr/bin/env LD_PRELOAD=/debootstrap/libfakesyscall-${ARCH}.so"
+ fi
+ 
+ if [ -z "$SHA_SIZE" ]; then
+@@ -485,6 +488,7 @@ fi
+ 
+ if [ "$TARGET" != "" ]; then
+ 	mkdir -p "$TARGET/debootstrap"
++	cp @PREFIX@/share/debootstrap/libfakesyscall* $TARGET/debootstrap
+ fi
+ 
+ ###########################################################################
