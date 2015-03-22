@@ -1,4 +1,4 @@
-$NetBSD: patch-functions,v 1.1 2015/03/21 23:37:22 tnn2 Exp $
+$NetBSD: patch-functions,v 1.2 2015/03/22 01:52:06 tnn2 Exp $
 
 --- functions.orig	2015-01-06 04:00:50.000000000 +0000
 +++ functions
@@ -14,3 +14,12 @@ $NetBSD: patch-functions,v 1.1 2015/03/21 23:37:22 tnn2 Exp $
  	    hurd*)
  		;;
  	    *)
+@@ -1052,7 +1057,7 @@ setup_devices () {
+ 		setup_devices_hurd ;;
+ 	    *)
+ 		if [ -e "$DEVICES_TARGZ" ]; then
+-			zcat "$DEVICES_TARGZ" | (cd "$TARGET"; tar -xf -)
++			zcat "$DEVICES_TARGZ" | (cd "$TARGET"; tar -xpf -)
+ 		else
+ 			if [ -e /dev/.devfsd ] ; then
+ 				in_target mount -t devfs devfs /dev

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/03/21 23:37:22 tnn2 Exp $
+$NetBSD: distinfo,v 1.2 2015/03/22 01:52:06 tnn2 Exp $
 
 SHA1 (debian-archive-keyring_2014.3_all.deb) = 7f16adc03d5e2f21afba8ae843d1ed5d7ef9c14a
 RMD160 (debian-archive-keyring_2014.3_all.deb) = 13fec7c8c07af16742af3ddae29422726d341cc1
@@ -11,4 +11,4 @@ RMD160 (ubuntu-archive-keyring_2012.05.19-2_all.deb) = f9d8e97c3ded064eb26bfaced
 Size (ubuntu-archive-keyring_2012.05.19-2_all.deb) = 18178 bytes
 SHA1 (patch-Makefile) = 021a7732eb6f6b8e99f0011402d73d6c07d295ad
 SHA1 (patch-debootstrap) = a923299ffa8f5e3c85bf6262c7113300e70ea05d
-SHA1 (patch-functions) = 22e2ef8b01df7f764d5c7c2417663ba35d41215f
+SHA1 (patch-functions) = b83df037dcbb1b967dac5ae07f72fc0b1f42987d
