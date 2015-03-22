@@ -1,10 +1,10 @@
-$NetBSD: patch-src_daemon_main.c,v 1.3 2014/11/24 22:40:15 makoto Exp $
+$NetBSD: patch-src_daemon_main.c,v 1.4 2015/03/22 09:31:40 makoto Exp $
 
 Only display Linux-specific warning on Linux.
 
---- src/daemon/main.c~	2014-11-25 01:06:34.000000000 +0900
-+++ src/daemon/main.c	2014-11-25 01:07:27.000000000 +0900
-@@ -999,10 +999,12 @@ int main(int argc, char *argv[]) {
+--- src/daemon/main.c.orig	2015-02-12 14:10:35.000000000 +0000
++++ src/daemon/main.c
+@@ -997,10 +997,12 @@ int main(int argc, char *argv[]) {
  
      pa_disable_sigpipe();
  

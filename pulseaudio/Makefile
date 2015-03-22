@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2014/11/24 22:40:15 makoto Exp $
+# $NetBSD: Makefile,v 1.16 2015/03/22 09:31:40 makoto Exp $
 
-DISTNAME=	pulseaudio-5.99.1
+DISTNAME=	pulseaudio-6.0
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -10,12 +10,14 @@ HOMEPAGE=	http://www.freedesktop.org/wiki/Software/PulseAudio
 COMMENT=	Sound server for POSIX and Win32 systems
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
+LIBTOOL_REQD=	2.4
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 
-REPLACE_BASH=	shell-completion/pulseaudio-bash-completion.sh
+REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
 
 .include "../../mk/bsd.prefs.mk"
 # Some tests are incompatible for NetBSD at least
@@ -28,6 +30,7 @@ CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
 
 CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
+USE_PKGLOCALEDIR=	yes
 
 # Wrong sys/capability.h assumptions, incompatible implementation:
 .if ${OPSYS} == "FreeBSD"
@@ -55,11 +58,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 PLIST.evdev=		yes
 .endif
 
-# Find the appropriate SDK
-.if !empty(MACHINE_PLATFORM:MDarwin-10.*)
-CONFIGURE_ARGS+=	--with-mac-sysroot=/Developer/SDKs/MacOSX10.6.sdk
-.endif
-
 .include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
@@ -68,7 +66,7 @@ PKGCONFIG_OVERRIDE+=	libpulse.pc.in
 
 LIBS.NetBSD+=		${LIBOSSAUDIO}
 
-INSTALLATION_DIRS=	share/examples/pulseaudio
+INSTALLATION_DIRS=	share/examples/pulse
 
 PULSE_USER?=		pulse
 PULSE_GROUP?=		pulse
@@ -86,17 +84,17 @@ CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
 
-PLIST_VARS+=		evdev oss sun
-# strip third part of separated by '.'
-PA_VERSION=	${PKGVERSION:C/([0-9]+\.[0-9]+)\.[0-9]+/\1/}
-PLIST_SUBST+=	PA_VERSION=${PA_VERSION}
+PLIST_VARS+=		bonjour coreaudio evdev oss sun
 
 .if ${OPSYS} == "SunOS"
 PLIST.sun=		yes
 .  if ${OS_VERSION} == "5.11"
 PLIST.oss=		yes
 .  endif
-.elif ${OPSYS} != "Darwin"
+.elif ${OPSYS} == "Darwin"
+PLIST.bonjour=	yes
+PLIST.coreaudio=	yes
+.else
 PLIST.oss=		yes
 .endif
 
@@ -109,26 +107,18 @@ pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
-post-install:
-.for f in client.conf daemon.conf default.pa system.pa
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/${f} ${DESTDIR}${EGDIR}
-.endfor
-
 .if ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
 .endif
-
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
-
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

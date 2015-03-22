@@ -1,4 +1,4 @@
-$NetBSD: patch-src_daemon_caps.c,v 1.2 2014/05/06 11:47:25 thomasklausner Exp $
+$NetBSD: patch-src_daemon_caps.c,v 1.3 2015/03/22 09:31:40 makoto Exp $
 
 Disable warning about capabilities that only makes sense on Linux.
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tests_rtpoll-test.c,v 1.2 2014/05/06 11:47:25 thomasklausner Exp $
+$NetBSD: patch-src_tests_rtpoll-test.c,v 1.3 2015/03/22 09:31:40 makoto Exp $
 
 Build fix for systems without real-time signals.
 

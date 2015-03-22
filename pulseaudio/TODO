@@ -1,5 +1,17 @@
-    CPPFLAGS:                      -I/usr/pkg/include -I/usr/include -I/usr/pkg/include/freetype2 -I/usr/pkg/include/libdrm -DFASTPATH -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
-    LIBS:                          -lgdbm -lexecinfo -lpthread -lrt -lm -lossaudio
+ ---{ pulseaudio 6.0 }---
+
+    prefix:                        /usr/pkg
+    sysconfdir:                    /usr/pkg/etc
+    localstatedir:                 /var
+    modlibexecdir:                 ${exec_prefix}/lib/pulse-6.0/modules
+    System Runtime Path:           /var/run/pulse
+    System State Path:             /var/db/pulse
+    System Config Path:            /var/db/pulse
+    Zsh completions directory:     ${datarootdir}/zsh/site-functions
+    Compiler:                      gcc -std=gnu99
+    CFLAGS:                        -O2 -I/usr/pkg/include -I/usr/include -I/usr/X11R7/include -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include/libdrm -Wall -W -Wextra -pipe -Wno-long-long -Wno-overlength-strings -Wunsafe-loop-optimizations -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wcast-align -Wstrict-aliasing -Wwrite-strings -Wno-unused-parameter -ffast-math -fno-common -fdiagnostics-show-option
+    CPPFLAGS:                      -I/usr/pkg/include -I/usr/include -I/usr/X11R7/include -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include/libdrm -DFASTPATH -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+    LIBS:                          -lgdbm -lpthread -lm -lossaudio
 
     Enable X11:                    yes
     Enable OSS Output:             yes

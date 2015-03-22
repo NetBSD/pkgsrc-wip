@@ -1,4 +1,4 @@
-$NetBSD: patch-src_modules_oss_module-oss.c,v 1.2 2014/05/06 11:47:25 thomasklausner Exp $
+$NetBSD: patch-src_modules_oss_module-oss.c,v 1.3 2015/03/22 09:31:40 makoto Exp $
 
 Set proper sound device default on NetBSD.
 
@@ -9,7 +9,7 @@ Set proper sound device default on NetBSD.
  #endif
  
 +#if defined(__NetBSD__)
-+#define DEFAULT_DEVICE "/dev/sound"
++#define DEFAULT_DEVICE "/dev/audio"
 +#else /* Linux */
  #define DEFAULT_DEVICE "/dev/dsp"
 +#endif
