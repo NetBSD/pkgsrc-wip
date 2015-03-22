@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/03/22 09:31:40 makoto Exp $
+# $NetBSD: Makefile,v 1.17 2015/03/22 14:16:50 makoto Exp $
 
 DISTNAME=	pulseaudio-6.0
 CATEGORIES=	audio
@@ -18,6 +18,10 @@ USE_TOOLS+=	aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-c
 USE_LANGUAGES=	c c++
 
 REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
+REPLACE_PYTHON=	src/utils/qpaeq
+
+# Async DNS
+DEPENDS+=	libasyncns-[0-9]*:../../net/libasyncns
 
 .include "../../mk/bsd.prefs.mk"
 # Some tests are incompatible for NetBSD at least
@@ -42,7 +46,8 @@ MAKE_ENV+=		EGDIR=${EGDIR}
 
 MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 
-CONFIGURE_ARGS+=	--enable-samplerate
+# /usr/lib/libwrap.so: undefined reference to `deny_severity'
+# /usr/lib/libwrap.so: undefined reference to `allow_severity'
 CONFIGURE_ARGS+=	--disable-tcpwrap
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
@@ -110,12 +115,13 @@ pre-configure:
 .if ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
 .endif
-.include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/orc/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

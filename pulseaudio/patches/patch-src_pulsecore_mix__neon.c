@@ -1,4 +1,8 @@
-$NetBSD: patch-src_pulsecore_mix__neon.c,v 1.1 2015/03/22 09:31:40 makoto Exp $
+$NetBSD: patch-src_pulsecore_mix__neon.c,v 1.2 2015/03/22 14:16:50 makoto Exp $
+
+Use NEON intrinsics in Clang to avoid the unsupported assembler
+modifiers. It is beyond common sense why pulseaudio devs considered the
+mechanical conversion to inline asm an improvement...
 
 --- src/pulsecore/mix_neon.c.orig	2015-02-25 15:03:12.000000000 +0000
 +++ src/pulsecore/mix_neon.c

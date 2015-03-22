@@ -1,0 +1,15 @@
+(Makefile)
+ - Drop - libsamplerate: said as (DEPRECATED)
+ - Add orc buildlink3.mk
+ - Add DEPENDS+= to libasyncns
+ - Add REPLACE_PYTHON= src/utils/qpaeq
+ - Add include "lang/python/application.mk"
+
+(options.mk, new options)
+ - Enable GConf
+ - Enable jack
+ - Enable fftw
+
+(PLIST.fftw, PLIST.jack, PLIST.gconf)
+ - New files
+ 

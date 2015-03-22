@@ -23,9 +23,9 @@
     Enable WaveOut:                no
     Enable GLib 2.0:               yes
     Enable Gtk+ 3.0:               no
-    Enable GConf:                  no
+    Enable GConf:                  yes
     Enable Avahi:                  yes
-    Enable Jack:                   no
+    Enable Jack:                   yes
     Enable Async DNS:              no
     Enable LIRC:                   no
     Enable Xen PV driver:          no
@@ -41,11 +41,11 @@
       Login (Session Tracking):    no
       Journal (Logging):           no
     Enable TCP Wrappers:           no
-    Enable libsamplerate:          yes (DEPRECATED)
+    Enable libsamplerate:          no
     Enable IPv6:                   yes
     Enable OpenSSL (for Airtunes): yes
-    Enable fftw:                   no
-    Enable orc:                    no
+    Enable fftw:                   yes
+    Enable orc:                    yes
     Enable Adrian echo canceller:  yes
     Enable speex (resampler, AEC): yes
     Enable WebRTC echo canceller:  no
