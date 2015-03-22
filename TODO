@@ -69,7 +69,7 @@ Suggested package updates
 	o libgme-0.6.0
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
-	o libressl-2.1.2
+	o libressl-2.1.5
 	o libxshmfence-1.2
 	o lives-2.2.4
 	o llvm-3.6
@@ -100,6 +100,7 @@ Suggested package updates
 	o py-PyPE-2.9
 	o py-bitstring-3.1.3
 	o py-rpyc-3.2.1
+	o py-xpra-0.14.21
 	o py-zeitgeist-0.9
 	o rdup-1.1.13
 	o recoll-1.19.14
