@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9 2015/02/23 11:31:08 venture37 Exp $
+$NetBSD: TODO,v 1.10 2015/03/23 06:09:22 venture37 Exp $
 
 * debug
 * test on Linux/FreeBSD/OpenBSD
@@ -8,3 +8,4 @@ When updating this package, please have a look at:
 - http://secunia.com/advisories/46636/
 - http://secunia.com/advisories/47694/
 - http://www.secunia.com/advisories/62964/
+- http://secunia.com/advisories/63496/
