@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6114 2015/03/21 23:56:10 tnn2 Exp $
+# $Id: Makefile,v 1.6115 2015/03/23 20:47:23 pebog Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -422,6 +422,7 @@ SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbmail
 SUBDIR+=	dbus-explorer
+SUBDIR+=	dcc
 SUBDIR+=	ddate
 SUBDIR+=	deadbeef
 SUBDIR+=	debian_base
