@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/03/23 11:26:03 adanbsd Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/23 11:27:25 adanbsd Exp $
+
+SUBDIR+=gnupg21
 
 DISTNAME=	gnupg-2.1.2
 CATEGORIES=	security
