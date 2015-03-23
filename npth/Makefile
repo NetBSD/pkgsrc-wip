@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/20 15:12:34 adanbsd Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/23 16:34:54 adanbsd Exp $
 
 SUBDIR+=npth
 
@@ -13,6 +13,9 @@ COMMENT=	New Portable Threads Library (nPth)
 LICENSE=	gnu-gpl-v3
 
 USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
+#GNU_CONFIGURE=	yes
+#USE_TOOLS+=	yes
+HAS_CONFIGURE=	yes
+#CONFIGURE_ARGS+=	--includedir=${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"
