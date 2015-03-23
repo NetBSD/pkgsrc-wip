@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/18 09:49:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/23 09:36:30 thomasklausner Exp $
 
 DISTNAME=	Attic-0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
@@ -11,9 +11,6 @@ COMMENT=	Deduplicating backup program
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
-
-# missing xattr support; packages, but does not run
-NOT_FOR_PLATFORM=	NetBSD-*-*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
