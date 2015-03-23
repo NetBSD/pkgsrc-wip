@@ -1,3 +1,0 @@
-Package finished, but no NetBSD support, so I can't test it.
-Import it if it works for you, or if you can add/ignore xattr
-support for NetBSD. -- wiz 20140810
