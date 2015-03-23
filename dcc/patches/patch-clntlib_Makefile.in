@@ -1,0 +1,16 @@
+$NetBSD: patch-clntlib_Makefile.in,v 1.1 2015/03/23 20:58:03 pebog Exp $
+
+Set LIBISPRIVATE=yes or NetBSD's bsd.lib.mk will build more than just
+the object archive and also try to install the library during the
+install stage.
+
+--- clntlib/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ clntlib/Makefile.in
+@@ -38,6 +38,7 @@
+ 
+ DEPTH	=..
+ LIB	=clnt
++LIBISPRIVATE=yes
+ SRCS	=aop.c ask.c cdhome.c ck.c ck2str.c ckbody.c ckfuz1.c		\
+ 	ckfuz2.c ckmime.c ckparse.c cktbls.c ckwhite.c			\
+ 	clnt_init.c clnt_send.c ckmime.c ckparse.c ckwhite.c		\

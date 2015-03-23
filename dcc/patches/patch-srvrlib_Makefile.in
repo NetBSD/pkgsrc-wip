@@ -1,0 +1,16 @@
+$NetBSD: patch-srvrlib_Makefile.in,v 1.1 2015/03/23 20:58:03 pebog Exp $
+
+Set LIBISPRIVATE=yes or NetBSD's bsd.lib.mk will build more than just
+the object archive and also try to install the library during the
+install stage.
+
+--- srvrlib/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ srvrlib/Makefile.in
+@@ -39,6 +39,7 @@
+ 
+ DEPTH	=..
+ LIB	=srvr
++LIBISPRIVATE=yes
+ SRCS	=db.c flod.c istmpfs.c read_rcd.c ts2str.c
+ 
+ @MAKE_DOT@ifdef DCCD_MAX_FLOODS

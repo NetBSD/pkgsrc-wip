@@ -1,0 +1,16 @@
+$NetBSD: patch-thrlib_Makefile.in,v 1.1 2015/03/23 20:58:03 pebog Exp $
+
+Set LIBISPRIVATE=yes or NetBSD's bsd.lib.mk will build more than just
+the object archive and also try to install the library during the
+install stage.
+
+--- thrlib/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ thrlib/Makefile.in
+@@ -39,6 +39,7 @@
+ 
+ DEPTH	=..
+ LIB	=thr
++LIBISPRIVATE=yes
+ SRCS	=clnt_threaded.c cmn.c reply.c totals.c
+ 
+ CFLAGS	+=@PTHREAD_CFLAGS@

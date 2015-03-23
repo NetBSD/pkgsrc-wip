@@ -1,0 +1,36 @@
+$NetBSD: patch-configure,v 1.1 2015/03/23 20:58:03 pebog Exp $
+
+NetBSD uses mandoc since netbsd-6.
+
+Also, remove mancat since it unnecessarily expands @mandir@ into
+@mandir@/man and we already provide a complete --mandir.
+
+--- configure.orig	2014-08-06 14:43:42.000000000 +0000
++++ configure
+@@ -1945,10 +1945,9 @@ case "$TARGET_SYS" in
+ 	MANXFILE="$MAN8AS8"
+ 	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+ 	;;
+-    FreeBSD)
++    FreeBSD|NetBSD)
+ 	# default to /usr/local/man/man8 and use nroff files, possibly
+ 	#   compressed via /usr/share/mk
+-	mancat=man
+ 	MANX='$(MAN8)'
+ 	USE_DCCMANINSTALL='# USE_DCCMANINSTALL=no'
+ 	;;
+@@ -1965,14 +1964,6 @@ case "$TARGET_SYS" in
+ 	MANX='$(MAN8)'
+ 	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes'
+ 	;;
+-    NetBSD)
+-	# use text output to avoid running groff on every `man` command
+-	mancat=cat
+-	MANX='$(MAN0)'
+-	# force NetBSD to install the man pages
+-	USE_DCCMANINSTALL='USE_DCCMANINSTALL=yes\
+-install:maninstall'
+-	;;
+     BSD/OS)
+ 	# default to /usr/local/man/cat8 and use cleartext files, possibly
+ 	#   compressed via /usr/share/mk, and named .0

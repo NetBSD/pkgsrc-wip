@@ -1,0 +1,16 @@
+$NetBSD: patch-dcclib_Makefile.in,v 1.1 2015/03/23 20:58:03 pebog Exp $
+
+Set LIBISPRIVATE=yes or NetBSD's bsd.lib.mk will build more than just
+the object archive and also try to install the library during the
+install stage.
+
+--- dcclib/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ dcclib/Makefile.in
+@@ -38,6 +38,7 @@
+ 
+ DEPTH	=..
+ LIB	=dcc
++LIBISPRIVATE=yes
+ SRCS	=dccif.c fnm.c get_port.c hstrerror.c inet_ntop.c ipv6_conv.c	\
+ 	lock_stubs.c logbad.c mk_su.c msg1.c parse_word.c		\
+ 	parse_srvr_nm.c strlcat.c strlcpy.c su2str.c vsyslog.c

@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/03/23 20:58:02 pebog Exp $
+
+Both bsd.man.mk include files on NetBSD and FreeBSD expect the list of
+man pages to be in MAN, but only the latter also seems to accept pages
+in MAN${sect}.
+
+--- Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ Makefile.in
+@@ -50,6 +50,7 @@ MAN_HTML=$(MAN8:.8=.html)
+ TEXT	=$(MAN8) $(MAN0) $(MAN_HTML)
+ 
+ MANX	=@MANX@
++MAN	=@MANX@
+ 
+ @MAKE_INC@
+ @MAKE_SUBDIR@

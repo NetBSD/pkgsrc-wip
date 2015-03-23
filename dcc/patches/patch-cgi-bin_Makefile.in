@@ -1,0 +1,18 @@
+$NetBSD: patch-cgi-bin_Makefile.in,v 1.1 2015/03/23 20:58:03 pebog Exp $
+
+Add DESTDIR support.
+
+The path in CGI_BIN is only used during installation and should
+therefore not end up in any of the installed files.
+
+--- cgi-bin/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ cgi-bin/Makefile.in
+@@ -47,7 +47,7 @@ CSCRIPTS=chgpasswd edit-whiteclnt list-l
+ OFILES	=README common.pm common
+ LOCFILES=header footer
+ 
+-CGI_BIN=@installroot@@cgibin@
++CGI_BIN=$(DESTDIR)@installroot@@cgibin@
+ 
+ DCC_BINDIR=@installroot@@libexecdir@
+ @MAKE_PROG@

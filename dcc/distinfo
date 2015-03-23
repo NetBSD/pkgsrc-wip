@@ -1,5 +1,19 @@
-$NetBSD: distinfo,v 1.15 2015/03/23 20:43:17 pebog Exp $
+$NetBSD: distinfo,v 1.16 2015/03/23 20:58:02 pebog Exp $
 
-SHA1 (dcc-1.3.123.tar.Z) = 3127cdde1ce374fbc5ef08fa5103cffcf93b99ee
-RMD160 (dcc-1.3.123.tar.Z) = c7b0cedba3feffc4ad7c94249a56303c7f09bf2b
-Size (dcc-1.3.123.tar.Z) = 1663943 bytes
+SHA1 (dcc-1.3.155.tar.Z) = b5d766671c0f4558f859296eddae24cb5af7b869
+RMD160 (dcc-1.3.155.tar.Z) = 3fba4b993c4df87f440ae98993baaac126b18472
+Size (dcc-1.3.155.tar.Z) = 1711020 bytes
+SHA1 (patch-Makefile.in) = ba38154b21f7726e706b2a9fabe1ae0f47d273fc
+SHA1 (patch-Makefile.inc.in) = 562dc17712f5e5d99f70283e4f6271fe681fccc7
+SHA1 (patch-Makefile.inc2.in) = 16e3fdd5933048ea31f90a6e1b2dad2949deb2a3
+SHA1 (patch-cdcc_Makefile.in) = 24f1d4d8e224658b8848a6cf6206aa05b27f4a5b
+SHA1 (patch-cgi-bin_Makefile.in) = b422ab1e03b18e772798827acd4a1506c606d655
+SHA1 (patch-clntlib_Makefile.in) = d45555c847ea57bb9d07f29b4553e5ed8cb450d1
+SHA1 (patch-configure) = b52d5150e57a7bb1ee5427144ee732612d9652d5
+SHA1 (patch-dcclib_Makefile.in) = d07ffd907ecdbc35384d3e19fb08001974c5bc65
+SHA1 (patch-dccproc_Makefile.in) = 58b777e1d0b33f808a023e1758fae096bc94f2a1
+SHA1 (patch-dccsight_Makefile.in) = 646a309ef634bbdac73f2726b9de0b2e4f9cf106
+SHA1 (patch-homedir_Makefile.in) = 0cad682a0e34fc91ceae356bc742054465724ce3
+SHA1 (patch-misc_Makefile.in) = 70ed6eb6ce19c8c97804eb3921df8161d4bcbcce
+SHA1 (patch-srvrlib_Makefile.in) = cecd2cdb04d8585c3a62ff7d832b1ad326bf43eb
+SHA1 (patch-thrlib_Makefile.in) = a663fb4a1013565daefd52e20c360cd24569c505
