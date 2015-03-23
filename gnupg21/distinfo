@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/03/23 11:26:03 adanbsd Exp $
+
+SHA1 (gnupg-2.1.2.tar.bz2) = 7e972cb9af47d9b8ce164dcf37fc4f32634d6cd6
+RMD160 (gnupg-2.1.2.tar.bz2) = 015c1f427702310b6cc201483a5f94159d9e9981
+Size (gnupg-2.1.2.tar.bz2) = 4832996 bytes
