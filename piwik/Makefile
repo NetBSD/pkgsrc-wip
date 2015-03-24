@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/03/24 02:12:29 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/24 02:25:32 makoto Exp $
 
-DISTNAME=		2.11.2
+DISTNAME=		2.12.0
 PKGNAME=		piwik-${DISTNAME}
 CATEGORIES=		www
-MASTER_SITES=		https://github.com/piwik/piwik/archive/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=piwik/piwik/archive/}
 DIST_SUBDIR=		piwik
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -49,7 +49,7 @@ PHP_VERSIONS_ACCEPTED= 54 55 56
 DEPENDS+=	php5[0-9]-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	ap22-php5[0-9]*-[0-9]*:../../www/ap-php
 
-REPLACE_BASH=	tests/lib/mocha-1.17.1/test/acceptance/glob/glob.sh
+REPLACE_BASH=	tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/glob/glob.sh
 REPLACE_BASH+=	tests/travis/generate_docs.sh
 
 REPLACE_BASH+=	libs/jqplot/build_minified_script.sh
@@ -67,7 +67,7 @@ REPLACE_BASH+=	tests/javascript/jash
 
 REPLACE_BASH+=	tests/lib/chai-1.9.0/support/sauce/*.sh
 REPLACE_BASH+=	tests/lib/jsdoc-toolkit/jsrun.sh
-REPLACE_BASH+=	tests/lib/mocha-1.17.1/test/acceptance/glob/glob.sh
+REPLACE_BASH+=	tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/glob/glob.sh
 
 REPLACE_BASH+=	tests/travis/*.sh
 
@@ -75,8 +75,8 @@ REPLACE_BASH+=	tests/travis/*.sh
 
 REPLACE_PYTHON+=misc/log-analytics/import_logs.py
 
-MOCHA_VERSION=		1.17.1
-PLIST_SUBST+=		MOCHA_VERSION=${MOCHA_VERSION}		
+MOCHA_VERSION=	2.1.0
+PLIST_SUBST+=	MOCHA_VERSION=${MOCHA_VERSION}
 
 do-install:
 	cd ${WRKSRC} && pax -rw -pmp . ${DESTDIR}${PKHOME}
@@ -90,5 +90,5 @@ do-install:
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
 
-## wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-1.17.1/bin/_mocha
-## wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-1.17.1/bin/mocha
+## wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-${MOCHA_VERSION}/bin/_mocha
+## wip/piwik/work/.destdir/usr/pkg/share/piwik/tests/lib/mocha-${MOCHA_VERSION}/bin/mocha
