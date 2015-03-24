@@ -1,0 +1,26 @@
+Does not compile in pkgsrc due to:
+
+-- Checking compiler flag: -std=c++11
+CMake Error at cmake/CompileCheck.cmake:72 (try_compile):
+  Attempt at a recursive or nested TRY_COMPILE in directory
+
+    /scratch/nih/innoextract/work/innoextract-1.4
+
+Call Stack (most recent call first):
+  cmake/CXX11Check.cmake:41 (check_compile)
+  CMakeLists.txt:150 (check_cxx11)
+
+
+CMake Error at cmake/CompileCheck.cmake:72 (try_compile):
+  Attempt at a recursive or nested TRY_COMPILE in directory
+
+    /scratch/nih/innoextract/work/innoextract-1.4
+
+Call Stack (most recent call first):
+  cmake/CXX11Check.cmake:41 (check_compile)
+  CMakeLists.txt:154 (check_cxx11)
+  
+  
+Works fine when built outside.
+
+wiz 20150324
