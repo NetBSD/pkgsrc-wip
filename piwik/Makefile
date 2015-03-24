@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/03/24 03:11:29 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2015/03/24 04:01:00 makoto Exp $
 
 DISTNAME=		2.12.0
 PKGNAME=		piwik-${DISTNAME}
@@ -90,6 +90,8 @@ do-install:
 		-type d -exec ${CHMOD} ${PKGDIRMODE} "{}" \;
 	${FIND} ${DESTDIR}${PKHOME} \
 		-type f -exec ${CHMOD} ${SHAREMODE} "{}" \;
+
+	${CHMOD} +x ${DESTDIR}${PKHOME}/misc/composer/build-xhprof.sh
 
 .include "../../lang/python/application.mk"
 # to give PHP_VERSION_DEFAULT

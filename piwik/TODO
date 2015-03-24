@@ -30,11 +30,13 @@
 
 - 2. /usr/pkg/etc/php.ini setup
 
-@@ -901,6 +884,18 @@
+@@ -901,6 +884,20 @@
  ;extension=php_pspell.dll
  ;extension=php_shmop.dll
  
 +extension=mysql.so
++extension=curl.so
++extension=dom.so
 +extension=json.so
 +extension=dom.so
 +extension=curl.so
@@ -69,7 +71,7 @@
  # symbolic links and aliases may be used to point to other locations.
  #
  DocumentRoot "/usr/pkg/share/httpd/htdocs"
-+DocumentRoot "/usr/pkg/share/piwik"
++DocumentRoot "/var/share/httpd/piwik"
  
  #
  # Each directory to which Apache has access can be configured with respect
@@ -91,36 +93,18 @@
 - 4. mysql database setup
      (database name, userid, password)
 
+
 - 5. (composer)
     ------------------------
-    cd /usr/pkg/share/piwik
-    sudo -s
-    mkdir -p       /var/httpd/share/piwik;
-    pax -rw -pmp . /var/httpd/share/piwik;
-    cd /var/httpd/share/piwik;
+    cd /usr/pkg/share/piwik ;
+    sudo -s ;
+    mkdir -p       /var/share/httpd/piwik;
+    pax -rw -pmp . /var/share/httpd/piwik;
+    cd             /var/share/httpd/piwik;
+
     curl -sS https://getcomposer.org/installer | php ;
     php composer.phar install ;
     ------------------------
-
-(To be fixed later)
-    - www/php-curl
--------------------
-modena@root 12:24:33/150324(..share/piwik)% php composer.phar install ;
-Loading composer repositories with package information
-Installing dependencies (including require-dev) from lock file
-Your requirements could not be resolved to an installable set of packages.
-
-  Problem 1
-    - Installation request for guzzle/guzzle v3.9.2 -> satisfiable by guzzle/guzzle[v3.9.2].
-    - guzzle/guzzle v3.9.2 requires ext-curl * -> the requested PHP extension curl is missing from your system.
-  Problem 2
-    - Installation request for phpunit/phpunit 4.4.5 -> satisfiable by phpunit/phpunit[4.4.5].
-    - phpunit/phpunit 4.4.5 requires ext-dom * -> the requested PHP extension dom is missing from your system.
-  Problem 3
-    - guzzle/guzzle v3.9.2 requires ext-curl * -> the requested PHP extension curl is missing from your system.
-    - aws/aws-sdk-php 2.7.1 requires guzzle/guzzle ~3.7 -> satisfiable by guzzle/guzzle[v3.9.2].
-    - Installation request for aws/aws-sdk-php 2.7.1 -> satisfiable by aws/aws-sdk-php[2.7.1].
--------------------
 
     (real example)
     --------------------
@@ -132,72 +116,26 @@ Your requirements could not be resolved to an installable set of packages.
     
     Composer successfully installed to: /usr/pkg/share/piwik/composer.phar
     Use it: php composer.phar
-    t-105#
-    --------------------
 
-    ------------------------------
-    t-105#  php composer.phar install
+
+    ---------------
+    modena@root 12:55:48/150324(..httpd/piwik)%     php composer.phar install ;
     Loading composer repositories with package information
     Installing dependencies (including require-dev) from lock file
-      - Installing doctrine/lexer (v1.0)
-        Downloading: connection...    Downloading: 0%
-        Downloading: 80%
-        Downloading: 100%
-        ....
-    sebastian/global-state suggests installing ext-uopz (*)
-    phpunit/phpunit-mock-objects suggests installing ext-soap (*)
-    phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
-    phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+       - Installing doctrine/lexer (v1.0.1)
+         Loading from cache
+        ..
+
     symfony/var-dumper suggests installing ext-symfony_debug ()
     Generating autoload files
-    sh: misc/composer/build-xhprof.sh: permission denied
-    t-105#
-    ------------------------------
+    Building xhprof...
+    Fatal error: could not build extension (make failed)! View tmp/xhprof-logs/make.log for more info.
 
-t-105# chmod +x  misc/composer/build-xhprof.sh
+/var/share/httpd/piwik/vendor/facebook/xhprof/extension/xhprof.c:210:3: error: expected specifier-qualifier-list before 'cpu_set_t'
+/var/share/httpd/piwik/vendor/facebook/xhprof/extension/xhprof.c:238:1: warning: 'visibility' attribute ignored
+/var/share/httpd/piwik/vendor/facebook/xhprof/extension/xhprof.c:242:28: warning: 'visibility' attribute ignored
+..
 
-(TO BE CONTINUED) ..
-
-
---- misc/composer/build-xhprof.sh.orig	2015-02-19 11:00:59.000000000 +0900
-+++ misc/composer/build-xhprof.sh	2015-02-19 11:23:37.000000000 +0900
-@@ -1,14 +1,12 @@
--#!
-+#!/bin/sh
- 
- if ! type phpize &> /dev/null; then
-     echo "phpize missing, skipping build"
-     echo "If you installed PHP via Aptitude, you can install phpize w/ 'sudo apt-get install php5-dev'"
--    exit
- fi
- 
- if ! type make &> /dev/null; then
-     echo "make missing, skipping build"
--    exit
- fi
- 
- if ! [ -d "vendor/facebook/xhprof/extension" ]; then
-@@ -22,9 +20,8 @@
- 
- echo "Building xhprof..."
- 
--if ! phpize &> ../../../../tmp/xhprof-logs/phpize.log; then
-+if ! /usr/pkg/bin/phpize &> ../../../../tmp/xhprof-logs/phpize.log; then
-     echo "Fatal error: phpize failed! View tmp/xhprof-logs/phpize.log for more info."
--    exit 1
- fi
- 
- # Execute aclocal and autoconf only if Gentoo is used.
-@@ -45,9 +42,9 @@
-     exit 2
- fi
- 
--if ! make &> ../../../../tmp/xhprof-logs/make.log; then
-+if ! gmake &> ../../../../tmp/xhprof-logs/make.log; then
-     echo "Fatal error: could not build extension (make failed)! View tmp/xhprof-logs/make.log for more info."
-     exit 3
- fi
- 
--echo "Done."
-\ No newline at end of file
-+echo "Done."
+   209    /* The saved cpu affinity. */
+   210    cpu_set_t prev_mask;
+   211
