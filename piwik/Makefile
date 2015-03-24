@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/24 02:03:03 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/24 02:12:29 makoto Exp $
 
 DISTNAME=		2.11.2
 PKGNAME=		piwik-${DISTNAME}
@@ -55,7 +55,7 @@ REPLACE_BASH+=	tests/travis/generate_docs.sh
 REPLACE_BASH+=	libs/jqplot/build_minified_script.sh
 
 REPLACE_BASH+=	misc/composer/*.sh
-REPLACE_BASH+=	misc/cron/archive.sh
+REPLACE_SH+=	misc/cron/archive.sh
 REPLACE_BASH+=	misc/log-analytics/tests/run_tests.sh
 REPLACE_BASH+=	misc/others/stress.sh
 
