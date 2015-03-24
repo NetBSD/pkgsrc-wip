@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/03/01 20:07:29 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/03/24 23:09:06 jonthn Exp $
 bin/livestreamer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -192,6 +192,9 @@ ${PYSITELIB}/livestreamer/plugins/goodgame.pyo
 ${PYSITELIB}/livestreamer/plugins/hitbox.py
 ${PYSITELIB}/livestreamer/plugins/hitbox.pyc
 ${PYSITELIB}/livestreamer/plugins/hitbox.pyo
+${PYSITELIB}/livestreamer/plugins/itvplayer.py
+${PYSITELIB}/livestreamer/plugins/itvplayer.pyc
+${PYSITELIB}/livestreamer/plugins/itvplayer.pyo
 ${PYSITELIB}/livestreamer/plugins/letontv.py
 ${PYSITELIB}/livestreamer/plugins/letontv.pyc
 ${PYSITELIB}/livestreamer/plugins/letontv.pyo
@@ -249,9 +252,18 @@ ${PYSITELIB}/livestreamer/plugins/svtplay.pyo
 ${PYSITELIB}/livestreamer/plugins/tga.py
 ${PYSITELIB}/livestreamer/plugins/tga.pyc
 ${PYSITELIB}/livestreamer/plugins/tga.pyo
+${PYSITELIB}/livestreamer/plugins/tv3cat.py
+${PYSITELIB}/livestreamer/plugins/tv3cat.pyc
+${PYSITELIB}/livestreamer/plugins/tv3cat.pyo
 ${PYSITELIB}/livestreamer/plugins/tv4play.py
 ${PYSITELIB}/livestreamer/plugins/tv4play.pyc
 ${PYSITELIB}/livestreamer/plugins/tv4play.pyo
+${PYSITELIB}/livestreamer/plugins/tvcatchup.py
+${PYSITELIB}/livestreamer/plugins/tvcatchup.pyc
+${PYSITELIB}/livestreamer/plugins/tvcatchup.pyo
+${PYSITELIB}/livestreamer/plugins/tvplayer.py
+${PYSITELIB}/livestreamer/plugins/tvplayer.pyc
+${PYSITELIB}/livestreamer/plugins/tvplayer.pyo
 ${PYSITELIB}/livestreamer/plugins/twitch.py
 ${PYSITELIB}/livestreamer/plugins/twitch.pyc
 ${PYSITELIB}/livestreamer/plugins/twitch.pyo
