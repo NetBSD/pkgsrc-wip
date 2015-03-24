@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/09 15:12:58 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/24 02:03:03 makoto Exp $
 
 DISTNAME=		2.11.2
 PKGNAME=		piwik-${DISTNAME}
@@ -74,6 +74,9 @@ REPLACE_BASH+=	tests/travis/*.sh
 #REPLACE_PHP+=	console
 
 REPLACE_PYTHON+=misc/log-analytics/import_logs.py
+
+MOCHA_VERSION=		1.17.1
+PLIST_SUBST+=		MOCHA_VERSION=${MOCHA_VERSION}		
 
 do-install:
 	cd ${WRKSRC} && pax -rw -pmp . ${DESTDIR}${PKHOME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/09 15:12:58 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/03/24 02:03:03 makoto Exp $
 share/piwik/.bowerrc
 share/piwik/.coveralls.yml
 share/piwik/.gitignore
@@ -7990,148 +7990,148 @@ share/piwik/tests/lib/jsdoc-toolkit/templates/jsdoc/static/default.css
 share/piwik/tests/lib/jsdoc-toolkit/templates/jsdoc/static/header.html
 share/piwik/tests/lib/jsdoc-toolkit/templates/jsdoc/static/index.html
 share/piwik/tests/lib/jsdoc-toolkit/templates/jsdoc/symbol.tmpl
-share/piwik/tests/lib/mocha-1.17.1/.gitignore
-share/piwik/tests/lib/mocha-1.17.1/.travis.yml
-share/piwik/tests/lib/mocha-1.17.1/History.md
-share/piwik/tests/lib/mocha-1.17.1/LICENSE
-share/piwik/tests/lib/mocha-1.17.1/Makefile
-share/piwik/tests/lib/mocha-1.17.1/Readme.md
-share/piwik/tests/lib/mocha-1.17.1/bin/_mocha
-share/piwik/tests/lib/mocha-1.17.1/bin/mocha
-share/piwik/tests/lib/mocha-1.17.1/bower.json
-share/piwik/tests/lib/mocha-1.17.1/component.json
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/bdd - after each.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/bdd - after.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/bdd - before each.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/bdd - before.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/bdd - describe.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/bdd - it.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_deepEqual.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_equal.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_fail.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_isFunction.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - setup.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - suite.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - teardown.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/Snippets/tdd - test.tmSnippet
-share/piwik/tests/lib/mocha-1.17.1/editors/JavaScript mocha.tmbundle/info.plist
-share/piwik/tests/lib/mocha-1.17.1/images/error.png
-share/piwik/tests/lib/mocha-1.17.1/images/ok.png
-share/piwik/tests/lib/mocha-1.17.1/index.js
-share/piwik/tests/lib/mocha-1.17.1/lib/browser/debug.js
-share/piwik/tests/lib/mocha-1.17.1/lib/browser/events.js
-share/piwik/tests/lib/mocha-1.17.1/lib/browser/fs.js
-share/piwik/tests/lib/mocha-1.17.1/lib/browser/path.js
-share/piwik/tests/lib/mocha-1.17.1/lib/browser/progress.js
-share/piwik/tests/lib/mocha-1.17.1/lib/browser/tty.js
-share/piwik/tests/lib/mocha-1.17.1/lib/context.js
-share/piwik/tests/lib/mocha-1.17.1/lib/hook.js
-share/piwik/tests/lib/mocha-1.17.1/lib/interfaces/bdd.js
-share/piwik/tests/lib/mocha-1.17.1/lib/interfaces/exports.js
-share/piwik/tests/lib/mocha-1.17.1/lib/interfaces/index.js
-share/piwik/tests/lib/mocha-1.17.1/lib/interfaces/qunit.js
-share/piwik/tests/lib/mocha-1.17.1/lib/interfaces/tdd.js
-share/piwik/tests/lib/mocha-1.17.1/lib/mocha.js
-share/piwik/tests/lib/mocha-1.17.1/lib/ms.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/base.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/doc.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/dot.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/html-cov.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/html.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/index.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/json-cov.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/json-stream.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/json.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/landing.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/list.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/markdown.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/min.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/nyan.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/progress.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/spec.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/tap.js
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/templates/coverage.jade
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/templates/menu.jade
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/templates/script.html
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/templates/style.html
-share/piwik/tests/lib/mocha-1.17.1/lib/reporters/xunit.js
-share/piwik/tests/lib/mocha-1.17.1/lib/runnable.js
-share/piwik/tests/lib/mocha-1.17.1/lib/runner.js
-share/piwik/tests/lib/mocha-1.17.1/lib/suite.js
-share/piwik/tests/lib/mocha-1.17.1/lib/template.html
-share/piwik/tests/lib/mocha-1.17.1/lib/test.js
-share/piwik/tests/lib/mocha-1.17.1/lib/utils.js
-share/piwik/tests/lib/mocha-1.17.1/media/logo.svg
-share/piwik/tests/lib/mocha-1.17.1/mocha.css
-share/piwik/tests/lib/mocha-1.17.1/mocha.js
-share/piwik/tests/lib/mocha-1.17.1/package.json
-share/piwik/tests/lib/mocha-1.17.1/support/compile.js
-share/piwik/tests/lib/mocha-1.17.1/support/foot.js
-share/piwik/tests/lib/mocha-1.17.1/support/head.js
-share/piwik/tests/lib/mocha-1.17.1/support/tail.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/context.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/diffs.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/duration.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/fixtures/css.in
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/fixtures/css.out
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/fs.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/glob/glob.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/glob/glob.sh
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/globals.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/http.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/interfaces/bdd.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/interfaces/exports.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/interfaces/qunit.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/interfaces/tdd.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/asyncOnly.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/bail.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/cascade.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/exit.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/grep.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/many.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/nontty.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/only/bdd.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/only/qunit.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/misc/only/tdd.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/multiple.done.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/pending.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/require/a.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/require/b.coffee
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/require/c.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/require/d.coffee
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/require/require.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/required-tokens.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/root.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/sort/alpha.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/sort/beta.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/test.coffee
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/test.foo
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/timeout.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/uncaught.js
-share/piwik/tests/lib/mocha-1.17.1/test/acceptance/utils.js
-share/piwik/tests/lib/mocha-1.17.1/test/browser/array.js
-share/piwik/tests/lib/mocha-1.17.1/test/browser/index.html
-share/piwik/tests/lib/mocha-1.17.1/test/browser/large.html
-share/piwik/tests/lib/mocha-1.17.1/test/browser/large.js
-share/piwik/tests/lib/mocha-1.17.1/test/browser/opts.html
-share/piwik/tests/lib/mocha-1.17.1/test/browser/opts.js
-share/piwik/tests/lib/mocha-1.17.1/test/compiler/foo.js
-share/piwik/tests/lib/mocha-1.17.1/test/grep.js
-share/piwik/tests/lib/mocha-1.17.1/test/hook.async.js
-share/piwik/tests/lib/mocha-1.17.1/test/hook.err.js
-share/piwik/tests/lib/mocha-1.17.1/test/hook.sync.js
-share/piwik/tests/lib/mocha-1.17.1/test/hook.sync.nested.js
-share/piwik/tests/lib/mocha-1.17.1/test/hook.timeout.js
-share/piwik/tests/lib/mocha-1.17.1/test/http.meta.2.js
-share/piwik/tests/lib/mocha-1.17.1/test/http.meta.js
-share/piwik/tests/lib/mocha-1.17.1/test/jsapi/index.js
-share/piwik/tests/lib/mocha-1.17.1/test/mocha.opts
-share/piwik/tests/lib/mocha-1.17.1/test/reporters/nyan.js
-share/piwik/tests/lib/mocha-1.17.1/test/runnable.js
-share/piwik/tests/lib/mocha-1.17.1/test/runner.js
-share/piwik/tests/lib/mocha-1.17.1/test/suite.js
-share/piwik/tests/lib/mocha-1.17.1/test/utils.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/.gitignore
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/.travis.yml
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/History.md
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/LICENSE
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/Makefile
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/Readme.md
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/bin/_mocha
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/bin/mocha
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/bower.json
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/component.json
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/bdd - after each.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/bdd - after.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/bdd - before each.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/bdd - before.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/bdd - describe.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/bdd - it.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_deepEqual.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_equal.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_fail.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - assert_isFunction.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - setup.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - suite.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - teardown.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/Snippets/tdd - test.tmSnippet
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/editors/JavaScript mocha.tmbundle/info.plist
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/images/error.png
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/images/ok.png
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/index.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/browser/debug.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/browser/events.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/browser/fs.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/browser/path.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/browser/progress.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/browser/tty.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/context.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/hook.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/interfaces/bdd.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/interfaces/exports.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/interfaces/index.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/interfaces/qunit.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/interfaces/tdd.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/mocha.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/ms.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/base.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/doc.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/dot.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/html-cov.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/html.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/index.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/json-cov.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/json-stream.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/json.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/landing.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/list.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/markdown.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/min.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/nyan.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/progress.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/spec.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/tap.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/templates/coverage.jade
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/templates/menu.jade
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/templates/script.html
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/templates/style.html
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/reporters/xunit.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/runnable.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/runner.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/suite.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/template.html
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/test.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/lib/utils.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/media/logo.svg
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/mocha.css
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/mocha.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/package.json
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/support/compile.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/support/foot.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/support/head.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/support/tail.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/context.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/diffs.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/duration.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/fixtures/css.in
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/fixtures/css.out
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/fs.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/glob/glob.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/glob/glob.sh
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/globals.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/http.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/interfaces/bdd.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/interfaces/exports.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/interfaces/qunit.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/interfaces/tdd.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/asyncOnly.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/bail.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/cascade.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/exit.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/grep.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/many.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/nontty.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/only/bdd.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/only/qunit.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/misc/only/tdd.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/multiple.done.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/pending.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/require/a.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/require/b.coffee
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/require/c.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/require/d.coffee
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/require/require.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/required-tokens.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/root.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/sort/alpha.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/sort/beta.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/test.coffee
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/test.foo
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/timeout.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/uncaught.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/utils.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/browser/array.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/browser/index.html
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/browser/large.html
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/browser/large.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/browser/opts.html
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/browser/opts.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/compiler/foo.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/grep.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/hook.async.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/hook.err.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/hook.sync.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/hook.sync.nested.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/hook.timeout.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/http.meta.2.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/http.meta.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/jsapi/index.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/mocha.opts
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/reporters/nyan.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/runnable.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/runner.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/suite.js
+share/piwik/tests/lib/mocha-${MOCHA_VERSION}/test/utils.js
 share/piwik/tests/lib/resemblejs/LICENSE
 share/piwik/tests/lib/resemblejs/README.md
 share/piwik/tests/lib/resemblejs/resemble.js
