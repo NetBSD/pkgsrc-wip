@@ -92,14 +92,37 @@
      (database name, userid, password)
 
 - 5. (composer)
-
     ------------------------
-    cd /usr/pkg/share/piwik 
+    cd /usr/pkg/share/piwik
     sudo -s
-    curl -sS https://getcomposer.org/installer | php 
-    php composer.phar install
+    mkdir -p       /var/httpd/share/piwik;
+    pax -rw -pmp . /var/httpd/share/piwik;
+    cd /var/httpd/share/piwik;
+    curl -sS https://getcomposer.org/installer | php ;
+    php composer.phar install ;
     ------------------------
 
+(To be fixed later)
+    - www/php-curl
+-------------------
+modena@root 12:24:33/150324(..share/piwik)% php composer.phar install ;
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Installation request for guzzle/guzzle v3.9.2 -> satisfiable by guzzle/guzzle[v3.9.2].
+    - guzzle/guzzle v3.9.2 requires ext-curl * -> the requested PHP extension curl is missing from your system.
+  Problem 2
+    - Installation request for phpunit/phpunit 4.4.5 -> satisfiable by phpunit/phpunit[4.4.5].
+    - phpunit/phpunit 4.4.5 requires ext-dom * -> the requested PHP extension dom is missing from your system.
+  Problem 3
+    - guzzle/guzzle v3.9.2 requires ext-curl * -> the requested PHP extension curl is missing from your system.
+    - aws/aws-sdk-php 2.7.1 requires guzzle/guzzle ~3.7 -> satisfiable by guzzle/guzzle[v3.9.2].
+    - Installation request for aws/aws-sdk-php 2.7.1 -> satisfiable by aws/aws-sdk-php[2.7.1].
+-------------------
+
+    (real example)
     --------------------
     t-105@makoto 10:30:25/150219(..share/piwik)% sudo -s
     t-105#  curl -sS https://getcomposer.org/installer | php 
