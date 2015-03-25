@@ -1,2 +1,3 @@
-NetBSD fails: arc4randomforktest
-  treat same as Darwin and Solaris and need crypto/compat/getentropy_netbsd.c?
+Check PLIST on various systems.
+
+Determine if tests passing is good enough pre import.
