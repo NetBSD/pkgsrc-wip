@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/04 03:25:15 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/25 02:13:54 othyro Exp $
 #
 
 DISTNAME=	nestopia-1.45
@@ -34,7 +34,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/readme.html \
 		${DESTDIR}${PREFIX}/share/doc/nestopia
 
-.include "../../wip/libarchive/buildlink3.mk"
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 BUILD_DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../audio/alsa-lib/buildlink3.mk"
