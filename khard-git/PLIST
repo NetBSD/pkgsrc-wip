@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/04 12:38:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/03/26 21:53:04 thomasklausner Exp $
 bin/davcontroller
 bin/khard
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -28,4 +28,7 @@ ${PYSITELIB}/khard/helpers.pyo
 ${PYSITELIB}/khard/khard.py
 ${PYSITELIB}/khard/khard.pyc
 ${PYSITELIB}/khard/khard.pyo
+${PYSITELIB}/khard/version.py
+${PYSITELIB}/khard/version.pyc
+${PYSITELIB}/khard/version.pyo
 share/examples/khard/khard.conf.example
