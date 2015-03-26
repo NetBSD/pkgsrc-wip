@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/03/14 17:59:04 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/26 03:39:36 othyro Exp $
 #
 
 MODNAME=	igbinary
 PECL_VERSION=	1.2.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	mbowie@buzmo.com
@@ -18,6 +19,13 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}
 USE_LIBTOOL=		yes
 
 USE_PHP_EXT_PATCHES=	yes
+
+PLIST_SRC+=		PLIST
+
+INSTALLATION_DIRS+=	include/php/ext/igbinary
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/igbinary.h ${DESTDIR}${PREFIX}/include/php/ext/igbinary
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
