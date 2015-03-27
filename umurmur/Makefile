@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/01/13 00:42:39 wongk Exp $
+# $NetBSD: Makefile,v 1.5 2015/03/27 22:56:15 othyro Exp $
 #
 
 DISTNAME=	umurmur-0.2.10
@@ -40,5 +40,5 @@ do-install:
 
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../wip/protobuf-c/buildlink3.mk"
-.include "../../wip/polarssl11/buildlink3.mk"
+.include "../../security/polarssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
