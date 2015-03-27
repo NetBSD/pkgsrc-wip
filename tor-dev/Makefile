@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2015/02/19 23:35:13 athaba Exp $
+# $NetBSD: Makefile,v 1.49 2015/03/27 09:54:53 athaba Exp $
 
-DISTNAME=	tor-0.2.6.3-alpha
-PKGNAME=	${DISTNAME:S/-alpha//}
+DISTNAME=	tor-0.2.6.6
 CATEGORIES=	net security
 MASTER_SITES=	https://www.torproject.org/dist/
 
