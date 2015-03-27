@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2015/03/27 09:54:53 athaba Exp $
+# $NetBSD: Makefile,v 1.50 2015/03/27 11:14:09 athaba Exp $
 
 DISTNAME=	tor-0.2.6.6
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	https://www.torproject.org/dist/
 
@@ -45,12 +46,6 @@ CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME.${TOR_USER}}
 FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
-
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		contrib/torify.in
-SUBST_SED.fix-paths=		-e 's,"/etc/tor,"${PKG_SYSCONFDIR},g'
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
