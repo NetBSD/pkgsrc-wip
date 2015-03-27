@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/02/09 18:45:13 leot1990 Exp $
+$NetBSD: distinfo,v 1.6 2015/03/27 16:30:06 leot1990 Exp $
 
-SHA1 (netsurf-all-3.2.tar.gz) = 722246784c713a22c0dc17b908c65dbb792cc6a3
-RMD160 (netsurf-all-3.2.tar.gz) = f5300c90f26a1e37c46d445e760969e10b651fb7
-Size (netsurf-all-3.2.tar.gz) = 6025683 bytes
+SHA1 (netsurf-all-3.3.tar.gz) = ec52ff9c8f43140d403cc2a434de6c919d9d6079
+RMD160 (netsurf-all-3.3.tar.gz) = 74da2b99bcce4857f5975d4bc2caa4b9a0a6f5eb
+Size (netsurf-all-3.3.tar.gz) = 6088708 bytes
