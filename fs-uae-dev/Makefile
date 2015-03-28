@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/02/10 13:59:53 moubctez Exp $
+# $NetBSD: Makefile,v 1.9 2015/03/28 16:18:32 rhialto Exp $
 
-DISTNAME=	fs-uae-2.5.27dev
+DISTNAME=	fs-uae-2.5.29dev
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${PKGVERSION_NOREV}/
 
