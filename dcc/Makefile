@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/03/24 20:27:49 pebog Exp $
+# $NetBSD: Makefile,v 1.28 2015/03/28 21:46:39 pebog Exp $
 
 DISTNAME=		dcc-1.3.155
 #PKGREVISION=		2
@@ -59,6 +59,7 @@ MAKE_JOBS_SAFE=		no
 # PKGSRC_DCC_EGDIR is for homedir/Makefile
 MAKE_ENV+=		PKGSRC_DCC_EGDIR=${DCC_EGDIR}
 MAKE_ENV+=		MKHTML=no
+MAKE_ENV+=		NO_SUID=yes
 
 BUILD_DEFS+=		VARBASE
 
