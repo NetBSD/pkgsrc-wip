@@ -1,17 +1,16 @@
-$NetBSD: distinfo,v 1.17 2015/01/25 20:45:25 leot1990 Exp $
+$NetBSD: distinfo,v 1.18 2015/03/28 18:39:36 leot1990 Exp $
 
-SHA1 (webkitgtk-2.6.5.tar.xz) = 1db3894f1c20d49550a2a064686afc944aa10dbb
-RMD160 (webkitgtk-2.6.5.tar.xz) = f38051dce253ef1cbc295d9e9fd83af20da24eb7
-Size (webkitgtk-2.6.5.tar.xz) = 10000124 bytes
-SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = bee908e10d7480c28e1a2b62f514b9e1e70fb1ba
-SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = dc642247bbaab0365547454d4482ad6d73b48e34
-SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = b5c3e540769da651d7bde197e426b6b66ab8e560
-SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 0f0366355a14a221aa49e5d06da2b2ddc8f3b341
+SHA1 (webkitgtk-2.8.0.tar.xz) = ab91e24620a30dda28b8265c996b3cb99a9abb77
+RMD160 (webkitgtk-2.8.0.tar.xz) = 72833322de97f46e08b10f82468adc9dc7653fe3
+Size (webkitgtk-2.8.0.tar.xz) = 10431576 bytes
+SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 1f4a4be3593f9aa9ae6b41a2be8ae9d8bb27dcbb
+SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = 2b7e69b8e6aff9bd5f65190f8eb1afdbb993857f
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = f1eee7f9d3012edee1915234c837cff820f97092
-SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 14796910c3ff76545bc4826fa8d7b09863cf2b02
-SHA1 (patch-Source_WTF_wtf_Platform.h) = bff658eb090c6738454e38f16c6635f45582b57a
-SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 02f5d9c2289c8eb1038bdf1cc73e14dac3cd76c4
-SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 71d042b68eeb14a2dcbb85037541076a5465f933
+SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 925d653feaa204b5128d389959328cdf559f26d3
+SHA1 (patch-Source_WTF_wtf_Platform.h) = 6ac3e1263fdacc8677b2a4e98310f3886d1dbadf
+SHA1 (patch-Source_WTF_wtf_Stopwatch.h) = 25bc1552a10a5724cbf261d05c0202c153fd69f7
+SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 3707a87994d941d5f147f797d7d0be1b45bea591
+SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 599ed6188b632e78774fd833e3ea9e1a1acf8a2d
 SHA1 (patch-ai) = 4b02898c650564fbf7b586652a13a1775a4d4748
-SHA1 (patch-aj) = 8d317673070f621a2aa9ac9c6de7d5bdf1ca9079
-SHA1 (patch-am) = f3371113b4b633200cee2f96aea574421584d7fd
+SHA1 (patch-aj) = 84b0928c17460848fb51f255f6f68057ef768574
+SHA1 (patch-am) = 2061b7a88fe019d21f7eba8a69a16f5f74810666

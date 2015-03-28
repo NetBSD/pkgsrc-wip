@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.15 2015/02/02 16:41:32 leot1990 Exp $
+# $NetBSD: Makefile.common,v 1.16 2015/03/28 18:39:35 leot1990 Exp $
 # used by wip/webkit-gtk/Makefile
 
-DISTNAME=	webkitgtk-2.6.5
+DISTNAME=	webkitgtk-2.8.0
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +26,7 @@ PKGCONFIG_OVERRIDE+=	Source/WebKit2/webkit2gtk-web-extension.pcin
 
 CMAKE_ARGS+=		-DPORT=GTK
 CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
+CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 
 .include "options.mk"
 
@@ -95,6 +96,7 @@ BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
 BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.42.2nb3
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"

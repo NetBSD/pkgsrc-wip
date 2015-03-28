@@ -1,8 +1,8 @@
-$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.3 2015/01/24 01:33:08 leot1990 Exp $
+$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.4 2015/03/28 18:39:36 leot1990 Exp $
 
---- Source/WTF/wtf/Platform.h.orig	2015-01-15 09:40:35.000000000 +0000
+--- Source/WTF/wtf/Platform.h.orig	2015-03-23 08:08:04.000000000 +0000
 +++ Source/WTF/wtf/Platform.h
-@@ -572,7 +572,7 @@
+@@ -579,7 +579,7 @@
  #endif
  
  #if !defined(HAVE_STRNSTR)
@@ -11,7 +11,7 @@ $NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.3 2015/01/24 01:33:08 leot1990 Exp 
  #define HAVE_STRNSTR 1
  #endif
  #endif
-@@ -625,6 +625,11 @@
+@@ -632,6 +632,11 @@
  #define USE_SYSTEM_MALLOC 1
  #endif
  
