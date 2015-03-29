@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/03/29 13:45:31 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/29 16:14:44 leot1990 Exp $
 
 DISTNAME=	csvutils-0.9.3
 CATEGORIES=	textproc
@@ -25,5 +25,5 @@ pre-install:
 	done
 
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../local/libcsv/buildlink3.mk"
+.include "../../wip/libcsv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
