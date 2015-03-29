@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/21 16:29:03 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/03/29 15:31:59 jonthn Exp $
 bin/nvim
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
@@ -305,6 +305,7 @@ share/nvim/runtime/doc/usr_90.txt
 share/nvim/runtime/doc/usr_toc.txt
 share/nvim/runtime/doc/various.txt
 share/nvim/runtime/doc/vi_diff.txt
+share/nvim/runtime/doc/vim_diff.txt
 share/nvim/runtime/doc/visual.txt
 share/nvim/runtime/doc/windows.txt
 share/nvim/runtime/filetype.vim
