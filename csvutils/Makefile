@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/29 16:14:44 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/29 16:28:02 leot1990 Exp $
 
 DISTNAME=	csvutils-0.9.3
 CATEGORIES=	textproc
@@ -20,8 +20,9 @@ MAKE_ENV+=	LDFLAGS="-R,-L${PREFIX}/lib"
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 pre-install:
-	for m in ${WRKSRC}/*.gz; do \
-		gunzip "$${m}" ; \
+	set -e ; \
+	for f in ${WRKSRC}/*.gz; do \
+		gunzip "$${f}" ; \
 	done
 
 .include "../../devel/pcre/buildlink3.mk"
