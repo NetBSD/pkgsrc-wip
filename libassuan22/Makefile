@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2015/03/27 12:40:27 adanbsd Exp $
+# $NetBSD: Makefile,v 1.4 2015/03/30 07:29:43 adanbsd Exp $
 
-SUBDIR+=libassuan22
 
 DISTNAME=	libassuan-2.2.0
 CATEGORIES=	security

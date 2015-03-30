@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/16 20:59:35 adanbsd Exp $
-
-SUBDIR+= dnscrypt-proxy
+# $NetBSD: Makefile,v 1.3 2015/03/30 07:31:03 adanbsd Exp $
 
 DISTNAME=	dnscrypt-proxy-1.4.3
 CATEGORIES=	security
