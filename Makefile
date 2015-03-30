@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6119 2015/03/30 07:37:29 adanbsd Exp $
+# $Id: Makefile,v 1.6120 2015/03/30 23:30:25 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3257,7 +3257,6 @@ SUBDIR+=	quickie
 SUBDIR+=	qupzilla
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
-SUBDIR+=	radare2-git
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
 SUBDIR+=	rapidxml
