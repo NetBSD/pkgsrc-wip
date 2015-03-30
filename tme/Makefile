@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/03/27 10:40:58 phabrics Exp $
+# $NetBSD: Makefile,v 1.6 2015/03/30 01:11:00 phabrics Exp $
 
-DISTNAME=	tme-1.0beta_7
+DISTNAME=	tme-1.0beta_8
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.phabrics.com/
 EXTRACT_SUFX=   .tar.xz
@@ -10,11 +10,12 @@ MAINTAINER=	phabrics@phabrics.com
 MAKE_JOBS_SAFE=		no
 
 HOMEPAGE=	http://www.phabrics.com/
-COMMENT=	Updated TME to add features like GTK3, NAT, and pthreads.
+COMMENT=	Updated TME to add features like GTK3, NAT, and pthreads
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	perl
 
 CONFLICTS=	tme-[0-9]*
 
