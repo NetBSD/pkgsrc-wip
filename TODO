@@ -31,7 +31,7 @@ Suggested package updates
 	o firebird-2.5
 	o flc-1.12
 	o fs-uae-2.4.1
-	o gambas2-2.23.0
+	o gambas2-3.7.1
 	o gcc42-4.2.4
 	o gcc43-4.3.4
 	o geant-4.9.5p1
@@ -99,7 +99,6 @@ Suggested package updates
 	o py-PyPE-2.9
 	o py-bitstring-3.1.3
 	o py-rpyc-3.2.1
-	o py-xpra-0.14.21
 	o py-zeitgeist-0.9
 	o rdup-1.1.13
 	o recoll-1.19.14
