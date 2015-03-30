@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6118 2015/03/29 13:47:01 leot1990 Exp $
+# $Id: Makefile,v 1.6119 2015/03/30 07:37:29 adanbsd Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -850,6 +850,7 @@ SUBDIR+=	gnormalize
 SUBDIR+=	gnubg
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
+SUBDIR+=	gnupg21
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnupod
 SUBDIR+=	gnuradio
