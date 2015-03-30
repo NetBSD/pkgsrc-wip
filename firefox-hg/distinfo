@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2015/02/19 21:08:40 thomasklausner Exp $
+$NetBSD: distinfo,v 1.50 2015/03/30 08:09:09 thomasklausner Exp $
 
 SHA1 (firefox-31.0.source.tar.bz2) = a6c3e25ee3aeb7da42db2aaeb50a385d63532beb
 RMD160 (firefox-31.0.source.tar.bz2) = 8512ed164920c9fdad492ba2b47b46aae4894564
@@ -7,6 +7,7 @@ SHA1 (patch-aa) = 548c338a5dd2d2c761d03360afddc11807ebc26a
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
 SHA1 (patch-ao) = ca7e6723a10b9f6e3306cd12557e1856727edee9
 SHA1 (patch-bf) = 87cd1a9a1d7503e0748569028a3d693124d43208
+SHA1 (patch-browser_components_loop_run-all-loop-tests.sh) = e9cdfe64d1f1133ee59b3d6117beef232ecd2b07
 SHA1 (patch-browser_installer_package-manifest.in) = a4cb67eb1934038ca9f68b0cf63e239d7cf59f32
 SHA1 (patch-build_autoconf_nss.m4) = bf65db126705a3a1ba294418b9380683ea401fc7
 SHA1 (patch-build_gyp.mozbuild) = 2842da0783d344dd12e86adde447f7cda6191518
@@ -39,7 +40,7 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__captur
 SHA1 (patch-memory_jemalloc_src_configure) = 749c10436fb86d7c70946f00aa61e1736fd66e22
 SHA1 (patch-memory_jemalloc_src_configure.ac) = 7385007023ddb255009322ed90b1ea0bd41a8e08
 SHA1 (patch-mfbt_Alignment.h) = 9ebc9892fd11eba7105974979b54f4f8759b7749
-SHA1 (patch-mfbt_Attributes.h) = 8edc1b34ffb9ac2095044d3f87d83452f559de41
+SHA1 (patch-mfbt_Attributes.h) = 474222bdadcc1d462465114a52d0beded7019426
 SHA1 (patch-ostream) = 593a114a31a0117af6c00cd12e3aed4565571288
 SHA1 (patch-rc) = 86817d5b746b1d18cb6430cf38bdeffdb288dc1b
 SHA1 (patch-toolkit_library_moz.build) = f0937fa86058a5c16fc261ad182df73b6533cb81
