@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2014/01/06 02:04:59 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2015/03/31 23:49:49 othyro Exp $
 #
 
 DISTNAME=	ScrollZ-2.2.3
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	chat
-MASTER_SITES=	http://www.scrollz.com/download/
+MASTER_SITES=	http://www.scrollz.info/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scrollz.com/
+HOMEPAGE=	http://www.scrollz.info/
 COMMENT=	Advanced IRC client based on ircII client
 LICENSE=	modified-bsd # XXX ?
 
