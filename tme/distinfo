@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/03/30 01:11:00 phabrics Exp $
+$NetBSD: distinfo,v 1.6 2015/03/31 04:49:08 phabrics Exp $
 
-SHA1 (tme-1.0beta_8.tar.xz) = 1a2e57c38f6a84b51dd94cbaf25db568d12e5945
-RMD160 (tme-1.0beta_8.tar.xz) = 15b9bc4b2f5d643bcd34585c8d80017bc01bced6
-Size (tme-1.0beta_8.tar.xz) = 1180496 bytes
+SHA1 (tme-1.0beta_9.tar.xz) = b635f3378a2f5063f8673b972e1f2aaec9acd32e
+RMD160 (tme-1.0beta_9.tar.xz) = 1eee60c7a4e06f73cfac14ac349cb4ca4fbc70d1
+Size (tme-1.0beta_9.tar.xz) = 1184608 bytes
