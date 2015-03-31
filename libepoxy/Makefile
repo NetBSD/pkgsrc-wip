@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/03/09 22:51:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2015/03/31 20:23:45 tnn2 Exp $
 
 DISTNAME=	libepoxy-1.2
 CATEGORIES=	graphics
@@ -22,6 +22,7 @@ pre-configure:
 
 .include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=10
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
