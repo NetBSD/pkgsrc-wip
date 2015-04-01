@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/03/24 13:50:50 yvs4sf Exp $
+$NetBSD: distinfo,v 1.9 2015/04/01 13:14:20 yvs4sf Exp $
 
-Size (mtr-b139cc3.tar.gz) = 103075 bytes
-SHA1 (mtr-b139cc3.tar.gz) = 41f8d8a7e64eb4ad951dafa6a8f6d2fd488ccf17
-RMD160 (mtr-b139cc3.tar.gz) = 510f926d0a8acab96066dc13f08ee9ad6c2c9c13
+Size (mtr-ca79a82.tar.gz) = 103036 bytes
+SHA1 (mtr-ca79a82.tar.gz) = cd0bde4ad5d66888e2d261d4814172816324b0b1
+RMD160 (mtr-ca79a82.tar.gz) = 49aafebc7ca8308acf0c36dcea25cf3ac5ca86cc
