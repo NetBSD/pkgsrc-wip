@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/12/04 21:55:33 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/01 16:23:09 tnn2 Exp $
 
 DISTNAME=		skype-4.3.0.37
 CATEGORIES=		net
@@ -17,8 +17,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_REQD=		suse>=12.1
-EMUL_MODULES.linux=	alsa base glx gstreamer gtk2 qt4 sqlite3 x11 xml2
+EMUL_REQD=		suse>=13.1
+EMUL_MODULES.linux=	alsa base glx gstreamer gtk2 qt4 sqlite3 x11 xml2 xslt webp
 
 DATADIR=		share/skype
 DOCDIR=			share/doc/skype
