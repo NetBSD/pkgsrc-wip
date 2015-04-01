@@ -1,4 +1,4 @@
-$NetBSD: patch-homedir_Makefile.in,v 1.1 2015/03/23 20:58:03 pebog Exp $
+$NetBSD: patch-homedir_Makefile.in,v 1.2 2015/04/01 21:04:31 pebog Exp $
 
 Install configuration files into PKGSRC_DCC_EGDIR.
 
@@ -15,7 +15,7 @@ into rc-files as start_precmd check).
  
  HINST	=$(INSTALL) -c $(SET_DCCOWN)
 -HD	=@installroot@@prefix@
-+HD	=$(DESTDIR)$(PKGSRC_DCC_EGDIR)
++HD	=@installroot@$(PKGSRC_DCC_EGDIR)
  MAP	=$(HD)/map@configsuffix@
  MAPTXT	=$(HD)/map.txt@configsuffix@
  IDS	=$(HD)/ids@configsuffix@
@@ -24,11 +24,10 @@ into rc-files as start_precmd check).
  	@:
  
 -install:$(HD) $(HD)/log
--	for NM in $(SSCRIPTS); do $(BININSTALL) $$NM $(DCC_BINDIR)/$$NM;done
++install:$(HD)
+ 	for NM in $(SSCRIPTS); do $(BININSTALL) $$NM $(DCC_BINDIR)/$$NM;done
 -	sh make-dcc_conf -F '@configsuffix@' -h $(HD)
 -	for NM in $(SIMPLE); do\
-+install:$(HD)
-+	for NM in $(SSCRIPTS); do $(BININSTALL) $$NM $(DESTDIR)$(DCC_BINDIR)/$$NM;done
 +	for NM in $(SIMPLE) $(GENFILES); do\
  	    if test -n '@configsuffix@' -o ! -f $(HD)/$$NM; then\
  		$(HINST) -m 644 $$NM $(HD)/$${NM}@configsuffix@; fi; done
