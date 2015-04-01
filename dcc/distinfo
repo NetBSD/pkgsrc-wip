@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.19 2015/04/01 09:06:31 pebog Exp $
+$NetBSD: distinfo,v 1.20 2015/04/01 09:25:31 pebog Exp $
 
 SHA1 (dcc-1.3.156.tar.Z) = dfc01539663be6a19a8d1a760dc26e1b3687a4eb
 RMD160 (dcc-1.3.156.tar.Z) = 119417e83308526c63ffbc6ba9017658d9033d53
 Size (dcc-1.3.156.tar.Z) = 1714093 bytes
 SHA1 (patch-Makefile.inc.in) = 9cd0fb433697d1864dde3314bed08f5a78bf3e7e
-SHA1 (patch-Makefile.inc2.in) = 32c504a67c77f982cd942b7276e569b40c3dfb79
+SHA1 (patch-Makefile.inc2.in) = 16e3fdd5933048ea31f90a6e1b2dad2949deb2a3
 SHA1 (patch-cgi-bin_Makefile.in) = b422ab1e03b18e772798827acd4a1506c606d655
 SHA1 (patch-configure) = 5010d0b26616e1c70091c3af7c8d90e4607165c2
 SHA1 (patch-homedir_Makefile.in) = 0cad682a0e34fc91ceae356bc742054465724ce3
