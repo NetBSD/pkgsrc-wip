@@ -1,5 +1,13 @@
 1) Make this stop crashing a few seconds after execution;
-2) Use the latest SuSE emulation packages instead of 12.1.
-   If those aren't in pkgsrc, import them;
-3) Add PulseAudio as a PKG_OPTION, defaulting to enabled;
-4) Figure out where skype.conf in the ${DISTFILE} goes during install;
+   This is probably due to incomplete emulation of the Linux tgkill(2) syscall.
+   syscalls leading up to crash:
+  6398  16934 skype    CALL  rt_sigaction(SIGABRT,0xf5dfe8a8,0,8)
+  6398  16934 skype    RET   rt_sigaction 0
+  6398  16934 skype    CALL  rt_sigprocmask(1,0xf5dfe8d8,0,8)
+  6398  16934 skype    RET   rt_sigprocmask 0
+  6398  16934 skype    CALL  tgkill(0x18fe,0x4226,6)
+  6398  16934 skype    RET   tgkill 0
+  6398  16934 skype    PSIG  SIGABRT SIG_DFL: code=SI_LWP sent by pid=6398, uid=1000)
+
+2) Add PulseAudio as a PKG_OPTION, defaulting to enabled;
+3) Figure out where skype.conf in the ${DISTFILE} goes during install;
