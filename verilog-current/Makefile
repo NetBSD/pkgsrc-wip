@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/01 02:40:52 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/01 02:50:44 makoto Exp $
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
@@ -29,9 +29,8 @@ TEST_TARGET=		check
 SUBST_CLASSES+=		dep
 SUBST_STAGE.dep=	pre-configure
 SUBST_MESSAGE.dep=	Resolve dependency for dep directory (mkdir dep before compile)
-SUBST_FILES.dep=	tgt-null/Makefile.in \
-			tgt-vlog95/Makefile.in \
-			tgt-vvp/Makefile.in \
+SUBST_FILES.dep=	\
+			cadpli/Makefile.in \
 			tgt-blif/Makefile.in \
 			tgt-fpga/Makefile.in \
 			tgt-null/Makefile.in \
@@ -42,7 +41,7 @@ SUBST_FILES.dep=	tgt-null/Makefile.in \
 			tgt-vhdl/Makefile.in \
 			tgt-vlog95/Makefile.in \
 			tgt-vvp/Makefile.in \
-			cadpli/Makefile.in
+
 SUBST_SED.dep=		-e 's,%.o: %.c,%.o: %.c dep,'
 
 # probably more simple fix with small patches, but interim solution:
