@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/02 20:28:13 outpaddling Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/02 20:58:07 outpaddling Exp $
 
 DISTNAME=	slurm-2.6.4
 PKGREVISION=	5
@@ -42,6 +42,11 @@ SUBST_FILES.htmldir=	${WRKSRC}/doc/man/man5/Makefile.am \
 			${WRKSRC}/doc/man/man8/Makefile.in \
 			${WRKSRC}/doc/man/man1/Makefile.in
 SUBST_SED.htmldir=	-e 's|$${datadir}/doc/@PACKAGE@-@VERSION@/html|@htmldir@|g'
+
+SUBST_CLASSES+=		linuxinit
+SUBST_STAGE.linuxinit=	post-patch
+SUBST_FILES.linuxinit=	${WRKSRC}/etc/init.d.slurm.in
+SUBST_SED.linuxinit=	-e "/^BINDIR=/ i exec_prefix=$(PREFIX)\nprefix=$(PREFIX)\n" 
 
 post-install:
 	$(INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)
