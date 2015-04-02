@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6120 2015/03/30 23:30:25 krytarowski Exp $
+# $Id: Makefile,v 1.6121 2015/04/02 14:59:13 bsiegert Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2398,6 +2398,7 @@ SUBDIR+=	pointless
 SUBDIR+=	pokerth
 SUBDIR+=	polarssl11
 SUBDIR+=	polipo
+SUBDIR+=	polkit
 SUBDIR+=	polylib
 SUBDIR+=	polymul
 SUBDIR+=	pop3.proxy
