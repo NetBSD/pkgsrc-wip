@@ -1,0 +1,2 @@
+The passenger-status script doesn't work well on Illumos, possibly related
+to non-portable file locking code implemented.

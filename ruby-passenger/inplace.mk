@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.4 2014/02/20 14:50:08 makoto Exp $
+# $NetBSD: inplace.mk,v 1.5 2015/04/02 15:40:14 fhajny Exp $
 
 USE_LANGUAGES+=		c c++
 USE_RAKE=		yes
@@ -16,10 +16,7 @@ extract-inplace-passenger:
 
 BUILDLINK_DEPMETHOD.curl=	build
 BUILDLINK_DEPMETHOD.libeio=	build
-BUILDLINK_DEPMETHOD.libev=	build
 
 .include "../../wip/libeio/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libev+=	libev>=4.11
-.include "../../devel/libev/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../www/curl/buildlink3.mk"

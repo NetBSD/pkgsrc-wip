@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.11 2014/10/29 12:59:17 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.12 2015/04/02 15:40:14 fhajny Exp $
 # used by wip/ap2-passenger/Makefile
 # used by wip/ruby-passenger/Makefile
 #
-DISTNAME=		passenger-4.0.53
+DISTNAME=		passenger-5.0.6
 CATEGORIES=		www
 
 MASTER_SITES=		http://s3.amazonaws.com/phusion-passenger/releases/
@@ -29,6 +29,7 @@ REPLACE_RUBY+=		bin/passenger-status
 REPLACE_RUBY+=		helper-scripts/backtrace-sanitizer.rb
 REPLACE_RUBY+=		helper-scripts/classic-rails-loader.rb
 REPLACE_RUBY+=		helper-scripts/classic-rails-preloader.rb
+REPLACE_RUBY+=		helper-scripts/crash-watch.rb
 REPLACE_RUBY+=		helper-scripts/download_binaries/extconf.rb
 REPLACE_RUBY+=		helper-scripts/meteor-loader.rb
 REPLACE_RUBY+=		helper-scripts/prespawn
@@ -51,7 +52,6 @@ SUBST_VARS.rake=	COMPILER_RPATH_FLAG PKG_SYSCONFDIR PREFIX
 
 MAKE_ENV+=		EXTRA_LDFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_ENV+=		USE_VENDORED_LIBEIO=no
-MAKE_ENV+=		USE_VENDORED_LIBEV=no
 
 post-patch:
 	${RM} -f ${WRKSRC}/lib/phusion_passenger/packaging.rb.orig			\
@@ -59,7 +59,5 @@ post-patch:
 		 ${WRKSRC}/lib/phusion_passenger/platform_info/cxx_portability.rb.orig
 
 .include "../../wip/libeio/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libev+=	libev>=4.11
-.include "../../devel/libev/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"

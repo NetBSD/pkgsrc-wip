@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2014/06/19 11:13:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2015/04/02 15:40:14 fhajny Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
 
 COMMENT=		Passenger module for running Rails and Rack applications on Apache2
 
 BUILDLINK_DEPMETHOD.libeio=	build
-BUILDLINK_DEPMETHOD.libev=	build
 BUILDLINK_DEPMETHOD.curl=	build
 .include "../../wip/ruby-passenger/Makefile.common"
 
