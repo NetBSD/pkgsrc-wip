@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/04/29 19:38:51 outpaddling Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/02 19:36:21 outpaddling Exp $
 
 DISTNAME=	munge-0.5.11
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://munge.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,10 +15,17 @@ BUILD_DEFS+=	VARBASE
 USE_TOOLS=	perl pkg-config
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=$(VARBASE)
 INSTALLATION_DIRS+=	lib/pkgconfig
 
-OWN_DIRS=	${VARBASE}/lib/munge ${VARBASE}/log/munge ${VARBASE}/run/munge
+OWN_DIRS=	$(VARBASE)/lib/munge $(VARBASE)/log/munge $(VARBASE)/run/munge
+
+RCD_SCRIPTS+=	munge
+
+SUBST_CLASSES+=		mungeuser
+SUBST_STAGE.mungeuser=	post-patch
+SUBST_FILES.mungeuser=	${WRKSRC}/src/etc/munge.init.in
+SUBST_SED.mungeuser=	-e 's|"munge"|"daemon"|g'
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

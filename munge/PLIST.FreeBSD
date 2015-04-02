@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.2 2014/04/29 19:38:51 outpaddling Exp $
 share/examples/init.d/munge
 share/examples/default/munge
