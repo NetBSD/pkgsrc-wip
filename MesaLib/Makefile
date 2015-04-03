@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/04/03 02:45:25 tnn2 Exp $
+# $NetBSD: Makefile,v 1.28 2015/04/03 16:16:47 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
+
+GCC_REQD+=	4.2
 
 PKGCONFIG_OVERRIDE+=	src/egl/main/egl.pc.in
 PKGCONFIG_OVERRIDE+=	src/egl/wayland/wayland-egl/wayland-egl.pc.in
