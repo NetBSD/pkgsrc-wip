@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/03/09 23:24:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.32 2015/04/03 08:23:33 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.17.1
 PKGNAME=	modular-${DISTNAME}
@@ -79,7 +79,7 @@ CONFIGURE_ARGS+=	--with-int10=x86emu
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 CONFIGURE_ENV+=		DRIVER_MAN_SUFFIX=4
 
-PLIST_VARS+=		sunos
+PLIST_VARS+=		sunos sparc
 PLIST_SUBST+=		SUNOS_ARCH=${SUNOS_ARCH}
 
 .if ${OPSYS} == "SunOS"
@@ -91,6 +91,10 @@ SUNOS_ARCH=		amd64
 .  elif ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 SUNOS_ARCH=		sparcv8plus
 .  endif
+.endif
+
+.if !empty(MACHINE_ARCH:Msparc*)
+PLIST.sparc=		yes
 .endif
 
 # Workaround for PR#41556.
