@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/04/03 15:37:49 tnn2 Exp $
+# $NetBSD: Makefile,v 1.35 2015/04/03 16:19:30 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.17.1
 PKGNAME=	modular-${DISTNAME}
@@ -16,7 +16,6 @@ SPECIAL_PERMS+=		bin/Xorg ${SETUID_ROOT_PERMS}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++ # XXX does it really need C++, url2pkg suggested it ...
 
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 SHLIBTOOL_OVERRIDE=	# empty
