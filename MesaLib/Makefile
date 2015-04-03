@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/04/03 16:16:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.29 2015/04/03 21:30:42 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -59,6 +59,13 @@ CONFIGURE_ARGS+=	--with-sha1=libc
 CONFIGURE_ARGS+=	--with-sha1=libnettle
 .endif
 
+# On NetBSD < 6 we need to compile with GCC from pkgsrc.
+# But GCC from pkgsrc does not add implicit -lc like base GCC does,
+# which breaks the build with -Wl,--no-undefined.
+# So we piggy back on -lpthread and inject -lc after it.
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
+BUILDLINK_TRANSFORM+=   l:pthread:pthread:c
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
