@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/04/03 08:23:33 tnn2 Exp $
+# $NetBSD: Makefile,v 1.33 2015/04/03 08:54:41 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.17.1
 PKGNAME=	modular-${DISTNAME}
@@ -135,7 +135,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 .include "options.mk"
 
 ## XXX even for disable dri?
-.include "../../wip/libepoxy/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
