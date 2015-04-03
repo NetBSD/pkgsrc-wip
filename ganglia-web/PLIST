@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/21 14:53:29 outpaddling Exp $
-@comment $NetBSD: PLIST,v 1.1 2014/11/21 14:53:29 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/03 17:39:25 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/03 17:39:25 outpaddling Exp $
 share/httpd/htdocs/ganglia/actions.php
 share/httpd/htdocs/ganglia/aggregate_graphs.php
 share/httpd/htdocs/ganglia/api/events.php
@@ -1091,10 +1091,10 @@ share/httpd/htdocs/ganglia/trend_navigation.php
 share/httpd/htdocs/ganglia/version.php
 share/httpd/htdocs/ganglia/view_content.php
 share/httpd/htdocs/ganglia/views_view.php
-var/db/ganglia-web/conf/default.json
-var/db/ganglia-web/conf/event_color.json
-var/db/ganglia-web/conf/events.json
-var/db/ganglia-web/conf/sql/ganglia.mysql
-var/db/ganglia-web/conf/view_default.json
-@pkgdir var/db/ganglia-web/dwoo/compiled
-@pkgdir var/db/ganglia-web/dwoo/cache
+var/lib/ganglia-web/conf/default.json
+var/lib/ganglia-web/conf/event_color.json
+var/lib/ganglia-web/conf/events.json
+var/lib/ganglia-web/conf/sql/ganglia.mysql
+var/lib/ganglia-web/conf/view_default.json
+@pkgdir var/lib/ganglia-web/dwoo/compiled
+@pkgdir var/lib/ganglia-web/dwoo/cache
