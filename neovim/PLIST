@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/30 21:52:46 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/04/03 13:58:13 jonthn Exp $
 bin/nvim
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
@@ -69,6 +69,7 @@ share/nvim/runtime/autoload/syntaxcomplete.vim
 share/nvim/runtime/autoload/tar.vim
 share/nvim/runtime/autoload/tohtml.vim
 share/nvim/runtime/autoload/vimball.vim
+share/nvim/runtime/autoload/vimexpect.vim
 share/nvim/runtime/autoload/xml/html32.vim
 share/nvim/runtime/autoload/xml/html401f.vim
 share/nvim/runtime/autoload/xml/html401s.vim
