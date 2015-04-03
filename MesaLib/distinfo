@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2015/03/28 05:07:09 tnn2 Exp $
+$NetBSD: distinfo,v 1.23 2015/04/03 02:45:25 tnn2 Exp $
 
-SHA1 (mesa-10.5.1.tar.xz) = 1940e2eb87da32a7321ac21a3978e4f7e526bcaf
-RMD160 (mesa-10.5.1.tar.xz) = 4a71070fea5b4a78e1172eacd8b5598513d5069b
-Size (mesa-10.5.1.tar.xz) = 6973916 bytes
+SHA1 (mesa-10.5.2.tar.xz) = e5659207105531385454e6fa08a1c3cf46a2ce95
+RMD160 (mesa-10.5.2.tar.xz) = f210e94c2c178970ca54c5f0b47f7ec0d2dc5bb3
+Size (mesa-10.5.2.tar.xz) = 6975500 bytes
 SHA1 (patch-configure) = 67bc605b52c3e05125e122864828f7415b86aa29
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
 SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = 3891adbd458dbe60c9b44cde0d6807ccab565006
