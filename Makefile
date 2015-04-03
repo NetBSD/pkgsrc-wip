@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6125 2015/04/03 09:45:02 thomasklausner Exp $
+# $Id: Makefile,v 1.6126 2015/04/03 22:32:59 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1483,7 +1483,6 @@ SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
 SUBDIR+=	libharu
 SUBDIR+=	libhid
-SUBDIR+=	libhidapi
 SUBDIR+=	libhttpd
 SUBDIR+=	libifstat
 SUBDIR+=	libindicator
