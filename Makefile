@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6123 2015/04/02 23:16:11 othyro Exp $
+# $Id: Makefile,v 1.6124 2015/04/03 08:52:16 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1453,7 +1453,6 @@ SUBDIR+=	libee
 SUBDIR+=	libeio
 SUBDIR+=	libeio-cvs
 SUBDIR+=	libepc
-SUBDIR+=	libepoxy
 SUBDIR+=	libeps
 SUBDIR+=	libestr
 SUBDIR+=	libfm
@@ -3837,6 +3836,7 @@ SUBDIR+=	xf86-input-mutouch
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel-old
+SUBDIR+=	xf86-video-intel
 SUBDIR+=	xf86-video-modesetting
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv-current
