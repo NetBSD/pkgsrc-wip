@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2015/04/01 21:04:31 pebog Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/03 10:55:09 pebog Exp $
 
-DISTNAME=		dcc-1.3.156
+DISTNAME=		dcc-1.3.158
 #PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
@@ -67,7 +67,6 @@ MAKE_JOBS_SAFE=		no
 # PKGSRC_DCC_EGDIR is for homedir/Makefile
 MAKE_ENV+=		PKGSRC_DCC_EGDIR=${DCC_EGDIR}
 MAKE_ENV+=		DCC_DESTDIR=${DCC_DESTDIR:Q}
-MAKE_ENV+=		MKHTML=no
 MAKE_ENV+=		NO_SUID=yes
 
 BUILD_DEFS+=		VARBASE
