@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/04/03 08:54:41 tnn2 Exp $
+# $NetBSD: Makefile,v 1.34 2015/04/03 15:37:49 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.17.1
 PKGNAME=	modular-${DISTNAME}
@@ -79,7 +79,7 @@ CONFIGURE_ARGS+=	--with-int10=x86emu
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 CONFIGURE_ENV+=		DRIVER_MAN_SUFFIX=4
 
-PLIST_VARS+=		sunos sparc
+PLIST_VARS+=		sunos
 PLIST_SUBST+=		SUNOS_ARCH=${SUNOS_ARCH}
 
 .if ${OPSYS} == "SunOS"
@@ -93,6 +93,7 @@ SUNOS_ARCH=		sparcv8plus
 .  endif
 .endif
 
+PLIST_VARS+=		sparc
 .if !empty(MACHINE_ARCH:Msparc*)
 PLIST.sparc=		yes
 .endif
@@ -128,33 +129,30 @@ BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.11
 BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
 BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.1.0
 
-# XXX check if this is still needed
 BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "options.mk"
 
-## XXX even for disable dri?
-.include "../../graphics/libepoxy/buildlink3.mk"
+.if !empty(OPSYS:M*BSD)
+CONFIGURE_ARGS+=	--with-sha1=libc
+.else
+.include "../../security/nettle/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sha1=libnettle
+.endif
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
-# XXX not sure if needed; forcing wip version for now
-BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=10
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpciaccess+=	libpciaccess>=0.11.0
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/damageproto/buildlink3.mk"
-.include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/fixesproto/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
-.include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
@@ -167,7 +165,6 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
@@ -185,7 +182,6 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../x11/xf86bigfontproto/buildlink3.mk"
 .include "../../x11/xf86dgaproto/buildlink3.mk"
-.include "../../x11/xf86driproto/buildlink3.mk"
 .include "../../x11/xf86miscproto/buildlink3.mk"
 .include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .include "../../x11/xineramaproto/buildlink3.mk"

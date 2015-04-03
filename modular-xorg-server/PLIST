@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/04/03 08:23:33 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/04/03 15:37:49 tnn2 Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -31,9 +31,9 @@ include/xorg/dixfont.h
 include/xorg/dixfontstr.h
 include/xorg/dixgrabs.h
 include/xorg/dixstruct.h
-include/xorg/dri.h
-include/xorg/dri2.h
-include/xorg/dristruct.h
+${PLIST.dri}include/xorg/dri.h
+${PLIST.dri}include/xorg/dri2.h
+${PLIST.dri}include/xorg/dristruct.h
 include/xorg/edid.h
 include/xorg/events.h
 include/xorg/exa.h
@@ -98,7 +98,7 @@ include/xorg/registry.h
 include/xorg/resource.h
 include/xorg/rgb.h
 include/xorg/rrtransform.h
-include/xorg/sarea.h
+${PLIST.dri}include/xorg/sarea.h
 include/xorg/screenint.h
 include/xorg/scrnintstr.h
 include/xorg/selection.h
@@ -164,8 +164,8 @@ include/xorg/xserver-properties.h
 include/xorg/xvdix.h
 include/xorg/xvmcext.h
 lib/pkgconfig/xorg-server.pc
-lib/xorg/modules/drivers/modesetting_drv.la
-lib/xorg/modules/extensions/libglx.la
+${PLIST.dri}lib/xorg/modules/drivers/modesetting_drv.la
+${PLIST.dri}lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/libexa.la
 lib/xorg/modules/libfb.la
 lib/xorg/modules/libfbdevhw.la
@@ -184,7 +184,7 @@ man/man1/cvt.1
 man/man1/gtf.1
 man/man4/exa.4
 man/man4/fbdevhw.4
-man/man4/modesetting.4
+${PLIST.dri}man/man4/modesetting.4
 man/man5/xorg.conf.5
 man/man5/xorg.conf.d.5
 share/aclocal/xorg-server.m4
