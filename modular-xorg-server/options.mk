@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2015/04/03 15:37:49 tnn2 Exp $
+# $NetBSD: options.mk,v 1.16 2015/04/03 15:48:50 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug dtrace
@@ -12,7 +12,6 @@ PLIST_VARS+=		dri dtrace
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=10
 .include "../../graphics/MesaLib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.16
 .include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
