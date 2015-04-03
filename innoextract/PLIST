@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2015/03/25 22:34:42 yhardy Exp $
-bin/innoextract
-man/man1/innoextract.1

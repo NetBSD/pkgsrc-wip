@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6124 2015/04/03 08:52:16 tnn2 Exp $
+# $Id: Makefile,v 1.6125 2015/04/03 09:45:02 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1239,7 +1239,6 @@ SUBDIR+=	imagination
 SUBDIR+=	imonc
 SUBDIR+=	inetdxtra
 SUBDIR+=	info2man
-SUBDIR+=	innoextract
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
 #SUBDIR+=	io			# not a package, same as jabberd bellow
@@ -2500,7 +2499,6 @@ SUBDIR+=	py-async
 SUBDIR+=	py-atmark
 SUBDIR+=	py-atom
 SUBDIR+=	py-atpy
-SUBDIR+=	py-attic
 SUBDIR+=	py-automata
 SUBDIR+=	py-bctpy
 SUBDIR+=	py-behaviour
