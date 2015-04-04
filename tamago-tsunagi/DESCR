@@ -1,4 +1,5 @@
-Emacs plug-in to bridge inputmethods of (Free)Wnn, Canna, sj3, Anthy. This
-is fork from IM egg(tamago). This works even after Emacs-24.3. Similar work
-is found at http://anonscm.debian.org/cgit/pkg-anthy/egg.git, but it does
-not have capability with (Free)Wnn and Canna.
+Emacs plug-in to bridge inputmethods of (Free)Wnn, Canna, sj3, and
+Anthy. This is fork from IM egg(tamago). This works with even after
+Emacs-24.3. Similar work may be found at
+   http://anonscm.debian.org/cgit/pkg-anthy/egg.git
+but it does not have capability with (Free)Wnn and Canna.
