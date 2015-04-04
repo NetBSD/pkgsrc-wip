@@ -1,1 +1,7 @@
 - ja-FreeWnn-server dependency is NOT resolved yet.
+
+- This package is (kind of) successor of editors/tamago.
+  Is category not inputmethod but editors ?
+  
+- Also editors/tamago has no dependency. This package has
+  four full dependencies. Which is good for the users ?
