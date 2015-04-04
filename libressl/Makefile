@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/04/04 14:01:28 krytarowski Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/04 18:00:29 krytarowski Exp $
 
 DISTNAME=	libressl-2.1.6
 CATEGORIES=	security
@@ -9,8 +9,6 @@ HOMEPAGE=	http://www.libressl.org/
 COMMENT=	Secure Sockets Layer and cryptography libraries and tools
 LICENSE=	openssl
 
-CONFLICTS+=	openssl-[0-9]*
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
@@ -19,12 +17,18 @@ PKGCONFIG_OVERRIDE+=	libcrypto.pc.in
 PKGCONFIG_OVERRIDE+=	libssl.pc.in
 PKGCONFIG_OVERRIDE+=	openssl.pc.in
 
-PKG_SYSCONFSUBDIR=	openssl
+LIBRESSL_PREFIX=	${PREFIX}/${PKGBASE}
+
+PKG_SYSCONFSUBDIR=	${PKGBASE}
+GNU_CONFIGURE_PREFIX=	${LIBRESSL_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-openssldir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-enginesdir=${PREFIX}/lib/engines
+CONFIGURE_ARGS+=	--with-enginesdir=${LIBRESSL_PREFIX}/lib/engines
 
 # Added for 2.1.6 - remove for next stable version as it's fixed upstream
 CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
+
+# Handle subprefix
+LDFLAGS+=               ${COMPILER_RPATH_FLAG}${LIBRESSL_PREFIX:Q}/lib
 
 TEST_TARGET=	check
 
