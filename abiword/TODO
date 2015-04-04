@@ -2,10 +2,13 @@
 - Test package on main platforms
 - Write a CONFLICT with abiword-plugins (or not?)
 - dependecies are missing for some plugins
-  the wordperfect plugin need libwpd-stream fixed!
+  the wordperfect plugin need libwpd-stream Fixed!
   mathview plugin needs gtkmathview Fixed!
   inter7eps needs http://www.inter7.com/eps-email-processor Fixed!
 
 - one patch in editors/abiword mentions that gcc 4.6+ chokes on 
   -no-undefined and needs -Wl, well -no-undefined is now in every plugin
-  Makefile so they will need patching as well I guess.
+  Makefile so they will need patching as well I guess. Fixed!
+
+- On NetBSD UCS-4 (UTF-32) is not converted correctly the first time 
+  rulers are painted. On repaint they are displayed correctly.
