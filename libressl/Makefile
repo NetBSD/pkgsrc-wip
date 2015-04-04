@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/03/24 22:42:18 lexort Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/04 14:01:28 krytarowski Exp $
 
 DISTNAME=	libressl-2.1.6
 CATEGORIES=	security
@@ -22,6 +22,9 @@ PKGCONFIG_OVERRIDE+=	openssl.pc.in
 PKG_SYSCONFSUBDIR=	openssl
 CONFIGURE_ARGS+=	--with-openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-enginesdir=${PREFIX}/lib/engines
+
+# Added for 2.1.6 - remove for next stable version as it's fixed upstream
+CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 TEST_TARGET=	check
 
