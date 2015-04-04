@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/04 14:35:45 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/04 15:15:44 makoto Exp $
 
 DISTNAME=	tamago-tsunagi-5.0.7.1
 CATEGORIES=	inputmethod
@@ -13,5 +13,7 @@ CONFLICTS=	tamago-anthy-[0-9]*
 CONFLICTS+=	tamago-[0-9]*
 
 GNU_CONFIGURE=		yes
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
