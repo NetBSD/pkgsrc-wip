@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6126 2015/04/03 22:32:59 othyro Exp $
+# $Id: Makefile,v 1.6127 2015/04/05 19:04:09 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1352,6 +1352,7 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kawa
 SUBDIR+=	keepassx-git
+SUBDIR+=	keybinder
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	khard-git
