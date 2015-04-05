@@ -1,6 +1,6 @@
-$NetBSD: patch-build_autoconf_nss.m4,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
+$NetBSD: patch-build_autoconf_nss.m4,v 1.2 2015/04/05 07:33:51 thomasklausner Exp $
 
---- build/autoconf/nss.m4.orig	2013-10-25 22:27:10.000000000 +0000
+--- build/autoconf/nss.m4.orig	2015-04-05 06:58:11.000000000 +0000
 +++ build/autoconf/nss.m4
 @@ -22,18 +22,18 @@ AC_ARG_WITH(nss-exec-prefix,
  	if test -n "$nss_config_exec_prefix"; then
@@ -35,12 +35,12 @@ $NetBSD: patch-build_autoconf_nss.m4,v 1.1 2014/09/29 10:46:24 thomasklausner Ex
  
 -		nss_config_major_version=`$NSS_CONFIG $nss_config_args --version | \
 +		nss_config_major_version=`$NSS_CONFIG $nss_config_args nss --modversion | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
+ 			sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\(\.\([[0-9]]*\)\)\{0,1\}/\1/'`
 -		nss_config_minor_version=`$NSS_CONFIG $nss_config_args --version | \
 +		nss_config_minor_version=`$NSS_CONFIG $nss_config_args nss --modversion | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\2/'`
+ 			sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\(\.\([[0-9]]*\)\)\{0,1\}/\2/'`
 -		nss_config_micro_version=`$NSS_CONFIG $nss_config_args --version | \
 +		nss_config_micro_version=`$NSS_CONFIG $nss_config_args nss --modversion | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\3/'`
- 		min_nss_major_version=`echo $min_nss_version | \
- 			sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
+ 			sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\(\.\([[0-9]]*\)\)\{0,1\}/\4/'`
+ 		if test -z "$nss_config_micro_version"; then
+ 			nss_config_micro_version="0"

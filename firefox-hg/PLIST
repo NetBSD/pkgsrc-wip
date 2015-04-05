@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2015/03/19 13:08:25 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.59 2015/04/05 07:33:51 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -15,6 +15,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/branding/icon48.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/branding/icon64.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/branding/identity-icons-brand.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/branding/identity-icons-brand@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/content/branding/silhouette-40.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutDialog.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutDialog.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/aboutDialog.xul
@@ -111,6 +112,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/defaultthemes/5.fo
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/defaultthemes/5.header.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/defaultthemes/5.icon.jpg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/defaultthemes/5.preview.jpg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/defaultthemes/devedition.header.png
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/defaultthemes/devedition.icon.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/NetworkPanel.xhtml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/animationinspector/animation-controller.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/animationinspector/animation-inspector.xhtml
@@ -177,6 +180,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/debugger-
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/debugger-view.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/debugger.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/debugger.xul
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/debugger/utils.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/eyedropper.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/eyedropper/crosshairs.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/eyedropper/nocursor.css
@@ -216,6 +220,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performan
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-subview.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details-waterfall.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/details.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/jit-optimizations.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/overview.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/recordings.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/devtools/performance/views/toolbar.js
@@ -605,6 +610,8 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/comm
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-pick@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-responsivemode.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-responsivemode@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-rulers.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-rulers@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-scratchpad.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-scratchpad@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devtools/command-screenshot.png
@@ -759,14 +766,10 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/downloads/dow
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/drm-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/e10s-64@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/engineManager.css
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/audioFeedIcon.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/audioFeedIcon16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/feedIcon.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/feedIcon16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/subscribe-ui.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/subscribe.css
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/videoFeedIcon.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/feeds/videoFeedIcon16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/fullscreen-darknoise.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/heartbeat-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/heartbeat-star-lit.svg
@@ -830,6 +833,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/O
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/aboutPermissions.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/alwaysAsk.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/applications.css
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/in-content/default-profile-image.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/in-content/dialog.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/in-content/favicon.ico
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/in-content/icons.svg
@@ -839,7 +843,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/m
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/preferences.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/search.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/privatebrowsing-mask.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/reader-mode-16.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readerMode.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/icons.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/readinglist-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/readinglist/sidebar.css
@@ -909,6 +913,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/translating-1
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/translation-16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/translation-16@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/undoCloseTab.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/update-badge.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/urlbar-arrow.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/warning16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/warning16@2x.png
@@ -1404,7 +1409,6 @@ lib/firefox-${VERSION}/browser/chrome/webide/skin/logs.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/monitor.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/newapp.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/permissionstable.css
-lib/firefox-${VERSION}/browser/chrome/webide/skin/prefs.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/project-listing.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/runtimedetails.css
 lib/firefox-${VERSION}/browser/chrome/webide/skin/throbber.svg
@@ -1580,10 +1584,12 @@ lib/firefox-${VERSION}/browser/modules/devtools/shared/d3.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/devices.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/doorhanger.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/frame-script-utils.js
+lib/firefox-${VERSION}/browser/modules/devtools/shared/getjson.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/inplace-editor.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/observable-object.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/options-view.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/profiler/global.js
+lib/firefox-${VERSION}/browser/modules/devtools/shared/profiler/jit.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/profiler/tree-model.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/profiler/tree-view.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/telemetry.js
@@ -1595,6 +1601,7 @@ lib/firefox-${VERSION}/browser/modules/devtools/shared/timeline/markers-overview
 lib/firefox-${VERSION}/browser/modules/devtools/shared/timeline/memory-overview.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/timeline/waterfall.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/undo.js
+lib/firefox-${VERSION}/browser/modules/devtools/shared/widgets/CubicBezierPresets.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/widgets/CubicBezierWidget.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/widgets/FastListWidget.js
 lib/firefox-${VERSION}/browser/modules/devtools/shared/widgets/Spectrum.js
@@ -1637,7 +1644,6 @@ lib/firefox-${VERSION}/browser/modules/devtools/webide/app-manager.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/build.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/config-view.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/project-list.js
-lib/firefox-${VERSION}/browser/modules/devtools/webide/remote-resources.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/runtimes.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/simulator-process.js
 lib/firefox-${VERSION}/browser/modules/devtools/webide/simulators.js
@@ -1659,6 +1665,8 @@ lib/firefox-${VERSION}/browser/modules/offlineAppCache.jsm
 lib/firefox-${VERSION}/browser/modules/readinglist/ReadingList.jsm
 lib/firefox-${VERSION}/browser/modules/readinglist/SQLiteStore.jsm
 lib/firefox-${VERSION}/browser/modules/readinglist/Scheduler.jsm
+lib/firefox-${VERSION}/browser/modules/readinglist/ServerClient.jsm
+lib/firefox-${VERSION}/browser/modules/readinglist/Sync.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/ContentRestore.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/DocShellCapabilities.jsm
 lib/firefox-${VERSION}/browser/modules/sessionstore/FrameTree.jsm
@@ -1726,6 +1734,7 @@ lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutSupport.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutSupport.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutTelemetry.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutTelemetry.properties
+lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/aboutWebrtc.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/appPicker.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/appstrings.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/global/autocomplete.properties
@@ -1859,14 +1868,21 @@ lib/firefox-${VERSION}/chrome/marionette/content/EventUtils.js
 lib/firefox-${VERSION}/chrome/marionette/content/MozillaLogger.js
 lib/firefox-${VERSION}/chrome/marionette/content/SpecialPowersObserver.js
 lib/firefox-${VERSION}/chrome/marionette/content/SpecialPowersObserverAPI.js
+lib/firefox-${VERSION}/chrome/marionette/content/actions.js
 lib/firefox-${VERSION}/chrome/marionette/content/atoms.js
-lib/firefox-${VERSION}/chrome/marionette/content/marionette-common.js
-lib/firefox-${VERSION}/chrome/marionette/content/marionette-elements.js
-lib/firefox-${VERSION}/chrome/marionette/content/marionette-frame-manager.js
-lib/firefox-${VERSION}/chrome/marionette/content/marionette-listener.js
-lib/firefox-${VERSION}/chrome/marionette/content/marionette-sendkeys.js
-lib/firefox-${VERSION}/chrome/marionette/content/marionette-server.js
-lib/firefox-${VERSION}/chrome/marionette/content/marionette-simpletest.js
+lib/firefox-${VERSION}/chrome/marionette/content/command.js
+lib/firefox-${VERSION}/chrome/marionette/content/common.js
+lib/firefox-${VERSION}/chrome/marionette/content/dispatcher.js
+lib/firefox-${VERSION}/chrome/marionette/content/driver.js
+lib/firefox-${VERSION}/chrome/marionette/content/elements.js
+lib/firefox-${VERSION}/chrome/marionette/content/emulator.js
+lib/firefox-${VERSION}/chrome/marionette/content/error.js
+lib/firefox-${VERSION}/chrome/marionette/content/frame-manager.js
+lib/firefox-${VERSION}/chrome/marionette/content/listener.js
+lib/firefox-${VERSION}/chrome/marionette/content/modal.js
+lib/firefox-${VERSION}/chrome/marionette/content/sendkeys.js
+lib/firefox-${VERSION}/chrome/marionette/content/server.js
+lib/firefox-${VERSION}/chrome/marionette/content/simpletest.js
 lib/firefox-${VERSION}/chrome/marionette/content/specialpowers.js
 lib/firefox-${VERSION}/chrome/marionette/content/specialpowersAPI.js
 lib/firefox-${VERSION}/chrome/marionette/modules/Assert.jsm
@@ -1928,13 +1944,13 @@ lib/firefox-${VERSION}/chrome/toolkit/content/global/about.xhtml
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutAbout.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutAbout.xhtml
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutCache.js
-lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutCompartments.js
-lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutCompartments.xhtml
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutMemory.css
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutMemory.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutMemory.xhtml
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutNetworking.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutNetworking.xhtml
+lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutPerformance.js
+lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutPerformance.xhtml
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutRights-unbranded.xhtml
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutRights.xhtml
 lib/firefox-${VERSION}/chrome/toolkit/content/global/aboutSupport.js
@@ -2186,12 +2202,10 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-dn-sharp.g
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-dn.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-down.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-lft-dis.gif
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-lft-hov.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-lft-sharp-end.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-lft-sharp.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-lft.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-rit-dis.gif
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-rit-hov.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-rit-sharp-end.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-rit-sharp.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/arrow/arrow-rit.gif
@@ -2373,7 +2387,13 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/sort-asc-classic.
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/sort-asc.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/sort-dsc-classic.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/sort-dsc.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-clsd-hover-rtl.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-clsd-hover.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-clsd-rtl.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-clsd.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-open-hover-rtl.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-open-hover.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-open-rtl.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-open.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/wizard.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/aboutNetworking.css
@@ -2389,17 +2409,12 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/alerticon-
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/blocklist.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/cancel.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-available.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-dictionaries.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-discover.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-experiments.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-extensions.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-languages.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-plugins.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-recent.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-search.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-searchengines.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-service.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/category-themes.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/dictionaryGeneric-16.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/dictionaryGeneric.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/extensions/discover-logo.png
@@ -2437,8 +2452,6 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/contentPlugin
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginDownload.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginMissing.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginStripe.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/notifyPluginCrashed.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/notifyPluginGeneric.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/pluginBlocked-64.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/pluginBlocked.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/pluginGeneric-16.png
@@ -2451,7 +2464,6 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/update/downloadButton
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/update/updates.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/viewsource/viewsource.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallConfirm.css
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/xpinstall/xpinstallItemGeneric.png
 lib/firefox-${VERSION}/components/ActivityMessageConfigurator.js
 lib/firefox-${VERSION}/components/ActivityProxy.js
 lib/firefox-${VERSION}/components/ActivityRequestHandler.js
@@ -2479,6 +2491,7 @@ lib/firefox-${VERSION}/components/MainProcessSingleton.js
 lib/firefox-${VERSION}/components/MozKeyboard.js
 lib/firefox-${VERSION}/components/NetworkGeolocationProvider.js
 lib/firefox-${VERSION}/components/NotificationStorage.js
+lib/firefox-${VERSION}/components/PACGenerator.js
 lib/firefox-${VERSION}/components/PageThumbsProtocol.js
 lib/firefox-${VERSION}/components/Payment.js
 lib/firefox-${VERSION}/components/PaymentFlowInfo.js
@@ -2496,6 +2509,7 @@ lib/firefox-${VERSION}/components/SlowScriptDebug.js
 lib/firefox-${VERSION}/components/SystemMessageCache.js
 lib/firefox-${VERSION}/components/SystemMessageInternal.js
 lib/firefox-${VERSION}/components/SystemMessageManager.js
+lib/firefox-${VERSION}/components/TCPPresentationServer.js
 lib/firefox-${VERSION}/components/TCPServerSocket.js
 lib/firefox-${VERSION}/components/TCPSocket.js
 lib/firefox-${VERSION}/components/TCPSocketParentIntermediary.js
@@ -2628,6 +2642,7 @@ lib/firefox-${VERSION}/modules/BrowserUtils.jsm
 lib/firefox-${VERSION}/modules/CertUtils.jsm
 lib/firefox-${VERSION}/modules/CharsetMenu.jsm
 lib/firefox-${VERSION}/modules/ChromeManifestParser.jsm
+lib/firefox-${VERSION}/modules/ClientID.jsm
 lib/firefox-${VERSION}/modules/CloudSync.jsm
 lib/firefox-${VERSION}/modules/CloudSyncAdapters.jsm
 lib/firefox-${VERSION}/modules/CloudSyncBookmarks.jsm
@@ -2640,6 +2655,7 @@ lib/firefox-${VERSION}/modules/ClusterLib.js
 lib/firefox-${VERSION}/modules/ColorAnalyzer_worker.js
 lib/firefox-${VERSION}/modules/ColorConversion.js
 lib/firefox-${VERSION}/modules/CommonDialog.jsm
+lib/firefox-${VERSION}/modules/CompatWarning.jsm
 lib/firefox-${VERSION}/modules/ContactDB.jsm
 lib/firefox-${VERSION}/modules/ContactService.jsm
 lib/firefox-${VERSION}/modules/ContentPrefInstance.jsm
@@ -2684,9 +2700,11 @@ lib/firefox-${VERSION}/modules/FxAccountsClient.jsm
 lib/firefox-${VERSION}/modules/FxAccountsCommon.js
 lib/firefox-${VERSION}/modules/FxAccountsOAuthClient.jsm
 lib/firefox-${VERSION}/modules/FxAccountsOAuthGrantClient.jsm
+lib/firefox-${VERSION}/modules/FxAccountsProfile.jsm
 lib/firefox-${VERSION}/modules/FxAccountsProfileChannel.jsm
 lib/firefox-${VERSION}/modules/FxAccountsProfileClient.jsm
 lib/firefox-${VERSION}/modules/GMPInstallManager.jsm
+lib/firefox-${VERSION}/modules/GMPUtils.jsm
 lib/firefox-${VERSION}/modules/Geometry.jsm
 lib/firefox-${VERSION}/modules/HealthReport.jsm
 lib/firefox-${VERSION}/modules/History.jsm
@@ -2720,6 +2738,7 @@ lib/firefox-${VERSION}/modules/NativeApp.jsm
 lib/firefox-${VERSION}/modules/NetUtil.jsm
 lib/firefox-${VERSION}/modules/NewTabUtils.jsm
 lib/firefox-${VERSION}/modules/NotificationDB.jsm
+lib/firefox-${VERSION}/modules/ObjectUtils.jsm
 lib/firefox-${VERSION}/modules/OfflineCacheInstaller.jsm
 lib/firefox-${VERSION}/modules/OperatorApps.jsm
 lib/firefox-${VERSION}/modules/PageMenu.jsm
@@ -2729,6 +2748,7 @@ lib/firefox-${VERSION}/modules/PageThumbs.jsm
 lib/firefox-${VERSION}/modules/PageThumbsWorker.js
 lib/firefox-${VERSION}/modules/Payment.jsm
 lib/firefox-${VERSION}/modules/PerfMeasurement.jsm
+lib/firefox-${VERSION}/modules/PerformanceStats.jsm
 lib/firefox-${VERSION}/modules/PermissionSettings.jsm
 lib/firefox-${VERSION}/modules/PermissionsInstaller.jsm
 lib/firefox-${VERSION}/modules/PermissionsTable.jsm
@@ -3157,6 +3177,7 @@ lib/firefox-${VERSION}/modules/devtools/gcli/commands/paintflashing.js
 lib/firefox-${VERSION}/modules/devtools/gcli/commands/pref.js
 lib/firefox-${VERSION}/modules/devtools/gcli/commands/preflist.js
 lib/firefox-${VERSION}/modules/devtools/gcli/commands/restart.js
+lib/firefox-${VERSION}/modules/devtools/gcli/commands/rulers.js
 lib/firefox-${VERSION}/modules/devtools/gcli/commands/screenshot.js
 lib/firefox-${VERSION}/modules/devtools/gcli/commands/test.js
 lib/firefox-${VERSION}/modules/devtools/gcli/commands/tools.js
@@ -3269,6 +3290,7 @@ lib/firefox-${VERSION}/modules/devtools/server/actors/stylesheets.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/timeline.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/tracer.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/ScriptStore.js
+lib/firefox-${VERSION}/modules/devtools/server/actors/utils/TabSources.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/actor-registry-utils.js
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/audionodes.json
 lib/firefox-${VERSION}/modules/devtools/server/actors/utils/automation-timeline.js
@@ -3349,7 +3371,6 @@ lib/firefox-${VERSION}/modules/services-common/hawkrequest.js
 lib/firefox-${VERSION}/modules/services-common/logmanager.js
 lib/firefox-${VERSION}/modules/services-common/observers.js
 lib/firefox-${VERSION}/modules/services-common/rest.js
-lib/firefox-${VERSION}/modules/services-common/storageservice.js
 lib/firefox-${VERSION}/modules/services-common/stringbundle.js
 lib/firefox-${VERSION}/modules/services-common/tokenserverclient.js
 lib/firefox-${VERSION}/modules/services-common/utils.js

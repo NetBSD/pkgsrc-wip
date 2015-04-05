@@ -1,6 +1,6 @@
-$NetBSD: patch-mfbt_Attributes.h,v 1.4 2015/03/30 08:09:10 thomasklausner Exp $
+$NetBSD: patch-mfbt_Attributes.h,v 1.5 2015/04/05 07:33:51 thomasklausner Exp $
 
---- mfbt/Attributes.h.orig	2015-03-24 09:13:57.000000000 +0000
+--- mfbt/Attributes.h.orig	2015-04-05 06:58:05.000000000 +0000
 +++ mfbt/Attributes.h
 @@ -50,6 +50,7 @@
   * don't indicate support for them here, due to
@@ -28,5 +28,5 @@ $NetBSD: patch-mfbt_Attributes.h,v 1.4 2015/03/30 08:09:10 thomasklausner Exp $
 +#    define MOZ_HAVE_CXX11_ALIGNAS
 +#  endif
  #  if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
- #      define MOZ_HAVE_CXX11_CONSTEXPR
- #      define MOZ_HAVE_EXPLICIT_CONVERSION
+ #    define MOZ_HAVE_CXX11_CONSTEXPR
+ #    if MOZ_GCC_VERSION_AT_LEAST(4, 8, 0)
