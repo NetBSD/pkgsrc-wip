@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2015/03/09 21:52:06 tnn2 Exp $
+# $NetBSD: options.mk,v 1.22 2015/04/05 16:34:37 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -58,7 +58,7 @@ DRI_DRIVERS+=		swrast
 
 # Software rasterizer
 GALLIUM_DRIVERS=	#
-PLIST.swrast+=		yes
+PLIST.swrast=		yes
 GALLIUM_DRIVERS+=	swrast
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
