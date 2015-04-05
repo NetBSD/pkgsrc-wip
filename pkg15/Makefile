@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/02/23 18:24:20 khorben Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/05 20:06:53 khorben Exp $
 #
 
-GHCOMMIT=	d7d7a7f532ce90d41f7c146b209b5c34808f8b09
+GHCOMMIT=	87ba5ad017b7e984999278d3f63010522ba47b01
 DISTNAME=	${GHCOMMIT}
-PKGNAME=	pkg15-1.4.99.11.20150220
-PKGREVISION=	5
+PKGNAME=	pkg15-1.4.99.18.20150405
 CATEGORIES=	pkgtools
 MASTER_SITES=	https://github.com/freebsd/pkg/archive/
 

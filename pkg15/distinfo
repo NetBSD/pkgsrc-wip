@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/02/23 18:25:24 khorben Exp $
+$NetBSD: distinfo,v 1.5 2015/04/05 20:06:53 khorben Exp $
 
-SHA1 (d7d7a7f532ce90d41f7c146b209b5c34808f8b09.tar.gz) = fc71ff2152995ded9d991821e093ae0fe69b83d2
-RMD160 (d7d7a7f532ce90d41f7c146b209b5c34808f8b09.tar.gz) = 0989322de74d5a11f8b5c4519594b886e8110ebd
-Size (d7d7a7f532ce90d41f7c146b209b5c34808f8b09.tar.gz) = 2928523 bytes
-SHA1 (patch-compat_bsd__compat.h) = 56ed4ab89e0298badf0715c1ac277c13dfa44146
-SHA1 (patch-compat_file__at.c) = b5f644f1cdc39cc1885a716a748283632c51bbb9
-SHA1 (patch-libpkg_pkg.h.in) = 880728301aaf3801c253207904a5bfaeaed770c4
-SHA1 (patch-libpkg_pkg__elf.c) = a016bb435c62ad2102cc958b7dc11b539928a03f
-SHA1 (patch-libpkg_pkg__status.c) = 8cb9625e1650b3a9bceabf8932aedb7665a84698
-SHA1 (patch-libpkg_private_elf__tables.h) = 31950c9cd29bda488f4e6ac28e558e8a5286cb45
+SHA1 (87ba5ad017b7e984999278d3f63010522ba47b01.tar.gz) = f4ba54fa287040b0b81e899bfcb1afd7785633cb
+RMD160 (87ba5ad017b7e984999278d3f63010522ba47b01.tar.gz) = 2dd24e521dd6eba45ffb685e31f0564ee0ce3309
+Size (87ba5ad017b7e984999278d3f63010522ba47b01.tar.gz) = 2936700 bytes
+SHA1 (patch-libpkg_pkg__add.c) = 0d06efc9beeecb533aac5e930bf0de344115f9c6
+SHA1 (patch-libpkg_pkg__delete.c) = 89a4aebf1c2a4797ca482e58850a79e4024528ed
