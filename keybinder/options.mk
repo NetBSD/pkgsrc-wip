@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/04/05 19:46:56 krytarowski Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/05 20:35:31 krytarowski Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.keybinder
 PKG_SUPPORTED_OPTIONS=		doc lua python
@@ -23,8 +23,10 @@ CONFIGURE_ARGS+=	--disable-lua
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
+PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+.include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../lang/python27/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-python
 PLIST_SRC+=		PLIST.python
 .else

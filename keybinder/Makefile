@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/05 19:46:56 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/05 20:35:31 krytarowski Exp $
 
 DISTNAME=	keybinder-0.3.0
 CATEGORIES=	x11
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
+PLIST_SRC+=	PLIST
 
 PKGCONFIG_OVERRIDE+=	libkeybinder/keybinder.pc.in
 
