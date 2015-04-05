@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.gtkdoc,v 1.2 2015/04/05 20:35:31 krytarowski Exp $
-share/gtk-doc/html/keybinder/left-insensitive.png
-share/gtk-doc/html/keybinder/right-insensitive.png
-share/gtk-doc/html/keybinder/up-insensitive.png

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/05 20:35:31 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/05 20:41:19 krytarowski Exp $
 
 DISTNAME=	keybinder-0.3.0
 CATEGORIES=	x11
@@ -17,6 +17,8 @@ PLIST_SRC+=	PLIST
 PKGCONFIG_OVERRIDE+=	libkeybinder/keybinder.pc.in
 
 CONFIGURE_ARGS+=	--disable-static
+# Don't rebuild the documentation
+CONFIGURE_ARGS+=	--disable-gtk-doc
 
 post-install:
 	${RUN}${RM} ${DESTDIR}${PREFIX}/lib/libkeybinder.a

@@ -1,18 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2015/04/05 20:35:31 krytarowski Exp $
+# $NetBSD: options.mk,v 1.3 2015/04/05 20:41:20 krytarowski Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.keybinder
-PKG_SUPPORTED_OPTIONS=		doc lua python
+PKG_SUPPORTED_OPTIONS=		lua python
 PKG_SUGGESTED_OPTIONS=		python
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mdoc)
-.include "../../textproc/gtk-doc/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gtk-doc
-PLIST_SRC+=		PLIST.gtkdoc
-.else
-CONFIGURE_ARGS+=	--disable-gtk-doc
-.endif
 
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua51/buildlink3.mk"
