@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/04/03 21:30:42 tnn2 Exp $
+# $NetBSD: Makefile,v 1.30 2015/04/05 19:37:19 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -51,13 +51,6 @@ SUBST_SED.wrapper-bug+=		-e 's,libglapi_shared.la,libglapi.la,g'
 PYTHON_FOR_BUILD_ONLY=	yes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 .include "../../lang/python/tool.mk"
-
-.if !empty(OPSYS:M*BSD)
-CONFIGURE_ARGS+=	--with-sha1=libc
-.else
-.include "../../security/nettle/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sha1=libnettle
-.endif
 
 # On NetBSD < 6 we need to compile with GCC from pkgsrc.
 # But GCC from pkgsrc does not add implicit -lc like base GCC does,
