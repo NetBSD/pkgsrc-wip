@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2015/04/05 16:43:19 tnn2 Exp $
+$NetBSD: distinfo,v 1.27 2015/04/05 16:54:28 tnn2 Exp $
 
 SHA1 (mesa-10.5.2.tar.xz) = e5659207105531385454e6fa08a1c3cf46a2ce95
 RMD160 (mesa-10.5.2.tar.xz) = f210e94c2c178970ca54c5f0b47f7ec0d2dc5bb3
@@ -10,7 +10,7 @@ SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = a48959f10f09decfaf66180bd69c
 SHA1 (patch-src_gallium_drivers_r600_sb_sb__expr.cpp) = e75f4d97e46a1ca9ff6edb6c2888ca513db7fd2a
 SHA1 (patch-src_gallium_include_pipe_p__config.h) = 3183844096e8952d722d059e94247513aa16c8c8
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c) = 2cc53b390af6ba71dc6b5acaf30c158729e0a784
-SHA1 (patch-src_gbm_main_gbm.c) = bc9e1fe1f6777fdcec7f47c2d9b86b9b6251ca59
+SHA1 (patch-src_gbm_main_gbm.c) = b017e4d5d906898739f625d4a66c2918b63a1980
 SHA1 (patch-src_mesa_drivers_dri_common_Makefile.in) = 24bc5de306ab3718c37cd980493de7525bab2c19
 SHA1 (patch-src_mesa_drivers_dri_common_xmlconfig.c) = 42ed0b55f219afbce340abd9b0294991953bd995
 SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = 8587f6b8825bdd8ada74a5e8573f469a1cd80d35
