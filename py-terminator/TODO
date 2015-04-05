@@ -1,4 +1,1 @@
 1. Missing soft-dependency of keybinder https://github.com/engla/keybinder
-
-2. Undefined clash of dependencies of vte and py-vte -- it's needed to build
-and install them manually. This occurs in pkgsrc-2013Q4 (NetBSD/6.1.x).
