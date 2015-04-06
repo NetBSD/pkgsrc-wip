@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/06/01 12:49:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/06 09:13:02 thomasklausner Exp $
 
 GIT_PKG=		euca2ools
 GIT_LEVEL=		2.1.3
@@ -17,7 +17,7 @@ LICENSE=		2-clause-bsd
 DEPENDS+=		${PYPKGPREFIX}-boto>=2.2:../../net/py-boto
 DEPENDS+=		${PYPKGPREFIX}-m2crypto>=0.20.2:../../security/py-m2crypto
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-m2crypto, py-filechunkio via py-boto
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-m2crypto
 
 DIST_SUBDIR=		${GIT_PKG}
 USE_LANGUAGES=		# python
