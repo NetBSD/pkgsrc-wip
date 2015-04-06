@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/05 20:35:31 krytarowski Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/06 10:07:16 krytarowski Exp $
 include/keybinder.h
 lib/girepository-1.0/Keybinder-0.0.typelib
-lib/libkeybinder.so
-lib/libkeybinder.so.0
-lib/libkeybinder.so.0.1.0
+lib/libkeybinder.la
 lib/pkgconfig/keybinder.pc
 share/gir-1.0/Keybinder-0.0.gir
 share/gtk-doc/html/keybinder/annotation-glossary.html
