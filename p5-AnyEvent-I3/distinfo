@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/06 17:22:22 nros Exp $
+
+SHA1 (AnyEvent-I3-0.16.tar.gz) = 12effe154e116401732775aef576588001a3acfd
+RMD160 (AnyEvent-I3-0.16.tar.gz) = 51e15e6f36e5a1015f2b3f844bb6227aaa4d3859
+Size (AnyEvent-I3-0.16.tar.gz) = 25320 bytes
