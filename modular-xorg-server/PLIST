@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/04/03 15:37:49 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/04/06 12:06:54 tnn2 Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -107,6 +107,7 @@ include/xorg/shadow.h
 include/xorg/shadowfb.h
 include/xorg/shmint.h
 include/xorg/site.h
+${PLIST.sunos}include/xorg/solaris-${SUNOS_ARCH}.il
 include/xorg/swaprep.h
 include/xorg/swapreq.h
 include/xorg/syncsdk.h
