@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6128 2015/04/06 00:56:45 krytarowski Exp $
+# $Id: Makefile,v 1.6129 2015/04/06 11:06:38 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1613,6 +1613,7 @@ SUBDIR+=	lsyncd
 SUBDIR+=	ltp
 SUBDIR+=	ltrace
 SUBDIR+=	lua-MessagePack
+SUBDIR+=	lua-keybinder
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-pgsql
 SUBDIR+=	luasocket
@@ -2754,6 +2755,7 @@ SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kabuki
 SUBDIR+=	py-kcs11
+SUBDIR+=	py-keybinder
 SUBDIR+=	py-keyczar
 SUBDIR+=	py-khayyam
 SUBDIR+=	py-kineticlib
