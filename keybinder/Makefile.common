@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/04/06 09:35:36 krytarowski Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/04/06 09:58:19 krytarowski Exp $
 #
 # used by x11/py-keybinder/Makefile
 
@@ -8,5 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 HOMEPAGE=	https://github.com/engla/keybinder
 LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=          ${.CURDIR}/../../wip/keybinder/distinfo
+PATCHDIR=               ${.CURDIR}/../../wip/keybinder/patches
 
 PKGCONFIG_OVERRIDE+=	libkeybinder/keybinder.pc.in
