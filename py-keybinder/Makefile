@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/06 10:07:16 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/06 10:44:24 krytarowski Exp $
 
 .include "../../wip/keybinder/Makefile.common"
 
@@ -9,15 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python bindings for the keybinder library
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
-
-CONFIGURE_ARGS+=	--disable-static
 CONFIGURE_ARGS+=	--disable-lua
 CONFIGURE_ARGS+=	--enable-python
-# Don't rebuild the documentation
-CONFIGURE_ARGS+=	--disable-gtk-doc
 
 PY_PATCHPLIST=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34

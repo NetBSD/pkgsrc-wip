@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/06 10:26:55 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/06 10:44:24 krytarowski Exp $
 
 .include "../../wip/keybinder/Makefile.common"
 
@@ -9,15 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Lua bindings for the keybinder library
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
-
-CONFIGURE_ARGS+=	--disable-static
 CONFIGURE_ARGS+=	--enable-lua
 CONFIGURE_ARGS+=	--disable-python
-# Don't rebuild the documentation
-CONFIGURE_ARGS+=	--disable-gtk-doc
 
 INSTALL_DIRS=	lua-keybinder
 
