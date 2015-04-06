@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.python,v 1.1 2015/04/06 09:19:12 krytarowski Exp $
-${PYSITELIB}/keybinder/__init__.py
-${PYSITELIB}/keybinder/__init__.pyc
-${PYSITELIB}/keybinder/__init__.pyo
-${PYSITELIB}/keybinder/_keybinder.so

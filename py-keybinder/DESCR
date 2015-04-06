@@ -7,4 +7,4 @@ The library contains:
 - Python bindings, python-keybinder
 - An examples directory with programs in C, Lua, Python and Vala.
 
-There are: Python and Lua bindings.
+This package contains the Python bindings.

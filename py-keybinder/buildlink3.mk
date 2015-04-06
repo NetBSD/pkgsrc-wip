@@ -1,15 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/04/06 09:19:12 krytarowski Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/04/06 09:53:21 krytarowski Exp $
 
-BUILDLINK_TREE+=	keybinder
+BUILDLINK_TREE+=	py-keybinder
 
-.if !defined(KEYBINDER_BUILDLINK3_MK)
-KEYBINDER_BUILDLINK3_MK:=
+.if !defined(PY_KEYBINDER_BUILDLINK3_MK)
+PY_KEYBINDER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.keybinder+=	keybinder>=0.3.0
-BUILDLINK_PKGSRCDIR.keybinder?=	../../wip/keybinder
+.include "../../lang/python/pyversion.mk"
 
-.include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.endif	# KEYBINDER_BUILDLINK3_MK
+BUILDLINK_API_DEPENDS.py-keybinder+=	${PYPKGPREFIX}-keybinder>=0.3.0
+BUILDLINK_PKGSRCDIR.py-keybinder?=	../../wip/py-keybinder
 
-BUILDLINK_TREE+=	-keybinder
+.include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../wip/keybinder/buildlink3.mk"
+.endif	# PY_KEYBINDER_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-py-keybinder
