@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6129 2015/04/06 11:06:38 krytarowski Exp $
+# $Id: Makefile,v 1.6130 2015/04/06 20:58:36 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -749,6 +749,7 @@ SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambas2
 SUBDIR+=	gambatte-dev
 SUBDIR+=	gambit
+SUBDIR+=	ganglia-monitor-core
 SUBDIR+=	ganglia-monitor-core319
 SUBDIR+=	ganglia-web
 SUBDIR+=	gappa
