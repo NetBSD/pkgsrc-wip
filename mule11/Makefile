@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/07 04:53:22 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/07 08:13:26 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
@@ -16,11 +16,11 @@ USE_TOOLS=		gmake
 BROKEN=		Segfaults without -nw, see TODO, thanks
 
 # next chunk should be before SUBST_CLASSES= pref
-SUBST_CLASSES+=		var
-SUBST_MESSAGE.var=	Adjust VARBASE
-SUBST_FILES.var=	src/paths.h-dist
-SUBST_STAGE.var=	pre-configure
-SUBST_VARS.var=		VARBASE
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	Adjust PATH (VARBASE and PKGVERSION)
+SUBST_FILES.path=	src/paths.h-dist
+SUBST_STAGE.path=	pre-configure
+SUBST_VARS.path=	VARBASE PKGNAME
 
 SUBST_CLASSES+=		pref
 SUBST_SED.pref=		-e 's,/usr/local,${PREFIX},g'

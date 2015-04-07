@@ -1,5 +1,6 @@
-$NetBSD: patch-src_dispnew.c,v 1.1 2015/04/07 02:33:28 makoto Exp $
+$NetBSD: patch-src_dispnew.c,v 1.2 2015/04/07 08:13:26 makoto Exp $
 
+Squelch warining
 
 --- src/dispnew.c.orig	2015-03-28 00:05:34.000000000 +0900
 +++ src/dispnew.c	2015-04-07 10:13:29.000000000 +0900
