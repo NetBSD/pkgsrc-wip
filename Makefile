@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6131 2015/04/07 11:29:12 othyro Exp $
+# $Id: Makefile,v 1.6132 2015/04/07 16:39:49 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1354,7 +1354,6 @@ SUBDIR+=	kapital
 SUBDIR+=	kawa
 SUBDIR+=	keepassx-git
 SUBDIR+=	keybinder
-SUBDIR+=	keybinder3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	khard-git
