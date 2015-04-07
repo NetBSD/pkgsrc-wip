@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/06 10:26:55 krytarowski Exp $
-${PYSITELIB}/keybinder/__init__.py
-${PYSITELIB}/keybinder/__init__.pyc
-${PYSITELIB}/keybinder/__init__.pyo
-${PYSITELIB}/keybinder/_keybinder.la
+@comment $NetBSD: PLIST,v 1.2 2015/04/07 16:14:35 krytarowski Exp $
+lib/lua/5.1/keybinder.la

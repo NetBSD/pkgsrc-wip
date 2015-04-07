@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/06 10:44:24 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/07 16:14:35 krytarowski Exp $
 
 .include "Makefile.common"
 
@@ -8,7 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for registering keyboard shortcuts
 LICENSE=	gnu-gpl-v2
 
-CONFIGURE_ARGS+=	--disable-lua
 CONFIGURE_ARGS+=	--disable-python
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
