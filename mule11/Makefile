@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/07 02:33:28 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/07 02:56:05 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
@@ -18,7 +18,7 @@ BROKEN=		See TODO, thanks
 SUBST_CLASSES+=		pref
 SUBST_SED.pref=		-e 's,/usr/local,${PREFIX},g'
 SUBST_MESSAGE.pref=	Convert /usr/local to ${PREFIX}
-SUBST_STAGE.pref=	pre-patch
+SUBST_STAGE.pref=	pre-configure
 SUBST_FILES.pref=	\
 	Makefile \
 	build-install \
@@ -49,7 +49,7 @@ SUBST_SED.dest+=	-e 's,$${LIBDIR},$$\{DESTDIR\}$$\{LIBDIR\},g'
 SUBST_SED.dest+=	-e 's,$${MANDIR},$$\{DESTDIR\}$$\{PKGMANDIR\},g'
 SUBST_SED.dest+=	-e 's,^INSTALLFLAGS,\#INSTALLFLAGS,'
 SUBST_MESSAGE.dest=	Support to DESTDIR (and disables INSTALLFLAGS)
-SUBST_STAGE.dest=	pre-patch
+SUBST_STAGE.dest=	pre-configure
 SUBST_FILES.dest=	Makefile
 
 # src/xemacs
