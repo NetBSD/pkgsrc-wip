@@ -8,7 +8,16 @@
 modena@makoto 13:51:14/150407(..wip/mule11)% mule
 Fatal error (6).zsh: abort (core dumped)  mule
 
-(4-2)
+(4-2) *** I M P O R T A N T    F O R   N O W  ***
+
+If you check your available font, like
+  xlsfonts |& grep jis
+and take one of them, say,
+  mule -fn "-sony-fixed-medium-r-normal--16-120-100-100-c-80-jisx0201.1976-0"
+mule starts. 
+  otherwise, you will see next items.
+  
+(4-3)
 modena@makoto 11:15:10/150407(..wip/mule11)% gdb /export/WRKOBJDIR/wip/mule11/work/.destdir/usr/pkg/bin/mule mule.core 
 GNU gdb (GDB) 7.3.1
 Copyright (C) 2011 Free Software Foundation, Inc.
