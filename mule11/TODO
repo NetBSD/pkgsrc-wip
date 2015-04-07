@@ -2,19 +2,11 @@
 
 (2) src/xemacs is not handled yet
 
-(3)
-=> Checking for work-directory references in mule-1.1
-ERROR: /usr/pkg/bin/mule:       Binary file /export/WRKOBJDIR/wip/mule11/work/.destdir/usr/pkg/bin/mule matches
-ERROR: *** The above files still have references to the build directory.
-ERROR:     This is possibly an error that should be fixed by unwrapping
-ERROR:     the files or adding missing tools to the package makefile!
-*** Error code 1
+(3) Now installs ${PREFIX}/mule, should be ${PREFIX}/share/mule or ${PREFIX}/share/emacs/mule
 
-
-(4)
-modena@makoto 11:13:15/150407(..wip/mule11)% /export/WRKOBJDIR/wip/mule11/work/.destdir/usr/pkg/bin/mule
-Warning: lisp library (/usr/pkg/mule/lisp) does not exist.
-Fatal error (6).zsh: abort (core dumped)  /export/WRKOBJDIR/wip/mule11/work/.destdir/usr/pkg/bin/mule
+(4) works only with -nw, otherwise:
+modena@makoto 13:51:14/150407(..wip/mule11)% mule
+Fatal error (6).zsh: abort (core dumped)  mule
 
 (4-2)
 modena@makoto 11:15:10/150407(..wip/mule11)% gdb /export/WRKOBJDIR/wip/mule11/work/.destdir/usr/pkg/bin/mule mule.core 

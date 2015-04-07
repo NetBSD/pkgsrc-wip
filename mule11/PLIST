@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/07 02:33:28 makoto Exp $
-bin/ctags
-bin/emacsclient
-bin/etags
+@comment $NetBSD: PLIST,v 1.2 2015/04/07 04:53:22 makoto Exp $
+${PLIST.exclusive}bin/ctags
+${PLIST.exclusive}bin/emacsclient
+${PLIST.exclusive}bin/etag
 bin/m2ps
 bin/mule
 mule/etc/3B-MAXMEM
@@ -541,4 +541,3 @@ mule/lisp/xscheme.el
 mule/lisp/xscheme.elc
 mule/lisp/yow.el
 mule/lisp/yow.elc
-@pkgdir mule/lock

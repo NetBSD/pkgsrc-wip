@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2015/04/07 03:12:27 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/07 04:53:22 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
 GITHUB_PROJECT=		mule1.1-netbsd
 GITHUB_TAG=		p20150328
-CATEGORIES=		inputmethod
+CATEGORIES=		editors
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		https://github.com/tsutsui/mule1.1-netbsd
-COMMENT=		Classical Mule, Muliti-Lingual-Emacs, based on 19.28
+COMMENT=		Classical Mule, Muliti-Lingual-Emacs, based on 18.59
 LICENSE=		gnu-gpl-v1
 
 USE_TOOLS=		gmake
 
-BROKEN=		See TODO, thanks
+BROKEN=		Segfaults without -nw, see TODO, thanks
 
 # next chunk should be before SUBST_CLASSES= pref
 SUBST_CLASSES+=		var
@@ -60,7 +60,12 @@ SUBST_STAGE.dest=	pre-configure
 SUBST_FILES.dest=	Makefile
 
 # src/xemacs
-#SPECIAL_PERMS=		
+#SPECIAL_PERMS=
+
+REPLACE_PERL=		etc/faq2texi.perl
+
+# build PATH in the dumped emacs may not be a problem
+CHECK_WRKREF_SKIP+=     bin/mule
 
 .include	"../../mk/bsd.prefs.mk"
 
@@ -72,6 +77,8 @@ pre-configure:
 	      src/config.h; \
 	${CP} src/mconfig.h-${LOWER_OPSYS} src/mconfig.h; \
 	)
+
+.include "options.mk"
 
 .include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
