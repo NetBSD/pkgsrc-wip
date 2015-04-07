@@ -1,0 +1,21 @@
+--- src/paths.h-dist~	2015-03-28 00:05:34.000000000 +0900
++++ src/paths.h-dist	2015-04-07 11:58:20.000000000 +0900
+@@ -1,6 +1,6 @@
+ /* The default search path for Lisp function "load".
+    This sets load-path.  */
+-#define PATH_LOADSEARCH "/usr/local/emacs/lisp"
++#define PATH_LOADSEARCH "/usr/local/share/emacs/lisp"
+ 
+ /* the extra search path for programs to invoke.
+  This is appended to whatever the PATH environment variable says
+@@ -12,8 +12,8 @@
+  with which we record what files are being modified in Emacs.
+  This directory should be writable by everyone.
+  THE STRING MUST END WITH A SLASH!!!  */
+-#define PATH_LOCK "/usr/local/emacs/lock/"
++#define PATH_LOCK "@VARBASE@/lock/emacs"
+ 
+ /* the name of the file !!!SuperLock!!! in the directory
+  specified by PATH_LOCK.  Yes, this is redundant.  */
+-#define PATH_SUPERLOCK "/usr/local/emacs/lock/!!!SuperLock!!!"
++#define PATH_SUPERLOCK "@VARBASE@/lock/emacs/lock/!!!SuperLock!!!"

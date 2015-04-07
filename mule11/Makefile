@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/07 02:56:05 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/07 03:12:27 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
@@ -14,6 +14,13 @@ LICENSE=		gnu-gpl-v1
 USE_TOOLS=		gmake
 
 BROKEN=		See TODO, thanks
+
+# next chunk should be before SUBST_CLASSES= pref
+SUBST_CLASSES+=		var
+SUBST_MESSAGE.var=	Adjust VARBASE
+SUBST_FILES.var=	src/paths.h-dist
+SUBST_STAGE.var=	pre-configure
+SUBST_VARS.var=		VARBASE
 
 SUBST_CLASSES+=		pref
 SUBST_SED.pref=		-e 's,/usr/local,${PREFIX},g'

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/04/07 02:33:28 makoto Exp $
+$NetBSD: distinfo,v 1.2 2015/04/07 03:12:27 makoto Exp $
 
 SHA1 (mule-1.1.tar.gz) = df7c21c573e0fdbad64e9d142c1a6165da400ad6
 RMD160 (mule-1.1.tar.gz) = ffa0e7f99bf0781b9fc8aa413a82f01d9e058b45
 Size (mule-1.1.tar.gz) = 4246421 bytes
 SHA1 (patch-src_dispnew.c) = 179936590054623db46a14f6b161d68aa90c312b
+SHA1 (patch-src_paths.h-dist) = da84727ecd9cdafae4f42ce0d8582a31c427fbe0
