@@ -2,12 +2,14 @@ TODO
 ====
 
 0) Work on gcc should happen upstream as far as possible. I have sent
-some patches upstream recently. Let's hope for some progress.
+some patches for NetBSD to gcc upstream a few month ago. Let's hope for some
+progress after gcc 5.0 is released in a few weeks, but it will be too late
+for me. I no longer use NetBSD and won't spend more time on it.
 
 PR 64271, the minimal patch set to bootstrap, extracted from pkgsrc.
 Jonathan Wakely is working on the libstdc++ patches involved.
 Without acceptance of patches for PR 64271, no other patches
-will be accepted upstream.
+will be accepted upstream. 
 
 PR 39570, this bug causes all gfortran run tests to fail. I have developed
 the necessary patches and sent them upstream. For gcc50snapshot it means
@@ -18,25 +20,25 @@ PR 48244, for iso_c_binding support in gfortran. The patches are
 there but it is delayed by PR 64271.
 
 1) On NetBSD a working cabsl function must be present in libm to build gfortran.
-This has been added to -current on 2014/10/10 and to NetBSD7 on 2014/10/13. Before this date it was defined in complex.h but missing from libm in current and 7.
+This has been added to -current on 2014/10/10 and to NetBSD7 on 2014/10/13. Before this date it was defined in complex.h but missing from libm in current and 7.I am working on a solution for older systems.
  
 2) This package and the lang/gcc4x need a cleanup or a complete new start. I
 think that SUBST_VARS could handle the platform dependencies in a much cleaner
 way.
 
 3) There are many undocumented hacks in the Makefile and patches. And yes, I
-am guilty ;-)  I itend to document patches 
+am guilty ;-)
 
 4) I run tests on 7.0 and 7.99 regularly, see test_summary.log at different 
 times. Build status on different platforms:
 
 a) NetBSD 7.99.1 amd64: Builds and tests OK
 
-b) NetBSD 7.0 amd64: Builds and tests OK
+b) NetBSD 7.0 amd64: Builds and tests OK (20150329)
 
 c) NetBSD 7.0 i386: Builds (testsuite run not done yet)
 
-d) NetBSD 6.1 i386: Builds and tests OK (20150301).
+d) NetBSD 6.0 i386: Builds and tests OK (20150301)
  
 e) Debian jessie amd64: fails with the same error message as lang/gcc49:
 

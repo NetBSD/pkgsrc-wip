@@ -1,7 +1,7 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 221440
+LAST_UPDATED: Obtained from SVN: trunk revision 221765
 
-Native configuration is x86_64--netbsd
+Native configuration is x86_64--netbsd  # NetBSD 7.0
 
 		=== g++ tests ===
 
@@ -22,12 +22,12 @@ FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++14 execution test
 
 		=== g++ Summary ===
 
-# of expected passes		85281
+# of expected passes		85457
 # of unexpected failures	9
 # of expected failures		285
 # of unresolved testcases	3
-# of unsupported tests		3549
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/g++/../../xg++  version 5.0.0 20150315 (experimental) (GCC) 
+# of unsupported tests		3595
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/g++/../../xg++  version 5.0.0 20150329 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -57,7 +57,6 @@ UNRESOLVED: gcc.dg/superblock.c scan-rtl-dump-times sched2 "ADVANCING TO" 2
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
-FAIL: gcc.dg/graphite/vect-pr43423.c scan-tree-dump-times vect "vectorized 2 loops" 1
 XPASS: gcc.dg/guality/example.c   -O0  execution test
 XPASS: gcc.dg/guality/example.c   -O1  execution test
 XPASS: gcc.dg/guality/example.c   -O2  execution test
@@ -466,13 +465,13 @@ UNRESOLVED: gcc.target/i386/pr63618.c compilation failed to produce executable
 
 		=== gcc Summary ===
 
-# of expected passes		109064
-# of unexpected failures	320
+# of expected passes		109179
+# of unexpected failures	319
 # of unexpected successes	18
-# of expected failures		277
+# of expected failures		278
 # of unresolved testcases	92
-# of unsupported tests		2724
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150315 (experimental) (GCC) 
+# of unsupported tests		2729
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150329 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -494,23 +493,34 @@ FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -fomit-frame-pointer -funr
 FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
 FAIL: gfortran.dg/default_format_denormal_2.f90   -O3 -g  execution test
 FAIL: gfortran.dg/default_format_denormal_2.f90   -Os  execution test
-FAIL: gfortran.dg/erf_3.F90   -O0  execution test
-FAIL: gfortran.dg/erf_3.F90   -O1  execution test
-FAIL: gfortran.dg/erf_3.F90   -O2  execution test
-FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer  execution test
-FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-loops  execution test
-FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
-FAIL: gfortran.dg/erf_3.F90   -O3 -g  execution test
-FAIL: gfortran.dg/erf_3.F90   -Os  execution test
+FAIL: gfortran.dg/erf_3.F90   -O0  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O0  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O1  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O1  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O2  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O2  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-loops  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-loops  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -O3 -g  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -O3 -g  compilation failed to produce executable
+FAIL: gfortran.dg/erf_3.F90   -Os  (test for excess errors)
+UNRESOLVED: gfortran.dg/erf_3.F90   -Os  compilation failed to produce executable
+FAIL: gfortran.dg/large_real_kind_3.F90   -O0  (test for excess errors)
+UNRESOLVED: gfortran.dg/large_real_kind_3.F90   -O0  compilation failed to produce executable
 FAIL: gfortran.dg/nint_2.f90   -O0  execution test
 
 		=== gfortran Summary ===
 
-# of expected passes		48105
-# of unexpected failures	25
+# of expected passes		48283
+# of unexpected failures	26
 # of expected failures		78
+# of unresolved testcases	9
 # of unsupported tests		111
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 5.0.0 20150315 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 5.0.0 20150329 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -522,7 +532,7 @@ Running target unix
 # of expected passes		1445
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 5.0.0 20150315 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 5.0.0 20150329 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -538,7 +548,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150315 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc50snapshot/work/build/gcc/xgcc  version 5.0.0 20150329 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -552,12 +562,6 @@ Running target unix
 
 
 Running target unix
-WARNING: program timed out.
-FAIL: libgomp.fortran/examples-4/e.53.4.f90   -O0  execution test
-WARNING: program timed out.
-FAIL: libgomp.fortran/examples-4/e.53.4.f90   -O2  execution test
-WARNING: program timed out.
-FAIL: libgomp.fortran/examples-4/e.53.4.f90   -Os  execution test
 FAIL: libgomp.fortran/pr25162.f   -O3 -fomit-frame-pointer  execution test
 FAIL: libgomp.fortran/pr25162.f   -O3 -fomit-frame-pointer -funroll-loops  execution test
 FAIL: libgomp.fortran/pr25162.f   -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
@@ -565,8 +569,8 @@ FAIL: libgomp.fortran/pr25162.f   -O3 -g  execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		4698
-# of unexpected failures	7
+# of expected passes		4705
+# of unexpected failures	4
 # of unsupported tests		207
 		=== libitm tests ===
 
@@ -646,17 +650,17 @@ UNRESOLVED: tr1/5_numerical_facilities/special_functions/22_sph_legendre/check_n
 
 		=== libstdc++ Summary ===
 
-# of expected passes		9248
+# of expected passes		9254
 # of unexpected failures	55
 # of expected failures		64
 # of unresolved testcases	3
 # of unsupported tests		646
 
-Compiler version: 5.0.0 20150315 (experimental) (GCC) 
+Compiler version: 5.0.0 20150329 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-nls --with-libiconv-prefix=/usr --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc50snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc50snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --with-arch=nocona --with-tune=nocona --with-fpmath=sse --prefix=/usr/pkg/gcc50snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc50snapshot/info --mandir=/usr/pkg/gcc50snapshot/man
 EOF
-Mail -s "Results for 5.0.0 20150315 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 5.0.0 20150329 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc50snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
