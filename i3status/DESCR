@@ -1,4 +1,4 @@
-i3status is a small program (about 1500 SLOC) for generating a status bar
+i3status is a small program (about 3000 SLOC) for generating a status bar
 for dzen2, xmobar or similar programs. It is designed to be very efficient
 by issuing a very small number of system calls, as one generally wants
 to update such a status line every second.
