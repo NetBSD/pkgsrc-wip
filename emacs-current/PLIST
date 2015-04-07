@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.167 2015/03/04 12:52:20 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.168 2015/04/07 15:15:03 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -72,6 +72,7 @@ libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/profile
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
+man/man1/ChangeLog.1
 man/man1/ctags.1
 man/man1/ebrowse.1
 man/man1/emacs.1
