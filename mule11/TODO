@@ -14,7 +14,9 @@ If you check your available font, like
   xlsfonts |& grep jis
 and take one of them, say,
   mule -fn "-sony-fixed-medium-r-normal--16-120-100-100-c-80-jisx0201.1976-0"
-mule starts. 
+or
+  mule -fn "-misc-fixed-medium-r-normal--14-130-75-75-c-70-jisx0201.1976-0"
+
   otherwise, you will see next items.
   
 (4-3)

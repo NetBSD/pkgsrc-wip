@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/07 08:13:26 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/07 15:54:02 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v1
 
 USE_TOOLS=		gmake
 
-BROKEN=		Segfaults without -nw, see TODO, thanks
+#BROKEN=		Segfaults without -nw, see TODO, thanks
 
 # next chunk should be before SUBST_CLASSES= pref
 SUBST_CLASSES+=		path
@@ -77,6 +77,9 @@ pre-configure:
 	      src/config.h; \
 	${CP} src/mconfig.h-${LOWER_OPSYS} src/mconfig.h; \
 	)
+
+pre-install:
+	${RM} ${WRKSRC}/lisp/mule-init.el.orig
 
 .include "options.mk"
 
