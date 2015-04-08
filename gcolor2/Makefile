@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/08 23:48:10 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/08 23:54:39 krytarowski Exp $
 
 DISTNAME=	gcolor2-0.4
 CATEGORIES=	x11
@@ -20,11 +20,12 @@ SUBST_MESSAGE.df=	Fixing icon reference in desktop file
 SUBST_FILES.df=		${PKGBASE}.desktop
 SUBST_SED.df=		-e 's:/usr/share:${PREFIX}/share:1'
 
+AUTO_MKDIRS=	yes
+
 post-extract:
 	${RUN}${CP} ${FILESDIR}/${PKGBASE}.desktop ${WRKSRC}/
 
 post-install:
-	${RUN}${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
 	${RUN}${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.desktop ${DESTDIR}${PREFIX}/share/applications
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
