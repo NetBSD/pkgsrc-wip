@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/04/08 05:03:01 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/08 14:58:25 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
@@ -80,6 +80,10 @@ pre-configure:
 	      src/config.h ; \
 	${CP} src/mconfig.h-${LOWER_OPSYS} src/mconfig.h; \
 	)
+
+# To avoid after patch, original file is installed
+pre-install:
+	(cd ${WRKSRC} ; ${RM} lisp/mule-init.el.orig )
 
 .include "options.mk"
 
