@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/08 04:20:41 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/08 05:03:01 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
@@ -8,7 +8,7 @@ CATEGORIES=		editors
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		https://github.com/tsutsui/mule1.1-netbsd
-COMMENT=		Classical Mule, Muliti-Lingual-Emacs, based on 18.59
+COMMENT=		Classical Mule (MULtilingual Enhancement of GNU Emacs), based on 18.59
 LICENSE=		gnu-gpl-v1
 MAKE_JOBS_SAFE=		no
 
