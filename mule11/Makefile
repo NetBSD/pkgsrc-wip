@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/07 15:56:56 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/08 04:20:41 makoto Exp $
 
 DISTNAME=		mule-1.1
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
@@ -10,22 +10,21 @@ MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		https://github.com/tsutsui/mule1.1-netbsd
 COMMENT=		Classical Mule, Muliti-Lingual-Emacs, based on 18.59
 LICENSE=		gnu-gpl-v1
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS=		gmake
 
-#BROKEN=		Segfaults without -nw, see TODO, thanks
-
-# next chunk should be before SUBST_CLASSES= pref
+# this chunk should be before SUBST_CLASSES= pref
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Adjust PATH (VARBASE and PKGVERSION)
-SUBST_FILES.path=	src/paths.h-dist
 SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	src/paths.h-dist
 SUBST_VARS.path=	VARBASE PKGNAME
 
 SUBST_CLASSES+=		pref
-SUBST_SED.pref=		-e 's,/usr/local,${PREFIX},g'
 SUBST_MESSAGE.pref=	Convert /usr/local to ${PREFIX}
 SUBST_STAGE.pref=	pre-configure
+SUBST_SED.pref=		-e 's,/usr/local,${PREFIX},g'
 SUBST_FILES.pref=	\
 	Makefile \
 	build-install \
@@ -51,13 +50,13 @@ SUBST_FILES.pref=	\
 	src/ymakefile \
 
 SUBST_CLASSES+=		dest
+SUBST_MESSAGE.dest=	Support to DESTDIR (and disables INSTALLFLAGS)
+SUBST_STAGE.dest=	pre-configure
+SUBST_FILES.dest=	Makefile
 SUBST_SED.dest=		-e 's,$${BINDIR},$$\{DESTDIR\}$$\{BINDIR\},g'
 SUBST_SED.dest+=	-e 's,$${LIBDIR},$$\{DESTDIR\}$$\{LIBDIR\},g'
 SUBST_SED.dest+=	-e 's,$${MANDIR},$$\{DESTDIR\}$$\{PKGMANDIR\},g'
 SUBST_SED.dest+=	-e 's,^INSTALLFLAGS,\#INSTALLFLAGS,'
-SUBST_MESSAGE.dest=	Support to DESTDIR (and disables INSTALLFLAGS)
-SUBST_STAGE.dest=	pre-configure
-SUBST_FILES.dest=	Makefile
 
 # src/xemacs
 #SPECIAL_PERMS=
@@ -70,11 +69,15 @@ CHECK_WRKREF_SKIP+=     bin/mule
 .include	"../../mk/bsd.prefs.mk"
 
 pre-configure:
+# OPSYS may returns x86_64, but mule wants its name as amd64
+# so copy its name beforehand 
 	(cd ${WRKSRC}; \
 	${CP} src/config.h-${LOWER_OPSYS}_amd64  \
 	      src/config.h-${LOWER_OPSYS}_x86_64; \
 	${CP} src/config.h-${LOWER_OPSYS}_${MACHINE_ARCH}  \
-	      src/config.h; \
+	      src/config.h || \
+	${CP} src/config.h-${LOWER_OPSYS}  \
+	      src/config.h ; \
 	${CP} src/mconfig.h-${LOWER_OPSYS} src/mconfig.h; \
 	)
 

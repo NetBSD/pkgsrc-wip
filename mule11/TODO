@@ -1,10 +1,12 @@
-(1) Only tried with NetBSD/amd64, just starting. (Thanks @tsutsui)
+(1) Only tried with NetBSD/amd64, just starting. (Thanks @tsutsuii)
+   - Test is only done by FreeWnn, but not successfull even with it 
+     (you need to start jserver before you start mule)
 
 (2) src/xemacs is not handled yet
 
-(3) Now installs ${PREFIX}/mule, should be ${PREFIX}/share/mule or ${PREFIX}/share/emacs/mule
+(3) mule-init.el is not honored due to wrong PATH configuration
 
-(4) works only with -nw, otherwise:
+(4) in some case you will see
 modena@makoto 13:51:14/150407(..wip/mule11)% mule
 Fatal error (6).zsh: abort (core dumped)  mule
 
