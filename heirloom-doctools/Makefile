@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/08 14:32:48 n-t-roff Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/08 16:00:58 n-t-roff Exp $
 
 V=		150406
 DISTNAME=	heirloom-doctools-${V}
@@ -32,5 +32,7 @@ MAKE_FLAGS =	CC="${CC}" \
 
 MAKE_FILE=	makefile
 BUILD_TARGET=	dummy
+
+SUBDIR+=	heirloom-doctools
 
 .include "../../mk/bsd.pkg.mk"
