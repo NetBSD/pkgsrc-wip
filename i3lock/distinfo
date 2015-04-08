@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/11/25 17:26:58 pallegra Exp $
+$NetBSD: distinfo,v 1.5 2015/04/08 12:09:29 nros Exp $
 
-SHA1 (i3lock-2.4.1.tar.bz2) = fd156993312340160a1d981267aef9912f3f7526
-RMD160 (i3lock-2.4.1.tar.bz2) = 79343291694abf8ba4c96e9d7c415de61f7b6fa0
-Size (i3lock-2.4.1.tar.bz2) = 30592 bytes
+SHA1 (i3lock-2.6.tar.bz2) = 7133e00e2c17a48c791fdaf9597a9c6279c51763
+RMD160 (i3lock-2.6.tar.bz2) = 2ca68b05056005645ec8336fe6d35be1273c4d81
+Size (i3lock-2.6.tar.bz2) = 17972 bytes
 SHA1 (patch-Makefile) = afa317af0baef04dfa78c5bf20b5147f736270dc
