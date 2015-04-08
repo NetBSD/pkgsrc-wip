@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/08 23:14:47 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/08 23:41:35 krytarowski Exp $
 
 DISTNAME=	gcolor2-0.4
 CATEGORIES=	x11
@@ -14,5 +14,19 @@ USE_TOOLS+=	gmake perl pkg-config
 
 BUILD_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
+SUBST_CLASSES+=		df
+SUBST_STAGE.df=		post-configure
+SUBST_MESSAGE.df=	Fixing icon reference in desktop file
+SUBST_FILES.df=		${PKGBASE}.desktop
+SUBST_SED.df=		-e 's:/usr/share:${PREFIX}/share:1'
+
+post-extract:
+	${RUN}${CP} ${FILESDIR}/${PKGBASE}.desktop ${WRKSRC}/
+
+post-install:
+	${RUN}${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
+	${RUN}${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.desktop ${DESTDIR}${PREFIX}/share/applications
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
