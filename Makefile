@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6133 2015/04/08 16:26:40 n-t-roff Exp $
+# $Id: Makefile,v 1.6134 2015/04/08 23:45:25 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -763,6 +763,7 @@ SUBDIR+=	gcc43
 SUBDIR+=	gcc48snapshot
 SUBDIR+=	gcc49snapshot
 SUBDIR+=	gcc50snapshot
+SUBDIR+=	gcolor2
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
