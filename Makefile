@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6132 2015/04/07 16:39:49 krytarowski Exp $
+# $Id: Makefile,v 1.6133 2015/04/08 16:26:40 n-t-roff Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -985,6 +985,7 @@ SUBDIR+=	haze
 SUBDIR+=	hdhomerun_config
 SUBDIR+=	hdparm
 SUBDIR+=	heimdall
+SUBDIR+=	heirloom-doctools
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
