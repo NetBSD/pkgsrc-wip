@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/07 20:02:23 n-t-roff Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/08 12:27:04 n-t-roff Exp $
 
 DISTNAME=	heirloom-doctools-150406
 CATEGORIES=	textproc
@@ -13,5 +13,6 @@ LICENSE=	cddl-1.0
 USE_LANGUAGES=	c c++
 
 MAKE_FILE=	makefile
+BUILD_TARGET=	dummy
 
 .include "../../mk/bsd.pkg.mk"
