@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/09 02:03:49 krytarowski Exp $
+$NetBSD: distinfo,v 1.5 2015/04/09 10:38:13 krytarowski Exp $
 
-SHA1 (mate-desktop-1.8.1.tar.xz) = e3e92eec0cf0443d6a0ca18ad2f88b2ddd54f833
-RMD160 (mate-desktop-1.8.1.tar.xz) = b2d446388900678022f9f86e92564cdfef3b6559
-Size (mate-desktop-1.8.1.tar.xz) = 8027312 bytes
+SHA1 (mate-desktop-1.8.2.tar.xz) = 4d3f77d73709631d22528b55d3ffb1cbe4d1ddab
+RMD160 (mate-desktop-1.8.2.tar.xz) = 7cc325fc94c68a0fd12d4dbda1ca708251c6ce5a
+Size (mate-desktop-1.8.2.tar.xz) = 8002700 bytes
 SHA1 (patch-libmate-desktop_mate-desktop-thumbnail.c) = 31320a4a6db879f633f684a8e91f57c6b5f9c608

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/04/09 02:50:51 krytarowski Exp $
+$NetBSD: distinfo,v 1.4 2015/04/09 10:38:13 krytarowski Exp $
 
-SHA1 (mate-settings-daemon-1.8.1.tar.xz) = cb279e69af618f8496ef45f61325b267afba539e
-RMD160 (mate-settings-daemon-1.8.1.tar.xz) = 52a324ce75dcad45a8d8a3ea4734d4cbe37d0ece
-Size (mate-settings-daemon-1.8.1.tar.xz) = 782508 bytes
+SHA1 (mate-settings-daemon-1.8.3.tar.xz) = affaa57d2fef2e2a7374a4e770850febfe6a8215
+RMD160 (mate-settings-daemon-1.8.3.tar.xz) = e3fda8eef35fd5f6d167163043621113c8989148
+Size (mate-settings-daemon-1.8.3.tar.xz) = 784084 bytes
