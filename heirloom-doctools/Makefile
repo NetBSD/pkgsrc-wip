@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/08 16:24:00 n-t-roff Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 09:30:55 thomasklausner Exp $
 
 V=		150406
 DISTNAME=	heirloom-doctools-${V}
@@ -8,10 +8,11 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	carsten.kunze@arcor.de
 HOMEPAGE=	http://n-t-roff.github.io/heirloom/doctools.html
-COMMENT=	modernized troff implementation
+COMMENT=	Modernized troff implementation
 LICENSE=	cddl-1.0
 
 USE_LANGUAGES=	c c++
+MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS =	CC="${CC}" \
 		CCC="${CXX}" \
