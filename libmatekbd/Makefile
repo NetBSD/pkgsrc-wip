@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/04/09 03:33:09 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 20:38:31 krytarowski Exp $
 
 DISTNAME=	libmatekbd-1.8.1
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE keyboard configuration library
 LICENSE=	gnu-lgpl-v2.1

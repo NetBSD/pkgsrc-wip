@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2015/04/09 03:38:55 krytarowski Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/09 20:38:32 krytarowski Exp $
 
 DISTNAME=	mate-user-share-1.8.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE user-leve file shareing
 LICENSE=	gnu-gpl-v2

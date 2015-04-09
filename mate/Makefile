@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/04/09 03:44:41 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 20:38:31 krytarowski Exp $
 
 PKGNAME=	mate-1.8
 CATEGORIES=	meta-pkgs
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Meta-package for MATE desktop environment
 

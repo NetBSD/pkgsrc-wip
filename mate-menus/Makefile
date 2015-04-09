@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/04/09 02:32:12 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 20:38:31 krytarowski Exp $
 
 DISTNAME=	mate-menus-1.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/releases/
 COMMENT=	Implementation of the desktop menu specification for MATE
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2

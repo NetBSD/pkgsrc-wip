@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 02:23:48 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 20:38:31 krytarowski Exp $
 
 DISTNAME=	mate-icon-theme-1.8.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Collection of icons used as the basis for MATE themes
 LICENSE=	gnu-lgpl-v3 OR cc-by-sa-v3.0

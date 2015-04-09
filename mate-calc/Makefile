@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2015/04/09 13:47:05 krytarowski Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/09 20:38:31 krytarowski Exp $
 
 DISTNAME=	mate-calc-1.8.0
 CATEGORIES=	math
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Calculator application for MATE desktop
 LICENSE=	gnu-gpl-v2

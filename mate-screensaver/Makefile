@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2015/04/09 13:58:14 krytarowski Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/09 20:38:31 krytarowski Exp $
 
 DISTNAME=	mate-screensaver-1.8.1
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Screen saver and locker for the MATE desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2

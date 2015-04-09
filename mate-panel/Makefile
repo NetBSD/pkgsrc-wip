@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 13:52:21 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 20:38:31 krytarowski Exp $
 
 DISTNAME=	mate-panel-1.8.1
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE panel application
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 02:47:23 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 20:38:32 krytarowski Exp $
 
 DISTNAME=	mate-sensors-applet-1.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE Sensors applets
 LICENSE=	gnu-gpl-v2 AND cc-by-sa-v3.0
