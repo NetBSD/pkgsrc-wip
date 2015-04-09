@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 02:28:06 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 13:49:47 krytarowski Exp $
 
 DISTNAME=	mate-media-1.8.0
 CATEGORIES=	multimedia
@@ -24,7 +24,7 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-media
 .include "options.mk"
 
 .include "../../devel/glib2/schemas.mk"
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"

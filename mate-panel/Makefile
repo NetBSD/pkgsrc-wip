@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/09 02:40:34 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 13:52:21 krytarowski Exp $
 
 DISTNAME=	mate-panel-1.8.1
 CATEGORIES=	x11
@@ -25,7 +25,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 .include "options.mk"
 
 .include "../../devel/glib2/schemas.mk"
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 #XXX NetworkManager
 .include "../../wip/libmateweather/buildlink3.mk"
 .include "../../wip/mate-desktop/buildlink3.mk"

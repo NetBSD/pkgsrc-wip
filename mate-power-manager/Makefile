@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 02:43:45 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 13:53:15 krytarowski Exp $
 
 DISTNAME=	mate-power-manager-1.8.1
 CATEGORIES=	sysutils
@@ -25,7 +25,7 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-power-manager/xdg/autostart/mate-powe
 .include "options.mk"
 
 .include "../../devel/glib2/schemas.mk"
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/upower/buildlink3.mk"
 .include "../../wip/mate-panel/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"

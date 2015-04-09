@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 02:13:02 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 13:47:05 krytarowski Exp $
 
 DISTNAME=	mate-calc-1.8.0
 CATEGORIES=	math
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/glib2/schemas.mk"
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

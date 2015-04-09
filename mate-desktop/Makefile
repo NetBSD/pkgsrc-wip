@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/09 03:35:24 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 13:48:23 krytarowski Exp $
 
 DISTNAME=	mate-desktop-1.8.2
 CATEGORIES=	x11
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	libmate-desktop/mate-desktop-2.0.pc.in
 REPLACE_SH+=	tools/mate-gsettings-toggle
 
 .include "../../devel/glib2/schemas.mk"
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
