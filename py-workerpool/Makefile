@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/04/09 11:42:14 thomasklausner Exp $
 
 DISTNAME=	workerpool-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
