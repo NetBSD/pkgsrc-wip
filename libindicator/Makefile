@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 13:14:54 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 13:16:09 krytarowski Exp $
 
 DISTNAME=	libindicator-12.10.1
 CATEGORIES=	sysutils
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake pkg-config
 
 EXTRACT_USING=	gtar
 
-BUILDLINK_TRANSFORM=	rm:-Werror
+BUILDLINK_TRANSFORM+=	rm:-Werror
 PKGCONFIG_OVERRIDE=	libindicator/indicator3-0.4.pc.in.in
 PKGCONFIG_OVERRIDE+=	libindicator/indicator-0.4.pc.in.in
 
