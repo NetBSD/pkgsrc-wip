@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/04/09 03:24:42 krytarowski Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/09 03:34:34 krytarowski Exp $
 
-DISTNAME=	marco-1.8.2
+DISTNAME=	marco-1.8.3
 CATEGORIES=	wm
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
