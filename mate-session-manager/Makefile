@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 02:49:02 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 03:37:08 krytarowski Exp $
 
-DISTNAME=	mate-session-manager-1.8.1
+DISTNAME=	mate-session-manager-1.8.2
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
