@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.1 2015/04/08 19:20:14 n-t-roff Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2015/04/09 09:30:27 thomasklausner Exp $
 
 Running ${PKGNAME} binaries
 ===========================
@@ -20,3 +21,4 @@ man.conf(5) may not make sense.  Instead set (ksh example)
 export MANPATH=${PREFIX}/heirloom-doctools/man:
 
 in the terminal where you want to read the manuals.
+===========================================================================
