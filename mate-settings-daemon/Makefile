@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/04/09 02:50:51 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 03:38:08 krytarowski Exp $
 
-DISTNAME=	mate-settings-daemon-1.8.1
+DISTNAME=	mate-settings-daemon-1.8.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
