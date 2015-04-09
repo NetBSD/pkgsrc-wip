@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 02:45:45 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 13:58:14 krytarowski Exp $
 
 DISTNAME=	mate-screensaver-1.8.1
 CATEGORIES=	x11
@@ -53,7 +53,7 @@ CONF_FILES+=	${PREFIX}/share/examples/pam.d/mate-screensaver \
 		/etc/pam.d/mate-screensaver
 
 .include "../../devel/glib2/schemas.mk"
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mate-desktop/buildlink3.mk"
 .include "../../wip/mate-menus/buildlink3.mk"
 .include "../../wip/libmatekbd/buildlink3.mk"
