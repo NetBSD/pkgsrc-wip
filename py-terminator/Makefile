@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/07 17:28:47 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 11:03:37 krytarowski Exp $
 
 DISTNAME=	terminator-0.97
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ REPLACE_PYTHON+= *.py
 REPLACE_PYTHON+= terminatorlib/*.py
 REPLACE_PYTHON+= terminatorlib/plugins/*.py
 
-USE_TOOLS=	intltool
+USE_TOOLS+=	intltool
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

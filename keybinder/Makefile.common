@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2015/04/07 16:56:57 krytarowski Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/04/09 10:59:52 krytarowski Exp $
 #
 # used by wip/py-keybinder/Makefile
 # used by wip/lua-keybinder/Makefile
@@ -10,14 +10,14 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 HOMEPAGE=	https://github.com/engla/keybinder
 LICENSE=	gnu-gpl-v2
 
-DISTINFO_FILE=          ${.CURDIR}/../../wip/keybinder/distinfo
+DISTINFO_FILE=		${.CURDIR}/../../wip/keybinder/distinfo
 
 PKGCONFIG_OVERRIDE+=	libkeybinder/keybinder.pc.in
 
-GNU_CONFIGURE=  yes
-USE_LIBTOOL=    yes
-USE_TOOLS+=     pkg-config gmake
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake
 
-CONFIGURE_ARGS+=        --disable-static
+CONFIGURE_ARGS+=	--disable-static
 # Don't rebuild the documentation
-CONFIGURE_ARGS+=        --disable-gtk-doc
+CONFIGURE_ARGS+=	--disable-gtk-doc
