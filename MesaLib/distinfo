@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2015/04/05 19:25:04 tnn2 Exp $
+$NetBSD: distinfo,v 1.29 2015/04/09 08:38:33 tnn2 Exp $
 
 SHA1 (mesa-10.5.2.tar.xz) = e5659207105531385454e6fa08a1c3cf46a2ce95
 RMD160 (mesa-10.5.2.tar.xz) = f210e94c2c178970ca54c5f0b47f7ec0d2dc5bb3
@@ -7,6 +7,8 @@ SHA1 (patch-configure) = 3fc150370e36fc49382b491d907608f00cf99a72
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
 SHA1 (patch-src_gallium_auxiliary_util_u__format__tests.c) = 4d5e4677c2825778c43440ab131b8807f6840975
 SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = a48959f10f09decfaf66180bd69c84ac518cd9d9
+SHA1 (patch-src_gallium_auxiliary_util_u__network.c) = 4afab5d337859a1df41bb32f07fdb0475057d3b3
+SHA1 (patch-src_gallium_auxiliary_util_u__network.h) = c6106d67b4fa9db0d790474182d6e0ce0c5da677
 SHA1 (patch-src_gallium_drivers_r600_sb_sb__expr.cpp) = e75f4d97e46a1ca9ff6edb6c2888ca513db7fd2a
 SHA1 (patch-src_gallium_include_pipe_p__config.h) = 3183844096e8952d722d059e94247513aa16c8c8
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen.c) = bcd613a21d55a5c1b96d6f84c691ea1b631b5092
