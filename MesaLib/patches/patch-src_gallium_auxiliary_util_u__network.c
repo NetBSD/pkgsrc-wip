@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gallium_auxiliary_util_u__network.c,v 1.1 2015/04/09 08:38:33 tnn2 Exp $
+$NetBSD: patch-src_gallium_auxiliary_util_u__network.c,v 1.2 2015/04/09 15:43:57 tnn2 Exp $
 
 BSD has sockets, silence warning about missing implementation.
 
@@ -13,13 +13,11 @@ BSD has sockets, silence warning about missing implementation.
  #  include <sys/socket.h>
  #  include <netinet/in.h>
  #  include <unistd.h>
-@@ -55,8 +55,8 @@ u_socket_close(int s)
-    if (s < 0)
+@@ -56,7 +56,7 @@ u_socket_close(int s)
        return;
  
--#if defined(PIPE_OS_LINUX) || defined(PIPE_OS_HAIKU) \
+ #if defined(PIPE_OS_LINUX) || defined(PIPE_OS_HAIKU) \
 -    || defined(PIPE_OS_APPLE) || defined(PIPE_OS_SOLARIS)
-+#if defined(PIPE_OS_LINUX) || defined(PIPE_OS_HAIKU) || \
 +    || defined(PIPE_OS_APPLE) || defined(PIPE_OS_SOLARIS) || defined(PIPE_OS_BSD)
     shutdown(s, SHUT_RDWR);
     close(s);
