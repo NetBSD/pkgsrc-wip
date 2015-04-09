@@ -1,0 +1,34 @@
+MATE System Tools package is a fork of GNOME System Tols package.
+
+- Targeted to desktop users:
+
+  These tools are intended to simplify the tasks of configuring a Unix system
+  for workstations. They are not intended for configuring Unix servers.
+
+- Unified system configuration:
+
+  Configuring different Unix systems is different; every Unix system has
+  different ways of being administrated. The MATE System Tools aspire to
+  unify these systems.
+
+- Multi-platform:
+
+  Each one of the MATE System Tools is split in two parts: a backend (which
+  is typically written in Perl) and a user interface frontend (which is
+  typically written in C or Python).
+
+  The backends are written in a way that should allow us to quickly adapt
+  them to various different flavors of Unix; the backend probes your system
+  and parses the existing system files. When the user has finished editing
+  the system settings, the configuration is written back as patches to the
+  system files.
+
+  This means that the MATE System Tools use whatever configuration files are
+  available on your system, and you can still edit those files by hand or
+  with other configuration tools without conflicts or data loss.
+
+- For Distributors:
+
+  Distributions may want to modify src/users/user-profiles.conf.in and add
+  groups that are specific to that distribution. For example add the sudo
+  group for Administrators on Ubuntu based distributions.
