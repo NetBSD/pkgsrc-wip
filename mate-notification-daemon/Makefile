@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 02:38:56 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 03:36:17 krytarowski Exp $
 
-DISTNAME=	mate-notification-daemon-1.8.1
+DISTNAME=	mate-notification-daemon-1.8.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
