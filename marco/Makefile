@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2015/04/09 03:34:34 krytarowski Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/09 22:07:26 krytarowski Exp $
 
 DISTNAME=	marco-1.8.3
 CATEGORIES=	wm
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE Marco is a fork of GNOME Metacity
 LICENSE=	gnu-gpl-v2

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 03:28:07 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 22:07:26 krytarowski Exp $
 
 DISTNAME=	pluma-1.8.1
 CATEGORIES=	editors
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Small and lightweight UTF-8 text editor for the MATE
 LICENSE=	gnu-gpl-v2

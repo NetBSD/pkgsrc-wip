@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 03:16:23 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 22:07:27 krytarowski Exp $
 
 DISTNAME=	eom-1.8.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Eye of MATE: an image viewing and cataloging program
 LICENSE=	gnu-gpl-v2

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 03:26:14 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 22:07:26 krytarowski Exp $
 
 DISTNAME=	mozo-1.8.0
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Menu editor for MATE
 LICENSE=	gnu-lgpl-v2.1

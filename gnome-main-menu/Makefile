@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 03:18:49 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/09 22:07:26 krytarowski Exp $
 
 DISTNAME=	gnome-main-menu-1.8.0
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE Desktop main menu
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 13:44:41 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 22:07:26 krytarowski Exp $
 #
 
 DISTNAME=	upower-0.9.16
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	obache@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://upower.freedesktop.org/releases/
 COMMENT=	UPower is an abstraction for enumerating power devices
 LICENSE=	gnu-gpl-v2
