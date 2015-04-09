@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/07 09:27:46 obache Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/09 13:14:54 krytarowski Exp $
 
 DISTNAME=	libindicator-12.10.1
 CATEGORIES=	sysutils
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+
+EXTRACT_USING=	gtar
 
 BUILDLINK_TRANSFORM=	rm:-Werror
 PKGCONFIG_OVERRIDE=	libindicator/indicator3-0.4.pc.in.in
