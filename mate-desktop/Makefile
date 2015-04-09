@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 02:03:48 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 03:35:24 krytarowski Exp $
 
-DISTNAME=	mate-desktop-1.8.1
+DISTNAME=	mate-desktop-1.8.2
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
