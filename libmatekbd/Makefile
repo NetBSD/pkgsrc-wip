@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/09 03:20:50 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/09 03:33:09 krytarowski Exp $
 
-DISTNAME=	libmatekbd-1.8.0
+DISTNAME=	libmatekbd-1.8.1
 CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
 EXTRACT_SUFX=	.tar.xz
