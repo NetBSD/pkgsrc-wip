@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/09 20:38:31 krytarowski Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/10 12:20:36 krytarowski Exp $
 
 DISTNAME=	mate-screensaver-1.8.1
 CATEGORIES=	x11
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Screen saver and locker for the MATE desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
+
+CONFLICTS+=	gnome-screensaver-[0-9]*
 
 DEPENDS+=	consolekit-[0-9]*:../../wip/consolekit
 
