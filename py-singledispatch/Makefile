@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/07 00:16:18 jonthn Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/10 08:21:30 thomasklausner Exp $
 
 DISTNAME=	singledispatch-3.4.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library brings functools.singledispatch from Python 3.4
 LICENSE=	mit
 
 PYTHON_VERSIONS_ACCEPTED=	33 27 26  # included in 3.4+
-PYTHON_VERSIONS_INCOMPATIBLE=	34
 
 USE_LANGUAGES=	# none
 
