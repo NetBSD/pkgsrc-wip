@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/24 23:09:06 jonthn Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/10 08:27:12 thomasklausner Exp $
 
 DISTNAME=	livestreamer-1.12.1
 CATEGORIES=	multimedia python
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../wip/py-futures
 .endif
 .if ${_PYTHON_VERSION} <= 33
-DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../wip/py-singledispatch
+DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 .endif
 
 EGG_NAME=	${PKGNAME_NOREV}
