@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2015/04/10 19:02:41 krytarowski Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/04/10 19:38:52 krytarowski Exp $
 #
 # used by wip/libindicator3/Makefile
+# used by wip/libindicator-tools/Makefile
 
 DISTNAME=	libindicator-12.10.1
 CATEGORIES=	sysutils
@@ -22,6 +23,3 @@ PKGCONFIG_OVERRIDE+=	libindicator/indicator-0.4.pc.in.in
 PKGCONFIG_OVERRIDE+=	libindicator/indicator3-0.4.pc.in.in
 
 CONFIGURE_ARGS+=	--with-gtk=${USE_GTK_VERSION}
-
-post-install:
-	${RUN}rm -f ${DESTDIR}${PREFIX}/lib/libdummy-indicator*.*
