@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/09 20:38:31 krytarowski Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/10 12:08:34 krytarowski Exp $
 
 DISTNAME=	mate-applets-1.8.1
 CATEGORIES=	x11
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE panel applets
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
+
+CONFLICTS+=	gnome-applets-[0-9]*
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
