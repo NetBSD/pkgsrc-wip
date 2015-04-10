@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/10 11:23:36 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/10 11:35:14 krytarowski Exp $
+
+USE_GTK_VERSION=3
 
 .include "../../wip/libindicator/Makefile.common"
 
