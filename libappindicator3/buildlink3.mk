@@ -1,17 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/04/10 18:33:03 krytarowski Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/04/10 19:06:32 krytarowski Exp $
 
-BUILDLINK_TREE+=	libappindicator
+BUILDLINK_TREE+=	libappindicator3
 
-.if !defined(LIBAPPINDICATOR_BUILDLINK3_MK)
-LIBAPPINDICATOR_BUILDLINK3_MK:=
+.if !defined(LIBAPPINDICATOR3_BUILDLINK3_MK)
+LIBAPPINDICATOR3_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libappindicator+=	libappindicator>=12.10.0
-BUILDLINK_PKGSRCDIR.libappindicator?=	../../wip/libappindicator
+BUILDLINK_API_DEPENDS.libappindicator3+=	libappindicator3>=12.10.0
+BUILDLINK_PKGSRCDIR.libappindicator3?=		../../wip/libappindicator3
 
-.include "../../wip/libindicator/buildlink3.mk"
-.include "../../wip/libdbusmenu-gtk/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.endif	# LIBAPPINDICATOR_BUILDLINK3_MK
+.include "../../wip/libindicator3/buildlink3.mk"
+.include "../../wip/libdbusmenu-gtk3/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.endif	# LIBAPPINDICATOR3_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-libappindicator
+BUILDLINK_TREE+=	-libappindicator3
