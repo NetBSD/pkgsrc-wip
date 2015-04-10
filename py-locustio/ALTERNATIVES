@@ -1,0 +1,1 @@
+bin/locust @PREFIX@/bin/locust-@PYVERSSUFFIX@
