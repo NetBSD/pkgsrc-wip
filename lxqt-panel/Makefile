@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/11 15:56:24 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/11 18:26:07 krytarowski Exp $
 
 DISTNAME=	lxqt-panel-0.9.0
 CATEGORIES=	x11
@@ -15,7 +15,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../audio/alsa-lib/buildlink3.mk"
-.include "../../wip/lxqt-mount/buildlink3.mk"
+.include "../../wip/liblxqt-mount/buildlink3.mk"
 .include "../../wip/lxqt-globalkeys/buildlink3.mk"
 .include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../wip/liblxqt/buildlink3.mk"

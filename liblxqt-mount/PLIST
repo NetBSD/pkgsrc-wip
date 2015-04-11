@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 13:27:31 krytarowski Exp $
+@comment $NetBSD: PLIST,v 1.1 2015/04/11 18:26:06 krytarowski Exp $
 include/lxqtmount/LXQtMount/Mount
 include/lxqtmount/LXQtMount/Providers
 include/lxqtmount/mount.h
