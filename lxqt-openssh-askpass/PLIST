@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/11 14:20:47 krytarowski Exp $
+bin/lxqt-openssh-askpass
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_de.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_pt.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ru.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ru_RU.qm

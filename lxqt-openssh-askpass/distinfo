@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/11 14:20:47 krytarowski Exp $
+
+SHA1 (lxqt-openssh-askpass-0.9.0.tar.gz) = e2d7db58b9999eaf885f79309b076a282235104b
+RMD160 (lxqt-openssh-askpass-0.9.0.tar.gz) = 1024ad905bdd06a6edb01772aeb0be71c4bd4bb5
+Size (lxqt-openssh-askpass-0.9.0.tar.gz) = 13523 bytes
