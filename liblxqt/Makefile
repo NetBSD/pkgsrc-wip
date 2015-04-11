@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.1 2015/04/11 01:47:19 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/11 11:19:26 krytarowski Exp $
 
 DISTNAME=	liblxqt-0.9.0
-CATEGORIES=	wip
-MASTER_SITES=	http://downloads.lxqt.org/lxqt/0.9.0/
+CATEGORIES=	x11
+MASTER_SITES=	http://downloads.lxqt.org/lxqt/${PKGVERSION_NOREV}/
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
-HOMEPAGE=	http://downloads.lxqt.org/lxqt/0.9.0/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://lxqt.org/
+COMMENT=	Core utility library for all LXQt components
+LICENSE=	gnu-lgpl-v2.1
 
 EXTRACT_USING=	gtar
 
 USE_CMAKE=	yes
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake
 
+.include "../../wip/libqtxdg/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
