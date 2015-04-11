@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/11 13:18:09 krytarowski Exp $
+bin/lxqt-about
+share/applications/lxqt-about.desktop
+share/lxqt/lxqt-about/KF5WindowSystemTargets-noconfig.cmake
