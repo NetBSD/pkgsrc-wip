@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/11 13:27:31 krytarowski Exp $
+include/lxqtmount/LXQtMount/Mount
+include/lxqtmount/LXQtMount/Providers
+include/lxqtmount/mount.h
+include/lxqtmount/providers.h
+lib/cmake/lxqtmount/lxqtmount-config.cmake
+lib/cmake/lxqtmount/lxqtmount_use.cmake
+lib/liblxqtmount.so
+lib/liblxqtmount.so.0
+lib/liblxqtmount.so.0.8.0
+lib/pkgconfig/lxqtmount.pc
