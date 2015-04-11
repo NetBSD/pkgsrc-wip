@@ -1,0 +1,21 @@
+$NetBSD: patch-include_dix-config.h.in,v 1.1 2015/04/11 21:27:14 tnn2 Exp $
+
+Try to fix broken X_BYTE_ORDER handling for big endian.
+Probably broken here:
+http://cgit.freedesktop.org/xorg/xserver/commit/?id=4302484ef2e67b2e05756c7ee0834dce938f1b44
+
+--- include/dix-config.h.in.orig	2014-10-09 12:15:31.000000000 +0000
++++ include/dix-config.h.in
+@@ -497,6 +497,12 @@
+ /* Build glamor's GBM-based EGL support */
+ #undef GLAMOR_HAS_GBM
+ 
++#ifndef X_BIG_ENDIAN
++#define X_BIG_ENDIAN 4321
++#endif
++#ifndef X_LITTLE_ENDIAN
++#define X_LITTLE_ENDIAN 1234
++#endif
+ /* byte order */
+ #undef X_BYTE_ORDER
+ 
