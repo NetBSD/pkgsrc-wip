@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/11 17:07:05 krytarowski Exp $
+bin/lxqt-config-powermanagement
+bin/lxqt-powermanagement
+share/applications/lxqt-config-powermanagement.desktop
+share/icons/hicolor/scalable/devices/laptop-lid.svg
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ja.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_pt.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ru.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ru_RU.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ja.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_pt.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ru.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ru_RU.qm
