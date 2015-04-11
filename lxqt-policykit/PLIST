@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/11 16:56:42 krytarowski Exp $
+bin/lxqt-policykit-agent
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_pt.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ru.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ru_RU.qm

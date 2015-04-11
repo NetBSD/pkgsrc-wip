@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/11 16:56:42 krytarowski Exp $
+
+SHA1 (lxqt-policykit-0.9.0.tar.gz) = 5bae535aad0c67ad40afac190405dc1279bc8c22
+RMD160 (lxqt-policykit-0.9.0.tar.gz) = 267316f11d70f08c01383fb15e377847c4743ff2
+Size (lxqt-policykit-0.9.0.tar.gz) = 15066 bytes
