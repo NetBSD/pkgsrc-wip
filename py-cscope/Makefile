@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/11 14:42:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/11 14:46:09 thomasklausner Exp $
 
-DISTNAME=	pycscope-0.3
+DISTNAME=	pycscope-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pycscope/
@@ -12,11 +12,14 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
+REPLACE_PYTHON+=	pycscope/__init__.py
+
 INSTALLATION_DIRS=	share/doc/py-cscope
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README  \
 		${DESTDIR}${PREFIX}/share/doc/py-cscope
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
