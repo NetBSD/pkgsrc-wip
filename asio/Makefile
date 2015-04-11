@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/12/25 12:12:49 nros Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/11 18:24:52 nros Exp $
 
-DISTNAME=	asio-1.10.4
+DISTNAME=	asio-1.10.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asio/}
 EXTRACT_SUFX=	.tar.bz2
