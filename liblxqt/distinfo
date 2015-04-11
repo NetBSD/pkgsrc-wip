@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/11 01:47:19 krytarowski Exp $
+
+SHA1 (liblxqt-0.9.0.tar.gz) = a36ca1d3d111e06925e02b5442322ba365bb2002
+RMD160 (liblxqt-0.9.0.tar.gz) = f7a94e3ff35e2c8ddf09d66306e64a42cf440270
+Size (liblxqt-0.9.0.tar.gz) = 107945 bytes
