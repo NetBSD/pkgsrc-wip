@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/11 11:19:26 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/11 13:03:08 krytarowski Exp $
 
 DISTNAME=	liblxqt-0.9.0
 CATEGORIES=	x11
@@ -15,6 +15,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake
 
+.include "../../wip/kwindowsystem/buildlink3.mk"
 .include "../../wip/libqtxdg/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
