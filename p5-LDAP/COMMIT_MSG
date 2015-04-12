@@ -1,0 +1,244 @@
+(pkgsrc)
+ -- Drop patch-aa, commenting as:
+    ------
+    Until the source catches up to the current Perl API, we need PERL_POLLUTE
+    to look like an older perl.
+    ------
+(upstream)
+ -- Update 1.2.2 (imported to pkgsrc in 1999) to 1.4.1
+--------------------------------------------------
+2000-09-19  Leif Hedstrom  <leif@perldap.org>
+
+	* Conn.pm (update): Bug fix to allow us to delete() an attribute,
+	call update(), and then add new values (or the same values...) to
+	the entry again.
+
+2000-09-19  Leif Hedstrom  <leif@perldap.org>
+
+	* Entry.pm (DESTROY): Bug fix from daniel.hams@db.com (Daniel
+	Hams) to avoid warnings from Apache and mod_perl.
+
+2000-09-13  Leif Hedstrom  <leif@perldap.org>
+
+	* Utils.pm (askPassword): Oops, stupid typo here, should be
+	"unless $prompt" of course...
+
+2000-09-13  Leif Hedstrom  <leif@perldap.org>
+
+	* Entry.pm (isDeleted): Removed a test which made this function
+	not working at all... :)
+
+2000-09-13  Leif Hedstrom  <leif@perldap.org>
+
+	* Removed an if defined() to avoid warnings with Perl v5.6.
+
+2000-06-24  Wolfram Schmidt  <wschmidt@decefix.iao.fhg.de>
+
+	* Entry.pm (FIRSTKEY): Fix bug for deleting all attributes and calling
+	keys.
+
+2000-05-30  Kevin McCarthy  <kevin@perldap.org>
+
+	* Makefile.PL: Added fix so API.xs compiles under Perl 5.6
+	(POLLUTE=>1)
+
+2000-05-30  Leif Hedstrom  <leif@perldap.org>
+
+	* Lots of small fixes...
+
+1999-09-07  Leif Hedstrom  <leif@perldap.org>
+
+	* API.xs (avref2charptrptr): Fixed potential core dump, if the
+	argument passed wasn't a proper array.
+	(avref2berptrptr): Ditto.
+
+1999-09-06  Leif Hedstrom  <leif@perldap.org>
+
+	* Conn.pm (search): Removed $res and $resv, set the internal data
+	element directly.
+	(searchURL): Ditto.
+
+1999-08-25  John Kristian <kristian@netscape.com>
+
+	* Entry.pm (printLDIF): Bug fix.
+
+	* LDIF.pm: Cleaned out memory leaks.
+
+1999-08-24  Leif Hedstrom  <leif@netscape.com>
+
+	* Merged v1.3.x into trunk, tagged it as v1.4, and released it!
+
+1999-08-19  Leif Hedstrom  <leif@netscape.com>
+
+	* Changed internal version numbering again, just called this plain
+	v1.4.
+
+	* Entry.pm (FIRSTKEY): Bug fix, we'd crap out if there are no
+	attributes in the returned entry.
+	(NEXTKEY): Ditto.
+
+1999-08-18  Leif Hedstrom  <leif@netscape.com>
+
+	* Set version number to v1.4! Woohoo! Also tagged it as v1.3.4,
+	last "development" release.
+
+1999-08-17  Leif Hedstrom  <leif@netscape.com>
+
+	* Makefile.PL: Fixes for Windows/NT, cleaned out some code etc.
+	(MY::postamble): Support for "make html".
+
+	* MANIFEST: Updated with all new files etc.
+
+	* test.pl: Renamed to oldtest.pl, to avoid "make test" to fail.
+
+1999-08-16  Kevin McCarthy  <kmccarth@perldap.org> and Leif Hedstrom
+
+	* API.xs: Cleaned most all the memory allocation changes, we are
+	changing it to use the LDAP_OPT_MEMALLOC_FN_PTRS option in the
+	C-SDK instead (much cleaner!).
+	(perldap_init): New function, set up the memory management
+	handlers. This is called when the API module is loaded.
+	(perldap_malloc): New function, our memory management method(s).
+	(perldap_calloc): Ditto.
+	(perldap_realloc): Ditto.
+	(perldap_free): Ditto.
+
+1999-08-16  Kevin McCarthy  <kmccarth@perldap.org>
+
+	* API.xs: Cleaned up prototypes, changed strdup() to use a
+	Perl'ified version, change a number of free()'s to use Safefree.
+	(ldap_value_free_perl): New function, similar to
+	ldap_mods_free_perl(), to avoid memory problems (on NT and
+	ActivePerl primarily).
+	(StrDup): New function, to handle strdup() calls in a safe way.
+	(ber_bvfree_perl): Ditto.
+	(ber_bvecfree_perl): Ditto.
+
+1999-08-15  Leif Hedstrom  <leif@netscape.com>
+
+	* API.xs (ldap_mods_free_perl): Modified version of
+	ldap_mods_free(), which uses Perl native free method instead of
+	the things from the LDAP SDK. This fixes some nasty issues with
+	Windows/NT and ActiveState Perl. Woohoo!!!
+
+1999-08-14  Leif Hedstrom  <leif@netscape.com> and Kevin McCarthy
+
+	* Entry.pm (setValues): Implemented bug fix for bug id 7131, where
+	the "_save_" structures weren't set properly when using setValues().
+
+1999-08-14  Kevin McCarthy  <kmccarth@perldap.org>
+
+	* Conn.pm (update): Rewrote to optimize add/remove vs replace
+	operations. Basically, we'll try to do whatever seems to be the
+	smallest amount of work for the LDAP server now.
+
+1999-08-13  Leif Hedstrom  <leif@netscape.com>
+
+	* Makefile.PL: Cleaned up code, and added support for linking in
+	the missing libraries need for some missing symbols.
+
+1999-08-13  Michelle Wyner  <mwyner@netscape.com>
+
+	* Entry.pm: Updated documentation, and cleaned it up.
+
+	* Conn.pm: Ditto.
+
+1999-08-12  Leif Hedstrom  <leif@netscape.com>
+
+	* Entry.pm (move): Changed name, was rename(), is now move().
+
+1999-08-10  Leif Hedstrom  <leif@netscape.com>
+
+	* Entry.pm (setValues): Renamed, used to be setValue(), which is
+	now an alias to setValues().
+	(getValues): New method, to get the array of values.
+	(STORE): Fixed tests around DN handling, making sure it's not
+	treated as an array. I also optimized a couple of tests, since we
+	now filter out "DN" earlier in the funtion(s).
+	(attrModified): Ditto.
+	(attrClean): Ditto.
+	(unRemove): Ditto.
+	(removeValue): Ditto.
+	(addValue): Ditto.
+
+1999-08-08  Leif Hedstrom  <leif@netscape.com> and Kevin McCarthy
+
+	* Entry.pm (setValue): Remove _delete_ flag, if set.
+
+	* Conn.pm (close): Fixed memory leak, moved code from the DESTROY
+	method over here.
+	(DESTROY): Call the close() method.
+	(getErrorCode): We now return LDAP_SUCCESS if there is no LDAP
+	connection handle.
+	(getErrorString): Ditto.
+
+	* Entry.pm (STORE): Bug fix for large attribute sets.
+	(attrModified): Ditto.
+	(removeValue): Ditto.
+	(addValue): Ditto.
+	(EXISTS): Fix for bug 4368, cleaning up the code, and avoid the
+	double calls.
+
+1999-08-06  Leif Hedstrom  <leif@netscape.com> and Kevin McCarthy
+
+	* API.xs: Added some more tests around free() statements. These
+	are most likely never triggered, but better safe than sorrow (and
+	the overhead of testing this is insignificant).
+
+	* Conn.pm (browse): Added this function, to make it easy to browse
+	an entry.
+	(compare): Compare an attribute value against a DN/entry, without
+	having to do the search.
+
+	* Entry.pm (removeValue): Fixed loop bug.
+	(addValue): Ditto.
+	(hasValue): Ditto.
+	(matchValue): Fixed loop bug, and also missing normalization in
+	half of the case statement.
+	(rename): Added this new method, to rename attributes.
+	(copy): Added, to copy attributes.
+
+	* Merged v1.2.3 with v1.3 branch.
+
+1999-08-06  Kevin McCarthy  <kmccarth@perldap.org>
+
+	* Entry.pm (addDNValue): Bug fix, index for norm was wrong.
+
+	* Entry.pm (size): Optimzied for performance.
+
+1999-07-25  Kevin McCarthy  <kmccarth@perldap.org>
+
+        * API.xs: Fixed memory allocation problems in parsing and
+        generating the LDAPMods structure.
+
+1999-06-22  Leif Hedstrom  <leif@netscape.com>
+
+        * Conn.pm (add): Fixed bug 3342, thanks to Kevin McCarthy for
+        debugging this, and providing a patch. This fixes the problem with
+        adding new entries that has binary data.
+
+1999-03-23  Leif Hedstrom  <leif@netscape.com>
+
+	* Changed versioning numbers for all .pm files.
+
+1999-03-22  Leif Hedstrom  <leif@netscape.com>
+
+	* Entry.pm: Removed all _self_obj_ stuff...
+
+	* Conn.pm: Ditto.
+
+	* Conn.pm: Cleanup in use statements, and "use strict".
+	(search): Avoid warnings of uninitialized variables.
+	(searchURL): Ditto.
+	(modifyRDN): Bugfix, we did not update the appropriate DN in the
+	self object (very minor...).
+
+	* Entry.pm: Cleanup in use statements, and "use strict".
+	(BEGIN): Added this initializer, to use the new LDIF module.
+	(STORE): Fixed bug where we would not ignore the internal instance
+	variables properly.
+
+	* Utils.pm: Cleanup in all use statements, and "use strict". Also
+	enforces the VERSION control feature.
+
+	* Merged v1.2.1 to devel-branch-1_3, and tagged v1.3.1.

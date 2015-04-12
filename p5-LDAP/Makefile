@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/01 16:03:00 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/12 14:22:45 makoto Exp $
 #
 
 DISTNAME=	perldap-1.4.1
@@ -18,7 +18,7 @@ MAKE_ENV+=	LDAPSDKDIR=${BUILDLINK_PREFIX.ldapsdk}
 MAKE_ENV+=	LDAPSDKSSL="no"
 MAKE_ENV+=	LDAPV3ON="yes"
 
-.include "../../x11/kdelibs3/buildlink3.mk"
+#include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../devel/ldapsdk/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
