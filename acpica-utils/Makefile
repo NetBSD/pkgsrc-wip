@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/03/13 01:30:15 krytarowski Exp $
+# $NetBSD: Makefile,v 1.1 2015/04/12 16:33:06 krytarowski Exp $
 #
 
 GIT_REPOSITORIES=	acpica-utils
