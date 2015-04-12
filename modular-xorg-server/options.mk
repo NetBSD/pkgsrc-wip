@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2015/04/03 15:48:50 tnn2 Exp $
+# $NetBSD: options.mk,v 1.17 2015/04/12 12:30:56 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug dtrace
@@ -20,8 +20,6 @@ PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-aiglx
-# XXX needs libepoxy
-#CONFIGURE_ARGS+=	--enable-glamor
 .else
 ###
 ### XXX Perhaps we should allow for a built-in glx without dri enabled?
@@ -33,6 +31,14 @@ pre-build: disable-modesetting
 disable-modesetting:
 	(echo "all:"; echo "install:") > ${WRKSRC}/hw/xfree86/drivers/modesetting/Makefile
 .endif
+
+#.if !empty(PKG_OPTIONS:Mglamor)
+#.include "../../x11/dri3proto/buildlink3.mk"
+#.include "../../x11/libxshmfence/buildlink3.mk"
+#CONFIGURE_ARGS+=	--enable-xtrans-send-fds
+#CONFIGURE_ARGS+=	--enable-dri3
+#CONFIGURE_ARGS+=	--enable-glamor
+#.endif
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
