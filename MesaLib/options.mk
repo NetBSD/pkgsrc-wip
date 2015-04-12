@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2015/04/12 11:50:52 tnn2 Exp $
+# $NetBSD: options.mk,v 1.24 2015/04/12 16:54:09 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -28,11 +28,11 @@ PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 
 .if !empty(PKG_OPTIONS:Mdri)
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
+# 
+
+# (EE) Failed to load /usr/pkg/lib/xorg/modules/extensions/libglx.so:
+# /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model initial-exec and dlopen is not supported
 CONFIGURE_ARGS+=	--disable-glx-tls
-.else
-CONFIGURE_ARGS+=	--enable-glx-tls
-.endif
 
 PLIST.dri=	yes
 BUILDLINK_DEPMETHOD.libpciaccess=      full
