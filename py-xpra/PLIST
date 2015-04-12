@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/06 23:11:12 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/12 14:55:39 thomasklausner Exp $
 bin/xpra
 bin/xpra_Xdummy
 bin/xpra_launcher
@@ -623,6 +623,7 @@ ${PYSITELIB}/xpra/x11/xsettings_prop.pyc
 ${PYSITELIB}/xpra/x11/xsettings_prop.pyo
 man/man1/xpra.1
 man/man1/xpra_launcher.1
+share/appdata/xpra.appdata.xml
 share/applications/xpra.desktop
 share/applications/xpra_launcher.desktop
 share/examples/py-xpra/xorg.conf
@@ -678,3 +679,4 @@ share/xpra/www/include/websock.js
 share/xpra/www/include/webutil.js
 share/xpra/www/include/window.js
 share/xpra/www/index.html
+@pkgdir etc/xpra
