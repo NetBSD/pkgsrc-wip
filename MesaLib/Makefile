@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/04/05 19:37:19 tnn2 Exp $
+# $NetBSD: Makefile,v 1.31 2015/04/12 18:10:28 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -46,7 +46,18 @@ SUBST_SED.wrapper-bug+=		-e 's,libglapi.la,libglapi_static.la,g'
 SUBST_SED.wrapper-bug+=		-e 's,libglapi_shared.la,libglapi.la,g'
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 .include "options.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+SUBST_CLASSES+=		tr1
+SUBST_STAGE.tr1=	pre-configure
+SUBST_MESSAGE.tr1=	Fixing TR1 C++ namespace
+SUBST_FILES.tr1=	src/gallium/drivers/nouveau/codegen/*.h
+SUBST_FILES.tr1+=	src/gallium/drivers/nouveau/codegen/*.cpp
+SUBST_SED.tr1=		-e 's,std::tr1::,std::,g'
+SUBST_SED.tr1+=		-e 's,include <tr1/,include <,g'
+.endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako

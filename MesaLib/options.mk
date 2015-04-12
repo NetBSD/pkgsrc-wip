@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2015/04/12 16:54:09 tnn2 Exp $
+# $NetBSD: options.mk,v 1.25 2015/04/12 18:10:28 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -22,13 +22,11 @@ PKG_SUGGESTED_OPTIONS+=		dri
 .include "../../mk/bsd.options.mk"
 
 # gallium
-PLIST_VARS+=		swrast svga ilo i915 i965 r300 r600 radeonsi
+PLIST_VARS+=		swrast svga ilo i915 i965 nouveau r300 r600 radeonsi
 # classic DRI
 PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 
 .if !empty(PKG_OPTIONS:Mdri)
-
-# 
 
 # (EE) Failed to load /usr/pkg/lib/xorg/modules/extensions/libglx.so:
 # /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model initial-exec and dlopen is not supported
@@ -81,8 +79,9 @@ GALLIUM_DRIVERS+=	r600
 # Broadcom VideoCore 4
 # GALLIUM_DRIVERS+=	vc4
 
-# nVidia, doesn't currently build
-# GALLIUM_DRIVERS+=	nouveau
+# nVidia
+PLIST.nouveau=		yes
+GALLIUM_DRIVERS+=	nouveau
 
 # classic DRI radeon
 PLIST.radeon_dri=	yes

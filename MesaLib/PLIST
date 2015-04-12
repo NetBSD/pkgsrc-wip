@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/03/04 23:48:48 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/04/12 18:10:28 tnn2 Exp $
 include/EGL/egl.h
 include/EGL/eglext.h
 include/EGL/eglextchromium.h
@@ -21,6 +21,7 @@ ${PLIST.i915_dri}lib/dri/i915_dri.so
 ${PLIST.i965_dri}lib/dri/i965_dri.so
 ${PLIST.ilo}lib/dri/ilo_dri.so
 ${PLIST.swrast}lib/dri/kms_swrast_dri.so
+${PLIST.nouveau}lib/dri/nouveau_dri.so
 ${PLIST.nouveau_dri}lib/dri/nouveau_vieux_dri.so
 ${PLIST.r200_dri}lib/dri/r200_dri.so
 ${PLIST.r300}lib/dri/r300_dri.so
