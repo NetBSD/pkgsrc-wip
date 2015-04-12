@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/04/12 19:26:12 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/12 19:28:12 krytarowski Exp $
 #
 
 DISTNAME=	acpica-unix2-20150410
-TESTS_DISTNAME=	${DISTNAME:S/acpica-unix2-/acpitests-unix-/}
-DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	${TESTS_DISTNAME}${EXTRACT_SUFX}
 PKGNAME=	${DISTNAME:S/-unix2-/-utils-/}
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://acpica.org/sites/acpica/files/
@@ -14,23 +11,27 @@ HOMEPAGE=	http://www.acpica.org/
 COMMENT=	Intel ACPI CA Unix utilities
 LICENSE=	modified-bsd OR gnu-gpl-v2
 
+TESTS_DISTNAME=	${DISTNAME:S/acpica-unix2-/acpitests-unix-/}
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	${TESTS_DISTNAME}${EXTRACT_SUFX}
+
 USE_TOOLS+=	bison flex gm4 gmake bash
 
-REPLACE_BASH+=  tests/aapits/bin/aapitsrun
-REPLACE_BASH+=  tests/aapits/bin/cadir
-REPLACE_BASH+=  tests/aapits/bin/run1
-REPLACE_BASH+=  tests/aslts.sh
-REPLACE_BASH+=  tests/aslts/bin/Do
-REPLACE_BASH+=  tests/aslts/bin/asltsdiffres
-REPLACE_BASH+=  tests/aslts/bin/asltsrun
-REPLACE_BASH+=  tests/aslts/bin/bugstate/bdemosconc
-REPLACE_BASH+=  tests/aslts/bin/bugstate/bdemossum
-REPLACE_BASH+=  tests/aslts/bin/bugstate/bdemostabs
-REPLACE_BASH+=  tests/aslts/bin/bugstate/parsebuglist
-REPLACE_BASH+=  tests/aslts/bin/common
-REPLACE_BASH+=  tests/aslts/bin/diffproc
-REPLACE_BASH+=  tests/aslts/bin/settings
-REPLACE_BASH+=  tests/templates/templates.sh
+REPLACE_BASH+=	tests/aapits/bin/aapitsrun
+REPLACE_BASH+=	tests/aapits/bin/cadir
+REPLACE_BASH+=	tests/aapits/bin/run1
+REPLACE_BASH+=	tests/aslts.sh
+REPLACE_BASH+=	tests/aslts/bin/Do
+REPLACE_BASH+=	tests/aslts/bin/asltsdiffres
+REPLACE_BASH+=	tests/aslts/bin/asltsrun
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemosconc
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemossum
+REPLACE_BASH+=	tests/aslts/bin/bugstate/bdemostabs
+REPLACE_BASH+=	tests/aslts/bin/bugstate/parsebuglist
+REPLACE_BASH+=	tests/aslts/bin/common
+REPLACE_BASH+=	tests/aslts/bin/diffproc
+REPLACE_BASH+=	tests/aslts/bin/settings
+REPLACE_BASH+=	tests/templates/templates.sh
 
 post-extract:
 	${RUN}rm -rf ${WRKSRC}/tests
