@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/07 15:47:06 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/04/13 19:59:59 fhajny Exp $
 bin/pcp_attach_node
 bin/pcp_detach_node
 bin/pcp_node_count
@@ -20,6 +20,7 @@ include/pool_type.h
 lib/libpcp.la
 ${PLIST.ext}lib/postgresql/pgpool-recovery.so
 ${PLIST.ext}lib/postgresql/pgpool-regclass.so
+${PLIST.ext}lib/postgresql/pgpool_adm.so
 man/man8/pgpool.8
 share/examples/pgpool2/pcp.conf.sample
 share/examples/pgpool2/pgpool.conf.sample
@@ -33,7 +34,9 @@ share/pgpool2/pgpool.pam
 share/pgpool2/system_db.sql
 ${PLIST.ext}share/postgresql/extension/pgpool-recovery.sql
 ${PLIST.ext}share/postgresql/extension/pgpool-regclass.sql
-${PLIST.ext}share/postgresql/extension/pgpool_recovery--1.0.sql
+${PLIST.ext}share/postgresql/extension/pgpool_adm--1.0.sql
+${PLIST.ext}share/postgresql/extension/pgpool_adm.control
+${PLIST.ext}share/postgresql/extension/pgpool_recovery--1.1.sql
 ${PLIST.ext}share/postgresql/extension/pgpool_recovery.control
 ${PLIST.ext}share/postgresql/extension/pgpool_regclass--1.0.sql
 ${PLIST.ext}share/postgresql/extension/pgpool_regclass.control

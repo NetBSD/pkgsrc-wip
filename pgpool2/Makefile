@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/05/07 09:19:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/13 19:59:59 fhajny Exp $
 #
 
-DISTNAME=	pgpool-II-3.3.3
+DISTNAME=	pgpool-II-3.4.2
 PKGNAME=	postgresql${PGSQL_VERSION}-pgpool2-${DISTNAME:S/pgpool-II-//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
@@ -32,7 +32,7 @@ PLIST_VARS+=		ext
 PLIST.ext=		yes
 .endif
 
-BUILD_DIRS=		. sql
+BUILD_DIRS=		. src/sql
 
 EGDIR=			share/examples/pgpool2
 
@@ -49,18 +49,24 @@ PKG_HOME.${PGPOOL_USER}=	${PGHOME}
 PKG_SHELL.${PGPOOL_GROUP}=	${SH}
 
 PKG_SYSCONFSUBDIR=	pgpool2
+PGPOOL_LOGDIR?=		${VARBASE}/log/pgpool
 PGPOOL_PIDDIR?=		${VARBASE}/run/pgpool
+OWN_DIRS_PERMS+=	${PGPOOL_LOGDIR} ${PGPOOL_USER} ${PGPOOL_GROUP} 0751
 OWN_DIRS_PERMS+=	${PGPOOL_PIDDIR} ${PGPOOL_USER} ${PGPOOL_GROUP} 0751
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing default paths
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	pgpool.conf.sample pool.h
-SUBST_VARS.path=	PGPOOL_PIDDIR
+SUBST_FILES.path=	src/sample/pgpool.conf.sample src/include/pool.h
+SUBST_VARS.path=	PGPOOL_LOGDIR PGPOOL_PIDDIR
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/${EGDIR}
+
+SMF_NAME=		pgpool
+FILES_SUBST+=		PGPOOL_USER=${PGPOOL_USER}
+FILES_SUBST+=		PGPOOL_GROUP=${PGPOOL_GROUP}
 
 CONF_FILES+=		${EGDIR}/pcp.conf.sample ${PKG_SYSCONFDIR}/pcp.conf
 CONF_FILES+=		${EGDIR}/pgpool.conf.sample ${PKG_SYSCONFDIR}/pgpool.conf

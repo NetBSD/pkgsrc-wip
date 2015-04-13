@@ -1,8 +1,8 @@
-$NetBSD: patch-watchdog_wd__packet.c,v 1.1 2014/05/07 09:19:27 fhajny Exp $
+$NetBSD: patch-src_watchdog_wd__packet.c,v 1.1 2015/04/13 20:00:00 fhajny Exp $
 
 Needs sys/wait.h here too.
---- watchdog/wd_packet.c.orig	2014-03-24 14:30:01.000000000 +0000
-+++ watchdog/wd_packet.c
+--- src/watchdog/wd_packet.c.orig	2015-04-08 07:28:03.000000000 +0000
++++ src/watchdog/wd_packet.c
 @@ -33,6 +33,7 @@
  #include <sys/un.h>
  #include <sys/types.h>
