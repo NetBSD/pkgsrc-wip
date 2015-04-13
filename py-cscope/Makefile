@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/12 09:35:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/13 23:33:19 othyro Exp $
 
 DISTNAME=	pycscope-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26
 REPLACE_PYTHON+=	pycscope/__init__.py
 
 INSTALLATION_DIRS=	share/doc/py-cscope
