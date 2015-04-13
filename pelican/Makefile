@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/03/11 20:56:06 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/13 23:22:01 othyro Exp $
 
 DISTNAME=		pelican-3.5.0
 PKGREVISION=		1
@@ -24,7 +24,7 @@ DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 USE_TOOLS+=		bash:run make:build
 
-PYTHON_VERSIONS_INCOMPATIBLE=26 32 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	32 # py-docutils
 
 SUBST_CLASSES+=				fix-python
 SUBST_STAGE.fix-python=		pre-configure

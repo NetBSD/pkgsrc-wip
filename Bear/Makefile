@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/24 19:15:16 jonthn Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/13 23:22:01 othyro Exp $
 
 DISTNAME=	Bear-2.0.2
 CATEGORIES=	devel
@@ -11,8 +11,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
-
-PYTHON_VERSIONS_INCOMPATIBLE=       26
 
 SUBST_CLASSES+=			   py_interpreter
 SUBST_STAGE.py_interpreter=        post-extract

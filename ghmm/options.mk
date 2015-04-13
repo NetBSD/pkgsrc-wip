@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/02/21 20:28:11 jihbed Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/13 23:22:01 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghmm
 PKG_SUPPORTED_OPTIONS=	gsl atlas  python
@@ -19,7 +19,7 @@ CONFIGURE_ENV+=		ac_cv_prog_MAGICK_CONFIG=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-PYTHON_VERSIONS_ACCEPTED= 27 26
+PYTHON_VERSIONS_ACCEPTED= 27
 .include "../../lang/python/extension.mk"
 .include "../../devel/swig/buildlink3.mk"
 .else

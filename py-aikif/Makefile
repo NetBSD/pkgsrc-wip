@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/02/28 16:49:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/13 23:22:01 othyro Exp $
 
 DISTNAME=	AIKIF-0.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 26 27 33
+PYTHON_VERSIONS_INCOMPATIBLE= 27 33
 PYDISTUTILSPKG= yes
 
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2014/01/25 10:38:27 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.9 2015/04/13 23:22:03 othyro Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
@@ -71,7 +71,7 @@ PLIST_SRC+=		PLIST.tcl
 # Python support
 #
 .if !empty(PKG_OPTIONS:Mpython)
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PEP3147=	no
 .include		"../../lang/python/extension.mk"
 CONFIGURE_ARGS+=	--enable-python=python-${PYVERSSUFFIX}

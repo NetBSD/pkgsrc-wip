@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:19 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/13 23:22:02 othyro Exp $
 #
 
 DISTNAME=	datatree-0.1.8
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.08:../../textproc/py-yaml
 WRKSRC=		${WRKDIR}/datatree-0.1.8
 
 USE_LANGUAGES=	# none
-#PYTHON_VERSIONS_ACCEPTED= 27 26
+#PYTHON_VERSIONS_ACCEPTED= 27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

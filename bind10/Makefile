@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/13 23:22:01 othyro Exp $
 #
 # TODO:
 # CONF_FILES etc/bind10/cmdctl-accounts.csv
@@ -27,7 +27,7 @@ USE_LANGUAGES+=	c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	26 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"

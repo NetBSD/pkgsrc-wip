@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/12/11 08:22:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2015/04/13 23:22:01 othyro Exp $
 
 DISTNAME=	CalendarServer-6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -48,7 +48,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-psutil
 #  File "support/version.py", line 43, in version
 #    svn_revision = subprocess.check_output(["svnversion", "-n", source_root, branch])
 #AttributeError: 'module' object has no attribute 'check_output'
-PYTHON_VERSIONS_INCOMPATIBLE+=	26
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	bash:run

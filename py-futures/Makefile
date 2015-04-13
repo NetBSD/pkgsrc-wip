@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/07 00:13:44 jonthn Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/13 23:22:02 othyro Exp $
 
 DISTNAME=	futures-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://code.google.com/p/pythonfutures/
 COMMENT=	Library brings asynchronous computations from Python 3.x
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_ACCEPTED=	27 26  # included in 3+
+PYTHON_VERSIONS_ACCEPTED=	27 # included in 3+
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34
 
 USE_LANGUAGES=	# none

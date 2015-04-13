@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/09 07:38:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2015/04/13 23:22:02 othyro Exp $
 
 AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.6:../../wip/py-divmod-epsilon
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	26
 REPLACE_PYTHON+=	bin/axiomatic
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-sqlite2, py-twisted
 

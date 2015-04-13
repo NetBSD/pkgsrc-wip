@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/11/22 14:05:07 ryo-on Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/13 23:22:01 othyro Exp $
 
 DISTNAME=	Electrum-1.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://electrum.org/
 COMMENT=	Electrum is an easy to use Bitcoin client
 LICENSE=	gnu-gpl-v3
 
-PYTHON_VERSIONS_ACCEPTED= 27 26
+PYTHON_VERSIONS_ACCEPTED= 27
 NO_BUILD=	yes
 PYDISTUTILSPKG= yes
 

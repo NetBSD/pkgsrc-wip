@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/12/31 13:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/13 23:22:03 othyro Exp $
 
 DISTNAME=	rdflib-django-0.2.dev-201210061248
 EGG_NAME=	rdflib_django-0.2.dev201210061248
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
-PYTHON_VERSIONS_INCOMPATIBLE=	26 33 34 # not yet ported as of 0.2.dev-201210061248
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.2.dev-201210061248
 
 USE_LANGUAGES=	# none
 
