@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.168 2015/04/07 15:15:03 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.169 2015/04/14 09:43:43 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -72,7 +72,6 @@ libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/profile
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
-man/man1/ChangeLog.1
 man/man1/ctags.1
 man/man1/ebrowse.1
 man/man1/emacs.1
@@ -1588,6 +1587,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/crm.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/crm.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cursor-sensor.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cursor-sensor.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/debug.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/debug.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/derived.el.gz
