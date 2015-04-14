@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/04/14 18:14:30 leot1990 Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/14 18:27:59 leot1990 Exp $
 #
 
 DISTNAME=	girara-0.2.4
@@ -12,6 +12,12 @@ COMMENT=	Library to develop simple and minimalist user interface
 
 USE_TOOLS+=	pkg-config gettext gmake groff
 USE_LIBTOOL=	yes
+
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-build
+SUBST_MESSAGE.makefile=	Fixing install invokation
+SUBST_FILES.makefile=	Makefile
+SUBST_SED.makefile=	-e '/install.*\.so.*/ s;install -m 644;${INSTALL_LIB:Q};'
 
 MAKE_ENV+=	COLOR=0
 
