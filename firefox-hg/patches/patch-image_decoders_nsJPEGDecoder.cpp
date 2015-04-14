@@ -1,8 +1,8 @@
-$NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.4 2015/01/23 09:46:22 thomasklausner Exp $
+$NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.5 2015/04/14 11:55:59 thomasklausner Exp $
 
---- image/decoders/nsJPEGDecoder.cpp.orig	2015-01-23 05:55:09.000000000 +0000
+--- image/decoders/nsJPEGDecoder.cpp.orig	2015-04-10 13:16:23.000000000 +0000
 +++ image/decoders/nsJPEGDecoder.cpp
-@@ -22,13 +22,28 @@
+@@ -23,13 +23,28 @@
  
  extern "C" {
  #include "iccjpeg.h"
@@ -32,7 +32,7 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.4 2015/01/23 09:46:22 thomas
  
  static void cmyk_convert_rgb(JSAMPROW row, JDIMENSION width);
  
-@@ -372,6 +388,7 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -373,6 +388,7 @@ nsJPEGDecoder::WriteInternal(const char*
          case JCS_GRAYSCALE:
          case JCS_RGB:
          case JCS_YCbCr:
@@ -40,7 +40,7 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.4 2015/01/23 09:46:22 thomas
            // if we're not color managing we can decode directly to
            // MOZ_JCS_EXT_NATIVE_ENDIAN_XRGB
            if (mCMSMode != eCMSMode_All) {
-@@ -380,6 +397,9 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -381,6 +397,9 @@ nsJPEGDecoder::WriteInternal(const char*
            } else {
                mInfo.out_color_space = JCS_RGB;
            }
@@ -50,10 +50,10 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.4 2015/01/23 09:46:22 thomas
            break;
          case JCS_CMYK:
          case JCS_YCCK:
-@@ -449,6 +469,15 @@ nsJPEGDecoder::WriteInternal(const char*
-       return; // I/O suspension
-     }
+@@ -450,6 +469,15 @@ nsJPEGDecoder::WriteInternal(const char*
  
+     // If this is a progressive JPEG ...
+     mState = mInfo.buffered_image ?
 +#ifndef JCS_EXTENSIONS
 +    /* Force to use our YCbCr to Packed RGB converter when possible */
 +    if (!mTransform && (mCMSMode != eCMSMode_All) &&
@@ -63,10 +63,10 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.4 2015/01/23 09:46:22 thomas
 +      mInfo.cconvert->color_convert = ycc_rgb_convert_argb;
 +    }
 +#endif
+              JPEG_DECOMPRESS_PROGRESSIVE : JPEG_DECOMPRESS_SEQUENTIAL;
+   }
  
-     // If this is a progressive JPEG ...
-     mState = mInfo.buffered_image ?
-@@ -630,7 +659,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
+@@ -629,7 +657,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
  
        MOZ_ASSERT(imageRow, "Should have a row buffer here");
  
@@ -78,9 +78,9 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.4 2015/01/23 09:46:22 thomas
          // Special case: scanline will be directly converted into packed ARGB
          if (jpeg_read_scanlines(&mInfo, (JSAMPARRAY)&imageRow, 1) != 1) {
            *suspend = true; // suspend
-@@ -957,6 +990,282 @@ term_source (j_decompress_ptr jd)
+@@ -953,6 +985,282 @@ term_source (j_decompress_ptr jd)
+ } // namespace image
  } // namespace mozilla
- 
  
 +#ifndef JCS_EXTENSIONS
 +/**************** YCbCr -> Cairo's RGB24/ARGB32 conversion: most common case **************/
