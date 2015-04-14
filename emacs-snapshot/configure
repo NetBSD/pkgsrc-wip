@@ -1,0 +1,36 @@
+Configured for `x86_64--netbsd'.
+
+  Where should the build process find the source code?    .
+  What compiler should emacs be built with?               gcc -std=gnu99 -O2 -I/usr/pkg/include -I/usr/include -I/usr/X11R7/include -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include/libdrm
+  Should Emacs use the GNU version of malloc?             yes
+  Should Emacs use a relocating allocator for buffers?    yes
+  Should Emacs use mmap(2) for buffer allocation?         no
+  What window system should Emacs use?                    x11
+  What toolkit should Emacs use?                          LUCID
+  Where do we find X Windows header files?                /usr/X11R7/include
+  Where do we find X Windows libraries?                   /usr/X11R7/lib
+  Does Emacs use -lXaw3d?                                 no
+  Does Emacs use -lXpm?                                   yes
+  Does Emacs use -ljpeg?                                  yes
+  Does Emacs use -ltiff?                                  yes
+  Does Emacs use a gif library?                           yes -lgif
+  Does Emacs use a png library?                           yes -lpng16
+  Does Emacs use -lrsvg-2?                                no
+  Does Emacs use imagemagick?                             no
+  Does Emacs support sound?                               yes
+  Does Emacs use -lgpm?                                   no
+  Does Emacs use -ldbus?                                  no
+  Does Emacs use -lgconf?                                 no
+  Does Emacs use GSettings?                               no
+  Does Emacs use a file notification library?             no
+  Does Emacs use access control lists?                    no
+  Does Emacs use -lselinux?                               no
+  Does Emacs use -lgnutls?                                no
+  Does Emacs use -lxml2?                                  no
+  Does Emacs use -lfreetype?                              no
+  Does Emacs use -lm17n-flt?                              no
+  Does Emacs use -lotf?                                   no
+  Does Emacs use -lxft?                                   no
+  Does Emacs directly use zlib?                           yes
+  Does Emacs use toolkit scroll bars?                     yes
+
