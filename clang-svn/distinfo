@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/04/13 23:10:26 krytarowski Exp $
+$NetBSD: distinfo,v 1.1 2015/04/14 08:50:15 thomasklausner Exp $
 
 SHA1 (clang-2.6.tar.gz) = 188f29ad3b2c64fcdc791aa34b323ed06452d7ae
 RMD160 (clang-2.6.tar.gz) = b7e44abbf28902ff8e3fd4578a5ff9dd34f40817

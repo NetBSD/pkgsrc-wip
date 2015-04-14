@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2015/04/13 23:10:26 krytarowski Exp $
+$NetBSD: patch-ad,v 1.1 2015/04/14 08:50:15 thomasklausner Exp $
 
 --- Makefile.config.in.orig	2010-03-19 14:56:04.000000000 +0000
 +++ Makefile.config.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/04/13 23:10:26 krytarowski Exp $
+# $NetBSD: Makefile,v 1.1 2015/04/14 08:50:15 thomasklausner Exp $
 
 DISTNAME=	llvm-2.6
 CATEGORIES=	lang

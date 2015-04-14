@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2015/04/13 23:10:26 krytarowski Exp $
+$NetBSD: patch-ac,v 1.1 2015/04/14 08:50:15 thomasklausner Exp $
 
 --- Makefile.rules.orig	2011-01-04 16:03:35.000000000 +0000
 +++ Makefile.rules
