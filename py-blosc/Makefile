@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/13 23:22:02 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/14 11:56:20 thomasklausner Exp $
 
 DISTNAME=	blosc-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED= 27
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/13 23:22:02 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/14 11:56:21 thomasklausner Exp $
 
 DISTNAME=	Faker-0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Library for generating fake user data
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test.py

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6140 2015/04/14 08:50:14 thomasklausner Exp $
+# $Id: Makefile,v 1.6141 2015/04/14 11:56:20 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2609,9 +2609,7 @@ SUBDIR+=	py-dill
 SUBDIR+=	py-dimarray
 SUBDIR+=	py-distutils-extra
 SUBDIR+=	py-divisi2
-SUBDIR+=	py-divmod-axiom
 SUBDIR+=	py-divmod-epsilon
-SUBDIR+=	py-divmod-mantissa
 SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-dj-static
 SUBDIR+=	py-django-audiofield
@@ -2649,7 +2647,6 @@ SUBDIR+=	py-etmtk
 SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
 SUBDIR+=	py-extremes
-SUBDIR+=	py-eyed3
 SUBDIR+=	py-faker
 SUBDIR+=	py-fanova
 SUBDIR+=	py-fastaudio
@@ -2840,7 +2837,6 @@ SUBDIR+=	py-msumastro
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-multimethods
 SUBDIR+=	py-mvpoly
-SUBDIR+=	py-mwavepy
 SUBDIR+=	py-myfitter
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-mystic

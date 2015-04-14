@@ -1,5 +1,0 @@
-Axiom is an object database, or alternatively, an object-relational mapper. Its
-primary goal is to provide an object-oriented layer with what we consider to be
-the key aspects of OO, i.e. polymorphism and message dispatch, without
-hindering the power of an RDBMS. It is designed to "feel pythonic", without
-encouraging the typical ORM behavior such as potato programming.

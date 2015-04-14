@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/04/13 23:22:01 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2015/04/14 11:56:20 thomasklausner Exp $
 
 VERSION=	2.5.29dev
 DISTNAME=	fs-uae-launcher-${VERSION}
@@ -17,7 +17,6 @@ INSTALL_ENV+=	DESTDIR=${DESTDIR}
 INSTALL_ENV+=	PYTHONBIN=${PYTHONBIN}
 
 # Imports urllib.parse which is 3+.
-PYTHON_VERSIONS_ACCEPTED= 34 33
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=fs_uae_launcher/netplay/oyoyo/examplebot.py

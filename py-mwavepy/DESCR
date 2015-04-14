@@ -1,4 +1,0 @@
-mwavepy is a compilation of functions and class's for microwave/RF
-engineering written in python. It is useful for things such as touchstone file
-manipulation, calibration, data analysis, data acquisition, and plotting.
-mwavepy is also very useful for scripting tasks. Being
