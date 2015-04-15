@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/14 11:56:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/15 22:03:05 rhialto Exp $
 
 VERSION=	2.5.29dev
 DISTNAME=	fs-uae-launcher-${VERSION}
@@ -27,7 +27,7 @@ PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}	# 3.4
 PLIST_SUBST+=   PYVERS=${PYPKGPREFIX:S/py//}	# py34 -> 34
 PLIST_SUBST+=   VERSION=${VERSION}
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.1.5:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.1.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-qt4>=4.10.2nb1:../../x11/py-qt4
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-lhafile>=0:../../wip/py-lhafile
