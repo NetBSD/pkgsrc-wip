@@ -1,4 +1,6 @@
-$NetBSD: patch-src_gallium_include_pipe_p__config.h,v 1.3 2015/03/03 21:38:08 tnn2 Exp $
+$NetBSD: patch-src_gallium_include_pipe_p__config.h,v 1.4 2015/04/17 17:50:11 tnn2 Exp $
+
+Fix endian detection on NetBSD.
 
 --- src/gallium/include/pipe/p_config.h.orig	2015-01-17 14:53:45.000000000 +0000
 +++ src/gallium/include/pipe/p_config.h

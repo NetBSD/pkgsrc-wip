@@ -1,4 +1,6 @@
-$NetBSD: patch-src_gallium_drivers_nouveau_nv50_nv84__video.c,v 1.1 2015/04/12 19:32:06 tnn2 Exp $
+$NetBSD: patch-src_gallium_drivers_nouveau_nv50_nv84__video.c,v 1.2 2015/04/17 17:50:11 tnn2 Exp $
+
+Fix build on platforms without close-on-exec.
 
 --- src/gallium/drivers/nouveau/nv50/nv84_video.c.orig	2015-03-21 00:51:18.000000000 +0000
 +++ src/gallium/drivers/nouveau/nv50/nv84_video.c

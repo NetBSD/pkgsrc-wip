@@ -1,4 +1,6 @@
-$NetBSD: patch-src_mesa_x86_common__x86.c,v 1.1 2015/04/03 21:30:42 tnn2 Exp $
+$NetBSD: patch-src_mesa_x86_common__x86.c,v 1.2 2015/04/17 17:50:11 tnn2 Exp $
+
+Treat NetBSD like OpenBSD.
 
 --- src/mesa/x86/common_x86.c.orig	2015-03-28 18:20:39.000000000 +0000
 +++ src/mesa/x86/common_x86.c

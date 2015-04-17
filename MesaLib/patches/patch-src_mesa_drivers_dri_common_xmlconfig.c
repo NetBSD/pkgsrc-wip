@@ -1,4 +1,6 @@
-$NetBSD: patch-src_mesa_drivers_dri_common_xmlconfig.c,v 1.1 2015/04/05 16:43:19 tnn2 Exp $
+$NetBSD: patch-src_mesa_drivers_dri_common_xmlconfig.c,v 1.2 2015/04/17 17:50:11 tnn2 Exp $
+
+Fix broken ifdef.
 
 --- src/mesa/drivers/dri/common/xmlconfig.c.orig	2015-03-28 18:20:39.000000000 +0000
 +++ src/mesa/drivers/dri/common/xmlconfig.c

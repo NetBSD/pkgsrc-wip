@@ -1,4 +1,6 @@
-$NetBSD: patch-src_gallium_winsys_svga_drm_vmw__screen.c,v 1.1 2015/04/05 19:25:04 tnn2 Exp $
+$NetBSD: patch-src_gallium_winsys_svga_drm_vmw__screen.c,v 1.2 2015/04/17 17:50:11 tnn2 Exp $
+
+Solaris needs sys/mkdev.h for major(2).
 
 --- src/gallium/winsys/svga/drm/vmw_screen.c.orig	2014-09-12 21:30:32.000000000 +0000
 +++ src/gallium/winsys/svga/drm/vmw_screen.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-src_mesa_drivers_dri_i965_intel__screen.c,v 1.1 2015/04/03 21:30:42 tnn2 Exp $
+$NetBSD: patch-src_mesa_drivers_dri_i965_intel__screen.c,v 1.2 2015/04/17 17:50:11 tnn2 Exp $
+
+Fix build on older NetBSD w/o _SC_PHYS_PAGES.
 
 --- src/mesa/drivers/dri/i965/intel_screen.c.orig	2015-03-28 18:20:39.000000000 +0000
 +++ src/mesa/drivers/dri/i965/intel_screen.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c,v 1.1 2015/04/12 19:32:06 tnn2 Exp $
+$NetBSD: patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c,v 1.2 2015/04/17 17:50:11 tnn2 Exp $
+
+Fix build on platforms without close-on-exec.
 
 --- src/gallium/drivers/nouveau/nouveau_vp3_video.c.orig	2014-09-12 21:30:32.000000000 +0000
 +++ src/gallium/drivers/nouveau/nouveau_vp3_video.c

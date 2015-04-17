@@ -1,4 +1,6 @@
-$NetBSD: patch-src_mesa_drivers_dri_common_Makefile.in,v 1.1 2015/03/04 23:48:48 tnn2 Exp $
+$NetBSD: patch-src_mesa_drivers_dri_common_Makefile.in,v 1.2 2015/04/17 17:50:11 tnn2 Exp $
+
+Don't install the sysconf directory for now.
 
 --- src/mesa/drivers/dri/common/Makefile.in.orig	2015-02-28 00:06:10.000000000 +0000
 +++ src/mesa/drivers/dri/common/Makefile.in
