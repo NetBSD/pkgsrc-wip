@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:15 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2015/04/17 06:56:55 thomasklausner Exp $
 
-DISTNAME=	smproxy-1.0.5
+DISTNAME=	smproxy-1.0.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
