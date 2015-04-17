@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/05/18 15:50:48 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.2 2015/04/17 06:59:48 thomasklausner Exp $
 
-DISTNAME=	xcmsdb-1.0.4
+DISTNAME=	xcmsdb-1.0.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
