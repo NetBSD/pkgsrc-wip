@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2015/02/13 08:54:40 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/17 22:16:02 jgoamakf Exp $
 
-DISTNAME=	bin_prot-${VERS}
-VERS=		112.17.00
+DISTNAME=	bin_prot-112.24.00
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/janestreet/bin_prot/archive/
-DISTFILES=	${VERS}${EXTRACT_SUFX}
-DIST_SUBDIR=	ocaml-bin_prot
+MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
+GITHUB_PROJECT=	bin_prot
+GITHUB_TAG=	112.24.00
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/bin_prot/

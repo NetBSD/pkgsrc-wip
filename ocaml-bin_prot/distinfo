@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/02/13 08:54:40 jgoamakf Exp $
+$NetBSD: distinfo,v 1.4 2015/04/17 22:16:02 jgoamakf Exp $
 
-SHA1 (ocaml-bin_prot/112.17.00.tar.gz) = 56c08f7c4915b422abd7fccdb64280445ee315ef
-RMD160 (ocaml-bin_prot/112.17.00.tar.gz) = e483372ec38fe62c8944be4bed3c20d7855901e6
-Size (ocaml-bin_prot/112.17.00.tar.gz) = 94952 bytes
+SHA1 (bin_prot-112.24.00.zip) = 4812328d03d20da1bc9ea2f5e9c0af5996045a28
+RMD160 (bin_prot-112.24.00.zip) = fc1ea819534155fe26731f0b1ddcab69fb5df20d
+Size (bin_prot-112.24.00.zip) = 110874 bytes
