@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2015/02/22 13:46:26 jonthn Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/18 15:53:41 jonthn Exp $
 
 DISTNAME=	libunibilium-1.1.2
 CATEGORIES=	devel
-MASTER_SITES=	-https://github.com/mauke/unibilium/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mauke/}
+GITHUB_PROJECT=	unibilium
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://github.com/mauke/unibilium
 COMMENT=	Basic terminfo library
 LICENSE=	gnu-lgpl-v3
-
-WRKSRC=		${WRKDIR}/unibilium-${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
