@@ -1,46 +1,38 @@
-# $NetBSD: Makefile,v 1.25 2013/01/22 23:21:22 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.26 2015/04/18 01:12:07 makoto Exp $
 
-DISTNAME=	audacious-3.2.3
+DISTNAME=	audacious-3.5.2
 CATEGORIES=	audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	loki.vt@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://audacious-media-player.org/
 COMMENT=	Media player based on BMP and XMMS
-# AND? OR?
-#LICENSE=	gnu-gpl-v3 public-domain
+LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=  c c++
-GNU_CONFIGURE=  YES
-USE_TOOLS+=	gmake pkg-config
-USE_LIBTOOL=    YES
-#LDFLAGS+=	-lglib2
-
-CONFIGURE_ARGS+=	--enable-chardet --enable-nls
-.include "options.mk"
-
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+GNU_CONFIGURE=		yes
+# requires libguess which is not available any more
+CONFIGURE_ARGS+=	--disable-chardet
 PKGCONFIG_OVERRIDE+=	audacious.pc.in
-PKGCONFIG_OVERRIDE+=	audclient.pc.in
-.include "../../mk/bsd.options.mk"
 
-LDFLAGS.DragonFly=      -lm -lX11 -lgmodule-2.0
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bsd.prefs.mk"
+# XXX does not solve linking problem completely
+.if ${OPSYS} == "Darwin"
+LDFLAGS+=	-flat_namespace -undefined suppress
+.endif
+
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-#.include "../../devel/libmcs/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../www/neon/buildlink3.mk"
-.include "../../net/libmms/buildlink3.mk"
-.include "../../devel/libmtp/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../misc/libcdio/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.16 2013/01/23 09:23:45 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2015/04/18 01:12:07 makoto Exp $
 
-BUILDLINK_TREE+=        audacious
+BUILDLINK_TREE+=	audacious
 
 .if !defined(AUDACIOUS_BUILDLINK3_MK)
 AUDACIOUS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.audacious+=       audacious>=3.2.2
-BUILDLINK_ABI_DEPENDS.audacious?=       audacious>=3.2.2
-BUILDLINK_PKGSRCDIR.audacious?= ../../wip/audacious
+BUILDLINK_API_DEPENDS.audacious+=	audacious>=3.5.1
+BUILDLINK_ABI_DEPENDS.audacious+=	audacious>=3.5.1
+BUILDLINK_PKGSRCDIR.audacious?=	../../audio/audacious
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -15,15 +15,8 @@ BUILDLINK_PKGSRCDIR.audacious?= ../../wip/audacious
 .include "../../devel/pango/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-#.include "../../devel/libmcs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../www/neon/buildlink3.mk"
-.include "../../net/libmms/buildlink3.mk"
-.include "../../devel/libmtp/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../misc/libcdio/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .endif # AUDACIOUS_BUILDLINK3_MK
 
-BUILDLINK_TREE+=        -audacious
+BUILDLINK_TREE+=	-audacious
