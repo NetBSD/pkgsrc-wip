@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/04/18 01:12:07 makoto Exp $
+# $NetBSD: Makefile,v 1.27 2015/04/18 01:15:30 makoto Exp $
 
 DISTNAME=	audacious-3.5.2
 CATEGORIES=	audio
@@ -34,5 +34,5 @@ LDFLAGS+=	-flat_namespace -undefined suppress
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
