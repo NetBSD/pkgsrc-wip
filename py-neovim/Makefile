@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/01/25 15:22:09 jonthn Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/18 15:35:19 jonthn Exp $
 
-DISTNAME=	py-neovim-0.0.26
+DISTNAME=	py-neovim-0.0.34
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	devel editors
-MASTER_SITES=	-https://github.com/neovim/python-client/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
+GITHUB_PROJECT=	python-client
 
 HOMEPAGE=	https://github.com/neovim/python-client
 COMMENT=	Python client to Neovim

@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/03 12:40:10 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/18 15:35:19 jonthn Exp $
+bin/pynvim
 ${PYSITELIB}/neovim-${PKGVERSION}-py2.7.egg-info/PKG-INFO
 ${PYSITELIB}/neovim-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
 ${PYSITELIB}/neovim-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/neovim-${PKGVERSION}-py2.7.egg-info/entry_points.txt
 ${PYSITELIB}/neovim-${PKGVERSION}-py2.7.egg-info/not-zip-safe
 ${PYSITELIB}/neovim-${PKGVERSION}-py2.7.egg-info/requires.txt
 ${PYSITELIB}/neovim-${PKGVERSION}-py2.7.egg-info/top_level.txt
@@ -62,3 +64,18 @@ ${PYSITELIB}/neovim/plugin/decorators.pyo
 ${PYSITELIB}/neovim/plugin/host.py
 ${PYSITELIB}/neovim/plugin/host.pyc
 ${PYSITELIB}/neovim/plugin/host.pyo
+${PYSITELIB}/neovim/ui/__init__.py
+${PYSITELIB}/neovim/ui/__init__.pyc
+${PYSITELIB}/neovim/ui/__init__.pyo
+${PYSITELIB}/neovim/ui/cli.py
+${PYSITELIB}/neovim/ui/cli.pyc
+${PYSITELIB}/neovim/ui/cli.pyo
+${PYSITELIB}/neovim/ui/gtk_ui.py
+${PYSITELIB}/neovim/ui/gtk_ui.pyc
+${PYSITELIB}/neovim/ui/gtk_ui.pyo
+${PYSITELIB}/neovim/ui/screen.py
+${PYSITELIB}/neovim/ui/screen.pyc
+${PYSITELIB}/neovim/ui/screen.pyo
+${PYSITELIB}/neovim/ui/ui_bridge.py
+${PYSITELIB}/neovim/ui/ui_bridge.pyc
+${PYSITELIB}/neovim/ui/ui_bridge.pyo
