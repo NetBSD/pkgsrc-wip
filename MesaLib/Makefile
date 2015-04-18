@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/04/13 09:26:53 tnn2 Exp $
+# $NetBSD: Makefile,v 1.33 2015/04/18 17:32:13 tnn2 Exp $
 
 DISTNAME=	mesa-10.5.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -73,8 +73,8 @@ BUILDLINK_TRANSFORM+=   l:pthread:pthread:c
 
 # Handle platforms without exp2
 .if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
-CPPFLAGS+=	-Dexp2\(x\)=pow\(2.0d,x\)
-CPPFLAGS+=	-Dexp2f\(x\)=powf\(2.0f,x\)
+CPPFLAGS+=	-Dexp2\(x\)=exp\(\(x\)\*M_LN2\)
+CPPFLAGS+=	-Dexp2f\(x\)=expf\(\(x\)\*M_LN2\)
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"
