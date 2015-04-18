@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/01 15:46:52 jonthn Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/18 15:29:22 jonthn Exp $
 
 PKGNAME=	neovim-0.0.0
 CATEGORIES=	editors
@@ -22,9 +22,6 @@ USE_TOOLS+=	gmake
 
 DEPENDS+=       ${LUA_PKGPREFIX}-MessagePack:../../wip/lua-MessagePack
 DEPENDS+=       ${LUA_PKGPREFIX}-lpeg:../../devel/lua-lpeg
-
-REPLACE_PERL+=	runtime/tools/pltags.pl runtime/tools/shtags.pl runtime/tools/efm_filter.pl
-REPLACE_AWK+=	runtime/tools/mve.awk
 
 .include "options.mk"
 

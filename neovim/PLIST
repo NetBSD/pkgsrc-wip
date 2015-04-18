@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/04/03 13:58:13 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/04/18 15:29:22 jonthn Exp $
 bin/nvim
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
@@ -191,12 +191,7 @@ share/nvim/runtime/doc/help.txt
 share/nvim/runtime/doc/helphelp.txt
 share/nvim/runtime/doc/howto.txt
 share/nvim/runtime/doc/if_cscop.txt
-share/nvim/runtime/doc/if_lua.txt
-share/nvim/runtime/doc/if_mzsch.txt
-share/nvim/runtime/doc/if_perl.txt
 share/nvim/runtime/doc/if_pyth.txt
-share/nvim/runtime/doc/if_ruby.txt
-share/nvim/runtime/doc/if_tcl.txt
 share/nvim/runtime/doc/indent.txt
 share/nvim/runtime/doc/index.txt
 share/nvim/runtime/doc/insert.txt
@@ -1334,25 +1329,4 @@ share/nvim/runtime/syntax/yaml.vim
 share/nvim/runtime/syntax/z8a.vim
 share/nvim/runtime/syntax/zimbu.vim
 share/nvim/runtime/syntax/zsh.vim
-share/nvim/runtime/tools/README.txt
-share/nvim/runtime/tools/blink.c
-share/nvim/runtime/tools/ccfilter.1
-share/nvim/runtime/tools/ccfilter.c
-share/nvim/runtime/tools/ccfilter_README.txt
-share/nvim/runtime/tools/efm_filter.pl
-share/nvim/runtime/tools/efm_filter.txt
-share/nvim/runtime/tools/efm_perl.pl
-share/nvim/runtime/tools/mve.awk
-share/nvim/runtime/tools/mve.txt
-share/nvim/runtime/tools/pltags.pl
-share/nvim/runtime/tools/ref
-share/nvim/runtime/tools/shtags.1
-share/nvim/runtime/tools/shtags.pl
-share/nvim/runtime/tools/unicode.vim
-share/nvim/runtime/tools/vim132
-share/nvim/runtime/tools/vim_vs_net.cmd
-share/nvim/runtime/tools/vimm
-share/nvim/runtime/tools/vimspell.sh
-share/nvim/runtime/tools/vimspell.txt
-share/nvim/runtime/tools/xcmdsrv_client.c
 share/nvim/runtime/vimrc_example.vim
