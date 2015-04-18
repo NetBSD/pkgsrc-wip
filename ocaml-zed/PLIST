@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/09 00:24:09 jgoamakf Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/zed
+@comment $NetBSD: PLIST,v 1.2 2015/04/18 20:05:34 jgoamakf Exp $
 lib/ocaml/site-lib/zed/META
 lib/ocaml/site-lib/zed/zed.a
 lib/ocaml/site-lib/zed/zed.cma
@@ -29,4 +28,3 @@ lib/ocaml/site-lib/zed/zed_rope.mli
 lib/ocaml/site-lib/zed/zed_utf8.cmi
 lib/ocaml/site-lib/zed/zed_utf8.cmx
 lib/ocaml/site-lib/zed/zed_utf8.mli
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/zed
