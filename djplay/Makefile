@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 07:54:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/19 15:10:39 othyro Exp $
 #
 
 DISTNAME=	djplay-0.5.0
@@ -18,8 +18,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake pkg-config
-CONFIGURE_ARGS+=	--with-SoundTouchincludes=${BUILDLINK_PREFIX.libSoundTouch}/include/soundtouch/
-BUILD_DEPENDS+=		libSoundTouch-[0-9]*:../../wip/libSoundTouch
+CONFIGURE_ARGS+=	--with-SoundTouchincludes=${BUILDLINK_PREFIX.soundtouch}/include/soundtouch/
+BUILD_DEPENDS+=		soundtouch-[0-9]*:../../audio/soundtouch
 
 SUBST_CLASSES+=		pixmaps
 SUBST_STAGE.pixmaps=	pre-configure

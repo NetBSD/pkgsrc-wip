@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2013/12/19 03:25:56 othyro Exp $
+# $NetBSD: Makefile,v 1.16 2015/04/19 15:10:39 othyro Exp $
 #
 
 DISTNAME=	desmume-0.9.10
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
 EXTRACT_SUFX=	.tar.tar
@@ -22,9 +23,9 @@ USE_LANGUAGES=	c c++
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libSoundTouch+=	libSoundTouch>=1.5.0
-BUILDLINK_DEPMETHOD.libSoundTouch=	full
-.include "../../wip/libSoundTouch/buildlink3.mk"
+BUILDLINK_API_DEPENDS.soundtouch+=	soundtouch>=1.5.0
+BUILDLINK_DEPMETHOD.soundtouch=	full
+.include "../../audio/soundtouch/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../archivers/zziplib/buildlink3.mk"

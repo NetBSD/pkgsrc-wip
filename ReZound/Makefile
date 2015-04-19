@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/24 16:56:28 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/04/19 15:10:39 othyro Exp $
 #
 
 DISTNAME=		rezound-0.12.0beta
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--disable-alsa
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../math/fftw2/buildlink3.mk"
-.include "../../wip/libSoundTouch/buildlink3.mk"
+.include "../../audio/soundtouch/buildlink3.mk"
 .include "../../x11/fox/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
