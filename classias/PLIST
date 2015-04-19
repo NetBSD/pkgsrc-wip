@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/04/19 16:55:50 cheusov Exp $
+include/classias/classify/linear/binary.h
+include/classias/classify/linear/multi.h
+include/classias/train/averaged_perceptron.h
+include/classias/train/lbfgs.h
+include/classias/train/online_scheduler.h
+include/classias/train/pegasos.h
+include/classias/train/truncated_gradient.h
+include/classias/classias.h
+include/classias/data.h
+include/classias/feature_generator.h
+include/classias/instance.h
+include/classias/quark.h
+include/classias/types.h
+include/classias/evaluation.h
+include/classias/parameters.h
+include/classias/version.h
+bin/classias-train
+bin/classias-tag
+share/doc/classias/README
+share/doc/classias/INSTALL
+share/doc/classias/COPYING
+share/doc/classias/AUTHORS
+share/doc/classias/ChangeLog
