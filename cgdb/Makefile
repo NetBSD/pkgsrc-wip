@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/19 18:40:07 krytarowski Exp $
+# $NetBSD: Makefile,v 1.12 2015/04/19 19:18:28 krytarowski Exp $
 
 DISTNAME=	cgdb-0.6.8
 CATEGORIES=	devel
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+INFO_FILES=	yes
 
 # As -L/usr/lib tends to be found in LDFLAGS, make sure that the library
 # of interest (the local libutil) is found first.
