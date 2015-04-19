@@ -1,31 +1,32 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:48 asau Exp $
+# $NetBSD: Makefile,v 1.10 2015/04/19 23:33:35 cheusov Exp $
 
-DISTNAME=	trayer-1.0
-PKGREVISION=    4
+PKGNAME=	trayer-1.1.6
+DISTNAME=	trayer-srg-${PKGNAME}
 CATEGORIES=	x11
-MASTER_SITES=	http://download.gna.org/fvwm-crystal/trayer/1.0/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=sargon/trayer-svg/archive/}
 
-MAINTAINER=	milos.negovanovic@googlemail.com
-HOMEPAGE=	http://fvwm-crystal.org/
-COMMENT=	Standalone tray app
+MAINTAINER=	cheusov@NetBSD.org
+HOMEPAGE=	https://github.com/sargon/trayer-srg
+COMMENT=	Lightweight GTK2-based systray for UNIX desktop
 LICENSE=	mit
 
 USE_TOOLS+=	gmake pkg-config
-MAKE_JOBS_SAFE=	no
 
-# trayer uses GTK_OBJECT_FLAGS which has been deprecated
-# this is an easy fix
-CFLAGS+=	-DGTK_COMPILATION
-BUILD_MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
+BUILD_MAKE_FLAGS=	CFLAGS=${CFLAGS:Q}
+INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 
-INSTALLATION_DIRS=	bin share/doc/trayer
+SUBST_CLASSES+=		paths
+SUBST_SED.paths=	-e 's,/usr,${PREFIX},'
+SUBST_FILES.paths=	config.h Makefile.config
+SUBST_STAGE.paths=	pre-build
+SUBST_MESSAGE.paths=	Fixing path to ${PREFIX}.
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/trayer ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/trayer
+AUTO_MKDIRS=		yes
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/trayer/
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
