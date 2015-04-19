@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/11 13:03:08 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/19 20:26:38 nros Exp $
 
 DISTNAME=	liblxqt-0.9.0
 CATEGORIES=	x11
@@ -9,11 +9,16 @@ HOMEPAGE=	http://lxqt.org/
 COMMENT=	Core utility library for all LXQt components
 LICENSE=	gnu-lgpl-v2.1
 
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	cmake
+
+# -fPIE is added by 
+# ${PREFIX}/qt5/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
+# for some reason when building this shared library
+# (it does not happen to the other shared libraries built cmake and qt5)
+BUILDLINK_TRANSFORM+=rm:-fPIE
 
 .include "../../wip/kwindowsystem/buildlink3.mk"
 .include "../../wip/libqtxdg/buildlink3.mk"
