@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/12/07 09:19:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2015/04/19 18:09:27 thomasklausner Exp $
 
-DISTNAME=	lgogdownloader-2.20
+DISTNAME=	lgogdownloader-2.21
 CATEGORIES=	games
 MASTER_SITES=	#
 
@@ -21,13 +21,6 @@ USE_TOOLS+=	gmake gunzip
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-
-SUBST_CLASSES+=		json
-SUBST_SED.json+=	-e 's,jsoncpp/json/json.h,json/json.h,'
-SUBST_FILES.json+=	include/downloader.h include/gamedetails.h include/gamefile.h
-SUBST_FILES.json+=	src/api.cpp src/downloader.cpp src/util.cpp
-SUBST_STAGE.json=	post-configure
-SUBST_MESSAGE.json=	Fixing path to jsoncpp headers.
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../security/liboauth/buildlink3.mk"
