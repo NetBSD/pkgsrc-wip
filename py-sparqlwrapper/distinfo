@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2013/12/05 21:07:20 jihbed Exp $
-
-SHA1 (SPARQLWrapper-1.5.2.tar.gz) = 7aa674995bdd575aa89685c0f494eb04ff2c5259
-RMD160 (SPARQLWrapper-1.5.2.tar.gz) = 80ecc5842c729c430a8c799622588aa790e2cb1b
-Size (SPARQLWrapper-1.5.2.tar.gz) = 24953 bytes

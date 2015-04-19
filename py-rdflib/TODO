@@ -1,2 +1,0 @@
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-rdflib/work/.destdir/usr/pkg/lib/python2.7/site-packages/rdflib/plugins/parsers/notation3.py" is not allowed.
-WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-rdflib/work/.destdir/usr/pkg/lib/python2.7/site-packages/rdflib/plugins/parsers/ntriples.py" is not allowed.

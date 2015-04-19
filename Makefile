@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6146 2015/04/19 19:35:22 krytarowski Exp $
+# $Id: Makefile,v 1.6147 2015/04/19 22:45:40 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2728,7 +2728,6 @@ SUBDIR+=	py-inflection
 SUBDIR+=	py-instant
 SUBDIR+=	py-iowait
 SUBDIR+=	py-irco
-SUBDIR+=	py-isodate
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-idavoll
@@ -2999,7 +2998,6 @@ SUBDIR+=	py-rasterio
 SUBDIR+=	py-raven
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdf
-SUBDIR+=	py-rdflib
 SUBDIR+=	py-rdflib-django
 SUBDIR+=	py-rdoupdate
 SUBDIR+=	py-recluse
@@ -3079,7 +3077,6 @@ SUBDIR+=	py-solpy
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-sparce
 SUBDIR+=	py-spark
-SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-spatialdata
 SUBDIR+=	py-spectral
 SUBDIR+=	py-speex
