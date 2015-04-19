@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6147 2015/04/19 22:45:40 othyro Exp $
+# $Id: Makefile,v 1.6148 2015/04/19 23:46:35 cheusov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3660,7 +3660,6 @@ SUBDIR+=	trac-plugins-TimingAndEstimation
 SUBDIR+=	trac-plugins-screenshots
 SUBDIR+=	trac-plugins-spamfilter
 SUBDIR+=	trackballs
-SUBDIR+=	trayer
 SUBDIR+=	trayion
 SUBDIR+=	treetool
 SUBDIR+=	treeview
