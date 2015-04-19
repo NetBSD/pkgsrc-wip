@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/04/19 17:56:54 realzhtw Exp $
+
+SHA1 (proplib-0.6.3.tar.xz) = 8454c4531aa00bb4e5f24dda7999160800cc4cfe
+RMD160 (proplib-0.6.3.tar.xz) = a8bb669b9e4b7d84f6bec6ffba46a18323a5eb3d
+Size (proplib-0.6.3.tar.xz) = 266012 bytes
+SHA1 (patch-src_prop__object.c) = 7e9600d9f214ebfd644bd1b3505f8a9a36634f0e
