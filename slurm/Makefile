@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/04/02 20:58:07 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2015/04/20 13:08:37 outpaddling Exp $
 
-DISTNAME=	slurm-2.6.4
-PKGREVISION=	5
+DISTNAME=	slurm-14.11.5
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \
@@ -31,26 +30,20 @@ PKG_SHELL.slurm=	$(NOLOGIN)
 
 RCD_SCRIPTS+=	slurmd slurmctld
 
-SUBST_CLASSES+=		htmldir
-SUBST_STAGE.htmldir=	post-patch
-SUBST_FILES.htmldir=	${WRKSRC}/doc/man/man5/Makefile.am \
-			${WRKSRC}/doc/html/Makefile.am \
-			${WRKSRC}/doc/man/man5/Makefile.in \
-			${WRKSRC}/doc/html/Makefile.in \
-			${WRKSRC}/doc/man/man8/Makefile.am \
-			${WRKSRC}/doc/man/man1/Makefile.am \
-			${WRKSRC}/doc/man/man8/Makefile.in \
-			${WRKSRC}/doc/man/man1/Makefile.in
-SUBST_SED.htmldir=	-e 's|$${datadir}/doc/@PACKAGE@-@VERSION@/html|@htmldir@|g'
-
 SUBST_CLASSES+=		linuxinit
 SUBST_STAGE.linuxinit=	post-patch
 SUBST_FILES.linuxinit=	${WRKSRC}/etc/init.d.slurm.in
-SUBST_SED.linuxinit=	-e "/^BINDIR=/ i exec_prefix=$(PREFIX)\nprefix=$(PREFIX)\n" 
+SUBST_SED.linuxinit=	-e 's|^exec_prefix=|&$(PREFIX)|' \
+			-e 's|^prefix=|&$(PREFIX)|' \
+			-e 's|@bindir@|$${exec_prefix}/bin|' \
+			-e 's|@sbindir@|$${exec_prefix}/sbin|' \
+			-e 's|@libdir@|$${exec_prefix}/lib|' \
+			-e 's|@sysconfdir@|$${prefix}/etc|'
 
 post-install:
 	$(INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)
 	$(INSTALL_DATA) $(WRKSRC)/etc/* $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)/
+	chmod 755 $(DESTDIR)$(PREFIX)/share/examples/slurm/init.d.slurm
 
 .include "../../lang/python/tool.mk"
 
