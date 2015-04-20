@@ -1,6 +1,6 @@
-$NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.5 2015/04/14 11:55:59 thomasklausner Exp $
+$NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.6 2015/04/20 10:01:53 thomasklausner Exp $
 
---- image/decoders/nsJPEGDecoder.cpp.orig	2015-04-10 13:16:23.000000000 +0000
+--- image/decoders/nsJPEGDecoder.cpp.orig	2015-04-20 02:19:51.000000000 +0000
 +++ image/decoders/nsJPEGDecoder.cpp
 @@ -23,13 +23,28 @@
  
@@ -50,10 +50,10 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.5 2015/04/14 11:55:59 thomas
            break;
          case JCS_CMYK:
          case JCS_YCCK:
-@@ -450,6 +469,15 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -448,6 +467,15 @@ nsJPEGDecoder::WriteInternal(const char*
+       return; // I/O suspension
+     }
  
-     // If this is a progressive JPEG ...
-     mState = mInfo.buffered_image ?
 +#ifndef JCS_EXTENSIONS
 +    /* Force to use our YCbCr to Packed RGB converter when possible */
 +    if (!mTransform && (mCMSMode != eCMSMode_All) &&
@@ -63,9 +63,9 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.5 2015/04/14 11:55:59 thomas
 +      mInfo.cconvert->color_convert = ycc_rgb_convert_argb;
 +    }
 +#endif
+     // If this is a progressive JPEG ...
+     mState = mInfo.buffered_image ?
               JPEG_DECOMPRESS_PROGRESSIVE : JPEG_DECOMPRESS_SEQUENTIAL;
-   }
- 
 @@ -629,7 +657,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
  
        MOZ_ASSERT(imageRow, "Should have a row buffer here");
