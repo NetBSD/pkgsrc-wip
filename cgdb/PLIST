@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2015/04/19 19:18:28 krytarowski Exp $
-bin/cgdb
-info/cgdb.info
-man/man1/cgdb.1
-share/cgdb/cgdb.txt
