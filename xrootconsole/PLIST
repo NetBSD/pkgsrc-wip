@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/11/04 23:54:08 gregschenzel Exp $
-bin/xrootconsole
-man/man1/xrootconsole.1

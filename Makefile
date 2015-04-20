@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6150 2015/04/20 07:49:44 thomasklausner Exp $
+# $Id: Makefile,v 1.6151 2015/04/20 20:32:06 cheusov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3922,7 +3922,6 @@ SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
 SUBDIR+=	xpr
 SUBDIR+=	xrdp
-SUBDIR+=	xrootconsole
 SUBDIR+=	xrx
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
