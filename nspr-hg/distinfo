@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2014/10/04 11:54:48 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2015/04/21 14:56:24 thomasklausner Exp $
 
 SHA1 (nspr-4.10.6.tar.gz) = 9f3f278f7f31574b2cdbb99d9703c58e51cd3e1c
 RMD160 (nspr-4.10.6.tar.gz) = cee6015cb94f6a8c399b290f22e986fc3b1d6799
 Size (nspr-4.10.6.tar.gz) = 1131328 bytes
-SHA1 (patch-configure.in) = 345d9272cfc128db64c3ea4a15dcbf6724164dff
+SHA1 (patch-configure.in) = a7270f2b3042f4860a9d896a3a1da2ccc4ea7d8b
 SHA1 (patch-pr_include_md___dragonfly.cfg) = b1041839d14c6b74bf90682a36e56d3e4a94f8a8
 SHA1 (patch-pr_include_md___freebsd.h) = 53f01cac4097168ba7d9e04a8fd923436905db86
 SHA1 (patch-pr_include_md___netbsd.h) = 9ad5cfe61e9e64de918ee38a998b96451e58dfce

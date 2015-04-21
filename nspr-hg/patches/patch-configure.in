@@ -1,15 +1,13 @@
-$NetBSD: patch-configure.in,v 1.3 2014/10/04 11:54:48 thomasklausner Exp $
+$NetBSD: patch-configure.in,v 1.4 2015/04/21 14:56:24 thomasklausner Exp $
 
 chunk 1: add rpath for pkgsrc
 chunk 2: Dragonfly support
-chunk 3: NetBSD support, see 
-https://bugzilla.mozilla.org/show_bug.cgi?id=871280
-chunk 4: Probably: Sync PLIST for pkgsrc on OpenBSD
+chunk 3: Probably: Sync PLIST for pkgsrc on OpenBSD
+chunk 4: Dragonfly support
 chunk 5: Dragonfly support
 chunk 6: Dragonfly support
-chunk 7: Dragonfly support
 
---- configure.in.orig	2014-09-28 14:07:42.000000000 +0000
+--- configure.in.orig	2015-04-21 12:06:00.000000000 +0000
 +++ configure.in
 @@ -38,7 +38,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ
@@ -54,15 +52,7 @@ chunk 7: Dragonfly support
      ;;
  
  *-hpux*)
-@@ -2120,6 +2147,7 @@ tools are selected during the Xcode/Deve
-     AC_DEFINE(XP_UNIX)
-     AC_DEFINE(NETBSD)
-     AC_DEFINE(HAVE_BSD_FLOCK)
-+    AC_DEFINE(HAVE_SOCKLEN_T)
-     if test -z "$USE_NSPR_THREADS"; then
-         USE_PTHREADS=1
-     fi
-@@ -2170,7 +2198,7 @@ tools are selected during the Xcode/Deve
+@@ -2171,7 +2199,7 @@ tools are selected during the Xcode/Deve
      AC_DEFINE(HAVE_SOCKLEN_T)
      CFLAGS="$CFLAGS -ansi -Wall"
      CXXFLAGS="$CXXFLAGS -ansi -Wall"
@@ -71,7 +61,7 @@ chunk 7: Dragonfly support
      DSO_CFLAGS=-fPIC
      MDCPUCFG_H=_openbsd.cfg
      PR_MD_CSRCS=openbsd.c
-@@ -2756,7 +2784,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2757,7 +2785,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -80,7 +70,7 @@ chunk 7: Dragonfly support
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2794,7 +2822,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2795,7 +2823,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -89,7 +79,7 @@ chunk 7: Dragonfly support
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2875,7 +2903,7 @@ case "$target" in
+@@ -2876,7 +2904,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
