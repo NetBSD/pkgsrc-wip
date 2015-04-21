@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/11 17:07:05 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 07:21:55 krytarowski Exp $
 
 DISTNAME=	lxqt-powermanagement-0.9.0
 CATEGORIES=	x11
@@ -18,5 +18,4 @@ USE_LANGUAGES=	c c++
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../wip/liblxqt/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

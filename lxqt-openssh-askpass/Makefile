@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/11 14:20:47 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/21 07:21:55 krytarowski Exp $
 
 DISTNAME=	lxqt-openssh-askpass-0.9.0
 CATEGORIES=	x11
@@ -15,5 +15,4 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../wip/liblxqt/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
