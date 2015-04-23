@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/23 00:52:35 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/04/23 01:38:10 krytarowski Exp $
 
 GITHUB_PROJECT=	wklejto
 DISTNAME=	0.1
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/wklejto-0.1
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run expr:run gsed:run
 
+DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	xclip-[0-9]*:../../x11/xclip
 
@@ -36,6 +37,19 @@ SUBST_STAGE.gsed=	pre-configure
 SUBST_MESSAGE.gsed=	Adjusting gsed path.
 SUBST_FILES.gsed=	usr/bin/wklejto
 SUBST_SED.gsed=		-e "s, sed , ${TOOLS_PATH.gsed} ,g"
+
+# $ gexpr http://wklejto.org/w/b8125f30 : '^http://wklejto.org/w/[0-9a-f]\+'
+# 29
+# $ expr http://wklejto.org/w/b8125f30 : '^http://wklejto.org/w/[0-9a-f]\+'  
+# 0
+# I will check what happens later.. for now just use gexpr
+
+SUBST_CLASSES+=		gexpr
+SUBST_STAGE.gexpr=	pre-configure
+SUBST_MESSAGE.gexpr=	Adjusting gexpr path.
+SUBST_FILES.gexpr=	usr/bin/wklejto
+# TODO, missing ${TOOLS_PATH.gexpr}?
+SUBST_SED.gexpr=	-e "s,expr , ${PREFIX}/bin/gexpr ,g"
 
 AUTO_MKDIRS=	yes
 
