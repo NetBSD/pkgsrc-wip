@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/23 00:36:30 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/23 00:52:35 krytarowski Exp $
 
 GITHUB_PROJECT=	wklejto
 DISTNAME=	0.1
@@ -16,7 +16,7 @@ EXTRACT_USING=	gtar
 
 WRKSRC=		${WRKDIR}/wklejto-0.1
 USE_LANGUAGES=	# none
-USE_TOOLS+=	bash:run gsed:run
+USE_TOOLS+=	bash:run expr:run gsed:run
 
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	xclip-[0-9]*:../../x11/xclip
