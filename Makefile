@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6152 2015/04/23 09:51:09 ahp-nils Exp $
+# $Id: Makefile,v 1.6153 2015/04/23 10:54:09 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2713,7 +2713,6 @@ SUBDIR+=	py-hdf5storage
 SUBDIR+=	py-healpy
 SUBDIR+=	py-helio
 SUBDIR+=	py-hfk
-SUBDIR+=	py-hglist
 SUBDIR+=	py-hgwatchman
 SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-hope
