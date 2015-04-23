@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6151 2015/04/20 20:32:06 cheusov Exp $
+# $Id: Makefile,v 1.6152 2015/04/23 09:51:09 ahp-nils Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3201,6 +3201,7 @@ SUBDIR+=	py-xlutils
 SUBDIR+=	py-xpra
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yams
+SUBDIR+=	py-yapf
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-yapps2
 SUBDIR+=	py-yaprt
