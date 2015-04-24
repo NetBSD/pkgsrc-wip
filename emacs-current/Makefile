@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2014/10/04 09:10:31 makoto Exp $
+# $NetBSD: Makefile,v 1.74 2015/04/24 01:19:04 makoto Exp $
 #
 
 .include	"version.mk"
@@ -9,17 +9,16 @@ MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
-COMMENT=	GNU editing macros (editor)
+COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake makeinfo gzip autoconf automake
+USE_TOOLS+=	autoconf automake gmake gzip makeinfo
 # for example, Mac OS X 10.6.1 has 2.61 which fails
 AUTOCONF_REQD=	2.65
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
-BUILD_TARGET=	bootstrap
-MAKE_JOBS_SAFE= no
+MAKE_JOBS_SAFE=	no
 
 GIT_REPOSITORIES=	master
 GIT_MODULE.master=	emacs
@@ -28,9 +27,6 @@ _GIT_FLAGS?=		--depth 1
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-REPLACE_PERL=		lib-src/grep-changelog
-CHECK_INTERPRETER_SKIP=	bin/grep-changelog
-
 WRKSRC=		${WRKDIR}/emacs
 
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
@@ -39,6 +35,7 @@ CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 # For wip special, following gives symbol names when back trace is shown.
 CFLAGS+=		-g
 
+BUILD_TARGET=		bootstrap
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
 
@@ -49,6 +46,9 @@ MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 #SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM:Q}/update-game-score ${SETGID_GAMES_PERMS}
+
+REPLACE_PERL=		lib-src/grep-changelog
+CHECK_INTERPRETER_SKIP=	bin/grep-changelog
 
 .include "options.mk"
 
