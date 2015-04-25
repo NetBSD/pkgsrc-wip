@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6153 2015/04/23 10:54:09 nros Exp $
+# $Id: Makefile,v 1.6154 2015/04/25 13:42:51 gschwarz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1890,6 +1890,7 @@ SUBDIR+=	nos-tun
 SUBDIR+=	nostromo
 SUBDIR+=	notify-sharp
 SUBDIR+=	npth
+SUBDIR+=	nrg4iso
 SUBDIR+=	nsc2ke
 SUBDIR+=	nsp
 SUBDIR+=	nspluginwrapper
