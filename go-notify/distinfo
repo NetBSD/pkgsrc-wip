@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 17:10:48 tnn2 Exp $
+
+SHA1 (go-notify-20150316-9ae2c42a589ea0ee4761559fd5b2c4b747b4150f.tar.gz) = 6bcabc3ae45bb63036aa14da36102169c8ac6718
+RMD160 (go-notify-20150316-9ae2c42a589ea0ee4761559fd5b2c4b747b4150f.tar.gz) = 5fb5da3509a55ed70fa34efd1994c83e4d3cda63
+Size (go-notify-20150316-9ae2c42a589ea0ee4761559fd5b2c4b747b4150f.tar.gz) = 49653 bytes
