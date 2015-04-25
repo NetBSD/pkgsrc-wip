@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 17:13:03 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/25 22:26:45 tnn2 Exp $
 
 DISTNAME=	syncthing-inotify-0.6
 CATEGORIES=	net
@@ -25,5 +25,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME}\
 		${DESTDIR}${PREFIX}/bin/${PKGBASE}
 
+.include "../../wip/go-backoff/buildlink3.mk"
 .include "../../wip/go-notify/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
