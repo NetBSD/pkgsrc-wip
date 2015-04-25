@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/04/19 22:11:33 phabrics Exp $
+# $NetBSD: Makefile,v 1.9 2015/04/25 10:23:58 phabrics Exp $
 
-DISTNAME=	tme-0.10beta
+DISTNAME=	tme-0.10beta_2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.phabrics.com/
 EXTRACT_SUFX=   .tar.xz
