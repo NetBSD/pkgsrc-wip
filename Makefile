@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6157 2015/04/25 21:57:26 ahp-nils Exp $
+# $Id: Makefile,v 1.6158 2015/04/25 21:59:05 ahp-nils Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3336,6 +3336,7 @@ SUBDIR+=	ruby-git
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-libv8
+SUBDIR+=	ruby-mustache
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-rdiscount
 SUBDIR+=	ruby-redmine
