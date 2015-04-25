@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6155 2015/04/25 15:02:22 tnn2 Exp $
+# $Id: Makefile,v 1.6156 2015/04/25 17:13:54 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -883,6 +883,7 @@ SUBDIR+=	go
 SUBDIR+=	go-backoff
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-net
+SUBDIR+=	go-notify
 SUBDIR+=	go-text
 SUBDIR+=	go-tools
 SUBDIR+=	goattracker
