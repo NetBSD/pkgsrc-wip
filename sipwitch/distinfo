@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2014/06/15 23:13:19 othyro Exp $
+$NetBSD: distinfo,v 1.9 2015/04/25 15:13:27 othyro Exp $
 
-SHA1 (sipwitch-1.9.2.tar.gz) = 9b54bc0aeb6f356bc819a5b8b13d04aa09e0c667
-RMD160 (sipwitch-1.9.2.tar.gz) = daebc89f320e0aae8ed79ad71dd5c69280970ed2
-Size (sipwitch-1.9.2.tar.gz) = 557639 bytes
+SHA1 (sipwitch-1.9.7.tar.gz) = 5f7189ec868a88ac8b9273ad7f1cb479ba6e1057
+RMD160 (sipwitch-1.9.7.tar.gz) = 8ca0c9544006cf09e1fc58074febdeceb98723e0
+Size (sipwitch-1.9.7.tar.gz) = 556562 bytes
