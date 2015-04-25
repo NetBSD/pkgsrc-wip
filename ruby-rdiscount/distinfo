@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/04/25 21:55:59 ahp-nils Exp $
+
+SHA1 (rdiscount-2.1.8.gem) = b9a058401a8562e79b314f42e40b7dff31c9966d
+RMD160 (rdiscount-2.1.8.gem) = 70393971c1c02f5f76f1eecc019da7c74a756dc0
+Size (rdiscount-2.1.8.gem) = 67072 bytes
