@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/23 01:38:10 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/04/25 12:34:35 krytarowski Exp $
 
 GITHUB_PROJECT=	wklejto
 DISTNAME=	0.1
@@ -17,7 +17,10 @@ EXTRACT_USING=	gtar
 WRKSRC=		${WRKDIR}/wklejto-0.1
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run expr:run gsed:run
+# XXX: After merging gexpr patch with mk/ use this line
+#USE_TOOLS+=	bash:run gexpr:run gsed:run
 
+# XXX: After merging gexpr patch with mk/ remove the following line
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	xclip-[0-9]*:../../x11/xclip
@@ -48,8 +51,9 @@ SUBST_CLASSES+=		gexpr
 SUBST_STAGE.gexpr=	pre-configure
 SUBST_MESSAGE.gexpr=	Adjusting gexpr path.
 SUBST_FILES.gexpr=	usr/bin/wklejto
-# TODO, missing ${TOOLS_PATH.gexpr}?
 SUBST_SED.gexpr=	-e "s,expr , ${PREFIX}/bin/gexpr ,g"
+# XXX: After merging gexpr patch with mk/ use this line
+#SUBST_SED.gexpr=	-e "s,expr ,${TOOLS_PATH.gexpr} ,g"
 
 AUTO_MKDIRS=	yes
 
