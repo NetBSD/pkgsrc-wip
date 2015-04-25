@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/13 00:54:30 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/04/25 10:01:54 krytarowski Exp $
 
 GIT_REPOSITORIES=	coreclr
 GIT_REPO.coreclr=	git@github.com:dotnet/coreclr.git
@@ -12,8 +12,14 @@ HOMEPAGE=	https://github.com/dotnet/coreclr
 COMMENT=	The .NET Core runtime and the base library
 LICENSE=	mit
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+#USE_CMAKE=	yes
+#USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	bash
+REPLACE_BASH+=	build.sh
+
+do-build:
+		${RUN} cd ${WRKSRC} && ./build.sh
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
