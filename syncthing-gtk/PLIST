@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/27 22:48:37 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/04/26 14:36:28 tnn2 Exp $
 bin/syncthing-gtk
 ${PYSITELIB}/syncthing_gtk/__init__.py
 ${PYSITELIB}/syncthing_gtk/__init__.pyc
@@ -92,6 +92,7 @@ share/pixmaps/emblem-syncthing-active.png
 share/pixmaps/emblem-syncthing-error.png
 share/pixmaps/emblem-syncthing-offline.png
 share/pixmaps/emblem-syncthing.png
+share/pixmaps/syncthing-gtk.png
 share/syncthing-gtk/about.glade
 share/syncthing-gtk/app.glade
 share/syncthing-gtk/daemon-output.glade
@@ -152,6 +153,7 @@ share/syncthing-gtk/icons/st-logo-32.png
 share/syncthing-gtk/icons/st-logo-512.png
 share/syncthing-gtk/icons/st-logo-64.png
 share/syncthing-gtk/icons/sync.png
+share/syncthing-gtk/icons/syncthing-gtk.png
 share/syncthing-gtk/icons/thumb_up.png
 share/syncthing-gtk/icons/up_rate.png
 share/syncthing-gtk/icons/version.png
