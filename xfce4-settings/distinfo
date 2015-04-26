@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/02/19 17:16:07 guigui2 Exp $
-
-SHA1 (xfce4-settings-4.8.3.tar.bz2) = 98431633ba3ec2a4a10182bc7266904d9256949b
-RMD160 (xfce4-settings-4.8.3.tar.bz2) = 37ee15874322b038948e496a0ff9ad25c7e6b219
-Size (xfce4-settings-4.8.3.tar.bz2) = 672266 bytes
-SHA1 (patch-aa) = 2ec5661978873d3270671878dd2f8ec4fcdd9c4c
-SHA1 (patch-ab) = 0bfdd8579c84c0df4162318c9533b6103549fd2a
