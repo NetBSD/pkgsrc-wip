@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/04/04 15:15:44 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/26 10:14:45 makoto Exp $
 
 DISTNAME=	tamago-tsunagi-5.0.7.1
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=tamago-tsunagi/62701/}
 
@@ -16,4 +17,5 @@ GNU_CONFIGURE=		yes
 
 .include "options.mk"
 
+.include "../../wip/emacs-current/modules.mk"
 .include "../../mk/bsd.pkg.mk"
