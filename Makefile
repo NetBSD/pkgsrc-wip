@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6161 2015/04/26 10:31:22 yrmt Exp $
+# $Id: Makefile,v 1.6162 2015/04/27 17:28:02 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3837,6 +3837,7 @@ SUBDIR+=	xf86-video-suntcx
 SUBDIR+=	xf86-video-voodoo
 SUBDIR+=	xf86dga
 SUBDIR+=	xf86rushproto
+SUBDIR+=	xfburn
 SUBDIR+=	xfs
 SUBDIR+=	xfsinfo
 SUBDIR+=	xgfe
