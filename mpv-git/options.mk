@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2014/10/26 22:08:31 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.5 2015/04/27 20:28:12 leot1990 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 PKG_SUPPORTED_OPTIONS=	caca lua pulseaudio sdl v4l2
@@ -22,6 +22,7 @@ WAF_CONFIGURE_ARGS+=	--disable-caca
 .if !empty(PKG_OPTIONS:Mlua)
 WAF_CONFIGURE_ARGS+=	--enable-lua
 .include "../../lang/lua/buildlink3.mk"
+LUA_VERSIONS_INCOMPATIBLE=	53
 .else
 WAF_CONFIGURE_ARGS+=	--disable-lua
 .endif
