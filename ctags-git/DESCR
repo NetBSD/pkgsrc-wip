@@ -1,0 +1,12 @@
+Exuberant Ctags generates an index (or tag) file of source language
+objects in source files that allows these items to be quickly and
+easily located by a text editor or other utility.
+
+Alternatively, it can generate a cross reference file which lists,
+in human-readable form, information about the various objects found
+in a set of source code files.
+
+Supported languages include: Ada, Assembler, ASP, Awk, C, C++, Clojure, CSS,
+BETA, COBOL, D, Eiffel, Falcon, Fortran, Go, Java, Json, Lisp, Make, Pascal,
+Perl, PHP, Python, REXX, Ruby, Rust, Scheme, Shell scripts (Bourne/Korn/Z),
+S-Lang, Tcl, Vim and YACC/Bison.
