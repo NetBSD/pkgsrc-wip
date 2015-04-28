@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 16:59:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2015/04/28 21:04:19 bsiegert Exp $
 
 DISTNAME=	syncthing-0.11.0
 CATEGORIES=	net
@@ -18,6 +18,7 @@ NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		GOPATH=${WRKDIR}/gopath
+INSTALL_UNSTRIPPED=	yes
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-build
