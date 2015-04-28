@@ -1,0 +1,14 @@
+@comment $Id: PLIST,v 1.1 2015/04/28 14:37:16 bartoszkuzma Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pygeoip/__init__.py
+${PYSITELIB}/pygeoip/__init__.pyc
+${PYSITELIB}/pygeoip/__init__.pyo
+${PYSITELIB}/pygeoip/const.py
+${PYSITELIB}/pygeoip/const.pyc
+${PYSITELIB}/pygeoip/const.pyo
+${PYSITELIB}/pygeoip/timezone.py
+${PYSITELIB}/pygeoip/timezone.pyc
+${PYSITELIB}/pygeoip/timezone.pyo
+${PYSITELIB}/pygeoip/util.py
+${PYSITELIB}/pygeoip/util.pyc
+${PYSITELIB}/pygeoip/util.pyo

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6162 2015/04/27 17:28:02 yrmt Exp $
+# $Id: Makefile,v 1.6163 2015/04/28 14:37:16 bartoszkuzma Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2676,6 +2676,7 @@ SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-gccxml
 SUBDIR+=	py-genesis
 SUBDIR+=	py-geographiclib
+SUBDIR+=	py-geoip
 SUBDIR+=	py-geopy
 SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-ghalatawi
