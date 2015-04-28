@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/03/16 14:27:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2015/04/28 15:15:31 thomasklausner Exp $
 
 DISTNAME=	lilypond-2.19.18
 CATEGORIES=	print
@@ -25,6 +25,7 @@ BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 DEPENDS+=	tex-cyrillic-[0-9]*:../../print/tex-cyrillic
+DEPENDS+=	tex-lh-[0-9]*:../../fonts/tex-lh
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
