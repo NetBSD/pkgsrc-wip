@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/29 21:27:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/04/29 13:13:34 tnn2 Exp $
 
-DISTNAME=	libxshmfence-1.1
+DISTNAME=	libxshmfence-1.2
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,11 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	xshmfence.pc.in
+
+# Needs additional pthread functions or alternative syncronization
+# implemenation on NetBSD. See PR lib/49529.
+
+ONLY_FOR_PLATFORM+=	Linux-*-* FreeBSD-*-*
 
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
