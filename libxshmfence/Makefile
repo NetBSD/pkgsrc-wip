@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/29 13:16:30 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2015/04/29 13:17:53 thomasklausner Exp $
 
 DISTNAME=	libxshmfence-1.2
 CATEGORIES=	x11
@@ -16,8 +16,8 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	xshmfence.pc.in
 
-# Needs additional pthread functions or alternative syncronization
-# implemenation on NetBSD. See PR lib/49529.
+# Needs additional pthread functions or alternative synchronization
+# implementation on NetBSD. See PR lib/49529.
 # (On FreeBSD, umtx is used.)
 
 ONLY_FOR_PLATFORM+=	Linux-*-* FreeBSD-*-*
