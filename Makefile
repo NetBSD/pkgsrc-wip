@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6163 2015/04/28 14:37:16 bartoszkuzma Exp $
+# $Id: Makefile,v 1.6164 2015/04/29 14:43:33 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1553,7 +1553,6 @@ SUBDIR+=	libvg
 SUBDIR+=	libvterm
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
-SUBDIR+=	libxshmfence
 SUBDIR+=	libzdb
 SUBDIR+=	libzn-poly
 SUBDIR+=	lidia
