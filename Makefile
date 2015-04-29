@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6164 2015/04/29 14:43:33 tnn2 Exp $
+# $Id: Makefile,v 1.6165 2015/04/29 15:08:26 gschwarz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3443,6 +3443,7 @@ SUBDIR+=	slurm
 SUBDIR+=	sm-change_ldappass
 SUBDIR+=	sm-change_qldforward
 SUBDIR+=	sm-compatibility
+SUBDIR?=	smap
 SUBDIR+=	smc
 SUBDIR+=	smplayer
 SUBDIR+=	smproxy
