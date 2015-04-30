@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2015/01/03 14:00:04 jonthn Exp $
+# $NetBSD: options.mk,v 1.2 2015/04/30 22:22:00 jonthn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.neovim
-PKG_SUPPORTED_OPTIONS=	python
+PKG_SUPPORTED_OPTIONS=	python jemalloc
 PKG_SUGGESTED_OPTIONS=	python
 
 .include "../../mk/bsd.options.mk"
@@ -13,4 +13,11 @@ PKG_SUGGESTED_OPTIONS=	python
 DEPENDS+=       ${PYPKGPREFIX}-neovim:../../wip/py-neovim
 
 .include "../../lang/python/pyversion.mk"
+.  endif
+
+###
+### Use jemalloc for memory allocation
+###
+.  if !empty(PKG_OPTIONS:Mjemalloc)
+.include "../../wip/jemalloc/buildlink3.mk"
 .  endif
