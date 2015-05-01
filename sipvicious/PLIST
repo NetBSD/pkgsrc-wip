@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/01 18:05:31 gschwarz Exp $
+bin/svcrack.py
+bin/svcrash.py
+bin/svmap.py
+bin/svreport.py
+bin/svwar.py

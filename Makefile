@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6166 2015/05/01 06:26:30 idleroux Exp $
+# $Id: Makefile,v 1.6167 2015/05/01 18:08:47 gschwarz Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3422,6 +3422,7 @@ SUBDIR+=	sipbomber
 SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	siptoolbox
+SUBDIR+=	sipvicious
 SUBDIR+=	sipwitch
 SUBDIR+=	sis
 SUBDIR+=	siscone
