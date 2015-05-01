@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2015/05/01 06:24:12 idleroux Exp $
+# $NetBSD: options.mk,v 1.6 2015/05/01 08:08:27 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		dbus debug dts faad gnome jack pulseaudio
@@ -98,6 +98,7 @@ CONFIGURE_ARGS+=	--disable-skins2
 
 ## X11 dependency and QT4 frontend
 
+PLIST_VARS+=		egl
 .if !empty(PKG_OPTIONS:Mx11)
 DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -115,6 +116,9 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 CONFIGURE_ARGS+=	--enable-qt \
 			--with-x
 PLIST.x11=		yes
+.if ${X11_TYPE} == "modular" || exists(${X11BASE}/include/EGL/egl.h)
+PLIST.egl=		yes
+.endif
 .else
 CONFIGURE_ARGS+=	--without-x \
 			--disable-xcb \
