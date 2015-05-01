@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/04/20 10:24:34 fhajny Exp $
+# $NetBSD: Makefile,v 1.37 2015/05/01 12:20:25 ryo-on Exp $
 
 DISTNAME=	mongodb-src-r2.6.9
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -25,7 +25,7 @@ SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
 SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
 SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
 
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "x86_64"
 SCONS_ARGS+=	--64
