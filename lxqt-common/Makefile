@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/04/11 13:48:40 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/02 23:31:37 krytarowski Exp $
 
-DISTNAME=	lxqt-common-0.9.0
+DISTNAME=	lxqt-common-0.9.1
 CATEGORIES=	x11
 MASTER_SITES=	http://downloads.lxqt.org/lxqt/${PKGVERSION_NOREV}/
 
