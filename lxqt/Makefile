@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/11 18:19:37 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/02 12:45:06 krytarowski Exp $
 
 PKGNAME=        lxqt-0.9.0
 CATEGORIES=     meta-pkgs
@@ -15,7 +15,7 @@ DEPENDS+=       liblxqt>=0.9.0:../../wip/liblxqt
 DEPENDS+=       liblxqt-mount>=0.9.0:../../wip/liblxqt-mount
 DEPENDS+=       lxqt-about>=0.9.0:../../wip/lxqt-about
 DEPENDS+=       lxqt-admin>=0.9.0:../../wip/lxqt-admin
-DEPENDS+=       lxqt-common>=0.9.0:../../wip/lxqt-common
+DEPENDS+=       lxqt-common>=0.9.1:../../wip/lxqt-common
 DEPENDS+=       lxqt-config>=0.9.0:../../wip/lxqt-config
 DEPENDS+=       lxqt-globalkeys>=0.9.0:../../wip/lxqt-globalkeys
 DEPENDS+=       lxqt-notificationd>=0.9.0:../../wip/lxqt-notificationd
