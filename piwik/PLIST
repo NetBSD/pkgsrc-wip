@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/05 14:39:00 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/05/02 02:58:45 makoto Exp $
 share/piwik/.bowerrc
 share/piwik/.coveralls.yml
 share/piwik/.gitignore
@@ -13,7 +13,6 @@ share/piwik/SECURITY.md
 share/piwik/bower.json
 share/piwik/composer.json
 share/piwik/composer.lock
-share/piwik/config/environment/cli.php
 share/piwik/config/environment/dev.php
 share/piwik/config/environment/test.php
 share/piwik/config/global.ini.php
@@ -36,6 +35,7 @@ share/piwik/core/Access.php
 share/piwik/core/Archive.php
 share/piwik/core/Archive/ArchiveInvalidator.php
 share/piwik/core/Archive/ArchivePurger.php
+share/piwik/core/Archive/Chunk.php
 share/piwik/core/Archive/DataCollection.php
 share/piwik/core/Archive/DataTableFactory.php
 share/piwik/core/Archive/Parameters.php
@@ -44,6 +44,7 @@ share/piwik/core/ArchiveProcessor/Loader.php
 share/piwik/core/ArchiveProcessor/Parameters.php
 share/piwik/core/ArchiveProcessor/PluginsArchiver.php
 share/piwik/core/ArchiveProcessor/Rules.php
+share/piwik/core/Archiver/Request.php
 share/piwik/core/AssetManager.php
 share/piwik/core/AssetManager/UIAsset.php
 share/piwik/core/AssetManager/UIAsset/InMemoryUIAsset.php
@@ -75,6 +76,7 @@ share/piwik/core/Composer/ScriptHandler.php
 share/piwik/core/Concurrency/DistributedList.php
 share/piwik/core/Config.php
 share/piwik/core/Config/ConfigNotFoundException.php
+share/piwik/core/Config/IniFileChain.php
 share/piwik/core/Console.php
 share/piwik/core/Container/ContainerFactory.php
 share/piwik/core/Container/IniConfigDefinitionSource.php
@@ -98,6 +100,7 @@ share/piwik/core/DataArray.php
 share/piwik/core/DataFiles/Providers.php
 share/piwik/core/DataFiles/SearchEngines.php
 share/piwik/core/DataFiles/Socials.php
+share/piwik/core/DataFiles/cacert.pem
 share/piwik/core/DataTable.php
 share/piwik/core/DataTable/BaseFilter.php
 share/piwik/core/DataTable/Bridges.php
@@ -218,6 +221,7 @@ share/piwik/core/Period.php
 share/piwik/core/Period/Day.php
 share/piwik/core/Period/Factory.php
 share/piwik/core/Period/Month.php
+share/piwik/core/Period/PeriodValidator.php
 share/piwik/core/Period/Range.php
 share/piwik/core/Period/Week.php
 share/piwik/core/Period/Year.php
@@ -316,6 +320,7 @@ share/piwik/core/Tracker/TrackerCodeGenerator.php
 share/piwik/core/Tracker/TrackerConfig.php
 share/piwik/core/Tracker/Visit.php
 share/piwik/core/Tracker/Visit/Factory.php
+share/piwik/core/Tracker/Visit/ReferrerSpamFilter.php
 share/piwik/core/Tracker/VisitExcluded.php
 share/piwik/core/Tracker/VisitInterface.php
 share/piwik/core/Tracker/Visitor.php
@@ -325,6 +330,7 @@ share/piwik/core/Translation/Loader/DevelopmentLoader.php
 share/piwik/core/Translation/Loader/JsonFileLoader.php
 share/piwik/core/Translation/Loader/LoaderCache.php
 share/piwik/core/Translation/Loader/LoaderInterface.php
+share/piwik/core/Translation/Transifex/API.php
 share/piwik/core/Translation/Translator.php
 share/piwik/core/Twig.php
 share/piwik/core/Unzip.php
@@ -411,6 +417,7 @@ share/piwik/core/Updates/2.11.0-b2.php
 share/piwik/core/Updates/2.11.0-b4.php
 share/piwik/core/Updates/2.11.0-b5.php
 share/piwik/core/Updates/2.11.1-b4.php
+share/piwik/core/Updates/${PKGVERSION}-b3.php
 share/piwik/core/Updates/2.2.0-b15.php
 share/piwik/core/Updates/2.2.3-b6.php
 share/piwik/core/Updates/2.3.0-rc2.php
@@ -1486,6 +1493,7 @@ share/piwik/piwik.js
 share/piwik/piwik.php
 share/piwik/plugins/API/API.php
 share/piwik/plugins/API/Controller.php
+share/piwik/plugins/API/DataTable/MergeDataTables.php
 share/piwik/plugins/API/Menu.php
 share/piwik/plugins/API/ProcessedReport.php
 share/piwik/plugins/API/Renderer/Console.php
@@ -1520,6 +1528,7 @@ share/piwik/plugins/API/lang/fr.json
 share/piwik/plugins/API/lang/gl.json
 share/piwik/plugins/API/lang/he.json
 share/piwik/plugins/API/lang/hi.json
+share/piwik/plugins/API/lang/hr.json
 share/piwik/plugins/API/lang/hu.json
 share/piwik/plugins/API/lang/id.json
 share/piwik/plugins/API/lang/is.json
@@ -1755,6 +1764,7 @@ share/piwik/plugins/Contents/Reports/GetContentNames.php
 share/piwik/plugins/Contents/Reports/GetContentPieces.php
 share/piwik/plugins/Contents/javascripts/contentsDataTable.js
 share/piwik/plugins/Contents/lang/ar.json
+share/piwik/plugins/Contents/lang/bg.json
 share/piwik/plugins/Contents/lang/ca.json
 share/piwik/plugins/Contents/lang/cs.json
 share/piwik/plugins/Contents/lang/da.json
@@ -1770,9 +1780,12 @@ share/piwik/plugins/Contents/lang/ja.json
 share/piwik/plugins/Contents/lang/nb.json
 share/piwik/plugins/Contents/lang/nl.json
 share/piwik/plugins/Contents/lang/pl.json
+share/piwik/plugins/Contents/lang/pt-br.json
 share/piwik/plugins/Contents/lang/pt.json
+share/piwik/plugins/Contents/lang/ro.json
 share/piwik/plugins/Contents/lang/ru.json
 share/piwik/plugins/Contents/lang/sl.json
+share/piwik/plugins/Contents/lang/sq.json
 share/piwik/plugins/Contents/lang/sv.json
 share/piwik/plugins/Contents/lang/tl.json
 share/piwik/plugins/Contents/lang/tr.json
@@ -1880,6 +1893,7 @@ share/piwik/plugins/CoreAdminHome/templates/pluginSettings.twig
 share/piwik/plugins/CoreAdminHome/templates/trackingCodeGenerator.twig
 share/piwik/plugins/CoreAdminHome/tests/Fixture/DuplicateActions.php
 share/piwik/plugins/CoreAdminHome/tests/Framework/Mock/API.php
+share/piwik/plugins/CoreAdminHome/tests/Integration/ArchivesToPurgeDistributedListTest.php
 share/piwik/plugins/CoreAdminHome/tests/Integration/Commands/PurgeOldArchiveDataTest.php
 share/piwik/plugins/CoreAdminHome/tests/Integration/FixDuplicateActionsTest.php
 share/piwik/plugins/CoreAdminHome/tests/Integration/Model/DuplicateActionRemoverTest.php
@@ -2218,6 +2232,7 @@ share/piwik/plugins/CoreUpdater/Commands/Update.php
 share/piwik/plugins/CoreUpdater/Commands/Update/CliUpdateObserver.php
 share/piwik/plugins/CoreUpdater/Controller.php
 share/piwik/plugins/CoreUpdater/CoreUpdater.php
+share/piwik/plugins/CoreUpdater/Diagnostic/HttpsUpdateCheck.php
 share/piwik/plugins/CoreUpdater/Model.php
 share/piwik/plugins/CoreUpdater/NoUpdatesFoundException.php
 share/piwik/plugins/CoreUpdater/Tasks.php
@@ -2283,9 +2298,11 @@ share/piwik/plugins/CoreUpdater/lang/zh-tw.json
 share/piwik/plugins/CoreUpdater/stylesheets/updateLayout.css
 share/piwik/plugins/CoreUpdater/templates/layout.twig
 share/piwik/plugins/CoreUpdater/templates/newVersionAvailable.twig
-share/piwik/plugins/CoreUpdater/templates/oneClickResults.twig
 share/piwik/plugins/CoreUpdater/templates/runUpdaterAndExit_done.twig
 share/piwik/plugins/CoreUpdater/templates/runUpdaterAndExit_welcome.twig
+share/piwik/plugins/CoreUpdater/templates/updateHttpError.twig
+share/piwik/plugins/CoreUpdater/templates/updateHttpsError.twig
+share/piwik/plugins/CoreUpdater/templates/updateSuccess.twig
 share/piwik/plugins/CoreUpdater/tests/Integration/Commands/UpdateTest.php
 share/piwik/plugins/CoreVisualizations/CoreVisualizations.php
 share/piwik/plugins/CoreVisualizations/JqplotDataGenerator.php
@@ -2624,6 +2641,7 @@ share/piwik/plugins/DevicesDetection/Segment.php
 share/piwik/plugins/DevicesDetection/Updates/1.14.php
 share/piwik/plugins/DevicesDetection/Visitor.php
 share/piwik/plugins/DevicesDetection/functions.php
+share/piwik/plugins/DevicesDetection/images/brand/3Q.ico
 share/piwik/plugins/DevicesDetection/images/brand/Acer.ico
 share/piwik/plugins/DevicesDetection/images/brand/Alcatel.ico
 share/piwik/plugins/DevicesDetection/images/brand/Apple.ico
@@ -2631,12 +2649,14 @@ share/piwik/plugins/DevicesDetection/images/brand/Archos.ico
 share/piwik/plugins/DevicesDetection/images/brand/Asus.ico
 share/piwik/plugins/DevicesDetection/images/brand/Audiovox.ico
 share/piwik/plugins/DevicesDetection/images/brand/Avvio.ico
+share/piwik/plugins/DevicesDetection/images/brand/BBK.ico
 share/piwik/plugins/DevicesDetection/images/brand/BangOlufsen.ico
 share/piwik/plugins/DevicesDetection/images/brand/Barnes_&_Noble.ico
 share/piwik/plugins/DevicesDetection/images/brand/Becker.ico
 share/piwik/plugins/DevicesDetection/images/brand/Beetel.ico
 share/piwik/plugins/DevicesDetection/images/brand/BenQ.ico
 share/piwik/plugins/DevicesDetection/images/brand/Cat.ico
+share/piwik/plugins/DevicesDetection/images/brand/Celkon.ico
 share/piwik/plugins/DevicesDetection/images/brand/Cherry_Mobile.ico
 share/piwik/plugins/DevicesDetection/images/brand/CnM.ico
 share/piwik/plugins/DevicesDetection/images/brand/Compal.ico
@@ -2659,6 +2679,7 @@ share/piwik/plugins/DevicesDetection/images/brand/Fujitsu.ico
 share/piwik/plugins/DevicesDetection/images/brand/Gemini.ico
 share/piwik/plugins/DevicesDetection/images/brand/Gigabyte.ico
 share/piwik/plugins/DevicesDetection/images/brand/Gigaset.ico
+share/piwik/plugins/DevicesDetection/images/brand/Gionee.ico
 share/piwik/plugins/DevicesDetection/images/brand/Google.ico
 share/piwik/plugins/DevicesDetection/images/brand/Gradiente.ico
 share/piwik/plugins/DevicesDetection/images/brand/Grundig.ico
@@ -2667,6 +2688,7 @@ share/piwik/plugins/DevicesDetection/images/brand/HTC.ico
 share/piwik/plugins/DevicesDetection/images/brand/Haier.ico
 share/piwik/plugins/DevicesDetection/images/brand/Huawei.ico
 share/piwik/plugins/DevicesDetection/images/brand/Humax.ico
+share/piwik/plugins/DevicesDetection/images/brand/Hyundai.ico
 share/piwik/plugins/DevicesDetection/images/brand/INQ.ico
 share/piwik/plugins/DevicesDetection/images/brand/Ikea.ico
 share/piwik/plugins/DevicesDetection/images/brand/Intek.ico
@@ -2679,6 +2701,7 @@ share/piwik/plugins/DevicesDetection/images/brand/Kyocera.ico
 share/piwik/plugins/DevicesDetection/images/brand/LG.ico
 share/piwik/plugins/DevicesDetection/images/brand/LGUPlus.ico
 share/piwik/plugins/DevicesDetection/images/brand/Lanix.ico
+share/piwik/plugins/DevicesDetection/images/brand/Le_Pan.ico
 share/piwik/plugins/DevicesDetection/images/brand/Lenovo.ico
 share/piwik/plugins/DevicesDetection/images/brand/Loewe.ico
 share/piwik/plugins/DevicesDetection/images/brand/MSI.ico
@@ -2719,6 +2742,7 @@ share/piwik/plugins/DevicesDetection/images/brand/Selevision.ico
 share/piwik/plugins/DevicesDetection/images/brand/Sharp.ico
 share/piwik/plugins/DevicesDetection/images/brand/Siemens.ico
 share/piwik/plugins/DevicesDetection/images/brand/Smart.ico
+share/piwik/plugins/DevicesDetection/images/brand/Smartfren.ico
 share/piwik/plugins/DevicesDetection/images/brand/Softbank.ico
 share/piwik/plugins/DevicesDetection/images/brand/Sony.ico
 share/piwik/plugins/DevicesDetection/images/brand/Sony_Ericsson.ico
@@ -2777,6 +2801,7 @@ share/piwik/plugins/DevicesDetection/images/browsers/CM.gif
 share/piwik/plugins/DevicesDetection/images/browsers/CN.gif
 share/piwik/plugins/DevicesDetection/images/browsers/CO.gif
 share/piwik/plugins/DevicesDetection/images/browsers/CP.gif
+share/piwik/plugins/DevicesDetection/images/browsers/CR.gif
 share/piwik/plugins/DevicesDetection/images/browsers/CS.gif
 share/piwik/plugins/DevicesDetection/images/browsers/DF.gif
 share/piwik/plugins/DevicesDetection/images/browsers/DI.gif
@@ -2863,6 +2888,7 @@ share/piwik/plugins/DevicesDetection/images/os/ARL.gif
 share/piwik/plugins/DevicesDetection/images/os/BBX.gif
 share/piwik/plugins/DevicesDetection/images/os/BEO.gif
 share/piwik/plugins/DevicesDetection/images/os/BLB.gif
+share/piwik/plugins/DevicesDetection/images/os/BMP.gif
 share/piwik/plugins/DevicesDetection/images/os/BSD.gif
 share/piwik/plugins/DevicesDetection/images/os/BTR.gif
 share/piwik/plugins/DevicesDetection/images/os/CES.gif
@@ -2976,6 +3002,7 @@ share/piwik/plugins/DevicesDetection/lang/sl.json
 share/piwik/plugins/DevicesDetection/lang/sq.json
 share/piwik/plugins/DevicesDetection/lang/sr.json
 share/piwik/plugins/DevicesDetection/lang/sv.json
+share/piwik/plugins/DevicesDetection/lang/ta.json
 share/piwik/plugins/DevicesDetection/lang/te.json
 share/piwik/plugins/DevicesDetection/lang/th.json
 share/piwik/plugins/DevicesDetection/lang/tl.json
@@ -2985,8 +3012,42 @@ share/piwik/plugins/DevicesDetection/lang/vi.json
 share/piwik/plugins/DevicesDetection/lang/zh-cn.json
 share/piwik/plugins/DevicesDetection/lang/zh-tw.json
 share/piwik/plugins/DevicesDetection/templates/detection.twig
-share/piwik/plugins/DevicesDetection/templates/index.twig
+share/piwik/plugins/DevicesDetection/templates/devices.twig
 share/piwik/plugins/DevicesDetection/templates/list.twig
+share/piwik/plugins/DevicesDetection/templates/software.twig
+share/piwik/plugins/Diagnostics/Commands/Run.php
+share/piwik/plugins/Diagnostics/Diagnostic/CronArchivingCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/DbAdapterCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/Diagnostic.php
+share/piwik/plugins/Diagnostics/Diagnostic/DiagnosticResult.php
+share/piwik/plugins/Diagnostics/Diagnostic/DiagnosticResultItem.php
+share/piwik/plugins/Diagnostics/Diagnostic/FileIntegrityCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/GdExtensionCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/HttpClientCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/LoadDataInfileCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/MemoryLimitCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/NfsDiskCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/PageSpeedCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/PhpExtensionsCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/PhpFunctionsCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/PhpSettingsCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/PhpVersionCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/RecommendedExtensionsCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/RecommendedFunctionsCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/TimezoneCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/TrackerCheck.php
+share/piwik/plugins/Diagnostics/Diagnostic/WriteAccessCheck.php
+share/piwik/plugins/Diagnostics/DiagnosticReport.php
+share/piwik/plugins/Diagnostics/DiagnosticService.php
+share/piwik/plugins/Diagnostics/Diagnostics.php
+share/piwik/plugins/Diagnostics/Test/Mock/DiagnosticWithError.php
+share/piwik/plugins/Diagnostics/Test/Mock/DiagnosticWithSuccess.php
+share/piwik/plugins/Diagnostics/Test/Mock/DiagnosticWithWarning.php
+share/piwik/plugins/Diagnostics/Test/Unit/Diagnostic/DiagnosticResultTest.php
+share/piwik/plugins/Diagnostics/Test/Unit/DiagnosticReportTest.php
+share/piwik/plugins/Diagnostics/Test/Unit/DiagnosticServiceTest.php
+share/piwik/plugins/Diagnostics/config/config.php
+share/piwik/plugins/Diagnostics/plugin.json
 share/piwik/plugins/Ecommerce/Columns/BaseConversion.php
 share/piwik/plugins/Ecommerce/Columns/ProductCategory.php
 share/piwik/plugins/Ecommerce/Columns/ProductName.php
@@ -3010,6 +3071,7 @@ share/piwik/plugins/Ecommerce/Reports/GetItemsSku.php
 share/piwik/plugins/Ecommerce/Reports/GetVisitsUntilConversionAbandonedCart.php
 share/piwik/plugins/Ecommerce/Reports/GetVisitsUntilConversionEcommerceOrder.php
 share/piwik/plugins/Ecommerce/Widgets.php
+share/piwik/plugins/Ecommerce/lang/bg.json
 share/piwik/plugins/Ecommerce/lang/cs.json
 share/piwik/plugins/Ecommerce/lang/da.json
 share/piwik/plugins/Ecommerce/lang/de.json
@@ -3021,6 +3083,7 @@ share/piwik/plugins/Ecommerce/lang/nb.json
 share/piwik/plugins/Ecommerce/lang/nl.json
 share/piwik/plugins/Ecommerce/lang/pt.json
 share/piwik/plugins/Ecommerce/lang/ru.json
+share/piwik/plugins/Ecommerce/lang/sk.json
 share/piwik/plugins/Ecommerce/lang/sv.json
 share/piwik/plugins/Ecommerce/plugin.json
 share/piwik/plugins/Ecommerce/templates/ecommerceLog.twig
@@ -3050,6 +3113,7 @@ share/piwik/plugins/Events/Reports/GetNameFromActionId.php
 share/piwik/plugins/Events/Reports/GetNameFromCategoryId.php
 share/piwik/plugins/Events/Segment.php
 share/piwik/plugins/Events/lang/bg.json
+share/piwik/plugins/Events/lang/ca.json
 share/piwik/plugins/Events/lang/cs.json
 share/piwik/plugins/Events/lang/da.json
 share/piwik/plugins/Events/lang/de.json
@@ -3069,6 +3133,7 @@ share/piwik/plugins/Events/lang/pt-br.json
 share/piwik/plugins/Events/lang/pt.json
 share/piwik/plugins/Events/lang/ro.json
 share/piwik/plugins/Events/lang/ru.json
+share/piwik/plugins/Events/lang/sk.json
 share/piwik/plugins/Events/lang/sl.json
 share/piwik/plugins/Events/lang/sr.json
 share/piwik/plugins/Events/lang/sv.json
@@ -3255,12 +3320,14 @@ share/piwik/plugins/Goals/Columns/Metrics/ProductConversionRate.php
 share/piwik/plugins/Goals/Columns/Metrics/RevenuePerVisit.php
 share/piwik/plugins/Goals/Columns/VisitsUntilConversion.php
 share/piwik/plugins/Goals/Controller.php
+share/piwik/plugins/Goals/DataTable/Filter/AppendNameToColumnNames.php
 share/piwik/plugins/Goals/Goals.php
 share/piwik/plugins/Goals/Menu.php
 share/piwik/plugins/Goals/Model.php
 share/piwik/plugins/Goals/Reports/Base.php
 share/piwik/plugins/Goals/Reports/Get.php
 share/piwik/plugins/Goals/Reports/GetDaysToConversion.php
+share/piwik/plugins/Goals/Reports/GetMetrics.php
 share/piwik/plugins/Goals/Reports/GetVisitsUntilConversion.php
 share/piwik/plugins/Goals/TranslationHelper.php
 share/piwik/plugins/Goals/Visualizations/Goals.php
@@ -3322,10 +3389,12 @@ share/piwik/plugins/Goals/templates/_listGoalEdit.twig
 share/piwik/plugins/Goals/templates/_listTopDimension.twig
 share/piwik/plugins/Goals/templates/_titleAndEvolutionGraph.twig
 share/piwik/plugins/Goals/templates/addNewGoal.twig
+share/piwik/plugins/Goals/templates/editGoals.twig
 share/piwik/plugins/Goals/templates/getGoalReportView.twig
 share/piwik/plugins/Goals/templates/getOverviewView.twig
 share/piwik/plugins/Goals/templates/manageGoals.twig
 share/piwik/plugins/Goals/tests/Integration/APITest.php
+share/piwik/plugins/Goals/tests/Unit/AppendNameToColumnNamesTest.php
 share/piwik/plugins/ImageGraph/API.php
 share/piwik/plugins/ImageGraph/Controller.php
 share/piwik/plugins/ImageGraph/ImageGraph.php
@@ -3401,12 +3470,16 @@ share/piwik/plugins/Insights/lang/ja.json
 share/piwik/plugins/Insights/lang/nb.json
 share/piwik/plugins/Insights/lang/nl.json
 share/piwik/plugins/Insights/lang/pl.json
+share/piwik/plugins/Insights/lang/pt-br.json
+share/piwik/plugins/Insights/lang/pt.json
 share/piwik/plugins/Insights/lang/ro.json
 share/piwik/plugins/Insights/lang/ru.json
+share/piwik/plugins/Insights/lang/sq.json
 share/piwik/plugins/Insights/lang/sr.json
 share/piwik/plugins/Insights/lang/sv.json
 share/piwik/plugins/Insights/lang/tl.json
 share/piwik/plugins/Insights/lang/tr.json
+share/piwik/plugins/Insights/lang/vi.json
 share/piwik/plugins/Insights/lang/zh-cn.json
 share/piwik/plugins/Insights/plugin.json
 share/piwik/plugins/Insights/stylesheets/insightVisualization.less
@@ -3437,7 +3510,6 @@ share/piwik/plugins/Installation/FormSuperUser.php
 share/piwik/plugins/Installation/Installation.php
 share/piwik/plugins/Installation/Menu.php
 share/piwik/plugins/Installation/ServerFilesGenerator.php
-share/piwik/plugins/Installation/SystemCheck.php
 share/piwik/plugins/Installation/View.php
 share/piwik/plugins/Installation/javascripts/installation.js
 share/piwik/plugins/Installation/lang/am.json
@@ -3510,9 +3582,8 @@ share/piwik/plugins/Installation/templates/tablesCreation.twig
 share/piwik/plugins/Installation/templates/trackingCode.twig
 share/piwik/plugins/Installation/templates/welcome.twig
 share/piwik/plugins/LanguagesManager/API.php
-share/piwik/plugins/LanguagesManager/Commands/CompareKeys.php
 share/piwik/plugins/LanguagesManager/Commands/CreatePull.php
-share/piwik/plugins/LanguagesManager/Commands/FetchFromOTrance.php
+share/piwik/plugins/LanguagesManager/Commands/FetchTranslations.php
 share/piwik/plugins/LanguagesManager/Commands/LanguageCodes.php
 share/piwik/plugins/LanguagesManager/Commands/LanguageNames.php
 share/piwik/plugins/LanguagesManager/Commands/PluginsWithTranslations.php
@@ -3578,6 +3649,7 @@ share/piwik/plugins/LanguagesManager/lang/pt-br.json
 share/piwik/plugins/LanguagesManager/lang/pt.json
 share/piwik/plugins/LanguagesManager/lang/ro.json
 share/piwik/plugins/LanguagesManager/lang/ru.json
+share/piwik/plugins/LanguagesManager/lang/sk.json
 share/piwik/plugins/LanguagesManager/lang/sl.json
 share/piwik/plugins/LanguagesManager/lang/sq.json
 share/piwik/plugins/LanguagesManager/lang/sr.json
@@ -3720,8 +3792,8 @@ share/piwik/plugins/Live/templates/getVisitList.twig
 share/piwik/plugins/Live/templates/getVisitorProfilePopup.twig
 share/piwik/plugins/Live/templates/index.twig
 share/piwik/plugins/Live/templates/indexVisitorLog.twig
+share/piwik/plugins/Live/tests/Integration/ModelTest.php
 share/piwik/plugins/Live/tests/System/APITest.php
-share/piwik/plugins/Live/tests/System/ModelTest.php
 share/piwik/plugins/Login/Auth.php
 share/piwik/plugins/Login/Controller.php
 share/piwik/plugins/Login/FormLogin.php
@@ -3857,7 +3929,9 @@ share/piwik/plugins/Monolog/Test/Unit/Processor/ExceptionToTextProcessorTest.php
 share/piwik/plugins/Monolog/Test/Unit/Processor/RequestIdProcessorTest.php
 share/piwik/plugins/Monolog/Test/Unit/Processor/SprintfProcessorTest.php
 share/piwik/plugins/Monolog/Test/Unit/Processor/TokenProcessorTest.php
+share/piwik/plugins/Monolog/config/cli.php
 share/piwik/plugins/Monolog/config/config.php
+share/piwik/plugins/Monolog/config/tracker.php
 share/piwik/plugins/Monolog/plugin.json
 share/piwik/plugins/Morpheus/images/add.png
 share/piwik/plugins/Morpheus/images/affix-arrow.png
@@ -3958,6 +4032,7 @@ share/piwik/plugins/Morpheus/javascripts/morpheus.js
 share/piwik/plugins/Morpheus/javascripts/piwikHelper.js
 share/piwik/plugins/Morpheus/plugin.json
 share/piwik/plugins/Morpheus/stylesheets/base.less
+share/piwik/plugins/Morpheus/stylesheets/bootstrap.css
 share/piwik/plugins/Morpheus/stylesheets/general/_admin.less
 share/piwik/plugins/Morpheus/stylesheets/general/_default.less
 share/piwik/plugins/Morpheus/stylesheets/general/_form.less
@@ -3973,6 +4048,7 @@ share/piwik/plugins/Morpheus/stylesheets/less/_variables.less
 share/piwik/plugins/Morpheus/stylesheets/rtl.css
 share/piwik/plugins/Morpheus/stylesheets/simple_structure.css
 share/piwik/plugins/Morpheus/stylesheets/theme.less
+share/piwik/plugins/Morpheus/stylesheets/ui/_alerts.less
 share/piwik/plugins/Morpheus/stylesheets/ui/_charts.less
 share/piwik/plugins/Morpheus/stylesheets/ui/_components.less
 share/piwik/plugins/Morpheus/stylesheets/ui/_map.less
@@ -3997,19 +4073,21 @@ share/piwik/plugins/Morpheus/templates/genericForm.twig
 share/piwik/plugins/Morpheus/templates/javascriptCode.tpl
 share/piwik/plugins/Morpheus/templates/layout.twig
 share/piwik/plugins/Morpheus/templates/macros.twig
+share/piwik/plugins/Morpheus/templates/maintenance.tpl
 share/piwik/plugins/Morpheus/templates/simpleLayoutFooter.tpl
 share/piwik/plugins/Morpheus/templates/simpleLayoutHeader.tpl
 share/piwik/plugins/Morpheus/templates/user.twig
+share/piwik/plugins/MultiSites/.gitignore
 share/piwik/plugins/MultiSites/API.php
 share/piwik/plugins/MultiSites/Columns/Metrics/EcommerceOnlyEvolutionMetric.php
 share/piwik/plugins/MultiSites/Columns/Website.php
 share/piwik/plugins/MultiSites/Controller.php
+share/piwik/plugins/MultiSites/Dashboard.php
 share/piwik/plugins/MultiSites/Menu.php
 share/piwik/plugins/MultiSites/MultiSites.php
 share/piwik/plugins/MultiSites/Reports/Base.php
 share/piwik/plugins/MultiSites/Reports/GetAll.php
 share/piwik/plugins/MultiSites/Reports/GetOne.php
-share/piwik/plugins/MultiSites/angularjs/dashboard/dashboard-group.filter.js
 share/piwik/plugins/MultiSites/angularjs/dashboard/dashboard-model.service.js
 share/piwik/plugins/MultiSites/angularjs/dashboard/dashboard.controller.js
 share/piwik/plugins/MultiSites/angularjs/dashboard/dashboard.directive.html
@@ -4069,6 +4147,9 @@ share/piwik/plugins/MultiSites/lang/vi.json
 share/piwik/plugins/MultiSites/lang/zh-cn.json
 share/piwik/plugins/MultiSites/lang/zh-tw.json
 share/piwik/plugins/MultiSites/templates/getSitesInfo.twig
+share/piwik/plugins/MultiSites/tests/Fixtures/ManySitesWithVisits.php
+share/piwik/plugins/MultiSites/tests/Integration/ControllerTest.php
+share/piwik/plugins/MultiSites/tests/Integration/DashboardTest.php
 share/piwik/plugins/MultiSites/tests/Integration/MultiSitesTest.php
 share/piwik/plugins/Overlay/API.php
 share/piwik/plugins/Overlay/Controller.php
@@ -4091,6 +4172,8 @@ share/piwik/plugins/Overlay/images/overlay_icon_hover.png
 share/piwik/plugins/Overlay/javascripts/Overlay_Helper.js
 share/piwik/plugins/Overlay/javascripts/Piwik_Overlay.js
 share/piwik/plugins/Overlay/javascripts/rowaction.js
+share/piwik/plugins/Overlay/lang/ar.json
+share/piwik/plugins/Overlay/lang/be.json
 share/piwik/plugins/Overlay/lang/bg.json
 share/piwik/plugins/Overlay/lang/ca.json
 share/piwik/plugins/Overlay/lang/cs.json
@@ -4105,25 +4188,38 @@ share/piwik/plugins/Overlay/lang/fi.json
 share/piwik/plugins/Overlay/lang/fr.json
 share/piwik/plugins/Overlay/lang/he.json
 share/piwik/plugins/Overlay/lang/hi.json
+share/piwik/plugins/Overlay/lang/hr.json
+share/piwik/plugins/Overlay/lang/hu.json
 share/piwik/plugins/Overlay/lang/id.json
+share/piwik/plugins/Overlay/lang/is.json
 share/piwik/plugins/Overlay/lang/it.json
 share/piwik/plugins/Overlay/lang/ja.json
+share/piwik/plugins/Overlay/lang/ka.json
 share/piwik/plugins/Overlay/lang/ko.json
+share/piwik/plugins/Overlay/lang/lt.json
+share/piwik/plugins/Overlay/lang/lv.json
 share/piwik/plugins/Overlay/lang/nb.json
 share/piwik/plugins/Overlay/lang/nl.json
+share/piwik/plugins/Overlay/lang/nn.json
 share/piwik/plugins/Overlay/lang/pl.json
 share/piwik/plugins/Overlay/lang/pt-br.json
+share/piwik/plugins/Overlay/lang/pt.json
 share/piwik/plugins/Overlay/lang/ro.json
 share/piwik/plugins/Overlay/lang/ru.json
 share/piwik/plugins/Overlay/lang/sk.json
+share/piwik/plugins/Overlay/lang/sl.json
+share/piwik/plugins/Overlay/lang/sq.json
 share/piwik/plugins/Overlay/lang/sr.json
 share/piwik/plugins/Overlay/lang/sv.json
 share/piwik/plugins/Overlay/lang/ta.json
 share/piwik/plugins/Overlay/lang/te.json
 share/piwik/plugins/Overlay/lang/th.json
 share/piwik/plugins/Overlay/lang/tl.json
+share/piwik/plugins/Overlay/lang/tr.json
+share/piwik/plugins/Overlay/lang/uk.json
 share/piwik/plugins/Overlay/lang/vi.json
 share/piwik/plugins/Overlay/lang/zh-cn.json
+share/piwik/plugins/Overlay/lang/zh-tw.json
 share/piwik/plugins/Overlay/stylesheets/overlay.css
 share/piwik/plugins/Overlay/stylesheets/showErrorWrongDomain.css
 share/piwik/plugins/Overlay/templates/index.twig
@@ -4611,8 +4707,11 @@ share/piwik/plugins/Referrers/lang/am.json
 share/piwik/plugins/Referrers/lang/ar.json
 share/piwik/plugins/Referrers/lang/be.json
 share/piwik/plugins/Referrers/lang/bg.json
+share/piwik/plugins/Referrers/lang/bn.json
+share/piwik/plugins/Referrers/lang/bs.json
 share/piwik/plugins/Referrers/lang/ca.json
 share/piwik/plugins/Referrers/lang/cs.json
+share/piwik/plugins/Referrers/lang/cy.json
 share/piwik/plugins/Referrers/lang/da.json
 share/piwik/plugins/Referrers/lang/de.json
 share/piwik/plugins/Referrers/lang/el.json
@@ -4626,6 +4725,7 @@ share/piwik/plugins/Referrers/lang/fr.json
 share/piwik/plugins/Referrers/lang/gl.json
 share/piwik/plugins/Referrers/lang/he.json
 share/piwik/plugins/Referrers/lang/hi.json
+share/piwik/plugins/Referrers/lang/hr.json
 share/piwik/plugins/Referrers/lang/hu.json
 share/piwik/plugins/Referrers/lang/id.json
 share/piwik/plugins/Referrers/lang/is.json
@@ -4648,6 +4748,7 @@ share/piwik/plugins/Referrers/lang/sl.json
 share/piwik/plugins/Referrers/lang/sq.json
 share/piwik/plugins/Referrers/lang/sr.json
 share/piwik/plugins/Referrers/lang/sv.json
+share/piwik/plugins/Referrers/lang/ta.json
 share/piwik/plugins/Referrers/lang/te.json
 share/piwik/plugins/Referrers/lang/th.json
 share/piwik/plugins/Referrers/lang/tl.json
@@ -4883,6 +4984,7 @@ share/piwik/plugins/SegmentEditor/lang/pl.json
 share/piwik/plugins/SegmentEditor/lang/pt-br.json
 share/piwik/plugins/SegmentEditor/lang/ro.json
 share/piwik/plugins/SegmentEditor/lang/ru.json
+share/piwik/plugins/SegmentEditor/lang/sk.json
 share/piwik/plugins/SegmentEditor/lang/sl.json
 share/piwik/plugins/SegmentEditor/lang/sr.json
 share/piwik/plugins/SegmentEditor/lang/sv.json
@@ -4905,6 +5007,7 @@ share/piwik/plugins/SitesManager/angularjs/sites-manager/edit-trigger.directive.
 share/piwik/plugins/SitesManager/angularjs/sites-manager/multiline-field.directive.html
 share/piwik/plugins/SitesManager/angularjs/sites-manager/multiline-field.directive.js
 share/piwik/plugins/SitesManager/angularjs/sites-manager/scroll.directive.js
+share/piwik/plugins/SitesManager/angularjs/sites-manager/sites-manager-admin-sites-model.js
 share/piwik/plugins/SitesManager/angularjs/sites-manager/sites-manager-site.controller.js
 share/piwik/plugins/SitesManager/angularjs/sites-manager/sites-manager.controller.js
 share/piwik/plugins/SitesManager/lang/am.json
@@ -4982,6 +5085,7 @@ share/piwik/plugins/SitesManager/templates/sites-list/site-fields.html
 share/piwik/plugins/SitesManager/templates/sites-list/site-search-field.html
 share/piwik/plugins/SitesManager/templates/sites-list/sites-list.html
 share/piwik/plugins/SitesManager/templates/sites-manager-header.html
+share/piwik/plugins/SitesManager/tests/Fixtures/ManySites.php
 share/piwik/plugins/SitesManager/tests/Integration/ApiTest.php
 share/piwik/plugins/SitesManager/tests/Integration/SiteUrlsTest.php
 share/piwik/plugins/SitesManager/tests/Integration/SitesManagerTest.php
@@ -5066,6 +5170,7 @@ share/piwik/plugins/UserCountry/Columns/Provider.php
 share/piwik/plugins/UserCountry/Columns/Region.php
 share/piwik/plugins/UserCountry/Commands/AttributeHistoricalDataWithLocations.php
 share/piwik/plugins/UserCountry/Controller.php
+share/piwik/plugins/UserCountry/Diagnostic/GeolocationDiagnostic.php
 share/piwik/plugins/UserCountry/GeoIPAutoUpdater.php
 share/piwik/plugins/UserCountry/LocationProvider.php
 share/piwik/plugins/UserCountry/LocationProvider/Default.php
@@ -5084,6 +5189,7 @@ share/piwik/plugins/UserCountry/Tasks.php
 share/piwik/plugins/UserCountry/UserCountry.php
 share/piwik/plugins/UserCountry/Visitor.php
 share/piwik/plugins/UserCountry/VisitorGeolocator.php
+share/piwik/plugins/UserCountry/config/config.php
 share/piwik/plugins/UserCountry/functions.php
 share/piwik/plugins/UserCountry/images/flags/a1.png
 share/piwik/plugins/UserCountry/images/flags/a2.png
@@ -5733,16 +5839,14 @@ share/piwik/plugins/UserLanguage/tests/System/GetLanguageSystemTest.php
 share/piwik/plugins/UserLanguage/tests/System/expected/test___UserLanguage.getLanguageCode_day.xml
 share/piwik/plugins/UserLanguage/tests/System/expected/test___UserLanguage.getLanguage_day.xml
 share/piwik/plugins/UserSettings/API.php
-share/piwik/plugins/UserSettings/Controller.php
-share/piwik/plugins/UserSettings/Menu.php
 share/piwik/plugins/UserSettings/UserSettings.php
 share/piwik/plugins/UserSettings/lang/en.json
-share/piwik/plugins/UserSettings/templates/index.twig
 share/piwik/plugins/UsersManager/API.php
 share/piwik/plugins/UsersManager/Controller.php
 share/piwik/plugins/UsersManager/LastSeenTimeLogger.php
 share/piwik/plugins/UsersManager/Menu.php
 share/piwik/plugins/UsersManager/Model.php
+share/piwik/plugins/UsersManager/Tasks.php
 share/piwik/plugins/UsersManager/UserPreferences.php
 share/piwik/plugins/UsersManager/UsersManager.php
 share/piwik/plugins/UsersManager/images/no-access.png
@@ -5753,6 +5857,7 @@ share/piwik/plugins/UsersManager/lang/am.json
 share/piwik/plugins/UsersManager/lang/ar.json
 share/piwik/plugins/UsersManager/lang/be.json
 share/piwik/plugins/UsersManager/lang/bg.json
+share/piwik/plugins/UsersManager/lang/bs.json
 share/piwik/plugins/UsersManager/lang/ca.json
 share/piwik/plugins/UsersManager/lang/cs.json
 share/piwik/plugins/UsersManager/lang/da.json
@@ -5767,6 +5872,7 @@ share/piwik/plugins/UsersManager/lang/fi.json
 share/piwik/plugins/UsersManager/lang/fr.json
 share/piwik/plugins/UsersManager/lang/gl.json
 share/piwik/plugins/UsersManager/lang/he.json
+share/piwik/plugins/UsersManager/lang/hi.json
 share/piwik/plugins/UsersManager/lang/hr.json
 share/piwik/plugins/UsersManager/lang/hu.json
 share/piwik/plugins/UsersManager/lang/id.json
@@ -5790,6 +5896,7 @@ share/piwik/plugins/UsersManager/lang/sl.json
 share/piwik/plugins/UsersManager/lang/sq.json
 share/piwik/plugins/UsersManager/lang/sr.json
 share/piwik/plugins/UsersManager/lang/sv.json
+share/piwik/plugins/UsersManager/lang/ta.json
 share/piwik/plugins/UsersManager/lang/te.json
 share/piwik/plugins/UsersManager/lang/th.json
 share/piwik/plugins/UsersManager/lang/tl.json
@@ -6112,8 +6219,6 @@ share/piwik/plugins/Widgetize/stylesheets/widgetize.less
 share/piwik/plugins/Widgetize/templates/iframe.twig
 share/piwik/plugins/Widgetize/templates/iframe_empty.twig
 share/piwik/plugins/Widgetize/templates/index.twig
-share/piwik/plugins/Widgetize/templates/testJsInclude1.twig
-share/piwik/plugins/Widgetize/templates/testJsInclude2.twig
 share/piwik/plugins/ZenMode/ZenMode.php
 share/piwik/plugins/ZenMode/angularjs/quick-access/quick-access.directive.html
 share/piwik/plugins/ZenMode/angularjs/quick-access/quick-access.directive.js
@@ -6136,6 +6241,7 @@ share/piwik/plugins/ZenMode/lang/pl.json
 share/piwik/plugins/ZenMode/lang/ru.json
 share/piwik/plugins/ZenMode/lang/sr.json
 share/piwik/plugins/ZenMode/lang/sv.json
+share/piwik/plugins/ZenMode/lang/ta.json
 share/piwik/plugins/ZenMode/lang/tl.json
 share/piwik/plugins/ZenMode/plugin.json
 share/piwik/tests/LocalTracker.php
@@ -6182,12 +6288,15 @@ share/piwik/tests/PHPUnit/Fixtures/VisitOverSeveralDaysImportedLogs.php
 share/piwik/tests/PHPUnit/Fixtures/VisitsInDifferentTimezones.php
 share/piwik/tests/PHPUnit/Fixtures/VisitsOverSeveralDays.php
 share/piwik/tests/PHPUnit/Fixtures/VisitsTwoWebsitesWithAdditionalVisits.php
+share/piwik/tests/PHPUnit/Framework/Constraint/HttpResponseText.php
 share/piwik/tests/PHPUnit/Framework/Constraint/ResponseCode.php
 share/piwik/tests/PHPUnit/Framework/Fixture.php
 share/piwik/tests/PHPUnit/Framework/Mock/FakeAccess.php
+share/piwik/tests/PHPUnit/Framework/Mock/FakeLogger.php
 share/piwik/tests/PHPUnit/Framework/Mock/File.php
 share/piwik/tests/PHPUnit/Framework/Mock/LocationProvider.php
 share/piwik/tests/PHPUnit/Framework/Mock/PiwikOption.php
+share/piwik/tests/PHPUnit/Framework/Mock/Site.php
 share/piwik/tests/PHPUnit/Framework/Mock/Tracker.php
 share/piwik/tests/PHPUnit/Framework/Mock/Tracker/Db.php
 share/piwik/tests/PHPUnit/Framework/Mock/Tracker/Handler.php
@@ -6204,7 +6313,9 @@ share/piwik/tests/PHPUnit/Framework/TestRequest/ApiTestConfig.php
 share/piwik/tests/PHPUnit/Framework/TestRequest/Collection.php
 share/piwik/tests/PHPUnit/Framework/TestRequest/Response.php
 share/piwik/tests/PHPUnit/Integration/AccessTest.php
-share/piwik/tests/PHPUnit/Integration/Archive/PurgerTest.php
+share/piwik/tests/PHPUnit/Integration/Archive/ArchivePurgerTest.php
+share/piwik/tests/PHPUnit/Integration/Archive/ChunksTest.php
+share/piwik/tests/PHPUnit/Integration/Archive/DataTableFactoryTest.php
 share/piwik/tests/PHPUnit/Integration/ArchiveProcessingTest.php
 share/piwik/tests/PHPUnit/Integration/ArchiveTest.php
 share/piwik/tests/PHPUnit/Integration/AssetManager/UIAssetMinifierTest.php
@@ -6484,6 +6595,7 @@ share/piwik/tests/PHPUnit/System/expected/test_AutoSuggestAPITest_visitorId__Vis
 share/piwik/tests/PHPUnit/System/expected/test_AutoSuggestAPITest_visitorType__API.getSuggestedValuesForSegment.xml
 share/piwik/tests/PHPUnit/System/expected/test_AutoSuggestAPITest_visitorType__VisitsSummary.get_range.xml
 share/piwik/tests/PHPUnit/System/expected/test_BackwardsCompatibility1XTest__DevicesDetection.getOsVersions_day.xml
+share/piwik/tests/PHPUnit/System/expected/test_BackwardsCompatibility1XTest__Goals.get_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_BackwardsCompatibility1XTest__MultiSites.getAll_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_BackwardsCompatibility1XTest__UserSettings.getBrowserType_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_BackwardsCompatibility1XTest__UserSettings.getOS_day.xml
@@ -6610,6 +6722,7 @@ share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Goals.getGoals.xml
 share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Goals.getItemsCategory_month.xml
 share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Goals.getItemsName_month.xml
 share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Goals.getItemsSku_month.xml
+share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Goals.getMetrics_month.xml
 share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Goals.getVisitsUntilConversion_month.xml
 share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Goals.get_month.xml
 share/piwik/tests/PHPUnit/System/expected/test_ImportLogs__Live.getLastVisitsDetails_range.xml
@@ -6767,6 +6880,7 @@ share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getGoa
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getItemsCategory_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getItemsName_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getItemsSku_day.xml
+share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getMetrics_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getNbVisitsConverted_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getRevenue_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits__Goals.getVisitsUntilConversion_day.xml
@@ -6876,6 +6990,7 @@ share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSup
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSupport__Goals.getItemsCategory_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSupport__Goals.getItemsName_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSupport__Goals.getItemsSku_day.xml
+share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSupport__Goals.getMetrics_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSupport__Goals.getVisitsUntilConversion_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSupport__Goals.get_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_OneVisitorTwoVisits_withCookieSupport__Live.getLastVisitsDetails_day.xml
@@ -7337,6 +7452,8 @@ share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getIt
 share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getItemsName_week.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getItemsSku_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getItemsSku_week.xml
+share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getMetrics_day.xml
+share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getMetrics_week.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getVisitsUntilConversion_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.getVisitsUntilConversion_week.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit_PeriodIsLast__Goals.get_day.xml
@@ -7492,6 +7609,7 @@ share/piwik/tests/PHPUnit/System/expected/test_noVisit__Goals.getGoals.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit__Goals.getItemsCategory_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit__Goals.getItemsName_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit__Goals.getItemsSku_day.xml
+share/piwik/tests/PHPUnit/System/expected/test_noVisit__Goals.getMetrics_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit__Goals.getVisitsUntilConversion_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit__Goals.get_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_noVisit__MultiSites.getAll_day.xml
@@ -7574,6 +7692,17 @@ share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_Metadat
 share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI__Referrers.getCampaigns_range.xml
 share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI__Referrers.getKeywords_range.xml
 share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI__VisitsSummary.get_range.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__API.getProcessedReport_range.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Actions.getPageUrls_range.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Goals.get_range.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Live.getCounters.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Live.getLastVisits.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Live.getLastVisitsDetails_range.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Live.getMostRecentVisitorId.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Live.getVisitorProfile.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Referrers.getCampaigns_range.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__Referrers.getKeywords_range.xml
+share/piwik/tests/PHPUnit/System/expected/test_periodIsRange_dateIsLastN_MetadataAndNormalAPI_pagesegment__VisitsSummary.get_range.xml
 share/piwik/tests/PHPUnit/System/expected/test_reportLimiting__Actions.getDownloads_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_reportLimiting__Actions.getOutlinks_day.xml
 share/piwik/tests/PHPUnit/System/expected/test_reportLimiting__Actions.getPageTitles_day.xml
@@ -7667,6 +7796,8 @@ share/piwik/tests/PHPUnit/System/expected/test_twoVisitsWithCustomVariables_segm
 share/piwik/tests/PHPUnit/TestingEnvironment.php
 share/piwik/tests/PHPUnit/Unit/API/ApiRendererTest.php
 share/piwik/tests/PHPUnit/Unit/API/ResponseBuilderTest.php
+share/piwik/tests/PHPUnit/Unit/Archive/ChunkTest.php
+share/piwik/tests/PHPUnit/Unit/Archive/DataCollectionTest.php
 share/piwik/tests/PHPUnit/Unit/AssetManager/PluginManagerMock.php
 share/piwik/tests/PHPUnit/Unit/AssetManager/PluginMock.php
 share/piwik/tests/PHPUnit/Unit/AssetManager/ThemeMock.php
@@ -7693,10 +7824,17 @@ share/piwik/tests/PHPUnit/Unit/CliMulti/OutputTest.php
 share/piwik/tests/PHPUnit/Unit/CliMulti/ProcessTest.php
 share/piwik/tests/PHPUnit/Unit/Columns/DimensionTest.php
 share/piwik/tests/PHPUnit/Unit/CommonTest.php
+share/piwik/tests/PHPUnit/Unit/Config/IniFileChainTest.php
+share/piwik/tests/PHPUnit/Unit/Config/test_files/default_settings_1.ini.php
+share/piwik/tests/PHPUnit/Unit/Config/test_files/default_settings_2.ini.php
+share/piwik/tests/PHPUnit/Unit/Config/test_files/default_settings_3.ini.php
+share/piwik/tests/PHPUnit/Unit/Config/test_files/empty.ini.php
+share/piwik/tests/PHPUnit/Unit/Config/test_files/special_values.ini.php
 share/piwik/tests/PHPUnit/Unit/ConfigTest.php
 share/piwik/tests/PHPUnit/Unit/Container/IniConfigDefinitionSourceTest.php
 share/piwik/tests/PHPUnit/Unit/CookieTest.php
 share/piwik/tests/PHPUnit/Unit/CronArchive/SegmentArchivingRequestUrlProviderTest.php
+share/piwik/tests/PHPUnit/Unit/DataAccess/ArchiveWriterTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Filter/AddSegmentFilterByLabelMappingTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Filter/AddSegmentFilterBySegmentValueTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Filter/AddSegmentFilterTest.php
@@ -7713,6 +7851,7 @@ share/piwik/tests/PHPUnit/Unit/DataTable/Filter/PrependValueToMetadataTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Filter/RangeCheckTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Filter/SortTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Filter/TruncateTest.php
+share/piwik/tests/PHPUnit/Unit/DataTable/ManagerTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/MapTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Renderer/CSVTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/Renderer/ConsoleTest.php
@@ -7722,7 +7861,6 @@ share/piwik/tests/PHPUnit/Unit/DataTable/Renderer/XMLTest.php
 share/piwik/tests/PHPUnit/Unit/DataTable/RowTest.php
 share/piwik/tests/PHPUnit/Unit/DataTableTest.php
 share/piwik/tests/PHPUnit/Unit/DateTest.php
-share/piwik/tests/PHPUnit/Unit/DbTest.php
 share/piwik/tests/PHPUnit/Unit/DeprecatedMethodsTest.php
 share/piwik/tests/PHPUnit/Unit/FactoryTest.php
 share/piwik/tests/PHPUnit/Unit/FilesystemTest.php
@@ -7797,9 +7935,12 @@ share/piwik/tests/UI/specs/Dashboard_spec.js
 share/piwik/tests/UI/specs/EmptySite_spec.js
 share/piwik/tests/UI/specs/EvolutionGraph_spec.js
 share/piwik/tests/UI/specs/GoalsTable_spec.js
+share/piwik/tests/UI/specs/Insights_spec.js
 share/piwik/tests/UI/specs/Installation_spec.js
 share/piwik/tests/UI/specs/Login_spec.js
 share/piwik/tests/UI/specs/Menus_spec.js
+share/piwik/tests/UI/specs/MultiSites_spec.js
+share/piwik/tests/UI/specs/OptOutForm_spec.js
 share/piwik/tests/UI/specs/Overlay_spec.js
 share/piwik/tests/UI/specs/PeriodSelector_spec.js
 share/piwik/tests/UI/specs/PieGraph_spec.js
@@ -7807,6 +7948,7 @@ share/piwik/tests/UI/specs/PivotByDimension_spec.js
 share/piwik/tests/UI/specs/RowEvolution_spec.js
 share/piwik/tests/UI/specs/SegmentSelectorEditor_spec.js
 share/piwik/tests/UI/specs/SiteSelector_spec.js
+share/piwik/tests/UI/specs/SitesManager_spec.js
 share/piwik/tests/UI/specs/Transitions_spec.js
 share/piwik/tests/UI/specs/UIIntegration_spec.js
 share/piwik/tests/UI/specs/ViewDataTable_spec.js
@@ -8208,6 +8350,7 @@ share/piwik/tests/resources/Config/common.config.ini.php
 share/piwik/tests/resources/Config/config.ini.php
 share/piwik/tests/resources/Config/config.written.ini.php
 share/piwik/tests/resources/Config/global.ini.php
+share/piwik/tests/resources/DataTables-archived-different-formats.php
 share/piwik/tests/resources/OmniFixture-dump.sql.gz
 share/piwik/tests/resources/README
 share/piwik/tests/resources/Updater/core/0.3.php
@@ -8238,7 +8381,6 @@ share/piwik/tests/resources/overlay-test-site/page-5.html
 share/piwik/tests/resources/overlay-test-site/page-6.html
 share/piwik/tests/resources/piwik-1.13-dump.sql
 share/piwik/tests/resources/plugins/Actions/Actions.config.ini.php
-share/piwik/tests/resources/pre-Piwik2-DataTable-archived.php
 share/piwik/tests/resources/referer-xss.txt
 share/piwik/tests/resources/screenshot-override/jquery.waitforimages.js
 share/piwik/tests/resources/screenshot-override/override.css
@@ -8260,3 +8402,4 @@ share/piwik/tests/travis/setup_webserver.sh
 share/piwik/tests/travis/travis-helper.sh
 share/piwik/tests/travis/travis.sh
 share/piwik/tests/travis/upload_artifacts.sh
+share/piwik/tmp/.gitkeep
