@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.37 2015/05/01 12:20:25 ryo-on Exp $
+# $NetBSD: Makefile,v 1.38 2015/05/02 07:52:33 ryo-on Exp $
 
-DISTNAME=	mongodb-src-r2.6.9
+DISTNAME=	mongodb-src-r3.0.2
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://mongodb.org/
-COMMENT=	NOSQL distributed document-oriented database
+COMMENT=	NoSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 
 NO_CONFIGURE=	yes
@@ -17,13 +17,16 @@ BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
-SCONS_ARGS+=	--c++11=C++11
+SCONS_ARGS=	--c++11=on
 SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC:Q}
 SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX:Q}
 SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
 SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
 SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
 SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
+SCONS_ARGS+=	--js-engine=v8-3.25
+# Avoid Argument list too long from mongod linking
+SCONS_ARGS+=	--variant-dir=pkgsrc
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -100,7 +103,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} \
-		--full --prefix=${DESTDIR}${PREFIX} install
+		--prefix=${DESTDIR}${PREFIX} install
 
 do-test:
 	cd ${WRKSRC} && ./test

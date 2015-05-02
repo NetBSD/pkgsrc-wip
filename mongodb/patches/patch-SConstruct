@@ -1,9 +1,9 @@
-$NetBSD: patch-SConstruct,v 1.7 2014/07/27 21:05:29 fhajny Exp $
+$NetBSD: patch-SConstruct,v 1.8 2015/05/02 07:52:33 ryo-on Exp $
 
 Add support for NetBSD/Dragonfly, fix locations.
---- SConstruct.orig	2014-06-19 20:19:09.000000000 +0000
+--- SConstruct.orig	2015-04-08 20:28:08.000000000 +0000
 +++ SConstruct
-@@ -59,7 +59,9 @@ nix = False
+@@ -53,7 +53,9 @@ nix = False
  linux = False
  darwin = False
  windows = False
@@ -13,7 +13,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  openbsd = False
  solaris = False
  
-@@ -71,8 +73,12 @@ elif platform.startswith("linux"):
+@@ -65,8 +67,12 @@ elif platform.startswith("linux"):
      platform = "linux"
  elif "sunos5" == platform:
      solaris = True
@@ -26,9 +26,9 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif platform.startswith( "openbsd" ):
      openbsd = True
  elif "win32" == platform:
-@@ -679,6 +685,12 @@ elif solaris:
+@@ -848,6 +854,12 @@ elif solaris:
       env.Append( CPPDEFINES=[ "__sunos__" ] )
-      env.Append( LIBS=["socket","resolv"] )
+      env.Append( LIBS=["socket","resolv","lgrp"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
 +    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
@@ -39,7 +39,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif freebsd:
      env.Append( LIBS=[ "kvm" ] )
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
-@@ -686,6 +698,12 @@ elif freebsd:
+@@ -855,6 +867,12 @@ elif freebsd:
      env.Append( CPPDEFINES=[ "__freebsd__" ] )
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
@@ -52,7 +52,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif openbsd:
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
      env.Append( EXTRALIBPATH=[ "/usr/local/lib" ] )
-@@ -826,8 +844,11 @@ if nix:
+@@ -1020,8 +1038,11 @@ if nix:
              env.Append( CCFLAGS=["-Werror"] )
  
      env.Append( CPPDEFINES=["_FILE_OFFSET_BITS=64"] )
@@ -64,12 +64,21 @@ Add support for NetBSD/Dragonfly, fix locations.
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -1399,7 +1420,7 @@ def doConfigure(myenv):
+@@ -2163,7 +2184,7 @@ def doConfigure(myenv):
          Exit(1)
  
      # requires ports devel/libexecinfo to be installed
 -    if freebsd or openbsd:
 +    if freebsd or openbsd or netbsd or dragonfly:
          if not conf.CheckLib("execinfo"):
+             print("Cannot find libexecinfo, please install devel/libexecinfo.")
              Exit(1)
- 
+@@ -2409,7 +2430,7 @@ Export("mongoCodeVersion")
+ Export("usev8")
+ Export("v8version v8suffix")
+ Export("boostSuffix")
+-Export("darwin windows solaris linux freebsd nix openbsd")
++Export("darwin windows solaris linux freebsd nix openbsd netbsd dragonfly")
+ Export('module_sconscripts')
+ Export("debugBuild optBuild")
+ Export("s3push")

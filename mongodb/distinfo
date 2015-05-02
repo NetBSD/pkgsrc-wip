@@ -1,15 +1,16 @@
-$NetBSD: distinfo,v 1.25 2015/04/20 19:33:11 fhajny Exp $
+$NetBSD: distinfo,v 1.26 2015/05/02 07:52:33 ryo-on Exp $
 
-SHA1 (mongodb-src-r2.6.9.tar.gz) = 70a3eb69d94b02d42bf3c2be22a6741a9264f354
-RMD160 (mongodb-src-r2.6.9.tar.gz) = aca729bc24fa48eb1b69eb224fef71a2979a8e2b
-Size (mongodb-src-r2.6.9.tar.gz) = 15491620 bytes
-SHA1 (patch-SConstruct) = 9c395756d2351c5e8d3a0ce6d5497290849b29f8
+SHA1 (mongodb-src-r3.0.2.tar.gz) = c24c4deb619e199d5c3688370b39ea6e4a4df204
+RMD160 (mongodb-src-r3.0.2.tar.gz) = 12571664adca8bcec7fe8daa6ee2a8a120261aea
+Size (mongodb-src-r3.0.2.tar.gz) = 26594777 bytes
+SHA1 (patch-SConstruct) = 656921b86b686c0dd2005036629d0149d6f713e7
 SHA1 (patch-debian_mongod.conf) = 35f3d7e7da4f573458bef0fe742c1790adec8200
 SHA1 (patch-src_mongo_base_initializer.h) = add32c5940c922a98122d0e6883eb3ad52dc25c5
-SHA1 (patch-src_mongo_db_exec_working__set.cpp) = f3520f5167a696ff9333ee421565a0515704963e
-SHA1 (patch-src_mongo_db_pipeline_document__source__cursor.cpp) = b9dec1013821573e9a4f4a533e131ec079c21975
-SHA1 (patch-src_mongo_db_pipeline_document__source__sort.cpp) = 956e03a6a2edb0d21f871207dddfa081fc539356
-SHA1 (patch-src_mongo_platform_random.cpp) = cf44302102618d32a8c6427500482c26e7b08b58
-SHA1 (patch-src_mongo_s_chunk__manager__targeter.cpp) = 05441130c715c947edd00fad542635e98efc254b
-SHA1 (patch-src_mongo_shell_dbshell.cpp) = c60ecb69a5c40e55eb602c5838dcf9d82008446e
-SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = 28632f33b0ab972f765fb3c5c515cfd0d6012d3e
+SHA1 (patch-src_mongo_db_repl_isself.c) = 93001bf0616c0fd64ac5e7ea03113885671540b0
+SHA1 (patch-src_mongo_platform_random.cpp) = ab275e90347a9d2e767f031df4e56a204647ddfe
+SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = d505c22aeeee09b482bf3d3a6bd0cdc45c9ec0bc
+SHA1 (patch-src_third__party_s2_base_port.h) = 8e715efbfcacaba51d957c21aa32ccfd3cc4f736
+SHA1 (patch-src_third__party_v8-3.25_SConscript) = a8da59130c36b2be3b89498ba0b23b1c7c9ab9e6
+SHA1 (patch-src_third__party_v8-3.25_src_platform-posix.cc) = 2fa27016a9af828d1c01815739770918a2d53d16
+SHA1 (patch-src_third__party_wiredtiger_SConscript) = 576ae923cd77c5d21f44f82fc6bde7c3b5ffa250
+SHA1 (patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h) = e41064c0ff7268efc795782312ff413295cbcba7
