@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/01 18:05:31 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/03 13:20:34 thomasklausner Exp $
 
 DISTNAME=	sipvicious-0.2.8
 CATEGORIES=	security
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 PYTHON_SCRIPTS=	svcrack.py svcrash.py svmap.py svreport.py svwar.py
 
 USE_LANGUAGES=	#perl scripts only
-NO_CONFIGURE=	YES
 NO_BUILD=	YES
 REPLACE_PYTHON+=	${PYTHON_SCRIPTS}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
