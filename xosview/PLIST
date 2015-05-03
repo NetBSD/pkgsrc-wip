@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/03 18:48:58 bsiegert Exp $
+bin/xosview
+lib/X11/app-defaults/XOsview
+man/man1/xosview.1
