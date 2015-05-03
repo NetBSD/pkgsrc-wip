@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/24 23:09:06 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/05/03 13:35:55 jonthn Exp $
 bin/livestreamer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -204,6 +204,9 @@ ${PYSITELIB}/livestreamer/plugins/livestation.pyo
 ${PYSITELIB}/livestreamer/plugins/livestream.py
 ${PYSITELIB}/livestreamer/plugins/livestream.pyc
 ${PYSITELIB}/livestreamer/plugins/livestream.pyo
+${PYSITELIB}/livestreamer/plugins/media_ccc_de.py
+${PYSITELIB}/livestreamer/plugins/media_ccc_de.pyc
+${PYSITELIB}/livestreamer/plugins/media_ccc_de.pyo
 ${PYSITELIB}/livestreamer/plugins/mips.py
 ${PYSITELIB}/livestreamer/plugins/mips.pyc
 ${PYSITELIB}/livestreamer/plugins/mips.pyo
@@ -225,18 +228,27 @@ ${PYSITELIB}/livestreamer/plugins/nrk.pyo
 ${PYSITELIB}/livestreamer/plugins/oldlivestream.py
 ${PYSITELIB}/livestreamer/plugins/oldlivestream.pyc
 ${PYSITELIB}/livestreamer/plugins/oldlivestream.pyo
+${PYSITELIB}/livestreamer/plugins/periscope.py
+${PYSITELIB}/livestreamer/plugins/periscope.pyc
+${PYSITELIB}/livestreamer/plugins/periscope.pyo
 ${PYSITELIB}/livestreamer/plugins/picarto.py
 ${PYSITELIB}/livestreamer/plugins/picarto.pyc
 ${PYSITELIB}/livestreamer/plugins/picarto.pyo
 ${PYSITELIB}/livestreamer/plugins/rtve.py
 ${PYSITELIB}/livestreamer/plugins/rtve.pyc
 ${PYSITELIB}/livestreamer/plugins/rtve.pyo
+${PYSITELIB}/livestreamer/plugins/sbsdiscovery.py
+${PYSITELIB}/livestreamer/plugins/sbsdiscovery.pyc
+${PYSITELIB}/livestreamer/plugins/sbsdiscovery.pyo
 ${PYSITELIB}/livestreamer/plugins/seemeplay.py
 ${PYSITELIB}/livestreamer/plugins/seemeplay.pyc
 ${PYSITELIB}/livestreamer/plugins/seemeplay.pyo
 ${PYSITELIB}/livestreamer/plugins/speedrunslive.py
 ${PYSITELIB}/livestreamer/plugins/speedrunslive.pyc
 ${PYSITELIB}/livestreamer/plugins/speedrunslive.pyo
+${PYSITELIB}/livestreamer/plugins/ssh101.py
+${PYSITELIB}/livestreamer/plugins/ssh101.pyc
+${PYSITELIB}/livestreamer/plugins/ssh101.pyo
 ${PYSITELIB}/livestreamer/plugins/stream.py
 ${PYSITELIB}/livestreamer/plugins/stream.pyc
 ${PYSITELIB}/livestreamer/plugins/stream.pyo
