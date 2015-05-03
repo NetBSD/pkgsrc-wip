@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/05/03 14:00:20 jonthn Exp $
+
+SHA1 (rcm-1.2.3.tar.gz) = f89e64f45d714567f54474b3b4cc825b130ab114
+RMD160 (rcm-1.2.3.tar.gz) = 7e41b370fa2bd6308a632175c4d5469a3bbcc10b
+Size (rcm-1.2.3.tar.gz) = 83947 bytes
