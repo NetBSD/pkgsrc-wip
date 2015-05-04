@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/06 22:35:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/04 21:14:52 thomasklausner Exp $
 
 DISTNAME=	fuse-zip-0.4.0
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	https://fuse-zip.googlecode.com/files/
 
