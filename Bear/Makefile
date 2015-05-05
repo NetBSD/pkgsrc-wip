@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/04/13 23:22:01 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/05 21:55:23 jonthn Exp $
 
-DISTNAME=	Bear-2.0.2
+DISTNAME=	Bear-2.0.3
 CATEGORIES=	devel
-MASTER_SITES=	-https://github.com/rizsotto/Bear/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rizsotto/}
+GITHUB_PROJECT=	Bear
 
 HOMEPAGE=	https://github.com/rizsotto/Bear
 COMMENT=	Bear is a tool to generate compilation database
