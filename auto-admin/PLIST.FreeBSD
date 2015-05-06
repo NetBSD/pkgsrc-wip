@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2015/05/06 13:03:25 outpaddling Exp $
+sbin/auto-append-line
+sbin/auto-ask
+sbin/auto-backup-file
+sbin/auto-denyhosts-remove-ip
+sbin/auto-denyhosts-setup
+sbin/auto-enable-autologout
+sbin/auto-harden
+sbin/auto-insert-line
+sbin/auto-ldap-adduser
+sbin/auto-pkgsrc-setup
+sbin/auto-pxe-node-discover
+sbin/auto-replace-file
+sbin/auto-ssh-authorize
