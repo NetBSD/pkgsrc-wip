@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/05/06 21:50:36 f8l Exp $
+
+SHA1 (phalanx-XXIV-source.tgz) = 52230da6cfd2ccaadf4d3f1cdaffefeb1c5939fd
+RMD160 (phalanx-XXIV-source.tgz) = f0f9f949934e1d0e3020bc1942b643495f29019c
+Size (phalanx-XXIV-source.tgz) = 352486 bytes
+SHA1 (patch-makefile) = e6f091fe381ca6a17f115bcc5eeb6500191a1d97
+SHA1 (patch-phalanx.c) = 8155cdf0e333d2fe3a256a67e593b203e3b1f93d
