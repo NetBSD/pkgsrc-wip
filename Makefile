@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6169 2015/05/06 07:33:22 thomasklausner Exp $
+# $Id: Makefile,v 1.6170 2015/05/06 22:04:27 f8l Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2311,6 +2311,7 @@ SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	pgplot
 SUBDIR+=	pgpool2
+SUBDIR+=	phalanx
 SUBDIR+=	phantomjs
 SUBDIR+=	phantomjs2
 SUBDIR+=	pheanstalk
