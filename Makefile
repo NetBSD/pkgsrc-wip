@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6168 2015/05/02 08:16:02 ryo-on Exp $
+# $Id: Makefile,v 1.6169 2015/05/06 07:33:22 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -759,7 +759,6 @@ SUBDIR+=	gauche-pib
 SUBDIR+=	gcalcli-git
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
-SUBDIR+=	gcc48snapshot
 SUBDIR+=	gcc49snapshot
 SUBDIR+=	gcc50snapshot
 SUBDIR+=	gcolor2
