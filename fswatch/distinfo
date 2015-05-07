@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/05/07 22:25:32 jonthn Exp $
+
+SHA1 (fswatch-1.4.6.tar.gz) = fb0dfd6fac6e11e11f8507bb084cb0b3c5ceb244
+RMD160 (fswatch-1.4.6.tar.gz) = ae62559177968a1d3b237a1a06a73fc7edd12c46
+Size (fswatch-1.4.6.tar.gz) = 126122 bytes
