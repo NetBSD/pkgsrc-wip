@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/04/17 00:33:17 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2015/05/08 22:58:43 i3enedek Exp $
 
-SHA1 (df_34_11_linux.tar.bz2) = a66d56562ffba698198127c8d9a1194a2313c992
-RMD160 (df_34_11_linux.tar.bz2) = ea12f65e55bbcd65b7e099c5c873d959a8115e50
-Size (df_34_11_linux.tar.bz2) = 11587360 bytes
+SHA1 (df_40_15_linux.tar.bz2) = 75d81eb1c5fe8b504db0e02ef774fac779104076
+RMD160 (df_40_15_linux.tar.bz2) = 42ccf94f72770887346648e8b3981f18500660f4
+Size (df_40_15_linux.tar.bz2) = 12894041 bytes
