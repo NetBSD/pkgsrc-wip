@@ -1,10 +1,21 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2013/12/14 17:02:44 outpaddling Exp $
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2015/05/08 14:23:18 outpaddling Exp $
 sbin/auto-append-line
 sbin/auto-ask
+sbin/auto-backup-file
+sbin/auto-denyhosts-remove-ip
+sbin/auto-denyhosts-setup
 sbin/auto-desktop-setup
+sbin/auto-enable-autologout
+sbin/auto-harden
+sbin/auto-insert-line
 sbin/auto-install-packages
 sbin/auto-install-packages-from-source
 sbin/auto-install-pkgsrc-tree
+sbin/auto-ldap-adduser
 sbin/auto-package-installed
+sbin/auto-pkgsrc-setup
+sbin/auto-pxe-node-discover
 sbin/auto-replace-file
 sbin/auto-select-pkgsrc-dist
+sbin/auto-ssh-authorize
+sbin/install-vuln

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/02/24 16:54:33 outpaddling Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/08 14:23:18 outpaddling Exp $
 #
 
 DISTNAME=	auto-admin-0.3.5
@@ -24,7 +24,7 @@ do-install:
 # Why doesn't this work?
 #.if exists(${WRKSRC}/Scripts/${OPSYS})
 .if ${OPSYS} == NetBSD
-	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/${OPSYS}/* \
+	${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
 .endif
 .if exists(/etc/redhat-release)
