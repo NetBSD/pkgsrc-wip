@@ -1,0 +1,5 @@
+watch execute a program periodically, showing its output in fullscreen.
+This allows you to watch the program output change over time.
+
+procps-ng is a fork of the procps project and in its original form it provides
+command line and full screen utilities for browsing procfs on Linux
