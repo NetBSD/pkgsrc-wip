@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2014/12/29 19:51:22 gschwarz Exp $
+$NetBSD: patch-ab,v 1.7 2015/05/08 20:18:18 gschwarz Exp $
 
---- configure.orig	2014-05-20 01:13:29.000000000 +0200
-+++ configure	2014-12-29 20:33:55.000000000 +0100
-@@ -22,10 +22,10 @@
+--- configure.orig	2015-04-29 00:00:38.000000000 +0200
++++ configure	2015-05-08 21:48:39.000000000 +0200
+@@ -21,10 +21,10 @@
  infodir='$(datarootdir)/info'
  mandir='$(datarootdir)/man'
  sysconfdir='$(prefix)/etc'

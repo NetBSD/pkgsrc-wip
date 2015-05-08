@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2014/12/29 19:51:22 gschwarz Exp $
+$NetBSD: patch-aa,v 1.10 2015/05/08 20:18:18 gschwarz Exp $
 
---- Makefile.in.orig	2014-04-27 19:20:25.000000000 +0200
-+++ Makefile.in	2014-12-29 20:38:34.000000000 +0100
+--- Makefile.in.orig	2015-04-21 22:43:12.000000000 +0200
++++ Makefile.in	2015-05-08 21:52:07.000000000 +0200
 @@ -1,11 +1,11 @@
  
  DISTNAME = $(pkgname)-$(pkgversion)
@@ -19,21 +19,21 @@ $NetBSD: patch-aa,v 1.9 2014/12/29 19:51:22 gschwarz Exp $
  
  edobjs = basic_buffer.o block.o buffer.o buffer_handle.o \
           encoding.o iso_8859.o menu_file.o menu_help.o menu_opts.o \
-@@ -70,7 +70,7 @@
+@@ -72,7 +72,7 @@
  	if [ ! -d "$(DESTDIR)$(bindir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(bindir)" ; fi
  	if [ ! -d "$(DESTDIR)$(sysconfdir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(sysconfdir)" ; fi
  	$(INSTALL_PROGRAM) ./$(progname) "$(DESTDIR)$(bindir)/$(progname)"
 -	$(INSTALL_DATA) $(VPATH)/$(pkgname)rc "$(DESTDIR)$(sysconfdir)/$(pkgname)rc"
 +	$(INSTALL_DATA) $(VPATH)/$(pkgname)rc "$(DESTDIR)$(prefix)/share/examples/moe/$(progname)rc"
  
- install-info :
- 	if [ ! -d "$(DESTDIR)$(infodir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(infodir)" ; fi
-@@ -79,7 +79,7 @@
- 
+ install-bin-strip : all
+ 	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install-bin
+@@ -89,7 +89,7 @@
  install-man :
  	if [ ! -d "$(DESTDIR)$(mandir)/man1" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(mandir)/man1" ; fi
+ 	-rm -f "$(DESTDIR)$(mandir)/man1/$(progname).1"*
 -	$(INSTALL_DATA) $(VPATH)/doc/$(progname).1 "$(DESTDIR)$(mandir)/man1/$(progname).1"
 +	$(INSTALL_MAN) $(VPATH)/doc/$(progname).1 "$(DESTDIR)$(mandir)/man1/$(progname).1"
  
- install-strip : all
- 	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install
+ install-man-compress : install-man
+ 	lzip -v -9 "$(DESTDIR)$(mandir)/man1/$(progname).1"
