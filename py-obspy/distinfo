@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/05/09 03:11:29 uccwen Exp $
+$NetBSD: distinfo,v 1.4 2015/05/09 03:34:01 uccwen Exp $
 
 SHA1 (obspy-0.10.1.zip) = 66f87fd39dacbaa824d7865e4c0cb6ae7305fd14
 RMD160 (obspy-0.10.1.zip) = b6c72f045635b6ba0de38ec1c5f7220f6bf2d864
 Size (obspy-0.10.1.zip) = 15930034 bytes
-SHA1 (patch-obspy_taup_src_ttimes__subrout.f) = 9d62e95380b9a10826a076492ec3b5b65bd255f0

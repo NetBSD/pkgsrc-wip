@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/05/09 03:11:28 uccwen Exp $
+# $NetBSD: Makefile,v 1.8 2015/05/09 03:34:01 uccwen Exp $
 
 DISTNAME=	obspy-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,9 @@ USE_TOOLS+=	bash:run
 REPLACE_BASH=	obspy/taup/tests/data/TauP_test_data/gendata.sh
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-suds
+
+pre-configure:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
