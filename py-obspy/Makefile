@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2014/07/18 09:33:01 uccwen Exp $
+# $NetBSD: Makefile,v 1.7 2015/05/09 03:11:28 uccwen Exp $
 
-DISTNAME=	obspy-0.9.2
+DISTNAME=	obspy-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/o/obspy/
-EXTRACT_SUFX=	.zip#md5=9da79d3a0604d433085ad4dc0e430100
+MASTER_SITES=	http://pypi.python.org/packages/source/o/obspy/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.obspy.org/
@@ -16,6 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-suds>=0.4:../../net/py-suds
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.3:../../textproc/py-lxml
 
 USE_LANGUAGES=	c fortran
+USE_TOOLS+=	bash:run
+
+REPLACE_BASH=	obspy/taup/tests/data/TauP_test_data/gendata.sh
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-suds
 
