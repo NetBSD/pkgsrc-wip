@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/27 21:17:15 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/10 10:13:06 jonthn Exp $
 bin/${PREFIX_PROGRAM}ctags
 ${PLIST.emacs}bin/${PREFIX_PROGRAM}etags
 include/readtags.h
@@ -10,6 +10,7 @@ share/ctags/corpora/RFC1213-MIB.txt
 share/ctags/corpora/ctags.ctags
 share/ctags/optlib/coffee.ctags
 share/ctags/optlib/ctags.ctags
+share/ctags/optlib/m4.ctags
 share/ctags/optlib/mib.ctags
 share/ctags/preload/default.ctags
 @pkgdir etc/ctags/preload
