@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2015/02/24 16:54:33 outpaddling Exp $
+@comment $NetBSD: PLIST.Linux,v 1.5 2015/05/10 13:55:18 outpaddling Exp $
 sbin/auto-append-line
 sbin/auto-ask
+sbin/auto-backup-file
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
 sbin/auto-disable-hyperthreading
