@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/14 08:31:56 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/10 08:53:04 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1587,6 +1587,8 @@ share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/copyright.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/copyright.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/crm.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/crm.elc
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cursor-sensor.el.gz
+share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/cursor-sensor.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/debug.el.gz
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/debug.elc
 share/emacs/${EMACS_VERSION}/lisp/emacs-lisp/derived.el.gz
