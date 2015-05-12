@@ -123,6 +123,7 @@ Suggested package updates
 	o xaralx-bin-0.7.1692
 	o xf86-input-synaptics-1.8.0
 	o xf86-video-geode-2.11.16
+	o webkit-gtk-2.8.2 [leot1990]
 	o zapping-0.10cvs6
 
 Suggested ready to import packages
