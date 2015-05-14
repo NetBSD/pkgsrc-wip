@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2015/05/08 18:04:12 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/05/14 22:38:17 jonthn Exp $
 include/msgpack.h
 include/msgpack.hpp
 include/msgpack/adaptor/adaptor_base.hpp
 include/msgpack/adaptor/bool.hpp
 include/msgpack/adaptor/boost/optional.hpp
+include/msgpack/adaptor/boost/string_ref.hpp
 include/msgpack/adaptor/char_ptr.hpp
 include/msgpack/adaptor/check_container_size.hpp
 include/msgpack/adaptor/cpp11/array.hpp
