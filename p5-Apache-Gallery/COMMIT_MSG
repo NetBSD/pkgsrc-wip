@@ -1,0 +1,59 @@
+1.0.2 Wed Jun  8 20:47:16 CEST 2011
+
+        - Extended GalleryUnderscoresToSpaces to filenames as well.
+          (Debian bug #348724, Francesco Potortì)
+        - Added txt to GalleryDocFile, the code in Gallery.pm already
+          allowed it.  (Luca Capello)
+        - Added text-html.png and text-txt.png icons.
+          (Debian bug #423004, Luca Capello)
+        - Fixed counter typo for <directory>.folder in next directory
+          menu item.  (Luca Capello)
+        - Added support to ignore items through <directory|file>.ignore.
+          (Debian bug #619625, Luca Capello)
+        - Fixed spelling typos in Gallery.pm and README.  (Luca Capello)
+        - GalleryCacheDir defaults to /var/cache/www/ per the FHS-2.3.
+          (Debian bug #337197, Luca Capello)
+        - Fixed two minor POD errors (Michael Legart)
+
+1.0.1 Wed Feb 23 20:45:38 CET 2011
+
+        - Added missing template files to MANIFEST
+
+1.0 Tue Feb 22 21:54:31 CET 2011
+
+        - Handle files that match both GalleryDocFile and GalleryImgFile
+          correctly. (Claus Faerber)
+        - Only respond to HEAD and GET requests, enabling users to use
+          WebDAV for upload (Andreas Plesner)
+        - Added new option GalleryCommentExifKey to get comments from
+          EXIF data (Michael Legart)
+        - Added new option GalleryEnableMediaRss to enable generation of
+          a media RSS feed for each directory listing. This works with
+          e.g. the plugin from http://piclens.com to enable 3D viewing
+          of your gallery. (Michael Legart)
+        - Make browser-caching work with mod_perl 2. Supports If-None-Match
+          and If-Modified-Since headers. Sets Last-Modified-Date and
+          ETag headers. (Michael Legart)
+
+1.0RC3 Fri Sep 16 10:27:48 CEST 2005
+
+        - Add watermark even when picture doesn't need to be rescaled
+          (Andreas Plesner)
+        - Fix logging to work in Apache 1.3 (Andreas Plesner)
+        - Bugfix: If only one GallerySize was specified, the image's
+          max width was autmatically added to GallerySizes
+          (Andreas Plesner)
+        - Bugfix: Locate thm files if they are called .thm or .THM 
+                (Michael Legart)
+
+1.0RC2 Wed Jun  1 09:11:50 CEST 2005
+
+        - Added access keys for navigation (Michael Knudsen)
+
+1.0RC1 Tue May 24 13:31:50 CEST 2005
+
+        - Added submit button to form in selection mode (Vlad Marchenko)
+        - Added new option GalleryRootPath for use when the gallery
+          is not running from the root of the virtual host (Lubomir Host)
+        - Report proper errors when there are problems with templates (Don Armstrong)
+        - Support newest mod_perl2 version (Philip Paeps)
