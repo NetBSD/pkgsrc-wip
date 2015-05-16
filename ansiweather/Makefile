@@ -1,19 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2015/05/16 21:13:32 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/16 21:44:29 krytarowski Exp $
 
-GITHUB_PROJECT=	ansiweather
-DISTNAME=	1.02
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	ansiweather-1.02
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
-EXTRACT_SUFX=	.zip
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=fcambus/ansiweather/}
 COMMENT=	Display current weather conditions in your terminal
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/ansiweather-1.02
 USE_LANGUAGES=	# none
 
 USE_TOOLS+=	awk:run bash:run date:run grep:run
