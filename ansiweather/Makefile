@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 21:03:05 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/16 21:10:05 krytarowski Exp $
 
 GITHUB_PROJECT=	ansiweather
 DISTNAME=	1.02
@@ -16,7 +16,7 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/ansiweather-1.02
 USE_LANGUAGES=	# none
 
-USE_TOOLS+=	bash:run date:run
+USE_TOOLS+=	awk:run bash:run date:run grep:run
 
 DEPENDS+=	bc-[0-9]*:../../math/bc
 DEPENDS+=	curl-[0-9]*:../../www/curl
