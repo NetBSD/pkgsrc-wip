@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/16 21:10:05 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/16 21:13:32 krytarowski Exp $
 
 GITHUB_PROJECT=	ansiweather
 DISTNAME=	1.02
@@ -21,8 +21,6 @@ USE_TOOLS+=	awk:run bash:run date:run grep:run
 DEPENDS+=	bc-[0-9]*:../../math/bc
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	jq-[0-9]*:../../devel/jq
-
-REPLACE_BASH+=	ansiweather
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
