@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2015/04/18 15:29:22 jonthn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2015/05/17 21:53:10 jonthn Exp $
 
 Awk scripts are not executable install them as simple files
 
---- CMakeLists.txt.orig	2015-04-18 15:03:24.000000000 +0000
+--- CMakeLists.txt.orig	2015-05-17 21:27:17.000000000 +0000
 +++ CMakeLists.txt
-@@ -290,13 +290,23 @@ install_helper(
+@@ -285,13 +285,23 @@ install_helper(
  
  file(GLOB_RECURSE RUNTIME_PROGRAMS
    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
@@ -13,7 +13,7 @@ Awk scripts are not executable install them as simple files
  
  foreach(PROG ${RUNTIME_PROGRAMS})
    get_filename_component(BASEDIR ${PROG} PATH)
-   install_helper(PROGRAMS ${PROG} DESTINATION share/nvim/${BASEDIR})
+   install_helper(PROGRAMS ${PROG} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/nvim/${BASEDIR})
  endforeach()
  
 +file(GLOB_RECURSE RUNTIME_AWK_SCRIPTS
@@ -28,4 +28,4 @@ Awk scripts are not executable install them as simple files
 +
  install(SCRIPT ${PROJECT_SOURCE_DIR}/cmake/GenerateHelptags.cmake)
  
- # Go down the tree.
+ 

@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2015/05/14 19:56:36 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/05/17 21:53:10 jonthn Exp $
 bin/nvim
+man/man1/nvim.1
+man/man1/nvimtutor.1
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
 share/locale/cs.cp1250/LC_MESSAGES/nvim.mo
