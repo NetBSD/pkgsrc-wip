@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2015/05/06 13:03:25 outpaddling Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2015/05/17 17:21:40 outpaddling Exp $
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-backup-file
+sbin/auto-clean-pkgsrc
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
 sbin/auto-enable-autologout
