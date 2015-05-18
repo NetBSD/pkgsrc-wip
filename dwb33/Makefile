@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/18 11:14:47 n-t-roff Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/18 11:44:59 n-t-roff Exp $
 
 V=		20150517
 DISTNAME=	DWB3.3-${V}
@@ -16,7 +16,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	lex yacc
 MAKE_JOBS_SAFE=	no
 
-MAKE_FLAGS=	ROOT=${DESTDIR} \
+MAKE_FLAGS=	CFLGS="${CFLAGS}" \
+		LDFLGS="${LDFLAGS}" \
+		ROOT=${DESTDIR} \
 		BINDIR=${PREFIX}/dwb33/bin \
 		FONTDIR=${PREFIX}/dwb33/lib/font \
 		HOSTDIR=${PREFIX}/dwb33/lib/font/postscript \
