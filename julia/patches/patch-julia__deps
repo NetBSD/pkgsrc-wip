@@ -1,0 +1,62 @@
+--- deps/Rmath/Make.inc.orig	2014-12-26 06:17:54.000000000 +0100
++++ deps/Rmath/Make.inc	2015-02-19 12:44:37.000000000 +0100
+@@ -32,8 +32,14 @@
+ CFLAGS-add+=-fPIC
+ FFLAGS-add+=-fPIC
+ endif
+ 
++ifeq ($(OS), NetBSD)
++SHLIB_EXT = so
++CFLAGS-add+=-fPIC
++FFLAGS-add+=-fPIC
++endif
++
+ ifeq ($(OS), Darwin)
+ SHLIB_EXT = dylib
+ CFLAGS-add+=-fPIC
+ FFLAGS-add+=-fPIC
+--- deps/libuv/src/unix/thread.c.orig	2014-12-26 06:17:57.000000000 +0100
++++ deps/libuv/src/unix/thread.c	2015-02-19 16:46:40.000000000 +0100
+@@ -279,9 +279,9 @@
+   err = pthread_condattr_init(&attr);
+   if (err)
+     return -err;
+ 
+-#if !defined(__ANDROID__)
++#if !defined(__ANDROID__) && !defined(__NetBSD__)
+   err = pthread_condattr_setclock(&attr, CLOCK_MONOTONIC);
+   if (err)
+     goto error2;
+ #endif
+--- deps/openlibm/Make.inc.orig	2014-12-26 06:17:59.000000000 +0100
++++ deps/openlibm/Make.inc	2015-02-17 15:12:07.000000000 +0100
+@@ -91,8 +91,14 @@
+ SONAME_FLAG = -soname
+ CFLAGS_add+=-fPIC
+ endif
+ 
++ifeq ($(OS), NetBSD)
++SHLIB_EXT = so
++SONAME_FLAG = -soname
++CFLAGS_add+=-fPIC
++endif
++
+ ifeq ($(OS), Darwin)
+ SHLIB_EXT = dylib
+ SONAME_FLAG = -install_name
+ CFLAGS_add+=-fPIC
+--- deps/openlibm/include/cdefs-compat.h.orig	2014-12-26 06:17:59.000000000 +0100
++++ deps/openlibm/include/cdefs-compat.h	2015-02-17 15:08:41.000000000 +0100
+@@ -2,8 +2,12 @@
+ #define	_CDEFS_COMPAT_H_
+ 
+ #ifndef _WIN32
+ #include "sys/cdefs.h"
++#ifdef __NetBSD__
++#undef __weak_reference
++#undef __warn_references
++#endif
+ #else /* _WIN32 */
+ 
+ #if defined(__cplusplus)
+ #define	__BEGIN_DECLS	extern "C" {
