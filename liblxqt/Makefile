@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/19 20:26:38 nros Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/19 11:48:36 krytarowski Exp $
 
 DISTNAME=	liblxqt-0.9.0
 CATEGORIES=	x11
@@ -18,7 +18,9 @@ USE_LANGUAGES=	c c++
 # ${PREFIX}/qt5/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
 # for some reason when building this shared library
 # (it does not happen to the other shared libraries built cmake and qt5)
-BUILDLINK_TRANSFORM+=rm:-fPIE
+#BUILDLINK_TRANSFORM+=rm:-fPIE
+# XXX Should be fixed in qt5-qtbase
+
 
 .include "../../wip/kwindowsystem/buildlink3.mk"
 .include "../../wip/libqtxdg/buildlink3.mk"
