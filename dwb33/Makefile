@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/19 10:55:31 n-t-roff Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/19 14:23:22 n-t-roff Exp $
 
 V=		20150517
 DISTNAME=	DWB3.3-${V}
@@ -18,6 +18,6 @@ MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS=	CFLGS="${CFLAGS}" \
 		LDFLGS="${LDFLAGS}" \
-		ROOT=${PREFIX}/dwb33
+		ROOT=${DESTDIR}${PREFIX}/dwb33
 
 .include "../../mk/bsd.pkg.mk"
