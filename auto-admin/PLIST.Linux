@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.6 2015/05/13 15:16:51 outpaddling Exp $
+@comment $NetBSD: PLIST.Linux,v 1.7 2015/05/20 22:19:59 outpaddling Exp $
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-backup-file
@@ -16,5 +16,6 @@ sbin/auto-pxe-installer-setup
 sbin/auto-pxe-node-discover
 sbin/auto-register-dhcp-hostname
 sbin/auto-replace-file
+sbin/auto-restore-pw
 sbin/auto-set-memory-limits
 sbin/auto-ssh-authorize
