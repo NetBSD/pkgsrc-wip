@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/05/20 21:54:19 alnsn Exp $
-
-SHA1 (mpfi-1.5.1.tar.gz) = 288302c0cdefe823cc3aa71de31c1da82eeb6ad0
-RMD160 (mpfi-1.5.1.tar.gz) = ec102d1a83e46edd2a43b431928abb692896ac70
-Size (mpfi-1.5.1.tar.gz) = 520274 bytes
