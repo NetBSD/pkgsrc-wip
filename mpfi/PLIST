@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/05/20 21:54:19 alnsn Exp $
+include/mpfi.h
+include/mpfi_io.h
+info/mpfi.info
+lib/libmpfi.la
