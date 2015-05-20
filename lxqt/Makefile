@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/02 12:45:06 krytarowski Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/20 22:02:18 krytarowski Exp $
 
 PKGNAME=        lxqt-0.9.0
 CATEGORIES=     meta-pkgs
@@ -9,8 +9,12 @@ COMMENT=        Meta-package for LXQt desktop environment
 
 META_PACKAGE=   yes
 
-# see http://downloads.lxqt.org/lxqt/0.9.0/
 
+# See http://wiki.lxde.org/en/Build_LXDE-Qt_From_Source
+# example meta package from Mageia
+# https://svnweb.mageia.org/packages/cauldron/task-lxqt/current/SPECS/task-lxqt.spec?view=markup
+
+# Set of packages from http://downloads.lxqt.org/lxqt/0.9.0/
 DEPENDS+=       liblxqt>=0.9.0:../../wip/liblxqt
 DEPENDS+=       liblxqt-mount>=0.9.0:../../wip/liblxqt-mount
 DEPENDS+=       lxqt-about>=0.9.0:../../wip/lxqt-about
