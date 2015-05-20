@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2015/05/17 17:21:40 outpaddling Exp $
+$NetBSD: distinfo,v 1.14 2015/05/20 16:47:21 outpaddling Exp $
 
-SHA1 (auto-admin-0.3.5.tar.xz) = 55546818efab3221fd961fa087b353704e3b7399
-RMD160 (auto-admin-0.3.5.tar.xz) = 70eddb582f72edfe2720157255cb180a55358104
-Size (auto-admin-0.3.5.tar.xz) = 43620 bytes
+SHA1 (auto-admin-0.3.5.tar.xz) = 6fbc5fcb39ba638e143315a05f0dcef25f794d77
+RMD160 (auto-admin-0.3.5.tar.xz) = 66b26e83620e52f25e4300f07bf2274d746707bc
+Size (auto-admin-0.3.5.tar.xz) = 43660 bytes
