@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/15 03:28:15 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/21 17:27:06 blef Exp $
 bin/lxlauncher
-etc/xdg/lxlauncher/gtkrc
-etc/xdg/lxlauncher/settings.conf
+man/man1/lxlauncher.1
 share/desktop-directories/lxde-learn.directory
 share/desktop-directories/lxde-math.directory
 share/desktop-directories/lxde-play.directory
 share/desktop-directories/lxde-science.directory
 share/desktop-directories/lxde-webmail.directory
 share/desktop-directories/lxde-work.directory
+share/examples/xdg/lxlauncher/gtkrc
+share/examples/xdg/lxlauncher/lxlauncher-applications.menu
+share/examples/xdg/lxlauncher/settings.conf
