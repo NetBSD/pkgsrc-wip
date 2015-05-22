@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6174 2015/05/18 16:26:10 n-t-roff Exp $
+# $Id: Makefile,v 1.6175 2015/05/22 11:09:31 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1496,6 +1496,8 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblogging
 SUBDIR+=	liblognorm1
+SUBDIR+=	liblxqt
+SUBDIR+=	liblxqt-mount
 SUBDIR+=	libmemphis02
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmpg123
@@ -1617,6 +1619,20 @@ SUBDIR+=	lxlauncher
 SUBDIR+=	lxmenu-data
 SUBDIR+=	lxmusic
 SUBDIR+=	lxpanel
+SUBDIR+=	lxqt
+SUBDIR+=	lxqt-about
+SUBDIR+=	lxqt-admin
+SUBDIR+=	lxqt-common
+SUBDIR+=	lxqt-config
+SUBDIR+=	lxqt-globalkeys
+SUBDIR+=	lxqt-notificationd
+SUBDIR+=	lxqt-openssh-askpass
+SUBDIR+=	lxqt-panel
+SUBDIR+=	lxqt-policykit
+SUBDIR+=	lxqt-powermanagement
+SUBDIR+=	lxqt-qtplugin
+SUBDIR+=	lxqt-runner
+SUBDIR+=	lxqt-session
 SUBDIR+=	lxrandr
 SUBDIR+=	lxsession-edit
 SUBDIR+=	lxshortcut
@@ -2213,6 +2229,7 @@ SUBDIR+=	passepartout
 SUBDIR+=	paxmirabilis
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pcmanfm
+SUBDIR+=	pcmanfm-qt
 SUBDIR+=	pcp
 SUBDIR+=	pcsx
 SUBDIR+=	pcsx-df
