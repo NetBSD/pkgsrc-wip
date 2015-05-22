@@ -1,10 +1,17 @@
-# $NetBSD: Makefile,v 1.12 2015/01/24 01:33:07 leot1990 Exp $
+# $NetBSD: Makefile,v 1.13 2015/05/22 00:42:51 f8l Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 
 COMMENT=	GTK port of the WebKit browser engine
+
+BUILD_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
+
+# shm_open(3) and shm_unlink(3) appeared in NetBSD 7.0
+.if !empty(MACHINE_PLATFORM:MNetBSD-*)
+DEPENDS+=       osabi-NetBSD>=7.0:../../pkgtools/osabi
+.endif
 
 #introspection support
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.24.17nb3
