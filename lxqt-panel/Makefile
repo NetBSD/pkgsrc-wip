@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/21 07:21:55 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/23 17:47:33 krytarowski Exp $
 
 DISTNAME=	lxqt-panel-0.9.0
 CATEGORIES=	x11
@@ -13,6 +13,8 @@ EXTRACT_USING=	gtar
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/xdg
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../wip/liblxqt-mount/buildlink3.mk"

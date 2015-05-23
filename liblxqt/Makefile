@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/05/19 11:48:36 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/23 17:47:33 krytarowski Exp $
 
 DISTNAME=	liblxqt-0.9.0
 CATEGORIES=	x11
@@ -21,6 +21,7 @@ USE_LANGUAGES=	c c++
 #BUILDLINK_TRANSFORM+=rm:-fPIE
 # XXX Should be fixed in qt5-qtbase
 
+CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/xdg
 
 .include "../../wip/kwindowsystem/buildlink3.mk"
 .include "../../wip/libqtxdg/buildlink3.mk"
