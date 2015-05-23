@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/05/23 12:56:45 krytarowski Exp $
+# $NetBSD: Makefile,v 1.8 2015/05/23 16:07:35 krytarowski Exp $
 
 PKGNAME=        lxqt-0.9.0
 CATEGORIES=     meta-pkgs
@@ -33,6 +33,12 @@ DEPENDS+=       lxqt-qtplugin>=0.9.0:../../wip/lxqt-qtplugin
 DEPENDS+=       lxqt-runner>=0.9.0:../../wip/lxqt-runner
 DEPENDS+=       lxqt-session>=0.9.0:../../wip/lxqt-session
 DEPENDS+=       pcmanfm-qt>=0.9.0:../../wip/pcmanfm-qt
+
+# actively used by apps -- are there alternatives?
+DEPENDS+=       oxygen-icons>=0.9.0:../../graphics/oxygen-icons
+
+# to be verified whether we want it, for now just shut the warnings up
+DEPENDS+=       qt5-qttranslations>=5.4.0:../../x11/qt5-qttranslations
 
 .include "options.mk"
 
