@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/05/23 00:57:50 krytarowski Exp $
+
+SHA1 (obconf-qt-0.1.0.tar.gz) = b66819f0eddf77abb9ec1b0dba93185eb64dca25
+RMD160 (obconf-qt-0.1.0.tar.gz) = 7f3f9a8ecaf14bec0376dbeb780d2ab5cb023e8c
+Size (obconf-qt-0.1.0.tar.gz) = 64858 bytes
+SHA1 (patch-CMakeLists.txt) = 772606622bd3fb6377fa5c46141a9babcdf71500
+SHA1 (patch-src_CMakeLists.txt) = afa3d6c7543fcc8462290eb3d51ffd56e153b8c5
+SHA1 (patch-src_appearance.cpp) = cc0a8149d90e8f1f485e9e682444628b3ed19dba
