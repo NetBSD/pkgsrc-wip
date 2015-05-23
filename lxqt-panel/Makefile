@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/05/23 19:03:23 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/05/23 20:38:29 krytarowski Exp $
 
 DISTNAME=	lxqt-panel-0.9.0
 CATEGORIES=	x11
@@ -20,11 +20,10 @@ OWN_DIRS=	${PKG_SYSCONFDIR}/xdg/lxqt
 
 CONF_FILES+=	${EGDIR}/xdg/lxqt/panel.conf ${PKG_SYSCONFDIR}/xdg/lxqt/panel.conf
 
-# XXX: how to fix it properly?
-post-install:
-	${RUN} mkdir -p ${DESTDIR}${EGDIR}/xdg
-	${RUN} mv ${DESTDIR}${PKG_SYSCONFDIR}/xdg/lxqt ${DESTDIR}${EGDIR}/xdg
-	${RUN} rm -rf mv ${DESTDIR}${PKG_SYSCONFDIR}
+SUBST_CLASSES+=		confdir
+SUBST_FILES.confdir=	panel/CMakeLists.txt
+SUBST_SED.confdir=	-e 's,$${LXQT_ETC_XDG_DIR}/,${EGDIR}/xdg/,'
+SUBST_STAGE.confdir=	post-patch
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../wip/liblxqt-mount/buildlink3.mk"
