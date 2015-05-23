@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/05/23 18:23:45 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/05/23 19:03:23 krytarowski Exp $
 
 DISTNAME=	lxqt-common-0.9.1
 CATEGORIES=	x11
@@ -29,8 +29,6 @@ CONF_FILES+=	${EGDIR}/xdg/autostart/lxqt-qxkb-autostart.desktop ${PKG_SYSCONFDIR
 CONF_FILES+=	${EGDIR}/xdg/autostart/lxqt-runner.desktop ${PKG_SYSCONFDIR}/xdg/autostart/lxqt-runner.desktop
 CONF_FILES+=	${EGDIR}/xdg/autostart/lxqt-screenlocker.desktop ${PKG_SYSCONFDIR}/xdg/autostart/lxqt-screenlocker.desktop
 CONF_FILES+=	${EGDIR}/xdg/autostart/lxqt-xscreensaver-autostart.desktop ${PKG_SYSCONFDIR}/xdg/autostart/lxqt-xscreensaver-autostart.desktop
-
-CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PKG_SYSCONFDIR}/xdg
 
 SUBST_CLASSES+=	xdg
 SUBST_FILES.xdg=	autostart/CMakeLists.txt

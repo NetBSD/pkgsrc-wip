@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/11 15:56:24 krytarowski Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/05/23 19:03:23 krytarowski Exp $
 bin/lxqt-panel
 include/lxqt/ilxqtpanel.h
 include/lxqt/ilxqtpanelplugin.h
@@ -18,7 +18,7 @@ lib/lxqt-panel/libtaskbar.${RUBY_DLEXT}
 lib/lxqt-panel/libtray.${RUBY_DLEXT}
 lib/lxqt-panel/libvolume.${RUBY_DLEXT}
 lib/lxqt-panel/libworldclock.${RUBY_DLEXT}
-qt5/etc/xdg/lxqt/panel.conf
+share/examples/lxqt-panel/xdg/lxqt/panel.conf
 share/lxqt/lxqt-panel/clock.desktop
 share/lxqt/lxqt-panel/colorpicker.desktop
 share/lxqt/lxqt-panel/desktopswitch.desktop

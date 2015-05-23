@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/05/23 17:47:33 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/05/23 19:03:23 krytarowski Exp $
 
 DISTNAME=	lxqt-panel-0.9.0
 CATEGORIES=	x11
@@ -14,7 +14,17 @@ EXTRACT_USING=	gtar
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DLXQT_ETC_XDG_DIR=${PREFIX}/xdg
+EGDIR=		${PREFIX}/share/examples/lxqt-panel
+
+OWN_DIRS=	${PKG_SYSCONFDIR}/xdg/lxqt
+
+CONF_FILES+=	${EGDIR}/xdg/lxqt/panel.conf ${PKG_SYSCONFDIR}/xdg/lxqt/panel.conf
+
+# XXX: how to fix it properly?
+post-install:
+	${RUN} mkdir -p ${DESTDIR}${EGDIR}/xdg
+	${RUN} mv ${DESTDIR}${PKG_SYSCONFDIR}/xdg/lxqt ${DESTDIR}${EGDIR}/xdg
+	${RUN} rm -rf mv ${DESTDIR}${PKG_SYSCONFDIR}
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../wip/liblxqt-mount/buildlink3.mk"
