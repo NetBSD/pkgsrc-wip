@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2015/05/23 12:59:41 krytarowski Exp $
+# $NetBSD: options.mk,v 1.4 2015/05/23 14:00:11 krytarowski Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lxqt
-PKG_SUPPORTED_OPTIONS=	openbox # alternatives: kwin and possibly metacity
+PKG_SUPPORTED_OPTIONS=	openbox # alternatives: kwin and possibly metacity and compton
 PKG_SUGGESTED_OPTIONS=	openbox
 
 .include "../../mk/bsd.options.mk"
