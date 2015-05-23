@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/23 00:57:50 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/23 22:01:50 krytarowski Exp $
 
 DISTNAME=	obconf-qt-0.1.0
 CATEGORIES=	x11
@@ -16,6 +16,7 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ENV=	USE_QT5=ON
 
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../wm/openbox/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

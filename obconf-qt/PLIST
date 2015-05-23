@@ -1,1 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/23 00:57:50 krytarowski Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/23 22:01:50 krytarowski Exp $
+bin/obconf-qt
+share/applications/obconf-qt.desktop
+share/pixmaps/obconf-qt.png
