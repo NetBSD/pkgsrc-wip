@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2015/05/23 18:23:45 krytarowski Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/05/23 20:28:04 krytarowski Exp $
 bin/startlxqt
-qt5/etc/xdg/lxqt/lxqt.conf
-qt5/etc/xdg/lxqt/session.conf
-qt5/etc/xdg/lxqt/windowmanagers.conf
-qt5/etc/xdg/menus/lxqt-applications.menu
-qt5/etc/xdg/pcmanfm-qt/lxqt/settings.conf
 share/desktop-directories/lxqt-leave.directory
 share/desktop-directories/lxqt-settings.directory
 share/examples/lxqt-common/xdg/autostart/lxqt-compton.desktop
@@ -20,6 +15,11 @@ share/examples/lxqt-common/xdg/autostart/lxqt-qxkb-autostart.desktop
 share/examples/lxqt-common/xdg/autostart/lxqt-runner.desktop
 share/examples/lxqt-common/xdg/autostart/lxqt-screenlocker.desktop
 share/examples/lxqt-common/xdg/autostart/lxqt-xscreensaver-autostart.desktop
+share/examples/lxqt-common/xdg/lxqt/lxqt.conf
+share/examples/lxqt-common/xdg/lxqt/session.conf
+share/examples/lxqt-common/xdg/lxqt/windowmanagers.conf
+share/examples/lxqt-common/xdg/menus/lxqt-applications.menu
+share/examples/lxqt-common/xdg/pcmanfm-qt/lxqt/settings.conf
 share/icons/hicolor/scalable/places/start-here-lxqt.svg
 share/lxqt/graphics/README
 share/lxqt/graphics/helix.svg
