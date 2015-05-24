@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6175 2015/05/22 11:09:31 krytarowski Exp $
+# $Id: Makefile,v 1.6176 2015/05/24 01:13:08 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1615,6 +1615,7 @@ SUBDIR+=	lucene
 SUBDIR+=	lwc
 SUBDIR+=	lxappearance
 SUBDIR+=	lxde-common
+SUBDIR+=	lximage-qt
 SUBDIR+=	lxlauncher
 SUBDIR+=	lxmenu-data
 SUBDIR+=	lxmusic
@@ -1908,6 +1909,7 @@ SUBDIR+=	nuttcp
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
+SUBDIR+=	obconf-qt
 SUBDIR+=	objfw
 SUBDIR+=	objfw-git
 SUBDIR+=	obmenu
