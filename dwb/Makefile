@@ -1,16 +1,23 @@
-# $NetBSD: Makefile,v 1.1 2015/03/29 23:38:33 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/25 22:40:27 f8l Exp $
 
-DISTNAME=	dwb-2013.03.30
-CATEGORIES=	wip
+DISTNAME=	dwb-2014.03.07
+CATEGORIES=	www
 MASTER_SITES=	https://bitbucket.org/portix/dwb/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/portix/dwb/downloads/
-COMMENT=	webkit browser
+HOMEPAGE=	http://portix.bitbucket.org/dwb/
+COMMENT=	Dynamic WebKit browser, gtk2 version
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS=	gmake
+FETCH_USING=	curl
+USE_TOOLS+=	gmake
+USE_TOOLS+=	pkg-config
+NO_CONFIGURE=	yes
+MAKE_ENV+=	REAL_VERSION=2014.03.07
+MAKE_ENV+=	MANDIR=$(PREFIX)/man
 
-.include "../../x11/gtk3/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
