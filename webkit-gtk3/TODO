@@ -1,3 +1,4 @@
+Verify buildlink3.mk.
 Build without --disable-webkit2. It was added for the following reason:
 Build stops on NetBSD 7.99.1/amd64:
 
