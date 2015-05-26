@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/25 22:40:27 f8l Exp $
+# $NetBSD: Makefile,v 1.3 2015/05/26 09:32:52 f8l Exp $
 
 DISTNAME=	dwb-2014.03.07
 CATEGORIES=	www
@@ -9,7 +9,6 @@ HOMEPAGE=	http://portix.bitbucket.org/dwb/
 COMMENT=	Dynamic WebKit browser, gtk2 version
 LICENSE=	gnu-gpl-v3
 
-FETCH_USING=	curl
 USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config
 NO_CONFIGURE=	yes
