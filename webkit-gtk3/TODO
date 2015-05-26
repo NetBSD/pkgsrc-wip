@@ -1,3 +1,4 @@
+Build without --disable-webkit2. It was added for the following reason:
 Build stops on NetBSD 7.99.1/amd64:
 
   CXXLD    Programs/WebKitPluginProcess
@@ -270,5 +271,3 @@ gmake[1]: Leaving directory '/scratch/www/webkit-gtk3/work/webkitgtk-2.4.5'
 GNUmakefile:25649: recipe for target 'all' failed
 gmake: *** [all] Error 2
 *** Error code 2
-
-PLIST not up-to-date yet for that reason.

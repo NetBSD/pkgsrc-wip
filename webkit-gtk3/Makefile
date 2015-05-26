@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/02 06:42:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/26 10:49:33 f8l Exp $
 
 .include "../../www/webkit-gtk/Makefile.common"
 
@@ -7,6 +7,7 @@ PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk3/}
 COMMENT=	GTK3 port of the WebKit browser engine
 
 CONFIGURE_ARGS+=	--with-gtk=3.0
+CONFIGURE_ARGS+=        --disable-webkit2
 
 # gen PLIST from webkit-gtk/PLIST
 .PHONY: print-PLIST-from-gtk
@@ -23,7 +24,5 @@ print-PLIST-from-gtk:
 	-e 's/WebKit-1.0/WebKit-3.0/'				\
 	../../www/webkit-gtk/PLIST
 
-.include "../../graphics/cairo/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
