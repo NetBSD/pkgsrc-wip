@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/05/23 20:28:04 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/05/26 10:50:01 krytarowski Exp $
 
 DISTNAME=	lxqt-common-0.9.1
 CATEGORIES=	x11
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 EGDIR=		${PREFIX}/share/examples/lxqt-common
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/lxqt
-OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/menus
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/menus
 OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/pcmanfm-qt/lxqt
 
 CONF_FILES+=	${EGDIR}/xdg/autostart/lxqt-compton.desktop ${PKG_SYSCONFDIR}/xdg/autostart/lxqt-compton.desktop
