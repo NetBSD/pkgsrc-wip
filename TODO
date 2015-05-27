@@ -17,6 +17,7 @@ Suggested package updates
 	o cinelerra-4.5
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o debootstrap-1.0.70
 	o desmume-0.9.11
 	o directfb-1.0.0
 	o dolphin-4.0
@@ -99,7 +100,7 @@ Suggested package updates
 	o py-PyPE-2.9
 	o py-bitstring-3.1.3
 	o py-rpyc-3.2.1
-	o py-xpra-0.14.23
+	o py-xpra-0.14.24
 	o py-zeitgeist-0.9
 	o rdup-1.1.13
 	o recoll-1.19.14
@@ -125,7 +126,7 @@ Suggested package updates
 	o webkit-gtk-2.8.3 [leot1990]
 	o xaralx-bin-0.7.1692
 	o xf86-input-synaptics-1.8.0
-	o xf86-video-geode-2.11.16
+	o xf86-video-geode-2.11.17
 	o zapping-0.10cvs6
 
 Suggested ready to import packages
