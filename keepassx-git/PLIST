@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/24 09:18:14 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/27 20:39:44 thomasklausner Exp $
 bin/keepassx
 lib/keepassx/libkeepassx-autotype-x11.so
 share/applications/keepassx.desktop
@@ -138,9 +138,16 @@ share/keepassx/icons/database/C65_W.png
 share/keepassx/icons/database/C66_Money.png
 share/keepassx/icons/database/C67_Certificate.png
 share/keepassx/icons/database/C68_BlackBerry.png
+share/keepassx/translations/keepassx_cs.qm
+share/keepassx/translations/keepassx_da.qm
 share/keepassx/translations/keepassx_de.qm
 share/keepassx/translations/keepassx_en_plurals.qm
+share/keepassx/translations/keepassx_es.qm
+share/keepassx/translations/keepassx_fr.qm
+share/keepassx/translations/keepassx_id.qm
 share/keepassx/translations/keepassx_it.qm
 share/keepassx/translations/keepassx_nl_NL.qm
+share/keepassx/translations/keepassx_ru.qm
 share/keepassx/translations/keepassx_sv.qm
+share/keepassx/translations/keepassx_zh_TW.qm
 share/mime/packages/keepassx.xml
