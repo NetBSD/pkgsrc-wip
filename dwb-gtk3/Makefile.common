@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2015/05/27 16:46:29 f8l Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/05/27 17:59:19 f8l Exp $
 # used by wip/dwb-gtk3/Makefile
+# used by wip/dwb-gtk2/Makefile
 
 DISTNAME=	dwb-${VERSION}
 VERSION=	2014.03.07
