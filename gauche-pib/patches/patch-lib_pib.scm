@@ -1,19 +1,10 @@
-$NetBSD: patch-lib_pib.scm,v 1.1 2015/05/28 05:36:12 phonohawk Exp $
+$NetBSD: patch-lib_pib.scm,v 1.2 2015/05/28 05:38:12 phonohawk Exp $
 
 Fix a race-condition on the send queue:
 https://github.com/ayamada/copy-of-svn.tir.jp/pull/1
 
 --- lib/pib.scm.orig	2009-09-28 16:03:37.000000000 +0000
 +++ lib/pib.scm
-@@ -1,7 +1,7 @@
- ;;; coding: euc-jp
- ;;; -*- scheme -*-
- ;;; vim:set ft=scheme ts=8 sts=2 sw=2 et:
--;;; $Id: patch-lib_pib.scm,v 1.1 2015/05/28 05:36:12 phonohawk Exp $
-+;;; $Id: patch-lib_pib.scm,v 1.1 2015/05/28 05:36:12 phonohawk Exp $
- 
- ;;; plain irc bot (pib) module
- 
 @@ -461,10 +461,6 @@
       :accessor irc-recv-cv-of)
     (irc-send-cv
