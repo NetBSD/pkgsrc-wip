@@ -1,0 +1,16 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2015/05/28 05:36:12 phonohawk Exp $
+
+Do not install *.scm.orig:
+https://github.com/ayamada/copy-of-svn.tir.jp/pull/2
+
+--- lib/Makefile.in.orig	2009-03-09 13:43:18.000000000 +0000
++++ lib/Makefile.in
+@@ -6,7 +6,7 @@
+ 
+ NAME = pib
+ 
+-TARGET_FILES = $(shell find .|grep '\.scm')
++TARGET_FILES = $(shell find . -name '*.scm')
+ 
+ 
+ GENERATED = 

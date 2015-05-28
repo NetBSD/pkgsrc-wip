@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:33 asau Exp $
+# $NetBSD: Makefile,v 1.4 2015/05/28 05:36:12 phonohawk Exp $
 #
 
 DISTNAME=	pib-0.3.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://d.tir.jp/
 EXTRACT_SUFX=	.tgz
