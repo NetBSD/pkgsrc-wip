@@ -1,0 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/05/28 11:00:49 n-t-roff Exp $
+
+Running DWB binaries
+--------------------
+
+Most of the binaries have the same name as their respective counterpart in
+groff.  To avoid conflicts they have been installed to ${PREFIX}/dwb33/bin.
+To use them you should add this directory to your PATH variable (e.g. for
+ksh):
+
+	export PATH=${PREFIX}/dwb33/bin:$PATH
+
+It is also required to set the DWBHOME to ${PREFIX}/dwb33:
+
+	export DWBHOME=${PREFIX}/dwb33
+
+Reading DWB manual pages
+------------------------
+
+The manual pages are installed to ${PREFIX}/dwb33/man.  Most of DWB's
+manual pages are not compatible with mandoc(1) or groff.  It is possible to
+read them with e.g.
+
+	tbl <path to file> | nroff -man | col -x | less
+===========================================================================

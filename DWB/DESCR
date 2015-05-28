@@ -1,0 +1,5 @@
+$NetBSD: DESCR,v 1.1 2015/05/28 11:00:49 n-t-roff Exp $
+
+The Documenter's Workbench (DWB) Release 3.3 is AT&T's original software
+distribution of nroff and troff (ditroff), the preprocessors tbl, eqn, pic,
+and grap, and the macro packages man, ms, and mm.
