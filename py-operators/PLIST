@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/20 20:46:43 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/30 17:42:10 jihbed Exp $
 ${PYSITELIB}/pyoperators/__init__.py
 ${PYSITELIB}/pyoperators/__init__.pyc
 ${PYSITELIB}/pyoperators/__init__.pyo
@@ -8,12 +8,12 @@ ${PYSITELIB}/pyoperators/config.pyo
 ${PYSITELIB}/pyoperators/core.py
 ${PYSITELIB}/pyoperators/core.pyc
 ${PYSITELIB}/pyoperators/core.pyo
-${PYSITELIB}/pyoperators/decorators.py
-${PYSITELIB}/pyoperators/decorators.pyc
-${PYSITELIB}/pyoperators/decorators.pyo
 ${PYSITELIB}/pyoperators/fft.py
 ${PYSITELIB}/pyoperators/fft.pyc
 ${PYSITELIB}/pyoperators/fft.pyo
+${PYSITELIB}/pyoperators/flags.py
+${PYSITELIB}/pyoperators/flags.pyc
+${PYSITELIB}/pyoperators/flags.pyo
 ${PYSITELIB}/pyoperators/iterative/__init__.py
 ${PYSITELIB}/pyoperators/iterative/__init__.pyc
 ${PYSITELIB}/pyoperators/iterative/__init__.pyo
@@ -53,15 +53,18 @@ ${PYSITELIB}/pyoperators/memory.pyo
 ${PYSITELIB}/pyoperators/nonlinear.py
 ${PYSITELIB}/pyoperators/nonlinear.pyc
 ${PYSITELIB}/pyoperators/nonlinear.pyo
-${PYSITELIB}/pyoperators/norms.py
-${PYSITELIB}/pyoperators/norms.pyc
-${PYSITELIB}/pyoperators/norms.pyo
 ${PYSITELIB}/pyoperators/operators_mpi.py
 ${PYSITELIB}/pyoperators/operators_mpi.pyc
 ${PYSITELIB}/pyoperators/operators_mpi.pyo
 ${PYSITELIB}/pyoperators/operators_pywt.py
 ${PYSITELIB}/pyoperators/operators_pywt.pyc
 ${PYSITELIB}/pyoperators/operators_pywt.pyo
+${PYSITELIB}/pyoperators/proxy.py
+${PYSITELIB}/pyoperators/proxy.pyc
+${PYSITELIB}/pyoperators/proxy.pyo
+${PYSITELIB}/pyoperators/rules.py
+${PYSITELIB}/pyoperators/rules.pyc
+${PYSITELIB}/pyoperators/rules.pyo
 ${PYSITELIB}/pyoperators/utils/__init__.py
 ${PYSITELIB}/pyoperators/utils/__init__.pyc
 ${PYSITELIB}/pyoperators/utils/__init__.pyo
@@ -79,3 +82,6 @@ ${PYSITELIB}/pyoperators/utils/testing.py
 ${PYSITELIB}/pyoperators/utils/testing.pyc
 ${PYSITELIB}/pyoperators/utils/testing.pyo
 ${PYSITELIB}/pyoperators/utils/ufuncs.so
+${PYSITELIB}/pyoperators/warnings.py
+${PYSITELIB}/pyoperators/warnings.pyc
+${PYSITELIB}/pyoperators/warnings.pyo
