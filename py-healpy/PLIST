@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/22 10:47:53 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/05/30 20:24:08 jihbed Exp $
 ${PYSITELIB}/healpy-${PKGVERSION}-py2.7.egg-info/PKG-INFO
 ${PYSITELIB}/healpy-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
 ${PYSITELIB}/healpy-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
@@ -61,9 +61,6 @@ ${PYSITELIB}/healpy/projector.pyo
 ${PYSITELIB}/healpy/rotator.py
 ${PYSITELIB}/healpy/rotator.pyc
 ${PYSITELIB}/healpy/rotator.pyo
-${PYSITELIB}/healpy/run_doctest_cython.py
-${PYSITELIB}/healpy/run_doctest_cython.pyc
-${PYSITELIB}/healpy/run_doctest_cython.pyo
 ${PYSITELIB}/healpy/sphtfunc.py
 ${PYSITELIB}/healpy/sphtfunc.pyc
 ${PYSITELIB}/healpy/sphtfunc.pyo
@@ -83,6 +80,9 @@ ${PYSITELIB}/healpy/test/data/wmap_band_iqumap_r9_7yr_W_v4_udgraded32_masked.fit
 ${PYSITELIB}/healpy/test/data/wmap_band_iqumap_r9_7yr_W_v4_udgraded32_masked_smoothed10deg_fortran.fits
 ${PYSITELIB}/healpy/test/data/wmap_band_iqumap_r9_7yr_W_v4_udgraded32_smoothed10deg_fortran.fits
 ${PYSITELIB}/healpy/test/data/wmap_temperature_analysis_mask_r9_7yr_v4_udgraded32.fits
+${PYSITELIB}/healpy/test/test_doctest_cython.py
+${PYSITELIB}/healpy/test/test_doctest_cython.pyc
+${PYSITELIB}/healpy/test/test_doctest_cython.pyo
 ${PYSITELIB}/healpy/test/test_fitsfunc.py
 ${PYSITELIB}/healpy/test/test_fitsfunc.pyc
 ${PYSITELIB}/healpy/test/test_fitsfunc.pyo
@@ -95,6 +95,9 @@ ${PYSITELIB}/healpy/test/test_query_disc.pyo
 ${PYSITELIB}/healpy/test/test_sphtfunc.py
 ${PYSITELIB}/healpy/test/test_sphtfunc.pyc
 ${PYSITELIB}/healpy/test/test_sphtfunc.pyo
+${PYSITELIB}/healpy/test/test_spinfunc.py
+${PYSITELIB}/healpy/test/test_spinfunc.pyc
+${PYSITELIB}/healpy/test/test_spinfunc.pyo
 ${PYSITELIB}/healpy/test/test_visufunc.py
 ${PYSITELIB}/healpy/test/test_visufunc.pyc
 ${PYSITELIB}/healpy/test/test_visufunc.pyo
