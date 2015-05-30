@@ -1,0 +1,10 @@
+# $NetBSD: Makefile.common,v 1.1 2015/05/30 01:36:11 krytarowski Exp $
+# used by wip/liblxqt/Makefile
+
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxde/}
+HOMEPAGE=	http://lxqt.org/
+
+EXTRACT_USING=	gtar
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
