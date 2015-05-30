@@ -1,2 +1,0 @@
-"Hash" digests of arbitrary R objects using the md5, sha-1, sha-256 and crc32
-algorithms permitting easy comparison of R objects.
