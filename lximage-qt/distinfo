@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/05/22 11:21:39 krytarowski Exp $
+$NetBSD: distinfo,v 1.2 2015/05/30 01:23:41 krytarowski Exp $
 
-SHA1 (lximage-qt-0.4.0.tar.gz) = 208c8ad4d4580ea388fb18dbb02090d470b32250
-RMD160 (lximage-qt-0.4.0.tar.gz) = c74a3ac71e2bd76e8d10f68b16f5e88898645e40
-Size (lximage-qt-0.4.0.tar.gz) = 51390 bytes
+SHA1 (lximage-qt-0.4.0.tar.gz) = 92d4190cb26eead814abf18703a22954f6d1b1ea
+RMD160 (lximage-qt-0.4.0.tar.gz) = 77485f0b352355a467b230207cda54b5d191abe4
+Size (lximage-qt-0.4.0.tar.gz) = 52688 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2015/05/23 20:38:29 krytarowski Exp $
+# $NetBSD: Makefile,v 1.8 2015/05/30 01:23:41 krytarowski Exp $
 
 DISTNAME=	lxqt-panel-0.9.0
 CATEGORIES=	x11
-MASTER_SITES=	http://downloads.lxqt.org/lxqt/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lxde/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxqt.org/

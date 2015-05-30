@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/04/11 15:56:24 krytarowski Exp $
+$NetBSD: distinfo,v 1.3 2015/05/30 01:23:41 krytarowski Exp $
 
-SHA1 (lxqt-panel-0.9.0.tar.gz) = cbdb633ca69e56fc465b434acbfa1b8e90a91d53
-RMD160 (lxqt-panel-0.9.0.tar.gz) = 1a1d97862271efea2dc1da2cd61fd950d23f8032
-Size (lxqt-panel-0.9.0.tar.gz) = 383039 bytes
+SHA1 (lxqt-panel-0.9.0.tar.gz) = d1a0bb400980b5785bca4c25591d0c34e2032c91
+RMD160 (lxqt-panel-0.9.0.tar.gz) = 02bf4f0b689226776ad59b1cd7e918a58103ee7f
+Size (lxqt-panel-0.9.0.tar.gz) = 383041 bytes
 SHA1 (patch-plugin-volume_ossengine.cpp) = e712ef65b066dd82227802b88831731cffa94499
