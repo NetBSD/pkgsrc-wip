@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/31 12:22:40 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/05/31 23:28:25 krytarowski Exp $
 
 DISTNAME=	enigmail-1.8.2
 PKGNAME=	thunderbird-${DISTNAME}
@@ -18,7 +18,6 @@ MAKE_JOBS_SAFE=	no
 
 # Minimal requirements are here: https://www.enigmail.net/download/source.php
 BUILD_DEPENDS+=		thunderbird>=31:../../mail/thunderbird
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 
 REPLACE_PERL+=	config/getOsTarget.pl
