@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/01 23:23:05 jihbed Exp $
+
+SHA1 (redbaron-0.5.1.tar.gz) = 930428d5020ddc35cc70de12932912f003f83cc1
+RMD160 (redbaron-0.5.1.tar.gz) = 02650b667eadb8eb5cd9e100a9e32836193bec43
+Size (redbaron-0.5.1.tar.gz) = 21498 bytes

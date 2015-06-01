@@ -1,0 +1,6 @@
+RedBaron is a python library and tool powerful enough to be used into IPython 
+solely that intent to make the process of writting code that modify source code
+as easy and as simple as possible. That include writing custom refactoring,
+generic refactoring, tools, IDE or directly modifying you source code into
+IPython with an higher and more powerful abstraction than the advanced texts
+modification tools that you find in advanced text editors and IDE
