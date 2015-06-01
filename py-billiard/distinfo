@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2015/06/01 20:54:48 jihbed Exp $
+
+SHA1 (billiard-3.3.0.20.tar.gz) = ed949fc8a36487da751452c0ba99b2754bfb3917
+RMD160 (billiard-3.3.0.20.tar.gz) = dd306bc3ae8c8dd850e2aa8c502aa4a2f8c7064e
+Size (billiard-3.3.0.20.tar.gz) = 150990 bytes
