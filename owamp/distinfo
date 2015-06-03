@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/06/03 00:38:05 mbowie Exp $
+
+SHA1 (owamp-3.4-10.tar.gz) = acf7502eef15fc0ac14d1b1d86e28759b4bc39fe
+RMD160 (owamp-3.4-10.tar.gz) = 26aed4d65f152b8909397fc3cf54b98207db6283
+Size (owamp-3.4-10.tar.gz) = 656960 bytes
+SHA1 (patch-owamp_endpoint.c) = cd47e7c51f59a39fa69951ff47da154835469300
