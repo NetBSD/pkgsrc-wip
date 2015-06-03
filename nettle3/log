@@ -1,151 +1,93 @@
-NEWS for the Nettle 3.0 release
+NEWS for the Nettle 3.1.1 release
 
-	This is a major release, including several interface changes,
-	and new features, some of which are a bit experimental.
-	Feedback is highly appreciated.
+	This release fixes a couple of non-critical bugs.
 
-	It is *not* binary (ABI) compatible with earlier versions. It
-	is mostly source-level (API) compatible, with a couple of
-	incompatibilities noted below. The shared library names are
-	libnettle.so.5.0 and libhogweed.so.3.0, with sonames
-	libnettle.so.5 and libhogweed.so.3.
-	
-	There may be some problems in the new interfaces and new
-	features which really need incompatible fixes. It is likely
-	that there will be an update in the form of a 3.1 release in
-	the not too distant future, with small but incompatible
-	changes, and if that happens, bugfix-only releases 3.0.x are
-	unlikely. Users and applications which desire better API and
-	ABI stability are advised to stay with nettle-2.7.x (latest
-	version is now 2.7.1) until the dust settles.
+	Bug fixes:
+
+	* By accident, nettle-3.1 disabled the assembly code for the
+	  secp_224r1 and secp_521r1 elliptic curves on all x86_64
+	  configurations, making signature operations on those curves
+	  10%-30% slower. This code is now re-enabled.
+
+	* The x86_64 assembly implementation of gcm hashing has been
+          fixed to work with the Sun/Oracle assembler.
+
+	The shared library names are libnettle.so.6.1 and
+	libhogweed.so.4.1, with sonames still libnettle.so.6 and
+	libhogweed.so.4. It is intended to be fully binary compatible
+	with nettle-3.1.
+
+NEWS for the Nettle 3.1 release
+
+	This release adds a couple of new features.
+
+	The library is mostly source-level compatible with nettle-3.0.
+	It is however not binary compatible, due to the introduction
+	of versioned symbols, and extensions to the base64 context
+	structs. The shared library names are libnettle.so.6.0 and
+	libhogweed.so.4.0, with sonames libnettle.so.6 and
+	libhogweed.so.4.
+
+	Bug fixes:
+
+	* Fixed a missing include of <limits.h>, which made the
+	  camellia implementation fail on all 64-bit non-x86
+	  platforms.
+
+	* Eliminate out-of-bounds reads in the C implementation of
+	  memxor (related to valgrind's --partial-loads-ok flag).
 
 	Interface changes:
 
-	* For the many _set_key functions, it is now consider the
-	  normal case to have a fixed key size, with no key_size
-	  arguments. _set_key functions with a length parameter are
-	  provided only for algorithms with a truly variable keysize,
-	  and where it makes sense for backwards compatibility.
-
-	  INCOMPATIBLE CHANGE: cast128_set_key no longer accepts a key
-	  size argument. The old function is available under a new
-	  name, cast5_set_key.
-
-	  INCOMPATIBLE CHANGE: The function typedef
-	  nettle_set_key_func no longer accepts a key size argument.
-	  In particular, this affects users of struct nettle_cipher.
-
-	* The nettle_cipher abstraction (in nettle-meta.h) is
-	  restricted to block ciphers only. The encrypt and decrypt
-	  functions now take a const argument for the context.
-
-	  INCOMPATIBLE CHANGE: nettle_arcfour, i.e., the nettle_cipher
-	  abstraction for the arcfour stream cipher, is deleted.
-
-	  INCOMPATIBLE CHANGE: New type, nettle_cipher_func, for the
-	  encrypt and decrypt fields of struct nettle_cipher.
-
-	* New DSA interface, with a separate struct dsa_param to
-	  represent the underlying group, and generalized dsa_sign and
-	  dsa_verify functions which don't care about the hash
-	  function used. Limited backwards compatibility provided in
-	  dsa-compat.h.
-
-	  INCOMPATIBLE CHANGE: Declarations of the old interface,
-	  e.g., struct dsa_public_key, dsa_sha1_sign, etc, is moved to
-	  dsa-compat.h.
-
-	  INCOMPATIBLE CHANGE: The various key conversion functions,
-	  e.g., dsa_keypair_to_sexp, all use the new DSA interface, with
-	  no backwards compatible functions.
-
-	  INCOMPATIBLE CHANGE: dsa_generate_keypair also uses the new
-	  interface. dsa-compat.h declares a function
-	  dsa_compat_generate_keypair, implementing the old
-	  interface, and #defines dsa_generate_keypair to refer to
-	  this backwards compatible function.
-
-	* New AES and Camellia interfaces. There are now separate
-	  context structs for each key size, e.g., aes128_ctx and
-	  camellia256_ctx, and corresponding new functions. The old
-	  interface, with struct aes_ctx and struct camellia_ctx, is
-	  kept for backwards compatibility, but might be removed in
-	  later versions.
-
-	* The type of most length arguments is changed from unsigned
-	  to size_t. The memxor functions have their pointer arguments
-	  changed from uint8_t * to void *, for consistency with
-	  related libc functions.
-
-	* For hash functions, the constants *_DATA_SIZE have been
-	  renamed to *_BLOCK_SIZE. Old names kept for backwards
-	  compatibility.
-
-	Removed features:
-
-	* The nettle_next_prime function has been deleted.
-	  Applications should use GMP's mpz_nextprime instead.
-
-	* Deleted the RSAREF compatibility, including the header file
-	  rsa-compat.h and everything declared therein.
-
-	* Also under consideration for removal is des-compat.h and
-	  everything declared therein. This implements a subset of the
-	  old libdes/ssleay/openssl interface for DES and triple-DES,
-	  and it is poorly tested. If anyone uses this interface,
-	  please speak up! Otherwise, it will likely be removed in the
-	  next release.
-	
-	Bug fixes:
-
-	* Building with ./configure --disable-static now works.
-
-	* Use GMP's allocation functions for temporary storage related
-	  to bignums, to avoid potentially large stack allocations.
-
-	* Fixes for shared libraries on M$ Windows.
+	* Declarations of many internal functions are moved from ecc.h
+	  to ecc-internal.h. The functions are undocumented, and
+	  luckily they're apparently also unused by applications, so I
+	  don't expect any problems from this change.
 
 	New features:
 
-	* Support for Poly1305-AES MAC.
+	* Support for curve25519 and for EdDSA25519 signatures.
 
-	* Support for the ChaCha stream cipher and EXPERIMENTAL
-	  support for the ChaCha-Poly1305 AEAD mode. Specifications
-	  are still in flux, and future releases may do incompatible
-	  changes to track standardization. Currently uses 256-bit key
-	  and 64-bit nonce.
+	* Support for "fat builds" on x86_64 and arm, where the
+	  implementation of certain functions is selected at run-time
+	  depending on available cpu features. Configure with
+	  --enable-fat to try this out. If it turns out to work well
+	  enough, it will likely be enabled by default in later
+	  releases.
 
-	* Support for EAX mode.
+	* Support for building the hogweed library (public key
+	  support) using "mini-gmp", a small but slower implementation
+	  of a subset of the GMP interfaces. Note that builds using
+	  mini-gmp are *not* binary compatible with regular builds,
+	  and more likely to leak side-channel information.
 
-	* Support for CCM mode. Contributed by Owen Kirby.
+	  One intended use-case is for small embedded applications
+	  which need to verify digital signatures.
 
-	* Additional variants of SHA512 with output size of 224 and
-	  256 bits. Contributed by Joachim Strömbergson.
+	* The shared libraries are now built with versioned symbols.
+	  Should reduce problems in case a program links explicitly to
+	  nettle and/or hogweed, and to gnutls, and the program and
+	  gnutls expect different versions.
 
-	* New interface, struct nettle_aead, for mechanisms providing
-	  authenticated encryption with associated data (AEAD).
-
-	* DSA: Support a wider range for the size of q and a wider
-	  range for the digest size.
+	* Support for "URL-safe" base64 encoding and decoding, as
+          specified in RFC 4648. Contributed by Amos Jeffries.
 
 	Optimizations:
 
-	* New x86_64 assembly for GCM and MD5. Modest speedups on the
-	  order of 10%-20%.
+	* New x86_64 implementation of AES, using the "aesni"
+	  instructions. Autodetected in fat builds. In non-fat builds,
+	  it has to be enabled explicitly with --enable-x86-aesni.
+
+	Build system:
+
+	* Use the same object files for both static and shared
+	  libraries. This eliminates the *.po object files which were
+	  confusing to some tools (as well as humans). Like before,
+	  PIC code is used by default; to build a non-pic static
+	  library, configure with --disable-pic --disable-shared.
 
 	Miscellaneous:
 
-	* SHA3 is now documented as EXPERIMENTAL. Nettle currently
-	  implements SHA3 as specified at the time Keccak won the SHA3
-	  competition. However, the final standard specified by NIST
-	  is likely to be incompatible, in which case future releases
-	  may do incompatible changes to track standardization.
-
-	* The portability fix for the rotation macros, mentioned in
-	  NEWS for 2.7.1, actually didn't make it into that release.
-	  It is included now.
-
-	* cast128_set_key rewritten for clarity, also eliminating a
-	  couple of compiler warnings.
-
-	* New command line tool nettle-pbkdf2.
+	* Made type-checking hack in CBC_ENCRYPT and similar macros
+	  stricter, to generate warnings if they are used with
+	  functions which have a length argument smaller than size_t.

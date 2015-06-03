@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/14 17:40:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/03 20:40:39 thomasklausner Exp $
 bin/nettle-hash
 bin/nettle-lfib-stream
 bin/nettle-pbkdf2
@@ -20,6 +20,7 @@ include/nettle/ccm.h
 include/nettle/chacha-poly1305.h
 include/nettle/chacha.h
 include/nettle/ctr.h
+include/nettle/curve25519.h
 include/nettle/des-compat.h
 include/nettle/des.h
 include/nettle/dsa-compat.h
@@ -28,6 +29,7 @@ include/nettle/eax.h
 include/nettle/ecc-curve.h
 include/nettle/ecc.h
 include/nettle/ecdsa.h
+include/nettle/eddsa.h
 include/nettle/gcm.h
 include/nettle/gosthash94.h
 include/nettle/hmac.h
@@ -57,6 +59,7 @@ include/nettle/sha2.h
 include/nettle/sha3.h
 include/nettle/twofish.h
 include/nettle/umac.h
+include/nettle/version.h
 include/nettle/yarrow.h
 info/nettle.info
 lib/libhogweed.la
