@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/05/27 06:50:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2015/06/03 11:30:43 thomasklausner Exp $
 
 DISTNAME=	lgogdownloader-2.23
 CATEGORIES=	games
@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/lgogdownloader
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake gunzip
 
+BUILD_TARGET=	release
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
