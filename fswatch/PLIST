@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/07 22:25:32 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/04 10:14:50 thomasklausner Exp $
 bin/fswatch
-bin/fswatch-run
-bin/fswatch-run-bash
-bin/fswatch-run-zsh
 include/libfswatch/c++/event.h
 include/libfswatch/c++/filter.h
-include/libfswatch/c++/fsevents_monitor.h
 include/libfswatch/c++/kqueue_monitor.h
 include/libfswatch/c++/libfswatch_exception.h
 include/libfswatch/c++/monitor.h

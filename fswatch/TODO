@@ -1,5 +1,0 @@
-bin/fswatch-run-bash is only installed if bash is found,
-bin/fswatch-run-zsh only if zsh is found. Handle this in the PLIST;
-or disable installation unconditionally?
-
-fsevents_monitor.h is not installed for me on NetBSD-7.99.15/amd64.
