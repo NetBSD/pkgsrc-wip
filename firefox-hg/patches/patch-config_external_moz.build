@@ -1,6 +1,6 @@
-$NetBSD: patch-config_external_moz.build,v 1.4 2014/12/19 00:01:37 thomasklausner Exp $
+$NetBSD: patch-config_external_moz.build,v 1.5 2015/06/04 13:11:03 thomasklausner Exp $
 
---- config/external/moz.build.orig	2014-12-18 09:28:55.000000000 +0000
+--- config/external/moz.build.orig	2015-06-04 12:35:49.000000000 +0000
 +++ config/external/moz.build
 @@ -19,10 +19,16 @@ if CONFIG['MOZ_UPDATER']:
  # There's no "native brotli" yet, but probably in the future...
@@ -21,9 +21,9 @@ $NetBSD: patch-config_external_moz.build,v 1.4 2014/12/19 00:01:37 thomasklausne
      external_dirs += ['media/libtremor']
  
  if CONFIG['MOZ_WEBM']:
-@@ -37,15 +43,17 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
- if not CONFIG['MOZ_NATIVE_PNG']:
-     external_dirs += ['media/libpng']
+@@ -46,15 +52,17 @@ if CONFIG['MOZ_WEBSPEECH_POCKETSPHINX']:
+         'media/pocketsphinx',
+     ]
  
 +if not CONFIG['MOZ_NATIVE_SPEEX']:
 +    external_dirs += ['media/libspeex_resampler']
