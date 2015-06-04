@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2015/01/20 14:42:14 yrmt Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/04 19:11:33 yrmt Exp $
 
-GHCOMMIT=	10195c7f9452e37605fd63061b1421c6dcbc425e
-DISTNAME=	${GHCOMMIT}
-PKGNAME=	2bwm-2014-8
+DISTNAME=	2bwm-20152605
 CATEGORIES=	wm
-MASTER_SITES=	https://github.com/venam/2bwm/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=venam/}
+GITHUB_PROJECT=	2bwm
+GITHUB_TAG=	dfb0cd1b77ce15e52e3fb9dd4eea653b0959e799
 
-MAINTAINER=	youri.mout@gmail.com
+MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://github.com/venam/2bwm
 COMMENT=	Fast floating WM written over the XCB library and derived from mcwm
 LICENSE=	isc
-
-WRKSRC=		${WRKDIR}/2bwm-${GHCOMMIT}
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
