@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6183 2015/06/04 13:42:51 krytarowski Exp $
+# $Id: Makefile,v 1.6184 2015/06/04 16:19:42 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3396,6 +3396,7 @@ SUBDIR+=	sdd
 SUBDIR+=	sdict-tools
 SUBDIR+=	sdif-git
 SUBDIR+=	seagull
+SUBDIR+=	seamonkey-enigmail
 SUBDIR+=	sector-decomposition
 SUBDIR+=	seeks
 SUBDIR+=	semanticscuttle
