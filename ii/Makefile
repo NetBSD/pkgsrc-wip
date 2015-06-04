@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2015/01/20 14:48:40 yrmt Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/04 19:43:27 yrmt Exp $
 
 DISTNAME=	ii-1.7
 CATEGORIES=	chat
 MASTER_SITES=	http://dl.suckless.org/tools/
 
-MAINTAINER=	youri.mout@gmail.com
+MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://dl.suckless.org/tools/
 COMMENT=	Minimalist FIFO and filesystem-based IRC client
 LICENSE=	mit
 
-# Adjust config.mk
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing config.mk
