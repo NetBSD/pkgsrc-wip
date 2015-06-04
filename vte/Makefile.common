@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1 2015/06/04 23:17:14 krytarowski Exp $
+#
+# used by x11/py-vte/Makefile
+
+DISTNAME=	vte-0.28.1
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.28/}
+EXTRACT_SUFX=	.tar.bz2
+
+HOMEPAGE=	http://www.gnome.org/
+LICENSE=	gnu-lgpl-v2
+
+DISTINFO_FILE=		${.CURDIR}/../../x11/vte/distinfo
+PATCHDIR=		${.CURDIR}/../../x11/vte/patches
+
+PKGCONFIG_OVERRIDE+=	vte.pc.in
