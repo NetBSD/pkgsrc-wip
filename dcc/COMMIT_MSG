@@ -10,9 +10,7 @@ Simplify package, update to 1.3.158.
    now works well enough.
 
 
-Changes to the Distributed Checksum Clearinghouse source.
-
-    2015/04/03 01:32:41 Rhyolite Software DCC 1.3.158-1.348 $Revision: 1.1 $
+CHANGES:
 
 1.3.158
     Do not flood any reports to peers with "leaf=0"
