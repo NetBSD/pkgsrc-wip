@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6187 2015/06/04 20:18:14 yrmt Exp $
+# $Id: Makefile,v 1.6188 2015/06/04 20:28:39 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -404,7 +404,6 @@ SUBDIR+=	cvsanaly
 SUBDIR+=	cvsnt
 SUBDIR+=	cvsproxy
 SUBDIR+=	cvstrac
-SUBDIR+=	cw
 SUBDIR+=	cwebx
 SUBDIR+=	cxfreeze
 SUBDIR+=	cycle
