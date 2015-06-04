@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/04 15:40:29 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/04 21:41:25 krytarowski Exp $
 
 .include "Makefile.common"
 
@@ -11,3 +11,5 @@ DEPENDS+=		thunderbird>=31:../../mail/thunderbird
 
 # Path used during the install stage
 XPIDIR=		${PREFIX}/lib/thunderbird/extensions
+
+.include "../../mk/bsd.pkg.mk"

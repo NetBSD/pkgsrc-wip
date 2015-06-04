@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/06/04 16:16:17 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/04 21:41:25 krytarowski Exp $
 
 .include "../../wip/thunderbird-enigmail/Makefile.common"
 
@@ -11,3 +11,5 @@ DEPENDS+=		seamonkey>=2.29:../../www/seamonkey
 
 # Path used during the install stage
 XPIDIR=		${PREFIX}/lib/seamonkey/extensions
+
+.include "../../mk/bsd.pkg.mk"
