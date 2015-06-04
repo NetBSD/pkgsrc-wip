@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/04/14 20:54:02 pebog Exp $
+# $NetBSD: Makefile,v 1.33 2015/06/04 18:38:48 pebog Exp $
 
 DISTNAME=		dcc-1.3.158
 #PKGREVISION=		2
@@ -73,7 +73,6 @@ BUILD_DEFS+=		VARBASE
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
-INSTALLATION_DIRS+=	share/examples/dcc
 INSTALLATION_DIRS+=	${PKGMANDIR}/man8
 
 PKG_GROUPS=		${DCC_GROUP}
