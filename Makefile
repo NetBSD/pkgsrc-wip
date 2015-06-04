@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6185 2015/06/04 19:40:23 yrmt Exp $
+# $Id: Makefile,v 1.6186 2015/06/04 20:14:46 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -151,7 +151,6 @@ SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
 SUBDIR+=	ascii2binary
-SUBDIR+=	asignify
 SUBDIR+=	asio
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql

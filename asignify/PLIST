@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/20 13:25:30 yrmt Exp $
-bin/asignify
-include/asignify.h
-lib/libasignify.la
-man/man1/asignify.1
