@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/05 13:13:26 thomasklausner Exp $
-bin/2bwm
-bin/hidden
-man/man1/2bwm.1
-man/man1/hidden.1
