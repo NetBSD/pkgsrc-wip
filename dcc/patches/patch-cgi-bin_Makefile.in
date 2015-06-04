@@ -1,0 +1,31 @@
+$NetBSD: patch-cgi-bin_Makefile.in,v 1.3 2015/06/04 14:28:52 lexort Exp $
+
+At least sometimes, the rule to create $(CGI_BIN) is not invoked.  To
+avoid this, hoist the directory creation step into the main install
+rule, which is simpler and works fine.   This may or may not be working
+around a BSD make bug.
+
+This change has not yet been filed upstream.
+
+--- cgi-bin/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
++++ cgi-bin/Makefile.in
+@@ -57,7 +57,8 @@ DCC_BINDIR=@installroot@@libexecdir@
+ all:
+ 	@:
+ 
+-install:$(CGI_BIN)
++install:
++	$(INSTALL) -d $(SET_BINOWN) -m 755 $(CGI_BIN)
+ 	for NM in $(CSCRIPTS); do $(INSTALL) $(SET_BINOWN)\
+ 		-m $(BINMODE) -c $$NM $(CGI_BIN)/$$NM; done
+ 	for NM in $(OFILES); do $(INSTALL) $(SET_BINOWN)\
+@@ -80,9 +81,6 @@ install:$(CGI_BIN)
+ 	    $(INSTALL) $(SET_BINOWN) -m 644 -c $$NM $(CGI_BIN)/$$NM-dist;\
+ 	done
+ 
+-$(CGI_BIN):
+-	$(INSTALL) -d $(SET_BINOWN) -m 755 $(CGI_BIN)
+-
+ deinstall:
+ 	-for NM in $(OFILES) $(CSCRIPTS); do rm -f $(CGI_BIN)/$$NM; done
+ 	for NM in $(LOCFILES); do\
