@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/06 02:38:34 khorben Exp $
-share/enigmail-1.0-${LOWER_OPSYS}-${MACHINE_ARCH}.xpi
