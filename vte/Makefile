@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2015/06/05 01:47:29 krytarowski Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/05 09:34:54 krytarowski Exp $
 #
 
 .include "Makefile.common"
+
+# https://git.gnome.org/browse/vte/
 
 CATEGORIES=	x11
 
