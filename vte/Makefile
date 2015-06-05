@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/06/04 23:17:14 krytarowski Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/05 01:47:29 krytarowski Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	16
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,12 +13,18 @@ LICENSE=	gnu-lgpl-v2
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf automake
 
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-ft-exec-prefix=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
+pre-configure:
+	cd ${WRKSRC} && sh -x ./autogen.sh NOCONFIGURE=1
+
+.include "../../lang/vala/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
