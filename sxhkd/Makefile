@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2015/01/20 14:56:00 yrmt Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/05 17:40:24 yrmt Exp $
 
-GHCOMMIT=		e94452a2a0f40909e31d7b0b4ee83e05a4bd5e68
-DISTNAME=		${GHCOMMIT}
-PKGNAME=		sxhkd-0.5.4
+DISTNAME=		sxhkd-0.5.5
 CATEGORIES=		x11
-MASTER_SITES=		http://github.com/baskerville/sxhkd/archive/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=baskerville/}
+GITHUB_TAG=		${PKGVERSION}
 
-MAINTAINER=		youri.mout@gmail.com
+MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://github.com/baskerville/sxhkd
 COMMENT=		Simple X hotkey daemon
 LICENSE=		2-clause-bsd
 
-WRKSRC=			${WRKDIR}/sxhkd-${GHCOMMIT}
 USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		makefile
