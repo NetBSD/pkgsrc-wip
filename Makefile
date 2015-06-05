@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6188 2015/06/04 20:28:39 yrmt Exp $
+# $Id: Makefile,v 1.6189 2015/06/05 22:50:09 yrmt Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -246,7 +246,6 @@ SUBDIR+=	bsdbuild
 SUBDIR+=	bsfilter
 SUBDIR+=	bsh
 SUBDIR+=	bsnmp
-SUBDIR+=	bspwm
 SUBDIR+=	bss
 SUBDIR+=	bsvc
 SUBDIR+=	btscanner
@@ -3550,7 +3549,6 @@ SUBDIR+=	swftools
 SUBDIR+=	swift-git
 SUBDIR+=	swisseph
 SUBDIR+=	sxemacs
-SUBDIR+=	sxhkd
 SUBDIR+=	sxid
 SUBDIR+=	sxiv
 SUBDIR+=	sylfilter
