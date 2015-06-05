@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/05 09:34:54 krytarowski Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/05 22:19:50 krytarowski Exp $
 #
 
 .include "Makefile.common"
@@ -15,15 +15,17 @@ LICENSE=	gnu-lgpl-v2
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf automake
+USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf automake gettext-m4
+USE_LANGUAGES+=		c c++
 
-CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	--with-ft-exec-prefix=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
 pre-configure:
 	cd ${WRKSRC} && sh -x ./autogen.sh NOCONFIGURE=1
 
+.include "../../devel/gperf/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
