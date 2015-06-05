@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.inc.in,v 1.3 2015/03/28 21:46:39 pebog Exp $
+$NetBSD: patch-Makefile.inc.in,v 1.4 2015/06/05 13:50:46 lexort Exp $
 
 NO_SYS_INSTALL shouldn't prevent man pages from being installed.
 

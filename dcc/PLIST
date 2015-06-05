@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/03/23 20:58:02 pebog Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/06/05 13:50:46 lexort Exp $
 bin/cdcc
 bin/dccif-test
 bin/dccproc

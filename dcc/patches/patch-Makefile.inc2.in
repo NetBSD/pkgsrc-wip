@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.inc2.in,v 1.1 2015/03/23 20:58:03 pebog Exp $
+$NetBSD: patch-Makefile.inc2.in,v 1.2 2015/06/05 13:50:46 lexort Exp $
 
 Prepending `depend' and `all' during the install stage will cause at
 least two ambiguous errors.  Remove the whole dependency because it
