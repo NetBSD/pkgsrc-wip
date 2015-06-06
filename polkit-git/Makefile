@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/06/06 23:10:23 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/06 23:28:10 krytarowski Exp $
 #
+
+GIT_REPOSITORIES=	polkit
+GIT_REPO.polkit=	git://anongit.freedesktop.org/polkit
 
 DISTNAME=	polkit-0.112
 CATEGORIES=	security
@@ -10,10 +13,13 @@ HOMEPAGE=	http://www.freedesktop.org/wiki/Software/polkit
 COMMENT=	Authorization Manager
 LICENSE=	gnu-lgpl-v2
 
+WRKSRC=		${WRKDIR}/polkit
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt perl
+USE_TOOLS+=		autoreconf autoconf automake
 
 PKGCONFIG_OVERRIDE+=	data/polkit-gobject-1.pc.in
 PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
@@ -54,6 +60,14 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	docs/man/pkexec.xml
 SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.policy.in
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh NOCONFIGURE=1
+
+.include "../../wip/mk/git-package.mk"
+
+.include "../../textproc/gtk-doc/buildlink3.mk"
 
 .include "../../wip/spidermonkey185/buildlink3.mk"
 #.include "../../lang/spidermonkey/buildlink3.mk"
