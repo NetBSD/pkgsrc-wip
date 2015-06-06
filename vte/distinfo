@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2015/06/05 09:34:54 krytarowski Exp $
+$NetBSD: distinfo,v 1.10 2015/06/06 15:46:31 krytarowski Exp $
 
-SHA1 (vte-0.40-a235384892c617c961cd1c9131227f8b1363fa22.tar.gz) = 3b6a3c10c662fb8996abdb6446b776bd06a7dd40
-RMD160 (vte-0.40-a235384892c617c961cd1c9131227f8b1363fa22.tar.gz) = eab8a16f86585003292731cb6734ba84ef46bcba
-Size (vte-0.40-a235384892c617c961cd1c9131227f8b1363fa22.tar.gz) = 611940 bytes
+SHA1 (vte-0.40.2.tar.gz) = fa4f548032e3017e7663fa43d5f5c6ed5536913f
+RMD160 (vte-0.40.2.tar.gz) = 8a79a7f540e8d044625ae038a62824393564f948
+Size (vte-0.40.2.tar.gz) = 633056 bytes

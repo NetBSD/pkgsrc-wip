@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/05 22:19:50 krytarowski Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/06 15:46:31 krytarowski Exp $
 #
 
 .include "Makefile.common"
@@ -19,6 +19,10 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf automake gette
 USE_LANGUAGES+=		c c++
 
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
+# XXX: option
+CONFIGURE_ARGS+=	--enable-introspection
+# XXX: option
+CONFIGURE_ARGS+=	--enable-python
 
 pre-configure:
 	cd ${WRKSRC} && sh -x ./autogen.sh NOCONFIGURE=1
@@ -37,7 +41,6 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
