@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/06 18:22:26 leot1990 Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/06 18:28:43 leot1990 Exp $
 #
 
 DISTNAME=	zenity-3.16.2
@@ -9,14 +9,15 @@ GITHUB_TAG=	${PKGNAME_NOREV:C/[.-]/_/g:tu}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
+LICENSE=	gnu-lgpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf automake gm4 aclocal
-USE_TOOLS+=		xgettext
+USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf
+USE_TOOLS+=		automake gm4 aclocal xgettext
 
-BUILD_DEPENDS+=		gnome-common>=0:../../devel/gnome-common
-BUILD_DEPENDS+=		yelp-tools>=0:../../wip/yelp-tools
+BUILD_DEPENDS+=		gnome-common-[0-9]*:../../devel/gnome-common
+BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../wip/yelp-tools
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh
