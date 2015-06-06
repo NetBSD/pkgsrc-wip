@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/06 15:46:31 krytarowski Exp $
+# $NetBSD: Makefile,v 1.13 2015/06/06 18:39:04 krytarowski Exp $
 #
 
 .include "Makefile.common"
@@ -25,7 +25,8 @@ CONFIGURE_ARGS+=	--enable-introspection
 CONFIGURE_ARGS+=	--enable-python
 
 pre-configure:
-	cd ${WRKSRC} && sh -x ./autogen.sh NOCONFIGURE=1
+	${RUN} cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh NOCONFIGURE=1
 
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
