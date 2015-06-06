@@ -1,9 +1,0 @@
-This package installs the AMD/ATI Linux binary driver in a manner
-suitable for use on NetBSD/i386 with XFree86 4.3 and above.
-This driver enables dual-head support (with or without Xinerama).
-This package does not enable accelerated GL support, nor DRI support.
-
-This package installs what is deemed to be a stable version of the
-driver, which may not correspond to the latest version released by
-ATI.  The latest ATI driver, which may be not as tested and thus
-less stable, may be available as ati-xfree86-bin-unstable.

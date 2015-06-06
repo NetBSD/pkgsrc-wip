@@ -1,7 +1,0 @@
-This package installs the latest AMD/ATI Linux binary driver(s) in
-a manner suitable for use on NetBSD/i386 with XFree86 4.3 and above.
-This driver provides dual-head support (with or without Xinerama).
-This package does not enable accelerated GL support, nor DRI.
-
-This driver is the latest driver as released by AMD/ATI, but is not
-as well tested and hence may be less stable.

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/12 21:35:56 thomasklausner Exp $
-sbin/initati
-share/${PKGBASE}/aticonfig
-share/${PKGBASE}/modules/fglrx_drv.o
-share/${PKGBASE}/modules/libfglrxdrm.a
-share/${PKGBASE}/XF86Config.initati
-share/examples/${PKGBASE}/XF86Config.example
-etc/ati/control
-etc/ati/signature

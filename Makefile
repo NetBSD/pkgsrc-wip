@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6189 2015/06/05 22:50:09 yrmt Exp $
+# $Id: Makefile,v 1.6190 2015/06/06 19:47:33 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -156,8 +156,6 @@ SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
 SUBDIR+=	aten
 SUBDIR+=	atftp
-SUBDIR+=	ati-xfree86-bin
-SUBDIR+=	ati-xfree86-bin-unstable
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
 SUBDIR+=	atool
