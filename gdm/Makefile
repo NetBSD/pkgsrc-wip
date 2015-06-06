@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2015/06/06 00:53:43 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/06 19:56:37 krytarowski Exp $
 #
 
-DISTNAME=	gdm-2.20.11
-PKGREVISION=	21
+DISTNAME=	gdm-3.17.2
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
-COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
+COMMENT=	Gnome Display Manager
 
-DEPENDS+=	zenity>=2.16.0:../../x11/zenity
+DEPENDS+=	zenity>=2.16.0:../../wip/zenity
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		automake autoconf autoreconf
 BUILD_DEFS+=		VARBASE
+
+USE_LANGUAGES=		c c++
 
 .include "options.mk"
 
@@ -26,6 +27,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-dmconfdir=${PKG_SYSCONFDIR:Q}/dm
 CONFIGURE_ARGS+=	--with-sysconfsubdir=
 CONFIGURE_ARGS+=	--with-prefetch=yes
+CONFIGURE_ARGS+=	--with-plymouth=no
+CONFIGURE_ARGS+=	--disable-systemd-journal
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
@@ -120,12 +123,19 @@ PLIST.dmx=		yes
 .endif
 PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
 
-PLIST_VARS+=		gdmopen
+ PLIST_VARS+=		gdmopen
 .if exists(/usr/include/linux/vt.h) || ${OPSYS} == "SunOS"
 PLIST.gdmopen=		yes
 .endif
 PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 
+pre-configure:
+	${RUN} cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh NOCONFIGURE=1
+
+.include "../../audio/libcanberra/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../wip/accountsservice/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
