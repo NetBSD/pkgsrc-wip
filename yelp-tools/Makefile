@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/04/29 16:02:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/06 18:49:33 krytarowski Exp $
 
-DISTNAME=	yelp-tools-3.12.1
+DISTNAME=	yelp-tools-3.16.1
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-tools/3.12/}
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.gnome.org/
@@ -11,8 +10,12 @@ COMMENT=	Set of command-line tools to build and check your documentation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config autoreconf autoconf automake gmake
 USE_LANGUAGES=	# none
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh NOCONFIGURE=1
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
