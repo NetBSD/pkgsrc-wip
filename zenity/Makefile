@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/06 16:23:52 krytarowski Exp $
+# $NetBSD: Makefile,v 1.10 2015/06/06 18:17:23 leot1990 Exp $
 #
 
 DISTNAME=	zenity-3.16.2
@@ -14,7 +14,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf automake gm4 aclocal
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
+BUILD_DEPENDS+=		gnome-common>=0:../../devel/gnome-common
+BUILD_DEPENDS+=		yelp-tools>=0:../../wip/yelp-tools
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh
@@ -22,6 +23,7 @@ pre-configure:
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 #.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
