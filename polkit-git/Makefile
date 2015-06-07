@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/06 23:28:10 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/07 14:46:47 krytarowski Exp $
 #
 
 GIT_REPOSITORIES=	polkit
@@ -26,6 +26,7 @@ PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
+CONFIGURE_ARGS+=	--disable-test
 
 POLKITD_USER?=		polkitd
 POLKITD_GROUP?=		polkitd
