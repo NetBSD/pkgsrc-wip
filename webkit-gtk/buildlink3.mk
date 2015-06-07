@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2015/05/22 00:38:16 f8l Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2015/06/07 14:24:49 yrmt Exp $
 
 BUILDLINK_TREE+=	webkit-gtk
 
@@ -24,7 +24,7 @@ pkgbase := webkit-gtk
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

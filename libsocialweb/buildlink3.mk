@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/06/18 07:30:54 noud4 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/06/07 14:24:49 yrmt Exp $
 
 BUILDLINK_TREE+=	libsocialweb
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libsocialweb?=	../../wip/libsocialweb
 
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/librest07/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .endif	# LIBSOCIALWEB_BUILDLINK3_MK
 

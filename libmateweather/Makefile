@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/09 20:38:31 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/07 14:24:48 yrmt Exp $
 
 DISTNAME=	libmateweather-1.8.0
 CATEGORIES=	devel
@@ -21,6 +21,6 @@ PKGCONFIG_OVERRIDE+=	libmateweather/mateweather.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

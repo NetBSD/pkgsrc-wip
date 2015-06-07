@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/05/26 11:00:39 f8l Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/06/07 14:24:49 yrmt Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.16.
 # XXX After this file has been verified as correct, the comment lines
@@ -36,7 +36,7 @@ BUILDLINK_PKGSRCDIR.webkit-gtk3?=	../../wip/webkit-gtk3
 #.include "../../graphics/png/buildlink3.mk"
 #.include "../../multimedia/gstreamer1/buildlink3.mk"
 #.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 #.include "../../security/libsecret/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
 #.include "../../textproc/libxslt/buildlink3.mk"

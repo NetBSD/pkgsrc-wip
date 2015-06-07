@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 22:07:35 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/07 14:24:48 yrmt Exp $
 #
 
 DISTNAME=	evolution-rss-0.2.1
@@ -39,7 +39,7 @@ post-extract:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/evolution/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 #.include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgtkhtml+=		libgtkhtml>=2.6.0
 .include "../../www/gtkhtml314/buildlink3.mk"

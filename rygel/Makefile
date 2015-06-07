@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/25 13:33:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/07 14:24:49 yrmt Exp $
 #
 
 DISTNAME=	rygel-0.16.3
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--disable-tracker-plugin
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/04/09 03:23:14 krytarowski Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2015/06/07 14:24:48 yrmt Exp $
 #
 
 BUILDLINK_TREE+=	libmateweather
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.libmateweather?=	../../wip/libmateweather
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .endif	# LIBMATEWEATHER_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/12/25 15:30:50 nros Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/07 14:24:48 yrmt Exp $
 
 DISTNAME=	libchamplain-0.12.9
 PKGNAME=	libchamplain012-0.12.9
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE+=	champlain.pc.in
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../wip/libmemphis02/buildlink3.mk"

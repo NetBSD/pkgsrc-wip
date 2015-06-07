@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/11/23 22:33:39 othyro Exp $
+# $NetBSD: options.mk,v 1.6 2015/06/07 14:24:48 yrmt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libgda4				# XXX libgda4, to have mk.conf options on a per libgda basis.
 PKG_SUPPORTED_OPTIONS=	bdb jdbc ldap mdb mysql postgres web
@@ -147,5 +147,5 @@ DEPENDS+=	p5-XML-Parser>=:../../textproc/p5-XML-Parser
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../x11/gtksourceview2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/11/25 12:51:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/07 14:24:48 yrmt Exp $
 
 DISTNAME=	libgrss-0.5.0
 CATEGORIES=	www
@@ -18,5 +18,5 @@ PKGCONFIG_OVERRIDE+=	libgrss.pc.in
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

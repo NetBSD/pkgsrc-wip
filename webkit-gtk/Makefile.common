@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2015/04/19 10:05:24 leot1990 Exp $
+# $NetBSD: Makefile.common,v 1.18 2015/06/07 14:24:49 yrmt Exp $
 # used by wip/webkit-gtk/Makefile
 
 DISTNAME=	webkitgtk-2.8.1
@@ -93,8 +93,8 @@ BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.0.3
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.42.2nb3
-.include "../../net/libsoup24/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"

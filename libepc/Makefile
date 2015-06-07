@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/04/22 04:30:10 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/07 14:24:48 yrmt Exp $
 
 DISTNAME=	libepc-0.4.4
 CATEGORIES=	devel
@@ -26,6 +26,6 @@ BUILDLINK_DEPMETHOD.gtk3=	build
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

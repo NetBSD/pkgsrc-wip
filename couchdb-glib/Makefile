@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/04/18 01:25:26 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2015/06/07 14:24:48 yrmt Exp $
 #
 
 DISTNAME=	couchdb-glib-0.7.4
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gnome-keyring=	build
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

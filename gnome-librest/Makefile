@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:36 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/07 14:24:48 yrmt Exp $
 #
 
 DISTNAME=	rest-0.7.10
@@ -22,6 +22,6 @@ PKGCONFIG_OVERRIDE+=	rest.pc.in
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.18.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

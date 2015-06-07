@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/19 10:27:01 leot1990 Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/07 14:24:49 yrmt Exp $
 
 DISTNAME=	vimprobable2_1.4.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -19,7 +19,7 @@ MAKE_ENV+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 
 .include "options.mk"
 
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

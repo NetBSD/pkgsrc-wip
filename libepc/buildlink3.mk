@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2013/04/22 04:30:10 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2015/06/07 14:24:48 yrmt Exp $
 
 BUILDLINK_TREE+=	libepc
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.libepc?=	../../wip/libepc
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .endif	# LIBEPC_BUILDLINK3_MK
 
