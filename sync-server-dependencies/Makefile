@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/27 15:47:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/07 14:27:04 thomasklausner Exp $
 
 DISTNAME=	sync-server-dependencies-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
 DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 
 META_PACKAGE=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # only supports 2.7
 
 .include "options.mk"
 
