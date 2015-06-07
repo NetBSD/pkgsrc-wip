@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2015/05/27 17:59:19 f8l Exp $
+# $NetBSD: Makefile.common,v 1.3 2015/06/07 00:49:49 f8l Exp $
 # used by wip/dwb-gtk3/Makefile
 # used by wip/dwb-gtk2/Makefile
 
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config
 NO_CONFIGURE=	yes
 MAKE_ENV+=	REAL_VERSION=${VERSION}
-MAKE_ENV+=	MANDIR=$(PREFIX)/man
+MAKE_ENV+=	MANDIR=$(PREFIX)/${PKGMANDIR}
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
