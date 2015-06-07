@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6190 2015/06/06 19:47:33 thomasklausner Exp $
+# $Id: Makefile,v 1.6191 2015/06/07 15:03:37 ishit Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1430,6 +1430,7 @@ SUBDIR+=	libcstring
 SUBDIR+=	libcsv
 SUBDIR+=	libcthreads
 SUBDIR+=	libcuba
+SUBDIR+=	libcue
 SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
 SUBDIR+=	libdbusmenu
