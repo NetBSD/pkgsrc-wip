@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/25 16:57:41 jonperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/06/08 17:38:55 fhajny Exp $
 ${PLIST.ad}bin/ad
 bin/afpldaptest
 bin/afppasswd
@@ -9,7 +9,6 @@ bin/cnid2_create
 bin/dbd
 bin/macusers
 bin/netatalk-config
-bin/uniconv
 include/atalk/acl.h
 include/atalk/adouble.h
 include/atalk/afp.h

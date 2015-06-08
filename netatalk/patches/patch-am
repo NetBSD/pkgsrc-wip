@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1 2013/06/07 00:28:23 makoto Exp $
+$NetBSD: patch-am,v 1.2 2015/06/08 17:38:56 fhajny Exp $
 
---- bin/afppasswd/afppasswd.c.orig	2013-01-04 23:38:53.000000000 +0900
-+++ bin/afppasswd/afppasswd.c	2013-06-07 07:24:34.000000000 +0900
+--- bin/afppasswd/afppasswd.c.orig	2013-10-28 13:43:13.000000000 +0000
++++ bin/afppasswd/afppasswd.c
 @@ -35,7 +35,7 @@
  #include <pwd.h>
  #include <arpa/inet.h>

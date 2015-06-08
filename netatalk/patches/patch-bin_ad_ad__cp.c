@@ -1,8 +1,8 @@
-$NetBSD: patch-bin_ad_ad__cp.c,v 1.1 2013/06/07 00:28:23 makoto Exp $
+$NetBSD: patch-bin_ad_ad__cp.c,v 1.2 2015/06/08 17:38:56 fhajny Exp $
 
---- bin/ad/ad_cp.c.orig	2013-03-28 19:06:20.000000000 +0000
+--- bin/ad/ad_cp.c.orig	2013-10-28 15:46:51.000000000 +0000
 +++ bin/ad/ad_cp.c
-@@ -841,7 +841,7 @@ static int setfile(const struct stat *fs
+@@ -821,7 +821,7 @@ static int setfile(const struct stat *fs
      islink = !fdval && S_ISLNK(fs->st_mode);
      mode = fs->st_mode & (S_ISUID | S_ISGID | S_ISVTX | S_IRWXU | S_IRWXG | S_IRWXO);
  

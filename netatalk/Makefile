@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/04/25 16:57:41 jonperkin Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/08 17:38:55 fhajny Exp $
 
-DISTNAME=	netatalk-3.1.0
+DISTNAME=	netatalk-3.1.7
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,8 +18,6 @@ USE_LIBTOOL=		yes
 USE_OLD_DES_API=	yes
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
-
-
 
 BUILDLINK_TRANSFORM+=	l:db48:${BDB_TYPE}
 
@@ -49,6 +47,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db
 CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-libevent-header=${BUILDLINK_PREFIX.libevent}/include
+CONFIGURE_ARGS+=	--with-libevent-lib=${BUILDLINK_PREFIX.libevent}/lib
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 CFLAGS.SunOS+= -I/usr/include/kerberosv5/
@@ -91,6 +91,7 @@ post-install:
 .endif
 
 .include "../../databases/mysql55-client/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

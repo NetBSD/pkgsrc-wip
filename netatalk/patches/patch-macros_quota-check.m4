@@ -1,4 +1,4 @@
-$NetBSD: patch-macros_quota-check.m4,v 1.1 2013/06/07 00:28:23 makoto Exp $
+$NetBSD: patch-macros_quota-check.m4,v 1.2 2015/06/08 17:38:56 fhajny Exp $
 
 - do not disable quota support if some of rpc/rpc.h, rpc/pmap_prot.h,
   rpcsvc/rquota.h are missing.
@@ -14,9 +14,9 @@ independent of the local quota support, and can be probed for
 independently. However, this needs to be coordinated with upstream,
 not done in pkgsrc.
 
---- macros/quota-check.m4.orig	2011-08-18 12:23:44.000000000 +0000
+--- macros/quota-check.m4.orig	2013-10-28 13:43:14.000000000 +0000
 +++ macros/quota-check.m4
-@@ -10,13 +10,9 @@ AC_DEFUN([AC_CHECK_QUOTA], [
+@@ -9,13 +9,9 @@ AC_DEFUN([AC_NETATALK_CHECK_QUOTA], [
  	QUOTA_LIBS=""
  	netatalk_cv_quotasupport="yes"
  	AC_CHECK_LIB(rpcsvc, main, [QUOTA_LIBS="-lrpcsvc"])

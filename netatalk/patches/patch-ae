@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2013/06/07 00:28:23 makoto Exp $
+$NetBSD: patch-ae,v 1.2 2015/06/08 17:38:56 fhajny Exp $
 
---- config.h.in.orig	2013-05-24 22:33:19.000000000 +0900
-+++ config.h.in	2013-06-07 07:18:53.000000000 +0900
-@@ -250,8 +250,8 @@
+--- config.h.in.orig	2014-08-29 10:32:48.000000000 +0000
++++ config.h.in
+@@ -259,8 +259,8 @@
  /* Define to 1 if you have the `getproplist' function. */
  #undef HAVE_GETPROPLIST
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.1 2013/06/07 00:28:23 makoto Exp $
  
  /* Define to 1 if you have the `getxattr' function. */
  #undef HAVE_GETXATTR
-@@ -433,6 +433,9 @@
+@@ -439,6 +439,9 @@
  /* Define to 1 if you have the `renameat' function. */
  #undef HAVE_RENAMEAT
  
