@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2013/11/05 23:42:39 asau Exp $
+# $NetBSD: Makefile,v 1.11 2015/06/08 18:07:36 leot1990 Exp $
 
-DISTNAME=	chicken-4.8.2 # development snapshot
+DISTNAME=	chicken-4.10.0rc1
 CATEGORIES=	lang
-MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/ \
-		http://code.call-cc.org/releases/current/ \
-		http://code.call-cc.org/dev-snapshots/2013/08/08/
+MASTER_SITES=	http://code.call-cc.org/dev-snapshots/2015/06/07/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
@@ -38,7 +36,7 @@ PLATFORM=	haiku
 .else
 #PLATFORM+=	${OPSYS} == "Interix"
 # possible choices left: mingw-msys mingw cygwin cross-linux-mingw
-PKG_FAIL_REASON=	"${OPSYS} is not supported"
+PKG_SKIP_REASON=	"${OPSYS} is not supported"
 .endif
 
 MAKE_FILE=	GNUmakefile
@@ -47,10 +45,10 @@ MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
 # Need to have these in MAKE_FLAGS, MAKE_ENV is not enough due to the
 # way the build system overrides them.
 MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
-MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR}
+MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR}
 MAKE_FLAGS+=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
 
-TEST_TARGET=	check	# works only after installation
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
