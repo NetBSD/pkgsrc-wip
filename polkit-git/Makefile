@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/07 15:47:45 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/06/08 23:39:00 krytarowski Exp $
 #
 
 GIT_REPOSITORIES=	polkit
@@ -27,6 +27,8 @@ PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
 CONFIGURE_ARGS+=	--disable-test
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD"
 CONFIGURE_ARGS+=	--with-os-type=freebsd
