@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/06/09 08:19:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/09 11:14:45 thomasklausner Exp $
 
 DISTNAME=		1.8.1
-PKGNAME=		hgsubversion-${DISTNAME}
+PKGNAME=		${PYPKGPREFIX}-hgsubversion-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		https://bitbucket.org/durin42/hgsubversion/get/
 
