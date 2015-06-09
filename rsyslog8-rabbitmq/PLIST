@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/13 10:51:05 fhajny Exp $
-lib/rsyslog/omrabbitmq.la
