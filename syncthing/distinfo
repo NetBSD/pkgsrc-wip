@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/04/25 16:59:22 tnn2 Exp $
+$NetBSD: distinfo,v 1.6 2015/06/09 08:39:05 tnn2 Exp $
 
-SHA1 (syncthing-0.11.0.tar.gz) = e5986c341ba253be69eb4921389d5198f0726890
-RMD160 (syncthing-0.11.0.tar.gz) = 46a7f54357052d935eeebb255b305997eabe43ff
-Size (syncthing-0.11.0.tar.gz) = 3076962 bytes
+SHA1 (syncthing-0.11.8.tar.gz) = e4eda6bb187342d504e94077f4388d0ef474255a
+RMD160 (syncthing-0.11.8.tar.gz) = a243965632382b42f726d3a35987c479845ef1ea
+Size (syncthing-0.11.8.tar.gz) = 3182487 bytes
 SHA1 (patch-internal-config-config.go) = cb068c4648b935509ed181f3734dd752b147b6a2
