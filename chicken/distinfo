@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2015/06/08 18:07:36 leot1990 Exp $
+$NetBSD: distinfo,v 1.9 2015/06/09 10:31:00 leot1990 Exp $
 
 SHA1 (chicken-4.10.0rc1.tar.gz) = 66f1d7ffed060162fb1792dd73978a177aefa5fa
 RMD160 (chicken-4.10.0rc1.tar.gz) = d925493b0c2d62e7cc0d83ec6af150d023a3cf47
 Size (chicken-4.10.0rc1.tar.gz) = 4033834 bytes
-SHA1 (patch-scripts_csc-trans) = e9385fb00a6e72146c56a6223557355ef4f7cc96
