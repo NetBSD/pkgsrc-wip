@@ -1,25 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:56 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2015/06/09 08:19:23 thomasklausner Exp $
 
-DISTNAME=		1.1.2
+DISTNAME=		1.8.1
 PKGNAME=		hgsubversion-${DISTNAME}
-EGG_NAME=		hgsubversion-${DISTNAME}
 CATEGORIES=		devel python
-MASTER_SITES=		http://bitbucket.org/durin42/hgsubversion/get/
+MASTER_SITES=		https://bitbucket.org/durin42/hgsubversion/get/
 
 MAINTAINER=		ura@jp.NetBSD.org
-HOMEPAGE=		http://bibucket.org/durin42/hgsubversion/
+HOMEPAGE=		http://bitbucket.org/durin42/hgsubversion/
 COMMENT=		Subversion plugin for Mercurial
 LICENSE=		gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=2.0:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.7.4:../../devel/py-subvertpy
+
 DIST_SUBDIR=    hgsubversion
-WRKSRC=		${WRKDIR}/hgsubversion
+WRKSRC=		${WRKDIR}/durin42-hgsubversion-dde1ade36a49
 
-DEPENDS+=	mercurial>=1.3.1:../../devel/mercurial
-DEPENDS+=	subversion-base>=1.5:../../devel/subversion-base
-
-pre-build:
-	${ECHO} "tag: ${DISTNAME}" >> ${WRKSRC}/.hg_archival.txt
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mercurial
+EGG_NAME=		hgsubversion-${DISTNAME}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/04 16:07:45 ura Exp $
+$NetBSD: distinfo,v 1.2 2015/06/09 08:19:23 thomasklausner Exp $
 
-SHA1 (hgsubversion/1.1.2.tar.gz) = 4844d169dc1c63b3b0aed0fdf05e9f4562c21899
-RMD160 (hgsubversion/1.1.2.tar.gz) = 24e9fe47e6d25b55a6d2c280ca012fdbea44de8b
-Size (hgsubversion/1.1.2.tar.gz) = 214045 bytes
+SHA1 (hgsubversion/1.8.1.tar.gz) = 9e4220ddbd77e1c95260a5ba31a4be6e4d74d44d
+RMD160 (hgsubversion/1.8.1.tar.gz) = 655049a23dfaf836b486af370350c9385d1622b9
+Size (hgsubversion/1.8.1.tar.gz) = 285463 bytes
