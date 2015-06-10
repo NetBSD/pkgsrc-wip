@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/10 21:51:12 jihbed Exp $
+
+SHA1 (cf-python-1.0.2.tar.gz) = 33a3b0f50551a66a8e22f2c617896e51522c05cb
+RMD160 (cf-python-1.0.2.tar.gz) = 6e93e391527075c62d59df47ed1cbb7e964a14e6
+Size (cf-python-1.0.2.tar.gz) = 2147676 bytes
