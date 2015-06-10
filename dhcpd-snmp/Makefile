@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/02/18 08:22:56 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/10 13:43:17 ahp-nils Exp $
 #
 
 DISTNAME=		dhcpd-snmp-0.2
 CATEGORIES=		net
 MASTER_SITES=	http://www.net-track.ch/php/d.php?f=/opensource/dhcpd-snmp/
 
-MAINTAINER=		ahp-nils@users.sourceforge.net
+MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		http://www.net-track.ch/opensource/dhcpd-snmp/
 COMMENT=		Extension for the Net-SNMP agent and the ISC DHCP server
 LICENSE=		gnu-gpl-v2

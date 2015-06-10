@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/23 16:39:01 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/10 13:43:17 ahp-nils Exp $
 #
 
 DISTNAME=		rrdclean-v${VERSION}
@@ -6,7 +6,7 @@ PKGNAME=		cacti-plugin-rrdclean-${VERSION}
 CATEGORIES=		net
 MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
-MAINTAINER=		ahp-nils@users.sourceforge.net
+MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		http://docs.cacti.net/plugin:rrdclean
 COMMENT=		Cacti RRD File Cleaner
 LICENSE=		gnu-gpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/20 08:25:09 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/10 13:43:16 ahp-nils Exp $
 #
 
 DISTNAME=		realtime-v${VERSION}
@@ -6,7 +6,7 @@ PKGNAME=		cacti-plugin-realtime-${VERSION}
 CATEGORIES=		net
 MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
-MAINTAINER=		ahp-nils@users.sourceforge.net
+MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		http://docs.cacti.net/
 COMMENT=		Provides a method to view Cacti graphs with a resolution of upto 5 sec
 LICENSE=		gnu-gpl-v2

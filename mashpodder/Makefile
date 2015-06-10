@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/27 11:20:48 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/10 13:43:17 ahp-nils Exp $
 
 CATEGORIES=	net
 
@@ -11,7 +11,7 @@ PKGNAME=	mashpodder-0.4.9
 PKGREVISION=	1
 MASTER_SITES=	https://github.com/chessgriffin/mashpodder/archive/
 
-MAINTAINER=	ahp-nils@users.sourceforge.net
+MAINTAINER=	nils@NetBSD.org
 HOMEPAGE=	https://github.com/chessgriffin/mashpodder/
 
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt

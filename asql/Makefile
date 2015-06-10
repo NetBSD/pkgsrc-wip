@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/11/14 18:21:13 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/10 13:43:17 ahp-nils Exp $
 
 DISTNAME=	asql-${VERSION}
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.steve.org.uk/Software/asql/
 
-MAINTAINER=	ahp-nils@users.sourceforge.net
+MAINTAINER=	nils@NetBSD.org
 HOMEPAGE=	http://www.steve.org.uk/Software/asql/
 COMMENT=	Query Apache logfiles via SQL
 LICENSE=	gnu-gpl-v2 OR artistic

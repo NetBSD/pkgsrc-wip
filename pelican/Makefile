@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/14 11:56:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2015/06/10 13:43:17 ahp-nils Exp $
 
 DISTNAME=		pelican-3.5.0
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		www textproc
 MASTER_SITES=		-https://github.com/getpelican/pelican/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		ahp-nils@users.sourceforge.net
+MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		http://blog.getpelican.com/
 COMMENT=		Static site generator that supports Markdown and reST syntax
 LICENSE=		gnu-agpl-v3

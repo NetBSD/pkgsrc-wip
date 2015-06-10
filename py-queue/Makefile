@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/04 17:38:21 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/10 13:43:17 ahp-nils Exp $
 
 DISTNAME=	0.4
 EGG_NAME=	pyqueue-${DISTNAME}
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-queue-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/outini/pyqueue/archive/
 
-MAINTAINER=	ahp-nils@users.sourceforge.net
+MAINTAINER=	nils@NetBSD.org
 HOMEPAGE=	https://github.com/outini/pyqueue/
 COMMENT=	Postfix queue control python tool
 LICENSE=	gnu-gpl-v2

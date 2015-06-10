@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/23 16:37:56 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/10 13:43:17 ahp-nils Exp $
 #
 
 DISTNAME=		aggregate-v${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
 MAINTAINER=		ahp-nils@users.sourceforge.net
-HOMEPAGE=		http://docs.cacti.net/plugin:aggregate
+HOMEPAGE=		nils@NetBSD.org
 COMMENT=		Aggregate plugin to cacti
 LICENSE=		gnu-gpl-v2
 
