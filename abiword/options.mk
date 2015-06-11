@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/12/23 20:56:06 nros Exp $
+# $NetBSD: options.mk,v 1.2 2015/06/11 16:26:40 nros Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.abiword
@@ -13,7 +13,11 @@ PKG_SUGGESTED_OPTIONS=		gtk3
 # more verbose terminal output
 #
 .if !empty(PKG_OPTIONS:Mdebug)
+CC+=			-ggdb
+CXX+=			-ggdb
 CONFIGURE_ARGS+=        --enable-debug
+INSTALL_UNSTRIPPED=	yes
+CFLAGS+=		-O0
 .endif
 
 #
@@ -21,6 +25,7 @@ CONFIGURE_ARGS+=        --enable-debug
 #
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--with-gtk2
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .endif
 
