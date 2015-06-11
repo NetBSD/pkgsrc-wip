@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/11 20:47:30 tnn2 Exp $
+bin/bin2fex
+bin/fel
+bin/fex2bin
+bin/fexc
+bin/nand-part
+bin/pio

@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2015/06/11 20:47:30 tnn2 Exp $
+
+Allow pkgsrc to override CFLAGS.
+
+--- Makefile.orig	2014-04-26 18:59:49.000000000 +0000
++++ Makefile
+@@ -1,5 +1,5 @@
+ CC = gcc
+-CFLAGS = -g -O0 -Wall -Wextra
++#CFLAGS += -g -O0 -Wall -Wextra
+ CFLAGS += -std=c99 -D_POSIX_C_SOURCE=200112L
+ CFLAGS += -Iinclude/
+ 

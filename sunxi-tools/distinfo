@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/06/11 20:47:30 tnn2 Exp $
+
+SHA1 (sunxi-tools-1.2.tar.gz) = a6ac7071ce8e4ce60fec10e884d86a34a98d6261
+RMD160 (sunxi-tools-1.2.tar.gz) = 3d748bef4a173cc990e213d8b86a1a923de9e320
+Size (sunxi-tools-1.2.tar.gz) = 35378 bytes
+SHA1 (patch-Makefile) = ff2ee438848056a648c3bcf79ea448efe073efe6
+SHA1 (patch-include_endian__compat.h) = cf6c176d8f2f0b1f432deefda14e9234dfd05f43
+SHA1 (patch-nand-part.c) = 3d0ea6f8cefd3ebef72f13e7359cf7098673440e
