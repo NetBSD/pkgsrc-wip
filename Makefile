@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6196 2015/06/13 12:05:32 fhajny Exp $
+# $Id: Makefile,v 1.6197 2015/06/13 12:18:48 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1810,7 +1810,6 @@ SUBDIR+=	myfitter
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs
 SUBDIR+=	mysql-proxy
-SUBDIR+=	mysql-sphinxse
 SUBDIR+=	mysqltcl
 SUBDIR+=	mythtv
 SUBDIR+=	n2n

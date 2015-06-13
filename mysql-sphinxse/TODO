@@ -1,5 +1,0 @@
-This is a prototype package that works fine on our SmartOS/SunOS
-systems. It is designed to build a dynamic plugin that's loaded
-into the MySQL server, which why MySQL 5.0 is not supported.
-
-It was not tested on NetBSD or any other non-SunOS platform yet.

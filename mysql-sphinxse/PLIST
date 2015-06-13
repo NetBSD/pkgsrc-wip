@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/10 12:51:59 fhajny Exp $
-${PLIST.mysql51}lib/mysql/plugin/ha_sphinx.la
-${PLIST.mysql55up}lib/mysql/plugin/ha_sphinx.so
-${PLIST.mysql51}lib/mysql/plugin/sphinx.la
