@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6194 2015/06/13 11:54:34 fhajny Exp $
+# $Id: Makefile,v 1.6195 2015/06/13 12:00:22 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2397,7 +2397,6 @@ SUBDIR+=	pmk
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
-SUBDIR+=	pocketsphinx
 SUBDIR+=	pointfree
 SUBDIR+=	pointless
 SUBDIR+=	pokerth
@@ -3476,9 +3475,6 @@ SUBDIR+=	spawnfcgi
 SUBDIR+=	spe
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
-SUBDIR+=	sphinx3
-SUBDIR+=	sphinxbase
-SUBDIR+=	sphinxtrain
 SUBDIR+=	spidermonkey185
 SUBDIR+=	spidermonkey24
 SUBDIR+=	splix
