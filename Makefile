@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6193 2015/06/11 20:49:00 tnn2 Exp $
+# $Id: Makefile,v 1.6194 2015/06/13 11:54:34 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1490,7 +1490,6 @@ SUBDIR+=	liblbxutil
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblogging
-SUBDIR+=	liblognorm1
 SUBDIR+=	liblxqt
 SUBDIR+=	liblxqt-mount
 SUBDIR+=	libmemphis02
