@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2015/03/27 22:56:15 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/13 11:48:57 fhajny Exp $
 #
 
-DISTNAME=	umurmur-0.2.10
+DISTNAME=	umurmur-0.2.16
 CATEGORIES=	comms
-MASTER_SITES=	http://umurmur.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=umurmur/}
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://umurmur.googlecode.com/
 COMMENT=	Mumble (murmur) server for embedded systems
-LICENSE=	3-clause-bsd
+LICENSE=	modified-bsd
 
+USE_CMAKE=	yes
 USE_TOOLS+=	gmake
-GNU_CONFIGURE=	yes
 
 LDFLAGS.SunOS+= -lresolv -lsocket -lnsl
 
@@ -20,25 +20,21 @@ INSTALLATION_DIRS=	sbin share/examples/umurmur
 EGDIR=		${PREFIX}/share/examples/umurmur
 CONF_FILES+=	${EGDIR}/umurmur.conf ${PKG_SYSCONFDIR}/umurmur.conf
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-extract
-SUBST_FILES.conf=	src/conf.*
-SUBST_SED.conf=	-e 's,/etc/umurmur.conf,${PKG_SYSCONFDIR}/umurmur.conf,g'
-
-SUBST_CLASSES+=		certdir
-SUBST_STAGE.certdir=	post-extract
-SUBST_FILES.certdir=	umurmur.conf.example
-SUBST_SED.certdir=	-e 's,/etc,${PKG_SYSCONFDIR},g'
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-build
+SUBST_FILES.path=	src/conf.c src/config.h.in umurmur.conf.example
+SUBST_SED.path=		-e 's,/etc/umurmur,${PKG_SYSCONFDIR}/umurmur,g'
+SUBST_VARS.path=	PKG_SYSCONFDIR
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/umurmur
 RCD_SCRIPTS=	umurmur
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/umurmurd ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/umurmurd ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/umurmur.conf.example \
 		${DESTDIR}${EGDIR}/umurmur.conf
 
 .include "../../devel/libconfig/buildlink3.mk"
-.include "../../wip/protobuf-c/buildlink3.mk"
-.include "../../security/polarssl/buildlink3.mk"
+.include "../../devel/protobuf-c/buildlink3.mk"
+.include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

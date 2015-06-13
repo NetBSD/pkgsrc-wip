@@ -1,0 +1,14 @@
+$NetBSD: patch-src_config.h.in,v 1.1 2015/06/13 11:48:57 fhajny Exp $
+
+Set default config path.
+
+--- src/config.h.in.orig	2015-04-07 10:01:12.000000000 +0000
++++ src/config.h.in
+@@ -8,6 +8,6 @@
+ 
+ #cmakedefine USE_SHAREDMEMORY_API
+ 
+-#define DEFAULT_CONFIG "${CMAKE_INSTALL_PREFIX}/etc/umurmur.conf"
++#define DEFAULT_CONFIG "@PKG_SYSCONFDIR@/umurmur.conf"
+ 
+ #endif // CONFIG_H
