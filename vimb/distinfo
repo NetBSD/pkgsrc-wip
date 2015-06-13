@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2015/01/19 14:17:01 leot1990 Exp $
+$NetBSD: distinfo,v 1.14 2015/06/13 19:31:34 leot1990 Exp $
 
-SHA1 (vimb-2.9.tar.gz) = 01f8d9d16d1f3eb4a0673678ca06d6710a052759
-RMD160 (vimb-2.9.tar.gz) = 6039125e9a8bb5cb0af7546dc0d978da6f7ea489
-Size (vimb-2.9.tar.gz) = 126272 bytes
+SHA1 (vimb-2.10.tar.gz) = f3216718e42a60997d0f0d8c68124614d068c670
+RMD160 (vimb-2.10.tar.gz) = e861ef5f623f361554c58023c08d02a945c08c2c
+Size (vimb-2.10.tar.gz) = 127502 bytes
+SHA1 (patch-Makefile) = d08b4ed88b86ff6de14f75e95effbd93fd06f718
