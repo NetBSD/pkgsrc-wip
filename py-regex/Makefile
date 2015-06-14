@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/06/01 12:49:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/14 22:52:11 jihbed Exp $
 
-DISTNAME=	regex-2014.01.10
-PKGNAME=	${PYPKGPREFIX}-regex-20140110
+DISTNAME=	regex-2015.06.14
+PKGNAME=	${PYPKGPREFIX}-regex-20150614
 CATEGORIES=	textproc
 MASTER_SITES=	https://pypi.python.org/packages/source/r/regex/
 
@@ -10,7 +10,11 @@ HOMEPAGE=	https://code.google.com/p/mrab-regex-hg
 COMMENT=	Alternative regular expression module, to replace re
 LICENSE=	python-software-foundation
 
+PYTHON_VERSIONS_ACCEPTED= 34 33 27
 PYDISTUTILSPKG=	yes
+
+do-test:
+	${RUN} cd ${WRKSRC}/Python2; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_regex.py
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
