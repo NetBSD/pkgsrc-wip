@@ -1,0 +1,21 @@
+Update from 20140101 to 20150415(22).
+     prev version: emacs24-24.3.50.20140101nb10
+  current version: emacs25-25.0.50.2015041522
+(upstream)
+  Upstream changes are too many to list here. Year and
+  3 month between them. But it includes (at least)
+   - the changes from emacs24 to emacs25
+   - (This may require adding emacs25 on
+     EMACS_VERSIONS_ACCEPTED in some packages)
+(pkgsrc)
+ - (Makefile.common) sequence now resembles (wip)/emacs-current/Makefile
+ - (Makefile)
+   Add missing send-pr.el setup (at /usr/share/gnats) in site-init.el
+ - Drop patch-ae:            "if [ $# == 0 ]; then"  ( == -> =)
+        patch-configure.ac:  ksh bad substitution problem
+	patch-src_image.c:   Fix build with giflib 5.1.
+ - (options.mk)
+   * configuration now resembles (wip)/emacs-current/options.mk
+   * Add options xaw3d and xml (also in PKG_SUGGESTED_OPTIONS)
+   * Correction typo on CONFIGURE_ARGS on --without-imagemagic(k)
+ 
