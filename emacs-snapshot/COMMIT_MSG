@@ -11,6 +11,8 @@ Update from 20140101 to 20150415(22).
  - (Makefile.common) sequence now resembles (wip)/emacs-current/Makefile
  - (Makefile)
    Add missing send-pr.el setup (at /usr/share/gnats) in site-init.el
+ - (files/site-init.el)
+   Copied from editors/emacs24
  - Drop patch-ae:            "if [ $# == 0 ]; then"  ( == -> =)
         patch-configure.ac:  ksh bad substitution problem
 	patch-src_image.c:   Fix build with giflib 5.1.
