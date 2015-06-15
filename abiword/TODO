@@ -11,4 +11,4 @@
   Makefile so they will need patching as well I guess. Fixed!
 
 - On NetBSD UCS-4 (UTF-32) is not converted correctly the first time 
-  rulers are painted. On repaint they are displayed correctly.
+  rulers are painted. On repaint they are displayed correctly. Fixed!
