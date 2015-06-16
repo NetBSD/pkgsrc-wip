@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6199 2015/06/16 09:33:36 ahp-nils Exp $
+# $Id: Makefile,v 1.6200 2015/06/16 09:35:50 nros Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -66,6 +66,7 @@ SUBDIR+=	VASSAL
 SUBDIR+=	WEPCrack
 SUBDIR+=	a2ps-sharatype
 SUBDIR+=	abiword
+SUBDIR+=	abiword-plugins
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
 SUBDIR+=	adamem
