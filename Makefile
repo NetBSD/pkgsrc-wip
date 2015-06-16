@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6200 2015/06/16 09:35:50 nros Exp $
+# $Id: Makefile,v 1.6201 2015/06/16 18:31:28 ishit Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2443,6 +2443,7 @@ SUBDIR+=	purple-translate
 SUBDIR+=	pwnat
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
+SUBDIR+=	pxz
 SUBDIR+=	py-Beaker
 SUBDIR+=	py-Brenda
 SUBDIR+=	py-CVSToys
