@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/16 09:32:26 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/16 19:16:46 ahp-nils Exp $
 bin/cookiecutter
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -43,3 +43,4 @@ ${PYSITELIB}/cookiecutter/utils.pyo
 ${PYSITELIB}/cookiecutter/vcs.py
 ${PYSITELIB}/cookiecutter/vcs.pyc
 ${PYSITELIB}/cookiecutter/vcs.pyo
+man/man1/cookiecutter.1
