@@ -70,6 +70,7 @@ Suggested package updates
 	o libgme-0.6.0
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
+	o libressl-2.2.0
 	o libxshmfence-1.2
 	o lives-2.4.0
 	o llvm-3.6
@@ -107,7 +108,7 @@ Suggested package updates
 	o residualvm-0.2.1
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o rust-0.12.0
+	o rust-1.0.0
 	o rygel-0.26.0
 	o samhain-3.1.4
 	o scantailor-0.9.11.1
