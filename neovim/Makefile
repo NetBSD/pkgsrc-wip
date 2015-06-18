@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/18 15:29:22 jonthn Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/18 20:53:01 jonthn Exp $
 
 PKGNAME=	neovim-0.0.0
 CATEGORIES=	editors
@@ -25,7 +25,7 @@ DEPENDS+=       ${LUA_PKGPREFIX}-lpeg:../../devel/lua-lpeg
 
 .include "options.mk"
 
-.include "../../wip/libuv/buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../wip/msgpack-git/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../lang/lua/application.mk"

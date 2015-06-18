@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/05/17 21:53:10 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.13 2015/06/18 20:53:01 jonthn Exp $
 bin/nvim
 man/man1/nvim.1
 man/man1/nvimtutor.1
@@ -222,6 +222,7 @@ share/nvim/runtime/doc/os_win32.txt
 share/nvim/runtime/doc/pattern.txt
 share/nvim/runtime/doc/pi_getscript.txt
 share/nvim/runtime/doc/pi_gzip.txt
+share/nvim/runtime/doc/pi_matchit.txt
 share/nvim/runtime/doc/pi_netrw.txt
 share/nvim/runtime/doc/pi_paren.txt
 share/nvim/runtime/doc/pi_spec.txt
@@ -680,8 +681,6 @@ share/nvim/runtime/macros/justify.vim
 share/nvim/runtime/macros/less.bat
 share/nvim/runtime/macros/less.sh
 share/nvim/runtime/macros/less.vim
-share/nvim/runtime/macros/matchit.txt
-share/nvim/runtime/macros/matchit.vim
 share/nvim/runtime/macros/shellmenu.vim
 share/nvim/runtime/macros/swapmous.vim
 share/nvim/runtime/makemenu.vim
@@ -691,6 +690,7 @@ share/nvim/runtime/optwin.vim
 share/nvim/runtime/plugin/README.txt
 share/nvim/runtime/plugin/getscriptPlugin.vim
 share/nvim/runtime/plugin/gzip.vim
+share/nvim/runtime/plugin/matchit.vim
 share/nvim/runtime/plugin/matchparen.vim
 share/nvim/runtime/plugin/netrwPlugin.vim
 share/nvim/runtime/plugin/rplugin.vim
