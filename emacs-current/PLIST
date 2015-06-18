@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.170 2015/06/06 20:46:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.171 2015/06/18 12:54:20 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1643,6 +1643,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/inline.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/inline.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/let-alist.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/let-alist.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mnt.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mnt.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mode.el.gz
@@ -2266,8 +2268,12 @@ share/emacs/${PKGVERSION}/lisp/international/ccl.elc
 share/emacs/${PKGVERSION}/lisp/international/characters.el.gz
 share/emacs/${PKGVERSION}/lisp/international/characters.elc
 share/emacs/${PKGVERSION}/lisp/international/charprop.el
-share/emacs/${PKGVERSION}/lisp/international/cp51932.el
-share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.el
+share/emacs/${PKGVERSION}/lisp/international/charscript.el.gz
+share/emacs/${PKGVERSION}/lisp/international/charscript.elc
+share/emacs/${PKGVERSION}/lisp/international/cp51932.el.gz
+share/emacs/${PKGVERSION}/lisp/international/cp51932.elc
+share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.el.gz
+share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.elc
 share/emacs/${PKGVERSION}/lisp/international/fontset.el.gz
 share/emacs/${PKGVERSION}/lisp/international/fontset.elc
 share/emacs/${PKGVERSION}/lisp/international/isearch-x.el.gz
@@ -2541,8 +2547,6 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/vnvni.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/vnvni.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/welsh.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/welsh.elc
-share/emacs/${PKGVERSION}/lisp/let-alist.el.gz
-share/emacs/${PKGVERSION}/lisp/let-alist.elc
 share/emacs/${PKGVERSION}/lisp/linum.el.gz
 share/emacs/${PKGVERSION}/lisp/linum.elc
 share/emacs/${PKGVERSION}/lisp/loaddefs.el
@@ -2772,6 +2776,8 @@ share/emacs/${PKGVERSION}/lisp/net/nsm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/nsm.elc
 share/emacs/${PKGVERSION}/lisp/net/ntlm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/ntlm.elc
+share/emacs/${PKGVERSION}/lisp/net/pinentry.el.gz
+share/emacs/${PKGVERSION}/lisp/net/pinentry.elc
 share/emacs/${PKGVERSION}/lisp/net/quickurl.el.gz
 share/emacs/${PKGVERSION}/lisp/net/quickurl.elc
 share/emacs/${PKGVERSION}/lisp/net/rcirc.el.gz
@@ -2897,7 +2903,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/assoc.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/assoc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/awk-mode.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/bruce.el
+share/emacs/${PKGVERSION}/lisp/obsolete/bruce.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/bruce.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz
@@ -2922,7 +2929,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/iso-swed.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-swed.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/keyswap.el
+share/emacs/${PKGVERSION}/lisp/obsolete/keyswap.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/keyswap.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/ledit.el.gz
@@ -2949,7 +2957,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/options.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/options.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/patcomp.el
+share/emacs/${PKGVERSION}/lisp/obsolete/patcomp.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/patcomp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pc-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pc-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pc-select.el.gz
