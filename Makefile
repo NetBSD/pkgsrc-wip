@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6201 2015/06/16 18:31:28 ishit Exp $
+# $Id: Makefile,v 1.6202 2015/06/18 19:28:41 ahp-nils Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2315,7 +2315,6 @@ SUBDIR+=	pear-phpcpd
 SUBDIR+=	pear-phpdcd
 SUBDIR+=	pear-phploc
 SUBDIR+=	peercoin
-SUBDIR+=	pelican
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
 SUBDIR+=	pfe
@@ -2908,6 +2907,7 @@ SUBDIR+=	py-pdef
 SUBDIR+=	py-pdfposter
 SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
+SUBDIR+=	py-pelican
 SUBDIR+=	py-percol
 SUBDIR+=	py-pet
 SUBDIR+=	py-pint
