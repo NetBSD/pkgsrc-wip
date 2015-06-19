@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/18 19:26:06 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/06/19 07:35:05 ahp-nils Exp $
 bin/pelican
 bin/pelican-import
 bin/pelican-quickstart
@@ -260,9 +260,14 @@ ${PYSITELIB}/pelican/tests/output/custom_locale/oh-yeah-fr.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/override/index.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/pages/this-is-a-test-hidden-page.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/pages/this-is-a-test-page.html
+${PYSITELIB}/pelican/tests/output/custom_locale/posts/2010/d+%AEcembre/02/this-is-a-super-article/index.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/posts/2010/octobre/15/unbelievable/index.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/posts/2010/octobre/20/oh-yeah/index.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/posts/2011/avril/20/a-markdown-powered-article/index.html
+${PYSITELIB}/pelican/tests/output/custom_locale/posts/2011/f+%AEvrier/17/article-1/index.html
+${PYSITELIB}/pelican/tests/output/custom_locale/posts/2011/f+%AEvrier/17/article-2/index.html
+${PYSITELIB}/pelican/tests/output/custom_locale/posts/2011/f+%AEvrier/17/article-3/index.html
+${PYSITELIB}/pelican/tests/output/custom_locale/posts/2012/f+%AEvrier/29/second-article/index.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/posts/2012/novembre/30/filename_metadata-example/index.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/second-article-fr.html
 ${PYSITELIB}/pelican/tests/output/custom_locale/tag/bar.html
