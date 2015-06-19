@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/01/08 04:43:11 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/19 19:17:41 outpaddling Exp $
 
-DISTNAME=	openmpi-1.6.3
+DISTNAME=	openmpi-${PKGVERSION}
+PKGVERSION=	1.6.3
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/ \
 		http://www.open-mpi.org/nightly/v1.6/
@@ -86,13 +87,13 @@ TEST_TARGET=	check
 # 	cd $(WRKSRC) && $(PERL5) autogen.sh
 
 post-install:
-	${MKDIR} ${DESTDIR}${MPI_PREFIX}/etc
+	${MKDIR} ${DESTDIR}${MPI_PREFIX}/etc/modulefiles/openmpi
 	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
 		files/shrc.in > ${DESTDIR}${MPI_PREFIX}/etc/shrc
 	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
 		files/cshrc.in > ${DESTDIR}${MPI_PREFIX}/etc/cshrc
 	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
-		files/module.in > ${DESTDIR}${MPI_PREFIX}/etc/module
+		files/module.in > ${DESTDIR}${PREFIX}/etc/modulefiles/openmpi/${PKGVERSION}
 	${INSTALL_DATA} ${DESTDIR}${MPI_PREFIX}/share/openmpi/examples/openmpi-default-hostfile ${DESTDIR}${MPI_PREFIX}/etc
 
 LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
