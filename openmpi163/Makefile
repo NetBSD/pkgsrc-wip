@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/06/19 19:17:41 outpaddling Exp $
+# $NetBSD: Makefile,v 1.8 2015/06/19 19:40:40 outpaddling Exp $
 
 DISTNAME=	openmpi-${PKGVERSION}
 PKGVERSION=	1.6.3
@@ -93,7 +93,7 @@ post-install:
 	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
 		files/cshrc.in > ${DESTDIR}${MPI_PREFIX}/etc/cshrc
 	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
-		files/module.in > ${DESTDIR}${PREFIX}/etc/modulefiles/openmpi/${PKGVERSION}
+		files/module.in > ${DESTDIR}${MPI_PREFIX}/etc/modulefiles/openmpi/${PKGVERSION}
 	${INSTALL_DATA} ${DESTDIR}${MPI_PREFIX}/share/openmpi/examples/openmpi-default-hostfile ${DESTDIR}${MPI_PREFIX}/etc
 
 LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
