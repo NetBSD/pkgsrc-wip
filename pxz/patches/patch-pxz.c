@@ -1,4 +1,7 @@
-$NetBSD: patch-pxz.c,v 1.2 2015/06/20 19:19:06 ishit Exp $
+$NetBSD: patch-pxz.c,v 1.3 2015/06/20 19:25:53 ishit Exp $
+
+fixed complie error.
+fixed CVE. 
 
 cf. FreeBSD's ports
 cf. Debian's deb fix CVE patch
