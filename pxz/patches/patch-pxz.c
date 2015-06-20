@@ -1,4 +1,4 @@
-$NetBSD: patch-pxz.c,v 1.1 2015/06/16 18:28:35 ishit Exp $
+$NetBSD: patch-pxz.c,v 1.2 2015/06/20 19:19:06 ishit Exp $
 
 cf. FreeBSD's ports
 cf. Debian's deb fix CVE patch
@@ -52,7 +52,7 @@ cf. Debian's deb fix CVE patch
  		}
  		
  		fo = stdout;
-+		/* for CVE-2015-1200 */
++		/* for fix CVE-2015-1200 */
 +		umask(077);
  		if ( std_in ) {
  			fi = stdin;

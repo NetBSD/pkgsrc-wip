@@ -1,2 +1,2 @@
-$NetBSD: distinfo,v 1.1 2015/06/16 18:28:35 ishit Exp $
-SHA1 (patch-pxz.c) = 31672115511faecb2de05ecddd333a188f3f6995
+$NetBSD: distinfo,v 1.2 2015/06/20 19:19:52 ishit Exp $
+SHA1 (patch-pxz.c) = 46297756fc0931d87b416214f7ad347d1dc26097
