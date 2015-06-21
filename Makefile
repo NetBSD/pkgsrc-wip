@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6202 2015/06/18 19:28:41 ahp-nils Exp $
+# $Id: Makefile,v 1.6203 2015/06/21 20:32:51 cfkoch Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1683,6 +1683,7 @@ SUBDIR+=	megaglest
 SUBDIR+=	megatools
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
+SUBDIR+=	memo
 SUBDIR+=	menumaker
 SUBDIR+=	meta-tracker
 SUBDIR+=	metalog
