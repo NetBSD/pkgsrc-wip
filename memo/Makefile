@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/06/21 16:53:41 cfkoch Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/21 17:00:51 thomasklausner Exp $
 
-DISTNAME=	memo-${VERSION}
-PKGNAME=	memo-${VERSION}
-VERSION=	1.6
+DISTNAME=	memo-1.6
 CATEGORIES=	misc
-MASTER_SITES=	-http://www.getmemo.org/memo-${VERSION}.tar.gz
+MASTER_SITES=	http://www.getmemo.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.getmemo.org/
@@ -16,8 +14,6 @@ NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
-
-post-build:
-	mkdir -p ${DESTDIR}${PREFIX}/bin
+INSTALLATION_DIRS=	bin
 
 .include "../../mk/bsd.pkg.mk"
