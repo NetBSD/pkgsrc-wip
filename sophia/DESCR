@@ -1,0 +1,11 @@
+Sophia is a modern embeddable key-value database.
+
+It has unique architecture that was created as a result of research and
+reconsideration primary algorithmic constraints of Log-file based data
+structures, such as LSM-tree. (see architecture)
+
+Sophia is designed for fast write (append-only) and read (range
+query-optimized, adaptive architecture) small to medium-sized key-values.
+
+BSD licensed and implemented as small C-written library with zero
+dependencies.
