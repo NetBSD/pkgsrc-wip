@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/02/10 13:59:53 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/06/22 16:21:18 rhialto Exp $
 bin/fs-uae
 bin/fs-uae-device-helper
 share/applications/fs-uae.desktop
@@ -228,3 +228,4 @@ share/locale/pt_BR/LC_MESSAGES/fs-uae.mo
 share/locale/sr/LC_MESSAGES/fs-uae.mo
 share/locale/sv/LC_MESSAGES/fs-uae.mo
 share/locale/tr/LC_MESSAGES/fs-uae.mo
+share/mime/packages/fs-uae.xml
