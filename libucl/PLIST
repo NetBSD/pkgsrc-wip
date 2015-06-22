@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/06/22 00:34:20 cfkoch Exp $
+include/ucl.h
+lib/libucl.la
+lib/pkgconfig/libucl.pc
+man/man3/libucl.3

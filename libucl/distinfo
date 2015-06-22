@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/06/22 00:34:20 cfkoch Exp $
+
+SHA1 (libucl-0.7.3.tar.gz) = ec1ebfdef61e5c6999b87b543fe1712901997e3c
+RMD160 (libucl-0.7.3.tar.gz) = d2760b0a0a3dd2f9f898e07d839b442e76d0a4ca
+Size (libucl-0.7.3.tar.gz) = 1986726 bytes
