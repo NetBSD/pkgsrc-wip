@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/03/28 15:43:02 rhialto Exp $
+$NetBSD: distinfo,v 1.9 2015/06/22 16:19:36 rhialto Exp $
 
-SHA1 (fs-uae-launcher-2.5.29dev.tar.gz) = ce1ab30b12ec0e23a70a890411796b53230a9daa
-RMD160 (fs-uae-launcher-2.5.29dev.tar.gz) = 2e62eb870b27850c06e1822169070fa81a2248b1
-Size (fs-uae-launcher-2.5.29dev.tar.gz) = 9049361 bytes
+SHA1 (fs-uae-launcher-2.5.32dev.tar.gz) = 7c20c067a3825b279d47cb211b2c6d074c386603
+RMD160 (fs-uae-launcher-2.5.32dev.tar.gz) = 63bd69a3d8c9c3dadde4da013f00c647196a68b7
+Size (fs-uae-launcher-2.5.32dev.tar.gz) = 9091151 bytes
 SHA1 (patch-Makefile) = 17100b1df144e8856f1981eeed02c1b079dfb640

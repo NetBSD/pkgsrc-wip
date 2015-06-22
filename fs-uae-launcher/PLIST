@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/03/28 15:43:02 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/06/22 16:19:36 rhialto Exp $
 @comment :4,$s=py3.4=py${PYVERSSUFFIX}=
 @comment :4,$s=cpython-34=cpython-${PYVERS}=
 bin/fs-uae-arcade
@@ -4233,7 +4233,7 @@ share/fs-uae-launcher/OpenGL/raw/osmesa/mesa.py
 share/fs-uae-launcher/OpenGL/version.py
 share/fs-uae-launcher/OpenGL/wrapper.py
 share/fs-uae-launcher/fs-uae-launcher
-share/fs-uae-launcher/fs_uae_launcher-2.5.29dev-py${PYVERSSUFFIX}.egg-info
+share/fs-uae-launcher/fs_uae_launcher-${VERSION}-py${PYVERSSUFFIX}.egg-info
 share/fs-uae-launcher/fs_uae_launcher/CDManager.py
 share/fs-uae-launcher/fs_uae_launcher/Config.py
 share/fs-uae-launcher/fs_uae_launcher/ConfigChecker.py
@@ -4657,6 +4657,7 @@ share/fs-uae-launcher/fs_uae_launcher/ui/settings/__pycache__/language.cpython-$
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/__pycache__/maintenance.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/__pycache__/mouse.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/__pycache__/video_sync.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fs_uae_launcher/ui/settings/__pycache__/whdload.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/advanced.py
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/advanced_video.py
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/header.py
@@ -4666,6 +4667,7 @@ share/fs-uae-launcher/fs_uae_launcher/ui/settings/language.py
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/maintenance.py
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/mouse.py
 share/fs-uae-launcher/fs_uae_launcher/ui/settings/video_sync.py
+share/fs-uae-launcher/fs_uae_launcher/ui/settings/whdload.py
 share/fs-uae-launcher/fs_uae_launcher/ui/statusbar/LanguageElement.py
 share/fs-uae-launcher/fs_uae_launcher/ui/statusbar/PlayersElement.py
 share/fs-uae-launcher/fs_uae_launcher/ui/statusbar/ProtectionElement.py
@@ -4954,6 +4956,7 @@ share/fs-uae-launcher/fsgs/__pycache__/SaveStateHandler.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/__pycache__/SignalContext.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/__pycache__/application.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fsgs/__pycache__/context.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/__pycache__/platform.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/__pycache__/refreshratetool.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/__pycache__/runner.cpython-${PYVERS}.pyc
@@ -4984,6 +4987,7 @@ share/fs-uae-launcher/fsgs/amiga/__pycache__/whdload.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/amiga/__pycache__/workbench.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/amiga/__pycache__/workbench_data.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/amiga/__pycache__/workbench_files.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fsgs/amiga/adf.py~
 share/fs-uae-launcher/fsgs/amiga/adf.py
 share/fs-uae-launcher/fsgs/amiga/roms.py
 share/fs-uae-launcher/fsgs/amiga/runner.py
@@ -4992,10 +4996,7 @@ share/fs-uae-launcher/fsgs/amiga/workbench.py
 share/fs-uae-launcher/fsgs/amiga/workbench_data.py
 share/fs-uae-launcher/fsgs/amiga/workbench_files.py
 share/fs-uae-launcher/fsgs/application.py
-share/fs-uae-launcher/fsgs/dat/DatFile.py
-share/fs-uae-launcher/fsgs/dat/__init__.py
-share/fs-uae-launcher/fsgs/dat/__pycache__/DatFile.cpython-${PYVERS}.pyc
-share/fs-uae-launcher/fsgs/dat/__pycache__/__init__.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fsgs/context.py
 share/fs-uae-launcher/fsgs/dosbox/__init__.py
 share/fs-uae-launcher/fsgs/dosbox/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/dosbox/__pycache__/dos.cpython-${PYVERS}.pyc
@@ -5258,12 +5259,16 @@ share/fs-uae-launcher/fsgs/res/input/xgaming/x_arcade_right.ini
 share/fs-uae-launcher/fsgs/res/input/xinput_controller_15_6_0_0_windows.conf
 share/fs-uae-launcher/fsgs/res/input/zeemote/steelseries_free.ini
 share/fs-uae-launcher/fsgs/runner.py
-share/fs-uae-launcher/fsgs/util/GameNameUtil.py
 share/fs-uae-launcher/fsgs/util/__init__.py
-share/fs-uae-launcher/fsgs/util/__pycache__/GameNameUtil.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/util/__pycache__/__init__.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fsgs/util/__pycache__/datfile.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fsgs/util/__pycache__/disknameutil.cpython-${PYVERS}.pyc
+share/fs-uae-launcher/fsgs/util/__pycache__/gamenameutil.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/util/__pycache__/sdl2constants.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/util/sdl2constants.py
+share/fs-uae-launcher/fsgs/util/datfile.py
+share/fs-uae-launcher/fsgs/util/disknameutil.py
+share/fs-uae-launcher/fsgs/util/gamenameutil.py
 share/fs-uae-launcher/fsgs/vice/__init__.py
 share/fs-uae-launcher/fsgs/vice/__pycache__/__init__.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/fsgs/vice/__pycache__/commodore_64.cpython-${PYVERS}.pyc
