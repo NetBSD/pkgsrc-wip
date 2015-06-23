@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/04/18 15:35:19 jonthn Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/23 21:41:02 jonthn Exp $
 
-DISTNAME=	py-neovim-0.0.34
+DISTNAME=	py-neovim-0.0.36
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	devel editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
@@ -11,8 +11,7 @@ COMMENT=	Python client to Neovim
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/python-client-${PKGVERSION_NOREV}
-
-EGG_NAME=	${DISTNAME:S/-/_/}
+EGG_NAME=	neovim-${PKGVERSION_NOREV}
 
 DEPENDS+=       ${PYPKGPREFIX}-msgpack:../../devel/py-msgpack
 DEPENDS+=       ${PYPKGPREFIX}-greenlet:../../devel/py-greenlet
