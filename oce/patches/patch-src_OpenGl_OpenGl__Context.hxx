@@ -1,16 +1,16 @@
-$NetBSD: patch-src_OpenGl_OpenGl__Context.hxx,v 1.1 2014/05/30 11:21:00 fhajny Exp $
+$NetBSD: patch-src_OpenGl_OpenGl__Context.hxx,v 1.2 2015/06/25 12:41:09 fhajny Exp $
 
 We need alloca.h.
---- src/OpenGl/OpenGl_Context.hxx.orig	2014-02-12 20:06:33.000000000 +0000
+--- src/OpenGl/OpenGl_Context.hxx.orig	2015-03-08 22:19:42.000000000 +0000
 +++ src/OpenGl/OpenGl_Context.hxx
-@@ -34,6 +34,10 @@
- #include <Handle_OpenGl_Context.hxx>
- #include <OpenGl_Clipping.hxx>
+@@ -39,6 +39,10 @@
+ #include <OpenGl_GlCore11.hxx>
+ #include <OpenGl_Utils.hxx>
  
-+#if defined(__sun) 
++#if defined(__sun)
 +#include <alloca.h>
 +#endif
 +
  //! Forward declarations
- struct OpenGl_GlCore12;
- struct OpenGl_GlCore13;
+ struct OpenGl_GlFunctions;
+ struct OpenGl_ArbTBO;

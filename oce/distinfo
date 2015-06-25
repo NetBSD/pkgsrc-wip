@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.1 2014/05/30 11:21:00 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/06/25 12:41:09 fhajny Exp $
 
-SHA1 (OCE-0.15.tar.gz) = 3036ca47202bdffdef79a65c314a446424ac47f1
-RMD160 (OCE-0.15.tar.gz) = be53cced4d5463d466fd17c3f721ae56fb89e32b
-Size (OCE-0.15.tar.gz) = 24341270 bytes
+SHA1 (OCE-0.17.tar.gz) = 4d5a7fd6e074e2a3c56e083b82fc0bb1aff1c998
+RMD160 (OCE-0.17.tar.gz) = 5580bf57b6534a31809644a673ddb7008a001c1b
+Size (OCE-0.17.tar.gz) = 24382694 bytes
 SHA1 (patch-CMakeLists.txt) = 35c51b9a3f9620bb1caa121cc2fd251daab2dccc
-SHA1 (patch-src_OSD_OSD__signal.cxx) = 1138a73e280f30edefdb532ec81e09865da781a2
-SHA1 (patch-src_OpenGl_OpenGl__Context.hxx) = f603b285d5790ceebd7c3bf3f48697c3e24ffa0b
-SHA1 (patch-src_Standard_Standard__CLocaleSentry.hxx) = 50e5bb748d23eb7e913d40e3c43dd4b50d8ace4a
+SHA1 (patch-adm_cmake_TKernel_CMakeLists.txt) = 40752a95ba115a4869c6ff4c3ef906d70a34ff43
+SHA1 (patch-src_MeshVS_MeshVS__MeshPrsBuilder.cxx) = d3974c716e7243f667ad3e026320dadd70c47db7
+SHA1 (patch-src_OSD_OSD__signal.cxx) = 74f1291aae6872543a52b3202fa90432f6d328c6
+SHA1 (patch-src_OpenGl_OpenGl__Context.hxx) = f5654287a239c8885923f36f0a34699788b0fdad
+SHA1 (patch-src_Standard_Standard__Mutex.hxx) = ffea6f4a7a4b01663f71643276f9f94a94a5ab70
 SHA1 (patch-src_Standard_Standard__PrimitiveTypes.hxx) = 791ad1d8120c43aadb3e321c72bf217dc1057e58
