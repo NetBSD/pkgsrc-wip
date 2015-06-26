@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2014/12/04 20:03:18 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2015/06/26 22:12:58 othyro Exp $
 
-DISTNAME=	xf86-video-qxl-0.1.3
+DISTNAME=	xf86-video-qxl-0.1.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +20,8 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.46
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../sysutils/spice-protocol/buildlink3.mk"
 .include "../../x11/xf86dgaproto/buildlink3.mk"
