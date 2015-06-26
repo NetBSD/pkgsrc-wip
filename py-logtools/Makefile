@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/02/13 00:58:05 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2015/06/26 23:03:28 othyro Exp $
 #
 
-DISTNAME=	logtools-0.8.6
+DISTNAME=	logtools-0.8.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://pypi.python.org/packages/source/l/logtools/
 

@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2014/02/03 10:51:00 othyro Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/26 23:03:28 othyro Exp $
 bin/aggregate
 bin/colsum
 bin/filterbots
+bin/flattenjson
 bin/geoip
 bin/logfilter
 bin/logjoin
@@ -34,6 +35,9 @@ ${PYSITELIB}/logtools/_filter.pyo
 ${PYSITELIB}/logtools/_filterbots.py
 ${PYSITELIB}/logtools/_filterbots.pyc
 ${PYSITELIB}/logtools/_filterbots.pyo
+${PYSITELIB}/logtools/_flattenjson.py
+${PYSITELIB}/logtools/_flattenjson.pyc
+${PYSITELIB}/logtools/_flattenjson.pyo
 ${PYSITELIB}/logtools/_geoip.py
 ${PYSITELIB}/logtools/_geoip.pyc
 ${PYSITELIB}/logtools/_geoip.pyo
