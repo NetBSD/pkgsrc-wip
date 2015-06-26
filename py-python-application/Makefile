@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/12/31 13:58:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/06/26 22:18:55 othyro Exp $
 
-DISTNAME=	python-application-1.4.1
+DISTNAME=	python-application-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-application/

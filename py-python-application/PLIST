@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/02 10:26:44 othyro Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/06/26 22:18:55 othyro Exp $
 ${PYSITELIB}/application/__init__.py
 ${PYSITELIB}/application/__init__.pyc
 ${PYSITELIB}/application/__init__.pyo
@@ -50,6 +50,9 @@ ${PYSITELIB}/application/python/descriptor.pyo
 ${PYSITELIB}/application/python/queue.py
 ${PYSITELIB}/application/python/queue.pyc
 ${PYSITELIB}/application/python/queue.pyo
+${PYSITELIB}/application/python/threadpool.py
+${PYSITELIB}/application/python/threadpool.pyc
+${PYSITELIB}/application/python/threadpool.pyo
 ${PYSITELIB}/application/python/types.py
 ${PYSITELIB}/application/python/types.pyc
 ${PYSITELIB}/application/python/types.pyo
