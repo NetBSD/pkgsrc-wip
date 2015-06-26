@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2015/04/05 20:06:53 khorben Exp $
+$NetBSD: distinfo,v 1.6 2015/06/26 12:56:33 khorben Exp $
 
-SHA1 (87ba5ad017b7e984999278d3f63010522ba47b01.tar.gz) = f4ba54fa287040b0b81e899bfcb1afd7785633cb
-RMD160 (87ba5ad017b7e984999278d3f63010522ba47b01.tar.gz) = 2dd24e521dd6eba45ffb685e31f0564ee0ce3309
-Size (87ba5ad017b7e984999278d3f63010522ba47b01.tar.gz) = 2936700 bytes
-SHA1 (patch-libpkg_pkg__add.c) = 0d06efc9beeecb533aac5e930bf0de344115f9c6
-SHA1 (patch-libpkg_pkg__delete.c) = 89a4aebf1c2a4797ca482e58850a79e4024528ed
+SHA1 (1.5.4.tar.gz) = 2e58510fa9b9eb97b6d9e0d62e527228601af1c1
+RMD160 (1.5.4.tar.gz) = b38582e325752a329eb353212783850db6b138ea
+Size (1.5.4.tar.gz) = 2937244 bytes
