@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/03/03 00:52:43 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/26 22:26:57 othyro Exp $
 
 DISTNAME=	Lingua-EN-Syllable-0.251
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~gregfast/Lingua-EN-Syllable-0.251/
 COMMENT=	Routine for estimating syllable count in words
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Lingua/EN/Syllable/.packlist
 USE_LANGUAGES=	# none
