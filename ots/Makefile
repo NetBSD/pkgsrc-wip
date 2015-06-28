@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/12/22 18:12:10 nros Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/28 21:00:55 thomasklausner Exp $
 
 DISTNAME=	ots-0.5.0
 CATEGORIES=	textproc
-MASTER_SITES=	http://downloads.sf.net/project/libots/libots/${DISTNAME}/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libots/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libots.sf.net/
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	libots-1.pc.in
