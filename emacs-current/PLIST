@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.171 2015/06/18 12:54:20 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.172 2015/06/29 08:48:09 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1463,6 +1463,8 @@ share/emacs/${PKGVERSION}/lisp/cedet/srecode/template.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/template.elc
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/texi.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/texi.elc
+share/emacs/${PKGVERSION}/lisp/character-fold.el.gz
+share/emacs/${PKGVERSION}/lisp/character-fold.elc
 share/emacs/${PKGVERSION}/lisp/chistory.el.gz
 share/emacs/${PKGVERSION}/lisp/chistory.elc
 share/emacs/${PKGVERSION}/lisp/cmuscheme.el.gz
