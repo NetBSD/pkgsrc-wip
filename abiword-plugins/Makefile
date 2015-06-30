@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/06/11 16:31:05 nros Exp $
+# $NetBSD: Makefile,v 1.3 2015/06/30 09:36:32 nros Exp $
 
 ABIVERSION=	3.0.1
 DISTNAME=	abiword-${ABIVERSION}
 PKGNAME=	abiword-plugins-${ABIVERSION}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abiword.com/downloads/abiword/${PKGVERSION_NOREV}/source/
 
@@ -23,12 +24,7 @@ USE_LANGUAGES=	c c++
 
 BUILD_DIRS=	plugins
 
-#DEPENDS+=	abiword-${ABIVERSION}{,nb*}:../../wip/abiword
-
-#MAKE_JOBS_SAFE=no
-
 # All configure_args here
-# TODO: an options.mk file
 CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
 #CONFIGURE_ARGS+=	--enable-plugins	#build all plugins
 CONFIGURE_ARGS+=	 --enable-builtin-plugins
