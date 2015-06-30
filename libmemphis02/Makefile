@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2014/12/25 15:18:45 nros Exp $
+# $NetBSD: Makefile,v 1.2 2015/06/30 08:51:54 nros Exp $
 
 DISTNAME=	memphis-0.2.3
 PKGNAME=	libmemphis02-0.2.3
 CATEGORIES=	geography
-MASTER_SITES=	-https://github.com/jiuka/memphis/archive/0.2.3.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jiuka/}
+GITHUB_PROJECT=	memphis
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/jiuka/mempis
+HOMEPAGE=	https://github.com/jiuka/memphis
 COMMENT=	Library for OpenStreetMap
 LICENSE=	gnu-lgpl-v2.1
 
