@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6205 2015/06/22 00:35:18 cfkoch Exp $
+# $Id: Makefile,v 1.6206 2015/07/01 02:47:32 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2112,8 +2112,6 @@ SUBDIR+=	p5-KyotoCabinet
 SUBDIR+=	p5-LDAP
 SUBDIR+=	p5-LWP-Protocol-socks
 SUBDIR+=	p5-Libencode-Arabic
-SUBDIR+=	p5-Lingua-EN-Fathom
-SUBDIR+=	p5-Lingua-EN-Syllable
 SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
