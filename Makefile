@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6208 2015/07/01 13:49:55 ryo-on Exp $
+# $Id: Makefile,v 1.6209 2015/07/01 13:52:32 ryo-on Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3502,7 +3502,6 @@ SUBDIR+=	structure
 SUBDIR+=	stumpwm
 SUBDIR+=	stunnel3
 SUBDIR+=	sudo
-SUBDIR+=	sudoscript
 SUBDIR+=	suitesparse
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib

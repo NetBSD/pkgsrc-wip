@@ -1,9 +1,0 @@
-Sudoscript provides an audited shell using sudo(8) and script(1).  The
-front end script, sudoshell(1) contacts the daemon, sudoscriptd(8).
-They agree on the location of a FIFO, which the daemon opens for read.
-Sudoshell then runs scropt(1) with the FIFO as a typescript.  The
-daemon stamps each line of the script(1) outpur with a session id,
-then passes the data over to another daemon.  This daemon timestamps
-the data and stores it in a log file, /var/log/sudscript.  This daemon
-also keeps an eye on the size of the log, and forks a
-rotator/compressor when it exceeds 2 MiB.
