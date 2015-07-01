@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/06/21 17:00:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/01 03:04:24 cfkoch Exp $
 
 DISTNAME=	memo-1.6
 CATEGORIES=	misc
 MASTER_SITES=	http://www.getmemo.org/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	cfkoch@users.sourceforge.net
 HOMEPAGE=	http://www.getmemo.org/
 COMMENT=	Note-taking software
 LICENSE=	gnu-gpl-v3
