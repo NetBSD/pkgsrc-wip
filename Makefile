@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6210 2015/07/02 02:29:48 leot1990 Exp $
+# $Id: Makefile,v 1.6211 2015/07/02 04:04:32 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3821,21 +3821,10 @@ SUBDIR+=	xebece
 SUBDIR+=	xedit
 SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
-SUBDIR+=	xf86-input-elographics
-SUBDIR+=	xf86-input-fpit
-SUBDIR+=	xf86-input-hyperpen
-SUBDIR+=	xf86-input-joystick
-SUBDIR+=	xf86-input-mutouch
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-intel
-SUBDIR+=	xf86-video-modesetting
-SUBDIR+=	xf86-video-nouveau
-SUBDIR+=	xf86-video-qxl
-SUBDIR+=	xf86-video-suncg6
-SUBDIR+=	xf86-video-suntcx
-SUBDIR+=	xf86-video-voodoo
 SUBDIR+=	xf86dga
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfburn
