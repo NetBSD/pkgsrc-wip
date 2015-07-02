@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.13 2015/06/18 20:53:01 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/07/02 18:36:58 jonthn Exp $
 bin/nvim
 man/man1/nvim.1
-man/man1/nvimtutor.1
 share/locale/af/LC_MESSAGES/nvim.mo
 share/locale/ca/LC_MESSAGES/nvim.mo
 share/locale/cs.cp1250/LC_MESSAGES/nvim.mo
@@ -284,7 +283,6 @@ share/nvim/runtime/doc/usr_42.txt
 share/nvim/runtime/doc/usr_43.txt
 share/nvim/runtime/doc/usr_44.txt
 share/nvim/runtime/doc/usr_45.txt
-share/nvim/runtime/doc/usr_90.txt
 share/nvim/runtime/doc/usr_toc.txt
 share/nvim/runtime/doc/various.txt
 share/nvim/runtime/doc/vi_diff.txt
@@ -493,7 +491,6 @@ share/nvim/runtime/ftplugin/yaml.vim
 share/nvim/runtime/ftplugin/zimbu.vim
 share/nvim/runtime/ftplugin/zsh.vim
 share/nvim/runtime/ftplugof.vim
-share/nvim/runtime/gvimrc_example.vim
 share/nvim/runtime/indent.vim
 share/nvim/runtime/indent/README.txt
 share/nvim/runtime/indent/aap.vim
@@ -681,6 +678,7 @@ share/nvim/runtime/macros/justify.vim
 share/nvim/runtime/macros/less.bat
 share/nvim/runtime/macros/less.sh
 share/nvim/runtime/macros/less.vim
+share/nvim/runtime/macros/matchit.vim
 share/nvim/runtime/macros/shellmenu.vim
 share/nvim/runtime/macros/swapmous.vim
 share/nvim/runtime/makemenu.vim
