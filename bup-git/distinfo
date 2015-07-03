@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.28 2015/06/21 20:08:51 thomasklausner Exp $
+$NetBSD: distinfo,v 1.29 2015/07/03 13:07:49 thomasklausner Exp $
 
 SHA1 (patch-Makefile) = 3208d663af3e5e129499282d14e10abd94f56805
-SHA1 (patch-config_configure) = e453f37c2496a167292062b83ce84efd0756d7de
+SHA1 (patch-config_configure) = 925baba30562819a5e200220a0d7253543f34895
 SHA1 (patch-format-subst.pl) = 86f5a59e7680718c663878a3197f50bb071724dd
-SHA1 (patch-lib_bup___helpers.c) = 87718ebf27981fa5466ef70bd035485a6830bb98
+SHA1 (patch-lib_bup___helpers.c) = 4191a5b0fab03d1ef292c874daf4d4b741a87e23
+SHA1 (patch-lib_bup_hashsplit.py) = a09e73d2a8625dc00eba24a72a0c449fb9f5f506
+SHA1 (patch-lib_bup_helpers.py) = 231c447dfbadb8015607ebd4158121dc26fc69c4
+SHA1 (patch-lib_bup_t_thashsplit.py) = 62a9e6d97482c7f9e95df5c8d86e6300868b6d26

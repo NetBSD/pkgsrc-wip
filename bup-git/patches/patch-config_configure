@@ -1,10 +1,28 @@
-$NetBSD: patch-config_configure,v 1.3 2013/12/21 12:46:44 thomasklausner Exp $
+$NetBSD: patch-config_configure,v 1.4 2015/07/03 13:07:49 thomasklausner Exp $
 
 Use PYTHON passed through from Makefile.
 
---- config/configure.orig	2013-12-20 09:43:15.000000000 +0000
+--- config/configure.orig	2015-07-03 06:59:44.000000000 +0000
 +++ config/configure
-@@ -42,7 +42,7 @@ if [ -z "$MAKE_VERSION" ]; then
+@@ -12,6 +12,17 @@ bup_find_prog()
+     echo "$result"
+ }
+ 
++bup_try_c_code()
++{
++    local code="$1" tmpdir rc
++    tmpdir="$(mktemp -d "bup-try-c-compile-XXXXXXX")" || exit $?
++    echo "$code" > "$tmpdir/test.c" || exit $?
++    $AC_CC -Wall -Werror -c -o "$tmpdir/test" "$tmpdir/test.c"
++    rc=$?
++    rm -r "$tmpdir" || exit $?
++    return $rc
++}
++
+ TARGET=bup
+ 
+ . ./configure.inc
+@@ -42,7 +53,7 @@ if [ -z "$MAKE_VERSION" ]; then
  fi
  expr "$MAKE_VERSION" '>=' '3.81' || AC_FAIL "ERROR: $MAKE must be >= version 3.81"
  
@@ -13,3 +31,42 @@ Use PYTHON passed through from Makefile.
      AC_FAIL "ERROR: unable to find python"
  fi
  
+@@ -65,7 +76,37 @@ if [ -z "$OS_GNU_KFREEBSD" ]; then
+ fi
+ AC_CHECK_FUNCS utimes
+ AC_CHECK_FUNCS lutimes
+-AC_CHECK_FUNCS mincore
++
++
++TLOGN "checking for mincore"
++
++mincore_code()
++{
++    local vec_type="$1" mincore_incore="$2"
++    echo "
++#include <sys/mman.h>
++int main(int argc, char **argv)
++{
++    void *x = 0;
++    $vec_type *buf = 0;
++    if ($mincore_incore)
++      return 0;
++    return mincore(x, 0, buf);
++}" || exit $?
++}
++
++if bup_try_c_code "$(mincore_code char 0)"; then
++    AC_DEFINE BUP_MINCORE_BUF_TYPE 'char'
++    TLOG ' (found BSD style)'
++elif bup_try_c_code "$(mincore_code 'unsigned char' 0)"; then
++    if ! test "$(uname -s)" = Linux; then
++        AC_FAIL "ERROR: unexpected mincore definition; please notify bup-list@googlegroups.com"
++    fi
++    AC_DEFINE BUP_MINCORE_BUF_TYPE 'unsigned char'
++    TLOG ' (found Linux style)'
++else
++    TLOG ' (not found)'
++fi
+ 
+ AC_CHECK_FIELD stat st_atim sys/types.h sys/stat.h unistd.h
+ AC_CHECK_FIELD stat st_mtim sys/types.h sys/stat.h unistd.h
