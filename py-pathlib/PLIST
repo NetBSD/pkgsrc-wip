@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/07/03 18:49:26 jihbed Exp $
+${PYSITELIB}/pathlib.py
+${PYSITELIB}/pathlib.pyc
+${PYSITELIB}/pathlib.pyo
