@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/03/30 07:29:43 adanbsd Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/04 04:27:32 ryo-on Exp $
 
-
-DISTNAME=	libassuan-2.2.0
+DISTNAME=	libassuan-2.2.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 EXTRACT_SUFX=	.tar.bz2
-CONFLICTS=	libassuan-1.*{,nb*}
+CONFLICTS=	libassuan-[0-9]*
 
 MAINTAINER=	ada@netbsdfr.org
 HOMEPAGE=	http://gnupg.org/related_software/libassuan/index.en.html
