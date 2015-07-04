@@ -1,4 +1,0 @@
-pkg is built on top of libpkg, a new library to interface with package
-registration backends.
-It abstracts package management details such as registration, remote
-repositories, package creation, updating, etc.
