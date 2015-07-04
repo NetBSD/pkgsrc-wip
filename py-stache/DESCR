@@ -1,0 +1,2 @@
+A Python implementation of Mustache. Mustache is a framework-agnostic,
+logic-free templating system inspired by ctemplate
