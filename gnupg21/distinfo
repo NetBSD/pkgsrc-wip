@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/03/23 11:26:03 adanbsd Exp $
+$NetBSD: distinfo,v 1.2 2015/07/04 05:10:31 ryo-on Exp $
 
-SHA1 (gnupg-2.1.2.tar.bz2) = 7e972cb9af47d9b8ce164dcf37fc4f32634d6cd6
-RMD160 (gnupg-2.1.2.tar.bz2) = 015c1f427702310b6cc201483a5f94159d9e9981
-Size (gnupg-2.1.2.tar.bz2) = 4832996 bytes
+SHA1 (gnupg-2.1.6.tar.bz2) = 9e8157b3386da04760657ce3117fc4dc570c57c5
+RMD160 (gnupg-2.1.6.tar.bz2) = 42db712fe0669caf246dbf46aca429b392614e2b
+Size (gnupg-2.1.6.tar.bz2) = 4917722 bytes
+SHA1 (patch-doc_Makefile.in) = 1f5dc55c6751322e2a5436b0a66a530d231b4a75

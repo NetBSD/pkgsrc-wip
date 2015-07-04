@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/03/30 07:30:28 adanbsd Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/04 05:10:31 ryo-on Exp $
 
-
-DISTNAME=	gnupg-2.1.2
+DISTNAME=	gnupg-2.1.6
+PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +22,6 @@ GNU_CONFIGURE=		yes
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
 BUILDLINK_API_DEPENDS.npth+=		npth>=0.91
-
 
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../wip/libassuan22/buildlink3.mk"
