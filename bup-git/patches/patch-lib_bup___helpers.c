@@ -1,8 +1,20 @@
-$NetBSD: patch-lib_bup___helpers.c,v 1.4 2015/07/03 13:07:49 thomasklausner Exp $
+$NetBSD: patch-lib_bup___helpers.c,v 1.5 2015/07/05 20:46:45 thomasklausner Exp $
 
---- lib/bup/_helpers.c.orig	2015-07-03 06:59:44.000000000 +0000
+--- lib/bup/_helpers.c.orig	2015-07-05 20:33:32.000000000 +0000
 +++ lib/bup/_helpers.c
-@@ -1332,77 +1332,48 @@ static PyObject *bup_localtime(PyObject 
+@@ -14,8 +14,10 @@
+ #include <stdint.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+-#include <sys/mman.h>
+ 
++#ifdef HAVE_SYS_MMAN_H
++#include <sys/mman.h>
++#endif
+ #ifdef HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
+@@ -1332,77 +1334,48 @@ static PyObject *bup_localtime(PyObject 
  #endif /* def HAVE_TM_TM_GMTOFF */
  
  
@@ -13,6 +25,7 @@ $NetBSD: patch-lib_bup___helpers.c,v 1.4 2015/07/03 13:07:49 thomasklausner Exp 
  {
 -    int fd, rc;
 -    if (!PyArg_ParseTuple(args, "i", &fd))
+-	return NULL;
 +    const char *src;
 +    Py_ssize_t src_ssize;
 +    Py_buffer dest;
@@ -20,16 +33,16 @@ $NetBSD: patch-lib_bup___helpers.c,v 1.4 2015/07/03 13:07:49 thomasklausner Exp 
 +    if (!PyArg_ParseTuple(args, "s#OOw*O",
 +                          &src, &src_ssize, &py_src_n, &py_src_off,
 +                          &dest, &py_dest_off))
- 	return NULL;
- 
--    struct stat st;
--    rc = fstat(fd, &st);
++	return NULL;
++
 +    unsigned long long src_size, src_n, src_off, dest_size, dest_off;
 +    if (!(bup_ullong_from_py(&src_n, py_src_n, "src_n")
 +          && bup_ullong_from_py(&src_off, py_src_off, "src_off")
 +          && bup_ullong_from_py(&dest_off, py_dest_off, "dest_off")))
 +        return NULL;
-+
+ 
+-    struct stat st;
+-    rc = fstat(fd, &st);
 +    if (!INTEGRAL_ASSIGNMENT_FITS(&src_size, src_ssize))
 +        return PyErr_Format(PyExc_OverflowError, "invalid src size");
 +    unsigned long long src_region_end;
@@ -116,7 +129,7 @@ $NetBSD: patch-lib_bup___helpers.c,v 1.4 2015/07/03 13:07:49 thomasklausner Exp 
  
  
  static PyMethodDef helper_methods[] = {
-@@ -1467,9 +1438,10 @@ static PyMethodDef helper_methods[] = {
+@@ -1467,9 +1440,10 @@ static PyMethodDef helper_methods[] = {
      { "localtime", bup_localtime, METH_VARARGS,
        "Return struct_time elements plus the timezone offset and name." },
  #endif
@@ -130,7 +143,7 @@ $NetBSD: patch-lib_bup___helpers.c,v 1.4 2015/07/03 13:07:49 thomasklausner Exp 
  #endif
      { NULL, NULL, 0, NULL },  // sentinel
  };
-@@ -1516,6 +1488,14 @@ PyMODINIT_FUNC init_helpers(void)
+@@ -1516,6 +1490,14 @@ PyMODINIT_FUNC init_helpers(void)
          Py_DECREF(value);
      }
  #endif

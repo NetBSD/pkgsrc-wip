@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.29 2015/07/03 13:07:49 thomasklausner Exp $
+$NetBSD: distinfo,v 1.30 2015/07/05 20:46:45 thomasklausner Exp $
 
 SHA1 (patch-Makefile) = 3208d663af3e5e129499282d14e10abd94f56805
-SHA1 (patch-config_configure) = 925baba30562819a5e200220a0d7253543f34895
+SHA1 (patch-config_configure) = 36e40fdb1f953df12864be9bd6a389d1ca094346
+SHA1 (patch-config_configure.inc) = f7952f1d33808c339b82dbd86c15443df31c2f95
 SHA1 (patch-format-subst.pl) = 86f5a59e7680718c663878a3197f50bb071724dd
-SHA1 (patch-lib_bup___helpers.c) = 4191a5b0fab03d1ef292c874daf4d4b741a87e23
-SHA1 (patch-lib_bup_hashsplit.py) = a09e73d2a8625dc00eba24a72a0c449fb9f5f506
-SHA1 (patch-lib_bup_helpers.py) = 231c447dfbadb8015607ebd4158121dc26fc69c4
-SHA1 (patch-lib_bup_t_thashsplit.py) = 62a9e6d97482c7f9e95df5c8d86e6300868b6d26
+SHA1 (patch-lib_bup___helpers.c) = 151ba789a93f6a63240fa642d1281b7dff80ce77
+SHA1 (patch-lib_bup_hashsplit.py) = 5276cd71c720a79078b4efa0da74ab74c1c56de9
+SHA1 (patch-lib_bup_helpers.py) = 4382ac09c885d9f5cef3d462cf242fddf1c17125
+SHA1 (patch-lib_bup_t_thashsplit.py) = 4de962e72831861bcbcfd275c20b2d2fd42c8659

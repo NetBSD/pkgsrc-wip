@@ -1,16 +1,8 @@
-$NetBSD: patch-lib_bup_helpers.py,v 1.3 2015/07/03 13:07:49 thomasklausner Exp $
+$NetBSD: patch-lib_bup_helpers.py,v 1.4 2015/07/05 20:46:45 thomasklausner Exp $
 
---- lib/bup/helpers.py.orig	2015-07-03 06:59:44.000000000 +0000
+--- lib/bup/helpers.py.orig	2015-07-05 20:33:32.000000000 +0000
 +++ lib/bup/helpers.py
-@@ -9,6 +9,7 @@ import hashlib, heapq, math, operator, t
- 
- from bup import _helpers
- 
-+sc_page_size = os.sysconf('SC_PAGE_SIZE')
- sc_arg_max = os.sysconf('SC_ARG_MAX')
- 
- # This function should really be in helpers, not in bup.options.  But we
-@@ -714,6 +715,42 @@ def mmap_readwrite_private(f, sz = 0, cl
+@@ -715,6 +715,42 @@ def mmap_readwrite_private(f, sz = 0, cl
                      close)
  
  
