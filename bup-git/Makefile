@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/04/28 12:02:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2015/07/05 20:46:14 thomasklausner Exp $
 
 DISTNAME=	bup-0.27
 CATEGORIES=	sysutils
@@ -32,7 +32,7 @@ MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 USE_TOOLS+=		bash gmake perl
-REPLACE_PERL=		format-subst.pl wvtestrun
+REPLACE_PERL=		format-subst.pl
 REPLACE_PYTHON+=	cmd/bloom-cmd.py
 REPLACE_PYTHON+=	cmd/cat-file-cmd.py
 REPLACE_PYTHON+=	cmd/daemon-cmd.py
