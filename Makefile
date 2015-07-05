@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6215 2015/07/04 14:48:27 khorben Exp $
+# $Id: Makefile,v 1.6216 2015/07/05 13:42:14 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1727,7 +1727,6 @@ SUBDIR+=	mmm-mode
 SUBDIR+=	mnogosearch
 SUBDIR+=	modglue
 SUBDIR+=	modplugplay
-SUBDIR+=	modular-xorg-xephyr
 SUBDIR+=	moe
 SUBDIR+=	moeclock
 SUBDIR+=	molmol
