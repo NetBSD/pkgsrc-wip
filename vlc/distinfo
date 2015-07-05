@@ -1,24 +1,16 @@
-$NetBSD: distinfo,v 1.10 2015/05/01 06:24:12 idleroux Exp $
+$NetBSD: distinfo,v 1.11 2015/07/05 12:38:39 idleroux Exp $
 
 SHA1 (vlc-2.2.1.tar.xz) = ee8535c5966217bc2069a74c1d4e8c32609656e9
 RMD160 (vlc-2.2.1.tar.xz) = 3b199e3555e8aa52a760a9ed7b89874c782e0dff
 Size (vlc-2.2.1.tar.xz) = 20940288 bytes
-SHA1 (patch-bin_override.c) = dfe9657a162b51d414bce4ed99d47ca346ed9f95
+SHA1 (patch-bin_override.c) = 0190b65ec29ccdb7ef89d7c6af74a6bfdfc17076
 SHA1 (patch-compat_Makefile.am) = 983e9e29380702326d114274db99af72b5bdb3dd
-SHA1 (patch-compat_Makefile.in) = 7dbf2c6de82bba5439b2072987424b310b9ea235
+SHA1 (patch-compat_Makefile.in) = dd250b276064e5f727bc81c21b776eb02a21ab99
 SHA1 (patch-include_vlc__common.h) = 26ab2c96230e3fbe26dd4bce60db7c5331eb3f6c
 SHA1 (patch-include_vlc__fixups.h) = 277cc7985f66fe3e8e94c75003e25aabd2f1bbfc
 SHA1 (patch-modules_access_directory.c) = 95bc95cb7eb0bf44684c04d2cecc2c4e8339f0f7
 SHA1 (patch-modules_access_file.c) = 22eb568aa5a1fea765e65a770432282024baaaf1
 SHA1 (patch-modules_access_rtp_Makefile.am) = cd2c1bcbde8fc04c15f4030ff8708e32b800dd53
-SHA1 (patch-modules_gui_qt4_components_controller.cpp) = 8af988de9ea527dfb81d75f59b1c37dc740d41af
-SHA1 (patch-modules_gui_qt4_components_extended__panels.cpp) = 98dd52b704130809cd8f2dd6971beba902d4aab2
-SHA1 (patch-modules_gui_qt4_components_interface__widgets.cpp) = d82e2c4da79d699ac522fb2a5a07b9a39b28f239
-SHA1 (patch-modules_gui_qt4_components_interface__widgets.hpp) = 1dbd1562bbe6daf0ce0e13468b156a5df58f212e
-SHA1 (patch-modules_gui_qt4_input__manager.cpp) = 6e391bf8b7a0fee69bcb350af83def02441e12c9
-SHA1 (patch-modules_gui_qt4_input__manager.hpp) = 853d85d6fe4181cbbcced606487fa431cd924937
-SHA1 (patch-modules_gui_qt4_util_input__slider.cpp) = b8e1bb4b18a6fcffb34c1288753ffc64da32f55b
-SHA1 (patch-modules_gui_qt4_util_input__slider.hpp) = baff87bd759f319b89a364bd3d5531900304277a
 SHA1 (patch-modules_gui_skins2_src_theme__loader.cpp) = cbf1dfa33aa89bbb9382b789d77f6eea69d85b04
 SHA1 (patch-modules_misc_inhibit_xdg.c) = f84a8d629c8cd98c30b0acf41d87d55c7dc90d30
 SHA1 (patch-modules_video__output_sdl.c) = fcb5daacd5fe0627dcf1eaad79c8e2a27d6c948a

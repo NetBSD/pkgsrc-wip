@@ -1,4 +1,6 @@
-$NetBSD: patch-compat_Makefile.in,v 1.1 2015/05/01 06:24:13 idleroux Exp $
+$NetBSD: patch-compat_Makefile.in,v 1.2 2015/07/05 12:38:39 idleroux Exp $
+
+See comment on patch_compat_Makefile.am.
 
 --- compat/Makefile.in.orig	2015-02-23 19:46:51.000000000 +0000
 +++ compat/Makefile.in
