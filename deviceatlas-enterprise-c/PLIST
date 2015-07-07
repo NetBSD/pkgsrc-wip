@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2015/07/07 15:13:37 devnexen Exp $
 include/dac.h
 include/dac_json.h
 lib/libda.so

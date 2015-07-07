@@ -1,3 +1,5 @@
+$NetBSD: patch-examples_CMakeLists.txt,v 1.2 2015/07/07 15:13:37 devnexen Exp $
+cmake install compiled examples and their source codes.
 --- examples/CMakeLists.txt.orig	2015-07-07 09:44:58.000000000 +0000
 +++ examples/CMakeLists.txt	2015-07-07 09:46:55.000000000 +0000
 @@ -12,3 +12,7 @@

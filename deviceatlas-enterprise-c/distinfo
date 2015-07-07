@@ -1,3 +1,5 @@
-SHA1 (deviceatlas_c_0.9.zip) = 4833389c9c13af644077629038b406fced6e769a
-SHA1 (patch-CMakeLists.txt) = 3764abda69c5fd78590470b713478be8905a61be
-SHA1 (patch-examples_CMakeLists.txt) = 0b0adfd1511f403d8577bfa5325d16d472c31549
+$NetBSD: distinfo,v 1.2 2015/07/07 15:13:37 devnexen Exp $
+
+RMD160 (deviceatlas_c_0.9.zip) = 7f41a0ddf1d84f72d91d04af8314ca4f46de54d2
+SHA1 (patch-CMakeLists.txt) = 53864152d179aa75b720b29b21dbd30cfff31751
+SHA1 (patch-examples_CMakeLists.txt) = 16198ee7e3cd8895ac1c66e24e25bf76368657be

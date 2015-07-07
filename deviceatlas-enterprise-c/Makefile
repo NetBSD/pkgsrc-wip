@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.1 2015/07/07 13:21:28 devnexen Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/07 15:13:37 devnexen Exp $
 
-DISTNAME=	deviceatlas_c_${PKGVERSION}
+DISTNAME=	deviceatlas_c_${API_VERSION}
 EXTRACT_SUFX=	.zip
-PKGNAME=	deviceatlas-enterprise-c
-PKGVERSION=	0.9
-PKGREVISION=	0
+PKGNAME=	deviceatlas-enterprise-c-${API_VERSION}
+API_VERSION=	0.9
+PKGREVISION=	1
 CATEGORIES=	net devel
-MASTER_SITES=	manual
+MASTER_SITES=	#
 
 USE_LANGUAGES=	c c++
 
-HOMEPAGE=	https://www.deviceatlas.com
+HOMEPAGE=	https://www.deviceatlas.com/
 COMMENT=	DeviceAtlas Device Detection C API
 LICENSE=	deviceatlas-enterprise-c-license
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-${PKGVERSION}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	cmake
 
 RESTRICTED=		License prohibits redistribution
@@ -35,7 +35,7 @@ FETCH_MESSAGE+= "and put into"
 FETCH_MESSAGE+= "${DISTDIR}"
 
 pre-build:
-	@cd ${WRKSRC} && cmake -DINSTALL_PREFIX=${LOCALBASE}
+	cd ${WRKSRC} && cmake -DINSTALL_PREFIX=${LOCALBASE}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,3 +1,5 @@
+$NetBSD: patch-CMakeLists.txt,v 1.2 2015/07/07 15:13:37 devnexen Exp $
+cmake install library, C headers and documentation.
 --- CMakeLists.txt.orig	2015-05-29 14:26:36.000000000 +0000
 +++ CMakeLists.txt	2015-07-07 09:59:07.000000000 +0000
 @@ -20,6 +20,10 @@
