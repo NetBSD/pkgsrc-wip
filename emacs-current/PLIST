@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.172 2015/06/29 08:48:09 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.173 2015/07/07 19:32:13 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2933,6 +2933,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/keyswap.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/keyswap.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/landmark.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/ledit.el.gz
@@ -3276,8 +3278,6 @@ share/emacs/${PKGVERSION}/lisp/play/handwrite.el.gz
 share/emacs/${PKGVERSION}/lisp/play/handwrite.elc
 share/emacs/${PKGVERSION}/lisp/play/hanoi.el.gz
 share/emacs/${PKGVERSION}/lisp/play/hanoi.elc
-share/emacs/${PKGVERSION}/lisp/play/landmark.el.gz
-share/emacs/${PKGVERSION}/lisp/play/landmark.elc
 share/emacs/${PKGVERSION}/lisp/play/life.el.gz
 share/emacs/${PKGVERSION}/lisp/play/life.elc
 share/emacs/${PKGVERSION}/lisp/play/morse.el.gz
