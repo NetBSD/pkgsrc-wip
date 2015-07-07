@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6216 2015/07/05 13:42:14 khorben Exp $
+# $Id: Makefile,v 1.6217 2015/07/07 16:29:33 leot1990 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3918,6 +3918,7 @@ SUBDIR+=	zathura-djvu
 SUBDIR+=	zathura-mupdf
 SUBDIR+=	zathura-poppler
 SUBDIR+=	zathura-ps
+SUBDIR+=	zbar
 SUBDIR+=	zetacoin
 SUBDIR+=	zinf
 SUBDIR+=	ziparchive
