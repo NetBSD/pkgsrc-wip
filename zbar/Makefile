@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/07/07 16:24:57 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/07 16:38:43 leot1990 Exp $
 
 DISTNAME=	zbar-0.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zbar/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://zbar.sourceforge.net/
 COMMENT=	Bar code reader
 LICENSE=	gnu-lgpl-v2.1
