@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6218 2015/07/07 17:56:29 devnexen Exp $
+# $Id: Makefile,v 1.6219 2015/07/07 20:53:07 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -645,6 +645,7 @@ SUBDIR+=	fastrpc
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
+SUBDIR+=	fbsd2pkg
 SUBDIR+=	fceux
 SUBDIR+=	fcgiwrap
 SUBDIR+=	fdm
