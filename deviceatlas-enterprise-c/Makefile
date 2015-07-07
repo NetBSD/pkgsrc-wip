@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2015/07/07 15:13:37 devnexen Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/07 15:42:02 devnexen Exp $
 
 DISTNAME=	deviceatlas_c_${API_VERSION}
 EXTRACT_SUFX=	.zip
 PKGNAME=	deviceatlas-enterprise-c-${API_VERSION}
 API_VERSION=	0.9
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	net devel
 MASTER_SITES=	#
 
 USE_LANGUAGES=	c c++
 
-HOMEPAGE=	https://www.deviceatlas.com/
+HOMEPAGE=	https://www.deviceatlas.com/deviceatlas-haproxy-module
 COMMENT=	DeviceAtlas Device Detection C API
 LICENSE=	deviceatlas-enterprise-c-license
 
