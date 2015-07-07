@@ -1,0 +1,21 @@
+--- CMakeLists.txt.orig	2015-05-29 14:26:36.000000000 +0000
++++ CMakeLists.txt	2015-07-07 09:59:07.000000000 +0000
+@@ -20,6 +20,10 @@
+ include_directories(${PCRE_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+ set(da PROPERTIES SOVERSION 2.0)
++set(CMAKE_SKIP_RPATH FALSE)
++set(CMAKE_SKIP_INSTALL_RPATH FALSE)
++set(CMAKE_INSTALL_RPATH_USE_LINK_RPATH TRUE)
++set(CMAKE_INSTALL_RPATH "${INSTALL_PREFIX}/lib")
+ 
+ add_library (da ${LIBTYPE} json.c dac.c)
+ target_link_libraries(da ${PCRELIB})
+@@ -44,3 +48,7 @@
+     add_executable(dasample dasample.c)
+     target_link_libraries(dasample da)
+ endif()
++
++install(TARGETS da DESTINATION ${INSTALL_PREFIX}/lib)
++install(FILES dac.h dac_json.h DESTINATION ${INSTALL_PREFIX}/include)
++install(DIRECTORY Documentation/ DESTINATION ${INSTALL_PREFIX}/share/doc/deviceatlas-enterprise-c)
