@@ -1,0 +1,3 @@
+The fbsd2pkg command converts a FreeBSD port framework to a pkgsrc package.
+Most common constructs are converted, but in most cases, manual editing is
+required to reach a working package.
