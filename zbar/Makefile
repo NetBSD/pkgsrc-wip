@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/07/07 18:09:04 leot1990 Exp $
+# $NetBSD: Makefile,v 1.5 2015/07/07 18:50:58 leot1990 Exp $
 
 DISTNAME=	zbar-0.10
 CATEGORIES=	graphics
@@ -27,7 +27,12 @@ PKGCONFIG_OVERRIDE+=	zbar.pc.in
 
 .if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
 TEST_TARGET=	check
+
 USE_LANGUAGES=	c c++
+
+REPLACE_PYTHON+=	test/barcodetest.py
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/python/application.mk"
 .endif
 
 .include "options.mk"
