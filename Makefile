@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6219 2015/07/07 20:53:07 outpaddling Exp $
+# $Id: Makefile,v 1.6220 2015/07/08 12:11:53 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1399,7 +1399,6 @@ SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
-SUBDIR+=	libXaw3d
 SUBDIR+=	libXprintAppUtil
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
