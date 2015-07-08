@@ -1,0 +1,26 @@
+# $NetBSD: Makefile,v 1.1 2015/07/08 22:03:20 khorben Exp $
+
+.include "../../devel/radare2/Makefile.common"
+
+DISTNAME=	radare2-bindings-${RADARE2_VERSION}
+PKGNAME=	${PYPKGPREFIX}-radare2-${RADARE2_VERSION}
+CATEGORIES=	devel
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	khorben@defora.org
+COMMENT=	Reverse engineering framework (Python bindings)
+LICENSE=	gnu-gpl-v3
+
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	gmake
+
+BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
+
+HAS_CONFIGURE=	yes
+CONFIGURE_ARGS+=--enable=python
+
+MAKE_ENV+=	PYTHON_CONFIG=${PYTHONCONFIG}
+
+.include "../../devel/radare2/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../mk/bsd.pkg.mk"

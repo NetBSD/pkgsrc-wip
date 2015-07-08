@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/08 22:03:20 khorben Exp $
+
+SHA1 (radare2-bindings-0.9.9.tar.xz) = e7f536e490da7a4e98c94ae3fb7e6529abae1dff
+RMD160 (radare2-bindings-0.9.9.tar.xz) = 438902d9e20d89cc76e7ccfecbd192c64da6d6ed
+Size (radare2-bindings-0.9.9.tar.xz) = 539100 bytes
