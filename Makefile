@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6221 2015/07/08 22:04:52 khorben Exp $
+# $Id: Makefile,v 1.6222 2015/07/09 03:32:04 othyro Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2339,7 +2339,6 @@ SUBDIR+=	php-dtrace
 SUBDIR+=	php-gtk2
 SUBDIR+=	php-imagick
 SUBDIR+=	php-libawl-git
-SUBDIR+=	php-mongo
 SUBDIR+=	php-recode
 SUBDIR+=	php-rrd
 SUBDIR+=	php-tclink
