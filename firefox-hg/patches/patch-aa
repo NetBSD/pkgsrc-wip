@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2015/01/30 01:30:08 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.7 2015/07/09 10:08:00 thomasklausner Exp $
 
---- configure.in.orig	2015-01-08 13:43:53.000000000 +0000
+--- configure.in.orig	2015-07-09 06:11:33.000000000 +0000
 +++ configure.in
-@@ -3661,11 +3674,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3642,11 +3642,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -15,7 +15,16 @@ $NetBSD: patch-aa,v 1.6 2015/01/30 01:30:08 thomasklausner Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -5123,6 +5136,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -4337,7 +4333,7 @@ cairo-cocoa)
+     MOZ_USER_DIR="Mozilla"
+     MOZ_FS_LAYOUT=bundle
+     # skip event loop instrumentation on UIKit for now
+-    if test "$MOZ_WIDGET_TOOLKIT" == "cocoa"; then
++    if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
+       MOZ_INSTRUMENT_EVENT_LOOP=1
+     fi
+     ;;
+@@ -5108,6 +5104,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -25,7 +34,7 @@ $NetBSD: patch-aa,v 1.6 2015/01/30 01:30:08 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5209,6 +5225,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
+@@ -5234,6 +5233,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
      [ac_cv_c_attribute_aligned],
      [ac_cv_c_attribute_aligned=0
       CFLAGS_save="${CFLAGS}"
@@ -83,7 +92,7 @@ $NetBSD: patch-aa,v 1.6 2015/01/30 01:30:08 thomasklausner Exp $
       CFLAGS="${CFLAGS} -Werror"
       for ac_cv_c_attr_align_try in 64 32 16 8; do
         echo "trying $ac_cv_c_attr_align_try"
-@@ -5226,6 +5293,89 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5251,6 +5301,89 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -173,7 +182,7 @@ $NetBSD: patch-aa,v 1.6 2015/01/30 01:30:08 thomasklausner Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -8048,6 +8200,48 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8131,6 +8264,48 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
