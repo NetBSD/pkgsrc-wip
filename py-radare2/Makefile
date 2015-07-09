@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/08 22:54:18 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/09 00:33:36 khorben Exp $
 
 .include "../../devel/radare2/Makefile.common"
 
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
+USE_TOOLS+=	pkg-config
 
 BUILD_DEPENDS+=	radare2-valabind-[0-9]*:../../devel/radare2-valabind
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
