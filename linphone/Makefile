@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/08/11 23:10:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.37 2015/07/10 09:55:40 thomasklausner Exp $
 
 DISTNAME=	linphone-3.5.2
 PKGREVISION=	2
@@ -14,7 +14,6 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake intltool perl pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
-USE_GNU_READLINE=	yes # rl_hook_func_t et al.
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-osip=${BUILDLINK_PREFIX.libosip2}
@@ -28,6 +27,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--enable-macsnd
 . if !empty(PKGSRC_COMPILER:Mgcc*)
