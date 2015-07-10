@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6223 2015/07/09 18:04:51 khorben Exp $
+# $Id: Makefile,v 1.6224 2015/07/10 12:47:26 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -363,7 +363,6 @@ SUBDIR+=	converttomp3
 SUBDIR+=	cool-old-term-git
 SUBDIR+=	cops
 SUBDIR+=	copytape
-SUBDIR+=	couchdb-glib
 SUBDIR+=	courierpassd
 SUBDIR+=	cowpatty
 SUBDIR+=	coxeter
@@ -621,7 +620,6 @@ SUBDIR+=	evas-xpm
 SUBDIR+=	evas_generic_loaders
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
-SUBDIR+=	evolution-couchdb
 SUBDIR+=	evolution-rss
 SUBDIR+=	evolution-tray
 SUBDIR+=	ewl

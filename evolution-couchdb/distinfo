@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2010/12/23 21:59:19 noud4 Exp $
-
-SHA1 (evolution-couchdb-0.5.1.tar.bz2) = adae77f6150ae3ec59a31f82f3c6bbd9df054b20
-RMD160 (evolution-couchdb-0.5.1.tar.bz2) = 880f4f637d074a7f9ff27f069a30ea75c5c0b955
-Size (evolution-couchdb-0.5.1.tar.bz2) = 283228 bytes
