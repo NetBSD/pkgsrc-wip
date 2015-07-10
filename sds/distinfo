@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/07/10 21:24:03 travis-paul Exp $
+
+SHA1 (sds/master-d86a9b85cb4fb96430c7479ae6c956f2b605bbd1.zip) = 382c40a241dc22c7a36430cf33cbc3073425b58e
+RMD160 (sds/master-d86a9b85cb4fb96430c7479ae6c956f2b605bbd1.zip) = 9a9e5d576e6db258365ac56f54ba2299a419aaa2
+Size (sds/master-d86a9b85cb4fb96430c7479ae6c956f2b605bbd1.zip) = 24051 bytes
+SHA1 (patch-Makefile) = 95d581795ef4adb3ad2fe2cfdd566666bccb0540

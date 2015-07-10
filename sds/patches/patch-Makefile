@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2015/07/10 21:24:03 travis-paul Exp $
+
+* Add target for object file and shared object.
+
+--- Makefile.orig	2014-02-06 16:10:16.000000000 +0000
++++ Makefile
+@@ -1,8 +1,14 @@
+-all: sds-test
++all: sds-test libsds.so
++
++sds.o: sds.c sds.h
++	$(CC) -c -fpic -Wall -std=c99 -pedantic -O2 sds.c
++
++libsds.so: sds.o
++	$(CC) -shared -o libsds.so sds.o
+ 
+ sds-test: sds.c sds.h testhelp.h
+ 	$(CC) -o sds-test sds.c -Wall -std=c99 -pedantic -O2 -DSDS_TEST_MAIN
+ 	@echo ">>> Type ./sds-test to run the sds.c unit tests."
+ 
+ clean:
+-	rm -f sds-test
++	rm -f sds-test sds.o libsds.so
