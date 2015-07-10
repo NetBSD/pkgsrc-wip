@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/10 14:03:21 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.4 2015/07/10 09:50:01 thomasklausner Exp $
 
 DISTNAME=	why-2.29
 CATEGORIES=	devel
@@ -15,7 +14,7 @@ USE_TOOLS+= 	gmake
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
+.include "../../devel/ocamlgraph/buildlink3.mk"
 .include "../../x11/ocaml-lablgtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../wip/ocamlgraph/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
