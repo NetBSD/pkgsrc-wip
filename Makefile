@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6224 2015/07/10 12:47:26 thomasklausner Exp $
+# $Id: Makefile,v 1.6225 2015/07/10 17:38:20 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -800,7 +800,6 @@ SUBDIR+=	gimp-webp
 SUBDIR+=	gin
 SUBDIR+=	girara
 SUBDIR+=	git
-SUBDIR+=	git-contrib
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-modes-git
 SUBDIR+=	gitg
