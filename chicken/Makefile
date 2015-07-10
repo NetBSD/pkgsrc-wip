@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/06/09 18:28:17 leot1990 Exp $
+# $NetBSD: Makefile,v 1.14 2015/07/10 12:51:52 leot1990 Exp $
 
-DISTNAME=	chicken-4.10.0rc1
+DISTNAME=	chicken-4.10.0rc2
 CATEGORIES=	lang
-MASTER_SITES=	http://code.call-cc.org/dev-snapshots/2015/06/07/
+MASTER_SITES=	http://code.call-cc.org/dev-snapshots/2015/07/04/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
