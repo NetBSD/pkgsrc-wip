@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/10 22:45:07 jihbed Exp $
+
+SHA1 (ccdproc-0.3.1.tar.gz) = d830d0d92ae8cf131972a22aa7055ec4afdb56e1
+RMD160 (ccdproc-0.3.1.tar.gz) = 0be0c95e0154309437d9a9cc2c95727b363dbaa2
+Size (ccdproc-0.3.1.tar.gz) = 642280 bytes
