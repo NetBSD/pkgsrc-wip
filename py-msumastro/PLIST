@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/26 20:00:13 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/11 00:36:05 jihbed Exp $
 bin/quick_add_keys_to_file.py
 bin/run_astrometry.py
 bin/run_patch.py
@@ -53,18 +53,6 @@ ${PYSITELIB}/msumastro/image.pyo
 ${PYSITELIB}/msumastro/image_collection.py
 ${PYSITELIB}/msumastro/image_collection.pyc
 ${PYSITELIB}/msumastro/image_collection.pyo
-${PYSITELIB}/msumastro/reduction/__init__.py
-${PYSITELIB}/msumastro/reduction/__init__.pyc
-${PYSITELIB}/msumastro/reduction/__init__.pyo
-${PYSITELIB}/msumastro/reduction/reduction.py
-${PYSITELIB}/msumastro/reduction/reduction.pyc
-${PYSITELIB}/msumastro/reduction/reduction.pyo
-${PYSITELIB}/msumastro/reduction/tests/__init__.py
-${PYSITELIB}/msumastro/reduction/tests/__init__.pyc
-${PYSITELIB}/msumastro/reduction/tests/__init__.pyo
-${PYSITELIB}/msumastro/reduction/tests/test_reduction.py
-${PYSITELIB}/msumastro/reduction/tests/test_reduction.pyc
-${PYSITELIB}/msumastro/reduction/tests/test_reduction.pyo
 ${PYSITELIB}/msumastro/scripts/__init__.py
 ${PYSITELIB}/msumastro/scripts/__init__.pyc
 ${PYSITELIB}/msumastro/scripts/__init__.pyo
@@ -83,15 +71,9 @@ ${PYSITELIB}/msumastro/scripts/run_standard_header_process.pyo
 ${PYSITELIB}/msumastro/scripts/run_triage.py
 ${PYSITELIB}/msumastro/scripts/run_triage.pyc
 ${PYSITELIB}/msumastro/scripts/run_triage.pyo
-${PYSITELIB}/msumastro/scripts/run_trim.py
-${PYSITELIB}/msumastro/scripts/run_trim.pyc
-${PYSITELIB}/msumastro/scripts/run_trim.pyo
 ${PYSITELIB}/msumastro/scripts/script_helpers.py
 ${PYSITELIB}/msumastro/scripts/script_helpers.pyc
 ${PYSITELIB}/msumastro/scripts/script_helpers.pyo
-${PYSITELIB}/msumastro/scripts/shifter.py
-${PYSITELIB}/msumastro/scripts/shifter.pyc
-${PYSITELIB}/msumastro/scripts/shifter.pyo
 ${PYSITELIB}/msumastro/scripts/sort_files.py
 ${PYSITELIB}/msumastro/scripts/sort_files.pyc
 ${PYSITELIB}/msumastro/scripts/sort_files.pyo

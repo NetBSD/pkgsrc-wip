@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/12/31 13:58:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/07/11 00:36:05 jihbed Exp $
 
-DISTNAME=	msumastro-0.5.0
+DISTNAME=	msumastro-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/m/msumastro/
@@ -8,9 +8,10 @@ MASTER_SITES=	https://pypi.python.org/packages/source/m/msumastro/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/mwcraig/msumastro
 COMMENT=	Process FITS files
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../wip/py-astropy
+DEPENDS+=      ${PYPKGPREFIX}-ccdproc>=0.3.1:../../wip/py-ccdproc
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-astropy
 
