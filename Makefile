@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6225 2015/07/10 17:38:20 khorben Exp $
+# $Id: Makefile,v 1.6226 2015/07/11 11:40:43 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1344,7 +1344,6 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kawa
 SUBDIR+=	keepassx-git
-SUBDIR+=	keybinder
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	khard-git
@@ -1600,7 +1599,6 @@ SUBDIR+=	lsyncd
 SUBDIR+=	ltp
 SUBDIR+=	ltrace
 SUBDIR+=	lua-MessagePack
-SUBDIR+=	lua-keybinder
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-pgsql
 SUBDIR+=	luasocket
@@ -2748,7 +2746,6 @@ SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kabuki
 SUBDIR+=	py-kcs11
-SUBDIR+=	py-keybinder
 SUBDIR+=	py-keyczar
 SUBDIR+=	py-khayyam
 SUBDIR+=	py-kineticlib
