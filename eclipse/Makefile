@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/20 16:15:02 mayureshw Exp $
+# $NetBSD: Makefile,v 1.7 2015/07/11 13:02:06 khorben Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	eclipse-${VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.2.1-201209141800/eclipse-SDK-4.2.1-linux-gtk.tar.gz&url=http://download.nus.edu.sg/mirror/eclipse//eclipse/downloads/drops4/R-4.2.1-201209141800/eclipse-SDK-4.2.1-linux-gtk.tar.gz&mirror_id=580
 VERSION=	4.2.1
 
-MAINTAINER=	khorben@defora.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
 LICENSE=	eclipse-license
