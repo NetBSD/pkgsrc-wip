@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/11 00:59:05 jihbed Exp $
+
+SHA1 (reducer-0.1.tar.gz) = 8f698802991f1d5d1df5ec6b29b9f09495bd003a
+RMD160 (reducer-0.1.tar.gz) = 062da56a69a2fc14783327eceed0f043cf1822b5
+Size (reducer-0.1.tar.gz) = 11657177 bytes
