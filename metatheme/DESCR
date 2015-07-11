@@ -1,9 +1,0 @@
-This is metatheme, a way of managing "theme sets" that accomodate
-gtk, your window manager, etc etc.
-
-Basic Usage:
-	There is a capplet to select/apply themes.
-	To install a new theme (or one you've created):
- 	* if it is a tarball untar into ~/.metathemes
-	* if it is a directory copy it into ~/.metathemes
-	Themes can also be installed in $prefix/share/metathemes

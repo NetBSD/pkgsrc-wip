@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6227 2015/07/11 12:02:04 krytarowski Exp $
+# $Id: Makefile,v 1.6228 2015/07/11 14:56:48 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1684,7 +1684,6 @@ SUBDIR+=	menumaker
 SUBDIR+=	meta-tracker
 SUBDIR+=	metalog
 SUBDIR+=	metasploit
-SUBDIR+=	metatheme
 SUBDIR+=	metis
 SUBDIR+=	mg-cvs
 SUBDIR+=	mg-lsh
