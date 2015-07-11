@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6226 2015/07/11 11:40:43 krytarowski Exp $
+# $Id: Makefile,v 1.6227 2015/07/11 12:02:04 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3110,7 +3110,6 @@ SUBDIR+=	py-tasphyne
 SUBDIR+=	py-teafiles
 SUBDIR+=	py-telepathy
 SUBDIR+=	py-teng
-SUBDIR+=	py-terminator
 SUBDIR+=	py-texml
 SUBDIR+=	py-thLib
 SUBDIR+=	py-theano
