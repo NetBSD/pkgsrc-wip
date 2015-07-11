@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/09 11:03:37 krytarowski Exp $
+# $NetBSD: Makefile,v 1.7 2015/07/11 11:31:52 krytarowski Exp $
 
 DISTNAME=	terminator-0.97
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ USE_TOOLS+=	intltool
 .include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/py-notify-python/buildlink3.mk"
-.include "../../wip/py-keybinder/buildlink3.mk"
+.include "../../x11/py-keybinder/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/py-vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
