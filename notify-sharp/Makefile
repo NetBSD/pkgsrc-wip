@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/06/01 12:49:37 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/11 14:33:36 thomasklausner Exp $
 #
 
 DISTNAME=	notify-sharp_0.4.0~r3032.orig
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c
 
 PKGCONFIG_OVERRIDE+=	notify-sharp.pc.in
 
-.include "../../lang/mono2/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
