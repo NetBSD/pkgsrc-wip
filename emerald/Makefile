@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/11/14 13:55:33 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.5 2015/07/11 09:56:34 thomasklausner Exp $
 
 DISTNAME=	emerald-0.8.8
 CATEGORIES=	wm
-MASTER_SITES=	http://releases.compiz.org/0.8.8/
+MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/emerald/emerald-0.8.8.tar.bz2/6c6fbef2009461392ba927586df6635e/
+#http://releases.compiz.org/0.8.8/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
