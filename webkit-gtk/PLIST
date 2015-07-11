@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/04/19 10:05:24 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/07/11 22:17:03 thomasklausner Exp $
 bin/MiniBrowser
 bin/jsc
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
@@ -272,16 +272,16 @@ include/webkitgtk-4.0/webkitdom/webkitdomdefines.h
 lib/girepository-1.0/JavaScriptCore-4.0.typelib
 lib/girepository-1.0/WebKit2-4.0.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
-lib/libjavascriptcoregtk-4.0.${RUBY_DLEXT}
+lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
 lib/libjavascriptcoregtk-4.0.so.18.1.8
-lib/libwebkit2gtk-4.0.${RUBY_DLEXT}
+lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
 lib/libwebkit2gtk-4.0.so.37.6.4
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
-lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.${RUBY_DLEXT}
+lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
 libexec/webkit2gtk-4.0/WebKitNetworkProcess
 libexec/webkit2gtk-4.0/WebKitPluginProcess
 libexec/webkit2gtk-4.0/WebKitPluginProcess2
