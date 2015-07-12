@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/13 19:31:34 leot1990 Exp $
+# $NetBSD: Makefile,v 1.20 2015/07/12 00:38:17 thomasklausner Exp $
 
 DISTNAME=	vimb-2.10
 CATEGORIES=	www
@@ -18,6 +18,6 @@ MAKE_ENV+=	EXAMPLEDIR="${EGDIR}"
 MAKE_ENV+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 
 .include "../../net/libsoup/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
