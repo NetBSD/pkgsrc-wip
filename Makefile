@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6230 2015/07/12 00:25:08 thomasklausner Exp $
+# $Id: Makefile,v 1.6231 2015/07/12 00:35:53 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -849,6 +849,7 @@ SUBDIR+=	gnomad2
 SUBDIR+=	gnome
 SUBDIR+=	gnome-activity-journal
 SUBDIR+=	gnome-alsamixer
+SUBDIR+=	gnome-apps
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-core
