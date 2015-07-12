@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/08/13 08:27:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/07/12 18:57:34 thomasklausner Exp $
 
 DISTNAME=	p5-Packager-Utils-0.0
 CATEGORIES=	pkgtools
@@ -36,7 +36,7 @@ DEPENDS+=	p5-MooX-Roles-Pluggable-[0-9]*:../../devel/p5-MooX-Roles-Pluggable
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-SQL-Translator-[0-9]*:../../databases/p5-SQL-Translator
 DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
-DEPENDS+=	{perl>=5.004,p5-CPAN-[0-9]*}:../../devel/p5-CPAN
+#DEPENDS+=	{perl>=5.004,p5-CPAN-[0-9]*}:../../devel/p5-CPAN
 DEPENDS+=	p5-CPAN-DistnameInfo-[0-9]*:../../devel/p5-CPAN-DistnameInfo
 DEPENDS+=	p5-Carp-Assert-[0-9]*:../../devel/p5-Carp-Assert
 DEPENDS+=	p5-IO-CaptureOutput-[0-9]*:../../devel/p5-IO-CaptureOutput
