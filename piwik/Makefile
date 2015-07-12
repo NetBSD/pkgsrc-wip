@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/05/02 02:58:45 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/12 07:18:21 makoto Exp $
 
-DISTNAME=		2.13.0
+DISTNAME=		2.14.0
 PKGNAME=		piwik-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=piwik/piwik/archive/}
@@ -40,6 +40,7 @@ DEPENDS+=	php5[0-9]-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=	php5[0-9]-geoip-[0-9]*:../../net/php-geoip
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 PHP_VERSIONS_ACCEPTED= 54 55 56
 #PHP_VERSION_REQD= 56
@@ -72,10 +73,13 @@ REPLACE_BASH+=	tests/travis/*.sh
 
 #REPLACE_PHP+=	console
 
-REPLACE_PYTHON+=misc/log-analytics/import_logs.py
+#REPLACE_PYTHON+=misc/log-analytics/import_logs.py
 
-MOCHA_VERSION=	2.1.0
+MOCHA_VERSION=	2.2.5
+Q_VERSION=	1.4.1
+
 PLIST_SUBST+=	MOCHA_VERSION=${MOCHA_VERSION}
+PLIST_SUBST+=	Q_VERSION=${Q_VERSION}
 
 SUBST_CLASSES+=		build
 SUBST_MESSAGE.build=	Fix build script, (shebang and PATH)
