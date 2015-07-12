@@ -155,8 +155,6 @@ Suggested ready to import packages
 	o gcolor2
 	o ilbc-rfc3951
 	o ispell-dictionaries
-	o keybinder
-	o lua-keybinder
 	o marathon-tempus-irae
 	o matiec
 	o pear-Net_URL2
@@ -165,8 +163,6 @@ Suggested ready to import packages
 	o pnmcurve
 	o py-csp # XXX import this as py-pycsp
 	o py-jswebkit
-	o py-keybinder
-	o py-terminator
 	o rar4
 	o send-pr
 	o tqsllib
