@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/18 18:18:19 schnoebe Exp $
-# $Id: Makefile,v 1.2 2015/03/18 18:18:19 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/12 00:35:40 thomasklausner Exp $
 
 PKGNAME=	${DISTNAME:C/source-//:C/-beta/b/}
 DISTNAME=	xtrkcad-source-4.2.0-beta1
@@ -13,7 +12,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/source-//}
 
-USE_TOOLS+=	gmake cmake
+USE_TOOLS+=	gmake cmake pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_CMAKE=	yes
@@ -21,7 +20,7 @@ USE_CMAKE=	yes
 .include "../../devel/gettext-lib/buildlink3.mk"
 # .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 # .include "../../www/libgtkhtml/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
