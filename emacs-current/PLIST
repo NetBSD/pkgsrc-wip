@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.173 2015/07/07 19:32:13 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.174 2015/07/13 21:37:30 thomasklausner Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3444,6 +3444,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/prog-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/prog-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/project.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/project.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/prolog.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/prolog.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ps-mode.el.gz
