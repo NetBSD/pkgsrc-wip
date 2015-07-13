@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2008/10/17 16:05:34 marko_schuetz Exp $
-#
+# $NetBSD: Makefile,v 1.2 2015/07/13 15:12:13 thomasklausner Exp $
 
-DISTNAME=	yapgvb-1.1.3
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	yapgvb-1.2.3-source
+PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/-source//}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yapgvb/}
+MASTER_SITES=	https://yapgvb.googlecode.com/files/
 
 MAINTAINER=	MarkoSchuetz@web.de
-HOMEPAGE=	${MASTER_SITE_SOURCEFORGE:=yapgvb/}
-COMMENT=	Yapgvb is a shiny new way to use python and graphviz at the same time
+HOMEPAGE=	https://code.google.com/p/yapgvb/
+COMMENT=	Yet Another Python Graphviz Binding
+LICENSE=	modified-bsd
 
 SUBST_CLASSES+=                 fix-paths
 SUBST_STAGE.fix-paths=          pre-configure
@@ -19,14 +19,12 @@ SUBST_SED.fix-paths+=           -e 's,/usr/include,${PREFIX}/include,g'
 SUBST_SED.fix-paths+=           -e 's,/usr/lib,${PREFIX}/lib,g'
 SUBST_SED.fix-paths+=           -e 's,boost_python,boost_python-mt,g'
 
-
-PYDISTUTILSPKG=	yes
-
-WRKSRC=		${WRKDIR}/yapgvb
 USE_LANGUAGES=	c c++
+EGG_NAME=	${DISTNAME:S/-source//}
 
-.include "../../devel/boost-python/buildlink3.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2.3
+
+.include "../../devel/py-boost/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
