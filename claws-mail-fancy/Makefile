@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/06/07 14:24:48 yrmt Exp $
-#
+# $NetBSD: Makefile,v 1.6 2015/07/13 09:01:43 thomasklausner Exp $
 
 DISTNAME=	fancy-0.9.15
 PKGNAME=	claws-mail-${DISTNAME}
 CATEGORIES=	mail
-MASTER_SITES=	http://www.claws-mail.org/downloads/plugins/
+MASTER_SITES=	http://www.claws-mail.org/downloads/plugins_obsolete/
 
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://www.claws-mail.org/downloads/plugins/
@@ -21,6 +20,6 @@ USE_PKGLOCALEDIR=	yes
 #.include "../../net/libsoup/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
