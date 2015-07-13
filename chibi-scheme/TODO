@@ -1,0 +1,8 @@
+During the install phase sometimes I have:
+
+ [...]
+ gmake: write error: stdout
+
+Diagnose further this problem, especially regarding why sometimes appears and
+why sometimes not (and the installation succesfully complete in the latter
+case).
