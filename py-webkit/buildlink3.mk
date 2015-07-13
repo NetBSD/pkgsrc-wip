@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2014/08/03 22:16:38 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2015/07/13 15:11:46 thomasklausner Exp $
 
 BUILDLINK_TREE+=	py-webkitgtk
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.py-webkitgtk?=	../../wip/py-webkit
 
 
 .include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .endif	# PY_WEBKITGTK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py-webkitgtk
