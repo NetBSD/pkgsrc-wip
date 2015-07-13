@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/13 02:29:29 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/13 02:57:38 leot1990 Exp $
 
 DISTNAME=	chibi-scheme-0.7.3
 CATEGORIES=	lang
@@ -20,6 +20,8 @@ REPLACE_FILES.chibi-scheme=	tools/chibi-doc tools/chibi-ffi tools/snow-chibi
 
 CFLAGS.NetBSD+=	-D_KMEMUSER	# Needed for kinfo_proc in <sys/sysctl.h>
 
+# XXX: Avoid `gmake: write error: stdout' error during the install phase
+INSTALL_MAKE_FLAGS+=	-s
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_ENV+=	PREFIX=${PREFIX}
 
