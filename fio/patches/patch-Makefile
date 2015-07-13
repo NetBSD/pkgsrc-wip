@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2015/07/13 18:54:04 leot1990 Exp $
+
+Change the old syntax (supported only by fmt(1) in coreutils) to the -g and -w
+options.
+
+--- Makefile.orig	2015-05-08 00:19:25.000000000 +0000
++++ Makefile
+@@ -276,7 +276,7 @@ override CFLAGS += -DFIO_VERSION='"$(FIO
+ 	@$(CC) -MM $(CFLAGS) $(CPPFLAGS) $*.c > $*.d
+ 	@mv -f $*.d $*.d.tmp
+ 	@sed -e 's|.*:|$*.o:|' < $*.d.tmp > $*.d
+-	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -1 | \
++	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -g 0 -w 1 | \
+ 		sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
+ 	@rm -f $*.d.tmp
+ 
