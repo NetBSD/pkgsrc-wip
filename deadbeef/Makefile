@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/12/04 13:34:47 roelants Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/13 10:30:47 roelants Exp $
 #
 
 DISTNAME=	deadbeef-0.5.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=deadbeef/}
 EXTRACT_SUFX=	.tar.bz2
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://deadbeef.sourceforge.net/
@@ -16,6 +16,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake intltool pkg-config
+
+CONFIGURE_ARGS+=	--disable-cdda
 
 LDFLAGS+=	-lintl
 MAKE_ENV+=	OSS_LIBS=${LIBOSSAUDIO}
@@ -33,7 +35,7 @@ BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../misc/libcdio/buildlink3.mk"
+#.include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
