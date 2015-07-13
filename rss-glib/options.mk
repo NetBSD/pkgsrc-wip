@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2014/05/09 07:38:51 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.8 2015/07/13 09:11:26 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rss-glib
 
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-python
 ### Enable mono support
 ###
 .if !empty(PKG_OPTIONS:Mmono)
-.  include "../../lang/mono2/buildlink3.mk"
+.  include "../../lang/mono/buildlink3.mk"
 .  include "../../x11/gtk-sharp/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-mono=yes
 PLIST_SRC+=		${PKGDIR}/PLIST.mono
