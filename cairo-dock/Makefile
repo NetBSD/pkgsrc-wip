@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/15 20:14:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/13 09:06:07 thomasklausner Exp $
 
 DISTNAME=	cairo-dock-3.2.1
 CATEGORIES=	x11
@@ -15,6 +15,9 @@ USE_TOOLS+=	gmake pkg-config
 CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR}
 
 PKGCONFIG_OVERRIDE=	src/gldit/gldi.pc.in cairo-dock.pc.in
+REPLACE_SH+=		data/scripts/initial-setup.sh
+REPLACE_SH+=		data/scripts/cairo-dock-package-theme.sh
+REPLACE_SH+=		data/scripts/help_scripts.sh
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
