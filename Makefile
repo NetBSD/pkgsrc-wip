@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6233 2015/07/12 22:07:29 thomasklausner Exp $
+# $Id: Makefile,v 1.6234 2015/07/13 02:32:24 leot1990 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -305,6 +305,7 @@ SUBDIR+=	chbg
 SUBDIR+=	checkstyle
 SUBDIR+=	chemeq
 SUBDIR+=	chems
+SUBDIR+=	chibi-scheme
 SUBDIR+=	chicken
 SUBDIR+=	choosefont
 SUBDIR+=	chora
