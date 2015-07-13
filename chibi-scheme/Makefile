@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/07/13 02:57:38 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2015/07/13 09:12:25 leot1990 Exp $
 
 DISTNAME=	chibi-scheme-0.7.3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ashinn/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=ashinn/chibi-scheme/}
+HOMEPAGE=	http://synthcode.com/wiki/chibi-scheme
 COMMENT=	Minimal Scheme Implementation for use as an Extension Language
 LICENSE=	modified-bsd
 
@@ -22,8 +22,8 @@ CFLAGS.NetBSD+=	-D_KMEMUSER	# Needed for kinfo_proc in <sys/sysctl.h>
 
 # XXX: Avoid `gmake: write error: stdout' error during the install phase
 INSTALL_MAKE_FLAGS+=	-s
-MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
-MAKE_ENV+=	PREFIX=${PREFIX}
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
+MAKE_ENV+=		PREFIX=${PREFIX}
 
 TEST_TARGET=	test
 
