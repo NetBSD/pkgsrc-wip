@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6237 2015/07/13 09:37:53 thomasklausner Exp $
+# $Id: Makefile,v 1.6238 2015/07/13 09:41:34 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -214,7 +214,6 @@ SUBDIR+=	bird6
 SUBDIR+=	bitchx
 SUBDIR+=	bitcoin
 SUBDIR+=	bkchem
-SUBDIR+=	blam
 SUBDIR+=	bleachbit
 SUBDIR+=	blink
 SUBDIR+=	blueproxy
@@ -724,7 +723,6 @@ SUBDIR+=	freevrrpd
 SUBDIR+=	fribid
 SUBDIR+=	fricas
 SUBDIR+=	frobby
-SUBDIR+=	froggymicroblog
 SUBDIR+=	fs-uae
 SUBDIR+=	fs-uae-dev
 SUBDIR+=	fs-uae-launcher
@@ -3870,7 +3868,6 @@ SUBDIR+=	wbox
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
 SUBDIR+=	webkit-gtk3
-SUBDIR+=	webkit-sharp
 SUBDIR+=	weland
 SUBDIR+=	weplab
 SUBDIR+=	west
