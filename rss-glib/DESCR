@@ -1,6 +1,0 @@
-RSS-GLib is a wrapper around the fantastic libmrss library for parsing
-rss, atom, and other syndications.  The reason for this was two-fold.
-The libmrss, while quite powerful, is a little more complex than needed
-for most projects.  For this reason RSS-GLib aims to wrap that into a
-simpler API.  The primary reason, however, is that gobject is so easy
-to wrap into various languages

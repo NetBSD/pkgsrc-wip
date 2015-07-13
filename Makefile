@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6236 2015/07/13 09:07:17 thomasklausner Exp $
+# $Id: Makefile,v 1.6237 2015/07/13 09:37:53 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1493,7 +1493,6 @@ SUBDIR+=	libgme
 SUBDIR+=	libgnome-java
 SUBDIR+=	libgrass5
 SUBDIR+=	libgrss
-SUBDIR+=	libgtask
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libgtksourceviewmm
@@ -3407,7 +3406,6 @@ SUBDIR+=	rpki-svn
 SUBDIR+=	rpm5
 SUBDIR+=	rsget
 SUBDIR+=	rsound
-SUBDIR+=	rss-glib
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstart

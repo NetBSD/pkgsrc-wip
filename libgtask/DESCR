@@ -1,3 +1,0 @@
-GTask is a mini-framework to simplify asynchronous and concurrent
-programming with C and GObject. GTask makes event driven programming
-easier whether you are in C or in a higher level language such as Python
