@@ -6,3 +6,5 @@ systems. Most of its components are therefore meant to be portable and
 functional on these systems as well.
 
 This is a meta-package for the DeforaOS Desktop environment.
+
+This is the GTK3 version.
