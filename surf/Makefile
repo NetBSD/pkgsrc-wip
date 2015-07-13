@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/08/03 22:16:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/13 11:10:36 leot1990 Exp $
 
-DISTNAME=	surf-0.5
+DISTNAME=	surf-0.6
 CATEGORIES=	www
 MASTER_SITES=	http://dl.suckless.org/surf/
 
@@ -9,14 +9,23 @@ HOMEPAGE=	http://surf.suckless.org/
 COMMENT=	Surf is a fast and minimalistic web browser based on WebKit/GTK+
 LICENSE=	mit
 
+MAKE_JOBS_SAFE=	no
+
+NO_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+# Adjust config.mk
+SUBST_CLASSES+=		configmk
+SUBST_STAGE.configmk=	pre-build
+SUBST_MESSAGE.configmk=		Fixing config.mk
+SUBST_FILES.configmk=		config.mk
+SUBST_SED.configmk+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.configmk+=	-e 's,share/man,${PKGMANDIR},g'
+SUBST_SED.configmk+=	-e 's,/usr/X11R6,${X11BASE},g'
+SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/surf ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/surf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
