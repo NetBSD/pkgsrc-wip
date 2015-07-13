@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/03/14 18:42:49 lexort Exp $
-#
+# $NetBSD: Makefile,v 1.9 2015/07/13 15:11:02 thomasklausner Exp $
 
 DISTNAME=	mapnik-0.4.0
 PKGREVISION=	4
@@ -13,7 +12,7 @@ COMMENT=	Toolkit for mapping applications
 NO_CONFIGURE=		yes
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 DEPENDS+=		dejavu-ttf>=2.19:../../fonts/dejavu-ttf
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 
 PTHREAD_AUTO_VARS=	yes
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
@@ -28,7 +27,8 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PREFIX}/bin/scons ${SCONS_ENV} install
 
-.include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/py-boost/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
