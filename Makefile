@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6245 2015/07/14 19:51:27 roelants Exp $
+# $Id: Makefile,v 1.6246 2015/07/14 20:16:48 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1682,7 +1682,6 @@ SUBDIR+=	makedict
 SUBDIR+=	makepp
 SUBDIR+=	malaga
 SUBDIR+=	maloc
-SUBDIR+=	mame
 SUBDIR+=	man
 SUBDIR+=	man-db
 SUBDIR+=	manatee
