@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/07/17 12:31:09 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2015/07/14 15:45:29 fhajny Exp $
 
-SHA1 (Imager-0.97.tar.gz) = 531fe37fe77cf9e62a00b46ab6ab2f495b3808f9
-RMD160 (Imager-0.97.tar.gz) = a9157c676ce19c230634506b3062ce400847df70
-Size (Imager-0.97.tar.gz) = 1195137 bytes
+SHA1 (Imager-1.003.tar.gz) = 24a40af326842c1bd640a318c47b45b458e893c9
+RMD160 (Imager-1.003.tar.gz) = 6aa1d81da1b0f69913164e0e5bdc86db7db32df9
+Size (Imager-1.003.tar.gz) = 1227310 bytes
