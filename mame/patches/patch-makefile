@@ -1,0 +1,33 @@
+$NetBSD: patch-makefile,v 1.1 2015/07/14 18:51:45 thomasklausner Exp $
+
+Add NetBSD support.
+
+--- makefile.orig	2015-07-14 10:55:58.000000000 +0000
++++ makefile
+@@ -1000,6 +1000,26 @@ freebsd_x86: generate $(PROJECTDIR)/gmak
+ 
+ 
+ #-------------------------------------------------
++# gmake-netbsd
++#-------------------------------------------------
++
++
++$(PROJECTDIR)/gmake-netbsd/Makefile: makefile $(SCRIPTS) $(GENIE)
++	$(SILENT) $(GENIE) $(PARAMS) --gcc=netbsd --gcc_version=$(GCC_VERSION) gmake
++
++.PHONY: netbsd_x64
++netbsd_x64: generate $(PROJECTDIR)/gmake-netbsd/Makefile
++	$(SILENT) $(MAKE) -C $(PROJECTDIR)/gmake-netbsd config=$(CONFIG)64
++
++.PHONY: netbsd
++netbsd: netbsd_x86
++
++.PHONY: netbsd_x86
++netbsd_x86: generate $(PROJECTDIR)/gmake-netbsd/Makefile
++	$(SILENT) $(MAKE) -C $(PROJECTDIR)/gmake-netbsd config=$(CONFIG)32
++
++
++#-------------------------------------------------
+ # Clean/bootstrap
+ #-------------------------------------------------
+ 
