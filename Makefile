@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6244 2015/07/14 19:01:17 thomasklausner Exp $
+# $Id: Makefile,v 1.6245 2015/07/14 19:51:27 roelants Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -338,6 +338,7 @@ SUBDIR+=	clang-svn
 SUBDIR+=	classgen
 SUBDIR+=	classias
 SUBDIR+=	classic-mac-font-pack
+SUBDIR+=	claws-mail-fancy
 SUBDIR+=	clearsans-ttf
 SUBDIR+=	clfswm
 SUBDIR+=	clhep
