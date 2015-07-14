@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/30 19:34:51 roelants Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/14 20:25:24 roelants Exp $
 lib/evas/utils/evas_image_loader.264
 lib/evas/utils/evas_image_loader.3g2
 lib/evas/utils/evas_image_loader.3gp
@@ -50,7 +50,7 @@ lib/evas/utils/evas_image_loader.ogg
 lib/evas/utils/evas_image_loader.ogm
 lib/evas/utils/evas_image_loader.ogv
 lib/evas/utils/evas_image_loader.orf
-lib/evas/utils/evas_image_loader.pdf
+@comment lib/evas/utils/evas_image_loader.pdf
 lib/evas/utils/evas_image_loader.pef
 lib/evas/utils/evas_image_loader.ps
 lib/evas/utils/evas_image_loader.qt
