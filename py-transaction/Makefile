@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:31 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2015/07/15 18:20:12 thomasklausner Exp $
 
 DISTNAME=	transaction-1.1.1
 EGG_NAME=	${DISTNAME}
@@ -10,7 +9,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/t/transaction/
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.zope.org/Products/ZODB
 COMMENT=	Transaction management for Python
-LICENSE=		zpl
+LICENSE=	zpl-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
 
