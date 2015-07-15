@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/07/05 20:46:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2015/07/15 12:53:51 thomasklausner Exp $
 
 DISTNAME=	bup-0.27
 CATEGORIES=	sysutils
@@ -87,6 +87,7 @@ SUBST_FILES.python-c+=	t/test-meta.sh
 SUBST_MESSAGE.python-c=	Fixing python executable in tests.
 
 REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
+REPLACE_BASH+=		config/configure
 REPLACE_BASH+=		t/compare-trees
 REPLACE_BASH+=		t/configure-sampledata
 REPLACE_BASH+=		t/force-delete
