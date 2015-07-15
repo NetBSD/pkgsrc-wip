@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6246 2015/07/14 20:16:48 thomasklausner Exp $
+# $Id: Makefile,v 1.6247 2015/07/15 18:54:57 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2524,6 +2524,7 @@ SUBDIR+=	py-EditObj2
 SUBDIR+=	py-Fnorb
 SUBDIR+=	py-Fnorb-docs
 SUBDIR+=	py-Genetic
+SUBDIR+=	py-Kallithea
 SUBDIR+=	py-Netzob
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-Py2Play
