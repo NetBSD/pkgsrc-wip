@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/31 12:11:07 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/07/15 17:58:08 thomasklausner Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/webhelpers/__init__.py
 ${PYSITELIB}/webhelpers/__init__.pyc

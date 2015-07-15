@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/08/20 13:28:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2015/07/15 17:58:08 thomasklausner Exp $
 
-DISTNAME=	WebHelpers-1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/W/w/S/H/h/}
+DISTNAME=	WebHelpers-1.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/W/WebHelpers/
 
@@ -10,6 +10,7 @@ HOMEPAGE=	http://webhelpers.groovie.org/
 COMMENT=	Python helper functions for writing templates in web applications
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=0.9.2:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.6.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-pylons>=0.1:../../wip/py-pylons
