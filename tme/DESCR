@@ -1,5 +1,5 @@
 The Machine Emulator, or tme, is a program that provides a general-
-purpose framework for computer emulation.  This is a fork of the original,
-with all applicable patches rolled in.  New in this release, the graphical
-display is updated to GTK3, and a new tap element is introduced with
-automatic NAT configuration using NPF or an equavalent packet filter.
+purpose framework for computer emulation.  The first machine that tme
+could emulate was the Sun 2/120, one of the first widely available Sun
+workstations. Other emulations include the Sun 3/150, SPARCstation 2,
+and UltraSPARC 1.
