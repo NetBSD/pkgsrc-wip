@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/07/16 00:06:13 kethzer-08 Exp $
+
+SHA1 (clickatell-0.1.1.tar.gz) = b1f6e1567ec5e056180f2de827b67ac32a43f904
+RMD160 (clickatell-0.1.1.tar.gz) = f93ff326204c34e060f232d0e83bd50f0ff7ebb3
+Size (clickatell-0.1.1.tar.gz) = 6727 bytes
