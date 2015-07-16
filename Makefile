@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6247 2015/07/15 18:54:57 thomasklausner Exp $
+# $Id: Makefile,v 1.6248 2015/07/16 00:22:51 kethzer-08 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2624,6 +2624,7 @@ SUBDIR+=	py-chm
 SUBDIR+=	py-chompack
 SUBDIR+=	py-cinfony
 SUBDIR+=	py-cito
+SUBDIR+=        py-clickatell	
 SUBDIR+=	py-clics
 SUBDIR+=	py-cliff
 SUBDIR+=	py-clint
