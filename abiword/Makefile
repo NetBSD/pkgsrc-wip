@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/11 16:26:40 nros Exp $
+# $NetBSD: Makefile,v 1.11 2015/07/16 14:09:37 thomasklausner Exp $
 
 DISTNAME=	abiword-3.0.1
 CATEGORIES=	editors
@@ -9,26 +9,16 @@ HOMEPAGE=	http://www.abiword.com/
 COMMENT=	Open Source cross-platform word processor
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS=      abiword-personal-[0-9]* abiword2-[0-9]*
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake pkg-config
 USE_LANGUAGES=	c c++
 
-#MAKE_JOBS_SAFE=no
-
-# All configure_args here
-# TODO: an options.mk file
-CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
-#CONFIGURE_ARGS+=	--enable-plugins	#build all plugins
-#CONFIGURE_ARGS+=	 --enable-builtin-plugins      ="foo bar baz" # list of plugins to link statically
-CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
-
-# Disabled plugins: gda rsvg
-# rsvg is not needed with gtk and we don't have libgnomedb
+# plugins are in abiword-plugins package
+CONFIGURE_ARGS+=	--disable-default-plugins
 CONFIGURE_ARGS+=	--enable-plugins=""
-
+# (Gtk+ only) include spell checking support
+CONFIGURE_ARGS+=	--enable-spell
 
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 
@@ -38,7 +28,6 @@ pre-configure:
 
 .include "options.mk"
 
-# normal dependecies
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
@@ -53,5 +42,4 @@ pre-configure:
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

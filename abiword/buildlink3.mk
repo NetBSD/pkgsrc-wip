@@ -1,14 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/06/11 16:26:40 nros Exp $
-# XXX
-# XXX This file was created automatically using createbuildlink-3.16.
-# XXX After this file has been verified as correct, the comment lines
-# XXX beginning with "XXX" should be removed.  Please do not commit
-# XXX unverified buildlink3.mk files.
-# XXX
-# XXX Packages that only install static libraries or headers should
-# XXX include the following line:
-# XXX
-# XXX	BUILDLINK_DEPMETHOD.abiword?=	build
+# $NetBSD: buildlink3.mk,v 1.2 2015/07/16 14:09:37 thomasklausner Exp $
 
 BUILDLINK_TREE+=	abiword
 
