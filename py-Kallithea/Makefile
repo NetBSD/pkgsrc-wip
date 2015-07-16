@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/15 18:54:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/07/16 11:41:46 thomasklausner Exp $
 
 DISTNAME=	Kallithea-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
+DEPENDS+=	${PYPKGPREFIX}-PasteScript-[0-9]*:../../www/py-PasteScript
 DEPENDS+=	${PYPKGPREFIX}-Paste-[0-9]*:../../www/py-paste
 
 DEPENDS+=	${PYPKGPREFIX}-waitress>=0.8.8:../../www/py-waitress
