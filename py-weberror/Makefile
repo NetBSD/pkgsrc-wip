@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/08/20 13:28:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2015/07/16 11:47:14 thomasklausner Exp $
 
 DISTNAME=	WebError-0.10.2
 EGG_NAME=	${DISTNAME:S/.tar//}
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=0.9.8:../../www/py-WebOb
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-paste
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

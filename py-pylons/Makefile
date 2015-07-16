@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/08/20 13:28:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2015/07/16 11:47:14 thomasklausner Exp $
 
 DISTNAME=	Pylons-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.2:../../www/py-paste
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=		# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-cheetah, py-paste
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-cheetah
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests/conftest.py
