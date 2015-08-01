@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/06 23:42:04 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/01 08:04:54 thomasklausner Exp $
 bin/pkginfo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pkginfo/__init__.py
 ${PYSITELIB}/pkginfo/__init__.pyc
 ${PYSITELIB}/pkginfo/__init__.pyo
+${PYSITELIB}/pkginfo/_compat.py
+${PYSITELIB}/pkginfo/_compat.pyc
+${PYSITELIB}/pkginfo/_compat.pyo
 ${PYSITELIB}/pkginfo/bdist.py
 ${PYSITELIB}/pkginfo/bdist.pyc
 ${PYSITELIB}/pkginfo/bdist.pyo
@@ -36,6 +40,9 @@ ${PYSITELIB}/pkginfo/tests/__init__.pyo
 ${PYSITELIB}/pkginfo/tests/test_bdist.py
 ${PYSITELIB}/pkginfo/tests/test_bdist.pyc
 ${PYSITELIB}/pkginfo/tests/test_bdist.pyo
+${PYSITELIB}/pkginfo/tests/test_commandline.py
+${PYSITELIB}/pkginfo/tests/test_commandline.pyc
+${PYSITELIB}/pkginfo/tests/test_commandline.pyo
 ${PYSITELIB}/pkginfo/tests/test_develop.py
 ${PYSITELIB}/pkginfo/tests/test_develop.pyc
 ${PYSITELIB}/pkginfo/tests/test_develop.pyo
@@ -54,6 +61,12 @@ ${PYSITELIB}/pkginfo/tests/test_sdist.pyo
 ${PYSITELIB}/pkginfo/tests/test_utils.py
 ${PYSITELIB}/pkginfo/tests/test_utils.pyc
 ${PYSITELIB}/pkginfo/tests/test_utils.pyo
+${PYSITELIB}/pkginfo/tests/test_wheel.py
+${PYSITELIB}/pkginfo/tests/test_wheel.pyc
+${PYSITELIB}/pkginfo/tests/test_wheel.pyo
 ${PYSITELIB}/pkginfo/utils.py
 ${PYSITELIB}/pkginfo/utils.pyc
 ${PYSITELIB}/pkginfo/utils.pyo
+${PYSITELIB}/pkginfo/wheel.py
+${PYSITELIB}/pkginfo/wheel.pyc
+${PYSITELIB}/pkginfo/wheel.pyo
