@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6249 2015/07/16 14:44:11 kethzer-08 Exp $
+# $Id: Makefile,v 1.6250 2015/08/01 07:59:42 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2624,7 +2624,7 @@ SUBDIR+=	py-chm
 SUBDIR+=	py-chompack
 SUBDIR+=	py-cinfony
 SUBDIR+=	py-cito
-SUBDIR+=        py-clickatell	
+SUBDIR+=	py-clickatell
 SUBDIR+=	py-clics
 SUBDIR+=	py-cliff
 SUBDIR+=	py-clint
@@ -3164,7 +3164,6 @@ SUBDIR+=	py-sima
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
-SUBDIR+=        py-sqlalchemy-searchable	
 SUBDIR+=	py-sleekxmpp
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smcp
@@ -3188,6 +3187,7 @@ SUBDIR+=	py-sphinxreport
 SUBDIR+=	py-sphviewer
 SUBDIR+=	py-sppy
 SUBDIR+=	py-spyse
+SUBDIR+=	py-sqlalchemy-searchable
 SUBDIR+=	py-srpy
 SUBDIR+=	py-ssh2
 SUBDIR+=	py-sshpt
@@ -3472,7 +3472,6 @@ SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scratchpad
 SUBDIR+=	scrc
-SUBDIR+=	scrollz
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scummvm-nightly
 SUBDIR+=	scx
