@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/01 22:18:47 jihbed Exp $
+
+SHA1 (flipper-0.8.6.tar.gz) = a7b6da82fe3266271a00f3857206de1c154d0d6b
+RMD160 (flipper-0.8.6.tar.gz) = a39c469dd272116935b45ef5ffd9a896bf4c8a09
+Size (flipper-0.8.6.tar.gz) = 312611 bytes
