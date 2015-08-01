@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/01 22:12:08 jihbed Exp $
+${PYSITELIB}/pylds/__init__.py
+${PYSITELIB}/pylds/__init__.pyc
+${PYSITELIB}/pylds/__init__.pyo
+${PYSITELIB}/pylds/blas_lapack.so
+${PYSITELIB}/pylds/lds_info_messages.so
+${PYSITELIB}/pylds/lds_messages.so
+${PYSITELIB}/pylds/lds_messages_interface.py
+${PYSITELIB}/pylds/lds_messages_interface.pyc
+${PYSITELIB}/pylds/lds_messages_interface.pyo
+${PYSITELIB}/pylds/lds_messages_python.py
+${PYSITELIB}/pylds/lds_messages_python.pyc
+${PYSITELIB}/pylds/lds_messages_python.pyo
+${PYSITELIB}/pylds/models.py
+${PYSITELIB}/pylds/models.pyc
+${PYSITELIB}/pylds/models.pyo
+${PYSITELIB}/pylds/states.py
+${PYSITELIB}/pylds/states.pyc
+${PYSITELIB}/pylds/states.pyo
