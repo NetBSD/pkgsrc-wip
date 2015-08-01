@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6250 2015/08/01 07:59:42 thomasklausner Exp $
+# $Id: Makefile,v 1.6251 2015/08/01 08:03:25 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2227,7 +2227,6 @@ SUBDIR+=	p5-Proc-Fork
 SUBDIR+=	p5-RT-Authen-ExternalAuth
 SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-SDL
-SUBDIR+=	p5-Safe
 SUBDIR+=	p5-Spread
 SUBDIR+=	p5-Startup
 SUBDIR+=	p5-Sub-Recursive
