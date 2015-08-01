@@ -1,0 +1,4 @@
+This module contains some tools for linear algebra. It contanis classes
+to define matrices and vectors, and a number of functions for working
+on those matrices and vectors. It is intended for mathematical and
+scientific use. It saved me a lot of time in a linear algebra class.
