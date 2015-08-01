@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/01 22:32:33 jihbed Exp $
+
+SHA1 (nilearn-0.1.4.post1.tar.gz) = d10134af484124aed863c7926b3b504c3f7c786b
+RMD160 (nilearn-0.1.4.post1.tar.gz) = 36c49b61bd943baf828926288103a02a95d2c2a7
+Size (nilearn-0.1.4.post1.tar.gz) = 649510 bytes
