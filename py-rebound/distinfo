@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/08/01 22:31:16 jihbed Exp $
+
+SHA1 (rebound-2.3.0.tar.gz) = baf58214e15f4766faf6dc51a38bde5071652034
+RMD160 (rebound-2.3.0.tar.gz) = 6df07a2d0a64a6238f0cca4b67388a0d19d81456
+Size (rebound-2.3.0.tar.gz) = 89705 bytes
+SHA1 (patch-setup.py) = d7192cda8e8264a9b063c28c3d663371ea7ba33a
