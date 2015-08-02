@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/02 09:44:46 rhialto Exp $
+lib/irssi/modules/libotr.a
+lib/irssi/modules/libotr.so
+share/irssi/help/otr
