@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1 2015/08/02 22:32:46 jihbed Exp $
+
+DISTNAME=	Fiona-1.6.0
+ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	geography python
+MASTER_SITES=	https://pypi.python.org/packages/source/F/Fiona/
+
+MAINTAINER=	jihbed.research@gmail.com
+HOMEPAGE=	 http://github.com/Toblerity/Fiona
+COMMENT=	Fiona reads and writes spatial data files
+LICENSE=	modified-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+#DEPENDS+=	${PYPKGPREFIX}-cligj>=0.2.0:../../wip/py-cligj
+#DEPENDS+=	${PYPKGPREFIX}-ordereddict>=1.1:../../wip/py-ordereddict
+
+WRKSRC=		${WRKDIR}/Fiona-1.6.0
+
+USE_LANGUAGES=	c c++
+
+.include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../devel/py-cython/buildlink3.mk"
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
