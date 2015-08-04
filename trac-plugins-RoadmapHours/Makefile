@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 13:58:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/04 20:04:16 thomasklausner Exp $
 
 SVNVERSION=	4802
 # Eggs do not have the same name and do not include the SVN revision.
@@ -16,7 +16,7 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/RoadmapHoursPlugin
 COMMENT=	RoadmapHours plugin for Trac
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	trac>=0.11:../../www/trac
 DEPENDS+=	trac-plugins-TimingAndEstimation>=0.7.6:../../wip/trac-plugins-TimingAndEstimation
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # trac-plugins-TimingAndEstimation

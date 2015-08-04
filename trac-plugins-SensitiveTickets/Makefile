@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/12/31 13:58:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/04 20:04:16 thomasklausner Exp $
 
 UPSTREAM_VERSION=	0.22
 VERSION=	${UPSTREAM_VERSION}.${SVN_VERSION}
@@ -18,7 +18,7 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/SensitiveTicketsPlugin
 COMMENT=	Ticket dependency plugin for Trac
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	trac>=0.11:../../www/trac
 
 EGG_NAME=	sensitivetickets-${UPSTREAM_VERSION}
 

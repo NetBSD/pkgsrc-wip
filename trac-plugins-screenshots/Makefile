@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/09 07:38:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/04 20:04:16 thomasklausner Exp $
 
 DISTNAME=	screenshotsplguin_0.11-r${SVN_REV}
 PKGNAME=	trac-plugins-screenshots-0.1pre${SVN_REV}
@@ -12,7 +12,7 @@ MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/ScreenshotsPlugin
 COMMENT=	Screenshots plugin for Trac
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	trac>=0.11:../../www/trac
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-imaging
 

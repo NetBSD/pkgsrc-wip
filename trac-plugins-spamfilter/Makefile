@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/12/31 13:58:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/04 20:04:16 thomasklausner Exp $
 
 SVNREV=		9935
 DISTNAME=	TracSpamFilter-0.3.2dev
@@ -11,7 +11,7 @@ MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/wiki/SpamFilter
 COMMENT=	Spam Filter plugin for Trac
 
-DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
+DEPENDS+=	trac>=0.12:../../www/trac
 
 PYTHON_VERSIONED_DEPENDENCIES=	dns
 

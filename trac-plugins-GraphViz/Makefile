@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/12/31 13:58:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/04 20:04:15 thomasklausner Exp $
 
 SVNVERSION=		13275
 UPSTREAM_VERSION=	0.7.7
@@ -14,7 +14,7 @@ MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://trac-hacks.org/wiki/GraphVizPlugin
 COMMENT=	Graphviz plugin for Trac
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	trac>=0.11:../../www/trac
 
 EGG_NAME=	graphviz-${UPSTREAM_VERSION}dev_r0
 

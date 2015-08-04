@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/05/09 07:38:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2015/08/04 20:04:14 thomasklausner Exp $
 
 DISTVERS=	0.3.4
 DISTNAME=	TracAuthOpenId-${DISTVERS}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://trac.sandbox.lt/auth/wiki/AuthOpenIdPlugin
 COMMENT=	This plugins allows to login to Trac using OpenID
 LICENSE=	modified-bsd
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	trac>=0.11:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-openid>=2.2.4:../../security/py-openid
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-openid
