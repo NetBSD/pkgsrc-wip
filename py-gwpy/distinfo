@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/05 20:41:42 jihbed Exp $
+
+SHA1 (gwpy-0.1b3.tar.gz) = 0a26ffb5dfc45d230bb23e4233bbcd50a2dd5cf5
+RMD160 (gwpy-0.1b3.tar.gz) = ac333685f3ffef0cbde6666be88725ff4caa69d0
+Size (gwpy-0.1b3.tar.gz) = 1000554 bytes
