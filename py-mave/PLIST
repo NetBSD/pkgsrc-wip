@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/05 20:56:48 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mave/__init__.py
+${PYSITELIB}/mave/__init__.pyc
+${PYSITELIB}/mave/__init__.pyo
+${PYSITELIB}/mave/comparison_functions.py
+${PYSITELIB}/mave/comparison_functions.pyc
+${PYSITELIB}/mave/comparison_functions.pyo
+${PYSITELIB}/mave/core.py
+${PYSITELIB}/mave/core.pyc
+${PYSITELIB}/mave/core.pyo
+${PYSITELIB}/mave/estimators.py
+${PYSITELIB}/mave/estimators.pyc
+${PYSITELIB}/mave/estimators.pyo
+${PYSITELIB}/mave/trainers.py
+${PYSITELIB}/mave/trainers.pyc
+${PYSITELIB}/mave/trainers.pyo
+${PYSITELIB}/test/__init__.py
+${PYSITELIB}/test/__init__.pyc
+${PYSITELIB}/test/__init__.pyo
+${PYSITELIB}/test/test_simple.py
+${PYSITELIB}/test/test_simple.pyc
+${PYSITELIB}/test/test_simple.pyo
