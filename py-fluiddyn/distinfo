@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/05 20:29:10 jihbed Exp $
+
+SHA1 (fluiddyn-0.0.10a7.tar.gz) = 74951b4be519cc26d2911b8eb226d076f8d1b699
+RMD160 (fluiddyn-0.0.10a7.tar.gz) = 2458f443245b8a574c1b6be815a4d0def527ca3e
+Size (fluiddyn-0.0.10a7.tar.gz) = 51873 bytes

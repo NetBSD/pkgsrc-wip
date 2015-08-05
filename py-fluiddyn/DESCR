@@ -1,0 +1,4 @@
+FluidDyn is a framework for studying fluid dynamics. Most of the features are
+actually implemented in other packages (fluidsim, fluidlab). The project is
+still in a testing stage so it is still pretty unstable and many of its planned
+features have not yet been implemented
