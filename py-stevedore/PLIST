@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/19 21:53:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/05 22:19:29 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/stevedore/__init__.py
 ${PYSITELIB}/stevedore/__init__.pyc
@@ -47,9 +49,15 @@ ${PYSITELIB}/stevedore/hook.pyo
 ${PYSITELIB}/stevedore/named.py
 ${PYSITELIB}/stevedore/named.pyc
 ${PYSITELIB}/stevedore/named.pyo
+${PYSITELIB}/stevedore/sphinxext.py
+${PYSITELIB}/stevedore/sphinxext.pyc
+${PYSITELIB}/stevedore/sphinxext.pyo
 ${PYSITELIB}/stevedore/tests/__init__.py
 ${PYSITELIB}/stevedore/tests/__init__.pyc
 ${PYSITELIB}/stevedore/tests/__init__.pyo
+${PYSITELIB}/stevedore/tests/extension_unimportable.py
+${PYSITELIB}/stevedore/tests/extension_unimportable.pyc
+${PYSITELIB}/stevedore/tests/extension_unimportable.pyo
 ${PYSITELIB}/stevedore/tests/manager.py
 ${PYSITELIB}/stevedore/tests/manager.pyc
 ${PYSITELIB}/stevedore/tests/manager.pyo
@@ -80,6 +88,12 @@ ${PYSITELIB}/stevedore/tests/test_hook.pyo
 ${PYSITELIB}/stevedore/tests/test_named.py
 ${PYSITELIB}/stevedore/tests/test_named.pyc
 ${PYSITELIB}/stevedore/tests/test_named.pyo
+${PYSITELIB}/stevedore/tests/test_sphinxext.py
+${PYSITELIB}/stevedore/tests/test_sphinxext.pyc
+${PYSITELIB}/stevedore/tests/test_sphinxext.pyo
 ${PYSITELIB}/stevedore/tests/test_test_manager.py
 ${PYSITELIB}/stevedore/tests/test_test_manager.pyc
 ${PYSITELIB}/stevedore/tests/test_test_manager.pyo
+${PYSITELIB}/stevedore/tests/utils.py
+${PYSITELIB}/stevedore/tests/utils.pyc
+${PYSITELIB}/stevedore/tests/utils.pyo
