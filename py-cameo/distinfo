@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/05 20:32:55 jihbed Exp $
+
+SHA1 (cameo-0.4.9.tar.gz) = 2bfdaaa899be5c37312ea7b86e94bce9c7b8ae4c
+RMD160 (cameo-0.4.9.tar.gz) = 6a1c80bb07b9f81cfd4abcd69db7735b93187206
+Size (cameo-0.4.9.tar.gz) = 12983581 bytes
