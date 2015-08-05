@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2015/07/13 02:29:29 leot1990 Exp $
+$NetBSD: patch-Makefile,v 1.2 2015/08/05 15:22:53 leot1990 Exp $
 
 o .meta files need to be generated after all-libs
 o libchibi-scheme.a is generated only on mingw and cygwin operating systems.
@@ -10,7 +10,7 @@ o libchibi-scheme.a is generated only on mingw and cygwin operating systems.
  	$(CHIBI_DOC) --html $< > $@
  
 -lib/.%.meta: lib/%/ tools/generate-install-meta.scm
-+lib/.%.meta: lib/%/ tools/generate-install-meta.scm all-libs
++lib/.%.meta: lib/%/ tools/generate-install-meta.scm | all-libs
  	-$(FIND) $< -name \*.sld | \
  	 $(CHIBI) tools/generate-install-meta.scm $(VERSION) > $@
  

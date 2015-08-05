@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/07/13 09:12:25 leot1990 Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/05 15:22:53 leot1990 Exp $
 
 DISTNAME=	chibi-scheme-0.7.3
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ashinn/}
 
