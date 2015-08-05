@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/05 20:31:24 jihbed Exp $
+
+SHA1 (abcpmc-0.1.1.tar.gz) = fe4c82d3065416751c68d5f5ba59b6e9fd9eab44
+RMD160 (abcpmc-0.1.1.tar.gz) = 9e7b5fa398a1bfb01819d0fc509e96b6a692dc34
+Size (abcpmc-0.1.1.tar.gz) = 700581 bytes
