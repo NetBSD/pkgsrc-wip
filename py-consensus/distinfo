@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/05 21:17:40 jihbed Exp $
+
+SHA1 (pyconsensus-0.5.8.tar.gz) = d3a469345bb0038fc63a7e06b59d9250db69d0ca
+RMD160 (pyconsensus-0.5.8.tar.gz) = 0b1ac9afbeb084791b4f8d2169d6df409c0390bd
+Size (pyconsensus-0.5.8.tar.gz) = 23516 bytes
