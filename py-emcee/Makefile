@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/03/15 17:06:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/05 21:50:06 jihbed Exp $
 
-DISTNAME=	emcee-2.0.0
+DISTNAME=	emcee-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/e/emcee/

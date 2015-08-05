@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2014/03/15 17:06:55 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2015/08/05 21:50:07 jihbed Exp $
 
-SHA1 (emcee-2.0.0.tar.gz) = be8666eca7cd1eedee23cb26ffb4d14927727353
-RMD160 (emcee-2.0.0.tar.gz) = 8c66e4e8bf2b5ad500f3f946f8bea2f0c1ab0bb6
-Size (emcee-2.0.0.tar.gz) = 18774 bytes
+SHA1 (emcee-2.1.0.tar.gz) = c942e97d0d13c4a1c9e586cae428e02e3efee1a3
+RMD160 (emcee-2.1.0.tar.gz) = 2d141fc5cf7f1ab983d9faa97b714909bc133d5a
+Size (emcee-2.1.0.tar.gz) = 23094 bytes

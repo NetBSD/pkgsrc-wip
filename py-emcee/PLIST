@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/15 17:06:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/05 21:50:07 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,12 +7,21 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/emcee/__init__.py
 ${PYSITELIB}/emcee/__init__.pyc
 ${PYSITELIB}/emcee/__init__.pyo
+${PYSITELIB}/emcee/autocorr.py
+${PYSITELIB}/emcee/autocorr.pyc
+${PYSITELIB}/emcee/autocorr.pyo
 ${PYSITELIB}/emcee/ensemble.py
 ${PYSITELIB}/emcee/ensemble.pyc
 ${PYSITELIB}/emcee/ensemble.pyo
+${PYSITELIB}/emcee/interruptible_pool.py
+${PYSITELIB}/emcee/interruptible_pool.pyc
+${PYSITELIB}/emcee/interruptible_pool.pyo
 ${PYSITELIB}/emcee/mh.py
 ${PYSITELIB}/emcee/mh.pyc
 ${PYSITELIB}/emcee/mh.pyo
+${PYSITELIB}/emcee/mpi_pool.py
+${PYSITELIB}/emcee/mpi_pool.pyc
+${PYSITELIB}/emcee/mpi_pool.pyo
 ${PYSITELIB}/emcee/ptsampler.py
 ${PYSITELIB}/emcee/ptsampler.pyc
 ${PYSITELIB}/emcee/ptsampler.pyo
