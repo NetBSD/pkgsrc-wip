@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/05 21:02:58 jihbed Exp $
+
+SHA1 (Cartopy-0.13.0.tar.gz) = 0ac3d7d0609de9b66de11f4bfca3ca5eac1e4cfb
+RMD160 (Cartopy-0.13.0.tar.gz) = 59a0533369ad8a210bd529ee03860dbdb4638aa4
+Size (Cartopy-0.13.0.tar.gz) = 7739229 bytes
