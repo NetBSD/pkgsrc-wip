@@ -1,0 +1,5 @@
+A unified Python package for calculating buffer properties.
+
+**ionize** calculates the properties of individual ionic species in
+aqueous solution, as well as aqueous solutions containing arbitrary
+sets of ions
