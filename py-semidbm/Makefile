@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/02 22:15:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/05 21:44:33 jihbed Exp $
 
 DISTNAME=	semidbm-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://pypi.python.org/packages/source/s/semidbm/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.python.org/packages/source/s/semidbm/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Cross platform (fast) DBM interface in python
 #LICENSE=	# TODO: (see mk/license.mk)
 
 WRKSRC=		${WRKDIR}/semidbm-0.5.1
