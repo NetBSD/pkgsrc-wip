@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6254 2015/08/06 07:19:28 thomasklausner Exp $
+# $Id: Makefile,v 1.6255 2015/08/06 07:22:04 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2493,7 +2493,6 @@ SUBDIR+=	protobuf-c
 SUBDIR+=	prover9
 SUBDIR+=	proxychains
 SUBDIR+=	proxyknife
-SUBDIR+=	proxymngr
 SUBDIR+=	prozilla
 SUBDIR+=	prpltwtr
 SUBDIR+=	prtunnel
