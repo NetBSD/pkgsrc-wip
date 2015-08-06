@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/22 12:22:53 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/06 00:09:22 jihbed Exp $
 include/geners/AbsArchive.hh
 include/geners/AbsCatalog.hh
 include/geners/AbsReader.hh
+include/geners/AbsReaderWriter.hh
 include/geners/AbsRecord.hh
 include/geners/AbsReference.hh
 include/geners/ArchiveRecord.hh
@@ -94,6 +95,8 @@ include/geners/WriteOnlyCatalog.hh
 include/geners/ZlibHandle.hh
 include/geners/allUnique.hh
 include/geners/arrayIO.hh
+include/geners/assignIfPossible.hh
+include/geners/associate_serialization_factory.hh
 include/geners/binaryIO.hh
 include/geners/collectTupleNames.hh
 include/geners/complexIO.hh
@@ -103,6 +106,7 @@ include/geners/forward_listIO.hh
 include/geners/listIO.hh
 include/geners/mapIO.hh
 include/geners/platform.hh
+include/geners/pseudoIO.hh
 include/geners/setIO.hh
 include/geners/specialize_hash_io.hh
 include/geners/static_check.h

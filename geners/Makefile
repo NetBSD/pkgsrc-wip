@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/11/22 12:22:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/06 00:09:22 jihbed Exp $
 
-DISTNAME=	geners-1.5.0
+DISTNAME=	geners-1.9.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hepforge.org/archive/geners/
 
