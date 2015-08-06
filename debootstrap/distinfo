@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2015/07/14 08:45:42 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2015/08/06 07:56:45 thomasklausner Exp $
 
 SHA1 (debian-archive-keyring_2014.3_all.deb) = 7f16adc03d5e2f21afba8ae843d1ed5d7ef9c14a
 RMD160 (debian-archive-keyring_2014.3_all.deb) = 13fec7c8c07af16742af3ddae29422726d341cc1
 Size (debian-archive-keyring_2014.3_all.deb) = 40060 bytes
-SHA1 (debootstrap_1.0.71.tar.gz) = a0b37e9a997d36bbf37e6715390c33ab34024a17
-RMD160 (debootstrap_1.0.71.tar.gz) = 1d10cf82a12a8c307779b41ec4f0628b308d13e2
-Size (debootstrap_1.0.71.tar.gz) = 61472 bytes
+SHA1 (debootstrap_1.0.72.tar.gz) = dabf81337a51ae6dc84c1dc3bd231dd3d25b7e36
+RMD160 (debootstrap_1.0.72.tar.gz) = da5cab30b36a0b4b500921ed38204cbf0ff6aa8c
+Size (debootstrap_1.0.72.tar.gz) = 62089 bytes
 SHA1 (ubuntu-archive-keyring_2012.05.19-2_all.deb) = 256efaf11b6408bc31c105c4e63fd925e7e8f05c
 RMD160 (ubuntu-archive-keyring_2012.05.19-2_all.deb) = f9d8e97c3ded064eb26bfacedbb950d1eb1a2d01
 Size (ubuntu-archive-keyring_2012.05.19-2_all.deb) = 18178 bytes
