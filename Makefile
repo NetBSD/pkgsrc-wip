@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6252 2015/08/02 09:46:06 rhialto Exp $
+# $Id: Makefile,v 1.6253 2015/08/06 07:15:09 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3943,7 +3943,6 @@ SUBDIR+=	xiphos
 SUBDIR+=	xmail
 SUBDIR+=	xmakemol
 SUBDIR+=	xmds
-SUBDIR+=	xmh
 SUBDIR+=	xmim
 SUBDIR+=	xml-light
 SUBDIR+=	xmlformat-docs
