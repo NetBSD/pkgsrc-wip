@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6255 2015/08/06 07:22:04 thomasklausner Exp $
+# $Id: Makefile,v 1.6256 2015/08/08 11:44:44 anielski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3538,7 +3538,6 @@ SUBDIR+=	slime
 SUBDIR+=	sloccount
 SUBDIR+=	slowhttptest
 SUBDIR+=	slrn-devel
-SUBDIR+=	slrn-pl
 SUBDIR+=	slune
 SUBDIR+=	slurm
 SUBDIR+=	sm-change_ldappass

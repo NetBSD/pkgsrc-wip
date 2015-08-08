@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.faces,v 1.1 2003/07/02 08:32:29 anielski Exp $
-bin/iksfejs
-bin/slrnface
-share/doc/slrn-pl/Protocol
-share/doc/slrn-pl/README.slrnface
