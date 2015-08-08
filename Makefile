@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6256 2015/08/08 11:44:44 anielski Exp $
+# $Id: Makefile,v 1.6257 2015/08/08 21:47:41 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1555,8 +1555,6 @@ SUBDIR+=	libqtxdg
 SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	librem
-SUBDIR+=	libreoffice
-SUBDIR+=	libreoffice-devel
 SUBDIR+=	libressl
 SUBDIR+=	libscscp
 SUBDIR+=	libslab
