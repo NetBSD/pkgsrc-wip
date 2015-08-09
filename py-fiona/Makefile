@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/02 22:32:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/09 22:10:05 jihbed Exp $
 
 DISTNAME=	Fiona-1.6.0
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,8 @@ COMMENT=	Fiona reads and writes spatial data files
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-#DEPENDS+=	${PYPKGPREFIX}-cligj>=0.2.0:../../wip/py-cligj
-#DEPENDS+=	${PYPKGPREFIX}-ordereddict>=1.1:../../wip/py-ordereddict
+DEPENDS+=	${PYPKGPREFIX}-cligj>=0.2.0:../../wip/py-cligj
+DEPENDS+=	${PYPKGPREFIX}-ordereddict>=1.1:../../wip/py-ordereddict
 
 WRKSRC=		${WRKDIR}/Fiona-1.6.0
 
