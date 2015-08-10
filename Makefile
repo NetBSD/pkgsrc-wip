@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6258 2015/08/10 10:11:31 asau Exp $
+# $Id: Makefile,v 1.6259 2015/08/10 10:13:40 asau Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -680,7 +680,6 @@ SUBDIR+=	fftjet
 SUBDIR+=	fftw-mpich
 SUBDIR+=	fftw-openmpi
 SUBDIR+=	fftw2-openmpi
-SUBDIR+=	ficl
 SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	fio
