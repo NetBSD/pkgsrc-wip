@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6260 2015/08/10 20:14:27 yhardy Exp $
+# $Id: Makefile,v 1.6261 2015/08/10 20:25:58 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3699,6 +3699,8 @@ SUBDIR+=	tetrinet
 SUBDIR+=	tex-abntex
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
+SUBDIR+=	tex-cuisine
+SUBDIR+=	tex-cuisine-doc
 SUBDIR+=	tex-toptesi
 SUBDIR+=	tex-toptesi-doc
 SUBDIR+=	texlive
