@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6272 2015/08/10 22:05:42 yhardy Exp $
+# $Id: Makefile,v 1.6273 2015/08/10 22:29:36 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1418,6 +1418,7 @@ SUBDIR+=	ledger
 SUBDIR+=	leim-current
 SUBDIR+=	leo
 SUBDIR+=	leveldb
+SUBDIR+=	libtxc_dxtn
 SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
