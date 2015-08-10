@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6271 2015/08/10 21:37:59 yhardy Exp $
+# $Id: Makefile,v 1.6272 2015/08/10 22:05:42 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3573,6 +3573,7 @@ SUBDIR+=	spamd-devel
 SUBDIR+=	spatt
 SUBDIR+=	spawnfcgi
 SUBDIR+=	spe
+SUBDIR+=	speedtest-cli
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	spidermonkey17
