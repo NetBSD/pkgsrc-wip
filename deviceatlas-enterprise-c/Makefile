@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/08/02 05:28:52 devnexen Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/10 05:26:29 devnexen Exp $
 
-DISTNAME=	deviceatlas_c_${API_VERSION}
 EXTRACT_SUFX=	.zip
-PKGNAME=	deviceatlas-enterprise-c-${API_VERSION}
-API_VERSION=	0.9
-PKGREVISION=	4
+DISTNAME=	deviceatlas-enterprise-c-${API_VERSION}
+API_VERSION=	2.1
+PKGREVISION=	5
 CATEGORIES=	net devel
 MASTER_SITES=	#
 
