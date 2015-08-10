@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2015/04/27 21:17:15 jonthn Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/10 18:59:28 jonthn Exp $
 
 DISTNAME=	ctags-5.8
 CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=fishman/}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=universal-ctags/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/fishman/ctags
-COMMENT=	Exuberant (feature-filled) tagfile generator for vi, emacs and clones
+HOMEPAGE=	https://ctags.io
+COMMENT=	A maintained ctags implementation
 LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	ctags
-GIT_REPO.ctags=		git://github.com/fishman/ctags
+GIT_REPO.ctags=		git://github.com/universal-ctags/ctags
 GIT_MODULE.ctags=	ctags
 
 WRKSRC=			${WRKDIR}/${GIT_MODULE.ctags}
