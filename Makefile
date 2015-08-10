@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6262 2015/08/10 20:32:59 yhardy Exp $
+# $Id: Makefile,v 1.6263 2015/08/10 20:41:24 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3701,6 +3701,8 @@ SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-cuisine
 SUBDIR+=	tex-cuisine-doc
+SUBDIR+=	tex-tikzposter
+SUBDIR+=	tex-tikzposter-doc
 SUBDIR+=	tex-toptesi
 SUBDIR+=	tex-toptesi-doc
 SUBDIR+=	tex-xstring
