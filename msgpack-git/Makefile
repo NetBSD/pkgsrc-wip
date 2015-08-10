@@ -2,7 +2,10 @@
 
 DISTNAME=	msgpack-1.1.0
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/msgpack/msgpack-c/releases/download/cpp-${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
+GITHUB_PROJECT=	msgpack-c
+GITHUB_RELEASE=	cpp-${PKGVERSION_NOREV}
+GITHUB_TYPE=	release
 
 GIT_REPOSITORIES=	msgpack
 GIT_REPO.msgpack=	git://github.com/msgpack/msgpack-c.git
