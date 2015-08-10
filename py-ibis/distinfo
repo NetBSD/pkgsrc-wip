@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/10 23:20:59 jihbed Exp $
+
+SHA1 (ibis-1.3.2.tar.gz) = 8c562fc1371d7499c62ab1059206b7a1e049e7ca
+RMD160 (ibis-1.3.2.tar.gz) = 61c54ced56a31f0c9488a9a1f6df55136e2fa19a
+Size (ibis-1.3.2.tar.gz) = 12583 bytes
