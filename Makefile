@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6257 2015/08/08 21:47:41 thomasklausner Exp $
+# $Id: Makefile,v 1.6258 2015/08/10 10:11:31 asau Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2379,7 +2379,6 @@ SUBDIR+=	pear-phploc
 SUBDIR+=	peercoin
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
-SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	pgplot
 SUBDIR+=	pgpool2
