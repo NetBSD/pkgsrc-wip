@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/08/10 05:26:29 devnexen Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/10 05:51:35 devnexen Exp $
 
 EXTRACT_SUFX=	.zip
-DISTNAME=	deviceatlas-enterprise-c-${API_VERSION}
-API_VERSION=	2.1
+DISTNAME=	deviceatlas-enterprise-c-2.1
 PKGREVISION=	5
 CATEGORIES=	net devel
 MASTER_SITES=	#
@@ -34,7 +33,7 @@ FETCH_MESSAGE+= "and put into"
 FETCH_MESSAGE+= "${DISTDIR}"
 
 pre-build:
-	cd ${WRKSRC} && cmake -DINSTALL_PREFIX=${LOCALBASE}
+	cd ${WRKSRC} && cmake -DINSTALL_PREFIX=${PREFIX}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

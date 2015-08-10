@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/08/10 05:26:29 devnexen Exp $
+$NetBSD: distinfo,v 1.5 2015/08/10 05:51:35 devnexen Exp $
 
+SHA1 (deviceatlas-enterprise-c-2.1.zip) = fbd4a4198307616d51518e50d09666aeac2eea29
 RMD160 (deviceatlas-enterprise-c-2.1.zip) = fc4b78bc18c80cc19e36fa5b8776cbf8b959abd7
+Size (deviceatlas-enterprise-c-2.1.zip) = 504286 bytes
 SHA1 (patch-CMakeLists.txt) = 04a5cb463a708d2803e0900d23e2b3cc0a76162a
 SHA1 (patch-examples_CMakeLists.txt) = fa31fa30800b5739c0359f021b5e86ebdc1babd5
