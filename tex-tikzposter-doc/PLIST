@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/10 20:39:49 yhardy Exp $
+share/texmf-dist/doc/latex/tikzposter/README
+share/texmf-dist/doc/latex/tikzposter/tikzposter-example.tex
+share/texmf-dist/doc/latex/tikzposter/tikzposter-template.tex
+share/texmf-dist/doc/latex/tikzposter/tikzposter.pdf
