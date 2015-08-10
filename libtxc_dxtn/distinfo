@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/10 22:27:47 yhardy Exp $
+
+SHA1 (libtxc_dxtn-1.0.1.tar.gz) = 29f2922399c9ebfb4718366295038b7d8aab191c
+RMD160 (libtxc_dxtn-1.0.1.tar.gz) = c00664c4278133bcc301e38e9612289e02a6114d
+Size (libtxc_dxtn-1.0.1.tar.gz) = 281484 bytes
