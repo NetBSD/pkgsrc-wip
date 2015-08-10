@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2013/01/08 17:43:26 emil_s Exp $
+# $NetBSD: Makefile,v 1.16 2015/08/10 21:16:48 yhardy Exp $
 #
 
-DISTNAME=	task-2.1.2
+DISTNAME=	task-2.4.4
 CATEGORIES=	time
 MASTER_SITES=	http://www.taskwarrior.org/download/
 
@@ -29,5 +29,6 @@ CMAKE_ARGS+=	-DTASK_MAN5DIR=${PREFIX}/${PKGMANDIR}/man5
 .endif
 
 .include "../../devel/libuuid/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
