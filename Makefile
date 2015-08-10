@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6265 2015/08/10 20:57:05 yhardy Exp $
+# $Id: Makefile,v 1.6266 2015/08/10 21:05:14 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3701,6 +3701,8 @@ SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-cuisine
 SUBDIR+=	tex-cuisine-doc
+SUBDIR+=	tex-europasscv
+SUBDIR+=	tex-europasscv-doc
 SUBDIR+=	tex-probsoln
 SUBDIR+=	tex-probsoln-doc
 SUBDIR+=	tex-stringstrings
