@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6261 2015/08/10 20:25:58 yhardy Exp $
+# $Id: Makefile,v 1.6262 2015/08/10 20:32:59 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3703,6 +3703,8 @@ SUBDIR+=	tex-cuisine
 SUBDIR+=	tex-cuisine-doc
 SUBDIR+=	tex-toptesi
 SUBDIR+=	tex-toptesi-doc
+SUBDIR+=	tex-xstring
+SUBDIR+=	tex-xstring-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
