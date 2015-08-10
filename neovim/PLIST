@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/07/02 18:36:58 jonthn Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/08/10 23:19:00 jonthn Exp $
 bin/nvim
 man/man1/nvim.1
 share/locale/af/LC_MESSAGES/nvim.mo
@@ -38,7 +38,6 @@ share/locale/zh_CN.cp936/LC_MESSAGES/nvim.mo
 share/locale/zh_CN/LC_MESSAGES/nvim.mo
 share/locale/zh_TW.UTF-8/LC_MESSAGES/nvim.mo
 share/locale/zh_TW/LC_MESSAGES/nvim.mo
-share/nvim/runtime/autoload/README.txt
 share/nvim/runtime/autoload/ada.vim
 share/nvim/runtime/autoload/adacomplete.vim
 share/nvim/runtime/autoload/ccomplete.vim
@@ -89,7 +88,6 @@ share/nvim/runtime/autoload/xml/xsl.vim
 share/nvim/runtime/autoload/xmlcomplete.vim
 share/nvim/runtime/autoload/zip.vim
 share/nvim/runtime/bugreport.vim
-share/nvim/runtime/colors/README.txt
 share/nvim/runtime/colors/blue.vim
 share/nvim/runtime/colors/darkblue.vim
 share/nvim/runtime/colors/default.vim
@@ -108,7 +106,6 @@ share/nvim/runtime/colors/shine.vim
 share/nvim/runtime/colors/slate.vim
 share/nvim/runtime/colors/torte.vim
 share/nvim/runtime/colors/zellner.vim
-share/nvim/runtime/compiler/README.txt
 share/nvim/runtime/compiler/ant.vim
 share/nvim/runtime/compiler/bcc.vim
 share/nvim/runtime/compiler/bdf.vim
@@ -168,7 +165,6 @@ share/nvim/runtime/compiler/xbuild.vim
 share/nvim/runtime/compiler/xmllint.vim
 share/nvim/runtime/compiler/xmlwf.vim
 share/nvim/runtime/delmenu.vim
-share/nvim/runtime/doc/Makefile
 share/nvim/runtime/doc/arabic.txt
 share/nvim/runtime/doc/autocmd.txt
 share/nvim/runtime/doc/change.txt
@@ -178,7 +174,6 @@ share/nvim/runtime/doc/debugger.txt
 share/nvim/runtime/doc/develop.txt
 share/nvim/runtime/doc/diff.txt
 share/nvim/runtime/doc/digraph.txt
-share/nvim/runtime/doc/doctags.c
 share/nvim/runtime/doc/editing.txt
 share/nvim/runtime/doc/eval.txt
 share/nvim/runtime/doc/farsi.txt
@@ -188,7 +183,6 @@ share/nvim/runtime/doc/ft_ada.txt
 share/nvim/runtime/doc/ft_sql.txt
 share/nvim/runtime/doc/gui.txt
 share/nvim/runtime/doc/gui_w32.txt
-share/nvim/runtime/doc/gui_x11.txt
 share/nvim/runtime/doc/hebrew.txt
 share/nvim/runtime/doc/help.txt
 share/nvim/runtime/doc/helphelp.txt
@@ -208,8 +202,9 @@ share/nvim/runtime/doc/message.txt
 share/nvim/runtime/doc/mlang.txt
 share/nvim/runtime/doc/motion.txt
 share/nvim/runtime/doc/msgpack_rpc.txt
+share/nvim/runtime/doc/nvim.txt
 share/nvim/runtime/doc/nvim_clipboard.txt
-share/nvim/runtime/doc/nvim_intro.txt
+share/nvim/runtime/doc/nvim_from_vim.txt
 share/nvim/runtime/doc/nvim_provider.txt
 share/nvim/runtime/doc/nvim_python.txt
 share/nvim/runtime/doc/nvim_terminal_emulator.txt
@@ -292,7 +287,6 @@ share/nvim/runtime/doc/windows.txt
 share/nvim/runtime/filetype.vim
 share/nvim/runtime/ftoff.vim
 share/nvim/runtime/ftplugin.vim
-share/nvim/runtime/ftplugin/README.txt
 share/nvim/runtime/ftplugin/a2ps.vim
 share/nvim/runtime/ftplugin/aap.vim
 share/nvim/runtime/ftplugin/abap.vim
@@ -492,7 +486,6 @@ share/nvim/runtime/ftplugin/zimbu.vim
 share/nvim/runtime/ftplugin/zsh.vim
 share/nvim/runtime/ftplugof.vim
 share/nvim/runtime/indent.vim
-share/nvim/runtime/indent/README.txt
 share/nvim/runtime/indent/aap.vim
 share/nvim/runtime/indent/ada.vim
 share/nvim/runtime/indent/ant.vim
@@ -605,7 +598,6 @@ share/nvim/runtime/indent/yaml.vim
 share/nvim/runtime/indent/zimbu.vim
 share/nvim/runtime/indent/zsh.vim
 share/nvim/runtime/indoff.vim
-share/nvim/runtime/keymap/README.txt
 share/nvim/runtime/keymap/accents.vim
 share/nvim/runtime/keymap/arabic.vim
 share/nvim/runtime/keymap/arabic_utf-8.vim
@@ -685,7 +677,6 @@ share/nvim/runtime/makemenu.vim
 share/nvim/runtime/menu.vim
 share/nvim/runtime/mswin.vim
 share/nvim/runtime/optwin.vim
-share/nvim/runtime/plugin/README.txt
 share/nvim/runtime/plugin/getscriptPlugin.vim
 share/nvim/runtime/plugin/gzip.vim
 share/nvim/runtime/plugin/matchit.vim
@@ -729,11 +720,9 @@ share/nvim/runtime/print/ks_roman.ps
 share/nvim/runtime/print/latin1.ps
 share/nvim/runtime/print/mac-roman.ps
 share/nvim/runtime/print/prolog.ps
-share/nvim/runtime/rgb.txt
 share/nvim/runtime/scripts.vim
 share/nvim/runtime/synmenu.vim
 share/nvim/runtime/syntax/2html.vim
-share/nvim/runtime/syntax/README.txt
 share/nvim/runtime/syntax/a2ps.vim
 share/nvim/runtime/syntax/a65.vim
 share/nvim/runtime/syntax/aap.vim
