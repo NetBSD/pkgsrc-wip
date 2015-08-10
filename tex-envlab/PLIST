@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/10 21:07:15 yhardy Exp $
+share/texmf-dist/tex/latex/envlab/envlab.cfg
+share/texmf-dist/tex/latex/envlab/envlab.sty
