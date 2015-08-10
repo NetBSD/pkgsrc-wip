@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6269 2015/08/10 21:31:22 yhardy Exp $
+# $Id: Makefile,v 1.6270 2015/08/10 21:34:13 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -931,6 +931,7 @@ SUBDIR+=	gsdpdf
 SUBDIR+=	gsmartcontrol
 SUBDIR+=	gst-inspector
 SUBDIR+=	gst-plugins0.10-farsight
+SUBDIR+=	gst-plugins1-fluidsynth
 SUBDIR+=	gst-plugins1-modplug
 SUBDIR+=	gst-plugins1-ximagesrc
 SUBDIR+=	gstat
