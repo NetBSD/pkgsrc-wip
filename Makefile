@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6259 2015/08/10 10:13:40 asau Exp $
+# $Id: Makefile,v 1.6260 2015/08/10 20:14:27 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3862,6 +3862,7 @@ SUBDIR+=	wackamole
 SUBDIR+=	wang-ttf
 SUBDIR+=	watch
 SUBDIR+=	wbox
+SUBDIR+=	weatherman
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
 SUBDIR+=	webkit-gtk3
