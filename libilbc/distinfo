@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/08/10 22:33:01 yhardy Exp $
+
+SHA1 (libilbc/v2.0.2.tar.gz) = 343a11fc4c0aedbb85eab4568f88a4c2258fca01
+RMD160 (libilbc/v2.0.2.tar.gz) = 6e52b715800a9fa209f32fe58c223da6ae286302
+Size (libilbc/v2.0.2.tar.gz) = 165401 bytes
+SHA1 (patch-CMakeLists.txt) = 733734c2c04de8547572848f7810ac010e6be28d
