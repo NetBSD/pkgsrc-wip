@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/11 22:42:24 jihbed Exp $
+
+SHA1 (ciabatta-0.3.0.tar.gz) = e2cf209ccf1b60f2a3e63d806f46dae8649205e7
+RMD160 (ciabatta-0.3.0.tar.gz) = 9f81180a5b3cc994c53916f74a4b9e827c9ed01b
+Size (ciabatta-0.3.0.tar.gz) = 61066 bytes
