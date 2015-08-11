@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/08/10 22:33:01 yhardy Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/08/11 09:55:04 yhardy Exp $
 
 BUILDLINK_TREE+=	libilbc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libilbc
 LIBILBC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libilbc+=	libilbc>=2.0.2
-BUILDLINK_PKGSRCDIR.libilbc?=	../../local/libilbc
+BUILDLINK_PKGSRCDIR.libilbc?=	../../wip/libilbc
 .endif	# LIBILBC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libilbc
