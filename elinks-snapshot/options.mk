@@ -1,21 +1,24 @@
-# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:34 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.6 2015/08/12 19:46:44 atomicules Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
-PKG_SUPPORTED_OPTIONS+=	bittorrent nntp spidermonkey finger gopher
-PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-fastmem elinks-exmode expat
-PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec ssl
-PKG_SUPPORTED_OPTIONS+= elinks-use-alloca boehm-gc
+PKG_SUPPORTED_OPTIONS+=	bittorrent nntp finger gopher
+PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-exmode expat
+PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec
+PKG_SUPPORTED_OPTIONS+=	kerberos
+PKG_SUPPORTED_OPTIONS+=	python
 PKG_OPTIONS_GROUP.tls=	gnutls ssl
+PKG_OPTIONS_GROUP.malloc=	boehm-gc elinks-fastmem
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
-PKG_SUGGESTED_OPTIONS=	ssl spidermonkey x11 elinks-exmode boehm-gc expat
-PKG_SUGGESTED_OPTIONS+= elinks-html-highlight bittorrent inet6
+PKG_OPTIONS_OPTIONAL_GROUPS=	malloc
+PKG_SUGGESTED_OPTIONS=	ssl elinks-html-highlight elinks-exmode
+PKG_SUGGESTED_OPTIONS+=	expat boehm-gc inet6
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+= --enable-ipv6
+CONFIGURE_ARGS+=	--enable-ipv6
 .else
-CONFIGURE_ARGS+= --disable-ipv6
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
@@ -41,16 +44,14 @@ CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--disable-nntp
 .endif
 
-.if !empty(PKG_OPTIONS:Mspidermonkey)
-
-.include "../../lang/spidermonkey/buildlink3.mk"
-
-CONFIGURE_ARGS+=	--with-spidermonkey
-CONFIGURE_ARGS+=	--enable-sm-scripting
-.else
-CONFIGURE_ARGS+=	--without-spidermonkey
-CONFIGURE_ARGS+=	--disable-sm-scripting
-.endif
+#.if !empty(PKG_OPTIONS:Mjavascript)
+#.include "../../lang/spidermonkey/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-spidermonkey
+#CONFIGURE_ARGS+=	--enable-sm-scripting
+#.else
+#CONFIGURE_ARGS+=	--without-spidermonkey
+#CONFIGURE_ARGS+=	--disable-sm-scripting
+#.endif
 
 .if !empty(PKG_OPTIONS:Mssl)
 
@@ -62,9 +63,7 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 .include "../../security/gnutls/buildlink3.mk"
 
-CONFIGURE_ARGS+= --with-gnutls-includes=${BUILDLINK_PREFIX.gnutls}/include
-CONFIGURE_ARGS+= --with-gnutls-libs=${BUILDLINK_PREFIX.gnutls}/lib
-CONFIGURE_ARGS+= --without-openssl
+CONFIGURE_ARGS+=	--without-openssl
 .endif
 
 # Requires fsplib, which is not currently in pkgsrc.
@@ -96,12 +95,6 @@ CONFIGURE_ARGS+=	--enable-xbel
 CONFIGURE_ARGS+=	--disable-xbel
 .endif
 
-.if !empty(PKG_OPTIONS:Melinks-fastmem)
-CONFIGURE_ARGS+=	--enable-fastmem
-.else
-CONFIGURE_ARGS+=	--disable-fastmem
-.endif
-
 .if !empty(PKG_OPTIONS:Melinks-html-highlight)
 CONFIGURE_ARGS+=	--enable-html-highlight
 .else
@@ -120,12 +113,23 @@ CONFIGURE_ARGS+=	--disable-no-root
 CONFIGURE_ARGS+=	--enable-no-root
 .endif
 
-.if empty(PKG_OPTIONS:Melinks-use-alloca)
-CONFIGURE_ENV+= ac_cv_func_alloca_works=no
+.if !empty(PKG_OPTIONS:Mboehm-gc)
+CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc:Q}
+.  include "../../devel/boehm-gc/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Melinks-fastmem)
+CONFIGURE_ARGS+=	--enable-fastmem
 .endif
 
-.if !empty(PKG_OPTIONS:Mboehm-gc)
-.include "../../devel/boehm-gc/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mkerberos)
+CONFIGURE_ARGS+=	--with-gssapi
+.  include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gssapi
+.endif
 
-CONFIGURE_ARGS+=	--with-gc
+.if !empty(PKG_OPTIONS:Mpython)
+.include "../../lang/python/pyversion.mk"
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
+.else
+CONFIGURE_ARGS+=	--without-python
 .endif
