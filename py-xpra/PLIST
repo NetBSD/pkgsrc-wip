@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/07/01 09:58:09 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/08/14 20:43:35 thomasklausner Exp $
 bin/xpra
 bin/xpra_Xdummy
 bin/xpra_launcher
@@ -403,6 +403,9 @@ ${PYSITELIB}/xpra/platform/xposix/shadow_server.pyo
 ${PYSITELIB}/xpra/scripts/__init__.py
 ${PYSITELIB}/xpra/scripts/__init__.pyc
 ${PYSITELIB}/xpra/scripts/__init__.pyo
+${PYSITELIB}/xpra/scripts/bug_report.py
+${PYSITELIB}/xpra/scripts/bug_report.pyc
+${PYSITELIB}/xpra/scripts/bug_report.pyo
 ${PYSITELIB}/xpra/scripts/config.py
 ${PYSITELIB}/xpra/scripts/config.pyc
 ${PYSITELIB}/xpra/scripts/config.pyo
