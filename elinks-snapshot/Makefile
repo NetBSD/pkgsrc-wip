@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2015/08/12 19:46:43 atomicules Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/14 18:05:50 atomicules Exp $
 #
 
 DISTNAME=	elinks-current-0.13
 PKGNAME=		elinks-0.13
-PKGREVISION=	6
+
 CATEGORIES=	www
 MASTER_SITES=	http://elinks.or.cz/download/
 EXTRACT_SUFX=		.tar.bz2
-MAINTAINER=	base@atomicules.co.uk
+MAINTAINER=	atomicules@users.sourceforge.net
 HOMEPAGE=	http://elinks.or.cz/download/
 COMMENT=	Extended/Enhanced Links 0.13
 LICENSE=	gnu-gpl-v2
