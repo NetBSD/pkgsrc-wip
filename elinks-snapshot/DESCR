@@ -9,4 +9,4 @@ available in pkgsrc/www. Created due to SSL Errors that occur with some sites
 and stop them from loading altogether under 0.12pre6. It is fixed with 0.13.
 Patches are as per the pkgsrc/www version, only line numbers, etc were
 updated so they applied cleanly. Some patches were no longer required because
-the changes had been incorporate into 0.13.
+the changes had been incorporated into 0.13.

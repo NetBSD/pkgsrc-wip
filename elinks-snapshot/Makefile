@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/08/14 18:05:50 atomicules Exp $
+# $NetBSD: Makefile,v 1.11 2015/08/15 22:19:25 atomicules Exp $
 #
 
 DISTNAME=	elinks-current-0.13
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 #NO_CHECKSUM=	Yes
 
 CONFLICTS+=	elinks-[0-9]*
+LUA_VERSIONS_ACCEPTED=	51
+LUA_VERSIONS_INCOMPATIBLE= 52
 
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
