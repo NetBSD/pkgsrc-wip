@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/07/16 08:57:32 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/16 21:18:25 leot1990 Exp $
 
 DISTNAME=	fio-2.2.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://brick.kernel.dk/snaps/
 
@@ -14,7 +14,7 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=	bash gmake lex yacc
 
 DOCDIR=		${PREFIX}/share/doc/fio
-EGDIR=		${PREFIX}/share/example/fio
+EGDIR=		${PREFIX}/share/examples/fio
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
