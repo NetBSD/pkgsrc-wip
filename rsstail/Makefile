@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/04/02 18:17:25 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/17 12:49:44 leot1990 Exp $
 
-DISTNAME=	rsstail-1.8
+DISTNAME=	rsstail-2.0
 CATEGORIES=	www
 MASTER_SITES=	http://www.vanheusden.com/rsstail/
 EXTRACT_SUFX=	.tgz
@@ -24,5 +24,6 @@ SUBST_SED.makefile+=	-e 's/\$$(DEBUG)//'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../www/libmrss/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
