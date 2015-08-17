@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2014/07/17 20:47:10 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2015/08/17 15:34:47 fhajny Exp $
 
-DISTNAME=	wkhtmltox-0.12.1
+DISTNAME=	wkhtmltox-0.12.2.1
 PKGNAME=	${DISTNAME:S/tox/topdf/}
-PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wkhtmltopdf/}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=wkhtmltopdf/}
+MASTER_SITES=	http://download.gna.org/wkhtmltopdf/0.12/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zecrazytux@zecrazytux.net
@@ -74,6 +74,8 @@ CONFIGURE_ARGS+=	\
 CFLAGS.SunOS+=	-D_XPG6
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}${PREFIX}
+
+PLIST_SUBST+=	LIBVERSION=${PKGVERSION_NOREV:C/([0-9]+\.)([0-9]+\.)([0-9]+)\.[0-9]+/\1\2\3/}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build/app ${WRKSRC}/build/qt
