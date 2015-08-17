@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6274 2015/08/17 20:12:12 yhardy Exp $
+# $Id: Makefile,v 1.6275 2015/08/17 20:40:51 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -306,6 +306,7 @@ SUBDIR+=	chemeq
 SUBDIR+=	chems
 SUBDIR+=	chibi-scheme
 SUBDIR+=	chicken
+SUBDIR+=	chocolate-doom
 SUBDIR+=	choosefont
 SUBDIR+=	chora
 SUBDIR+=	chromium
