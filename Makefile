@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6275 2015/08/17 20:40:51 yhardy Exp $
+# $Id: Makefile,v 1.6276 2015/08/17 20:52:14 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3404,6 +3404,7 @@ SUBDIR+=	rootcheck
 SUBDIR+=	rope
 SUBDIR+=	rosegarden
 SUBDIR+=	rosegarden-current
+SUBDIR+=	rott
 SUBDIR+=	roundcube-skin-mvision2
 SUBDIR+=	roxterm
 SUBDIR+=	rpcemu
