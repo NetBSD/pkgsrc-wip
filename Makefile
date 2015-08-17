@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6273 2015/08/10 22:29:36 yhardy Exp $
+# $Id: Makefile,v 1.6274 2015/08/17 20:12:12 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3908,6 +3908,7 @@ SUBDIR+=	wmsupermon
 SUBDIR+=	wmswallow
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
+SUBDIR+=	wolf4SDL
 SUBDIR+=	wordwarvi
 SUBDIR+=	workrave
 SUBDIR+=	wpro
