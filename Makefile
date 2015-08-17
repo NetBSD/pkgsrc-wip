@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6276 2015/08/17 20:52:14 yhardy Exp $
+# $Id: Makefile,v 1.6277 2015/08/17 21:13:12 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -726,6 +726,7 @@ SUBDIR+=	freevrrpd
 SUBDIR+=	fribid
 SUBDIR+=	fricas
 SUBDIR+=	frobby
+SUBDIR+=	frobtads
 SUBDIR+=	fs-uae
 SUBDIR+=	fs-uae-dev
 SUBDIR+=	fs-uae-launcher
