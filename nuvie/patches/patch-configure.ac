@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/08/17 21:22:15 yhardy Exp $
+
+Fix == test
+
+--- configure.ac.orig	2012-09-08 17:51:52.000000000 +0200
++++ configure.ac	2012-09-08 17:52:19.000000000 +0200
+@@ -77,7 +77,7 @@
+ # ---------------------------------------------------------------------
+ # Black magic for static linking on OS X
+ # ---------------------------------------------------------------------
+-if test x$HOST_SYSTEM == xMACOSX; then
++if test x$HOST_SYSTEM = xMACOSX; then
+ 	AC_ARG_WITH(macosx-static-lib-path,
+ 		AS_HELP_STRING([--with-macosx-static-lib-path=path], [path to location of static library files (Mac OS X bundles only)]),
+ 		[with_macosx_static_lib_path="$withval"],

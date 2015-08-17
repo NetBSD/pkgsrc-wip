@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/08/17 21:22:15 yhardy Exp $
+
+SHA1 (nuvie-0.5.tgz) = d4de34d0d9a01bfa1f5cd895d4e31b394dee19fc
+RMD160 (nuvie-0.5.tgz) = 3dec5d61888ff7c06eed1b1179f0dccfc32c3d69
+Size (nuvie-0.5.tgz) = 1656332 bytes
+SHA1 (patch-configure) = 9e2b302469c070c36c670a70f6987fed22d27771
+SHA1 (patch-configure.ac) = ebb7c28a7893c544ba96c88c25dad9974f69479d
+SHA1 (patch-nuvieDefs.h) = 24b6a928b0840ceb96d7e92d3bf39bdec08074df
