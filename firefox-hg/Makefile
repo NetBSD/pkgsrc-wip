@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/04/05 07:33:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2015/08/17 07:30:47 thomasklausner Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	40.0a1
+MOZ_BRANCH=	43.0a1
 MOZ_BRANCH_MINOR=
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
@@ -14,14 +14,15 @@ EXTRACT_SUFX=	.tar.bz2
 HG_REPOSITORIES=	mozilla
 HG_REPO.mozilla=	https://hg.mozilla.org/mozilla-central
 
-WRKSRC=		${WRKDIR}/mozilla
-
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions (hg version)
 LICENSE=	mpl-1.1
 
+WRKSRC=		${WRKDIR}/mozilla
 MOZILLA_DIR=	# empty
+
+BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
 CONFIGURE_ARGS+=	--enable-application=browser
 

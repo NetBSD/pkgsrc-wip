@@ -1,6 +1,6 @@
-$NetBSD: patch-mfbt_Attributes.h,v 1.5 2015/04/05 07:33:51 thomasklausner Exp $
+$NetBSD: patch-mfbt_Attributes.h,v 1.6 2015/08/17 07:30:48 thomasklausner Exp $
 
---- mfbt/Attributes.h.orig	2015-04-05 06:58:05.000000000 +0000
+--- mfbt/Attributes.h.orig	2015-08-16 14:08:46.000000000 +0000
 +++ mfbt/Attributes.h
 @@ -50,6 +50,7 @@
   * don't indicate support for them here, due to
@@ -9,8 +9,8 @@ $NetBSD: patch-mfbt_Attributes.h,v 1.5 2015/04/05 07:33:51 thomasklausner Exp $
 +#  define MOZ_HAVE_CXX11_ALIGNAS
  #  define MOZ_HAVE_NEVER_INLINE          __declspec(noinline)
  #  define MOZ_HAVE_NORETURN              __declspec(noreturn)
- #  ifdef __clang__
-@@ -70,6 +71,9 @@
+ #  if _MSC_VER >= 1900
+@@ -73,6 +74,9 @@
  #  ifndef __has_extension
  #    define __has_extension __has_feature /* compatibility, for older versions of clang */
  #  endif
@@ -20,7 +20,7 @@ $NetBSD: patch-mfbt_Attributes.h,v 1.5 2015/04/05 07:33:51 thomasklausner Exp $
  #  if __has_extension(cxx_constexpr)
  #    define MOZ_HAVE_CXX11_CONSTEXPR
  #  endif
-@@ -83,6 +87,9 @@
+@@ -86,6 +90,9 @@
  #    define MOZ_HAVE_NORETURN            __attribute__((noreturn))
  #  endif
  #elif defined(__GNUC__)
