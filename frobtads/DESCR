@@ -1,0 +1,23 @@
+FrobTADS has been written as a replacement for the "traditional"
+Unix-port of TADS, which has many problems and limitations, and is
+difficult to maintain and change.  The FrobTADS interpreter also
+provides some features that the traditional Unix-port lacks, the most
+important of them being:
+
+  - Automatic configuration prior to building; no need to edit
+    makefiles.
+  - TADS 3 color support and configurable default colors.
+  - Correct timing with timed operations (millisecond-precision).
+  - Input like in Frotz; cursor keys, insert, delete, etc., instead
+    of Emacs-like input.
+  - TADS 3 banners look as they should.
+  - You are not required to install the package prior to running the
+    TADS 3 test suite.
+  - File I/O initiated by the game will happen in the game's directory.
+    This means that you don't have to change to the game's directory
+    prior to starting the interpreter.
+  - Less source code (and also less complex), more comments.
+  - More portable.
+
+The ultimate goal is to make FrobTADS compile and run out-of-the-box on
+every system that has a curses library and a Unix-like shell available.
