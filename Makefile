@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6277 2015/08/17 21:13:12 yhardy Exp $
+# $Id: Makefile,v 1.6278 2015/08/17 21:24:00 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1970,6 +1970,7 @@ SUBDIR+=	ntimed-git
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nuttcp
+SUBDIR+=	nuvie
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
