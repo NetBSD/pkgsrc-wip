@@ -14,3 +14,5 @@ Chocolate Doom's aims are:
  * Compatibility with the DOS demo, configuration and savegame files.
  * To provide an accurate retro "feel" (display and input should
    behave the same).
+
+This is a game engine - the data files are not included.
