@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/08/18 21:56:49 yhardy Exp $
+
+SHA1 (R/Cairo_1.5-8.tar.gz) = 56a66e9c9ed3a584c5be3bf71fdec0ac4a42debd
+RMD160 (R/Cairo_1.5-8.tar.gz) = bb83d02117c12cf050731b101b4015b4aa5d99b1
+Size (R/Cairo_1.5-8.tar.gz) = 86920 bytes
+SHA1 (patch-configure) = eb4918abf1d80c02afbeea52aeccaa8675ee2021
