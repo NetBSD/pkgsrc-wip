@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/28 21:24:38 asau Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/18 20:35:47 yhardy Exp $
 #
 
 DISTNAME=		dumb-0.9.3
@@ -13,13 +13,16 @@ COMMENT=		IT, XM, S3M and MOD player library
 
 USE_TOOLS+=		gmake
 
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
+INSTALLATION_DIRS+=	bin include lib share/doc/dumb
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dumb
 	cd ${WRKSRC} && ${INSTALL_DATA} licence.txt readme.txt release.txt \
-		${PREFIX}/share/doc/dumb
+		${DESTDIR}${PREFIX}/share/doc/dumb
 	cd ${WRKSRC}/docs && ${INSTALL_DATA} deprec.txt faq.txt howto.txt \
 		ptr.txt dumb.txt fnptr.txt modplug.txt \
-		${PREFIX}/share/doc/dumb
+		${DESTDIR}${PREFIX}/share/doc/dumb
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
