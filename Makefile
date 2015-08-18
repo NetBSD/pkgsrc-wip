@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6281 2015/08/18 20:16:23 yhardy Exp $
+# $Id: Makefile,v 1.6282 2015/08/18 20:26:36 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -242,6 +242,7 @@ SUBDIR+=	bpmcounter
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	brltty
+SUBDIR+=	brogue
 SUBDIR+=	bscript
 SUBDIR+=	bsdbuild
 SUBDIR+=	bsfilter
