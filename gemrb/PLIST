@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2013/12/03 12:03:47 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/08/18 21:31:46 yhardy Exp $
 bin/extend2da.py
 bin/gemrb
 lib/gemrb/libgemrb_core.so
+lib/gemrb/libgemrb_core.so.${PKGVERSION}
 lib/gemrb/plugins/2DAImporter.so
 lib/gemrb/plugins/ACMReader.so
 lib/gemrb/plugins/AREImporter.so
@@ -110,8 +111,8 @@ share/doc/gemrb/en/GUIScript/Control_SetStatus.txt
 share/doc/gemrb/en/GUIScript/Control_SetText.txt
 share/doc/gemrb/en/GUIScript/Control_SetTooltip.txt
 share/doc/gemrb/en/GUIScript/Control_SetVarAssoc.txt
+share/doc/gemrb/en/GUIScript/Control_SubstituteForControl.txt
 share/doc/gemrb/en/GUIScript/Control_TextArea_SetFlags.txt
-share/doc/gemrb/en/GUIScript/ConvertEdit.txt
 share/doc/gemrb/en/GUIScript/CountEffects.txt
 share/doc/gemrb/en/GUIScript/CreateButton.txt
 share/doc/gemrb/en/GUIScript/CreateCreature.txt
@@ -168,8 +169,6 @@ share/doc/gemrb/en/GUIScript/GameSetProtagonistMode.txt
 share/doc/gemrb/en/GUIScript/GameSetReputation.txt
 share/doc/gemrb/en/GUIScript/GameSetScreenFlags.txt
 share/doc/gemrb/en/GUIScript/GetAbilityBonus.txt
-share/doc/gemrb/en/GUIScript/GetCharSounds.txt
-share/doc/gemrb/en/GUIScript/GetCharacters.txt
 share/doc/gemrb/en/GUIScript/GetCombatDetails.txt
 share/doc/gemrb/en/GUIScript/GetContainer.txt
 share/doc/gemrb/en/GUIScript/GetContainerItem.txt
@@ -208,7 +207,6 @@ share/doc/gemrb/en/GUIScript/GetPlayerSound.txt
 share/doc/gemrb/en/GUIScript/GetPlayerStat.txt
 share/doc/gemrb/en/GUIScript/GetPlayerStates.txt
 share/doc/gemrb/en/GUIScript/GetPlayerString.txt
-share/doc/gemrb/en/GUIScript/GetPortraits.txt
 share/doc/gemrb/en/GUIScript/GetRumour.txt
 share/doc/gemrb/en/GUIScript/GetSaveGameAttrib.txt
 share/doc/gemrb/en/GUIScript/GetSaveGameCount.txt
@@ -264,7 +262,6 @@ share/doc/gemrb/en/GUIScript/LoadWindowPack.txt
 share/doc/gemrb/en/GUIScript/MemorizeSpell.txt
 share/doc/gemrb/en/GUIScript/MessageWindowDebug.txt
 share/doc/gemrb/en/GUIScript/ModifyEffect.txt
-share/doc/gemrb/en/GUIScript/MoveTAText.txt
 share/doc/gemrb/en/GUIScript/MoveToArea.txt
 share/doc/gemrb/en/GUIScript/PlayMovie.txt
 share/doc/gemrb/en/GUIScript/PlaySound.txt
@@ -287,7 +284,6 @@ share/doc/gemrb/en/GUIScript/SaveGame_GetPortrait.txt
 share/doc/gemrb/en/GUIScript/SaveGame_GetPreview.txt
 share/doc/gemrb/en/GUIScript/SaveGame_GetSaveID.txt
 share/doc/gemrb/en/GUIScript/ScrollBar_SetDefaultScrollBar.txt
-share/doc/gemrb/en/GUIScript/ScrollBar_SetSprites.txt
 share/doc/gemrb/en/GUIScript/SetActionIcon.txt
 share/doc/gemrb/en/GUIScript/SetAnimation.txt
 share/doc/gemrb/en/GUIScript/SetAnimationPalette.txt
@@ -311,6 +307,7 @@ share/doc/gemrb/en/GUIScript/SetDefaultActions.txt
 share/doc/gemrb/en/GUIScript/SetDefaultScrollBar.txt
 share/doc/gemrb/en/GUIScript/SetEquippedQuickSlot.txt
 share/doc/gemrb/en/GUIScript/SetEvent.txt
+share/doc/gemrb/en/GUIScript/SetFeature.txt
 share/doc/gemrb/en/GUIScript/SetFullScreen.txt
 share/doc/gemrb/en/GUIScript/SetGamePortraitPreview.txt
 share/doc/gemrb/en/GUIScript/SetGamePreview.txt
@@ -344,7 +341,6 @@ share/doc/gemrb/en/GUIScript/SetSaveGamePortrait.txt
 share/doc/gemrb/en/GUIScript/SetSaveGamePreview.txt
 share/doc/gemrb/en/GUIScript/SetScrollBarSprites.txt
 share/doc/gemrb/en/GUIScript/SetSpellIcon.txt
-share/doc/gemrb/en/GUIScript/SetTAHistory.txt
 share/doc/gemrb/en/GUIScript/SetText.txt
 share/doc/gemrb/en/GUIScript/SetTextAreaFlags.txt
 share/doc/gemrb/en/GUIScript/SetTickHook.txt
@@ -387,15 +383,9 @@ share/doc/gemrb/en/GUIScript/TextAreaClear.txt
 share/doc/gemrb/en/GUIScript/TextAreaScroll.txt
 share/doc/gemrb/en/GUIScript/TextArea_Append.txt
 share/doc/gemrb/en/GUIScript/TextArea_Clear.txt
-share/doc/gemrb/en/GUIScript/TextArea_GetCharSounds.txt
-share/doc/gemrb/en/GUIScript/TextArea_GetCharacters.txt
-share/doc/gemrb/en/GUIScript/TextArea_GetPortraits.txt
-share/doc/gemrb/en/GUIScript/TextArea_MoveText.txt
-share/doc/gemrb/en/GUIScript/TextArea_Rewind.txt
+share/doc/gemrb/en/GUIScript/TextArea_ListResources.txt
 share/doc/gemrb/en/GUIScript/TextArea_Scroll.txt
-share/doc/gemrb/en/GUIScript/TextArea_SelectText.txt
-share/doc/gemrb/en/GUIScript/TextArea_SetHistory.txt
-share/doc/gemrb/en/GUIScript/TextEdit_ConvertEdit.txt
+share/doc/gemrb/en/GUIScript/TextArea_SetChapterText.txt
 share/doc/gemrb/en/GUIScript/TextEdit_SetBufferLength.txt
 share/doc/gemrb/en/GUIScript/UnhideGUI.txt
 share/doc/gemrb/en/GUIScript/UnloadSymbol.txt
@@ -482,6 +472,7 @@ share/doc/gemrb/en/Tables/skillsta.txt
 share/doc/gemrb/en/Tables/slottype.txt
 share/doc/gemrb/en/Tables/spells.txt
 share/doc/gemrb/en/Tables/splprot.txt
+share/doc/gemrb/en/Tables/splspec.txt
 share/doc/gemrb/en/Tables/stances.txt
 share/doc/gemrb/en/Tables/start.txt
 share/doc/gemrb/en/Tables/states.txt
@@ -504,12 +495,15 @@ share/gemrb/GUIScripts/AutodetectCommon.py
 share/gemrb/GUIScripts/BGCommon.py
 share/gemrb/GUIScripts/CommonTables.py
 share/gemrb/GUIScripts/CommonWindow.py
+share/gemrb/GUIScripts/CreateControlDecorators.py
 share/gemrb/GUIScripts/DualClass.py
 share/gemrb/GUIScripts/GUIClasses.py
 share/gemrb/GUIScripts/GUICommon.py
 share/gemrb/GUIScripts/GUICommonWindows.py
 share/gemrb/GUIScripts/GUIDefines.py
 share/gemrb/GUIScripts/GUILOAD.py
+share/gemrb/GUIScripts/GUIMA.py
+share/gemrb/GUIScripts/GUIMG.py
 share/gemrb/GUIScripts/GUIOPT.py
 share/gemrb/GUIScripts/GUIOPTControls.py
 share/gemrb/GUIScripts/GUIPR.py
@@ -518,6 +512,7 @@ share/gemrb/GUIScripts/GUIRECCommon.py
 share/gemrb/GUIScripts/GUISAVE.py
 share/gemrb/GUIScripts/GUISTORE.py
 share/gemrb/GUIScripts/GUIWORLD.py
+share/gemrb/GUIScripts/GameCheck.py
 share/gemrb/GUIScripts/InventoryCommon.py
 share/gemrb/GUIScripts/LUCommon.py
 share/gemrb/GUIScripts/LUProfsSelection.py
@@ -550,8 +545,6 @@ share/gemrb/GUIScripts/bg1/GUICG8.py
 share/gemrb/GUIScripts/bg1/GUICG9.py
 share/gemrb/GUIScripts/bg1/GUIINV.py
 share/gemrb/GUIScripts/bg1/GUIJRNL.py
-share/gemrb/GUIScripts/bg1/GUIMA.py
-share/gemrb/GUIScripts/bg1/GUIMG.py
 share/gemrb/GUIScripts/bg1/GUIMOVIE.py
 share/gemrb/GUIScripts/bg1/GUIMP.py
 share/gemrb/GUIScripts/bg1/GUISONGS.py
@@ -593,8 +586,6 @@ share/gemrb/GUIScripts/bg2/GUICG8.py
 share/gemrb/GUIScripts/bg2/GUICG9.py
 share/gemrb/GUIScripts/bg2/GUIINV.py
 share/gemrb/GUIScripts/bg2/GUIJRNL.py
-share/gemrb/GUIScripts/bg2/GUIMA.py
-share/gemrb/GUIScripts/bg2/GUIMG.py
 share/gemrb/GUIScripts/bg2/GUIMOVIE.py
 share/gemrb/GUIScripts/bg2/GUISONGS.py
 share/gemrb/GUIScripts/bg2/ImportFile.py
@@ -617,6 +608,7 @@ share/gemrb/GUIScripts/demo/MessageWindow.py
 share/gemrb/GUIScripts/demo/README
 share/gemrb/GUIScripts/demo/SetupGame.py
 share/gemrb/GUIScripts/demo/Start.py
+share/gemrb/GUIScripts/demo/Tests.py
 share/gemrb/GUIScripts/ie_action.py
 share/gemrb/GUIScripts/ie_feats.py
 share/gemrb/GUIScripts/ie_modal.py
@@ -630,8 +622,6 @@ share/gemrb/GUIScripts/iwd/Autodetect.py
 share/gemrb/GUIScripts/iwd/CharGen.py
 share/gemrb/GUIScripts/iwd/GUIINV.py
 share/gemrb/GUIScripts/iwd/GUIJRNL.py
-share/gemrb/GUIScripts/iwd/GUIMA.py
-share/gemrb/GUIScripts/iwd/GUIMG.py
 share/gemrb/GUIScripts/iwd/GUIMOVIE.py
 share/gemrb/GUIScripts/iwd/LoadScreen.py
 share/gemrb/GUIScripts/iwd/MessageWindow.py
@@ -660,11 +650,11 @@ share/gemrb/GUIScripts/iwd2/Feats.py
 share/gemrb/GUIScripts/iwd2/GUIINV.py
 share/gemrb/GUIScripts/iwd2/GUIJRNL.py
 share/gemrb/GUIScripts/iwd2/GUILOAD.py
-share/gemrb/GUIScripts/iwd2/GUIMA.py
 share/gemrb/GUIScripts/iwd2/GUIREC.py
 share/gemrb/GUIScripts/iwd2/GUISPL.py
 share/gemrb/GUIScripts/iwd2/GUIWORLD.py
 share/gemrb/GUIScripts/iwd2/Gender.py
+share/gemrb/GUIScripts/iwd2/IDLUCommon.py
 share/gemrb/GUIScripts/iwd2/ImportFile.py
 share/gemrb/GUIScripts/iwd2/LoadScreen.py
 share/gemrb/GUIScripts/iwd2/MessageWindow.py
@@ -677,6 +667,7 @@ share/gemrb/GUIScripts/iwd2/SPParty2.py
 share/gemrb/GUIScripts/iwd2/SPPartyFormation.py
 share/gemrb/GUIScripts/iwd2/Skills.py
 share/gemrb/GUIScripts/iwd2/Songs.py
+share/gemrb/GUIScripts/iwd2/Spells.py
 share/gemrb/GUIScripts/iwd2/Start.py
 share/gemrb/GUIScripts/iwd2/SubRaces.py
 share/gemrb/GUIScripts/maze_defs.py
@@ -734,18 +725,22 @@ share/gemrb/minimal/test.cfg
 share/gemrb/override/bg1/CMakeLists.txt
 share/gemrb/override/bg1/efftext.2da
 share/gemrb/override/bg1/minorglb.vvc
+share/gemrb/override/bg2/clearair.2da
 share/gemrb/override/bg2/efftext.2da
 share/gemrb/override/bg2/minorglb.vvc
 share/gemrb/override/bg2/spells.2da
 share/gemrb/override/how/baldur.bcs
+share/gemrb/override/how/drmtxt2.2da
 share/gemrb/override/how/efftext.2da
 share/gemrb/override/iwd/baldur.bcs
+share/gemrb/override/iwd/drmtxt2.2da
 share/gemrb/override/iwd/efftext.2da
+share/gemrb/override/iwd2/drmtxt2.2da
 share/gemrb/override/iwd2/efftext.2da
-share/gemrb/override/pst/baldur.bcs
+share/gemrb/override/iwd2/skillrac.2da
+share/gemrb/override/pst/drmtxt2.2da
 share/gemrb/override/pst/efftext.2da
 share/gemrb/override/pst/rndtreas.2da
-share/gemrb/override/pst/source/baldur.baf
 share/gemrb/override/shared/stats.ids
 share/gemrb/unhardcoded/bg1/ability.2da
 share/gemrb/unhardcoded/bg1/acidblgr.pro
@@ -928,6 +923,7 @@ share/gemrb/unhardcoded/bg2/comet.pro
 share/gemrb/unhardcoded/bg2/damage.2da
 share/gemrb/unhardcoded/bg2/defsound.2da
 share/gemrb/unhardcoded/bg2/denyspl.2da
+share/gemrb/unhardcoded/bg2/difflvls.2da
 share/gemrb/unhardcoded/bg2/dsclass.2da
 share/gemrb/unhardcoded/bg2/dsrace.2da
 share/gemrb/unhardcoded/bg2/dstable.2da
@@ -1078,6 +1074,9 @@ share/gemrb/unhardcoded/how/cgraceh.pro
 share/gemrb/unhardcoded/how/cgtable.2da
 share/gemrb/unhardcoded/how/chant.pro
 share/gemrb/unhardcoded/how/chromorb.pro
+share/gemrb/unhardcoded/how/clabdrui.2da
+share/gemrb/unhardcoded/how/clabpala.2da
+share/gemrb/unhardcoded/how/clabrngr.2da
 share/gemrb/unhardcoded/how/classes.2da
 share/gemrb/unhardcoded/how/cldamah.pro
 share/gemrb/unhardcoded/how/cloud.pro
@@ -1152,6 +1151,7 @@ share/gemrb/unhardcoded/how/entangle.pro
 share/gemrb/unhardcoded/how/equake.pro
 share/gemrb/unhardcoded/how/exaltah.pro
 share/gemrb/unhardcoded/how/factioh.pro
+share/gemrb/unhardcoded/how/fatiimm.spl
 share/gemrb/unhardcoded/how/findtrap.pro
 share/gemrb/unhardcoded/how/fireball.pro
 share/gemrb/unhardcoded/how/fireblic.pro
@@ -1240,9 +1240,10 @@ share/gemrb/unhardcoded/how/pathfind.2da
 share/gemrb/unhardcoded/how/pdolls.2da
 share/gemrb/unhardcoded/how/pfire.pro
 share/gemrb/unhardcoded/how/pictures.2da
+share/gemrb/unhardcoded/how/poisimm.spl
 share/gemrb/unhardcoded/how/poisonh.pro
 share/gemrb/unhardcoded/how/pomab.2da
-share/gemrb/unhardcoded/how/portal.pro
+share/gemrb/unhardcoded/how/portalh.pro
 share/gemrb/unhardcoded/how/prayer.pro
 share/gemrb/unhardcoded/how/prayerh.pro
 share/gemrb/unhardcoded/how/proftype.2da
@@ -1448,6 +1449,9 @@ share/gemrb/unhardcoded/iwd/cgraceh.pro
 share/gemrb/unhardcoded/iwd/cgtable.2da
 share/gemrb/unhardcoded/iwd/chant.pro
 share/gemrb/unhardcoded/iwd/chromorb.pro
+share/gemrb/unhardcoded/iwd/clabdrui.2da
+share/gemrb/unhardcoded/iwd/clabpala.2da
+share/gemrb/unhardcoded/iwd/clabrngr.2da
 share/gemrb/unhardcoded/iwd/classes.2da
 share/gemrb/unhardcoded/iwd/cldamah.pro
 share/gemrb/unhardcoded/iwd/cloud.pro
@@ -1611,7 +1615,7 @@ share/gemrb/unhardcoded/iwd/pfire.pro
 share/gemrb/unhardcoded/iwd/pictures.2da
 share/gemrb/unhardcoded/iwd/poisonh.pro
 share/gemrb/unhardcoded/iwd/pomab.2da
-share/gemrb/unhardcoded/iwd/portal.pro
+share/gemrb/unhardcoded/iwd/portalh.pro
 share/gemrb/unhardcoded/iwd/prayer.pro
 share/gemrb/unhardcoded/iwd/prayerh.pro
 share/gemrb/unhardcoded/iwd/proftype.2da
@@ -1829,6 +1833,7 @@ share/gemrb/unhardcoded/iwd2/chant.pro
 share/gemrb/unhardcoded/iwd2/chromorb.pro
 share/gemrb/unhardcoded/iwd2/classes.2da
 share/gemrb/unhardcoded/iwd2/cldamah.pro
+share/gemrb/unhardcoded/iwd2/clight.pro
 share/gemrb/unhardcoded/iwd2/cloud.pro
 share/gemrb/unhardcoded/iwd2/cloudb.pro
 share/gemrb/unhardcoded/iwd2/cloudbh.pro
@@ -1873,6 +1878,7 @@ share/gemrb/unhardcoded/iwd2/damage.2da
 share/gemrb/unhardcoded/iwd2/dart.pro
 share/gemrb/unhardcoded/iwd2/dartex.pro
 share/gemrb/unhardcoded/iwd2/dattach.pro
+share/gemrb/unhardcoded/iwd2/dbfireb.pro
 share/gemrb/unhardcoded/iwd2/dbreath.pro
 share/gemrb/unhardcoded/iwd2/ddeath.pro
 share/gemrb/unhardcoded/iwd2/ddeath2.pro
@@ -2032,7 +2038,7 @@ share/gemrb/unhardcoded/iwd2/pfire.pro
 share/gemrb/unhardcoded/iwd2/pictures.2da
 share/gemrb/unhardcoded/iwd2/poisonh.pro
 share/gemrb/unhardcoded/iwd2/polystat.2da
-share/gemrb/unhardcoded/iwd2/portal.pro
+share/gemrb/unhardcoded/iwd2/portalh.pro
 share/gemrb/unhardcoded/iwd2/prayer.pro
 share/gemrb/unhardcoded/iwd2/prayerh.pro
 share/gemrb/unhardcoded/iwd2/proftype.2da
@@ -2201,6 +2207,7 @@ share/gemrb/unhardcoded/pst/avslots.2da
 share/gemrb/unhardcoded/pst/axe.pro
 share/gemrb/unhardcoded/pst/axeex.pro
 share/gemrb/unhardcoded/pst/axoft.spl
+share/gemrb/unhardcoded/pst/baldur.bcs
 share/gemrb/unhardcoded/pst/ball.spl
 share/gemrb/unhardcoded/pst/bbridge.pro
 share/gemrb/unhardcoded/pst/bbridge.spl

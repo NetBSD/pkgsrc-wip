@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2014/05/09 07:38:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/18 21:31:46 yhardy Exp $
 
-DISTNAME=	gemrb-0.8.0.1
-PKGREVISION=	1
+DISTNAME=	gemrb-0.8.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gemrb/}
 
@@ -23,6 +22,10 @@ CMAKE_ARGS+=		-DINSOURCEBUILD=1
 CMAKE_ARGS+=		-DMAN_DIR:PATH=${PREFIX}/${PKGMANDIR}/man6
 CMAKE_ARGS+=		-DEXAMPLE_CONF_DIR:PATH=${PREFIX}/share/examples/gemrb
 CMAKE_ARGS+=		-DSDLMIXER_INCLUDE_DIR=${BUILDLINK_PREFIX.SDL_mixer}/include
+CMAKE_ARGS+=		-DCMAKE_SKIP_RPATH:BOOL=FALSE
+
+CFLAGS+=		-Wl,-R${PREFIX}/lib/gemrb
+CXXFLAGS+=		-Wl,-R${PREFIX}/lib/gemrb
 
 #.include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
