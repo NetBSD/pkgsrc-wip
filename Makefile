@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6278 2015/08/17 21:24:00 yhardy Exp $
+# $Id: Makefile,v 1.6279 2015/08/18 18:38:24 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3840,6 +3840,7 @@ SUBDIR+=	uprof
 SUBDIR+=	ups-monitor
 SUBDIR+=	uptimed
 SUBDIR+=	uqwk
+SUBDIR+=	urlwatch
 SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
