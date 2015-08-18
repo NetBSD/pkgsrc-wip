@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/08/18 18:36:32 yhardy Exp $
+bin/urlwatch
+${PYSITELIB}/urlwatch/__init__.py
+${PYSITELIB}/urlwatch/__init__.pyc
+${PYSITELIB}/urlwatch/__init__.pyo
+${PYSITELIB}/urlwatch/handler.pyc
+${PYSITELIB}/urlwatch/handler.pyo
+${PYSITELIB}/urlwatch/html2txt.pyc
+${PYSITELIB}/urlwatch/html2txt.pyo
+${PYSITELIB}/urlwatch/ical2txt.pyc
+${PYSITELIB}/urlwatch/ical2txt.pyo
+${PYSITELIB}/urlwatch/mailer.pyc
+${PYSITELIB}/urlwatch/mailer.pyo
+${PYSITELIB}/urlwatch/handler.py
+${PYSITELIB}/urlwatch/html2txt.py
+${PYSITELIB}/urlwatch/ical2txt.py
+${PYSITELIB}/urlwatch/mailer.py
+man/man1/urlwatch.1
+share/urlwatch/examples/hooks.py.example
+share/urlwatch/examples/urls.txt.example
