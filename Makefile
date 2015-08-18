@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6285 2015/08/18 21:50:43 yhardy Exp $
+# $Id: Makefile,v 1.6286 2015/08/18 21:58:02 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -31,6 +31,7 @@ SUBDIR+=	R-bigmemory
 SUBDIR+=	R-bigmemory.sri
 SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-bnlearn
+SUBDIR+=	R-cairo
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-entropy
 SUBDIR+=	R-foreach
