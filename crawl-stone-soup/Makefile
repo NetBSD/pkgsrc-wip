@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/09/10 09:12:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/18 21:15:41 yhardy Exp $
 
-DISTNAME=	stone_soup-0.12.2-nodeps
-PKGNAME=	dungeon-crawl-stone-soup-0.12.2
+DISTNAME=	stone_soup-0.16.1-nodeps
+PKGNAME=	dungeon-crawl-stone-soup-0.16.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crawl-ref/}
 EXTRACT_SUFX=	.tar.xz
@@ -31,6 +31,7 @@ REPLACE_PERL+=	util/gen-mi-enum
 REPLACE_PERL+=	util/gather*
 REPLACE_PERL+=	util/db_lint
 REPLACE_PERL+=	util/checkwhite
+REPLACE_PERL+=	util/good-depfile
 
 #SUBST_FILES.fix-paths=	source/Makefile
 #SUBST_SED.fix-paths=	-e 's,"/usr/local,"${PREFIX},g'
@@ -42,6 +43,8 @@ REPLACE_PERL+=	util/checkwhite
 #PKGCONFIG_OVERRIDE+=	source/contrib/libpng/scripts/libpng.pc.in
 #PKGCONFIG_OVERRIDE+=	source/contrib/sdl/sdl.pc.in
 #PKGCONFIG_OVERRIDE+=	source/contrib/sdl-image/SDL_image.pc.in
+
+LUA_VERSIONS_INCOMPATIBLE=	52 53
 
 .include "../../lang/lua/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
