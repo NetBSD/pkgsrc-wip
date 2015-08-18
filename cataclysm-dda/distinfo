@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/08/18 21:49:07 yhardy Exp $
+
+SHA1 (cataclysm-dda/0.C.tar.gz) = 37e317a75e7bf7e3425da86382551958d890e872
+RMD160 (cataclysm-dda/0.C.tar.gz) = c0f95a7a2902094444e07e6175e2494abfe0eea3
+Size (cataclysm-dda/0.C.tar.gz) = 26887684 bytes
+SHA1 (patch-Makefile) = ff6e92afd04a889803ffb045649d6a2774ffbe64
