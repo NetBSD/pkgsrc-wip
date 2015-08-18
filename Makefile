@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6282 2015/08/18 20:26:36 yhardy Exp $
+# $Id: Makefile,v 1.6283 2015/08/18 20:44:23 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -939,6 +939,7 @@ SUBDIR+=	gst-plugins0.10-farsight
 SUBDIR+=	gst-plugins1-aalib
 SUBDIR+=	gst-plugins1-fluidsynth
 SUBDIR+=	gst-plugins1-modplug
+SUBDIR+=	gst-plugins1-schroedinger
 SUBDIR+=	gst-plugins1-ximagesrc
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
