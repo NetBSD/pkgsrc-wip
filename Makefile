@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6284 2015/08/18 21:35:56 yhardy Exp $
+# $Id: Makefile,v 1.6285 2015/08/18 21:50:43 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -291,6 +291,7 @@ SUBDIR+=	carnival
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
 SUBDIR+=	castget
+SUBDIR+=	cataclysm-dda
 SUBDIR+=	cb2bib
 SUBDIR+=	ccrypt
 SUBDIR+=	cddlib
