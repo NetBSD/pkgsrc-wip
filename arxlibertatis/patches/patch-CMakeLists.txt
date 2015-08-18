@@ -1,0 +1,44 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/08/18 20:14:58 yhardy Exp $
+
+Fix use of CMAKE_MODULE_PATH (see also patch-cmake_VersionString.cmake)
+
+Resolve "Attempt at a recursive or nested TRY_COMPILE in directory"
+(see also patch-cmake_CompileCheck.cmake)
+
+--- CMakeLists.txt.orig	2013-07-15 19:52:41.000000000 +0200
++++ CMakeLists.txt	2013-07-15 19:53:24.000000000 +0200
+@@ -177,7 +177,8 @@
+ include(CheckSymbolExists)
+ include(CheckTypeSize)
+ 
+-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake") # For custom cmake modules
++set(CMAKE_CUSTOM_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake") # For custom cmake modules
++list(APPEND CMAKE_MODULE_PATH ${CMAKE_CUSTOM_MODULE_PATH}) # For custom cmake modules
+ include(BuildSystem)
+ include(BuildType)
+ include(CompileCheck)
+@@ -407,15 +408,15 @@
+ 	endif()
+ 	
+ 	# Not a symbol, so we can't use check_symbol_exists
+-	check_compile(ARX_HAVE_BUILTIN_TRAP
+-		"${CMAKE_MODULE_PATH}/check_compiler_builtin_trap.cpp"
+-		"__builtin_trap" "compiler feature"
+-	)
+-	
+-	check_compile(ARX_HAVE_ATTRIBUTE_FORMAT_PRINTF
+-		"${CMAKE_MODULE_PATH}/check_compiler_attribute_format_printf.cpp"
+-		"__attribute__((format(printf, i, j)))" "compiler feature"
+-	)
++	#check_compile(ARX_HAVE_BUILTIN_TRAP
++	#	"${CMAKE_MODULE_PATH}/check_compiler_builtin_trap.cpp"
++	#	"__builtin_trap" "compiler feature"
++	#)
++	
++	#check_compile(ARX_HAVE_ATTRIBUTE_FORMAT_PRINTF
++	#	"${CMAKE_MODULE_PATH}/check_compiler_attribute_format_printf.cpp"
++	#	"__attribute__((format(printf, i, j)))" "compiler feature"
++	#)
+ 	
+ 	check_symbol_exists(nanosleep "time.h" ARX_HAVE_NANOSLEEP)
+ 	
