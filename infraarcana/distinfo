@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/08/19 19:42:29 yhardy Exp $
+
+SHA1 (ia-17.0.tar.gz) = 27cf4e37cf727367899208ad3cec67d2e4c28027
+RMD160 (ia-17.0.tar.gz) = ec57372405bc8f106aa6f1ff0616c1da4f214d78
+Size (ia-17.0.tar.gz) = 19962153 bytes
+SHA1 (patch-src_Config.cpp) = 3de8baf11b217d8640d921b468be579451592896
+SHA1 (patch-src_SaveHandling.cpp) = e57e5674ec255c7205d6d8992a4e32d69134c3d2
