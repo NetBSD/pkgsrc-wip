@@ -1,0 +1,17 @@
+These are ports of Keen Dreams, Catacomb 3-D (The Descent) and The Catacomb
+Adventure Series. Although it may initially seem non-obvious, the reason these
+ports are available under a single project is that a lot of common code can be
+found. It may be true that Keen Dreams is a smooth-scrolling 2D platformer
+game, while the Catacombs are 3D first person shooters, but there are still
+common low-level 2D picture and font drawing routines, as well as very similar
+user input and sound output routines. Files with such code are often marked
+"ID Engine". A later revision of the codebase is also found in Wolfenstein 3D.
+
+These source ports aim to reproduce behaviors of original executables
+for DOS, including bugs, at least if it's not too difficult
+(e.g., anything that highly depends on the memory layout).
+With the exception of The Catacomb Armageddon/Apocalypse, this also includes
+compatibility with saved games for original DOS executables (done per version).
+The Chocolate Doom source port can be considered an inspiration for that.
+
+This is a game engine - the data files are not included.
