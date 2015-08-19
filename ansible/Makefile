@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/08/19 14:36:04 ttys Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/19 15:04:11 ttys Exp $
 
 DISTNAME=	ansible-1.9.2
 PKGREVISION=	1
@@ -61,8 +61,8 @@ INSTALLATION_DIRS+=     ${EGDIR}/playbooks
 
 CHECK_INTERPRETER_SKIP= share/ansible/*
 
-#pre-install:
-#	find ${WRKSRC} -name \*.orig -exec rm {} \;
+pre-install:
+	find ${WRKSRC} -name \*.orig -exec rm {} \;
 
 post-install:
 .for f in ${MANPAGES}
