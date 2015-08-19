@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6295 2015/08/19 20:08:45 yhardy Exp $
+# $Id: Makefile,v 1.6296 2015/08/19 20:13:03 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1896,6 +1896,7 @@ SUBDIR+=	mysql-proxy
 SUBDIR+=	mysqltcl
 SUBDIR+=	mythtv
 SUBDIR+=	n2n
+SUBDIR+=	naev
 SUBDIR+=	nag
 SUBDIR+=	nanomsg
 SUBDIR+=	nanomsgxx
