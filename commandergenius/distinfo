@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/08/19 21:21:53 yhardy Exp $
+
+SHA1 (Commander-Genius/v1822release.tar.gz) = c1ff103059686f5b9a0880289f56b6c076fd752c
+RMD160 (Commander-Genius/v1822release.tar.gz) = 2c705bd4e6dc9cd90d56e90493cb0319064bf812
+Size (Commander-Genius/v1822release.tar.gz) = 71019673 bytes
+SHA1 (patch-lib_GsKit_base_video_scaler_scalebit.cpp) = 003196f19690e0f0fbe4c2d2ab9390e475a42d01
+SHA1 (patch-src_install.cmake) = 67078bc0922aecc941a76680607ab076f5ced71f
