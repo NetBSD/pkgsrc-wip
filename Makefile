@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6293 2015/08/19 19:50:31 yhardy Exp $
+# $Id: Makefile,v 1.6294 2015/08/19 19:55:02 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1005,6 +1005,7 @@ SUBDIR+=	haskell-mode
 SUBDIR+=	hasktags
 SUBDIR+=	hawk
 SUBDIR+=	hawknl
+SUBDIR+=	haxima
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
 SUBDIR+=	hdhomerun_config
