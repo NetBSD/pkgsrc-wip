@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6296 2015/08/19 20:13:03 yhardy Exp $
+# $Id: Makefile,v 1.6297 2015/08/19 20:37:45 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -568,6 +568,7 @@ SUBDIR+=	edb
 SUBDIR+=	edelib
 SUBDIR+=	editorconfig-core
 SUBDIR+=	edje
+SUBDIR+=	eduke32
 SUBDIR+=	eet
 SUBDIR+=	efltk
 SUBDIR+=	efreet
