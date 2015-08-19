@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6289 2015/08/19 19:15:05 yhardy Exp $
+# $Id: Makefile,v 1.6290 2015/08/19 19:23:00 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3390,6 +3390,7 @@ SUBDIR+=	recoll
 SUBDIR+=	recutils
 SUBDIR+=	redfang
 SUBDIR+=	reduze
+SUBDIR+=	refkeen
 SUBDIR+=	regexxer
 SUBDIR+=	reinteract
 SUBDIR+=	rekall
