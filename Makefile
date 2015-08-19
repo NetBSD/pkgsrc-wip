@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6297 2015/08/19 20:37:45 yhardy Exp $
+# $Id: Makefile,v 1.6298 2015/08/19 21:23:27 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -365,6 +365,7 @@ SUBDIR+=	coldfire
 SUBDIR+=	collectd
 SUBDIR+=	colorfull
 SUBDIR+=	colorize
+SUBDIR+=	commandergenius
 SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
