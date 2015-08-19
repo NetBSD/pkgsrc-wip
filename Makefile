@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6288 2015/08/19 19:07:21 yhardy Exp $
+# $Id: Makefile,v 1.6289 2015/08/19 19:15:05 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -422,6 +422,7 @@ SUBDIR+=	cygwin
 SUBDIR+=	cygwin-binutils
 SUBDIR+=	d-feet
 SUBDIR+=	d1x-rebirth
+SUBDIR+=	d2x-rebirth
 SUBDIR+=	d4x
 SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
