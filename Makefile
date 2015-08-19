@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6290 2015/08/19 19:23:00 yhardy Exp $
+# $Id: Makefile,v 1.6291 2015/08/19 19:38:58 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2044,6 +2044,7 @@ SUBDIR+=	opentracker-current
 SUBDIR+=	openttd-opengfx
 SUBDIR+=	openttd-openmsx
 SUBDIR+=	openttd-opensfx
+SUBDIR+=	opentyrian
 SUBDIR+=	openvrml
 SUBDIR+=	openxcom
 SUBDIR+=	ophcrack
