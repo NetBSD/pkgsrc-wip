@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6291 2015/08/19 19:38:58 yhardy Exp $
+# $Id: Makefile,v 1.6292 2015/08/19 19:44:03 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1264,6 +1264,7 @@ SUBDIR+=	imagination
 SUBDIR+=	imonc
 SUBDIR+=	inetdxtra
 SUBDIR+=	info2man
+SUBDIR+=	infraarcana
 SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
 #SUBDIR+=	io			# not a package, same as jabberd bellow
