@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6286 2015/08/18 21:58:02 yhardy Exp $
+# $Id: Makefile,v 1.6287 2015/08/19 14:13:59 triaxx Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -554,6 +554,7 @@ SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	e_dbus
 SUBDIR+=	easymesh
+SUBDIR+=	easyrsa
 SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound
 SUBDIR+=	ecb
