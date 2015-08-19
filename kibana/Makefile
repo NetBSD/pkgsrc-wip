@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/02/22 20:10:34 mbowie Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/19 21:02:45 wiedi Exp $
 #
 
-PKGNAME=	kibana-${VERSION}
-DISTNAME=	v${VERSION}
-VERSION=	4.0.0
+DISTNAME=	kibana-4.1.1
 CATEGORIES=	databases
-MASTER_SITES=	https://github.com/elasticsearch/kibana/archive/
-FETCH_USING=	curl
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=elasticsearch/}
+GITHUB_TAG=     v${PKGVERSION_NOREV}
 
 MAINTAINER=	mbowie@rocketspace.com
 HOMEPAGE=	http://www.elasticsearch.org/overview/kibana/
@@ -15,13 +13,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	elasticsearch>=1.4.3:../../databases/elasticsearch
 DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
-
-# Cannot use until GIT_TAG is supported
-#GIT_REPOSITORIES=	kibana
-#GIT_MODULE.kibana=	kibana
-#GIT_REPO.kibana=	https://github.com/elasticsearch/kibana.git
-#GIT_TAG.kibana=		v4.0.0
-#PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
 
 USE_TOOLS+=	pax
 
@@ -38,17 +29,16 @@ INSTALLATION_DIRS+=	${KBDIR}
 INSTALLATION_DIRS+=	${EGDIR}
 
 do-build:
-	# NODE_PATH setup doesn't appear to do what I'm hoping for
-	mkdir ${WRKDIR}/.node
-	cd ${WRKSRC} && ${SETENV} NODE_PATH=${WRKDIR}/.node && \
-		npm install -g grunt-cli bower && \
-		npm install && bower --allow-root install && \
-		grunt build
+	cd ${WRKSRC} && \
+	npm install grunt-cli bower && \
+	npm install && \
+	./node_modules/.bin/bower --allow-root --config.interactive=false install && \
+	./node_modules/.bin/grunt build
 
 do-install:
+	${FIND} ${WRKSRC}/build/dist/kibana/src/node_modules \
+		-type f -exec ${CHMOD} ${DOCMODE} {} \;
 	cd ${WRKSRC}/build/dist/kibana && pax -rw . ${DESTDIR}/${KBDIR}
 	${INSTALL_DATA} ${DESTDIR}/${KBDIR}/config/kibana.yml ${DESTDIR}/${EGDIR}
 
-# Cannot use until GIT_TAG is supported
-#.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
