@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6294 2015/08/19 19:55:02 yhardy Exp $
+# $Id: Makefile,v 1.6295 2015/08/19 20:08:45 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -4010,6 +4010,7 @@ SUBDIR+=	xmoto
 SUBDIR+=	xnee
 SUBDIR+=	xombrero
 SUBDIR+=	xoo
+SUBDIR+=	xoreos
 SUBDIR+=	xosview
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
