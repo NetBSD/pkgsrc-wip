@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.10 2015/03/04 10:50:12 heidnes Exp $
+$NetBSD: distinfo,v 1.11 2015/08/20 11:45:27 heidnes Exp $
 
 SHA1 (zabbix-2.4.4.tar.gz) = 505b274fe17d83bd5099cf71cd3d38a4d3d8d88b
 RMD160 (zabbix-2.4.4.tar.gz) = 27b92992a008f3cd37dd264d46c2f1ed3392f2fe
 Size (zabbix-2.4.4.tar.gz) = 14844586 bytes
+SHA1 (patch-src_libs_zbxsysinfo_netbsd_diskspace.c) = 186cdcb367e68b1c9f5250ac2b94c75b8731da40
 SHA1 (patch-src_zabbix__agent_Makefile.in) = 8b366776f72e189234cebbb4e9c4cba62750790b
 SHA1 (patch-src_zabbix__agent_zabbix__agentd.c) = 959bc02cd67167001c11ba532be1e4f0971144b8
 SHA1 (patch-src_zabbix__proxy_Makefile.in) = 7b3fe51b7f21656c1453de5f948568e6d0d0d3d8
