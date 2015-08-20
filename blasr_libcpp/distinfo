@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/08/20 21:20:14 outpaddling Exp $
+
+SHA1 (blasr_libcpp-2015.08.17.tar.xz) = 1aa134c1cf0fd1fb69da8ce0a9d405a85e74b70c
+RMD160 (blasr_libcpp-2015.08.17.tar.xz) = 28c95ad27b0a4de94cdfa378954f6af059b75269
+Size (blasr_libcpp-2015.08.17.tar.xz) = 935436 bytes
+SHA1 (patch-alignment_ipc_SharedMemoryAllocator.hpp) = 9ec9cce03f2577ad1fe0f4fbf3c6f5d908921b8a
+SHA1 (patch-configure.py) = a1d5d35e8930f4abb4a1d1a46359e2e747a27c5c
+SHA1 (patch-pbdata_reads_HoleXY.hpp) = 9e994953f580ff92cd8d3d0577b736aeff402077

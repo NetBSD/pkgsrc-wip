@@ -1,0 +1,4 @@
+Blasr_libcpp is a library used by blasr and other executables such as samtoh5,
+loadPulses for analyzing PacBio sequences.
+
+WWW: https://github.com/PacificBiosciences/blasr_libcpp
