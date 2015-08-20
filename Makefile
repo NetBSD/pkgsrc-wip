@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6299 2015/08/20 16:56:30 khorben Exp $
+# $Id: Makefile,v 1.6300 2015/08/20 21:21:25 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -217,6 +217,7 @@ SUBDIR+=	bird6
 SUBDIR+=	bitchx
 SUBDIR+=	bitcoin
 SUBDIR+=	bkchem
+SUBDIR+=	blasr_libcpp
 SUBDIR+=	bleachbit
 SUBDIR+=	blink
 SUBDIR+=	blueproxy
