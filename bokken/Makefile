@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/08/20 17:01:54 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2015/08/20 17:02:36 khorben Exp $
+# TODO:
+# - move bokken to bin/bokken
+# - fix path to bokken.py in bin/bokken
 
 DISTNAME=	bokken-1.8
 CATEGORIES=	wip
