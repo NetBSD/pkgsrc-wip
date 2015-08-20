@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/07/09 00:33:36 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/20 16:30:28 khorben Exp $
 
 .include "../../devel/radare2/Makefile.common"
 
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	radare2-valabind-[0-9]*:../../devel/radare2-valabind
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable=python
+CONFIGURE_ARGS+=--enable=ctypes
 
 MAKE_ENV+=	PYTHON_CONFIG=${PYTHONCONFIG}
 

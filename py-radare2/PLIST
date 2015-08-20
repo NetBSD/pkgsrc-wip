@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/08 22:03:20 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/20 16:30:28 khorben Exp $
+lib/radare2/${PKGVERSION}/lang_duktape.so
