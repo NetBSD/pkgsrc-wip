@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/08/19 15:04:11 ttys Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/20 14:02:41 ttys Exp $
 
 DISTNAME=	ansible-1.9.2
 PKGREVISION=	1
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
 
 USE_TOOLS+=	gmake
 EGDIR=		${PREFIX}/share/examples/ansible
-
-MAKE_DIRS=				${PKG_SYSCONFDIR}/ansible ${PREFIX}/share/ansible
 
 SUBST_CLASSES+=         prefix
 SUBST_STAGE.prefix=     pre-configure
@@ -50,7 +48,7 @@ SUBST_SED.pythonbin=    -e "s,PYTHON=python,PYTHON=${PYTHONBIN},"
 
 PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # py-paramiko
 
-REPLACE_PYTHON+=        lib/ansible/runner/action_plugins/synchronize.py
+REPLACE_PYTHON=         lib/ansible/runner/action_plugins/synchronize.py
 REPLACE_PYTHON+=        lib/ansible/utils/module_docs.py
 
 MANPAGES=       ansible-doc.1 ansible-pull.1 ansible-galaxy.1 ansible-vault.1
@@ -60,6 +58,15 @@ INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 ${PKG_SYSCONFDIR}/ansible
 INSTALLATION_DIRS+=     ${EGDIR}/playbooks
 
 CHECK_INTERPRETER_SKIP= share/ansible/*
+
+MAKE_DIRS=		${PKG_SYSCONFDIR}/ansible ${PREFIX}/share/ansible
+MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins
+MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/action_plugins
+MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/callback_plugins
+MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/connection_plugins
+MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/lookup_plugins
+MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/vars_plugins
+MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/filter_plugins
 
 pre-install:
 	find ${WRKSRC} -name \*.orig -exec rm {} \;
