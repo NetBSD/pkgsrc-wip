@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/08/20 16:30:28 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2015/08/20 17:46:34 khorben Exp $
 
 .include "../../devel/radare2/Makefile.common"
 
@@ -19,9 +19,11 @@ BUILD_DEPENDS+=	radare2-valabind-[0-9]*:../../devel/radare2-valabind
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable=ctypes
+CONFIGURE_ARGS+=--enable=python
 
 MAKE_ENV+=	PYTHON_CONFIG=${PYTHONCONFIG}
+
+INSTALL_TARGET=	install-plugins
 
 .include "../../devel/radare2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
