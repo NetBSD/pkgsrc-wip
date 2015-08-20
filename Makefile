@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6298 2015/08/19 21:23:27 yhardy Exp $
+# $Id: Makefile,v 1.6299 2015/08/20 16:56:30 khorben Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -234,6 +234,7 @@ SUBDIR+=	bogomips
 SUBDIR+=	boinc
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
+SUBDIR+=	bokken
 SUBDIR+=	bonnie++-current
 SUBDIR+=	boo
 SUBDIR+=	boost-test-suite
