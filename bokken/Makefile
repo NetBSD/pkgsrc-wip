@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/20 16:55:26 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/20 17:01:54 khorben Exp $
 
 DISTNAME=	bokken-1.8
 CATEGORIES=	wip
@@ -8,8 +8,6 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://bokken.re/
 COMMENT=	Open Source Reverse Code Engineering
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=       radare2>=0.9.9:../../devel/radare2
 
 NO_BUILD=	yes
 
