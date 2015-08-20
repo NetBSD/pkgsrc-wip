@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2015/08/17 07:30:48 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.62 2015/08/20 15:17:23 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -333,6 +333,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/dr
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/ellipsis-v.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/empty_contacts.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/empty_conversations.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/empty_search.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/facemute-14x14.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/facemute-14x14@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/hangup-inverse-14x14.png
@@ -912,6 +913,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/panic-panel/h
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/panic-panel/header@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/panic-panel/icons.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/panic-panel/icons@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/autocomplete-star.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/bookmarks-menu-arrow.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/bookmarks-notification-finish.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/bookmarksMenu.png
@@ -925,7 +927,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/organi
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/organizer.xml
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/places.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/query.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/star-icons.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/starred48.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/tag.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/places/toolbarDropMarker.png
@@ -1100,6 +1101,7 @@ lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/eyedropper.p
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/filterwidget.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/filterwidget.properties
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/font-inspector.dtd
+lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/graphs.properties
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/har.properties
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/inspector.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/devtools/inspector.properties
@@ -2218,6 +2220,7 @@ lib/firefox-${VERSION}/chrome/toolkit/content/global/dialogOverlay.xul
 lib/firefox-${VERSION}/chrome/toolkit/content/global/directionDetector.html
 lib/firefox-${VERSION}/chrome/toolkit/content/global/editMenuOverlay.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/editMenuOverlay.xul
+lib/firefox-${VERSION}/chrome/toolkit/content/global/extensions.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/filepicker.js
 lib/firefox-${VERSION}/chrome/toolkit/content/global/filepicker.properties
 lib/firefox-${VERSION}/chrome/toolkit/content/global/filepicker.xul
@@ -3548,6 +3551,8 @@ lib/firefox-${VERSION}/modules/devtools/tern/tern.js
 lib/firefox-${VERSION}/modules/devtools/toolkit/webconsole/client.js
 lib/firefox-${VERSION}/modules/devtools/toolkit/webconsole/network-helper.js
 lib/firefox-${VERSION}/modules/devtools/toolkit/webconsole/network-monitor.js
+lib/firefox-${VERSION}/modules/devtools/toolkit/webconsole/server-logger-monitor.js
+lib/firefox-${VERSION}/modules/devtools/toolkit/webconsole/server-logger.js
 lib/firefox-${VERSION}/modules/devtools/toolkit/webconsole/utils.js
 lib/firefox-${VERSION}/modules/devtools/touch/simulator-content.js
 lib/firefox-${VERSION}/modules/devtools/touch/simulator.js
