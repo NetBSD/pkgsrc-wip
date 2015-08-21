@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2015/08/20 15:17:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.63 2015/08/21 15:01:33 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -338,6 +338,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/fa
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/facemute-14x14@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/hangup-inverse-14x14.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/hangup-inverse-14x14@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/hello_logo.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/helloicon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/icon_32.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/icon_64.png
@@ -351,10 +352,27 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/mu
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/spinner.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/spinner.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/spinner@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/audio-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/audio-mute-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/audio-mute.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/audio.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/exit.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-account-16x16.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-help-16x16.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-signin-16x16.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/glyph-signout-16x16.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/media-group-left-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/media-group-right-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/media-group.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/settings-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/settings.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/sharing-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/sharing-mute.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/sharing.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/video-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/video-mute-hover.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/video-mute.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/video.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/telefonica.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/telefonica@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/video-inverse-14x14.png
