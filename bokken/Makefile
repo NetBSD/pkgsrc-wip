@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/08/21 15:18:00 khorben Exp $
-# TODO:
-# - fix path to bokken.py in bin/bokken
+# $NetBSD: Makefile,v 1.7 2015/08/21 15:26:59 khorben Exp $
 
 DISTNAME=	bokken-1.8
 CATEGORIES=	wip
@@ -17,6 +15,12 @@ NO_BUILD=	yes
 
 REPLACE_PYTHON=	bokken.py lib/web/utils.py ui/xdot.py
 REPLACE_SH=	bokken
+
+SUBST_CLASSES+=			bin-bokken
+SUBST_STAGE.bin-bokken=		post-patch
+SUBST_MESSAGE.bin-bokken=	Fixing path to bokken.py
+SUBST_FILES.bin-bokken=		bokken
+SUBST_SED.bin-bokken=	-e 's,`dirname $$0`,"${PREFIX}/share/bokken",'
 
 INSTALLATION_DIRS=	bin share/bokken
 
