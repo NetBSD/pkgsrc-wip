@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/08/20 17:02:36 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/21 14:58:49 khorben Exp $
 # TODO:
 # - move bokken to bin/bokken
 # - fix path to bokken.py in bin/bokken
@@ -24,6 +24,7 @@ do-install:
 
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-gtksourceview/buildlink3.mk"
+.include "../../wip/py-pygraphviz/buildlink3.mk"
 .include "../../wip/py-radare2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
