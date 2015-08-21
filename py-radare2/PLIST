@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2015/08/20 17:46:34 khorben Exp $
-lib/radare2/${PKGVERSION}/lang_duktape.so
-lib/radare2/${PKGVERSION}/lang_python.so
+@comment $NetBSD: PLIST,v 1.4 2015/08/21 10:47:24 khorben Exp $
+lib/python2.7/site-packages/r2/__init__.py
+lib/python2.7/site-packages/r2/_r_asm.so
+lib/python2.7/site-packages/r2/_r_bin.so
+lib/python2.7/site-packages/r2/_r_core.so
+lib/python2.7/site-packages/r2/r_asm.py
+lib/python2.7/site-packages/r2/r_bin.py
+lib/python2.7/site-packages/r2/r_core.py
