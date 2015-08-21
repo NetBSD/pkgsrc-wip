@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/08/21 15:07:03 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/21 15:18:00 khorben Exp $
 # TODO:
 # - fix path to bokken.py in bin/bokken
 
@@ -11,6 +11,8 @@ HOMEPAGE=	http://bokken.re/
 COMMENT=	Open Source Reverse Code Engineering
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	pax
+
 NO_BUILD=	yes
 
 REPLACE_PYTHON=	bokken.py lib/web/utils.py ui/xdot.py
@@ -19,7 +21,7 @@ REPLACE_SH=	bokken
 INSTALLATION_DIRS=	bin share/bokken
 
 do-install:
-	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/bokken
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/bokken
 	${RM} ${DESTDIR}${PREFIX}/share/bokken/.gitignore
 	${MV} ${DESTDIR}${PREFIX}/share/bokken/bokken ${DESTDIR}${PREFIX}/bin/bokken
 
