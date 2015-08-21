@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6300 2015/08/20 21:21:25 outpaddling Exp $
+# $Id: Makefile,v 1.6301 2015/08/21 10:02:29 thomasklausner Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -546,7 +546,6 @@ SUBDIR+=	dvegas
 SUBDIR+=	dwarf_fortress
 SUBDIR+=	dwb-gtk2
 SUBDIR+=	dwb-gtk3
-SUBDIR+=	dwb33
 SUBDIR+=	dwepcrack
 SUBDIR+=	dxmake
 SUBDIR+=	dzen2
