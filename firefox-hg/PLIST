@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2015/08/21 15:01:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.64 2015/08/22 16:09:53 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -336,6 +336,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/em
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/empty_search.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/facemute-14x14.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/facemute-14x14@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/firefox-avatar.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/hangup-inverse-14x14.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/hangup-inverse-14x14@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/hello_logo.svg
