@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.1 2012/12/30 20:00:56 roelants Exp $
+$NetBSD: patch-configure.ac,v 1.1 2015/08/22 10:50:16 roelants Exp $
 
 Avoid detection of clearenv availability when it's not.
 

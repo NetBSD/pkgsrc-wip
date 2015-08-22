@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/15 17:22:36 roelants Exp $
+@comment $NetBSD: PLIST,v 1.1 2015/08/22 10:50:16 roelants Exp $
 bin/elementary_config
 bin/elementary_quicklaunch
 bin/elementary_run

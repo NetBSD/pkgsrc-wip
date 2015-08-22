@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6302 2015/08/22 10:15:53 roelants Exp $
+# $Id: Makefile,v 1.6303 2015/08/22 10:50:14 roelants Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -584,7 +584,7 @@ SUBDIR+=	electricsheep
 SUBDIR+=	electricsheep-svn
 SUBDIR+=	electrum
 SUBDIR+=	elegent
-SUBDIR+=	elementary
+SUBDIR+=	elementary17
 SUBDIR+=	elementary-icon-theme
 SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot

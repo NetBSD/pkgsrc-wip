@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/08/22 10:15:54 roelants Exp $
+# $NetBSD: Makefile,v 1.37 2015/08/22 10:50:15 roelants Exp $
 #
 
 DISTVERSION=	0.17.5
@@ -58,5 +58,5 @@ PRINT_PLIST_AWK+=	{ gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}"); \
 .include "../../wip/e_dbus/buildlink3.mk"
 .include "../../wip/efreet/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
-.include "../../wip/elementary/buildlink3.mk"
+.include "../../wip/elementary17/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

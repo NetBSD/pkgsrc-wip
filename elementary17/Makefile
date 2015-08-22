@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/11/09 14:40:13 roelants Exp $
+# $NetBSD: Makefile,v 1.1 2015/08/22 10:50:16 roelants Exp $
 #
 
 DISTNAME=	elementary-1.7.9
