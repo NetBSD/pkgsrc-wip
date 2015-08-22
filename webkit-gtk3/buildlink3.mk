@@ -1,47 +1,41 @@
-# $NetBSD: buildlink3.mk,v 1.2 2015/06/07 14:24:49 yrmt Exp $
-# XXX
-# XXX This file was created automatically using createbuildlink-3.16.
-# XXX After this file has been verified as correct, the comment lines
-# XXX beginning with "XXX" should be removed.  Please do not commit
-# XXX unverified buildlink3.mk files.
-# XXX
-# XXX Packages that only install static libraries or headers should
-# XXX include the following line:
-# XXX
-# XXX	BUILDLINK_DEPMETHOD.webkit-gtk3?=	build
+# $NetBSD: buildlink3.mk,v 1.3 2015/08/22 12:24:39 leot1990 Exp $
 
-BUILDLINK_TREE+=	webkit-gtk3
+BUILDLINK_TREE+=	webkit24-gtk3
 
-.if !defined(WEBKIT_GTK3_BUILDLINK3_MK)
-WEBKIT_GTK3_BUILDLINK3_MK:=
+.if !defined(WEBKIT24_GTK3_BUILDLINK3_MK)
+WEBKIT24_GTK3_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.webkit-gtk3+=	webkit-gtk3>=2.4.8
-BUILDLINK_PKGSRCDIR.webkit-gtk3?=	../../wip/webkit-gtk3
+BUILDLINK_API_DEPENDS.webkit24-gtk3+=	webkit24-gtk3>=2.0
+BUILDLINK_ABI_DEPENDS.webkit24-gtk3?=	webkit24-gtk3>=2.4.9
+BUILDLINK_PKGSRCDIR.webkit24-gtk3?=	../../www/webkit24-gtk3
 
-# XXX
-# XXX Uncomment and keep only the buildlink3 lines below which are directly
-# XXX needed for dependencies to compile, link, and run.  If this package
-# XXX provides a wrappered API or otherwise does not expose the APIs of the
-# XXX buildlink3 lines below to dependencies, remove them.
-# XXX
-.include "../../x11/gtk3/buildlink3.mk"
-#.include "../../devel/glib2/buildlink3.mk"
-#.include "../../devel/gobject-introspection/buildlink3.mk"
-#.include "../../devel/zlib/buildlink3.mk"
-#.include "../../databases/sqlite3/buildlink3.mk"
-#.include "../../devel/flex/buildlink3.mk"
-#.include "../../devel/gperf/buildlink3.mk"
-#.include "../../graphics/freetype2/buildlink3.mk"
-#.include "../../graphics/libwebp/buildlink3.mk"
-#.include "../../graphics/png/buildlink3.mk"
-#.include "../../multimedia/gstreamer1/buildlink3.mk"
-#.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+# Linking with this library may require newer libstdc++ features than are
+# available under the native compiler, so possibly upgrade the compiler
+# used by dependent packages too.
+GCC_REQD+=	4.8
+
+pkgbase := webkit24-gtk3
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.webkit24-gtk3:Menchant)
+.include "../../textproc/enchant/buildlink3.mk"
+.endif
+
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
-#.include "../../security/libsecret/buildlink3.mk"
-#.include "../../textproc/icu/buildlink3.mk"
-#.include "../../textproc/libxslt/buildlink3.mk"
-#.include "../../x11/libXdamage/buildlink3.mk"
-#.include "../../x11/libXt/buildlink3.mk"
-.endif	# WEBKIT_GTK3_BUILDLINK3_MK
+.include "../../security/libsecret/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.endif # WEBKIT24_GTK3_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-webkit-gtk3
+BUILDLINK_TREE+=	-webkit24-gtk3
