@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/08/18 21:34:26 yhardy Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/22 12:57:44 yhardy Exp $
 
 GITHUB_PROJECT=	bstone
 DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-1.1.1
+PKGNAME=	${GITHUB_PROJECT}-1.1.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bibendovsky/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://bibendovsky.github.io/bstone/
 COMMENT=	Source port of Blake Stone game engines
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/bstone-1.1.1
+WRKSRC=		${WRKDIR}/bstone-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++
 
