@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/08/22 13:50:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/22 16:20:34 thomasklausner Exp $
 
 DISTNAME=	llfuse-0.41
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	https://pypi.python.org/packages/source/l/llfuse/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,5 +14,5 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/python/egg.mk"
-.include "../../mk/fuse.buildlink3.mk"
+.include "../../filesystems/fuse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

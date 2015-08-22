@@ -1,6 +1,7 @@
-$NetBSD: patch-src_llfuse_capi.c,v 1.1 2015/08/22 13:50:45 thomasklausner Exp $
+$NetBSD: patch-src_llfuse_capi.c,v 1.2 2015/08/22 16:20:34 thomasklausner Exp $
 
-Fake NetBSD support by handling it the same as FreeBSD.
+Add NetBSD support by handling it the same as FreeBSD.
+https://bitbucket.org/nikratio/python-llfuse/issues/48/netbsd-support-for-llfuse-041
 
 --- src/llfuse/capi.c.orig	2015-08-20 22:51:49.000000000 +0000
 +++ src/llfuse/capi.c
