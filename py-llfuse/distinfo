@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/08/22 13:50:45 thomasklausner Exp $
+
+SHA1 (llfuse-0.41.tar.bz2) = 5e6278264a594cd51a5e030cf49e504121fcbf9f
+RMD160 (llfuse-0.41.tar.bz2) = 1e404936bc6639f42b217ee9ee7235cb11fe1377
+Size (llfuse-0.41.tar.bz2) = 397155 bytes
+SHA1 (patch-src_llfuse_capi.c) = 103587929e02f04baa4ce70ef45b2ae9ddbe2c37

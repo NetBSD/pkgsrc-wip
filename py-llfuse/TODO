@@ -1,0 +1,29 @@
+Needs fuse 2.8.0 API, worked around by this diff:
+
+/usr/pkgsrc/mk> cvs di fuse.buildlink3.mk
+Index: fuse.buildlink3.mk
+===================================================================
+RCS file: /cvsroot/pkgsrc/mk/fuse.buildlink3.mk,v
+retrieving revision 1.18
+diff -u -r1.18 fuse.buildlink3.mk
+--- fuse.buildlink3.mk  4 Feb 2015 23:44:34 -0000       1.18
++++ fuse.buildlink3.mk  22 Aug 2015 13:48:30 -0000
+@@ -76,7 +76,7 @@
+        ${ECHO} "";                                     \
+        ${ECHO} "Name: FuSE";                           \
+        ${ECHO} "Description: Filesystem USEr Space";   \
+-       ${ECHO} "Version: 2.6.0";                       \
++       ${ECHO} "Version: 2.8.0";                       \
+        ${ECHO} "Libs: -Wl,-R\$${libdir} -L\$${libdir} -lrefuse";       \
+        ${ECHO} "Cflags: -I\$${includedir}";            \
+        } >> ${BLKDIR_PKGCFG}/${FUSE_PKGCFGF};
+
+Needs NetBSD platform support:
+
+In file included from src/llfuse/capi.c:15:0:
+src/llfuse/capi_freebsd.c:243:27: fatal error: fuse_lowlevel.h: No such file or directory
+ #include "fuse_lowlevel.h"
+                           ^
+compilation terminated.
+error: command 'gcc' failed with exit status 1
+*** Error code 1
