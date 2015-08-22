@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6301 2015/08/21 10:02:29 thomasklausner Exp $
+# $Id: Makefile,v 1.6302 2015/08/22 10:15:53 roelants Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -642,7 +642,7 @@ SUBDIR+=	evas
 SUBDIR+=	evas-gif
 SUBDIR+=	evas-software-x11
 SUBDIR+=	evas-xpm
-SUBDIR+=	evas_generic_loaders
+SUBDIR+=	evas_generic_loaders17
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
 SUBDIR+=	evolution-rss

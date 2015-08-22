@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/07/14 20:25:24 roelants Exp $
+# $NetBSD: Makefile,v 1.1 2015/08/22 10:15:54 roelants Exp $
 #
 
 DISTNAME=	evas_generic_loaders-1.7.9

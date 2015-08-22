@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/07/14 20:30:07 roelants Exp $
+# $NetBSD: Makefile,v 1.36 2015/08/22 10:15:54 roelants Exp $
 #
 
 DISTVERSION=	0.17.5
@@ -18,7 +18,7 @@ LICENSE=	2-clause-bsd
 #DEPENDS+=	evas-gl-x11>=1.7.0:../../wip/evas-gl-x11
 DEPENDS+=	evas-software-x11>=1.7.0:../../wip/evas-software-x11
 DEPENDS+=	evas-xpm>=1.7.0:../../wip/evas-xpm
-DEPENDS+=	evas_generic_loaders>=1.7.0:../../wip/evas_generic_loaders
+DEPENDS+=	evas_generic_loaders>=1.7.0:../../wip/evas_generic_loaders17
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
