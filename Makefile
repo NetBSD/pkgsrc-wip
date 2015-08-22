@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6304 2015/08/22 13:52:49 thomasklausner Exp $
+# $Id: Makefile,v 1.6305 2015/08/22 21:12:00 leot1990 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -6,7 +6,6 @@ SUBDIR+=	389-ds-base
 SUBDIR+=	Bear
 SUBDIR+=	BitchX
 SUBDIR+=	Chinput
-SUBDIR+=	DWB
 SUBDIR+=	ETL
 SUBDIR+=	FontManager
 SUBDIR+=	GNUMail-pgp
