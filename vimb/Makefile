@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2015/07/12 00:38:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2015/08/22 12:26:27 leot1990 Exp $
 
 DISTNAME=	vimb-2.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://fanglingsu.github.io/vimb/
 COMMENT=	Vim-like webkit browser
 LICENSE=	gnu-gpl-v3
@@ -12,10 +12,11 @@ LICENSE=	gnu-gpl-v3
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE	# needed for LOCK_* macros in <fcntl.h>
+
 EGDIR=		${PREFIX}/share/examples/vimb
 
-MAKE_ENV+=	EXAMPLEDIR="${EGDIR}"
-MAKE_ENV+=	MANDIR="${PREFIX}/${PKGMANDIR}"
+MAKE_ENV+=	EXAMPLEDIR="${EGDIR}" MANDIR="${PREFIX}/${PKGMANDIR}"
 
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../www/webkit24-gtk/buildlink3.mk"
