@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/02/27 20:26:27 r-hansen Exp $
+# $NetBSD: Makefile,v 1.16 2015/08/23 20:33:34 thomasklausner Exp $
 
 # the Git SHA1 ID of the snapshot
 OPENSC_GIT_REVISION=	a399905d234d3d6d2a9aa8501a4c8ba1224c6b31
@@ -18,6 +18,8 @@ MAINTAINER=		rhansen@bbn.com
 HOMEPAGE=		https://github.com/OpenSC/OpenSC/wiki
 COMMENT=		Smart Card drivers and middleware
 LICENSE=		gnu-lgpl-v2.1
+
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -58,7 +60,6 @@ post-install:
 
 # build tools for doc; should be TOOLS
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/docbook-xsl/buildlink3.mk"
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
