@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2014/12/14 17:45:11 midar Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/08/23 17:14:18 midar Exp $
 bin/objfw-compile
 bin/objfw-config
 bin/ofhash
+bin/ofhttp
 bin/ofzip
 include/ObjFW/OFAcceptFailedException.h
 include/ObjFW/OFAddressTranslationFailedException.h
@@ -34,13 +35,13 @@ include/ObjFW/OFDataArray+Hashing.h
 include/ObjFW/OFDataArray+MessagePackValue.h
 include/ObjFW/OFDataArray.h
 include/ObjFW/OFDate.h
-include/ObjFW/OFDeflate64Stream.h
-include/ObjFW/OFDeflateStream.h
 include/ObjFW/OFDictionary.h
 include/ObjFW/OFEnumerationMutationException.h
 include/ObjFW/OFEnumerator.h
 include/ObjFW/OFException.h
 include/ObjFW/OFFile.h
+include/ObjFW/OFFileManager.h
+include/ObjFW/OFGetOptionFailedException.h
 include/ObjFW/OFHTTPClient.h
 include/ObjFW/OFHTTPRequest.h
 include/ObjFW/OFHTTPRequestFailedException.h
@@ -50,6 +51,8 @@ include/ObjFW/OFHash.h
 include/ObjFW/OFHashAlreadyCalculatedException.h
 include/ObjFW/OFINICategory.h
 include/ObjFW/OFINIFile.h
+include/ObjFW/OFInflate64Stream.h
+include/ObjFW/OFInflateStream.h
 include/ObjFW/OFInitializationFailedException.h
 include/ObjFW/OFIntrospection.h
 include/ObjFW/OFInvalidArgumentException.h
@@ -76,13 +79,14 @@ include/ObjFW/OFMutableDictionary.h
 include/ObjFW/OFMutableSet.h
 include/ObjFW/OFMutableString.h
 include/ObjFW/OFMutex.h
-include/ObjFW/OFNotConnectedException.h
 include/ObjFW/OFNotImplementedException.h
+include/ObjFW/OFNotOpenException.h
 include/ObjFW/OFNull.h
 include/ObjFW/OFNumber.h
 include/ObjFW/OFObject+Serialization.h
 include/ObjFW/OFObject.h
-include/ObjFW/OFOpenFileFailedException.h
+include/ObjFW/OFObserveFailedException.h
+include/ObjFW/OFOpenItemFailedException.h
 include/ObjFW/OFOptionsParser.h
 include/ObjFW/OFOutOfMemoryException.h
 include/ObjFW/OFOutOfRangeException.h
@@ -108,6 +112,7 @@ include/ObjFW/OFSet.h
 include/ObjFW/OFSetOptionFailedException.h
 include/ObjFW/OFSettings.h
 include/ObjFW/OFSortedList.h
+include/ObjFW/OFStatItemFailedException.h
 include/ObjFW/OFStdIOStream.h
 include/ObjFW/OFStillLockedException.h
 include/ObjFW/OFStream.h
@@ -167,5 +172,5 @@ include/ObjFW/threading.h
 include/ObjFW/unicode.h
 lib/libobjfw.a
 lib/libobjfw.so
-lib/libobjfw.so.7
-lib/libobjfw.so.7.0.0
+lib/libobjfw.so.8
+lib/libobjfw.so.8.0.0

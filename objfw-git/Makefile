@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/09/10 09:12:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/23 17:14:18 midar Exp $
 
 DISTNAME=	objfw-0.0
 CATEGORIES=	devel
@@ -9,8 +9,7 @@ HOMEPAGE=	https://webkeks.org/objfw/
 MAINTAINER=	js@webkeks.org
 
 GIT_REPOSITORIES=	objfw
-# Use GitHub mirror because pkgsrc git refuses to clone from https
-GIT_REPO.objfw=		git://github.com/Midar/objfw.git
+GIT_REPO.objfw=		https://webkeks.org/git/objfw.git
 
 WRKSRC=			${WRKDIR}/objfw
 USE_TOOLS=		aclocal automake
