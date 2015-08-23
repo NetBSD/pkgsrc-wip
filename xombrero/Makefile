@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/08/03 22:16:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2015/08/23 13:37:02 thomasklausner Exp $
 
 DISTNAME=	xombrero-1.6.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://opensource.conformal.com/snapshots/xombrero/
 EXTRACT_SUFX=	.tgz
@@ -12,6 +13,7 @@ LICENSE=	isc
 
 ONLY_FOR_PLATFORM= DragonFly-*-* NetBSD-*-*
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 MAKE_JOBS_SAFE=	no
 
@@ -34,5 +36,5 @@ BUILD_DIRS= netbsd
 .endif
 
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../www/webkit1-gtk3/buildlink3.mk"
+.include "../../www/webkit24-gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
