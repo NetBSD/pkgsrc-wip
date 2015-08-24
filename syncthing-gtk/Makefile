@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/04/26 14:36:28 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2015/08/24 10:51:13 thomasklausner Exp $
 
-DISTNAME=	syncthing-gtk-0.7.0.1
+DISTNAME=	syncthing-gtk-0.7.4.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing-gtk
@@ -32,6 +32,7 @@ SUBST_SED.paths=	-e 's|/usr/share/syncthing-gtk|${PREFIX}/share/syncthing-gtk|'
 .include "../../lang/python/application.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 # XXX --single-version-externally-managed comes from egg.mk, setup.py does not understand this
 _PYSETUPTOOLSINSTALLARGS:=${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
