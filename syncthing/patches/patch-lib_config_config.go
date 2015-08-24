@@ -1,4 +1,7 @@
-$NetBSD: patch-lib_config_config.go,v 1.1 2015/08/24 10:46:20 thomasklausner Exp $
+$NetBSD: patch-lib_config_config.go,v 1.2 2015/08/24 11:27:51 tnn2 Exp $
+
+Disable auto upgrade mechanism. It would overwrite the binary in /usr/pkg/bin
+with something the user doesn't necessarily trust.
 
 --- lib/config/config.go.orig	2015-08-16 13:29:48.000000000 +0000
 +++ lib/config/config.go
