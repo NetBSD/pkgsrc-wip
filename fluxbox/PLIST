@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/03/26 10:09:53 lokivit Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/08/24 17:49:39 anielski Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -24,7 +24,7 @@ share/fluxbox/menu
 share/fluxbox/nls/C/fluxbox.cat
 share/fluxbox/nls/be_BY.CP1251/fluxbox.cat
 share/fluxbox/nls/be_BY.UTF-8/fluxbox.cat
-share/fluxbox/nls/bg_BG.ISO-8859-1/fluxbox.cat
+share/fluxbox/nls/bg_BG.CP1251/fluxbox.cat
 share/fluxbox/nls/bg_BG.UTF-8/fluxbox.cat
 share/fluxbox/nls/cs_CZ.ISO-8859-2/fluxbox.cat
 share/fluxbox/nls/cs_CZ.UTF-8/fluxbox.cat

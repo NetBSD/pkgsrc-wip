@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/03/26 10:09:53 lokivit Exp $
+# $NetBSD: Makefile,v 1.6 2015/08/24 17:49:39 anielski Exp $
 #
 
-DISTNAME=	fluxbox-1.3.5
+DISTNAME=	fluxbox-1.3.7
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,12 +12,11 @@ COMMENT=	Window Manager for X based on Blackbox
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--enable-shape
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-xinerama
 
