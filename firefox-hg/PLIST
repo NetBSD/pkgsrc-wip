@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2015/08/22 16:09:53 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.65 2015/08/25 06:36:53 thomasklausner Exp $
 bin/firefox
 lib/firefox-${VERSION}/application.ini
 lib/firefox-${VERSION}/browser/blocklist.xml
@@ -1034,7 +1034,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/ta
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-overflow-indicator.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-selected-end.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-selected-start.svg
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-separator.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-stroke-end.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tab-stroke-start.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/tabbrowser/tabDragIndicator.png
@@ -3063,7 +3062,6 @@ lib/firefox-${VERSION}/modules/TelemetryUtils.jsm
 lib/firefox-${VERSION}/modules/ThirdPartyCookieProbe.jsm
 lib/firefox-${VERSION}/modules/Timer.jsm
 lib/firefox-${VERSION}/modules/Troubleshoot.jsm
-lib/firefox-${VERSION}/modules/TrustedHostedAppsUtils.jsm
 lib/firefox-${VERSION}/modules/UITelemetry.jsm
 lib/firefox-${VERSION}/modules/UpdateChannel.jsm
 lib/firefox-${VERSION}/modules/UserAgentOverrides.jsm
@@ -3481,6 +3479,7 @@ lib/firefox-${VERSION}/modules/devtools/performance/legacy/actors.js
 lib/firefox-${VERSION}/modules/devtools/performance/legacy/compatibility.js
 lib/firefox-${VERSION}/modules/devtools/performance/legacy/front.js
 lib/firefox-${VERSION}/modules/devtools/performance/legacy/recording.js
+lib/firefox-${VERSION}/modules/devtools/performance/process-communication.js
 lib/firefox-${VERSION}/modules/devtools/performance/recorder.js
 lib/firefox-${VERSION}/modules/devtools/performance/utils.js
 lib/firefox-${VERSION}/modules/devtools/pretty-fast.js
