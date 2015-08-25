@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2013/01/10 01:41:39 makoto Exp $
+$NetBSD: patch-ab,v 1.2 2015/08/25 13:41:24 leot1990 Exp $
 
---- fifo.cpp.orig       2007-07-16 17:54:23.000000000 +0000
+--- fifo.cpp.orig	2014-03-04 16:47:15.000000000 +0000
 +++ fifo.cpp
-@@ -39,6 +39,12 @@
+@@ -41,6 +41,12 @@
  #include "wave.h"
  #include "debug.h"
  
@@ -15,21 +15,21 @@ $NetBSD: patch-ab,v 1.1 2013/01/10 01:41:39 makoto Exp $
  
  //>
  //<decls and function prototypes
-@@ -310,10 +316,15 @@ static int sleep_until_start_request_or_
+@@ -312,10 +318,15 @@ static int sleep_until_start_request_or_
  			to.tv_sec, to.tv_nsec,
  			ts.tv_sec, ts.tv_nsec);
  
--		while ((err = sem_timedwait(&my_sem_start_is_required, &ts)) == -1 
+-		while ((err = sem_timedwait(&my_sem_start_is_required, &ts)) == -1
 -			&& errno == EINTR)
 +		while ((err = sem_trywait(&my_sem_start_is_required)) == -1 
 +			&& (errno == EINTR || errno == EAGAIN))
  		{
  			continue;
-+		struct timespec help;
-+		clock_gettime2(&help);
-+		if (timespeccmp(&help, &ts, >=))
-+			break;
-+		sched_yield();
++			struct timespec help;
++			clock_gettime2(&help);
++			if (timespeccmp(&help, &ts, >=))
++				break;
++			sched_yield();
  		}
  
  		assert (gettimeofday(&tv, NULL) != -1);

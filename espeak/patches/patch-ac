@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2013/01/10 01:41:39 makoto Exp $
+$NetBSD: patch-ac,v 1.2 2015/08/25 13:41:24 leot1990 Exp $
 
---- Makefile.orig	2008-01-19 22:50:27.000000000 +0100
+--- Makefile.orig	2014-02-02 10:58:11.000000000 +0000
 +++ Makefile
 @@ -81,17 +81,21 @@ libespeak_SOURCES = speak_lib.cpp compil
  	tr_languages.cpp voices.cpp wavegen.cpp phonemelist.cpp \
