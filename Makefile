@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6307 2015/08/23 14:22:40 thomasklausner Exp $
+# $Id: Makefile,v 1.6308 2015/08/26 15:31:50 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3505,6 +3505,7 @@ SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-cabin
 SUBDIR+=	ruby-chawan
+SUBDIR+=	ruby-delegate_it
 SUBDIR+=	ruby-diaspora
 SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-git
