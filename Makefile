@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6308 2015/08/26 15:31:50 yhardy Exp $
+# $Id: Makefile,v 1.6309 2015/08/26 15:41:10 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3519,6 +3519,7 @@ SUBDIR+=	ruby-redmine
 SUBDIR+=	ruby-review
 SUBDIR+=	ruby-ronn
 SUBDIR+=	ruby-teamocil
+SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
