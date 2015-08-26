@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2015/08/20 11:43:12 heidnes Exp $
+# $NetBSD: Makefile.common,v 1.6 2015/08/26 13:45:38 heidnes Exp $
 # used by wip/zabbix-server/Makefile
 # used by wip/zabbix-agent/Makefile
 # used by wip/zabbix-server-pgsql/Makefile
@@ -55,6 +55,8 @@ SUBST_SED.fix-paths+=	-e 's,"@HOMEDIR@,"${ZBXHOME},g'
 SUBST_SED.fix-paths+=	-e 's,"@CONFDIR@,"${PKG_SYSCONFDIR},g'
 SUBST_SED.fix-paths+=	-e 's,"@SCRIPTDIR@,"${PREFIX}/libexec/${PKGNAME_NOREV},g'
 SUBST_SED.fix-paths+=	-e 's,"@PIDDIR@,"${VARBASE}/run,g'
+
+BUILD_DEFS+=		VARBASE
 
 INSTALLATION_DIRS+=	share/zabbix share/zabbix/data
 INSTALLATION_DIRS+=	share/zabbix/schema share/examples/zabbix share/doc/zabbix
