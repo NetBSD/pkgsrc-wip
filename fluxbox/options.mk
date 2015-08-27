@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/08/24 17:49:39 anielski Exp $
+# $NetBSD: options.mk,v 1.3 2015/08/27 15:19:08 anielski Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fluxbox
 PKG_SUPPORTED_OPTIONS=	imlib2 xft xrender bidi
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--disable-xrender
 
 .if !empty(PKG_OPTIONS:Mbidi)
 CONFIGURE_ARGS+=        --enable-fribidi
+.include "../../converters/fribidi/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=        --disable-fribidi
 .endif
