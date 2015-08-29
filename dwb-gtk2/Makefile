@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2015/07/12 00:38:17 thomasklausner Exp $
-.include "../../wip/dwb-gtk3/Makefile.common"
+# $NetBSD: Makefile,v 1.3 2015/08/29 16:11:03 f8l Exp $
+.include "../../wip/dwb-gtk2/Makefile.common"
 
 PKGNAME=        ${DISTNAME:S/dwb/dwb-gtk2/}
 COMMENT=	Dynamic WebKit browser, gtk2 version
