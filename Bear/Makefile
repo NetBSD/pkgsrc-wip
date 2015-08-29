@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/05/05 21:55:23 jonthn Exp $
+# $NetBSD: Makefile,v 1.7 2015/08/29 20:26:29 jonthn Exp $
 
-DISTNAME=	Bear-2.0.3
+DISTNAME=	Bear-2.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rizsotto/}
 GITHUB_PROJECT=	Bear
