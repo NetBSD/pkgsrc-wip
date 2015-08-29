@@ -1,10 +1,10 @@
-$NetBSD: patch-runtime_CMakeLists.txt,v 1.1 2015/08/10 23:19:00 jonthn Exp $
+$NetBSD: patch-runtime_CMakeLists.txt,v 1.2 2015/08/29 20:56:15 jonthn Exp $
 
 Awk scripts are not executable install them as simple files
 
---- runtime/CMakeLists.txt.orig	2015-08-05 23:39:13.000000000 +0200
-+++ runtime/CMakeLists.txt	2015-08-05 23:40:04.000000000 +0200
-@@ -66,7 +66,7 @@
+--- runtime/CMakeLists.txt.orig	2015-08-29 20:38:10.000000000 +0000
++++ runtime/CMakeLists.txt
+@@ -71,7 +71,7 @@ install_helper(
  
  file(GLOB_RECURSE RUNTIME_PROGRAMS
    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
@@ -13,12 +13,12 @@ Awk scripts are not executable install them as simple files
  
  foreach(PROG ${RUNTIME_PROGRAMS})
    get_filename_component(BASEDIR ${PROG} PATH)
-@@ -76,7 +76,7 @@
+@@ -81,7 +81,7 @@ endforeach()
  
  file(GLOB_RECURSE RUNTIME_FILES
    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
--  *.vim *.dict *.py *.ps)
-+  *.vim *.dict *.py *.ps *.awk)
+-  *.vim *.dict *.py *.ps *.tutor)
++  *.vim *.dict *.py *.ps *.awk *.tutor)
  list(APPEND RUNTIME_FILES macros/dvorak)
  
  foreach(F ${RUNTIME_FILES})

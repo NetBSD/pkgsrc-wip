@@ -1,2 +1,2 @@
-$NetBSD: distinfo,v 1.6 2015/08/10 23:19:00 jonthn Exp $
-SHA1 (patch-runtime_CMakeLists.txt) = 9177358facbf9990539b3caf48aa5ad428949b30
+$NetBSD: distinfo,v 1.7 2015/08/29 20:56:15 jonthn Exp $
+SHA1 (patch-runtime_CMakeLists.txt) = c3361c9ed05a0e38dce9ce40777cb9cd34d13aad
