@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/08/30 22:42:37 slitvinov Exp $
+
+SHA1 (gts-snapshot.tar.gz) = d509974706c59598ff055867d2a12221e215949e
+RMD160 (gts-snapshot.tar.gz) = 24b3c469d5a35b658825eb342ae03e9e9d93afb8
+Size (gts-snapshot.tar.gz) = 880569 bytes
