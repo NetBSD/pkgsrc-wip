@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/08/30 22:42:37 slitvinov Exp $
+# $NetBSD: Makefile,v 1.2 2015/08/30 23:02:24 slitvinov Exp $
 
 DISTNAME=	gts-snapshot
 SNAPDATE=	121130
-PKGNAME=	gts.${SNAPDATE}
+PKGNAME=	gts-0.7.6.${SNAPDATE}
 CATEGORIES=	graphics
 MASTER_SITES=	http://gts.sf.net/
 
