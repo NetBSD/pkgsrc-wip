@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6311 2015/08/29 17:08:27 f8l Exp $
+# $Id: Makefile,v 1.6312 2015/08/30 22:44:35 slitvinov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -979,6 +979,7 @@ SUBDIR+=	gtkhotkey
 SUBDIR+=	gtkmathview
 SUBDIR+=	gtksourcecompletion
 SUBDIR+=	gts
+SUBDIR+=	gts-snapshot
 SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
 SUBDIR+=	guichan
