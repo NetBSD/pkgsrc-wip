@@ -1,0 +1,12 @@
+Update 2.5.5 to 2.6  
+----------------------
+(from http://www.freetype.org/)
+2015-06-08 FreeType 2.6
+  FreeType 2.6 has been released. This is a new major release that
+  provides a better (and simpler) thread-safety model. Among other new
+  features we now have auto-hinting support for Arabic and Thai,
+  together with much improved handling of Apple's GX TrueType variation
+  font format.
+  (ChangeLog from 2.5.5 to 2.6 extends some 1600 lines, consult with it
+  if necessary, thanks)
+  
