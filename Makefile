@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6312 2015/08/30 22:44:35 slitvinov Exp $
+# $Id: Makefile,v 1.6313 2015/08/31 15:48:27 yhardy Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3795,6 +3795,8 @@ SUBDIR+=	tex-envlab
 SUBDIR+=	tex-envlab-doc
 SUBDIR+=	tex-europasscv
 SUBDIR+=	tex-europasscv-doc
+SUBDIR+=	tex-flowfram
+SUBDIR+=	tex-flowfram-doc
 SUBDIR+=	tex-newlfm
 SUBDIR+=	tex-newlfm-doc
 SUBDIR+=	tex-probsoln
