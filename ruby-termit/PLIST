@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/26 15:39:51 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/08/31 19:13:30 yhardy Exp $
 bin/termit
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -21,6 +21,8 @@ ${GEM_LIBDIR}/lib/termit/text_translator.rb
 ${GEM_LIBDIR}/lib/termit/url_constructor.rb
 ${GEM_LIBDIR}/lib/termit/user_input_parser.rb
 ${GEM_LIBDIR}/lib/termit/version.rb
+${GEM_LIBDIR}/spec/fixtures/google_1.yml
+${GEM_LIBDIR}/spec/fixtures/google_2.yml
 ${GEM_LIBDIR}/spec/fixtures/text_response_with_synonyms
 ${GEM_LIBDIR}/spec/fixtures/text_response_without_synonyms
 ${GEM_LIBDIR}/spec/spec_helper.rb
