@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6315 2015/09/01 22:36:48 mwdavies Exp $
+# $Id: Makefile,v 1.6316 2015/09/01 23:48:54 f8l Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -545,10 +545,10 @@ SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
 SUBDIR+=	dvegas
 SUBDIR+=	dwarf_fortress
-SUBDIR+=	dwb-git-gtk2
-SUBDIR+=	dwb-git-gtk3
 SUBDIR+=	dwb-gtk2
+SUBDIR+=	dwb-gtk2-git
 SUBDIR+=	dwb-gtk3
+SUBDIR+=	dwb-gtk3-git
 SUBDIR+=	dwepcrack
 SUBDIR+=	dxmake
 SUBDIR+=	dzen2
