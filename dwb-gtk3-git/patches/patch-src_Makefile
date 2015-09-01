@@ -1,0 +1,42 @@
+$NetBSD: patch-src_Makefile,v 1.1 2015/09/01 23:24:55 f8l Exp $
+
+Imported from http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/ports/www/dwb/patches/patch-src_Makefile?rev=1.1
+
+--- src/Makefile.orig	2015-05-24 10:10:47.000000000 +0000
++++ src/Makefile
+@@ -34,30 +34,25 @@ DOBJ := $(OBJ:.o=.do)
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJ) 
+-	@echo $(CC) -o $@
+-	@$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS) 
++	$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS) 
+ 
+ -include $(OBJ:.o=.d)
+ -include $(DOBJ:.do=.dd)
+ 
+ %.o: %.c %.h config.h dwb.h
+-	@echo $(CC) $<
+-	@$(CC) -c -o $@ $< $(CFLAGS) $(CPPFLAGS) 
++	$(CC) -c -o $@ $< $(CFLAGS) $(CPPFLAGS) 
+ 
+ debug: $(DTARGET)
+ 
+ deps.d: %.c %.h
+-	@echo "$(CC) -MM $@"
+-	@$(CC) $(CFLAGS) -MM $< -o $@
++	$(CC) $(CFLAGS) -MM $< -o $@
+ 
+ 
+ %.do: %.c %.h config.h
+-	@echo "${CC} $<"
+-	@$(CC) -c -o $@ $< $(DCFLAGS) 
++	$(CC) -c -o $@ $< $(DCFLAGS) 
+ 
+ $(DTARGET): $(DOBJ)
+-	@echo "$(CC) $@"
+-	@$(CC) $(DOBJ) -o $(DTARGET) $(LDFLAGS) 
++	$(CC) $(DOBJ) -o $(DTARGET) $(LDFLAGS) 
+ 
+ dependencies: $(DEPS)
+ 

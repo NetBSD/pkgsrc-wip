@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2015/09/01 23:24:54 f8l Exp $
+
+SHA1 (5134b576a6ca.zip) = 064e27016246b70a312cdb47891c5e4609927b0d
+RMD160 (5134b576a6ca.zip) = 5e4fdd4b88ff2e496c3e6fb4cd17f3ac3932f6c9
+Size (5134b576a6ca.zip) = 622015 bytes
+SHA1 (patch-config.mk) = 9fc7a0a5089bd32151e67eda75f8508aae925831
+SHA1 (patch-dwbem_Makefile) = de80c402c20d33d085f65e0d54204ef1d7316791
+SHA1 (patch-dwbem_dwbem.c) = b48817207054161dce229903082448777e040554
+SHA1 (patch-dwbremote_Makefile) = a4380c1eef5dd8bfc927877c6661f383ee917215
+SHA1 (patch-exar_Makefile) = 37d75b5a0d84e7c7bc31280496c016acdd2cae57
+SHA1 (patch-src_Makefile) = af63f94945516cc4da1565418953f35adf106ee1
+SHA1 (patch-src_application.c) = b3f5d3b31075732e58f7f4d3c0cb2a1d89399013
+SHA1 (patch-src_config.mk) = 79d5cde2ef57f534b02fbefce2f5c75b3fd19cb8
+SHA1 (patch-src_secret.h) = 5c4fa2fece8cc9b0ab75b3010f69776c28525c88
+SHA1 (patch-src_session.c) = c690adeb54736697eac0686a4dfffd6b30db12a5
+SHA1 (patch-src_util_Makefile) = 79c76dd0b6002c263907623593e623e78572a69a
+SHA1 (patch-src_util_mktlds-header.c) = a0e7e68ebc5ca53c75a949eaa4116204e0f9229a
+SHA1 (patch-version.mk) = cdbab9a49b8691e349eef11d27bb33e2769ec49e
