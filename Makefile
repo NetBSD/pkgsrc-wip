@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6313 2015/08/31 15:48:27 yhardy Exp $
+# $Id: Makefile,v 1.6314 2015/09/01 20:46:02 devnexen Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1004,6 +1004,7 @@ SUBDIR+=	habak
 SUBDIR+=	haddock
 SUBDIR+=	hammer
 SUBDIR+=	hanazono-ttf
+SUBDIR+=	haproxy-devel
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
 SUBDIR+=	haskell-mode
