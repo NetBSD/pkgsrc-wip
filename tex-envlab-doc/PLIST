@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/10 21:08:08 yhardy Exp $
-share/texmf-dist/doc/latex/envlab/elguide.pdf
-share/texmf-dist/doc/latex/envlab/elguide.tex
-share/texmf-dist/doc/latex/envlab/envlab.pdf
-share/texmf-dist/doc/latex/envlab/readme.v12

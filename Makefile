@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6314 2015/09/01 20:46:02 devnexen Exp $
+# $Id: Makefile,v 1.6315 2015/09/01 22:36:48 mwdavies Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3790,26 +3790,6 @@ SUBDIR+=	tetrinet
 SUBDIR+=	tex-abntex
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
-SUBDIR+=	tex-cuisine
-SUBDIR+=	tex-cuisine-doc
-SUBDIR+=	tex-envlab
-SUBDIR+=	tex-envlab-doc
-SUBDIR+=	tex-europasscv
-SUBDIR+=	tex-europasscv-doc
-SUBDIR+=	tex-flowfram
-SUBDIR+=	tex-flowfram-doc
-SUBDIR+=	tex-newlfm
-SUBDIR+=	tex-newlfm-doc
-SUBDIR+=	tex-probsoln
-SUBDIR+=	tex-probsoln-doc
-SUBDIR+=	tex-stringstrings
-SUBDIR+=	tex-stringstrings-doc
-SUBDIR+=	tex-tikzposter
-SUBDIR+=	tex-tikzposter-doc
-SUBDIR+=	tex-toptesi
-SUBDIR+=	tex-toptesi-doc
-SUBDIR+=	tex-xstring
-SUBDIR+=	tex-xstring-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/31 15:42:32 yhardy Exp $
-share/texmf-dist/scripts/flowfram/flowfram.perl
-share/texmf-dist/tex/latex/flowfram/flowfram.sty
