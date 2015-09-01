@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/09/01 23:24:55 f8l Exp $
-.include "../../wip/dwb-git-gtk2/Makefile.common"
+# $NetBSD: Makefile,v 1.2 2015/09/01 23:46:36 f8l Exp $
+.include "../../wip/dwb-gtk2-git/Makefile.common"
 
-PKGNAME=        dwb-git-gtk3
+PKGNAME=        dwb-gtk3-git
 COMMENT=	Dynamic WebKit browser, gtk3 version
 
 MAKE_ENV+=	GTK=3

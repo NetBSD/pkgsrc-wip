@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2015/09/01 23:24:53 f8l Exp $
-# used by wip/dwb-git-gtk2/Makefile
-# used by wip/dwb-git-gtk3/Makefile
+# $NetBSD: Makefile.common,v 1.2 2015/09/01 23:46:36 f8l Exp $
+# used by wip/dwb-gtk2-git/Makefile
+# used by wip/dwb-gtk3-git/Makefile
 
 DISTNAME=	${VERSION}
 VERSION=	dda5aa74a63a	# Please keep the same number of initial characters. WRKSRC depends on that.
