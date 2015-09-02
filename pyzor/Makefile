@@ -1,27 +1,51 @@
-# $NetBSD: Makefile,v 1.9 2014/01/25 10:45:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2015/09/02 20:28:57 fhajny Exp $
 
-DISTNAME=	pyzor-0.5.0
+DISTNAME=	pyzor-1.0.0
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyzor/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=SpamExperts/}
 
 MAINTAINER=	tom@replic8.net
-HOMEPAGE=	http://sourceforge.net/apps/trac/pyzor/
+HOMEPAGE=	http://github.com/SpamExperts/pyzor/
 COMMENT=	Collaborative, networked system to detect and block spam
 LICENSE=	gnu-gpl-v2
 
-.if defined(PYZOR_USE_PYZORD) && !empty(PYZOR_USE_PYZORD:M[Yy][Ee][Ss])
-DEPENDS+=	${PYPKGPREFIX}-gdbm>=0nb1:../../databases/py-gdbm
-.endif
+GITHUB_TAG=	release-${PKGVERSION_NOREV:S/./-/g}
 
-BUILD_DEFS+=	PYZOR_USE_PYZORD
+USE_TOOLS+=	gmake
 
-PYDISTUTILSPKG=	YES
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-REPLACE_PYTHON=		scripts/pyzor	\
-				scripts/pyzord
+REPLACE_PYTHON=	scripts/pyzor scripts/pyzord
+MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/application.mk"
+EGDIR=			share/examples/pyzor
+CONFIG_FILES=		accounts config pyzord.access pyzord.paswd servers
 
+.for file in ${CONFIG_FILES}
+CONF_FILES+=		${EGDIR}/${file}.sample ${PKG_SYSCONFDIR}/${file}
+.endfor
+
+PKG_SYSCONFSUBDIR=	pyzor
+
+SUBST_CLASSES+=		etc
+SUBST_STAGE.etc=	pre-build
+SUBST_MESSAGE.etc=	Fixing default config path
+SUBST_FILES.etc=	scripts/pyzord scripts/pyzor web/application.py
+SUBST_SED.etc=		-e 's,/etc,${PKG_SYSCONFBASE},'
+
+MAKE_FLAGS+=		SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
+INSTALLATION_DIRS+=	${PREFIX}/${PKGMANDIR}/man1 ${EGDIR}
+
+post-build:
+	cd ${WRKSRC}/docs && ${BUILD_MAKE_CMD} man
+
+post-install:
+.for file in ${CONFIG_FILES}
+	${INSTALL_DATA} ${WRKSRC}/config/${file}.sample \
+		${DESTDIR}${PREFIX}/${EGDIR}
+.endfor
+	${INSTALL_MAN} ${WRKSRC}/docs/.build/man/pyzor.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
