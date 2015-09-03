@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/04/14 18:27:59 leot1990 Exp $
+# $NetBSD: Makefile,v 1.11 2015/09/03 22:35:18 leot1990 Exp $
 #
 
 DISTNAME=	girara-0.2.4
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pwmt.org/projects/girara/download/
 MAINTAINER=	degroote@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/girara/
 COMMENT=	Library to develop simple and minimalist user interface
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config gettext gmake groff
 USE_LIBTOOL=	yes

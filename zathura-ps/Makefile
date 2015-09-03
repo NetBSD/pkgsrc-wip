@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/05/18 11:46:24 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/03 22:35:18 leot1990 Exp $
 #
 
 VERSION=	0.2.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://pwmt.org/projects/zathura-ps/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura-ps/
 COMMENT=	Add PS support to zathura using libspectre library
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config gettext gmake groff
 USE_LIBTOOL=	yes

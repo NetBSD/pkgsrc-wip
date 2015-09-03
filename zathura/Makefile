@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/04/14 18:10:46 leot1990 Exp $
+# $NetBSD: Makefile,v 1.15 2015/09/03 22:35:17 leot1990 Exp $
 
 DISTNAME=	zathura-0.3.3
 CATEGORIES=	print
@@ -7,7 +7,7 @@ MASTER_SITES=	http://pwmt.org/projects/zathura/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura/
 COMMENT=	PDF viewer with vi-like keybindings
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	zlib
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 

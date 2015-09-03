@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/13 02:16:06 leot1990 Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/03 22:35:18 leot1990 Exp $
 #
 
 VERSION=	0.2.8
@@ -10,7 +10,7 @@ MASTER_SITES=	http://pwmt.org/projects/zathura/plugins/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura-pdf-mupdf/
 COMMENT=	Add PDF support to zathura using mupdf rendering engine
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	zlib
 
 CONFLICTS+=	zathura-poppler-[0-9]*
 
