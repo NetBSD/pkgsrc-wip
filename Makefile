@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6318 2015/09/03 07:03:56 fhajny Exp $
+# $Id: Makefile,v 1.6319 2015/09/03 07:34:35 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2432,7 +2432,6 @@ SUBDIR+=	php-gtk2
 SUBDIR+=	php-imagick
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
-SUBDIR+=	php-rrd
 SUBDIR+=	php-tclink
 SUBDIR+=	picasm
 SUBDIR+=	picocom
