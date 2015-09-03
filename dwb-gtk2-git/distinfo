@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/09/01 23:24:54 f8l Exp $
+$NetBSD: distinfo,v 1.2 2015/09/03 10:08:53 f8l Exp $
 
-SHA1 (5134b576a6ca.zip) = 064e27016246b70a312cdb47891c5e4609927b0d
-RMD160 (5134b576a6ca.zip) = 5e4fdd4b88ff2e496c3e6fb4cd17f3ac3932f6c9
-Size (5134b576a6ca.zip) = 622015 bytes
 SHA1 (patch-config.mk) = 9fc7a0a5089bd32151e67eda75f8508aae925831
 SHA1 (patch-dwbem_Makefile) = de80c402c20d33d085f65e0d54204ef1d7316791
 SHA1 (patch-dwbem_dwbem.c) = b48817207054161dce229903082448777e040554
