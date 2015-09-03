@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6316 2015/09/01 23:48:54 f8l Exp $
+# $Id: Makefile,v 1.6317 2015/09/03 06:26:14 fhajny Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2435,7 +2435,6 @@ SUBDIR+=	php-malware-finder
 SUBDIR+=	php-recode
 SUBDIR+=	php-rrd
 SUBDIR+=	php-tclink
-SUBDIR+=	php-tidy
 SUBDIR+=	picasm
 SUBDIR+=	picocom
 SUBDIR+=	picosat
