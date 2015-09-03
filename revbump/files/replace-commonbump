@@ -129,7 +129,7 @@ sub GenerateHash ($$) {
 		    $included =~ s/\${[^}]+}/$value/;	# Replace it with the value
 		    if ($value eq '') {			# if the $value is empty, issue message
 			print STDERR 
-$FILE, ': ', __LINE__, ' Value ${', $varname, '} is emtpy at ', $shortdir, "\n";
+$FILE, ': ', __LINE__, ' Value ${', $varname, '} is empty at ', $shortdir, "\n";
 		    }
 		}
 		print STDERR __LINE__ , ' ', $shortname, ' -> ', $included,': ',$_ ,"\n" if $debug;
