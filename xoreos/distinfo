@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/08/19 20:07:05 yhardy Exp $
+$NetBSD: distinfo,v 1.2 2015/09/05 14:50:45 yhardy Exp $
 
 SHA1 (xoreos/v0.0.2.tar.gz) = 953582a7542ab643c6b743a7ec69eac049077cd7
 RMD160 (xoreos/v0.0.2.tar.gz) = 93f52cf9910846e94545919359268de60b9c6c22
 Size (xoreos/v0.0.2.tar.gz) = 2188862 bytes
-SHA1 (patch-src_common_encoding.cpp) = 1a2b8044a266effaf30a073712e097698cf0880b
+SHA1 (patch-CMakeLists.txt) = 63003a7b635530955f8ff9623051c11d0234a2a9
+SHA1 (patch-cmake_FindIconv.cmake) = f9817fc58fbc7c34cccfeeb72c0a632cc9fb4f0e
+SHA1 (patch-cmake_FindOgg.cmake) = 6e0816ff71946650015f439c8b8a62f6780df801
