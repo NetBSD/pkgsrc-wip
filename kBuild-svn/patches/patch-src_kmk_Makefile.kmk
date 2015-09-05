@@ -1,9 +1,9 @@
-$NetBSD: patch-src_kmk_Makefile.kmk,v 1.1 2014/08/21 10:18:18 thomasklausner Exp $
+$NetBSD: patch-src_kmk_Makefile.kmk,v 1.2 2015/09/05 08:50:10 makoto Exp $
 
 Add NetBSD case.
 
---- src/kmk/Makefile.kmk.orig	2014-08-21 09:57:49.000000000 +0000
-+++ src/kmk/Makefile.kmk
+--- src/kmk/Makefile.kmk.orig	2015-09-05 17:43:02.000000000 +0900
++++ src/kmk/Makefile.kmk	2015-09-05 17:46:10.000000000 +0900
 @@ -57,6 +57,7 @@ TEMPLATE_BIN-KMK_INCS = $(kmk_0_OUTDIR) 
  TEMPLATE_BIN-KMK_INCS.darwin = glob
  TEMPLATE_BIN-KMK_INCS.dragonfly = glob
@@ -24,8 +24,8 @@ Add NetBSD case.
  kmkmissing_SOURCES.haiku = \
  	kmkbuiltin/haikufakes.c \
  	glob/glob.c \
-@@ -232,6 +238,9 @@ kmk_SOURCES = \
- 	remote-stub.c
+@@ -238,6 +244,9 @@ kmk_SOURCES = \
+ 	kbuild-object.c
  
  kmk_DEFS.freebsd.x86 = CONFIG_WITHOUT_THREADS
 +kmk_DEFS.netbsd.x86 = CONFIG_WITHOUT_THREADS
