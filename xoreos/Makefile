@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/19 20:07:05 yhardy Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/05 16:05:10 yhardy Exp $
 
 GITHUB_PROJECT=	xoreos
 DISTNAME=	${GITHUB_TAG}
@@ -14,17 +14,18 @@ COMMENT=	Open source implementation of BioWare's Aurora engine
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/xoreos-0.0.2
-USE_CMAKE=	yes
+USE_TOOLS+=	aclocal autoconf autoheader automake
 USE_LANGUAGES=	c c++
-
-CMAKE_ARGS+=	-DFAAD_INCLUDE_DIR=${PREFIX}/include/faad2
-CMAKE_ARGS+=	-DSDL2_INCLUDE_DIR=${PREFIX}/include/SDL2
-
+GNU_CONFIGURE=	YES
 
 INSTALLATION_DIRS+=	bin
 
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; libtoolize; automake -a --foreign -i; autoconf
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/xoreos ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/xoreos ${DESTDIR}${PREFIX}/bin/
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
@@ -33,6 +34,7 @@ do-install:
 .include "../../audio/openal/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
