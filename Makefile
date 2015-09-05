@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6321 2015/09/03 21:14:59 leot1990 Exp $
+# $Id: Makefile,v 1.6322 2015/09/05 02:41:17 dshao Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1478,6 +1478,7 @@ SUBDIR+=	libcuba
 SUBDIR+=	libcue
 SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
+SUBDIR+=	libdevq
 SUBDIR+=	libdbusmenu
 SUBDIR+=	libdbusmenu-glib
 SUBDIR+=	libdbusmenu-gtk
