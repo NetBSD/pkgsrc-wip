@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/09/05 16:05:10 yhardy Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/05 21:49:59 yhardy Exp $
 
 GITHUB_PROJECT=	xoreos
 DISTNAME=	${GITHUB_TAG}
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}/xoreos-0.0.2
 USE_TOOLS+=	aclocal autoconf autoheader automake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
+
+CONFIGURE_ARGS+=	--with-release=pkgsrc
 
 INSTALLATION_DIRS+=	bin
 
