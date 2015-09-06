@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/09/06 14:35:45 slitvinov Exp $
+
+SHA1 (gerris-snapshot.tar.gz) = 16c121e4b526d5a2c0386d36cb23dff3897bf1c1
+RMD160 (gerris-snapshot.tar.gz) = 5575376c8d9ce252215dd361443dfeb1c8e82144
+Size (gerris-snapshot.tar.gz) = 2841686 bytes
