@@ -14,7 +14,7 @@ use Getopt::Std;
 use File::Find;
 
 my(%HASH);	  		# referenced -> referer relation hash, referer is delimitted by ;
-my($PKGSRCDIR) = '/usr/pkgsrc';	# /usr/pkgsrc path, usually /usr/pkgsrc
+my($PKGSRCDIR);			# /usr/pkgsrc path, usually /usr/pkgsrc
 
 my($TABLE) = 'commonbump';	# name of file, list-of-files to process
 my(@TABLE);			# contents of file above
@@ -149,7 +149,6 @@ $FILE, ': ', __LINE__, ' Value ${', $varname, '} is empty at ', $shortdir, "\n";
     };  # end of my ($wanted_closure) = sub () {
     # ----------------------------------------------------------------    
     find({ wanted => $wanted_closure, follow => 1 }, $pkgsrc);
-    
 }
 
 # Table is assumed to contain list of files to process, set up it in @TABLE here.
@@ -219,6 +218,11 @@ sub main() {
     my($check_all) = 0;
     my($prefix);
     my($CheckHashFile) = 0;
+
+    $PKGSRCDIR = $ENV{PKGSRCDIR};
+    if (! $PKGSRCDIR) {
+        $PKGSRCDIR = "/usr/pkgsrc";
+    }
     getopts('ac:hp:T:', \%opts);
 
     if ($opts{'a'}) { $check_all = 1;  }
@@ -234,7 +238,6 @@ sub main() {
     GenerateHash($PKGSRCDIR, $prefix);
 	# Check the first half, 
     CheckHash($PKGSRCDIR, $CheckHashFile) if $CheckHashFile;
-    
     ReadTable($TABLE);
     if ($check_all) { CheckAll(); }
     else            { ShowResults();}

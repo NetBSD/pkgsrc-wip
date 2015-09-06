@@ -1,4 +1,4 @@
-.\"	$NetBSD: replace-commonbump.1,v 1.7 2015/02/03 11:25:19 makoto Exp $
+.\"	$NetBSD: replace-commonbump.1,v 1.8 2015/09/06 01:47:48 makoto Exp $
 .\"
 .\" Copyright (c) 2014 The NetBSD Foundation, Inc.
 .\"
@@ -31,7 +31,7 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd December 14, 2014
+.Dd February 9, 2015
 .Dt REPLACE-COMMONBUMP 1
 .Os
 .Sh NAME
@@ -129,6 +129,11 @@ then outputs to the file
 .Pa commonbump.replaced
 (currently the name is fixed).
 .El
+.Sh ENVIRONMENT
+.Ev PKGSRCDIR
+pkgsrc root directory.
+Defaults to
+.Pa /usr/pkgsrc .
 .Sh SEE ALSO
 .Xr blbump 1 ,
 .Xr check-cvs-diff 1 ,
