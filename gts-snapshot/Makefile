@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/30 23:02:24 slitvinov Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/06 14:31:49 slitvinov Exp $
 
 DISTNAME=	gts-snapshot
 SNAPDATE=	121130
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	gts.pc.in
 
 INSTALLATION_DIRS+=	bin
 
-WRKSRC=${WRKDIR}/gts-snapshot-121130
+WRKSRC=${WRKDIR}/gts-snapshot-${SNAPDATE}
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0
 .include "../../devel/glib2/buildlink3.mk"
