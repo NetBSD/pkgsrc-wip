@@ -148,6 +148,7 @@ $FILE, ': ', __LINE__, ' Value ${', $varname, '} is empty at ', $shortdir, "\n";
 	} # if of (major process) ... starting with: if ($_ =~ m|Makefile| || 
     };  # end of my ($wanted_closure) = sub () {
     # ----------------------------------------------------------------    
+    # With 'follow => 1', /usr/pkgsrc can be symlink to other location.
     find({ wanted => $wanted_closure, follow => 1 }, $pkgsrc);
 }
 
