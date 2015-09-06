@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/08/30 09:18:16 makoto Exp $
-
-SHA1 (freetype-2.6.tar.bz2) = cd2b144205dd2c61693e2d861069367aa3dde1bc
-RMD160 (freetype-2.6.tar.bz2) = 80618594b49c5bfdd8fd951f83a346d57f04ee09
-Size (freetype-2.6.tar.bz2) = 1726219 bytes
-SHA1 (patch-aa) = d89f3f452354129df49d02d5063e712b57e8ba0e
-SHA1 (patch-ab) = cb8c9552e2db1e1f3da3d20971c22f174e343162
