@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:36 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2015/09/06 21:40:51 jihbed Exp $
 
-DISTNAME=	fs-0.1.0
+DISTNAME=	fs-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-CATEGORIES=	devel python
-MASTER_SITES=	http://pyfilesystem.googlecode.com/files/
+CATEGORIES=	filesystems python
+MASTER_SITES=	https://pypi.python.org/packages/source/f/fs/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://code.google.com/p/pyfilesystem/
-COMMENT=	Creates a common interface to filesystems
-LICENSE=	gnu-gpl-v2
+HOMEPAGE=	http://pypi.python.org/pypi/fs/
+COMMENT=	Filesystem abstraction layer
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_ACCEPTED= 34 33 27
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
