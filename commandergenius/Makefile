@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/19 21:21:53 yhardy Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/06 20:10:45 yhardy Exp $
 
 GITHUB_PROJECT=	Commander-Genius
 DISTNAME=	${GITHUB_TAG}
@@ -33,7 +33,8 @@ post-install:
 		${INSTALL_DATA} "$$f" "${DESTDIR}${PREFIX}/share/commandergenius/$${f%/*}" || exit 1; \
 	done
 
-.include "../../audio/libvorbis/buildlink3.mk"
+.include "options.mk"
+
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
