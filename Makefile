@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6322 2015/09/05 02:41:17 dshao Exp $
+# $Id: Makefile,v 1.6323 2015/09/06 14:39:26 slitvinov Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -803,6 +803,7 @@ SUBDIR+=	gemrb
 SUBDIR+=	geners
 SUBDIR+=	genus2reduction
 SUBDIR+=	gerris
+SUBDIR+=	gerris-snapshot
 SUBDIR+=	getdp
 SUBDIR+=	gf2x
 SUBDIR+=	gfa
@@ -812,6 +813,7 @@ SUBDIR+=	gflags
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	gforth
+SUBDIR+=	gfs-snapshot
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
