@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/05/16 21:44:29 krytarowski Exp $
+# $NetBSD: Makefile,v 1.5 2015/09/08 20:57:44 krytarowski Exp $
 
-DISTNAME=	ansiweather-1.02
+DISTNAME=	ansiweather-1.03
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
@@ -11,9 +11,8 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-USE_TOOLS+=	awk:run bash:run date:run grep:run
+USE_TOOLS+=	awk:run date:run grep:run
 
-DEPENDS+=	bc-[0-9]*:../../math/bc
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	jq-[0-9]*:../../devel/jq
 
@@ -33,7 +32,7 @@ SUBST_SED.config=	-e 's,~/.ansiweatherrc,${PKG_SYSCONFDIR}/ansiweatherrc,'
 SUBST_STAGE.config=	post-patch
 
 SUBST_FILES.shebang=	ansiweather
-SUBST_SED.shebang=	-e 's,/usr/bin/env bash,${BASH},'
+SUBST_SED.shebang=	-e 's,/usr/bin/env sh,${SH},'
 SUBST_STAGE.shebang=	post-patch
 
 AUTO_MKDIRS=	yes
