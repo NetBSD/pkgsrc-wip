@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/09/08 21:50:52 f8l Exp $
+# $NetBSD: Makefile,v 1.14 2015/09/08 21:56:11 f8l Exp $
 #
 
 DISTNAME=		gdmap-0.8.1
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdmap/}
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://gdmap.sourceforge.net/
 COMMENT=		Tool to visualize disk space
+LICENSE=		gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
