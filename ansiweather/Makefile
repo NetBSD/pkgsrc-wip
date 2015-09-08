@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/09/08 20:57:44 krytarowski Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/08 21:46:16 krytarowski Exp $
 
 DISTNAME=	ansiweather-1.03
-CATEGORIES=	sysutils
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
