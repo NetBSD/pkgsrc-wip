@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/09/05 02:34:31 dshao Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2015/09/09 22:51:39 tnn2 Exp $
 
 BUILDLINK_TREE+=	libdevq
 
@@ -7,7 +7,6 @@ LIBDEVQ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdevq+=	libdevq>=0.0.2
 BUILDLINK_PKGSRCDIR.libdevq?=	../../devel/libdevq
-.include "../../mk/dlopen.buildlink3.mk"
 .endif # LIBDEVQ_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libdevq
