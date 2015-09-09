@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/09/09 22:37:23 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/09 22:42:05 tnn2 Exp $
 
 # Original port from FreeBSD ports and DragonFly dports
 # Created by: Koop Mast <kwm@FreeBSD.org>
@@ -12,6 +12,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/freebsd/libdevq
+# See also:	https://wiki.freebsd.org/Graphics
 COMMENT=	Generic Device Query and Monitor interface
 LICENSE=	2-clause-bsd
 
