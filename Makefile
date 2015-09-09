@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6325 2015/09/08 22:02:48 krytarowski Exp $
+# $Id: Makefile,v 1.6326 2015/09/09 23:07:34 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1487,7 +1487,6 @@ SUBDIR+=	libdbusmenu-gtk-doc
 SUBDIR+=	libdbusmenu-gtk3
 SUBDIR+=	libdbusmenu-jsonloader
 SUBDIR+=	libdbusmenu-tools
-SUBDIR+=	libdevq
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole
