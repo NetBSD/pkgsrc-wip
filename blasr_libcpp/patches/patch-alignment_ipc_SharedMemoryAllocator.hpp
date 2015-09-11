@@ -1,6 +1,6 @@
-$NetBSD: patch-alignment_ipc_SharedMemoryAllocator.hpp,v 1.1 2015/08/20 21:20:14 outpaddling Exp $
+$NetBSD: patch-alignment_ipc_SharedMemoryAllocator.hpp,v 1.2 2015/09/11 16:48:33 outpaddling Exp $
 
---- alignment/ipc/SharedMemoryAllocator.hpp.orig	2015-08-12 17:41:23 UTC
+--- alignment/ipc/SharedMemoryAllocator.hpp.orig	2015-08-12 17:41:23.000000000 +0000
 +++ alignment/ipc/SharedMemoryAllocator.hpp
 @@ -7,6 +7,7 @@
  #include <fcntl.h>

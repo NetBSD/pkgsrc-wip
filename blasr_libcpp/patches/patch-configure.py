@@ -1,6 +1,6 @@
-$NetBSD: patch-configure.py,v 1.1 2015/08/20 21:20:14 outpaddling Exp $
+$NetBSD: patch-configure.py,v 1.2 2015/09/11 16:48:33 outpaddling Exp $
 
---- configure.py.orig	2015-08-12 17:41:23 UTC
+--- configure.py.orig	2015-08-12 17:41:23.000000000 +0000
 +++ configure.py
 @@ -93,7 +93,7 @@ nohdf         ?=1
  """%(dict(thisdir=thisdir))
