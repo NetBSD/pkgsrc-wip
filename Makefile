@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6326 2015/09/09 23:07:34 tnn2 Exp $
+# $Id: Makefile,v 1.6327 2015/09/12 15:07:27 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -439,7 +439,6 @@ SUBDIR+=	dateutils
 SUBDIR+=	davical-current
 SUBDIR+=	db1
 SUBDIR+=	dbf
-SUBDIR+=	dbmail
 SUBDIR+=	dbus-explorer
 SUBDIR+=	dcc
 SUBDIR+=	ddate
@@ -1607,7 +1606,6 @@ SUBDIR+=	libvg
 SUBDIR+=	libvterm
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
-SUBDIR+=	libzdb
 SUBDIR+=	libzn-poly
 SUBDIR+=	lidia
 SUBDIR+=	light-desktop
