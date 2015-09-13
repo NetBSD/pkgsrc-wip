@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/07/12 08:32:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2015/09/13 07:33:05 thomasklausner Exp $
 
-DISTNAME=	lgogdownloader-2.24
+DISTNAME=	lgogdownloader-2.25
 CATEGORIES=	games
 MASTER_SITES=	#
 
