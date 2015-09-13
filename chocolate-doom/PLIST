@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/17 20:38:55 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/09/13 20:39:38 yhardy Exp $
 bin/chocolate-doom
 bin/chocolate-doom-setup
 bin/chocolate-heretic
@@ -26,6 +26,10 @@ man/man6/chocolate-server.6
 man/man6/chocolate-setup.6
 man/man6/chocolate-strife-setup.6
 man/man6/chocolate-strife.6
+share/appdata/chocolate-doom.appdata.xml
+share/appdata/chocolate-heretic.appdata.xml
+share/appdata/chocolate-hexen.appdata.xml
+share/appdata/chocolate-strife.appdata.xml
 share/applications/chocolate-doom.desktop
 share/applications/chocolate-heretic.desktop
 share/applications/chocolate-hexen.desktop
