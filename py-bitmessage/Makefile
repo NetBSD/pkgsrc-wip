@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/09/13 19:49:33 krytarowski Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/13 21:14:54 krytarowski Exp $
 
 GITHUB_PROJECT=	PyBitmessage
 DISTNAME=	${PYPKGPREFIX}-bitmessage-0.4.4
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Bitmessage/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +23,10 @@ REPLACE_PYTHON+=	src/pyelliptic/hash.py
 REPLACE_PYTHON+=	src/pyelliptic/openssl.py
 REPLACE_PYTHON+=	src/qidenticon.py
 REPLACE_PYTHON+=	src/singleton.py
+
+# Hack
+post-install:
+	${RUN} rm -f ${DESTDIR}${PREFIX}/share/pybitmessage/helper_startup.py.orig
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
