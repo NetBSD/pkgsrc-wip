@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/09/13 21:14:54 krytarowski Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/13 21:34:05 krytarowski Exp $
 
 GITHUB_PROJECT=	PyBitmessage
 DISTNAME=	${PYPKGPREFIX}-bitmessage-0.4.4
@@ -27,6 +27,7 @@ REPLACE_PYTHON+=	src/singleton.py
 # Hack
 post-install:
 	${RUN} rm -f ${DESTDIR}${PREFIX}/share/pybitmessage/helper_startup.py.orig
+	${RUN} rm -f ${DESTDIR}${PREFIX}/share/pybitmessage/shared.py.orig
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
