@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6327 2015/09/12 15:07:27 tnn2 Exp $
+# $Id: Makefile,v 1.6328 2015/09/13 19:56:24 krytarowski Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -2610,6 +2610,7 @@ SUBDIR+=	py-biofrills
 SUBDIR+=	py-bip
 SUBDIR+=	py-biskit
 SUBDIR+=	py-bitarray
+SUBDIR+=	py-bitmessage
 SUBDIR+=	py-bitsets
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-blaze
