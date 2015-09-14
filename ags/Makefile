@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/08/18 18:47:57 yhardy Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/14 22:26:14 yhardy Exp $
 
 GITHUB_PROJECT=	ags
 DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-3.3.4.1
+PKGNAME=	${GITHUB_PROJECT}-3.3.4.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adventuregamestudio/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.adventuregamestudio.co.uk/
 COMMENT=	Adventure Game Studio runtime engine
 LICENSE=	artistic-2.0
 
-WRKSRC=		${WRKDIR}/ags-v.3.3.4.1
+WRKSRC=		${WRKDIR}/ags-${GITHUB_TAG}
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake pkg-config
