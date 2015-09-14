@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/11/24 09:18:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/14 12:52:50 thomasklausner Exp $
 
-DISTNAME=	keepassx-2.0alpha0
+DISTNAME=	keepassx-2.0beta2
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/keepassx/keepassx/
 
@@ -33,8 +33,8 @@ pre-configure:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-qdbus/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
