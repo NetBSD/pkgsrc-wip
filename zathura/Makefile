@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2015/09/03 22:35:17 leot1990 Exp $
+# $NetBSD: Makefile,v 1.16 2015/09/14 00:28:52 leot1990 Exp $
 
 DISTNAME=	zathura-0.3.3
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura/download/
 
@@ -17,6 +18,7 @@ USE_LIBTOOL=	yes
 MAKE_ENV+=	COLOR=0
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
+PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
 
 .include "../../databases/sqlite3/buildlink3.mk"
