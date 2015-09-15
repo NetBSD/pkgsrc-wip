@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6329 2015/09/15 13:12:14 tnn2 Exp $
+# $Id: Makefile,v 1.6330 2015/09/15 13:16:22 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -343,7 +343,6 @@ SUBDIR+=	cl-trivial-gray-streams
 SUBDIR+=	cl-unicode
 SUBDIR+=	cl-who
 SUBDIR+=	clamassassin
-SUBDIR+=	clang-svn
 SUBDIR+=	classgen
 SUBDIR+=	classias
 SUBDIR+=	classic-mac-font-pack
