@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6330 2015/09/15 13:16:22 tnn2 Exp $
+# $Id: Makefile,v 1.6331 2015/09/15 20:58:26 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -4009,9 +4009,11 @@ SUBDIR+=	xedit
 SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-input-synaptics
+SUBDIR+=	xf86-input-vboxmouse
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel
 SUBDIR+=	xf86-video-intel-old
+SUBDIR+=	xf86-video-virtualbox
 SUBDIR+=	xf86-video-voodoo
 SUBDIR+=	xf86dga
 SUBDIR+=	xf86rushproto
