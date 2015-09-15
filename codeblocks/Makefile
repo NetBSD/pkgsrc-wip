@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.10 2015/09/15 11:26:40 realzhtw Exp $
 #
 
-PKGVERSION=	10.05
-DISTNAME=	codeblocks-${PKGVERSION}-src
+PKGVERSION=	13.12
+DISTNAME=	codeblocks_${PKGVERSION}-1
 PKGNAME=	codeblocks-${PKGVERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://download.berlios.de/codeblocks/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=   http://downloads.sourceforge.net/project/codeblocks/Sources/13.12/
+EXTRACT_SUFX=	.tar.gz
 
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.codeblocks.org/
 COMMENT=	Open source, cross platform, free C++ IDE
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-release
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake

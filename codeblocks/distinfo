@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/15 09:43:19 mwdavies Exp $
+$NetBSD: distinfo,v 1.4 2015/09/15 11:26:40 realzhtw Exp $
 
-SHA1 (codeblocks-10.05-src.tar.bz2) = b7697f512de69ad731f0febac4b91bb6c605fa57
-RMD160 (codeblocks-10.05-src.tar.bz2) = a1b4e93f4cc41ae6b7fd955689dae8648f0fd2f9
-Size (codeblocks-10.05-src.tar.bz2) = 7271651 bytes
+SHA1 (codeblocks_13.12-1.tar.gz) = 3d16f977c9dcc0d857f61af3233a76d6a68609e3
+RMD160 (codeblocks_13.12-1.tar.gz) = e5e469431b792687ba029689b1107a0d735bce8b
+Size (codeblocks_13.12-1.tar.gz) = 17221056 bytes
 SHA1 (patch-ac) = 71f5e31e5a344c2699637f18783f2a2103c6cfd1
