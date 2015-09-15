@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6328 2015/09/13 19:56:24 krytarowski Exp $
+# $Id: Makefile,v 1.6329 2015/09/15 13:12:14 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -1644,7 +1644,6 @@ SUBDIR+=	litecoin
 SUBDIR+=	lives
 SUBDIR+=	livestreamer
 SUBDIR+=	lldpd
-SUBDIR+=	llvm
 SUBDIR+=	llvm-rtlib
 SUBDIR+=	lmdbg-current
 SUBDIR+=	lmfit
