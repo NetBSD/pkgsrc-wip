@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2015/08/26 13:45:38 heidnes Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/09/16 12:56:59 heidnes Exp $
 # used by wip/zabbix-server/Makefile
 # used by wip/zabbix-agent/Makefile
 # used by wip/zabbix-server-pgsql/Makefile
@@ -6,7 +6,7 @@
 
 VER=			2.4.4
 DISTNAME=		zabbix-${VER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zabbix/}
 
