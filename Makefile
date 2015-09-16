@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6331 2015/09/15 20:58:26 tnn2 Exp $
+# $Id: Makefile,v 1.6332 2015/09/16 14:25:17 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -259,6 +259,7 @@ SUBDIR+=	bub-n-bros
 SUBDIR+=	bunny
 SUBDIR+=	bup-git
 SUBDIR+=	busybox
+SUBDIR+=	bwa
 SUBDIR+=	bwm-ng
 SUBDIR+=	bwping
 SUBDIR+=	c-news
