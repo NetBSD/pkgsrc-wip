@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/09/16 15:50:26 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/16 16:10:01 outpaddling Exp $
 
 DISTNAME=	bwa-0.7.9a
 CATEGORIES=	biology
-MASTER_SITES=	http://downloads.sourceforge.net/project/bio-bwa/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bio-bwa/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jwbacon@tds.net
