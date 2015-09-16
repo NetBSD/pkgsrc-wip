@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2015/09/11 16:48:33 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2015/09/16 02:36:53 outpaddling Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.16.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,7 +16,8 @@ BUILDLINK_TREE+=	blasr_libcpp
 BLASR_LIBCPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.blasr_libcpp+=	blasr_libcpp>=2015.08.17
-BUILDLINK_PKGSRCDIR.blasr_libcpp?=	../../jb-wip/blasr_libcpp-wip
+BUILDLINK_PKGSRCDIR.blasr_libcpp?=	../../wip/blasr_libcpp
+=======
 .endif	# BLASR_LIBCPP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-blasr_libcpp

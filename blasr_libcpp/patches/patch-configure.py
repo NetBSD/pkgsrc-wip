@@ -1,7 +1,13 @@
-$NetBSD: patch-configure.py,v 1.2 2015/09/11 16:48:33 outpaddling Exp $
+$NetBSD: patch-configure.py,v 1.3 2015/09/16 02:36:53 outpaddling Exp $
 
 --- configure.py.orig	2015-08-12 17:41:23.000000000 +0000
 +++ configure.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2.7
+ """Configure the build.
+ 
+ - Fetch HDF5 headers.
 @@ -93,7 +93,7 @@ nohdf         ?=1
  """%(dict(thisdir=thisdir))
  
