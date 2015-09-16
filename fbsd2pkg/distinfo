@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/07/07 20:51:12 outpaddling Exp $
+$NetBSD: distinfo,v 1.2 2015/09/16 13:34:41 outpaddling Exp $
 
-SHA1 (fbsd2pkg-0.1.tar.xz) = d4066d720f250144fdad25cf7ced0f008129a5f1
-RMD160 (fbsd2pkg-0.1.tar.xz) = 40fed9656185e5ba0ea5b20d67481e4e47722f20
-Size (fbsd2pkg-0.1.tar.xz) = 3472 bytes
+SHA1 (fbsd2pkg-0.1.tar.xz) = d4a49316282edf08ae5bccd6a77fd47ae4cee358
+RMD160 (fbsd2pkg-0.1.tar.xz) = b00189651f0a46e4e0549709b3a57e7db5c7dbd4
+Size (fbsd2pkg-0.1.tar.xz) = 4068 bytes
