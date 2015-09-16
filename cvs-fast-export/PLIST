@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2015/02/28 10:29:18 ryo-on Exp $
-bin/cvs-fast-export
-bin/cvsconvert
-bin/cvssync
-man/man1/cvs-fast-export.1
-man/man1/cvsconvert.1
-man/man1/cvssync.1
