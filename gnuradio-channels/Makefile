@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/09/27 23:57:38 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/17 13:48:04 makoto Exp $
 
 PKGNAME=	gnuradio-channels-${VERSION}
-COMMENT=	Signal processing blocks to simulate channel models of gnuradio
+COMMENT=	Signal processing blocks to simulate channel models of GNU Radio
 
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"

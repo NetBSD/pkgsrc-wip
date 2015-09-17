@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/09/28 00:40:28 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2015/09/17 13:48:06 makoto Exp $
 
 PKGNAME=	gnuradio-vocoder-${VERSION}
 COMMENT=	All available vocoders in GNU Radio

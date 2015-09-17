@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/09/29 15:25:54 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2015/09/17 13:48:06 makoto Exp $
 
 BUILDLINK_TREE+=	gnuradio-dtv
 

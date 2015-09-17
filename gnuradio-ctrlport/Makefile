@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:30 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/17 13:48:05 makoto Exp $
 
 PKGNAME=	gnuradio-ctrlport-${VERSION}
 COMMENT=	New set of hooks into GNU Radio to allow a remote client to attach

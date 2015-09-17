@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/04 05:28:53 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2015/09/17 13:48:06 makoto Exp $
 
 PKGNAME=	gnuradio-fcd-${VERSION}
 COMMENT=	FanCube support of GNU Radio

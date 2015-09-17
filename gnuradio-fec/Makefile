@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/18 00:43:32 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/17 13:48:06 makoto Exp $
 
 PKGNAME=	gnuradio-fec-${VERSION}
 COMMENT=	Forward Error Correction blocks, utilities, & examples of GNU Radio

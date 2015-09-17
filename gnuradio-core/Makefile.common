@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2015/03/06 15:07:57 makoto Exp $
+# $NetBSD: Makefile.common,v 1.12 2015/09/17 13:48:04 makoto Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -8,19 +8,18 @@
 # used by wip/gnuradio-core/Makefile
 # used by wip/gnuradio-ctrlport/Makefile
 
-# used by wip/gnuradio-default/Makefile
 # used by wip/gnuradio-digital/Makefile
 # used by wip/gnuradio-doxygen/Makefile
 # used by wip/gnuradio-dtv/Makefile
 # used by wip/gnuradio-fcd/Makefile
-
 # used by wip/gnuradio-fec/Makefile
+
 # used by wip/gnuradio-fcd/Makefile
 # used by wip/gnuradio-noaa/Makefile
 # used by wip/gnuradio-pager/Makefile
 # used by wip/gnuradio-qtgui/Makefile
-
 # used by wip/gnuradio-trellis/Makefile
+
 # used by wip/gnuradio-uhd/Makefile
 # used by wip/gnuradio-utils/Makefile
 # used by wip/gnuradio-video-sdl/Makefile
@@ -34,8 +33,8 @@
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
-MASTER_SITES?=	http://gnuradio.org/releases/gnuradio/
-MASTER_SITES=	http://s3-dist.gnuradio.org/
+MASTER_SITES=  http://s3-dist.gnuradio.org/
+MASTER_SITES=  http://gnuradio.org/releases/gnuradio/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
@@ -93,7 +92,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
 CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 
-CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${DESTDIR}${PREFIX}/lib
+CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
 CMAKE_ARGS+=	-DGR_PREFSDIR=${DESTDIR}${PREFIX}/share/
 
 CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include

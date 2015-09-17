@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/01/25 12:13:39 makoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/09/17 13:48:06 makoto Exp $
 include/gnuradio/swig/trellis_swig.i
 include/gnuradio/swig/trellis_swig_doc.i
 include/gnuradio/trellis/api.h

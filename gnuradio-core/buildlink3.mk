@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2014/10/07 11:45:09 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2015/09/17 13:48:04 makoto Exp $
 
 BUILDLINK_TREE+=	gnuradio-core
 

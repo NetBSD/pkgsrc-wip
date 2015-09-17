@@ -12,7 +12,7 @@ our(@ARGV);
 my ($verbose) = 0;
 
 my ($PKGSRC)	='/usr/pkgsrc';
-my ($CATEGORY)	='wip';
+my ($CATEGORY)	='ham';
 my ($DEFAULT) = 'gnuradio-default';
 
 my (@LIST);	# list of gnuradio-*/PLIST files
@@ -30,7 +30,7 @@ Synopsys:
     check-PLIST-overwrap [-h] [-c CATEGORY] [-m] [-p PATH] [-v]
 Where:
     -h	show this help
-    -c	CATEGORY (wip)
+    -c	CATEGORY (ham)
     -m	print missing file instead of dupes
     -p	pkgsrc directory (/usr/pkgsrc)
     -v	verbose
