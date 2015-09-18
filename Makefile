@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6333 2015/09/16 16:15:47 thomasklausner Exp $
+# $Id: Makefile,v 1.6334 2015/09/18 13:47:22 outpaddling Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -298,6 +298,7 @@ SUBDIR+=	castget
 SUBDIR+=	cataclysm-dda
 SUBDIR+=	cb2bib
 SUBDIR+=	ccrypt
+SUBDIR+=	cd-hit
 SUBDIR+=	cddlib
 SUBDIR+=	cde
 SUBDIR+=	cdogs
