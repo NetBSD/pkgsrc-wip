@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.6334 2015/09/18 13:47:22 outpaddling Exp $
+# $Id: Makefile,v 1.6335 2015/09/19 14:56:25 tnn2 Exp $
 
 COMMENT=	WIP pkgsrc packages
 
@@ -3948,6 +3948,7 @@ SUBDIR+=	vpr
 SUBDIR+=	vreng
 SUBDIR+=	vte
 SUBDIR+=	wackamole
+SUBDIR+=	waffle
 SUBDIR+=	wang-ttf
 SUBDIR+=	watch
 SUBDIR+=	wbox
