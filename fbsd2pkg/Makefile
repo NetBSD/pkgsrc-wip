@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/07/07 20:51:12 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2015/09/19 13:43:00 outpaddling Exp $
+#
+# Don't bother committing this.  I'm adding new features almost every
+# time I convert a port.
 
 DISTNAME=	fbsd2pkg-0.1
 CATEGORIES=	pkgtools
