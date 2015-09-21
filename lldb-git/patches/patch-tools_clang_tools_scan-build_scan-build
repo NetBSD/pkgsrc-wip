@@ -2,9 +2,9 @@ $NetBSD: patch-tools_clang_tools_scan-build_scan-build,v 1.1 2014/10/01 09:41:02
 
 Adapt paths for pkgsrc installation.
 
---- tools/clang/tools/scan-build/scan-build.orig	2014-07-17 08:40:35.000000000 +0000
+--- tools/clang/tools/scan-build/scan-build.orig	2015-09-21 20:57:27.000000000 +0000
 +++ tools/clang/tools/scan-build/scan-build
-@@ -437,7 +437,7 @@ sub CopyFiles {
+@@ -462,7 +462,7 @@ sub CopyFiles {
  
    my $Dir = shift;
  
@@ -13,7 +13,7 @@ Adapt paths for pkgsrc installation.
  
    DieDiag("Cannot find 'sorttable.js'.\n")
      if (! -r $JS);
-@@ -447,7 +447,7 @@ sub CopyFiles {
+@@ -472,7 +472,7 @@ sub CopyFiles {
    DieDiag("Could not copy 'sorttable.js' to '$Dir'.\n")
      if (! -r "$Dir/sorttable.js");
  
@@ -22,7 +22,7 @@ Adapt paths for pkgsrc installation.
  
    DieDiag("Cannot find 'scanview.css'.\n")
      if (! -r $CSS);
-@@ -1657,8 +1657,8 @@ $HtmlDir = GetHTMLRunDir($HtmlDir);
+@@ -1726,8 +1726,8 @@ $Options{OutputDir} = GetHTMLRunDir($Opt
  
  # Determine the location of ccc-analyzer.
  my $AbsRealBin = Cwd::realpath($RealBin);
@@ -33,12 +33,12 @@ Adapt paths for pkgsrc installation.
  
  # Portability: use less strict but portable check -e (file exists) instead of
  # non-portable -x (file is executable). On some windows ports -x just checks
-@@ -1726,7 +1726,7 @@ if (defined $OutputFormat) {
-     if ($ViewResults and -r "$HtmlDir/index.html") {
+@@ -1795,7 +1795,7 @@ if (defined $Options{OutputFormat}) {
+     if ($Options{ViewResults} and -r "$Options{OutputDir}/index.html") {
        Diag "Analysis run complete.\n";
-       Diag "Viewing analysis results in '$HtmlDir' using scan-view.\n";
+       Diag "Viewing analysis results in '$Options{OutputDir}' using scan-view.\n";
 -      my $ScanView = Cwd::realpath("$RealBin/scan-view");
 +      my $ScanView = Cwd::realpath("$RealBin/../share/llvm/static-analyzer/scan-view");
        if (! -x $ScanView) { $ScanView = "scan-view"; }
-       exec $ScanView, "$HtmlDir";
+       exec $ScanView, "$Options{OutputDir}";
      }
