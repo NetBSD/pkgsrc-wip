@@ -3,20 +3,23 @@
 # used by lang/clang/Makefile
 # used by lang/libLLVM/Makefile
 
-DISTNAME=	clang-3.6.2
+# This is a dummy package - only for lldb/llvm porting efforts
+# It will conflict with clang and llvm packages
+
+PKGNAME=	lldb-0.0.0
 CATEGORIES=	lang
-MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.xz \
-		libcxx-${PKGVERSION_NOREV}.src.tar.xz \
-		cfe-${PKGVERSION_NOREV}.src.tar.xz \
-		compiler-rt-${PKGVERSION_NOREV}.src.tar.xz
+
+GIT_REPOSITORIES=	llvm lldb clang
+GIT_REPO.llvm=		git@github.com:llvm-mirror/llvm.git
+GIT_REPO.clang=		git@github.com:llvm-mirror/clang.git
+GIT_REPO.lldb=		git@github.com:llvm-mirror/lldb.git
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
+WRKSRC=			${WRKDIR}/llvm
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown gmake groff gzip pod2html pod2man
@@ -94,13 +97,10 @@ SUBST_SED.libcxx=		-e 's,Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 49
 .endif
 
 post-extract:
-	mv ${WRKDIR}/libcxx-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/libcxx
-	mv ${WRKDIR}/compiler-rt-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/compiler-rt
-	mv ${WRKDIR}/cfe-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
-.if ${OPSYS} == "SunOS"
-	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
-.endif
+	mv ${WRKDIR}/clang/ ${WRKSRC}/tools
+	mv ${WRKDIR}/lldb/ ${WRKSRC}/tools
 
+.include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
