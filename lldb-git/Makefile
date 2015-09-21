@@ -3,6 +3,6 @@
 MAKE_DIRS=		etc/llvm
 INSTALLATION_DIRS=	bin lib libexec
 
-.include "../../lang/clang/options.mk"
+.include "../../wip/lldb-git/options.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../lang/clang/Makefile.common"
+.include "../../wip/lldb-git/Makefile.common"

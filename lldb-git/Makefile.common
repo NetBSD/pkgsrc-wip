@@ -31,8 +31,8 @@ CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 TEST_TARGET=		check unittests
 
-DISTINFO_FILE=		${.CURDIR}/../../lang/clang/distinfo
-PATCHDIR=		${.CURDIR}/../../lang/clang/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/lldb-git/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/lldb-git/patches
 
 .include "../../mk/bsd.prefs.mk"
 
