@@ -1,7 +1,7 @@
-$NetBSD: patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
+$NetBSD: patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp,v 1.4 2014/02/21 16:17:47 ryoon Exp $
 
---- extensions/spellcheck/hunspell/src/mozHunspell.cpp.orig	2014-02-12 21:28:58.000000000 +0000
-+++ extensions/spellcheck/hunspell/src/mozHunspell.cpp
+--- extensions/spellcheck/hunspell/glue/mozHunspell.cpp.orig	2014-02-12 21:28:58.000000000 +0000
++++ extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 @@ -426,6 +426,12 @@ mozHunspell::LoadDictionaryList()
      }
    }
