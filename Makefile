@@ -1015,7 +1015,6 @@ SUBDIR+=	hawknl
 SUBDIR+=	haxima
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
-SUBDIR+=	hdhomerun_config
 SUBDIR+=	hdparm
 SUBDIR+=	heimdall
 SUBDIR+=	hengband
