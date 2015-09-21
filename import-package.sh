@@ -11,8 +11,12 @@
 # to use. It also shows you what files will be imported, reminds you
 # to run pkglint(1) and asks for confirmation before doing anything.
 
+set -e
+
 [ -n "${MKTEMP}" ] || MKTEMP=mktemp
 [ -n "${EDITOR}" ] || EDITOR=vi
+CLEANUP=""
+DRYRUN="" # "echo dry-run:"
 
 cleanup() {
 	if [ -n "${CLEANUP}" ]; then
@@ -29,31 +33,74 @@ if [ -z "${MAKE}" ]; then
 	fi
 fi
 
-PACKAGE=$(basename $(pwd))
+if [ ! -f "../../mk/bsd.pkg.mk" ]; then
+	echo "$0: ../../bsd.pkg.mk not found" 1>&2
+	exit 1
+fi
 
-for cvsdir in $(find . -type d -name CVS); do
-	cvsdir=$(echo ${cvsdir} | cut -c 3-)
-	if [ -r "${cvsdir}/Repository" ]; then
-		read repo < "${cvsdir}/Repository"
-		if [ "${repo}" != "$(dirname wip/${PACKAGE}/${cvsdir})" ]; then
-			echo "Mismatched CVS directory found: ${cvsdir}" >&2
-			echo 'Please remove CVS directories from other' \
-				'packages, or change to the correct' \
-				'directory path.' >&2
-			exit 1
-		fi
-	fi
-	if grep '[^D]' "${cvsdir}/Entries"; then
-		echo "It seems $(dirname ${cvsdir}) is already checked in." >&2
+stale=no
+for cvsdir in $(find "$(pwd)" -type d -name CVS -print); do
+	echo "$0: stale CVS state directory found: ${cvsdir}" 1>&2
+	stale=yes
+done
+for gitdir in $(find "$(pwd)" -type d -name .git -print); do
+	echo "$0: stale git state directory found: ${gitdir}" 1>&2
+	stale=yes
+done
+for wrkdir in $(find "$(pwd)" -type d -name "work*" -print); do
+	echo "$0: stale work directory found: ${wrkdir}" 1>&2
+	stale=yes
+done
+if [ "${stale}" = "yes" ]; then
+	exit 1
+fi
+
+PACKAGE="$(basename $(pwd))"
+CATEGORY="$(basename $(dirname $(pwd)))"
+PKGPATH="${CATEGORY}/${PACKAGE}"
+
+if [ "${CATEGORY}" = "wip" ]; then
+	SCM=GIT
+	if [ ! -d "../.git" ]; then
+		echo "$0: git state directory not found in ../.git" 1>&2
 		exit 1
 	fi
-done
+	GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+	if [ "${GIT_BRANCH}" != "master" ]; then
+		echo "$0: ${GIT_BRANCH} is not the git master branch" 1>&2
+		exit 1
+	fi
+	if ! git config --get user.name > /dev/null; then
+		echo "$0: Please run 'git config --local user.name \"Your name here\"'" 1>&2
+		exit 1
+	fi
+	if ! git config --get user.email > /dev/null; then
+		echo "$0: Please run 'git config --local user.email \"you@example.com\"'" 1>&2
+		exit 1
+	fi
+	if git status | grep "Changes to be committed" > /dev/null; then
+		echo "$0: You have uncommitted changes staged!" 1>&2
+		echo "$0: Check output of 'git status'" 1>&2
+		exit 1
+	fi
+	if ! git fetch; then
+	    echo "$0: git fetch failed"
+	fi
+	if ! git status -u no | grep "Your branch is up-to-date" > /dev/null; then
+		echo "$0: git repository does not appear to be up to date." 1>&2
+		echo "$0: You should probably run 'git pull --rebase'" 1>&2
+		echo "$0: and 'git push' (if you have unpushed work)" 1>&2
+		exit 1
+	fi
+else
+	SCM=CVS
+	CVSROOT="$(cat ../CVS/Root | tr A-Z a-z)"
+	if [ "${CVSROOT}" != "cvs.netbsd.org:/cvsroot" ]; then
+		echo "$0: wrong CVS root" 1>&2
+		exit 1
+	fi
+fi
 
-CATEGORY=$(basename $(dirname $(pwd)))
-PKGPATH=${CATEGORY}/${PACKAGE}
-CVSROOT=$(cat ../CVS/Root)
-USER=$(echo ${CVSROOT} | sed -e 's/@.*$//' -e 's/^.*://')
-USER_UPPER="$(echo ${USER} | tr '[a-z]' '[A-Z]')"
 MSG="$(${MKTEMP} -t import-package.XXXXXXXX)"
 CLEANUP="${MSG}"
 echo "Please wait while determining PKGNAME and DESCR_SRC."
@@ -65,51 +112,62 @@ DASH70=----------------------------------------------------------------------
 echo "Import ${PKGNAME} as ${CATEGORY}/${PACKAGE}." > ${MSG}
 echo "" >> ${MSG}
 cat ${DESCR_SRC} >> ${MSG}
-echo ${DASH70} | sed 's/^/CVS: /' >> ${MSG}
-echo "CVS: Please edit the above message to give a brief description" >> ${MSG}
-echo "CVS: of the package for those who read the *-changes@ list." >> ${MSG}
-echo "CVS: Did you remember to run pkglint(1) before importing?" >> ${MSG}
-echo "CVS:" >> ${MSG}
-echo "CVS: Lines starting with CVS: will be automatically removed." >> ${MSG}
-echo "CVS:" >> ${MSG}
+echo "${SCM}: ${DASH70}" >> ${MSG}
+echo "${SCM}: Please edit the above message to give a brief description" >> ${MSG}
+echo "${SCM}: of the package for those who read the *-changes@ list." >> ${MSG}
+echo "${SCM}: Did you remember to run pkglint(1) before importing?" >> ${MSG}
+echo "${SCM}:" >> ${MSG}
+echo "${SCM}: Lines starting with ${SCM}: will be automatically removed." >> ${MSG}
+echo "${SCM}:" >> ${MSG}
 
 ADDLIST="$(${MKTEMP} -t import-package-files.XXXXXXXX)"
 CLEANUP="${CLEANUP} ${ADDLIST}"
 (
 	cd ..
-	find ${PACKAGE} \( -name CVS -prune \) -o -type d -print |
-		while read dir; do
-			[ -e "${dir}/CVS" ] && continue
-			echo ${dir}/
-		done
-	find ${PACKAGE} \( -name CVS -prune \) -o -type f ! -name '*orig' \
-	    ! -name '.#*' -print
-) | sort > ${ADDLIST}
-sed "s|^|CVS: will add: ${CATEGORY}/|" ${ADDLIST} >> ${MSG}
+	if [ "${SCM}" = "GIT" ]; then
+		find ${PACKAGE} -type f -print
+	else
+		find ${PACKAGE} \( -type f -o -type d \) -print
+	fi
+) | sed -e '/^\./d' -e '/\/CVS/d' -e '/[^-_,./a-zA-Z0-9]/d' | sort > ${ADDLIST}
+sed "s|^|${SCM}: will add: ${CATEGORY}/|" ${ADDLIST} >> ${MSG}
 
 ${EDITOR} ${MSG}
 
 echo "Edited message follows:"
 echo ${DASH70}
-grep -v '^CVS:.*$' < ${MSG}
+grep -v "^${SCM}:" < ${MSG}
 echo ${DASH70}
-echo 	"CVSROOT:	${CVSROOT}"
 echo 	"PKGPATH:	${PKGPATH}"
+if [ "${SCM}" = "GIT" ]; then
+	echo 	"GIT_BRANCH:	${GIT_BRANCH}"
+else
+	echo 	"CVSROOT:	${CVSROOT}"
+fi
+
 echo ""
 printf "y + enter to import, any other text + enter to abort> "
 read ANS
 
 if [ "${ANS}" = "y" ]; then
-	(
-		export CVS_RSH=ssh
-		cd ..
-		[ -e "${PACKAGE}/CVS" ] || cvs add ${PACKAGE} || exit 1
-		grep '/$' ${ADDLIST} | fgrep -vx ${PACKAGE}/ |
-			xargs -L 100 cvs add
-		grep -v '/$' ${ADDLIST} | xargs -L 100 cvs add
-		cvs commit -m "$(grep -v '^CVS:.*$' ${MSG})" ${PACKAGE}
-	)
-
+	if [ "${SCM}" = "GIT" ]; then
+		(
+			cd ..
+			cat ${ADDLIST} | xargs -L 100 ${DRYRUN} git add
+			${DRYRUN} git commit -m "$(grep -v "^${SCM}:" ${MSG})" ${PACKAGE}
+			${DRYRUN} git push
+		)
+	else
+		(
+			cd ..
+			export CVS_RSH=ssh
+			[ -e "${PACKAGE}/CVS" ] || ${DRYRUN} cvs add ${PACKAGE} || exit 1
+			grep '/$' ${ADDLIST} | fgrep -vx ${PACKAGE}/ |
+			    xargs -L 100 ${DRYRUN} cvs add
+			grep -v '/$' ${ADDLIST} | xargs -L 100 ${DRYRUN} cvs add
+			${DRYRUN} cvs commit -m "$(grep -v "^${SCM}:" ${MSG})" ${PACKAGE}
+		)
+	fi
 	echo ${DASH70}
 	echo "Don't forget to add the package to ${CATEGORY}/Makefile."
 	echo "When imported to pkgsrc itself, please update the CHANGES-*"
