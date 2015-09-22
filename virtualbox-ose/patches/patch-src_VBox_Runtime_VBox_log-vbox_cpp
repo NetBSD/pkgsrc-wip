@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/VBox/Runtime/VBox/log-vbox.cpp~	2015-07-10 23:31:43.000000000 +0900
++++ src/VBox/Runtime/VBox/log-vbox.cpp	2015-09-22 18:04:09.000000000 +0900
+@@ -380,7 +380,7 @@ RTDECL(PRTLOGGER) RTLogDefaultInit(void)
+             RTLogLoggerEx(pLogger, 0, ~0U, "Commandline: %.64s\n", info.args);
+         }
+ 
+-#  elif defined(RT_OS_FREEBSD)
++#  elif defined(RT_OS_FREEBSD) || defined(RT_OS_NETBSD)
+         /* Retrieve the required length first */
+         int aiName[4];
+         aiName[0] = CTL_KERN;
