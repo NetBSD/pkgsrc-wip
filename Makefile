@@ -4015,7 +4015,6 @@ SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel-git
 SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-virtualbox
-SUBDIR+=	xf86-video-voodoo
 SUBDIR+=	xf86dga
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfburn
