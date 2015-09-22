@@ -2,8 +2,8 @@ $NetBSD: patch-tools_clang_tools_scan-build_scan-build,v 1.1 2014/10/01 09:41:02
 
 Adapt paths for pkgsrc installation.
 
---- tools/clang/tools/scan-build/scan-build.orig	2015-09-21 20:57:27.000000000 +0000
-+++ tools/clang/tools/scan-build/scan-build
+--- ../llvm/tools/clang/tools/scan-build/scan-build.orig	2015-09-21 20:57:27.000000000 +0000
++++ ../llvm/tools/clang/tools/scan-build/scan-build
 @@ -462,7 +462,7 @@ sub CopyFiles {
  
    my $Dir = shift;

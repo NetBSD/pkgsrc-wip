@@ -19,7 +19,8 @@ HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/llvm
+WRKSRC=			${WRKDIR}/build
+CONFIGURE_SCRIPT=	${WRKDIR}/llvm/configure
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown gmake groff gzip pod2html pod2man
@@ -97,8 +98,9 @@ SUBST_SED.libcxx=		-e 's,Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 49
 .endif
 
 post-extract:
-	mv ${WRKDIR}/clang/ ${WRKSRC}/tools
-	mv ${WRKDIR}/lldb/ ${WRKSRC}/tools
+	${RUN} mkdir -p ${WRKSRC}/build
+	${RUN} mv ${WRKDIR}/clang/ ${WRKDIR}/llvm/tools
+	${RUN} mv ${WRKDIR}/lldb/ ${WRKDIR}/llvm/tools
 
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"

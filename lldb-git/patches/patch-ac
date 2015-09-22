@@ -1,7 +1,7 @@
 $NetBSD: patch-ac,v 1.9 2014/01/19 14:06:41 ryoon Exp $
 
---- Makefile.rules.orig	2015-09-21 20:56:17.000000000 +0000
-+++ Makefile.rules
+--- ../llvm/Makefile.rules.orig	2015-09-21 20:56:17.000000000 +0000
++++ ../llvm/Makefile.rules
 @@ -847,9 +847,6 @@ endif
  # in the file so they get built before dependencies
  #---------------------------------------------------------
