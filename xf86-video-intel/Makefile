@@ -14,6 +14,7 @@ COMMENT=	Modular Xorg Intel video driver
 CONFLICTS+=	xf86-video-i810-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-dri
+CONFIGURE_ARGS+=	--enable-dri2
 CONFIGURE_ARGS+=	--disable-dri3
 
 GNU_CONFIGURE=	YES
@@ -31,11 +32,10 @@ pre-configure:
 
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
 
-.include "../../wip/modular-xorg-server/buildlink3.mk"
-.include "../../wip/MesaLib/buildlink3.mk"
-.include "../../x11/libXvMC/buildlink3.mk"
+.include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
-.include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../x11/libXvMC/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
