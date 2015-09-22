@@ -501,7 +501,6 @@ SUBDIR+=	distella
 SUBDIR+=	ditz-commander
 SUBDIR+=	diveintopython
 SUBDIR+=	djplay
-SUBDIR+=	dk-milter
 SUBDIR+=	dlpoly-classic
 SUBDIR+=	dmapd
 SUBDIR+=	dmd
@@ -1273,7 +1272,6 @@ SUBDIR+=	inetdxtra
 SUBDIR+=	info2man
 SUBDIR+=	infraarcana
 SUBDIR+=	interbase-docs
-SUBDIR+=	interchange
 #SUBDIR+=	io			# not a package, same as jabberd bellow
 SUBDIR+=	io-base
 SUBDIR+=	io-blowfish
@@ -4175,13 +4173,8 @@ ${.CURDIR}/INDEX: ${.CURDIR}/PKGDB
 	${GREP} -v '||||||||||$$' ${.CURDIR}/INDEX > ${.CURDIR}/INDEX.tmp && \
 		${MV} ${.CURDIR}/INDEX.tmp ${.CURDIR}/INDEX
 
-limited_list: .PHONY
-	${RM} -f ${.CURDIR}/limited_list
-	(for X in ${SUBDIR}; do ${ECHO} wip/$$X; done) > ${.CURDIR}/limited_list.tmp
-	${MV} ${.CURDIR}/limited_list.tmp ${.CURDIR}/limited_list
 
-.if exists(../mk/misc/category.mk)
 .include "../mk/misc/category.mk"
-.else
-.include "../mk/bsd.pkg.subdir.mk"
+.if make(limited_list)
+.include "../wip/mk/pbulk.mk"
 .endif
