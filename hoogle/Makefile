@@ -9,7 +9,7 @@ COMMENT=	Haskell API Search
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-QuickCheck/buildlink3.mk"
+.include "../../devel/hs-QuickCheck/buildlink3.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"

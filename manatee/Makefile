@@ -38,7 +38,7 @@ pre-configure:
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../www/apache/buildlink3.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

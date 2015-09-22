@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-storablevector+=	hs-storablevector>=0.2.7
 BUILDLINK_ABI_DEPENDS.hs-storablevector+=	hs-storablevector>=0.2.7.2
 BUILDLINK_PKGSRCDIR.hs-storablevector?=	../../wip/hs-storablevector
 
-.include "../../wip/hs-QuickCheck/buildlink3.mk"
+.include "../../devel/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"

@@ -9,5 +9,5 @@ COMMENT=	Unicode alternatives for common functions and operators
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
+.include "../../devel/hs-base-unicode-symbols/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

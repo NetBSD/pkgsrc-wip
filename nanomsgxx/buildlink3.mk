@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nanomsgxx
 NANOMSGXX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nanomsgxx+=	nanomsgxx>=0.1
-BUILDLINK_PKGSRCDIR.nanomsgxx?=	../../devel/nanomsgxx
+BUILDLINK_PKGSRCDIR.nanomsgxx?=	../../wip/nanomsgxx
 .endif	# NANOMSGXX_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nanomsgxx

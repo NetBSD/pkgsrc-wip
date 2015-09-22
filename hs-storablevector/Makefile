@@ -9,7 +9,7 @@ COMMENT=	Fast, packed, strict storable arrays
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-QuickCheck/buildlink3.mk"
+.include "../../devel/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"

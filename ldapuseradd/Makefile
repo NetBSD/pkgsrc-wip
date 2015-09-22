@@ -23,5 +23,5 @@ INSTALLATION_DIRS=      sbin lib/ldapuseradd ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 .include "../../mk/compiler.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../databases/mysql56-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

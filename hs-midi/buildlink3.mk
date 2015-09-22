@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-midi?=	../../wip/hs-midi
 .include "../../wip/hs-explicit-exception/buildlink3.mk"
 .include "../../wip/hs-monoid-transformer/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
-.include "../../wip/hs-QuickCheck/buildlink3.mk"
+.include "../../devel/hs-QuickCheck/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_MIDI_BUILDLINK3_MK

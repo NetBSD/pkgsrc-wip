@@ -57,6 +57,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/reference/syslog-ng.html/*.html ${DOCDIR}
 
 
-.include "../../wip/eventlog/buildlink3.mk"
+.include "../../sysutils/eventlog/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -23,5 +23,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/pam-pop3
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pam-pop3
 
-.include "../../security/PAM/buildlink3.mk"
+# gone from pkgsrc .include "../../security/PAM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
