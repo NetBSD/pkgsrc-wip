@@ -6,47 +6,12 @@
    See http://svnweb.freebsd.org/ports/head/emulators/virtualbox-ose/
  - Thus there should be so many things to adjust from FreeBSD to pkgsrc
 
- - Now you need to adjust src/VBox/Runtime/VBox/log-vbox.cpp first, say,
-   patches/patch-src_VBox_Runtime_VBox_log-vbox_cpp
-
  - Current build status (errors are):
 
-(1) before patch to src/VBox/Runtime/VBox/log-vbox.cpp 
-------------------------------------------------------
-kBuild: Compiling RuntimeBldProg - /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp:420:5: error: #error needs porting.
- #   error needs porting.
-     ^
-kmk: *** [/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/RuntimeBldProg/VBox/log-vbox.o] Error 1
+/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/generic/RTFileReadAllByHandleEx-generic.cpp:101: undefined reference to `RTFileSeek'
+ld: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm: hidden symbol `rtThreadNativeDestroy' isn't defined
+ld: final link failed: Bad value
+kmk: *** [/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm] Error 1
 The failing command:
-@c++ -c -O2 -g -pipe -pedantic -Wshadow -Wshadow -Wall -Wextra -Wno-missing-field-initializers -Wno-unused -Wno-trigraphs -fdiagnostics-show-option -Wno-unused-parameter -Wno-long-long -Wno-long-long -Wno-delete-non-virtual-dtor -Wno-variadic-macros -O2 -fno-omit-frame-pointer -fno-strict-aliasing -m64 -I/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/include -I/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/libs/liblzf-3.4 -I/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/libs/kStuff/kStuff/include -I/usr/local/include -I/usr/pkg/include/libxml2 -I/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/include -I/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release -DVBOX -DVBOX_OSE -DVBOX_WITH_64_BITS_GUESTS -DVBOX_WITH_DEBUGGER -DRT_OS_NETBSD -DRT_ARCH_AMD64 -D__AMD64__ -DVBOX_WITH_HARDENING -D_REENTRANT -DIN_RING3 -DLOG_DISABLED -DIN_RT_R3 -DIN_RT_R3 -DLDR_WITH_NATIVE -DLDR_WITH_ELF32 -DLDR_WITH_PE -DRT_WITH_VBOX -DRT_NO_GIP -DRT_WITHOUT_NOCRT_WRAPPERS -DIPRT_WITH_OPENSSL -DLDR_WITH_KLDR -DRT_WITH_ICONV_CACHE -DIPRT_WITHOUT_LDR_VERIFY -DRT_NO_GIP -Wp,-MD,/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/RuntimeBldProg/VBox/log-vbox.o.dep -Wp,-MT,/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/RuntimeBldProg/VBox/log-vbox.o -Wp,-MP -o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/RuntimeBldProg/VBox/log-vbox.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp
+@c++                  -m64   -o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmdiff.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmrw.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmstream.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmsubversion.o   -L/usr/local/lib   /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/lib/RuntimeBldProg.a   /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/lib/VBox-kStuffStaticBldProg.a   /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/lib/RuntimeBldProg.a   -lpthread
 *** Error code 2
-
-Stop.
-make[1]: stopped in /usr/pkgsrc/wip/virtualbox-ose
-*** Error code 1
-
-Stop.
-make: stopped in /usr/pkgsrc/wip/virtualbox-ose
-h97@makoto 17:51:24/150922(..wip/virtualbox-ose)% 
-
-(2) after easy patch to src/VBox/Runtime/VBox/log-vbox.cpp:
-
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp: In function 'RTLOGGER* RTLogDefaultInit()':
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp:386:21: error: 'CTL_KERN' was not declared in this scope
-         aiName[0] = CTL_KERN;
-                     ^
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp:387:21: error: 'KERN_PROC' was not declared in this scope
-         aiName[1] = KERN_PROC;
-                     ^
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp:388:21: error: 'KERN_PROC_ARGS' was not declared in this scope
-         aiName[2] = KERN_PROC_ARGS;     /* Introduced in FreeBSD 4.0 */
-                     ^
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp:389:28: error: 'getpid' was not declared in this scope
-         aiName[3] = getpid();
-                            ^
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/VBox/log-vbox.cpp:391:80: error: 'sysctl' was not declared in this scope
-         int rcBSD = sysctl(aiName, RT_ELEMENTS(aiName), NULL, &cchArgs, NULL, 0);
-                                                                                ^
-kmk: *** [/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/RuntimeBldProg/VBox/log-vbox.o] Error 1
-The failing command:
