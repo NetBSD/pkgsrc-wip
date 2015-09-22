@@ -25,11 +25,10 @@ BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 BUILD_DEPENDS+=	kBuild-[0-9]*:../../wip/kBuild-svn
 
 USE_TOOLS+=	gtar pkg-config gmake
-#MAKE_ENV+=	PATH_KBUILD=${WRKDIR}${WRKSRC}/kBuild
 
-KMK_CONFIG=	`cat ${WRKSRC}/LocalConfig.kmk`
 WRKSRC=		${WRKDIR}/VirtualBox-${DISTVERSION}
-ONLY_FOR_ARCHS= i386 amd64
+ONLY_FOR_PLATFORM+= *-*-i386
+ONLY_FOR_PLATFORM+= *-*-x86_64
 
 CONFIGURE_ARGS=	# empty
 CONFIGURE_ARGS+= --disable-java --passive-mesa
@@ -83,6 +82,7 @@ do-build:
 .include	"../../graphics/png/buildlink3.mk"
 .include	"../../textproc/libxslt/buildlink3.mk"
 .include	"../../devel/SDL/buildlink3.mk"
+.include	"../../devel/glib2/buildlink3.mk"
 .include	"../../x11/libXext/buildlink3.mk"
 .include	"../../x11/qt4-libs/buildlink3.mk"
 .include	"../../lang/python/pyversion.mk"
