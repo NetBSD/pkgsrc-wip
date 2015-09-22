@@ -3015,6 +3015,7 @@ SUBDIR+=	py-notify-dev
 SUBDIR+=	py-nptdms
 SUBDIR+=	py-ntch
 SUBDIR+=	py-nuitka
+SUBDIR+=	py-numberjack
 SUBDIR+=	py-numdifftools
 SUBDIR+=	py-numericalunits
 SUBDIR+=	py-nupic
