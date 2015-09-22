@@ -10,9 +10,9 @@ PKGNAME=	lldb-0.0.0
 CATEGORIES=	lang
 
 GIT_REPOSITORIES=	llvm lldb clang
-GIT_REPO.llvm=		git@github.com:llvm-mirror/llvm.git
-GIT_REPO.clang=		git@github.com:llvm-mirror/clang.git
-GIT_REPO.lldb=		git@github.com:llvm-mirror/lldb.git
+GIT_REPO.llvm=		git://github.com/llvm-mirror/llvm.git
+GIT_REPO.clang=		git://github.com/llvm-mirror/clang.git
+GIT_REPO.lldb=		git://github.com/llvm-mirror/lldb.git
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
