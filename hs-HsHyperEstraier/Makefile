@@ -12,7 +12,7 @@ LICENSE=	public-domain
 CONFIGURE_ARGS=
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
+.include "../../devel/hs-base-unicode-symbols/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

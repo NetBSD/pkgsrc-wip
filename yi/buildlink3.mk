@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.yi?=	../../wip/yi
 .include "../../wip/hs-data-accessor-monads-fd/buildlink3.mk"
 .include "../../wip/hs-data-accessor-template/buildlink3.mk"
 .include "../../wip/hs-derive/buildlink3.mk"
-.include "../../wip/hs-dlist/buildlink3.mk"
+.include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../wip/hs-dyre/buildlink3.mk"
 .include "../../wip/hs-fingertree/buildlink3.mk"
 .include "../../devel/hs-ghc-paths/buildlink3.mk"

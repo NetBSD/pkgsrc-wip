@@ -10,7 +10,7 @@ COMMENT=	Tools to build the Gtk2Hs suite of User Interface libraries
 LICENSE=	gnu-gpl-v2
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/alex/buildlink3.mk"
+.include "../../devel/alex/buildlink3.mk"
 .include "../../devel/happy/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -45,6 +45,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../databases/mysql56-client/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

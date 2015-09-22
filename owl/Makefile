@@ -20,5 +20,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/intro.txt ${PREFIX}/share/doc/owl/
 
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../chat/zephyr/buildlink3.mk"
+# gone from pkgsrc .include "../../chat/zephyr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

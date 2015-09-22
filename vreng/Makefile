@@ -31,7 +31,7 @@ CONFIGURE_ENV+=		PERLPATH=${LOCALBASE}/bin/perl
 
 #mpeg
 #java
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../databases/mysql56-client/buildlink3.mk"
 #BUILDLINK_LDFLAGS.mysql-client?=        -Wl,-R${LOCALBASE}/lib/mysql
 LDFLAGS.SunOS+=		-R${LOCALBASE}/lib/mysql
 LIBS.SunOS+=		-R${LOCALBASE}/lib/mysql

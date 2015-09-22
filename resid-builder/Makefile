@@ -29,5 +29,5 @@ pre-extract:
 pre-configure:
 	cd ${WRKDIR}/${RESID} && ./configure && make
 
-.include "../../wip/libsidplay2/buildlink3.mk"
+.include "../../audio/libsidplay2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

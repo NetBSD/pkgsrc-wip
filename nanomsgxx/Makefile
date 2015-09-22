@@ -35,5 +35,5 @@ do-install:
 	cd ${WRKSRC} && env DESTDIR=${DESTDIR} ${MAKE_ENV} ./waf install
 
 .include "../../lang/python/application.mk"
-.include "../../devel/nanomsg/buildlink3.mk"
+.include "../../wip/nanomsg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

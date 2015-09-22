@@ -72,7 +72,7 @@ pre-configure:
 .include "../../misc/attica/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../misc/marble/buildlink3.mk"
-.include "../../misc/nepomuk-core/buildlink3.mk"
+#nonexistent .include "../../misc/nepomuk-core/buildlink3.mk"
 .include "../../print/okular/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"

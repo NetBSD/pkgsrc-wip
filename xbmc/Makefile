@@ -81,7 +81,7 @@ pre-configure:
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
-.include "../../net/samba35/buildlink3.mk"
+.include "../../net/samba/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

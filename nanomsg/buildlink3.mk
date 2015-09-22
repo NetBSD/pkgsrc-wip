@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	nanomsg
 NANOMSG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nanomsg+=	nanomsg>=0.4beta
-BUILDLINK_PKGSRCDIR.nanomsg?=	../../devel/nanomsg
+BUILDLINK_PKGSRCDIR.nanomsg?=	../../wip/nanomsg
 .endif	# NANOMSG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nanomsg

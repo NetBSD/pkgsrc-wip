@@ -29,7 +29,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_gfx/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../databases/mysql56-client/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"

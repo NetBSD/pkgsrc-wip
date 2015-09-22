@@ -16,7 +16,7 @@ USE_CMAKE=	yes
 post-install:
 	${INSTALL} ${WRKSRC}/include/emokit/* ${DESTDIR}${PREFIX}/include/emokit
 
-.include "../../wip/libhidapi/buildlink3.mk"
+.include "../../comms/libhidapi/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../security/libmcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

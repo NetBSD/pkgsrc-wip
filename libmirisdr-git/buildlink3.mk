@@ -7,7 +7,7 @@ LIBMIRISDR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmirisdr+=	libmirisdr>=0.1
 BUILDLINK_ABI_DEPENDS.libmirisdr+=	libmirisdr>=0.1
-BUILDLINK_PKGSRCDIR.libmirisdr?=	../../wip/libmirisdr
+BUILDLINK_PKGSRCDIR.libmirisdr?=	../../wip/libmirisdr-git
 
 .endif # LIBMIRISDR_BUILDLINK3_MK
 

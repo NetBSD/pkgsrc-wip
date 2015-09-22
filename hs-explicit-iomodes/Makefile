@@ -9,6 +9,6 @@ COMMENT=	File handles with explicit IOModes
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
+.include "../../devel/hs-base-unicode-symbols/buildlink3.mk"
 .include "../../devel/hs-tagged/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
