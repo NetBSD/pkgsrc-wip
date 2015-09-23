@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/27 18:28:46 ryo-on Exp $
-man/man8/bwping.8
-man/man8/bwping6.8
-sbin/bwping
-sbin/bwping6
