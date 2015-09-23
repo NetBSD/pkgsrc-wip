@@ -23,5 +23,5 @@ CONFIGURE_ARGS+=	--enable-lua
 PKGCONFIG_OVERRIDE+=	kyototycoon.pc.in
 
 .include "../../lang/lua/buildlink3.mk"
-.include "../../wip/kyotocabinet/buildlink3.mk"
+.include "../../databases/kyotocabinet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

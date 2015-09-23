@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.suitesparse?=	../../wip/suitesparse
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-.include "../../wip/metis/buildlink3.mk"
+.include "../../math/metis/buildlink3.mk"
 .endif	# SUITESPARSE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-suitesparse
