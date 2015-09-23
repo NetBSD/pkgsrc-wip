@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/19 12:51:31 fhajny Exp $
-bin/stdlogctl
-include/liblogging/stdlog.h
-lib/liblogging-stdlog.la
-lib/pkgconfig/liblogging-stdlog.pc
-man/man1/stdlogctl.1
-man/man3/stdlog.3
