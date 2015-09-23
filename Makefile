@@ -150,7 +150,6 @@ SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
 SUBDIR+=	arxlibertatis
 SUBDIR+=	ascii2binary
-SUBDIR+=	asio
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
 SUBDIR+=	aten
