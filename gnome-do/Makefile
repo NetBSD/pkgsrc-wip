@@ -38,6 +38,6 @@ PKGCONFIG_OVERRIDE+=	Do.Interface.Linux.AnimationBase/do.interface.linux.animati
 .include "../../x11/gnome-desktop-sharp/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
-.include "../../wip/gnome-keyring-sharp/buildlink3.mk"
+.include "../../security/gnome-keyring-sharp/buildlink3.mk"
 .include "../../wip/notify-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

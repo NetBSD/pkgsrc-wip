@@ -28,5 +28,5 @@ PKGCONFIG_OVERRIDE+=	champlain.pc.in
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../wip/libmemphis02/buildlink3.mk"
+.include "../../geography/libmemphis02/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

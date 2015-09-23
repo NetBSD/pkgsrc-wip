@@ -9,7 +9,7 @@ COMMENT=	Helpers for querying .cabal files or hackageDB's 00-index.tar
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/ghc/buildlink3.mk"
+.include "../../lang/ghc7/buildlink3.mk"
 .include "../../wip/hs-MissingH/buildlink3.mk"
 .include "../../wip/hs-derive/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"

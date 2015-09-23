@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.libchamplain012?=	../../wip/libchamplain012
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
-.include "../../wip/libmemphis02/buildlink3.mk"
+.include "../../geography/libmemphis02/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .endif	# LIBCHAMPLAIN012_BUILDLINK3_MK
 

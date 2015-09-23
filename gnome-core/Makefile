@@ -87,7 +87,7 @@ DEPENDS+=	gupnp>=0.20.14:../../net/gupnp
 DEPENDS+=	gupnp-igd>=0.2.4:../../net/gupnp-igd
 DEPENDS+=	gvfs>=1.24.1:../../sysutils/gvfs
 DEPENDS+=	json-glib>=1.0.4:../../textproc/json-glib
-DEPENDS+=	libchamplain>=0.12.10:../../wip/libchamplain012
+DEPENDS+=	libchamplain>=0.12.10:../../geography/libchamplain012
 DEPENDS+=	libcroco>=0.6.8:../../textproc/libcroco
 DEPENDS+=	libgdata>=0.17.1:../../net/libgdata
 DEPENDS+=	libgee>=0.18.0:../../devel/libgee
