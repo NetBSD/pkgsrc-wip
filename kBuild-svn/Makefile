@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2014/08/22 09:24:56 thomasklausner Exp $
 
 DISTNAME=		kBuild
-PKGNAME=		kBuild-0.1.5
+PKGNAME=		kBuild-0.1.9998
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.netlabs.org/pub/kbuild/
 

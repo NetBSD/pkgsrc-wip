@@ -2,29 +2,20 @@ $NetBSD: patch-src_kmk_Makefile.kmk,v 1.2 2015/09/05 08:50:10 makoto Exp $
 
 Add NetBSD case.
 
---- src/kmk/Makefile.kmk.orig	2015-09-05 17:43:02.000000000 +0900
-+++ src/kmk/Makefile.kmk	2015-09-05 17:46:10.000000000 +0900
-@@ -57,6 +57,7 @@ TEMPLATE_BIN-KMK_INCS = $(kmk_0_OUTDIR) 
- TEMPLATE_BIN-KMK_INCS.darwin = glob
- TEMPLATE_BIN-KMK_INCS.dragonfly = glob
- TEMPLATE_BIN-KMK_INCS.freebsd = glob
-+TEMPLATE_BIN-KMK_INCS.netbsd = glob
- TEMPLATE_BIN-KMK_INCS.haiku = glob
- TEMPLATE_BIN-KMK_INCS.openbsd = glob
- TEMPLATE_BIN-KMK_INCS.solaris = glob
-@@ -102,6 +103,11 @@ kmkmissing_SOURCES.freebsd = \
- 	glob/glob.c \
+--- src/kmk/Makefile.kmk.orig	2015-09-23 16:23:55.000000000 +0900
++++ src/kmk/Makefile.kmk	2015-09-23 16:26:33.000000000 +0900
+@@ -107,6 +107,10 @@ kmkmissing_SOURCES.dragonfly = \
+ kmkmissing_SOURCES.freebsd = \
  	glob/fnmatch.c
  
 +kmkmissing_SOURCES.netbsd = \
-+	glob/glob.c \
 +	glob/fnmatch.c \
-+    strtofflags.c
++	strtofflags.c
 +
  kmkmissing_SOURCES.haiku = \
  	kmkbuiltin/haikufakes.c \
- 	glob/glob.c \
-@@ -238,6 +244,9 @@ kmk_SOURCES = \
+ 	glob/fnmatch.c
+@@ -245,6 +248,9 @@ kmk_SOURCES = \
  	kbuild-object.c
  
  kmk_DEFS.freebsd.x86 = CONFIG_WITHOUT_THREADS
