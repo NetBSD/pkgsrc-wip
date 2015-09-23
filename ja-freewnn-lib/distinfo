@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/08/07 08:13:32 makoto Exp $
-
-SHA1 (FreeWnn-1.1.1-a022.tar.gz) = 659ab9db35e7a92189671ea6be17f138c24913d3
-RMD160 (FreeWnn-1.1.1-a022.tar.gz) = ae8373cb1522de9170bab01a185287c325368749
-Size (FreeWnn-1.1.1-a022.tar.gz) = 3702026 bytes
-SHA1 (patch-makerule.mk.in-2) = 3c27d57081ac5937bb280c1b8cdaf12e489d2384
