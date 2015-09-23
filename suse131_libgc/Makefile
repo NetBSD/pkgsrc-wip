@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 RPMPKGS+=	libgc1-7.2d-2.1.2.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Linux compatibility package for libcurl
+COMMENT=	Linux compatibility package for Boehm-Demers-Weiser g/c libraries
 
 EMUL_MODULES.linux=	base
 
