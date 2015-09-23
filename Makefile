@@ -55,7 +55,6 @@ SUBDIR+=	SDL-intro-jp
 SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
 SUBDIR+=	SDL2
-SUBDIR+=	SOPE
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	SuperCollider
