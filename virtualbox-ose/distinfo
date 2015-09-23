@@ -3,7 +3,7 @@ $NetBSD$
 SHA1 (VirtualBox-4.3.30.tar.bz2) = 16976f2d520af78797f85404e38c3abb6084db09
 RMD160 (VirtualBox-4.3.30.tar.bz2) = bc43b45cc7eeecc2fde922d197cde3a1e6cede14
 Size (VirtualBox-4.3.30.tar.bz2) = 97428942 bytes
-SHA1 (patch-Config.kmk) = 9a3e0e7ccf45aecca2651c60d39eb78da734dead
+SHA1 (patch-Config.kmk) = c857913e482673cf48f47bb02fa0a8ea939e1aa9
 SHA1 (patch-configure) = 949f32c43fdd44dbfdd60312b7a088b2bb25af4a
 SHA1 (patch-include-VBox-com-array.h) = 3df9650bd11f2e21bdcb40d2b68d28121c3e01ea
 SHA1 (patch-include-VBox-vmm-cpumctx.h) = de663f58a60b79ba071457ffb001ff56580aa2ea
@@ -55,6 +55,7 @@ SHA1 (patch-src-VBox-Runtime-common-misc-uri.cpp) = efac47610a942e196b8bb5cadec0
 SHA1 (patch-src-VBox-Runtime-r0drv-freebsd-memobj-r0drv-freebsd.c) = 7622528f6988110cfe2887f9d22a502b2839a556
 SHA1 (patch-src-VBox-Runtime-r0drv-freebsd-sleepqueue-r0drv-freebsd.h) = 46f398e36198533a49799ce23b9c073a7a366861
 SHA1 (patch-src-VBox-Runtime-r3-freebsd-RTSystemQueryTotalRam-freebsd.cpp) = 2b6bc12c6d9a768ed6a3e1206ef032fad468cff2
+SHA1 (patch-src-VBox-Runtime-r3-posix-thread-posix.cpp) = 10697de9e932f07ffb6fcfb7a933b2243efcf3a7
 SHA1 (patch-src-VBox-Runtime-r3-posix-utf8-posix.cpp) = c14f53cbfd5b52c441a901b92375a7a52026cfb6
 SHA1 (patch-src-recompiler-Sun-testmath.c) = 89c5f18ff91b21da7e6096ef27421a05897bd76d
 SHA1 (patch-src_VBox_Installer_darwin_VirtualBox_postflight) = 7ca0133e7027a96779fa27cb0f525ed72d00e7c2
