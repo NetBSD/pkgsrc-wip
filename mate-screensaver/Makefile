@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFLICTS+=	gnome-screensaver-[0-9]*
 
-DEPENDS+=	consolekit-[0-9]*:../sysutils/consolekit
+DEPENDS+=	consolekit-[0-9]*:../../sysutils/consolekit
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
