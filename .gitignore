@@ -2,3 +2,7 @@
 */work
 # OBJHOSTNAME=yes use-case
 */work.*
+
+# Temporary files
+*~
+\#*\#
