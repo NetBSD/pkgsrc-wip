@@ -22,8 +22,6 @@
 .if !defined(_PKG_MK_GIT_PACKAGE_MK)
 _PKG_MK_GIT_PACKAGE_MK=	# defined
 
-NOT_FOR_BULK_PLATFORM+=	*-*-*	# not eligible for bulk building
-
 BUILD_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
 
 #
