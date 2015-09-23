@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:46 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	sleekxmpp-1.1.11
+DISTNAME=	sleekxmpp-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	chat  python
+CATEGORIES=	chat net python
 MASTER_SITES=	https://pypi.python.org/packages/source/s/sleekxmpp/
 
 MAINTAINER=	kamelderouiche@yahoo.com
@@ -10,10 +10,7 @@ HOMEPAGE=	http://github.com/fritzy/SleekXMPP
 COMMENT=	SleekXMPP is an elegant Python library for XMPP
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-dns>=1.11.1:../../net/py-dns
-DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.7:../../security/py-asn1
-
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testall.py
