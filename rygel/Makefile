@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-tracker-plugin
 .include "../../net/gupnp/buildlink3.mk"
 .include "../../net/gupnp-av/buildlink3.mk"
 .include "../../net/gupnp-dlna/buildlink3.mk"
-.include "../../net/gupnp-vala/buildlink3.mk"
+#gone from pkgsrc? .include "../../net/gupnp-vala/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
