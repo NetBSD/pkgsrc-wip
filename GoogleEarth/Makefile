@@ -25,7 +25,7 @@ EMUL_MODULES.linux=	fontconfig glx gstreamer gtk2 lsb qt4 webp xslt
 
 ONLY_FOR_PLATFORM=	NetBSD-[0-9]*-x86_64 Linux-[0-9]*-x86_64
 
-GE_VERSION=		7.1.2.204
+GE_VERSION=		7.1.4.1529
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 EXTRACT_CMD=		ar x "$$extract_file"
