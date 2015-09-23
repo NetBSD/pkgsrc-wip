@@ -19,7 +19,7 @@ $NetBSD$
 +#
 +
 +PATH="/usr/bin:/bin:/usr/sbin:/sbin"
-+CONFIG="@PREIFX@/etc/vbox/vbox.cfg"
++CONFIG="@PREFIX@/etc/vbox/vbox.cfg"
 +
 +test -r "${CONFIG}" &&
 +    . "${CONFIG}"
