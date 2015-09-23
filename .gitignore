@@ -1,1 +1,4 @@
+# pkgsrc's work dir
 */work
+# OBJHOSTNAME=yes use-case
+*/work.*
