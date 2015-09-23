@@ -84,6 +84,8 @@
 .if !defined(_PKG_MK_CVS_PACKAGE_MK)
 _PKG_MK_CVS_PACKAGE_MK=	# defined
 
+NOT_FOR_BULK_PLATFORM+=	*-*-*	# not eligible for bulk building
+
 #
 # defaults for user-visible input variables
 #

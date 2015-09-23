@@ -78,6 +78,8 @@
 .if !defined(_PKG_MK_SVN_PACKAGE_MK)
 _PKG_MK_SVN_PACKAGE_MK=	# defined
 
+NOT_FOR_BULK_PLATFORM+=	*-*-*	# not eligible for bulk building
+
 BUILD_DEPENDS+=		subversion-base>=1.0:../../devel/subversion-base
 
 #
