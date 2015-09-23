@@ -563,7 +563,6 @@ SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound
 SUBDIR+=	ecb
 SUBDIR+=	eciadsl-usermode
-SUBDIR+=	ecl
 SUBDIR+=	eclipse
 SUBDIR+=	ecore
 SUBDIR+=	edb
