@@ -59,6 +59,7 @@ SHA1 (patch-src-VBox-Runtime-r3-freebsd-RTSystemQueryTotalRam-freebsd.cpp) = 2b6
 SHA1 (patch-src-VBox-Runtime-r3-posix-thread-posix.cpp) = 10697de9e932f07ffb6fcfb7a933b2243efcf3a7
 SHA1 (patch-src-VBox-Runtime-r3-posix-utf8-posix.cpp) = c14f53cbfd5b52c441a901b92375a7a52026cfb6
 SHA1 (patch-src-recompiler-Sun-testmath.c) = 89c5f18ff91b21da7e6096ef27421a05897bd76d
+SHA1 (patch-src_VBox_HostDrivers_VBoxNetFlt_Makefile.kmk) = 90a16d2c1098bb46b1059bfd5c977054f6c7ab1b
 SHA1 (patch-src_VBox_Installer_darwin_VirtualBox_postflight) = 7ca0133e7027a96779fa27cb0f525ed72d00e7c2
 SHA1 (patch-src_VBox_Installer_darwin_VirtualBox_preflight) = e4a020048a70095679f3e6716b242563e982608e
 SHA1 (patch-src_VBox_Runtime_VBox_log-vbox_cpp) = 836ffb311768cec7eb8ab6a08381a746e2b082ec
