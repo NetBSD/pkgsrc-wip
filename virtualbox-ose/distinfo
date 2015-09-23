@@ -3,7 +3,7 @@ $NetBSD$
 SHA1 (VirtualBox-4.3.30.tar.bz2) = 16976f2d520af78797f85404e38c3abb6084db09
 RMD160 (VirtualBox-4.3.30.tar.bz2) = bc43b45cc7eeecc2fde922d197cde3a1e6cede14
 Size (VirtualBox-4.3.30.tar.bz2) = 97428942 bytes
-SHA1 (patch-Config.kmk) = a46cc014c23f2bd80ca2c3819b47b4bc548f622d
+SHA1 (patch-Config.kmk) = c304e6bb8f50ee769a37667cb82b835eff5a4088
 SHA1 (patch-configure) = 949f32c43fdd44dbfdd60312b7a088b2bb25af4a
 SHA1 (patch-include-VBox-com-array.h) = 3df9650bd11f2e21bdcb40d2b68d28121c3e01ea
 SHA1 (patch-include-VBox-vmm-cpumctx.h) = de663f58a60b79ba071457ffb001ff56580aa2ea

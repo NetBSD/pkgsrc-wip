@@ -6,6 +6,15 @@
    See http://svnweb.freebsd.org/ports/head/emulators/virtualbox-ose/
  - Thus there should be so many things to adjust from FreeBSD to pkgsrc
 
+ - At beginning:
+===> Building for virtualbox-ose-4.3.30
+cd /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/ &&  /bin/sh -c . kBuild/env.sh && VBOX_LIBPATH_X11=/usr/X11R7/lib VBOX_FREEBSD_SRC=/usr/src/sys KBUILD_PA
+OBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/kBuild /usr/pkg/bin/kmk -j1
+Config.kmk:2463: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/DynamicConfig.kmk: No such file or directory
+Config.kmk:5749: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/revision.kmk: No such file or directory
+/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Main/Makefile.kmk:194: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/
+iwrap.kmk: No such file or directory
+
  - Current build status (errors are):
 
 /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/generic/RTFileReadAllByHandleEx-generic.cpp:101: undefined reference to `RTFileSeek'

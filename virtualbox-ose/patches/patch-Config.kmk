@@ -2,8 +2,8 @@ $NetBSD$
 
 Add FreeBSD and NetBSD
 
---- Config.kmk.orig	2014-07-16 16:59:27.000000000 -0400
-+++ Config.kmk	2014-07-16 17:12:48.000000000 -0400
+--- Config.kmk.orig	2015-07-10 23:27:42.000000000 +0900
++++ Config.kmk	2015-09-23 19:31:02.000000000 +0900
 @@ -339,7 +339,7 @@ VBOX_WITH_DOCS = 1
  # Include documentation in the package
  VBOX_WITH_DOCS_PACKING = 1
@@ -22,6 +22,17 @@ Add FreeBSD and NetBSD
   VBOX_WITH_VPX = 1
  endif
  # Enable shared folders
+@@ -750,8 +750,8 @@ ifdef VBOX_WITH_HARDENING
+   VBOX_PATH_APP_PRIVATE      = /opt/VirtualBox
+  else ifeq ($(KBUILD_TARGET),darwin)
+   VBOX_PATH_APP_PRIVATE      = /Applications/VirtualBox.app/Contents/MacOS
+- else ifeq ($(KBUILD_TARGET),freebsd)
+-  VBOX_PATH_APP_PRIVATE      = /usr/local/lib/virtualbox
++ else ifeq ($(KBUILD_TARGET),freebsd netbsd)
++  VBOX_PATH_APP_PRIVATE      = @PREFIX@/lib/virtualbox
+  else ifeq ($(KBUILD_TARGET),haiku)
+   VBOX_PATH_APP_PRIVATE      = /boot/apps/VirtualBox
+  endif
 @@ -899,10 +899,6 @@ ifeq ($(KBUILD_TARGET),darwin)
   VBOX_WITH_VBOXSDL=
  endif
@@ -62,20 +73,25 @@ Add FreeBSD and NetBSD
  	$(VBOX_GCC_fno-stack-protector) $(VBOX_GCC_R0_OPT) $(VBOX_GCC_R0_FP) \
  	-nostdinc
  TEMPLATE_VBOXR0DRV_CXXFLAGS.x86        = $(TEMPLATE_VBOXR0DRV_CFLAGS.x86)
-@@ -3760,12 +3756,8 @@ TEMPLATE_VBOXR3EXE_LDFLAGS            +=
+@@ -3760,13 +3756,11 @@ TEMPLATE_VBOXR3EXE_LDFLAGS            +=
  TEMPLATE_VBOXR3EXE_TOOL                = GXX3
  TEMPLATE_VBOXR3EXE_LIBS                = pthread
  TEMPLATE_VBOXR3EXE_INCS               += \
 -	/usr/include \
 -	/usr/X11R6/include \
- 	/usr/local/include
+-	/usr/local/include
++	@X11BASE@/include \
++	@PREFIX@/include
  TEMPLATE_VBOXR3EXE_LIBPATH            += \
 -	/usr/lib \
 -	/usr/X11R6/lib \
- 	/usr/local/lib
+-	/usr/local/lib
++	@X11BASE@/include \
++	@PREFIX@/lib
   else ifeq ($(KBUILD_TARGET),solaris)
  TEMPLATE_VBOXR3EXE_TOOL                = GXX3PLAIN
-@@ -4023,7 +4015,7 @@ ifeq ($(KBUILD_TARGET),win) # No CRT!
+ TEMPLATE_VBOXR3EXE_DEFS               += LIBICONV_PLUG _REENTRANT # Avoid the GNU libiconv, for now at least.
+@@ -4023,7 +4017,7 @@ ifeq ($(KBUILD_TARGET),win) # No CRT!
   TEMPLATE_VBOXR3HARDENEDEXE_LDFLAGS.win.amd64 = $(TEMPLATE_VBOXR3EXE_LDFLAGS.win.amd64) /entry:suplibHardenedWindowsMain
   TEMPLATE_VBOXR3HARDENEDEXE_LIBS.x86       = $(NOT_SUCH_VARIABLE)
   TEMPLATE_VBOXR3HARDENEDEXE_LIBS.amd64     = $(NOT_SUCH_VARIABLE)
@@ -84,50 +100,74 @@ Add FreeBSD and NetBSD
   TEMPLATE_VBOXR3HARDENEDEXE_LDFLAGS       = $(filter-out '$(VBOX_GCC_RPATH_OPT)%,$(TEMPLATE_VBOXR3EXE_LDFLAGS))
   TEMPLATE_VBOXR3HARDENEDEXE_LDFLAGS.linux = $(filter-out $(VBOX_GCC_ORIGIN_OPT),$(TEMPLATE_VBOXR3EXE_LDFLAGS.linux))
  endif
-@@ -4428,12 +4420,8 @@ TEMPLATE_VBOXMAINEXE_LIBS               
+@@ -4428,13 +4422,11 @@ TEMPLATE_VBOXMAINEXE_LIBS               
  TEMPLATE_VBOXMAINEXE_TOOL                = GXX3
  TEMPLATE_VBOXMAINEXE_LIBS                = $(LIB_RUNTIME)
  TEMPLATE_VBOXMAINEXE_INCS               += \
 -	/usr/include \
 -	/usr/X11R6/include \
- 	/usr/local/include
+-	/usr/local/include
++	@X11BASE@/include \
++	@PREFIX@/include
  TEMPLATE_VBOXMAINEXE_LIBPATH            += \
 -	/usr/lib \
 -	/usr/X11R6/lib \
- 	/usr/local/lib
+-	/usr/local/lib
++	@X11BASE@/include \
++	@PREFIX@/lib
  else ifeq ($(KBUILD_TARGET),solaris)
  TEMPLATE_VBOXMAINEXE_TOOL                = GXX3PLAIN
-@@ -4897,12 +4885,8 @@ ifdef VBOX_WITH_QTGUI
+ TEMPLATE_VBOXMAINEXE_DEFS               += _REENTRANT
+@@ -4897,13 +4889,11 @@ ifdef VBOX_WITH_QTGUI
  	$(VBOX_LIBPATH_X11)
     ifeq ($(KBUILD_TARGET),freebsd)
      TEMPLATE_VBOXQT4GUIEXE_INCS += \
 -	/usr/include \
 -	/usr/X11R6/include \
- 	/usr/local/include
+-	/usr/local/include
++    	@X11BASE@/include	\
++	@PREFIX@/include
      TEMPLATE_VBOXQT4GUIEXE_LIBPATH += \
 -	/usr/lib \
 -	/usr/X11R6/lib \
- 	/usr/local/lib
+-	/usr/local/lib
++    	@X11BASE@/include	\
++	@PREFIX@/lib
     endif
     ifeq ($(KBUILD_TARGET),solaris)
-@@ -5094,12 +5078,8 @@ TEMPLATE_VBoxBldProg_LIBPATH            
+     TEMPLATE_VBOXQT4GUIEXE_LDFLAGS.solaris = -Wl,-z,ignore # Same as VBOX_LD_as_needed.
+@@ -5094,13 +5084,11 @@ TEMPLATE_VBoxBldProg_LIBPATH            
  TEMPLATE_VBoxBldProg_TOOL                = GXX3
  TEMPLATE_VBoxBldProg_LIBS                = pthread
  TEMPLATE_VBoxBldProg_INCS               += \
 -	/usr/include \
 -	/usr/X11R6/include \
- 	/usr/local/include
+-	/usr/local/include
++    	@X11BASE@/include	\
++	@PREFIX@/include
  TEMPLATE_VBoxBldProg_LIBPATH            += \
 -	/usr/lib \
 -	/usr/X11R6/lib \
- 	/usr/local/lib
+-	/usr/local/lib
++    	@X11BASE@/include	\
++	@PREFIX@/lib
   else ifeq ($(KBUILD_HOST),solaris)
  TEMPLATE_VBoxBldProg_TOOL                = GXX3PLAIN
-@@ -5461,6 +5441,7 @@ TEMPLATE_VBOXCROGLR3HOSTDLL_LDFLAGS.darw
+ TEMPLATE_VBoxBldProg_LIBS                = rt
+@@ -5454,6 +5442,7 @@ TEMPLATE_VBOXCROGLR3HOSTDLL_DEFS.solaris
+ TEMPLATE_VBOXCROGLR3HOSTDLL_DEFS.darwin      = DARWIN=1 GL_GLEXT_LEGACY _GNU_SOURCE VBOX_WITH_COCOA_QT
+ TEMPLATE_VBOXCROGLR3HOSTDLL_LDFLAGS.darwin   = -framework AppKit
+ TEMPLATE_VBOXCROGLR3HOSTDLL_DEFS.freebsd     = FreeBSD=1 _GNU_SOURCE
++TEMPLATE_VBOXCROGLR3HOSTDLL_DEFS.netbsd	     = NetBSD=1 _GNU_SOURCE
+ TEMPLATE_VBOXCROGLR3HOSTDLL_INCS             = $(VBOX_PATH_CROGL_INCLUDE) $(VBOX_PATH_CROGL_GENFILES)
+ TEMPLATE_VBOXCROGLR3HOSTDLL_SDKS.darwin      = DARWIN-OPENGL
+ TEMPLATE_VBOXCROGLR3HOSTDLL_LDFLAGS.darwin  += \
+@@ -5461,6 +5450,8 @@ TEMPLATE_VBOXCROGLR3HOSTDLL_LDFLAGS.darw
  	-current_version $(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD) \
  	-compatibility_version $(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD)
  TEMPLATE_VBOXCROGLR3HOSTDLL_LDFLAGS.linux    = -Wl,--no-as-needed
 +TEMPLATE_VBOXCROGLR3HOSTDLL_LDFLAGS.freebsd  = -Wl,--no-as-needed
++TEMPLATE_VBOXCROGLR3HOSTDLL_LDFLAGS.netbsd   = -Wl,--no-as-needed
  TEMPLATE_VBOXCROGLR3HOSTDLL_BLDDIRS          = $(VBOX_PATH_CROGL_GENFILES)/
  
  #

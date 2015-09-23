@@ -42,6 +42,7 @@ SUBST_FILES.prefix+=	src/VBox/Additions/x11/Installer/98vboxadd-xclient
 SUBST_FILES.prefix+=	src/VBox/Installer/freebsd/VBox.sh
 SUBST_FILES.prefix+=	src/VBox/Additions/x11/Installer/vboxclient.desktop
 SUBST_FILES.prefix+=	kBuild/header.kmk
+SUBST_FILES.prefix+=	Config.kmk
 
 SUBST_MESSAGE.prefix+=	Configure prefix to ${PREFIX}
 SUBST_STAGE.prefix+=	pre-configure
