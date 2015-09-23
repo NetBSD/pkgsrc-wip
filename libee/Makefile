@@ -20,6 +20,6 @@ USE_TOOLS+=		bash pkg-config
 
 PKGCONFIG_OVERRIDE+=	libee.pc.in
 
-.include "../../wip/libestr/buildlink3.mk"
+.include "../../devel/libestr/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

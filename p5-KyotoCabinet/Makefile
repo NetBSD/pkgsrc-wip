@@ -15,6 +15,6 @@ REPLACE_PERL=	*.pl
 
 PERL5_PACKLIST=	auto/KyotoCabinet/.packlist
 
-.include "../../wip/kyotocabinet/buildlink3.mk"
+.include "../../databases/kyotocabinet/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -56,7 +56,7 @@ post-install:
 .	endif
 
 .include "../../wip/libee/buildlink3.mk"
-.include "../../wip/libestr/buildlink3.mk"
+.include "../../devel/libestr/buildlink3.mk"
 .include "../../sysutils/liblognorm/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

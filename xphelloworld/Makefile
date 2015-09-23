@@ -23,7 +23,7 @@ SUBST_STAGE.xaw=	post-patch
 BUILDLINK_DEPMETHOD.libXt=	build
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../wip/libXprintAppUtil/buildlink3.mk"
+.include "../../x11/libXprintAppUtil/buildlink3.mk"
 .include "../../x11/libXprintUtil/buildlink3.mk"
 BUILD_DEPENDS+=	xp-[0-9]*:../../x11/xp
 .include "../../x11/libX11/buildlink3.mk"

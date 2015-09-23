@@ -86,7 +86,7 @@ MMVERSION=	1.2
 
 .include "../../lang/python/application.mk"
 .include "../../wip/armadillo/buildlink3.mk"
-.include "../../wip/metis/buildlink3.mk"
+.include "../../devel/metis/buildlink3.mk"
 .include "../../wip/ufc/buildlink3.mk"
 .include "../../wip/py-ffc/buildlink3.mk"
 .include "../../wip/py-fiat/buildlink3.mk"

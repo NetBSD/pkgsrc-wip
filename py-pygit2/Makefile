@@ -19,7 +19,7 @@ PY_PATCHPLIST=	yes
 #do-install:
 #	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR} --prefix=${PREFIX}
 
-.include "../../wip/libgit2/buildlink3.mk"
+.include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 #.include "../../lang/python/application.mk"
 #.include "../../lang/python/extension.mk"

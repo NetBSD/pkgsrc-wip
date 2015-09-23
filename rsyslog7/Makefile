@@ -50,7 +50,7 @@ post-install:
 
 .include "../../wip/libee/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.libestr+=		libestr>=0.1.9
-.include "../../wip/libestr/buildlink3.mk"
+.include "../../devel/libestr/buildlink3.mk"
 .include "../../wip/liblogging/buildlink3.mk"
 .include "../../sysutils/liblognorm/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

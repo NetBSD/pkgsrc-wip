@@ -128,5 +128,5 @@ do-install:
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-.include "../../wip/metis/buildlink3.mk"
+.include "../../math/metis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

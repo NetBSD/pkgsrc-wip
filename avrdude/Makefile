@@ -42,7 +42,7 @@ BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .endif
 
 .include "../../devel/libftdi/buildlink3.mk"
-.include "../../wip/libhid/buildlink3.mk"
+.include "../../devel/libhid/buildlink3.mk"
 .include "../../wip/libftdi1/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
