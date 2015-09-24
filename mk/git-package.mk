@@ -30,11 +30,7 @@ BUILD_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
 
 DISTFILES?=		# empty
 .if empty(GIT_TAG)
-. if defined(CHECKOUT_DATE)
-PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
-. else
 PKGREVISION?=		${_GIT_PKGVERSION:S/.//g}
-. endif
 .endif
 
 #
@@ -85,12 +81,6 @@ _GIT_TAG.${repo}=	${GIT_TAG.${repo}}
 .  elif defined(GIT_TAG)
 _GIT_TAG_FLAG.${repo}=	-r${GIT_TAG}
 _GIT_TAG.${repo}=	${GIT_TAG}
-.  elif defined(CHECKOUT_DATE)
-_GIT_TAG_FLAG.${repo}=	-D${CHECKOUT_DATE:Q}
-_GIT_TAG.${repo}=	${CHECKOUT_DATE:Q}
-.  else
-_GIT_TAG_FLAG.${repo}=	'-D${_GIT_TODAY} 00:00 +0000'
-_GIT_TAG.${repo}=	${_GIT_TODAY:Q}
 .  endif
 
 # Cache support:
