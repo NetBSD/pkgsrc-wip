@@ -16,6 +16,11 @@ Config.kmk:5749: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out
 iwrap.kmk: No such file or directory
 
  - Current build status (errors are):
+   - VBoxRT.so dosen't seem to be generated
+     (FreeBSD has):
+        7237857 Sep 25 00:19 work/VirtualBox-4.3.30/out/freebsd.amd64/release/obj/VBoxRT/VBoxRT.so
+        7237857 Sep 25 00:19 work/VirtualBox-4.3.30/out/freebsd.amd64/release/bin/VBoxRT.so
+   - make ends with:
 
 /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/generic/RTFileReadAllByHandleEx-generic.cpp:101: undefined reference to `RTFileSeek'
 ld: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm: hidden symbol `rtThreadNativeDestroy' isn't defined
