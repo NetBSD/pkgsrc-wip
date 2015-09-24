@@ -6,3 +6,4 @@
 # Temporary files
 *~
 \#*\#
+*.orig
