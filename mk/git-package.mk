@@ -12,6 +12,9 @@
 #
 # It may define the following variables:
 #
+#	GIT_BRANCH.${id}
+#		The branch to check out.
+#
 #	GIT_TAG
 #		The tag to check out (default: HEAD).
 #
@@ -75,7 +78,10 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 GIT_MODULE.${repo}?=	${repo}
 
 # determine appropriate checkout date or tag
-.  if defined(GIT_TAG.${repo})
+.  if defined(GIT_BRANCH.${repo})
+_GIT_TAG_FLAG.${repo}=	-b${GIT_BRANCH.${repo}}
+_GIT_TAG.${repo}=	${GIT_BRANCH.${repo}}
+.  elif defined(GIT_TAG.${repo})
 _GIT_TAG_FLAG.${repo}=	-r${GIT_TAG.${repo}}
 _GIT_TAG.${repo}=	${GIT_TAG.${repo}}
 .  elif defined(GIT_TAG)
@@ -85,7 +91,18 @@ _GIT_TAG.${repo}=	${GIT_TAG}
 
 # Cache support:
 #   cache file name
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}}.tar.gz
+.  if defined(GIT_BRANCH.${repo})
+_GIT_DISTNAME_SHA1_CMD= \
+	${SETENV} ${_GIT_ENV}				\
+	${_GIT_CMD} ls-remote				\
+	${GIT_REPO.${repo}:Q}				\
+	| grep refs/heads/${GIT_BRANCH.${repo}:Q} 	\
+	| cut -f1
+_GIT_DISTNAME_SHA1=	${_GIT_DISTNAME_SHA1_CMD:sh}
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_DISTNAME_SHA1:Q}.tar.gz
+.  elif defined(GIT_TAG.${repo}) || defined(GIT_TAG)
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}:Q}.tar.gz
+.  endif
 
 #   command to extract cache file
 _GIT_EXTRACT_CACHED.${repo}=	\
