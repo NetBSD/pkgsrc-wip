@@ -12,7 +12,7 @@ COMMENT=	Entity / relation schema
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-logilab-common-[0-9]*:../devel/py-logilab-common
+DEPENDS+=	${PYPKGPREFIX}-logilab-common-[0-9]*:../../devel/py-logilab-common
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

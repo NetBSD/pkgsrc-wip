@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.2../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.3.5:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-rql>=0.33.0:../../wip/py-rql
-DEPENDS+=	${PYPKGPREFIX}-logilab-common-[0-9]*:../devel/py-logilab-common
+DEPENDS+=	${PYPKGPREFIX}-logilab-common-[0-9]*:../../devel/py-logilab-common
 
 USE_LANGUAGES=	# none
 
