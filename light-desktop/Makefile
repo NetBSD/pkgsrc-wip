@@ -13,7 +13,7 @@ COMMENT=	Fast and lightweight desktop
 META_PACKAGE=	yes
 
 DEPENDS=	dejavu-ttf>2.28:../../fonts/dejavu-ttf
-DEPENDS+=	elementary-icon-theme>=0:../../wip/elementary-icon-theme
+DEPENDS+=	elementary-icon-theme>=0:../../x11/elementary-icon-theme
 DEPENDS+=	foomatic-filters>=4.0.9:../../print/foomatic4-filters
 DEPENDS+=	freefont-ttf>0:../../fonts/freefont-ttf
 DEPENDS+=	ghostscript-agpl>=8.71:../../print/ghostscript-agpl

@@ -12,7 +12,7 @@ PERL5_REQD+=	5.6.0
 
 DEPENDS+=	p5-Bit-Vector-Minimal>=1.0:../../wip/p5-Bit-Vector-Minimal
 DEPENDS+=	p5-Class-Accessor>=0.18:../../devel/p5-Class-Accessor
-DEPENDS+=	p5-Class-Virtual>=0.03:../../wip/p5-Class-Virtual
+DEPENDS+=	p5-Class-Virtual>=0.03:../../devel/p5-Class-Virtual
 DEPENDS+=	p5-PathTools>=1.1:../../devel/p5-PathTools
 DEPENDS+=	p5-IO-stringy>=2.104:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Lingua-Stem>=0.81:../../wip/p5-Lingua-Stem

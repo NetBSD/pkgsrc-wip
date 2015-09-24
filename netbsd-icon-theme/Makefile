@@ -19,7 +19,7 @@ COMMENT=	Icon theme for NetBSD
 #        distributor-logo.svg
 
 # Note: the index.theme inherits elementary-mono-dark
-DEPENDS=	elementary-icon-theme>=0:../../wip/elementary-icon-theme
+DEPENDS=	elementary-icon-theme>=0:../../x11/elementary-icon-theme
 
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
