@@ -79,7 +79,7 @@ GIT_MODULE.${repo}?=	${repo}
 
 # determine appropriate checkout date or tag
 .  if defined(GIT_BRANCH.${repo})
-_GIT_TAG_FLAG.${repo}=	-b${GIT_BRANCH.${repo}}
+_GIT_TAG_FLAG.${repo}=	--branch ${GIT_BRANCH.${repo}}
 _GIT_TAG.${repo}=	${GIT_BRANCH.${repo}}
 .  elif defined(GIT_TAG.${repo})
 _GIT_TAG_FLAG.${repo}=	-r${GIT_TAG.${repo}}
@@ -100,7 +100,7 @@ _GIT_DISTNAME_SHA1_CMD= \
 	| cut -f1
 _GIT_DISTNAME_SHA1=	${_GIT_DISTNAME_SHA1_CMD:sh}
 _GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_DISTNAME_SHA1:Q}.tar.gz
-.  elif defined(GIT_TAG.${repo}) || defined(GIT_TAG)
+.  else
 _GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}:Q}.tar.gz
 .  endif
 
@@ -130,8 +130,10 @@ do-git-extract:
 	${SETENV} ${_GIT_ENV}						\
 		${_GIT_CMD} clone					\
 			${_GIT_FLAGS}		 			\
+			${_GIT_TAG_FLAG.${_repo_}}			\
 			${GIT_REPO.${_repo_}:Q};			\
 	${_GIT_CREATE_CACHE.${_repo_}}
+
 .endfor
 
 .endif
