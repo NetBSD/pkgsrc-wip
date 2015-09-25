@@ -10,7 +10,8 @@ HOMEPAGE=	http://mjambon.com/yojson.html
 COMMENT=	JSON parsing and printing library for OCaml
 LICENSE=	modified-bsd
 
-DEPENDS+=	ocaml-cppo-[0-9]*:../../wip/ocaml-cppo
+BROKEN=		depends on nonexistent ocaml-cppo package
+#DEPENDS+=	ocaml-cppo-[0-9]*:../../wip/ocaml-cppo
 
 USE_TOOLS+=	gmake
 BUILD_TARGET+=	all opt
