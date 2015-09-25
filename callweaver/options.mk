@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=        --enable-jabber --with-res_jabber
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../databases/mysql55-client/buildlink3.mk"
 PLIST.mysql=		yes
 CONFIGURE_ARGS+=	--enable-mysql --with-app_sql_mysql --with-cdr_mysql --with-res_config_mysql
 .endif
