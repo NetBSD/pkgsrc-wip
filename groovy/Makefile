@@ -4,7 +4,7 @@
 DISTNAME=	groovy-binary-2.0.6
 PKGNAME=	${DISTNAME:S/binary-//}
 CATEGORIES=	lang
-MASTER_SITES=	http://dist.groovy.codehaus.org/distributions/
+MASTER_SITES=	https://bintray.com/artifact/download/groovy/maven/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
