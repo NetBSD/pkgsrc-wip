@@ -63,7 +63,7 @@ USE_TOOLS+=		date pax
 
 _GIT_CMD=		git
 _GIT_ENV=		# empty
-_GIT_FLAGS=		--quiet --depth 1
+_GIT_FLAGS=		--quiet --depth 1 --recursive
 _GIT_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _GIT_TODAY=		${_GIT_TODAY_CMD:sh}
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
