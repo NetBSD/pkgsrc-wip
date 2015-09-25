@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-system-zziplib
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/ptexenc/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../wip/graphite2/buildlink3.mk"
+.include "../../graphics/graphite2/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .else
 CONFLICTS=      kpathsea-[0-9]*
