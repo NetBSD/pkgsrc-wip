@@ -27,7 +27,7 @@ DEPENDS+=	p5-Catalyst-Plugin-Session-State-Cookie>=0.02:../../www/p5-Catalyst-Pl
 DEPENDS+=	p5-Catalyst-Plugin-Session-State-URI>=0.02:../../wip/p5-Catalyst-Plugin-Session-State-URI
 DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.05:../../www/p5-Catalyst-Plugin-Authentication
 DEPENDS+=	p5-Catalyst-Plugin-Authentication-Store-Htpasswd>=0.02:../../wip/p5-Catalyst-Plugin-Authentication-Store-Htpasswd
-DEPENDS+=	p5-Catalyst-Plugin-Authorization-ACL>=0.06:../../wip/p5-Catalyst-Plugin-Authorization-ACL
+DEPENDS+=	p5-Catalyst-Plugin-Authorization-ACL>=0.06:../../www/p5-Catalyst-Plugin-Authorization-ACL
 DEPENDS+=	p5-Catalyst-Plugin-Authorization-Roles>=0.03:../../www/p5-Catalyst-Plugin-Authorization-Roles
 DEPENDS+=	p5-Catalyst-Plugin-I18N>=0.05:../../www/p5-Catalyst-Plugin-I18N
 DEPENDS+=	p5-XML-Parser>=0:../../textproc/p5-XML-Parser
