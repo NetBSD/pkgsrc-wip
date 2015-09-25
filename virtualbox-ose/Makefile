@@ -22,7 +22,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-BUILD_DEPENDS+=	kBuild-[0-9]*:../../wip/kBuild-svn
+BUILD_DEPENDS+=	kBuild>=0.1.999:../../wip/kBuild-svn
 
 USE_TOOLS+=	gtar pkg-config gmake
 
@@ -70,6 +70,8 @@ post-patch:
 	@${ECHO} 'VBOX_WITH_ADDITIONS =' >> ${WRKSRC}/LocalConfig.kmk
 	@${ECHO} 'VBOX_WITH_DRAG_AND_DROP = ${VBOX_WITH_QT4}' >> ${WRKSRC}/LocalConfig.kmk
 	@${ECHO} 'VBOX_WITH_X11_ADDITIONS =' >> ${WRKSRC}/LocalConfig.kmk
+	@${MKDIR} ${WRKSRC}/src/VBox/Installer/netbsd
+	@${CP}    ${FILESDIR}/src-VBox-Installer-netbsd-Makefile.kmk ${WRKSRC}/src/VBox/Installer/netbsd/Makefile.kmk
 
 do-build:
 	cd ${WRKSRC}/ && \
