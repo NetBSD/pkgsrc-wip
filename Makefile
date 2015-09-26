@@ -2001,6 +2001,7 @@ SUBDIR+=	openca
 SUBDIR+=	opencascade
 SUBDIR+=	opendchub
 SUBDIR+=	openerp-server
+SUBDIR+=	openh264
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openmpi163
