@@ -1,21 +1,15 @@
 # $NetBSD: Makefile,v 1.2 2015/03/10 23:33:26 leot1990 Exp $
 
-DISTNAME=	pdfcrack-0.14
+DISTNAME=	pdfcrack-0.15
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdfcrack/}
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://pdfcrack.sourceforge.net/
 COMMENT=	Password Recovery Tool for PDF-files
 LICENSE=	gnu-gpl-v2
 
 NO_CONFIGURE=	yes
-
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.makefile=	Fixing CFLAGS
-SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e '/CFLAGS/ s/-O3 -g//'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
