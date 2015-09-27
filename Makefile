@@ -4012,7 +4012,6 @@ SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
 SUBDIR+=	xtags
-SUBDIR+=	xtrace
 SUBDIR+=	xtraceroute
 SUBDIR+=	xtrackcad
 SUBDIR+=	xtreemfs-client
