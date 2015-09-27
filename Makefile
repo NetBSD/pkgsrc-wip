@@ -4,7 +4,6 @@ COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	389-ds-base
 SUBDIR+=	Bear
-SUBDIR+=	BitchX
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
 SUBDIR+=	FontManager
