@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2015/08/24 10:51:13 thomasklausner Exp $
 
-DISTNAME=	syncthing-gtk-0.7.4.1
+DISTNAME=	syncthing-gtk-0.7.5.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing-gtk
@@ -12,6 +12,7 @@ COMMENT=	GTK3 & python based GUI for Syncthing
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	syncthing>=0.11.0:../../wip/syncthing
+DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc # for killall
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
@@ -29,6 +30,8 @@ SUBST_FILES.paths+=	syncthing_gtk/wizard.py
 SUBST_SED.paths=	-e 's|/usr/share/syncthing-gtk|${PREFIX}/share/syncthing-gtk|'
 
 .include "../../devel/py-gobject3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.40.9nb2	# for introspection
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
