@@ -127,7 +127,8 @@ CLEANUP="${CLEANUP} ${ADDLIST}"
 	if [ "${SCM}" = "GIT" ]; then
 		find ${PACKAGE} -type f -print
 	else
-		find ${PACKAGE} \( -type f -o -type d \) -print
+		find ${PACKAGE} \( -type d \) -print | sed 's,$,/,'
+		find ${PACKAGE} \( -type f \) -print
 	fi
 ) | sed -e '/^\./d' -e '/\/CVS/d' -e '/[^-_,./a-zA-Z0-9]/d' | sort > ${ADDLIST}
 sed "s|^|${SCM}: will add: ${CATEGORY}/|" ${ADDLIST} >> ${MSG}
