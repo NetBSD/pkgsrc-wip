@@ -6,7 +6,7 @@ MASTER_SITES=	http://christian.amsuess.com/tools/arandr/files/
 
 MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://christian.amsuess.com/tools/arandr/
-COMMENT=	Designed to provide a simple visual front end for XRandR 1.2/1.3
+COMMENT=	Designed to provide a simple visual front end for XRandR
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.6:../../textproc/py-docutils
