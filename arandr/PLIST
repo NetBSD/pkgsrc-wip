@@ -31,7 +31,7 @@ ${PYSITELIB}/screenlayout/xrandr.py
 ${PYSITELIB}/screenlayout/xrandr.pyc
 ${PYSITELIB}/screenlayout/xrandr.pyo
 man/man1/arandr.1
-man/man1/unxrandr.1.gz
+man/man1/unxrandr.1
 share/applications/arandr.desktop
 share/locale/ar/LC_MESSAGES/arandr.mo
 share/locale/br/LC_MESSAGES/arandr.mo
