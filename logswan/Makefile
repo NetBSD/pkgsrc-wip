@@ -16,10 +16,10 @@ SUBST_STAGE.geoip=	post-patch
 SUBST_FILES.geoip+=	src/logswan.c
 SUBST_SED.geoip+=	-e 's,/usr/local,${PREFIX},g'
 
-DOCDIR=         share/doc/logswan
-EGDIR=          share/examples/logswan
+DOCDIR=		share/doc/logswan
+EGDIR=		share/examples/logswan
 
-CONF_FILES+=    ${EGDIR}/logswan.json ${PKG_SYSCONFDIR}/logswan.json
+CONF_FILES+=	${EGDIR}/logswan.json ${PKG_SYSCONFDIR}/logswan.json
 
 AUTO_MKDIRS=	yes
 
