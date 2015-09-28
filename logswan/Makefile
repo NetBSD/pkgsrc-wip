@@ -16,6 +16,20 @@ SUBST_STAGE.geoip=	post-patch
 SUBST_FILES.geoip+=	src/logswan.c
 SUBST_SED.geoip+=	-e 's,/usr/local,${PREFIX},g'
 
+DOCDIR=         share/doc/logswan
+EGDIR=          share/examples/logswan
+
+CONF_FILES+=    ${EGDIR}/logswan.json ${PKG_SYSCONFDIR}/logswan.json
+
+AUTO_MKDIRS=	yes
+
+post-install:
+.for f in AUTHORS README.md THANKS TODO
+	${RUN}${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
+.endfor
+	${RUN}${INSTALL_DATA} ${WRKSRC}/examples/logswan.json \
+	                      ${DESTDIR}${PREFIX}/${EGDIR}
+
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
