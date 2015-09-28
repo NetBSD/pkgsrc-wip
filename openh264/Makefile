@@ -15,6 +15,7 @@ LICENSE=	2-clause-bsd
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
+
 BUILD_TARGET=		all plugin
 PKGCONFIG_OVERRIDE+=	openh264.pc.in
 
@@ -35,6 +36,12 @@ SUBST_VARS.jsvars=	VERSION
 SUBST_VARS.jsvars+=	LASTUPDATE_TIMESTAMP
 
 LASTUPDATE_TIMESTAMP!=	date +%s
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+BUILD_DEPENDS+=		nasm>=2.07:../../devel/nasm
+.endif
 
 post-extract:
 	cp ${WRKSRC}/build/platform-freebsd.mk		\
