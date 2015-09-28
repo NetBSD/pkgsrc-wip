@@ -1,0 +1,10 @@
+Being overflooded with different logfile colo(u)?ri(s|z)ers,
+colortails, gccolors, colormakes and similar programs for making
+text files or outputs of different programs more readable by
+inserting ansi colour control codes into them, I decided to write
+my very own colouriser, eventually providing the functions of all
+those others.
+
+Two programs are provided: grc and grcat.  The main is grcat, which
+acts as a filter, i.e. taking standard input, colourising it and
+writing to standard output.
