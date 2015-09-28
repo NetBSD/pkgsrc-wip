@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	logswan-1.00
-CATEGORIES=	sysutils
+CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
