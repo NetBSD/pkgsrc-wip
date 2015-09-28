@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=fcambus/logswan/}
-COMMENT=	fast Web log analyzer using probabilistic data structures
+COMMENT=	Fast Web log analyzer using probabilistic data structures
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
