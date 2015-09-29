@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/09/01 20:45:04 devnexen Exp $
 
-DISTNAME=	haproxy-1.6-dev4
+DISTNAME=	haproxy-1.6-dev6
+PKGBASE=	haproxy-devel
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/1.6/src/devel/
 DISTFILES=	${DISTNAME}.tar.gz
