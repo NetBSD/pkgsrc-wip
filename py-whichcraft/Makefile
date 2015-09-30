@@ -1,12 +1,11 @@
 # $NetBSD$
 
+DISTNAME=	whichcraft-0.1.1
 GITHUB_PROJECT=	whichcraft
-DISTNAME=	0.1.1
-PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pydanny/}
 EXTRACT_SUFX=	.zip
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	gde@llew.me
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pydanny/whichcraft/}
@@ -17,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-wheel>=0.23.0:../../wip/py-wheel
 
 USE_LANGUAGES=	# none
 
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
+WRKSRC=	${WRKDIR}/${DISTNAME}
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/egg.mk"
