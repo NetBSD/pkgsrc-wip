@@ -15,7 +15,7 @@ LICENSE=			modified-bsd
 USE_LANGUAGES=	#none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-BUILD_DEPENDS+=			${PYPKGPREFIX}-chardet>=2.0.0:../../wip/py-chardet
+BUILD_DEPENDS+=			${PYPKGPREFIX}-chardet>=2.0.0:../../converters/py-chardet
 
 USE_LANGUAGES=			#none
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
