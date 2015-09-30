@@ -5,7 +5,7 @@ DISTNAME=		siege-3.1.2
 CATEGORIES=		www
 MASTER_SITES=		http://download.joedog.org/siege/
 
-MAINTAINER=		airhead@users.sf.net
+MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		http://www.joedog.org/JoeDog/Siege
 COMMENT=		Website/webserver regression testing utility
 LICENSE=		gnu-gpl-v2
