@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/09/18 13:44:08 outpaddling Exp $
+$NetBSD$
 
-SHA1 (cd-hit-v4.6.4-2015-0603.tar.gz) = e4315377a2cf04648abe6d6ac1f988029a603581
-RMD160 (cd-hit-v4.6.4-2015-0603.tar.gz) = ca0d407a12584495e9e6f2e3a89e968e04f9e7b7
-Size (cd-hit-v4.6.4-2015-0603.tar.gz) = 1150522 bytes
+SHA1 (cdhit-4.6.4.tar.gz) = 3606a8200e62ac60c9dd782a57bec426256e6fa8
+RMD160 (cdhit-4.6.4.tar.gz) = a94a29103393dded87000173d8eb4ec1a1e0614f
+Size (cdhit-4.6.4.tar.gz) = 1148426 bytes
