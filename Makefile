@@ -2589,6 +2589,7 @@ SUBDIR+=	py-cerridwen
 SUBDIR+=	py-cf-python
 SUBDIR+=	py-chaco
 SUBDIR+=	py-chaintipy
+SUBDIR+=	py-chardet
 SUBDIR+=	py-chaos
 SUBDIR+=	py-chealpy
 SUBDIR+=	py-chebpy
