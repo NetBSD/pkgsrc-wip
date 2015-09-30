@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/whichcraft-${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/whichcraft-${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/whichcraft-${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/whichcraft-${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/whichcraft-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/whichcraft.py
+${PYSITELIB}/whichcraft.pyc
+${PYSITELIB}/whichcraft.pyo
