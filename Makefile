@@ -3316,6 +3316,7 @@ SUBDIR+=	py-websocket
 SUBDIR+=	py-webtest
 SUBDIR+=	py-wheel
 SUBDIR+=	py-whisper
+SUBDIR+=	py-whichcraft
 SUBDIR+=	py-wifite
 SUBDIR+=	py-willow
 SUBDIR+=	py-workerpool
