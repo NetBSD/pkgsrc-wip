@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (cookiecutter/1.1.0.zip) = 0579bdf7d5257c70e14b4064842bc34f9caf1ef2
-RMD160 (cookiecutter/1.1.0.zip) = 071a42dfbb70b6868ccbec57dec67a2f172abf54
-Size (cookiecutter/1.1.0.zip) = 265851 bytes
+SHA1 (cookiecutter-1.1.0.zip) = 0579bdf7d5257c70e14b4064842bc34f9caf1ef2
+RMD160 (cookiecutter-1.1.0.zip) = 071a42dfbb70b6868ccbec57dec67a2f172abf54
+Size (cookiecutter-1.1.0.zip) = 265851 bytes
 SHA1 (patch-docs_Makefile) = c0451b26ea79a8ebd7ca0f733264806fea84857d
