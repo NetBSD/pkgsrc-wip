@@ -10,11 +10,7 @@ HOMEPAGE=	https://github.com/borntyping/python-colorlog
 COMMENT=	Log formatting with colors
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/colorlog-2.6.0
-
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

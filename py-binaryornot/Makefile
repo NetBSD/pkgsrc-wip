@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	#none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_ACCEPTED=	34 33 27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -32,7 +32,6 @@ DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.1.1:../../wip/py-whichcraft
 DEPENDS+=			${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
-PYTHON_VERSIONS_ACCEPTED=	35 34 33 27
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON+=		setup.py
 REPLACE_PYTHON+=		cookiecutter/*.py

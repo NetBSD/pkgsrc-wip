@@ -10,7 +10,6 @@ HOMEPAGE=	https://code.google.com/p/mrab-regex-hg
 COMMENT=	Alternative regular expression module, to replace re
 LICENSE=	python-software-foundation
 
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
 PYDISTUTILSPKG=	yes
 
 do-test:
