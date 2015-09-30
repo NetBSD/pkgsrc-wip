@@ -5,7 +5,7 @@ DISTNAME=	lire-2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.logreport.org/pub/
 
-MAINTAINER=	airhead@users.sf.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.logreport.org/lire.html
 COMMENT=	Log analyzing tool
 LICENSE=	gnu-gpl-v2

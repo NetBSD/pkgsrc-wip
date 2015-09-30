@@ -4,7 +4,7 @@ DISTNAME=		mmm-mode-0.4.8
 CATEGORIES=		textproc editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mmm-mode/}
 
-MAINTAINER=		airhead@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mmm-mode.sourceforge.net/
 COMMENT=		Multiple Major Modes for emacs
 

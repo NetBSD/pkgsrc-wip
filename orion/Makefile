@@ -5,7 +5,7 @@ DISTNAME=		orion-0.2
 CATEGORIES=		wm
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/orion-wm/
 
-MAINTAINER=		airhead@users.sf.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://orion.antidesktop.org/
 COMMENT=		Orion - a window manager for X written in Scheme
 

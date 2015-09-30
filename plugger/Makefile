@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://fredrik.hubbe.net/plugger/
 
-MAINTAINER=	airhead@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fredrik.hubbe.net/plugger.html
 COMMENT=	Plugin for multimedia types in Mozilla, Netscape and Opera
 

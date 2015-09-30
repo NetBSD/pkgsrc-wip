@@ -6,7 +6,7 @@ DISTNAME=		scx-0.2
 CATEGORIES=		devel x11
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/scx/
 
-MAINTAINER=		airhead@users.sf.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scsh.net/resources/graphics.html
 COMMENT=		Scx - a GUI library for scsh and Scheme 48
 
