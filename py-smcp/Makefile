@@ -14,5 +14,5 @@ PYDISTUTILSPKG= yes
 
 .include "../../lang/python/extension.mk"
 DEPENDS+=	${PYPKGPREFIX}-chompack>=2.0.0:../../wip/py-chompack
-DEPENDS+=	${PYPKGPREFIX}-cvxopt>=1.1.7:../../wip/py-cvxopt
+DEPENDS+=	${PYPKGPREFIX}-cvxpy-[0-9]*:../../wip/py-cvxpy
 .include "../../mk/bsd.pkg.mk"

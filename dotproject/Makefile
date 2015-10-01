@@ -20,7 +20,9 @@ DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.4.0:../../www/ap-php
 
 # extensions buildable with both PHP 5.x
 DEPENDS+=	${PHP_PKG_PREFIX}-apc>=4.4.0:../../www/php-apc
-DEPENDS+=	${PHP_PKG_PREFIX}-eaccelerator>=4.4.0:../../www/php-eaccelerator
+# eaccelerator is gone from pkgsrc
+BROKEN=		depends on missing www/php-eaccelerator package
+#DEPENDS+=	${PHP_PKG_PREFIX}-eaccelerator>=4.4.0:../../www/php-eaccelerator
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.4.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdflib>=4.4.0:../../print/php-pdflib

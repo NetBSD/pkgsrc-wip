@@ -15,11 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.4:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-cElementTree>=2.7.10:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-mando>=0.3.2:../../wip/py-mando
 
-WRKSRC=		${WRKDIR}/radon-1.2.2
-
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
 
 do-test:
 	${RUN} cd ${WRKSRC}/radon/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run.py

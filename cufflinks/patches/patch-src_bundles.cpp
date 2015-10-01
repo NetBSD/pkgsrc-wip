@@ -1,6 +1,6 @@
 $NetBSD: patch-src_bundles.cpp,v 1.1 2014/09/04 21:51:02 outpaddling Exp $
 
---- src/bundles.cpp.orig	2014-05-29 14:45:27.000000000 +0000
+--- src/bundles.cpp.orig	2014-03-24 21:54:47.000000000 +0000
 +++ src/bundles.cpp
 @@ -698,7 +698,7 @@ double BundleFactory::next_valid_alignme
          if (!_hit_fac->get_hit_from_buf(hit_buf, tmp, false))

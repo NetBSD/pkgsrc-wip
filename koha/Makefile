@@ -9,7 +9,7 @@ MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://koha.org/
 COMMENT=	Koha is an integrated library system
 
-DEPENDS+=	mysql-client>=5.0.45:../../databases/mysql5-client
+DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
 DEPENDS+=	apache>=2.0.61:../../www/apache2
 
 DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc

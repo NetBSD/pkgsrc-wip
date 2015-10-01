@@ -12,11 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
-
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_pystache.py
-
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -11,7 +11,7 @@ COMMENT=	Receiver function calculation in seismology
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-geographiclib>=1.31:../../wip/py-geographiclib
-DEPENDS+=	${PYPKGPREFIX}-obspy>=0.8.4:../../wip/py-obspy
+DEPENDS+=	${PYPKGPREFIX}-obspy>=0.8.4:../../geography/py-obspy
 DEPENDS+=	${PYPKGPREFIX}-toeplitz>=0.1.2:../../wip/py-toeplitz
 
 USE_LANGUAGES=	c fortran

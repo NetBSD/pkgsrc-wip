@@ -2,14 +2,14 @@
 
 BUILDLINK_TREE+=	libtermkey
 
-pkgbase := libtermkey
-.include "../../mk/pkg-build-options.mk"
-
 .if !defined(LIBTERMKEY_BUILDLINK3_MK)
 LIBTERMKEY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtermkey+=	libtermkey>=0.17
 BUILDLINK_PKGSRCDIR.libtermkey?=	../../wip/libtermkey
+
+pkgbase := libtermkey
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.termkey:Mncurses)
 .include "../../mk/termcap/termcap.buildlink3.mk"

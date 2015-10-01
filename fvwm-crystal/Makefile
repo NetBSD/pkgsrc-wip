@@ -30,7 +30,7 @@ SUBST_MESSAGE.bash=	Fixing harcoded bash path
 
 
 DEPENDS+=	fvwm>=2.5.14:../../wm/fvwm-devel
-DEPENDS+=	trayer>=1.0:../../wip/trayer
+DEPENDS+=	trayer>=1.0:../../wm/trayer
 DEPENDS+=	ImageMagick>=6.2.9.1:../../graphics/ImageMagick
 DEPENDS+=	bash>=3.0:../../shells/bash
 .include "options.mk"

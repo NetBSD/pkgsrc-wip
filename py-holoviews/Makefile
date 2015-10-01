@@ -14,8 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-param>=1.3.2:../../wip/py-param
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
-
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

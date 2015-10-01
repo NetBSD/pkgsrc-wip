@@ -12,6 +12,9 @@
 #
 # It may define the following variables:
 #
+#	GIT_BRANCH.${id}
+#		The branch to check out.
+#
 #	GIT_TAG
 #		The tag to check out (default: HEAD).
 #
@@ -30,11 +33,7 @@ BUILD_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
 
 DISTFILES?=		# empty
 .if empty(GIT_TAG)
-. if defined(CHECKOUT_DATE)
-PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
-. else
 PKGREVISION?=		${_GIT_PKGVERSION:S/.//g}
-. endif
 .endif
 
 #
@@ -64,7 +63,7 @@ USE_TOOLS+=		date pax
 
 _GIT_CMD=		git
 _GIT_ENV=		# empty
-_GIT_FLAGS=		--quiet --depth 1
+_GIT_FLAGS=		--quiet --depth 1 --recursive
 _GIT_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _GIT_TODAY=		${_GIT_TODAY_CMD:sh}
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
@@ -79,23 +78,31 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 GIT_MODULE.${repo}?=	${repo}
 
 # determine appropriate checkout date or tag
-.  if defined(GIT_TAG.${repo})
+.  if defined(GIT_BRANCH.${repo})
+_GIT_TAG_FLAG.${repo}=	--branch ${GIT_BRANCH.${repo}}
+_GIT_TAG.${repo}=	${GIT_BRANCH.${repo}}
+.  elif defined(GIT_TAG.${repo})
 _GIT_TAG_FLAG.${repo}=	-r${GIT_TAG.${repo}}
 _GIT_TAG.${repo}=	${GIT_TAG.${repo}}
 .  elif defined(GIT_TAG)
 _GIT_TAG_FLAG.${repo}=	-r${GIT_TAG}
 _GIT_TAG.${repo}=	${GIT_TAG}
-.  elif defined(CHECKOUT_DATE)
-_GIT_TAG_FLAG.${repo}=	-D${CHECKOUT_DATE:Q}
-_GIT_TAG.${repo}=	${CHECKOUT_DATE:Q}
-.  else
-_GIT_TAG_FLAG.${repo}=	'-D${_GIT_TODAY} 00:00 +0000'
-_GIT_TAG.${repo}=	${_GIT_TODAY:Q}
 .  endif
 
 # Cache support:
 #   cache file name
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}}.tar.gz
+.  if defined(GIT_BRANCH.${repo})
+_GIT_DISTNAME_SHA1_CMD= \
+	${SETENV} ${_GIT_ENV}				\
+	${_GIT_CMD} ls-remote				\
+	${GIT_REPO.${repo}:Q}				\
+	| grep refs/heads/${GIT_BRANCH.${repo}:Q} 	\
+	| cut -f1
+_GIT_DISTNAME_SHA1=	${_GIT_DISTNAME_SHA1_CMD:sh}
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_DISTNAME_SHA1:Q}.tar.gz
+.  else
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}:Q}.tar.gz
+.  endif
 
 #   command to extract cache file
 _GIT_EXTRACT_CACHED.${repo}=	\
@@ -123,8 +130,10 @@ do-git-extract:
 	${SETENV} ${_GIT_ENV}						\
 		${_GIT_CMD} clone					\
 			${_GIT_FLAGS}		 			\
+			${_GIT_TAG_FLAG.${_repo_}}			\
 			${GIT_REPO.${_repo_}:Q};			\
 	${_GIT_CREATE_CACHE.${_repo_}}
+
 .endfor
 
 .endif

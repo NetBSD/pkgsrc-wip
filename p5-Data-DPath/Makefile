@@ -19,7 +19,7 @@ DEPENDS+=	p5-List-MoreUtils>0:../../devel/p5-List-MoreUtils
 #DEPENDS+=	p5-Safe>0:../../wip/p5-Safe
 DEPENDS+=	p5-Class-XSAccessor>0:../../devel/p5-Class-XSAccessor
 DEPENDS+=	p5-Iterator-Util>0:../../wip/p5-Iterator-Util
-DEPENDS+=	p5-Data-Dumper>0:../../wip/p5-Data-Dumper
+DEPENDS+=	p5-Data-Dumper>0:../../devel/p5-Data-Dumper
 
 USE_LANGUAGES+=	# empty
 PERL5_PACKLIST= auto/Data/DPath/.packlist

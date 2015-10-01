@@ -5,7 +5,7 @@ DISTNAME=		sunterlib-0.7
 CATEGORIES=		devel
 MASTER_SITES=		http://savannah.nongnu.org/download/sunterlib/
 
-MAINTAINER=		airhead@users.sf.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scsh.net/resources/sunterlib.html
 COMMENT=		Scheme Unterground library, a collection of libraries for scsh
 

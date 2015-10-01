@@ -49,7 +49,7 @@ post-install:
 
 CONFIGURE_ARGS+=	--with-munge=$(BUILDLINK_PREFIX.munge:Q)
 
-.include "../../wip/munge/buildlink3.mk" # optional
+.include "../../security/munge/buildlink3.mk" # optional
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"

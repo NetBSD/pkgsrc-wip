@@ -11,7 +11,7 @@ COMMENT=		Provides bindings to GDAL and R
 R_PKGNAME=		rgdal
 R_PKGVER=		0.2-7
 
-DEPENDS+=		gdal>=1.1.9:../../wip/gdal
+DEPENDS+=		gdal-lib>=1.1.9:../../geography/gdal-lib
 DEPENDS+=		R-abind>=1.1.0:../../math/R-abind
 DEPENDS+=		R-pixmap>=0.4.1:../../math/R-pixmap
 

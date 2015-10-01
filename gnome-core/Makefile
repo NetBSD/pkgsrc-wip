@@ -55,7 +55,7 @@ DEPENDS+=	gnome-desktop>=3.16.2:../../x11/gnome-desktop3
 #DEPENDS+=	gnome-font-viewer>=3.16.2:../../devel/gnome-font-viewer
 DEPENDS+=	gnome-keyring>=3.16.0:../../security/gnome-keyring
 DEPENDS+=	gnome-menus>=3.13.3:../../sysutils/gnome-menus
-DEPENDS+=	gnome-online-accounts>=3.16.2:../../nih/gnome-online-accounts
+DEPENDS+=	gnome-online-accounts>=3.16.2:../../net/gnome-online-accounts
 #DEPENDS+=	gnome-online-miners>=3.14.3:../../devel/gnome-online-miners
 DEPENDS+=	gnome-packagekit>=3.16.0:../../pkgtools/gnome-packagekit
 #DEPENDS+=	gnome-screenshot>=3.16.2:../../devel/gnome-screenshot

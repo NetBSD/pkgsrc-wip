@@ -10,7 +10,8 @@ HOMEPAGE=	http://cvxopt.github.io/chompack/
 COMMENT=	Library for chordal matrix computations
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-cvxopt>=1.1.7:../../wip/py-cvxopt
+BROKEN=		depends on missing py-cvxopt package
+#DEPENDS+=	${PYPKGPREFIX}-cvxopt>=1.1.7:../../wip/py-cvxopt
 
 PYDISTUTILSPKG=	yes
 

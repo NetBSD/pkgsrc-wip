@@ -16,11 +16,25 @@ Config.kmk:5749: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out
 iwrap.kmk: No such file or directory
 
  - Current build status (errors are):
+   - VBoxRT.so dosen't seem to be generated
+     (FreeBSD has):
+        7237857 Sep 25 00:19 work/VirtualBox-4.3.30/out/freebsd.amd64/release/obj/VBoxRT/VBoxRT.so
+        7237857 Sep 25 00:19 work/VirtualBox-4.3.30/out/freebsd.amd64/release/bin/VBoxRT.so
+   - make ends with:
 
-/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/generic/RTFileReadAllByHandleEx-generic.cpp:101: undefined reference to `RTFileSeek'
-ld: /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm: hidden symbol `rtThreadNativeDestroy' isn't defined
-ld: final link failed: Bad value
-kmk: *** [/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm] Error 1
-The failing command:
-@c++                  -m64   -o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scm.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmdiff.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmrw.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmstream.o /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/scm/scmsubversion.o   -L/usr/local/lib   /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/lib/RuntimeBldProg.a   /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/lib/VBox-kStuffStaticBldProg.a   /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/lib/RuntimeBldProg.a   -lpthread
-*** Error code 2
+/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/r3/freebsd/rtProcInitExePath-freebsd.cpp:84:51: error: too few arguments to function 'int rtPathFromNative(const char**, const char*, const char*)'
+         int rc = rtPathFromNative(&pszTmp, pszPath);
+                                                   ^
+In file included from /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/r3/freebsd/rtProcInitExePath-freebsd.cpp:43:0:
+/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/include/internal/path.h:95:5: note: declared here
+ int rtPathFromNative(const char **ppszPath, const char *pszNativePath, const char *pszBasePath);
+     ^
+/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/r3/freebsd/rtProcInitExePath-freebsd.cpp:89:34: error: too few arguments to function 'void rtPathFreeIprt(const char*, const char*)'
+             rtPathFreeIprt(pszTmp);
+                                  ^
+In file included from /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/r3/freebsd/rtProcInitExePath-freebsd.cpp:43:0:
+/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/src/VBox/Runtime/include/internal/path.h:103:6: note: declared here
+ void rtPathFreeIprt(const char *pszPath, const char *pszNativePath);
+      ^
+kmk: *** [/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/RuntimeBldProg/r3/freebsd/rtProcInitExePath-freebsd.o] Error 1
+

@@ -10,7 +10,7 @@ HOMEPAGE=	https://pypi.python.org/packages/source/g/geopy/
 COMMENT=	Python Geocoding Toolbox
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.0:../../wip/py-requests-oauthlib
+DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.0:../../security/py-requests-oauthlib
 
 USE_LANGUAGES=	# none
 

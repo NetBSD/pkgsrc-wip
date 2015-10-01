@@ -12,7 +12,7 @@ COMMENT=	Easy database connections for Dancer applications
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
-DEPENDS+=	p5-Dancer>=1.175:../../wip/p5-Dancer
+DEPENDS+=	p5-Dancer>=1.175:../../www/p5-Dancer
 
 PERL5_PACKLIST=	auto/Dancer/Plugin/Database/.packlist
 USE_LANGUAGES=	# none

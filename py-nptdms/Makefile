@@ -10,11 +10,7 @@ HOMEPAGE=	https://github.com/adamreeve/npTDMS
 COMMENT=	NumPy based module for reading TDMS files produced by LabView
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/npTDMS-0.6.4
-
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
