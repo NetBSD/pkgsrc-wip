@@ -3194,6 +3194,7 @@ SUBDIR+=	py-smmap
 SUBDIR+=	py-smop
 SUBDIR+=	py-snappy
 SUBDIR+=	py-snmp
+SUBDIR+=	py-socksipy-branch	
 SUBDIR+=	py-sode
 SUBDIR+=	py-sofa
 SUBDIR+=	py-solpy
