@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
 INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
+NOT_FOR_PLATFORM+=	SunOS-*-*
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
