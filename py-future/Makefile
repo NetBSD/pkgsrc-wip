@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/future/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	gde@llew.me
 HOMEPAGE=	https://python-future.org/
 COMMENT=	Clean single-source support for Python 3 and 2
 LICENSE=	mit
