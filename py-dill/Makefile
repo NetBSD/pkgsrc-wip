@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.1 2014/06/09 21:12:57 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	dill-0.2.1
+DISTNAME=	dill-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/d/dill/
-EXTRACT_SUFX=	.zip#md5=b2354a5717da6228acae33cb13bc407b
+EXTRACT_SUFX=	.tgz#md5=8e7d1ec5a0f150b536da4d0623c3931b
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.cacr.caltech.edu/~mmckerns/dill.htm
 COMMENT=	Utility for serialization of python objects
 LICENSE=	2-clause-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/readline
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 30 31 32 33 34
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE= 32 33 34
 
-post-extract:
-	${MV} ${WRKSRC}/scripts/get_objgraph.py ${WRKSRC}/scripts/get_objgraph.py${PYVERSSUFFIX}
-	${MV} ${WRKSRC}/scripts/unpickle.py ${WRKSRC}/scripts/unpickle.py${PYVERSSUFFIX}
-
+	
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
