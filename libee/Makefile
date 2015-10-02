@@ -17,6 +17,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash pkg-config
+USE_MULTIARCH=		lib
 
 PKGCONFIG_OVERRIDE+=	libee.pc.in
 

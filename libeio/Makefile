@@ -14,6 +14,7 @@ LICENSE=	2-clause-bsd OR gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake
+USE_MULTIARCH=	lib
 
 WRKSRC=	${WRKDIR}/${PKGBASE}-${DISTNAME}
 

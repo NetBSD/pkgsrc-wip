@@ -14,6 +14,8 @@ COMMENT=	Perl interface to the JavaScript Engine
 
 MAKE_PARAMS+=	INC=${PREFIX}/include
 
+USE_MULTIARCH=	lib
+
 SUBST_CLASSES+=		fix-lib
 SUBST_STAGE.fix-lib=	pre-configure
 SUBST_MESSAGE.fix-lib=	Fixing library detection

@@ -15,6 +15,8 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake:run
 
+USE_MULTIARCH=		yes
+
 NO_CONFIGURE=		yes
 #BUILD_TARGET=		native
 #TEST_TARGET=		native.check
@@ -58,7 +60,7 @@ REPLACE_PYTHON=		tools/*.py tools/*/*.py tools/*/*/*.py
 REPLACE_PYTHON+=	third_party/icu/source/*/*.py
 REPLACE_PYTHON+=	third_party/icu/source/*/*/*.py
 
-INSTALLATION_DIRS+=	bin include lib
+INSTALLATION_DIRS+=	bin include lib${LIBARCHSUFFIX}
 
 INSTALL_INCLUDES=	v8-debug.h v8-platform.h v8-profiler.h
 INSTALL_INCLUDES+=	v8-testing.h v8-util.h v8.h
@@ -80,8 +82,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/out/native/libv8.dylib ${DESTDIR}${PREFIX}/lib/libv8.1.dylib
 	${LN} -sf libv8.1.dylib ${DESTDIR}${PREFIX}/lib/libv8.dylib
 .else
-	${INSTALL_LIB} ${WRKSRC}/out/native/lib.target/libv8.so ${DESTDIR}${PREFIX}/lib/libv8.so.1
-	${LN} -sf libv8.so.1 ${DESTDIR}${PREFIX}/lib/libv8.so
+	${INSTALL_LIB} ${WRKSRC}/out/native/lib.target/libv8.so ${DESTDIR}${PREFIX}/lib${LIBARCHSUFFIX}/libv8.so.1
+	${LN} -sf libv8.so.1 ${DESTDIR}${PREFIX}/lib${LIBARCHSUFFIX}/libv8.so
 .endif
 .for inc in ${INSTALL_INCLUDES}
 	${INSTALL_DATA} ${WRKSRC}/include/${inc} ${DESTDIR}${PREFIX}/include
