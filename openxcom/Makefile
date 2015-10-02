@@ -11,7 +11,7 @@ PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	https://github.com/SupSuper/OpenXcom/archive/
 
-MAINTAINER=	airhead@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openxcom.org/
 COMMENT=	Open-source clone of UFO: Enemy Unknown/X-Com: UFO Defense
 LICENSE=	gnu-gpl-v3

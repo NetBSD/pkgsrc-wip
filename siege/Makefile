@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.10 2015/02/11 16:37:58 ahp-nils Exp $
 #
 
-DISTNAME=		siege-3.0.9
+DISTNAME=		siege-3.1.2
 CATEGORIES=		www
 MASTER_SITES=		http://download.joedog.org/siege/
 
-MAINTAINER=		airhead@users.sf.net
+MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		http://www.joedog.org/JoeDog/Siege
 COMMENT=		Website/webserver regression testing utility
 LICENSE=		gnu-gpl-v2
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
 INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR}
+NOT_FOR_PLATFORM+=	SunOS-*-*
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
@@ -51,11 +52,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${DOCDIR}/ChangeLog
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}/INSTALL
 	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${DESTDIR}${DOCDIR}/KNOWNBUGS
-	${INSTALL_DATA} ${WRKSRC}/MACHINES ${DESTDIR}${DOCDIR}/MACHINES
+	#${INSTALL_DATA} ${WRKSRC}/MACHINES ${DESTDIR}${DOCDIR}/MACHINES
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${DOCDIR}/NEWS
 	${INSTALL_DATA} ${WRKSRC}/PLATFORM ${DESTDIR}${DOCDIR}/PLATFORM
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}/README.md
 	${INSTALL_DATA} ${WRKSRC}/README.https ${DESTDIR}${DOCDIR}/README.https
-	${INSTALL_DATA} ${WRKSRC}/README.solaris ${DESTDIR}${DOCDIR}/README.solaris
+	#${INSTALL_DATA} ${WRKSRC}/README.solaris ${DESTDIR}${DOCDIR}/README.solaris
 
 .include "../../mk/bsd.pkg.mk"

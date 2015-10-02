@@ -2,8 +2,8 @@
 man/man1/haproxy.1
 sbin/haproxy
 sbin/haproxy-systemd-wrapper
-share/doc/haproxy/architecture.txt
-share/doc/haproxy/configuration.txt
-share/doc/haproxy/haproxy-en.txt
-share/doc/haproxy/haproxy-fr.txt
-share/examples/haproxy/haproxy.cfg
+share/doc/haproxy-devel/architecture.txt
+share/doc/haproxy-devel/configuration.txt
+share/doc/haproxy-devel/haproxy-en.txt
+share/doc/haproxy-devel/haproxy-fr.txt
+share/examples/haproxy-devel/haproxy.cfg

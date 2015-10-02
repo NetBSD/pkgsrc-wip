@@ -19,7 +19,7 @@
 
 DISTNAME=	cufflinks-2.2.1
 CATEGORIES=	biology
-MASTER_SITES=	http://cufflinks.cbcb.umd.edu/downloads/
+MASTER_SITES=	http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/
 
 MAINTAINER=	jwbacon@tds.net
 

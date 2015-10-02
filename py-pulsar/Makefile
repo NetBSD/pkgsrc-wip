@@ -12,8 +12,5 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
-
-
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

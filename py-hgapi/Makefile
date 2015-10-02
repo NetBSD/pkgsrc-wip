@@ -14,8 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.6.5:../../converters/py-simplejson
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	34 33 27
-
 do-test:
 	${RUN} cd ${WRKSRC}/hgapi; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testhgapi.py
 

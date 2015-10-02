@@ -14,11 +14,7 @@ DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 DEPENDS+=       ${PYPKGPREFIX}-nibabel>=1.3.0:../../wip/py-nibabel
 DEPENDS+=       ${PYPKGPREFIX}-scikit-learn>=0.15.2:../../wip/py-scikit-learn
 
-WRKSRC=		${WRKDIR}/nilearn-0.1.4.post1
-
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

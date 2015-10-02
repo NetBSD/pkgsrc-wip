@@ -6,7 +6,7 @@ DISTNAME=		scsh-install-lib-1.2.0
 CATEGORIES=		devel
 MASTER_SITES=		http://lamp.epfl.ch/~schinz/scsh_packages/
 
-MAINTAINER=		airhead@users.sf.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lamp.epfl.ch/~schinz/scsh_packages/
 COMMENT=		SCSH installation library for third-party libraries
 
