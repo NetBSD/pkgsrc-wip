@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/25 18:43:42 jihbed Exp $
+@comment $NetBSD$
 include/cuba.h
 lib/libcuba.a
 share/cuba.pdf
-share/doc/libcuba/cuba.pdf
