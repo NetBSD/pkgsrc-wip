@@ -9,3 +9,7 @@ SHA1 (patch-ac) = f4281f4f2dd35ded4f8ab38c52181da385263df4
 SHA1 (patch-ad) = 81748bf4839f69e98b05525e529e4e86769fecec
 SHA1 (patch-ae) = 1f2a8c8894ad51c2b5d84d08a4f33eaf6496f62f
 SHA1 (patch-af) = 0d611a641927dd07719fb4d874ce9daaf9126b7c
+SHA1 (patch-configure) = 5c8dd6d5e867a90869a62c04a30de88a20bf6ac7
+SHA1 (patch-gencat_gencat.c) = 50563fd665b5f8916ffdb51339d3fcd02e106772
+SHA1 (patch-src_man.c) = 7512d0e273448656bf917a6234c74a547456fb6f
+SHA1 (patch-src_man.conf.in) = beea07007f36fe2fe84bab78085dd514bd180e56

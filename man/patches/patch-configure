@@ -1,0 +1,36 @@
+$NetBSD$
+
+--- configure.orig	2006-05-01 17:56:14.000000000 +0000
++++ configure
+@@ -362,7 +362,7 @@ rm -f conftest
+ #   for i in /bin:/usr/bin:$PATH
+ # does not work everywhere.)
+ # Some people might prefer having $PATH first in PREPATH
+-PREPATH=/bin:/usr/bin:/usr/ucb:/usr/local/bin:$PATH
++PREPATH=@PREFIX@/bin:/bin:/usr/bin:/usr/ucb:/usr/local/bin:$PATH
+ IFS0="$IFS"
+ IFS=":$IFS"
+ for i in $PREPATH
+@@ -476,18 +476,18 @@ else
+   then
+     if test $Fnroff = "missing"
+     then
+-      nroff="nroff -Tlatin1 -mandoc"
++      nroff="nroff -mandoc"
+     else
+-      nroff="$Fnroff -Tlatin1 -mandoc"
++      nroff="$Fnroff -mandoc"
+     fi
+     troff="troff -mandoc"
+     echo "Warning: could not find groff"
+   else
+     if test $Fnroff = "missing"
+     then
+-      nroff="$Fgroff -Tlatin1 -mandoc"
++      nroff="$Fgroff -mandoc"
+     else
+-      nroff="$Fnroff -Tlatin1 -mandoc"
++      nroff="$Fnroff -mandoc"
+     fi
+     troff="$Fgroff -Tps -mandoc"
+     jnroff="$Fgroff -Tnippon -mandocj"

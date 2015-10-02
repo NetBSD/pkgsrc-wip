@@ -4,114 +4,11 @@ bin/man
 bin/man2dvi
 bin/man2html
 bin/whatis
-man/bg/man1/apropos.1
-man/bg/man1/man.1
-man/bg/man1/whatis.1
-man/bg/man5/man.conf.5
-man/bg/man8/makewhatis.8
-man/cs/man1/apropos.1
-man/cs/man1/man.1
-man/cs/man1/whatis.1
-man/cs/man5/man.conf.5
-man/da/man1/apropos.1
-man/da/man1/man.1
-man/da/man1/whatis.1
-man/da/man5/man.conf.5
-man/de/man1/apropos.1
-man/de/man1/man.1
-man/de/man1/whatis.1
-man/de/man5/man.conf.5
-man/el/man1/apropos.1
-man/el/man1/man.1
-man/el/man1/whatis.1
-man/el/man5/man.conf.5
-man/el/man8/makewhatis.8
-man/es/man1/apropos.1
-man/es/man1/man.1
-man/es/man1/whatis.1
-man/es/man5/man.conf.5
-man/es/man8/makewhatis.8
-man/fi/man1/apropos.1
-man/fi/man1/man.1
-man/fi/man1/whatis.1
-man/fi/man5/man.conf.5
-man/fr/man1/apropos.1
-man/fr/man1/man.1
-man/fr/man1/whatis.1
-man/fr/man5/man.conf.5
-man/fr/man8/makewhatis.8
-man/hr/man1/apropos.1
-man/hr/man1/man.1
-man/hr/man1/whatis.1
-man/hr/man5/man.conf.5
-man/it/man1/apropos.1
-man/it/man1/man.1
-man/it/man1/whatis.1
-man/it/man5/man.conf.5
-man/it/man8/makewhatis.8
-man/ja/man1/apropos.1
-man/ja/man1/man.1
-man/ja/man1/whatis.1
-man/ja/man5/man.conf.5
-man/ko/man1/apropos.1
-man/ko/man1/man.1
-man/ko/man1/whatis.1
-man/ko/man5/man.conf.5
 man/man1/apropos.1
 man/man1/man.1
 man/man1/man2html.1
 man/man1/whatis.1
 man/man5/man.conf.5
 man/man8/makewhatis.8
-man/nl/man1/apropos.1
-man/nl/man1/man.1
-man/nl/man1/whatis.1
-man/nl/man5/man.conf.5
-man/pl/man1/apropos.1
-man/pl/man1/man.1
-man/pl/man1/whatis.1
-man/pl/man5/man.conf.5
-man/pt/man1/apropos.1
-man/pt/man1/man.1
-man/pt/man1/whatis.1
-man/pt/man5/man.conf.5
-man/ro/man1/apropos.1
-man/ro/man1/man.1
-man/ro/man1/whatis.1
-man/ro/man5/man.conf.5
-man/ro/man8/makewhatis.8
-man/sl/man1/apropos.1
-man/sl/man1/man.1
-man/sl/man1/whatis.1
-man/sl/man5/man.conf.5
 sbin/makewhatis
 share/examples/man/man.conf
-share/locale/mess.bg.cat
-share/locale/mess.cs.cat
-share/locale/mess.da.cat
-share/locale/mess.de.cat
-share/locale/mess.el.cat
-share/locale/mess.en.cat
-share/locale/mess.es.cat
-share/locale/mess.fi.cat
-share/locale/mess.fr.cat
-share/locale/mess.hr.cat
-share/locale/mess.it.cat
-share/locale/mess.ja.cat
-share/locale/mess.ko.cat
-share/locale/mess.nl.cat
-share/locale/mess.pl.cat
-share/locale/mess.pt.cat
-share/locale/mess.ro.cat
-share/locale/mess.ru.cat
-share/locale/mess.sl.cat
-@exec ${MKDIR} %D/man/sl/man8
-@exec ${MKDIR} %D/man/pt/man8
-@exec ${MKDIR} %D/man/nl/man8
-@exec ${MKDIR} %D/man/ko/man8
-@exec ${MKDIR} %D/man/hr/man8
-@exec ${MKDIR} %D/man/fi/man8
-@exec ${MKDIR} %D/man/de/man8
-@exec ${MKDIR} %D/man/da/man8
-@exec ${MKDIR} %D/man/cs/man8
-@exec ${MKDIR} %D/man/bg/man8
