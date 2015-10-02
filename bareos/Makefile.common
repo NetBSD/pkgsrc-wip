@@ -1,5 +1,5 @@
-DISTNAME=	bareos-Release-14.2.5
-PKGNAME=	bareos-14.2.5
+DISTNAME=	bareos-Release-15.2.1
+PKGNAME=	bareos-15.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	-https://github.com/bareos/bareos/archive/Release/${DISTNAME:S/bareos-Release-//}.tar.gz
 EXTRACT_SUFX=	.tar.gz
@@ -17,9 +17,9 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-# For make_catalog_backup.pl.in.                                                                                                                                                                                                  
-USE_TOOLS+=             perl:run                                                                                                                                                                                                  
-                                                                                                                                                                                                                                  
+# For make_catalog_backup.pl.in.
+USE_TOOLS+=             perl:run
+
 BAREOS_GROUP?=          bareos
 BAREOS_DIR_USER?=       bareos-dir
 BAREOS_SD_USER?=        bareos-sd
@@ -28,7 +28,7 @@ PKG_GROUPS_VARS+=       BAREOS_GROUP
 PKG_USERS_VARS=         BAREOS_DIR_USER BAREOS_SD_USER
 
 #PKG_SYSCONFSUBDIR?=     bareos
-BAREOS_PIDDIR?=         ${VARBASE}/run/bareos
+BAREOS_PIDDIR?=         ${VARBASE}/run
 BAREOS_WORKINGDIR?=     ${VARBASE}/spool/bareos
 
 BUILD_DEFS+=            VARBASE BAREOS_PIDDIR BAREOS_WORKINGDIR
@@ -50,7 +50,7 @@ SUBST_FILES.egdir+=     src/wx-console/Makefile.in
 SUBST_FILES.egdir+=     src/tray-monitor/Makefile.in
 SUBST_SED.egdir=        -e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
 
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}/bareos
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=        --with-scriptdir=${PREFIX}/libexec/bareos
 CONFIGURE_ARGS+=        --with-sbin-perm=0755
 CONFIGURE_ARGS+=        --with-working-dir=${BAREOS_WORKINGDIR}
