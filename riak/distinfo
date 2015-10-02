@@ -21,5 +21,6 @@ SHA1 (patch-deps_cuttlefish_rebar.config) = 23a0b960b88277a9370eefe5a284b7aa8bd7
 SHA1 (patch-deps_eleveldb_c__src_build__deps.sh) = 8878a0e99d89f084b0cf8860743f4a39a996c47f
 SHA1 (patch-deps_eleveldb_c__src_eleveldb.cc) = 2e21a560c3f990ff9ac7dd604de00404644e7a5a
 SHA1 (patch-deps_node__package_priv_base_env.sh) = ee305e631180a50a1192a10e5dd4bf185c2e96c8
+SHA1 (patch-deps_node__package_priv_base_runner) = 0fa3cdbab932ba7033f56bb4260f56208ecb4741
 SHA1 (patch-deps_yokozuna_tools_grab-solr.sh) = d90115d3522238cd6a6774ff221fad009d17ebbb
-SHA1 (patch-rel__vars.config) = 1cde95447a50300bd10994d6eb6628914a8ac97b
+SHA1 (patch-rel__vars.config) = fe328bb4c6202ba7d36c092663622c56cbda1a7f

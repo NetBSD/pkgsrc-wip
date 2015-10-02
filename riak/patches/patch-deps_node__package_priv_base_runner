@@ -1,0 +1,60 @@
+$NetBSD$
+
+Warn against non-SMF usage, increase file descriptors.
+
+--- deps/node_package/priv/base/runner.orig	2014-10-14 17:01:01.000000000 +0000
++++ deps/node_package/priv/base/runner
+@@ -170,11 +170,22 @@ bootstrapd() {
+ }
+
+ do_start() {
++    if [ "${SMF_METHOD}" != "start" ]; then
++        echo "***"
++        echo "Warning: please use 'svcadm enable $SCRIPT' instead"
++        echo "***"
++    fi
++
+     # Make sure there is not already a node running
+     node_down_check
+
+-    # Warn the user if ulimit is too low
+-    check_ulimit
++    # Make sure we have access to enough file descriptors
++    ULIMIT_S=$(prctl -n process.max-file-descriptor -t basic -P $$ | awk '/max-file-descriptor/ { print $3 }')
++    ULIMIT_H=$(prctl -n process.max-file-descriptor -t priv -P $$ | awk '/max-file-descriptor/ { print $3 }')
++    if [ ${ULIMIT_S} -lt ${ULIMIT_H} ]; then
++        echo "Trying to raise the file descriptor limit to maximum allowed."
++        prctl -n process.max-file-descriptor -t basic -v ${ULIMIT_H} $$ || true
++    fi
+
+     # Make sure log directory exists
+     mkdir -p $RUNNER_LOG_DIR
+@@ -222,6 +233,12 @@ do_start() {
+ }
+
+ do_stop() {
++    if [ "${SMF_METHOD}" != "stop" ]; then
++        echo "***"
++        echo "Warning: please use 'svcadm disable $SCRIPT' instead"
++        echo "***"
++    fi
++
+     get_pid
+     ES=$?
+     if [ "$ES" -ne 0 ] || [ -z $PID ]; then
+@@ -324,8 +341,13 @@ case "$1" in
+             exit $ES
+         fi
+
+-        # Warn the user if ulimit -n is less than the defined threshold
+-        check_ulimit
++        # Make sure we have access to enough file descriptors
++        ULIMIT_S=$(prctl -n process.max-file-descriptor -t basic -P $$ | awk '/max-file-descriptor/ { print $3 }')
++        ULIMIT_H=$(prctl -n process.max-file-descriptor -t priv -P $$ | awk '/max-file-descriptor/ { print $3 }')
++        if [ ${ULIMIT_S} -lt ${ULIMIT_H} ]; then
++            echo "Trying to raise the file descriptor limit to maximum allowed."
++            prctl -n process.max-file-descriptor -t basic -v ${ULIMIT_H} $$ || true
++        fi
+
+         # Make sure log directory exists
+         mkdir -p $RUNNER_LOG_DIR
