@@ -12,6 +12,8 @@ COMMENT=	Peer-to-peer high availability cluster
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		flex yacc
 
+USE_GCC_RUNTIME=	yes
+
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILD_DEFS+=		VARBASE WACKAMOLE_PID_DIR
