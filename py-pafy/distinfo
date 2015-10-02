@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/02/14 10:58:25 jihbed Exp $
 
-SHA1 (Pafy-0.3.72.tar.gz) = 7c6960e6cb3a45f16523261c6a1850f59d738a8c
-RMD160 (Pafy-0.3.72.tar.gz) = ae09418fa53cb3efed2f3c8ec469b3b42bd90d8d
-Size (Pafy-0.3.72.tar.gz) = 21635 bytes
-SHA1 (patch-setup.py) = 978deae3dc3bc875cbc463fc0ca4fe701525c2ac
+SHA1 (pafy-0.3.74.tar.gz) = 7133f60c5a6ec447808d009790f9e2c73bf38076
+RMD160 (pafy-0.3.74.tar.gz) = 44b90355c0e518b5cf191c7a8bf236af232f6b61
+Size (pafy-0.3.74.tar.gz) = 22584 bytes
+SHA1 (patch-setup.py) = 4ef995164dcabd3d30190c51a3e26aac862ca8f1
