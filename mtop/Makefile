@@ -11,7 +11,7 @@ COMMENT=	Curses-based MySQL server monitor
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Curses>=0:../../devel/p5-Curses
-DEPENDS+=	p5-DBD-mysql>=0:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-DBD-{mysql,percona}*-[0-9]*:../../databases/p5-DBD-mysql
 
 PERL5_PACKLIST=	auto/mtop/.packlist
 USE_LANGUAGES=	# none

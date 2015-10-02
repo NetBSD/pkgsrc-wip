@@ -15,7 +15,7 @@ DEPENDS+=	apache>=2.2:../../www/apache22
 DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Date-Manip>=5.44:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Digest-MD5>=2.35:../../security/p5-Digest-MD5
-DEPENDS+=	p5-DBD-mysql>=3.0002:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-DBD-{mysql,percona}*-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-DBI>=1.56:../../databases/p5-DBI
 DEPENDS+=	p5-Event>=1.06:../../devel/p5-Event
 DEPENDS+=	p5-HTML-Template>=2.9:../../www/p5-HTML-Template

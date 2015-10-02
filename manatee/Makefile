@@ -12,7 +12,7 @@ COMMENT=		Web-based gene evaluation and genome annotation tool
 WRKSRC=			${WRKDIR}/manatee
 
 DEPENDS+=		p5-CGI>=2.91:../../www/p5-CGI
-DEPENDS+=		p5-DBD-mysql>=2.1017:../../databases/p5-DBD-mysql
+DEPENDS+=		p5-DBD-{mysql,percona}*-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=		p5-XML-Parser>=2.31:../../textproc/p5-XML-Parser
 DEPENDS+=		p5-XML-Simple>=2.07:../../textproc/p5-XML-Simple
 DEPENDS+=		p5-HTML-Template>=2.6:../../www/p5-HTML-Template

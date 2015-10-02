@@ -75,7 +75,7 @@ SA_SSLCERTS=		'$$LOCAL_RULES_DIR/certs'
 .if !empty(SPAMASSASSIN_USE_MYSQL:M[yY][eE][sS])
 .include "../../databases/p5-DBI/buildlink3.mk"
 DEPENDS+=		p5-DBI>=1.37:../../databases/p5-DBI
-DEPENDS+=		p5-DBD-mysql>=2.1017:../../databases/p5-DBD-mysql
+DEPENDS+=		p5-DBD-{mysql,percona}*-[0-9]*:../../databases/p5-DBD-mysql
 .endif
 
 .if !empty(SPAMASSASSIN_USE_RAZOR:M[yY][eE][sS])
