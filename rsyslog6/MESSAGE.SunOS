@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD$
+
+To use rsyslogd on Solaris, you'll need to stop the default syslogd first
+via SMF:
+
+    svcadm disable system/system-log
+
+===========================================================================

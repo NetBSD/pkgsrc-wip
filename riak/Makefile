@@ -60,6 +60,10 @@ PKG_SYSCONFSUBDIR=	riak
 CONF_FILES+=		share/examples/riak/riak.conf ${PKG_SYSCONFDIR}/riak.conf
 CONF_FILES+=		share/examples/riak/solr-log4j.properties ${PKG_SYSCONFDIR}/solr-log4j.properties
 
+SMF_USER=		${RIAK_USER}
+SMF_GROUP=		${RIAK_GROUP}
+SMF_HOME=		${RIAK_DATA}
+
 BUILD_TARGET=		rel
 
 SUBST_CLASSES+=		pkgsrc

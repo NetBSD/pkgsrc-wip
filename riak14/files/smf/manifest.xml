@@ -20,6 +20,9 @@
         <envvar name="HOME" value="@RIAK_DATA@" />
         <envvar name="LOGNAME" value="@RIAK_USER@" />
         <envvar name="PATH" value="/usr/bin:/bin:@PREFIX@/bin:@PREFIX@/sbin" />
+        <envvar name="LD_PRELOAD_32" value="/lib/libumem.so.1" />
+        <envvar name="LD_PRELOAD_64" value="/lib/64/libumem.so.1" />
+        <envvar name="UMEM_OPTIONS" value="allocator=best" />
       </method_environment>
     </method_context>
     <exec_method type="method" name="start" exec="@PREFIX@/sbin/riak start" timeout_seconds="60" />
