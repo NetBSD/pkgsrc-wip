@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2014/01/20 12:55:08 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	aipy-0.9.1
+DISTNAME=	aipy-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-CATEGORIES=	misc python
-MASTER_SITES=	http://pypi.python.org/packages/source/a/aipy/
+CATEGORIES=	math python
+MASTER_SITES=	https://pypi.python.org/packages/source/a/aipy/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://casper.berkeley.edu/astrobaki/index.php/AIPY
 COMMENT=	Astronomical Interferometry in Python
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-fits>=2.3.1:../../graphics/py-fits
+#DEPENDS+=	${PYPKGPREFIX}-fits>=3.2:../../graphics/py-fits
 
 USE_LANGUAGES=	c c++
 
