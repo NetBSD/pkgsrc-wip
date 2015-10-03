@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/04 21:41:46 jihbed Exp $
-bin/conda2.7
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD$
+bin/conda
 ${PYSITELIB}/conda/__init__.py
 ${PYSITELIB}/conda/__init__.pyc
 ${PYSITELIB}/conda/__init__.pyo
@@ -74,6 +69,9 @@ ${PYSITELIB}/conda/cli/main_package.pyo
 ${PYSITELIB}/conda/cli/main_remove.py
 ${PYSITELIB}/conda/cli/main_remove.pyc
 ${PYSITELIB}/conda/cli/main_remove.pyo
+${PYSITELIB}/conda/cli/main_run.py
+${PYSITELIB}/conda/cli/main_run.pyc
+${PYSITELIB}/conda/cli/main_run.pyo
 ${PYSITELIB}/conda/cli/main_search.py
 ${PYSITELIB}/conda/cli/main_search.pyc
 ${PYSITELIB}/conda/cli/main_search.pyo
@@ -98,6 +96,9 @@ ${PYSITELIB}/conda/connection.pyo
 ${PYSITELIB}/conda/console.py
 ${PYSITELIB}/conda/console.pyc
 ${PYSITELIB}/conda/console.pyo
+${PYSITELIB}/conda/exceptions.py
+${PYSITELIB}/conda/exceptions.pyc
+${PYSITELIB}/conda/exceptions.pyo
 ${PYSITELIB}/conda/fetch.py
 ${PYSITELIB}/conda/fetch.pyc
 ${PYSITELIB}/conda/fetch.pyo
@@ -107,6 +108,9 @@ ${PYSITELIB}/conda/history.pyo
 ${PYSITELIB}/conda/install.py
 ${PYSITELIB}/conda/install.pyc
 ${PYSITELIB}/conda/install.pyo
+${PYSITELIB}/conda/instructions.py
+${PYSITELIB}/conda/instructions.pyc
+${PYSITELIB}/conda/instructions.pyo
 ${PYSITELIB}/conda/lock.py
 ${PYSITELIB}/conda/lock.pyc
 ${PYSITELIB}/conda/lock.pyo
@@ -119,6 +123,9 @@ ${PYSITELIB}/conda/misc.pyo
 ${PYSITELIB}/conda/packup.py
 ${PYSITELIB}/conda/packup.pyc
 ${PYSITELIB}/conda/packup.pyo
+${PYSITELIB}/conda/pip.py
+${PYSITELIB}/conda/pip.pyc
+${PYSITELIB}/conda/pip.pyo
 ${PYSITELIB}/conda/plan.py
 ${PYSITELIB}/conda/plan.pyc
 ${PYSITELIB}/conda/plan.pyo
@@ -137,6 +144,12 @@ ${PYSITELIB}/conda/resolve.pyo
 ${PYSITELIB}/conda/share.py
 ${PYSITELIB}/conda/share.pyc
 ${PYSITELIB}/conda/share.pyo
+${PYSITELIB}/conda/signature.py
+${PYSITELIB}/conda/signature.pyc
+${PYSITELIB}/conda/signature.pyo
+${PYSITELIB}/conda/toposort.py
+${PYSITELIB}/conda/toposort.pyc
+${PYSITELIB}/conda/toposort.pyo
 ${PYSITELIB}/conda/utils.py
 ${PYSITELIB}/conda/utils.pyc
 ${PYSITELIB}/conda/utils.pyo

@@ -1,21 +1,27 @@
-# $NetBSD: Makefile,v 1.1 2014/10/04 21:41:46 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	conda-3.5.0
+DISTNAME=	conda-3.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel sysutils python
 MASTER_SITES=	https://pypi.python.org/packages/source/c/conda/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/conda/conda
 COMMENT=	Package management tool
 LICENSE=	modified-bsd
 
+DEPENDS+=    	${PYPKGPREFIX}-requests>=2.7.0:../../devel/py-requests
+DEPENDS+=    	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-conda-env>=2.4.2:../../wip/py-conda-env
+DEPENDS+=	${PYPKGPREFIX}-cosat>=0.6.1:../../wip/py-cosat
+
 USE_LANGUAGES=	# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYDISTUTILSPKG= yes
 
-post-extract:
-	${MV} ${WRKSRC}/bin/conda ${WRKSRC}/bin/conda${PYVERSSUFFIX}
+do-test:
+	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} runtests.sh
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

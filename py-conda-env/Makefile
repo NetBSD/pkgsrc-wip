@@ -1,0 +1,28 @@
+# $NetBSD$
+
+DISTNAME=	conda-env-2.4.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	sysutils devel python
+MASTER_SITES=	https://pypi.python.org/packages/source/c/conda-env/
+
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	https://github.com/conda/conda-env
+COMMENT=	Tools for interacting with conda environments
+LICENSE=	modified-bsd
+
+USE_TOOLS+=	bash
+USE_LANGUAGES=	# none
+
+PYDISTUTILSPKG=	yes
+PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
+
+REPLACE_BASH+=	bin/activate${PYVERSSUFFIX}  bin/deactivate${PYVERSSUFFIX}
+
+post-extract:
+	${MV} ${WRKSRC}/bin/activate ${WRKSRC}/bin/activate${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/conda-env ${WRKSRC}/bin/conda-env${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/deactivate ${WRKSRC}/bin/deactivate${PYVERSSUFFIX}
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
+.include "../../mk/bsd.pkg.mk"

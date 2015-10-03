@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/pycosat.so
+${PYSITELIB}/test_pycosat.py
+${PYSITELIB}/test_pycosat.pyc
+${PYSITELIB}/test_pycosat.pyo
