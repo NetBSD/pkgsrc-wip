@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+Don't use subroutine prototypes
+--- fgallery.orig	2014-09-05 16:33:54.000000000 +0200
++++ fgallery	2015-10-02 11:10:05.000000000 +0200
+@@ -86,7 +86,7 @@
+ }
+ 
+ 
+-sub any(&@)
++sub any
+ {
+   my ($fun, @seq) = @_;
+   return (List::Util::first { &$fun() } @seq)? 1: 0;

@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+Handle exiftran/exitautotran discovery better
+--- fgallery.orig       2014-09-05 16:33:54.000000000 +0200
++++ fgallery    2015-10-02 11:10:05.000000000 +0200
+@@ -326,16 +326,19 @@
+ }
+ 
+ my $exiftrancmd;
+-if($orient)
++while($orient)
+ {
+-  if(!system("exiftran -h >/dev/null 2>&1")) {
++  if(system("exiftran -h >/dev/null 2>&1")) {
+     $exiftrancmd = "exiftran -aip";
+-  } elsif(!system("exifautotran >/dev/null 2>&1")) {
++    last;
++  }
++  if(system("exifautotran >/dev/null 2>&1")) {
+     $exiftrancmd = "exifautotran";
+-  } else {
+-    fatal("cannot execute exiftran or exifautotran for lossless JPEG autorotation");
++    last;
+   }
+ }
++fatal("cannot execute exiftran or exifautotran for lossless JPEG autorotation")
++  if $orient && ! defined $exiftrancmd;
+ 
+ # list available files
+ my @files;
