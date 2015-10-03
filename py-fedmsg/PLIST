@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/20 16:43:35 jihbed Exp $
+@comment $NetBSD$
 bin/fedmsg-announce
 bin/fedmsg-collectd
 bin/fedmsg-config
@@ -15,6 +15,7 @@ ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fedmsg/__init__.py
@@ -86,6 +87,9 @@ ${PYSITELIB}/fedmsg/crypto/gpg.pyo
 ${PYSITELIB}/fedmsg/crypto/x509.py
 ${PYSITELIB}/fedmsg/crypto/x509.pyc
 ${PYSITELIB}/fedmsg/crypto/x509.pyo
+${PYSITELIB}/fedmsg/crypto/x509_ng.py
+${PYSITELIB}/fedmsg/crypto/x509_ng.pyc
+${PYSITELIB}/fedmsg/crypto/x509_ng.pyo
 ${PYSITELIB}/fedmsg/encoding/__init__.py
 ${PYSITELIB}/fedmsg/encoding/__init__.pyc
 ${PYSITELIB}/fedmsg/encoding/__init__.pyo
