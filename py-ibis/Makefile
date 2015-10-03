@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/08/10 23:20:59 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	ibis-1.3.2
+DISTNAME=	ibis-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://pypi.python.org/packages/source/i/ibis/
