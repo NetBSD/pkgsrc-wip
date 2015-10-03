@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/02/14 12:27:21 jihbed Exp $
 
-SHA1 (mps-youtube-0.2.2.tar.gz) = aaeeedb8bececfa534e484250c4a0c62f93f8896
-RMD160 (mps-youtube-0.2.2.tar.gz) = 80baf39073f98a5866c55842ccffa7de7456c3d6
-Size (mps-youtube-0.2.2.tar.gz) = 47130 bytes
+SHA1 (mps-youtube-0.2.5-2.tar.gz) = 9453245617efa6459b4f29a11ed55e6cf08954c8
+RMD160 (mps-youtube-0.2.5-2.tar.gz) = 686bf8c87db09d042b6bead353f593be52116b1c
+Size (mps-youtube-0.2.5-2.tar.gz) = 54835 bytes
