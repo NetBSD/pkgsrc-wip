@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+Path of fgallery/view code
+--- fgallery.orig	2015-10-03 21:35:52.000000000 +0200
++++ fgallery	2015-10-03 21:39:40.000000000 +0200
+@@ -20,7 +20,6 @@
+ use File::Basename qw{fileparse};
+ use File::Find qw{find};
+ use File::Path qw{make_path remove_tree};
+-use FindBin qw{$RealBin};
+ use Getopt::Long qw{:config bundling};
+ use IO::Handle;
+ use Image::ExifTool qw{ImageInfo};

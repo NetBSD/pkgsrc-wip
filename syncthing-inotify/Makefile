@@ -12,7 +12,7 @@ LICENSE=	mpl-2.0
 
 BUILD_DEPENDS+=	go-[0-9]*:../../lang/go
 
-DEPENDS+=	syncthing>=0.11.0:../../wip/syncthing
+DEPENDS+=	syncthing>=0.11.0:../../net/syncthing
 
 MAKE_ENV+=	GOPATH=${PREFIX}/gopkg
 
