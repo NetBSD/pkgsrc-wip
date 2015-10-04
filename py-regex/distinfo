@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.4 2015/06/14 22:52:11 jihbed Exp $
 
-SHA1 (regex-2015.06.14.tar.gz) = 5ee3f6ef71f351c8d7759224514d0a2d4ab090a2
-RMD160 (regex-2015.06.14.tar.gz) = a5e3dd0c14163871c6e1d8bf4d29b907a2d99b5c
-Size (regex-2015.06.14.tar.gz) = 547718 bytes
+SHA1 (regex-2015.10.01.tar.gz) = e18c36675854eb9ad98fe7393edd84f8051f5ca0
+RMD160 (regex-2015.10.01.tar.gz) = 829acea1b3cc4bd62684f6e6742553a8d617654d
+Size (regex-2015.10.01.tar.gz) = 564351 bytes

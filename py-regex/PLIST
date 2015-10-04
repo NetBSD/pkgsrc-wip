@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/25 16:26:23 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/_regex.so
 ${PYSITELIB}/_regex_core.py
 ${PYSITELIB}/_regex_core.pyc
