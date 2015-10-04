@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+Use oct instead of 0###
+--- fgallery.orig	2014-09-05 16:33:54.000000000 +0200
++++ fgallery	2015-10-02 11:10:05.000000000 +0200
+@@ -29,7 +29,7 @@
+ use Time::Piece;
+ 
+ # defaults
+-my $mode = 0644;
++my $mode = oct(644);
+ my $slim = 0;
+ my $ofile = 0;
+ my $orient = 1;

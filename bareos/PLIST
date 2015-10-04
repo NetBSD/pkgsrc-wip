@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/11 20:30:18 plecuq Exp $
+@comment $NetBSD$
 bin/bconsole
 bin/bregex
 bin/bsmtp

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/02/14 10:58:25 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	Pafy-0.3.72
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	pafy-0.3.74
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pafy/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://np1.github.io/pafy/
 COMMENT=	Retrieve YouTube content and metadata
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/Pafy-0.3.72
+WRKSRC=		${WRKDIR}/pafy-0.3.74
 
 USE_LANGUAGES=	# none
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/09/12 20:18:57 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	control-0.6c
+DISTNAME=	control-0.6d
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/python-control/
+MASTER_SITES=	http://downloads.sourceforge.net/project/python-control/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://python-control.sourceforge.net

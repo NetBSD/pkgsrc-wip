@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/09 21:12:57 jihbed Exp $
-bin/get_objgraph.py2.7
-bin/unpickle.py2.7
+@comment $NetBSD$
+bin/get_objgraph.py
+bin/unpickle.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/dill/__diff.py
+${PYSITELIB}/dill/__diff.pyc
+${PYSITELIB}/dill/__diff.pyo
 ${PYSITELIB}/dill/__init__.py
 ${PYSITELIB}/dill/__init__.pyc
 ${PYSITELIB}/dill/__init__.pyo
@@ -27,6 +30,9 @@ ${PYSITELIB}/dill/objtypes.pyo
 ${PYSITELIB}/dill/pointers.py
 ${PYSITELIB}/dill/pointers.pyc
 ${PYSITELIB}/dill/pointers.pyo
+${PYSITELIB}/dill/settings.py
+${PYSITELIB}/dill/settings.pyc
+${PYSITELIB}/dill/settings.pyo
 ${PYSITELIB}/dill/source.py
 ${PYSITELIB}/dill/source.pyc
 ${PYSITELIB}/dill/source.pyo

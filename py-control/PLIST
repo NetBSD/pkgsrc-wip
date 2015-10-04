@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/12 20:18:57 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,6 +9,12 @@ ${PYSITELIB}/control/__init__.pyo
 ${PYSITELIB}/control/bdalg.py
 ${PYSITELIB}/control/bdalg.pyc
 ${PYSITELIB}/control/bdalg.pyo
+${PYSITELIB}/control/canonical.py
+${PYSITELIB}/control/canonical.pyc
+${PYSITELIB}/control/canonical.pyo
+${PYSITELIB}/control/config.py
+${PYSITELIB}/control/config.pyc
+${PYSITELIB}/control/config.pyo
 ${PYSITELIB}/control/ctrlutil.py
 ${PYSITELIB}/control/ctrlutil.pyc
 ${PYSITELIB}/control/ctrlutil.pyo
