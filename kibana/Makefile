@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	elasticsearch>=1.4.3:../../databases/elasticsearch
 DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+DEPENDS+=	git-[0-9]*:../../devel/git
 
 USE_TOOLS+=	pax
 
