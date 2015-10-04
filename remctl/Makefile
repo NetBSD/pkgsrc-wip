@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 14:53:43 asau Exp $
+# $NetBSD$
 
 VERSION=	2.16
+PKGREVISION=	1
 DISTNAME=	remctl-${VERSION}
 CATEGORIES=	sysutils security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
-MAINTAINER=	jakllsch@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eyrie.org/~eagle/software/remctl/
 COMMENT=	Client/server protocol for running commands using Kerberos v5 auth
 LICENSE=	mit
