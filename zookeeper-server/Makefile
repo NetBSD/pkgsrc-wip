@@ -48,7 +48,7 @@ SUBST_FILES.paths=	conf/zoo_sample.cfg
 SUBST_FILES.paths+=	src/packages/templates/conf/zookeeper-env.sh
 SUBST_VARS.paths+=	PKG_JAVA_HOME ZK_DB ZK_LOG ZK_RUN
 
-REPLACE_BASH=		bin/zkCli.sh bin/zkEnv.sh bin/zkServer.sh
+REPLACE_BASH=		bin/zkCleanup.sh bin/zkCli.sh bin/zkEnv.sh bin/zkServer.sh
 
 INSTALLATION_DIRS+=	bin libexec sbin share/examples/zookeeper share/zookeeper
 
@@ -62,6 +62,7 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} JAVA_HOME=${PKG_JAVA_HOME} ant bin-package
 
 do-install:
+	${INSTALL_SCRIPT} ${BUILDDIR}/bin/zkCleanup.sh ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${BUILDDIR}/bin/zkCli.sh ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${BUILDDIR}/libexec/zkEnv.sh ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_SCRIPT} ${BUILDDIR}/sbin/zkServer.sh ${DESTDIR}${PREFIX}/sbin
