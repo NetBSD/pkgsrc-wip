@@ -15,9 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 .include "../../lang/python/egg.mk"
 
-.if ${_PYTHON_VERSION} == 26
-DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
-.endif
 .if ${_PYTHON_VERSION} < 30
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../wip/py-futures
