@@ -6,6 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://elinks.or.cz/download/
 EXTRACT_SUFX=		.tar.bz2
+DIST_SUBDIR=		elinks-libmm
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://elinks.or.cz/
