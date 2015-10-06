@@ -10,7 +10,7 @@ HOMEPAGE=	http://weboob.org/
 COMMENT=	Weboob, Web Out Of Browsers
 LICENSE=	gnu-agpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.0: ../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.1.3:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.4.4:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-prettytable>=0.7.2:../../textproc/py-prettytable
