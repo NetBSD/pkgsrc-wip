@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- tests/util/CMakeLists.txt.orig	2015-10-06 10:00:01.000000000 +0000
++++ tests/util/CMakeLists.txt
+@@ -109,7 +109,7 @@ else()
+ 	)
+ endif()
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++#if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ 	# One needs to have at least one hardware driver present, otherwise
+ 	# there is no point compiling just the dispatcher.
+ 	if(PIGLIT_BUILD_DMA_BUF_TESTS)
+@@ -141,6 +141,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ 	if(PIGLIT_HAS_X11)
+ 		list(APPEND UTIL_GL_LIBS ${X11_X11_LIB})
+ 	endif()
+-endif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++#endif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ 
+ piglit_include_target_api()
