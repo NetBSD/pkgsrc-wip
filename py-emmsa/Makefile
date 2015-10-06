@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-rpy>=2.1.3:../../math/py-rpy
 DEPENDS+=	${PYPKGPREFIX}-Elixir>=0.7.0:../../databases/py-elixir
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.3.0:../../wip/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-pandas>=0.3.0:../../math/py-pandas
 
 WRKSRC=		${WRKDIR}/EMMSA-0.0.3
 
