@@ -1253,6 +1253,7 @@ SUBDIR+=	imonc
 SUBDIR+=	inetdxtra
 SUBDIR+=	info2man
 SUBDIR+=	infraarcana
+SUBDIR+=	intel-gpu-tools
 SUBDIR+=	interbase-docs
 #SUBDIR+=	io			# not a package, same as jabberd bellow
 SUBDIR+=	io-base
