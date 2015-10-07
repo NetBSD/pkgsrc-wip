@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- qso.d/Makefile.orig	2010-10-13 05:11:39.000000000 +0000
++++ qso.d/Makefile
+@@ -1,4 +1,4 @@
+-CFLAGS  = -O3
++#CFLAGS  = -O3
+ 
+ OBJECTS = QSO.o put_form.o make_fre.o grammar.o util.o init_str.o
+ INCLUDES = antenna.h callsign.h city.h cityh.h heights.h jobs.h misc.h \
+@@ -7,7 +7,7 @@ INCLUDES = antenna.h callsign.h city.h c
+ all:	QSO
+ 
+ QSO:	$(OBJECTS)
+-	$(CC) -o $@ $(OBJECTS)
++	$(CC) $(CFLAGS) -o $@ $(LDFLAGS) $(OBJECTS)
+ 
+ init_str.o:	$(INCLUDES)
+ 

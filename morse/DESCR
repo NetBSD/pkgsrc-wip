@@ -1,0 +1,9 @@
+A morse-code training program and QSO generator.
+
+Morse Classic is a Morse-code training program for aspiring radio hams.
+It can generate random tests or simulated QSOs resembling those used in
+the ARRL test (a QSO generator is included). There are a plethora of
+options to vary the training method.
+
+In one of the simpler modes, this program will take text from standard
+input and render it as Morse-code beeps.
