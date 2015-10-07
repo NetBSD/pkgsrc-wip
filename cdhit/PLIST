@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/18 13:44:08 outpaddling Exp $
+@comment $NetBSD$
 bin/cd-hit
 bin/cd-hit-2d
 bin/cd-hit-2d-para.pl
@@ -32,3 +32,4 @@ bin/clstr_sql_tbl_sort.pl
 bin/make_multi_seq.pl
 bin/plot_2d.pl
 bin/plot_len1.pl
+share/doc/cdhit/cdhit-user-guide.pdf

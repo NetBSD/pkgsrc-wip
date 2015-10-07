@@ -7,6 +7,7 @@
 DISTNAME=	cdhit-4.6.4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=weizhongli/}
+GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://weizhong-lab.ucsd.edu/cd-hit/
@@ -16,23 +17,28 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c++
 USE_TOOLS+=	bash:run gmake perl
 REPLACE_PERL=	*.pl
-GITHUB_TAG=	V${PKGVERSION}
 
 # Restore default overridden by GITHUB_TAG
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 SUBST_CLASSES+=		compiler
 SUBST_STAGE.compiler=	post-patch
-SUBST_FILES.compiler=	${WRKSRC}/${MAKE_FILE}
+SUBST_MESSAGE.compiler=	Fixing hardcoded compiler name
+SUBST_FILES.compiler=	${MAKE_FILE}
 SUBST_SED.compiler=	-e 's|g++|${CXX:Q}|g'
 
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-patch
-SUBST_FILES.bash=	${WRKSRC}/cd-hit-2d-para.pl ${WRKSRC}/cd-hit-para.pl
+SUBST_MESSAGE.bash=	Fixing bash path
+SUBST_FILES.bash=	cd-hit-2d-para.pl cd-hit-para.pl
 SUBST_SED.bash=		-e 's|/bin/bash|${PREFIX}/bin/bash|g'
 
 MAKE_FLAGS+=		openmp=yes PREFIX=${DESTDIR}${PREFIX}/bin
 
-INSTALLATION_DIRS=	bin
+DOCDIR=			${PREFIX}/share/doc/cdhit
+INSTALLATION_DIRS+=	bin ${DOCDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/cdhit-user-guide.pdf ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
