@@ -1,0 +1,16 @@
+$NetBSD$
+
+Let pkgsrc deal with the flags
+
+--- configure.orig	2012-03-31 11:55:36.000000000 +0000
++++ configure
+@@ -2725,9 +2725,6 @@ am__tar='$${TAR-tar} chof - "$$tardir"' 
+ 
+ 
+ 
+-CPPFLAGS="-I${includedir}"
+-LDFLAGS="-L${libdir}"
+-LIBS="-L${libdir} ${LIBS}"
+ 
+ # Checks for programs.
+ ac_ext=cpp

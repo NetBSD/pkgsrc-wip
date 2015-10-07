@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (aldo-0.7.7.tar.bz2) = c37589f8cb0855d33814b7462b3e5ded21caa8ea
+RMD160 (aldo-0.7.7.tar.bz2) = 9d9de14344450cee8589df4e6fd7fb1d2e5eb88e
+Size (aldo-0.7.7.tar.bz2) = 112000 bytes
+SHA1 (patch-configure) = 010dc5f5ba00de9dae3a683a8dc2ba7c744ae9ce
