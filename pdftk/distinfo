@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2006/12/01 04:32:13 mwicks Exp $
+$NetBSD$
 
-SHA1 (pdftk-1.41.tar.gz) = 256583800c213419a845b28fe9ad5baccceddf80
-RMD160 (pdftk-1.41.tar.gz) = 09394a3d772556fa2c053bcef843b1e593feab1d
-Size (pdftk-1.41.tar.gz) = 1011368 bytes
+SHA1 (pdftk-2.02-src.zip) = a4a27e984c5e1401cfa44b8e92a64113d7396a06
+RMD160 (pdftk-2.02-src.zip) = 4d9e75abc4a966041bd0be7b1db13bb73819d2ae
+Size (pdftk-2.02-src.zip) = 2239008 bytes
