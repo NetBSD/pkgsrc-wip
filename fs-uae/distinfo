@@ -6,4 +6,4 @@ Size (fs-uae-2.6.1.tar.gz) = 4575004 bytes
 SHA1 (patch-libfsemu_src_ml_x11.c) = aabd87d77dcca0c520cc225f9a9e17b682f751f2
 SHA1 (patch-manymouse_x11__xinput2.c) = 023690aeb0fef33894338f057a98e3cf22078df5
 SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = 5c3fe4ead3506c72609ced19ca243d74bd44765d
-SHA1 (patch-src_od-fs_mman.cpp) = 93b85dabe2e7eb326c7c8ecfa8a038189c042da2
+SHA1 (patch-src_od-fs_mman.cpp) = af76cf859daf0b80df2c9f0403bf5cd8bf8edb71

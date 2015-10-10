@@ -1,5 +1,7 @@
 $NetBSD$
 
+The flag is called MAP_ANON.
+
 --- src/od-fs/mman.cpp.orig	2015-10-09 10:30:03.000000000 +0000
 +++ src/od-fs/mman.cpp
 @@ -50,12 +50,6 @@ static void GetSystemInfo(SYSTEM_INFO *s

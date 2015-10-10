@@ -39,7 +39,7 @@ pre-install:
 
 post-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
-	cd ${DESTDIR}/${PREFIX}/bin; { echo "#!/bin/sh"; echo "exec ${PREFIX}/bin/fs-uae-launcher --fs-uae-arcade"; } > fs-uae-arcade; chmod +x fs-uae-arcade
+	cd ${DESTDIR}/${PREFIX}/bin; { ${ECHO} "#!/bin/sh"; ${ECHO} "exec ${PREFIX}/bin/fs-uae-launcher --fs-uae-arcade"; } > fs-uae-arcade; chmod +x fs-uae-arcade
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"

@@ -1,2 +1,7 @@
+===========================================================================
+$NetBSD$
+
 This version does not include the launcher anymore. To install it,
 get wip/fs-uae-launcher. It does not need to be the same version number.
+
+===========================================================================
