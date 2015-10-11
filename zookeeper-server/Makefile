@@ -5,6 +5,7 @@
 
 PKGNAME=		${DISTNAME:S/keeper/keeper-server/}
 COMMENT=		Highly reliable distributed coordination server
+PKGREVISION=		1
 
 USE_JAVA=		yes
 USE_JAVA2=		yes
