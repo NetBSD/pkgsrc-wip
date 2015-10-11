@@ -11,7 +11,7 @@
 #	The wxGTK version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 24 26 28 30
+#	Possible: 28 30
 #	Default: 28
 #
 # === Infrastructure variables ===
@@ -28,7 +28,7 @@
 # WXGTK_VERSIONS_ACCEPTED
 #	The wxGTK versions that are accepted by the package.
 #
-#	Possible: 24 26 28 30
+#	Possible: 28 30
 #	Default: 28
 #
 # WXGTK_CHECK_INSTALLED
@@ -43,7 +43,7 @@
 # PKG_WXGTK_VERSION
 #	The selected wxGTK version.
 #
-#	Possible: 24 26 28 30
+#	Possible: 28 30
 #	Default: ${WXGTK_VERSION_DEFAULT}
 #
 # WXGTK_BASE_VERS
@@ -101,7 +101,7 @@ _SYS_VARS.wxGTK=	PKG_WXGTK_VERSION PKG_WXGTK WXGTKPKGSRCDIR WXGTK_PKG_PREFIX \
 .include "../../mk/bsd.prefs.mk"
 
 WXGTK_VERSION_DEFAULT?=		28
-WXGTK_VERSIONS_ACCEPTED?=	24 26 28 30
+WXGTK_VERSIONS_ACCEPTED?=	28 30
 
 # transform the list into individual variables
 .for wv in ${WXGTK_VERSIONS_ACCEPTED}
@@ -109,13 +109,7 @@ _WXGTK_VERSION_${wv}_OK=	yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/include/wx-2.4)
-_WXGTK_VERSION_24_INSTALLED=	yes
-_WXGTK_INSTALLED=		yes
-.elif exists(${LOCALBASE}/include/wx-2.6)
-_WXGTK_VERSION_26_INSTALLED=	yes
-_WXGTK_INSTALLED=		yes
-.elif exists(${LOCALBASE}/include/wx-2.8)
+.if exists(${LOCALBASE}/include/wx-2.8)
 _WXGTK_VERSION_28_INSTALLED=	yes
 _WXGTK_INSTALLED=		yes
 .elif exists(${LOCALBASE}/include/wx-3.0)
@@ -189,17 +183,7 @@ WXGTK_VERSION_REQD:=	${PKG_WXGTK_VERSION}
 #
 # set variables for the version we decided to use:
 #
-.if ${_WXGTK_VERSION} == "24"
-WXGTKPKGSRCDIR=		../../x11/wxGTK24
-WXGTK_VERSION=		${WXGTK24_VERSION}
-WXGTK_INITIAL_TEENY=	2
-WXGTK_PKG_PREFIX=	wxGTK24
-.elif ${_WXGTK_VERSION} == "26"
-WXGTKPKGSRCDIR=		../../x11/wxGTK26
-WXGTK_VERSION=		${WXGTK26_VERSION}
-WXGTK_INITIAL_TEENY=	3
-WXGTK_PKG_PREFIX=	wxGTK26
-.elif ${_WXGTK_VERSION} == "28"
+.if ${_WXGTK_VERSION} == "28"
 WXGTKPKGSRCDIR=		../../x11/wxGTK28
 WXGTK_VERSION=		${WXGTK28_VERSION}
 WXGTK_INITIAL_TEENY=	12
