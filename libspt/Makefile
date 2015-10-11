@@ -10,9 +10,12 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.j10n.org/libspt/
 COMMENT=	Provide unpriviliged secure pty
+LICENSE=	2-clause-bsd
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=  yes
+
+MAKE_ENV+=	SHELL=${SH}
 
 SPECIAL_PERMS=	libexec/sptagent root wheel 4755
 

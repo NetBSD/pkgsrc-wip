@@ -14,7 +14,6 @@ CANNA_CMD_SED_SCRIPT+=	\
 	-e 's|\(${cmd} = \).*/\(.*\)|\1${CANNASERVERBINDIR}/bin/\2|'
 .endfor
 
-CONFIGURE_DIRS=		${DICT_WRKSRC}
 DICT_WRKSRC=		${WRKSRC}/dic/ideo
 CANNA_DICTDIR=		${PREFIX}/libdata/canna
 
@@ -22,6 +21,9 @@ PKG_GROUPS=	${CANNA_GROUP}
 PKG_USERS=	${CANNA_USER}:${CANNA_GROUP}
 
 post-patch:
+	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
+	${SED} -e 's|\(SUBDIRS = \).*|\1 canna lib/RKindep dic/ideo|' \
+		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
 	@${MV} ${WRKSRC}/Canna.conf ${WRKSRC}/Canna.conf.orig
 	@${SED} -e 's|\(DicDir.*=\).*|\1${IMDICTDIR}/canna|'		\
 		${WRKSRC}/Canna.conf.orig > ${WRKSRC}/Canna.conf
@@ -29,14 +31,6 @@ post-patch:
 		${MV} $$file $$file.orig;				\
 		${SED} ${CANNA_CMD_SED_SCRIPT} $$file.orig > $$file;	\
 	done
-
-# cannaconf.h is not automatically generated so specify explicitly.
-do-build:
-	(cd ${WRKSRC};\
-	${XMKMF};\
-	${MAKE} Makefile; \
-	${MAKE} cannaconf.h; \
-	${MAKE} canna )
 
 INSTALLATION_DIRS+=	${CANNA_DICTDIR}
 
@@ -79,4 +73,5 @@ REQD_DIRS_PERMS+=	${CANNA_DICTDIR} ${CANNA_USER} ${CANNA_GROUP} 0775
 SPECIAL_PERMS+=	${CANNA_DICTDIR}/${d} ${CANNA_USER} ${CANNA_GROUP} 0664
 .endfor
 
+.include "../../wip/canna-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

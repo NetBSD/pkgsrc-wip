@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/20 10:39:01 obache Exp $
 
 META_PACKAGE=	yes
 

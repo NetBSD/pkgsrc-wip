@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/12/31 16:21:21 makoto Exp $
+To convert user-destdir support, put in SPECIAL_PERMS instead
+
+--- Makefile.in~	2003-12-07 15:42:15.000000000 +0900
++++ Makefile.in	2011-01-01 00:10:50.000000000 +0900
+@@ -48,7 +48,7 @@
+ AGENTOBJS = sptagent.o sptconn.$lo cfuncs.$lo
+ LIBOBJS = libspt.$lo sptconn.$lo cfuncs.$lo error.$lo utilapi.$lo termios.$lo
+ OBJS = test.o $(LIBOBJS)
+-AGENT_MODE = -m 4755 -o root -g wheel
++AGENT_MODE =
+ 
+ .SUFFIXES: .c .o .cc .lo
+ .c.lo:
