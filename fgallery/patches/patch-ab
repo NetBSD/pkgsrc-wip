@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/04 19:04:20 oht Exp $
+$NetBSD: patch-ab,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
 Use oct instead of 0###
 --- fgallery.orig	2014-09-05 16:33:54.000000000 +0200
 +++ fgallery	2015-10-02 11:10:05.000000000 +0200

@@ -19,6 +19,11 @@ USE_TOOLS+=     perl
 REPLACE_PERL=   ${PKGBASE}
 
 DEPENDS+=       facedetect>=1.0:../../wip/facedetect
+DEPENDS+=       ImageMagick>=6.9:../../graphics/ImageMagick
+DEPENDS+=       jpegoptim>=1.4:../../graphics/jpegoptim
+DEPENDS+=       pngcrush>=1.7:../../graphics/pngcrush
+DEPENDS+=       lcms2>=2.7:../../graphics/lcms2
+DEPENDS+=       p7zip>=9.38:../../archivers/p7zip
 
 SUBST_CLASSES+=          fix-paths
 SUBST_STAGE.fix-paths=   post-patch
