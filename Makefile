@@ -1790,6 +1790,7 @@ SUBDIR+=	moregroupware
 SUBDIR+=	morse
 SUBDIR+=	moto4lin
 SUBDIR+=	mousetweaks
+SUBDIR+=	mozart
 SUBDIR+=	mozjpeg
 SUBDIR+=	mozldap
 SUBDIR+=	mozo

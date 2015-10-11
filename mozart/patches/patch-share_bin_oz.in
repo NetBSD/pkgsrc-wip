@@ -1,0 +1,19 @@
+$NetBSD$
+
+Get rid of .elc suffix in order to run Emacs Lisp code indipendently if it is
+compiled or not.
+
+--- share/bin/oz.in.orig	2015-10-08 15:38:24.000000000 +0000
++++ share/bin/oz.in
+@@ -82,9 +82,9 @@ case "$cmd" in
+ 	then
+ 	    exec "$OZEMACS" \
+ 		    --eval '(setq load-path (cons "'$OZHOME'/share/elisp" load-path))' \
+-		    -l oz.elc -f run-oz "$@"
++		    -l oz -f run-oz "$@"
+ 	else
+-	    exec "$OZEMACS" -L "$OZHOME/share/elisp" -l oz.elc -f run-oz "$@"
++	    exec "$OZEMACS" -L "$OZHOME/share/elisp" -l oz -f run-oz "$@"
+ 	fi
+ 	;;
+ 
