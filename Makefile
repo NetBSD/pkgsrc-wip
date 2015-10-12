@@ -770,6 +770,7 @@ SUBDIR+=	gcc42
 SUBDIR+=	gcc43
 SUBDIR+=	gcc49snapshot
 SUBDIR+=	gcc50snapshot
+SUBDIR+=	gcc6snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
