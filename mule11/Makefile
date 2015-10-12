@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.10 2015/04/08 14:58:25 makoto Exp $
 
-DISTNAME=		mule-1.1
+DISTNAME=		mule-p20151011
+#                                 mule-p20151011 -> mule11-20151011
+PKGNAME=		${DISTNAME:C/e-p/e11-/}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tsutsui/}
 GITHUB_PROJECT=		mule1.1-netbsd
-GITHUB_TAG=		p20150328
 CATEGORIES=		editors
 
 MAINTAINER=		makoto@ki.nu
@@ -12,6 +13,7 @@ COMMENT=		Classical Mule (MULtilingual Enhancement of GNU Emacs), based on 18.59
 LICENSE=		gnu-gpl-v1
 MAKE_JOBS_SAFE=		no
 
+WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 USE_TOOLS=		gmake
 
 # this chunk should be before SUBST_CLASSES= pref
@@ -70,7 +72,7 @@ CHECK_WRKREF_SKIP+=     bin/mule
 
 pre-configure:
 # OPSYS may returns x86_64, but mule wants its name as amd64
-# so copy its name beforehand 
+# so copy its name beforehand
 	(cd ${WRKSRC}; \
 	${CP} src/config.h-${LOWER_OPSYS}_amd64  \
 	      src/config.h-${LOWER_OPSYS}_x86_64; \
