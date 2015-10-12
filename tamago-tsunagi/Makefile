@@ -3,7 +3,7 @@
 DISTNAME=	tamago-tsunagi-5.0.7.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	inputmethod
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=tamago-tsunagi/62701/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=tamago-tsunagi/62701/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/tamago-tsunagi/

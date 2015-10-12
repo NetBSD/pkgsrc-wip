@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (haproxy-1.6-dev6.tar.gz) = d4d69aa843b25951b10ddaf8d9622d56a0edb727
-RMD160 (haproxy-1.6-dev6.tar.gz) = 10329a09330159a1598f63ff11efcde9525bf696
-Size (haproxy-1.6-dev6.tar.gz) = 1652340 bytes
-SHA1 (patch-src_proto__tcp.c) = 65fb30eafc892e6c2cac4ae98441546ccd9b1312
+SHA1 (haproxy-1.6-dev7.tar.gz) = 7bc00b6ef4bb3c02aa12aa56884340e7ad5e3f33
+RMD160 (haproxy-1.6-dev7.tar.gz) = a547bc19f199e60e2b975a0c8d37be2a031655a7
+Size (haproxy-1.6-dev7.tar.gz) = 1653547 bytes

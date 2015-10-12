@@ -1,0 +1,34 @@
+TODO
+====
+
+0) Work on gcc should happen upstream as far as possible. But it is 
+hopeless without NetBSD developers working on it upstream. I have sent
+some patches for NetBSD to gcc upstream a few month ago but there is
+no progress yet.  
+
+PR 64271, the minimal patch set to bootstrap, extracted from pkgsrc.
+Jonathan Wakely is working on the libstdc++ patches involved.
+Without acceptance of patches for PR 64271, no other patches
+will be accepted upstream. 
+
+PR 39570, this bug causes all gfortran run tests to fail. I have developed
+the necessary patches and sent them upstream. For gcc50snapshot it means
+replacing a short patch by a bunch of complex patches, but they are gcc
+conforming and can be reused for other patches as well.
+
+PR 48244, for iso_c_binding support in gfortran. The patches are
+there but it is delayed by PR 64271.
+
+
+1) On NetBSD a working cabsl function must be present in libm to build gfortran.
+This has been added to NetBSD7 on 2014/10/13. Before this date it was defined
+in complex.h but missing from libm.
+ 
+2) This package and the lang/gcc4x need a cleanup or a complete new start. I
+think that SUBST_VARS could handle the platform dependencies in a much cleaner
+way.
+
+
+Have fun,
+
+Kai-Uwe Eckhardt

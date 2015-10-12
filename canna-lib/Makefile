@@ -14,17 +14,16 @@ post-patch:
 		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
 .for f in forcpp kpdic
 	@${MV} ${WRKSRC}/cmd/${f}/Imakefile ${WRKSRC}/cmd/${f}/Imakefile.orig
-	@${SED} -e '/InstallProgram/d' ${WRKSRC}/cmd/${f}/Imakefile.orig \
+	@${SED} -e '/^#define TargetName/a\${.newline}#define DontInstallProgram' ${WRKSRC}/cmd/${f}/Imakefile.orig \
 		> ${WRKSRC}/cmd/${f}/Imakefile
 .endfor
 
+MAKE_ENV+=	AWK=${AWK:Q}
+
+post-extract:
+	${CP} ${FILESDIR}/dic-phono-filter.awk ${WRKSRC}/dic/phono/
+
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
-
-# forcpp and kpdic needed for build, but not to install
-post-install:
-.for f in forcpp kpdic
-	${RM} ${DESTDIR}${PREFIX}/bin/${f}
-.endfor
 
 .include "../../mk/bsd.pkg.mk"

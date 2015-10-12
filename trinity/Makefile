@@ -23,7 +23,7 @@
 PKGNAME=	trinity-2014.04.13
 DISTNAME=	trinityrnaseq_r20140413p1
 CATEGORIES=	biology
-MASTER_SITES=	https://sourceforge.net/projects/trinityrnaseq/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trinityrnaseq/PREV_CONTENTS/previous_releases/}
 
 MAINTAINER=	jwbacon@tds.net
 
@@ -100,8 +100,6 @@ SUBST_SED.gc_write=	-e 's|$$FindBin::Bin/../../Trinity|Trinity|g'
 CFLAGS+=	-fopenmp
 DATADIR=	${PREFIX}/share/trinity
 DOCSDIR=	${PREFIX}/share/doc/trinity
-
-FETCH_USING=	curl
 
 # Add p4-sys-cpu for CPU_MAX?
 DEPENDS+=	bash:../../shells/bash

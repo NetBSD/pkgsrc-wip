@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.13 2015/06/22 16:19:36 rhialto Exp $
 
-VERSION=	2.5.32dev
+VERSION=	2.7.2dev
 DISTNAME=	fs-uae-launcher-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
@@ -39,7 +39,7 @@ pre-install:
 
 post-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
-	cd ${DESTDIR}/${PREFIX}/bin; { echo "#!/bin/sh"; echo "exec ${PREFIX}/bin/fs-uae-launcher --fs-uae-arcade"; } > fs-uae-arcade; chmod +x fs-uae-arcade
+	cd ${DESTDIR}/${PREFIX}/bin; { ${ECHO} "#!/bin/sh"; ${ECHO} "exec ${PREFIX}/bin/fs-uae-launcher --fs-uae-arcade"; } > fs-uae-arcade; chmod +x fs-uae-arcade
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"

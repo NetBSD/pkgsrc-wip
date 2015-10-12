@@ -1,11 +1,9 @@
 # $NetBSD: Makefile,v 1.1 2015/03/05 16:37:14 mbowie Exp $
 #
 
-PKGNAME=	bicon-0.4
-DISTNAME=	master
+DISTNAME=	bicon-0.5
 CATEGORIES=	shells
-MASTER_SITES=	https://github.com/behdad/bicon/archive/
-FETCH_USING=	curl
+MASTER_SITES=	${MASTER_SITE_GITHUB:=behdad/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	mbowie@rocketspace.com
@@ -19,8 +17,6 @@ LICENSE=	python-software-foundation
 #GIT_REPO.bicon=	https://github.com/behdad/bicon.git
 #GIT_TAG.bicon=		0.4
 #PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
-
-WRKSRC=		${WRKDIR}/bicon-master
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++

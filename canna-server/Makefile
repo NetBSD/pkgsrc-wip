@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+# $NetBSD: Makefile,v 1.23 2013/07/12 10:44:55 jperkin Exp $
 
 CANNA_MODULE=	server
 
@@ -26,7 +26,7 @@ RCD_SCRIPTS=	canna
 
 post-patch:
 	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
-	${SED} -e 's|\(SUBDIRS = \).*|\1 canna lib server cmd doc|' \
+	${SED} -e 's|\(SUBDIRS = \).*|\1 canna lib/RK lib/RKindep server cmd doc|' \
 		-e 's|\(SERVERDIR = \).*|\1 server cmd doc|' \
 		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
 	${MV} ${WRKSRC}/Canna.conf ${WRKSRC}/Canna.conf.orig
