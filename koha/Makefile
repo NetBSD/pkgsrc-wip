@@ -10,7 +10,7 @@ HOMEPAGE=	http://koha.org/
 COMMENT=	Koha is an integrated library system
 
 DEPENDS+=	mysql-client>=5.5:../../databases/mysql55-client
-DEPENDS+=	apache>=2.0.61:../../www/apache2
+DEPENDS+=	apache>=2.2:../../www/apache22
 
 DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Date-Manip>=5.44:../../devel/p5-Date-Manip
