@@ -12,10 +12,10 @@
 # .endif
 # .include <bsd.port.post.mk>
 
-PKGNAME=	bowtie-1.0.1
-DISTNAME=	v1.0.1
+DISTNAME=	bowtie-1.0.1
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	biology
-MASTER_SITES=	http://github.com/BenLangmead/bowtie/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 
 MAINTAINER=	jwbacon@tds.net
 
@@ -30,14 +30,11 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl:run pax
 REPLACE_PERL=	scripts/*.pl
 
-WRKSRC=		${WRKDIR}/bowtie-1.0.1
-
 # Adapt REINPLACE commands to SUBST:
 SUBST_CLASSES+=		lock_guard
 SUBST_STAGE.lock_guard=	post-patch
 SUBST_FILES.lock_guard=	hit.h log.h
 SUBST_SED.lock_guard=	-e 's|lock_guard<MUTEX_T>|tthread::lock_guard<MUTEX_T>|g'
-FETCH_USING=	curl
 
 DATADIR=	${PREFIX}/share/bowtie
 
