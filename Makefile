@@ -1516,7 +1516,6 @@ SUBDIR+=	liblxqt
 SUBDIR+=	liblxqt-mount
 SUBDIR+=	libmatekbd
 SUBDIR+=	libmateweather
-SUBDIR+=	libmemphis02
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmpg123
 SUBDIR+=	libmspack
