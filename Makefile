@@ -291,7 +291,6 @@ SUBDIR+=	cb2bib
 SUBDIR+=	ccrypt
 SUBDIR+=	cddlib
 SUBDIR+=	cde
-SUBDIR+=	cdhit
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
