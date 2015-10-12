@@ -12,7 +12,6 @@ MAINTAINER=		mbowie@buzmo.com
 HOMEPAGE=		http://www.trustcommerce.com/
 COMMENT=		PHP extension for TrustCommerce credit card processing
 
-FETCH_USING=		curl
 CONFIGURE_ARGS=         --enable-${MODNAME}
 
 .include "../../lang/php/ext.mk"
