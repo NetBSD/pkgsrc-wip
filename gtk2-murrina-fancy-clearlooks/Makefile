@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	loki.vt@gmail.com
 COMMENT=	Murrine fancy clearlooks themes pack
-DEPENDS+=	gtk2-engines-murrine>=0.98.2:../../wip/gtk2-engines-murrine
+DEPENDS+=	gtk2-engines-murrine>=0.98.2:../../x11/gtk2-engines-murrine
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax
