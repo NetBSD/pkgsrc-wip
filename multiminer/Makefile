@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2014/10/26 18:25:41 noud4 Exp $
 
-DISTNAME=	v3.6.2
-PKGNAME=	multiminer-${DISTNAME:S|v||}
+DISTNAME=	multiminer-3.6.2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	finance
-MASTER_SITES=	https://github.com/nwoolls/MultiMiner/archive/
-FETCH_USING=	curl
+MASTER_SITES=	${MASTER_SITE_GITHUB:=nwoolls/}
 
 MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	https://github.com/nwoolls/MultiMiner
@@ -12,9 +11,6 @@ COMMENT=	Bitcoin miner front-end
 LICENSE=	mit
 
 DEPENDS+=	bfgminer>=3.9.0:../../wip/bfgminer
-
-DIST_SUBDIR=	multiminer
-WRKSRC=		${WRKDIR}/MultiMiner-${DISTNAME:S|v||}
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path= 	post-patch
