@@ -3,14 +3,13 @@
 
 DISTNAME=	axe-0.2.0
 CATEGORIES=	emulators cross
-MASTER_SITES=	https://web.archive.org/web/20051124083645/http://www.hardcoders.org/axe/
+MASTER_SITES=	https://web.archive.org/web/20010614080535/http://www.hardcoders.org/axe/
 
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	https://web.archive.org/web/20051124083645/http://www.hardcoders.org/axe/
 COMMENT=	Manipulate contents of Atari 8bit disk image files (.ATR, .XFD)
 
 PKG_DESTDIR_SUPPORT=	none
-FETCH_USING=		curl
 
 NO_CONFIGURE=	YES
 
