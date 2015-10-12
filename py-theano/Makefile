@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/01/26 21:21:52 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	Theano-0.6.0
+DISTNAME=	Theano-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	https://pypi.python.org/packages/source/T/Theano/
@@ -10,7 +10,7 @@ HOMEPAGE=	http://deeplearning.net/software/theano/
 COMMENT= 	Optimizing compiler for evaluating mathematical expressions
 LICENSE=	modified-bsd
 
-WRKSRC=	${WRKDIR}/Theano-0.6.0
+WRKSRC=	${WRKDIR}/Theano-0.7.0
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
@@ -24,5 +24,5 @@ do-test:
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"
