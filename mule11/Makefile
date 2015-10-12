@@ -13,7 +13,7 @@ COMMENT=		Classical Mule (MULtilingual Enhancement of GNU Emacs), based on 18.59
 LICENSE=		gnu-gpl-v1
 MAKE_JOBS_SAFE=		no
 
-WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
+WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-p${PKGVERSION_NOREV}
 USE_TOOLS=		gmake
 
 # this chunk should be before SUBST_CLASSES= pref
