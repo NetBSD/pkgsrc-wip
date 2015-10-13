@@ -88,6 +88,7 @@ do-install:
 		${INSTALL_DATA} $$fn ${DESTDIR}${PREFIX}/lib; \
 	done
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/hdf5-c++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
