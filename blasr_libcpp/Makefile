@@ -49,7 +49,9 @@ SUBST_STAGE.gcc44=	post-patch
 SUBST_FILES.gcc44=	${WRKSRC}/*/*
 SUBST_SED.gcc44=	-e 's|c++11|c++0x|g' \
 
-# OS X Lion
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Darwin
 SUBST_CLASSES+=		headers
 SUBST_STAGE.headers=	post-patch
 SUBST_FILES.headers=	hdf/*.hpp pbdata/saf/*.hpp
@@ -59,6 +61,7 @@ SUBST_CLASSES+=		uintmax
 SUBST_STAGE.uintmax=	post-patch
 SUBST_FILES.uintmax=	${WRKSRC}/alignment/suffixarray/SuffixArray.hpp
 SUBST_SED.uintmax=	-e 's|UINT_MAX|INT_MAX|g'
+.endif
 
 CXXFLAGS+=	-I${LOCALBASE}/include -O
 MAKE_FILE=	makefile
