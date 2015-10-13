@@ -23,7 +23,9 @@ COMMENT=	Library for analyzing PacBio sequences
 # Double-check this
 LICENSE=	modified-bsd
 
-GCC_REQD=	4.9 4.8
+# Not needed yet, but developers don't want to support CentOS 6
+# with it's GCC 4.4.
+# GCC_REQD=	4.9 4.8
 
 # Pessimistic assumption.  Test and change if possible.
 # MAKE_JOBS_SAFE=	no
