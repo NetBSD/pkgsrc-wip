@@ -54,6 +54,7 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glw/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
