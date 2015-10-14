@@ -251,7 +251,6 @@ SUBDIR+=	bub-n-bros
 SUBDIR+=	bunny
 SUBDIR+=	bup-git
 SUBDIR+=	busybox
-SUBDIR+=	bwa
 SUBDIR+=	bwm-ng
 SUBDIR+=	c-news
 SUBDIR+=	c2hs
