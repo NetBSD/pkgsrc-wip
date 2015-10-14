@@ -90,7 +90,7 @@ CONFIGURE_ARGS+=	--without-gconf
 ### Support Xaw3d (This is only valid with Lucid Toolkit)
 ###
 .  if !empty(PKG_OPTIONS:Mxaw3d)
-.include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../x11/libXaw3d/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--without-xaw3d
 .  endif

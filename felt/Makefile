@@ -17,6 +17,13 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_X11BASE=		yes
 USE_TOOLS+=		gzcat
 XAW_TYPE?=		3d
+# does not directly support Xaw3d
+BUILDLINK_TRANSFORM+=   l:Xaw:Xaw3d
+.PHONY: buildlink-Xaw3d-inc-hack
+pre-configure: buildlink-Xaw3d-inc-hack
+
+buildlink-Xaw3d-inc-hack: buildlink-directories
+	cd ${BUILDLINK_DIR}/include/X11 && ln -s Xaw3d Xaw
 
 MAKE_ENV+=		CCOPTS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDOPTS=${LDFLAGS:M*:Q}
