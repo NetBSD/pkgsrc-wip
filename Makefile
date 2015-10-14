@@ -3417,6 +3417,7 @@ SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	recoll
 SUBDIR+=	recutils
+SUBDIR+=	redeclipse
 SUBDIR+=	redfang
 SUBDIR+=	reduze
 SUBDIR+=	refkeen
