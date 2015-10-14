@@ -3,7 +3,7 @@
 DISTNAME=	sxemacs-22.1.5
 PKGREVISION=	3
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.sxemacs.org/pub/sxemacs/
+MASTER_SITES=	http://downloads.sxemacs.org/releases/
 
 MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.sxemacs.org/
