@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/16 14:24:01 outpaddling Exp $
+@comment $NetBSD$
 bin/bwa
 bin/qualfa2fq.pl
 bin/xa2multi.pl

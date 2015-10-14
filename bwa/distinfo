@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/09/16 14:24:01 outpaddling Exp $
+$NetBSD$
 
-SHA1 (bwa-0.7.9a.tar.bz2) = a77ce327e8acba554b1d27bfdd1c148f79726484
-RMD160 (bwa-0.7.9a.tar.bz2) = a51b7c686a206144eab2aee0a372d5ae46fcfce1
-Size (bwa-0.7.9a.tar.bz2) = 166193 bytes
+SHA1 (bwa-0.7.12.tar.bz2) = 6389ca75328bae6d946bfdd58ff4beb0feebaedd
+RMD160 (bwa-0.7.12.tar.bz2) = af9fc03d3a18cbfb46ac7bbda1b16f42338bf4bc
+Size (bwa-0.7.12.tar.bz2) = 184599 bytes
