@@ -2,7 +2,7 @@
 include/quickfix/Acceptor.h
 include/quickfix/Allocator.h
 include/quickfix/Application.h
-include/quickfix/CallStack.h
+include/quickfix/AtomicCount.h
 include/quickfix/DOMDocument.h
 include/quickfix/DataDictionary.h
 include/quickfix/DataDictionaryProvider.h
@@ -30,9 +30,7 @@ include/quickfix/HttpMessage.h
 include/quickfix/HttpParser.h
 include/quickfix/HttpServer.h
 include/quickfix/Initiator.h
-include/quickfix/LIBXML_DOMDocument.h
 include/quickfix/Log.h
-include/quickfix/MSXML_DOMDocument.h
 include/quickfix/Message.h
 include/quickfix/MessageCracker.h
 include/quickfix/MessageSorters.h
@@ -45,6 +43,7 @@ include/quickfix/NullStore.h
 include/quickfix/OdbcConnection.h
 include/quickfix/OdbcLog.h
 include/quickfix/OdbcStore.h
+include/quickfix/PUGIXML_DOMDocument.h
 include/quickfix/Parser.h
 include/quickfix/PostgreSQLConnection.h
 include/quickfix/PostgreSQLLog.h
@@ -57,6 +56,7 @@ include/quickfix/SessionID.h
 include/quickfix/SessionSettings.h
 include/quickfix/SessionState.h
 include/quickfix/Settings.h
+include/quickfix/SharedArray.h
 include/quickfix/SocketAcceptor.h
 include/quickfix/SocketConnection.h
 include/quickfix/SocketConnector.h
@@ -71,12 +71,12 @@ include/quickfix/Utility.h
 include/quickfix/Values.h
 include/quickfix/fix40/Advertisement.h
 include/quickfix/fix40/Allocation.h
-include/quickfix/fix40/AllocationACK.h
+include/quickfix/fix40/AllocationInstructionAck.h
 include/quickfix/fix40/DontKnowTrade.h
 include/quickfix/fix40/Email.h
 include/quickfix/fix40/ExecutionReport.h
 include/quickfix/fix40/Heartbeat.h
-include/quickfix/fix40/IndicationofInterest.h
+include/quickfix/fix40/IOI.h
 include/quickfix/fix40/ListCancelRequest.h
 include/quickfix/fix40/ListExecute.h
 include/quickfix/fix40/ListStatus.h
@@ -100,12 +100,12 @@ include/quickfix/fix40/SequenceReset.h
 include/quickfix/fix40/TestRequest.h
 include/quickfix/fix41/Advertisement.h
 include/quickfix/fix41/Allocation.h
-include/quickfix/fix41/AllocationACK.h
+include/quickfix/fix41/AllocationInstructionAck.h
 include/quickfix/fix41/DontKnowTrade.h
 include/quickfix/fix41/Email.h
 include/quickfix/fix41/ExecutionReport.h
 include/quickfix/fix41/Heartbeat.h
-include/quickfix/fix41/IndicationofInterest.h
+include/quickfix/fix41/IOI.h
 include/quickfix/fix41/ListCancelRequest.h
 include/quickfix/fix41/ListExecute.h
 include/quickfix/fix41/ListStatus.h
@@ -130,7 +130,7 @@ include/quickfix/fix41/SettlementInstructions.h
 include/quickfix/fix41/TestRequest.h
 include/quickfix/fix42/Advertisement.h
 include/quickfix/fix42/Allocation.h
-include/quickfix/fix42/AllocationACK.h
+include/quickfix/fix42/AllocationInstructionAck.h
 include/quickfix/fix42/BidRequest.h
 include/quickfix/fix42/BidResponse.h
 include/quickfix/fix42/BusinessMessageReject.h
@@ -138,7 +138,7 @@ include/quickfix/fix42/DontKnowTrade.h
 include/quickfix/fix42/Email.h
 include/quickfix/fix42/ExecutionReport.h
 include/quickfix/fix42/Heartbeat.h
-include/quickfix/fix42/IndicationofInterest.h
+include/quickfix/fix42/IOI.h
 include/quickfix/fix42/ListCancelRequest.h
 include/quickfix/fix42/ListExecute.h
 include/quickfix/fix42/ListStatus.h
@@ -245,6 +245,7 @@ include/quickfix/fix43/TradeCaptureReport.h
 include/quickfix/fix43/TradeCaptureReportRequest.h
 include/quickfix/fix43/TradingSessionStatus.h
 include/quickfix/fix43/TradingSessionStatusRequest.h
+include/quickfix/fix43/XMLnonFIX.h
 include/quickfix/fix44/Advertisement.h
 include/quickfix/fix44/AllocationInstruction.h
 include/quickfix/fix44/AllocationInstructionAck.h
@@ -339,6 +340,7 @@ include/quickfix/fix44/TradingSessionStatus.h
 include/quickfix/fix44/TradingSessionStatusRequest.h
 include/quickfix/fix44/UserRequest.h
 include/quickfix/fix44/UserResponse.h
+include/quickfix/fix44/XMLnonFIX.h
 include/quickfix/fix50/AdjustedPositionReport.h
 include/quickfix/fix50/Advertisement.h
 include/quickfix/fix50/AllocationInstruction.h
@@ -608,8 +610,6 @@ include/quickfix/fix50sp2/OrderMassCancelReport.h
 include/quickfix/fix50sp2/OrderMassCancelRequest.h
 include/quickfix/fix50sp2/OrderMassStatusRequest.h
 include/quickfix/fix50sp2/OrderStatusRequest.h
-include/quickfix/fix50sp2/PartyDetailsListReport.h
-include/quickfix/fix50sp2/PartyDetailsListRequest.h
 include/quickfix/fix50sp2/PositionMaintenanceReport.h
 include/quickfix/fix50sp2/PositionMaintenanceRequest.h
 include/quickfix/fix50sp2/PositionReport.h

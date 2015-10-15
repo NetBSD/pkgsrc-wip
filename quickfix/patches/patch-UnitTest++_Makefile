@@ -1,0 +1,15 @@
+$NetBSD$
+
+The $(test) target crashes on NetBSD. Disable it.
+
+--- UnitTest++/Makefile.orig	2014-09-15 06:23:52.000000000 +0000
++++ UnitTest++/Makefile
+@@ -68,7 +68,7 @@ define make-depend
+ endef
+ 
+ 
+-all: $(test)
++all: $(lib)
+ 
+ 
+ $(lib): $(objects) 
