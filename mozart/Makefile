@@ -15,7 +15,7 @@ GIT_REPOSITORIES=	mozart
 GIT_REPO.mozart=	git://github.com/mozart/mozart.git
 WRKSRC=			${WRKDIR}/mozart
 
-# Does not run on 64bit platforms
+# Does not build on 64bit platforms (still not ported)
 NOT_FOR_PLATFORM=	*-*-x86_64
 
 GNU_CONFIGURE=	yes
@@ -36,7 +36,12 @@ CONFIGURE_ARGS+=	--disable-compile-elisp
 pre-build:
 	cd ${WRKSRC} && ${GMAKE} bootstrap
 
-# TODO: fix permissions in post-install
+# Fix ownership and permissions
+post-install:
+	${FIND} ${DESTDIR}${PREFIX}/oz -exec ${CHOWN} ${ROOT_USER}:${ROOT_GROUP} {} +
+	${CHMOD} -R u=rwX,go=rX ${DESTDIR}${PREFIX}/oz
+	${CHMOD} -x ${DESTDIR}${PREFIX}/oz/platform/${LOWER_OPSYS}-${MACHINE_GNU_ARCH}/wish/*/*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/oz/include/*
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
