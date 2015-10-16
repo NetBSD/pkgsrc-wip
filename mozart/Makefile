@@ -3,13 +3,11 @@
 VERSION=	1.4.0
 DISTNAME=	mozart-${VERSION}
 CATEGORIES=	lang
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=mozart/}
-#GITHUB_TAG=	mozart-${VERSION:S/./-/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mozart.github.io/
 COMMENT=	Mozart Programming System
-#LICENSE=	# TODO: mit-ish or x11-ish, I should investigate furher
+LICENSE=	mit # with modifications
 
 GIT_REPOSITORIES=	mozart
 GIT_REPO.mozart=	git://github.com/mozart/mozart.git
