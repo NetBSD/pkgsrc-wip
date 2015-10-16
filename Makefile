@@ -3847,6 +3847,7 @@ SUBDIR+=	umurmur
 SUBDIR+=	unagi
 SUBDIR+=	unarchiver-clt
 SUBDIR+=	undo-tree
+SUBDIR+=	unicorn
 SUBDIR+=	unicorn5hc
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
