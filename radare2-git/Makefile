@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/03/21 21:01:51 krytarowski Exp $
 
-DISTNAME=	radare2-0.9.9
+DISTNAME=	radare2-0.10.0
 CATEGORIES=	devel
 GIT_REPOSITORIES=	radare2
 GIT_REPO.radare2=	git@github.com:radare/radare2.git
