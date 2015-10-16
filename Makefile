@@ -3399,6 +3399,7 @@ SUBDIR+=	quickie
 SUBDIR+=	qupzilla
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
+SUBDIR+=	radare2
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
 SUBDIR+=	rapidxml
