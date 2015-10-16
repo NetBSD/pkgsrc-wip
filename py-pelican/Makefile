@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/06/18 19:26:05 ahp-nils Exp $
 
-DISTNAME=		pelican-3.6.0
+DISTNAME=		pelican-3.6.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www textproc
 MASTER_SITES=		-https://github.com/getpelican/pelican/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
