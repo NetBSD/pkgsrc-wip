@@ -15,5 +15,7 @@ USE_TOOLS+=	gmake pkg-config
 
 MAKE_ENV+=	UNICORN_QEMU_FLAGS=--python=${PYTHONBIN:Q}
 
+ALL_ENV+=	USE_GENERIC_LIBDATADIR=yes
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
