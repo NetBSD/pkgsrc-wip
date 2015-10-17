@@ -1,0 +1,10 @@
+Linux compatibility package based on the openSUSE Linux distribution.
+Please visit http://www.opensuse.org/ for more information about openSUSE
+Linux.
+
+Freepascal is a free 32/64bit Pascal Compiler. It comes with a run-time library
+and is fully compatible with Turbo Pascal 7.0 and nearly Delphi compatible.
+Some extensions are added to the language, like function overloading and
+generics. Shared libraries can be linked. This package contains commandline
+compiler and utils. Provided units are the runtime library (RTL), free
+component library (FCL) and the base and extra packages.
