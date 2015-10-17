@@ -130,7 +130,7 @@ CLEANUP="${CLEANUP} ${ADDLIST}"
 		find ${PACKAGE} \( -type d \) -print | sed 's,$,/,'
 		find ${PACKAGE} \( -type f \) -print
 	fi
-) | sed -e '/^\./d' -e '/\/CVS/d' -e '/[^-_,./a-zA-Z0-9]/d' | sort > ${ADDLIST}
+) | sed -e '/^\./d' -e '/\/CVS/d' -e '/[^+-_,./a-zA-Z0-9]/d' | sort > ${ADDLIST}
 sed "s|^|${SCM}: will add: ${CATEGORY}/|" ${ADDLIST} >> ${MSG}
 
 ${EDITOR} ${MSG}
