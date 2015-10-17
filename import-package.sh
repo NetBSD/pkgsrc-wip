@@ -94,7 +94,7 @@ if [ "${CATEGORY}" = "wip" ]; then
 	fi
 else
 	SCM=CVS
-	CVSROOT="$(cat ../CVS/Root | tr A-Z a-z)"
+	CVSROOT="$(cat ../CVS/Root | tr A-Z a-z | sed -e 's/.*@//')"
 	if [ "${CVSROOT}" != "cvs.netbsd.org:/cvsroot" ]; then
 		echo "$0: wrong CVS root" 1>&2
 		exit 1
