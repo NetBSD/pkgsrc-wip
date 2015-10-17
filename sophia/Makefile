@@ -4,10 +4,11 @@ DISTNAME=	sophia-version_${VERSION}
 PKGNAME=	sophia-${VERSION}
 VERSION=	1.2.3
 CATEGORIES=	databases
-MASTER_SITES=	-https://codeload.github.com/pmwkaa/sophia/tar.gz/version_${VERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pmwkaa/}
+GITHUB_TAG=	v${VERSION}
 
-MAINTAINER=	cfkoch@users.sourceforge.net
-HOMEPAGE=	https://github.com/pmwkaa/sophia
+MAINTAINER=	cfkoch@edgebsd.org
+HOMEPAGE=	http://sphia.org/
 COMMENT=	Modern embeddable key-value database
 LICENSE=	2-clause-bsd
 
@@ -24,3 +25,4 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/libsophia.so ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
+.include "../../mk/fetch/sites.mk"
