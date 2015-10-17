@@ -207,6 +207,7 @@ SUBDIR+=	bind10-devel
 SUBDIR+=	bindgraph
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
+SUBDIR+=	bip
 SUBDIR+=	bitcoin
 SUBDIR+=	bkchem
 SUBDIR+=	blasr_libcpp
