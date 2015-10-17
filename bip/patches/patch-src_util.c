@@ -9,12 +9,12 @@ Fix ctype(3) usage.
  {
  	char *tmp;
 -	if (!str || !isalpha(*str))
-+	if (!str || !isalpha(*(int*)str))
++	if (!str || !isalpha((unsigned char)*str))
  		return 0;
  
  	tmp = str;
 -	while (*tmp != '\0' && (isalnum(*tmp) || *tmp == '-' || *tmp == '[' ||
-+	while (*tmp != '\0' && (isalnum(*(int*)tmp) || *tmp == '-' || *tmp == '[' ||
++	while (*tmp != '\0' && (isalnum((unsigned char)*tmp) || *tmp == '-' || *tmp == '[' ||
  			*tmp == ']' || *tmp == '\\' || *tmp == '`' ||
  			*tmp == '^' || *tmp == '{' || *tmp == '}' ||
  			*tmp == '|' || *tmp == '_' ))
@@ -23,7 +23,7 @@ Fix ctype(3) usage.
  
  	while ((c = *pkey++))
 -		hash = ((hash << 5) + hash) ^ toupper(c);
-+		hash = ((hash << 5) + hash) ^ toupper((int)c);
++		hash = ((hash << 5) + hash) ^ toupper((unsigned char)c);
  	return (unsigned char)hash;
  }
  
@@ -32,7 +32,7 @@ Fix ctype(3) usage.
  {
  	while (*s) {
 -		*s = toupper(*s);
-+		*s = toupper(*(int*)s);
++		*s = toupper((unsigned char)*s);
  		s++;
  	}
  }
