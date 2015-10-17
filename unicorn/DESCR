@@ -11,4 +11,3 @@ Unicorn offers some unparalleled features:
  - High performance via Just-In-Time compilation
  - Support for fine-grained instrumentation at various levels
  - Thread-safety by design
- - Distributed under open source license GPL
