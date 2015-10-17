@@ -2,7 +2,7 @@
 
 DISTNAME=	sophia-version_${VERSION}
 PKGNAME=	sophia-${VERSION}
-VERSION=	1.2.2
+VERSION=	1.2.3
 CATEGORIES=	databases
 MASTER_SITES=	-https://codeload.github.com/pmwkaa/sophia/tar.gz/version_${VERSION}
 
