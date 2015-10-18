@@ -97,6 +97,7 @@ SUBDIR+=	amaya
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	android-tools-adb
+SUBDIR+=	angelscript
 SUBDIR+=	ann
 SUBDIR+=	ansible
 SUBDIR+=	anthy-dic-jis34
