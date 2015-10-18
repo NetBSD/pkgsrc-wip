@@ -25,4 +25,3 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/libsophia.so ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
-.include "../../mk/fetch/sites.mk"
