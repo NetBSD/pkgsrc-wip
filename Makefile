@@ -3925,6 +3925,7 @@ SUBDIR+=	wings
 SUBDIR+=	winwrangler
 SUBDIR+=	wireless-tools
 SUBDIR+=	wise2
+SUBDIR+=	wjelement
 SUBDIR+=	wkhtmltopdf
 SUBDIR+=	wklejto
 SUBDIR+=	wl-current
