@@ -99,6 +99,7 @@ include/nss/nss/utilparst.h
 include/nss/nss/utilrename.h
 lib/nss/libcrmf.a
 lib/nss/libfreebl3.${SO_SUFFIX}
+lib/nss/libgtest1.${SO_SUFFIX}
 lib/nss/libnss3.${SO_SUFFIX}
 lib/nss/libnssckbi.${SO_SUFFIX}
 lib/nss/libnssdbm3.${SO_SUFFIX}

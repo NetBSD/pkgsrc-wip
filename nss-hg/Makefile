@@ -15,6 +15,8 @@ HG_REPO.nss=        	https://hg.mozilla.org/projects/nss
 WRKSRC=			${WRKDIR}/nss
 #WRKSRC=			${WRKDIR}
 
+USE_LANGUAGES=		c c++
+
 # wants to use zlib before making sure it's built
 MAKE_JOBS_SAFE=		no
 
