@@ -12,7 +12,7 @@
 
 DISTNAME=	blasr_libcpp-${PORTVERSION}
 CATEGORIES=	biology
-# FreeBSD MASTER_SITE_SUBDIR: 
+# FreeBSD MASTER_SITE_SUBDIR:
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
 		http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
@@ -31,15 +31,14 @@ LICENSE=	modified-bsd
 # MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake bash:run
 
 # Broken: hdf5-c++>=1.8:../../devel/hdf5-c++
-DEPENDS+=		bash:../../shells/bash
 
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-patch
 SUBST_FILES.bash=	${WRKSRC}/makefile
-SUBST_SED.bash=		-e 's|/bin/bash|${LOCALBASE}/bin/bash|g'
+SUBST_SED.bash=		-e 's|/bin/bash|${TOOLS_BASH}|g'
 
 SUBST_CLASSES+=		pbbam
 SUBST_STAGE.pbbam=	post-configure
@@ -65,7 +64,8 @@ SUBST_FILES.uintmax=	${WRKSRC}/alignment/suffixarray/SuffixArray.hpp
 SUBST_SED.uintmax=	-e 's|UINT_MAX|INT_MAX|g'
 .endif
 
-CXXFLAGS+=	-I${LOCALBASE}/include -O
+# XXX buildlink should take care of this for you
+CXXFLAGS+=	-I${PREFIX}/include -O
 MAKE_FILE=	makefile
 
 PORTNAME=	blasr_libcpp
@@ -77,9 +77,10 @@ PORTVERSION=	2015.08.17
 
 do-configure:
 	cd ${WRKSRC} && ./configure.py --no-pbbam \
-		HDF5_INCLUDE=${LOCALBASE}/include HDF5_LIB=${LOCALBASE}/lib
+		HDF5_INCLUDE=${PREFIX}/include HDF5_LIB=${PREFIX}/lib
 
 do-install:
+# XXX I suggest using pax(1) instead of this
 	${MKDIR} ${DESTDIR}${PREFIX}/include ${DESTDIR}${PREFIX}/lib
 	cd ${WRKSRC} && for fn in `find . -name '*.h' -o -name '*.hpp'`; do \
 		dir=`dirname $$fn | cut -d / -f 2-`; \
