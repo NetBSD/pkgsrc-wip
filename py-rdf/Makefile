@@ -12,7 +12,7 @@ COMMENT=	Pure Python package providing the core RDF constructs
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
+DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../textproc/py-rdflib
 
 WRKSRC=		${WRKDIR}/rdf-0.9a6
 

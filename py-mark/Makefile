@@ -12,7 +12,7 @@ COMMENT=RDF Bookmarking Utilities
 LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-argparse>=1.1:../../devel/py-argparse
-DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
+DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../textproc/py-rdflib
 
 WRKSRC=		${WRKDIR}/mark-0.2
 

@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.langdale.com.au/GraphPath/
 COMMENT=	Analysing graph-structured data, especially RDF
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
+DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../textproc/py-rdflib
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
