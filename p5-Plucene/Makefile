@@ -23,8 +23,6 @@ DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
 DEPENDS+=	p5-Encode-compat>=0:../../wip/p5-Encode-compat
 BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
 
-PKG_DESTDIR_SUPPORT=	none
-
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST= auto/Plucene/.packlist
 
