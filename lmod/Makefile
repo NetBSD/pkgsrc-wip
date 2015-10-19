@@ -12,10 +12,10 @@ LICENSE=	mit
 
 .include "../../mk/bsd.prefs.mk"
 
-DEPENDS+=	${LUA_PKGPREFIX}-filesystem:../../devel/lua-filesystem
-DEPENDS+=	${LUA_PKGPREFIX}-posix:../../devel/lua-posix
+DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
+DEPENDS+=	${LUA_PKGPREFIX}-posix-[0-9]*:../../devel/lua-posix
 .if ${OPSYS} != "Linux"	# Part of base on CentOS and zsh pkg does not build
-DEPENDS+=	zsh:../../shells/zsh
+DEPENDS+=	zsh-[0-9]*:../../shells/zsh
 .endif
 
 WRKSRC=		${WRKDIR}/Lmod-5.2
