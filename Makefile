@@ -3187,6 +3187,7 @@ SUBDIR+=	py-semidbm
 SUBDIR+=	py-sempy
 SUBDIR+=	py-sentry
 SUBDIR+=	py-sep
+SUBDIR+=	py-setconf
 SUBDIR+=	py-setupdocs
 SUBDIR+=	py-setuptools_git
 SUBDIR+=	py-sexy
