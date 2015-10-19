@@ -13,8 +13,6 @@ COMMENT=	Validate an email address
 DEPENDS+=	p5-CGI-Untaint>=0.07:../../wip/p5-CGI-Untaint
 DEPENDS+=	p5-Email-Valid>=0.13:../../mail/p5-Email-Valid
 
-PKG_DESTDIR_SUPPORT=	none
-
 PERL5_PACKLIST=	auto/CGI/Untaint/email/.packlist
 USE_LANGUAGES=	# none
 
