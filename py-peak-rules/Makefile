@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 13:57:26 asau Exp $
 #
 
-DISTNAME=	PEAK-Rules-0.5a1.dev-r2707
-EGG_NAME=	PEAK_Rules-0.5a1.dev_r2707
+DISTNAME=	PEAK-Rules-0.5a1.dev-r2713
+EGG_NAME=	PEAK_Rules-0.5a1.dev_r2713
 PKGNAME=	${PYPKGPREFIX}-peak-rules-0.5a1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	http://peak.telecommunity.com/snapshots/
 
