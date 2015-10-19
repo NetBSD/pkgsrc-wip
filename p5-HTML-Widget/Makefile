@@ -9,8 +9,6 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/HTML-Widget/
 COMMENT=		HTML Widget And Validation Framework
 
-PKG_DESTDIR_SUPPORT=	none
-
 DEPENDS+=		p5-Module-Pluggable-Fast>=0.18:../../wip/p5-Module-Pluggable-Fast
 DEPENDS+=		p5-Class-Data-Accessor>=0.04001:../../devel/p5-Class-Data-Accessor
 DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
