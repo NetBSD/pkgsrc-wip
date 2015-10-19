@@ -4,7 +4,7 @@
 DISTNAME=	commons-collections-3.2.1-bin
 PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	http://www.motorlogy.com/apachemirror//commons/collections/binaries/
+MASTER_SITES=	http://archive.apache.org/dist/commons/collections/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/collections/
