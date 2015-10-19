@@ -12,6 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-multiprocessing
+
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test.py
 
