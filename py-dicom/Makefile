@@ -19,6 +19,8 @@ REPLACE_PYTHON+=	dicom/contrib/dicom_dao.py
 
 PYTHON_VERSIONS_ACCEPTED= 27
 
+BROKEN=		tries to download in build phase
+
 do-test:
 	${RUN} cd ${WRKSRC}/dicom/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_test.py
 
