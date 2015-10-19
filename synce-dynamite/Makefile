@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.synce.org/oldwiki/index.php/Dynamite
 COMMENT=		Microsoft cabinet file extraction library
 
-PKG_DESTDIR_SUPPORT=	none
-
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
