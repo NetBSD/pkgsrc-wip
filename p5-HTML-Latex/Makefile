@@ -11,8 +11,6 @@ COMMENT=		Perl5 module for converting HTML to LaTeX
 DEPENDS+=		p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=		p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
-PKG_DESTDIR_SUPPORT=	none
-
 REPLACE_PERL+=		Latex.pm
 PERL5_PACKLIST=		auto/HTML/Latex/.packlist
 
