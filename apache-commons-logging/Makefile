@@ -4,7 +4,7 @@
 DISTNAME=	commons-logging-1.1.1-bin
 PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	http://www.fightrice.com/mirrors/apache//commons/logging/binaries/
+MASTER_SITES=	http://archive.apache.org/dist/commons/logging/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/logging/
