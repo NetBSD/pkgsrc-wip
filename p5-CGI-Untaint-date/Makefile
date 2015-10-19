@@ -14,8 +14,6 @@ DEPENDS+=	p5-CGI-Untaint>=0.07:../../wip/p5-CGI-Untaint
 DEPENDS+=	p5-Date-Manip>=5:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Date-Simple>=0.01:../../devel/p5-Date-Simple
 
-PKG_DESTDIR_SUPPORT=	none
-
 PERL5_PACKLIST=	auto/CGI/Untaint/date/.packlist
 USE_LANGUAGES=	# none
 
