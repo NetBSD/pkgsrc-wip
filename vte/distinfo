@@ -3,3 +3,4 @@ $NetBSD: distinfo,v 1.10 2015/06/06 15:46:31 krytarowski Exp $
 SHA1 (vte-0.40.2.tar.gz) = fa4f548032e3017e7663fa43d5f5c6ed5536913f
 RMD160 (vte-0.40.2.tar.gz) = 8a79a7f540e8d044625ae038a62824393564f948
 Size (vte-0.40.2.tar.gz) = 633056 bytes
+SHA1 (patch-src_app.vala) = cd8ff7daf6f22c3e3cc9c6535e47782e3e29fd36
