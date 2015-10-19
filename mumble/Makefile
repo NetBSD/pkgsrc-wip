@@ -25,8 +25,8 @@ do-configure:
 	cd ${WRKSRC} && \
 	${QTDIR}/bin/qmake -unix -recursive main.pro ${CONFIG_OPTIONS} ${MAKE_ENV}
 
-BUILDLINK_API_DEPENDS.celt+=   celt>=0.7.0
-BUILDLINK_API_DEPENDS.celt+=   celt<0.7.1
+#BUILDLINK_API_DEPENDS.celt+=   celt>=0.7.0
+#BUILDLINK_API_DEPENDS.celt+=   celt<0.7.1
 .include "../../audio/celt/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
