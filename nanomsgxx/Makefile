@@ -1,20 +1,17 @@
 # $NetBSD: Makefile,v 1.1 2014/08/08 11:55:56 chybz Exp $
 
-PKGNAME=	nanomsgxx-0.1
+DISTNAME=	nanomsgxx-0.1
 CATEGORIES=	devel
-GHCOMMIT=	ab79438ddbf9033b93a2f53db068c03735cd45d7
-DISTNAME=	${GHCOMMIT}.zip
-MASTER_SITES=	https://github.com/achille-roussel/nanomsgxx/archive/
-DIST_SUBDIR=	nanomsgxx
-EXTRACT_SUFX=	# none
+GITHUB_TAG=	ab79438ddbf9033b93a2f53db068c03735cd45d7
+MASTER_SITES=	${MASTER_SITE_GITHUB:=achille-roussel/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rchibois@gmail.com
-HOMEPAGE=	https://github.com/achille-roussel/nanomsgxx
+HOMEPAGE=	https://github.com/achille-roussel/nanomsgxx/
 COMMENT=	Nanomsg binding for C++11
 LICENSE=	mit
 
-DEPENDS+=	nanomsg>=0:../../devel/nanomsg
-WRKSRC=		${WRKDIR}/nanomsgxx-${GHCOMMIT}
+DEPENDS+=	nanomsg>=0:../../wip/nanomsg
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
