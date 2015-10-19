@@ -1,18 +1,19 @@
 # $NetBSD: Makefile,v 1.1 2014/02/03 09:41:37 othyro Exp $
 #
 
-DATESTAMP=	20140105
-DISTNAME=	libcthreads-experimental-${DATESTAMP}
-PKGNAME=	${DISTNAME:S/experimental-//1}
+DISTNAME=	libcthreads-experimental-20150101
+GITHUB_PROJECT=	libcthreads
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+PKGNAME=	${DISTNAME:S/-experimental//1}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSdlBOeGZJeml1T1k/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libyal/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libcthreads/
+HOMEPAGE=	https://github.com/libyal/libcthreads/
 COMMENT=	Library for cross-platform C threads functions
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libcthreads-${DATESTAMP}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
