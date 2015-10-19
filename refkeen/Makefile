@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.1 2015/08/19 19:21:33 yhardy Exp $
 
-PKGNAME=	refkeen-20150313
 DISTNAME=	refkeen-src-20150313
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NY00123/}
 EXTRACT_SUFX=	.tar.bz2
 GITHUB_PROJECT=	refkeen
-GITHUB_RELEASE=	release-20150313
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NY00123/refkeen/
