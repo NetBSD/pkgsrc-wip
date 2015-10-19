@@ -11,6 +11,7 @@ MAINTAINER=		noud4@users.sourceforge.net
 HOMEPAGE=		http://wiki.openmoko.org/wiki/OpenMoko_under_QEMU
 COMMENT=		Qemu OpenMoko Neo1973 phone emulator
 
+BROKEN=			please convert this to svn-package.mk
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
 PKG_DESTDIR_SUPPORT=	none
