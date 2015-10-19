@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.6 2012/11/25 23:32:23 othyro Exp $
 #
 
-DISTNAME=		bcel-5.1
-PKGNAME=		java-bcel-5.1
+DISTNAME=		bcel-5.2
+PKGNAME=		java-bcel-5.2
 CATEGORIES=		devel
-MASTER_SITES=	http://apache.rediris.es/jakarta/bcel/binaries/
+MASTER_SITES=		http://archive.apache.org/dist/commons/bcel/binaries/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jakarta.apache.org/bcel/
@@ -14,7 +14,7 @@ NO_BUILD=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/bcel-5.1.jar ${DESTDIR}${PREFIX}/lib/java/bcel.jar
+	${INSTALL_DATA} ${WRKSRC}/bcel-5.2.jar ${DESTDIR}${PREFIX}/lib/java/bcel.jar
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java-bcel/
 	${CP} -rf ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/java-bcel/
 
