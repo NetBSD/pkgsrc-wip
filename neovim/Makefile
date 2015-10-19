@@ -20,8 +20,8 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
-DEPENDS+=       ${LUA_PKGPREFIX}-MessagePack:../../wip/lua-MessagePack
-DEPENDS+=       ${LUA_PKGPREFIX}-lpeg:../../devel/lua-lpeg
+DEPENDS+=       ${LUA_PKGPREFIX}-MessagePack-[0-9]*:../../wip/lua-MessagePack
+DEPENDS+=       ${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 
 .include "options.mk"
 

@@ -47,8 +47,8 @@ LICENSE=        gnu-agpl-v3
 # rails hints
 # http://guides.rubyonrails.org/getting_started.html
 
-DEPENDS+=	${RUBY_PKGPREFIX}-rubygems:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-bundler:../../misc/ruby-bundler
+DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
+DEPENDS+=	${RUBY_PKGPREFIX}-bundler-[0-9]*:../../misc/ruby-bundler
 
 # TODO: package and depend on all required gems:
 # http://wiki.diaspora-project.org/wiki/Required_Gems_Overview

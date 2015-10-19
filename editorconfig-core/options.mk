@@ -10,7 +10,7 @@ PLIST_VARS+=		doc
 ### Build and install html documentation and man pages
 ###
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+= doxygen:../../devel/doxygen
+BUILD_DEPENDS+= doxygen-[0-9]*:../../devel/doxygen
 CMAKE_ARGS+=	-DBUILD_DOCUMENTATION=ON
 CMAKE_ARGS+=    -DINSTALL_HTML_DOC=ON
 PLIST.doc=	yes

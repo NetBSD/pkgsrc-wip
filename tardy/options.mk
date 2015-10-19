@@ -14,5 +14,5 @@ PKG_SUGGESTED_OPTIONS=
 ### testing support
 ###
 .if !empty(PKG_OPTIONS:Mtesting)
-DEPENDS+=	gcpio:../../archivers/gcpio
+DEPENDS+=	gcpio-[0-9]*:../../archivers/gcpio
 .endif

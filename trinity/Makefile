@@ -36,7 +36,7 @@ MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pax perl
+USE_TOOLS+=	gmake pax perl bash:run
 REPLACE_SH=	trinity-plugins/collectl/make_data_files.sh \
 		trinity-plugins/collectl/plot.sh \
 		trinity-plugins/collectl/timetable.sh \
@@ -102,7 +102,6 @@ DATADIR=	${PREFIX}/share/trinity
 DOCSDIR=	${PREFIX}/share/doc/trinity
 
 # Add p4-sys-cpu for CPU_MAX?
-DEPENDS+=	bash:../../shells/bash
 
 LIBEXEC_DIR=	${PREFIX}/libexec/trinity
 PLUGINS_DIR=	${LIBEXEC_DIR}/trinity-plugins

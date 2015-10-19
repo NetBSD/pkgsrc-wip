@@ -76,7 +76,7 @@ CONFIGURE_ARGS+=	--with-libdkim=${PREFIX:Q}
 .if empty(PKG_OPTIONS:Mp0f)
 CONFIGURE_ARGS+=	--disable-p0f
 .else
-DEPENDS+=		p0f:../../security/p0f
+DEPENDS+=		p0f-[0-9]*:../../security/p0f
 
 CONFIGURE_ARGS+=	--with-p0f=${PREFIX:Q}
 .endif
@@ -87,7 +87,7 @@ CONFIGURE_ARGS+=	--with-p0f=${PREFIX:Q}
 .if empty(PKG_OPTIONS:Mspamassassin)
 CONFIGURE_ARGS+=	--disable-p0f
 .else
-DEPENDS+=		spamassassin:../../mail/spamassassin
+DEPENDS+=		spamassassin-[0-9]*:../../mail/spamassassin
 CONFIGURE_ARGS+=	--enable-spamassassin
 .endif
 

@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	python
 ### Support Python (add dependency)
 ###
 .  if !empty(PKG_OPTIONS:Mpython)
-DEPENDS+=       ${PYPKGPREFIX}-neovim:../../wip/py-neovim
+DEPENDS+=       ${PYPKGPREFIX}-neovim-[0-9]*:../../wip/py-neovim
 
 .include "../../lang/python/pyversion.mk"
 .  endif

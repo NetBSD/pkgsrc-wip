@@ -23,8 +23,8 @@ SUBST_FILES.prefix=	${WRKSRC}/fbsd2pkg
 SUBST_SED.prefix=	\
 	's|fbsd2pkg.awk|${PREFIX}/libexec/fbsd2pkg/fbsd2pkg.awk|g'
 
-DEPENDS+=	createbuildlink:../../pkgtools/createbuildlink \
-		pkglint:../../pkgtools/pkglint
+DEPENDS+=	createbuildlink-[0-9]*:../../pkgtools/createbuildlink \
+		pkglint-[0-9]*:../../pkgtools/pkglint
 
 do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/libexec/fbsd2pkg

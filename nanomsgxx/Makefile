@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+=	waf wscript
 MAKE_ENV+=		PYTHON=${PYTHONBIN}
-BUILD_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-expat:../../textproc/py-expat
+BUILD_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-expat-[0-9]*:../../textproc/py-expat
 
 do-configure:
 	cd ${WRKSRC} && env ${MAKE_ENV} ./waf configure
