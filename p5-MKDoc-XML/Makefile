@@ -9,8 +9,6 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/MKDoc-XML/
 COMMENT=		Suite of low level XML processing modules
 
-PKG_DESTDIR_SUPPORT=	none
-
 PERL5_PACKLIST=		auto/MKDoc/XML/.packlist
 
 .include "../../lang/perl5/module.mk"
