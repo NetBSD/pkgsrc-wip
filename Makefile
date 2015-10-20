@@ -154,6 +154,7 @@ SUBDIR+=	arxlibertatis
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
+SUBDIR+=	assimp
 SUBDIR+=	aten
 SUBDIR+=	atftp
 SUBDIR+=	atlas
