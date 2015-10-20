@@ -11,7 +11,7 @@ HOMEPAGE=	http://setconf.roboticoverlords.org/
 COMMENT=	Small utility to change settings in configuration textfiles
 LICENSE=	gnu-gpl-v2
 
-PYTHON_REPLACE+=	setconf.py
+REPLACE_PYTHON+=	setconf.py
 
 WRKSRC=	${WRKDIR}/setconf-${PKGVERSION_NOREV}
 
