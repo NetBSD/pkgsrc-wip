@@ -11,15 +11,10 @@ HOMEPAGE=	http://setconf.roboticoverlords.org/
 COMMENT=	Small utility to change settings in configuration textfiles
 LICENSE=	gnu-gpl-v2
 
-SUBST_CLASSES+=		path
-SUBST_SED.path=		-e "s,/usr/bin/python2,${PYTHONBIN},"
-SUBST_MESSAGE.path=	Fixing path to python.
-SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	setconf.py
+PYTHON_REPLACE+=	setconf.py
 
 WRKSRC=	${WRKDIR}/setconf-${PKGVERSION_NOREV}
 
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 AUTO_MKDIRS=	yes
