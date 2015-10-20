@@ -68,7 +68,7 @@ MOZILLA_NAME=	Browser
 SUBST_CLASSES+=		sys-dic
 SUBST_STAGE.sys-dic=	pre-configure
 SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
-SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/src/mozHunspell.cpp
+SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
 
 pre-configure:

@@ -4,10 +4,10 @@ Part of https://bugzilla.mozilla.org/show_bug.cgi?id=1026499:
 Make sure storage provided for attributes is properly aligned
 in the generated C++ code.
 
---- ipc/ipdl/ipdl/cxx/ast.py.orig	2014-07-17 01:45:18.000000000 +0000
+--- ipc/ipdl/ipdl/cxx/ast.py.orig	2015-10-20 08:24:26.000000000 +0000
 +++ ipc/ipdl/ipdl/cxx/ast.py
-@@ -336,12 +336,13 @@ Type.VOID = Type('void')
- Type.VOIDPTR = Type('void', ptr=1)
+@@ -340,12 +340,13 @@ Type.VOIDPTR = Type('void', ptr=1)
+ Type.AUTO = Type('auto')
  
  class TypeArray(Node):
 -    def __init__(self, basetype, nmemb):
