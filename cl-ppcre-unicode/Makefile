@@ -13,7 +13,8 @@ COMMENT=	CL-PPCRE-UNICODE is the CL-PPCRE package with Unicode support
 LICENSE= 	modified-bsd
 
 WRKSRC=			${WRKDIR}/${DISTNAME}-${VERSION}
-DEPENDS+=		${LISP_PREFIX}-ppcre-${VERSION}-[0-9]*:../../wip/cl-ppcre
+
+DEPENDS+=		${LISP_PREFIX}-ppcre-${VERSION}{,nb*}:../../wip/cl-ppcre
 DEPENDS+=		${LISP_PREFIX}-unicode-[0-9]*:../../wip/cl-unicode
 
 .include "options.mk"

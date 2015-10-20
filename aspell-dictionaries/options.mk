@@ -14,7 +14,7 @@ DEPENDS+=	aspell-br>=0.50.2:../../textproc/aspell-br
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ca)
-DEPENDS+=	aspell-ca>=20040130.1:../../textproc/aspell-ca
+DEPENDS+=	aspell-ca>=2.1.5.1:../../textproc/aspell-ca
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-cs)
