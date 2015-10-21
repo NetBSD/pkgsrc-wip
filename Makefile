@@ -423,6 +423,7 @@ SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
 SUBDIR+=	darcs-to-git
 SUBDIR+=	darkcoin
+SUBDIR+=	dart
 SUBDIR+=	dasm
 SUBDIR+=	datapipe
 SUBDIR+=	dates
