@@ -87,21 +87,36 @@ _GIT_TAG.${repo}=	${GIT_TAG.${repo}}
 .  elif defined(GIT_TAG)
 _GIT_TAG_FLAG.${repo}=	-r${GIT_TAG}
 _GIT_TAG.${repo}=	${GIT_TAG}
+.  else
+# determine the default branch name (HEAD pointer)
+_GIT_HEAD_PTR_SHA1_CMD=					\
+	${SETENV} ${_GIT_ENV}				\
+	${_GIT_CMD} ls-remote				\
+	${GIT_REPO.${repo}:Q}				\
+	| grep '[^[:graph:]]HEAD[^[:graph:]]*$$'	\
+	| cut -f1
+_GIT_HEAD_PTR_SHA1=	${_GIT_HEAD_PTR_SHA1_CMD:sh}
+# dereference HEAD and get a name of the default branch
+_GIT_DEREF_HEAD_PTR_SHA1_CMD=				\
+	${SETENV} ${_GIT_ENV}				\
+	${_GIT_CMD} ls-remote				\
+	${GIT_REPO.${repo}:Q}				\
+	| grep -v '[^[:graph:]]HEAD[^[:graph:]]*$$'	\
+	| grep "${_GIT_HEAD_PTR_SHA1}"			\
+	| cut -f2					\
+	| sed 's!^refs/heads/!!'
+${_GIT_DEREF_HEAD_PTR_SHA1_CMD}
+GIT_BRANCH.${repo}=	${_GIT_DEREF_HEAD_PTR_SHA1_CMD:sh}
+_GIT_TAG_FLAG.${repo}=	--branch ${GIT_BRANCH.${repo}}
+_GIT_TAG.${repo}=	${GIT_BRANCH.${repo}}
 .  endif
 
 # Cache support:
 #   cache file name
 .  if defined(GIT_BRANCH.${repo})
-_GIT_DISTNAME_SHA1_CMD= \
-	${SETENV} ${_GIT_ENV}				\
-	${_GIT_CMD} ls-remote				\
-	${GIT_REPO.${repo}:Q}				\
-	| grep refs/heads/${GIT_BRANCH.${repo}:Q} 	\
-	| cut -f1
-_GIT_DISTNAME_SHA1=	${_GIT_DISTNAME_SHA1_CMD:sh}
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_DISTNAME_SHA1:Q}.tar.gz
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${GIT_BRANCH.${repo}:Q:S,/,_,}.tar.gz
 .  else
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}:Q}.tar.gz
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}:Q:S,/,_,}.tar.gz
 .  endif
 
 #   command to extract cache file
