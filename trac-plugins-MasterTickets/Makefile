@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.14 2015/08/04 20:04:16 thomasklausner Exp $
 
-UPSTREAM_VERSION=	3.0.4
+UPSTREAM_VERSION=	3.90
 DISTNAME=	TracMasterTickets-${UPSTREAM_VERSION}
 VERSION=	${UPSTREAM_VERSION}.${SVN_TAG.mastertickets}
 PKGNAME=	trac-plugins-MasterTickets-${VERSION}
@@ -20,8 +20,14 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.0.4/r12946
 
 SVN_REPOSITORIES=		mastertickets
 SVN_ROOT.mastertickets=		http://trac-hacks.org/svn/masterticketsplugin/trunk
-# Upsteam has tagged 3.0.4 at r12946
-SVN_TAG.mastertickets=		12946
+
+# Upstream has labeled 4.0.0dev at r14695.  Since it appears release
+# are not forthcoming, I have adopted 3.90.rSVN to have version
+# numbers that can increase while staying under 4.
+SVN_TAG.mastertickets=		14695
+
+# TODO: do this more cleanly
+EGG_INFODIR=		TracMasterTickets-4.0.0dev_r0-py2.7.egg-info
 
 NO_CHECKSUM=	yes
 
