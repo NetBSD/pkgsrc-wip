@@ -103,6 +103,7 @@ _GIT_DEREF_HEAD_PTR_SHA1_CMD=				\
 	${GIT_REPO.${repo}:Q}				\
 	| grep -v '[^[:graph:]]HEAD[^[:graph:]]*$$'	\
 	| grep "${_GIT_HEAD_PTR_SHA1}"			\
+	| grep "[^[:graph:]]refs/heads/"		\
 	| cut -f2					\
 	| sed 's!^refs/heads/!!'
 ${_GIT_DEREF_HEAD_PTR_SHA1_CMD}
