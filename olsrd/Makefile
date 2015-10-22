@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2012/10/03 21:32:46 asau Exp $
 #
 
-DISTNAME=	olsrd-0.6.8
+DISTNAME=	olsrd-0.6.8.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.olsr.org/releases/0.6/
 
@@ -17,18 +17,21 @@ USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_FLAGS+=ETCDIR=${DESTDIR}${PREFIX}/etc
+PKG_SYSCONFSUBDIR=olsrd
+
+MAKE_FLAGS+=ETCDIR=${DESTDIR}${PKG_SYSCONFDIR}
 MAKE_FLAGS+=MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=SBINDIR=${DESTDIR}${PREFIX}/sbin
-MAKE_FLAGS+=EXTRA_CPPFLAGS=-DETCDIR=\\\"${PREFIX}/etc\\\"
+MAKE_FLAGS+=EXTRA_CPPFLAGS=-DETCDIR=\\\"${PKG_SYSCONFDIR}\\\"
 
 EGDIR=	${PREFIX}/share/examples/olsrd
-CONF_FILES=	${EGDIR}/olsrd.conf ${PREFIX}/etc/olsrd/olsrd.conf
+CONF_FILES=	${EGDIR}/olsrd.conf ${PKG_SYSCONFDIR}/olsrd.conf
 INSTALLATION_DIRS=	${EGDIR}
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/files/olsrd.conf.default.lq		\
 		${DESTDIR}${EGDIR}/olsrd.conf
-	${RM} ${DESTDIR}${PREFIX}/etc/olsrd.conf
+	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/olsrd.conf
 
 .include "../../mk/bsd.pkg.mk"
