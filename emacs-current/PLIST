@@ -94,6 +94,7 @@ share/emacs/${PKGVERSION}/etc/FTP
 share/emacs/${PKGVERSION}/etc/GNU
 share/emacs/${PKGVERSION}/etc/GNUS-NEWS
 share/emacs/${PKGVERSION}/etc/HELLO
+share/emacs/${PKGVERSION}/etc/HISTORY
 share/emacs/${PKGVERSION}/etc/JOKES
 share/emacs/${PKGVERSION}/etc/LINUX-GNU
 share/emacs/${PKGVERSION}/etc/MACHINES
