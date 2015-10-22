@@ -1,9 +1,8 @@
 $NetBSD: distinfo,v 1.6 2012/09/28 22:44:11 khorben Exp $
 
-SHA1 (olsrd-0.6.1.tar.gz) = 9c2147bba8803e3265954f99e53a2a2255667ac8
-RMD160 (olsrd-0.6.1.tar.gz) = 5a5d721a6bcd369bb096e7a1dd796f7fa0b62d51
-Size (olsrd-0.6.1.tar.gz) = 783918 bytes
-SHA1 (patch-ab) = e26209d10d480c7e421fb9ff28b40fcad60d78fb
-SHA1 (patch-ac) = 594380f441b7e8b871bd37162eb92889b9d53668
-SHA1 (patch-ad) = 719d8eb1977583c473389786d60e61deb09eff42
-SHA1 (patch-src_cfgparser_local.mk) = 4c061c6c7d30b629f118aad5a7f2a25d30109c6a
+SHA1 (olsrd-0.6.8.tar.gz) = e86fbadcef146f36b0b518b32a158ee48d429b59
+RMD160 (olsrd-0.6.8.tar.gz) = 2d2bebd16489cdbc978fc5f1e5d0fea4c4ad2018
+SHA512 (olsrd-0.6.8.tar.gz) = d7e449b6895c32fe32c730b0fc1ff14d6d09451429142579b0f43bd1011a180dc04a0952c2278ee043da0288c9752a5c85f521d7c7763d3a79571878744356a0
+Size (olsrd-0.6.8.tar.gz) = 5781409 bytes
+SHA1 (patch-ad) = 1d4ffb957bab96732e05e5f94cf8193995386998
+SHA1 (patch-src_cfgparser_local.mk) = 1c0e2454360a8071ecbbd16a8f0e242d47d1028c

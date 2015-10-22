@@ -2,11 +2,11 @@ $NetBSD: patch-ad,v 1.3 2012/09/28 22:44:11 khorben Exp $
 
 Allowing the configuration files' directory to be re-defined
 
---- src/defs.h.orig	2010-04-08 12:50:26.000000000 +0000
+--- src/defs.h.orig	2014-12-29 11:17:09.000000000 +0000
 +++ src/defs.h
-@@ -60,9 +60,13 @@ extern const char olsrd_version[];
- extern const char build_date[];
- extern const char build_host[];
+@@ -60,9 +60,13 @@
+ #include "olsr_protocol.h"
+ #include "olsr_cfg.h"
  
 +#ifndef ETCDIR
 +#define ETCDIR "/etc"
@@ -14,8 +14,8 @@ Allowing the configuration files' directory to be re-defined
 +
  #ifndef OLSRD_GLOBAL_CONF_FILE
  #define OLSRD_CONF_FILE_NAME	"olsrd.conf"
--#define OLSRD_GLOBAL_CONF_FILE	"/etc/" OLSRD_CONF_FILE_NAME
-+#define OLSRD_GLOBAL_CONF_FILE	ETCDIR "/" OLSRD_CONF_FILE_NAME
- #endif
+-#define OLSRD_GLOBAL_CONF_FILE	"/etc/olsrd/" OLSRD_CONF_FILE_NAME
++#define OLSRD_GLOBAL_CONF_FILE	ETCDIR "/olsrd/" OLSRD_CONF_FILE_NAME
+ #endif /* OLSRD_GLOBAL_CONF_FILE */
  
  #define	MAXMESSAGESIZE		1500    /* max broadcast size */
