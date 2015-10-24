@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/28 01:33:35 mbowie Exp $
+@comment $NetBSD$
+doc/portfwd/COPYING
+doc/portfwd/CREDITS
+doc/portfwd/FAQ
+doc/portfwd/README
+doc/portfwd/TODO
+doc/portfwd/conf.txt
 man/man5/portfwd.cfg.5
 man/man8/portfwd.8
 sbin/portfwd
