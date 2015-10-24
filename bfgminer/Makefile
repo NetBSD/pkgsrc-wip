@@ -12,12 +12,14 @@ COMMENT=	Modular ASIC/FPGA Bitcoin miner
 LICENSE=	gnu-gpl-v3
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config bash
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-cpumining
 CONFIGURE_ARGS+=	--enable-scrypt
 PKGCONFIG_OVERRIDE+=	libblkmaker/libblkmaker_jansson.pc.in
+
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 CURSES_DEFAULT=	ncurses
 .include "../../mk/curses.buildlink3.mk"
