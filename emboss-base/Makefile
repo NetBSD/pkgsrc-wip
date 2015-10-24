@@ -20,17 +20,17 @@ post-patch:
 	${RM} -rf ${WRKSRC}/jemboss
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/emboss
-	${INSTALL_DATA} ${WRKSRC}/ajax/*.h ${PREFIX}/include/emboss
-	${INSTALL_DATA} ${WRKSRC}/nucleus/*.h ${PREFIX}/include/emboss
-	${INSTALL_DATA} ${WRKSRC}/plplot/*.h ${PREFIX}/include/emboss
-	${INSTALL_DATA_DIR} ${PREFIX}/share/EMBOSS/scripts
-	${INSTALL_DATA} ${WRKSRC}/plplot/lib/plstnd5.fnt ${PREFIX}/share/EMBOSS
-	${INSTALL_DATA} ${WRKSRC}/plplot/lib/plxtnd5.fnt ${PREFIX}/share/EMBOSS
-	${INSTALL_DATA} ${WRKSRC}/config.guess ${PREFIX}/share/EMBOSS/scripts
-	${INSTALL_DATA} ${WRKSRC}/config.sub ${PREFIX}/share/EMBOSS/scripts
-	${INSTALL_DATA} ${WRKSRC}/depcomp ${PREFIX}/share/EMBOSS/scripts
-	${INSTALL_DATA} ${WRKSRC}/install-sh ${PREFIX}/share/EMBOSS/scripts
-	${INSTALL_DATA} ${WRKSRC}/mkinstalldirs ${PREFIX}/share/EMBOSS/scripts
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/emboss
+	${INSTALL_DATA} ${WRKSRC}/ajax/*.h ${DESTDIR}${PREFIX}/include/emboss
+	${INSTALL_DATA} ${WRKSRC}/nucleus/*.h ${DESTDIR}${PREFIX}/include/emboss
+	${INSTALL_DATA} ${WRKSRC}/plplot/*.h ${DESTDIR}${PREFIX}/include/emboss
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/EMBOSS/scripts
+	${INSTALL_DATA} ${WRKSRC}/plplot/lib/plstnd5.fnt ${DESTDIR}${PREFIX}/share/EMBOSS
+	${INSTALL_DATA} ${WRKSRC}/plplot/lib/plxtnd5.fnt ${DESTDIR}${PREFIX}/share/EMBOSS
+	${INSTALL_DATA} ${WRKSRC}/config.guess ${DESTDIR}${PREFIX}/share/EMBOSS/scripts
+	${INSTALL_DATA} ${WRKSRC}/config.sub ${DESTDIR}${PREFIX}/share/EMBOSS/scripts
+	${INSTALL_DATA} ${WRKSRC}/depcomp ${DESTDIR}${PREFIX}/share/EMBOSS/scripts
+	${INSTALL_DATA} ${WRKSRC}/install-sh ${DESTDIR}${PREFIX}/share/EMBOSS/scripts
+	${INSTALL_DATA} ${WRKSRC}/mkinstalldirs ${DESTDIR}${PREFIX}/share/EMBOSS/scripts
 
 .include "../../mk/bsd.pkg.mk"
