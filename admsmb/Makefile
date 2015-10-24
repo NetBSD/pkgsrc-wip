@@ -4,10 +4,10 @@
 DISTNAME=	ADMsmb_0.3
 PKGNAME=	admsmb-0.3
 CATEGORIES=	security
-MASTER_SITES=	http://www.void.irq.org/
+MASTER_SITES=	https://dl.packetstormsecurity.net/groups/ADM/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.void.irq.org/
+HOMEPAGE=	https://packetstormsecurity.com/files/32604/ADMsmb_0.3.tar.gz.html
 COMMENT=	Security scanner for Samba
 LICENSE=	gnu-gpl-v2
 
