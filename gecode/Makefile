@@ -12,7 +12,9 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS=	gmake perl
+USE_TOOLS=	gmake perl bash
+
+CONFIG_SHELL=	${TOOLS_PATH.bash}
 
 CONFIGURE_ARGS+=--enable-examples=no
 
