@@ -28,6 +28,8 @@ CONFIGUE_ARGS+=	--with-javaos=${PKG_JAVA_HOME}/include/netbsd
 CONFIGUE_ARGS+=	--build=i386-netbsd
 CONFIGUE_ARGS+=	--prefix=${PREFIX}
 
+INSTALLATION_DIRS=	lib
+
 post-patch:
 	${SED} -e 's:@CROSSPKG@:${PREFIX}/lib:' \
 		${WRKSRC}/ajax/Makefile.in > \
