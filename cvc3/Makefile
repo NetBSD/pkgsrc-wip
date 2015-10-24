@@ -12,7 +12,9 @@ COMMENT=	Automatic theorem prover for SMT problems
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake bash perl
+USE_TOOLS+=	gmake bash perl bison
+
+CONFIGURE_ENV+=			ac_cv_prog_YACC="bison -y"
 
 SUBST_CLASSES+=                 fix-bash
 SUBST_STAGE.fix-bash=          	pre-configure
