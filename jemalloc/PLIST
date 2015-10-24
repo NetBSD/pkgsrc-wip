@@ -2,9 +2,9 @@
 bin/jemalloc.sh
 bin/jepprof
 include/jemalloc/jemalloc.h
-lib/libjemalloc.1.dylib
+lib/libjemalloc.1.${SOEXT}
 lib/libjemalloc.a
-lib/libjemalloc.dylib
+lib/libjemalloc.${SOEXT}
 lib/libjemalloc_pic.a
 man/man3/jemalloc.3
 share/doc/jemalloc/jemalloc.html

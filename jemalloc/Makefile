@@ -25,6 +25,15 @@ REPLACE_PERL=		bin/jepprof
 
 BUILD_TARGET=		all dist
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+SOEXT=			dylib
+.else
+SOEXT=			so
+.endif
+PLIST_SUBST+=		SOEXT=${SOEXT}
+
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 	cd ${WRKSRC} && mv bin/pprof bin/jepprof
