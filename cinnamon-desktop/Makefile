@@ -18,6 +18,7 @@ USE_LIBTOOL= yes
 USE_TOOLS+=  gmake pkg-config automake autoreconf intltool msgfmt
 
 BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
+BUILD_DEPENDS+=		gnome-common-[0-9]*:../../devel/gnome-common
 
 PKGCONFIG_OVERRIDE+=	libcinnamon-desktop/cinnamon-desktop.pc.in
 
