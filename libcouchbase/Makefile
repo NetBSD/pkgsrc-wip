@@ -14,6 +14,8 @@ USE_TOOLS+=	gmake unzip
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
+BROKEN= "configure: error: You need wget or curl in path to download the headers."
+
 CONFIGURE_ARGS+=	--disable-couchbasemock
 CONFIGURE_ARGS+=	--disable-static
 # Test framework automatically downloads Google Test.
