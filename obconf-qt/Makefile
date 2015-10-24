@@ -15,6 +15,7 @@ USE_TOOLS=	pkg-config
 # pkgsrc does not support qt4 variant
 CONFIGURE_ENV=	USE_QT5=ON
 
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../wm/openbox/buildlink3.mk"
