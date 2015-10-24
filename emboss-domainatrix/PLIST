@@ -7,8 +7,10 @@ bin/hmmgen
 bin/interface
 bin/libscan
 bin/pdbparse
+bin/pdbplus
 bin/pdbtosp
 bin/profgen
+bin/rocplot
 bin/scopalign
 bin/scopnr
 bin/scopparse
