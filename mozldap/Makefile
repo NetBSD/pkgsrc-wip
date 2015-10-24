@@ -55,6 +55,8 @@ CONFIGURE_ARGS+=        --with-pthreads
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 
+INSTALLATION_DIRS=	bin
+
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
