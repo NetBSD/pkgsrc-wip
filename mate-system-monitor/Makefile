@@ -16,6 +16,7 @@ TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
