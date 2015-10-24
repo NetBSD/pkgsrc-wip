@@ -3,9 +3,9 @@
 VERSION=	0.7.3
 DISTNAME=	libucl-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	-https://codeload.github.com/vstakhov/libucl/tar.gz/${VERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
-MAINTAINER=	cfkoch@users.sourceforge.net
+MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://github.com/vstakhov/libucl
 COMMENT=	Universal configuration library parser
 LICENSE=	2-clause-bsd
