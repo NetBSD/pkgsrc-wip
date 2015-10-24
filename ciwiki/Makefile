@@ -71,4 +71,10 @@ post-install:
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
+
+INTERACTIVE_STAGE+=	configure
+.if ${X11_TYPE} == "modular"
+DEPENDS+=		xterm>=1.0.1:../../x11/xterm
+.endif
+
 .include "../../mk/bsd.pkg.mk"
