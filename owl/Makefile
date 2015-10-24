@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		perl
 
 INSTALLATION_DIRS+=	share/doc/owl
 
