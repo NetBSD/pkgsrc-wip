@@ -3,10 +3,12 @@
 
 DISTNAME=		matanza-0.13
 CATEGORIES=		games
-MASTER_SITES=		http://bachue.com/matanza/
+MASTER_SITES=		http://web.archive.org/web/20071027182116/http://bachue.com/matanza/matanza-0.13.tar.gz
+#MASTER_SITES=		http://bachue.com/matanza/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://bachue.com/matanza/
+HOMEPAGE=		http://web.archive.org/web/20071226080243/http://bachue.com/matanza/
+#HOMEPAGE=		http://bachue.com/matanza/
 COMMENT=		Multiplayer space shooter ascii-art game
 
 PKG_DESTDIR_SUPPORT=	none
