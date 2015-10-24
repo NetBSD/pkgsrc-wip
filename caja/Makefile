@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	File manager for the MATE desktop
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
