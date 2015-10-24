@@ -1309,7 +1309,6 @@ SUBDIR+=	jabref
 SUBDIR+=	jacorb-lib
 SUBDIR+=	jad
 SUBDIR+=	jakarta-log4j
-SUBDIR+=	jakarta-oro
 SUBDIR+=	jakarta-struts
 SUBDIR+=	jalview
 SUBDIR+=	jamaica
