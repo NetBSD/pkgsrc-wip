@@ -4,7 +4,7 @@
 DISTNAME=	commons-beanutils-1.8.3-bin
 PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	http://mirrors.axint.net/apache//commons/beanutils/binaries/
+MASTER_SITES=	http://archive.apache.org/dist/commons/beanutils/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/beanutils/
