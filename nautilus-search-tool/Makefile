@@ -15,6 +15,9 @@ USE_TOOLS+=		pkg-config intltool
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 
+# for gnome-search-tool
+DEPENDS+=	gnome-utils>=2.26.0:../../misc/gnome-utils
+
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
