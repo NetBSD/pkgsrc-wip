@@ -16,6 +16,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/bstone-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS+=	bin share/doc/${PKGNAME}
 
