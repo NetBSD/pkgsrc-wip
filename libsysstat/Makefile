@@ -11,4 +11,5 @@ COMMENT=	Library used to query system info and statistics
 LICENSE=	gnu-lgpl-v2.1
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
