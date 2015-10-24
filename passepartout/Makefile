@@ -13,6 +13,7 @@ COMMENT=		Desktop publishing for X
 
 PKG_DESTDIR_SUPPORT=	none
 
+USE_LANGUAGES=		c++
 USE_TOOLS+=		gs:run
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
