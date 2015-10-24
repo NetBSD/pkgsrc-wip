@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config perl gm4
 USE_LANGUAGES=	c c++
+CXXFLAGS+=	-std=c++11
 
 PKGCONFIG_OVERRIDE+=	gdkglextmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtkglextmm.pc.in
