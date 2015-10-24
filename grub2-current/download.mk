@@ -6,6 +6,10 @@
 # translations), and generate the configure script with autogen.sh.
 #
 
+.if defined(BATCH)
+PKG_SKIP_REASON+=	"skipping bzr package in bulk build"
+.endif
+
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
 BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 BUILD_DEPENDS+=		autogen>=5.9:../../devel/autogen
