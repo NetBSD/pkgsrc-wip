@@ -8,3 +8,4 @@ EXTRACT_USING=	gtar
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
