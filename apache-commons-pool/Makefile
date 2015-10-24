@@ -4,7 +4,7 @@
 DISTNAME=	commons-pool-1.5.5-bin
 PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	${MASTER_SITE_APACHE:=/commons/pool/binaries/}
+MASTER_SITES=	http://archive.apache.org/dist/commons/pool/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/pool/
