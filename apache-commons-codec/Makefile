@@ -4,7 +4,7 @@
 DISTNAME=	commons-codec-1.7-bin
 PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	${MASTER_SITE_APACHE:=commons/codec/binaries/}
+MASTER_SITES=	http://archive.apache.org/dist/commons/codec/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/codec/
