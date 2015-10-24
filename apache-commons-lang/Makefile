@@ -4,7 +4,7 @@
 DISTNAME=	commons-lang-2.5-bin
 PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	http://apache.inetbridge.net//commons/lang/binaries/
+MASTER_SITES=	http://archive.apache.org/dist/commons/lang/binaries/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/lang/
