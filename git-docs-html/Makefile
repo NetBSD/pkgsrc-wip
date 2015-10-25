@@ -14,7 +14,7 @@ INSTALL_TARGET=		install-html
 
 UNLIMIT_RESOURCES+=	datasize
 
-USE_TOOLS+=             perl
+USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 
 .include "../../devel/git/Makefile.common"
