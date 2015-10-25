@@ -1,8 +1,8 @@
 $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 
---- configure.in.orig	2015-08-16 14:08:48.000000000 +0000
+--- configure.in.orig	2015-10-25 13:54:45.000000000 +0000
 +++ configure.in
-@@ -3550,11 +3550,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3491,11 +3491,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -5010,6 +5006,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -4989,6 +4985,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5136,6 +5135,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
+@@ -5115,6 +5114,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
      [ac_cv_c_attribute_aligned],
      [ac_cv_c_attribute_aligned=0
       CFLAGS_save="${CFLAGS}"
@@ -83,7 +83,7 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
       CFLAGS="${CFLAGS} -Werror"
       for ac_cv_c_attr_align_try in 64 32 16 8; do
         echo "trying $ac_cv_c_attr_align_try"
-@@ -5153,6 +5203,89 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5132,6 +5182,53 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -134,46 +134,10 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 +AC_SUBST(MOZ_NATIVE_SPEEX)
 +
 +dnl ========================================================
-+dnl Check for libsoundtouch
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-soundtouch,
-+[  --with-system-soundtouch Use system libsoundtouch (located with pkgconfig)],
-+MOZ_NATIVE_SOUNDTOUCH=1,
-+MOZ_NATIVE_SOUNDTOUCH=)
-+
-+if test -n "$MOZ_NATIVE_SOUNDTOUCH"; then
-+    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.8.0)
-+
-+    AC_LANG_SAVE
-+    AC_LANG_CPLUSPLUS
-+    _SAVE_CXXFLAGS=$CXXFLAGS
-+    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
-+    AC_CACHE_CHECK(for soundtouch sample type,
-+                   ac_cv_soundtouch_sample_type,
-+                   [AC_TRY_COMPILE([#include <SoundTouch.h>
-+                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
-+                                    #error soundtouch expects float samples
-+                                    #endif],
-+                                   [],
-+                                   [ac_cv_soundtouch_sample_type=short],
-+                                   [ac_cv_soundtouch_sample_type=float])])
-+    CXXFLAGS=$_SAVE_CXXFLAGS
-+    AC_LANG_RESTORE
-+
-+    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
-+         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
-+        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
-+    fi
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
-+
-+dnl ========================================================
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -8131,6 +8264,48 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8131,6 +8228,48 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================

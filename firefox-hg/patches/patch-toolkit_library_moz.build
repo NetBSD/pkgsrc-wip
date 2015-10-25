@@ -1,8 +1,8 @@
 $NetBSD: patch-toolkit_library_moz.build,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
 
---- toolkit/library/moz.build.orig	2014-09-28 08:30:04.000000000 +0000
+--- toolkit/library/moz.build.orig	2015-10-25 13:54:43.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -230,6 +230,27 @@ if CONFIG['MOZ_NATIVE_PNG']:
+@@ -220,6 +220,24 @@ if CONFIG['MOZ_NATIVE_PNG']:
  if CONFIG['MOZ_NATIVE_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
@@ -24,13 +24,10 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.1 2014/09/29 10:46:25 thomasklausne
 +if CONFIG['MOZ_NATIVE_SPEEX']:
 +    OS_LIBS += CONFIG['MOZ_SPEEX_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
-+    OS_LIBS += CONFIG['MOZ_SOUNDTOUCH_LIBS']
-+
  if CONFIG['MOZ_NATIVE_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -239,6 +260,15 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
+@@ -229,6 +247,15 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  

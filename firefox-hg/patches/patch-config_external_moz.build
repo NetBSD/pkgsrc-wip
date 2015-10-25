@@ -1,8 +1,8 @@
 $NetBSD: patch-config_external_moz.build,v 1.5 2015/06/04 13:11:03 thomasklausner Exp $
 
---- config/external/moz.build.orig	2015-06-04 12:35:49.000000000 +0000
+--- config/external/moz.build.orig	2015-10-25 13:54:45.000000000 +0000
 +++ config/external/moz.build
-@@ -19,10 +19,16 @@ if CONFIG['MOZ_UPDATER']:
+@@ -20,10 +20,16 @@ if CONFIG['MOZ_UPDATER']:
  # There's no "native brotli" yet, but probably in the future...
  external_dirs += ['modules/brotli']
  
@@ -21,15 +21,12 @@ $NetBSD: patch-config_external_moz.build,v 1.5 2015/06/04 13:11:03 thomasklausne
      external_dirs += ['media/libtremor']
  
  if CONFIG['MOZ_WEBM']:
-@@ -46,15 +52,17 @@ if CONFIG['MOZ_WEBSPEECH_POCKETSPHINX']:
+@@ -47,13 +53,13 @@ if CONFIG['MOZ_WEBSPEECH_POCKETSPHINX']:
          'media/pocketsphinx',
      ]
  
 +if not CONFIG['MOZ_NATIVE_SPEEX']:
 +    external_dirs += ['media/libspeex_resampler']
-+
-+if not CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
-+    external_dirs += ['media/libsoundtouch']
 +
  external_dirs += [
      'media/kiss_fft',
@@ -39,7 +36,5 @@ $NetBSD: patch-config_external_moz.build,v 1.5 2015/06/04 13:11:03 thomasklausne
 -    'media/libtheora',
 -    'media/libspeex_resampler',
      'media/libstagefright',
--    'media/libsoundtouch',
+     'media/libsoundtouch',
  ]
- 
- DIRS += ['../../' + i for i in external_dirs]
