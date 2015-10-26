@@ -1,14 +1,15 @@
 # $NetBSD: Makefile,v 1.10 2013/07/06 16:56:24 othyro Exp $
 #
 
-DISTNAME=	pidgin-sipe-1.16.0
+DISTNAME=	pidgin-sipe-1.20.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sipe/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	yacht@users.sourceforge.net
 HOMEPAGE=	http://sipe.sourceforge.net/
 COMMENT=	Pidgin plugin for Microsoft Office Communicator
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
