@@ -40,11 +40,6 @@ SUBST_SED.nostromo+=	-e 's,${VAR_NOSTROMO},${PREFIX}/nostromo,g'
 SUBST_SED.nostromo+=	-e 's,${USR_LOCAL},${PREFIX},g'
 SUBST_STAGE.nostromo=	post-patch
 
-SUBST_CLASSES+=		perl
-SUBST_FILES.perl=	htdocs/cgi-bin/printenv
-SUBST_SED.perl+=	-e 's,/usr/bin/perl,/usr/bin/env perl,g'
-SUBST_STAGE.perl=	post-patch
-
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/nhttpd/nhttpd \
 		${DESTDIR}${PREFIX}/sbin/
