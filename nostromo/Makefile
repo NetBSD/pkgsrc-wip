@@ -7,15 +7,14 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.nazgul.ch/dev/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	ast@marabu.ch
+MAINTAINER=	ast@NetBSD.org
 HOMEPAGE=	http://www.nazgul.ch/dev_nostromo.html
 COMMENT=	Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	sed
-# gcc version 4.5.3 (NetBSD nb2 20110806) -O2 causes index out of bounds
-CFLAGS+= -O
+USE_TOOLS+=	perl
+REPLACE_PERL=	htdocs/cgi-bin/printenv
 
 RCD_SCRIPTS=	nostromo
 EGDIR=		${DESTDIR}/${PREFIX}/nostromo
