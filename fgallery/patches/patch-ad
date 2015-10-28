@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
+$NetBSD: patch-ad,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
 Handle discovery/checking of external commands uniformly
 --- fgallery.orig	2015-10-11 11:16:27.000000000 +0200
 +++ fgallery	2015-10-11 11:11:52.000000000 +0200

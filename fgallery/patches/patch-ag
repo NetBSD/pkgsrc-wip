@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
+$NetBSD: patch-ag,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
 Make the (optional) download/date area slightly less intrusive
 --- view/index.js.orig	2015-10-28 14:10:55.000000000 +0100
 +++ view/index.js	2015-10-28 14:14:47.000000000 +0100
