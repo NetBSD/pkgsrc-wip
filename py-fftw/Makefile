@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://pypi.python.org/packages/source/P/PyFFTW3/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/P/PyFFTW3/
+HOMEPAGE=	https://pypi.python.org/pypi/PyFFTW3
 COMMENT=	Python bindings to the FFTW3 C-library
 LICENSE=	gnu-gpl-v3
 
