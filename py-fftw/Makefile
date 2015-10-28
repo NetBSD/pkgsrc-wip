@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.6 2012/10/07 11:54:33 asau Exp $
-#
 
 DISTNAME=	PyFFTW3-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/FFTW/fftw/S/3//}
@@ -14,10 +13,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c
 
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.2.1
 
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
