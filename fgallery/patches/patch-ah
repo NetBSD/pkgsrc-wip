@@ -1,5 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
+$NetBSD$
+
 Make the (optional) download/date text slightly less conspicuous
+
 --- view/index.css.orig	2015-10-28 14:11:00.000000000 +0100
 +++ view/index.css	2015-10-28 14:11:35.000000000 +0100
 @@ -105,6 +105,7 @@

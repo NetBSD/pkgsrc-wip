@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/15 08:36:06 astforge Exp $
+@comment $NetBSD$
 man/man8/nhttpd.8
 nostromo/conf/mimes
 nostromo/conf/nhttpd.conf-dist

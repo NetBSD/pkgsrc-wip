@@ -1,4 +1,4 @@
-$NetBSD: patch-src-http_path-main,v 1.1 2013/09/15 08:36:06 astforge Exp $
+$NetBSD$
 
 http_path is not needed (PATH is responsibility of cgi-bin programs)
 

@@ -1,5 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
-Path of fgallery/view code
+$NetBSD$
+
+Path to fgallery/view code
+
 --- fgallery.orig	2015-10-03 21:35:52.000000000 +0200
 +++ fgallery	2015-10-03 21:39:40.000000000 +0200
 @@ -20,7 +20,6 @@

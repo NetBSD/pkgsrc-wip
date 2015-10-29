@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/09/15 08:36:06 astforge Exp $
-#
+# $NetBSD$
 
 DISTNAME=       nostromo-1.9.5
 PKGREVISION=    2

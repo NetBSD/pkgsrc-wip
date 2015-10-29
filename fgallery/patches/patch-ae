@@ -1,5 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2015/10/11 19:04:20 ast Exp $
-Pass a code ref as expected
+$NetBSD$
+
+Pass a code ref to subroutine "any" as expected
+
 --- fgallery.orig	2014-09-05 16:33:54.000000000 +0200
 +++ fgallery	2015-10-02 11:10:05.000000000 +0200
 @@ -349,7 +354,7 @@

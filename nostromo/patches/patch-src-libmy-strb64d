@@ -1,6 +1,6 @@
-$NetBSD: patch-src-libmy-strb64d,v 1.1 2013/09/15 08:36:06 astforge Exp $
+$NetBSD$
 
-Better style, clang fails to compile here
+Better C style; clang failed to compile here
 
 --- src/libmy/strb64d.c.orig	2013-09-10 09:58:37.814139989 +0200
 +++ src/libmy/strb64d.c	2013-09-10 10:00:47.489957357 +0200

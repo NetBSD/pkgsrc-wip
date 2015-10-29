@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (facedetect-1.0-d4a226674c71e89bc171f7b66de997acc1d82b72.tar.gz) = 28c47eacf59f21f38dd18562aa2b81d43e71d1cf
 RMD160 (facedetect-1.0-d4a226674c71e89bc171f7b66de997acc1d82b72.tar.gz) = b8ac9ee08afdd041468334ccdca073c47fdcf7ff
+SHA512 (facedetect-1.0-d4a226674c71e89bc171f7b66de997acc1d82b72.tar.gz) = aaeedff0a286f549fdcaf13d2150ce4162f4ea7564f50384f781f6f8c0cdb59639052347a98e4ba3218f6fecc52a848fe9281e5a453126efd6710dd1452303dc
 Size (facedetect-1.0-d4a226674c71e89bc171f7b66de997acc1d82b72.tar.gz) = 119021 bytes

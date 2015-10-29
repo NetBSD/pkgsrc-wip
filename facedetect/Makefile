@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/10/03 21:32:48 ast Exp $
-#
+# $NetBSD$
 
 PKGBASE=        facedetect
 DISTNAME=       ${PKGBASE}-1.0
