@@ -1,23 +1,16 @@
-Ledger is a powerful, double-entry accounting system that is accessed
-from the UNIX command-line. This may put off some users - as there
-is no flashy UI - but for those who want unparalleled reporting
-access to their data, there really is no alternative.
+Double-entry accounting system with a command-line reporting interface
+http://www.ledger-cli.org
 
-Ledger never creates or modifies your data. Your entries are kept
-in a text file that you maintain, and you can rest assured, no
-automated tool will ever change that data.
+Ledger is a powerful, double-entry accounting system that is accessed from the
+UNIX command-line. This may put off some users, since there is no flashy UI, but
+for those who want unparalleled reporting access to their data there are few
+alternatives.
 
-Ledger is 100% currency-agnostic. You can store multiple currencies
-in any account, convert between them, or even pay in one currency
-and receive change in another.
+Ledger uses text files for input. It reads the files and generates reports;
+there is no other database or stored state. To use Ledger, you create a file of
+your account names and transactions, run from the command line with some options
+to specify input and requested reports, and get output. The output is generally
+plain text, though you could generate a graph or html instead. Ledger is simple
+in concept, surprisingly rich in ability, and easy to use.
 
-Ledger is international. Although UTF8 support is not quite there
-yet, Ledger uses ISO format dates, attaches no meaning to the naming
-of accounts, and can accept data in either US or European decimal
-formats. It will report currencies back to you following the manner
-of your own entries.
-
-Ledger uses a simple set of base commands which can be extended in
-countless ways. You can create monthly reports, average reports,
-check account balances, reconcile accounts, keep track of capital
-gains on stocks, etc.
+#Above text taken from the Ledger README
