@@ -11,7 +11,6 @@ $_rc_subr_loaded . /etc/rc.subr
 name="haproxy"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-conf_file="@PKG_SYSCONFDIR@/${name}.cfg"
 required_files="${conf_file}"
 command_args="-f ${conf_file}"
 extra_commands="configtest"

@@ -4,6 +4,3 @@ sbin/haproxy
 sbin/haproxy-systemd-wrapper
 share/doc/haproxy-devel/architecture.txt
 share/doc/haproxy-devel/configuration.txt
-share/doc/haproxy-devel/haproxy-en.txt
-share/doc/haproxy-devel/haproxy-fr.txt
-share/examples/haproxy-devel/haproxy.cfg
