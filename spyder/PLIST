@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2015/01/01 17:35:49 jihbed Exp $
-bin/spyder
+@comment $NetBSD$
+bin/spyder2.7
 bin/spyder_win_post_install.py
 ${PYSITELIB}/spyderlib/__init__.py
 ${PYSITELIB}/spyderlib/__init__.pyc
@@ -188,6 +188,8 @@ ${PYSITELIB}/spyderlib/images/arredit.png
 ${PYSITELIB}/spyderlib/images/arrow.png
 ${PYSITELIB}/spyderlib/images/bold.png
 ${PYSITELIB}/spyderlib/images/browser.png
+${PYSITELIB}/spyderlib/images/chevron-left.png
+${PYSITELIB}/spyderlib/images/chevron-right.png
 ${PYSITELIB}/spyderlib/images/console/clear.png
 ${PYSITELIB}/spyderlib/images/console/cmdprompt_t.png
 ${PYSITELIB}/spyderlib/images/console/console.png
@@ -254,7 +256,6 @@ ${PYSITELIB}/spyderlib/images/editor/unindent.png
 ${PYSITELIB}/spyderlib/images/editor/versplit.png
 ${PYSITELIB}/spyderlib/images/editor/warning.png
 ${PYSITELIB}/spyderlib/images/editor/wng_list.png
-${PYSITELIB}/spyderlib/images/ext_tools.png
 ${PYSITELIB}/spyderlib/images/file/fileclose.png
 ${PYSITELIB}/spyderlib/images/file/filecloseall.png
 ${PYSITELIB}/spyderlib/images/file/fileimport.png
@@ -375,6 +376,7 @@ ${PYSITELIB}/spyderlib/ipythonconfig.pyc
 ${PYSITELIB}/spyderlib/ipythonconfig.pyo
 ${PYSITELIB}/spyderlib/locale/es/LC_MESSAGES/spyderlib.mo
 ${PYSITELIB}/spyderlib/locale/fr/LC_MESSAGES/spyderlib.mo
+${PYSITELIB}/spyderlib/mac_stylesheet.qss
 ${PYSITELIB}/spyderlib/otherplugins.py
 ${PYSITELIB}/spyderlib/otherplugins.pyc
 ${PYSITELIB}/spyderlib/otherplugins.pyo
@@ -745,12 +747,18 @@ ${PYSITELIB}/spyderlib/utils/inspector/tutorial.rst
 ${PYSITELIB}/spyderlib/utils/introspection/__init__.py
 ${PYSITELIB}/spyderlib/utils/introspection/__init__.pyc
 ${PYSITELIB}/spyderlib/utils/introspection/__init__.pyo
-${PYSITELIB}/spyderlib/utils/introspection/base.py
-${PYSITELIB}/spyderlib/utils/introspection/base.pyc
-${PYSITELIB}/spyderlib/utils/introspection/base.pyo
+${PYSITELIB}/spyderlib/utils/introspection/fallback_plugin.py
+${PYSITELIB}/spyderlib/utils/introspection/fallback_plugin.pyc
+${PYSITELIB}/spyderlib/utils/introspection/fallback_plugin.pyo
+${PYSITELIB}/spyderlib/utils/introspection/jedi_plugin.py
+${PYSITELIB}/spyderlib/utils/introspection/jedi_plugin.pyc
+${PYSITELIB}/spyderlib/utils/introspection/jedi_plugin.pyo
 ${PYSITELIB}/spyderlib/utils/introspection/module_completion.py
 ${PYSITELIB}/spyderlib/utils/introspection/module_completion.pyc
 ${PYSITELIB}/spyderlib/utils/introspection/module_completion.pyo
+${PYSITELIB}/spyderlib/utils/introspection/plugin_manager.py
+${PYSITELIB}/spyderlib/utils/introspection/plugin_manager.pyc
+${PYSITELIB}/spyderlib/utils/introspection/plugin_manager.pyo
 ${PYSITELIB}/spyderlib/utils/introspection/rope_plugin.py
 ${PYSITELIB}/spyderlib/utils/introspection/rope_plugin.pyc
 ${PYSITELIB}/spyderlib/utils/introspection/rope_plugin.pyo
@@ -826,6 +834,9 @@ ${PYSITELIB}/spyderlib/widgets/externalshell/__init__.pyo
 ${PYSITELIB}/spyderlib/widgets/externalshell/baseshell.py
 ${PYSITELIB}/spyderlib/widgets/externalshell/baseshell.pyc
 ${PYSITELIB}/spyderlib/widgets/externalshell/baseshell.pyo
+${PYSITELIB}/spyderlib/widgets/externalshell/inputhooks.py
+${PYSITELIB}/spyderlib/widgets/externalshell/inputhooks.pyc
+${PYSITELIB}/spyderlib/widgets/externalshell/inputhooks.pyo
 ${PYSITELIB}/spyderlib/widgets/externalshell/introspection.py
 ${PYSITELIB}/spyderlib/widgets/externalshell/introspection.pyc
 ${PYSITELIB}/spyderlib/widgets/externalshell/introspection.pyo
@@ -952,3 +963,4 @@ ${PYSITELIB}/spyderplugins/widgets/pylintgui.py
 ${PYSITELIB}/spyderplugins/widgets/pylintgui.pyc
 ${PYSITELIB}/spyderplugins/widgets/pylintgui.pyo
 share/applications/spyder.desktop
+share/pixmaps/spyder.png

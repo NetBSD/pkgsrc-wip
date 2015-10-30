@@ -1,32 +1,30 @@
-# $NetBSD: Makefile,v 1.17 2015/01/01 17:35:49 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	spyder-2.3.2
-CATEGORIES=	devel python
-MASTER_SITES=	https://bitbucket.org/spyder-ide/spyderlib/downloads/
+DISTNAME=	spyder-2.3.7
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/spyder/}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://bitbucket.org/spyder-ide/spyderlib/
-COMMENT=	Scientific PYthon Development EnviRonment
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	https://github.com/spyder-ide/spyder/wiki
+COMMENT= 	Scientific PYthon Development EnviRonment, alternative to IDLE
 LICENSE=	mit
 
+DEPENDS+= 	${PYPKGPREFIX}-rope>=0.9.3:../../devel/py-rope
+DEPENDS+= 	${PYPKGPREFIX}-sphinx>=1.2.3:../../textproc/py-sphinx
+
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c
+USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG= yes
-
-INSTALLATION_DIRS= share/applications
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
-	${CP} ${FILESDIR}/spyder.desktop ${WRKSRC}
+	${MV} ${WRKSRC}/scripts/spyder ${WRKSRC}/scripts/spyder${PYVERSSUFFIX}
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/spyder.desktop \
-		${DESTDIR}${PREFIX}/share/applications
+#.include "options.mk"
 
 .include "../../lang/python/extension.mk"
-.include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
-DEPENDS+= 	${PYPKGPREFIX}-sphinx>=1.2.1:../../textproc/py-sphinx
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
