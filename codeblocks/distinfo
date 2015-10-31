@@ -3,4 +3,7 @@ $NetBSD: distinfo,v 1.4 2015/09/15 11:26:40 realzhtw Exp $
 SHA1 (codeblocks_13.12-1.tar.gz) = 3d16f977c9dcc0d857f61af3233a76d6a68609e3
 RMD160 (codeblocks_13.12-1.tar.gz) = e5e469431b792687ba029689b1107a0d735bce8b
 Size (codeblocks_13.12-1.tar.gz) = 17221056 bytes
-SHA1 (patch-ac) = 71f5e31e5a344c2699637f18783f2a2103c6cfd1
+SHA1 (patch-ac) = acfe18d848e959ed62885c5efc8f6f2129acff5a
+SHA1 (patch-src_plugins_contrib_wxContribItems_wxchart_configure) = 4dffe936b6cd21388771db2828f9f322cbec32e7
+SHA1 (patch-src_plugins_contrib_wxContribItems_wxthings_configure) = 0143703b7ebbd98bae83aea189dc016f667779b6
+SHA1 (patch-src_sdk_wxpropgrid_configure) = b796c0a5b0ad1b44c1757b5b7a0f480c9ec5b929

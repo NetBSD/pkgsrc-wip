@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/sdk/wxpropgrid/configure.orig	2013-11-17 19:33:44.000000000 +0000
++++ src/sdk/wxpropgrid/configure
+@@ -4628,7 +4628,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
+         fi
+ 
+-        if test "x$GCC" == "xyes"; then
++        if test "x$GCC" = "xyes"; then
+             PIC_FLAG="-dynamic -fPIC"
+         fi
+         if test "x$XLCC" = "xyes"; then

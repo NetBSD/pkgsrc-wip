@@ -1,6 +1,6 @@
 $NetBSD: patch-ac,v 1.1 2008/12/05 19:47:13 jsonn Exp $
 
---- src/src/prefix.cpp.orig	2008-12-05 18:28:05.000000000 +0100
+--- src/src/prefix.cpp.orig	2013-11-17 19:33:49.000000000 +0000
 +++ src/src/prefix.cpp
 @@ -55,9 +55,6 @@ extern "C" {
  #endif /* __cplusplus */
