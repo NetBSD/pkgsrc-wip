@@ -22,7 +22,7 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 post-extract:
 	${MV} ${WRKSRC}/scripts/spyder ${WRKSRC}/scripts/spyder${PYVERSSUFFIX}
 
-#.include "options.mk"
+.include "options.mk"
 
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

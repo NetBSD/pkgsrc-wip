@@ -18,9 +18,11 @@ DEPENDS+=	${PYPKGPREFIX}-ipython>=2.0.0:../../devel/py-ipython
 
 .if !empty(PKG_OPTIONS:Mnumpy)
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.2:../../math/py-numpy
+.endif
 
 .if !empty(PKG_OPTIONS:Mscipy)
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+.endif
 
 .if !empty(PKG_OPTIONS:Mpandas)
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.16.2:../../math/py-pandas
