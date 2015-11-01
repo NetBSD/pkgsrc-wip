@@ -3868,7 +3868,6 @@ SUBDIR+=	urlwatch
 SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
-SUBDIR+=	uthash
 SUBDIR+=	util-linux
 SUBDIR+=	v8
 SUBDIR+=	v8-316

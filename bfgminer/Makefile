@@ -29,6 +29,6 @@ CURSES_DEFAULT=	ncurses
 .include "../../devel/libusb1/buildlink3.mk"
 
 .include "../../textproc/jansson/buildlink3.mk"
-.include "../../wip/uthash/buildlink3.mk"
+.include "../../devel/uthash/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
