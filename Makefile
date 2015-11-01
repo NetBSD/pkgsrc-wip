@@ -3703,7 +3703,6 @@ SUBDIR+=	syncthing-inotify
 SUBDIR+=	synfig
 SUBDIR+=	synfigstudio
 SUBDIR+=	sysklogd
-SUBDIR+=	syslog-ng2
 SUBDIR+=	sysstat
 SUBDIR+=	system-tools-backends
 SUBDIR+=	sysvinit
