@@ -10,13 +10,9 @@ PKG_SUGGESTED_OPTIONS=	qt4 dbus
 
 
 .if !empty(PKG_OPTIONS:Mqt5)
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mdbus)
-.include "../../x11/qt5-dbus/buildlink3.mk"
-.else
-MAKE_ENV+= DISABLE_DBUS=${TRUE}
-.endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt4)

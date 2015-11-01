@@ -17,5 +17,4 @@ pre-configure:
 	${QTDIR}/bin/qmake -o Makefile
 
 .include "../../inputmethod/ibus/buildlink3.mk"
-.include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

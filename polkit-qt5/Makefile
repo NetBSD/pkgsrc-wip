@@ -17,7 +17,6 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-.include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../wip/polkit/buildlink3.mk"

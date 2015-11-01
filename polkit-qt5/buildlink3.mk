@@ -9,7 +9,6 @@ BUILDLINK_API_DEPENDS.polkit-qt5-1+=	polkit-qt5-1>=0.112.0
 BUILDLINK_ABI_DEPENDS.polkit-qt5-1+=	polkit-qt5-1>=0.112.0
 BUILDLINK_PKGSRCDIR.polkit-qt5-1?=	../../wip/polkit-qt5
 
-.include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../wip/polkit/buildlink3.mk"
