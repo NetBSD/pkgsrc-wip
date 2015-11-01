@@ -4,7 +4,7 @@
 DISTNAME=	fyzz-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://ftp.logilab.org/pub/fyzz/
+MASTER_SITES=	${MASTER_SITE_PYPI}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.logilab.org/project/fyzz

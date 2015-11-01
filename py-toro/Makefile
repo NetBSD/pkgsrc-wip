@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/ajdavis/toro/
 COMMENT=	Synchronization primitives for Tornado coroutines
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}- pygments>=1.6:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
 

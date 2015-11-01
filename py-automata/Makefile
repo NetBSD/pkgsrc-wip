@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/bniemczyk/automata
 COMMENT=	Finite automata for python
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/automata-0.1.4
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
 

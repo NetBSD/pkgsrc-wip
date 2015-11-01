@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/ligo-cbc/pycbc
 COMMENT=	Gravitational wave CBC analysis toolkit
 #LICENSE=	# TODO: (see mk/license.mk)
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 WRKSRC=		${WRKDIR}/PyCBC-1.1.0

@@ -23,13 +23,14 @@ BRENDA_SHARE=		INSTALL LICENSE NEWS QuickStart README TODO examples/hello.py
 BRENDA_DIR=		${PREFIX}/share/doc/${PKGNAME}
 
 do-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PYSITELIB}
 	for a in ${BRENDA_FILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$a ${PREFIX}/${PYSITELIB}/$$a; \
+		${INSTALL_DATA} ${WRKSRC}/$$a ${DESTDIR}${PREFIX}/${PYSITELIB}/$$a; \
 	done
-	${INSTALL_DATA_DIR} ${BRENDA_DIR}
-	${INSTALL_DATA_DIR} ${BRENDA_DIR}/examples
+	${INSTALL_DATA_DIR} ${DESTDIR}${BRENDA_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${BRENDA_DIR}/examples
 	for a in ${BRENDA_SHARE}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$a ${BRENDA_DIR}/$$a; \
+		${INSTALL_DATA} ${WRKSRC}/$$a ${DESTDIR}${BRENDA_DIR}/$$a; \
 	done
 
 .include "../../lang/python/extension.mk"

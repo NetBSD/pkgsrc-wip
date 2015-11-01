@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
-DEPENDS+=	${PYPKGPREFIX}-stache>=0.5.4:../../wip/py-stache
+DEPENDS+=	${PYPKGPREFIX}-pystache>=0.5.4:../../wip/py-stache
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.10.1:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug

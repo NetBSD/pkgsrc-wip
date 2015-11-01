@@ -10,6 +10,8 @@ HOMEPAGE=	http://packages.python.org/algopy
 COMMENT=	Taylor Arithmetic Computation and Algorithmic Differentiation
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 WRKSRC=		${WRKDIR}/algopy-0.5.0
 
 USE_LANGUAGES=	# none

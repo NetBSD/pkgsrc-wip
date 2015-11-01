@@ -14,7 +14,7 @@ DEPENDS+=       ${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=       ${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../wip/py-astropy
-DEPENDS+=	${PYPKGPREFIX}-gitd>=-0.6.4:../../wip/py-gitdb
+DEPENDS+=	${PYPKGPREFIX}-gitdb>=-0.6.4:../../wip/py-gitdb
 
 
 USE_LANGUAGES=	# none

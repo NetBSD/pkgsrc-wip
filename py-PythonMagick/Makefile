@@ -15,6 +15,7 @@ USE_TOOLS+=     pkg-config
 
 GNU_CONFIGURE=  yes
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 # py-boost
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../devel/py-boost/buildlink3.mk"

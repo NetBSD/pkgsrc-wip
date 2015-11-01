@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.4:../../devel/py-nose
 
+BROKEN=		"downloads during build (distribute_setup.py)"
+
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

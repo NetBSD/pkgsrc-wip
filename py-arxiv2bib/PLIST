@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/12 18:01:16 jihbed Exp $
+@comment $NetBSD$
 bin/arxiv2bib
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/arxiv2bib.py
 ${PYSITELIB}/arxiv2bib.pyc
 ${PYSITELIB}/arxiv2bib.pyo

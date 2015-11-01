@@ -2,6 +2,7 @@
 
 DISTNAME=	cma-1.1.01
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+EGG_NAME=	${DISTNAME:S/1.1.01/1.1.1/}
 CATEGORIES=     math python
 MASTER_SITES=   https://pypi.python.org/packages/source/c/cma/
 

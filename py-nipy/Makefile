@@ -19,5 +19,6 @@ PYDISTUTILSPKG=	yes
 .include "../../lang/python/extension.mk"
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.6:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.2:../../math/py-sympy
+DEPENDS+=	${PYPKGPREFIX}-nibabel>=1.3.0:../../wip/py-nibabel
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

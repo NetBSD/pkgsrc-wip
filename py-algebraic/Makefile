@@ -3,7 +3,7 @@
 
 VERSION= 0.3.1.dev-20120112
 DISTNAME=	python-algebraic-0.3.1.dev-20120112
-EGG_NAME=	python_algebraic-0.3.1.dev_20120112
+EGG_NAME=	python_algebraic-0.3.1.dev20120112
 PKGNAME=	${PYPKGPREFIX}-algebraic-${VERSION}
 CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-algebraic/

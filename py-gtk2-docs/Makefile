@@ -18,12 +18,9 @@ USE_TOOLS+=	pax
 
 HTMLDIR=	share/doc/${DISTNAME}
 DOC_SRCDIR=	${WRKSRC}
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
-	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${DOC_SRCDIR} && pax -rw -pe pygtk* ${DESTDIR}${PREFIX}/${HTMLDIR}
-	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
