@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.2 2005/08/07 11:39:54 thomasklausner Exp $
 
-SHA1 (tv-0.5.tar.gz) = 8a9a08eb48223886d2564e0a672737e6db057da1
-RMD160 (tv-0.5.tar.gz) = 1af715ad1b83cefcce41e9693fb8d0e7acfbe0c7
-Size (tv-0.5.tar.gz) = 394811 bytes
+SHA1 (treeviewx_0.5.1+20100823.orig.tar.gz) = ffee9ab62bf20cc84079fa7796aaf145f9f47c82
+RMD160 (treeviewx_0.5.1+20100823.orig.tar.gz) = 981c521bdfa9f24365d2107b215abaed95180052
+SHA512 (treeviewx_0.5.1+20100823.orig.tar.gz) = 7043606a918331f90637eba3c614b5e27ad32e693a47e80d9cb445bbc72a9e83ee3e0ec62709cdace796925b99f27713c12bd8a2e4bcc855fe2b59bd9ca25feb
+Size (treeviewx_0.5.1+20100823.orig.tar.gz) = 441422 bytes
 SHA1 (patch-aa) = fe0e2ff32c70b517284f0a8977fffcf71079c077
