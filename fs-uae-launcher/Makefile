@@ -11,6 +11,7 @@ COMMENT=	Graphical launcher for FS-UAE, the Amiga Emulator
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
+PYDISTUTILSPKG=	yes
 
 INSTALL_ENV+=	prefix=${PREFIX}
 INSTALL_ENV+=	DESTDIR=${DESTDIR}
@@ -27,7 +28,6 @@ PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}	# 3.4
 PLIST_SUBST+=   PYVERS=${PYPKGPREFIX:S/py//}	# py34 -> 34
 PLIST_SUBST+=   VERSION=${VERSION}
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.1.5:../../devel/py-setuptools
 #DEPENDS+=	${PYPKGPREFIX}-qt4>=4.10.2nb1:../../x11/py-qt4
 # when building with qt5 it should co-exist with calibre and qbzr.
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
@@ -43,5 +43,6 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

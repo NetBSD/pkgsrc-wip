@@ -10,9 +10,7 @@ HOMEPAGE=	http://github.com/bniemczyk/automata
 COMMENT=	Finite automata for python
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
 USE_LANGUAGES=	c c++
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

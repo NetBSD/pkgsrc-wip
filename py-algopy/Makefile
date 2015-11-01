@@ -10,8 +10,6 @@ HOMEPAGE=	http://packages.python.org/algopy
 COMMENT=	Taylor Arithmetic Computation and Algorithmic Differentiation
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
 WRKSRC=		${WRKDIR}/algopy-0.5.0
 
 USE_LANGUAGES=	# none
@@ -20,5 +18,5 @@ do-test:
 	${RUN} cd ${WRKSRC}/algopy; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_utils.py
 
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

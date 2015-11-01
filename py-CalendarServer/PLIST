@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/09 10:17:42 thomasklausner Exp $
+@comment $NetBSD$
 bin/caldavd
 bin/calendarserver_check_database_schema
 bin/calendarserver_command_gateway
@@ -22,12 +22,12 @@ bin/calendarserver_shell
 bin/calendarserver_upgrade
 bin/calendarserver_verify_data
 caldavd/caldavd.plist
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/calendarserver/__init__.py
 ${PYSITELIB}/calendarserver/__init__.pyc
 ${PYSITELIB}/calendarserver/__init__.pyo

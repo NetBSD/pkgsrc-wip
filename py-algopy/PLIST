@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2013/08/31 22:13:21 jihbed Exp $
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/algopy/__init__.py
 ${PYSITELIB}/algopy/__init__.pyc
 ${PYSITELIB}/algopy/__init__.pyo

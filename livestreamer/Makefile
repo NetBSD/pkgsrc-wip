@@ -10,7 +10,6 @@ HOMEPAGE=	http://livestreamer.tanuki.se/
 COMMENT=	Tool that pipes video streams into a video player
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 .include "../../lang/python/egg.mk"

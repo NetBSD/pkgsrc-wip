@@ -29,21 +29,19 @@ DEPENDS+=	${PYPKGPREFIX}-ldap-[0-9]*:../../databases/py-ldap
 DEPENDS+=	${PYPKGPREFIX}-nevow-[0-9]*:../../www/py-nevow
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlparse-[0-9]*:../../databases/py-sqlparse
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-xattr-[0-9]*:../../sysutils/py-xattr
 DEPENDS+=	epydoc-[0-9]*:../../devel/epydoc
 DEPENDS+=	memcached-[0-9]*:../../devel/memcached
 DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
-DEPENDS+=	postgresql93-server-[0-9]*:../../databases/postgresql93-server
+DEPENDS+=	postgresql94-server-[0-9]*:../../databases/postgresql94-server
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted, py-xml via py-nevow, py-psutil, py-Kerberos, py-ldap
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	bash:run
 
 EGG_NAME=	CalendarServer-6.0a.unknown_r14210MS
@@ -59,6 +57,6 @@ REPLACE_PYTHON+=	txdav/common/datastore/upgrade/migrate.py
 REPLACE_PYTHON+=	txdav/common/datastore/upgrade/sql/upgrade.py
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

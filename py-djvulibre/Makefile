@@ -11,14 +11,12 @@ COMMENT=	Python bindings for the DjVuLibre library
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_TOOLS+=	pkg-config #gsed
 #DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 
 USE_LANGUAGES=	c
 
-PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-pyrex
 
 SUBST_CLASSES+=		setup

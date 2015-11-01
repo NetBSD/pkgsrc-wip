@@ -18,9 +18,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	speedtest_cli.py
 
-PYDISTUTILSPKG=	YES
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
