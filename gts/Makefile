@@ -16,6 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.netpbm}/${BUILDLINK_INCDIRS.netpbm}/netpbm
 PKGCONFIG_OVERRIDE+=	gts.pc.in
 
 INSTALLATION_DIRS+=	bin
