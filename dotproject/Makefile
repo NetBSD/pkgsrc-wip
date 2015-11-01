@@ -26,7 +26,6 @@ BROKEN=		depends on missing www/php-eaccelerator package
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.4.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdflib>=4.4.0:../../print/php-pdflib
-DEPENDS+=	mysql-server>=4.1:../../databases/mysql${MYSQL_VERSION_DEFAULT}-server
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/mysql.buildlink3.mk"

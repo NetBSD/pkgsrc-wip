@@ -21,13 +21,11 @@ PKG_SUGGESTED_OPTIONS=  sqlite3 apache22
 
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../databases/mysql56-client/buildlink3.mk"
-.include "../../databases/mysql56-server/buildlink3.mk"
 OPT_MYSQL=
 OPT_POSTGRES=echo
 .endif
 
 .if !empty(PKG_OPTIONS:Mpostgres)
-DEPENDS+=	postgresql93-[0-9]*:../../databases/postgresql93-server
 .include "../../databases/postgresql93-client/buildlink3.mk"
 OPT_POSTGRES=
 OPT_MYSQL=echo

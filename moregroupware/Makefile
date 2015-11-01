@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.moregroupware.de/
 COMMENT=	Web based GroupWare system
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=4.3.4:../../www/php-curl
-DEPENDS+=	mysql-server>=4.0.0:../../databases/mysql${MYSQL_VERSION_DEFAULT}-server
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.3.4:../../databases/php-ldap
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.4:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.4:../../graphics/php-gd
