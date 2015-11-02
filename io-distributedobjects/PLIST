@@ -1,10 +1,32 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/DistributedObjects/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/C.includecache
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/DependInfo.cmake
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/build.make
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/cmake_clean.cmake
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/depend.internal
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/depend.make
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/flags.make
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/link.txt
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/progress.make
+lib/io/addons/DistributedObjects/CMakeFiles/IoDistributedObjects.dir/source/IoDistributedObjectsInit.c.o
+lib/io/addons/DistributedObjects/CMakeFiles/progress.marks
+lib/io/addons/DistributedObjects/CMakeLists.txt
+lib/io/addons/DistributedObjects/Makefile
 lib/io/addons/DistributedObjects/_build/dll/libIoDistributedObjects.so
-lib/io/addons/DistributedObjects/_build/lib/libIoDistributedObjects.a
-lib/io/addons/DistributedObjects/build.io
+lib/io/addons/DistributedObjects/cmake_install.cmake
 lib/io/addons/DistributedObjects/depends
 lib/io/addons/DistributedObjects/io/DOConnection.io
 lib/io/addons/DistributedObjects/io/DOServer.io
 lib/io/addons/DistributedObjects/io/MDOConnection.io
 lib/io/addons/DistributedObjects/io/MDOServer.io
 lib/io/addons/DistributedObjects/protos
+lib/io/addons/DistributedObjects/samples/DOTest.io
+lib/io/addons/DistributedObjects/samples/MDOConnectionTest.io
+lib/io/addons/DistributedObjects/samples/MDOServerTest.io
+lib/io/addons/DistributedObjects/source/IoDistributedObjectsInit.c
+lib/io/addons/DistributedObjects/tests/correctness/DOTest.io
+lib/io/addons/DistributedObjects/tests/correctness/MDOTest.io
+lib/io/addons/DistributedObjects/tests/correctness/run.io
+lib/io/addons/DistributedObjects/tests/performance/MDOTest.io
+lib/io/addons/DistributedObjects/tests/performance/run.io

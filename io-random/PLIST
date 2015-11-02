@@ -1,5 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/Random/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/C.includecache
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/DependInfo.cmake
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/build.make
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/cmake_clean.cmake
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/depend.internal
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/depend.make
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/flags.make
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/link.txt
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/progress.make
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/source/IoRandom.c.o
+lib/io/addons/Random/CMakeFiles/IoRandom.dir/source/IoRandomInit.c.o
+lib/io/addons/Random/CMakeFiles/progress.marks
+lib/io/addons/Random/CMakeLists.txt
+lib/io/addons/Random/Makefile
 lib/io/addons/Random/_build/dll/libIoRandom.so
-lib/io/addons/Random/_build/lib/libIoRandom.a
-lib/io/addons/Random/build.io
+lib/io/addons/Random/cmake_install.cmake
 lib/io/addons/Random/depends
+lib/io/addons/Random/io/List.io
+lib/io/addons/Random/protos
+lib/io/addons/Random/source/IoRandom.c
+lib/io/addons/Random/source/IoRandom.h
+lib/io/addons/Random/source/IoRandomInit.c
+lib/io/addons/Random/tests/correctness/ListTest.io
+lib/io/addons/Random/tests/correctness/run.io

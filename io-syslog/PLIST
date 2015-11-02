@@ -1,5 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/Syslog/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/C.includecache
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/DependInfo.cmake
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/build.make
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/cmake_clean.cmake
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/depend.internal
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/depend.make
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/flags.make
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/link.txt
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/progress.make
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/source/IoSyslog.c.o
+lib/io/addons/Syslog/CMakeFiles/IoSyslog.dir/source/IoSyslogInit.c.o
+lib/io/addons/Syslog/CMakeFiles/progress.marks
+lib/io/addons/Syslog/CMakeLists.txt
+lib/io/addons/Syslog/Makefile
 lib/io/addons/Syslog/_build/dll/libIoSyslog.so
-lib/io/addons/Syslog/_build/lib/libIoSyslog.a
-lib/io/addons/Syslog/build.io
+lib/io/addons/Syslog/cmake_install.cmake
 lib/io/addons/Syslog/depends
+lib/io/addons/Syslog/protos
+lib/io/addons/Syslog/samples/sample.io
+lib/io/addons/Syslog/source/IoSyslog.c
+lib/io/addons/Syslog/source/IoSyslog.h
+lib/io/addons/Syslog/source/IoSyslogInit.c

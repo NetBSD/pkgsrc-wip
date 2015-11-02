@@ -1,6 +1,30 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/SystemCall/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/C.includecache
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/DependInfo.cmake
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/build.make
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/cmake_clean.cmake
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/depend.internal
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/depend.make
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/flags.make
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/link.txt
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/progress.make
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/source/IoSystemCall.c.o
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/source/IoSystemCallInit.c.o
+lib/io/addons/SystemCall/CMakeFiles/IoSystemCall.dir/source/callsystem.c.o
+lib/io/addons/SystemCall/CMakeFiles/progress.marks
+lib/io/addons/SystemCall/CMakeLists.txt
+lib/io/addons/SystemCall/Makefile
 lib/io/addons/SystemCall/_build/dll/libIoSystemCall.so
-lib/io/addons/SystemCall/_build/lib/libIoSystemCall.a
-lib/io/addons/SystemCall/build.io
+lib/io/addons/SystemCall/cmake_install.cmake
 lib/io/addons/SystemCall/depends
 lib/io/addons/SystemCall/io/SystemCall.io
+lib/io/addons/SystemCall/protos
+lib/io/addons/SystemCall/samples/pingtest.io
+lib/io/addons/SystemCall/samples/test.io
+lib/io/addons/SystemCall/samples/test2.io
+lib/io/addons/SystemCall/source/IoSystemCall.c
+lib/io/addons/SystemCall/source/IoSystemCall.h
+lib/io/addons/SystemCall/source/IoSystemCallInit.c
+lib/io/addons/SystemCall/source/callsystem.c
+lib/io/addons/SystemCall/source/callsystem.h

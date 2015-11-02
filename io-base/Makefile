@@ -2,7 +2,7 @@
 
 META_PACKAGE=	# empty
 
-.include "../../wip/io/version.mk"
+.include "../../wip/io-base/version.mk"
 
 DISTNAME =	io-${IO_VERSION}
 PKGNAME =	io-base-${IO_VERSION}
@@ -16,8 +16,8 @@ DEPENDS+=	io-vm>=${IO_VERSION}:../../wip/io-vm
 DEPENDS+=	io-blowfish>=${IO_VERSION}:../../wip/io-blowfish
 DEPENDS+=	io-cgi>=${IO_VERSION}:../../wip/io-cgi
 DEPENDS+=	io-continuedfraction>=${IO_VERSION}:../../wip/io-continuedfraction
-DEPENDS+=	io-contracts>=${IO_VERSION}:../../wip/io-contracts
-DEPENDS+=	io-socket>=${IO_VERSION}:../../wip/io-socket
+# conflicts with securesocket
+#DEPENDS+=	io-socket>=${IO_VERSION}:../../wip/io-socket
 DEPENDS+=	io-distributedobjects>=${IO_VERSION}:../../wip/io-distributedobjects
 DEPENDS+=	io-editline>=${IO_VERSION}:../../wip/io-editline
 DEPENDS+=	io-fnmatch>=${IO_VERSION}:../../wip/io-fnmatch

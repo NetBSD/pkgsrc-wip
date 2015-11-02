@@ -1,5 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/User/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/User/CMakeFiles/IoUser.dir/C.includecache
+lib/io/addons/User/CMakeFiles/IoUser.dir/DependInfo.cmake
+lib/io/addons/User/CMakeFiles/IoUser.dir/build.make
+lib/io/addons/User/CMakeFiles/IoUser.dir/cmake_clean.cmake
+lib/io/addons/User/CMakeFiles/IoUser.dir/depend.internal
+lib/io/addons/User/CMakeFiles/IoUser.dir/depend.make
+lib/io/addons/User/CMakeFiles/IoUser.dir/flags.make
+lib/io/addons/User/CMakeFiles/IoUser.dir/link.txt
+lib/io/addons/User/CMakeFiles/IoUser.dir/progress.make
+lib/io/addons/User/CMakeFiles/IoUser.dir/source/IoUser.c.o
+lib/io/addons/User/CMakeFiles/IoUser.dir/source/IoUserInit.c.o
+lib/io/addons/User/CMakeFiles/progress.marks
+lib/io/addons/User/CMakeLists.txt
+lib/io/addons/User/Makefile
 lib/io/addons/User/_build/dll/libIoUser.so
-lib/io/addons/User/_build/lib/libIoUser.a
-lib/io/addons/User/build.io
+lib/io/addons/User/cmake_install.cmake
 lib/io/addons/User/depends
+lib/io/addons/User/protos
+lib/io/addons/User/source/IoUser.c
+lib/io/addons/User/source/IoUser.h
+lib/io/addons/User/source/IoUserInit.c
+lib/io/addons/User/tests/correctness/UserTest.io
+lib/io/addons/User/tests/correctness/run.io

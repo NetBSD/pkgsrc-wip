@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2012/11/13 23:05:30 othyro Exp $
 
-.include "../../wip/io/version.mk"
+.include "../../wip/io-base/version.mk"
 
 PKGNAME=		io-thread-${IO_VERSION}
 CATEGORIES=		devel
@@ -11,5 +11,5 @@ COMMENT=		Thread addon for Io
 
 ADDON_NAME=		Thread
 
-.include "../../wip/io/addon.mk"
+.include "../../wip/io-base/addon.mk"
 .include "../../mk/bsd.pkg.mk"

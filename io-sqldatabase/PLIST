@@ -1,6 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/SqlDatabase/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/C.includecache
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/DependInfo.cmake
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/build.make
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/cmake_clean.cmake
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/depend.internal
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/depend.make
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/flags.make
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/link.txt
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/progress.make
+lib/io/addons/SqlDatabase/CMakeFiles/IoSqlDatabase.dir/source/IoSqlDatabaseInit.c.o
+lib/io/addons/SqlDatabase/CMakeFiles/progress.marks
+lib/io/addons/SqlDatabase/CMakeLists.txt
+lib/io/addons/SqlDatabase/Makefile
 lib/io/addons/SqlDatabase/_build/dll/libIoSqlDatabase.so
-lib/io/addons/SqlDatabase/_build/lib/libIoSqlDatabase.a
-lib/io/addons/SqlDatabase/build.io
+lib/io/addons/SqlDatabase/cmake_install.cmake
 lib/io/addons/SqlDatabase/depends
 lib/io/addons/SqlDatabase/io/SqlDatabase.io
+lib/io/addons/SqlDatabase/protos
+lib/io/addons/SqlDatabase/source/IoSqlDatabaseInit.c

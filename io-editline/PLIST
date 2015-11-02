@@ -1,5 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/EditLine/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/C.includecache
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/DependInfo.cmake
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/build.make
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/cmake_clean.cmake
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/depend.internal
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/depend.make
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/flags.make
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/link.txt
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/progress.make
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/source/IoEditLine.c.o
+lib/io/addons/EditLine/CMakeFiles/IoEditLine.dir/source/IoEditLineInit.c.o
+lib/io/addons/EditLine/CMakeFiles/progress.marks
+lib/io/addons/EditLine/CMakeLists.txt
+lib/io/addons/EditLine/Makefile
 lib/io/addons/EditLine/_build/dll/libIoEditLine.so
-lib/io/addons/EditLine/_build/lib/libIoEditLine.a
-lib/io/addons/EditLine/build.io
+lib/io/addons/EditLine/cmake_install.cmake
 lib/io/addons/EditLine/depends
+lib/io/addons/EditLine/protos
+lib/io/addons/EditLine/source/IoEditLine.c
+lib/io/addons/EditLine/source/IoEditLine.h
+lib/io/addons/EditLine/source/IoEditLineInit.c

@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:48 thomasklausner Exp $
+@comment $NetBSD$
 bin/io
+bin/io_static
+include/io/386-ucontext.h
 include/io/BStream.h
 include/io/BStreamTag.h
 include/io/Base.h
@@ -34,6 +36,7 @@ include/io/IoDynLib.h
 include/io/IoError.h
 include/io/IoFile.h
 include/io/IoFile_stat.h
+include/io/IoInstallPrefix.h
 include/io/IoLexer.h
 include/io/IoList.h
 include/io/IoMap.h
@@ -46,6 +49,7 @@ include/io/IoObject.h
 include/io/IoObject_flow.h
 include/io/IoObject_inline.h
 include/io/IoObject_struct.h
+include/io/IoProfiler.h
 include/io/IoSandbox.h
 include/io/IoSeq.h
 include/io/IoSeq_immutable.h
@@ -83,9 +87,6 @@ include/io/PortableStdint.h
 include/io/PortableStrlcpy.h
 include/io/PortableStrptime.h
 include/io/PortableTruncate.h
-include/io/PortableUContext.h
-include/io/PortableUContext386.h
-include/io/PortableUContextPPC.h
 include/io/PortableUsleep.h
 include/io/RandomGen.h
 include/io/Stack.h
@@ -98,10 +99,15 @@ include/io/UArray_path.h
 include/io/UArray_stream.h
 include/io/UArray_string.h
 include/io/UArray_utf.h
+include/io/amd64-ucontext.h
 include/io/cdecode.h
 include/io/cencode.h
+include/io/power-ucontext.h
+include/io/taskimpl.h
 include/io/utf8.h
 include/io/utf8internal.h
 include/io/utf_convert.h
-lib/libiovmall.a
+lib/libbasekit.so
+lib/libcoroutine.so
+lib/libgarbagecollector.so
 lib/libiovmall.so

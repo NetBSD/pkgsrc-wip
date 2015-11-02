@@ -1,6 +1,29 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/Blowfish/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/C.includecache
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/DependInfo.cmake
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/build.make
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/cmake_clean.cmake
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/depend.internal
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/depend.make
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/flags.make
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/link.txt
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/progress.make
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/source/IoBlowfish.c.o
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/source/IoBlowfishInit.c.o
+lib/io/addons/Blowfish/CMakeFiles/IoBlowfish.dir/source/blowfish.c.o
+lib/io/addons/Blowfish/CMakeFiles/progress.marks
+lib/io/addons/Blowfish/CMakeLists.txt
+lib/io/addons/Blowfish/Makefile
 lib/io/addons/Blowfish/_build/dll/libIoBlowfish.so
-lib/io/addons/Blowfish/_build/lib/libIoBlowfish.a
-lib/io/addons/Blowfish/build.io
+lib/io/addons/Blowfish/cmake_install.cmake
 lib/io/addons/Blowfish/depends
 lib/io/addons/Blowfish/io/Blowfish.io
+lib/io/addons/Blowfish/protos
+lib/io/addons/Blowfish/source/IoBlowfish.c
+lib/io/addons/Blowfish/source/IoBlowfish.h
+lib/io/addons/Blowfish/source/IoBlowfishInit.c
+lib/io/addons/Blowfish/source/blowfish.c
+lib/io/addons/Blowfish/source/blowfish.h
+lib/io/addons/Blowfish/tests/correctness/BlowfishTest.io
+lib/io/addons/Blowfish/tests/correctness/run.io

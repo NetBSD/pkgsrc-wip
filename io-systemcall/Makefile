@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2012/11/14 00:16:11 othyro Exp $
 
-.include "../../wip/io/version.mk"
+.include "../../wip/io-base/version.mk"
 
 PKGNAME=		io-systemcall-${IO_VERSION}
 CATEGORIES=		sysutils
@@ -11,5 +11,5 @@ COMMENT=		SystemCall addon for Io
 
 ADDON_NAME=		SystemCall
 
-.include "../../wip/io/addon.mk"
+.include "../../wip/io-base/addon.mk"
 .include "../../mk/bsd.pkg.mk"

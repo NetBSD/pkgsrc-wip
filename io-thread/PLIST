@@ -1,5 +1,31 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/Thread/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/C.includecache
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/DependInfo.cmake
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/build.make
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/cmake_clean.cmake
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/depend.internal
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/depend.make
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/flags.make
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/link.txt
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/progress.make
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/source/IoThread.c.o
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/source/IoThreadInit.c.o
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/source/Thread.c.o
+lib/io/addons/Thread/CMakeFiles/IoThread.dir/source/ThreadMutex.c.o
+lib/io/addons/Thread/CMakeFiles/progress.marks
+lib/io/addons/Thread/CMakeLists.txt
+lib/io/addons/Thread/Makefile
 lib/io/addons/Thread/_build/dll/libIoThread.so
-lib/io/addons/Thread/_build/lib/libIoThread.a
-lib/io/addons/Thread/build.io
+lib/io/addons/Thread/cmake_install.cmake
 lib/io/addons/Thread/depends
+lib/io/addons/Thread/protos
+lib/io/addons/Thread/source/IoThread.c
+lib/io/addons/Thread/source/IoThread.h
+lib/io/addons/Thread/source/IoThreadInit.c
+lib/io/addons/Thread/source/Thread.c
+lib/io/addons/Thread/source/Thread.h
+lib/io/addons/Thread/source/ThreadMutex.c
+lib/io/addons/Thread/source/ThreadMutex.h
+lib/io/addons/Thread/tests/correctness/ThreadTest.io
+lib/io/addons/Thread/tests/correctness/run.io

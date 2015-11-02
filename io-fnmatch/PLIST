@@ -1,5 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/Fnmatch/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/C.includecache
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/DependInfo.cmake
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/build.make
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/cmake_clean.cmake
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/depend.internal
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/depend.make
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/flags.make
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/link.txt
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/progress.make
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/source/IoFnmatch.c.o
+lib/io/addons/Fnmatch/CMakeFiles/IoFnmatch.dir/source/IoFnmatchInit.c.o
+lib/io/addons/Fnmatch/CMakeFiles/progress.marks
+lib/io/addons/Fnmatch/CMakeLists.txt
+lib/io/addons/Fnmatch/Makefile
 lib/io/addons/Fnmatch/_build/dll/libIoFnmatch.so
-lib/io/addons/Fnmatch/_build/lib/libIoFnmatch.a
-lib/io/addons/Fnmatch/build.io
+lib/io/addons/Fnmatch/cmake_install.cmake
 lib/io/addons/Fnmatch/depends
+lib/io/addons/Fnmatch/source/IoFnmatch.c
+lib/io/addons/Fnmatch/source/IoFnmatch.h
+lib/io/addons/Fnmatch/source/IoFnmatchInit.c
+lib/io/addons/Fnmatch/tests/correctness/FnmatchTest.io
+lib/io/addons/Fnmatch/tests/correctness/run.io

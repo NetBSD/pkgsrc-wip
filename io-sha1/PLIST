@@ -1,6 +1,32 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/SHA1/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/C.includecache
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/DependInfo.cmake
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/build.make
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/cmake_clean.cmake
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/depend.internal
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/depend.make
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/flags.make
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/link.txt
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/progress.make
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/source/IoSHA1.c.o
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/source/IoSHA1Init.c.o
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/source/hmac.c.o
+lib/io/addons/SHA1/CMakeFiles/IoSHA1.dir/source/sha1.c.o
+lib/io/addons/SHA1/CMakeFiles/progress.marks
+lib/io/addons/SHA1/CMakeLists.txt
+lib/io/addons/SHA1/Makefile
 lib/io/addons/SHA1/_build/dll/libIoSHA1.so
-lib/io/addons/SHA1/_build/lib/libIoSHA1.a
-lib/io/addons/SHA1/build.io
+lib/io/addons/SHA1/cmake_install.cmake
 lib/io/addons/SHA1/depends
 lib/io/addons/SHA1/io/sha1.io
+lib/io/addons/SHA1/protos
+lib/io/addons/SHA1/source/IoSHA1.c
+lib/io/addons/SHA1/source/IoSHA1.h
+lib/io/addons/SHA1/source/IoSHA1Init.c
+lib/io/addons/SHA1/source/hmac.c
+lib/io/addons/SHA1/source/hmac.h
+lib/io/addons/SHA1/source/sha1.c
+lib/io/addons/SHA1/source/sha1.h
+lib/io/addons/SHA1/tests/correctness/SHA1Test.io
+lib/io/addons/SHA1/tests/correctness/run.io

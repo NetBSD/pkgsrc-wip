@@ -1,6 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/Rational/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/C.includecache
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/DependInfo.cmake
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/build.make
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/cmake_clean.cmake
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/depend.internal
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/depend.make
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/flags.make
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/link.txt
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/progress.make
+lib/io/addons/Rational/CMakeFiles/IoRational.dir/source/IoRationalInit.c.o
+lib/io/addons/Rational/CMakeFiles/progress.marks
+lib/io/addons/Rational/CMakeLists.txt
+lib/io/addons/Rational/Makefile
 lib/io/addons/Rational/_build/dll/libIoRational.so
-lib/io/addons/Rational/_build/lib/libIoRational.a
-lib/io/addons/Rational/build.io
+lib/io/addons/Rational/cmake_install.cmake
 lib/io/addons/Rational/depends
 lib/io/addons/Rational/io/Rational.io
+lib/io/addons/Rational/protos
+lib/io/addons/Rational/samples/Sample.io
+lib/io/addons/Rational/source/IoRationalInit.c
+lib/io/addons/Rational/tests/correctness/RationalTest.io
+lib/io/addons/Rational/tests/correctness/run.io

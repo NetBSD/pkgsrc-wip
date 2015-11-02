@@ -5,8 +5,7 @@ BUILDLINK_TREE+=        io-range
 .if !defined(IORANGE_BUILDLINK3_MK)
 IORANGE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.io-range+=	io-range>=20080904
-BUILDLINK_ABI_DEPENDS.io-range+=	io-range>=20080904
+BUILDLINK_API_DEPENDS.io-range+=	io-range>=2013.12.04
 BUILDLINK_PKGSRCDIR.io-range?=		../../wip/io-range
 
 BUILDLINK_LIBDIRS.io-range+=		lib/io/addons/Range/_build/dll

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
-lib/io/addons/Contracts/_build/dll/libIoContracts.so
-lib/io/addons/Contracts/_build/lib/libIoContracts.a
-lib/io/addons/Contracts/build.io
-lib/io/addons/Contracts/depends
-lib/io/addons/Contracts/io/Contracts.io

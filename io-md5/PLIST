@@ -1,6 +1,30 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/MD5/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/C.includecache
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/DependInfo.cmake
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/build.make
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/cmake_clean.cmake
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/depend.internal
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/depend.make
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/flags.make
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/link.txt
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/progress.make
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/source/IoMD5.c.o
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/source/IoMD5Init.c.o
+lib/io/addons/MD5/CMakeFiles/IoMD5.dir/source/md5.c.o
+lib/io/addons/MD5/CMakeFiles/progress.marks
+lib/io/addons/MD5/CMakeLists.txt
+lib/io/addons/MD5/Makefile
 lib/io/addons/MD5/_build/dll/libIoMD5.so
-lib/io/addons/MD5/_build/lib/libIoMD5.a
-lib/io/addons/MD5/build.io
+lib/io/addons/MD5/cmake_install.cmake
 lib/io/addons/MD5/depends
 lib/io/addons/MD5/io/MD5_extras.io
+lib/io/addons/MD5/protos
+lib/io/addons/MD5/samples/data.txt
+lib/io/addons/MD5/samples/md5.io
+lib/io/addons/MD5/source/IoMD5.c
+lib/io/addons/MD5/source/IoMD5.h
+lib/io/addons/MD5/source/IoMD5Init.c
+lib/io/addons/MD5/source/md5.c
+lib/io/addons/MD5/source/md5.h
+lib/io/addons/MD5/tests/correctness/MD5Test.io

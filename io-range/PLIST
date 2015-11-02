@@ -1,9 +1,29 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:47 thomasklausner Exp $
-include/io/Range/IoRange.h
-include/io/Range/IoRange_inline.h
+@comment $NetBSD$
+lib/io/addons/Range/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Range/CMakeFiles/IoRange.dir/C.includecache
+lib/io/addons/Range/CMakeFiles/IoRange.dir/DependInfo.cmake
+lib/io/addons/Range/CMakeFiles/IoRange.dir/build.make
+lib/io/addons/Range/CMakeFiles/IoRange.dir/cmake_clean.cmake
+lib/io/addons/Range/CMakeFiles/IoRange.dir/depend.internal
+lib/io/addons/Range/CMakeFiles/IoRange.dir/depend.make
+lib/io/addons/Range/CMakeFiles/IoRange.dir/flags.make
+lib/io/addons/Range/CMakeFiles/IoRange.dir/link.txt
+lib/io/addons/Range/CMakeFiles/IoRange.dir/progress.make
+lib/io/addons/Range/CMakeFiles/IoRange.dir/source/IoRange.c.o
+lib/io/addons/Range/CMakeFiles/IoRange.dir/source/IoRangeInit.c.o
+lib/io/addons/Range/CMakeFiles/progress.marks
+lib/io/addons/Range/CMakeLists.txt
+lib/io/addons/Range/Makefile
 lib/io/addons/Range/_build/dll/libIoRange.so
-lib/io/addons/Range/_build/lib/libIoRange.a
-lib/io/addons/Range/build.io
+lib/io/addons/Range/cmake_install.cmake
 lib/io/addons/Range/depends
 lib/io/addons/Range/io/Extras.io
 lib/io/addons/Range/io/Range.io
+lib/io/addons/Range/protos
+lib/io/addons/Range/source/IoRange.c
+lib/io/addons/Range/source/IoRange.h
+lib/io/addons/Range/source/IoRangeApi.h
+lib/io/addons/Range/source/IoRangeInit.c
+lib/io/addons/Range/source/IoRange_inline.h
+lib/io/addons/Range/tests/correctness/RangeTest.io
+lib/io/addons/Range/tests/correctness/run.io

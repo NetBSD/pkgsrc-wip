@@ -1,7 +1,30 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:48 thomasklausner Exp $
+@comment $NetBSD$
+lib/io/addons/Zlib/CMakeFiles/CMakeDirectoryInformation.cmake
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/C.includecache
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/DependInfo.cmake
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/build.make
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/cmake_clean.cmake
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/depend.internal
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/depend.make
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/flags.make
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/link.txt
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/progress.make
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/source/IoZlibDecoder.c.o
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/source/IoZlibEncoder.c.o
+lib/io/addons/Zlib/CMakeFiles/IoZlib.dir/source/IoZlibInit.c.o
+lib/io/addons/Zlib/CMakeFiles/progress.marks
+lib/io/addons/Zlib/CMakeLists.txt
+lib/io/addons/Zlib/Makefile
 lib/io/addons/Zlib/_build/dll/libIoZlib.so
-lib/io/addons/Zlib/_build/lib/libIoZlib.a
-lib/io/addons/Zlib/build.io
+lib/io/addons/Zlib/cmake_install.cmake
 lib/io/addons/Zlib/depends
 lib/io/addons/Zlib/io/Zlib.io
 lib/io/addons/Zlib/protos
+lib/io/addons/Zlib/source/IoZlibDecoder.c
+lib/io/addons/Zlib/source/IoZlibDecoder.h
+lib/io/addons/Zlib/source/IoZlibEncoder.c
+lib/io/addons/Zlib/source/IoZlibEncoder.h
+lib/io/addons/Zlib/source/IoZlibInit.c
+lib/io/addons/Zlib/tests/correctness/ZlibTest.io
+lib/io/addons/Zlib/tests/correctness/run.io
+lib/io/addons/Zlib/tests/correctness/test.gz
