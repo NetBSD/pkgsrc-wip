@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/08/29 20:56:15 jonthn Exp $
+@comment $NetBSD$
 bin/nvim
 man/man1/nvim.1
 share/locale/af/LC_MESSAGES/nvim.mo
@@ -49,6 +49,7 @@ share/nvim/runtime/autoload/gnat.vim
 share/nvim/runtime/autoload/gzip.vim
 share/nvim/runtime/autoload/htmlcomplete.vim
 share/nvim/runtime/autoload/javascriptcomplete.vim
+share/nvim/runtime/autoload/man.vim
 share/nvim/runtime/autoload/netrw.vim
 share/nvim/runtime/autoload/netrwFileHandlers.vim
 share/nvim/runtime/autoload/netrwSettings.vim
@@ -212,7 +213,6 @@ share/nvim/runtime/doc/nvim_terminal_emulator.txt
 share/nvim/runtime/doc/options.txt
 share/nvim/runtime/doc/os_dos.txt
 share/nvim/runtime/doc/os_mac.txt
-share/nvim/runtime/doc/os_unix.txt
 share/nvim/runtime/doc/os_win32.txt
 share/nvim/runtime/doc/pattern.txt
 share/nvim/runtime/doc/pi_getscript.txt
@@ -374,6 +374,7 @@ share/nvim/runtime/ftplugin/jsp.vim
 share/nvim/runtime/ftplugin/kconfig.vim
 share/nvim/runtime/ftplugin/kwt.vim
 share/nvim/runtime/ftplugin/ld.vim
+share/nvim/runtime/ftplugin/less.vim
 share/nvim/runtime/ftplugin/lftp.vim
 share/nvim/runtime/ftplugin/libao.vim
 share/nvim/runtime/ftplugin/limits.vim
@@ -539,6 +540,7 @@ share/nvim/runtime/indent/javascript.vim
 share/nvim/runtime/indent/json.vim
 share/nvim/runtime/indent/jsp.vim
 share/nvim/runtime/indent/ld.vim
+share/nvim/runtime/indent/less.vim
 share/nvim/runtime/indent/lifelines.vim
 share/nvim/runtime/indent/liquid.vim
 share/nvim/runtime/indent/lisp.vim
@@ -667,7 +669,6 @@ share/nvim/runtime/keymap/ukrainian-dvorak.vim
 share/nvim/runtime/keymap/ukrainian-jcuken.vim
 share/nvim/runtime/keymap/vietnamese-viqr_utf-8.vim
 share/nvim/runtime/macmap.vim
-share/nvim/runtime/macros/dvorak
 share/nvim/runtime/macros/editexisting.vim
 share/nvim/runtime/macros/justify.vim
 share/nvim/runtime/macros/less.bat
@@ -682,6 +683,7 @@ share/nvim/runtime/mswin.vim
 share/nvim/runtime/optwin.vim
 share/nvim/runtime/plugin/getscriptPlugin.vim
 share/nvim/runtime/plugin/gzip.vim
+share/nvim/runtime/plugin/man.vim
 share/nvim/runtime/plugin/matchit.vim
 share/nvim/runtime/plugin/matchparen.vim
 share/nvim/runtime/plugin/netrwPlugin.vim
@@ -981,6 +983,7 @@ share/nvim/runtime/syntax/latte.vim
 share/nvim/runtime/syntax/ld.vim
 share/nvim/runtime/syntax/ldapconf.vim
 share/nvim/runtime/syntax/ldif.vim
+share/nvim/runtime/syntax/less.vim
 share/nvim/runtime/syntax/lex.vim
 share/nvim/runtime/syntax/lftp.vim
 share/nvim/runtime/syntax/lhaskell.vim

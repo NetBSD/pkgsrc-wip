@@ -19,6 +19,6 @@ Awk scripts are not executable install them as simple files
    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
 -  *.vim *.dict *.py *.ps *.tutor)
 +  *.vim *.dict *.py *.ps *.awk *.tutor)
- list(APPEND RUNTIME_FILES macros/dvorak)
  
  foreach(F ${RUNTIME_FILES})
+   get_filename_component(BASEDIR ${F} PATH)
