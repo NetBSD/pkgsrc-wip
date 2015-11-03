@@ -1,0 +1,26 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/translationstring/__init__.py
+${PYSITELIB}/translationstring/__init__.pyc
+${PYSITELIB}/translationstring/__init__.pyo
+${PYSITELIB}/translationstring/compat.py
+${PYSITELIB}/translationstring/compat.pyc
+${PYSITELIB}/translationstring/compat.pyo
+${PYSITELIB}/translationstring/tests/__init__.py
+${PYSITELIB}/translationstring/tests/__init__.pyc
+${PYSITELIB}/translationstring/tests/__init__.pyo
+${PYSITELIB}/translationstring/tests/fixtures/locales/de/LC_MESSAGES/messages.mo
+${PYSITELIB}/translationstring/tests/fixtures/locales/de/LC_MESSAGES/messages.po
+${PYSITELIB}/translationstring/tests/test__init__.py
+${PYSITELIB}/translationstring/tests/test__init__.pyc
+${PYSITELIB}/translationstring/tests/test__init__.pyo
+${PYSITELIB}/translationstring/tests/test_integration.py
+${PYSITELIB}/translationstring/tests/test_integration.pyc
+${PYSITELIB}/translationstring/tests/test_integration.pyo
+${PYSITELIB}/translationstring/tests/translations.py
+${PYSITELIB}/translationstring/tests/translations.pyc
+${PYSITELIB}/translationstring/tests/translations.pyo
