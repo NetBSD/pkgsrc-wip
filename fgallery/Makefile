@@ -23,6 +23,7 @@ DEPENDS+=       jpegoptim>=1.4:../../graphics/jpegoptim
 DEPENDS+=       pngcrush>=1.7:../../graphics/pngcrush
 DEPENDS+=       lcms2>=2.7:../../graphics/lcms2
 DEPENDS+=       p7zip>=9.38:../../archivers/p7zip
+DEPENDS+=       p5-Image-ExifTool>=10.0:../../graphics/p5-Image-ExifTool
 
 SUBST_CLASSES+=          fix-paths
 SUBST_STAGE.fix-paths=   post-patch
