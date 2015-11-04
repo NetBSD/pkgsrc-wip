@@ -12,8 +12,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.0:../../math/py-scipy
 
-WRKSRC=		${WRKDIR}/scikit-learn-0.17b1
-
 USE_LANGUAGES=	c c++ fortran
 
 .include "../../lang/python/egg.mk"
