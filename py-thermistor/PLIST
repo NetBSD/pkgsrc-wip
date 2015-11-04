@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/thermistor.py
+${PYSITELIB}/thermistor.pyc
+${PYSITELIB}/thermistor.pyo

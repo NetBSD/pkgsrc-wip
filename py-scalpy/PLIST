@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/scalpy/__init__.py
+${PYSITELIB}/scalpy/__init__.pyc
+${PYSITELIB}/scalpy/__init__.pyo
+${PYSITELIB}/scalpy/fluids.py
+${PYSITELIB}/scalpy/fluids.pyc
+${PYSITELIB}/scalpy/fluids.pyo
+${PYSITELIB}/scalpy/scalar.py
+${PYSITELIB}/scalpy/scalar.pyc
+${PYSITELIB}/scalpy/scalar.pyo
+${PYSITELIB}/scalpy/solver.py
+${PYSITELIB}/scalpy/solver.pyc
+${PYSITELIB}/scalpy/solver.pyo
+${PYSITELIB}/scalpy/transfer_func.py
+${PYSITELIB}/scalpy/transfer_func.pyc
+${PYSITELIB}/scalpy/transfer_func.pyo
