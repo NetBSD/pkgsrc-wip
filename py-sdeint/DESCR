@@ -1,0 +1,4 @@
+sdeint is a collection of numerical algorithms for integrating Ito and Stratonovich
+stochastic ordinary differential equations (SODEs). It has simple functions that
+can be used in a similar way to ``scipy.integrate.odeint()`` or MATLAB's
+``ode45``
