@@ -14,7 +14,6 @@ DEPENDS+=       ${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
 PYDISTUTILSPKG= yes
 
 do-test:

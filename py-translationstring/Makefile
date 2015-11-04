@@ -15,7 +15,5 @@ WRKSRC=			${WRKDIR}/translationstring-1.3
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_ACCEPTED= 34 33 27
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
