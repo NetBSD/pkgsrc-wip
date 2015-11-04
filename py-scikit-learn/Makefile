@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/12/31 13:58:41 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	scikit-learn-0.15.2
+DISTNAME=	scikit-learn-0.17b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-learn/
@@ -10,7 +10,9 @@ HOMEPAGE=	http://scikit-learn.org/
 COMMENT=	Machine learning algorithms for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.9:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.0:../../math/py-scipy
+
+WRKSRC=		${WRKDIR}/scikit-learn-0.17b1
 
 USE_LANGUAGES=	c c++ fortran
 
