@@ -12,8 +12,6 @@ COMMENT=	General Equation Parser and Evaluator
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.2:../../math/py-numpy
 
-WRKSRC=		${WRKDIR}/Equation-1.2.01
-
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
