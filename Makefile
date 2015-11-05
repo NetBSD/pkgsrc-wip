@@ -1557,6 +1557,7 @@ SUBDIR+=	libslab
 SUBDIR+=	libsocialweb
 SUBDIR+=	libspt
 SUBDIR+=	libstacktrace
+SUBDIR+=	libstrophe
 SUBDIR+=	libsysstat
 SUBDIR+=	libtermkey
 SUBDIR+=	libtextcat

@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (libstrophe-0.8.8.tar.gz) = c68c2e96eb8c3896b3296d8d126791dfc4cc304b
+RMD160 (libstrophe-0.8.8.tar.gz) = 3250167ebfbcb74c70cc74121c92d51bfb7efdef
+Size (libstrophe-0.8.8.tar.gz) = 128385 bytes
+SHA1 (patch-configure.ac) = b45ec265650f213f27e9e1bf62d770e6c85ee39a
+SHA1 (patch-src_auth.c) = c58624f78bf962fde3991071ec9a2a44fb79257e
+SHA1 (patch-src_scram.c) = a891d48032af53180d489e68123ae123f07f5448
+SHA1 (patch-src_sha1.c) = 51b1862e4fc9997b16efba3b045d5342df8bf8b0
+SHA1 (patch-src_sha1.h) = 38ecad8589bfbd1d0d86ac15022a45f29f910163
