@@ -18,7 +18,7 @@
 
 MK_WXGTK_BUILDLINK3_MK:=	${MK_WXGTK_BUILDLINK3_MK}+
 
-.include "bsd.fast.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(MK_WXGTK_BUILDLINK3_MK:M+)
 
