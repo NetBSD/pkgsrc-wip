@@ -2466,6 +2466,7 @@ SUBDIR+=	primecoin
 SUBDIR+=	probcons
 SUBDIR+=	probe
 SUBDIR+=	procps
+SUBDIR+=	profanity
 SUBDIR+=	progreiserfs
 SUBDIR+=	proplib
 SUBDIR+=	prover9
