@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.14 2014/06/13 09:54:43 makoto Exp $
+$NetBSD: MESSAGE,v 1.2 2014/06/13 11:38:54 mef Exp $
 To start the application, just type tqsl in shell. You will see
 the icons for operations (with Window facility).
 

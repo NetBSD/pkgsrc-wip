@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2015/01/07 14:44:34 makoto Exp $
+# $NetBSD: Makefile,v 1.17 2015/10/11 02:59:07 mef Exp $
 
-DISTNAME=		tqsl-2.1
-PKGNAME=		${DISTNAME}RC3
+DISTNAME=		tqsl-2.1.2
 CATEGORIES=		ham
-MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v2.1-beta/
-MASTER_SITES+=		http://www.rickmurphy.net/lotw/
-DIST_SUBDIR=		${PKGNAME_NOREV}
+MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v2.1.2/
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
@@ -41,12 +38,12 @@ post-install:
 	(cd ${WRKSRC} ;\
 	${INSTALL_DATA} LICENSE.txt ${DESTDIR}${PREFIX}/share/TrustedQSL/ \
 	)
-# Conflicting PLIST with wxGTK28-2.8.12nb
-	(cd ${WRKSRC} ; ${RM} ${DESTDIR}${PREFIX}/share/locale/*/LC_MESSAGES/wxstd.mo)
+	# Conflicting PLIST with wxGTK28-2.8.12nb8:
+	${RM} ${DESTDIR}${PREFIX}/share/locale/*/LC_MESSAGES/wxstd.mo
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/db5/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../wip/mk/wxGTK.mk"
 .include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
