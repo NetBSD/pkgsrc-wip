@@ -1,0 +1,4 @@
+A python script to convert WordPress XML dump to a set of plain text/markdown
+files. Intended to be used for migration from WordPress to public-static
+website generator, but could also be helpful as general purpose WordPress
+content processor.
