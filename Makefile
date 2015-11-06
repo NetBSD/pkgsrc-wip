@@ -3569,6 +3569,7 @@ SUBDIR+=	silo
 SUBDIR+=	silvertree
 SUBDIR+=	sim-kde
 SUBDIR+=	sim-qt
+SUBDIR+=	simgear
 SUBDIR+=	simpa
 SUBDIR+=	simple-scan
 SUBDIR+=	simplec
