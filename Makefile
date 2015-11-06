@@ -1569,7 +1569,6 @@ SUBDIR+=	libucl
 SUBDIR+=	libuna
 SUBDIR+=	libunibilium
 SUBDIR+=	libunwind
-SUBDIR+=	libuv
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
