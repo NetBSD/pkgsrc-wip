@@ -7,7 +7,7 @@ SIMGEAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.simgear+=	simgear>=2.0.0nb6
 BUILDLINK_ABI_DEPENDS.simgear+=	simgear>=2.8.0nb23
-BUILDLINK_PKGSRCDIR.simgear?=	../../games/simgear
+BUILDLINK_PKGSRCDIR.simgear?=	../../wip/simgear
 BUILDLINK_DEPMETHOD.simgear?=	build
 
 .include "../../devel/zlib/buildlink3.mk"
