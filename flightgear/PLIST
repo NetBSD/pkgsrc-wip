@@ -2,6 +2,8 @@
 bin/GPSsmooth
 bin/MIDGsmooth
 bin/UGsmooth
+bin/fgcom
+bin/fgelev
 bin/fgfs
 bin/fgjs
 bin/fgpanel
@@ -14,6 +16,5 @@ bin/yasim-proptest
 man/man1/fgfs.1
 man/man1/fgjs.1
 man/man1/fgpanel.1
-man/man1/gl-info.1
 man/man1/js_demo.1
 man/man1/terrasync.1

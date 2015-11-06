@@ -6,8 +6,8 @@ $NetBSD: patch-src_FDM_JSBSim_models_propulsion_FGEngine.cpp,v 1.1 2014/08/19 13
  
    Name = engine_element->GetAttributeValue("name");
  
--  Load(engine_element, PropertyManager, to_string(EngineNumber)); // Call ModelFunctions loader
-+  Load(engine_element, PropertyManager, ::to_string(EngineNumber)); // Call ModelFunctions loader
+-  FGModelFunctions::Load(engine_element, PropertyManager, to_string((int)EngineNumber)); // Call ModelFunctions loader
++  FGModelFunctions::Load(engine_element, PropertyManager, ::to_string((int)EngineNumber)); // Call ModelFunctions loader
  
  // Find and set engine location
  
@@ -15,8 +15,8 @@ $NetBSD: patch-src_FDM_JSBSim_models_propulsion_FGEngine.cpp,v 1.1 2014/08/19 13
    property_name = base_property_name + "/fuel-used-lbs";
    PropertyManager->Tie( property_name.c_str(), this, &FGEngine::GetFuelUsedLbs);
  
--  PostLoad(engine_element, PropertyManager, to_string(EngineNumber));
-+  PostLoad(engine_element, PropertyManager, ::to_string(EngineNumber));
+-  PostLoad(engine_element, PropertyManager, to_string((int)EngineNumber));
++  PostLoad(engine_element, PropertyManager, ::to_string((int)EngineNumber));
  
    Debug(0);
- }
+ 

@@ -12,4 +12,4 @@ Use standard headers.
 +#include <cstdlib>
  #endif
  
- #include <simgear/props/props_io.hxx>
+ #include <cstdio>

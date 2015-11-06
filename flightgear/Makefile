@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.53 2015/06/30 09:57:35 ryoon Exp $
 
-DISTNAME=	flightgear-2.8.0
-PKGREVISION=	24
+DISTNAME=	flightgear-3.4.0
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Source/ \
 		http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/ \
@@ -24,9 +23,10 @@ CMAKE_ARGS+=		-DJPEG_FACTORY:BOOL=ON
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.simgear+=	simgear>=2.0.0
-.include "../../games/simgear/buildlink3.mk"
+BUILDLINK_API_DEPENDS.simgear+=	simgear>=${PKGVERSION}
+.include "../../wip/simgear/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
-.include "../../graphics/osg/buildlink3.mk"
+BUILDLINK_API_DEPENDS.osg+=	osg>=3.2.0
+.include "../../wip/osg/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
