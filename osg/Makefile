@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.55 2015/06/30 09:57:36 ryoon Exp $
 
-DISTNAME=	OpenSceneGraph-3.0.1
-PKGNAME=	osg-3.0.1
-PKGREVISION=	37
+DISTNAME=	OpenSceneGraph-3.4.0
+PKGNAME=	osg-3.4.0
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-${PKGVERSION_NOREV}/source/
 EXTRACT_SUFX=	.zip
@@ -39,6 +38,7 @@ PLIST.x11=	yes
 .include "../../mk/jpeg.buildlink3.mk"
 .endif
 
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

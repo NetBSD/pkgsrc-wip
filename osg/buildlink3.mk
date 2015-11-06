@@ -7,7 +7,7 @@ OSG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.osg+=	osg>=2.8.3
 BUILDLINK_ABI_DEPENDS.osg+=	osg>=3.0.1nb37
-BUILDLINK_PKGSRCDIR.osg?=	../../graphics/osg
+BUILDLINK_PKGSRCDIR.osg?=	../../wip/osg
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
