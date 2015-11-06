@@ -793,6 +793,7 @@ SUBDIR+=	geekcode
 SUBDIR+=	gemrb
 SUBDIR+=	geners
 SUBDIR+=	genus2reduction
+SUBDIR+=	geoloc
 SUBDIR+=	gerris
 SUBDIR+=	gerris-snapshot
 SUBDIR+=	getdp
