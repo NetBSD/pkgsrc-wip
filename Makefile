@@ -666,6 +666,7 @@ SUBDIR+=	fbpanel
 SUBDIR+=	fbsd2pkg
 SUBDIR+=	fceux
 SUBDIR+=	fcgiwrap
+SUBDIR+=	fdupes
 SUBDIR+=	feathercoin
 SUBDIR+=	felt
 SUBDIR+=	festvox-awb
