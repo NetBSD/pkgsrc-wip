@@ -1,4 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2003/06/03 14:30:19 poppnk Exp $
 
-SHA1 (hasciicam-0.9.tar.gz) = 75e31867074aa2c991b6ded5aa5caeebf6f51b3f
-Size (hasciicam-0.9.tar.gz) = 72134 bytes
+SHA1 (hasciicam_1.3.tar.gz) = 8eece108955afde6a364c0a3ab287c618e8333a4
+RMD160 (hasciicam_1.3.tar.gz) = 2917ff9a71bdd60ea2711bf9a65f3ee4720f3445
+SHA512 (hasciicam_1.3.tar.gz) = f500bbeb9d41cb1721956cca597b03a2012459596926ced3717fbfa9cb9f26b07bc5b653cf04956cfe668327a082fc9c0b8995eff39225a86394fbace2eb7a93
+Size (hasciicam_1.3.tar.gz) = 395117 bytes
+SHA1 (patch-src_hasciicam.c) = e91ce6760c9ebd216d61007e3f0115c12115a3e4
