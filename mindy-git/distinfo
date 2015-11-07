@@ -1,4 +1,2 @@
 $NetBSD$
 
-SHA1 (patch-cmake_modules_AddSphinxTarget.cmake) = 1018e6165151aaf453c88ef450dc8aee3c30984d
-SHA1 (patch-man-pages_CMakeLists.txt) = 652b1b23a6bed60e930f332b7238ce1942d36450
