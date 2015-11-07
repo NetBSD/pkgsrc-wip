@@ -1,0 +1,5 @@
+Mindy is an implementation of a language that is very much like the language
+described in the Dylan Reference Manual (DRM). Mindy was named for "Mindy Is
+Not Dylan Yet", and it still is and will probably always remain a Dylan subset,
+primarily because mindycomp t do enough semantic analysis to implement macros
+or to implement the precise semantics of Dylan naming.
