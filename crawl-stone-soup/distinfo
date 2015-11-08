@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.4 2015/08/18 21:15:41 yhardy Exp $
 
-SHA1 (stone_soup-0.16.1-nodeps.tar.xz) = c4495c00648821daea81ed5de179c6b2f7743a5e
-RMD160 (stone_soup-0.16.1-nodeps.tar.xz) = 679bd5fd15324e1a2ea916575cf0c97edbd0625c
-Size (stone_soup-0.16.1-nodeps.tar.xz) = 9250980 bytes
+SHA1 (stone_soup-0.17.0-nodeps.tar.xz) = a8d5b497ea99afa84f7d934ff3272b7499a509ae
+RMD160 (stone_soup-0.17.0-nodeps.tar.xz) = ab89b8dae5305d342e17f28bd98103bdf1d3d033
+Size (stone_soup-0.17.0-nodeps.tar.xz) = 9115236 bytes
+SHA1 (patch-source__libunix.cc) = 485c3973bed32e88f7e84e4d42757a987d012090
 SHA1 (patch-source_platform.h) = d310773dc87504677108e59a050b5664d82d41e1
