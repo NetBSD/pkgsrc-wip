@@ -1,0 +1,15 @@
+$NetBSD$
+
+We don't have setuptools-markdown yet.
+
+--- setup.py.orig	2015-11-07 12:51:06.000000000 -0500
++++ setup.py	2015-11-07 12:51:55.000000000 -0500
+@@ -19,8 +19,6 @@
+       packages=['hypatia'],
+       version=__version__,
+       description='2D action adventure game engine',
+-      setup_requires=['setuptools-markdown'],
+-      long_description_markdown_filename='README.md',
+       author='Lillian Lemmer',
+       author_email='lillian.lynn.lemmer@gmail.com',
+       url='http://hypatia-engine.github.io/hypatia',
