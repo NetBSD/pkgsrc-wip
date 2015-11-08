@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.8 2015/03/24 22:42:18 lexort Exp $
 
-SHA1 (libressl-2.1.6.tar.gz) = 5a513ea72dd091aee236b411cbf55e6e6dff2573
-RMD160 (libressl-2.1.6.tar.gz) = 1329a4b8d35f2336883ca122b1308040251c02f4
-Size (libressl-2.1.6.tar.gz) = 2865936 bytes
+SHA1 (libressl-2.2.4.tar.gz) = 902578c5dc0d2b2789dfb9d8d7e66e2c3cbf951c
+RMD160 (libressl-2.2.4.tar.gz) = 812b36607859db1d30bd4aebbe9e788288f78bdc
+SHA512 (libressl-2.2.4.tar.gz) = 390fbf4f531976c873a0a1163fd57f33097686c6956ec4d3eb69e8271a4e40abfec76d65172b34ae50af8936dd8b5c3ca5fefee9d8686ca468a5577d432c3fe5
+Size (libressl-2.2.4.tar.gz) = 2966157 bytes
