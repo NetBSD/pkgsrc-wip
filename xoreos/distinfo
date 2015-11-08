@@ -1,8 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/09/05 23:04:36 yhardy Exp $
 
-SHA1 (xoreos/v0.0.2.tar.gz) = 953582a7542ab643c6b743a7ec69eac049077cd7
-RMD160 (xoreos/v0.0.2.tar.gz) = 93f52cf9910846e94545919359268de60b9c6c22
-Size (xoreos/v0.0.2.tar.gz) = 2188862 bytes
-SHA1 (patch-configure.ac) = f262de829b22b9253b08de25cd735003f0335004
-SHA1 (patch-m4_ax_check_zlib.m4) = 8893146ce8d6467933f1fde3694df9c4e0cfd0f9
-SHA1 (patch-src_common_system.h) = 7b7c46d251680da48cb62508862b1148f26355e5
+SHA1 (xoreos/v0.0.3.tar.gz) = 81e1e4bd8b0afaaf7ca54f1315f79b7afdd61c9b
+RMD160 (xoreos/v0.0.3.tar.gz) = c56366451644ed7a2eb3f0ad5428fd3d039abc34
+SHA512 (xoreos/v0.0.3.tar.gz) = 47c9e4f8f7782caea6a23d5dd80dde7c539ec230d1fbc5c30f8bb8e2eb695182a48037e6a9c5f512efe3280de42596c9ac6de99cc56b90688732a3a75f5b0bbb
+Size (xoreos/v0.0.3.tar.gz) = 2467596 bytes
