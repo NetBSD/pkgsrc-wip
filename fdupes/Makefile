@@ -9,7 +9,6 @@ HOMEPAGE=	http://netdial.caribe.net/~adrian2/fdupes.html
 COMMENT=	Program for identifying or deleting duplicate files
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	gmake	# without it, md5.o ends up in a wrong directory
 NO_CONFIGURE=	yes
 
 MAKE_FLAGS=	INSTALLDIR=${PREFIX}/bin MANPAGEDIR=${PREFIX}/${PKGMANDIR}

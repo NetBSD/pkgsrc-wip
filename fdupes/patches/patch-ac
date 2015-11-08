@@ -27,3 +27,14 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
  MAN_DIR = $(MAN_BASE_DIR)/man1
  MAN_EXT = 1
  
+@@ -91,7 +91,9 @@ INSTALL_DATA    = $(INSTALL) -c -m 0644
+ #
+ #ADDITIONAL_OBJECTS = getopt.o
+ 
+-OBJECT_FILES = fdupes.o md5/md5.o $(ADDITIONAL_OBJECTS)
++OBJECT_FILES = fdupes.o md5.o $(ADDITIONAL_OBJECTS)
++
++md5.o: md5/md5.c
+ 
+ #####################################################################
+ # no need to modify anything beyond this point                      #
