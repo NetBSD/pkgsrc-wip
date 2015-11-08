@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2015/04/21 17:02:51 joerg Exp $
 
-DISTNAME=	FlightGear-data-2.8.0
+DISTNAME=	FlightGear-data-3.4.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	games
 MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Shared/ \
@@ -15,25 +15,25 @@ LICENSE=	gnu-gpl-v2
 
 UNLIMIT_RESOURCES+=	cputime
 
-WRKSRC=			${WRKDIR}/data
+WRKSRC=			${WRKDIR}/fgdata
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 
-SHARESUBDIR=	share/FlightGear
-SHAREDIR=	${PREFIX}/${SHARESUBDIR}
+DATASUBDIR=	lib/FlightGear
+DATADIR=	${PREFIX}/${DATASUBDIR}
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
 	# auto-generated PLIST
 	rm -f ${WRKDIR}/PLIST.F
 	set -e;	cd ${WRKSRC} &&						\
 	find . -type d -print | while read d; do			\
-		${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/"$${d}";	\
+		${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}/"$${d}";	\
 	done;								\
 	find . -type f -print | while read f; do			\
-		${INSTALL_DATA} "$${f}" ${DESTDIR}${SHAREDIR}/"$${f}";	\
-		${ECHO} ${SHARESUBDIR}/"$${f#./}" >> ${WRKDIR}/PLIST.F;	\
+		${INSTALL_DATA} "$${f}" ${DESTDIR}${DATADIR}/"$${f}";	\
+		${ECHO} ${DATASUBDIR}/"$${f#./}" >> ${WRKDIR}/PLIST.F;	\
 	done;
 
 .include "../../mk/bsd.pkg.mk"
