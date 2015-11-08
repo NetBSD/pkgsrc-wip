@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.13 2015/08/10 21:16:48 yhardy Exp $
 
-SHA1 (task-2.4.4.tar.gz) = e7e1336ed099f672b3d5971d6a221b72ed804ac6
-RMD160 (task-2.4.4.tar.gz) = 2e39b53a9946a468c2bc31f498608edfbdd8608e
-Size (task-2.4.4.tar.gz) = 2352265 bytes
+SHA1 (task-2.5.0.tar.gz) = d319f872ae74c541c7a257e75ee531b67783678b
+RMD160 (task-2.5.0.tar.gz) = 5e4908027a073627184868346819afdd975595c6
+SHA512 (task-2.5.0.tar.gz) = 911ed33553c71d0578dda20774ff1c5762700957ed637ed849ef51c4cd00a53feabc18c477dbc4b618371d9ddc8fec71795f96d8474acbec8a91be8bb1ff1bfd
+Size (task-2.5.0.tar.gz) = 900285 bytes

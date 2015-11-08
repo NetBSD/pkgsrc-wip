@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.16 2015/08/10 21:16:48 yhardy Exp $
 #
 
-DISTNAME=	task-2.4.4
+DISTNAME=	task-2.5.0
 CATEGORIES=	time
 MASTER_SITES=	http://www.taskwarrior.org/download/
 
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+#GCC_REQD+=	4.7
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.task
 PKG_SUPPORTED_OPTIONS=	lua
