@@ -702,6 +702,7 @@ SUBDIR+=	flc
 SUBDIR+=	flexdock
 SUBDIR+=	flexdump
 SUBDIR+=	flightgear
+SUBDIR+=	flightgear-data
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
 SUBDIR+=	flpsed
