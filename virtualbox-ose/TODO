@@ -6,6 +6,8 @@
    See http://svnweb.freebsd.org/ports/head/emulators/virtualbox-ose/
  - Thus there should be so many things to adjust from FreeBSD to pkgsrc
 
+ - CVE-2015-4813 CVE-2015-4896
+
  - At beginning:
 ===> Building for virtualbox-ose-4.3.30
 cd /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/ &&  /bin/sh -c . kBuild/env.sh && VBOX_LIBPATH_X11=/usr/X11R7/lib VBOX_FREEBSD_SRC=/usr/src/sys KBUILD_PA
