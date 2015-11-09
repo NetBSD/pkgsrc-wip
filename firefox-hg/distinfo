@@ -35,7 +35,6 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__captur
 SHA1 (patch-mfbt_Alignment.h) = 1d97ee858b62c31112fe90ebb2d8fe430c95ed56
 SHA1 (patch-mfbt_Attributes.h) = b587038d2f41d3cd4dbc346ac591088b2f36750c
 SHA1 (patch-ostream) = 593a114a31a0117af6c00cd12e3aed4565571288
-SHA1 (patch-toolkit_components_perfmonitoring_nsPerformanceStats.cpp) = 86912930138ad03fd08eac980d39a4285583f98f
 SHA1 (patch-toolkit_library_moz.build) = 44389f31b916f980e8c85971104dd216d64260d8
 SHA1 (patch-toolkit_toolkit.mozbuild) = a92b9f5114c3eab2c8e9f1d0eb21926235d2203a
 SHA1 (patch-unwind.h) = c7a606c83cb60d0d6bcc7babad8157097d9036a8
