@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/taskd
+bin/taskdctl
+man/man1/taskd.1
+man/man1/taskdctl.1
+man/man5/taskdrc.5
+share/doc/taskd/AUTHORS
+share/doc/taskd/COPYING
+share/doc/taskd/ChangeLog
+share/doc/taskd/INSTALL
+share/doc/taskd/NEWS

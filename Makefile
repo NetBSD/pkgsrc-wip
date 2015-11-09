@@ -3725,6 +3725,7 @@ SUBDIR+=	tardy
 SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
+SUBDIR+=	taskserver
 SUBDIR+=	tc-git
 SUBDIR+=	tc-hasida-table
 SUBDIR+=	tc-svn
