@@ -8,4 +8,4 @@ Many security issues in available components, check http://secunia.com
 and/or other sources before using any part of joomla.  pkgsrc-security
 
 Advisories for Joomla! itself:
-CVE-2015-7859, CVE-2015-7297 
+CVE-2015-7857, CVE-2015-7859, CVE-2015-7297 
