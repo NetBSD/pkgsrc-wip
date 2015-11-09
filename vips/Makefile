@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/current/
 
 MAINTAINER=	base@atomicules.co.uk
 HOMEPAGE=	http://www.vips.ecs.soton.ac.uk/supported/current/
-COMMENT=	TODO: Short description of the package
+COMMENT=	A 2D image processing library
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
@@ -23,6 +23,5 @@ PKGCONFIG_OVERRIDE+=	vipsCC.pc.in
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/giflib/buildlink3.mk"
 #Note to self: This must go last
 .include "../../mk/bsd.pkg.mk"
