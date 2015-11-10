@@ -4,7 +4,7 @@ DISTNAME=		bip-0.8.9
 CATEGORIES=		chat
 MASTER_SITES=		https://projects.duckcorp.org/attachments/download/61/
 
-OWNER=			petar@smokva.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://bip.milkypond.org/
 COMMENT=		IRC proxy
 LICENSE=		gnu-gpl-v2
