@@ -2,8 +2,9 @@
 #
 
 VERSION=	0.2.8
-PKGNAME=	zathura-mupdf-${VERSION}
 DISTNAME=	zathura-pdf-mupdf-${VERSION}
+PKGNAME=	zathura-mupdf-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura/plugins/download/
 
