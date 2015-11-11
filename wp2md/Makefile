@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	wp2md-0.0.0
+DISTNAME=	wp2md-0.8.1
 CATEGORIES=	textproc
 GIT_REPOSITORIES=	wp2md
 GIT_REPO.wp2md=		https://github.com/dreikanter/wp2md.git

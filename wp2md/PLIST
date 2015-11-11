@@ -1,12 +1,12 @@
 @comment $NetBSD$
 bin/wp2md
-${PYSITELIB}/wp2md-0.8.1-py3.4.egg-info/PKG-INFO
-${PYSITELIB}/wp2md-0.8.1-py3.4.egg-info/SOURCES.txt
-${PYSITELIB}/wp2md-0.8.1-py3.4.egg-info/dependency_links.txt
-${PYSITELIB}/wp2md-0.8.1-py3.4.egg-info/entry_points.txt
-${PYSITELIB}/wp2md-0.8.1-py3.4.egg-info/not-zip-safe
-${PYSITELIB}/wp2md-0.8.1-py3.4.egg-info/requires.txt
-${PYSITELIB}/wp2md-0.8.1-py3.4.egg-info/top_level.txt
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/wp2md/__init__.py
 ${PYSITELIB}/wp2md/__main__.py
 ${PYSITELIB}/wp2md/__init__.pyc
