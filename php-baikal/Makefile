@@ -50,6 +50,7 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 
 do-install:
 	${RM} -f ${WRKSRC}/*orig
+	${RM} -f ${WRKSRC}/*/*/*/*/*orig
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${BAIKALDIR}
 
