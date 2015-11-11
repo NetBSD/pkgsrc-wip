@@ -238,7 +238,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/vie
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/libs/backbone-1.2.1.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/libs/classnames-2.2.0.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/libs/lodash-3.9.3.js
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/libs/react-0.12.2.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/libs/react-0.13.3.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/sounds/connected.ogg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/sounds/connecting.ogg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/sounds/failure.ogg
@@ -2781,10 +2781,6 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/autocomplete-sea
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/autoscroll.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/blacklist_favicon.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/blacklist_large.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/close-XPVista7.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/close-XPVista7@2x.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/close-inverted-XPVista7.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/close-inverted-XPVista7@2x.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/close-inverted.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/close-inverted@2x.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/close.png
@@ -2913,6 +2909,11 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-open-hover
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-open-rtl.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/tree/twisty-open.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/wizard.css
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/help/Toolbar-rtl.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/help/Toolbar.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/help/Weblink-rtl.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/help/Weblink.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/help/helpFileLayout.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/aboutNetworking.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/aboutServiceWorkers.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/downloads/downloadButtons.png
@@ -2955,7 +2956,6 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/formautofill/requestA
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/handling/handling.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/passwordmgr/key-16.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/passwordmgr/key-64.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/passwordmgr/key.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/places/defaultFavicon.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/places/defaultFavicon@2x.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/mozapps/plugins/contentPluginActivate.png
@@ -3856,9 +3856,7 @@ lib/firefox-${VERSION}/webapprt/chrome/webapprt/content/mochitest.js
 lib/firefox-${VERSION}/webapprt/chrome/webapprt/content/mochitest.xul
 lib/firefox-${VERSION}/webapprt/chrome/webapprt/content/webapp.js
 lib/firefox-${VERSION}/webapprt/chrome/webapprt/content/webapp.xul
-lib/firefox-${VERSION}/webapprt/chrome/webapprt/skin/classic/webapprt/downloads/downloadButtons-XP.png
 lib/firefox-${VERSION}/webapprt/chrome/webapprt/skin/classic/webapprt/downloads/downloadButtons.png
-lib/firefox-${VERSION}/webapprt/chrome/webapprt/skin/classic/webapprt/downloads/downloadIcon-XP.png
 lib/firefox-${VERSION}/webapprt/chrome/webapprt/skin/classic/webapprt/downloads/downloadIcon.png
 lib/firefox-${VERSION}/webapprt/chrome/webapprt/skin/classic/webapprt/downloads/downloads.css
 lib/firefox-${VERSION}/webapprt/components/CommandLineHandler.js
