@@ -2,7 +2,8 @@
 
 DISTNAME=	fbpager-0.1.4
 CATEGORIES=	wm x11
-MASTER_SITES=	http://fluxbox.org/download/
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
+# http://git.fluxbox.org/fbpager.git/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fluxbox.org/fbpager/
