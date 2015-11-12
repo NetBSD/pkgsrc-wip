@@ -1,17 +1,18 @@
 # $NetBSD: Makefile,v 1.2 2014/02/03 09:29:26 othyro Exp $
 
-DATESTAMP=	20140105
-DISTNAME=	libcfile-alpha-${DATESTAMP}
+DISTNAME=	libcfile-alpha-20150101
+GITHUB_PROJECT=	libcfile
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 PKGNAME=	${DISTNAME:S/-alpha//1}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSem41RXpvQkIyZlU/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libyal/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/libcfile/
+HOMEPAGE=	https://github.com/libyal/libcfile
 COMMENT=	Library for cross-platform C file functions
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libcfile-${DATESTAMP}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext

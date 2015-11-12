@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2014/02/03 09:29:26 othyro Exp $
 
-SHA1 (libcfile-alpha-20140105.tar.gz) = 0976907d899b8c2a11c4ef483e05e558505bbdac
-RMD160 (libcfile-alpha-20140105.tar.gz) = 1b7ba7e4450e651085a9326f574f8febc5be2b34
-Size (libcfile-alpha-20140105.tar.gz) = 1727154 bytes
+SHA1 (libcfile-alpha-20150101.tar.gz) = 4b04fde8133b7b2fbf3123e6ac14967f6a12a00c
+RMD160 (libcfile-alpha-20150101.tar.gz) = 5c0eab0f28d80459d91810c211867411aa4cbb40
+SHA512 (libcfile-alpha-20150101.tar.gz) = a40acb35d3ecc9ba9b0f8081487322c33f42429dd0eeb93ccf7dc5a07be6c9f78efd39183ab889ced5f3d4e3ea651be9e449781efdc2d4d635cbe509f13ab7a0
+Size (libcfile-alpha-20150101.tar.gz) = 1738555 bytes
