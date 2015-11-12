@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/08/10 18:59:28 jonthn Exp $
+@comment $NetBSD$
 bin/${PREFIX_PROGRAM}ctags
 ${PLIST.emacs}bin/${PREFIX_PROGRAM}etags
 include/readtags.h
@@ -6,11 +6,8 @@ lib/readtags.o
 libexec/ctags/drivers/coffeetags
 man/man1/${PREFIX_PROGRAM}ctags.1
 ${PLIST.emacs}man/man1/${PREFIX_PROGRAM}etags.1
-share/ctags/corpora/RFC1213-MIB.txt
-share/ctags/corpora/ctags.ctags
 share/ctags/optlib/coffee.ctags
 share/ctags/optlib/ctags.ctags
 share/ctags/optlib/gdbinit.ctags
 share/ctags/optlib/m4.ctags
-share/ctags/optlib/mib.ctags
 share/ctags/preload/default.ctags
