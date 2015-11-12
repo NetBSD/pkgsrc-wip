@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2014/02/03 09:27:15 othyro Exp $
 
-SHA1 (libcpath-alpha-20140105.tar.gz) = 9f0a7472c61145145b8ec8510244fa4b3b1de5b1
-RMD160 (libcpath-alpha-20140105.tar.gz) = 04763ef3f5ee994272ad2aba09ac874bca60bbd9
-Size (libcpath-alpha-20140105.tar.gz) = 932002 bytes
+SHA1 (libcpath-alpha-20150101.tar.gz) = c1a6268a0717520910c77a152d241a1ca02213c5
+RMD160 (libcpath-alpha-20150101.tar.gz) = ed9ae7a0422524cf1552a7ac300dadceb1ecf4c4
+SHA512 (libcpath-alpha-20150101.tar.gz) = 17c3679ef248b4bf2db2d2194c9e521465328ea7c98078b8ce69d43ce2e31ba6fe1d1f69c5355b1ffc5de36fc5f85d10c075f49444eb81d45f6a7299946f502b
+Size (libcpath-alpha-20150101.tar.gz) = 937363 bytes

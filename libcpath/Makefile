@@ -1,17 +1,18 @@
 # $NetBSD: Makefile,v 1.3 2014/02/03 09:27:15 othyro Exp $
 
-DATESTAMP=	20140105
-DISTNAME=	libcpath-alpha-${DATESTAMP}
+DISTNAME=	libcpath-alpha-20150101
+GITHUB_PROJECT=	libcpath
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 PKGNAME=	${DISTNAME:S/-alpha//1}
-CATEGORIES=	devel
-MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSOGFVQUwtOHlEWjQ/
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libyal/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libcpath/
+HOMEPAGE=	https://github.com/libyal/libcpath
 COMMENT=	Library for cross-platform C path functions
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libcpath-${DATESTAMP}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
