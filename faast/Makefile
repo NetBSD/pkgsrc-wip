@@ -3,16 +3,17 @@
 
 DISTNAME=	faast-0.2.0
 CATEGORIES=	math
-MASTER_SITES=	http://www.lix.polytechnique.fr/~defeo/FAAST/download/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=defeo/}
+GITHUB_PROJECT=	FAAST
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.lix.polytechnique.fr/~defeo/FAAST
-COMMENT= Library for Fast Arithmetics in Artin-Schreier Towers
+HOMEPAGE=	https://github.com/defeo/FAAST
+COMMENT=	Library for Fast Arithmetics in Artin-Schreier Towers
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=		yes
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../math/ntl/buildlink3.mk"

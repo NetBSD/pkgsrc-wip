@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/01/01 15:11:20 jihbed Exp $
 
-SHA1 (faast-0.2.0.tar.bz2) = bb54582e1ebfecb0beb4a47d46ba9e0dfbe15001
-RMD160 (faast-0.2.0.tar.bz2) = 99785bc8aa5886af503158828f4f2ef30c2cde0b
-Size (faast-0.2.0.tar.bz2) = 316771 bytes
+SHA1 (faast-0.2.0.tar.gz) = c70e497d7266aabcc03097d43dd9903eaf915946
+RMD160 (faast-0.2.0.tar.gz) = fab9fe3a2b215df9009c343c4138fdc184c38259
+SHA512 (faast-0.2.0.tar.gz) = 89c034425b371afc633b2a63040796dc26206d5ba0ee0d7faf2e59996ef0702a3071c92310105d6f39a261f2fdf4b2151958346b62a267ca9ae8f0a1d64bbcb6
+Size (faast-0.2.0.tar.gz) = 407700 bytes
