@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/06/02 14:54:44 jihbed Exp $
 
-SHA1 (cmetrics-0.11.tar.gz) = b67bdaf879a0ccc608f65dda9addfbc0b3da5cae
-RMD160 (cmetrics-0.11.tar.gz) = ed3935078cd7e7fc0c605ea89a05a03bda749fff
-Size (cmetrics-0.11.tar.gz) = 112394 bytes
+SHA1 (CMetrics-0.2.tar.gz) = 9b345c5b1230661fbe88b617ffecced9e8bebb19
+RMD160 (CMetrics-0.2.tar.gz) = cfa6a1fbef89563b07d6cd9aea7dbdf848ade65d
+SHA512 (CMetrics-0.2.tar.gz) = 1aea73427a3bf1538644b49795941ed303f6a654475673db5e8febd3ecc03d1f0da08369f8c51081275db6691d2f7b9b5ea123eaa60234885a8acdffae1c1ee5
+Size (CMetrics-0.2.tar.gz) = 24730 bytes
