@@ -21,6 +21,8 @@
 #	GIT_TAG.${id}
 #		Overridable GIT tag for a repository.
 #
+#	GIT_ENV
+#		The environment for git, to set e.g. GIT_SSL_NO_VERIFY=true
 
 .if !defined(_PKG_MK_GIT_PACKAGE_MK)
 _PKG_MK_GIT_PACKAGE_MK=	# defined
@@ -62,7 +64,7 @@ PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${_repo_:Q}" must be set."
 USE_TOOLS+=		date pax
 
 _GIT_CMD=		git
-_GIT_ENV=		# empty
+_GIT_ENV=		${GIT_ENV}
 _GIT_FLAGS=		--quiet --depth 1 --recursive
 _GIT_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _GIT_TODAY=		${_GIT_TODAY_CMD:sh}
