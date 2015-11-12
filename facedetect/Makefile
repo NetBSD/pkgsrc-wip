@@ -15,7 +15,7 @@ HOMEPAGE=       http://www.thregr.org/~wavexx/software/facedetect/
 COMMENT=        Simple face detector for batch processing
 LICENSE=        gnu-gpl-v2
 
-DEPENDS+=       opencv>=2.4:../../graphics/opencv
+DEPENDS+=       opencv>=2.4:../../graphics/opencv2
 
 SUBST_CLASSES+=          fix-paths
 SUBST_STAGE.fix-paths=   post-extract
