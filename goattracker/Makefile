@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	goattrk2
-PKGNAME=	goattracker-2.70
+PKGNAME=	goattracker-2.73
 CATEGORIES=	audio
 MASTER_SITES=	http://cadaver.homeftp.net/tools/
 EXTRACT_SUFX=	.zip
@@ -15,7 +15,7 @@ CFLAGS=			-I{PREFIX}/include -D_GNU_SOURCE=1 -D_REENTRANT -D_THREAD_SAFE
 WRKSRC=			${WRKDIR}/src
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
-MAKE_FILE=		makefile.common
+MAKE_FILE=		makefile
 INSTALLATION_DIRS=	bin share/examples/goattracker share/doc/goattracker
 
 do-install:

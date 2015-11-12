@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2009/10/12 10:13:57 rodo6510 Exp $
+$NetBSD$
 
---- makefile.common	2009-01-03 00:22:58.000000000 +0100
-+++ /home/nikon/makefile.common_goat
-@@ -4,16 +4,17 @@ CC=gcc
- CXX=g++
+--- makefile.common.orig	2014-07-23 21:58:44.000000000 +0000
++++ makefile.common
+@@ -5,16 +5,16 @@ CXX=g++
  CFLAGS+=-O3 -Wall -Ibme -Iasm
  CXXFLAGS=$(CFLAGS)
-+LIBS=`sdl-config --libs`
  
 -EXE=	$(PREFIX)goattrk2$(SUFFIX) \
+-	$(PREFIX)gt2reloc$(SUFFIX) \
 -	$(PREFIX)ins2snd2$(SUFFIX) \
 -	$(PREFIX)sngspli2$(SUFFIX) \
 -	$(PREFIX)betaconv$(SUFFIX) \
 -	$(PREFIX)mod2sng$(SUFFIX)
 +EXE=	goattrk2 \
++	gt2reloc \
 +	ins2snd2 \
 +	sngspli2 \
 +	betaconv \
@@ -27,10 +27,19 @@ $NetBSD: patch-aa,v 1.2 2009/10/12 10:13:57 rodo6510 Exp $
  gfile.o greloc.o ghelp.o gsound.o gconsole.o gsid.o \
  resid/envelope.o resid/extfilt.o resid/filter.o resid/pot.o resid/sid.o resid/wave.o resid/wave6581__ST.o \
  resid/wave6581_P_T.o resid/wave6581_PS_.o resid/wave6581_PST.o resid/wave8580__ST.o resid/wave8580_P_T.o \
-@@ -27,27 +28,35 @@ bme/bme_gfx.o bme/bme_snd.o bme/bme_win.
- 	$(CXX) -o $@ $^ $(LIBS)
+@@ -34,7 +34,7 @@ greloc2.o: greloc.c
+ 	
+ # it would be nice not having to link things like resid, however the source is
+ # not ready for that
+-$(PREFIX)gt2reloc$(SUFFIX): goatdata.o gt2reloc.o gsong.o gorder.o gpattern.o ginstr.o gtable.o gplay.o gdisplay.o \
++gt2reloc: goatdata.o gt2reloc.o gsong.o gorder.o gpattern.o ginstr.o gtable.o gplay.o gdisplay.o \
+ gfile.o greloc2.o ghelp.o gsound.o gconsole.o gsid.o \
+ resid/envelope.o resid/extfilt.o resid/filter.o resid/pot.o resid/sid.o resid/wave.o resid/wave6581__ST.o \
+ resid/wave6581_P_T.o resid/wave6581_PS_.o resid/wave6581_PST.o resid/wave8580__ST.o resid/wave8580_P_T.o \
+@@ -47,27 +47,35 @@ bme/bme_gfx.o bme/bme_snd.o bme/bme_win.
+ 	$(CXX) -DGT2RELOC -o $@ $^ $(LIBS)
  	strip $@
- 
+ 	
 -$(PREFIX)mod2sng$(SUFFIX): mod2sng.o bme/bme_end.o
 +mod2sng: mod2sng.o bme/bme_end.o
  	gcc -o $@ $^
@@ -48,16 +57,16 @@ $NetBSD: patch-aa,v 1.2 2009/10/12 10:13:57 rodo6510 Exp $
  
 -$(PREFIX)betaconv$(SUFFIX): betaconv.o bme/bme_end.o
 +betaconv: betaconv.o bme/bme_end.o
++	gcc -o $@ $^
++	strip $@
++
++datafile: bme/datafile.o bme/bme_end.o
++	gcc -o $@ $^ $(LIBS)
++	strip $@
++
++dat2inc: bme/dat2inc.o
  	gcc -o $@ $^
  	strip $@
-+datafile: bme/datafile.c bme/bme_end.c
-+	gcc -o ./datafile bme/datafile.c bme/bme_end.c $(LIBS)
-+	strip ./datafile
-+
-+dat2inc: bme/dat2inc.c
-+	gcc -o ./dat2inc bme/dat2inc.c
-+	strip ./dat2inc
-+
  
  goattrk2.dat: player.s altplayer.s chargen.bin palette.bin cursor.bin goattrk2.bmp goattrk2.seq
 -	datafile $@ goattrk2.seq
