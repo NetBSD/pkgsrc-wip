@@ -1,8 +1,7 @@
 $NetBSD: distinfo,v 1.4 2013/11/07 12:39:31 noud4 Exp $
 
-SHA1 (patch-aa) = 3172ea7a359e1779431d732d0f1cb106e3b4dd4e
-SHA1 (patch-ab) = d9c4c6729e7be6968306bdd96ed4269c0887a885
-SHA1 (patch-ac) = 74e9b103d502886736dff4fa659fb3e50bae5032
-SHA1 (patch-ad) = 7816ff4ee7440911e275f3152089760e82b5d180
-SHA1 (patch-ae) = e3f2b5c002c8289d40cd025a38c382d402fc659e
-SHA1 (patch-scripts_build-always.sh) = 528aef5225f83908786aa1ba6ee176e87db64a15
+SHA1 (patch-dba_create-database.sh) = d5719354896873badce2ffa0a7718870f0c705c2
+SHA1 (patch-dba_update-davical-database) = 7ac756cff0949090b54f4cdfa709c07198b6366c
+SHA1 (patch-inc_always.php.in) = 0a818cb04dd64df25ba15b04b5eb38a2dffd8438
+SHA1 (patch-inc_davical__configuration__missing.php) = 27d0fab4ff8770acf07a12b19cadb8ac059381e2
+SHA1 (patch-scripts_po_rebuild-translations.sh) = 864692ee896a71171a12127bab883321b6f77c81

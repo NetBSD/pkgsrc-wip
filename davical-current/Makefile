@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=1.1.1
+DAVICAL_VERSION=1.1.3.1
 PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	www
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
@@ -14,8 +14,10 @@ COMMENT=	Simple CalDAV server using a PostgreSQL backend
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
 GIT_REPOSITORIES=       master
-GIT_REPO.master=        git://repo.or.cz/${PKGBASE}.git
-GIT_MODULE.master=      ${PKGBASE}
+GIT_REPO.master=        https://gitlab.com/davical-project/davical.git
+GIT_MODULE.master=      davical
+# for "SSL certificate problem: unable to get local issuer certificate"
+GIT_ENV+=	GIT_SSL_NO_VERIFY=true
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical

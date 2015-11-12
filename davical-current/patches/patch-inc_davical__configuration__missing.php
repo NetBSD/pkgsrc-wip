@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2012/11/22 12:13:19 hfath Exp $
+$NetBSD$
 
---- inc/davical_configuration_missing.php.orig	2011-09-11 11:46:40.000000000 +0000
+--- inc/davical_configuration_missing.php.orig	2015-11-12 14:35:57.000000000 +0000
 +++ inc/davical_configuration_missing.php
 @@ -4,7 +4,7 @@ include("page-header.php");
    echo <<<EOBODY
