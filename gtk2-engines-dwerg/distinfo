@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2006/08/19 16:31:41 kristerw Exp $
 
-SHA1 (dwerg-default-0.8.tar.gz) = 1448e3b3bad77d02739de1e855f3566b86441932
-RMD160 (dwerg-default-0.8.tar.gz) = c94db35ae4a513abe1c1d2a9c8da6e2ca77ee316
-Size (dwerg-default-0.8.tar.gz) = 288009 bytes
+SHA1 (dwerg-default-0.8-03a9c43f2979cb4ccd59f5c12581c4a032ec246a.tar.gz) = 1dce682c68965cff1ac2cc1ef18ac693c1349ea1
+RMD160 (dwerg-default-0.8-03a9c43f2979cb4ccd59f5c12581c4a032ec246a.tar.gz) = cb89aca9cd22aa4218cd489dc8fcd8057c0ca835
+SHA512 (dwerg-default-0.8-03a9c43f2979cb4ccd59f5c12581c4a032ec246a.tar.gz) = d049e77b26416eae97fc619b1b5c16edfb570be3962587e8e27ce3bd5331d8c0d36dadbd2c5179c26516f663e7c31bf7489b4228171afac828656f80e20128e6
+Size (dwerg-default-0.8-03a9c43f2979cb4ccd59f5c12581c4a032ec246a.tar.gz) = 285227 bytes
