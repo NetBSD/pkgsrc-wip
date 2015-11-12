@@ -227,7 +227,6 @@ SUBDIR+=	bluez-libs
 SUBDIR+=	bluez-utils
 SUBDIR+=	bmap
 SUBDIR+=	bmp-docklet
-SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bochs
 SUBDIR+=	bogomips
