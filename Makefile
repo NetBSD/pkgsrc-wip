@@ -3775,6 +3775,7 @@ SUBDIR+=	thawab
 SUBDIR+=	thcrut
 SUBDIR+=	theama
 SUBDIR+=	thepeg
+SUBDIR+=	tidy
 SUBDIR+=	tilda
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
