@@ -898,7 +898,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/breadcrumbs.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/inspector-commands.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/inspector-panel.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/selector-search.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/inspector-search.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/components/headers-panel.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/components/headers.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/components/json-panel.js
@@ -948,6 +948,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/ac
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/breakdown.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/filter.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/inverted.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/io.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/snapshot.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/app.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/components/frame.js
@@ -1049,6 +1050,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/ob
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/options-view.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/poller.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/create-store.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/middleware/history.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/middleware/log.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/middleware/promise.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/middleware/task.js
@@ -1201,6 +1203,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/ut
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/utils/make-debugger.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/utils/map-uri-to-addon-id.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/utils/stack.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/utils/walker-search.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/webapps.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/webaudio.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/actors/webbrowser.js
@@ -3295,6 +3298,7 @@ lib/firefox-${VERSION}/modules/PhoneNumberNormalizer.jsm
 lib/firefox-${VERSION}/modules/PhoneNumberUtils.jsm
 lib/firefox-${VERSION}/modules/PlacesBackups.jsm
 lib/firefox-${VERSION}/modules/PlacesDBUtils.jsm
+lib/firefox-${VERSION}/modules/PlacesRemoteTabsAutocompleteProvider.jsm
 lib/firefox-${VERSION}/modules/PlacesSearchAutocompleteProvider.jsm
 lib/firefox-${VERSION}/modules/PlacesTransactions.jsm
 lib/firefox-${VERSION}/modules/PlacesUtils.jsm
