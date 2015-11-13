@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
 USE_TOOLS+=	perl
+CHECK_PORTABILITY_SKIP+=	distrib.sh
 
 post-extract:
 	@cd ${WRKSRC} && perl -pi -e 's/\r$$//' setup.py
