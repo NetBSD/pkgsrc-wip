@@ -30,4 +30,5 @@ SUBST_SED.soname=	-e '/soname/ s/libGL\.so\.1/libGL.so/'
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

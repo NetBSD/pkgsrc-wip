@@ -15,6 +15,8 @@ BUILDLINK_PKGSRCDIR.glfw?=	../../wip/glfw
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .endif	# GLFW_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-glfw
