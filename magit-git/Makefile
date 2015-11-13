@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v3
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://github.com/magit/magit.git
 GIT_MODULE.master=	magit
+# for "SSL certificate problem: unable to get local issuer certificate"
+GIT_ENV+=	GIT_SSL_NO_VERIFY=true
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_CONFIGURE=	yes
@@ -41,7 +43,5 @@ post-patch:
 	(cd ${WRKSRC}; ${GMAKE} VERSION=${PKGVERSION} magit-version.el)
 
 .include "../../wip/mk/git-package.mk"
-# for "SSL certificate problem: unable to get local issuer certificate"
-_GIT_ENV+=	GIT_SSL_NO_VERIFY=true
 .include "../../wip/git-modes-git/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

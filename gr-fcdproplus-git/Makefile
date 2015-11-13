@@ -11,6 +11,7 @@ LICENSE=		gnu-gpl-v2
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://github.com/dl1ksv/gr-fcdproplus
 GIT_MODULE.master=	gr-fcdproplus
+GIT_ENV+=		GIT_SSL_NO_VERIFY=true
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake
@@ -33,7 +34,6 @@ SUBST_MESSAGE.libusb=	Fix for "libusb.h not found"
 .include	"../../wip/mk/git-package.mk"
 # you need place after above line for now.
 _GIT_FLAGS=		# set empty, --depth 1 seems harmfull
-_GIT_ENV+=		GIT_SSL_NO_VERIFY=true
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
