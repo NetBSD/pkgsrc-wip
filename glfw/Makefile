@@ -16,6 +16,12 @@ USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DGLFW_BUILD_DOCS=OFF
 
+SUBST_CLASSES+=		soname
+SUBST_STAGE.soname=	pre-configure
+SUBST_MESSAGE.soname=	Avoid hardcoded libGL.so
+SUBST_FILES.soname=	src/glx_context.c
+SUBST_SED.soname=	-e '/soname/ s/libGL\.so\.1/libGL.so/'
+
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
@@ -23,4 +29,5 @@ CMAKE_ARGS+=	-DGLFW_BUILD_DOCS=OFF
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
