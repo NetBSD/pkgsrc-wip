@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/tidy
+include/tidy.h
+include/tidybuffio.h
+include/tidyenum.h
+include/tidyplatform.h
+lib/libtidy.so
+lib/libtidy.so.5
+lib/libtidy.so.5.0.0
+lib/libtidys.a
+man/man1/tidy.1
