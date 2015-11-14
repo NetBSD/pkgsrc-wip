@@ -65,7 +65,9 @@ USE_TOOLS+=		date pax
 
 _GIT_CMD=		git
 _GIT_ENV=		${GIT_ENV}
-_GIT_FLAGS=		--quiet --depth 1 --recursive
+_GIT_FETCH_FLAGS=	--quiet --depth 1 --recurse-submodules=yes
+_GIT_CLONE_FLAGS=	--quiet --depth 1 --recursive
+_GIT_CHECKOUT_FLAGS=	--quiet
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _GIT_PKGVERSION=	${_GIT_PKGVERSION_CMD:sh}
 _GIT_DISTDIR=		${DISTDIR}/git-packages
@@ -77,55 +79,26 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 .for repo in ${GIT_REPOSITORIES}
 GIT_MODULE.${repo}?=	${repo}
 
-# determine appropriate checkout date or tag
+# determine appropriate checkout branch or tag
 .  if defined(GIT_BRANCH.${repo})
-_GIT_TAG_FLAG.${repo}=	--branch ${GIT_BRANCH.${repo}}
-_GIT_TAG.${repo}=	${GIT_BRANCH.${repo}}
+_GIT_FLAG.${repo}=	origin/${GIT_BRANCH.${repo}}
 .  elif defined(GIT_TAG.${repo})
-_GIT_TAG_FLAG.${repo}=	-r${GIT_TAG.${repo}}
-_GIT_TAG.${repo}=	${GIT_TAG.${repo}}
+_GIT_FLAG.${repo}=	tags/${GIT_TAG.${repo}}
 .  elif defined(GIT_TAG)
-_GIT_TAG_FLAG.${repo}=	-r${GIT_TAG}
-_GIT_TAG.${repo}=	${GIT_TAG}
+_GIT_FLAG.${repo}=	tags/${GIT_TAG}
 .  else
-# determine the default branch name (HEAD pointer)
-_GIT_HEAD_PTR_SHA1_CMD=					\
-	${SETENV} ${_GIT_ENV}				\
-	${_GIT_CMD} ls-remote				\
-	${GIT_REPO.${repo}:Q}				\
-	| grep '[^[:graph:]]HEAD[^[:graph:]]*$$'	\
-	| cut -f1
-_GIT_HEAD_PTR_SHA1=	${_GIT_HEAD_PTR_SHA1_CMD:sh}
-# dereference HEAD and get a name of the default branch
-_GIT_DEREF_HEAD_PTR_SHA1_CMD=				\
-	${SETENV} ${_GIT_ENV}				\
-	${_GIT_CMD} ls-remote				\
-	${GIT_REPO.${repo}:Q}				\
-	| grep -v '[^[:graph:]]HEAD[^[:graph:]]*$$'	\
-	| grep "${_GIT_HEAD_PTR_SHA1}"			\
-	| grep "[^[:graph:]]refs/heads/"		\
-	| cut -f2					\
-	| sed 's!^refs/heads/!!'
-${_GIT_DEREF_HEAD_PTR_SHA1_CMD}
-GIT_BRANCH.${repo}=	${_GIT_DEREF_HEAD_PTR_SHA1_CMD:sh}
-_GIT_TAG_FLAG.${repo}=	--branch ${GIT_BRANCH.${repo}}
-_GIT_TAG.${repo}=	${GIT_BRANCH.${repo}}
+_GIT_FLAG.${repo}=	origin/HEAD
 .  endif
 
 # Cache support:
 #   cache file name
-.  if defined(GIT_BRANCH.${repo})
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${GIT_BRANCH.${repo}:Q:S,/,_,}.tar.gz
-.  else
-_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}:Q:S,/,_,}.tar.gz
-.  endif
+_GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-gitarchive.tar.gz
 
 #   command to extract cache file
 _GIT_EXTRACT_CACHED.${repo}=	\
 	if [ -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} ]; then		\
 	  ${STEP_MSG} "Extracting cached GIT archive "${_GIT_DISTFILE.${repo}:Q}"."; \
 	  gzip -d -c ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} | pax -r;	\
-	  exit 0;							\
 	fi
 
 #   create cache archive
@@ -133,6 +106,21 @@ _GIT_CREATE_CACHE.${repo}=	\
 	${STEP_MSG} "Creating cached GIT archive "${_GIT_DISTFILE.${repo}:Q}"."; \
 	${MKDIR} ${_GIT_DISTDIR:Q};					\
 	pax -w ${GIT_MODULE.${repo}:Q} | gzip > ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}
+
+#   fetch git repo or update cached one
+_GIT_FETCH_REPO.${repo}=	\
+	if [ -d ${GIT_MODULE.${repo}:Q} ]; then					\
+	  ${STEP_MSG} "Updating GIT archive "${GIT_MODULE.${repo}:Q}".";	\
+	  ${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q} fetch	\
+	    ${_GIT_FETCH_FLAGS};						\
+	else									\
+	  ${STEP_MSG} "Cloning GIT archive "${GIT_MODULE.${repo}:Q}".";		\
+	  ${SETENV} ${_GIT_ENV} ${_GIT_CMD} clone ${_GIT_CLONE_FLAGS} 		\
+	    ${GIT_REPO.${repo}:Q} ${GIT_MODULE.${repo}:Q};			\
+	fi;									\
+	${STEP_MSG} "Checking out GIT "${_GIT_FLAG.${repo}:Q}".";		\
+	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q}
 .endfor
 
 pre-extract: do-git-extract
@@ -140,15 +128,11 @@ pre-extract: do-git-extract
 .PHONY: do-git-extract
 do-git-extract:
 .for _repo_ in ${GIT_REPOSITORIES}
-	${RUN} cd ${WRKDIR};						\
+	${RUN} cd ${WRKDIR};							\
 	if [ ! -d ${_GIT_DISTDIR:Q} ]; then mkdir -p ${_GIT_DISTDIR:Q}; fi;	\
-	${_GIT_EXTRACT_CACHED.${_repo_}};				\
-	${SETENV} ${_GIT_ENV}						\
-		${_GIT_CMD} clone					\
-			${_GIT_FLAGS}		 			\
-			${_GIT_TAG_FLAG.${_repo_}}			\
-			${GIT_REPO.${_repo_}:Q};			\
-	${_GIT_CREATE_CACHE.${_repo_}}
+	${_GIT_EXTRACT_CACHED.${_repo_}};					\
+	${_GIT_FETCH_REPO.${_repo_}};						\
+	${_GIT_CREATE_CACHE.${_repo_}};
 
 .endfor
 
