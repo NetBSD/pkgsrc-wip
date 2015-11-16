@@ -6,11 +6,15 @@
 #	* set WXGTKBASE to the directory of wxGTK package
 #	* set WXGTK_TYPE to the version of wxGTK used.
 #
-# There are two variables that can be used to tweak the selection of
+# Because multiple versions of wxGTK cannot currently coexist, the
+# strategy is to use a single version, with each packge building with
+# it if possible and failing otherwise.
+#
+# There are two variables that can be used to influence the selection of
 # the version of wxGTK.
 #
 # WXGTK_DEFAULT is a user-settable variable whose value is the default
-#	version of wxGTK, for exampe WXGTK28 or WXGTK30.
+#	version of wxGTK, for example WXGTK28 or WXGTK30.
 #
 # WXGTK_ACCEPTED is a package-settable list of wxGTK versions
 #	that may be used by the package.
