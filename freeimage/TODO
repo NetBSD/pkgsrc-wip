@@ -1,8 +1,0 @@
-This package does not use any type of configure script has only been 
-tried with NetBSD. Does it build correctly on other platforms? 
-Also endianess might be a issue README.solaris in the distfile says that 
--DBYTE_ORDER=BIG_ENDIAN -D__BIG_ENDIAN__ is needed to build under 
-solaris/sparc. The commiter of the package does not have
-access to a big endian machine. If you have access to a big endian 
-machine please try the package and report your experience to the 
-commiter and/or to the pkgsrc-wip-discuss mailing list.
