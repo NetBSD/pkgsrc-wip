@@ -326,10 +326,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/pocket/panels/tmpl
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/pocket/panels/tmpl/signup_shell.handlebars
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/pocket/panels/tmpl/signupstoryboard_shell.handlebars
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/pocket/pktApi.js
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/aboutPermissions.css
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/aboutPermissions.js
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/aboutPermissions.xml
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/aboutPermissions.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/applicationManager.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/applicationManager.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/blocklists.js
@@ -517,6 +513,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/fxa/sync-illu
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/heartbeat-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/heartbeat-star-lit.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/heartbeat-star-off.svg
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/identity-icon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/identity-mixed-active-blocked.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/identity-mixed-active-loaded.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/identity-mixed-passive-loaded.svg
@@ -583,7 +580,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/pointerLock-1
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/pointerLock-64.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/Options-sync.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/Options.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/aboutPermissions.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/alwaysAsk.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/applications.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/preferences/in-content/dialog.css
@@ -946,9 +942,11 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/markupvie
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/markupview/markup-view.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/allocations.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/breakdown.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/diffing.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/filter.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/inverted.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/io.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/refresh.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/snapshot.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/app.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/components/frame.js
@@ -965,6 +963,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/pa
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/reducers.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/reducers/allocations.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/reducers/breakdown.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/reducers/diffing.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/reducers/errors.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/reducers/filter.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/reducers/inverted.js
@@ -1048,6 +1047,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/in
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/node-attribute-parser.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/observable-object.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/options-view.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/output-parser.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/poller.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/create-store.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/middleware/history.js
@@ -1339,7 +1339,6 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/jsbeautif
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/jsbeautify/src/beautify-js.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/jsbeautify/src/beautify-tests.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/layout/utils.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/output-parser.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/path.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/performance/process-communication.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/performance/recording-common.js
@@ -1469,14 +1468,9 @@ lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/magnifying-glass-ligh
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/magnifying-glass-light@2x.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/magnifying-glass.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/magnifying-glass@2x.png
-lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/newtab-inverted.png
-lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/newtab-inverted@2x.png
-lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/newtab.png
-lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/newtab@2x.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/noise.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/performance-icons.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/power.svg
-lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/profiler-stopwatch-checked.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/profiler-stopwatch.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/pseudo-class.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/responsivemode/responsive-horizontal-resizer.png
@@ -1598,8 +1592,6 @@ lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/places/editBookmarkOv
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/places/moveBookmarks.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/places/places.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/places/places.properties
-lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/aboutPermissions.dtd
-lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/aboutPermissions.properties
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/advanced.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/applicationManager.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/applicationManager.properties
@@ -2134,6 +2126,7 @@ lib/firefox-${VERSION}/browser/modules/FormValidationHandler.jsm
 lib/firefox-${VERSION}/browser/modules/HiddenFrame.jsm
 lib/firefox-${VERSION}/browser/modules/MigrationUtils.jsm
 lib/firefox-${VERSION}/browser/modules/NetworkPrioritizer.jsm
+lib/firefox-${VERSION}/browser/modules/NewTabPrefsProvider.jsm
 lib/firefox-${VERSION}/browser/modules/NewTabURL.jsm
 lib/firefox-${VERSION}/browser/modules/PanelFrame.jsm
 lib/firefox-${VERSION}/browser/modules/PanelWideWidgetTracker.jsm
