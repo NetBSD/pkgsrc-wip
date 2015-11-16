@@ -2642,7 +2642,6 @@ SUBDIR+=	py-conda
 SUBDIR+=	py-conda-env
 SUBDIR+=	py-consensus
 SUBDIR+=	py-constraint
-SUBDIR+=	py-construct
 SUBDIR+=	py-control
 SUBDIR+=	py-cookiecutter
 SUBDIR+=	py-corpus
