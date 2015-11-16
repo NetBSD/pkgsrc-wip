@@ -541,16 +541,23 @@ share/emacs/${PKGVERSION}/etc/images/icons/allout-widgets/light-bg/through-desce
 share/emacs/${PKGVERSION}/etc/images/icons/allout-widgets/light-bg/unlocked-encrypted.png
 share/emacs/${PKGVERSION}/etc/images/icons/allout-widgets/light-bg/unlocked-encrypted.xpm
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/128x128/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/128x128/apps/emacs23.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps/emacs.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps/emacs22.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps/emacs23.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24/apps/emacs.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24/apps/emacs22.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24/apps/emacs23.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps/emacs.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps/emacs22.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps/emacs23.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs22.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs23.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/apps/emacs.svg
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/apps/emacs23.svg
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/mimetypes/emacs-document.svg
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/mimetypes/emacs-document23.svg
 share/emacs/${PKGVERSION}/etc/images/index.pbm
 share/emacs/${PKGVERSION}/etc/images/index.xpm
 share/emacs/${PKGVERSION}/etc/images/info.pbm
@@ -1781,6 +1788,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-unsafep.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-unsafep.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/testcover.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/testcover.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/thunk.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/thunk.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/timer.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/timer.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tq.el.gz
@@ -2983,6 +2992,8 @@ share/emacs/${PKGVERSION}/lisp/nxml/xmltok.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/xmltok.elc
 share/emacs/${PKGVERSION}/lisp/nxml/xsd-regexp.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/xsd-regexp.elc
+share/emacs/${PKGVERSION}/lisp/obarray.el.gz
+share/emacs/${PKGVERSION}/lisp/obarray.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/abbrevlist.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/abbrevlist.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/assoc.el.gz
@@ -4001,3 +4012,4 @@ share/icons/hicolor/32x32/apps/emacs.png
 share/icons/hicolor/48x48/apps/emacs.png
 share/icons/hicolor/scalable/apps/emacs.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document.svg
+share/icons/hicolor/scalable/mimetypes/emacs-document23.svg

@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.74 2015/04/24 01:19:04 makoto Exp $
-#
 
 .include	"version.mk"
 DISTNAME=	emacs-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
