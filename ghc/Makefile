@@ -6,6 +6,8 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
+EXTRACT_USING=	gtar
+
 MAINTAINER=	pho@cielonero.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell

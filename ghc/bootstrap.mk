@@ -33,6 +33,12 @@ DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
 SITES.${BOOT_ARCHIVE}=  https://us-east.manta.joyent.com/pkgsrc/public/distfiles-local/
 .endif
 
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
+BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
+DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
+SITES.${BOOT_ARCHIVE}=  ftp://ftp.netbsd.org/pub/NetBSD/misc/kamil/
+.endif
+
 .if empty(BOOT_ARCHIVE)
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-unknown.tar.xz
 PKG_FAIL_REASON+=	"Unsupported platform, please generate bootstrap kit"
