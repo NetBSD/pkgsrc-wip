@@ -233,7 +233,6 @@ SUBDIR+=	bogomips
 SUBDIR+=	boinc
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
-SUBDIR+=	bokken
 SUBDIR+=	bonnie++-current
 SUBDIR+=	boo
 SUBDIR+=	boost-test-suite
