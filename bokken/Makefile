@@ -22,6 +22,12 @@ SUBST_MESSAGE.bin-bokken=	Fixing path to bokken.py
 SUBST_FILES.bin-bokken=		bokken
 SUBST_SED.bin-bokken=	-e 's,`dirname $$0`,"${PREFIX}/share/bokken",'
 
+SUBST_CLASSES+=			bin-dot
+SUBST_STAGE.bin-dot=		post-patch
+SUBST_MESSAGE.bin-dot=		Fixing path to dot(1)
+SUBST_FILES.bin-dot=		ui/graph.py
+SUBST_SED.bin-dot=	-e 's,/usr/bin/dot,${PREFIX}/bin/dot,'
+
 INSTALLATION_DIRS=	bin share/bokken
 
 do-install:
