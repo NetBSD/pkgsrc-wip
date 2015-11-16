@@ -3087,7 +3087,6 @@ SUBDIR+=	py-pyflation
 SUBDIR+=	py-pygit2
 SUBDIR+=	py-pyglet
 SUBDIR+=	py-pygr
-SUBDIR+=	py-pygraphviz
 SUBDIR+=	py-pykit-sci
 SUBDIR+=	py-pykit-shared
 SUBDIR+=	py-pylith
