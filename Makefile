@@ -3134,7 +3134,6 @@ SUBDIR+=	py-quaternionarray
 SUBDIR+=	py-quepy
 SUBDIR+=	py-qutip
 SUBDIR+=	py-qutrub
-SUBDIR+=	py-radare2
 SUBDIR+=	py-radon
 SUBDIR+=	py-radontea
 SUBDIR+=	py-raphrase
