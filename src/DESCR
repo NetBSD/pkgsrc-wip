@@ -1,0 +1,7 @@
+Simple Revision Control
+
+is RCS reloaded with a modern UI, designed to manage single-file solo
+projects kept more than one to a directory. Use it for FAQs, ~/bin
+directories, config files, and the like. Features integer sequential
+revision numbers, a command set that will seem familiar to
+Subversion/Git/hg users, and no binary blobs anywhere.
