@@ -43,7 +43,7 @@ post-install:
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/db5/buildlink3.mk"
-.include "../../wip/mk/wxGTK.mk"
+.include "../../mk/wxGTK.mk"
 .include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
