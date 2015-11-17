@@ -2,13 +2,21 @@ $NetBSD$
 
 SHA1 (ghc-7.10.2-boot-i386-unknown-solaris2.tar.xz) = 39880e0dc1c39292c03af753e9877ee1213a8852
 RMD160 (ghc-7.10.2-boot-i386-unknown-solaris2.tar.xz) = 4d5d12744d67ecd67bdccb3688335129040df703
+SHA512 (ghc-7.10.2-boot-i386-unknown-solaris2.tar.xz) = 50e2f1f9fa29636f16fbbbaf42ed3c496f04e3d978ae66b741e30446bf169682a868ae2df5e8f24bf75978dbb142e13ff6264c7c6ca7a6905618844c42996e3f
 Size (ghc-7.10.2-boot-i386-unknown-solaris2.tar.xz) = 40445420 bytes
 SHA1 (ghc-7.10.2-boot-x86_64-apple-darwin.tar.xz) = b2f99710933c275d10ea08961f313077574cc567
 RMD160 (ghc-7.10.2-boot-x86_64-apple-darwin.tar.xz) = f08f19cdbcda38cede85f78631a04dd9611be6b2
+SHA512 (ghc-7.10.2-boot-x86_64-apple-darwin.tar.xz) = 118874eaea1df93088c5faf0825cb1228e80b5d9afccacd2bec80df93b6b0d05a1664409863a2be5e932b79f7f1691c2b7f4394d9fc5125830916e8b2b0bf3ab
 Size (ghc-7.10.2-boot-x86_64-apple-darwin.tar.xz) = 52981452 bytes
+SHA1 (ghc-7.10.2-boot-x86_64-unknown-netbsd.tar.xz) = 3b5ffe63424dd643e6628c6ec3e3712e2679197d
+RMD160 (ghc-7.10.2-boot-x86_64-unknown-netbsd.tar.xz) = 0f6094978685fbc124dd15e13c7d094329cff23c
+SHA512 (ghc-7.10.2-boot-x86_64-unknown-netbsd.tar.xz) = 7f23287e91e9a9b457839534746bb547890972fdf2dbd2018039b65e798c2fce5b85e98da95c315e172d73c51d8e3102cc239b1763294a6c3024d06ea8471ee7
+Size (ghc-7.10.2-boot-x86_64-unknown-netbsd.tar.xz) = 41224924 bytes
 SHA1 (ghc-7.10.2-boot-x86_64-unknown-solaris2.tar.xz) = 3257a8e659521e7dbc9e7441e602a8a1fe9b35f9
 RMD160 (ghc-7.10.2-boot-x86_64-unknown-solaris2.tar.xz) = 11c45b1c1d15b130f980e7db2e96235ab6f6c49a
+SHA512 (ghc-7.10.2-boot-x86_64-unknown-solaris2.tar.xz) = e344829f338a035e311bb06c08b06ee455af5fdc0a9784027f536c29abf9bdea40d43b0044d33e91c1d94c3d220b1f3199cfe0ed4f0943e9d0cab8bb7fd72864
 Size (ghc-7.10.2-boot-x86_64-unknown-solaris2.tar.xz) = 48986488 bytes
 SHA1 (ghc-7.10.2-src.tar.bz2) = aead70af50fa1f24b38a0a03182f9583aac9803a
 RMD160 (ghc-7.10.2-src.tar.bz2) = cad56e1cb2574aded0b7a57dc575390024b5919e
+SHA512 (ghc-7.10.2-src.tar.bz2) = ba130597d68013590f1fdf1ee52efed081d6d064826ec1b5e037cad1ad29720fa58edf1728c7342cd285f8aeb9d74143aa51ec88e5a3f4af480a9e77e23d45d6
 Size (ghc-7.10.2-src.tar.bz2) = 12536999 bytes
