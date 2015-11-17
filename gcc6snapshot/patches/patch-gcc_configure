@@ -2,15 +2,6 @@ $NetBSD$
 
 --- gcc/configure.orig	2015-09-30 23:06:11.000000000 +0000
 +++ gcc/configure
-@@ -28247,7 +28247,7 @@ else
-   enable_default_ssp=no
- fi
- 
--if test x$enable_default_ssp == xyes ; then
-+if test x$enable_default_ssp = xyes ; then
- 
- $as_echo "#define ENABLE_DEFAULT_SSP 1" >>confdefs.h
- 
 @@ -28321,7 +28321,7 @@ case "$target" in
        gcc_cv_target_dl_iterate_phdr=no
      fi
@@ -20,12 +11,3 @@ $NetBSD$
      if grep dl_iterate_phdr $target_header_dir/sys/link_elf.h > /dev/null 2>&1; then
        gcc_cv_target_dl_iterate_phdr=yes
      else
-@@ -29099,7 +29099,7 @@ else
-   enable_default_pie=no
- fi
- 
--if test x$enable_default_pie == xyes ; then
-+if test x$enable_default_pie = xyes ; then
- 
- $as_echo "#define ENABLE_DEFAULT_PIE 1" >>confdefs.h
- 
