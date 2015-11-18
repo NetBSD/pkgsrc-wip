@@ -1,0 +1,20 @@
+#/bin/sh
+echo $*
+OLD=$*
+NEW=$*.new
+sed '/wxGTK28/s/x11\/wxGTK28\/buildlink3.mk/mk\/wxGTK.mk/' $OLD > $NEW
+CMP=`cmp $OLD $NEW`
+
+if [ -z ${CMP} ] ; then
+  echo $OLD is not changed
+  rm $NEW
+else
+  mv $NEW $OLD
+fi
+exit;
+
+
+# h97@makoto 22:25:58/151118(..wip/wxGTK-test)%  \
+foreach i (`awk -F : '{print $2}'  Makefile | sed '/^$/d'`)
+(cd $i; find . \( -name Makefile\* -o -name options.mk \) -exec ../../wip/wxGTK-test/files/replace-blk3 '{}' \;)
+end
