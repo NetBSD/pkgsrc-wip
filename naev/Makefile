@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=project/naev/naev-${NAEV_VER}/}
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ndata-${NAEV_VER}.zip
-NAEV_VER=	0.6.0
+NAEV_VER=	0.6.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://naev.org/
