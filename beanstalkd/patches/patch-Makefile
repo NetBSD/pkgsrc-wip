@@ -2,17 +2,16 @@ $NetBSD: patch-Makefile,v 1.1 2014/01/03 05:31:52 othyro Exp $
 
 Add NetBSD support. Don't hardcode ${PREFIX}.
 
---- Makefile.orig	2013-04-14 17:19:41.000000000 +0000
+--- Makefile.orig	2014-08-05 03:39:54.000000000 +0000
 +++ Makefile
 @@ -1,5 +1,5 @@
+ DESTDIR=
 -PREFIX=/usr/local
--BINDIR=$(PREFIX)/bin
-+#PREFIX=/usr/local
-+BINDIR=${DESTDIR}${PREFIX}/bin
++PREFIX?=/usr/local
+ BINDIR=$(DESTDIR)$(PREFIX)/bin
  CFLAGS=-Wall -Werror\
  	-Wformat=2\
- 	-g\
-@@ -91,3 +91,5 @@ doc/beanstalkd.1 doc/beanstalkd.1.html: 
+@@ -96,3 +96,5 @@ doc/beanstalkd.1 doc/beanstalkd.1.html: 
  	ronn $<
  
  freebsd.o: darwin.c

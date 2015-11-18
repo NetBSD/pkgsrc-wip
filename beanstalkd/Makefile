@@ -1,11 +1,13 @@
 # $NetBSD: Makefile,v 1.3 2014/06/01 12:49:34 thomasklausner Exp $
 #
 
-DISTNAME=	v1.9
-PKGNAME=	beanstalkd${DISTNAME:S/v/-/1}
-PKGREVISION=	1
+GITHUB_TAG=	v1.10
+GITHUB_PROJECT=	beanstalkd
+DISTNAME=	${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}${DISTNAME:S/v/-/1}
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/kr/beanstalkd/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kr/}
+DIST_SUBDIR=	${PKGBASE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kr.github.io/beanstalkd/
