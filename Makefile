@@ -776,7 +776,6 @@ SUBDIR+=	gauche-pib
 SUBDIR+=	gcalcli-git
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
-SUBDIR+=	gcc50snapshot
 SUBDIR+=	gcc6snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal-docs
