@@ -24,6 +24,16 @@ GCC_REQD+=		4.8
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
+PY_PATCHPLIST=		yes
+
+REPLACE_PERL+=		${WRKDIR}/llvm/tools/clang/tools/scan-build/bin/scan-build
+REPLACE_PERL+=		${WRKDIR}/llvm/tools/clang/tools/scan-build/libexec/c++-analyzer
+REPLACE_PERL+=		${WRKDIR}/llvm/tools/clang/tools/scan-build/libexec/ccc-analyzer
+
+REPLACE_PYTHON+=	${WRKDIR}/llvm/tools/clang/tools/scan-view/bin/scan-view
+REPLACE_PYTHON+=	${WRKDIR}/llvm/tools/clang/tools/clang-format/clang-format-diff.py
+REPLACE_PYTHON+=	${WRKDIR}/llvm/tools/clang/tools/clang-format/git-clang-format
+
 TEST_TARGET=		check unittests
 
 .if exists(/usr/include/panel.h)
@@ -46,6 +56,9 @@ post-extract:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
