@@ -190,7 +190,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 CMAKE_ARG_PATH=	${WRKDIR}/llvm
 
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}/build
+	${RUN} mkdir -p ${WRKSRC}
 	${RUN} mv ${WRKDIR}/clang/ ${WRKDIR}/llvm/tools
 	${RUN} mv ${WRKDIR}/lldb/ ${WRKDIR}/llvm/tools
 
