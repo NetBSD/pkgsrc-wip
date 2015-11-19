@@ -175,7 +175,7 @@ REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/testgen/mc-bundling-x86-gen.py
 REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/update_llc_test_checks.py
 REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/wciia.py
 
-TEST_TARGET=		check unittests
+TEST_TARGET=		check-lldb
 
 .if exists(/usr/include/panel.h)
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
