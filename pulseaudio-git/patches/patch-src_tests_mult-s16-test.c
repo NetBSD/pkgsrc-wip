@@ -2,9 +2,9 @@ $NetBSD: patch-src_tests_mult-s16-test.c,v 1.1 2014/06/09 13:08:19 ryoon Exp $
 
 Define glibc-specific (?) __WORDSIZE.
 
---- src/tests/mult-s16-test.c.orig	2014-01-23 18:57:55.000000000 +0000
+--- src/tests/mult-s16-test.c.orig	2015-09-10 04:51:41.000000000 +0000
 +++ src/tests/mult-s16-test.c
-@@ -30,6 +30,14 @@
+@@ -28,6 +28,14 @@
  #include <pulsecore/random.h>
  #include <pulsecore/macro.h>
  

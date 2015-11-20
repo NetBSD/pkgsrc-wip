@@ -2,9 +2,9 @@ $NetBSD: patch-src_Makefile.in,v 1.4 2014/08/07 07:43:48 spz Exp $
 
 Use pkgsrc infrastructure for config files.
 
---- src/Makefile.in.orig	2014-03-03 14:37:00.000000000 +0000
+--- src/Makefile.in.orig	2015-10-30 12:27:07.000000000 +0000
 +++ src/Makefile.in
-@@ -3342,7 +3342,7 @@ pdfdir = @pdfdir@
+@@ -3486,7 +3486,7 @@ pdfdir = @pdfdir@
  prefix = @prefix@
  program_transform_name = @program_transform_name@
  psdir = @psdir@
@@ -13,7 +13,7 @@ Use pkgsrc infrastructure for config files.
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
-@@ -3355,10 +3355,10 @@ udevrulesdir = @udevrulesdir@
+@@ -3501,10 +3501,10 @@ zshcompletiondir = @zshcompletiondir@
  pulseincludedir = $(includedir)/pulse
  pulsecoreincludedir = $(includedir)/pulsecore
  pulselibexecdir = $(libexecdir)/pulse
