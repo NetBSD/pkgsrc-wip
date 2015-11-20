@@ -2774,6 +2774,7 @@ SUBDIR+=	py-gato
 SUBDIR+=	py-gauss
 SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-gccxml
+SUBDIR+=	py-gds
 SUBDIR+=	py-genesis
 SUBDIR+=	py-geographiclib
 SUBDIR+=	py-geoip
