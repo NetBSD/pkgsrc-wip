@@ -2485,7 +2485,6 @@ SUBDIR+=	ptpd
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
 SUBDIR+=	pudb
-SUBDIR+=	pulseaudio
 SUBDIR+=	pure
 SUBDIR+=	purple-translate
 SUBDIR+=	pwnat
