@@ -2485,6 +2485,7 @@ SUBDIR+=	ptpd
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
 SUBDIR+=	pudb
+SUBDIR+=	pulseaudio-git
 SUBDIR+=	pure
 SUBDIR+=	purple-translate
 SUBDIR+=	pwnat
