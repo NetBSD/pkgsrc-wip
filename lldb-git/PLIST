@@ -2059,6 +2059,7 @@ ${PYSITELIB}/lldb/utils/symbolication.py
 ${PYSITELIB}/six.py
 libexec/c++-analyzer
 libexec/ccc-analyzer
+man/man1/scan-build.1
 share/clang/clang-format-bbedit.applescript
 share/clang/clang-format-diff.py
 share/clang/clang-format-sublime.py
@@ -2088,7 +2089,6 @@ share/llvm/cmake/LLVMExternalProjectUtils.cmake
 share/llvm/cmake/LLVMInstallSymlink.cmake
 share/llvm/cmake/LLVMProcessSources.cmake
 share/llvm/cmake/TableGen.cmake
-share/man/man1/scan-build.1
 share/scan-build/scanview.css
 share/scan-build/sorttable.js
 share/scan-view/FileRadar.scpt
