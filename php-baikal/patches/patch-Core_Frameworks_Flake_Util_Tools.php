@@ -1,6 +1,7 @@
 $NetBSD$
 
 '//TRANSLIT' is only supported by GNU iconv.
+https://github.com/netgusto/Baikal/issues/419
 
 --- Core/Frameworks/Flake/Util/Tools.php.orig	2014-02-03 20:46:11.000000000 +0000
 +++ Core/Frameworks/Flake/Util/Tools.php
