@@ -2042,6 +2042,7 @@ lib/liblldbSymbol.a
 lib/liblldbTarget.a
 lib/liblldbUtility.a
 ${PYSITELIB}/lldb/__init__.py
+${PYSITELIB}/lldb/__init__.pyc
 ${PYSITELIB}/lldb/_lldb.so
 ${PYSITELIB}/lldb/embedded_interpreter.py
 ${PYSITELIB}/lldb/formatters/Logger.py
