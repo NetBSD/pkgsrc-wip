@@ -176,6 +176,7 @@ REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/update_llc_test_checks.py
 REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/wciia.py
 
 TEST_TARGET=		check-lldb
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 
 .if exists(/usr/include/panel.h)
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
