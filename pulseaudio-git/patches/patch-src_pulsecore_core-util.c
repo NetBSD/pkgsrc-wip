@@ -23,3 +23,16 @@ $NetBSD: patch-src_pulsecore_core-util.c,v 1.1 2015/09/25 14:37:27 ryoon Exp $
  #include <mach/mach_init.h>
  #include <mach/thread_act.h>
  #include <mach/thread_policy.h>
+@@ -3501,6 +3503,12 @@ int pa_accept_cloexec(int sockfd, struct
+ 
+ #endif
+ 
++#ifdef HAVE_PACCEPT
++    errno = 0;
++    if ((fd = paccept(sockfd, addr, addrlen, NULL, SOCK_CLOEXEC)) >= 0)
++        goto finish;
++#endif
++
+     if ((fd = accept(sockfd, addr, addrlen)) >= 0)
+         goto finish;
+ 
