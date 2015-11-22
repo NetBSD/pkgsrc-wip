@@ -2,24 +2,12 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.1 2014/09/29 10:46:25 thomasklausne
 
 --- toolkit/library/moz.build.orig	2015-10-25 13:54:43.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -220,6 +220,24 @@ if CONFIG['MOZ_NATIVE_PNG']:
+@@ -220,6 +220,12 @@ if CONFIG['MOZ_NATIVE_PNG']:
  if CONFIG['MOZ_NATIVE_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
-+if CONFIG['MOZ_NATIVE_OGG']:
-+    OS_LIBS += CONFIG['MOZ_OGG_LIBS']
-+
-+if CONFIG['MOZ_NATIVE_THEORA']:
-+    OS_LIBS += CONFIG['MOZ_THEORA_LIBS']
-+
 +if CONFIG['MOZ_NATIVE_VORBIS']:
 +    OS_LIBS += CONFIG['MOZ_VORBIS_LIBS']
-+
-+if CONFIG['MOZ_NATIVE_TREMOR']:
-+    OS_LIBS += CONFIG['MOZ_TREMOR_LIBS']
-+
-+if CONFIG['MOZ_NATIVE_OPUS']:
-+    OS_LIBS += CONFIG['MOZ_OPUS_LIBS']
 +
 +if CONFIG['MOZ_NATIVE_SPEEX']:
 +    OS_LIBS += CONFIG['MOZ_SPEEX_LIBS']
@@ -27,7 +15,7 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.1 2014/09/29 10:46:25 thomasklausne
  if CONFIG['MOZ_NATIVE_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -229,6 +247,15 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
+@@ -229,6 +244,15 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  

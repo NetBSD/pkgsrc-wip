@@ -1,8 +1,8 @@
 $NetBSD: patch-config_system-headers,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
 
---- config/system-headers.orig	2015-10-25 13:54:45.000000000 +0000
+--- config/system-headers.orig	2015-11-21 10:14:06.000000000 +0000
 +++ config/system-headers
-@@ -1342,3 +1342,34 @@ unicode/utypes.h
+@@ -1342,3 +1342,18 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
@@ -14,25 +14,9 @@ $NetBSD: patch-config_system-headers,v 1.1 2014/09/29 10:46:24 thomasklausner Ex
 +harfbuzz/hb-ot.h
 +harfbuzz/hb.h
 +#endif
-+#if MOZ_NATIVE_OGG==1
-+ogg/ogg.h
-+ogg/os_types.h
-+#endif
-+#if MOZ_NATIVE_THEORA==1
-+theora/theoradec.h
-+#endif
 +#if MOZ_NATIVE_VORBIS==1
 +vorbis/codec.h
 +vorbis/vorbisenc.h
-+#endif
-+#if MOZ_NATIVE_TREMOR==1
-+tremor/ivorbiscodec.h
-+#endif
-+#if MOZ_NATIVE_OPUS==1
-+opus.h
-+opus_multistream.h
-+opus/opus.h
-+opus/opus_multistream.h
 +#endif
 +#if MOZ_NATIVE_SPEEX==1
 +speex/speex_resampler.h

@@ -1,8 +1,8 @@
 $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 
---- configure.in.orig	2015-10-25 13:54:45.000000000 +0000
+--- configure.in.orig	2015-11-21 10:14:06.000000000 +0000
 +++ configure.in
-@@ -3491,11 +3491,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3496,11 +3496,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4989,6 +4985,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5005,6 +5001,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -25,30 +25,10 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5115,6 +5114,57 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
+@@ -5131,6 +5130,22 @@ AC_CACHE_CHECK([__attribute__ ((aligned 
      [ac_cv_c_attribute_aligned],
      [ac_cv_c_attribute_aligned=0
       CFLAGS_save="${CFLAGS}"
-+dnl Check for libogg
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-ogg,
-+[  --with-system-ogg       Use system libogg (located with pkgconfig)],
-+MOZ_NATIVE_OGG=1,
-+MOZ_NATIVE_OGG=)
-+
-+if test -n "$MOZ_NATIVE_OGG"; then
-+    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
-+
-+    _SAVE_LIBS=$LIBS
-+    LIBS="$LIBS $MOZ_OGG_LIBS"
-+    AC_CHECK_FUNC(ogg_set_mem_functions, [],
-+      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
-+    LIBS=$_SAVE_LIBS
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_OGG)
-+
 +dnl ========================================================
 +dnl Check for libvorbis
 +dnl ========================================================
@@ -65,60 +45,13 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 +AC_SUBST(MOZ_NATIVE_VORBIS)
 +
 +dnl ========================================================
-+dnl Check for integer-only libvorbis aka tremor
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-tremor,
-+[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
-+MOZ_NATIVE_TREMOR=1,
-+MOZ_NATIVE_TREMOR=)
-+
-+if test -n "$MOZ_NATIVE_TREMOR"; then
-+    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_TREMOR)
-+
-+dnl ========================================================
       CFLAGS="${CFLAGS} -Werror"
       for ac_cv_c_attr_align_try in 64 32 16 8; do
         echo "trying $ac_cv_c_attr_align_try"
-@@ -5132,6 +5182,53 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5148,6 +5163,21 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
-+dnl Check for libopus
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-opus,
-+[  --with-system-opus      Use system libopus (located with pkgconfig)],
-+MOZ_NATIVE_OPUS=1,
-+MOZ_NATIVE_OPUS=)
-+
-+if test -n "$MOZ_NATIVE_OPUS"; then
-+    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
-+else
-+    MOZ_OPUS_CFLAGS='-I$(topsrcdir)/media/libopus/include'
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_OPUS)
-+
-+dnl ========================================================
-+dnl Check for libtheora
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-theora,
-+[  --with-system-theora    Use system libtheora (located with pkgconfig)],
-+MOZ_NATIVE_THEORA=1,
-+MOZ_NATIVE_THEORA=)
-+
-+if test -n "$MOZ_NATIVE_THEORA"; then
-+    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_THEORA)
-+
-+dnl ========================================================
 +dnl Check for libspeex resampler
 +dnl ========================================================
 +
@@ -137,7 +70,7 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -8131,6 +8228,48 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8136,6 +8166,48 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================

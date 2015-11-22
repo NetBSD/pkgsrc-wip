@@ -55,13 +55,7 @@ CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
-# 1.2 or later is required.
-#CONFIGURE_ARGS+=	--with-system-theora
-#CONFIGURE_ARGS+=	--with-system-ogg
-#CONFIGURE_ARGS+=	--with-system-tremor
 #CONFIGURE_ARGS+=	--with-system-vorbis
-# opus support requires Ogg Theora support
-#CONFIGURE_ARGS+=	--with-system-opus
 CONFIGURE_ARGS+=	--with-system-graphite2
 CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
@@ -119,7 +113,7 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue
+PLIST_VARS+=	sps vorbis glskia throwwrapper mozglue
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "little"
@@ -138,7 +132,6 @@ PLIST.sps=	yes
 .endif
 
 .if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
-PLIST.tremor=	yes
 .else
 PLIST.vorbis=	yes
 .endif
@@ -187,8 +180,6 @@ PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
-#.include "../../audio/libopus/buildlink3.mk"
-#.include "../../audio/tremor/buildlink3.mk"
 #.include "../../audio/libvorbis/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.8.2
 #CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
@@ -205,8 +196,6 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
-#.include "../../multimedia/libogg/buildlink3.mk"
-#.include "../../multimedia/libtheora/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
