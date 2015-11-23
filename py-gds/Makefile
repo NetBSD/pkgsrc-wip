@@ -11,6 +11,8 @@ HOMEPAGE=	https://pypi.python.org/packages/source/g/gdspy/
 COMMENT=	Python module for creating GDSII stream files
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+
 PYDISTUTILSPKG= yes
 
 .include "../../lang/python/extension.mk"
