@@ -188,6 +188,9 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 
+# Try to optimize building LLVM for now.
+CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
+
 CMAKE_ARG_PATH=	${WRKDIR}/llvm
 
 post-extract:
