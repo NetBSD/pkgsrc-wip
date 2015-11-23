@@ -34,11 +34,11 @@ SUBST_FILES.prefix+=    lib/ansible/modules/core/system/setup.py
 SUBST_FILES.prefix+=    lib/ansible/modules/extras/database/misc/riak.py
 SUBST_FILES.prefix+=    lib/ansible/modules/extras/monitoring/nagios.py
 SUBST_FILES.prefix+=    lib/ansible/modules/extras/packaging/os/pkgin.py
-SUBST_FILES.prefix+=    lib/ansible/modules/core/cloud/rackspace/rax_cdb_user.py
 SUBST_FILES.prefix+=    plugins/README.md plugins/inventory/cobbler.py
 SUBST_FILES.prefix+=    plugins/inventory/collins.py
 SUBST_MESSAGE.prefix=   Fixing PREFIX path.
 SUBST_SED.prefix=       -e "s,@PREFIX@,${PREFIX},"
+SUBST_SED.prefix+=      -e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
 
 SUBST_CLASSES+=         pythonbin
 SUBST_STAGE.pythonbin=  pre-configure
