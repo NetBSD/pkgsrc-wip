@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/08/20 14:02:41 ttys Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/23 12:51:43 tty Exp $
 
-DISTNAME=	ansible-1.9.2
+DISTNAME=	ansible-1.9.4
 PKGREVISION=	1
 #PKGNAME=   ${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
 CATEGORIES=	python sysutils
@@ -34,11 +34,11 @@ SUBST_FILES.prefix+=    lib/ansible/modules/core/system/setup.py
 SUBST_FILES.prefix+=    lib/ansible/modules/extras/database/misc/riak.py
 SUBST_FILES.prefix+=    lib/ansible/modules/extras/monitoring/nagios.py
 SUBST_FILES.prefix+=    lib/ansible/modules/extras/packaging/os/pkgin.py
+SUBST_FILES.prefix+=    lib/ansible/modules/core/cloud/rackspace/rax_cdb_user.py
 SUBST_FILES.prefix+=    plugins/README.md plugins/inventory/cobbler.py
 SUBST_FILES.prefix+=    plugins/inventory/collins.py
 SUBST_MESSAGE.prefix=   Fixing PREFIX path.
 SUBST_SED.prefix=       -e "s,@PREFIX@,${PREFIX},"
-SUBST_SED.prefix+=      -e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
 
 SUBST_CLASSES+=         pythonbin
 SUBST_STAGE.pythonbin=  pre-configure

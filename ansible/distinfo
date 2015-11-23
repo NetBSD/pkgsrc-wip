@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/08/20 14:02:41 ttys Exp $
+$NetBSD$
 
-SHA1 (ansible-1.9.2.tar.gz) = 7e865e497cb411125823680699ad12c3b95da0e3
-RMD160 (ansible-1.9.2.tar.gz) = 71f8634c3f6cd7e07538f3813531ce6f087fa29b
-Size (ansible-1.9.2.tar.gz) = 927525 bytes
+SHA1 (ansible-1.9.4.tar.gz) = f71f451d96239d08396d20fff2d9b8840426f714
+RMD160 (ansible-1.9.4.tar.gz) = a88a7a1a19a82e6ca17ca77ae8d64a428cf37fe8
+Size (ansible-1.9.4.tar.gz) = 937120 bytes
 SHA1 (patch-docs_man_man1_ansible) = af150377f41d2feb239111346fc5d3101aa8bcea
 SHA1 (patch-docs_man_man1_ansible-asciidoc) = 6c2b4eae3d8213d8ee0870727003bb128df44f10
 SHA1 (patch-docs_man_man1_ansible-galaxy) = fa8e683620d53d81a88afe7446bef96071aa0edd
@@ -15,7 +15,6 @@ SHA1 (patch-lib_ansible_callbacks) = bdcec47047b5361012472f6276df21618cc664bb
 SHA1 (patch-lib_ansible_constants) = 0e95e2b3bd2b1b2b9deb95c64d6131d850260b39
 SHA1 (patch-lib_ansible_modules_core_system_ping) = 1b91dbdb74e8cfc5e0bf99628e5ebb4bbd54dead
 SHA1 (patch-lib_ansible_modules_core_system_setup) = a9a92a4a8786e0f96155cbd6d4d7b459d7728f0c
-SHA1 (patch-lib_ansible_modules_core_windows_win_template) = 5a1ebefd0a45e29a494f7c1795b311fe100ccaab
 SHA1 (patch-lib_ansible_modules_extras_database_misc_riak) = 26fcb21fe56613a151913398c677d2fdcdaa3703
 SHA1 (patch-lib_ansible_modules_extras_monitoring_nagios) = 0af8b51bc5e34dbb516a3b0be1c8670ea7c863b6
 SHA1 (patch-lib_ansible_modules_extras_packaging_os_pkgin) = a8e2be00ff309be676435b7333e9b9ceebaba810

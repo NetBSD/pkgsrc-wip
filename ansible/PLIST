@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/19 14:36:04 ttys Exp $
+@comment $NetBSD$
 bin/ansible
 bin/ansible-doc
 bin/ansible-galaxy
