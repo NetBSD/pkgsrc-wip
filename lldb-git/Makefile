@@ -175,7 +175,7 @@ REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/testgen/mc-bundling-x86-gen.py
 REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/update_llc_test_checks.py
 REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/wciia.py
 
-BUILD_TARGET=		lldb
+BUILD_TARGET=		lldb lldb-mi
 
 TEST_TARGET=		check-lldb
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
