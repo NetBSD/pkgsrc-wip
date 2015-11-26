@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2012/11/13 14:44:37 othyro Exp $
 
-SHA1 (silo-4.8-bsd.tar.gz) = 8850c82e66d1d00f80041594e6f9b15f8efdfd4d
-RMD160 (silo-4.8-bsd.tar.gz) = c5a9d278ce71808a421e1b1f10d18c83b51d98fd
-Size (silo-4.8-bsd.tar.gz) = 11890001 bytes
-SHA1 (patch-aa) = 0463d2ec1dd1a590b66aa148b84b6b558ead6066
+SHA1 (silo-4.10.2-bsd.tar.gz) = aa1c82a586d9bdd8fe9694af5d858ec0fd7407d1
+RMD160 (silo-4.10.2-bsd.tar.gz) = f15098dfc58f86146bf87fc651bd6580aca71178
+SHA512 (silo-4.10.2-bsd.tar.gz) = 5764a1e309c938bd0ab271dc274f446532dcf22580ee7506b193b0d85fa814277741351bca241b25bf3452de68f5bf03f6623cfd3f2b0d83a11746bfcd19a95e
+Size (silo-4.10.2-bsd.tar.gz) = 13067837 bytes
