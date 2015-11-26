@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2013/03/30 07:06:51 shattered Exp $
-#
 
-DISTNAME=		autossh-1.4c
+DISTNAME=		autossh-1.4e
 CATEGORIES=		security
 MASTER_SITES=		http://www.harding.motd.ca/autossh/
 EXTRACT_SUFX=		.tgz
