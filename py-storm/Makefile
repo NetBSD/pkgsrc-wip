@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:46 thomasklausner Exp $
-#
+# $NetBSD$
 
-DISTNAME=	storm-0.16.0
+DISTNAME=	storm-0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://launchpad.net/storm/trunk/0.16/+download/
+MASTER_SITES=	https://launchpad.net/storm/trunk/0.20/+download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://storm.canonical.com/
 COMMENT=	Object-relational mapper (ORM) for Python
 LICENSE=	gnu-lgpl-v2.1
-
 
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} test )
