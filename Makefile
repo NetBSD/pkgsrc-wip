@@ -2743,7 +2743,6 @@ SUBDIR+=	py-fatiando
 SUBDIR+=	py-fdasrsf
 SUBDIR+=	py-fdm
 SUBDIR+=	py-fedmsg
-SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-feyn
 SUBDIR+=	py-ffc
 SUBDIR+=	py-fiat
