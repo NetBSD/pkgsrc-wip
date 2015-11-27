@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (bicho_0.9.tar.gz) = f1c0ddaf0ba7a53b002edff999d9f5f9b1b5049a
+RMD160 (bicho_0.9.tar.gz) = 2d9431f9f447d522b881ef64e2f97f487fd7d341
+SHA512 (bicho_0.9.tar.gz) = 8b7200318553612971744fe372bc3775c1237a2d8bb9f75f3a1020340397c61833f1e68bb70291606bcff7152e9f32d964fe0e1fcb6c826b72930698bedfbfc9
+Size (bicho_0.9.tar.gz) = 257020 bytes
+SHA1 (patch-setup.py) = 431d420634906675fb9fe7c8dfe4aba93d2bd2c9
