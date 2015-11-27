@@ -8,7 +8,10 @@ MASTER_SITES=	https://github.com/downloads/MetricsGrimoire/Bicho/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/MetricsGrimoire/Bicho
 COMMENT=	Bug tracking system tool analyzer
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3.2:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-storm>=0.20:../../wip/py-storm
 
 WRKSRC=		${WRKDIR}/bicho-0.9
 
