@@ -2746,7 +2746,6 @@ SUBDIR+=	py-fedmsg
 SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-feyn
 SUBDIR+=	py-ffc
-SUBDIR+=	py-fftw
 SUBDIR+=	py-fiat
 SUBDIR+=	py-figleaf
 SUBDIR+=	py-fiona

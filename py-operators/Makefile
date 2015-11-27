@@ -11,7 +11,7 @@ COMMENT=	Operators and solvers for high-performance computing
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-fftw>=0.2:../../wip/py-fftw
+DEPENDS+=	${PYPKGPREFIX}-fftw>=0.2:../../math/py-fftw
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-fftw
 EGG_NAME=	pyoperators-0.13
