@@ -33,7 +33,7 @@ PLUGINDIR=		${CACTIDIR}/plugins/weathermap
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	weathermap
+REPLACE_FILES.php=	weathermap random-bits/query_weathermap_runtime.php
 
 REPLACE_PERL+=		random-bits/auto-overlib.pl
 
