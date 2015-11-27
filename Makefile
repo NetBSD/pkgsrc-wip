@@ -1737,7 +1737,6 @@ SUBDIR+=	meep
 SUBDIR+=	meep-mpi
 SUBDIR+=	meep-openmpi
 SUBDIR+=	megaglest
-SUBDIR+=	megatools
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	memo
