@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/fssa/__init__.py
+${PYSITELIB}/fssa/__init__.pyc
+${PYSITELIB}/fssa/__init__.pyo
+${PYSITELIB}/fssa/fssa.py
+${PYSITELIB}/fssa/fssa.pyc
+${PYSITELIB}/fssa/fssa.pyo
+${PYSITELIB}/fssa/optimize.py
+${PYSITELIB}/fssa/optimize.pyc
+${PYSITELIB}/fssa/optimize.pyo
+${PYSITELIB}/fssa/test/__init__.py
+${PYSITELIB}/fssa/test/__init__.pyc
+${PYSITELIB}/fssa/test/__init__.pyo
+${PYSITELIB}/fssa/test/test_fss.py
+${PYSITELIB}/fssa/test/test_fss.pyc
+${PYSITELIB}/fssa/test/test_fss.pyo
