@@ -3570,7 +3570,6 @@ SUBDIR+=	shttpd
 SUBDIR+=	shunt
 SUBDIR+=	sic
 SUBDIR+=	sickbeard
-SUBDIR+=	siege
 SUBDIR+=	signify
 SUBDIR+=	sil
 SUBDIR+=	sil-scheherazade-ttf
