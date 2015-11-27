@@ -3035,7 +3035,6 @@ SUBDIR+=	py-pdef
 SUBDIR+=	py-pdfposter
 SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
-SUBDIR+=	py-pelican
 SUBDIR+=	py-percol
 SUBDIR+=	py-peru
 SUBDIR+=	py-pet
