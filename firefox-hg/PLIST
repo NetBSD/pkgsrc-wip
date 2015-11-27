@@ -190,10 +190,13 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/mo
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/movistar@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/mute-inverse-14x14.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/mute-inverse-14x14@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/pause-12x12.svg
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/play-12x12.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/sad_hello_icon_64x64.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/spinner.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/spinner.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/spinner@2x.png
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/stop-12x12.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/audio-hover.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/audio-mute-hover.svg
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/img/svg/audio-mute.svg
@@ -225,6 +228,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/act
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/activeRoomStore.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/dispatcher.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/linkifiedTextView.js
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/loopapi-client.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/mixins.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/models.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/loop/shared/js/otSdkDriver.js
@@ -409,7 +413,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/web-panels.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/web-panels.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/webrtcIndicator.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/webrtcIndicator.xul
-lib/firefox-${VERSION}/browser/chrome/browser/defaults/permissions
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/Geolocation-16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/Geolocation-64.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/Info.png
@@ -421,7 +424,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/Toolbar.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/aboutCertError.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/aboutNetError.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/aboutNetError_alert.svg
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/aboutNetError_info.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/aboutProviderDirectory.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/aboutSessionRestore-window-icon.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/aboutSessionRestore.css
@@ -477,8 +479,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableu
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableui/subView-arrow-back-inverted-rtl@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableui/subView-arrow-back-inverted.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableui/subView-arrow-back-inverted@2x.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableui/thumburger-inverted.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableui/thumburger.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableui/whimsy.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/customizableui/whimsy@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/devedition.css
@@ -955,7 +955,6 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/co
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/components/snapshot-list-item.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/components/toolbar.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/components/tree-item.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/components/tree.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/constants.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/initializer.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/models.js
@@ -1038,6 +1037,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/Js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/SplitView.jsm
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/autocomplete-popup.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/browser-loader.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/tree.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/css-parsing-utils.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/devices.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/doorhanger.js
@@ -1254,6 +1254,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/comm
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/media.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/pagemod.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/paintflashing.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/qsa.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/restart.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/rulers.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/screenshot.js
@@ -1351,6 +1352,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/security/
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/security/cert.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/security/prompt.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/security/socket.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/sourcemap/source-map.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/styleinspector/css-logic.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/system.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/touch/simulator-content.js
@@ -1369,7 +1371,6 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/webconsol
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/worker/helper.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/worker/loader.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/worker/worker.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/sourcemap/source-map.js
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/animationinspector.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/canvasdebugger.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/commandline.css
@@ -1440,6 +1441,9 @@ lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/debugger-step-over.pn
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/debugger-step-over@2x.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/debugger-toggleBreakpoints.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/debugger-toggleBreakpoints@2x.png
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/debugging-addons.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/debugging-devices.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/debugging-workers.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/dock-bottom-maximize@2x.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/dock-bottom-minimize@2x.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/dock-bottom@2x.png
@@ -1473,6 +1477,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/performance-icons.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/power.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/profiler-stopwatch.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/pseudo-class.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/reload.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/responsivemode/responsive-horizontal-resizer.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/responsivemode/responsive-horizontal-resizer@2x.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/responsivemode/responsive-se-resizer.png
@@ -1491,6 +1496,11 @@ lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/rewind@2x.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/search-clear-dark.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/search-clear-failed.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/search-clear-light.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/security-state-broken.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/security-state-insecure.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/security-state-local.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/security-state-secure.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/security-state-weak.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/timeline-filter.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/toggle-tools.png
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/toggle-tools@2x.png
@@ -2084,6 +2094,7 @@ lib/firefox-${VERSION}/browser/components/nsSessionStartup.js
 lib/firefox-${VERSION}/browser/components/nsSessionStore.js
 lib/firefox-${VERSION}/browser/components/nsSetDefaultBrowser.js
 lib/firefox-${VERSION}/browser/components/webideCli.js
+lib/firefox-${VERSION}/browser/defaults/permissions
 lib/firefox-${VERSION}/browser/defaults/preferences/devtools.js
 lib/firefox-${VERSION}/browser/defaults/preferences/firefox-branding.js
 lib/firefox-${VERSION}/browser/defaults/preferences/firefox-l10n.js
@@ -2105,7 +2116,7 @@ lib/firefox-${VERSION}/browser/modules/BrowserUITelemetry.jsm
 lib/firefox-${VERSION}/browser/modules/CastingApps.jsm
 lib/firefox-${VERSION}/browser/modules/Chat.jsm
 lib/firefox-${VERSION}/browser/modules/ContentClick.jsm
-lib/firefox-${VERSION}/browser/modules/ContentCrashReporters.jsm
+lib/firefox-${VERSION}/browser/modules/ContentCrashHandlers.jsm
 lib/firefox-${VERSION}/browser/modules/ContentLinkHandler.jsm
 lib/firefox-${VERSION}/browser/modules/ContentObservers.jsm
 lib/firefox-${VERSION}/browser/modules/ContentSearch.jsm
@@ -2350,11 +2361,16 @@ lib/firefox-${VERSION}/chrome/en-US/locale/en-US/places/places.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/pluginproblem/pluginproblem.dtd
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/services/errors.properties
 lib/firefox-${VERSION}/chrome/en-US/locale/en-US/services/sync.properties
+lib/firefox-${VERSION}/chrome/marionette/content/Assert.jsm
 lib/firefox-${VERSION}/chrome/marionette/content/ChromePowers.js
 lib/firefox-${VERSION}/chrome/marionette/content/ChromeUtils.js
 lib/firefox-${VERSION}/chrome/marionette/content/EventUtils.js
+lib/firefox-${VERSION}/chrome/marionette/content/MockColorPicker.jsm
+lib/firefox-${VERSION}/chrome/marionette/content/MockFilePicker.jsm
+lib/firefox-${VERSION}/chrome/marionette/content/MockPaymentsUIGlue.jsm
+lib/firefox-${VERSION}/chrome/marionette/content/MockPermissionPrompt.jsm
 lib/firefox-${VERSION}/chrome/marionette/content/MozillaLogger.js
-lib/firefox-${VERSION}/chrome/marionette/content/SpecialPowersObserver.js
+lib/firefox-${VERSION}/chrome/marionette/content/SpecialPowersObserver.jsm
 lib/firefox-${VERSION}/chrome/marionette/content/SpecialPowersObserverAPI.js
 lib/firefox-${VERSION}/chrome/marionette/content/actions.js
 lib/firefox-${VERSION}/chrome/marionette/content/atoms.js
@@ -2375,11 +2391,6 @@ lib/firefox-${VERSION}/chrome/marionette/content/server.js
 lib/firefox-${VERSION}/chrome/marionette/content/simpletest.js
 lib/firefox-${VERSION}/chrome/marionette/content/specialpowers.js
 lib/firefox-${VERSION}/chrome/marionette/content/specialpowersAPI.js
-lib/firefox-${VERSION}/chrome/marionette/modules/Assert.jsm
-lib/firefox-${VERSION}/chrome/marionette/modules/MockColorPicker.jsm
-lib/firefox-${VERSION}/chrome/marionette/modules/MockFilePicker.jsm
-lib/firefox-${VERSION}/chrome/marionette/modules/MockPaymentsUIGlue.jsm
-lib/firefox-${VERSION}/chrome/marionette/modules/MockPermissionPrompt.jsm
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/CAOverlay.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/MineOverlay.xul
 lib/firefox-${VERSION}/chrome/pippki/content/pippki/OrphanOverlay.xul
@@ -2788,6 +2799,7 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/error-64.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/expand.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/find-arrows.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/folder-item.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/info.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/information-16.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/information-24.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/information-32.png
