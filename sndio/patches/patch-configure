@@ -1,0 +1,35 @@
+$NetBSD$
+
+Add NetBSD support.
+
+Patch pending upstream.
+
+--- configure.orig	2015-08-30 09:51:50.000000000 +0000
++++ configure
+@@ -51,14 +51,24 @@ case `uname` in
+ 		ldadd="-lrt"
+ 		user=sndiod
+ 		so="$so libsndio.so"
+-		defs='-D_GNU_SOURCE -DDEV_RANDOM=\\"/dev/urandom\\"'
++		defs='-D_GNU_SOURCE -DDEV_RANDOM=\\"/dev/urandom\\" \\\
++		-DHAVE_SETRESGID -DHAVE_SETRESUID'
++		;;
++	NetBSD)
++		sun=no
++		rmidi=yes
++		user=_sndio
++		so="$so libsndio.so"
++		defs='-DHAVE_ARC4RANDOM -DHAVE_ISSETUGID \\\
++		-DHAVE_STRLCAT -DHAVE_STRLCPY'
+ 		;;
+ 	OpenBSD)
+ 		sun=yes
+ 		rmidi=yes
+ 		user=_sndio
+ 		defs='-DHAVE_ARC4RANDOM -DHAVE_ISSETUGID \\\
+-		-DHAVE_STRLCAT -DHAVE_STRLCPY -DHAVE_STRTONUM'
++		-DHAVE_STRLCAT -DHAVE_STRLCPY -DHAVE_STRTONUM \\\
++		-DHAVE_SETRESGID -DHAVE_SETRESUID'
+ 		;;
+ esac
+ 
