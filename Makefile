@@ -3894,6 +3894,7 @@ SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vee
 SUBDIR+=	verbiste
+SUBDIR+=	verilator
 SUBDIR+=	verilog-current
 SUBDIR+=	verilog08
 SUBDIR+=	vidalia
