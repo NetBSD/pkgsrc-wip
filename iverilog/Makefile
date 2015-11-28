@@ -16,6 +16,8 @@ USE_TOOLS+=	autoconf gmake bison
 
 GNU_CONFIGURE=	yes
 
+TEST_TARGET=	check
+
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoconf
 
