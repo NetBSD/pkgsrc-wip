@@ -1,23 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2013/08/23 20:54:49 wongk Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/27 20:54:49 wongk Exp $
 
 DISTNAME=	yenc-${DISTVERSION}
-DISTVERSION= 0.3
-DISTFILES=	${DISTNAME}-w32fixed${EXTRACT_SUFX}
+DISTVERSION=	0.4.0
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-REPLACE_PYTHON= *.py
-CATEGORIES=	news
-MASTER_SITES=    ${MASTER_SITE_SOURCEFORGE:=sabnzbdplus/sabnzbdplus-tools/}
-EXTRACT_SUFX=	.zip
+REPLACE_PYTHON=	*.py
+CATEGORIES=	devel
+MASTER_SITES=	http://www.golug.it/pub/yenc/
 
-PYDISTUTILSPKG=         yes
+PYDISTUTILSPKG=	yes
 
-
-MAINTAINER=	wongk@apt.homeunix.net
-HOMEPAGE=	http://sabnzbdplus.sourceforge.net/
+MAINTAINER=	pkgsrc128@fastmail.us
+HOMEPAGE=	http://www.golug.it/yenc.html
 COMMENT=	Python module for yenc decoding module in C
-LICENSE=        gnu-gpl-v2
+LICENSE=        gnu-lgpl-v2.1
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
