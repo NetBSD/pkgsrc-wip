@@ -3621,6 +3621,7 @@ SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
 SUBDIR+=	smw
 SUBDIR+=	snark
+SUBDIR+=	sndio
 SUBDIR+=	snes9express
 SUBDIR+=	snotes
 SUBDIR+=	socklog
