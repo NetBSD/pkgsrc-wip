@@ -19,7 +19,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	aclocal autoheader autoconf automake gmake gm4 intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 
-REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
+REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen bootstrap.sh
 
 .include "../../mk/bsd.prefs.mk"
 # Some tests are incompatible for NetBSD at least
@@ -107,7 +107,7 @@ PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
-	aclocal; autoheader; automake -a --foreign -i; autoconf
+	./autogen.sh
 
 .include "../../wip/mk/git-package.mk"
 .if ${OPSYS} != "Darwin"
