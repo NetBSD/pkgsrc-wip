@@ -8,7 +8,7 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
   file framework will install them in the right place.
 * Avoid hardcoded SDK paths on Darwin.
 
---- configure.ac.orig	2015-10-30 12:22:13.000000000 +0000
+--- configure.ac.orig	2015-11-28 09:05:41.000000000 +0000
 +++ configure.ac
 @@ -21,7 +21,7 @@
  
@@ -93,15 +93,6 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
      AC_DEFINE([HAVE_CLOCK_GETTIME], 1, [Using clock_gettime() replacement])
      HAVE_BONJOUR=1
  fi
-@@ -572,7 +567,7 @@ AC_CHECK_FUNCS_ONCE([strerror_r])
- AC_CHECK_FUNCS_ONCE([lstat])
- 
- # Non-standard
--AC_CHECK_FUNCS_ONCE([setresuid setresgid setreuid setregid seteuid setegid ppoll strsignal sig2str strtod_l pipe2 accept4])
-+AC_CHECK_FUNCS_ONCE([setresuid setresgid setreuid setregid seteuid setegid ppoll strsignal sig2str strtod_l pipe2 accept4 paccept])
- 
- AC_FUNC_ALLOCA
- 
 @@ -1001,7 +996,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
  
  PA_MACHINE_ID="${sysconfdir}/machine-id"

@@ -3,7 +3,7 @@ $NetBSD: patch-src_Makefile.am,v 1.1 2014/06/09 13:08:19 ryoon Exp $
 Install files into pkgsrc example paths; will be correctly
 installed by pkgsrc configuration file framework.
 
---- src/Makefile.am.orig	2015-10-30 12:14:56.000000000 +0000
+--- src/Makefile.am.orig	2015-11-28 09:05:41.000000000 +0000
 +++ src/Makefile.am
 @@ -25,14 +25,14 @@ pulseincludedir=$(includedir)/pulse
  pulsecoreincludedir=$(includedir)/pulsecore

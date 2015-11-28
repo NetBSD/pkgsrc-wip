@@ -2,7 +2,7 @@ $NetBSD: patch-src_pulsecore_svolume__mmx.c,v 1.4 2015/02/21 23:13:10 ryoon Exp 
 
 Avoid bad register usage on OSX 32-bit.
 
---- src/pulsecore/svolume_mmx.c.orig	2015-09-10 04:51:41.000000000 +0000
+--- src/pulsecore/svolume_mmx.c.orig	2015-11-28 09:05:41.000000000 +0000
 +++ src/pulsecore/svolume_mmx.c
 @@ -32,7 +32,7 @@
  

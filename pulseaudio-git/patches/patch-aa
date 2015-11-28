@@ -6,7 +6,7 @@ stat() system call has been versioned, use latest version when dlopen()ing.
 Try more typical device names.
 SOUND_PCM_* is not available on SunOS.
 
---- src/utils/padsp.c.orig	2015-09-10 04:51:41.000000000 +0000
+--- src/utils/padsp.c.orig	2015-11-28 09:05:41.000000000 +0000
 +++ src/utils/padsp.c
 @@ -47,6 +47,9 @@
  #ifdef __linux__

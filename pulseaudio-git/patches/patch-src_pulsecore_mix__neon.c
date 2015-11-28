@@ -1,6 +1,6 @@
 $NetBSD: patch-src_pulsecore_mix__neon.c,v 1.1 2015/02/28 23:41:58 joerg Exp $
 
---- src/pulsecore/mix_neon.c.orig	2015-07-28 03:30:52.000000000 +0000
+--- src/pulsecore/mix_neon.c.orig	2015-11-28 09:05:41.000000000 +0000
 +++ src/pulsecore/mix_neon.c
 @@ -175,6 +175,10 @@ static void pa_mix2_ch4_s16ne_neon(pa_mi
  

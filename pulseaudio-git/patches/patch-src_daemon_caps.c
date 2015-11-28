@@ -2,7 +2,7 @@ $NetBSD: patch-src_daemon_caps.c,v 1.1 2014/06/09 13:08:19 ryoon Exp $
 
 Disable warning about capabilities that only makes sense on Linux.
 
---- src/daemon/caps.c.orig	2015-09-10 04:51:41.000000000 +0000
+--- src/daemon/caps.c.orig	2015-11-28 09:05:41.000000000 +0000
 +++ src/daemon/caps.c
 @@ -92,8 +92,10 @@ void pa_drop_caps(void) {
  #error "Don't know how to do capabilities on your system.  Please send a patch."

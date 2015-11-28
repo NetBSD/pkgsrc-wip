@@ -1,6 +1,6 @@
 $NetBSD: patch-src_pulsecore_core-util.c,v 1.1 2015/09/25 14:37:27 ryoon Exp $
 
---- src/pulsecore/core-util.c.orig	2015-10-30 12:14:56.000000000 +0000
+--- src/pulsecore/core-util.c.orig	2015-11-28 09:05:41.000000000 +0000
 +++ src/pulsecore/core-util.c
 @@ -52,8 +52,11 @@
  #include <pcreposix.h>
@@ -23,16 +23,3 @@ $NetBSD: patch-src_pulsecore_core-util.c,v 1.1 2015/09/25 14:37:27 ryoon Exp $
  #include <mach/mach_init.h>
  #include <mach/thread_act.h>
  #include <mach/thread_policy.h>
-@@ -3501,6 +3503,12 @@ int pa_accept_cloexec(int sockfd, struct
- 
- #endif
- 
-+#ifdef HAVE_PACCEPT
-+    errno = 0;
-+    if ((fd = paccept(sockfd, addr, addrlen, NULL, SOCK_CLOEXEC)) >= 0)
-+        goto finish;
-+#endif
-+
-     if ((fd = accept(sockfd, addr, addrlen)) >= 0)
-         goto finish;
- 

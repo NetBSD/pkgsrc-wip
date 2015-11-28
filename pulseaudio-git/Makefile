@@ -5,6 +5,8 @@ CATEGORIES=	audio
 GIT_REPOSITORIES=	pulse
 GIT_REPO.pulse=		git://github.com/pulseaudio/pulseaudio.git
 
+WRKSRC=		${WRKDIR}/pulse
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/PulseAudio
 COMMENT=	Sound server for POSIX and Win32 systems
@@ -107,6 +109,7 @@ pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
+.include "../../wip/mk/git-package.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
 .endif
