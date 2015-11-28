@@ -1303,6 +1303,7 @@ SUBDIR+=	islamic-menus
 SUBDIR+=	ispell-dictionaries
 SUBDIR+=	itask-ng
 SUBDIR+=	itools
+SUBDIR+=	iverilog
 SUBDIR+=	ja-freewnn-cvs
 SUBDIR+=	ja-ptex
 #SUBDIR+=	jabberd			# not a real package
