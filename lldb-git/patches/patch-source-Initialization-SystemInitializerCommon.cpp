@@ -1,7 +1,7 @@
 $NetBSD$
 
---- ../lldb/source/Initialization/SystemInitializerCommon.cpp.orig	2015-11-18 04:51:19.000000000 +0000
-+++ ../lldb/source/Initialization/SystemInitializerCommon.cpp
+--- lldb/source/Initialization/SystemInitializerCommon.cpp.orig	2015-11-18 04:51:19.000000000 +0000
++++ lldb/source/Initialization/SystemInitializerCommon.cpp
 @@ -115,6 +115,7 @@ SystemInitializerCommon::Initialize()
      DynamicLoaderWindowsDYLD::Initialize();
      platform_freebsd::PlatformFreeBSD::Initialize();
