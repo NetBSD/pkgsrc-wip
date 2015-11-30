@@ -1880,6 +1880,7 @@ SUBDIR+=	nanomsgxx
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
+SUBDIR+=	nautilus
 SUBDIR+=	nautilus-dropbox
 SUBDIR+=	nautilus-image-converter
 SUBDIR+=	nautilus-open-terminal
