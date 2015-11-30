@@ -21,6 +21,7 @@ SHA1 (patch-lldb_include_lldb_Utility_regex__impl.h) = 438ea79c00a2aab9c48af766d
 SHA1 (patch-lldb_include_lldb_Utility_regutils.h) = 32720727b719332123135536bdb4240cfc9db928
 SHA1 (patch-lldb_packages_Python_lldbsuite_test_lldbtest.py) = 2a96183b2b3d0e69b777223176fca0beb4d9c1f8
 SHA1 (patch-lldb_packages_Python_lldbsuite_test_plugins_builder__netbsd.py) = 04378657989586b9c416f0a96fef7e176d438da0
+SHA1 (patch-lldb_scripts_CMakeLists.txt) = 7381e2905b2582c49e13f1e1190f3b4192271e68
 SHA1 (patch-lldb_source_Initialization_SystemInitializerCommon.cpp) = 6c1afcccdaae97960c79faa7c83dee5001cc2a17
 SHA1 (patch-lldb_source_Utility_CMakeLists.txt) = 30a81e6b255c542011e2d9162f2516739df18c31
 SHA1 (patch-lldb_source_Utility_regcomp.c) = 053fb3a61237d05e5f5ef26ab7f3be78240615e6
