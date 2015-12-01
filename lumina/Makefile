@@ -26,26 +26,10 @@ SUBST_MESSAGE.sysconf=	Fixing system configuration dir
 SUBST_FILES.sysconf=	libLumina/LuminaUtils.cpp
 SUBST_SED.sysconf=	-e 's,/etc/luminaDesktop.conf,${PKG_SYSCONFDIR}/luminaDesktop.conf,'
 
-SUBST_CLASSES+=		lrelease
-SUBST_STAGE.lrelease=	post-patch
-SUBST_MESSAGE.lrelease=	Fixing system configuration dir
-SUBST_FILES.lrelease=	desktop-utilities/lumina-terminal/lumina-terminal.pro
-SUBST_FILES.lrelease+=	lumina-config/lumina-config.pro
-SUBST_FILES.lrelease+=	lumina-desktop/lumina-desktop.pro
-SUBST_FILES.lrelease+=	lumina-fileinfo/lumina-fileinfo.pro
-SUBST_FILES.lrelease+=	lumina-fm/lumina-fm.pro
-SUBST_FILES.lrelease+=	lumina-info/lumina-info.pro
-SUBST_FILES.lrelease+=	lumina-open/lumina-open.pro
-SUBST_FILES.lrelease+=	lumina-screenshot/lumina-screenshot.pro
-SUBST_FILES.lrelease+=	lumina-search/lumina-search.pro
-SUBST_FILES.lrelease+=	lumina-wm-INCOMPLETE/lumina-wm.pro
-SUBST_FILES.lrelease+=	lumina-xconfig/lumina-xconfig.pro
-SUBST_SED.lrelease=	-e 's,\$\$QT5LIBDIR/bin/lrelease,${QTDIR}/bin/lrelease,'
-
 INSTALL_ENV=		INSTALL_ROOT=${DESTDIR}
 
 pre-build:
-	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX}
+	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} CONFIG+="configure NO_I18N"
 
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
