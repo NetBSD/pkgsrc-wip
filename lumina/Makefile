@@ -17,7 +17,7 @@ SUBST_STAGE.prefix=	post-patch
 SUBST_MESSAGE.prefix=	Fixing prefix
 SUBST_FILES.prefix=	libLumina/LuminaXDG.cpp
 SUBST_FILES.prefix+=	lumina-config/mainUI.cpp
-SUBST_FILES.prefix=	lumina-desktop/SettingsMenu.cpp
+SUBST_FILES.prefix+=	lumina-desktop/SettingsMenu.cpp
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
 SUBST_CLASSES+=		sysconf
