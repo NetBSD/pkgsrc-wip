@@ -50,6 +50,7 @@ share/nvim/runtime/autoload/gzip.vim
 share/nvim/runtime/autoload/htmlcomplete.vim
 share/nvim/runtime/autoload/javascriptcomplete.vim
 share/nvim/runtime/autoload/man.vim
+share/nvim/runtime/autoload/msgpack.vim
 share/nvim/runtime/autoload/netrw.vim
 share/nvim/runtime/autoload/netrwFileHandlers.vim
 share/nvim/runtime/autoload/netrwSettings.vim
@@ -66,6 +67,7 @@ share/nvim/runtime/autoload/pythoncomplete.vim
 share/nvim/runtime/autoload/remote/define.vim
 share/nvim/runtime/autoload/remote/host.vim
 share/nvim/runtime/autoload/rubycomplete.vim
+share/nvim/runtime/autoload/shada.vim
 share/nvim/runtime/autoload/spellfile.vim
 share/nvim/runtime/autoload/sqlcomplete.vim
 share/nvim/runtime/autoload/syntaxcomplete.vim
@@ -212,12 +214,12 @@ share/nvim/runtime/doc/nvim_python.txt
 share/nvim/runtime/doc/nvim_terminal_emulator.txt
 share/nvim/runtime/doc/options.txt
 share/nvim/runtime/doc/os_dos.txt
-share/nvim/runtime/doc/os_mac.txt
 share/nvim/runtime/doc/os_win32.txt
 share/nvim/runtime/doc/pattern.txt
 share/nvim/runtime/doc/pi_getscript.txt
 share/nvim/runtime/doc/pi_gzip.txt
 share/nvim/runtime/doc/pi_matchit.txt
+share/nvim/runtime/doc/pi_msgpack.txt
 share/nvim/runtime/doc/pi_netrw.txt
 share/nvim/runtime/doc/pi_paren.txt
 share/nvim/runtime/doc/pi_spec.txt
@@ -246,7 +248,6 @@ share/nvim/runtime/doc/tags
 share/nvim/runtime/doc/tagsrch.txt
 share/nvim/runtime/doc/term.txt
 share/nvim/runtime/doc/tips.txt
-share/nvim/runtime/doc/todo.txt
 share/nvim/runtime/doc/uganda.txt
 share/nvim/runtime/doc/undo.txt
 share/nvim/runtime/doc/usr_01.txt
@@ -448,6 +449,7 @@ share/nvim/runtime/ftplugin/services.vim
 share/nvim/runtime/ftplugin/setserial.vim
 share/nvim/runtime/ftplugin/sgml.vim
 share/nvim/runtime/ftplugin/sh.vim
+share/nvim/runtime/ftplugin/shada.vim
 share/nvim/runtime/ftplugin/sieve.vim
 share/nvim/runtime/ftplugin/slpconf.vim
 share/nvim/runtime/ftplugin/slpreg.vim
@@ -689,6 +691,7 @@ share/nvim/runtime/plugin/matchparen.vim
 share/nvim/runtime/plugin/netrwPlugin.vim
 share/nvim/runtime/plugin/rplugin.vim
 share/nvim/runtime/plugin/rrhelper.vim
+share/nvim/runtime/plugin/shada.vim
 share/nvim/runtime/plugin/spellfile.vim
 share/nvim/runtime/plugin/tarPlugin.vim
 share/nvim/runtime/plugin/tohtml.vim
@@ -1165,6 +1168,7 @@ share/nvim/runtime/syntax/sgml.vim
 share/nvim/runtime/syntax/sgmldecl.vim
 share/nvim/runtime/syntax/sgmllnx.vim
 share/nvim/runtime/syntax/sh.vim
+share/nvim/runtime/syntax/shada.vim
 share/nvim/runtime/syntax/sicad.vim
 share/nvim/runtime/syntax/sieve.vim
 share/nvim/runtime/syntax/simula.vim
