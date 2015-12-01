@@ -1,0 +1,17 @@
+# $NetBSD$
+# used by wip/py-acme/Makefile
+# used by wip/py-letsencrypt/Makefile
+# used by wip/py-letsencrypt-apache/Makefile
+# used by wip/py-letsencrypt-nginx/Makefile
+
+DISTNAME=	letsencrypt-${GITHUB_TAG:S/^v//}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=letsencrypt/}
+
+MAINTAINER=	filip@joyent.com
+HOMEPAGE=	https://letsencrypt.org/
+
+GITHUB_PROJECT=	letsencrypt
+GITHUB_TAG=	v0.0.0.dev20151123
+
+DISTINFO_FILE=	${PKGDIR}/../../wip/py-letsencrypt/distinfo
+PATCHDIR=	${PKGDIR}/../../wip/py-letsencrypt/patches
