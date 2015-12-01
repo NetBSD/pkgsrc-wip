@@ -306,6 +306,7 @@ SUBDIR+=	cgterm
 SUBDIR+=	chani
 SUBDIR+=	chbg
 SUBDIR+=	checkstyle
+SUBDIR+=	cheese
 SUBDIR+=	chemeq
 SUBDIR+=	chems
 SUBDIR+=	chibi-scheme
