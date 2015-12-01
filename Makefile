@@ -3909,6 +3909,7 @@ SUBDIR+=	viewglob
 SUBDIR+=	vimb
 SUBDIR+=	vimprobable2
 SUBDIR+=	vimrc-mode
+SUBDIR+=	vino
 SUBDIR+=	vips
 SUBDIR+=	virtualbox-ose
 SUBDIR+=	virtualjaguar
