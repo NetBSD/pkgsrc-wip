@@ -12,6 +12,12 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 
+DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
+DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
+DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
+DEPENDS+=	numlockx-[0-9]*:../../x11/numlockx
+DEPENDS+=	xterm-[0-9]*:../../x11/xterm
+
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_MESSAGE.prefix=	Fixing prefix
