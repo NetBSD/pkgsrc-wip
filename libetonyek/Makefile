@@ -22,10 +22,6 @@ CXXFLAGS+=	-std=c++0x
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-docs
 
-MDDS_LIBS=/usr/pkg/include
-MDDS_CFLAGS+=-I/usr/pkg/include
-PKG_CONFIG_PATH=/usr/pkg/include
-
 PKGCONFIG_OVERRIDE+=	libetonyek.pc.in
 
 .include "../../wip/mdds/buildlink3.mk"
