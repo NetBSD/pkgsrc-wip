@@ -14,6 +14,10 @@ USE_LANGUAGES=	c c++
 
 USE_LIBTOOL=	yes
 
+EGDIR=		${PREFIX}/share/examples/lumina
+
+CONF_FILES+=	${EGDIR}/ ${PKG_SYSCONFDIR}/
+
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
@@ -34,10 +38,21 @@ SUBST_MESSAGE.sysconf=	Fixing system configuration dir
 SUBST_FILES.sysconf=	libLumina/LuminaUtils.cpp
 SUBST_SED.sysconf=	-e 's,/etc/luminaDesktop.conf,${PKG_SYSCONFDIR}/luminaDesktop.conf,'
 
+SUBST_CLASSES+=		egdir
+SUBST_STAGE.egdir=	post-patch
+SUBST_MESSAGE.egdir=	Install configuration to example dir
+SUBST_FILES.egdir=	lumina-desktop/lumina-desktop.pro
+SUBST_SED.egdir=	-e 's,\$\$PREFIX/etc/luminaDesktop.conf.dist,${EGDIR}/luminaDesktop.conf,'
+
 INSTALL_ENV=		INSTALL_ROOT=${DESTDIR}
 
+# The NO_I18N option results in regeneration of empty translation files
+# These files are available via lumina-i18n
 pre-build:
 	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} CONFIG+="configure NO_I18N"
+
+pre-install:
+	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
