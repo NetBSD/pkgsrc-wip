@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 
 EGDIR=		${PREFIX}/share/examples/lumina
 
-CONF_FILES+=	${EGDIR}/ ${PKG_SYSCONFDIR}/
+CONF_FILES+=	${EGDIR}/luminaDesktop.conf ${PKG_SYSCONFDIR}/luminaDesktop.conf
 
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
