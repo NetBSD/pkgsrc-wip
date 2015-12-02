@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2013/08/19 09:18:06 nthauvin Exp $
 
-SHA1 (pkgconf-0.9.2.tar.bz2) = 9e9c302f5a1c529df2ac1037ffea71da1d485bcf
-RMD160 (pkgconf-0.9.2.tar.bz2) = 77c0a29da88cdb16b0e25937a867a3425ed2e6da
-Size (pkgconf-0.9.2.tar.bz2) = 82140 bytes
+SHA1 (pkgconf-0.9.12.tar.bz2) = 9f99afd100c3a42ae996a782ea46978d2877f891
+RMD160 (pkgconf-0.9.12.tar.bz2) = 97e64c8717ec069ad9722615b056e573762c25ab
+SHA512 (pkgconf-0.9.12.tar.bz2) = efe13db7a46992eb44ead493fc12b3fc6a5567e0206f701b6c48d9b5eb0bc90fcc9ae7a7e08ae641bb10df869287e5b68291701d4013d6cf27bd2b1518c29192
+Size (pkgconf-0.9.12.tar.bz2) = 87109 bytes
