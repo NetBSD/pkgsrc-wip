@@ -12,6 +12,8 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 
+USE_LIBTOOL=	yes
+
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
@@ -37,6 +39,7 @@ INSTALL_ENV=		INSTALL_ROOT=${DESTDIR}
 pre-build:
 	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} CONFIG+="configure NO_I18N"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
