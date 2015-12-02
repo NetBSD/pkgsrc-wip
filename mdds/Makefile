@@ -3,30 +3,18 @@
 DISTNAME=	mdds_1.0.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
-MASTER_SITES= http://kohei.us/files/mdds/src/
+MASTER_SITES=	http://kohei.us/files/mdds/src/
 EXTRACT_SUFX=	.tar.bz2
-EXTRACT_USING=	gtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/multidimalgorithm/
+HOMEPAGE=	https://gitlab.com/mdds/mdds
 COMMENT=	Collection of multi-dimensional data structure and indexing algorithms
 LICENSE=	mit
 
-USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-#NO_BUILD=		yes
-#INSTALLATION_DIRS=		share/pkgconfig
-INSTALLATION_DIRS=include/mdds
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	misc/mdds.pc.in
-
-do-install:
-	for i in ${WRKSRC}/include/mdds/*.hpp; do \
-		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds; \
-	done
-	for i in ${WRKSRC}/include/mdds/*.inl; do \
-		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds; \
-	done
-#	${INSTALL_DATA} ${WRKSRC}/misc/mdds.pc ${DESTDIR}${PREFIX}/share/pkgconfig
 
 BUILDLINK_DEPMETHOD.boost-headers?=	build
 .include "../../devel/boost-headers/buildlink3.mk"
