@@ -46,6 +46,7 @@ SUBST_STAGE.vars=	pre-configure
 SUBST_FILES.vars=	gcc/Makefile.in
 SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
+
 .include "../../mk/bsd.prefs.mk"
 
 LANGS=			c

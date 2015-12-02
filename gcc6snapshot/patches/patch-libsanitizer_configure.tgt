@@ -1,9 +1,9 @@
 $NetBSD$
 
---- libsanitizer/configure.tgt.orig	2015-10-21 07:32:45.000000000 +0000
+--- libsanitizer/configure.tgt.orig	2015-11-23 09:07:18.000000000 +0000
 +++ libsanitizer/configure.tgt
-@@ -39,7 +39,7 @@ case "${target}" in
- 		TSAN_SUPPORTED=yes
+@@ -41,7 +41,7 @@ case "${target}" in
+ 		TSAN_TARGET_DEPENDENT_OBJECTS=tsan_rtl_aarch64.lo
  	fi
  	;;
 -  x86_64-*-darwin[1]* | i?86-*-darwin[1]*)
