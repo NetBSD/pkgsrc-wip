@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.2 2014/03/13 20:47:13 fhajny Exp $
 
-SHA1 (carbon-0.9.12.tar.gz) = 7dad24c3a441a39af0f8d48315ca13649a2fda19
-RMD160 (carbon-0.9.12.tar.gz) = 9df1939eea1a0895da91619ba369edc2caf7d533
-Size (carbon-0.9.12.tar.gz) = 52107 bytes
-SHA1 (patch-setup.py) = 9dc431096fdfc5c10ee045f447371b2ab0dd12e9
+SHA1 (carbon-0.9.15.tar.gz) = 204e837684c29ac09069d740d009f070bfb942d3
+RMD160 (carbon-0.9.15.tar.gz) = 4a1b11d8ba06357f44e6eca3d45ee0f89dfef98a
+SHA512 (carbon-0.9.15.tar.gz) = cc56257e703fc262dd27019d4a4e86d483daf55bb4c0792200be82533fc721b087b9eb5926cd007bf1e1c0f799729de871de5182f807fa9e0394ba08eccfa2fe
+Size (carbon-0.9.15.tar.gz) = 57328 bytes
+SHA1 (patch-setup.py) = b3f5d9c312b295d5e0ccf08a5364eaf313bf32ee

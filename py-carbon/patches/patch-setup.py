@@ -1,9 +1,8 @@
-$NetBSD: patch-setup.py,v 1.2 2014/03/13 20:47:13 fhajny Exp $
+$NetBSD$
 
-Use proper paths for storage and config example files.
---- setup.py.orig	2013-08-21 16:52:35.000000000 +0000
-+++ setup.py
-@@ -13,9 +13,9 @@ else:
+--- setup.py.orig	2015-11-27 10:37:07.000000000 -0800
++++ setup.py	2015-12-03 10:56:59.000000000 -0800
+@@ -13,15 +13,16 @@
    setup_kwargs = dict()
  
  
@@ -16,3 +15,11 @@ Use proper paths for storage and config example files.
  
  install_files = storage_dirs + conf_files
  
+ # Let's include redhat init scripts, despite build platform
+ # but won't put them in /etc/init.d/ automatically anymore
+-init_scripts = [ ('examples/init.d', ['distro/redhat/init.d/carbon-cache',
++init_scripts = [ ('@GRAPHITE_RCD@',
++                                     ['distro/redhat/init.d/carbon-cache',
+                                       'distro/redhat/init.d/carbon-relay',
+                                       'distro/redhat/init.d/carbon-aggregator']) ]
+ install_files += init_scripts

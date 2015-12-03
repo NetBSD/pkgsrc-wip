@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2014/05/09 07:38:46 thomasklausner Exp $
 
-DISTNAME=	carbon-0.9.12
+DISTNAME=	carbon-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	-https://github.com/graphite-project/carbon/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
@@ -31,6 +31,7 @@ PKG_GECOS.${GRAPHITE_USER}=	Graphite Carbon user
 
 GRAPHITE_DIR?=		${VARBASE}/graphite
 GRAPHITE_EGDIR?=	share/examples/graphite
+GRAPHITE_RCD?=		share/examples/rc.d
 
 OWN_DIRS_PERMS+=	${GRAPHITE_DIR} ${GRAPHITE_USER} ${GRAPHITE_GROUP} 0755
 OWN_DIRS_PERMS+=	${GRAPHITE_DIR}/lists ${GRAPHITE_USER} ${GRAPHITE_GROUP} 0755
@@ -42,7 +43,7 @@ SUBST_CLASSES+=		dirs
 SUBST_STAGE.dirs=	pre-configure
 SUBST_MESSAGE.dirs=	Patching default storage directory
 SUBST_FILES.dirs=	setup.py
-SUBST_VARS.dirs=	GRAPHITE_DIR GRAPHITE_EGDIR PREFIX
+SUBST_VARS.dirs=	GRAPHITE_DIR GRAPHITE_EGDIR GRAPHITE_RCD PREFIX
 
 PKG_SYSCONFSUBDIR=	graphite
 
