@@ -2,6 +2,15 @@ $NetBSD$
 
 --- Makefile.orig	2015-10-22 21:22:34.000000000 +0000
 +++ Makefile
+@@ -29,7 +29,7 @@ LDFLAGS +=$(shell pkg-config --libs   gt
+ CFLAGS  +=$(shell pkg-config --cflags cairo)
+ LDFLAGS +=$(shell pkg-config --libs   cairo)
+ 
+-PREFIX=/usr/local
++PREFIX?=/usr/local
+ BINDIR=$(PREFIX)/bin
+ SHAREDIR=$(PREFIX)/share
+ 
 @@ -60,7 +60,7 @@ install: install-bin install-share
  # rm the old binary first in case it's still in use
  install-bin: pangoterm

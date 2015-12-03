@@ -14,6 +14,7 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk".
 .include "../../wip/libvterm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
