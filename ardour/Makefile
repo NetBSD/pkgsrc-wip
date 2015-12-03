@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	ardour-4.4
+PKG_NAME=	${DISTNAME:S/-r/-/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ardour/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 MASTER_SITES=	http://ardour.org/
