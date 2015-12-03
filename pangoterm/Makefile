@@ -15,4 +15,6 @@ USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
 .include "../../wip/libvterm/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -4,3 +4,5 @@ SHA1 (pangoterm-0.0_pre20151022.tar.gz) = b9a852ef6bdd17eab66b751fd972df173f1497
 RMD160 (pangoterm-0.0_pre20151022.tar.gz) = 97e20c6fcd9392529698084a0a3960e6ec21c3c1
 SHA512 (pangoterm-0.0_pre20151022.tar.gz) = 716acd0c47fbca35961aff21a8dba886ec4cb152d89544f20d9752828f9e005a5561090959be64f1db864bde71db1d205d045b8a7baa36d23471e1a87c7fee14
 Size (pangoterm-0.0_pre20151022.tar.gz) = 22588 bytes
+SHA1 (patch-Makefile) = e6dca57ef4732f019bb327e381e475c71d0f1b15
+SHA1 (patch-main.c) = f68397c559477dba34a7b56cf74b98ad873ff2ee

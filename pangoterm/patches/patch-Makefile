@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.orig	2015-10-22 21:22:34.000000000 +0000
++++ Makefile
+@@ -60,7 +60,7 @@ install: install-bin install-share
+ # rm the old binary first in case it's still in use
+ install-bin: pangoterm
+ 	install -d $(DESTDIR)$(BINDIR)
+-	$(LIBTOOL) --mode=install cp --remove-destination pangoterm $(DESTDIR)$(BINDIR)/pangoterm
++	$(LIBTOOL) --mode=install cp pangoterm $(DESTDIR)$(BINDIR)/pangoterm
+ 
+ install-share:
+ 	install -d $(DESTDIR)$(SHAREDIR)/pixmaps
