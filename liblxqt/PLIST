@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/11 13:03:08 krytarowski Exp $
-include/lxqt/LXQt/AboutDialog
-include/lxqt/LXQt/AddPluginDialog
+@comment $NetBSD$
 include/lxqt/LXQt/Application
 include/lxqt/LXQt/AutostartEntry
 include/lxqt/LXQt/ConfigDialog
@@ -17,8 +15,6 @@ include/lxqt/LXQt/ScreenSaver
 include/lxqt/LXQt/Settings
 include/lxqt/LXQt/SingleApplication
 include/lxqt/LXQt/Translator
-include/lxqt/LXQt/lxqtaboutdialog.h
-include/lxqt/LXQt/lxqtaddplugindialog.h
 include/lxqt/LXQt/lxqtapplication.h
 include/lxqt/LXQt/lxqtautostartentry.h
 include/lxqt/LXQt/lxqtconfigdialog.h
@@ -40,12 +36,15 @@ lib/liblxqt.${RUBY_DLEXT}
 lib/liblxqt.so.0
 lib/liblxqt.so.${PKGVERSION}
 lib/pkgconfig/lxqt.pc
+share/cmake/lxqt/lxqt-config-version.cmake
 share/cmake/lxqt/lxqt-config.cmake
-share/cmake/lxqt/lxqt-targets-noconfig.cmake
+share/cmake/lxqt/lxqt-targets-release.cmake
 share/cmake/lxqt/lxqt-targets.cmake
-share/cmake/lxqt/lxqt_use.cmake
 share/cmake/lxqt/modules/LXQtAppTranslationLoader.cpp.in
+share/cmake/lxqt/modules/LXQtCompilerSettings.cmake
+share/cmake/lxqt/modules/LXQtCreatePkgConfigFile.cmake
 share/cmake/lxqt/modules/LXQtLibTranslationLoader.cpp.in
+share/cmake/lxqt/modules/LXQtPluginTranslationLoader.cpp.in
 share/cmake/lxqt/modules/LXQtTranslate.cmake
 share/cmake/lxqt/modules/LXQtTranslateDesktop.cmake
 share/cmake/lxqt/modules/LXQtTranslateTs.cmake
@@ -59,8 +58,7 @@ share/lxqt/translations/liblxqt/liblxqt_cs_CZ.qm
 share/lxqt/translations/liblxqt/liblxqt_da.qm
 share/lxqt/translations/liblxqt/liblxqt_da_DK.qm
 share/lxqt/translations/liblxqt/liblxqt_de.qm
-share/lxqt/translations/liblxqt/liblxqt_de_DE.qm
-share/lxqt/translations/liblxqt/liblxqt_el_GR.qm
+share/lxqt/translations/liblxqt/liblxqt_el.qm
 share/lxqt/translations/liblxqt/liblxqt_eo.qm
 share/lxqt/translations/liblxqt/liblxqt_es.qm
 share/lxqt/translations/liblxqt/liblxqt_es_VE.qm
@@ -70,7 +68,7 @@ share/lxqt/translations/liblxqt/liblxqt_fr_FR.qm
 share/lxqt/translations/liblxqt/liblxqt_hu.qm
 share/lxqt/translations/liblxqt/liblxqt_ia.qm
 share/lxqt/translations/liblxqt/liblxqt_id_ID.qm
-share/lxqt/translations/liblxqt/liblxqt_it_IT.qm
+share/lxqt/translations/liblxqt/liblxqt_it.qm
 share/lxqt/translations/liblxqt/liblxqt_ja.qm
 share/lxqt/translations/liblxqt/liblxqt_ko.qm
 share/lxqt/translations/liblxqt/liblxqt_lt.qm
