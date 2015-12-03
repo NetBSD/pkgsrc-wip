@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 11:07:19 krytarowski Exp $
+@comment $NetBSD$
 include/qt5xdg/${PKGVERSION}/private/qtxdg/qiconloader_p.h
 include/qt5xdg/XdgAction
 include/qt5xdg/XdgAutoStart
@@ -23,5 +23,7 @@ lib/libQt5Xdg.so
 lib/libQt5Xdg.so.1
 lib/libQt5Xdg.so.${PKGVERSION}
 lib/pkgconfig/Qt5Xdg.pc
+share/cmake/qt5xdg/qt5xdg-config-version.cmake
 share/cmake/qt5xdg/qt5xdg-config.cmake
-share/cmake/qt5xdg/qt5xdg_use.cmake
+share/cmake/qt5xdg/qt5xdg-targets-release.cmake
+share/cmake/qt5xdg/qt5xdg-targets.cmake
