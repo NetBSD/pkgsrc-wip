@@ -39,5 +39,9 @@ SUBST_MESSAGE.path=	Fixing default paths
 SUBST_FILES.path+=	letsencrypt/constants.py letsencrypt/display/ops.py
 SUBST_FILES.path+=	letsencrypt/renewer.py letsencrypt/tests/*.py
 SUBST_SED.path+=	-e 's,/etc/letsencrypt,${PKG_SYSCONFDIR},g'
+SUBST_SED.path+=	-e 's,/var/lib/letsencrypt,${VARBASE}/letsencrypt,g'
+SUBST_SED.path+=	-e 's,/var/log/letsencrypt,${VARBASE}/letsencrypt/log,g'
+
+MAKE_DIRS+=	${VARBASE}/letsencrypt/log
 
 .include "../../mk/bsd.pkg.mk"
