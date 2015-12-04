@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	vamp
+
+.if !defined(VAMP_BUILDLINK3_MK)
+VAMP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.vamp+=	vamp>=2.0.4
+BUILDLINK_PKGSRCDIR.vamp?=	../../wip/vamp
+.endif	# VAMP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-vamp
