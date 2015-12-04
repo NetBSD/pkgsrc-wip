@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/pkg-config
-bin/pkgconf
-share/aclocal/pkg.m4
-man/man1/pkgconf.1
