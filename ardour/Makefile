@@ -18,4 +18,7 @@ PKGCONFIG_OVERRIDE+=	libs/gtkmm2ext/libgtkmm2ext.pc.in
 PKGCONFIG_OVERRIDE+=	libs/midi++2/libmidi++.pc.in
 PKGCONFIG_OVERRIDE+=	libs/pbd/libpbd.pc.in
 
+# As of NetBSD-7.99.21 pkgsrc's checks cannot open file with rare unicode characters
+CHECK_PORTABILITY_SKIP+=	libs/pbd/test/i18n_test/*.tst
+
 .include "../../mk/bsd.pkg.mk"
