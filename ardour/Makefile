@@ -52,6 +52,7 @@ do-install:
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
 
+.include "../../wip/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../wip/liblo/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
