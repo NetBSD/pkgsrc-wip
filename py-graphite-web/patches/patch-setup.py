@@ -1,9 +1,10 @@
 $NetBSD: patch-config.py,v 1.1 2012/08/07 19:43:37 fhajny Exp $
 
 Use proper paths for storage and config example files.
---- setup.py.orig	2012-05-31 20:30:12.000000000 +0000
-+++ setup.py
-@@ -15,11 +15,11 @@ else:
+
+--- setup.py.orig	2015-11-27 10:37:16.000000000 -0800
++++ setup.py	2015-12-04 14:33:20.000000000 -0800
+@@ -41,11 +41,11 @@
  storage_dirs = []
  
  for subdir in ('whisper', 'rrd', 'log', 'log/webapp'):
@@ -17,7 +18,7 @@ Use proper paths for storage and config example files.
    for filename in files:
      filepath = os.path.join(root, filename)
  
-@@ -29,8 +29,8 @@ for root, dirs, files in os.walk('webapp
+@@ -55,8 +55,8 @@
      webapp_content[root].append(filepath)
  
  
@@ -26,5 +27,5 @@ Use proper paths for storage and config example files.
 +conf_files = [ ('@PREFIX@/@GRAPHITE_EGDIR@', glob('conf/*.example')) ]
 +examples = [ ('@PREFIX@/@GRAPHITE_EGDIR@', glob('examples/example-*')) ]
  
- setup(
-   name='graphite-web',
+ try:
+     setup(

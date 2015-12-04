@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.12 2015/01/15 09:29:38 fhajny Exp $
 
-DISTNAME=	graphite-web-0.9.12
+DISTNAME=	graphite-web-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	-https://github.com/graphite-project/graphite-web/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
