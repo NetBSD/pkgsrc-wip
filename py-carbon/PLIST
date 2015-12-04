@@ -105,6 +105,3 @@ share/examples/graphite/rewrite-rules.conf.example
 share/examples/graphite/storage-aggregation.conf.example
 share/examples/graphite/storage-schemas.conf.example
 share/examples/graphite/whitelist.conf.example
-share/examples/rc.d/carbon-aggregator
-share/examples/rc.d/carbon-cache
-share/examples/rc.d/carbon-relay

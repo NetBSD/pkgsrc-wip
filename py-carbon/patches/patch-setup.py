@@ -1,8 +1,10 @@
 $NetBSD$
 
+Rearrange installation dirs for pkgsrc, and don't install redhat files
+
 --- setup.py.orig	2015-11-27 10:37:07.000000000 -0800
-+++ setup.py	2015-12-03 10:56:59.000000000 -0800
-@@ -13,15 +13,16 @@
++++ setup.py	2015-12-04 12:53:42.000000000 -0800
+@@ -13,19 +13,12 @@
    setup_kwargs = dict()
  
  
@@ -15,11 +17,13 @@ $NetBSD$
  
  install_files = storage_dirs + conf_files
  
- # Let's include redhat init scripts, despite build platform
- # but won't put them in /etc/init.d/ automatically anymore
+-# Let's include redhat init scripts, despite build platform
+-# but won't put them in /etc/init.d/ automatically anymore
 -init_scripts = [ ('examples/init.d', ['distro/redhat/init.d/carbon-cache',
-+init_scripts = [ ('@GRAPHITE_RCD@',
-+                                     ['distro/redhat/init.d/carbon-cache',
-                                       'distro/redhat/init.d/carbon-relay',
-                                       'distro/redhat/init.d/carbon-aggregator']) ]
- install_files += init_scripts
+-                                      'distro/redhat/init.d/carbon-relay',
+-                                      'distro/redhat/init.d/carbon-aggregator']) ]
+-install_files += init_scripts
+-
+ 
+ setup(
+   name='carbon',
