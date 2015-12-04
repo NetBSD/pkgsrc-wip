@@ -3898,6 +3898,7 @@ SUBDIR+=	vacuum
 SUBDIR+=	vagalume
 SUBDIR+=	vale-current
 SUBDIR+=	vamp
+SUBDIR+=	vamp-plugin-sdk
 SUBDIR+=	vamps
 SUBDIR+=	varnish
 SUBDIR+=	varnish4
