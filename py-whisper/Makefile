@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2014/07/15 13:37:03 fhajny Exp $
 #
 
-DISTNAME=	whisper-0.9.12
+DISTNAME=	whisper-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	-https://github.com/graphite-project/whisper/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
