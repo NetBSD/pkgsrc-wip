@@ -7,7 +7,7 @@ MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/1520/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vamp-plugins.org/
 COMMENT=	The Vamp audio analysis plugin system
-LICENSE=	modified-bsd # mit with rider
+LICENSE=	x11
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
