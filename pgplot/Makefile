@@ -36,5 +36,6 @@ do-install:
 	${INSTALL_DATA} grfont.dat rgb.txt ${DESTDIR}${PREFIX}/lib && \
 	${INSTALL_DATA} cpgplot.h ${DESTDIR}${PREFIX}/include
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

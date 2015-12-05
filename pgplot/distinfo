@@ -2,8 +2,9 @@ $NetBSD: distinfo,v 1.1 2013/12/12 19:10:29 slitvinov Exp $
 
 SHA1 (pgplot5.2.tar.gz) = 1f1c9aa17eeec9a2fb23fd15a0e4a91dcc49ddc1
 RMD160 (pgplot5.2.tar.gz) = 4c21cad6613772f4104c65ac3d8d9a42e3c4afe1
+SHA512 (pgplot5.2.tar.gz) = 03a075c84506ead1d665a7105cd41c7cfbe19d12094cb36fb7459a0f6ee0df0638543b7eca92aaf80677984cc47a07b968f854db8eaa90ec605f78d89c615d1f
 Size (pgplot5.2.tar.gz) = 1197397 bytes
 SHA1 (patch-drivers.list) = df56ba221bb24754255c17565fe4b45164d7e2d1
-SHA1 (patch-drivers_pndriv.c) = d433f406251c94642cd18b5f56d5dee77d0ae792
-SHA1 (patch-makemake) = b806cbbdff7a89235dd71f0beafc5f59a9bbb8b2
-SHA1 (patch-pgdispd_proccom.c) = cfdb2e3d2bb35d971eb8ae774bc3d110caa727bb
+SHA1 (patch-drivers_pndriv.c) = 8e96fb287138619e1dfd6b6f37a0d5b3d2381571
+SHA1 (patch-makemake) = 47d10f4d58274a44e12d9d21e130613c0cbda245
+SHA1 (patch-pgdispd_proccom.c) = c72883df06b4fd551e1c49c468d9c5450e8e3aa3
