@@ -137,6 +137,7 @@ SUBDIR+=	ar7
 SUBDIR+=	arabeyes-qr-ttf
 SUBDIR+=	aravis
 SUBDIR+=	archimedes
+SUBDIR+=	arcanist
 SUBDIR+=	ardour
 SUBDIR+=	argouml
 SUBDIR+=	argtable2
