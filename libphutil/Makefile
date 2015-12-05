@@ -4,7 +4,7 @@ PKGNAME=		libphutil-0
 CATEGORIES=		devel
 
 GIT_REPOSITORIES=	libphutil
-GIT_REPO.libphutil=	git@github.com:phacility/libphutil.git
+GIT_REPO.libphutil=	https://github.com/phacility/libphutil.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=phacility/libphutil/}
