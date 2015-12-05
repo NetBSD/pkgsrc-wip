@@ -3,7 +3,7 @@
 DISTNAME=		ltp-0.0
 CATEGORIES=		devel
 GIT_REPOSITORIES=	ltp
-GIT_REPO.ltp=		git@github.com:linux-test-project/ltp.git
+GIT_REPO.ltp=		https://github.com/linux-test-project/ltp.git
 WRKSRC=			${WRKDIR}/ltp
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
