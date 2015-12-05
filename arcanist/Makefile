@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/arcanist
 USE_TOOLS+=	bash
 
 DEPENDS=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
+DEPENDS=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 
 REPLACE_BASH+=	bin/arc
 
@@ -37,9 +38,7 @@ ARCANISTDIR=	${PREFIX}/share/arcanist
 AUTO_MKDIRS=	yes
 
 do-install:
-#	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${ARCANISTDIR}
 	${RUN} cp -r ${WRKSRC}/* ${DESTDIR}${ARCANISTDIR}
-#	${RUN} ${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 	${RUN} ${LN} -s ${ARCANISTDIR}/scripts/arcanist.php \
 		${DESTDIR}${PREFIX}/bin/arc
 
