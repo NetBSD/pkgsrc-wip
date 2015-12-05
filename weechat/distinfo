@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (weechat-1.3.tar.bz2) = 3d6cac3a92b194819197ee7ed435a0c2e62a7c66
+RMD160 (weechat-1.3.tar.bz2) = 2484204e67eea53328a37c7d588cb76f76dfd0ec
+SHA512 (weechat-1.3.tar.bz2) = 82159f1c630bf389e7a3b8baf29b67c50711e1a767040440c71bfd7d3cd0c3005b7423e6dd53c2437512cc68953f540039971a4e6f6d7a4cdb4a4e74e4c3985b
+Size (weechat-1.3.tar.bz2) = 2402422 bytes
+SHA1 (patch-src_gui_curses_gui-curses-term.c) = 7e83f583101cf04a7c71eb25d8c7cf1c49d051ba
