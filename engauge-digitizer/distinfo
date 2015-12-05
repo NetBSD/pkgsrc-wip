@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/02/15 15:07:12 slitvinov Exp $
 
-SHA1 (digit-src-4_1.tar.gz) = c9e98d855d7c297c5868823e5f3c811452b1ec81
-RMD160 (digit-src-4_1.tar.gz) = b1d26ff502c2051d2c5791c0e341bf74ceec75dd
-Size (digit-src-4_1.tar.gz) = 5831396 bytes
+SHA1 (engauge_5.2.tgz) = 235746a72e54d5e0a26fe2583659df3fc02defa7
+RMD160 (engauge_5.2.tgz) = dcb158c8110b14d6f75ac03163604bea27006c20
+SHA512 (engauge_5.2.tgz) = b1839a223c93866f880ca090b6dd5a9ab45a89b5f6f470fd6abba3e2aa4b108ed228c8b06c3888fa463316798c2d157e20b2e22975bd65a1124d007bb36d2d88
+Size (engauge_5.2.tgz) = 5708224 bytes
+SHA1 (patch-src_main.cpp) = 988a438ce637244081a4a392bd5125eada91b9ed
