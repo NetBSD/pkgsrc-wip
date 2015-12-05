@@ -3,7 +3,7 @@
 DISTNAME=	radare2-0.10.0
 CATEGORIES=	devel
 GIT_REPOSITORIES=	radare2
-GIT_REPO.radare2=	git@github.com:radare/radare2.git
+GIT_REPO.radare2=	https://github.com/radare/radare2.git
 WRKSRC=		${WRKDIR}/radare2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
