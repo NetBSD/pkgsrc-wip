@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2015/04/25 10:01:54 krytarowski Exp $
 
 GIT_REPOSITORIES=	coreclr
-GIT_REPO.coreclr=	git@github.com:dotnet/coreclr.git
+GIT_REPO.coreclr=	https://github.com/dotnet/coreclr.git
 
 DISTNAME=	coreclr
 PKGNAME=	coreclr-0.0.0
