@@ -1548,6 +1548,7 @@ SUBDIR+=	libpano12
 SUBDIR+=	libpar2
 SUBDIR+=	libpare
 SUBDIR+=	libparsifal
+SUBDIR+=	libphutil
 SUBDIR+=	libpsl
 SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
