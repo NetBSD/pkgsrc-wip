@@ -3,7 +3,7 @@
 DISTNAME=	dart-1.13.0
 CATEGORIES=	lang
 GIT_REPOSITORIES=	sdk
-GIT_REPO.sdk=		git@github.com:dart-lang/sdk.git
+GIT_REPO.sdk=		https://github.com/dart-lang/sdk.git
 WRKSRC=			${WRKDIR}/sdk
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
