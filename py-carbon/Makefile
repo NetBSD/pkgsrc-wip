@@ -50,6 +50,15 @@ SUBST_FILES.dirs=	setup.py conf/*
 SUBST_VARS.dirs=	GRAPHITE_DIR GRAPHITE_EGDIR GRAPHITE_USER PREFIX \
 			PKG_SYSCONFDIR VARBASE
 
+# NetBSD has posix_fallocate in libc, but fs can't actually use it.
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		fallocate
+SUBST_STAGE.fallocate=	pre-configure
+SUBST_MESSAGE.fallocate=Patching for NetBSD defaults
+SUBST_FILES.fallocate=	conf/carbon.conf.example
+SUBST_SED.fallocate=	-e 's,^\(WHISPER_FALLOCATE_CREATE *= *\)\(.*\),\1False,'
+.endif
+
 PKG_SYSCONFSUBDIR=	graphite
 
 GRAPHITE_CONF_FILES=	aggregation-rules.conf			\
