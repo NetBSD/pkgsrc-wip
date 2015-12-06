@@ -622,6 +622,7 @@ ${PYSITELIB}/graphite/events/urls.pyo
 ${PYSITELIB}/graphite/events/views.py
 ${PYSITELIB}/graphite/events/views.pyc
 ${PYSITELIB}/graphite/events/views.pyo
+${PYSITELIB}/graphite/local_settings.py
 ${PYSITELIB}/graphite/local_settings.py.example
 ${PYSITELIB}/graphite/logger.py
 ${PYSITELIB}/graphite/logger.pyc
