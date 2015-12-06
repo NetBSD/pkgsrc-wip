@@ -54,6 +54,18 @@ do-install:
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
 
+.include "../../x11/gtkmm/buildlink3.mk"
+.include "../../audio/lilv/buildlink3.mk"
+.include "../../converters/sratom/buildlink3.mk"
+.include "../../textproc/sord/buildlink3.mk"
+.include "../../textproc/serd/buildlink3.mk"
+.include "../../audio/lv2/buildlink3.mk"
+.include "../../textproc/liblrdf/buildlink3.mk"
+.include "../../devel/cppunit/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../audio/aubio/buildlink3.mk"
+.include "../../math/fftwf/buildlink3.mk"
+.include "../../wip/rubberband/buildlink3.mk"
 .include "../../wip/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../wip/liblo/buildlink3.mk"
