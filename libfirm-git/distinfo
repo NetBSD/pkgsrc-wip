@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-CMakeLists.txt) = 35e76f62a5cb507aed4b6ab36c195d46844402c6
+SHA1 (patch-ir_adt_bitfiddle.h) = bf8de1c27790bd3d35f7162ccba5d109be57fd1e

@@ -1,0 +1,10 @@
+Firm is a C-library that provides a graph-based intermediate representation,
+optimizations, and assembly code generation suitable for use in compilers.
+
+Features
+ - Completely graph-based, source- and target-independent intermediate
+   representation in SSA form
+ - Accompanying GCC-compatible C frontend with full C99 support
+ - Extensive set of optimizations
+ - High-quality register allocation
+ - Mature code generation support for x86 (32-bit) and SPARC
