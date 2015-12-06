@@ -1,5 +1,7 @@
 $NetBSD$
 
+Make C compiler happy
+
 --- src/gui/curses/gui-curses-term.c.orig	2015-08-16 06:27:07.000000000 +0000
 +++ src/gui/curses/gui-curses-term.c
 @@ -45,7 +45,7 @@
