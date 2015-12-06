@@ -3510,6 +3510,7 @@ SUBDIR+=	rtl-sdr-git
 SUBDIR+=	rtpbreak
 SUBDIR+=	rtspdump
 SUBDIR+=	rubinius
+SUBDIR+=	rubberband
 SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-cabin
