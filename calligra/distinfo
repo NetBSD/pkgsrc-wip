@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2014/03/29 14:10:18 nsloss Exp $
+$NetBSD$
 
-SHA1 (calligra-2.7.4.tar.xz) = 5d4cebfd6b1c7c53049e12144ea149780fc979fe
-RMD160 (calligra-2.7.4.tar.xz) = 43600ca551319261ab268e8dee93f98d66280809
-Size (calligra-2.7.4.tar.xz) = 119271956 bytes
-SHA1 (patch-3rdparty_kdchart_kdablibfakes_src_KDABLibFakes.h) = 5e8e815b22bc8324c753a522e72f8c12b89db384
-SHA1 (patch-filters_words_msword-odf_wv2_src_word97__helper.cpp) = c5ae5b9d286fd058a1d504f28898d740fa3dd015
-SHA1 (patch-krita_plugins_formats_xcf_xcftools.h) = 28b580e943a9c82a27685a21ef4a8766b9088966
+SHA1 (calligra-2.9.9.tar.xz) = 0e657ab80e4fe78591d8460bd2cf3cfc3506e432
+RMD160 (calligra-2.9.9.tar.xz) = e737998aeac5f531f1290bb074aa6ec45c864055
+SHA512 (calligra-2.9.9.tar.xz) = 09b221502dc2c1d48ee5f783da515a1a53ffc7456b45b271e8de846430ad1254ce12c39baf7f0e220a6ccef4e5bc02da05e211d300caa948905b5d0c766068e5
+Size (calligra-2.9.9.tar.xz) = 194657892 bytes
+SHA1 (patch-3rdparty_google-breakpad_src_third_party_protobuf_protobuf_post_process_dist.sh) = 94a37a5095d8864fc426453625dbb5f62b087dc7
+SHA1 (patch-krita_plugins_formats_xcf_3rdparty_xcftools_config.h) = e040804bfef8c1e10d722b2862c25aaff947da73
