@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (letsencrypt-0.0.0.dev20151123.tar.gz) = 9575ccadea3d135f5e14eaafe439d0b223636c27
-RMD160 (letsencrypt-0.0.0.dev20151123.tar.gz) = a52907331f9cd3c44835e72ff1baeafd2a17a3bb
-SHA512 (letsencrypt-0.0.0.dev20151123.tar.gz) = e62cd4bf966b75e159949d84eda1005649dd4f11efbb1515601a5c6690e09ea1cc73bb3f535b6b20655752b7218fa3f02cf50e4cb12a335d76b10461e385aa96
-Size (letsencrypt-0.0.0.dev20151123.tar.gz) = 403690 bytes
+SHA1 (letsencrypt-0.1.0.tar.gz) = 7e3b0f479dddadcfebe3ecb68608f690d97766fc
+RMD160 (letsencrypt-0.1.0.tar.gz) = 8644d49302bf9dc2b66e67e41e529bc7c727ee3a
+SHA512 (letsencrypt-0.1.0.tar.gz) = 6a786290362741ac97dcb4b59bc4cba56f3e8b5193bbc10be19086d462f76e6124259c42bac36afe9eb818f4bb9edec34f8e2a02bd8c855e3b35404f4ee81f96
+Size (letsencrypt-0.1.0.tar.gz) = 524821 bytes

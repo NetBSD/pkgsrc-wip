@@ -7,7 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/letsencrypt/DISCLAIMER
 ${PYSITELIB}/letsencrypt/__init__.py
 ${PYSITELIB}/letsencrypt/__init__.pyc
 ${PYSITELIB}/letsencrypt/__init__.pyo

@@ -21,5 +21,12 @@ EGG_NAME=	${DISTNAME:S/letsencrypt/letsencrypt_apache/}
 
 PYSETUPSUBDIR=	letsencrypt-apache
 
+SUBST_CLASSES+=         path
+SUBST_STAGE.path=       pre-build
+SUBST_MESSAGE.path=     Fixing default paths
+SUBST_FILES.path+=	letsencrypt-apache/letsencrypt_apache/augeas_lens/httpd.aug
+SUBST_FILES.path+=	letsencrypt-apache/letsencrypt_apache/constants.py
+SUBST_SED.path+=        -e 's,/etc,${PKG_SYSCONFBASE},g'
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

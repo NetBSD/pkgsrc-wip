@@ -21,9 +21,6 @@ ${PYSITELIB}/letsencrypt_apache/constants.pyo
 ${PYSITELIB}/letsencrypt_apache/display_ops.py
 ${PYSITELIB}/letsencrypt_apache/display_ops.pyc
 ${PYSITELIB}/letsencrypt_apache/display_ops.pyo
-${PYSITELIB}/letsencrypt_apache/dvsni.py
-${PYSITELIB}/letsencrypt_apache/dvsni.pyc
-${PYSITELIB}/letsencrypt_apache/dvsni.pyo
 ${PYSITELIB}/letsencrypt_apache/obj.py
 ${PYSITELIB}/letsencrypt_apache/obj.pyc
 ${PYSITELIB}/letsencrypt_apache/obj.pyo
@@ -46,9 +43,6 @@ ${PYSITELIB}/letsencrypt_apache/tests/configurator_test.pyo
 ${PYSITELIB}/letsencrypt_apache/tests/display_ops_test.py
 ${PYSITELIB}/letsencrypt_apache/tests/display_ops_test.pyc
 ${PYSITELIB}/letsencrypt_apache/tests/display_ops_test.pyo
-${PYSITELIB}/letsencrypt_apache/tests/dvsni_test.py
-${PYSITELIB}/letsencrypt_apache/tests/dvsni_test.pyc
-${PYSITELIB}/letsencrypt_apache/tests/dvsni_test.pyo
 ${PYSITELIB}/letsencrypt_apache/tests/obj_test.py
 ${PYSITELIB}/letsencrypt_apache/tests/obj_test.pyc
 ${PYSITELIB}/letsencrypt_apache/tests/obj_test.pyo
@@ -89,6 +83,7 @@ ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/ap
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/mods-enabled/.gitignore
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/ports.conf
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/sites-available/000-default.conf
+${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/sites-available/default-ssl-port-only.conf
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/sites-available/default-ssl.conf
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/sites-available/encryption-example.conf
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/sites-available/letsencrypt.conf
@@ -98,6 +93,12 @@ ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/ap
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/sites-enabled/letsencrypt.conf
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/apache2/sites-enabled/mod_macro-example.conf
 ${PYSITELIB}/letsencrypt_apache/tests/testdata/debian_apache_2_4/two_vhost_80/sites
+${PYSITELIB}/letsencrypt_apache/tests/tls_sni_01_test.py
+${PYSITELIB}/letsencrypt_apache/tests/tls_sni_01_test.pyc
+${PYSITELIB}/letsencrypt_apache/tests/tls_sni_01_test.pyo
 ${PYSITELIB}/letsencrypt_apache/tests/util.py
 ${PYSITELIB}/letsencrypt_apache/tests/util.pyc
 ${PYSITELIB}/letsencrypt_apache/tests/util.pyo
+${PYSITELIB}/letsencrypt_apache/tls_sni_01.py
+${PYSITELIB}/letsencrypt_apache/tls_sni_01.pyc
+${PYSITELIB}/letsencrypt_apache/tls_sni_01.pyo

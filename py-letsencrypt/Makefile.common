@@ -11,7 +11,7 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://letsencrypt.org/
 
 GITHUB_PROJECT=	letsencrypt
-GITHUB_TAG=	v0.0.0.dev20151123
+GITHUB_TAG=	v0.1.0
 
 DISTINFO_FILE=	${PKGDIR}/../../wip/py-letsencrypt/distinfo
 PATCHDIR=	${PKGDIR}/../../wip/py-letsencrypt/patches
