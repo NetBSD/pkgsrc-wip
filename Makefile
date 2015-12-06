@@ -1481,6 +1481,7 @@ SUBDIR+=	libeio-cvs
 SUBDIR+=	libepc
 SUBDIR+=	libeps
 SUBDIR+=	libetonyek
+SUBDIR+=	libfirm-git
 SUBDIR+=	libfm
 SUBDIR+=	libfplll
 SUBDIR+=	libftdi1
