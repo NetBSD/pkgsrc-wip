@@ -6,7 +6,7 @@ MASTER_SITES=	http://code.breakfastquay.com/attachments/download/34/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.rog
-HOMEPAGE=	http://code.breakfastquay.com/attachments/download/34/
+HOMEPAGE=	http://breakfastquay.com/rubberband/
 COMMENT=	Audio time-stretching and pitch-shifting library
 LICENSE=	gnu-gpl-v2
 
