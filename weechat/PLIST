@@ -1,6 +1,5 @@
 @comment $NetBSD$
 bin/weechat
-bin/weechat-curses
 include/weechat/weechat-plugin.h
 lib/pkgconfig/weechat.pc
 lib/weechat/plugins/alias.so
