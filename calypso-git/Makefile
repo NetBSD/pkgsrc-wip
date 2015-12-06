@@ -21,7 +21,7 @@ PYDISTUTILSPKG=			yes
 INSTALLATION_DIRS=	share/examples/calypso
 
 REPLACE_PYTHON=	calypso.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-vobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-vobject
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/share/examples/calypso/

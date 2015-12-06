@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-ditz>=0.5:../../wip/ruby-ditz
 
 REPLACE_PYTHON=	ditz-commander
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-gtk2, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2, py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/application.mk"

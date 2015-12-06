@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.1:../../textproc/py-lxml
 REPLACE_PYTHON=	${WRKSRC}/*.py
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

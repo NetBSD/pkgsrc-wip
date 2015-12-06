@@ -15,7 +15,7 @@ DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-notify
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2, py-notify
 
 REPLACE_PYTHON=	backintime
 USE_LANGUAGES=	# none

@@ -188,7 +188,7 @@ WITHOUT_PLUGINS+=	pulse
 
 .if !empty(PKG_OPTIONS:Mpyrex)
 BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-pyrex
 .include "../../lang/python/extension.mk"
 PY_PATCHPLIST=		yes
 PLIST.pyrex=		yes

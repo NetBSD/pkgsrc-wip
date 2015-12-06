@@ -16,7 +16,7 @@ DEPENDS+=  ${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessin
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-multiprocessing
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-multiprocessing
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

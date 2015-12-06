@@ -46,7 +46,7 @@ SUBST_FILES.pythonbin=  Makefile
 SUBST_MESSAGE.pythonbin=        Fixing path to PYTHONBIN.
 SUBST_SED.pythonbin=    -e "s,PYTHON=python,PYTHON=${PYTHONBIN},"
 
-PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # py-paramiko
+PYTHON_VERSIONS_INCOMPATIBLE=   33 34 35 # py-paramiko
 
 REPLACE_PYTHON=         lib/ansible/runner/action_plugins/synchronize.py
 REPLACE_PYTHON+=        lib/ansible/utils/module_docs.py

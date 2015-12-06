@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 33 34
+PYTHON_VERSIONS_INCOMPATIBLE= 33 34 35
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

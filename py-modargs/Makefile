@@ -9,7 +9,7 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/python-modargs
 COMMENT=	line argument parsing library that infers
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.7
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

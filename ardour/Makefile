@@ -21,6 +21,8 @@ PKGCONFIG_OVERRIDE+=	libs/pbd/libpbd.pc.in
 # As of NetBSD-7.99.21 pkgsrc's checks cannot open file with rare unicode characters
 CHECK_PORTABILITY_SKIP+=	libs/pbd/test/i18n_test/*.tst
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 35 # as of 4.4
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"

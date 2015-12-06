@@ -17,7 +17,7 @@ USE_LANGUAGES=		# none
 
 EGG_NAME=	${DISTNAME:S/-/_/g:S/registration_/registration-/}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.8a1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.8a1
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

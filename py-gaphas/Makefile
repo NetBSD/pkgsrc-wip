@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-decorator>=3.2.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8.1:../../wip/py-simplegeneric
 
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 USE_LANGUAGES=	# none
 

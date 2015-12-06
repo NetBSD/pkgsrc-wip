@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.6:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-imaging, py-gtk2, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-imaging, py-gtk2, py-gobject
 
 post-extract:
 	${MV} ${WRKSRC}/bin/aesthete_ime ${WRKSRC}/bin/aesthete_ime${PYVERSSUFFIX}

@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-biopython>=1.63:../../wip/biopython
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-reportlab via biopython
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-reportlab via biopython
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

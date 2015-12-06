@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-pyreadline
 .endif
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ipython
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ipython
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"

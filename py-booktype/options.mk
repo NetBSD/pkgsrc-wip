@@ -10,7 +10,7 @@ PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mysqldb
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mysqldb
 PLIST.mysql=	yes
 .endif
 

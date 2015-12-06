@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-workerpool-[0-9]*:../../wip/py-workerpool
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.5.2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.5.2
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

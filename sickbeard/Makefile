@@ -34,7 +34,7 @@ AUTO_MKDIRS=yes
 PY_PATCHPLIST=          yes
 PLIST_SUBST+=           PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON=		*.py */*.py */*/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-cheetah
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-cheetah
 
 SUBST_CLASSES+= fix-paths
 SUBST_STAGE.fix-paths=  pre-configure

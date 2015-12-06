@@ -19,7 +19,7 @@ USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-gtk2, py-gstreamer0.10, py-gobject, py-elementtree
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2, py-gtk2, py-gstreamer0.10, py-gobject, py-elementtree
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"

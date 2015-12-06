@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-openpyxl>=1.8.0:../../textproc/py-openpyxl
 
 USE_LANGUAGES=	# none
 REPLACE_PYTHON=	pkshared/scripts/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.1.11
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.1.11
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/application.mk"

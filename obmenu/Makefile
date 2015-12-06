@@ -19,7 +19,7 @@ SUBST_SED.obmenu+=	-e 's|/usr/share|${LOCALBASE}/share|g'
 
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON=	${WRKSRC}/obmenu ${WRKSRC}/obxml.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 USE_LANGUAGES=	# none
 

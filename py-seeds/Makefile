@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 USE_LANGUAGES=	c
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-networkx
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

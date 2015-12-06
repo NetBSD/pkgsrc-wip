@@ -52,7 +52,7 @@ CONF_FILES+=		${GRAPHITE_EGDIR}/${file}.example	\
 
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
 			--install-lib=${PREFIX}/${PYSITELIB}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-django-tagging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-django-tagging
 
 INSTALLATION_DIRS+=	share/examples/graphite
 

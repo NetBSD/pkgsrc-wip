@@ -15,7 +15,7 @@ DEPENDS+=		${PYPKGPREFIX}-mad>=0.5.0:../../audio/py-mad
 
 PYDISTUTILSPKG=		yes
 REPLACE_PYTHON=		*.py */*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mad
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mad
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

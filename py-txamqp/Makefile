@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 
 WRKSRC=		${WRKDIR}/python-txamqp-0.3
 EGG_NAME=	txAMQP-${PKGVERSION_NOREV}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

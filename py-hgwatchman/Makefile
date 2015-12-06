@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/facebook-hgwatchman-ff079639962b
 DEPENDS+=	watchman-[0-9]*:../../sysutils/watchman
 DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=   33 34
+PYTHON_VERSIONS_INCOMPATIBLE=   33 34 35
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

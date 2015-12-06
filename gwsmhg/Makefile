@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2, py-gobject
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

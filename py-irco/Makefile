@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-raven>=4.2.1:../../wip/py-raven
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-networkx, py-tablib-garetjax
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-networkx, py-tablib-garetjax
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:

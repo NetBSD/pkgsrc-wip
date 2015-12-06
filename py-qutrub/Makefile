@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 QUTRUB_FILES=	ar_ctype.py arabic_const.py classverb.py mosaref_main.py  conjugate.py conjugatedisplay.py  index.py verb_const.py
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-sqlite2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-sqlite2
 PY_EXEC=	${PREFIX}/bin/python${PYVERSSUFFIX}
 QUTRUBDIR=	${PREFIX}/${PYSITELIB}/py-qutrub
 

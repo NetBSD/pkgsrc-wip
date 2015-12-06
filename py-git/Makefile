@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 #DEPENDS+=	${PYPKGPREFIX}-gitdb>=0.6.1:../../wip/py-gitdb
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3.2.RC1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.3.2.RC1
 
 USE_LANGUAGES=	# none
 

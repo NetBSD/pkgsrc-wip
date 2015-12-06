@@ -13,7 +13,7 @@ COMMENT=	Operators and solvers for high-performance computing
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-fftw>=0.2:../../math/py-fftw
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-fftw
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-fftw
 EGG_NAME=	pyoperators-0.13
 
 .include "../../devel/py-cython/buildlink3.mk"

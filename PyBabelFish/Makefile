@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 NO_CONFIGURE=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 PYFILES=	URLRead.py pybabelfish.py pyfilter.py pytheme.py \
 		pythonol_festival.py symbolbar.py

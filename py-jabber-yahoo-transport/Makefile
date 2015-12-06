@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.4.1:../../chat/py-xmpppy
 
 PYTHON_VERSIONED_DEPENDENCIES=	dns
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xmpppy
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xmpppy
 
 # Fifth paragraph - all build definitions that describe things used by
 # the package.  These include: WRKSRC, GNU_CONFIGURE,

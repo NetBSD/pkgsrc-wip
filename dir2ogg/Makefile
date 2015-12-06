@@ -14,7 +14,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	${WRKSRC}/dir2ogg
 NO_BUILD=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.11.8
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.11.8
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dir2ogg ${DESTDIR}${PREFIX}/bin

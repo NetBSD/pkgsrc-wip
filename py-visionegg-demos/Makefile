@@ -18,7 +18,7 @@ MESSAGE_SUBST+=		PY_VE_DIR=${PY_VE_DEMO_DIR}
 
 PY_VE_DEMO_DIR=		${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/demo
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric and py-OpenGL via py-visionegg
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-Numeric and py-OpenGL via py-visionegg
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PY_VE_DEMO_DIR}

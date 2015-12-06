@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

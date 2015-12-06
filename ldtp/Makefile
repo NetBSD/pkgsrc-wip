@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON+=	bin/ldtp
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit and py-gnome2 via py-at-spi, py-gobject, py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit and py-gnome2 via py-at-spi, py-gobject, py-twisted
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/application.mk"

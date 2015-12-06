@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-ase-[0-9]*:../../wip/py-ase
 USE_LANGUAGES=	c c99
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2 and py-gobject via py-ase
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2 and py-gobject via py-ase
 
 post-extract:
 	${MV} ${WRKSRC}/tools/gpaw ${WRKSRC}/tools/gpaw${PYVERSSUFFIX}

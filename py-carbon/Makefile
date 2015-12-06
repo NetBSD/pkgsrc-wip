@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-whisper>=${PKGVERSION_NOREV}:../../wip/py-whisper
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

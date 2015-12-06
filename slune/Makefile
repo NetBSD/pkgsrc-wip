@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-vorbis, py-EditObj2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-vorbis, py-EditObj2
 
 PYSETUPINSTALLARGS=	--install-lib ${PYSITELIB} --install-scripts ${PREFIX}/bin --install-data ${PREFIX}/share/
 

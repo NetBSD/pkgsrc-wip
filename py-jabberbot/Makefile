@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.5.0rc1:../../chat/py-xmpppy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xmpppy
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xmpppy
 
 EXDIR=		${PREFIX}/share/examples/py-jabberbot
 

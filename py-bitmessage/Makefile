@@ -11,7 +11,7 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=Bitmessage/PyBitmessage/}
 COMMENT=	P2P communications protocol used to send encrypted messages
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none

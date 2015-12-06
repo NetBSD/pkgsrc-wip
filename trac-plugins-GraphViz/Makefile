@@ -22,7 +22,7 @@ SVN_REPOSITORIES=	graphviz
 SVN_ROOT.graphviz=	http://trac-hacks.org/svn/graphvizplugin/trunk
 SVN_TAG.graphviz=	${SVNVERSION}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 13275/0.7.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 13275/0.7.7
 
 NO_CHECKSUM=	yes
 

@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-cython>=0.14:../../devel/py-cython
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 REPLACE_PYTHON+=	tests/__init__.py
 REPLACE_PYTHON+=	tests/scripts/__init__.py

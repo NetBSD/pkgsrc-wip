@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		gmake
 REPLACE_PYTHON=		ups-monitor
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2
 
 SUBST_CLASSES+=		py
 SUBST_STAGE.py= 	post-patch

@@ -19,7 +19,7 @@ MAKE_ENV+=	COLOR=0
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-docutils
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"

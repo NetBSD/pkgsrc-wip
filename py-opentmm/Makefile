@@ -14,7 +14,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 #DEPENDS+=	${PYPKGPREFIX}-django-gitrevision>=0.1.4:../../wip/py-django-gitrevision
 
-#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-git via py-django-gitrevision
+#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-git via py-django-gitrevision
 
 USE_LANGUAGES=	c fortran
 

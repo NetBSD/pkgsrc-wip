@@ -17,7 +17,7 @@ LICENSE=		2-clause-bsd
 DEPENDS+=		${PYPKGPREFIX}-boto>=2.2:../../net/py-boto
 DEPENDS+=		${PYPKGPREFIX}-m2crypto>=0.20.2:../../security/py-m2crypto
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-m2crypto
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-m2crypto
 
 DIST_SUBDIR=		${GIT_PKG}
 USE_LANGUAGES=		# python

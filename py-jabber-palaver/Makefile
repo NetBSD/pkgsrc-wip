@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
 
 # it's a python package using the standard Python packager
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"

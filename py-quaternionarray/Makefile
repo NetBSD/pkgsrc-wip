@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 #DEPENDS+=	${PYPKGPREFIX}-docutils>=0.6:../../textproc/py-docutils
 
 USE_LANGUAGES=	# none
-#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-docutils
+#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-docutils
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

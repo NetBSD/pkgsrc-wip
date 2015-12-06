@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-postgresql>=4.0:../../databases/py-postgresql
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-postgresql
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-postgresql
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

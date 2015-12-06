@@ -12,7 +12,7 @@ COMMENT=	Framework for solving PDEs with FDM using Python
 LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONED_DEPENDENCIES=	Pmw
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-Numeric, py-numarray
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-Numeric, py-numarray
 
 USE_LANGUAGES=	c c++
 
