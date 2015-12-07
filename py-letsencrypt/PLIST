@@ -224,3 +224,4 @@ ${PYSITELIB}/letsencrypt/tests/validator_test.pyo
 ${PYSITELIB}/letsencrypt/validator.py
 ${PYSITELIB}/letsencrypt/validator.pyc
 ${PYSITELIB}/letsencrypt/validator.pyo
+share/examples/letsencrypt/cli.ini

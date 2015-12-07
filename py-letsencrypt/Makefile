@@ -42,6 +42,12 @@ SUBST_SED.path+=	-e 's,/etc/letsencrypt,${PKG_SYSCONFDIR},g'
 SUBST_SED.path+=	-e 's,/var/lib/letsencrypt,${VARBASE}/letsencrypt,g'
 SUBST_SED.path+=	-e 's,/var/log/letsencrypt,${VARBASE}/letsencrypt/log,g'
 
-MAKE_DIRS+=	${VARBASE}/letsencrypt/log
+MAKE_DIRS+=		${VARBASE}/letsencrypt/log
+
+INSTALLATION_DIRS+=	share/examples/letsencrypt
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/examples/cli.ini \
+		${DESTDIR}${PREFIX}/share/examples/letsencrypt
 
 .include "../../mk/bsd.pkg.mk"
