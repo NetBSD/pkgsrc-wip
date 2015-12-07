@@ -14,6 +14,7 @@ LICENSE=	public-domain
 WRKSRC=		${WRKDIR}/TP
 
 NO_BUILD=	yes
+PY_PATCHPLIST=	yes
 
 TERMINATORLIB_PLUGINS=	${PREFIX}/${PYSITELIB}/terminatorlib/plugins/
 
@@ -26,4 +27,5 @@ do-install:
 
 .include "../../wip/mk/git-package.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
