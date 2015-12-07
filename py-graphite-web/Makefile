@@ -35,9 +35,10 @@ SUBST_FILES.dirs+=	examples/example-graphite-vhost.conf
 SUBST_FILES.dirs+=	setup.py
 SUBST_FILES.dirs+=	webapp/graphite/local_settings.py.example
 SUBST_SED.dirs=		-e 's,/opt/graphite/conf,${PKG_SYSCONFDIR},g'
+SUBST_SED.dirs+=	-e 's,/opt/graphite/storage/log,${GRAPHITE_LOG_DIR},g'
 SUBST_SED.dirs+=	-e 's,/opt/graphite/storage,${GRAPHITE_DIR},g'
 SUBST_SED.dirs+=	-e 's,/opt/graphite,${PREFIX}/graphite,g'
-SUBST_VARS.dirs=	GRAPHITE_DIR GRAPHITE_EGDIR PREFIX
+SUBST_VARS.dirs=	GRAPHITE_DIR GRAPHITE_EGDIR GRAPHITE_LOG_DIR PREFIX
 
 PKG_SYSCONFSUBDIR=	graphite
 
