@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-carbon>=${PKGREVISION_NOREV}:../../wip/py-carbon
 DEPENDS+=	${PYPKGPREFIX}-django>=1.3.1:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.3.1:../../www/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
@@ -42,6 +43,11 @@ SUBST_SED.dirs+=	-e 's,/opt/graphite/storage/log,${GRAPHITE_LOG_DIR},g'
 SUBST_SED.dirs+=	-e 's,/opt/graphite/storage,${GRAPHITE_DIR},g'
 SUBST_SED.dirs+=	-e 's,/opt/graphite,${PREFIX}/graphite,g'
 SUBST_VARS.dirs=	GRAPHITE_DIR GRAPHITE_EGDIR GRAPHITE_LOG_DIR PREFIX
+
+MESSAGE_SUBST+=		GRAPHITE_DIR=${GRAPHITE_DIR}
+MESSAGE_SUBST+=		GRAPHITE_LOG_DIR=${GRAPHITE_LOG_DIR}
+MESSAGE_SUBST+=		GRAPHITE_USER=${GRAPHITE_USER}
+MESSAGE_SUBST+=		WWW_USER=${WWW_USER}
 
 PKG_SYSCONFSUBDIR=	graphite
 
