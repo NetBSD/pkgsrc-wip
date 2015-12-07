@@ -2,7 +2,6 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
 
 * Don't assume sys/capability.h is guaranteed present on Linux.
 * Fix NetBSD detection for libatomics_ops check.
-* Fix unportable test(1) construct.
 * Adapt /var-paths for pkgsrc defaults.
 * Install default config files in example directory; pkgsrc config
   file framework will install them in the right place.
