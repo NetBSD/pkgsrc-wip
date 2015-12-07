@@ -24,9 +24,6 @@ PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 BUILD_DEFS+=		VARBASE GRAPHITE_DIR
 
-GRAPHITE_DIR?=		${VARBASE}/graphite
-GRAPHITE_EGDIR?=	share/examples/graphite
-
 REPLACE_SH+=		bin/build-index.sh
 
 SUBST_CLASSES+=		dirs
@@ -65,6 +62,7 @@ pre-build:
 post-install:
 	${LN} -s ${PKG_SYSCONFDIR}/local_settings.py ${DESTDIR}${PREFIX}/${PYSITELIB}/graphite/
 
+.include "../../wip/py-carbon/Makefile.common"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
