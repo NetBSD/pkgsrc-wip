@@ -22,15 +22,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
 
 BUILD_DEFS+=	VARBASE GRAPHITE_USER GRAPHITE_GROUP GRAPHITE_DIR
 
-GRAPHITE_USER?=		graphite
-GRAPHITE_GROUP?=	graphite
-GRAPHITE_DIR?=		${VARBASE}/graphite
-GRAPHITE_EGDIR?=	share/examples/graphite
-
-PKG_GROUPS+=			${GRAPHITE_GROUP}
-PKG_USERS+=			${GRAPHITE_USER}:${GRAPHITE_GROUP}
-PKG_GECOS.${GRAPHITE_USER}=	Graphite Carbon user
-
 RCD_SCRIPTS=		carbon-aggregator carbon-cache carbon-relay
 FILES_SUBST+=		GRAPHITE_USER=${GRAPHITE_USER} GRAPHITE_GROUP=${GRAPHITE_GROUP} \
 			GRAPHITE_DIR=${GRAPHITE_DIR}
@@ -81,5 +72,6 @@ PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
 
 INSTALLATION_DIRS+=	share/examples/graphite
 
+.include "../../wip/py-carbon/Makefile.common"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

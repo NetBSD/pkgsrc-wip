@@ -1,0 +1,11 @@
+# $NetBSD$
+
+GRAPHITE_USER?=		graphite
+GRAPHITE_GROUP?=	graphite
+GRAPHITE_DIR?=		${VARBASE}/graphite
+GRAPHITE_EGDIR?=	share/examples/graphite
+GRAPHITE_LOG_DIR?=	${VARBASE}/log/graphite
+
+PKG_GROUPS+=			${GRAPHITE_GROUP}
+PKG_USERS+=			${GRAPHITE_USER}:${GRAPHITE_GROUP}
+PKG_GECOS.${GRAPHITE_USER}=	Graphite Carbon user
