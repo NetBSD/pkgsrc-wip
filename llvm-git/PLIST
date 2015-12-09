@@ -13,6 +13,7 @@ bin/llvm-diff
 bin/llvm-dis
 bin/llvm-dsymutil
 bin/llvm-dwarfdump
+bin/llvm-dwp
 bin/llvm-extract
 bin/llvm-lib
 bin/llvm-link
@@ -140,6 +141,7 @@ include/llvm/Analysis/DivergenceAnalysis.h
 include/llvm/Analysis/DomPrinter.h
 include/llvm/Analysis/DominanceFrontier.h
 include/llvm/Analysis/DominanceFrontierImpl.h
+include/llvm/Analysis/EHPersonalities.h
 include/llvm/Analysis/GlobalsModRef.h
 include/llvm/Analysis/IVUsers.h
 include/llvm/Analysis/InlineCost.h
@@ -150,7 +152,6 @@ include/llvm/Analysis/IntervalPartition.h
 include/llvm/Analysis/IteratedDominanceFrontier.h
 include/llvm/Analysis/LazyCallGraph.h
 include/llvm/Analysis/LazyValueInfo.h
-include/llvm/Analysis/LibCallSemantics.h
 include/llvm/Analysis/Lint.h
 include/llvm/Analysis/Loads.h
 include/llvm/Analysis/LoopAccessAnalysis.h
@@ -699,6 +700,7 @@ include/llvm/Support/Path.h
 include/llvm/Support/PluginLoader.h
 include/llvm/Support/PointerLikeTypeTraits.h
 include/llvm/Support/PrettyStackTrace.h
+include/llvm/Support/Printable.h
 include/llvm/Support/Process.h
 include/llvm/Support/Program.h
 include/llvm/Support/RWMutex.h
