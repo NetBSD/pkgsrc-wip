@@ -3788,6 +3788,7 @@ SUBDIR+=	tex-abntex
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-mathdots
+SUBDIR+=	tex-mathdots-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
