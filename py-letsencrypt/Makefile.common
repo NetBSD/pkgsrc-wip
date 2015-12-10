@@ -13,5 +13,8 @@ HOMEPAGE=	https://letsencrypt.org/
 GITHUB_PROJECT=	letsencrypt
 GITHUB_TAG=	v0.1.0
 
+EXTRACT_USING=	bsdtar
+USE_TOOLS+=	bsdtar
+
 DISTINFO_FILE=	${PKGDIR}/../../wip/py-letsencrypt/distinfo
 PATCHDIR=	${PKGDIR}/../../wip/py-letsencrypt/patches
