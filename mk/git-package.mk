@@ -109,15 +109,17 @@ _GIT_CREATE_CACHE.${repo}=	\
 
 #   fetch git repo or update cached one
 _GIT_FETCH_REPO.${repo}=	\
-	if [ -d ${GIT_MODULE.${repo}:Q} ]; then					\
-	  ${STEP_MSG} "Updating GIT archive "${GIT_MODULE.${repo}:Q}".";	\
-	  ${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q} fetch	\
-	    ${_GIT_FETCH_FLAGS};						\
-	else									\
+	if [ ! -d ${GIT_MODULE.${repo}:Q} ]; then				\
 	  ${STEP_MSG} "Cloning GIT archive "${GIT_MODULE.${repo}:Q}".";		\
 	  ${SETENV} ${_GIT_ENV} ${_GIT_CMD} clone ${_GIT_CLONE_FLAGS} 		\
 	    ${GIT_REPO.${repo}:Q} ${GIT_MODULE.${repo}:Q};			\
 	fi;									\
+	${STEP_MSG} "Fetching remote branches of "${_GIT_FLAG.${repo}:Q}".";	\
+	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	  remote set-branches origin '*';					\
+	${STEP_MSG} "Updating GIT archive "${GIT_MODULE.${repo}:Q}".";		\
+	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	  fetch ${_GIT_FETCH_FLAGS};						\
 	${STEP_MSG} "Checking out GIT "${_GIT_FLAG.${repo}:Q}".";		\
 	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
 	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q}
