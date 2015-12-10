@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
+$NetBSD$
 
 * Don't assume sys/capability.h is guaranteed present on Linux.
 * Adapt /var-paths for pkgsrc defaults.
@@ -25,7 +25,17 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
          os_is_linux=1
      ;;
      freebsd*)
-@@ -523,15 +522,9 @@ AC_SEARCH_LIBS([backtrace], [execinfo ub
+@@ -463,6 +462,9 @@ AC_TYPE_OFF_T
+ AC_TYPE_UID_T
+ AC_CHECK_DECLS(environ)
+ 
++# Used to deduct CPU word size
++AC_CHECK_SIZEOF(void*)
++
+ # SIGXCPU
+ AX_CHECK_DEFINE([signal.h], [SIGXCPU], [HAVE_SIGXCPU=1], [HAVE_SIGXCPU=0])
+ AS_IF([test "x$HAVE_SIGXCPU" = "x1"], AC_DEFINE([HAVE_SIGXCPU], 1, [Have SIGXCPU?]))
+@@ -523,15 +525,9 @@ AC_SEARCH_LIBS([backtrace], [execinfo ub
  if test "x$os_is_darwin" = "x1" ; then
      AC_MSG_CHECKING([looking for Apple CoreService Framework])
      # How do I check a framework "library" - AC_CHECK_LIB prob. won't work??, just assign LIBS & hope
@@ -43,7 +53,7 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
      AC_DEFINE([HAVE_CLOCK_GETTIME], 1, [Using clock_gettime() replacement])
      HAVE_BONJOUR=1
  fi
-@@ -1002,7 +995,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
+@@ -1002,7 +998,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
  
  PA_MACHINE_ID="${sysconfdir}/machine-id"
  AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
@@ -52,7 +62,7 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
  AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
  	      [Fallback machine-id file])
  
-@@ -1325,9 +1318,9 @@ fi
+@@ -1325,9 +1321,9 @@ fi
  
  PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
  AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
@@ -64,7 +74,7 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
  AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
  
  PA_BINARY=${bindir}/pulseaudio${EXEEXT}
-@@ -1339,8 +1332,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+@@ -1339,8 +1335,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
  AC_SUBST(PA_SOEXT, [.so])
  AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
  
@@ -76,7 +86,7 @@ $NetBSD: patch-configure.ac,v 1.5 2015/02/25 23:40:35 ryoon Exp $
  
  #### Mac OSX specific stuff #####
  
-@@ -1356,17 +1350,6 @@ AC_ARG_WITH(mac-sysroot,
+@@ -1356,17 +1353,6 @@ AC_ARG_WITH(mac-sysroot,
      AS_HELP_STRING([--with-mac-sysroot=<path>], [SDK basedir to use as the logical root directory for headers and libraries.]),
      mac_sysroot=$withval, mac_sysroot="/Developer/SDKs/MacOSX10.5.sdk")
  

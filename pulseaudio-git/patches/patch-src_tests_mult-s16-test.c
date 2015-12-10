@@ -2,20 +2,25 @@ $NetBSD: patch-src_tests_mult-s16-test.c,v 1.1 2014/06/09 13:08:19 ryoon Exp $
 
 Define glibc-specific (?) __WORDSIZE.
 
---- src/tests/mult-s16-test.c.orig	2015-11-28 09:05:41.000000000 +0000
+--- src/tests/mult-s16-test.c.orig	2015-12-07 11:45:13.000000000 +0000
 +++ src/tests/mult-s16-test.c
-@@ -28,6 +28,14 @@
+@@ -23,6 +23,7 @@
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <math.h>
++#include <limits.h>
+ 
+ #include <pulse/rtclock.h>
  #include <pulsecore/random.h>
- #include <pulsecore/macro.h>
+@@ -93,9 +94,9 @@ int main(int argc, char *argv[]) {
+     if (!getenv("MAKE_CHECK"))
+         pa_log_set_level(PA_LOG_DEBUG);
  
-+#if !defined __WORDSIZE
-+# if defined __LP64__
-+#  define __WORDSIZE     64
-+# else
-+#  define __WORDSIZE     32
-+# endif
-+#endif
-+
- #include "runtime-test-util.h"
- 
- static inline int32_t pa_mult_s16_volume_32(int16_t v, int32_t cv) {
+-#if __WORDSIZE == 64 || ((ULONG_MAX) > (UINT_MAX))
++#if (SIZEOF_VOIDP * CHAR_BIT) == 64
+     pa_log_debug("This seems to be 64-bit code.");
+-#elif  __WORDSIZE == 32
++#elif (SIZEOF_VOIDP * CHAR_BIT) == 32
+     pa_log_debug("This seems to be 32-bit code.");
+ #else
+     pa_log_debug("Don't know if this is 32- or 64-bit code.");
