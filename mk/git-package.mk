@@ -62,8 +62,6 @@ PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${_repo_:Q}" must be set."
 USE_TOOLS+=		date pax
 
 _GIT_CMD=		git
-_GIT_FETCH_FLAGS=	--quiet --depth 1 --recurse-submodules=yes --tags
-_GIT_CLONE_FLAGS=	--quiet --depth 1 --recursive
 _GIT_CHECKOUT_FLAGS=	--quiet
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _GIT_PKGVERSION=	${_GIT_PKGVERSION_CMD:sh}
@@ -88,6 +86,15 @@ _GIT_FLAG.${repo}=	tags/${GIT_TAG.${repo}}
 _GIT_FLAG.${repo}=	origin/HEAD
 .  endif
 
+_GIT_FETCH_FLAGS.${repo}=	--quiet --recurse-submodules=yes --tags
+_GIT_CLONE_FLAGS.${repo}=	--quiet --recursive
+
+# For revision checkout we need deep copy
+. if !defined(GIT_BRANCH.${repo})
+_GIT_FETCH_FLAGS.${repo}+=	--depth 1
+_GIT_CLONE_FLAGS.${repo}+=	--depth 1
+. endif
+
 # Cache support:
 #   cache file name
 _GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-gitarchive.tar.gz
@@ -110,7 +117,8 @@ _GIT_CREATE_CACHE.${repo}=	\
 _GIT_FETCH_REPO.${repo}=	\
 	if [ ! -d ${GIT_MODULE.${repo}:Q} ]; then				\
 	  ${STEP_MSG} "Cloning GIT archive "${GIT_MODULE.${repo}:Q}".";		\
-	  ${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} clone ${_GIT_CLONE_FLAGS} 	\
+	  ${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD}				\
+	    clone ${_GIT_CLONE_FLAGS.${repo}}					\
 	    ${GIT_REPO.${repo}:Q} ${GIT_MODULE.${repo}:Q};			\
 	fi;									\
 	${STEP_MSG} "Fetching remote branches of "${_GIT_FLAG.${repo}:Q}".";	\
@@ -118,7 +126,7 @@ _GIT_FETCH_REPO.${repo}=	\
 	  remote set-branches origin '*';					\
 	${STEP_MSG} "Updating GIT archive "${GIT_MODULE.${repo}:Q}".";		\
 	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
-	  fetch ${_GIT_FETCH_FLAGS};						\
+	  fetch ${_GIT_FETCH_FLAGS.${repo}};					\
 	${STEP_MSG} "Checking out GIT "${_GIT_FLAG.${repo}:Q}".";		\
 	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
 	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q};		\
