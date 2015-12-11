@@ -31,9 +31,7 @@ BUILD_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
 #
 
 DISTFILES?=		# empty
-.if empty(GIT_TAG)
 PKGREVISION?=		${_GIT_PKGVERSION:S/.//g}
-.endif
 
 #
 # End of the interface part. Start of the implementation part.
@@ -81,8 +79,6 @@ _GIT_ENV.${repo}=	${GIT_ENV.${repo}}
 _GIT_FLAG.${repo}=	origin/${GIT_BRANCH.${repo}}
 .  elif defined(GIT_TAG.${repo})
 _GIT_FLAG.${repo}=	tags/${GIT_TAG.${repo}}
-.  elif defined(GIT_TAG)
-_GIT_FLAG.${repo}=	tags/${GIT_TAG}
 .  else
 _GIT_FLAG.${repo}=	origin/HEAD
 .  endif
