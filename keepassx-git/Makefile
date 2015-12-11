@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/09/14 12:52:50 thomasklausner Exp $
 
-DISTNAME=	keepassx-2.0beta2
+DISTNAME=	keepassx-2.0
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/keepassx/keepassx/
 
