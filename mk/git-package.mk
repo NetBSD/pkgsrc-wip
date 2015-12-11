@@ -122,7 +122,10 @@ _GIT_FETCH_REPO.${repo}=	\
 	  fetch ${_GIT_FETCH_FLAGS};						\
 	${STEP_MSG} "Checking out GIT "${_GIT_FLAG.${repo}:Q}".";		\
 	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
-	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q}
+	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q};		\
+	${STEP_MSG} "Updating submodules of "${_GIT_FLAG.${repo}:Q}".";		\
+	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	  submodule update --recursive
 .endfor
 
 pre-extract: do-git-extract
