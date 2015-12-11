@@ -6,7 +6,7 @@ CATEGORIES=	www
 GITHUB_PROJECT= graphite-web
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	riz@NetBSD.org
 HOMEPAGE=	https://launchpad.net/graphite
 COMMENT=	Enterprise scalable realtime graphing platform
 LICENSE=	apache-2.0

@@ -6,7 +6,7 @@ CATEGORIES=	databases
 GITHUB_PROJECT=	carbon
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	riz@NetBSD.org
 HOMEPAGE=	http://launchpad.net/graphite
 COMMENT=	Backend storage application for graphite
 LICENSE=	apache-2.0
