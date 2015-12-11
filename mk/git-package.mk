@@ -65,7 +65,7 @@ USE_TOOLS+=		date pax
 
 _GIT_CMD=		git
 _GIT_ENV=		${GIT_ENV}
-_GIT_FETCH_FLAGS=	--quiet --depth 1 --recurse-submodules=yes
+_GIT_FETCH_FLAGS=	--quiet --depth 1 --recurse-submodules=yes --tags
 _GIT_CLONE_FLAGS=	--quiet --depth 1 --recursive
 _GIT_CHECKOUT_FLAGS=	--quiet
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
