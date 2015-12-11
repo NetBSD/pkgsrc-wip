@@ -3,7 +3,8 @@
 DISTNAME=	carbon-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	-https://github.com/graphite-project/carbon/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+GITHUB_PROJECT=	carbon
+MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://launchpad.net/graphite

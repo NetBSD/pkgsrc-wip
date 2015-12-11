@@ -4,7 +4,8 @@
 DISTNAME=	whisper-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	-https://github.com/graphite-project/whisper/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+GITHUB_PROJECT= whisper
+MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://launchpad.net/graphite

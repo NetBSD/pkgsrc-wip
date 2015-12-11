@@ -3,7 +3,8 @@
 DISTNAME=	graphite-web-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	-https://github.com/graphite-project/graphite-web/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+GITHUB_PROJECT= graphite-web
+MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/graphite
