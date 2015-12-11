@@ -17,7 +17,7 @@ GIT_REPOSITORIES=       master
 GIT_REPO.master=        https://gitlab.com/davical-project/davical.git
 GIT_MODULE.master=      davical
 # for "SSL certificate problem: unable to get local issuer certificate"
-GIT_ENV+=	GIT_SSL_NO_VERIFY=true
+GIT_ENV.master+=	GIT_SSL_NO_VERIFY=true
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical

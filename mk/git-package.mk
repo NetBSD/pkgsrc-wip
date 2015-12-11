@@ -21,7 +21,7 @@
 #	GIT_TAG.${id}
 #		Overridable GIT tag for a repository.
 #
-#	GIT_ENV
+#	GIT_ENV.${id}
 #		The environment for git, to set e.g. GIT_SSL_NO_VERIFY=true
 
 .if !defined(_PKG_MK_GIT_PACKAGE_MK)
@@ -64,7 +64,6 @@ PKG_FAIL_REASON+=	"[git-package.mk] GIT_REPO."${_repo_:Q}" must be set."
 USE_TOOLS+=		date pax
 
 _GIT_CMD=		git
-_GIT_ENV=		${GIT_ENV}
 _GIT_FETCH_FLAGS=	--quiet --depth 1 --recurse-submodules=yes --tags
 _GIT_CLONE_FLAGS=	--quiet --depth 1 --recursive
 _GIT_CHECKOUT_FLAGS=	--quiet
@@ -78,6 +77,7 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 
 .for repo in ${GIT_REPOSITORIES}
 GIT_MODULE.${repo}?=	${repo}
+_GIT_ENV.${repo}=	${GIT_ENV.${repo}}
 
 # determine appropriate checkout branch or tag
 .  if defined(GIT_BRANCH.${repo})
@@ -111,20 +111,20 @@ _GIT_CREATE_CACHE.${repo}=	\
 _GIT_FETCH_REPO.${repo}=	\
 	if [ ! -d ${GIT_MODULE.${repo}:Q} ]; then				\
 	  ${STEP_MSG} "Cloning GIT archive "${GIT_MODULE.${repo}:Q}".";		\
-	  ${SETENV} ${_GIT_ENV} ${_GIT_CMD} clone ${_GIT_CLONE_FLAGS} 		\
+	  ${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} clone ${_GIT_CLONE_FLAGS} 	\
 	    ${GIT_REPO.${repo}:Q} ${GIT_MODULE.${repo}:Q};			\
 	fi;									\
 	${STEP_MSG} "Fetching remote branches of "${_GIT_FLAG.${repo}:Q}".";	\
-	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
 	  remote set-branches origin '*';					\
 	${STEP_MSG} "Updating GIT archive "${GIT_MODULE.${repo}:Q}".";		\
-	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
 	  fetch ${_GIT_FETCH_FLAGS};						\
 	${STEP_MSG} "Checking out GIT "${_GIT_FLAG.${repo}:Q}".";		\
-	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
 	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q};		\
 	${STEP_MSG} "Updating submodules of "${_GIT_FLAG.${repo}:Q}".";		\
-	${SETENV} ${_GIT_ENV} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}		\
+	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
 	  submodule update --recursive
 .endfor
 

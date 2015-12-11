@@ -12,7 +12,7 @@ GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://github.com/magit/magit.git
 GIT_MODULE.master=	magit
 # for "SSL certificate problem: unable to get local issuer certificate"
-GIT_ENV+=	GIT_SSL_NO_VERIFY=true
+GIT_ENV.master+=	GIT_SSL_NO_VERIFY=true
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_CONFIGURE=	yes

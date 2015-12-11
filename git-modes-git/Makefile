@@ -6,7 +6,7 @@ LICENSE=	gnu-gpl-v3
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://github.com/magit/git-modes.git
 GIT_MODULE.master=	git-modes
-GIT_ENV+=		GIT_SSL_NO_VERIFY=true
+GIT_ENV.master+=	GIT_SSL_NO_VERIFY=true
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magit/git-modes
