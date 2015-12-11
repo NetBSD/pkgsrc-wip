@@ -12,7 +12,7 @@ LICENSE=	gplv2
 
 GIT_REPOSITORIES=	fuse-google-drive
 GIT_REPO.fuse-google-drive=	http://github.com/jcline/fuse-google-drive.git
-GIT_TAG.fuse-google-drive=	1e1bfa00b6d55cabcb717d0109ffc374c0af0348
+GIT_REVISION.fuse-google-drive=	1e1bfa00b6d55cabcb717d0109ffc374c0af0348
 .include "../../wip/mk/git-package.mk"
 
 GNU_CONFIGURE=	yes

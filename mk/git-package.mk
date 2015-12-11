@@ -15,6 +15,9 @@
 #	GIT_BRANCH.${id}
 #		The branch to check out.
 #
+#	GIT_REVISION.${id}
+#		The revision to check out.
+#
 #	GIT_TAG.${id}
 #		Overridable GIT tag for a repository.
 #
@@ -68,7 +71,7 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 
 #
 # Generation of repository-specific variables
-#
+
 
 .for repo in ${GIT_REPOSITORIES}
 GIT_MODULE.${repo}?=	${repo}
@@ -77,6 +80,8 @@ _GIT_ENV.${repo}=	${GIT_ENV.${repo}}
 # determine appropriate checkout branch or tag
 .  if defined(GIT_BRANCH.${repo})
 _GIT_FLAG.${repo}=	origin/${GIT_BRANCH.${repo}}
+.  elif defined(GIT_REVISION.${repo})
+_GIT_FLAG.${repo}=	${GIT_REVISION.${repo}}
 .  elif defined(GIT_TAG.${repo})
 _GIT_FLAG.${repo}=	tags/${GIT_TAG.${repo}}
 .  else
