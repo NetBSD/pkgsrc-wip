@@ -15,9 +15,6 @@
 #	GIT_BRANCH.${id}
 #		The branch to check out.
 #
-#	GIT_TAG
-#		The tag to check out (default: HEAD).
-#
 #	GIT_TAG.${id}
 #		Overridable GIT tag for a repository.
 #
