@@ -8,6 +8,8 @@ LICENSE=	apache-2.0
 
 EGG_NAME=	${DISTNAME}
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 0.1.0
+
 .include "Makefile.common"
 .include "../../lang/python/egg.mk"
 
