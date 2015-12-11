@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.21 2015/09/07 13:10:43 thomasklausner Exp $
 
-SHA1 (xpra-0.15.8.tar.xz) = 32d00646250ae9b915b01719c5a4bc0f9a49c412
-RMD160 (xpra-0.15.8.tar.xz) = 3a4e20fe9965afe7889aa83a6cfc4594f005da06
-SHA512 (xpra-0.15.8.tar.xz) = 0c23bda2ad2ac2355da1e867f3909e13c2146a5f1b0c4903628e1177edb143fb10a57e8cfaada901bf1df0ec71f87356444856405f0f32f99abc1b655d2de636
-Size (xpra-0.15.8.tar.xz) = 1198496 bytes
+SHA1 (xpra-0.15.9.tar.xz) = 29cadefe20702ba7339d85384d7a332eea700a62
+RMD160 (xpra-0.15.9.tar.xz) = 72e97abc25a0fecd8bc49218852ed41bb28f1559
+SHA512 (xpra-0.15.9.tar.xz) = 83b3452b45a3fa3ea095cef5d2ed901d754903b9aed20cb5a42e0172e9f7058abd88f8635b36adbf314114a4c396a6478e64611273ac61c369332d8590bcef76
+Size (xpra-0.15.9.tar.xz) = 1199224 bytes
 SHA1 (patch-xpra_x11_gtk__x11_gdk__bindings.pyx) = ee45b2e56b36d3c55b8e07ccd90daccda0b222df
 SHA1 (patch-xpra_x11_gtk__x11_gdk__display__source.pyx) = 5786562b61e10f807d1e42bdce37fa7108f48cf5
