@@ -103,7 +103,8 @@ _GIT_EXTRACT_CACHED.${repo}=	\
 _GIT_CREATE_CACHE.${repo}=	\
 	${STEP_MSG} "Creating cached GIT archive "${_GIT_DISTFILE.${repo}:Q}"."; \
 	${MKDIR} ${_GIT_DISTDIR:Q};					\
-	pax -w ${GIT_MODULE.${repo}:Q} | gzip > ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}
+	pax -w ${GIT_MODULE.${repo}:Q} | gzip > ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp;	\
+	$(MV) '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp' '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}'
 
 #   fetch git repo or update cached one
 _GIT_FETCH_REPO.${repo}=	\
