@@ -2,9 +2,9 @@ $NetBSD: patch-src_controller.cpp,v 1.1 2013/05/19 19:52:00 airhead Exp $
 
 Everything works, but native curses has no curses_version(), so rip out that bit.
 
---- src/controller.cpp.orig	2013-03-19 10:58:39.000000000 +0000
+--- src/controller.cpp.orig	2015-02-19 10:56:59.000000000 +0000
 +++ src/controller.cpp
-@@ -984,7 +984,11 @@ void controller::version_information(con
+@@ -970,7 +970,11 @@ void controller::version_information(con
  #if defined(__GNUC__) && defined(__VERSION__)
  		std::cout << "Compiler: g++ " << __VERSION__ << std::endl;
  #endif

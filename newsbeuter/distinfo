@@ -1,7 +1,8 @@
 $NetBSD: distinfo,v 1.7 2014/07/25 08:31:44 airhead Exp $
 
-SHA1 (newsbeuter-2.8.tar.gz) = de284124c840062941b500ffbd72e3f183fb2b61
-RMD160 (newsbeuter-2.8.tar.gz) = d83d6a5264263685fe0aca2d78d191a3a634c830
-Size (newsbeuter-2.8.tar.gz) = 431299 bytes
-SHA1 (patch-config.sh) = f5a59a74faa8d84fd0d1f451a2db29e8857e11b4
-SHA1 (patch-src_controller.cpp) = 1d432e996ce47a241e6dd7ca60ac8561ecba129b
+SHA1 (newsbeuter-2.9.tar.gz) = e0d61cda874ea9b77ed27f2edfea50a6ea471894
+RMD160 (newsbeuter-2.9.tar.gz) = b93adbf5305191c40f3e4b2d770d9984bb7c32e3
+SHA512 (newsbeuter-2.9.tar.gz) = b173008c8c8d3729f8ccef3ce62645a05c1803fb842d5c0afdf9ffd4ed3726030f9c359c20bc817402a6a0ea12af742d0ae7faf9b92d52c11f420f62b430b0aa
+Size (newsbeuter-2.9.tar.gz) = 432763 bytes
+SHA1 (patch-config.sh) = e5d4adf96cae46c8febf818ff03b4f598a865945
+SHA1 (patch-src_controller.cpp) = 927b11064deac38acbb577aa0d3f750f72c0e55a

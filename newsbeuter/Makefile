@@ -1,17 +1,18 @@
 # $NetBSD: Makefile,v 1.19 2014/07/25 08:31:44 airhead Exp $
 
-DISTNAME=	newsbeuter-2.8
+DISTNAME=	newsbeuter-2.9
 CATEGORIES=	news
 MASTER_SITES=	http://www.newsbeuter.org/downloads/
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://www.newsbeuter.org/
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
+LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl
-USE_NCURSES=	yes
 USE_GNU_ICONV=	yes
+USE_NCURSES=	yes
 
 REPLACE_PERL+=	txt2h.pl
 
@@ -19,8 +20,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS}=="Linux"
-# Makefile
+.if ${OPSYS} == "Linux"
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing distribution Makefile...
