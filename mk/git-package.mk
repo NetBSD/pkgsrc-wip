@@ -90,7 +90,7 @@ _GIT_FETCH_FLAGS.${repo}=	--quiet --recurse-submodules=yes --tags
 _GIT_CLONE_FLAGS.${repo}=	--quiet --recursive
 
 # For revision checkout we need deep copy
-. if !defined(GIT_BRANCH.${repo})
+. if !defined(GIT_REVISION.${repo})
 _GIT_FETCH_FLAGS.${repo}+=	--depth 1
 _GIT_CLONE_FLAGS.${repo}+=	--depth 1
 . endif
