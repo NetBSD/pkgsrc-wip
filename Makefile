@@ -2050,7 +2050,6 @@ SUBDIR+=	osmo-sdr-git
 SUBDIR+=	osmose
 SUBDIR+=	osxinfo
 SUBDIR+=	ots
-SUBDIR+=	otter-browser
 SUBDIR+=	outguess
 SUBDIR+=	overgod
 SUBDIR+=	owamp
