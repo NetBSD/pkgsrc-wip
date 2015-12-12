@@ -10,6 +10,7 @@ COMMENT=	Application for viewing and analysing music audio files
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
