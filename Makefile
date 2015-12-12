@@ -784,7 +784,6 @@ SUBDIR+=	gdal-grass
 SUBDIR+=	gdb
 SUBDIR+=	gde
 SUBDIR+=	gdm
-SUBDIR+=	gdmap
 SUBDIR+=	gdvb
 SUBDIR+=	geant
 SUBDIR+=	gecko-sharp
