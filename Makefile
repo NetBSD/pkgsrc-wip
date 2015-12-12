@@ -3652,6 +3652,7 @@ SUBDIR+=	soil
 SUBDIR+=	solarus-zsdx
 SUBDIR+=	sollya
 SUBDIR+=	songwrite2
+SUBDIR+=	sonic-visualiser
 SUBDIR+=	sophia
 SUBDIR+=	soqt
 SUBDIR+=	spade
