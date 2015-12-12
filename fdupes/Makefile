@@ -7,6 +7,7 @@ MASTER_SITES=	http://fdupes.googlecode.com/files/
 MAINTAINER=	ef@math.uni-bonn.de
 HOMEPAGE=	http://netdial.caribe.net/~adrian2/fdupes.html
 COMMENT=	Program for identifying or deleting duplicate files
+LICENSE=	mit
 
 USE_LANGUAGES=	c
 NO_CONFIGURE=	yes
