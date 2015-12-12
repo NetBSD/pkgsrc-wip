@@ -2,8 +2,7 @@
 #
 
 DISTNAME=		gdmap-0.8.1
-PKGREVISION=		2
-CATEGORIES=		misc
+CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdmap/}
 
 MAINTAINER=		dhowland@users.sourceforge.net
