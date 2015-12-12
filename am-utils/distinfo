@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2013/08/30 14:56:45 hfath Exp $
+$NetBSD$
 
-SHA1 (am-utils-6.2-rc1.tar.gz) = b3afe9e4f4d4c20cc4e431af28b381f66b511114
-RMD160 (am-utils-6.2-rc1.tar.gz) = d7b4437cb69b7067a562ba3a14ae63dc2a75dda1
-Size (am-utils-6.2-rc1.tar.gz) = 1730021 bytes
-SHA1 (patch-aa) = 181e045b7bd049eddac9248c6eb4cd2209aaf325
-SHA1 (patch-ab) = 3502892407ecf89f47f3683defdf9c1dfada9f45
+SHA1 (am-utils-6.2.tar.gz) = 29fd2a6924b85a78deb6690a5a670dbf9eace6ad
+RMD160 (am-utils-6.2.tar.gz) = 49444d4ca7c0131dcdb82967b9df2ff06de13830
+SHA512 (am-utils-6.2.tar.gz) = 868b662b113cffabb32ae88731e877e4c9830adf454f7e23d9bd033b534745e0e7b75619c6d7fa58ae13fa67dd588f4a789f53e452d0b4ffde90f3a3ed03de34
+Size (am-utils-6.2.tar.gz) = 2297161 bytes
+SHA1 (patch-aa) = 51ce9ff8724a190ab4bcae8f70af2006685f7ad4
+SHA1 (patch-fsinfo_Makefile.in) = 4d8e4642ebd9dfc2b504af2477c34a89c9cf1768
+SHA1 (patch-ylwrap.amd) = e30de2720929bf70cfd1bcdd6a9e02cedf7d615b

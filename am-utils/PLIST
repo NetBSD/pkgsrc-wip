@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2013/08/30 14:56:45 hfath Exp $
-bin/expn
+@comment $NetBSD$
 bin/pawd
 info/am-utils.info
+info/am-utils.info-1
+info/am-utils.info-2
 lib/libamu.la
-man/man1/expn.1
 man/man1/pawd.1
 man/man5/amd.conf.5
 man/man8/amd.8
@@ -50,4 +50,3 @@ share/doc/am-utils/README.y2k
 share/examples/am-utils/amd.conf
 share/examples/am-utils/lostaltmail.conf
 share/examples/rc.d/amd-pkgsrc
-@pkgdir etc/amd

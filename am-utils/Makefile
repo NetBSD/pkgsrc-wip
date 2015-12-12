@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2013/08/30 14:56:45 hfath Exp $
+# $NetBSD$
 #
 
-DISTNAME=	${PKGNAME}-rc1
+DISTNAME=	am-utils-6.2
 PKGNAME=	am-utils-6.2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.am-utils.org/pub/am-utils/ \
@@ -20,15 +20,17 @@ HOMEPAGE=		http://www.am-utils.org/
 COMMENT=		Berkeley automounter suite of utilities
 LICENSE=		original-bsd
 
-USE_TOOLS+=		yacc lex perl:run
+USE_TOOLS+=		yacc lex perl:run gmake
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 INFO_FILES=		yes
 
 CONFIGURE_ARGS+=	--without-ldap
-CONFIGURE_ARGS+=	--without-hesiod
 CONFIGURE_ARGS+=	--without-ndbm
+CONFIGURE_ARGS+=	--enable-debug=yes
+
+.include "options.mk"
 
 RCD_SCRIPTS=		amd-pkgsrc
 
@@ -41,6 +43,9 @@ EXTRA_DOC_FILES=	COPYING FAQ ChangeLog BUGS AUTHORS \
                         README.attrcache README.autofs README.ldap \
                         README.osx README.y2k NEWS README INSTALL
 EXAMPLE_CONF_FILES=	amd.conf lostaltmail.conf
+
+post-patch:
+	cp ${WRKSRC}/amd/ops_nfs3.c ${WRKSRC}/amd/ops_nfs4.c
 
 post-install:
 .for i in ${EXTRA_DOC_FILES}

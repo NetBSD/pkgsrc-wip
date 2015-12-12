@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- fsinfo/Makefile.in.orig	2014-10-30 14:38:56.000000000 +0000
++++ fsinfo/Makefile.in
+@@ -268,7 +268,7 @@ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+ LIBOBJS = @LIBOBJS@
+ # must manually add f/lex library to LIBS, and not to LDADD.
+-LIBS = @LIBS@ @LEXLIB@
++LIBS = @LIBS@
+ LIBTOOL = @LIBTOOL@
+ LIBTOOL_DEPS = @LIBTOOL_DEPS@
+ LIBTOOL_LDFLAGS = @LIBTOOL_LDFLAGS@
