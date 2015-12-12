@@ -1,5 +1,8 @@
 $NetBSD: patch-aa,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
 
+Add casts to silence prinitf errors.
+Do not overwrite stdin.
+
 --- fdupes.c.orig	2013-04-20 18:02:18.000000000 +0000
 +++ fdupes.c
 @@ -643,7 +643,7 @@ void printmatches(file_t *files)
