@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- lldb/source/Plugins/Process/Utility/CMakeLists.txt.orig	2015-12-06 02:57:30.000000000 +0000
++++ lldb/source/Plugins/Process/Utility/CMakeLists.txt
+@@ -3,6 +3,7 @@ include_directories(../../../Utility/)
+ add_lldb_library(lldbPluginProcessUtility
+   DynamicRegisterInfo.cpp
+   FreeBSDSignals.cpp
++  NetBSDSignals.cpp
+   GDBRemoteSignals.cpp
+   HistoryThread.cpp
+   HistoryUnwind.cpp
