@@ -3,5 +3,6 @@ $NetBSD: distinfo,v 1.1 2015/06/06 13:52:41 krytarowski Exp $
 SHA1 (accountsservice-0.6.40.tar.xz) = 2afbcddf6e1d1a97b4cc5c4c7897201f06378ec3
 RMD160 (accountsservice-0.6.40.tar.xz) = 83c148f750058039728397b5c8d058058557d519
 Size (accountsservice-0.6.40.tar.xz) = 367772 bytes
+SHA1 (patch-configure.ac) = 106b5e515632fb7de8d53718ce1fc46887dce66b
 SHA1 (patch-data_Makefile.am) = b059cd214a346adb371e4a006f497d652c9d9234
-SHA1 (patch-src_wtmp-helper.c) = b6c626633c2cfc49c9f1953209d762770c9ff0f7
+SHA1 (patch-src_wtmp-helper.c) = f3a4a1c77cfef244391efb91fe952e45986f6235

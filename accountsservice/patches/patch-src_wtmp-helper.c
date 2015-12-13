@@ -1,28 +1,69 @@
-$NetBSD: patch-src_wtmp-helper.c,v 1.1 2015/06/06 13:52:41 krytarowski Exp $
-
-Use portable symbol _PATH_WTMPX in the place of WTMPX_FILENAME.
+$NetBSD$
 
 --- src/wtmp-helper.c.orig	2014-11-04 03:46:00.000000000 +0000
 +++ src/wtmp-helper.c
-@@ -60,8 +60,8 @@ wtmp_helper_start (void)
-                 if (setutxdb (UTXDB_LOG, NULL) != 0) {
-                         return FALSE;
-                 }
+@@ -56,21 +56,32 @@ user_previous_login_free (UserPreviousLo
+ static gboolean
+ wtmp_helper_start (void)
+ {
+-#if defined(UTXDB_LOG)
+-                if (setutxdb (UTXDB_LOG, NULL) != 0) {
+-                        return FALSE;
+-                }
 -#elif defined(WTMPX_FILENAME)
 -                if (utmpxname (WTMPX_FILENAME) != 0) {
-+#elif defined(_PATH_WTMPX)
-+                if (utmpxname (_PATH_WTMPX) != 0) {
-                         return FALSE;
-                 }
+-                        return FALSE;
+-                }
++#if HAVE_FREEBSD
++        if (setutxdb (UTXDB_LOG, NULL) != 0) {
++                return FALSE;
++        }
++#elif HAVE_LINUX
++        if (utmpxname (WTMPX_FILENAME) != 0) {
++                return FALSE;
++        }
++
++        setutxent ();
++#elif HAVE_NETBSD
++        if (utmpxname (_PATH_WTMPX) != 0) {
++                return FALSE;
++        }
  
-@@ -212,8 +212,8 @@ wtmp_helper_entry_generator (GHashTable 
+-                setutxent ();
++        setutxent ();
++#elif HAVE_SOLARIS
++        if (utmpxname (WTMPX_FILE) != 0) {
++                return FALSE;
++        }
++
++        setutxent ();
+ #else
+ #error You have utmpx.h, but no known way to use it for wtmp entries
+ #endif
+-
+-                return TRUE;
++        return TRUE;
+ }
+ 
+ struct passwd *
+@@ -212,12 +223,16 @@ wtmp_helper_entry_generator (GHashTable 
  const gchar *
  wtmp_helper_get_path_for_monitor (void)
  {
 -#if defined(WTMPX_FILENAME)
 -        return WTMPX_FILENAME;
-+#if defined(_PATH_WTMPX)
-+        return _PATH_WTMPX;
- #elif defined(__FreeBSD__)
+-#elif defined(__FreeBSD__)
++#if HAVE_FREEBSD
          return "/var/log/utx.log";
++#elif HAVE_LINUX
++        return WTMPX_FILENAME;
++#elif HAVE_NETBSD
++        return _PATH_WTMPX;
++#elif HAVE_SOLARIS
++        return WTMPX_FILE;
  #else
+-#error Do not know which filename to watch for wtmp changes
++#error You have utmpx.h, but no known way to use it for wtmp entries
+ #endif
+ }
+ 
