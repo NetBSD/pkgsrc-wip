@@ -509,6 +509,7 @@ include/llvm/LibDriver/LibDriver.h
 include/llvm/LineEditor/LineEditor.h
 include/llvm/LinkAllIR.h
 include/llvm/LinkAllPasses.h
+include/llvm/Linker/IRMover.h
 include/llvm/Linker/Linker.h
 include/llvm/MC/ConstantPools.h
 include/llvm/MC/MCAsmBackend.h
