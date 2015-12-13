@@ -2,6 +2,9 @@ $NetBSD: patch-src_shared.py,v 1.1 2015/09/13 21:34:05 krytarowski Exp $
 
 FreeBSD and NetBSD are compatible here.
 
+Patch merged upstream:
+https://github.com/Bitmessage/PyBitmessage/pull/812
+
 --- src/shared.py.orig	2014-10-15 21:16:27.000000000 +0000
 +++ src/shared.py
 @@ -419,8 +419,8 @@ def checkSensitiveFilePermissions(filena

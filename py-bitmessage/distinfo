@@ -4,5 +4,5 @@ SHA1 (py27-bitmessage-0.4.4.tar.gz) = 60585ee922b53f96940898bf4c278ae035b32ab9
 RMD160 (py27-bitmessage-0.4.4.tar.gz) = b6ea349ebfecd3ac2f809156cfeffedf95d36449
 Size (py27-bitmessage-0.4.4.tar.gz) = 611490 bytes
 SHA1 (patch-Makefile) = ae867577d5c6a0a5f4938d857b117701933b4ade
-SHA1 (patch-src_helper__startup.py) = 3ae355074f0049a6e2f1a5151404ba8c723de5b9
-SHA1 (patch-src_shared.py) = 7c1bd4452c42ede9272364edab8ec645681b3bcf
+SHA1 (patch-src_helper__startup.py) = 1175e9f5279160ec8d533a188944c60283f6be22
+SHA1 (patch-src_shared.py) = 691380e3879aaf776abbfe6711c791cd013ac127
