@@ -2585,7 +2585,6 @@ SUBDIR+=	py-biofrills
 SUBDIR+=	py-bip
 SUBDIR+=	py-biskit
 SUBDIR+=	py-bitarray
-SUBDIR+=	py-bitmessage
 SUBDIR+=	py-bitsets
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-blaze
