@@ -21,6 +21,6 @@ AUTO_MKDIRS=	yes
 
 do-install:
 	${RUN} cd ${WRKSRC} && \
-		${INSTALL_PROGRAM} oysttyer.pl ${DESTDIR}${PREFIX}/bin/oysttyer
+		${INSTALL_SCRIPT} oysttyer.pl ${DESTDIR}${PREFIX}/bin/oysttyer
 
 .include "../../mk/bsd.pkg.mk"
