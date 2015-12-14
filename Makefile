@@ -2054,6 +2054,7 @@ SUBDIR+=	overgod
 SUBDIR+=	owamp
 SUBDIR+=	owl
 SUBDIR+=	oww-nox11
+SUBDIR+=	oysttyer
 SUBDIR+=	ozymandns
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
