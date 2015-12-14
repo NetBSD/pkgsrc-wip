@@ -1,6 +1,5 @@
-Doesn't start for me on NetBSD-6.99.40:
-Gives "libpng: bad parameters to zlib" during startup.
+Fix sound.
 
-This
-https://github.com/svenstaro/dwarf_fortress_unfuck.git
-might be a fix, but someone needs to compile it for suse emulation.
+Workaround for png issues; use bitmaps instead.
+
+Package it up.
