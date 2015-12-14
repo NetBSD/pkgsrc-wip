@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.31 2015/07/15 12:53:51 thomasklausner Exp $
 
 SHA1 (patch-Makefile) = 3208d663af3e5e129499282d14e10abd94f56805
-SHA1 (patch-config_configure) = b62b3c61ce08353503fa89d382be47ecaf455593
 SHA1 (patch-format-subst.pl) = 86f5a59e7680718c663878a3197f50bb071724dd
