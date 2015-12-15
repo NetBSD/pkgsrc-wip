@@ -645,7 +645,7 @@ lib/libgnuradio-pmt.so.${PKGVERSION}
 lib/libgnuradio-runtime.so
 lib/libgnuradio-runtime.so.${PKGVERSION}
 lib/libvolk.so
-lib/libvolk.so.1.0.2
+lib/libvolk.so.1.1.1
 lib/pkgconfig/gnuradio-analog.pc
 lib/pkgconfig/gnuradio-audio.pc
 lib/pkgconfig/gnuradio-blocks.pc
@@ -940,6 +940,11 @@ share/gnuradio/examples/filter/resampler.py
 share/gnuradio/examples/filter/resampler_demo.grc
 share/gnuradio/examples/filter/synth_filter.py
 share/gnuradio/examples/filter/synth_to_chan.py
+share/gnuradio/examples/gnuradio-runtime.conf
+share/gnuradio/examples/gr-audio-jack.conf
+share/gnuradio/examples/gr-audio-oss.conf
+share/gnuradio/examples/gr-audio-portaudio.conf
+share/gnuradio/examples/gr-audio.conf
 share/gnuradio/examples/metadata/file_metadata_sink.grc
 share/gnuradio/examples/metadata/file_metadata_source.grc
 share/gnuradio/examples/metadata/file_metadata_vector_sink.grc

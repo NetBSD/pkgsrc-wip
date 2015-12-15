@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/09/17 13:48:04 makoto Exp $
+@comment $NetBSD$
 bin/gnuradio-companion
 ${PYSITELIB}/gnuradio/grc/__init__.py
 ${PYSITELIB}/gnuradio/grc/__init__.pyc
@@ -169,6 +169,7 @@ ${PYSITELIB}/grc_gnuradio/blks2/tcp.py
 ${PYSITELIB}/grc_gnuradio/blks2/tcp.pyc
 ${PYSITELIB}/grc_gnuradio/blks2/tcp.pyo
 libexec/gnuradio/grc_setup_freedesktop
+share/gnuradio/examples/grc.conf
 share/gnuradio/examples/grc/simple/variable_config.grc
 share/gnuradio/examples/grc/xmlrpc/readme.txt
 share/gnuradio/examples/grc/xmlrpc/xmlrpc_client.grc
@@ -198,6 +199,7 @@ share/gnuradio/grc/blocks/parameter.xml
 share/gnuradio/grc/blocks/variable.xml
 share/gnuradio/grc/blocks/variable_config.xml
 share/gnuradio/grc/blocks/variable_function_probe.xml
+share/gnuradio/grc/blocks/variable_struct.xml
 share/gnuradio/grc/blocks/virtual_sink.xml
 share/gnuradio/grc/blocks/virtual_source.xml
 share/gnuradio/grc/blocks/xmlrpc_client.xml
@@ -211,4 +213,3 @@ share/gnuradio/grc/freedesktop/grc-icon-256.png
 share/gnuradio/grc/freedesktop/grc-icon-32.png
 share/gnuradio/grc/freedesktop/grc-icon-48.png
 share/gnuradio/grc/freedesktop/grc-icon-64.png
-share/gnuradio/grc/blocks/variable_struct.xml

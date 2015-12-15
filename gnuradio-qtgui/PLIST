@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/17 13:48:06 makoto Exp $
+@comment $NetBSD$
 bin/gr_constellation_plot
 bin/gr_psd_plot_b
 bin/gr_psd_plot_c
@@ -114,6 +114,7 @@ ${PYSITELIB}/gnuradio/qtgui/range.py
 ${PYSITELIB}/gnuradio/qtgui/range.pyc
 ${PYSITELIB}/gnuradio/qtgui/range.pyo
 share/doc/gnuradio-${PKGVERSION}/README.qtgui
+share/gnuradio/examples/gr-qtgui.conf
 share/gnuradio/examples/qt-gui/pyqt_const_c.py
 share/gnuradio/examples/qt-gui/pyqt_example_c.py
 share/gnuradio/examples/qt-gui/pyqt_example_f.py
@@ -127,6 +128,7 @@ share/gnuradio/examples/qt-gui/pyqt_time_raster_f.py
 share/gnuradio/examples/qt-gui/pyqt_waterfall_c.py
 share/gnuradio/examples/qt-gui/pyqt_waterfall_f.py
 share/gnuradio/examples/qt-gui/qtgui_tags_viewing.grc
+share/gnuradio/examples/qt-gui/qtgui_vector_sink_example.grc
 share/gnuradio/grc/blocks/qtgui_ber_sink_b.xml
 share/gnuradio/grc/blocks/qtgui_block_tree.xml
 share/gnuradio/grc/blocks/qtgui_check_box.xml

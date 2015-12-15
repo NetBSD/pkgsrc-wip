@@ -25,7 +25,7 @@ post-install:
 	    fi							\
 	  done							\
 	done							\
-	| ${AWK} ${_PLIST_SHLIB_AWK}				\
+	| ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK}				\
 	> ${WRKDIR}/.PLIST.minus;
 	(cd ${WRKDIR}/.destdir/${PREFIX};			\
 	${RM} -f $$(cat ${WRKDIR}/.PLIST.minus)	);

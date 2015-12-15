@@ -58,7 +58,7 @@ PY_PATCHPLIST=	yes
 
 CONFIGURE_DIRS=	build
 
-EGDIR=			share/examples/gnuradio/conf.d
+EGDIR=			share/gnuradio/examples
 PKG_SYSCONFSUBDIR=	gnuradio/conf.d
 
 LDFLAGS.DragonFly+=	-lboost_system
@@ -93,7 +93,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
 CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 
 CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
-CMAKE_ARGS+=	-DGR_PREFSDIR=${DESTDIR}${PREFIX}/share/
+CMAKE_ARGS+=	-DGR_PREFSDIR=${PREFIX}/share/gnuradio/examples/
 
 CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 CMAKE_ARG_PATH=	../
