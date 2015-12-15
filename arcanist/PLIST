@@ -329,6 +329,7 @@ share/arcanist/src/lint/linter/xhpast/rules/ArcanistCommentStyleXHPASTLinterRule
 share/arcanist/src/lint/linter/xhpast/rules/ArcanistConcatenationOperatorXHPASTLinterRule.php
 share/arcanist/src/lint/linter/xhpast/rules/ArcanistConstructorParenthesesXHPASTLinterRule.php
 share/arcanist/src/lint/linter/xhpast/rules/ArcanistControlStatementSpacingXHPASTLinterRule.php
+share/arcanist/src/lint/linter/xhpast/rules/ArcanistCurlyBraceArrayIndexXHPASTLinterRule.php
 share/arcanist/src/lint/linter/xhpast/rules/ArcanistDeclarationParenthesesXHPASTLinterRule.php
 share/arcanist/src/lint/linter/xhpast/rules/ArcanistDefaultParametersXHPASTLinterRule.php
 share/arcanist/src/lint/linter/xhpast/rules/ArcanistDeprecationXHPASTLinterRule.php
@@ -426,6 +427,7 @@ share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistCommentStyleXHPAST
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistConcatenationOperatorXHPASTLinterRuleTestCase.php
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistConstructorParenthesesXHPASTLinterRuleTestCase.php
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistControlStatementSpacingXHPASTLinterRuleTestCase.php
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistCurlyBraceArrayIndexXHPASTLinterRuleTestCase.php
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistDeclarationParenthesesXHPASTLinterRuleTestCase.php
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistDefaultParametersXHPASTLinterRuleTestCase.php
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/ArcanistDeprecationXHPASTLinterRuleTestCase.php
@@ -514,7 +516,11 @@ share/arcanist/src/lint/linter/xhpast/rules/__tests__/binary-expression-spacing/
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/binary-expression-spacing/binary-expression-spacing.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/binary-numeric-scalar-casing/binary.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/blacklisted-function/blacklisted-function.lint-test
-share/arcanist/src/lint/linter/xhpast/rules/__tests__/brace-formatting/brace-formatting.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/brace-formatting/class.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/brace-formatting/control-statement.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/brace-formatting/declare.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/brace-formatting/function.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/brace-formatting/try-catch.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/call-parentheses/array.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/call-parentheses/call-parentheses.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/call-time-pass-by-reference/call-time-pass-by-reference.lint-test
@@ -528,6 +534,10 @@ share/arcanist/src/lint/linter/xhpast/rules/__tests__/comment-style/hash-comment
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/concatenation-operator/concatenation-operator.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/constructor-parentheses/constructor-parentheses.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/control-statement-spacing/control-statement-spacing.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/curly-brace-array-index/array.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/curly-brace-array-index/array_push.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/curly-brace-array-index/nested.lint-test
+share/arcanist/src/lint/linter/xhpast/rules/__tests__/curly-brace-array-index/whitespace.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/declaration-parentheses/declaration-parentheses.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/default-parameters/default-parameters.lint-test
 share/arcanist/src/lint/linter/xhpast/rules/__tests__/deprecation/deprecated-function.lint-test
