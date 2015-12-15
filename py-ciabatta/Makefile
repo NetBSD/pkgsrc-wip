@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/08/11 22:42:24 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	ciabatta-0.3.0
+DISTNAME=	ciabatta-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://pypi.python.org/packages/source/c/ciabatta/
@@ -11,13 +11,11 @@ COMMENT=	Miscellaneous shared utilities
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-brewer2mpl>=1.4.1:../../wip/py-brewer2mpl
-DEPENDS+=	${PYPKGPREFIX}-wheel>=0.24.0:../../wip/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-wheel>=0.26.0:../../wip/py-wheel
 
-WRKSRC=		${WRKDIR}/ciabatta-0.3.0
+WRKSRC=		${WRKDIR}/ciabatta-0.4.0
 
 USE_LANGUAGES=	# none
 
-.include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
