@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/01/30 22:52:25 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	wheel-0.24.0
+DISTNAME=	wheel-0.26.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://pypi.python.org/packages/source/w/wheel/
@@ -10,8 +10,7 @@ HOMEPAGE=	http://bitbucket.org/pypa/wheel/
 COMMENT=	Built-package format for Python
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/wheel-0.24.0
-
+WRKSRC=		${WRKDIR}/wheel-0.26.0
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
