@@ -1482,6 +1482,7 @@ SUBDIR+=	libetonyek
 SUBDIR+=	libfirm-git
 SUBDIR+=	libfm
 SUBDIR+=	libfplll
+SUBDIR+=	libfpx
 SUBDIR+=	libftdi1
 SUBDIR+=	libgadu
 SUBDIR+=	libgda-bdb

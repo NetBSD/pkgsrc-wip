@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libfpx
+
+.if !defined(LIBFPX_BUILDLINK3_MK)
+LIBFPX_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libfpx+=	libfpx>=1.3.1
+BUILDLINK_PKGSRCDIR.libfpx?=	../../wip/libfpx
+.endif	# LIBFPX_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libfpx
