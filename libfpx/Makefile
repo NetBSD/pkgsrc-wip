@@ -13,12 +13,13 @@ HOMEPAGE=	http://www.imagemagick.org/
 COMMENT=	Library for reading FlashPix images
 #LICENSE=	# TODO: (see mk/license.mk)
 
-USE_TOOLS+=	autoconf
+USE_TOOLS+=	autoconf automake
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC}; aclocal; autoheader; \
+	automake -a --foreign -i; autoconf
 
 .include "../../mk/bsd.pkg.mk"

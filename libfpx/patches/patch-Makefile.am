@@ -1,0 +1,22 @@
+$NetBSD$
+* Don't install autoconf config file.
+* link using c++
+--- Makefile.am.orig	2015-12-17 12:32:11.000000000 +0000
++++ Makefile.am
+@@ -11,7 +11,7 @@ SUBDIRS = oless jpeg basics ole ri_image
+ AM_CPPFLAGS = -I$(top_srcdir)
+ 
+ # Headers which are installed
+-include_HEADERS = fpxlib.h fpxlib-config.h
++include_HEADERS = fpxlib.h
+ 
+ # Shared libraries built in this directory
+ lib_LTLIBRARIES = libfpx.la
+@@ -21,6 +21,7 @@ libfpx_la_LDFLAGS = -version-info $(MAJO
+ 
+ # Sources
+ libfpx_la_SOURCES =
++nodist_EXTRA_libfpx_la_SOURCES = dummy.cpp
+ 
+ # Convenience libraries
+ libfpx_la_LIBADD = \
