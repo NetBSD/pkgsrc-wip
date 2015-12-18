@@ -370,6 +370,7 @@ SUBDIR+=	commoncpp2
 SUBDIR+=	compare
 SUBDIR+=	compiz-boxmenu
 SUBDIR+=	consolekit
+SUBDIR+=	consul
 SUBDIR+=	contact-lookup-applet
 SUBDIR+=	contacts
 SUBDIR+=	converttomp3
