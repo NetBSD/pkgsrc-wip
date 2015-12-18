@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.21 2015/08/22 12:26:27 leot1990 Exp $
 
-DISTNAME=	vimb-2.10
+DISTNAME=	vimb-2.11
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
