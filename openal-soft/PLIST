@@ -1,9 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:00 thomasklausner Exp $
+@comment $NetBSD$
+bin/altonegen
+bin/bsincgen
+bin/makehrtf
 bin/openal-info
 include/AL/al.h
 include/AL/alc.h
 include/AL/alext.h
+include/AL/efx-creative.h
+include/AL/efx-presets.h
+include/AL/efx.h
 lib/libopenal.so
 lib/libopenal.so.1
 lib/libopenal.so.${PKGVERSION}
 lib/pkgconfig/openal.pc
+share/openal/alsoftrc.sample
+share/openal/hrtf/default-44100.mhr
+share/openal/hrtf/default-48000.mhr

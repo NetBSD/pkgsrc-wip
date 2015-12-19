@@ -1,27 +1,38 @@
 # $NetBSD: Makefile,v 1.5 2012/10/03 21:32:46 asau Exp $
 #
 
-DISTNAME=	openal-soft-1.5.304
+DISTNAME=	openal-soft-1.17.1
 CATEGORIES=	audio
-MASTER_SITES=	http://connect.creativelabs.com/openal/Downloads/ \
-		http://kcat.strangesoft.net/openal-releases/
+MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kcat.strangesoft.net/
 COMMENT=	Alternative OpenAL implementation
+LICENSE=	gnu-lgpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-CMAKE_ARGS+=	-DALSA=OFF
+CMAKE_ARGS+=	-DALSOFT_BACKEND_ALSA:BOOL=OFF
+.else
+.include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
-CMAKE_ARGS+=	-DDSOUND=OFF
-CMAKE_ARGS+=	-DWINMM=OFF
+CMAKE_ARGS+=	-DALSOFT_REQUIRE_OSS:BOOL=ON
+CMAKE_ARGS+=	-DALSOFT_REQUIRE_SOLARIS:BOOL=OFF
+CMAKE_ARGS+=	-DALSOFT_REQUIRE_SNDIO:BOOL=OFF
+CMAKE_ARGS+=	-DALSOFT_REQUIRE_QSA:BOOL=OFF
+CMAKE_ARGS+=	-DALSOFT_BACKEND_WAVE:BOOL=ON
+CMAKE_ARGS+=	-DALSOFT_UTILS:BOOL=ON
+CMAKE_ARGS+=	-DALSOFT_EXAMPLES:BOOL=OFF
+CMAKE_ARGS+=	-DALSOFT_BACKEND_JACK:BOOL=OFF
+CMAKE_ARGS+=	-DALSOFT_BACKEND_PORTAUDIO:BOOL=OFF
+CMAKE_ARGS+=	-DALSOFT_BACKEND_PULSEAUDIO:BOOL=OFF
 
 .include "../../mk/oss.buildlink3.mk"
 
