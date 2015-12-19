@@ -1595,6 +1595,7 @@ share/emacs/${PKGVERSION}/lisp/dframe.el.gz
 share/emacs/${PKGVERSION}/lisp/dframe.elc
 share/emacs/${PKGVERSION}/lisp/dired-aux.el.gz
 share/emacs/${PKGVERSION}/lisp/dired-aux.elc
+share/emacs/${PKGVERSION}/lisp/dired-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/dired-x.el.gz
 share/emacs/${PKGVERSION}/lisp/dired-x.elc
 share/emacs/${PKGVERSION}/lisp/dired.el.gz
@@ -1704,6 +1705,7 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-opt.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-opt.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-speedbar.el.gz
@@ -2321,12 +2323,14 @@ share/emacs/${PKGVERSION}/lisp/hippie-exp.el.gz
 share/emacs/${PKGVERSION}/lisp/hippie-exp.elc
 share/emacs/${PKGVERSION}/lisp/hl-line.el.gz
 share/emacs/${PKGVERSION}/lisp/hl-line.elc
+share/emacs/${PKGVERSION}/lisp/htmlfontify-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/htmlfontify.el.gz
 share/emacs/${PKGVERSION}/lisp/htmlfontify.elc
 share/emacs/${PKGVERSION}/lisp/ibuf-ext.el.gz
 share/emacs/${PKGVERSION}/lisp/ibuf-ext.elc
 share/emacs/${PKGVERSION}/lisp/ibuf-macs.el.gz
 share/emacs/${PKGVERSION}/lisp/ibuf-macs.elc
+share/emacs/${PKGVERSION}/lisp/ibuffer-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/ibuffer.el.gz
 share/emacs/${PKGVERSION}/lisp/ibuffer.elc
 share/emacs/${PKGVERSION}/lisp/icomplete.el.gz
@@ -2691,6 +2695,7 @@ share/emacs/${PKGVERSION}/lisp/mail/rfc2368.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rfc2368.elc
 share/emacs/${PKGVERSION}/lisp/mail/rfc822.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rfc822.elc
+share/emacs/${PKGVERSION}/lisp/mail/rmail-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/mail/rmail-spam-filter.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rmail-spam-filter.elc
 share/emacs/${PKGVERSION}/lisp/mail/rmail.el.gz
@@ -3579,6 +3584,7 @@ share/emacs/${PKGVERSION}/lisp/ps-def.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-def.elc
 share/emacs/${PKGVERSION}/lisp/ps-mule.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-mule.elc
+share/emacs/${PKGVERSION}/lisp/ps-print-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/ps-print.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-print.elc
 share/emacs/${PKGVERSION}/lisp/ps-samp.el.gz
@@ -3755,6 +3761,7 @@ share/emacs/${PKGVERSION}/lisp/textmodes/reftex-global.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-global.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-index.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-index.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/reftex-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-parse.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-parse.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-ref.el.gz
