@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/14 12:52:50 thomasklausner Exp $
+@comment $NetBSD$
 bin/keepassx
 lib/keepassx/libkeepassx-autotype-xcb.so
 share/applications/keepassx.desktop
@@ -141,16 +141,23 @@ share/keepassx/icons/database/C68_BlackBerry.png
 share/keepassx/translations/keepassx_cs.qm
 share/keepassx/translations/keepassx_da.qm
 share/keepassx/translations/keepassx_de.qm
+share/keepassx/translations/keepassx_el.qm
 share/keepassx/translations/keepassx_en_plurals.qm
 share/keepassx/translations/keepassx_es.qm
 share/keepassx/translations/keepassx_fr.qm
 share/keepassx/translations/keepassx_id.qm
 share/keepassx/translations/keepassx_it.qm
 share/keepassx/translations/keepassx_ja.qm
+share/keepassx/translations/keepassx_ko.qm
+share/keepassx/translations/keepassx_lt.qm
 share/keepassx/translations/keepassx_nl_NL.qm
+share/keepassx/translations/keepassx_pl.qm
+share/keepassx/translations/keepassx_pt_BR.qm
 share/keepassx/translations/keepassx_pt_PT.qm
 share/keepassx/translations/keepassx_ru.qm
+share/keepassx/translations/keepassx_sl_SI.qm
 share/keepassx/translations/keepassx_sv.qm
+share/keepassx/translations/keepassx_uk.qm
 share/keepassx/translations/keepassx_zh_CN.qm
 share/keepassx/translations/keepassx_zh_TW.qm
 share/mime/packages/keepassx.xml
