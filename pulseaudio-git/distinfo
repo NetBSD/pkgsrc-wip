@@ -7,7 +7,6 @@ Size (pulseaudio-7.1.tar.gz) = 2686090 bytes
 SHA1 (patch-aa) = bef8282af4a2051d9421c2bdc8e652254beeddd7
 SHA1 (patch-configure.ac) = 42930c9c8c2dac418630703da9010dd00de23eb8
 SHA1 (patch-src_Makefile.am) = 4533c3123d4beba08165e40137b73ae37ce62b31
-SHA1 (patch-src_daemon_main.c) = d00ea97a3fd6e14976a0cc8eb7f7db811a990fe5
 SHA1 (patch-src_modules_module-detect.c) = 4e1db6d3b3224c097ecd981d3f055880ecff780a
 SHA1 (patch-src_modules_module-solaris.c) = 814fefd672f9db75ef3209b50538e2a71aceaf01
 SHA1 (patch-src_modules_oss_module-oss.c) = 6199e48a842dc076b14d039c249295566bcb2c03
