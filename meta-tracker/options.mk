@@ -13,8 +13,12 @@ PKG_SUGGESTED_OPTIONS+=		hal unac enca libsecret gnome
 PKG_SUGGESTED_OPTIONS+=		pdf xps gif jpeg tiff vorbis flac html gsf playlist
 PKG_SUGGESTED_OPTIONS+=		-gstreamer
 PKG_SUGGESTED_OPTIONS+=		rss evolution firefox # thunderbird
-PKG_SUGGESTED_OPTIONS+=		nautilus
 PKG_SUGGESTED_OPTIONS+=		mp3 taglib xmp
+# XXX pbulk complains:
+# Cyclic dependency for package:
+# meta-tracker-0.16.3nb2
+# nautilus-3.16.2
+# PKG_SUGGESTED_OPTIONS+=		nautilus
 
 .include "../../mk/bsd.options.mk"
 
