@@ -139,8 +139,8 @@ do-configure:
 			--configdir=${PKG_SYSCONFDIR} \
 			--destdir=${DESTDIR} \
 			--mandir=${PKGMANDIR} \
-			--strict \
-			--with-backends=dummy
+			--with-backends=dummy \
+			--cxx11
 
 # ./waf
 # ./waf i18n
