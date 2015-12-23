@@ -9,14 +9,20 @@ HOMEPAGE=	http://www.vamp-plugins.org/
 COMMENT=	The Vamp audio analysis plugin system
 LICENSE=	x11
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-hostsdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-sdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp.pc.in
 
+pre-patch:
+	${RUN} cp ${FILESDIR}/wscript ${WRKSRC}
+
+.include "../../devel/waf/waf.mk"
+# Missing --mandir
+WAF_ARGS=
+.include "../../math/fftw/buildlink3.mk"
+.include "../../math/fftwf/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
