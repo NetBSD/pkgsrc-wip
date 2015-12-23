@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # Ardour developers (c) 2015
-# This file is redistributed with the same license as vamp-plugins-sdk (x11)
+# This file is redistributed with the same license as vamp-plugin-sdk (x11)
 
 from waflib import TaskGen
 import re
@@ -16,18 +16,22 @@ def configure(conf):
     conf.load('compiler_cxx')
     conf.check_cfg (package='fftw3', uselib_store='FFTW3', args=['--cflags', '--libs'], mandatory=True)
     conf.check_cfg (package='fftw3f', uselib_store='FFTW3F',  args=['--cflags', '--libs'], mandatory=True)
+    conf.check_cfg (package='sndfile', uselib_store='SNDFILE', args=['--cflags', '--libs'], mandatory=True)
     conf.env.append_value('CXXFLAGS', '-DHAVE_FFTW3')
 
 def build(bld):
     # Host Library
     host_sources = '''
-            src/vamp-hostsdk/PluginHostAdapter.cpp
+            src/vamp-hostsdk/Files.cpp
             src/vamp-hostsdk/PluginBufferingAdapter.cpp
             src/vamp-hostsdk/PluginChannelAdapter.cpp
+            src/vamp-hostsdk/PluginHostAdapter.cpp
             src/vamp-hostsdk/PluginInputDomainAdapter.cpp
             src/vamp-hostsdk/PluginLoader.cpp
+            src/vamp-hostsdk/PluginSummarisingAdapter.cpp
             src/vamp-hostsdk/PluginWrapper.cpp
             src/vamp-hostsdk/RealTime.cpp
+            src/vamp-hostsdk/host-c.cpp
     '''
     sdk_sources = '''
             src/vamp-sdk/PluginAdapter.cpp
@@ -40,7 +44,7 @@ def build(bld):
                name = 'vamp-hostsdk',
                uselib = 'FFTW3 FFTW3F',
                features = 'cxx cxxshlib',
-               vnum = '3.0.0',
+               vnum = '3.6.0',
                )
     
     bld.shlib (source = sdk_sources,
@@ -49,7 +53,31 @@ def build(bld):
                name = 'vamp-sdk',
                uselib = 'FFTW3 FFTW3F',
                features = 'cxx cxxshlib',
-               vnum = '2.0.0',
+               vnum = '2.6.0',
+               )
+
+    rdf_sources = '''
+        rdf/generator/vamp-rdf-template-generator.cpp
+    '''
+
+    simple_host_sources = '''
+        host/vamp-simple-host.cpp
+    '''
+
+    bld.program (source = rdf_sources,
+               includes = '.',
+               target = 'vamp-rdf-template-generator',
+               name = 'rdf-generator',
+               use = 'vamp-hostsdk vamp-sdk',
+               features = 'cxx'
+               )
+
+    bld.program (source = simple_host_sources,
+               includes = '.',
+               target = 'vamp-simple-host',
+               name = 'simple-host-generator',
+               use = 'vamp-hostsdk vamp-sdk SNDFILE',
+               features = 'cxx'
                )
 
     sdk_headers = '''
@@ -72,6 +100,7 @@ def build(bld):
          vamp-hostsdk/PluginLoader.h
          vamp-hostsdk/PluginSummarisingAdapter.h
          vamp-hostsdk/PluginWrapper.h
+         vamp-hostsdk/host-c.h
          vamp-hostsdk/hostguard.h
          vamp-hostsdk/vamp-hostsdk.h
     '''
