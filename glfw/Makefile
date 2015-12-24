@@ -27,6 +27,7 @@ SUBST_SED.soname=	-e '/soname/ s/libGL\.so\.1/libGL.so/'
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
