@@ -1,0 +1,9 @@
+MHA for MySQL: Master High Availability Manager and tools for MySQL
+
+MHA provides the following functionality, and can be useful in many deployments
+where requirements such as high availability, data integrity, almost non-stop
+master maintenance are desired.
+-Automated master monitoring and failover
+-Interactive (manual) Master Failover
+-Non-interactive master failover
+-Online switching master to a different host

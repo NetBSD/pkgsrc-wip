@@ -7,10 +7,10 @@ DISTNAME=	${PKGNAME}-${GIT_COMMIT}
 CATEGORIES=	local perl5
 MASTER_SITES=	-https://github.com/yoshinorim/mha4mysql-manager/archive/${GIT_COMMIT}.tar.gz
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	gianni-pkgsrc-wip@daprile.net
 HOMEPAGE=	http://www.mysql.gr.jp/frame/modules/bwiki/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Master High Availability Manager and tools for MySQL
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/mha4mysql-manager-${GIT_COMMIT}
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Config-Tiny>=2:../../devel/p5-Config-Tiny
 DEPENDS+=	p5-Log-Dispatch>=2:../../devel/p5-Log-Dispatch
 DEPENDS+=	p5-Parallel-ForkManager>=0.7:../../devel/p5-Parallel-ForkManager
 DEPENDS+=	p5-Time-HiRes>=1:../../time/p5-Time-HiRes
-DEPENDS+=	p5-mha4mysql-node>=0.56:../../local/p5-mha4mysql-node
+DEPENDS+=	p5-mha4mysql-node>=0.56:../../wip/p5-mha4mysql-node
 
 PERL5_PACKLIST= 	auto/mha4mysql/manager/.packlist
 
