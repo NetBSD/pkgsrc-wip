@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.2 2010/07/20 08:41:21 adam Exp $
+
+--- Make.inc.in.orig	2015-09-30 20:37:13.000000000 +0000
++++ Make.inc.in
+@@ -47,6 +47,7 @@ INSTALLSTRIP	= @INSTALLSTRIP@
+ LCRYPT		= @CRYPTLIB@
+ LIBS		= @LIBS@
+ LDFLAGS		= @LDFLAGS@
++RLM_LIBS	+= -lcrypto -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+ 
+ LOGDIR		= ${logdir}
+ RADDBDIR	= ${raddbdir}

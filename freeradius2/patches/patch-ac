@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.4 2013/04/12 13:45:47 joerg Exp $
+
+--- src/main/modules.c.orig	2015-09-30 20:37:13.000000000 +0000
++++ src/main/modules.c
+@@ -1408,9 +1408,6 @@ int setup_modules(int reload, CONF_SECTI
+ 		 *	It's like libtool and libltdl are some kind
+ 		 *	of sick joke.
+ 		 */
+-#ifdef IE_LIBTOOL_DIE
+-#define lt__PROGRAM__LTX_preloaded_symbols lt_libltdl_LTX_preloaded_symbols
+-#endif
+ 
+ 		/*
+ 		 *	Set the default list of preloaded symbols.
