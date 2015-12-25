@@ -23,6 +23,13 @@ LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
 REPLACE_SH+=	lang/compile_mo.sh
 
+
+SUBST_CLASSES+=			fix-ncurses
+SUBST_STAGE.fix-ncurses=	pre-configure
+SUBST_MESSAGE.fix-ncurses=	Fixing ncurses configuration.
+SUBST_FILES.fix-ncurses=	Makefile
+SUBST_SED.fix-ncurses=		-e 's,ncursesw5-config,ncursesw6-config,g'
+
 BUILD_MAKE_FLAGS+=	DYNAMIC_LINKING=1 RELEASE=1 USE_HOME_DIR=1
 BUILD_MAKE_FLAGS+=	PREFIX=${PREFIX}
 INSTALL_MAKE_FLAGS+=	DYNAMIC_LINKING=1 RELEASE=1 USE_HOME_DIR=1
