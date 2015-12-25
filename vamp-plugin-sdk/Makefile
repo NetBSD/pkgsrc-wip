@@ -16,6 +16,8 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-hostsdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-sdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp.pc.in
 
+BUILD_DEPENDS+=	waf-[0-9]*:../../devel/waf
+
 pre-patch:
 	${RUN} cp ${FILESDIR}/wscript ${WRKSRC}
 
