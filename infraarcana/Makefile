@@ -11,6 +11,8 @@ HOMEPAGE=	https://sites.google.com/site/infraarcana/
 COMMENT=	Infra Arcana is a Lovecraftian roguelike set in the early 20th century
 LICENSE=	cc-by-nc-sa-v3.0-license
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 USE_GAMESGROUP=	yes
