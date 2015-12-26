@@ -3,7 +3,7 @@
 # used by editors/emacs-snapshot/Makefile
 
 .include	"version.mk"
-DISTNAME=	emacs-snapshot_2015041522+17a8618dc7396ef485c38b4b7c37c591839b3ec5.orig
+DISTNAME=	emacs-snapshot_2015073023+f3f15aef9a2d79252ec061093c25160f29809976.orig
 SNAPDATE=	${DISTNAME:C/.*_(20[0-9]+)\+.*/\1/}
 PKGNAME=	emacs${_EMACS_VERSION_MAJOR}-${EMACS_VERSION}.${SNAPDATE}
 CATEGORIES=	editors
