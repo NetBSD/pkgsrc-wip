@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/09/03 22:35:18 leot1990 Exp $
 #
 
-VERSION=	0.2.2
+VERSION=	0.2.3
 DISTNAME=	zathura-ps-${VERSION}
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura-ps/download/
