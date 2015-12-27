@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	QTDIR=${QTDIR}
 
 .include "../../textproc/sord/buildlink3.mk"
 .include "../../wip/rubberband/buildlink3.mk"
-.include "../../wip/vamp-plugin-sdk/buildlink3.mk"
+.include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
