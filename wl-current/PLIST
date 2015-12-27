@@ -55,6 +55,8 @@ share/emacs/site-lisp/wl/elmo-pipe.el
 share/emacs/site-lisp/wl/elmo-pipe.elc
 share/emacs/site-lisp/wl/elmo-pop3.el
 share/emacs/site-lisp/wl/elmo-pop3.elc
+share/emacs/site-lisp/wl/elmo-rss.el
+share/emacs/site-lisp/wl/elmo-rss.elc
 share/emacs/site-lisp/wl/elmo-search.el
 share/emacs/site-lisp/wl/elmo-search.elc
 share/emacs/site-lisp/wl/elmo-sendlog.el
@@ -138,6 +140,8 @@ share/emacs/site-lisp/wl/wl-message.elc
 share/emacs/site-lisp/wl/wl-mime.el
 share/emacs/site-lisp/wl/wl-mime.elc
 share/emacs/site-lisp/wl/wl-news.el
+share/emacs/site-lisp/wl/wl-qs.el
+share/emacs/site-lisp/wl/wl-qs.elc
 share/emacs/site-lisp/wl/wl-refile.el
 share/emacs/site-lisp/wl/wl-refile.elc
 share/emacs/site-lisp/wl/wl-score.el
