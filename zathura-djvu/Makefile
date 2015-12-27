@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/09/03 22:35:17 leot1990 Exp $
 #
 
-VERSION=	0.2.3
+VERSION=	0.2.5
 DISTNAME=	zathura-djvu-${VERSION}
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura-djvu/download/
