@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2015/09/03 22:35:18 leot1990 Exp $
 #
 
-VERSION=	0.2.8
+VERSION=	0.2.9
 DISTNAME=	zathura-pdf-mupdf-${VERSION}
 PKGNAME=	zathura-mupdf-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura/plugins/download/
 
