@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/10/10 01:57:53 ryoon Exp $
 
-DISTNAME=	nqp-2013.08
-PKGREVISION=	7
+DISTNAME=	nqp-2015.11
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/nqp/
 
@@ -20,17 +19,15 @@ PLIST_SRC+=		${PLIST_SRC_DFLT}
 .if (${OPSYS} != "Darwin")
 PLIST_SRC+=		PLIST.shared
 .else
-USE_TOOLS+=		 gmake
+USE_TOOLS+=		gmake
 .endif
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
-			--with-parrot=${PREFIX}/bin/parrot
+			--backends=moar
 
-PLIST_SUBST+=		PARROT_VERSION=${PARROT_VERSION:Q}
-PRINT_PLIST_AWK+=        { gsub(/${PARROT_VERSION}/, "$${PARROT_VERSION}") }
 
-.include "../../lang/parrot/buildlink3.mk"
+.include "../../wip/MoarVM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
