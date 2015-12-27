@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.3 2015/04/25 14:23:12 tnn Exp $
 
-DISTNAME=	gmic_1.5.9.3
+DISTNAME=	gmic_1.6.8
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmic/}
+MASTER_SITES=	http://gmic.eu/files/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/gmic/
@@ -21,6 +20,11 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/fr/man1 && gunzip gmic.1.gz
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && gunzip gmic.1.gz
 
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../graphics/GraphicsMagick/buildlink3.mk"
+.include "../../graphics/opencv2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
