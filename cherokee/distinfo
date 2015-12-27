@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (cherokee-1.2.104-a917d76ed9b4272478ca973084ec1037a950c443.tar.gz) = 3b9ee1f48003ec75b68eeb09cfc0e751f1758658
+RMD160 (cherokee-1.2.104-a917d76ed9b4272478ca973084ec1037a950c443.tar.gz) = ca1a78b2350814e492469146458f1afdcb3dfe6a
+Size (cherokee-1.2.104-a917d76ed9b4272478ca973084ec1037a950c443.tar.gz) = 5313230 bytes
+SHA1 (patch-admin_wizards_php.py) = ee0cbb2f728889a57dad3712aa7d355b5c6473a8
+SHA1 (patch-autogen.sh) = 7bb7456f85bd90dd23370e2b58812d27367486b5
+SHA1 (patch-cherokee_main__admin.c) = 18fab221ca914038822457a904af322813d8acd8
+SHA1 (patch-po_admin_generate__POTFILESin.py) = badfafc7f9d002923fb8d5b1fc5d38a2e6a3146d
