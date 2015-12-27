@@ -1,5 +1,6 @@
 # $NetBSD$
 
+# During upgrade please adjust files/wscript and doublecheck libs major/minor
 DISTNAME=	vamp-plugin-sdk-2.6
 CATEGORIES=	audio
 MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/1520/
