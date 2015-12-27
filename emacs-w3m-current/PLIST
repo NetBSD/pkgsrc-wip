@@ -187,6 +187,8 @@ ${EMACS_LISPPREFIX}/w3m/sb-kantei.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-kantei.elc
 ${EMACS_LISPPREFIX}/w3m/sb-kde.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-kde.elc
+${EMACS_LISPPREFIX}/w3m/sb-kyoko-np.el.gz
+${EMACS_LISPPREFIX}/w3m/sb-kyoko-np.elc
 ${EMACS_LISPPREFIX}/w3m/sb-laut-de.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-laut-de.elc
 ${EMACS_LISPPREFIX}/w3m/sb-linuxce-jp.el.gz
@@ -229,6 +231,8 @@ ${EMACS_LISPPREFIX}/w3m/sb-namazu.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-namazu.elc
 ${EMACS_LISPPREFIX}/w3m/sb-netbsd.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-netbsd.elc
+${EMACS_LISPPREFIX}/w3m/sb-nikkangendai.el.gz
+${EMACS_LISPPREFIX}/w3m/sb-nikkangendai.elc
 ${EMACS_LISPPREFIX}/w3m/sb-nikkansports.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-nikkansports.elc
 ${EMACS_LISPPREFIX}/w3m/sb-nikkei.el.gz
@@ -341,6 +345,8 @@ ${EMACS_LISPPREFIX}/w3m/sb-yomiuri-html.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-yomiuri-html.elc
 ${EMACS_LISPPREFIX}/w3m/sb-yomiuri.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-yomiuri.elc
+${EMACS_LISPPREFIX}/w3m/sb-yoshirin.el.gz
+${EMACS_LISPPREFIX}/w3m/sb-yoshirin.elc
 ${EMACS_LISPPREFIX}/w3m/sb-zdnet-jp.el.gz
 ${EMACS_LISPPREFIX}/w3m/sb-zdnet-jp.elc
 ${EMACS_LISPPREFIX}/w3m/sb-zeit-de.el.gz
@@ -351,6 +357,8 @@ ${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/custom-load.el.gz
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/custom-load.elc
 ${EMACS_LISPPREFIX}/w3m/w3m.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m.elc
+${EMACS_LISPPREFIX}/w3m/w3m-save.el.gz
+${EMACS_LISPPREFIX}/w3m/w3m-save.elc
 ${ETCDIR}/COPYING
 ${ETCDIR}/ChangeLog
 ${ETCDIR}/ChangeLog.1
@@ -384,6 +392,8 @@ ${PLIST.gui}${ETCDIR}/parent-up.png
 ${PLIST.gui}${ETCDIR}/parent-up.xpm
 ${PLIST.gui}${ETCDIR}/reload-up.png
 ${PLIST.gui}${ETCDIR}/reload-up.xpm
+${PLIST.gui}${ETCDIR}/save-up.png
+${PLIST.gui}${ETCDIR}/save-up.xpm
 ${PLIST.gui}${ETCDIR}/search-up.png
 ${PLIST.gui}${ETCDIR}/search-up.xpm
 ${PLIST.gui}${ETCDIR}/spinner.gif
