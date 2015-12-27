@@ -4,7 +4,7 @@
 PKGNAME=	p5-mha4mysql-node-0.56
 GIT_COMMIT= 	ef26bdeeeb16c4c1c5e37bdaa276d118ffdd85e7
 DISTNAME=	${PKGNAME}-${GIT_COMMIT}
-CATEGORIES=	local perl5
+CATEGORIES=	databases perl5
 MASTER_SITES=	-https://github.com/yoshinorim/mha4mysql-node/archive/${GIT_COMMIT}.tar.gz
 
 MAINTAINER=	gianni-pkgsrc-wip@daprile.net
