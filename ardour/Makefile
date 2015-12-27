@@ -164,7 +164,7 @@ do-install:
 .include "../../audio/aubio/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../wip/rubberband/buildlink3.mk"
-.include "../../wip/vamp-plugin-sdk/buildlink3.mk"
+.include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../wip/liblo/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
