@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	rubberband.pc.in
 
 .include "../../audio/ladspa/buildlink3.mk"
-.include "../../wip/vamp-plugin-sdk/buildlink3.mk"
+.include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
