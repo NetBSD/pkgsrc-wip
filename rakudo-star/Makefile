@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/10/10 01:57:53 ryoon Exp $
 
-DISTNAME=	rakudo-star-2013.08
-PKGREVISION=	7
+DISTNAME=	rakudo-star-2015.11
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/star/
 
@@ -15,22 +14,17 @@ MAKE_JOBS_SAFE=	no
 .include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl gmake
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 .if (${OPSYS} != "Darwin")
 PLIST_SRC+=		PLIST.shared
-.else
-USE_TOOLS+=		 gmake
 .endif
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
-CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
-			--with-nqp=${PREFIX}/bin/nqp
+CONFIGURE_ARGS=		--prefix=${PREFIX:Q} --backends=moar
 
-PLIST_SUBST+=		PARROT_VERSION=${PARROT_VERSION:Q}
-PRINT_PLIST_AWK+=        { gsub(/${PARROT_VERSION}/, "$${PARROT_VERSION}") }
-
-.include "../../lang/nqp/buildlink3.mk"
+.include "../../wip/MoarVM/buildlink3.mk"
+.include "../../wip/nqp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
