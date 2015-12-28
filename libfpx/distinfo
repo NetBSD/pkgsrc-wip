@@ -1,10 +1,6 @@
 $NetBSD$
 
-SHA1 (libfpx-1.3.1-5.tar.xz) = 2df0085b6d364d9cb2224b8cc14e308d7fad35ae
-RMD160 (libfpx-1.3.1-5.tar.xz) = ed63f57bdebd53bbf3fc6d01b4c5069800503283
-SHA512 (libfpx-1.3.1-5.tar.xz) = 23e2d27f1d6d132f3b12bc807fa68acbd211ba58b2c745a6f7735700329aa2973dd70d88811503eebd05f98812e84e8b977a837521b8749523864f3edb11d053
-Size (libfpx-1.3.1-5.tar.xz) = 1906544 bytes
-SHA1 (patch-fpx_f__fpxvw.cpp) = f096de5d72125b13e793210ca701c0c7e5ead0df
-SHA1 (patch-fpx_fpxlibio.cpp) = 5a8c52c07616b7623106eb54f5c47336451f53b3
-SHA1 (patch-fpxlib.h) = 3ee9dde1db3eee5b901c8da752f5a4c19d2d95d4
-SHA1 (patch-ole_olecore.h) = d9625be22f2f895ff63e56e032bbd31d59ba71ab
+SHA1 (libfpx-1.3.1-6.tar.xz) = 23c630e1c39b3adf52b34100af4db38234f95b1f
+RMD160 (libfpx-1.3.1-6.tar.xz) = 9bd3497f68b74b66b41e2c826445065501075e5b
+SHA512 (libfpx-1.3.1-6.tar.xz) = 0d4eb06954a76fde286acc2257774d515a9826154f1603d64f261342f31af29de608b00a7837bcd1942dfff1cca679c34166f0f7972373515126b27970ce2bf8
+Size (libfpx-1.3.1-6.tar.xz) = 1906256 bytes
