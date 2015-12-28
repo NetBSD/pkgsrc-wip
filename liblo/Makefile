@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2012/11/05 13:17:57 othyro Exp $
 #
 
-DISTNAME=	liblo-0.26
+DISTNAME=	liblo-0.28
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=liblo/}
 
@@ -13,13 +13,14 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
 
 CFLAGS+=		${PTHREAD_CFLAGS}
 PKGCONFIG_OVERRIDE+=	liblo.pc.in
 PTHREAD_OPTS+=		require
 RESOLV_AUTO_VARS=	yes	# gethostbyname and friends
 
-SUBST_CLASSES=		conf
+SUBST_CLASSES+=		conf
 SUBST_FILES.conf=	configure Makefile.in src/Makefile.in liblo.pc.in
 SUBST_MESSAGE.conf=	Performing build-time configuration substitutions.
 SUBST_SED.conf=		-e 's,-lpthread,$${PTHREAD_LDFLAGS} $${PTHREAD_LIBS},'
