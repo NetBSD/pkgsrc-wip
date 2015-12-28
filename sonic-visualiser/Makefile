@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	dataquay/deploy/dataquay.pc.in
 CONFIGURE_ARGS+=	QTDIR=${QTDIR}
 
 .include "../../textproc/sord/buildlink3.mk"
-.include "../../wip/rubberband/buildlink3.mk"
+.include "../../audio/rubberband/buildlink3.mk"
 .include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
