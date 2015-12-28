@@ -1,4 +1,0 @@
-$NetBSD: patch-ab,v 1.2 2012/11/05 13:15:58 othyro Exp $
-
-Fixes calculation of address size and removes error handling switch.
-
