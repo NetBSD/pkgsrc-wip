@@ -14,12 +14,22 @@ USE_LANGUAGES=	c c++
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
+CONFIGURE_ENV+=		LDFLAGS=${LDFLAGS:Q}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--has-libatomic_ops \
 			--has-libffi \
 			--has-libuv \
 			--has-libtommath
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	EXT=dylib
+.else
+PLIST_SUBST+=	EXT=so
+.endif
 
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"

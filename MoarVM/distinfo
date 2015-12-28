@@ -4,3 +4,5 @@ SHA1 (MoarVM-2015.12.tar.gz) = aec5d730a3f1ee80bb86190f21c0b90f1379922d
 RMD160 (MoarVM-2015.12.tar.gz) = 372b3dacee231c371730ba6e8089e315ee8e3687
 SHA512 (MoarVM-2015.12.tar.gz) = cd51dc2495a2f897ecff3ae46ff4334a840d52de6f3c492473bbd4d0b2fc5dffe4e671b008bd5baa623ba7017bf995900898f690b0b93a827559f43525e421f4
 Size (MoarVM-2015.12.tar.gz) = 3273408 bytes
+SHA1 (patch-build_probe.pm) = 8ea9313c1d2329239f123fb4f6c28e1f7de566c2
+SHA1 (patch-build_setup.pm) = fd53d47bd3126b2c89d4e8d82c6bc0b6db5f4fdf
