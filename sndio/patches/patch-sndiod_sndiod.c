@@ -2,7 +2,7 @@ $NetBSD$
 
 Add NetBSD support.
 
-Patch pending upstream.
+Issue fixed upstream differently.
 
 --- sndiod/sndiod.c.orig	2015-04-24 17:44:06.000000000 +0000
 +++ sndiod/sndiod.c

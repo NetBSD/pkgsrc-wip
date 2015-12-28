@@ -2,7 +2,7 @@ $NetBSD$
 
 Add NetBSD support.
 
-Patch pending upstream.
+Patch merged upstream.
 
 --- configure.orig	2015-08-30 09:51:50.000000000 +0000
 +++ configure
