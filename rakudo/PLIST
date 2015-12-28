@@ -19,7 +19,7 @@ share/perl6/precomp/.lock
 share/perl6/repo.lock
 share/perl6/runtime/CORE.setting.moarvm
 share/perl6/runtime/RESTRICTED.setting.moarvm
-share/perl6/runtime/dynext/libperl6_ops_moar.dylib
+share/perl6/runtime/dynext/libperl6_ops_moar.${EXT}
 share/perl6/runtime/perl6-debug.moarvm
 share/perl6/runtime/perl6.moarvm
 share/perl6/short/0D7FDBBC72083980348BED148BF46BD198D51DE8

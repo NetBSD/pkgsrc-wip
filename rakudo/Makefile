@@ -20,6 +20,14 @@ CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} --backends=moar
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	EXT=dylib
+.else
+PLIST_SUBST+=	EXT=so
+.endif
+
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/precomp/*
 
