@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.9 2015/10/10 01:57:53 ryoon Exp $
 
 DISTNAME=	rakudo-2015.12
+PKGREVISION=	1
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/rakudo/
 
@@ -11,19 +12,16 @@ LICENSE=	artistic-2.0
 
 MAKE_JOBS_SAFE=	no
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl gmake
-PLIST_SRC+=		${PLIST_SRC_DFLT}
-.if (${OPSYS} != "Darwin")
-PLIST_SRC+=		PLIST.shared
-.endif
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} --backends=moar
+
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/precomp/*
 
 .include "../../wip/MoarVM/buildlink3.mk"
 .include "../../wip/nqp/buildlink3.mk"

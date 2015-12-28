@@ -4,4 +4,5 @@ SHA1 (rakudo-2015.12.tar.gz) = b425629ad7bf407d4e08564084e0fa63dcecec9d
 RMD160 (rakudo-2015.12.tar.gz) = d26d8b45375407f46872dfb5835152dcec623071
 SHA512 (rakudo-2015.12.tar.gz) = 48e4c98bbff67a52f68a835cc87a19a0b17f2d67790f8162ffd9f167f080d09180d375b5ea9a8577d1de5036c78e604473a2140107d448aff3630c138fd16114
 Size (rakudo-2015.12.tar.gz) = 2669528 bytes
-SHA1 (patch-src_core_CompUnit_Repository_Installation.pm) = 654e8a61ee10c029fbb15f290ff90d99fb5aa08c
+SHA1 (patch-tools_build_Makefile-Moar.in) = a2da23b50c54fa2619512cc41d3c3357b134738c
+SHA1 (patch-tools_build_install-core-dist.pl) = aeab5b43e097a2c1b461b576a1cddaeea660af08
