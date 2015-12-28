@@ -40,5 +40,5 @@ PLIST_VARS+=	mad vorbis samplerate ddi liblo
 .endif
 
 .if !empty(PKG_OPTIONS:Mrubberband)
-.include "../../wip/rubberband/buildlink3.mk"
+.include "../../audio/rubberband/buildlink3.mk"
 .endif
