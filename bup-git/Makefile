@@ -33,9 +33,6 @@ MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 USE_TOOLS+=		bash gmake perl
-#REPLACE_PERL=		format-subst.pl
-#REPLACE_PYTHON+=	main.py
-#REPLACE_PYTHON+=	wvtest.py
 
 REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
 REPLACE_BASH+=		config/configure
@@ -53,6 +50,8 @@ REPLACE_BASH+=		t/test-rm-between-index-and-save.sh
 REPLACE_BASH+=		t/test-save-creates-no-unrefs.sh
 REPLACE_BASH+=		t/test.sh
 REPLACE_BASH+=		wvtest-bup.sh
+
+INSTALLATION_DIRS=	share/doc/bup
 
 post-install:
 #	${INSTALL_DATA} ${DOCDIR}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
