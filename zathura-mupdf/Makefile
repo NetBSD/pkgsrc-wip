@@ -14,7 +14,7 @@ LICENSE=	zlib
 
 CONFLICTS+=	zathura-poppler-[0-9]*
 
-USE_TOOLS+=	pkg-config gettext gmake groff
+USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 
 MAKE_ENV+=	MUPDF_LIB="-lmupdf -lmujs"

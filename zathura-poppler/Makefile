@@ -14,12 +14,12 @@ LICENSE=	zlib
 
 CONFLICTS+=	zathura-mupdf-[0-9]*
 
-USE_TOOLS+=	pkg-config gettext gmake groff
+USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
-.include "../../wip/zathura/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../wip/zathura/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
