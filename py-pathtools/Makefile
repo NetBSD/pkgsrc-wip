@@ -3,7 +3,7 @@
 DISTNAME=	pathtools-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pathtools/
+MASTER_SITES=	${MASTER_SITE_PYPI}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/gorakhargosh/pathtools
