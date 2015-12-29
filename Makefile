@@ -4105,6 +4105,7 @@ SUBDIR+=	zabbix-server-mysql
 SUBDIR+=	zabbix-server-pgsql
 SUBDIR+=	zapping
 SUBDIR+=	zathura
+SUBDIR+=	zathura-cb
 SUBDIR+=	zathura-djvu
 SUBDIR+=	zathura-mupdf
 SUBDIR+=	zathura-poppler
