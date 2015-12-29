@@ -3823,6 +3823,7 @@ SUBDIR+=	tor-dev
 SUBDIR+=	torcs
 SUBDIR+=	torsocks
 SUBDIR+=	tortunnel
+SUBDIR+=	toxic
 SUBDIR+=	toxcore
 SUBDIR+=	tpp
 SUBDIR+=	tqsllib
