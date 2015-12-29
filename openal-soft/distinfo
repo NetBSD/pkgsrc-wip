@@ -4,3 +4,4 @@ SHA1 (openal-soft-1.17.1.tar.bz2) = 92b8dbba07674e11538934fc7a89dcd64ecafd40
 RMD160 (openal-soft-1.17.1.tar.bz2) = d8292b39bf88f0f6f2d3200e034fa368589ca84c
 SHA512 (openal-soft-1.17.1.tar.bz2) = f0b14e9fdcc22bb18d9c3278392fd94959cd3d85d83ad0472dcac24122fe1f8c818ef8c47197424f6d9789524d0aff64965ce502965f5d6541a772fc8dc3286d
 Size (openal-soft-1.17.1.tar.bz2) = 485178 bytes
+SHA1 (patch-common_threads.c) = aca201b6649e1b5b083aeb90c6fcde71e66c66cd
