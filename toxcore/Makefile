@@ -1,0 +1,34 @@
+# $NetBSD$
+
+DISTNAME=	toxcore-0
+CATEGORIES=	chat
+MASTER_SITES=	${MASTER_SITE_GITHUB:=irungentoo/}
+
+GIT_REPOSITORIES=	toxcore
+GIT_REPO.toxcore=	http://github.com/irungentoo/toxcore.git
+#GIT_BRANCH.toxcore=	new_av
+WRKSRC=	${WRKDIR}/toxcore
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://tox.chat/
+COMMENT=	Tox protocol library
+LICENSE=	gnu-gpl-v3
+
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	autoconf automake autoreconf
+USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
+USE_LANGUAGES+=	c
+
+#SUBST_FILES.autotools=	autogen.sh
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
+
+.include "../../audio/libopus/buildlink3.mk"
+#.include "../../devel/check/buildlink3.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
+
+.include "../../wip/mk/git-package.mk"
+.include "../../mk/bsd.pkg.mk"

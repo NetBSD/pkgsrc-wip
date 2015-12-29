@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/DHT_bootstrap
+include/tox/tox.h
+include/tox/tox_old.h
+include/tox/toxav.h
+include/tox/toxdns.h
+include/tox/toxencryptsave.h
+lib/libtoxav.la
+lib/libtoxcore.la
+lib/libtoxdns.la
+lib/libtoxencryptsave.la
+lib/pkgconfig/libtoxav.pc
+lib/pkgconfig/libtoxcore.pc
