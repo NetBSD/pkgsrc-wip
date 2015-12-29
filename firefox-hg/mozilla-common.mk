@@ -55,7 +55,6 @@ CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
-#CONFIGURE_ARGS+=	--with-system-vorbis
 CONFIGURE_ARGS+=	--with-system-graphite2
 CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
@@ -113,7 +112,7 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	sps vorbis glskia throwwrapper mozglue
+PLIST_VARS+=	sps glskia throwwrapper mozglue
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "little"
@@ -129,11 +128,6 @@ PLIST.throwwrapper=	yes
 
 .if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
 PLIST.sps=	yes
-.endif
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
-.else
-PLIST.vorbis=	yes
 .endif
 
 # See ${WRKSRC}/mozglue/build/moz.build: libmozglue is built and
@@ -180,7 +174,6 @@ PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
-#.include "../../audio/libvorbis/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.8.2
 #CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 #.include "../../databases/sqlite3/buildlink3.mk"
