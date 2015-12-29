@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- config/get_ld.orig	2011-09-22 20:02:11.000000000 +0000
++++ config/get_ld
+@@ -70,7 +70,7 @@ if test "$GNULDused" = yes; then
+   runpathprefix='-rpath '
+ else # guess...
+   case "$osname" in
+-    gnu|osf1|linux|cygwin*|freebsd|netbsd) runpathprefix='-rpath ' ;;
++    gnu|osf1|linux|cygwin*|freebsd|netbsd|dragonfly*) runpathprefix='-rpath ' ;;
+     solaris) runpathprefix='-R ' ;;
+     hpux) runpathprefix='+b ' ;;
+     aix) runpathprefix='-blibpath:' ;;
