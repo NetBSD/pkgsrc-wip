@@ -24,7 +24,6 @@ USE_LANGUAGES+=	c
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mk/git-package.mk"
