@@ -2878,6 +2878,8 @@ share/emacs/${PKGVERSION}/lisp/net/ntlm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/ntlm.elc
 share/emacs/${PKGVERSION}/lisp/net/pinentry.el.gz
 share/emacs/${PKGVERSION}/lisp/net/pinentry.elc
+share/emacs/${PKGVERSION}/lisp/net/puny.el.gz
+share/emacs/${PKGVERSION}/lisp/net/puny.elc
 share/emacs/${PKGVERSION}/lisp/net/quickurl.el.gz
 share/emacs/${PKGVERSION}/lisp/net/quickurl.elc
 share/emacs/${PKGVERSION}/lisp/net/rcirc.el.gz
