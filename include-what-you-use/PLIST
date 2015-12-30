@@ -1,1 +1,4 @@
 @comment $NetBSD$
+bin/fix_includes.py
+bin/include-what-you-use
+bin/iwyu_tool.py

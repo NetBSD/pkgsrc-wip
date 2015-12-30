@@ -13,6 +13,15 @@ COMMENT=	Analyze \#includes in C and C++ source files
 WRKSRC=		${WRKDIR}/include-what-you-use
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+CMAKE_ARGS+=	-DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 
-.include "../../lang/libLLVM/buildlink3.mk"
+REPLACE_PYTHON=		fix_includes.py
+REPLACE_PYTHON+=	fix_includes_test.py
+REPLACE_PYTHON+=	iwyu_test_util.py
+REPLACE_PYTHON+=	iwyu_tool.py
+REPLACE_PYTHON+=	make_readme.py
+REPLACE_PYTHON+=	run_iwyu_tests.py
+
+.include "../../lang/clang/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
