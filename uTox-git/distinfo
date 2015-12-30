@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (patch-Makefile) = 5d4be90089c550fe23269f82794714671149c900
+SHA1 (patch-src_main.h) = b4cfefec1f239d870403578bababef1a54889fe3
+SHA1 (patch-src_xlib_main.c) = ca58bd2868299e1ff4a1ea04e2459af89761d885
+SHA1 (patch-src_xlib_v4l.c) = 159ac6e676c0361262daeb3f5324e4916b09b16a
+SHA1 (patch-src_xlib_video.c) = b072978c84b5577b76ddb2f8085b2cc2f1df6290
