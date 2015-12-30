@@ -12,7 +12,7 @@ and the icons won't be displayed such setup.
 -                              (let ((icons (expand-file-name "wl/icons/"
 -							      data-directory)))
 +                              (let ((icons (expand-file-name "share/wl"
-+							      "%%PRFIX%%")))
++							      "%%PREFIX%%")))
                                  (if (file-directory-p icons)
                                      icons))
                                (if load-file-name
