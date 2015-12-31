@@ -2295,6 +2295,7 @@ SUBDIR+=	parted
 SUBDIR+=	partonevolution
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
+SUBDIR+=	pathod
 SUBDIR+=	paxmirabilis
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pcmanfm

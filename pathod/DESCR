@@ -1,0 +1,6 @@
+pathod is a collection of pathological tools for testing and torturing HTTP
+clients and servers. The project has three components:
+
+ o pathod, a pathological HTTP daemon
+ o pathoc, a perverse HTTP client
+ o libpathod.test, an API for easily using pathod and pathoc in unit tests
