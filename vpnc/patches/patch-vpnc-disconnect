@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- vpnc-disconnect.orig	2014-09-05 20:53:13.000000000 +0000
++++ vpnc-disconnect
+@@ -1,6 +1,6 @@
+-#!/bin/sh
++#!@SH@
+ 
+-pid=/var/run/vpnc.pid
++pid=@VARBASE@/run/vpnc.pid
+ 
+ if [ $# -ne 0 ]; then
+ 	echo "Usage: $0" 1>&2

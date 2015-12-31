@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.19 2012/05/24 09:35:53 hauke Exp $
+
+SHA1 (vpnc_0.5.3r550.orig.tar.gz) = 519fb5b09c03bde3d2a850f6b018a9ca6beba0ff
+RMD160 (vpnc_0.5.3r550.orig.tar.gz) = 0758da3256ba0f2538b33c561aa95d416ce7a0f0
+Size (vpnc_0.5.3r550.orig.tar.gz) = 128136 bytes
+SHA1 (patch-config.c) = 19034c988de3e304f6a0f295682261c668dc9229
+SHA1 (patch-config.h) = df42a8447b89a029c84a5ebfdcd8d95b5d721567
+SHA1 (patch-makeman.pl) = c3a8f9780cedf3cb1af0d299473452df1e4c85db
+SHA1 (patch-pcf2vpnc) = 614864da872977d3be9f3e5fcf67843e464f5984
+SHA1 (patch-sysdep.c) = eef69790c37a8fad66c444a2e89bd924d95e7560
+SHA1 (patch-tunip.c) = 0698acafe236b2f4de506a1849076cb009f96958
+SHA1 (patch-vpnc-disconnect) = 8db3b20f00c49210791d9bfa5dd2462468b16785
+SHA1 (patch-vpnc.c) = ad1c9e29b01ed080cdda1326371d4b162cd26460
+SHA1 (patch-vpnc_script) = 5e282d8379a5f9adca34ebf449a0f3cbb2223cfb

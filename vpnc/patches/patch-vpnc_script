@@ -1,0 +1,62 @@
+$NetBSD: patch-vpnc_script,v 1.3 2014/02/20 20:54:00 hfath Exp $
+
+--- vpnc-script.orig	2014-09-05 20:53:13.000000000 +0000
++++ vpnc-script
+@@ -77,9 +77,10 @@ PATH=/sbin:/usr/sbin:$PATH
+ 
+ OS="`uname -s`"
+ 
+-HOOKS_DIR=/etc/vpnc
+-DEFAULT_ROUTE_FILE=/var/run/vpnc/defaultroute
+-RESOLV_CONF_BACKUP=/var/run/vpnc/resolv.conf-backup
++HOOKS_DIR=$PKG_SYSCONFDIR/vpnc
++STATEDIR=@VARBASE@/run/vpnc
++DEFAULT_ROUTE_FILE=$STATEDIR/defaultroute
++RESOLV_CONF_BACKUP=$STATEDIR/resolv.conf-backup
+ SCRIPTNAME=`basename $0`
+ 
+ # some systems, eg. Darwin & FreeBSD, prune /var/run on boot
+@@ -162,7 +163,7 @@ do_ifconfig() {
+ 	fi
+ 
+ 	if [ -z "$MTU" ]; then
+-		MTU=1412
++		MTU=1390
+ 	fi
+ 
+ 	# Point to point interface require a netmask of 255.255.255.255 on some systems
+@@ -284,11 +285,11 @@ else # use route command
+ 		# isn't -n supposed to give --numeric output?
+ 		# apperently not...
+ 		# Get rid of lines containing IPv6 addresses (':')
+-		netstat -r -n | awk '/:/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
++		netstat -r -n | awk '/:/ { next; } $2 ~ /^link/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
+ 	}
+ 
+ 	set_vpngateway_route() {
+-		route add -host "$VPNGATEWAY" $route_syntax_gw "`get_default_gw`"
++		route add -host "$VPNGATEWAY" $route_syntax_gw "`get_default_gw`" $route_syntax_interface
+ 	}
+ 
+ 	del_vpngateway_route() {
+@@ -622,6 +623,20 @@ do_pre_init() {
+ }
+ 
+ do_connect() {
++	if test "$TARGET_NETWORKS" ; then
++		i=0
++		for network in $TARGET_NETWORKS ; do
++			eval CISCO_SPLIT_INC_${i}_ADDR=`echo $network | cut -f1 -d/`
++			eval CISCO_SPLIT_INC_${i}_MASKLEN=`echo $network | cut -f2 -d/`
++			eval CISCO_SPLIT_INC_${i}_MASK=$( @PERL5@ -e '$ARGV[0]=~s,.*/,,;$m=(2**$ARGV[0]-1)<<(32-$ARGV[0]);printf "%d.%d.%d.%d\n", $m>>24 & 0xff, $m>>16 & 0xff, $m>>8 & 0xff, $m & 0xff;' $network )
++			eval CISCO_SPLIT_INC_${i}_PROTOCOL=0
++			eval CISCO_SPLIT_INC_${i}_SPORT=0
++			eval CISCO_SPLIT_INC_${i}_DPORT=0
++			i=`expr $i + 1`
++		done
++		CISCO_SPLIT_INC=$i
++	fi
++
+ 	if [ -n "$CISCO_BANNER" ]; then
+ 		echo "Connect Banner:"
+ 		echo "$CISCO_BANNER" | while read LINE ; do echo "|" "$LINE" ; done
