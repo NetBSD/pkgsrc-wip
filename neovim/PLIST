@@ -44,7 +44,6 @@ share/nvim/runtime/autoload/ccomplete.vim
 share/nvim/runtime/autoload/clojurecomplete.vim
 share/nvim/runtime/autoload/csscomplete.vim
 share/nvim/runtime/autoload/decada.vim
-share/nvim/runtime/autoload/getscript.vim
 share/nvim/runtime/autoload/gnat.vim
 share/nvim/runtime/autoload/gzip.vim
 share/nvim/runtime/autoload/htmlcomplete.vim
@@ -216,7 +215,6 @@ share/nvim/runtime/doc/options.txt
 share/nvim/runtime/doc/os_dos.txt
 share/nvim/runtime/doc/os_win32.txt
 share/nvim/runtime/doc/pattern.txt
-share/nvim/runtime/doc/pi_getscript.txt
 share/nvim/runtime/doc/pi_gzip.txt
 share/nvim/runtime/doc/pi_matchit.txt
 share/nvim/runtime/doc/pi_msgpack.txt
@@ -683,7 +681,6 @@ share/nvim/runtime/makemenu.vim
 share/nvim/runtime/menu.vim
 share/nvim/runtime/mswin.vim
 share/nvim/runtime/optwin.vim
-share/nvim/runtime/plugin/getscriptPlugin.vim
 share/nvim/runtime/plugin/gzip.vim
 share/nvim/runtime/plugin/man.vim
 share/nvim/runtime/plugin/matchit.vim
