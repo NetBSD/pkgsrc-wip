@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.3 2015/10/01 21:38:44 kamil Exp $
 
-DISTNAME=	logswan-1.01
+DISTNAME=	logswan-1.03
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.logswan.org
+HOMEPAGE=	http://www.logswan.org/
 COMMENT=	Fast Web log analyzer using probabilistic data structures
 LICENSE=	modified-bsd
 
@@ -19,7 +19,7 @@ SUBST_SED.geoip+=	-e 's,/usr/local,${PREFIX},g'
 DOCDIR=		share/doc/logswan
 EGDIR=		share/examples/logswan
 
-CONF_FILES+=	${EGDIR}/logswan.json ${PKG_SYSCONFDIR}/logswan.json
+#CONF_FILES+=	${EGDIR}/logswan.json ${PKG_SYSCONFDIR}/logswan.json
 
 AUTO_MKDIRS=	yes
 
@@ -29,6 +29,8 @@ post-install:
 .endfor
 	${RUN}${INSTALL_DATA} ${WRKSRC}/examples/logswan.json \
 	                      ${DESTDIR}${PREFIX}/${EGDIR}
+	${RUN}${INSTALL_MAN}  ${WRKSRC}/logswan.1 \
+	                      ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
