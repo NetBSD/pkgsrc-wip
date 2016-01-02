@@ -15,6 +15,7 @@ bin/rax2
 include/libr/btree.h
 include/libr/ht.h
 include/libr/list.h
+include/libr/naked.h
 include/libr/r.h
 include/libr/r_anal.h
 include/libr/r_anal_ex.h
@@ -406,6 +407,7 @@ share/radare2/${PKGVERSION}-git/r2pm/armthumb
 share/radare2/${PKGVERSION}-git/r2pm/baleful
 share/radare2/${PKGVERSION}-git/r2pm/bcl
 share/radare2/${PKGVERSION}-git/r2pm/blackfin
+share/radare2/${PKGVERSION}-git/r2pm/blessr2
 share/radare2/${PKGVERSION}-git/r2pm/bokken
 share/radare2/${PKGVERSION}-git/r2pm/bpf
 share/radare2/${PKGVERSION}-git/r2pm/dlang
