@@ -2,7 +2,7 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.3 2015/04/02 14:55:36 bsiegert
 
 * NetBSD support
 
---- src/polkit/polkitunixprocess.c.orig	2013-05-06 17:54:15.000000000 +0000
+--- src/polkit/polkitunixprocess.c.orig	2014-01-14 22:42:25.000000000 +0000
 +++ src/polkit/polkitunixprocess.c
 @@ -29,6 +29,10 @@
  #include <sys/sysctl.h>

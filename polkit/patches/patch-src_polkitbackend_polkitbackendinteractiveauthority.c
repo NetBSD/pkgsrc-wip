@@ -2,7 +2,7 @@ $NetBSD: patch-src_polkitbackend_polkitbackendinteractiveauthority.c,v 1.3 2015/
 
 * for *BSD netgroup functions
 
---- src/polkitbackend/polkitbackendinteractiveauthority.c.orig	2013-04-04 18:16:50.000000000 +0000
+--- src/polkitbackend/polkitbackendinteractiveauthority.c.orig	2015-06-19 20:39:58.000000000 +0000
 +++ src/polkitbackend/polkitbackendinteractiveauthority.c
 @@ -23,7 +23,12 @@
  #include <errno.h>
@@ -17,27 +17,12 @@ $NetBSD: patch-src_polkitbackend_polkitbackendinteractiveauthority.c,v 1.3 2015/
  #include <string.h>
  #include <glib/gstdio.h>
  #include <locale.h>
-@@ -2113,15 +2118,23 @@ get_users_in_net_group (PolkitIdentity  
+@@ -2224,7 +2229,7 @@ get_users_in_net_group (PolkitIdentity  
    ret = NULL;
    name = polkit_unix_netgroup_get_name (POLKIT_UNIX_NETGROUP (group));
  
-+#ifdef BSD_NETGROUP
-+  setnetgrent (name);
-+#else
+-#ifdef HAVE_SETNETGRENT_RETURN
++#if HAVE_SETNETGRENT_RETURN && !defined(__NetBSD__)
    if (setnetgrent (name) == 0)
      {
        g_warning ("Error looking up net group with name %s: %s", name, g_strerror (errno));
-       goto out;
-     }
-+#endif
- 
-   for (;;)
-     {
-+#ifdef BSD_NETGROUP
-+      const char *hostname, *username, *domainname;
-+#else
-       char *hostname, *username, *domainname;
-+#endif
-       PolkitIdentity *user;
-       GError *error = NULL;
- 

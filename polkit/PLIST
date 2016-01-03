@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/02 14:55:36 bsiegert Exp $
+@comment $NetBSD$
 bin/pk-example-frobnicate
 bin/pkaction
 bin/pkcheck
