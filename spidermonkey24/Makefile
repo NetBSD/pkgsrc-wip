@@ -9,15 +9,13 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.mozilla.org/en/SpiderMonkey
 COMMENT=	Standalone JavaScript implementation in C
-LICENSE=	mpl-1.1
+LICENSE=	mpl-2.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/js/src
 
 USE_TOOLS+=		pkg-config perl:build gmake
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-
-MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-strip
@@ -47,6 +45,5 @@ PLIST_SUBST+=	ARCH=${MACHINE_ARCH}
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

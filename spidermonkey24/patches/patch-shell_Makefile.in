@@ -1,6 +1,6 @@
 $NetBSD: patch-shell_Makefile.in,v 1.1 2014/02/06 15:12:18 fhajny Exp $
 
---- shell/Makefile.in.orig	2013-09-10 03:43:36.000000000 +0000
+--- shell/Makefile.in.orig	2013-10-29 20:40:20.000000000 +0000
 +++ shell/Makefile.in
 @@ -27,6 +27,9 @@ LIBS      = $(NSPR_LIBS) $(EDITLINE_LIBS
  ifdef MOZ_NATIVE_FFI

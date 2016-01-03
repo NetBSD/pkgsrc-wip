@@ -1,8 +1,8 @@
 $NetBSD: patch-ctypes_CTypes.h,v 1.1 2014/02/06 15:12:18 fhajny Exp $
 
---- ctypes/CTypes.h.orig	2013-09-10 03:43:34.000000000 +0000
+--- ctypes/CTypes.h.orig	2013-11-19 19:42:43.000000000 +0000
 +++ ctypes/CTypes.h
-@@ -13,6 +13,23 @@
+@@ -16,6 +16,23 @@
  
  #include "js/HashTable.h"
  

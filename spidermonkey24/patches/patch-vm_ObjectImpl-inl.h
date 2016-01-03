@@ -1,6 +1,6 @@
 $NetBSD: patch-vm_ObjectImpl-inl.h,v 1.1 2014/02/06 15:12:18 fhajny Exp $
 
---- vm/ObjectImpl-inl.h.orig	2013-09-10 03:43:39.000000000 +0000
+--- vm/ObjectImpl-inl.h.orig	2013-10-29 20:40:17.000000000 +0000
 +++ vm/ObjectImpl-inl.h
 @@ -364,7 +364,7 @@ js::ObjectImpl::zone() const
  js::ObjectImpl::readBarrier(ObjectImpl *obj)

@@ -1,6 +1,6 @@
 $NetBSD: patch-jsnativestack.cpp,v 1.1 2014/02/06 15:12:18 fhajny Exp $
 
---- jsnativestack.cpp.orig	2013-09-10 03:43:36.000000000 +0000
+--- jsnativestack.cpp.orig	2013-10-29 20:40:20.000000000 +0000
 +++ jsnativestack.cpp
 @@ -114,7 +114,7 @@ js::GetNativeStackBaseImpl()
      pthread_attr_init(&sattr);

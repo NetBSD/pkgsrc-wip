@@ -1,6 +1,6 @@
 $NetBSD: patch-ctypes_libffi_configure,v 1.1 2014/02/06 15:12:18 fhajny Exp $
 
---- ctypes/libffi/configure.orig	2013-01-04 23:44:34.000000000 +0000
+--- ctypes/libffi/configure.orig	2013-10-29 20:40:26.000000000 +0000
 +++ ctypes/libffi/configure
 @@ -11278,7 +11278,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)

@@ -2,7 +2,7 @@ $NetBSD: patch-jit_AsmJSSignalHandlers.cpp,v 1.1 2014/02/06 15:12:18 fhajny Exp 
 
 * REG_EIP is not defined on Solaris/SunOS, use REG_PC instead.
 
---- jit/AsmJSSignalHandlers.cpp.orig	2013-09-11 03:22:33.000000000 +0000
+--- jit/AsmJSSignalHandlers.cpp.orig	2013-10-29 20:40:19.000000000 +0000
 +++ jit/AsmJSSignalHandlers.cpp
 @@ -59,10 +59,11 @@ using namespace mozilla;
  #elif defined(__linux__) || defined(SOLARIS)
