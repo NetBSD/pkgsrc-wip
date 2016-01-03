@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (xmlsig-1.0.1.tar.gz) = aa4236e7ff40d7ccb96b5848383c5926e69feb1b
+RMD160 (xmlsig-1.0.1.tar.gz) = 833be7c4b5d1da887a6f211c0e75e9a481de3a50
+Size (xmlsig-1.0.1.tar.gz) = 20821263 bytes
+SHA1 (patch-src_TrustVerifier.cpp) = 9353a1449a1b167592c1c56fb72b68a683ce5f1b
+SHA1 (patch-src_X509Certificate.cpp) = bd97449c0ec12c8b5b6423d31955e62728071dc1
+SHA1 (patch-src_X509Certificate.h) = 7a270ffa1090f6650b0d16b1204e7240052d737f
