@@ -19,8 +19,6 @@ SVN_MODULE.xmlsig=	xmlsig
 WRKSRC=		${WRKDIR}/${SVN_MODULE.xmlsig}
 
 CONFIGURE_DIRS= perl
-#PERL5_CONFIGURE_DIRS= perl
-#BUILD_TARGET=	perl
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl
 
