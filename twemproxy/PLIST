@@ -1,0 +1,6 @@
+@comment $NetBSD$
+man/man8/nutcracker.8
+sbin/nutcracker
+share/examples/twemproxy/nutcracker.leaf.yml
+share/examples/twemproxy/nutcracker.root.yml
+share/examples/twemproxy/nutcracker.yml
