@@ -565,6 +565,7 @@ SUBDIR+=	eciadsl-usermode
 SUBDIR+=	eclipse
 SUBDIR+=	ecore
 SUBDIR+=	edb
+SUBDIR+=	edbrowse
 SUBDIR+=	edelib
 SUBDIR+=	editorconfig-core
 SUBDIR+=	edje
