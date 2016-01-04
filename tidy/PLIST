@@ -6,6 +6,6 @@ include/tidyenum.h
 include/tidyplatform.h
 lib/libtidy.so
 lib/libtidy.so.5
-lib/libtidy.so.5.0.0
+lib/libtidy.so.5.1.25
 lib/libtidys.a
 man/man1/tidy.1

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (tidy-html5-5.0.0.tar.gz) = 6ed058ba2528c170d2beee5df4aff532da4415b5
-RMD160 (tidy-html5-5.0.0.tar.gz) = bb5a4e41cf1e7b15c2c04b28295bf540683ba1c0
-SHA512 (tidy-html5-5.0.0.tar.gz) = e2433d2df9879a19f92c9b82d9624331a42daa97997a91aaa39222802dd17bd4b28bf7737e6986c023bba25bd64a3101f9eeda83172528d23177ce244f6b1c16
-Size (tidy-html5-5.0.0.tar.gz) = 680608 bytes
+SHA1 (tidy-html5-5.1.25.tar.gz) = 2a2cd09298901c5c578253ce103e77f0755187c2
+RMD160 (tidy-html5-5.1.25.tar.gz) = 1a57a3a4975d4988e8f87aa40cfff0ca65afdb47
+SHA512 (tidy-html5-5.1.25.tar.gz) = d58757858cdc41b064e6002d30ff5a7059dca9c4a25f4f8a7cb8ffbfc175b1bddc92c0f7139660872a86024e9d96797637872bc44dda1652d13dec883be296f8
+Size (tidy-html5-5.1.25.tar.gz) = 645230 bytes

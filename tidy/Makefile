@@ -1,17 +1,15 @@
 # $NetBSD$
 
-DISTNAME=	tidy-html5-5.0.0
+DISTNAME=	tidy-html5-5.1.25
 PKGNAME=	${DISTNAME:S/-html5//}
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htacg/}
 GITHUB_PROJECT=	tidy-html5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/htacg/tidy-html5
+HOMEPAGE=	http://www.html-tidy.org/
 COMMENT=	Fixes and tidies up HTML files
 LICENSE=	mit
-
-#CONFIGURE_DIRS=	build/cmake
 
 USE_LANGUAGES=	c c++
 
