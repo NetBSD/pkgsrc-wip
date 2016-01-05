@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/30 22:16:52 jonthn Exp $
+@comment $NetBSD$
+bin/jemalloc-config
 bin/jemalloc.sh
-bin/jepprof
+bin/jeprof
 include/jemalloc/jemalloc.h
-lib/libjemalloc.1.${SOEXT}
+lib/libjemalloc.2.${SOEXT}
 lib/libjemalloc.a
 lib/libjemalloc.${SOEXT}
 lib/libjemalloc_pic.a
+lib/pkgconfig/jemalloc.pc
 man/man3/jemalloc.3
 share/doc/jemalloc/jemalloc.html
