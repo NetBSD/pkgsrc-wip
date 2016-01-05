@@ -1,6 +1,12 @@
 $NetBSD$
 
-SHA1 (bareos-Release-15.2.1.tar.gz) = 79d7a5a404c99df32f90f1a883d5e7ad3a9f8610
-RMD160 (bareos-Release-15.2.1.tar.gz) = 3e5b26497b58c72c2ffc1a7666455f54a01c24c7
-Size (bareos-Release-15.2.1.tar.gz) = 3904573 bytes
+SHA1 (bareos-Release-15.2.2.tar.gz) = 2a3792389fe4c337d95dda54429dfc854cd7d225
+RMD160 (bareos-Release-15.2.2.tar.gz) = 2fbb0176e0aba7de5eae2765e006cab0800b0c60
+Size (bareos-Release-15.2.2.tar.gz) = 3928036 bytes
+SHA1 (patch-GNUmakefile.in) = 9afa4bf9e0818b2e969174b898c10eadcc6768b6
+SHA1 (patch-Makefile.in) = 020827dae3b780a3f8e9716ed15bae90ce40a44b
 SHA1 (patch-aa) = b60a5b11dc36e6a6ebc30a685be59d28ff765b16
+SHA1 (patch-src_console_Makefile.in) = 15754702725b7fe20283a01c328ba272c4adbbb3
+SHA1 (patch-src_dird_Makefile.in) = bbe4df434087683607c5de8219d3bf9228736fab
+SHA1 (patch-src_filed_Makefile.in) = 50a119b7dc66faf0ddf9a5f2a87c6a643ea306b4
+SHA1 (patch-src_stored_Makefile.in) = e126612e0785c668b5cbe4cd6ebbc6d4bdb3e977

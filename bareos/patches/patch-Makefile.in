@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.in.old	2016-01-05 15:09:44.000000000 +0000
++++ Makefile.in
+@@ -40,7 +40,7 @@ LIBTOOL_DEPS = @LIBTOOL_DEPS@
+ 
+ #-------------------------------------------------------------------------
+ 
+-all: info Makefile
++all: Makefile
+ 	@for I in ${all_subdirs}; \
+ 	  do (cd $$I; echo "==>Entering directory `pwd`"; \
+ 	      $(MAKE) DESTDIR=$(DESTDIR) $@ || (echo ""; echo ""; echo "  ====== Error in `pwd` ======"; \

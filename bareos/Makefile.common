@@ -1,5 +1,5 @@
-DISTNAME=	bareos-Release-15.2.1
-PKGNAME=	bareos-15.2.1
+DISTNAME=	bareos-Release-15.2.2
+PKGNAME=	bareos-15.2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	-https://github.com/bareos/bareos/archive/Release/${DISTNAME:S/bareos-Release-//}.tar.gz
 EXTRACT_SUFX=	.tar.gz
@@ -27,8 +27,8 @@ BAREOS_SD_USER?=        bareos-sd
 PKG_GROUPS_VARS+=       BAREOS_GROUP
 PKG_USERS_VARS=         BAREOS_DIR_USER BAREOS_SD_USER
 
-#PKG_SYSCONFSUBDIR?=     bareos
-BAREOS_PIDDIR?=         ${VARBASE}/run
+PKG_SYSCONFSUBDIR?=     bareos
+BAREOS_PIDDIR?=         ${VARBASE}/run/bareos
 BAREOS_WORKINGDIR?=     ${VARBASE}/spool/bareos
 
 BUILD_DEFS+=            VARBASE BAREOS_PIDDIR BAREOS_WORKINGDIR

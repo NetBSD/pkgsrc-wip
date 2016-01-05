@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- GNUmakefile.in.old	2016-01-05 15:09:55.000000000 +0000
++++ GNUmakefile.in
+@@ -40,7 +40,7 @@ LIBTOOL_DEPS = @LIBTOOL_DEPS@
+ 
+ #-------------------------------------------------------------------------
+ 
+-all: info Makefile subdirs
++all: Makefile subdirs
+ 	@echo "bareos was built successfully"
+ 
+ SUBDIRS = ${all_subdirs}

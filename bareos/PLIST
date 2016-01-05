@@ -3,11 +3,6 @@ bin/bconsole
 bin/bregex
 bin/bsmtp
 bin/bwild
-etc/bareos/bareos-dir.conf
-etc/bareos/bareos-fd.conf
-etc/bareos/bareos-sd.conf
-etc/bareos/bconsole.conf
-etc/bareos/mtx-changer.conf
 lib/BareosDirPluginBaseclass.py
 lib/BareosDirWrapper.py
 lib/BareosFdPluginBaseclass.py
@@ -55,6 +50,7 @@ libexec/bareos/ddl/updates/${BAREOS_DB}.12_14.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.14_2001.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.2001_2002.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.2002_2003.sql
+libexec/bareos/ddl/updates/${BAREOS_DB}.2003_2004.sql
 libexec/bareos/ddl/versions.map
 libexec/bareos/delete_catalog_backup
 libexec/bareos/disk-changer
