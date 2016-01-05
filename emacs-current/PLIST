@@ -2628,6 +2628,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/slovak.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/slovak.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/symbol-ksc.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/symbol-ksc.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/tamil-dvorak.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/tamil-dvorak.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/thai.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/thai.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/tibetan.el.gz
@@ -2836,8 +2838,6 @@ share/emacs/${PKGVERSION}/lisp/net/eudcb-ldap.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-ldap.elc
 share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.elc
-share/emacs/${PKGVERSION}/lisp/net/eudcb-ph.el.gz
-share/emacs/${PKGVERSION}/lisp/net/eudcb-ph.elc
 share/emacs/${PKGVERSION}/lisp/net/eww.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eww.elc
 share/emacs/${PKGVERSION}/lisp/net/gnutls.el.gz
@@ -3021,6 +3021,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/cust-print.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cust-print.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
