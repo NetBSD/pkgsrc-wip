@@ -1,0 +1,3 @@
+o Still not ready to be imported because probably all the existing programs in
+  pkgsrc expect tidy headers in <tidy/...>.
+o Add a "doc" option like www/tidy
