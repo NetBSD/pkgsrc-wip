@@ -1,3 +1,21 @@
-o Still not ready to be imported because probably all the existing programs in
-  pkgsrc expect tidy headers in <tidy/...>.
 o Add a "doc" option like www/tidy
+o Still not ready to be imported because probably all the existing programs in
+  pkgsrc expect tidy headers in <tidy/...>:
+  + DEPENDS on tidy:
+   - meta-pkgs/netbsd-doc
+   - doc/guide/Makefile.common (used by meta-pkgs/pkgsrc-guide-tools)
+  + Change in htdocs/share/mk/doc.docbook.mk:63:
+     REQPKGS_HTML=   tidy>=20021108
+  + Other tidy users (via buildlink3.mk):
+   - editors/abiword-plugins/Makefile	-- hardcode tidy/tidy.h in configure,
+       plugins/mht/xp/tidyReader.h
+   - mail/prayer/Makefile		-- hardcode tidy/ in
+       patches/patch-defaults_Config
+   - www/kdewebdev4/Makefile		-- dunno, check
+       ${WRKSRC}/klinkstatus/cmake/modules/FindLibTidy.cmake
+       (probably it will work but it will not be able to recognise the
+       TIDY_ULONG_VERSION)
+   - www/php-tidy/Makefile		-- should be ok
+   - x11/kde-baseapps4/Makefile		-- like www/kdewebdev4, check
+       ${WRKSRC}/konq-plugins/validators/FindLibTidy.cmake
+   - wip/gurlchecker/options.mk		-- should be ok
