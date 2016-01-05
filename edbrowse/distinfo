@@ -4,3 +4,4 @@ SHA1 (edbrowse-3.6.0.1.zip) = 9c4f158bd1492ac216a6f80e32143c2955910327
 RMD160 (edbrowse-3.6.0.1.zip) = 6ecc8f955bededac87e8976f10aa7b92bd5194f1
 SHA512 (edbrowse-3.6.0.1.zip) = b06b0631fd6305631abf57b5d6a7b51233cea51b4d02f92235d350872095a010e5982d5478f4a344d2e6c9e87fbae037880f34ef29aaa6cdc8c4da78089fc308
 Size (edbrowse-3.6.0.1.zip) = 582275 bytes
+SHA1 (patch-src_buffers.c) = bbadde0840e88b6e345701cc0db6257f51a34a19
