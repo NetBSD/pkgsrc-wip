@@ -1,8 +1,14 @@
-DISTNAME=	bareos-Release-15.2.2
-PKGNAME=	bareos-15.2.2
+GITHUB_PROJECT= bareos
+PKGNAME=        ${GITHUB_PROJECT}-${VERSION}
+DISTNAME=	bareos
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=bareos/}
+DIST_SUBDIR=    ${GITHUB_PROJECT}
+TAG=		Release
+GITHUB_TAG=     ${TAG}/${PKGVERSION_NOREV}
+WRKSRC=         ${WRKDIR}/${DISTNAME}-${TAG}-${PKGVERSION_NOREV}
+
+VERSION=        15.2.2
 CATEGORIES=	sysutils
-MASTER_SITES=	-https://github.com/bareos/bareos/archive/Release/${DISTNAME:S/bareos-Release-//}.tar.gz
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	paul@paulbsd.com
 HOMEPAGE=	http://www.bareos.org/

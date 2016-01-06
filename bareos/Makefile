@@ -1,4 +1,4 @@
-#PKGREVISION=		1
+PKGREVISION=		1
 
 .include "options.mk"
 
