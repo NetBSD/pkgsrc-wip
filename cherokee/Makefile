@@ -4,10 +4,11 @@
 PKGNAME=	cherokee-1.2.104
 GIT_COMMIT=	a917d76ed9b4272478ca973084ec1037a950c443
 DISTNAME=	${PKGNAME}-${GIT_COMMIT}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-https://github.com/cherokee/webserver/archive/${GIT_COMMIT}.tar.gz
 
-MAINTAINER=	gianni-pkgsrc-wio@daprile.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cherokee-project.com/
 COMMENT=	Flexible and fast web server
 LICENSE=	gnu-gpl-v2
@@ -54,7 +55,8 @@ SUBST_MESSAGE.python= 	Fixing Python references
 SUBST_FILES.python= 	po/admin/generate_POTFILESin.py
 SUBST_VARS.python= 	PYTHONBIN
 
-REPLACE_PYTHON= 	cherokee/cherokee-admin-launcher \
+REPLACE_PYTHON= 	admin/server.py \
+			cherokee/cherokee-admin-launcher \
 			cherokee/cherokee-tweak
 
 # Needs installation:

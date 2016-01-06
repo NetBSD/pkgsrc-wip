@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cherokee/main_admin.c.orig	2014-10-17 17:20:36.000000000 +0000
+--- cherokee/main_admin.c.orig	2014-12-10 12:35:45.000000000 +0000
 +++ cherokee/main_admin.c
 @@ -556,7 +556,7 @@ check_for_python (void)
  	int         re;

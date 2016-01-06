@@ -1,6 +1,6 @@
 $NetBSD$
 
---- autogen.sh.orig	2014-10-17 17:20:36.000000000 +0000
+--- autogen.sh.orig	2014-12-10 12:35:45.000000000 +0000
 +++ autogen.sh
 @@ -29,14 +29,8 @@ test -z "$AUTOMAKE" && AUTOMAKE=automake
  test -z "$ACLOCAL" && ACLOCAL=aclocal
