@@ -4,7 +4,7 @@ $NetBSD$
 +++ po/admin/generate_POTFILESin.py
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python2
-+#!/usr/pkg/bin/python2.7
++#!@PYTHONBIN@
  
  # Cherokee POTFILES.in generator
  #

@@ -6,4 +6,4 @@ Size (cherokee-1.2.104nb1-a917d76ed9b4272478ca973084ec1037a950c443.tar.gz) = 531
 SHA1 (patch-admin_wizards_php.py) = 360cab90695efa1dfaf4295c3c124e6634302655
 SHA1 (patch-autogen.sh) = eb21f6ba7e9b4dc865be0009aae55ea09bc19822
 SHA1 (patch-cherokee_main__admin.c) = 3c648df7bc5e4d35c89e7232caf990cda416f2a9
-SHA1 (patch-po_admin_generate__POTFILESin.py) = 3fb0aeffe739f3b15a2ccd6d64fc5106402b4aff
+SHA1 (patch-po_admin_generate__POTFILESin.py) = eac5f273a81a53b5dbfef21f4045226e7d1dd6ee
