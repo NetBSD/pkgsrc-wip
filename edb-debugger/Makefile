@@ -14,7 +14,7 @@ COMMENT=	Cross platform x86/x86-64 debugger
 LICENSE=	gnu-gpl-v2
 
 do-configure:
-	${RUN} ${WRKSRC} && ${QTDIR}/bin/qmake DEFAULT_PLUGIN_PATH="${PREFIX}/lib/${PKGBASE}/"
+	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake DEFAULT_PLUGIN_PATH="${PREFIX}/lib/${PKGBASE}/"
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
