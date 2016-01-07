@@ -448,6 +448,7 @@ include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
 lib/clang/3.8.0/include/Intrin.h
+lib/clang/3.8.0/include/__clang_cuda_runtime_wrapper.h
 lib/clang/3.8.0/include/__stddef_max_align_t.h
 lib/clang/3.8.0/include/__wmmintrin_aes.h
 lib/clang/3.8.0/include/__wmmintrin_pclmul.h
@@ -470,7 +471,6 @@ lib/clang/3.8.0/include/bmi2intrin.h
 lib/clang/3.8.0/include/bmiintrin.h
 lib/clang/3.8.0/include/cpuid.h
 lib/clang/3.8.0/include/cuda_builtin_vars.h
-lib/clang/3.8.0/include/cuda_runtime.h
 lib/clang/3.8.0/include/emmintrin.h
 lib/clang/3.8.0/include/f16cintrin.h
 lib/clang/3.8.0/include/float.h
@@ -490,6 +490,7 @@ lib/clang/3.8.0/include/mm_malloc.h
 lib/clang/3.8.0/include/mmintrin.h
 lib/clang/3.8.0/include/module.modulemap
 lib/clang/3.8.0/include/nmmintrin.h
+lib/clang/3.8.0/include/pkuintrin.h
 lib/clang/3.8.0/include/pmmintrin.h
 lib/clang/3.8.0/include/popcntintrin.h
 lib/clang/3.8.0/include/prfchwintrin.h
