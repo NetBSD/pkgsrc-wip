@@ -13,6 +13,8 @@ HOMEPAGE=	http://codef00.com/projects#debugger
 COMMENT=	Cross platform x86/x86-64 debugger
 LICENSE=	gnu-gpl-v2
 
+USE_LANGUAGES=	c c++
+
 do-configure:
 	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake -makefile DEFAULT_PLUGIN_PATH="${PREFIX}/lib/${PKGBASE}/"
 
