@@ -16,3 +16,12 @@ $NetBSD$
  
  	# arch include paths
  	macx {
+@@ -34,7 +35,7 @@ unix {
+ 		include(plugins-x86_64.pri)
+ 	}
+ 
+-	!macx:contains(QMAKE_HOST.arch, x86_64) {
++	!macx:contains(QMAKE_HOST.arch, x86_64|amd64) {
+ 		INCLUDEPATH += $$LEVEL/include/arch/x86_64
+ 		include(plugins-x86_64.pri)
+ 	}

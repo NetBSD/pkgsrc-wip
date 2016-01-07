@@ -29,10 +29,11 @@ $NetBSD$
  	macx-* {
  		VPATH       += $$LEVEL/include/os/unix/osx
  		INCLUDEPATH += $$LEVEL/include/os/unix/osx /opt/local/include
-@@ -201,6 +196,16 @@ unix {
+@@ -201,7 +196,17 @@ unix {
  		INCLUDEPATH += arch/x86_64 $$LEVEL/include/arch/x86_64
  	}
  
+-	!macx:contains(QMAKE_HOST.arch, x86_64) {
 +	netbsd-* {
 +		VPATH       += $$LEVEL/include/os/unix/netbsd
 +		INCLUDEPATH += $$LEVEL/include/os/unix/netbsd
@@ -43,9 +44,10 @@ $NetBSD$
 +		INCLUDEPATH += $$LEVEL/include/os/unix/openbsd /usr/local/include
 +	}
 +
- 	!macx:contains(QMAKE_HOST.arch, x86_64) {
++	!macx:contains(QMAKE_HOST.arch, x86_64|amd64) {
  		VPATH       += arch/x86_64 $$LEVEL/include/arch/x86_64
  		INCLUDEPATH += arch/x86_64 $$LEVEL/include/arch/x86_64
+ 	}
 @@ -221,6 +226,6 @@ unix {
  	linux-g++*   : QMAKE_LFLAGS += -rdynamic $$(LDFLAGS)
  	macx-clang*  : QMAKE_LFLAGS += -rdynamic $$(LDFLAGS)
