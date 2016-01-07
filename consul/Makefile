@@ -10,8 +10,9 @@ COMMENT=	Tool for service discovery, monitoring and configuration
 LICENSE=	mpl-2.0
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTFILES+=	${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
-SITES.${DISTNAME}-deps.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
+DEPS=		${DISTNAME}-deps-20160107.tar.gz
+DISTFILES+=	${DEFAULT_DISTFILES} ${DEPS}
+SITES.${DEPS}=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 
 WRKSRC=		${WRKDIR}/src/github.com/hashicorp/consul
 
@@ -30,7 +31,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}
 	${MV} ${WRKDIR}/${DISTNAME}/* ${WRKSRC}
 
-deps: extract
+getdeps: extract
 	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} deps ${MAKE_FLAGS}
 
 do-build:

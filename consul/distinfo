@@ -1,14 +1,10 @@
 $NetBSD$
 
-SHA1 (consul-0.6.0-deps.tar.gz) = a0a159930e08a97a458fe260c3b132150019c59f
-RMD160 (consul-0.6.0-deps.tar.gz) = dbe75c2a0262306ddad95edc5cab287d864fa831
-SHA512 (consul-0.6.0-deps.tar.gz) = ad97be504cb9623f2add67607abffa6710c49b59d475086c187ae9aa686ac4543a2de8ca09355f958a6adb5ce45177db77f9351c65806eaad0174763c8bb5376
-Size (consul-0.6.0-deps.tar.gz) = 36566770 bytes
+SHA1 (consul-0.6.0-deps-20160107.tar.gz) = 6b7548a6479fef5e790a065e43899bb15dfe91ce
+RMD160 (consul-0.6.0-deps-20160107.tar.gz) = c26bfa79c6244407be5339757e885b366fab3b83
+SHA512 (consul-0.6.0-deps-20160107.tar.gz) = 47adf427509eb66cb77a3e81a427824101d1f7e1fdc5e839c56a3f8d71c14b86f261dcede0e752a6dcb46d83043d956f319ab392b8a2c1c50127dc28a0a39d59
+Size (consul-0.6.0-deps-20160107.tar.gz) = 37924371 bytes
 SHA1 (consul-0.6.0.tar.gz) = 86c156079c9138b11580ac1dedd5acbbe7a0f6e3
 RMD160 (consul-0.6.0.tar.gz) = cc5481473ad55978b62cda5af7bfcbcd6978ff3c
 SHA512 (consul-0.6.0.tar.gz) = 0caea4f7b45424c0d9d07cd931c7c3ae99c38a865d29c0d21affd11a92bef6459ab6d55d98b4d3b6c1a77b51cd92444f3ca157160e2febc1377d8ea92c8a3b49
 Size (consul-0.6.0.tar.gz) = 1966751 bytes
-SHA1 (patch-.._.._.._golang.org_x_crypto_util__solaris.go) = 55011f421620199634d3dade15da365831df0d8c
-SHA1 (patch-.._.._fsouza_go-dockerclient_external_github.com_Sirupsen_logrus_terminal_solaris.go) = f9dd9eafefa30c84b5a98109c20d14a828c5dc09
-SHA1 (patch-.._.._fsouza_go-dockerclient_external_github.com_docker_docker_pkg_system_stat_solaris.go) = 431566fe7d5350888e918a5ffc1ce49d4a96bebd
-SHA1 (patch-.._.._fsouza_go-dockerclient_external_github.com_docker_docker_pkg_system_stat_unsupported.go) = 0b550ceec7123de545b7066898a8ce816001859d
