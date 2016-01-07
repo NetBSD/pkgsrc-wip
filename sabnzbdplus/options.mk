@@ -34,7 +34,8 @@ DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 ### par2 support
 ###
 .if !empty(PKG_OPTIONS:Myenc)
-DEPENDS+=	${PYPKGPREFIX}-yenc-[0-9]*:../../wip/py-yenc
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-yenc
+DEPENDS+=	${PYPKGPREFIX}-yenc-[0-9]*:../../converters/py-yenc
 .endif
 
 ###

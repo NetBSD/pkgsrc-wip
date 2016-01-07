@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/23 20:54:49 wongk Exp $
-${PYSITELIB}/_yenc.so
-${PYSITELIB}/yenc.py
-${PYSITELIB}/yenc.pyc
-${PYSITELIB}/yenc.pyo
