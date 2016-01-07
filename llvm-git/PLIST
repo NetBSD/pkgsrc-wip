@@ -42,6 +42,7 @@ include/llvm-c/BitReader.h
 include/llvm-c/BitWriter.h
 include/llvm-c/Core.h
 include/llvm-c/Disassembler.h
+include/llvm-c/ErrorHandling.h
 include/llvm-c/ExecutionEngine.h
 include/llvm-c/IRReader.h
 include/llvm-c/Initialization.h
@@ -56,6 +57,7 @@ include/llvm-c/Transforms/IPO.h
 include/llvm-c/Transforms/PassManagerBuilder.h
 include/llvm-c/Transforms/Scalar.h
 include/llvm-c/Transforms/Vectorize.h
+include/llvm-c/Types.h
 include/llvm-c/lto.h
 include/llvm/ADT/APFloat.h
 include/llvm/ADT/APInt.h
@@ -304,6 +306,19 @@ include/llvm/Config/AsmPrinters.def
 include/llvm/Config/Disassemblers.def
 include/llvm/Config/Targets.def
 include/llvm/Config/llvm-config.h
+include/llvm/DebugInfo/CodeView/CodeView.h
+include/llvm/DebugInfo/CodeView/CodeViewOStream.h
+include/llvm/DebugInfo/CodeView/FieldListRecordBuilder.h
+include/llvm/DebugInfo/CodeView/FunctionId.h
+include/llvm/DebugInfo/CodeView/Line.h
+include/llvm/DebugInfo/CodeView/ListRecordBuilder.h
+include/llvm/DebugInfo/CodeView/MemoryTypeTableBuilder.h
+include/llvm/DebugInfo/CodeView/MethodListRecordBuilder.h
+include/llvm/DebugInfo/CodeView/TypeIndex.h
+include/llvm/DebugInfo/CodeView/TypeRecord.h
+include/llvm/DebugInfo/CodeView/TypeRecordBuilder.h
+include/llvm/DebugInfo/CodeView/TypeSymbolEmitter.h
+include/llvm/DebugInfo/CodeView/TypeTableBuilder.h
 include/llvm/DebugInfo/DIContext.h
 include/llvm/DebugInfo/DWARF/DWARFAbbreviationDeclaration.h
 include/llvm/DebugInfo/DWARF/DWARFAcceleratorTable.h
@@ -476,7 +491,6 @@ include/llvm/IR/MDBuilder.h
 include/llvm/IR/Mangler.h
 include/llvm/IR/Metadata.def
 include/llvm/IR/Metadata.h
-include/llvm/IR/MetadataTracking.h
 include/llvm/IR/Module.h
 include/llvm/IR/ModuleSlotTracker.h
 include/llvm/IR/NoFolder.h
@@ -532,6 +546,7 @@ include/llvm/MC/MCExternalSymbolizer.h
 include/llvm/MC/MCFixedLenDisassembler.h
 include/llvm/MC/MCFixup.h
 include/llvm/MC/MCFixupKindInfo.h
+include/llvm/MC/MCFragment.h
 include/llvm/MC/MCInst.h
 include/llvm/MC/MCInstBuilder.h
 include/llvm/MC/MCInstPrinter.h
@@ -727,6 +742,7 @@ include/llvm/Support/TargetParser.h
 include/llvm/Support/TargetRegistry.h
 include/llvm/Support/TargetSelect.h
 include/llvm/Support/ThreadLocal.h
+include/llvm/Support/ThreadPool.h
 include/llvm/Support/Threading.h
 include/llvm/Support/TimeValue.h
 include/llvm/Support/Timer.h
@@ -773,7 +789,9 @@ include/llvm/Target/TargetSelectionDAG.td
 include/llvm/Target/TargetSelectionDAGInfo.h
 include/llvm/Target/TargetSubtargetInfo.h
 include/llvm/Transforms/IPO.h
+include/llvm/Transforms/IPO/ForceFunctionAttrs.h
 include/llvm/Transforms/IPO/FunctionImport.h
+include/llvm/Transforms/IPO/InferFunctionAttrs.h
 include/llvm/Transforms/IPO/InlinerPass.h
 include/llvm/Transforms/IPO/LowerBitSets.h
 include/llvm/Transforms/IPO/PassManagerBuilder.h
@@ -822,6 +840,7 @@ lib/libLLVMBitReader.a
 lib/libLLVMBitWriter.a
 lib/libLLVMCodeGen.a
 lib/libLLVMCore.a
+lib/libLLVMDebugInfoCodeView.a
 lib/libLLVMDebugInfoDWARF.a
 lib/libLLVMDebugInfoPDB.a
 lib/libLLVMExecutionEngine.a
