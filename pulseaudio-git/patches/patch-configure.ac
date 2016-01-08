@@ -6,7 +6,7 @@ $NetBSD$
   file framework will install them in the right place.
 * Avoid hardcoded SDK paths on Darwin.
 
---- configure.ac.orig	2015-12-19 23:04:33.000000000 +0000
+--- configure.ac.orig	2016-01-08 22:26:44.000000000 +0000
 +++ configure.ac
 @@ -21,7 +21,7 @@
  
@@ -25,25 +25,7 @@ $NetBSD$
          os_is_linux=1
      ;;
      freebsd*)
-@@ -463,6 +462,17 @@ AC_TYPE_OFF_T
- AC_TYPE_UID_T
- AC_CHECK_DECLS(environ)
- 
-+AC_CHECK_SIZEOF(void*)
-+
-+fast_64bit_operations="no"
-+# This check covers x32-ABI
-+AC_CHECK_DECL([__x86_64__], [fast_64bit_operations="yes"], [], [])
-+if test "x$fast_64bit_operations" = "xno"; then
-+    AS_IF([test $ac_cv_sizeof_voidp -ge 8], [fast_64bit_operations="yes"])
-+fi
-+
-+AS_IF([test "x$fast_64bit_operations" = "xyes"], AC_DEFINE([HAVE_FAST_64BIT_OPERATIONS], 1, [Have CPU with fast 64-bit operations?]))
-+
- # SIGXCPU
- AX_CHECK_DEFINE([signal.h], [SIGXCPU], [HAVE_SIGXCPU=1], [HAVE_SIGXCPU=0])
- AS_IF([test "x$HAVE_SIGXCPU" = "x1"], AC_DEFINE([HAVE_SIGXCPU], 1, [Have SIGXCPU?]))
-@@ -523,15 +533,9 @@ AC_SEARCH_LIBS([backtrace], [execinfo ub
+@@ -534,15 +533,9 @@ AC_SEARCH_LIBS([backtrace], [execinfo ub
  if test "x$os_is_darwin" = "x1" ; then
      AC_MSG_CHECKING([looking for Apple CoreService Framework])
      # How do I check a framework "library" - AC_CHECK_LIB prob. won't work??, just assign LIBS & hope
@@ -61,7 +43,7 @@ $NetBSD$
      AC_DEFINE([HAVE_CLOCK_GETTIME], 1, [Using clock_gettime() replacement])
      HAVE_BONJOUR=1
  fi
-@@ -769,6 +773,13 @@ AM_CONDITIONAL([HAVE_OSS_WRAPPER], [test
+@@ -780,6 +773,13 @@ AM_CONDITIONAL([HAVE_OSS_WRAPPER], [test
  AS_IF([test "x$HAVE_OSS_OUTPUT" = "x1"], AC_DEFINE([HAVE_OSS_OUTPUT], 1, [Have OSS output?]))
  AS_IF([test "x$HAVE_OSS_WRAPPER" = "x1"], AC_DEFINE([HAVE_OSS_WRAPPER], 1, [Have OSS wrapper (padsp)?]))
  
@@ -75,7 +57,7 @@ $NetBSD$
  #### CoreAudio support (optional) ####
  
  AC_ARG_ENABLE([coreaudio-output],
-@@ -1002,7 +1013,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
+@@ -1016,7 +1016,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
  
  PA_MACHINE_ID="${sysconfdir}/machine-id"
  AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
@@ -84,7 +66,7 @@ $NetBSD$
  AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
  	      [Fallback machine-id file])
  
-@@ -1325,9 +1336,9 @@ fi
+@@ -1339,9 +1339,9 @@ fi
  
  PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
  AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
@@ -96,7 +78,7 @@ $NetBSD$
  AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
  
  PA_BINARY=${bindir}/pulseaudio${EXEEXT}
-@@ -1339,8 +1350,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+@@ -1353,8 +1353,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
  AC_SUBST(PA_SOEXT, [.so])
  AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
  
@@ -108,7 +90,7 @@ $NetBSD$
  
  #### Mac OSX specific stuff #####
  
-@@ -1356,17 +1368,6 @@ AC_ARG_WITH(mac-sysroot,
+@@ -1370,17 +1371,6 @@ AC_ARG_WITH(mac-sysroot,
      AS_HELP_STRING([--with-mac-sysroot=<path>], [SDK basedir to use as the logical root directory for headers and libraries.]),
      mac_sysroot=$withval, mac_sysroot="/Developer/SDKs/MacOSX10.5.sdk")
  
