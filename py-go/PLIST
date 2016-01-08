@@ -1,0 +1,7 @@
+@comment $NetBSD$
+${PYSITELIB}/pygo/__init__.py
+${PYSITELIB}/pygo/__init__.pyc
+${PYSITELIB}/pygo/__init__.pyo
+${PYSITELIB}/pygo/pygo.py
+${PYSITELIB}/pygo/pygo.pyc
+${PYSITELIB}/pygo/pygo.pyo

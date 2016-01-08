@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/_cdecimalfp.so
+${PYSITELIB}/_pydecimalfp.py
+${PYSITELIB}/_pydecimalfp.pyc
+${PYSITELIB}/_pydecimalfp.pyo
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/decimalfp.py
+${PYSITELIB}/decimalfp.pyc
+${PYSITELIB}/decimalfp.pyo

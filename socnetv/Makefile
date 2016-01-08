@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
-#
+# $NetBSD$
 
-DISTNAME=	SocNetV-0.90
-PKGNAME=	socnetv-0.90
+DISTNAME=	SocNetV-1.9
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=socnetv/}
 
@@ -11,21 +10,21 @@ HOMEPAGE=	http://socnetv.sourceforge.net/index.html
 COMMENT=	Social network analysis and visualisation application
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/socnetv-0.90
+WRKSRC=		${WRKDIR}/socnetv-1.9
 
-GNU_CONFIGURE=	yes
+QMAKE=			${QTDIR}/bin/qmake
 USE_TOOLS+=	gzip
-USE_LANGUAGES=	c c++
+USE_LANGUAGES= c++
 
-CONFIGURE_ARGS+=	--with-qt=${LOCALBASE}/qt4
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 post-extract:
 	gzip -d ${WRKSRC}/man/socnetv.1.gz
 
+do-configure:
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
+	${QMAKE} PREFIX=${PREFIX} INSTALLPATH=${PREFIX} socnetv.pro 
+
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.1.0
-.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
