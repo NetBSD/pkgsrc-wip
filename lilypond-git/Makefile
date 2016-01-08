@@ -25,6 +25,7 @@ BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 DEPENDS+=	tex-cyrillic-[0-9]*:../../print/tex-cyrillic
+DEPENDS+=	tex-tex-gyre-[0-9]*:../../fonts/tex-tex-gyre
 DEPENDS+=	tex-lh-[0-9]*:../../fonts/tex-lh
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
@@ -52,6 +53,15 @@ GCC_REQD+=		3.0.5
 GNU_CONFIGURE_INFODIR=	${PREFIX}/${PKGINFODIR}
 INFO_DIR=		${GNU_CONFIGURE_INFODIR}
 INFO_FILES=		YES
+
+# this doesn't work, and I don't know why
+CONFIGURE_ARGS+=	--with-texgyre-dir=${PREFIX}/share/texmf-dist/fonts/opentype/public/tex-gyre/
+# so manually fix it (see also configure.ac patch)
+SUBST_CLASSES+=		gyre
+SUBST_SED.gyre+=	-e "s,@@PREFIX@@,${PREFIX},"
+SUBST_FILES.gyre+=	configure.ac
+SUBST_STAGE.gyre+=	pre-configure
+SUBST_MESSAGE.gyre+=	Help configure find tex-gyre.
 
 CONFIGURE_ARGS+=	--disable-optimising
 CONFIGURE_ARGS+=	--with-ncsb-dir=${PREFIX}/share/fonts/urw

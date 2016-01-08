@@ -5,4 +5,4 @@ RMD160 (lilypond-2.17.95.tar.gz) = 651d91cf5f9b9a35458cbd5e07657f62cae3ccf2
 Size (lilypond-2.17.95.tar.gz) = 15960245 bytes
 SHA1 (patch-ab) = dde89081b612df1b21c47cb19206c83ef18a8b66
 SHA1 (patch-aclocal.m4) = b076271b3bf0920c6f49399773f59655a3cbe4d2
-SHA1 (patch-configure.ac) = 9f92335b0c28bc9fd4db99a7617b16990c1c5289
+SHA1 (patch-configure.ac) = 80100981ff2e2282131b1324d6f21d0bca4c5845

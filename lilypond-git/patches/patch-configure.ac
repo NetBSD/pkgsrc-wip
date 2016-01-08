@@ -2,9 +2,17 @@ $NetBSD: patch-configure.ac,v 1.2 2014/04/06 14:17:45 thomasklausner Exp $
 
 Disable c/c++ version check; it fails e.g. with clang emulating gcc.
 
---- configure.ac.orig	2014-04-06 12:44:15.000000000 +0000
+--- configure.ac.orig	2016-01-08 12:43:22.000000000 +0000
 +++ configure.ac
-@@ -109,10 +109,10 @@ STEPMAKE_PYTHON(REQUIRED, 2.4, 3.0)
+@@ -37,6 +37,7 @@ AC_ARG_WITH(texgyre-dir,
+ 		    [location of TeX Gyre fonts.])],
+     [TEXGYRE_DIR=$withval],
+     [TEXGYRE_DIR=""])
++TEXGYRE_DIR=@@PREFIX@@/share/texmf-dist/fonts/opentype/public/tex-gyre/
+ 
+ reloc_b=no
+ AC_ARG_ENABLE(relocation,
+@@ -111,10 +112,10 @@ STEPMAKE_PYTHON(REQUIRED, 2.4, 3.0)
  # __GNUC__, but that macro now unofficially means "the compiler
  # supports the GNU C extensions" -- the intel C compiler and clang
  # both support __GNUC__!
