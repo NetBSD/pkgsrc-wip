@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/06/20 09:26:26 jihbed Exp $
-
-SHA1 (SocNetV-1.9.tar.gz) = 50935070d56b9a71f8d97366826999e6f221cc0d
-RMD160 (SocNetV-1.9.tar.gz) = d685d5bcb3ef9c328b40502a49159cce931d46ae
-SHA512 (SocNetV-1.9.tar.gz) = 97750ca139d4eb72ade66109e4116567735354870ef46107af51d3ca6419c6ee69fb7781421de1a224253ed17307cc9fbe9df2d7e619624fbf076e3d60a96473
-Size (SocNetV-1.9.tar.gz) = 958160 bytes
-SHA1 (patch-socnetv.pro) = 163665211c3b9dd61c11a9cd4be251c252cc7a01
