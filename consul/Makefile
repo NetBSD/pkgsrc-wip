@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	consul-0.6.0
-PKGREVISION=	1
+DISTNAME=	consul-0.6.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -11,7 +10,7 @@ COMMENT=	Tool for service discovery, monitoring and configuration
 LICENSE=	mpl-2.0
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DEPS=		${DISTNAME}-deps-20160107.tar.gz
+DEPS=		${DISTNAME}-deps-20160108.tar.gz
 DISTFILES+=	${DEFAULT_DISTFILES} ${DEPS}
 SITES.${DEPS}=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 

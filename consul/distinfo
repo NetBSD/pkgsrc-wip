@@ -1,10 +1,10 @@
 $NetBSD$
 
-SHA1 (consul-0.6.0-deps-20160107.tar.gz) = 6b7548a6479fef5e790a065e43899bb15dfe91ce
-RMD160 (consul-0.6.0-deps-20160107.tar.gz) = c26bfa79c6244407be5339757e885b366fab3b83
-SHA512 (consul-0.6.0-deps-20160107.tar.gz) = 47adf427509eb66cb77a3e81a427824101d1f7e1fdc5e839c56a3f8d71c14b86f261dcede0e752a6dcb46d83043d956f319ab392b8a2c1c50127dc28a0a39d59
-Size (consul-0.6.0-deps-20160107.tar.gz) = 37924371 bytes
-SHA1 (consul-0.6.0.tar.gz) = 86c156079c9138b11580ac1dedd5acbbe7a0f6e3
-RMD160 (consul-0.6.0.tar.gz) = cc5481473ad55978b62cda5af7bfcbcd6978ff3c
-SHA512 (consul-0.6.0.tar.gz) = 0caea4f7b45424c0d9d07cd931c7c3ae99c38a865d29c0d21affd11a92bef6459ab6d55d98b4d3b6c1a77b51cd92444f3ca157160e2febc1377d8ea92c8a3b49
-Size (consul-0.6.0.tar.gz) = 1966751 bytes
+SHA1 (consul-0.6.1-deps-20160108.tar.gz) = 196248ba969ddd5de4896b41d405896230039f8c
+RMD160 (consul-0.6.1-deps-20160108.tar.gz) = 4e124e3363d7a2f49b61e55d971704f414a03d76
+SHA512 (consul-0.6.1-deps-20160108.tar.gz) = 3220245edfd9394a996180c63723a90cc948a66d4297b6e18ff1bd402c12affb43c809b2c3f51771cea6a61925c5a33b415bd48e0081c48c3ecb084a866afdc4
+Size (consul-0.6.1-deps-20160108.tar.gz) = 38775961 bytes
+SHA1 (consul-0.6.1.tar.gz) = 6dccc89b47e03a27a0e68802923fd46739551915
+RMD160 (consul-0.6.1.tar.gz) = 7694ea275df4f890c2b22acb1905178e8410def9
+SHA512 (consul-0.6.1.tar.gz) = ad7cbecff8abe48a5b3f4e1eaea61290db3f0ce0d52e99cf165bb2f0ed3d1c01ea595ef946176c7af5f37590a688b3c7852cf30aa7b348c61aeb2862b5da1820
+Size (consul-0.6.1.tar.gz) = 2355580 bytes
