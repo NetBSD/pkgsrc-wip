@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2014/06/28 10:37:03 cheusov Exp $
 
 DISTNAME=	picocom-1.7
-PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://picocom.googlecode.com/files/
 
