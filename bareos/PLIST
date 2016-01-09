@@ -44,6 +44,9 @@ libexec/bareos/btraceback.mdb
 libexec/bareos/chio-changer
 libexec/bareos/create_bareos_database
 libexec/bareos/ddl/creates/${BAREOS_DB}.sql
+libexec/bareos/ddl/drops/${BAREOS_DB}.sql
+libexec/bareos/ddl/grants/${BAREOS_DB}-readonly.sql
+libexec/bareos/ddl/grants/${BAREOS_DB}.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.10_11.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.11_12.sql
 libexec/bareos/ddl/updates/${BAREOS_DB}.12_14.sql
@@ -98,9 +101,14 @@ sbin/bsmtp
 sbin/btape
 sbin/btraceback
 sbin/bwild
+share/examples/bareos/bareos-dir.conf
+share/examples/bareos/bareos-fd.conf
+share/examples/bareos/bareos-sd.conf
+share/examples/bareos/bconsole.conf
 @pkgdir var/bareos/logs
 @pkgdir share/examples/bareos
 @pkgdir libexec/bareos/ddl/grants
+@pkgdir libexec/bareos/ddl/updates
 @pkgdir libexec/bareos/ddl/drops
 @pkgdir etc/bareos/bareos-sd.d
 @pkgdir etc/bareos/bareos-dir.d
