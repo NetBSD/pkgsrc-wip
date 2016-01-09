@@ -52,8 +52,6 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/aboutHom
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/aboutHome.xhtml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/addons.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/addons@2x.png
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/apps.png
-lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/apps@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/bookmarks.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/bookmarks@2x.png
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/abouthome/downloads.png
@@ -630,10 +628,10 @@ lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/inspector.css
 lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/inspector.xul
 lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/layout/layout.js
 lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/layout/layout.xhtml
+lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/markup/markup.css
+lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/markup/markup.xhtml
 lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/rules/rules.css
 lib/firefox-${VERSION}/browser/chrome/devtools/content/inspector/rules/rules.xhtml
-lib/firefox-${VERSION}/browser/chrome/devtools/content/markupview/markup-view.css
-lib/firefox-${VERSION}/browser/chrome/devtools/content/markupview/markup-view.xhtml
 lib/firefox-${VERSION}/browser/chrome/devtools/content/memory/initializer.js
 lib/firefox-${VERSION}/browser/chrome/devtools/content/memory/memory.xhtml
 lib/firefox-${VERSION}/browser/chrome/devtools/content/netmonitor/netmonitor-controller.js
@@ -729,7 +727,12 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/aboutdebu
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/aboutdebugging/components/target-list.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/aboutdebugging/components/target.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/aboutdebugging/components/workers.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/components.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/components/animation-details.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/components/animation-target-node.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/components/animation-time-block.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/components/animation-timeline.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/components/keyframes.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/components/rate-selector.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/animationinspector/utils.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/canvasdebugger/panel.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/debugger/content/actions/breakpoints.js
@@ -753,6 +756,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/eyedroppe
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/eyedropper/eyedropper-child.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/eyedropper/eyedropper.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/ToolboxProcess.jsm
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/attach-thread.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/gDevTools.jsm
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/selection.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/sidebar.js
@@ -768,6 +772,10 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/inspector-panel.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/inspector-search.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/layout/layout.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/markup/html-editor.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/markup/markup.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/rules/models/rule.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/rules/models/text-property.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/rules/rules.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/components/headers-panel.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/components/headers.js
@@ -814,8 +822,6 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/utils.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/jsonview/viewer-config.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/main.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/markupview/html-editor.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/markupview/markup-view.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/allocations.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/breakdown.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/memory/actions/diffing.js
@@ -922,7 +928,6 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/fr
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/getjson.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/inplace-editor.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/node-attribute-parser.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/observable-object.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/options-view.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/output-parser.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/poller.js
@@ -1430,7 +1435,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/skin/images/webconsole.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/inspector.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/layout.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/light-theme.css
-lib/firefox-${VERSION}/browser/chrome/devtools/skin/markup-view.css
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/markup.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/memory.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/netmonitor.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/performance.css
@@ -2206,8 +2211,8 @@ lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/too
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-inverted@2x.png
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-lunaSilver.png
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-lunaSilver@2x.png
-lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win8.png
-lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win8@2x.png
+lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win10.png
+lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win10@2x.png
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar.png
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar@2x.png
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/install.rdf
@@ -3241,6 +3246,8 @@ lib/firefox-${VERSION}/hyphenation/hyph_sv.dic
 lib/firefox-${VERSION}/hyphenation/hyph_tr.dic
 lib/firefox-${VERSION}/hyphenation/hyph_uk.dic
 lib/firefox-${VERSION}/liblgpllibs.so
+lib/firefox-${VERSION}/libmozavcodec.so
+lib/firefox-${VERSION}/libmozavutil.so
 lib/firefox-${VERSION}/libmozsqlite3.so
 lib/firefox-${VERSION}/libxul.so
 lib/firefox-${VERSION}/modules/AboutReader.jsm
