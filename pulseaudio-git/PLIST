@@ -49,7 +49,6 @@ lib/cmake/PulseAudio/PulseAudioConfigVersion.cmake
 lib/libpulse-mainloop-glib.la
 lib/libpulse-simple.la
 lib/libpulse.la
-lib/libpulsecore-6.0.la
 lib/pkgconfig/libpulse-mainloop-glib.pc
 lib/pkgconfig/libpulse-simple.pc
 lib/pkgconfig/libpulse.pc
@@ -221,6 +220,7 @@ ${PLIST.avahi}lib/pulse-6.0/modules/module-zeroconf-discover.a
 ${PLIST.avahi}lib/pulse-6.0/modules/module-zeroconf-discover.so
 ${PLIST.avahi}lib/pulse-6.0/modules/module-zeroconf-publish.a
 ${PLIST.avahi}lib/pulse-6.0/modules/module-zeroconf-publish.so
+lib/pulseaudio/libpulsecore-6.0.la
 lib/pulseaudio/libpulsecommon-6.0.la
 ${PLIST.oss}lib/pulseaudio/libpulsedsp.la
 man/man1/esdcompat.1
