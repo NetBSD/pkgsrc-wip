@@ -209,6 +209,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/connec
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/connection.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/cookies.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/cookies.xul
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/donottrack.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/fonts.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/fonts.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/preferences/handlers.css
@@ -1511,6 +1512,7 @@ lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/colors.dt
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/connection.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/content.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/cookies.dtd
+lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/donottrack.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/fonts.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/languages.dtd
 lib/firefox-${VERSION}/browser/chrome/en-US/locale/browser/preferences/main.dtd
@@ -2000,11 +2002,6 @@ lib/firefox-${VERSION}/browser/defaults/preferences/firefox-branding.js
 lib/firefox-${VERSION}/browser/defaults/preferences/firefox-l10n.js
 lib/firefox-${VERSION}/browser/defaults/preferences/firefox.js
 lib/firefox-${VERSION}/browser/defaults/preferences/webide-prefs.js
-lib/firefox-${VERSION}/browser/defaults/profile/chrome/userChrome-example.css
-lib/firefox-${VERSION}/browser/defaults/profile/chrome/userContent-example.css
-lib/firefox-${VERSION}/browser/defaults/profile/localstore.rdf
-lib/firefox-${VERSION}/browser/defaults/profile/mimeTypes.rdf
-lib/firefox-${VERSION}/browser/defaults/profile/prefs.js
 lib/firefox-${VERSION}/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/chrome.manifest
 lib/firefox-${VERSION}/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
 lib/firefox-${VERSION}/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
