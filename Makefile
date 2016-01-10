@@ -495,6 +495,7 @@ SUBDIR+=	dir2ogg
 SUBDIR+=	directfb
 SUBDIR+=	discident-glib
 SUBDIR+=	dispred
+SUBDIR+=	disque
 SUBDIR+=	distbb-current
 SUBDIR+=	distella
 SUBDIR+=	ditz-commander
