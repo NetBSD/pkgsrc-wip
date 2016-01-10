@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/disque
+bin/disque-check-aof
+bin/disque-server
