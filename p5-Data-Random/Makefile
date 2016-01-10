@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/10/09 14:06:29 thomasklausner Exp $
 
-DISTNAME=		Data-Random-0.08
+DISTNAME=		Data-Random-0.12
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Data/}
