@@ -2310,6 +2310,7 @@ SUBDIR+=	pcsx-df
 SUBDIR+=	pcsx2
 SUBDIR+=	pcsxr
 SUBDIR+=	pdb2ldif
+SUBDIR+=	pdf-redact-tools
 SUBDIR+=	pdf2svg
 SUBDIR+=	pdfcrack
 SUBDIR+=	pdfedit

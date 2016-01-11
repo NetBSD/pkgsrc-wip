@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/pdf-redact-tools
+${PYSITELIB}/${EGG_FILE}
