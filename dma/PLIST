@@ -1,0 +1,4 @@
+@comment $NetBSD$
+libexec/dma-mbox-create
+man/man8/dma.8
+sbin/dma

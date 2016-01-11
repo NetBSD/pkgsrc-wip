@@ -502,6 +502,7 @@ SUBDIR+=	ditz-commander
 SUBDIR+=	diveintopython
 SUBDIR+=	djplay
 SUBDIR+=	dlpoly-classic
+SUBDIR+=	dma
 SUBDIR+=	dmapd
 SUBDIR+=	dmd
 SUBDIR+=	dmd-bin
