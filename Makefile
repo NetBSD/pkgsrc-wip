@@ -2030,6 +2030,7 @@ SUBDIR+=	openbsc
 SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
 SUBDIR+=	opencascade
+SUBDIR+=	openclonk
 SUBDIR+=	opendchub
 SUBDIR+=	opendylan
 SUBDIR+=	openerp-server
