@@ -1706,6 +1706,7 @@ SUBDIR+=	marathon-tempus-irae
 SUBDIR+=	marco
 SUBDIR+=	marsyas
 SUBDIR+=	mashpodder
+SUBDIR+=	mat
 SUBDIR+=	matanza
 SUBDIR+=	mate
 SUBDIR+=	mate-applets
