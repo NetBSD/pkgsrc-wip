@@ -3071,6 +3071,7 @@ SUBDIR+=	py-patsy
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-pdef
 SUBDIR+=	py-pdfposter
+SUBDIR+=	py-pdfrw
 SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
 SUBDIR+=	py-percol
