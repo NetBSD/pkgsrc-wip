@@ -1,0 +1,16 @@
+mat still does not work because it is not able to find Poppler (any idea how to
+have a Poppler namespace for py-gobject3?):
+
+ $ mat
+ Traceback (most recent call last):
+   File "/usr/pkg/bin/mat", line 10, in <module>
+     from libmat import mat
+   File "/usr/pkg/lib/python2.7/site-packages/libmat/mat.py", line 22, in <module>
+     import strippers  # this is loaded here because we need LOGGING_LEVEL
+   File "/usr/pkg/lib/python2.7/site-packages/libmat/strippers.py", line 9, in <module>
+     import office
+   File "/usr/pkg/lib/python2.7/site-packages/libmat/office.py", line 15, in <module>
+     gi.require_version('Poppler', '0.18')
+   File "/usr/pkg/lib/python2.7/site-packages/gi/__init__.py", line 100, in require_version
+     raise ValueError('Namespace %s not available' % namespace)
+ ValueError: Namespace Poppler not available
