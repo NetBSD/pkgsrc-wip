@@ -1637,7 +1637,6 @@ SUBDIR+=	lmfit
 SUBDIR+=	lmod
 SUBDIR+=	logfmon-devel
 SUBDIR+=	logrotate-svn
-SUBDIR+=	logswan
 SUBDIR+=	logwatch
 SUBDIR+=	lorder
 SUBDIR+=	love
