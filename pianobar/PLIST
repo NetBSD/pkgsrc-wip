@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/pianobar
+man/man1/pianobar.1
