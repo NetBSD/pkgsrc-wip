@@ -1,0 +1,14 @@
+# $NetBSD$
+
+DISTNAME=	wanderer-dev
+CATEGORIES=	games
+MASTER_SITES=	http://e271.net/~marina/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	catskillmarina@gmail.com
+HOMEPAGE=	http://e271.net/~marina/wanderer.html
+COMMENT=	Wanderer  is a game similar to Boulderdash, Repton, XOR and others
+LICENSE=	gnu-gpl-v2
+
+# url2pkg-marker (please do not remove this line.)
+.include "../../mk/bsd.pkg.mk"
