@@ -1,2 +1,2 @@
 @comment $NetBSD: PLIST.Darwin,v 1.1 2015/06/04 10:14:50 thomasklausner Exp $
-include/libfswatch/c++/fsevents_monitor.h
+include/libfswatch/c++/fsevents_monitor.hpp
