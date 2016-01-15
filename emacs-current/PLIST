@@ -2610,6 +2610,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/programmer-dvorak.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/programmer-dvorak.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/py-punct.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/py-punct.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/pypunct-b5.el.gz
