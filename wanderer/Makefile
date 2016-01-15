@@ -30,11 +30,6 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/wanderer
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/games
-	echo ${DESTDIR}${PREFIX}/games
-	echo ${DESTDIR}${PREFIX}/games
-	echo ${DESTDIR}${PREFIX}/games
-	echo ${DESTDIR}${PREFIX}/games
-	echo ${DESTDIR}${PREFIX}/games
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/wanderer/screens
 	${INSTALL_DATA} -m 0644 ${WRKSRC}/screens/* ${DESTDIR}${PREFIX}/share/wanderer/screens/
         ${INSTALL} -o ${GAMES_USER} -g ${GAMES_GROUP} -m 2755 ${WRKSRC}/wanderer ${DESTDIR}${PREFIX}/bin/
