@@ -2422,7 +2422,6 @@ SUBDIR+=	php-gtk2
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
 SUBDIR+=	php-tclink
-SUBDIR+=	pianobar
 SUBDIR+=	picasm
 SUBDIR+=	picocom
 SUBDIR+=	picosat
