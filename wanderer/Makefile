@@ -17,7 +17,6 @@ SUBST_CLASSES+= wanderer
 SUBST_STAGE.wanderer= pre-build
 SUBST_FILES.wanderer= wand_head.h
 SUBST_SED.wanderer= -e "s,/usr/local/share/wanderer/screens,${PREFIX}/share/wanderer/screens,"
-#SUBST_SED.wanderer+= -e "s,/var/games/wandererscores,${PREFIX}/games/wandererscores,"
 SUBST_SED.wanderer+= -e "s,\#include <ncurses.h>,\#include <curses.h>,"
 
 SUBST_CLASSES+= wand-mk
