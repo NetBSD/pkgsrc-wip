@@ -1,0 +1,6 @@
+id3 mass tagger is a tool for manipulating id3 and id3v2 tags in multiple
+files. It can generate tag fields from the filename and other variables,
+and/or rename files, using an intuitive syntax.
+id3 currently supports old-style ID3v1 tags, Lyrics3v2, as well as the
+more complex ID3v2 format. This means its use is limited to audio files
+which use these formats, i.e. MP3.

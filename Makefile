@@ -1257,6 +1257,7 @@ SUBDIR+=	icecat
 SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
 SUBDIR+=	icmpchat
+SUBDIR+=	id3
 SUBDIR+=	idled
 SUBDIR+=	ifstat
 SUBDIR+=	igal
