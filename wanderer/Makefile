@@ -37,9 +37,7 @@ do-install:
 	echo ${DESTDIR}${PREFIX}/games
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/wanderer/screens
 	${INSTALL_DATA} -m 0644 ${WRKSRC}/screens/* ${DESTDIR}${PREFIX}/share/wanderer/screens/
-	${CP} ${WRKSRC}/wanderer ${DESTDIR}${PREFIX}/bin/
-	${CHOWN} root:games ${DESTDIR}${PREFIX}/bin/wanderer
-	${CHMOD} 2755  ${DESTDIR}${PREFIX}/bin/wanderer
+        ${INSTALL} -o ${GAMES_USER} -g ${GAMES_GROUP} -m 2755 ${WRKSRC}/wanderer ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/wanderer.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/
 
 .include "../../mk/bsd.pkg.mk"
