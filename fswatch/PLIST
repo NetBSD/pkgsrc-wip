@@ -1,9 +1,11 @@
 @comment $NetBSD$
 bin/fswatch
 include/libfswatch/c++/event.hpp
-include/libfswatch/c++/fen_monitor.hpp
+${PLIST.fen}include/libfswatch/c++/fen_monitor.hpp
+${PLIST.fsevents}include/libfswatch/c++/fsevents_monitor.hpp
 include/libfswatch/c++/filter.hpp
-include/libfswatch/c++/inotify_monitor.hpp
+${PLIST.inotify}include/libfswatch/c++/inotify_monitor.hpp
+${PLIST.kqueue}include/libfswatch/c++/kqueue_monitor.hpp
 include/libfswatch/c++/libfswatch_exception.hpp
 include/libfswatch/c++/libfswatch_map.hpp
 include/libfswatch/c++/libfswatch_set.hpp
