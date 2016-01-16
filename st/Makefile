@@ -11,8 +11,6 @@ LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
 
-NO_CONFIGURE=	yes
-
 # Adjust config.mk and Makefile
 SUBST_CLASSES+=		configdefh configmk makefile
 SUBST_STAGE.configdefh=	pre-build

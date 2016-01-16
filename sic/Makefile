@@ -11,8 +11,6 @@ LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
 
-NO_CONFIGURE=	yes
-
 # Adjust config.mk
 SUBST_CLASSES+=		configmk
 SUBST_STAGE.configmk=	pre-build

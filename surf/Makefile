@@ -11,7 +11,6 @@ LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
 
-NO_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 # Adjust config.mk
