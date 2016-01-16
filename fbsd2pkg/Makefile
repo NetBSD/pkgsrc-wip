@@ -3,12 +3,12 @@
 # Don't bother committing this.  I'm adding new features almost every
 # time I convert a port.
 
-DISTNAME=	fbsd2pkg-0.1
+DISTNAME=	fbsd2pkg-0.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Convert a FreeBSD port framework to a pkgsrc package
 LICENSE=	2-clause-bsd
@@ -23,8 +23,8 @@ SUBST_FILES.prefix=	${WRKSRC}/fbsd2pkg
 SUBST_SED.prefix=	\
 	's|fbsd2pkg.awk|${PREFIX}/libexec/fbsd2pkg/fbsd2pkg.awk|g'
 
-DEPENDS+=	createbuildlink-[0-9]*:../../pkgtools/createbuildlink \
-		pkglint-[0-9]*:../../pkgtools/pkglint
+DEPENDS+=	createbuildlink:../../pkgtools/createbuildlink \
+		pkglint:../../pkgtools/pkglint
 
 do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/libexec/fbsd2pkg
