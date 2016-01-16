@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/04/02 16:17:31 emil_s Exp $
 
-SHA1 (recutils-1.5.tar.gz) = 36fca9624c4bd70ad20ba38c9c68350745fe4753
-RMD160 (recutils-1.5.tar.gz) = ebea0ada679414930ba011a743b824cd43b7a016
-Size (recutils-1.5.tar.gz) = 1811121 bytes
+SHA1 (recutils-1.7.tar.gz) = 20d265aecb05ca4e4072df9cfac08b1392da6919
+RMD160 (recutils-1.7.tar.gz) = 8376dd636a6ee1808adb7b00bcf8462f6660a304
+SHA512 (recutils-1.7.tar.gz) = 80f6996f2bc02986695223db597cff75aae2bd47b88e81b0dfe44c33f79fc3320108e2715b1af086b167ff1124fe94deeec4e337b1ede99807d381927327bd68
+Size (recutils-1.7.tar.gz) = 2252648 bytes

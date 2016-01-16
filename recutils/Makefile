@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
 #
 
-DISTNAME=	recutils-1.5
+DISTNAME=	recutils-1.7
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=recutils/}
 

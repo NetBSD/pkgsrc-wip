@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/02 16:17:31 emil_s Exp $
+@comment $NetBSD$
 bin/csv2rec
 bin/rec2csv
 bin/recdel
@@ -9,7 +9,9 @@ bin/recins
 bin/recsel
 bin/recset
 include/rec.h
+info/rec-mode.info
 info/recutils.info
+lib/charset.alias
 lib/librec.la
 man/man1/csv2rec.1
 man/man1/rec2csv.1
@@ -24,6 +26,10 @@ share/emacs/site-lisp/ob-rec.el
 share/emacs/site-lisp/rec-mode.el
 share/locale/de/LC_MESSAGES/recutils.mo
 share/locale/fi/LC_MESSAGES/recutils.mo
+share/locale/fr/LC_MESSAGES/recutils.mo
 share/locale/nl/LC_MESSAGES/recutils.mo
+share/locale/sr/LC_MESSAGES/recutils.mo
 share/locale/sv/LC_MESSAGES/recutils.mo
+share/locale/uk/LC_MESSAGES/recutils.mo
+share/locale/vi/LC_MESSAGES/recutils.mo
 share/recutils/etc/FSD.rec
