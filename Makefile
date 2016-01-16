@@ -660,6 +660,7 @@ SUBDIR+=	facedetect
 SUBDIR+=	fairymax
 SUBDIR+=	fakenes
 SUBDIR+=	fala
+SUBDIR+=	farbfeld
 SUBDIR+=	farsi-ttf
 SUBDIR+=	farstream
 SUBDIR+=	fasm

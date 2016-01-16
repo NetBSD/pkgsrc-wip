@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (farbfeld-1.tar.gz) = 06ad65ddf43f3b86174ab0de7316ac5580f9b9fe
+RMD160 (farbfeld-1.tar.gz) = 478fb4bc4ed81071634ac8c301ae56664ecff54d
+Size (farbfeld-1.tar.gz) = 6770 bytes
+SHA1 (patch-config.mk) = b3121df9e7ecacd3bda45eb1c725577288f0bc8c
