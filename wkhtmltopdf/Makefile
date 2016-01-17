@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.gna.org/wkhtmltopdf/0.12/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zecrazytux@zecrazytux.net
-HOMEPAGE=	http://wkhtmltopdf.org//
+HOMEPAGE=	http://wkhtmltopdf.org/
 COMMENT=	Render HTML into PDF and image formats using QT Webkit
 LICENSE=	gnu-lgpl-v3
 
