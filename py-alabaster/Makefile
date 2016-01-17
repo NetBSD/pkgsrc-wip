@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/14 09:14:32 jihbed Exp $
 
-DISTNAME=	alabaster-0.6.3
+DISTNAME=	alabaster-0.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	https://pypi.python.org/packages/source/a/alabaster/
