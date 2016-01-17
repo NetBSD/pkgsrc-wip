@@ -11,7 +11,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 MAINTAINER=	base@atomicules.co.uk
 HOMEPAGE=	http://ledger-cli.org/
 COMMENT=	Double-entry accounting system for command-line
-LICENSE=	ledger-license
+LICENSE=	modified-bsd
 
 # url2pkg-marker (please do not remove this line.)
 
