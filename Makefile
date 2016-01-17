@@ -2558,7 +2558,6 @@ SUBDIR+=	py-affine
 SUBDIR+=	py-agio
 SUBDIR+=	py-aikif
 SUBDIR+=	py-aipy
-SUBDIR+=	py-alabaster
 SUBDIR+=	py-albatross
 SUBDIR+=	py-alembic
 SUBDIR+=	py-alfanous
