@@ -13,6 +13,9 @@ LICENSE=	zpl-2.0
 
 USE_LANGUAGES=	# none
 
+pre-patch:
+	${CHMOD} go-w ${WRKSRC}/wsgiref.egg-info/*
+
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} test_wsgiref.py )
 
