@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-cmake_FindJsoncpp.cmake) = 0ab831e8d26625a748cf9c4ab270cd7a39a4472e
+SHA1 (patch-cmake_FindTinyxml.cmake) = 66dabf0fff90893c46fcf0aecdab24a7e4c530c8
