@@ -21,5 +21,6 @@ REPLACE_BASH+=	build.sh
 do-build:
 		${RUN} cd ${WRKSRC} && ./build.sh
 
+
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
