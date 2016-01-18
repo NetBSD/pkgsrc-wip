@@ -1,6 +1,6 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	lldb-3.7.0
+PKGNAME=	lldb-3.9.0
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	lldb

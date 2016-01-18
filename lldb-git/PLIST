@@ -1,11 +1,11 @@
 @comment $NetBSD$
 bin/lldb
-bin/lldb-3.8.0
+bin/${PKGNAME}
 bin/lldb-argdumper
 bin/lldb-mi
-bin/lldb-mi-3.8.0
+bin/lldb-mi-${PKGVERSION}
 bin/lldb-server
-bin/lldb-server-3.8.0
+bin/lldb-server-${PKGVERSION}
 include/lldb/API/LLDB.h
 include/lldb/API/SBAddress.h
 include/lldb/API/SBAttachInfo.h
@@ -122,6 +122,7 @@ include/lldb/Core/History.h
 include/lldb/Core/IOHandler.h
 include/lldb/Core/IOStreamMacros.h
 include/lldb/Core/Listener.h
+include/lldb/Core/LoadedModuleInfoList.h
 include/lldb/Core/Log.h
 include/lldb/Core/Logging.h
 include/lldb/Core/Mangled.h
@@ -494,7 +495,7 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.3.8.0
+lib/liblldb.so.${PKGVERSION}
 lib/liblldbBase.a
 lib/liblldbBreakpoint.a
 lib/liblldbCommands.a
