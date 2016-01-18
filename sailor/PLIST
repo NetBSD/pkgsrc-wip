@@ -29,7 +29,6 @@ share/sailor/ships/common/NetBSD/etc/mk.conf
 share/sailor/ships/common/NetBSD/etc/nsswitch.conf
 share/sailor/ships/common/NetBSD/etc/passwd
 share/sailor/ships/common/NetBSD/etc/pwd.db
-share/sailor/ships/common/NetBSD/etc/resolv.conf
 share/sailor/ships/common/NetBSD/etc/spwd.db
 share/sailor/ships/common/all/etc/rc.conf
 share/sailor/ships/common/all/etc/rc.subr
