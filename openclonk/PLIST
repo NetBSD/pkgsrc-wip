@@ -4,6 +4,7 @@ games/openclonk
 share/applications/openclonk.desktop
 share/games/openclonk/Arena.ocf
 share/games/openclonk/Decoration.ocd
+share/games/openclonk/Defense.ocf
 share/games/openclonk/Graphics.ocg
 share/games/openclonk/Material.ocg
 share/games/openclonk/Missions.ocf
@@ -12,7 +13,7 @@ share/games/openclonk/Objects.ocd
 share/games/openclonk/Parkour.ocf
 share/games/openclonk/Sound.ocg
 share/games/openclonk/System.ocg
-share/games/openclonk/Tutorial.ocf
+share/games/openclonk/Tutorials.ocf
 share/games/openclonk/Worlds.ocf
 share/icons/hicolor/128x128/apps/openclonk.png
 share/icons/hicolor/256x256/apps/openclonk.png
