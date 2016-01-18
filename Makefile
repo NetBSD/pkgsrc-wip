@@ -3562,6 +3562,7 @@ SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
 SUBDIR+=	sabnzbdplus
 SUBDIR+=	safekeep
+SUBDIR+=	sailor
 SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
 SUBDIR+=	samba

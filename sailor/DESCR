@@ -1,0 +1,6 @@
+Sailor is based on chroot and pkgin, it will create a chrooted environment
+containing only the needed pieces in order to install and / or run a service.
+Note that sailor's goal is not to provide bullet-proof security,
+chroot is definitely not a trustable isolator;
+instead, sailor is a really convenient way of trying / testing an evironment
+without compromising your workstation filesystem.
