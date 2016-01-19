@@ -46,6 +46,8 @@ REPLACE_PERL=	util/*/*.pl \
 # FIXME: Coreutils doesn't build, but we should use the pkg anyway
 REPLACE_BASH=	trinity-plugins/coreutils/build_parallel_sort.sh
 
+DEPENDS+=	p5-PerlIO-gzip>=0:../../devel/p5-PerlIO-gzip
+
 # Some scripts are not available during patch stage
 SUBST_CLASSES+=		shebang
 SUBST_STAGE.shebang=	post-build
