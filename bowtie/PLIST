@@ -3,7 +3,6 @@ bin/best_verify.pl
 bin/bowtie
 bin/bowtie-build
 bin/bowtie-inspect
-bin/bowtie-manual
 bin/bs_mapability.pl
 bin/build_test.sh
 bin/colorize_fasta.pl

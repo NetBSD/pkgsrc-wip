@@ -49,7 +49,6 @@ do-install:
 	${INSTALL_SCRIPT} \
 		${WRKSRC}/scripts/*.sh \
 		${WRKSRC}/scripts/*.pl \
-		${FILESDIR}/bowtie-manual \
 		${DESTDIR}${PREFIX}/bin
 	${MKDIR} ${DESTDIR}${DATADIR}
 	cd ${WRKSRC} && ${PAX} -wr genomes indexes reads \
