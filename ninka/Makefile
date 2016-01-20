@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2013/03/04 21:58:38 thomasklausner Exp $
 #
 
-DISTNAME=	ninka-1.0-pre2
+DISTNAME=	ninka-1.3
 CATEGORIES=	devel
 MASTER_SITES=	http://ninka.turingmachine.org/download/
 EXTRACT_SUFX=	.tar.bz2
