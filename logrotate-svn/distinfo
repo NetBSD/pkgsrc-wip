@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/06/25 09:12:04 ahp-nils Exp $
-
-SHA1 (patch-Makefile.am) = 857e290854f3925e42e85469ac28ea06fad70727
-SHA1 (patch-examples_logrotate-default) = 6e6f1b7e9c7ea038e49f60bfb31ae39d03541eef
-SHA1 (patch-examples_logrotate.cron) = d42a7a84c0ff43799a743598b3b31fac3acc3df1
-SHA1 (patch-logrotate.8) = 68e125d67062777dd6262ae647689569fbae85f6
