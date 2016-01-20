@@ -1,0 +1,15 @@
+$NetBSD: patch-toolkit_toolkit.mozbuild,v 1.2 2014/10/03 13:48:56 thomasklausner Exp $
+
+--- toolkit/toolkit.mozbuild.orig	2014-10-03 13:16:21.000000000 +0000
++++ toolkit/toolkit.mozbuild
+@@ -38,8 +38,8 @@ DIRS += [
+ if CONFIG['MOZ_AUTH_EXTENSION']:
+     DIRS += ['/extensions/auth']
+ 
+-if CONFIG['MOZ_UPDATER']:
+-    DIRS += ['/other-licenses/bsdiff']
++#if CONFIG['MOZ_UPDATER']:
++#    DIRS += ['/other-licenses/bsdiff']
+ 
+ # Gecko/Core components.
+ 
