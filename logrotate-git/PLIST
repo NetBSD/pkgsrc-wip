@@ -1,0 +1,11 @@
+@comment $NetBSD$
+man/man5/logrotate.conf.5
+man/man8/logrotate.8
+sbin/logrotate
+share/doc/logrotate/CHANGES
+share/doc/logrotate/COPYING
+share/doc/logrotate/README.HPUX
+share/doc/logrotate/README.Solaris
+share/doc/logrotate/README.md
+share/examples/logrotate/logrotate.conf
+share/examples/logrotate/logrotate.cron
