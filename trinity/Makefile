@@ -76,6 +76,13 @@ SUBST_FILES.plugins=	${WRKSRC}/Trinity
 SUBST_SED.plugins=	-e 's|$$ROOTDIR/trinity-plugins/jellyfish|${PREFIX}|g' \
 			-e 's|$$ROOTDIR/trinity-plugins/parafly|${PREFIX}|g'
 
+SUBST_CLASSES+=		util
+SUBST_STAGE.util=	post-patch
+SUBST_FILES.util=	${WRKSRC}/util/insilico_read_normalization.pl
+SUBST_SED.util= \
+		-e 's|$$ROOTDIR/trinity-plugins/jellyfish|${LOCALBASE}|g' \
+		-e 's|$$ROOTDIR/trinity-plugins/fastool|${LOCALBASE}/bin|g'
+
 SUBST_CLASSES+=		make
 SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	${WRKSRC}/trinity-plugins/collectl/build_collectl.sh
