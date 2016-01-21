@@ -2449,6 +2449,7 @@ SUBDIR+=	pike-mime
 SUBDIR+=	pilemc-svn
 SUBDIR+=	pinball
 SUBDIR+=	pinkpony
+SUBDIR+=	pioneer
 SUBDIR+=	piwik
 SUBDIR+=	pixz
 SUBDIR+=	pizza
