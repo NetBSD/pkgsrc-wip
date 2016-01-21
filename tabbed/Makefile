@@ -10,13 +10,9 @@ COMMENT=	Simple generic tabbed frontend to xembed aware applications
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c
 
-NO_CONFIGURE=	yes
-
-# Adjust config.mk
 SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-build
+SUBST_STAGE.makefile=	pre-configure
 SUBST_MESSAGE.makefile=	Fixing config.mk
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
