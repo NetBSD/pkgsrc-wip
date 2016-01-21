@@ -18,13 +18,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash
 REPLACE_BASH+=	build.sh
 
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_FILES.python=	build.sh
-SUBST_SED.python=	-e 's,python ,${PYTHONBIN} ,'
-
 do-build:
-		${RUN} cd ${WRKSRC} && ./build.sh
+		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
 
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../wip/lldb-git/buildlink3.mk"

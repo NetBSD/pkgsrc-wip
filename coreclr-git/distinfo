@@ -1,6 +1,2 @@
 $NetBSD$
 
-SHA1 (patch-build.sh) = 6489403b0a2ab39d718ff249e93872297c591f95
-SHA1 (patch-run-cppcheck.sh) = 0fc41126112b23aca159bea1c2474e90a6eef322
-SHA1 (patch-src_pal_src_configure.cmake) = ce7fcf8da51c43cf1aba677809a3027f2cab9573
-SHA1 (patch-src_pal_src_loader_module.cpp) = 820de87ead31396d54d5523dd9bc0d6bc210ee4d
