@@ -26,6 +26,9 @@ SUBST_SED.python=	-e 's,python ,${PYTHONBIN} ,'
 do-build:
 		${RUN} cd ${WRKSRC} && ./build.sh
 
+.include "../../wip/llvm-git/buildlink3.mk"
+.include "../../wip/lldb-git/buildlink3.mk"
+.include "../../wip/clang-git/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
