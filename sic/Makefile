@@ -11,11 +11,10 @@ LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
 
-# Adjust config.mk
 SUBST_CLASSES+=		configmk
-SUBST_STAGE.configmk=	pre-build
-SUBST_MESSAGE.configmk=		Fixing config.mk
-SUBST_FILES.configmk=		config.mk
+SUBST_STAGE.configmk=	pre-configure
+SUBST_MESSAGE.configmk=	Fixing config.mk
+SUBST_FILES.configmk=	config.mk
 SUBST_SED.configmk+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.configmk+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
