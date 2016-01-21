@@ -68,7 +68,7 @@ CMAKE_ARG_PATH=	${WRKDIR}/clang
 SUBST_CLASSES+=			libcxx
 SUBST_STAGE.libcxx=		pre-configure
 SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ as we're using GCC
-SUBST_FILES.libcxx=		lib/Driver/ToolChains.cpp
+SUBST_FILES.libcxx=		${WRKDIR}/clang/lib/Driver/ToolChains.cpp
 SUBST_SED.libcxx=		-e 's,Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 49) || Major == 0,false,'
 .endif
 
