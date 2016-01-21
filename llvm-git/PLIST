@@ -224,6 +224,8 @@ include/llvm/CodeGen/GCMetadata.h
 include/llvm/CodeGen/GCMetadataPrinter.h
 include/llvm/CodeGen/GCStrategy.h
 include/llvm/CodeGen/GCs.h
+include/llvm/CodeGen/GlobalISel/IRTranslator.h
+include/llvm/CodeGen/GlobalISel/Types.h
 include/llvm/CodeGen/ISDOpcodes.h
 include/llvm/CodeGen/IntrinsicLowering.h
 include/llvm/CodeGen/LatencyPriorityQueue.h
@@ -782,6 +784,7 @@ include/llvm/TableGen/StringMatcher.h
 include/llvm/TableGen/StringToOffsetTable.h
 include/llvm/TableGen/TableGenBackend.h
 include/llvm/Target/CostTable.h
+include/llvm/Target/GenericOpcodes.td
 include/llvm/Target/Target.td
 include/llvm/Target/TargetCallingConv.h
 include/llvm/Target/TargetCallingConv.td
