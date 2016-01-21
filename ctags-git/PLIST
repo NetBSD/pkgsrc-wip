@@ -1,13 +1,5 @@
 @comment $NetBSD$
 bin/${PREFIX_PROGRAM}ctags
 ${PLIST.emacs}bin/${PREFIX_PROGRAM}etags
-include/readtags.h
-lib/readtags.o
-libexec/ctags/drivers/coffeetags
+libexec/ctags/drivers/${PREFIX_PROGRAM}coffeetags
 man/man1/${PREFIX_PROGRAM}ctags.1
-${PLIST.emacs}man/man1/${PREFIX_PROGRAM}etags.1
-share/ctags/optlib/coffee.ctags
-share/ctags/optlib/ctags.ctags
-share/ctags/optlib/gdbinit.ctags
-share/ctags/optlib/m4.ctags
-share/ctags/preload/default.ctags

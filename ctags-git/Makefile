@@ -5,8 +5,8 @@ CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=universal-ctags/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ctags.io
-COMMENT=	A maintained ctags implementation
+HOMEPAGE=	https://ctags.io/
+COMMENT=	Maintained ctags implementation
 LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	ctags
@@ -15,7 +15,15 @@ GIT_MODULE.ctags=	ctags
 
 WRKSRC=			${WRKDIR}/${GIT_MODULE.ctags}
 
-USE_TOOLS=		aclocal autoreconf autoconf automake autoheader gmake
+USE_TOOLS=		aclocal autoreconf autoconf automake autoheader
+USE_TOOLS+=		bash gmake
+
+SUBST_CLASSES+=         bash
+SUBST_MESSAGE.bash=     Fixing shellbang references to bash.
+SUBST_STAGE.bash=       post-extract
+SUBST_SED.bash=         -e 's,\#\!/bin/bash,\#\!${BASH},g'
+SUBST_FILES.bash=       misc/optlib2c
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-macro-patterns
 CONFIGURE_ARGS+=	--enable-readlib
@@ -25,7 +33,8 @@ CONFIGURE_ARGS+=	--enable-custom-config=${PKG_SYSCONFDIR}/ctags.conf
 CONFLICTS=	exctags-[0-9]*
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -f -i -v
+	cd ${WRKSRC} && ./autogen.sh
+
 
 .include "options.mk"
 
