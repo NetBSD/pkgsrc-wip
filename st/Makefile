@@ -4,30 +4,29 @@ DISTNAME=	st-0.6
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/st/
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://st.suckless.org/
 COMMENT=	Simple terminal implementation for X
 LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
 
-# Adjust config.mk and Makefile
-SUBST_CLASSES+=		configdefh configmk makefile
-SUBST_STAGE.configdefh=	pre-build
-SUBST_STAGE.configmk=	pre-build
-SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.configdefh=	Fixing config.def.h
+SUBST_CLASSES+=			configdefh configmk makefile
+SUBST_STAGE.configdefh=		pre-configure
+SUBST_STAGE.configmk=		pre-configure
+SUBST_STAGE.makefile=		pre-configure
+SUBST_MESSAGE.configdefh=	Change default termname to xterm
 SUBST_FILES.configdefh=		config.def.h
 SUBST_MESSAGE.configmk=		Fixing config.mk
 SUBST_FILES.configmk=		config.mk
-SUBST_MESSAGE.makefile=		Fixing Makefile
+SUBST_MESSAGE.makefile=		Do not install the st terminfo entry
 SUBST_FILES.makefile=		Makefile
-SUBST_SED.configdefh+=	-e 's,st-256color,xterm,g'
-SUBST_SED.configmk+=	-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.configmk+=	-e 's,share/man,${PKGMANDIR},g'
-SUBST_SED.configmk+=	-e 's,/usr/X11R6,${X11BASE},g'
-SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
-SUBST_SED.makefile+=	-e '/tic/d'	# Do not install the st terminfo entry
+SUBST_SED.configdefh+=		-e 's,st-256color,xterm,g'
+SUBST_SED.configmk+=		-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.configmk+=		-e 's,share/man,${PKGMANDIR},g'
+SUBST_SED.configmk+=		-e 's,/usr/X11R6,${X11BASE},g'
+SUBST_SED.configmk+=		-e 's/cc/${CC:Q}/'
+SUBST_SED.makefile+=		-e '/tic/d' # Do not install the st terminfo entry
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
