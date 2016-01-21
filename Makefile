@@ -3775,6 +3775,7 @@ SUBDIR+=	tabbed
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	taglib-sharp
 SUBDIR+=	tagtool
+SUBDIR+=	taisei
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tamago-tsunagi
