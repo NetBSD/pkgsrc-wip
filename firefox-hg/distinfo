@@ -36,6 +36,7 @@ SHA1 (patch-unwind.h) = c7a606c83cb60d0d6bcc7babad8157097d9036a8
 SHA1 (patch-xg) = 2b472858270a109c2b317bb08698c12717174510
 SHA1 (patch-xl) = 337960ba518f1f142b45ae91d3f122ee5e0c9da3
 SHA1 (patch-xm) = 85000d412a7e7aa9ea8c337c9bc72b55d9e7ca63
+SHA1 (patch-xpcom_base_Logging.h) = d7c1a7ac97a085a94ab7ce12c37f14a6569c8e20
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__asm__mips.S) = 17becf7433af427289ee1e25c16600df468e2540
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__gcc__x86__unix.cpp) = 4d93c465be5fb5e6aaf0b12707a116c6b3ed4be8
 SHA1 (patch-xptcinvoke__sparc64__netbsd.cpp) = a292378e1a882b273616f2b749d7785fda2ddf54

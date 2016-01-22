@@ -3,6 +3,7 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc gnome pulseaudio webrtc
+PKG_SUPPORTED_OPTIONS+=	firefox-builtin-nss firefox-builtin-nspr
 
 PLIST_SRC+=	PLIST
 
@@ -24,6 +25,20 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
+.endif
+
+.if !empty(PKG_OPTIONS:Mfirefox-builtin-nspr)
+# do nothing
+.else
+CONFIGURE_ARGS+=	--with-system-nspr
+.include "../../wip/nspr-hg/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mfirefox-builtin-nss)
+# do nothing
+.else
+CONFIGURE_ARGS+=	--with-system-nss
+.include "../../wip/nss-hg/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
