@@ -1,1 +1,0 @@
-configure: error: System SQLite library is not compiled with SQLITE_ENABLE_DBSTAT_VTAB.
