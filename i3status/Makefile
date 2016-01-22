@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2015/04/08 14:33:19 nros Exp $
 #
 
-DISTNAME=	i3status-2.9
-PKGREVISION=	1
+DISTNAME=	i3status-2.10
 CATEGORIES=	sysutils wm
 MASTER_SITES=	http://i3wm.org/i3status/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,4 +27,5 @@ do-install:
 
 .include "../../devel/confuse/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
