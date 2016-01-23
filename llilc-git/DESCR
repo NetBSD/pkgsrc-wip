@@ -1,0 +1,3 @@
+This repo contains LLILC, an LLVM based compiler for .NET Core. It includes a
+set of cross-platform .NET code generation tools that enables compilation of
+MSIL byte code to LLVM supported platforms.
