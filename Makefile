@@ -732,6 +732,7 @@ SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
 SUBDIR+=	freecell
 SUBDIR+=	freedict-tools-xsl
+SUBDIR+=	freedoom
 SUBDIR+=	freedup
 SUBDIR+=	freedup16
 SUBDIR+=	freefem++
