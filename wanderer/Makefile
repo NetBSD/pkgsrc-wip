@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	wanderer-dev.3.2.1
+DISTNAME=	wanderer_dev-3.2.1
 PKGREVISION=    1
-PKGNAME=	wanderer-dev.3.2.1
+PKGNAME=	wanderer_dev-3.2.1
 DIST_SUBDIR=	${PKGVERSION_NOREV}
 CATEGORIES=	games
 MASTER_SITES=	http://e271.net/~marina/
@@ -25,16 +25,16 @@ SUBST_FILES.wand-mk= Makefile
 SUBST_SED.wand-mk= -e 's|${DESTDIR}||'
 SUBST_SED.wand-mk+= -e "s,/usr/local/,${PREFIX}/,"
 
-SETGIDGAME=	yes
+USE_GAMESGROUP=	yes
 SPECIAL_PERMS=	bin/wanderer ${SETGID_GAMES_PERMS}
 
-INSTALLATION_DIRS+=     man man/man6 bin share/wanderer share/wanderer/screens games
+INSTALLATION_DIRS+=     man ${PKGMANDIR}/man6 bin share/wanderer share/wanderer/screens games
+INSTALLATION_DIRS+= share/wanderer/screens
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wanderer ${DESTDIR}${PREFIX}/bin/wanderer
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/wanderer/screens
-	${INSTALL_DATA} ${WRKSRC}/screens/* ${DESTDIR}${PREFIX}/share/wanderer/screens/
 	${INSTALL_MAN} ${WRKSRC}/wanderer.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/
+	${INSTALL_DATA} ${WRKSRC}/screens/* ${DESTDIR}${PREFIX}/share/wanderer/screens/
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
