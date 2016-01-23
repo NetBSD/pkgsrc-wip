@@ -1,0 +1,4 @@
+.NET Core Runtime (CoreRT)
+
+This repo contains the .NET Core runtime optimized for AOT (ahead of time
+compilation) compilation, with the accompanying .NET Native compiler toolchain.
