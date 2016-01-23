@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lldb/source/Plugins/Process/Utility/RegisterContextNetBSD_x86_64.cpp.orig	2016-01-23 13:46:39.000000000 +0000
+--- lldb/source/Plugins/Process/Utility/RegisterContextNetBSD_x86_64.cpp.orig	2016-01-23 15:05:04.000000000 +0000
 +++ lldb/source/Plugins/Process/Utility/RegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,117 @@
+@@ -0,0 +1,124 @@
 +//===-- RegisterContextNetBSD_x86_64.cpp ----------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -45,16 +45,23 @@ $NetBSD$
 +    int64_t err;     /* 20 */
 +    int64_t rip;     /* 21 */
 +    int64_t cs;      /* 22 */
-+    int64_t eflags;  /* 23 */
++    int64_t rflags;  /* 23 */
 +    int64_t rsp;     /* 24 */
 +    int64_t ss;      /* 25 */
 +} GPR;
 +
 +struct DBG {
++    int64_t dr[8];
 +};
 +
 +struct UserArea {
++    GPR      gpr;
++    FPR      fpr;
++    DBG      dbg;
 +};
++
++#define DR_OFFSET(reg_index) \
++    (LLVM_EXTENSION offsetof(DBG, dr[reg_index]))
 +
 +//---------------------------------------------------------------------------
 +// Include RegisterInfos_x86_64 to declare our g_register_infos_x86_64 structure.
