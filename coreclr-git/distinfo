@@ -1,4 +1,2 @@
 $NetBSD$
 
-SHA1 (patch-src_pal_inc_pal.h) = bbe7bf6d609415ecec4993bdc3e1ec5b6f94f99a
-SHA1 (patch-src_pal_src_configure.cmake) = 2f62a889063e059dcd327072b5df21f7bab5f5a6
