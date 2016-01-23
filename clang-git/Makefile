@@ -75,6 +75,7 @@ SUBST_SED.libcxx=		-e 's,Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 49
 post-extract:
 	${RUN} mkdir -p ${WRKSRC}
 
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
