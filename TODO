@@ -29,6 +29,7 @@ Suggested package updates
 	o etoile-0.4.2
 	o evilvte-0.5.1
 	o fakenes-0.5.7
+	o fio-2.5
 	o firebird-2.5
 	o flc-1.12
 	o gambas2-3.7.1
@@ -62,6 +63,7 @@ Suggested package updates
 	o java-bcel-5.2
 	o java-swt-3.6
 	o kawa-1.9.1
+	o kibana-4.3.1
 	o kino-1.0.0
 	o kmymoney4-4.6.2
 	o kup-0.6.0
@@ -111,7 +113,7 @@ Suggested package updates
 	o residualvm-0.2.1
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o rust-1.5
+	o rust-1.6
 	o rygel-0.26.0
 	o samhain-4.0.0
 	o scantailor-0.9.11.1
@@ -134,6 +136,7 @@ Suggested package updates
 	o xaralx-bin-0.7.1692
 	o xf86-input-synaptics-1.8.0
 	o xf86-video-geode-2.11.17
+	o xxdiff-4.0
 	o zapping-0.10cvs6
 
 Suggested ready to import packages
