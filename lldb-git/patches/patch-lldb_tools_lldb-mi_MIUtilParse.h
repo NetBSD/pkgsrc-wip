@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lldb/tools/lldb-mi/MIUtilParse.h.orig	2015-11-18 04:51:19.000000000 +0000
+--- lldb/tools/lldb-mi/MIUtilParse.h.orig	2015-12-06 02:57:30.000000000 +0000
 +++ lldb/tools/lldb-mi/MIUtilParse.h
 @@ -9,8 +9,7 @@
   

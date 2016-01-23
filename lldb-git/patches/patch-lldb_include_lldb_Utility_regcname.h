@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lldb/include/lldb/Utility/regcname.h.orig	2015-11-30 03:53:10.000000000 +0000
+--- lldb/include/lldb/Utility/regcname.h.orig	2016-01-23 13:45:51.000000000 +0000
 +++ lldb/include/lldb/Utility/regcname.h
 @@ -0,0 +1,144 @@
 +/*-

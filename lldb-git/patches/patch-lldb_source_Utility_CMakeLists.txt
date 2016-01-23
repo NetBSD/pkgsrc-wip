@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lldb/source/Utility/CMakeLists.txt.orig	2015-11-18 04:51:19.000000000 +0000
+--- lldb/source/Utility/CMakeLists.txt.orig	2015-12-06 02:57:30.000000000 +0000
 +++ lldb/source/Utility/CMakeLists.txt
 @@ -17,4 +17,9 @@ add_lldb_library(lldbUtility
    TaskPool.cpp

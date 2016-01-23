@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lldb/source/Utility/regexec.c.orig	2015-11-30 03:53:10.000000000 +0000
+--- lldb/source/Utility/regexec.c.orig	2016-01-23 13:45:52.000000000 +0000
 +++ lldb/source/Utility/regexec.c
 @@ -0,0 +1,162 @@
 +/*-

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lldb/cmake/modules/LLDBStandalone.cmake.orig	2015-11-18 04:51:18.000000000 +0000
+--- lldb/cmake/modules/LLDBStandalone.cmake.orig	2015-12-06 02:57:30.000000000 +0000
 +++ lldb/cmake/modules/LLDBStandalone.cmake
 @@ -6,57 +6,77 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
  
