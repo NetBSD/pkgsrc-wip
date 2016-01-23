@@ -1,2 +1,5 @@
 $NetBSD$
 
+SHA1 (patch-build.sh) = 672ac72639fad7823c6f321f84ca83b94cd2dfeb
+SHA1 (patch-src_Native_CMakeLists.txt) = 9eb2e3790cf8199a561f295c12547cd2fb1b71d1
+SHA1 (patch-src_Native_Runtime_unix_configure.cmake) = c5ffe7d1b728e054c0173a8d06a6ea40c331e627
