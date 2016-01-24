@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/08/18 18:36:32 yhardy Exp $
 
-DISTNAME=	urlwatch-1.18
+DISTNAME=	urlwatch-2.0
 CATEGORIES=	net
 MASTER_SITES=	http://thp.io/2008/urlwatch/
 
@@ -11,16 +11,14 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	YES
-# needs futures
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+# no support for 2.x
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-post-extract:
-	cd ${WRKSRC} && ${MV} share/man man
-
-post-patch:
-	cd ${WRKSRC} && ${TOOLS_PLATFORM.env} PYVERSSUFFIX=${PYVERSSUFFIX} ${SH} convert-to-python3.sh
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/urlwatch.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
