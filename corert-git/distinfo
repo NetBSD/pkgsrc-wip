@@ -2,3 +2,7 @@ $NetBSD$
 
 SHA1 (patch-src_Native_Runtime_CachedInterfaceDispatch.cpp) = 1485afd92ab2748e8d5f97708124e06aebd592f2
 SHA1 (patch-src_Native_Runtime_EHHelpers.cpp) = 2f64d4d24096fe6e36ef79aa80f1600bd96eda58
+SHA1 (patch-src_Native_Runtime_gcrhenv.cpp) = d76cb47a9e0e8e35c9512d61e2ddfc23c0dccbc9
+SHA1 (patch-src_Native_Runtime_gcrhscan.cpp) = 9326e04f09a35cf435a4d38e70cb02f9f59df351
+SHA1 (patch-src_Native_Runtime_thread.cpp) = 90cc0624800bba44cb798b7623ecfbc618853cd8
+SHA1 (patch-src_Native_gc_env_gcenv.interlocked.inl) = 0dc2cc6aa827a84e91360976d9217c6e69adb328
