@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 231049
+LAST_UPDATED: Obtained from SVN: trunk revision 232486
 
 Native configuration is x86_64--netbsd
 
@@ -13,35 +13,8 @@ FAIL: g++.dg/cdce3.C  -std=gnu++11 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C  -std=gnu++11 compilation failed to produce executable
 FAIL: g++.dg/cdce3.C  -std=gnu++14 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C  -std=gnu++14 compilation failed to produce executable
-FAIL: c-c++-common/attr-simd-3.c  -std=gnu++98 (test for excess errors)
-FAIL: c-c++-common/attr-simd-3.c  -std=gnu++11 (test for excess errors)
-FAIL: c-c++-common/attr-simd-3.c  -std=gnu++14 (test for excess errors)
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 58: is 18:should be 9
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 73: is 162:should be 81
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  line 115: is 27:should be 14
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++98  gcov: 3 failures in line counts, 0 in branch percentages, 0 in return percentages, 0 in intermediate format
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++11  line 58: is 18:should be 9
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++11  line 73: is 162:should be 81
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++11  line 115: is 27:should be 14
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++11  gcov: 3 failures in line counts, 0 in branch percentages, 0 in return percentages, 0 in intermediate format
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++14  line 58: is 18:should be 9
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++14  line 73: is 162:should be 81
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++14  line 115: is 27:should be 14
-FAIL: g++.dg/gcov/gcov-1.C  -std=gnu++14  gcov: 3 failures in line counts, 0 in branch percentages, 0 in return percentages, 0 in intermediate format
 FAIL: g++.dg/guality/pr55665.C   -O2  line 23 p == 40
 FAIL: g++.dg/guality/pr55665.C   -O3 -g  line 23 p == 40
-FAIL: g++.dg/lto/20081118 cp_lto_20081118_0.o-cp_lto_20081118_1.o link, -fPIC -flto -flto-partition=1to1 -r -nostdlib (internal compiler error)
-UNRESOLVED: g++.dg/lto/20081118 cp_lto_20081118_0.o-cp_lto_20081118_1.o execute -fPIC -flto -flto-partition=1to1 -r -nostdlib
-FAIL: g++.dg/lto/20081204-1 cp_lto_20081204-1_0.o-cp_lto_20081204-1_1.o link, -flto -flto-partition=1to1 -fPIC -r -nostdlib (internal compiler error)
-UNRESOLVED: g++.dg/lto/20081204-1 cp_lto_20081204-1_0.o-cp_lto_20081204-1_1.o execute -flto -flto-partition=1to1 -fPIC -r -nostdlib
-FAIL: g++.dg/lto/20081219 cp_lto_20081219_0.o-cp_lto_20081219_1.o link, -fPIC -flto -flto-partition=1to1 -O2 (internal compiler error)
-UNRESOLVED: g++.dg/lto/20081219 cp_lto_20081219_0.o-cp_lto_20081219_1.o execute -fPIC -flto -flto-partition=1to1 -O2
-FAIL: g++.dg/lto/20090302 cp_lto_20090302_0.o-cp_lto_20090302_1.o link, -fPIC -flto -flto-partition=1to1 -r -nostdlib (internal compiler error)
-UNRESOLVED: g++.dg/lto/20090302 cp_lto_20090302_0.o-cp_lto_20090302_1.o execute -fPIC -flto -flto-partition=1to1 -r -nostdlib
-FAIL: g++.dg/lto/20091002-1 cp_lto_20091002-1_0.o-cp_lto_20091002-1_0.o link, -fPIC -flto (internal compiler error)
-UNRESOLVED: g++.dg/lto/20091002-1 cp_lto_20091002-1_0.o-cp_lto_20091002-1_0.o execute -fPIC -flto
-FAIL: g++.dg/lto/pr65193 cp_lto_pr65193_0.o-cp_lto_pr65193_0.o link, -fPIC -r -nostdlib -flto -O2 -g (internal compiler error)
-UNRESOLVED: g++.dg/lto/pr65193 cp_lto_pr65193_0.o-cp_lto_pr65193_0.o execute -fPIC -r -nostdlib -flto -O2 -g
 FAIL: g++.dg/vect/pr68145.cc  -std=c++98  scan-tree-dump vect "vectorized 1 loops"
 FAIL: g++.dg/vect/pr68145.cc  -std=c++11  scan-tree-dump vect "vectorized 1 loops"
 FAIL: g++.dg/vect/pr68145.cc  -std=c++14  scan-tree-dump vect "vectorized 1 loops"
@@ -51,12 +24,12 @@ FAIL: g++.old-deja/g++.eh/badalloc1.C  -std=c++14 execution test
 
 		=== g++ Summary ===
 
-# of expected passes		92792
-# of unexpected failures	32
-# of expected failures		268
-# of unresolved testcases	9
-# of unsupported tests		3514
-/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/testsuite/g++/../../xg++  version 6.0.0 20151129 (experimental) (GCC) 
+# of expected passes		94309
+# of unexpected failures	11
+# of expected failures		272
+# of unresolved testcases	3
+# of unsupported tests		3550
+/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/testsuite/g++/../../xg++  version 6.0.0 20160117 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -78,18 +51,14 @@ FAIL: gcc.dg/ifcvt-1.c scan-rtl-dump ce1 "3 true changes made"
 FAIL: gcc.dg/ifcvt-3.c scan-rtl-dump ce1 "3 true changes made"
 FAIL: gcc.dg/ifcvt-4.c scan-rtl-dump ce1 "2 true changes made"
 FAIL: gcc.dg/ira-loop-pressure.c scan-rtl-dump loop2_invariant "Decided to move invariant"
-FAIL: gcc.dg/pr52592.c (internal compiler error)
-FAIL: gcc.dg/pr52592.c (test for excess errors)
-UNRESOLVED: gcc.dg/pr52592.c scan-assembler-not __builtin_iround
-UNRESOLVED: gcc.dg/pr52592.c scan-assembler-not __builtin_irint
 FAIL: gcc.dg/pr68435.c scan-rtl-dump ce1 "2 true changes made"
 UNRESOLVED: gcc.dg/superblock.c scan-rtl-dump-times sched2 "ADVANCING TO" 2
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
-FAIL: gcc.dg/graphite/fuse-1.c scan-tree-dump-times graphite "ISL AST generated by ISL:.*for \\\\(int c0 = 0; c0 <= 99; c0 \\\\+= 1\\\\) {.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*}" 1
+FAIL: gcc.dg/graphite/fuse-1.c scan-tree-dump-times graphite "AST generated by isl:.*for \\\\(int c0 = 0; c0 <= 99; c0 \\\\+= 1\\\\) {.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*}" 1
 FAIL: gcc.dg/graphite/fuse-1.c scan-tree-dump-times forwprop4 "gimple_simplified to[^\\\\n]*\\\\^ 12" 1
-FAIL: gcc.dg/graphite/fuse-2.c scan-tree-dump-times graphite "ISL AST generated by ISL:.*for \\\\(int c0 = 0; c0 <= 99; c0 \\\\+= 1\\\\) {.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*}" 1
+FAIL: gcc.dg/graphite/fuse-2.c scan-tree-dump-times graphite "AST generated by isl:.*for \\\\(int c0 = 0; c0 <= 99; c0 \\\\+= 1\\\\) {.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*S_.*\\\\(c0\\\\);.*}" 1
 XPASS: gcc.dg/guality/example.c   -O0  execution test
 XPASS: gcc.dg/guality/example.c   -O1  execution test
 XPASS: gcc.dg/guality/example.c   -O2  execution test
@@ -142,6 +111,30 @@ FAIL: gcc.dg/guality/pr54693-2.c   -O2  line 21 z == 30 - 3 * i
 FAIL: gcc.dg/guality/pr54693-2.c   -O3 -g  line 21 z == 30 - 3 * i
 FAIL: gcc.dg/guality/pr54693-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 21 z == 30 - 3 * i
 FAIL: gcc.dg/guality/pr54693-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 21 z == 30 - 3 * i
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg1 == 1
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg2 == 2
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg3 == 3
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg4 == 4
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg5 == 5
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 14 arg6 == 6
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg1 == 1
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg2 == 2
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg3 == 3
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg4 == 4
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg5 == 5
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 arg6 == 6
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg1 == 1
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg2 == 2
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg3 == 3
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg4 == 4
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg5 == 5
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 14 arg6 == 6
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg1 == 1
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg2 == 2
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg3 == 3
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg4 == 4
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg5 == 5
+FAIL: gcc.dg/guality/pr68860-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 arg6 == 6
 FAIL: gcc.dg/guality/vla-1.c   -O1  line 17 sizeof (a) == 6
 FAIL: gcc.dg/guality/vla-1.c   -O2  line 17 sizeof (a) == 6
 FAIL: gcc.dg/guality/vla-1.c   -O3 -g  line 17 sizeof (a) == 6
@@ -164,15 +157,18 @@ UNRESOLVED: gcc.dg/lto/pr60449 c_lto_pr60449_0.o-c_lto_pr60449_1.o execute -O2 -
 FAIL: gcc.dg/torture/builtin-convert-1.c   -O1  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-1.c   -O2  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-1.c   -O3 -g  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-1.c   -Os  (internal compiler error)
 FAIL: gcc.dg/torture/builtin-convert-1.c   -Os  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-2.c   -O1  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-2.c   -O2  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-2.c   -O3 -g  (test for excess errors)
-FAIL: gcc.dg/torture/builtin-convert-2.c   -Os  (internal compiler error)
 FAIL: gcc.dg/torture/builtin-convert-2.c   -Os  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-integral-1.c   -O1  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-integral-1.c   -O2  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-integral-1.c   -O3 -g  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-integral-1.c   -Os  (test for excess errors)
+FAIL: gcc.dg/torture/builtin-integral-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-math-7.c   -O0  execution test
 FAIL: gcc.dg/torture/builtin-math-7.c   -O1  execution test
 FAIL: gcc.dg/torture/builtin-math-7.c   -O2  execution test
@@ -362,13 +358,13 @@ UNRESOLVED: gcc.target/i386/pr63618.c compilation failed to produce executable
 
 		=== gcc Summary ===
 
-# of expected passes		104959
-# of unexpected failures	191
+# of expected passes		106373
+# of unexpected failures	216
 # of unexpected successes	22
-# of expected failures		304
-# of unresolved testcases	84
-# of unsupported tests		2663
-/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/xgcc  version 6.0.0 20151129 (experimental) (GCC) 
+# of expected failures		314
+# of unresolved testcases	82
+# of unsupported tests		2690
+/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/xgcc  version 6.0.0 20160117 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -402,27 +398,23 @@ FAIL: gfortran.dg/read_dir.f90   -Os  execution test
 
 		=== gfortran Summary ===
 
-# of expected passes		41223
+# of expected passes		41546
 # of unexpected failures	25
-# of expected failures		73
-# of unsupported tests		89
-/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 6.0.0 20151129 (experimental) (GCC) 
+# of expected failures		71
+# of unsupported tests		90
+/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 6.0.0 20160117 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
 
 Running target unix
-FAIL: obj-c++.dg/property/dotsyntax-11.mm -fgnu-runtime  (test for errors, line 51)
-FAIL: obj-c++.dg/property/dotsyntax-11.mm -fgnu-runtime  (test for errors, line 56)
-FAIL: obj-c++.dg/property/dotsyntax-11.mm -fgnu-runtime  (test for errors, line 59)
 
 		=== obj-c++ Summary ===
 
-# of expected passes		1428
-# of unexpected failures	3
+# of expected passes		1446
 # of expected failures		10
 # of unsupported tests		77
-/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 6.0.0 20151129 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 6.0.0 20160117 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -438,7 +430,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		68
-/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/xgcc  version 6.0.0 20151129 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc6snapshot/work/build/gcc/xgcc  version 6.0.0 20160117 (experimental) (GCC) 
 
 		=== libatomic tests ===
 
@@ -457,9 +449,9 @@ FAIL: libgomp.fortran/pr25162.f   -O3 -g  execution test
 
 		=== libgomp Summary ===
 
-# of expected passes		4620
+# of expected passes		4704
 # of unexpected failures	2
-# of unsupported tests		254
+# of unsupported tests		262
 		=== libitm tests ===
 
 
@@ -468,7 +460,7 @@ FAIL: libitm.c/clone-1.c execution test
 
 		=== libitm Summary ===
 
-# of expected passes		37
+# of expected passes		41
 # of unexpected failures	1
 # of expected failures		3
 # of unsupported tests		1
@@ -531,7 +523,18 @@ FAIL: 30_threads/shared_future/members/wait_for.cc execution test
 FAIL: 30_threads/shared_future/members/wait_until.cc execution test
 FAIL: experimental/filesystem/iterators/directory_iterator.cc execution test
 FAIL: experimental/filesystem/iterators/recursive_directory_iterator.cc execution test
-UNRESOLVED: experimental/memory/shared_ptr/cons/copy_ctor_neg.cc compilation failed to produce executable
+FAIL: special_functions/07_cyl_bessel_i/check_nan.cc (test for excess errors)
+UNRESOLVED: special_functions/07_cyl_bessel_i/check_nan.cc compilation failed to produce executable
+FAIL: special_functions/08_cyl_bessel_j/check_nan.cc (test for excess errors)
+UNRESOLVED: special_functions/08_cyl_bessel_j/check_nan.cc compilation failed to produce executable
+FAIL: special_functions/09_cyl_bessel_k/check_nan.cc (test for excess errors)
+UNRESOLVED: special_functions/09_cyl_bessel_k/check_nan.cc compilation failed to produce executable
+FAIL: special_functions/10_cyl_neumann/check_nan.cc (test for excess errors)
+UNRESOLVED: special_functions/10_cyl_neumann/check_nan.cc compilation failed to produce executable
+FAIL: special_functions/18_riemann_zeta/check_nan.cc (test for excess errors)
+UNRESOLVED: special_functions/18_riemann_zeta/check_nan.cc compilation failed to produce executable
+FAIL: special_functions/20_sph_legendre/check_nan.cc (test for excess errors)
+UNRESOLVED: special_functions/20_sph_legendre/check_nan.cc compilation failed to produce executable
 FAIL: tr1/5_numerical_facilities/special_functions/08_cyl_bessel_i/check_nan.cc (test for excess errors)
 UNRESOLVED: tr1/5_numerical_facilities/special_functions/08_cyl_bessel_i/check_nan.cc compilation failed to produce executable
 FAIL: tr1/5_numerical_facilities/special_functions/09_cyl_bessel_j/check_nan.cc (test for excess errors)
@@ -547,17 +550,17 @@ UNRESOLVED: tr1/5_numerical_facilities/special_functions/22_sph_legendre/check_n
 
 		=== libstdc++ Summary ===
 
-# of expected passes		9822
-# of unexpected failures	60
-# of expected failures		67
-# of unresolved testcases	7
-# of unsupported tests		612
+# of expected passes		9948
+# of unexpected failures	66
+# of expected failures		88
+# of unresolved testcases	12
+# of unsupported tests		613
 
-Compiler version: 6.0.0 20151129 (experimental) (GCC) 
+Compiler version: 6.0.0 20160117 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-nls --with-libiconv-prefix=/usr --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc6snapshot/include/c++/ --enable-languages='c obj-c++ objc fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc6snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --with-arch=nocona --with-tune=nocona --with-fpmath=sse --prefix=/usr/pkg/gcc6snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc6snapshot/info --mandir=/usr/pkg/gcc6snapshot/man
 EOF
-Mail -s "Results for 6.0.0 20151129 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 6.0.0 20160117 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc6snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc6snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc6snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc6snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc6snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc6snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
