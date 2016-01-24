@@ -1,2 +1,4 @@
 $NetBSD$
 
+SHA1 (patch-src_Native_Runtime_CachedInterfaceDispatch.cpp) = 1485afd92ab2748e8d5f97708124e06aebd592f2
+SHA1 (patch-src_Native_Runtime_EHHelpers.cpp) = 2f64d4d24096fe6e36ef79aa80f1600bd96eda58
