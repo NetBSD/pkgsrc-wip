@@ -5,7 +5,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	amoibos@gmail.com
-HOMEPAGE=	http://dl.suckless.org/tools/
+HOMEPAGE=	http://tools.suckless.org/tabbed/
 COMMENT=	Simple generic tabbed frontend to xembed aware applications
 LICENSE=	mit
 
