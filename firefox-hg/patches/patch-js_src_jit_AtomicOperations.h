@@ -1,3 +1,5 @@
+$NetBSD$
+
 # See https://bugzilla.mozilla.org/show_bug.cgi?id=1232150
 
 diff -r c5da92c5b490 js/src/jit/AtomicOperations.h

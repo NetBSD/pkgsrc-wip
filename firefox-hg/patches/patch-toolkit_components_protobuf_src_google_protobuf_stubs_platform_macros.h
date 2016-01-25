@@ -1,3 +1,5 @@
+$NetBSD$
+
 # see upstream pull request #780 : not all __sparc__ are running Solaris
 # https://github.com/google/protobuf/pull/780
 
