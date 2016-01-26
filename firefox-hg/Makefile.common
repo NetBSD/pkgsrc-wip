@@ -75,6 +75,8 @@ SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
 
+USE_TOOLS+=	autoconf213
+
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC} && autoconf

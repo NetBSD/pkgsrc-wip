@@ -6,7 +6,7 @@
 # used by www/seamonkey/Makefile
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
+USE_TOOLS+=		pkg-config perl gmake unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
 
