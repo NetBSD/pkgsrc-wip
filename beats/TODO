@@ -1,0 +1,3 @@
+- topbeat needs some patching, disabled for now
+- doesn't seem to find syslog on SunOS properly
+- not much testing done so far

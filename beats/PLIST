@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/filebeat
+bin/libbeat
+bin/packetbeat
+share/examples/beats/filebeat.template.json
+share/examples/beats/filebeat.yml
+share/examples/beats/packetbeat.template.json
+share/examples/beats/packetbeat.yml
