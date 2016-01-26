@@ -17,7 +17,6 @@ SUBST_CLASSES+= wanderer
 SUBST_STAGE.wanderer= pre-build
 SUBST_FILES.wanderer= wand_head.h
 SUBST_SED.wanderer= -e "s,/usr/local/share/wanderer/screens,${PREFIX}/share/wanderer/screens,"
-SUBST_SED.wanderer+= -e "s,\#include <ncurses.h>,\#include <curses.h>,"
 
 SUBST_CLASSES+= wand-mk
 SUBST_STAGE.wand-mk= pre-build
@@ -29,12 +28,11 @@ USE_GAMESGROUP=	yes
 SPECIAL_PERMS=	bin/wanderer ${SETGID_GAMES_PERMS}
 
 INSTALLATION_DIRS+=     man ${PKGMANDIR}/man6 bin share/wanderer share/wanderer/screens games
-INSTALLATION_DIRS+= share/wanderer/screens
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wanderer ${DESTDIR}${PREFIX}/bin/wanderer
-	${INSTALL_MAN} ${WRKSRC}/wanderer.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/
 	${INSTALL_DATA} ${WRKSRC}/screens/* ${DESTDIR}${PREFIX}/share/wanderer/screens/
+	${INSTALL_MAN} ${WRKSRC}/wanderer.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/
 
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
