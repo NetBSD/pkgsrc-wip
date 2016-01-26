@@ -1,0 +1,7 @@
+- Need to come up with a suitable PLIST, despite that there is no "install"
+  target. Fortunately, users can set the AQUARIA_DATA_PATH environment var
+  to pretty much whatever they want, including wherever we decide to install
+  that data (probably ${PREFIX}/share/aquaria/data). 
+
+- Need to build a MESSAGE which describes what you need to do/buy in order
+  to actually play the game.
