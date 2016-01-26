@@ -205,6 +205,7 @@ SUBDIR+=	bastard
 SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
+SUBDIR+=	beats
 SUBDIR+=	bertini
 SUBDIR+=	bfgminer
 SUBDIR+=	bibliographer
