@@ -14,17 +14,11 @@ LICENSE=	apache-2.0
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
-
+AUTO_MKDIRS=	yes
 USE_JAVA=	yes
-USE_JAVA2=  yes
+USE_JAVA2=	yes
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15
-
-
-INSTALLATION_DIRS=	lib/java/lucene		\
-						lib/java/lucene/lib		\
-						lib/java/lucene/contrib 	\
-						share/doc/lucene
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${PREFIX}/lib/java/lucene
