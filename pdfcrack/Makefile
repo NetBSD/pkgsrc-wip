@@ -9,8 +9,6 @@ HOMEPAGE=	http://pdfcrack.sourceforge.net/
 COMMENT=	Password Recovery Tool for PDF-files
 LICENSE=	gnu-gpl-v2
 
-NO_CONFIGURE=	yes
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
