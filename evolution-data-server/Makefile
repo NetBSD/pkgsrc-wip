@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.154 2015/10/10 01:57:53 ryoon Exp $
 
-DISTNAME=	evolution-data-server-2.32.3
-PKGREVISION=	37
+DISTNAME=	evolution-data-server-3.18.4
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/2.32/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/3.18/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/evolution/
@@ -63,6 +62,10 @@ BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
 .include "../../devel/gperf/buildlink3.mk"
+.include "../../security/libgnome-keyring/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.10
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
