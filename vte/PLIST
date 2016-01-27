@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2015/06/05 22:19:50 krytarowski Exp $
+@comment $NetBSD$
 bin/vte-2.91
 etc/profile.d/vte.sh
+include/vte-2.91/vte/vte.h
 include/vte-2.91/vte/vtedeprecated.h
 include/vte-2.91/vte/vteenums.h
 include/vte-2.91/vte/vteglobals.h
-include/vte-2.91/vte/vte.h
 include/vte-2.91/vte/vtemacros.h
 include/vte-2.91/vte/vtepty.h
 include/vte-2.91/vte/vteterminal.h
@@ -15,16 +15,17 @@ lib/libvte-2.91.la
 lib/pkgconfig/vte-2.91.pc
 share/gir-1.0/Vte-2.91.gir
 share/locale/am/LC_MESSAGES/vte-2.91.mo
+share/locale/an/LC_MESSAGES/vte-2.91.mo
 share/locale/ang/LC_MESSAGES/vte-2.91.mo
 share/locale/ar/LC_MESSAGES/vte-2.91.mo
 share/locale/as/LC_MESSAGES/vte-2.91.mo
 share/locale/ast/LC_MESSAGES/vte-2.91.mo
 share/locale/az/LC_MESSAGES/vte-2.91.mo
-share/locale/be@latin/LC_MESSAGES/vte-2.91.mo
 share/locale/be/LC_MESSAGES/vte-2.91.mo
+share/locale/be@latin/LC_MESSAGES/vte-2.91.mo
 share/locale/bg/LC_MESSAGES/vte-2.91.mo
-share/locale/bn_IN/LC_MESSAGES/vte-2.91.mo
 share/locale/bn/LC_MESSAGES/vte-2.91.mo
+share/locale/bn_IN/LC_MESSAGES/vte-2.91.mo
 share/locale/bs/LC_MESSAGES/vte-2.91.mo
 share/locale/ca/LC_MESSAGES/vte-2.91.mo
 share/locale/ca@valencia/LC_MESSAGES/vte-2.91.mo
@@ -34,9 +35,9 @@ share/locale/da/LC_MESSAGES/vte-2.91.mo
 share/locale/de/LC_MESSAGES/vte-2.91.mo
 share/locale/dz/LC_MESSAGES/vte-2.91.mo
 share/locale/el/LC_MESSAGES/vte-2.91.mo
+share/locale/en@shaw/LC_MESSAGES/vte-2.91.mo
 share/locale/en_CA/LC_MESSAGES/vte-2.91.mo
 share/locale/en_GB/LC_MESSAGES/vte-2.91.mo
-share/locale/en@shaw/LC_MESSAGES/vte-2.91.mo
 share/locale/eo/LC_MESSAGES/vte-2.91.mo
 share/locale/es/LC_MESSAGES/vte-2.91.mo
 share/locale/et/LC_MESSAGES/vte-2.91.mo
@@ -82,8 +83,8 @@ share/locale/oc/LC_MESSAGES/vte-2.91.mo
 share/locale/or/LC_MESSAGES/vte-2.91.mo
 share/locale/pa/LC_MESSAGES/vte-2.91.mo
 share/locale/pl/LC_MESSAGES/vte-2.91.mo
-share/locale/pt_BR/LC_MESSAGES/vte-2.91.mo
 share/locale/pt/LC_MESSAGES/vte-2.91.mo
+share/locale/pt_BR/LC_MESSAGES/vte-2.91.mo
 share/locale/ro/LC_MESSAGES/vte-2.91.mo
 share/locale/ru/LC_MESSAGES/vte-2.91.mo
 share/locale/rw/LC_MESSAGES/vte-2.91.mo
@@ -91,8 +92,8 @@ share/locale/si/LC_MESSAGES/vte-2.91.mo
 share/locale/sk/LC_MESSAGES/vte-2.91.mo
 share/locale/sl/LC_MESSAGES/vte-2.91.mo
 share/locale/sq/LC_MESSAGES/vte-2.91.mo
-share/locale/sr@latin/LC_MESSAGES/vte-2.91.mo
 share/locale/sr/LC_MESSAGES/vte-2.91.mo
+share/locale/sr@latin/LC_MESSAGES/vte-2.91.mo
 share/locale/sv/LC_MESSAGES/vte-2.91.mo
 share/locale/ta/LC_MESSAGES/vte-2.91.mo
 share/locale/te/LC_MESSAGES/vte-2.91.mo

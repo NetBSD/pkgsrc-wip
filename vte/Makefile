@@ -34,14 +34,15 @@ pre-configure:
 .include "../../lang/vala/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.40.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 # for FC_WIDTH
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
+# requires gtk3 >= 3.8.0
+#BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
