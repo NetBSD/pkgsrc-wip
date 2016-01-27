@@ -24,7 +24,7 @@ DEPENDS+=	cantarell-fonts>=0.0.16:../../fonts/cantarell-fonts
 #DEPENDS+=	caribou>=0.4.18.1:../../devel/caribou
 DEPENDS+=	clutter>=1.22.2:../../graphics/clutter
 DEPENDS+=	clutter-gst>=2.0.14:../../multimedia/clutter-gst
-DEPENDS+=	clutter-gst>=3.0.4:../../multimedia/clutter-gst
+DEPENDS+=	clutter-gst>=3.0.4:../../wip/clutter-gst
 DEPENDS+=	clutter-gtk>=1.6.0:../../graphics/clutter-gtk
 DEPENDS+=	cogl>=1.20.0:../../graphics/cogl
 DEPENDS+=	dconf>=0.24.0:../../devel/dconf
