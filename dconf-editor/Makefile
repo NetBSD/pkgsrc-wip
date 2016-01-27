@@ -7,7 +7,7 @@ EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Xterm like terminal program for GNOME 2
+COMMENT=		Editor for gsettings backend
 LICENSE=		gnu-lgpl-v2.1
 
 #BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
