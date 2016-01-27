@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/11/03 01:20:21 agc Exp $
 
-SHA1 (folks-0.4.2.tar.bz2) = 8c08c13880be3c73ebaebfbd786e6ca28c6d3fe1
-RMD160 (folks-0.4.2.tar.bz2) = 8807ec65c809ca84e0f42902ed65ad8bf84b0772
-SHA512 (folks-0.4.2.tar.bz2) = a8bcee058dc85e845814f4d5a86a2c692fee60a3adcc67d830546f7f065348dfa9217b47098c89721fd77103fe5fdda82421732651653e7c3e3f3566dc09769b
-Size (folks-0.4.2.tar.bz2) = 610469 bytes
+SHA1 (folks-0.10.1.tar.xz) = e576d2f65f059df7dfb79c5a21d2336ea4765435
+RMD160 (folks-0.10.1.tar.xz) = 515423cea44d7f7f686ef4bc34c57b6c20df1c5b
+SHA512 (folks-0.10.1.tar.xz) = 12ef1ea9220a3a0936c4846e5d7b756a0d6edc3c4ae66e419d8483df71eb83d639e4b9d8068c527546fdb3d9c2a51b300bb940acf35c1f123e9d7369a130109b
+Size (folks-0.10.1.tar.xz) = 1879032 bytes
