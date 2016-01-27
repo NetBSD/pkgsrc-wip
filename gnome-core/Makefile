@@ -27,7 +27,7 @@ DEPENDS+=	clutter-gst>=2.0.14:../../multimedia/clutter-gst
 DEPENDS+=	clutter-gst>=3.0.4:../../wip/clutter-gst
 DEPENDS+=	clutter-gtk>=1.6.0:../../graphics/clutter-gtk
 DEPENDS+=	cogl>=1.20.0:../../graphics/cogl
-DEPENDS+=	dconf>=0.24.0:../../devel/dconf
+DEPENDS+=	dconf>=0.24.0:../../wip/dconf
 DEPENDS+=	dconf-editor>=3.16.1:../../devel/dconf-editor
 DEPENDS+=	empathy>=3.12.10:../../chat/empathy
 DEPENDS+=	eog>=3.16.2:../../graphics/eog
