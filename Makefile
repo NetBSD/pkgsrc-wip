@@ -103,6 +103,7 @@ SUBDIR+=	ann
 SUBDIR+=	ansible
 SUBDIR+=	anthy-dic-jis34
 SUBDIR+=	antlr3-c
+SUBDIR+=	anura
 SUBDIR+=	aoeui
 SUBDIR+=	aoi
 SUBDIR+=	aokell
