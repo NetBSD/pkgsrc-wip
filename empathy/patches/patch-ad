@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.2 2013/08/12 10:00:03 obache Exp $
+
+--- configure.orig	2011-03-24 15:18:52.000000000 +0000
++++ configure
+@@ -13553,8 +13553,8 @@ install-data-am: install-gsettings-schem
+ .SECONDARY: $(gsettings_SCHEMAS)
+ 
+ gsettings__base_list = \
+-  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
+-  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
++  gsed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
++  gsed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
+ 
+ install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid)
+ 	@$(NORMAL_INSTALL)
