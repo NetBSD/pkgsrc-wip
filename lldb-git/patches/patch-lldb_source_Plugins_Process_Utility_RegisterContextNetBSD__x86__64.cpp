@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lldb/source/Plugins/Process/Utility/RegisterContextNetBSD_x86_64.cpp.orig	2016-01-23 15:05:04.000000000 +0000
+--- lldb/source/Plugins/Process/Utility/RegisterContextNetBSD_x86_64.cpp.orig	2016-01-27 23:48:07.000000000 +0000
 +++ lldb/source/Plugins/Process/Utility/RegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,124 @@
+@@ -0,0 +1,118 @@
 +//===-- RegisterContextNetBSD_x86_64.cpp ----------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -22,51 +22,45 @@ $NetBSD$
 +// src/sys/arch/amd64/include/frame_regs.h
 +typedef struct _GPR
 +{
-+    int64_t rdi;     /*  0 */
-+    int64_t rsi;     /*  1 */
-+    int64_t rdx;     /*  2 */
-+    int64_t rcx;     /*  3 */
-+    int64_t r8;      /*  4 */
-+    int64_t r9;      /*  5 */
-+    int64_t r10;     /*  6 */
-+    int64_t r11;     /*  7 */
-+    int64_t r12;     /*  8 */
-+    int64_t r13;     /*  9 */
-+    int64_t r14;     /* 10 */
-+    int64_t r15;     /* 11 */
-+    int64_t rbp;     /* 12 */
-+    int64_t rbx;     /* 13 */
-+    int64_t rax;     /* 14 */
-+    int64_t gs;      /* 15 */
-+    int64_t fs;      /* 16 */
-+    int64_t es;      /* 17 */
-+    int64_t ds;      /* 18 */
-+    int64_t trapno;  /* 19 */
-+    int64_t err;     /* 20 */
-+    int64_t rip;     /* 21 */
-+    int64_t cs;      /* 22 */
-+    int64_t rflags;  /* 23 */
-+    int64_t rsp;     /* 24 */
-+    int64_t ss;      /* 25 */
++    uint64_t rdi;     /*  0 */
++    uint64_t rsi;     /*  1 */
++    uint64_t rdx;     /*  2 */
++    uint64_t rcx;     /*  3 */
++    uint64_t r8;      /*  4 */
++    uint64_t r9;      /*  5 */
++    uint64_t r10;     /*  6 */
++    uint64_t r11;     /*  7 */
++    uint64_t r12;     /*  8 */
++    uint64_t r13;     /*  9 */
++    uint64_t r14;     /* 10 */
++    uint64_t r15;     /* 11 */
++    uint64_t rbp;     /* 12 */
++    uint64_t rbx;     /* 13 */
++    uint64_t rax;     /* 14 */
++    uint64_t gs;      /* 15 */
++    uint64_t fs;      /* 16 */
++    uint64_t es;      /* 17 */
++    uint64_t ds;      /* 18 */
++    uint64_t trapno;  /* 19 */
++    uint64_t err;     /* 20 */
++    uint64_t rip;     /* 21 */
++    uint64_t cs;      /* 22 */
++    uint64_t rflags;  /* 23 */
++    uint64_t rsp;     /* 24 */
++    uint64_t ss;      /* 25 */
 +} GPR;
-+
-+struct DBG {
-+    int64_t dr[8];
-+};
 +
 +struct UserArea {
 +    GPR      gpr;
++    uint64_t mc_tlsbase;
 +    FPR      fpr;
-+    DBG      dbg;
 +};
-+
-+#define DR_OFFSET(reg_index) \
-+    (LLVM_EXTENSION offsetof(DBG, dr[reg_index]))
 +
 +//---------------------------------------------------------------------------
 +// Include RegisterInfos_x86_64 to declare our g_register_infos_x86_64 structure.
 +//---------------------------------------------------------------------------
 +#define DECLARE_REGISTER_INFOS_X86_64_STRUCT
++#define NO_DEBUGREGS
 +#include "RegisterInfos_x86_64.h"
 +#undef DECLARE_REGISTER_INFOS_X86_64_STRUCT
 +
