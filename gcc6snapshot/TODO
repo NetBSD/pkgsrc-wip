@@ -1,6 +1,10 @@
 TODO
 ====
 
+
+I won't work on gcc any longer after gcc6 has been released in about 
+April 2016. So please step up as maintainer of gcc6/gcc7 for NetBSD.
+
 0) This package aims to keep the latest gcc usable on NetBSD, although
 any work on gcc should happen upstream as far as possible. But it is 
 hopeless without enough NetBSD developers working on it upstream. I have sent
@@ -28,15 +32,15 @@ in complex.h but missing from libm.
 will stay high. The dozens of missing or inaccurate long double functions
 causes a misconception of NetBSD being an obscure platform, causing other
 projects like gcc or R to abandon support for NetBSD. And the race goes on,
-now we need support for C11 functions like aligned_alloc in our libc/libm.
+now we need support for C11 functions like aligned_alloc and the plethora
+of thread functions in our libc/libm.
  
 3) This package and the lang/gccXY need a cleanup or a complete new start. I
 think that SUBST_VARS could handle the platform dependencies in a much cleaner
 way.
 
-4) Patches from lang/gcc52 should be integrated as far as possible, especially
+4) Patches from lang/gcc5 should be integrated as far as possible, especially
 patches for other platforms. Right now I just look at it from time to time.
-
 
 Have fun,
 
