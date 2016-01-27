@@ -1,11 +1,21 @@
 # $NetBSD: Makefile,v 1.26 2015/09/07 12:02:06 jperkin Exp $
 
-PKGREVISION= 1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+
 .include "Makefile.common"
 
-CONFIGURE_ARGS+= --disable-editor
+CONFIGURE_ARGS+=	--disable-editor
 
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
+
+SUBST_CLASSES=		sysdir
+SUBST_MESSAGE.sysdir=	Fixes hard-coded dconf database directory name
+SUBST_STAGE.sysdir=	post-configure
+SUBST_FILES.sysdir=	engine/dconf-engine-source-system.c
+SUBST_FILES.sysdir+=	tests/engine.c
+SUBST_FILES.sysdir+=	bin/dconf-update.c
+SUBST_FILES.sysdir+=	bin/dconf-update.vala
+SUBST_SED.sysdir=	-e s,/etc/dconf,${PKG_SYSCONFDIR}/dconf,g
 
 .include "../../mk/bsd.prefs.mk"
 
