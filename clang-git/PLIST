@@ -453,6 +453,7 @@ include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
 lib/clang/${PKGVERSION}/include/Intrin.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_runtime_wrapper.h
 lib/clang/${PKGVERSION}/include/__stddef_max_align_t.h
 lib/clang/${PKGVERSION}/include/__wmmintrin_aes.h
