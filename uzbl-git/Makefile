@@ -31,8 +31,6 @@ REPLACE_PYTHON+=	examples/data/scripts/per-site-settings.py
 REPLACE_PYTHON+=	examples/data/scripts/scheme.py
 .include "../../lang/python/application.mk"
 
-do-configure: replace-interpreter	# Do not configure, but replace interpreters.
-
 # for uzbl-browser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # for uzbl-tabbed with GTK+ 2
