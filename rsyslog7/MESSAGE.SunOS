@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.SunOS,v 1.1 2013/09/11 10:01:56 fhajny Exp $
-
-To use rsyslogd on Solaris, you'll need to stop the default syslogd first
-via SMF:
-
-    svcadm disable system/system-log
-
-===========================================================================
