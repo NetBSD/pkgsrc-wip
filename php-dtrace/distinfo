@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/08 10:36:26 fhajny Exp $
-
-SHA1 (php-dtrace/dtrace-1.0.3.tgz) = 8d37df831f779230c31e814e0e7ce3bbfa705674
-RMD160 (php-dtrace/dtrace-1.0.3.tgz) = 5249cfd0c1021a65c3c540ce6c72494a68d73ba4
-Size (php-dtrace/dtrace-1.0.3.tgz) = 3335 bytes
