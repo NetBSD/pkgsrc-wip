@@ -14,9 +14,6 @@ HOMEPAGE=	http://www.uzbl.org/
 COMMENT=	Web interface tools which adhere to the UNIX philosophy
 LICENSE=	gnu-gpl-v3
 
-# In fact there is no configure script,
-# but replace-interpreter is a part of configure phase.
-#NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 # Disabled for now, as it is not stable yet.
 #MAKE_ENV+=	ENABLE_WEBKIT2=yes
