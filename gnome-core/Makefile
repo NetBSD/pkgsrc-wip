@@ -29,11 +29,11 @@ DEPENDS+=	clutter-gtk>=1.6.0:../../graphics/clutter-gtk
 DEPENDS+=	cogl>=1.20.0:../../graphics/cogl
 DEPENDS+=	dconf>=0.24.0:../../wip/dconf
 DEPENDS+=	dconf-editor>=3.16.0:../../wip/dconf-editor
+DEPENDS+=	evolution-data-server>=3.16.2:../../wip/evolution-data-server
 DEPENDS+=	empathy>=3.12.10:../../chat/empathy
-DEPENDS+=	eog>=3.16.2:../../graphics/eog
+DEPENDS+=	eog>=3.16.2:../../graphics/eog3
 DEPENDS+=	epiphany>=3.16.1:../../www/epiphany
-DEPENDS+=	evince>=3.16.0:../../print/evince
-DEPENDS+=	evolution-data-server>=3.16.2:../../mail/evolution-data-server
+DEPENDS+=	evince>=3.16.0:../../print/evince3
 DEPENDS+=	folks>=0.11.0:../../chat/libfolks
 #DEPENDS+=	gcr>=3.16.0:../../devel/gcr
 DEPENDS+=	gdk-pixbuf>=2.31.4:../../graphics/gdk-pixbuf
