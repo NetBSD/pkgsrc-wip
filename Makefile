@@ -2425,7 +2425,6 @@ SUBDIR+=	php-doc-ro
 SUBDIR+=	php-doc-ru
 SUBDIR+=	php-doc-tr
 SUBDIR+=	php-doc-zh
-SUBDIR+=	php-dtrace
 SUBDIR+=	php-gtk2
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
@@ -3532,7 +3531,6 @@ SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
 SUBDIR+=	rsyslog6
-SUBDIR+=	rsyslog7
 SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtl-sdr-git
@@ -4154,8 +4152,6 @@ SUBDIR+=	ziparchive
 SUBDIR+=	zipios
 SUBDIR+=	zmap
 SUBDIR+=	znc
-SUBDIR+=	zookeeper-client
-SUBDIR+=	zookeeper-server
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
