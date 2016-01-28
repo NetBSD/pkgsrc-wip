@@ -61,6 +61,7 @@ PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
+.include "../../wip/gcr/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.10
@@ -78,7 +79,7 @@ BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.10
 .include "../../lang/python/application.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../net/libgdata0.6/buildlink3.mk"
+#.include "../../net/libgdata0.6/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
