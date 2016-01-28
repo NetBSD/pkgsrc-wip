@@ -44,6 +44,7 @@ CFLAGS.SunOS+=	-D__FUNCTION__=__func__
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
+CONFIGURE_ARGS+=	--disable-uoa
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--with-libdb=${BDBBASE}
 
@@ -61,7 +62,9 @@ PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../wip/gcr/buildlink3.mk"
+.include "../../net/gnome-online-accounts/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.10
@@ -74,12 +77,12 @@ BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.10
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgweather/buildlink3.mk"
+.include "../../wip/libgweather/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-#.include "../../net/libgdata0.6/buildlink3.mk"
+.include "../../net/libgdata/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
