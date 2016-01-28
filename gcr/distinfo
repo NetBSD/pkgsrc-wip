@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.21 2015/11/04 03:28:30 agc Exp $
+
+SHA1 (gcr-3.18.0.tar.xz) = 993ba9263cb4554b8710ab6df6abd0576878f8b3
+RMD160 (gcr-3.18.0.tar.xz) = 4a31fc41abd22fcb399c546b13ac1a3bf90dc95d
+SHA512 (gcr-3.18.0.tar.xz) = 3733a462c23b0cf1d3579ea4b0b6eea9b5e3eb98e81e7c0e0364e540ec60a7a7bc567d1d159c674df280fb20c305cbaef796dffef73801ece4f4474352786e6b
+Size (gcr-3.18.0.tar.xz) = 1311368 bytes
