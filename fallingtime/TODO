@@ -1,0 +1,2 @@
+- No suitable "install" target; AFAICT the game's data MUST reside in a
+  subdirectory of the directory where the main executable resides.

@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (FallingTime-1.0.1.tar.gz) = 40abd3595f891b33fcc26f39379ea04be73fa5ba
+RMD160 (FallingTime-1.0.1.tar.gz) = 47591713db84edbc6ed7450dcd9ec4695e676703
+Size (FallingTime-1.0.1.tar.gz) = 1875727 bytes
+SHA1 (patch-CMakeLists.txt) = bc3613d36e72038b85aa6667ca859e0d1272feba
+SHA1 (patch-cfgpath.h) = e615ce4cd230be2f02e9c3d3a33a4481c71d75f6
+SHA1 (patch-chipmunk_include_chipmunk_chipmunk.h) = d428809559e96da1f0ac896b0c49674bcbf8b599
