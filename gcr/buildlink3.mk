@@ -25,7 +25,7 @@ BUILDLINK_PKGSRCDIR.gcr?=	../../wip/gcr
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 #.include "../../security/libgcrypt/buildlink3.mk"
-#.include "../../wip/p11-kit/buildlink3.mk"
+.include "../../wip/p11-kit/buildlink3.mk"
 #.include "../../devel/glib2/buildlink3.mk"
 #.include "../../sysutils/dbus-glib/buildlink3.mk"
 #.include "../../textproc/gnome-doc-utils/buildlink3.mk"
