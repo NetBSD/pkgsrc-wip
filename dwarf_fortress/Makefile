@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/05/08 22:58:43 i3enedek Exp $
 
-DISTNAME=	df_42_03_linux
-PKGNAME=	dwarf_fortress-42.03
+DISTNAME=	df_42_04_linux
+PKGNAME=	dwarf_fortress-42.04
 CATEGORIES=	games
 MASTER_SITES=	http://www.bay12games.com/dwarves/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=bin df_linux
 #INSTALLATION_DIRS=bin df_linux/data df_linux/data/movies df_linux/data/art df_linux/data/init df_linux/data/init/macros df_linux/data/announcement df_linux/data/dipscript df_linux/data/dipscript/text df_linux/data/help df_linux/data/speech df_linux/data/initial_movies df_linux/data/sound df_linux/raw df_linux/raw/graphics df_linux/raw/graphics/example df_linux/raw/interaction\ examples df_linux/raw/objects df_linux/raw/objects/notes df_linux/raw/objects/text df_linux/sdl df_linux/libs
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	base compat expat gtk2 libSDL
+EMUL_MODULES.linux=	base compat expat gtk2 libSDL glx x11
 
 DFDIR=        df_linux
 
@@ -51,10 +51,10 @@ SUBST_STAGE.fix-paths-1= post-configure
 SUBST_FILES.fix-paths-1= data/init/init.txt
 SUBST_SED.fix-paths-1= -e 's,SOUND:YES,SOUND:NO,g'
 
-#SUBST_CLASSES+= fix-paths-2
-#SUBST_STAGE.fix-paths-2= post-configure
-#SUBST_FILES.fix-paths-2= df
-#SUBST_SED.fix-paths-2= -e 's,\.\/libs,/usr/pkg/df_linux/libs,g'
+SUBST_CLASSES+= fix-paths-2
+SUBST_STAGE.fix-paths-2= post-configure
+SUBST_FILES.fix-paths-2= df
+SUBST_SED.fix-paths-2= -e '4l' -e '4s@.*@export LIBGL_DRIVERS_PATH=/usr/X11R7/lib/modules/dri@'
 
 
 .include "../../mk/bsd.prefs.mk"
