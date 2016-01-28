@@ -7,7 +7,7 @@ EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		GCR is a library for crypto UI and related tasks
+COMMENT=		Library for crypto UI and related tasks
 LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
