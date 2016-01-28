@@ -3940,6 +3940,7 @@ SUBDIR+=	uschedule
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
+SUBDIR+=	uzbl-git
 SUBDIR+=	v8
 SUBDIR+=	v8-316
 SUBDIR+=	vacuum
