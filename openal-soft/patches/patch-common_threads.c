@@ -2,16 +2,18 @@ $NetBSD$
 
 Adjust usage of pthread_setname_np(3).
 
---- common/threads.c.orig	2015-12-10 12:45:30.000000000 +0000
-+++ common/threads.c
-@@ -497,7 +497,9 @@ extern inline void alcall_once(alonce_fl
- void althrd_setname(althrd_t thr, const char *name)
- {
- #if defined(HAVE_PTHREAD_SETNAME_NP)
--#if defined(__GNUC__)
+--- common/threads.c.orig	2016-01-25 04:12:39.000000000 +0100
++++ common/threads.c	2016-01-29 18:13:41.000000000 +0100
+@@ -501,8 +501,12 @@
+     if(althrd_equal(thr, althrd_current()))
+         pthread_setname_np(name);
+ #else
 +#if defined(__NetBSD__)
 +    pthread_setname_np(thr, "%s", name);
-+#elif defined(__GNUC__)
++#else
      pthread_setname_np(thr, name);
- #elif defined(__APPLE__)
-     if(althrd_equal(thr, althrd_current())
+ #endif
++#endif
+ #elif defined(HAVE_PTHREAD_SET_NAME_NP)
+     pthread_set_name_np(thr, name);
+ #else
