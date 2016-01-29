@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/pal/src/cruntime/file.cpp.orig	2016-01-18 21:51:39.000000000 +0000
+--- src/pal/src/cruntime/file.cpp.orig	2016-01-28 19:04:13.000000000 +0000
 +++ src/pal/src/cruntime/file.cpp
-@@ -841,7 +841,7 @@ PAL_fgetpos (
+@@ -840,7 +840,7 @@ PAL_fgetpos (
      PAL_fpos_t *pos
  )
  {
@@ -11,7 +11,7 @@ $NetBSD$
      // TODO: implement for Linux if required
      ASSERT(FALSE);
      return -1;
-@@ -887,7 +887,7 @@ PAL_fsetpos (
+@@ -886,7 +886,7 @@ PAL_fsetpos (
      const PAL_fpos_t *pos
  )
  {

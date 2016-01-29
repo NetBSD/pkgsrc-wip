@@ -1,3 +1,6 @@
 $NetBSD$
 
-SHA1 (patch-src_pal_src_cruntime_file.cpp) = aefeb45ffc205d9c1f8893c8699b1a948ee24dad
+SHA1 (patch-src_pal_src_config.h.in) = bbf370ef53a770051ef1b64ff57e093061563828
+SHA1 (patch-src_pal_src_configure.cmake) = fc41e4af9fe7f770ae3f53fabb7a035d26541fe2
+SHA1 (patch-src_pal_src_cruntime_file.cpp) = 315ad5db53ef2b893a77aa131ce97999214e0e11
+SHA1 (patch-src_pal_src_include_pal_context.h) = 962cf83ef0ba0a4e2e57e344809a566f12f2e01d
