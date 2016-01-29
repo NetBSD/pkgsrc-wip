@@ -928,6 +928,7 @@ SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
 SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-osmosdr-git
+SUBDIR+=	gradle
 SUBDIR+=	grandr
 SUBDIR+=	graphite2
 SUBDIR+=	graphmonkey
