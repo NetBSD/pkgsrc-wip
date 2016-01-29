@@ -29,6 +29,7 @@ Update package in order to fix multiple vulnerabilities. Reference:
 http://secunia.com/advisories/28596/
 http://secunia.com/advisories/31064/
 http://secunia.com/advisories/36026/
+CVE-2016-1569
 
 	-- kefren@netbsd.org
 
