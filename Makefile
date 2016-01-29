@@ -3452,6 +3452,7 @@ SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qrint
 SUBDIR+=	qrq
+SUBDIR+=	qtaccountsservice
 SUBDIR+=	qt4-gstreamer
 SUBDIR+=	qt4-libqtlua
 SUBDIR+=	qt5-libqtlua
