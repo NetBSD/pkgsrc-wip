@@ -1,0 +1,19 @@
+@comment $NetBSD$
+include/QtAccountsService/QtAccountsService/AccountsManager
+include/QtAccountsService/QtAccountsService/UserAccount
+include/QtAccountsService/QtAccountsService/UsersModel
+include/QtAccountsService/qtaccountsservice/accountsmanager.h
+include/QtAccountsService/qtaccountsservice/qtaccountsservice_export.h
+include/QtAccountsService/qtaccountsservice/qtaccountsservice_version.h
+include/QtAccountsService/qtaccountsservice/useraccount.h
+include/QtAccountsService/qtaccountsservice/usersmodel.h
+lib/cmake/QtAccountsService/QtAccountsServiceConfig.cmake
+lib/cmake/QtAccountsService/QtAccountsServiceConfigVersion.cmake
+lib/cmake/QtAccountsService/QtAccountsServiceTargets-relwithdebinfo.cmake
+lib/cmake/QtAccountsService/QtAccountsServiceTargets.cmake
+lib/libQtAccountsService.${RUBY_DLEXT}
+lib/libQtAccountsService.so.0
+lib/libQtAccountsService.so.${PKGVERSION}
+lib/qml/QtAccountsService/libdeclarative_accountsservice.${RUBY_DLEXT}
+lib/qml/QtAccountsService/plugins.qmltypes
+lib/qml/QtAccountsService/qmldir
