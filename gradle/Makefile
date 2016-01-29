@@ -8,19 +8,20 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	asiekierka@gmail.com
 HOMEPAGE=	http://gradle.org/
-COMMENT=	"Groovy-based Java build system"
+COMMENT=	Groovy-based Java build system
 LICENSE=	apache-2.0
-
-DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_JAVA=	run
 USE_JAVA2=	yes
+USE_TOOLS+=	bash:run
 NO_BUILD=	yes
 
 pre-configure:
 	${CP} files/gradle-launcher ${WRKSRC}/gradle-launcher
+
+REPLACE_BASH+=		gradle-launcher
 
 SUBST_CLASSES+=		launcher
 SUBST_FILES.launcher=	gradle-launcher
@@ -35,11 +36,11 @@ INSTALLATION_DIRS+=	lib/java/gradle/media share/doc/java/gradle
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gradle-launcher ${DESTDIR}${PREFIX}/bin/gradle
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/plugins/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib/plugins
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/plugins/sonar/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib/plugins/sonar
-	${INSTALL_SCRIPT} ${WRKSRC}/media/*.icns ${DESTDIR}${PREFIX}/lib/java/gradle/media
-	${INSTALL_SCRIPT} ${WRKSRC}/getting-started.html ${DESTDIR}${PREFIX}/share/doc/java/gradle
+	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib
+	${INSTALL_DATA} ${WRKSRC}/lib/plugins/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib/plugins
+	${INSTALL_DATA} ${WRKSRC}/lib/plugins/sonar/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib/plugins/sonar
+	${INSTALL_DATA} ${WRKSRC}/media/*.icns ${DESTDIR}${PREFIX}/lib/java/gradle/media
+	${INSTALL_DATA} ${WRKSRC}/getting-started.html ${DESTDIR}${PREFIX}/share/doc/java/gradle
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
