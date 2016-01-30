@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/05/30 20:24:08 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	healpy-1.8.6
+DISTNAME=	healpy-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/healpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/healpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/healpy

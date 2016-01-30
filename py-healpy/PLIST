@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/05/30 20:24:08 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/healpy-${PKGVERSION}-py2.7.egg-info/PKG-INFO
 ${PYSITELIB}/healpy-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
 ${PYSITELIB}/healpy-${PKGVERSION}-py2.7.egg-info/dependency_links.txt

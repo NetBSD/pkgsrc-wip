@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/05/30 20:24:08 jihbed Exp $
 
-SHA1 (healpy-1.8.6.tar.gz) = 9b330deba369c6e2f389404f18cc4930b5fa0761
-RMD160 (healpy-1.8.6.tar.gz) = 0dca3ae348fa92261051f207db00fd47bb15233e
-Size (healpy-1.8.6.tar.gz) = 4035837 bytes
+SHA1 (healpy-1.9.1.tar.gz) = 6e79aa5d21e8d92226dc0f6c6c6ef42fdf2ed2da
+RMD160 (healpy-1.9.1.tar.gz) = 0a3477447e212882875fcdd1d4d3c46264779df4
+SHA512 (healpy-1.9.1.tar.gz) = 84427e4fdb01ed534a00617ba707a58f4ed21ba0114fcc3f7bd4748cefaad148c9025bfc7a4c77c1de40b7f69dfb53139f2b347e80955f4631609cd50e70cd5a
+Size (healpy-1.9.1.tar.gz) = 4043342 bytes
