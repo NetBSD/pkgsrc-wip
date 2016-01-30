@@ -1,0 +1,13 @@
+The corefx repo contains the library implementation (called "CoreFX") for .NET
+Core. It includes System.Collections, System.IO, System.Xml and many other
+components. You can see more information in Documentation.
+
+.NET Core is a modular implementation of .NET that can be used as the base
+stack for a wide variety of scenarios, today scaling from console utilities to
+web apps in the cloud.
+
+Runtime-specific library code - namely mscorlib - lives in the CoreCLR repo. It
+needs to be built and versioned in tandem with the runtime. The rest of CoreFX
+is agnostic of runtime-implementation and can be run on any compatible .NET
+runtime. These characteristics were the primary motivation for the 2-repo
+structure.
