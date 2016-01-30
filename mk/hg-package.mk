@@ -143,15 +143,24 @@ do-hg-extract:
 .for _repo_ in ${HG_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
 	if [ ! -d ${HG_DISTDIR:Q} ]; then mkdir -p ${HG_DISTDIR:Q}; fi;	\
-	${_HG_EXTRACT_CACHED.${_repo_}};					\
-	${SETENV} ${_HG_ENV}						\
-	       ${_HG_CMD} clone ${_HG_FLAGS}			       \
-		       ${HG_REPO.${_repo_}:Q} ${HG_MODULE.${_repo_}} && \
-	(cd ${HG_MODULE.${_repo_}:Q} && 				\
-	${SETENV} ${_HG_ENV}						\
-		${_HG_CMD} update ${_HG_FLAGS}				\
-			 ${_HG_TAG_FLAG.${_repo_}:Q}) &&		\
-	${_HG_CREATE_CACHE.${_repo_}}
+	if [ ! -d ${HG_MODULE.${_repo_}:Q}/.hg ]; then			\
+		${_HG_EXTRACT_CACHED.${_repo_}};			\
+		${SETENV} ${_HG_ENV}					\
+		       ${_HG_CMD} clone ${_HG_FLAGS}			\
+			       ${HG_REPO.${_repo_}:Q}			\
+				${HG_MODULE.${_repo_}} &&		\
+		(cd ${HG_MODULE.${_repo_}:Q} && 			\
+		${SETENV} ${_HG_ENV}					\
+			${_HG_CMD} update ${_HG_FLAGS}			\
+				 ${_HG_TAG_FLAG.${_repo_}:Q}) &&	\
+		${_HG_CREATE_CACHE.${_repo_}};				\
+	else								\
+		(cd ${HG_MODULE.${_repo_}:Q} &&				\
+		${SETENV} ${_HG_ENV}					\
+			${_HG_CMD} pull ${_HG_FLAGS} &&			\
+		${SETENV} ${_HG_ENV}					\
+			${_HG_CMD} update -C ${_HG_FLAGS})		\
+	fi
 .endfor
 
 .endif
