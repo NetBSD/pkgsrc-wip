@@ -8,6 +8,10 @@
 # CHECKOUT_DATE
 #	Date to check out in ISO format (YYYY-MM-DD).
 #
+# HG_DISTDIR
+#	A directory where to store the cached repositories (default:
+#	distfiles/hg-packages)
+#
 # === Package-settable variables ===
 #
 # A package using this file shall define the following variables:
@@ -89,7 +93,7 @@ _HG_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _HG_TODAY=		${_HG_TODAY_CMD:sh}
 _HG_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _HG_PKGVERSION=		${_HG_PKGVERSION_CMD:sh}
-_HG_DISTDIR=		${DISTDIR}/hg-packages
+HG_DISTDIR?=		${DISTDIR}/hg-packages
 
 #
 # Generation of repository-specific variables
@@ -119,17 +123,17 @@ _HG_DISTFILE.${repo}=	${PKGBASE}-${HG_MODULE.${repo}}-${_HG_TAG.${repo}}.tar.gz
 
 #   command to extract cache file
 _HG_EXTRACT_CACHED.${repo}=	\
-	if [ -f ${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q} ]; then		\
+	if [ -f ${HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q} ]; then		\
 	  ${STEP_MSG} "Extracting cached Mercurial archive "${_HG_DISTFILE.${repo}:Q}"."; \
-	  gzip -d -c ${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q} | pax -r;	\
+	  gzip -d -c ${HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q} | pax -r;	\
 	  exit 0;							\
 	fi
 
 #   create cache archive
 _HG_CREATE_CACHE.${repo}=	\
 	${STEP_MSG} "Creating cached Mercurial archive "${_HG_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_HG_DISTDIR:Q};					\
-	pax -w ${HG_MODULE.${repo}:Q} | gzip > ${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q}
+	${MKDIR} ${HG_DISTDIR:Q};					\
+	pax -w ${HG_MODULE.${repo}:Q} | gzip > ${HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q}
 .endfor
 
 pre-extract: do-hg-extract
@@ -138,12 +142,12 @@ pre-extract: do-hg-extract
 do-hg-extract:
 .for _repo_ in ${HG_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
-	if [ ! -d ${_HG_DISTDIR:Q} ]; then mkdir -p ${_HG_DISTDIR:Q}; fi;	\
+	if [ ! -d ${HG_DISTDIR:Q} ]; then mkdir -p ${HG_DISTDIR:Q}; fi;	\
 	${_HG_EXTRACT_CACHED.${_repo_}};					\
 	${SETENV} ${_HG_ENV}						\
-		${_HG_CMD} clone ${_HG_FLAGS}	 			\
-			${HG_REPO.${_repo_}:Q} ${HG_MODULE.${_repo_}} && \
-	(cd ${HG_MODULE.${_repo_}:Q} &&					\
+	       ${_HG_CMD} clone ${_HG_FLAGS}			       \
+		       ${HG_REPO.${_repo_}:Q} ${HG_MODULE.${_repo_}} && \
+	(cd ${HG_MODULE.${_repo_}:Q} && 				\
 	${SETENV} ${_HG_ENV}						\
 		${_HG_CMD} update ${_HG_FLAGS}				\
 			 ${_HG_TAG_FLAG.${_repo_}:Q}) &&		\
