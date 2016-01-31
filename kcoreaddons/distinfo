@@ -4,3 +4,4 @@ SHA1 (kcoreaddons-5.18.0.tar.xz) = 7c41dbcc217d0e93cb276c84b23a55ad803e80a3
 RMD160 (kcoreaddons-5.18.0.tar.xz) = 8b2a07d0415ab5a3047549c3ef3e3ddb83279a0d
 SHA512 (kcoreaddons-5.18.0.tar.xz) = 1a1fcd2ac01b54c2d95eaa62119642d392aaeaa79aab4f36fb926e22342e30a4e6dd73cf5ea386eb7c04fc0f3aba54818a213c47b88f91a5a2ae31bcbc679bcd
 Size (kcoreaddons-5.18.0.tar.xz) = 312104 bytes
+SHA1 (patch-src_lib_caching_kshareddatacache_p.h) = 7683c70dad2d244aee2a60b3c1630335a40e18d3
