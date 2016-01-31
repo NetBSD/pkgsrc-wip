@@ -1,25 +1,8 @@
 $NetBSD$
 
---- src/pal/src/config.h.in.orig	2016-01-31 00:59:14.000000000 +0000
+--- src/pal/src/config.h.in.orig	2016-01-31 18:28:53.000000000 +0000
 +++ src/pal/src/config.h.in
-@@ -6,6 +6,8 @@
- #cmakedefine01 HAVE_SYS_VMPARAM_H
- #cmakedefine01 HAVE_MACH_VM_TYPES_H
- #cmakedefine01 HAVE_MACH_VM_PARAM_H
-+#cmakedefine01 HAVE_MACHINE_NPX_H
-+#cmakedefine01 HAVE_MACHINE_REG_H
- #cmakedefine01 HAVE_MACHINE_VMPARAM_H
- #cmakedefine01 HAVE_PROCFS_H
- #cmakedefine01 HAVE_CRT_EXTERNS_H
-@@ -14,6 +16,7 @@
- #cmakedefine01 HAVE_SYS_LWP_H
- #cmakedefine01 HAVE_LIBUNWIND_H
- #cmakedefine01 HAVE_LIBUUID_H
-+#cmakedefine01 HAVE_LWP_H
- #cmakedefine01 HAVE_BSD_UUID_H
- #cmakedefine01 HAVE_RUNETYPE_H
- 
-@@ -58,6 +61,7 @@
+@@ -61,6 +61,7 @@
  #cmakedefine01 HAVE_BSD_REGS_T
  #cmakedefine01 HAVE_PT_REGS
  #cmakedefine01 HAVE_GREGSET_T
