@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 14:44:40 krytarowski Exp $
+@comment $NetBSD$
 include/KF5/KGuiAddons/KColorCollection
 include/KF5/KGuiAddons/KColorMimeData
 include/KF5/KGuiAddons/KColorUtils
@@ -27,4 +27,4 @@ lib/cmake/KF5GuiAddons/KF5GuiAddonsTargets.cmake
 lib/libKF5GuiAddons.so
 lib/libKF5GuiAddons.so.5
 lib/libKF5GuiAddons.so.${PKGVERSION}
-mkspecs/modules/qt_KGuiAddons.pri
+qt5/mkspecs/modules/qt_KGuiAddons.pri
