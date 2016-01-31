@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (redshift/v1.11.tar.gz) = b665d7e9f60e8448b444244f7d75cf23b0ee90ee
+RMD160 (redshift/v1.11.tar.gz) = 5a601a96a969e912b61f07c363f4580d136c2575
+SHA512 (redshift/v1.11.tar.gz) = bcdb4c120efec3955f4f91f1290db0679e987e25d6610bd90ee8540a96bb11338e36b10680736490ea0b7e9eca5bc195b51767a5badf0b80495dc3da44c4ed8c
+Size (redshift/v1.11.tar.gz) = 543804 bytes
+SHA1 (patch-src_gamma-drm.c) = e33e0d29e290e0472acddfcd75ba81c2bfab904d
