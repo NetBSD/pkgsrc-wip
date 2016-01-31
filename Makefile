@@ -1394,6 +1394,7 @@ SUBDIR+=	kapital
 SUBDIR+=	karchive
 SUBDIR+=	kawa
 SUBDIR+=	kcodecs
+SUBDIR+=	kcompletion
 SUBDIR+=	kconfig
 SUBDIR+=	kcoreaddons
 SUBDIR+=	kdbusaddons
