@@ -12,15 +12,15 @@ include/libfswatch/c++/libfswatch_set.hpp
 include/libfswatch/c++/monitor.hpp
 include/libfswatch/c++/path_utils.hpp
 include/libfswatch/c++/poll_monitor.hpp
+include/libfswatch/c++/string_utils.hpp
 include/libfswatch/c/cevent.h
 include/libfswatch/c/cfilter.h
 include/libfswatch/c/cmonitor.h
 include/libfswatch/c/error.h
 include/libfswatch/c/libfswatch.h
 include/libfswatch/c/libfswatch_log.h
-include/libfswatch/c/libfswatch_mem.h
+include/libfswatch/c/libfswatch_types.h
 info/fswatch.info
-info/libfswatch.info
 lib/libfswatch.la
 man/man7/fswatch.7
 share/doc/fswatch/ABOUT-NLS

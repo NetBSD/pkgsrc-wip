@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/05/10 07:41:59 thomasklausner Exp $
 
-DISTNAME=	fswatch-1.7.0
+DISTNAME=	fswatch-1.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emcrisostomo/}
 
@@ -22,18 +22,16 @@ USE_LIBTOOL=	yes
 PLIST_VARS+=	fen fsevents inotify kqueue
 
 .if ${OPSYS} == "Darwin"
-PLIST.fsevents=	yes
+PLIST.fsevents=		yes
+.elif ${OPSYS} == "Linux"
+PLIST.inotify=		yes
 .elif ${OPSYS} == "SunOS"
-PLIST.fen=	yes
+CONFIGURE_ARGS+=	ac_cv_header_sys_inotify_h=no
+PLIST.fen=		yes
 .endif
 .if defined(PKG_HAVE_KQUEUE)
-PLIST.kqueue=	yes
+PLIST.kqueue=		yes
 .endif
-.for dir in ${COMPILER_INCLUDE_DIRS}
-.  if exists(${dir}/sys/inotify.h)
-PLIST.inotify=	yes
-.  endif
-.endfor
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
