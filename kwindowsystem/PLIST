@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 13:00:41 krytarowski Exp $
+@comment $NetBSD$
 include/KF5/KWindowSystem/KKeyServer
 include/KF5/KWindowSystem/KSelectionOwner
 include/KF5/KWindowSystem/KSelectionWatcher
@@ -25,15 +25,21 @@ include/KF5/KWindowSystem/kwindowsystem_export.h
 include/KF5/KWindowSystem/kxmessages.h
 include/KF5/KWindowSystem/netwm.h
 include/KF5/KWindowSystem/netwm_def.h
+include/KF5/KWindowSystem/private/kwindoweffects_p.h
+include/KF5/KWindowSystem/private/kwindowinfo_p.h
+include/KF5/KWindowSystem/private/kwindowsystem_p.h
+include/KF5/KWindowSystem/private/kwindowsystemplugininterface_p.h
 include/KF5/kwindowsystem_version.h
 lib/cmake/KF5WindowSystem/KF5WindowSystemConfig.cmake
 lib/cmake/KF5WindowSystem/KF5WindowSystemConfigVersion.cmake
 lib/cmake/KF5WindowSystem/KF5WindowSystemTargets-noconfig.cmake
 lib/cmake/KF5WindowSystem/KF5WindowSystemTargets.cmake
-lib/libKF5WindowSystem.${RUBY_DLEXT}
+lib/libKF5WindowSystem.so
 lib/libKF5WindowSystem.so.5
 lib/libKF5WindowSystem.so.${PKGVERSION}
-mkspecs/modules/qt_KWindowSystem.pri
+qt5/mkspecs/modules/qt_KWindowSystem.pri
+qt5/plugins/kf5/org.kde.kwindowsystem.platforms/KF5WindowSystemWaylandPlugin.so
+qt5/plugins/kf5/org.kde.kwindowsystem.platforms/KF5WindowSystemX11Plugin.so
 share/locale/af/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/ar/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/as/LC_MESSAGES/kwindowsystem5_qt.qm
