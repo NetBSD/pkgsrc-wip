@@ -550,6 +550,7 @@ include/llvm/MC/MCAsmLayout.h
 include/llvm/MC/MCAssembler.h
 include/llvm/MC/MCCodeEmitter.h
 include/llvm/MC/MCCodeGenInfo.h
+include/llvm/MC/MCCodeView.h
 include/llvm/MC/MCContext.h
 include/llvm/MC/MCDirectives.h
 include/llvm/MC/MCDisassembler/MCDisassembler.h
@@ -651,7 +652,6 @@ include/llvm/ProfileData/InstrProfWriter.h
 include/llvm/ProfileData/SampleProf.h
 include/llvm/ProfileData/SampleProfReader.h
 include/llvm/ProfileData/SampleProfWriter.h
-include/llvm/Support/AIXDataTypesFix.h
 include/llvm/Support/ARMBuildAttributes.h
 include/llvm/Support/ARMEHABI.h
 include/llvm/Support/ARMTargetParser.def
