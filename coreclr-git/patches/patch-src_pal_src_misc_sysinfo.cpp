@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/src/misc/sysinfo.cpp.orig	2016-01-29 08:46:10.000000000 +0000
+--- src/pal/src/misc/sysinfo.cpp.orig	2016-01-31 00:59:14.000000000 +0000
 +++ src/pal/src/misc/sysinfo.cpp
 @@ -37,6 +37,7 @@ Revision History:
  #if HAVE_SYS_VMPARAM_H

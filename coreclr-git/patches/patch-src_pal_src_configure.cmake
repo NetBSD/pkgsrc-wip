@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/src/configure.cmake.orig	2016-01-29 08:46:10.000000000 +0000
+--- src/pal/src/configure.cmake.orig	2016-01-31 00:59:14.000000000 +0000
 +++ src/pal/src/configure.cmake
 @@ -76,6 +76,7 @@ check_struct_has_member ("struct stat" s
  check_struct_has_member ("struct stat" st_atimensec "sys/types.h;sys/stat.h" HAVE_STAT_NSEC)
