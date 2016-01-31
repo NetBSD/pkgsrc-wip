@@ -19,3 +19,19 @@ $NetBSD$
  check_type_size(ucontext_t UCONTEXT_T)
  set(CMAKE_EXTRA_INCLUDE_FILES)
  set(CMAKE_EXTRA_INCLUDE_FILES pthread.h)
+@@ -937,6 +938,7 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL FreeBS
+   set(PAL_PT_READ_D PT_READ_D)
+   set(PAL_PT_WRITE_D PT_WRITE_D)
+   set(HAS_FTRUNCATE_LENGTH_ISSUE 0)
++  set(HAVE_REG_R_REGS 1)
+ 
+   if(EXISTS "/lib/libc.so.7")
+     set(FREEBSD_LIBC "/lib/libc.so.7")
+@@ -960,6 +962,7 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL NetBSD
+   set(PAL_PT_READ_D PT_READ_D)
+   set(PAL_PT_WRITE_D PT_WRITE_D)
+   set(HAS_FTRUNCATE_LENGTH_ISSUE 0)
++  set(HAVE_REG__R_REGS 1)
+ 
+ elseif(CMAKE_SYSTEM_NAME STREQUAL SunOS)
+   if(NOT HAVE_LIBUNWIND_H)
