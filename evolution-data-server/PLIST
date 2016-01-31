@@ -308,6 +308,9 @@ lib/evolution-data-server/registry-modules/module-owncloud-backend.la
 lib/evolution-data-server/registry-modules/module-secret-monitor.la
 lib/evolution-data-server/registry-modules/module-trust-prompt.la
 lib/evolution-data-server/registry-modules/module-yahoo-backend.la
+lib/girepository-1.0/EBook-1.2.typelib
+lib/girepository-1.0/EBookContacts-1.2.typelib
+lib/girepository-1.0/EDataServer-1.2.typelib
 lib/libcamel-1.2.la
 lib/libebackend-1.2.la
 lib/libebook-1.2.la
@@ -342,6 +345,9 @@ share/dbus-1/services/org.gnome.evolution.dataserver.Calendar.service
 share/dbus-1/services/org.gnome.evolution.dataserver.Sources.service
 share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter.service
 share/evolution-data-server/evolutionperson.schema
+share/gir-1.0/EBook-1.2.gir
+share/gir-1.0/EBookContacts-1.2.gir
+share/gir-1.0/EDataServer-1.2.gir
 share/glib-2.0/schemas/org.gnome.Evolution.DefaultSources.gschema.xml
 share/glib-2.0/schemas/org.gnome.evolution-data-server.addressbook.gschema.xml
 share/glib-2.0/schemas/org.gnome.evolution-data-server.calendar.gschema.xml
@@ -453,3 +459,9 @@ share/pixmaps/evolution-data-server/category_status_16.png
 share/pixmaps/evolution-data-server/category_strategies_16.png
 share/pixmaps/evolution-data-server/category_suppliers_16.png
 share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
+share/vala/vapi/libebook-1.2.deps
+share/vala/vapi/libebook-1.2.vapi
+share/vala/vapi/libebook-contacts-1.2.deps
+share/vala/vapi/libebook-contacts-1.2.vapi
+share/vala/vapi/libedataserver-1.2.deps
+share/vala/vapi/libedataserver-1.2.vapi

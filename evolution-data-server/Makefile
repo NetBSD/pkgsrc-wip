@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 PYTHON_FOR_BUILD_ONLY=	YES
-REPLACE_PYTHON=	addressbook/libebook/gen-western-table.py
+REPLACE_PYTHON=		addressbook/libebook/gen-western-table.py
 
 .include "options.mk"
 
@@ -44,6 +44,8 @@ CFLAGS.SunOS+=	-D__FUNCTION__=__func__
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
+CONFIGURE_ARGS+=	--enable-vala-bindings
+# disable ubuntu online accounts, unsure what is needed to enable
 CONFIGURE_ARGS+=	--disable-uoa
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--with-libdb=${BDBBASE}
@@ -62,12 +64,15 @@ PKGCONFIG_OVERRIDE+=	libedataserverui/libedataserverui.pc.in
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.12
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../wip/gcr/buildlink3.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.10
+BUILDLINK_API_DEPENDS.gtk3+=			gtk3+>=3.10
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
@@ -86,7 +91,7 @@ BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.10
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libical+=	libical>=0.43
+BUILDLINK_API_DEPENDS.libical+=			libical>=0.43
 .include "../../time/libical/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
