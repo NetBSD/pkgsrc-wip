@@ -48,16 +48,16 @@ CONFIGURE_ARGS+=	--disable-uoa
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--with-libdb=${BDBBASE}
 
+PKGCONFIG_OVERRIDE+=	addressbook/libebook-contacts/libebook-contacts.pc.in
 PKGCONFIG_OVERRIDE+=	addressbook/libebook/libebook.pc.in
 PKGCONFIG_OVERRIDE+=	addressbook/libedata-book/libedata-book.pc.in
 PKGCONFIG_OVERRIDE+=	calendar/libecal/libecal.pc.in
 PKGCONFIG_OVERRIDE+=	calendar/libedata-cal/libedata-cal.pc.in
 PKGCONFIG_OVERRIDE+=	camel/camel.pc.in
-PKGCONFIG_OVERRIDE+=	camel/camel-provider.pc.in
+PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
+PKGCONFIG_OVERRIDE+=	libebackend/libebackend.pc.in
 PKGCONFIG_OVERRIDE+=	libedataserver/libedataserver.pc.in
 PKGCONFIG_OVERRIDE+=	libedataserverui/libedataserverui.pc.in
-PKGCONFIG_OVERRIDE+=	servers/groupwise/libegroupwise.pc.in
-PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
 
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	rm:-ldl
