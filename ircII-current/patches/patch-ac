@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.8 2014/01/02 07:57:49 mrg Exp $
+
+--- Makefile.in.orig	2015-11-12 17:20:02.000000000 +0000
++++ Makefile.in
+@@ -128,10 +128,10 @@ LN = @LN@
+ CP = cp
+ MV = mv
+ SED = sed
+-INSTALL = $(topdir)/bsdinstall -c -m 755
+-INSTALL_DATA = $(topdir)/bsdinstall -c -m 644
++INSTALL = $(BSD_INSTALL_PROGRAM)
++INSTALL_DATA = $(BSD_INSTALL_DATA)
+ 
+-VERSION = @VERSION@
++VERSION = current
+ 
+ SHELL = /bin/sh
+ 
+@@ -150,11 +150,9 @@ installbin: installirc installio install
+ 
+ installirc: irc installdirs
+ 	$(INSTALL) irc $(INSTALL_IRC)-$(VERSION)
+-	$(INSTALL) ircbug $(bindir)/ircbug
+-	@if test -f $(INSTALL_IRC).old; then $(RM) $(INSTALL_IRC).old; fi
+-	@if test -f $(INSTALL_IRC); then $(MV) $(INSTALL_IRC) $(INSTALL_IRC).old; fi
++	$(BSD_INSTALL_SCRIPT) ircbug $(bindir)/ircbug
+ 	$(RM) $(INSTALL_IRC)
+-	$(LN) $(INSTALL_IRC_NAME)-$(VERSION) $(INSTALL_IRC)
++	cd ${bindir}; $(LN) irc-$(VERSION) irc
+ 
+ installscript: installdirs
+ 	(								\
+@@ -194,7 +192,7 @@ installman:
+ #	$(INSTALL_DATA) $(topdir)/doc/query-pr.1 $(mandir)
+ 
+ installdirs:
+-	umask 022; $(topdir)/mkinstalldirs $(IRCLIB) $(bindir) $(mandir) \
++	$(topdir)/mkinstalldirs $(IRCLIB) $(bindir) $(mandir) \
+ 		$(INSTALL_SCRIPT) $(HELP_DIR) $(libexecdir)
+ 
+ clena clean:

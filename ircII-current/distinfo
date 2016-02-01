@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.44 2015/12/07 06:44:23 mrg Exp $
+
+SHA1 (ircii-current.tar.bz2) = 066b7489a03d2bc02cc2b6493346840d7b9642bb
+RMD160 (ircii-current.tar.bz2) = 20926b9a1694066e889ecaae8bd4536b99239863
+SHA512 (ircii-current.tar.bz2) = 3e16bcf170a569cad0b597173a38e29354569715bc51d7b463eeefd2ae6ee4820b74421ed9e2ac34aad46ba41909eeb8137bf34b3c42db89e9b394bab8c2aaf8
+Size (ircii-current.tar.bz2) = 597003 bytes
+SHA1 (patch-ac) = aa5f050c321fe2cf3daa999dc2dbec8591f5b826
