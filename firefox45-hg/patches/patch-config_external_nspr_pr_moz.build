@@ -1,0 +1,56 @@
+# HG changeset patch
+# User Landry Breuil <landry@openbsd.org>
+# Date 1454101563 0
+#      Fri Jan 29 21:06:03 2016 +0000
+# Node ID 91d69babe26a073e195768359a94cd7518be1d1c
+# Parent  50b6f681c7ed32eb71fdfc9d4583b7ad1fda18c8
+Bug 1243493 - Add BSDs to NSPR moz.build. r?ted
+
+diff --git a/config/external/nspr/pr/moz.build b/config/external/nspr/pr/moz.build
+--- config/external/nspr/pr/moz.build
++++ config/external/nspr/pr/moz.build
+@@ -24,16 +24,23 @@ if CONFIG['OS_ARCH'] == 'Linux':
+     SOURCES += ['/nsprpub/pr/src/md/unix/linux.c']
+     if CONFIG['CPU_ARCH'] == 'x86_64':
+         SOURCES += ['/nsprpub/pr/src/md/unix/os_Linux_x86_64.s']
+     elif CONFIG['CPU_ARCH'] == 'x86':
+         DEFINES['i386'] = True
+         SOURCES += ['/nsprpub/pr/src/md/unix/os_Linux_x86.s']
+     elif CONFIG['CPU_ARCH'] == 'ppc':
+         SOURCES += ['/nsprpub/pr/src/md/unix/os_Linux_ppc.s']
++elif CONFIG['OS_TARGET'] in ('FreeBSD', 'OpenBSD', 'NetBSD'):
++    DEFINES.update(
++        HAVE_BSD_FLOCK=True,
++        HAVE_SOCKLEN_T=True,
++    )
++    DEFINES[CONFIG['OS_TARGET'].upper()] = True
++    SOURCES += ['/nsprpub/pr/src/md/unix/%s.c' % CONFIG['OS_TARGET'].lower()]
+ elif CONFIG['OS_TARGET'] == 'Darwin':
+     DEFINES.update(
+         DARWIN=True,
+         HAVE_BSD_FLOCK=True,
+         HAVE_SOCKLEN_T=True,
+     )
+     SOURCES += [
+         '/nsprpub/pr/src/md/unix/darwin.c',
+@@ -205,17 +212,20 @@ EXPORTS.nspr += [
+     '/nsprpub/pr/include/prtrace.h',
+     '/nsprpub/pr/include/prtypes.h',
+     '/nsprpub/pr/include/prvrsion.h',
+     '/nsprpub/pr/include/prwin16.h',
+ ]
+ 
+ EXPORTS.nspr.md += [
+     '/nsprpub/pr/include/md/_darwin.cfg',
++    '/nsprpub/pr/include/md/_freebsd.cfg',
+     '/nsprpub/pr/include/md/_linux.cfg',
++    '/nsprpub/pr/include/md/_netbsd.cfg',
++    '/nsprpub/pr/include/md/_openbsd.cfg',
+     '/nsprpub/pr/include/md/_win95.cfg',
+ ]
+ 
+ EXPORTS.nspr.private += [
+     '/nsprpub/pr/include/private/pprio.h',
+     '/nsprpub/pr/include/private/pprthred.h',
+     '/nsprpub/pr/include/private/prpriv.h',
+ ]
