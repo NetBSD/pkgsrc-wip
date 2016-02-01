@@ -136,6 +136,16 @@ _HG_CREATE_CACHE.${repo}=	\
 	pax -w ${HG_MODULE.${repo}:Q} | gzip > ${HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q}
 .endfor
 
+.PHONY: hg-cleandir
+hg-cleandir:
+.for _repo_ in ${HG_REPOSITORIES}
+	${RUN} cd ${WRKDIR};						\
+	if [ -d ${HG_MODULE.${_repo_}:Q} ]; then			\
+		cd ${HG_MODULE.${_repo_}:Q} && rm -rf *;		\
+	fi
+.endfor
+	${RUN} cd ${WRKDIR} && rm -f .*_done
+
 pre-extract: do-hg-extract
 
 .PHONY: do-hg-extract
