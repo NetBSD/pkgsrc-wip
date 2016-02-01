@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/pal/src/CMakeLists.txt.orig	2016-01-31 18:28:53.000000000 +0000
+--- src/pal/src/CMakeLists.txt.orig	2016-02-01 23:37:48.000000000 +0000
 +++ src/pal/src/CMakeLists.txt
-@@ -251,6 +251,18 @@ if(CMAKE_SYSTEM_NAME STREQUAL Darwin)
+@@ -250,6 +250,18 @@ if(CMAKE_SYSTEM_NAME STREQUAL Darwin)
    )
  endif(CMAKE_SYSTEM_NAME STREQUAL Darwin)
  
