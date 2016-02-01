@@ -2,7 +2,7 @@
 
 DISTNAME=	evolution-data-server-3.18.4
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/3.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/3.16/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -66,7 +66,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.12
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../lang/vala/buildlink3.mk"
+.include "../../wip/vala/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../wip/gcr/buildlink3.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"
