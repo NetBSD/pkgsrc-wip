@@ -583,6 +583,9 @@ ${PYSITELIB}/xpra/simple_stats.pyo
 ${PYSITELIB}/xpra/sound/__init__.py
 ${PYSITELIB}/xpra/sound/__init__.pyc
 ${PYSITELIB}/xpra/sound/__init__.pyo
+${PYSITELIB}/xpra/sound/gst_hacks.py
+${PYSITELIB}/xpra/sound/gst_hacks.pyc
+${PYSITELIB}/xpra/sound/gst_hacks.pyo
 ${PYSITELIB}/xpra/sound/gstreamer_util.py
 ${PYSITELIB}/xpra/sound/gstreamer_util.pyc
 ${PYSITELIB}/xpra/sound/gstreamer_util.pyo
