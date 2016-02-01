@@ -10,3 +10,4 @@ SHA1 (patch-src_pal_src_include_pal_context.h) = 32e5535866b4c7046bb05cc152b2e6d
 SHA1 (patch-src_pal_src_safecrt_safecrt__output__s.c) = ed008b078417d790c989226f50f4fe90f0def1ef
 SHA1 (patch-src_pal_src_safecrt_safecrt__woutput__s.c) = 0d666b335e262ed84a385bd3537cdbd94efa46e4
 SHA1 (patch-src_pal_src_thread_context.cpp) = bd5fe3f1793f32e396ace0a9b0cc06b8424b529a
+SHA1 (patch-src_pal_src_thread_thread.cpp) = eb397c1fdd60e2bd9eb5a5c01c267d86acdd712d
