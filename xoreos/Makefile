@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	xoreos
 DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-0.0.3
+PKGNAME=	${GITHUB_PROJECT}-0.0.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -14,7 +14,7 @@ COMMENT=	Open source implementation of BioWare's Aurora engine
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/xoreos-${PKGVERSION_NOREV}
-USE_TOOLS+=	aclocal autoconf autoheader automake
+USE_TOOLS+=	aclocal autoconf autoheader automake gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
