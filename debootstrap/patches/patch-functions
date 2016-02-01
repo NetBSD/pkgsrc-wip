@@ -1,8 +1,8 @@
 $NetBSD: patch-functions,v 1.2 2015/03/22 01:52:06 tnn2 Exp $
 
---- functions.orig	2015-01-06 04:00:50.000000000 +0000
+--- functions.orig	2016-01-29 16:36:56.000000000 +0000
 +++ functions
-@@ -1011,6 +1011,11 @@ setup_proc () {
+@@ -1020,6 +1020,11 @@ setup_proc () {
  			mount -t linprocfs proc $TARGET/proc
  		fi
  		;;
@@ -14,12 +14,12 @@ $NetBSD: patch-functions,v 1.2 2015/03/22 01:52:06 tnn2 Exp $
  	    hurd*)
  		;;
  	    *)
-@@ -1052,7 +1057,7 @@ setup_devices () {
- 		setup_devices_hurd ;;
- 	    *)
- 		if [ -e "$DEVICES_TARGZ" ]; then
+@@ -1063,7 +1068,7 @@ setup_devices () {
+ 		if true; then
+ 			setup_devices_simple
+ 		elif [ -e "$DEVICES_TARGZ" ]; then
 -			zcat "$DEVICES_TARGZ" | (cd "$TARGET"; tar -xf -)
 +			zcat "$DEVICES_TARGZ" | (cd "$TARGET"; tar -xpf -)
  		else
- 			if [ -e /dev/.devfsd ] ; then
- 				in_target mount -t devfs devfs /dev
+ 			error 1 NODEVTGZ "no %s. cannot create devices" "$DEVICES_TARGZ"
+ 		fi
