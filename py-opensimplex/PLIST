@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/opensimplex/__init__.py
+${PYSITELIB}/opensimplex/__init__.pyc
+${PYSITELIB}/opensimplex/__init__.pyo
+${PYSITELIB}/opensimplex/opensimplex.py
+${PYSITELIB}/opensimplex/opensimplex.pyc
+${PYSITELIB}/opensimplex/opensimplex.pyo
+${PYSITELIB}/opensimplex/tests/__init__.py
+${PYSITELIB}/opensimplex/tests/__init__.pyc
+${PYSITELIB}/opensimplex/tests/__init__.pyo
+${PYSITELIB}/opensimplex/tests/opensimplex_test.py
+${PYSITELIB}/opensimplex/tests/opensimplex_test.pyc
+${PYSITELIB}/opensimplex/tests/opensimplex_test.pyo

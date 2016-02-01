@@ -1,0 +1,23 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pynosh/__init__.py
+${PYSITELIB}/pynosh/__init__.pyc
+${PYSITELIB}/pynosh/__init__.pyo
+${PYSITELIB}/pynosh/magnetic_vector_potentials.py
+${PYSITELIB}/pynosh/magnetic_vector_potentials.pyc
+${PYSITELIB}/pynosh/magnetic_vector_potentials.pyo
+${PYSITELIB}/pynosh/modelevaluator_bordering_constant.py
+${PYSITELIB}/pynosh/modelevaluator_bordering_constant.pyc
+${PYSITELIB}/pynosh/modelevaluator_bordering_constant.pyo
+${PYSITELIB}/pynosh/modelevaluator_nls.py
+${PYSITELIB}/pynosh/modelevaluator_nls.pyc
+${PYSITELIB}/pynosh/modelevaluator_nls.pyo
+${PYSITELIB}/pynosh/numerical_methods.py
+${PYSITELIB}/pynosh/numerical_methods.pyc
+${PYSITELIB}/pynosh/numerical_methods.pyo
+${PYSITELIB}/pynosh/preconditioners.py
+${PYSITELIB}/pynosh/preconditioners.pyc
+${PYSITELIB}/pynosh/preconditioners.pyo
+${PYSITELIB}/pynosh/yaml.py
+${PYSITELIB}/pynosh/yaml.pyc
+${PYSITELIB}/pynosh/yaml.pyo

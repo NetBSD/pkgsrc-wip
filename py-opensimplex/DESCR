@@ -1,0 +1,4 @@
+OpenSimplex noise is an n-dimensional gradient noise function that was
+developed in order to overcome the patent-related issues surrounding
+Simplex noise, while continuing to also avoid the visually-significant
+directional artifacts characteristic of Perlin noise

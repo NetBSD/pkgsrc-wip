@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/golangenv
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/golangenv/__init__.py
+${PYSITELIB}/golangenv/__init__.pyc
+${PYSITELIB}/golangenv/__init__.pyo
+${PYSITELIB}/golangenv/_version.py
+${PYSITELIB}/golangenv/_version.pyc
+${PYSITELIB}/golangenv/_version.pyo
+${PYSITELIB}/golangenv/app.py
+${PYSITELIB}/golangenv/app.pyc
+${PYSITELIB}/golangenv/app.pyo

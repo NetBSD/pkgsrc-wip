@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/progressbar/__init__.py
+${PYSITELIB}/progressbar/__init__.pyc
+${PYSITELIB}/progressbar/__init__.pyo
+${PYSITELIB}/progressbar/compat.py
+${PYSITELIB}/progressbar/compat.pyc
+${PYSITELIB}/progressbar/compat.pyo
+${PYSITELIB}/progressbar/widgets.py
+${PYSITELIB}/progressbar/widgets.pyc
+${PYSITELIB}/progressbar/widgets.pyo

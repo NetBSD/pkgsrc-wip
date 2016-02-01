@@ -1,0 +1,23 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/agaro/__init__.py
+${PYSITELIB}/agaro/__init__.pyc
+${PYSITELIB}/agaro/__init__.pyo
+${PYSITELIB}/agaro/measure_utils.py
+${PYSITELIB}/agaro/measure_utils.pyc
+${PYSITELIB}/agaro/measure_utils.pyo
+${PYSITELIB}/agaro/output_utils.py
+${PYSITELIB}/agaro/output_utils.pyc
+${PYSITELIB}/agaro/output_utils.pyo
+${PYSITELIB}/agaro/run_utils.py
+${PYSITELIB}/agaro/run_utils.pyc
+${PYSITELIB}/agaro/run_utils.pyo
+${PYSITELIB}/agaro/runner.py
+${PYSITELIB}/agaro/runner.pyc
+${PYSITELIB}/agaro/runner.pyo

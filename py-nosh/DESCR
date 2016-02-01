@@ -1,0 +1,4 @@
+PyNosh is a solver package for nonlinear Schrodinger equations.
+It contains the respective model evaluators along with an
+implementation of Newton's method and optional preconditioner
+for its linearization

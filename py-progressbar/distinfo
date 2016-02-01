@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/06/09 23:15:39 jihbed Exp $
 
-SHA1 (progressbar2-3.6.0.tar.gz) = 8e515d06f1d23d1f67cb999e9b411dbf64b767dc
-RMD160 (progressbar2-3.6.0.tar.gz) = fb60c36bae7b2eea9696ae5ebee65fcc144be426
-SHA512 (progressbar2-3.6.0.tar.gz) = 96575ca1f08c2d5c82ed03f39e46d3e66187b7c9f34dda2470d6a8c869ba2bf8ecca82ba5d1dd98408d09fa1402977f2f50e35d49a08998a3814b57092b10666
-Size (progressbar2-3.6.0.tar.gz) = 20439 bytes
+SHA1 (progressbar-2.3.tar.gz) = 5b4b11fc0421855314d666b08c069d2ed0349bcc
+RMD160 (progressbar-2.3.tar.gz) = c916aa30094b63e938dd7f7091c93febb7e6c3d7
+SHA512 (progressbar-2.3.tar.gz) = 06fdc8b6664642bd864be8023355316fba23bcc4deb0c5877c5dfa91da5d233301a8f39342f133cbb63f37a20de7b8b24910ac8073127fcbdf43b5200d60ed5f
+Size (progressbar-2.3.tar.gz) = 9420 bytes

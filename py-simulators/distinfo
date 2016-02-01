@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/05/05 20:26:49 jihbed Exp $
 
-SHA1 (pysimulators-0.8.dev26-g93d2e.tar.gz) = ff7b4aeb621330df0e632bb73abe0e2e64c7188d
-RMD160 (pysimulators-0.8.dev26-g93d2e.tar.gz) = 8da8cc31bf53a78a7558a3839f0d5317ac2e727a
-Size (pysimulators-0.8.dev26-g93d2e.tar.gz) = 4962809 bytes
+SHA1 (pysimulators-1.1.tar.gz) = 8be6d7fe94ac06585842b35cd0238bb780186338
+RMD160 (pysimulators-1.1.tar.gz) = 05c56b56311fc099dad6d8b8bcbfb893c8f76c39
+SHA512 (pysimulators-1.1.tar.gz) = b61e9d2ab715b7bc2152d17785e7e7dcfcc3f58ac5c8aef09ff44d7be390324fd7c9aeaa0a04db7339d04750d57a4a690ab7c89d4984772c54f0370791adb165
+Size (pysimulators-1.1.tar.gz) = 4971853 bytes

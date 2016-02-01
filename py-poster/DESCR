@@ -1,0 +1,2 @@
+The modules in the Python standard library don't provide a way to upload
+large files via HTTP without having to load the entire file into memory first

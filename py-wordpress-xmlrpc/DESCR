@@ -1,0 +1,4 @@
+Python library to interface with a WordPress blog's XML-RPC API
+An implementation of the standard WordPress API methods is provided, but
+the library is designed for easy integration with custom XML-RPC API methods
+provided by plugins

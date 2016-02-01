@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (spams-python-v2.5-svn2014-07-04.tar.gz) = f6f6d7fe385773690f886ee6d077a1cdf6f2ba41
+RMD160 (spams-python-v2.5-svn2014-07-04.tar.gz) = 053398c1c029036d31e341aa1c9ff58e08ba8470
+SHA512 (spams-python-v2.5-svn2014-07-04.tar.gz) = 4d0894e846ce501f855bc170871580f52443a3e2abbc941be5cfc87c66358e698725f51d5e16bacb11e03b7b5fbb6536150d458a758963173fe922644a19a09b
+Size (spams-python-v2.5-svn2014-07-04.tar.gz) = 1856222 bytes
+SHA1 (patch-setup.py) = da47a15cad7ecfbb7d7a7fe0cce5a45978c4945c

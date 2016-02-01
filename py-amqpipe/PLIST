@@ -1,0 +1,11 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/amqpipe/__init__.py
+${PYSITELIB}/amqpipe/__init__.pyc
+${PYSITELIB}/amqpipe/__init__.pyo
+${PYSITELIB}/amqpipe/amqpipe.py
+${PYSITELIB}/amqpipe/amqpipe.pyc
+${PYSITELIB}/amqpipe/amqpipe.pyo
+${PYSITELIB}/amqpipe/utils.py
+${PYSITELIB}/amqpipe/utils.pyc
+${PYSITELIB}/amqpipe/utils.pyo

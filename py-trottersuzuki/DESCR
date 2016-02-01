@@ -1,0 +1,3 @@
+The module is a massively parallel implementation of the Trotter-Suzuki
+approximation to simulate the evolution of quantum systems classically.
+It relies on interfacing with C++ code with OpenMP for multicore execution.
