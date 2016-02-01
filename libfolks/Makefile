@@ -25,9 +25,11 @@ TEST_TARGET=	check
 CPPFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
+.include "../../wip/evolution-data-server/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

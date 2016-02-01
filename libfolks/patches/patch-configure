@@ -1,0 +1,24 @@
+$NetBSD$
+
+https://bugzilla.gnome.org/show_bug.cgi?id=761192
+
+--- configure.orig	2015-01-19 17:42:40.000000000 +0000
++++ configure
+@@ -13409,7 +13409,7 @@ fi
+     as_fn_error $? "Unknown --enable-zeitgeist argument: $enable_zeitgeist" "$LINENO" 5
+ esac
+ 
+-if test "x$have_zeitgeist" == "xyes"; then :
++if test "x$have_zeitgeist" = "xyes"; then :
+ 
+    ZEITGEIST_VALAFLAGS="-D HAVE_ZEITGEIST"
+ 
+@@ -15127,7 +15127,7 @@ $as_echo "yes" >&6; }
+ fi
+ 
+ 
+-	  if test "x$have_zeitgeist" == "xyes"; then :
++	  if test "x$have_zeitgeist" = "xyes"; then :
+ 
+ 
+   unset vala_pkgs

@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.libfolks?=	../../chat/libfolks
 .include "../../devel/glib2/buildlink3.mk"
 #.include "../../devel/gobject-introspection/buildlink3.mk"
 #.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../devel/libgee0.6/buildlink3.mk"
+#.include "../../devel/libgee0.6/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .endif	# LIBFOLKS_BUILDLINK3_MK
 
