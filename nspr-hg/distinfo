@@ -14,4 +14,4 @@ SHA1 (patch-pr_src_md_unix_uxrng.c) = 85fad8b3607f5113fdd4697d251544418c025ab1
 SHA1 (patch-pr_src_misc_prnetdb.c) = b54360b1e1cfb8c5b08c55d4f99253bd192bc9de
 SHA1 (patch-pr_src_pthreads_ptio.c) = 8a40edcc64c7df3d068be51ea2e1b1fb1ed43cfc
 SHA1 (patch-pr_src_pthreads_ptsynch.c) = 4f385106b2846d0c10b5a8a362f43240aa64d299
-SHA1 (patch-pr_src_pthreads_ptthread.c) = 66376dead249ab941c4fcccd80b971d67f4e7525
+SHA1 (patch-pr_src_pthreads_ptthread.c) = fe762cc407ed18931b7ddf78c0a1f4f322395c56
