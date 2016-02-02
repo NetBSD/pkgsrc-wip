@@ -14,3 +14,6 @@ SHA1 (patch-src_pal_src_include_pal_context.h) = 32e5535866b4c7046bb05cc152b2e6d
 SHA1 (patch-src_pal_src_include_pal_synchcache.hpp) = 7ace14659295f07fd62e0d2a5f2b2d55541debfb
 SHA1 (patch-src_pal_src_thread_context.cpp) = badf337b8b9c561db9cbf928ea2f35b54178a7e0
 SHA1 (patch-src_pal_src_thread_thread.cpp) = 7c11ae04827da599d2e2b64ae8d57efc62b2494b
+SHA1 (patch-src_utilcode_delayloadhelpers.cpp) = 8e3d9d1897d2af39d4e2eaf47b4f9060cd6914d7
+SHA1 (patch-src_vm_jitinterfacegen.cpp) = 6e990673242964381238929116e78a67e7ea7967
+SHA1 (patch-src_vm_threadsuspend.cpp) = dd56cdb5daa9f3f14af13ee172d618386f14f704
