@@ -3756,7 +3756,6 @@ SUBDIR+=	srvx
 SUBDIR+=	sselp
 SUBDIR+=	ssid
 SUBDIR+=	ssu
-SUBDIR+=	st-term
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	stfl

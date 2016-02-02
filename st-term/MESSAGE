@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/08/14 12:49:19 leot1990 Exp $
-
-By default the st terminfo entry is not automatically installed and
-config.def.h termname[] array is changed to "xterm" in order to use the
-xterm terminfo entry.
-===========================================================================

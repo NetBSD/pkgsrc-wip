@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/14 12:49:19 leot1990 Exp $
-bin/st
-man/man1/st.1
