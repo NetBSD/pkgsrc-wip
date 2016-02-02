@@ -3913,6 +3913,8 @@ share/emacs/${PKGVERSION}/lisp/xml.el.gz
 share/emacs/${PKGVERSION}/lisp/xml.elc
 share/emacs/${PKGVERSION}/lisp/xt-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
+share/emacs/${PKGVERSION}/lisp/xwidget.el.gz
+share/emacs/${PKGVERSION}/lisp/xwidget.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
 share/icons/hicolor/128x128/apps/emacs.png
