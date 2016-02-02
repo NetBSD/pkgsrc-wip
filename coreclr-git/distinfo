@@ -2,15 +2,12 @@ $NetBSD$
 
 SHA1 (patch-src_debug_ee_debugger.h) = 43cd45cafa38911900b395ec1596496938d62a81
 SHA1 (patch-src_pal_inc_pal__char16.h) = 205f6a8533838c192b36bbb00155da1b02e0f629
-SHA1 (patch-src_pal_src_config.h.in) = 05c67c2131ed0eec3ba6fb80de08e101c9ec98cb
-SHA1 (patch-src_pal_src_configure.cmake) = 0bcb4ff8c0def2f146d29e75e781aa414fb5db23
 SHA1 (patch-src_pal_src_cruntime_file.cpp) = 315ad5db53ef2b893a77aa131ce97999214e0e11
 SHA1 (patch-src_pal_src_debug_debug.cpp) = 0d6bee5d2896de64effafa01d2e2989de82c76fc
 SHA1 (patch-src_pal_src_exception_seh-unwind.cpp) = 64a221a2f57b6654cae73a2aba0b59daf33b8224
 SHA1 (patch-src_pal_src_exception_signal.cpp) = ba0cabad71792a0108ffd9ec29254751f1e95997
-SHA1 (patch-src_pal_src_include_pal_context.h) = 32e5535866b4c7046bb05cc152b2e6db9dc9cf9b
 SHA1 (patch-src_pal_src_include_pal_synchcache.hpp) = 7ace14659295f07fd62e0d2a5f2b2d55541debfb
-SHA1 (patch-src_pal_src_thread_context.cpp) = 9f059a29685a95edcf88c936603b562f4457de9a
+SHA1 (patch-src_pal_src_thread_context.cpp) = c982763c5b6c9905fd1f14b1271baae5a2fbf052
 SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test4_test4.c) = 01e8f755465d5d9e2beb7333d711759c75c3a9a7
 SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test5_test5.c) = 94c430a39f26663cca6cdae78548e7b4d776b88f
 SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test6_test6.c) = 2f5f1eb383c460b9c3ae7200466da83b50e3f1ee
@@ -23,4 +20,4 @@ SHA1 (patch-src_pal_tests_palsuite_c__runtime_swscanf_test7_test7.c) = c9c466c9b
 SHA1 (patch-src_pal_tests_palsuite_c__runtime_swscanf_test8_test8.c) = 308f4de7dc624572db2090e4b1c81b3ee4a6d902
 SHA1 (patch-src_utilcode_delayloadhelpers.cpp) = 8e3d9d1897d2af39d4e2eaf47b4f9060cd6914d7
 SHA1 (patch-src_vm_jitinterfacegen.cpp) = 6e990673242964381238929116e78a67e7ea7967
-SHA1 (patch-src_vm_threadsuspend.cpp) = dd56cdb5daa9f3f14af13ee172d618386f14f704
+SHA1 (patch-src_vm_threadsuspend.cpp) = 8a7e2bea569a4eb6a9896b9bcfc9cadc803b4315

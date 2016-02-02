@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/vm/threadsuspend.cpp.orig	2016-01-28 19:04:13.000000000 +0000
+--- src/vm/threadsuspend.cpp.orig	2016-02-02 22:59:18.000000000 +0000
 +++ src/vm/threadsuspend.cpp
-@@ -8445,23 +8445,23 @@ void PALAPI HandleGCSuspensionForInterru
+@@ -8447,23 +8447,23 @@ void PALAPI HandleGCSuspensionForInterru
          ClrFlsValueSwitch threadStackWalking(TlsIdx_StackWalkerWalkingThread, pThread);
  
          // Hijack the return address to point to the appropriate routine based on the method's return type.
