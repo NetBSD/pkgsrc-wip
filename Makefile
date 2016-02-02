@@ -1992,6 +1992,7 @@ SUBDIR+=	nhc98
 SUBDIR+=	nicotine+
 SUBDIR+=	nightfall
 SUBDIR+=	nih-current
+SUBDIR+=	nim
 SUBDIR+=	ninja-devel
 SUBDIR+=	ninja-ide
 SUBDIR+=	ninka

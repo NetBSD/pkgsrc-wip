@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (nim-0.13.0.tar.xz) = 88450e9ffcc65625450c25e1ef73ebfb3c348955
+RMD160 (nim-0.13.0.tar.xz) = 03629c1b9be1df541023b170adc79a893382980a
+Size (nim-0.13.0.tar.xz) = 3145360 bytes
+SHA1 (patch-install.sh) = 9d19e3c7b7b5b5dce35ea2e3a8309877f6dc8691
