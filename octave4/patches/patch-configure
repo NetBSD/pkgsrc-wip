@@ -1,0 +1,39 @@
+$NetBSD$
+
+install .oct loadable modules with INSTALL_LIB to avoid stripping them
+
+--- configure.orig	2015-05-26 16:21:37.000000000 +0000
++++ configure
+@@ -1951,6 +1951,7 @@ DEFAULT_PAGER
+ GNUPLOT
+ GHOSTSCRIPT
+ DESKTOP_FILE_INSTALL
++INSTALL_LIB
+ LN_S
+ TEXI2PDF
+ TEXI2DVI
+@@ -8609,7 +8610,9 @@ fi
+ 
+ 
+ 
+-INSTALL_SCRIPT='${INSTALL}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
++
++test -z "$INSTALL_LIB" && INSTALL_LIB='${INSTALL_SCRIPT}'
+ 
+ 
+ 
+@@ -13788,7 +13791,12 @@ else
+ fi
+ 	  done
+ 	  ;;
+-	-[lLR]*)
++	-R*)
++	  ac_arg="-Wl,$ac_arg"
++	  shift
++	  set X $ac_arg "$@"
++	  ;;
++	-[lLR]*|-Wl*)
+ 	    ac_exists=false
+   for ac_i in $ac_cv_f77_libs; do
+     if test x"$ac_arg" = x"$ac_i"; then

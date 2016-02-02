@@ -1,0 +1,15 @@
+$NetBSD$
+
+install .oct loadable modules with INSTALL_LIB to avoid stripping them
+
+--- libinterp/Makefile.am.orig	2015-05-23 14:21:53.000000000 +0000
++++ libinterp/Makefile.am
+@@ -351,7 +351,7 @@ install-oct:
+ 	  f=`echo $$ltlib | $(SED) 's,.*/,,'`; \
+ 	  dl=`$(SED) -n -e "s/dlname='\([^']*\)'/\1/p" < $$f`; \
+ 	  if [ -n "$$dl" ]; then \
+-	    $(INSTALL_PROGRAM) $$dl $(DESTDIR)$(octfiledir)/`echo $$f | $(SED) 's,^lib,,; s,\.la$$,.oct,'`; \
++	    $(INSTALL_LIB) $$dl $(DESTDIR)$(octfiledir)/`echo $$f | $(SED) 's,^lib,,; s,\.la$$,.oct,'`; \
+ 	  else \
+ 	    echo "error: dlname is empty in $$ltlib!"; \
+ 	    exit 1; \
