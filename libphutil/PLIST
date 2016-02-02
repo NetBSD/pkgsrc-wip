@@ -2,6 +2,7 @@
 share/libphutil/LICENSE
 share/libphutil/NOTICE
 share/libphutil/README.md
+share/libphutil/bin/aws-s3
 share/libphutil/externals/includes/README
 share/libphutil/externals/jsonlint/LICENSE
 share/libphutil/externals/jsonlint/src/Seld/JsonLint/JsonParser.php
@@ -34,6 +35,7 @@ share/libphutil/scripts/test/progress_bar.php
 share/libphutil/scripts/test/prompt.php
 share/libphutil/scripts/test/service_profiler.php
 share/libphutil/scripts/update_compat_info.php
+share/libphutil/scripts/utils/aws-s3.php
 share/libphutil/scripts/utils/directory_fixture.php
 share/libphutil/scripts/utils/lock.php
 share/libphutil/scripts/utils/utf8.php
@@ -53,6 +55,7 @@ share/libphutil/src/aphront/storage/exception/AphrontConnectionQueryException.ph
 share/libphutil/src/aphront/storage/exception/AphrontCountQueryException.php
 share/libphutil/src/aphront/storage/exception/AphrontDeadlockQueryException.php
 share/libphutil/src/aphront/storage/exception/AphrontDuplicateKeyQueryException.php
+share/libphutil/src/aphront/storage/exception/AphrontInvalidCredentialsQueryException.php
 share/libphutil/src/aphront/storage/exception/AphrontLockTimeoutQueryException.php
 share/libphutil/src/aphront/storage/exception/AphrontNotSupportedQueryException.php
 share/libphutil/src/aphront/storage/exception/AphrontObjectMissingQueryException.php
@@ -213,6 +216,13 @@ share/libphutil/src/future/aws/PhutilAWSEC2Future.php
 share/libphutil/src/future/aws/PhutilAWSException.php
 share/libphutil/src/future/aws/PhutilAWSFuture.php
 share/libphutil/src/future/aws/PhutilAWSS3Future.php
+share/libphutil/src/future/aws/PhutilAWSv4Signature.php
+share/libphutil/src/future/aws/__tests__/PhutilAWSv4SignatureTestCase.php
+share/libphutil/src/future/aws/management/PhutilAWSManagementWorkflow.php
+share/libphutil/src/future/aws/management/PhutilAWSS3DeleteManagementWorkflow.php
+share/libphutil/src/future/aws/management/PhutilAWSS3GetManagementWorkflow.php
+share/libphutil/src/future/aws/management/PhutilAWSS3ManagementWorkflow.php
+share/libphutil/src/future/aws/management/PhutilAWSS3PutManagementWorkflow.php
 share/libphutil/src/future/exec/CommandException.php
 share/libphutil/src/future/exec/ExecFuture.php
 share/libphutil/src/future/exec/PhutilExecPassthru.php
@@ -255,6 +265,7 @@ share/libphutil/src/internationalization/locales/PhutilAllCapsEnglishLocale.php
 share/libphutil/src/internationalization/locales/PhutilBritishEnglishLocale.php
 share/libphutil/src/internationalization/locales/PhutilCzechLocale.php
 share/libphutil/src/internationalization/locales/PhutilKoreanLocale.php
+share/libphutil/src/internationalization/locales/PhutilPirateEnglishLocale.php
 share/libphutil/src/internationalization/locales/PhutilRawEnglishLocale.php
 share/libphutil/src/internationalization/locales/PhutilUSEnglishLocale.php
 share/libphutil/src/internationalization/locales/PhutilVeryWowEnglishLocale.php
