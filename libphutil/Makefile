@@ -47,6 +47,8 @@ SUBST_FILES.php+=	src/parser/PhutilLanguageGuesser.php
 SUBST_FILES.php+=	src/parser/__tests__/languageguesser/php.shell-env
 SUBST_FILES.php+=	support/parser/generate-type-parser.php
 SUBST_FILES.php+=	support/xhpast/generate_nodes.php
+SUBST_FILES.php+=	bin/aws-s3
+SUBST_FILES.php+=	scripts/utils/aws-s3.php
 SUBST_SED.php=		-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
 
 NO_BUILD=	yes
