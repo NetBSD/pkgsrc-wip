@@ -66,6 +66,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/include/js ${DESTDIR}${PREFIX}/include/js-1.8.5
 	${CHMOD} -x ${DESTDIR}${PREFIX}/include/js-1.8.5/*
 
+# Python is only needed for the test target
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 .include "../../devel/nspr/buildlink3.mk"
