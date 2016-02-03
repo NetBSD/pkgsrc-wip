@@ -2,7 +2,6 @@ $NetBSD$
 
 SHA1 (patch-src_debug_ee_controller.h) = f1a11bdadd82b706d37236cf41d629aee247cd86
 SHA1 (patch-src_debug_ee_debugger.h) = 4f93c0da59999e326bfec29b57a202acf0341309
-SHA1 (patch-src_debug_ee_debuggermodule.cpp) = 5c15b89a14ef3457084316166afe315cef321ee2
 SHA1 (patch-src_pal_inc_pal__char16.h) = 205f6a8533838c192b36bbb00155da1b02e0f629
 SHA1 (patch-src_pal_src_CMakeLists.txt) = 7f5b7e7f669efa42fb1bc230949e508a0df080ed
 SHA1 (patch-src_pal_src_cruntime_file.cpp) = 315ad5db53ef2b893a77aa131ce97999214e0e11
