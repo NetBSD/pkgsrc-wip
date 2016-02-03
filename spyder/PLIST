@@ -79,6 +79,7 @@ ${PYSITELIB}/spyderlib/doc/_static/down-pressed.png
 ${PYSITELIB}/spyderlib/doc/_static/down.png
 ${PYSITELIB}/spyderlib/doc/_static/favicon.ico
 ${PYSITELIB}/spyderlib/doc/_static/file.png
+${PYSITELIB}/spyderlib/doc/_static/jquery-1.11.1.js
 ${PYSITELIB}/spyderlib/doc/_static/jquery.js
 ${PYSITELIB}/spyderlib/doc/_static/minus.png
 ${PYSITELIB}/spyderlib/doc/_static/navigation.png
@@ -87,6 +88,7 @@ ${PYSITELIB}/spyderlib/doc/_static/pygments.css
 ${PYSITELIB}/spyderlib/doc/_static/searchtools.js
 ${PYSITELIB}/spyderlib/doc/_static/sphinxdoc.css
 ${PYSITELIB}/spyderlib/doc/_static/spyder_bbg.png
+${PYSITELIB}/spyderlib/doc/_static/underscore-1.3.1.js
 ${PYSITELIB}/spyderlib/doc/_static/underscore.js
 ${PYSITELIB}/spyderlib/doc/_static/up-pressed.png
 ${PYSITELIB}/spyderlib/doc/_static/up.png

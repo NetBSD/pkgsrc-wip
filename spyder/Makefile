@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	spyder-2.3.8
-CATEGORIES=	wip
-MASTER_SITES=	https://pypi.python.org/packages/source/s/spyder/
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/spyder/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
