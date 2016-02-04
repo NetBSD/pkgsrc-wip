@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Library for crypto UI and related tasks
 LICENSE=		gnu-gpl-v2
 
+BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
