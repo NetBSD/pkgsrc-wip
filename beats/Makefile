@@ -29,12 +29,6 @@ CONF_FILES+=		share/examples/beats/${file} ${PKG_SYSCONFDIR}/${file}
 
 PKG_SYSCONFSUBDIR=	beats
 
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	pre-configure
-SUBST_MESSAGE.path=	Fix default paths
-SUBST_FILES.path=	libbeat/cfgfile/cfgfile.go
-SUBST_VARS.path=	PKG_SYSCONFDIR
-
 MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
 BUILD_DIRS=		libbeat packetbeat filebeat # topbeat
 
