@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/08/25 18:27:06 jihbed Exp $
+$NetBSD$
 
-SHA1 (unpaper-0.3.tar.gz) = 120eee7c635eeb8ea75431c2dfba89bd8c132493
-RMD160 (unpaper-0.3.tar.gz) = f67a41ae4f80ba74fd7193674340d518d4bbc89f
-Size (unpaper-0.3.tar.gz) = 546488 bytes
+SHA1 (unpaper-6.1.tar.xz) = 52768ff1451c0e0b56a2be8bf4baa505a9eacb7d
+RMD160 (unpaper-6.1.tar.xz) = 3337c18090c13e388eade98b1010b44893901c82
+SHA512 (unpaper-6.1.tar.xz) = afef705985d3c265672c9e42130acc34befc080c361f3169e299b5110c662d0b9845a9d0ca4fc3aad468f49967ded36fb60ffed296373569dd7337c3cb81e79c
+Size (unpaper-6.1.tar.xz) = 2655724 bytes
+SHA1 (patch-file.c) = 6560d8173e776600b0db9c976f1fa565d2d5ccec
+SHA1 (patch-unpaper.c) = 90f1b85de7c8aa22d4daed1be2a57dffde19cc5b

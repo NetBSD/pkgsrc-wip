@@ -1,29 +1,20 @@
 # $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
-DISTNAME=	unpaper-0.3
+DISTNAME=	unpaper-6.1
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unpaper.berlios/}
+MASTER_SITES=	https://www.flameeyes.eu/files/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://unpaper.berlios.de/
+HOMEPAGE=	https://www.flameeyes.eu/projects/unpaper
 COMMENT=	Post-processing scanned and photocopied book pages
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+= bash
-
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_SED.paths+=	-e 's,/usr/local/bin,${DESTDIR}${PREFIX}/bin,g'
-SUBST_FILES.paths+=	make.sh
-SUBST_MESSAGE.paths=	Fixing header search paths.
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS= bin
 
-do-build:
-	cd ${WRKSRC}/src; ${CC} ${CFLAGS} -DUNIX -o unpaper unpaper.c -lm
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/unpaper ${DESTDIR}${PREFIX}/bin
-
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

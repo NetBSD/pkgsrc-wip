@@ -1,2 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/25 18:27:06 jihbed Exp $
+@comment $NetBSD$
 bin/unpaper
+man/man1/unpaper.1
+share/doc/unpaper/AUTHORS
+share/doc/unpaper/COPYING
+share/doc/unpaper/NEWS
+share/doc/unpaper/README.md
+share/doc/unpaper/basic-concepts.md
+share/doc/unpaper/file-formats.md
+share/doc/unpaper/image-processing.md
+share/doc/unpaper/img/blackfilter-detail.png
+share/doc/unpaper/img/blackfilter.png
+share/doc/unpaper/img/blurfilter-detail.png
+share/doc/unpaper/img/blurfilter.png
+share/doc/unpaper/img/border-align.png
+share/doc/unpaper/img/border-scan.png
+share/doc/unpaper/img/deskew-detail1.png
+share/doc/unpaper/img/deskew-detail2.png
+share/doc/unpaper/img/deskew.png
+share/doc/unpaper/img/documentation.odg
+share/doc/unpaper/img/input-pages.png
+share/doc/unpaper/img/layout-templates.png
+share/doc/unpaper/img/mask-center.png
+share/doc/unpaper/img/mask-scan-detail1.png
+share/doc/unpaper/img/mask-scan-detail2.png
+share/doc/unpaper/img/mask-scan.png
+share/doc/unpaper/img/multiple-input-files.png
+share/doc/unpaper/img/multiple-output-files.png
+share/doc/unpaper/img/noisefilter.png
+share/doc/unpaper/img/output-pages.png
+share/doc/unpaper/img/processing-order.png
+share/doc/unpaper/img/sheetspages.png
+share/doc/unpaper/img/standard-deviation.png
