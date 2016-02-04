@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=		beats-1.0.1
+DISTNAME=		beats-1.1.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=		beats
