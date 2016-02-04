@@ -16,6 +16,9 @@ USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DGLFW_BUILD_DOCS=OFF
 
+# Problem reported and fixed (differently) upstream:
+#  https://github.com/glfw/glfw/issues/646
+# It will not be needed for the next release.
 SUBST_CLASSES+=		soname
 SUBST_STAGE.soname=	pre-configure
 SUBST_MESSAGE.soname=	Avoid hardcoded libGL.so
