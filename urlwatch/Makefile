@@ -10,6 +10,7 @@ COMMENT=	Watch web pages and arbitrary URLs for changes
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-minidb-[0-9]*:../../wip/py-minidb
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
