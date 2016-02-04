@@ -79,6 +79,7 @@ include/clang/AST/ExprOpenMP.h
 include/clang/AST/ExternalASTSource.h
 include/clang/AST/GlobalDecl.h
 include/clang/AST/LambdaCapture.h
+include/clang/AST/LocInfoType.h
 include/clang/AST/Mangle.h
 include/clang/AST/MangleNumberingContext.h
 include/clang/AST/NSAPI.h
@@ -242,6 +243,7 @@ include/clang/CodeGen/ObjectFilePCHContainerOperations.h
 include/clang/Config/config.h
 include/clang/Driver/Action.h
 include/clang/Driver/Compilation.h
+include/clang/Driver/DebugInfoKind.h
 include/clang/Driver/Driver.h
 include/clang/Driver/DriverDiagnostic.h
 include/clang/Driver/Job.h
@@ -352,7 +354,6 @@ include/clang/Sema/Designator.h
 include/clang/Sema/ExternalSemaSource.h
 include/clang/Sema/IdentifierResolver.h
 include/clang/Sema/Initialization.h
-include/clang/Sema/LocInfoType.h
 include/clang/Sema/Lookup.h
 include/clang/Sema/LoopHint.h
 include/clang/Sema/MultiplexExternalSemaSource.h
@@ -431,6 +432,7 @@ include/clang/StaticAnalyzer/Core/PathSensitive/Store.h
 include/clang/StaticAnalyzer/Core/PathSensitive/StoreRef.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SubEngine.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SummaryManager.h
+include/clang/StaticAnalyzer/Core/PathSensitive/SymExpr.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SymbolManager.h
 include/clang/StaticAnalyzer/Core/PathSensitive/Symbols.def
 include/clang/StaticAnalyzer/Core/PathSensitive/TaintManager.h
