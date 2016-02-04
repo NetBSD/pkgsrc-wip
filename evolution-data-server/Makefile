@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.gnome.org/projects/evolution/
 COMMENT=	Evolution data server
 LICENSE=	gnu-lgpl-v2
 
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+
 BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++
