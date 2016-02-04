@@ -2,7 +2,7 @@
 
 DISTNAME=	evolution-data-server-3.18.4
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/3.16/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/3.18/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
