@@ -19,7 +19,7 @@ USE_TOOLS+=	bash
 REPLACE_BASH+=	build.sh
 
 do-build:
-		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
+		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} MONOROOTDIR=${PREFIX} ./build.sh verbose
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
