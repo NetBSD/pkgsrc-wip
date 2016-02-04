@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash
 REPLACE_BASH+=	build.sh
 
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
 do-build:
 		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
 
