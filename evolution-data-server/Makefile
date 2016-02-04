@@ -66,7 +66,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.12
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../wip/vala/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../wip/gcr/buildlink3.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"

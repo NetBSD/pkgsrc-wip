@@ -3986,7 +3986,6 @@ SUBDIR+=	v8
 SUBDIR+=	v8-316
 SUBDIR+=	vacuum
 SUBDIR+=	vagalume
-SUBDIR+=	vala
 SUBDIR+=	vale-current
 SUBDIR+=	vamp
 SUBDIR+=	vamps
