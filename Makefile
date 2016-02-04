@@ -856,7 +856,6 @@ SUBDIR+=	gjs
 SUBDIR+=	gksu
 SUBDIR+=	glade2-nognome
 SUBDIR+=	gle
-SUBDIR+=	glfw
 SUBDIR+=	glib-java
 SUBDIR+=	glibc
 SUBDIR+=	glide3
