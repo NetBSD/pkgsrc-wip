@@ -3792,7 +3792,6 @@ SUBDIR+=	swift-git
 SUBDIR+=	swisseph
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid
-SUBDIR+=	sxiv
 SUBDIR+=	sylfilter
 SUBDIR+=	symbolic++
 SUBDIR+=	symmetrica
