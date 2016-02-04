@@ -1,7 +1,11 @@
 @comment $NetBSD$
 bin/urlwatch
 man/man1/urlwatch.1
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/urlwatch/__init__.py
 ${PYSITELIB}/urlwatch/__init__.pyc
 ${PYSITELIB}/urlwatch/__init__.pyo
@@ -32,5 +36,6 @@ ${PYSITELIB}/urlwatch/storage.pyo
 ${PYSITELIB}/urlwatch/util.py
 ${PYSITELIB}/urlwatch/util.pyc
 ${PYSITELIB}/urlwatch/util.pyo
+share/doc/urlwatch/README.md
 share/urlwatch/examples/hooks.py.example
 share/urlwatch/examples/urls.yaml.example
