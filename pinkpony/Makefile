@@ -25,7 +25,7 @@ do-build:
 
 do-install:
 
-.include "../../wip/glfw/buildlink3.mk"
+.include "../../graphics/glfw/buildlink3.mk"
 .include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../wip/ftgl/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
