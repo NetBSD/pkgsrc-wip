@@ -11,8 +11,6 @@ HOMEPAGE=	http://github.com/muennich/sxiv
 COMMENT=	Simple (or small or suckless) X Image Viewer
 LICENSE=	gnu-gpl-v2
 
-NO_CONFIGURE=	yes
-
 USE_TOOLS+=	gmake
 
 SUBST_CLASSES+=		makefile
