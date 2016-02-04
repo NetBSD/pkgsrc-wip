@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/minidb.py
+${PYSITELIB}/minidb.pyc
+${PYSITELIB}/minidb.pyo
