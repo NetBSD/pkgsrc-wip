@@ -122,20 +122,19 @@ $NetBSD$
  
    include(AddLLVM)
    include(HandleLLVMOptions)
-@@ -73,9 +94,9 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+@@ -73,23 +94,16 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
      message("-- Found PythonInterp: ${PYTHON_EXECUTABLE}")
    endif()
    # Import CMake library targets from LLVM and Clang.
 -  include("${LLDB_PATH_TO_LLVM_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm/LLVMConfig.cmake")
 -  if (EXISTS "${LLDB_PATH_TO_CLANG_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
 -      include("${LLDB_PATH_TO_CLANG_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
+-  endif()
 +  include("${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm/LLVMConfig.cmake")
-+  if (EXISTS "${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/cmake/ClangConfig.cmake")
-+      include("${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
-   endif()
++  include("${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
  
    set(PACKAGE_VERSION "${LLVM_PACKAGE_VERSION}")
-@@ -83,13 +104,8 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+ 
    set(LLVM_BINARY_DIR ${CMAKE_BINARY_DIR})
  
    set(CMAKE_INCLUDE_CURRENT_DIR ON)
