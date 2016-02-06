@@ -28,8 +28,8 @@ post-extract:
 	${RUN} mkdir -p ${WRKSRC}/build
 
 post-install:
-	${RUN} mkdir -p ${DESTDIR}${PREFIX}/include/libunwind
-	${RUN} cp -r ${WRKSRC}/libunwind/include/* ${DESTDIR}${PREFIX}/include/libunwind
+	${RUN} mkdir -p ${DESTDIR}${PREFIX}/include
+	${RUN} cp -r ${WRKSRC}/libunwind/include/* ${DESTDIR}${PREFIX}/include
 
 
 .include "../../wip/mk/git-package.mk"
