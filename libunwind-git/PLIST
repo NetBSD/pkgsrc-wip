@@ -1,4 +1,8 @@
 @comment $NetBSD$
+include/libunwind/__libunwind_config.h
+include/libunwind/libunwind.h
+include/libunwind/mach-o/compact_unwind_encoding.h
+include/libunwind/unwind.h
 lib/libunwind.so
 lib/libunwind.so.1
 lib/libunwind.so.1.0

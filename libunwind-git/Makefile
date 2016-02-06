@@ -27,6 +27,11 @@ CMAKE_ARG_PATH=	${WRKDIR}/libunwind
 post-extract:
 	${RUN} mkdir -p ${WRKSRC}/build
 
+post-install:
+	${RUN} mkdir -p ${DESTDIR}${PREFIX}/include/libunwind
+	${RUN} cp -r ${WRKSRC}/libunwind/include/* ${DESTDIR}${PREFIX}/include/libunwind
+
+
 .include "../../wip/mk/git-package.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
