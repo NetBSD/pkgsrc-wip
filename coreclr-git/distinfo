@@ -5,5 +5,4 @@ SHA1 (patch-src_pal_src_CMakeLists.txt) = 1a8b4d357578a851306c6930f8de1b7e64eeab
 SHA1 (patch-src_pal_src_debug_debug.cpp) = 0d6bee5d2896de64effafa01d2e2989de82c76fc
 SHA1 (patch-src_pal_src_exception_seh-unwind.cpp) = 3a0c587cf9a4f00a0da2cd7a7a59a24b330e1f3d
 SHA1 (patch-src_pal_src_exception_signal.cpp) = ba0cabad71792a0108ffd9ec29254751f1e95997
-SHA1 (patch-src_pal_src_synchmgr_synchmanager.hpp) = a009d45632a8bcbf422a68d1b2bd1b3d9c1b6cce
 SHA1 (patch-src_pal_src_thread_context.cpp) = c982763c5b6c9905fd1f14b1271baae5a2fbf052
