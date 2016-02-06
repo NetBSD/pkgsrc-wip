@@ -11,7 +11,8 @@ HOMEPAGE=	http://libunwind.llvm.org/
 COMMENT=	LLVM libunwind
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/build
+WRKSRC=			${WRKDIR}
+CONFIGURE_DIRS=		${WRKDIR}/build
 
 USE_LANGUAGES=		c c++
 USE_CMAKE+=		yes
@@ -24,7 +25,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 CMAKE_ARG_PATH=	${WRKDIR}/libunwind
 
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}
+	${RUN} mkdir -p ${WRKSRC}/build
 
 .include "../../wip/mk/git-package.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
