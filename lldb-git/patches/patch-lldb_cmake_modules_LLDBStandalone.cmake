@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lldb/cmake/modules/LLDBStandalone.cmake.orig	2015-12-06 02:57:30.000000000 +0000
+--- lldb/cmake/modules/LLDBStandalone.cmake.orig	2016-02-05 23:28:46.000000000 +0000
 +++ lldb/cmake/modules/LLDBStandalone.cmake
-@@ -6,57 +6,77 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+@@ -6,57 +6,78 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
  
    option(LLVM_INSTALL_TOOLCHAIN_ONLY "Only include toolchain files in the 'install' target." OFF)
  
@@ -41,6 +41,7 @@ $NetBSD$
 +      string(REGEX REPLACE
 +        "[ \t]*[\r\n]+[ \t]*" ";"
 +        CONFIG_OUTPUT ${CONFIG_OUTPUT})
++
      else()
 -      get_filename_component(LLVM_MAIN_SRC_DIR ${LLDB_PATH_TO_LLVM_SOURCE}
 -                             ABSOLUTE)
@@ -58,7 +59,7 @@ $NetBSD$
 -      set(CLANG_MAIN_INCLUDE_DIR "${CLANG_MAIN_SRC_DIR}/include")
 -  endif()
 -
--  list(APPEND CMAKE_MODULE_PATH "${LLDB_PATH_TO_LLVM_BUILD}/share/llvm/cmake")
+-  list(APPEND CMAKE_MODULE_PATH "${LLDB_PATH_TO_LLVM_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm")
 -
 -  if (LLDB_PATH_TO_LLVM_BUILD)
 -    get_filename_component(PATH_TO_LLVM_BUILD ${LLDB_PATH_TO_LLVM_BUILD}
@@ -95,7 +96,7 @@ $NetBSD$
 +  find_program(LLVM_TABLEGEN_EXE "llvm-tblgen" ${LLVM_TOOLS_BINARY_DIR}
 +    NO_DEFAULT_PATH)
 +
-+  set(LLVM_CMAKE_PATH "${LLVM_BINARY_DIR}/share/llvm/cmake")
++  set(LLVM_CMAKE_PATH "${LLVM_BINARY_DIR}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm")
 +  set(LLVMCONFIG_FILE "${LLVM_CMAKE_PATH}/LLVMConfig.cmake")
 +  if(EXISTS ${LLVMCONFIG_FILE})
 +    list(APPEND CMAKE_MODULE_PATH "${LLVM_CMAKE_PATH}")
@@ -121,20 +122,20 @@ $NetBSD$
  
    include(AddLLVM)
    include(HandleLLVMOptions)
-@@ -73,9 +93,9 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+@@ -73,9 +94,9 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
      message("-- Found PythonInterp: ${PYTHON_EXECUTABLE}")
    endif()
    # Import CMake library targets from LLVM and Clang.
--  include("${LLDB_PATH_TO_LLVM_BUILD}/share/llvm/cmake/LLVMConfig.cmake")
--  if (EXISTS "${LLDB_PATH_TO_CLANG_BUILD}/share/clang/cmake/ClangConfig.cmake")
--      include("${LLDB_PATH_TO_CLANG_BUILD}/share/clang/cmake/ClangConfig.cmake")
-+  include("${LLVM_OBJ_ROOT}/share/llvm/cmake/LLVMConfig.cmake")
-+  if (EXISTS "${LLVM_OBJ_ROOT}/share/clang/cmake/ClangConfig.cmake")
-+      include("${LLVM_OBJ_ROOT}/share/clang/cmake/ClangConfig.cmake")
+-  include("${LLDB_PATH_TO_LLVM_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm/LLVMConfig.cmake")
+-  if (EXISTS "${LLDB_PATH_TO_CLANG_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
+-      include("${LLDB_PATH_TO_CLANG_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
++  include("${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm/LLVMConfig.cmake")
++  if (EXISTS "${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/cmake/ClangConfig.cmake")
++      include("${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
    endif()
  
    set(PACKAGE_VERSION "${LLVM_PACKAGE_VERSION}")
-@@ -83,13 +103,8 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+@@ -83,13 +104,8 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
    set(LLVM_BINARY_DIR ${CMAKE_BINARY_DIR})
  
    set(CMAKE_INCLUDE_CURRENT_DIR ON)
