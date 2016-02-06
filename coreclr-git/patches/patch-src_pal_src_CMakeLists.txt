@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/pal/src/CMakeLists.txt.orig	2016-02-02 22:59:18.000000000 +0000
+--- src/pal/src/CMakeLists.txt.orig	2016-02-06 02:05:27.000000000 +0000
 +++ src/pal/src/CMakeLists.txt
-@@ -251,12 +251,12 @@ if(CMAKE_SYSTEM_NAME STREQUAL Linux)
+@@ -263,12 +263,12 @@ if(CMAKE_SYSTEM_NAME STREQUAL Linux)
  endif(CMAKE_SYSTEM_NAME STREQUAL Linux)
  
  if(CMAKE_SYSTEM_NAME STREQUAL NetBSD)

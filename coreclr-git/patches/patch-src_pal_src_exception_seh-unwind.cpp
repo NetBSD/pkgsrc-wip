@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/src/exception/seh-unwind.cpp.orig	2016-01-28 19:04:13.000000000 +0000
+--- src/pal/src/exception/seh-unwind.cpp.orig	2016-02-06 02:05:27.000000000 +0000
 +++ src/pal/src/exception/seh-unwind.cpp
 @@ -297,7 +297,6 @@ BOOL PAL_VirtualUnwind(CONTEXT *context,
  }

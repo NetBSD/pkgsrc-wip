@@ -1,21 +1,9 @@
 $NetBSD$
 
-SHA1 (patch-src_debug_ee_controller.h) = f1a11bdadd82b706d37236cf41d629aee247cd86
-SHA1 (patch-src_debug_ee_debugger.h) = 4f93c0da59999e326bfec29b57a202acf0341309
 SHA1 (patch-src_pal_inc_pal__char16.h) = 205f6a8533838c192b36bbb00155da1b02e0f629
-SHA1 (patch-src_pal_src_CMakeLists.txt) = 7f5b7e7f669efa42fb1bc230949e508a0df080ed
+SHA1 (patch-src_pal_src_CMakeLists.txt) = 1a8b4d357578a851306c6930f8de1b7e64eeab0a
 SHA1 (patch-src_pal_src_debug_debug.cpp) = 0d6bee5d2896de64effafa01d2e2989de82c76fc
-SHA1 (patch-src_pal_src_exception_seh-unwind.cpp) = 64a221a2f57b6654cae73a2aba0b59daf33b8224
+SHA1 (patch-src_pal_src_exception_seh-unwind.cpp) = 3a0c587cf9a4f00a0da2cd7a7a59a24b330e1f3d
 SHA1 (patch-src_pal_src_exception_signal.cpp) = ba0cabad71792a0108ffd9ec29254751f1e95997
-SHA1 (patch-src_pal_src_include_pal_synchcache.hpp) = 7ace14659295f07fd62e0d2a5f2b2d55541debfb
+SHA1 (patch-src_pal_src_synchmgr_synchmanager.hpp) = 54696c8ee6a10bfa9858e3145b552c56c58dfbbf
 SHA1 (patch-src_pal_src_thread_context.cpp) = c982763c5b6c9905fd1f14b1271baae5a2fbf052
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test4_test4.c) = f9d52fa5a7f6c215186a33b2847a77799c5d9093
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test5_test5.c) = 5a2527106707efab05e990965bc336219d62f2c3
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test6_test6.c) = 816c3b7bda86664adc06cf2bc52d4c6063a34c76
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test7_test7.c) = 1ab27ca6fe6b68f74fed6c22a1af7d648d2e9e93
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_sscanf_test8_test8.c) = 5a87decf74f703b574e109a22b81a974eae4b8b9
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_swscanf_test4_test4.c) = 823d59ec0b678eee2ac7a222022fe3caaf3149f4
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_swscanf_test5_test5.c) = f9636dd137d86cd7950d735f092fb13df8505b95
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_swscanf_test6_test6.c) = e51600bfd6ab73c95c51ed5bc468f4baec49022b
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_swscanf_test7_test7.c) = aa77ae6c78aef8800f5e441ad64efd9167472cc1
-SHA1 (patch-src_pal_tests_palsuite_c__runtime_swscanf_test8_test8.c) = 61ab6bca0b3d7740bb06fd97ead821f81890a4dc
