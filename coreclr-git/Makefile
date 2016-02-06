@@ -27,6 +27,7 @@ do-build:
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../wip/lldb-git/buildlink3.mk"
 .include "../../wip/clang-git/buildlink3.mk"
+.include "../../wip/libunwind-git/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
