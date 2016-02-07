@@ -60,6 +60,7 @@ include/c++/v1/experimental/any
 include/c++/v1/experimental/chrono
 include/c++/v1/experimental/dynarray
 include/c++/v1/experimental/functional
+include/c++/v1/experimental/iterator
 include/c++/v1/experimental/optional
 include/c++/v1/experimental/ratio
 include/c++/v1/experimental/string_view
