@@ -1,0 +1,31 @@
+$NetBSD$
+
+Option -X to enable debugging.
+
+--- lib/FCGI/Daemon.pm.orig     2015-12-26 09:28:53.000000000 +0100
++++ lib/FCGI/Daemon.pm  2016-02-07 18:03:39.000000000 +0100
+@@ -52,7 +52,7 @@
+     Modulino-style main routine
+ =cut
+ sub run {
+-    getopts('hde:f:q:p:s:g:u:m:c:l:w:',\%o) or help(0);
++    getopts('hde:f:q:p:s:g:u:m:c:l:w:X',\%o) or help(0);
+     help(2) if $o{'h'};
+ 
+     $o{sockfile}=$o{'s'}||'/var/run/fcgi-daemon.sock';
+@@ -64,6 +64,7 @@
+     $o{max_evals}=defined $o{'e'} ? $o{'e'} : 10240;   #max evals before exit - paranoid to free memory if leaks
+     $o{file_pattern}=$o{'f'}||qr{\.pl};
+     $o{leak_threshold}=$o{'l'}||1.3;
++    $DEBUG++ if $o{'X'};
+ 
+     if($EFFECTIVE_USER_ID==0){
+         $o{gid}=$o{g}||'www-data'; $o{gid_num}=scalar getgrnam($o{gid});
+@@ -380,6 +381,7 @@
+   -u www-data                     # user name to become (if run as root)
+   -g www-data                     # group name to become (if run as root)
+   -d                              # daemonize (run in background)
++  -X                              # enable debugging
+ 
+ All options are optional.
+ 
