@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.4 2010/04/25 13:22:23 alnsn Exp $
 
-SHA1 (quickfix-1.14.3.tar.gz) = a67a8affaf9273f10eb378d63cfdd7f2c653be84
-RMD160 (quickfix-1.14.3.tar.gz) = 369d5bf7044fa4c90d2d74e4470e50c0ad82951b
-SHA512 (quickfix-1.14.3.tar.gz) = aff3676f2c43a9de7dbe86732e1411f9ce42946e2e74e20a3cd2d7c032cc46c1492c97a4a67eb175f118d93f07f94f9297122e3961069537907bf1c4d68f9a09
-Size (quickfix-1.14.3.tar.gz) = 21803784 bytes
+SHA1 (quickfix-1.14.4.tar.gz) = 879a643e6cdc8b8c5bfd037645d766a6358dc1c3
+RMD160 (quickfix-1.14.4.tar.gz) = 13af542f469a5e10e01ea27691f62b11c287a3b4
+SHA512 (quickfix-1.14.4.tar.gz) = b54852365d85c769bd7cf59a972ab722227a2fc5fa760cdc7f5e31d143ece303049e4b05235913072fa8df3061c6fcb5a89f853821c6372e02620cd1ef16b981
+Size (quickfix-1.14.4.tar.gz) = 15710216 bytes
 SHA1 (patch-UnitTest++_Makefile) = 22482a78df02996a7af623148576093441ba140d
-SHA1 (patch-configure) = 831eb5bb24c82549b81c40f7e9896628dcef6ef6
+SHA1 (patch-configure.ac) = 0662d15b3d8e1e2238dfc44491dfb4f5d72749a5

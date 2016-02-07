@@ -1,0 +1,34 @@
+$NetBSD$
+
+Replace "==" with "=".
+XXX This patch doesn't help because autoconf generates "==".
+
+--- configure.ac.orig	2014-09-15 17:22:31.000000000 +0000
++++ configure.ac
+@@ -42,7 +42,7 @@ AX_JAVA()
+ has_tbb=false
+ AC_ARG_WITH(tbb,
+     [  --with-tbb=<path>       prefix of Intel Thread Building Blocks (TBB) installation. e.g. /opt/intel/tbb/3.0], 
+-    [if test $withval == "no"
++    [if test $withval = "no"
+      then
+        has_tbb=false
+      else
+@@ -56,7 +56,7 @@ AC_SUBST(TBB_PREFIX)
+ has_tbb_arch=false
+ AC_ARG_WITH(tbb-arch,
+     [  --with-tbb-arch=<arch>  TBB arch subdir, e.g. intel64/cc4.1.0_libc2.4_kernel2.6.16.21 ], 
+-    [if test $withval == "no"
++    [if test $withval = "no"
+      then
+        has_tbb_arch=false
+      else
+@@ -80,7 +80,7 @@ fi
+ # libs
+ LIBS="$STLPORT_LIBS $XML_LIBS $MYSQL_LIBS $POSTGRESQL_LDFLAGS $TBB_LIBS $LIBS"
+ # gcc flags
+-if test `uname` == SunOS; then
++if test `uname` = SunOS; then
+    	SHAREDFLAGS="$TBB_CFLAGS $BOOST_CFLAGS $STLPORT_CFLAGS $MYSQL_CFLAGS $POSTGRESQL_CFLAGS $XML_CPPFLAGS $XML_CFLAGS $JAVA_CFLAGS $PYTHON_CFLAGS $RUBY_CFLAGS"
+ else
+ 	SHAREDFLAGS="-Wall -ansi -Wpointer-arith -Wwrite-strings -Wno-overloaded-virtual $TBB_CFLAGS $BOOST_CFLAGS $STLPORT_CFLAGS $MYSQL_CFLAGS $POSTGRESQL_CFLAGS $XML_CPPFLAGS $XML_CFLAGS $PYTHON_CFLAGS $RUBY_CFLAGS"
