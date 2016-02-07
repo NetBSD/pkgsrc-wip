@@ -21,6 +21,15 @@ Option -X to enable debugging.
  
      if($EFFECTIVE_USER_ID==0){
          $o{gid}=$o{g}||'www-data'; $o{gid_num}=scalar getgrnam($o{gid});
+@@ -80,7 +80,7 @@
+         POSIX::setsid() or die q{Can't start a new session: }.$OS_ERROR;
+         open *STDIN,'<','/dev/null';
+         open *STDOUT,'>>','/dev/null';
+-        open *STDERR,'>>','/dev/null';
++        open *STDERR,'>>','/dev/null' unless $DEBUG;
+         umask 022;
+     }
+
 @@ -380,6 +381,7 @@
    -u www-data                     # user name to become (if run as root)
    -g www-data                     # group name to become (if run as root)
