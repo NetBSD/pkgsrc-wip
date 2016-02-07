@@ -10,3 +10,4 @@ SHA1 (patch-bsd3) = 0a59d856c66b0f8dc829c858fd4caf58660ff281
 SHA1 (patch-bsd4) = 31491220625b8691962dd354d588a081dcf52229
 SHA1 (patch-bsd5) = c504b293a68cb07429914a0d6b00fe7c72cab8e0
 SHA1 (patch-bsd6) = b09927b4637f0fc9bc8bd2eed0e606cc2ca7cfa5
+SHA1 (patch-bsd7) = d0e196bb50b93e2901b8c597b1084b5232f9134a
