@@ -17,7 +17,7 @@ $NetBSD$
  
 -cmake \
 +cmake_extra_env="$cmake_extra_env $CMAKE_ENV_EXTRA"
-+cmake_extra_defines="$cmake_extra_defined $CMAKE_ARGS_EXTRA"
++cmake_extra_defines="$cmake_extra_defines $CMAKE_ARGS_EXTRA"
 +
 +$cmake_extra_env cmake \
    -G "$generator" \

@@ -23,11 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-		${PKGSRC_SETENV} \
-			CMAKE_ENV_EXTRA="${CONFIGURE_ENV}" \
-			CMAKE_ARGS_EXTRA="${CMAKE_ARGS}" \
-			PYTHON=${PYTHONBIN} \
-				./build.sh
+	${PKGSRC_SETENV} CMAKE_ENV_EXTRA="${CONFIGURE_ENV}" CMAKE_ARGS_EXTRA="${CMAKE_ARGS}" PYTHON=${PYTHONBIN} ./build.sh
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
