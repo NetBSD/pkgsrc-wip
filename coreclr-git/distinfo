@@ -3,6 +3,3 @@ $NetBSD$
 SHA1 (patch-src_pal_inc_pal__char16.h) = ca743d8330802f1a626b1c335461c733eb2a6325
 SHA1 (patch-src_pal_src_CMakeLists.txt) = 70b48ae972cf214c9e38119f376a6b6c83079fe9
 SHA1 (patch-src_pal_src_configure.cmake) = 3c43cd68dffab48a1ab8a6997a681197ddacaac4
-SHA1 (patch-src_pal_src_debug_debug.cpp) = ef966aebe05933b671ed77aba7ca8b0db59f20e3
-SHA1 (patch-src_pal_src_exception_signal.cpp) = 65015ec62b45d65a9b96742faa606e7b094e8662
-SHA1 (patch-src_pal_src_thread_context.cpp) = eb0c789e9fd6ac4ec5b20bee09a8d6ea2076fb6e
