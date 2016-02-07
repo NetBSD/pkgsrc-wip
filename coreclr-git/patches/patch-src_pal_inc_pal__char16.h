@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/inc/pal_char16.h.orig	2016-02-06 09:37:43.000000000 +0000
+--- src/pal/inc/pal_char16.h.orig	2016-01-28 19:04:13.000000000 +0000
 +++ src/pal/inc/pal_char16.h
 @@ -29,6 +29,8 @@ This file is used to define the wchar_t 
  #ifndef PAL_STDCPP_COMPAT
