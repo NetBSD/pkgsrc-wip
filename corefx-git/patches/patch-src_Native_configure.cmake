@@ -10,3 +10,20 @@ $NetBSD$
  
  # in_pktinfo: Find whether this struct exists
  check_include_files(
+@@ -75,6 +76,16 @@ check_symbol_exists(
+     "sys/ioctl.h"
+     HAVE_TIOCGWINSZ)
+ 
++check_symbol_exists(
++    ENOTRECOVERABLE
++    "sys/errno.h"
++    HAVE_ENOTRECOVERABLE)
++
++check_symbol_exists(
++    EOWNERDEAD
++    "sys/errno.h"
++    HAVE_EOWNERDEAD)
++
+ check_function_exists(
+     tcgetattr
+     HAVE_TCGETATTR)
