@@ -1,0 +1,17 @@
+FCGI::Daemon is a small FastCGI server for use as CGI-wrapper for
+CGI applications.
+
+Like mod_perl FCGI-Daemon stay persistent in memory and accelerate
+unmodified CGI applications written in Perl.
+
+FCGI-Daemon run CGI scripts with RLIMITs and predefined number of
+workers.
+
+It was developed as replacement for cgiwrap-fcgi.pl
+(http://wiki.nginx.org/SimpleCGI) and fcgiwrap
+(http://nginx.localdomain.pl/wiki/FcgiWrap).
+
+FCGI-Daemon check for executable in path and correctly set PATH_INFO
+environment variable which is crucial for some CGI applications
+like fossil (http://fossil-scm.org). (Lack of this functionality
+make cgiwrap-fcgi.pl unsuitable for some scripts.)

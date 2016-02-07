@@ -1,0 +1,57 @@
+$NetBSD$
+
+Instead of using a non-portable /proc/$$/status read to get memory
+usage on Linux, use a non-portable /bin/ps command on BSD platforms.
+
+--- lib/FCGI/Daemon.pm.orig	2015-12-26 09:28:53.000000000 +0100
++++ lib/FCGI/Daemon.pm	2016-02-07 18:03:39.000000000 +0100
+@@ -171,21 +180,37 @@
+                 delete $main::{$_};
+             }
+ 
+-            if(open my $STAT,'<',"/proc/$$/status"){
+-                my %stat;
+-                while(my ($k,$v)=split /\:\s+/,<$STAT>){
+-                    chop $v;
+-                    $stat{$k}=$v;
++            exit unless --$o{max_evals};
++
++            # exit if child takes too much resident memory
++            my %stat = ();
++            if ( $OSNAME =~ m{bsd}oi ) {
++                if (open my $STAT,'-|',"/bin/ps -o vsz,rss -p $$") {
++                    while(<$STAT>) {
++                        if ( m{^\s*(\d+)\s+(\d+)$}o ) {
++                             $stat{VmSize} = $1;
++                             $stat{VmRSS} = $2;
++                             last;
++                        }
++                    }
++                    close $STAT;
+                 }
+-                close $STAT;
+-                # check if child takes too much resident memory and terminate if necessary
+-                if($stat{VmSize}/$stat{VmRSS}<$o{leak_threshold}){
+-                    print {*STDERR} 'fcgi-daemon :: terminating child - memory leak? '
+-                    ."VmSize:$stat{VmSize}; VmRSS:$stat{VmRSS}; Ratio:".$stat{VmSize}/$stat{VmRSS};
+-                    exit;
++            } else {
++                if(open my $STAT,'<',"/proc/$$/status"){
++                    while(my ($k,$v)=split /\:\s+/,<$STAT>){
++                        chop $v;
++                        $stat{$k}=$v;
++                    }
++                    close $STAT;
+                 }
+             }
+-            exit unless --$o{max_evals};
++            if ( $stat{VmSize} && $stat{VmRSS}
++                   && ($stat{VmSize}/$stat{VmRSS}<$o{leak_threshold}) ) {
++                 die 'fcgi-daemon :: terminating child - memory leak? '
++                     ."VmSize:$stat{VmSize}; VmRSS:$stat{VmRSS}; Ratio:"
++                     .$stat{VmSize}/$stat{VmRSS};
++            }
++
+             next REQ_LOOP;
+         }
+ 

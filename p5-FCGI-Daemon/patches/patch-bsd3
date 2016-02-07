@@ -1,0 +1,37 @@
+$NetBSD$
+
+Use only $EFFECTIVE_USER_ID to discrimiate if we need to set[gu]id
+and don't install signal handlers INT and TERM as FCGI::ProcManager
+does that.
+
+--- lib/FCGI/Daemon.pm.orig	2015-12-26 09:28:53.000000000 +0100
++++ lib/FCGI/Daemon.pm	2016-02-07 18:03:39.000000000 +0100
+@@ -62,26 +65,18 @@
+     $o{file_pattern}=$o{'f'}||qr{\.pl};
+     $o{leak_threshold}=$o{'l'}||1.3;
+ 
+-    if($REAL_USER_ID==$EFFECTIVE_USER_ID and $EFFECTIVE_USER_ID==0){        # if run as root
++    if($EFFECTIVE_USER_ID==0){
+         $o{gid}=$o{g}||'www-data'; $o{gid_num}=scalar getgrnam($o{gid});
+         $o{uid}=$o{u}||'www-data'; $o{uid_num}=scalar getpwnam($o{uid});
+     }
+ 
+-    local $SIG{INT}= local $SIG{TERM}= sub{
+-        # actually FCGI::ProcManager override our TERM handler so .sock and .pid files will be removed only by sysv script... :(
+-        $o{fcgi_pm}->pm_remove_pid_file() if $o{fcgi_pm};
+-        unlink @o{'sockfile','pidfile'};
+-        $o{fcgi_pm}->pm_die() if $o{fcgi_pm};   #pm_die() does not return
+-        exit 0;
+-    };
+-
+     # daemonize
+     if($o{'d'}){
+         chdir '/';                              # this is good practice for unmounting
+         local $PROGRAM_NAME='FCGI::Daemon';
+         defined(my $pid=fork) or die "Can't fork: $!";
+         exit if $pid;
+-        eval {use POSIX qw(setsid); POSIX::setsid();} or die q{Can't start a new session: }.$OS_ERROR;
++        POSIX::setsid() or die q{Can't start a new session: }.$OS_ERROR;
+         open *STDIN,'<','/dev/null';
+         open *STDOUT,'>>','/dev/null';
+         open *STDERR,'>>','/dev/null';

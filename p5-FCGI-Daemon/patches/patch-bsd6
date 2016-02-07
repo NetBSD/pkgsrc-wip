@@ -1,0 +1,28 @@
+$NetBSD$
+
+Close socket when running as root (manager) and remove files in
+pm_die() routine.
+
+--- lib/FCGI/Daemon.pm.orig	2015-12-26 09:28:53.000000000 +0100
++++ lib/FCGI/Daemon.pm	2016-02-07 18:03:39.000000000 +0100
+@@ -243,6 +268,20 @@
+     return;
+ }
+ 
++# close socket as manager
++sub managing_init {
++    # manager (running as root) doesn't need to listen on the socket
++    close $o{socket_fh} if $EFFECTIVE_USER_ID==0;
++    return $o{fcgi_pm}->managing_init(shift @_);
++}
++
++# exit cleanly
++sub pm_die {
++    # manager (running as root) can remove these better
++    unlink $o{$_} for qw(pidfile sockfile);
++    return $o{fcgi_pm}->pm_die(shift @_);
++}
++
+ # overriding process names
+ sub FCGI::ProcManager::pm_change_process_name {
+     my ($self,$name)=@_;

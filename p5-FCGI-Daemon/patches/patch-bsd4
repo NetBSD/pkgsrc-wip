@@ -1,0 +1,54 @@
+$NetBSD$
+
+Add debug flag and prepare to remove files in pm_die() routine
+
+--- lib/FCGI/Daemon.pm.orig	2015-12-26 09:28:53.000000000 +0100
++++ lib/FCGI/Daemon.pm	2016-02-07 18:03:39.000000000 +0100
+@@ -94,24 +89,38 @@
+                                         pid_fname=>$o{pidfile}
+                                       });
+     print "Opening socket $o{sockfile}\n";
++    $o{socket_fh} = FCGI::OpenSocket($o{sockfile},$o{prefork}*$o{queue});
+     my $rqst=FCGI::Request(\*STDIN,\*STDOUT,\*STDERR,\%req_env,
+-             FCGI::OpenSocket($o{sockfile},$o{prefork}*$o{queue}),
+-             FCGI::FAIL_ACCEPT_ON_INTR())
++             $o{socket_fh}, FCGI::FAIL_ACCEPT_ON_INTR())
+         or die "Error: Unable to create FCGI::Request...";
+ 
+-    if(defined $o{gid_num} and defined $o{uid_num}){                # if run as root
+-        chown $o{uid_num},$o{gid_num},$o{sockfile}                  # chown SOCKfile
++    if($EFFECTIVE_USER_ID==0){
++        chown $o{uid_num},$o{gid_num},$o{sockfile}
+             or dieif($OS_ERROR,'Unable to chown SOCKfile');
+     }
+ 
+     $o{fcgi_pm}->pm_manage();   # from now on we are worker process
+ 
++    if ($DEBUG) {
++        use Data::Dumper;
++        $Data::Dumper::Indent = 1;
++        warn Data::Dumper->Dump([\%o],['o']);
++    }
++
+     # drop privileges if run as root
+-    if(defined $o{gid_num} and defined $o{uid_num}){
+-        local $REAL_GROUP_ID= local $EFFECTIVE_GROUP_ID= getgrnam($o{gid});
+-            dieif($OS_ERROR,'Unable to change group_id to '.$o{gid});
+-        local $REAL_USER_ID= local $EFFECTIVE_USER_ID= getpwnam($o{uid});
+-            dieif($OS_ERROR,'Unable to change user_id to '.$o{uid});
++    my $old_euid = $EFFECTIVE_USER_ID;
++    if ($old_euid==0) {
++        POSIX::setgid($o{gid_num}) or dieif($OS_ERROR,
++            "UID $old_euid couldn't change group to $o{gid} ($o{gid_num})");
++        POSIX::setuid($o{uid_num}) or dieif($OS_ERROR,
++            "UID $old_euid couldn't change user to $o{uid} ($o{uid_num})");
++    }
++
++    if ($DEBUG) {
++        warn "REAL_USER_ID = $REAL_USER_ID";
++        warn "EFFECTIVE_USER_ID = $EFFECTIVE_USER_ID";
++        warn "REAL_GROUP_ID = $REAL_GROUP_ID";
++        warn "EFFECTIVE_GROUP_ID = $EFFECTIVE_GROUP_ID";
+     }
+ 
+     ## set rlimit(s)

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Attempt to unlink each file one by one.
+
+--- lib/FCGI/Daemon.pm.orig	2015-12-26 09:28:53.000000000 +0100
++++ lib/FCGI/Daemon.pm	2016-02-07 18:03:39.000000000 +0100
+@@ -39,7 +42,7 @@
+ sub dieif {
+     if($ARG[0]){
+         my $err=$ARG[1];
+-        unlink @o{'pidfile','sockfile'};
++        unlink $o{$_} for qw(pidfile sockfile);
+         print "Error - $err:\n",$ARG[0],"\n";
+         exit 1;
+     }

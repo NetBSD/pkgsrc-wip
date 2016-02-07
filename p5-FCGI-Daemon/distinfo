@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (FCGI-Daemon-0.20151226.tar.gz) = 75b43915cfd860b5ad9072a6cc472267eef40804
+RMD160 (FCGI-Daemon-0.20151226.tar.gz) = 8f56061adb572e43d3c7cde9c7416a9920a4c16f
+SHA512 (FCGI-Daemon-0.20151226.tar.gz) = 67e0e92a8a01400c70a219f9df7c30a1f67c0ee0ea9506f0dbf388473a9931d64f2a5d7f4b34329241ae5c5bd1caf55dfce4f1dd1b5f4d6f6c7ee4615612dd14
+Size (FCGI-Daemon-0.20151226.tar.gz) = 23375 bytes
+SHA1 (patch-bsd1) = bd6eef790759a1eb2df143f888820b47fbce4d3c
+SHA1 (patch-bsd2) = adedc89ffc5cfc2289ebad569e495273d80df3cf
+SHA1 (patch-bsd3) = 0a59d856c66b0f8dc829c858fd4caf58660ff281
+SHA1 (patch-bsd4) = 31491220625b8691962dd354d588a081dcf52229
+SHA1 (patch-bsd5) = c504b293a68cb07429914a0d6b00fe7c72cab8e0
+SHA1 (patch-bsd6) = b09927b4637f0fc9bc8bd2eed0e606cc2ca7cfa5

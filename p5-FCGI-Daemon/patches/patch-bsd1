@@ -1,0 +1,23 @@
+$NetBSD$
+
+Use POSIX calls setgid and setuid to non-root user when running as
+"root" daemon; add debug flag.
+
+--- lib/FCGI/Daemon.pm.orig	2015-12-26 09:28:53.000000000 +0100
++++ lib/FCGI/Daemon.pm	2016-02-07 18:03:39.000000000 +0100
+@@ -7,12 +7,15 @@
+ our $VERSION = '0.20151226';
+ use 5.14.2;
+ use English '-no_match_vars';
++use POSIX;
+ use BSD::Resource;                      # on Debian available as libbsd-resource-perl
+ use FCGI 0.71;                          # on Debian available as libfcgi-perl
+ use FCGI::ProcManager 0.18;             # on Debian available as libfcgi-procmanager-perl
+ use Getopt::Std;
+ use autouse 'Pod::Usage'=>qw(pod2usage);
+ 
++my $DEBUG = 0;
++
+ =head1 NAME
+ 
+ FCGI::Daemon - Perl-aware Fast CGI daemon for use with nginx web server.
