@@ -6,7 +6,7 @@ DISTNAME=	zathura-ps-${VERSION}
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura-ps/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura-ps/
 COMMENT=	Add PS support to zathura using libspectre library
 LICENSE=	zlib

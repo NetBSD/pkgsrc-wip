@@ -6,7 +6,7 @@ DISTNAME=	zathura-djvu-${VERSION}
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura-djvu/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura-djvu/
 COMMENT=	Add DjVu support to zathura using djvulibre library
 LICENSE=	zlib

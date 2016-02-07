@@ -7,7 +7,7 @@ PKGNAME=	zathura-mupdf-${VERSION}
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura/plugins/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura-pdf-mupdf/
 COMMENT=	Add PDF support to zathura using mupdf rendering engine
 LICENSE=	zlib

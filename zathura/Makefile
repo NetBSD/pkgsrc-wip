@@ -4,7 +4,7 @@ DISTNAME=	zathura-0.3.4
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura/
 COMMENT=	PDF viewer with vi-like keybindings
 LICENSE=	zlib
@@ -18,7 +18,6 @@ MAKE_ENV+=	COLOR=0
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-docutils
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"

@@ -6,7 +6,7 @@ DISTNAME=	zathura-cb-${VERSION}
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura-cb/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://pwmt.org/projects/zathura-cb/
 COMMENT=	Adds comic book support to zathura
 LICENSE=	zlib
