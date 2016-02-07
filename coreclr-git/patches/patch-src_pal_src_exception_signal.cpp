@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/src/exception/signal.cpp.orig	2016-01-28 19:04:13.000000000 +0000
+--- src/pal/src/exception/signal.cpp.orig	2016-02-06 09:37:43.000000000 +0000
 +++ src/pal/src/exception/signal.cpp
 @@ -45,7 +45,7 @@ using namespace CorUnix;
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/src/thread/context.cpp.orig	2016-02-02 22:59:18.000000000 +0000
+--- src/pal/src/thread/context.cpp.orig	2016-02-06 09:37:43.000000000 +0000
 +++ src/pal/src/thread/context.cpp
 @@ -19,6 +19,8 @@ Abstract:
  
