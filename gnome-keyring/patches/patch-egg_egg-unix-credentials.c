@@ -74,10 +74,14 @@ $NetBSD$
  	bytes_written = sendmsg (socket, &msg, 0);
  #else
  	bytes_written = write (socket, &buf, 1);
-@@ -227,13 +216,6 @@ int
- egg_unix_credentials_setup (int sock)
- {
- 	int retval = 0;
+@@ -223,20 +212,6 @@ again:
+ 	return 0;
+ }
+ 
+-int
+-egg_unix_credentials_setup (int sock)
+-{
+-	int retval = 0;
 -#if defined(LOCAL_CREDS) && !defined(HAVE_CMSGCRED)
 -	int val = 1;
 -	if (setsockopt (sock, 0, LOCAL_CREDS, &val, sizeof (val)) < 0) {
@@ -85,6 +89,9 @@ $NetBSD$
 -		retval = -1;
 -	}
 -#endif
- 	return retval;
- }
- 
+-	return retval;
+-}
+-
+ char*
+ egg_unix_credentials_executable (pid_t pid)
+ {

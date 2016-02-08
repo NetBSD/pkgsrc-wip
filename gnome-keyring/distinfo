@@ -4,4 +4,6 @@ SHA1 (gnome-keyring-3.18.3.tar.xz) = 74b49e36113afe0cb6e6752dcbc47c0cf89ae4a5
 RMD160 (gnome-keyring-3.18.3.tar.xz) = a836c50350789a385978be2a2ec8e13397f606d2
 SHA512 (gnome-keyring-3.18.3.tar.xz) = 123819218477cd9b617d9cc2c1d10483d9c790bb90edd5b20298a1ba38aeef10dcddf85fcb6b9b92969dd64e53caaaf825b5cbb741e57461050be4973e8c2f78
 Size (gnome-keyring-3.18.3.tar.xz) = 1205108 bytes
-SHA1 (patch-egg_egg-unix-credentials.c) = 6bea6c2430ce72eb381a5b4d3c710535b835b389
+SHA1 (patch-daemon_control_gkd-control-server.c) = 9400ecef7efd148ed6d9512572bd6ac196dcccca
+SHA1 (patch-egg_egg-unix-credentials.c) = 2ed51494ba97476d923ab84d03713cc1d9563bc6
+SHA1 (patch-egg_egg-unix-credentials.h) = a688de09828436cee573ac0b6a944eb8d75e4794
