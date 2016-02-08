@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake pkg-config
 
 .include "../../wip/toxcore/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../wip/openal-soft/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 
