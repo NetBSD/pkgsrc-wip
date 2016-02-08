@@ -12,14 +12,19 @@ HOMEPAGE=	https://github.com/dotnet/corefx
 COMMENT=	The .NET Core foundational libraries
 LICENSE=	mit
 
-#USE_CMAKE=	yes
+# We need to set CMake this way to get defined CMAKE_ARGS
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	build.sh
 
+do-configure:
+	${RUN} ${ECHO} Skip configure and call CMake via build.sh
+
 do-build:
-		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh native verbose
+	${RUN} cd ${WRKSRC} && \
+	${PKGSRC_SETENV} ${CONFIGURE_ENV} CMAKE_ARGS_EXTRA=${CMAKE_ARGS:Q} ./build.sh native verbose
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
