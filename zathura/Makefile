@@ -9,18 +9,13 @@ HOMEPAGE=	http://pwmt.org/projects/zathura/
 COMMENT=	PDF viewer with vi-like keybindings
 LICENSE=	zlib
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-
-USE_TOOLS+=	pkg-config gettext gmake groff
+USE_TOOLS+=	gmake msgfmt pkg-config
 USE_LIBTOOL=	yes
 
 MAKE_ENV+=	COLOR=0
 MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
-PYTHON_FOR_BUILD_ONLY=		yes
-
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../wip/girara/buildlink3.mk"
