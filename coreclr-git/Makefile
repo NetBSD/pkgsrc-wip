@@ -26,7 +26,7 @@ do-configure:
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-	CMAKE_ENV_EXTRA="${PKGSRC_SETENV} ${CONFIGURE_ENV}" CMAKE_ARGS_EXTRA="${CMAKE_ARGS}" PYTHON=${PYTHONBIN} ./build.sh
+	${PKGSRC_SETENV} CMAKE_ENV_EXTRA="${CONFIGURE_ENV}" CMAKE_ARGS_EXTRA="${CMAKE_ARGS}" PYTHON=${PYTHONBIN} ./build.sh
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
