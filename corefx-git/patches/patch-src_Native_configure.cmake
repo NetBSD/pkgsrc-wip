@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/Native/configure.cmake.orig	2016-02-07 13:49:29.000000000 +0000
+--- src/Native/configure.cmake.orig	2016-02-08 16:12:54.000000000 +0000
 +++ src/Native/configure.cmake
 @@ -10,6 +10,7 @@ include(CheckTypeSize)
  #CMake does not include /usr/local/include into the include search path
@@ -10,20 +10,22 @@ $NetBSD$
  
  # in_pktinfo: Find whether this struct exists
  check_include_files(
-@@ -27,6 +28,12 @@ check_type_size(
+@@ -27,6 +28,14 @@ check_type_size(
      "struct in_pktinfo"
      HAVE_IN_PKTINFO
      BUILTIN_TYPES_ONLY)
++
 +check_type_size(
 +    "struct ip_mreqn"
 +    HAVE_IP_MREQN)
++
 +check_type_size(
 +    "struct ip_mreq" 
 +    HAVE_IP_MREQ)
  set(CMAKE_EXTRA_INCLUDE_FILES) # reset CMAKE_EXTRA_INCLUDE_FILES
  # /in_pktinfo
  
-@@ -34,6 +41,10 @@ check_include_files(
+@@ -34,6 +43,10 @@ check_include_files(
      alloca.h
      HAVE_ALLOCA_H)
  
@@ -34,24 +36,7 @@ $NetBSD$
  check_function_exists(
      stat64
      HAVE_STAT64)
-@@ -75,6 +86,16 @@ check_symbol_exists(
-     "sys/ioctl.h"
-     HAVE_TIOCGWINSZ)
- 
-+check_symbol_exists(
-+    ENOTRECOVERABLE
-+    "sys/errno.h"
-+    HAVE_ENOTRECOVERABLE)
-+
-+check_symbol_exists(
-+    EOWNERDEAD
-+    "sys/errno.h"
-+    HAVE_EOWNERDEAD)
-+
- check_function_exists(
-     tcgetattr
-     HAVE_TCGETATTR)
-@@ -117,6 +138,22 @@ check_struct_has_member(
+@@ -117,6 +130,21 @@ check_struct_has_member(
      HAVE_STATFS_FSTYPENAME)
  
  check_struct_has_member(
@@ -67,14 +52,13 @@ $NetBSD$
 +check_symbol_exists(
 +    VFS_NAMELEN
 +    "sys/mount.h"
-+    HAVE_VFS_NAMELEN
-+)
++    HAVE_VFS_NAMELEN)
 +
 +check_struct_has_member(
      "struct in6_addr"
      __in6_u
      "netdb.h"
-@@ -157,6 +194,18 @@ check_function_exists(
+@@ -157,6 +185,18 @@ check_function_exists(
      gethostbyaddr_r
      HAVE_GETHOSTBYADDR_R)
  
@@ -90,6 +74,6 @@ $NetBSD$
 +    getnameinfo
 +    HAVE_GETNAMEINFO)
 +
- set(HAVE_SUPPORT_FOR_MULTIPLE_CONNECT_ATTEMPTS 0)
  set(HAVE_SUPPORT_FOR_DUAL_MODE_IPV4_PACKET_INFO 0)
  set(HAVE_THREAD_SAFE_GETHOSTBYNAME_AND_GETHOSTBYADDR 0)
+ 

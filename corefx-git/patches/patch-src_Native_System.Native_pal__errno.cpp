@@ -6,7 +6,7 @@ $NetBSD$
              return PAL_ENOTDIR;
          case ENOTEMPTY:
              return PAL_ENOTEMPTY;
-+#if HAVE_ENOTRECOVERABLE
++#ifdef ENOTRECOVERABLE
          case ENOTRECOVERABLE:
              return PAL_ENOTRECOVERABLE;
 +#endif
@@ -17,7 +17,7 @@ $NetBSD$
              return PAL_ENXIO;
          case EOVERFLOW:
              return PAL_EOVERFLOW;
-+#if HAVE_EOWNERDEAD
++#ifdef EOWNERDEAD
          case EOWNERDEAD:
              return PAL_EOWNERDEAD;
 +#endif
@@ -28,7 +28,7 @@ $NetBSD$
          case PAL_ENOTEMPTY:
              return ENOTEMPTY;
          case PAL_ENOTRECOVERABLE:
-+#if HAVE_ENOTRECOVERABLE
++#ifdef ENOTRECOVERABLE
              return ENOTRECOVERABLE;
 +#else
 +            return -1;
@@ -40,7 +40,7 @@ $NetBSD$
          case PAL_EOVERFLOW:
              return EOVERFLOW;
          case PAL_EOWNERDEAD:
-+#if HAVE_EOWNERDEAD
++#ifdef EOWNERDEAD
              return EOWNERDEAD;
 +#else
 +            return -1;

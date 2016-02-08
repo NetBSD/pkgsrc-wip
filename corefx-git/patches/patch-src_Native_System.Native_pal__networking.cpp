@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/Native/System.Native/pal_networking.cpp.orig	2016-02-07 13:49:29.000000000 +0000
+--- src/Native/System.Native/pal_networking.cpp.orig	2016-02-08 16:12:54.000000000 +0000
 +++ src/Native/System.Native/pal_networking.cpp
 @@ -381,7 +381,138 @@ static void ConvertHostEntPlatformToPal(
      }

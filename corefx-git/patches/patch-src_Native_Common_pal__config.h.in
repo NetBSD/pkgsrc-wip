@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/Native/Common/pal_config.h.in.orig	2016-02-07 13:49:29.000000000 +0000
+--- src/Native/Common/pal_config.h.in.orig	2016-02-08 16:12:54.000000000 +0000
 +++ src/Native/Common/pal_config.h.in
 @@ -7,6 +7,7 @@
  #cmakedefine01 HAVE_DIRENT_NAME_LEN
@@ -10,14 +10,7 @@ $NetBSD$
  #cmakedefine01 HAVE_STRCPY_S
  #cmakedefine01 HAVE_STRLCPY
  #cmakedefine01 HAVE_SHM_OPEN_THAT_WORKS_WELL_ENOUGH_WITH_MMAP
-@@ -15,13 +16,18 @@
- #cmakedefine01 HAVE_IN6_U
- #cmakedefine01 HAVE_IOCTL
- #cmakedefine01 HAVE_TIOCGWINSZ
-+#cmakedefine01 HAVE_ENOTRECOVERABLE
-+#cmakedefine01 HAVE_EOWNERDEAD
- #cmakedefine01 HAVE_SCHED_GETAFFINITY
- #cmakedefine01 HAVE_SCHED_SETAFFINITY
+@@ -20,8 +21,11 @@
  #cmakedefine01 HAVE_FDS_BITS
  #cmakedefine01 HAVE_PRIVATE_FDS_BITS
  #cmakedefine01 HAVE_ALLOCA_H
@@ -28,8 +21,8 @@ $NetBSD$
 +#cmakedefine01 HAVE_GETNAMEINFO
  #cmakedefine01 HAVE_GETHOSTBYNAME_R
  #cmakedefine01 HAVE_GETHOSTBYADDR_R
- #cmakedefine01 HAVE_SUPPORT_FOR_MULTIPLE_CONNECT_ATTEMPTS
-@@ -33,6 +39,8 @@
+ #cmakedefine01 HAVE_SUPPORT_FOR_DUAL_MODE_IPV4_PACKET_INFO
+@@ -32,6 +36,8 @@
  #cmakedefine01 HAVE_ICANON
  #cmakedefine01 HAVE_TCSANOW
  #cmakedefine01 HAVE_IN_PKTINFO
