@@ -10,12 +10,12 @@ HOMEPAGE=	http://pwmt.org/projects/girara/
 COMMENT=	Library to develop simple and minimalist user interface
 LICENSE=	zlib
 
-USE_TOOLS+=	pkg-config gettext gmake groff
+USE_TOOLS+=	gmake msgfmt pkg-config
 USE_LIBTOOL=	yes
 
 SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.makefile=	Fixing install invokation
+SUBST_STAGE.makefile=	pre-configure
+SUBST_MESSAGE.makefile=	Fixing install invocation
 SUBST_FILES.makefile=	Makefile
 SUBST_SED.makefile=	-e '/install.*\.so.*/ s;install -m 644;${INSTALL_LIB:Q};'
 
