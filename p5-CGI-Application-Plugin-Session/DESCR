@@ -1,3 +1,0 @@
-GI::Application::Plugin::Session seamlessly adds session support
-to your CGI::Application modules by providing a CGI::SEssion
-that is accessible from anywhere in the application.
