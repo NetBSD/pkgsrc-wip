@@ -178,3 +178,43 @@ $NetBSD$
  
  extern "C" int32_t SystemNative_GetHostByAddress(const IPAddress* address, HostEntry* entry)
  {
+@@ -1188,7 +1319,11 @@ extern "C" Error SystemNative_GetIPv4Mul
+         return PAL_EINVAL;
+     }
+ 
++#if HAVE_IP_MREQ
++    ip_mreq opt;
++#elif HAVE_IP_MREQN
+     ip_mreqn opt;
++#endif
+     socklen_t len = sizeof(opt);
+     int err = getsockopt(socket, IPPROTO_IP, optionName, &opt, &len);
+     if (err != 0)
+@@ -1197,8 +1332,12 @@ extern "C" Error SystemNative_GetIPv4Mul
+     }
+ 
+     *option = {.MulticastAddress = opt.imr_multiaddr.s_addr,
++#if HAVE_IP_MREQ
++               .LocalAddress = opt.imr_interface.s_addr};
++#elif HAVE_IP_MREQN
+                .LocalAddress = opt.imr_address.s_addr,
+                .InterfaceIndex = opt.imr_ifindex};
++#endif
+     return PAL_SUCCESS;
+ }
+ 
+@@ -1215,9 +1354,14 @@ extern "C" Error SystemNative_SetIPv4Mul
+         return PAL_EINVAL;
+     }
+ 
++#if HAVE_IP_MREQ
++    ip_mreq opt = {.imr_multiaddr = {.s_addr = option->MulticastAddress},
++                   .imr_interface = {.s_addr = option->LocalAddress}};
++#elif HAVE_IP_MREQN
+     ip_mreqn opt = {.imr_multiaddr = {.s_addr = option->MulticastAddress},
+                     .imr_address = {.s_addr = option->LocalAddress},
+                     .imr_ifindex = option->InterfaceIndex};
++#endif
+     int err = setsockopt(socket, IPPROTO_IP, optionName, &opt, sizeof(opt));
+     return err == 0 ? PAL_SUCCESS : SystemNative_ConvertErrorPlatformToPal(errno);
+ }

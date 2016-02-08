@@ -10,7 +10,20 @@ $NetBSD$
  
  # in_pktinfo: Find whether this struct exists
  check_include_files(
-@@ -34,6 +35,10 @@ check_include_files(
+@@ -27,6 +28,12 @@ check_type_size(
+     "struct in_pktinfo"
+     HAVE_IN_PKTINFO
+     BUILTIN_TYPES_ONLY)
++check_type_size(
++    "struct ip_mreqn"
++    HAVE_IP_MREQN)
++check_type_size(
++    "struct ip_mreq" 
++    HAVE_IP_MREQ)
+ set(CMAKE_EXTRA_INCLUDE_FILES) # reset CMAKE_EXTRA_INCLUDE_FILES
+ # /in_pktinfo
+ 
+@@ -34,6 +41,10 @@ check_include_files(
      alloca.h
      HAVE_ALLOCA_H)
  
@@ -21,7 +34,7 @@ $NetBSD$
  check_function_exists(
      stat64
      HAVE_STAT64)
-@@ -75,6 +80,16 @@ check_symbol_exists(
+@@ -75,6 +86,16 @@ check_symbol_exists(
      "sys/ioctl.h"
      HAVE_TIOCGWINSZ)
  
@@ -38,7 +51,7 @@ $NetBSD$
  check_function_exists(
      tcgetattr
      HAVE_TCGETATTR)
-@@ -117,6 +132,22 @@ check_struct_has_member(
+@@ -117,6 +138,22 @@ check_struct_has_member(
      HAVE_STATFS_FSTYPENAME)
  
  check_struct_has_member(
@@ -61,7 +74,7 @@ $NetBSD$
      "struct in6_addr"
      __in6_u
      "netdb.h"
-@@ -157,6 +188,18 @@ check_function_exists(
+@@ -157,6 +194,18 @@ check_function_exists(
      gethostbyaddr_r
      HAVE_GETHOSTBYADDR_R)
  
