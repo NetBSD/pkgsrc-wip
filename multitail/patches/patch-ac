@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.2 2006/06/25 00:01:44 hubertf Exp $
+
+Add DragonFly
+
+--- mt.h.orig	2014-05-01 21:54:06.000000000 +0900
++++ mt.h	2016-02-08 12:34:19.000000000 +0900
+@@ -94,7 +94,7 @@ typedef enum { SCHEME_TYPE_EDIT = 0, SCH
+ 	#define getmaxyx(w,y,x) y = w->_maxy;  x = w->_maxx
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__CYGWIN__) || defined(__minix)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__CYGWIN__) || defined(__minix) || defined(__DragonFly__)
+ #define off64_t off_t
+ #define stat64 stat
+ #define open64 open

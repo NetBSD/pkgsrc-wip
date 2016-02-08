@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.11 2014/01/09 11:16:18 jperkin Exp $
+
+SHA1 (multitail-6.4.2.tgz) = f50af14146c78b5372438fdc163233ed31ec3e38
+RMD160 (multitail-6.4.2.tgz) = dcaf3855bd862c4b2924c9313f16d8a369e22400
+SHA512 (multitail-6.4.2.tgz) = 668c453372ba1e4013aa5191c697bdcaad82c84732841c120a506bee063d2134941e93aed63f96e5aeeb6045829a13aba012f9514dbd9520ab4f1b9b75b42dbd
+Size (multitail-6.4.2.tgz) = 155757 bytes
+SHA1 (patch-aa) = cf6cb6f8837f381d308a3778bb41bc486c197e3f
+SHA1 (patch-ab) = e2cb5531abac35336063f7dd691ffc6574c126c4
+SHA1 (patch-ac) = 0cc708afaebf47009c545374b02e224edb176fbc
+SHA1 (patch-ad) = 0967f44a37cf44a9c2f3f9eddf4be121e5e0c83d
+SHA1 (patch-ae) = 823af6e27c4fb2c185aba455e0d2746f222e80bc
+SHA1 (patch-af) = 944ae329f9ad7e6f35570a9d881d1c3ff7803ccc

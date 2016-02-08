@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/multitail
+man/man1/multitail.1
+share/doc/multitail/license.txt
+share/doc/multitail/manual-nl.html
+share/doc/multitail/manual.html
+share/doc/multitail/readme.txt
+share/doc/multitail/thanks.txt
+share/examples/multitail/multitail.conf
