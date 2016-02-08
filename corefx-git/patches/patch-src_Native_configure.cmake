@@ -10,7 +10,18 @@ $NetBSD$
  
  # in_pktinfo: Find whether this struct exists
  check_include_files(
-@@ -75,6 +76,16 @@ check_symbol_exists(
+@@ -34,6 +35,10 @@ check_include_files(
+     alloca.h
+     HAVE_ALLOCA_H)
+ 
++check_include_files(
++    sys/statvfs.h
++    HAVE_SYS_STATVFS)
++
+ check_function_exists(
+     stat64
+     HAVE_STAT64)
+@@ -75,6 +80,16 @@ check_symbol_exists(
      "sys/ioctl.h"
      HAVE_TIOCGWINSZ)
  
@@ -27,3 +38,26 @@ $NetBSD$
  check_function_exists(
      tcgetattr
      HAVE_TCGETATTR)
+@@ -117,6 +132,22 @@ check_struct_has_member(
+     HAVE_STATFS_FSTYPENAME)
+ 
+ check_struct_has_member(
++    "struct statvfs"
++    f_fstypename
++    "sys/mount.h"
++    HAVE_STATVFS_FSTYPENAME)
++
++if (HAVE_STATVFS_FSTYPENAME)
++    set(HAVE_STATFS_FSTYPENAME 1)
++endif ()
++
++check_symbol_exists(
++    VFS_NAMELEN
++    "sys/mount.h"
++    HAVE_VFS_NAMELEN
++)
++
++check_struct_has_member(
+     "struct in6_addr"
+     __in6_u
+     "netdb.h"
