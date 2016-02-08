@@ -1440,6 +1440,7 @@ SUBDIR+=	kpanta
 SUBDIR+=	kplayer
 SUBDIR+=	kplotting
 SUBDIR+=	krusader
+SUBDIR+=	kservice
 SUBDIR+=	kstest
 SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
