@@ -10,7 +10,7 @@ $NetBSD$
  #cmakedefine01 HAVE_STRCPY_S
  #cmakedefine01 HAVE_STRLCPY
  #cmakedefine01 HAVE_SHM_OPEN_THAT_WORKS_WELL_ENOUGH_WITH_MMAP
-@@ -15,11 +16,14 @@
+@@ -15,13 +16,18 @@
  #cmakedefine01 HAVE_IN6_U
  #cmakedefine01 HAVE_IOCTL
  #cmakedefine01 HAVE_TIOCGWINSZ
@@ -24,4 +24,8 @@ $NetBSD$
 +#cmakedefine01 HAVE_SYS_STATVFS
  #cmakedefine01 HAVE_EPOLL
  #cmakedefine01 HAVE_KQUEUE
++#cmakedefine01 HAVE_GETADDRINFO
++#cmakedefine01 HAVE_GETNAMEINFO
  #cmakedefine01 HAVE_GETHOSTBYNAME_R
+ #cmakedefine01 HAVE_GETHOSTBYADDR_R
+ #cmakedefine01 HAVE_SUPPORT_FOR_MULTIPLE_CONNECT_ATTEMPTS

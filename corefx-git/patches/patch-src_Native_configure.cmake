@@ -61,3 +61,22 @@ $NetBSD$
      "struct in6_addr"
      __in6_u
      "netdb.h"
+@@ -157,6 +188,18 @@ check_function_exists(
+     gethostbyaddr_r
+     HAVE_GETHOSTBYADDR_R)
+ 
++check_function_exists(
++    getaddrinfo
++    HAVE_GETADDRINFO)
++
++check_function_exists(
++    gethostbyname_r
++    HAVE_GETHOSTBYNAME_R)
++
++check_function_exists(
++    getnameinfo
++    HAVE_GETNAMEINFO)
++
+ set(HAVE_SUPPORT_FOR_MULTIPLE_CONNECT_ATTEMPTS 0)
+ set(HAVE_SUPPORT_FOR_DUAL_MODE_IPV4_PACKET_INFO 0)
+ set(HAVE_THREAD_SAFE_GETHOSTBYNAME_AND_GETHOSTBYADDR 0)
