@@ -29,7 +29,7 @@ BUILDLINK_PKGSRCDIR.gcr?=	../../wip/gcr
 #.include "../../devel/glib2/buildlink3.mk"
 #.include "../../sysutils/dbus-glib/buildlink3.mk"
 #.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-#.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .endif	# GCR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gcr
