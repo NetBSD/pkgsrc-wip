@@ -1427,6 +1427,7 @@ SUBDIR+=	kidletime
 SUBDIR+=	kimageformats
 SUBDIR+=	kino
 SUBDIR+=	kissme
+SUBDIR+=	kitemmodels
 SUBDIR+=	kitemviews
 SUBDIR+=	klamav
 SUBDIR+=	kmymoney-devel
