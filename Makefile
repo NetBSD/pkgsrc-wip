@@ -2070,7 +2070,6 @@ SUBDIR+=	oorexx
 SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
-SUBDIR+=	openal-soft
 SUBDIR+=	openaxiom
 SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
