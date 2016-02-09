@@ -2,7 +2,15 @@ $NetBSD$
 
 --- src/Native/System.Native/pal_errno.h.orig	2016-02-07 13:49:29.000000000 +0000
 +++ src/Native/System.Native/pal_errno.h
-@@ -84,13 +84,17 @@ enum Error : int32_t
+@@ -5,6 +5,7 @@
+ #pragma once
+ 
+ #include "pal_types.h"
++#include <errno.h>
+ 
+ /**
+  * Error codes returned via ConvertErrno.
+@@ -84,13 +85,17 @@ enum Error : int32_t
      PAL_ENOTCONN = 0x10038,        // The socket is not connected.
      PAL_ENOTDIR = 0x10039,         // Not a directory or a symbolic link to a directory.
      PAL_ENOTEMPTY = 0x1003A,       // Directory not empty.
