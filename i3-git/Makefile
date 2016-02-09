@@ -19,6 +19,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake bison lex yacc pkg-config perl
 USE_LANGUAGES=	c99
+BUILD_TARGET=	all mans
 MAKE_JOBS_SAFE=	no
 
 PKG_SYSCONFSUBDIR=	i3
@@ -42,6 +43,8 @@ SUBST_STAGE.conf=	pre-install
 SUBST_MESSAGE.conf=	Change src/i3.mk to install conf files in share/examples
 SUBST_FILES.conf=	src/i3.mk
 SUBST_SED.conf=		-e s,$$\(SYSCONFDIR\),$$\(PREFIX\)/share/examples,g
+
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
