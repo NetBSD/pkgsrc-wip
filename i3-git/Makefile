@@ -1,10 +1,16 @@
 # $NetBSD: Makefile,v 1.13 2015/11/09 11:05:44 nros Exp $
 #
 
-DISTNAME=	i3-4.11
+DISTNAME=	i3-${VERSION}
+VERSION=	4.11
 CATEGORIES=	wm
 MASTER_SITES=	http://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
+
+GIT_REPOSITORIES=	i3
+GIT_REPO.i3=	https://github.com/i3/i3.git
+GIT_BRANCH.i3=	next
+WRKSRC= ${WRKDIR}/i3
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://i3wm.org/
@@ -25,6 +31,7 @@ CONF_FILES+=	${EGDIR}/config.keycodes ${PKG_SYSCONFDIR}/config.keycodes
 MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR:C/\/i3//}
 MAKE_ENV+=	DEBUG=0
 MAKE_ENV+=	SHM_SUPPORT=0
+MAKE_ENV+=	VERSION=${VERSION}
 
 REPLACE_PERL+=	i3-dmenu-desktop
 REPLACE_PERL+=	i3-migrate-config-to-v4 
@@ -55,4 +62,6 @@ post-install:
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
