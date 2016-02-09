@@ -1,6 +1,7 @@
 $NetBSD$
 
 SHA1 (patch-build.sh) = 18610c0707583e6501a01b2c25644cbc91786d3e
+SHA1 (patch-src_debug_daccess_daccess.cpp) = 7c154b6e049ac6a3280db3d5b5c91b0195cfa623
 SHA1 (patch-src_pal_inc_pal__char16.h) = ca743d8330802f1a626b1c335461c733eb2a6325
 SHA1 (patch-src_pal_tools_gen-buildsys-clang.sh) = 81e547b9024b498bc9a003037122c71da712d240
 SHA1 (patch-src_vm_amd64_externalmethodfixupthunk.S) = 5e84b369f30ea62e391e1f949d0d01e1995e5192
