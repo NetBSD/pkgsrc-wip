@@ -1,5 +1,4 @@
 $NetBSD$
-SHA1 (patch-src_Native_CMakeLists.txt) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-src_Native_Common_pal__config.h.in) = 37fa257faf95a5da68f9dfa2e609afdaddd1ed9a
 SHA1 (patch-src_Native_System.Native_pal__errno.cpp) = f619d61f531e31cf80113553c7fcc84c15fd2798
 SHA1 (patch-src_Native_System.Native_pal__errno.h) = 12663841b61986caf2272c28ea7ac93da2940d6d
