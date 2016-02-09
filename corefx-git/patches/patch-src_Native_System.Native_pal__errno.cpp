@@ -46,14 +46,3 @@ $NetBSD$
          case PAL_EPERM:
              return EPERM;
          case PAL_EPIPE:
-@@ -339,9 +347,9 @@ extern "C" int32_t SystemNative_ConvertE
-         case PAL_EXDEV:
-             return EXDEV;
-         case PAL_ENONSTANDARD:
-+        default:
-             break; // fall through to assert
-     }
--
-     // We should not use this function to round-trip platform -> pal
-     // -> platform. It's here only to synthesize a platform number
-     // from the fixed set above. Note that the assert is outside the

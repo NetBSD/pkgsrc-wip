@@ -262,19 +262,31 @@ $NetBSD$
  
      assert(currentEvents != newEvents);
  
-@@ -2337,7 +2494,11 @@ static Error TryChangeSocketEventRegistr
-                (newEvents & PAL_SA_READ) == 0 ? RemoveFlags : AddFlags,
-                0,
-                0,
+@@ -2331,6 +2488,15 @@ static Error TryChangeSocketEventRegistr
+     int i = 0;
+     if (readChanged)
+     {
 +#if KEVENT_HAS_NUMERIC_DATA
++        EV_SET(&events[i++],
++               static_cast<uint64_t>(socket),
++               EVFILT_READ,
++               (newEvents & PAL_SA_READ) == 0 ? RemoveFlags : AddFlags,
++               0,
++               0,
 +               data);
 +#else
+         EV_SET(&events[i++],
+                static_cast<uint64_t>(socket),
+                EVFILT_READ,
+@@ -2338,6 +2504,7 @@ static Error TryChangeSocketEventRegistr
+                0,
+                0,
                 reinterpret_cast<void*>(data));
 +#endif
      }
  
      if (writeChanged)
-@@ -2348,11 +2509,15 @@ static Error TryChangeSocketEventRegistr
+@@ -2348,11 +2515,15 @@ static Error TryChangeSocketEventRegistr
                 (newEvents & PAL_SA_WRITE) == 0 ? RemoveFlags : AddFlags,
                 0,
                 0,
@@ -291,7 +303,7 @@ $NetBSD$
      return err == 0 ? PAL_SUCCESS : SystemNative_ConvertErrorPlatformToPal(errno);
  }
  
-@@ -2364,7 +2529,11 @@ static Error WaitForSocketEventsInner(in
+@@ -2364,7 +2535,11 @@ static Error WaitForSocketEventsInner(in
  
      auto* events = reinterpret_cast<struct kevent*>(buffer);
      int numEvents;
@@ -303,7 +315,7 @@ $NetBSD$
      if (numEvents == -1)
      {
          *count = -1;
-@@ -2382,7 +2551,11 @@ static Error WaitForSocketEventsInner(in
+@@ -2382,7 +2557,11 @@ static Error WaitForSocketEventsInner(in
      {
          // This copy is made deliberately to avoid overwriting data.
          struct kevent evt = events[i];
