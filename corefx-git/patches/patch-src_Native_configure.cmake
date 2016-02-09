@@ -58,7 +58,27 @@ $NetBSD$
      "struct in6_addr"
      __in6_u
      "netdb.h"
-@@ -157,6 +185,18 @@ check_function_exists(
+@@ -129,6 +157,19 @@ check_cxx_source_compiles(
+     "
+     HAVE_GNU_STRERROR_R)
+ 
++check_c_source_compiles(
++    "
++    #include <sys/event.h>
++    int main(void)
++    {
++        struct kevent event;
++        uintptr_t data;
++        EV_SET(&event, 0, EVFILT_READ, 0, 0, 0, data);
++        return 0;
++    }
++    "
++    KEVENT_HAS_NUMERIC_DATA)
++
+ check_struct_has_member(
+     "struct fd_set"
+     fds_bits
+@@ -157,6 +198,18 @@ check_function_exists(
      gethostbyaddr_r
      HAVE_GETHOSTBYADDR_R)
  
@@ -77,3 +97,22 @@ $NetBSD$
  set(HAVE_SUPPORT_FOR_DUAL_MODE_IPV4_PACKET_INFO 0)
  set(HAVE_THREAD_SAFE_GETHOSTBYNAME_AND_GETHOSTBYADDR 0)
  
+@@ -214,10 +267,17 @@ check_cxx_source_runs(
+ check_prototype_definition(
+     getpriority
+     "int getpriority(int which, int who)"
+-    "0"
++    0
+     "sys/resource.h"
+     PRIORITY_REQUIRES_INT_WHO)
+ 
++check_prototype_definition(
++    kevent
++    "int kevent(int kg, const struct kevent *chagelist, size_t nchanges, struct kevent *eventlist, size_t nevents, const struct timespec *timeout)"
++    0
++    "sys/event.h"
++    KEVENT_REQUIRES_SIZE_T_NUMERICS)
++
+ check_cxx_source_compiles(
+     "
+     #include <sys/types.h>

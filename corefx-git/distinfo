@@ -1,9 +1,9 @@
 $NetBSD$
 SHA1 (patch-src_Native_CMakeLists.txt) = 07568f980cad506f0c3e3c40448f164dcdd4fcb4
-SHA1 (patch-src_Native_Common_pal__config.h.in) = b42af66a61b43cd682d2f54f775299990170a702
-SHA1 (patch-src_Native_System.Native_pal__errno.cpp) = 35ceb59ed13e0a3ba4007bf5e4aae375bbaed5c0
+SHA1 (patch-src_Native_Common_pal__config.h.in) = 37fa257faf95a5da68f9dfa2e609afdaddd1ed9a
+SHA1 (patch-src_Native_System.Native_pal__errno.cpp) = 75f34599240aa87699320c6b2fee6c2a8bac2a16
 SHA1 (patch-src_Native_System.Native_pal__interfaceaddresses.cpp) = 4f82e6f028fe2b9826ba6afb62869e42a0b6ee3d
 SHA1 (patch-src_Native_System.Native_pal__mount.cpp) = 7858f5ff60fcb0d60452648aef1b1034698e2c85
-SHA1 (patch-src_Native_System.Native_pal__networking.cpp) = 0ece22414c357580a0ea3f6f13b2325a37e4afb1
-SHA1 (patch-src_Native_configure.cmake) = c17b54e1302f17404806da0618bc7ee174f82535
+SHA1 (patch-src_Native_System.Native_pal__networking.cpp) = 71183f8f7c68697401468c49216fb249fe0df099
+SHA1 (patch-src_Native_configure.cmake) = c4d12c3a55c97804fd053c6923df08fe72c4d91d
 SHA1 (patch-src_Native_gen-buildsys-clang.sh) = efc34b0da3d11b1c66625336bb4d3c7ac5273b60
