@@ -3,13 +3,11 @@
 DISTNAME=	fswatch-1.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emcrisostomo/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://github.com/emcrisostomo/fswatch
 COMMENT=	Cross-platform file change monitor with multiple backends
 LICENSE=	gnu-gpl-v3
-
-# needs autopoint
-BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake autoconf automake makeinfo
@@ -32,9 +30,6 @@ PLIST.fen=		yes
 .if defined(PKG_HAVE_KQUEUE)
 PLIST.kqueue=		yes
 .endif
-
-pre-configure:
-	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
