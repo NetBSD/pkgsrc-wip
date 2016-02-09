@@ -30,12 +30,12 @@ CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=	${EGDIR}/config.keycodes ${PKG_SYSCONFDIR}/config.keycodes
 
 MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR:C/\/i3//}
-MAKE_ENV+=	DEBUG=0
-MAKE_ENV+=	SHM_SUPPORT=0
+#MAKE_ENV+=	DEBUG=0
+#MAKE_ENV+=	SHM_SUPPORT=0
 MAKE_ENV+=	VERSION=${VERSION}
 
 REPLACE_PERL+=	i3-dmenu-desktop
-REPLACE_PERL+=	i3-migrate-config-to-v4 
+REPLACE_PERL+=	i3-migrate-config-to-v4
 REPLACE_PERL+=	i3-save-tree
 
 SUBST_CLASSES+=		conf
@@ -65,6 +65,7 @@ post-install:
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

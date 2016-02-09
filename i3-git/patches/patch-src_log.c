@@ -1,35 +1,27 @@
 $NetBSD: patch-src_log.c,v 1.3 2014/08/09 19:14:01 degroote Exp $
 
-NetBSD does not support shm_open (3), disable the code in this case
+Use ftruncate(2) instead of posix_fallocate(2) on NetBSD.
+Do not set process-shared attribute on NetBSD.
 
---- src/log.c.orig	2014-06-15 17:12:43.000000000 +0000
-+++ src/log.c	2014-08-09 20:52:23.000000000 +0000
-@@ -108,6 +108,7 @@
-          * For 512 MiB of RAM this will lead to a 5 MiB log buffer.
-          * At the moment (2011-12-10), no testcase leads to an i3 log
-          * of more than ~ 600 KiB. */
-+#if !defined(__NetBSD__)
-     long long physical_mem_bytes;
- #if defined(__APPLE__)
-     int mib[2] = {CTL_HW, HW_MEMSIZE};
-@@ -163,6 +164,7 @@
-     logwalk = logbuffer + sizeof(i3_shmlog_header);
-     loglastwrap = logbuffer + logbuffer_size;
-     store_log_markers();
-+#endif /* !defined(__NetBSD__) */
- }
+--- src/log.c.orig	2016-01-11 23:36:55.000000000 +0000
++++ src/log.c
+@@ -129,7 +129,7 @@ void open_logbuffer(void) {
+         return;
+     }
  
- /*
-@@ -170,10 +172,12 @@
-  *
-  */
- void close_logbuffer(void) {
+-#if defined(__OpenBSD__) || defined(__APPLE__)
++#if defined(__OpenBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+     if (ftruncate(logbuffer_shm, logbuffer_size) == -1) {
+         fprintf(stderr, "Could not ftruncate SHM segment for the i3 log: %s\n", strerror(errno));
+ #else
+@@ -156,8 +156,10 @@ void open_logbuffer(void) {
+ 
+     pthread_condattr_t cond_attr;
+     pthread_condattr_init(&cond_attr);
 +#if !defined(__NetBSD__)
-     close(logbuffer_shm);
-     shm_unlink(shmlogname);
-     logbuffer = NULL;
-     shmlogname = "";
+     if (pthread_condattr_setpshared(&cond_attr, PTHREAD_PROCESS_SHARED) != 0)
+         fprintf(stderr, "pthread_condattr_setpshared() failed, i3-dump-log -f will not work!\n");
 +#endif
- }
+     pthread_cond_init(&(header->condvar), &cond_attr);
  
- /*
+     logwalk = logbuffer + sizeof(i3_shmlog_header);
