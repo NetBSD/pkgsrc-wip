@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/05/08 22:58:43 i3enedek Exp $
 
-DISTNAME=	df_42_04_linux
-PKGNAME=	dwarf_fortress-42.04
+DISTNAME=	df_42_05_linux
+PKGNAME=	dwarf_fortress-42.05
 CATEGORIES=	games
 MASTER_SITES=	http://www.bay12games.com/dwarves/
 EXTRACT_SUFX=	.tar.bz2
@@ -50,12 +50,6 @@ SUBST_MESSAGE.fix-paths= Disabling sound.
 SUBST_STAGE.fix-paths-1= post-configure
 SUBST_FILES.fix-paths-1= data/init/init.txt
 SUBST_SED.fix-paths-1= -e 's,SOUND:YES,SOUND:NO,g'
-
-SUBST_CLASSES+= fix-paths-2
-SUBST_STAGE.fix-paths-2= post-configure
-SUBST_FILES.fix-paths-2= df
-SUBST_SED.fix-paths-2= -e '4l' -e '4s@.*@export LIBGL_DRIVERS_PATH=/usr/X11R7/lib/modules/dri@'
-
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
