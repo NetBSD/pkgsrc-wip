@@ -1,4 +1,6 @@
 $NetBSD$
 
 SHA1 (patch-src_pal_inc_pal__char16.h) = 205f6a8533838c192b36bbb00155da1b02e0f629
+SHA1 (patch-src_pal_src_include_pal_context.h) = 211baea6d21db220e621cafb4a6535f453ca8cc7
+SHA1 (patch-src_pal_src_thread_context.cpp) = 04fa57e3023429e9699d777c52999513eed34769
 SHA1 (patch-src_pal_tools_gen-buildsys-clang.sh) = 2b701661e4d3bbf68a8d249a35d80e8a83bc563d
