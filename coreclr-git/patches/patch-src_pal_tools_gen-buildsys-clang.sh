@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/tools/gen-buildsys-clang.sh.orig	2016-01-18 21:51:39.000000000 +0000
+--- src/pal/tools/gen-buildsys-clang.sh.orig	2016-02-06 09:37:43.000000000 +0000
 +++ src/pal/tools/gen-buildsys-clang.sh
 @@ -3,16 +3,17 @@
  # This file invokes cmake and generates the build system for gcc.

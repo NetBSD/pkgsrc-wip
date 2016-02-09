@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/vm/amd64/externalmethodfixupthunk.S.orig	2016-02-02 01:31:09.000000000 +0000
+--- src/vm/amd64/externalmethodfixupthunk.S.orig	2016-02-06 09:37:43.000000000 +0000
 +++ src/vm/amd64/externalmethodfixupthunk.S
 @@ -18,7 +18,7 @@ NESTED_ENTRY ExternalMethodFixupStub, _T
          mov             rdx, 0                              // sectionIndex

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/vm/amd64/umthunkstub.S.orig	2016-01-28 19:04:13.000000000 +0000
+--- src/vm/amd64/umthunkstub.S.orig	2016-02-06 09:37:43.000000000 +0000
 +++ src/vm/amd64/umthunkstub.S
 @@ -17,7 +17,7 @@ NESTED_ENTRY TheUMEntryPrestub, _TEXT, U
      END_PROLOGUE

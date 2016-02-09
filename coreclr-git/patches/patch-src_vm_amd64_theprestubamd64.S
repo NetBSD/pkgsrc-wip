@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/vm/amd64/theprestubamd64.S.orig	2016-01-28 19:04:13.000000000 +0000
+--- src/vm/amd64/theprestubamd64.S.orig	2016-02-06 09:37:43.000000000 +0000
 +++ src/vm/amd64/theprestubamd64.S
 @@ -14,7 +14,7 @@ NESTED_ENTRY ThePreStub, _TEXT, NoHandle
          //

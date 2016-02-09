@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/vm/amd64/jithelpers_fast.S.orig	2016-01-28 19:04:13.000000000 +0000
+--- src/vm/amd64/jithelpers_fast.S.orig	2016-02-06 09:37:43.000000000 +0000
 +++ src/vm/amd64/jithelpers_fast.S
 @@ -19,7 +19,7 @@ LEAF_END JIT_PatchedCodeStart, _TEXT
  LEAF_ENTRY JIT_WriteBarrier, _TEXT
