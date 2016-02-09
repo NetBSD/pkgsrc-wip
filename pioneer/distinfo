@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (pioneer-20160116.tar.gz) = 3cc60650cbc86243009882e5f33f11ef9b85232c
-RMD160 (pioneer-20160116.tar.gz) = 186456206ba95e754259ecbeda7eabcbb738876d
-Size (pioneer-20160116.tar.gz) = 187179897 bytes
-SHA1 (patch-src_posix_OSPosix.cpp) = 2128a056e52c8d16f5055ec54244976fda5551d4
+SHA1 (pioneer-20160205.tar.gz) = 5a18ea18bd854bd91762c26779c350423ec472d9
+RMD160 (pioneer-20160205.tar.gz) = a1c40f14dcb480bf42eaa6375050195ccfae26e8
+Size (pioneer-20160205.tar.gz) = 187188185 bytes
