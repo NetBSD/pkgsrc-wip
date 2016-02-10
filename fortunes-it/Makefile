@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.fortune-it.net/download/ \
 		ftp://sunsite.unc.edu/pub/Linux/games/amusements/fortune/
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://www.fortune-it.net/
 COMMENT=	Italian fortunes
 

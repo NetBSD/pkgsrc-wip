@@ -5,7 +5,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=csvutils/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://csvutils.sourceforge.net/
 COMMENT=	Command-line utilities for managing CSV data using libcsv
 LICENSE=	gnu-gpl-v2
