@@ -164,6 +164,7 @@ include/llvm/Analysis/LoopInfo.h
 include/llvm/Analysis/LoopInfoImpl.h
 include/llvm/Analysis/LoopIterator.h
 include/llvm/Analysis/LoopPass.h
+include/llvm/Analysis/LoopUnrollAnalyzer.h
 include/llvm/Analysis/MemoryBuiltins.h
 include/llvm/Analysis/MemoryDependenceAnalysis.h
 include/llvm/Analysis/MemoryLocation.h
@@ -813,6 +814,7 @@ include/llvm/Transforms/IPO/InlinerPass.h
 include/llvm/Transforms/IPO/LowerBitSets.h
 include/llvm/Transforms/IPO/PassManagerBuilder.h
 include/llvm/Transforms/IPO/StripDeadPrototypes.h
+include/llvm/Transforms/IPO/WholeProgramDevirt.h
 include/llvm/Transforms/InstCombine/InstCombine.h
 include/llvm/Transforms/InstCombine/InstCombineWorklist.h
 include/llvm/Transforms/Instrumentation.h
