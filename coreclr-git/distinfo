@@ -1,6 +1,14 @@
 $NetBSD$
 
+SHA1 (patch-build.sh) = b43e77b610481184e99fac986e9d1e4e5f63ba34
 SHA1 (patch-src_pal_inc_pal__char16.h) = 205f6a8533838c192b36bbb00155da1b02e0f629
 SHA1 (patch-src_pal_src_include_pal_context.h) = 211baea6d21db220e621cafb4a6535f453ca8cc7
 SHA1 (patch-src_pal_src_thread_context.cpp) = 04fa57e3023429e9699d777c52999513eed34769
-SHA1 (patch-src_pal_tools_gen-buildsys-clang.sh) = 2b701661e4d3bbf68a8d249a35d80e8a83bc563d
+SHA1 (patch-src_pal_tools_gen-buildsys-clang.sh) = bf18d427782ee8f01df69f640ab291c4f2f154f8
+SHA1 (patch-src_vm_amd64_externalmethodfixupthunk.S) = e1333a44bc0c85f1ceecf2608288c314f81ea75d
+SHA1 (patch-src_vm_amd64_jithelpers__fast.S) = 8b4caa3a355eda6552420fa60c7fdcb886b87754
+SHA1 (patch-src_vm_amd64_pinvokestubs.S) = b16ff26c429dbf4ca08562f1c85bc084a00b13f3
+SHA1 (patch-src_vm_amd64_theprestubamd64.S) = 67f2c136608de2e9626eb73938ea3c2ee20e7b69
+SHA1 (patch-src_vm_amd64_umthunkstub.S) = a5b0893cf383485475276eefa004f6781dc87b94
+SHA1 (patch-src_vm_amd64_unixasmhelpers.S) = f3ca1e949526d884fa48d1a7e3a45939fd93192c
+SHA1 (patch-src_vm_amd64_virtualcallstubamd64.S) = 0c607052fed74cbcae3e17ec7b0d7a9dac235539
