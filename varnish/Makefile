@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.26 2015/08/18 07:31:20 wiz Exp $
 
-DISTNAME=	varnish-4.1.0
+DISTNAME=	varnish-4.1.1
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
