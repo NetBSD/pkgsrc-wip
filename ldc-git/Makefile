@@ -1,12 +1,10 @@
 # $NetBSD$
 
-PKGNAME=	ldc-0.16.1
+PKGNAME=	ldc-0.17.0
 CATEGORIES=	wip
 
 GIT_REPOSITORIES=	ldc
 GIT_REPO.ldc=	https://github.com/ldc-developers/ldc.git
-#GIT_TAG.ldc=	v0.16.1
-GIT_BRANCH.ldc=	release-0.16.1
 WRKSRC=	${WRKDIR}/ldc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
