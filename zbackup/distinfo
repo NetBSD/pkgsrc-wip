@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (zbackup/1.4.4.tar.gz) = 722d04a158214d2548c08d6ce7bceb451a757863
+RMD160 (zbackup/1.4.4.tar.gz) = 1b2874244528af51a8099b74dbda3ee25b2b71a5
+SHA512 (zbackup/1.4.4.tar.gz) = 96f0984be71e521b2a188448bb2801996701be6e96b1dac4672cabc9f6bcb6631fdb8d03f5dde4bbdbb0050d9bd1409d468fcba15f93730d69e6c55271aba575
+Size (zbackup/1.4.4.tar.gz) = 87118 bytes
+SHA1 (patch-compression.cc) = 89e0b6c90329fd1454e11825e3d4ea1f404ffa7b
+SHA1 (patch-endian.hh) = cc36f8538e33f3709c45cd475043ecd38650e805
+SHA1 (patch-file.cc) = d735acfc4830ae2a50b2d91797b91d16af0b6d62
+SHA1 (patch-unbuffered__file.cc) = e92a3fb2403154526ed6fce5f9b89d4660c73eb8
