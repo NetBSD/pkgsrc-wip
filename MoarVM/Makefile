@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	MoarVM-2015.12
+DISTNAME=	MoarVM-2016.01
 CATEGORIES=	wip perl6
 MASTER_SITES=	http://www.moarvm.org/releases/
 

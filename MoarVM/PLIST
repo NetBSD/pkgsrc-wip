@@ -170,10 +170,6 @@ include/moar/strings/utf8_c8.h
 include/moar/strings/windows1252.h
 include/moar/types.h
 include/moar/uthash.h
-include/msinttypes/inttypes.h
-include/msinttypes/stdint.h
-include/sha1/sha1.h
-include/tinymt/tinymt64.h
 lib/libmoar.${EXT}
 share/nqp/lib/MAST/Nodes.nqp
 share/nqp/lib/MAST/Ops.nqp
