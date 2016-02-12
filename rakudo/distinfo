@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.1 2013/09/13 22:04:07 schmonz Exp $
 
-SHA1 (rakudo-2015.12.tar.gz) = b425629ad7bf407d4e08564084e0fa63dcecec9d
-RMD160 (rakudo-2015.12.tar.gz) = d26d8b45375407f46872dfb5835152dcec623071
-SHA512 (rakudo-2015.12.tar.gz) = 48e4c98bbff67a52f68a835cc87a19a0b17f2d67790f8162ffd9f167f080d09180d375b5ea9a8577d1de5036c78e604473a2140107d448aff3630c138fd16114
-Size (rakudo-2015.12.tar.gz) = 2669528 bytes
+SHA1 (rakudo-2016.01.tar.gz) = 081579ae32a2fe7ff0e2a86836bfd0d82139c5d4
+RMD160 (rakudo-2016.01.tar.gz) = 73887c89455ae672d14235a5185fe0725289e17c
+SHA512 (rakudo-2016.01.tar.gz) = b84feb26363c7b75a89fac0ac255f87e5e349265386f7eaf99f761466d8acf8fb5d8eb951c4172278d17af407ff7ccefa73a9543fe9c182a0e78984946481bad
+Size (rakudo-2016.01.tar.gz) = 2687098 bytes
 SHA1 (patch-tools_build_Makefile-Moar.in) = a2da23b50c54fa2619512cc41d3c3357b134738c
 SHA1 (patch-tools_build_install-core-dist.pl) = aeab5b43e097a2c1b461b576a1cddaeea660af08
