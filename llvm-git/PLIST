@@ -226,6 +226,7 @@ include/llvm/CodeGen/GCMetadataPrinter.h
 include/llvm/CodeGen/GCStrategy.h
 include/llvm/CodeGen/GCs.h
 include/llvm/CodeGen/GlobalISel/IRTranslator.h
+include/llvm/CodeGen/GlobalISel/MachineIRBuilder.h
 include/llvm/CodeGen/GlobalISel/Types.h
 include/llvm/CodeGen/ISDOpcodes.h
 include/llvm/CodeGen/IntrinsicLowering.h
@@ -889,6 +890,7 @@ lib/libLLVMDebugInfoCodeView.a
 lib/libLLVMDebugInfoDWARF.a
 lib/libLLVMDebugInfoPDB.a
 lib/libLLVMExecutionEngine.a
+lib/libLLVMGlobalISel.a
 lib/libLLVMIRReader.a
 lib/libLLVMInstCombine.a
 lib/libLLVMInstrumentation.a
