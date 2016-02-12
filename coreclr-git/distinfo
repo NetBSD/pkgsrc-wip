@@ -1,11 +1,7 @@
 $NetBSD$
 
-SHA1 (patch-build.sh) = 18610c0707583e6501a01b2c25644cbc91786d3e
-SHA1 (patch-src_ToolBox_SOS_lldbplugin_debugclient.h) = 9b0f8339c44d30ed130c9af4bd17964105c28c46
-SHA1 (patch-src_ToolBox_SOS_lldbplugin_inc_dbgeng.h) = 0f28abf96b6b7cb2c9dcb605799af2a827d0ea81
 SHA1 (patch-src_debug_daccess_daccess.cpp) = ea97750ba113ff5af3a7cf8030e9f8d5fe45dc2b
 SHA1 (patch-src_pal_inc_pal__char16.h) = ca743d8330802f1a626b1c335461c733eb2a6325
-SHA1 (patch-src_pal_tools_gen-buildsys-clang.sh) = 81e547b9024b498bc9a003037122c71da712d240
 SHA1 (patch-src_vm_amd64_externalmethodfixupthunk.S) = 5e84b369f30ea62e391e1f949d0d01e1995e5192
 SHA1 (patch-src_vm_amd64_jithelpers__fast.S) = b4002abaed826b673c0af58a818c25d6b17e488e
 SHA1 (patch-src_vm_amd64_pinvokestubs.S) = 344e94f87fc08edde9a61f74a495e3bd2ed11248
