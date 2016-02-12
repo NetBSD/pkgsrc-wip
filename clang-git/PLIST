@@ -296,6 +296,9 @@ include/clang/Frontend/Utils.h
 include/clang/Frontend/VerifyDiagnosticConsumer.h
 include/clang/FrontendTool/Utils.h
 include/clang/Index/CommentToXML.h
+include/clang/Index/IndexDataConsumer.h
+include/clang/Index/IndexSymbol.h
+include/clang/Index/IndexingAction.h
 include/clang/Index/USRGeneration.h
 include/clang/Lex/CodeCompletionHandler.h
 include/clang/Lex/DirectoryLookup.h
@@ -447,6 +450,7 @@ include/clang/Tooling/CommonOptionsParser.h
 include/clang/Tooling/CompilationDatabase.h
 include/clang/Tooling/CompilationDatabasePluginRegistry.h
 include/clang/Tooling/Core/Lookup.h
+include/clang/Tooling/Core/QualTypeNames.h
 include/clang/Tooling/Core/Replacement.h
 include/clang/Tooling/FileMatchTrie.h
 include/clang/Tooling/JSONCompilationDatabase.h
