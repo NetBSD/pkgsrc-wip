@@ -111,6 +111,7 @@ include/c++/v1/stdio.h
 include/c++/v1/stdlib.h
 include/c++/v1/streambuf
 include/c++/v1/string
+include/c++/v1/string.h
 include/c++/v1/strstream
 include/c++/v1/support/android/locale_bionic.h
 include/c++/v1/support/ibm/limits.h
