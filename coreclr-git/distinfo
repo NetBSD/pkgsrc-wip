@@ -1,6 +1,7 @@
 $NetBSD$
 
 SHA1 (patch-src_gc_gc.cpp) = c468a34bbafe35dcd242065762ff042a94152e47
+SHA1 (patch-src_pal_src_misc_miscpalapi.cpp) = b7a902309081c9a1a4d7a8a4dcfbb11342c7e311
 SHA1 (patch-src_vm_amd64_externalmethodfixupthunk.S) = 5e84b369f30ea62e391e1f949d0d01e1995e5192
 SHA1 (patch-src_vm_amd64_jithelpers__fast.S) = b4002abaed826b673c0af58a818c25d6b17e488e
 SHA1 (patch-src_vm_amd64_pinvokestubs.S) = 344e94f87fc08edde9a61f74a495e3bd2ed11248
