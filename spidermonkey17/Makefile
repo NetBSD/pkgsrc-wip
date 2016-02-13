@@ -28,6 +28,13 @@ PKGCONFIG_OVERRIDE+=	js/src/js.pc.in
 
 TEST_TARGET=		check
 
+# Adjust file permissions
+post-install:
+	${CHMOD} -x ${DESTDIR}${PREFIX}/include/js-17.0/*.*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/include/js-17.0/*/*.*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-17.0.a
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-17.0.pc
+
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/tool.mk"
 .include "../../devel/libffi/buildlink3.mk"
