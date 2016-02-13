@@ -71,6 +71,8 @@ SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ as we're using GCC
 SUBST_FILES.libcxx=		${WRKDIR}/clang/lib/Driver/ToolChains.cpp
 SUBST_FILES.libcxx+=		${WRKDIR}/clang/lib/Driver/Tools.cpp
 SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
+
+CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
 post-extract:
