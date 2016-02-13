@@ -4,14 +4,15 @@ PKGNAME=	clang-3.9.0
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	clang
-GIT_REPO.clang=		git://github.com/llvm-mirror/clang.git
+GIT_REPO.clang=		https://github.com/llvm-mirror/clang.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clang.llvm.org/
 COMMENT=	C language family frontend for LLVM
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/build
+WRKSRC=			${WRKDIR}
+CONFIGURE_DIRS=		${WRKDIR}/build
 
 USE_LANGUAGES=		c c++
 USE_CMAKE+=		yes
@@ -76,7 +77,7 @@ CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}
+	${RUN} mkdir -p ${WRKSRC}/build
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
