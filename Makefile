@@ -1800,7 +1800,6 @@ SUBDIR+=	mcl
 SUBDIR+=	mcwm
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
-SUBDIR+=	mdds
 SUBDIR+=	mediawiki-mode
 SUBDIR+=	meep
 SUBDIR+=	meep-mpi
