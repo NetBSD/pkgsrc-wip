@@ -246,7 +246,7 @@ do-install:
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/libe-book/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.4
-.include "../../wip/libetonyek/buildlink3.mk"
+.include "../../converters/libetonyek/buildlink3.mk"
 .include "../../converters/libfreehand/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../converters/libmspub/buildlink3.mk"
