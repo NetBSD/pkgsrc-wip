@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=			cookiecutter-1.1.0
+DISTNAME=			cookiecutter-1.3.0
 GITHUB_PROJECT=			cookiecutter
 PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=			devel
@@ -21,7 +21,6 @@ BUILD_DEPENDS+=			${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../wip/py-future
 DEPENDS+=			${PYPKGPREFIX}-binaryornot>=0.2.0:../../wip/py-binaryornot
 DEPENDS+=			${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
-DEPENDS+=			${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 DEPENDS+=			${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.1.1:../../wip/py-whichcraft
 

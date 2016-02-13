@@ -1,13 +1,15 @@
 @comment $NetBSD$
 bin/cookiecutter
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cookiecutter/__init__.py
+${PYSITELIB}/cookiecutter/__init__.pyc
+${PYSITELIB}/cookiecutter/__init__.pyo
 ${PYSITELIB}/cookiecutter/cli.py
 ${PYSITELIB}/cookiecutter/cli.pyc
 ${PYSITELIB}/cookiecutter/cli.pyo
@@ -26,9 +28,6 @@ ${PYSITELIB}/cookiecutter/generate.pyo
 ${PYSITELIB}/cookiecutter/hooks.py
 ${PYSITELIB}/cookiecutter/hooks.pyc
 ${PYSITELIB}/cookiecutter/hooks.pyo
-${PYSITELIB}/cookiecutter/__init__.py
-${PYSITELIB}/cookiecutter/__init__.pyc
-${PYSITELIB}/cookiecutter/__init__.pyo
 ${PYSITELIB}/cookiecutter/main.py
 ${PYSITELIB}/cookiecutter/main.pyc
 ${PYSITELIB}/cookiecutter/main.pyo

@@ -3178,6 +3178,7 @@ SUBDIR+=	py-pmi
 SUBDIR+=	py-poster
 SUBDIR+=	py-postmarkup
 SUBDIR+=	py-pot
+SUBDIR+=	py-poyo
 SUBDIR+=	py-pp
 SUBDIR+=	py-prayertime
 SUBDIR+=	py-premailer
