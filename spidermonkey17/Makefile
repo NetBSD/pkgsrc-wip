@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	mozjs17.0.0
-PKGNAME=	${DISTNAME:S/mozjs17/spidermonkey17-17/}
+PKGNAME=	${DISTNAME:S/mozjs/spidermonkey17-/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=js/}
 
