@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kdbusaddons-5.18.0.tar.xz) = 7df0c6a23366e39a9ee9c4b96243d286aca639ae
-RMD160 (kdbusaddons-5.18.0.tar.xz) = acd5c1d0f9ad6800337e0d9163a94f0ff9682940
-SHA512 (kdbusaddons-5.18.0.tar.xz) = aca4438c62f6d72850a4b0eed5a6c470d1021c3bddaae0a28fdf4c718d6819175f5bcd10d92e88d804523ae4cbc2fafd3178933a86d03328360f4af439364024
-Size (kdbusaddons-5.18.0.tar.xz) = 33848 bytes
+SHA1 (kdbusaddons-5.19.0.tar.xz) = 9f9f526395b7fe6de1ac22f1282f508ae8f9cec8
+RMD160 (kdbusaddons-5.19.0.tar.xz) = ecdcfc28c3ed0ddffa8c9f8d796ce814e648e9bc
+SHA512 (kdbusaddons-5.19.0.tar.xz) = 6f801967af8518979cdf8d5ae13fc16b0c7d45a47b194b49d48cc598216a49918ef84b0219c0f825e1107a6532a5db37f40dd10d34a3dc6047bca58980786d64
+Size (kdbusaddons-5.19.0.tar.xz) = 33812 bytes
