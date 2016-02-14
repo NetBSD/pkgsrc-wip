@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/18 11:46:24 leot1990 Exp $
-lib/zathura/ps.so
-share/applications/zathura-ps.desktop

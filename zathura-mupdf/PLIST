@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/29 22:42:45 leot1990 Exp $
-lib/zathura/pdf.so
-share/applications/zathura-pdf-mupdf.desktop
