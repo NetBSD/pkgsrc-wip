@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kcompletion-5.18.0.tar.xz) = 6e4e095711c073056d1bd101d24e7ba1c4c214cc
-RMD160 (kcompletion-5.18.0.tar.xz) = f5f1e0f07ef0e0173ccab7e86969baf490a07ad0
-SHA512 (kcompletion-5.18.0.tar.xz) = a2215038e5a8738650f3abf99becdc4a0fa13420506827cb284818ff4cc56b5aa0ff960db940791ca37718b63d579b523c7f9a5e0c8906ee3018f3ce18c7325a
-Size (kcompletion-5.18.0.tar.xz) = 115836 bytes
+SHA1 (kcompletion-5.19.0.tar.xz) = 70583acb189b471a89af43d8a8d2a215e79a033d
+RMD160 (kcompletion-5.19.0.tar.xz) = 1c1992ed748c5058ea52415d9afcf2d0ee4958df
+SHA512 (kcompletion-5.19.0.tar.xz) = 375e3951f223205ef5d63f8013055bd390fc6cd7a9c46cec3882cc43e51788186028a5e5a0cf78f928fb658d73e108ce9ac83b36e1eae4e485c9eba1a808023d
+Size (kcompletion-5.19.0.tar.xz) = 115900 bytes
