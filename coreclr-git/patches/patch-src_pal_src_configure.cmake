@@ -20,7 +20,7 @@ $NetBSD$
 +  uuid_t uuid;
 +  uint32_t status;
 +  uuid_create(&uuid, &status);
-+  exit(0);
++  return 0;
 +}" HAVE_BSD_UUID_H)
 +
 +check_cxx_source_runs("
