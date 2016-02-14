@@ -12,6 +12,4 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../wip/kcoreaddons/buildlink3.mk"
 .include "../../wip/kwindowsystem/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.qt5-qttools= build
-#.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
