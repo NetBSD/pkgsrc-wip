@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (threadweaver-5.18.0.tar.xz) = bb5d9b6935831bede0591ea6c3eca83d8806d698
-RMD160 (threadweaver-5.18.0.tar.xz) = 0ad31f9db44ef10bcce7c9f1aef158a92d3b2fa7
-SHA512 (threadweaver-5.18.0.tar.xz) = 8b1d97f91249a6d147bb49cd329fac2e0c9ce582114e5a86f7417285dc11a4f7f987657dd401055c6bad9223f17fb1616e00ebdd6233893e82df730f0f21d833
-Size (threadweaver-5.18.0.tar.xz) = 1408596 bytes
+SHA1 (threadweaver-5.19.0.tar.xz) = aa4ccc27c739c752479349140f3c61b0b5b7068d
+RMD160 (threadweaver-5.19.0.tar.xz) = 438f9a4730b3d8a26962a29aeace0d337467d5e6
+SHA512 (threadweaver-5.19.0.tar.xz) = d389dbb9b6eb1c87519bf90c295512d13cd17dd86f2237b9af9f012f59c9bd7c77b878602691041181ebddaea2429dd34d52701742b0ac340fbe22f8a5cdbf33
+Size (threadweaver-5.19.0.tar.xz) = 1408612 bytes
