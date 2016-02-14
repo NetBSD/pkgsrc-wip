@@ -1408,6 +1408,7 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapidox
 SUBDIR+=	kapital
 SUBDIR+=	karchive
+SUBDIR+=	kauth
 SUBDIR+=	kawa
 SUBDIR+=	kcodecs
 SUBDIR+=	kcompletion

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (kauth-5.19.0.tar.xz) = 0bd8dd1580f222e3b0096cd2573a7f548930aefa
+RMD160 (kauth-5.19.0.tar.xz) = a33fce0aad571275420095345d5fa49e105133c5
+SHA512 (kauth-5.19.0.tar.xz) = 1a83dd6f5cf3d1714f9560bf0f37c79a82789d00f749cd4e4141b7083858e23bc95d0e7153a48235475f9dc79e9c211ae6e7bfeac943b5f0c0a3c4e80873b6f5
+Size (kauth-5.19.0.tar.xz) = 82444 bytes
+SHA1 (patch-src_ConfigureChecks.cmake) = c38cca661b579dcab28b16c982e7a336f58d6984
