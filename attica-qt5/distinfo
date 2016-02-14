@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (attica-5.18.0.tar.xz) = 80e4344be0fe2722238bfce362474949e1380575
-RMD160 (attica-5.18.0.tar.xz) = b6a3a03148a08fd2f35e1d012a14c4aaa970bfea
-SHA512 (attica-5.18.0.tar.xz) = 7fb2014dede5491511db058e39793544c536991381865bb6d2b67509094fd69ceec56ec832fa7b632862559b3279481d502ac3ef2c2f74864c015090605e1e69
-Size (attica-5.18.0.tar.xz) = 60464 bytes
+SHA1 (attica-5.19.0.tar.xz) = ca96082de3aaf1f800da76a42f1b7d82023edc8e
+RMD160 (attica-5.19.0.tar.xz) = cec85e2979bebfbc54465acc4bf8d09f5a031267
+SHA512 (attica-5.19.0.tar.xz) = 1dcdda6927c9a0e5eaff96f7bd32de30565758f037745baaa06206e5af52b819fa89d94623a9dbac5d40127012a4072e21bd66a338d37bc39eda0b7a58f3aa37
+Size (attica-5.19.0.tar.xz) = 59800 bytes
