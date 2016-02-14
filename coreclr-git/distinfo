@@ -1,7 +1,13 @@
 $NetBSD$
 
+SHA1 (patch-src_ToolBox_SOS_Strike_CMakeLists.txt) = c0abf4678a2b6f3d4589444f56efdff3aa8227de
+SHA1 (patch-src_dlls_dbgshim_CMakeLists.txt) = 324a00675b196a5385ab9c08bf3563ef94410b3e
+SHA1 (patch-src_dlls_mscordac_CMakeLists.txt) = b6cb6eccb95906cc937528aa665ec8838bf47408
+SHA1 (patch-src_dlls_mscordbi_CMakeLists.txt) = e426383ed88d49d127b4f2a1180e72356a3906f7
+SHA1 (patch-src_dlls_mscoree_coreclr_CMakeLists.txt) = 50339aa1e75d76ef1e9d24c149bc8749c2bea240
 SHA1 (patch-src_gc_gc.cpp) = c468a34bbafe35dcd242065762ff042a94152e47
 SHA1 (patch-src_pal_src_misc_miscpalapi.cpp) = b7a902309081c9a1a4d7a8a4dcfbb11342c7e311
+SHA1 (patch-src_pal_tests_palsuite_exception__handling_pal__sxs_test1_CMakeLists.txt) = c3974175fce11c46ecc60ca75b4b5959e6e79a9b
 SHA1 (patch-src_vm_amd64_externalmethodfixupthunk.S) = 5e84b369f30ea62e391e1f949d0d01e1995e5192
 SHA1 (patch-src_vm_amd64_jithelpers__fast.S) = b4002abaed826b673c0af58a818c25d6b17e488e
 SHA1 (patch-src_vm_amd64_pinvokestubs.S) = 344e94f87fc08edde9a61f74a495e3bd2ed11248
