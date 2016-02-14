@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:17 agc Exp $
+
+SHA1 (htop-2.0.0.tar.gz) = 73bf8b97d4ee74066c75c0f9e0c1eacbaff11ba0
+RMD160 (htop-2.0.0.tar.gz) = 2d5e812fcabde1922b9fdd35413795200f306eb8
+SHA512 (htop-2.0.0.tar.gz) = 2df1b96e4c07a1de360dc7b7b20db0e663d7fa2c9a8a9dcc3d7dc1ce5e5b59f72d927e8e7ae919631cf0e950a82450b45116a1f8d788f63c5762bd73332ec32c
+Size (htop-2.0.0.tar.gz) = 473765 bytes
+SHA1 (patch-Makefile.am) = 5139fca6858abcba7db51d6a1345936a6e1d17a6
+SHA1 (patch-configure.ac) = 7f76263003cd0ec76aa40fa47131122e38f254b4
+SHA1 (patch-linux_LinuxProcess.c) = bf20e9afbd795ae3c6f99403828ff9c05713a89f
