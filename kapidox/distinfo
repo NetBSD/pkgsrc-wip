@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (kapidox-5.18.0.tar.xz) = b4ff24da6f90f8ce12f80d5a6c742c80a558d6e7
-RMD160 (kapidox-5.18.0.tar.xz) = 5cd29ce92a9a463858618e81a881bab6562921d0
-SHA512 (kapidox-5.18.0.tar.xz) = 9f77d53273c1d7b1b4da2a40be984640901a219637b78a557e4ff1b66cc5baa4d07ee9a744e2987d281e805e057951254f73f3acfc7ed24701fda35b45320ad1
-Size (kapidox-5.18.0.tar.xz) = 132828 bytes
+SHA1 (kapidox-5.19.0.tar.xz) = 3b55291c4fc57bb0b79ec34d957145204c35d38f
+RMD160 (kapidox-5.19.0.tar.xz) = 07bc1281f25f1813a90e453247847c0d303f93c2
+SHA512 (kapidox-5.19.0.tar.xz) = 09ba83d384b0676c6fa33191c2729c529399d2c621adcaba4c9df3120f3d4e91d6a01dd9c78dd5cbab8bd7e014735ad085e9b201d6a801332089f6083b4c043b
+Size (kapidox-5.19.0.tar.xz) = 132800 bytes
 SHA1 (patch-setup.py) = ae1e6008b76ec96dfce2e351d9d8824e5287f6a9
