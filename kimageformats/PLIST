@@ -1,6 +1,8 @@
 @comment $NetBSD$
 qt5/plugins/imageformats/kimg_eps.so
 qt5/plugins/imageformats/kimg_exr.so
+qt5/plugins/imageformats/kimg_kra.so
+qt5/plugins/imageformats/kimg_ora.so
 qt5/plugins/imageformats/kimg_pcx.so
 qt5/plugins/imageformats/kimg_pic.so
 qt5/plugins/imageformats/kimg_psd.so
@@ -12,6 +14,8 @@ share/kservices5/qimageioplugins/dds.desktop
 share/kservices5/qimageioplugins/eps.desktop
 share/kservices5/qimageioplugins/exr.desktop
 share/kservices5/qimageioplugins/jp2.desktop
+share/kservices5/qimageioplugins/kra.desktop
+share/kservices5/qimageioplugins/ora.desktop
 share/kservices5/qimageioplugins/pcx.desktop
 share/kservices5/qimageioplugins/pic.desktop
 share/kservices5/qimageioplugins/psd.desktop

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kimageformats-5.18.0.tar.xz) = b36ff047b533db584facaa1163198d9bd1cbec6a
-RMD160 (kimageformats-5.18.0.tar.xz) = a56ed2b5ab6325f8a75413a169220f153161eb47
-SHA512 (kimageformats-5.18.0.tar.xz) = 7c0b2f7b2c2b4bcb0b8fbc9b32a6d7cfe2801ae2740d3c66b5711a4ac913a9e172884be2125a76f098d8ebc675b1149464843d11d39e8a792971794597a3fd04
-Size (kimageformats-5.18.0.tar.xz) = 85192 bytes
+SHA1 (kimageformats-5.19.0.tar.xz) = c7058bc31669489b17c0b862fdd2aa4f2c1fc6b3
+RMD160 (kimageformats-5.19.0.tar.xz) = 00b0ae2e471a5b5ebd99e34a52800d1d3ebae454
+SHA512 (kimageformats-5.19.0.tar.xz) = d2e68898747690b4214c6c2778f07e0e157f464a3a2117679de9246e68c5ba0b8c53d74e1b0af04b8a05cb484afebf24bb6211178d723e419966a540dd956b2b
+Size (kimageformats-5.19.0.tar.xz) = 204108 bytes

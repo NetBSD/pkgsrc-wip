@@ -11,6 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 
+.include "../../wip/karchive/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
