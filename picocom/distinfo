@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2014/07/16 22:25:11 gregschenzel Exp $
-
-SHA1 (picocom-1.7.tar.gz) = bde6e36af71db845913f9d61f28dee1b485218fa
-RMD160 (picocom-1.7.tar.gz) = f1311e84d21aa359dd98ed74d85ca7a94050e10f
-Size (picocom-1.7.tar.gz) = 42857 bytes
-SHA1 (patch-aa) = 7b031863bd64e5b9ac4421334082bcb1c12a8d1d

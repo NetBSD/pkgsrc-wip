@@ -2473,7 +2473,6 @@ SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
 SUBDIR+=	php-tclink
 SUBDIR+=	picasm
-SUBDIR+=	picocom
 SUBDIR+=	picosat
 SUBDIR+=	picprog
 SUBDIR+=	pidgin-evolution

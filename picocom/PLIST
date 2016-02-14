@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/05 00:29:27 gregschenzel Exp $
-bin/picocom
-man/man8/picocom.8
