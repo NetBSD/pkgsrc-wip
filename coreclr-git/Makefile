@@ -28,7 +28,11 @@ do-configure:
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-	${PKGSRC_SETENV} ${CONFIGURE_ENV} PYTHON=${PYTHONBIN:Q} ./build.sh cmakeargs ${CMAKE_ARGS:Q}
+	${PKGSRC_SETENV} ${CONFIGURE_ENV} PYTHON=${PYTHONBIN:Q} ./build.sh skipmscorlib cmakeargs ${CMAKE_ARGS:Q}
+
+do-test:
+	${RUN} cd ${WRKSRC} && \
+	${SETENV} ${TEST_ENV} ${BASH} src/pal/tests/palsuite/runpaltests.sh ${WRKSRC}/bin/obj/NetBSD.x64.Debug ${WRKSRC}/paltestout
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
