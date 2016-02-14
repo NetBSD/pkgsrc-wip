@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kplotting-5.18.0.tar.xz) = bf20f765a1382a12872fec48277e8c96839d74e9
-RMD160 (kplotting-5.18.0.tar.xz) = d0b74cda2afd012caddc55f09cce86b10587fa04
-SHA512 (kplotting-5.18.0.tar.xz) = 920ddca57903545edc895ed58455ac8dada55f5dee5846ae67d65d360b7032be28a7b63c249ffef3594f486ea414fd1e1dd3f29da567c235af3d337067874f41
-Size (kplotting-5.18.0.tar.xz) = 29488 bytes
+SHA1 (kplotting-5.19.0.tar.xz) = 3b952ebed34132fc0ccb4decc77d406ab8c6c810
+RMD160 (kplotting-5.19.0.tar.xz) = 5de5b1ceb927a46818c6268fb7b1045cc9dd08e7
+SHA512 (kplotting-5.19.0.tar.xz) = 43631511aa9781a63cb633a00ca44c6e653cd6d50b3125eec8e6e412e8ae318d09d3f494d162a870be26120ecb8af275283a7a03158334db5bed335e7815eba6
+Size (kplotting-5.19.0.tar.xz) = 29500 bytes
