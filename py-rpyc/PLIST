@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2012/09/10 11:22:44 jihbed Exp $
+@comment $NetBSD$
 bin/rpyc_classic.py
 bin/rpyc_registry.py
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
 ${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/requires.txt
 ${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/rpyc/__init__.py
 ${PYSITELIB}/rpyc/__init__.pyc
@@ -30,6 +31,9 @@ ${PYSITELIB}/rpyc/core/netref.pyo
 ${PYSITELIB}/rpyc/core/protocol.py
 ${PYSITELIB}/rpyc/core/protocol.pyc
 ${PYSITELIB}/rpyc/core/protocol.pyo
+${PYSITELIB}/rpyc/core/reactor.py
+${PYSITELIB}/rpyc/core/reactor.pyc
+${PYSITELIB}/rpyc/core/reactor.pyo
 ${PYSITELIB}/rpyc/core/service.py
 ${PYSITELIB}/rpyc/core/service.pyc
 ${PYSITELIB}/rpyc/core/service.pyo
@@ -39,6 +43,15 @@ ${PYSITELIB}/rpyc/core/stream.pyo
 ${PYSITELIB}/rpyc/core/vinegar.py
 ${PYSITELIB}/rpyc/core/vinegar.pyc
 ${PYSITELIB}/rpyc/core/vinegar.pyo
+${PYSITELIB}/rpyc/experimental/__init__.py
+${PYSITELIB}/rpyc/experimental/__init__.pyc
+${PYSITELIB}/rpyc/experimental/__init__.pyo
+${PYSITELIB}/rpyc/experimental/retunnel.py
+${PYSITELIB}/rpyc/experimental/retunnel.pyc
+${PYSITELIB}/rpyc/experimental/retunnel.pyo
+${PYSITELIB}/rpyc/experimental/splitbrain.py
+${PYSITELIB}/rpyc/experimental/splitbrain.pyc
+${PYSITELIB}/rpyc/experimental/splitbrain.pyo
 ${PYSITELIB}/rpyc/lib/__init__.py
 ${PYSITELIB}/rpyc/lib/__init__.pyc
 ${PYSITELIB}/rpyc/lib/__init__.pyo
@@ -69,9 +82,12 @@ ${PYSITELIB}/rpyc/utils/registry.pyo
 ${PYSITELIB}/rpyc/utils/server.py
 ${PYSITELIB}/rpyc/utils/server.pyc
 ${PYSITELIB}/rpyc/utils/server.pyo
-${PYSITELIB}/rpyc/utils/ssh.py
-${PYSITELIB}/rpyc/utils/ssh.pyc
-${PYSITELIB}/rpyc/utils/ssh.pyo
+${PYSITELIB}/rpyc/utils/teleportation.py
+${PYSITELIB}/rpyc/utils/teleportation.pyc
+${PYSITELIB}/rpyc/utils/teleportation.pyo
+${PYSITELIB}/rpyc/utils/zerodeploy.py
+${PYSITELIB}/rpyc/utils/zerodeploy.pyc
+${PYSITELIB}/rpyc/utils/zerodeploy.pyo
 ${PYSITELIB}/rpyc/version.py
 ${PYSITELIB}/rpyc/version.pyc
 ${PYSITELIB}/rpyc/version.pyo

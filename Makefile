@@ -3172,6 +3172,7 @@ SUBDIR+=	py-plete
 SUBDIR+=	py-plex
 SUBDIR+=	py-plink
 SUBDIR+=	py-plucker
+SUBDIR+=	py-plumbum
 SUBDIR+=	py-ply
 SUBDIR+=	py-pmi
 SUBDIR+=	py-poster
