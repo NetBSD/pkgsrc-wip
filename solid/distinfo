@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (solid-5.18.0.tar.xz) = c0a63501525d499f1fdd64e736c6701c688f0324
-RMD160 (solid-5.18.0.tar.xz) = 0e2a3745997246fdf4bb4663fe98bc188979ccd9
-SHA512 (solid-5.18.0.tar.xz) = 0d4b6cd2da5b75e93bc9f95054c133b4fd6cadaaa54c3f0fa2c4225b2838d655d0ff96d7965b11cff03bf6ac51bc9686c3a4fac6ff8a6ff19b4022eb09145a76
-Size (solid-5.18.0.tar.xz) = 267412 bytes
+SHA1 (solid-5.19.0.tar.xz) = a2d7f46daeae79ff542d5882b7536271849327ab
+RMD160 (solid-5.19.0.tar.xz) = 94fae23ce6b050e4bb0bab1fd8169d9a8a96c734
+SHA512 (solid-5.19.0.tar.xz) = 232073be85547feeadacbaa61437811363c27d64f9d05c18024678afa53c04fc6a57fb14d3d2198d27274f158ff11a7393e3b9224b37e0eb96f41ddef90a2cd1
+Size (solid-5.19.0.tar.xz) = 268088 bytes
