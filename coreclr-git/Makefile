@@ -30,6 +30,7 @@ do-build:
 	${RUN} cd ${WRKSRC} && \
 	${PKGSRC_SETENV} ${CONFIGURE_ENV} PYTHON=${PYTHONBIN:Q} ./build.sh cmakeargs ${CMAKE_ARGS:Q}
 
+.include "../../lang/mono/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../wip/lldb-git/buildlink3.mk"

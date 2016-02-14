@@ -1,6 +1,7 @@
 $NetBSD$
 
 SHA1 (patch-CMakeLists.txt) = 621111492c3199019a61a3a98aa98653c6a064b7
+SHA1 (patch-build.sh) = 7335e55a0e331e899a6efe884609c06ea845c9db
 SHA1 (patch-src_ToolBox_SOS_Strike_CMakeLists.txt) = 7180a842fdf944a42354f715e98360849def355d
 SHA1 (patch-src_dlls_dbgshim_CMakeLists.txt) = 324a00675b196a5385ab9c08bf3563ef94410b3e
 SHA1 (patch-src_dlls_mscordac_CMakeLists.txt) = b6cb6eccb95906cc937528aa665ec8838bf47408
