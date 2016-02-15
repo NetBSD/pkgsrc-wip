@@ -1447,6 +1447,7 @@ SUBDIR+=	kpackage
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
 SUBDIR+=	kplotting
+SUBDIR+=	kpty
 SUBDIR+=	krusader
 SUBDIR+=	kservice
 SUBDIR+=	kstest
