@@ -18,6 +18,7 @@ SHA1 (patch-lib_certhigh_ocsp.c) = 7ac69dfec32d7102757133c28354dc33f762104e
 SHA1 (patch-lib_dbm_src_mktemp.c) = a23cfc9d86a91bf982bb8e27d81fc8f7391bdab8
 SHA1 (patch-lib_freebl_Makefile) = aedfd6f12872bc94256e1c6be4628334f363c2bb
 SHA1 (patch-lib_freebl_blapi.h) = 00e0dcfe1f6a54bffa97c4852f9f9fcb5ab783e1
+SHA1 (patch-lib_freebl_chacha20poly1305.c) = ee99e7c04f628d285f497ae9b172a8a72da7286a
 SHA1 (patch-lib_freebl_config.mk) = ade7f656b900f93f1fdaa036a733529af132d2ca
 SHA1 (patch-lib_freebl_mpi_mpi.c) = 2d358f72da7a1fe9f257716119e5ead5ed7006ed
 SHA1 (patch-lib_freebl_sha-fast-amd64-sun.s) = 6feb56632584f04c5259dcb72e330e13d485b50a
