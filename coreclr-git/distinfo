@@ -1,17 +1,7 @@
 $NetBSD$
 
-SHA1 (patch-CMakeLists.txt) = 621111492c3199019a61a3a98aa98653c6a064b7
-SHA1 (patch-build.sh) = 7335e55a0e331e899a6efe884609c06ea845c9db
-SHA1 (patch-src_ToolBox_SOS_Strike_CMakeLists.txt) = 7180a842fdf944a42354f715e98360849def355d
-SHA1 (patch-src_dlls_dbgshim_CMakeLists.txt) = 324a00675b196a5385ab9c08bf3563ef94410b3e
-SHA1 (patch-src_dlls_mscordac_CMakeLists.txt) = b6cb6eccb95906cc937528aa665ec8838bf47408
-SHA1 (patch-src_dlls_mscordbi_CMakeLists.txt) = 8f45e41ebbaf724b129b0bec434deb76692a7fd7
-SHA1 (patch-src_dlls_mscoree_coreclr_CMakeLists.txt) = 50339aa1e75d76ef1e9d24c149bc8749c2bea240
-SHA1 (patch-src_pal_inc_pal.h) = b2cf698debe62fb081ecfd54d97c3a1328f7621d
-SHA1 (patch-src_pal_src_CMakeLists.txt) = 3a20f2cf944f1f2adb9725693d8204dd1d7628d4
-SHA1 (patch-src_pal_src_configure.cmake) = 653871e6b95e78ee2812d936bce989095d348cd9
-SHA1 (patch-src_pal_src_cruntime_misc.cpp) = cbef115e6bcbd9166105b25362d7f64729676dcf
-SHA1 (patch-src_pal_src_include_pal_misc.h) = 08ebba414b6579c2ca62b04dccb78d388dd9641a
-SHA1 (patch-src_pal_src_include_pal_palinternal.h) = 9bb986f199ff3d761ae98c8df4f6c60c4ceb9261
-SHA1 (patch-src_pal_src_misc_miscpalapi.cpp) = b7a902309081c9a1a4d7a8a4dcfbb11342c7e311
-SHA1 (patch-src_pal_tests_palsuite_exception__handling_pal__sxs_test1_CMakeLists.txt) = c3974175fce11c46ecc60ca75b4b5959e6e79a9b
+SHA1 (patch-CMakeLists.txt) = 921b2713e8a7cf4ddcfa1fa2e028f3efa495357b
+SHA1 (patch-build.sh) = 7feac3e423fb4e3fd75f1bcdefee8a67c9c509aa
+SHA1 (patch-src_ToolBox_SOS_Strike_CMakeLists.txt) = 6344da328f268a130081a5b6f7a2f736d098612d
+SHA1 (patch-src_dlls_mscordbi_CMakeLists.txt) = 38013a29e151a949c6c1b86093c7e95435b89e57
+SHA1 (patch-src_pal_src_CMakeLists.txt) = db06bb55a6f78d8191b0005eae34732e03e38e60

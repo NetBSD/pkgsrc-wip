@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/src/CMakeLists.txt.orig	2016-02-06 02:05:27.000000000 +0000
+--- src/pal/src/CMakeLists.txt.orig	2016-02-06 12:33:48.000000000 +0000
 +++ src/pal/src/CMakeLists.txt
 @@ -8,8 +8,10 @@ project(coreclrpal)
  

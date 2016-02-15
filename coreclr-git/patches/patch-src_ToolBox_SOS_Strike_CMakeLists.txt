@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/ToolBox/SOS/Strike/CMakeLists.txt.orig	2016-02-01 23:37:48.000000000 +0000
+--- src/ToolBox/SOS/Strike/CMakeLists.txt.orig	2016-02-02 10:08:55.000000000 +0000
 +++ src/ToolBox/SOS/Strike/CMakeLists.txt
 @@ -1,10 +1,12 @@
  # Set the RPATH of sos so that it can find dependencies without needing to set LD_LIBRARY_PATH

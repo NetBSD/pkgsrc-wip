@@ -1,6 +1,6 @@
 $NetBSD$
 
---- build.sh.orig	2016-02-12 01:41:34.000000000 +0000
+--- build.sh.orig	2016-02-15 11:05:55.000000000 +0000
 +++ build.sh
 @@ -204,7 +204,7 @@ isMSBuildOnNETCoreSupported()
                      __isMSBuildOnNETCoreSupported=1
