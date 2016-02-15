@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (kxmlgui-5.19.0.tar.xz) = 80fb062a48c3e30004dd4801b81dc9ac1b69b542
+RMD160 (kxmlgui-5.19.0.tar.xz) = e7f013a2e0a7cdd8941f969121e943f6e6f34238
+SHA512 (kxmlgui-5.19.0.tar.xz) = 7a6572b72eb530c6937c18286d0238387ca720f6045de832dc04e0fed48e2d99038187f352625e9629d69364e4ebe1b5d75a54d0785a0a0ffa7420d505411235
+Size (kxmlgui-5.19.0.tar.xz) = 865088 bytes
+SHA1 (patch-src_CMakeLists.txt) = 6641d488b9cd8b7d000d7488eb27a5fb1fe9ca79
