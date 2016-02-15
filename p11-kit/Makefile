@@ -21,6 +21,8 @@ PKG_SYSCONFSUBDIR=	pkcs11
 CONF_FILES+=		share/examples/p11-kit/pkcs11.conf.example \
 			${PKG_SYSCONFDIR}/pkcs11.conf
 
+# XXX why is this needed?
+CONFIGURE_ARGS+=	--without-trust-paths
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=	-D_NETBSD_SOURCE
