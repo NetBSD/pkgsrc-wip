@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--with-proc=/system/lxproc
 REPLACE_PYTHON+=	scripts/MakeHeader.py
 CONFIGURE_ENV+=		ac_cv_file__proc_stat=yes ac_cv_file__proc_meminfo=yes
 
+.include "../../lang/python/application.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
