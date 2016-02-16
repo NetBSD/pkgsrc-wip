@@ -66,7 +66,6 @@ PKGCONFIG_OVERRIDE+=	libedataserverui/libedataserverui.pc.in
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.12
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
@@ -82,9 +81,11 @@ BUILDLINK_API_DEPENDS.gtk3+=			gtk3+>=3.10
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.38
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../wip/libgweather/buildlink3.mk"
+.include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libsoup/buildlink3.mk"
