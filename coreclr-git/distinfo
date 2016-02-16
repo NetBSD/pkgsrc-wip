@@ -1,2 +1,6 @@
 $NetBSD$
 
+SHA1 (patch-src_ToolBox_SOS_Strike_strike.h) = f5128c974d4f2be838d476de87167045afb6ed31
+SHA1 (patch-src_pal_inc_pal.h) = f7f1f2a2e18c37a961289a360e960eb71bf75a0a
+SHA1 (patch-src_pal_src_CMakeLists.txt) = 910d8464b5caf4db79b80b46cc8d23105f81c162
+SHA1 (patch-src_pal_src_include_pal_palinternal.h) = d55df797d34de6577566da4886bb70d09ab45308
