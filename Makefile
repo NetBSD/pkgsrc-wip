@@ -4080,6 +4080,7 @@ SUBDIR+=	virtualbox-ose
 SUBDIR+=	virtualjaguar
 SUBDIR+=	virus
 SUBDIR+=	vis
+SUBDIR+=	vis-editor
 SUBDIR+=	vista-fonts
 SUBDIR+=	vkeybd
 SUBDIR+=	vlevel
