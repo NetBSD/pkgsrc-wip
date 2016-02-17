@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (kfilemetadata-5.19.0.tar.xz) = 26966653137ef247beffa9f69965f5d16661c135
+RMD160 (kfilemetadata-5.19.0.tar.xz) = cd0240aa2a585a10531b53c956ea7eb526def869
+SHA512 (kfilemetadata-5.19.0.tar.xz) = fe6231584ae0fc4583c51eb66040109ede3a3822ab144f9de85f8c5b2ca28d62b57c0c335edce1c55cee47e2130beb9369d9e2e26638886f85ae71c070e9884f
+Size (kfilemetadata-5.19.0.tar.xz) = 124788 bytes
+SHA1 (patch-cmake_FindFFmpeg.cmake) = 94c7699d9a62b86f3c188ad162385bc3319b7753

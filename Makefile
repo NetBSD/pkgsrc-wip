@@ -1421,6 +1421,7 @@ SUBDIR+=	kdoctools
 SUBDIR+=	keepassx-git
 SUBDIR+=	kemoticons
 SUBDIR+=	kf5
+SUBDIR+=	kfilemetadata5
 SUBDIR+=	kglobalaccel
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
