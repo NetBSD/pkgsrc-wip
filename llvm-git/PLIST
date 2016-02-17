@@ -225,6 +225,7 @@ include/llvm/CodeGen/GCMetadata.h
 include/llvm/CodeGen/GCMetadataPrinter.h
 include/llvm/CodeGen/GCStrategy.h
 include/llvm/CodeGen/GCs.h
+include/llvm/CodeGen/GlobalISel/CallLowering.h
 include/llvm/CodeGen/GlobalISel/IRTranslator.h
 include/llvm/CodeGen/GlobalISel/MachineIRBuilder.h
 include/llvm/CodeGen/GlobalISel/Types.h
@@ -671,6 +672,7 @@ include/llvm/Support/COM.h
 include/llvm/Support/Capacity.h
 include/llvm/Support/Casting.h
 include/llvm/Support/CodeGen.h
+include/llvm/Support/CodeGenCWrappers.h
 include/llvm/Support/CommandLine.h
 include/llvm/Support/Compiler.h
 include/llvm/Support/Compression.h
