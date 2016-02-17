@@ -17,6 +17,5 @@ DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.13.0:../../security/py-paramiko
 
 PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
