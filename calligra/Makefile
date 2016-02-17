@@ -21,6 +21,15 @@ CONFIGURE_DIRS=		_KDE_build
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
 
+.include "../../graphics/oxygen-icons/buildlink3.mk"
+.include "../../databases/libpqxx/buildlink3.mk"
+.include "../../converters/librevenge/buildlink3.mk"
+.include "../../devel/libgit2/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/libodfgen/buildlink3.mk"
+.include "../../converters/libetonyek/buildlink3.mk"
 .include "../../converters/libvisio/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
