@@ -3,7 +3,7 @@
 DISTNAME=	qt-creator-2.5.2-src
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-src//}
 CATEGORIES=	devel
-MASTER_SITES=	http://get.qt.nokia.com/qtcreator/
+MASTER_SITES=	http://download.qt.io/official_releases/qtcreator/2.5/2.5.2/
 EXTRACT_SUFX=	.tar.gz
 EXTRACT_USING=	bsdtar
 
