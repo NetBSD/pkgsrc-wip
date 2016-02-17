@@ -1,0 +1,26 @@
+# $NetBSD$
+
+DISTNAME=	scp-0.10.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	net
+MASTER_SITES=	https://pypi.python.org/packages/source/s/scp/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/jbardin/scp.py
+COMMENT=	Send and receive files with scp
+LICENSE=	apache-2.0
+
+#USE_TOOLS=	pax
+USE_LANGUAGES=	# none
+PLIST_SUBST+=	PYVERSUFFIX=${PYVERSUFFIX}
+PYTHON_VERSIONS_ACCEPTED=	27 26
+
+#REPLACE_PYTHON+=	tools/sw_upgrade
+
+PYDISTUTILSPKG= yes
+
+DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
