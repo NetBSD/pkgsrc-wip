@@ -5,7 +5,7 @@ PKGNAME=		${DISTNAME:S/vis/vis-editor/}
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
 
-MAINTAINER=		e@erig.me
+MAINTAINER=		erig@erig.me
 HOMEPAGE=		${MASTER_SITE_GITHUB:=martanne/vis/}
 COMMENT=		Vim like text editor
 LICENSE=		isc
@@ -17,8 +17,6 @@ DISTBASE=		${DISTNAME:C/(.*)-${PKGVERSION}/\1/}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-MAKE_JOBS_SAFE=		no
-
 LUA_VERSIONS_ACCEPTED=	52
 
 USE_TOOLS+=		gmake
@@ -26,11 +24,6 @@ USE_TOOLS+=		gsed
 USE_TOOLS+=		pkg-config
 
 .include "../../mk/bsd.prefs.mk"
-
-SUBST_CLASSES+=			sha1sum
-SUBST_STAGE.sha1sum=		pre-build
-SUBST_FILES.sha1sum=		Makefile
-SUBST_SED.sha1sum=		-e 's/sha1sum/gsha1sum/g'
 
 .if ${OPSYS} != "Linux"
 SUBST_CLASSES+=			zap-ldl
@@ -60,7 +53,6 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE}-open ${DESTDIR}${PREFIX}/bin/${PKGBASE}-open
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${DISTBASE}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
 
-BUILD_DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 .include "../../lang/lua/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
