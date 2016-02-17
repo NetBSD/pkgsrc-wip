@@ -1,0 +1,7 @@
+The Juniper Networks Ansible library, which is hosted on the Ansible
+Galaxy website under the role junos, enables you to use Ansible to
+perform specific operational and configuration tasks on devices
+running Junos OS, including installing and upgrading Junos OS,
+deploying specific devices in the network, loading configuration
+changes, retrieving information, and resetting, rebooting, or
+shutting down managed devices.

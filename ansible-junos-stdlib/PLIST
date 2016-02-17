@@ -1,0 +1,25 @@
+@comment $NetBSD$
+etc/ansible/roles/Juniper.junos/.gitignore
+etc/ansible/roles/Juniper.junos/COPYRIGHT
+etc/ansible/roles/Juniper.junos/LICENSE
+etc/ansible/roles/Juniper.junos/README.md
+etc/ansible/roles/Juniper.junos/docs/ansible2rst.py
+etc/ansible/roles/Juniper.junos/docs/conf.py
+etc/ansible/roles/Juniper.junos/docs/docreq.txt
+etc/ansible/roles/Juniper.junos/docs/juniper.png
+etc/ansible/roles/Juniper.junos/docs/rst.j2
+etc/ansible/roles/Juniper.junos/env-setup
+etc/ansible/roles/Juniper.junos/library/__init__.py
+etc/ansible/roles/Juniper.junos/library/junos_commit
+etc/ansible/roles/Juniper.junos/library/junos_get_config
+etc/ansible/roles/Juniper.junos/library/junos_get_facts
+etc/ansible/roles/Juniper.junos/library/junos_install_config
+etc/ansible/roles/Juniper.junos/library/junos_install_os
+etc/ansible/roles/Juniper.junos/library/junos_rollback
+etc/ansible/roles/Juniper.junos/library/junos_shutdown
+etc/ansible/roles/Juniper.junos/library/junos_srx_cluster
+etc/ansible/roles/Juniper.junos/library/junos_zeroize
+etc/ansible/roles/Juniper.junos/meta/main.yml
+etc/ansible/roles/Juniper.junos/setup.py
+etc/ansible/roles/Juniper.junos/tools/sw_upgrade
+etc/ansible/roles/Juniper.junos/version.py
