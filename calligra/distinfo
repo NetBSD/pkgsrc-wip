@@ -5,4 +5,5 @@ RMD160 (calligra-2.9.9.tar.xz) = e737998aeac5f531f1290bb074aa6ec45c864055
 SHA512 (calligra-2.9.9.tar.xz) = 09b221502dc2c1d48ee5f783da515a1a53ffc7456b45b271e8de846430ad1254ce12c39baf7f0e220a6ccef4e5bc02da05e211d300caa948905b5d0c766068e5
 Size (calligra-2.9.9.tar.xz) = 194657892 bytes
 SHA1 (patch-3rdparty_google-breakpad_src_third_party_protobuf_protobuf_post_process_dist.sh) = 94a37a5095d8864fc426453625dbb5f62b087dc7
+SHA1 (patch-krita_image_kis__image__config.cpp) = 3e38bfe21ca12fa810630eb13eadd800959e3fe0
 SHA1 (patch-krita_plugins_formats_xcf_3rdparty_xcftools_config.h) = e040804bfef8c1e10d722b2862c25aaff947da73
