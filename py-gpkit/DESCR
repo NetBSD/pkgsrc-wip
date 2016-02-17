@@ -1,0 +1,3 @@
+GPkit is a Python package for defining and manipulating geometric
+programming models, abstracting away the backend solver. Supported
+solvers are MOSEK and CVXopt.

@@ -1,0 +1,4 @@
+Python (2.7-3.*) library for loading and utilizing triangular meshes.
+The goal of the library is to provide a fully featured Trimesh object
+which allows for easy manipulation and analysis, in the style of the
+excellent Polygon object in the Shapely library.
