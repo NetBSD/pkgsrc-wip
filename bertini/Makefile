@@ -1,25 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2015/08/14 23:43:38 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	BertiniSource_v1.4
-PKGNAME=	bertini-1.4
+DISTNAME=	BertiniSource_v1.5
+PKGNAME=	bertini-1.5
 CATEGORIES=	math
-MASTER_SITES=	http://www3.nd.edu/~sommese/bertini/
+MASTER_SITES=	http://bertini.nd.edu/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www3.nd.edu/~sommese/bertini/
+HOMEPAGE=	http://bertini.nd.edu/
 COMMENT=	Software for Numerical Algebraic Geometry
-#LICENSE=	# TODO: (see mk/license.mk)
-
-WRKSRC=	${WRKDIR}/${DISTNAME}/src
+LICENSE=	modified-bsd
 
 MAKE_JOBS_SAFE=	NO
 
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison flex
-
-INSTALLATION_DIRS=	 bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bertini ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"

@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/08/14 23:43:38 jihbed Exp $
 
-SHA1 (BertiniSource_v1.4.tar.gz) = ee9a3e2d558f20093fd1b1d9cc730182f49244ab
-RMD160 (BertiniSource_v1.4.tar.gz) = 12c6ee33bd69c496adf376920d232f96ee2d39eb
-Size (BertiniSource_v1.4.tar.gz) = 1833744 bytes
+SHA1 (BertiniSource_v1.5.tar.gz) = 60c53e241041dc3a654d049576d0729c6b178e9f
+RMD160 (BertiniSource_v1.5.tar.gz) = 97563ff7d8d1e0ecf039ee52a72f3228148d7098
+SHA512 (BertiniSource_v1.5.tar.gz) = a90ca19dc65c12e15b4cffdc7d3bf7b8065a86a8685eacfd6ffb508bd2e45793cd1bc0538dc01c8727f459063be552b8718799802c558069eeb364cdc11bcdf1
+Size (BertiniSource_v1.5.tar.gz) = 2845067 bytes
