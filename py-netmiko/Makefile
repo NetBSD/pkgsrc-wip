@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	netmiko-0.3.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils net
 MASTER_SITES=	-https://github.com/ktbyers/${PKGBASE}/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
