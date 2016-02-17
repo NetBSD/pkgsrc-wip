@@ -1,0 +1,114 @@
+$NetBSD$
+
+--- configure.orig	2015-12-18 11:54:35.000000000 +0000
++++ configure
+@@ -3255,7 +3255,7 @@ fi
+ if test x$SWVERS != x; then
+   PROD_NAME=$($SWVERS -productName | cut -f 2 -d:)
+ fi
+- if test "$PROD_NAME" == "Mac OS X"; then
++ if test "$PROD_NAME" = "Mac OS X"; then
+   WITH_OSX_TRUE=
+   WITH_OSX_FALSE='#'
+ else
+@@ -3263,7 +3263,7 @@ else
+   WITH_OSX_FALSE=
+ fi
+ 
+-if test "$PROD_NAME" == "Mac OS X"; then
++if test "$PROD_NAME" = "Mac OS X"; then
+   MACOSX_DEPLOYMENT_TARGET=$($SWVERS -productVersion | cut -f 1,2 -d.)
+   { $as_echo "$as_me:${as_lineno-$LINENO}: MACOSX_DEPLOYMENT_TARGET = $MACOSX_DEPLOYMENT_TARGET" >&5
+ $as_echo "$as_me: MACOSX_DEPLOYMENT_TARGET = $MACOSX_DEPLOYMENT_TARGET" >&6;}
+@@ -15665,10 +15665,10 @@ else
+   enable_lhaglue_cxx=yes
+ fi
+ 
+-if test x$enable_lhaglue == xyes; then
++if test x$enable_lhaglue = xyes; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Building LHAGLUE Fortran wrappers" >&5
+ $as_echo "$as_me: Building LHAGLUE Fortran wrappers" >&6;}
+-  if test x$enable_lhaglue_cxx == xyes; then
++  if test x$enable_lhaglue_cxx = xyes; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: Building LHAGLUE C++ wrappers" >&5
+ $as_echo "$as_me: Building LHAGLUE C++ wrappers" >&6;}
+   else
+@@ -15679,7 +15679,7 @@ else
+    { $as_echo "$as_me:${as_lineno-$LINENO}: Not building LHAGLUE wrappers" >&5
+ $as_echo "$as_me: Not building LHAGLUE wrappers" >&6;}
+ fi
+- if test x$enable_lhaglue == xyes; then
++ if test x$enable_lhaglue = xyes; then
+   ENABLE_LHAGLUE_TRUE=
+   ENABLE_LHAGLUE_FALSE='#'
+ else
+@@ -15687,13 +15687,13 @@ else
+   ENABLE_LHAGLUE_FALSE=
+ fi
+ 
+-if test x$enable_lhaglue == xyes; then flag=1; else flag=0; fi
++if test x$enable_lhaglue = xyes; then flag=1; else flag=0; fi
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define LHAPDF_PDFLIB $flag
+ _ACEOF
+ 
+- if test x$enable_lhaglue_cxx == xyes; then
++ if test x$enable_lhaglue_cxx = xyes; then
+   ENABLE_LHAGLUE_CXX_TRUE=
+   ENABLE_LHAGLUE_CXX_FALSE='#'
+ else
+@@ -15701,7 +15701,7 @@ else
+   ENABLE_LHAGLUE_CXX_FALSE=
+ fi
+ 
+-if test x$enable_lhaglue_cxx == xyes; then flag=1; else flag=0; fi
++if test x$enable_lhaglue_cxx = xyes; then flag=1; else flag=0; fi
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define LHAPDF_LHA5CXX $flag
+@@ -15819,7 +15819,7 @@ else
+   enable_python=yes
+ fi
+ 
+-if test x$enable_python == xyes; then
++if test x$enable_python = xyes; then
+   # Extract the first word of "python", so it can be a program name with args.
+ set dummy python; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -16172,7 +16172,7 @@ _ACEOF
+   rm -f lhapdf-cpp-conf.tmp
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $flag_ok" >&5
+ $as_echo "$flag_ok" >&6; }
+-  if test x$flag_ok == xyes; then
++  if test x$flag_ok = xyes; then
+     true
+     AM_CXXFLAGS="$AM_CXXFLAGS -pedantic "
+   else
+@@ -16211,7 +16211,7 @@ _ACEOF
+   rm -f lhapdf-cpp-conf.tmp
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $flag_ok" >&5
+ $as_echo "$flag_ok" >&6; }
+-  if test x$flag_ok == xyes; then
++  if test x$flag_ok = xyes; then
+     true
+     AM_CXXFLAGS="$AM_CXXFLAGS -Wall "
+   else
+@@ -16250,7 +16250,7 @@ _ACEOF
+   rm -f lhapdf-cpp-conf.tmp
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $flag_ok" >&5
+ $as_echo "$flag_ok" >&6; }
+-  if test x$flag_ok == xyes; then
++  if test x$flag_ok = xyes; then
+     true
+     AM_CXXFLAGS="$AM_CXXFLAGS -Wno-long-long "
+   else
+@@ -16289,7 +16289,7 @@ _ACEOF
+   rm -f lhapdf-cpp-conf.tmp
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $flag_ok" >&5
+ $as_echo "$flag_ok" >&6; }
+-  if test x$flag_ok == xyes; then
++  if test x$flag_ok = xyes; then
+     true
+     AM_CPPFLAGS="$AM_CPPFLAGS -Qunused-arguments "
+   else

@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:34:50 jihbed Exp $
 
-SHA1 (lhapdf-5.8.7b2.tar.gz) = e4a69dfc6e2bd3d531d88cb6f1d6c9167ad0a7dc
-RMD160 (lhapdf-5.8.7b2.tar.gz) = 55c42d31e12762c69d06709e8fd6942658747d36
-Size (lhapdf-5.8.7b2.tar.gz) = 1166621 bytes
+SHA1 (LHAPDF-6.1.6.tar.gz) = c4604f5d78ad5e498e0128bc3729911e602e0975
+RMD160 (LHAPDF-6.1.6.tar.gz) = 8c8a1e3fc0ea61cd9e6e24c4074b2e8373896055
+SHA512 (LHAPDF-6.1.6.tar.gz) = 371a4062d3f1a4d611d8c09950a1ba7b747df29f04502a1ab9c420c300799143a53eebdecd04293d38b2c481b525c2414ac0fb8e2f8846de65e07992dea18656
+Size (LHAPDF-6.1.6.tar.gz) = 696608 bytes
+SHA1 (patch-configure) = dbf090871d993ecf094e3b314b8ea973473c6511

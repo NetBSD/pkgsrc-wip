@@ -1,1 +1,35 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:34:50 jihbed Exp $
+@comment $NetBSD$
+bin/lhapdf
+bin/lhapdf-config
+include/LHAPDF/AlphaS.h
+include/LHAPDF/BicubicInterpolator.h
+include/LHAPDF/BilinearInterpolator.h
+include/LHAPDF/CompositePDF.h
+include/LHAPDF/Config.h
+include/LHAPDF/ContinuationExtrapolator.h
+include/LHAPDF/ErrExtrapolator.h
+include/LHAPDF/Exceptions.h
+include/LHAPDF/Extrapolator.h
+include/LHAPDF/Factories.h
+include/LHAPDF/GridPDF.h
+include/LHAPDF/Info.h
+include/LHAPDF/Interpolator.h
+include/LHAPDF/KnotArray.h
+include/LHAPDF/LHAGlue.h
+include/LHAPDF/LHAPDF.h
+include/LHAPDF/LogBicubicInterpolator.h
+include/LHAPDF/LogBilinearInterpolator.h
+include/LHAPDF/NearestPointExtrapolator.h
+include/LHAPDF/PDF.h
+include/LHAPDF/PDFIndex.h
+include/LHAPDF/PDFInfo.h
+include/LHAPDF/PDFSet.h
+include/LHAPDF/Paths.h
+include/LHAPDF/Reweighting.h
+include/LHAPDF/Utils.h
+include/LHAPDF/Version.h
+lib/libLHAPDF.la
+lib/pkgconfig/lhapdf.pc
+${PYSITELIB}/lhapdf.so
+share/LHAPDF/lhapdf.conf
+share/LHAPDF/pdfsets.index

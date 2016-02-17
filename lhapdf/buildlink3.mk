@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	lhapdf
+
+.if !defined(LHAPDF_BUILDLINK3_MK)
+LHAPDF_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.lhapdf+=	lhapdf>=6.1.6
+BUILDLINK_PKGSRCDIR.lhapdf?=	../../wip/lhapdf
+
+.endif	# LHAPDF_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-lhapdf
