@@ -10,12 +10,9 @@ HOMEPAGE=	https://github.com/jbardin/scp.py
 COMMENT=	Send and receive files with scp
 LICENSE=	apache-2.0
 
-#USE_TOOLS=	pax
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSUFFIX=${PYVERSUFFIX}
 PYTHON_VERSIONS_ACCEPTED=	27 26
-
-#REPLACE_PYTHON+=	tools/sw_upgrade
 
 PYDISTUTILSPKG= yes
 
