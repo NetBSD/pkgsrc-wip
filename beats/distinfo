@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (beats-1.1.0.tar.gz) = e6b977db967aeca923532d18ea6e2103cee0e368
-RMD160 (beats-1.1.0.tar.gz) = 91e7d0e58c2bf83b483b2441ccab50dc276b7b71
-SHA512 (beats-1.1.0.tar.gz) = ed135df752d26f5fb9ed7f99cc966e1a989fe85fcb2a526e4667e1507006829865fa81dfd416a7b06517d9d483dc0d102212fc11c7681d676812ca081139f808
-Size (beats-1.1.0.tar.gz) = 9843707 bytes
+SHA1 (beats-1.1.1.tar.gz) = b9f146c1d42aedd399a6afda73d6c3563d8bcba8
+RMD160 (beats-1.1.1.tar.gz) = 6f3b6e36e05632f5eb3a9b2f3192448f89f643cd
+SHA512 (beats-1.1.1.tar.gz) = b701fe116abab553cb39faa417a21c12278e4a72e746f80d5294b24f1ac539f81be4cf513e1de631dfd169a035ea853ec293dbb27e81af40ff8414d77d29bedc
+Size (beats-1.1.1.tar.gz) = 9841045 bytes
