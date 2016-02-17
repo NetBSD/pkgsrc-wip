@@ -1419,6 +1419,7 @@ SUBDIR+=	kcrash
 SUBDIR+=	kdbusaddons
 SUBDIR+=	kdoctools
 SUBDIR+=	keepassx-git
+SUBDIR+=	kemoticons
 SUBDIR+=	kf5
 SUBDIR+=	kglobalaccel
 SUBDIR+=	kgrab
