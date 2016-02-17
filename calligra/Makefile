@@ -21,7 +21,8 @@ CONFIGURE_DIRS=		_KDE_build
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
 
-.include "../../graphics/oxygen-icons/buildlink3.mk"
+DEPENDS+=	oxygen-icons:../../graphics/oxygen-icons
+
 .include "../../databases/libpqxx/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/libgit2/buildlink3.mk"
