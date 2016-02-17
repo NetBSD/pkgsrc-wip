@@ -43,6 +43,9 @@ do-install:
 	${RUN} ${LN} -s ${ARCANISTDIR}/bin/arc \
 		${DESTDIR}${PREFIX}/bin/arc
 
+DEPENDS+=	php-json-[0-9]*:../../textproc/php-json
+DEPENDS+=	php-curl-[0-9]*:../../www/php-curl
+
 .include "../../wip/mk/git-package.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/php/phpversion.mk"
