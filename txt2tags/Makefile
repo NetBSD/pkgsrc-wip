@@ -18,14 +18,16 @@ USE_LANGUAGES=	# none
 
 DOC_DIR=			${PREFIX}/share/doc/${PKGBASE}
 SAMPLES_DIR=			${PREFIX}/share/examples/${PKGBASE}
+INSTALLATION_DIRS+= 		${DOC_DIR} ${SAMPLES_DIR}
+INSTALLATION_DIRS+= 		bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOC_DIR} ${SAMPLES_DIR} ${SAMPLES_DIR}/img
-	${INSTALL_SCRIPT} ${WRKSRC}/txt2tags ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${DOC_DIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/*.* ${SAMPLES_DIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/img/*.* ${SAMPLES_DIR}/img
-	${INSTALL_MAN} ${WRKSRC}/doc/manpage.man ${PREFIX}/${PKGMANDIR}/man1/txt2tags.1
+	${INSTALL_DATA_DIR} ${DOC_DIR} ${SAMPLES_DIR} ${DESTDIR}${SAMPLES_DIR}/img
+	${INSTALL_SCRIPT} ${WRKSRC}/txt2tags ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${DESTDIR}${DOC_DIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/*.* ${DESTDIR}${SAMPLES_DIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/img/*.* ${DESTDIR}${SAMPLES_DIR}/img
+	${INSTALL_MAN} ${WRKSRC}/doc/manpage.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/txt2tags.1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
