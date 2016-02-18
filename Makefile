@@ -1377,7 +1377,6 @@ SUBDIR+=	java-xmlrpc
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
 SUBDIR+=	jellyfish
-SUBDIR+=	jemalloc
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
