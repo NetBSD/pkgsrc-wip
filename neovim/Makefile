@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.7 2015/06/18 20:53:01 jonthn Exp $
 
-PKGNAME=	neovim-0.1.1
+PKGNAME=	neovim-0.1.3
 CATEGORIES=	editors
-MASTER_SITES=	https://github.com/neovim/neovim/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 
 HOMEPAGE=	http://neovim.org/
 COMMENT=	Refactor vim for the 21st century

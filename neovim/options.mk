@@ -19,5 +19,5 @@ DEPENDS+=       ${PYPKGPREFIX}-neovim-[0-9]*:../../wip/py-neovim
 ### Use jemalloc for memory allocation
 ###
 .  if !empty(PKG_OPTIONS:Mjemalloc)
-.include "../../wip/jemalloc/buildlink3.mk"
+.include "../../devel/jemalloc/buildlink3.mk"
 .  endif
