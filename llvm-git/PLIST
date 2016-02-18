@@ -811,6 +811,7 @@ include/llvm/Target/TargetSelectionDAG.td
 include/llvm/Target/TargetSubtargetInfo.h
 include/llvm/Transforms/IPO.h
 include/llvm/Transforms/IPO/ForceFunctionAttrs.h
+include/llvm/Transforms/IPO/FunctionAttrs.h
 include/llvm/Transforms/IPO/FunctionImport.h
 include/llvm/Transforms/IPO/InferFunctionAttrs.h
 include/llvm/Transforms/IPO/InlinerPass.h
