@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/debug/debug-pal/unix/windefs.h.orig	2016-02-18 22:12:18.171417621 +0000
+--- src/debug/debug-pal/unix/windefs.h.orig	2016-02-18 23:09:44.740731261 +0000
 +++ src/debug/debug-pal/unix/windefs.h
 @@ -0,0 +1,12 @@
 +// Licensed to the .NET Foundation under one or more agreements.
