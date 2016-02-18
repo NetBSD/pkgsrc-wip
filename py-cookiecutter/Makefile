@@ -18,11 +18,13 @@ AUTO_MKDIRS=			yes
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1/
 
 BUILD_DEPENDS+=			${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
+BUILD_DEPENDS+=			${PYPKGPREFIX}-chardet>=2.3.0:../../converters/py-chardet
 DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../wip/py-future
 DEPENDS+=			${PYPKGPREFIX}-binaryornot>=0.2.0:../../wip/py-binaryornot
 DEPENDS+=			${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
 DEPENDS+=			${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.1.1:../../wip/py-whichcraft
+DEPENDS+=			${PYPKGPREFIX}-ruamel-yaml>=0.10.12:../../wip/py-ruamel-yaml
 
 # for python < 3.0
 .include "../../lang/python/pyversion.mk"
