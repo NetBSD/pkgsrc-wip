@@ -34,7 +34,6 @@ do-test:
 	${RUN} cd ${WRKSRC} && \
 	${SETENV} ${TEST_ENV} ${BASH} src/pal/tests/palsuite/runpaltests.sh ${WRKSRC}/bin/obj/NetBSD.x64.Debug ${WRKSRC}/paltestout
 
-.include "../../lang/mono/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../wip/lldb-git/buildlink3.mk"
