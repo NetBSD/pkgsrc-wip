@@ -27,9 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-junos-eznc>=1.2.2:../../net/py-junos-eznc
 # Not packaged yet
 #DEPENDS+=	${PYPKGPREFIX}-netconify>=1.0.1:../../wip/py-netconify
 
-# Pkgsrc frowns on this, pkglint says "use CONF_FILES framework"
-# However, this is what "ansible-galaxy install Juniper.junos" does,
-# and we simply replicate that here.
 INSTALLATION_DIRS=	${PREFIX}/share/ansible/roles/Juniper.junos
 
 do-build:
