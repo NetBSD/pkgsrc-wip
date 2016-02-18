@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (lugaru-rev269-src.tar.bz2) = 3788915dd3a792be45250c819a9411bf3d98d0c1
+RMD160 (lugaru-rev269-src.tar.bz2) = 3a1c4a2e1461aa948162b3686744fe30680a8742
+Size (lugaru-rev269-src.tar.bz2) = 39250302 bytes
+SHA1 (patch-CMakeLists.txt) = 954bfa0fd1bf074ee7b65a4be0b5089880e0e468

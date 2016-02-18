@@ -1708,6 +1708,7 @@ SUBDIR+=	lua-MessagePack
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-pgsql
 SUBDIR+=	lucene
+SUBDIR+=	lugaru
 SUBDIR+=	lumina
 SUBDIR+=	lumina-i18n
 SUBDIR+=	lwc
