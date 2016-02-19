@@ -3,6 +3,7 @@
 
 DISTNAME=	# empty
 PKGNAME=	vista-fonts-20061028
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://download.microsoft.com/download/f/5/a/f5a3df76-d856-4a61-a6bd-722f52a5be26/
 DISTFILES=	PowerPointViewer.exe
@@ -22,10 +23,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-EVAL_PREFIX+=	CABEXTRACT_PREFIX=cabextract
-CABEXTRACT_PREFIX_DEFAULT=${LOCALBASE}
-EXTRACT_CMD=	${CABEXTRACT_PREFIX}/bin/cabextract -q -s $${extract_file} ppviewer.cab
-FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+EXTRACT_CMD=	${LOCALBASE}/bin/cabextract -q -s $${extract_file} ppviewer.cab
+FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/vista-fonts
 FONTS_DIRS.ttf=	${FONTDIR}
 
