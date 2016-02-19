@@ -1,0 +1,3 @@
+Getopt::Args processes Perl script options and arguments. This is in
+contrast with most modules in the Getopt::* namespace, which deal with
+options only.
