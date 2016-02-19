@@ -19,15 +19,12 @@ USE_TOOLS+=	autopoint autoreconf intltoolize aclocal autoheader autoconf automak
 USE_LIBTOOL=            yes
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=	--enable-drm\
-			--disable-geoclue\
-			--disable-gui
+CONFIGURE_ARGS+=	--disable-gui
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	autopoint --force;  autoreconf --force --install --verbose ; intltoolize --force --automake --copy
 
+.include "options.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
