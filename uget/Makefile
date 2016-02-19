@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2013/03/03 17:55:48 othyro Exp $
 #
 
-DISTNAME=	uget-1.10.3
+DISTNAME=	uget-2.0.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=urlget/}
 

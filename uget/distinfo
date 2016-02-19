@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/03/03 17:55:48 othyro Exp $
 
-SHA1 (uget-1.10.3.tar.gz) = 9d46192e8ff3ebbf9912e94e532898f8bd444848
-RMD160 (uget-1.10.3.tar.gz) = 6fff06a438b788b7edf503eaacf21848cd8e0dd9
-Size (uget-1.10.3.tar.gz) = 484395 bytes
+SHA1 (uget-2.0.5.tar.gz) = 18e7f152c59aef11180c4efb11576f30d48900ff
+RMD160 (uget-2.0.5.tar.gz) = 48c637442b44a5fa569bcf49a4902d1f04f1d8a5
+SHA512 (uget-2.0.5.tar.gz) = 8d16e990c92c694870a9ace6a22191effb9879681ceb563538fa646da7ed8fb2da88bd15a2eab3b49f91a1768391b5d6f6e7cc80635919f235b36f77e885226e
+Size (uget-2.0.5.tar.gz) = 885766 bytes
