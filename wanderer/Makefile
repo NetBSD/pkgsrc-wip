@@ -2,7 +2,7 @@
 
 DISTNAME=	wanderer_dev-3.2.1
 PKGREVISION=    1
-PKGNAME=	wanderer_dev-3.2.1
+PKGNAME=	${DISTNAME:S/_dev//}
 DIST_SUBDIR=	${PKGVERSION_NOREV}
 CATEGORIES=	games
 MASTER_SITES=	http://e271.net/~marina/
