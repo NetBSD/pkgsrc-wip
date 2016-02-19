@@ -4210,6 +4210,7 @@ SUBDIR+=	xnee
 SUBDIR+=	xombrero
 SUBDIR+=	xoo
 SUBDIR+=	xoreos
+SUBDIR+=	xoreos-tools
 SUBDIR+=	xosview
 SUBDIR+=	xpde
 SUBDIR+=	xpdq

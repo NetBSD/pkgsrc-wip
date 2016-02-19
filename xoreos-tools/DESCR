@@ -1,0 +1,6 @@
+xoreos-tools is a loose collection of command line tools to help with the
+development of xoreos. In addition, they might also have some limited use
+for modders looking to enhance the original games.
+
+Please note that these are all command line tools, without any GUI
+whatsoever.
