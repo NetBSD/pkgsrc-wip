@@ -3531,6 +3531,8 @@ share/emacs/${PKGVERSION}/lisp/strokes.elc
 share/emacs/${PKGVERSION}/lisp/subdirs.el
 share/emacs/${PKGVERSION}/lisp/subr.el.gz
 share/emacs/${PKGVERSION}/lisp/subr.elc
+share/emacs/${PKGVERSION}/lisp/svg.el.gz
+share/emacs/${PKGVERSION}/lisp/svg.elc
 share/emacs/${PKGVERSION}/lisp/t-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/t-mouse.elc
 share/emacs/${PKGVERSION}/lisp/tabify.el.gz
