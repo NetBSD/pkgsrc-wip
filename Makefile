@@ -1687,6 +1687,7 @@ SUBDIR+=	lives
 SUBDIR+=	livestreamer
 SUBDIR+=	lldb-git
 SUBDIR+=	llilc-git
+SUBDIR+=	llvm
 SUBDIR+=	llvm-git
 SUBDIR+=	llvm-rtlib
 SUBDIR+=	lmdbg-current
