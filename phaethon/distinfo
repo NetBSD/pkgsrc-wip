@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (phaethon-v0.0.4.tar.gz) = 621a2d3ff70cd970842dcf935d38871035399b8a
+RMD160 (phaethon-v0.0.4.tar.gz) = 6faa4a115bd970f241458ffe1b74d39d98b27fea
+Size (phaethon-v0.0.4.tar.gz) = 543332 bytes
+SHA1 (patch-cmake_FindFaad.cmake) = c33c9e296c2b4cf492f35ae82fa78c6e2d9a0fcc

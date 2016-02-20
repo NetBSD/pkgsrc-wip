@@ -2461,6 +2461,7 @@ SUBDIR+=	petsc
 SUBDIR+=	pgp6
 SUBDIR+=	pgplot
 SUBDIR+=	pgpool2
+SUBDIR+=	phaethon
 SUBDIR+=	phalanx
 SUBDIR+=	phantomjs
 SUBDIR+=	phantomjs2
