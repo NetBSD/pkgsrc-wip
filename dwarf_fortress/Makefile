@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/05/08 22:58:43 i3enedek Exp $
 
-DISTNAME=	df_42_05_linux
-PKGNAME=	dwarf_fortress-42.05
+DISTNAME=	df_42_06_linux
+PKGNAME=	dwarf_fortress-42.06
 CATEGORIES=	games
 MASTER_SITES=	http://www.bay12games.com/dwarves/
 EXTRACT_SUFX=	.tar.bz2
