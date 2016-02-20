@@ -26,5 +26,6 @@ pre-configure:
 	autopoint --force;  autoreconf --force --install --verbose ; intltoolize --force --automake --copy
 
 .include "options.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
