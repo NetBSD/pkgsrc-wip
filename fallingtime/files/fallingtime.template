@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $NetBSD$
+# Launcher script for fallingtime.
+
+cd @@PREFIX@@/share/fallingtime && @@PREFIX@@/libexec/falling_time

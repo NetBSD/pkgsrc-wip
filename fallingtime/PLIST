@@ -1,5 +1,6 @@
 @comment $NetBSD$
-bin/falling_time
+bin/fallingtime
+libexec/falling_time
 share/fallingtime/data/LondrinaSolid-Regular.otf
 share/fallingtime/data/graphics/360.png
 share/fallingtime/data/graphics/anim.png
