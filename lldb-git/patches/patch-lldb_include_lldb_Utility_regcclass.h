@@ -1,7 +1,7 @@
 $NetBSD$
 
---- lldb/include/lldb/Utility/regcclass.h.orig	2016-01-23 13:45:51.000000000 +0000
-+++ lldb/include/lldb/Utility/regcclass.h
+--- include/lldb/Utility/regcclass.h.orig	2016-01-23 13:45:51.000000000 +0000
++++ include/lldb/Utility/regcclass.h
 @@ -0,0 +1,75 @@
 +/*-
 + * This code is derived from OpenBSD's libc/regex, original license follows:

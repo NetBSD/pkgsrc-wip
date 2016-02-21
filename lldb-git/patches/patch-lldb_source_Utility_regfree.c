@@ -1,7 +1,7 @@
 $NetBSD$
 
---- lldb/source/Utility/regfree.c.orig	2016-01-23 13:45:52.000000000 +0000
-+++ lldb/source/Utility/regfree.c
+--- source/Utility/regfree.c.orig	2016-01-23 13:45:52.000000000 +0000
++++ source/Utility/regfree.c
 @@ -0,0 +1,72 @@
 +/*-
 + * This code is derived from OpenBSD's libc/regex, original license follows:

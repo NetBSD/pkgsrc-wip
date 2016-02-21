@@ -1,7 +1,7 @@
 $NetBSD$
 
---- lldb/source/Utility/regstrlcpy.c.orig	2016-01-23 13:45:52.000000000 +0000
-+++ lldb/source/Utility/regstrlcpy.c
+--- source/Utility/regstrlcpy.c.orig	2016-01-23 13:45:52.000000000 +0000
++++ source/Utility/regstrlcpy.c
 @@ -0,0 +1,52 @@
 +/*
 + * This code is derived from OpenBSD's libc, original license follows:

@@ -1,7 +1,7 @@
 $NetBSD$
 
---- lldb/cmake/modules/LLDBStandalone.cmake.orig	2016-02-05 23:28:46.000000000 +0000
-+++ lldb/cmake/modules/LLDBStandalone.cmake
+--- cmake/modules/LLDBStandalone.cmake.orig	2016-02-05 23:28:46.000000000 +0000
++++ cmake/modules/LLDBStandalone.cmake
 @@ -6,57 +6,78 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
  
    option(LLVM_INSTALL_TOOLCHAIN_ONLY "Only include toolchain files in the 'install' target." OFF)
