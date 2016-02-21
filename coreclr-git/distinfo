@@ -6,3 +6,4 @@ SHA1 (patch-src_pal_src_cruntime_printf.cpp) = 8a86c57e1fe3953d158e1860f04bd19d7
 SHA1 (patch-src_pal_src_cruntime_printfcpp.cpp) = 4d1ba5fea45402259c67428506f39d9c3128ecbd
 SHA1 (patch-src_pal_src_cruntime_silent__printf.cpp) = 0922321ad05a90cc3b87b1e2663ff4d0b2e4717e
 SHA1 (patch-src_pal_tests_palsuite_threading_GetProcessTimes_test2_test2.c) = 2e99bd2f7775fe8ddfef2b6a171b40623474befe
+SHA1 (patch-src_pal_tools_gen-buildsys-clang.sh) = a495e13ad919aaeaa0963795ff9a76a2f52983fa
