@@ -4,3 +4,5 @@ SHA1 (llvm-3.8.0rc1.src.tar.xz) = ba4574a9a6c6c68fe21c32dd4f74e037614c8259
 RMD160 (llvm-3.8.0rc1.src.tar.xz) = 89a530ba0b4c14422e87e7b556408bff2077aced
 SHA512 (llvm-3.8.0rc1.src.tar.xz) = 0fbb2a5c16aad989a00b0068ab094882eb6f945237f1b82e102835321dc74cdbdaaa2d16dbc73df93ad466b3221ad440c18bd79e70e1f3de92e0a11de717d20e
 Size (llvm-3.8.0rc1.src.tar.xz) = 16559376 bytes
+SHA1 (patch-include_llvm_Support_Host.h) = 55a9fab6ee49ec09a2fd644747a6dddd6b39f942
+SHA1 (patch-tools_llvm-shlib_Makefile) = 5cd529e824a935abfe91c4b820cfd9c318e03102
