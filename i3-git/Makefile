@@ -20,7 +20,6 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	gmake bison lex yacc pkg-config perl
 USE_LANGUAGES=	c99
 BUILD_TARGET=	all mans
-MAKE_JOBS_SAFE=	no
 
 PKG_SYSCONFSUBDIR=	i3
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/${PKGBASE}
