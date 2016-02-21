@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
-PY_PATCHPLIST=		yes
+PYTHON_FOR_BUILD_ONLY=	yes
 
 WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
@@ -26,6 +26,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
+# XXX perl is not added as a tool as it does not seem to be required
 REPLACE_PERL+=		utils/GenLibDeps.pl
 REPLACE_PERL+=		utils/UpdateCMakeLists.pl
 REPLACE_PERL+=		utils/codegen-diff
@@ -77,8 +78,5 @@ post-extract:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/pyversion.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
