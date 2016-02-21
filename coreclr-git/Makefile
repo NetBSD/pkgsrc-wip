@@ -35,13 +35,15 @@ do-configure:
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-	${PKGSRC_SETENV} ${CONFIGURE_ENV} PYTHON=${PYTHONBIN:Q} ./build.sh skipmscorlib cmakeargs ${CMAKE_ARGS:Q}
+	${PKGSRC_SETENV} ${CONFIGURE_ENV} PYTHON=${PYTHONBIN:Q} \
+		./build.sh skipmscorlib cmakeargs ${CMAKE_ARGS:Q}
 
 # Currently there is no unix-like install target.
 # Put all produced files under subprefix.
 do-install:
 	${RUN} mkdir -p ${DESTDIR}${PREFIX}/CoreCLR
-	${RUN} ${CP} -r ./bin/Product/${OPSYS}.x64.Debug/ ${DESTDIR}${CORECLR_PREFIX}
+	${RUN} ${CP} -r ${WRKSRC}/bin/Product/${OPSYS}.x64.Debug/* \
+		${DESTDIR}${CORECLR_PREFIX}
 
 do-test:
 	${RUN} cd ${WRKSRC} && \
