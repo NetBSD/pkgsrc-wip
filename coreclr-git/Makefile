@@ -23,6 +23,13 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CMAKE_ARGS+=	-DCORECLR_SET_RPATH:BOOL=OFF
 
+CORECLR_PREFIX=	${PREFIX}/CoreCLR
+
+# Handle subprefix
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${CORECLR_PREFIX:Q}
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${CORECLR_PREFIX:Q}/Loader/NativeLibs
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${CORECLR_PREFIX:Q}/bin
+
 do-configure:
 	${RUN} ${ECHO} Skip configure and call CMake via build.sh
 
@@ -30,9 +37,16 @@ do-build:
 	${RUN} cd ${WRKSRC} && \
 	${PKGSRC_SETENV} ${CONFIGURE_ENV} PYTHON=${PYTHONBIN:Q} ./build.sh skipmscorlib cmakeargs ${CMAKE_ARGS:Q}
 
+# Currently there is no unix-like install target.
+# Put all produced files under subprefix.
+do-install:
+	${RUN} mkdir -p ${DESTDIR}${PREFIX}/CoreCLR
+	${RUN} ${CP} -r ./bin/Product/${OPSYS}.x64.Debug/ ${DESTDIR}${CORECLR_PREFIX}
+
 do-test:
 	${RUN} cd ${WRKSRC} && \
-	${SETENV} ${TEST_ENV} ${BASH} src/pal/tests/palsuite/runpaltests.sh ${WRKSRC}/bin/obj/NetBSD.x64.Debug ${WRKSRC}/paltestout
+	${SETENV} ${TEST_ENV} ${BASH} src/pal/tests/palsuite/runpaltests.sh \
+		${WRKSRC}/bin/obj/${OPSYS}.x64.Debug ${WRKSRC}/paltestout
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
