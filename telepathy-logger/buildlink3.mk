@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	telepathy-logger
 TELEPATHY_LOGGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.telepathy-logger+=	telepathy-logger>=0.1.4
-BUILDLINK_ABI_DEPENDS.telepathy-logger+=	telepathy-logger>=0.2.7nb15
+BUILDLINK_ABI_DEPENDS.telepathy-logger+=	telepathy-logger>=0.8.2
 BUILDLINK_PKGSRCDIR.telepathy-logger?=	../../chat/telepathy-logger
 
 .include "../../devel/glib2/buildlink3.mk"
