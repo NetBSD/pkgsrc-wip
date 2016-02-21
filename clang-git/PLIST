@@ -295,6 +295,7 @@ include/clang/Frontend/TextDiagnosticPrinter.h
 include/clang/Frontend/Utils.h
 include/clang/Frontend/VerifyDiagnosticConsumer.h
 include/clang/FrontendTool/Utils.h
+include/clang/Index/CodegenNameGenerator.h
 include/clang/Index/CommentToXML.h
 include/clang/Index/IndexDataConsumer.h
 include/clang/Index/IndexSymbol.h
@@ -304,6 +305,7 @@ include/clang/Lex/CodeCompletionHandler.h
 include/clang/Lex/DirectoryLookup.h
 include/clang/Lex/ExternalPreprocessorSource.h
 include/clang/Lex/HeaderMap.h
+include/clang/Lex/HeaderMapTypes.h
 include/clang/Lex/HeaderSearch.h
 include/clang/Lex/HeaderSearchOptions.h
 include/clang/Lex/LexDiagnostic.h
