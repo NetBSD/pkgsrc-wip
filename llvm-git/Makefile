@@ -67,7 +67,7 @@ REPLACE_PYTHON+=	utils/testgen/mc-bundling-x86-gen.py
 REPLACE_PYTHON+=	utils/update_llc_test_checks.py
 REPLACE_PYTHON+=	utils/wciia.py
 
-TEST_TARGET=		check-lldb
+TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 post-extract:
