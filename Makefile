@@ -1488,6 +1488,7 @@ SUBDIR+=	leveldb
 SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
+SUBDIR+=	libLLVM
 SUBDIR+=	libGenome
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
