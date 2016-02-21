@@ -28,47 +28,47 @@ CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
-REPLACE_PERL+=		${WRKDIR}/llvm/utils/GenLibDeps.pl
-REPLACE_PERL+=		${WRKDIR}/llvm/utils/UpdateCMakeLists.pl
-REPLACE_PERL+=		${WRKDIR}/llvm/utils/codegen-diff
-REPLACE_PERL+=		${WRKDIR}/llvm/utils/findsym.pl
-REPLACE_PERL+=		${WRKDIR}/llvm/utils/llvm-native-gxx
-REPLACE_PERL+=		${WRKDIR}/llvm/utils/test_debuginfo.pl
+REPLACE_PERL+=		utils/GenLibDeps.pl
+REPLACE_PERL+=		utils/UpdateCMakeLists.pl
+REPLACE_PERL+=		utils/codegen-diff
+REPLACE_PERL+=		utils/findsym.pl
+REPLACE_PERL+=		utils/llvm-native-gxx
+REPLACE_PERL+=		utils/test_debuginfo.pl
 
-REPLACE_PYTHON+=	${WRKDIR}/llvm/examples/Kaleidoscope/MCJIT/cached/genk-timing.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/examples/Kaleidoscope/MCJIT/cached/split-lib.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/examples/Kaleidoscope/MCJIT/complete/genk-timing.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/examples/Kaleidoscope/MCJIT/complete/split-lib.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/examples/Kaleidoscope/MCJIT/lazy/genk-timing.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/test/BugPoint/compile-custom.ll.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/test/tools/llvm-readobj/Inputs/relocs.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/Misc/zkill
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/Target/ARM/analyze-match-table.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/bisect
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/clang-parse-diagnostics-file
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/create_ladder_graph.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/git/find-rev
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/lint/common_lint.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/lint/cpp_lint.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/lint/generic_lint.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/lit/lit.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/lit/lit/ProgressBar.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/lit/lit/main.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/llvm-build/llvm-build
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/llvm-compilers-check
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/llvm-lit/llvm-lit.in
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/release/findRegressions-nightly.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/release/findRegressions-simple.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/schedcover.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/shuffle_fuzz.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/sort_includes.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/testgen/mc-bundling-x86-gen.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/update_llc_test_checks.py
-REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/wciia.py
+REPLACE_PYTHON+=	examples/Kaleidoscope/MCJIT/cached/genk-timing.py
+REPLACE_PYTHON+=	examples/Kaleidoscope/MCJIT/cached/split-lib.py
+REPLACE_PYTHON+=	examples/Kaleidoscope/MCJIT/complete/genk-timing.py
+REPLACE_PYTHON+=	examples/Kaleidoscope/MCJIT/complete/split-lib.py
+REPLACE_PYTHON+=	examples/Kaleidoscope/MCJIT/lazy/genk-timing.py
+REPLACE_PYTHON+=	test/BugPoint/compile-custom.ll.py
+REPLACE_PYTHON+=	test/tools/llvm-readobj/Inputs/relocs.py
+REPLACE_PYTHON+=	utils/Misc/zkill
+REPLACE_PYTHON+=	utils/Target/ARM/analyze-match-table.py
+REPLACE_PYTHON+=	utils/bisect
+REPLACE_PYTHON+=	utils/clang-parse-diagnostics-file
+REPLACE_PYTHON+=	utils/create_ladder_graph.py
+REPLACE_PYTHON+=	utils/git/find-rev
+REPLACE_PYTHON+=	utils/lint/common_lint.py
+REPLACE_PYTHON+=	utils/lint/cpp_lint.py
+REPLACE_PYTHON+=	utils/lint/generic_lint.py
+REPLACE_PYTHON+=	utils/lit/lit.py
+REPLACE_PYTHON+=	utils/lit/lit/ProgressBar.py
+REPLACE_PYTHON+=	utils/lit/lit/main.py
+REPLACE_PYTHON+=	utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest
+REPLACE_PYTHON+=	utils/llvm-build/llvm-build
+REPLACE_PYTHON+=	utils/llvm-compilers-check
+REPLACE_PYTHON+=	utils/llvm-lit/llvm-lit.in
+REPLACE_PYTHON+=	utils/release/findRegressions-nightly.py
+REPLACE_PYTHON+=	utils/release/findRegressions-simple.py
+REPLACE_PYTHON+=	utils/schedcover.py
+REPLACE_PYTHON+=	utils/shuffle_fuzz.py
+REPLACE_PYTHON+=	utils/sort_includes.py
+REPLACE_PYTHON+=	utils/testgen/mc-bundling-x86-gen.py
+REPLACE_PYTHON+=	utils/update_llc_test_checks.py
+REPLACE_PYTHON+=	utils/wciia.py
 
 TEST_TARGET=		check-lldb
-TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
