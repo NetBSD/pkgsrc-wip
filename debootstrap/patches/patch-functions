@@ -1,6 +1,6 @@
 $NetBSD: patch-functions,v 1.2 2015/03/22 01:52:06 tnn2 Exp $
 
---- functions.orig	2016-01-29 16:36:56.000000000 +0000
+--- functions.orig	2016-02-18 04:01:23.000000000 +0000
 +++ functions
 @@ -1020,6 +1020,11 @@ setup_proc () {
  			mount -t linprocfs proc $TARGET/proc
@@ -12,9 +12,9 @@ $NetBSD: patch-functions,v 1.2 2015/03/22 01:52:06 tnn2 Exp $
 +		mount -t procfs -o linux proc $TARGET/proc
 +		;;
  	    hurd*)
- 		;;
- 	    *)
-@@ -1063,7 +1068,7 @@ setup_devices () {
+ 		# firmlink $TARGET/{dev,servers,proc} to the system ones.
+ 		settrans -a "$TARGET/dev" /hurd/firmlink /dev
+@@ -1068,7 +1073,7 @@ setup_devices () {
  		if true; then
  			setup_devices_simple
  		elif [ -e "$DEVICES_TARGZ" ]; then

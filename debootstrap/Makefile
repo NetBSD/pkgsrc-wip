@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2015/08/06 07:56:45 thomasklausner Exp $
 
-DISTNAME=	debootstrap_1.0.78
+DISTNAME=	debootstrap_1.0.79
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/debootstrap/}
@@ -18,8 +18,8 @@ LICENSE=	mit
 DEPENDS+=	wget-[0-9]*:../../net/wget
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 
-#WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-WRKSRC=		${WRKDIR}/debootstrap
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+#WRKSRC=		${WRKDIR}/debootstrap
 USE_LANGUAGES=	# none
 
 USE_TOOLS+=	gmake xzcat tar bash:run
