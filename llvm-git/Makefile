@@ -23,8 +23,6 @@ CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-# Try to optimize building LLVM for now.
-CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
@@ -69,6 +67,9 @@ REPLACE_PYTHON+=	utils/wciia.py
 
 TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
