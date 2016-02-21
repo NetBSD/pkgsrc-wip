@@ -11,56 +11,54 @@ HOMEPAGE=	http://clang.llvm.org/
 COMMENT=	C language family frontend for LLVM
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}
+WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
 
 USE_LANGUAGES=		c c++
 USE_CMAKE+=		yes
 GCC_REQD+=		4.8
 
-REPLACE_PERL+=		${WRKDIR}/clang/test/make_test_dirs.pl
-REPLACE_PERL+=		${WRKDIR}/clang/tools/scan-build/bin/scan-build
-REPLACE_PERL+=		${WRKDIR}/clang/tools/scan-build/libexec/c++-analyzer
-REPLACE_PERL+=		${WRKDIR}/clang/tools/scan-build/libexec/ccc-analyzer
-REPLACE_PERL+=		${WRKDIR}/clang/utils/TestUtils/pch-test.pl
-REPLACE_PERL+=		${WRKDIR}/clang/utils/analyzer/reducer.pl
-REPLACE_PERL+=		${WRKDIR}/clang/utils/analyzer/update_plist_test.pl
-REPLACE_PERL+=		${WRKDIR}/clang/www/demo/index.cgi
-
-REPLACE_PYTHON+=	${WRKDIR}/clang/bindings/python/examples/cindex/cindex-dump.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/bindings/python/examples/cindex/cindex-includes.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/docs/tools/dump_ast_matchers.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/docs/tools/dump_format_style.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/tools/clang-format/clang-format-diff.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/tools/clang-format/git-clang-format
-REPLACE_PYTHON+=	${WRKDIR}/clang/tools/scan-build/bin/set-xcode-analyzer
-REPLACE_PYTHON+=	${WRKDIR}/clang/tools/scan-view/bin/scan-view
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/ABITest/ABITestGen.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/CIndex/completion_logger_server.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/CaptureCmd
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/CmpDriver
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/FindSpecRefs
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/FuzzTest
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/TestUtils/deep-stack.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/analyzer/CmpRuns.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/analyzer/SATestAdd.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/analyzer/SATestBuild.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/analyzer/SumTimerInfo.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/analyzer/ubiviz
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/check_cfc/check_cfc.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/check_cfc/obj_diff.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/check_cfc/test_check_cfc.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/utils/token-delta.py
-REPLACE_PYTHON+=	${WRKDIR}/clang/www/builtins.py
-
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-
 # Try to optimize building LLVM for now.
 CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
 
-CMAKE_ARG_PATH=	${WRKDIR}/clang
+REPLACE_PERL+=		test/make_test_dirs.pl
+REPLACE_PERL+=		tools/scan-build/bin/scan-build
+REPLACE_PERL+=		tools/scan-build/libexec/c++-analyzer
+REPLACE_PERL+=		tools/scan-build/libexec/ccc-analyzer
+REPLACE_PERL+=		utils/TestUtils/pch-test.pl
+REPLACE_PERL+=		utils/analyzer/reducer.pl
+REPLACE_PERL+=		utils/analyzer/update_plist_test.pl
+REPLACE_PERL+=		www/demo/index.cgi
+
+REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-dump.py
+REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-includes.py
+REPLACE_PYTHON+=	docs/tools/dump_ast_matchers.py
+REPLACE_PYTHON+=	docs/tools/dump_format_style.py
+REPLACE_PYTHON+=	tools/clang-format/clang-format-diff.py
+REPLACE_PYTHON+=	tools/clang-format/git-clang-format
+REPLACE_PYTHON+=	tools/scan-build/bin/set-xcode-analyzer
+REPLACE_PYTHON+=	tools/scan-view/bin/scan-view
+REPLACE_PYTHON+=	utils/ABITest/ABITestGen.py
+REPLACE_PYTHON+=	utils/CIndex/completion_logger_server.py
+REPLACE_PYTHON+=	utils/CaptureCmd
+REPLACE_PYTHON+=	utils/CmpDriver
+REPLACE_PYTHON+=	utils/FindSpecRefs
+REPLACE_PYTHON+=	utils/FuzzTest
+REPLACE_PYTHON+=	utils/TestUtils/deep-stack.py
+REPLACE_PYTHON+=	utils/analyzer/CmpRuns.py
+REPLACE_PYTHON+=	utils/analyzer/SATestAdd.py
+REPLACE_PYTHON+=	utils/analyzer/SATestBuild.py
+REPLACE_PYTHON+=	utils/analyzer/SumTimerInfo.py
+REPLACE_PYTHON+=	utils/analyzer/ubiviz
+REPLACE_PYTHON+=	utils/check_cfc/check_cfc.py
+REPLACE_PYTHON+=	utils/check_cfc/obj_diff.py
+REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
+REPLACE_PYTHON+=	utils/token-delta.py
+REPLACE_PYTHON+=	www/builtins.py
 
 .include "../../mk/compiler.mk"
 
@@ -69,15 +67,18 @@ CMAKE_ARG_PATH=	${WRKDIR}/clang
 SUBST_CLASSES+=			libcxx
 SUBST_STAGE.libcxx=		pre-configure
 SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ as we're using GCC
-SUBST_FILES.libcxx=		${WRKDIR}/clang/lib/Driver/ToolChains.cpp
-SUBST_FILES.libcxx+=		${WRKDIR}/clang/lib/Driver/Tools.cpp
+SUBST_FILES.libcxx=		lib/Driver/ToolChains.cpp
+SUBST_FILES.libcxx+=		lib/Driver/Tools.cpp
 SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
 
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
+TEST_TARGET=		clang-test
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}/build
+	${RUN} mkdir -p ${WRKDIR}/build
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
