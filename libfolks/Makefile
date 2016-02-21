@@ -17,8 +17,13 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake msgfmt
 USE_PKGLOCALEDIR= yes
 
-PKGCONFIG_OVERRIDE+=	backends/telepathy/lib/folks-telepathy.pc.in
-PKGCONFIG_OVERRIDE+=	folks/folks.pc.in
+
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/folks-dummy.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/folks-telepathy.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/folks.pc
+
+# XXX disabled because this blocks the build, unclear why
+CONFIGURE_ARGS+=	--enable-eds-backend=no
 
 TEST_TARGET=	check
 
