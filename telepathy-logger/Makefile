@@ -1,13 +1,12 @@
 # $NetBSD: Makefile,v 1.30 2015/12/05 21:25:30 adam Exp $
 
-DISTNAME=	telepathy-logger-0.2.7
-PKGREVISION=	16
+DISTNAME=	telepathy-logger-0.8.2
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-logger/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Logger
+HOMEPAGE=	http://telepathy.freedesktop.org/
 COMMENT=	Logger module for telepathy
 LICENSE=	gnu-lgpl-v2.1
 
