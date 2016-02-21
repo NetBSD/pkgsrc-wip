@@ -11,15 +11,22 @@ HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/build
-
 USE_LANGUAGES=		c c++
-USE_CMAKE+=		yes
+USE_CMAKE=		yes
 GCC_REQD+=		4.8
+PY_PATCHPLIST=		yes
+
+WRKSRC=			${WRKDIR}/${PKGBASE}
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
+
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
+# Try to optimize building LLVM for now.
+CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
-
-PY_PATCHPLIST=		yes
 
 REPLACE_PERL+=		${WRKDIR}/llvm/utils/GenLibDeps.pl
 REPLACE_PERL+=		${WRKDIR}/llvm/utils/UpdateCMakeLists.pl
@@ -63,17 +70,8 @@ REPLACE_PYTHON+=	${WRKDIR}/llvm/utils/wciia.py
 TEST_TARGET=		check-lldb
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-
-# Try to optimize building LLVM for now.
-CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
-
-CMAKE_ARG_PATH=	${WRKDIR}/llvm
-
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}
+	${RUN} mkdir -p ${WRKDIR}/build
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
