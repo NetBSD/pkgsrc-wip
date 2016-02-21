@@ -21,7 +21,7 @@ REPLACE_BASH+=	build.sh
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-CMAKE_ARGS+=	-DCORECLR_SET_RPATH=OFF
+CMAKE_ARGS+=	-DCORECLR_SET_RPATH:BOOL=OFF
 
 do-configure:
 	${RUN} ${ECHO} Skip configure and call CMake via build.sh
