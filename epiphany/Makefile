@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.162 2016/01/06 10:46:50 adam Exp $
 
-DISTNAME=	epiphany-2.30.6
-PKGREVISION=	44
+DISTNAME=	epiphany-3.16.3
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.30/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/3.16/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/epiphany/
@@ -15,9 +14,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
-
-# see pkgsrc/security/mozilla-rootcerts
-CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,16 +26,21 @@ PKGCONFIG_OVERRIDE=	data/epiphany.pc.in
 
 .include "options.mk"
 
-GCONF_SCHEMAS=		epiphany.schemas
-GCONF_SCHEMAS+=	epiphany-lockdown.schemas
+GCONF_SCHEMAS=		Epiphany.enums.xml
+GCONF_SCHEMAS+=		epiphany.gschema.xml
 
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
+.include "../../devel/libwnck3/buildlink3.mk"
+.include "../../net/avahi/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../wip/gcr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
-.include "../../www/webkit24-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"

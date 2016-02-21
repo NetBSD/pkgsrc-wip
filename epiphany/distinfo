@@ -1,8 +1,6 @@
 $NetBSD: distinfo,v 1.55 2015/11/04 02:46:53 agc Exp $
 
-SHA1 (epiphany-2.30.6.tar.bz2) = a4bde975f9b2b97d6aad14b4b8a715b40d19a155
-RMD160 (epiphany-2.30.6.tar.bz2) = 60f2c7d699dd8728dc79cce012475972943c4007
-SHA512 (epiphany-2.30.6.tar.bz2) = 0057ad94bfba73c3957da185ce087fdcfc621df7e7818fbf46aea63a288de8df7c63b41eafb412a5d8ba3cfafbd3159f0dcda26b66a16c0dca3e0fe54dc84525
-Size (epiphany-2.30.6.tar.bz2) = 5927938 bytes
-SHA1 (patch-aa) = 408c45c8fa725e01608c766cd3a093c4f940244c
-SHA1 (patch-embed_downloader-view.c) = 534840af5820d2570844de5d08c6e992ed263215
+SHA1 (epiphany-3.16.3.tar.xz) = f5d7ad0ee302496f59945ff9034758d775dbb78f
+RMD160 (epiphany-3.16.3.tar.xz) = 270f4b7018e7000813d26f80ea3832642b0e25c0
+SHA512 (epiphany-3.16.3.tar.xz) = 68f4dc0e299b929f244818d93a9af14f48ef2c3a93813fe5457c11d37ddb5a5e2b5ae3f93f0d41e8095590f87d8679d2cee5b6298c128475a9ad9eb6aa3c8bae
+Size (epiphany-3.16.3.tar.xz) = 3082680 bytes
