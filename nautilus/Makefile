@@ -29,8 +29,13 @@ BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 # current default path
 INSTALLATION_DIRS+=	lib/nautilus/extensions-2.0
 
+
+# XXX this should maybe move to gnome-desktop3?
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+
 .include "../../wip/meta-tracker/buildlink3.mk"
-.include "../../databases/shared-mime-info/mimedb.mk"
+#.include "../../net/libgdata/buildlink3.mk"
+#.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/exempi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.5
@@ -39,14 +44,14 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.5
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+#.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.13.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
+#.include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
