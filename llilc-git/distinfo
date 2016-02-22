@@ -1,2 +1,4 @@
 $NetBSD$
 
+SHA1 (patch-include_Jit_LLILCJit.h) = d58f2096a435e20f39a80129183290eb519219c0
+SHA1 (patch-lib_CoreDisTools_coredistools.cpp) = 31b5b0b5be6577509f9fb068133be9d3a259d4b8
