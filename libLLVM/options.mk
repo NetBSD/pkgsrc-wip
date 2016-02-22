@@ -25,6 +25,7 @@ PKG_SUGGESTED_OPTIONS+=		llvm-target-mips
 PKG_SUGGESTED_OPTIONS+=		llvm-target-${tgt:tl}
 .  endfor
 .endif
+PKG_SUGGESTED_OPTIONS+=		llvm-target-amdgpu	# for mesa/radeon
 
 .include "../../mk/bsd.options.mk"
 
