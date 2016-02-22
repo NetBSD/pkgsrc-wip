@@ -12,15 +12,22 @@ HOMEPAGE=	https://github.com/dotnet/llilc
 COMMENT=	LLVM based compiler for .NET Core
 LICENSE=	mit
 
+WRKSRC=		${WRKDIR}/llilc
+CONFIGURE_DIRS=	${WRKDIR}/build
+CMAKE_ARG_PATH=	${WRKSRC}
+
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	build.sh
 
-#do-build:
-#		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
+CMAKE_ARGS+=	-DWITH_CORECLR:PATH=${PREFIX}/CoreCLR
 
+post-extract:
+	${RUN} mkdir -p ${WRKDIR}/build
+
+.include "../../wip/coreclr-git/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../wip/lldb-git/buildlink3.mk"
 .include "../../wip/clang-git/buildlink3.mk"
