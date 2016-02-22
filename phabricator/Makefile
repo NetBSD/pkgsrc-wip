@@ -60,23 +60,25 @@ SUBST_FILES.php_env+=	scripts/almanac/manage_almanac.php \
 			scripts/symbols/*.php \
 			scripts/user/*.php \
 			scripts/util/*.php \
-			support/aphlict/server/aphlict_launcher.php 
+			support/aphlict/server/aphlict_launcher.php
 SUBST_SED.php_env=	-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
-
-
-REPLACE_PYTHON+=	externals/twilio-php/docs/_themes/flask_theme_support.py \
-			externals/twilio-php/docs/conf.py
-
-CHECK_INTERPRETER_SKIP+=	externals/wordlist/password.lst
 
 NO_BUILD=		yes
 
-PHABRICATOR_DIR=	${PREFIX}/share/phabricator
+PHABRICATOR_DIR=	share/phabricator
 
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS+=	${PHABRICATOR_DIR}
+
+CHECK_INTERPRETER_SKIP+=${PHABRICATOR_DIR}/externals/wordlist/password.lst
+
+CHMOD_FILES=		conf LICENSE NOTICE README.md externals resources src \
+			support webroot scripts/__init_script__.php scripts/fpm/warmup.php
+
+post-extract:
+			cd ${WRKSRC} && ${FIND} ${CHMOD_FILES} -type f -exec ${CHMOD} -x \{\} \;
 
 do-install:
-			cd ${WRKSRC} && pax -rw -pe * ${DESTDIR}${PHABRICATOR_DIR}
+			cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${PREFIX}/${PHABRICATOR_DIR}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
