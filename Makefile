@@ -350,6 +350,7 @@ SUBDIR+=	cl-who
 SUBDIR+=	clamassassin
 SUBDIR+=	clang
 SUBDIR+=	clang-git
+SUBDIR+=	clang-static-analyzer
 SUBDIR+=	clang-static-analyzer-git
 SUBDIR+=	classgen
 SUBDIR+=	classias
