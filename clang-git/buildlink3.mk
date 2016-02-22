@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	clang
 .if !defined(CLANG_BUILDLINK3_MK)
 CLANG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.clang+=	clang>=3.7.0nb20151127
+BUILDLINK_API_DEPENDS.clang+=	clang>=3.9.0<3.10.0
 BUILDLINK_PKGSRCDIR.clang?=	../../wip/clang-git
 
 .include "../../textproc/libxml2/buildlink3.mk"
