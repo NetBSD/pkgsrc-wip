@@ -87,5 +87,6 @@ post-extract:
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
