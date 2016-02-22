@@ -1,3 +1,6 @@
+- GNOME3: re-enable options once the relevant packages
+  have been updated.
+
 - PLIST variation by options are not fully checked yet.
 - Combination of options may have some constraint, but not
   checked, for example,
