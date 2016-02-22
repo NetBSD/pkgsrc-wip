@@ -348,6 +348,7 @@ SUBDIR+=	cl-unicode
 SUBDIR+=	cl-who
 SUBDIR+=	clamassassin
 SUBDIR+=	clang-git
+SUBDIR+=	clang-static-analyzer-git
 SUBDIR+=	classgen
 SUBDIR+=	classias
 SUBDIR+=	classic-mac-font-pack

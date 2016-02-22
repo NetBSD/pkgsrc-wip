@@ -1,92 +1,12 @@
-# $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
+# $NetBSD$
 
 PKGNAME=	clang-3.9.0
-CATEGORIES=	lang devel
+PYTHON_FOR_BUILD_ONLY=	yes
 
-GIT_REPOSITORIES=	clang
-GIT_REPO.clang=		https://github.com/llvm-mirror/clang.git
+CMAKE_ARGS+=	-DCLANG_ENABLE_STATIC_ANALYZER=OFF
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://clang.llvm.org/
-COMMENT=	C language family frontend for LLVM
-LICENSE=	modified-bsd
+# There are some contrib utilities written in python here.
+# We don't want to add a python runtime dependency for that.
+CHECK_INTERPRETER_SKIP+=	share/clang/*
 
-WRKSRC=			${WRKDIR}/${PKGBASE}
-CONFIGURE_DIRS=		${WRKDIR}/build
-CMAKE_ARG_PATH=		${WRKSRC}
-
-USE_LANGUAGES=		c c++
-USE_CMAKE+=		yes
-GCC_REQD+=		4.8
-
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-# Try to optimize building LLVM for now.
-CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
-
-REPLACE_PERL+=		test/make_test_dirs.pl
-REPLACE_PERL+=		tools/scan-build/bin/scan-build
-REPLACE_PERL+=		tools/scan-build/libexec/c++-analyzer
-REPLACE_PERL+=		tools/scan-build/libexec/ccc-analyzer
-REPLACE_PERL+=		utils/TestUtils/pch-test.pl
-REPLACE_PERL+=		utils/analyzer/reducer.pl
-REPLACE_PERL+=		utils/analyzer/update_plist_test.pl
-REPLACE_PERL+=		www/demo/index.cgi
-
-REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-dump.py
-REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-includes.py
-REPLACE_PYTHON+=	docs/tools/dump_ast_matchers.py
-REPLACE_PYTHON+=	docs/tools/dump_format_style.py
-REPLACE_PYTHON+=	tools/clang-format/clang-format-diff.py
-REPLACE_PYTHON+=	tools/clang-format/git-clang-format
-REPLACE_PYTHON+=	tools/scan-build/bin/set-xcode-analyzer
-REPLACE_PYTHON+=	tools/scan-view/bin/scan-view
-REPLACE_PYTHON+=	utils/ABITest/ABITestGen.py
-REPLACE_PYTHON+=	utils/CIndex/completion_logger_server.py
-REPLACE_PYTHON+=	utils/CaptureCmd
-REPLACE_PYTHON+=	utils/CmpDriver
-REPLACE_PYTHON+=	utils/FindSpecRefs
-REPLACE_PYTHON+=	utils/FuzzTest
-REPLACE_PYTHON+=	utils/TestUtils/deep-stack.py
-REPLACE_PYTHON+=	utils/analyzer/CmpRuns.py
-REPLACE_PYTHON+=	utils/analyzer/SATestAdd.py
-REPLACE_PYTHON+=	utils/analyzer/SATestBuild.py
-REPLACE_PYTHON+=	utils/analyzer/SumTimerInfo.py
-REPLACE_PYTHON+=	utils/analyzer/ubiviz
-REPLACE_PYTHON+=	utils/check_cfc/check_cfc.py
-REPLACE_PYTHON+=	utils/check_cfc/obj_diff.py
-REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
-REPLACE_PYTHON+=	utils/token-delta.py
-REPLACE_PYTHON+=	www/builtins.py
-
-.include "../../mk/compiler.mk"
-
-# patch NetBSD::GetCXXStdlibType
-.if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc)
-SUBST_CLASSES+=			libcxx
-SUBST_STAGE.libcxx=		pre-configure
-SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ as we're using GCC
-SUBST_FILES.libcxx=		lib/Driver/ToolChains.cpp
-SUBST_FILES.libcxx+=		lib/Driver/Tools.cpp
-SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
-
-CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
-.endif
-
-TEST_TARGET=		clang-test
-TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
-
-post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
-
-.include "../../devel/googletest/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/pyversion.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/tool.mk"
-.include "../../wip/llvm-git/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
+.include "../../wip/clang-git/Makefile.common"
