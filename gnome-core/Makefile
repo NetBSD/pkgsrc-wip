@@ -32,12 +32,11 @@ DEPENDS+=	dconf-editor>=3.16.0:../../wip/dconf-editor
 DEPENDS+=	evolution-data-server>=3.16.2:../../wip/evolution-data-server
 DEPENDS+=	empathy>=3.12.10:../../wip/empathy
 DEPENDS+=	eog>=3.16.2:../../graphics/eog3
-DEPENDS+=	epiphany>=3.16.1:../../www/epiphany
+DEPENDS+=	epiphany>=3.16.1:../../wip/epiphany
 DEPENDS+=	evince>=3.16.0:../../print/evince3
-DEPENDS+=	folks>=0.10.1:../../wip/libfolks
 #DEPENDS+=	gcr>=3.16.0:../../devel/gcr
-DEPENDS+=	gdk-pixbuf>=2.31.4:../../graphics/gdk-pixbuf
-DEPENDS+=	gdm>=3.16.1.1:../../x11/gdm
+DEPENDS+=	gdk-pixbuf2>=2.31.4:../../graphics/gdk-pixbuf2
+DEPENDS+=	gdm>=3.16.1.1:../../wip/gdm
 #DEPENDS+=	geocode-glib>=3.16.2:../../devel/geocode-glib
 DEPENDS+=	gjs>=1.43.3:../../wip/gjs
 DEPENDS+=	glib>=2.44.1:../../devel/glib2
@@ -65,7 +64,7 @@ DEPENDS+=	gnome-settings-daemon>=3.16.2:../../sysutils/gnome-settings-daemon
 #DEPENDS+=	gnome-shell-extensions>=3.16.1:../../devel/gnome-shell-extensions
 #DEPENDS+=	gnome-system-log>=3.9.90:../../devel/gnome-system-log
 DEPENDS+=	gnome-system-monitor>=3.16.0:../../sysutils/gnome-system-monitor
-DEPENDS+=	gnome-terminal>=3.16.2:../../x11/gnome-terminal
+DEPENDS+=	gnome-terminal>=3.16.2:../../wip/gnome-terminal
 #DEPENDS+=	gnome-themes-standard>=3.16.2:../../devel/gnome-themes-standard
 DEPENDS+=	gnome-user-docs>=3.16.1:../../misc/gnome-user-docs
 #DEPENDS+=	gnome-user-share>=3.14.2:../../devel/gnome-user-share
@@ -107,7 +106,7 @@ DEPENDS+=	libwnck>=3.14.0:../../devel/libwnck
 DEPENDS+=	mm-common>=0.9.7:../../devel/mm-common
 DEPENDS+=	mousetweaks>=3.12.0:../../wip/mousetweaks
 #DEPENDS+=	mutter>=3.16.1.1:../../devel/mutter
-DEPENDS+=	nautilus>=3.16.2:../../sysutils/nautilus
+DEPENDS+=	nautilus>=3.16.2:../../wip/nautilus
 DEPENDS+=	pango>=1.36.8:../../devel/pango
 DEPENDS+=	pangomm>=2.36.0:../../devel/pangomm
 DEPENDS+=	${PYPKGPREFIX}-gobject>=3.16.1:../../devel/py-gobject
