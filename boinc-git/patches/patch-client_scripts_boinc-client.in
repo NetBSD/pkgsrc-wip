@@ -1,0 +1,19 @@
+$NetBSD$
+
+Avoid == in test, as it is not portable.
+
+--- client/scripts/boinc-client.in.orig	2016-02-22 14:20:54.000000000 +0000
++++ client/scripts/boinc-client.in
+@@ -471,10 +471,10 @@ case "$1" in
+             PID=""
+           fi
+         fi
+-        if [ "$PID" == "" ]; then
++        if [ "$PID" = "" ]; then
+           PID=`local_pidof $BOINCEXE_NAME`
+         fi
+-        if [ "$PID" == "" ]; then
++        if [ "$PID" = "" ]; then
+           PID=`local_pidof $BOINCEXE`
+         fi
+         if [ "$PID" != "" ]; then

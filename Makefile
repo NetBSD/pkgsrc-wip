@@ -238,6 +238,7 @@ SUBDIR+=	bochs
 SUBDIR+=	bogomips
 SUBDIR+=	boinc
 SUBDIR+=	boinc-client
+SUBDIR+=	boinc-git
 SUBDIR+=	boinc-lib
 SUBDIR+=	bonnie++-current
 SUBDIR+=	boo
