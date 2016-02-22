@@ -1,0 +1,15 @@
+@comment $NetBSD$
+bin/wla-6502
+bin/wla-6510
+bin/wla-65816
+bin/wla-65c02
+bin/wla-gb
+bin/wla-huc6280
+bin/wla-spc700
+bin/wla-z80
+bin/wlab
+bin/wlalink
+share/doc/wla-dx/CHANGELOG
+share/doc/wla-dx/FILE_FORMATS
+share/doc/wla-dx/README
+share/doc/wla-dx/README.md
