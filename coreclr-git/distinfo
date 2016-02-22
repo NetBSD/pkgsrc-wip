@@ -5,5 +5,3 @@ SHA1 (patch-src_pal_inc_pal.h) = 7d3ef148af8b1b24067ba4cb5efc12581ebc6881
 SHA1 (patch-src_pal_src_cruntime_printf.cpp) = 8a86c57e1fe3953d158e1860f04bd19d7df1fe08
 SHA1 (patch-src_pal_src_cruntime_printfcpp.cpp) = 4d1ba5fea45402259c67428506f39d9c3128ecbd
 SHA1 (patch-src_pal_src_cruntime_silent__printf.cpp) = 0922321ad05a90cc3b87b1e2663ff4d0b2e4717e
-SHA1 (patch-src_pal_tests_palsuite_exception__handling_pal__sxs_test1_exceptionsxs.cpp) = 174daa49b8bb21b851855e016f3c0c824b75aae0
-SHA1 (patch-src_pal_tools_gen-buildsys-clang.sh) = a495e13ad919aaeaa0963795ff9a76a2f52983fa
