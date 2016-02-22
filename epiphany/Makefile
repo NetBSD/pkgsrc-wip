@@ -30,11 +30,11 @@ GCONF_SCHEMAS=		Epiphany.enums.xml
 GCONF_SCHEMAS+=		epiphany.gschema.xml
 
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../wip/gcr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0

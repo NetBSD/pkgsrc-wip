@@ -1,1 +1,5 @@
-This crashes at runtime. schemas are missing.
+This package hangs and has messages of 
+Error sending IPC message: Message too long
+
+Saw occasional core dumps and leaks.
+Old webkit may be the problem?
