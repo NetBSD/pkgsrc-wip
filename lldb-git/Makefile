@@ -8,7 +8,7 @@ GIT_REPO.lldb=		git://github.com/llvm-mirror/lldb.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
-COMMENT=	next generation, high-performance debugger
+COMMENT=	Next generation, high-performance debugger
 LICENSE=	modified-bsd
 
 WRKSRC=			${WRKDIR}/${PKGBASE}
@@ -16,15 +16,14 @@ CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
 USE_LANGUAGES=		c c++
-USE_CMAKE+=		yes
+USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
 
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-# Try to optimize building LLVM for now.
-CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
