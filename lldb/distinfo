@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
+
+SHA1 (lldb-3.8.0rc1.src.tar.xz) = bfd6e8231b213b967aba3f2bdf2f4863bca14426
+RMD160 (lldb-3.8.0rc1.src.tar.xz) = cd4ad26cd4c573cd9d3df5738c17eaadabb336ad
+SHA512 (lldb-3.8.0rc1.src.tar.xz) = acb7755308dfb4bbd78732b1e7e0ac12b61f5c72bdb30be737549c14abd0ed8b31fc80d3f592890b47312b670cfe3f8f9d493531ad19e1bd4fdcd15406241362
+Size (lldb-3.8.0rc1.src.tar.xz) = 10928688 bytes
+SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 1b8d85d5aa4ac35d4b303a1dc7754ce63cf96cb0
+SHA1 (patch-include_lldb_Utility_regcclass.h) = 9ed649e8deb5924feaf82a6e675f5c596367b3d6
+SHA1 (patch-include_lldb_Utility_regcname.h) = b67145f0437d3c09adc33a925d49267cd9ba4fd7
+SHA1 (patch-include_lldb_Utility_regengine.inc) = a031c43a63acab80a97cfb7727326d610d4ad9ab
+SHA1 (patch-include_lldb_Utility_regex2.h) = 822a47b1221368ec5442bfbdbc20fe4e370c1a6b
+SHA1 (patch-include_lldb_Utility_regex__impl.h) = 4d99669a756bd662ae28abc8cefe6e1538ef84b6
+SHA1 (patch-include_lldb_Utility_regutils.h) = ea36409f8cd05dcf9b81144cbc136abc5fc3a190
+SHA1 (patch-scripts_CMakeLists.txt) = 07043853b1a923aa8fcb9124b79453eca21c01fb
+SHA1 (patch-source_Utility_CMakeLists.txt) = 5b10fe94d76135d8d5ba31862066841394dd45c1
+SHA1 (patch-source_Utility_regcomp.c) = bd315000773bab38b6fe6d119420afbcb5b83a59
+SHA1 (patch-source_Utility_regerror.c) = 6bbf8dc3f12e64515d166a475452f3f08d849ad3
+SHA1 (patch-source_Utility_regexec.c) = 6e523b4d00d74fb51d5971d415fd3d0a8323461b
+SHA1 (patch-source_Utility_regfree.c) = a3033a951c2773b5fd1209ee2a60be2e042970ee
+SHA1 (patch-source_Utility_regstrlcpy.c) = 284dc5d06d88e243fb91a1225008319b282d6fdc
+SHA1 (patch-tools_lldb-mi_MIUtilParse.h) = cbd524e70c10cee25e44f1befe594a7198b008b9

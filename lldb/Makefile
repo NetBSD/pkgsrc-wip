@@ -1,10 +1,11 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	lldb-3.9.0
+DISTNAME=	lldb-3.8.0rc1.src
+PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-
-GIT_REPOSITORIES=	lldb
-GIT_REPO.lldb=		git://github.com/llvm-mirror/lldb.git
+MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc1/
+#MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
@@ -13,7 +14,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
@@ -121,11 +121,10 @@ post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
 .include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
-.include "../../wip/llvm-git/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git
-.include "../../wip/clang-git/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm
+.include "../../wip/llvm/buildlink3.mk"
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang
+.include "../../wip/clang/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"
