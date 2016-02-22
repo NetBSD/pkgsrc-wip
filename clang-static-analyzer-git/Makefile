@@ -3,7 +3,7 @@
 PKGNAME=	clang-static-analyzer-3.9.0
 #PKGNAME=	${DISTNAME:S/clang/clang-static-analyzer/}
 
-DEPENDS+=	clang>=${PKGVERSION_NOREV}:../../wip/clang-git
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git
 
 USE_TOOLS+=	perl:run
 
