@@ -23,8 +23,8 @@ DEPENDS+=	atkmm>=2.22.7:../../devel/atkmm
 DEPENDS+=	cantarell-fonts>=0.0.16:../../fonts/cantarell-fonts
 #DEPENDS+=	caribou>=0.4.18.1:../../devel/caribou
 DEPENDS+=	clutter>=1.22.2:../../graphics/clutter
-DEPENDS+=	clutter-gst>=2.0.14:../../multimedia/clutter-gst
-DEPENDS+=	clutter-gst>=3.0.4:../../wip/clutter-gst
+DEPENDS+=	clutter-gst>=2.0.12:../../multimedia/clutter-gst
+#DEPENDS+=	clutter-gst>=3.0.4:../../wip/clutter-gst
 DEPENDS+=	clutter-gtk>=1.6.0:../../graphics/clutter-gtk
 DEPENDS+=	cogl>=1.20.0:../../graphics/cogl
 DEPENDS+=	dconf>=0.24.0:../../wip/dconf
@@ -34,7 +34,7 @@ DEPENDS+=	empathy>=3.12.10:../../wip/empathy
 DEPENDS+=	eog>=3.16.2:../../graphics/eog3
 DEPENDS+=	epiphany>=3.16.1:../../www/epiphany
 DEPENDS+=	evince>=3.16.0:../../print/evince3
-DEPENDS+=	folks>=0.11.0:../../chat/libfolks
+DEPENDS+=	folks>=0.10.1:../../wip/libfolks
 #DEPENDS+=	gcr>=3.16.0:../../devel/gcr
 DEPENDS+=	gdk-pixbuf>=2.31.4:../../graphics/gdk-pixbuf
 DEPENDS+=	gdm>=3.16.1.1:../../x11/gdm
