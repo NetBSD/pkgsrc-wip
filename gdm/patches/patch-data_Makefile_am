@@ -1,0 +1,63 @@
+$OpenBSD: patch-data_Makefile_am,v 1.1 2015/10/18 13:25:54 ajacoutot Exp $
+--- data/Makefile.am.orig	2015-11-17 17:16:04.000000000 +0000
++++ data/Makefile.am
+@@ -192,6 +192,7 @@ if ENABLE_GDM_XSESSION
+ Xsession: $(srcdir)/Xsession.in
+ 	sed	-e 's,[@]XSESSION_SHELL[@],$(XSESSION_SHELL),g' \
+ 		-e 's,[@]libexecdir[@],$(libexecdir),g' \
++		-e 's,[@]X_PATH[@],$(X_PATH),g' \
+ 		<$(srcdir)/Xsession.in >Xsession
+ Xsession_files += Xsession
+ CLEANFILES += Xsession
+@@ -271,7 +272,7 @@ endif
+ 	if test '!' -d $(DESTDIR)$(logdir); then \
+ 		$(mkinstalldirs) $(DESTDIR)$(logdir); \
+ 		chmod 755 $(DESTDIR)$(logdir); \
+-		chown root:root $(DESTDIR)$(logdir) || : ; \
++		chown root:wheel $(DESTDIR)$(logdir) || : ; \
+ 	fi
+ 
+ 	system=`uname`; \
+@@ -294,36 +295,36 @@ endif
+ 	if test '!' -d $(DESTDIR)$(xauthdir); then \
+ 		$(mkinstalldirs) $(DESTDIR)$(xauthdir); \
+ 		chmod 0711 $(DESTDIR)$(xauthdir); \
+-		chown root:gdm $(DESTDIR)$(xauthdir) || : ; \
++		chown root:676 $(DESTDIR)$(xauthdir) || : ; \
+ 	fi
+ 
+ 	if test -n "$(systemdsystemunit)" -a '!' -d $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR); then \
+ 		$(mkinstalldirs) $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR); \
+ 		chmod 0755 $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR); \
+-		chown root:root $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR) || : ; \
++		chown root:wheel $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR) || : ; \
+ 		$(INSTALL_DATA) $(builddir)/$(systemdsystemunit) $(DESTDIR)$(SYSTEMD_SYSTEM_UNIT_DIR)/$(systemdsystemunit); \
+ 	fi
+ 
+ 	if test '!' -d $(DESTDIR)$(screenshotdir); then \
+ 		$(mkinstalldirs) $(DESTDIR)$(screenshotdir); \
+ 		chmod 0755 $(DESTDIR)$(screenshotdir); \
+-		chown gdm:gdm $(DESTDIR)$(screenshotdir) || : ; \
++		chown 676:676 $(DESTDIR)$(screenshotdir) || : ; \
+ 	fi
+ 
+ 	if test '!' -d $(DESTDIR)$(workingdir); then \
+ 		$(mkinstalldirs) $(DESTDIR)$(workingdir); \
+ 		chmod 1770 $(DESTDIR)$(workingdir); \
+-		chown root:gdm $(DESTDIR)$(workingdir) || : ; \
++		chown root:676 $(DESTDIR)$(workingdir) || : ; \
+ 	fi
+ 
+ 	if test '!' -d $(DESTDIR)$(workingdir)/.local/share/applications; then \
+ 		$(mkinstalldirs) $(DESTDIR)$(workingdir)/.local/share/applications; \
+ 		chmod 0755 $(DESTDIR)$(workingdir)/.local/share/applications; \
+-		chown gdm:gdm $(DESTDIR)$(workingdir)/.local/share/applications || : ; \
++		chown 676:676 $(DESTDIR)$(workingdir)/.local/share/applications || : ; \
+ 	fi
+ 
+ 	if test '!' -d $(DESTDIR)$(cachedir); then \
+ 		$(mkinstalldirs) $(DESTDIR)$(cachedir); \
+ 		chmod 1755 $(DESTDIR)$(cachedir); \
+-		chown root:gdm $(DESTDIR)$(cachedir) || : ; \
++		chown root:676 $(DESTDIR)$(cachedir) || : ; \
+ 	fi

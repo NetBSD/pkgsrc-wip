@@ -1,5 +1,29 @@
 $NetBSD: distinfo,v 1.5 2015/06/06 20:00:43 krytarowski Exp $
 
-SHA1 (gdm-3.17.2.tar.gz) = 0d03cce39a025c3e9c972949f76a0ff0e473b25c
-RMD160 (gdm-3.17.2.tar.gz) = 4041dac5baa53fd5244f1c8931a79e556805f919
-Size (gdm-3.17.2.tar.gz) = 2552713 bytes
+SHA1 (gdm-3.18.2.tar.gz) = f62a3fd116198d1ac500d64d00380a4bb6da3de9
+RMD160 (gdm-3.18.2.tar.gz) = 06eb2e9a1d90b06def795d3c1dd02ea3fe0a027e
+SHA512 (gdm-3.18.2.tar.gz) = d0806010a1575880a9f108fdefe0bb68d40c64c9ff9307fa3718a93125d95293e16f9c44e6041723132a0630db09df37e54f8b2996c940458b73c71848725215
+Size (gdm-3.18.2.tar.gz) = 2603925 bytes
+SHA1 (patch-common_gdm-address_c) = 194c2ccb1404709d2cb78cdaded93258bfec74f3
+SHA1 (patch-common_gdm-common_c) = 4ce512da501f37c98c397dc29b375e90c41e845e
+SHA1 (patch-common_gdm-common_h) = 4d2b59d14aac48af055bb805ee4d4533a1e2b674
+SHA1 (patch-common_gdm-log_c) = 7f3b809a082a17b9d6d05b4bcc6f3d623860bd47
+SHA1 (patch-configure_ac) = c2696cedeee73ef3e8f8fb8b7a20c0211bf06e74
+SHA1 (patch-daemon_Makefile_am) = 45e1bdaada5241a488c4d3bb1a4f538f22483a30
+SHA1 (patch-daemon_gdm-display_c) = d24d91aeb8e7e85980b45cc084fc4dc6f81aa938
+SHA1 (patch-daemon_gdm-launch-environment_c) = 712c3dc71101970bbaca2ff36d5a0226d82f58c2
+SHA1 (patch-daemon_gdm-local-display-factory_c) = 7e9e3aab79d5067be8c219408e7a591cfe9af38a
+SHA1 (patch-daemon_gdm-manager_c) = b8429ff15331586e8dfa72c6d6691203029b9d46
+SHA1 (patch-daemon_gdm-server_c) = 283d327c96269b7d2722a15ca9dd33c7ca9210aa
+SHA1 (patch-daemon_gdm-session-record_c) = b62d5cf03c7f6c6bbf2b948a939bfd62cd82ae1d
+SHA1 (patch-daemon_gdm-session-worker-job_c) = 1c067b09637f96e7e997bdfbada6eb61ec760cda
+SHA1 (patch-daemon_gdm-session-worker_c) = ab54b035f669ffc536aa91a5a2786b1e3aed7d36
+SHA1 (patch-daemon_gdm-session-worker_xml) = d6b97526777bc6bf374069cfd11c1370c6bb1ac6
+SHA1 (patch-daemon_gdm-session_c) = 6b7b7173e2b5f678616f5b22e5f7288b2f0a6c70
+SHA1 (patch-daemon_gdm-session_h) = 026c361633566413f7a07135683596feb9f9ad09
+SHA1 (patch-daemon_main_c) = 10342344290dfe27b93d0b5b620861e7af8026d1
+SHA1 (patch-data_Init_in) = 9df2fcf45c138fd3bd392964b6f7dd514e31bcad
+SHA1 (patch-data_Makefile_am) = 699bf0cbb3a8e9f4886985b6880c47230e613bc5
+SHA1 (patch-data_PostSession_in) = 3a8e66f8ae2839a54955aa8a25f51f3a26cbe791
+SHA1 (patch-data_PreSession_in) = 598d10822c2d9e0600a684c29a7b2a2f5e14d10d
+SHA1 (patch-libgdm_gdm-user-switching_c) = 861d676eb6f4a2c94c85993d49f7ee71643b7af1
