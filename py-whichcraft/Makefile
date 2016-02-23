@@ -18,6 +18,5 @@ USE_LANGUAGES=	# none
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/egg.mk"
+.include "../../mk/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
