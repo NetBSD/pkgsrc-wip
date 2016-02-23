@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.15 2014/02/11 21:04:07 noud4 Exp $
 #
 
-DISTNAME=	tracker-0.16.3
-PKGREVISION=	2
+DISTNAME=	tracker-1.7.3
 PKGNAME=	meta-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/0.16/}

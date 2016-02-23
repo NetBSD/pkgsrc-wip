@@ -1,11 +1,7 @@
 $NetBSD: distinfo,v 1.10 2014/11/25 13:14:30 thomasklausner Exp $
 
-SHA1 (tracker-0.16.3.tar.xz) = 0e660777973224b112d9ce459fe6fda1aa33a241
-RMD160 (tracker-0.16.3.tar.xz) = 82e5fde9d99948e871e41d88ba8091de2aa040ff
-Size (tracker-0.16.3.tar.xz) = 5995068 bytes
-SHA1 (patch-aa) = 7a6fd86823aef6507a05ed01b74e3638e59db742
-SHA1 (patch-ad) = aa00117a7092cbc3713693f9f9b591bcc1739aab
-SHA1 (patch-ae) = 7b7d2a550af8d4deae04981c06efe328cbf0e166
-SHA1 (patch-ai) = 55e9b828a9476ca404ada0dad78d491b1f470a9b
+SHA1 (tracker-1.7.3.tar.xz) = acf3e76c43eecb3526284c628495262b6a9f7b4e
+RMD160 (tracker-1.7.3.tar.xz) = faf520f73cf119a8b0704e85fc827647b0694e4c
+SHA512 (tracker-1.7.3.tar.xz) = 593b409cd43cbd4209cdaf8abde8ca4d91cb9a3328a21118de225f5cdab1bc6e8facace57a5762150ce13b3b4b2d76cead64605502e75f00eb25a5f333b7bc97
+Size (tracker-1.7.3.tar.xz) = 4920820 bytes
 SHA1 (patch-src_miners_fs_tracker-power-hal.c) = 01818a9cd346a76465b53aa47330217e3268287b
-SHA1 (patch-src_tracker-extract_tracker-extract-gif.c) = 9b6e359831cf1b683157f5b60a32098a42b65b58

@@ -1,3 +1,13 @@
+Somehow convince this to use pkgsrc sqlite3
+sqlite3 to build threadsafe
+
+Currently fails at:
+	checking for sqlite3.h... yes
+	checking for sqlite3_threadsafe in -lsqlite3... yes
+	checking whether sqlite was compiled thread-safe... no
+	configure: error: sqlite3 is not compiled thread-safe
+	*** Error code 1
+
 - GNOME3: re-enable options once the relevant packages
   have been updated.
 
