@@ -1,0 +1,139 @@
+diff --git a/lib/CoreDisTools/coredistools.cpp b/lib/CoreDisTools/coredistools.cpp
+index f886569..6881c82 100644
+--- tools/llilc/lib/CoreDisTools/coredistools.cpp
++++ tools/llilc/lib/CoreDisTools/coredistools.cpp
+@@ -49,13 +49,13 @@ public:
+   void printInstruction(const MCInst *MI, size_t Address, size_t InstSize,
+                         ArrayRef<uint8_t> Bytes) const;
+ 
+-  CorDisasm(TargetArch Target) { TargetArch = Target; }
++  CorDisasm(TargetArch Target) { TheTargetArch = Target; }
+ 
+ private:
+   bool setTarget();
+   bool verifyPrefixDecoding();
+ 
+-  TargetArch TargetArch;
++  TargetArch TheTargetArch;
+   string TargetTriple;
+   const Target *TheTarget;
+ 
+@@ -113,20 +113,20 @@ bool CorDisasm::setTarget() {
+   TargetTriple = Triple::normalize(TargetTriple);
+   Triple TheTriple(TargetTriple);
+ 
+-  switch (TargetArch) {
++  switch (TheTargetArch) {
+   case Target_Host:
+     switch (TheTriple.getArch()) {
+     case Triple::x86:
+-      TargetArch = Target_X86;
++      TheTargetArch = Target_X86;
+       break;
+     case Triple::x86_64:
+-      TargetArch = Target_X64;
++      TheTargetArch = Target_X64;
+       break;
+     case Triple::thumb:
+-      TargetArch = Target_Thumb;
++      TheTargetArch = Target_Thumb;
+       break;
+     case Triple::aarch64:
+-      TargetArch = Target_Arm64;
++      TheTargetArch = Target_Arm64;
+       break;
+     default:
+       errs() << "Unsupported Architecture"
+@@ -146,7 +146,7 @@ bool CorDisasm::setTarget() {
+     TheTriple.setArch(Triple::x86_64);
+   }
+ 
+-  assert(TargetArch != Target_Host && "Target Expected to be specific");
++  assert(TheTargetArch != Target_Host && "Target Expected to be specific");
+ 
+   // Get the target specific parser.
+   string Error;
+@@ -235,7 +235,7 @@ bool CorDisasm::init() {
+ // X86 prefix bytes are decoded by LLVM -- and learn about
+ // any change in behavior.
+ bool CorDisasm::verifyPrefixDecoding() {
+-  if ((TargetArch != Target_X86) && (TargetArch != Target_X64)) {
++  if ((TheTargetArch != Target_X86) && (TheTargetArch != Target_X64)) {
+     return true;
+   }
+ 
+@@ -296,7 +296,7 @@ size_t CorDisasm::disasmInstruction(size_t Address, const uint8_t *Bytes,
+     }
+ 
+     ContinueDisasm = false;
+-    if ((TargetArch == Target_X86) || (TargetArch == Target_X64)) {
++    if ((TheTargetArch == Target_X86) || (TheTargetArch == Target_X64)) {
+ 
+       // Check if the decoded instruction is a prefix byte, and if so,
+       // continue decoding.
+diff --git a/lib/Jit/jitoptions.cpp b/lib/Jit/jitoptions.cpp
+index 664a282..2919ccc 100644
+--- tools/llilc/lib/Jit/jitoptions.cpp
++++ tools/llilc/lib/Jit/jitoptions.cpp
+@@ -63,7 +63,7 @@ JitOptions::JitOptions(LLILCJitContext &Context) {
+ 
+   // Set optimization level for this JIT invocation.
+   OptLevel = queryOptLevel(Context);
+-  EnableOptimization = OptLevel != OptLevel::DEBUG_CODE;
++  EnableOptimization = OptLevel != ::OptLevel::DEBUG_CODE;
+ 
+   // Set whether to use conservative GC.
+   UseConservativeGC = queryUseConservativeGC(Context);
+diff --git a/lib/Reader/reader.cpp b/lib/Reader/reader.cpp
+index 23edb4e..f5baa45 100644
+--- tools/llilc/lib/Reader/reader.cpp
++++ tools/llilc/lib/Reader/reader.cpp
+@@ -2277,11 +2277,6 @@ EHRegion *ReaderBase::fgSwitchRegion(EHRegion *OldRegion, uint32_t Offset,
+   return OldRegion;
+ }
+ 
+-#define CHECKTARGET(TargetOffset, BufSize)                                     \
+-  {                                                                            \
+-    if ((TargetOffset) < 0 || (TargetOffset) >= (BufSize))                     \
+-      ReaderBase::verGlobalError(MVER_E_BAD_BRANCH);                           \
+-  }
+ 
+ // Parse bytecode to blocks.  Incoming argument 'block' holds dummy
+ // entry block. This entry block may be preceeded by another block
+@@ -2410,7 +2405,10 @@ void ReaderBase::fgBuildPhase1(FlowGraphNode *Block, uint8_t *ILInput,
+ 
+       // Make the label node
+       TargetOffset = NextOffset + BranchOffset;
+-      CHECKTARGET(TargetOffset, ILInputSize);
++
++      // Check target size
++      if (TargetOffset >= ILInputSize)
++        ReaderBase::verGlobalError(MVER_E_BAD_BRANCH);
+ 
+       if (Opcode == ReaderBaseNS::CEE_LEAVE ||
+           Opcode == ReaderBaseNS::CEE_LEAVE_S) {
+@@ -2456,7 +2454,11 @@ void ReaderBase::fgBuildPhase1(FlowGraphNode *Block, uint8_t *ILInput,
+       // Make the short-circuit target label
+       BlockNode = fgNodeGetStartIRNode(Block);
+       GraphNode = nullptr;
+-      CHECKTARGET(NextOffset, ILInputSize);
++
++      // Check target size
++      if (NextOffset >= ILInputSize)
++        ReaderBase::verGlobalError(MVER_E_BAD_BRANCH);
++
+       fgAddNodeMSILOffset(&GraphNode, NextOffset);
+ 
+       // Make the switch node.
+@@ -2470,7 +2472,10 @@ void ReaderBase::fgBuildPhase1(FlowGraphNode *Block, uint8_t *ILInput,
+       for (uint32_t I = 0; (uint32_t)I < NumCases; I++) {
+         BranchOffset = readSwitchCase(&Operand);
+         TargetOffset = NextOffset + BranchOffset;
+-        CHECKTARGET(TargetOffset, ILInputSize);
++
++        // Check target size
++        if (TargetOffset >= ILInputSize)
++          ReaderBase::verGlobalError(MVER_E_BAD_BRANCH);
+ 
+         GraphNode = nullptr;
+         fgAddNodeMSILOffset(&GraphNode, TargetOffset);
