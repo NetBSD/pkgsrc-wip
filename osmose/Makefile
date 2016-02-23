@@ -1,26 +1,33 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:29:14 asau Exp $
+# $NetBSD$
 #
-
-DISTNAME=	Osmose_0-8-0_src
-PKGNAME=	osmose-0.8.0
+DISTNAME=	Osmose-${PKGVERSION_NOREV:S/./-/g}-QT
+PKGNAME=	osmose-0.9.96
 CATEGORIES=	emulators
-MASTER_SITES=	http://bcz.emu-france.com/osmose/
+MASTER_SITES=	http://bcz.asterope.fr/osmose/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bcz.emu-france.com/index.htm
 COMMENT=	Sega Master System/Game Gear emulator
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/Osmose
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
+
+QMAKE=${QTDIR}/bin/qmake
+
+do-configure:
+	cd ${WRKSRC} && \
+	env QTDIR=${QTDIR} ${QMAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/osmose ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/osmose
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/osmose
+	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} ${DESTDIR}${PREFIX}/bin/osmose
+	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

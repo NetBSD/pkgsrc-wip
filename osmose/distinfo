@@ -1,8 +1,13 @@
 $NetBSD: distinfo,v 1.1.1.1 2006/12/13 18:34:02 thomasklausner Exp $
 
-SHA1 (Osmose_0-8-0_src.zip) = 5eb4a64002bd52e2a235faa0c21a46f8315f1d3d
-RMD160 (Osmose_0-8-0_src.zip) = c88dd515689a5a243e92dee93e0a8ef4d4b51bcb
-Size (Osmose_0-8-0_src.zip) = 332579 bytes
-SHA1 (patch-aa) = a5875ae5b9cb31aa7f0592d99211ffa3749ace0b
-SHA1 (patch-ab) = 93b260b12d6b830ea57e0d22b3b67e0aa2c3b76e
-SHA1 (patch-ac) = 114838b9b0d7bc78d56ecf4fff362f0fcbabfc81
+SHA1 (Osmose-0-9-96-QT.zip) = 49f41e3babb4e48e8b0f095533a13e3ba2e1d97a
+RMD160 (Osmose-0-9-96-QT.zip) = bacdebb2e077e3e08b51c973da3f52fe8f582d67
+SHA512 (Osmose-0-9-96-QT.zip) = 0c2b8ec71edd567afdbee7d7347be2a854cd424c37daec4336987e749bd325739c6d7294213e5ed988b3dd4af11d548afd5601c0e6e74b27e481559b085c9e19
+Size (Osmose-0-9-96-QT.zip) = 194671 bytes
+SHA1 (patch-EmulationThread.h) = 2acf9935b6068f940c9d12beba13aca6a818c093
+SHA1 (patch-Osmose-0-9-96-QT.pro) = 725547b5d2c0bf9015ca9ac1a02b54fc1661fe58
+SHA1 (patch-OsmoseCore.cpp) = 384adc7aa8ae61ff256a27bcfe1b04f086b025e2
+SHA1 (patch-OsmoseCore.h) = f678a6ee0ed688d71a3061c80077cd86c9274f4e
+SHA1 (patch-OsmoseGUI.cpp) = ef0e611dc2c2bbb70ad26a4f57317b56c51cb07d
+SHA1 (patch-OsmoseGUI.h) = e8dc4130c0ab33c9854566ee8012ab09f1fbb9a5
+SHA1 (patch-QOsmoseConfiguration.h) = 8d194c2c685ca8f189b7435ee94d5026ca1238c9
