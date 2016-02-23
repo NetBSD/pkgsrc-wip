@@ -1230,6 +1230,7 @@ share/phabricator/resources/sql/autopatches/20160221.almanac.6.networki.php
 share/phabricator/resources/sql/autopatches/20160221.almanac.7.namespacen.sql
 share/phabricator/resources/sql/autopatches/20160221.almanac.8.namespace.sql
 share/phabricator/resources/sql/autopatches/20160221.almanac.9.namespacex.sql
+share/phabricator/resources/sql/autopatches/20160222.almanac.1.properties.php
 share/phabricator/resources/sql/patches/000.project.sql
 share/phabricator/resources/sql/patches/0000.legacy.sql
 share/phabricator/resources/sql/patches/001.maniphest_projects.sql
@@ -1759,14 +1760,18 @@ share/phabricator/src/applications/almanac/controller/AlmanacServiceController.p
 share/phabricator/src/applications/almanac/controller/AlmanacServiceEditController.php
 share/phabricator/src/applications/almanac/controller/AlmanacServiceListController.php
 share/phabricator/src/applications/almanac/controller/AlmanacServiceViewController.php
-share/phabricator/src/applications/almanac/customfield/AlmanacCoreCustomField.php
-share/phabricator/src/applications/almanac/customfield/AlmanacCustomField.php
 share/phabricator/src/applications/almanac/editor/AlmanacBindingEditor.php
+share/phabricator/src/applications/almanac/editor/AlmanacBindingPropertyEditEngine.php
 share/phabricator/src/applications/almanac/editor/AlmanacDeviceEditor.php
+share/phabricator/src/applications/almanac/editor/AlmanacDevicePropertyEditEngine.php
+share/phabricator/src/applications/almanac/editor/AlmanacEditor.php
 share/phabricator/src/applications/almanac/editor/AlmanacNamespaceEditEngine.php
 share/phabricator/src/applications/almanac/editor/AlmanacNamespaceEditor.php
+share/phabricator/src/applications/almanac/editor/AlmanacNetworkEditEngine.php
 share/phabricator/src/applications/almanac/editor/AlmanacNetworkEditor.php
+share/phabricator/src/applications/almanac/editor/AlmanacPropertyEditEngine.php
 share/phabricator/src/applications/almanac/editor/AlmanacServiceEditor.php
+share/phabricator/src/applications/almanac/editor/AlmanacServicePropertyEditEngine.php
 share/phabricator/src/applications/almanac/engineextension/AlmanacPropertiesDestructionEngineExtension.php
 share/phabricator/src/applications/almanac/management/AlmanacManagementLockWorkflow.php
 share/phabricator/src/applications/almanac/management/AlmanacManagementRegisterWorkflow.php
@@ -1823,6 +1828,7 @@ share/phabricator/src/applications/almanac/storage/AlmanacSchemaSpec.php
 share/phabricator/src/applications/almanac/storage/AlmanacService.php
 share/phabricator/src/applications/almanac/storage/AlmanacServiceNameNgrams.php
 share/phabricator/src/applications/almanac/storage/AlmanacServiceTransaction.php
+share/phabricator/src/applications/almanac/storage/AlmanacTransaction.php
 share/phabricator/src/applications/almanac/typeahead/AlmanacInterfaceDatasource.php
 share/phabricator/src/applications/almanac/typeahead/AlmanacServiceDatasource.php
 share/phabricator/src/applications/almanac/util/AlmanacAddress.php

@@ -4,16 +4,16 @@
 # rc.d file?
 # mention php.ini mods in MESSAGE and mysql setup
 # need working git + mozilla-rootcerts ?
-DISTNAME=		phabricator-20160222
+DISTNAME=		phabricator-20160223
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
+GITHUB_PROJECT=		phabricator
+GITHUB_TAG=		023cfbb23af36b7f15be86a1f5950b62d68b246d
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		http://phabricator.com/
 COMMENT=		Open software engineering platform
 LICENSE=		apache-2.0
-
-WRKSRC=			${WRKDIR}/phabricator
 
 USE_TOOLS+=		pax
 
