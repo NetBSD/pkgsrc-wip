@@ -4,7 +4,7 @@
 # rc.d file?
 # mention php.ini mods in MESSAGE and mysql setup
 # need working git + mozilla-rootcerts ?
-DISTNAME=		phabricator-20160221
+DISTNAME=		phabricator-20160222
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -29,6 +29,8 @@ DEPENDS+=		${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
 #DEPENDS+=		:../../textproc/py-pygments?
 DEPENDS+=		libphutil-[0-9]*:../../wip/libphutil
 DEPENDS+=		arcanist-[0-9]*:../../wip/arcanist
+
+PHP_VERSIONS_ACCEPTED=	54 55
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing PHP path
