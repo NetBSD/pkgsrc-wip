@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2014/09/08 10:25:33 fhajny Exp $
 
-DISTNAME=	therubyracer-0.12.1
+DISTNAME=	therubyracer-0.12.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 
@@ -10,6 +10,7 @@ COMMENT=	Embedded V8 Javascript
 LICENSE=        mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-libv8>=3.16:../../wip/ruby-libv8
+DEPENDS+=	${RUBY_PKGPREFIX}-ref-[0-9]*:../../devel/ruby-ref
 
 USE_LANGUAGES+=	c c++
 
