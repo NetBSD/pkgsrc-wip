@@ -23,6 +23,7 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
 
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
+#DEPENDS+=	mysql[0-9]*-client:../../databases/mysql[0-9]*-client
 
 .include "../../textproc/libodfgen/buildlink3.mk"
 .include "../../converters/libetonyek/buildlink3.mk"
@@ -31,7 +32,6 @@ DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../databases/freetds/buildlink3.mk"
-.include "../../databases/mysql55-client/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

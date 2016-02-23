@@ -514,6 +514,7 @@ lib/kde4/calligra_filter_karbon1x2karbon.so
 lib/kde4/calligra_filter_karbon2image.so
 lib/kde4/calligra_filter_karbon2svg.so
 lib/kde4/calligra_filter_karbon2wmf.so
+lib/kde4/calligra_filter_key2odp.so
 lib/kde4/calligra_filter_kpr2odp.so
 lib/kde4/calligra_filter_kspread2tex.so
 lib/kde4/calligra_filter_mpxj2plan.so
@@ -534,7 +535,10 @@ lib/kde4/calligra_filter_sheets2gnumeric.so
 lib/kde4/calligra_filter_sheets2html.so
 lib/kde4/calligra_filter_sheets2opencalc.so
 lib/kde4/calligra_filter_svg2karbon.so
+lib/kde4/calligra_filter_vsdx2odg.so
 lib/kde4/calligra_filter_wmf2svg.so
+lib/kde4/calligra_filter_wpd2odt.so
+lib/kde4/calligra_filter_wpg2odg.so
 lib/kde4/calligra_filter_wpg2svg.so
 lib/kde4/calligra_filter_xfig2odg.so
 lib/kde4/calligra_filter_xls2ods.so
@@ -575,7 +579,6 @@ lib/kde4/karbon_whirlpinchplugin.so
 lib/kde4/karbonfiltereffects.so
 lib/kde4/karbonpart.so
 lib/kde4/karbontools.so
-lib/kde4/kexidb_mysqldriver.so
 lib/kde4/kexidb_sqlite3_icu.so
 lib/kde4/kexidb_sqlite3driver.so
 lib/kde4/kexidb_sybasedriver.so
@@ -587,7 +590,6 @@ lib/kde4/kexihandler_report.so
 lib/kde4/kexihandler_script.so
 lib/kde4/kexihandler_table.so
 lib/kde4/keximigrate_mdb.so
-lib/kde4/keximigrate_mysql.so
 lib/kde4/keximigrate_spreadsheet.so
 lib/kde4/keximigrate_sybase.so
 lib/kde4/keximigrate_txt.so
@@ -984,6 +986,7 @@ share/applications/kde4/okularApplication_doc_calligra.desktop
 share/applications/kde4/okularApplication_docx_calligra.desktop
 share/applications/kde4/okularApplication_odp.desktop
 share/applications/kde4/okularApplication_odt.desktop
+share/applications/kde4/okularApplication_wpd_calligra.desktop
 share/applications/kde4/plan.desktop
 share/applications/kde4/planwork.desktop
 share/applications/kde4/sheets.desktop
@@ -7556,6 +7559,7 @@ share/kde4/services/calligra/calligra_filter_karbon1x2karbon.desktop
 share/kde4/services/calligra/calligra_filter_karbon2image.desktop
 share/kde4/services/calligra/calligra_filter_karbon2svg.desktop
 share/kde4/services/calligra/calligra_filter_karbon2wmf.desktop
+share/kde4/services/calligra/calligra_filter_key2odp.desktop
 share/kde4/services/calligra/calligra_filter_kpr2odp.desktop
 share/kde4/services/calligra/calligra_filter_kspread2tex.desktop
 share/kde4/services/calligra/calligra_filter_mpp2plan.desktop
@@ -7577,7 +7581,10 @@ share/kde4/services/calligra/calligra_filter_sheets2gnumeric.desktop
 share/kde4/services/calligra/calligra_filter_sheets2html.desktop
 share/kde4/services/calligra/calligra_filter_sheets2opencalc.desktop
 share/kde4/services/calligra/calligra_filter_svg2karbon.desktop
+share/kde4/services/calligra/calligra_filter_vsdx2odg.desktop
 share/kde4/services/calligra/calligra_filter_wmf2svg.desktop
+share/kde4/services/calligra/calligra_filter_wpd2odt.desktop
+share/kde4/services/calligra/calligra_filter_wpg2odg.desktop
 share/kde4/services/calligra/calligra_filter_wpg2svg.desktop
 share/kde4/services/calligra/calligra_filter_xfig2odg.desktop
 share/kde4/services/calligra/calligra_filter_xls2ods.desktop
@@ -7615,12 +7622,10 @@ share/kde4/services/calligra/karbonroundcornersplugin.desktop
 share/kde4/services/calligra/karbontools.desktop
 share/kde4/services/calligra/karbonwhirlpinchplugin.desktop
 share/kde4/services/calligra/kexicsv_importexporthandler.desktop
-share/kde4/services/calligra/kexidb_mysqldriver.desktop
 share/kde4/services/calligra/kexidb_sqlite3driver.desktop
 share/kde4/services/calligra/kexidb_sybasedriver.desktop
 share/kde4/services/calligra/kexiformhandler.desktop
 share/kde4/services/calligra/keximigrate_mdb.desktop
-share/kde4/services/calligra/keximigrate_mysql.desktop
 share/kde4/services/calligra/keximigrate_spreadsheet.desktop
 share/kde4/services/calligra/keximigrate_sybase.desktop
 share/kde4/services/calligra/keximigrate_txt.desktop
@@ -7797,6 +7802,8 @@ share/kde4/services/calligra/stagepart.desktop
 share/kde4/services/calligra/wordspart.desktop
 share/kde4/services/calligra_filter_odt2wiki.desktop
 share/kde4/services/calligra_odg_thumbnail.desktop
+share/kde4/services/flow_vsdx_thumbnail.desktop
+share/kde4/services/flow_wpg_thumbnail.desktop
 share/kde4/services/karbon_karbon1x_thumbnail.desktop
 share/kde4/services/karbon_wmf_thumbnail.desktop
 share/kde4/services/karbon_wpg_thumbnail.desktop
@@ -7806,15 +7813,18 @@ share/kde4/services/libokularGenerator_doc_calligra.desktop
 share/kde4/services/libokularGenerator_docx_calligra.desktop
 share/kde4/services/libokularGenerator_odp.desktop
 share/kde4/services/libokularGenerator_odt.desktop
+share/kde4/services/libokularGenerator_wpd_calligra.desktop
 share/kde4/services/okularDoc_calligra.desktop
 share/kde4/services/okularDocx_calligra.desktop
 share/kde4/services/okularOdp.desktop
 share/kde4/services/okularOdt.desktop
+share/kde4/services/okularWpd_calligra.desktop
 share/kde4/services/qimageioplugins/kra.desktop
 share/kde4/services/qimageioplugins/ora.desktop
 share/kde4/services/sheets_excel_thumbnail.desktop
 share/kde4/services/sheets_ods_thumbnail.desktop
 share/kde4/services/sheets_xlsx_thumbnail.desktop
+share/kde4/services/stage_key_thumbnail.desktop
 share/kde4/services/stage_kpr_thumbnail.desktop
 share/kde4/services/stage_odp_thumbnail.desktop
 share/kde4/services/stage_powerpoint_thumbnail.desktop
@@ -7823,6 +7833,7 @@ share/kde4/services/words_docx_thumbnail.desktop
 share/kde4/services/words_msword_thumbnail.desktop
 share/kde4/services/words_odt_thumbnail.desktop
 share/kde4/services/words_rtf_thumbnail.desktop
+share/kde4/services/words_wpd_thumbnail.desktop
 share/kde4/servicetypes/braindump_extensions.desktop
 share/kde4/servicetypes/calligra_application.desktop
 share/kde4/servicetypes/calligra_deferred_plugin.desktop
@@ -7870,3 +7881,4 @@ share/mime/packages/krita.xml
 share/mime/packages/krita_ora.xml
 share/mime/packages/msooxml-all.xml
 share/mime/packages/wiki-format.xml
+share/mime/packages/x-iwork-keynote-sffkey.xml
