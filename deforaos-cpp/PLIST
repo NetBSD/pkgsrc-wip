@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2011/06/26 19:23:54 khorben Exp $
-bin/deforaos-cpp
-include/cpp.h
-lib/libcpp.a
-lib/libcpp.so
-lib/libcpp.so.0
-lib/libcpp.so.0.0
-lib/pkgconfig/cpp.pc

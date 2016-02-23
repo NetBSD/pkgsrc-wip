@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/01/09 15:59:52 khorben Exp $
-
-SHA1 (asm-0.2.0.tar.gz) = f0ec07b73d08db187184291b55cbdb9b99e1a44d
-RMD160 (asm-0.2.0.tar.gz) = 60c9f2d67c29af0f87f1e47fcfe16975678b1211
-Size (asm-0.2.0.tar.gz) = 88980 bytes
-SHA1 (patch-Makefile) = ab235977930ec0eb7ffafdabd7c30edf6e0b7a8c
