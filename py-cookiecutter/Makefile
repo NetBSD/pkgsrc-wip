@@ -17,6 +17,9 @@ USE_TOOLS+=			make:build
 AUTO_MKDIRS=			yes
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1/
 
+#UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 3550: ordinal not in range(128)
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+
 BUILD_DEPENDS+=			${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 BUILD_DEPENDS+=			${PYPKGPREFIX}-chardet>=2.3.0:../../converters/py-chardet
 DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../wip/py-future
