@@ -12,5 +12,15 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+PLIST_VARS+=    pre30 post30
+
+# for python < 3.0
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 30
+PLIST.pre30=	yes
+.else
+PLIST.post30=	yes
+.endif
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
