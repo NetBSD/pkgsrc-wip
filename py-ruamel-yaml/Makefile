@@ -11,7 +11,12 @@ COMMENT=	YAML parser/emitter
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-ruamel-base>=1.0.0:../../wip/py-ruamel-base
+
+# for python < 3.0
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 30
 DEPENDS+=	${PYPKGPREFIX}-ruamel-ordereddict>=0.4.9:../../wip/py-ruamel-ordereddict
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
