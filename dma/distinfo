@@ -1,5 +1,14 @@
 $NetBSD$
 
-SHA1 (dma-v0.10.tar.gz) = 299741b8b336267293812f3ceae3b8c43f06cc03
-RMD160 (dma-v0.10.tar.gz) = 3950fa80c434d8b8f8d7006e69411756a0b25453
-Size (dma-v0.10.tar.gz) = 34531 bytes
+SHA1 (dma-v0.11.tar.gz) = 39badd49b6305c282df7734c927e7a90420265dc
+RMD160 (dma-v0.11.tar.gz) = 1ec92cb8854640a1f0e0fc1f5cdf7132f715949e
+SHA512 (dma-v0.11.tar.gz) = 8ccf85a921da12cbf5b9f2c93dd96da91d2acdace979ed4a6b37af94e72441bf654ac65525fc2c1118c1b16136278de4daeafc753dcaf4300a017e317f83fc4d
+Size (dma-v0.11.tar.gz) = 34529 bytes
+SHA1 (patch-Makefile) = 76395db385e3afb8f3d3678f12bb676c0ef73f67
+SHA1 (patch-crypto.c) = 80f4eb7c3a7e5dc296259ac90678b0d8eac0ec35
+SHA1 (patch-dma.c) = a77711f474ded4c53eeb3176bd0c561777c15807
+SHA1 (patch-dma.h) = c1d57229ec790f5f11a18f277c19e0ba1cdcfdd4
+SHA1 (patch-dns.c) = 5f8a7adb8b1ca379ab8b837e56ca044d7699d2f1
+SHA1 (patch-local.c) = 28cfa61aedc87851addf0db0c347d0bce820869d
+SHA1 (patch-mail.c) = c4d952d16086f3c47448f6e4a55f24ed86da3e9b
+SHA1 (patch-spool.c) = 1c63ef62cefa3a20da3001d841393bbaf6ac5978

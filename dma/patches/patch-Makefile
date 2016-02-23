@@ -1,0 +1,17 @@
+$NetBSD$
+
+For setuid files its recommended to not set any write permissions
+
+--- Makefile.orig	2016-02-23 20:01:56.895785904 +0000
++++ Makefile
+@@ -50,8 +50,8 @@ clean:
+ install: all
+ 	${INSTALL} -d ${DESTDIR}${SBIN}
+ 	${INSTALL} -d ${DESTDIR}${MAN}/man8 ${DESTDIR}${LIBEXEC}
+-	${INSTALL} -m 2755 -o root -g mail dma ${DESTDIR}${SBIN}
+-	${INSTALL} -m 4754 -o root -g mail dma-mbox-create ${DESTDIR}${LIBEXEC}
++	${INSTALL} -m 2555 -o root -g mail dma ${DESTDIR}${SBIN}
++	${INSTALL} -m 4554 -o root -g mail dma-mbox-create ${DESTDIR}${LIBEXEC}
+ 	${INSTALL} -m 0644 dma.8 ${DESTDIR}${MAN}/man8/
+ 
+ sendmail-link:
