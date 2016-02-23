@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.1 2015/09/15 20:56:51 tnn2 Exp $
 
-DISTNAME=	VirtualBox-5.0.4
+DISTNAME=	VirtualBox-5.0.14
 PKGNAME=	${DISTNAME:S/VirtualBox/xf86-input-vboxmouse/}
 CATEGORIES=	x11
-MASTER_SITES=	http://download.virtualbox.org/virtualbox/5.0.4/
+MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

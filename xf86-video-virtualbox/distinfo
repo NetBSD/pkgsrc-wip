@@ -1,8 +1,10 @@
 $NetBSD: distinfo,v 1.1 2015/09/15 20:56:03 tnn2 Exp $
 
-SHA1 (VirtualBox-5.0.4.tar.bz2) = 11c0bac5387467e2d6286553db829f6a90f444f0
-RMD160 (VirtualBox-5.0.4.tar.bz2) = 1fb2105712ed95eb25d1631d44be48020da3d7b3
-Size (VirtualBox-5.0.4.tar.bz2) = 109865904 bytes
+SHA1 (VirtualBox-5.0.14.tar.bz2) = d19b06df4af90e0b641ce2ce0c4c91b39ad3fc74
+RMD160 (VirtualBox-5.0.14.tar.bz2) = 64193fa20d21e54836a846fd392e58515bcb26f7
+SHA512 (VirtualBox-5.0.14.tar.bz2) = 5547da58b50c9cf5d096f81c005134e1f56c4fb55d4d40a6fbd1efe1fe1fbeebc0747f0903933da9238a24c63eeed2c6c15bfc5cae5ce6e3e2eb4a18511d6258
+Size (VirtualBox-5.0.14.tar.bz2) = 111033626 bytes
 SHA1 (patch-include_VBox_VBoxGuest.h) = 8798bf144c62e52e141269a3ebfa214b561fb4fb
+SHA1 (patch-include_iprt_string.h) = 53f7a496dfe5d23e758d85dc805f555ca11bc557
 SHA1 (patch-src_VBox_Additions_x11_vboxvideo_pointer.c) = 3d4733a8ffcdaea59783f982e32f61581ed8c4d2
 SHA1 (patch-src_VBox_Additions_x11_vboxvideo_vboxvideo.c) = 871c5529ae304eb378b3a7069e6c84b2ad60372e

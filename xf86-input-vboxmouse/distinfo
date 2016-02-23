@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/09/15 20:56:51 tnn2 Exp $
 
-SHA1 (VirtualBox-5.0.4.tar.bz2) = 11c0bac5387467e2d6286553db829f6a90f444f0
-RMD160 (VirtualBox-5.0.4.tar.bz2) = 1fb2105712ed95eb25d1631d44be48020da3d7b3
-Size (VirtualBox-5.0.4.tar.bz2) = 109865904 bytes
+SHA1 (VirtualBox-5.0.14.tar.bz2) = d19b06df4af90e0b641ce2ce0c4c91b39ad3fc74
+RMD160 (VirtualBox-5.0.14.tar.bz2) = 64193fa20d21e54836a846fd392e58515bcb26f7
+SHA512 (VirtualBox-5.0.14.tar.bz2) = 5547da58b50c9cf5d096f81c005134e1f56c4fb55d4d40a6fbd1efe1fe1fbeebc0747f0903933da9238a24c63eeed2c6c15bfc5cae5ce6e3e2eb4a18511d6258
+Size (VirtualBox-5.0.14.tar.bz2) = 111033626 bytes
