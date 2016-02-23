@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/07/15 08:52:51 fhajny Exp $
 
-DISTNAME=	libv8-3.16.14.11
+DISTNAME=	libv8-3.16.14.13
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 

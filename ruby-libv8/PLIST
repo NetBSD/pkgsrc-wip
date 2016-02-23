@@ -30,6 +30,7 @@ ${GEM_LIBDIR}/patches/arm/do-not-use-vfp2.patch
 ${GEM_LIBDIR}/patches/clang/no-unused-private-field.patch
 ${GEM_LIBDIR}/patches/clang33/silence-nested-anon-types-and-unused-function-warnings.patch
 ${GEM_LIBDIR}/patches/clang51/no-unused-variable.patch
+${GEM_LIBDIR}/patches/clang70/no-unused-local-typedefs.patch
 ${GEM_LIBDIR}/patches/disable-building-tests.patch
 ${GEM_LIBDIR}/patches/fPIC-for-static.patch
 ${GEM_LIBDIR}/patches/gcc48/gcc48-wno-unused-local-typedefs.patch
