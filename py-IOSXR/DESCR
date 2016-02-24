@@ -1,0 +1,3 @@
+In the spirit of pyEOS for Arista EOS devices and pyEZ for JUNOS
+devices, pyIOSXR is a python library to help interact with Cisco
+devices running IOS-XR.
