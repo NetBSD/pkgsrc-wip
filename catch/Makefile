@@ -13,6 +13,10 @@ LICENSE=	boost-license
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+USE_TOOLS+=	gmake
+
+USE_LANGUAGES=	c c++
+
 NO_BUILD=	yes
 
 AUTO_MKDIRS=	yes
@@ -20,5 +24,9 @@ AUTO_MKDIRS=	yes
 do-install:
 	${RUN} ${INSTALL_DATA} ${WRKSRC}/single_include/catch.hpp \
 		${DESTDIR}${PREFIX}/include
+
+do-test:
+	${RUN} cd ${WRKSRC}/projects/SelfTest && \
+		${GMAKE} -f makefile && ./CatchSelfTest
 
 .include "../../mk/bsd.pkg.mk"
