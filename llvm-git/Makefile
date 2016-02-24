@@ -72,8 +72,13 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+# replacing config.guess is required even for cmake.
+# It is used to detect correct LLVM_HOST_TRIPLE, e.g. for NetBSD/evbarm.
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
+.for f in config.guess config.sub
+	cp ../../mk/gnu-config/${f} ${WRKSRC}/autoconf/${f}
+.endfor
 
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
