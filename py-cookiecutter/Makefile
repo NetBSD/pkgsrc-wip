@@ -12,7 +12,7 @@ HOMEPAGE=			${MASTER_SITE_GITHUB:=audreyr/cookiecutter/}
 COMMENT=			Command-line utility that creates projects from project templates
 LICENSE=			modified-bsd
 
-USE_LANGUAGES=			c
+USE_LANGUAGES=			# none
 USE_TOOLS+=			make:build
 AUTO_MKDIRS=			yes
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1/
@@ -26,7 +26,7 @@ DEPENDS+=			${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
 DEPENDS+=			${PYPKGPREFIX}-click>=6.3:../../wip/py-click
 DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.1.1:../../wip/py-whichcraft
 DEPENDS+=			${PYPKGPREFIX}-ruamel-yaml>=0.10.12:../../wip/py-ruamel-yaml
-DEPENDS+=			${PYPKGPREFIX}-markupsafe:../../textproc/py-markupsafe
+DEPENDS+=			${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 
 # for python < 3.0
 .include "../../lang/python/pyversion.mk"

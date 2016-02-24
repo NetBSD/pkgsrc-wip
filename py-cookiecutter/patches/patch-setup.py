@@ -1,3 +1,8 @@
+$NetBSD$
+
+Remove history file to make this build in C locales.
+Waiting a workaround: https://github.com/audreyr/cookiecutter/pull/638
+
 --- setup.py.orig	2016-02-16 08:36:10.000000000 +0100
 +++ setup.py	2016-02-16 08:34:17.000000000 +0100
 @@ -23,9 +23,6 @@
