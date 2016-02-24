@@ -4,16 +4,17 @@ PKGNAME=	libunwind-3.9.0
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	libunwind
-GIT_REPO.libunwind=		https://github.com/llvm-mirror/libunwind.git
+GIT_REPO.libunwind=	https://github.com/llvm-mirror/libunwind.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libunwind.llvm.org/
 COMMENT=	LLVM libunwind
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}
+WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
 
+USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 USE_CMAKE+=		yes
 GCC_REQD+=		4.8
@@ -22,15 +23,15 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 
-CMAKE_ARG_PATH=	${WRKDIR}/libunwind
+CMAKE_ARG_PATH=	${WRKSRC}
+
+INSTALLATION_DIRS=	include
 
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}/build
+	${RUN} mkdir -p ${WRKDIR}/build
 
 post-install:
-	${RUN} mkdir -p ${DESTDIR}${PREFIX}/include
-	${RUN} cp -r ${WRKSRC}/libunwind/include/* ${DESTDIR}${PREFIX}/include
-
+	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
 .include "../../wip/mk/git-package.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
