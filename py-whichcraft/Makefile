@@ -16,5 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-wheel>=0.23.0:../../wip/py-wheel
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+WRKSRC=	${WRKDIR}/${DISTNAME}
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
