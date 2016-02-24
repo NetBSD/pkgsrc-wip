@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.10 2015/06/29 12:28:55 nils Exp $
 
 DISTNAME=		${GHCOMMIT}
-PKGNAME=		logorate-3.9.2
+PKGNAME=		logrotate-3.9.2.20160126
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=logrotate/logrotate/archive/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=		${MASTER_SITE_GITHUB:=logrotate/logrotate/}
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
 
-GHCOMMIT=		f6ca8f386d1444ef46b7eaf8b3f8a19f2b548f60
+GHCOMMIT=		73493ec38c5e806fa66d8c3f13259775da6282d9
 USE_TOOLS+=		gmake gzip:run gunzip:run mail:run automake autoconf
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
