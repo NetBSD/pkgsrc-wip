@@ -16,7 +16,7 @@ CONFIGURE_DIRS=		${WRKDIR}/build
 
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
-USE_CMAKE+=		yes
+USE_CMAKE=		yes
 GCC_REQD+=		4.8
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -34,5 +34,6 @@ post-install:
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
 .include "../../wip/mk/git-package.mk"
+BUILDLINK_DEPMETHOD.llvm=	build
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

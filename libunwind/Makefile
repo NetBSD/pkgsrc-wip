@@ -1,24 +1,38 @@
-# $NetBSD: Makefile,v 1.1 2015/04/25 20:52:55 krytarowski Exp $
+# $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-DISTNAME=	libunwind-1.1
-CATEGORIES=	devel
-MASTER_SITES=	http://download.savannah.gnu.org/releases/libunwind/
+DISTNAME=	libunwind-3.8.0rc2.src
+PKGNAME=	${DISTNAME:S/.src//}
+CATEGORIES=	lang devel
+MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc2/
+#MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://download.savannah.gnu.org/releases/libunwind/
-COMMENT=	Generic stack unwinding library
-LICENSE=	mit
+HOMEPAGE=	http://libunwind.llvm.org/
+COMMENT=	LLVM libunwind
+LICENSE=	modified-bsd
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+CONFIGURE_DIRS=		${WRKDIR}/build
 
-PKGCONFIG_OVERRIDE+=	src/libunwind-generic.pc.in
-PKGCONFIG_OVERRIDE+=	src/ptrace/libunwind-ptrace.pc.in
-PKGCONFIG_OVERRIDE+=	src/setjmp/libunwind-setjmp.pc.in
-PKGCONFIG_OVERRIDE+=	src/coredump/libunwind-coredump.pc.in
-PKGCONFIG_OVERRIDE+=	src/unwind/libunwind.pc.in
+USE_TOOLS+=		pax
+USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
+GCC_REQD+=		4.8
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 
+CMAKE_ARG_PATH=	${WRKSRC}
+
+INSTALLATION_DIRS=	include
+
+post-extract:
+	${RUN} mkdir -p ${WRKDIR}/build
+
+post-install:
+	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
+
+BUILDLINK_DEPMETHOD.llvm=	build
+.include "../../wip/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
