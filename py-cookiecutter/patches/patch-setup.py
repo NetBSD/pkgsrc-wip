@@ -1,6 +1,7 @@
 $NetBSD$
 
 Set encoding for history file to make this build in C locales.
+https://github.com/audreyr/cookiecutter/pull/638
 
 --- setup.py.orig	2016-02-24 08:53:51.329247880 +0000
 +++ setup.py
