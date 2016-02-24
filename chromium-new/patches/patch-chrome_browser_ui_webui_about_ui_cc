@@ -1,0 +1,55 @@
+$OpenBSD: patch-chrome_browser_ui_webui_about_ui_cc,v 1.31 2015/12/05 16:13:32 robert Exp $
+--- chrome/browser/ui/webui/about_ui.cc.orig.port	Fri Nov 13 12:04:15 2015
++++ chrome/browser/ui/webui/about_ui.cc	Wed Dec  2 08:18:32 2015
+@@ -68,7 +68,7 @@
+ #include "chrome/browser/ui/webui/theme_source.h"
+ #endif
+ 
+-#if defined(OS_LINUX) || defined(OS_OPENBSD)
++#if defined(OS_LINUX)
+ #include "content/public/browser/zygote_host_linux.h"
+ #include "content/public/common/sandbox_linux.h"
+ #endif
+@@ -701,7 +701,7 @@ void FinishMemoryDataRequest(
+   }
+ }
+ 
+-#if defined(OS_LINUX) || defined(OS_OPENBSD)
++#if defined(OS_LINUX) || defined(OS_BSD)
+ std::string AboutLinuxProxyConfig() {
+   std::string data;
+   AppendHeader(&data, 0,
+@@ -717,6 +717,7 @@ std::string AboutLinuxProxyConfig() {
+   return data;
+ }
+ 
++#if !defined(OS_BSD)
+ void AboutSandboxRow(std::string* data, int name_id, bool good) {
+   data->append("<tr><td>");
+   data->append(l10n_util::GetStringUTF8(name_id));
+@@ -784,6 +785,7 @@ std::string AboutSandbox() {
+   return data;
+ }
+ #endif
++#endif
+ 
+ // AboutMemoryHandler ----------------------------------------------------------
+ 
+@@ -956,7 +958,7 @@ void AboutUIHTMLSource::StartDataRequest(
+   } else if (source_name_ == chrome::kChromeUIDNSHost) {
+     AboutDnsHandler::Start(profile(), callback);
+     return;
+-#if defined(OS_LINUX) || defined(OS_OPENBSD)
++#if defined(OS_LINUX) || defined(OS_BSD)
+   } else if (source_name_ == chrome::kChromeUILinuxProxyConfigHost) {
+     response = AboutLinuxProxyConfig();
+ #endif
+@@ -970,7 +972,7 @@ void AboutUIHTMLSource::StartDataRequest(
+     ChromeOSCreditsHandler::Start(path, callback);
+     return;
+ #endif
+-#if defined(OS_LINUX) || defined(OS_OPENBSD)
++#if defined(OS_LINUX)
+   } else if (source_name_ == chrome::kChromeUISandboxHost) {
+     response = AboutSandbox();
+ #endif

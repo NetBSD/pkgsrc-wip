@@ -1,0 +1,12 @@
+$OpenBSD: patch-chrome_browser_browser_resources_grd,v 1.24 2016/01/23 18:49:31 robert Exp $
+--- chrome/browser/browser_resources.grd.orig.port	Wed Jan 20 21:01:19 2016
++++ chrome/browser/browser_resources.grd	Fri Jan 22 19:58:58 2016
+@@ -259,7 +259,7 @@
+         <include name="IDR_ABOUT_VOICESEARCH_JS" file="resources\about_voicesearch.js" type="BINDATA" />
+         <include name="IDR_PLUGIN_DB_JSON" file="resources\plugin_metadata\plugins_chromeos.json" type="BINDATA" />
+       </if>
+-      <if expr="desktop_linux or (is_android and enable_plugins)">
++      <if expr="desktop_linux or (is_android and enable_plugins) or is_posix">
+         <include name="IDR_PLUGIN_DB_JSON" file="resources\plugin_metadata\plugins_linux.json" type="BINDATA" />
+       </if>
+       <if expr="is_android">

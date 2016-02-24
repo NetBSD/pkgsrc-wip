@@ -1,0 +1,12 @@
+$OpenBSD: patch-chrome_common_chrome_switches_cc,v 1.18 2016/01/29 16:56:10 robert Exp $
+--- chrome/common/chrome_switches.cc.orig.port	Wed Jan 27 18:00:46 2016
++++ chrome/common/chrome_switches.cc	Thu Jan 28 07:31:23 2016
+@@ -1168,7 +1168,7 @@ const char kHelpShort[]                     = "h";
+ const char kPasswordStore[]                 = "password-store";
+ #endif
+ 
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
++#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+ // Triggers migration of user data directory to another directory
+ // specified as a parameter. The migration is done under singleton lock,
+ // and sanity checks are made to avoid corrupting the profile.

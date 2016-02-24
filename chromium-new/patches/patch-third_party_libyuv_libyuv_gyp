@@ -1,0 +1,19 @@
+$OpenBSD: patch-third_party_libyuv_libyuv_gyp,v 1.10 2016/01/23 18:49:31 robert Exp $
+--- third_party/libyuv/libyuv.gyp.orig.port	Wed Jan 20 21:02:20 2016
++++ third_party/libyuv/libyuv.gyp	Fri Jan 22 19:58:59 2016
+@@ -86,11 +86,15 @@
+               ],
+             }],
+             [ 'use_system_libjpeg == 1', {
++              'include_dirs': [ '/usr/local/include' ],
+               'link_settings': {
+                 'libraries': [
+                   '-ljpeg',
+                 ],
+               }
++            }],
++            ['target_arch == "ia32"', {
++              'cflags': [ '-fomit-frame-pointer' ],
+             }],
+           ],
+         }],

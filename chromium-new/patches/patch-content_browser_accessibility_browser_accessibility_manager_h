@@ -1,0 +1,21 @@
+$OpenBSD: patch-content_browser_accessibility_browser_accessibility_manager_h,v 1.2 2016/01/23 18:49:31 robert Exp $
+--- content/browser/accessibility/browser_accessibility_manager.h.orig.port	Wed Jan 20 21:01:21 2016
++++ content/browser/accessibility/browser_accessibility_manager.h	Fri Jan 22 19:58:58 2016
+@@ -28,7 +28,7 @@ class BrowserAccessibilityManager;
+ class BrowserAccessibilityManagerAndroid;
+ #elif defined(OS_WIN)
+ class BrowserAccessibilityManagerWin;
+-#elif defined(OS_LINUX) && !defined(OS_CHROMEOS) && defined(USE_X11)
++#elif (defined(OS_BSD) || defined(OS_LINUX)) && !defined(OS_CHROMEOS) && defined(USE_X11)
+ class BrowserAccessibilityManagerAuraLinux;
+ #endif
+ 
+@@ -237,7 +237,7 @@ class CONTENT_EXPORT BrowserAccessibilityManager : pub
+   BrowserAccessibilityManagerAndroid* ToBrowserAccessibilityManagerAndroid();
+ #endif
+ 
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS) && defined(USE_X11)
++#if (defined(OS_BSD) || defined(OS_LINUX)) && !defined(OS_CHROMEOS) && defined(USE_X11)
+   BrowserAccessibilityManagerAuraLinux*
+       ToBrowserAccessibilityManagerAuraLinux();
+ #endif

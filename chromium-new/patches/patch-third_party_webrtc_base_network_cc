@@ -1,0 +1,30 @@
+$OpenBSD: patch-third_party_webrtc_base_network_cc,v 1.8 2016/01/23 18:49:31 robert Exp $
+--- third_party/webrtc/base/network.cc.orig.port	Wed Jan 20 21:02:39 2016
++++ third_party/webrtc/base/network.cc	Fri Jan 22 19:58:59 2016
+@@ -18,7 +18,7 @@
+ // linux/if.h can't be included at the same time as the posix sys/if.h, and
+ // it's transitively required by linux/route.h, so include that version on
+ // linux instead of the standard posix one.
+-#if defined(WEBRTC_LINUX)
++#if defined(WEBRTC_LINUX) && !defined(WEBRTC_BSD)
+ #include <linux/if.h>
+ #include <linux/route.h>
+ #elif !defined(__native_client__)
+@@ -620,7 +620,7 @@ bool BasicNetworkManager::CreateNetworks(bool include_
+ }
+ #endif  // WEBRTC_WIN
+ 
+-#if defined(WEBRTC_LINUX)
++#if defined(WEBRTC_LINUX) && !defined(WEBRTC_BSD)
+ bool IsDefaultRoute(const std::string& network_name) {
+   FileStream fs;
+   if (!fs.Open("/proc/net/route", "r", NULL)) {
+@@ -666,7 +666,7 @@ bool BasicNetworkManager::IsIgnoredNetwork(const Netwo
+       strncmp(network.name().c_str(), "vboxnet", 7) == 0) {
+     return true;
+   }
+-#if defined(WEBRTC_LINUX)
++#if defined(WEBRTC_LINUX) && !defined(WEBRTC_BSD)
+   // Make sure this is a default route, if we're ignoring non-defaults.
+   if (ignore_non_default_routes_ && !IsDefaultRoute(network.name())) {
+     return true;

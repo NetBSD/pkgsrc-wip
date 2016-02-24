@@ -1,0 +1,12 @@
+$OpenBSD: patch-base_message_loop_message_loop_cc,v 1.5 2015/10/14 16:42:07 robert Exp $
+--- base/message_loop/message_loop.cc.orig.port	Tue Oct 13 21:04:30 2015
++++ base/message_loop/message_loop.cc	Wed Oct 14 07:41:12 2015
+@@ -205,7 +205,7 @@ scoped_ptr<MessagePump> MessageLoop::CreateMessagePump
+ // TODO(rvargas): Get rid of the OS guards.
+ #if defined(USE_GLIB) && !defined(OS_NACL)
+   typedef MessagePumpGlib MessagePumpForUI;
+-#elif defined(OS_LINUX) && !defined(OS_NACL)
++#elif defined(OS_BSD) && !defined(OS_NACL)
+   typedef MessagePumpLibevent MessagePumpForUI;
+ #endif
+ 

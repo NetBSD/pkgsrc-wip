@@ -1,0 +1,17 @@
+$OpenBSD: patch-third_party_webrtc_build_common_gypi,v 1.23 2016/01/23 18:49:31 robert Exp $
+--- third_party/webrtc/build/common.gypi.orig.port	Wed Jan 20 21:02:39 2016
++++ third_party/webrtc/build/common.gypi	Fri Jan 22 19:58:59 2016
+@@ -347,6 +347,13 @@
+           'WEBRTC_LINUX',
+         ],
+       }],
++      ['os_bsd==1', {
++        'defines': [
++          'WEBRTC_BSD',
++          'WEBRTC_LINUX',
++          'WEBRTC_THREAD_RR',
++        ],
++      }],
+       ['OS=="mac"', {
+         'defines': [
+           'WEBRTC_MAC',
