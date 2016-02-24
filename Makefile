@@ -1476,6 +1476,7 @@ SUBDIR+=	lat
 SUBDIR+=	lbt
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
+SUBDIR+=	lci
 SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
