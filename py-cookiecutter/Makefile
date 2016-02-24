@@ -17,11 +17,9 @@ USE_TOOLS+=			make:build
 AUTO_MKDIRS=			yes
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1/
 
-#UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 3550: ordinal not in range(128)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
-
 BUILD_DEPENDS+=			${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 BUILD_DEPENDS+=			${PYPKGPREFIX}-chardet>=2.3.0:../../converters/py-chardet
+BUILD_DEPENDS+=			${PYPKGPREFIX}-test>=2.3.0:../../devel/py-test
 DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../wip/py-future
 DEPENDS+=			${PYPKGPREFIX}-binaryornot>=0.2.0:../../wip/py-binaryornot
 DEPENDS+=			${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
@@ -46,6 +44,9 @@ post-build:
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/cookiecutter.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+
+do-test:
+	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
