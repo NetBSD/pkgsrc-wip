@@ -4147,7 +4147,6 @@ SUBDIR+=	wireless-tools
 SUBDIR+=	wise2
 SUBDIR+=	wjelement
 SUBDIR+=	wkhtmltopdf
-SUBDIR+=	wklejto
 SUBDIR+=	wl-current
 SUBDIR+=	wla-dx-git
 SUBDIR+=	wmc2d
