@@ -76,10 +76,21 @@ SUBST_SED.libcxx=		-e 's,(Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 4
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
+PKG_SUPPORTED_OPTIONS=	tests
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mtests)
+CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=ON
+CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=ON
 TEST_TARGET=		clang-test
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
-# test dependency
-#.include "../../devel/googletest/buildlink3.mk"
+.include "../../devel/googletest/buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
+CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
+.endif
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
