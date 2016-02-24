@@ -14,9 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-netmiko-[0-9]*:../../wip/py-netmiko
 DEPENDS+=	${PYPKGPREFIX}-IOSXR-[0-9]*:../../wip/py-IOSXR
 DEPENDS+=	${PYPKGPREFIX}-junos-eznc-[0-9]*:../../net/py-junos-eznc
 DEPENDS+=	${PYPKGPREFIX}-ncclient-[0-9]*:../../net/py-ncclient
+DEPENDS+=	${PYPKGPREFIX}-eapi-[0-9]*:../../wip/py-eapi
 
 # Not yet packaged, this may depend on:
-# pyeapi	Library for Arista's eAPI command API implementation
 # pyFG		API for FortiOS or how to turn FortiOS into JunOS
 # pycsco	Library for working with Cisco NX-OS switches
 # bnclient	Blade Network Technologies Netconf Python Client
