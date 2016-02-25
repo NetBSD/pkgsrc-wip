@@ -76,11 +76,23 @@ SUBST_SED.libcxx=		-e 's,(Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 4
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
+# 3.8.0 -> 3.8
+LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
+PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
+
+# 3.8.0rc2 -> 3.8.0
+# This is not required in pkgsrc proper, use PKGVERSION_NOREV
+PKGVERSION_NORC=${PKGVERSION_NOREV:C/rc[0-9]+//}
+PLIST_SUBST+=	PKGVERSION_NORC=${PKGVERSION_NORC}
+
+PLIST_VARS+=	notdylib
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=		SOEXT="dylib"
+SOEXT=		dylib
 .else
-PLIST_SUBST+=		SOEXT="so"
+SOEXT=		so
+PLIST.notdylib=	yes
 .endif
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
 PKG_SUPPORTED_OPTIONS=	tests

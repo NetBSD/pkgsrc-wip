@@ -2,7 +2,7 @@
 bin/c-index-test
 bin/clang
 bin/clang++
-bin/clang-3.9
+bin/clang-${LLVM_MAJOR}
 bin/clang-cl
 bin/clang-format
 include/clang-c/BuildSystem.h
@@ -536,7 +536,7 @@ lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang.${SOEXT}
-lib/libclang.${SOEXT}.3.9
+${PLIST.notdylib}lib/libclang.${SOEXT}.${LLVM_MAJOR}
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a

@@ -802,9 +802,8 @@ include/libLLVM/llvm/Transforms/Utils/UnifyFunctionExitNodes.h
 include/libLLVM/llvm/Transforms/Utils/UnrollLoop.h
 include/libLLVM/llvm/Transforms/Utils/ValueMapper.h
 include/libLLVM/llvm/Transforms/Vectorize.h
-lib/libLLVM/libLLVM-3.8.so
-lib/libLLVM/libLLVM-3.8.0.so
-lib/libLLVM/libLLVM.so
+${PLIST.notdylib}lib/libLLVM/libLLVM-${LLVM_MAJOR}.${SOEXT}
+lib/libLLVM/libLLVM.${SOEXT}
 libexec/libLLVM/llvm-config
 share/libLLVM/cmake/AddLLVM.cmake
 share/libLLVM/cmake/AddLLVMDefinitions.cmake

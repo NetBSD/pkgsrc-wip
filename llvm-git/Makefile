@@ -72,9 +72,20 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 .include "../../mk/bsd.prefs.mk"
 
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=		SOEXT="dylib"
+SOEXT=		dylib
 .else
-PLIST_SUBST+=		SOEXT="so"
+SOEXT=		so
+.endif
+PLIST_SUBST+=	SOEXT=${SOEXT}
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+.  for lib in BugpointPasses LLVMHello libLTO
+	install_name_tool -id ${PREFIX}/lib/${lib}.${SOEXT}	\
+		${DESTDIR}${PREFIX}/lib/${lib}.${SOEXT}
+.  endfor
 .endif
 
 .include "options.mk"
@@ -83,9 +94,9 @@ PLIST_SUBST+=		SOEXT="so"
 # It is used to detect correct LLVM_HOST_TRIPLE, e.g. for NetBSD/evbarm.
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
-#.for f in config.guess config.sub
-#	cp ../../mk/gnu-config/${f} ${WRKSRC}/autoconf/${f}
-#.endfor
+.for f in config.guess config.sub
+	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
+.endfor
 
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/zlib/buildlink3.mk"

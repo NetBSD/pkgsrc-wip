@@ -89,6 +89,27 @@ TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
+
+# 3.8.0 -> 3.8
+LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
+PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
+
+# This is not required in pkgsrc proper, use PKGVERSION_NOREV
+PKGVERSION_NORC=${PKGVERSION_NOREV:C/rc[0-9]+//}
+PLIST_SUBST+=	PKGVERSION_NORC=${PKGVERSION_NORC}
+
+PLIST_VARS+=	notdylib
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+SOEXT=		dylib
+LLVM_LIBNAME=	libLLVM.${SOEXT}
+.else
+SOEXT=		so
+LLVM_LIBNAME=	libLLVM-${LLVM_MAJOR}.${SOEXT}
+PLIST.notdylib=	yes
+.endif
+PLIST_SUBST+=	SOEXT=${SOEXT}
+PLIST_SUBST+=	LLVM_LIBNAME=${LLVM_LIBNAME}
+
 .include "options.mk"
 
 # replacing config.guess is required even for cmake.
@@ -101,9 +122,16 @@ post-extract:
 
 post-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/libLLVM
-	${INSTALL_LIB} ${WRKDIR}/build/lib/libLLVM-3.8.so ${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-3.8.so
-	${LN} -s libLLVM-3.8.so ${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM.so
-	${LN} -s libLLVM-3.8.so ${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-3.8.0.so
+	${INSTALL_LIB} ${WRKDIR}/build/lib/${LLVM_LIBNAME}	\
+		${DESTDIR}${PREFIX}/lib/libLLVM/${LLVM_LIBNAME}
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id	\
+		${PREFIX}/lib/libLLVM/${LLVM_LIBNAME}	\
+		${DESTDIR}${PREFIX}/lib/libLLVM/${LLVM_LIBNAME}
+.else
+	${LN} -s ${LLVM_LIBNAME}	\
+		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM.${SOEXT}
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
