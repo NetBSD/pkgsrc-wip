@@ -70,6 +70,13 @@ TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+PLIST_SUBST+=		SOEXT="dylib"
+.else
+PLIST_SUBST+=		SOEXT="so"
+.endif
+
 .include "options.mk"
 
 # replacing config.guess is required even for cmake.

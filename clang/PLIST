@@ -518,8 +518,8 @@ lib/clang/3.8.0/include/xsaveintrin.h
 lib/clang/3.8.0/include/xsaveoptintrin.h
 lib/clang/3.8.0/include/xsavesintrin.h
 lib/clang/3.8.0/include/xtestintrin.h
-lib/libclang.so
-lib/libclang.so.3.8
+lib/libclang.${SOEXT}
+lib/libclang.${SOEXT}.3.8
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a

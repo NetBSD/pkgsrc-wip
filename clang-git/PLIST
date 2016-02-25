@@ -535,8 +535,8 @@ lib/clang/${PKGVERSION}/include/xtestintrin.h
 lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
-lib/libclang.so
-lib/libclang.so.3.9
+lib/libclang.${SOEXT}
+lib/libclang.${SOEXT}.3.9
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a

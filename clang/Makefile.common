@@ -76,6 +76,12 @@ SUBST_SED.libcxx=		-e 's,(Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 4
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+PLIST_SUBST+=		SOEXT="dylib"
+.else
+PLIST_SUBST+=		SOEXT="so"
+.endif
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
 PKG_SUPPORTED_OPTIONS=	tests
 

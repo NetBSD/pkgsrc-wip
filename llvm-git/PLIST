@@ -860,8 +860,8 @@ include/llvm/Transforms/Utils/UnifyFunctionExitNodes.h
 include/llvm/Transforms/Utils/UnrollLoop.h
 include/llvm/Transforms/Utils/ValueMapper.h
 include/llvm/Transforms/Vectorize.h
-lib/BugpointPasses.so
-lib/LLVMHello.so
+lib/BugpointPasses.${SOEXT}
+lib/LLVMHello.${SOEXT}
 lib/cmake/llvm/AddLLVM.cmake
 lib/cmake/llvm/AddLLVMDefinitions.cmake
 lib/cmake/llvm/AddOCaml.cmake
@@ -1000,4 +1000,4 @@ ${PLIST.XCore}lib/libLLVMXCoreDesc.a
 ${PLIST.XCore}lib/libLLVMXCoreDisassembler.a
 ${PLIST.XCore}lib/libLLVMXCoreInfo.a
 lib/libLLVMipo.a
-lib/libLTO.so
+lib/libLTO.${SOEXT}
