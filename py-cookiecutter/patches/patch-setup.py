@@ -1,26 +1,28 @@
 $NetBSD$
 
-Remove history file to make this build in C locales.
-Waiting a workaround: https://github.com/audreyr/cookiecutter/pull/638
+Fix build with python-3.x and C locale.
+https://github.com/audreyr/cookiecutter/pull/639
 
---- setup.py.orig	2016-02-16 08:36:10.000000000 +0100
-+++ setup.py	2016-02-16 08:34:17.000000000 +0100
-@@ -23,9 +23,6 @@
- with open('README.rst') as readme_file:
+--- setup.py.orig	2015-11-10 22:47:32.000000000 +0000
++++ setup.py
+@@ -1,6 +1,7 @@
+ #!/usr/bin/env python
+ 
+ import os
++import io
+ import sys
+ 
+ try:
+@@ -20,10 +21,10 @@ if sys.argv[-1] == 'tag':
+     os.system("git push --tags")
+     sys.exit()
+ 
+-with open('README.rst') as readme_file:
++with io.open('README.rst', 'r', encoding='utf-8') as readme_file:
      readme = readme_file.read()
  
 -with open('HISTORY.rst') as history_file:
--    history = history_file.read().replace('.. :changelog:', '')
--
++with io.open('HISTORY.rst', 'r', encoding='utf-8') as history_file:
+     history = history_file.read().replace('.. :changelog:', '')
+ 
  requirements = [
-     'future>=0.15.2',
-     'binaryornot>=0.2.0',
-@@ -34,7 +31,7 @@
-     'whichcraft>=0.1.1'
- ]
- 
--long_description = readme + '\n\n' + history
-+long_description = readme
- 
- if sys.argv[-1] == 'readme':
-     print(long_description)
