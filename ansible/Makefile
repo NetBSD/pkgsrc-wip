@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2015/11/23 12:51:43 tty Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/24 22:32:59 tty Exp $
 
-DISTNAME=	ansible-1.9.4
+DISTNAME=	ansible-2.0.0.2
 PKGREVISION=	1
-#PKGNAME=   ${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
+#PKGNAME=	${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	matthieu@beastmail.org
 HOMEPAGE=	http://ansibleworks.com/
 COMMENT=	SSH-based configuration management, deployment, and task execution
 LICENSE=	gnu-gpl-v3
@@ -17,59 +17,64 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
 
 USE_TOOLS+=	gmake
+PYTHON_VERSIONS_ACCEPTED=		27
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-paramiko
+
 EGDIR=		${PREFIX}/share/examples/ansible
 
-SUBST_CLASSES+=         prefix
-SUBST_STAGE.prefix=     pre-configure
-SUBST_FILES.prefix+=    docs/man/man1/ansible.1
-SUBST_FILES.prefix+=    docs/man/man1/ansible.1.asciidoc.in
-SUBST_FILES.prefix+=    docs/man/man1/ansible-galaxy.1
-SUBST_FILES.prefix+=    docs/man/man1/ansible-galaxy.1.asciidoc.in
-SUBST_FILES.prefix+=    docs/man/man1/ansible-playbook.1
-SUBST_FILES.prefix+=    docs/man/man1/ansible-playbook.1.asciidoc.in
-SUBST_FILES.prefix+=    examples/ansible.cfg examples/hosts
-SUBST_FILES.prefix+=    lib/ansible/constants.py lib/ansible/callbacks.py
-SUBST_FILES.prefix+=    lib/ansible/modules/core/system/ping.py
-SUBST_FILES.prefix+=    lib/ansible/modules/core/system/setup.py
-SUBST_FILES.prefix+=    lib/ansible/modules/extras/database/misc/riak.py
-SUBST_FILES.prefix+=    lib/ansible/modules/extras/monitoring/nagios.py
-SUBST_FILES.prefix+=    lib/ansible/modules/extras/packaging/os/pkgin.py
-SUBST_FILES.prefix+=    plugins/README.md plugins/inventory/cobbler.py
-SUBST_FILES.prefix+=    plugins/inventory/collins.py
-SUBST_MESSAGE.prefix=   Fixing PREFIX path.
-SUBST_SED.prefix=       -e "s,@PREFIX@,${PREFIX},"
-SUBST_SED.prefix+=      -e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
+SUBST_CLASSES+=			prefix
+SUBST_STAGE.prefix=		pre-configure
+SUBST_FILES.prefix+=	docs/man/man1/ansible.1
+SUBST_FILES.prefix+=	docs/man/man1/ansible.1.asciidoc.in
+SUBST_FILES.prefix+=	docs/man/man1/ansible-galaxy.1
+SUBST_FILES.prefix+=	docs/man/man1/ansible-galaxy.1.asciidoc.in
+SUBST_FILES.prefix+=	docs/man/man1/ansible-playbook.1
+SUBST_FILES.prefix+=	docs/man/man1/ansible-playbook.1.asciidoc.in
+SUBST_FILES.prefix+=	examples/ansible.cfg examples/hosts
+SUBST_FILES.prefix+=	lib/ansible/constants.py lib/ansible/cli/galaxy.py
+SUBST_FILES.prefix+=	lib/ansible/modules/core/system/ping.py
+SUBST_FILES.prefix+=	lib/ansible/modules/core/system/setup.py
+SUBST_FILES.prefix+=	lib/ansible/modules/extras/monitoring/nagios.py
+SUBST_FILES.prefix+=	contrib/README.md contrib/inventory/cobbler.py
+SUBST_FILES.prefix+=	contrib/inventory/collins.py contrib/inventory/nova.py
+SUBST_FILES.prefix+=	contrib/inventory/openstack.py
+SUBST_FILES.prefix+=	contrib/inventory/spacewalk.py
+SUBST_MESSAGE.prefix=	Fixing PREFIX path.
+SUBST_SED.prefix=		-e "s,@PREFIX@,${PREFIX},"
+SUBST_SED.prefix+=		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
 
-SUBST_CLASSES+=         pythonbin
-SUBST_STAGE.pythonbin=  pre-configure
-SUBST_FILES.pythonbin=  Makefile
-SUBST_MESSAGE.pythonbin=        Fixing path to PYTHONBIN.
-SUBST_SED.pythonbin=    -e "s,PYTHON=python,PYTHON=${PYTHONBIN},"
+SUBST_CLASSES+=				pythonbin
+SUBST_STAGE.pythonbin=		pre-configure
+SUBST_FILES.pythonbin=		Makefile
+SUBST_MESSAGE.pythonbin=	Fixing path to PYTHONBIN.
+SUBST_SED.pythonbin=		-e "s,PYTHON=python,PYTHON=${PYTHONBIN},"
 
-PYTHON_VERSIONS_INCOMPATIBLE=   33 34 35 # py-paramiko
+PY_DIRS=	lib/ansible contrib/inventory
 
-REPLACE_PYTHON=         lib/ansible/runner/action_plugins/synchronize.py
-REPLACE_PYTHON+=        lib/ansible/utils/module_docs.py
+.for f in `find ${PY_DIRS} -name \*.py`
+REPLACE_PYTHON+=	${f}
+.endfor
 
-MANPAGES=       ansible-doc.1 ansible-pull.1 ansible-galaxy.1 ansible-vault.1
-MANPAGES+=      ansible-playbook.1 ansible.1
+MANPAGES=	ansible-doc.1 ansible-pull.1 ansible-galaxy.1 ansible-vault.1
+MANPAGES+=	ansible-playbook.1 ansible.1
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 ${PKG_SYSCONFDIR}/ansible
-INSTALLATION_DIRS+=     ${EGDIR}/playbooks
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKG_SYSCONFDIR}/ansible
+INSTALLATION_DIRS+=	${EGDIR}/playbooks
 
-CHECK_INTERPRETER_SKIP= share/ansible/*
+CHECK_INTERPRETER_SKIP=	share/ansible/*
 
-MAKE_DIRS=		${PKG_SYSCONFDIR}/ansible ${PREFIX}/share/ansible
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/action_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/callback_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/connection_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/lookup_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/vars_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/filter_plugins
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/ansible ${PKG_SYSCONFDIR}/ansible/facts.d
+MAKE_DIRS+=	${PREFIX}/share/ansible
+MAKE_DIRS+= ${PREFIX}/share/ansible/ansible_plugins
+MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/action_plugins
+MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/callback_plugins
+MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/connection_plugins
+MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/lookup_plugins
+MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/vars_plugins
+MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/filter_plugins
 
 pre-install:
-	find ${WRKSRC} -name \*.orig -exec rm {} \;
+	${FIND} ${WRKSRC} -type f -name \*.orig -delete
 
 post-install:
 .for f in ${MANPAGES}

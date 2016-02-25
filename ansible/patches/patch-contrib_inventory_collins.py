@@ -1,9 +1,9 @@
-$NetBSD: patch-plugins_inventory_collins,v 1.1 2015/08/19 15:04:11 ttys Exp $
+$NetBSD: patch-contrib_inventory_collins.py,v 1.0 2016/02/24 22:43:01 tty Exp $
 
-Fix hardcoded paths to be replaced with SUBST framework.
+Fix hardcoded paths.
 
---- plugins/inventory/collins.py.orig	2015-06-25 20:39:08.000000000 +0000
-+++ plugins/inventory/collins.py
+--- contrib/inventory/collins.py.orig	2016-02-24 13:04:04.000000000 +0000
++++ contrib/inventory/collins.py
 @@ -4,7 +4,7 @@
  Collins external inventory script
  =================================

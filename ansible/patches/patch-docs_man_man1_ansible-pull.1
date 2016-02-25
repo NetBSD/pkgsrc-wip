@@ -1,0 +1,30 @@
+$NetBSD: patch-docs_man_man1_ansible-pull.1,v 1.0 2016/02/24 22:43:58 tty Exp $
+
+Fix hardcoded paths.
+
+--- docs/man/man1/ansible-pull.1.orig	2016-01-14 22:33:37.000000000 +0000
++++ docs/man/man1/ansible-pull.1
+@@ -115,7 +115,7 @@ Show the help message and exit\&.
+ The
+ \fIPATH\fR
+ to the inventory, which defaults to
+-\fI/etc/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
++\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
+ \fIhost,\fR\&.
+ .RE
+ .PP
+@@ -201,11 +201,11 @@ ANSIBLE_CONFIG \(em Override the default
+ Many more are available for most options in ansible\&.cfg
+ .SH "FILES"
+ .sp
+-/etc/ansible/hosts \(em Default inventory file
++@PKG_SYSCONFDIR@/ansible/hosts \(em Default inventory file
+ .sp
+-/usr/share/ansible/ \(em Default module library
++@PREFIX@/share/ansible/ \(em Default module library
+ .sp
+-/etc/ansible/ansible\&.cfg \(em Config file, used if present
++@PKG_SYSCONFDIR@/ansible/ansible\&.cfg \(em Config file, used if present
+ .sp
+ ~/\&.ansible\&.cfg \(em User config file, overrides the default config if present
+ .SH "AUTHOR"

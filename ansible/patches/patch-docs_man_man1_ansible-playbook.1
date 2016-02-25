@@ -1,19 +1,19 @@
-$NetBSD: patch-docs_man_man1_ansible-playbook,v 1.1 2015/08/19 15:04:11 ttys Exp $
+$NetBSD: patch-docs_man_man1_ansible-playbook.1,v 1.0 2016/02/24 22:43:47 tty Exp $
 
-Fix hardcoded paths to be replaced with SUBST framework.
+Fix hardcoded paths.
 
---- docs/man/man1/ansible-playbook.1.orig	2015-06-25 20:39:08.000000000 +0000
+--- docs/man/man1/ansible-playbook.1.orig	2016-01-14 22:33:36.000000000 +0000
 +++ docs/man/man1/ansible-playbook.1
-@@ -53,7 +53,7 @@ Verbose mode, more output from successfu
+@@ -123,7 +123,7 @@ Show help page and exit
  The
  \fIPATH\fR
- to the inventory hosts file, which defaults to
--\fI/etc/ansible/hosts\fR\&.
-+\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&.
+ to the inventory, which defaults to
+-\fI/etc/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
++\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
+ \fIhost,\fR\&.
  .RE
  .PP
- \fB\-M\fR \fIDIRECTORY\fR, \fB\-\-module\-path=\fR\fIDIRECTORY\fR
-@@ -61,7 +61,7 @@ to the inventory hosts file, which defau
+@@ -154,7 +154,7 @@ List all tasks that would be executed; d
  The
  \fIDIRECTORY\fR
  search path to load modules from\&. The default is
@@ -21,9 +21,9 @@ Fix hardcoded paths to be replaced with SUBST framework.
 +\fI@PREFIX@/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
  .RE
  .PP
- \fB\-e\fR \fIVARS\fR, \fB\-\-extra\-vars=\fR\fIVARS\fR
-@@ -161,11 +161,11 @@ ANSIBLE_HOSTS  \(em Override the default
- ANSIBLE_LIBRARY \(em Override the default ansible module library path
+ \fB\-\-private\-key=\fR\fIPRIVATE_KEY_FILE\fR
+@@ -274,11 +274,11 @@ ANSIBLE_CONFIG \(em Override the default
+ Many more are available for most options in ansible\&.cfg
  .SH "FILES"
  .sp
 -/etc/ansible/hosts \(em Default inventory file

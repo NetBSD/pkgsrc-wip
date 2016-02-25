@@ -1,0 +1,27 @@
+$NetBSD: patch-docs_man_man1_ansible-doc.1,v 1.0 2016/02/24 22:43:22 tty Exp $
+
+Fix hardcoded paths.
+
+--- docs/man/man1/ansible-doc.1.orig	2016-01-14 22:33:38.000000000 +0000
++++ docs/man/man1/ansible-doc.1
+@@ -42,7 +42,7 @@ ansible\-doc [\-M module_path] [\-l] [\-
+ the
+ \fIDIRECTORY\fR
+ search path to load modules from\&. The default is
+-\fI/usr/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
++\fI@PREFIX@/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
+ .RE
+ .PP
+ \fB\-s\fR, \fB\-\-snippet=\fR
+@@ -59,9 +59,9 @@ Produce a terse listing of modules and a
+ ANSIBLE_LIBRARY \(em Override the default ansible module library path
+ .SH "FILES"
+ .sp
+-/usr/share/ansible/ \(em Default module library
++@PREFIX@/share/ansible/ \(em Default module library
+ .sp
+-/etc/ansible/ansible\&.cfg \(em Config file, used if present
++@PKG_SYSCONFDIR@/ansible/ansible\&.cfg \(em Config file, used if present
+ .sp
+ ~/\&.ansible\&.cfg \(em User config file, overrides the default config if present
+ .SH "AUTHOR"

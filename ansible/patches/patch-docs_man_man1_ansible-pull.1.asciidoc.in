@@ -1,0 +1,30 @@
+$NetBSD: patch-docs_man_man1_ansible-pull.1.asciidoc.in,v 1.0 2016/02/24 22:44:03 tty Exp $
+
+Fix hardcoded paths.
+
+--- docs/man/man1/ansible-pull.1.asciidoc.in.orig	2016-01-14 22:33:27.000000000 +0000
++++ docs/man/man1/ansible-pull.1.asciidoc.in
+@@ -105,7 +105,7 @@ Show the help message and exit.
+ 
+ *-i* 'PATH', *--inventory=*'PATH'::
+ 
+-The 'PATH' to the inventory, which defaults to '/etc/ansible/hosts'.
++The 'PATH' to the inventory, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
+ Alternatively you can use a comma separated list of hosts or single host with traling comma 'host,'.
+ 
+ *--private-key=*'PRIVATE_KEY_FILE'::
+@@ -192,11 +192,11 @@ Many more are available for most options
+ FILES
+ -----
+ 
+-/etc/ansible/hosts -- Default inventory file
++@PKG_SYSCONFDIR@/ansible/hosts -- Default inventory file
+ 
+-/usr/share/ansible/ -- Default module library
++@PREFIX@/share/ansible/ -- Default module library
+ 
+-/etc/ansible/ansible.cfg -- Config file, used if present
++@PKG_SYSCONFDIR@/ansible/ansible.cfg -- Config file, used if present
+ 
+ ~/.ansible.cfg -- User config file, overrides the default config if present
+ 

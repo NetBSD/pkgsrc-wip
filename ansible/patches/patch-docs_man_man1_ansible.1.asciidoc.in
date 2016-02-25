@@ -1,19 +1,19 @@
-$NetBSD: patch-docs_man_man1_ansible-asciidoc,v 1.1 2015/08/19 15:04:11 ttys Exp $
+$NetBSD: patch-docs_man_man1_ansible.1.asciidoc.in,v 1.0 2016/02/24 22:44:14 tty Exp $
 
-Fix hardcoded paths to be replaced with SUBST framework.
+Fix hardcoded paths.
 
---- docs/man/man1/ansible.1.asciidoc.in.orig	2015-06-25 20:39:08.000000000 +0000
+--- docs/man/man1/ansible.1.asciidoc.in.orig	2016-01-14 22:33:27.000000000 +0000
 +++ docs/man/man1/ansible.1.asciidoc.in
-@@ -41,7 +41,7 @@ up to three times for more output.
+@@ -98,7 +98,7 @@ Show help message and exit.
  
  *-i* 'PATH', *--inventory=*'PATH'::
  
--The 'PATH' to the inventory hosts file, which defaults to '/etc/ansible/hosts'.
-+The 'PATH' to the inventory hosts file, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
+-The 'PATH' to the inventory, which defaults to '/etc/ansible/hosts'.
++The 'PATH' to the inventory, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
+ Alternatively you can use a comma separated list of hosts or single host with traling comma 'host,'.
  
- 
- *-f* 'NUM', *--forks=*'NUM'::
-@@ -61,7 +61,7 @@ Execute the module called 'NAME'.
+ *-l* 'SUBSET', *--limit=*'SUBSET'::
+@@ -117,7 +117,7 @@ Execute the module called 'NAME'.
  *-M* 'DIRECTORY', *--module-path=*'DIRECTORY'::
  
  The 'DIRECTORY' search path to load modules from. The default is
@@ -21,8 +21,8 @@ Fix hardcoded paths to be replaced with SUBST framework.
 +'@PREFIX@/share/ansible'. This can also be set with the ANSIBLE_LIBRARY
  environment variable.
  
- *-a* \'_ARGUMENTS_', *--args=*\'_ARGUMENTS_'::
-@@ -140,11 +140,11 @@ additional options, see the documentatio
+ *-o*, *--one-line*::
+@@ -223,11 +223,11 @@ Many more are available for most options
  FILES
  -----
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-examples_hosts,v 1.1 2015/08/19 15:04:11 ttys Exp $
+$NetBSD: patch-examples_hosts,v 1.0 2016/02/24 22:44:25 tty Exp $
 
-Fix hardcoded paths to be replaced with SUBST framework.
+Fix hardcoded path.
 
---- examples/hosts.orig	2015-06-25 20:39:08.000000000 +0000
+--- examples/hosts.orig	2016-01-14 22:33:27.000000000 +0000
 +++ examples/hosts
 @@ -1,6 +1,6 @@
  # This is the default ansible 'hosts' file.
