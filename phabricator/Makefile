@@ -15,7 +15,8 @@ HOMEPAGE=		http://phabricator.com/
 COMMENT=		Open software engineering platform
 LICENSE=		apache-2.0
 
-USE_TOOLS+=		pax
+USE_TOOLS+=		pax bash:run
+EXTRACT_USING=		bsdtar
 
 DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=		${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
@@ -64,6 +65,9 @@ SUBST_FILES.php_env+=	scripts/almanac/manage_almanac.php \
 			scripts/util/*.php \
 			support/aphlict/server/aphlict_launcher.php
 SUBST_SED.php_env=	-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
+
+REPLACE_BASH+=		scripts/install/install_rhel-derivs.sh \
+			scripts/install/install_ubuntu.sh
 
 NO_BUILD=		yes
 
