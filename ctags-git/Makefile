@@ -16,7 +16,7 @@ GIT_MODULE.ctags=	ctags
 WRKSRC=			${WRKDIR}/${GIT_MODULE.ctags}
 
 USE_TOOLS=		aclocal autoreconf autoconf automake autoheader
-USE_TOOLS+=		bash gmake
+USE_TOOLS+=		bash gmake perl
 
 SUBST_CLASSES+=         bash
 SUBST_MESSAGE.bash=     Fixing shellbang references to bash.
