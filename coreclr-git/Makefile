@@ -41,6 +41,8 @@ _WRAP_EXTRA_ARGS.CXX+=	-Wno-unused-function -Wno-self-assign
 CWRAPPERS_APPEND.cxx+=	-Wno-unused-function -Wno-self-assign
 .endif
 
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/bin/obj/${OPSYS}.x64.Debug/src/pal/tests/palsuite/exception_handling/pal_sxs/test1
+
 do-configure:
 	${RUN} ${ECHO} Skip configure and call CMake via build.sh
 
