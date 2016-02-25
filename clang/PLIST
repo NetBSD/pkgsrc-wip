@@ -4,6 +4,7 @@ bin/clang
 bin/clang++
 bin/clang-${LLVM_MAJOR}
 bin/clang-cl
+bin/clang-cpp
 bin/clang-format
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
