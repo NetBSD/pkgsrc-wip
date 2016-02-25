@@ -1,11 +1,11 @@
 @comment $NetBSD$
 bin/cl_napalm_configure
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/napalm/__init__.py
 ${PYSITELIB}/napalm/__init__.pyc
 ${PYSITELIB}/napalm/__init__.pyo
@@ -48,6 +48,7 @@ ${PYSITELIB}/napalm/utils/__init__.pyo
 ${PYSITELIB}/napalm/utils/junos_views.py
 ${PYSITELIB}/napalm/utils/junos_views.pyc
 ${PYSITELIB}/napalm/utils/junos_views.pyo
+${PYSITELIB}/napalm/utils/junos_views.yml
 ${PYSITELIB}/napalm/utils/string_parsers.py
 ${PYSITELIB}/napalm/utils/string_parsers.pyc
 ${PYSITELIB}/napalm/utils/string_parsers.pyo
