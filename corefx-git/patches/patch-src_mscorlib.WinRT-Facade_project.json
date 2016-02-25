@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- src/mscorlib.WinRT-Facade/project.json.orig	2016-02-25 00:30:49.146016511 +0000
++++ src/mscorlib.WinRT-Facade/project.json
+@@ -0,0 +1,9 @@
++{
++  "frameworks": {
++    "dnxcore50": {
++      "dependencies": {
++        "System.Runtime": "4.0.20",
++      },
++    }
++  }
++}
+\ No newline at end of file

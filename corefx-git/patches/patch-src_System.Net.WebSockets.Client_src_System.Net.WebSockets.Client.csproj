@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- src/System.Net.WebSockets.Client/src/System.Net.WebSockets.Client.csproj.orig	2016-02-25 00:30:19.954540313 +0000
++++ src/System.Net.WebSockets.Client/src/System.Net.WebSockets.Client.csproj
+@@ -126,6 +126,10 @@
+     <TargetingPackReference Include="System" />
+   </ItemGroup>
+ 
++  <ItemGroup Condition="'$(TargetGroup)' == 'netcore50'">
++    <ProjectReference Include="$(SourceDir)/mscorlib.WinRT-Facade/mscorlib.WinRT-Facade.csproj" />
++  </ItemGroup>
++
+   <ItemGroup>
+     <None Include="project.json" />
+   </ItemGroup>

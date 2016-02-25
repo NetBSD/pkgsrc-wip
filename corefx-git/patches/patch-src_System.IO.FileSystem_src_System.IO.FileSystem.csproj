@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- src/System.IO.FileSystem/src/System.IO.FileSystem.csproj.orig	2016-02-25 00:30:19.910865554 +0000
++++ src/System.IO.FileSystem/src/System.IO.FileSystem.csproj
+@@ -35,7 +35,8 @@
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'net46_Release|AnyCPU'" />
+ 
+   <ItemGroup Condition="'$(EnableWinRT)' == 'true'">
+-    <TargetingPackReference Include="windows" />
++    <TargetingPackReference Include="Windows" />
++    <ProjectReference Include="$(SourceDir)/mscorlib.WinRT-Facade/mscorlib.WinRT-Facade.csproj" />
+   </ItemGroup>
+ 
+   <ItemGroup Condition="'$(TargetGroup)' != 'net46'">

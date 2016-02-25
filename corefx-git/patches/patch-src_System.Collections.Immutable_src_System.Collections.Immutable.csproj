@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/System.Collections.Immutable/src/System.Collections.Immutable.csproj.orig	2016-02-10 10:03:58.000000000 +0000
++++ src/System.Collections.Immutable/src/System.Collections.Immutable.csproj
+@@ -7,8 +7,6 @@
+     <AppDesignerFolder>Properties</AppDesignerFolder>
+     <RootNamespace>System.Collections.Immutable</RootNamespace>
+     <AssemblyName>System.Collections.Immutable</AssemblyName>
+-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+     <FileAlignment>512</FileAlignment>
+     <DocumentationFile>$(OutputPath)System.Collections.Immutable.xml</DocumentationFile>
+     <GenerateAppxPackageOnBuild>False</GenerateAppxPackageOnBuild>

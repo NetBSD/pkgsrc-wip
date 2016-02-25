@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- src/System.Runtime.WindowsRuntime/ref/project.json.orig	2016-02-25 00:30:19.978834932 +0000
++++ src/System.Runtime.WindowsRuntime/ref/project.json
+@@ -1,6 +1,5 @@
+ {
+   "dependencies": {
+-    "Microsoft.NETCore.Portable.Compatibility": "1.0.0",
+     "Microsoft.TargetingPack.Private.WinRT": "1.0.1",
+     "System.Runtime": "4.0.0",
+     "System.IO": "4.0.0",

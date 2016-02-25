@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- src/System.Composition/demos/Microsoft.Composition.Demos.ExtendedCollectionImports/project.json.orig	2016-02-25 00:30:49.141746628 +0000
++++ src/System.Composition/demos/Microsoft.Composition.Demos.ExtendedCollectionImports/project.json
+@@ -0,0 +1,10 @@
++{
++  "dependencies": {
++    "System.Collections": "4.0.0",
++    "System.Linq": "4.0.0",
++    "System.Reflection": "4.0.0",
++  },
++  "frameworks": {
++    "dnxcore50": {}
++  }
++}
+\ No newline at end of file

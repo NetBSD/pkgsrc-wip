@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- src/System.Net.Primitives/src/System.Net.Primitives.csproj.orig	2016-02-25 00:30:19.946266969 +0000
++++ src/System.Net.Primitives/src/System.Net.Primitives.csproj
+@@ -237,6 +237,10 @@
+     <TargetingPackReference Include="System" />
+   </ItemGroup>
+ 
++  <ItemGroup Condition="'$(TargetGroup)' == 'netcore50'">
++    <ProjectReference Include="$(SourceDir)/mscorlib.WinRT-Facade/mscorlib.WinRT-Facade.csproj" />
++  </ItemGroup>
++
+   <ItemGroup>
+     <None Include="project.json" />
+   </ItemGroup>
