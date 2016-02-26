@@ -3,7 +3,7 @@
 DISTNAME=	llvm-3.8.0rc2.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc1/
+MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc2/
 #MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
