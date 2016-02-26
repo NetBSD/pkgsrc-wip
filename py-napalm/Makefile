@@ -2,7 +2,7 @@
 
 DISTNAME=	napalm-0.51.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	-https://github.com/napalm-automation/napalm/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 

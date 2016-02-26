@@ -4,4 +4,4 @@ SHA1 (napalm-0.51.0.tar.gz) = 0e6d1737799aa705d6d62e74ebe3c879196b5c73
 RMD160 (napalm-0.51.0.tar.gz) = d77028e76ed653304fca19cfea444b971b320943
 SHA512 (napalm-0.51.0.tar.gz) = 99d749a50ee7d09c1a0de994055d86fd5f9603daa14fd73c847ffe9dc6ed8315d27758c16cb22a8d8dfcc031d80f24e41b0870b1b52d60530df167677661cd56
 Size (napalm-0.51.0.tar.gz) = 292674 bytes
-SHA1 (patch-napalm_____init____.py) = 7781d1fe1630c0ea29aac99b8db74476f122f7e2
+SHA1 (patch-napalm_____init____.py) = a63759bbf2262a12fa30c8698574f92255d82e61
