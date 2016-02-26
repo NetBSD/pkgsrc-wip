@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	llvm-3.8.0rc1.src
+DISTNAME=	llvm-3.8.0rc2.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc1/
+MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc2/
 #MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
@@ -131,6 +131,8 @@ post-install:
 .else
 	${LN} -s ${LLVM_LIBNAME}	\
 		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM.${SOEXT}
+	${LN} -s ${LLVM_LIBNAME}	\
+		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-${PKGVERSION_NORC}.${SOEXT}
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
