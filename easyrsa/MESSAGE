@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/08/19 14:06:47 triaxx Exp $
-
-To create a pki infrastructure, copy the example directory in your home:
-  cp -r ${EGDIR} ~
-and init the pki:
-  cd easyrsa && easyrsa init-pki
-
-===========================================================================
