@@ -1,0 +1,24 @@
+Robust Distributed System Nucleus (rDSN)
+
+Developed by System Research Group of Microsoft Research Asia, Robust
+Distributed System Nucleus (rDSN), is now open source. rDSN is an open
+framework for developers, students, and researchers to quickly build and
+manage high-performance and robust distributed systems, and the latter is
+critical for the success of many emerging technologies today such as cloud
+computing, big data, and IoT (Internet of Things).
+
+The idea of this framework arises during the team's past efforts to (semi-)
+automatically test, debug, optimize, monitor, scale, replicate, compose, and
+reason about distributed systems. A lot of challenges were encountered in those
+projects, and most are due to the fact that the initial development process had
+not consider these goals, resulting later maintenance difficulties.
+
+rDSN provides a coherent framework from which developers build their systems
+with minor adjustment from traditional development styles. Code built on atop
+of rDSN conforms to certain principles, and can be upgraded later with little
+or no cost for achieving the aforementioned goals. An early version of rDSN has
+been used in Bing for building a distributed data service, and the system has
+been online and running well. Based on feedbacks from the production teams,
+rDSN is improved and now made public with an open source license. The goal is
+to benefit the community especially developers, students, and researchers who
+are working on distributed systems in various ways.
