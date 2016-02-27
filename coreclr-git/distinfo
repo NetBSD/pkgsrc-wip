@@ -1,5 +1,6 @@
 $NetBSD$
 
+SHA1 (patch-src_ToolBox_SOS_lldbplugin_inc_lldbservices.h) = 23ec1a475013168d66b04df36d21b188a7d52331
 SHA1 (patch-src_pal_inc_pal.h) = 7d3ef148af8b1b24067ba4cb5efc12581ebc6881
 SHA1 (patch-src_pal_src_cruntime_printf.cpp) = 8a86c57e1fe3953d158e1860f04bd19d7df1fe08
 SHA1 (patch-src_pal_src_cruntime_printfcpp.cpp) = 4d1ba5fea45402259c67428506f39d9c3128ecbd
