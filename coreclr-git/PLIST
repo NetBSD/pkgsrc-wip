@@ -6,8 +6,12 @@ CoreCLR/bin/hfa_nested_f64_native_cpp.so
 CoreCLR/bin/hfa_simple_f32_native_cpp.so
 CoreCLR/bin/hfa_simple_f64_native_cpp.so
 CoreCLR/bin/jitstructtests_lib.so
+CoreCLR/bin/libBoolNative.so
+CoreCLR/bin/libMarshalArrayByValNative.so
 CoreCLR/bin/libMarshalBoolArrayDLL.so
+CoreCLR/bin/libMarshalBoolArrayNative.so
 CoreCLR/bin/libStructABILib.so
+CoreCLR/bin/libUIntPtrNative.so
 CoreCLR/bin/mirror.so
 CoreCLR/bin/native_i0c.so
 CoreCLR/bin/native_i0s.so
