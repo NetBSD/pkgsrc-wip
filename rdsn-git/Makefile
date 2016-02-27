@@ -1,10 +1,10 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	rdns-3.9.0
+PKGNAME=	rdsn-3.9.0
 CATEGORIES=	net
 
-GIT_REPOSITORIES=	rdns
-GIT_REPO.rdns=		https://github.com/Microsoft/rDSN.git
+GIT_REPOSITORIES=	rdsn
+GIT_REPO.rdsn=		https://github.com/Microsoft/rDSN.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Microsoft/rDSN
