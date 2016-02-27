@@ -603,7 +603,6 @@ SUBDIR+=	electricsheep-svn
 SUBDIR+=	electrum
 SUBDIR+=	elegent
 SUBDIR+=	elementary17
-SUBDIR+=	elfcat
 SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot
 SUBDIR+=	elk
