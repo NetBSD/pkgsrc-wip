@@ -8,6 +8,7 @@ share/doc/task/AUTHORS
 share/doc/task/COPYING
 share/doc/task/ChangeLog
 share/doc/task/INSTALL
+share/doc/task/LICENSE
 share/doc/task/NEWS
 share/doc/task/README.md
 share/doc/task/rc/dark-16.theme
@@ -32,6 +33,7 @@ share/doc/task/rc/holidays.en-CA.rc
 share/doc/task/rc/holidays.en-GB.rc
 share/doc/task/rc/holidays.en-GL.rc
 share/doc/task/rc/holidays.en-HK.rc
+share/doc/task/rc/holidays.en-IN.rc
 share/doc/task/rc/holidays.en-NZ.rc
 share/doc/task/rc/holidays.en-US.rc
 share/doc/task/rc/holidays.en-ZA.rc

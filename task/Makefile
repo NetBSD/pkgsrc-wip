@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.16 2015/08/10 21:16:48 yhardy Exp $
 #
 
-DISTNAME=	task-2.5.0
+DISTNAME=	task-2.5.1
 CATEGORIES=	time
 MASTER_SITES=	http://www.taskwarrior.org/download/
 
