@@ -22,9 +22,24 @@ $NetBSD$
      # endif
      if (err != 0)
      {
-@@ -255,10 +261,16 @@ void task_worker::set_affinity(uint64_t 
+@@ -254,11 +260,31 @@ void task_worker::set_affinity(uint64_t 
+         (thread_policy_t)&policy,
          THREAD_AFFINITY_POLICY_COUNT
          ));
++# elif defined(__NetBSD__)
++    cpuset_t *cpuset;
++    int nr_bits = std::min(nr_cpu, static_cast<int>(sizeof(affinity) * 8));
++
++    cpuset = cpuset_create();
++    cpuset_zero(cpuset);
++    for (int i = 0; i < nr_bits; i++)
++    {
++        if ((affinity & ((uint64_t)1 << i)) != 0)
++        {
++            cpuset_set(i, cpuset);
++        }
++    }
++    err = pthread_setaffinity_np(pthread_self(), cpuset_size(cpuset), cpuset);
  # else
 -    # ifdef __FreeBSD__
 +    # if defined(__FreeBSD__) || defined(__NetBSD__)
