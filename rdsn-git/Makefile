@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/Microsoft/rDSN
 COMMENT=	Robust Distributed System Nucleus
 LICENSE=	mit
 
+MAKE_JOBS_SAFE=	no
+
 WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
 
