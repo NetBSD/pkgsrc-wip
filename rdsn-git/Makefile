@@ -7,7 +7,7 @@ GIT_REPOSITORIES=	rdsn
 GIT_REPO.rdsn=		https://github.com/Microsoft/rDSN.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/Microsoft/rDSN
+HOMEPAGE=	http://research.microsoft.com/en-us/projects/rdsn/
 COMMENT=	Robust Distributed System Nucleus
 LICENSE=	mit
 
