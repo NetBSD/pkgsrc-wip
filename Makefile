@@ -1660,6 +1660,7 @@ SUBDIR+=	libvc
 SUBDIR+=	libvg
 SUBDIR+=	libvterm
 SUBDIR+=	libwbxml2-patched
+SUBDIR+=	libwebsockets
 SUBDIR+=	libxc
 SUBDIR+=	libzn-poly
 SUBDIR+=	lidia
