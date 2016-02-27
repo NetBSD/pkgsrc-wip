@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+# Build without tests (with them it doesn't build for now)
 CMAKE_ARGS+=	-DLWS_WITHOUT_TESTAPPS=ON
 
 .include "../../security/openssl/buildlink3.mk"
