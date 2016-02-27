@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/dev/cpp/utils.cpp.orig	2016-02-27 19:03:52.000000000 +0000
+--- src/dev/cpp/utils.cpp.orig	2016-02-27 19:59:48.000000000 +0000
 +++ src/dev/cpp/utils.cpp
 @@ -45,6 +45,8 @@
  # include <sys/thr.h>

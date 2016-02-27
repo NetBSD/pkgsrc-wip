@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/dsn/internal/ports.h.orig	2016-02-27 19:03:52.000000000 +0000
+--- include/dsn/internal/ports.h.orig	2016-02-27 19:59:48.000000000 +0000
 +++ include/dsn/internal/ports.h
 @@ -44,7 +44,7 @@ __pragma(warning(disable:4127))
  # define __thread __declspec(thread)
