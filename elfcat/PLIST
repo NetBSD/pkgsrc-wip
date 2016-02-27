@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/elfcat
-man/man1/elfcat.1
