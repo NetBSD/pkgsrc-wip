@@ -1,2 +1,3 @@
 Read _autosetup and add version checks.
 Build GUI client, possibly as a separate package.
+ Make sure wxGTK30 is compiled with wxWebView.
