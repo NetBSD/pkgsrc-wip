@@ -8,6 +8,7 @@ bin/lumina-open
 bin/lumina-screenshot
 bin/lumina-search
 bin/lumina-xconfig
+etc/luminaDesktop.conf.dist
 include/LuminaOS.h
 include/LuminaSingleApplication.h
 include/LuminaThemes.h
@@ -17,6 +18,7 @@ include/LuminaXDG.h
 lib/libLuminaUtils.la
 share/Lumina-DE/Login.ogg
 share/Lumina-DE/Logout.ogg
+share/Lumina-DE/colors/Black.qss.colors
 share/Lumina-DE/colors/Blue-Light.qss.colors
 share/Lumina-DE/colors/Grey-Dark.qss.colors
 share/Lumina-DE/colors/Lumina-Glass.qss.colors
@@ -38,6 +40,7 @@ share/applications/lumina-fm.desktop
 share/applications/lumina-info.desktop
 share/applications/lumina-screenshot.desktop
 share/applications/lumina-search.desktop
+share/applications/lumina-support.desktop
 share/examples/lumina/luminaDesktop.conf
 share/pixmaps/Insight-FileManager.png
 share/pixmaps/Lumina-DE.png
