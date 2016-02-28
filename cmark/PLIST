@@ -7,5 +7,5 @@ lib/libcmark.a
 lib/libcmark.so
 lib/libcmark.so.${PKGVERSION}
 lib/pkgconfig/libcmark.pc
-share/man/man1/cmark.1
-share/man/man3/cmark.3
+man/man1/cmark.1
+man/man3/cmark.3

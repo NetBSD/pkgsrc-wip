@@ -4,4 +4,5 @@ SHA1 (cmark-0.24.1.tar.gz) = bfd17ef9cae14a74a7b2d1c3f171ced3ce9a5c8a
 RMD160 (cmark-0.24.1.tar.gz) = 70dbf24b47c9f9b8b4c8e2d55bcfa92d636056a6
 SHA512 (cmark-0.24.1.tar.gz) = ad6381b0a876472d85fa68e538caeebe3ee2f042c7cd479da1e025164f1ada7ee25ccbdb2d97cc2198de8c903950ba1648f39cef868f9c4f3ccd37db3c9c33b9
 Size (cmark-0.24.1.tar.gz) = 205568 bytes
+SHA1 (patch-man_CMakeLists.txt) = 310fe6af0c85542f1e73d78962edc2beffda4a03
 SHA1 (patch-src_commonmark.c) = 39aeafbda996f420d5a79912faa3e2813af4d5bd
