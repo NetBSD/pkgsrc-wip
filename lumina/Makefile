@@ -60,4 +60,5 @@ pre-install:
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
