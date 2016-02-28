@@ -13,12 +13,20 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
+PYTHON_FOR_BUILD_ONLY=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 PKGCONFIG_OVERRIDE+=	src/libcmark.pc.in
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKDIR}/build/src
+TEST_TARGET=	test
+
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
