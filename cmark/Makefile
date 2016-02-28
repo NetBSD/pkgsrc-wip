@@ -4,7 +4,7 @@ DISTNAME=	cmark-0.24.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jgm/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.rog
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=jgm/cmark/}
 COMMENT=	CommonMark parsing and rendering library and program in C
 LICENSE=	2-clause-bsd
