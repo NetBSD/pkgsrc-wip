@@ -84,7 +84,7 @@ PLIST.gnome=		yes
 CONFIGURE_ARGS+=	--enable-icon
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
-.include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../wip/gnome-keyring/buildlink3.mk"
 #.include "../../x11/gnome-panel/buildlink3.mk" # XXX remove this when we have gnome-panel3
 .include "../../x11/gtk2/buildlink3.mk"
 .else

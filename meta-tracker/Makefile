@@ -4,10 +4,10 @@
 DISTNAME=	tracker-1.7.3
 PKGNAME=	meta-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/0.16/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/1.7/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	noud4@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://projects.gnome.org/tracker/
 COMMENT=	Extract information and metadata about your personal data
 LICENSE=	gnu-gpl-v2
@@ -18,9 +18,6 @@ USE_TOOLS+=		gmake intltool pkg-config
 USE_TOOLS+=		msgfmt
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-# tracker_miner_fs-tracker-power-hal.o: In function `tracker_power_init':
-# tracker-power-hal.c:(.text+0x447): undefined reference to `dbus_connection_setup_with_g_main'
-LDFLAGS+=		-ldbus-glib-1
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -33,10 +30,18 @@ PKGCONFIG_OVERRIDE+=	data/tracker-extract.pc.in
 # strip last .digit (but not safe if it is missing)
 PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION_NOREV:C/\.[0-9]+$//}
 
+# tracker_miner_fs-tracker-power-hal.o: In function `tracker_power_init':
+# tracker-power-hal.c:(.text+0x447): undefined reference to `dbus_connection_setup_with_g_main'
+LDFLAGS+=		-ldbus-glib-1
+
+# Shared object "libdbus-glib-1.so.2" not found
+BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
+
 .include "options.mk"
 
 #PKGCONFIG_OVERRIDE+=	dbus-glib-1.pc.in
 
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
