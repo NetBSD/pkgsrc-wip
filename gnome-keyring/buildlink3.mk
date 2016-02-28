@@ -7,7 +7,7 @@ GNOME_KEYRING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.4.0
 BUILDLINK_ABI_DEPENDS.gnome-keyring+=	gnome-keyring>=2.32.1nb19
-BUILDLINK_PKGSRCDIR.gnome-keyring?=	../../security/gnome-keyring
+BUILDLINK_PKGSRCDIR.gnome-keyring?=	../../wip/gnome-keyring
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
