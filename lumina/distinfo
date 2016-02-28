@@ -4,4 +4,4 @@ SHA1 (lumina-0.8.8.tar.gz) = 20d7e54cd388fe713e25357e6714d17b8297f569
 RMD160 (lumina-0.8.8.tar.gz) = 3e476470178ded86e6ab88a111eb68f2cffe3b65
 SHA512 (lumina-0.8.8.tar.gz) = b6cbc5b17fbf3b442d42e1cf90c4af090ab87f0eb56dd13ea980b62bef5277a2803fe3caca4eeaac471379aec35fbf2e796526db1f0970532fdd0237c93bd0ae
 Size (lumina-0.8.8.tar.gz) = 35770958 bytes
-SHA1 (patch-OS-detect.pri) = c68f7d58043297d5c163e9ede539e7ccc70e03ea
+SHA1 (patch-OS-detect.pri) = c1ee01fbd9602fccf8225159ec2d5b8f3f876c5c
