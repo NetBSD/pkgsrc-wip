@@ -1,5 +1,9 @@
 $NetBSD$
 
+Patch accepted upstream.
+
+Fix usage of ctype(3) functions.
+
 --- src/commonmark.c.orig	2016-01-18 05:53:29.000000000 +0000
 +++ src/commonmark.c
 @@ -270,8 +270,8 @@ static int S_render_node(cmark_renderer 

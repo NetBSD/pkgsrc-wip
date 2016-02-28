@@ -1,5 +1,9 @@
 $NetBSD$
 
+Patch accepted upstream.
+
+Fix installation of man-pages.
+
 --- man/CMakeLists.txt.orig	2016-01-18 05:53:29.000000000 +0000
 +++ man/CMakeLists.txt
 @@ -1,8 +1,10 @@
