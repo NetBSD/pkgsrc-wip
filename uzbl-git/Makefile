@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	uzbl-2012.05.14
+DISTNAME=	uzbl-0.9.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uzbl/}
 
 GIT_REPOSITORIES=	uzbl
-GIT_REPO.uzbl=	https://github.com/uzbl/uzbl.git
+GIT_REPO.uzbl=		https://github.com/uzbl/uzbl.git
 GIT_BRANCH.uzbl=	next
-WRKSRC=	${WRKDIR}/uzbl
+WRKSRC=			${WRKDIR}/uzbl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.uzbl.org/
