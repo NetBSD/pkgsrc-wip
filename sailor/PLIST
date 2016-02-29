@@ -17,6 +17,13 @@ share/sailor/ships/common/Darwin/opt/pkg/etc/gnupg/pkgsrc.gpg
 share/sailor/ships/common/Darwin/opt/pkg/etc/pkg_install.conf
 share/sailor/ships/common/Darwin/opt/pkg/etc/pkgin/repositories.conf
 share/sailor/ships/common/Darwin/opt/pkg/share/gnupg/pkgsrc-security.gpg
+share/sailor/ships/common/Linux/etc/group
+share/sailor/ships/common/Linux/etc/gshadow
+share/sailor/ships/common/Linux/etc/hosts
+share/sailor/ships/common/Linux/etc/login.defs
+share/sailor/ships/common/Linux/etc/nsswitch.conf
+share/sailor/ships/common/Linux/etc/passwd
+share/sailor/ships/common/Linux/etc/shadow
 share/sailor/ships/common/NetBSD/etc/defaults/daily.conf
 share/sailor/ships/common/NetBSD/etc/defaults/monthly.conf
 share/sailor/ships/common/NetBSD/etc/defaults/pf.boot.conf
@@ -34,7 +41,6 @@ share/sailor/ships/common/all/etc/rc.conf
 share/sailor/ships/common/all/etc/rc.subr
 share/sailor/ships/namp/usr/pkg/etc/httpd/httpd.conf
 share/sailor/ships/nginx/usr/pkg/etc/nginx/nginx.conf
-share/sailor/ships/nginx/usr/pkg/etc/pkgin/repositories.conf
 share/sailor/ships/nginxflaskapi/PREFIX/etc/nginx/nginx.conf
 share/sailor/ships/nginxflaskapi/PREFIX/etc/nginx/sites/localhost
 share/sailor/ships/nginxflaskapi/var/flask/example.py
