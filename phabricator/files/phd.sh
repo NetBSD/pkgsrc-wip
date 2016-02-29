@@ -79,7 +79,6 @@ if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 else
 	case "$1" in
 	restart)
-		eval ${restart_precmd}
 		eval ${restart_cmd}
 		;;
 	stop)
@@ -98,7 +97,6 @@ else
 		eval ${log_cmd}
 		;;
 	*)
-		eval ${start_precmd}
 		eval ${start_cmd}
 		;;
 	esac
