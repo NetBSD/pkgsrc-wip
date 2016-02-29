@@ -1,25 +1,19 @@
 # $NetBSD$
 
-DISTNAME=		easy-rsa-${VERSION}
-PKGNAME=		easyrsa-${VERSION}
+DISTNAME=		easy-rsa-3.0.1
+PKGNAME=		${DISTNAME:S/-//1}
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_GITHUB:=OpenVPN/easy-rsa/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=OpenVPN/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/OpenVPN/easy-rsa
 COMMENT=		Small RSA key management based on openssl command
 LICENSE=		gnu-gpl-v2
 
-VERSION=		3.0.1
-GIT_REPOSITORIES=	easy-rsa
-GIT_REPO.easy-rsa=	https://github.com/OpenVPN/easy-rsa.git
-GIT_TAG.easy-rsa=	${VERSION}
-
 EASYRSA_DOC_FILES=	COPYING ChangeLog KNOWN_ISSUES README README.quickstart.md
 EASYRSA_CNF_FILES=	openssl-1.0.cnf vars.example x509-types/COMMON x509-types/ca \
 			x509-types/client x509-types/server
 
-WRKSRC=			${WRKDIR}/easy-rsa
 INSTALLATION_DIRS+=	${BINDIR} ${EGDIR} ${DOCDIR}
 BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/easyrsa
@@ -45,6 +39,5 @@ do-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${DOCDIR}
 
-.include "../../wip/mk/git-package.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
