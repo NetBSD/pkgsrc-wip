@@ -26,8 +26,6 @@ CONFIGURE_ARGS+=	--disable-python
 LIBS.SunOS+=		-lsocket -lnsl
 CPPFLAGS.SunOS+=	-std=c99 -D_POSIX_C_SOURCE=200112L
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -DBSD_COMP -DMAP_FILE=0
-CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t
-CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t -Du_int64_t=uint64_t
 CPPFLAGS.SunOS+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.SunOS+=	-Dbswap_64=BSWAP_64 -Dbswap_32=BSWAP_32 -Dbswap_16=BSWAP_16
 

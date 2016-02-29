@@ -1,6 +1,6 @@
 $NetBSD: patch-ah,v 1.3 2014/06/09 12:21:07 ryoon Exp $
 
---- src/pcm/pcm.c.orig	2013-07-08 12:31:36.000000000 +0000
+--- src/pcm/pcm.c.orig	2016-02-24 08:33:29.000000000 +0000
 +++ src/pcm/pcm.c
 @@ -630,7 +630,7 @@ playback devices.
  
@@ -11,3 +11,100 @@ $NetBSD: patch-ah,v 1.3 2014/06/09 12:21:07 ryoon Exp $
  #include <stdarg.h>
  #include <signal.h>
  #include <ctype.h>
+@@ -2584,7 +2584,7 @@ int snd_pcm_area_silence(const snd_pcm_c
+ 	char *dst;
+ 	unsigned int dst_step;
+ 	int width;
+-	u_int64_t silence;
++	uint64_t silence;
+ 	if (!dst_area->addr)
+ 		return 0;
+ 	dst = snd_pcm_channel_area_addr(dst_area, dst_offset);
+@@ -2592,7 +2592,7 @@ int snd_pcm_area_silence(const snd_pcm_c
+ 	silence = snd_pcm_format_silence_64(format);
+ 	if (dst_area->step == (unsigned int) width) {
+ 		unsigned int dwords = samples * width / 64;
+-		u_int64_t *dstp = (u_int64_t *)dst;
++		uint64_t *dstp = (uint64_t *)dst;
+ 		samples -= dwords * 64 / width;
+ 		while (dwords-- > 0)
+ 			*dstp++ = silence;
+@@ -2602,8 +2602,8 @@ int snd_pcm_area_silence(const snd_pcm_c
+ 	dst_step = dst_area->step / 8;
+ 	switch (width) {
+ 	case 4: {
+-		u_int8_t s0 = silence & 0xf0;
+-		u_int8_t s1 = silence & 0x0f;
++		uint8_t s0 = silence & 0xf0;
++		uint8_t s1 = silence & 0x0f;
+ 		int dstbit = dst_area->first % 8;
+ 		int dstbit_step = dst_area->step % 8;
+ 		while (samples-- > 0) {
+@@ -2624,7 +2624,7 @@ int snd_pcm_area_silence(const snd_pcm_c
+ 		break;
+ 	}
+ 	case 8: {
+-		u_int8_t sil = silence;
++		uint8_t sil = silence;
+ 		while (samples-- > 0) {
+ 			*dst = sil;
+ 			dst += dst_step;
+@@ -2632,9 +2632,9 @@ int snd_pcm_area_silence(const snd_pcm_c
+ 		break;
+ 	}
+ 	case 16: {
+-		u_int16_t sil = silence;
++		uint16_t sil = silence;
+ 		while (samples-- > 0) {
+-			*(u_int16_t*)dst = sil;
++			*(uint16_t*)dst = sil;
+ 			dst += dst_step;
+ 		}
+ 		break;
+@@ -2651,16 +2651,16 @@ int snd_pcm_area_silence(const snd_pcm_c
+ #endif
+ 		break;
+ 	case 32: {
+-		u_int32_t sil = silence;
++		uint32_t sil = silence;
+ 		while (samples-- > 0) {
+-			*(u_int32_t*)dst = sil;
++			*(uint32_t*)dst = sil;
+ 			dst += dst_step;
+ 		}
+ 		break;
+ 	}
+ 	case 64: {
+ 		while (samples-- > 0) {
+-			*(u_int64_t*)dst = silence;
++			*(uint64_t*)dst = silence;
+ 			dst += dst_step;
+ 		}
+ 		break;
+@@ -2804,7 +2804,7 @@ int snd_pcm_area_copy(const snd_pcm_chan
+ 	}
+ 	case 16: {
+ 		while (samples-- > 0) {
+-			*(u_int16_t*)dst = *(const u_int16_t*)src;
++			*(uint16_t*)dst = *(const uint16_t*)src;
+ 			src += src_step;
+ 			dst += dst_step;
+ 		}
+@@ -2821,7 +2821,7 @@ int snd_pcm_area_copy(const snd_pcm_chan
+ 		break;
+ 	case 32: {
+ 		while (samples-- > 0) {
+-			*(u_int32_t*)dst = *(const u_int32_t*)src;
++			*(uint32_t*)dst = *(const uint32_t*)src;
+ 			src += src_step;
+ 			dst += dst_step;
+ 		}
+@@ -2829,7 +2829,7 @@ int snd_pcm_area_copy(const snd_pcm_chan
+ 	}
+ 	case 64: {
+ 		while (samples-- > 0) {
+-			*(u_int64_t*)dst = *(const u_int64_t*)src;
++			*(uint64_t*)dst = *(const uint64_t*)src;
+ 			src += src_step;
+ 			dst += dst_step;
+ 		}
