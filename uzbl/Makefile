@@ -1,21 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	uzbl-2012.05.14
+PKGNAME=	uzbl-0.9.0
+DISTNAME=	${PKGBASE}-v${PKGVERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uzbl/}
-
-GIT_REPOSITORIES=	uzbl
-GIT_REPO.uzbl=	https://github.com/uzbl/uzbl.git
-GIT_BRANCH.uzbl=	next
-WRKSRC=	${WRKDIR}/uzbl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.uzbl.org/
 COMMENT=	Web interface tools which adhere to the UNIX philosophy
 LICENSE=	gnu-gpl-v3
 
+WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
+
 USE_TOOLS+=	gmake pkg-config
-# Disabled for now, as it is not stable yet.
+# Support removed in v0.9.0, to come back in v1.0.
 #MAKE_ENV+=	ENABLE_WEBKIT2=yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -36,9 +34,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # for uzbl-tabbed with GTK+ 2
 #DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
-## TODO: make an option for webkit version
-##.include "../../www/webkit-gtk/buildlink3.mk"
-## or
 # TODO: make an option for GTK version
 #.include "../../www/webkit24-gtk/buildlink3.mk"
 # or
@@ -48,5 +43,4 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
