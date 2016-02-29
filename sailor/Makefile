@@ -10,8 +10,8 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=NetBSDfr/sailor/}
 COMMENT=	Wannabe portable container system
 LICENSE=	modified-bsd
 
-VERSION=	0.2.20160118
-GHCOMMIT=	eff61afce095c2b8bac49503a34311afb37e5e9f
+VERSION=	0.2.20160211
+GHCOMMIT=	e86d0440a4bcc1b6a49602e084079778d3418861
 DEPENDS=	pkgin>=0.9.3:../../pkgtools/pkgin
 DEPENDS=	rsync-[0-9]*:../../net/rsync
 DEPENDS=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
