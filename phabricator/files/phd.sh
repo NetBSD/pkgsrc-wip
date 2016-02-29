@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: phd.sh,v 1.1 2015/01/14 21:01:19 adam Exp $
+# $NetBSD$
 #
 # Phabricator rc.d control script
 #
@@ -8,10 +8,9 @@
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 #
-# You will need to set some variables in /etc/rc.conf to start PostgreSQL:
+# You will need to set some variables in /etc/rc.conf to start Phabricator:
 #
 # phd=YES
-# do initdb?
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -79,9 +78,6 @@ if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	run_rc_command "$1"
 else
 	case "$1" in
-	#initdb)
-		#eval ${initdb_cmd}
-		#;;
 	restart)
 		eval ${restart_precmd}
 		eval ${restart_cmd}
