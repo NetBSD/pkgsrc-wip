@@ -71,6 +71,8 @@ REPLACE_BASH+=		scripts/install/install_rhel-derivs.sh \
 
 NO_BUILD=		yes
 
+RCD_SCRIPTS=	phd
+
 PHABRICATOR_DIR=	share/phabricator
 
 INSTALLATION_DIRS+=	${PHABRICATOR_DIR}
