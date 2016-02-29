@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/easyrsa
+man/man1/easyrsa.1
 share/doc/easyrsa/COPYING
 share/doc/easyrsa/ChangeLog
 share/doc/easyrsa/EasyRSA-Advanced.md
