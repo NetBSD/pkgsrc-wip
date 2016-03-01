@@ -1450,6 +1450,7 @@ SUBDIR+=	klamav
 SUBDIR+=	kmymoney-devel
 SUBDIR+=	kmymoney-svn
 SUBDIR+=	kmymoney4
+SUBDIR+=	knotifications
 SUBDIR+=	knutclient
 SUBDIR+=	koffice
 SUBDIR+=	koha
