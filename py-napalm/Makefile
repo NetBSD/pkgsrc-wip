@@ -23,7 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-eapi-[0-9]*:../../wip/py-eapi
 # bnclient	Blade Network Technologies Netconf Python Client
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	35 34 33 27
 
 # Target dir already exists...
 INSTALL_EXTRA_FILES=	napalm/utils/*.yml
