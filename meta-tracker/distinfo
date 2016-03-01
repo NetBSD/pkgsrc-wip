@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.10 2014/11/25 13:14:30 thomasklausner Exp $
 
-SHA1 (tracker-1.7.3.tar.xz) = acf3e76c43eecb3526284c628495262b6a9f7b4e
-RMD160 (tracker-1.7.3.tar.xz) = faf520f73cf119a8b0704e85fc827647b0694e4c
-SHA512 (tracker-1.7.3.tar.xz) = 593b409cd43cbd4209cdaf8abde8ca4d91cb9a3328a21118de225f5cdab1bc6e8facace57a5762150ce13b3b4b2d76cead64605502e75f00eb25a5f333b7bc97
-Size (tracker-1.7.3.tar.xz) = 4920820 bytes
+SHA1 (tracker-1.6.1.tar.xz) = 8f52e4acf62fbf99427d711cf154e9abb2db244f
+RMD160 (tracker-1.6.1.tar.xz) = 0f89b4949a8ea44b70ac038a8dde61ca799e05b4
+SHA512 (tracker-1.6.1.tar.xz) = f3002576164cc4ba60b9c2f19bd301be7c1a9ef187216a7e1366d52ed0925f6d9fb29d2527d4bc5a88eb75314765de26621d5183741ecb9f21eb988a19d3f0ae
+Size (tracker-1.6.1.tar.xz) = 4905544 bytes
 SHA1 (patch-src_miners_fs_tracker-power-hal.c) = 01818a9cd346a76465b53aa47330217e3268287b

@@ -1,5 +1,12 @@
 @comment $NetBSD$
 bin/tracker
+bin/tracker-control
+bin/tracker-import
+bin/tracker-info
+bin/tracker-search
+bin/tracker-sparql
+bin/tracker-stats
+bin/tracker-tag
 etc/xdg/autostart/tracker-extract.desktop
 etc/xdg/autostart/tracker-miner-apps.desktop
 etc/xdg/autostart/tracker-miner-fs.desktop

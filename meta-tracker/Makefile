@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.15 2014/02/11 21:04:07 noud4 Exp $
 #
 
-DISTNAME=	tracker-1.7.3
+DISTNAME=	tracker-1.6.1
 PKGNAME=	meta-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/1.7/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/1.6/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,7 +27,7 @@ PKGCONFIG_OVERRIDE+=	src/libtracker-control/tracker-control.pc.in
 
 #TRACKER_VERSION= ${PKGVERSION:C/\.[0-9]+$//}
 # strip last .digit (but not safe if it is missing)
-PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION_NOREV:C/\.[0-9]+$//}
+# PLIST_SUBST+=	TRACKER_VERSION=tracker-${PKGVERSION_NOREV:C/\.[0-9]+$//}
 
 # tracker_miner_fs-tracker-power-hal.o: In function `tracker_power_init':
 # tracker-power-hal.c:(.text+0x447): undefined reference to `dbus_connection_setup_with_g_main'
