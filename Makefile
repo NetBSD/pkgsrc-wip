@@ -1459,6 +1459,7 @@ SUBDIR+=	koha
 SUBDIR+=	korelib
 SUBDIR+=	kpackage
 SUBDIR+=	kpanta
+SUBDIR+=	kpeople
 SUBDIR+=	kplayer
 SUBDIR+=	kplotting
 SUBDIR+=	kpty
