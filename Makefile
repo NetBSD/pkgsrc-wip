@@ -1445,6 +1445,7 @@ SUBDIR+=	kiconthemes
 SUBDIR+=	kidletime
 SUBDIR+=	kimageformats
 SUBDIR+=	kino
+SUBDIR+=	kio
 SUBDIR+=	kissme
 SUBDIR+=	kitemmodels
 SUBDIR+=	kitemviews
