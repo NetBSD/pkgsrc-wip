@@ -1,12 +1,13 @@
 $NetBSD$
+SHA1 (patch-run-test.sh) = 7d849403f8b4babf214ccf0b609712f770fa925c
 SHA1 (patch-src_System.Diagnostics.TextWriterTraceListener_tests_System.Diagnostics.TextWriterTraceListener.Tests.csproj) = 3444446dea13c4b3568a705150e204f6bf6142b1
 SHA1 (patch-src_System.IO.FileSystem.DriveInfo_tests_System.IO.FileSystem.DriveInfo.Tests.csproj) = 2566a3cb4e92de519569461cae2a2b9b6b6554da
 SHA1 (patch-src_System.Net.Http_tests_FunctionalTests_System.Net.Http.Functional.Tests.csproj) = b49b15fc11b7c5373d237ebea524dbeab77ac653
 SHA1 (patch-src_System.Net.NameResolution_tests_FunctionalTests_System.Net.NameResolution.Functional.Tests.csproj) = 20073552527d651b49ca54f12f38ee1d8e34e518
 SHA1 (patch-src_System.Net.NameResolution_tests_PalTests_System.Net.NameResolution.Pal.Tests.csproj) = 869d96d5b36cba1da239d27378b799eb08a971f1
 SHA1 (patch-src_System.Net.Primitives_tests_FunctionalTests_System.Net.Primitives.Functional.Tests.csproj) = 148c2f65f5b8bf4768822ee4cda5924f3a75bc1a
-SHA1 (patch-src_System.Net.Primitives_tests_PalTests_System.Net.Primitives.Pal.Tests.csproj) = df65256fb5bd93c269c328d6d3bd439793b712c5
-SHA1 (patch-src_System.Net.Primitives_tests_UnitTests_System.Net.Primitives.UnitTests.Tests.csproj) = f966ec7ea207196c85743381c4524cff3d726c4c
+SHA1 (patch-src_System.Net.Primitives_tests_PalTests_System.Net.Primitives.Pal.Tests.csproj) = 6081fd464da9617e0c976a22e75572c8c469c5f6
+SHA1 (patch-src_System.Net.Primitives_tests_UnitTests_System.Net.Primitives.UnitTests.Tests.csproj) = 034d24b57bfc3f66cd5990cb31c1aeb113ad0856
 SHA1 (patch-src_System.Net.Sockets.Legacy_tests_FunctionalTests_System.Net.Sockets.APMServer.Tests.csproj) = ce8df8345074568b7551d05f3a906609f174d2d5
 SHA1 (patch-src_System.Net.Sockets.Legacy_tests_FunctionalTests_System.Net.Sockets.AsyncServer.Tests.csproj) = 612c57ec6478e232fd707e502255ce460ba05a43
 SHA1 (patch-src_System.Net.Sockets.Legacy_tests_PerformanceTests_System.Net.Sockets.APM.Performance.Tests.csproj) = b3835f5cb2939d5cb5093cbb1d2ca5a3843488a0

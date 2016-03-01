@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/System.Net.Primitives/tests/PalTests/System.Net.Primitives.Pal.Tests.csproj.orig	2016-03-01 04:32:05.540867654 +0000
+--- src/System.Net.Primitives/tests/PalTests/System.Net.Primitives.Pal.Tests.csproj.orig	2016-03-01 04:32:05.000000000 +0000
 +++ src/System.Net.Primitives/tests/PalTests/System.Net.Primitives.Pal.Tests.csproj
 @@ -23,7 +23,7 @@
    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Windows_Release|AnyCPU'" />

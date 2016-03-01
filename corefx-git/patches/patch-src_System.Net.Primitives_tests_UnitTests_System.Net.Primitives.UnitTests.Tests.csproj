@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/System.Net.Primitives/tests/UnitTests/System.Net.Primitives.UnitTests.Tests.csproj.orig	2016-03-01 04:32:05.540954746 +0000
+--- src/System.Net.Primitives/tests/UnitTests/System.Net.Primitives.UnitTests.Tests.csproj.orig	2016-03-01 04:32:05.000000000 +0000
 +++ src/System.Net.Primitives/tests/UnitTests/System.Net.Primitives.UnitTests.Tests.csproj
 @@ -21,7 +21,7 @@
    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Windows_Debug|AnyCPU'" />
