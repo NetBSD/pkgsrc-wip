@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/04/23 09:49:45 ahp-nils Exp $
 
-SHA1 (yapf-0.1.6.tar.gz) = cccc8075e5a4800caa77ced4a307f7874bfeeecc
-RMD160 (yapf-0.1.6.tar.gz) = da4445dc3f7220351962dc03122177f292f3f00f
-Size (yapf-0.1.6.tar.gz) = 74768 bytes
+SHA1 (yapf-0.6.2.tar.gz) = cf3f3d64e180c403e348d49dcefa5a31563c6ed0
+RMD160 (yapf-0.6.2.tar.gz) = 8ace5a2c61786fb43a8e8df708990739e921d5ee
+SHA512 (yapf-0.6.2.tar.gz) = 2578000a2d916e91431cf31e3e5cbf3258a3bc57d7290a375c1e7c45bf6fd305b4a462a2b3d4eb8a4d2af31ae0975c092024603c1f1642ad441204bc4a9705fc
+Size (yapf-0.6.2.tar.gz) = 92681 bytes

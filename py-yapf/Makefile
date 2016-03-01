@@ -1,21 +1,25 @@
 # $NetBSD: Makefile,v 1.1 2015/04/23 09:49:45 ahp-nils Exp $
 
-DISTNAME=	yapf-0.1.6
+DISTNAME=	yapf-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel textproc
-MASTER_SITES=	-https://github.com/google/yapf/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_PROJECT= yapf
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	https://github.com/google/yapf/
+HOMEPAGE=	${MASTER_SITE_GITHUB:=google/}
 COMMENT=	Python files formatter
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
+FILES_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_ACCEPTED=	34 27
 
 post-install:
 		${MV} ${DESTDIR}${PREFIX}/bin/yapf ${DESTDIR}${PREFIX}/bin/yapf${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

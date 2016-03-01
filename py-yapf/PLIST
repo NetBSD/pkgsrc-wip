@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/23 09:49:45 ahp-nils Exp $
+@comment $NetBSD$
 bin/yapf${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/yapf/__init__.py
 ${PYSITELIB}/yapf/__init__.pyc
 ${PYSITELIB}/yapf/__init__.pyo
@@ -23,6 +23,9 @@ ${PYSITELIB}/yapf/yapflib/comment_splicer.pyo
 ${PYSITELIB}/yapf/yapflib/continuation_splicer.py
 ${PYSITELIB}/yapf/yapflib/continuation_splicer.pyc
 ${PYSITELIB}/yapf/yapflib/continuation_splicer.pyo
+${PYSITELIB}/yapf/yapflib/errors.py
+${PYSITELIB}/yapf/yapflib/errors.pyc
+${PYSITELIB}/yapf/yapflib/errors.pyo
 ${PYSITELIB}/yapf/yapflib/file_resources.py
 ${PYSITELIB}/yapf/yapflib/file_resources.pyc
 ${PYSITELIB}/yapf/yapflib/file_resources.pyo
