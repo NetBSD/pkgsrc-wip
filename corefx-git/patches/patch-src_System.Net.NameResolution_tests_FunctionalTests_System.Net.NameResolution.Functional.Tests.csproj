@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/System.Net.NameResolution/tests/FunctionalTests/System.Net.NameResolution.Functional.Tests.csproj.orig	2016-01-30 00:21:00.000000000 +0000
++++ src/System.Net.NameResolution/tests/FunctionalTests/System.Net.NameResolution.Functional.Tests.csproj
+@@ -9,7 +9,7 @@
+     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+     <ProjectGuid>{4FE5ECEE-ACC5-4558-A946-573426599B73}</ProjectGuid>
+     <OutputType>Library</OutputType>
+-    <UnsupportedPlatforms>FreeBSD</UnsupportedPlatforms>
++    <UnsupportedPlatforms>FreeBSD;NetBSD</UnsupportedPlatforms>
+   </PropertyGroup>
+   
+   <!-- Help VS understand available configurations -->

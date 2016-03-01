@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- src/System.Net.Primitives/tests/UnitTests/System.Net.Primitives.UnitTests.Tests.csproj.orig	2016-03-01 04:32:05.540954746 +0000
++++ src/System.Net.Primitives/tests/UnitTests/System.Net.Primitives.UnitTests.Tests.csproj
+@@ -21,7 +21,7 @@
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Windows_Debug|AnyCPU'" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Windows_Release|AnyCPU'" />
+   <PropertyGroup>
+-    <UnsupportedPlatforms>FreeBSD</UnsupportedPlatforms>
++    <UnsupportedPlatforms>FreeBSD;NetBSD</UnsupportedPlatforms>
+   </PropertyGroup>
+   <PropertyGroup>
+     <!-- SYSTEM_NET_PRIMITIVES_DLL is required to allow source-level code sharing for types defined within the 
+@@ -140,4 +140,4 @@
+     <None Include="project.json" />
+   </ItemGroup>
+   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
+-</Project>
+\ No newline at end of file
++</Project>

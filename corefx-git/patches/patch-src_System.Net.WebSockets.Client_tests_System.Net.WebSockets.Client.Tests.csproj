@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/System.Net.WebSockets.Client/tests/System.Net.WebSockets.Client.Tests.csproj.orig	2016-01-30 00:21:00.000000000 +0000
++++ src/System.Net.WebSockets.Client/tests/System.Net.WebSockets.Client.Tests.csproj
+@@ -10,7 +10,7 @@
+     <ProjectGuid>{7C395A91-D955-444C-98BF-D3F809A56CE1}</ProjectGuid>
+     <OutputType>Library</OutputType>
+     <StringResourcesPath>../src/Resources/Strings.resx</StringResourcesPath>
+-    <UnsupportedPlatforms>Linux;OSX</UnsupportedPlatforms>
++    <UnsupportedPlatforms>Linux;OSX;NetBSD</UnsupportedPlatforms>
+   </PropertyGroup>
+ 
+   <!-- Help VS understand available configurations -->

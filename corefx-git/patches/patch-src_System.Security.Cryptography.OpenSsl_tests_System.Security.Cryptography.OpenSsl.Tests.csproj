@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/System.Security.Cryptography.OpenSsl/tests/System.Security.Cryptography.OpenSsl.Tests.csproj.orig	2016-01-30 00:21:00.000000000 +0000
++++ src/System.Security.Cryptography.OpenSsl/tests/System.Security.Cryptography.OpenSsl.Tests.csproj
+@@ -10,7 +10,7 @@
+     <OutputType>Library</OutputType>
+     <AssemblyName>System.Security.Cryptography.OpenSsl.Tests</AssemblyName>
+     <RootNamespace>System.Security.Cryptography.OpenSsl.Tests</RootNamespace>
+-    <UnsupportedPlatforms>Windows_NT</UnsupportedPlatforms>
++    <UnsupportedPlatforms>Windows_NT;NetBSD</UnsupportedPlatforms>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FreeBSD_Debug|AnyCPU'" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'FreeBSD_Release|AnyCPU'" />

@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/System.Net.Sockets/tests/FunctionalTests/System.Net.Sockets.Tests.csproj.orig	2016-02-08 03:25:49.000000000 +0000
++++ src/System.Net.Sockets/tests/FunctionalTests/System.Net.Sockets.Tests.csproj
+@@ -9,7 +9,7 @@
+     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+     <ProjectGuid>{8CBA022C-635F-4C8D-9D29-CD8AAC68C8E6}</ProjectGuid>
+     <OutputType>Library</OutputType>
+-    <UnsupportedPlatforms>FreeBSD</UnsupportedPlatforms>
++    <UnsupportedPlatforms>FreeBSD;NetBSD</UnsupportedPlatforms>
+   </PropertyGroup>
+   <!-- Help VS understand available configurations -->
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'" />

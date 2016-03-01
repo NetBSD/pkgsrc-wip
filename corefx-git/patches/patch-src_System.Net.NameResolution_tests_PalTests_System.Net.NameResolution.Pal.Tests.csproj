@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/System.Net.NameResolution/tests/PalTests/System.Net.NameResolution.Pal.Tests.csproj.orig	2016-01-30 00:21:00.000000000 +0000
++++ src/System.Net.NameResolution/tests/PalTests/System.Net.NameResolution.Pal.Tests.csproj
+@@ -10,7 +10,7 @@
+     <ProjectGuid>{F6D1C093-081D-46DE-B5A8-516533375FDD}</ProjectGuid>
+     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+     <StringResourcesPath>../../src/Resources/Strings.resx</StringResourcesPath>
+-    <UnsupportedPlatforms>FreeBSD</UnsupportedPlatforms>
++    <UnsupportedPlatforms>FreeBSD;NetBSD</UnsupportedPlatforms>
+   </PropertyGroup>
+   
+   <!-- Help VS understand available configurations -->
