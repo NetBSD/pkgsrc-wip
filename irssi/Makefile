@@ -41,7 +41,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/irssi-config ${DESTDIR}${IRSSI_CONFIG}
 
 # tries to run lynx in autogen.sh (or links, elinks)
-BUILD_DEPENDS+= lynx-[0-9]*:../../www/lynx
+BUILD_DEPENDS+=		lynx-[0-9]*:../../www/lynx
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
