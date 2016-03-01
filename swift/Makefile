@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2015/04/25 14:20:28 tnn Exp $
 
-DISTNAME=	swift-3.0rc2
+DISTNAME=	swift-3.0
 CATEGORIES=	chat
 MASTER_SITES=	http://swift.im/downloads/releases/${DISTNAME}/
 

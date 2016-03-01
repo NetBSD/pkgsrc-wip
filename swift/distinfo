@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (swift-3.0rc2.tar.gz) = b340bdd1b5ad55008b13e77f33711f38f1f28701
-RMD160 (swift-3.0rc2.tar.gz) = 2e286b37e04df4330a64fafb974174bea7dc893e
-SHA512 (swift-3.0rc2.tar.gz) = cd72ae606fe03bb8c8f568bcc10322f496c9f83f1f5eb3fdb7866cd547bc45b24e1b6bf1147ee965a723d767456c804b5f957bddeb095a31de8671ba0f536d78
-Size (swift-3.0rc2.tar.gz) = 11070940 bytes
+SHA1 (swift-3.0.tar.gz) = 2bafacd9cfffea1044bc8ff6b3547c771aa5547c
+RMD160 (swift-3.0.tar.gz) = 7b25e3655855f18446e0fb5053f37f490f68bda3
+SHA512 (swift-3.0.tar.gz) = 3d635e9a904a48a8553e153627242e44fad5d57c48152d3c698cdf73363bdc1c566a13692c7fb2d70f0f6b773f7ff9c2cd717687501940e3b8a30b6bebc44f63
+Size (swift-3.0.tar.gz) = 11084214 bytes
 SHA1 (patch-BuildTools_SCons_SConscript.boot) = f134f01b73e6862171c432c76088947d616c6d3d
 SHA1 (patch-BuildTools_SCons_SConstruct) = a2d68e60a41ea74ad753b17f97c7887cbd458c46
