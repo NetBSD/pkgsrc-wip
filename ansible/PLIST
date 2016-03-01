@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/02/24 22:38:35 tty Exp $
+@comment $NetBSD$
 bin/ansible
 bin/ansible-doc
 bin/ansible-galaxy
@@ -179,6 +179,9 @@ ${PYSITELIB}/ansible/module_utils/ios.pyo
 ${PYSITELIB}/ansible/module_utils/iosxr.py
 ${PYSITELIB}/ansible/module_utils/iosxr.pyc
 ${PYSITELIB}/ansible/module_utils/iosxr.pyo
+${PYSITELIB}/ansible/module_utils/ismount.py
+${PYSITELIB}/ansible/module_utils/ismount.pyc
+${PYSITELIB}/ansible/module_utils/ismount.pyo
 ${PYSITELIB}/ansible/module_utils/known_hosts.py
 ${PYSITELIB}/ansible/module_utils/known_hosts.pyc
 ${PYSITELIB}/ansible/module_utils/known_hosts.pyo
@@ -771,12 +774,12 @@ ${PYSITELIB}/ansible/modules/core/utilities/__init__.pyo
 ${PYSITELIB}/ansible/modules/core/utilities/helper/__init__.py
 ${PYSITELIB}/ansible/modules/core/utilities/helper/__init__.pyc
 ${PYSITELIB}/ansible/modules/core/utilities/helper/__init__.pyo
+${PYSITELIB}/ansible/modules/core/utilities/helper/_fireball.py
+${PYSITELIB}/ansible/modules/core/utilities/helper/_fireball.pyc
+${PYSITELIB}/ansible/modules/core/utilities/helper/_fireball.pyo
 ${PYSITELIB}/ansible/modules/core/utilities/helper/accelerate.py
 ${PYSITELIB}/ansible/modules/core/utilities/helper/accelerate.pyc
 ${PYSITELIB}/ansible/modules/core/utilities/helper/accelerate.pyo
-${PYSITELIB}/ansible/modules/core/utilities/helper/fireball.py
-${PYSITELIB}/ansible/modules/core/utilities/helper/fireball.pyc
-${PYSITELIB}/ansible/modules/core/utilities/helper/fireball.pyo
 ${PYSITELIB}/ansible/modules/core/utilities/logic/__init__.py
 ${PYSITELIB}/ansible/modules/core/utilities/logic/__init__.pyc
 ${PYSITELIB}/ansible/modules/core/utilities/logic/__init__.pyo
@@ -907,6 +910,9 @@ ${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_remote_facts.pyo
 ${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_igw.py
 ${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_igw.pyc
 ${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_igw.pyo
+${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_net_facts.py
+${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_net_facts.pyc
+${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_net_facts.pyo
 ${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_route_table.py
 ${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_route_table.pyc
 ${PYSITELIB}/ansible/modules/extras/cloud/amazon/ec2_vpc_route_table.pyo

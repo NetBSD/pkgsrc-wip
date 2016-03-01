@@ -1,21 +1,21 @@
 $NetBSD$
 
-SHA1 (ansible-2.0.0.2.tar.gz) = 00f571edfed51e12b014b86e4374819e7808803f
-RMD160 (ansible-2.0.0.2.tar.gz) = 46f2cf605ff982a3bf70aa54cd0e74e96e7361ad
-SHA512 (ansible-2.0.0.2.tar.gz) = bf034384849d3f065ff77982e2e47a94727fc2982f0dac8d67efda2646dcdbd52ba9cc3ddfcdb9cd8210af0935f6f42946cc8ddc659d62cccd670e5d55c7dfa0
-Size (ansible-2.0.0.2.tar.gz) = 1497944 bytes
+SHA1 (ansible-2.0.1.0.tar.gz) = f183d6e028433f42f55c25db006b5e705c28d398
+RMD160 (ansible-2.0.1.0.tar.gz) = b69b209c3554a267932a0ba162f251001f17b3ca
+SHA512 (ansible-2.0.1.0.tar.gz) = ed126341ddae2be8f55984d7bc8b6232239f59a56f8028f19f8e2ee25096b3bba934b88b2ee72b53bbbdd245ec51a10dfbc3ffed9e0bc9f13444557ff490d6df
+Size (ansible-2.0.1.0.tar.gz) = 1510155 bytes
 SHA1 (patch-contrib_README.md) = 2ee41243901233670a2e2967b834e3d14e639699
 SHA1 (patch-contrib_inventory_cobbler.py) = 3d5811a00c18556a8993f23e17df6238bde477b5
 SHA1 (patch-contrib_inventory_collins.py) = fd3c4d71d8373488979274a9abb7faad173cc02f
-SHA1 (patch-contrib_inventory_nova.py) = a8550e663a2d5bc6e133deabb95af2c9f5e6fe06
+SHA1 (patch-contrib_inventory_nova.py) = d72d5da4a152c7165acab66512a5152d53c1edda
 SHA1 (patch-contrib_inventory_openstack.py) = 6a501bcb970410a3e3e7fae6b1c856e9704715c2
 SHA1 (patch-contrib_inventory_spacewalk.py) = fe4a439f23b3ccb356803ff93d2e7c45b979257d
 SHA1 (patch-docs_man_man1_ansible-doc.1) = f6c2523eb889ab8b623a7f565b3314a9f877cef3
 SHA1 (patch-docs_man_man1_ansible-doc.1.asciidoc.in) = 4c4602ce499d97c37f4e2e821e40414ce8073add
 SHA1 (patch-docs_man_man1_ansible-galaxy.1) = f2eeb4a1bd1cc2ec5f2329c872a8421d66b4c606
 SHA1 (patch-docs_man_man1_ansible-galaxy.1.asciidoc.in) = 56c652a14b2b55356c431fc8b72780835e14445c
-SHA1 (patch-docs_man_man1_ansible-playbook.1) = b7114f88509d5bcc595fc49239154d41b0c22c42
-SHA1 (patch-docs_man_man1_ansible-playbook.1.asciidoc.in) = ba127f7167eeb5ae03970b1d81834a6f7a5a9fe4
+SHA1 (patch-docs_man_man1_ansible-playbook.1) = bdf5a2fe6b3b0d2b8ac9827eb451db6cbf3e2ec9
+SHA1 (patch-docs_man_man1_ansible-playbook.1.asciidoc.in) = 19535dd770413590d74f6566e479aafcecac4a7b
 SHA1 (patch-docs_man_man1_ansible-pull.1) = 1edb0cd6fd6638086982662927e632b979e28235
 SHA1 (patch-docs_man_man1_ansible-pull.1.asciidoc.in) = 320c3610c01d420707e75b0d93058ea2b9047b65
 SHA1 (patch-docs_man_man1_ansible.1) = 7625324222ce6aacfbe31f6551b87ff74f50c296

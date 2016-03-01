@@ -1,15 +1,13 @@
-$NetBSD: patch-docs_man_man1_ansible-playbook.1,v 1.0 2016/02/24 22:43:47 tty Exp $
+$NetBSD: patch-docs_man_man1_ansible-playbook.1,v 1.1 2016/03/01 12:01:04 tty Exp $
 
-Fix hardcoded paths.
-
---- docs/man/man1/ansible-playbook.1.orig	2016-01-14 22:33:36.000000000 +0000
+--- docs/man/man1/ansible-playbook.1.orig	2016-02-25 03:01:04.000000000 +0000
 +++ docs/man/man1/ansible-playbook.1
 @@ -123,7 +123,7 @@ Show help page and exit
  The
  \fIPATH\fR
  to the inventory, which defaults to
--\fI/etc/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
-+\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&. Alternatively you can use a comma separated list of hosts or single host with traling comma
+-\fI/etc/ansible/hosts\fR\&. Alternatively, you can use a comma\-separated list of hosts or a single host with a trailing comma
++\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&. Alternatively, you can use a comma\-separated list of hosts or a single host with a trailing comma
  \fIhost,\fR\&.
  .RE
  .PP

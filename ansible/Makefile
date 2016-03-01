@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2016/02/24 22:32:59 tty Exp $
 
-DISTNAME=	ansible-2.0.0.2
+DISTNAME=	ansible-2.0.1.0
 PKGREVISION=	1
 #PKGNAME=	${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
 CATEGORIES=	python sysutils
@@ -42,6 +42,7 @@ SUBST_FILES.prefix+=	contrib/inventory/spacewalk.py
 SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=		-e "s,@PREFIX@,${PREFIX},"
 SUBST_SED.prefix+=		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
+SUBST_SED.prefix+=		-e "s,@PYSITELIB@,${PYSITELIB},"
 
 SUBST_CLASSES+=				pythonbin
 SUBST_STAGE.pythonbin=		pre-configure
@@ -64,14 +65,15 @@ INSTALLATION_DIRS+=	${EGDIR}/playbooks
 CHECK_INTERPRETER_SKIP=	share/ansible/*
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/ansible ${PKG_SYSCONFDIR}/ansible/facts.d
-MAKE_DIRS+=	${PREFIX}/share/ansible
-MAKE_DIRS+= ${PREFIX}/share/ansible/ansible_plugins
-MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/action_plugins
-MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/callback_plugins
-MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/connection_plugins
-MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/lookup_plugins
-MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/vars_plugins
-MAKE_DIRS+=	${PREFIX}/share/ansible/ansible_plugins/filter_plugins
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/ansible/roles ${PREFIX}/share/ansible
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins/action
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins/callback
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins/connection
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins/lookup
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins/vars
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins/filter
+MAKE_DIRS+=	${PREFIX}/share/ansible/plugins/test
 
 pre-install:
 	${FIND} ${WRKSRC} -type f -name \*.orig -delete

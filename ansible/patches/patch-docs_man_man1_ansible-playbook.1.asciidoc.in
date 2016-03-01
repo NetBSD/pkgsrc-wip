@@ -1,8 +1,6 @@
-$NetBSD: patch-docs_man_man1_ansible-playbook.1.asciidoc.in,v 1.0 2016/02/24 22:43:52 tty Exp $
+$NetBSD: patch-docs_man_man1_ansible-playbook.1.asciidoc.in,v 1.1 2016/03/01 12:02:02 tty Exp $
 
-Fix hardcoded paths.
-
---- docs/man/man1/ansible-playbook.1.asciidoc.in.orig	2016-01-14 22:33:27.000000000 +0000
+--- docs/man/man1/ansible-playbook.1.asciidoc.in.orig	2016-02-25 03:00:56.000000000 +0000
 +++ docs/man/man1/ansible-playbook.1.asciidoc.in
 @@ -95,7 +95,7 @@ Show help page and exit
  
@@ -10,7 +8,7 @@ Fix hardcoded paths.
  
 -The 'PATH' to the inventory, which defaults to '/etc/ansible/hosts'.
 +The 'PATH' to the inventory, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
- Alternatively you can use a comma separated list of hosts or single host with traling comma 'host,'.
+ Alternatively, you can use a comma-separated list of hosts or a single host with a trailing comma 'host,'.
  
  *-l* 'SUBSET', *--limit=*'SUBSET'::
 @@ -118,7 +118,7 @@ List all tasks that would be executed; d
