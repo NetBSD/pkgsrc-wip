@@ -1469,6 +1469,7 @@ SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kvirc
+SUBDIR+=	kwallet
 SUBDIR+=	kwidgetsaddons
 SUBDIR+=	kwindowsystem
 SUBDIR+=	kxmleditor
