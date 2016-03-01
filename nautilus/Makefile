@@ -36,6 +36,7 @@ INSTALLATION_DIRS+=	lib/nautilus/extensions-2.0
 .include "../../wip/meta-tracker/buildlink3.mk"
 #.include "../../net/libgdata/buildlink3.mk"
 #.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/exempi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.5
