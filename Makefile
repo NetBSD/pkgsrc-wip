@@ -1428,6 +1428,7 @@ SUBDIR+=	kconfigwidgets
 SUBDIR+=	kcoreaddons
 SUBDIR+=	kcrash
 SUBDIR+=	kdbusaddons
+SUBDIR+=	kdnssd
 SUBDIR+=	kdoctools
 SUBDIR+=	keepassx-git
 SUBDIR+=	kemoticons
