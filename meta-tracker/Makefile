@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/1.7/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.gnome.org/tracker/
 COMMENT=	Extract information and metadata about your personal data
 LICENSE=	gnu-gpl-v2
@@ -21,10 +21,9 @@ USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-PKGCONFIG_OVERRIDE+=	data/tracker-sparql.pc.in
-PKGCONFIG_OVERRIDE+=	data/tracker-miner.pc.in
-PKGCONFIG_OVERRIDE+=	data/tracker-client.pc.in
-PKGCONFIG_OVERRIDE+=	data/tracker-extract.pc.in
+PKGCONFIG_OVERRIDE+=	src/libtracker-sparql/tracker-sparql.pc.in
+PKGCONFIG_OVERRIDE+=	src/libtracker-miner/tracker-miner.pc.in
+PKGCONFIG_OVERRIDE+=	src/libtracker-control/tracker-control.pc.in
 
 #TRACKER_VERSION= ${PKGVERSION:C/\.[0-9]+$//}
 # strip last .digit (but not safe if it is missing)
