@@ -41,6 +41,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
 
 #PKGCONFIG_OVERRIDE+=	dbus-glib-1.pc.in
 
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
