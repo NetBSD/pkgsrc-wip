@@ -1,0 +1,24 @@
+Update graphics/viewnior to 1.6.
+
+Changes:
+ * Viewnior 1.6
+  * New features:
+   * Added support for the back & forward buttons of your mouse
+   * Updated translations
+  * Fixes:
+   * Mouse scroll behaviour and actions settings
+ * Viewnior 1.5
+  * New features:
+   * Disable Wallpaper support during compilation
+   * Updated translations
+  * Fixes:
+   * Preferences menu position
+   * Nitrogen wallpaper support
+ * Viewnior 1.4
+  * New features:
+   * Read EXIF and IPTC metadata
+   * Nitrogen support
+   * Updated translations
+  * Fixes:
+   * Preserve metadata after image modification
+   * Rendidering artifacts when panning
