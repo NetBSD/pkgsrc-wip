@@ -3898,7 +3898,6 @@ SUBDIR+=	swami
 SUBDIR+=	swarp
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
-SUBDIR+=	swift
 SUBDIR+=	swift-git
 SUBDIR+=	swisseph
 SUBDIR+=	sxemacs
