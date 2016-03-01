@@ -8,7 +8,11 @@ share/icons/hicolor/24x24/apps/viewnior.png
 share/icons/hicolor/32x32/apps/viewnior.png
 share/icons/hicolor/48x48/apps/viewnior.png
 share/icons/hicolor/scalable/apps/viewnior.svg
+share/locale/ar/LC_MESSAGES/viewnior.mo
 share/locale/bg/LC_MESSAGES/viewnior.mo
+share/locale/bs/LC_MESSAGES/viewnior.mo
+share/locale/ca/LC_MESSAGES/viewnior.mo
+share/locale/ca@valencia/LC_MESSAGES/viewnior.mo
 share/locale/cs/LC_MESSAGES/viewnior.mo
 share/locale/da/LC_MESSAGES/viewnior.mo
 share/locale/de/LC_MESSAGES/viewnior.mo
