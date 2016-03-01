@@ -27,6 +27,8 @@ CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
+# specify date of version, we can't use git to figure it out
+# (irssi-version.sh)
 MAKE_ENV+=	DATE="20160208 10:18:00"
 
 pre-configure:
