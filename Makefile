@@ -942,6 +942,7 @@ SUBDIR+=	googlecl
 SUBDIR+=	googlesharing
 SUBDIR+=	gosmore
 SUBDIR+=	gpak
+SUBDIR+=	gpgmepp
 SUBDIR+=	gplbasic
 SUBDIR+=	gps
 SUBDIR+=	gpsdrive
