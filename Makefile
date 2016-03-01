@@ -4115,6 +4115,7 @@ SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
+SUBDIR+=	viewnior
 SUBDIR+=	vimprobable2
 SUBDIR+=	vimrc-mode
 SUBDIR+=	vino
