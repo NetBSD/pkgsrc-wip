@@ -2,9 +2,9 @@
 
 DISTNAME=	napalm-0.51.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	6
 CATEGORIES=	net
-MASTER_SITES=	-https://github.com/napalm-automation/napalm/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=napalm-automation/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/napalm-automation/napalm/
@@ -23,9 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-eapi-[0-9]*:../../wip/py-eapi
 # bnclient	Blade Network Technologies Netconf Python Client
 
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSUFFIX=${PYVERSUFFIX}
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
-PYTHON_VERSIONS_ACCEPTED=	35 34 33 27 26
+PYTHON_VERSIONS_ACCEPTED=	35 34 33 27
 
 # Target dir already exists...
 INSTALL_EXTRA_FILES=	napalm/utils/*.yml
