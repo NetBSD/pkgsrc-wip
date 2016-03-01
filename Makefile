@@ -1469,6 +1469,7 @@ SUBDIR+=	kstest
 SUBDIR+=	ktextwidgets
 SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
+SUBDIR+=	kunitconversion
 SUBDIR+=	kup
 SUBDIR+=	kvirc
 SUBDIR+=	kwallet
