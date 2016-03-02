@@ -1496,6 +1496,7 @@ SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
 SUBDIR+=	ldapuseradd
+SUBDIR+=	ldc
 SUBDIR+=	ldc-git
 SUBDIR+=	lde
 SUBDIR+=	ldtp
