@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.12 2015/08/18 21:31:46 yhardy Exp $
 
-SHA1 (gemrb-0.8.3.tar.gz) = 8fc060539a0458c7f6a822a1eddbc286d356b37b
-RMD160 (gemrb-0.8.3.tar.gz) = 9da58cacf01de037f52142bad283419f63d91833
-Size (gemrb-0.8.3.tar.gz) = 12370971 bytes
+SHA1 (gemrb-0.8.4.tar.gz) = 88b9d5b0b392a92b21bdd3fd90838c10f9ad09e9
+RMD160 (gemrb-0.8.4.tar.gz) = 4e575c9affc6d978c2da195766328a1b94827578
+SHA512 (gemrb-0.8.4.tar.gz) = f65b56fe213b4b4b4adaf0476b57ebde73a8ca53d9d6d13f16b536f9e4c4a95417e09d1183ea557a2030defc52ef2f5b32f4a35318c02ee6187d8307c049f585
+Size (gemrb-0.8.4.tar.gz) = 12344618 bytes

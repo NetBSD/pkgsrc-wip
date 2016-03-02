@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.14 2015/08/18 21:31:46 yhardy Exp $
 
-DISTNAME=	gemrb-0.8.3
+DISTNAME=	gemrb-0.8.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gemrb/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gemrb.sourceforge.net/
+HOMEPAGE=	http://www.gemrb.org/
 COMMENT=	Open Source clone of the Infinity Engine
 LICENSE=	gnu-gpl-v2
 
