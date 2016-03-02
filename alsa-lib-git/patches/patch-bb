@@ -1,6 +1,6 @@
 $NetBSD: patch-bb,v 1.4 2014/03/25 23:06:07 asau Exp $
 
---- src/pcm/pcm_route.c.orig	2016-02-24 08:33:29.000000000 +0000
+--- src/pcm/pcm_route.c.orig	2008-10-29 08:42:10.000000000 -0400
 +++ src/pcm/pcm_route.c
 @@ -26,7 +26,9 @@
   *
@@ -12,12 +12,3 @@ $NetBSD: patch-bb,v 1.4 2014/03/25 23:06:07 asau Exp $
  #include <math.h>
  #include "pcm_local.h"
  #include "pcm_plugin.h"
-@@ -190,7 +192,7 @@ static void snd_pcm_route_convert1_one_g
- 	const char *src;
- 	char *dst;
- 	int src_step, dst_step;
--	u_int32_t sample = 0;
-+	uint32_t sample = 0;
- 	for (srcidx = 0; srcidx < ttable->nsrcs && srcidx < src_channels; ++srcidx) {
- 		unsigned int channel = ttable->srcs[srcidx].channel;
- 		if (channel >= src_channels)

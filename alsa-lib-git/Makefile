@@ -26,11 +26,10 @@ CONFIGURE_ARGS+=	--disable-python
 LIBS.SunOS+=		-lsocket -lnsl
 CPPFLAGS.SunOS+=	-std=c99 -D_POSIX_C_SOURCE=200112L
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -DBSD_COMP -DMAP_FILE=0
-CPPFLAGS.SunOS+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.SunOS+=	-Dbswap_64=BSWAP_64 -Dbswap_32=BSWAP_32 -Dbswap_16=BSWAP_16
 
-CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t -Dbswap_16=bswap16 -Dbswap_32=bswap32 -Dbswap_64=bswap64
-CPPFLAGS.FreeBSD+=	-D__u32=uint32_t -D__u64=uint64_t -Dbswap_16=bswap16 -Dbswap_32=bswap32 -Dbswap_64=bswap64
+CPPFLAGS.NetBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32 -Dbswap_64=bswap64
+CPPFLAGS.FreeBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32 -Dbswap_64=bswap64
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"

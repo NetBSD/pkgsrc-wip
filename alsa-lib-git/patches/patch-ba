@@ -1,6 +1,6 @@
 $NetBSD: patch-ba,v 1.4 2014/03/25 23:06:07 asau Exp $
 
---- src/pcm/pcm_rate_linear.c.orig	2016-02-24 08:33:29.000000000 +0000
+--- src/pcm/pcm_rate_linear.c.orig	2008-10-29 08:42:10.000000000 -0400
 +++ src/pcm/pcm_rate_linear.c
 @@ -21,7 +21,9 @@
   */
@@ -12,21 +12,3 @@ $NetBSD: patch-ba,v 1.4 2014/03/25 23:06:07 asau Exp $
  #include "pcm_local.h"
  #include "pcm_plugin.h"
  #include "pcm_rate.h"
-@@ -346,7 +348,7 @@ static int linear_init(void *obj, snd_pc
- 			rate->func = linear_shrink;
- 		/* pitch is get_increment */
- 	}
--	rate->pitch = (((u_int64_t)info->out.rate * LINEAR_DIV) +
-+	rate->pitch = (((uint64_t)info->out.rate * LINEAR_DIV) +
- 		       (info->in.rate / 2)) / info->in.rate;
- 	rate->channels = info->channels;
- 
-@@ -363,7 +365,7 @@ static int linear_adjust_pitch(void *obj
- 	struct rate_linear *rate = obj;
- 	snd_pcm_uframes_t cframes;
- 
--	rate->pitch = (((u_int64_t)info->out.period_size * LINEAR_DIV) +
-+	rate->pitch = (((uint64_t)info->out.period_size * LINEAR_DIV) +
- 		       (info->in.period_size/2) ) / info->in.period_size;
- 			
- 	cframes = input_frames(rate, info->out.period_size);
