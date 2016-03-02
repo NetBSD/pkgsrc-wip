@@ -20,6 +20,5 @@ PYTHON_VERSIONS_ACCEPTED=	34 27
 post-install:
 		${MV} ${DESTDIR}${PREFIX}/bin/yapf ${DESTDIR}${PREFIX}/bin/yapf${PYVERSSUFFIX}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
