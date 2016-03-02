@@ -18,3 +18,4 @@ GITHUB_TAG=			${IRSSI_VERSION}
 # These files are generated during Irssi's build, but are required by
 # plugins to compile properly.
 IRSSI_CONFIG=			${PREFIX}/share/irssi/irssi-config
+IRSSI_CONFIG_H=			${PREFIX}/include/irssi/irssi-config.h
