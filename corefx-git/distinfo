@@ -1,6 +1,5 @@
 $NetBSD$
-SHA1 (patch-run-test.sh) = 7d849403f8b4babf214ccf0b609712f770fa925c
-SHA1 (patch-src_System.Diagnostics.TextWriterTraceListener_tests_System.Diagnostics.TextWriterTraceListener.Tests.csproj) = 3444446dea13c4b3568a705150e204f6bf6142b1
+SHA1 (patch-run-test.sh) = a50960196fadc4e6d7b6c6f7bbf968b46ff284b4
 SHA1 (patch-src_System.IO.FileSystem.DriveInfo_tests_System.IO.FileSystem.DriveInfo.Tests.csproj) = 2566a3cb4e92de519569461cae2a2b9b6b6554da
 SHA1 (patch-src_System.Net.Http_tests_FunctionalTests_System.Net.Http.Functional.Tests.csproj) = b49b15fc11b7c5373d237ebea524dbeab77ac653
 SHA1 (patch-src_System.Net.NameResolution_tests_FunctionalTests_System.Net.NameResolution.Functional.Tests.csproj) = 20073552527d651b49ca54f12f38ee1d8e34e518
