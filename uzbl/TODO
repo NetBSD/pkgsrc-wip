@@ -1,6 +1,4 @@
-Add option for WebKit2 (in development as of January 2016)
 Add option for GTK+ version
-Add options for uzbl-browser and uzbl-tabbed
+Add options or separate packages for uzbl-browser and uzbl-tabbed
 Resolve Python version conflict for uzbl-tabbed with GTK+ 2
 Add missing dependencies for uzbl-tabbed with GTK+ 3
-Change the default certificate file path in examples/config/config without influencing the PLIST

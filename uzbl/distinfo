@@ -4,3 +4,4 @@ SHA1 (uzbl-v0.9.0.tar.gz) = 7f9655c09af7db200396a953c4f565953d481f52
 RMD160 (uzbl-v0.9.0.tar.gz) = 53dc66917f898b9ce3940ee4603015c26cbb249f
 SHA512 (uzbl-v0.9.0.tar.gz) = 32823cc63b7a29d89e614746f9a12bdaf7b81a56194889caca24277b4c155542fff2727b60faf6d73f1d3bb33ce4e29143b7fb302e4abf30f8333ada01df1fcb
 Size (uzbl-v0.9.0.tar.gz) = 254468 bytes
+SHA1 (patch-examples_config_config) = 56ac5901dc93086ba5bf0167df21e90c4fa995fc
