@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (otrtool-1.2.0.tar.gz) = 11de1361a0fed00b86b3b7b70a1cf64ed8de7a08
+RMD160 (otrtool-1.2.0.tar.gz) = 50100982dc0fdd2b232bb9b2fd6bb30de7aa91fa
+SHA512 (otrtool-1.2.0.tar.gz) = 22c854427cce385c9eebb828944e5a52c0db29a9e187ada90b3c64f1891c7284027ae6a76b2d9f681ac6c214fd7327bd4f8397856722d3a2ce3fda0ddf91cb35
+Size (otrtool-1.2.0.tar.gz) = 20670 bytes
+SHA1 (patch-Makefile) = 43fec93290f0b1c98533f225d44b3dea912c951c
