@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.68 2015/06/12 10:48:27 wiz Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		chat
 EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}
 
@@ -15,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl gettext autoconf automake autoreconf pkg-config
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--with-terminfo \
 			--with-proxy \
@@ -27,21 +26,11 @@ CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
-# specify date of version, we can't use git to figure it out
-# (irssi-version.sh)
-MAKE_ENV+=	DATE="20160208 10:18:00"
-
-pre-configure:
-	cd ${WRKSRC} && ./autogen.sh
-
 .include "options.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/irssi-config ${DESTDIR}${IRSSI_CONFIG}
-
-# tries to run lynx in autogen.sh (or links, elinks)
-BUILD_DEPENDS+=		lynx-[0-9]*:../../www/lynx
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
