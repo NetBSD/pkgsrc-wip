@@ -8,9 +8,7 @@ IRSSI_VERSION=			0.8.18
 IRSSI_DISTNAME=			irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=		.tar.gz
 IRSSI_DISTFILE=			${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}
-MASTER_SITES=			${MASTER_SITE_GITHUB:=irssi/}
-SITES.${IRSSI_DISTFILE}=	${MASTER_SITES}
-GITHUB_RELEASE=			${IRSSI_VERSION}
+SITES.${IRSSI_DISTFILE}=	https://github.com/irssi/irssi/releases/download/${IRSSI_VERSION}/
 
 # These files are generated during Irssi's build, but are required by
 # plugins to compile properly.
