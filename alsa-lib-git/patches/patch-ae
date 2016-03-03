@@ -5,60 +5,22 @@ $NetBSD: patch-ae,v 1.7 2016/02/18 15:15:57 wiz Exp $
 
 --- include/local.h.orig	2016-02-29 14:44:47.000000000 +0000
 +++ include/local.h
-@@ -50,13 +50,52 @@
+@@ -50,11 +50,11 @@
  #include <sys/poll.h>
  #include <sys/types.h>
  #include <errno.h>
 +#if defined(__linux__)
  #include <linux/types.h>
  #include <linux/ioctl.h>
-+#endif
- 
- #ifndef EBADFD
- #define EBADFD EBADF
+-
+-#ifndef EBADFD
+-#define EBADFD EBADF
++#else
++#include "type_compat.h"
  #endif
  
-+#ifndef __u16
-+#define __u16	uint16_t
-+#endif
-+#ifndef __u32
-+#define __u32	uint32_t
-+#endif
-+#ifndef __u64
-+#define __u64	uint64_t
-+#endif
-+#ifndef __le16
-+#define __le16	uint16_t
-+#endif
-+#ifndef __le32
-+#define __le32	uint32_t
-+#endif
-+#ifndef __le64
-+#define __le64	uint64_t
-+#endif
-+#ifndef u_int8_t
-+#define u_int8_t	uint8_t
-+#endif
-+#ifndef u_int16_t
-+#define u_int16_t	uint16_t
-+#endif
-+#ifndef u_int32_t
-+#define u_int32_t	uint32_t
-+#endif
-+#ifndef u_int32_t
-+#define u_int32_t	uint64_t
-+#endif
-+#ifndef __kernel_pid_t
-+#define __kernel_pid_t	pid_t
-+#endif
-+#ifndef __kernel_off_t
-+#define __kernel_off_t	off_t
-+#endif
-+
  #ifdef SUPPORT_RESMGR
- #include <resmgr.h>
- #endif
-@@ -253,7 +292,9 @@ extern snd_lib_error_handler_t snd_err_m
+@@ -253,7 +253,9 @@ extern snd_lib_error_handler_t snd_err_m
  
  /*
   */
