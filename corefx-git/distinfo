@@ -1,5 +1,8 @@
 $NetBSD$
+SHA1 (patch-build.sh) = fb2f19bc7fece61f2a227a1670737df9dc7b21ab
 SHA1 (patch-run-test.sh) = a50960196fadc4e6d7b6c6f7bbf968b46ff284b4
+SHA1 (patch-src_Native_configure.cmake) = 2f9be9b5319a386bffe326cbfb0afd3c4a15b975
+SHA1 (patch-src_Native_gen-buildsys-clang.sh) = 8ea05b26ee7c25e60bb24252ec2a07714504c344
 SHA1 (patch-src_System.IO.FileSystem.DriveInfo_tests_System.IO.FileSystem.DriveInfo.Tests.csproj) = 2566a3cb4e92de519569461cae2a2b9b6b6554da
 SHA1 (patch-src_System.Net.Http_tests_FunctionalTests_System.Net.Http.Functional.Tests.csproj) = b49b15fc11b7c5373d237ebea524dbeab77ac653
 SHA1 (patch-src_System.Net.NameResolution_tests_FunctionalTests_System.Net.NameResolution.Functional.Tests.csproj) = 20073552527d651b49ca54f12f38ee1d8e34e518

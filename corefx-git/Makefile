@@ -24,7 +24,7 @@ do-configure:
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-	${PKGSRC_SETENV} ${CONFIGURE_ENV} CMAKE_ARGS_EXTRA=${CMAKE_ARGS:Q} ./build.sh native verbose
+	${PKGSRC_SETENV} ${MAKE_ENV} ./build.sh native verbose cmakeargs ${CMAKE_ARGS:Q}
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
