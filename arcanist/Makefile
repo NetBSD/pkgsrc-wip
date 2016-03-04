@@ -6,20 +6,20 @@ CATEGORIES=		devel
 GIT_REPOSITORIES=	arcanist
 GIT_REPO.arcanist=	https://github.com/phacility/arcanist.git
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=phacility/arcanist/}
-COMMENT=	Command line interface for Phabricator
-LICENSE=	apache-2.0
+MAINTAINER=		youri@NetBSD.org
+HOMEPAGE=		${MASTER_SITE_GITHUB:=phacility/arcanist/}
+COMMENT=		Command line interface for Phabricator
+LICENSE=		apache-2.0
 
-WRKSRC=		${WRKDIR}/arcanist
+WRKSRC=			${WRKDIR}/arcanist
 
-USE_TOOLS+=	bash
+USE_TOOLS+=		bash
 
-DEPENDS=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-DEPENDS=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-DEPENDS=	libphutil-[0-9]*:../../wip/libphutil
+DEPENDS=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
+DEPENDS=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+DEPENDS=		libphutil-[0-9]*:../../wip/libphutil
 
-REPLACE_BASH+=	bin/arc
+REPLACE_BASH+=		bin/arc
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing PHP path
