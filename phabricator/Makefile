@@ -1,9 +1,5 @@
 # $NetBSD$
 
-# TODO
-# rc.d file?
-# mention php.ini mods in MESSAGE and mysql setup
-# need working git + mozilla-rootcerts ?
 DISTNAME=		phabricator-20160223
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}

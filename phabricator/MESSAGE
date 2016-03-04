@@ -2,12 +2,7 @@
 $NetBSD$
 
 To run the phabricator daemons from startup, add phd=yes
-in your /etc/rc.conf. You can control the daemon using
-
-service start phd
-service status phd
-service log phd
-etc
+in your /etc/rc.conf.
 
 Before starting the daemons, please finish configuring your Phabricator
 instance. This involves configuring a web server (Apache, NGINX, LightHTTP)
