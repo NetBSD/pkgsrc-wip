@@ -29,7 +29,7 @@ CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 # XXX unsure what is needed here instead
-#GCONF_SCHEMAS=		glib-2.0/gnome-session-schemas
+GCONF_SCHEMAS=		gnome-session.schemas
 
 #post-extract:
 #	${MV} ${WRKSRC}/data/gnome-splash.png \
@@ -43,8 +43,6 @@ CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
-.include "../../devel/GConf-ui/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
