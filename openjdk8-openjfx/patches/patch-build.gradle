@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- build.gradle.orig	2016-03-03 23:18:49.000000000 +0000
++++ build.gradle
+@@ -250,7 +250,7 @@ ext.OS_ARCH = System.getProperty("os.arc
+ ext.IS_64 = OS_ARCH.toLowerCase().contains("64")
+ ext.IS_MAC = OS_NAME.contains("mac") || OS_NAME.contains("darwin")
+ ext.IS_WINDOWS = OS_NAME.contains("windows")
+-ext.IS_LINUX = OS_NAME.contains("linux")
++ext.IS_LINUX = OS_NAME.contains("linux") || OS_NAME.contains("bsd")
+ 
+ // Get the JDK_HOME automatically based on the version of Java used to execute gradle. Or, if specified,
+ // use a user supplied JDK_HOME, STUB_RUNTIME, JAVAC, and/or JAVAH, all of which may be specified

@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (gradle-1.8-bin.zip) = f14299582a1ab6c1293a43697ecda4b2673e34b1
+RMD160 (gradle-1.8-bin.zip) = 0f80d8a065633c2405317bea5a9225650acf0dd7
+SHA512 (gradle-1.8-bin.zip) = 2692f36626576a511e688ff42fc3381f8ecdf4fdf537939ab59de6c807eb17f4b4df722c4912e373ad3d9fe95be8516841ccb78a00111b5a7d38b848e632337b
+Size (gradle-1.8-bin.zip) = 39400269 bytes
+SHA1 (patch-build.gradle) = ee1decb109cd70a4b43c1b04b87f34b86a3121d3
+SHA1 (patch-modules_web_src_main_native_Tools_ReducedFTL_build.sh) = f11170c34010b08ac1850d0259234d82050320da
+SHA1 (patch-modules_web_src_main_native_Tools_ReducedFTL_processIRDump.sh) = 4378f27ffc7dd5a9ace9ef41812fe4a5c8488cb1
