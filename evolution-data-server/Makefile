@@ -26,6 +26,8 @@ REPLACE_PYTHON=		addressbook/libebook/gen-western-table.py
 
 .include "../../mk/bsd.prefs.mk"
 
+CFLAGS+=	-D_NETBSD_SOURCE
+
 CONFIGURE_ENV+=		PTHREAD_LIB="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.6.2)
