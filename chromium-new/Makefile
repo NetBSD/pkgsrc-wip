@@ -2,7 +2,7 @@
 
 DISTNAME=	chromium-48.0.2564.116
 CATEGORIES=	www
-MASTER_SITES=	http://build.chromium.org/buildbot/official/obsolete/
+MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	rxg@NetBSD.org
@@ -28,42 +28,6 @@ DATADIR=	${DESTDIR}${PREFIX}/share/chromium
 .endif
 
 GNU_CONFIGURE=	yes
-CONFIGURE_DIRS=	third_party/icu/source
-CONFIGURE_DIRS+=third_party/tcmalloc/vendor
-CONFIGURE_DIRS+=third_party/yasm/source/patched-yasm
-CONFIGURE_ENV+=	GYP_DEFINES=${GYP_DEFINES:C/^/-D/} 
-
-# Replace config.{guess,sub}
-OVERRIDE_DIRDEPTH=	5
-
-GYP_DEFINES+=	clang=1
-GYP_DEFINES+=	OS=${LOWER_OPSYS}
-GYP_DEFINES+=	buildtype=Official
-.if ${OPSYS} != "Linux"
-GYP_DEFINES+=	disable_nacl=1
-.endif
-GYP_DEFINES+=	disable_sse2=0
-GYP_DEFINES+=	ffmpeg_branding=${FFMPEG_CODECS}
-GYP_DEFINES+=	libvpx_path=${BUILDLINK_DIR}/lib
-.if ${OPSYS} != "Linux" && ${OPSYS} != "FreeBSD"
-GYP_DEFINES+=	linux_use_tcmalloc=0
-.endif
-.if ${OPSYS} == "NetBSD"
-GYP_DEFINES+=	no_gc_sections=1 
-.endif
-GYP_DEFINES+=	python_ver=2.7 # ${PYVERSSUFFIX}
-GYP_DEFINES+=	linux_breakpad=0
-GYP_DEFINES+=	use_system_bzip2=1 
-GYP_DEFINES+=	use_system_ffmpeg=0 
-GYP_DEFINES+=	use_system_libevent=1 
-GYP_DEFINES+=	use_system_libjpeg=1 
-GYP_DEFINES+=	use_system_libpng=1 
-GYP_DEFINES+=	use_system_libxml=1 
-GYP_DEFINES+=	use_system_sqlite=0 
-GYP_DEFINES+=	use_system_ssl=0 
-GYP_DEFINES+=	use_system_vpx=1 
-GYP_DEFINES+=	use_system_yasm=0 
-GYP_DEFINES+=	use_system_zlib=1 
 
 FFMPEG_ARGS+=	--disable-everything
 FFMPEG_ARGS+=	--disable-network
@@ -94,11 +58,6 @@ MAKE_ENV+=	LINK=${CXX:Q}
 
 BUILDDIR=	${WRKSRC}/out # /${BUILDTYPE}
 
-CHECK_PORTABILITY_SKIP+=gpu/demos/run_demo_ppapi.sh
-CHECK_PORTABILITY_SKIP+=third_party/xdg-utils/scripts/xdg-terminal
-CHECK_PORTABILITY_SKIP+=third_party/xdg-utils/scripts/xdg-terminal.in
-CHECK_PORTABILITY_SKIP+=v8/tools/linux-tick-processor
-
 SUBST_CLASSES+=		bash
 SUBST_MESSAGE.bash=	Fixing bash path
 SUBST_STAGE.bash=	post-patch
@@ -118,15 +77,12 @@ SUBST_SED.path+=	-e 's:/usr/local/:${PREFIX}/:'
 SUBST_SED.path+=	-e 's:/usr/lib/:${BUILDLINK_DIR}/lib/:'
 SUBST_SED.path+=	-e 's:/usr/include/:${BUILDLINK_DIR}/include/:'
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 bin share/chromium
-INSTALLATION_DIRS+=	share/chromium/locales share/chromium/resources
-
-MODPY_ADJ_FILES=build/linux/unbundle/replace_gyp_files.py
-
 BUILDTYPE=		Release
 MAKE_ENV+=		BUILDTYPE=${BUILDTYPE}
 
-pre-configure:
+do-configure:
+	set -e \
+	${PYTHONBIN} ${WRKSRC}/bootstrap/bootstrap.py -s
 	# phajdan-jr: list of things *not* to remove, so maybe the script
 	#             should be called "keep_bundled_libraries.py"
 	cd ${WRKSRC} && ${PYTHON_CMD} \
@@ -238,13 +194,6 @@ pre-configure:
 	# will fail if it's not there. do not break TESTS build while
 	# allowing regular build without pulling in -testdata.
 	${TOUCH} ${WRKSRC}/chrome/test/data/webui/i18n_process_css_test.html
-
-# gyp_chromium generates all the Makefiles from gyp
-do-configure:
-	cd ${WRKSRC} && \
-		build/linux/unbundle/replace_gyp_files.py ${GYP_DEFINES:C/^/-D/} && \
-		env -i ${CONFIGURE_ENV} ${MODPY_BIN} build/gyp_chromium \
-		${GYP_DEFS} "--depth=${WRKSRC}"
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
