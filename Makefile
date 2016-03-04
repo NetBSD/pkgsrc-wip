@@ -2123,6 +2123,7 @@ SUBDIR+=	opendchub
 SUBDIR+=	opendylan
 SUBDIR+=	openerp-server
 SUBDIR+=	openh264
+SUBDIR+=	openjdk8-openjfx
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openmpi163
