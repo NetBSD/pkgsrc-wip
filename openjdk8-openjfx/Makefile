@@ -34,7 +34,10 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BASH} ../gradle-1.8/bin/gradle
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BASH} ../gradle-1.8/bin/gradle zips
+
+do-install:
+	false
 
 .include "../../wip/mk/hg-package.mk"
 .include "../../x11/libXtst/buildlink3.mk"

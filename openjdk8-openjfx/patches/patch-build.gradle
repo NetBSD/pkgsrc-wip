@@ -1,5 +1,7 @@
 $NetBSD$
 
+Pretend we are Linux for now.
+
 --- build.gradle.orig	2016-03-03 23:18:49.000000000 +0000
 +++ build.gradle
 @@ -250,7 +250,7 @@ ext.OS_ARCH = System.getProperty("os.arc
