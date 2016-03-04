@@ -3985,6 +3985,7 @@ SUBDIR+=	theama
 SUBDIR+=	thepeg
 SUBDIR+=	threadweaver
 SUBDIR+=	tidy
+SUBDIR+=	tigervnc
 SUBDIR+=	tilda
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol

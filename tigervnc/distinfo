@@ -1,0 +1,14 @@
+$NetBSD$
+
+SHA1 (tigervnc-1.6.0.tar.gz) = 2e2edd6a94be18380a8b00b064e268ac892c8070
+RMD160 (tigervnc-1.6.0.tar.gz) = fc2cea59032b5b1c6c8adaf5966221d1a773ccf1
+SHA512 (tigervnc-1.6.0.tar.gz) = b4f1f5116ad5fe27a168764dd746400474e973d2edb85fbbe67a2459824a7267f2c63d1a2b2fdd2811017216c24a7168712df3afece56f404780d386ad24e135
+Size (tigervnc-1.6.0.tar.gz) = 1291089 bytes
+SHA1 (xorg-server-1.18.1.tar.gz) = 73009ea90952bcbc790a76020e4c32beff6c9bad
+RMD160 (xorg-server-1.18.1.tar.gz) = cef7f3ecd1494b88b7898bef0ae425fd7817239b
+SHA512 (xorg-server-1.18.1.tar.gz) = e05ef1f1b6e684019164983d67e879927d449bbaa21e7417040575e57e3aa2fdc01cdc51c9dd500058bce7b416e75e0e0cc989ad9155721e52902c12393b78ee
+Size (xorg-server-1.18.1.tar.gz) = 8186779 bytes
+SHA1 (patch-tigervnc-1.6.0_unix_xserver_hw_vnc_Input.c) = 45cb74c2d1c561cfe6db74f04a312c97144d3212
+SHA1 (patch-tigervnc-1.6.0_unix_xserver_hw_vnc_Makefile.am) = b1c754c87a2332049616281c8c4e4de1b88aaa7a
+SHA1 (patch-tigervnc-1.6.0_unix_xserver_hw_vnc_xorg-version.h) = d4cebca615a8b737ff34bc33266978b5b0ee1c31
+SHA1 (patch-tigervnc-1.6.0_vncviewer_CMakeLists.txt) = e2303cb9399429eb431280c8da632adb7dc59f5f
