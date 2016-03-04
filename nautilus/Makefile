@@ -20,6 +20,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 GCONF_SCHEMAS=		apps_nautilus_preferences.schemas
 
+# Fails to find tracker-common which is in a subdirectory.
+# /usr/bin/ld: cannot find -ltracker-common
+LDFLAGS+=		-L${PREFIX}/lib/tracker-1.0
+
 # needed for nautilus-2.28 and gtk2-2.20 -- remove on next update
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
