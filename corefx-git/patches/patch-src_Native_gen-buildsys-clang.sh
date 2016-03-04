@@ -33,5 +33,5 @@ $NetBSD$
 +fi
 +
 +cmake $cmake_extra_defines \
-+    $__UnprocessedCMakeArgs
++    $__UnprocessedCMakeArgs \
 +    $1

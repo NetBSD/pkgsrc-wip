@@ -2,7 +2,9 @@ $NetBSD$
 
 --- build.sh.orig	2016-03-02 23:13:05.000000000 +0000
 +++ build.sh
-@@ -2,7 +2,7 @@
+@@ -1,8 +1,8 @@
+-#!/usr/bin/env bash
++#!/usr/pkg/bin/bash
  
  usage()
  {
@@ -136,7 +138,7 @@ $NetBSD$
 +
 +        cmakeargs)
 +            if [ -n "$2" ]; then
-+                __cmakeargs="$2"
++                __cmakeextraargs="$2"
 +                shift
 +            else
 +                echo "ERROR: 'cmakeargs' requires a non-empty option argument"
