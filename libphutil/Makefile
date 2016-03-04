@@ -6,15 +6,12 @@ CATEGORIES=		devel
 GIT_REPOSITORIES=	libphutil
 GIT_REPO.libphutil=	https://github.com/phacility/libphutil.git
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=phacility/libphutil/}
-COMMENT=	Collection of utility classes and functions for PHP
-LICENSE=	apache-2.0
+MAINTAINER=		youri@NetBSD.org
+HOMEPAGE=		${MASTER_SITE_GITHUB:=phacility/libphutil/}
+COMMENT=		Collection of utility classes and functions for PHP
+LICENSE=		apache-2.0
 
-WRKSRC=		${WRKDIR}/libphutil
-
-#DEPENDS=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-#DEPENDS=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+WRKSRC=			${WRKDIR}/libphutil
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing PHP path
@@ -51,11 +48,11 @@ SUBST_FILES.php+=	bin/aws-s3
 SUBST_FILES.php+=	scripts/utils/aws-s3.php
 SUBST_SED.php=		-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
 
-NO_BUILD=	yes
+NO_BUILD=		yes
 
-LIBPHUTILDIR=	${PREFIX}/share/libphutil
+LIBPHUTILDIR=		${PREFIX}/share/libphutil
 
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
 
 do-install:
 	${RUN} cp -r ${WRKSRC}/* ${DESTDIR}${LIBPHUTILDIR}
