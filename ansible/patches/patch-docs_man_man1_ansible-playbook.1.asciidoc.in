@@ -1,5 +1,7 @@
 $NetBSD: patch-docs_man_man1_ansible-playbook.1.asciidoc.in,v 1.1 2016/03/01 12:02:02 tty Exp $
 
+Fix hardcoded paths.
+
 --- docs/man/man1/ansible-playbook.1.asciidoc.in.orig	2016-02-25 03:00:56.000000000 +0000
 +++ docs/man/man1/ansible-playbook.1.asciidoc.in
 @@ -95,7 +95,7 @@ Show help page and exit
