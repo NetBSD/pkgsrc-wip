@@ -4212,7 +4212,6 @@ SUBDIR+=	xf86-video-intel-git
 SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-virtualbox
 SUBDIR+=	xf86rushproto
-SUBDIR+=	xfburn
 SUBDIR+=	xfs
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
