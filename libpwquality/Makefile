@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--disable-pam
 CONFIGURE_ARGS+=	--with-python-binary=${PYTHONBIN}
 
 # XXX what to do with the conf files?
-EGDIR=		etc
+EGDIR=		python
 CONF_FILES=	${EGDIR}/security/pwquality.conf ${PKG_SYSCONFDIR}/security/pwquality.conf
 
 pre-configure:
@@ -28,4 +28,5 @@ pre-configure:
 
 .include "../../wip/py-cracklib/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
