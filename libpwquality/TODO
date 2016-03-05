@@ -1,0 +1,13 @@
+Currently having a problem with the PLIST
+Unsure how to fix it
+
+=> Checking file-check results for libpwquality-1.3.0
+ERROR: ************************************************************
+ERROR: The following files are in the PLIST but not in /usr/pkgsrc/wip/libpwquality/work/.destdir/usr/pkg:
+ERROR:         /usr/pkgsrc/wip/libpwquality/work/.destdir/usr/pkg/${PYSITELIB}/pwquality-1.3.0-py2.7.egg-info
+ERROR:         /usr/pkgsrc/wip/libpwquality/work/.destdir/usr/pkg/${PYSITELIB}/pwquality.so
+ERROR: ************************************************************
+ERROR: The following files are in /usr/pkgsrc/wip/libpwquality/work/.destdir/usr/pkg but not in the PLIST:
+ERROR:         /usr/pkgsrc/wip/libpwquality/work/.destdir/usr/pkg/etc/security/pwquality.conf
+ERROR:         /usr/pkgsrc/wip/libpwquality/work/.destdir/usr/pkg/lib/python2.7/site-packages/pwquality-1.3.0-py2.7.egg-info
+ERROR:         /usr/pkgsrc/wip/libpwquality/work/.destdir/usr/pkg/lib/python2.7/site-packages/pwquality.so

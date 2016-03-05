@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/pwmake
 bin/pwscore
-etc/security/pwquality.conf
 include/pwquality.h
 lib/libpwquality.la
 lib/pkgconfig/pwquality.pc
