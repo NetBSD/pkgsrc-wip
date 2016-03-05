@@ -688,7 +688,6 @@ SUBDIR+=	farstream
 SUBDIR+=	fasm
 SUBDIR+=	fasta
 SUBDIR+=	fastbit
-SUBDIR+=	fastjar
 SUBDIR+=	fastjet
 SUBDIR+=	fastrpc
 SUBDIR+=	fbida

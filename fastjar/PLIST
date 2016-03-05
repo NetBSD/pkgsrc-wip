@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/15 09:49:33 makoto Exp $
-bin/fastjar
-bin/grepjar
-info/fastjar.info
-lib/charset.alias
-man/man1/fastjar.1
-man/man1/grepjar.1
