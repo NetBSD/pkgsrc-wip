@@ -11,16 +11,9 @@ LICENSE=	gnu-gpl-v3
 
 .include "../../lang/ruby/rubyversion.mk"
 
-.if ${RUBY_VER} == "193"
-GIT_REPOSITORIES=	ruby19
-GIT_REPO.ruby19=	git://github.com/chriskempson/Ditz-for-Ruby-1.9.2.git
-GIT_MODULE.ruby19=	Ditz-for-Ruby-1.9.2
-WRKSRC=				${WRKDIR}/${GIT_MODULE.ruby19}
-.else
 GIT_REPOSITORIES=	mainline
 GIT_REPO.mainline=	git://gitorious.org/ditz/mainline.git
 WRKSRC=		${WRKDIR}/${GIT_MODULE.mainline}
-.endif
 
 GEM_SPECFILE=	${WRKSRC}/ditz.gemspec
 

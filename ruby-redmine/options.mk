@@ -86,9 +86,7 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 DEPENDS+=	${RUBY_PKGPREFIX}-shoulda>=3.3.2:../../devel/ruby-shoulda
 DEPENDS+=	${RUBY_PKGPREFIX}-mocha>=0.14:../../devel/ruby-mocha
 OVERRIDE_GEMSPEC+=	shoulda>=3.3.2
-.if ${RUBY_VER} >= 193
 DEPENDS+=	${RUBY_PKGPREFIX}-capybara>=2.1.0:../../www/ruby-capybara
 DEPENDS+=	${RUBY_PKGPREFIX}-selenium-webdriver-[0-9]*:../../www/ruby-selenium-webdriver
 OVERRIDE_GEMSPEC+=	capybara>=2.1.0
-.endif
 .endif

@@ -18,7 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mecab>=0:../../textproc/ruby-mecab
 DEPENDS+=	${RUBY_PKGPREFIX}-kakasi>=1.0.2:../../wip/ruby-kakasi
 #DEPENDS+=	${RUBY_PKGPREFIX}-chasen>=0:../../wip/ruby-chasen
 
-RUBY_VERSION_SUPPORTED=	193 200
+RUBY_VERSION_SUPPORTED=	200
 
 NO_BUILD=	yes
 REPLACE_RUBY=	bsfilter/bsfilter
