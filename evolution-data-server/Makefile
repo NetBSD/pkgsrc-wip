@@ -28,7 +28,7 @@ REPLACE_PYTHON=		addressbook/libebook/gen-western-table.py
 
 CFLAGS+=	-D_NETBSD_SOURCE
 
-CONFIGURE_ENV+=		PTHREAD_LIB="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+CONFIGURE_ENV+=		PTHREAD_LIB=${PTHREAD_LDFLAGS:M*:Q} ${PTHREAD_LIBS:M*:Q}
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.6.2)
 .include "../../devel/pthread-sem/buildlink3.mk"
