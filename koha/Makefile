@@ -24,7 +24,7 @@ DEPENDS+=	p5-PDF-API2>=0.65:../../textproc/p5-PDF-API2
 DEPENDS+=	p5-XML-Simple>=2.18:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-libwww>=5.808:../../www/p5-libwww
 
-DEPENDS+=	p5-Data-Random>=0.05:../../wip/p5-Data-Random
+DEPENDS+=	p5-Data-Random>=0.05:../../devel/p5-Data-Random
 DEPENDS+=	p5-GD-Barcode>=1.15:../../graphics/p5-GD-Barcode
 DEPENDS+=	p5-MARC-Record>=2.0.0:../../databases/p5-MARC-Record
 DEPENDS+=	p5-MARC-XML>=0.87:../../databases/p5-MARC-XML

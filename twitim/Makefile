@@ -34,7 +34,7 @@ DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-Net-OAuth-[0-9]*:../../net/p5-Net-OAuth
-DEPENDS+=	p5-Data-Random-[0-9]*:../../wip/p5-Data-Random
+DEPENDS+=	p5-Data-Random-[0-9]*:../../devel/p5-Data-Random
 DEPENDS+=	libgnome-[0-9]*:../../devel/libgnome
 
 .include "options.mk"
