@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.31 2012/10/06 14:10:55 asau Exp $
 
-DISTNAME=	gnome-backgrounds-2.32.0
-PKGREVISION=	1
+DISTNAME=	gnome-backgrounds-3.18.0
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-backgrounds/2.32/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-backgrounds/3.18/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
