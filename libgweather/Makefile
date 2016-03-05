@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.55 2015/10/10 01:57:52 ryoon Exp $
 #
 
-DISTNAME=	libgweather-3.18.1
+DISTNAME=	libgweather-3.16.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgweather/3.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgweather/3.16/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,8 +15,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
-#GCONF_SCHEMAS+=	gweather.schemas
-#PKGCONFIG_OVERRIDE+=	libgweather/gweather.pc.in
+GCONF_SCHEMAS+=		gweather.schemas
+PKGCONFIG_OVERRIDE+=	data/gweather-3.0.pc.in
 
 .include "../../wip/geocode-glib/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
