@@ -4,7 +4,3 @@ SHA1 (empathy-3.12.10.tar.xz) = 1de7132ec517e033ba033fa00775fe620a1b2b55
 RMD160 (empathy-3.12.10.tar.xz) = 1f99444129eb32fa0a1bafae96d1bb7a5678a2e6
 SHA512 (empathy-3.12.10.tar.xz) = 59d48316d4708e04cddb395626ac1e8fc55aa215e1bbb79e6976c58c857f08e8a758ccc670a35bd966b95676a2cdd6bc70dd12e3aac85d01e02e995bb6fd6fe2
 Size (empathy-3.12.10.tar.xz) = 5064384 bytes
-SHA1 (patch-ad) = 2f0df78b7ee7ae3f58610894a6899397a4601ba7
-SHA1 (patch-libempathy_empathy-auth-factory.c) = 4f2e4fe7ad4e15bd075c39791248143a5c0f005f
-SHA1 (patch-src_Makefile.am) = b80be45492abf1a4bf79f4c408f07beb4ee4ed29
-SHA1 (patch-src_Makefile.in) = bf630e12c9517d0bb7b4e0e32ee47d4197ab0d92

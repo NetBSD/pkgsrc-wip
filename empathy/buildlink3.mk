@@ -10,10 +10,10 @@ BUILDLINK_ABI_DEPENDS.empathy+=	empathy>=2.34.0nb43
 BUILDLINK_PKGSRCDIR.empathy?=	../../chat/empathy
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../wip/evolution-data-server/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .endif # EMPATHY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-empathy

@@ -17,7 +17,7 @@ USE_TOOLS+=		gawk gmake gsed intltool msgfmt pkg-config
 USE_TOOLS+=		autoconf msgmerge xgettext
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-CONFIGURE_ENV+=	YELL_CFLAGS=-I${WRKSRC}/telepathy-yell
+CONFIGURE_ENV+=		YELL_CFLAGS=-I${WRKSRC}/telepathy-yell
 CONFIGURE_ENV+=	\
   YELL_LIBS="-L${WRKSRC}/telepathy-yell/telepathy-yell -ltelepathy-yell"
 
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 # with --nonet, xsltproc needs a helping hand finding some dtds
-XSLTPROC_PATH+=	${LOCALBASE}/share/doc/dbus
+XSLTPROC_PATH=		${LOCALBASE}/share/doc/dbus
 
 # notyet
 #CONFIGURE_ARGS+=	--enable-meego
