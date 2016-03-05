@@ -1,14 +1,13 @@
 # $NetBSD: Makefile,v 1.181 2016/02/25 08:27:04 jperkin Exp $
 
-DISTNAME=		gnome-panel-2.32.1
-PKGREVISION=		45
+DISTNAME=		gnome-panel-3.16.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.32/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/3.16/}
+EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		drochner@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		GNOME2 panel application
+COMMENT=		GNOME3 panel application
 
 # depends on policykit
 #EGDIR=		${PREFIX}/share/examples/gnome-panel
@@ -23,6 +22,12 @@ PKGCONFIG_OVERRIDE+=	bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	libpanel-applet/libpanelapplet-3.0.pc.in
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2
+
+
+# Horrible hack because the package uses libgweather wrong
+# error "gweather-timezone.h must not be included individually, 
+# include gweather.h instead"
+CFLAGS+=	-DGWEATHER_COMPILATION
 
 # XXX this pkg installs a gio module to ${PREFIX}/lib/gnome-panel/modules
 # but there are two problems with this:
@@ -62,19 +67,24 @@ SUBST_SED.noundef=	-e 's/ -no-undefined//g'
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../wip/polkit/buildlink3.mk"
+.include "../../devel/dconf/buildlink3.mk"
+.include "../../wip/gnome-menus/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libwnck/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
-.include "../../devel/libgweather/buildlink3.mk"
+.include "../../devel/libwnck3/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
+.include "../../wip/libgweather/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mevolution)
-.include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../wip/evolution-data-server/buildlink3.mk"
 .endif
 .include "../../net/ORBit2/buildlink3.mk"
 # pkgsrc policykit is too old
@@ -83,11 +93,11 @@ BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.gnome-menus+= gnome-menus>=2.28.0
-.include "../../sysutils/gnome-menus/buildlink3.mk"
+#.include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
-.include "../../x11/py-gnome2/buildlink3.mk"
+#.include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
