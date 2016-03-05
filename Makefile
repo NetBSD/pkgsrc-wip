@@ -3748,6 +3748,7 @@ SUBDIR+=	sds
 SUBDIR+=	seagull
 SUBDIR+=	sector-decomposition
 SUBDIR+=	seeks
+SUBDIR+=	segvcatch
 SUBDIR+=	semanticscuttle
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
