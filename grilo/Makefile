@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.17 2015/10/10 01:57:53 ryoon Exp $
 #
 
-DISTNAME=	grilo-0.3.0
+DISTNAME=	grilo-0.2.15
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo/0.3/
+MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo/0.2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,9 +19,9 @@ SET_LIBDIR=	yes
 
 CONFIGURE_ARGS+=	"--enable-grl-pls"
 
-PKGCONFIG_OVERRIDE+=	grilo-0.3.pc.in
-PKGCONFIG_OVERRIDE+=	grilo-net-0.3.pc.in
-PKGCONFIG_OVERRIDE+=	grilo-pls-0.3.pc.in
+PKGCONFIG_OVERRIDE+=	grilo-0.2.pc.in
+PKGCONFIG_OVERRIDE+=	grilo-net-0.2.pc.in
+PKGCONFIG_OVERRIDE+=	grilo-pls-0.2.pc.in
 
 .include "../../wip/totem-pl-parser/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
