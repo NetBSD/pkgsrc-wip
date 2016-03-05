@@ -3,18 +3,18 @@
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
 
-DISTNAME=	totem-2.32.0
+DISTNAME=	totem-3.18.1
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.32/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/3.18/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/totem/
 COMMENT=	Movie player for the GNOME Desktop
 LICENSE=	gnu-gpl-v2 # with an exception clause
 
-DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
-PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
-PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
+#DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
+#PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
+#PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config gawk
@@ -52,4 +52,4 @@ BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
 .include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../multimedia/totem-pl-parser/buildlink3.mk"
+.include "../../wip/totem-pl-parser/buildlink3.mk"
