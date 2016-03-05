@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2015/04/02 19:36:21 outpaddling Exp $
-
-SHA1 (munge-0.5.11.tar.bz2) = 6939ddabc4bc2b3bacdb8bb2bf24766b666d1c0d
-RMD160 (munge-0.5.11.tar.bz2) = f7908ba980570519dab99f81023201fb0bd3c195
-Size (munge-0.5.11.tar.bz2) = 423232 bytes
-SHA1 (patch-src_etc_Makefile.in) = 11a79fd9d5e5b3da76a3c637c3e7cf394acbbe5e

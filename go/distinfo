@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.11 2015/08/01 13:05:54 bsiegert Exp $
-
-SHA1 (go1.5beta3.src.tar.gz) = 9aff4b5941c8ba6fe5799341dd433b157bacb940
-RMD160 (go1.5beta3.src.tar.gz) = d33705c837d3116367c63da09de777150229113f
-Size (go1.5beta3.src.tar.gz) = 12062802 bytes
-SHA1 (patch-misc_cgo_testso_cgoso.go) = ef782a6f173c814656eac0df640aedaa1a923bbc
-SHA1 (patch-src_cmd_go_build.go) = f7705aa955241d3add353a144a676a58a0a1617e
-SHA1 (patch-src_cmd_go_pkg.go) = ccc470577951bd00741c39229599c0c06be52d0a
-SHA1 (patch-src_runtime_cgo_gcc__solaris__amd64.c) = dea780dd3b6bed7cfa41e250eb01ab8137405562
