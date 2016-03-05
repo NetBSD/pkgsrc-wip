@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.24 2015/11/03 23:54:33 agc Exp $
 
-SHA1 (totem-pl-parser-3.4.5.tar.xz) = 3d9067ce4305447b4d0ef18d00ec66645b949755
-RMD160 (totem-pl-parser-3.4.5.tar.xz) = 8dc0aaa0c06858b0514c6e55bc2210a7e7446c89
-SHA512 (totem-pl-parser-3.4.5.tar.xz) = 55723306d76554d000b9b957008e295d748d100eb3d442e2645f7d2ac9a64929c6ec0c70186e10dddb30f49b03bd1869b3408b96a5d50bfac52131629b726dbc
-Size (totem-pl-parser-3.4.5.tar.xz) = 1608140 bytes
+SHA1 (totem-pl-parser-3.10.6.tar.xz) = 969fc90695e493d73c3b1efb1e24fc1b1c3e8b91
+RMD160 (totem-pl-parser-3.10.6.tar.xz) = f3259cf4cb5cd803417163825126e8ba7b002c0a
+SHA512 (totem-pl-parser-3.10.6.tar.xz) = 366de6ea11eb7ad80de9832eecd814fa3868fb9e3149f314f7056861eff1b6f6943b009b637145984d33f51fddfcb93ec2bd9103b6fcb68732cddcc77fbc4721
+Size (totem-pl-parser-3.10.6.tar.xz) = 1606636 bytes
 SHA1 (patch-plparse_Makefile.in) = ca79faf9253f63cc5f478f5c19bf2c51e622cd4b

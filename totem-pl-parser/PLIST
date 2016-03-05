@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/01/30 12:59:37 prlw1 Exp $
-include/totem-pl-parser/1/plparser/totem-disc.h
+@comment $NetBSD$
 include/totem-pl-parser/1/plparser/totem-pl-parser-builtins.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-features.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-mini.h
@@ -19,12 +18,14 @@ share/gtk-doc/html/totem-pl-parser/home.png
 share/gtk-doc/html/totem-pl-parser/index.html
 share/gtk-doc/html/totem-pl-parser/index.sgml
 share/gtk-doc/html/totem-pl-parser/ix02.html
+share/gtk-doc/html/totem-pl-parser/left-insensitive.png
 share/gtk-doc/html/totem-pl-parser/left.png
+share/gtk-doc/html/totem-pl-parser/right-insensitive.png
 share/gtk-doc/html/totem-pl-parser/right.png
 share/gtk-doc/html/totem-pl-parser/style.css
-share/gtk-doc/html/totem-pl-parser/totem-pl-parser-TotemDisc.html
 share/gtk-doc/html/totem-pl-parser/totem-pl-parser-TotemPlPlaylistIter.html
 share/gtk-doc/html/totem-pl-parser/totem-pl-parser.devhelp2
+share/gtk-doc/html/totem-pl-parser/up-insensitive.png
 share/gtk-doc/html/totem-pl-parser/up.png
 share/locale/af/LC_MESSAGES/totem-pl-parser.mo
 share/locale/am/LC_MESSAGES/totem-pl-parser.mo
@@ -39,6 +40,7 @@ share/locale/bg/LC_MESSAGES/totem-pl-parser.mo
 share/locale/bn/LC_MESSAGES/totem-pl-parser.mo
 share/locale/bn_IN/LC_MESSAGES/totem-pl-parser.mo
 share/locale/br/LC_MESSAGES/totem-pl-parser.mo
+share/locale/bs/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ca/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ca@valencia/LC_MESSAGES/totem-pl-parser.mo
 share/locale/cs/LC_MESSAGES/totem-pl-parser.mo
@@ -59,6 +61,7 @@ share/locale/fi/LC_MESSAGES/totem-pl-parser.mo
 share/locale/fr/LC_MESSAGES/totem-pl-parser.mo
 share/locale/fur/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ga/LC_MESSAGES/totem-pl-parser.mo
+share/locale/gd/LC_MESSAGES/totem-pl-parser.mo
 share/locale/gl/LC_MESSAGES/totem-pl-parser.mo
 share/locale/gu/LC_MESSAGES/totem-pl-parser.mo
 share/locale/he/LC_MESSAGES/totem-pl-parser.mo
@@ -70,6 +73,7 @@ share/locale/is/LC_MESSAGES/totem-pl-parser.mo
 share/locale/it/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ja/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ka/LC_MESSAGES/totem-pl-parser.mo
+share/locale/kk/LC_MESSAGES/totem-pl-parser.mo
 share/locale/km/LC_MESSAGES/totem-pl-parser.mo
 share/locale/kn/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ko/LC_MESSAGES/totem-pl-parser.mo
