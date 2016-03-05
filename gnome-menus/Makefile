@@ -1,11 +1,10 @@
 # $NetBSD: Makefile,v 1.56 2012/10/23 19:51:04 asau Exp $
 #
 
-DISTNAME=	gnome-menus-2.30.5
-PKGREVISION=	4
+DISTNAME=	gnome-menus-3.10.1
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.30/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/3.10/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -24,9 +23,9 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/libmenu/libgnome-menu.pc.in
 
 EXAMPLEDIR=		${PREFIX}/share/examples/gnome-menus/xdg/menus
 OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/menus
-CONF_FILES=		${EXAMPLEDIR}/applications.menu \
+#CONF_FILES=		${EXAMPLEDIR}/applications.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/applications.menu
-CONF_FILES+=		${EXAMPLEDIR}/settings.menu \
+#CONF_FILES+=		${EXAMPLEDIR}/settings.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/settings.menu
 
 SUBST_CLASSES+=		paths
