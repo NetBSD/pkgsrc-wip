@@ -17,9 +17,13 @@ USE_TOOLS+=	pkg-config intltool msgfmt
 USE_LANGUAGES=	c99
 SET_LIBDIR=	yes
 
-PKGCONFIG_OVERRIDE+=	grilo-0.2.pc.in
-PKGCONFIG_OVERRIDE+=	grilo-net-0.2.pc.in
+CONFIGURE_ARGS+=	"--enable-grl-pls"
 
+PKGCONFIG_OVERRIDE+=	grilo-0.3.pc.in
+PKGCONFIG_OVERRIDE+=	grilo-net-0.3.pc.in
+PKGCONFIG_OVERRIDE+=	grilo-pls-0.3.pc.in
+
+.include "../../wip/totem-pl-parser/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"

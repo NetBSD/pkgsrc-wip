@@ -7,7 +7,7 @@ GRILO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.grilo+=	grilo>=0.2.2
 BUILDLINK_ABI_DEPENDS.grilo?=	grilo>=0.2.7nb3
-BUILDLINK_PKGSRCDIR.grilo?=	../../net/grilo
+BUILDLINK_PKGSRCDIR.grilo?=	../../wip/grilo
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
