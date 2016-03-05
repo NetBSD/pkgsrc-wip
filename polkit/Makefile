@@ -58,7 +58,7 @@ SUBST_FILES.paths+=	docs/man/pkexec.xml
 SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.policy.in
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 
-.include "../../wip/spidermonkey185/buildlink3.mk"
+.include "../../wip/spidermonkey17/buildlink3.mk"
 #.include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
