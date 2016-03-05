@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.16 2015/10/10 01:58:15 ryoon Exp $
 #
 
-DISTNAME=	grilo-plugins-0.2.9
-PKGREVISION=	4
+DISTNAME=	grilo-plugins-0.3.0
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo-plugins/0.2/
+MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo-plugins/0.3/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
