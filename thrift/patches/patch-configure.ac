@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix portability.
+
+--- configure.ac.orig	2015-10-01 17:16:28.000000000 +0000
++++ configure.ac
+@@ -199,7 +199,7 @@ AM_CONDITIONAL(WITH_C_GLIB, [test "$have
+ AX_THRIFT_LIB(csharp, [C#], yes)
+ if test "$with_csharp" = "yes";  then
+   PKG_CHECK_MODULES(MONO, mono >= 2.11.0, mono_2_11=yes, mono_2_11=no)
+-  if test "$mono_2_11" == "yes"; then
++  if test "$mono_2_11" = "yes"; then
+     AC_PATH_PROG([MCS], [mcs])
+     if test "x$MCS" != "x"; then
+       mono_mcs="yes"

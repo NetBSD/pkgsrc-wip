@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/thrift
+include/src/socket.h
+lib/libluabitwise.la
+lib/libluabpack.la
+lib/liblualongnumber.la
+lib/libluasocket.la

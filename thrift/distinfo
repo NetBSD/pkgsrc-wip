@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (thrift-0.9.3.tar.gz) = f1421a0d1e0e107aa549fa83177b965e4d61199d
+RMD160 (thrift-0.9.3.tar.gz) = 238dfe898808bf2a1c509a565f6678858237d94c
+SHA512 (thrift-0.9.3.tar.gz) = 743131b276155c2d178404e190bdebcc12cedf42956f3d83177ebb4e4b85768b111a999dcf054594e92c120431323769a9641fc2ff2efade983191afd0786c2c
+Size (thrift-0.9.3.tar.gz) = 2161165 bytes
+SHA1 (patch-aclocal_ax__dmd.m4) = f9e0c8d11ae4bf2052adfccc93b0601daf9724e4
+SHA1 (patch-configure.ac) = 6ec3cf58be687868c42e043c675726332b99124c
