@@ -20,6 +20,7 @@ CONFLICTS+=	totem<2.22.0
 PKGCONFIG_OVERRIDE+=	totem-plparser-mini.pc.in
 PKGCONFIG_OVERRIDE+=	totem-plparser.pc.in
 
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"

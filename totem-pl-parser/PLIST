@@ -4,10 +4,12 @@ include/totem-pl-parser/1/plparser/totem-pl-parser-features.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-mini.h
 include/totem-pl-parser/1/plparser/totem-pl-parser.h
 include/totem-pl-parser/1/plparser/totem-pl-playlist.h
+lib/girepository-1.0/TotemPlParser-1.0.typelib
 lib/libtotem-plparser-mini.la
 lib/libtotem-plparser.la
 lib/pkgconfig/totem-plparser-mini.pc
 lib/pkgconfig/totem-plparser.pc
+share/gir-1.0/TotemPlParser-1.0.gir
 share/gtk-doc/html/totem-pl-parser/TotemPlParser.html
 share/gtk-doc/html/totem-pl-parser/TotemPlPlaylist.html
 share/gtk-doc/html/totem-pl-parser/annotation-glossary.html
