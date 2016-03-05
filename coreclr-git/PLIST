@@ -40,6 +40,7 @@ CoreCLR/inc/corerror.h
 CoreCLR/inc/corhdr.h
 CoreCLR/inc/corinfo.h
 CoreCLR/inc/corjit.h
+CoreCLR/inc/corjithost.h
 CoreCLR/inc/corprof.h
 CoreCLR/inc/gcinfoencoder.h
 CoreCLR/inc/gcinfotypes.h
