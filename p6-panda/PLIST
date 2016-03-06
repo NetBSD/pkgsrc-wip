@@ -1,1 +1,19 @@
 @comment $NetBSD$
+bin/panda
+bin/panda-build
+bin/panda-cpanize
+bin/panda-fetch
+bin/panda-install
+bin/panda-test
+lib/Panda.pm
+lib/Panda/App.pm
+lib/Panda/Builder.pm
+lib/Panda/Bundler.pm
+lib/Panda/Common.pm
+lib/Panda/Ecosystem.pm
+lib/Panda/Fetcher.pm
+lib/Panda/Installer.pm
+lib/Panda/Project.pm
+lib/Panda/Reporter.pm
+lib/Panda/Tester.pm
+panda/state

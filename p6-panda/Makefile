@@ -14,7 +14,10 @@ LICENSE=	artistic
 WRKSRC=		${WRKDIR}/panda-2015.12
 USE_LANGUAGES=	# none
 
-do-build:
-	cd ${WRKSRC} && perl6 ./bootstrap.pl
+NO_BUILD=	yes
+
+do-install:
+	cd ${WRKSRC} && perl6 ./bootstrap.pl --prefix=${DESTDIR}${PREFIX}
+	rm -rf ${DESTDIR}${PREFIX}/lib/.precomp ${DESTDIR}${PREFIX}/bin/*.bat
 
 .include "../../mk/bsd.pkg.mk"
