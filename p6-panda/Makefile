@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	panda
-DISTNAME=	panda-2015.10
+DISTNAME=	panda-2015.12
 PKGNAME=	p6-${DISTNAME}
 CATEGORIES=	wip perl6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tadzik/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/tadzik/panda/
 COMMENT=	Perl 6 package manager
 LICENSE=	artistic
 
-WRKSRC=		${WRKDIR}/panda-2015.10
+WRKSRC=		${WRKDIR}/panda-2015.12
 USE_LANGUAGES=	# none
 
 do-build:
