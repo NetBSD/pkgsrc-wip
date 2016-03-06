@@ -671,6 +671,7 @@ SUBDIR+=	evolution-rss
 SUBDIR+=	evolution-tray
 SUBDIR+=	ewl
 SUBDIR+=	exact-image
+SUBDIR+=	execline
 SUBDIR+=	exhume
 SUBDIR+=	expiretable
 SUBDIR+=	extra-cmake-modules
