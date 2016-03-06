@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/09/13 11:16:18 sno Exp $
 
-SHA1 (nqp-2016.01.tar.gz) = b39e6c3ad50cd8b7954ca40ec22afbc523fda012
-RMD160 (nqp-2016.01.tar.gz) = 2ab91c295d75bba15d0da52fd4203d223338f3f9
-SHA512 (nqp-2016.01.tar.gz) = ea93168c27f861aa100046fe32e2bdaeb1b08089f60ae13a72eeeb72c1f45ced9cf6192a41b1ef3fbecdd908dc5bb4cfc48e48829d9b75414ff3bfaacf558eec
-Size (nqp-2016.01.tar.gz) = 5124294 bytes
+SHA1 (nqp-2016.02.tar.gz) = eeb91acfd03227fc7751fc207716b60c53a291a8
+RMD160 (nqp-2016.02.tar.gz) = 780d3ca7aa9f60c97bd5153d08d65091081db8d4
+SHA512 (nqp-2016.02.tar.gz) = 8dba84178b6e2442082f94c76bd6d62d5b16902a8205d8bcbde3bf1bc11409e4ebb5fd7f49107daae82b1993eb9a30535db0648e23088bffc619530c0d1ceb72
+Size (nqp-2016.02.tar.gz) = 5127327 bytes
