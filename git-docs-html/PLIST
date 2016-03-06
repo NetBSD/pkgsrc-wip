@@ -264,6 +264,12 @@ share/doc/git/RelNotes/2.5.3.txt
 share/doc/git/RelNotes/2.5.4.txt
 share/doc/git/RelNotes/2.6.0.txt
 share/doc/git/RelNotes/2.6.1.txt
+share/doc/git/RelNotes/2.6.2.txt
+share/doc/git/RelNotes/2.6.3.txt
+share/doc/git/RelNotes/2.6.4.txt
+share/doc/git/RelNotes/2.6.5.txt
+share/doc/git/RelNotes/2.7.0.txt
+share/doc/git/RelNotes/2.7.1.txt
 share/doc/git/RelNotes/${PKGVERSION}.txt
 share/doc/git/blame-options.txt
 share/doc/git/cmds-ancillaryinterrogators.txt
@@ -758,6 +764,7 @@ share/doc/git/technical/protocol-common.html
 share/doc/git/technical/protocol-common.txt
 share/doc/git/technical/racy-git.html
 share/doc/git/technical/racy-git.txt
+share/doc/git/technical/repository-version.txt
 share/doc/git/technical/send-pack-pipeline.html
 share/doc/git/technical/send-pack-pipeline.txt
 share/doc/git/technical/shallow.html
