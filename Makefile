@@ -3714,6 +3714,7 @@ SUBDIR+=	rust
 SUBDIR+=	rygel
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
+SUBDIR+=	s6
 SUBDIR+=	sabnzbdplus
 SUBDIR+=	safekeep
 SUBDIR+=	sailor
