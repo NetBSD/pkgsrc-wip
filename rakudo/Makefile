@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/10/10 01:57:53 ryoon Exp $
 
-DISTNAME=	rakudo-2016.01
+DISTNAME=	rakudo-2016.02
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/rakudo/
 
