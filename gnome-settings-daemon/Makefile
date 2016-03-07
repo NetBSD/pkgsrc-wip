@@ -16,6 +16,10 @@ USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 CONFLICTS+=	gnome-control-center<2.22.0
 
+CONFIGURE_ARGS= 	--disable-gudev
+CONFIGURE_ARGS+=	--disable-rfkill
+CONFIGURE_ARGS+=	--disable-network-manager
+
 GCONF_SCHEMAS+=	gnome-settings-daemon.schemas
 GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF_SCHEMAS+=	desktop_gnome_keybindings.schemas
@@ -30,6 +34,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-settings-daemon
 PKG_SUPPORTED_OPTIONS=	pulseaudio
 .include "../../mk/bsd.options.mk"
 PLIST_VARS+=		pulseaudio
+
+#DEPENDS+=	gettext-[0-9]*:../../devel/gettext
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
@@ -50,6 +56,13 @@ BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../sysutils/upower/buildlink3.mk"
+.include "../../wip/upower/buildlink3.mk"
+.include "../../wip/colord/buildlink3.mk"
+.include "../../wip/geoclue/buildlink3.mk"
+.include "../../wip/geocode-glib/buildlink3.mk"
+.include "../../wip/libgweather/buildlink3.mk"
+.include "../../wip/polkit/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
