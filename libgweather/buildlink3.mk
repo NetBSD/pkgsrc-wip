@@ -8,6 +8,8 @@ LIBGWEATHER_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=3.16.1
 BUILDLINK_PKGSRCDIR.libgweather?=	../../wip/libgweather
 
+.include "../../net/libsoup/buildlink3.mk"
+
 .endif	# LIBGWEATHER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libgweather
