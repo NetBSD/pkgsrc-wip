@@ -20,6 +20,7 @@ PKGCONFIG_OVERRIDE=	platform/autoconf/gle-graphics.pc.in
 
 # GLUT is used only by the examples, which aren't built or installed.
 #.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"

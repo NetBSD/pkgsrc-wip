@@ -4,3 +4,4 @@ SHA1 (gle-graphics-4.2.5-src.tar.gz) = b5fda634d94d90c95ba14afcda562ec4cd9c1d52
 RMD160 (gle-graphics-4.2.5-src.tar.gz) = 518563269d987c78d60fce94b381536dad27dc52
 SHA512 (gle-graphics-4.2.5-src.tar.gz) = 0bb7e7ad7432c412b4d676f3ea21d15afa4aaf0075afd9ce0942fced8e3c48f122563e84f71d0093e590a635d42c444141982a3707c0428b1edd4ab04f4bbde7
 Size (gle-graphics-4.2.5-src.tar.gz) = 2330236 bytes
+SHA1 (patch-src_gle_tokens_StringKeyHash.h) = a58899a96f6c127793c902f7b39b6432daa483e3
