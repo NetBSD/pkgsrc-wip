@@ -27,6 +27,10 @@ CONFIGURE_ARGS+=	--disable-bash-completion
 
 CONFIGURE_ARGS+=	--disable-systemd-login
 
+PKGCONFIG_OVERRIDE+=	lib/colorhug/colorhug.pc.in
+PKGCONFIG_OVERRIDE+=	lib/colord/colord.pc.in
+
+
 # XXX conf file?
 #CONF_FILES+=		data/org.freedesktop.ColorManager.conf
 
