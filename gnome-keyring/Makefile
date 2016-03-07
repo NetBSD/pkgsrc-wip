@@ -43,5 +43,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
