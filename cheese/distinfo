@@ -4,4 +4,3 @@ SHA1 (cheese-3.18.1.tar.xz) = a77214dbabb90bbbc754f1c4792468fc92f97f13
 RMD160 (cheese-3.18.1.tar.xz) = 5bfffc2726633facea7c14f11f01dd6ff7e1954a
 SHA512 (cheese-3.18.1.tar.xz) = 37e48f393521b242750d0cbda31537564cd63d2ceb4b3ea6a066c758c8bc9ac632dcbe4ee0ec0b36405c54058ea98ff5744ed087bf928445ffa58fdd2b04d2f7
 Size (cheese-3.18.1.tar.xz) = 1829408 bytes
-SHA1 (patch-configure.ac) = c69f6dd436caf6840e0f4fd9b82074a5c060e873

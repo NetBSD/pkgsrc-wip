@@ -27,10 +27,10 @@ USE_TOOLS+=		autoconf automake autoreconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-GCONF_SCHEMAS+=	cheese.schemas
+GLIB_SCHEMAS+=		org.gnome.cheese.gschema.xml
 
-pre-configure:
-	cd ${WRKSRC} && autoconf 
+#pre-configure:
+#	cd ${WRKSRC} && autoreconf -fiv
 
 .include "options.mk"
 
@@ -62,7 +62,7 @@ BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.0
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.70
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
