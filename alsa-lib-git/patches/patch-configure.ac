@@ -2,19 +2,6 @@ $NetBSD$
 
 --- configure.ac.orig	2016-02-24 08:33:29.000000000 +0000
 +++ configure.ac
-@@ -86,6 +86,12 @@ AC_SUBST(ALSA_CONFIG_DIR)
- dnl ALSA plugin directory
- test "x$exec_prefix" = xNONE && exec_prefix=$prefix
- 
-+case $host_os in
-+  netbsd*|freebsd*|dragonfly*)
-+    DEFS="$DEFS -Dbswap_32=bswap32 -Dbswap_16=bswap16 -Dbswap_64=bswap64"
-+    ;;
-+esac
-+
- AC_ARG_WITH(plugindir,
-     AS_HELP_STRING([--with-plugindir=dir],
- 	[path where ALSA plugin files are stored]),
 @@ -665,6 +671,15 @@ AC_OUTPUT(Makefile doc/Makefile doc/pict
  	  test/Makefile test/lsb/Makefile \
  	  utils/Makefile utils/alsa-lib.spec utils/alsa.pc)
