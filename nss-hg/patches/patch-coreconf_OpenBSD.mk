@@ -2,7 +2,7 @@ $NetBSD: patch-coreconf_OpenBSD.mk,v 1.2 2014/10/05 20:12:38 thomasklausner Exp 
 
 PLIST unification (see nspr)?
 
---- coreconf/OpenBSD.mk.orig	2014-09-28 13:54:02.000000000 +0000
+--- coreconf/OpenBSD.mk.orig	2016-03-07 12:57:50.000000000 +0000
 +++ coreconf/OpenBSD.mk
 @@ -24,7 +24,7 @@ OS_LIBS			+= -pthread
  DSO_LDOPTS		+= -pthread
@@ -11,5 +11,5 @@ PLIST unification (see nspr)?
 -DLL_SUFFIX		= so.1.0
 +DLL_SUFFIX		= so
  
- OS_CFLAGS		= $(DSO_CFLAGS) $(OS_REL_CFLAGS) -ansi -Wall -Wno-switch -pipe -DOPENBSD
+ OS_CFLAGS		= $(DSO_CFLAGS) $(OS_REL_CFLAGS) -Wall -Wno-switch -pipe -DOPENBSD
  
