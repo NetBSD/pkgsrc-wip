@@ -2,8 +2,8 @@ $OpenBSD: patch-daemon_gdm-session-record_c,v 1.7 2015/10/18 13:25:54 ajacoutot 
 
 https://bugzilla.gnome.org/show_bug.cgi?id=722482
 
---- daemon/gdm-session-record.c.orig	Sun Oct 18 14:14:52 2015
-+++ daemon/gdm-session-record.c	Sun Oct 18 14:18:27 2015
+--- daemon/gdm-session-record.c.orig	2015-11-17 17:16:04.000000000 +0000
++++ daemon/gdm-session-record.c
 @@ -33,6 +33,16 @@
  #include <utmp.h>
  #endif
@@ -101,7 +101,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=722482
 +                    bzero (ut.ut_name, UT_NAMESIZE);
 +                    bzero (ut.ut_host, UT_HOSTSIZE);
 +                    gettimeofday (&tv, NULL);
-+                    ut.ut_time = tv.tv_sec;
++                    ut.ut_tv = tv;
 +                    (void) lseek (fd, -(off_t) sizeof (struct utmp), SEEK_CUR);
 +                    (void) write (fd, &ut, sizeof (struct utmp));
 +                    rval = 0;
@@ -116,7 +116,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=722482
  void
  gdm_session_record_login (GPid                  session_pid,
                            const char           *user_name,
-@@ -227,8 +318,9 @@ gdm_session_record_login (GPid                  sessio
+@@ -227,8 +318,9 @@ gdm_session_record_login (GPid          
  #if defined(HAVE_GETUTXENT)
          g_debug ("Adding or updating utmp record for login");
          pututxline (&session_record);
@@ -128,7 +128,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=722482
  #endif
  }
  
-@@ -270,8 +362,8 @@ gdm_session_record_logout (GPid                  sessi
+@@ -270,8 +362,8 @@ gdm_session_record_logout (GPid         
  #if defined(HAVE_GETUTXENT)
          g_debug ("Adding or updating utmp record for logout");
          pututxline (&session_record);

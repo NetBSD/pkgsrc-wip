@@ -22,19 +22,19 @@ USE_LANGUAGES=		c c++
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-dmconfdir=${PKG_SYSCONFDIR:Q}/dm
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-dmconfdir=${PKG_SYSCONFDIR}/dm
 CONFIGURE_ARGS+=	--with-sysconfsubdir=
 CONFIGURE_ARGS+=	--with-prefetch=yes
 CONFIGURE_ARGS+=	--without-plymouth
 CONFIGURE_ARGS+=	--without-systemd
 CONFIGURE_ARGS+=	--disable-systemd-journal
-CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
-CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
+CONFIGURE_ENV+=		PREFIX=${PREFIX}
+CONFIGURE_ENV+=		X11BASE=${X11BASE}
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR:Q}/custom.conf
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
+INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR}/custom.conf
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/Init
@@ -48,18 +48,8 @@ OWN_DIRS+=		${VARBASE}/log/gdm
 
 PKG_SYSCONFSUBDIR=	gdm
 EGDIR=			${PREFIX}/share/examples/gdm
-CONF_FILES=
-.for f in custom.conf locale.alias \
-	modules/AccessDwellMouseEvents modules/AccessKeyMouseEvents \
-	modules/factory-AccessDwellMouseEvents \
-	modules/factory-AccessKeyMouseEvents
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
-.endfor
-.for f in Init/Default PostLogin/Default.sample PostSession/Default \
-	PreSession/Default XKeepsCrashing Xsession
-CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
-.endfor
+CONF_FILES=		${EGDIR}/custom.conf ${PKG_SYSCONFDIR}/data/custom.conf
+
 RCD_SCRIPTS=		gdm
 
 .include "../../mk/bsd.prefs.mk"
@@ -124,20 +114,17 @@ PLIST.dmx=		yes
 .endif
 PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
 
- PLIST_VARS+=		gdmopen
+PLIST_VARS+=		gdmopen
 .if exists(/usr/include/linux/vt.h) || ${OPSYS} == "SunOS"
 PLIST.gdmopen=		yes
 .endif
 PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 
 pre-configure:
-	sed -i -e 's,root:root,root:wheel,g' \
-		-e 's,root:gdm,root:676,g' \
-		-e 's,gdm:gdm,676:676,g' ${WRKSRC}/data/Makefile.am
-	sed -i -e 's,/usr/local,${LOCALBASE},g' \
-		-e 's,/bin/bash,/bin/ksh,g' \
-		${WRKSRC}/daemon/gdm-session-worker.c
-	cd ${WRKSRC} && \
+	sed -i -e 's,/usr/local,${PREFIX},g' \
+		-e 's,/bin/bash,/bin/sh,g' \
+		${WRKSRC}/daemon/gdm-session-worker.c &&
+	cd ${WRKSRC}; \
 		./autogen.sh; \
 		autoreconf -fiv; \
 		intltoolize
