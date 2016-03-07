@@ -17,6 +17,8 @@ pre-configure:
 	${RUN} cd ${WRKSRC} && \
 	${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh NOCONFIGURE=1
 
+DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+
 .include "../../lang/python/application.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
