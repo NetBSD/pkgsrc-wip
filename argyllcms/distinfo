@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (Argyll_V1.8.3_src.zip) = e6a524a2add640f7dc2cf4dc0501fc9ba55d61a3
+RMD160 (Argyll_V1.8.3_src.zip) = 10303ab9b53da9b9d301f98c584166101fdcfa76
+SHA512 (Argyll_V1.8.3_src.zip) = 19bdba20313ec62b5b3c461d29a4f1eefbeb799ded06a1e0b568013b606547bf97b23c1b69f27d415e0052a7a2b747273131624e725ee21781b261568822b3a7
+Size (Argyll_V1.8.3_src.zip) = 13933565 bytes
+SHA1 (patch-Jamtop) = 5c4c628c7e5e89dabe5a729f7abeac6f3d35b52e
+SHA1 (patch-spectro_usbio.c) = 3902ed4198f078f2d193b3be52104398cc373013
+SHA1 (patch-tiff_configure) = a91cac5acbe83951fc7280d2752df4a42fdab4c9

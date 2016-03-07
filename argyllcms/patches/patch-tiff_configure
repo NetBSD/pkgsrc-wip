@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- tiff/configure.orig	2015-10-26 04:18:09.000000000 +0000
++++ tiff/configure
+@@ -18766,7 +18766,7 @@ if test "${with_jpeg12_lib+set}" = set; 
+ fi
+ 
+ 
+-if test "x$enable_jpeg12" == "xyes" ; then
++if test "x$enable_jpeg12" = "xyes" ; then
+ 
+   if test "x$with_jpeg12_lib" != "x" ; then
+     LIBS="$with_jpeg12_lib $LIBS"

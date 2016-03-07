@@ -1,0 +1,106 @@
+$NetBSD$
+
+--- Jamtop.orig	2015-10-26 04:17:32.000000000 +0000
++++ Jamtop
+@@ -72,39 +72,39 @@ if $(UNIX) {
+ 		LINKFLAGS += -framework AppKit ;
+ 
+ 	} else {
+-		if [ GLOB /usr/X11R6/include/X11 : X.h ] {
+-			LibWinH = /usr/X11R6/include ;
+-		} else if [ GLOB /usr/include/X11 : X.h ] {
+-			LibWinH = /usr/include ;
+-		} else if [ GLOB /usr/local/include/X11 : X.h ] {
+-			LibWinH = /usr/local/include ;
++		if [ GLOB $(PREFIX)/X11R6/include/X11 : X.h ] {
++			LibWinH = $(PREFIX)/X11R6/include ;
++		} else if [ GLOB $(PREFIX)/include/X11 : X.h ] {
++			LibWinH = $(PREFIX)/include ;
++		} else if [ GLOB $(PREFIX)/local/include/X11 : X.h ] {
++			LibWinH = $(PREFIX)/local/include ;
+ 		} else {
+ 			EXIT Unable to locate the X11 include files ;
+ 		}
+ 
+ 		if $(HOST64) {
+-			if [ GLOB /usr/X11R6/lib : libX11.so libX11.a ] {
+-				LibWinD = /usr/X11R6/lib ;
+-			} else if [ GLOB /usr/lib/x86_64-linux-gnu : libX11.so libX11.a ] {
+-				LibWinD = /usr/lib/x86_64-linux-gnu ;
+-			} else if [ GLOB /usr/lib64 : libX11.so libX11.a ] {
+-				LibWinD = /usr/lib64 ;
+-			} else if [ GLOB /usr/lib : libX11.so libX11.a ] {
+-				LibWinD = /usr/lib ;
+-			} else if [ GLOB /usr/local/lib : libX11.so libX11.a ] {
+-				LibWinD = /usr/local/lib ;
++			if [ GLOB $(PREFIX)/X11R6/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/X11R6/lib ;
++			} else if [ GLOB $(PREFIX)/lib/x86_64-linux-gnu : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/lib/x86_64-linux-gnu ;
++			} else if [ GLOB $(PREFIX)/lib64 : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/lib64 ;
++			} else if [ GLOB $(PREFIX)/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/lib ;
++			} else if [ GLOB $(PREFIX)/local/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/local/lib ;
+ 			} else {
+ 				ECHO Unable to locate the 64 bit X11 library files ;
+ 			}
+ 		} else {
+-			if [ GLOB /usr/X11R6/lib : libX11.so libX11.a ] {
+-				LibWinD = /usr/X11R6/lib ;
+-			} else if [ GLOB /usr/lib/i386-linux-gnu : libX11.so libX11.a ] {
+-				LibWinD = /usr/lib/i386-linux-gnu ;
+-			} else if [ GLOB /usr/lib : libX11.so libX11.a ] {
+-				LibWinD = /usr/lib ;
+-			} else if [ GLOB /usr/local/lib : libX11.so libX11.a ] {
+-				LibWinD = /usr/local/lib ;
++			if [ GLOB $(PREFIX)/X11R6/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/X11R6/lib ;
++			} else if [ GLOB $(PREFIX)/lib/i386-linux-gnu : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/lib/i386-linux-gnu ;
++			} else if [ GLOB $(PREFIX)/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/lib ;
++			} else if [ GLOB $(PREFIX)/local/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/local/lib ;
+ 			} else {
+ 				ECHO Unable to locate the 32 bit X11 library files ;
+ 			}
+@@ -112,7 +112,7 @@ if $(UNIX) {
+ 		if $(OS) = FREEBSD {
+ 			LINKFLAGS += -L$(LibWinD) -g -lrt -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss  -lusb ;
+ 		} else if $(OS) = OPENBSD {
+-			LINKFLAGS += -L$(LibWinD) -g -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss -L/usr/local/lib ;
++			LINKFLAGS += -L$(LibWinD) -g -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss -L$(PREFIX)/local/lib ;
+ 		} else {
+ 			LINKFLAGS += -L$(LibWinD) -ldl -lrt -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss ;
+ 		}
+@@ -139,17 +139,17 @@ rule CheckForLibrary {
+ 	}
+ 
+ 	if ! $(BUILTIN_$(UCASE)) && $(UNIX) {
+-		if  [ GLOB /usr/include$(subd) : $(lcase).h $(lcase)lib.h ]
+-	     || [ GLOB /usr/local/include$(subd) : $(lcase).h $(lcase)lib.h ]
+-		 || [ GLOB /usr/include/x86_64-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ]
+-	     || [ GLOB /usr/include/i386-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ] {
+-			if  [ GLOB /usr/lib : lib$(lcase).so ] || [ GLOB /usr/lib : lib$(lcase).a ]
+-			 || [ GLOB /usr/local/lib : lib$(lcase).so ] || [ GLOB /usr/local/lib : lib$(lcase).a ]
+-			 || [ GLOB /usr/lib64 : lib$(lcase).so ] || [ GLOB /usr/lib64 : lib$(lcase).a ]
+-			 || [ GLOB /usr/lib/x86_64-linux-gnu : lib$(lcase).so ]
+-			 || [ GLOB /usr/lib/x86_64-linux-gnu : lib$(lcase).a ]
+-	         || [ GLOB /usr/lib/i386-linux-gnu : lib$(lcase).so ]
+-	         || [ GLOB /usr/lib/i386-linux-gnu : lib$(lcase).a ] {
++		if  [ GLOB $(PREFIX)/include$(subd) : $(lcase).h $(lcase)lib.h ]
++	     || [ GLOB $(PREFIX)/local/include$(subd) : $(lcase).h $(lcase)lib.h ]
++		 || [ GLOB $(PREFIX)/include/x86_64-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ]
++	     || [ GLOB $(PREFIX)/include/i386-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ] {
++			if  [ GLOB $(PREFIX)/lib : lib$(lcase).so ] || [ GLOB /usr/lib : lib$(lcase).a ]
++			 || [ GLOB $(PREFIX)/local/lib : lib$(lcase).so ] || [ GLOB /usr/local/lib : lib$(lcase).a ]
++			 || [ GLOB $(PREFIX)/lib64 : lib$(lcase).so ] || [ GLOB /usr/lib64 : lib$(lcase).a ]
++			 || [ GLOB $(PREFIX)/lib/x86_64-linux-gnu : lib$(lcase).so ]
++			 || [ GLOB $(PREFIX)/lib/x86_64-linux-gnu : lib$(lcase).a ]
++	         || [ GLOB $(PREFIX)/lib/i386-linux-gnu : lib$(lcase).so ]
++	         || [ GLOB $(PREFIX)/lib/i386-linux-gnu : lib$(lcase).a ] {
+ 				echo "Using system $(UCASE) library" ;
+ 				$(UCASE)LIB = ;
+ 				$(UCASE)INC = ;
