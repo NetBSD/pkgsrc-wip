@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.54 2015/04/25 14:24:52 tnn Exp $
-#
 
 DISTNAME=	gnome-settings-daemon-3.16.4
 CATEGORIES=	sysutils
@@ -9,6 +8,9 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME settings daemon
+
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -20,6 +22,8 @@ CONFIGURE_ARGS= 	--disable-gudev
 CONFIGURE_ARGS+=	--disable-rfkill
 CONFIGURE_ARGS+=	--disable-network-manager
 
+PYTHON_VERSIONS_ACCEPTED=	27
+
 GCONF_SCHEMAS+=	gnome-settings-daemon.schemas
 GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF_SCHEMAS+=	desktop_gnome_keybindings.schemas
@@ -29,13 +33,6 @@ GCONF_SCHEMAS+=	apps_gnome_settings_daemon_housekeeping.schemas
 GCONF_SCHEMAS+=	desktop_gnome_peripherals_touchpad.schemas
 GCONF_SCHEMAS+=	desktop_gnome_peripherals_smartcard.schemas
 PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-settings-daemon
-PKG_SUPPORTED_OPTIONS=	pulseaudio
-.include "../../mk/bsd.options.mk"
-PLIST_VARS+=		pulseaudio
-
-#DEPENDS+=	gettext-[0-9]*:../../devel/gettext
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
@@ -52,7 +49,8 @@ BUILDLINK_API_DEPENDS.libgnomekbd+=	libgnomekbd>=2.31.2
 .include "../../x11/libgnomekbd/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
 .include "../../x11/libxklavier/buildlink3.mk"
-.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.15.4
+.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
