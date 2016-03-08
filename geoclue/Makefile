@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.24 2014/05/05 00:47:53 ryoon Exp $
-#
 
 DISTNAME=	geoclue-2.2.0
 CATEGORIES=	geography
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/GeoClue
 COMMENT=	Geoinformation service API and base providers
 #LICENSE=	# TODO: (see mk/license.mk)
+
+BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 USE_TOOLS=	intltool
 
