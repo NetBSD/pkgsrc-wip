@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2015/04/10 11:43:49 krytarowski Exp $
-#
 
 DISTNAME=	mozjs17.0.0
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey17-/}
@@ -35,6 +34,7 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-17.0.a
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-17.0.pc
 
+PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/tool.mk"
 .include "../../devel/libffi/buildlink3.mk"
