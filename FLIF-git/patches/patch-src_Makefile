@@ -1,0 +1,61 @@
+$NetBSD$
+
+Make use of DESTDIR and MANDIR.
+
+--- src/Makefile.orig	2016-03-08 21:05:02.000000000 +0000
++++ src/Makefile
+@@ -1,4 +1,5 @@
+-PREFIX := $(DESTDIR)/usr
++PREFIX ?= $(DESTDIR)/usr
++MANDIR ?= $(PREFIX)/share/man
+ CXXFLAGS := $(shell pkg-config --cflags zlib libpng)
+ LDFLAGS := $(shell pkg-config --libs libpng)
+ 
+@@ -63,30 +64,30 @@ viewflif: libflif_dec.so viewflif.c
+ 
+ 
+ install: all
+-	install -d $(PREFIX)/bin $(PREFIX)/lib $(PREFIX)/share/man/man1
+-	install -s -m 755 flif viewflif $(PREFIX)/bin
+-	install -s -m 755 libflif_dec.so.* $(PREFIX)/lib
+-	install -s -m 755 libflif.so.* $(PREFIX)/lib
+-	install -m 644 ../doc/flif.1 $(PREFIX)/share/man/man1
+-	install -m 755 ../tools/gif2flif $(PREFIX)/bin
+-	install -m 755 ../tools/apng2flif $(PREFIX)/bin
++	install -d $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(PREFIX)/lib $(DESTDIR)$(MANDIR)/man1
++	install -s -m 755 flif viewflif $(DESTDIR)$(PREFIX)/bin
++	install -s -m 755 libflif_dec.so.* $(DESTDIR)$(PREFIX)/lib
++	install -s -m 755 libflif.so.* $(DESTDIR)$(PREFIX)/lib
++	install -m 644 ../doc/flif.1 $(DESTDIR)$(MANDIR)/man1
++	install -m 755 ../tools/gif2flif $(DESTDIR)$(PREFIX)/bin
++	install -m 755 ../tools/apng2flif $(DESTDIR)$(PREFIX)/bin
+ 
+ install-dev:
+-	install -m 644 library/*.h $(PREFIX)/include
++	install -m 644 library/*.h $(DESTDIR)$(PREFIX)/include
+ 
+ magic:
+ 	if ! grep -q FLIF /etc/magic; then cat ../doc/flif.magic >> /etc/magic; fi
+ 
+ uninstall:
+-	rm -f $(PREFIX)/bin/flif
+-	rm -f $(PREFIX)/bin/viewflif
+-	rm -f $(PREFIX)/bin/gif2flif
+-	rm -f $(PREFIX)/bin/apng2flif
+-	rm -f $(PREFIX)/lib/libflif.so
+-	rm -f $(PREFIX)/lib/libflif_dec.so
+-	rm -f $(PREFIX)/lib/libflif.so.0
+-	rm -f $(PREFIX)/lib/libflif_dec.so.0
+-	rm -f $(PREFIX)/share/man/man1/flif.1
++	rm -f $(DESTDIR)$(PREFIX)/bin/flif
++	rm -f $(DESTDIR)$(PREFIX)/bin/viewflif
++	rm -f $(DESTDIR)$(PREFIX)/bin/gif2flif
++	rm -f $(DESTDIR)$(PREFIX)/bin/apng2flif
++	rm -f $(DESTDIR)$(PREFIX)/lib/libflif.so
++	rm -f $(DESTDIR)$(PREFIX)/lib/libflif_dec.so
++	rm -f $(DESTDIR)$(PREFIX)/lib/libflif.so.0
++	rm -f $(DESTDIR)$(PREFIX)/lib/libflif_dec.so.0
++	rm -f $(DESTDIR)$(MANDIR)/man1/flif.1
+ 
+ clean:
+ 	rm -f flif dflif libflif*.so* viewflif flif.asan flif.dbg flif.prof flif.stats test-interface

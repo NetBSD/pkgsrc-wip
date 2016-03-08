@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (FLIF-0.1alpha.tar.gz) = 55ddb13397a2fa6ff6b786a65a40237d15559d56
+RMD160 (FLIF-0.1alpha.tar.gz) = 0872bca3ea9d33da51b9fb935ece37e6124083f5
+Size (FLIF-0.1alpha.tar.gz) = 1543110 bytes
+SHA1 (patch-src_Makefile) = b9763ae6d2e36510d7112a5378f0e47b71029efe

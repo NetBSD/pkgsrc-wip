@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/apng2flif
+bin/flif
+bin/gif2flif
+bin/viewflif
+lib/libflif.so.0
+lib/libflif_dec.so.0
+man/man1/flif.1

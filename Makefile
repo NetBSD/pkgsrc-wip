@@ -8,6 +8,7 @@ SUBDIR+=	Bear
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
 SUBDIR+=	FLIF
+SUBDIR+=	FLIF-git
 SUBDIR+=	FontManager
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
