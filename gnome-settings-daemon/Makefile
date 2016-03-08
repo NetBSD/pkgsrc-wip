@@ -56,7 +56,7 @@ BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../wip/upower/buildlink3.mk"
+.include "../../sysutils/upower/buildlink3.mk"
 .include "../../wip/colord/buildlink3.mk"
 .include "../../wip/geoclue/buildlink3.mk"
 .include "../../wip/geocode-glib/buildlink3.mk"
