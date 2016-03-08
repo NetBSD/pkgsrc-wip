@@ -1,10 +1,10 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-DISTNAME=	lldb-3.8.0rc1.src
+DISTNAME=	lldb-3.8.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc1/
-#MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+#MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
