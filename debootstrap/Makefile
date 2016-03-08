@@ -1,12 +1,13 @@
 # $NetBSD: Makefile,v 1.5 2015/08/06 07:56:45 thomasklausner Exp $
 
 DISTNAME=	debootstrap_1.0.79
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/debootstrap/}
 DISTFILES=	${DEFAULT_DISTFILES} ${DEBIAN_KEYRING_DEB} ${UBUNTU_KEYRING_DEB}
 DEBIAN_KEYRING_DEB=	debian-archive-keyring_2014.3_all.deb
-UBUNTU_KEYRING_DEB=	ubuntu-archive-keyring_2012.05.19-2_all.deb
+UBUNTU_KEYRING_DEB=	ubuntu-archive-keyring_2012.05.19-5_all.deb
 SITES.${DEBIAN_KEYRING_DEB}=	${MASTER_SITE_DEBIAN:=pool/main/d/debian-archive-keyring/}
 SITES.${UBUNTU_KEYRING_DEB}=	${MASTER_SITE_DEBIAN:=pool/main/u/ubuntu-keyring/}
 
