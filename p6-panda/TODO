@@ -1,1 +1,2 @@
-This package does not build nor install correctly yet, so the PLIST is missing.
+- check that the resulting package actually works
+- try packaging Perl 6 modules using Panda.
