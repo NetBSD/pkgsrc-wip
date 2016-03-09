@@ -1,5 +1,6 @@
 $NetBSD$
 
+SHA1 (patch-__autosetup) = 243e245f4645f3df03eb33374253642f0a3b5bd4
 SHA1 (patch-client_scripts_boinc-client.in) = f8adeab7c51783106e8784e4712b20aa5d1fcfae
 SHA1 (patch-configure.ac) = 9173c44906200c0e0a48b7193f0acb5640ca998c
 SHA1 (patch-lib_diagnostics.cpp) = 512ec177f6dce8785ba9c4061ac74a6edd1fa3d7
