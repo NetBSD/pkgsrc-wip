@@ -31,24 +31,13 @@ REPLACE_PYTHON+=	examples/data/scripts/per-site-settings.py
 REPLACE_PYTHON+=	examples/data/scripts/scheme.py
 .include "../../lang/python/application.mk"
 
-post-install:
-	${RM} ${DESTDIR}/${PREFIX}/share/uzbl/examples/config/config.orig
-
 # for uzbl-browser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # for uzbl-tabbed with GTK+ 2
 #DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
-## TODO: make an option for webkit version
-##.include "../../www/webkit-gtk/buildlink3.mk"
-## or
-# TODO: make an option for GTK version
-#.include "../../www/webkit24-gtk/buildlink3.mk"
-# or
-.include "../../www/webkit24-gtk3/buildlink3.mk"
-
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mk/git-package.mk"

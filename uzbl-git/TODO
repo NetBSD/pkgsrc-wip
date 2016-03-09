@@ -1,5 +1,4 @@
-Add convert to WebKit2 (it is going to be the only supported version after 0.9)
-Add option for GTK+ version
 Add options or separate packages for uzbl-browser and uzbl-tabbed
-Resolve Python version conflict for uzbl-tabbed with GTK+ 2
-Add missing dependencies for uzbl-tabbed with GTK+ 3
+Add option for GTK+ version for uzbl-tabbed:
+ Resolve Python version conflict for uzbl-tabbed with GTK+ 2
+ Add missing dependencies for uzbl-tabbed with GTK+ 3
