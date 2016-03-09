@@ -126,7 +126,6 @@ DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git
 .include "../../wip/clang-git/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"
