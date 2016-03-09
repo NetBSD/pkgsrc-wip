@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	utils/alsa.pc.in
 CONFIGURE_ARGS+=	--disable-python
 
 LIBS.SunOS+=		-lsocket -lnsl
-CPPFLAGS.SunOS+=	-std=c99 -D_POSIX_C_SOURCE=200112L
+CPPFLAGS.SunOS+=	-std=gnu11 -D_POSIX_C_SOURCE=200112L
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -DBSD_COMP -DMAP_FILE=0
 
 .include "../../mk/bsd.prefs.mk"
