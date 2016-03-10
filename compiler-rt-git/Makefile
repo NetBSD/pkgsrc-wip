@@ -14,7 +14,7 @@ LICENSE=	modified-bsd OR mit
 WRKSRC=			${WRKDIR}/build
 
 USE_LANGUAGES=		c c++
-USE_CMAKE+=		yes
+USE_CMAKE=		yes
 GCC_REQD+=		4.8
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
