@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=FLIF-hub/}
 
 GIT_REPOSITORIES=	flif
 GIT_REPO.flif=		https://github.com/FLIF-hub/flif.git
-WRKSRC=			${WRKDIR}/${PKGBASE}
+WRKSRC=			${WRKDIR}/flif
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flif.info/
