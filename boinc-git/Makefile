@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	autoconf	# for autoreconf
 USE_TOOLS+=	automake pkg-config
+USE_TOOLS+=	gmake	# seems to be required only by ${WRKSRC}/_autosetup
 
 USE_LANGUAGES=	c c++ fortran
 
