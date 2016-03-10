@@ -1057,7 +1057,6 @@ SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
 SUBDIR+=	hdparm
 SUBDIR+=	heimdall
-SUBDIR+=	heirloom-doctools
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
