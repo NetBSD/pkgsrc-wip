@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2016/03/01 13:59:11 leot Exp $
+
+Running heirloom-doctools binaries
+----------------------------------
+
+Most of the binaries have the same name as their respective counterpart in
+groff.  To avoid conflicts they have been installed to
+${PREFIX}/heirloom-doctools/bin.  To use them you should add this directory
+to your PATH variable (e.g. for sh and ksh):
+
+	PATH=${PREFIX}/heirloom-doctools/bin:$PATH; export PATH
+
+Reading heirloom-doctools manual pages
+--------------------------------------
+
+The manual pages are installed to ${PREFIX}/heirloom-doctools/man.  Since
+groff does have manual pages with the same name adding this path to
+man.conf(5) may not make sense.  Instead set (ksh example)
+
+	MANPATH=${PREFIX}/heirloom-doctools/man:; export MANPATH
+
+in the terminal where you want to read the manuals.
+===========================================================================
