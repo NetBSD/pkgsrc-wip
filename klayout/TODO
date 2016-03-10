@@ -3,5 +3,7 @@
 - ruby version handling is not properly setup
 - MAKE_JOBS= may not be in effect ?
 
-- lib/libklayout.so is not installed yet
-
+----------------------
+ERROR: /usr/pkg/qt4/lib/libQtDesigner.so.4: qt4-tools-4.8.7 is not a runtime dependency
+ERROR: /usr/pkg/qt4/lib/libQtDesigner.so.4: qt4-tools-4.8.7 is not a runtime dependency
+----------------------

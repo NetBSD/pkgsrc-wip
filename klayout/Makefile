@@ -9,13 +9,12 @@ HOMEPAGE=	http://www.klayout.org/downloads/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		lib/libklayout.so is not installed yet
+BROKEN=		libQtDesigner.so.4: qt4-tools-4.8.7 is not a runtime dependency
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
-#LD_LIBRARY_PATH=${PREFIX}/lib
 NO_CONFIGURE=	yes
 
 SUBST_CLASSES+= 	rpath
@@ -48,11 +47,9 @@ do-install:
 	(cd ${WRKSRC}; \
 	pwd; \
 	${INSTALL_PROGRAM} ${REL_DIR}/main/klayout ${INSTALL_BINDIR}; \
+	${INSTALL_PROGRAM} ${REL_DIR}/main/libklayout.so ${INSTALL_LIBDIR} ;\
 	for bin in ${OTHER_BIN}; do \
 	  ${INSTALL_PROGRAM} ${REL_DIR}/main/$$bin ${INSTALL_BINDIR} ;\
-	done ;\
-	for plugin in ${PLUGINS}; do \
-	  ${INSTALL_PROGRAM} ${REL_DIR}/main/libklayout.so ${INSTALL_LIBDIR} ;\
 	done ;\
 	${CHMOD} 755 ${INSTALL_BINDIR}/* ;\
 	)
