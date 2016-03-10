@@ -3,9 +3,9 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
 * Interix support
 * Revive tcp_wrappers support.
 
---- sshd.c.orig	2015-08-21 04:49:03.000000000 +0000
+--- sshd.c.orig	2016-03-09 18:04:48.000000000 +0000
 +++ sshd.c
-@@ -126,6 +126,13 @@
+@@ -125,6 +125,13 @@
  #include "version.h"
  #include "ssherr.h"
  
@@ -19,7 +19,7 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
  #ifndef O_NOCTTY
  #define O_NOCTTY	0
  #endif
-@@ -237,7 +244,11 @@ int *startup_pipes = NULL;
+@@ -236,7 +243,11 @@ int *startup_pipes = NULL;
  int startup_pipe;		/* in child */
  
  /* variables used for privilege separation */
@@ -31,34 +31,28 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
  struct monitor *pmonitor = NULL;
  int privsep_is_preauth = 1;
  
-@@ -644,10 +655,15 @@ privsep_preauth_child(void)
- 	/* XXX not ready, too heavy after chroot */
- 	do_setusercontext(privsep_pw);
- #else
+@@ -643,6 +654,10 @@ privsep_preauth_child(void)
+ 		/* Drop our privileges */
+ 		debug3("privsep user:group %u:%u", (u_int)privsep_pw->pw_uid,
+ 		    (u_int)privsep_pw->pw_gid);
 +#ifdef HAVE_INTERIX
-+	if (setuser(privsep_pw->pw_name, NULL, SU_COMPLETE))
-+		fatal("setuser: %.100s", strerror(errno));
-+#else
- 	gidset[0] = privsep_pw->pw_gid;
- 	if (setgroups(1, gidset) < 0)
- 		fatal("setgroups: %.100s", strerror(errno));
- 	permanently_set_uid(privsep_pw);
-+#endif /* HAVE_INTERIX */
- #endif
- }
++		if (setuser(privsep_pw->pw_name, NULL, SU_COMPLETE))
++			fatal("setuser: %.100s", strerror(errno));
++#endif
+ 		gidset[0] = privsep_pw->pw_gid;
+ 		if (setgroups(1, gidset) < 0)
+ 			fatal("setgroups: %.100s", strerror(errno));
+@@ -712,11 +727,17 @@ privsep_preauth(Authctxt *authctxt)
  
-@@ -715,11 +731,18 @@ privsep_preauth(Authctxt *authctxt)
+ 		/* Arrange for logging to be sent to the monitor */
  		set_log_handler(mm_log_handler, pmonitor);
- 
- 		/* Demote the child */
--		if (getuid() == 0 || geteuid() == 0)
-+#ifdef  __APPLE_SANDBOX_NAMED_EXTERNAL__
+-
++#ifdef  __APPLE_SANDBOX_NAMED_EXTERNAL_
 +		/* We need to do this before we chroot() so we can read sshd.sb */
 +		if (box != NULL)
-+			ssh_sandbox_child(box);
++			ssh_sandbox_child(box);_
 +#endif
-+		if (getuid() == ROOTUID || geteuid() == ROOTUID)
- 			privsep_preauth_child();
+ 		privsep_preauth_child();
  		setproctitle("%s", "[net]");
 +#ifndef __APPLE_SANDBOX_NAMED_EXTERNAL__
  		if (box != NULL)
@@ -67,7 +61,7 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
  
  		return 0;
  	}
-@@ -733,7 +756,7 @@ privsep_postauth(Authctxt *authctxt)
+@@ -730,7 +751,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -76,7 +70,7 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1489,8 +1512,10 @@ main(int ac, char **av)
+@@ -1497,8 +1518,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -88,7 +82,7 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1919,7 +1944,7 @@ main(int ac, char **av)
+@@ -1925,7 +1948,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -97,7 +91,7 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1942,8 +1967,10 @@ main(int ac, char **av)
+@@ -1948,8 +1971,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
@@ -108,7 +102,7 @@ $NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
  
  	if (rexec_flag) {
  		rexec_argv = xcalloc(rexec_argc + 2, sizeof(char *));
-@@ -2139,6 +2166,25 @@ main(int ac, char **av)
+@@ -2145,6 +2170,25 @@ main(int ac, char **av)
  	audit_connection_from(remote_ip, remote_port);
  #endif
  

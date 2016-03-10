@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2015/08/14 08:57:00 jperkin Exp $
+@comment $NetBSD$
 bin/scp
 bin/sftp
-bin/slogin
 bin/ssh
 bin/ssh-add
 bin/ssh-agent
@@ -10,10 +9,8 @@ bin/ssh-keyscan
 libexec/sftp-server
 libexec/ssh-keysign
 libexec/ssh-pkcs11-helper
-${PLIST.prng}libexec/ssh-rand-helper
 man/man1/scp.1
 man/man1/sftp.1
-man/man1/slogin.1
 man/man1/ssh-add.1
 man/man1/ssh-agent.1
 man/man1/ssh-keygen.1
@@ -28,8 +25,5 @@ man/man8/ssh-pkcs11-helper.8
 man/man8/sshd.8
 sbin/sshd
 share/examples/openssh/moduli
-${PLIST.darwin}share/examples/openssh/org.openssh.sshd.sb
 share/examples/openssh/ssh_config
-${PLIST.prng}share/examples/openssh/ssh_prng_cmds
-${PLIST.pam}share/examples/openssh/sshd.pam
 share/examples/openssh/sshd_config

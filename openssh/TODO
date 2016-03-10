@@ -1,0 +1,6 @@
+This probably breaks OS X X11 forwarding.
+The relevant code has changed, check macports when they update.
+
+segfaults for me on netbsd-current (running ssh@host)
+but so does the previous version.
+(base openssl)
