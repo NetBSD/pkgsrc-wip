@@ -1,3 +1,4 @@
+@comment $NetBSD$
 bin/clang-check
 bin/scan-build
 bin/scan-view

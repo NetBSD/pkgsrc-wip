@@ -1,4 +1,6 @@
 # $NetBSD$
+# used by wip/clang-git/Makefile
+# used by wip/clang-static-analyzer-git/Makefile
 
 CATEGORIES=	lang devel
 

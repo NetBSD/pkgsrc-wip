@@ -12,7 +12,7 @@ INSTALL_DIRS=	../build/tools/clang-check ../build/tools/scan-build ../build/tool
 
 CMAKE_ARGS+=	-DCLANG_ENABLE_STATIC_ANALYZER=ON
 
-REPLACE_PYTHON=	# defined
+REPLACE_PYTHON=	# empty
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.5
 
 .include "../../lang/python/application.mk"
