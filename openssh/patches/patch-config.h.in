@@ -1,0 +1,37 @@
+$NetBSD: patch-config.h.in,v 1.5 2016/01/18 12:53:26 jperkin Exp $
+
+* Added Interix and define new path to if_tun.h.
+* Revive tcp_wrappers support.
+
+--- config.h.in.orig	2015-08-21 05:09:20.000000000 +0000
++++ config.h.in
+@@ -640,6 +640,9 @@
+ /* define if you have int64_t data type */
+ #undef HAVE_INT64_T
+ 
++/* Define if you are on Interix */
++#undef HAVE_INTERIX
++
+ /* Define to 1 if the system has the type `intmax_t'. */
+ #undef HAVE_INTMAX_T
+ 
+@@ -799,6 +802,9 @@
+ /* Define to 1 if you have the <net/if_tun.h> header file. */
+ #undef HAVE_NET_IF_TUN_H
+ 
++/* Define to 1 if you have the <net/tun/if_tun.h> header file. */
++#undef HAVE_NET_TUN_IF_TUN_H
++
+ /* Define if you are on NeXT */
+ #undef HAVE_NEXT
+ 
+@@ -1394,6 +1400,9 @@
+ /* Define if pututxline updates lastlog too */
+ #undef LASTLOG_WRITE_PUTUTXLINE
+ 
++/* Define if you want TCP Wrappers support */
++#undef LIBWRAP
++
+ /* Define to whatever link() returns for "not supported" if it doesn't return
+    EOPNOTSUPP. */
+ #undef LINK_OPNOTSUPP_ERRNO

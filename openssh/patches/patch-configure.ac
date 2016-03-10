@@ -1,0 +1,141 @@
+$NetBSD: patch-configure.ac,v 1.5 2016/01/18 12:53:26 jperkin Exp $
+
+* Various fixes regarding portability
+* Revive tcp_wrappers support.
+
+--- configure.ac.orig	2015-08-21 04:49:03.000000000 +0000
++++ configure.ac
+@@ -316,6 +316,9 @@ AC_ARG_WITH([rpath],
+ 	]
+ )
+ 
++# pkgsrc handles any rpath settings this package needs
++need_dash_r=
++
+ # Allow user to specify flags
+ AC_ARG_WITH([cflags],
+ 	[  --with-cflags           Specify additional flags to pass to compiler],
+@@ -387,6 +390,7 @@ AC_CHECK_HEADERS([ \
+ 	maillock.h \
+ 	ndir.h \
+ 	net/if_tun.h \
++	net/tun/if_tun.h \
+ 	netdb.h \
+ 	netgroup.h \
+ 	pam/pam_appl.h \
+@@ -696,6 +700,15 @@ main() { if (NSVersionOfRunTimeLibrary("
+ 		;;
+ 	esac
+ 	;;
++*-*-interix*)
++        AC_DEFINE(HAVE_INTERIX)
++        AC_DEFINE(DISABLE_FD_PASSING)
++        AC_DEFINE(DISABLE_SHADOW)
++        AC_DEFINE(IP_TOS_IS_BROKEN)
++        AC_DEFINE(MISSING_HOWMANY)
++        AC_DEFINE(NO_IPPORT_RESERVED_CONCEPT)
++        AC_DEFINE(USE_PIPES)
++        ;;
+ *-*-irix5*)
+ 	PATH="$PATH:/usr/etc"
+ 	AC_DEFINE([BROKEN_INET_NTOA], [1],
+@@ -1424,6 +1437,62 @@ AC_ARG_WITH([skey],
+ 	]
+ )
+ 
++# Check whether user wants TCP wrappers support
++TCPW_MSG="no"
++AC_ARG_WITH([tcp-wrappers],
++	[  --with-tcp-wrappers[[=PATH]] Enable tcpwrappers support (optionally in PATH)],
++	[
++		if test "x$withval" != "xno" ; then
++			saved_LIBS="$LIBS"
++			saved_LDFLAGS="$LDFLAGS"
++			saved_CPPFLAGS="$CPPFLAGS"
++			if test -n "${withval}" && \
++			    test "x${withval}" != "xyes"; then
++				if test -d "${withval}/lib"; then
++					if test -n "${need_dash_r}"; then
++						LDFLAGS="-L${withval}/lib -R${withval}/lib ${LDFLAGS}"
++					else
++						LDFLAGS="-L${withval}/lib ${LDFLAGS}"
++					fi
++				else
++					if test -n "${need_dash_r}"; then
++						LDFLAGS="-L${withval} -R${withval} ${LDFLAGS}"
++					else
++						LDFLAGS="-L${withval} ${LDFLAGS}"
++					fi
++				fi
++				if test -d "${withval}/include"; then
++					CPPFLAGS="-I${withval}/include ${CPPFLAGS}"
++				else
++					CPPFLAGS="-I${withval} ${CPPFLAGS}"
++				fi
++			fi
++			LIBS="-lwrap $LIBS"
++			AC_MSG_CHECKING([for libwrap])
++			AC_LINK_IFELSE([AC_LANG_PROGRAM([[
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <netinet/in.h>
++#include <tcpd.h>
++int deny_severity = 0, allow_severity = 0;
++				]], [[
++	hosts_access(0);
++				]])], [
++					AC_MSG_RESULT([yes])
++					AC_DEFINE([LIBWRAP], [1],
++						[Define if you want
++						TCP Wrappers support])
++					SSHDLIBS="$SSHDLIBS -lwrap"
++					TCPW_MSG="yes"
++				], [
++					AC_MSG_ERROR([*** libwrap missing])
++				
++			])
++			LIBS="$saved_LIBS"
++		fi
++	]
++)
++
+ # Check whether user wants to use ldns
+ LDNS_MSG="no"
+ AC_ARG_WITH(ldns,
+@@ -4816,9 +4885,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+ ])
+ if test -z "$conf_wtmpx_location"; then
+ 	if test x"$system_wtmpx_path" = x"no" ; then
+-		AC_DEFINE([DISABLE_WTMPX])
++		for f in /var/log/wtmpx; do
++			if test -f $f ; then
++				conf_wtmpx_location=$f
++			fi
++		done
++		if test -z "$conf_wtmpx_location"; then
++			AC_DEFINE(DISABLE_WTMPX)
++		fi
+ 	fi
+-else
++fi
++if test -n "$conf_wtmpx_location"; then
+ 	AC_DEFINE_UNQUOTED([CONF_WTMPX_FILE], ["$conf_wtmpx_location"],
+ 		[Define if you want to specify the path to your wtmpx file])
+ fi
+@@ -4905,7 +4982,7 @@ echo "OpenSSH has been configured with t
+ echo "                     User binaries: $B"
+ echo "                   System binaries: $C"
+ echo "               Configuration files: $D"
+-echo "                   Askpass program: $E"
++echo "                   Askpass program: ${ASKPASS_PROGRAM}"
+ echo "                      Manual pages: $F"
+ echo "                          PID file: $G"
+ echo "  Privilege separation chroot path: $H"
+@@ -4929,6 +5006,7 @@ echo "                 KerberosV support
+ echo "                   SELinux support: $SELINUX_MSG"
+ echo "                 Smartcard support: $SCARD_MSG"
+ echo "                     S/KEY support: $SKEY_MSG"
++echo "              TCP Wrappers support: $TCPW_MSG"
+ echo "              MD5 password support: $MD5_MSG"
+ echo "                   libedit support: $LIBEDIT_MSG"
+ echo "  Solaris process contract support: $SPC_MSG"
