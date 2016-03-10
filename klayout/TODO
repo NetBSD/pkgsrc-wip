@@ -1,25 +1,7 @@
 - Tested only on NetBSD/amd64 7.0 and 7.99.25
-- Currently rpath or LD_LIBRARY_PATH is not properly set
-- make install is not implemented yet.
-  (thus PLIST is not ready)
-- (Test is done before make package, by:
-   env LD_LIBRARY_PATH=/usr/pkg/lib:/usr/pkg/qt4/lib   \
-   /export/WRKOBJDIR/wip/klayout/work/klayout-0.24.5/bin.netbsd-32-gcc-release/klayout
-  )
 - Several hard coding for string gcc ar etc
 - ruby version handling is not properly setup
 - MAKE_JOBS= may not be in effect ?
 
+- lib/libklayout.so is not installed yet
 
-(sample log)
------------------
-Build done.
-
-Final binary is ready in /export/WRKOBJDIR/wip/klayout/work/klayout-0.24.5/bin.netbsd-32-gcc-release/klayout.
-To run it, you may need to add the following to your LD_LIBRARY_PATH:
-/usr/pkg/qt4/lib
-Shared object "libruby23.so.23" not found
-Shared object "libruby23.so.23" not found
-=> Unwrapping files-to-be-installed.
-762.07s 77.20s 14:00.81 99% 0+0k 0+609io 470pf+0w
------------------

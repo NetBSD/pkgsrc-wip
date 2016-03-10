@@ -1,1 +1,12 @@
 @comment $NetBSD$
+bin/klayout
+bin/strm2cif
+bin/strm2dxf
+bin/strm2gds
+bin/strm2gdstxt
+bin/strm2oas
+bin/strm2txt
+bin/strmclip
+bin/strmcmp
+bin/strmxor
+lib/libklayout.so

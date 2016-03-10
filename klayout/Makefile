@@ -9,13 +9,13 @@ HOMEPAGE=	http://www.klayout.org/downloads/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		make install step does not work yet.
+BROKEN=		lib/libklayout.so is not installed yet
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
-LD_LIBRARY_PATH=${PREFIX}/lib
+#LD_LIBRARY_PATH=${PREFIX}/lib
 NO_CONFIGURE=	yes
 
 SUBST_CLASSES+= 	rpath
@@ -25,8 +25,37 @@ SUBST_STAGE.rpath=	post-patch
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG PREFIX
 SUBST_SED.rpath=	'-e s|@@LDFLAGS@@|${LDFLAGS}|'
 
+AUTO_MKDIRS=	yes
+INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
+INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib
+REL_DIR=		build.netbsd-32-gcc-release
+
+OTHER_BIN= \
+	strm2cif \
+	strm2dxf \
+	strm2gds \
+	strm2gdstxt \
+	strm2oas \
+	strm2txt \
+	strmclip \
+	strmcmp \
+	strmxor \
+
 do-build:
 	(cd ${WRKSRC}; sh build.sh -python python${PYVERSSUFFIX} -qt ${PREFIX}/qt4)
+
+do-install:
+	(cd ${WRKSRC}; \
+	pwd; \
+	${INSTALL_PROGRAM} ${REL_DIR}/main/klayout ${INSTALL_BINDIR}; \
+	for bin in ${OTHER_BIN}; do \
+	  ${INSTALL_PROGRAM} ${REL_DIR}/main/$$bin ${INSTALL_BINDIR} ;\
+	done ;\
+	for plugin in ${PLUGINS}; do \
+	  ${INSTALL_PROGRAM} ${REL_DIR}/main/libklayout.so ${INSTALL_LIBDIR} ;\
+	done ;\
+	${CHMOD} 755 ${INSTALL_BINDIR}/* ;\
+	)
 
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/buildlink3.mk"
