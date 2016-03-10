@@ -66,11 +66,15 @@ REPLACE_PYTHON+=	www/builtins.py
 
 .include "../../mk/compiler.mk"
 
-# command to check if the PKG_CXX compiler is using libc++ or libstdc++
-LIBCPP_CHECK_SH=	printf "\#include <ciso646>\n\#ifdef _LIBCPP_VERSION\nYES\n\#endif" | ${PKG_CXX} -x c++ -E - | grep YES || true
+.if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang)
+# command to check if clang is using libc++ or libstdc++
+LIBCPP_CHECK_SH=	printf "\#include <ciso646>\n\#ifdef _LIBCPP_VERSION\nYES\n\#endif" | ${CLANGBASE}/bin/clang++ -x c++ -E - 2>&1 | grep YES || true
+.else
+LIBCPP_CHECK_SH=	echo NO
+.endif
 
 # patch NetBSD::GetCXXStdlibType
-.if ${OPSYS} == "NetBSD" && (!empty(PKGSRC_COMPILER:Mgcc) || empty(LIBCPP_CHECK_SH:sh:MYES))
+.if ${OPSYS} == "NetBSD" && empty(LIBCPP_CHECK_SH:sh:MYES)
 SUBST_CLASSES+=			libcxx
 SUBST_STAGE.libcxx=		pre-configure
 SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ (matching the host compiler)
