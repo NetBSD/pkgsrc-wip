@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.klayout.org/downloads/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		Shared library linking fails, see TODO, thank you.
+BROKEN=		make install step does not work yet.
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -23,6 +23,7 @@ SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific confi
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
 SUBST_STAGE.rpath=	post-patch
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG PREFIX
+SUBST_SED.rpath=	'-e s|@@LDFLAGS@@|${LDFLAGS}|'
 
 do-build:
 	(cd ${WRKSRC}; sh build.sh -python python${PYVERSSUFFIX} -qt ${PREFIX}/qt4)
