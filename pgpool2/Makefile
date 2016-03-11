@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	pgpool-II-3.5.0
-PKGNAME=	postgresql${PGSQL_VERSION}-pgpool2-${DISTNAME:S/pgpool-II-//}
+PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/pgpool-II/pgpool2/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
 
