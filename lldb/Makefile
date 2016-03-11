@@ -121,10 +121,10 @@ post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
 .include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm
-.include "../../wip/llvm/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang
-.include "../../wip/clang/buildlink3.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
+.include "../../lang/llvm/buildlink3.mk"
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
+.include "../../lang/clang/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"
