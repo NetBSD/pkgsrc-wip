@@ -1,10 +1,11 @@
-$NetBSD: patch-src_include_pool.h,v 1.1 2015/04/13 19:59:59 fhajny Exp $
+$NetBSD$
 
 Default pid file location.
---- src/include/pool.h.orig	2015-04-08 07:58:44.000000000 +0000
-+++ src/include/pool.h
-@@ -78,7 +78,7 @@
- #define DEFAULT_SOCKET_DIR "/tmp"
+
+--- src/include/pool.h.orig	2016-02-20 00:28:07.000000000 +0200
++++ src/include/pool.h		2016-02-20 00:29:09.000000000 +0200
+@@ -81,7 +81,7 @@
+ #define DEFAULT_WD_IPC_SOCKET_DIR "/tmp"
  
  /* pid file name */
 -#define DEFAULT_PID_FILE_NAME "/var/run/pgpool/pgpool.pid"

@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/04/13 19:59:59 fhajny Exp $
 #
 
-DISTNAME=	pgpool-II-3.4.2
+DISTNAME=	pgpool-II-3.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-pgpool2-${DISTNAME:S/pgpool-II-//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
@@ -13,26 +13,14 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 .include "options.mk"
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		PGPOOL_USER PGPOOL_GROUP PGGROUP PGHOME VARBASE
-
-.include "../../mk/pgsql.buildlink3.mk"
-
-PLIST_VARS+=		ext
-# PostgreSQL 9.1 and above supports loadable extensions
-.if ${PGSQL_VERSION} >= 91
-PLIST.ext=		yes
-.endif
-
-BUILD_DIRS=		. src/sql
 
 EGDIR=			share/examples/pgpool2
 
@@ -41,10 +29,10 @@ PGPOOL_GROUP?=		${PGGROUP}
 PGGROUP?=		pgsql
 PGHOME?=		${PREFIX}/${PGGROUP}
 
-PKG_GROUPS=		${PGPOOL_GROUP}
-PKG_USERS=		${PGPOOL_USER}:${PGPOOL_GROUP}
-PKG_GROUPS_VARS+=	PGPOOL_GROUP
-PKG_USERS_VARS=		PGPOOL_USER
+PKG_GROUPS=			${PGPOOL_GROUP}
+PKG_USERS=			${PGPOOL_USER}:${PGPOOL_GROUP}
+PKG_GROUPS_VARS+=		PGPOOL_GROUP
+PKG_USERS_VARS=			PGPOOL_USER
 PKG_HOME.${PGPOOL_USER}=	${PGHOME}
 PKG_SHELL.${PGPOOL_GROUP}=	${SH}
 
@@ -62,6 +50,8 @@ SUBST_VARS.path=	PGPOOL_LOGDIR PGPOOL_PIDDIR
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
+BUILD_DIRS=		. src/sql
+
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/${EGDIR}
 
 SMF_NAME=		pgpool
@@ -77,4 +67,5 @@ CONF_FILES_PERMS+=	${EGDIR}/pool_passwd ${PKG_SYSCONFDIR}/pool_passwd \
 post-install:
 	${TOUCH} ${DESTDIR}${PREFIX}/share/examples/pgpool2/pool_passwd
 
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
