@@ -9,8 +9,6 @@ HOMEPAGE=	http://www.klayout.org/downloads/
 COMMENT=	Simple GDS and OASIS file viewer and Editor
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		libQtDesigner.so.4: qt4-tools-4.8.7 is not a runtime dependency
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
@@ -24,7 +22,7 @@ SUBST_STAGE.rpath=	post-patch
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG PREFIX
 SUBST_SED.rpath=	'-e s|@@LDFLAGS@@|${LDFLAGS}|'
 
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
 INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
 INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib
 REL_DIR=		build.netbsd-32-gcc-release
@@ -47,7 +45,7 @@ do-install:
 	(cd ${WRKSRC}; \
 	pwd; \
 	${INSTALL_PROGRAM} ${REL_DIR}/main/klayout ${INSTALL_BINDIR}; \
-	${INSTALL_PROGRAM} ${REL_DIR}/main/libklayout.so ${INSTALL_LIBDIR} ;\
+	${INSTALL_LIB} ${REL_DIR}/main/libklayout.so ${INSTALL_LIBDIR} ;\
 	for bin in ${OTHER_BIN}; do \
 	  ${INSTALL_PROGRAM} ${REL_DIR}/main/$$bin ${INSTALL_BINDIR} ;\
 	done ;\
@@ -59,4 +57,5 @@ do-install:
 .include "../../x11/qt4-libs/buildlink3.mk"
 # libQtDesigner
 .include "../../x11/qt4-tools/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../mk/bsd.pkg.mk"
