@@ -44,12 +44,6 @@ SUBST_SED.prefix=		-e "s,@PREFIX@,${PREFIX},"
 SUBST_SED.prefix+=		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
 SUBST_SED.prefix+=		-e "s,@PYSITELIB@,${PYSITELIB},"
 
-SUBST_CLASSES+=				pythonbin
-SUBST_STAGE.pythonbin=		pre-configure
-SUBST_FILES.pythonbin=		Makefile
-SUBST_MESSAGE.pythonbin=	Fixing path to PYTHONBIN.
-SUBST_SED.pythonbin=		-e "s,PYTHON=python,PYTHON=${PYTHONBIN},"
-
 PY_DIRS=	lib/ansible contrib/inventory
 
 .for f in `find ${PY_DIRS} -name \*.py`
