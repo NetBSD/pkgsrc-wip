@@ -6,7 +6,7 @@ MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.freedesktop.org/software/colord/releases/
+HOMEPAGE=	https://www.freedesktop.org/software/colord/
 COMMENT=	Device color profile management daemon
 LICENSE=	gnu-gpl-v2
 
