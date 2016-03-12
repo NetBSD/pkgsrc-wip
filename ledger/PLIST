@@ -1,10 +1,8 @@
 @comment $NetBSD$
-@comment Obtained from install_manifest.txt
 bin/ledger
 include/ledger/account.h
 include/ledger/amount.h
 include/ledger/annotate.h
-include/ledger/archive.h
 include/ledger/balance.h
 include/ledger/chain.h
 include/ledger/commodity.h

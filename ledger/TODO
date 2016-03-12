@@ -1,43 +1,5 @@
 #Notes on the Makefile for pkgsrc/wip/ledger
 
-##Making the Makefile less hacky
-
-Currently the makefile uses quite a hacky approach to get something that works. Ledger comes with its own python based acprep tool for configuration and building which is mostly a wrapper around cmake, but it is actually really good and works, where as using plain cmake and make should work, but doesn't (for me). So in order to use acprep I had to disable the build and configure stages in the Pkgsrc Makefile and instead do them in a post-patch target.
-
-I did try some less hacky approaches, but I couldn't get them to work.
-
-###1 Using CONFIGURE_SCRIPT
-
-This seems like it should be the none-hacky way of doing what I want to do (run the acprep script). This is what I tried:
-
-	HAS_CONFIGURE= yes
-	CONFIGURE_ENV= python 
-	CONFIGURE_SCRIPT= ./acprep configure
-	CONFIGURE_ARGS=  --prefix ${PREFIX} -- -DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON"
-	MAKE_PROGRAM= ./acprep
-	BUILD_MAKE_FLAGS= make
-	BUILD_MAKE_FILE=
-
-along with various permutations of splitting the overall commands between [CONFIGURE_ENV, CONFIGURE_SCRIPT, etc][1].
-
-###2 Using CMAKE
-
-In theory Ledger supports direct configuration and building with CMake, but something Pkgsrc does with CMake makes it not work. It will appear to configure fine and will build, but won't link. I have tried so many different variations of CMake settings, but for whatever reason I cannot get it to link unless I use acprep. None of this works:
-	
-	USE_CMAKE= yes
-	CMAKE_ARGS+= -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} -DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON -DCMAKE_SHARED_LINKER_FLAGS="-R${PREFIX}/lib -L${PREFIX}/lib" -DCMAKE_MODULE_LINKER_FLAGS="-R${PREFIX}/lib -L${PREFIX}/lib" -DCMAKE_EXE_LINKER_FLAGS="-R${PREFIX}/lib -L${PREFIX}/lib" -DCMAKE_CXX_COMPILER=g++ 
-
-or
-
-	USE_CMAKE= yes
-	CMAKE_ARGS+= -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} -DCMAKE_PREFIX_PATH:PATH=${PREFIX} -DCMAKE_LIBRARY_PATH:PATH=${PREFIX}/lib -DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
-	LDFLAGS+= -L${PREFIX}/lib
-
-...etc
-
-##Other things that need doing
+##Things that still need doing
 
 - Adding options (as in show-options) for all the optional dependencies
-- Figuring out how to specify all the dependencies for building (such as python and cmake), but that aren't linked in
-
-[1]: https://www.netbsd.org/docs/pkgsrc/build.html#build.configure

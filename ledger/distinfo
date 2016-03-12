@@ -1,13 +1,6 @@
 $NetBSD: distinfo,v 1.2 2013/10/05 14:32:12 slitvinov Exp $
 
-SHA1 (ledger-3.1.tar.gz) = 549aa375d4802e9dd4fd153c45ab64d8ede94afc
-RMD160 (ledger-3.1.tar.gz) = 6e9b1afaeb29e75ad8fe251ac19ad4618c4ec5c1
-SHA512 (ledger-3.1.tar.gz) = caa84330eee05d3e88820e8afd4a906d22f6aaa9de4abc2f6813636754e052e6ec4d1b3d2fce68215aededc72651405c62aaf16a2c1b69d34e1b10ffece48519
-Size (ledger-3.1.tar.gz) = 817624 bytes
-SHA1 (patch-src_account.h) = eb560d3c3390eab0c4bb2a312d5ed4b9436de453
-SHA1 (patch-src_filters.cc) = e5f8a20519f689eb9a98ed8bfa89f74a3beb8237
-SHA1 (patch-src_item.h) = 738538ac35603879d40d5094ebcc21efca865172
-SHA1 (patch-src_iterators.cc) = 23617982df804a5817d9a66bff8f46d08aa777d4
-SHA1 (patch-src_parser.h) = 00df805cdffb313fe25d65bc55cfb4e4c271c471
-SHA1 (patch-src_post.h) = 1f625c90e8673c87081cf23aaa0260ec1a1dc166
-SHA1 (patch-src_times.h) = 9f9aeaaf6e45ee83420f7efac9763886eee960de
+SHA1 (ledger-3.1.1.tar.gz) = 77ad24ce4947e2f130e58d8e8bc4c5b6920a0222
+RMD160 (ledger-3.1.1.tar.gz) = 07645c8d798e386eb4ed0a5a9e3dcf6fe0a184f8
+SHA512 (ledger-3.1.1.tar.gz) = 3f81b98a414cdfc0e272de4e958770149fb1acc8bda880d270e1459ce35294a220c52820bb9af49a751ac3a80b878f81fc7799ba41e0a1be43eba72081351bf5
+Size (ledger-3.1.1.tar.gz) = 842364 bytes

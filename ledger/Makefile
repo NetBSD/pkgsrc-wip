@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	ledger
-VERSION=	3.1
+VERSION=	3.1.1
 DISTNAME=	ledger-${VERSION}
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ledger/}
@@ -14,10 +14,8 @@ LICENSE=	modified-bsd
 
 # url2pkg-marker (please do not remove this line.)
 
-
 USE_CMAKE=	YES
 USE_LANGUAGES=	c++ c
-USE_TOOLS+=	curl unzip
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	/usr/bin/env python
@@ -31,14 +29,11 @@ REPLACE_FILES.python+=	tools/genuuid
 # - python
 # - devel/editline?
 
-#Version 3.1 requires a separate download of UTFCPP, automate this
-#With version 3.1.1 this should get bundled with the Ledger release and this target can be removed.
-post-extract:
-	cd ${WRKSRC} && curl -L -O https://github.com/ledger/ledger/releases/download/v3.1/ledger-utfcpp.zip && unzip ledger-utfcpp.zip
 
 #These are the minimum libraries required for Ledger
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
