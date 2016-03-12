@@ -36,7 +36,7 @@ OTHER_BIN= \
 	strm2txt \
 	strmclip \
 	strmcmp \
-	strmxor \
+	strmxor
 
 do-build:
 	(cd ${WRKSRC}; sh build.sh -python python${PYVERSSUFFIX} -qt ${PREFIX}/qt4)
