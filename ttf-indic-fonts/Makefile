@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 17:17:49 asau Exp $
-#
 
 DISTNAME=	ttf-indic-fonts_0.5.4
 PKGNAME=	${DISTNAME:C/_/-/}
@@ -33,5 +32,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${d}/* ${DESTDIR}${FONTS_DIRS.ttf}
 .endfor
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

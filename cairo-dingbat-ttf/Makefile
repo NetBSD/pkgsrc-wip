@@ -27,5 +27,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Cairo*.pdf ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Cairo*.txt ${DESTDIR}${DOCDIR}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

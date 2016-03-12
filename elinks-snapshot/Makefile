@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.11 2015/08/15 22:19:25 atomicules Exp $
-#
 
 DISTNAME=	elinks-current-0.13
 PKGNAME=		elinks-0.13
@@ -45,6 +44,4 @@ LIBS+=	-lexecinfo
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

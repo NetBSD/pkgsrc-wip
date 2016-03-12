@@ -28,5 +28,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}/README
 
 .include "../../lang/perl5/buildlink3.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

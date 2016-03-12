@@ -11,11 +11,11 @@ HOMEPAGE=	http://code.google.com/p/numdifftools/
 COMMENT=	Tools for automatic numerical differentiation
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
+
 do-test:
 	${RUN} cd ${WRKSRC}/numdifftools/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testnumdifftools.py
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../lang/python/egg.mk"
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

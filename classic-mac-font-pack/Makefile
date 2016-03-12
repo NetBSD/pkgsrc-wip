@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.11 2014/02/27 22:06:24 christtrekker Exp $
-#
 
 DISTNAME=	classic-mac-font-pack-201401
 CATEGORIES=	fonts
@@ -49,6 +48,9 @@ COMMENT=	Outline fonts modeled after those of the vintage 68k Macintosh era
 LICENSE=	generic-nonlicense
 RESTRICTED=	Various.
 
+DEPENDS+=	cairo-dingbat-ttf-[0-9]*:../../wip/cairo-dingbat-ttf
+DEPENDS+=	urbanrenewal-ttf-[0-9]*:../../fonts/urbanrenewal-ttf
+
 WRKSRC=		${WRKDIR}
 TTFPATH=	lib/X11/fonts/TTF
 FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH}
@@ -77,7 +79,4 @@ do-install:
 	fi
 # install doco too!
 
-DEPENDS+=	cairo-dingbat-ttf-[0-9]*:../../wip/cairo-dingbat-ttf
-DEPENDS+=	urbanrenewal-ttf-[0-9]*:../../fonts/urbanrenewal-ttf
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

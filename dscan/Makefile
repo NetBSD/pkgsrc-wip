@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2015/06/10 13:43:16 ahp-nils Exp $
-#
 
 VERSION=			8ebbeb20c5721567eeba80e5cec65155a488291f
 DISTNAME=			${VERSION}
@@ -26,5 +25,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../net/libdnet/buildlink3.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

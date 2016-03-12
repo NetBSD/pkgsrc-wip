@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.2 2014/06/01 12:49:38 thomasklausner Exp $
-#
 
 DISTNAME=	polarssl-1.1.4
 DISTFILES=	polarssl-1.1.4-gpl.tgz
@@ -48,5 +47,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/programs/${i} ${DSTDIR}/bin/polarssl_`basename ${i}`
 .endfor
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

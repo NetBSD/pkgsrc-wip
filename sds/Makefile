@@ -21,5 +21,4 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/libsds.so ${DESTDIR}${PREFIX}/lib/libsds.so
 	${INSTALL_DATA} ${WRKSRC}/sds.h ${DESTDIR}${PREFIX}/include/sds.h
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

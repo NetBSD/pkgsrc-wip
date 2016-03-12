@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2012/11/13 22:25:40 othyro Exp $
-#
 
 DISTNAME=	LWP-Protocol-socks-1.5
 PKGNAME=	p5-${DISTNAME}
@@ -11,10 +10,9 @@ HOMEPAGE=	http://search.cpan.org/~scr/LWP-Protocol-socks-1.5/lib/LWP/Protocol/so
 COMMENT=	Adds support for SOCKS to p5-libwww
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-IO-Socket-SSL*:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-IO-Socket-Socks*:../../wip/p5-IO-Socket-Socks
+DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
+DEPENDS+=	p5-IO-Socket-Socks-[0-9]*:../../wip/p5-IO-Socket-Socks
 
 .include "../../devel/lwp/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

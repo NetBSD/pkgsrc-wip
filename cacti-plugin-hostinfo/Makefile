@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.5 2012/09/24 18:26:51 asau Exp $
-#
 
 DISTNAME=		hostinfo-0.2
 PKGNAME=		cacti-plugin-${DISTNAME}
@@ -32,5 +31,4 @@ do-extract:
 do-install:
 	${CP} -R ${WRKSRC}/* ${DESTDIR}${PLUGINDIR}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

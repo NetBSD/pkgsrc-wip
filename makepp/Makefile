@@ -17,5 +17,4 @@ TEST_TARGET=	test
 do-configure:
 	cd ${WRKSRC} && ./configure --prefix=${PREFIX}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

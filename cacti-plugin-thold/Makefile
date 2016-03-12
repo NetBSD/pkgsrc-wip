@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.10 2013/07/23 08:09:52 ahp-nils Exp $
-#
 
 DISTNAME=		thold-v${VERSION}
 PKGNAME=		cacti-plugin-thold-${VERSION}
@@ -36,5 +35,4 @@ INSTALLATION_DIRS+=	${PLUGINDIR}
 do-install:
 	cd ${WRKSRC} && ${PAX} -wr * ${DESTDIR}${PLUGINDIR}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

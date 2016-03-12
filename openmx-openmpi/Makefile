@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.5 2013/06/22 15:54:28 outpaddling Exp $
-#
 
 DISTNAME=	openmx3.7
 PKGNAME=	openmx-openmpi-3.7
@@ -53,7 +52,6 @@ do-install:
 	${RM} ${DESTDIR}${MPI_PREFIX}/share/openmx/work/${f}
 .endfor
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../wip/openmpi163/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"

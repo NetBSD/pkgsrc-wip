@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.5 2012/11/12 16:51:40 othyro Exp $
-#
 
 DISTNAME=	xsi-0.98.29
 CATEGORIES=	sysutils
@@ -26,5 +25,4 @@ CONFIGURE_ARGS+= --enable-user=xsi
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

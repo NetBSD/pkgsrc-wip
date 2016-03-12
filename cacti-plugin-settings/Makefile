@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.6 2013/02/20 08:25:09 ahp-nils Exp $
-#
 
 DISTNAME=		settings-v${VERSION}
 PKGNAME=		cacti-plugin-settings-${VERSION}
@@ -36,5 +35,4 @@ INSTALLATION_DIRS+=	${PLUGINDIR}
 do-install:
 	cd ${WRKSRC} && ${PAX} -wr * ${DESTDIR}${PLUGINDIR}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

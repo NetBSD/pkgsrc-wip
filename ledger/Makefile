@@ -12,8 +12,6 @@ HOMEPAGE=	http://ledger-cli.org/
 COMMENT=	Double-entry accounting system for command-line
 LICENSE=	modified-bsd
 
-# url2pkg-marker (please do not remove this line.)
-
 USE_CMAKE=	YES
 USE_LANGUAGES=	c++ c
 

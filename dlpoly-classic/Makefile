@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2013/03/22 00:38:01 outpaddling Exp $
-#
 
 DISTNAME=	dl_class_1.8
 PKGNAME=	dlpoly-classic-1.8
@@ -36,8 +35,6 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/execute/dlpoly-classic-mpi \
 		${DESTDIR}${PREFIX}/bin
-
-# url2pkg-marker (please do not remove this line.)
 
 # Temporary hack to use openmpi from outside pkgsrc
 # Link fails with non-pkgsrc openmpi on RHEL

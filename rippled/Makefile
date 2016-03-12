@@ -26,6 +26,4 @@ do-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

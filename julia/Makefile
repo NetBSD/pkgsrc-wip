@@ -18,5 +18,4 @@ USE_LANGUAGES+=	c
 USE_LANGUAGES+=	fortran
 BUILD_DEPENDS+=	git-base>=1.0:../../devel/git-base
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

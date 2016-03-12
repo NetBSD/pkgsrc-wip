@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.4 2015/06/10 13:43:16 ahp-nils Exp $
-#
 
 DISTNAME=		realtime-v${VERSION}
 PKGNAME=		cacti-plugin-realtime-${VERSION}
@@ -36,5 +35,4 @@ INSTALLATION_DIRS+=	${PLUGINDIR}
 do-install:
 	cd ${WRKSRC} && ${PAX} -wr * ${DESTDIR}${PLUGINDIR}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
