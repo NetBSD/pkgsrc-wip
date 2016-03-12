@@ -20,7 +20,7 @@ SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific confi
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
 SUBST_STAGE.rpath=	post-patch
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG PREFIX
-SUBST_SED.rpath=	'-e s|@@LDFLAGS@@|${LDFLAGS}|'
+SUBST_SED.rpath=	-e 's|@@LDFLAGS@@|${LDFLAGS}|'
 
 AUTO_MKDIRS=		yes
 INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
