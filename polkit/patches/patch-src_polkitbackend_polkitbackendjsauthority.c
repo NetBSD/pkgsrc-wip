@@ -19,6 +19,24 @@ $NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.c,v 1.3 2015/04/02 14:
  #include <string.h>
  #include <glib/gstdio.h>
  #include <locale.h>
+@@ -812,7 +817,7 @@ subject_to_jsval (PolkitBackendJsAuthori
+   if (passwd == NULL)
+     {
+       user_name = g_strdup_printf ("%d", (gint) uid);
+-      g_warning ("Error looking up info for uid %d: %m", (gint) uid);
++      g_warning ("Error looking up info for uid %d: %s", (gint) uid, g_strerror(errno));
+     }
+   else
+     {
+@@ -826,7 +831,7 @@ subject_to_jsval (PolkitBackendJsAuthori
+                         gids,
+                         &num_gids) < 0)
+         {
+-          g_warning ("Error looking up groups for uid %d: %m", (gint) uid);
++          g_warning ("Error looking up groups for uid %d: %s", (gint) uid, g_strerror(errno));
+         }
+       else
+         {
 @@ -1508,8 +1513,13 @@ js_polkit_user_is_in_netgroup (JSContext
    JSBool ret = JS_FALSE;
    JSString *user_str;

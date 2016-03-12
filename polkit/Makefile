@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	polkit-0.113
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
