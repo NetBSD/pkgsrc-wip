@@ -1594,6 +1594,7 @@ SUBDIR+=	libginac
 SUBDIR+=	libglade-java
 SUBDIR+=	libgme
 SUBDIR+=	libgnome-java
+SUBDIR+=	libgraphqlparser
 SUBDIR+=	libgrass5
 SUBDIR+=	libgrss
 SUBDIR+=	libgtk-java
