@@ -5,12 +5,8 @@ pkglint checks:
 
 Makefile:
 
-- Add in Tiff buildlink? Also, should these be includes or DEPENDS, I'm still not sure.
+- Add in Tiff buildlink? Also, should these be includes or DEPENDS, I'm still not sure?
 
 options.mk:
 
 - Should add in all the optional dependencies.
-
-Other files:
-
-- Add a buildlink file, since vips is primarily a library to be used by other things.

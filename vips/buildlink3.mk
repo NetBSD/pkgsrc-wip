@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	vips
+
+.if !defined(VIPS_BUILDLINK3_MK)
+VIPS_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.vips+=	vips>=8.2.2
+BUILDLINK_PKGSRCDIR.vips?=	../../wip/vips
+
+.endif	# VIPS_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-vips
