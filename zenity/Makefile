@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.13 2015/06/06 18:48:10 krytarowski Exp $
 #
 
-DISTNAME=	zenity-3.16.2
+DISTNAME=	zenity-3.18.1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
-GITHUB_TAG=	${PKGNAME_NOREV:C/[.-]/_/g:tu}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/3.18/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -32,5 +32,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 #.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
