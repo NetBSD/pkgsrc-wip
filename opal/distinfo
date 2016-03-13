@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.15 2015/11/03 03:27:53 agc Exp $
+
+SHA1 (opal-3.10.10.tar.xz) = 51cddcee0bdfe61dd0025ff6548d18e6aa0c255e
+RMD160 (opal-3.10.10.tar.xz) = a6580ebd8d711cc9b8e3ef79c4335b40efb8c9b2
+SHA512 (opal-3.10.10.tar.xz) = b72a058e001b5bf69de64467e6fc90280ec83bf31f46fa9f504e921b4702450f8732c7df333b9677e04cf1d33d27efbe22056211da94b879e013f5d7bcaa8465
+Size (opal-3.10.10.tar.xz) = 5886812 bytes
+SHA1 (patch-configure) = b0657673420a0d29a88196f65a16935eb104a680
+SHA1 (patch-plugins_configure) = ce9e268891bcbb4b341ca29e75ee141cf2518e0b
+SHA1 (patch-plugins_video_H.263-1998_Makefile.in) = 0bc7bb4ac14f731b18b25e4e0d761d41906e7b2a
+SHA1 (patch-plugins_video_H.263-1998_h263-1993.cxx) = 4a1ec9345c56e6959c0756a6b4b4389dbf4f1bb1
+SHA1 (patch-plugins_video_H.263-1998_h263-1998.h) = 9f899635f4e1f48d48b4798f2e0c3e0b2b02c3be
+SHA1 (patch-plugins_video_H.263-1998_rfc2429.cxx) = e923d8a48d0a1e72b1afb20fe8fea1baf82ce10e
+SHA1 (patch-plugins_video_H.264_h264-x264.cxx) = 85c66bc0d2935dc1a32c8f6d9a3f314105d56bbd
+SHA1 (patch-plugins_video_MPEG4-ffmpeg_Makefile.in) = 94150226fff12033433939c5b255bcf689edd9fc
+SHA1 (patch-plugins_video_MPEG4-ffmpeg_mpeg4.cxx) = 09de4fe772c6b84cfbf0c0b5f860928c73c73d34
+SHA1 (patch-plugins_video_common_dyna.cxx) = c735e23b0658b82933972ed2314924738c5121d9
+SHA1 (patch-plugins_video_common_dyna.h) = bd5256e83f37b5b4d5b19dd8caf97f0f1a45c387
+SHA1 (patch-plugins_video_common_ffmpeg.h) = dce56d86afdde709e180aa94ce552df51a84e6de

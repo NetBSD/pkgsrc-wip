@@ -1,0 +1,66 @@
+# $NetBSD: Makefile,v 1.30 2016/03/05 11:27:46 jperkin Exp $
+#
+
+DISTNAME=		opal-3.10.10
+CATEGORIES=		devel net comms
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/opal/3.10/}
+EXTRACT_SUFX=		.tar.xz
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.opalvoip.org/
+COMMENT=		Open Phone Abstraction Library
+LICENSE=		mpl-1.0
+
+PREV_PKGPATH=		devel/opal-devel
+
+OPALLIBDIR=		${DISTNAME}
+
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+BUILD_TARGET=		opt
+CONFIG_SHELL=		bash
+
+CONFIGURE_ARGS+=	--enable-h264
+# ekiga developers say that the ffmpeg-h263 plugin is
+# not used and should be disabled in favour of the
+# h263+ plugin, so do so
+CONFIGURE_ARGS+=	--disable-ffmpeg-h263
+CONFIGURE_ARGS+=	--disable-localgsm
+CONFIGURE_ARGS+=	--disable-localspeex
+CONFIGURE_ARGS+=	--disable-ivr
+
+USE_LANGUAGES=		c c++
+# plugins/configure uses bash style += assignment.
+USE_TOOLS+=		bash gmake pkg-config
+
+PLIST_SUBST+=		OPALLIBDIR=${OPALLIBDIR:Q}
+
+.if "${MACHINE_ARCH}" == "i386"
+PLIST_SUBST+=		LIBARCH=x86
+.else
+PLIST_SUBST+=		LIBARCH=${MACHINE_ARCH:Q}
+.endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/opal
+	${INSTALL_DATA} ${WRKSRC}/opal_inc.mak ${DESTDIR}${PREFIX}/share/opal
+	${INSTALL_DATA} ${WRKSRC}/version.h ${DESTDIR}${PREFIX}/share/opal
+
+# pkgsrc's gsm is shlib, need additional linker flags.
+GSM_LIBS=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gsm}/lib
+GSM_LIBS+=		-L${BUILDLINK_PREFIX.gsm}/lib -lgsm
+SUBST_CLASSES+=		gsm
+SUBST_STAGE.gsm=	pre-configure
+SUBST_FILES.gsm=	plugins/configure
+SUBST_SED.gsm=		-e 's;GSM_LIBS="-lgsm";GSM_LIBS="${GSM_LIBS}";g'
+
+#for WAV49
+BUILDLINK_API_DEPENDS.gsm+=	gsm>=1.0.12
+.include "../../audio/gsm/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
+.include "../../devel/ptlib/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../multimedia/x264-devel/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

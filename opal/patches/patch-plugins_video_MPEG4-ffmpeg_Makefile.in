@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- plugins/video/MPEG4-ffmpeg/Makefile.in.orig	2013-02-20 02:18:07.000000000 +0000
++++ plugins/video/MPEG4-ffmpeg/Makefile.in
+@@ -31,7 +31,7 @@ SRCDIR    := .
+ SRCS      := mpeg4.cxx $(COMMONDIR)/dyna.cxx
+ 
+ CFLAGS += @LIBAVCODEC_CFLAGS@ -I$(COMMONDIR)
+-LIBS   += @DL_LIBS@
++LIBS   += @DL_LIBS@ @LIBAVUTIL_LIBS@
+ 
+ # Add LIBAVCODEC_SOURCE_DIR to the include path so we can #include <libavcodec/...h>
+ # Also add libavutil, so ffmpeg headers can #include "log.h".
