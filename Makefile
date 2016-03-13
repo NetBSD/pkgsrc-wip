@@ -2033,6 +2033,7 @@ SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
 SUBDIR+=	netlogo
+SUBDIR+=	netquery-git
 SUBDIR+=	netrik
 SUBDIR+=	netwib
 SUBDIR+=	netwmpager
