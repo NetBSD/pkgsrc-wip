@@ -1,0 +1,5 @@
+netquery - the system introspection tool
+
+The goal is to get a library with unified interface to introspect system:
+* use GraphQL as the query language
+* retrieve data in the JSON format.
