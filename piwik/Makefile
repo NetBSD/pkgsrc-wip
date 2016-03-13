@@ -1,10 +1,8 @@
 # $NetBSD: Makefile,v 1.11 2015/07/12 07:18:21 makoto Exp $
 
-DISTNAME=		2.14.0
-PKGNAME=		piwik-${DISTNAME}
+DISTNAME=		piwik-2.16.0
 CATEGORIES=		www
-MASTER_SITES=		${MASTER_SITE_GITHUB:=piwik/piwik/archive/}
-DIST_SUBDIR=		piwik
+MASTER_SITES=		${MASTER_SITE_GITHUB:=piwik/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/piwik
@@ -50,9 +48,6 @@ PHP_VERSIONS_ACCEPTED= 54 55 56
 DEPENDS+=	php5[0-9]-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	ap22-php5[0-9]*-[0-9]*:../../www/ap-php
 
-REPLACE_BASH=	tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/glob/glob.sh
-REPLACE_BASH+=	tests/travis/generate_docs.sh
-
 REPLACE_BASH+=	libs/jqplot/build_minified_script.sh
 
 REPLACE_BASH+=	misc/composer/*.sh
@@ -61,19 +56,11 @@ REPLACE_BASH+=	misc/others/stress.sh
 
 REPLACE_BASH+=	plugins/TestRunner/scripts/on_instance_launch.sh
 
-REPLACE_BASH+=	tests/PHPUnit/travis.sh
 REPLACE_BASH+=	tests/angularjs/scripts/*.sh
 REPLACE_BASH+=	tests/javascript/jash
 
 REPLACE_BASH+=	tests/lib/chai-1.9.0/support/sauce/*.sh
 REPLACE_BASH+=	tests/lib/jsdoc-toolkit/jsrun.sh
-REPLACE_BASH+=	tests/lib/mocha-${MOCHA_VERSION}/test/acceptance/glob/glob.sh
-
-REPLACE_BASH+=	tests/travis/*.sh
-
-#REPLACE_PHP+=	console
-
-#REPLACE_PYTHON+=misc/log-analytics/import_logs.py
 
 MOCHA_VERSION=	2.2.5
 Q_VERSION=	1.4.1
