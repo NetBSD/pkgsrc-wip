@@ -12,6 +12,9 @@ COMMENT=	Extended/Enhanced Links 0.13
 LICENSE=	gnu-gpl-v2
 
 #NO_CHECKSUM=	Yes
+# Note: the distname stays the same even though the actual dist (checksum) changes every so often
+#       so update the below every time changes occur to the distinfo
+DIST_SUBDIR= elinks-20160312
 
 CONFLICTS+=	elinks-[0-9]*
 LUA_VERSIONS_ACCEPTED=	51
