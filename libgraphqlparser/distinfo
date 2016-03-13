@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (libgraphqlparser-0.4.1.tar.gz) = c6ae0699d656187e748ffaa8730d85990467fd41
+RMD160 (libgraphqlparser-0.4.1.tar.gz) = 1f880a5379be5e863d8f79097221b463e7af9e22
+SHA512 (libgraphqlparser-0.4.1.tar.gz) = 4004e104cde4ef7385fb2fec6c85ef5b46bb914d358e984a5a0f5739252f697acf2aef404de0d18fdbf507069894b14df380d0268b402dafd3b5f2e853ce9c04
+Size (libgraphqlparser-0.4.1.tar.gz) = 64255 bytes
+SHA1 (patch-CMakeLists.txt) = de2c208c08d2023c9e0cd637b17b28a46b9ad6c6
