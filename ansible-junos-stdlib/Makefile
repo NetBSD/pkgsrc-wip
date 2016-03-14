@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_TOOLS=	pax bash
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	27 26
+PYTHON_VERSIONS_ACCEPTED=	27
 
 REPLACE_PYTHON+=	docs/ansible2rst.py
 REPLACE_PYTHON+=	library/junos_get_config
