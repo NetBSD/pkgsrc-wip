@@ -16,7 +16,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	35 34 33 27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
