@@ -44,7 +44,7 @@ DEPENDS+=	p5-Alien-wxWidgets-[0-9]*:../../x11/p5-Alien-wxWidgets
 DEPENDS+=	p5-Wx-Perl-ProcessStream-[0-9]*:../../x11/p5-Wx-Perl-ProcessStream
 DEPENDS+=	p5-Wx-[0-9]*:../../x11/p5-Wx
 DEPENDS+=	py27-wxWidgets-[0-9]*:../../x11/py-wxWidgets
-DEPENDS+=	ruby200-wxruby-[0-9]*:../../x11/ruby-wxruby
+DEPENDS+=	ruby21-wxruby-[0-9]*:../../x11/ruby-wxruby
 DEPENDS+=	wxGTK28-contrib-[0-9]*:../../x11/wxGTK28-contrib
 DEPENDS+=	wxGTK28-[0-9]*:../../x11/wxGTK28
 

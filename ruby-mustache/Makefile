@@ -9,7 +9,7 @@ HOMEPAGE=	https://mustache.github.io/
 COMMENT=	Logic-less Ruby templates
 LICENSE=	mit
 
-RUBY_VERSION_SUPPORTED=		200 21
+RUBY_VERSION_SUPPORTED=		21
 
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1/ ${PKGMANDIR}/man5/
 
