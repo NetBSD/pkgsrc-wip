@@ -3956,7 +3956,6 @@ SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tamago-tsunagi
 SUBDIR+=	tardy
-SUBDIR+=	tarsnap-gui
 SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
