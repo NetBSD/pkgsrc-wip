@@ -10,7 +10,7 @@ HOMEPAGE=		http://elixir-lang.org/
 COMMENT=		Functional, meta-programming aware language built on top of Erlang VM
 LICENSE=		apache-2.0
 
-BUILD_DEPENDS+=		erlang-[0-9]*:../../lang/erlang
+BUILD_DEPENDS+=		erlang>=18.0:../../lang/erlang
 
 WRKSRC=${WRKDIR}/${PKGBASE}-${PKGVERSION_NOREV}
 
