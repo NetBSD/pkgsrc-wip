@@ -5,9 +5,8 @@ BUILDLINK_TREE+=	gnome-panel
 .if !defined(GNOME_PANEL_BUILDLINK3_MK)
 GNOME_PANEL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.12.1nb3
-BUILDLINK_ABI_DEPENDS.gnome-panel+=	gnome-panel>=2.32.1nb43
-BUILDLINK_PKGSRCDIR.gnome-panel?=	../../wip/gnome-panel
+BUILDLINK_API_DEPENDS.gnome-panel+=     gnome-panel>=3.16.1
+BUILDLINK_PKGSRCDIR.gnome-panel?=       ../../wip/gnome-panel
 
 pkgbase:= gnome-panel
 .include "../../mk/pkg-build-options.mk"
@@ -21,8 +20,8 @@ pkgbase:= gnome-panel
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
+#.include "../../devel/libgnome/buildlink3.mk"
+#.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

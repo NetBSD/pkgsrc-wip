@@ -52,7 +52,7 @@ GCONF_SCHEMAS+=	window-list.schemas
 GCONF_ENTRIES=		panel-default-setup.entries
 
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.15.1
-BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0
+#BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-panel
 PKG_SUPPORTED_OPTIONS=	evolution
@@ -74,8 +74,8 @@ SUBST_SED.noundef=	-e 's/ -no-undefined//g'
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
+#.include "../../devel/libgnome/buildlink3.mk"
+#.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
 .include "../../wip/libgweather/buildlink3.mk"
@@ -96,7 +96,6 @@ BUILDLINK_API_DEPENDS.gnome-menus+= gnome-menus>=2.28.0
 #.include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
 #.include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
