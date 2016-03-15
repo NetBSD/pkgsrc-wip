@@ -55,7 +55,6 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0
 BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.14.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
