@@ -62,3 +62,6 @@ ${PYSITELIB}/neovim/plugin/decorators.pyo
 ${PYSITELIB}/neovim/plugin/host.py
 ${PYSITELIB}/neovim/plugin/host.pyc
 ${PYSITELIB}/neovim/plugin/host.pyo
+${PYSITELIB}/neovim/plugin/script_host.py
+${PYSITELIB}/neovim/plugin/script_host.pyc
+${PYSITELIB}/neovim/plugin/script_host.pyo
