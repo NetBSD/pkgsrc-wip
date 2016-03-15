@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
