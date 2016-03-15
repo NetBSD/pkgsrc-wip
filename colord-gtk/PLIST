@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/cd-convert
+include/colord-1/colord-gtk.h
+include/colord-1/colord-gtk/cd-sample-widget.h
+include/colord-1/colord-gtk/cd-sample-window.h
+include/colord-1/colord-gtk/cd-version.h
+include/colord-1/colord-gtk/cd-window-sync.h
+include/colord-1/colord-gtk/cd-window.h
+lib/girepository-1.0/ColordGtk-1.0.typelib
+lib/libcolord-gtk.la
+lib/locale/en_GB/LC_MESSAGES/colord-gtk.mo
+lib/pkgconfig/colord-gtk.pc
+share/gir-1.0/ColordGtk-1.0.gir
