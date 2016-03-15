@@ -51,7 +51,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.37.6
 .include "../../lang/python/application.mk"
 BUILDLINK_API_DEPENDS.enchant+=		enchant>=1.2.0
 .include "../../wip/evolution-data-server/buildlink3.mk"
-.include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../wip/gnome-keyring/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
