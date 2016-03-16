@@ -1,11 +1,12 @@
 # $NetBSD: Makefile,v 1.20 2015/09/12 20:03:01 tnn Exp $
 #
 
-DISTNAME=	Viewnior-1.6
+DISTNAME=	viewnior-1.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xsisqox/}
+GITHUB_PROJECT=	Viewnior
 GITHUB_TAG=	viewnior-${PKGVERSION_NOREV}
-# For some reason the initial 'v' is dropped.
+# For some reason the initial 'v' of the tag is dropped.
 # Perhaps it is supposed to handle tags similar to 'v0.0'.
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
