@@ -1,7 +1,8 @@
 # $NetBSD$
 
 PKGNAME=	ldc-0.17.0
-DISTNAME=	${PKGNAME}-src
+PKGREVISION=	1
+DISTNAME=	${PKGNAME_NOREV}-src
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ldc-developers/}
@@ -94,6 +95,6 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/d/core/threadasm.S.orig
 	${RM} ${DESTDIR}${PREFIX}/include/d/core/time.d.orig
 
-.include "../../wip/llvm/buildlink3.mk"
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
