@@ -15,8 +15,6 @@ HOMEPAGE=	http://siyanpanayotov.com/project/viewnior/
 COMMENT=	Viewnior is a fast and simple image viewer
 LICENSE=	gnu-gpl-v3
 
-MAKE_JOBS_SAFE=	no
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
