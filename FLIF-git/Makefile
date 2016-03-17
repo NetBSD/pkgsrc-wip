@@ -5,7 +5,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FLIF-hub/}
 
 GIT_REPOSITORIES=	flif
-GIT_REPO.flif=		https://github.com/FLIF-hub/flif.git
+GIT_REPO.flif=		git://github.com/FLIF-hub/flif.git
 WRKSRC=			${WRKDIR}/flif
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
