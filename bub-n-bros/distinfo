@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.4 2007/09/15 00:19:22 thomasklausner Exp $
 
-SHA1 (bubbros-1.6.tar.gz) = 27bc2f4cfe8212cda6263fbea69baebfe0325081
-RMD160 (bubbros-1.6.tar.gz) = b0efd7f75b3a33aa6bb744c9bb34fcb7cdf00abb
-Size (bubbros-1.6.tar.gz) = 11546109 bytes
+SHA1 (bubbros-1.6.2.tar.gz) = b1d593176a5088b0649fa44f6acdcc121481b729
+RMD160 (bubbros-1.6.2.tar.gz) = 2e335e8519650ab0af4ece352737b7d1767d45bb
+SHA512 (bubbros-1.6.2.tar.gz) = a05fca8e31655e4bade60cd085f29796d789b349f005c715bf0e37e51f0bacb9d8b9650f3b10470917ee25421d32443e01132816a2f508e359302aa2c6d18ddb
+Size (bubbros-1.6.2.tar.gz) = 11568771 bytes
 SHA1 (patch-aa) = b649a1d9577aa7b085d4b2cab358e149c7d4af5f
