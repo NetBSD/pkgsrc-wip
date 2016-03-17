@@ -1,2 +1,3 @@
 $NetBSD: distinfo,v 1.5 2014/03/23 14:01:50 thomasklausner Exp $
 
+SHA1 (patch-pan_data-impl_groups.cc) = edfe8fb944a0ff50bd15cf00044f849e503bbecb
