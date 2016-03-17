@@ -1,5 +1,5 @@
 # $NetBSD$
-#
+
 DISTNAME=	Osmose-${PKGVERSION_NOREV:S/./-/g}-QT
 PKGNAME=	osmose-0.9.96
 CATEGORIES=	emulators
@@ -7,7 +7,7 @@ MASTER_SITES=	http://bcz.asterope.fr/osmose/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bcz.emu-france.com/index.htm
+HOMEPAGE=	http://bcz.asterope.fr/osmose.htm
 COMMENT=	Sega Master System/Game Gear emulator
 LICENSE=	gnu-gpl-v3
 
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
-QMAKE=${QTDIR}/bin/qmake
+QMAKE=	${QTDIR}/bin/qmake
 
 do-configure:
 	cd ${WRKSRC} && \
