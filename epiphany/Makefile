@@ -30,7 +30,7 @@ PKGCONFIG_OVERRIDE=	data/epiphany.pc.in
 GCONF_SCHEMAS=		Epiphany.enums.xml
 GCONF_SCHEMAS+=		epiphany.gschema.xml
 
-.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
