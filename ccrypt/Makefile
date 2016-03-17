@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2012/09/24 18:26:52 asau Exp $
 #
 
-DISTNAME=	ccrypt-1.9
+DISTNAME=	ccrypt-1.10
 CATEGORIES=	security
 MASTER_SITES=	http://www.mathstat.dal.ca/~selinger/ccrypt/download/
 
