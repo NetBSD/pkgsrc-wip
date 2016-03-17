@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 
 BUILD_DIRS=	src
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../graphics/png/buildlink3.mk"
