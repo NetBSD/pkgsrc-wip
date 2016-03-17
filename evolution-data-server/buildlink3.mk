@@ -15,7 +15,6 @@ BUILDLINK_PKGSRCDIR.evolution-data-server?=	../../wip/evolution-data-server
 .include "../../devel/nss/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
 .endif	# EVOLUTION_DATA_SERVER_BUILDLINK3_MK
