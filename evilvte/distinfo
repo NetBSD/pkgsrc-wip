@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2008/11/27 13:04:15 rsmarples Exp $
 
-SHA1 (evilvte-0.4.3.tar.gz) = c295667d99b602ca03f75f40275d308eabfa0333
-RMD160 (evilvte-0.4.3.tar.gz) = a8b234a6612fc10e3fa5a1a4c617b3e9eab1b94f
-Size (evilvte-0.4.3.tar.gz) = 41374 bytes
-SHA1 (patch-aa) = e66e78411ba971c4298a59cdc9eebae380af5410
+SHA1 (evilvte-0.5.1.tar.gz) = 6299036c8e79af83f90a7a9f2cc3895a1cd62ed0
+RMD160 (evilvte-0.5.1.tar.gz) = f583b1a87b06c36abc743a09567a2f8bed866c9b
+SHA512 (evilvte-0.5.1.tar.gz) = 0f1416a6d04bf8299a073c4907b9a60a9257a695a1d91a913bc417ba2aaf74e5bc941e7937126b1a01e777f8af633a0427c075ddc96c43e8a532c93872f9ec4f
+Size (evilvte-0.5.1.tar.gz) = 71446 bytes
