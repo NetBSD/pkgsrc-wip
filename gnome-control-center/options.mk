@@ -11,5 +11,5 @@ PLIST_VARS+=		evolution
 .if !empty(PKG_OPTIONS:Mevolution)
 CONFIGURE_ARGS+=	--enable-aboutme
 PLIST.evolution=	yes
-.include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../wip/evolution-data-server/buildlink3.mk"
 .endif
