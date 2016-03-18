@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	i3lock-2.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://i3wm.org/i3lock/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,13 +18,15 @@ USE_LANGUAGES=	c99
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
 
-SPECIAL_PERMS+=	bin/i3lock ${SETUID_ROOT_PERMS}
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/${PKGBASE} ${EGDIR}
+CONF_FILES+=		${EGDIR}/pam.d/i3lock /etc/pam.d/i3lock
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/i3lock ${DESTDIR}${PREFIX}/bin/
+EGDIR=	${PREFIX}/share/examples/${PKGBASE}
+
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/i3lock.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/pam.d ${DESTDIR}${EGDIR}
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
