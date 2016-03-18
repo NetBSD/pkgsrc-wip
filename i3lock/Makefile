@@ -14,9 +14,6 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c99
 
-# print options before building...
-MAKE_JOBS_SAFE=	no
-
 MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	NOLIBCAIRO=1
 
