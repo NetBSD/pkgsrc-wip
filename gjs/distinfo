@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/08/04 15:41:03 ryo-on Exp $
 
-SHA1 (gjs-0.7.14.tar.bz2) = d9955428f5cbe7a6714197da1e4dbe5d6d60360d
-RMD160 (gjs-0.7.14.tar.bz2) = f3183aaf98c6b37c6bf445e6309cd7f1f516a915
-Size (gjs-0.7.14.tar.bz2) = 515857 bytes
-SHA1 (patch-configure) = b4b591072ef1cecf3735041c00babd4249d53770
-SHA1 (patch-modules_console.c) = 61ece06f09e3c238fea722fbb33a3e14ddf332e3
+SHA1 (gjs-1.44.0.tar.xz) = c38009d51c194f2c75c506cd5826d67ba44c81c8
+RMD160 (gjs-1.44.0.tar.xz) = 7ae9b2828d113d65ff2fc15b555f3cae6e668160
+SHA512 (gjs-1.44.0.tar.xz) = 3866e124f05221fd47275951f8c2c6954ba28a9b1443cc3c01789284709e2dd69f496efa094e6ddc9fcae563b9def68441aa398c1488076701fa1e873f9b9735
+Size (gjs-1.44.0.tar.xz) = 486144 bytes

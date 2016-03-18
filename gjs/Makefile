@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
 #
 
-DISTNAME=	gjs-0.7.14
+DISTNAME=	gjs-1.44.0
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/0.7/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/1.44/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Gjs
@@ -31,15 +31,15 @@ SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 
 #SUBST_CLASSES+=			libjs
 #SUBST_STAGE.libjs=		pre-configure
-#SUBST_MESSAGE.fix-python=	Convert libjs to libmozjs185
+#SUBST_MESSAGE.fix-python=	Convert libjs to libmozjs24
 #SUBST_FILES.fix-python+=	scripts/make-tests
 #SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 
-BUILDLINK_TRANSFORM+=	l:mozjs:mozjs185
+BUILDLINK_TRANSFORM+=	l:mozjs:mozjs24
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../wip/spidermonkey185/buildlink3.mk"
+.include "../../wip/spidermonkey24/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
