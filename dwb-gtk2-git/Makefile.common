@@ -9,7 +9,6 @@ MASTER_SITES=	https://bitbucket.org/portix/dwb/get/
 
 GIT_REPOSITORIES=	dwb
 GIT_REPO.dwb=	http://bitbucket.org/portix/dwb.git
-GIT_REVISION.dwb=	dda5aa74a63abfdbde6c52ad067de628f6b7c615
 WRKSRC=	${WRKDIR}/dwb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
