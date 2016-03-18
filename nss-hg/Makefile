@@ -17,6 +17,8 @@ WRKSRC=			${WRKDIR}/nss
 
 USE_LANGUAGES=		c c++
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
 # wants to use zlib before making sure it's built
 MAKE_JOBS_SAFE=		no
 
