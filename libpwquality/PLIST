@@ -1,10 +1,10 @@
 @comment $NetBSD$
 bin/pwmake
 bin/pwscore
+etc/security/pwquality.conf
 include/pwquality.h
 lib/libpwquality.la
 lib/pkgconfig/pwquality.pc
-${PYSITELIB}/pwquality-${PKGVERSION}-py2.7.egg-info
 ${PYSITELIB}/pwquality.so
 man/man1/pwmake.1
 man/man1/pwscore.1
