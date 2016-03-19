@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/08/14 01:13:50 outpaddling Exp $
+$NetBSD$
 
-SHA1 (webbrowser-0.3.tar.gz) = 822496a2eab4beefef30c955731754b2660c2d93
-RMD160 (webbrowser-0.3.tar.gz) = 6215cdfd5985c5ebbb6ceb34402e73fb23e98b36
-Size (webbrowser-0.3.tar.gz) = 1916 bytes
+SHA1 (webbrowser-0.3.tar.xz) = c3101bc2afc2a9ef7cb29a7f8d47a17e461ec616
+RMD160 (webbrowser-0.3.tar.xz) = 28fd4efebcc1dbdc8cdb35e2c9e4ca605857484d
+Size (webbrowser-0.3.tar.xz) = 1656 bytes

@@ -4,6 +4,7 @@
 DISTNAME=	webbrowser-0.3
 CATEGORIES=	www
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
