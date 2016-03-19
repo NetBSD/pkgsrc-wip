@@ -45,13 +45,11 @@ CONFIGURE_ARGS+=	--with-system-nss
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus --enable-gnomeui
-CONFIGURE_ARGS+=	--enable-libnotify
+CONFIGURE_ARGS+=	--enable-dbus --enable-gnomeui
 CONFIGURE_ARGS+=	--enable-extensions=gnomevfs
 PLIST_SRC+=		PLIST.gnome
 .else
-CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
-CONFIGURE_ARGS+=	--disable-libnotify
+CONFIGURE_ARGS+=	--disable-dbus --disable-gnomeui
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)

@@ -1,8 +1,8 @@
 $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 
---- configure.in.orig	2015-12-29 06:56:12.000000000 +0000
-+++ configure.in
-@@ -3553,11 +3553,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+--- old-configure.in.orig	2016-03-18 22:27:07.000000000 +0000
++++ old-configure.in
+@@ -2722,11 +2722,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -12,10 +12,10 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 -                     #endif
 -                     ],
 +                     #endif ],
-                    MOZ_NATIVE_JPEG=1,
+                    MOZ_SYSTEM_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -5039,6 +5035,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -4014,6 +4010,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_RAW=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -8051,6 +8050,48 @@ if test "$USE_FC_FREETYPE"; then
+@@ -6937,6 +6936,48 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================

@@ -1,13 +1,13 @@
 $NetBSD: patch-config_Makefile.in,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
 
---- config/Makefile.in.orig	2015-10-25 13:54:45.000000000 +0000
+--- config/Makefile.in.orig	2016-03-18 22:27:09.000000000 +0000
 +++ config/Makefile.in
-@@ -73,6 +73,8 @@ export:: $(export-preqs)
- 		-DMOZ_NATIVE_LIBEVENT=$(MOZ_NATIVE_LIBEVENT) \
- 		-DMOZ_NATIVE_LIBVPX=$(MOZ_NATIVE_LIBVPX) \
- 		-DMOZ_NATIVE_ICU=$(MOZ_NATIVE_ICU) \
+@@ -73,6 +73,8 @@ $(STL_WRAPPERS_SENTINEL): $(srcdir)/make
+ 	$(PYTHON) $(srcdir)/nsinstall.py -t stl_wrappers $(DIST)
+ 	touch $(STL_WRAPPERS_SENTINEL)
+ 
 +		-DMOZ_NATIVE_GRAPHITE2=$(MOZ_NATIVE_GRAPHITE2) \
 +		-DMOZ_NATIVE_HARFBUZZ=$(MOZ_NATIVE_HARFBUZZ) \
- 		$(srcdir)/system-headers | $(PERL) $(topsrcdir)/nsprpub/config/make-system-wrappers.pl system_wrappers
- 	$(INSTALL) system_wrappers $(DIST)
+ export:: $(STL_WRAPPERS_SENTINEL)
  
+ GARBAGE += $(STL_WRAPPERS_SENTINEL)

@@ -5,7 +5,7 @@
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
 
-GNU_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
@@ -35,15 +35,8 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 
 CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--disable-pedantic
-CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
-CONFIGURE_ARGS+=	--enable-gstreamer=1.0
-#CONFIGURE_ARGS+=	--disable-gstreamer
-CONFIGURE_ARGS+=	--enable-svg
-CONFIGURE_ARGS+=	--enable-mathml
-CONFIGURE_ARGS+=	--enable-pango
 CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
@@ -59,20 +52,15 @@ CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 #configure: error: System SQLite library is not compiled with SQLITE_ENABLE_DBSTAT_VTAB.
 #CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
-CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
 CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 
 CONFIGURE_ARGS+=	--disable-elf-hack
-CONFIGURE_ARGS+=	--disable-elf-dynstr-gc
 CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--enable-gio
 CONFIGURE_ARGS+=	--enable-extensions=gio
-CONFIGURE_ARGS+=	--disable-mochitest
-CONFIGURE_ARGS+=	--enable-canvas
 #CONFIGURE_ARGS+=	--enable-readline
-CONFIGURE_ARGS+=	--disable-installer
 CONFIGURE_ARGS+=	--enable-url-classifier
 #CONFIGURE_ARGS+=	--enable-startup-notification
 # Disabled from https://bugzilla.mozilla.org/show_bug.cgi?id=977400
