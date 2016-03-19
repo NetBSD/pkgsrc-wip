@@ -13,14 +13,17 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		automake autoconf aclocal gmake
 GNU_CONFIGURE=		yes
 
+CONFIG_DIR=		share/examples/pwquality
+
 CONFIGURE_ARGS+=	--disable-pam
 CONFIGURE_ARGS+=	--with-python-binary=${PYTHONBIN}
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${CONFIG_DIR}
 
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/security/
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/security
 
 PY_PATCHPLIST=	yes
-EGDIR=		etc/security
-CONF_FILES=	${EGDIR}/pwquality.conf \
+
+CONF_FILES=	${CONFIG_DIR}/security/pwquality.conf \
 			${PKG_SYSCONFDIR}/security/pwquality.conf
 
 pre-configure:
