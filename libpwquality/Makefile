@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${CONFIG_DIR}
 
 INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/security
 
+PKGCONFIG_OVERRIDE=	src/pwquality.pc.in
+
 PY_PATCHPLIST=	yes
 
 CONF_FILES=	${CONFIG_DIR}/security/pwquality.conf \

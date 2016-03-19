@@ -1,0 +1,13 @@
+$NetBSD$
+
+Fix pkg-config file to include libdir.
+
+--- src/pwquality.pc.in.orig	2012-12-19 16:52:09.000000000 +0000
++++ src/pwquality.pc.in
+@@ -1,5 +1,5 @@
+ Name: pwquality
+ Description: Password quality checker
+ Version: @PACKAGE_VERSION@
+-Libs: -lpwquality
++Libs: -L${libdir} -lpwquality
+ Libs.private: -lcrack
