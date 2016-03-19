@@ -16,10 +16,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-pam
 CONFIGURE_ARGS+=	--with-python-binary=${PYTHONBIN}
 
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/security/
+
 PY_PATCHPLIST=	yes
-# XXX what to do with the conf files?
-EGDIR=		python
-CONF_FILES=	${EGDIR}/security/pwquality.conf ${PKG_SYSCONFDIR}/security/pwquality.conf
+EGDIR=		etc/security
+CONF_FILES=	${EGDIR}/pwquality.conf \
+			${PKG_SYSCONFDIR}/security/pwquality.conf
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
