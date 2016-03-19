@@ -2,7 +2,7 @@ $NetBSD$
 
 Avoid using Linux-specific headers when not compiling for Linux.
 
---- src/xlib/main.c.orig	2015-12-29 21:26:38.000000000 +0000
+--- src/xlib/main.c.orig	2016-03-18 02:00:21.000000000 +0000
 +++ src/xlib/main.c
 @@ -73,8 +73,9 @@ void postmessage(uint32_t msg, uint16_t 
      XFlush(display);

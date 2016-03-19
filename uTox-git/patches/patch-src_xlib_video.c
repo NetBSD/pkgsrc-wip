@@ -2,9 +2,9 @@ $NetBSD$
 
 The volatile macro is used in {amd64,i386,machine}/mcontext.h on NetBSD.
 
---- src/xlib/video.c.orig	2015-12-29 21:26:38.000000000 +0000
+--- src/xlib/video.c.orig	2016-03-18 02:00:21.000000000 +0000
 +++ src/xlib/video.c
-@@ -151,6 +151,10 @@ _Bool video_init(void *handle) {
+@@ -152,6 +152,10 @@ _Bool video_init(void *handle) {
      if(isdesktop(handle)) {
          utox_v4l_fd = -1;
  

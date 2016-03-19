@@ -2,10 +2,11 @@ $NetBSD$
 
 Treat non-Cygwin platforms similarly.
 Use dl library only on Linux.
+Allow separate destination for manuals.
 
---- Makefile.orig	2015-12-29 21:26:38.000000000 +0000
+--- Makefile.orig	2016-03-18 02:00:21.000000000 +0000
 +++ Makefile
-@@ -18,7 +18,24 @@ ifeq ($(FILTER_AUDIO), 1)
+@@ -18,7 +18,25 @@ ifeq ($(FILTER_AUDIO), 1)
  	CFLAGS += -DAUDIO_FILTERING
  endif
  
@@ -16,8 +17,9 @@ Use dl library only on Linux.
 +	CFLAGS  += -static
 +	LDFLAGS += /usr/x86_64-w64-mingw32/sys-root/mingw/lib/libwinpthread.a
 +
-+	CFLAGS  += $(shell x86_64-w64-mingw32-pkg-config --cflags $(DEPS))
-+	LDFLAGS += $(shell x86_64-w64-mingw32-pkg-config --libs   $(DEPS))
++	PKG_CONFIG = x86_64-w64-mingw32-pkg-config
++	CFLAGS  += $(shell $(PKG_CONFIG) --cflags $(DEPS))
++	LDFLAGS += $(shell $(PKG_CONFIG) --libs   $(DEPS))
 +
 +	LDFLAGS += -liphlpapi -lws2_32 -lgdi32 -lmsimg32 -ldnsapi -lcomdlg32
 +	LDFLAGS += -Wl,-subsystem,windows -lwinmm -lole32 -loleaut32 -lstrmiids
@@ -31,20 +33,19 @@ Use dl library only on Linux.
  	OUT_FILE = utox
  
  	DEPS += fontconfig freetype2 x11 xext xrender
-@@ -41,8 +58,10 @@ ifeq ($(UNAME_S), Linux)
- 	endif
+@@ -44,7 +62,10 @@ ifeq ($(UNAME_S), Linux)
  
- 	CFLAGS += $(shell pkg-config --cflags $(DEPS))
--
+ 	CFLAGS += $(shell $(PKG_CONFIG) --cflags $(DEPS))
+ 
 -	LDFLAGS += -lresolv -ldl
 +	LDFLAGS += -lresolv
 +	ifeq ($(UNAME_S), Linux)
 +		LDFLAGS += -ldl
 +	endif
- 	LDFLAGS += $(shell pkg-config --libs $(DEPS))
+ 	LDFLAGS += $(shell $(PKG_CONFIG) --libs $(DEPS))
  
  	OS_SRC = $(wildcard src/xlib/*.c)
-@@ -50,23 +69,6 @@ ifeq ($(UNAME_S), Linux)
+@@ -52,30 +73,13 @@ ifeq ($(UNAME_S), Linux)
  
  	TRAY_OBJ = icons/utox-128x128.o
  	TRAY_GEN = $(LD) -r -b binary icons/utox-128x128.png -o
@@ -54,8 +55,9 @@ Use dl library only on Linux.
 -	CFLAGS  += -static
 -	LDFLAGS += /usr/x86_64-w64-mingw32/sys-root/mingw/lib/libwinpthread.a
 -
--	CFLAGS  += $(shell x86_64-w64-mingw32-pkg-config --cflags $(DEPS))
--	LDFLAGS += $(shell x86_64-w64-mingw32-pkg-config --libs   $(DEPS))
+-	PKG_CONFIG = x86_64-w64-mingw32-pkg-config
+-	CFLAGS  += $(shell $(PKG_CONFIG) --cflags $(DEPS))
+-	LDFLAGS += $(shell $(PKG_CONFIG) --libs   $(DEPS))
 -
 -	LDFLAGS += -liphlpapi -lws2_32 -lgdi32 -lmsimg32 -ldnsapi -lcomdlg32
 -	LDFLAGS += -Wl,-subsystem,windows -lwinmm -lole32 -loleaut32 -lstrmiids
@@ -68,14 +70,21 @@ Use dl library only on Linux.
  endif
  
  
-@@ -123,8 +125,8 @@ install: utox
- 	install -m 644 src/utox.desktop $(DESTDIR)$(PREFIX)/share/applications/utox.desktop
- 	if [ "$(UNITY)" -eq "1" ]; then echo "X-MessagingMenu-UsesChatSection=true" >> $(DESTDIR)$(PREFIX)/share/applications/utox.desktop; fi
+ DESTDIR ?=
+ PREFIX ?= /usr/local
+ DATAROOTDIR ?= $(PREFIX)/share
++MANROOTDIR ?= $(PREFIX)/man
  
--	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
--	install -m 644 src/utox.1 $(DESTDIR)$(PREFIX)/share/man/man1/utox.1
-+	mkdir -p $(DESTDIR)$(PREFIX)/man/man1
-+	install -m 644 src/utox.1 $(DESTDIR)$(PREFIX)/man/man1/utox.1
+ SRC = $(wildcard src/*.c)
+ HEADERS = $(wildcard src/*.h src/*/*.h langs/*.h)
+@@ -127,8 +131,8 @@ install: utox
+ 	install -m 644 src/utox.desktop $(DESTDIR)$(DATAROOTDIR)/applications/utox.desktop
+ 	if [ "$(UNITY)" -eq "1" ]; then echo "X-MessagingMenu-UsesChatSection=true" >> $(DESTDIR)$(DATAROOTDIR)/applications/utox.desktop; fi
+ 
+-	mkdir -p $(DESTDIR)$(DATAROOTDIR)/man/man1
+-	install -m 644 src/utox.1 $(DESTDIR)$(DATAROOTDIR)/man/man1/utox.1
++	mkdir -p $(DESTDIR)$(MANROOTDIR)/man1
++	install -m 644 src/utox.1 $(DESTDIR)$(MANROOTDIR)/man1/utox.1
  
  $(OBJ): %.o: %.c $(HEADERS)
  	@echo "  CC    $@"
