@@ -1,13 +1,13 @@
 $NetBSD: patch-config_Makefile.in,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
 
---- config/Makefile.in.orig	2016-03-18 22:27:09.000000000 +0000
+--- config/Makefile.in.orig	2016-03-19 10:59:50.000000000 +0000
 +++ config/Makefile.in
-@@ -73,6 +73,8 @@ $(STL_WRAPPERS_SENTINEL): $(srcdir)/make
- 	$(PYTHON) $(srcdir)/nsinstall.py -t stl_wrappers $(DIST)
- 	touch $(STL_WRAPPERS_SENTINEL)
- 
+@@ -46,6 +46,8 @@ export:: $(export-preqs)
+ 		-DMOZ_SYSTEM_ZLIB=$(MOZ_SYSTEM_ZLIB) \
+ 		-DMOZ_SYSTEM_PNG=$(MOZ_SYSTEM_PNG) \
+ 		-DMOZ_SYSTEM_JPEG=$(MOZ_SYSTEM_JPEG) \
 +		-DMOZ_NATIVE_GRAPHITE2=$(MOZ_NATIVE_GRAPHITE2) \
 +		-DMOZ_NATIVE_HARFBUZZ=$(MOZ_NATIVE_HARFBUZZ) \
- export:: $(STL_WRAPPERS_SENTINEL)
- 
- GARBAGE += $(STL_WRAPPERS_SENTINEL)
+ 		-DMOZ_SYSTEM_LIBEVENT=$(MOZ_SYSTEM_LIBEVENT) \
+ 		-DMOZ_SYSTEM_LIBVPX=$(MOZ_SYSTEM_LIBVPX) \
+ 		-DMOZ_SYSTEM_ICU=$(MOZ_SYSTEM_ICU) \
