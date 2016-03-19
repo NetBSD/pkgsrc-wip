@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PY_PATCHPLIST=		yes
+# does not follow this convention
+PY_PEP3147=		no
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
