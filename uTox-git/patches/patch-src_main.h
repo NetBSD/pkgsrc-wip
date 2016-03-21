@@ -2,7 +2,7 @@ $NetBSD$
 
 The volatile macro is used in {amd64,i386,machine}/mcontext.h on NetBSD.
 
---- src/main.h.orig	2016-03-08 20:06:44.000000000 +0000
+--- src/main.h.orig	2016-03-21 09:05:38.000000000 +0000
 +++ src/main.h
 @@ -33,7 +33,7 @@
  #define countof(x) (sizeof(x)/sizeof(*(x)))

@@ -4,15 +4,19 @@ Treat non-Cygwin platforms similarly.
 Use dl library only on Linux.
 Allow separate destination for manuals.
 
---- Makefile.orig	2016-03-18 02:00:21.000000000 +0000
+--- Makefile.orig	2016-03-21 09:05:38.000000000 +0000
 +++ Makefile
-@@ -18,7 +18,25 @@ ifeq ($(FILTER_AUDIO), 1)
+@@ -19,7 +19,29 @@ ifeq ($(FILTER_AUDIO), 1)
  	CFLAGS += -DAUDIO_FILTERING
  endif
  
 -ifeq ($(UNAME_S), Linux)
 +ifeq ($(UNAME_O), Cygwin)
 +	OUT_FILE = utox.exe
++
++	ifeq ($(XP), 1)
++		CFLAGS += -D__WIN_LEGACY
++	endif
 +
 +	CFLAGS  += -static
 +	LDFLAGS += /usr/x86_64-w64-mingw32/sys-root/mingw/lib/libwinpthread.a
@@ -33,7 +37,7 @@ Allow separate destination for manuals.
  	OUT_FILE = utox
  
  	DEPS += fontconfig freetype2 x11 xext xrender
-@@ -44,7 +62,10 @@ ifeq ($(UNAME_S), Linux)
+@@ -45,7 +67,10 @@ ifeq ($(UNAME_S), Linux)
  
  	CFLAGS += $(shell $(PKG_CONFIG) --cflags $(DEPS))
  
@@ -45,12 +49,16 @@ Allow separate destination for manuals.
  	LDFLAGS += $(shell $(PKG_CONFIG) --libs $(DEPS))
  
  	OS_SRC = $(wildcard src/xlib/*.c)
-@@ -52,30 +73,13 @@ ifeq ($(UNAME_S), Linux)
+@@ -53,34 +78,13 @@ ifeq ($(UNAME_S), Linux)
  
  	TRAY_OBJ = icons/utox-128x128.o
  	TRAY_GEN = $(LD) -r -b binary icons/utox-128x128.png -o
 -else ifeq ($(UNAME_O), Cygwin)
 -	OUT_FILE = utox.exe
+-
+-	ifeq ($(XP), 1)
+-		CFLAGS += -D__WIN_LEGACY
+-	endif
 -
 -	CFLAGS  += -static
 -	LDFLAGS += /usr/x86_64-w64-mingw32/sys-root/mingw/lib/libwinpthread.a
@@ -77,7 +85,7 @@ Allow separate destination for manuals.
  
  SRC = $(wildcard src/*.c)
  HEADERS = $(wildcard src/*.h src/*/*.h langs/*.h)
-@@ -127,8 +131,8 @@ install: utox
+@@ -132,8 +136,8 @@ install: utox
  	install -m 644 src/utox.desktop $(DESTDIR)$(DATAROOTDIR)/applications/utox.desktop
  	if [ "$(UNITY)" -eq "1" ]; then echo "X-MessagingMenu-UsesChatSection=true" >> $(DESTDIR)$(DATAROOTDIR)/applications/utox.desktop; fi
  
