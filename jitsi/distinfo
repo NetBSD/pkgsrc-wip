@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (jitsi-src-2.8.5426.zip) = 97e2b6d964d2a6f7dc1ff87ea9335d106655f2bc
+RMD160 (jitsi-src-2.8.5426.zip) = 54a858128789bdd0c83205aa3e12fb3d99163054
+SHA512 (jitsi-src-2.8.5426.zip) = 9a44f3af10620e42a4de87967c74084f6d07eea433c69f9e2e0ddd529723777ac48bcd250d5717872f8cea926cdf237cbbaf44cbeaba1ab201f23a34d68d7841
+Size (jitsi-src-2.8.5426.zip) = 67515973 bytes
+SHA1 (patch-build.xml) = 12366e729c31cb98d35197de4f2de24ff6d5336c
+SHA1 (patch-resources_install_generic_run.sh) = 69d104f900df2e6c1a6ab7192d75754a0d65c164
+SHA1 (patch-src_native_hwaddressretriever_HardwareAddressRetriever__unix.c) = 21b8e86460954b9240e02b8dfd3f3612b73fb356

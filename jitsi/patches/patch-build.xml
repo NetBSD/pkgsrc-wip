@@ -1,0 +1,33 @@
+$NetBSD$
+
+--- build.xml.orig	2015-02-10 17:12:09.000000000 +0000
++++ build.xml
+@@ -12,6 +12,7 @@
+     <property name="bundles.dest.win" value="${bundles.dest}/os-specific/windows"/>
+     <property name="bundles.dest.lin" value="${bundles.dest}/os-specific/linux"/>
+     <property name="bundles.dest.sol" value="${bundles.dest}/os-specific/solaris"/>
++    <property name="bundles.dest.freebsd" value="${bundles.dest}/os-specific/freebsd"/>
+     <property name="bundles.dest.freebsd" value="${bundles.dest}/os-specific/freebsd"/>
+     <property name="bundles.dest.android" value="${bundles.dest}/os-specific/android"/>
+     <property name="doc" value="doc"/>
+@@ -25,6 +26,8 @@
+     <property name="lib.mac.noinst" value="${lib}/os-specific/mac/installer-exclude"/>
+     <property name="lib.sol" value="${lib}/os-specific/solaris"/>
+     <property name="lib.sol.noinst" value="${lib}/os-specific/solaris/installer-exclude"/>
++    <property name="lib.netbsd" value="${lib}/os-specific/freebsd"/>
++    <property name="lib.netbsd.noinst" value="${lib}/os-specific/freebsd/installer-exclude"/>
+     <property name="lib.freebsd" value="${lib}/os-specific/freebsd"/>
+     <property name="lib.freebsd.noinst" value="${lib}/os-specific/freebsd/installer-exclude"/>
+     <property name="lib.noinst" value="${lib}/installer-exclude"/>
+@@ -168,6 +171,11 @@
+         <isset property="is.running.macos"/>
+     </condition>
+ 
++    <!-- NetBSD specific properties -->
++    <condition property="is.running.netbsd" value="${os.name}">
++        <equals arg1="${os.name}" arg2="freebsd" casesensitive="false" trim="true"/>
++    </condition>
++
+     <!-- FreeBSD specific properties -->
+     <condition property="is.running.freebsd" value="${os.name}">
+         <equals arg1="${os.name}" arg2="freebsd" casesensitive="false" trim="true"/>
