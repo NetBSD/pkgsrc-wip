@@ -46,7 +46,6 @@ CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
-CONFIGURE_ARGS+=	--with-system-graphite2
 CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 #configure: error: System SQLite library is not compiled with SQLITE_ENABLE_DBSTAT_VTAB.
@@ -172,7 +171,6 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../graphics/MesaLib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/graphite2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"

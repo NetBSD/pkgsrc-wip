@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -6937,6 +6936,48 @@ if test "$USE_FC_FREETYPE"; then
+@@ -6937,6 +6936,20 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
@@ -43,34 +43,6 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 +
 +AC_SUBST(MOZ_NATIVE_HARFBUZZ)
 +
-+dnl ========================================================
-+dnl Check for graphite2
-+dnl ========================================================
-+MOZ_ARG_WITH_BOOL(system-graphite2,
-+[  --with-system-graphite2 Use system graphite2 (located with pkgconfig)],
-+MOZ_NATIVE_GRAPHITE2=1,
-+MOZ_NATIVE_GRAPHITE2=)
-+
-+if test -n "$MOZ_NATIVE_GRAPHITE2"; then
-+    PKG_CHECK_MODULES(MOZ_GRAPHITE2, graphite2)
-+
-+    dnl graphite2.pc has bogus version, check manually
-+    AC_TRY_COMPILE([ #include <graphite2/Font.h>
-+                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
-+                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
-+                               * 100 + GR2_VERSION_BUGFIX >= \
-+                               (major) * 10000 + (minor) * 100 + (bugfix) )
-+                   ], [
-+                     #if !GR2_VERSION_REQUIRE(1,2,4)
-+                     #error "Insufficient graphite2 version."
-+                     #endif
-+                   ], [],
-+                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_GRAPHITE2)
-+
-+dnl ========================================================
  dnl Check for pixman and cairo
  dnl ========================================================
  
