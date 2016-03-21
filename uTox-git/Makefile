@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	uTox-0.6.1
+DISTNAME=	uTox-0.7
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GrayHatter/}
 
