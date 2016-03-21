@@ -25,24 +25,3 @@ $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -6937,6 +6936,20 @@ if test "$USE_FC_FREETYPE"; then
- fi
- 
- dnl ========================================================
-+dnl Check for harfbuzz
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-harfbuzz,
-+[  --with-system-harfbuzz  Use system harfbuzz (located with pkgconfig)],
-+MOZ_NATIVE_HARFBUZZ=1,
-+MOZ_NATIVE_HARFBUZZ=)
-+
-+if test -n "$MOZ_NATIVE_HARFBUZZ"; then
-+    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.25)
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_HARFBUZZ)
-+
- dnl Check for pixman and cairo
- dnl ========================================================
- 

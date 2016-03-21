@@ -46,7 +46,6 @@ CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
-CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 #configure: error: System SQLite library is not compiled with SQLITE_ENABLE_DBSTAT_VTAB.
 #CONFIGURE_ARGS+=	--enable-system-sqlite
