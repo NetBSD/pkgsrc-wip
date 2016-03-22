@@ -1,0 +1,3 @@
+This program currently uses binaries to work and has no way of generating them.
+Do not import it into pkgsrc until this issue is closed, even if working:
+https://github.com/jitsi/jitsi/issues/241
