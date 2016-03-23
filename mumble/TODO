@@ -1,3 +1,14 @@
+Currently stuck with the following:
+
+Reading /usr/pkgsrc/wip/mumble/work/mumble-1.2.15/opus-build/opus-build.pro
+Project MESSAGE: The opus-src/ directory was not found. You need to do one of the following:
+Project MESSAGE: 
+Project MESSAGE: git submodule init
+Project MESSAGE: git submodule update
+Project MESSAGE: 
+Project ERROR: Aborting configuration
+
+
 Address security issue: 
 - http://secunia.com/advisories/47951/
 - http://www.secunia.com/advisories/58793/ (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0044
@@ -8,5 +19,4 @@ Address security issue:
 Does not build, pkgsrc contains celt>=0.12, this needs celt-0.7.
 
 1.2.3 does not build either, somewhere in boost or qt4.
-No newer source tarball found (though supposedly 1.2.4rc1 exists).
 [wiz 2013-04-17]

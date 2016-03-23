@@ -1,23 +1,20 @@
 # $NetBSD: Makefile,v 1.6 2012/11/12 16:51:36 othyro Exp $
 #
 
-DISTNAME=	mumble-1.2.2
-PKGREVISION=	1
-CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mumble/}
+GITHUB_PROJECT= mumble
+DISTNAME=       mumble-1.2.15
+CATEGORIES=     audio
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=mumble-voip/}
+DIST_SUBDIR=    ${GITHUB_PROJECT}
 
 MAINTAINER=	elentirmo.gilgalad@gmail.com
 HOMEPAGE=	http://mumble.sourceforge.net/
 COMMENT=	Low latency VOIP software used mostly during computer games
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	boost-headers-[0-9]*:../../devel/boost-headers
 USE_TOOLS+= 	pkg-config
 USE_LANGUAGES=	c c++
-
-PKGCONFIG_OVERRIDE+=	celt-0.7.0-src/celt.pc.in
-PKGCONFIG_OVERRIDE+=	speex/speexdsp.pc.in
-PKGCONFIG_OVERRIDE+=	speex/speex.pc.in
 
 .include "options.mk"
 
@@ -28,6 +25,7 @@ do-configure:
 #BUILDLINK_API_DEPENDS.celt+=   celt>=0.7.0
 #BUILDLINK_API_DEPENDS.celt+=   celt<0.7.1
 .include "../../audio/celt/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
