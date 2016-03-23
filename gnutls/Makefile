@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.159 2016/02/26 09:41:05 jperkin Exp $
 
-DISTNAME=	gnutls-3.3.18
+DISTNAME=	gnutls-3.4.10
 CATEGORIES=	security devel
-MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.3/
+MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.4/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,6 +14,12 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake gsed perl pkg-config
+
+# for dsatest and openpgp test, not normal build
+USE_TOOLS+=		bash
+
+REPLACE_BASH+=		tests/scripts/common.sh
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-p11-kit
 # this library duplicates (and conflicts with) openssl

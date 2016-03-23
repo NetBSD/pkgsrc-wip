@@ -1,18 +1,18 @@
 $NetBSD: distinfo,v 1.118 2015/11/04 01:17:45 agc Exp $
 
-SHA1 (gnutls-3.3.18.tar.xz) = c47b43e5b7c60133cac8de18ce7a6494e21b539a
-RMD160 (gnutls-3.3.18.tar.xz) = 76ccb9fb302284ac1ad4966bf76a8c6d9249c2ab
-SHA512 (gnutls-3.3.18.tar.xz) = e7c972458ad0af401121c705ebe86aafa46c02743d963b1b67ca09192c746a9193c73d28501b6c046435259b40ac0f8d201860cd6cf6240a7783b6c01b64286c
-Size (gnutls-3.3.18.tar.xz) = 6275948 bytes
+SHA1 (gnutls-3.4.10.tar.xz) = faf74e01f2d19b68c8ae07ddb13c86cc630ea339
+RMD160 (gnutls-3.4.10.tar.xz) = d7848072ca79409bcb7217609c9ad6cfe9e7bba6
+SHA512 (gnutls-3.4.10.tar.xz) = e5cd60240ebbcac9d8f7c28fdbf023a499e3c58a352a43c24d075b248a0a903161b1745641bf263519293c0014424cc23dbb67274c8934aaf273a523ad0a2925
+Size (gnutls-3.4.10.tar.xz) = 6645892 bytes
 SHA1 (patch-ae) = 5e020483ac14ef6ccc45a53e351242ab16c860f1
-SHA1 (patch-gl_stdio.in.h) = 298cc0e27087f086e9d47c67f81c8d10f6a7a8f1
-SHA1 (patch-lib_Makefile.in) = d0e292e632a91a9f19e39bd2c2d205a086ba5588
+SHA1 (patch-lib_Makefile.in) = 490f155fe30f63c9ecf82c4c4db7fd8c96ddad78
 SHA1 (patch-lib_nettle_rnd-common.c) = e0feb509e0c37791560280d9eb36785edea51a25
-SHA1 (patch-src_gl_stdio.in.h) = fbea411c3a7b71dd2daa3a5963324a2f8daad212
 SHA1 (patch-src_libopts_autoopts_options.h) = 9202c55314fe8764ac82c95bbfabfa1b031e9ba4
 SHA1 (patch-src_libopts_compat_compat.h) = 240fbfc0ba20af35e0634ba873fe9e34bfbcc921
 SHA1 (patch-src_libopts_libopts.c) = ce5e7681def882e95ed5ab770564d1f999b97039
 SHA1 (patch-src_libopts_makeshell.c) = e5b7d66caaec45e12ae5490d515fc9fc75de3d92
 SHA1 (patch-src_libopts_proto.h) = 78f845bdcbac8de74953a3cee0b77fa9c5b05386
-SHA1 (patch-tests_Makefile.in) = a6505d834ac660ef6343c0ecdbff9f4aca324954
-SHA1 (patch-tests_openpgp-certs_Makefile.in) = 2e7074312e67d747bd0ecfa839187f8bf33f4f09
+SHA1 (patch-tests_dsa_testdsa) = 89d0fa935b14a4d4335a693090d149babce18340
+SHA1 (patch-tests_dtls_dtls-stress.c) = 49157822d8f4928d98a757157f13c913dcbed730
+SHA1 (patch-tests_openpgp-certs_testcerts) = cbf28fcc944133e2e40b754ca6d68f7a96789917
+SHA1 (patch-tests_utils.h) = 74e138fc7f13bc2e38341da0f73c73a686faa9f7
