@@ -1,6 +1,6 @@
 $NetBSD: patch-lib_nettle_rnd-common.c,v 1.1 2015/06/01 21:50:22 spz Exp $
 
-http://lists.gnupg.org/pipermail/gnutls-devel/2013-November/006588.html
+https://gitlab.com/gnutls/gnutls/issues/81
 
 --- lib/nettle/rnd-common.c.orig	2015-03-23 07:19:23.000000000 +0000
 +++ lib/nettle/rnd-common.c
