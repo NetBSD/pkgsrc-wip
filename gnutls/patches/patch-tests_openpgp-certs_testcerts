@@ -1,0 +1,16 @@
+$NetBSD$
+
+This is needed because of the use of RANDOM (possibly more)
+in common.sh
+
+--- tests/openpgp-certs/testcerts.orig	2015-11-09 22:07:04.000000000 +0000
++++ tests/openpgp-certs/testcerts
+@@ -32,7 +32,7 @@ if test "${WINDIR}" != ""; then
+ 	exit 77
+ fi 
+ 
+-. "${srcdir}/../scripts/common.sh"
++bash "${srcdir}/../scripts/common.sh"
+ 
+ PORT="${PORT:-$RPORT}"
+ 
