@@ -966,7 +966,6 @@ SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	gradle
 SUBDIR+=	grandr
-SUBDIR+=	graphite2
 SUBDIR+=	graphmonkey
 SUBDIR+=	grass
 SUBDIR+=	grass-JockeyRidge
