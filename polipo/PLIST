@@ -8,7 +8,6 @@ share/polipo/config.sample
 share/polipo/forbidden.sample
 share/polipo/www/Access-control.html
 share/polipo/www/Allowed-ports.html
-share/polipo/www/Apache.html
 share/polipo/www/Asynchronous-writing.html
 share/polipo/www/Background.html
 share/polipo/www/Browser-configuration.html
@@ -27,12 +26,12 @@ share/polipo/www/Daemon.html
 share/polipo/www/Disk-cache.html
 share/polipo/www/Disk-format.html
 share/polipo/www/External-redirectors.html
+share/polipo/www/Forbidden-Tunnels.html
 share/polipo/www/Forbidden.html
 share/polipo/www/HTTP-parent-proxies.html
 share/polipo/www/HTTP-tuning.html
-share/polipo/www/Harvest-and-Squid.html
+share/polipo/www/Intermediate-proxies.html
 share/polipo/www/Internal-forbidden-list.html
-share/polipo/www/Junkbuster.html
 share/polipo/www/Latency-and-throughput.html
 share/polipo/www/Limiting-chunk-usage.html
 share/polipo/www/Limiting-memory-usage.html
@@ -47,8 +46,6 @@ share/polipo/www/Network-traffic.html
 share/polipo/www/Network.html
 share/polipo/www/OS-usage-limits.html
 share/polipo/www/Offline-browsing.html
-share/polipo/www/Oops.html
-share/polipo/www/Other-HTTP-proxies.html
 share/polipo/www/PMM.html
 share/polipo/www/POST-and-PUT.html
 share/polipo/www/Parent-proxies.html
@@ -57,7 +54,6 @@ share/polipo/www/Persistent-connections.html
 share/polipo/www/Pipelining.html
 share/polipo/www/Polipo-Invocation.html
 share/polipo/www/Poor-Mans-Multiplexing.html
-share/polipo/www/Privoxy.html
 share/polipo/www/Proxies-and-caches.html
 share/polipo/www/Purging.html
 share/polipo/www/Running.html
@@ -72,7 +68,6 @@ share/polipo/www/Tuning-validation.html
 share/polipo/www/Tunnelling-connections.html
 share/polipo/www/Tweaking-validation.html
 share/polipo/www/Variable-index.html
-share/polipo/www/WWWOFFLE.html
 share/polipo/www/Web-interface.html
 share/polipo/www/index.html
 @exec ${MKDIR} %D/etc/polipo

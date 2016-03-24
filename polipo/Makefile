@@ -1,11 +1,13 @@
 # $NetBSD: Makefile,v 1.7 2012/10/05 13:52:02 asau Exp $
 #
 
-DISTNAME=		polipo-1.0.4.1
+GITHUB_PROJECT=		polipo
+DISTNAME=		polipo-1.1.1
 CATEGORIES=		www
-MASTER_SITES=		http://freehaven.net/~chrisd/polipo/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=jech/}
+GITHUB_TAG=		${DISTNAME}
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.pps.jussieu.fr/~jch/software/polipo/
+HOMEPAGE=		http://www.pps.univ-paris-diderot.fr/~jch/software/polipo/
 COMMENT=		Small and fast caching web proxy
 
 USE_TOOLS+=	makeinfo
