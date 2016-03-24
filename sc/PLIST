@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/psc
+bin/sc
+bin/scqref
+man/man1/psc.1
+man/man1/sc.1
+share/sc/tutorial.sc

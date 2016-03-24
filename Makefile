@@ -3746,6 +3746,7 @@ SUBDIR+=	sara
 SUBDIR+=	sarf
 SUBDIR+=	sawfish
 SUBDIR+=	sbcl
+SUBDIR+=	sc
 SUBDIR+=	scantailor
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
