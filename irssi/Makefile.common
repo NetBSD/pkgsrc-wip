@@ -4,7 +4,7 @@
 # used by chat/irssi-xmpp/Makefile
 
 # Specific distribution information.
-IRSSI_VERSION=			0.8.18
+IRSSI_VERSION=			0.8.19
 IRSSI_DISTNAME=			irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=		.tar.gz
 IRSSI_DISTFILE=			${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}

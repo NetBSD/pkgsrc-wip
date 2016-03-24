@@ -12,6 +12,5 @@ SHA1 (patch-src_libopts_libopts.c) = ce5e7681def882e95ed5ab770564d1f999b97039
 SHA1 (patch-src_libopts_makeshell.c) = e5b7d66caaec45e12ae5490d515fc9fc75de3d92
 SHA1 (patch-src_libopts_proto.h) = 78f845bdcbac8de74953a3cee0b77fa9c5b05386
 SHA1 (patch-tests_dsa_testdsa) = 89d0fa935b14a4d4335a693090d149babce18340
-SHA1 (patch-tests_dtls_dtls-stress.c) = da8305d2557c37a0d2bfd7688e8b153717636b29
 SHA1 (patch-tests_openpgp-certs_testcerts) = cbf28fcc944133e2e40b754ca6d68f7a96789917
 SHA1 (patch-tests_utils.h) = 74e138fc7f13bc2e38341da0f73c73a686faa9f7
