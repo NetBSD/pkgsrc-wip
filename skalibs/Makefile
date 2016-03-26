@@ -13,6 +13,14 @@ USE_LANGUAGES=	c
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
+PLIST_VARS+=	include-shared-objects
+PLIST.include-shared-objects=	yes
+
 CONFIGURE_ARGS+=	"--prefix=${PREFIX}"
+
+.if "${OPSYS}" == "Darwin"
+PLIST.include-shared-objects=	no
+CONFIGURE_ARGS+=	"--disable-shared"
+.endif
 
 .include "../../mk/bsd.pkg.mk"

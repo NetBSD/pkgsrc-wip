@@ -83,10 +83,10 @@ include/skalibs/unixmessage.h
 include/skalibs/unixonacid.h
 include/skalibs/ushort.h
 include/skalibs/webipc.h
-lib/libskarnet.so
-lib/libskarnet.so.2.3
-lib/libskarnet.so.2.3.9
-lib/libskarnet.so.${PKGVERSION}
+${PLIST.include-shared-objects}lib/libskarnet.so
+${PLIST.include-shared-objects}lib/libskarnet.so.2.3
+${PLIST.include-shared-objects}lib/libskarnet.so.2.3.9
+${PLIST.include-shared-objects}lib/libskarnet.so.${PKGVERSION}
 lib/skalibs/libskarnet.a
 lib/skalibs/sysdeps/rt.lib
 lib/skalibs/sysdeps/socket.lib
