@@ -30,7 +30,7 @@ PKGCONFIG_OVERRIDE=	data/epiphany.pc.in
 GCONF_SCHEMAS=		Epiphany.enums.xml
 GCONF_SCHEMAS+=		epiphany.gschema.xml
 
-DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 .include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
