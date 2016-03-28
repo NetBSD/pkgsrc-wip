@@ -21,6 +21,7 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -111,23 +112,27 @@ REPLACE_PYTHON+=	utils/test/run-until-faulted.py
 TEST_TARGET=		check-lldb
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
-.if exists(/usr/include/panel.h)
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.  if exists(/usr/include/panel.h)
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
-.else
+.  else
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
+.  endif
 .endif
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
+.include "../../mk/readline.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 .include "../../lang/llvm/buildlink3.mk"
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 .include "../../lang/clang/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../devel/swig/buildlink3.mk"
