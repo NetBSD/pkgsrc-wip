@@ -13,6 +13,7 @@ SHA1 (patch-include_lldb_Utility_regex__impl.h) = 4d99669a756bd662ae28abc8cefe6e
 SHA1 (patch-include_lldb_Utility_regutils.h) = ea36409f8cd05dcf9b81144cbc136abc5fc3a190
 SHA1 (patch-scripts_CMakeLists.txt) = 07043853b1a923aa8fcb9124b79453eca21c01fb
 SHA1 (patch-scripts_Python_finishSwigPythonLLDB.py) = e2ad536cf12cea251b2a2117091b970e3081fad6
+SHA1 (patch-scripts_Python_modules_readline_readline.cpp) = 4a030226c47cf7d54ebc727e92e278c163e48bf5
 SHA1 (patch-source_Utility_CMakeLists.txt) = 5b10fe94d76135d8d5ba31862066841394dd45c1
 SHA1 (patch-source_Utility_regcomp.c) = bd315000773bab38b6fe6d119420afbcb5b83a59
 SHA1 (patch-source_Utility_regerror.c) = 6bbf8dc3f12e64515d166a475452f3f08d849ad3
