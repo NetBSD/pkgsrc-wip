@@ -10,7 +10,7 @@ CATEGORIES=	www
 MASTER_SITES=	# not defined
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://trac-hacks.org/wiki/MasterTicketsPlugin
+HOMEPAGE=	https://trac-hacks.org/wiki/MasterTicketsPlugin
 COMMENT=	Ticket dependency plugin for Trac
 LICENSE=	modified-bsd
 
@@ -19,7 +19,7 @@ DEPENDS+=	trac>=1.0:../../www/trac
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.0.4/r12946
 
 SVN_REPOSITORIES=		mastertickets
-SVN_ROOT.mastertickets=		http://trac-hacks.org/svn/masterticketsplugin/trunk
+SVN_ROOT.mastertickets=		https://trac-hacks.org/svn/masterticketsplugin/trunk
 
 # Upstream has labeled 4.0.0dev at r14695.  Since it appears release
 # are not forthcoming, I have adopted 3.90.rSVN to have version
