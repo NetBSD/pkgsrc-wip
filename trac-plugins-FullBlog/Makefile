@@ -5,11 +5,11 @@ PKGNAME=	trac-plugins-FullBlog-0.1.1pre${SVN_REV}
 PKGREVISION=	2
 EGG_NAME=	TracFullBlogPlugin-0.1.1
 CATEGORIES=	www
-MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+MASTER_SITES=	-https://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	roy@NetBSD.org
-HOMEPAGE=	http://trac-hacks.org/wiki/FullBlogPlugin
+HOMEPAGE=	https://trac-hacks.org/wiki/FullBlogPlugin
 COMMENT=	Blog plugin for Trac
 
 DEPENDS+=	trac>=0.11:../../www/trac

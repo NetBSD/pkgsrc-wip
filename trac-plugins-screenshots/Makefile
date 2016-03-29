@@ -5,11 +5,11 @@ PKGNAME=	trac-plugins-screenshots-0.1pre${SVN_REV}
 PKGREVISION=	1
 EGG_NAME=	TracScreenshots-0.7
 CATEGORIES=	www
-MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+MASTER_SITES=	-https://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	roy@NetBSD.org
-HOMEPAGE=	http://trac-hacks.org/wiki/ScreenshotsPlugin
+HOMEPAGE=	https://trac-hacks.org/wiki/ScreenshotsPlugin
 COMMENT=	Screenshots plugin for Trac
 
 DEPENDS+=	trac>=0.11:../../www/trac

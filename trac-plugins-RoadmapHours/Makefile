@@ -13,7 +13,7 @@ CATEGORIES=	www
 MASTER_SITES=	# not defined
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://trac-hacks.org/wiki/RoadmapHoursPlugin
+HOMEPAGE=	https://trac-hacks.org/wiki/RoadmapHoursPlugin
 COMMENT=	RoadmapHours plugin for Trac
 
 DEPENDS+=	trac>=0.11:../../www/trac
@@ -22,7 +22,7 @@ DEPENDS+=	trac-plugins-TimingAndEstimation>=0.7.6:../../wip/trac-plugins-TimingA
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # trac-plugins-TimingAndEstimation
 
 SVN_REPOSITORIES=	plugin
-SVN_ROOT.plugin=	http://trac-hacks.org/svn/roadmaphoursplugin/0.11
+SVN_ROOT.plugin=	https://trac-hacks.org/svn/roadmaphoursplugin/0.11
 SVN_TAG.plugin=		${SVNVERSION}
 
 NO_CHECKSUM=	yes

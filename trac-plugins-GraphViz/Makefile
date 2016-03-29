@@ -11,7 +11,7 @@ CATEGORIES=	www
 MASTER_SITES=	# not defined
 
 MAINTAINER=	pkgsrc-users@netbsd.org
-HOMEPAGE=	http://trac-hacks.org/wiki/GraphVizPlugin
+HOMEPAGE=	https://trac-hacks.org/wiki/GraphVizPlugin
 COMMENT=	Graphviz plugin for Trac
 
 DEPENDS+=	trac>=0.11:../../www/trac
@@ -19,7 +19,7 @@ DEPENDS+=	trac>=0.11:../../www/trac
 EGG_NAME=	graphviz-${UPSTREAM_VERSION}dev_r0
 
 SVN_REPOSITORIES=	graphviz
-SVN_ROOT.graphviz=	http://trac-hacks.org/svn/graphvizplugin/trunk
+SVN_ROOT.graphviz=	https://trac-hacks.org/svn/graphvizplugin/trunk
 SVN_TAG.graphviz=	${SVNVERSION}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 13275/0.7.7

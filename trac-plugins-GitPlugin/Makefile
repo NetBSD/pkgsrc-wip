@@ -5,7 +5,7 @@ PKGNAME=	trac-plugins-GitPlugin-0.1pre${SVN_REV}
 PKGREVISION=	1
 EGG_NAME=	TracGit-0.12.0.2dev
 CATEGORIES=	www
-MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+MASTER_SITES=	-https://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	roy@NetBSD.org

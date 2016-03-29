@@ -15,7 +15,7 @@ MASTER_SITES=	# not defined
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://trac-hacks.org/wiki/SensitiveTicketsPlugin
+HOMEPAGE=	https://trac-hacks.org/wiki/SensitiveTicketsPlugin
 COMMENT=	Ticket dependency plugin for Trac
 
 DEPENDS+=	trac>=0.11:../../www/trac
@@ -23,7 +23,7 @@ DEPENDS+=	trac>=0.11:../../www/trac
 EGG_NAME=	sensitivetickets-${UPSTREAM_VERSION}
 
 SVN_REPOSITORIES=	sensitivetickets
-SVN_ROOT.sensitivetickets=	http://trac-hacks.org/svn/sensitiveticketsplugin/trunk
+SVN_ROOT.sensitivetickets=	https://trac-hacks.org/svn/sensitiveticketsplugin/trunk
 SVN_TAG.sensitivetickets=	${SVN_VERSION}
 WRKSRC=		${WRKDIR}/sensitivetickets
 

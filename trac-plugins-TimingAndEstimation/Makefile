@@ -13,7 +13,7 @@ CATEGORIES=	www
 MASTER_SITES=	# not defined
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://trac-hacks.org/wiki/TimingAndEstimationPlugin
+HOMEPAGE=	https://trac-hacks.org/wiki/TimingAndEstimationPlugin
 COMMENT=	TimingAndEstimation plugin for Trac
 
 DEPENDS+=	trac>=0.12:../../www/trac
@@ -21,7 +21,7 @@ DEPENDS+=	trac>=0.12:../../www/trac
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.2.8/11739
 
 SVN_REPOSITORIES=	plugin
-SVN_ROOT.plugin=	http://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12
+SVN_ROOT.plugin=	https://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12
 SVN_TAG.plugin=		${SVNVERSION}
 
 NO_CHECKSUM=	yes
