@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/03/29 21:17:02 florian-geiges Exp $
 
-SHA1 (znc-1.0.tar.gz) = 50e6e3aacb67cf0a63d77f5031d4b75264cee294
-RMD160 (znc-1.0.tar.gz) = 3d44924a5496127eb3f127085b9d4a6a5fb4f8f7
-Size (znc-1.0.tar.gz) = 1222361 bytes
+SHA1 (znc-1.6.3.tar.gz) = 89e8c2a32c8c0a95d0464a3cbfb06e6b050c6c72
+RMD160 (znc-1.6.3.tar.gz) = 2c306679192afd160c320d53229ceb22dc3895d9
+SHA512 (znc-1.6.3.tar.gz) = 777279b6c973310b4e78a0472bd1e355c2adf3e4fbe9ebedde3dd4706e5c0b208d4330eb2318a8d9e0d7d7146bee0a4a428cbe5a3f230c8f6aa692a477e86e2b
+Size (znc-1.6.3.tar.gz) = 1464200 bytes
