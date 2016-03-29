@@ -67,6 +67,7 @@ SUBDIR+=	Typewriter
 SUBDIR+=	VASSAL
 SUBDIR+=	WEPCrack
 SUBDIR+=	a2ps-sharatype
+SUBDIR+=	abduco
 SUBDIR+=	accountsservice
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
