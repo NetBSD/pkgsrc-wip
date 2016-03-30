@@ -4295,6 +4295,7 @@ SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
 SUBDIR+=	xtags
+SUBDIR+=	xterm
 SUBDIR+=	xtraceroute
 SUBDIR+=	xtrackcad
 SUBDIR+=	xtreemfs-client
