@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	xterm-324
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/ \
 		http://www.sfr-fresh.com/unix/misc/
