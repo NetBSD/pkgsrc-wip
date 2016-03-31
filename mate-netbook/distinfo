@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2015/04/09 02:34:49 krytarowski Exp $
 
-SHA1 (mate-netbook-1.8.1.tar.xz) = f71cf614929500c13b364dcf387e2464512f9f08
-RMD160 (mate-netbook-1.8.1.tar.xz) = 8912d456acc9186c705074e0008ea112e9c65257
-Size (mate-netbook-1.8.1.tar.xz) = 267556 bytes
+SHA1 (mate-netbook-1.12.0.tar.xz) = c8be6ba86119e313c36eb676d4bf7c74005b4ab5
+RMD160 (mate-netbook-1.12.0.tar.xz) = ce77b57a3c12bce5c23fba36f04a9913417bedfd
+SHA512 (mate-netbook-1.12.0.tar.xz) = 3f46e537b48833fe3bd599dcaa6af89a265dacac4fc077d46ca87b5a35c2368810824747411d263541e2685e2700311996f8741aa9321122d6d306c1ad8fc15b
+Size (mate-netbook-1.12.0.tar.xz) = 268632 bytes

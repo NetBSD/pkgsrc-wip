@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.5 2015/04/09 20:38:31 krytarowski Exp $
 
-DISTNAME=	mate-netbook-1.8.1
+DISTNAME=	mate-netbook-1.12.0
 CATEGORIES=	wm
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
