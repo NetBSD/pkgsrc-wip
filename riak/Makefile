@@ -2,15 +2,16 @@
 
 DISTNAME=		riak-2.1.3
 CATEGORIES=		databases
-MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/2.1/${PKGVERSION}/
-MASTER_SITES+=		http://s3.amazonaws.com/files.basho.com/yokozuna/
+MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/2.1/${PKGVERSION}/ \
+			http://s3.amazonaws.com/files.basho.com/solr/ \
+			http://s3.amazonaws.com/files.basho.com/yokozuna/
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.basho.com/products_riak_overview.php
 COMMENT=		Distributed, highly available data store
 LICENSE=		apache-2.0
 
-DISTFILES=		${DEFAULT_DISTFILES} yokozuna-3.jar yz_monitor-1.jar
+DISTFILES=		${DEFAULT_DISTFILES} solr-4.7.0-yz-1.tgz yokozuna-3.jar yz_monitor-1.jar
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 DIST_SUBDIR=		basho
 
@@ -96,8 +97,10 @@ update-deps: build
 	 > ${.CURDIR}/../../wip/riak/Makefile.versions
 
 post-extract:
+	${MKDIR} ${WRKSRC}/deps/yokozuna/build
 	${MKDIR} ${WRKSRC}/deps/yokozuna/priv/java_lib
 	${MKDIR} ${WRKSRC}/deps/yokozuna/priv/solr/lib/ext
+	${CP} ${_DISTDIR}/solr-4.7.0-yz-1.tgz ${WRKSRC}/deps/yokozuna/build
 	${CP} ${_DISTDIR}/yokozuna-3.jar ${WRKSRC}/deps/yokozuna/priv/java_lib
 	${CP} ${_DISTDIR}/yz_monitor-1.jar ${WRKSRC}/deps/yokozuna/priv/solr/lib/ext
 	${INSTALL_DATA} ${FILESDIR}/nspr-src-configure2.patch \
