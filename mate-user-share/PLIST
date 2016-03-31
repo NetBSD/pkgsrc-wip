@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/09 03:00:29 krytarowski Exp $
+@comment $NetBSD$
 bin/mate-file-share-properties
-lib/caja/extensions-2.0/libcaja-share-extension.la
+lib/caja/extensions-2.0/libcaja-user-share.la
 libexec/mate-user-share
 man/man1/mate-file-share-properties.1
 share/MateConf/gsettings/mate-user-share.convert
 share/applications/mate-user-share-properties.desktop
+share/caja/extensions/libcaja-user-share.caja-extension
 share/examples/mate-user-share/xdg/autostart/mate-user-share-obexftp.desktop
 share/examples/mate-user-share/xdg/autostart/mate-user-share-obexpush.desktop
 share/examples/mate-user-share/xdg/autostart/mate-user-share-webdav.desktop
@@ -101,6 +102,7 @@ share/locale/am/LC_MESSAGES/mate-user-share.mo
 share/locale/ar/LC_MESSAGES/mate-user-share.mo
 share/locale/as/LC_MESSAGES/mate-user-share.mo
 share/locale/ast/LC_MESSAGES/mate-user-share.mo
+share/locale/be/LC_MESSAGES/mate-user-share.mo
 share/locale/bg/LC_MESSAGES/mate-user-share.mo
 share/locale/bn/LC_MESSAGES/mate-user-share.mo
 share/locale/bn_IN/LC_MESSAGES/mate-user-share.mo
@@ -134,8 +136,10 @@ share/locale/id/LC_MESSAGES/mate-user-share.mo
 share/locale/is/LC_MESSAGES/mate-user-share.mo
 share/locale/it/LC_MESSAGES/mate-user-share.mo
 share/locale/ja/LC_MESSAGES/mate-user-share.mo
+share/locale/kk/LC_MESSAGES/mate-user-share.mo
 share/locale/kn/LC_MESSAGES/mate-user-share.mo
 share/locale/ko/LC_MESSAGES/mate-user-share.mo
+share/locale/ky/LC_MESSAGES/mate-user-share.mo
 share/locale/lt/LC_MESSAGES/mate-user-share.mo
 share/locale/lv/LC_MESSAGES/mate-user-share.mo
 share/locale/mai/LC_MESSAGES/mate-user-share.mo
@@ -174,7 +178,6 @@ share/locale/zh_CN/LC_MESSAGES/mate-user-share.mo
 share/locale/zh_HK/LC_MESSAGES/mate-user-share.mo
 share/locale/zh_TW/LC_MESSAGES/mate-user-share.mo
 share/mate-user-share/dav_groupfile
-share/mate-user-share/dav_user_2.0.conf
 share/mate-user-share/dav_user_2.2.conf
 share/mate-user-share/dav_user_2.4.conf
 share/mate-user-share/file-share-properties.ui
