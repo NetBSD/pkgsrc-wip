@@ -17,7 +17,6 @@ DEPENDS+=	caja-dropbox>=1.12.0:../../wip/caja-dropbox
 DEPENDS+=	caja-extensions>=1.12.0:../../wip/caja-extensions
 DEPENDS+=	engrampa>=1.12.0:../../wip/engrampa
 DEPENDS+=	eom>=1.12.0:../../wip/eom
-DEPENDS+=	gnome-main-menu>=1.12.0:../../wip/gnome-main-menu
 DEPENDS+=	libmatekbd>=1.12.0:../../wip/libmatekbd
 DEPENDS+=	libmateweather>=1.12.0:../../wip/libmateweather
 DEPENDS+=	marco>=1.12.0:../../wip/marco
