@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/09 02:10:30 krytarowski Exp $
+@comment $NetBSD$
 share/backgrounds/mate/abstract/Arc-Colors-Transparent-Wallpaper.png
 share/backgrounds/mate/abstract/Flow.png
 share/backgrounds/mate/abstract/Gulp.png
@@ -7,7 +7,13 @@ share/backgrounds/mate/abstract/Spring.png
 share/backgrounds/mate/abstract/Waves.png
 share/backgrounds/mate/desktop/Float-into-MATE.png
 share/backgrounds/mate/desktop/GreenTraditional.jpg
+share/backgrounds/mate/desktop/MATE-Stripes-Dark.png
+share/backgrounds/mate/desktop/MATE-Stripes-Light.png
 share/backgrounds/mate/desktop/Stripes.png
+share/backgrounds/mate/desktop/Ubuntu-Mate-Cold-no-logo.png
+share/backgrounds/mate/desktop/Ubuntu-Mate-Dark-no-logo.png
+share/backgrounds/mate/desktop/Ubuntu-Mate-Radioactive-no-logo.png
+share/backgrounds/mate/desktop/Ubuntu-Mate-Warm-no-logo.png
 share/backgrounds/mate/nature/Aqua.jpg
 share/backgrounds/mate/nature/Blinds.jpg
 share/backgrounds/mate/nature/Dune.jpg
