@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.8 2015/04/09 22:07:27 krytarowski Exp $
 
-DISTNAME=	atril-1.8.1
+DISTNAME=	atril-1.12.2
 CATEGORIES=	print
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,6 +28,7 @@ PKGCONFIG_OVERRIDE+=	atril-view.pc.in
 
 .include "../../wip/mate-icon-theme/buildlink3.mk"
 .include "../../wip/caja/buildlink3.mk"
+.include "../../wip/mate-desktop/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
