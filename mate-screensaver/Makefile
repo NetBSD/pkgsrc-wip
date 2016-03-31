@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.9 2015/04/10 12:20:36 krytarowski Exp $
 
-DISTNAME=	mate-screensaver-1.8.1
+DISTNAME=	mate-screensaver-1.12.0
 CATEGORIES=	x11
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/09 02:45:45 krytarowski Exp $
+@comment $NetBSD$
 bin/mate-screensaver
 bin/mate-screensaver-command
 bin/mate-screensaver-preferences
