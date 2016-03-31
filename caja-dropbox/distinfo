@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2015/04/09 03:09:36 krytarowski Exp $
 
-SHA1 (caja-dropbox-1.8.0.tar.xz) = 616ef634f2a5ba479dd2402d8527fcd5cf9950b0
-RMD160 (caja-dropbox-1.8.0.tar.xz) = edfd94649b0fc920abfe9a195ea1f07e283457be
-Size (caja-dropbox-1.8.0.tar.xz) = 310592 bytes
+SHA1 (caja-dropbox-1.12.0.tar.xz) = db3131570fab30a8aba702a137ffbe9f60f1909e
+RMD160 (caja-dropbox-1.12.0.tar.xz) = 24829cd5c3d51d2365b048172bd7aa8d01bf3d6e
+SHA512 (caja-dropbox-1.12.0.tar.xz) = 32d8fcd2d2aa4a03a976c7848cd628e240558b802247ad6a36242ea95628aa97088aa55ae6d9c889616910e5fc36e2db6753c4f8854d6f9e626c990469d71223
+Size (caja-dropbox-1.12.0.tar.xz) = 311488 bytes
