@@ -22,7 +22,7 @@ EXTRACT_DIR.${SOLR}=	${WRKSRC}/deps/yokozuna/build
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		bash:run gmake
 
 MAKE_JOBS_SAFE=		no
 
@@ -69,6 +69,9 @@ SUBST_FILES.pkgsrc=	deps/node_package/priv/base/env.sh rel/vars.config
 SUBST_FILES.pkgsrc+=	deps/cuttlefish/rebar.config
 SUBST_VARS.pkgsrc=	PREFIX PKG_SYSCONFDIR PKGVERSION_NOREV
 SUBST_VARS.pkgsrc+=	RIAK_USER RIAK_DATA RIAK_LOG RIAK_RUN
+
+REPLACE_BASH+=		deps/eper/priv/bin/*
+REPLACE_BASH+=		deps/yokozuna/build/${SOLR:S/.tgz//}/example/etc/create-solrtest.keystore.sh
 
 REPLACE_INTERPRETER+=	escript
 REPLACE.escript.old=	.*escript
