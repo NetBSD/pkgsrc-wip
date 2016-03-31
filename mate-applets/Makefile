@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.9 2015/04/10 12:08:34 krytarowski Exp $
 
-DISTNAME=	mate-applets-1.8.1
+DISTNAME=	mate-applets-1.12.1
 CATEGORIES=	x11
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
