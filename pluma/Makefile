@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.7 2015/04/09 22:07:26 krytarowski Exp $
 
-DISTNAME=	pluma-1.8.1
+DISTNAME=	pluma-1.12.2
 CATEGORIES=	editors
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--disable-updater # only for OS X and Windows
 
 .include "../../devel/glib2/schemas.mk"
 
+.include "../../wip/mate-desktop/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
