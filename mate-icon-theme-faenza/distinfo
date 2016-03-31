@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.3 2015/04/09 02:22:25 krytarowski Exp $
 
-SHA1 (mate-icon-theme-faenza-1.8.0.tar.xz) = 60ecb21261d969e60925254cb435a4a877540d4c
-RMD160 (mate-icon-theme-faenza-1.8.0.tar.xz) = f12d28deb25f6384590531c597b34e8f2ef3c27a
-Size (mate-icon-theme-faenza-1.8.0.tar.xz) = 20817400 bytes
-SHA1 (patch-Makefile.in) = b4c233ac6a8dffc9895750adc1c6d54d72dd676f
+SHA1 (mate-icon-theme-faenza-1.12.0.tar.xz) = 391bb5c04a3090feeac4b92850ce57b96ebd53c2
+RMD160 (mate-icon-theme-faenza-1.12.0.tar.xz) = 4bfb798f5a81ede2187367bbac8dbc4521693e82
+SHA512 (mate-icon-theme-faenza-1.12.0.tar.xz) = 58c26458027bc9938ca01f88942faedce5189b090302adb3c4f63f1c042616fb4fb8f53f1454a9d7de1b642af1074fa3f7a1a75eeaacbc675a4467dad9b95be4
+Size (mate-icon-theme-faenza-1.12.0.tar.xz) = 19058516 bytes
