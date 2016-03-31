@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/09 02:42:17 krytarowski Exp $
+@comment $NetBSD$
 include/polkit-gtk-mate-1/polkitgtkmate/polkitgtkmate.h
 include/polkit-gtk-mate-1/polkitgtkmate/polkitgtkmatetypes.h
 include/polkit-gtk-mate-1/polkitgtkmate/polkitlockbutton.h
-${PLIST.introspection}lib/girepository-1.0/PolkitGtkMate-1.0.typelib
+lib/girepository-1.0/PolkitGtkMate-1.0.typelib
 lib/libpolkit-gtk-mate-1.la
 lib/pkgconfig/polkit-gtk-mate-1.pc
 libexec/polkit-mate-authentication-agent-1
 share/examples/mate-polkit/xdg/autostart/polkit-mate-authentication-agent-1.desktop
-${PLIST.introspection}share/gir-1.0/PolkitGtkMate-1.0.gir
+share/gir-1.0/PolkitGtkMate-1.0.gir
 share/locale/am/LC_MESSAGES/mate-polkit.mo
 share/locale/ar/LC_MESSAGES/mate-polkit.mo
 share/locale/be/LC_MESSAGES/mate-polkit.mo
@@ -21,6 +21,7 @@ share/locale/el/LC_MESSAGES/mate-polkit.mo
 share/locale/en_AU/LC_MESSAGES/mate-polkit.mo
 share/locale/en_GB/LC_MESSAGES/mate-polkit.mo
 share/locale/es/LC_MESSAGES/mate-polkit.mo
+share/locale/et/LC_MESSAGES/mate-polkit.mo
 share/locale/eu/LC_MESSAGES/mate-polkit.mo
 share/locale/fi/LC_MESSAGES/mate-polkit.mo
 share/locale/fr/LC_MESSAGES/mate-polkit.mo
@@ -33,6 +34,7 @@ share/locale/hu/LC_MESSAGES/mate-polkit.mo
 share/locale/id/LC_MESSAGES/mate-polkit.mo
 share/locale/it/LC_MESSAGES/mate-polkit.mo
 share/locale/ja/LC_MESSAGES/mate-polkit.mo
+share/locale/kk/LC_MESSAGES/mate-polkit.mo
 share/locale/kn/LC_MESSAGES/mate-polkit.mo
 share/locale/ko/LC_MESSAGES/mate-polkit.mo
 share/locale/ky/LC_MESSAGES/mate-polkit.mo
@@ -53,6 +55,7 @@ share/locale/ru/LC_MESSAGES/mate-polkit.mo
 share/locale/sk/LC_MESSAGES/mate-polkit.mo
 share/locale/sl/LC_MESSAGES/mate-polkit.mo
 share/locale/sq/LC_MESSAGES/mate-polkit.mo
+share/locale/sr/LC_MESSAGES/mate-polkit.mo
 share/locale/sv/LC_MESSAGES/mate-polkit.mo
 share/locale/ta/LC_MESSAGES/mate-polkit.mo
 share/locale/te/LC_MESSAGES/mate-polkit.mo
