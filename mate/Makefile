@@ -22,7 +22,6 @@ DEPENDS+=	libmateweather>=1.12.0:../../wip/libmateweather
 DEPENDS+=	marco>=1.12.0:../../wip/marco
 DEPENDS+=	mate-applets>=1.12.0:../../wip/mate-applets
 DEPENDS+=	mate-backgrounds>=1.12.0:../../wip/mate-backgrounds
-DEPENDS+=	mate-calc>=1.12.0:../../wip/mate-calc
 DEPENDS+=	mate-common>=1.12.0:../../wip/mate-common
 DEPENDS+=	mate-control-center>=1.12.0:../../wip/mate-control-center
 DEPENDS+=	mate-desktop>=1.12.0:../../wip/mate-desktop
