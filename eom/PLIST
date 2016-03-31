@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/09 03:16:23 krytarowski Exp $
+@comment $NetBSD$
 bin/eom
 include/eom-2.20/eom/eom-application.h
+include/eom-2.20/eom/eom-clipboard-handler.h
 include/eom-2.20/eom/eom-debug.h
 include/eom-2.20/eom/eom-dialog.h
 include/eom-2.20/eom/eom-enums.h
@@ -32,12 +33,14 @@ lib/eom/plugins/statusbar-date.eom-plugin
 lib/pkgconfig/eom.pc
 man/man1/eom.1
 share/MateConf/gsettings/eom.convert
+share/appdata/eom.appdata.xml
 share/applications/eom.desktop
 share/eom/eom-image-properties-dialog.ui
 share/eom/eom-multiple-save-as-dialog.ui
 share/eom/eom-preferences-dialog.ui
 share/eom/eom-toolbar.xml
 share/eom/eom-ui.xml
+share/eom/eom.css
 share/eom/gtkrc
 share/eom/icons/hicolor/16x16/actions/eom-image-collection.png
 share/eom/icons/hicolor/16x16/actions/eom-plugin.png
@@ -55,6 +58,7 @@ share/eom/icons/hicolor/scalable/actions/eom-image-collection.svg
 share/eom/icons/hicolor/scalable/actions/eom-plugin.svg
 share/eom/icons/hicolor/scalable/actions/slideshow-play.svg
 share/eom/pixmaps/thumbnail-frame.png
+share/glib-2.0/schemas/org.mate.eom.enums.xml
 share/glib-2.0/schemas/org.mate.eom.gschema.xml
 share/gtk-doc/html/eom/EomDialog.html
 share/gtk-doc/html/eom/EomExifDetails.html
@@ -69,6 +73,7 @@ share/gtk-doc/html/eom/EomPrintPreview.html
 share/gtk-doc/html/eom/EomScrollView.html
 share/gtk-doc/html/eom/EomSidebar.html
 share/gtk-doc/html/eom/EomStatusbar.html
+share/gtk-doc/html/eom/api-index.html
 share/gtk-doc/html/eom/ch01.html
 share/gtk-doc/html/eom/ch02.html
 share/gtk-doc/html/eom/ch03.html
@@ -77,6 +82,7 @@ share/gtk-doc/html/eom/ch05.html
 share/gtk-doc/html/eom/ch06.html
 share/gtk-doc/html/eom/ch07.html
 share/gtk-doc/html/eom/eom-eom-application.html
+share/gtk-doc/html/eom/eom-eom-clipboard-handler.html
 share/gtk-doc/html/eom/eom-eom-config-keys.html
 share/gtk-doc/html/eom/eom-eom-debug.html
 share/gtk-doc/html/eom/eom-eom-error-message-area.html
@@ -108,8 +114,10 @@ share/gtk-doc/html/eom/index.html
 share/gtk-doc/html/eom/index.sgml
 share/gtk-doc/html/eom/left-insensitive.png
 share/gtk-doc/html/eom/left.png
+share/gtk-doc/html/eom/pt01.html
 share/gtk-doc/html/eom/right-insensitive.png
 share/gtk-doc/html/eom/right.png
+share/gtk-doc/html/eom/rn01.html
 share/gtk-doc/html/eom/style.css
 share/gtk-doc/html/eom/up-insensitive.png
 share/gtk-doc/html/eom/up.png
@@ -285,6 +293,7 @@ share/locale/he/LC_MESSAGES/eom.mo
 share/locale/hi/LC_MESSAGES/eom.mo
 share/locale/hr/LC_MESSAGES/eom.mo
 share/locale/hu/LC_MESSAGES/eom.mo
+share/locale/hy/LC_MESSAGES/eom.mo
 share/locale/id/LC_MESSAGES/eom.mo
 share/locale/is/LC_MESSAGES/eom.mo
 share/locale/it/LC_MESSAGES/eom.mo
