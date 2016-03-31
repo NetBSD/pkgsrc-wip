@@ -28,3 +28,4 @@ share/gtk-doc/html/libdbusmenu-glib/object-tree.html
 share/gtk-doc/html/libdbusmenu-glib/right.png
 share/gtk-doc/html/libdbusmenu-glib/style.css
 share/gtk-doc/html/libdbusmenu-glib/up.png
+share/vala/vapi/Dbusmenu-0.4.vapi
