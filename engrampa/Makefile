@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.6 2015/04/09 22:07:27 krytarowski Exp $
 
-DISTNAME=	engrampa-1.8.1
+DISTNAME=	engrampa-1.12.0
 CATEGORIES=	archivers
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
