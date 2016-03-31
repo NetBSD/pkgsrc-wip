@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.3 2015/04/09 02:32:12 krytarowski Exp $
 
-SHA1 (mate-menus-1.8.0.tar.xz) = e2c3eda5123da8ff30dcd5f86c4ad9426e34a7b5
-RMD160 (mate-menus-1.8.0.tar.xz) = a4d07d9b40b7c084a595e3592457d5a751564f60
-Size (mate-menus-1.8.0.tar.xz) = 342768 bytes
-SHA1 (patch-configure) = a29fdf2873ebe39fe5d1c24ad9e378219aa8906f
-SHA1 (patch-m4_python.m4) = df739bd9c0d0972aa02a729d442b4e04a80f3908
+SHA1 (mate-menus-1.12.0.tar.xz) = a52eacac8cd912b866c085bc4a20e866572f96d6
+RMD160 (mate-menus-1.12.0.tar.xz) = 369a8109affd76fcd20e4394b8f58eacaba07ff5
+SHA512 (mate-menus-1.12.0.tar.xz) = 12788d5b88c1dba7b561a3119e311a9724629d1f9ae7d54a9e4443946b331c532310c79b7b39bcacc791697ac52d4b55338051da66c4d747c371575a03183ba6
+Size (mate-menus-1.12.0.tar.xz) = 342488 bytes
