@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.7 2015/04/09 22:07:26 krytarowski Exp $
 
-DISTNAME=	caja-1.8.2
+DISTNAME=	caja-1.12.6
 CATEGORIES=	sysutils
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
