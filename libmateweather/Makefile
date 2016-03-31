@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.6 2015/06/07 14:24:48 yrmt Exp $
 
-DISTNAME=	libmateweather-1.8.0
+DISTNAME=	libmateweather-1.12.1
 CATEGORIES=	devel
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
