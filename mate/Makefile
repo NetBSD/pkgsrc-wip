@@ -42,7 +42,7 @@ DEPENDS+=	mate-session-manager>=1.12.0:../../wip/mate-session-manager
 DEPENDS+=	mate-settings-daemon>=1.12.0:../../wip/mate-settings-daemon
 DEPENDS+=	mate-system-monitor>=1.12.0:../../wip/mate-system-monitor
 DEPENDS+=	mate-terminal>=1.12.0:../../wip/mate-terminal
-DEPENDS+=	mate-themes>=1.12.0:../../wip/mate-themes
+DEPENDS+=	mate-themes>=1.9.0:../../wip/mate-themes
 DEPENDS+=	mate-user-share>=1.12.0:../../wip/mate-user-share
 DEPENDS+=	mate-utils>=1.12.0:../../wip/mate-utils
 DEPENDS+=	mozo>=1.12.0:../../wip/mozo

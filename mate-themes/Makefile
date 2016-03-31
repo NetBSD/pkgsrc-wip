@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.8 2015/04/09 20:38:32 krytarowski Exp $
 
-DISTNAME=	mate-themes-1.8.1
+DISTNAME=	mate-themes-1.9.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.9/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
