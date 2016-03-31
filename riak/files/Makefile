@@ -19,7 +19,7 @@ package:
 	$(BSD_INSTALL_DATA_DIR) ${DEST}/share/examples/riak
 	$(BSD_INSTALL_DATA) ${RIAK_PATH}/rel/riak/etc/riak.conf ${DEST}/share/examples/riak
 	$(BSD_INSTALL_DATA) ${RIAK_PATH}/rel/riak/etc/solr-log4j.properties ${DEST}/share/examples/riak
-	$(BSD_INSTALL_PROGRAM_DIR) ${DEST}/riak
-	cp -Rp ${RIAK_PATH}/rel/riak/erts* ${DEST}/riak
-	cp -Rp ${RIAK_PATH}/rel/riak/lib ${DEST}/riak
-	cp -Rp ${RIAK_PATH}/rel/riak/releases ${DEST}/riak
+	$(BSD_INSTALL_PROGRAM_DIR) ${DEST}/lib/riak
+	cp -Rp ${RIAK_PATH}/rel/riak/erts* ${DEST}/lib/riak
+	cp -Rp ${RIAK_PATH}/rel/riak/lib ${DEST}/lib/riak
+	cp -Rp ${RIAK_PATH}/rel/riak/releases ${DEST}/lib/riak

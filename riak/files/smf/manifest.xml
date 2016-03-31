@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
 <service_bundle type="manifest" name="riak">
-  <service name="@SMF_PREFIX@/@SMF_NAME@" type="service" version="1">
+  <service name="@SMF_PREFIX@/riak" type="service" version="1">
     <create_default_instance enabled="false" />
     <single_instance />
     <dependency name="network" grouping="require_all" restart_on="error" type="service">
@@ -11,7 +11,6 @@
       <service_fmri value="svc:/system/filesystem/local" />
     </dependency>
     <dependency name="epmd" grouping="require_any" restart_on="restart" type="service">
-      <service_fmri value="svc:/@SMF_PREFIX@/epmd:default" />
       <service_fmri value="svc:/@SMF_PREFIX@/riak-epmd:default" />
     </dependency>
     <method_context working_directory="@RIAK_DATA@">
@@ -51,7 +50,7 @@
       <method_credential user="@RIAK_USER@" group="@RIAK_GROUP@" />
     </method_context>
     <exec_method type="method" name="start" exec="@PREFIX@/riak/erts-@ERTS_VERSION@/bin/epmd -daemon" timeout_seconds="60" />
-    <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
+    <exec_method type="method" name="stop" exec="@PREFIX@/riak/erts-@ERTS_VERSION@/bin/epmd -kill" timeout_seconds="60" />
     <property_group name="startd" type="framework">
       <propval name="duration" type="astring" value="contract" />
       <propval name="ignore_error" type="astring" value="core,signal" />

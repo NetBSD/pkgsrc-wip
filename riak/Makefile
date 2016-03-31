@@ -1,15 +1,18 @@
 # $NetBSD: Makefile,v 1.27 2015/07/14 19:44:09 fhajny Exp $
 
-DISTNAME=		riak-2.1.1
+DISTNAME=		riak-2.1.3
 CATEGORIES=		databases
 MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/2.1/${PKGVERSION}/
+MASTER_SITES+=		http://s3.amazonaws.com/files.basho.com/yokozuna/
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.basho.com/products_riak_overview.php
 COMMENT=		Distributed, highly available data store
 LICENSE=		apache-2.0
 
-BUILD_DEPENDS+=		git-base-[0-9]*:../../devel/git-base
+DISTFILES=		${DEFAULT_DISTFILES} yokozuna-3.jar yz_monitor-1.jar
+EXTRACT_ONLY=		${DEFAULT_DISTFILES}
+DIST_SUBDIR=		basho
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -19,7 +22,7 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../lang/erlang/Makefile.versions"
+.include "../../wip/erlang-basho/Makefile.versions"
 .include "Makefile.versions"
 
 .for depname depver in ${RIAK_VERSIONS}
@@ -53,31 +56,23 @@ CONF_FILES+=		share/examples/riak/solr-log4j.properties ${PKG_SYSCONFDIR}/solr-l
 
 BUILD_TARGET=		rel
 
-PLIST_SRC=		PLIST
-.if exists(${.CURDIR}/PLIST.${OPSYS})
-PLIST_SRC+=		PLIST.${OPSYS}
-.endif
-.if !empty(PKG_BUILD_OPTIONS.erlang:Merlang-hipe)
-PLIST_SRC+=		PLIST.hipe
-.endif
-
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-build
 SUBST_MESSAGE.pkgsrc=	Fixing pkgsrc locations and tools
 SUBST_FILES.pkgsrc=	deps/node_package/priv/base/env.sh rel/vars.config
+SUBST_FILES.pkgsrc+=	deps/cuttlefish/rebar.config
 SUBST_VARS.pkgsrc=	PREFIX PKG_SYSCONFDIR PKGVERSION_NOREV
 SUBST_VARS.pkgsrc+=	RIAK_USER RIAK_DATA RIAK_LOG RIAK_RUN
 
-CHECK_INTERPRETER_SKIP=	riak/lib/eper-${VERSION.eper}/priv/bin/* \
-			riak/erts-${VERSION.erts}/bin/* \
-			riak/lib/bitcask-${VERSION.bitcask}/priv/Run-eunit-loop.expect \
-			riak/lib/riaknostic/riaknostic
+REPLACE_INTERPRETER+=	escript
+REPLACE.escript.old=	.*escript
+REPLACE.escript.new=	${PREFIX}/bin/escript
+REPLACE_FILES.escript=  deps/node_package/priv/base/nodetool
 
-CHECK_PORTABILITY_SKIP=	deps/riak_search/tests/riak_search/run_all.sh \
-			riak/lib/yokozuna-${VERSION.yokozuna}/priv/solr/etc/*.sh \
- 			tests/riak_search/run_all.sh
+CHECK_PORTABILITY_SKIP=	deps/riak_search/tests/riak_search/run_all.sh
 
 MAKE_ENV+=		PATCH=${PATCH:Q}
+MAKE_ENV+=		REBAR_OPTS=escript_shebang='\#!/opt/local/bin/escript\n'
 
 INSTALL_ENV+=		REPO=riak
 INSTALL_ENV+=		PKG_VERSION=${PKGVERSION_NOREV}
@@ -101,6 +96,10 @@ update-deps: build
 	 > ${.CURDIR}/../../wip/riak/Makefile.versions
 
 post-extract:
+	${MKDIR} ${WRKSRC}/deps/yokozuna/priv/java_lib
+	${MKDIR} ${WRKSRC}/deps/yokozuna/priv/solr/lib/ext
+	${CP} ${_DISTDIR}/yokozuna-3.jar ${WRKSRC}/deps/yokozuna/priv/java_lib
+	${CP} ${_DISTDIR}/yz_monitor-1.jar ${WRKSRC}/deps/yokozuna/priv/solr/lib/ext
 	${INSTALL_DATA} ${FILESDIR}/nspr-src-configure2.patch \
 	  ${WRKSRC}/deps/erlang_js/c_src/patches
 	${CHMOD} -R u=rwX,g=rX,o=rX ${WRKSRC}
@@ -117,6 +116,6 @@ do-install:
            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}
 
 .include "../../devel/ncurses/buildlink3.mk"
-BUILDLINK_DEPMETHOD.erlang=	build
-.include "../../lang/erlang/buildlink3.mk"
+BUILDLINK_DEPMETHOD.erlang-basho=	build
+.include "../../wip/erlang-basho/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

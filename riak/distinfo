@@ -1,10 +1,20 @@
 $NetBSD: distinfo,v 1.24 2015/07/14 19:44:09 fhajny Exp $
 
-SHA1 (riak-2.1.1.tar.gz) = 941da4ce6f2447eb686a989bd5020a4a8e80986b
-RMD160 (riak-2.1.1.tar.gz) = 8c63f61cf9b551eb42b6e36a7918ff0f8bd8b5e0
-Size (riak-2.1.1.tar.gz) = 18771429 bytes
+SHA1 (basho/riak-2.1.3.tar.gz) = 18743afc2463801acc5b8c4a1f41748e55d296db
+RMD160 (basho/riak-2.1.3.tar.gz) = 6163ce1f7efc80b725cdf7171aeb9619d868e9dd
+SHA512 (basho/riak-2.1.3.tar.gz) = d61c732d300dd28b05a5967c504f59fdc4536850acc6eb648ee8d5fc0712190d6294407a047361effebee57a6f38d85593585cd8de3d72d0f205d132df3fc873
+Size (basho/riak-2.1.3.tar.gz) = 18962967 bytes
+SHA1 (basho/yokozuna-3.jar) = 8a1c98342258bdfa85cdeff5a13573f12e1590e4
+RMD160 (basho/yokozuna-3.jar) = edd77a888b1ef31a33745d87b23415c90e476b1b
+SHA512 (basho/yokozuna-3.jar) = d00720af7962e53ede000c2ea79b7342ace7cc233a11ac0c7ee1da8892db352d30aaf9ebf7f394f38a198140021880d67513ce836888a6a9fad751fbcb5acf2c
+Size (basho/yokozuna-3.jar) = 11261 bytes
+SHA1 (basho/yz_monitor-1.jar) = 40a8d9a79db9036aca73a0ddd61a79d604d542ce
+RMD160 (basho/yz_monitor-1.jar) = 27681f3be21c51aaae40d15d975bd3bced5fd3f8
+SHA512 (basho/yz_monitor-1.jar) = 0732bd5d7119d1eff325e99028a888b4f339485a214999c84ca50f8612524022095a9be89854e3d33f00e7068e25ce6df5fcc2098b57c81854f3de9aca18edb6
+Size (basho/yz_monitor-1.jar) = 2661 bytes
 SHA1 (patch-deps__erlang_js__c_src__Makefile) = a49481f9cb0ae9130a96102b3d540a828b8ec5f7
+SHA1 (patch-deps_cuttlefish_rebar.config) = 23a0b960b88277a9370eefe5a284b7aa8bd71f42
 SHA1 (patch-deps_eleveldb_c__src_build__deps.sh) = 88348831637a6fcafea0099ae0bd35c36e197146
 SHA1 (patch-deps_eleveldb_c__src_eleveldb.cc) = 2e21a560c3f990ff9ac7dd604de00404644e7a5a
 SHA1 (patch-deps_node__package_priv_base_env.sh) = c7a32ac69b916c47706b914c71042ea6fd62a1e2
-SHA1 (patch-rel__vars.config) = e962d9190cb9ce0e7c7b95ecb354db95a9c3a30d
+SHA1 (patch-rel__vars.config) = 1cde95447a50300bd10994d6eb6628914a8ac97b

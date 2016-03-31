@@ -1,4 +1,4 @@
 @comment $NetBSD: PLIST.SunOS,v 1.1 2014/11/28 20:38:31 fhajny Exp $
-riak/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
-riak/lib/os_mon-${VERSION.os_mon}/priv/bin/ferrule
-riak/lib/os_mon-${VERSION.os_mon}/priv/bin/mod_syslog
+lib/riak/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
+lib/riak/lib/os_mon-${VERSION.os_mon}/priv/bin/ferrule
+lib/riak/lib/os_mon-${VERSION.os_mon}/priv/bin/mod_syslog
