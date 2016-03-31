@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/04/10 11:40:29 krytarowski Exp $
 
-SHA1 (marco-1.8.3.tar.xz) = 388c7e22bf84e8ba1fc9955858a681bb93206575
-RMD160 (marco-1.8.3.tar.xz) = 7bfb57a2862ccf5c35e9f2eb10c4bd6f67ede771
-Size (marco-1.8.3.tar.xz) = 1109592 bytes
+SHA1 (marco-1.12.1.tar.xz) = 8cf33e096f8cb77627e3fdad7ae3350a78f77227
+RMD160 (marco-1.12.1.tar.xz) = b6bb5f3bd38bfef7918057471cdad71e1dc59463
+SHA512 (marco-1.12.1.tar.xz) = d271c4627fc50643d8e1a2faec33b5327999ad16a3975d62ea3ded956bccf3d5e015ed8085d43a200a34f1ea78f17d7e4ea4afaa9111e5f2e3a2230b51752945
+Size (marco-1.12.1.tar.xz) = 1163996 bytes

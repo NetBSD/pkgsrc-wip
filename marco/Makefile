@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.12 2015/04/09 22:07:26 krytarowski Exp $
 
-DISTNAME=	marco-1.8.3
+DISTNAME=	marco-1.12.1
 CATEGORIES=	wm
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,9 +11,9 @@ COMMENT=	MATE Marco is a fork of GNOME Metacity
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=		gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
-DEPENDS+=		mate-dialogs-[0-9]*:../../wip/mate-dialogs
 TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
+DEPENDS+=		zenity-[0-9]*:../../x11/zenity
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
