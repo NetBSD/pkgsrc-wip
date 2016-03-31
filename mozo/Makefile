@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.5 2015/04/09 22:07:26 krytarowski Exp $
 
-DISTNAME=	mozo-1.8.0
+DISTNAME=	mozo-1.12.0
 CATEGORIES=	x11
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.8/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
