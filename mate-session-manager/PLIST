@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/09 02:49:02 krytarowski Exp $
+@comment $NetBSD$
 bin/mate-session
+bin/mate-session-inhibit
 bin/mate-session-properties
 bin/mate-session-save
 bin/mate-wm
+man/man1/mate-session-inhibit.1
 man/man1/mate-session-properties.1
 man/man1/mate-session-save.1
 man/man1/mate-session.1
