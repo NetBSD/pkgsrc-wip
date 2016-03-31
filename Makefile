@@ -652,6 +652,7 @@ SUBDIR+=	epiphany
 SUBDIR+=	epsilon
 SUBDIR+=	erc
 SUBDIR+=	erlang15
+SUBDIR+=	erlang-basho
 SUBDIR+=	es40
 SUBDIR+=	es40-firmware
 SUBDIR+=	esdl

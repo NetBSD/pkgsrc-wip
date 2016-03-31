@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (basho/otp_src_R16B02-basho8.tar.gz) = e9e860e2679f3f149ea62ba8ef3602facd3cafcd
+RMD160 (basho/otp_src_R16B02-basho8.tar.gz) = 993ff3bb27488feda726974f993a590eb095f7b1
+SHA512 (basho/otp_src_R16B02-basho8.tar.gz) = b1296332f66d3fdad6c58c588c9f960322a1ad575974361d6fb2e41ba85b32985fc46a518ce5c3cf41bc901f867b53b480317291025e2a50b36b6afa64581a41
+Size (basho/otp_src_R16B02-basho8.tar.gz) = 32671222 bytes
+SHA1 (patch-ab) = 5f1602f3a49c05fd4c45884a7cd6be8d3f287ac3
+SHA1 (patch-ai) = 203d1208b3a8a6aa248cfe0e16c9c19ae25fe0ad
+SHA1 (patch-am) = 11ff769b6954f950d6447e69b033cdc0bfa767e9
+SHA1 (patch-ao) = a4ee17b0a81415d541cb55d76b3c1ecc3148c2c2
+SHA1 (patch-ay) = 7d1a7f79e8c3ea909b2f4476d9ff271ed1318234
+SHA1 (patch-configure.in) = 4a36245a6a6b6dc4804cbb899c7e824ec1fe61e0
+SHA1 (patch-lib_diameter_src_Makefile) = 9e2d96d19ff4cc4be5f2b31a554e8e48f69c9478
