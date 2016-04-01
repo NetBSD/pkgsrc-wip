@@ -11,7 +11,7 @@ COMMENT=	Collection of icons used as the basis for MATE themes
 LICENSE=	gnu-lgpl-v3 OR cc-by-sa-v3.0
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config gettext
 USE_LANGUAGES=	c
 
 PKGCONFIG_OVERRIDE+=	mate-icon-theme.pc.in
