@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (hitch-1.1.1.tar.gz) = c0bc8602b684cb5538e2fcdd503cbc52adadad37
+RMD160 (hitch-1.1.1.tar.gz) = 2a2e4568e8af13c4554c30efd9582a778704dc07
+SHA512 (hitch-1.1.1.tar.gz) = ca63af94eadaacfcacbb4c3cb821ac45e01236fcaf49524eb8650ce883a40bb3b9eacea453aca21f1bb98f1896ec6157872c2f188a120b541f99d38c8cd4538c
+Size (hitch-1.1.1.tar.gz) = 178534 bytes
+SHA1 (patch-src_hitch.c) = f16c5010a704291fd1c986b73bb987fd92148616

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+man/man8/hitch.8
+sbin/hitch
+share/doc/hitch/CHANGES.rst
+share/doc/hitch/README.md
+share/doc/hitch/hitch.conf.ex
