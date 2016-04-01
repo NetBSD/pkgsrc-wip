@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/02/06 15:12:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.1 2014/02/06 15:12:24 fhajny Exp $
 
 DISTNAME=	mozjs-24.2.0
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey24/}
@@ -41,6 +41,16 @@ PLIST_SUBST+=	ARCH=X64
 .else
 PLIST_SUBST+=	ARCH=${MACHINE_ARCH}
 .endif
+
+post-install:
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/lib/libmozjs-24.dylib \
+		${DESTDIR}${PREFIX}/lib/libmozjs-24.dylib
+.endif
+	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-24/*.*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-24/*/*.*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-24.a
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-24.pc
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
