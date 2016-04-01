@@ -27,8 +27,13 @@ PKGCONFIG_OVERRIDE+=	js/src/js.pc.in
 
 TEST_TARGET=		check
 
-# Adjust file permissions
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/lib/libmozjs-17.0.dylib \
+		${DESTDIR}${PREFIX}/lib/libmozjs-17.0.dylib
+.endif
 	${CHMOD} -x ${DESTDIR}${PREFIX}/include/js-17.0/*.*
 	${CHMOD} -x ${DESTDIR}${PREFIX}/include/js-17.0/*/*.*
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-17.0.a
