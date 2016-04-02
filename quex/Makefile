@@ -43,12 +43,6 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
 QUEX_DIR=	share/quex
-FILESDIR=	files
-FILES_SUBST+=	QUEX_DIR=${QUEX_DIR}
-FILES_SUBST+=	PREFIX=${PREFIX}
-
-BUILD_DEFS+=	QUEX_DIR
-BUILD_DEFS+=	PREFIX
 
 INSTALLATION_DIRS=	${PREFIX}/bin
 INSTALLATION_DIRS+=	${PREFIX}/${QUEX_DIR}
@@ -58,7 +52,8 @@ post-extract:
 
 do-install:
 	${RUN} cp -r ${WRKSRC}/* ${DESTDIR}${PREFIX}/${QUEX_DIR}
-	${RUN} ${INSTALL_SCRIPT} ${FILESDIR}/quex ${DESTDIR}${PREFIX}/bin
+	${RUN} ${INSTALL_SCRIPT} ${FILESDIR}/quex.sh ${DESTDIR}${PREFIX}/${QUEX_DIR}/quex.sh
+	${RUN} ln -s ${PREFIX}/${QUEX_DIR}/quex.sh ${DESTDIR}${PREFIX}/bin/quex
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

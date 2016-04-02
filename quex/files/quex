@@ -1,5 +1,0 @@
-#!/bin/sh
-
-QUEX_PATH=@PREFIX@/@QUEX_PATH@
-export QUEX_PATH
-@PREFIX@/@QUEX_PATH@/quex-exe.py $@

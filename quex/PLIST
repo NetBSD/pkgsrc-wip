@@ -272,6 +272,7 @@ share/quex/demo/make_clean.sh
 share/quex/manpage/quex.1
 share/quex/quex-exe.py
 share/quex/quex.bat
+share/quex/quex.sh
 share/quex/quex/DEFINITIONS.py
 share/quex/quex/__init__.py
 share/quex/quex/blackboard.py
