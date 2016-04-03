@@ -1,8 +1,0 @@
-This package is mostly ready for "production".
-
-Problems are listed as follows:
-* XFree86 4.4.0 (tested: NetBSD/i386 2.0.2) dies frequently, when game is used
-  in fullscreen mode, at least when using wide-screen resolutions.
-** this does not happen any longer using XFree86 4.5.0 (in the tests did);
-   different wide-screen handling in 4.5.0?
-** package configured for fullscreen mode to be disabled by default

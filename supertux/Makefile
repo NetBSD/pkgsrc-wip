@@ -1,32 +1,37 @@
 # $NetBSD: Makefile,v 1.16 2012/11/13 20:09:35 othyro Exp $
 #
 
-DISTNAME=		supertux-0.1.3
-PKGREVISION=		6
+DISTNAME=		supertux-0.4.0
 CATEGORIES=		games
-MASTER_SITES=		http://download.berlios.de/supertux/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=SuperTux/supertux/releases/download/v${PKGVERSION}/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://supertux.lethargik.org/
-COMMENT=		2D jump'n run game in the style of the Super Mario ones
-
+COMMENT=		2D jump\'n run game in the style of the Super Mario ones
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+USE_CMAKE=		yes
+CMAKE_ARGS+=		-DINSTALL_SUBDIR_BIN=bin
+CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=off
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-BUILDLINK_API_DEPENDS.SDL=	SDL>=1.2.9nb1
-BUILDLINK_API_DEPENDS.SDL_mixer=	SDL_mixer>=1.2.6nb3
-BUILDLINK_API_DEPENDS.SDL_image=	SDL_image>=1.2.4nb2
-
+BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.9nb1
+BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6nb3
+BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.4nb2
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/physfs/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
