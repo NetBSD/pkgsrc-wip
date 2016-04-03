@@ -372,6 +372,9 @@ ${PYSITELIB}/tests/test_demo.pyo
 ${PYSITELIB}/tests/test_dfw_uncomparables.py
 ${PYSITELIB}/tests/test_dfw_uncomparables.pyc
 ${PYSITELIB}/tests/test_dfw_uncomparables.pyo
+${PYSITELIB}/tests/test_exit_codes.py
+${PYSITELIB}/tests/test_exit_codes.pyc
+${PYSITELIB}/tests/test_exit_codes.pyo
 ${PYSITELIB}/tests/test_garner_dates.py
 ${PYSITELIB}/tests/test_garner_dates.pyc
 ${PYSITELIB}/tests/test_garner_dates.pyo

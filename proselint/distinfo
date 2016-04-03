@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (proselint-0.4.4.tar.gz) = 926f9b1754e60a7848e7c50e89984fdb41fe7abc
-RMD160 (proselint-0.4.4.tar.gz) = e1fa006550f36144b71320adcd85dd06acdd0d73
-SHA512 (proselint-0.4.4.tar.gz) = 15fab6345649ee3562b848a31ec175f20551a50f3ee3401da390df96ba096715ac892bfc67a8959c6f21f36e328be38bd2525078c7924f62052b46998fb2143c
-Size (proselint-0.4.4.tar.gz) = 823454 bytes
+SHA1 (proselint-0.5.1.tar.gz) = f9256b6733f81506363b7463db04bdfcd6d6d5fc
+RMD160 (proselint-0.5.1.tar.gz) = abba94951531174a4e184eea6f8b4eed0f7842de
+SHA512 (proselint-0.5.1.tar.gz) = 822dc631ac6204a4757f4ca00d63f1a24969d2e809425949f0c3ce6f4cb9a5974167e002e4055fa4f14a474f26b6fa3bda88f15ac1e19dd9890271edeba8fe91
+Size (proselint-0.5.1.tar.gz) = 824140 bytes
