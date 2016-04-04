@@ -1980,6 +1980,7 @@ SUBDIR+=	muscle-pam
 SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscletool
 SUBDIR+=	musescore
+SUBDIR+=	mutt
 SUBDIR+=	mutt-ng
 SUBDIR+=	muttprint
 SUBDIR+=	muttvcquery
