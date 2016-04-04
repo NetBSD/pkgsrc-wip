@@ -1,0 +1,2 @@
+Revert compressed-mbox patch location to variable-based when a patch for 1.6.0 is released.
+Update sidebar patch location when a patch for 1.6.0 is released.

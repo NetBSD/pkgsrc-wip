@@ -1,7 +1,6 @@
 # $NetBSD: Makefile.common,v 1.2 2016/02/25 15:00:51 jperkin Exp $
 #
-# used by mail/mutt/Makefile
-# used by mail/mutt-kz/Makefile
+# used by wip/mutt/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
