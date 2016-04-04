@@ -20,10 +20,6 @@ CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=off
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.9nb1
-BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6nb3
-BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.4nb2
-
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
