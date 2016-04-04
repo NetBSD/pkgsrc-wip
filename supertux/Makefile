@@ -3,7 +3,8 @@
 
 DISTNAME=		supertux-0.4.0
 CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_GITHUB:=SuperTux/supertux/releases/download/v${PKGVERSION}/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=SuperTux/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		hernani@vecirex.net
