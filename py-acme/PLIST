@@ -118,10 +118,14 @@ ${PYSITELIB}/acme/test_util.py
 ${PYSITELIB}/acme/test_util.pyc
 ${PYSITELIB}/acme/test_util.pyo
 ${PYSITELIB}/acme/testdata/README
+${PYSITELIB}/acme/testdata/cert-100sans.pem
+${PYSITELIB}/acme/testdata/cert-idnsans.pem
 ${PYSITELIB}/acme/testdata/cert-san.pem
 ${PYSITELIB}/acme/testdata/cert.der
 ${PYSITELIB}/acme/testdata/cert.pem
+${PYSITELIB}/acme/testdata/csr-100sans.pem
 ${PYSITELIB}/acme/testdata/csr-6sans.pem
+${PYSITELIB}/acme/testdata/csr-idnsans.pem
 ${PYSITELIB}/acme/testdata/csr-nosans.pem
 ${PYSITELIB}/acme/testdata/csr-san.pem
 ${PYSITELIB}/acme/testdata/csr.der

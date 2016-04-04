@@ -11,7 +11,7 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://letsencrypt.org/
 
 GITHUB_PROJECT=	letsencrypt
-GITHUB_TAG=	v0.1.0
+GITHUB_TAG=	v0.4.2
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	bsdtar
