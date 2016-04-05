@@ -8,15 +8,16 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.org/
 COMMENT=	Lightweight X11 desktop panel from LXDE
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	lxmenu-data-[0-9]*:../../wip/lxmenu-data
 
-LICENSE=	gnu-gpl-v2
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	perl pkg-config intltool
-CONFIGURE_ARGS+=--with-plugins=none
+LXDE_CONF=		share/examples/lxde
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		perl pkg-config intltool
+CONFIGURE_ARGS+=	--with-plugins=none
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${LXDE_CONF}
 # plugins may be comma separated:
 # possible:
 #Possible plugins are:
@@ -26,6 +27,23 @@ CONFIGURE_ARGS+=--with-plugins=none
 # TODO: maybe I need --enable-indicator-support ??
 
 PKGCONFIG_OVERRIDE+=	lxpanel.pc.in
+
+PKG_SYSCONFSUBDIR=	xdg
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/lxpanel/default/panels 	\
+		${PKG_SYSCONFDIR}/lxpanel/config		\
+		${PKG_SYSCONFDIR}/lxpanel/two_panels/panels
+
+CONF_FILES= ${LXDE_CONF}/xdg/lxpanel/default/config		\
+	${PKG_SYSCONFDIR}/lxpanel/default/config 		\
+	${LXDE_CONF}/xdg/lxpanel/default/panels/panel  		\
+	${PKG_SYSCONFDIR}/lxpanel/default/panels/panel 	\
+	${LXDE_CONF}/xdg/lxpanel/two_panels/config 			\
+	${PKG_SYSCONFDIR}/lxpanel/two_panels/config 		\
+	${LXDE_CONF}/xdg/lxpanel/two_panels/panels/bottom 	\
+	${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/bottom 	\
+	${LXDE_CONF}/xdg/lxpanel/two_panels/panels/top 		\
+	${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/top
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"

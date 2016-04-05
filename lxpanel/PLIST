@@ -1,11 +1,6 @@
 @comment $NetBSD$
 bin/lxpanel
 bin/lxpanelctl
-etc/xdg/lxpanel/default/config
-etc/xdg/lxpanel/default/panels/panel
-etc/xdg/lxpanel/two_panels/config
-etc/xdg/lxpanel/two_panels/panels/bottom
-etc/xdg/lxpanel/two_panels/panels/top
 include/lxpanel/conf.h
 include/lxpanel/icon-grid.h
 include/lxpanel/misc.h
@@ -15,6 +10,11 @@ lib/lxpanel/liblxpanel.la
 lib/pkgconfig/lxpanel.pc
 man/man1/lxpanel.1
 man/man1/lxpanelctl.1
+share/examples/lxde/xdg/lxpanel/default/config
+share/examples/lxde/xdg/lxpanel/default/panels/panel
+share/examples/lxde/xdg/lxpanel/two_panels/config
+share/examples/lxde/xdg/lxpanel/two_panels/panels/bottom
+share/examples/lxde/xdg/lxpanel/two_panels/panels/top
 share/lxpanel/images/background.png
 share/lxpanel/images/capslock-off.png
 share/lxpanel/images/capslock-on.png
