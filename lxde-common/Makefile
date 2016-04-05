@@ -25,26 +25,25 @@ LXDE_CONF=		share/examples/lxde
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${LXDE_CONF}
 PKG_SYSCONFSUBDIR=	xdg
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/lxpanel/LXDE 		\
-			${PKG_SYSCONFDIR}/lxpanel/LXDE/panels 		\
-			${PKG_SYSCONFDIR}/lxsession/LXDE 	\
-			${PKG_SYSCONFDIR}/openbox/LXDE 		\
-			${PKG_SYSCONFDIR}/pcmanfm/LXDE
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/lxpanel/LXDE/panels 	\
+		${PKG_SYSCONFDIR}/lxsession/LXDE 	\
+		${PKG_SYSCONFDIR}/openbox/LXDE 		\
+		${PKG_SYSCONFDIR}/pcmanfm/LXDE
 
-CONF_FILES+=	${LXDE_CONF}/xdg/lxpanel/LXDE/config			\
-				${PKG_SYSCONFDIR}/lxpanel/LXDE/config 			\
-				${LXDE_CONF}/xdg/lxpanel/LXDE/panels/panel 		\
-				${PKG_SYSCONFDIR}/lxpanel/LXDE/panels/panel		\
-				${LXDE_CONF}/xdg/lxsession/LXDE/autostart 		\
-				${PKG_SYSCONFDIR}/lxsession/LXDE/autostart  	\
-				${LXDE_CONF}/xdg/lxsession/LXDE/desktop.conf 	\
-				${PKG_SYSCONFDIR}/lxsession/LXDE/desktop.conf 	\
-				${LXDE_CONF}/xdg/openbox/LXDE/menu.xml 			\
-				${PKG_SYSCONFDIR}/openbox/LXDE/menu.xml 		\
-				${LXDE_CONF}/xdg/openbox/LXDE/rc.xml 			\
-				${PKG_SYSCONFDIR}/openbox/LXDE/rc.xml			\
-				${LXDE_CONF}/xdg/pcmanfm/LXDE/pcmanfm.conf 		\
-				${PKG_SYSCONFDIR}/pcmanfm/LXDE/pcmanfm.conf
+CONF_FILES+=	${LXDE_CONF}/xdg/lxpanel/LXDE/config		\
+		${PKG_SYSCONFDIR}/lxpanel/LXDE/config 		\
+		${LXDE_CONF}/xdg/lxpanel/LXDE/panels/panel 	\
+		${PKG_SYSCONFDIR}/lxpanel/LXDE/panels/panel	\
+		${LXDE_CONF}/xdg/lxsession/LXDE/autostart 	\
+		${PKG_SYSCONFDIR}/lxsession/LXDE/autostart  	\
+		${LXDE_CONF}/xdg/lxsession/LXDE/desktop.conf 	\
+		${PKG_SYSCONFDIR}/lxsession/LXDE/desktop.conf 	\
+		${LXDE_CONF}/xdg/openbox/LXDE/menu.xml 		\
+		${PKG_SYSCONFDIR}/openbox/LXDE/menu.xml		\
+		${LXDE_CONF}/xdg/openbox/LXDE/rc.xml 		\
+		${PKG_SYSCONFDIR}/openbox/LXDE/rc.xml		\
+		${LXDE_CONF}/xdg/pcmanfm/LXDE/pcmanfm.conf 	\
+		${PKG_SYSCONFDIR}/pcmanfm/LXDE/pcmanfm.conf
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
