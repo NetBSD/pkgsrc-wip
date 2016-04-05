@@ -14,7 +14,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 0.1.0
 .include "../../lang/python/egg.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-acme-${PKGVERSION_NOREV}{nb*,}:../../wip/py-acme
-DEPENDS+=	${PYPKGPREFIX}-configargparse-[0-9]*:../../devel/py-configargparse
+DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.7:../../security/py-cryptography
 .if ${_PYTHON_VERSION} == 27
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-dialog-[0-9]*:../../devel/py-dialog
 .endif
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-parsedatetime-[0-9]*:../../time/py-parsedatetime
+DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.0:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-psutil>=2.1.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
