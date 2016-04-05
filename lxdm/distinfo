@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2012/11/24 02:29:27 jeremy-c-reed Exp $
+
+SHA1 (lxdm-0.5.3.tar.xz) = 8c4f7439fa7b56a97e8b19dc62af02a88ae12b45
+RMD160 (lxdm-0.5.3.tar.xz) = 3d32767366a81e01f8a1e58d30b61b5b02990cc9
+SHA512 (lxdm-0.5.3.tar.xz) = 0e3539c595a71cb850c1756dd075b8d477a4e111a4167714057cac06650e9587f338f797f14122e7b2a2f4ad35b38cd7172b83e996758abeeaf0146d65bbc26f
+Size (lxdm-0.5.3.tar.xz) = 239132 bytes
