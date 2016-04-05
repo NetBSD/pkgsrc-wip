@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.2 2012/05/17 04:20:52 jeremy-c-reed Exp $
 
-SHA1 (lxde-common-0.5.5.tar.gz) = 27ce9bcaf109ded61aa0c691a8dc6059a04a6d08
-RMD160 (lxde-common-0.5.5.tar.gz) = 8f821c0bf3ec207ff99db9d952b05b052ca87ce4
-Size (lxde-common-0.5.5.tar.gz) = 899075 bytes
+SHA1 (lxde-common-0.99.1.tar.xz) = 6dda860cc0c96a3d0d444325ac9f4ee6c3a7b946
+RMD160 (lxde-common-0.99.1.tar.xz) = f1aaf284109c54388a5201d4c7a49454cd50ccf4
+SHA512 (lxde-common-0.99.1.tar.xz) = f5a14c44d827ba2355efd10c78732157f5645392ebbeb8e2a8126340a36eeba2842eff0c5338bb36623e5fe2da894c89d60a45c0b177704e2260413d63232b05
+Size (lxde-common-0.99.1.tar.xz) = 889656 bytes
+SHA1 (patch-configure) = 52f637fa4c481defcb96fbcabfbf665593a38e97
