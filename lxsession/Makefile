@@ -10,14 +10,23 @@ HOMEPAGE=	http://lxde.org/
 COMMENT=	Session manager for LXDE
 LICENSE=	gnu-gpl-v2
 
+LXDE_CONF=	share/examples/lxde
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${LXDE_CONF}
 INSTALLATION_DIRS=	share/doc/lxsession
 USE_TOOLS+=	intltool msgfmt pkg-config
+
+PKG_SYSCONFSUBDIR=	xdg
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/autostart
+
+CONF_FILES+=	${LXDE_CONF}/xdg/autostart/lxpolkit.desktop \
+		${PKG_SYSCONFDIR}/autostart/lxpolkit.desktop
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/lxsession/
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../wip/polkit/buildlink3.mk"
