@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax
+AUTO_MKDIRS=	yes
 
 do-install:
 	${RUN} cd ${WRKSRC} && \
