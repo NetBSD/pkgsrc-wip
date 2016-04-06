@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/04/11 13:18:09 krytarowski Exp $
 
-SHA1 (lxqt-about-0.9.0.tar.gz) = befc87f5497bbf363c47156b941b553fad64b3eb
-RMD160 (lxqt-about-0.9.0.tar.gz) = a73d1efd33f908c37654d8f302f53c7392eacaee
-Size (lxqt-about-0.9.0.tar.gz) = 11277 bytes
+SHA1 (lxqt-about-0.10.0.tar.gz) = 9a894d393076f055deac5fd2bf2a3f7a630a0912
+RMD160 (lxqt-about-0.10.0.tar.gz) = 3aa3666a5a0cef6dbbb61d3ce86c6c81fb7dc8ee
+SHA512 (lxqt-about-0.10.0.tar.gz) = 9eca612293474a6e3465606cecd0cc6ebdfb4472a2b4f04164f45b19d77be93bf2c08f58e1b82879f0aac6b600442040ee4d8d1f48edfc8e5cebcb559e01c4dc
+Size (lxqt-about-0.10.0.tar.gz) = 36410 bytes
