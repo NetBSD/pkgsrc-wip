@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 14:04:19 krytarowski Exp $
+@comment $NetBSD$
 bin/lxqt-config-globalkeyshortcuts
 bin/lxqt-globalkeysd
 include/lxqt-globalkeys-ui/LXQtGlobalKeysUi/ShortcutSelector
@@ -11,10 +11,6 @@ include/lxqt-globalkeys/action.h
 include/lxqt-globalkeys/client.h
 include/lxqt-globalkeys/lxqt-globalkeys.h
 include/lxqt-globalkeys/lxqtglobalkeys.h
-lib/cmake/lxqt-globalkeys-ui/lxqt-globalkeys-ui-config.cmake
-lib/cmake/lxqt-globalkeys-ui/lxqt_globalkeys_ui_use.cmake
-lib/cmake/lxqt-globalkeys/lxqt-globalkeys-config.cmake
-lib/cmake/lxqt-globalkeys/lxqt_globalkeys_use.cmake
 lib/liblxqt-globalkeys-ui.${RUBY_DLEXT}
 lib/liblxqt-globalkeys-ui.so.0
 lib/liblxqt-globalkeys-ui.so.${PKGVERSION}
@@ -24,19 +20,27 @@ lib/liblxqt-globalkeys.so.${PKGVERSION}
 lib/pkgconfig/lxqt-globalkeys-ui.pc
 lib/pkgconfig/lxqt-globalkeys.pc
 share/applications/lxqt-config-globalkeyshortcuts.desktop
+share/cmake/lxqt-globalkeys-ui/lxqt-globalkeys-ui-config-version.cmake
+share/cmake/lxqt-globalkeys-ui/lxqt-globalkeys-ui-config.cmake
+share/cmake/lxqt-globalkeys-ui/lxqt-globalkeys-ui-targets-release.cmake
+share/cmake/lxqt-globalkeys-ui/lxqt-globalkeys-ui-targets.cmake
+share/cmake/lxqt-globalkeys/lxqt-globalkeys-config-version.cmake
+share/cmake/lxqt-globalkeys/lxqt-globalkeys-config.cmake
+share/cmake/lxqt-globalkeys/lxqt-globalkeys-targets-release.cmake
+share/cmake/lxqt-globalkeys/lxqt-globalkeys-targets.cmake
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_ar.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_cs.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_cs_CZ.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_da_DK.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_de.qm
-share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_de_DE.qm
-share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_el_GR.qm
+share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_el.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_eo.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_es.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_es_VE.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_eu.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_fi.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_fr_FR.qm
+share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_hu.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_it_IT.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_ja.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_lt.qm
