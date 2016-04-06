@@ -10,4 +10,5 @@ SHA1 (patch-am) = 11ff769b6954f950d6447e69b033cdc0bfa767e9
 SHA1 (patch-ao) = a4ee17b0a81415d541cb55d76b3c1ecc3148c2c2
 SHA1 (patch-ay) = 7d1a7f79e8c3ea909b2f4476d9ff271ed1318234
 SHA1 (patch-configure.in) = 4a36245a6a6b6dc4804cbb899c7e824ec1fe61e0
+SHA1 (patch-erts_configure.in) = 49041c24904bc9013946ed8d1c4f031221ae9ee6
 SHA1 (patch-lib_diameter_src_Makefile) = 9e2d96d19ff4cc4be5f2b31a554e8e48f69c9478
