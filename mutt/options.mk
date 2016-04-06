@@ -122,8 +122,8 @@ CONFIGURE_ARGS+=	--disable-hcache
 PLIST_VARS+=		compressed_mbox
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
 PLIST.compressed_mbox=	yes
-PATCH_SITES+=		http://mutt.org.ua/download/mutt-1.5.24/
-PATCHFILES+=		patch-1.5.24.rr.compressed.gz
+PATCH_SITES+=          http://mutt.org.ua/download/${PKGNAME_NOREV}/
+PATCHFILES+=           patch-${PKGVERSION_NOREV}.rr.compressed.gz
 PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--enable-compressed
 SUBST_CLASSES+=		compress
