@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/04/11 14:11:00 krytarowski Exp $
 
-SHA1 (lxqt-notificationd-0.9.0.tar.gz) = 410afcfd88b6f9a8efbf11f95bf65806c652c876
-RMD160 (lxqt-notificationd-0.9.0.tar.gz) = 44d432e33072a4a9a05324183e35085244754038
-Size (lxqt-notificationd-0.9.0.tar.gz) = 43698 bytes
+SHA1 (lxqt-notificationd-0.10.0.tar.gz) = a94611b847a6b3081b29c9ec10013811211204fa
+RMD160 (lxqt-notificationd-0.10.0.tar.gz) = 128362eb0df77d3a48cdf6a8294bc168f637a050
+SHA512 (lxqt-notificationd-0.10.0.tar.gz) = a2b5d26635f08495eec2229218d1b1bfaf359b8de9540f55dbb5c306265f95ed7c191aa4202ba35bcb5205b90d0eabd2ba1f3fa9b2db6e30523bb8d47a1ed9e8
+Size (lxqt-notificationd-0.10.0.tar.gz) = 36473 bytes

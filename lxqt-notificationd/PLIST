@@ -1,10 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/11 14:11:00 krytarowski Exp $
+@comment $NetBSD$
 bin/lxqt-config-notificationd
 bin/lxqt-notificationd
 share/applications/lxqt-config-notificationd.desktop
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_de.qm
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_el.qm
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_hr.qm
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_hu.qm
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_it.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pt.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ru.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ru_RU.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_de.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_el.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_hu.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pt.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ru.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ru_RU.qm
