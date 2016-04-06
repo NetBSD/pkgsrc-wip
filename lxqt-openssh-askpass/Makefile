@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/05/30 01:23:41 krytarowski Exp $
 
-DISTNAME=	lxqt-openssh-askpass-0.9.0
+DISTNAME=	lxqt-openssh-askpass-0.10.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxde/}
 
