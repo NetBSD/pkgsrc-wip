@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/05/23 18:22:43 krytarowski Exp $
 
-SHA1 (lxqt-common-0.9.1.tar.gz) = 0bd727c31495c055c83a2c6a06b201a7707341a5
-RMD160 (lxqt-common-0.9.1.tar.gz) = 575220416266811933020575d522cf149574eda9
-Size (lxqt-common-0.9.1.tar.gz) = 4060259 bytes
-SHA1 (patch-startlxqt.in) = 173253709aa48bbfad22a4783521e28bcb2666fb
+SHA1 (lxqt-common-0.10.0.tar.gz) = 78626c49eecaae8873f65a1164344310a464a863
+RMD160 (lxqt-common-0.10.0.tar.gz) = 14e3b8f30b72fb281e6ae0d4b95a1c103d2e6451
+SHA512 (lxqt-common-0.10.0.tar.gz) = 6fc9fbba749bac04da43e8c1c3f165baa1af4a1e17a67f1824d3db93e4d1dcfcce390c8f5b96fefdc26e08306cacddb7f1748b2566bf1fd9d9babd832d39269d
+Size (lxqt-common-0.10.0.tar.gz) = 4060959 bytes
