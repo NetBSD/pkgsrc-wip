@@ -2,7 +2,7 @@
 
 .include "../../wip/liblxqt/Makefile.common"
 
-DISTNAME=	lxqt-admin-0.9.0
+DISTNAME=	lxqt-admin-0.10.0
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
