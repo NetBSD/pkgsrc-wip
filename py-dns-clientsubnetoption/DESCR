@@ -1,0 +1,4 @@
+This is a Python Class to add EDNS client subnet support to the
+dnsypthon (py-dns) DNS toolkit for Python.  This is a EDNS0 extension
+that is in active use to carry information about the network that
+originated a DNS query.

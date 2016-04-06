@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/clientsubnetoption-${PKGVERSION}-py2.7.egg-info
+${PYSITELIB}/clientsubnetoption.py
+${PYSITELIB}/clientsubnetoption.pyc
+${PYSITELIB}/clientsubnetoption.pyo
