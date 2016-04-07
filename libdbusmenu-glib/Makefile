@@ -18,4 +18,5 @@ INSTALL_DIRS=	libdbusmenu-glib docs
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
