@@ -4,4 +4,3 @@ SHA1 (mate-applets-1.12.1.tar.xz) = 1275d9922e8c0abde0256d086d3e7bceb9bcf2c9
 RMD160 (mate-applets-1.12.1.tar.xz) = 0227041fd94790ede52c8fdcdd1e81211750f540
 SHA512 (mate-applets-1.12.1.tar.xz) = c9acac98df31386b4016d42d3d1fe0e9ddd5e8fccc291269cff73e2a4c0853fabb85a649ee14f4aef3200c0f731c1d95f48aefdb3d8baaf014ad8776c1e94234
 Size (mate-applets-1.12.1.tar.xz) = 6816716 bytes
-#SHA1 (patch-battstat_power-management.c) = 2931dda3c1941126848cb3862d48549732df98b4

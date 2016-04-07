@@ -25,8 +25,18 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-applets
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/sound/events
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
 CONF_FILES+=	${PREFIX}/share/examples/mate-applets/sound/events/mate-battstat_applet.soundlist \
 		${PKG_SYSCONFDIR}/sound/events/mate-battstat_applet.soundlist
+.endif
+
+PLIST_VARS=	batt
+.if ${OPSYS} != "Darwin"
+PLIST.batt=	yes
+.endif
 
 .include "options.mk"
 
