@@ -21,5 +21,6 @@ BUILD_DIRS=	tests
 
 .include "../../wip/libdbusmenu-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
