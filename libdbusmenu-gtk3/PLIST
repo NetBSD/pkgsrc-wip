@@ -8,3 +8,4 @@ lib/girepository-1.0/DbusmenuGtk3-0.4.typelib
 lib/libdbusmenu-gtk3.la
 lib/pkgconfig/dbusmenu-gtk3-0.4.pc
 share/gir-1.0/DbusmenuGtk3-0.4.gir
+share/vala/vapi/DbusmenuGtk3-0.4.vapi
