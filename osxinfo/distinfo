@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2015/02/18 16:54:49 yrmt Exp $
 
-SHA1 (osxinfo/1ddf9b35cfaa4accbf43347332b6b8298a829233.tar.gz) = d52c07714ec7b5471741129573f06b831286bfd4
-RMD160 (osxinfo/1ddf9b35cfaa4accbf43347332b6b8298a829233.tar.gz) = 13b456bca2976cc1763397145e8e542c164bd5b6
-Size (osxinfo/1ddf9b35cfaa4accbf43347332b6b8298a829233.tar.gz) = 6031 bytes
+SHA1 (osxinfo-0.2.tar.gz) = 6474e38c4ec65f42c0c78cd10cb13ae4d980fb67
+RMD160 (osxinfo-0.2.tar.gz) = a1112555ac37f278ac18e0e8996500a5c9fc2a11
+SHA512 (osxinfo-0.2.tar.gz) = 252b0014085436a2af008ecbbac0062dfd8857111bc3df3b3ff07d5c0cad2927b111a8034fc51ec0e66d25eff13e1cbf00ced47aa0448504b7967b79410feb42
+Size (osxinfo-0.2.tar.gz) = 5182 bytes
