@@ -23,5 +23,6 @@ BUILD_DIRS=	libdbusmenu-gtk
 .include "../../wip/libdbusmenu-glib/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
