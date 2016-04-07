@@ -26,6 +26,7 @@ REPLACE_PYTHON+=	tools/dbusmenu-bench
 .include "../../wip/libdbusmenu-glib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.3
 .include "../../x11/libX11/buildlink3.mk"
