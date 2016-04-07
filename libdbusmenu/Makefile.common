@@ -30,8 +30,6 @@ PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk3-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	tests/dbusmenu-jsonloader-0.4.pc.in
 
-DISTINFO_FILE=		${.CURDIR}/../../wip/libdbusmenu/distinfo
-PATCHDIR=		${.CURDIR}/../../wip/libdbusmenu/patches
 DESCR_SRC=		${.CURDIR}/../../wip/libdbusmenu/DESCR
 
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
