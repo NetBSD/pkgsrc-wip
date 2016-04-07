@@ -1,5 +1,7 @@
 $NetBSD$
 
+Avoid %m usage in printf.
+
 --- src/polkitbackend/polkitd.c.orig	2015-06-18 20:20:50.000000000 +0000
 +++ src/polkitbackend/polkitd.c
 @@ -22,6 +22,7 @@

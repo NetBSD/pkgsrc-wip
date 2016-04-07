@@ -1,5 +1,7 @@
 $NetBSD$
 
+Avoid %m usage in printf.
+
 --- src/programs/pkttyagent.c.orig	2015-06-18 20:20:50.000000000 +0000
 +++ src/programs/pkttyagent.c
 @@ -24,6 +24,7 @@
