@@ -15,7 +15,6 @@ SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	I2util
 SUBDIR+=	LabPlot
-SUBDIR+=	MoarVM
 SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PHPUnit
