@@ -13,7 +13,7 @@ USE_TOOLS+=	autoconf gmake pax
 EXTRACT_USING=	gtar
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-# BROKEN=		libtool handling is NOT correct
+BROKEN=		libtool handling is NOT correct
 
 BUILD_TARGET=	all
 
@@ -45,7 +45,9 @@ do-configure:
 	env ${PKGSRC_ENV} ${CONFIGURE_ENV} QTDIR=${QTDIR} ${QTDIR}/bin/qmake -r
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/release/qcad-bin ${DESTDIR}${PREFIX}/bin/qcad
+	cd ${WRKSRC}/release && \
+	for i in lib*a ; do libtool --mode=install install $$i ${DESTDIR}${PREFIX}/bin/qcad ; done && \
+	libtool --mode=install install qcad-bin ${DESTDIR}${PREFIX}/bin/qcad
 	cd ${WRKSRC} && umask 022 && \
 	pax -rwpm support examples fonts patterns scripts ${DESTDIR}${PREFIX}/share/qcad
 
