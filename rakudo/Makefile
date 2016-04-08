@@ -30,6 +30,6 @@ PLIST_SUBST+=	EXT=so
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/precomp/*
 
-.include "../../wip/MoarVM/buildlink3.mk"
+.include "../../devel/MoarVM/buildlink3.mk"
 .include "../../wip/nqp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

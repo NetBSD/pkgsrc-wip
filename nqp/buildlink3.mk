@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.nqp+=		nqp>=2015.11
 BUILDLINK_ABI_DEPENDS.nqp+=		nqp>=2015.11
 BUILDLINK_PKGSRCDIR.nqp?=		../../lang/nqp
 
-.include "../../wip/MoarVM/buildlink3.mk"
+.include "../../devel/MoarVM/buildlink3.mk"
 .endif # NQP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nqp

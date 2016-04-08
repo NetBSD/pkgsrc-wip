@@ -25,6 +25,6 @@ CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} --backends=moar
 
-.include "../../wip/MoarVM/buildlink3.mk"
+.include "../../devel/MoarVM/buildlink3.mk"
 .include "../../wip/nqp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
