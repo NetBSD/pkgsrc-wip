@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (MoarVM-2016.02.tar.gz) = 8f553cafaf720d8c12dc58c592c88d24e999199f
-RMD160 (MoarVM-2016.02.tar.gz) = fc9c815cd5dd638fdb031c83681f4b4629ab90d0
-SHA512 (MoarVM-2016.02.tar.gz) = fdeb107e071bcd7a893f15f105e722543010a87710cbd2ac4ce322000c96c9dae5c5e661dd8d60e712c4fe22d860650a003485d75f95a5b19fcde266f8fe483d
-Size (MoarVM-2016.02.tar.gz) = 3313448 bytes
+SHA1 (MoarVM-2016.03.tar.gz) = e0b92cad450b35b1db1c63e676bf94dfa5c742d1
+RMD160 (MoarVM-2016.03.tar.gz) = 0c627a21dc7dbaca2f0846520cb9719240623969
+SHA512 (MoarVM-2016.03.tar.gz) = 358c48f6b1803e39841e9f287f2fe3cdde743962d9d9c34e629c18b1b7290fd8a713917f24233dd092ed68adf9a6d0aadb25bda22b3e353d40bd57ae58d70216
+Size (MoarVM-2016.03.tar.gz) = 3318299 bytes
 SHA1 (patch-build_probe.pm) = 8ea9313c1d2329239f123fb4f6c28e1f7de566c2
 SHA1 (patch-build_setup.pm) = fd53d47bd3126b2c89d4e8d82c6bc0b6db5f4fdf
