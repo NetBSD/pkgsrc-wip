@@ -4,4 +4,5 @@ SHA1 (mate-system-monitor-1.12.1.tar.xz) = 58fd0ab16ff76a1d0871053698c13cb28f407
 RMD160 (mate-system-monitor-1.12.1.tar.xz) = 784de2c54182f26e4b8bfb6d0c2c8d5f4f1adca3
 SHA512 (mate-system-monitor-1.12.1.tar.xz) = 8490d710fe65427c780f0ea5d39f7914dd4d114a6303d33cac64be53492da5a33188731724ca393fd2ece518432770c96bf05dc1524010da1671a1465c6d32a6
 Size (mate-system-monitor-1.12.1.tar.xz) = 2113756 bytes
-#SHA1 (patch-src_openfiles.cpp) = 6ca54d29baeb8acba30aa46fb46c169bf6378e8d
+SHA1 (patch-src_lsof.cpp) = bc4838c7da232854a7053d035f3f10aa49f415f9
+SHA1 (patch-src_procproperties.cpp) = 3b79a721869633a693299bb2db5f7796cee5699e
