@@ -11,7 +11,6 @@ include/Inventor/Qt/SoQtRenderArea.h
 include/Inventor/Qt/devices/SoQtDevice.h
 include/Inventor/Qt/devices/SoQtKeyboard.h
 include/Inventor/Qt/devices/SoQtMouse.h
-include/Inventor/Qt/devices/SoQtSpaceball.h
 include/Inventor/Qt/editors/SoQtColorEditor.h
 include/Inventor/Qt/editors/SoQtMaterialEditor.h
 include/Inventor/Qt/nodes/SoGuiColorEditor.h
@@ -25,6 +24,7 @@ include/Inventor/Qt/viewers/SoQtViewer.h
 include/Inventor/Qt/widgets/SoQtPopupMenu.h
 include/Inventor/Qt/widgets/SoQtThumbWheel.h
 lib/libSoQt.la
+lib/pkgconfig/SoQt.pc
 man/man1/soqt-config.1
 share/Coin/conf/soqt-default.cfg
 share/aclocal/soqt.m4
