@@ -8,10 +8,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GTK+3 Allow applications to export a menu into the panel
 PKGNAME=	${DISTNAME:S/-/3-/}
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
 .include "../../wip/libindicator3/buildlink3.mk"
 .include "../../wip/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-#.include "../../x11/py-gtk3/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
