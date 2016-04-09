@@ -4,3 +4,7 @@ SHA1 (caja-1.12.6.tar.xz) = 8e69164061fb8d21d2f887d1321b94d5225abe02
 RMD160 (caja-1.12.6.tar.xz) = b4104dbbd418f127d78ae2ba87026c4c8c09c7c9
 SHA512 (caja-1.12.6.tar.xz) = 9b4bbc9f856380e4a296b46aee1941b3c590de18550dbb19d64ca885c790296173bbce0bcd5f1562fdf01ca772f16dca8e17706cd434debfec8c6196fefa59a1
 Size (caja-1.12.6.tar.xz) = 3646336 bytes
+SHA1 (patch-eel_eel-background.c) = 9d0ed0d9f3c9004f6d9024837538cc26cdb410da
+SHA1 (patch-libcaja-private_caja-global-preferences.c) = 122d62430cf57e274f1e561783ca0f69d0de7d56
+SHA1 (patch-libcaja-private_caja-global-preferences.h) = edac3dc74ad737ed9e5347e8eb5eb83866dcaadf
+SHA1 (patch-src_caja-file-management-properties.h) = 4529eb0c91c39c1d1b1983da23074adfeb28c1a8
