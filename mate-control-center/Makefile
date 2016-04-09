@@ -29,7 +29,7 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/menus/matecc.menu \
 
 .include "../../devel/glib2/schemas.mk"
 
-.include "../../wip/libappindicator/buildlink3.mk"
+.include "../../wip/libappindicator3/buildlink3.mk"
 .include "../../wip/libmatekbd/buildlink3.mk"
 .include "../../wip/mate-desktop/buildlink3.mk"
 .include "../../wip/mate-menus/buildlink3.mk"
