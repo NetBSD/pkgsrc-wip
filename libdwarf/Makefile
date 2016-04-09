@@ -7,7 +7,7 @@ MASTER_SITES=	https://www.prevanders.net/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.prevanders.net/dwarf.html
 COMMENT=	Tools for parsing DWARF debug information
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/dwarf-20160115
 GNU_CONFIGURE=	yes
