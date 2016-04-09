@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/dwarf.h
+include/libdwarf.h
+lib/libdwarf.a
+lib/libdwarf.so
+share/doc/libdwarf/libdwarf2.1.pdf
+share/doc/libdwarf/libdwarf2p.1.pdf
+share/doc/libdwarf/mips_extensions.pdf
