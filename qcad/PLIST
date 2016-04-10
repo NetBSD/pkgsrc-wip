@@ -1,5 +1,18 @@
 @comment $NetBSD$
 bin/qcad
+lib/libdxflib.a
+lib/libopennurbs.a
+lib/libqcadcore.la
+lib/libqcadentity.la
+lib/libqcadgrid.la
+lib/libqcadgui.la
+lib/libqcadoperations.la
+lib/libqcadsnap.la
+lib/libqcadstemmer.la
+lib/libquazip.la
+lib/libspatialindexnavel.la
+lib/libstemmer.a
+lib/libzlib.a
 share/qcad/examples/colors.dxf
 share/qcad/examples/entities.dxf
 share/qcad/examples/example00.dxf
