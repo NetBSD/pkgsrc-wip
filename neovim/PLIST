@@ -212,7 +212,6 @@ share/nvim/runtime/doc/nvim_provider.txt
 share/nvim/runtime/doc/nvim_python.txt
 share/nvim/runtime/doc/nvim_terminal_emulator.txt
 share/nvim/runtime/doc/options.txt
-share/nvim/runtime/doc/os_dos.txt
 share/nvim/runtime/doc/os_win32.txt
 share/nvim/runtime/doc/pattern.txt
 share/nvim/runtime/doc/pi_gzip.txt
@@ -583,6 +582,7 @@ share/nvim/runtime/indent/sqlanywhere.vim
 share/nvim/runtime/indent/systemverilog.vim
 share/nvim/runtime/indent/tcl.vim
 share/nvim/runtime/indent/tcsh.vim
+share/nvim/runtime/indent/teraterm.vim
 share/nvim/runtime/indent/tex.vim
 share/nvim/runtime/indent/tf.vim
 share/nvim/runtime/indent/tilde.vim
@@ -1233,6 +1233,7 @@ share/nvim/runtime/syntax/taskedit.vim
 share/nvim/runtime/syntax/tasm.vim
 share/nvim/runtime/syntax/tcl.vim
 share/nvim/runtime/syntax/tcsh.vim
+share/nvim/runtime/syntax/teraterm.vim
 share/nvim/runtime/syntax/terminfo.vim
 share/nvim/runtime/syntax/tex.vim
 share/nvim/runtime/syntax/texinfo.vim
