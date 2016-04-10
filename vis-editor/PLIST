@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/vis-editor
+bin/vis-editor-clipboard
 bin/vis-editor-open
 man/man1/vis-editor.1
 share/vis-editor/lexers/LICENSE
@@ -13,6 +14,7 @@ share/vis-editor/lexers/apl.lua
 share/vis-editor/lexers/applescript.lua
 share/vis-editor/lexers/asm.lua
 share/vis-editor/lexers/asp.lua
+share/vis-editor/lexers/autoit.lua
 share/vis-editor/lexers/awk.lua
 share/vis-editor/lexers/bash.lua
 share/vis-editor/lexers/batch.lua
@@ -33,6 +35,7 @@ share/vis-editor/lexers/desktop.lua
 share/vis-editor/lexers/diff.lua
 share/vis-editor/lexers/django.lua
 share/vis-editor/lexers/dmd.lua
+share/vis-editor/lexers/dockerfile.lua
 share/vis-editor/lexers/dot.lua
 share/vis-editor/lexers/eiffel.lua
 share/vis-editor/lexers/elixir.lua
@@ -44,6 +47,7 @@ share/vis-editor/lexers/fortran.lua
 share/vis-editor/lexers/fsharp.lua
 share/vis-editor/lexers/gap.lua
 share/vis-editor/lexers/gettext.lua
+share/vis-editor/lexers/gherkin.lua
 share/vis-editor/lexers/glsl.lua
 share/vis-editor/lexers/gnuplot.lua
 share/vis-editor/lexers/go.lua
@@ -51,6 +55,7 @@ share/vis-editor/lexers/groovy.lua
 share/vis-editor/lexers/gtkrc.lua
 share/vis-editor/lexers/haskell.lua
 share/vis-editor/lexers/html.lua
+share/vis-editor/lexers/icon.lua
 share/vis-editor/lexers/idl.lua
 share/vis-editor/lexers/inform.lua
 share/vis-editor/lexers/ini.lua
@@ -71,6 +76,7 @@ share/vis-editor/lexers/makefile.lua
 share/vis-editor/lexers/man.lua
 share/vis-editor/lexers/markdown.lua
 share/vis-editor/lexers/matlab.lua
+share/vis-editor/lexers/moonscript.lua
 share/vis-editor/lexers/nemerle.lua
 share/vis-editor/lexers/nim.lua
 share/vis-editor/lexers/nsis.lua
@@ -79,6 +85,7 @@ share/vis-editor/lexers/objective_c.lua
 share/vis-editor/lexers/pascal.lua
 share/vis-editor/lexers/perl.lua
 share/vis-editor/lexers/php.lua
+share/vis-editor/lexers/pico8.lua
 share/vis-editor/lexers/pike.lua
 share/vis-editor/lexers/pkgbuild.lua
 share/vis-editor/lexers/powershell.lua
@@ -99,6 +106,7 @@ share/vis-editor/lexers/sass.lua
 share/vis-editor/lexers/scala.lua
 share/vis-editor/lexers/scheme.lua
 share/vis-editor/lexers/smalltalk.lua
+share/vis-editor/lexers/snobol4.lua
 share/vis-editor/lexers/sql.lua
 share/vis-editor/lexers/tcl.lua
 share/vis-editor/lexers/template.txt
