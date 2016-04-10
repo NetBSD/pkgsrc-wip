@@ -1,0 +1,10 @@
+h97@makoto 09:15:48/160410(~)% qcad
+QCAD version  3.13.1.3 
+Warning:  "Folder 'plugins' does not exist" 
+Warning:  RPluginLoader::loadPlugins: No plugins directory found. 
+Warning:  RPluginLoader::loadPlugins: No plugins directory found. 
+Warning:  Autostart script not found at: 
+ "scripts/autostart.js
+:scripts/autostart.js" 
+Warning:  RPluginLoader::loadPlugins: No plugins directory found. 
+h97@makoto 09:15:53/160410(~)% 
