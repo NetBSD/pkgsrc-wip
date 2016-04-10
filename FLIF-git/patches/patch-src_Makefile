@@ -31,7 +31,9 @@ Make use of DESTDIR and MANDIR.
 +	install -m 755 ../tools/apng2flif $(DESTDIR)$(PREFIX)/bin
  
  install-dev:
+-	install -d $(PREFIX)/include
 -	install -m 644 library/*.h $(PREFIX)/include
++	install -d $(DESTDIR)$(PREFIX)/include
 +	install -m 644 library/*.h $(DESTDIR)$(PREFIX)/include
  
  magic:
