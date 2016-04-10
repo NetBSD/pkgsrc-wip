@@ -83,6 +83,13 @@ man/man1/vipsedit.1
 man/man1/vipsheader.1
 man/man1/vipsprofile.1
 man/man1/vipsthumbnail.1
+share/gtk-doc/html/libvips/VipsForeignSave.html
+share/gtk-doc/html/libvips/VipsImage.html
+share/gtk-doc/html/libvips/VipsInterpolate.html
+share/gtk-doc/html/libvips/VipsObject.html
+share/gtk-doc/html/libvips/VipsOperation.html
+share/gtk-doc/html/libvips/VipsRegion.html
+share/gtk-doc/html/libvips/VipsThreadState.html
 share/gtk-doc/html/libvips/annotation-glossary.html
 share/gtk-doc/html/libvips/api-index-full.html
 share/gtk-doc/html/libvips/binding.html
@@ -99,13 +106,6 @@ share/gtk-doc/html/libvips/index.sgml
 share/gtk-doc/html/libvips/interconvert.png
 share/gtk-doc/html/libvips/left-insensitive.png
 share/gtk-doc/html/libvips/left.png
-share/gtk-doc/html/libvips/libvips-VipsForeignSave.html
-share/gtk-doc/html/libvips/libvips-VipsImage.html
-share/gtk-doc/html/libvips/libvips-VipsInterpolate.html
-share/gtk-doc/html/libvips/libvips-VipsObject.html
-share/gtk-doc/html/libvips/libvips-VipsOperation.html
-share/gtk-doc/html/libvips/libvips-VipsRegion.html
-share/gtk-doc/html/libvips/libvips-VipsThreadState.html
 share/gtk-doc/html/libvips/libvips-arithmetic.html
 share/gtk-doc/html/libvips/libvips-basic.html
 share/gtk-doc/html/libvips/libvips-buf.html
