@@ -1,0 +1,3 @@
+@comment $NetBSD$
+share/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+share/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty

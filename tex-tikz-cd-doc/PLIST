@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/tikz-cd/README
+share/texmf-dist/doc/latex/tikz-cd/tikz-cd-doc.pdf
+share/texmf-dist/doc/latex/tikz-cd/tikz-cd-doc.tex
