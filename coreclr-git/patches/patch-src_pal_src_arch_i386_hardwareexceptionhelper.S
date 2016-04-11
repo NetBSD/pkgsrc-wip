@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/pal/src/arch/i386/hardwareexceptionhelper.S.orig	2016-04-11 19:51:21.962403601 +0000
+--- src/pal/src/arch/i386/hardwareexceptionhelper.S.orig	2016-04-11 23:49:52.040000054 +0000
 +++ src/pal/src/arch/i386/hardwareexceptionhelper.S
 @@ -0,0 +1,46 @@
 +// Licensed to the .NET Foundation under one or more agreements.
