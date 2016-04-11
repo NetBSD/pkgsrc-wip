@@ -2,8 +2,8 @@
 bin/fswatch
 include/libfswatch/c++/event.hpp
 ${PLIST.fen}include/libfswatch/c++/fen_monitor.hpp
-${PLIST.fsevents}include/libfswatch/c++/fsevents_monitor.hpp
 include/libfswatch/c++/filter.hpp
+${PLIST.fsevents}include/libfswatch/c++/fsevents_monitor.hpp
 ${PLIST.inotify}include/libfswatch/c++/inotify_monitor.hpp
 ${PLIST.kqueue}include/libfswatch/c++/kqueue_monitor.hpp
 include/libfswatch/c++/libfswatch_exception.hpp
