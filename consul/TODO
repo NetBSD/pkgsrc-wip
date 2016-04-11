@@ -1,14 +1,3 @@
-There are two ways this package differs from other Go package in pkgsrc.
-
-1. Dependencies are pre-fetched and pre-packed as DISTFILES. They are not
-   actually required or used in any way at run time, and when installed
-   via `go install`, they fail to build on some platforms for various
-   reasons, which is not the case when simply fetched and made available
-   for the Consul build to succeed.
-
-2. The lang/go-package.mk framework is not used, because the Consul build
-   only results in a single fat binary, and doesn't need the hundreds of
-   source files. Also this helps avoid #1 above.
-
-To prepare dependencies, disable the DISTFILES (re)definition and use
-the 'getdeps' post-extract pkgsrc target.
+The lang/go-package.mk framework is not used, because the Consul build
+only results in a single fat binary, and doesn't need the hundreds of
+source files. Also this helps avoid #1 above.

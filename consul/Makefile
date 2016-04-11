@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	consul-0.6.3
+DISTNAME=	consul-0.6.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -10,9 +10,6 @@ COMMENT=	Tool for service discovery, monitoring and configuration
 LICENSE=	mpl-2.0
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DEPS=		${DISTNAME}-deps-20160116.tar.gz
-DISTFILES+=	${DEFAULT_DISTFILES} ${DEPS}
-SITES.${DEPS}=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 
 WRKSRC=		${WRKDIR}/src/github.com/hashicorp/consul
 
@@ -30,9 +27,6 @@ INSTALLATION_DIRS+=	bin
 post-extract:
 	${MKDIR} ${WRKSRC}
 	${MV} ${WRKDIR}/${DISTNAME}/* ${WRKSRC}
-
-getdeps: extract
-	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} deps ${MAKE_FLAGS}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} go build -o bin/consul
