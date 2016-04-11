@@ -4,3 +4,4 @@ SHA1 (mate-screensaver-1.12.0.tar.xz) = 6930459af0d0f116861696265faf5f0807285bcf
 RMD160 (mate-screensaver-1.12.0.tar.xz) = 26c932d7183b2f945e8e96a9b355b7eef0fe42e0
 SHA512 (mate-screensaver-1.12.0.tar.xz) = 01bdef496560eb8e9118b0ff66863568aaa6df872e7947d0a92fe9fcb1d305618b28928ea95c65a3367e3e4e79e9bdab7a8266287c8e3db2a5210b955d412c8d
 Size (mate-screensaver-1.12.0.tar.xz) = 4868924 bytes
+SHA1 (patch-src_gs-auth-pam.c) = 7b9ad4af83d21c4d5090cd2fa01ca25468cd7e49

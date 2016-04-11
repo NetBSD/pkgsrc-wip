@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFLICTS+=	gnome-screensaver-[0-9]*
 
-DEPENDS+=	consolekit-[0-9]*:../../sysutils/consolekit
-
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -35,7 +33,12 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-screensaver/xdg/autostart/mate-screen
 CONF_FILES+=	${PREFIX}/share/examples/mate-screensaver/xdg/menus/mate-screensavers.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/mate-screensavers.menu
 
-DEPENDS+=	pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		pam
+
+.if ${OPSYS} != "Darwin"
+DEPENDS+=		pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
 INSTALLATION_DIRS+=	${PREFIX}/share/examples/pam.d
 
 post-extract:
@@ -46,6 +49,8 @@ SUBST_STAGE.pam-conf=	post-configure
 SUBST_FILES.pam-conf=	${WRKDIR}/mate-screensaver.pam
 SUBST_VARS.pam-conf=	PREFIX
 
+PLIST.pam=		yes
+
 post-install:
 	${TEST} -f ${DESTDIR}${PREFIX}/share/examples/pam.d/mate-screensaver || \
 		${INSTALL_DATA} ${WRKDIR}/mate-screensaver.pam ${DESTDIR}${PREFIX}/share/examples/pam.d/mate-screensaver
@@ -53,6 +58,11 @@ post-install:
 MAKE_DIRS+=	/etc/pam.d
 CONF_FILES+=	${PREFIX}/share/examples/pam.d/mate-screensaver \
 		/etc/pam.d/mate-screensaver
+
+.include "../../mk/bsd.prefs.mk"
+
+DEPENDS+=	consolekit-[0-9]*:../../sysutils/consolekit
+.endif
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
