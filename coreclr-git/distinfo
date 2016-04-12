@@ -1,5 +1,6 @@
 $NetBSD$
 
+SHA1 (patch-src_ToolBox_SOS_Strike_strike.h) = 3c92ad66bb589d01957da754534d25ad7fba91c1
 SHA1 (patch-src_coreclr_hosts_unixcoreruncommon_coreruncommon.cpp) = 146372d15f157088d450d4cd37cd2aac590e6d06
 SHA1 (patch-src_pal_inc_pal.h) = 7d3ef148af8b1b24067ba4cb5efc12581ebc6881
 SHA1 (patch-src_pal_src_cruntime_printf.cpp) = 8a86c57e1fe3953d158e1860f04bd19d7df1fe08
