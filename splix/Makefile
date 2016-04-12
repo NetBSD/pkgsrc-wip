@@ -18,5 +18,5 @@ MAKE_ENV+=	rastertoqpdl_CXXFLAGS=-pthread
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
-.include "../../print/cups/buildlink3.mk"
+.include "../../print/cups15/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
