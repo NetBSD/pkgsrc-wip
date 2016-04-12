@@ -1,0 +1,18 @@
+$NetBSD$
+
+Go back to Bash echo, SunOS platforms may not have /usr/ucb.
+
+--- scripts/sendsms.orig	2010-07-08 12:41:13.000000000 +0000
++++ scripts/sendsms
+@@ -22,11 +22,6 @@ smsd_user="smsd"
+ 
+ # Will need echo which accepts -n argument:
+ ECHO=echo
+-case `uname` in
+-  SunOS)
+-    ECHO=/usr/ucb/echo
+-    ;;
+-esac
+ 
+ if ! [ -z "$KEYS" ]; then
+   printf "Key: "

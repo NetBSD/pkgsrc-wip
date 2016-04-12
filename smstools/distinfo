@@ -1,6 +1,12 @@
 $NetBSD: distinfo,v 1.1.1.1 2008/02/05 10:39:41 shattered Exp $
 
-SHA1 (smstools3-3.0.10.tar.gz) = 86a77b250dd4d1519161aa551a69146068f3ac31
-RMD160 (smstools3-3.0.10.tar.gz) = 04aef3ddf345038138b76dd1fd68c2b0d72e5cfe
-Size (smstools3-3.0.10.tar.gz) = 210913 bytes
-SHA1 (patch-aa) = d6fcad9fb3f1ba82165be8733fcaf0c51f69d649
+SHA1 (smstools3-3.1.15.tar.gz) = 41de2b80038d8bc1ba6db5fa16e7989c2edcae5c
+RMD160 (smstools3-3.1.15.tar.gz) = df81f66fc81dd564039f968355b53294c24ad32d
+SHA512 (smstools3-3.1.15.tar.gz) = 6a4cc852327fac27b00fc58def4bbc8caa395552586fe1b84f0f4a9f7f6b00008943b85c86de0821036629c58cf04840a189d711b4ac96f7ddaafd6b340b11fa
+Size (smstools3-3.1.15.tar.gz) = 300088 bytes
+SHA1 (patch-scripts_sendsms) = 948ad382fc1e03ff223b348d075dec74c7a806f4
+SHA1 (patch-scripts_sms3) = 38b3eeebdccc0340ebebf77828f2b6cd0b053f13
+SHA1 (patch-src_Makefile) = 68dc28d5388abe134cc4a6a511710c9492eb7d47
+SHA1 (patch-src_extras.c) = 73e45420e307a7e0d0f9e79561a70069f5e1a179
+SHA1 (patch-src_smsd__cfg.c) = 4f30d9dbcad62d2bfe9f31bd551e616cee2fd2da
+SHA1 (patch-src_smsd__cfg.h) = cff45ce08fdf539c2097cb11d810b5a43c5fb6cd

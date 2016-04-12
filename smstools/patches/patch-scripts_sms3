@@ -1,0 +1,16 @@
+$NetBSD$
+
+Go back to Bash echo, SunOS platforms may not have /usr/ucb.
+
+--- scripts/sms3.orig	2010-05-04 09:21:44.000000000 +0000
++++ scripts/sms3
+@@ -34,9 +34,6 @@ case `uname` in
+   *BSD|Darwin)
+     PSOPT="axc"
+     ;;
+-  SunOS)
+-    ECHO=/usr/ucb/echo
+-    ;;
+ esac
+ 
+ # Maximum time to stop smsd, after that it gets killed hardly:

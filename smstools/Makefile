@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.5 2013/02/02 13:20:14 shattered Exp $
 #
 
-DISTNAME=		smstools3-3.0.10
-PKGNAME=		smstools-3.0.10
-PKGREVISION=		1
+DISTNAME=		smstools3-3.1.15
+PKGNAME=		${DISTNAME:S/smstools3/smstools/}
 CATEGORIES=		comms
 MASTER_SITES=		http://smstools3.kekekasvi.com/packages/
 
@@ -13,16 +12,29 @@ COMMENT=		Send and receive short messages via GSM phones
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		bash:run gmake
-CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+
+WRKSRC=			${WRKDIR}/smstools3
+
 REPLACE_BASH=		scripts/sms2html scripts/sms2unicode scripts/regular_run scripts/unicode2sms
+
+BUILD_DEFS+=		VARBASE
+
+CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+CPPFLAGS+=		-DSMS_DIR="\"${VARBASE}/spool/sms\""
+LDFLAGS.SunOS+=		-lnsl -lsocket
 
 EGDIR=			${PREFIX}/share/examples/smstools
 CONF_FILES=		${EGDIR}/smsd.conf ${PKG_SYSCONFDIR}/smsd.conf
-INSTALLATION_DIRS+=	bin sbin ${EGDIR}
-RCD_SCRIPTS=		smsd
 
-WRKSRC=			${WRKDIR}/smstools3
+OWN_DIRS+=		${VARBASE}/spool/sms
+OWN_DIRS+=		${VARBASE}/spool/sms/checked
+OWN_DIRS+=		${VARBASE}/spool/sms/incoming
+OWN_DIRS+=		${VARBASE}/spool/sms/outgoing
+
 BUILD_DIRS=		src
+INSTALLATION_DIRS+=	bin sbin ${EGDIR}
+
+RCD_SCRIPTS=		smsd
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/smsd ${DESTDIR}${PREFIX}/sbin
