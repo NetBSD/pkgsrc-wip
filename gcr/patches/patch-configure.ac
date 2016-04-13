@@ -1,0 +1,15 @@
+$NetBSD$
+
+Detect memrchr function.
+
+--- configure.ac.orig	2015-09-28 16:08:46.000000000 +0000
++++ configure.ac
+@@ -144,7 +144,7 @@ AM_CONDITIONAL(HAVE_VALAC, test "x$VALAC
+ #
+ 
+ AC_CHECK_FUNCS(timegm, AC_DEFINE(HAVE_TIMEGM,1,[Have timegm]))
+-AC_CHECK_FUNCS(mlock)
++AC_CHECK_FUNCS(mlock memrchr)
+ 
+ # --------------------------------------------------------------------
+ # p11-kit

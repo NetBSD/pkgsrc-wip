@@ -14,8 +14,24 @@ BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config \
+				aclocal autoconf autoheader automake
+
 USE_LIBTOOL=		YES
+
+PKGCONFIG_OVERRIDE+=	gck-1.pc.in			\
+						gcr-base-3.pc.in	\
+						gcr-ui.pc.in		\
+						gcr-3.pc.in
+
+post-patch:
+		cp ${FILESDIR}/memrchr.c ${WRKSRC}/egg/
+
+pre-configure:
+	${RUN} cd ${WRKSRC} &&	\
+		autoconf &&			\
+		autoheader &&		\
+		automake
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
