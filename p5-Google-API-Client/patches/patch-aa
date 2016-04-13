@@ -1,0 +1,13 @@
+https://github.com/comewalk/google-api-perl-client/issues/23
+
+--- lib/Google/API/Method.pm.orig	2014-10-18 14:08:34.000000000 +0400
++++ lib/Google/API/Method.pm	2016-02-07 18:49:33.000000000 +0300
+@@ -39,7 +39,7 @@
+         $request = HTTP::Request->new($http_method => $uri);
+         if ($self->{opt}{body}) {
+             $request->content_type('application/json');
+-            $request->content($self->{json_parser}->encode($self->{opt}{body}));
++            $request->content(encode_utf8($self->{json_parser}->encode($self->{opt}{body})));
+         } else {
+             $request->content_length(0);
+         }

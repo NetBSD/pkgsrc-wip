@@ -4,3 +4,4 @@ SHA1 (Google-API-Client-0.14.tar.gz) = ff5e33fcc65a927efd557a7b11126918ed5a3386
 RMD160 (Google-API-Client-0.14.tar.gz) = 5f5f0359648acc8616c5f0a16835b25d825f2d4e
 SHA512 (Google-API-Client-0.14.tar.gz) = a42189b6a5cb3355505c22d902985fd4e188e75cc7ed694c720bd4323cc24401ec1268d19210103ce2d2561042256f5b6e3b994f45bc63adf5a4ab2de6766e55
 Size (Google-API-Client-0.14.tar.gz) = 26009 bytes
+SHA1 (patch-aa) = 8c815f4b194b8b89a483f4aa2c9bf43f7123f63f

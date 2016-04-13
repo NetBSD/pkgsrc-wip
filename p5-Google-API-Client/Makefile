@@ -2,6 +2,7 @@
 
 DISTNAME=		Google-API-Client-0.14
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		net perl5 www
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SH/SHIGETA/}
 
