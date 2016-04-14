@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2015/08/06 07:56:45 thomasklausner Exp $
 
-DISTNAME=	debootstrap_1.0.79
-PKGREVISION=	1
+DISTNAME=	debootstrap_1.0.80
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/debootstrap/}
