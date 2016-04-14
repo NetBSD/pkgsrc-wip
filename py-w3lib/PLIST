@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/07 17:43:19 slitvinov Exp $
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/w3lib/__init__.py
+${PYSITELIB}/w3lib/__init__.pyc
+${PYSITELIB}/w3lib/__init__.pyo
 ${PYSITELIB}/w3lib/encoding.py
 ${PYSITELIB}/w3lib/encoding.pyc
 ${PYSITELIB}/w3lib/encoding.pyo
@@ -11,9 +20,6 @@ ${PYSITELIB}/w3lib/html.pyo
 ${PYSITELIB}/w3lib/http.py
 ${PYSITELIB}/w3lib/http.pyc
 ${PYSITELIB}/w3lib/http.pyo
-${PYSITELIB}/w3lib/__init__.py
-${PYSITELIB}/w3lib/__init__.pyc
-${PYSITELIB}/w3lib/__init__.pyo
 ${PYSITELIB}/w3lib/url.py
 ${PYSITELIB}/w3lib/url.pyc
 ${PYSITELIB}/w3lib/url.pyo
