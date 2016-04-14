@@ -3332,6 +3332,7 @@ SUBDIR+=	py-qnet
 SUBDIR+=	py-quantities
 SUBDIR+=	py-quaternionarray
 SUBDIR+=	py-quepy
+SUBDIR+=	py-queuelib
 SUBDIR+=	py-qutip
 SUBDIR+=	py-qutrub
 SUBDIR+=	py-radon
