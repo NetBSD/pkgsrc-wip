@@ -3,8 +3,10 @@ $NetBSD$
 SHA1 (patch-src_ToolBox_SOS_Strike_strike.h) = 3c92ad66bb589d01957da754534d25ad7fba91c1
 SHA1 (patch-src_coreclr_hosts_unixcoreruncommon_coreruncommon.cpp) = 146372d15f157088d450d4cd37cd2aac590e6d06
 SHA1 (patch-src_pal_inc_pal.h) = 7d3ef148af8b1b24067ba4cb5efc12581ebc6881
+SHA1 (patch-src_pal_src_CMakeLists.txt) = de3994c6630ef6c16e2286e76910477f72cd2179
 SHA1 (patch-src_pal_src_cruntime_printf.cpp) = 8a86c57e1fe3953d158e1860f04bd19d7df1fe08
 SHA1 (patch-src_pal_src_cruntime_printfcpp.cpp) = 4d1ba5fea45402259c67428506f39d9c3128ecbd
 SHA1 (patch-src_pal_src_cruntime_silent__printf.cpp) = 0922321ad05a90cc3b87b1e2663ff4d0b2e4717e
+SHA1 (patch-src_pal_src_init_pal.cpp) = feaf0e6cc704d9a11e66cc6ad3adaca6a0b01f47
 SHA1 (patch-src_pal_src_safecrt_output.inl) = ceb1951e8a7e0839fa1c0f5d07fd6c4087afd5df
 SHA1 (patch-src_pal_src_safecrt_safecrt__output__l.c) = 5a17a2525ab434336cfef369980562d1ecdcd953
