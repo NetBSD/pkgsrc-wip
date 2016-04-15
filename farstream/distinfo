@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/04/18 21:35:52 thomasklausner Exp $
-
-SHA1 (farstream-0.2.3.tar.gz) = ab3692bcad2a99d5b8fcb9a0f62499569d38d5b3
-RMD160 (farstream-0.2.3.tar.gz) = 938a9b220d20bcee482977b40f42b20d1b33043f
-Size (farstream-0.2.3.tar.gz) = 1253317 bytes
-SHA1 (patch-transmitters_multicast_fs-multicast-transmitter.c) = 56249e902f932d1c5873b6a63e57233b05e3e503

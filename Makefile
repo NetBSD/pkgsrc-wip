@@ -690,7 +690,6 @@ SUBDIR+=	fala
 SUBDIR+=	fallingtime
 SUBDIR+=	farbfeld
 SUBDIR+=	farsi-ttf
-SUBDIR+=	farstream
 SUBDIR+=	fasm
 SUBDIR+=	fasta
 SUBDIR+=	fastbit
