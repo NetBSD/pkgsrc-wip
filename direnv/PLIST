@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/direnv
+man/man1/direnv-stdlib.1
+man/man1/direnv.1
