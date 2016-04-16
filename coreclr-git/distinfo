@@ -1,8 +1,4 @@
 $NetBSD$
 
-SHA1 (patch-src_coreclr_hosts_unixcoreruncommon_coreruncommon.cpp) = 146372d15f157088d450d4cd37cd2aac590e6d06
-SHA1 (patch-src_pal_src_CMakeLists.txt) = 8fc5da466e6181beaad5654faecf611498c72373
-SHA1 (patch-src_pal_src_cruntime_printf.cpp) = 42c9c2c1b619f3695330fface7d7e9b5fb8bb182
-SHA1 (patch-src_pal_src_init_pal.cpp) = feaf0e6cc704d9a11e66cc6ad3adaca6a0b01f47
 SHA1 (patch-src_pal_src_safecrt_output.inl) = ceb1951e8a7e0839fa1c0f5d07fd6c4087afd5df
 SHA1 (patch-src_pal_src_safecrt_safecrt__output__l.c) = 5a17a2525ab434336cfef369980562d1ecdcd953
