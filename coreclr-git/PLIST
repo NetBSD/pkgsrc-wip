@@ -39,6 +39,7 @@ CoreCLR/bin/native_i7c.so
 CoreCLR/bin/native_i7s.so
 CoreCLR/bin/native_i8c.so
 CoreCLR/bin/native_i8s.so
+CoreCLR/bin/test2.so
 CoreCLR/coreconsole
 CoreCLR/corerun
 CoreCLR/crossgen
