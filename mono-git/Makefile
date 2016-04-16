@@ -17,7 +17,7 @@ CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
 WRKSRC=		${WRKDIR}/mono
 
-USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config
+USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config autoconf automake autoreconf
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
@@ -63,6 +63,7 @@ REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/win32/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/x11/compile.sh
 REPLACE_BASH+=	mcs/tools/tinderbox/tinderbox.sh libgc/mkinstalldirs
 REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
+REPLACE_BASH+=	autogen.sh
 
 EGDIR=		${PREFIX}/share/examples/mono
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
@@ -160,6 +161,9 @@ PLIST.monodoc=		yes
 GNU_ARCH.i386=		i586
 CFLAGS+=		-march=i586
 .endif
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ./autogen.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/DefaultWsdlHelpGenerator.aspx \
