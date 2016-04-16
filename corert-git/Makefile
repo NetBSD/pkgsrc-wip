@@ -22,9 +22,9 @@ do-build:
 		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
 
 .include "../../lang/mono/buildlink3.mk"
-.include "../../wip/llvm-git/buildlink3.mk"
-.include "../../wip/lldb-git/buildlink3.mk"
-.include "../../wip/clang-git/buildlink3.mk"
+.include "../../lang/llvm/buildlink3.mk"
+.include "../../devel/lldb/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
