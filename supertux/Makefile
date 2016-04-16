@@ -20,6 +20,9 @@ CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=off
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
+CFLAGS+=	-I${BUILDLINK_DIR}/include/AL
+LDFLAGS+=	-L${BUILDLINK_DIR}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_DIR}/lib
+
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
