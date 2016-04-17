@@ -5,5 +5,7 @@ RMD160 (mono-4.4.0.122.tar.bz2) = 41d58720d7cb4f510cad64c1dbecdd9a6c9d19a1
 SHA512 (mono-4.4.0.122.tar.bz2) = 264b3779fc94e40c44f8cc637169d7f3a6367ead75b932069bc0498d53c13ea62ef5711784d1bc0767b85e0cb04424b9eee0ce7ed10772076902b55210097a10
 Size (mono-4.4.0.122.tar.bz2) = 84904723 bytes
 SHA1 (patch-mono_utils_dlmalloc.c) = a1fcd65964e1e18418c97e1726058f1864a49de1
+SHA1 (patch-mono_utils_mono-proclib.c) = 30739ccde2a25f5fd8dcf0e7d581443b6e175ade
+SHA1 (patch-mono_utils_mono-threads-posix.c) = defe4aeede1ff8f3a2035b9a403fa3d5bad99147
 SHA1 (patch-support_map.c) = 39a26cca54503d465fe89042433b7bfdb52104ab
 SHA1 (patch-support_sys-mman.c) = 9d22f579a3f826faf5092b1c3ba0409bde419970
