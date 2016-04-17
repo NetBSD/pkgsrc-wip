@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- mono/utils/Makefile.am.orig	2016-04-16 14:26:45.000000000 +0000
++++ mono/utils/Makefile.am
+@@ -109,6 +109,7 @@ monoutils_sources = \
+ 	mono-threads-windows.c	\
+ 	mono-threads-linux.c	\
+ 	mono-threads-freebsd.c	\
++	mono-threads-netbsd.c	\
+ 	mono-threads-openbsd.c	\
+ 	mono-threads-android.c	\
+ 	mono-threads.h	\
