@@ -163,7 +163,7 @@ CFLAGS+=		-march=i586
 .endif
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && ./autogen.sh
+	${RUN} cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/DefaultWsdlHelpGenerator.aspx \
