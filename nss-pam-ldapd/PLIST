@@ -1,7 +1,9 @@
 @comment $NetBSD: PLIST,v 1.2 2012/12/13 18:20:29 ftigeot Exp $
-lib/nss_ldap.so.1
+lib/${NSS_LDAP_SONAME}
+lib/security/${PAM_LDAP_SONAME}
 man/man5/nslcd.conf.5
 man/man8/nslcd.8
 man/man8/pam_ldap.8
 sbin/nslcd
 share/examples/nss-pam-ldapd/nslcd.conf
+share/examples/rc.d/nslcd

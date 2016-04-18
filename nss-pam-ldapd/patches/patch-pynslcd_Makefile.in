@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install pynslcd's files into $libdir/pynslcd, not $datadir/pynslcd since .pyc/.pyo files are binary
+
+--- pynslcd/Makefile.in.orig	2013-05-05 14:04:06.000000000 +0200
++++ pynslcd/Makefile.in	2013-11-29 16:33:48.000000000 +0100
+@@ -249,7 +249,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-pynslcddir = $(datadir)/pynslcd
++pynslcddir = $(libdir)/pynslcd
+ pynslcd_PYTHON = pynslcd.py attmap.py cache.py cfg.py common.py expr.py \
+                  mypidfile.py tio.py \
+                  alias.py ether.py group.py host.py netgroup.py network.py \
