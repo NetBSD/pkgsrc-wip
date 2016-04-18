@@ -1,0 +1,38 @@
+$NetBSD$
+
+Don't use strdupa which NetBSD lacks.
+
+--- action.c.orig	2014-05-10 00:54:13.000000000 -0400
++++ action.c	2016-04-09 14:25:44.000000000 -0400
+@@ -43,6 +43,7 @@
+ #include "mksquashfs.h"
+ #include "action.h"
+ #include "error.h"
++#include "fnm_extmatch.h"
+ 
+ /*
+  * code to parse actions
+@@ -1953,9 +1954,22 @@
+ 
+ static int subpathname_fn(struct atom *atom, struct action_data *action_data)
+ {
+-	return fnmatch(atom->argv[0], get_start(strdupa(action_data->subpath),
++	/* XXX some platforms might not have alloca, strdupa */
++	int ret_val;
++	char *copy_str;
++
++	if ((copy_str = strdup(action_data->subpath)) == NULL) {
++	  fprintf(stderr, "Out of mem\n");
++	  exit(1);
++	}
++
++	ret_val = fnmatch(atom->argv[0],get_start(copy_str,
+ 		count_components(atom->argv[0])),
+ 		FNM_PATHNAME|FNM_PERIOD|FNM_EXTMATCH) == 0;
++
++	free(copy_str);
++
++	return ret_val;
+ }
+ 
+ TEST_VAR_FN(filesize, ACTION_REG, action_data->buf->st_size)

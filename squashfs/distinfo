@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (squashfs4.3.tar.gz) = a615979db9cee82e4a934a1455577f597d290b41
+RMD160 (squashfs4.3.tar.gz) = fc91627c0757205c4a0fbe2037913cec1cefb1fd
+SHA512 (squashfs4.3.tar.gz) = 854ed7acc99920f24ecf11e0da807e5a2a162eeda55db971aba63a03f0da2c13b20ec0564a906c4b0e415bd8258b273a10208c7abc0704f2ceea773aa6148a79
+Size (squashfs4.3.tar.gz) = 182550 bytes
+SHA1 (patch-aa) = c411bff007132de3f7cfc4382d53f9d9a3ca6806
+SHA1 (patch-ab) = f971b98be2ac760580ff9e813304b1c6182cbd09
+SHA1 (patch-ac) = 070c08107dc466f7c9e0490b3ceb114decc1026b
+SHA1 (patch-ad) = 2bb64be1f48420b5e69cfaa3362448a9e9129b19
+SHA1 (patch-ae) = 5a627546b61b9611151feb9ed052b3b52956786d

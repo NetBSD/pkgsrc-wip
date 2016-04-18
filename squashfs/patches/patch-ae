@@ -1,0 +1,16 @@
+$NetBSD$
+
+Define FNM_EXTMATCH if needed.
+
+--- fnm_extmatch.h.orig	2016-04-08 15:40:57.000000000 -0400
++++ fnm_extmatch.h	2016-04-08 12:36:43.000000000 -0400
+@@ -0,0 +1,9 @@
++/*
++ * this is defined in external/gpl[23]/gnulib various fnmatch_.h
++ * with _GNU_SOURCE or various _POSIX_C_SOURCE but not
++ * pksrgc/pkgtools/libnbcompat pkg/include/nbcompat/fnmatch.h or
++ * usr/include/fnmatch.h, what is best way to fix?
++ */
++#ifndef FNM_EXTMATCH
++# define FNM_EXTMATCH	(1 << 5) /* Use ksh-like extended matching. */	      
++#endif
