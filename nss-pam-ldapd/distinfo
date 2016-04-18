@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2012/12/11 20:21:43 ftigeot Exp $
 
-SHA1 (nss-pam-ldapd-0.8.12.tar.gz) = 9c320172df0cdd4eca6cd97ad4c2438e6552ffe0
-RMD160 (nss-pam-ldapd-0.8.12.tar.gz) = 3c550253d122d6934dc2a967cf6d4a7b8f00cb49
-Size (nss-pam-ldapd-0.8.12.tar.gz) = 484453 bytes
+SHA1 (nss-pam-ldapd-0.8.13.tar.gz) = 0567cfea104defabeacd88a3a3200b311b8071ec
+RMD160 (nss-pam-ldapd-0.8.13.tar.gz) = 74d2f7aad5961a6657119aaf7b12d87e28949bb0
+Size (nss-pam-ldapd-0.8.13.tar.gz) = 487295 bytes
+SHA1 (patch-configure.ac) = 51db0b8f0670f103265df0988832caac5a034d60

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2012/12/13 18:20:29 ftigeot Exp $
 
-DISTNAME=	nss-pam-ldapd-0.8.12
+DISTNAME=	nss-pam-ldapd-0.8.13
 CATEGORIES=	databases
 MASTER_SITES=	http://arthurdejong.org/nss-pam-ldapd/
 
