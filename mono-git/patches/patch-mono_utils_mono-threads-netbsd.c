@@ -1,8 +1,8 @@
 $NetBSD$
 
---- mono/utils/mono-threads-netbsd.c.orig	2016-04-17 23:53:58.824548513 +0000
+--- mono/utils/mono-threads-netbsd.c.orig	2016-04-17 23:57:00.441950443 +0000
 +++ mono/utils/mono-threads-netbsd.c
-@@ -0,0 +1,21 @@
+@@ -0,0 +1,22 @@
 +#include <config.h>
 +
 +#if defined(__NetBSD__)
@@ -24,3 +24,4 @@ $NetBSD$
 +       pthread_attr_getstack (&attr, (void**)staddr, stsize);
 +       pthread_attr_destroy (&attr);
 +}
++#endif
