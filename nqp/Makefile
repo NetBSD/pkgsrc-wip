@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/10/10 01:57:53 ryoon Exp $
 
-DISTNAME=	nqp-2016.02
+DISTNAME=	nqp-2016.03
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/nqp/
 
