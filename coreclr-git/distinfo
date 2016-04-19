@@ -1,4 +1,2 @@
 $NetBSD$
 
-SHA1 (patch-src_pal_src_safecrt_output.inl) = ceb1951e8a7e0839fa1c0f5d07fd6c4087afd5df
-SHA1 (patch-src_pal_src_safecrt_safecrt__output__l.c) = 5a17a2525ab434336cfef369980562d1ecdcd953
