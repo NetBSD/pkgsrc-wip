@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2013/12/11 07:55:04 thomasklausner Exp $
 
-DISTNAME=		pan2-git-2
+DISTNAME=		pan2-2
 CATEGORIES=		news
 MASTER_SITES=		http://github.com/lostcoder/pan2
 
