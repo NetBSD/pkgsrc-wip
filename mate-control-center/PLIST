@@ -60,7 +60,6 @@ man/man1/mate-thumbnail-font.1
 man/man1/mate-typing-monitor.1
 man/man1/mate-window-properties.1
 sbin/mate-display-properties-install-systemwide
-share/MateConf/gsettings/mate-control-center.convert
 share/applications/mate-about-me.desktop
 share/applications/mate-appearance-properties.desktop
 share/applications/mate-at-properties.desktop
@@ -75,7 +74,6 @@ share/applications/mate-theme-installer.desktop
 share/applications/mate-window-properties.desktop
 share/applications/matecc.desktop
 share/desktop-directories/matecc.directory
-share/examples/mate-control-center/xdg/menus/mate-preferences-categories.menu
 share/examples/mate-control-center/xdg/menus/matecc.menu
 share/glib-2.0/schemas/org.mate.control-center.gschema.xml
 share/glib-2.0/schemas/org.mate.control-center.keybinding.gschema.xml
@@ -443,11 +441,14 @@ share/locale/en_CA/LC_MESSAGES/mate-control-center.mo
 share/locale/en_GB/LC_MESSAGES/mate-control-center.mo
 share/locale/eo/LC_MESSAGES/mate-control-center.mo
 share/locale/es/LC_MESSAGES/mate-control-center.mo
+share/locale/es_CO/LC_MESSAGES/mate-control-center.mo
+share/locale/es_MX/LC_MESSAGES/mate-control-center.mo
 share/locale/et/LC_MESSAGES/mate-control-center.mo
 share/locale/eu/LC_MESSAGES/mate-control-center.mo
 share/locale/fa/LC_MESSAGES/mate-control-center.mo
 share/locale/fi/LC_MESSAGES/mate-control-center.mo
 share/locale/fr/LC_MESSAGES/mate-control-center.mo
+share/locale/fr_CA/LC_MESSAGES/mate-control-center.mo
 share/locale/ga/LC_MESSAGES/mate-control-center.mo
 share/locale/gl/LC_MESSAGES/mate-control-center.mo
 share/locale/gu/LC_MESSAGES/mate-control-center.mo
@@ -455,10 +456,12 @@ share/locale/he/LC_MESSAGES/mate-control-center.mo
 share/locale/hi/LC_MESSAGES/mate-control-center.mo
 share/locale/hr/LC_MESSAGES/mate-control-center.mo
 share/locale/hu/LC_MESSAGES/mate-control-center.mo
+share/locale/hy/LC_MESSAGES/mate-control-center.mo
 share/locale/id/LC_MESSAGES/mate-control-center.mo
 share/locale/is/LC_MESSAGES/mate-control-center.mo
 share/locale/it/LC_MESSAGES/mate-control-center.mo
 share/locale/ja/LC_MESSAGES/mate-control-center.mo
+share/locale/jv/LC_MESSAGES/mate-control-center.mo
 share/locale/ka/LC_MESSAGES/mate-control-center.mo
 share/locale/kk/LC_MESSAGES/mate-control-center.mo
 share/locale/kn/LC_MESSAGES/mate-control-center.mo
