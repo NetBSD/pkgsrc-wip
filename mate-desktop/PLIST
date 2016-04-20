@@ -21,7 +21,6 @@ lib/pkgconfig/mate-desktop-2.0.pc
 man/man1/mate-about.1
 man/man1/mate-color-select.1
 man/man1/mpaste.1
-share/MateConf/gsettings/mate-desktop.convert
 share/applications/mate-about.desktop
 share/applications/mate-color-select.desktop
 share/glib-2.0/schemas/org.mate.accessibility-keyboard.gschema.xml
@@ -49,7 +48,6 @@ share/gtk-doc/html/mate-desktop/MateRRLabeler.html
 share/gtk-doc/html/mate-desktop/background.html
 share/gtk-doc/html/mate-desktop/home.png
 share/gtk-doc/html/mate-desktop/index.html
-share/gtk-doc/html/mate-desktop/index.sgml
 share/gtk-doc/html/mate-desktop/intro.html
 share/gtk-doc/html/mate-desktop/left-insensitive.png
 share/gtk-doc/html/mate-desktop/left.png
@@ -101,6 +99,7 @@ share/locale/cv/LC_MESSAGES/mate-desktop.mo
 share/locale/cy/LC_MESSAGES/mate-desktop.mo
 share/locale/da/LC_MESSAGES/mate-desktop.mo
 share/locale/de/LC_MESSAGES/mate-desktop.mo
+share/locale/de_CH/LC_MESSAGES/mate-desktop.mo
 share/locale/dz/LC_MESSAGES/mate-desktop.mo
 share/locale/el/LC_MESSAGES/mate-desktop.mo
 share/locale/en@shaw/LC_MESSAGES/mate-desktop.mo
@@ -110,6 +109,7 @@ share/locale/en_GB/LC_MESSAGES/mate-desktop.mo
 share/locale/en_US/LC_MESSAGES/mate-desktop.mo
 share/locale/eo/LC_MESSAGES/mate-desktop.mo
 share/locale/es/LC_MESSAGES/mate-desktop.mo
+share/locale/es_419/LC_MESSAGES/mate-desktop.mo
 share/locale/es_AR/LC_MESSAGES/mate-desktop.mo
 share/locale/es_CL/LC_MESSAGES/mate-desktop.mo
 share/locale/es_CO/LC_MESSAGES/mate-desktop.mo
@@ -198,6 +198,7 @@ share/locale/ro/LC_MESSAGES/mate-desktop.mo
 share/locale/ru/LC_MESSAGES/mate-desktop.mo
 share/locale/rw/LC_MESSAGES/mate-desktop.mo
 share/locale/sc/LC_MESSAGES/mate-desktop.mo
+share/locale/sco/LC_MESSAGES/mate-desktop.mo
 share/locale/si/LC_MESSAGES/mate-desktop.mo
 share/locale/sk/LC_MESSAGES/mate-desktop.mo
 share/locale/sl/LC_MESSAGES/mate-desktop.mo
