@@ -1,10 +1,10 @@
 # $NetBSD: options.mk,v 1.5 2015/04/09 02:50:51 krytarowski Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-settings-daemon
-PKG_SUPPORTED_OPTIONS=	nss polkit
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mate-settings-daemon
+PKG_SUPPORTED_OPTIONS=		nss polkit
 PKG_OPTIONS_OPTIONAL_GROUPS+=	audio
 PKG_OPTIONS_GROUP.audio=	pulseaudio gstreamer
-PKG_SUGGESTED_OPTIONS=	nss polkit gstreamer
+PKG_SUGGESTED_OPTIONS=		nss polkit gstreamer
 
 .include "../../mk/bsd.options.mk"
 
