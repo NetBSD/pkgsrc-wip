@@ -1,22 +1,14 @@
 # $NetBSD: Makefile,v 1.9 2015/04/09 20:38:32 krytarowski Exp $
 
-DISTNAME=	mate-terminal-1.12.1
-CATEGORIES=	x11
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
+.include "../../wip/mate/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
+DISTNAME=	mate-terminal-${MATE_VERSION}
+CATEGORIES=	x11
+
 COMMENT=	MATE terminal emulator application
-LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 .include "options.mk"
 
@@ -24,6 +16,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 REPLACE_PERL+=	mate-terminal.wrapper
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mate-desktop/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

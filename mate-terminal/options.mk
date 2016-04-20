@@ -10,7 +10,7 @@ PLIST_VARS+=	skey
 
 .if !empty(PKG_OPTIONS:Mskey)
 CONFIGURE_ARGS+=	--enable-skey
-PLIST.skey=	yes
+PLIST.skey=		yes
 .else
 CONFIGURE_ARGS+=	--disable-skey
 .endif
