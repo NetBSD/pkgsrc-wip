@@ -1,23 +1,16 @@
 # $NetBSD: Makefile,v 1.8 2015/04/09 22:07:27 krytarowski Exp $
 
-DISTNAME=	atril-1.12.2
-CATEGORIES=	print
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
+.include "../../wip/mate/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
+DISTNAME=	atril-${MATE_VERSION}
+CATEGORIES=	print
+
 COMMENT=	Simple multi-page document viewer for the MATE environment
-LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
 
 PKGCONFIG_OVERRIDE+=	atril-document.pc.in
 PKGCONFIG_OVERRIDE+=	atril-view.pc.in
