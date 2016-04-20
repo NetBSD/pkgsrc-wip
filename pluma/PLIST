@@ -137,11 +137,11 @@ lib/pluma/plugins/time.pluma-plugin
 lib/pluma/plugins/trailsave.pluma-plugin
 libexec/pluma/pluma-bugreport.sh
 man/man1/pluma.1
-share/MateConf/gsettings/pluma.convert
 share/appdata/pluma.appdata.xml
 share/applications/pluma.desktop
 share/glib-2.0/schemas/org.mate.pluma.gschema.xml
 share/glib-2.0/schemas/org.mate.pluma.plugins.filebrowser.gschema.xml
+share/glib-2.0/schemas/org.mate.pluma.plugins.spell.gschema.xml
 share/glib-2.0/schemas/org.mate.pluma.plugins.time.gschema.xml
 share/gtk-doc/html/pluma/PlumaMessage.html
 share/gtk-doc/html/pluma/PlumaMessageBus.html
@@ -150,7 +150,6 @@ share/gtk-doc/html/pluma/PlumaPlugin.html
 share/gtk-doc/html/pluma/ch01.html
 share/gtk-doc/html/pluma/home.png
 share/gtk-doc/html/pluma/index.html
-share/gtk-doc/html/pluma/index.sgml
 share/gtk-doc/html/pluma/left-insensitive.png
 share/gtk-doc/html/pluma/left.png
 share/gtk-doc/html/pluma/pluma-PlumaPrintJob.html
@@ -401,6 +400,9 @@ share/locale/en_CA/LC_MESSAGES/pluma.mo
 share/locale/en_GB/LC_MESSAGES/pluma.mo
 share/locale/eo/LC_MESSAGES/pluma.mo
 share/locale/es/LC_MESSAGES/pluma.mo
+share/locale/es_AR/LC_MESSAGES/pluma.mo
+share/locale/es_CO/LC_MESSAGES/pluma.mo
+share/locale/es_MX/LC_MESSAGES/pluma.mo
 share/locale/et/LC_MESSAGES/pluma.mo
 share/locale/eu/LC_MESSAGES/pluma.mo
 share/locale/fa/LC_MESSAGES/pluma.mo
@@ -464,6 +466,7 @@ share/locale/tk/LC_MESSAGES/pluma.mo
 share/locale/tr/LC_MESSAGES/pluma.mo
 share/locale/uk/LC_MESSAGES/pluma.mo
 share/locale/ur/LC_MESSAGES/pluma.mo
+share/locale/uz/LC_MESSAGES/pluma.mo
 share/locale/vi/LC_MESSAGES/pluma.mo
 share/locale/wa/LC_MESSAGES/pluma.mo
 share/locale/xh/LC_MESSAGES/pluma.mo
@@ -510,6 +513,7 @@ share/pluma/plugins/snippets/xml.xml
 share/pluma/plugins/snippets/xslt.xml
 share/pluma/plugins/sort/sort.ui
 share/pluma/plugins/spell/languages-dialog.ui
+share/pluma/plugins/spell/pluma-spell-setup-dialog.ui
 share/pluma/plugins/spell/spell-checker.ui
 share/pluma/plugins/taglist/HTML.tags.gz
 share/pluma/plugins/taglist/Latex.tags.gz

@@ -1,22 +1,14 @@
 # $NetBSD: Makefile,v 1.7 2015/04/09 22:07:26 krytarowski Exp $
 
-DISTNAME=	pluma-1.12.2
-CATEGORIES=	editors
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
+.include "../../wip/mate/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
+DISTNAME=	pluma-${MATE_VERSION}
+CATEGORIES=	editors
+
 COMMENT=	Small and lightweight UTF-8 text editor for the MATE
-LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE+=	data/pluma.pc.in
 
