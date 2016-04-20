@@ -1,14 +1,22 @@
-My steps to run CoreFX managed code tests:
-1. Build CoreCLR (with pkgsrc-wip/coreclr-git) on NetBSD x64 Debug and install the Product dir to /usr/pkg/CoreCLR
-2. Build CoreFX native x64 Debug and the work (build) dir is in /tmp/pkgsrc-tmp/wip/corefx-git/work/corefx
-3. Build CoreCLR Debug x64 on Linux and copy mscorlib.dll from ./bin/Product/Linux.x64.Debug/mscorlib.dll to NetBSD machine under /usr/pkg/CoreCLR
-4. Build CoreFX Debug x64 on Linux and copy bin/ to NetBSD machine under /public/bin
-5. Try to run ./run-test.sh
+My steps to run CoreFX managed code tests
 
+1. Build CoreCLR (with pkgsrc-wip/coreclr-git) on NetBSD x64 Debug and install the Product dir to /usr/pkg/CoreCLR:
+cd /usr/pkgsrc/wip/coreclr-git && make install
+
+2. Build CoreFX native x64 Debug and the work (build) dir is in /tmp/pkgsrc-tmp/wip/corefx-git/work/corefx:
+cd /usr/pkgsrc/wip/corefx-git && make
+
+3. Build CoreCLR Debug x64 on Linux and copy mscorlib.dll from ./bin/Product/Linux.x64.Debug/mscorlib.dll to NetBSD machine under /usr/pkg/CoreCLR:
+./build.sh mscorlib Debug
+
+4. Build CoreFX Debug x64 on Linux and copy bin/ to NetBSD machine under /public/bin:
+./build.sh /p:OSGroup=NetBSD /p:SkipTests=true
+
+5. Try to run ./run-test.sh:
 $ pwd
 /tmp/pkgsrc-tmp/wip/corefx-git/work/corefx
 $ ./run-test.sh \
 --coreclr-bins /usr/pkg/CoreCLR/ \
 --mscorlib-bins /usr/pkg/CoreCLR/ \
---corefx-tests /public/bin/tests/FreeBSD.AnyCPU.Debug/ \
+--corefx-tests /public/bin/tests/NetBSD.AnyCPU.Debug/ \
 --corefx-native-bins ./bin/NetBSD.x64.Debug/Native/
