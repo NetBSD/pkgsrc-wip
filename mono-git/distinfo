@@ -10,6 +10,5 @@ SHA1 (patch-mono_utils_Makefile.am) = b3bf378d1576c98262dce0a1b08bf45d013fa323
 SHA1 (patch-mono_utils_dlmalloc.c) = a1fcd65964e1e18418c97e1726058f1864a49de1
 SHA1 (patch-mono_utils_mono-proclib.c) = 30739ccde2a25f5fd8dcf0e7d581443b6e175ade
 SHA1 (patch-mono_utils_mono-threads-netbsd.c) = 244d88cd407bc28f498bb2e35b44304a7c911325
-SHA1 (patch-mono_utils_mono-threads-posix.c) = defe4aeede1ff8f3a2035b9a403fa3d5bad99147
 SHA1 (patch-support_map.c) = 39a26cca54503d465fe89042433b7bfdb52104ab
 SHA1 (patch-support_sys-mman.c) = 9d22f579a3f826faf5092b1c3ba0409bde419970
