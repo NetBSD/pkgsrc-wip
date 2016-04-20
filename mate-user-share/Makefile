@@ -1,23 +1,15 @@
 # $NetBSD: Makefile,v 1.8 2015/04/09 20:38:32 krytarowski Exp $
 
-DISTNAME=	mate-user-share-1.12.0
-CATEGORIES=	sysutils
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
+.include "../../wip/mate/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
+DISTNAME=	mate-user-share-${MATE_VERSION}
+CATEGORIES=	sysutils
+
 COMMENT=	MATE user-leve file shareing
-LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-dnssd>=0.6:../../www/ap22-dnssd
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-httpd=${BUILDLINK_PREFIX.apache}/sbin/httpd
@@ -34,6 +26,7 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/autostart/mate-user-share-w
 		${PKG_SYSCONFBASEDIR}/xdg/autostart/mate-user-share-webdav.desktop
 
 .include "../../devel/glib2/schemas.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../wip/caja/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
