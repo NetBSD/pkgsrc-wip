@@ -9,7 +9,6 @@ man/man1/mate-session-properties.1
 man/man1/mate-session-save.1
 man/man1/mate-session.1
 man/man1/mate-wm.1
-share/MateConf/gsettings/mate-session.convert
 share/applications/mate-session-properties.desktop
 share/doc/mate-session-manager/dbus/mate-session.html
 share/glib-2.0/schemas/org.mate.session.gschema.xml
@@ -49,12 +48,16 @@ share/locale/en_GB/LC_MESSAGES/mate-session-manager.mo
 share/locale/en_US/LC_MESSAGES/mate-session-manager.mo
 share/locale/eo/LC_MESSAGES/mate-session-manager.mo
 share/locale/es/LC_MESSAGES/mate-session-manager.mo
+share/locale/es_AR/LC_MESSAGES/mate-session-manager.mo
+share/locale/es_CO/LC_MESSAGES/mate-session-manager.mo
 share/locale/es_MX/LC_MESSAGES/mate-session-manager.mo
 share/locale/et/LC_MESSAGES/mate-session-manager.mo
 share/locale/eu/LC_MESSAGES/mate-session-manager.mo
 share/locale/fa/LC_MESSAGES/mate-session-manager.mo
 share/locale/fi/LC_MESSAGES/mate-session-manager.mo
 share/locale/fr/LC_MESSAGES/mate-session-manager.mo
+share/locale/fr_CA/LC_MESSAGES/mate-session-manager.mo
+share/locale/frp/LC_MESSAGES/mate-session-manager.mo
 share/locale/fur/LC_MESSAGES/mate-session-manager.mo
 share/locale/fy/LC_MESSAGES/mate-session-manager.mo
 share/locale/ga/LC_MESSAGES/mate-session-manager.mo
@@ -71,6 +74,7 @@ share/locale/ig/LC_MESSAGES/mate-session-manager.mo
 share/locale/is/LC_MESSAGES/mate-session-manager.mo
 share/locale/it/LC_MESSAGES/mate-session-manager.mo
 share/locale/ja/LC_MESSAGES/mate-session-manager.mo
+share/locale/jv/LC_MESSAGES/mate-session-manager.mo
 share/locale/ka/LC_MESSAGES/mate-session-manager.mo
 share/locale/kk/LC_MESSAGES/mate-session-manager.mo
 share/locale/kn/LC_MESSAGES/mate-session-manager.mo

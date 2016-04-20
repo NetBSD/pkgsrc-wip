@@ -1,26 +1,19 @@
 # $NetBSD: Makefile,v 1.8 2015/04/09 20:38:32 krytarowski Exp $
 
-DISTNAME=	mate-session-manager-1.12.1
-CATEGORIES=	x11
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
+.include "../../wip/mate/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
+DISTNAME=	mate-session-manager-${MATE_VERSION}
+CATEGORIES=	x11
+
 COMMENT=	MATE session manager
-LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
-
 .include "options.mk"
 
 .include "../../devel/glib2/schemas.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
