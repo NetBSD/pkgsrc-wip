@@ -1,19 +1,12 @@
 # $NetBSD: Makefile,v 1.6 2015/04/09 20:38:31 krytarowski Exp $
 
-DISTNAME=	mate-media-1.12.1
-CATEGORIES=	multimedia
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
+.include "../../wip/mate/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
+DISTNAME=	mate-media-${MATE_VERSION}
+CATEGORIES=	multimedia
+
 COMMENT=	MATE media tools for MATE Desktop
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
 
 EXTRACT_USING=	gtar
 
