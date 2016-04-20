@@ -16,7 +16,6 @@ man/man1/marco-message.1
 man/man1/marco-theme-viewer.1
 man/man1/marco-window-demo.1
 man/man1/marco.1
-share/MateConf/gsettings/marco.convert
 share/applications/marco.desktop
 share/glib-2.0/schemas/org.mate.marco.gschema.xml
 share/help/C/creating-marco-themes/index.docbook
@@ -110,6 +109,7 @@ share/locale/th/LC_MESSAGES/marco.mo
 share/locale/tk/LC_MESSAGES/marco.mo
 share/locale/tr/LC_MESSAGES/marco.mo
 share/locale/uk/LC_MESSAGES/marco.mo
+share/locale/uz/LC_MESSAGES/marco.mo
 share/locale/vi/LC_MESSAGES/marco.mo
 share/locale/wa/LC_MESSAGES/marco.mo
 share/locale/xh/LC_MESSAGES/marco.mo
