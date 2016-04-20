@@ -15,7 +15,6 @@ lib/pkgconfig/libmatepanelapplet-4.0.pc
 man/man1/mate-desktop-item-edit.1
 man/man1/mate-panel-test-applets.1
 man/man1/mate-panel.1
-share/MateConf/gsettings/mate-panel.convert
 share/applications/mate-panel.desktop
 share/gir-1.0/MatePanelApplet-4.0.gir
 share/glib-2.0/schemas/org.mate.panel.applet.clock.gschema.xml
@@ -32,7 +31,6 @@ share/gtk-doc/html/mate-panel-applet/applet-porting.html
 share/gtk-doc/html/mate-panel-applet/applet-writing.html
 share/gtk-doc/html/mate-panel-applet/home.png
 share/gtk-doc/html/mate-panel-applet/index.html
-share/gtk-doc/html/mate-panel-applet/index.sgml
 share/gtk-doc/html/mate-panel-applet/left-insensitive.png
 share/gtk-doc/html/mate-panel-applet/left.png
 share/gtk-doc/html/mate-panel-applet/mate-panel-applet-Panel-Applet-MateConf-Utilities.html
@@ -274,11 +272,15 @@ share/locale/en_CA/LC_MESSAGES/mate-panel.mo
 share/locale/en_GB/LC_MESSAGES/mate-panel.mo
 share/locale/eo/LC_MESSAGES/mate-panel.mo
 share/locale/es/LC_MESSAGES/mate-panel.mo
+share/locale/es_CO/LC_MESSAGES/mate-panel.mo
+share/locale/es_MX/LC_MESSAGES/mate-panel.mo
 share/locale/et/LC_MESSAGES/mate-panel.mo
 share/locale/eu/LC_MESSAGES/mate-panel.mo
 share/locale/fa/LC_MESSAGES/mate-panel.mo
 share/locale/fi/LC_MESSAGES/mate-panel.mo
 share/locale/fr/LC_MESSAGES/mate-panel.mo
+share/locale/fr_CA/LC_MESSAGES/mate-panel.mo
+share/locale/frp/LC_MESSAGES/mate-panel.mo
 share/locale/fur/LC_MESSAGES/mate-panel.mo
 share/locale/fy/LC_MESSAGES/mate-panel.mo
 share/locale/ga/LC_MESSAGES/mate-panel.mo
@@ -296,11 +298,13 @@ share/locale/ig/LC_MESSAGES/mate-panel.mo
 share/locale/is/LC_MESSAGES/mate-panel.mo
 share/locale/it/LC_MESSAGES/mate-panel.mo
 share/locale/ja/LC_MESSAGES/mate-panel.mo
+share/locale/jv/LC_MESSAGES/mate-panel.mo
 share/locale/ka/LC_MESSAGES/mate-panel.mo
 share/locale/kk/LC_MESSAGES/mate-panel.mo
 share/locale/kn/LC_MESSAGES/mate-panel.mo
 share/locale/ko/LC_MESSAGES/mate-panel.mo
 share/locale/ku/LC_MESSAGES/mate-panel.mo
+share/locale/ku_IQ/LC_MESSAGES/mate-panel.mo
 share/locale/ky/LC_MESSAGES/mate-panel.mo
 share/locale/la/LC_MESSAGES/mate-panel.mo
 share/locale/li/LC_MESSAGES/mate-panel.mo
