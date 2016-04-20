@@ -2,4 +2,6 @@ $NetBSD: distinfo,v 1.2 2013/01/29 11:16:34 jihbed Exp $
 
 SHA1 (cloc-1.56.pl) = 238ea26eccfc574c27aa90ee17741f363959be3f
 RMD160 (cloc-1.56.pl) = f5d969bb4cfcd9d2806a63741f8abcdabcad2795
+SHA512 (cloc-1.56.pl) = 6bbd74c79bc6c905bc20be1d5d4b75efdb01d5b395e5f163e0ea1358b5da2b41ae7c7f27fc0487a37c3144fd3ac81d7242e31245994e257bd09e313837f50979
 Size (cloc-1.56.pl) = 320786 bytes
+SHA1 (patch-cloc-1.56.pl) = 29aea7c6a2ca1338bc1b892bc5d686f7da197df8

@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.8 2013/12/01 09:01:55 thomasklausner Exp $
 
 DISTNAME=	cloc-1.56
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cloc/}
 EXTRACT_SUFX=	.pl
