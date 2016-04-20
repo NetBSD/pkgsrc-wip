@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/mate-system-monitor
 man/man1/mate-system-monitor.1
-share/MateConf/gsettings/mate-system-monitor.convert
 share/appdata/mate-system-monitor.appdata.xml
 share/applications/mate-system-monitor.desktop
 share/glib-2.0/schemas/org.mate.system-monitor.enums.xml
@@ -226,6 +225,7 @@ share/locale/be@latin/LC_MESSAGES/mate-system-monitor.mo
 share/locale/bg/LC_MESSAGES/mate-system-monitor.mo
 share/locale/bn/LC_MESSAGES/mate-system-monitor.mo
 share/locale/bn_IN/LC_MESSAGES/mate-system-monitor.mo
+share/locale/br/LC_MESSAGES/mate-system-monitor.mo
 share/locale/bs/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ca/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ca@valencia/LC_MESSAGES/mate-system-monitor.mo
@@ -242,12 +242,14 @@ share/locale/en_CA/LC_MESSAGES/mate-system-monitor.mo
 share/locale/en_GB/LC_MESSAGES/mate-system-monitor.mo
 share/locale/eo/LC_MESSAGES/mate-system-monitor.mo
 share/locale/es/LC_MESSAGES/mate-system-monitor.mo
+share/locale/es_CO/LC_MESSAGES/mate-system-monitor.mo
 share/locale/es_MX/LC_MESSAGES/mate-system-monitor.mo
 share/locale/et/LC_MESSAGES/mate-system-monitor.mo
 share/locale/eu/LC_MESSAGES/mate-system-monitor.mo
 share/locale/fa/LC_MESSAGES/mate-system-monitor.mo
 share/locale/fi/LC_MESSAGES/mate-system-monitor.mo
 share/locale/fr/LC_MESSAGES/mate-system-monitor.mo
+share/locale/fr_CA/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ga/LC_MESSAGES/mate-system-monitor.mo
 share/locale/gl/LC_MESSAGES/mate-system-monitor.mo
 share/locale/gu/LC_MESSAGES/mate-system-monitor.mo
@@ -255,9 +257,12 @@ share/locale/he/LC_MESSAGES/mate-system-monitor.mo
 share/locale/hi/LC_MESSAGES/mate-system-monitor.mo
 share/locale/hr/LC_MESSAGES/mate-system-monitor.mo
 share/locale/hu/LC_MESSAGES/mate-system-monitor.mo
+share/locale/hy/LC_MESSAGES/mate-system-monitor.mo
 share/locale/id/LC_MESSAGES/mate-system-monitor.mo
+share/locale/is/LC_MESSAGES/mate-system-monitor.mo
 share/locale/it/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ja/LC_MESSAGES/mate-system-monitor.mo
+share/locale/jv/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ka/LC_MESSAGES/mate-system-monitor.mo
 share/locale/kk/LC_MESSAGES/mate-system-monitor.mo
 share/locale/kn/LC_MESSAGES/mate-system-monitor.mo
@@ -304,6 +309,7 @@ share/locale/tr/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ug/LC_MESSAGES/mate-system-monitor.mo
 share/locale/uk/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ur/LC_MESSAGES/mate-system-monitor.mo
+share/locale/uz/LC_MESSAGES/mate-system-monitor.mo
 share/locale/vi/LC_MESSAGES/mate-system-monitor.mo
 share/locale/zh_CN/LC_MESSAGES/mate-system-monitor.mo
 share/locale/zh_HK/LC_MESSAGES/mate-system-monitor.mo

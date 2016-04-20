@@ -2,9 +2,9 @@ $NetBSD$
 
 Fix clang build.
 
---- src/lsof.cpp.orig	2015-09-25 11:36:19.000000000 +0000
+--- src/lsof.cpp.orig	2016-04-05 16:12:54.000000000 +0000
 +++ src/lsof.cpp
-@@ -140,7 +140,7 @@ namespace
+@@ -137,7 +137,7 @@ namespace
  
          void update_count(unsigned count)
          {
