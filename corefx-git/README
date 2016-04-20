@@ -15,7 +15,7 @@ cd /usr/pkgsrc/wip/corefx-git && make
 5. Try to run ./run-test.sh:
 $ pwd
 /tmp/pkgsrc-tmp/wip/corefx-git/work/corefx
-$ ./run-test.sh \
+$ sudo ./run-test.sh \
 --coreclr-bins /usr/pkg/CoreCLR/ \
 --mscorlib-bins /usr/pkg/CoreCLR/ \
 --corefx-tests /public/bin/tests/NetBSD.AnyCPU.Debug/ \
