@@ -5,7 +5,6 @@ libexec/engrampa-server
 libexec/engrampa/isoinfo.sh
 libexec/engrampa/rpm2cpio
 man/man1/engrampa.1
-share/MateConf/gsettings/engrampa.convert
 share/appdata/engrampa.appdata.xml
 share/applications/engrampa.desktop
 share/caja/extensions/libcaja-engrampa.caja-extension
@@ -193,11 +192,15 @@ share/locale/en_CA/LC_MESSAGES/engrampa.mo
 share/locale/en_GB/LC_MESSAGES/engrampa.mo
 share/locale/eo/LC_MESSAGES/engrampa.mo
 share/locale/es/LC_MESSAGES/engrampa.mo
+share/locale/es_CO/LC_MESSAGES/engrampa.mo
+share/locale/es_MX/LC_MESSAGES/engrampa.mo
 share/locale/et/LC_MESSAGES/engrampa.mo
 share/locale/eu/LC_MESSAGES/engrampa.mo
 share/locale/fa/LC_MESSAGES/engrampa.mo
 share/locale/fi/LC_MESSAGES/engrampa.mo
 share/locale/fr/LC_MESSAGES/engrampa.mo
+share/locale/fr_CA/LC_MESSAGES/engrampa.mo
+share/locale/frp/LC_MESSAGES/engrampa.mo
 share/locale/fur/LC_MESSAGES/engrampa.mo
 share/locale/fy/LC_MESSAGES/engrampa.mo
 share/locale/ga/LC_MESSAGES/engrampa.mo
@@ -212,6 +215,7 @@ share/locale/id/LC_MESSAGES/engrampa.mo
 share/locale/is/LC_MESSAGES/engrampa.mo
 share/locale/it/LC_MESSAGES/engrampa.mo
 share/locale/ja/LC_MESSAGES/engrampa.mo
+share/locale/jv/LC_MESSAGES/engrampa.mo
 share/locale/ka/LC_MESSAGES/engrampa.mo
 share/locale/kk/LC_MESSAGES/engrampa.mo
 share/locale/kn/LC_MESSAGES/engrampa.mo
@@ -259,6 +263,7 @@ share/locale/ug/LC_MESSAGES/engrampa.mo
 share/locale/uk/LC_MESSAGES/engrampa.mo
 share/locale/ur/LC_MESSAGES/engrampa.mo
 share/locale/ur_PK/LC_MESSAGES/engrampa.mo
+share/locale/uz/LC_MESSAGES/engrampa.mo
 share/locale/vi/LC_MESSAGES/engrampa.mo
 share/locale/xh/LC_MESSAGES/engrampa.mo
 share/locale/zh_CN/LC_MESSAGES/engrampa.mo
