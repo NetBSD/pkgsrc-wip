@@ -11,7 +11,6 @@ libexec/mate-screensaver/slideshow
 man/man1/mate-screensaver-command.1
 man/man1/mate-screensaver-preferences.1
 man/man1/mate-screensaver.1
-share/MateConf/gsettings/org.mate.screensaver.gschema.migrate
 share/applications/mate-screensaver-preferences.desktop
 share/applications/screensavers/cosmos-slideshow.desktop
 share/applications/screensavers/footlogo-floaters.desktop
@@ -32,7 +31,6 @@ share/dbus-1/services/org.mate.ScreenSaver.service
 share/desktop-directories/mate-screensaver.directory
 share/examples/mate-screensaver/xdg/autostart/mate-screensaver.desktop
 share/examples/mate-screensaver/xdg/menus/mate-screensavers.menu
-${PLIST.pam}share/examples/pam.d/mate-screensaver
 share/glib-2.0/schemas/org.mate.screensaver.gschema.xml
 share/locale/am/LC_MESSAGES/mate-screensaver.mo
 share/locale/ar/LC_MESSAGES/mate-screensaver.mo
@@ -65,6 +63,8 @@ share/locale/eu/LC_MESSAGES/mate-screensaver.mo
 share/locale/fa/LC_MESSAGES/mate-screensaver.mo
 share/locale/fi/LC_MESSAGES/mate-screensaver.mo
 share/locale/fr/LC_MESSAGES/mate-screensaver.mo
+share/locale/fr_CA/LC_MESSAGES/mate-screensaver.mo
+share/locale/frp/LC_MESSAGES/mate-screensaver.mo
 share/locale/ga/LC_MESSAGES/mate-screensaver.mo
 share/locale/gl/LC_MESSAGES/mate-screensaver.mo
 share/locale/gu/LC_MESSAGES/mate-screensaver.mo
@@ -72,6 +72,7 @@ share/locale/he/LC_MESSAGES/mate-screensaver.mo
 share/locale/hi/LC_MESSAGES/mate-screensaver.mo
 share/locale/hr/LC_MESSAGES/mate-screensaver.mo
 share/locale/hu/LC_MESSAGES/mate-screensaver.mo
+share/locale/hy/LC_MESSAGES/mate-screensaver.mo
 share/locale/id/LC_MESSAGES/mate-screensaver.mo
 share/locale/is/LC_MESSAGES/mate-screensaver.mo
 share/locale/it/LC_MESSAGES/mate-screensaver.mo
@@ -118,6 +119,7 @@ share/locale/th/LC_MESSAGES/mate-screensaver.mo
 share/locale/tr/LC_MESSAGES/mate-screensaver.mo
 share/locale/uk/LC_MESSAGES/mate-screensaver.mo
 share/locale/ur/LC_MESSAGES/mate-screensaver.mo
+share/locale/uz/LC_MESSAGES/mate-screensaver.mo
 share/locale/vi/LC_MESSAGES/mate-screensaver.mo
 share/locale/zh_CN/LC_MESSAGES/mate-screensaver.mo
 share/locale/zh_HK/LC_MESSAGES/mate-screensaver.mo

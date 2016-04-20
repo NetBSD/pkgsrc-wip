@@ -1,21 +1,13 @@
 # $NetBSD: Makefile,v 1.9 2015/04/10 12:20:36 krytarowski Exp $
 
-DISTNAME=	mate-screensaver-1.12.0
-CATEGORIES=	x11
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
+.include "../../wip/mate/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
+DISTNAME=	mate-screensaver-${MATE_VERSION}
+CATEGORIES=	x11
+
 COMMENT=	Screen saver and locker for the MATE desktop
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFLICTS+=	gnome-screensaver-[0-9]*
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE+=	data/mate-screensaver.pc.in
 
