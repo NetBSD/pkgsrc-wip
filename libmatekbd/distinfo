@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/04/10 11:39:10 krytarowski Exp $
 
-SHA1 (libmatekbd-1.12.1.tar.xz) = f2f3f272784961e20b97a5291ecc6465696d9154
-RMD160 (libmatekbd-1.12.1.tar.xz) = c092b4398fafda21ad3146c751b3413f5949b2de
-SHA512 (libmatekbd-1.12.1.tar.xz) = ef07e7b7ff35a17465eb427aafef4c0679ccecf0d96989a66eaf337791dd62d5e85ec72f2c58de5b09e7065eac6df16afb401975fcd727e924e8d3b34b19c0aa
-Size (libmatekbd-1.12.1.tar.xz) = 349492 bytes
+SHA1 (libmatekbd-1.14.0.tar.xz) = 36b107cd9a9cc6f44c2843abba0a6e65839b9d09
+RMD160 (libmatekbd-1.14.0.tar.xz) = 6d18aacfecffbf8921f2939b90040b65009e4bd7
+SHA512 (libmatekbd-1.14.0.tar.xz) = 755068234bdceee3f2a69a309a7d140180ee968f50e3512f60ef9724e12726b72a3e1a1b1a2d19727c307a74bc0269725d99fb4361d5904298106c94809d477e
+Size (libmatekbd-1.14.0.tar.xz) = 366520 bytes

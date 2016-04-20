@@ -1,19 +1,11 @@
 # $NetBSD: Makefile,v 1.6 2015/04/09 20:38:31 krytarowski Exp $
 
-DISTNAME=	libmatekbd-1.12.1
+.include "../../wip/mate/Makefile.common"
+
+DISTNAME=	libmatekbd-${MATE_VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	MATE keyboard configuration library
-LICENSE=	gnu-lgpl-v2.1
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	libmatekbd.pc.in
 PKGCONFIG_OVERRIDE+=	libmatekbdui.pc.in
