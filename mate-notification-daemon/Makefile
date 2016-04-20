@@ -1,19 +1,11 @@
 # $NetBSD: Makefile,v 1.7 2015/04/09 20:38:31 krytarowski Exp $
 
-DISTNAME=	mate-notification-daemon-1.12.1
+.include "../../wip/mate/Makefile.common"
+
+DISTNAME=	mate-notification-daemon-${MATE_VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Notification daemon for MATE desktop
-LICENSE=	gnu-gpl-v2
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
