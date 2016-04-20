@@ -1,9 +1,9 @@
-My steps to run CoreFX tests:
+My steps to run CoreFX managed code tests:
 1. Build CoreCLR (with pkgsrc-wip/coreclr-git) on NetBSD x64 Debug and install the Product dir to /usr/pkg/CoreCLR
 2. Build CoreFX native x64 Debug and the work (build) dir is in /tmp/pkgsrc-tmp/wip/corefx-git/work/corefx
 3. Build CoreCLR Debug x64 on Linux and copy mscorlib.dll from ./bin/Product/Linux.x64.Debug/mscorlib.dll to NetBSD machine under /usr/pkg/CoreCLR
 4. Build CoreFX Debug x64 on Linux and copy bin/ to NetBSD machine under /public/bin
-5. Try to run ./run-test.sh and see ` Consistency check failed: Managed object size does not match unmanaged object size
+5. Try to run ./run-test.sh
 
 $ pwd
 /tmp/pkgsrc-tmp/wip/corefx-git/work/corefx
