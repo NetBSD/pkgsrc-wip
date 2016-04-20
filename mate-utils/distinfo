@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/04/09 10:38:13 krytarowski Exp $
 
-SHA1 (mate-utils-1.12.0.tar.xz) = 577692e34fee8e79f59804bf314c5375a8482af1
-RMD160 (mate-utils-1.12.0.tar.xz) = f8e4f2492e451d50e932f6749c248cd785339833
-SHA512 (mate-utils-1.12.0.tar.xz) = fe1db5c04b3adc616fdd0f76ddfb1291bbbfb6fb7d2f9ab11c5ffc33e19e0487ba3581babdfe74dd64553fd07f7d986fbac08fe2b14bcb79fca315e365069e47
-Size (mate-utils-1.12.0.tar.xz) = 6482900 bytes
+SHA1 (mate-utils-1.14.0.tar.xz) = 4a6f4803432204b74d6d48e4a4325b7b9e1ea4d5
+RMD160 (mate-utils-1.14.0.tar.xz) = 937d492e89d4ca7bcff1977ff1c0f5799fe9f93a
+SHA512 (mate-utils-1.14.0.tar.xz) = acb0e347b8c98e207842881c77f4e773771c3f230b437059d08916c8a559f6da33f4681b6b87be7d02f8775ec6cfa00d18079dcce66a23612f79cce2c3dececb
+Size (mate-utils-1.14.0.tar.xz) = 6526244 bytes
