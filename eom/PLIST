@@ -32,7 +32,6 @@ lib/eom/plugins/reload.eom-plugin
 lib/eom/plugins/statusbar-date.eom-plugin
 lib/pkgconfig/eom.pc
 man/man1/eom.1
-share/MateConf/gsettings/eom.convert
 share/appdata/eom.appdata.xml
 share/applications/eom.desktop
 share/eom/eom-image-properties-dialog.ui
@@ -112,14 +111,11 @@ share/gtk-doc/html/eom/eom.devhelp2
 share/gtk-doc/html/eom/home.png
 share/gtk-doc/html/eom/index.html
 share/gtk-doc/html/eom/index.sgml
-share/gtk-doc/html/eom/left-insensitive.png
 share/gtk-doc/html/eom/left.png
 share/gtk-doc/html/eom/pt01.html
-share/gtk-doc/html/eom/right-insensitive.png
 share/gtk-doc/html/eom/right.png
 share/gtk-doc/html/eom/rn01.html
 share/gtk-doc/html/eom/style.css
-share/gtk-doc/html/eom/up-insensitive.png
 share/gtk-doc/html/eom/up.png
 share/help/C/eom/figures/eom_save_as_window.png
 share/help/C/eom/figures/eom_start_window.png
@@ -280,11 +276,14 @@ share/locale/en_GB/LC_MESSAGES/eom.mo
 share/locale/en_US/LC_MESSAGES/eom.mo
 share/locale/eo/LC_MESSAGES/eom.mo
 share/locale/es/LC_MESSAGES/eom.mo
+share/locale/es_CO/LC_MESSAGES/eom.mo
+share/locale/es_MX/LC_MESSAGES/eom.mo
 share/locale/et/LC_MESSAGES/eom.mo
 share/locale/eu/LC_MESSAGES/eom.mo
 share/locale/fa/LC_MESSAGES/eom.mo
 share/locale/fi/LC_MESSAGES/eom.mo
 share/locale/fr/LC_MESSAGES/eom.mo
+share/locale/fr_CA/LC_MESSAGES/eom.mo
 share/locale/fur/LC_MESSAGES/eom.mo
 share/locale/ga/LC_MESSAGES/eom.mo
 share/locale/gl/LC_MESSAGES/eom.mo
@@ -298,6 +297,7 @@ share/locale/id/LC_MESSAGES/eom.mo
 share/locale/is/LC_MESSAGES/eom.mo
 share/locale/it/LC_MESSAGES/eom.mo
 share/locale/ja/LC_MESSAGES/eom.mo
+share/locale/jv/LC_MESSAGES/eom.mo
 share/locale/ka/LC_MESSAGES/eom.mo
 share/locale/kk/LC_MESSAGES/eom.mo
 share/locale/kn/LC_MESSAGES/eom.mo
