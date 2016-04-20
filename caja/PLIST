@@ -22,7 +22,6 @@ man/man1/caja-autorun-software.1
 man/man1/caja-connect-server.1
 man/man1/caja-file-management-properties.1
 man/man1/caja.1
-share/MateConf/gsettings/caja.convert
 share/appdata/caja.appdata.xml
 share/applications/caja-autorun-software.desktop
 share/applications/caja-browser.desktop
@@ -84,7 +83,6 @@ share/gtk-doc/html/libcaja-extension/home.png
 share/gtk-doc/html/libcaja-extension/index.html
 share/gtk-doc/html/libcaja-extension/index.sgml
 share/gtk-doc/html/libcaja-extension/ix01.html
-share/gtk-doc/html/libcaja-extension/left-insensitive.png
 share/gtk-doc/html/libcaja-extension/left.png
 share/gtk-doc/html/libcaja-extension/libcaja-extension-caja-column-provider.html
 share/gtk-doc/html/libcaja-extension/libcaja-extension-caja-column.html
@@ -98,10 +96,8 @@ share/gtk-doc/html/libcaja-extension/libcaja-extension-caja-property-page-provid
 share/gtk-doc/html/libcaja-extension/libcaja-extension-caja-property-page.html
 share/gtk-doc/html/libcaja-extension/libcaja-extension.devhelp2
 share/gtk-doc/html/libcaja-extension/pt01.html
-share/gtk-doc/html/libcaja-extension/right-insensitive.png
 share/gtk-doc/html/libcaja-extension/right.png
 share/gtk-doc/html/libcaja-extension/style.css
-share/gtk-doc/html/libcaja-extension/up-insensitive.png
 share/gtk-doc/html/libcaja-extension/up.png
 share/icons/hicolor/16x16/apps/caja.png
 share/icons/hicolor/16x16/emblems/emblem-note.png
@@ -141,11 +137,15 @@ share/locale/en_GB/LC_MESSAGES/caja.mo
 share/locale/en_US/LC_MESSAGES/caja.mo
 share/locale/eo/LC_MESSAGES/caja.mo
 share/locale/es/LC_MESSAGES/caja.mo
+share/locale/es_AR/LC_MESSAGES/caja.mo
+share/locale/es_CO/LC_MESSAGES/caja.mo
+share/locale/es_MX/LC_MESSAGES/caja.mo
 share/locale/et/LC_MESSAGES/caja.mo
 share/locale/eu/LC_MESSAGES/caja.mo
 share/locale/fa/LC_MESSAGES/caja.mo
 share/locale/fi/LC_MESSAGES/caja.mo
 share/locale/fr/LC_MESSAGES/caja.mo
+share/locale/frp/LC_MESSAGES/caja.mo
 share/locale/fur/LC_MESSAGES/caja.mo
 share/locale/fy/LC_MESSAGES/caja.mo
 share/locale/ga/LC_MESSAGES/caja.mo
