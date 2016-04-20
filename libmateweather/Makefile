@@ -1,19 +1,11 @@
 # $NetBSD: Makefile,v 1.6 2015/06/07 14:24:48 yrmt Exp $
 
-DISTNAME=	libmateweather-1.12.1
+.include "../../wip/mate/Makefile.common"
+
+DISTNAME=	libmateweather-${MATE_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.12/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
 COMMENT=	Weather information access library
-LICENSE=	gnu-lgpl-v2.1
-
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	libmateweather/mateweather.pc.in
 
