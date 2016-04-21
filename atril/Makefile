@@ -32,5 +32,6 @@ PKGCONFIG_OVERRIDE+=	atril-view.pc.in
 .include "../../x11/libSM/buildlink3.mk"
 .endif
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
