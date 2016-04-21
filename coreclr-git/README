@@ -1,0 +1,11 @@
+Running tests:
+
+I PAL (Platform Abstraction Layer)
+
+Done in the package's Makefile:
+
+$ bmake test
+
+II Managed code tests
+
+In directory: tests/
