@@ -6,11 +6,11 @@ $NetBSD$
  #include "pal/environ.h"
  #include "pal/init.h"
  
-+#if defined(__NetBSD__) && !defined(HAVE_PTHREAD_GETCPUCLOCKID)
++#if defined(__NetBSD__) && !HAVE_PTHREAD_GETCPUCLOCKID
 +#include <sys/cdefs.h>
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
-+#include <sys/kvm.h>
++#include <kvm.h>
 +#endif
 +
  #include <signal.h>
@@ -20,7 +20,7 @@ $NetBSD$
  
      goto GetThreadTimesInternalExit;
  
-+#elif defined(__NetBSD__) && !defined(HAVE_PTHREAD_GETCPUCLOCKID) /* Currently unimplemented */
++#elif defined(__NetBSD__) && !HAVE_PTHREAD_GETCPUCLOCKID /* Currently unimplemented */
 +
 +    PAL_ERROR palError;
 +    CPalThread *pThread;
@@ -71,7 +71,7 @@ $NetBSD$
 +
 +    for (i = 0; i < nlwps; i++)
 +    {
-+        if (klwp[i].l_lid == lwpid)
++        if (klwp[i].l_lid == THREADSilentGetCurrentThreadId())
 +        {
 +            found = true;
 +            break;
