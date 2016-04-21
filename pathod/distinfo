@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2015/12/30 15:08:08 leot Exp $
-
-SHA1 (pathod-0.15.tar.gz) = 6b429d0a1306e8693dfb13c82fc0d6222ce04701
-RMD160 (pathod-0.15.tar.gz) = 5a375bfcdf20546f034a84c27a2ffd12ca7e97b4
-SHA512 (pathod-0.15.tar.gz) = 8f3ad09604a3e104480b232e8b4990660489d1c9fef380c71ff853715f6e5765780a44ce56904c8f95becb613770adeb582888b83cbe8621070af7d161047c3e
-Size (pathod-0.15.tar.gz) = 236459 bytes
-SHA1 (patch-setup.py) = d5c79f108eace6cc8c8fec58a34ce891ee3bfa2a
