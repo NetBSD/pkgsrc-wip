@@ -63,11 +63,11 @@ CoreCLR/inc/openum.h
 CoreCLR/lib/libcoreclrpal.a
 CoreCLR/lib/libcorguids.a
 CoreCLR/lib/libpalrt.a
+CoreCLR/libclrjit.so
 CoreCLR/libcoreclr.so
 CoreCLR/libdbgshim.so
 CoreCLR/libmscordaccore.so
 CoreCLR/libmscordbi.so
-CoreCLR/libryujit.so
 CoreCLR/libsos.so
 CoreCLR/libsosplugin.so
 CoreCLR/sosdocsunix.txt
