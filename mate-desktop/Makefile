@@ -14,6 +14,7 @@ PKGCONFIG_OVERRIDE+=	libmate-desktop/mate-desktop-2.0.pc.in
 
 REPLACE_SH+=	tools/mate-gsettings-toggle
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/dconf/buildlink3.mk"
