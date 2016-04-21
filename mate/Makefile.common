@@ -32,12 +32,10 @@
 # used by wip/mate-system-monitor/Makefile
 # used by wip/mate-terminal/Makefile
 # used by wip/mate-themes/Makefile
-# used by wip/mate-user-guide/Makefile
 # used by wip/mate-user-share/Makefile
 # used by wip/mate-utils/Makefile
 # used by wip/mozo/Makefile
 # used by wip/pluma/Makefile
-# used by wip/python-caja/Makefile
 
 MATE_VERSION=	1.14.0
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.14/
