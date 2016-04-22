@@ -11,7 +11,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=soimort/translate-shell/}
 COMMENT=	Command-line translator
-LICENSE=	public-domain
+LICENSE=	unlicense
 
 WRKSRC=		${WRKDIR}/translate-shell-${PKGVERSION_NOREV}
 USE_LANGUAGES=	# none
