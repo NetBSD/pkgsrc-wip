@@ -20,13 +20,13 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/sound/events
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
 CONF_FILES+=	${PREFIX}/share/examples/mate-applets/sound/events/mate-battstat_applet.soundlist \
 		${PKG_SYSCONFDIR}/sound/events/mate-battstat_applet.soundlist
 .endif
 
 PLIST_VARS=	batt
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
 PLIST.batt=	yes
 .endif
 
