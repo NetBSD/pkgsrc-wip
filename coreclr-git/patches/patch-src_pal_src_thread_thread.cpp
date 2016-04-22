@@ -16,7 +16,24 @@ $NetBSD$
  #include <signal.h>
  #include <pthread.h>
  #if HAVE_PTHREAD_NP_H
-@@ -1399,6 +1406,89 @@ CorUnix::GetThreadTimesInternal(
+@@ -1331,6 +1338,7 @@ CorUnix::GetThreadTimesInternal(
+     __int64 calcTime;
+     BOOL retval = FALSE;
+     const __int64 SECS_TO_NS = 1000000000; /* 10^9 */
++    const __int64 USECS_TO_NS = 1000;      /* 10^3 */
+ 
+ #if HAVE_MACH_THREADS
+     thread_basic_info resUsage;
+@@ -1340,8 +1348,6 @@ CorUnix::GetThreadTimesInternal(
+     IPalObject *pobjThread = NULL;
+     mach_msg_type_number_t resUsage_count = THREAD_BASIC_INFO_COUNT;
+ 
+-    const __int64 USECS_TO_NS = 1000;      /* 10^3 */
+-
+     pthrCurrent = InternalGetCurrentThread();
+     palError = InternalGetThreadDataFromHandle(
+         pthrCurrent,
+@@ -1399,6 +1405,89 @@ CorUnix::GetThreadTimesInternal(
  
      goto GetThreadTimesInternalExit;
  
@@ -92,7 +109,7 @@ $NetBSD$
 +    kvm_close(kd);
 +
 +    calcTime = (__int64) klwp[i].l_rtime_sec * SECS_TO_NS;
-+    calcTime += (__int64) klwp[i].l_rtime_usec / 1000;
++    calcTime += (__int64) klwp[i].l_rtime_usec * USECS_TO_NS;
 +    lpUserTime->dwLowDateTime = (DWORD)calcTime;
 +    lpUserTime->dwHighDateTime = (DWORD)(calcTime >> 32);
 +
