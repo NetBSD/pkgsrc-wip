@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (SDLPoP/v1.16.tar.gz) = 9e6f124705ef3c6e9c66c34046c9d4d5deaffa57
+RMD160 (SDLPoP/v1.16.tar.gz) = 3db4a19136011083c8a731630182c2e32f466ca3
+SHA512 (SDLPoP/v1.16.tar.gz) = 533b9b1aa548cc9d8b3d61bd032c924e71d344e15faca11e48d7e302cb9451729c0fe7c466be56535345b2cd40d92dcc0b1fbdca4b0663ddc34578e34bad189b
+Size (SDLPoP/v1.16.tar.gz) = 3685114 bytes
+SHA1 (patch-options.c) = 4d52a87cdfbf4b5be6f7d74ddbe336827a86aa41
+SHA1 (patch-seg009.c) = de7d2ac5c6a105409b44a05fe2e4710c661120f0

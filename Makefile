@@ -3776,6 +3776,7 @@ SUBDIR+=	scx
 SUBDIR+=	sdd
 SUBDIR+=	sdict-tools
 SUBDIR+=	sdif-git
+SUBDIR+=	sdlpop
 SUBDIR+=	sds
 SUBDIR+=	seagull
 SUBDIR+=	sector-decomposition
