@@ -4065,6 +4065,7 @@ SUBDIR+=	trac-plugins-TimingAndEstimation
 SUBDIR+=	trac-plugins-screenshots
 SUBDIR+=	trac-plugins-spamfilter
 SUBDIR+=	trackballs
+SUBDIR+=	translate-shell
 SUBDIR+=	trayion
 SUBDIR+=	treetool
 SUBDIR+=	treeviewx
