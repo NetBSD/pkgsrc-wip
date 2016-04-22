@@ -3,8 +3,9 @@ $NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.c,v 1.3 2015/04/02 14:
 * for *BSD netgroup functions
 * for no SIGPOLL
 * Fix a memory leak
+* Add getgrouplist for SunOS
 
---- src/polkitbackend/polkitbackendjsauthority.c.orig	2015-06-19 20:39:58.000000000 +0000
+--- src/polkitbackend/polkitbackendjsauthority.c.orig   2015-06-19 20:39:58.000000000 +0000
 +++ src/polkitbackend/polkitbackendjsauthority.c
 @@ -24,7 +24,12 @@
  #include <errno.h>
@@ -49,5 +50,58 @@ $NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.c,v 1.3 2015/04/02 14:
    char *netgroup;
 +#endif
    JSBool is_in_netgroup = JS_FALSE;
- 
+
    if (!JS_ConvertArguments (cx, argc, JS_ARGV (cx, vp), "SS", &user_str, &netgroup_str))
+@@ -1913,3 +1923,52 @@ utils_spawn_finish (GAsyncResult   *res,
+  out:
+   return ret;
+ }
++
++#ifdef __sun__
++#include <string.h>
++int
++getgrouplist(const char *uname, gid_t agroup, gid_t *groups, int *grpcnt)
++{
++    const struct group *grp;
++    int i, maxgroups, ngroups, ret;
++
++    ret = 0;
++    ngroups = 0;
++    maxgroups = *grpcnt;
++    /*
++     * When installing primary group, duplicate it;
++     * the first element of groups is the effective gid
++     * and will be overwritten when a setgid file is executed.
++     */
++    groups ? groups[ngroups++] = agroup : ngroups++;
++    if (maxgroups > 1)
++        groups ? groups[ngroups++] = agroup : ngroups++;
++    /*
++     * Scan the group file to find additional groups.
++     */
++    setgrent();
++    while ((grp = getgrent()) != NULL) {
++        if (groups) {
++            for (i = 0; i < ngroups; i++) {
++                if (grp->gr_gid == groups[i])
++                    goto skip;
++            }
++        }
++        for (i = 0; grp->gr_mem[i]; i++) {
++            if (!strcmp(grp->gr_mem[i], uname)) {
++                if (ngroups >= maxgroups) {
++                    ret = -1;
++                    break;
++                }
++                groups ? groups[ngroups++] = grp->gr_gid : ngroups++;
++                break;
++            }
++        }
++skip:
++        ;
++    }
++    endgrent();
++    *grpcnt = ngroups;
++    return (ret);
++}
++#endif
