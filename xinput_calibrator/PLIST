@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/xinput_calibrator
+man/man1/xinput_calibrator.1
+share/applications/xinput_calibrator.desktop
+share/pixmaps/xinput_calibrator.svg
+share/pixmaps/xinput_calibrator.xpm

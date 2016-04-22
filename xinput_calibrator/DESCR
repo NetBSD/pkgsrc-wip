@@ -1,0 +1,7 @@
+Because all existing calibrators were driver dependent and hard to use,
+xinput_calibrator was created. The goal of xinput_calibrator is to:
+
+* work for any Xorg driver (use Xinput to get axis valuators),
+* output the calibration as Xorg.conf, HAL policy and udev rule,
+* support advanced driver options, such as Evdev's dynamic calibration,
+* have a very intuitive GUI (normal X client).

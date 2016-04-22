@@ -4256,6 +4256,7 @@ SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xine-plugin
 SUBDIR+=	xinetd
+SUBDIR+=	xinput_calibrator
 SUBDIR+=	xiphos
 SUBDIR+=	xmail
 SUBDIR+=	xmakemol
