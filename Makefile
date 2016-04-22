@@ -3929,6 +3929,7 @@ SUBDIR+=	suse121_libgcrypt
 SUBDIR+=	suse121_libgpg-error
 SUBDIR+=	suse131_fpc
 SUBDIR+=	svgalib
+SUBDIR+=	svkbd
 SUBDIR+=	svnup
 SUBDIR+=	svrcore
 SUBDIR+=	swami
