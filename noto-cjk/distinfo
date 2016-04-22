@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:38 agc Exp $
+
+SHA1 (noto-cjk-1.004.tar.gz) = 820135a6e5404b228fad596325ed2efb7066eded
+RMD160 (noto-cjk-1.004.tar.gz) = 1369530ab2df0b617723b9e4a13b846db76b25f2
+SHA512 (noto-cjk-1.004.tar.gz) = 07ecb20f733373b267b7bdb097a6c39764290e67fe424b0247e1a498d0666a0b536cbe58a837958c98e850b4f424e735b3e55be70459821d8d32167157baba6c
+Size (noto-cjk-1.004.tar.gz) = 823586580 bytes

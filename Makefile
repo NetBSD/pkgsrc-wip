@@ -2073,6 +2073,7 @@ SUBDIR+=	noor
 SUBDIR+=	nos-tun
 SUBDIR+=	nostromo
 SUBDIR+=	notify-sharp
+SUBDIR+=	noto-cjk-otf
 SUBDIR+=	npth
 SUBDIR+=	nqp
 SUBDIR+=	nrg4iso
