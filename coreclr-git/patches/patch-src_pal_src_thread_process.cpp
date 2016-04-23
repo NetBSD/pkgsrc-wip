@@ -27,7 +27,7 @@ $NetBSD$
 -static const char* RuntimeContinueSemaphoreName = "/clrct%08x%016llx";
 +// NetBSD limits semaphore names to 15 characters, including null (at least up to 7.99.25).
 +static const char* RuntimeStartupSemaphoreName = "/clrst%04x%04llx";
-+static const char* RuntimeOldContinueSemaphoreName = "/clrco%08x%04llx";
++static const char* RuntimeOldContinueSemaphoreName = "/clrco%04x%04llx";
 +static const char* RuntimeContinueSemaphoreName = "/clrct%04x%04llx";
  
  class PAL_RuntimeStartupHelper
