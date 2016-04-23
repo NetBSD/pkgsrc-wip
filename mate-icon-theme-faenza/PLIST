@@ -3341,10 +3341,12 @@ share/icons/matefaenza/actions/scalable/zoom-original.svg
 share/icons/matefaenza/actions/scalable/zoom-out-symbolic.svg
 share/icons/matefaenza/actions/scalable/zoom-out.svg
 share/icons/matefaenza/apps/16/0ad.png
+share/icons/matefaenza/apps/16/DC++.png
 share/icons/matefaenza/apps/16/DC++.xpm
 share/icons/matefaenza/apps/16/EasyTAG_icon.png
 share/icons/matefaenza/apps/16/Etermutilities-terminal.png
 share/icons/matefaenza/apps/16/Launchpad-launchpad.net.png
+share/icons/matefaenza/apps/16/Terminal.png
 share/icons/matefaenza/apps/16/Thunar.png
 share/icons/matefaenza/apps/16/a4.png
 share/icons/matefaenza/apps/16/abiword.png
@@ -4022,6 +4024,7 @@ share/icons/matefaenza/apps/16/terminal.xpm
 share/icons/matefaenza/apps/16/terminator.png
 share/icons/matefaenza/apps/16/text-editor.png
 share/icons/matefaenza/apps/16/the-board.png
+share/icons/matefaenza/apps/16/thunar.png
 share/icons/matefaenza/apps/16/tilda.png
 share/icons/matefaenza/apps/16/time-admin.png
 share/icons/matefaenza/apps/16/time.png
@@ -4139,10 +4142,12 @@ share/icons/matefaenza/apps/16/zenmap.png
 share/icons/matefaenza/apps/16/zim.png
 share/icons/matefaenza/apps/16/zsnes.png
 share/icons/matefaenza/apps/22/0ad.png
+share/icons/matefaenza/apps/22/DC++.png
 share/icons/matefaenza/apps/22/DC++.xpm
 share/icons/matefaenza/apps/22/EasyTAG_icon.png
 share/icons/matefaenza/apps/22/Etermutilities-terminal.png
 share/icons/matefaenza/apps/22/Launchpad-launchpad.net.png
+share/icons/matefaenza/apps/22/Terminal.png
 share/icons/matefaenza/apps/22/Thunar.png
 share/icons/matefaenza/apps/22/a4.png
 share/icons/matefaenza/apps/22/abiword.png
@@ -4887,6 +4892,7 @@ share/icons/matefaenza/apps/22/terminal.xpm
 share/icons/matefaenza/apps/22/terminator.png
 share/icons/matefaenza/apps/22/text-editor.png
 share/icons/matefaenza/apps/22/the-board.png
+share/icons/matefaenza/apps/22/thunar.png
 share/icons/matefaenza/apps/22/tilda.png
 share/icons/matefaenza/apps/22/time-admin.png
 share/icons/matefaenza/apps/22/time.png
@@ -5004,10 +5010,12 @@ share/icons/matefaenza/apps/22/zenmap.png
 share/icons/matefaenza/apps/22/zim.png
 share/icons/matefaenza/apps/22/zsnes.png
 share/icons/matefaenza/apps/24/0ad.png
+share/icons/matefaenza/apps/24/DC++.png
 share/icons/matefaenza/apps/24/DC++.xpm
 share/icons/matefaenza/apps/24/EasyTAG_icon.png
 share/icons/matefaenza/apps/24/Etermutilities-terminal.png
 share/icons/matefaenza/apps/24/Launchpad-launchpad.net.png
+share/icons/matefaenza/apps/24/Terminal.png
 share/icons/matefaenza/apps/24/Thunar.png
 share/icons/matefaenza/apps/24/a4.png
 share/icons/matefaenza/apps/24/abiword.png
@@ -5752,6 +5760,7 @@ share/icons/matefaenza/apps/24/terminal.xpm
 share/icons/matefaenza/apps/24/terminator.png
 share/icons/matefaenza/apps/24/text-editor.png
 share/icons/matefaenza/apps/24/the-board.png
+share/icons/matefaenza/apps/24/thunar.png
 share/icons/matefaenza/apps/24/tilda.png
 share/icons/matefaenza/apps/24/time-admin.png
 share/icons/matefaenza/apps/24/time.png
@@ -5869,6 +5878,7 @@ share/icons/matefaenza/apps/24/zenmap.png
 share/icons/matefaenza/apps/24/zim.png
 share/icons/matefaenza/apps/24/zsnes.png
 share/icons/matefaenza/apps/32/0ad.png
+share/icons/matefaenza/apps/32/DC++.png
 share/icons/matefaenza/apps/32/DC++.xpm
 share/icons/matefaenza/apps/32/Doom3.png
 share/icons/matefaenza/apps/32/ET-quakewars.png
@@ -5880,6 +5890,7 @@ share/icons/matefaenza/apps/32/Osmos.png
 share/icons/matefaenza/apps/32/OsmosDemo.png
 share/icons/matefaenza/apps/32/Penumbra.png
 share/icons/matefaenza/apps/32/Savage2.png
+share/icons/matefaenza/apps/32/Terminal.png
 share/icons/matefaenza/apps/32/Thunar.png
 share/icons/matefaenza/apps/32/Trine.png
 share/icons/matefaenza/apps/32/WorldofPadman.png
@@ -6618,6 +6629,7 @@ share/icons/matefaenza/apps/32/terminal.xpm
 share/icons/matefaenza/apps/32/terminator.png
 share/icons/matefaenza/apps/32/text-editor.png
 share/icons/matefaenza/apps/32/the-board.png
+share/icons/matefaenza/apps/32/thunar.png
 share/icons/matefaenza/apps/32/tilda.png
 share/icons/matefaenza/apps/32/time-admin.png
 share/icons/matefaenza/apps/32/time.png
@@ -6741,6 +6753,7 @@ share/icons/matefaenza/apps/32/zenmap.png
 share/icons/matefaenza/apps/32/zim.png
 share/icons/matefaenza/apps/32/zsnes.png
 share/icons/matefaenza/apps/48/0ad.png
+share/icons/matefaenza/apps/48/DC++.png
 share/icons/matefaenza/apps/48/DC++.xpm
 share/icons/matefaenza/apps/48/Doom3.png
 share/icons/matefaenza/apps/48/ET-quakewars.png
@@ -6752,6 +6765,7 @@ share/icons/matefaenza/apps/48/Osmos.png
 share/icons/matefaenza/apps/48/OsmosDemo.png
 share/icons/matefaenza/apps/48/Penumbra.png
 share/icons/matefaenza/apps/48/Savage2.png
+share/icons/matefaenza/apps/48/Terminal.png
 share/icons/matefaenza/apps/48/Thunar.png
 share/icons/matefaenza/apps/48/Trine.png
 share/icons/matefaenza/apps/48/WorldofPadman.png
@@ -7488,6 +7502,7 @@ share/icons/matefaenza/apps/48/terminal.xpm
 share/icons/matefaenza/apps/48/terminator.png
 share/icons/matefaenza/apps/48/text-editor.png
 share/icons/matefaenza/apps/48/the-board.png
+share/icons/matefaenza/apps/48/thunar.png
 share/icons/matefaenza/apps/48/tilda.png
 share/icons/matefaenza/apps/48/time-admin.png
 share/icons/matefaenza/apps/48/time.png
@@ -7609,6 +7624,7 @@ share/icons/matefaenza/apps/48/zen-icon.png
 share/icons/matefaenza/apps/48/zenmap.png
 share/icons/matefaenza/apps/48/zim.png
 share/icons/matefaenza/apps/48/zsnes.png
+share/icons/matefaenza/apps/64/DC++.png
 share/icons/matefaenza/apps/64/Doom3.png
 share/icons/matefaenza/apps/64/ET-quakewars.png
 share/icons/matefaenza/apps/64/EasyTAG_icon.png
@@ -7618,6 +7634,7 @@ share/icons/matefaenza/apps/64/Launchpad-launchpad.net.png
 share/icons/matefaenza/apps/64/Osmos.png
 share/icons/matefaenza/apps/64/Penumbra.png
 share/icons/matefaenza/apps/64/Savage2.png
+share/icons/matefaenza/apps/64/Terminal.png
 share/icons/matefaenza/apps/64/Thunar.png
 share/icons/matefaenza/apps/64/Trine.png
 share/icons/matefaenza/apps/64/WorldofPadman.png
@@ -8289,6 +8306,7 @@ share/icons/matefaenza/apps/64/telepathy.png
 share/icons/matefaenza/apps/64/terminal.png
 share/icons/matefaenza/apps/64/terminator.png
 share/icons/matefaenza/apps/64/text-editor.png
+share/icons/matefaenza/apps/64/thunar.png
 share/icons/matefaenza/apps/64/tilda.png
 share/icons/matefaenza/apps/64/time-admin.png
 share/icons/matefaenza/apps/64/time.png
@@ -8397,9 +8415,11 @@ share/icons/matefaenza/apps/64/zenmap.png
 share/icons/matefaenza/apps/64/zim.png
 share/icons/matefaenza/apps/64/zsnes.png
 share/icons/matefaenza/apps/96/0ad.png
+share/icons/matefaenza/apps/96/DC++.png
 share/icons/matefaenza/apps/96/EasyTAG_icon.png
 share/icons/matefaenza/apps/96/Etermutilities-terminal.png
 share/icons/matefaenza/apps/96/Launchpad-launchpad.net.png
+share/icons/matefaenza/apps/96/Terminal.png
 share/icons/matefaenza/apps/96/Thunar.png
 share/icons/matefaenza/apps/96/abiword.png
 share/icons/matefaenza/apps/96/abiword_48.png
@@ -9033,6 +9053,7 @@ share/icons/matefaenza/apps/96/telepathy.png
 share/icons/matefaenza/apps/96/terminal.png
 share/icons/matefaenza/apps/96/terminator.png
 share/icons/matefaenza/apps/96/text-editor.png
+share/icons/matefaenza/apps/96/thunar.png
 share/icons/matefaenza/apps/96/tilda.png
 share/icons/matefaenza/apps/96/time-admin.png
 share/icons/matefaenza/apps/96/time.png
@@ -9133,6 +9154,7 @@ share/icons/matefaenza/apps/96/zim.png
 share/icons/matefaenza/apps/96/zsnes.png
 share/icons/matefaenza/apps/scalable/0ad.svg
 share/icons/matefaenza/apps/scalable/96x96.png
+share/icons/matefaenza/apps/scalable/DC++.svg
 share/icons/matefaenza/apps/scalable/Doom3.svg
 share/icons/matefaenza/apps/scalable/ET-quakewars.svg
 share/icons/matefaenza/apps/scalable/EasyTAG_icon.svg
@@ -9143,6 +9165,7 @@ share/icons/matefaenza/apps/scalable/Osmos.svg
 share/icons/matefaenza/apps/scalable/OsmosDemo.svg
 share/icons/matefaenza/apps/scalable/Penumbra.svg
 share/icons/matefaenza/apps/scalable/Savage2.svg
+share/icons/matefaenza/apps/scalable/Terminal.svg
 share/icons/matefaenza/apps/scalable/Thunar.svg
 share/icons/matefaenza/apps/scalable/Trine.svg
 share/icons/matefaenza/apps/scalable/UrbanTerror.svg
@@ -9863,6 +9886,7 @@ share/icons/matefaenza/apps/scalable/terminal.svg
 share/icons/matefaenza/apps/scalable/terminator.svg
 share/icons/matefaenza/apps/scalable/text-editor.svg
 share/icons/matefaenza/apps/scalable/the-board.svg
+share/icons/matefaenza/apps/scalable/thunar.svg
 share/icons/matefaenza/apps/scalable/tilda.svg
 share/icons/matefaenza/apps/scalable/time-admin.svg
 share/icons/matefaenza/apps/scalable/time.svg
