@@ -14,6 +14,7 @@ ${PYSITELIB}/Mozo/config.pyo
 ${PYSITELIB}/Mozo/util.py
 ${PYSITELIB}/Mozo/util.pyc
 ${PYSITELIB}/Mozo/util.pyo
+bin/mozo
 man/man1/mozo.1
 share/applications/mozo.desktop
 share/icons/hicolor/16x16/apps/mozo.png
