@@ -17,7 +17,7 @@ CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
 WRKSRC=		${WRKDIR}/mono
 
-USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config autoconf automake autoreconf
+USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config autoconf automake autoreconf gsed
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
