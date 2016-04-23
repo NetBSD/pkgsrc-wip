@@ -1,3 +1,4 @@
 $NetBSD$
+SHA1 (patch-run-test.sh) = 18b62a5f7118eb99da76de8cc99d12e986f03636
 SHA1 (patch-src_Native_System.Net.Security.Native_CMakeLists.txt) = 6f39c82e1d870dbf5b092a7b017727d0cc409886
 SHA1 (patch-src_Native_configure.cmake) = 9428d24bc7c166d6567959d0bcc34ba96446fe42
