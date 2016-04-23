@@ -24,6 +24,7 @@ CoreCLR/bin/libRefIntNative.so
 CoreCLR/bin/libSimpleStructNative.so
 CoreCLR/bin/libStructABILib.so
 CoreCLR/bin/libUIntPtrNative.so
+CoreCLR/bin/libVector3TestNative.so
 CoreCLR/bin/mirror.so
 CoreCLR/bin/native_i0c.so
 CoreCLR/bin/native_i0s.so
