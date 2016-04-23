@@ -1,11 +1,13 @@
 $NetBSD: patch-aa,v 1.1.1.1 2003/07/18 03:00:10 bencollver Exp $
 
---- make/unix.inc.orig	Thu Apr  3 16:34:18 2003
+--- make/unix.inc.orig	2005-08-08 00:18:40.000000000 +0000
 +++ make/unix.inc
-@@ -16,5 +16,6 @@ EXE_SUFFIX :=
+@@ -16,6 +16,7 @@ MKDIR = mkdir $(1)
+ EXE_SUFFIX :=
  
  LINK_MATH := -lm
- LINK_ALLEGRO := `allegro-config --libs`
-+CFLAGS_ALLEGRO := `allegro-config --cflags`
+-LINK_ALLEGRO := `allegro-config --libs`
++LINK_ALLEGRO := `pkg-config --libs allegro`
++CFLAGS_ALLEGRO := `pkg-config --cflags allegro`
  
  # PREFIX is set by config.sh.
