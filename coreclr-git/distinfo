@@ -1,3 +1,4 @@
 $NetBSD$
 
+SHA1 (patch-src_pal_src_exception_seh-unwind.cpp) = 29fc9269e8abb5dac244d61f5afb7e6e5f7a4d82
 SHA1 (patch-src_pal_src_thread_process.cpp) = fc73a635a66ef9dbda08ceed71343c70c651893e
