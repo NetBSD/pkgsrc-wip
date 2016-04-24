@@ -9,7 +9,6 @@ MASTER_SITES=	ftp://ftp.am-utils.org/pub/am-utils/ \
                 ftp://ftp.cise.ufl.edu/pub/mirrors/am-utils \
                 ftp://ftp.fu-berlin.de/unix/network/am-utils \
                 ftp://ftp.tu-darmstadt.de/pub/networking/filesystems/am-utils/ \
-                ftp://ftp.sunet.se/pub/unix/admin/am-utils \
                 ftp://sunsite.org.uk/package/am-utils \
                 ftp://ftp.u-aizu.ac.jp/pub/net/amd/am-utils \
                 ftp://core.ring.gr.jp/pub/net/am-utils/ \
