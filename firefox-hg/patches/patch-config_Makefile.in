@@ -1,6 +1,6 @@
 $NetBSD: patch-config_Makefile.in,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
 
---- config/Makefile.in.orig	2016-03-19 10:59:50.000000000 +0000
+--- config/Makefile.in.orig	2016-04-25 13:39:02.000000000 +0000
 +++ config/Makefile.in
 @@ -46,6 +46,8 @@ export:: $(export-preqs)
  		-DMOZ_SYSTEM_ZLIB=$(MOZ_SYSTEM_ZLIB) \
