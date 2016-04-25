@@ -7,7 +7,7 @@ DISTNAME=	mono
 PKGNAME=	mono-0.0.0
 CATEGORIES=	lang
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source ECMA CLI, C# and .NET implementation
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0

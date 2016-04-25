@@ -7,7 +7,7 @@ DISTNAME=	corefx
 PKGNAME=	corefx-0.0.0
 CATEGORIES=	devel
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/dotnet/corefx
 COMMENT=	The .NET Core foundational libraries
 LICENSE=	mit

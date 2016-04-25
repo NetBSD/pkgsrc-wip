@@ -7,7 +7,7 @@ DISTNAME=	coreclr
 PKGNAME=	coreclr-0.0.0
 CATEGORIES=	devel
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/dotnet/coreclr
 COMMENT=	The .NET Core runtime and the base library
 LICENSE=	mit
