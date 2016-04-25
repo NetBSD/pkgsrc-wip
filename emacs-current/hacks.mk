@@ -7,6 +7,7 @@ EMACS_HACKS_MK=	defined
 
 ### PaX is enabled, bootstrap-emacs command dumps core with segfault.
 ### src/Makefile.in does not support NetBSD paxctl(8) syntax.
+### http://debbugs.gnu.org/cgi/bugreport.cgi?bug=23371
 ###
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
 .    if exists(/usr/sbin/paxctl)
