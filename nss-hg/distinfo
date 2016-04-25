@@ -3,11 +3,11 @@ $NetBSD: distinfo,v 1.5 2015/03/17 14:28:41 thomasklausner Exp $
 SHA1 (nss-3.16.5.tar.gz) = bec488835954698e7b19149a15205db299cd13de
 RMD160 (nss-3.16.5.tar.gz) = 19630a0815d69ee5959b562d7849d35d677c6329
 Size (nss-3.16.5.tar.gz) = 6429830 bytes
-SHA1 (patch-cmd_fipstest_fipstest.c) = 870488f07e8c061d58c129bad3bb4982d1f08fb4
-SHA1 (patch-cmd_lib_basicutil.c) = 2fb6b8e5212cce352147e7241941d510e8137401
+SHA1 (patch-cmd_fipstest_fipstest.c) = 640b85bcb2254f7661f51caedde4a3a1cdbfbdfe
+SHA1 (patch-cmd_lib_basicutil.c) = cb5c0bc2e87fe815099bdfe7d1913fc919d24cad
 SHA1 (patch-cmd_shlibsign_sign.sh) = 9be9719d9e4cc212d9503616a1145b8c68b97a6a
 SHA1 (patch-coreconf_DragonFly.mk) = 328c0f3d4f03ab6d0efcfec3461d97da1c3e387a
-SHA1 (patch-coreconf_OpenBSD.mk) = f7e6df8b813d99dd3ee991055c26f7a3df2c5ee8
+SHA1 (patch-coreconf_OpenBSD.mk) = 0c22a08a6024aa7505e8307e598cbd02ac569a88
 SHA1 (patch-coreconf_SunOS5.mk) = db81e955db52ccccc2dbdae364449870b9724e15
 SHA1 (patch-coreconf_arch.mk) = 5462c0620564a2ad4a0deb9d71c427e8c0d426eb
 SHA1 (patch-coreconf_config.mk) = 0fdcd3fea51ea2c250ab88197b79ae2b91f27ef5
