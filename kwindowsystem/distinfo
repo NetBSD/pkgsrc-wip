@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kwindowsystem-5.19.0.tar.xz) = f3ff2213c8f63fe2ea228e59acb61120c1cbc9ad
-RMD160 (kwindowsystem-5.19.0.tar.xz) = 885e76985103a05fcc4a227ce3a6c0f2ad0b7ef1
-SHA512 (kwindowsystem-5.19.0.tar.xz) = dceb8da8c4e3f43c60782409cdf7e16c488e1838952001e7713aca82ae66b95deb71e5d345069c3e0ec21e2e31628ad6cd2bf93d06c2827cdb909e216ec0a3f5
-Size (kwindowsystem-5.19.0.tar.xz) = 163636 bytes
+SHA1 (kwindowsystem-5.21.0.tar.xz) = a72fcb501d8f4c539d88ba6b13e3ae178e958281
+RMD160 (kwindowsystem-5.21.0.tar.xz) = e1907282afb1d0453de925b5c5fa8dd1c5c22b17
+SHA512 (kwindowsystem-5.21.0.tar.xz) = 84301a634f7221f1c127af86005319418643693b989c9c3894798998d2562b901a266e06e5d7554ae3767d024df2d1bf3ab81b255339b73e43e0adbac987e800
+Size (kwindowsystem-5.21.0.tar.xz) = 163836 bytes

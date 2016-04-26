@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kdoctools-5.19.0.tar.xz) = 34537f2f72a1e664d75223761876bf4845253bb6
-RMD160 (kdoctools-5.19.0.tar.xz) = e8d51702adf946c18d7327155cb59d435935b03d
-SHA512 (kdoctools-5.19.0.tar.xz) = 9af22acd1a0979c50668c225ca41bf7641ab4bbb2c98219503a3beefb0df1b00ccd4b4bc865824af5919bc59e5e1f7d4f200a65b6c20ff02cb7573d784ac2a0c
-Size (kdoctools-5.19.0.tar.xz) = 408008 bytes
+SHA1 (kdoctools-5.21.0.tar.xz) = 1cf8a531e62947f3e6ff70db74dd86fb6fc59ed4
+RMD160 (kdoctools-5.21.0.tar.xz) = 42acbbdbfee6885bae22bdb5ada49736e4418808
+SHA512 (kdoctools-5.21.0.tar.xz) = bb1bb37e80ab2c21fc24fedc62b3e2ce24dc8b7dffcf2d9fb28e7faaabb15cbf8c347b3225310e35bd6911cb465e5419b38382bb1aa11dff3c5eccc97cd1b6f8
+Size (kdoctools-5.21.0.tar.xz) = 407996 bytes

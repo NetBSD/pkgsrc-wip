@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kcodecs-5.19.0.tar.xz) = f29a1644775ebc42fe53d4f58c9cbca03f5fc00c
-RMD160 (kcodecs-5.19.0.tar.xz) = 1d8d8e4fb0553ddaa6b25b99e96595afe9af638e
-SHA512 (kcodecs-5.19.0.tar.xz) = 0765c64f456ce73e3abc0e34744d27fa98ead88afa783632bde9dc2851fe64ba0e393c8c0fec1ad8ce3e069bc971b3ffe591bdc4f9c236114e8f2af7a8785ab8
-Size (kcodecs-5.19.0.tar.xz) = 217428 bytes
+SHA1 (kcodecs-5.21.0.tar.xz) = bf825ab54cbbd015894e7e2794beb330f32f9544
+RMD160 (kcodecs-5.21.0.tar.xz) = 2a812a4c4b923a859767a2197d0ce298490080e6
+SHA512 (kcodecs-5.21.0.tar.xz) = ca244632191eeeb571f7830e941ed067f6c794602746c1cfacba63658cc7500b379df864549058eda4071cc2e7e0fa543faf430ded5c4baa4d645414b3693a15
+Size (kcodecs-5.21.0.tar.xz) = 217368 bytes

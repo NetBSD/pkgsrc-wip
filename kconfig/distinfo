@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kconfig-5.19.0.tar.xz) = 2f6839aefdabe3af5c12e2b354d189cda70fa977
-RMD160 (kconfig-5.19.0.tar.xz) = b050c9901bcfb7c2e4ee276682b696556a6b728e
-SHA512 (kconfig-5.19.0.tar.xz) = 9a5a16246cf8546cd923d4e98f1b73fc7f3e745abb48b2fe24551d65d227d96d3f912a29d760b051310eabb1de9063db31a40431916106b53b7d172077c129f3
-Size (kconfig-5.19.0.tar.xz) = 224788 bytes
+SHA1 (kconfig-5.21.0.tar.xz) = 89be0b9be8108b3f0e0a99bb504b15afd1ab5585
+RMD160 (kconfig-5.21.0.tar.xz) = ddcaa8d0e60638091a0b395d1823de5262d15918
+SHA512 (kconfig-5.21.0.tar.xz) = 62f7c0383c01504de89db40bb2a14eee78131195a4ba5e8887e7474be30a6a063ccaf6c602b9ae2648e2d23dfe279019fbe747d250662829ad5ddae8c3f9223e
+Size (kconfig-5.21.0.tar.xz) = 225076 bytes

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ktextwidgets-5.19.0.tar.xz) = ae6aae6eb5251f308c2e986fef017f79be56b02c
-RMD160 (ktextwidgets-5.19.0.tar.xz) = 1ba6789e0e0a69d04fc8a23958248f326844947a
-SHA512 (ktextwidgets-5.19.0.tar.xz) = 8400163cd7dd895d09a90a64181d7c92e620c0c9360cf00359bbb5c12b804c238eca407a2dcb8fbc499e16b5c87acd9b5d9d020bd81098c496db9861b65e8006
-Size (ktextwidgets-5.19.0.tar.xz) = 306580 bytes
+SHA1 (ktextwidgets-5.21.0.tar.xz) = 40c9d732958cce083b450a0388b7cfd0162d299d
+RMD160 (ktextwidgets-5.21.0.tar.xz) = 2fced674d9593ecb6c6a906bd1b65874dab30424
+SHA512 (ktextwidgets-5.21.0.tar.xz) = 763176485046171836edd3bcdf4f1a1fe365535411680fab86e43b7c7d62cda93b5832fef9735cd188aa7fd4fb7944151aa788350a5ea3adc95497aed895dc08
+Size (ktextwidgets-5.21.0.tar.xz) = 306560 bytes

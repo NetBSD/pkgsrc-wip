@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ki18n-5.19.0.tar.xz) = e90d8c51217cd6d5a3881a259f048cd914811284
-RMD160 (ki18n-5.19.0.tar.xz) = b670b7f518c21f5349fff7dae6cddc436825b22a
-SHA512 (ki18n-5.19.0.tar.xz) = 4c54e3cd77e6bcd78dfd7ff8e91e735edef2a489eda549cd0ce14cfeb4ebb104845ccbe0897ec1e35067623f4affb65f0d7025daa239ac001787169b65d9ed2f
-Size (ki18n-5.19.0.tar.xz) = 599812 bytes
+SHA1 (ki18n-5.21.0.tar.xz) = 3360ed9d70bb9df4ede76591396f2ddeb982fd1a
+RMD160 (ki18n-5.21.0.tar.xz) = 8ad2569098e1b560fc6849293124ca4afcbfc0e5
+SHA512 (ki18n-5.21.0.tar.xz) = ab40182291b0d300405732cbb9bdee0e1d0b3e9a1c3deb3d6dc36e6f4f2c9710b59496bc5849ef75f8e7981bc50da219abb58afabaf021128481276ff0d7b8ed
+Size (ki18n-5.21.0.tar.xz) = 603756 bytes

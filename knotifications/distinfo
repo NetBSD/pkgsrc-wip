@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (knotifications-5.19.0.tar.xz) = d0531416cecc8f2bd2c3b9b11335035c63f7e490
-RMD160 (knotifications-5.19.0.tar.xz) = 86b7b6f9b7470d307f5be39d85490420b668df7d
-SHA512 (knotifications-5.19.0.tar.xz) = ec471d4dc1a94358a10912f1972bac1d196b30722b8e18a61064e7a04642a583f4b637268eada058073573b4879b5f68ab9a6981f04f2c7c6e5d525a257dd8ab
-Size (knotifications-5.19.0.tar.xz) = 93236 bytes
+SHA1 (knotifications-5.21.0.tar.xz) = 4f454f892fa26a721c8064503487420753de4d1b
+RMD160 (knotifications-5.21.0.tar.xz) = b89878c632b976a6461b0489c9ea13db9de9090b
+SHA512 (knotifications-5.21.0.tar.xz) = 5c722c16c4b5583576765e0ab956ae6c52cb1fb8f8bc51acf3515cf096b1abe9dcc8e4e4a1b9659f4f6516f5c1684c4337c619f9fbe3f36a08c3744edc6b371e
+Size (knotifications-5.21.0.tar.xz) = 95844 bytes

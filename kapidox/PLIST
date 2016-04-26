@@ -25,6 +25,7 @@ ${PYSITELIB}/kapidox/data/htmlresource/icons/bad.png
 ${PYSITELIB}/kapidox/data/htmlresource/icons/ok.png
 ${PYSITELIB}/kapidox/data/htmlresource/icons/warning.png
 ${PYSITELIB}/kapidox/data/htmlresource/jquery-2.1.0.min.js
+${PYSITELIB}/kapidox/data/htmlresource/kde-white.svg
 ${PYSITELIB}/kapidox/data/htmlresource/kde.css
 ${PYSITELIB}/kapidox/data/htmlresource/notetip.js
 ${PYSITELIB}/kapidox/data/htmlresource/top-kde.jpg

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kcrash-5.19.0.tar.xz) = 96124526e5bd55f159b2bc2e1ec19e22ab159dba
-RMD160 (kcrash-5.19.0.tar.xz) = 9d201659940b4a8d821de788921134ab9fecb9cf
-SHA512 (kcrash-5.19.0.tar.xz) = 379a67c1f9532324f818e12001c6b3eb26bd0fd1091a90153d559140b3aeff6bb7ff4dc052a400bf39a9c11daef0dcafc4ad3ea44b7a837ca8bfb209f30a91b3
-Size (kcrash-5.19.0.tar.xz) = 20104 bytes
+SHA1 (kcrash-5.21.0.tar.xz) = f81f809b4199bcc8867c2763ed82175edd590061
+RMD160 (kcrash-5.21.0.tar.xz) = b36a0d27cc195baccfd2e26d366d6182b6b01cd0
+SHA512 (kcrash-5.21.0.tar.xz) = 8aab546950567f41f2090007a846dae9722e99db2b003aef64bbe3754af1a4e5ba6241aa01ee1d4ab8c77cd54f4383d2e09aac982069dd1a7ae9f4f37321c728
+Size (kcrash-5.21.0.tar.xz) = 20108 bytes

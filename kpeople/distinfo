@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kpeople-5.19.0.tar.xz) = c0abbcddc57448ebaa5838d2fa01128b16844c11
-RMD160 (kpeople-5.19.0.tar.xz) = 77c5cfad0910dfe10e8f48b3b7e7a95c7f82b0ce
-SHA512 (kpeople-5.19.0.tar.xz) = 7ca3b94e5a83f113819f923157700776189e847f40c702426d2fafbc1ac190b42346609d64eafcae4a2dacc5d5630ec39faa0ed7d1a1ebbedeebb988b1044089
-Size (kpeople-5.19.0.tar.xz) = 57916 bytes
+SHA1 (kpeople-5.21.0.tar.xz) = fa254a7f95939a50ae42123cbdd1729b25a6cb65
+RMD160 (kpeople-5.21.0.tar.xz) = 97a30bb45c9579b5d3472509aacd10f9464b4997
+SHA512 (kpeople-5.21.0.tar.xz) = 5e63251f04699f842c36e9ee91c387429e5217df1728560299454a7326f9a363d41a2d8de483ebca8187e648efd6da31e2519129ced5be3eeb28a7b0c495c24b
+Size (kpeople-5.21.0.tar.xz) = 58160 bytes

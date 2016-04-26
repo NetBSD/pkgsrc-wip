@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kguiaddons-5.19.0.tar.xz) = 547625d9c910a643c0c8d4ec8f42e657da3e9959
-RMD160 (kguiaddons-5.19.0.tar.xz) = efa5845f9c55bface74302531bfb836e5db9da41
-SHA512 (kguiaddons-5.19.0.tar.xz) = b7efb3113b9a6e2d5346e8f7e3635fa1608c5462efcc7fdab9f6fc2792141d6a874b1e7690eed581be9197faeaadc92aeb8d7c474f6892af9ea5e837824e5041
-Size (kguiaddons-5.19.0.tar.xz) = 39364 bytes
+SHA1 (kguiaddons-5.21.0.tar.xz) = 63b84b981001b6d6041d7610d80f4c20a88de58d
+RMD160 (kguiaddons-5.21.0.tar.xz) = da25458489971517498c5c843262f2a3df4d390a
+SHA512 (kguiaddons-5.21.0.tar.xz) = 6e4e8f209006bcab756a919230dae2d0d1cdb3a4b6e99f830ebf06b8c708667a7a31511c830adaad7b6155cd7dd1a9e848f2a830452519786527838fbcc26aea
+Size (kguiaddons-5.21.0.tar.xz) = 39372 bytes

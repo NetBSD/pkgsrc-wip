@@ -1,5 +1,22 @@
 # $NetBSD: Makefile,v 1.25 2016/01/10 20:01:05 markd Exp $
 # used by wip/attica-qt5/Makefile
+# used by wip/kdnssd/Makefile
+# used by wip/kunitconversion/Makefile
+# used by wip/kpeople/Makefile
+# used by wip/kwallet/Makefile
+# used by wip/knotifications/Makefile
+# used by wip/kfilemetadata5/Makefile
+# used by wip/kemoticons/Makefile
+# used by wip/kpty/Makefile
+# used by wip/kpackage/Makefile
+# used by wip/kjobwidgets/Makefile
+# used by wip/kbookmarks/Makefile
+# used by wip/kxmlgui/Makefile
+# used by wip/ktextwidgets/Makefile
+# used by wip/sonnet/Makefile
+# used by wip/kiconthemes/Makefile
+# used by wip/kconfigwidgets/Makefile
+# used by wip/kauth/Makefile
 # used by wip/kapidox/Makefile
 # used by wip/karchive/Makefile
 # used by wip/kcodecs/Makefile
@@ -23,9 +40,9 @@
 # used by wip/solid/Makefile
 # used by wip/threadweaver/Makefile
 
-KF5VER=		5.19.0
+KF5VER=		5.21.0
 CATEGORIES+=	kde
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.19/}
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.21/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER?=	markd@NetBSD.org

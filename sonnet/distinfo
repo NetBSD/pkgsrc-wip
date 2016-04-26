@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (sonnet-5.19.0.tar.xz) = 51bd9df1b338f8762c8b75fb2f41b3443b6eda69
-RMD160 (sonnet-5.19.0.tar.xz) = e5656edb90b36d806172273bb204aff5d8786627
-SHA512 (sonnet-5.19.0.tar.xz) = 4e0062f772bbb44628aecad6ab5ca27a49b9fc454179decd86d649bfd35e9daa3773ffc23b42d7c0b08702e333eec59fc4c94d4e03d16f5b28b113d216e81848
-Size (sonnet-5.19.0.tar.xz) = 282108 bytes
+SHA1 (sonnet-5.21.0.tar.xz) = 5634e8b7b4c259b81686a3108be10587e35fc96f
+RMD160 (sonnet-5.21.0.tar.xz) = 65b248838490722aa1bdfe7263916dd0a0c1aee8
+SHA512 (sonnet-5.21.0.tar.xz) = 41202f5ff30d128a7568a76dbfed6874e61b0ef7ae3da83b1a3e20965816f32d439ab367de7bfc6f57d5ff6df3b8501fbc2b5067318d35a1aa5dcbb6c45606bc
+Size (sonnet-5.21.0.tar.xz) = 282128 bytes
