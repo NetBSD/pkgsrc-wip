@@ -9,7 +9,7 @@ DISTNAME=	llilc
 PKGNAME=	llilc-0.0.0
 CATEGORIES=	devel
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/dotnet/llilc
 COMMENT=	LLVM based compiler for .NET Core
 LICENSE=	mit

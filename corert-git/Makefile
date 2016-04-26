@@ -7,7 +7,7 @@ DISTNAME=	corert
 PKGNAME=	corert-0.0.0
 CATEGORIES=	devel
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kamil@NetBSD.org
 HOMEPAGE=	https://github.com/dotnet/corert
 COMMENT=	Microsoft .NET Core runtime optimized for AOT scenarios
 LICENSE=	mit
