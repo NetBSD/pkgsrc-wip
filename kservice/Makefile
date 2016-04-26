@@ -3,7 +3,7 @@
 DISTNAME=	kservice-${KF5VER}
 CATEGORIES=	devel
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kservice
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Advanced plugin and service introspection
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2.1
 

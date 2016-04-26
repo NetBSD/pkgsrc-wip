@@ -3,7 +3,7 @@
 DISTNAME=	kcodecs-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kcodecs
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Provide a collection of methods to manipulate strings using various encodings
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

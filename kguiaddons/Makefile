@@ -3,7 +3,7 @@
 DISTNAME=	kguiaddons-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kguiaddons
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Addons to QtGui
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

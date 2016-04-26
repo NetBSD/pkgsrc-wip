@@ -3,7 +3,7 @@
 DISTNAME=	kwallet-${KF5VER}
 CATEGORIES=	security
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kwallet
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Secure and unified container for user passwords
 LICENSE=	gnu-lgpl-v2.1
 

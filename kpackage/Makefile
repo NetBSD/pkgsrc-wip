@@ -3,7 +3,7 @@
 DISTNAME=	kpackage-${KF5VER}
 CATEGORIES=	archivers
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kpackage
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Installation and loading of additional content as packages
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

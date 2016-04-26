@@ -4,7 +4,7 @@ DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
 CATEGORIES=	sysutils
 
-HOMEPAGE=	https://projects.kde.org/kfilemetadata
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Library for extracting file metadata
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
 

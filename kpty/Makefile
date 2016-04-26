@@ -3,7 +3,7 @@
 DISTNAME=	kpty-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kpty
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Pty abstraction
 LICENSE=	gnu-lgpl-v2.1
 

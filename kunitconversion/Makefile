@@ -3,7 +3,7 @@
 DISTNAME=	kunitconversion-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kunitconversion
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Support for unit conversion
 LICENSE=	gnu-lgpl-v2.1
 

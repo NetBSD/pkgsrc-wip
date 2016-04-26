@@ -3,7 +3,7 @@
 DISTNAME=	kimageformats-${KF5VER}
 CATEGORIES=	graphics
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kimageformats
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Image format plugins for Qt5
 LICENSE=	gnu-lgpl-v2.1
 

@@ -3,7 +3,7 @@
 DISTNAME=	solid-${KF5VER}
 CATEGORIES=	sysutils
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/solid
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Hardware integration and detection
 LICENSE=	gnu-lgpl-v2.1
 

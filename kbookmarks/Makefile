@@ -3,7 +3,7 @@
 DISTNAME=	kbookmarks-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kbookmarks
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Support for bookmarks and the XBEL format
 LICENSE=	gnu-lgpl-v2.1
 

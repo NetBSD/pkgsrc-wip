@@ -4,7 +4,7 @@ DISTNAME=	attica-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/attica
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Qt5 library that implements the Open Collaboration Services API
 LICENSE=	gnu-lgpl-v2.1
 

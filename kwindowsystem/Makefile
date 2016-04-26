@@ -3,7 +3,7 @@
 DISTNAME=	kwindowsystem-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kwindowsystem
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Access to the windowing system
 LICENSE=	gnu-lgpl-v2.1
 

@@ -3,7 +3,7 @@
 DISTNAME=	threadweaver-${KF5VER}
 CATEGORIES=	devel
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/threadweaver
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	High-level multithreading framework
 LICENSE=	gnu-lgpl-v2.1
 

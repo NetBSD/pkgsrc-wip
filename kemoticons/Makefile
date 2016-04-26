@@ -3,7 +3,7 @@
 DISTNAME=	kemoticons-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kemoticons
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Support for emoticons and emoticons themes
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

@@ -3,7 +3,7 @@
 DISTNAME=	kwidgetsaddons-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kwidgetsaddons
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Addons to QtWidgets
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

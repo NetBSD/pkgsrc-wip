@@ -3,7 +3,7 @@
 DISTNAME=	kio-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kio
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Resource and network access abstraction
 LICENSE=	gnu-lgpl-v2.1
 

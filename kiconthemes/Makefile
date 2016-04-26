@@ -3,7 +3,7 @@
 DISTNAME=	kiconthemes-${KF5VER}
 CATEGORIES=	graphics
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kiconthemes
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Support for icon themes
 LICENSE=	gnu-lgpl-v2.1
 

@@ -3,7 +3,7 @@
 DISTNAME=	knotifications-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/knotifications
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Abstraction for system notifications
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 

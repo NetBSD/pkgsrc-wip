@@ -3,7 +3,7 @@
 DISTNAME=	sonnet-${KF5VER}
 CATEGORIES=	textproc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/sonnet
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Spelling framework for Qt5
 LICENSE=	gnu-lgpl-v2.1
 

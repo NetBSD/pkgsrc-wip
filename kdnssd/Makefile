@@ -3,7 +3,7 @@
 DISTNAME=	kdnssd-${KF5VER}
 CATEGORIES=	net
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kdnssd
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Abstraction to system DNSSD features
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 

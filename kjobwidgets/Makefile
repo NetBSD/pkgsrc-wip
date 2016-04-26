@@ -3,7 +3,7 @@
 DISTNAME=	kjobwidgets-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kjobwidgets
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Widgets for tracking KJob instances
 LICENSE=	gnu-lgpl-v2.1
 

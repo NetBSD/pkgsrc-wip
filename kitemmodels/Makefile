@@ -3,7 +3,7 @@
 DISTNAME=	kitemmodels-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kitemmodels
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Models for Qt Model/View system
 LICENSE=	gnu-lgpl-v2.1
 

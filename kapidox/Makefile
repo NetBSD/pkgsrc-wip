@@ -3,7 +3,7 @@
 DISTNAME=	kapidox-${KF5VER}
 CATEGORIES=	textproc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kapidox
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Frameworks API Documentation Tools
 LICENSE=	2-clause-bsd
 

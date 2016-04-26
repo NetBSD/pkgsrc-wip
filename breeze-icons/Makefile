@@ -3,7 +3,7 @@
 DISTNAME=	breeze-icons-${KF5VER}
 CATEGORIES=	graphics
 
-HOMEPAGE=	https://projects.kde.org/projects/kde/workspace/breeze
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Breeze icon themes
 LICENSE=	gnu-lgpl-v2.1 AND gnu-lgpl-v3
 

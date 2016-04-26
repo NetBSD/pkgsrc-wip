@@ -3,7 +3,7 @@
 DISTNAME=	kplotting-${KF5VER}
 CATEGORIES=	graphics
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kplotting
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Lightweight plotting framework
 LICENSE=	gnu-lgpl-v2.1
 

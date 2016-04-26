@@ -3,7 +3,7 @@
 DISTNAME=	kidletime-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kidletime
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Monitoring user activity
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

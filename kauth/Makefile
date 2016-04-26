@@ -3,7 +3,7 @@
 DISTNAME=	kauth-${KF5VER}
 CATEGORIES=	security
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kauth
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Abstraction to system policy and authentication features
 LICENSE=	gnu-lgpl-v2.1
 

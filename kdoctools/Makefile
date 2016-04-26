@@ -3,7 +3,7 @@
 DISTNAME=	kdoctools-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kdoctools
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Documentation generation from docbook
 LICENSE=	gnu-lgpl-v2.1
 

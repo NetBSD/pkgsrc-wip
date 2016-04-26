@@ -3,7 +3,7 @@
 DISTNAME=	kdbusaddons-${KF5VER}
 CATEGORIES=	sysutils
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kdbusaddons
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Addons to QtDBus
 LICENSE=	gnu-lgpl-v2.1
 

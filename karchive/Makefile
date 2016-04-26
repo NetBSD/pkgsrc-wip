@@ -3,7 +3,7 @@
 DISTNAME=	karchive-${KF5VER}
 CATEGORIES=	archivers
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/karchive
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Qt 5 addon providing access to numerous types of archives
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

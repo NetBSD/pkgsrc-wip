@@ -3,7 +3,7 @@
 DISTNAME=	ktextwidgets-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/ktextwidgets
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Advanced text editing widgets
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1
 

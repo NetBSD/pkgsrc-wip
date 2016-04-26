@@ -3,7 +3,7 @@
 DISTNAME=	kitemviews-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kitemviews
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Widget addons for Qt Model/View
 LICENSE=	gnu-lgpl-v2.1
 

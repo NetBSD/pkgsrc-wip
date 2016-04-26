@@ -3,7 +3,7 @@
 DISTNAME=	kxmlgui-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kxmlgui
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	User configurable main windows
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

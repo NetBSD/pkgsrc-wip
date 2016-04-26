@@ -3,7 +3,7 @@
 DISTNAME=	kcrash-${KF5VER}
 CATEGORIES=	devel
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kcrash
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Support for application crash analysis and bug report from apps
 LICENSE=	gnu-lgpl-v2.1
 

@@ -3,7 +3,7 @@
 DISTNAME=	kconfig-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kconfig
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Configuration system
 LICENSE=	gnu-lgpl-v2.1
 

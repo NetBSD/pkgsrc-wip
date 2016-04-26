@@ -3,7 +3,7 @@
 DISTNAME=	ki18n-${KF5VER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/ki18n
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Advanced internationalization framework
 LICENSE=	modified-bsd AND gnu-lgpl-v2.1
 

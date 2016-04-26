@@ -3,7 +3,7 @@
 DISTNAME=	kcompletion-${KF5VER}
 CATEGORIES=	textproc
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kcompletion
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Text completion helpers and widgets
 LICENSE=	gnu-lgpl-v2.1
 

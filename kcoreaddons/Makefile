@@ -3,7 +3,7 @@
 DISTNAME=	kcoreaddons-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kcoreaddons
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Addons to QtCore
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
 

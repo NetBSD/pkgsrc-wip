@@ -3,7 +3,7 @@
 DISTNAME=	kglobalaccel-${KF5VER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://projects.kde.org/projects/frameworks/kglobalaccel
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Add support for global workspace shortcuts
 LICENSE=	gnu-lgpl-v2.1
 
