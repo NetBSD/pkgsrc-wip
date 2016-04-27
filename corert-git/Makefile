@@ -21,7 +21,6 @@ REPLACE_BASH+=	build.sh
 do-build:
 		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
 
-.include "../../lang/mono/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../devel/lldb/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
