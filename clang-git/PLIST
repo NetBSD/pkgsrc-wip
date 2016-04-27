@@ -484,6 +484,7 @@ lib/clang/${PKGVERSION}/include/avx512pfintrin.h
 lib/clang/${PKGVERSION}/include/avx512vbmiintrin.h
 lib/clang/${PKGVERSION}/include/avx512vbmivlintrin.h
 lib/clang/${PKGVERSION}/include/avx512vlbwintrin.h
+lib/clang/${PKGVERSION}/include/avx512vlcdintrin.h
 lib/clang/${PKGVERSION}/include/avx512vldqintrin.h
 lib/clang/${PKGVERSION}/include/avx512vlintrin.h
 lib/clang/${PKGVERSION}/include/avxintrin.h
@@ -542,7 +543,6 @@ lib/clang/${PKGVERSION}/include/xsaveintrin.h
 lib/clang/${PKGVERSION}/include/xsaveoptintrin.h
 lib/clang/${PKGVERSION}/include/xsavesintrin.h
 lib/clang/${PKGVERSION}/include/xtestintrin.h
-lib/clang/${PKGVERSION}/vtables_blacklist.txt
 lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
