@@ -11,6 +11,7 @@ HOMEPAGE=	https://launchpad.net/libindicator
 LICENSE=	gnu-gpl-v3
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/libindicator/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/libindicator/patches
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
