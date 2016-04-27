@@ -29,7 +29,7 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-screensaver/xdg/menus/mate-screensave
 
 PLIST_VARS+=		pam
 
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
 DEPENDS+=		pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
 INSTALLATION_DIRS+=	${PREFIX}/share/examples/pam.d
 
