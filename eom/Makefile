@@ -12,6 +12,8 @@ TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	data/eom.pc.in
 
+BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
+
 .include "options.mk"
 
 .include "../../devel/glib2/schemas.mk"
