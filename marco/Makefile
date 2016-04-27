@@ -7,6 +7,8 @@ CATEGORIES=	wm
 
 COMMENT=	MATE Marco is a fork of GNOME Metacity
 
+USE_LANGUAGES+=	c99
+
 BUILD_DEPENDS+=		gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
 TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
