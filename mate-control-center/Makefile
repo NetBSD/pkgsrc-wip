@@ -7,6 +7,8 @@ CATEGORIES=	sysutils
 
 COMMENT=	MATE Control Center
 
+BUILD_DEPENDS+=	itstool>=0:../../textproc/itstool
+
 PKGCONFIG_OVERRIDE+=	capplets/keybindings/mate-keybindings.pc.in
 PKGCONFIG_OVERRIDE+=	capplets/default-applications/mate-default-applications.pc.in
 PKGCONFIG_OVERRIDE+=	libslab/libslab.pc.in
