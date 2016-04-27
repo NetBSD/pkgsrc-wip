@@ -203,6 +203,7 @@ include/clang/Basic/MacroBuilder.h
 include/clang/Basic/Module.h
 include/clang/Basic/ObjCRuntime.h
 include/clang/Basic/OpenCLExtensions.def
+include/clang/Basic/OpenCLImageTypes.def
 include/clang/Basic/OpenMPKinds.def
 include/clang/Basic/OpenMPKinds.h
 include/clang/Basic/OperatorKinds.def
@@ -210,6 +211,7 @@ include/clang/Basic/OperatorKinds.h
 include/clang/Basic/OperatorPrecedence.h
 include/clang/Basic/PartialDiagnostic.h
 include/clang/Basic/PlistSupport.h
+include/clang/Basic/PragmaKinds.h
 include/clang/Basic/PrettyStackTrace.h
 include/clang/Basic/SanitizerBlacklist.h
 include/clang/Basic/Sanitizers.def
@@ -238,6 +240,7 @@ include/clang/CodeGen/CodeGenABITypes.h
 include/clang/CodeGen/CodeGenAction.h
 include/clang/CodeGen/ModuleBuilder.h
 include/clang/CodeGen/ObjectFilePCHContainerOperations.h
+include/clang/CodeGen/SwiftCallingConv.h
 include/clang/Config/config.h
 include/clang/Driver/Action.h
 include/clang/Driver/Compilation.h
@@ -459,6 +462,7 @@ include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
 lib/clang/${PKGVERSION}/include/Intrin.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_math_forward_declares.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_runtime_wrapper.h
 lib/clang/${PKGVERSION}/include/__stddef_max_align_t.h
 lib/clang/${PKGVERSION}/include/__wmmintrin_aes.h
@@ -474,6 +478,11 @@ lib/clang/${PKGVERSION}/include/avx512cdintrin.h
 lib/clang/${PKGVERSION}/include/avx512dqintrin.h
 lib/clang/${PKGVERSION}/include/avx512erintrin.h
 lib/clang/${PKGVERSION}/include/avx512fintrin.h
+lib/clang/${PKGVERSION}/include/avx512ifmaintrin.h
+lib/clang/${PKGVERSION}/include/avx512ifmavlintrin.h
+lib/clang/${PKGVERSION}/include/avx512pfintrin.h
+lib/clang/${PKGVERSION}/include/avx512vbmiintrin.h
+lib/clang/${PKGVERSION}/include/avx512vbmivlintrin.h
 lib/clang/${PKGVERSION}/include/avx512vlbwintrin.h
 lib/clang/${PKGVERSION}/include/avx512vldqintrin.h
 lib/clang/${PKGVERSION}/include/avx512vlintrin.h
@@ -533,6 +542,7 @@ lib/clang/${PKGVERSION}/include/xsaveintrin.h
 lib/clang/${PKGVERSION}/include/xsaveoptintrin.h
 lib/clang/${PKGVERSION}/include/xsavesintrin.h
 lib/clang/${PKGVERSION}/include/xtestintrin.h
+lib/clang/${PKGVERSION}/vtables_blacklist.txt
 lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
