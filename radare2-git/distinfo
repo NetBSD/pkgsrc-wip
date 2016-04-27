@@ -3,5 +3,3 @@ $NetBSD: distinfo,v 1.1 2014/12/05 00:50:56 krytarowski Exp $
 SHA1 (radare2-0.9.8.tar.xz) = 7fce08c3d08749e91a0ce3bee177ba389ae145f4
 RMD160 (radare2-0.9.8.tar.xz) = 8a8ab14d14e61117f48b59c8c8aadb81baf2da5e
 Size (radare2-0.9.8.tar.xz) = 4614588 bytes
-SHA1 (patch-shlr_qnx_include_utils.h) = 5169a35793ba7d814e6efc209066f1b2555c1fc4
-SHA1 (patch-shlr_qnx_src_utils.c) = 06d037a1a548925dc8562e3485541e7066b7eaca
