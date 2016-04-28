@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/cmake/OxygenFont/OxygenFontConfig.cmake
+lib/cmake/OxygenFont/OxygenFontConfigVersion.cmake
+share/fonts/X11/TTF/Oxygen-Sans-Bold.ttf
+share/fonts/X11/TTF/Oxygen-Sans.ttf
+share/fonts/X11/TTF/OxygenMono-Regular.ttf
