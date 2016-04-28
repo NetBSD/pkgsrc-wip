@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- source/Plugins/SymbolFile/PDB/CMakeLists.txt.orig	2016-04-27 00:55:50.000000000 +0000
++++ source/Plugins/SymbolFile/PDB/CMakeLists.txt
+@@ -1,7 +1,11 @@
+-set(LLVM_PRIVATE_LINK_COMPONENTS
+-    DebugInfoPDB)
++#set(LLVM_PRIVATE_LINK_COMPONENTS
++#    DebugInfoPDB)
+ 
+ add_lldb_library(lldbPluginSymbolFilePDB
+   PDBASTParser.cpp
+   SymbolFilePDB.cpp
+   )
++
++target_link_libraries(lldbPluginSymbolFilePDB
++LINK_PRIVATE
++LLVMDebugInfoPDB)
