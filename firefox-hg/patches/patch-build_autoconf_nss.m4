@@ -1,5 +1,9 @@
 $NetBSD: patch-build_autoconf_nss.m4,v 1.2 2015/04/05 07:33:51 thomasklausner Exp $
 
+nss does not install nss-config, but a pkg-config .pc file. Convert the
+detection logic.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1268883
+
 --- build/autoconf/nss.m4.orig	2015-04-05 06:58:11.000000000 +0000
 +++ build/autoconf/nss.m4
 @@ -22,18 +22,18 @@ AC_ARG_WITH(nss-exec-prefix,

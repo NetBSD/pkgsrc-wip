@@ -1,5 +1,8 @@
 $NetBSD$
 
+Fix unportable test(1) operator.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1268882
+
 --- browser/extensions/loop/run-all-loop-tests.sh.orig	2015-12-14 14:47:20.000000000 +0000
 +++ browser/extensions/loop/run-all-loop-tests.sh
 @@ -1,7 +1,7 @@
