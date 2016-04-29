@@ -29,7 +29,7 @@ Suggested package updates
 	o fakenes-0.5.7
 	o fgallery-1.8
 	o fio-2.5
-	o firebird-2.5
+	o firebird-3.0
 	o flc-1.12
 	o gambas2-3.7.1
 	o gcc42-4.2.4
@@ -51,7 +51,7 @@ Suggested package updates
 	o gtkaml-0.4.3
 	o guichan-0.8.1
 	o guitone-0.9
-	o gwyddion-2.44
+	o gwyddion-2.45
 	o higan-096
 	o hitori-0.4.5
 	o hu-go-2.11
@@ -86,6 +86,7 @@ Suggested package updates
 	o mumble-1.2.4
 	o mupen64-0.5
 	o musescore-2.0
+	o mythtv-0.28.0
 	o nautilus-open-terminal-0.19
 	o ogmrip-1.0.0
 	o omega-1.2.10
