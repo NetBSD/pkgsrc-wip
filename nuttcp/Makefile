@@ -3,7 +3,8 @@
 
 DISTNAME=	nuttcp-${NUTTCP_VERSION}
 CATEGORIES=	benchmarks net
-MASTER_SITES=	http://www.lcp.nrl.navy.mil/nuttcp/ \
+MASTER_SITES=	http://nuttcp.net/nuttcp/ \
+		http://www.lcp.nrl.navy.mil/nuttcp/ \
 		ftp://ftp.lcp.nrl.navy.mil/pub/nuttcp/
 EXTRACT_SUFX=	.tar.bz2
 
