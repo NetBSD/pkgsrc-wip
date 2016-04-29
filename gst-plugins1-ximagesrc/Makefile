@@ -7,5 +7,6 @@ GST_PLUGINS1_FLAGS=	x xshm
 
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
