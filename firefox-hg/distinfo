@@ -12,6 +12,7 @@ SHA1 (patch-build_autoconf_nss.m4) = 53e8c6844fc0095237ee07df3ab3791edd248fc2
 SHA1 (patch-build_gyp.mozbuild) = 2842da0783d344dd12e86adde447f7cda6191518
 SHA1 (patch-config_Makefile.in) = 34af9523b3bab1a31392772ed852a6d937be1e70
 SHA1 (patch-config_rules.mk) = debd5acd52f4f7593ea4e54dd0fdad91eeb46839
+SHA1 (patch-config_system-headers) = 7f0d7a4bd721507315cb4ab9cced97a09b2f1441
 SHA1 (patch-dom_base_moz.build) = c0d68528c487a9f06fed2a886ceafd7d904cc8a5
 SHA1 (patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = 939f25f70f81eb86757696269c7e87c11a789c87
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = e104bea7922dac0ce441bca4ba7a6f9b2379d17a
