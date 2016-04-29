@@ -2,16 +2,10 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.1 2014/09/29 10:46:25 thomasklausne
 
 --- toolkit/library/moz.build.orig	2015-10-25 13:54:43.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -229,6 +244,15 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
+@@ -229,6 +244,9 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  
-+if CONFIG['MOZ_NATIVE_GRAPHITE2']:
-+    OS_LIBS += CONFIG['MOZ_GRAPHITE2_LIBS']
-+
-+if CONFIG['MOZ_NATIVE_HARFBUZZ']:
-+    OS_LIBS += CONFIG['MOZ_HARFBUZZ_LIBS']
-+
 +if CONFIG['MOZ_LIBV4L2_LIBS']:
 +    OS_LIBS += CONFIG['MOZ_LIBV4L2_LIBS']
 +
