@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	1.4
+VERSION=	1.5
 MINOR=		.0
 DISTNAME=	openh264-${VERSION}${MINOR}
 CATEGORIES=	www multimedia
@@ -44,13 +44,11 @@ BUILD_DEPENDS+=		nasm>=2.07:../../devel/nasm
 .endif
 
 post-extract:
-	cp ${WRKSRC}/build/platform-freebsd.mk		\
-		${WRKSRC}/build/platform-netbsd.mk
 	cp ${FILESDIR}/gmpopenh264.js ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gmpopenh264.info ${DESTDIR}${PREFIX}/${PLUGIN_DIR}
-	${INSTALL_DATA} ${WRKSRC}/libgmpopenh264.so.0 ${DESTDIR}${PREFIX}/${PLUGIN_DIR}/libgmpopenh264.so
+	${INSTALL_DATA} ${WRKSRC}/libgmpopenh264.so.1 ${DESTDIR}${PREFIX}/${PLUGIN_DIR}/libgmpopenh264.so
 	${INSTALL_DATA} ${WRKSRC}/gmpopenh264.js ${DESTDIR}${PREFIX}/${PLUGIN_DIR}/gmpopenh264.js
 
 .include "../../multimedia/gmp-api/buildlink3.mk"

@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (openh264-1.4.0.tar.gz) = 709520a591f5236af254a868b56fd4c5503ec929
-RMD160 (openh264-1.4.0.tar.gz) = 9f94eff519702bbe5b7447468f6eb80b68476486
-Size (openh264-1.4.0.tar.gz) = 37681189 bytes
+SHA1 (openh264-1.5.0.tar.gz) = 28e769f4326a7b370e4e4deedcd04ec98245b83e
+RMD160 (openh264-1.5.0.tar.gz) = 1a554f03e9e9dee0e8c44064d08ad557e2ca8083
+SHA512 (openh264-1.5.0.tar.gz) = 30599fed5e928af7dfec079d101a22885e52874c1d7db91ff289b989a9a20548b6bbd5d25e4e546efedd4e5aba97cbc42b1e847970b93116d86efc7af394aeaf
+Size (openh264-1.5.0.tar.gz) = 37851166 bytes

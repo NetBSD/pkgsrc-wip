@@ -8,5 +8,5 @@ lib/firefox/gmp-gmpopenh264/${VERSION}/gmpopenh264.js
 lib/firefox/gmp-gmpopenh264/${VERSION}/libgmpopenh264.so
 lib/libopenh264.a
 lib/libopenh264.so
-lib/libopenh264.so.0
+lib/libopenh264.so.1
 lib/pkgconfig/openh264.pc
