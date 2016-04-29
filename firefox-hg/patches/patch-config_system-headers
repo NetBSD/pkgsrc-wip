@@ -1,5 +1,8 @@
 $NetBSD$
 
+Needed to fix link failure on NetBSD-7.99.29/amd64/gcc-5.3.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1268879
+
 --- config/system-headers.orig	2016-04-29 09:24:33.807103859 +0000
 +++ config/system-headers
 @@ -256,6 +256,7 @@ cairo-xlib-xrender.h
