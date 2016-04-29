@@ -6,6 +6,9 @@
 # used by www/seamonkey/Makefile
 
 HAS_CONFIGURE=		yes
+# GNU_CONFIGURE does not work since the configure script doesn't like --build
+# and --mandir
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
