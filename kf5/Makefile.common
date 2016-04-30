@@ -1,5 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2016/01/10 20:01:05 markd Exp $
 # used by wip/attica-qt5/Makefile
+# used by wip/baloo5/Makefile
 # used by wip/frameworkintegration/Makefile
 # used by wip/kactivities-stats/Makefile
 # used by wip/kactivities5/Makefile
