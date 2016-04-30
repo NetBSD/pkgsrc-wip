@@ -1,5 +1,7 @@
 $NetBSD: patch-ao,v 1.1 2014/09/29 10:46:23 thomasklausner Exp $
 
+Do not install headers/sdl files.
+
 --- toolkit/mozapps/installer/packager.mk.orig	2014-03-15 05:19:37.000000000 +0000
 +++ toolkit/mozapps/installer/packager.mk
 @@ -775,7 +775,7 @@ endif
