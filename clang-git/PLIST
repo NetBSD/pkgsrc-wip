@@ -391,6 +391,7 @@ include/clang/Serialization/Module.h
 include/clang/Serialization/ModuleFileExtension.h
 include/clang/Serialization/ModuleManager.h
 include/clang/Serialization/SerializationDiagnostic.h
+include/clang/StaticAnalyzer/Checkers/Checkers.inc
 include/clang/StaticAnalyzer/Checkers/ClangCheckers.h
 include/clang/StaticAnalyzer/Checkers/LocalCheckers.h
 include/clang/StaticAnalyzer/Checkers/ObjCRetainCount.h
