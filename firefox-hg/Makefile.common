@@ -69,12 +69,6 @@ MOZILLA_NAME=	Firefox
 MOZILLA_NAME=	Browser
 .endif
 
-SUBST_CLASSES+=		sys-dic
-SUBST_STAGE.sys-dic=	pre-configure
-SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
-SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/glue/mozHunspell.cpp
-SUBST_VARS.sys-dic=	PREFIX
-
 USE_TOOLS+=	autoconf213
 
 pre-configure:
