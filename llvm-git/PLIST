@@ -950,10 +950,6 @@ ${PLIST.BPF}lib/libLLVMBPFAsmPrinter.a
 ${PLIST.BPF}lib/libLLVMBPFCodeGen.a
 ${PLIST.BPF}lib/libLLVMBPFDesc.a
 ${PLIST.BPF}lib/libLLVMBPFInfo.a
-${PLIST.BPF}lib/libLLVMBPFAsmPrinter.a
-${PLIST.BPF}lib/libLLVMBPFCodeGen.a
-${PLIST.BPF}lib/libLLVMBPFDesc.a
-${PLIST.BPF}lib/libLLVMBPFInfo.a
 lib/libLLVMBitReader.a
 lib/libLLVMBitWriter.a
 lib/libLLVMCodeGen.a
