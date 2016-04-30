@@ -1,8 +1,13 @@
 $NetBSD$
 
---- cmake/modules/LLDBStandalone.cmake.orig	2016-02-05 23:28:46.000000000 +0000
+--- cmake/modules/LLDBStandalone.cmake.orig	2016-04-27 00:55:49.000000000 +0000
 +++ cmake/modules/LLDBStandalone.cmake
-@@ -6,57 +6,78 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+@@ -2,61 +2,82 @@
+ # standalone project, using LLVM as an external library:
+ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+   project(lldb)
+-  cmake_minimum_required(VERSION 2.8)
++  cmake_minimum_required(VERSION 2.8.12.2)
  
    option(LLVM_INSTALL_TOOLCHAIN_ONLY "Only include toolchain files in the 'install' target." OFF)
  

@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2016-04-27 00:55:49.000000000 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 2.8.12.2)
+ 
+ include(cmake/modules/LLDBStandalone.cmake)
+ include(cmake/modules/LLDBConfig.cmake)
