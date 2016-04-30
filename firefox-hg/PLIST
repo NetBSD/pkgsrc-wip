@@ -2465,6 +2465,8 @@ lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/too
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar@2x.png
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/en-US/locale/en-US/loop.properties
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/install.rdf
+lib/firefox-${VERSION}/browser/features/webcompat@mozilla.org/bootstrap.js
+lib/firefox-${VERSION}/browser/features/webcompat@mozilla.org/install.rdf
 lib/firefox-${VERSION}/browser/icons/mozicon128.png
 lib/firefox-${VERSION}/browser/modules/AboutHome.jsm
 lib/firefox-${VERSION}/browser/modules/AboutNewTab.jsm
@@ -3388,7 +3390,6 @@ lib/firefox-${VERSION}/components/ColorAnalyzer.js
 lib/firefox-${VERSION}/components/ConsoleAPIStorage.js
 lib/firefox-${VERSION}/components/ContactManager.js
 lib/firefox-${VERSION}/components/ContentProcessSingleton.js
-lib/firefox-${VERSION}/components/DataStoreImpl.js
 lib/firefox-${VERSION}/components/DownloadLegacy.js
 lib/firefox-${VERSION}/components/FeedProcessor.js
 lib/firefox-${VERSION}/components/FormAutofillContentService.js
@@ -3592,9 +3593,6 @@ lib/firefox-${VERSION}/modules/ContentPrefUtils.jsm
 lib/firefox-${VERSION}/modules/CrashMonitor.jsm
 lib/firefox-${VERSION}/modules/Credentials.jsm
 lib/firefox-${VERSION}/modules/DOMRequestHelper.jsm
-lib/firefox-${VERSION}/modules/DataStoreChangeNotifier.jsm
-lib/firefox-${VERSION}/modules/DataStoreCursorImpl.jsm
-lib/firefox-${VERSION}/modules/DataStoreDB.jsm
 lib/firefox-${VERSION}/modules/DeferredSave.jsm
 lib/firefox-${VERSION}/modules/DeferredTask.jsm
 lib/firefox-${VERSION}/modules/Deprecated.jsm
