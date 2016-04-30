@@ -46,9 +46,9 @@ PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-hg-${_HG_PKGVERSION}
 # Enforce PKGREVISION unless HG_TAG is set:
 .if empty(HG_TAG)
 . if defined(CHECKOUT_DATE)
-PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
+PKGREVISION?=		${CHECKOUT_DATE:S/-//g}
 . else
-PKGREVISION?=		$(_HG_PKGVERSION:S/.//g)
+PKGREVISION?=		${_HG_PKGVERSION:S/.//g}
 . endif
 .endif
 
