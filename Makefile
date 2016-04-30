@@ -203,6 +203,7 @@ SUBDIR+=	backplane
 SUBDIR+=	bagel
 SUBDIR+=	bakery
 SUBDIR+=	baler
+SUBDIR+=	baloo5
 SUBDIR+=	banshee
 SUBDIR+=	bareos
 SUBDIR+=	baresip
