@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-notify>=0.2.1:../../sysutils/py-notify
 
 USE_LANGUAGES=	# none
 
-
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON+=	bleachbit.py
 

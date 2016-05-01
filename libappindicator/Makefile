@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/04/10 19:06:32 krytarowski Exp $
 
 USE_GTK_VERSION=2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 .include "Makefile.common"
 

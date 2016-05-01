@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--without-cms
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"

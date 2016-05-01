@@ -16,6 +16,7 @@ REPLACE_BASH=	grc/freedesktop/grc_setup_freedesktop.in
 CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
 CMAKE_ARGS+=	-DENABLE_GRC=ON
 
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 .include	"../../x11/py-gtk2/buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
 

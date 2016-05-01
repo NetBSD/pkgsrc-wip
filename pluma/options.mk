@@ -23,6 +23,7 @@ USE_TOOLS+=	bash:run
 REPLACE_PYTHON+=	plugins/externaltools/data/switch-c.tool.in
 REPLACE_BASH+=	plugins/externaltools/data/search-recursive.tool.in
 PLIST.python=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2, also via py-gtksourceview
 .include "../../lang/python/application.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
