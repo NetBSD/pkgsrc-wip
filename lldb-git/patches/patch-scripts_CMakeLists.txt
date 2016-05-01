@@ -1,6 +1,6 @@
 $NetBSD$
 
---- scripts/CMakeLists.txt.orig	2016-04-27 00:55:50.000000000 +0000
+--- scripts/CMakeLists.txt.orig	2016-05-01 10:39:36.000000000 +0000
 +++ scripts/CMakeLists.txt
 @@ -9,6 +9,8 @@ set(SWIG_HEADERS
    ${LLDB_SOURCE_DIR}/include/lldb/lldb-versioning.h
