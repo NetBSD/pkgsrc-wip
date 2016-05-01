@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:04:58 jperkin Exp $
+man/man5/bitlbee.conf.5
+man/man8/bitlbee.8
+sbin/bitlbee
+share/bitlbee/help.txt
+share/bitlbee/motd.txt
+share/doc/bitlbee/AUTHORS
+share/doc/bitlbee/CREDITS
+share/doc/bitlbee/FAQ
+share/doc/bitlbee/README
+share/doc/bitlbee/user-guide.html
+share/doc/bitlbee/user-guide.txt
+share/examples/bitlbee/bitlbee.conf
