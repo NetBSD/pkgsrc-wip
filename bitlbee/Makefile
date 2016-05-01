@@ -68,7 +68,7 @@ do-install:
 .endfor
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bitlbee
-PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUPPORTED_OPTIONS=	inet6 libpurple otr
 PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
@@ -77,6 +77,20 @@ PKG_SUGGESTED_OPTIONS=	inet6
 CONFIGURE_ARGS+=	--ipv6=1
 .else
 CONFIGURE_ARGS+=	--ipv6=0
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibpurple)
+CONFIGURE_ARGS+=      --purple=1
+.include "../../chat/libpurple/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=        --purple=0
+.endif
+
+.if !empty(PKG_OPTIONS:Motr)
+ CONFIGURE_ARGS+=	--otr=1
+.include "../../chat/libotr/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--otr=0
 .endif
 
 RCD_SCRIPTS=		bitlbee
