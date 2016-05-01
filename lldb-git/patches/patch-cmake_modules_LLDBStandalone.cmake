@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/modules/LLDBStandalone.cmake.orig	2016-02-05 23:28:46.000000000 +0000
+--- cmake/modules/LLDBStandalone.cmake.orig	2016-05-01 10:39:36.000000000 +0000
 +++ cmake/modules/LLDBStandalone.cmake
 @@ -6,57 +6,78 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
  
@@ -122,9 +122,11 @@ $NetBSD$
  
    include(AddLLVM)
    include(HandleLLVMOptions)
-@@ -73,23 +94,16 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+@@ -72,24 +93,18 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURR
+   else()
      message("-- Found PythonInterp: ${PYTHON_EXECUTABLE}")
    endif()
++
    # Import CMake library targets from LLVM and Clang.
 -  include("${LLDB_PATH_TO_LLVM_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm/LLVMConfig.cmake")
 -  if (EXISTS "${LLDB_PATH_TO_CLANG_BUILD}/lib${LLVM_LIBDIR_SUFFIX}/cmake/clang/ClangConfig.cmake")
