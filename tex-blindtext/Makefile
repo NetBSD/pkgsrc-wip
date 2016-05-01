@@ -14,4 +14,5 @@ LICENSE=	lppl-1.3c
 USE_LANGUAGES=	# none
 
 .include "../../print/texlive/package.mk"
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
