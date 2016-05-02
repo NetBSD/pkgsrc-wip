@@ -1455,6 +1455,7 @@ SUBDIR+=	kcrash
 SUBDIR+=	kdbusaddons
 SUBDIR+=	kdeclarative
 SUBDIR+=	kded
+SUBDIR+=	kdelibs4support
 SUBDIR+=	kdesignerplugin
 SUBDIR+=	kdesu
 SUBDIR+=	kdewebkit
