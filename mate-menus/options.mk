@@ -10,6 +10,7 @@ PLIST_VARS+=	introspection python
 
 .if !empty(PKG_OPTIONS:Mpython)
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../lang/python/extension.mk"
 CONFIGURE_ARGS+=	--enable-python
 PLIST.python=		yes
