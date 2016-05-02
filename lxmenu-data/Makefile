@@ -17,6 +17,7 @@ LXDE_CONF=		share/examples/lxde
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${LXDE_CONF}
 PKG_SYSCONFSUBDIR=	xdg
 
-CONF_FILES=	${LXDE_CONF}/xdg/menus/lxde-applications.menu \
+CONF_FILES=	${LXDE_CONF}/menus/lxde-applications.menu \
 		${PKG_SYSCONFDIR}/menus/lxde-applications.menu
+
 .include "../../mk/bsd.pkg.mk"
