@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.70 2015/12/23 12:38:37 joerg Exp $
 
-DISTNAME=		bitlbee-3.4.1
+DISTNAME=		bitlbee-3.4.2
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
