@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2012/10/08 09:57:28 asau Exp $
 #
 
-DISTNAME=	libquantum-1.0.0
+DISTNAME=	libquantum-1.1.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.libquantum.de/files/
 
