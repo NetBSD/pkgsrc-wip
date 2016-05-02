@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (kdelibs4support-5.21.0.tar.xz) = 8af13fcf3f8ec366b70c7c6377d84832d07a7de3
+RMD160 (kdelibs4support-5.21.0.tar.xz) = ca370dfd64bbaa45218faf89ee1acabbaf73e8ba
+SHA512 (kdelibs4support-5.21.0.tar.xz) = b243373463cb1ea21b4c7b12b51d6051cafbc724eea87eda69583bfb10600fe9adb1c58cd6c7517df157fa8455c16a2e86730d4f17fcf1cf3f2994b43afa3ffd
+Size (kdelibs4support-5.21.0.tar.xz) = 3228212 bytes
+SHA1 (patch-src_CMakeLists.txt) = bf7e4f0c63317cafa4c6c04c1b08989406fcdd1a
+SHA1 (patch-src_kssl_kssl_CMakeLists.txt) = 06036c0e26012df88a420145fbf0213e573e1c81
