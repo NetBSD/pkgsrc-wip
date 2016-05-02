@@ -420,6 +420,7 @@ include/llvm/DebugInfo/PDB/Raw/DbiStream.h
 include/llvm/DebugInfo/PDB/Raw/InfoStream.h
 include/llvm/DebugInfo/PDB/Raw/MappedBlockStream.h
 include/llvm/DebugInfo/PDB/Raw/ModInfo.h
+include/llvm/DebugInfo/PDB/Raw/NameHashTable.h
 include/llvm/DebugInfo/PDB/Raw/NameMap.h
 include/llvm/DebugInfo/PDB/Raw/PDBFile.h
 include/llvm/DebugInfo/PDB/Raw/RawConstants.h
