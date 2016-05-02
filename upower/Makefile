@@ -11,6 +11,9 @@ HOMEPAGE=	http://upower.freedesktop.org/releases/
 COMMENT=	UPower is an abstraction for enumerating power devices
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
