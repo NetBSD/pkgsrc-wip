@@ -9,7 +9,7 @@ name="bitlbee"
 rcvar=$name
 command="@PREFIX@/sbin/bitlbee"
 pidfile="@VARBASE@/run/${name}/pid"
-command_args="-D"	# run as a daemon
+command_args="-D -u bitlbee"	# run as a daemon
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
