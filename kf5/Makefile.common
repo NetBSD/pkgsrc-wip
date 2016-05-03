@@ -18,6 +18,7 @@
 # used by wip/kdbusaddons/Makefile
 # used by wip/kdeclarative/Makefile
 # used by wip/kded/Makefile
+# used by wip/kdelibs4support/Makefile
 # used by wip/kdesignerplugin/Makefile
 # used by wip/kdesu/Makefile
 # used by wip/kdewebkit/Makefile
@@ -73,6 +74,7 @@ CONFIGURE_DIRS=	_KDE_build
 
 CMAKE_ARGS+=	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
 CMAKE_ARGS+=	-DLIBEXEC_INSTALL_DIR=libexec
+CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PKG_SYSCONFDIR:Q}
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
