@@ -12,12 +12,14 @@ ${PYSITELIB}/uzbl/__init__.py
 ${PYSITELIB}/uzbl/__init__.pyc
 ${PYSITELIB}/uzbl/arguments.pyc
 ${PYSITELIB}/uzbl/core.pyc
+${PYSITELIB}/uzbl/daemon.pyc
 ${PYSITELIB}/uzbl/event_manager.pyc
 ${PYSITELIB}/uzbl/ext.pyc
 ${PYSITELIB}/uzbl/net.pyc
 ${PYSITELIB}/uzbl/xdg.pyc
 ${PYSITELIB}/uzbl/arguments.py
 ${PYSITELIB}/uzbl/core.py
+${PYSITELIB}/uzbl/daemon.py
 ${PYSITELIB}/uzbl/event_manager.py
 ${PYSITELIB}/uzbl/ext.py
 ${PYSITELIB}/uzbl/net.py
