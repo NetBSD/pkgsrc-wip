@@ -5,6 +5,7 @@ ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -14,6 +15,7 @@ ${GEM_LIBDIR}/ext/libv8/arch.rb
 ${GEM_LIBDIR}/ext/libv8/builder.rb
 ${GEM_LIBDIR}/ext/libv8/checkout.rb
 ${GEM_LIBDIR}/ext/libv8/compiler.rb
+${GEM_LIBDIR}/ext/libv8/compiler/apple_llvm.rb
 ${GEM_LIBDIR}/ext/libv8/compiler/clang.rb
 ${GEM_LIBDIR}/ext/libv8/compiler/gcc.rb
 ${GEM_LIBDIR}/ext/libv8/compiler/generic_compiler.rb
@@ -25,17 +27,14 @@ ${GEM_LIBDIR}/ext/libv8/paths.rb
 ${GEM_LIBDIR}/lib/libv8.rb
 ${GEM_LIBDIR}/lib/libv8/version.rb
 ${GEM_LIBDIR}/libv8.gemspec
-${GEM_LIBDIR}/patches/arm/do-not-imply-vfp3-and-armv7.patch
-${GEM_LIBDIR}/patches/arm/do-not-use-vfp2.patch
-${GEM_LIBDIR}/patches/clang/no-unused-private-field.patch
-${GEM_LIBDIR}/patches/clang33/silence-nested-anon-types-and-unused-function-warnings.patch
-${GEM_LIBDIR}/patches/clang51/no-unused-variable.patch
-${GEM_LIBDIR}/patches/clang70/no-unused-local-typedefs.patch
 ${GEM_LIBDIR}/patches/disable-building-tests.patch
+${GEM_LIBDIR}/patches/disable-werror-on-osx.patch
+${GEM_LIBDIR}/patches/do-not-imply-vfp3-and-armv7.patch
+${GEM_LIBDIR}/patches/do-not-use-vfp2.patch
 ${GEM_LIBDIR}/patches/fPIC-for-static.patch
-${GEM_LIBDIR}/patches/gcc48/gcc48-wno-unused-local-typedefs.patch
 ${GEM_LIBDIR}/patches/mingw-generate-makefiles.sh
 ${GEM_LIBDIR}/release/x86-linux/Vagrantfile
+${GEM_LIBDIR}/release/x86_64-freebsd10/Vagrantfile
 ${GEM_LIBDIR}/release/x86_64-linux/Vagrantfile
 ${GEM_LIBDIR}/spec/location_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
