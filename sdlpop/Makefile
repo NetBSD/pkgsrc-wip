@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/SDLPoP-${PKGVERSION_NOREV}
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 CFLAGS+=	-D PKGSRC_DATA_PATH="\"${PREFIX}/share/sdlpop/\""
 
