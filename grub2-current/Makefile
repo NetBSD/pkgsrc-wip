@@ -1,12 +1,11 @@
 # $NetBSD: Makefile,v 1.44 2012/10/28 11:29:03 gregoire Exp $
-#
 
 DISTNAME=		grub-bazaar-snapshot
 PKGNAME=		grub2-${BZR_REVISION}.${TODAY}
 CATEGORIES=		sysutils
 DISTFILES=		# See download.mk
 
-MAINTAINER=		gsutre@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/grub/
 COMMENT=		GRand Unified Bootloader, version 2 (development snapshot)
 LICENSE=		gnu-gpl-v3

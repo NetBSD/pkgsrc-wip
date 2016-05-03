@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 LICENSE=		${PERL5_LICENSE}
 
-MAINTAINER=		rhaen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/CGI-Application-Plugin-AutoRunmode/
 COMMENT=		CGI::App plugin to automatically register runmodes
 
