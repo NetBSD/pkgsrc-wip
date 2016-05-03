@@ -567,6 +567,7 @@ lib/liblldbPluginPlatformWindows.a
 lib/liblldbPluginProcessElfCore.a
 lib/liblldbPluginProcessGDBRemote.a
 lib/liblldbPluginProcessMachCore.a
+lib/liblldbPluginProcessNetBSD.a
 lib/liblldbPluginProcessPOSIX.a
 lib/liblldbPluginProcessUtility.a
 lib/liblldbPluginRenderScriptRuntime.a
