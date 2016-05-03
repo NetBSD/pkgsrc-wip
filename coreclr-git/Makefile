@@ -63,10 +63,17 @@ do-test:
 		${CORECLR_OBJDIR} ${WRKSRC}/paltestout
 
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../lang/llvm/buildlink3.mk"
-.include "../../devel/lldb/buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
-.include "../../lang/libunwind/buildlink3.mk"
+# Stable LLVM
+#.include "../../lang/llvm/buildlink3.mk"
+#.include "../../devel/lldb/buildlink3.mk"
+#.include "../../lang/clang/buildlink3.mk"
+#.include "../../lang/libunwind/buildlink3.mk"
+# Devel LLVM
+.include "../../wip/llvm-git/buildlink3.mk"
+.include "../../wip/lldb-git/buildlink3.mk"
+.include "../../wip/clang-git/buildlink3.mk"
+.include "../../wip/libunwind-git/buildlink3.mk"
+
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
