@@ -19,6 +19,7 @@ SHA1 (patch-include_lldb_Utility_regengine.inc) = a031c43a63acab80a97cfb7727326d
 SHA1 (patch-include_lldb_Utility_regex2.h) = 822a47b1221368ec5442bfbdbc20fe4e370c1a6b
 SHA1 (patch-include_lldb_Utility_regex__impl.h) = 4d99669a756bd662ae28abc8cefe6e1538ef84b6
 SHA1 (patch-include_lldb_Utility_regutils.h) = ea36409f8cd05dcf9b81144cbc136abc5fc3a190
+SHA1 (patch-scripts_CMakeLists.txt) = 1f9515a9c615aab15ac6955894664e2187a5da88
 SHA1 (patch-source_Plugins_SymbolFile_PDB_CMakeLists.txt) = 3465152684eabea85f4ae6250db7bf01fe06cf90
 SHA1 (patch-source_Utility_CMakeLists.txt) = 5b10fe94d76135d8d5ba31862066841394dd45c1
 SHA1 (patch-source_Utility_regcomp.c) = bd315000773bab38b6fe6d119420afbcb5b83a59
