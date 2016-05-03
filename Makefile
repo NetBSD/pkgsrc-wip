@@ -1679,6 +1679,7 @@ SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libpwquality
 SUBDIR+=	libqtxdg
+SUBDIR+=	libquantum
 SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	librem
