@@ -5,7 +5,7 @@
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	clang
-GIT_REPO.clang=		https://github.com/llvm-mirror/clang.git
+GIT_REPO.clang=		git://github.com/llvm-mirror/clang.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clang.llvm.org/
