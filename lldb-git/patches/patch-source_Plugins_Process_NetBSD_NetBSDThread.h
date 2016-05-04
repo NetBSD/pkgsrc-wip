@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NetBSDThread.h.orig	2016-05-03 20:18:09.426252287 +0000
+--- source/Plugins/Process/NetBSD/NetBSDThread.h.orig	2016-05-04 00:54:14.434480217 +0000
 +++ source/Plugins/Process/NetBSD/NetBSDThread.h
 @@ -0,0 +1,142 @@
 +//===-- NetBSDThread.h -----------------------------------------*- C++ -*-===//

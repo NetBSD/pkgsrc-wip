@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/RegisterContextPOSIX.h.orig	2016-05-03 20:18:09.467970089 +0000
+--- source/Plugins/Process/NetBSD/RegisterContextPOSIX.h.orig	2016-05-04 00:54:14.476290769 +0000
 +++ source/Plugins/Process/NetBSD/RegisterContextPOSIX.h
 @@ -0,0 +1,79 @@
 +//===-- RegisterContextPOSIX.h --------------------------------*- C++ -*-===//

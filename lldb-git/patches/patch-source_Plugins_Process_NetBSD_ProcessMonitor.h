@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/ProcessMonitor.h.orig	2016-05-03 20:18:09.450107065 +0000
+--- source/Plugins/Process/NetBSD/ProcessMonitor.h.orig	2016-05-04 00:54:14.458337439 +0000
 +++ source/Plugins/Process/NetBSD/ProcessMonitor.h
 @@ -0,0 +1,303 @@
 +//===-- ProcessMonitor.h -------------------------------------- -*- C++ -*-===//

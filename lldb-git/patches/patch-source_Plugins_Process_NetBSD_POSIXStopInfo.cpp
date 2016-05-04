@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/POSIXStopInfo.cpp.orig	2016-05-03 20:18:09.431983532 +0000
+--- source/Plugins/Process/NetBSD/POSIXStopInfo.cpp.orig	2016-05-04 00:54:14.440278231 +0000
 +++ source/Plugins/Process/NetBSD/POSIXStopInfo.cpp
 @@ -0,0 +1,92 @@
 +//===-- POSIXStopInfo.cpp ---------------------------------------*- C++ -*-===//

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/CMakeLists.txt.orig	2016-05-03 20:18:09.414601924 +0000
+--- source/Plugins/Process/NetBSD/CMakeLists.txt.orig	2016-05-04 00:54:14.422657625 +0000
 +++ source/Plugins/Process/NetBSD/CMakeLists.txt
 @@ -0,0 +1,12 @@
 +include_directories(.)
