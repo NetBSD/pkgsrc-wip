@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.27 2015/07/14 19:44:09 fhajny Exp $
 
-DISTNAME=		riak-2.1.3
+DISTNAME=		riak-2.1.4
 CATEGORIES=		databases
 MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/2.1/${PKGVERSION}/ \
 			http://s3.amazonaws.com/files.basho.com/solr/ \

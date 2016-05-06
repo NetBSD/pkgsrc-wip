@@ -355,6 +355,10 @@ lib/riak/lib/eleveldb-${VERSION.eleveldb}/ebin/eleveldb_bump.beam
 lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/eleveldb.schema
 lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/eleveldb.so
 lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/eleveldb_multi.schema
+lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/leveldb_repair
+lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/perf_dump
+lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/sst_rewrite
+lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/sst_scan
 lib/riak/lib/eleveldb-${VERSION.eleveldb}/priv/vsn.git
 lib/riak/lib/env.sh
 lib/riak/lib/eper-${VERSION.eper}/ebin/bread.beam

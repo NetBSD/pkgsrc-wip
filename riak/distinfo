@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.24 2015/07/14 19:44:09 fhajny Exp $
 
-SHA1 (basho/riak-2.1.3.tar.gz) = 18743afc2463801acc5b8c4a1f41748e55d296db
-RMD160 (basho/riak-2.1.3.tar.gz) = 6163ce1f7efc80b725cdf7171aeb9619d868e9dd
-SHA512 (basho/riak-2.1.3.tar.gz) = d61c732d300dd28b05a5967c504f59fdc4536850acc6eb648ee8d5fc0712190d6294407a047361effebee57a6f38d85593585cd8de3d72d0f205d132df3fc873
-Size (basho/riak-2.1.3.tar.gz) = 18962967 bytes
+SHA1 (basho/riak-2.1.4.tar.gz) = e442759f96daa8ef42f618cba419bc80abd1fc1b
+RMD160 (basho/riak-2.1.4.tar.gz) = eb37aecf943cccf3a6ed32b1ecd38abef1682860
+SHA512 (basho/riak-2.1.4.tar.gz) = cc810d68e59166f99829c80b92f2cf1805a6ddb52e990e23d4421da0c33e73e7b506c71a5710d2afb4b1174453a1f030064250afbcf2e949c2667e6d2acf1c8c
+Size (basho/riak-2.1.4.tar.gz) = 18971981 bytes
 SHA1 (basho/solr-4.7.0-yz-1.tgz) = e21b7734bc112711cd6ec4ae7188726069ae16e3
 RMD160 (basho/solr-4.7.0-yz-1.tgz) = b06b0d4a11644da9d074e9d161c3bef5b35826cb
 SHA512 (basho/solr-4.7.0-yz-1.tgz) = 4d30a6f3048657e5f30fb0a7817e88a1279db75d9f9743028c0713bdbb86e40d2e47de0b6c86b9e2e279f9fc754ceac907835baec86b773eb861f1e5a62ffab9
@@ -18,8 +18,8 @@ SHA512 (basho/yz_monitor-1.jar) = 0732bd5d7119d1eff325e99028a888b4f339485a214999
 Size (basho/yz_monitor-1.jar) = 2661 bytes
 SHA1 (patch-deps__erlang_js__c_src__Makefile) = a49481f9cb0ae9130a96102b3d540a828b8ec5f7
 SHA1 (patch-deps_cuttlefish_rebar.config) = 23a0b960b88277a9370eefe5a284b7aa8bd71f42
-SHA1 (patch-deps_eleveldb_c__src_build__deps.sh) = 88348831637a6fcafea0099ae0bd35c36e197146
+SHA1 (patch-deps_eleveldb_c__src_build__deps.sh) = 8878a0e99d89f084b0cf8860743f4a39a996c47f
 SHA1 (patch-deps_eleveldb_c__src_eleveldb.cc) = 2e21a560c3f990ff9ac7dd604de00404644e7a5a
-SHA1 (patch-deps_node__package_priv_base_env.sh) = c7a32ac69b916c47706b914c71042ea6fd62a1e2
+SHA1 (patch-deps_node__package_priv_base_env.sh) = ee305e631180a50a1192a10e5dd4bf185c2e96c8
 SHA1 (patch-deps_yokozuna_tools_grab-solr.sh) = d90115d3522238cd6a6774ff221fad009d17ebbb
 SHA1 (patch-rel__vars.config) = 1cde95447a50300bd10994d6eb6628914a8ac97b
