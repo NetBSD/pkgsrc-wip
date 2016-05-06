@@ -42,6 +42,7 @@ share/${PKGNAME}/dat/des/altar/lugonu_bribe.des
 share/${PKGNAME}/dat/des/altar/nemelex_the_gamble.des
 share/${PKGNAME}/dat/des/altar/okawaru_arena.des
 share/${PKGNAME}/dat/des/altar/overflow.des
+share/${PKGNAME}/dat/des/altar/pakellas_experiments.des
 share/${PKGNAME}/dat/des/altar/trog_burn_book.des
 share/${PKGNAME}/dat/des/altar/trog_wizard.des
 share/${PKGNAME}/dat/des/altar/vehumet_trees.des
@@ -168,6 +169,7 @@ share/${PKGNAME}/dat/descript/ability.txt
 share/${PKGNAME}/dat/descript/backgrounds.txt
 share/${PKGNAME}/dat/descript/branches.txt
 share/${PKGNAME}/dat/descript/cards.txt
+share/${PKGNAME}/dat/descript/clouds.txt
 share/${PKGNAME}/dat/descript/commands.txt
 share/${PKGNAME}/dat/descript/cs/ability.txt
 share/${PKGNAME}/dat/descript/cs/branches.txt
@@ -387,6 +389,7 @@ share/${PKGNAME}/dat/descript/ru/unrand.txt
 share/${PKGNAME}/dat/descript/skills.txt
 share/${PKGNAME}/dat/descript/species.txt
 share/${PKGNAME}/dat/descript/spells.txt
+share/${PKGNAME}/dat/descript/status.txt
 share/${PKGNAME}/dat/descript/sv/ability.txt
 share/${PKGNAME}/dat/descript/sv/cards.txt
 share/${PKGNAME}/dat/descript/sv/commands.txt
@@ -505,6 +508,7 @@ share/${PKGNAME}/docs/develop/coding_conventions.txt
 share/${PKGNAME}/docs/develop/ctags.txt
 share/${PKGNAME}/docs/develop/editor_tips.txt
 share/${PKGNAME}/docs/develop/gdb_tips.txt
+share/${PKGNAME}/docs/develop/keys.txt
 share/${PKGNAME}/docs/develop/levels/advanced.txt
 share/${PKGNAME}/docs/develop/levels/introduction.txt
 share/${PKGNAME}/docs/develop/levels/syntax.txt
@@ -535,9 +539,9 @@ share/${PKGNAME}/settings/0.12_monster_glyphs.txt
 share/${PKGNAME}/settings/0.13_monster_glyphs.txt
 share/${PKGNAME}/settings/0.14_monster_glyphs.txt
 share/${PKGNAME}/settings/0.16_monster_glyphs.txt
+share/${PKGNAME}/settings/0.17_monster_glyphs.txt
 share/${PKGNAME}/settings/0.9_monster_glyphs.txt
 share/${PKGNAME}/settings/034_command_keys.txt
-share/${PKGNAME}/settings/034_monster_glyphs.txt
 share/${PKGNAME}/settings/052_monster_glyphs.txt
 share/${PKGNAME}/settings/060_monster_glyphs.txt
 share/${PKGNAME}/settings/071_monster_glyphs.txt
