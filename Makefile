@@ -3012,7 +3012,6 @@ SUBDIR+=	py-helio
 SUBDIR+=	py-hessianfree
 SUBDIR+=	py-hfk
 SUBDIR+=	py-hgapi
-SUBDIR+=	py-hgwatchman
 SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-holoviews
 SUBDIR+=	py-hope
