@@ -1,5 +1,0 @@
-resident and shared memory still broken as in prev versions.
-figure out why, it merely reads /proc/<pid>/statm etc.
-in function LinuxProcessList_readStatmFile in file linux/LinuxProcessList.c
-
-some patches are redundant, most pre-configure stage stuff too

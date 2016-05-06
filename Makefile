@@ -1292,7 +1292,6 @@ SUBDIR+=	hs-yaml
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
-SUBDIR+=	htop
 SUBDIR+=	htslib
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
