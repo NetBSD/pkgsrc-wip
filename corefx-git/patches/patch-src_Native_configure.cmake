@@ -1,18 +1,19 @@
 $NetBSD$
 
---- src/Native/configure.cmake.orig	2016-04-09 19:53:47.000000000 +0000
+--- src/Native/configure.cmake.orig	2016-05-03 12:05:51.000000000 +0000
 +++ src/Native/configure.cmake
-@@ -447,10 +447,13 @@ if (HAVE_GSSFW_HEADERS)
-         "GSS/GSS.h"
-         HAVE_GSS_SPNEGO_MECHANISM)
- else ()
-+    find_path(LIBGSS_INCLUDE_DIR gssapi/gssapi_ext.h)
-+    set(CMAKE_REQUIRED_INCLUDES ${LIBGSS_INCLUDE_DIR})
-     check_symbol_exists(
-         GSS_SPNEGO_MECHANISM
-         "gssapi/gssapi.h"
-         HAVE_GSS_SPNEGO_MECHANISM)
-+    unset(CMAKE_REQUIRED_INCLUDES)
- endif ()
+@@ -437,6 +437,14 @@ check_cxx_source_compiles(
+     "
+     HAVE_CURL_SSLVERSION_TLSv1_012)
  
- set (CMAKE_REQUIRED_LIBRARIES)
++option(HeimdalGssApi "use heimdal implementation of GssApi" OFF)
++
++if (HeimdalGssApi)
++   check_include_files(
++       gssapi/gssapi.h
++       HAVE_HEIMDAL_HEADERS)
++endif()
++
+ check_include_files(
+     GSS/GSS.h
+     HAVE_GSSFW_HEADERS)
