@@ -2434,6 +2434,7 @@ SUBDIR+=	partonevolution
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	paxmirabilis
+SUBDIR+=	paxtest
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pcmanfm
 SUBDIR+=	pcmanfm-qt

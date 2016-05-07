@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (paxtest-0.9.14.tar.gz) = 867873f49e3d2cbb1b8221195876230506a47d73
+RMD160 (paxtest-0.9.14.tar.gz) = 7f7c95f8f8e5c1d408439cb8876bb52a0e778cd7
+SHA512 (paxtest-0.9.14.tar.gz) = 6e2d642e1dfe7e3381ed520956d2f5b19ad8c8e569c4ddcf43a2772a76ed67701bb18fe55d7fe2b82ff50644f92470622243ac974083d87448f560f6d48d8727
+Size (paxtest-0.9.14.tar.gz) = 34286 bytes
+SHA1 (patch-Makefile.OpenBSD) = fc9de99aa12618537bb260c23ecc87c2db89489d
