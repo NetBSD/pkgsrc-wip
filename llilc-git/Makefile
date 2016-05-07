@@ -25,10 +25,12 @@ PYTHON_FOR_BUILD_ONLY=  yes
 
 BUILDLINK_TRANSFORM+=        rm:-Werror
 
-# DOTNET targets only LLVM
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=clang
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=clang++
+
+# DOTNET targets only LLVM
+PKGSRC_COMPILER=	clang
+PKG_CC=			clang
+PKG_CXX=		clang++
 
 CHECK_PORTABILITY_SKIP= utils/buildit/build_llvm
 
