@@ -1,6 +1,5 @@
 $NetBSD$
 SHA1 (patch-src_Native_Common_pal__config.h.in) = 08b4e586eeed9e904547b2c169a0e19db6682a40
-SHA1 (patch-src_Native_System.Native_pal__console.cpp) = 44be298618c7a5510367e8526b8fd56932f6c49e
 SHA1 (patch-src_Native_System.Net.Security.Native_CMakeLists.txt) = 5be5902a707925dfd9d3ff613dbf41512b984dbd
 SHA1 (patch-src_Native_System.Net.Security.Native_pal__gssapi.cpp) = 5919f3284c6e80a0b6e8c807b6c6dfd2de0bd994
 SHA1 (patch-src_Native_System.Net.Security.Native_pal__gssapi.h) = 3ef35fb72afe48e5ce80a9a528965eedd24f8ddd
