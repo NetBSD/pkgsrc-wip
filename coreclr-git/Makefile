@@ -35,11 +35,13 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${CORECLR_PREFIX:Q}/bin
 BUILDLINK_PASSTHRU_DIRS+=	${CORECLR_PREFIX:Q}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${CORECLR_PREFIX:Q}
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
+# DOTNET targets only LLVM
+PKGSRC_COMPILER=	clang
+PKG_CC=			clang
+PKG_CXX=		clang++
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-unused-function -Wno-self-assign
 CWRAPPERS_APPEND.cxx+=	-Wno-unused-function -Wno-self-assign
-.endif
+
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/bin/obj/${OPSYS}.x64.Debug/src/pal/tests/palsuite/exception_handling/pal_sxs/test1
 
