@@ -1,6 +1,2 @@
 $NetBSD$
 
-SHA1 (patch-src_vm_amd64_jithelpers__fast.S) = 8fdb350dc1950c38a166f38a2f859632c35d79f7
-SHA1 (patch-src_vm_amd64_jithelpers__fastwritebarriers.S) = 1d69d2504344742c17f4958c2089d3c3734bbd38
-SHA1 (patch-src_vm_amd64_jithelpers__slow.S) = 74c507a248de6d7f2b075d14be9147095845c00d
-SHA1 (patch-tests_src_Interop_StructMarshalling_PInvoke_MarshalStructAsParamDLL.h) = 21df71b15e3352442eba340cd38ec6a691939229
