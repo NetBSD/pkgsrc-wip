@@ -38,7 +38,6 @@ bin/sancov
 bin/sanstats
 bin/verify-uselistorder
 bin/yaml2obj
-include/CoreDisTools/coredistools.h
 include/GcInfo/GcInfo.h
 include/GcInfo/GcInfoUtil.h
 include/GcInfo/Target.h
@@ -925,8 +924,6 @@ lib/cmake/llvm/LLVMInstallSymlink.cmake
 lib/cmake/llvm/LLVMProcessSources.cmake
 lib/cmake/llvm/TableGen.cmake
 lib/cmake/llvm/VersionFromVCS.cmake
-lib/libGcInfo.a
-lib/libLLILCReader.a
 lib/libLLVMAnalysis.a
 lib/libLLVMAsmParser.a
 lib/libLLVMAsmPrinter.a
@@ -976,4 +973,3 @@ lib/libLLVMX86Info.a
 lib/libLLVMX86Utils.a
 lib/libLLVMipo.a
 lib/libLTO.so
-lib/libllilcjit.so
