@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/05/03 13:32:58 jonthn Exp $
-
-SHA1 (futures-3.0.1.tar.gz) = 09f776f59ee4dc6ba5e4eb4f0d6325b3c210c84e
-RMD160 (futures-3.0.1.tar.gz) = 29c45a1b391e4a0b6a632d744ab9c1a56ff041b6
-Size (futures-3.0.1.tar.gz) = 24890 bytes
