@@ -113,7 +113,6 @@ share/fs-uae/input/atari_controller_usb_1_2_0_0_windows.conf
 share/fs-uae/input/c0110591000000000000504944564944.fs-uae-controller
 share/fs-uae/input/c6241a53000000000000504944564944.fs-uae-controller
 share/fs-uae/input/common/gamepad.ini
-share/fs-uae/input/common/xarcade.ini
 share/fs-uae/input/common/xinput_gamepad.ini
 share/fs-uae/input/controller_gamepad_f310_10_5_1_0_windows.conf
 share/fs-uae/input/controller_pro_ex_mini_for_xbox_10_5_1_0_windows.conf
@@ -124,18 +123,20 @@ share/fs-uae/input/controller_xbox_360_wireless_receiver_for_windows_10_5_1_0_wi
 share/fs-uae/input/controller_xbox_one_for_windows_11_6_1_0_windows.conf
 share/fs-uae/input/custom/custom_x_arcade.ini
 share/fs-uae/input/custom/custom_x_arcade_right.ini
+share/fs-uae/input/default_keyboard.conf
+share/fs-uae/input/default_xarcade.ini
+share/fs-uae/input/default_xarcade_2.ini
 share/fs-uae/input/dual_analog_pad_12_4_1_0_macosx.conf
 share/fs-uae/input/dual_analog_pad_12_4_1_0_windows.conf
 share/fs-uae/input/f02521c1000000000000504944564944.fs-uae-controller
 share/fs-uae/input/f025c383000000000000504944564944.fs-uae-controller
 share/fs-uae/input/gamtec_ltd/smartjoy_plus_adapter.ini
-share/fs-uae/input/generic/keyboard.ini
-share/fs-uae/input/generic/mouse.ini
 share/fs-uae/input/generic_x_box_pad_11_6_1_0_linux.conf
 share/fs-uae/input/gioteck_ps3_wired_controller_13_4_1_0_windows.conf
 share/fs-uae/input/gioteck_vx2_wired_controller_12_4_1_0_windows.conf
 share/fs-uae/input/goodbetterbest_ltd_gioteck_vx2_wired_controller_16_5_1_0_linux.conf
 share/fs-uae/input/jess_tech_dual_analog_pad_12_4_1_0_linux.conf
+share/fs-uae/input/keyboard.conf
 share/fs-uae/input/linux/saitek_dual_analog_pad_12_4_1_0_linux.conf
 share/fs-uae/input/logitech/controller_rumble_gamepad_f510.ini
 share/fs-uae/input/logitech/controller_wireless_gamepad_f710.ini
@@ -175,8 +176,8 @@ share/fs-uae/input/mosic/a_speed_link_competition_pro.ini
 share/fs-uae/input/mosic/speed_link_competition_pro.ini
 share/fs-uae/input/mosic/usb_2a4k_gamepad.ini
 share/fs-uae/input/mosic_speed_link_competition_pro_4_2_0_0_linux.conf
+share/fs-uae/input/mouse.conf
 share/fs-uae/input/other/retro_joystick_interface_v1_2.ini
-share/fs-uae/input/other/usb_2_axis_8_button_gamepad.ini
 share/fs-uae/input/p880_12_4_1_0_macosx.conf
 share/fs-uae/input/p880_12_4_1_0_windows.conf
 share/fs-uae/input/playstation_r_3_controller_19_4_0_0_macosx.conf
@@ -209,8 +210,9 @@ share/fs-uae/input/thrustmaster_2_in_1_dt_12_4_1_0_linux.conf
 share/fs-uae/input/thrustmaster_dual_analog_3_2_12_4_1_0_macosx.conf
 share/fs-uae/input/thrustmaster_dual_analog_3_2_12_4_1_0_windows.conf
 share/fs-uae/input/thrustmaster_thrustmaster_dual_analog_3_2_12_4_1_0_linux.conf
-share/fs-uae/input/universal_gamepad.ini
-share/fs-uae/input/unknown.ini
+share/fs-uae/input/universal_gamepad.conf
+share/fs-uae/input/universal_xarcade.ini
+share/fs-uae/input/unknown.conf
 share/fs-uae/input/usb_2_axis_8_button_gamepad_8_2_0_0_linux.conf
 share/fs-uae/input/usb_2_axis_8_button_gamepad_8_2_0_0_macosx.conf
 share/fs-uae/input/usb_2_axis_8_button_gamepad_8_2_0_0_windows.conf
@@ -226,8 +228,6 @@ share/fs-uae/input/xbox_360_wireless_receiver_15_6_0_0_linux.conf
 share/fs-uae/input/xbox_one_wired_controller_15_6_0_0_macosx.conf
 share/fs-uae/input/xeox_gamepad_sl_6556_bk_12_4_1_0_linux.conf
 share/fs-uae/input/xeox_gamepad_sl_6556_bk_12_4_1_0_windows.conf
-share/fs-uae/input/xgaming/x_arcade.ini
-share/fs-uae/input/xgaming/x_arcade_right.ini
 share/fs-uae/input/xinput_controller_15_6_0_0_windows.conf
 share/fs-uae/input/zeemote/steelseries_free.ini
 share/fs-uae/item_background.png
@@ -304,7 +304,6 @@ share/fs-uae/shaders/test-gamma.shader
 share/fs-uae/shaders/test.shader
 share/fs-uae/shaders/testbloom-2.shader
 share/fs-uae/shaders/testbloom.shader
-share/fs-uae/share-dir
 share/fs-uae/sidebar.png
 share/fs-uae/sidebar_edge.png
 share/fs-uae/stretch.png
@@ -328,7 +327,6 @@ share/icons/hicolor/64x64/apps/fs-uae.png
 share/locale/cs/LC_MESSAGES/fs-uae.mo
 share/locale/da/LC_MESSAGES/fs-uae.mo
 share/locale/de/LC_MESSAGES/fs-uae.mo
-share/locale/el/LC_MESSAGES/fs-uae.mo
 share/locale/es/LC_MESSAGES/fs-uae.mo
 share/locale/fi/LC_MESSAGES/fs-uae.mo
 share/locale/fr/LC_MESSAGES/fs-uae.mo

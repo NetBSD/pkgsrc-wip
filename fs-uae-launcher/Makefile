@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2015/06/22 16:19:36 rhialto Exp $
+# $NetBSD$
 
-VERSION=	2.7.2dev
+VERSION=	2.7.13dev
 DISTNAME=	fs-uae-launcher-${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
@@ -11,7 +11,6 @@ COMMENT=	Graphical launcher for FS-UAE, the Amiga Emulator
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
-PYDISTUTILSPKG=	yes
 
 INSTALL_ENV+=	prefix=${PREFIX}
 INSTALL_ENV+=	DESTDIR=${DESTDIR}
@@ -20,22 +19,21 @@ INSTALL_ENV+=	PYTHONBIN=${PYTHONBIN}
 # Imports urllib.parse which is 3+.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_PYTHON+=fs_uae_launcher/netplay/oyoyo/examplebot.py
 REPLACE_PYTHON+=OpenGL/arrays/_buffers.py
 REPLACE_PYTHON+=OpenGL/arrays/buffers.py
 
-PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}	# 3.4
-PLIST_SUBST+=   PYVERS=${PYPKGPREFIX:S/py//}	# py34 -> 34
+PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}	# 3.5
+PLIST_SUBST+=   PYVERS=${PYPKGPREFIX:S/py//}	# py35 -> 35
 PLIST_SUBST+=   VERSION=${VERSION}
 
 #DEPENDS+=	${PYPKGPREFIX}-qt4>=4.10.2nb1:../../x11/py-qt4
 # when building with qt5 it should co-exist with calibre and qbzr.
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=20:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-lhafile>=0:../../wip/py-lhafile
 
-pre-install:
-	cd ${WRKSRC:Q}; ${PYTHONBIN:Q} setup.py install --prefix=${PREFIX:Q} --root=${DESTDIR:Q} --install-lib=${PREFIX:Q}/share/fs-uae-launcher --install-scripts=${PREFIX:Q}/share/fs-uae-launcher
+# Use the normal "gmake install" to install; not setup.py via "../../lang/python/extension.mk".
 
 post-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
@@ -43,6 +41,5 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
