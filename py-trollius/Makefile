@@ -15,7 +15,7 @@ PLIST_VARS+=	pre33
 .include "../../lang/python/egg.mk"
 
 .if ${_PYTHON_VERSION} < 33
-DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../wip/py-futures
+DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
 PLIST.pre33=	yes
 .endif
 

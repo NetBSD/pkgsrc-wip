@@ -20,7 +20,7 @@ INSTALLATION_DIRS+=		${PKGMANDIR}/man1/
 BUILD_DEPENDS+=			${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 BUILD_DEPENDS+=			${PYPKGPREFIX}-chardet>=2.3.0:../../converters/py-chardet
 BUILD_DEPENDS+=			${PYPKGPREFIX}-test>=2.3.0:../../devel/py-test
-DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../wip/py-future
+DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../devel/py-future
 DEPENDS+=			${PYPKGPREFIX}-binaryornot>=0.2.0:../../wip/py-binaryornot
 DEPENDS+=			${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
 DEPENDS+=			${PYPKGPREFIX}-click>=6.3:../../devel/py-click

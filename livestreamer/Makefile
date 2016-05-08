@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 .if ${_PYTHON_VERSION} < 30
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../wip/py-futures
+DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
 .endif
 .if ${_PYTHON_VERSION} <= 33
 DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch

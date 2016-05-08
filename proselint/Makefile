@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-future>=0:../../wip/py-future
+DEPENDS+=	${PYPKGPREFIX}-future>=0:../../devel/py-future
 
 USE_LANGUAGES=	# none
 

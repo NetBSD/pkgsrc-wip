@@ -11,7 +11,7 @@ COMMENT=	Package for finite-size scaling analysis at phase transitions
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-future>=0.15.2:../../wip/py-future
+DEPENDS+=	${PYPKGPREFIX}-future>=0.15.2:../../devel/py-future
 
 WRKSRC=		${WRKDIR}/fssa-0.7.4
 
