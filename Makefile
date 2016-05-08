@@ -2196,7 +2196,6 @@ SUBDIR+=	overgod
 SUBDIR+=	owamp
 SUBDIR+=	owl
 SUBDIR+=	oww-nox11
-SUBDIR+=	oxygen-fonts
 SUBDIR+=	oysttyer
 SUBDIR+=	ozymandns
 SUBDIR+=	p11-kit
