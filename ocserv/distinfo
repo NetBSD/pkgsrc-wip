@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (ocserv-0.11.2.tar.xz) = 70083c7f8684a9ffb9300f38524dcbf874732965
+RMD160 (ocserv-0.11.2.tar.xz) = df8a97dd1bfa8596c3a6a3843c40bf2b170fa16f
+SHA512 (ocserv-0.11.2.tar.xz) = 029c5a3fe2fa278cd6b7ec3f7d22146a577bca85ea754cbad9c36a9d42b07ffdc37902794080bfa7e5b5b4242454134afbb216d29fae921380a894dcc21a0782
+Size (ocserv-0.11.2.tar.xz) = 747240 bytes
+SHA1 (patch-src_ccan_list_list.h) = 7daa342f9c14ce8ad7ae07295061b4fb9c2d2fb5
+SHA1 (patch-src_main.c) = 9bbc05fe72c73ce191f8fa57e779525930a2d400
+SHA1 (patch-src_tun.c) = 0381c8be926b70b7ae7ac77b5d089d0d70e40b30
+SHA1 (patch-src_worker-vpn.c) = 66f86330be15b8d1b92c0a7eee54e9784f6892c3

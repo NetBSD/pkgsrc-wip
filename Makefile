@@ -2134,6 +2134,7 @@ SUBDIR+=	ocaml-yojson
 SUBDIR+=	ocaml-zed
 SUBDIR+=	ocamlweb
 SUBDIR+=	oce
+SUBDIR+=	ocserv
 SUBDIR+=	octave
 SUBDIR+=	ode
 SUBDIR+=	ogmrip
