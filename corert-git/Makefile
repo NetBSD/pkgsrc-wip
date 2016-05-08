@@ -18,6 +18,11 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash
 REPLACE_BASH+=	build.sh
 
+# DOTNET targets only LLVM
+PKGSRC_COMPILER=	clang
+PKG_CC=			clang
+PKG_CXX=		clang++
+
 do-build:
 		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
 
