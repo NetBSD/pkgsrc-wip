@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 .include "../../wip/kf5/Makefile.common"
 
 DEPENDS+=	noto-ttf-[0-9]*:../../fonts/noto-ttf
-DEPENDS+=	oxygen-fonts-[0-9]*:../../wip/oxygen-fonts
+DEPENDS+=	oxygen-fonts-[0-9]*:../../fonts/oxygen-fonts
 
 USE_TOOLS+=	msgmerge pkg-config
 
