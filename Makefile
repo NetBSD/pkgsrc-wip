@@ -4252,6 +4252,7 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbmc
 SUBDIR+=	xbnbt
 SUBDIR+=	xbsql
+SUBDIR+=	xcb-util-xrm
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdebug
