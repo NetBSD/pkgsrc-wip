@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (polkit-kde-agent-1-5.6.3.tar.xz) = 09839526d03a56e5e937d4ebd41925a15d3ab213
+RMD160 (polkit-kde-agent-1-5.6.3.tar.xz) = bedd1a0c9c5063f86c1150c07ce5e62f69cf5569
+SHA512 (polkit-kde-agent-1-5.6.3.tar.xz) = ba24eb5dd4ed57004672a92ce8bff0d8f2ebdeaa855654c86ce1411d4724d28389dd034f5fcc4df86cdeb8e5fbdbc3bdc4328af5c10df8779cf99d57f304e030
+Size (polkit-kde-agent-1-5.6.3.tar.xz) = 50460 bytes
+SHA1 (patch-CMakeLists.txt) = c886c3126030d201cb9bdd5ab19c6c2b31f8da8f
