@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- kcmkwin/kwinscreenedges/CMakeLists.txt.orig	2016-04-19 11:12:37.000000000 +0000
++++ kcmkwin/kwinscreenedges/CMakeLists.txt
+@@ -20,6 +20,7 @@ target_link_libraries( kcm_kwinscreenedg
+     KF5::I18n
+     KF5::Service
+     KF5::Plasma
++    kwineffects
+     kwin4_effect_builtins
+     )
+ install( TARGETS kcm_kwinscreenedges  DESTINATION ${PLUGIN_INSTALL_DIR} )

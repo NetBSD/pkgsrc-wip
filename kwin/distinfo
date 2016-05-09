@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (kwin-5.6.3.tar.xz) = 442cc54d4124e8b93286d64477e19236aac7d8bc
+RMD160 (kwin-5.6.3.tar.xz) = 1cc0c56790c3309f6b1901bba90f29b94c5cc375
+SHA512 (kwin-5.6.3.tar.xz) = 392e46e9f6f091d0df8b7921fc3feed10eb987b392f74e1395b828d430e491768fe30a1c8d9828aba3be1baa05efcbfb2fd871aa2f9a47907952e96b8c0e5fa7
+Size (kwin-5.6.3.tar.xz) = 3914404 bytes
+SHA1 (patch-clients_aurorae_src_CMakeLists.txt) = 807abb12c4324255cb9db5284623726e59a7e696
+SHA1 (patch-data_CMakeLists.txt) = 5c6d97eafeb5ca02868c106605bd5625bbec4b30
+SHA1 (patch-kcmkwin_kwincompositing_CMakeLists.txt) = 2c55a2e2738047e0a478753b80426408e271f684
+SHA1 (patch-kcmkwin_kwindesktop_CMakeLists.txt) = ac855325440b14ea079a87b2ca1d79f69a7602d6
+SHA1 (patch-kcmkwin_kwinscreenedges_CMakeLists.txt) = b4f16df0e020be6c160301c2e74d3fe4e796b5f9
+SHA1 (patch-kcmkwin_kwinscripts_CMakeLists.txt) = c876840f3839e2565f975c740d23a23d2b872c7f
+SHA1 (patch-kcmkwin_kwintabbox_CMakeLists.txt) = 92c52c12eba3bab5990229794b64c9a229c891cd
