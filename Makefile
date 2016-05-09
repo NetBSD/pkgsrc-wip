@@ -1306,6 +1306,7 @@ SUBDIR+=	i3lock
 SUBDIR+=	i3status
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
+SUBDIR+=	ical2pcal
 SUBDIR+=	icecat
 SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
