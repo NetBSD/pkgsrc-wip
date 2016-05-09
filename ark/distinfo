@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ark-16.04.0.tar.xz) = 09a647fe1aa935f3084d8985a99b10e4a95197e2
+RMD160 (ark-16.04.0.tar.xz) = 2f5a15a1957c8d8700497d4351e0cf8f082ba40d
+SHA512 (ark-16.04.0.tar.xz) = 0b9210617db4912517fc6ee17baf46fc86235146e568a7143b6592e7b12fdadacbd8d7dcb08f1e4f305dc7e14f0ca9ffabccea0118393b3a69951d9dca1f1814
+Size (ark-16.04.0.tar.xz) = 908592 bytes
+SHA1 (patch-CMakeLists.txt) = bdab14a4596bc2b29ac4c00659c663fc82d69843

@@ -1,0 +1,14 @@
+$NetBSD$
+
+Install via examples dir
+
+--- CMakeLists.txt.orig	2016-05-04 09:16:24.000000000 +0000
++++ CMakeLists.txt
+@@ -94,6 +94,6 @@ endif()
+ 
+ ki18n_install(po)
+ 
+-install( FILES ark.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
++install( FILES ark.categories DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg )
+ 
+ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
