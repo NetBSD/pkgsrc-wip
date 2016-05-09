@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.12 2016/01/11 01:30:34 markd Exp $
+
+SHA1 (kde-baseapps-16.04.0.tar.xz) = ea32fba276acb4dd35f20fcef8da62e6944ee968
+RMD160 (kde-baseapps-16.04.0.tar.xz) = 21d83e6237693e363d437bbd79bb8d4e06051670
+SHA512 (kde-baseapps-16.04.0.tar.xz) = d8da8e76b6cbbf418af3f865d414f124423c573fa21751ddbb09cb2fa53792ad3e652455b215d9ae255b8dbfcf9731884384dce8e75168919b33cadcf3f8f6f8
+Size (kde-baseapps-16.04.0.tar.xz) = 2051040 bytes
+SHA1 (patch-dolphin_src_kitemviews_private_kdirectorycontentscounterworker.cpp) = db1d193f2413ae1aa53dbc979076ba76d485883f
