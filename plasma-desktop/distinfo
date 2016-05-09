@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (plasma-desktop-5.6.3.tar.xz) = c085748413923511de0193071fb11251c983191c
+RMD160 (plasma-desktop-5.6.3.tar.xz) = b0dc3d988567452ad2df736910c933c4668345c2
+SHA512 (plasma-desktop-5.6.3.tar.xz) = 9cd5731b17897e05d05f928e09e214ffb21649a226b922b821666c06b705d67eed7747b82f469bbc7ec3d1bb6b5538256a126e81517f0d13b4baa17253102379
+Size (plasma-desktop-5.6.3.tar.xz) = 6392724 bytes
+SHA1 (patch-kcms_colors_CMakeLists.txt) = 6bb4ac9cd63ed4b411d5eb5cd6f919330fe1e3fb
+SHA1 (patch-kcms_cursortheme_CMakeLists.txt) = 870898ecfab73acf05935958ddf31f24c1631381
+SHA1 (patch-kcms_desktoptheme_CMakeLists.txt) = 0b2a0b2088e01dea46b28de243eab851a6c0ae94
+SHA1 (patch-kcms_emoticons_CMakeLists.txt) = d2edd60b36e27102efdb0d78986483c4c782633c
+SHA1 (patch-kcms_icons_CMakeLists.txt) = 75b5f4767fc9b46893c9c67a309e19118195d86a
+SHA1 (patch-kcms_kfontinst_kcmfontinst_CMakeLists.txt) = a54f4f140227e15134d5b3d231c1f35652921df4
