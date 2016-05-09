@@ -1,0 +1,17 @@
+$NetBSD$
+
+SHA1 (ksysguard-5.6.3.tar.xz) = a31d2b09bc4187860457140132ac84b735ede5f6
+RMD160 (ksysguard-5.6.3.tar.xz) = c9226aa4585f504ce33c002f4d0ccf333f9002bc
+SHA512 (ksysguard-5.6.3.tar.xz) = 5f47004b2f5e28b1c99cbf7196765d227e40d59706db972b77e14a6c240e4958d6bd6b9d3097864704bc61639001cfdc16bdc33024d007a95035b542244cf83d
+Size (ksysguard-5.6.3.tar.xz) = 615740 bytes
+SHA1 (patch-example_CMakeLists.txt) = 1f208084ee87001b9c0f620bf2dffb8be5155869
+SHA1 (patch-gui_CMakeLists.txt) = 60e5609cff7d5b38fc4bf878104f8ed65ab53ecd
+SHA1 (patch-ksysguardd_FreeBSD_ProcessList.c) = 8ce52ef671aff102e9db0d6d4be2dae0da8ef989
+SHA1 (patch-ksysguardd_FreeBSD_cpuinfo.c) = bf646d263846faaf42ba80c0c85c3b607747f80d
+SHA1 (patch-ksysguardd_FreeBSD_uptime.c) = 8ea36c213e590f2c91c0723d03ddcf97d4f084ca
+SHA1 (patch-ksysguardd_NetBSD_CPU.c) = e1b44fffa0cc1109eb2999c4880f4240643a3829
+SHA1 (patch-ksysguardd_NetBSD_CPU.h) = dd1e701b60de2a3ddca37585b37d5540a3891afe
+SHA1 (patch-ksysguardd_NetBSD_Memory.c) = 0752eca6966424e5b7e56cef96d6868268ba6df9
+SHA1 (patch-ksysguardd_NetBSD_Memory.h) = 7fe2f05789d6166a982785ae155e36d7ed1cdcd1
+SHA1 (patch-ksysguardd_NetBSD_ProcessList.c) = 8a01eaf184ae989081c7f3e3c71ede93c2bbeb3b
+SHA1 (patch-ksysguardd_Solaris_LoadAvg.c) = 4d21e99fd3e183cc20560ccdb08451c858536ec9
