@@ -28,6 +28,11 @@ SUBST_FILES.fix-moc+=	_KDE_build/runners/windows/CMakeFiles/krunner_windows_auto
 SUBST_FILES.fix-moc+=	_KDE_build/applets/notifications/lib/CMakeFiles/plasma_applet_notifications_automoc.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
+SUBST_CLASSES+=		qtpath
+SUBST_FILES.qtpath=	startkde/startkde.cmake
+SUBST_VARS.qtpath=	QTDIR
+SUBST_STAGE.qtpath=	post-patch
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/krunner.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/krunner.desktop

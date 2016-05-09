@@ -9,5 +9,6 @@ SHA1 (patch-klipper_CMakeLists.txt) = 2f5f755a8056da155137da9dee6a9ffe531e2d79
 SHA1 (patch-krunner_CMakeLists.txt) = eb11603f00eefda5a67c8bcce85726099216f270
 SHA1 (patch-libtaskmanager_CMakeLists.txt) = f45c7eeb97b8950d2588099156a45590133387f4
 SHA1 (patch-shell_CMakeLists.txt) = 3054075aa6661716fff22bf80e0db05bfb425aa1
+SHA1 (patch-startkde_startkde.cmake) = 684129b87d920fd513c62c45527eb9dd1774c95b
 SHA1 (patch-wallpapers_image_CMakeLists.txt) = a62a155eed7cf69cada8d1e697a29b14e54ca683
 SHA1 (patch-xembed-sni-proxy_CMakeLists.txt) = 8158c958866ccd90858e76d40333e8719dda81a0
