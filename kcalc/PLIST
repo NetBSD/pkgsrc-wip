@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/kcalc
+lib/libkdeinit5_kcalc.so
+share/applications/org.kde.kcalc.desktop
+share/config.kcfg/kcalc.kcfg
+share/doc/HTML/en/kcalc/commands.docbook
+share/doc/HTML/en/kcalc/index.cache.bz2
+share/doc/HTML/en/kcalc/index.docbook
+share/kcalc/scienceconstants.xml
+share/kconf_update/kcalcrc.upd
+share/kxmlgui5/kcalc/kcalcui.rc
