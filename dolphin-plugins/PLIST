@@ -1,0 +1,14 @@
+@comment $NetBSD$
+qt5/plugins/fileviewbazaarplugin.so
+qt5/plugins/fileviewdropboxplugin.so
+qt5/plugins/fileviewgitplugin.so
+qt5/plugins/fileviewhgplugin.so
+qt5/plugins/fileviewsvnplugin.so
+share/config.kcfg/fileviewgitpluginsettings.kcfg
+share/config.kcfg/fileviewhgpluginsettings.kcfg
+share/config.kcfg/fileviewsvnpluginsettings.kcfg
+share/kservices5/fileviewbazaarplugin.desktop
+share/kservices5/fileviewdropboxplugin.desktop
+share/kservices5/fileviewgitplugin.desktop
+share/kservices5/fileviewhgplugin.desktop
+share/kservices5/fileviewsvnplugin.desktop
