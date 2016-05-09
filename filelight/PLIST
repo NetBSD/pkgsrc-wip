@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/filelight
+qt5/plugins/filelightpart.so
+share/applications/org.kde.filelight.desktop
+share/doc/HTML/en/filelight/config_appear.png
+share/doc/HTML/en/filelight/config_scan.png
+share/doc/HTML/en/filelight/index.cache.bz2
+share/doc/HTML/en/filelight/index.docbook
+share/doc/HTML/en/filelight/radial_map.png
+share/doc/HTML/en/filelight/radial_map_context_menu.png
+share/examples/kde-xdg/filelightrc
+share/icons/hicolor/16x16/apps/filelight.png
+share/icons/hicolor/22x22/apps/filelight.png
+share/icons/hicolor/32x32/actions/views_filelight.png
+share/icons/hicolor/32x32/apps/filelight.png
+share/icons/hicolor/48x48/apps/filelight.png
+share/icons/hicolor/64x64/apps/filelight.png
+share/kservices5/filelightpart.desktop
+share/kxmlgui5/filelight/filelightui.rc
+share/kxmlgui5/filelightpart/filelightpartui.rc
