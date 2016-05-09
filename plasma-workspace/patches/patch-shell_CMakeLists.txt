@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install via examples dir
+
+--- shell/CMakeLists.txt.orig	2016-04-19 11:20:13.000000000 +0000
++++ shell/CMakeLists.txt
+@@ -96,7 +96,7 @@ if(HAVE_X11)
+ endif()
+ 
+ install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+-install(FILES plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
++install(FILES plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTEXDIR})
+ install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
+ 
+ install(FILES

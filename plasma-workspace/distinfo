@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (plasma-workspace-5.6.3.tar.xz) = 8ff9e86763da375efea274be347118a61a96346b
+RMD160 (plasma-workspace-5.6.3.tar.xz) = a4c7dea5c0d4a6d17f67418932ad14f0e6456f04
+SHA512 (plasma-workspace-5.6.3.tar.xz) = 745a19f449fff6a83f6e5ca3c923f38fccc6374a31b983e47b6774808e674b12ea2c4ac18730f989a07f953a5819791d8df1a66550685ee7654e975fc1724a5f
+Size (plasma-workspace-5.6.3.tar.xz) = 7030108 bytes
+SHA1 (patch-components_shellprivate_CMakeLists.txt) = b8672d3415e8054087c77e3262bde46e41c88be2
+SHA1 (patch-klipper_CMakeLists.txt) = 2f5f755a8056da155137da9dee6a9ffe531e2d79
+SHA1 (patch-krunner_CMakeLists.txt) = eb11603f00eefda5a67c8bcce85726099216f270
+SHA1 (patch-libtaskmanager_CMakeLists.txt) = f45c7eeb97b8950d2588099156a45590133387f4
+SHA1 (patch-shell_CMakeLists.txt) = 3054075aa6661716fff22bf80e0db05bfb425aa1
+SHA1 (patch-wallpapers_image_CMakeLists.txt) = a62a155eed7cf69cada8d1e697a29b14e54ca683
+SHA1 (patch-xembed-sni-proxy_CMakeLists.txt) = 8158c958866ccd90858e76d40333e8719dda81a0

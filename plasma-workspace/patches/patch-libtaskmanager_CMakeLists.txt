@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install via examples dir
+
+--- libtaskmanager/CMakeLists.txt.orig	2016-04-19 11:20:13.000000000 +0000
++++ libtaskmanager/CMakeLists.txt
+@@ -110,7 +110,7 @@ install(EXPORT libtaskmanagerLibraryTarg
+         FILE LibTaskManagerLibraryTargets.cmake )
+ 
+ install(FILES taskmanagerrulesrc
+-        DESTINATION ${KDE_INSTALL_CONFDIR})
++        DESTINATION ${KDE_INSTALL_XDG_EX_DIR})
+ 
+ #set(tasksmodel_SRCS 
+ #   modeltest/dynamictreemodel.cpp
