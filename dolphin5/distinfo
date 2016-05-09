@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (dolphin-16.04.0.tar.xz) = dad368880545956c6483c651be2b08e8aa5bd56e
+RMD160 (dolphin-16.04.0.tar.xz) = a395cd914890ac9a260b40b8bbd43e6014898fbf
+SHA512 (dolphin-16.04.0.tar.xz) = 4fce5f109316d1986e4ab875ffedc3d117875f0d6bf4d7101a7a73e200d058f8c3249a5de9d78667cd1de8dd7b8e3b8509afd8ff005f739b2486804aaf3601da
+Size (dolphin-16.04.0.tar.xz) = 659996 bytes
+SHA1 (patch-src_CMakeLists.txt) = 981b8cac13f673ca0a482c59fd431eb228afea75
