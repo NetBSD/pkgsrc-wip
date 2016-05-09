@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.5 2016/01/10 19:20:48 markd Exp $
+
+SHA1 (kget-16.04.0.tar.xz) = 52a0c3d04159196cb9189f7faacb33ed979b857c
+RMD160 (kget-16.04.0.tar.xz) = ae20aa31b2a49bcd6668095d8ccd31a7cf610680
+SHA512 (kget-16.04.0.tar.xz) = 40c073ebe7e98e5a0625e559e9cf1ac178a36b04a9635fd02c23b1aaaf0491d23c5ece0bf47a9f6b3c8dcfe7453e7a9fb2beaeccea9538b2ea70806633b05aef
+Size (kget-16.04.0.tar.xz) = 1081892 bytes
+SHA1 (patch-CMakeLists.txt) = 73333adb9bb17ae97c3431f237e1b6807c61985f

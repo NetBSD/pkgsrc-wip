@@ -1,0 +1,31 @@
+# $NetBSD: Makefile,v 1.22 2016/04/11 19:02:00 ryoon Exp $
+
+DISTNAME=	kget-16.04.0
+CATEGORIES=	net
+COMMENT=	download manager for KDE
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.04.0/src/}
+
+.include "../../meta-pkgs/kde4/Makefile.kde4"
+
+CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_NepomukWidgets:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_KTorrent:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_KDE4Workspace:BOOL=OFF
+
+REPLACE_PERL+= \
+	conf/kget_limitdownloads.pl \
+	conf/kget_sensitive.pl
+
+.include "../../meta-pkgs/kde4/kde4.mk"
+
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../misc/kdepimlibs4/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libmms+=  libmms>=0.6.2
+.include "../../net/libmms/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../x11/kde-runtime4/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"
