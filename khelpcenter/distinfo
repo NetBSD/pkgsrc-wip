@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (khelpcenter-16.04.0.tar.xz) = 0583c775297238c428e88a9b87a049286b73dfa3
+RMD160 (khelpcenter-16.04.0.tar.xz) = 88bed4b6e07700100fa361401ac4f0d872aff11d
+SHA512 (khelpcenter-16.04.0.tar.xz) = 8f927f06e5576465fabd54d187f216ab0e93c4af0b587f74de077ee0e761df2012e65546d9c4947e0cc210d47de89487e271933fb435154f15b171b6c3278414
+Size (khelpcenter-16.04.0.tar.xz) = 1474884 bytes
+SHA1 (patch-CMakeLists.txt) = 18aaf4ce9e666b73d89a8e78ca8b2fb97f2930c6

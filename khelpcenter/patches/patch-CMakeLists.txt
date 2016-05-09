@@ -1,0 +1,14 @@
+$NetBSD$
+
+Install via examples dir
+
+--- CMakeLists.txt.orig	2016-05-04 22:05:24.000000000 +0000
++++ CMakeLists.txt
+@@ -106,6 +106,6 @@ install( FILES khelpcenter.desktop  DEST
+ install( FILES khelpcenter.desktop  DESTINATION  ${SHARE_INSTALL_PREFIX}/kde4/services )
+ install( FILES table-of-contents.xslt glossary.xslt DESTINATION ${DATA_INSTALL_DIR}/khelpcenter )
+ install( FILES khelpcenterui.rc DESTINATION ${KXMLGUI_INSTALL_DIR}/khelpcenter )
+-install( FILES khelpcenter.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
++install( FILES khelpcenter.categories DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kde-xdg )
+ 
+ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
