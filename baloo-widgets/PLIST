@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/baloo_filemetadata_temp_extractor
+include/KF5/BalooWidgets/Baloo/FileMetaDataConfigWidget
+include/KF5/BalooWidgets/Baloo/FileMetaDataWidget
+include/KF5/BalooWidgets/Baloo/TagWidget
+include/KF5/BalooWidgets/baloo/filemetadataconfigwidget.h
+include/KF5/BalooWidgets/baloo/filemetadatawidget.h
+include/KF5/BalooWidgets/baloo/tagwidget.h
+include/KF5/BalooWidgets/baloo/widgets_export.h
+lib/cmake/KF5BalooWidgets/KF5BalooWidgetsConfig.cmake
+lib/cmake/KF5BalooWidgets/KF5BalooWidgetsConfigVersion.cmake
+lib/cmake/KF5BalooWidgets/KF5BalooWidgetsTargets-noconfig.cmake
+lib/cmake/KF5BalooWidgets/KF5BalooWidgetsTargets.cmake
+lib/libKF5BalooWidgets.so
+lib/libKF5BalooWidgets.so.5
+lib/libKF5BalooWidgets.so.5.0.0
