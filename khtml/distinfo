@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (khtml-5.21.0.tar.xz) = e362accca6bbc2bd0e0b03e464c4e6d5039b7f5c
+RMD160 (khtml-5.21.0.tar.xz) = d0595c474008eff868f2694d2b4754509940d05d
+SHA512 (khtml-5.21.0.tar.xz) = 0ce7b6fd899d68ec5e471ff545da6d682949988db9b2630955fe88c80d4324fc7c98eb6e498c3932b4db947adc490b963797ea71e3f771bb0e02284e7ee2d6bb
+Size (khtml-5.21.0.tar.xz) = 2076456 bytes
+SHA1 (patch-src_CMakeLists.txt) = 8579c2c7d3f22d4df8e38db48e4e379eba370a0d
