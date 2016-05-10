@@ -1,6 +1,7 @@
 $NetBSD$
 
 NetBSD provides a timespecadd macro in sys/time.h, which conflicts with this one.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1271590
 
 --- js/src/threading/posix/ConditionVariable.cpp.orig	2016-05-10 09:55:11.875611541 +0000
 +++ js/src/threading/posix/ConditionVariable.cpp
