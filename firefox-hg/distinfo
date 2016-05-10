@@ -8,7 +8,6 @@ SHA1 (patch-ao) = fd708563f119823f5634ecd57e5a2089682040e0
 SHA1 (patch-browser_extensions_loop_run-all-loop-tests.sh) = 9f4bc8548485912f0b076ad63e4a64473da2e64d
 SHA1 (patch-build_autoconf_nss.m4) = 4241f056d0a046e3d028d823aa5ac54ada0a742b
 SHA1 (patch-build_gyp.mozbuild) = 084e8730d93b2d09901cf85876a39198605ee2a1
-SHA1 (patch-config_system-headers) = 24d880987c3e396a044b013b9bc541798e473648
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = e104bea7922dac0ce441bca4ba7a6f9b2379d17a
 SHA1 (patch-js_src_jit_AtomicOperations.h) = 6baf712644b290173b874910246eab6da438b7de
 SHA1 (patch-js_src_jit_none_AtomicOperations-sparc.h) = c2b7bc27a7e54476b00e142e79b456cbbe9d5d8c
