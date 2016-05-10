@@ -4463,6 +4463,3 @@ ${.CURDIR}/INDEX: ${.CURDIR}/PKGDB
 
 
 .include "../mk/misc/category.mk"
-.if make(limited_list)
-.include "../wip/mk/pbulk.mk"
-.endif
