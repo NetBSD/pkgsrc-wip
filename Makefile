@@ -1020,6 +1020,7 @@ SUBDIR+=	gst-plugins1-ximagesrc
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
 SUBDIR+=	gsview
+SUBDIR+=	gtextutils
 SUBDIR+=	gtg
 SUBDIR+=	gtimelog
 SUBDIR+=	gtk-gnutella-current
