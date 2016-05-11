@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2013/12/11 19:13:31 outpaddling Exp $
 
 DISTNAME=	Lmod-5.2
-CATEGORIES=	jb-wip
+CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.sourceforge.net/project/lmod/
 EXTRACT_SUFX=	.tar.bz2
 
