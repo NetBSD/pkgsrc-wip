@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/04 21:51:02 outpaddling Exp $
+@comment $NetBSD$
 bin/compress_gtf
 bin/cuffcompare
 bin/cuffdiff
 bin/cufflinks
 bin/cuffmerge
-bin/cuffnorm
-bin/cuffquant
 bin/gffread
 bin/gtf_to_sam

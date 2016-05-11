@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/09/04 21:51:02 outpaddling Exp $
+$NetBSD$
 
-SHA1 (cufflinks-2.2.1.tar.gz) = 2b1b3a8f12cd2821ffc74ffbdd55cb329f37cbbb
-RMD160 (cufflinks-2.2.1.tar.gz) = 6378571ecb06971d1dff5b6ef81a55b36a8be498
-Size (cufflinks-2.2.1.tar.gz) = 766280 bytes
-SHA1 (patch-configure) = 24e592c47e814f5c355a2351752473507ed9fca5
-SHA1 (patch-src_bundles.cpp) = 4240e40a3f16223e868a421248972f057b3a74f4
+SHA1 (cufflinks-2.1.1.tar.gz) = 9c5bf3d3872e8dd358ba7d7407644ab2cbbfdcb6
+RMD160 (cufflinks-2.1.1.tar.gz) = 4a612f98be24d7d31520be0501f1f4bcd3e76e0f
+SHA512 (cufflinks-2.1.1.tar.gz) = 3a52852d356240eeb24bfc10e449524499f03e8b908133f35e7fcb6ccb5d3566bacd99aa752082081b601fcd2872f5335473ccecb2cd1cb9a9224af41b224c29
+Size (cufflinks-2.1.1.tar.gz) = 705930 bytes
+SHA1 (patch-configure) = fa6121ad0abad7bfcc9cfc585b395999b107277c
+SHA1 (patch-src_bundles.cpp) = d90c68a2613c42b182e5dc4250f0609e55789c5b

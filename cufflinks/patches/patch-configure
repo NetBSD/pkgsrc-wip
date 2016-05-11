@@ -1,8 +1,8 @@
 $NetBSD$
 
---- configure.orig	2015-09-30 01:19:17.827123473 +0000
+--- configure.orig	2013-04-11 13:09:12.000000000 +0000
 +++ configure
-@@ -7592,7 +7592,7 @@ LDFLAGS="$LDFLAGS $EIGEN_LDFLAGS"
+@@ -6339,7 +6339,7 @@ LDFLAGS="$LDFLAGS $EIGEN_LDFLAGS"
  export LDFLAGS
  export EIGEN_CPPFLAGS
  
@@ -11,3 +11,31 @@ $NetBSD$
  
  
  cat >>confdefs.h <<\_ACEOF
+@@ -6974,7 +6974,7 @@ case "${host_cpu}-${host_os}" in
+   i*86-*linux*)
+ 	    ext_CFLAGS="-march=i686";;
+   i*86-darwin*)
+-	CFLAGS="-m64"
++	# CFLAGS="-m64"
+ 	cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -7022,7 +7022,7 @@ rm -f conftest.err conftest.$ac_objext c
+   *)
+     echo "$as_me:$LINENO: checking if gcc accepts -m64" >&5
+ echo $ECHO_N "checking if gcc accepts -m64... $ECHO_C" >&6
+-    CFLAGS="-m64"
++    # CFLAGS="-m64"
+     cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -7060,7 +7060,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ext_CFLAGS="-m64"; echo "$as_me:$LINENO: result: yes" >&5
++  # ext_CFLAGS="-m64";
++echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+ else
+   echo "$as_me: failed program was:" >&5
