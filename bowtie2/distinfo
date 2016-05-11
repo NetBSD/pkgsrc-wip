@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (bowtie2-2.2.7.tar.gz) = 001784d8a9e9fa06d705b2171af1309c30cf13e9
+RMD160 (bowtie2-2.2.7.tar.gz) = bf7af50df878a98ea84df70f3b1196d9b7ed5948
+Size (bowtie2-2.2.7.tar.gz) = 5813850 bytes
+SHA1 (patch-Makefile) = de7328796af0997784e6ba37d3770aa57a149076
