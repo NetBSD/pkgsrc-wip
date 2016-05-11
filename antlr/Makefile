@@ -43,6 +43,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.antlr2.org/download/
 
 MAINTAINER=	bacon4000@gmail.com
+HOMEPAGE=	http://www.antlr2.org
 
 COMMENT=	ANother Tool for Language Recognition
 #LICENSE=	

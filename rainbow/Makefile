@@ -15,9 +15,6 @@ HOMEPAGE=	http://sourceforge.net/projects/bio-rainbow/
 COMMENT=	Short reads clustering and local assembly
 # LICENSE=	unspecified
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
-
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -35,6 +32,4 @@ do-install:
 		${WRKSRC}/rbasm \
 		${DESTDIR}${PREFIX}/bin
 
-# Linux doesn't have zlib in the base, so just in case...
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
