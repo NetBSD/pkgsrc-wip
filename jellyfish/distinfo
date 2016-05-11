@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/01/28 16:36:28 outpaddling Exp $
+$NetBSD$
 
 SHA1 (jellyfish-1.1.11.tar.gz) = 8bd6a7b382e94d37adfddd916dec2b0e36f840fd
 RMD160 (jellyfish-1.1.11.tar.gz) = 30c4ed6d264cbe736ab9da977074f743998fb1d2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/28 16:36:28 outpaddling Exp $
+@comment $NetBSD$
 bin/jellyfish
 include/${PKGNAME}/jellyfish/aligned_values_array.hpp
 include/${PKGNAME}/jellyfish/allocators_malloc.hpp
