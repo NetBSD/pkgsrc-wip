@@ -252,6 +252,7 @@ SUBDIR+=	boo
 SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
 SUBDIR+=	bowtie
+SUBDIR+=	bowtie2
 SUBDIR+=	bpmcounter
 SUBDIR+=	breeze
 SUBDIR+=	breeze-icons
