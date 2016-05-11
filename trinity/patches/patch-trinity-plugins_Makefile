@@ -1,0 +1,42 @@
+$NetBSD$
+
+# Split plugins patch
+--- trinity-plugins/Makefile.orig	2015-10-15 12:07:11.000000000 +0000
++++ trinity-plugins/Makefile
+@@ -10,7 +10,8 @@ FASTOOL_CODE=fstrozzi-Fastool-7c3e034f05
+ PARAFLY_CODE=parafly-code
+ TRIMMOMATIC_CODE=Trimmomatic-0.32
+ 
+-trinity_essentials: jellyfish scaffold_iworm_contigs_target fastool_target parafly_target trimmomatic_target samtools
++# trinity_essentials: jellyfish scaffold_iworm_contigs_target fastool_target parafly_target trimmomatic_target samtools
++trinity_essentials: scaffold_iworm_contigs_target fastool_target
+ 
+ trimmomatic_target:
+ 	ln -sf ${TRIMMOMATIC_CODE} Trimmomatic
+@@ -27,11 +28,12 @@ jellyfish:
+ 	mv tmp.jellyfish jellyfish
+ 
+ htslib_target:
+-#	tar xjvf htslib-1.2.1.tar.bz2
+-#	cd htslib-1.2.1 && ./configure && $(MAKE)
++	tar xjvf htslib-1.2.1.tar.bz2
++	cd htslib-1.2.1 && ./configure && $(MAKE)
+ 	tar xvf ${HTSLIB_CODE} && cd htslib && $(MAKE)
+ 
+-scaffold_iworm_contigs_target: htslib_target
++# scaffold_iworm_contigs_target: htslib_target
++scaffold_iworm_contigs_target:
+ 	cd scaffold_iworm_contigs && $(MAKE)
+ 
+ fastool_target:
+@@ -48,7 +50,9 @@ parafly_target:
+ ### Needed for downstream analyses
+ ##################################
+ 
+-plugins: slclust_target collectl_target
++# All plugins except collectl are installed as dependency ports
++# plugins: slclust_target collectl_target
++plugins: collectl_target
+ 	@echo "\n\n** Done building plugins **\n\n"
+ 
+ 

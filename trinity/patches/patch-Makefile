@@ -1,0 +1,14 @@
+$NetBSD$
+
+# Makefile patch for plugins install
+--- Makefile.orig	2015-10-15 12:07:11.000000000 +0000
++++ Makefile
+@@ -14,7 +14,7 @@ else
+ endif
+ 
+ 
+-all: inchworm_target chrysalis_target trinity_essentials
++all: inchworm_target chrysalis_target trinity_essentials plugins
+ 	sh ./util/support_scripts/trinity_install_tests.sh
+ 
+ inchworm_target:

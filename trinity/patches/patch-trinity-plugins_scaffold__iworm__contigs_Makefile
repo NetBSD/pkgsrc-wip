@@ -1,0 +1,18 @@
+$NetBSD$
+
+# Proper rpath patch
+--- trinity-plugins/scaffold_iworm_contigs/Makefile.orig	2015-10-15 12:07:11.000000000 +0000
++++ trinity-plugins/scaffold_iworm_contigs/Makefile
+@@ -1,10 +1,8 @@
+-CXX    = g++
++CXX    ?= g++
+ prefix = ../htslib
+ 
+ ScaffoldIwormContigs:
+-	$(CXX) -I$(prefix) -L$(prefix) ScaffoldIwormContigs.cpp error_checker.cpp -lhts -lz -o scaffold_iworm_contigs
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) ScaffoldIwormContigs.cpp error_checker.cpp -L${LOCALBASE}/lib -lhts -lz -o scaffold_iworm_contigs
+ 
+ clean:
+ 	rm scaffold_iworm_contigs
+-
+-

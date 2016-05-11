@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2015/01/28 16:44:31 outpaddling Exp $
+$NetBSD$
 
-SHA1 (trinityrnaseq_r20140413p1.tar.gz) = d916cc7099a6a45de923e20bba85bb7949420395
-RMD160 (trinityrnaseq_r20140413p1.tar.gz) = f62a9830fef47d0ad3b85b65c365994e8e684447
-Size (trinityrnaseq_r20140413p1.tar.gz) = 156313571 bytes
-SHA1 (patch-PerlLib-HTC-SLURM_handler.pm) = fc978425c6c9a2894e8a08e3914bf85b4916c707
-SHA1 (patch-PerlLib_HTC_FarmIt.pm) = a3a1b8542ad11c609d89fccce6a65b7e843544f5
-SHA1 (patch-Trinity) = bfba1122d8bbae8bc533b4a7e2abd95ee37caa32
+SHA1 (trinity-2.1.1.tar.gz) = 5b537b8f8c35c6dd2853c9d82c761e6efd35c228
+RMD160 (trinity-2.1.1.tar.gz) = 8dd567d9f9a737a4efdd62dcb447a7275be3a10e
+SHA512 (trinity-2.1.1.tar.gz) = 36b67211902871c6dbba31a074c4e92d2e925c57fe54bf59418874282e283693d2d9b4e14333385a7adcef3edbf928bc1001df105b56412841662c45a9a74f3f
+Size (trinity-2.1.1.tar.gz) = 137541420 bytes
+SHA1 (patch-Makefile) = 1a7a185ad8252b74fdc2398049966acf21bc250c
+SHA1 (patch-PerlLib_HPC_SLURM__handler.pm) = c2bb0872340389f043b540ff457ebcabbdf48116
+SHA1 (patch-trinity-plugins_Makefile) = 0cb5fe8664eb3f2b80bd9873207d958c21a2f76f
+SHA1 (patch-trinity-plugins_scaffold__iworm__contigs_Makefile) = fb0abe2a37d7cd99190ad4f851bd695a014ec4f0

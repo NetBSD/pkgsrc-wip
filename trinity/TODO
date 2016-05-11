@@ -1,6 +1,1 @@
-
-Clean up jellyfish script - contains paths in pkg work dir
-
-Patch TRINITY_HOME in Trinity script
-
-Make sure separate ParaFly is used by GridRunner
+Clean up and test.
