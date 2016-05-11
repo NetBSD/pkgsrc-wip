@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/udunits2
+include/converter.h
+include/udunits.h
+include/udunits2.h
+lib/libudunits2.la
+share/doc/udunits/CHANGE_LOG
+share/doc/udunits/COPYRIGHT
+share/doc/udunits/README
+share/doc/udunits/udunits2-accepted.xml
+share/doc/udunits/udunits2-base.xml
+share/doc/udunits/udunits2-common.xml
+share/doc/udunits/udunits2-derived.xml
+share/doc/udunits/udunits2-prefixes.xml
+share/doc/udunits/udunits2.xml
+share/info/udunits2.info
+share/info/udunits2lib.info
+share/info/udunits2prog.info
+share/udunits/udunits2-accepted.xml
+share/udunits/udunits2-base.xml
+share/udunits/udunits2-common.xml
+share/udunits/udunits2-derived.xml
+share/udunits/udunits2-prefixes.xml
+share/udunits/udunits2.xml
