@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (rainbow_2.0.4.tar.gz) = c8a8458892873f59136176a3960f337ee7bea376
+RMD160 (rainbow_2.0.4.tar.gz) = bec9fa59563a06fd274b531acd33060b7c5c6a21
+SHA512 (rainbow_2.0.4.tar.gz) = 4308b618cc87811f3fcaabe508304a3df80de3c0c7b667d235db1ed336531517c9764a1af402cfe7dc3339ec903f9fb868d0a7f092c27fa579e74a635694cae9
+Size (rainbow_2.0.4.tar.gz) = 77111 bytes
+SHA1 (patch-Makefile) = e57277fb2ec920881718a211b415299bb16d26c6
