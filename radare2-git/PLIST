@@ -152,7 +152,6 @@ lib/pkgconfig/r_search.pc
 lib/pkgconfig/r_socket.pc
 lib/pkgconfig/r_syscall.pc
 lib/pkgconfig/r_util.pc
-lib/radare2/${PKGVERSION}-git/${PKGVERSION}-git
 lib/radare2/${PKGVERSION}-git/asm_LM32.so
 lib/radare2/${PKGVERSION}-git/asm_propeller.so
 lib/radare2/${PKGVERSION}-git/bin_xtr_dyldcache.so
