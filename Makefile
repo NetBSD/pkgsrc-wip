@@ -2453,6 +2453,7 @@ SUBDIR+=	p5-mha4mysql-node
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
 SUBDIR+=	p5-spf-policyd
+SUBDIR+=	p5-transdecoder
 SUBDIR+=	p5-xmlsig
 SUBDIR+=	p6-panda
 SUBDIR+=	packman
