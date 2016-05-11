@@ -1440,6 +1440,7 @@ SUBDIR+=	joomla
 SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
 SUBDIR+=	jpicedt
+SUBDIR+=	jrnl
 SUBDIR+=	jruby
 SUBDIR+=	jsl
 SUBDIR+=	jsoncpp-svn
