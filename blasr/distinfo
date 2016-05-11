@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (blasr-2015.08.17.tar.xz) = fd89eac035087b7a41295e7c6b20b678266628b4
+RMD160 (blasr-2015.08.17.tar.xz) = d85998bc824b6ad3319e140478d86b8ac6ffb056
+SHA512 (blasr-2015.08.17.tar.xz) = dcb3e9df039a09862bc25b9d4b9120e65bae7c8f3d7f38a81db21a8687c86d50ecacf32640af13ea8dfbd1b8d6adf198e7f58b3cc7b38022f1552e37046eb81d
+Size (blasr-2015.08.17.tar.xz) = 1027344 bytes
+SHA1 (patch-Blasr.cpp) = 663437d839027a7a6f057cf44234a96f6eb7299c

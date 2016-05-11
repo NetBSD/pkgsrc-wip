@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/blasr
+bin/loadPulses
+bin/pls2fasta
+bin/samFilter
+bin/samtoh5
+bin/samtom4
+bin/sawriter
+bin/sdpMatcher
+bin/toAfg

@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	blasr
+
+.if !defined(BLASR_BUILDLINK3_MK)
+BLASR_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.blasr+=	blasr>=2015.08.17
+BUILDLINK_PKGSRCDIR.blasr?=	../../wip/blasr
+.endif	# BLASR_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-blasr
