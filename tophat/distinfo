@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (tophat-2.1.1.tar.gz) = 33e81e57528520edd3e67bf2259e1f3a30998a3b
+RMD160 (tophat-2.1.1.tar.gz) = 73c06278ad8bddacc3c83f1dd7f7da6e7dd148c2
+SHA512 (tophat-2.1.1.tar.gz) = e2e0943a6f3d34b83922e6e403b65a3bee480a2b2bb4bf2de0cae7e0ef5bb166b66fec923316c2b643e8550e43c842f0f1bcc2ca7249d20fbcf5a4733fbdeabc
+Size (tophat-2.1.1.tar.gz) = 2259554 bytes
+SHA1 (patch-src-bam_merge.cpp) = 3fd585b5e1d15a3c4d42dbc152852b44bb1c6dbf
+SHA1 (patch-src-samtools-0.1.18-Makefile) = 54dfa3947fb260b2936050b1b2229a785febb327
+SHA1 (patch-src_Makefile.in) = 50aac2d59688ec99c9c6b315b79f832bf2218bd2

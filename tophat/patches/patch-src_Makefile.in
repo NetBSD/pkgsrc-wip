@@ -1,0 +1,23 @@
+$NetBSD$
+
+# Allow pkgsrc to control make program
+--- src/Makefile.in.orig	2016-02-24 03:08:32.568707000 +0000
++++ src/Makefile.in
+@@ -1658,7 +1658,7 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ 
+ clean-local:
+-	cd $(SAMDIR) && make clean
++	cd $(SAMDIR) && ${MAKE} clean
+ 
+ tophat2: tophat2.sh
+ 	cp tophat2.sh tophat2 && chmod 755 tophat2
+@@ -1669,7 +1669,7 @@ tophat: tophat.py
+ $(SAMPROG): $(SAMLIB)
+ 
+ $(SAMLIB):
+-	cd $(SAMDIR) && make $(SAMPROG) && cp $(SAMLIB) $(SAMPROG) ..
++	cd $(SAMDIR) && ${MAKE} $(SAMPROG) && cp $(SAMLIB) $(SAMPROG) ..
+ 
+ install-data-hook:
+ 	cp -r intervaltree sortedcontainers $(DESTDIR)$(bindir)
