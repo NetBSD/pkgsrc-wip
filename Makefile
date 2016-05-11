@@ -3840,6 +3840,7 @@ SUBDIR+=	scrc
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scummvm-nightly
 SUBDIR+=	scx
+SUBDIR+=	scythe
 SUBDIR+=	sdd
 SUBDIR+=	sdict-tools
 SUBDIR+=	sdif-git
