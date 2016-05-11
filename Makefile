@@ -3901,6 +3901,7 @@ SUBDIR+=	skype4
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slashem
 SUBDIR+=	slate
+SUBDIR+=	slclust
 SUBDIR+=	slideml
 SUBDIR+=	slim
 SUBDIR+=	slime
