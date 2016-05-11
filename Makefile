@@ -3063,6 +3063,7 @@ SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-holoviews
 SUBDIR+=	py-hope
 SUBDIR+=	py-hostlist
+SUBDIR+=	py-htseq
 SUBDIR+=	py-hurry-filesize
 SUBDIR+=	py-hyperspy
 SUBDIR+=	py-ibis
