@@ -1,0 +1,4 @@
+Scythe uses a Naive Bayesian approach to classify
+contaminant substrings in sequence reads. It considers
+quality information, which can make it robust in picking
+out 3'-end adapters, which often include poor quality bases.

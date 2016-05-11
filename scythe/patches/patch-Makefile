@@ -1,0 +1,13 @@
+$NetBSD$
+
+# Allowing CC override
+--- Makefile.orig	2016-04-08 13:09:23.860500120 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ PROGRAM_NAME = scythe
+ VERSION = 0.991
+-CC = gcc
++CC ?= gcc
+ DEBUG ?= 0
+ CFLAGS = -Wall -pedantic -DVERSION=$(VERSION) -std=gnu99
+ ifeq ($(DEBUG), 1)
