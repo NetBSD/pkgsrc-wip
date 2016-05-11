@@ -36,8 +36,6 @@ REPLACE_PERL=	util/*.pl sample_data/*.pl PerlLib/*.pm \
 		TransDecoder.LongOrfs TransDecoder.Predict
 NO_BUILD=	yes
 
-FETCH_USING=	curl
-
 PORTVERSION=	2.0.1
 
 INSTALLATION_DIRS=	bin lib/TransDecoder/PerlLib libexec/TransDecoder/util

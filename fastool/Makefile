@@ -25,8 +25,6 @@ SUBST_SED.compiler=	-e 's|CFLAGS *=|CFLAGS ?=|g'
 
 CFLAGS+=	-std=c99
 
-FETCH_USING=	curl
-
 PORTVERSION=	0.1.4
 
 INSTALLATION_DIRS=	bin

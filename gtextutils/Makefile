@@ -17,6 +17,4 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	 pkg-config
 GNU_CONFIGURE=	yes
 
-FETCH_USING=	curl
-
 .include "../../mk/bsd.pkg.mk"

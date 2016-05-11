@@ -25,8 +25,6 @@ REPLACE_PERL=	src/perl/*
 # No zlib.pc on FreeBSD 9.x
 CONFIGURE_ENV=	ZLIB_CFLAGS=" " ZLIB_LIBS="-lz"
 
-FETCH_USING=	curl
-
 PORTVERSION=	0.1.14
 
 pre-configure:

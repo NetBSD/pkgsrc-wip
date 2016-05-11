@@ -23,11 +23,11 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
-REPLACE_PYTHON=	src/bed_to_juncs \
-		src/contig_to_chr_coords \
-		src/sra_to_solid \
-		src/tophat-fusion-post \
-		src/tophat.py
+REPLACE_PYTHON=	src/bed_to_juncs
+REPLACE_PYTHON=	src/contig_to_chr_coords
+REPLACE_PYTHON=	src/sra_to_solid
+REPLACE_PYTHON=	src/tophat-fusion-post
+REPLACE_PYTHON=	src/tophat.py
 REPLACE_BASH=	src/tophat2.sh
 
 CFLAGS+=	-Wno-unused

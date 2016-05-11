@@ -7,12 +7,8 @@
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
 
-# # Created by: Dan Siercks
-# # $FreeBSD$
 # Unknown tool: USE_TOOLS=	cmake:outsource
-# USE_LDCONFIG=	yes
 # CMAKE_ARGS+=	-DLIB_DIR=${PREFIX}/lib
-# .include <bsd.port.pre.mk>
 # # Just for speed: Recent compilers have better optimizers
 # Unknown tool: USE_TOOLS=	compiler:c++11-lang
 # .if ${ARCH} == i386
@@ -21,7 +17,6 @@
 # post-patch:
 # 	${REINPLACE_CMD} -e 's|lib/bamtools|lib|g' \
 # 		work/bamtools-2.4.0/src/api/CMakeLists.txt
-# .include <bsd.port.post.mk>
 
 DISTNAME=	bamtools-${PORTVERSION}
 CATEGORIES=	biology
@@ -34,9 +29,6 @@ COMMENT=	API and toolkit for handling BAM files
 # Double-check this
 LICENSE=	mit
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
-
 # Just assuming C and C++: Adjust this!
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
@@ -46,11 +38,9 @@ CONFIGURE_DIRS=	_build
 pre-configure:
 	${MKDIR} ${WRKSRC}/_build
 
-
 WRKSRC=		${WRKDIR}/bamtools-${PORTVERSION}
 
-# Adapt REINPLACE commands to SUBST:
-SUBST_CLASSES+= bamtools_lib
+SUBST_CLASSES+=			bamtools_lib
 SUBST_STAGE.bamtools_lib=	post-patch
 SUBST_FILES.bamtools_lib=	${WRKSRC}/src/api/CMakeLists.txt
 SUBST_SED.bamtools_lib=		-e 's|lib/bamtools|lib|g'
@@ -60,21 +50,7 @@ SUBST_SED.bamtools_lib=		-e 's|lib/bamtools|lib|g'
 #SUBST_FILES.bluetooth=	${WRKSRC}/Commands/Legoctl/Makefile
 #SUBST_SED.bluetooth=	-e 's|-lbluetooth||g'
 
-FETCH_USING=	curl
-
 PORTVERSION=	2.4.0
-#DATADIR=	${PREFIX}/share/bamtools
-#DOCSDIR=	${PREFIX}/share/doc/bamtools
 
-# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
-# .include "../../mk/bsd.prefs.mk"
-
-# Keep this if there are user-selectable options.
-# .include "options.mk"
-
-# Specify which directories to create before install.
-# INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1 share/doc share/examples
-
-# Linux doesn't have zlib in the base, so just in case...
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -36,8 +36,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-FETCH_USING=	curl
-
 PORTVERSION=	1.33
 #DATADIR=	${PREFIX}/share/sickle
 #DOCSDIR=	${PREFIX}/share/doc/sickle

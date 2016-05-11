@@ -16,10 +16,6 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/webserver-${GIT_COMMIT}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=    curl
-
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake gmake gm4 msgfmt

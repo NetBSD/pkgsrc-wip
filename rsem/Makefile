@@ -61,8 +61,6 @@ WRKSRC=		${WRKDIR}/RSEM-${PORTVERSION}
 MAKE_ENV=	libexecdir=${PREFIX}/libexec \
 		perl_mod_dir=${SITE_PERL}
 
-FETCH_USING=	curl
-
 PORTVERSION=	1.2.30
 SITE_PERL=	${PREFIX}/share/rsem
 

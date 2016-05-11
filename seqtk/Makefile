@@ -24,8 +24,6 @@ WRKSRC=		${WRKDIR}/seqtk-${PORTVERSION}
 CFLAGS+=	-msse2
 .endif
 
-FETCH_USING=	curl
-
 PORTVERSION=	4feb6e81444ab6bc44139dd3a125068f81ae4ad8
 
 do-install:

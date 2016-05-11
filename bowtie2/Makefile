@@ -21,8 +21,6 @@ USE_TOOLS+=	gmake perl:run pax
 REPLACE_PERL=	scripts/*.pl bowtie2
 REPLACE_PYTHON=	bowtie2-build bowtie2-inspect
 
-FETCH_USING=	curl
-
 PORTVERSION=	2.2.7
 DATADIR=	${PREFIX}/share/bowtie2
 DOCSDIR=	${PREFIX}/share/doc/bowtie2

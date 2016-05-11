@@ -16,6 +16,4 @@ LICENSE=	gnu-gpl-v3
 
 PORTVERSION=	261142f1529f6b7464f6ad96d0c77872ff919849
 
-FETCH_USING=	curl
-
 .include "../../mk/bsd.pkg.mk"

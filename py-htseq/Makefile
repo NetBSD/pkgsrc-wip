@@ -16,12 +16,9 @@ LICENSE=	gnu-gpl-v3
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
-PYDISTUTILSPKG=	yes
 
 PORTVERSION=	0.6.1p1
 MASTER_SITE_CHEESESHOP= http://pypi.python.org/packages
-
-FETCH_USING=	curl
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"

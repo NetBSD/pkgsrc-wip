@@ -31,8 +31,6 @@ WRKSRC=		${WRKDIR}/bedtools2-${PORTVERSION}
 
 MAKE_ENV=	PYTHONBIN=${PYTHONBIN}
 
-FETCH_USING=	curl
-
 PORTVERSION=	2.23.0
 
 .include "../../devel/zlib/buildlink3.mk"

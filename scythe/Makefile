@@ -36,8 +36,6 @@ USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/scythe-${GITHUB_TAG}
 
-FETCH_USING=	curl
-
 PORTVERSION=	2016.02.10
 #DATADIR=	${PREFIX}/share/scythe
 #DOCSDIR=	${PREFIX}/share/doc/scythe

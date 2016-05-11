@@ -31,29 +31,29 @@ SUBST_SED.boost+=	-e 's|long double|double|g'
 SUBST_SED.boost+=	-e 's|Lf|lf|g'
 SUBST_SED.boost+=	-e 's|Lg|lg|g'
 SUBST_MESSAGE.boost=	"Substituting for boost"
-SUBST_FILES.boost=	${WRKSRC}/src/abundances.cpp \
-			${WRKSRC}/src/abundances.h \
-			${WRKSRC}/src/assemble.h \
-			${WRKSRC}/src/biascorrection.cpp \
-			${WRKSRC}/src/biascorrection.h \
-			${WRKSRC}/src/bundles.cpp \
-			${WRKSRC}/src/bundles.cpp.orig \
-			${WRKSRC}/src/bundles.h \
-			${WRKSRC}/src/clustering.cpp \
-			${WRKSRC}/src/common.h \
-			${WRKSRC}/src/compress_gtf.cpp \
-			${WRKSRC}/src/cuffdiff.cpp \
-			${WRKSRC}/src/cufflinks.cpp \
-			${WRKSRC}/src/differential.cpp \
-			${WRKSRC}/src/differential.h \
-			${WRKSRC}/src/filters.cpp \
-			${WRKSRC}/src/filters.h \
-			${WRKSRC}/src/gtf_to_sam.cpp \
-			${WRKSRC}/src/hits.h \
-			${WRKSRC}/src/replicates.cpp \
-			${WRKSRC}/src/replicates.h \
-			${WRKSRC}/src/scaffolds.cpp \
-			${WRKSRC}/src/scaffolds.h
+SUBST_FILES.boost+=	${WRKSRC}/src/abundances.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/abundances.h
+SUBST_FILES.boost+=	${WRKSRC}/src/assemble.h
+SUBST_FILES.boost+=	${WRKSRC}/src/biascorrection.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/biascorrection.h
+SUBST_FILES.boost+=	${WRKSRC}/src/bundles.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/bundles.cpp.orig
+SUBST_FILES.boost+=	${WRKSRC}/src/bundles.h
+SUBST_FILES.boost+=	${WRKSRC}/src/clustering.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/common.h
+SUBST_FILES.boost+=	${WRKSRC}/src/compress_gtf.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/cuffdiff.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/cufflinks.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/differential.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/differential.h
+SUBST_FILES.boost+=	${WRKSRC}/src/filters.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/filters.h
+SUBST_FILES.boost+=	${WRKSRC}/src/gtf_to_sam.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/hits.h
+SUBST_FILES.boost+=	${WRKSRC}/src/replicates.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/replicates.h
+SUBST_FILES.boost+=	${WRKSRC}/src/scaffolds.cpp
+SUBST_FILES.boost+=	${WRKSRC}/src/scaffolds.h
 
 SUBST_CLASSES+=		boolint
 SUBST_STAGE.boolint=	post-patch

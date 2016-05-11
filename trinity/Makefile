@@ -26,17 +26,17 @@
 #JAVA_VERSION=	1.7 1.6
 #		slclust:/usr/wip/biology/slclust
 
-DEPENDS+=	coreutils>=0:../../sysutils/coreutils \
-		bowtie<2:../../wip/bowtie \
-		bowtie2>=2:../../wip/bowtie2 \
-		jellyfish>=2.1.4:../../wip/jellyfish2 \
-		parafly>=0:../../wip/parafly \
-		fastool>=0:../../wip/fastool \
-		p5-transdecoder>=0:../../wip/p5-transdecoder \
-		Trimmomatic>=0.32:../../wip/trimmomatic \
-		rsem>=1.2.30:../../wip/rsem \
-		slclust>=0:../../wip/slclust \
-		samtools>=1.3:../../wip/samtools
+DEPENDS+=	coreutils>=0:../../sysutils/coreutils
+DEPENDS+=	bowtie<2:../../wip/bowtie
+DEPENDS+=	bowtie2>=2:../../wip/bowtie2
+DEPENDS+=	jellyfish>=2.1.4:../../wip/jellyfish2
+DEPENDS+=	parafly>=0:../../wip/parafly
+DEPENDS+=	fastool>=0:../../wip/fastool
+DEPENDS+=	p5-transdecoder>=0:../../wip/p5-transdecoder
+DEPENDS+=	Trimmomatic>=0.32:../../wip/trimmomatic
+DEPENDS+=	rsem>=1.2.30:../../wip/rsem
+DEPENDS+=	slclust>=0:../../wip/slclust
+DEPENDS+=	samtools>=1.3:../../wip/samtools
 
 DISTNAME=	trinity-${PORTVERSION}
 CATEGORIES=	biology
@@ -135,8 +135,6 @@ WRKSRC=		${WRKDIR}/trinityrnaseq-${PORTVERSION}
 
 CFLAGS+=	-fopenmp
 CXXFLAGS=	-fopenmp
-
-FETCH_USING=	curl
 
 PORTVERSION=	2.1.1
 EXAMPLESDIR=	${PREFIX}/share/examples/trinity
