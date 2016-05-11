@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (rsem-1.2.30.tar.gz) = dfe0cc7a503af2a976923432b266a8b589b264ca
+RMD160 (rsem-1.2.30.tar.gz) = b6843ac7c5db828a40d23568cc7f13507756d91c
+Size (rsem-1.2.30.tar.gz) = 9192827 bytes
+SHA1 (patch-Makefile) = 0fdd585d4ccb70a56a589e8ac280f7d63f1d9840
+SHA1 (patch-samtools-1.3_Makefile) = 6c9094bc8e0af85fede6d1db6af36e2da2a3e2e0
+SHA1 (patch-samtools-1.3_htslib-1.3_Makefile) = 036026001b4d34b1b03db763f334782fd4a9751a
