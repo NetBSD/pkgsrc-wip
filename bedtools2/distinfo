@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (bedtools2-2.23.0.tar.gz) = 7618000d534816cf54983eac39e0eb8f93f9e204
+RMD160 (bedtools2-2.23.0.tar.gz) = 3859e3b92d90b6120d2be808e46158ac51019dbf
+SHA512 (bedtools2-2.23.0.tar.gz) = 1896d567c7e299e032ff7b37a7612875ec99ef78c4b7cb09d4bf4f1b082b3304e0b36aa1cffc4d89d0ae43b3f6b9c0946bcf4d2d049e107055f061c8a42a6dbd
+Size (bedtools2-2.23.0.tar.gz) = 18401280 bytes
+SHA1 (patch-Makefile) = f37141441139fa9b520daa4c26ac87566e047f66
