@@ -703,6 +703,7 @@ SUBDIR+=	fasm
 SUBDIR+=	fasta
 SUBDIR+=	fastbit
 SUBDIR+=	fastjet
+SUBDIR+=	fastool
 SUBDIR+=	fastrpc
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
