@@ -217,6 +217,7 @@ SUBDIR+=	beads
 SUBDIR+=	beanstalkd
 SUBDIR+=	beast
 SUBDIR+=	beats
+SUBDIR+=	bedtools2
 SUBDIR+=	bertini
 SUBDIR+=	bfgminer
 SUBDIR+=	bibliographer
