@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/TransDecoder.LongOrfs
+bin/TransDecoder.Predict
+libexec/TransDecoder/util/cdna_alignment_orf_to_genome_orf.pl
+libexec/TransDecoder/util/compute_base_probs.pl
+libexec/TransDecoder/util/cufflinks_gtf_genome_to_cdna_fasta.pl
+libexec/TransDecoder/util/cufflinks_gtf_to_alignment_gff3.pl
+libexec/TransDecoder/util/cufflinks_gtf_to_bed.pl
+libexec/TransDecoder/util/ffindex_resume.pl
+libexec/TransDecoder/util/gene_list_to_gff.pl
+libexec/TransDecoder/util/get_top_longest_fasta_entries.pl
+libexec/TransDecoder/util/gff3_file_to_bed.pl
+libexec/TransDecoder/util/gff3_file_to_proteins.pl
+libexec/TransDecoder/util/index_gff3_files_by_isoform.pl
+libexec/TransDecoder/util/nr_ORFs_gff3.pl
+libexec/TransDecoder/util/pfam_runner.pl
+libexec/TransDecoder/util/remove_eclipsed_ORFs.pl
+libexec/TransDecoder/util/score_CDS_liklihood_all_6_frames.pl
+libexec/TransDecoder/util/seq_n_baseprobs_to_logliklihood_vals.pl
+lib/TransDecoder/PerlLib/Fasta_reader.pm
+lib/TransDecoder/PerlLib/Gene_obj_indexer.pm
+lib/TransDecoder/PerlLib/Gene_obj.pm
+lib/TransDecoder/PerlLib/GFF3_utils.pm
+lib/TransDecoder/PerlLib/Longest_orf.pm
+lib/TransDecoder/PerlLib/Nuc_translator.pm
+lib/TransDecoder/PerlLib/TiedHash.pm
