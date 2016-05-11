@@ -4184,6 +4184,7 @@ SUBDIR+=	ubit
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	udp-ping
+SUBDIR+=	udunits
 SUBDIR+=	uebimiau
 SUBDIR+=	ufc
 SUBDIR+=	uffizi
