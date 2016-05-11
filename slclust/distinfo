@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (slclust_02022010.tar.gz) = 3c4ab8239b5e5f44613d6cc64c60fea45ce04bf7
+RMD160 (slclust_02022010.tar.gz) = 4c7dd3ff5f439f3a492f5d208c991faf4931b513
+Size (slclust_02022010.tar.gz) = 23097 bytes
+SHA1 (patch-src_Makefile) = ea0babed51ad7af85a14acc31dbc55fc74635a5b
