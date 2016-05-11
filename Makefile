@@ -2497,6 +2497,7 @@ SUBDIR+=	pdfminer
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
+SUBDIR+=	pear
 SUBDIR+=	pear-Base
 SUBDIR+=	pear-Cache
 SUBDIR+=	pear-CakePHP_CodeSniffer
