@@ -4136,6 +4136,7 @@ SUBDIR+=	trayion
 SUBDIR+=	treetool
 SUBDIR+=	treeviewx
 SUBDIR+=	triangle
+SUBDIR+=	trimmomatic
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
