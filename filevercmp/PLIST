@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/filevercmp
+include/filevercmp.h
+lib/libfilevercmp.a
