@@ -3768,6 +3768,7 @@ SUBDIR+=	rpcemu
 SUBDIR+=	rpki-svn
 SUBDIR+=	rpm5
 SUBDIR+=	rrdtool
+SUBDIR+=	rsem
 SUBDIR+=	rsget
 SUBDIR+=	rsound
 SUBDIR+=	rsstail
