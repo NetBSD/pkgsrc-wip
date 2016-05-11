@@ -3874,6 +3874,7 @@ SUBDIR+=	shttpd
 SUBDIR+=	shunt
 SUBDIR+=	sic
 SUBDIR+=	sickbeard
+SUBDIR+=	sickle
 SUBDIR+=	signify
 SUBDIR+=	sil
 SUBDIR+=	sil-scheherazade-ttf
