@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	ganglia-monitor-core-
 GANGLIA_MONITOR_CORE__BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ganglia-monitor-core-+=	ganglia-monitor-core->=3.6.0
-BUILDLINK_PKGSRCDIR.ganglia-monitor-core-?=	../../jb-wip/ganglia-monitor-core
+BUILDLINK_PKGSRCDIR.ganglia-monitor-core-?=	../../wip/ganglia-monitor-core
 .endif	# GANGLIA_MONITOR_CORE__BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ganglia-monitor-core-
