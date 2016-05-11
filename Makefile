@@ -207,6 +207,7 @@ SUBDIR+=	bakery
 SUBDIR+=	baler
 SUBDIR+=	baloo-widgets
 SUBDIR+=	baloo5
+SUBDIR+=	bamtools
 SUBDIR+=	banshee
 SUBDIR+=	bareos
 SUBDIR+=	baresip
