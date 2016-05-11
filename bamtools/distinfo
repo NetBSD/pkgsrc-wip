@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (bamtools-2.4.0.tar.gz) = 7b98d88a12c022bbcabdbd7c0e92c5d2bc4a3f6b
+RMD160 (bamtools-2.4.0.tar.gz) = e2269a9d1af2ebf1a38f2fd5f4d75f3f2426b358
+SHA512 (bamtools-2.4.0.tar.gz) = 33332f290e72ed3943c9df6022a44cfcd358ae1c1d41b1b494c7087a66e865529721ee6230212313d482cb66764573e300f362fee9ccbf3c0da18544bf2e9425
+Size (bamtools-2.4.0.tar.gz) = 539779 bytes
+SHA1 (patch-src_api_internal_io_HostInfo__p.cpp) = 041bdbccd9b5906b5c3d6ba3c285d674ccd4f509
+SHA1 (patch-src_api_internal_io_TcpSocketEngine__unix__p.cpp) = 81ba4f71f85724ddc38039fc621076b1570eaf02
