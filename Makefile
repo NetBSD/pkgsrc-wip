@@ -232,6 +232,7 @@ SUBDIR+=	bip
 SUBDIR+=	bitcoin
 SUBDIR+=	bitlbee
 SUBDIR+=	bkchem
+SUBDIR+=	blasr
 SUBDIR+=	blasr_libcpp
 SUBDIR+=	bleachbit
 SUBDIR+=	blink
