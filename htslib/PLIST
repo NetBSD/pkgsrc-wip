@@ -6,8 +6,8 @@ include/htslib/bgzf.h
 include/htslib/cram.h
 include/htslib/faidx.h
 include/htslib/hfile.h
-include/htslib/hts.h
 include/htslib/hts_defs.h
+include/htslib/hts.h
 include/htslib/kbitset.h
 include/htslib/kfunc.h
 include/htslib/khash.h
@@ -24,11 +24,11 @@ include/htslib/tbx.h
 include/htslib/vcf.h
 include/htslib/vcf_sweep.h
 include/htslib/vcfutils.h
+libdata/pkgconfig/htslib.pc
 lib/libhts.a
 lib/libhts.so
 lib/libhts.so.1
 lib/libhts.so.${PKGVERSION}
-lib/pkgconfig/htslib.pc
 man/man1/htsfile.1
 man/man1/tabix.1
 man/man5/faidx.5

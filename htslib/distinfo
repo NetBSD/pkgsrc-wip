@@ -1,6 +1,9 @@
 $NetBSD$
 
-SHA1 (htslib-1.3.tar.bz2) = 917981547952ad02e6041a6032e0cc18896b92ec
-RMD160 (htslib-1.3.tar.bz2) = 0947a319f2f9263a100902e9e065c07d79dc6be3
-SHA512 (htslib-1.3.tar.bz2) = 1a96fd22632b4a593596645b3a40aa59aaaaa9f342f97ec8c1807fe4058576420ba2c6279594d00bfc67db93aa858bd63bf3e2cf1a63e79605791c6f8aef097c
-Size (htslib-1.3.tar.bz2) = 952864 bytes
+SHA1 (htslib-1.3.tar.gz) = 356eae930da23c74c315a85d59d2a61b96d6f702
+RMD160 (htslib-1.3.tar.gz) = 6fa662ba22b5f67224e5aa6b0388e062127dda80
+SHA512 (htslib-1.3.tar.gz) = 82748d39a862582a0376e5fe27e80462c5ac55ab7f29c049c0f2f10de27f8e46ea751d5603005392886804d3048dd3ca62a6cc709c2c012de8a02b4cc6ad98fe
+Size (htslib-1.3.tar.gz) = 1042953 bytes
+SHA1 (patch-Makefile) = 73f92ba7dac13f4fd35586982d841aedfc047c51
+SHA1 (patch-configure.ac) = 0154f80956488605fc9683fd26357e87e78abcf2
+SHA1 (patch-hfile__libcurl.c) = 97853952c6fef571b511cb5e3de2869f088f2a19
