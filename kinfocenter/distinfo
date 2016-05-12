@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (kinfocenter-5.6.3.tar.xz) = 6a21c1c6400106d07d67d123bcfbf75abccfa73b
+RMD160 (kinfocenter-5.6.3.tar.xz) = 8571b1b104557199a9fa014da03296f843ee6ef0
+SHA512 (kinfocenter-5.6.3.tar.xz) = 8b3d6506427bdf5e170751bf82c0dd8d1fed374a5decd82ffcdffae611dddbe004ac38736e29a6614529128b319f7a96353e443674fcba5244e7398590b2e2c8
+Size (kinfocenter-5.6.3.tar.xz) = 1320396 bytes
+SHA1 (patch-Modules_nics_nic.cpp) = d759de60f074d8e35d759cef3426c2f84ad9768e
+SHA1 (patch-kcontrol_menus_CMakeLists.txt) = d55591620116acf72649026f7eaab878838621e9
