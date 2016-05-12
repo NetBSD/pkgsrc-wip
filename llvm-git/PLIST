@@ -127,6 +127,7 @@ include/llvm/Analysis/AliasAnalysisEvaluator.h
 include/llvm/Analysis/AliasSetTracker.h
 include/llvm/Analysis/AssumptionCache.h
 include/llvm/Analysis/BasicAliasAnalysis.h
+include/llvm/Analysis/BitSetUtils.h
 include/llvm/Analysis/BlockFrequencyInfo.h
 include/llvm/Analysis/BlockFrequencyInfoImpl.h
 include/llvm/Analysis/BranchProbabilityInfo.h
@@ -315,6 +316,7 @@ include/llvm/CodeGen/StackMaps.h
 include/llvm/CodeGen/StackProtector.h
 include/llvm/CodeGen/TailDuplicator.h
 include/llvm/CodeGen/TargetLoweringObjectFileImpl.h
+include/llvm/CodeGen/TargetPassConfig.h
 include/llvm/CodeGen/TargetSchedule.h
 include/llvm/CodeGen/ValueTypes.h
 include/llvm/CodeGen/ValueTypes.td
@@ -325,7 +327,6 @@ include/llvm/Config/AsmPrinters.def
 include/llvm/Config/Disassemblers.def
 include/llvm/Config/Targets.def
 include/llvm/Config/llvm-config.h
-include/llvm/DebugInfo/CodeView/CVLeafTypes.def
 include/llvm/DebugInfo/CodeView/CVSymbolTypes.def
 include/llvm/DebugInfo/CodeView/CVTypeVisitor.h
 include/llvm/DebugInfo/CodeView/CodeView.h
@@ -336,6 +337,8 @@ include/llvm/DebugInfo/CodeView/Line.h
 include/llvm/DebugInfo/CodeView/ListRecordBuilder.h
 include/llvm/DebugInfo/CodeView/MemoryTypeTableBuilder.h
 include/llvm/DebugInfo/CodeView/MethodListRecordBuilder.h
+include/llvm/DebugInfo/CodeView/RecordIterator.h
+include/llvm/DebugInfo/CodeView/RecordSerialization.h
 include/llvm/DebugInfo/CodeView/SymbolRecord.h
 include/llvm/DebugInfo/CodeView/TypeDumper.h
 include/llvm/DebugInfo/CodeView/TypeIndex.h
@@ -426,6 +429,7 @@ include/llvm/DebugInfo/PDB/Raw/DbiStream.h
 include/llvm/DebugInfo/PDB/Raw/InfoStream.h
 include/llvm/DebugInfo/PDB/Raw/MappedBlockStream.h
 include/llvm/DebugInfo/PDB/Raw/ModInfo.h
+include/llvm/DebugInfo/PDB/Raw/ModStream.h
 include/llvm/DebugInfo/PDB/Raw/NameHashTable.h
 include/llvm/DebugInfo/PDB/Raw/NameMap.h
 include/llvm/DebugInfo/PDB/Raw/PDBFile.h
@@ -461,7 +465,7 @@ include/llvm/ExecutionEngine/Orc/LogicalDylib.h
 include/llvm/ExecutionEngine/Orc/NullResolver.h
 include/llvm/ExecutionEngine/Orc/ObjectLinkingLayer.h
 include/llvm/ExecutionEngine/Orc/ObjectTransformLayer.h
-include/llvm/ExecutionEngine/Orc/OrcArchitectureSupport.h
+include/llvm/ExecutionEngine/Orc/OrcABISupport.h
 include/llvm/ExecutionEngine/Orc/OrcError.h
 include/llvm/ExecutionEngine/Orc/OrcRemoteTargetClient.h
 include/llvm/ExecutionEngine/Orc/OrcRemoteTargetRPCAPI.h
@@ -666,6 +670,7 @@ include/llvm/Object/SymbolSize.h
 include/llvm/Object/SymbolicFile.h
 include/llvm/ObjectYAML/COFFYAML.h
 include/llvm/ObjectYAML/ELFYAML.h
+include/llvm/ObjectYAML/MachOYAML.h
 include/llvm/ObjectYAML/YAML.h
 include/llvm/Option/Arg.h
 include/llvm/Option/ArgList.h
