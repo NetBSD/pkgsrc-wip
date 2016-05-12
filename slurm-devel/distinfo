@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.3 2015/04/29 12:40:50 outpaddling Exp $
+
+SHA1 (slurm-16.05.0-0rc1.tar.bz2) = 72b6372aab7ff1df57c52db22b91b32f5daab5eb
+RMD160 (slurm-16.05.0-0rc1.tar.bz2) = e76cb4d68ff45330a57846564ff5ad39a160c623
+SHA512 (slurm-16.05.0-0rc1.tar.bz2) = c8ad323d942805c7f0b843e961958e3a2057e28a334466640cc58ccf184033bf64ebeba3f3cb994c7f6133a51a4f32c6d73905def0a299f1e8333ad4fc4eadff
+Size (slurm-16.05.0-0rc1.tar.bz2) = 5993402 bytes
+SHA1 (patch-etc_init.d.slurm.in) = f29d2c603b8d62df80aec4ac77f2e9bc218f55fc
+SHA1 (patch-src_plugins_switch_generic_switch__generic.c) = b91f4cbb253a1c93c83edc8e5f0d2b4606f96735
+SHA1 (patch-src_slurmd_slurmstepd_task.c) = 9d0a2384655301c0f00e2c291a767d9f4f4d0102
