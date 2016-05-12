@@ -9,7 +9,7 @@ DISTNAME=	ganglia-${PORTVERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ganglia/}
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 
 COMMENT=	Ganglia cluster monitor, monitoring daemon
 LICENSE=	modified-bsd

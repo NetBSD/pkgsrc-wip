@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.sourceforge.net/project/lmod/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://downloads.sourceforge.net/project/lmod/
 COMMENT=	Dynamic modification of a user's environment
 LICENSE=	mit

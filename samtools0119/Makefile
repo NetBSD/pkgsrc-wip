@@ -27,7 +27,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=samtools/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 
 COMMENT=	Generic format for storing large nucleotide sequence alignments
 # LICENSE=	

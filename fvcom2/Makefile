@@ -6,7 +6,7 @@ DISTNAME=	sourcecode1
 CATEGORIES=	math
 MASTER_SITES=	http://fvcom.smast.umassd.edu/FVCOM/password_required/t2/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://fvcom.smast.umassd.edu/FVCOM/password_required/t2/
 COMMENT=	Prognostic coastal ocean circulation model
 #LICENSE=	fvcom-license

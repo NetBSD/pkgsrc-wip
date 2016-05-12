@@ -6,7 +6,7 @@ PKGNAME=	mpb-openmpi-1.4.2
 CATEGORIES=	math
 MASTER_SITES=	http://ab-initio.mit.edu/mpb/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://ab-initio.mit.edu/mpb/
 COMMENT=	MIT Photonic Bands
 LICENSE=	gnu-gpl-v3

@@ -4,7 +4,7 @@ DISTNAME=	meep-1.2
 CATEGORIES=	math
 MASTER_SITES=	http://ab-initio.mit.edu/meep/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://ab-initio.mit.edu/meep/
 COMMENT=	FDTD simulation software to model electromagnetic systems
 LICENSE=	gnu-gpl-v3

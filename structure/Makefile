@@ -9,7 +9,7 @@ DISTNAME=	structure_kernel_source
 CATEGORIES=	biology
 MASTER_SITES=	http://pritchardlab.stanford.edu/structure_software/release_versions/v2.3.4/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 
 COMMENT=	Multi-locus genotype data to investigate population structure
 

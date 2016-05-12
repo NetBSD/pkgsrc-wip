@@ -8,7 +8,7 @@ PKGNAME=	suitesparse-4.0.2
 CATEGORIES=	math
 MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
 

@@ -4,7 +4,7 @@ DISTNAME=	python-hostlist-1.14
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.nsc.liu.se/~kent/python-hostlist/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://www.nsc.liu.se/~kent/python-hostlist/
 COMMENT=	Manage SLURM host lists
 LICENSE=	gnu-gpl-v2

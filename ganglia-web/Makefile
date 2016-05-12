@@ -20,7 +20,7 @@ DISTNAME=	ganglia-web-${PORTVERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.sourceforge.net/project/ganglia/ganglia-web/${PORTVERSION}/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 
 COMMENT=	Ganglia network monitor web interface
 #LICENSE=	BSD3CLAUSE

@@ -5,7 +5,7 @@ PKGNAME=	armadillo-4.${PKG_MINOR}.2
 CATEGORIES=	math
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=arma/}
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://sourceforge.net/projects/arma/
 COMMENT=	C++ linear algebra library
 LICENSE=	mpl-2.0

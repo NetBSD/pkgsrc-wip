@@ -5,7 +5,7 @@ PKGNAME=	dlpoly-classic-1.8
 CATEGORIES=	math parallel
 MASTER_SITES=	http://ccpforge.cse.rl.ac.uk/gf/download/frsrelease/238/2028/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://ccpforge.cse.rl.ac.uk/gf/download/frsrelease/238/2028/
 COMMENT=	General purpose classical molecular dynamics
 LICENSE=	original-bsd

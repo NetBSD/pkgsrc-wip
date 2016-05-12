@@ -5,7 +5,7 @@ PKGNAME=	openmx-openmpi-3.7
 CATEGORIES=	math
 MASTER_SITES=	http://www.openmx-square.org/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://www.openmx-square.org/
 COMMENT=	Nano-scale material simulations based on DFT
 LICENSE=	gnu-gpl-v1

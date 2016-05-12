@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	http://launchpad.net/ffc/${MMVERSION}.x/${MMVERSION}.0/+download/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	https://launchpad.net/ffc
 COMMENT=	C++ code generator for multilinear forms
 

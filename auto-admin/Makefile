@@ -5,7 +5,7 @@ DISTNAME=	auto-admin-0.3.5
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Automate common systems administration tasks
 #LICENSE=	original-bsd

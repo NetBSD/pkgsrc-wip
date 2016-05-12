@@ -13,11 +13,10 @@
 DISTNAME=	blasr_libcpp-${PORTVERSION}
 CATEGORIES=	biology
 # FreeBSD MASTER_SITE_SUBDIR:
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
-		http://personalpages.tds.net/~jwbacon/Ports/distfiles/
+MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon4000@gmail.com
 
 COMMENT=	Library for analyzing PacBio sequences
 # Double-check this
