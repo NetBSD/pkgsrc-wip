@@ -1,0 +1,2 @@
+SLURM spank X11 plugin allows X11 applications run under the SLURM scheduler
+to access the display.
