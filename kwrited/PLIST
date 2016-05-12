@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PLIST.noutempter}bin/kwrited
+${PLIST.utempter}qt5/plugins/kf5/kded/kwrited.so
+${PLIST.noutempter}share/examples/kde-xdg/autostart/kwrited-autostart.desktop
+share/knotifications5/kwrited.notifyrc
