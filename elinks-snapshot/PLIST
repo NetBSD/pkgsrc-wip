@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/12 19:46:43 atomicules Exp $
+@comment $NetBSD$
 bin/elinks
 man/man1/elinks.1
 man/man5/elinks.conf.5
