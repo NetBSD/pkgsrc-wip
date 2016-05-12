@@ -1,6 +1,10 @@
 $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 
+First chunk: ?
+
+Second chunk:
 Support for Video for Linux on NetBSD.
+https://bugzilla.mozilla.org/show_bug.cgi?id=826985
 
 --- old-configure.in.orig	2016-03-18 22:27:07.000000000 +0000
 +++ old-configure.in

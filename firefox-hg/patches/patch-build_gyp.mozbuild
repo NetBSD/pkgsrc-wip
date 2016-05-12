@@ -1,6 +1,7 @@
 $NetBSD: patch-build_gyp.mozbuild,v 1.1 2014/09/29 10:46:24 thomasklausner Exp $
 
 Support for Video for Linux on NetBSD.
+https://bugzilla.mozilla.org/show_bug.cgi?id=826985
 
 --- build/gyp.mozbuild.orig	2014-04-18 02:02:38.000000000 +0000
 +++ build/gyp.mozbuild

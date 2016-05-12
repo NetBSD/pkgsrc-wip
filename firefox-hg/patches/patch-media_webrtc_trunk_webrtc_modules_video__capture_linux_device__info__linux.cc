@@ -1,6 +1,7 @@
 $NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.1 2014/09/29 10:46:25 thomasklausner Exp $
 
 Support for Video for Linux on NetBSD.
+https://bugzilla.mozilla.org/show_bug.cgi?id=826985
 
 --- media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2014-05-29 23:31:23.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc
