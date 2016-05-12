@@ -3924,6 +3924,7 @@ SUBDIR+=	slowhttptest
 SUBDIR+=	slrn-devel
 SUBDIR+=	slune
 SUBDIR+=	slurm
+SUBDIR+=	slurm-14.11.6
 SUBDIR+=	sm-change_ldappass
 SUBDIR+=	sm-change_qldforward
 SUBDIR+=	sm-compatibility
