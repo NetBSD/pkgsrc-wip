@@ -21,7 +21,7 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--htmldir=$(PREFIX)/share/doc/$(PKGNAME_NOREV)/html
 CONFIGURE_ARGS+=	--with-munge=$(BUILDLINK_PREFIX.munge:Q)
 
-REPLACE_PYTHON=	doc/html/shtml2html.py
+REPLACE_PYTHON=		doc/html/shtml2html.py
 
 PKG_GROUPS=		slurm
 PKG_USERS=		slurm:slurm
@@ -29,7 +29,7 @@ PKG_USERS=		slurm:slurm
 PKG_GECOS.slurm=	SLURM user
 PKG_SHELL.slurm=	$(NOLOGIN)
 
-RCD_SCRIPTS+=	slurmd slurmctld
+RCD_SCRIPTS+=		slurmd slurmctld
 
 SUBST_CLASSES+=		linuxinit
 SUBST_STAGE.linuxinit=	post-patch
