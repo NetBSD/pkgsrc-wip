@@ -5,5 +5,6 @@ RMD160 (am-utils-6.2.tar.gz) = 49444d4ca7c0131dcdb82967b9df2ff06de13830
 SHA512 (am-utils-6.2.tar.gz) = 868b662b113cffabb32ae88731e877e4c9830adf454f7e23d9bd033b534745e0e7b75619c6d7fa58ae13fa67dd588f4a789f53e452d0b4ffde90f3a3ed03de34
 Size (am-utils-6.2.tar.gz) = 2297161 bytes
 SHA1 (patch-aa) = 51ce9ff8724a190ab4bcae8f70af2006685f7ad4
+SHA1 (patch-amd_autil.c) = ee8b1908768b00790e339a32182ba0a17254155f
 SHA1 (patch-fsinfo_Makefile.in) = 4d8e4642ebd9dfc2b504af2477c34a89c9cf1768
 SHA1 (patch-ylwrap.amd) = e30de2720929bf70cfd1bcdd6a9e02cedf7d615b
