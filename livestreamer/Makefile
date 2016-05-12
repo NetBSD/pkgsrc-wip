@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2015/05/03 13:35:55 jonthn Exp $
 
 DISTNAME=	livestreamer-1.12.2
-CATEGORIES=	multimedia python
+CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrippa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
