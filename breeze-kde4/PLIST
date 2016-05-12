@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/kde4/kstyle_breeze_config.so
+lib/kde4/plugins/styles/breeze.so
+share/kde/apps/kstyle/themes/breeze.themerc
