@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/ProcessMonitor.h.orig	2016-05-04 00:54:14.458337439 +0000
+--- source/Plugins/Process/NetBSD/ProcessMonitor.h.orig	2016-05-12 22:23:45.179633093 +0000
 +++ source/Plugins/Process/NetBSD/ProcessMonitor.h
-@@ -0,0 +1,303 @@
+@@ -0,0 +1,302 @@
 +//===-- ProcessMonitor.h -------------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -290,8 +290,7 @@ $NetBSD$
 +    DupDescriptor(const lldb_private::FileSpec &file_spec, int fd, int flags);
 +
 +    static bool
-+    MonitorCallback(void *callback_baton,
-+                    lldb::pid_t pid, bool exited, int signal, int status);
++    MonitorCallback(ProcessMonitor *monitor, lldb::pid_t pid, bool exited, int signal, int status);
 +
 +    void
 +    DoOperation(Operation *op);

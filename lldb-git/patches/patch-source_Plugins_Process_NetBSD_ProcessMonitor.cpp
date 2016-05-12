@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/ProcessMonitor.cpp.orig	2016-05-04 00:54:14.452147128 +0000
+--- source/Plugins/Process/NetBSD/ProcessMonitor.cpp.orig	2016-05-12 22:23:45.173739621 +0000
 +++ source/Plugins/Process/NetBSD/ProcessMonitor.cpp
 @@ -0,0 +1,1344 @@
 +//===-- ProcessMonitor.cpp ------------------------------------ -*- C++ -*-===//
@@ -728,6 +728,8 @@ $NetBSD$
 +      m_terminal_fd(-1),
 +      m_operation(0)
 +{
++    using namespace std::placeholders;
++
 +    std::unique_ptr<LaunchArgs> args(new LaunchArgs(this, module, argv, envp,
 +                                                    stdin_file_spec,
 +                                                    stdout_file_spec,
@@ -765,7 +767,7 @@ $NetBSD$
 +
 +    // Finally, start monitoring the child process for change in state.
 +    m_monitor_thread = Host::StartMonitoringChildProcess(
-+        ProcessMonitor::MonitorCallback, this, GetPID(), true);
++        std::bind(&ProcessMonitor::MonitorCallback, this, _1, _2, _3, _4), GetPID(), true);
 +    if (!m_monitor_thread.IsJoinable())
 +    {
 +        error.SetErrorToGenericError();
@@ -782,6 +784,8 @@ $NetBSD$
 +      m_terminal_fd(-1),
 +      m_operation(0)
 +{
++    using namespace std::placeholders;
++
 +    sem_init(&m_operation_pending, 0, 0);
 +    sem_init(&m_operation_done, 0, 0);
 +
@@ -815,7 +819,7 @@ $NetBSD$
 +
 +    // Finally, start monitoring the child process for change in state.
 +    m_monitor_thread = Host::StartMonitoringChildProcess(
-+        ProcessMonitor::MonitorCallback, this, GetPID(), true);
++        std::bind(&ProcessMonitor::MonitorCallback, this, _1, _2, _3, _4), GetPID(), true);
 +    if (!m_monitor_thread.IsJoinable())
 +    {
 +        error.SetErrorToGenericError();
@@ -1066,14 +1070,10 @@ $NetBSD$
 +}
 +
 +bool
-+ProcessMonitor::MonitorCallback(void *callback_baton,
-+                                lldb::pid_t pid,
-+                                bool exited,
-+                                int signal,
-+                                int status)
++ProcessMonitor::MonitorCallback(ProcessMonitor *monitor, lldb::pid_t pid, bool exited, int signal, int status)
 +{
 +    ProcessMessage message;
-+    ProcessMonitor *monitor = static_cast<ProcessMonitor*>(callback_baton);
++
 +    ProcessNetBSD *process = monitor->m_process;
 +    assert(process);
 +    bool stop_monitoring;
