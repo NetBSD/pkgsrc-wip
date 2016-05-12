@@ -1786,7 +1786,6 @@ SUBDIR+=	lire
 SUBDIR+=	lissac
 SUBDIR+=	litecoin
 SUBDIR+=	lives
-SUBDIR+=	livestreamer
 SUBDIR+=	lldb-git
 SUBDIR+=	llilc-git
 SUBDIR+=	llvm-git
