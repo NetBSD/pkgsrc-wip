@@ -1,7 +1,7 @@
 pkglint checks:
 
 - WARN: PLIST:6: Manual page missing for bin/shrink_width
-- WARN: PLIST:8: Manual page missing for bin/vips-8.1
+- WARN: PLIST:8: Manual page missing for bin/vips-8.3
 
 Makefile:
 
