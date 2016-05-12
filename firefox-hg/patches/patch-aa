@@ -1,6 +1,8 @@
 $NetBSD: patch-aa,v 1.8 2015/08/17 07:30:48 thomasklausner Exp $
 
-First chunk: ?
+First chunk:
+Partially revert https://bugzilla.mozilla.org/show_bug.cgi?id=791305
+to allow building against jpeg (not jpeg-turbo).
 
 Second chunk:
 Support for Video for Linux on NetBSD.

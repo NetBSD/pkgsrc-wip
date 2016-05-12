@@ -1,5 +1,8 @@
 $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.6 2015/04/20 10:01:53 thomasklausner Exp $
 
+Partially revert https://bugzilla.mozilla.org/show_bug.cgi?id=791305
+to allow building against jpeg (not jpeg-turbo).
+
 --- image/decoders/nsJPEGDecoder.cpp.orig	2015-04-20 02:19:51.000000000 +0000
 +++ image/decoders/nsJPEGDecoder.cpp
 @@ -23,13 +23,28 @@
