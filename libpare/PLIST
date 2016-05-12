@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/13 23:02:30 outpaddling Exp $
-include/pare.h
-lib/libpare.a
-man/man3/pare.3

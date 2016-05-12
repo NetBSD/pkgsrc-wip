@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/08/13 23:02:30 outpaddling Exp $
-
-SHA1 (libpare-1.1.1.tar.gz) = 38e6bdb6a79a73df7f97bef5b8da654ca57862c8
-RMD160 (libpare-1.1.1.tar.gz) = ba85cb0fb10679a8abf5ebc0ad4e4a3694c4a580
-Size (libpare-1.1.1.tar.gz) = 18088 bytes
