@@ -2203,6 +2203,7 @@ SUBDIR+=	openclonk
 SUBDIR+=	opendchub
 SUBDIR+=	opendylan
 SUBDIR+=	openerp-server
+SUBDIR+=	openfodder
 SUBDIR+=	openh264
 SUBDIR+=	openjdk8-openjfx
 SUBDIR+=	openlogos
