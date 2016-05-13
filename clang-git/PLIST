@@ -82,6 +82,7 @@ include/clang/AST/MangleNumberingContext.h
 include/clang/AST/NSAPI.h
 include/clang/AST/NestedNameSpecifier.h
 include/clang/AST/OpenMPClause.h
+include/clang/AST/OperationKinds.def
 include/clang/AST/OperationKinds.h
 include/clang/AST/ParentMap.h
 include/clang/AST/PrettyPrinter.h
@@ -456,6 +457,7 @@ include/clang/Tooling/Core/Lookup.h
 include/clang/Tooling/Core/QualTypeNames.h
 include/clang/Tooling/Core/Replacement.h
 include/clang/Tooling/FileMatchTrie.h
+include/clang/Tooling/FixIt.h
 include/clang/Tooling/JSONCompilationDatabase.h
 include/clang/Tooling/Refactoring.h
 include/clang/Tooling/RefactoringCallbacks.h
