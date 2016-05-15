@@ -686,6 +686,7 @@ SUBDIR+=	evas-gif
 SUBDIR+=	evas-software-x11
 SUBDIR+=	evas-xpm
 SUBDIR+=	evas_generic_loaders17
+SUBDIR+=	eventd
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
 SUBDIR+=	evolution-data-server
