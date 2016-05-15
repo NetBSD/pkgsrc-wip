@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Macros only provided for kernel in in6.h
 --- src/common/callerid.c.orig	2016-05-03 22:41:59.000000000 +0000
 +++ src/common/callerid.c
 @@ -61,6 +61,12 @@

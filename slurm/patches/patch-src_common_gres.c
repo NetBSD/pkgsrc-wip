@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Linux compatibility
 --- src/common/gres.c.orig	2016-05-03 22:41:59.000000000 +0000
 +++ src/common/gres.c
 @@ -79,6 +79,21 @@ typedef cpuset_t cpu_set_t;
