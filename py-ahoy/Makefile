@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ciabatta>=0.4.0:../../wip/py-ciabatta
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-wheel>=0.26.0:../../wip/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-wheel>=0.26.0:../../devel/py-wheel
 
 
 WRKSRC=	${WRKDIR}/ahoy-0.8.2

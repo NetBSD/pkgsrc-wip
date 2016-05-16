@@ -12,7 +12,7 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=pydanny/whichcraft/}
 COMMENT=	Cross-platform cross-python shutil.which functionality
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-wheel>=0.23.0:../../wip/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-wheel>=0.23.0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

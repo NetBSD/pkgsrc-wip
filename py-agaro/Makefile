@@ -11,7 +11,7 @@ COMMENT=	Framework to run models
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-wheel>=0.26.0:../../wip/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-wheel>=0.26.0:../../devel/py-wheel
 
 WRKSRC=		${WRKDIR}/agaro-0.2.0
 
