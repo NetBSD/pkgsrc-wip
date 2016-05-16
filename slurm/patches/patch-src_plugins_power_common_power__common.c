@@ -1,6 +1,7 @@
 $NetBSD$
 
 # Linux compat
+
 --- ./src/plugins/power/common/power_common.c.orig	2016-05-03 22:35:12.000000000 +0000
 +++ ./src/plugins/power/common/power_common.c
 @@ -50,7 +50,7 @@

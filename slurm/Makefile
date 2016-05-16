@@ -16,11 +16,11 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
-USE_TOOLS=	perl pkg-config
+USE_TOOLS+=	perl pkg-config
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
-CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge:Q}
+CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
 REPLACE_PYTHON+=	doc/man/man2html.py

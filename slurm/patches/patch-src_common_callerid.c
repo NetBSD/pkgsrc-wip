@@ -1,6 +1,7 @@
 $NetBSD$
 
 # Hack to allow access to opaque structure members
+
 --- src/common/callerid.c.orig	2016-05-03 22:41:59.000000000 +0000
 +++ src/common/callerid.c
 @@ -58,6 +58,14 @@
