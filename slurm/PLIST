@@ -41,6 +41,7 @@ lib/slurm/acct_gather_profile_hdf5.la
 lib/slurm/acct_gather_profile_none.la
 lib/slurm/auth_munge.la
 lib/slurm/auth_none.la
+lib/slurm/burst_buffer_cray.la
 lib/slurm/burst_buffer_generic.la
 lib/slurm/checkpoint_none.la
 lib/slurm/checkpoint_ompi.la
@@ -83,6 +84,7 @@ lib/slurm/mpi_mvapich.la
 lib/slurm/mpi_none.la
 lib/slurm/mpi_openmpi.la
 lib/slurm/mpi_pmi2.la
+lib/slurm/power_cray.la
 lib/slurm/power_none.la
 lib/slurm/preempt_job_prio.la
 lib/slurm/preempt_none.la
