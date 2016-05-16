@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge:Q}
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
+REPLACE_PYTHON+=	doc/man/man2html.py
+REPLACE_PYTHON+=	testsuite/expect/regression.py
+REPLACE_PYTHON+=	testsuite/expect/driveregress.py
+REPLACE_PYTHON+=	contribs/cray/csm/slurmconfgen_smw.py
 
 PKG_GROUPS=		slurm
 PKG_USERS=		slurm:slurm

@@ -1,1 +1,4 @@
 mkdir /var/log/slurm /var/run/slurm?
+
+NetBSD build installs fewer files in share/doc/slurm/html because it lacks
+man2html.
