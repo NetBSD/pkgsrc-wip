@@ -1,6 +1,7 @@
 $NetBSD: patch-src_plugins_switch_generic_switch__generic.c,v 1.1 2015/04/20 13:08:37 outpaddling Exp $
 
 # Ensure proper #include order
+
 --- src/plugins/switch/generic/switch_generic.c.orig	2015-03-19 19:38:01.000000000 +0000
 +++ src/plugins/switch/generic/switch_generic.c
 @@ -40,12 +40,13 @@
