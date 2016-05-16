@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/man2html
+man/man1/man2html.1
+www/cgi-bin/man.cgi
