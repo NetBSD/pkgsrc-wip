@@ -1,13 +1,12 @@
 # $NetBSD: Makefile,v 1.9 2015/04/10 12:20:36 krytarowski Exp $
 
+PKGREVISION= 1
 .include "../../wip/mate/Makefile.common"
 
 DISTNAME=	mate-screensaver-${MATE_VERSION}
 CATEGORIES=	x11
 
 COMMENT=	Screen saver and locker for the MATE desktop
-
-CONFLICTS+=	gnome-screensaver-[0-9]*
 
 PKGCONFIG_OVERRIDE+=	data/mate-screensaver.pc.in
 
@@ -55,6 +54,15 @@ CONF_FILES+=	${PREFIX}/share/examples/pam.d/mate-screensaver \
 
 DEPENDS+=	consolekit-[0-9]*:../../sysutils/consolekit
 .endif
+
+post-install:
+	# avoid conflicts with gnome-screensaver
+	${RM} -f ${DESTDIR}${PREFIX}/share/applications/screensavers/gnomelogo-floaters.desktop
+	${RM} -f ${DESTDIR}${PREFIX}/share/pixmaps/gnome-logo-white.svg
+	cd ${DESTDIR}${PREFIX}/share/applications/screensavers && \
+	for f in *; do			\
+		${MV} $$f mate-$$f; 	\
+	done
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
