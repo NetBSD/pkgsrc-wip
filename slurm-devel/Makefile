@@ -47,17 +47,15 @@ SUBST_SED.linuxinit+=	-e 's|@sbindir@|$${exec_prefix}/sbin|'
 SUBST_SED.linuxinit+=	-e 's|@libdir@|$${exec_prefix}/lib|'
 SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|$${prefix}/etc|'
 
-MAKEFILE_EXAMPLE=	${WRKSRC}/etc/Makefile
+SUBST_CLASSES+=		make-ex
+SUBST_STAGE.make-ex=	post-install
+SUBST_FILES.make-ex=	etc/Makefile
+SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
 post-install:
-	# Sanity checks fail if installed files contain references to WRKSRC
-	${SED} -e "s|${WRKDIR}|PREFIX|g" \
-		${MAKEFILE_EXAMPLE} > ${MAKEFILE_EXAMPLE}.tmp
-	${MV} -f ${MAKEFILE_EXAMPLE}.tmp ${MAKEFILE_EXAMPLE}
 	${RM} -f ${WRKSRC}/etc/init.d.slurm.in.orig
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/init.d.slurm
 

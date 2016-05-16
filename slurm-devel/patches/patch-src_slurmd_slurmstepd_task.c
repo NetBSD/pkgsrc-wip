@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Linux compat
+
 --- src/slurmd/slurmstepd/task.c.orig	2016-05-03 22:41:59.000000000 +0000
 +++ src/slurmd/slurmstepd/task.c
 @@ -558,6 +558,18 @@ _make_tmpdir(stepd_step_rec_t *job)

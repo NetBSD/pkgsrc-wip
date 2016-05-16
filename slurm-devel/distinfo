@@ -10,4 +10,4 @@ SHA1 (patch-src_common_gres.c) = 0051f23e065ad70856ee261469591f454eafaf61
 SHA1 (patch-src_plugins_burst__buffer_common_burst__buffer__common.c) = b21a852722c26b955ae51d8615c9d22304650d32
 SHA1 (patch-src_plugins_power_common_power__common.c) = 7527e0655efe6ea0243cb3a9ff21814002bed5d9
 SHA1 (patch-src_plugins_switch_generic_switch__generic.c) = acf9bcc6f8a787770cd8553de520edef5bdbda4a
-SHA1 (patch-src_slurmd_slurmstepd_task.c) = 38498af389b770145c55bc9428d84c5d6a10ca91
+SHA1 (patch-src_slurmd_slurmstepd_task.c) = 7948c76ce65b0e5211486d2e7b1901664c1f7016
