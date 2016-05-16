@@ -1,5 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/04/10 12:08:34 krytarowski Exp $
 
+PKGREVISION= 1
 .include "../../wip/mate/Makefile.common"
 
 DISTNAME=	mate-applets-${MATE_VERSION}
@@ -7,12 +8,11 @@ CATEGORIES=	x11
 
 COMMENT=	MATE panel applets
 
-CONFLICTS+=	gnome-applets-[0-9]*
-
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/mate-applets
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-applets
 
