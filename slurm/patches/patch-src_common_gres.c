@@ -32,11 +32,13 @@ $NetBSD$
  	bitstr_t *usable_gres = NULL;
  	int i, i_last, rc;
  	ListIterator iter;
-@@ -5641,6 +5654,7 @@ static bitstr_t * _get_usable_gres(int c
+@@ -5641,6 +5654,9 @@ static bitstr_t * _get_usable_gres(int c
  		gres_inx += gres_slurmd_conf->count;
  	}
  	list_iterator_destroy(iter);
++#ifdef __NetBSD__
 +	cpuset_destroy(mask);
++#endif
  
  	return usable_gres;
  }
