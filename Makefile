@@ -1870,6 +1870,7 @@ SUBDIR+=	malaga
 SUBDIR+=	maloc
 SUBDIR+=	man
 SUBDIR+=	man-db
+SUBDIR+=	man2html
 SUBDIR+=	manatee
 SUBDIR+=	map-browse
 SUBDIR+=	mapnik
