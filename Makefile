@@ -3652,7 +3652,6 @@ SUBDIR+=	py-weblib
 SUBDIR+=	py-weboob
 SUBDIR+=	py-websocket
 SUBDIR+=	py-webtest
-SUBDIR+=	py-whichcraft
 SUBDIR+=	py-wifite
 SUBDIR+=	py-willow
 SUBDIR+=	py-wordpress-xmlrpc
