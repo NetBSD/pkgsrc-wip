@@ -1,5 +1,6 @@
 $NetBSD: patch-src_slurmd_slurmstepd_task.c,v 1.2 2015/04/20 13:08:37 outpaddling Exp $
 
+# Hack for Linux compat
 --- src/slurmd/slurmstepd/task.c.orig	2015-03-19 19:38:01.000000000 +0000
 +++ src/slurmd/slurmstepd/task.c
 @@ -540,6 +540,17 @@ _make_tmpdir(stepd_step_rec_t *job)
