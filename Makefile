@@ -3445,7 +3445,6 @@ SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rpyc
 SUBDIR+=	py-rql
 SUBDIR+=	py-rsistent
-SUBDIR+=	py-ruamel-base
 SUBDIR+=	py-ruamel-yaml
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-sage

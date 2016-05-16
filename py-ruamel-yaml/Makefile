@@ -10,7 +10,7 @@ HOMEPAGE=	https://bitbucket.org/ruamel/yaml
 COMMENT=	YAML parser/emitter
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-ruamel-base>=1.0.0:../../wip/py-ruamel-base
+DEPENDS+=	${PYPKGPREFIX}-ruamel-base>=1.0.0:../../devel/py-ruamel-base
 
 # for python < 3.0
 .include "../../lang/python/pyversion.mk"
