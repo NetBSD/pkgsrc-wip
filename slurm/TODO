@@ -2,3 +2,5 @@ mkdir /var/log/slurm /var/run/slurm?
 
 NetBSD build installs fewer files in share/doc/slurm/html because it lacks
 man2html.
+	man2html Perl script does not work
+	Seems to requires man2html from Gnu man package

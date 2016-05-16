@@ -32,6 +32,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man2html.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/man.cgi ${DESTDIR}${CGIDIR}
 
-# Linux doesn't have zlib in the base, so just in case...
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

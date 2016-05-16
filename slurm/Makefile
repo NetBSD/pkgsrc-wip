@@ -21,7 +21,6 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
-CONFIGURE_ARGS+=	--with-json=${PREFIX}
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
 REPLACE_PYTHON+=	doc/man/man2html.py
@@ -46,6 +45,11 @@ SUBST_SED.linuxinit+=	-e 's|@bindir@|$${exec_prefix}/bin|'
 SUBST_SED.linuxinit+=	-e 's|@sbindir@|$${exec_prefix}/sbin|'
 SUBST_SED.linuxinit+=	-e 's|@libdir@|$${exec_prefix}/lib|'
 SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|$${prefix}/etc|'
+
+SUBST_CLASSES+=		configure
+SUBST_STAGE.configure=	post-patch
+SUBST_FILES.configure=	configure
+SUBST_SED.configure=	-e 's|/usr/local|${PREFIX}|g'
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
