@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Linux compatiblity
+# CPU sets are not (yet) standardized across platforms.
 
 --- src/common/gres.c.orig	2016-05-03 22:41:59.000000000 +0000
 +++ src/common/gres.c
@@ -32,3 +32,11 @@ $NetBSD$
  	bitstr_t *usable_gres = NULL;
  	int i, i_last, rc;
  	ListIterator iter;
+@@ -5641,6 +5654,7 @@ static bitstr_t * _get_usable_gres(int c
+ 		gres_inx += gres_slurmd_conf->count;
+ 	}
+ 	list_iterator_destroy(iter);
++	cpuset_destroy(mask);
+ 
+ 	return usable_gres;
+ }
