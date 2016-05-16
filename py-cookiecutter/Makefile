@@ -24,7 +24,7 @@ DEPENDS+=			${PYPKGPREFIX}-future>=0.15.2:../../devel/py-future
 DEPENDS+=			${PYPKGPREFIX}-binaryornot>=0.2.0:../../wip/py-binaryornot
 DEPENDS+=			${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
 DEPENDS+=			${PYPKGPREFIX}-click>=6.3:../../devel/py-click
-DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.1.1:../../wip/py-whichcraft
+DEPENDS+=			${PYPKGPREFIX}-whichcraft>=0.1.1:../../devel/py-whichcraft
 DEPENDS+=			${PYPKGPREFIX}-ruamel-yaml>=0.10.12:../../devel/py-ruamel-yaml
 DEPENDS+=			${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 
