@@ -4,7 +4,7 @@ DISTNAME=	newsbeuter-2.9
 CATEGORIES=	news
 MASTER_SITES=	http://www.newsbeuter.org/downloads/
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.newsbeuter.org/
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
 LICENSE=	mit
