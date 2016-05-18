@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
-
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
