@@ -55,4 +55,5 @@ share/debootstrap/scripts/wily
 share/debootstrap/scripts/woody
 share/debootstrap/scripts/woody.buildd
 share/debootstrap/scripts/xenial
+share/debootstrap/scripts/yakkety
 share/debootstrap/ubuntu-archive-keyring.gpg
