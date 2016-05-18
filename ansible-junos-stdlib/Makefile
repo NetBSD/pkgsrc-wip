@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ansible-junos-stdlib-1.2.0
-PKGREVISION=	1
+DISTNAME=	ansible-junos-stdlib-1.3.1
 CATEGORIES=	sysutils net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Juniper/}
 

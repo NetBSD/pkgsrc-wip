@@ -10,12 +10,14 @@ share/ansible/roles/Juniper.junos/docs/juniper.png
 share/ansible/roles/Juniper.junos/docs/rst.j2
 share/ansible/roles/Juniper.junos/env-setup
 share/ansible/roles/Juniper.junos/library/__init__.py
+share/ansible/roles/Juniper.junos/library/junos_cli
 share/ansible/roles/Juniper.junos/library/junos_commit
 share/ansible/roles/Juniper.junos/library/junos_get_config
 share/ansible/roles/Juniper.junos/library/junos_get_facts
 share/ansible/roles/Juniper.junos/library/junos_install_config
 share/ansible/roles/Juniper.junos/library/junos_install_os
 share/ansible/roles/Juniper.junos/library/junos_rollback
+share/ansible/roles/Juniper.junos/library/junos_rpc
 share/ansible/roles/Juniper.junos/library/junos_shutdown
 share/ansible/roles/Juniper.junos/library/junos_srx_cluster
 share/ansible/roles/Juniper.junos/library/junos_zeroize
