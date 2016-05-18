@@ -42,7 +42,9 @@ SUBST_VARS.pam-conf=	PREFIX
 
 PLIST.pam=		yes
 
-post-install:
+post-install: pamd
+.PHONY: pamd
+pamd:
 	${TEST} -f ${DESTDIR}${PREFIX}/share/examples/pam.d/mate-screensaver || \
 		${INSTALL_DATA} ${WRKDIR}/mate-screensaver.pam ${DESTDIR}${PREFIX}/share/examples/pam.d/mate-screensaver
 
