@@ -15,9 +15,9 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED=	27
 
-DEPENDS+=	${PYPKGPREFIX}-serial:../../comms/py-serial
-DEPENDS+=	${PYPKGPREFIX}-paramiko:../../security/py-paramiko
-DEPENDS+=	${PYPKGPREFIX}-lxml:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
