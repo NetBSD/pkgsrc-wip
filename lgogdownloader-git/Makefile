@@ -21,14 +21,14 @@ USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DPC_JSONCPP_FOUND:BOOL=1
 CMAKE_ARGS+=	-DPC_JSONCPP_INCLUDEDIRS:PATH=${BUILDLINK_PREFIX.jsoncpp}/include/json
 CMAKE_ARGS+=	-DPC_JSONCPP_LIBRARY_DIRS:PATH=${BUILDLINK_PREFIX.jsoncpp}/lib
-CMAKE_ARGS+=	-DPC_TINYXML_FOUND:BOOL=1
-CMAKE_ARGS+=	-DPC_TINYXML_LIBRARY_DIRS:PATH=${BUILDLINK_PREFIX.tinyxml}/lib
+CMAKE_ARGS+=	-DPC_TINYXML2_FOUND:BOOL=1
+CMAKE_ARGS+=	-DPC_TINYXML2_LIBRARY_DIRS:PATH=${BUILDLINK_PREFIX.tinyxml2}/lib
 # for man page
 CMAKE_ARGS+=	-DINSTALL_SHARE_DIR:PATH=${PREFIX}
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../security/liboauth/buildlink3.mk"
-.include "../../textproc/tinyxml/buildlink3.mk"
+.include "../../textproc/tinyxml2/buildlink3.mk"
 .include "../../www/htmlcxx/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../misc/rhash/buildlink3.mk"
