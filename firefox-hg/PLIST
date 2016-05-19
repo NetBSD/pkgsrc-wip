@@ -282,6 +282,7 @@ lib/firefox-${VERSION}/browser/chrome/browser/content/browser/tabbrowser.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/tabbrowser.xml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/translation-infobar.xml
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/urlbarBindings.xml
+lib/firefox-${VERSION}/browser/chrome/browser/content/browser/usercontext/usercontext.css
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/utilityOverlay.js
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/viewSourceOverlay.xul
 lib/firefox-${VERSION}/browser/chrome/browser/content/browser/web-panels.js
@@ -498,10 +499,10 @@ lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-128.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-16.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-32.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-bg.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-desktopIcon.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-desktopIcon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-horizontalbar.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-horizontalbar@2x.png
-lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-mobileIcon.png
+lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-mobileIcon.svg
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/sync-notification-24.png
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/syncCommon.css
 lib/firefox-${VERSION}/browser/chrome/browser/skin/classic/browser/syncProgress-horizontalbar.png
@@ -682,7 +683,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/content/shared/widgets/graphs-fra
 lib/firefox-${VERSION}/browser/chrome/devtools/content/shared/widgets/mdn-docs-frame.xhtml
 lib/firefox-${VERSION}/browser/chrome/devtools/content/shared/widgets/mdn-docs.css
 lib/firefox-${VERSION}/browser/chrome/devtools/content/shared/widgets/spectrum-frame.xhtml
-lib/firefox-${VERSION}/browser/chrome/devtools/content/shared/widgets/spectrum.css
+lib/firefox-${VERSION}/browser/chrome/devtools/content/shared/widgets/tooltip-frame.xhtml
 lib/firefox-${VERSION}/browser/chrome/devtools/content/shared/widgets/widgets.css
 lib/firefox-${VERSION}/browser/chrome/devtools/content/sourceeditor/codemirror/addon/comment/comment.js
 lib/firefox-${VERSION}/browser/chrome/devtools/content/sourceeditor/codemirror/addon/dialog/dialog.css
@@ -808,8 +809,6 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/toolbox-hosts.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/toolbox-options.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/framework/toolbox.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/fronts/storage.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/fronts/stylesheets.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/breadcrumbs.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/computed/computed.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/inspector/fonts/fonts.js
@@ -984,6 +983,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsiv
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/actions/index.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/actions/location.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/actions/screenshot.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/actions/touch-simulation.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/actions/viewports.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/app.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/audio/camera-click.mp3
@@ -1004,12 +1004,14 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsiv
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/images/rotate-viewport.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/images/screenshot.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/images/select-arrow.svg
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/images/touch-events.svg
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/index.css
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/manager.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/reducers.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/reducers/devices.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/reducers/location.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/reducers/screenshot.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/reducers/touch-simulation.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/reducers/viewports.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/responsive-ua.css
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/store.js
@@ -1032,6 +1034,8 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/au
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/browser-loader.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/frame.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/h-split-box.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/notification-box.css
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/notification-box.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/array.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/attribute.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/caption.js
@@ -1082,6 +1086,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/fi
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/frame-script-utils.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/getjson.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/inplace-editor.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/key-shortcuts.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/l10n.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/node-attribute-parser.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/options-view.js
@@ -1122,6 +1127,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/wi
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/FlameGraph.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/Graphs.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/GraphsWorker.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/HTMLTooltip.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/LineGraphWidget.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/MdnDocsWidget.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/MountainGraphWidget.js
@@ -1133,8 +1139,8 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/wi
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/TreeWidget.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/VariablesView.jsm
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/VariablesViewController.jsm
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/ViewHelpers.jsm
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/tooltip/TooltipToggle.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/view-helpers.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/sourceeditor/autocomplete.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/sourceeditor/css-autocompleter.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/sourceeditor/debugger.js
@@ -1302,6 +1308,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/performan
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/performance/recorder.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/performance/timeline.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/primitive.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/protocol.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/service-worker-child.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/server/worker.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/DevToolsUtils.js
@@ -1313,6 +1320,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/apps/Simu
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/apps/app-actor-front.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/async-storage.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/async-utils.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/builtin-modules.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/client/connection-manager.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/client/main.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/content-observer.js
@@ -1321,7 +1329,11 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/deprecate
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/discovery/discovery.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/event-emitter.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/event-parsers.js
-lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/Templater.jsm
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/fronts/highlighters.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/fronts/inspector.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/fronts/storage.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/fronts/styles.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/fronts/stylesheets.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/addon.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/appcache.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/commands/calllog.js
@@ -1405,6 +1417,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/sour
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/source/lib/gcli/util/prism.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/source/lib/gcli/util/spell.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/source/lib/gcli/util/util.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/gcli/templater.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/heapsnapshot/CensusUtils.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/heapsnapshot/DominatorTreeNode.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/heapsnapshot/HeapAnalysesClient.js
@@ -1435,7 +1448,10 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/security/
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/security/prompt.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/security/socket.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/sourcemap/source-map.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/highlighters.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/inspector.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/storage.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/styles.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/stylesheets.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/system.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/touch/simulator-content.js
@@ -1675,6 +1691,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/skin/promisedebugger.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/rules.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/scratchpad.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/shadereditor.css
+lib/firefox-${VERSION}/browser/chrome/devtools/skin/spectrum.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/splitters.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/splitview.css
 lib/firefox-${VERSION}/browser/chrome/devtools/skin/storage.css
@@ -2313,6 +2330,7 @@ lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/j
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/js/copy.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/js/desktopViews.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/js/feedbackViews.js
+lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/js/models.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/js/otconfig.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/js/panel.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/panels/js/roomStore.js
@@ -2379,6 +2397,7 @@ lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/i
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/img/icons-10x10.svg
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/img/icons-14x14.svg
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/img/icons-16x16.svg
+lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/img/join_notification.svg
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/img/leave.svg
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/img/leave_notification.svg
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/img/media-group-left-hover.svg
@@ -2418,7 +2437,6 @@ lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/j
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/js/linkifiedTextView.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/js/loopapi-client.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/js/mixins.js
-lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/js/models.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/js/otSdkDriver.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/js/remoteCursorStore.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/js/store.js
@@ -2439,6 +2457,7 @@ lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/s
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/vendor/backbone.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/vendor/classnames.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/vendor/lodash.js
+lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/vendor/react-dom.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/vendor/react.js
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/vendor/sdk-content/css/ot.css
 lib/firefox-${VERSION}/browser/features/loop@mozilla.org/chrome/content/shared/vendor/sdk-content/images/rtc/access-denied-chrome.png
@@ -2507,6 +2526,7 @@ lib/firefox-${VERSION}/browser/modules/ContentLinkHandler.jsm
 lib/firefox-${VERSION}/browser/modules/ContentObservers.jsm
 lib/firefox-${VERSION}/browser/modules/ContentSearch.jsm
 lib/firefox-${VERSION}/browser/modules/ContentWebRTC.jsm
+lib/firefox-${VERSION}/browser/modules/ContextualIdentityService.jsm
 lib/firefox-${VERSION}/browser/modules/CustomizableUI.jsm
 lib/firefox-${VERSION}/browser/modules/CustomizableWidgets.jsm
 lib/firefox-${VERSION}/browser/modules/CustomizeMode.jsm
@@ -2526,6 +2546,7 @@ lib/firefox-${VERSION}/browser/modules/NetworkPrioritizer.jsm
 lib/firefox-${VERSION}/browser/modules/NewTabMessages.jsm
 lib/firefox-${VERSION}/browser/modules/NewTabPrefsProvider.jsm
 lib/firefox-${VERSION}/browser/modules/NewTabRemoteResources.jsm
+lib/firefox-${VERSION}/browser/modules/NewTabSearchProvider.jsm
 lib/firefox-${VERSION}/browser/modules/NewTabURL.jsm
 lib/firefox-${VERSION}/browser/modules/NewTabWebChannel.jsm
 lib/firefox-${VERSION}/browser/modules/PanelFrame.jsm
@@ -2547,7 +2568,6 @@ lib/firefox-${VERSION}/browser/modules/Social.jsm
 lib/firefox-${VERSION}/browser/modules/TabGroupsMigrator.jsm
 lib/firefox-${VERSION}/browser/modules/TransientPrefs.jsm
 lib/firefox-${VERSION}/browser/modules/UITour.jsm
-lib/firefox-${VERSION}/browser/modules/UserContextUI.jsm
 lib/firefox-${VERSION}/browser/modules/devtools/client/framework/gDevTools.jsm
 lib/firefox-${VERSION}/browser/modules/devtools/gDevTools.jsm
 lib/firefox-${VERSION}/browser/modules/distribution.js
@@ -2761,8 +2781,8 @@ lib/firefox-${VERSION}/chrome/marionette/content/SpecialPowersObserverAPI.js
 lib/firefox-${VERSION}/chrome/marionette/content/accessibility.js
 lib/firefox-${VERSION}/chrome/marionette/content/action.js
 lib/firefox-${VERSION}/chrome/marionette/content/atom.js
+lib/firefox-${VERSION}/chrome/marionette/content/browser.js
 lib/firefox-${VERSION}/chrome/marionette/content/capture.js
-lib/firefox-${VERSION}/chrome/marionette/content/common.js
 lib/firefox-${VERSION}/chrome/marionette/content/cookies.js
 lib/firefox-${VERSION}/chrome/marionette/content/dispatcher.js
 lib/firefox-${VERSION}/chrome/marionette/content/driver.js
@@ -2774,6 +2794,7 @@ lib/firefox-${VERSION}/chrome/marionette/content/event.js
 lib/firefox-${VERSION}/chrome/marionette/content/frame.js
 lib/firefox-${VERSION}/chrome/marionette/content/interaction.js
 lib/firefox-${VERSION}/chrome/marionette/content/listener.js
+lib/firefox-${VERSION}/chrome/marionette/content/logging.js
 lib/firefox-${VERSION}/chrome/marionette/content/message.js
 lib/firefox-${VERSION}/chrome/marionette/content/modal.js
 lib/firefox-${VERSION}/chrome/marionette/content/proxy.js
@@ -3216,7 +3237,7 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/collapse.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/error-16.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/error-64.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/expand.png
-lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/find-arrows.png
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/find-arrows.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/folder-item.png
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/info.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/icons/information-16.png
@@ -3300,6 +3321,10 @@ lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/radio.css
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/radio/radio-check-dis.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/radio/radio-check.gif
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Close-24x24.svg
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Content-Width-Minus-42x16.svg
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Content-Width-Plus-44x16.svg
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Line-Height-Minus-38x14.svg
+lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Line-Height-Plus-38x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Minus-24x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Plus-24x24.svg
 lib/firefox-${VERSION}/chrome/toolkit/skin/classic/global/reader/RM-Type-Controls-24x24.svg
