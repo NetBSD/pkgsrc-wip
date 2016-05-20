@@ -7,6 +7,8 @@ GIT_REPO.qtproject=	https://github.com/qtproject/qtbase.git
 GIT_BRANCH.qtproject=	5.6
 COMMENT=	C++ X GUI toolkit
 
+WRKSRC=		${WRKDIR}/qtproject
+
 .include "../../wip/qt5-qtbase-git/Makefile.common"
 
 .if defined(MAKE_JOBS)
