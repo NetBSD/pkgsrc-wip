@@ -987,6 +987,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsiv
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/actions/viewports.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/app.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/audio/camera-click.mp3
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/browser/swap.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/components/browser.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/components/device-modal.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/components/device-selector.js
@@ -1018,6 +1019,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsiv
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/types.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/utils/e10s.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/utils/l10n.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsive.html/utils/message.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsivedesign/resize-commands.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsivedesign/responsivedesign-child.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/responsivedesign/responsivedesign.jsm
