@@ -13,10 +13,10 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_TAG=	${DISTNAME}
 
 # TODO: release version of dependencies?
-DEPENDS+=	tex-enumitem:../../print/tex-enumitem
-DEPENDS+=	tex-memoir:../../print/tex-memoir
-DEPENDS+=	tex-textcase:../../print/tex-textcase
-DEPENDS+=	tex-hyperref:../../print/tex-hyperref
+DEPENDS+=	tex-enumitem>=3.5.2:../../print/tex-enumitem
+DEPENDS+=	tex-memoir>=3.7e:../../print/tex-memoir
+DEPENDS+=	tex-textcase>=0.07:../../print/tex-textcase
+DEPENDS+=	tex-hyperref>=6.83m:../../print/tex-hyperref
 
 SUBST_CLASSES+=			install-path
 SUBST_STAGE.install-path =	pre-configure
