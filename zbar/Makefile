@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.5 2015/07/07 18:50:58 leot1990 Exp $
 
 DISTNAME=	zbar-0.10
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zbar/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +21,10 @@ CONFIGURE_ARGS+=	--disable-video
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-qt
+
+# pkgsrc ImageMagick always provide also <MagickWand.h> there is no need
+# to check it also manually (and this breaks with ImageMagick-7)
+CONFIGURE_ENV+=		ac_cv_header_wand_MagickWand_h=yes
 
 PKGCONFIG_OVERRIDE+=	zbar-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	zbar-qt.pc.in
