@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.3 2015/01/24 16:48:48 thomasklausner Exp $
 
-DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.18beta5
+DISTNAME=		nss-${NSS_RELEASE}
+# see lib/nss/nss.h
+NSS_RELEASE=		3.25.0
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_RELEASE:S/.0$//:S/./_/g}_RTM/src/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_RTM/src/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
@@ -67,12 +68,29 @@ MAKE_ENV+=	INCLUDES=-I${BUILDLINK_PREFIX.nspr}/include/nspr
 MAKE_ENV+=	NSS_USE_SYSTEM_SQLITE=1
 MAKE_ENV+=	EXTRA_SHARED_LIBS="-Wl,-R${BUILDLINK_PREFIX.nspr}/lib/nspr -Wl,-R,${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4"
 
+NSS_MAJOR_VERSION=	${NSS_RELEASE:C/\.[0-9.]*//}
+NSS_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
+NSS_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
+
+SUBST_CLASSES+=		config
+SUBST_SED.config+=	-e "s,@PREFIX@,${PREFIX},g"
+SUBST_SED.config+=	-e "s,@NSS_MAJOR_VERSION@,${NSS_MAJOR_VERSION},"
+SUBST_SED.config+=	-e "s,@NSS_MINOR_VERSION@,${NSS_MINOR_VERSION},"
+SUBST_SED.config+=	-e "s,@NSS_PATCH_VERSION@,${NSS_PATCH_VERSION},"
+SUBST_SED.config+=	-e "s!@COMPILER_RPATH_FLAG@!${COMPILER_RPATH_FLAG}!"
+SUBST_SED.config+=	-e "s,@PTHREAD@,${BUILDLINK_LIBS.pthread:Q},"
+SUBST_STAGE.config=	pre-build
+SUBST_MESSAGE.config=	Preparing *-config files.
+SUBST_FILES.config+=	nss.pc nss-config
+
+INSTALLATION_DIRS=	bin include/nss lib/nss lib/pkgconfig
+DIST=	${WRKDIR}/dist
+
 post-extract:
 	find ${WRKSRC} -type f | xargs ${CHMOD} 644
 	find ${WRKSRC} -type d | xargs ${CHMOD} 755
-
-INSTALLATION_DIRS=	include/nss lib/nss lib/pkgconfig
-DIST=	${WRKDIR}/dist
+	${CP} ${FILESDIR}/nss.pc.in ${WRKSRC}/nss.pc
+	${CP} ${FILESDIR}/nss-config.in ${WRKSRC}/nss-config
 
 do-install:
 	(cd ${DIST}/public && pax -Lrw . ${DESTDIR}${PREFIX}/include/nss/ )
@@ -80,17 +98,8 @@ do-install:
 		pax -Lrw *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
 	${INSTALL_LIB} ${DIST}/*_OPT.OBJ/lib/libcrmf.a \
 		${DESTDIR}${PREFIX}/lib/nss/
-	set -e; \
-	{ ${ECHO} "Name: NSS"; \
-	  ${ECHO} "Description: Mozilla Network Security Services"; \
-	  ${ECHO} "Version: ${NSS_RELEASE}"; \
-	  ${ECHO} "Requires: nspr >= 4.10.3"; \
-	  ${ECHO} "Cflags: -I${PREFIX}/include/nss/nss -I${PREFIX}/include/nss"; \
-	  ${ECHO} "Libs: -L${PREFIX}/lib/nss" \
-	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss" \
-	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 -lnssutil3" \
-	      ${BUILDLINK_LIBS.pthread:Q}; \
-	} >${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
+	${INSTALL_DATA} ${WRKSRC}/nss.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
+	${INSTALL_SCRIPT} ${WRKSRC}/nss-config ${DESTDIR}${PREFIX}/bin/nss-config
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../wip/nspr-hg/buildlink3.mk"
