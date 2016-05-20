@@ -1,11 +1,13 @@
 # $NetBSD: Makefile,v 1.35 2016/04/11 19:01:40 ryoon Exp $
 
-DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	6
+GIT_REPOSITORIES=	qtproject
+GIT_REPO.qtproject=	https://github.com/qtproject/qtbase.git
+# 5.6 will go up to 5.7 and dev automatically
+GIT_BRANCH.qtproject=	5.6
 COMMENT=	C++ X GUI toolkit
 
-.include "../../x11/qt5-qtbase/Makefile.common"
+.include "../../wip/qt5-qtbase-git/Makefile.common"
 
 .if defined(MAKE_JOBS)
 .  if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
@@ -184,6 +186,7 @@ post-install:
 	${MV} -f ${DESTDIR}${PREFIX}/${BROKEN_FILES}.1 \
 		${DESTDIR}${PREFIX}/${BROKEN_FILES}
 
+.include "../../wip/mk/git-package.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
