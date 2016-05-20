@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/04/10 18:33:03 krytarowski Exp $
-
-SHA1 (libappindicator-12.10.0.tar.gz) = 17e2e22cb7025a175ba7f7cff5efdf5dc0e79634
-RMD160 (libappindicator-12.10.0.tar.gz) = 24e5df115394adcea584c19d36562162c3ab333e
-Size (libappindicator-12.10.0.tar.gz) = 535562 bytes
