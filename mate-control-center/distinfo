@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2015/04/09 02:18:27 krytarowski Exp $
-
-SHA1 (mate-control-center-1.14.0.tar.xz) = 4e02c9461fbdf7acf4bca015199e8bfedb11a278
-RMD160 (mate-control-center-1.14.0.tar.xz) = c61f2b94a15600e7a1d3feed5e3cb599aa94ba9f
-SHA512 (mate-control-center-1.14.0.tar.xz) = b0739d782b08c380dce5ffe3fd3fa97ae4c6e0ba7225f9af5f72bea160ffecd0d14ee27d9187df88326c77b5e8537aaad072321d2cd23d50e34c14f794efa878
-Size (mate-control-center-1.14.0.tar.xz) = 1380000 bytes
