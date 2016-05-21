@@ -18,6 +18,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	perl
 
+PKGSRC_FORTRAN=	gfortran
+
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../devel/libf2c/buildlink3.mk"
