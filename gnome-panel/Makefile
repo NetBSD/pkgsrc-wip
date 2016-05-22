@@ -67,7 +67,7 @@ SUBST_SED.noundef=	-e 's/ -no-undefined//g'
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../wip/gnome-menus/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
