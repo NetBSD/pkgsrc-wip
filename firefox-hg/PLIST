@@ -1456,6 +1456,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/sto
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/styles.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/specs/stylesheets.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/system.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/task.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/touch/simulator-content.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/touch/simulator.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/shared/transport/packets.js
