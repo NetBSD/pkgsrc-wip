@@ -1,9 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	lumina-0.8.8
+DISTNAME=	lumina-0.9.0
+PATCHREL=	-P1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pcbsd/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}-Release
+GITHUB_TAG=	v${PKGVERSION_NOREV}-Release${PATCHREL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lumina-desktop.org/
