@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/06/07 14:24:48 yrmt Exp $
 
-DISTNAME=	gnome-3.17
+DISTNAME=	gnome-3.21.1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
