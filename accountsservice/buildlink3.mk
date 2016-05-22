@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.accountsservice?=	../../wip/accountsservice
 # XXX: option?
 .include "../../devel/gobject-introspection/buildlink3.mk"
 
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .endif	# ACCOUNTSSERVICE_BUILDLINK3_MK
 
