@@ -61,7 +61,7 @@ OWN_DIRS+=	${VARBASE}/log/ConsoleKit
 CONF_FILES+=	/dev/null ${VARBASE}/log/ConsoleKit/history
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
