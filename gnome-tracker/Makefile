@@ -19,21 +19,28 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config intltool gmake
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
+PKG_SYSCONFSUBDIR=	xdg/autostart
+MAKE_DIRS+=	${PKG_SYSCONFDIR}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-extract.desktop \
-                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-extract.desktop
+                ${PKG_SYSCONFDIR}/tracker-extract.desktop
 CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-apps.desktop \
-                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-miner-apps.desktop
+                ${PKG_SYSCONFDIR}/tracker-miner-apps.desktop
 CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-fs.desktop \
-                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-miner-fs.desktop
+                ${PKG_SYSCONFDIR}/tracker-miner-fs.desktop
 CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-user-guides.desktop \
-                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-miner-user-guides.desktop
+                ${PKG_SYSCONFDIR}/tracker-miner-user-guides.desktop
 CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-store.desktop \
-                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-store.desktop
+                ${PKG_SYSCONFDIR}/tracker-store.desktop
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
+REPLACE_PYTHON+=	tests/*/*.py
+REPLACE_PYTHON+=	tests/*/*/*.py
+REPLACE_PYTHON+=	examples/rss-reader/*.py
+REPLACE_PYTHON+=	utils/*/*.py
+REPLACE_PYTHON+=	utils/*/*/*.py
 
 # Options?
 CONFIGURE_ARGS+=	--disable-miner-thunderbird
@@ -47,4 +54,5 @@ CONFIGURE_ARGS+=	--disable-miner-evolution
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
