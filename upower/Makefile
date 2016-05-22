@@ -38,7 +38,7 @@ BUILD_DEFS+=	VARBASE
 
 .include "options.mk"
 
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.0
 .include "../../sysutils/dbus/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.76
