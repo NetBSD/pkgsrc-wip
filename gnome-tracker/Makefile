@@ -12,6 +12,8 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Tracker
 COMMENT=	Desktop-neutral metadata-based search framework
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
+CONFLICTS+=	tracker-[0-9]*:../../audio/tracker
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
