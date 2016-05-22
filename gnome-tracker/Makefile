@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	tracker-1.8.0
+PKGNAME=	gnome-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/1.8/}
 EXTRACT_SUFX=	.tar.xz
