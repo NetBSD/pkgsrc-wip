@@ -9,7 +9,7 @@ Fix building on Darwin.
  #include "qtconcurrentiteratekernel.h"
  
 -#if defined(Q_OS_MAC)
-+#if defined(Q_OS_MAC) || defined(__APPLE__)
++#if defined(Q_OS_MAC) || defined(Q_OS_DARWIN)
  #include <mach/mach.h>
  #include <mach/mach_time.h>
  #include <unistd.h>
@@ -18,7 +18,7 @@ Fix building on Darwin.
  };
  
 -#if defined(Q_OS_MAC)
-+#if defined(Q_OS_MAC) || defined(__APPLE__)
++#if defined(Q_OS_MAC) || defined(Q_OS_DARWIN)
  
  static qint64 getticks()
  {
