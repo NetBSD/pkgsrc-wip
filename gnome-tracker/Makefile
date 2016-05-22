@@ -19,6 +19,22 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config intltool gmake
 
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-extract.desktop \
+                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-extract.desktop
+CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-apps.desktop \
+                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-miner-apps.desktop
+CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-fs.desktop \
+                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-miner-fs.desktop
+CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-miner-user-guides.desktop \
+                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-miner-user-guides.desktop
+CONF_FILES+=	${EGDIR}/xdg/autostart/tracker-store.desktop \
+                ${PKG_SYSCONFDIR}/xdg/autostart/tracker-store.desktop
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
 # Options?
 CONFIGURE_ARGS+=	--disable-miner-thunderbird
 CONFIGURE_ARGS+=	--disable-miner-firefox
