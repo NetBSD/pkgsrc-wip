@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/28 00:39:13 poppnk Exp $
+
+SHA1 (tracker-1.8.0.tar.xz) = bbd093cc36e8086e70cf005a1e2b2a0f1995abde
+RMD160 (tracker-1.8.0.tar.xz) = 26d6c239b5240fafe8c44a708e44738ec6d98819
+SHA512 (tracker-1.8.0.tar.xz) = c7d0600cfcf5485188167d237e22a00a5777b97b96c8735ba3efcef67288a8d9db9476f05289cf1498c50432981a4bc932973241138ea116a18e421576ed3cdd
+Size (tracker-1.8.0.tar.xz) = 4961488 bytes
