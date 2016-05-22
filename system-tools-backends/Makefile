@@ -17,7 +17,7 @@ PLIST_VARS+=		polkit
 
 .include "../../mk/bsd.options.mk"
 .if !empty(PKG_OPTIONS:Mpolkit)
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 PLIST.polkit=		yes
 .endif
 
