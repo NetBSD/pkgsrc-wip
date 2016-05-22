@@ -2447,7 +2447,6 @@ SUBDIR+=	passepartout
 SUBDIR+=	paxmirabilis
 SUBDIR+=	paxtest
 SUBDIR+=	pbbuttonsd
-SUBDIR+=	pcmanfm
 SUBDIR+=	pcmanfm-qt
 SUBDIR+=	pcp
 SUBDIR+=	pcsx
