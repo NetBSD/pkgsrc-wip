@@ -59,7 +59,7 @@ BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.1
 .include "../../wip/geoclue/buildlink3.mk"
 .include "../../wip/geocode-glib/buildlink3.mk"
 .include "../../wip/libgweather/buildlink3.mk"
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 
