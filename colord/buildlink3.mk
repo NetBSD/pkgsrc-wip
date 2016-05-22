@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.colord?=	../../wip/colord
 #.include "../../devel/nss/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 #.include "../../databases/sqlite3/buildlink3.mk"
-#.include "../../wip/polkit/buildlink3.mk"
+#.include "../../security/polkit/buildlink3.mk"
 #.include "../../devel/libdbusmenu-qt/buildlink3.mk"
 #.include "../../sysutils/dbus/buildlink3.mk"
 #.include "../../devel/gobject-introspection/buildlink3.mk"
