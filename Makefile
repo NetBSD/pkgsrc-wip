@@ -1639,7 +1639,6 @@ SUBDIR+=	libeio-cvs
 SUBDIR+=	libepc
 SUBDIR+=	libeps
 SUBDIR+=	libfirm-git
-SUBDIR+=	libfm
 SUBDIR+=	libfolks
 SUBDIR+=	libfplll
 SUBDIR+=	libfpx
