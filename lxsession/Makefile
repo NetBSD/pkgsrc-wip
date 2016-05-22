@@ -29,7 +29,7 @@ post-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
