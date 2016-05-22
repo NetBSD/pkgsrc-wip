@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config intltool
+USE_TOOLS+=	pkg-config intltool gmake
 
 # Options?
 CONFIGURE_ARGS+=	--disable-miner-thunderbird
