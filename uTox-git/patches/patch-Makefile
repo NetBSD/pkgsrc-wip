@@ -83,7 +83,7 @@ Allow separate destination for manuals.
  DATAROOTDIR ?= $(PREFIX)/share
 +MANROOTDIR ?= $(PREFIX)/man
  
- SRC = $(wildcard src/*.c)
+ SRC = $(wildcard src/*.c src/ui/*.c src/av/*.c)
  HEADERS = $(wildcard src/*.h src/*/*.h langs/*.h)
 @@ -132,8 +136,8 @@ install: utox
  	install -m 644 src/utox.desktop $(DESTDIR)$(DATAROOTDIR)/applications/utox.desktop
