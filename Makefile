@@ -306,6 +306,7 @@ SUBDIR+=	canna-dict
 SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
 SUBDIR+=	cardpeek
+SUBDIR+=	caribou
 SUBDIR+=	carnival
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
