@@ -221,6 +221,7 @@ SUBDIR+=	bfgminer
 SUBDIR+=	bibliographer
 SUBDIR+=	bicon
 SUBDIR+=	bigdft
+SUBDIR+=	bijiben
 SUBDIR+=	bind10
 SUBDIR+=	bind10-devel
 SUBDIR+=	bindgraph
