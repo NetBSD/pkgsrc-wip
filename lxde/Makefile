@@ -23,8 +23,8 @@ DEPENDS+=	lxlauncher-[0-9]*:../../x11/lxlauncher
 DEPENDS+=	lxsession-[0-9]*:../../x11/lxsession
 DEPENDS+=	lxde-icon-theme-[0-9]*:../../graphics/lxde-icon-theme
 DEPENDS+=	pcmanfm-[0-9]*:../../sysutils/pcmanfm
-DEPENDS+=	lxinput-[0-9]*:../../wip/lxinput
-DEPENDS+=	lxtask-[0-9]*:../../wip/lxtask
+DEPENDS+=	lxinput-[0-9]*:../../x11/lxinput
+DEPENDS+=	lxtask-[0-9]*:../../sysutils/lxtask
 
 .include "../../mk/bsd.prefs.mk"
 
