@@ -12,20 +12,11 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	lxmenu-data-[0-9]*:../../wip/lxmenu-data
 
-LXDE_CONF=		share/examples/lxde
+LXDE_CONF=		share/examples/lxpanel
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl pkg-config intltool
-CONFIGURE_ARGS+=	--with-plugins=none
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${LXDE_CONF}
-# plugins may be comma separated:
-# possible:
-#Possible plugins are:
-#			 netstatus, netstat, volume, volumealsa,
-#			 cpu, deskno, batt, kbled, xkb, thermal,
-#			 cpufreq, monitors, wnckpager
-# TODO: maybe I need --enable-indicator-support ??
-
+CONFIGURE_ARGS+=	--with-plugins="deskno, xkb, wnckpager"
 PKGCONFIG_OVERRIDE+=	lxpanel.pc.in
 
 PKG_SYSCONFSUBDIR=	xdg
@@ -34,15 +25,15 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/lxpanel/default/panels 	\
 		${PKG_SYSCONFDIR}/lxpanel/config		\
 		${PKG_SYSCONFDIR}/lxpanel/two_panels/panels
 
-CONF_FILES= ${LXDE_CONF}/xdg/lxpanel/default/config		\
+CONF_FILES= ${LXDE_CONF}/default/config				\
 	${PKG_SYSCONFDIR}/lxpanel/default/config 		\
-	${LXDE_CONF}/xdg/lxpanel/default/panels/panel  		\
-	${PKG_SYSCONFDIR}/lxpanel/default/panels/panel 	\
-	${LXDE_CONF}/xdg/lxpanel/two_panels/config 			\
+	${LXDE_CONF}/default/panels/panel  			\
+	${PKG_SYSCONFDIR}/lxpanel/default/panels/panel 		\
+	${LXDE_CONF}/two_panels/config 				\
 	${PKG_SYSCONFDIR}/lxpanel/two_panels/config 		\
-	${LXDE_CONF}/xdg/lxpanel/two_panels/panels/bottom 	\
+	${LXDE_CONF}/two_panels/panels/bottom		 	\
 	${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/bottom 	\
-	${LXDE_CONF}/xdg/lxpanel/two_panels/panels/top 		\
+	${LXDE_CONF}/two_panels/panels/top 			\
 	${PKG_SYSCONFDIR}/lxpanel/two_panels/panels/top
 
 .include "../../devel/glib2/buildlink3.mk"
@@ -50,7 +41,8 @@ CONF_FILES= ${LXDE_CONF}/xdg/lxpanel/default/config		\
 .include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
-.include "../../wip/libfm/buildlink3.mk"
+.include "../../sysutils/libfm/buildlink3.mk"
+.include "../../sysutils/libfm-extra/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/keybinder/buildlink3.mk"
 
