@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/15 03:22:07 jeremy-c-reed Exp $
-bin/lxshortcut
-share/lxshortcut/choose-icon.ui
-share/lxshortcut/lxshortcut.ui
