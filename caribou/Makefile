@@ -15,6 +15,9 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config intltool gmake
 
+PY_PATCHPLIST=	yes
+
+.include "../../lang/python/extension.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
