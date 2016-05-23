@@ -1806,7 +1806,6 @@ SUBDIR+=	lxde-common
 SUBDIR+=	lxde-icon-theme
 SUBDIR+=	lxdm
 SUBDIR+=	lximage-qt
-SUBDIR+=	lxinput
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt
 SUBDIR+=	lxqt-about
