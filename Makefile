@@ -469,7 +469,6 @@ SUBDIR+=	davical-current
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-explorer
-SUBDIR+=	dconf-editor
 SUBDIR+=	ddate
 SUBDIR+=	deadbeef
 SUBDIR+=	debian_base
