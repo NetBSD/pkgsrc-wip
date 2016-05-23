@@ -9,7 +9,7 @@ COMMENT=	Lxde
 MAINTAINER=	youri@NetBSD.org
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	lxmenu-data-[0-9]*:../../wip/lxmenu-data
+DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 DEPENDS+=	lxappearance-[0-9]*:../../x11/lxappearance
 #DEPENDS+=	lxappearance-obconf-[0-9]*:../../wip/lxappearance-obconf
 DEPENDS+=	gpicview-[0-9]*:../../graphics/gpicview
