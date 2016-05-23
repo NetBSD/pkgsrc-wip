@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.13 2013/06/19 12:15:39 noud4 Exp $
-#
 
 DISTNAME=	tracker-1.8.0
 PKGNAME=	gnome-${DISTNAME}
@@ -12,7 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Tracker
 COMMENT=	Desktop-neutral metadata-based search framework
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-CONFLICTS+=	tracker-[0-9]*:../../audio/tracker
+CONFLICTS+=	tracker-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
