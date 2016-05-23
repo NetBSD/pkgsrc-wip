@@ -1822,7 +1822,6 @@ SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-runner
 SUBDIR+=	lxqt-session
 SUBDIR+=	lxshortcut
-SUBDIR+=	lxtask
 SUBDIR+=	lz4jsoncat-git
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
