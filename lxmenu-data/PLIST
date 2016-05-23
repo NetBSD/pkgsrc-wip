@@ -20,4 +20,4 @@ share/desktop-directories/lxde-system-tools.directory
 share/desktop-directories/lxde-system.directory
 share/desktop-directories/lxde-utility-accessibility.directory
 share/desktop-directories/lxde-utility.directory
-share/examples/lxde/menus/lxde-applications.menu
+share/examples/menus/lxde-applications.menu
