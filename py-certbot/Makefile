@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dev//}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 
 COMMENT=	Automatically receive and install X.509 certificates on servers
@@ -8,7 +8,9 @@ LICENSE=	apache-2.0
 
 EGG_NAME=	${DISTNAME}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 0.1.0
+# Only supports Python 2.6 and 2.7 so far
+# https://github.com/certbot/certbot#system-requirements
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "Makefile.common"
 .include "../../lang/python/egg.mk"
@@ -38,18 +40,18 @@ PKG_SYSCONFSUBDIR=	letsencrypt
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-build
 SUBST_MESSAGE.path=	Fixing default paths
-SUBST_FILES.path+=	letsencrypt/constants.py letsencrypt/display/ops.py
-SUBST_FILES.path+=	letsencrypt/renewer.py letsencrypt/tests/*.py
+SUBST_FILES.path+=	certbot/constants.py certbot/display/ops.py
+SUBST_FILES.path+=	certbot/plugins/*.py certbot/tests/*.py
 SUBST_SED.path+=	-e 's,/etc/letsencrypt,${PKG_SYSCONFDIR},g'
 SUBST_SED.path+=	-e 's,/var/lib/letsencrypt,${VARBASE}/letsencrypt,g'
 SUBST_SED.path+=	-e 's,/var/log/letsencrypt,${VARBASE}/letsencrypt/log,g'
 
 MAKE_DIRS+=		${VARBASE}/letsencrypt/log
 
-INSTALLATION_DIRS+=	share/examples/letsencrypt
+INSTALLATION_DIRS+=	share/examples/certbot
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/cli.ini \
-		${DESTDIR}${PREFIX}/share/examples/letsencrypt
+		${DESTDIR}${PREFIX}/share/examples/certbot
 
 .include "../../mk/bsd.pkg.mk"

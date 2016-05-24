@@ -102,12 +102,6 @@ ${PYSITELIB}/acme/messages.pyo
 ${PYSITELIB}/acme/messages_test.py
 ${PYSITELIB}/acme/messages_test.pyc
 ${PYSITELIB}/acme/messages_test.pyo
-${PYSITELIB}/acme/other.py
-${PYSITELIB}/acme/other.pyc
-${PYSITELIB}/acme/other.pyo
-${PYSITELIB}/acme/other_test.py
-${PYSITELIB}/acme/other_test.pyc
-${PYSITELIB}/acme/other_test.pyo
 ${PYSITELIB}/acme/standalone.py
 ${PYSITELIB}/acme/standalone.pyc
 ${PYSITELIB}/acme/standalone.pyo

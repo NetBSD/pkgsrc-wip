@@ -1,3 +1,3 @@
-It looks like the Apache letsencrypt plugin assumes the Apache
+It looks like the Apache certbot plugin assumes the Apache
 configuration to have the Debian sites-available etc. like
 structure, making it useless on pkgsrc standard sites.
