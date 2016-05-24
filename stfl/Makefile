@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.clifford.at/stfl/
 COMMENT=	Library which implements a curses-based widget set for text terminals
 LICENSE=	gnu-lgpl-v3
 
-NO_INSTALL_MANPAGES=	yes
-
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
 USE_GNU_ICONV=	yes
