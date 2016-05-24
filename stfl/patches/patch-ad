@@ -1,5 +1,8 @@
 $NetBSD: patch-ad,v 1.1 2012/02/07 19:43:48 mwilhelmy Exp $
 
+Disable building modules/binding for other programming languages and avoid to
+check if they are present.
+
 --- Makefile.cfg.orig	2009-05-31 18:20:39.000000000 +0000
 +++ Makefile.cfg
 @@ -22,33 +22,11 @@ export libdir ?= lib

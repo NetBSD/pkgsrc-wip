@@ -1,5 +1,7 @@
 $NetBSD: patch-ab,v 1.2 2012/02/07 18:20:00 mwilhelmy Exp $
 
+Create a symbolic link also for the versioned SONAME.
+
 --- Makefile.orig	2012-01-19 21:12:56.000000000 +0000
 +++ Makefile	2012-01-19 21:13:57.000000000 +0000
 @@ -65,6 +65,7 @@

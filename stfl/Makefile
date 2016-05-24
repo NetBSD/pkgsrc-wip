@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.15 2012/10/07 16:23:17 asau Exp $
 
 MAJOR=		0
-MINOR=		22
+MINOR=		24
 DISTNAME=	stfl-${MAJOR}.${MINOR}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.clifford.at/stfl/
@@ -35,8 +35,7 @@ SUBST_FILES.curses=	stfl.pc.in Makefile
 SUBST_SED.curses=	-e "s|-lncursesw|-lcurses|g"
 .include "../../mk/curses.buildlink3.mk"
 .else
-USE_NCURSES=		yes
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .endif
 
 PLIST_SUBST+=	MAJOR=${MAJOR:Q} MINOR=${MINOR:Q}

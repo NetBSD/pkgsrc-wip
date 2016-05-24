@@ -1,6 +1,8 @@
 $NetBSD: patch-ac,v 1.1 2012/02/07 19:43:48 mwilhelmy Exp $
 
---- stfl_internals.h.orig	2011-10-24 05:52:06.000000000 +0000
+Use curses(3) in NetBSD instead of ncursesw.
+
+--- stfl_internals.h.orig	2015-01-05 10:47:32.000000000 +0000
 +++ stfl_internals.h
 @@ -28,7 +28,12 @@ extern "C" {
  #endif

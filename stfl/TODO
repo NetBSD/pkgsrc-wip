@@ -1,3 +1,0 @@
-- use the options framework to decide whether to use native curses (on NetBSD),
-  ncurses or ncursesw rather than always using curses on NetBSD and ncursesw
-  everywhere else
