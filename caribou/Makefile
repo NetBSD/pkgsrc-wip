@@ -17,6 +17,7 @@ USE_TOOLS+=		pkg-config intltool gmake
 
 PY_PATCHPLIST=	yes
 
+.include "../../devel/glib2/schemas.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
