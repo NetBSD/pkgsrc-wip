@@ -1004,7 +1004,6 @@ SUBDIR+=	grsync
 SUBDIR+=	grub2-current
 SUBDIR+=	gsdpdf
 SUBDIR+=	gsegrafix
-SUBDIR+=	gsettings-desktop-schemas
 SUBDIR+=	gsm
 SUBDIR+=	gsmartcontrol
 SUBDIR+=	gst-inspector
