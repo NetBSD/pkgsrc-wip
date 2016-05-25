@@ -12,6 +12,7 @@ COMMENT=	Meta-package for the GNOME core libraries
 META_PACKAGE=	yes
 
 # see https://git.gnome.org/browse/
+# Please keep the order alphabetically using the upstream package (git repo) name
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 DEPENDS+=	at-spi2-atk-[0-9]*:../../devel/at-spi2-atk
 DEPENDS+=	at-spi2-core-[0-9]*:../../devel/at-spi2-core
@@ -70,7 +71,7 @@ DEPENDS+=	grilo-plugins-[0-9]*:../../wip/grilo-plugins
 DEPENDS+=	gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=	gssdp-[0-9]*:../../net/gssdp
 # TODO gstreamermm
-DEPENDS+=	gtk3-[0-9]*:../../x11/gtk3
+DEPENDS+=	gtk3-[0-9]*:../../x11/gtk3 # Upstream name "gtk+"
 DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 DEPENDS+=	gtkmm3-[0-9]*:../../x11/gtkmm3
 DEPENDS+=	gtksourceview3-[0-9]*:../../x11/gtksourceview3 # TODO obsolete x11/gtksourceview?
