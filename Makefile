@@ -884,7 +884,6 @@ SUBDIR+=	gksu
 SUBDIR+=	glade2-nognome
 SUBDIR+=	gle
 SUBDIR+=	glib-java
-SUBDIR+=	glib-networking
 SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glimmerm
