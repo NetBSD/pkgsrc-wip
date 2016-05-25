@@ -995,7 +995,6 @@ SUBDIR+=	grass-gully
 SUBDIR+=	graveman
 SUBDIR+=	grc
 SUBDIR+=	gretl
-SUBDIR+=	grilo
 SUBDIR+=	grilo-plugins
 SUBDIR+=	grip
 SUBDIR+=	grisbi
