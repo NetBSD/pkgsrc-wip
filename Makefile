@@ -920,7 +920,6 @@ SUBDIR+=	gnome-jabber
 SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnome-keyring-sharp
-SUBDIR+=	gnome-librest
 SUBDIR+=	gnome-main-menu
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-paint
