@@ -69,7 +69,7 @@ DEPENDS+=	gobject-introspection-[0-9]*:../../devel/gobject-introspection
 DEPENDS+=	grilo-plugins-[0-9]*:../../wip/grilo-plugins
 DEPENDS+=	gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=	gssdp-[0-9]*:../../net/gssdp
-#TODO gstreamermm
+# TODO gstreamermm
 DEPENDS+=	gtk3-[0-9]*:../../x11/gtk3
 DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 DEPENDS+=	gtkmm3-[0-9]*:../../x11/gtkmm3
@@ -77,8 +77,49 @@ DEPENDS+=	gtksourceview3-[0-9]*:../../x11/gtksourceview3 # TODO obsolete x11/gtk
 DEPENDS+=	gucharmap-[0-9]*:../../fonts/gucharmap
 DEPENDS+=	gupnp-[0-9]*:../../net/gupnp
 DEPENDS+=	gupnp-igd-[0-9]*:../../net/gupnp-igd
-DEPENDS+=	gnome-tracker-[0-9]*:../../wip/gnome-tracker
-
-# TODO
+DEPENDS+=	gvfs-[0-9]*:../../sysutils/gvfs
+DEPENDS+=	json-glib-[0-9]*:../../textproc/json-glib
+DEPENDS+=	libchamplain012-[0-9]*:../../wip/libchamplain012
+DEPENDS+=	libcroco-[0-9]*:../../textproc/libcroco
+DEPENDS+=	libgdata-[0-9]*:../../net/libgdata
+DEPENDS+=	libgee-[0-9]*:../../devel/libgee
+DEPENDS+=	libgnomekbd-[0-9]*:../../x11/libgnomekbd
+DEPENDS+=	libgsf-[0-9]*:../../devel/libgsf
+# TODO libgsystem
+DEPENDS+=	libgtop-[0-9]*:../../sysutils/libgtop
+# TODO libgudev
+DEPENDS+=	libgweather-[0-9]*:../../wip/libgweather
+DEPENDS+=	libgxps-[0-9]*:../../print/libgxps
+# TODO libmediaart
+DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
+DEPENDS+=	libpeas-[0-9]*:../../devel/libpeas
+DEPENDS+=	libsecret-[0-9]*:../../security/libsecret
+# TODO libsigcplusplus
+DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
+DEPENDS+=	libwnck-[0-9]*:../../devel/libwnck
+# TODO libzapojit
+DEPENDS+=	mm-common-[0-9]*:../../devel/mm-common
+DEPENDS+=	mousetweaks-[0-9]*:../../wip/mousetweaks
+# TODO mutter
+DEPENDS+=	nautilus-[0-9]*:../../wip/nautilus
+# TODO network-manager-applet
+DEPENDS+=	pango-[0-9]*:../../devel/pango
+DEPENDS+=	pangomm-[0-9]*:../../devel/pangomm
+# TODO pyclutter
+DEPENDS+=	py-gobject3-[0-9]*:../../devel/py-gobject3
+# TODO seed
+# TODO sushi
+DEPENDS+=	totem-[0-9]*:../../wip/totem
+DEPENDS+=	totem-pl-parser-[0-9]*:../../wip/totem-pl-parser
+DEPENDS+=	gnome-tracker-[0-9]*:../../wip/gnome-tracker # upstream name "tracker"
+DEPENDS+=	vala-[0-9]*:../../lang/vala
+# TODO valadoc
+DEPENDS+=	vino-[0-9]*:../../wip/vino
+DEPENDS+=	vte-[0-9]*:../../wip/vte # x11/vte029 ?
+# TODO wing
+DEPENDS+=	yelp3-[0-9]*:../../misc/yelp3
+DEPENDS+=	yelp-tools-[0-9]*:../../wip/yelp-tools
+DEPENDS+=	yelp-xsl-[0-9]*:../../textproc/yelp-xsl
+DEPENDS+=	zenity-[0-9]*:../../wip/zenity
 
 .include "../../mk/bsd.pkg.mk"
