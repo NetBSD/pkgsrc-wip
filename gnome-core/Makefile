@@ -70,7 +70,6 @@ DEPENDS+=	grilo-plugins-[0-9]*:../../wip/grilo-plugins
 DEPENDS+=	gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=	gssdp-[0-9]*:../../net/gssdp
 #TODO gstreamermm
-# gtk+?
 DEPENDS+=	gtk3-[0-9]*:../../x11/gtk3
 DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 DEPENDS+=	gtkmm3-[0-9]*:../../x11/gtkmm3
