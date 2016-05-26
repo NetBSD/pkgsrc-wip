@@ -14,7 +14,7 @@ DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 USE_TOOLS+=	msgmerge
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/kxmlgui/buildlink3.mk"
+.include "../../x11/kxmlgui/buildlink3.mk"
 .include "../../wip/libkscreen/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
