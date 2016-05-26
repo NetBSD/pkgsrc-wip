@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../wip/kde5/plasma.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -18,8 +18,8 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 CONF_FILES+=	${PREFIX}/share/examples/kde-polkit/polkit-kde-authentication-agent-1.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/polkit-kde-authentication-agent-1.desktop
 
-.include "../../wip/kcrash/buildlink3.mk"
-.include "../../wip/kdbusaddons/buildlink3.mk"
-.include "../../wip/kiconthemes/buildlink3.mk"
+.include "../../devel/kcrash/buildlink3.mk"
+.include "../../sysutils/kdbusaddons/buildlink3.mk"
+.include "../../graphics/kiconthemes/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
