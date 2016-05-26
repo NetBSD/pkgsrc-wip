@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-browser-plugins
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
-.include "../../wip/grilo/buildlink3.mk"
+.include "../../net/grilo/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../wip/clutter-gst/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
