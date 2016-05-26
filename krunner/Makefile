@@ -7,12 +7,12 @@ HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Framework for providing different actions given a string query
 LICENSE=	gnu-lgpl-v2.1
 
-.include "../../wip/kf5/Makefile.common"
+.include "../../meta-pkgs/kf5/Makefile.common"
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.21/portingAids/}
 
 USE_TOOLS+=	msgmerge
 
-.include "../../wip/plasma-framework/buildlink3.mk"
-.include "../../wip/threadweaver/buildlink3.mk"
+.include "../../x11/plasma-framework/buildlink3.mk"
+.include "../../devel/threadweaver/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
