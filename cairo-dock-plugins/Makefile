@@ -13,7 +13,9 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
-
+.include "../../devel/libdbusmenu-glib/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
@@ -22,12 +24,8 @@ USE_TOOLS+=	gmake pkg-config
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/cairo-dock/buildlink3.mk"
-.include "../../wip/libindicator/buildlink3.mk"
-#-- WARNING: It seems that one (or more) module(s) is (are) missing: indicator(-0.4) (libido-0.1) dbusmenu-glib(-0.4) dbusmenu-gtk(-0.4) alsa libical libgnome-menu-3.0 libpulse upower-glib zeitgeist-1.0 alsa
-#-- It can be interesting to install them (especially if you're a maintainer of Cairo-Dock's packages).
-#-- WARNING: It seems that one (or more) program(s) or package(s) is (are) missing: ruby valac sensors
-#-- It can be interesting to install them (especially if you're a maintainer of Cairo-Dock's packages).
+.include "../../devel/libindicator3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
