@@ -117,7 +117,7 @@ DEPENDS+=	vala-[0-9]*:../../lang/vala
 # TODO valadoc
 DEPENDS+=	vino-[0-9]*:../../wip/vino
 DEPENDS+=	vte-[0-9]*:../../wip/vte # x11/vte029 ?
-# TODO wing
+# wing - Windows only
 DEPENDS+=	yelp3-[0-9]*:../../misc/yelp3
 DEPENDS+=	yelp-tools-[0-9]*:../../wip/yelp-tools
 DEPENDS+=	yelp-xsl-[0-9]*:../../textproc/yelp-xsl
