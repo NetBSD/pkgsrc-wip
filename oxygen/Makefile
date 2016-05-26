@@ -13,8 +13,8 @@ CONFLICTS+=	kde-workspace4-[0-9]*
 
 USE_TOOLS+=	msgmerge pkg-config
 
-.include "../../wip/frameworkintegration/buildlink3.mk"
+.include "../../x11/frameworkintegration/buildlink3.mk"
 .include "../../wip/kdecoration/buildlink3.mk"
-.include "../../wip/kcmutils/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
