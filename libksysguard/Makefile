@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 CONFLICTS+=	kde-workspace4-[0-9]*
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -33,7 +33,7 @@ post-install:
 	mv ${DESTDIR}/etc/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf \
 	${DESTDIR}${PREFIX}/share/examples/libksysguard/
 
-.include "../../wip/plasma-framework/buildlink3.mk"
+.include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"

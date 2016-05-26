@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../wip/kde5/plasma.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	khotkeys>=${PLASMAVER}:../../wip/khotkeys
 
 USE_TOOLS+=	msgmerge
