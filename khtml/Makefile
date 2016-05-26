@@ -7,7 +7,7 @@ HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	HTML rendering engine
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
-.include "../../wip/kf5/Makefile.common"
+.include "../../meta-pkgs/kf5/Makefile.common"
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.21/portingAids/}
 
 USE_TOOLS+=	perl
@@ -21,6 +21,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khtmlrc \
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../wip/kjs/buildlink3.mk"
-.include "../../wip/kparts/buildlink3.mk"
+.include "../../devel/kparts/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
