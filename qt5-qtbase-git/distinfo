@@ -4,3 +4,5 @@ SHA1 (qtbase-opensource-src-5.5.1.tar.xz) = 0b651543fa013ae151b7a11f0d0dee092050
 RMD160 (qtbase-opensource-src-5.5.1.tar.xz) = ce4bccd0703aaf8d904fbecd1f334ef13d698a44
 SHA512 (qtbase-opensource-src-5.5.1.tar.xz) = 4d31de136870025dfb7544f255798884af1ad4f3060b0c00a0467c98af1f7de368eb298d4c52ba6d1ad27e36060b30c0314ce7ba0744b15642420ec89587a575
 Size (qtbase-opensource-src-5.5.1.tar.xz) = 46389212 bytes
+SHA1 (patch-src_corelib_io_io.pri) = 922eb2606a627a6f0da23860a090b34ae259af29
+SHA1 (patch-src_corelib_io_qlockfile__unix.cpp) = e2a1dadfe7422a1c5f3cf4f11385e5bc9c2fc83c
