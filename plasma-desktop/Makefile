@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
 .include "../../wip/kde5/plasma.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	ksysguard>=${PLASMAVER}:../../wip/ksysguard
 DEPENDS+=	kmenuedit>=${PLASMAVER}:../../wip/kmenuedit
 DEPENDS+=	polkit-kde-agent>=${PLASMAVER}:../../wip/polkit-kde-agent
@@ -49,13 +49,13 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/baloo5/buildlink3.mk"
-.include "../../wip/kactivities5/buildlink3.mk"
+.include "../../sysutils/baloo5/buildlink3.mk"
+.include "../../x11/kactivities5/buildlink3.mk"
 .include "../../wip/kdelibs4support/buildlink3.mk"
-.include "../../wip/knotifyconfig/buildlink3.mk"
-.include "../../wip/kpeople/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/kpeople/buildlink3.mk"
 .include "../../wip/krunner/buildlink3.mk"
-.include "../../wip/plasma-framework/buildlink3.mk"
+.include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../wip/plasma-workspace/buildlink3.mk"
 .include "../../wip/systemsettings/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

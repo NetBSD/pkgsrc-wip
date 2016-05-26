@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
 .include "../../wip/kde5/plasma.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	breeze>=${PLASMAVER}:../../wip/breeze
 DEPENDS+=	kactivitymanagerd>=${PLASMAVER}:../../wip/kactivitymanagerd
 DEPENDS+=	kde-cli-tools>=${PLASMAVER}:../../wip/kde-cli-tools
@@ -53,17 +53,17 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 .include "../../math/qalculate/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
-.include "../../wip/baloo5/buildlink3.mk"
+.include "../../sysutils/baloo5/buildlink3.mk"
 .include "../../wip/kdelibs4support/buildlink3.mk"
-.include "../../wip/kdesu/buildlink3.mk"
+.include "../../security/kdesu/buildlink3.mk"
 .include "../../wip/kjsembed/buildlink3.mk"
-.include "../../wip/knewstuff/buildlink3.mk"
-.include "../../wip/knotifyconfig/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
 .include "../../wip/krunner/buildlink3.mk"
 .include "../../wip/kscreenlocker/buildlink3.mk"
-.include "../../wip/ktexteditor/buildlink3.mk"
-.include "../../wip/kxmlgui/buildlink3.mk"
-.include "../../wip/kxmlrpcclient/buildlink3.mk"
+.include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../net/kxmlrpcclient/buildlink3.mk"
 .include "../../wip/libkscreen/buildlink3.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
