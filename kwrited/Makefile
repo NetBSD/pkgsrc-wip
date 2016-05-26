@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../wip/kde5/plasma.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
@@ -26,8 +26,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/kwrited-autostart.deskto
 		${PKG_SYSCONFDIR}/xdg/autostart/kwrited-autostart.desktop
 .endif
 
-.include "../../wip/kdbusaddons/buildlink3.mk"
-.include "../../wip/knotifications/buildlink3.mk"
-.include "../../wip/kpty/buildlink3.mk"
+.include "../../sysutils/kdbusaddons/buildlink3.mk"
+.include "../../devel/knotifications/buildlink3.mk"
+.include "../../devel/kpty/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
