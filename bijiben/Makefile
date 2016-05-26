@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool pkg-config
 
+.include "../../www/webkit24-gtk3/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../wip/gnome-tracker/buildlink3.mk"
