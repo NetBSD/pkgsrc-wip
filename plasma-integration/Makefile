@@ -14,7 +14,7 @@ DEPENDS+=	oxygen-fonts-[0-9]*:../../fonts/oxygen-fonts
 
 USE_TOOLS+=	msgmerge
 
-.include "../../wip/kio/buildlink3.mk"
+.include "../../devel/kio/buildlink3.mk"
 .include "../../wip/kwayland/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

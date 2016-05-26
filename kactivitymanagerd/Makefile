@@ -18,6 +18,6 @@ SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/src/service/plugins/virtualdesktopswitch/CMakeFiles/kactivitymanagerd_plugin_virtualdesktopswitch_automoc.dir/AutogenInfo.cmake
 SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
-.include "../../wip/kio/buildlink3.mk"
+.include "../../devel/kio/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
