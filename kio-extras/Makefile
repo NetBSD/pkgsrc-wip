@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../wip/kde5/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config perl:run
 
@@ -27,10 +27,10 @@ SUBST_STAGE.paths=	post-patch
 .include "../../net/openslp/buildlink3.mk"
 .include "../../net/samba/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-.include "../../wip/kactivities5/buildlink3.mk"
+.include "../../x11/kactivities5/buildlink3.mk"
 .include "../../wip/kdelibs4support/buildlink3.mk"
-.include "../../wip/kdnssd/buildlink3.mk"
+.include "../../net/kdnssd/buildlink3.mk"
 .include "../../wip/khtml/buildlink3.mk"
-.include "../../wip/kpty/buildlink3.mk"
+.include "../../devel/kpty/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
