@@ -24,7 +24,7 @@ USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
 
 .include "../../wip/xfce4-dev-tools/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../wip/xfce4-thunar/buildlink3.mk"
+.include "../../sysutils/xfce4-thunar/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
