@@ -15,32 +15,12 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 EGDIR=		${PREFIX}/share/examples/lumina
-
 CONF_FILES+=	${EGDIR}/luminaDesktop.conf ${PKG_SYSCONFDIR}/luminaDesktop.conf
 
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
 DEPENDS+=	numlockx-[0-9]*:../../x11/numlockx
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
-SUBST_MESSAGE.prefix=	Fixing prefix
-SUBST_FILES.prefix=	src-qt5/core/libLumina/LuminaXDG.cpp
-SUBST_FILES.prefix+=	src-qt5/core/libLumina/LuminaOS-NetBSD.cpp
-SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
-
-#SUBST_CLASSES+=		sysconf
-#SUBST_STAGE.sysconf=	post-patch
-#SUBST_MESSAGE.sysconf=	Fixing system configuration dir
-#SUBST_FILES.sysconf=	src-qt5/core/libLumina/LuminaUtils.cpp
-#SUBST_SED.sysconf=	-e 's,/etc/luminaDesktop.conf,${PKG_SYSCONFDIR}/luminaDesktop.conf,'
-
-SUBST_CLASSES+=		egdir
-SUBST_STAGE.egdir=	post-patch
-SUBST_MESSAGE.egdir=	Install configuration to example dir
-SUBST_FILES.egdir=	src-qt5/core/lumina-desktop/lumina-desktop.pro
-SUBST_SED.egdir=	-e 's,\$\$PREFIX/etc/luminaDesktop.conf.dist,${EGDIR}/luminaDesktop.conf,'
 
 INSTALL_MAKE_FLAGS=		INSTALL_ROOT=${DESTDIR}
 
