@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.2
 
 .include "../../wip/kde5/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
@@ -22,7 +22,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ark.categories \
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/kparts/buildlink3.mk"
-.include "../../wip/kpty/buildlink3.mk"
+.include "../../devel/kparts/buildlink3.mk"
+.include "../../devel/kpty/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
