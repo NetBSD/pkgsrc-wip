@@ -1,10 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	lumina-0.9.0
-PATCHREL=	-P1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pcbsd/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}-Release${PATCHREL}
+GITHUB_TAG=	v${PKGVERSION_NOREV}-Release
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lumina-desktop.org/
@@ -27,22 +26,20 @@ DEPENDS+=	numlockx-[0-9]*:../../x11/numlockx
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_MESSAGE.prefix=	Fixing prefix
-SUBST_FILES.prefix=	libLumina/LuminaXDG.cpp
-SUBST_FILES.prefix+=	lumina-config/mainUI.cpp
-SUBST_FILES.prefix+=	lumina-desktop/SettingsMenu.cpp
-SUBST_FILES.prefix+=	libLumina/LuminaOS-NetBSD.cpp
+SUBST_FILES.prefix=	src-qt5/core/libLumina/LuminaXDG.cpp
+SUBST_FILES.prefix+=	src-qt5/core/libLumina/LuminaOS-NetBSD.cpp
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
-SUBST_CLASSES+=		sysconf
-SUBST_STAGE.sysconf=	post-patch
-SUBST_MESSAGE.sysconf=	Fixing system configuration dir
-SUBST_FILES.sysconf=	libLumina/LuminaUtils.cpp
-SUBST_SED.sysconf=	-e 's,/etc/luminaDesktop.conf,${PKG_SYSCONFDIR}/luminaDesktop.conf,'
+#SUBST_CLASSES+=		sysconf
+#SUBST_STAGE.sysconf=	post-patch
+#SUBST_MESSAGE.sysconf=	Fixing system configuration dir
+#SUBST_FILES.sysconf=	src-qt5/core/libLumina/LuminaUtils.cpp
+#SUBST_SED.sysconf=	-e 's,/etc/luminaDesktop.conf,${PKG_SYSCONFDIR}/luminaDesktop.conf,'
 
 SUBST_CLASSES+=		egdir
 SUBST_STAGE.egdir=	post-patch
 SUBST_MESSAGE.egdir=	Install configuration to example dir
-SUBST_FILES.egdir=	lumina-desktop/lumina-desktop.pro
+SUBST_FILES.egdir=	src-qt5/core/lumina-desktop/lumina-desktop.pro
 SUBST_SED.egdir=	-e 's,\$\$PREFIX/etc/luminaDesktop.conf.dist,${EGDIR}/luminaDesktop.conf,'
 
 INSTALL_MAKE_FLAGS=		INSTALL_ROOT=${DESTDIR}
@@ -54,7 +51,7 @@ pre-build:
 
 pre-install:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${RUN} ${INSTALL_DATA} ${WRKSRC}/lumina-desktop/defaults/luminaDesktop.conf ${DESTDIR}${EGDIR}
+	${RUN} ${INSTALL_DATA} ${WRKSRC}/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf ${DESTDIR}${EGDIR}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
