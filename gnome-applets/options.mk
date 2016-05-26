@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if !empty(PKG_OPTIONS:Mhal)
 .include "../../sysutils/hal/buildlink3.mk"
-.include "../../wip/polkit/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 #.include "../../security/policykit-gnome/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-polkit
