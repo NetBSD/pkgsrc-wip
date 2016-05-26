@@ -3643,7 +3643,6 @@ SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
 SUBDIR+=	ripole
 SUBDIR+=	rippled
-SUBDIR+=	ristretto
 SUBDIR+=	rk
 SUBDIR+=	rnc-mode
 SUBDIR+=	rng-tools
