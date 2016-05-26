@@ -32,7 +32,7 @@ GCONF_SCHEMAS+=		epiphany.gschema.xml
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
