@@ -50,7 +50,7 @@ BUILDLINK_API_DEPENDS.libgnomekbd+=	libgnomekbd>=2.31.2
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
 .include "../../x11/libxklavier/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.15.4
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
