@@ -9,12 +9,12 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../wip/kde5/plasma.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
-.include "../../wip/kcmutils/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
 .include "../../wip/kdelibs4support/buildlink3.mk"
-.include "../../wip/kdesu/buildlink3.mk"
+.include "../../security/kdesu/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

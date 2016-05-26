@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../wip/kde5/plasma.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -28,7 +28,7 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 #CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/plasmoids.knsrc \
 #		${PKG_SYSCONFDIR}/xdg/plasmoids.knsrc
 
-.include "../../wip/kcmutils/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
 .include "../../wip/kdelibs4support/buildlink3.mk"
 .include "../../wip/plasma-workspace/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

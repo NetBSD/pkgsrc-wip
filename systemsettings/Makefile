@@ -11,11 +11,11 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 CONFLICTS+=	kde-workspace4-[0-9]*
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../wip/kcmutils/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
 .include "../../wip/khtml/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

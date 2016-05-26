@@ -11,8 +11,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 CONFLICTS+=	kde-workspace4-[0-9]*
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
-DEPENDS+=	kinit>=5.21.0:../../wip/kinit
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+DEPENDS+=	kinit>=5.21.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -40,12 +40,12 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/org_kde_kwin.categories \
 		${PKG_SYSCONFDIR}/xdg/org_kde_kwin.categories
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/kcmutils/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
 .include "../../wip/kdecoration/buildlink3.mk"
-.include "../../wip/kio/buildlink3.mk"
-.include "../../wip/knewstuff/buildlink3.mk"
+.include "../../devel/kio/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../wip/kscreenlocker/buildlink3.mk"
-.include "../../wip/plasma-framework/buildlink3.mk"
+.include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
