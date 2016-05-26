@@ -109,7 +109,7 @@ DEPENDS+=	pangomm-[0-9]*:../../devel/pangomm
 # TODO pyclutter
 DEPENDS+=	py-gobject3-[0-9]*:../../devel/py-gobject3
 # TODO seed
-# TODO sushi
+DEPENDS+=	sushi-[0-9]*:../../wip/sushi
 DEPENDS+=	totem-[0-9]*:../../wip/totem
 DEPENDS+=	totem-pl-parser-[0-9]*:../../wip/totem-pl-parser
 DEPENDS+=	gnome-tracker-[0-9]*:../../wip/gnome-tracker # upstream name "tracker"
