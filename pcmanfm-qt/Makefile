@@ -14,7 +14,7 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	libfm-qt/libfm-qt.pc.in
 
 .include "../../sysutils/menu-cache/buildlink3.mk"
-.include "../../wip/libfm/buildlink3.mk"
+.include "../../sysutils/libfm/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
