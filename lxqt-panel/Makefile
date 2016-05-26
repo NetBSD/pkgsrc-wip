@@ -26,5 +26,5 @@ SUBST_STAGE.confdir=	post-patch
 .include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../wip/liblxqt/buildlink3.mk"
 .include "../../wip/libsysstat/buildlink3.mk"
-.include "../../wip/kguiaddons/buildlink3.mk"
+.include "../../x11/kguiaddons/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
