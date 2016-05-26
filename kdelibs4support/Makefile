@@ -7,12 +7,12 @@ HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Porting aid from KDELibs4
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-.include "../../wip/kf5/Makefile.common"
+.include "../../meta-pkgs/kf5/Makefile.common"
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.21/portingAids/}
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
-DEPENDS+=	kded>=${KF5VER}:../../wip/kded
+DEPENDS+=	kded>=${KF5VER}:../../x11/kded
 
 USE_TOOLS+=	perl:run pkg-config
 
@@ -36,10 +36,10 @@ CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Royal.colors \
 CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Web.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/Web.colors
 
-#.include "../../wip/kdesignerplugin/buildlink3.mk"
-.include "../../wip/kemoticons/buildlink3.mk"
-.include "../../wip/kitemmodels/buildlink3.mk"
-.include "../../wip/kunitconversion/buildlink3.mk"
-.include "../../wip/kparts/buildlink3.mk"
+#.include "../../x11/kdesignerplugin/buildlink3.mk"
+.include "../../misc/kemoticons/buildlink3.mk"
+.include "../../devel/kitemmodels/buildlink3.mk"
+.include "../../misc/kunitconversion/buildlink3.mk"
+.include "../../devel/kparts/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
