@@ -205,6 +205,7 @@ include/clang/Basic/Module.h
 include/clang/Basic/ObjCRuntime.h
 include/clang/Basic/OpenCLExtensions.def
 include/clang/Basic/OpenCLImageTypes.def
+include/clang/Basic/OpenCLOptions.h
 include/clang/Basic/OpenMPKinds.def
 include/clang/Basic/OpenMPKinds.h
 include/clang/Basic/OperatorKinds.def
@@ -465,6 +466,7 @@ include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
 lib/clang/${PKGVERSION}/include/Intrin.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_intrinsics.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_math_forward_declares.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_runtime_wrapper.h
 lib/clang/${PKGVERSION}/include/__stddef_max_align_t.h
@@ -513,6 +515,7 @@ lib/clang/${PKGVERSION}/include/mm3dnow.h
 lib/clang/${PKGVERSION}/include/mm_malloc.h
 lib/clang/${PKGVERSION}/include/mmintrin.h
 lib/clang/${PKGVERSION}/include/module.modulemap
+lib/clang/${PKGVERSION}/include/mwaitxintrin.h
 lib/clang/${PKGVERSION}/include/nmmintrin.h
 lib/clang/${PKGVERSION}/include/pkuintrin.h
 lib/clang/${PKGVERSION}/include/pmmintrin.h
