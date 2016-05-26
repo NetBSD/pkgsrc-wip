@@ -26,6 +26,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cgctheme.knsrc \
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../wip/knewstuff/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

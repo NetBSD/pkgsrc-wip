@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 CONFLICTS+=	kde-workspace4-[0-9]*
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../wip/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -32,6 +32,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ksysguard.knsrc \
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
 .include "../../wip/kdelibs4support/buildlink3.mk"
-.include "../../wip/knewstuff/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
