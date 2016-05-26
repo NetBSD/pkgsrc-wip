@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/28 00:39:13 poppnk Exp $
+
+SHA1 (sushi-3.20.0.tar.xz) = b7f5949af2cf0774205fb9c6afda2ca54b9d0bc1
+RMD160 (sushi-3.20.0.tar.xz) = 38c9c1847efe7d88f00d37367219234f8363adab
+SHA512 (sushi-3.20.0.tar.xz) = 3b6c0103458c7c646e61d0733707452ad1e63f2afc48cfaf66625685e4c6ef610e5569f0f888951d0f790804b06c8c15022abc7c1a3b3676f1fe4955fa55c5ab
+Size (sushi-3.20.0.tar.xz) = 297568 bytes
