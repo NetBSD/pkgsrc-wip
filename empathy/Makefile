@@ -35,7 +35,7 @@ XSLTPROC_PATH=		${LOCALBASE}/share/doc/dbus
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../multimedia/clutter-gst/buildlink3.mk"
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../www/webkit24-gtk3/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
