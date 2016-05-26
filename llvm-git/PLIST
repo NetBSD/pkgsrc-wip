@@ -96,6 +96,7 @@ include/llvm/ADT/PriorityQueue.h
 include/llvm/ADT/SCCIterator.h
 include/llvm/ADT/STLExtras.h
 include/llvm/ADT/ScopedHashTable.h
+include/llvm/ADT/Sequence.h
 include/llvm/ADT/SetOperations.h
 include/llvm/ADT/SetVector.h
 include/llvm/ADT/SmallBitVector.h
