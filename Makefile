@@ -193,7 +193,6 @@ SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
 SUBDIR+=	avr-libc
 SUBDIR+=	avrdude
-SUBDIR+=	awflwm
 SUBDIR+=	axe
 SUBDIR+=	axel
 SUBDIR+=	azureus
