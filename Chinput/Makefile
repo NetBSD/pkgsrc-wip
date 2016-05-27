@@ -11,8 +11,6 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	Chinese input server
 
-PKG_DESTDIR_SUPPORT=	none
-
 USE_X11BASE=	yes
 
 BUILD_TARGET=	chinput
@@ -31,13 +29,13 @@ post-patch:
 		${WRKSRC}/resource/Chinput.ad
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/chinput ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/chinput ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/resource/Chinput.ad ${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/resource/Chinput.ad ${DESTDIR}${EGDIR}/
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Chinput
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/Chinput
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/Chinput
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/Chinput
 
 .include "../../inputmethod/unicon-im/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
