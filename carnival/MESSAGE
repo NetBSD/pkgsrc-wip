@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2012/01/04 19:10:40 noud4 Exp $
-
-Carnival needs Festival in server mode,
-and Festivals text2wave to synthesize.
-
-sox play command can be used to play.
-
-===========================================================================

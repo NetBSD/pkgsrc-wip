@@ -1,4 +1,0 @@
-Carnival is a graphical user interface (GUI) for Festival,
-the wide-spread and popular speech synthesis system.
-Carnival is written in C++ with the wxWidgets framework and therefore
-supports several OS including Windows, Unix/Linux and MacOS.

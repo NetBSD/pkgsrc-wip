@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/04 19:10:40 noud4 Exp $
-bin/carnival
-share/applications/${XDG_DESKTOP}
-share/pixmaps/carnival.xpm
-${DOCDIR}/sable.htm
-${DOCDIR}/ssml.htm

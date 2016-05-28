@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/04 19:10:40 noud4 Exp $
-
-SHA1 (carnival-1.03-src.zip) = 83e5b997e3ad27afc346a29c5fa3b2133ced7c3a
-RMD160 (carnival-1.03-src.zip) = 486bceb535e64d916b1a687b0bf7796b2be8d2e1
-Size (carnival-1.03-src.zip) = 67566 bytes
-SHA1 (patch-aa) = 7d40ffd4dc243abc8e0f0c6e12a227ca3189c9fb
-SHA1 (patch-ab) = 6c3405e8568e7066fca29f7719afeab084e8416d
