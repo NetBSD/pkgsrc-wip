@@ -9,7 +9,6 @@ MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		http://www.ktools.org/dist/owl/
 COMMENT=		Curses-based instant messaging client
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

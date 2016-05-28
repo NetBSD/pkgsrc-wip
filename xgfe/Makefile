@@ -9,7 +9,6 @@ MASTER_SITES=		${MASTER_SITE_TEX_CTAN=graphics/gnuplot/contrib}
 MAINTAINER=		dprice@cs.nmsu.edu
 COMMENT=		GUI front end for Gnuplot plotting package
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/xgfe-2.1/source
 

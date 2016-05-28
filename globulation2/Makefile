@@ -11,7 +11,6 @@ MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://globulation2.org/wiki/
 COMMENT=		Real-Time Strategy (RTS) game providing AI and net mode
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c++

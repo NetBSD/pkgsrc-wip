@@ -9,7 +9,6 @@ HOMEPAGE=	http://memberwebs.com/nielsen/software/nullpop/
 MAINTAINER=	shaun@inerd.com
 COMMENT=	POP3 server that allows logins, but never returns any email
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 

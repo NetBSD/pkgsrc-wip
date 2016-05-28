@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.busybox.net/
 COMMENT=	Embedded DHCP Client/Server
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 

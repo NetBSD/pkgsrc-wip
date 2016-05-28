@@ -13,7 +13,6 @@ BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xml>=4.2nb4:../../textproc/docbook-xml
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	perl
 

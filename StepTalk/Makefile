@@ -10,7 +10,6 @@ MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://www.gnustep.org/experience/StepTalk.html
 COMMENT=	GNUstep scripting framework
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/StepTalk
 USE_LANGUAGES=	objc

@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://klamav.sourceforge.net/
 COMMENT=	Clam Anti-Virus Manager For The KDE Desktop
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PKGNAME_NOREV}
 

@@ -17,7 +17,6 @@ BUILD_DEPENDS+=	p5-File-Find-Rule>=0.10:../../devel/p5-File-Find-Rule
 BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
 BUILD_DEPENDS+=	p5-Test-Class>=0.03:../../devel/p5-Test-Class
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST= auto/PluceneSimple/.packlist

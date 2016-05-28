@@ -10,7 +10,6 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://openmodeller.sourceforge.net/
 COMMENT=		Spatial distribution modelling library
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++

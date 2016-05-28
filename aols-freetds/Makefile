@@ -11,7 +11,6 @@ MAINTAINER=		iharding@destinydata.com
 HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		FreeTDS database access module for aolserver
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
 

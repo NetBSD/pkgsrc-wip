@@ -9,7 +9,6 @@ MAINTAINER=		nel@soraneko.com
 HOMEPAGE=		http://0xcc.net/scmail/
 COMMENT=		The scmail is a mail filter using Gauche
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../lang/gauche/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

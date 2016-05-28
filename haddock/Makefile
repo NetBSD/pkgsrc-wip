@@ -14,7 +14,6 @@ COMMENT=		Documentation tool for Haskell
 
 VERSION=		0.8
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl

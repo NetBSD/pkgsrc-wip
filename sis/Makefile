@@ -9,7 +9,6 @@ MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://embedded.eecs.berkeley.edu/Alumni/pchong/sis.html
 COMMENT=	Classic logic synthesis tool
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

@@ -11,7 +11,6 @@ MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://musicbrainz.org/products/tunepimp/index.html
 COMMENT=	Python bindings for TunePimp library
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 

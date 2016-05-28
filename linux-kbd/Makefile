@@ -14,7 +14,6 @@ COMMENT=		Keyboard and console utilities for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
-PKG_DESTDIR_SUPPORT=	none
 
 HAS_CONFIGURE=		YES
 USE_TOOLS+=		gmake msgfmt # and xgettext

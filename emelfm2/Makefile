@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emelfm2.net/
 COMMENT=	Fast two-pane file manager using GTK2
 
-PKG_DESTDIR_SUPPORT=	none
 
 PTHREAD_OPTS+=	require
 

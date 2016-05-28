@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/topics/database/
 COMMENT=	Python extension module for Berkeley DB 3 and 4
 
-PKG_DESTDIR_SUPPORT=	none
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes

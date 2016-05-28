@@ -15,7 +15,6 @@ COMMENT=	Curses port of Glk interface
 INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/glkterm
 USE_LIBTOOL=	yes

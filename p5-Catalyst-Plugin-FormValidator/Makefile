@@ -15,7 +15,6 @@ PERL5_REQD+=	5.6.3
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Data-FormValidator>=0:../../textproc/p5-Data-FormValidator
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/FormValidator/.packlist
 

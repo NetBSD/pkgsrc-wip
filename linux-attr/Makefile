@@ -13,7 +13,6 @@ COMMENT=		The extended attribute package for acl
 # uses linux/version.h and only tested under Linux
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-PKG_DESTDIR_SUPPORT=	none
 
 AUTOCONF_REQD=	2.50
 

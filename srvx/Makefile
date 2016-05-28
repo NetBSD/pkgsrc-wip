@@ -9,7 +9,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://srvx.sourceforge.net/
 COMMENT=	Srvx IRC services
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

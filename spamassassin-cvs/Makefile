@@ -21,7 +21,6 @@ DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*			\
 		spamassassin-[1-9]*
 
-PKG_DESTDIR_SUPPORT=	none
 
 EXTRACT_SUFX?=	.tar.bz2
 NO_CHECKSUM=	YES

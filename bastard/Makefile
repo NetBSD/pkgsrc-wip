@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bastard.sourceforge.net/
 COMMENT=		Disassembler for ELF x86 binarys
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/bastard_src-0.17

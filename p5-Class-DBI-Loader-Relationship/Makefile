@@ -13,7 +13,6 @@ COMMENT=	Easier relationship specification in CDBI::L
 DEPENDS+=	p5-Class-DBI-Loader>=0:../../wip/p5-Class-DBI-Loader
 DEPENDS+=	p5-Lingua-EN-Inflect-Number>=1:../../textproc/p5-Lingua-EN-Inflect-Number
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Class/DBI/Loader/Relationship/.packlist
 USE_LANGUAGES=	# none

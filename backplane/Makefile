@@ -11,7 +11,6 @@ COMMENT=		Innovative RDBMS database by Matthew Dillon
 
 BUILD_DEPENDS+=		dxmake>=0:../../wip/dxmake
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

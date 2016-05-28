@@ -11,7 +11,6 @@ MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://fprobe.sourceforge.net/
 COMMENT=		Collect network traffic data and emit it as NetFlow flows
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 

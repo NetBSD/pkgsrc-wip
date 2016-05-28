@@ -10,7 +10,6 @@ MAINTAINER=		psham@cs.nmsu.edu
 HOMEPAGE=		http://videolab.uoregon.edu/
 COMMENT=		GUI interface for multicast MPEG-I stream viewer
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/mim-1.2
 GNU_CONFIGURE=		yes

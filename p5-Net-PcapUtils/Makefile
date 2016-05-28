@@ -12,7 +12,6 @@ COMMENT=	Utility routines for Net::Pcap module
 
 DEPENDS+=	p5-Net-Pcap>=0.3:../../net/p5-Net-Pcap
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Net/PcapUtils/.packlist
 

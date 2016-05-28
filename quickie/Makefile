@@ -12,7 +12,6 @@ HOMEPAGE=	http://${PKGBASE}.sourceforge.net/
 MAINTAINER=	shaun@inerd.com
 COMMENT=	Small footprint, fast Wiki engine written in C++
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	c c++
 

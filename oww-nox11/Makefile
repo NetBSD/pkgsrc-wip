@@ -10,7 +10,6 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://oww.sourceforge.net/
 COMMENT=	One-wire weather
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 #USE_LIBTOOL=	yes

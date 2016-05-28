@@ -1,6 +1,5 @@
 # $NetBSD: Makefile,v 1.5 2012/10/07 20:11:08 asau Exp $
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../chat/xchat/Makefile.common"
 

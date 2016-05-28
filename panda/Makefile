@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.stillhq.com//panda/
 COMMENT=	GPLed PDF generation library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/panda.pc.in

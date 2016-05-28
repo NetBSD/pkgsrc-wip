@@ -10,7 +10,6 @@ MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://www.tnsp.org/xs-files/
 COMMENT=	Snapshot of reSID-builder from ccr/TNSP
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

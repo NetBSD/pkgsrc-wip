@@ -18,7 +18,6 @@ DEPENDS+=	p5-Test-MockObject>=1.01:../../devel/p5-Test-MockObject
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-URI-Find>=0:../../www/p5-URI-Find
 
-PKG_DESTDIR_SUPPORT=	none
 
 # PERL5_MODULE_TYPE=	Module::Build
 

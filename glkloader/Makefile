@@ -11,7 +11,6 @@ COMMENT=		Glk library that loads real glk implementation at runtime
 
 DEPENDS+=		glkterm-[0-9]*:../../wip/glkterm
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		perl
 

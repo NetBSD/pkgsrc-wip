@@ -10,7 +10,6 @@ MAINTAINER=	eggert@macvaerk.dtu.dk
 HOMEPAGE=	http://www.temme.net/sander/mod_zeroconf/
 COMMENT=	Allows apache2 to register on a Zero Configuration network
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/mod_zeroconf
 

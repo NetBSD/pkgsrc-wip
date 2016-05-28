@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wordwarvi.sourceforge.net/
 COMMENT=	Side-scrolling shoot 'em up '80s style arcade game
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake pkg-config
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}

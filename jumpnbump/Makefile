@@ -10,7 +10,6 @@ MAINTAINER=		Peter.Bex@student.kun.nl
 HOMEPAGE=		http://jumpbump.mine.nu/
 COMMENT=		Game with cute rabbits and lots of blood
 
-PKG_DESTDIR_SUPPORT=	none
 
 MAKE_ENV+=		SDL_PREFIX="${BUILDLINK_PREFIX.SDL}"
 MAKE_ENV+=		SDL_mixer_PREFIX="${BUILDLINK_PREFIX.SDL_mixer}"

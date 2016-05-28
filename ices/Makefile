@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	MP3/Vorbis encoder for icecast servers
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \

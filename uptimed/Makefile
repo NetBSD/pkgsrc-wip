@@ -10,7 +10,6 @@ MAINTAINER=		joe@joe.cz
 HOMEPAGE=		http://podgorny.cz/uptimed/
 COMMENT=		Keeps track of current and past system uptimes
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

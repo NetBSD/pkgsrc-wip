@@ -19,6 +19,5 @@ SUBST_FILES.prefix=Makefile
 SUBST_SED.prefix  =-e s,/usr,,g \
 		   -e s,DESTDIR\ =,DESTDIR=${PREFIX},g
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.pkg.mk"

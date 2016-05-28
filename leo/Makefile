@@ -13,7 +13,6 @@ COMMENT=		Programmer's editor and a flexible browser
 DEPENDS+=		${PYPKGPREFIX}-docutils>=0.3.9:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=		yes
 REPLACE_PYTHON=	src/leo.py scripts/LinixInstall.py

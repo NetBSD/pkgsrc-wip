@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.phrozensmoke.com/projects/pythonol/
 COMMENT=		Gtk-based frontend for several translation services on web
 
-PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 NO_CONFIGURE=		yes

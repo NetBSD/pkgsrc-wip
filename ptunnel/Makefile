@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.cs.uit.no/~daniels/PingTunnel/
 COMMENT=	TCP tunnel over ICMP
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	none
 NOT_FOR_PLATFORM=	NetBSD-*-* # XXX needs net/ethernet.h
 			# XXX Could be patched to use net/if_ether.h
 

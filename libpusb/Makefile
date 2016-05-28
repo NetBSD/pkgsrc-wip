@@ -9,7 +9,6 @@ MASTER_SITES=		http://benoit.is-a-geek.net/bsd-tmp/
 MAINTAINER=		imil@gcu.info
 COMMENT=		Simple and portable USB development interface
 
-PKG_DESTDIR_SUPPORT=	none
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
 

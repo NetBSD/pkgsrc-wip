@@ -13,7 +13,6 @@ COMMENT=		Libraries needed by apps dependent on NCBI C++ toolkit
 
 CONFLICTS=		ncbi_cxx-lib-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

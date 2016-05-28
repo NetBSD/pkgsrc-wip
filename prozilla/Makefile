@@ -10,7 +10,6 @@ MAINTAINER=		low@ameba6.com
 HOMEPAGE=		http://directory.fsf.org/project/ProZilla/
 COMMENT=		ProZilla is a multi-threaded download accelerator
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -10,7 +10,6 @@ MAINTAINER=		ivaniclixx@gmail.com
 HOMEPAGE=		http://www.arrakis.es/~ninsesabe/qtre/
 COMMENT=		Quick Tool for Raw Editing
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config perl

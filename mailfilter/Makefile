@@ -9,7 +9,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://mailfilter.sourceforge.net/
 COMMENT=	Filter mail on a POP3 server
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake bison

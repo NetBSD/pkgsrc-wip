@@ -14,7 +14,6 @@ PERL5_REQD+=	5.8.0
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/SubRequest/.packlist
 

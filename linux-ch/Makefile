@@ -16,7 +16,6 @@ LICENSE=		chstandard-license
 LINUX_BINPKG_FMT=	plain
 LINUX_USE_X11=		yes
 
-PKG_DESTDIR_SUPPORT=	none
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} PREFIX="${EMULOPTDIR}" ./install.sh

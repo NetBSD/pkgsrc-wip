@@ -18,7 +18,6 @@ DEPENDS+=		portmap>=4:../../net/portmap
 # rc.d script uses domainname from yp-tools or net-tools
 #DEPENDS+=		yp-tools-[0-9]*:../../wip/yp-tools
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

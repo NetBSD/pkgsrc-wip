@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hcs.harvard.edu/~dholland/computers/netkit.html
 COMMENT=		Network RIP and router discovery daemon for Linux
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes

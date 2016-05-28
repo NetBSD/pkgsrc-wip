@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 
 CONFLICTS+=		top-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		DESTDIR=${PREFIX:Q}

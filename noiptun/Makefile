@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://noiptun.sourceforge.net/
 COMMENT=		Allows communication with computers that do not have an IP address
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/noiptun
 

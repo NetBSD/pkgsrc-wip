@@ -10,7 +10,6 @@ MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://tobias.eyedacor.org/typespeed/
 COMMENT=		Game to measure your typing speed, with network mode
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c
 GNU_CONFIGURE=		YES

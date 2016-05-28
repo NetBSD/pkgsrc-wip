@@ -24,7 +24,6 @@ DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 

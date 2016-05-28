@@ -10,7 +10,6 @@ MASTER_SITES=   http://ftp.unixdev.net/pub/unixdev/ldapuseradd/0.9.2/
 HOMEPAGE=       http://www.unixdev.net/projects/ldapuseradd/
 COMMENT=        LDAP User/Group Management Toolset
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=             gmake
 GNU_CONFIGURE=	yes

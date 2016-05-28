@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fish2.com/cops/
 COMMENT=		Computer Oracle and Password System
 
-PKG_DESTDIR_SUPPORT=	none
 
 MAKE_FILE=		makefile
 

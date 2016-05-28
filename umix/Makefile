@@ -8,7 +8,6 @@ MAINTAINER=	cez@compsoc.man.ac.uk
 HOMEPAGE=	http://umix.sourceforge.net/
 COMMENT=	Adjust mix levels
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config

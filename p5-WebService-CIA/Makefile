@@ -16,7 +16,6 @@ DEPENDS+=		p5-DB_File>=1.8:../../databases/p5-DB_File
 DEPENDS+=		p5-libwww>=2.0:../../www/p5-libwww
 DEPENDS+=		p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/WebService/CIA/.packlist

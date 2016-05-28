@@ -17,7 +17,6 @@ DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../net/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
 DEPENDS+=		${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
 
-PKG_DESTDIR_SUPPORT=    none
 
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-beautifulsoup, py-mxDateTime, py-imaging, py-twisted, py-elementtree, py-xml

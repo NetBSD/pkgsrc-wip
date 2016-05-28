@@ -8,7 +8,6 @@ MAINTAINER=	rumcic@gmail.com
 HOMEPAGE=	http://www.tinycc.org/
 COMMENT=	The Smallest ANSI C compiler
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 HAS_CONFIGURE=	yes

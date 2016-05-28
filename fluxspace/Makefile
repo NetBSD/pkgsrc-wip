@@ -9,7 +9,6 @@ MAINTAINER=		poff@sixbit.org
 HOMEPAGE=		http://fluxspace.sourceforge.net/
 COMMENT=		Fluxbox workspace manager, environment
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

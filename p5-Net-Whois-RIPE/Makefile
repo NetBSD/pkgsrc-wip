@@ -11,7 +11,6 @@ COMMENT=	Implementation of RIPE Whois
 
 #BUILD_DEPENDS+=		{p5-Test-Simple>=0.44,perl{,-thread}>=5.8.0}:../../devel/p5-Test-Simple
 
-PKG_DESTDIR_SUPPORT=	none
 PERL_CONFIGURE=	yes
 MAKE_PARAMS=		--online-tests
 PERL5_PACKLIST=		auto/Net/Whois/RIPE/.packlist

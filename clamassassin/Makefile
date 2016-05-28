@@ -11,7 +11,6 @@ COMMENT=	Simple virus filter wrapper for ClamAV
 DEPENDS+=	clamav>=0.84:../../security/clamav
 DEPENDS+=	procmail>=3.22nb1:../../mail/procmail
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CONF_RM=${RM:Q}

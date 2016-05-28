@@ -11,7 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cse.unsw.edu.au/~neilb/source/mdadm/ANNOUNCE
 COMMENT=		RAID management for Linux systems
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+= gmake
 

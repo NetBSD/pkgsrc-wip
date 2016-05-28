@@ -12,7 +12,6 @@ MAINTAINER=	matias@dotbsd.org
 HOMEPAGE=	http://siptoolbox.sourceforge.net/
 COMMENT=	Scilab Image Processing toolbox
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

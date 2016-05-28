@@ -16,7 +16,6 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-vorbis>=0:../../audio/py-vorbis
 DEPENDS+=	${PYPKGPREFIX}-GeoIP>=0:../../net/py-GeoIP
 
-PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes

@@ -15,7 +15,6 @@ DEPENDS+=	p5-Class-DBI-Loader>=0.2:../../wip/p5-Class-DBI-Loader
 DEPENDS+=	p5-Catalyst-Runtime>=4:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-DBI>=0:../../databases/p5-Class-DBI
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Model/CDBI/.packlist
 

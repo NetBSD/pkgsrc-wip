@@ -12,7 +12,6 @@ COMMENT=		Frontend for snes9x written in GTK2
 
 DEPENDS+=		snes9x>=1.39:../../emulators/snes9x
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

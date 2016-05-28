@@ -14,7 +14,6 @@ DEPENDS+=		debian_x11-[0-9]*:../../wip/debian_x11
 DEBS=			libgtk1.2_1.2.10-16_${MACHINE_ARCH}.deb
 DEBS=			libgtk1.2-common_1.2.10-16_all.deb
 
-PKG_DESTDIR_SUPPORT=	none
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb

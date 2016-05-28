@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fluxbox.org/fbpager/
 COMMENT=	Fluxbox pager with transparency and mouse gestures
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

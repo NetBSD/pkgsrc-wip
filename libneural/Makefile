@@ -8,7 +8,6 @@ MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE= http://ieee.uow.edu.au/~daniel/software/libneural/
 COMMENT=	C++ library for creating 3-layer backpropagation neural networks
 
-PKG_DESTDIR_SUPPORT=	none
 
 CONFIGURE_PREFIX+= ${PREFIX}
 MAKE_FLAGS+= prefix=${PREFIX:Q}

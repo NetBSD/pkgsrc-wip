@@ -9,7 +9,6 @@ MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		ftp://ftp.informatik.tu-darmstadt.de/pub/TI/systems/LiDIA/current/
 COMMENT=		C++ Library For Computational Number Theory
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

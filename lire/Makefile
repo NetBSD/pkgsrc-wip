@@ -17,7 +17,6 @@ DEPENDS+=	p5-Curses-UI-[0-9]*:../../devel/p5-Curses-UI
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

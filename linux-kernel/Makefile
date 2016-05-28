@@ -15,7 +15,6 @@ BUILD_DEPENDS+=		linux-module-init-tools-[0-9]*:../../wip/linux-module-init-tool
 # XXX       maybe say "Package preserve option is set" or ...?
 PKG_PRESERVE=	# defined
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

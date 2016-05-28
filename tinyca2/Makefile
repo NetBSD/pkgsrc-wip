@@ -14,7 +14,6 @@ DEPENDS+=	p5-gtk2>=1.072:../../x11/p5-gtk2
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
-PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=	YES
 CADIR=		${PREFIX}/share/tinyca2

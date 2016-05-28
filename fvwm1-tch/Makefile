@@ -11,7 +11,6 @@ COMMENT=		Virtual window manager for X
 
 CONFLICTS=		fvwm2-[0-9]* fvwm1-[0-9]* fvwm>=1
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf automake

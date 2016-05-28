@@ -11,7 +11,6 @@ MAINTAINER=	hallmann@ahatec.de
 HOMEPAGE=	http://freedup.org/
 COMMENT=	Free disk space by hard linking duplicate files
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 

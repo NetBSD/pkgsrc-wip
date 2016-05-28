@@ -14,7 +14,6 @@ PERL5_REQD+=	5.8.1
 DEPENDS+=	p5-Catalyst-Runtime>=5.2:../../www/p5-Catalyst-Runtime
 #DEPENDS+=	{perl>=5.8.6,p5-Encode>=2.1}:../../textproc/p5-Encode
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=	auto/Catalyst/Plugin/Unicode/Encoding/.packlist

@@ -11,7 +11,6 @@ HOMEPAGE=	http://ede.sourceforge.net/
 COMMENT=	Extended Fast Light Toolkit
 LICENSE=	gnu-lgpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/efltk
 GNU_CONFIGURE=		yes

@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvrml.org/
 COMMENT=	Portable C++ library for displaying VRML97 files
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes

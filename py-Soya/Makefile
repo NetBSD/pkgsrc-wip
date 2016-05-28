@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/oomadness/en/soya/index.html
 COMMENT=		High level 3D engine for Python
 
-PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

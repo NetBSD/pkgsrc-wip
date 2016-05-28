@@ -8,7 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libspf2.org/
 COMMENT=	Implementation of the Sender Policy Framework (SPF) as a milter
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 PTHREAD_OPTS+=	require

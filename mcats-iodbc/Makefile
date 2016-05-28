@@ -13,7 +13,6 @@ COMMENT=	MCatS iODBC module
 #DEPENDS+=	mcats>=0.1.0:../../convertors/mcats
 DEPENDS+=	mcats>=0.1.0:../../wip/mcats
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

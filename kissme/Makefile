@@ -12,7 +12,6 @@ COMMENT=		Java Virtual Machine (JVM) freely available
 DEPENDS+=		classpath>=0.7:../../lang/classpath
 DEPENDS+=		zip>=2.3:../../archivers/zip
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

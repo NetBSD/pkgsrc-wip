@@ -10,7 +10,6 @@ MAINTAINER=	oherrala@ee.oulu.fi
 HOMEPAGE=	http://silky.sourceforge.net/
 COMMENT=	Silky is an easy-to-use graphical SILC client
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=gmake
 GNU_CONFIGURE=		YES

@@ -11,7 +11,6 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://vncselector.sourceforge.net/
 COMMENT=		Tool for managing VNC sessions
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77

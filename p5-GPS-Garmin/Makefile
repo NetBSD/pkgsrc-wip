@@ -8,7 +8,6 @@ MAINTAINER=	uli@habel.name
 HOMEPAGE=	http://search.cpan.org/dist/perl-GPS/
 COMMENT=	GPS::Garmin access module for Perl
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/GPS/Garmin/.packlist
 

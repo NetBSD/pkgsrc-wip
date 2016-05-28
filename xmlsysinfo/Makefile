@@ -8,7 +8,6 @@ MAINTAINER=	haaaad@gmail.com
 HOMEPAGE=	http://xsi.kolabore.ath.cx/
 COMMENT=	System monitor that provides XML encoded stats
 
-PKG_DESTDIR_SUPPORT=	none
 
 BUILDLINK_API_DEPENDS.libxml2+=   libxml2>=2.0.0
 BUILDLINK_API_DEPENDS.zlib+=	  zlib>=1.2.0

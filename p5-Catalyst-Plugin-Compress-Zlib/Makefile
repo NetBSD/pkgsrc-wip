@@ -13,7 +13,6 @@ DEPENDS+=	p5-IO-Compress>=0:../../devel/p5-IO-Compress
 DEPENDS+=	p5-ExtUtils-MakeMaker>=0:../../devel/p5-ExtUtils-MakeMaker
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/Compress/Zlib/.packlist
 

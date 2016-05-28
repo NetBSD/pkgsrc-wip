@@ -10,7 +10,6 @@ MAINTAINER=		iharding@destinydata.com
 HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		America Online's open source web server
 
-PKG_DESTDIR_SUPPORT=	none
 
 MAKE_FLAGS+=		NSHOME=${WRKSRC:Q}
 CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib

@@ -10,7 +10,6 @@ MAINTAINER=	flynn@energyhq.homeip.net
 HOMEPAGE=	http://themes.freshmeat.net/projects/qnx11__/?topic_id=923%2C954
 COMMENT=	GTK theme-engine to yield a QNX look and feel
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

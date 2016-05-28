@@ -14,7 +14,6 @@ DEPENDS+=	p5-Class-DBI>=0.9:../../databases/p5-Class-DBI
 DEPENDS+=	p5-Data-Page>=0.13:../../devel/p5-Data-Page
 DEPENDS+=	p5-Exporter-Lite>=0.01:../../devel/p5-Exporter-Lite
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Class/DBI/Pager/.packlist
 USE_LANGUAGES=	# none

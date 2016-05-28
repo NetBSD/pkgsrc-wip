@@ -9,7 +9,6 @@ MAINTAINER=		dawszy@arhea.pl
 HOMEPAGE=		http://www.qsl.net/g4klx/
 COMMENT=		Satellite tracking program for amateurs
 
-PKG_DESTDIR_SUPPORT=	none
 
 NO_CONFIGURE=		yes
 

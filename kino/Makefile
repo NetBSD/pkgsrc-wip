@@ -11,7 +11,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.kinodv.org/
 COMMENT=		Non-linear editor for Digital Video data
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes

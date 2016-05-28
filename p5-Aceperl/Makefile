@@ -10,7 +10,6 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.cpan.org/authors/id/L/LD/LDS/
 COMMENT=		Perl interface for the ACEDB object-oriented database
 
-PKG_DESTDIR_SUPPORT=    none
 
 PERL5_PACKLIST=		auto/Ace/.packlist
 

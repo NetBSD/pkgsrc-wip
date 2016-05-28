@@ -10,7 +10,6 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://www.kvaleberg.org/g21.html
 COMMENT=		Assemblre and linker tools for Analog Devices 21k series DSPs
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES

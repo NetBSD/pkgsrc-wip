@@ -17,7 +17,6 @@ DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
 DEPENDS+=	iso12083-[0-9]*:../../textproc/iso12083
 DEPENDS+=	iso8879-[0-9]*:../../textproc/iso8879
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV=	PYTHON=${PYTHONBIN:Q}

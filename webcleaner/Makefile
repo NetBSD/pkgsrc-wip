@@ -11,7 +11,6 @@ COMMENT=		Filtering HTTP proxy
 DEPENDS+=		${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 DEPENDS+=		${PYPKGPREFIX}-imaging>=0:../../graphics/py-imaging
 
-PKG_DESTDIR_SUPPORT=    none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -9,7 +9,6 @@ MAINTAINER=	tmarc@NetBSD.org.pl
 HOMEPAGE=	http://web.archive.org/web/2/http://www.darkwing.com/idled/
 COMMENT=	Daemon that logs out idle users
 
-PKG_DESTDIR_SUPPORT=	none
 
 post-extract:
 	${RM} -f ${WRKSRC}/parse.c ${WRKSRC}/scan.c

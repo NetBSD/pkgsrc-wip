@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 COMMENT=		The telnet and telnetd for Linux
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes

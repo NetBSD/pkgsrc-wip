@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gtk-server.org/
 COMMENT=	Small tool to enable GUI access for shell scripts
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config

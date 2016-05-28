@@ -10,7 +10,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.rosegardenmusic.com/
 COMMENT=	Development release of rosegarden
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

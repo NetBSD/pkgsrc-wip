@@ -15,7 +15,6 @@ DEPENDS+=		${PYPKGPREFIX}-Soya>=0.6.1:../../wip/py-Soya
 DEPENDS+=		${PYPKGPREFIX}-EditObj2-[0-9]*:../../wip/py-EditObj2
 DEPENDS+=		${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 
-PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

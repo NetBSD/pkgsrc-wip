@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
 COMMENT=		Tools for manipulating Linux Wireless Extensions
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 USE_TOOLS+=		gmake

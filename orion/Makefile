@@ -17,7 +17,6 @@ BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
 DEPENDS+=		sunterlib-*:../../wip/sunterlib
 DEPENDS+=		scx-*:../../wip/scx
 
-PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=		yes
 

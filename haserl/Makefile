@@ -11,6 +11,5 @@ COMMENT=	CGI wrapper for mixing HTML with shell script
 
 GNU_CONFIGURE=	yes
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.pkg.mk"

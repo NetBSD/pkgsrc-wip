@@ -12,7 +12,6 @@ COMMENT=		External contact manager for mutt
 
 DEPENDS+=		rolo-[0-9]*:../../wip/rolo
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

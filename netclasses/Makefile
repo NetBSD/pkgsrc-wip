@@ -9,7 +9,6 @@ MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://netclasses.sourceforge.net/
 COMMENT=	Asynchronous networking library
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config

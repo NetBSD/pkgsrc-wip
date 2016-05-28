@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2012/10/07 20:11:10 asau Exp $
 #
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../wip/xspd/Makefile.common"
 .include "../../wip/xspd/options.mk"

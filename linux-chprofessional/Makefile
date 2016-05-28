@@ -16,7 +16,6 @@ COMMENT=	Ch is an interactive C development environment
 #
 LICENSE=	chpro-license
 
-PKG_DESTDIR_SUPPORT=	none
 
 BUILD_DIRS=	# empty
 

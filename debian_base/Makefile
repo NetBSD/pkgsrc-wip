@@ -23,7 +23,6 @@ DISTFILE_LIBSTDCXX=		libstdc++5_3.3.6-7_${MACHINE_ARCH}.deb
 SITES.${DISTFILE_LIBSTDCXX}=	${MASTER_SITE_DEBIAN:=pool/main/g/gcc-3.3/}
 DEBS+=				${DISTFILE_LIBSTDCXX}
 
-PKG_DESTDIR_SUPPORT=	none
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb

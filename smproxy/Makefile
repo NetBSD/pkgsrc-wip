@@ -9,7 +9,6 @@ MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/app/
 COMMENT=	Proxy to allow non-XSMP apps to be managed by xsm
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+= pkg-config

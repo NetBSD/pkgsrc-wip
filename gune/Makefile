@@ -9,7 +9,6 @@ MAINTAINER=		Peter.Bex@student.kun.nl
 HOMEPAGE=		http://gune.berlios.de/
 COMMENT=		High level C utility library
 
-PKG_DESTDIR_SUPPORT=	none
 
 MAKE_ENV+=		MKLINT=no
 

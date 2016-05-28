@@ -11,7 +11,6 @@ MAINTAINER=		evaldo@gardenali.biz
 HOMEPAGE=		http://loop-aes.sourceforge.net/aespipe/
 COMMENT=		AES encryption pipe from the loop-aes project
 
-PKG_DESTDIR_SUPPORT=	none
 
 DEPENDS+=		gnupg>=1.2.0:../../security/gnupg
 

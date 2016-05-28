@@ -11,7 +11,6 @@ COMMENT=		Perl module for generating documents in Rich Text Format
 
 DEPENDS+=		p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/RTF/Writer/.packlist
 

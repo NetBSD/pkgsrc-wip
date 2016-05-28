@@ -11,7 +11,6 @@ HOMEPAGE=	http://equinox-project.org/
 COMMENT=	Libraries for Equinox Desktop
 LICENSE=	gnu-lgpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
 CHECK_PORTABILITY_SKIP=	test/run-all.sh
 
 GNU_CONFIGURE=	yes

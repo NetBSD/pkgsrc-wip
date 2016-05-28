@@ -15,7 +15,6 @@ DEPENDS+=	p5-Class-DBI>=0.89:../../databases/p5-Class-DBI
 DEPENDS+=	p5-Class-DBI-Plugin-Type>=0.02:../../wip/p5-Class-DBI-Plugin-Type
 DEPENDS+=	p5-HTML-Tree>=1.88:../../www/p5-HTML-Tree
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Class/DBI/AsForm/.packlist
 

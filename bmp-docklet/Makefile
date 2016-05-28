@@ -11,7 +11,6 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://mark.xnull.de/bmp-docklet.php
 COMMENT=		BMP Dock applet
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

@@ -9,7 +9,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://pinball.sourceforge.net/
 COMMENT=	Pinball using the Allegro game library
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

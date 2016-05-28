@@ -9,7 +9,6 @@ MAINTAINER=		alchow@users.sourceforge.net
 HOMEPAGE=		http://www.cabaret.demon.co.uk/filepp/
 COMMENT=		Generic file preprocessor
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

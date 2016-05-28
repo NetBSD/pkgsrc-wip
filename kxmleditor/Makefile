@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kxmleditor.sourceforge.net/
 COMMENT=	KDE xml editor
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=		yes

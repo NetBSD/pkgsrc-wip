@@ -9,7 +9,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://perso.orange.fr/sebastien.godard/
 COMMENT=		System performance tools for Linux
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 # uses msgfmt

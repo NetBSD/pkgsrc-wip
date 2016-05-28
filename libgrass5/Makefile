@@ -9,7 +9,6 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://gdal.velocet.ca/projects/grass/index.html
 COMMENT=		Standalone shared library suitable for use by non-GRASS applications
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -13,7 +13,6 @@ COMMENT=	Multithreaded caching HTTP proxy server
 # Oops requires working native threads
 NOT_FOR_PLATFORM=	NetBSD-1.*-*
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES

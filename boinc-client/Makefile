@@ -7,7 +7,6 @@ CATEGORIES=		net
 
 COMMENT=		The BOINC distributed computing application
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

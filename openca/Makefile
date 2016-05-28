@@ -29,7 +29,6 @@ DEPENDS+=	p5-X500-DN>=0.28:../../net/p5-X500-DN
 DEPENDS+=	p5-Locale-libintl>=1.10:../../misc/p5-Locale-libintl
 DEPENDS+=	p5-perl-ldap>=0.33:../../databases/p5-perl-ldap
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/openca/OpenCA/}
 USE_TOOLS+=	perl:run pkg-config gmake

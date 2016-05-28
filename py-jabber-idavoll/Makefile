@@ -9,7 +9,6 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://idavoll.ik.nu/
 COMMENT=	XMPP publish-subscribe (XEP-0060) component (via twistd)
 
-# PKG_DESTDIR_SUPPORT=	none
 #
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will

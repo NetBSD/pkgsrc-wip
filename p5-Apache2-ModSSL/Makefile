@@ -11,7 +11,6 @@ COMMENT=	Perl Interface to mod_ssl functions
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Apache2/ModSSL/.packlist
 

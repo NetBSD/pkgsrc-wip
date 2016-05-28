@@ -15,7 +15,6 @@ MAINTAINER=	pkgsrc-users@pkgsrc.org
 COMMENT=	Space sim game, inspired by Elite
 HOMEPAGE=	http://oolite.aegidian.org/
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	objc
 USE_TOOLS+=	gmake

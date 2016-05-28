@@ -16,7 +16,6 @@ DEPENDS+=		p5-Template-Toolkit>=2.14:../../www/p5-Template-Toolkit
 DEPENDS+=		p5-libwww>=5.805:../../www/p5-libwww
 DEPENDS+=		p5-Text-VimColor>=0.11:../../wip/p5-Text-VimColor
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/Text/Hatena/.packlist
 

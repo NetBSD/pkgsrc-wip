@@ -10,7 +10,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.linuxnet.com/
 COMMENT=		PAM plugin for MUSCLE SmartCard framework
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/MusclePAM
 USE_TOOLS+=		gmake

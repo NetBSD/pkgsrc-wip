@@ -9,7 +9,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://search.cpan.org/dist/Sub-Recursive/
 COMMENT=	Anonymous memory leak free recursive subroutines
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Sub/Recursive/.packlist
 

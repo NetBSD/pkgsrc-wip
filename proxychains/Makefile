@@ -16,7 +16,6 @@ COMMENT=		Chain multiple proxies in a transparent way
 # (see mk/fetch/fetch.mk), so you have to use a browser for now.
 FETCH_BEFORE_ARGS=	--no-check-certificate
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/proxychains
 

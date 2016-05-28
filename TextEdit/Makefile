@@ -11,7 +11,6 @@ MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://www.nongnu.org/backbone/apps.html
 COMMENT=	GNUstep text editor
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/textedit-4.0
 NO_CONFIGURE=	yes

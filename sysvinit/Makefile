@@ -14,7 +14,6 @@ COMMENT=		The Linux System V init and miscellaneous Linux tools
 # this uses linux/kd.h for example
 ONLY_FOR_PLATFORM=	Linux-*-*	# This is the Linux init
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		ROOT=${PREFIX:Q} ROOT_GROUP=${ROOT_GROUP:Q} \

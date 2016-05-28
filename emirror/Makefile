@@ -11,7 +11,6 @@ MAINTAINER=	holger@zedat.fu-berlin.de
 HOMEPAGE=	http://sourceforge.net/projects/emirror/
 COMMENT=	FTP mirroring tool with nice HTML logfiles
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes

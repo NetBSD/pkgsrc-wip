@@ -10,7 +10,6 @@ MAINTAINER=	jdunn@opentrend.net
 HOMEPAGE=	http://www.cri.ensmp.fr/~coelho/mod_macro/
 COMMENT=	Apache module for using macros in config files
 
-PKG_DESTDIR_SUPPORT=	none
 
 CONFLICTS=	ap-macro-[0-9]*
 

@@ -36,8 +36,6 @@ NOT_FOR_PLATFORM=	NetBSD-5.99.*-* NetBSD-[6-9]*-*
 
 MAKE_JOBS_SAFE=		no
 
-PKG_DESTDIR_SUPPORT=	none
-
 CONFLICTS+=	nntpclnt-[0-9]* inn-[0-9]*
 
 WRKSRC=		${WRKDIR}

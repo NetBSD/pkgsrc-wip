@@ -14,7 +14,6 @@ COMMENT=		TV/video recorder with many features
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-PKG_DESTDIR_SUPPORT=	none
 
 HAS_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

@@ -8,7 +8,6 @@ DISTFILES=	# empty
 MAINTAINER=	blair.sadewitz@gmail.com #drochner@NetBSD.org
 COMMENT=	Library providing noop-stubs for pthread functions
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}
 USE_LIBTOOL=	yes

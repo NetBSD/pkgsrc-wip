@@ -8,7 +8,6 @@ MAINTAINER=	josediazfer@yahoo.es
 HOMEPAGE=	http://www.saunalahti.fi/~samiuus/toni/xmlproc/
 COMMENT=	XML parser with implementation SAX2
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

@@ -28,7 +28,6 @@ DEBS+=			libxpm4_4.3.0.dfsg.1-4_${MACHINE_ARCH}.deb
 DEBS+=			libxt6_4.3.0.dfsg.1-4_${MACHINE_ARCH}.deb
 DEBS+=			xlibs-data_4.3.0.dfsg.1-4_all.deb
 
-PKG_DESTDIR_SUPPORT=	none
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb

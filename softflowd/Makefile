@@ -8,7 +8,6 @@ MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://www.mindrot.org/projects/softflowd/
 COMMENT=		Flow-based network traffic analyser capable of Cisco NetFlow export
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c
 GNU_CONFIGURE=		yes

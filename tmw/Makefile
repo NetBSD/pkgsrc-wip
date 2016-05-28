@@ -10,7 +10,6 @@ MAINTAINER=	Pseudo.Statistic@gmail.com
 HOMEPAGE=	http://themanaworld.sourceforge.net/
 COMMENT=	Free open source 2D MMORPG in development
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

@@ -8,7 +8,6 @@ MASTER_SITES=	http://dockapps.org/files/78/116/
 MAINTAINER=		poff@sixbit.org
 COMMENT=		Windowmaker dockapp to monitor network interface usage
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 

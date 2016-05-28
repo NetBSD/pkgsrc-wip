@@ -12,7 +12,6 @@ COMMENT=	DBIx::Simple - Easy-to-use OO interface to DBI
 
 DEPENDS+=	p5-DBI>=1.21:../../databases/p5-DBI
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/DBIx/Simple/.packlist
 USE_LANGUAGES=	# none

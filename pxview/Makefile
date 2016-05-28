@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pxlib.sourceforge.net/
 COMMENT=		Simple utility to view Paradox database files
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/pxview-0.1.4
 USE_PKGLOCALEDIR=	yes

@@ -6,7 +6,6 @@ PKGREVISION=		4
 CATEGORIES=		sysutils kde
 MASTER_SITES=		ftp://ftp.buzuluk.cz/pub/alo/knutclient/stable/
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}

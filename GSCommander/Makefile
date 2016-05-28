@@ -10,8 +10,6 @@ MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://www.nice.ch/~phip/softcorner.html
 COMMENT=	Simple Unix command monitor for GNUstep
 
-PKG_DESTDIR_SUPPORT=	none
-
 WRKSRC=		${WRKDIR}/GSCommander
 USE_LANGUAGES=	objc
 NO_CONFIGURE=	yes

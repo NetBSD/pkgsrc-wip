@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lingoteach.sourceforge.net/
 COMMENT=		Library for lingoteach
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/liblingoteach.pc.in

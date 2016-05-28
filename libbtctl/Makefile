@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://live.gnome.org/GnomeBluetooth
 COMMENT=		GObject Bluetooth controller
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake perl
 USE_PKGLOCALEDIR=	yes

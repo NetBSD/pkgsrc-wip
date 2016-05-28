@@ -11,7 +11,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		C style scripting lang
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 

@@ -9,7 +9,6 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/Devel-Profiler/
 COMMENT=		Perl profiler compatible with dprofpp
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/Devel/Profiler/.packlist
 

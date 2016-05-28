@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Startup/
 COMMENT=		Program flow utility
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/Startup/.packlist
 

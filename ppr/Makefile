@@ -12,7 +12,6 @@ COMMENT=		PPR is a print spooler for PostScript printers
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]* cups-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl

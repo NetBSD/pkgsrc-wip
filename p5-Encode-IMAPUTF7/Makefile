@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Encode-IMAPUTF7/
 COMMENT=	Modified UTF7 encoding (for IMAP)
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Encode/IMAPUTF7/.packlist
 

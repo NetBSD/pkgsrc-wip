@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/JavaScript/SpiderMonkey/
 COMMENT=	Perl interface to the JavaScript Engine
 
-PKG_DESTDIR_SUPPORT=	none
 
 MAKE_PARAMS+=	INC=${PREFIX}/include
 

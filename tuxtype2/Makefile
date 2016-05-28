@@ -12,7 +12,6 @@ HOMEPAGE=	http://tuxtype.sourceforge.net/
 
 VERSION=	1.5.0
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES

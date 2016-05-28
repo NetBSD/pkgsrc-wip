@@ -10,7 +10,6 @@ MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.gdal.org/dl/
 COMMENT=		Standalone GRASS 6 drivers for GDAL and OGR
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../wip/grass/Makefile.common"
 

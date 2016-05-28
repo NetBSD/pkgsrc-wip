@@ -1,6 +1,5 @@
 # $NetBSD: Makefile,v 1.6 2012/10/03 09:10:42 asau Exp $
 
-PKG_DESTDIR_SUPPORT=	none
 
 .include "../../wip/linux24-kernel/Makefile.common"
 

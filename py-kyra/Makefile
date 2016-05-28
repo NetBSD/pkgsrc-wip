@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.alobbs.com/pykyra/
 COMMENT=	Game development framework for Python
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

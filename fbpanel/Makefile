@@ -11,7 +11,6 @@ MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://fbpanel.sourceforge.net/
 COMMENT=		Desktop panel with menu, pager, and other plugins
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake pkg-config
 HAS_CONFIGURE=		yes

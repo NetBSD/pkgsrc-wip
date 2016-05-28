@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www1.maraudingpirates.org:8080/navigatrix/
 COMMENT=	GPS navigational system for KDE
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

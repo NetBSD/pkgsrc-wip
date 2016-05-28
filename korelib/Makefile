@@ -8,7 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.thekompany.com/projects/korelib/
 COMMENT=	Cross-platform C++ library for developing modular applications
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

@@ -20,7 +20,6 @@ DEPENDS+=		p5-libwww>=5.808:../../www/p5-libwww
 DEPENDS+=		vorbis-tools>=1.1.1:../../audio/vorbis-tools
 DEPENDS+=		timidity>=2.13.2nb2:../../audio/timidity
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

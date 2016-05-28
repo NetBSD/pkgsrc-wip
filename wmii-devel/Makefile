@@ -12,7 +12,6 @@ COMMENT=		Window manager improved 2
 
 DEPENDS+=		dmenu-[0-9]*:../../x11/dmenu
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		pkg-config
 NO_CONFIGURE=		yes

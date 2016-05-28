@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.eyrie.org/~eagle/software/remctl/
 COMMENT=	Client/server protocol for running commands using Kerberos v5 auth
 LICENSE=	mit
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake

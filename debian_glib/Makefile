@@ -19,7 +19,6 @@ DIST_SUBDIR=		debian_linux
 
 DEBS=			libglib1.2_1.2.10-9_${MACHINE_ARCH}.deb
 
-PKG_DESTDIR_SUPPORT=	none
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb

@@ -8,7 +8,6 @@ MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~js/warez/
 COMMENT=	Tool to collect news and mail packets for offline reading
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_FEATURES+=	regcomp

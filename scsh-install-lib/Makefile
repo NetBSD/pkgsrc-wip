@@ -12,7 +12,6 @@ COMMENT=		SCSH installation library for third-party libraries
 
 BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
 
-PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=		yes
 

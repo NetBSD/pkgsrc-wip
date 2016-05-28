@@ -13,7 +13,6 @@ COMMENT=		Portable Haskell 98 compiler
 # Not yet ported to 64-bit machines
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

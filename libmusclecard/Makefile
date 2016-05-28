@@ -8,7 +8,6 @@ MAINTAINER=		evaldo@gardenali.biz
 HOMEPAGE=		http://www.musclecard.com/
 COMMENT=		MUSCLE SmartCard framework support library
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

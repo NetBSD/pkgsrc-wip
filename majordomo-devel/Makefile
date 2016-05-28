@@ -39,7 +39,6 @@ DEPENDS+=	p5-Text-Reflow>=1.04:../../textproc/p5-Text-Reflow
 ##DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 ##DEPENDS+=	p5-DB_File>=1.63:../../databases/p5-DB_File
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/majordomo
 

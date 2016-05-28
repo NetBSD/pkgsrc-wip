@@ -16,7 +16,6 @@ DEPENDS+=	p5-Catalyst-Plugin-Session>=0.01:../../www/p5-Catalyst-Plugin-Session
 DEPENDS+=	p5-Class-Accessor>=0.22:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0.04:../../devel/p5-Class-Data-Inheritable
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_REQD+=	5.8.0
 PERL5_MODULE_TYPE=	Module::Build

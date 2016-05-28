@@ -19,7 +19,6 @@ CONFLICTS=	ddate-[0-9]*
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES

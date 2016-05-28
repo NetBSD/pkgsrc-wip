@@ -14,7 +14,6 @@ COMMENT=	DVB channels manager frontend using JavaGTK
 DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 DEPENDS+=	linuxtv-dvb-apps>=1.0:../../wip/linuxtv-dvb-apps
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes

@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.info.uni-karlsruhe.de/~andf/tendra.htm
 COMMENT=	Multi-targetted C and C++ compiler
 
-PKG_DESTDIR_SUPPORT=	none
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/src/installers/80x86

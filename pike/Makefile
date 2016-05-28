@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pike.ida.liu.se/
 COMMENT=		Dynamic programming language similar to Java and C
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src

@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nopcode.org/?t=mksend
 COMMENT=		Network testing tool for capture and generate packets
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

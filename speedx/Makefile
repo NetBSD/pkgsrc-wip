@@ -13,7 +13,6 @@ COMMENT=	Car racing game for X
 
 SITES.mercrain.s3m.zip=	http://www.modarchive.com/cgi-bin/download.cgi/M/
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

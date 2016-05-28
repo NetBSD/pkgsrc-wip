@@ -14,7 +14,6 @@ COMMENT=		Learn Spanish (with a little help of Python)
 
 DEPENDS+=		${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
 
-PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2

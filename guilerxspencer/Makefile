@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.arglist.com/guile/
 COMMENT=		Guile bindings for Henry Spencer's regex
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

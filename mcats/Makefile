@@ -9,7 +9,6 @@ MAINTAINER=	pehr@mcats.net
 HOMEPAGE=	http://mcats.net/
 COMMENT=	Catalog converter
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

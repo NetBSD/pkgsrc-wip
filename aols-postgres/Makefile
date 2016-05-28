@@ -10,7 +10,6 @@ MAINTAINER=	iharding@destinydata.com
 HOMEPAGE=	http://www.aolserver.com/
 COMMENT=	Postgres database access module for aolserver
 
-PKG_DESTDIR_SUPPORT=	none
 
 MAKE_FLAGS+=	POSTGRES=${PREFIX:Q} INST=/${PREFIX:Q}/include/nsd \
 		TCL_CC=gcc

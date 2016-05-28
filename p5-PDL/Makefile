@@ -13,7 +13,6 @@ DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/PDL/.packlist
 

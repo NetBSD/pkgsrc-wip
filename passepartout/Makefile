@@ -11,7 +11,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.stacken.kth.se/project/pptout/
 COMMENT=		Desktop publishing for X
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gs:run

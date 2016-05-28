@@ -13,7 +13,6 @@ COMMENT=		Full-featured text editor highly optimized for size
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 

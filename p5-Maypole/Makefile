@@ -32,7 +32,6 @@ DEPENDS+=	p5-UNIVERSAL-moniker>=0:../../devel/p5-UNIVERSAL-moniker
 DEPENDS+=	p5-UNIVERSAL-require>=0:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Maypole/.packlist
 USE_LANGUAGES=	# none

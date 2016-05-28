@@ -9,7 +9,6 @@ MAINTAINER=		reed@reedmedia.net
 #HOMEPAGE
 COMMENT=		Network configuration and status tools for Linux
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 # build uses linux/if_ether.h for example

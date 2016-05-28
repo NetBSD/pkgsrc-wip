@@ -16,7 +16,6 @@ DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 # The ptal-cups script require bash
 DEPENDS+=		bash-[0-9]*:../../shells/bash
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES

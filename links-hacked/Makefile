@@ -12,7 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xray.sai.msu.ru/~karpov/links-hacked/
 COMMENT=	Enhanced version of Links with tabs and more
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		aclocal autoheader autoconf automake gmake

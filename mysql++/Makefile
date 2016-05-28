@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tangentsoft.net/mysql++/
 COMMENT=	Complex C++ API for MySQL${MYSQL_VER}
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

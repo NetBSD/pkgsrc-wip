@@ -15,7 +15,6 @@ DEPENDS+=	p5-Class-Data-Accessor>=0:../../devel/p5-Class-Data-Accessor
 DEPENDS+=	p5-Cache-Cache>=0:../../devel/p5-Cache-Cache
 DEPENDS+=	p5-UNIVERSAL-require>=0:../../devel/p5-UNIVERSAL-require
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_MODULE_TYPE=	MakeMaker
 PERL5_PACKLIST=		auto/WebService/Audioscrobbler/.packlist

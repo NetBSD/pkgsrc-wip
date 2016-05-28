@@ -10,7 +10,6 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://freevo.sourceforge.net/cgi-bin/freevo-2.0/Kaa
 COMMENT=		Media metadata parser for the Kaa multimedia framework
 
-PKG_DESTDIR_SUPPORT=	none
 
 PYDISTUTILSPKG=		yes
 

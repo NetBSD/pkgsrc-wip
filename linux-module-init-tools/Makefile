@@ -13,7 +13,6 @@ COMMENT=		Linux kernel module utilities (kernel 2.5.48 and above)
 
 CONFLICTS+=		linux-modutils-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	none
 
 ONLY_FOR_PLATFORM=	Linux-*-* # configure: error: Linux only, dude!
 

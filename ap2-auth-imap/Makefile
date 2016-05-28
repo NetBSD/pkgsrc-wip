@@ -11,7 +11,6 @@ MAINTAINER=	cg@cgall.de
 HOMEPAGE=	http://ben.brillat.net/projects/mod_auth_imap/
 COMMENT=	Module to allow apache2 authentication against an IMAP server
 
-PKG_DESTDIR_SUPPORT=	none
 
 APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	auth_imap_module

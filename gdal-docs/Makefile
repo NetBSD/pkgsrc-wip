@@ -13,7 +13,6 @@ COMMENT=		Documentation for GDAL
 
 DEPENDS+=		doxygen>=1.4.1:../../devel/doxygen
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES

@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinylogin.busybox.net/
 COMMENT=	Suite of tiny Unix utilities for handling logging
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 

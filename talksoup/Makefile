@@ -10,7 +10,6 @@ MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://talksoup.sourceforge.net/
 COMMENT=	IRC client for GNUstep and MacOSX
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		objc
 NO_CONFIGURE=		yes

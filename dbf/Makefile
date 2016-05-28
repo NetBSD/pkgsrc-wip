@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://berg-systeme.de/dbf.html
 COMMENT=	Converts dBASE files to comma separated values text files
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

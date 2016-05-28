@@ -11,7 +11,6 @@ HOMEPAGE=		http://gael.roualland.free.fr/ifstat/
 COMMENT=		Tool to report network interface bandwidth, shared library version
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-library
 

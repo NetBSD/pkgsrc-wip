@@ -9,7 +9,6 @@ HOMEPAGE=	http://icmpchat.sourceforge.net/
 COMMENT=	Simple chat using ICMP and Rijndael-256 encryptation
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 

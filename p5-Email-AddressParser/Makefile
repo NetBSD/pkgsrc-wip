@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Email-AddressParser/
 COMMENT=	RFC 2822 Address Parsing and Creation
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Email/AddressParser/.packlist
 

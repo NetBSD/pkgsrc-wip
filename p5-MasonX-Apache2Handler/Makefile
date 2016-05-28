@@ -16,7 +16,6 @@ DEPENDS+=		p5-libapreq2>=2.4:../../www/p5-libapreq2
 DEPENDS+=		p5-HTML-Mason>=1.26:../../www/p5-HTML-Mason
 DEPENDS+=		${APACHE_PKG_PREFIX}-perl>=1.99.17:../../www/ap2-perl
 
-PKG_DESTDIR_SUPPORT=	none
 
 BUILDLINK_API_DEPENDS.perl=	perl>=5.8.4
 

@@ -11,7 +11,6 @@ MAINTAINER=	flynn@energyhq.homeip.net
 HOMEPAGE=	http://www.usermode.org/code.html
 COMMENT=	Widget style and window decoration for KDE3
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

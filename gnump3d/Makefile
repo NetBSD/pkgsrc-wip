@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gnump3d/
 COMMENT=		The GNU Streaming MP3 / Media Server
 
-PKG_DESTDIR_SUPPORT=	none
 
 CFGFILE=		${PKG_SYSCONFDIR}/gnump3d/gnump3d.conf
 RCD_SCRIPTS=		gnump3d

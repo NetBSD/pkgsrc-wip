@@ -10,7 +10,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.linuxnet.com/
 COMMENT=		MUSCLE SmartCard framework PKCS \#11 library
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/libmusclepkcs11
 GNU_CONFIGURE=		YES

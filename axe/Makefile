@@ -9,7 +9,6 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	https://web.archive.org/web/20051124083645/http://www.hardcoders.org/axe/
 COMMENT=	Manipulate contents of Atari 8bit disk image files (.ATR, .XFD)
 
-PKG_DESTDIR_SUPPORT=	none
 
 NO_CONFIGURE=	YES
 

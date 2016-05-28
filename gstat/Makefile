@@ -10,7 +10,6 @@ MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://www.gstat.org/
 COMMENT=	Geostatistical modelling, prediction and simulation
 
-PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 MAKE_FILE=	makefile

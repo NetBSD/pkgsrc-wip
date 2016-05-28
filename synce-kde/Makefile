@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.synce.org/oldwiki/index.php/KDE
 COMMENT=		Integrate Windows CE or Windows Mobile device into KDE
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

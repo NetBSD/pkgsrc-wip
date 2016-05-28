@@ -11,7 +11,6 @@ MAINTAINER=		Pseudo.Statistic@gmail.com
 HOMEPAGE=		http://guichan.sourceforge.net/
 COMMENT=	Portable C++ GUI library for games
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.ripe.net/
 COMMENT=	RPSL Object Library
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/perl
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/perl

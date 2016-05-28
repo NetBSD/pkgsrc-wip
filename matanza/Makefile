@@ -11,7 +11,6 @@ HOMEPAGE=		http://web.archive.org/web/20071226080243/http://bachue.com/matanza/
 #HOMEPAGE=		http://bachue.com/matanza/
 COMMENT=		Multiplayer space shooter ascii-art game
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

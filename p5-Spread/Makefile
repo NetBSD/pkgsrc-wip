@@ -9,7 +9,6 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/J/JE/JESUS/
 MAINTAINER=	gizm0@inbox.lv
 COMMENT=	Perl5 module interface to Spread network utilities
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/Spread/.packlist
 

@@ -14,7 +14,6 @@ DEPENDS+=	p5-CGI-Application>=0:../../www/p5-CGI-Application
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-Test-WWW-Mechanize>=1.04:../../www/p5-Test-WWW-Mechanize
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Test/WWW/Mechanize/CGIApp/.packlist
 USE_LANGUAGES=	# none

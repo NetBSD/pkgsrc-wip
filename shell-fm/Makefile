@@ -10,7 +10,6 @@ MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://nex.scrapping.cc/shell-fm/
 COMMENT=	Console based player for Last.FM radio streams
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	autoconf automake
 HAS_CONFIGURE=	yes

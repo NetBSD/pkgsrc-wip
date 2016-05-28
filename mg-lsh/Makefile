@@ -13,7 +13,6 @@ COMMENT=	DOS compatible command line interpreter
 
 DEPENDS+=	free-[0-9]*:../../sysutils/free
 
-PKG_DESTDIR_SUPPORT=	none
 
 BUILD_TARGET=	lsh
 WRKSRC=		${WRKDIR}/lsh-0.70

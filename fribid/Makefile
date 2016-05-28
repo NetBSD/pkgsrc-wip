@@ -12,7 +12,6 @@ COMMENT=		FriBID  is a web browser plugin for BankID
 USE_TOOLS+=             gmake pkg-config
 LICENSE=		mit
 
-PKG_DESTDIR_SUPPORT=    none
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}  --mandir=${PKGMANDIR}
 HAS_CONFIGURE=		yes

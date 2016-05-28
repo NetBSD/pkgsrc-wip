@@ -11,7 +11,6 @@ COMMENT=	Crypt::CBC for Egg Plugin.
 
 DEPENDS+=	p5-Crypt-CBC>=0:../../security/p5-Crypt-CBC
 
-PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Egg/Plugin/Crypt/CBC/.packlist
 

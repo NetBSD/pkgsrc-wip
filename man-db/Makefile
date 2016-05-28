@@ -12,7 +12,6 @@ COMMENT=		Manual pager and related man page utilities
 
 CONFLICTS+=		man-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

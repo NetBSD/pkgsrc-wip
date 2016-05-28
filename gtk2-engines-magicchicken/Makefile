@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		MagicChicken theme engine for GTK+ 2.x
 
-PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pkg-config
