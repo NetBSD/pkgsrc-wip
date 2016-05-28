@@ -11,8 +11,6 @@ MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 COMMENT=	Bundle for PGP support in GNUMail
 
-PKG_DESTDIR_SUPPORT=	none
-
 WRKSRC=		${WRKDIR}/GNUMail/Bundles/PGP
 
 USE_LANGUAGES=	objc
