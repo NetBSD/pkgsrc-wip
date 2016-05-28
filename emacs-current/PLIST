@@ -1457,8 +1457,8 @@ share/emacs/${PKGVERSION}/lisp/cedet/srecode/template.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/template.elc
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/texi.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/texi.elc
-share/emacs/${PKGVERSION}/lisp/character-fold.el.gz
-share/emacs/${PKGVERSION}/lisp/character-fold.elc
+share/emacs/${PKGVERSION}/lisp/char-fold.el.gz
+share/emacs/${PKGVERSION}/lisp/char-fold.elc
 share/emacs/${PKGVERSION}/lisp/chistory.el.gz
 share/emacs/${PKGVERSION}/lisp/chistory.elc
 share/emacs/${PKGVERSION}/lisp/cmuscheme.el.gz
