@@ -45,7 +45,7 @@ CONF_FILES+=		${EGDIR}/gnomecc.menu \
 .include "../../wip/colord-gtk/buildlink3.mk"
 .include "../../wip/accountsservice/buildlink3.mk"
 .include "../../wip/gnome-settings-daemon/buildlink3.mk"
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../wip/gnome-panel/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
