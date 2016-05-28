@@ -33,7 +33,6 @@ TOOLS_PATH.${t}=	${QTDIR}/bin/${t}
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-dbus/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
