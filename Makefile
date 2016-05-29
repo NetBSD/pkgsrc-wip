@@ -3192,7 +3192,6 @@ SUBDIR+=	py-pet
 SUBDIR+=	py-pint
 SUBDIR+=	py-piquant
 SUBDIR+=	py-pithos
-SUBDIR+=	py-pkginfo
 SUBDIR+=	py-plete
 SUBDIR+=	py-plex
 SUBDIR+=	py-plink
