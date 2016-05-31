@@ -18,7 +18,8 @@ Fix install paths.
 +PREFIX		?= /usr/local
 +BINDIR		= $(PREFIX)/bin
  
- all: $(PROGOBJ) $(PROG)
+-all: $(PROGOBJ) $(PROG)
++all: $(PROGOBJ) .WAIT $(PROG)
  
  cowpatty: common.h md5.c md5.h sha1.h cowpatty.c cowpatty.h sha1.c \
              sha1.h utils.c utils.h
