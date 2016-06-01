@@ -1,0 +1,18 @@
+$NetBSD$
+
+Substitute the dhcpd leases path
+
+--- dhcpd-snmp.conf.dist.orig	2016-05-18 13:37:42.000000000 +0000
++++ dhcpd-snmp.conf.dist
+@@ -2,9 +2,9 @@
+ 
+ # Path to the dhcpd.leases file.
+ #
+-# leases: /var/lib/dhcp3/dhcpd.leases
++# leases: @VARBASE@/db/dhcpd.leases
+ 
+-leases: /var/lib/dhcp3/dhcpd.leases
++leases: @VARBASE@/db/dhcpd.leases
+ 
+ # Definition of the pools
+ #

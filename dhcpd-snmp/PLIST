@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/18 08:22:56 ahp-nils Exp $
+@comment $NetBSD$
 man/man8/dhcpd-snmp.8
 sbin/dhcpd-snmp
-share/dhcpd-snmp/mibs/nettrack-dhcpd-snmp.mib
-share/dhcpd-snmp/mibs/nettrack.mib
-share/doc/dhcpd-snmp/AUTHORS
-share/doc/dhcpd-snmp/COPYING
-share/doc/dhcpd-snmp/ChangeLog
-share/doc/dhcpd-snmp/NEWS
-share/doc/dhcpd-snmp/README
+share/examples/dhcpd-snmp/cacti/README.txt
+share/examples/dhcpd-snmp/cacti/snmp_queries/dhcp_snmp_leases.xml
+share/examples/dhcpd-snmp/cacti/templates/cacti_graph_template_dhcp_lease_stats.xml
+share/examples/dhcpd-snmp/dhcpd-snmp.conf
+share/snmp/mibs/nettrack-dhcpd-mib.txt
