@@ -3,7 +3,7 @@
 DISTNAME=	queuelib-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_PYPI}
+MASTER_SITES=	${MASTER_SITE_PYPI:=q/queuelib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/scrapy/queuelib

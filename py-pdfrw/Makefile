@@ -3,7 +3,7 @@
 DISTNAME=	pdfrw-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_PYPI}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdfrw/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pmaupin/pdfrw

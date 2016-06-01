@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
-#
 
 DISTNAME=	w3lib-1.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_PYPI}
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/w3lib/}
 
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://github.com/scrapy/w3lib
