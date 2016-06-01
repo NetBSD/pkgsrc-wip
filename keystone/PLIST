@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/kstool
+include/keystone/arm.h
+include/keystone/arm64.h
+include/keystone/hexagon.h
+include/keystone/keystone.h
+include/keystone/mips.h
+include/keystone/ppc.h
+include/keystone/sparc.h
+include/keystone/systemz.h
+include/keystone/x86.h
+lib/libkeystone.a
