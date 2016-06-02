@@ -4253,6 +4253,7 @@ SUBDIR+=	xmms-skin-m2n
 SUBDIR+=	xmms-skin-maXMMS
 SUBDIR+=	xmms-skin-nixamp
 SUBDIR+=	xmms-skins
+SUBDIR+=	xmms-volnorm
 SUBDIR+=	xmms2
 SUBDIR+=	xmoto
 SUBDIR+=	xnee
