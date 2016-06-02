@@ -1667,6 +1667,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/pcase.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/pcase.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/pp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/pp.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/radix-tree.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/radix-tree.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/re-builder.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/re-builder.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/regexp-opt.el.gz
