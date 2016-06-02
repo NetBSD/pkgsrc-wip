@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (syncthing-discosrv-0.13.0.tar.gz) = a26327ec1c86152ab53c5bef8deeb5792c4889fd
+RMD160 (syncthing-discosrv-0.13.0.tar.gz) = f59234a73c65d378dbe3dca1324b0bdf957ee3b1
+SHA512 (syncthing-discosrv-0.13.0.tar.gz) = cb8c1d5978b08c3e8c381b2be9baa95b9fbca39c46b28d3aceb744877803edcfb14897fb82bcb67ab883cfd012c67c269ba37d7a5b976e7773d7a2c9c7058868
+Size (syncthing-discosrv-0.13.0.tar.gz) = 2401348 bytes
+SHA1 (patch-aa) = 1259e1d0e06e6dd853167aa7c5811a836f98efc1
