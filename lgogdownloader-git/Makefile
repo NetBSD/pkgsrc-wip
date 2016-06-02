@@ -15,7 +15,7 @@ GIT_REPOSITORIES=		lgogdownloader
 GIT_REPO.lgogdownloader=	git://github.com/Sude-/lgogdownloader.git
 
 WRKSRC=		${WRKDIR}/lgogdownloader
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DPC_JSONCPP_FOUND:BOOL=1
