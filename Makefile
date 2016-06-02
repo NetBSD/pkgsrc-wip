@@ -1931,7 +1931,6 @@ SUBDIR+=	muscle-pam
 SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscletool
 SUBDIR+=	musescore
-SUBDIR+=	mutt
 SUBDIR+=	muttprint
 SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
