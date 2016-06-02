@@ -1060,6 +1060,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/co
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/object-with-text.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/object-with-url.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/object.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/prop-rep.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/regexp.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/rep-utils.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/components/reps/rep.js
@@ -1108,6 +1109,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/re
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/middleware/thunk.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/middleware/wait-service.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/redux/non-react-subscriber.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/shim/Services.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/source-utils.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/suggestion-picker.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/telemetry.js
@@ -1149,6 +1151,7 @@ lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/wi
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/tooltip/ImageTooltipHelper.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/tooltip/TooltipToggle.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/widgets/view-helpers.js
+lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/shared/zoom-keys.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/sourceeditor/autocomplete.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/sourceeditor/css-autocompleter.js
 lib/firefox-${VERSION}/browser/chrome/devtools/modules/devtools/client/sourceeditor/debugger.js
@@ -3659,7 +3662,13 @@ lib/firefox-${VERSION}/modules/ContentPrefStore.jsm
 lib/firefox-${VERSION}/modules/ContentPrefUtils.jsm
 lib/firefox-${VERSION}/modules/CrashMonitor.jsm
 lib/firefox-${VERSION}/modules/Credentials.jsm
+lib/firefox-${VERSION}/modules/DNSPacket.jsm
+lib/firefox-${VERSION}/modules/DNSRecord.jsm
+lib/firefox-${VERSION}/modules/DNSResourceRecord.jsm
+lib/firefox-${VERSION}/modules/DNSTypes.jsm
 lib/firefox-${VERSION}/modules/DOMRequestHelper.jsm
+lib/firefox-${VERSION}/modules/DataReader.jsm
+lib/firefox-${VERSION}/modules/DataWriter.jsm
 lib/firefox-${VERSION}/modules/DeferredSave.jsm
 lib/firefox-${VERSION}/modules/DeferredTask.jsm
 lib/firefox-${VERSION}/modules/Deprecated.jsm
@@ -3733,6 +3742,7 @@ lib/firefox-${VERSION}/modules/MessageBroadcaster.jsm
 lib/firefox-${VERSION}/modules/MessageChannel.jsm
 lib/firefox-${VERSION}/modules/Microformats.js
 lib/firefox-${VERSION}/modules/MozSocialAPI.jsm
+lib/firefox-${VERSION}/modules/MulticastDNS.jsm
 lib/firefox-${VERSION}/modules/NetUtil.jsm
 lib/firefox-${VERSION}/modules/NewTabUtils.jsm
 lib/firefox-${VERSION}/modules/NotificationDB.jsm
@@ -3819,6 +3829,7 @@ lib/firefox-${VERSION}/modules/SocialService.jsm
 lib/firefox-${VERSION}/modules/SpatialNavigation.jsm
 lib/firefox-${VERSION}/modules/Sqlite.jsm
 lib/firefox-${VERSION}/modules/StoreTrustAnchor.jsm
+lib/firefox-${VERSION}/modules/Subprocess.jsm
 lib/firefox-${VERSION}/modules/SystemMessagePermissionsChecker.jsm
 lib/firefox-${VERSION}/modules/SystemUpdateService.jsm
 lib/firefox-${VERSION}/modules/Task.jsm
@@ -4234,6 +4245,12 @@ lib/firefox-${VERSION}/modules/services-sync/status.js
 lib/firefox-${VERSION}/modules/services-sync/userapi.js
 lib/firefox-${VERSION}/modules/services-sync/util.js
 lib/firefox-${VERSION}/modules/sqlite/sqlite_internal.js
+lib/firefox-${VERSION}/modules/subprocess/subprocess_common.jsm
+lib/firefox-${VERSION}/modules/subprocess/subprocess_shared.js
+lib/firefox-${VERSION}/modules/subprocess/subprocess_shared_unix.js
+lib/firefox-${VERSION}/modules/subprocess/subprocess_unix.jsm
+lib/firefox-${VERSION}/modules/subprocess/subprocess_worker_common.js
+lib/firefox-${VERSION}/modules/subprocess/subprocess_worker_unix.js
 lib/firefox-${VERSION}/modules/third_party/jsesc/jsesc.js
 lib/firefox-${VERSION}/modules/vtt.jsm
 lib/firefox-${VERSION}/modules/workers/PromiseWorker.js
