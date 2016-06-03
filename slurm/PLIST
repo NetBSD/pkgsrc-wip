@@ -122,6 +122,12 @@ lib/slurm/topology_hypercube.la
 lib/slurm/topology_node_rank.la
 lib/slurm/topology_none.la
 lib/slurm/topology_tree.la
+lib/slurm/job_submit_lua.a
+lib/slurm/job_submit_lua.la
+lib/slurm/job_submit_lua.so
+lib/slurm/proctrack_lua.a
+lib/slurm/proctrack_lua.la
+lib/slurm/proctrack_lua.so
 man/man1/sacct.1
 man/man1/sacctmgr.1
 man/man1/salloc.1

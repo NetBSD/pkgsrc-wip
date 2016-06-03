@@ -62,9 +62,12 @@ post-install:
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/pam.buildlink3.mk"
+# Package openpam-20130907 has a security-bypass vulnerability, see http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3879
+# .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
