@@ -55,6 +55,8 @@ CONFIGURE_ARGS+=	--with-munge=$(BUILDLINK_PREFIX.munge:Q)
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 # Privelege escalation vulnerabilities as of 1-4-2013
