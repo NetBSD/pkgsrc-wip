@@ -19,6 +19,7 @@ USE_LIBTOOL=	yes
 
 # Fix installation:
 CONFIGURE_ARGS+=	--htmldir=$(PREFIX)/share/doc/$(PKGNAME_NOREV)/html
+CONFIGURE_ARGS+=	--with-hwloc=$(PREFIX)
 
 REPLACE_PYTHON=	doc/html/shtml2html.py
 
@@ -41,6 +42,7 @@ SUBST_SED.linuxinit=	-e 's|^exec_prefix=|&$(PREFIX)|' \
 			-e 's|@sysconfdir@|$${prefix}/etc|'
 
 post-install:
+	${RM} -f ${WRKSRC}/etc/init.d.slurm.in.orig
 	$(INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)
 	$(INSTALL_DATA) $(WRKSRC)/etc/* $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)/
 	chmod 755 $(DESTDIR)$(PREFIX)/share/examples/slurm/init.d.slurm
