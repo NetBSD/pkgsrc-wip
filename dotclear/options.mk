@@ -32,7 +32,7 @@ WWW_SYSCONFDIR=		${PREFIX}/etc/httpd
 ###
 .if !empty(PKG_OPTIONS:Mnginx)
 DEPENDS+=		nginx-[0-9]*:../../www/nginx
-DEPENDS+=		${PHP_PKG_PREFIX}>=5.5:../../www/php-fpm
+DEPENDS+=		${PHP_PKG_PREFIX}-fpm>=5.5:../../www/php-fpm
 WWW_USER?=		nginx
 WWW_GROUP?=		nginx
 WWW_CONF_FILE=		nginx.conf
