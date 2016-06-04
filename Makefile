@@ -547,6 +547,7 @@ SUBDIR+=	dolphin
 SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
 SUBDIR+=	doorman
+SUBDIR+=	dotclear
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot-antispam
 SUBDIR+=	downtimed
