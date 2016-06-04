@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	numactl
+
+.if !defined(NUMACTL_BUILDLINK3_MK)
+NUMACTL_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.numactl+=	numactl>=2.0.11
+BUILDLINK_PKGSRCDIR.numactl?=	../../wip/numactl
+.endif	# NUMACTL_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-numactl

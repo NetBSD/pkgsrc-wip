@@ -70,4 +70,7 @@ post-install:
 # Package openpam-20130907 has a security-bypass vulnerability, see http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3879
 # .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.if ${OPSYS} == Linux
+.include "../../wip/numactl/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
