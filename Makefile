@@ -2032,6 +2032,7 @@ SUBDIR+=	nss-pam-ldapd
 SUBDIR+=	ntimed-git
 SUBDIR+=	nuget-git
 SUBDIR+=	nullpop
+SUBDIR+=	numactl
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
