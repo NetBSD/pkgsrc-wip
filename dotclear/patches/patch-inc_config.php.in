@@ -1,0 +1,15 @@
+$NetBSD$
+
+Set the cache directory as a macro for substitution
+
+--- inc/config.php.in.orig	2016-03-27 09:27:59.000000000 +0000
++++ inc/config.php.in
+@@ -49,7 +49,7 @@ define('DC_SESSION_NAME','dcxd');
+ define('DC_PLUGINS_ROOT',dirname(__FILE__).'/../plugins');
+ 
+ // Template cache directory
+-define('DC_TPL_CACHE',path::real(dirname(__FILE__).'/..').'/cache');
++define('DC_TPL_CACHE','@DC_CACHE@');
+ 
+ 
+ // If you have PATH_INFO issue, uncomment following lines
