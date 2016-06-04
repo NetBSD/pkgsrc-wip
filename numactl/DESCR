@@ -1,0 +1,4 @@
+The numactl program allows you to run your application program on specific
+cpu's and memory nodes.  The libnuma library provides convenient ways for you
+to add NUMA memory policies into your own program. It is a shared object (.so)
+library.

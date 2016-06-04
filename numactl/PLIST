@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/memhog
+bin/migratepages
+bin/migspeed
+bin/numactl
+bin/numademo
+bin/numastat
+include/numacompat1.h
+include/numa.h
+include/numaif.h
+lib/libnuma.la
+man/man2/move_pages.2
+man/man3/numa.3
+man/man8/migratepages.8
+man/man8/migspeed.8
+man/man8/numactl.8
+man/man8/numastat.8
