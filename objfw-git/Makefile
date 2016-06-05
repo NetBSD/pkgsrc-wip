@@ -5,20 +5,21 @@ CATEGORIES=	devel
 
 COMMENT=	Portable, lightweight framework for the Objective-C language
 LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
-HOMEPAGE=	https://webkeks.org/objfw/
-MAINTAINER=	js@webkeks.org
+HOMEPAGE=	https://heap.zone/objfw/
+MAINTAINER=	js@heap.zone
 
 GIT_REPOSITORIES=	objfw
-GIT_REPO.objfw=		https://webkeks.org/git/objfw.git
+GIT_REPO.objfw=		https://heap.zone/git/objfw.git
 
 WRKSRC=			${WRKDIR}/objfw
 USE_TOOLS=		aclocal automake
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		objc
 CONFIGURE_ARGS+=	--enable-static
+CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 
 pre-configure:
-	cd ${WRKSRC} && ./autogen.sh
+	cd ${WRKSRC} && autoreconf
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
