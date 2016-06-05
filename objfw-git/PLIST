@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/08/23 17:14:18 midar Exp $
+@comment $NetBSD$
 bin/objfw-compile
 bin/objfw-config
 bin/ofhash
@@ -35,12 +35,15 @@ include/ObjFW/OFDataArray+Hashing.h
 include/ObjFW/OFDataArray+MessagePackValue.h
 include/ObjFW/OFDataArray.h
 include/ObjFW/OFDate.h
+include/ObjFW/OFDeflate64Stream.h
+include/ObjFW/OFDeflateStream.h
 include/ObjFW/OFDictionary.h
 include/ObjFW/OFEnumerationMutationException.h
 include/ObjFW/OFEnumerator.h
 include/ObjFW/OFException.h
 include/ObjFW/OFFile.h
 include/ObjFW/OFFileManager.h
+include/ObjFW/OFGZIPStream.h
 include/ObjFW/OFGetOptionFailedException.h
 include/ObjFW/OFHTTPClient.h
 include/ObjFW/OFHTTPRequest.h
@@ -51,8 +54,6 @@ include/ObjFW/OFHash.h
 include/ObjFW/OFHashAlreadyCalculatedException.h
 include/ObjFW/OFINICategory.h
 include/ObjFW/OFINIFile.h
-include/ObjFW/OFInflate64Stream.h
-include/ObjFW/OFInflateStream.h
 include/ObjFW/OFInitializationFailedException.h
 include/ObjFW/OFIntrospection.h
 include/ObjFW/OFInvalidArgumentException.h
@@ -62,6 +63,7 @@ include/ObjFW/OFInvalidJSONException.h
 include/ObjFW/OFInvalidServerReplyException.h
 include/ObjFW/OFJSONRepresentation.h
 include/ObjFW/OFKernelEventObserver.h
+include/ObjFW/OFKeyValueCoding.h
 include/ObjFW/OFLinkFailedException.h
 include/ObjFW/OFList.h
 include/ObjFW/OFListenFailedException.h
@@ -83,6 +85,7 @@ include/ObjFW/OFNotImplementedException.h
 include/ObjFW/OFNotOpenException.h
 include/ObjFW/OFNull.h
 include/ObjFW/OFNumber.h
+include/ObjFW/OFObject+KeyValueCoding.h
 include/ObjFW/OFObject+Serialization.h
 include/ObjFW/OFObject.h
 include/ObjFW/OFObserveFailedException.h
@@ -127,6 +130,8 @@ include/ObjFW/OFString.h
 include/ObjFW/OFSystemInfo.h
 include/ObjFW/OFTCPSocket.h
 include/ObjFW/OFTLSSocket.h
+include/ObjFW/OFTarArchive.h
+include/ObjFW/OFTarArchiveEntry.h
 include/ObjFW/OFThread.h
 include/ObjFW/OFThreadJoinFailedException.h
 include/ObjFW/OFThreadPool.h
@@ -138,6 +143,7 @@ include/ObjFW/OFUDPSocket.h
 include/ObjFW/OFURL.h
 include/ObjFW/OFUnboundNamespaceException.h
 include/ObjFW/OFUnboundPrefixException.h
+include/ObjFW/OFUndefinedKeyException.h
 include/ObjFW/OFUnknownXMLEntityException.h
 include/ObjFW/OFUnlockFailedException.h
 include/ObjFW/OFUnsupportedProtocolException.h
@@ -160,11 +166,13 @@ include/ObjFW/atomic.h
 include/ObjFW/autorelease.h
 include/ObjFW/base64.h
 include/ObjFW/block.h
+include/ObjFW/crc32.h
 include/ObjFW/instance.h
 include/ObjFW/macros.h
 include/ObjFW/objfw-defs.h
 include/ObjFW/of_asprintf.h
 include/ObjFW/of_strptime.h
+include/ObjFW/platform.h
 include/ObjFW/resolver.h
 include/ObjFW/runtime.h
 include/ObjFW/socket.h
