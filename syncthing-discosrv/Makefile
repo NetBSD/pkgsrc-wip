@@ -12,7 +12,7 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=syncthing/discosrv/}
 COMMENT=	Syncthing discovery server
 LICENSE=	mit
 
-EXTRACT_USING=bsdtar
+EXTRACT_USING=		bsdtar
 WRKSRC=			${WRKDIR}/syncthing-0.13.5
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 NO_CONFIGURE=		yes
@@ -41,9 +41,9 @@ RCD_SCRIPTS=                    stdisco
 MAKE_ENV+=	GOPATH=${WRKSRC}
 
 post-extract:
-	${MKDIR} ${WRKSRC}/src/github.com/syncthing
+	${MKDIR} ${WRKSRC}/github.com/syncthing
+	${LN} -s ../.. ${WRKSRC}/github.com/syncthing/syncthing
 	${LN} -s . ${WRKSRC}/src
-	${LN} -s ../.. ${WRKSRC}/src/github.com/syncthing/syncthing
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build discosrv
