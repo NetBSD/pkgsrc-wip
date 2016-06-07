@@ -1,21 +1,22 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-relaysrv-0.12.18
+PKGNAME=	syncthing-relaysrv-0.13.5
 CATEGORIES=	local
-DISTNAME=	syncthing-relaysrv-0.12.18
+DISTNAME=	syncthing-0.13.5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
-GITHUB_PROJECT=	relaysrv
+GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	izaac@setec.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=syncthing/relaysrv/}
-COMMENT=	syncthing relay server
+COMMENT=	Syncthing relay server
 LICENSE=	mit
 
-WRKSRC=			${WRKDIR}/relaysrv-0.12.18
+EXTRACT_USING=		bsdtar
+WRKSRC=			${WRKDIR}/syncthing-0.13.5
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
-USE_LANGUAGES=		# go
 NO_CONFIGURE=		yes
+USE_LANGUAGES=		c # and go
 INSTALLATION_DIRS=	bin
 
 BUILD_DEFS+=			VARBASE
@@ -37,12 +38,17 @@ FILES_SUBST+=			STRELAY_GROUP=${STRELAY_GROUP}
 FILES_SUBST+=			STRELAY_USER=${STRELAY_USER}
 RCD_SCRIPTS=			strelay
 
-MAKE_ENV+=	GOPATH=${WRKSRC}/Godeps/_workspace
+MAKE_ENV+=	GOPATH=${WRKSRC}
+
+post-extract:
+	${MKDIR} ${WRKSRC}/github.com/syncthing
+	${LN} -s ../.. ${WRKSRC}/github.com/syncthing/syncthing
+	${LN} -s . ${WRKSRC}/src
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go build -i -v -ldflags -w
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build relaysrv
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/relaysrv-0.12.18 ${DESTDIR}${PREFIX}/bin/syncthing-relaysrv
+	${INSTALL_PROGRAM} ${WRKSRC}/relaysrv ${DESTDIR}${PREFIX}/bin/syncthing-relaysrv
 
 .include "../../mk/bsd.pkg.mk"

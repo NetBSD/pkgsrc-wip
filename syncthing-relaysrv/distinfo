@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (syncthing-relaysrv-0.12.18.tar.gz) = 3315cfea060385097bac830e63c732e1377acc04
-RMD160 (syncthing-relaysrv-0.12.18.tar.gz) = 6d50606fe20f2a9f5cb02b9de7067aece9a36a3e
-SHA512 (syncthing-relaysrv-0.12.18.tar.gz) = 58f0494bc61e2d62e54535483b8ff7053d433b17a94c85a006a72a9d82d4cd454f97daa9c2648cf63ff4dd55f2fc6c3a85eb5295309cacec3ea2b8fa58d166ff
-Size (syncthing-relaysrv-0.12.18.tar.gz) = 174413 bytes
+SHA1 (syncthing-0.13.5.tar.gz) = 7e359c2bf23f24242f25c8ee566cbddb6266c827
+RMD160 (syncthing-0.13.5.tar.gz) = 431a0ff50ee3ca9db183a08318383cbf3df5a207
+SHA512 (syncthing-0.13.5.tar.gz) = a718a8a7d6a704ddadf3d8e701ce97eeba732593a1a8540a4423beb32a47c068e0d487e42a1827fc6d639ab0b3e920880e26554f009d1cd9c1d461b903a3e203
+Size (syncthing-0.13.5.tar.gz) = 4335533 bytes
