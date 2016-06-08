@@ -1,8 +1,11 @@
 $NetBSD: distinfo,v 1.21 2015/09/07 13:10:43 thomasklausner Exp $
 
-SHA1 (xpra-0.16.3.tar.xz) = 99f73650dd483d16641833e524aaf06b1d922583
-RMD160 (xpra-0.16.3.tar.xz) = 96c4dca59392bd6514217aa7fc5341a7973309ed
-SHA512 (xpra-0.16.3.tar.xz) = 1a6bbd01837e702e98ffcaffe12a2e5320108ef50f0fcc64a80735fb53a2b41e4cdda0e0a2d1a3b5f2159a81da4a7c2cac458ab4c2eed4de17adb4e963218590
-Size (xpra-0.16.3.tar.xz) = 1343392 bytes
+SHA1 (xpra-0.17.3.tar.xz) = d4c4eea6765dd008177ba23a08964805b80e218d
+RMD160 (xpra-0.17.3.tar.xz) = 28b9f15a25eee205e418b74003923191b591dd89
+SHA512 (xpra-0.17.3.tar.xz) = d3a62c4c6c6f63d165fb605bacaf8f50e773dac09a92cbfdf521a91e085245cff287e6c534eb86fa5987c7d1ed04d4e55c1a812ca5e599311cb314e65b4d14dd
+Size (xpra-0.17.3.tar.xz) = 1416376 bytes
+SHA1 (patch-setup.py) = d60fe0a9b6e2eafa222fa232783bd009ccca85a2
+SHA1 (patch-xpra_codecs_v4l2_pusher.pyx) = 1cfaf9404e6dea08762956d72502eec79605e7aa
+SHA1 (patch-xpra_codecs_v4l2_video.h) = 001cc17b7549c2ec62c503dc86d33489fae3cd88
 SHA1 (patch-xpra_x11_gtk2_gdk__bindings.pyx) = 66e9688758e777de440ab047e9444309d543aac1
 SHA1 (patch-xpra_x11_gtk2_gdk__display__source.pyx) = 22184d73ed547373762070a550a5379eb6b4561b
