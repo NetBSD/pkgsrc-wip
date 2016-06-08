@@ -4,7 +4,7 @@
 DISTNAME=	pyutilib.enum-1.0.5
 PKGNAME=	${PYPKGPREFIX}-utilib_enum-${VERSION}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutilib.enum/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.enum/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://software.sandia.gov/svn/public/pyutilib/pyutilib.enum

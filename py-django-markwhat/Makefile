@@ -3,7 +3,7 @@
 DISTNAME=	django-markwhat-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/d/django-markwhat/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-markwhat/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	 http://pypi.python.org/pypi/django-markwhat

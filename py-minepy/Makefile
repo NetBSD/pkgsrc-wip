@@ -3,7 +3,7 @@
 DISTNAME=	minepy-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/m/minepy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/minepy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	minepy.sourceforge.net

@@ -2,7 +2,7 @@
 
 DISTNAME=	mps-youtube-0.2.5-2
 CATEGORIES=	multimedia net python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mps-youtube/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mps-youtube/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/np1/mps-youtube

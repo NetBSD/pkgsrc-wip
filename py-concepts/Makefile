@@ -3,7 +3,7 @@
 DISTNAME=	concepts-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/c/concepts/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/concepts/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

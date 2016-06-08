@@ -3,7 +3,7 @@
 DISTNAME=	Shapely-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/S/Shapely/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/Shapely/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/sgillies/shapely

@@ -3,7 +3,7 @@
 DISTNAME=	pypot-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	comms
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pypot/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypot/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/poppy-project/pypot

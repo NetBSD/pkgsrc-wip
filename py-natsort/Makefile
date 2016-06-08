@@ -3,7 +3,7 @@
 DISTNAME=	natsort-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/natsort/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/natsort/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/SethMMorton/natsort

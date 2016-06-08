@@ -3,7 +3,7 @@
 DISTNAME=	pyicane-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyicane/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyicane/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/predicador37/pyicane

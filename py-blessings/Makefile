@@ -3,7 +3,7 @@
 DISTNAME=	blessings-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/b/blessings/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/blessings/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/erikrose/blessings

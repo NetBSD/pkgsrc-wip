@@ -3,7 +3,7 @@
 DISTNAME=	csb-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/csb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/csb/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

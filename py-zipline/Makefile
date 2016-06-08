@@ -4,7 +4,7 @@
 DISTNAME=	zipline-0.5.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance
-MASTER_SITES=	http://pypi.python.org/packages/source/z/zipline/
+MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipline/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/quantopian/zipline

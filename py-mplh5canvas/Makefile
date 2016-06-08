@@ -3,7 +3,7 @@
 DISTNAME=	mplh5canvas-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mplh5canvas/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mplh5canvas/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/mplh5canvas/

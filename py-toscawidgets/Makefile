@@ -4,7 +4,7 @@ DISTNAME=	ToscaWidgets-0.9.9
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/W/w/}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/T/ToscaWidgets/
+MASTER_SITES=	${MASTER_SITE_PYPI:=T/ToscaWidgets/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com

@@ -3,7 +3,7 @@
 DISTNAME=	ciabatta-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/c/ciabatta/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/ciabatta/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/eddiejessup/ciabatta

@@ -3,7 +3,7 @@
 DISTNAME=	tardis-sn-0.9rc1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/t/tardis-sn/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tardis-sn/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://tardis.readthedocs.org/

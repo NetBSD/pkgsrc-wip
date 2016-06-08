@@ -4,7 +4,7 @@
 DISTNAME=	wafo-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/w/wafo/
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/wafo/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

@@ -3,7 +3,7 @@
 DISTNAME=	zope.deprecation-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/z/zope.deprecation/
+MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deprecation/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	 http://pypi.python.org/pypi/zope.deprecation

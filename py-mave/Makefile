@@ -3,10 +3,10 @@
 DISTNAME=	mave-0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mave/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mave/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/m/mave/
+HOMEPAGE=	${MASTER_SITE_PYPI:=m/mave/}
 COMMENT=	Library for Measurement and Verification
 LICENSE=	gnu-gpl-v3
 

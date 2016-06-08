@@ -3,7 +3,7 @@
 DISTNAME=	LinearAlgebra-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/L/LinearAlgebra/
+MASTER_SITES=	${MASTER_SITE_PYPI:=L/LinearAlgebra/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/LinearAlgebra/

@@ -5,10 +5,10 @@ VERSION=	3.0.4
 DISTNAME=	pyutilib.math-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-utilib_math-${VERSION}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutilib.math/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.math/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/p/pyutilib.math/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyutilib.math/}
 COMMENT=	PyUtilib math utilities
 LICENSE=	modified-bsd
 

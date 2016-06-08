@@ -3,7 +3,7 @@
 DISTNAME=	dexy-0.9.9.5
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dexy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dexy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dexy.it/

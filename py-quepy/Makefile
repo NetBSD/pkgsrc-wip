@@ -3,7 +3,7 @@
 DISTNAME=	quepy-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	https://pypi.python.org/packages/source/q/quepy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=q/quepy/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/machinalis/quepy

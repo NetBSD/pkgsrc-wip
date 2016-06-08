@@ -3,7 +3,7 @@
 DISTNAME=	TSGeom-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/T/TSGeom/
+MASTER_SITES=	${MASTER_SITE_PYPI:=T/TSGeom/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/jbn/TSGeom

@@ -3,7 +3,7 @@
 DISTNAME=	python-premailer-0.5.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-premailer/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-premailer/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/ralphbean/python-premailer

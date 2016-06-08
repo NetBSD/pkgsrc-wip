@@ -4,7 +4,7 @@
 DISTNAME=	scikits.bvp_solver-0.3.0
 PKGNAME=	${PYPKGPREFIX}-scikits-bvp_solver-0.3.0
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.bvp_solver/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.bvp_solver/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/scikits.bvp_solver/

@@ -3,7 +3,7 @@
 DISTNAME=	Faker-0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/F/Faker/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/deepthawtz/faker

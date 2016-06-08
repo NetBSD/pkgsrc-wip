@@ -3,7 +3,7 @@
 DISTNAME=	pydas-0.2.32
 PKGNAME=	${PYPKGPREFIX}-das-0.2.32
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pydas/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydas/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/midasplatform/pydas

@@ -3,7 +3,7 @@
 DISTNAME=	PyCorpus-0.1
 PKGNAME=   	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/P/PyCorpus/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyCorpus/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	 http://www.alfanous.org/

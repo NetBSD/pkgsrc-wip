@@ -3,7 +3,7 @@
 DISTNAME=	pdftools.pdfposter-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pdftools.//}
 CATEGORIES=	print
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pdftools.pdfposter/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdftools.pdfposter/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

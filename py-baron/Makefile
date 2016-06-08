@@ -3,7 +3,7 @@
 DISTNAME=	baron-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/b/baron/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/baron/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/Psycojoker/baron

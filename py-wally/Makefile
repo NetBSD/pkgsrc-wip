@@ -4,7 +4,7 @@ DISTNAME=	Wally-0.6.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Wally/wally/}
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://pypi.python.org/packages/source/W/Wally/
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/Wally/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/Wally/

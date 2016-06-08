@@ -4,7 +4,7 @@
 DISTNAME=	csa-0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math  python
-MASTER_SITES=	http://pypi.python.org/packages/source/c/csa/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/csa/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://software.incf.org/software/csa/

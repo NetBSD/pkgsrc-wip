@@ -4,7 +4,7 @@
 DISTNAME=	chebpy-0.2
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/c/chebpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/chebpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 https://bitbucket.org/liuyxpp/chebpy

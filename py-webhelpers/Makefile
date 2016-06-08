@@ -3,7 +3,7 @@
 DISTNAME=	WebHelpers-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/W/WebHelpers/
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebHelpers/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://webhelpers.groovie.org/

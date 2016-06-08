@@ -3,7 +3,7 @@
 DISTNAME=	sima-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sima/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sima/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.losonczylab.org/sima/

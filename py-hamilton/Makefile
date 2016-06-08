@@ -3,10 +3,10 @@
 DISTNAME=	Hamilton-0.1.0
 PKGNAME=	${PYPKGPREFIX}-hamilton-0.1.0
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/H/Hamilton/
+MASTER_SITES=	${MASTER_SITE_PYPI:=H/Hamilton/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/H/Hamilton/
+HOMEPAGE=	${MASTER_SITE_PYPI:=H/Hamilton/}
 COMMENT= Visualize and control mechanic systems through solving these systems
 LICENSE=	gnu-gpl-v3
 

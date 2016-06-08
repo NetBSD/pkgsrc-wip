@@ -3,7 +3,7 @@
 DISTNAME=	monty-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/m/monty/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/monty/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/materialsvirtuallab/monty

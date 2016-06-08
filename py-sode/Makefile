@@ -3,7 +3,7 @@
 DISTNAME=	sode-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sode/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sode/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 https://github.com/oscarbenjamin/sode

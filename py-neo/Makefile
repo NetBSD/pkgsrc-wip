@@ -3,7 +3,7 @@
 DISTNAME=	neo-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	http://pypi.python.org/packages/source/n/neo/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/neo/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pythonhosted.org/neo/

@@ -3,7 +3,7 @@
 DISTNAME=	stevedore-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/stevedore/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/stevedore/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/dreamhost/stevedore

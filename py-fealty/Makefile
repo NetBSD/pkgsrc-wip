@@ -3,7 +3,7 @@
 DISTNAME=	fealty-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fealty/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fealty/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/eddiejessup/fealty

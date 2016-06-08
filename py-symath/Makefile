@@ -3,7 +3,7 @@
 DISTNAME=	symath-0.1.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/symath/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/symath/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/bniemczyk/symbolic

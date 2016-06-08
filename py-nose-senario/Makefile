@@ -5,7 +5,7 @@ DISTNAME=	nose_scenario-0.1.3.tar
 EGG_NAME=	${DISTNAME:S/.tar//}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/n/nose_scenario/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose_scenario/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamel.derouiche@gmail.com

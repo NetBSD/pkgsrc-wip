@@ -4,7 +4,7 @@
 DISTNAME=	neuronpy-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
-MASTER_SITES=	http://pypi.python.org/packages/source/n/neuronpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/neuronpy/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

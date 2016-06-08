@@ -3,7 +3,7 @@
 DISTNAME=	Booktype-1.5
 PKGNAME=	${PYPKGPREFIX}-booktype-1.5
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/B/Booktype/
+MASTER_SITES=	${MASTER_SITE_PYPI:=B/Booktype/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://booki-dev.flossmanuals.net/

@@ -4,7 +4,7 @@ DISTNAME=	fs-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	filesystems python
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fs/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fs/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/fs/

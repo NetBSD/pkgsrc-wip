@@ -3,7 +3,7 @@
 DISTNAME=	nilearn-0.1.4.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/nilearn/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nilearn/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://nilearn.github.io

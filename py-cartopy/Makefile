@@ -3,7 +3,7 @@
 DISTNAME=	Cartopy-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	geography
-MASTER_SITES=	https://pypi.python.org/packages/source/C/Cartopy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cartopy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://scitools.org.uk/cartopy/docs/latest/

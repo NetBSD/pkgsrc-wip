@@ -3,7 +3,7 @@
 DISTNAME=	pyvoronoi-0.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyvoronoi/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyvoronoi/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

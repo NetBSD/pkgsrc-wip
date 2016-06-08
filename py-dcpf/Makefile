@@ -3,10 +3,10 @@
 DISTNAME=	pydcpf-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S//py/}
 CATEGORIES=	comms python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pydcpf/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydcpf/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pydcpf/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pydcpf/}
 COMMENT=	Python device communications protocol framework
 LICENSE=	gnu-gpl-v3
 

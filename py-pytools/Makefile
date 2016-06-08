@@ -3,7 +3,7 @@
 DISTNAME=	pytools-2014.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pytools/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytools/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pytools

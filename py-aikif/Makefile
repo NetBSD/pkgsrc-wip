@@ -3,7 +3,7 @@
 DISTNAME=	AIKIF-0.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/A/AIKIF/
+MASTER_SITES=	${MASTER_SITE_PYPI:=A/AIKIF/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

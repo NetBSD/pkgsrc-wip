@@ -3,7 +3,7 @@
 DISTNAME=	Escher-1.1.2.post2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/E/Escher/
+MASTER_SITES=	${MASTER_SITE_PYPI:=E/Escher/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://escher.github.io

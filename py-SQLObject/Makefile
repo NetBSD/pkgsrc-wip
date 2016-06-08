@@ -4,7 +4,7 @@ DISTNAME=	SQLObject-1.3.1.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 EGG_NAME=	${DISTNAME:S|.tar||:Q}
 CATEGORIES=	databases python
-MASTER_SITES=	http://pypi.python.org/packages/source/S/SQLObject/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLObject/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

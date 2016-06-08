@@ -3,7 +3,7 @@
 DISTNAME=	pyfanova-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S//py/}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyfanova/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfanova/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/automl/fanova

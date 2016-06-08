@@ -4,7 +4,7 @@ DISTNAME=	transaction-1.1.1
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/t/transaction/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/transaction/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.zope.org/Products/ZODB

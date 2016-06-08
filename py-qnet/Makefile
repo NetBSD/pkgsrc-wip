@@ -3,7 +3,7 @@
 DISTNAME=	QNET-1.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/Q/QNET/
+MASTER_SITES=	${MASTER_SITE_PYPI:=Q/QNET/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/mabuchilab/QNET

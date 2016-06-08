@@ -4,7 +4,7 @@ VERSION=	0.2
 DISTNAME=	GRPy0.2
 PKGNAME=       ${PYPKGPREFIX}-grpy-${VERSION}
 CATEGORIES=	wip
-MASTER_SITES=	https://pypi.python.org/packages/source/G/GRPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/GRPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi?%3Aaction=search&term=GRPy&submit=search

@@ -4,7 +4,7 @@ DISTNAME=	py-1.0.2
 PKGNAME=	${PYPKGPREFIX}-lib-1.0.2
 PKGREVISION=	2
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/py/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/py/}
 EXTRACT_SUFX=	.tar.gz#md5=d64444015bac78e0c73ac285f9423750
 
 MAINTAINER=	kamelderouiche@yahoo.com

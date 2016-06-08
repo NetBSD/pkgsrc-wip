@@ -4,7 +4,7 @@
 DISTNAME=	scikits.samplerate-0.3.3
 PKGNAME=	${PYPKGPREFIX}-scikits_samplerate-0.3.3
 CATEGORIES=	audio
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.samplerate/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.samplerate/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.ar.media.kyoto-u.ac.jp/members/david/softwares/samplerate

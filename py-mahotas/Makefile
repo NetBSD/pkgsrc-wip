@@ -3,7 +3,7 @@
 DISTNAME=	mahotas-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mahotas/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mahotas/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://luispedro.org/software/mahotas

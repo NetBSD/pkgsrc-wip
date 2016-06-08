@@ -4,7 +4,7 @@
 DISTNAME=	sdt_metrics-0.1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/sdt_metrics/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sdt_metrics/}
 EXTRACT_SUFX=	.zip#md5=8f5b2a4ad73ec62c78872d2d3b509be2
 
 MAINTAINER=	jihbed.research@gmail.com

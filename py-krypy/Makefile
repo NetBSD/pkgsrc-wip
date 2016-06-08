@@ -3,7 +3,7 @@
 DISTNAME=	krypy-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/k/krypy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/krypy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 https://github.com/andrenarchy/krypy

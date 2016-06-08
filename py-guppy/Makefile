@@ -3,7 +3,7 @@
 DISTNAME=	guppy-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/g/guppy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/guppy/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://guppy-pe.sourceforge.net/

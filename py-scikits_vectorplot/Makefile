@@ -4,7 +4,7 @@
 DISTNAME=	scikits.vectorplot-0.1.1
 PKGNAME=	${PYPKGPREFIX}-scikits_vectorplot-0.1.1
 CATEGORIES= math python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.vectorplot/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.vectorplot/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.scipy.org/scipy/scikits

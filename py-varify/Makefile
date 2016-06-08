@@ -3,7 +3,7 @@
 DISTNAME=	varify-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	https://pypi.python.org/packages/source/v/varify/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/varify/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/cbmi/varify

@@ -3,7 +3,7 @@
 DISTNAME=	ordereddict-1.1
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/o/ordereddict/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/ordereddict/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.python.org/pypi/ordereddict/

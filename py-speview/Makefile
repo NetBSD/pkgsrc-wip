@@ -3,7 +3,7 @@
 DISTNAME=	speview-0.1.3
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/speview/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/speview/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ximeg/speview

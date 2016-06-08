@@ -3,10 +3,10 @@
 DISTNAME=	pyplete-0.0.5
 PKGNAME=	${PYPKGPREFIX}-plete-0.0.5
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyplete/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyplete/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pyplete/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyplete/}
 COMMENT=	Python,autocomplete,python autocomplete,python analizer
 LICENSE=	gnu-lgpl-v2.1
 

@@ -3,7 +3,7 @@
 DISTNAME=	usagestats-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	systutils python
-MASTER_SITES=	https://pypi.python.org/packages/source/u/usagestats/
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/usagestats/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/remram44/usagestats

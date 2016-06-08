@@ -3,7 +3,7 @@
 DISTNAME=	mistune-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mistune/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mistune/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/lepture/mistune

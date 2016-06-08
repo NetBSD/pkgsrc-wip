@@ -3,10 +3,10 @@
 DISTNAME=	redbaron-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/redbaron/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/redbaron/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/r/redbaron/
+HOMEPAGE=	${MASTER_SITE_PYPI:=r/redbaron/}
 COMMENT=	FST for python to make writing refactoring code a realistic task
 LICENSE=	gnu-lgpl-v3
 

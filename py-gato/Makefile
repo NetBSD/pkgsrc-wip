@@ -3,7 +3,7 @@
 DISTNAME=	Gato-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/G/Gato/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/Gato/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gato.sf.net/

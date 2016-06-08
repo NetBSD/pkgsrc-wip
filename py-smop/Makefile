@@ -2,7 +2,7 @@
 
 DISTNAME=	smop-0.1.5
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/s/smop/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/smop/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://chiselapp.com/user/victorlei/repository/smop-dev/index

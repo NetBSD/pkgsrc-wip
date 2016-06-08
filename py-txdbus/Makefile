@@ -3,7 +3,7 @@
 DISTNAME=	txdbus-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://pypi.python.org/packages/source/t/txdbus/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/txdbus/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/cocagne/txdbus

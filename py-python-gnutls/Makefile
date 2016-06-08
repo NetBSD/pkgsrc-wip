@@ -3,7 +3,7 @@
 DISTNAME=	python-gnutls-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-gnutls/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-gnutls/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ag-projects.com/

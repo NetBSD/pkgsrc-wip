@@ -3,7 +3,7 @@
 DISTNAME=	lea-2.1.2
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=     math python
-MASTER_SITES=	https://pypi.python.org/packages/source/l/lea/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lea/}
 
 MAINTAINER=     jihbed.research@gmail.com
 HOMEPAGE=       https://bitbucket.org/piedenis/lea

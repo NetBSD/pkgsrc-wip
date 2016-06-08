@@ -3,7 +3,7 @@
 DISTNAME=	msumastro-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/msumastro/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/msumastro/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/mwcraig/msumastro

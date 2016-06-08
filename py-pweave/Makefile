@@ -4,7 +4,7 @@
 DISTNAME=	Pweave-0.20.1
 PKGNAME=	${PYPKGPREFIX}-pweave-0.20.1
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/P/Pweave/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pweave/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mpastell.com/pweave

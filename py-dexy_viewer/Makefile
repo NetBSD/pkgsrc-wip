@@ -3,7 +3,7 @@
 DISTNAME=	dexy_viewer-0.0.4
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dexy_viewer/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dexy_viewer/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dexy.it/

@@ -6,7 +6,7 @@ EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-scikits_ann-0.2
 PKGREVISION=	1
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.ann/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.ann/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://scipy.org/scipy/scikits/wiki/AnnWrapper

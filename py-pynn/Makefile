@@ -3,7 +3,7 @@
 DISTNAME=	PyNN-0.7.5
 PKGNAME=	${PYPKGPREFIX}-pynn-0.7.5
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/P/PyNN/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyNN/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://neuralensemble.org/trac/PyNN/wiki

@@ -3,7 +3,7 @@
 DISTNAME=	sasa-0.1.3
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sasa/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sasa/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://code.google.com/p/sasa-tool/

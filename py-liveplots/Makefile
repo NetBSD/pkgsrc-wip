@@ -3,7 +3,7 @@
 DISTNAME=	liveplots-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics math python
-MASTER_SITES=	http://pypi.python.org/packages/source/l/liveplots/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/liveplots/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/liveplots/

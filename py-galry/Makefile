@@ -3,7 +3,7 @@
 DISTNAME=	galry-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics parallel
-MASTER_SITES=	https://pypi.python.org/packages/source/g/galry/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/galry/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

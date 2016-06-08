@@ -3,7 +3,7 @@
 DISTNAME=	Kallithea-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
-MASTER_SITES=	https://pypi.python.org/packages/source/K/Kallithea/
+MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kallithea/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

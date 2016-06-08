@@ -5,7 +5,7 @@ EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/BIP/bip/}
 PKGREVISION=	2
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/B/BIP/
+MASTER_SITES=	${MASTER_SITE_PYPI:=B/BIP/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/bayesian-inference/

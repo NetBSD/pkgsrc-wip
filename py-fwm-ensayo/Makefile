@@ -3,7 +3,7 @@
 DISTNAME=	fwm_ensayo-0.1.1
 PKGNAME=	${PYPKGPREFIX}-fwm-ensayo-0.1.1
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fwm_ensayo/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fwm_ensayo/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/fwm_ensayo/

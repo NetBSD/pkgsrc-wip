@@ -3,7 +3,7 @@
 DISTNAME=	APPLPy-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/A/APPLPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=A/APPLPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/APPLPy/

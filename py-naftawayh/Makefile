@@ -4,7 +4,7 @@
 DISTNAME=	Naftawayh-0.1
 PKGNAME=	${PYPKGPREFIX}-naftawayh-0.1
 CATEGORIES=	textproc python #arabic
-MASTER_SITES=	http://pypi.python.org/packages/source/N/Naftawayh/
+MASTER_SITES=	${MASTER_SITE_PYPI:=N/Naftawayh/}
 EXTRACT_SUFX=	.zip#md5=30663df3626a2464e234131f674e7627
 
 MAINTAINER=	kamelderouiche@yahoo.com

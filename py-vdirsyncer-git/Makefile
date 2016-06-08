@@ -3,7 +3,7 @@
 DISTNAME=	vdirsyncer-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time
-MASTER_SITES=	https://pypi.python.org/packages/source/v/vdirsyncer/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/vdirsyncer/

@@ -4,7 +4,7 @@ DISTNAME=	papy-1.0b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	parallel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/papy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/papy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/papy/

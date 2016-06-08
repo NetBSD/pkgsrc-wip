@@ -3,7 +3,7 @@
 DISTNAME=	pylds-0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pylds/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylds/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/mattjj/pylds

@@ -3,7 +3,7 @@
 DISTNAME=	alembic-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/alembic/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bitbucket.org/zzzeek/alembic

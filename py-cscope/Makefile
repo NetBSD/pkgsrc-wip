@@ -3,7 +3,7 @@
 DISTNAME=	pycscope-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pycscope/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycscope/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pycscope/

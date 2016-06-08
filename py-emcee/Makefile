@@ -3,7 +3,7 @@
 DISTNAME=	emcee-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/e/emcee/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/emcee/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dan.iel.fm/emcee/current/

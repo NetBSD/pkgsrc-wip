@@ -3,7 +3,7 @@
 DISTNAME=	scikit-nano-0.2.25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-nano/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-nano/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/androomerrill/scikit-nano

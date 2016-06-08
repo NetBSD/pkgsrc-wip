@@ -3,10 +3,10 @@
 DISTNAME=	fssa-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fssa/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fssa/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/f/fssa/
+HOMEPAGE=	${MASTER_SITE_PYPI:=f/fssa/}
 COMMENT=	Package for finite-size scaling analysis at phase transitions
 LICENSE=	2-clause-bsd
 

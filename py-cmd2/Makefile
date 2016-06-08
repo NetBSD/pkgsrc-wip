@@ -3,10 +3,10 @@
 DISTNAME=	cmd2-0.6.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cmd2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmd2/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/c/cmd2/
+HOMEPAGE=	${MASTER_SITE_PYPI:=c/cmd2/}
 COMMENT=	Extra features for standard library's cmd module
 LICENSE=	mit
 

@@ -3,10 +3,10 @@
 DISTNAME=	GraTeLPy-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/G/GraTeLPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/GraTeLPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/G/GraTeLPy/
+HOMEPAGE=	${MASTER_SITE_PYPI:=G/GraTeLPy/}
 COMMENT=	Graph theoretic linear stability analysis
 LICENSE=	gnu-gpl-v3
 

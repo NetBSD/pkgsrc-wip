@@ -3,7 +3,7 @@
 DISTNAME=	pykrylov-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pykrylov/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pykrylov/}
 
 MAINTAINER=     jihbed.research@gmail.com
 HOMEPAGE=       https://github.com/dpo/pykrylov/tree/master

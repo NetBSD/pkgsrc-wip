@@ -3,10 +3,10 @@
 DISTNAME=	weblib-0.1.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/w/weblib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/weblib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/w/weblib/
+HOMEPAGE=	${MASTER_SITE_PYPI:=w/weblib/}
 COMMENT=	Set of tools for web scraping projects
 LICENSE=	mit
 

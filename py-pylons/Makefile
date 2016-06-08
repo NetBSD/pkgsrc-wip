@@ -3,7 +3,7 @@
 DISTNAME=	Pylons-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/P/Pylons/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pylons/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pylonshq.com/

@@ -3,10 +3,10 @@
 DISTNAME=	neupy-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/n/neupy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/neupy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/n/neupy/
+HOMEPAGE=	${MASTER_SITE_PYPI:=n/neupy/}
 COMMENT=	Artificial Neural Network library implemented in Python
 LICENSE=	mit
 

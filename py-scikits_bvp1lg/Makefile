@@ -4,7 +4,7 @@
 DISTNAME=	scikits.bvp1lg-0.2.5
 PKGNAME=	${PYPKGPREFIX}-scikits_bvp1lg-0.2.5
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.bvp1lg/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.bvp1lg/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.iki.fi/pav/software/bvp

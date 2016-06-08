@@ -3,7 +3,7 @@
 DISTNAME=	python-coveralls-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-coveralls/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-coveralls/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/z4r/python-coveralls

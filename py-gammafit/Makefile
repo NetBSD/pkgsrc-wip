@@ -4,7 +4,7 @@ DISTNAME=	gammafit-0.1.dev395
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=	${DISTNAME:S/395//}-${PYVERSSUFFIX}.egg
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gammafit/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gammafit/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/zblz/gammafit

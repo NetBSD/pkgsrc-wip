@@ -3,7 +3,7 @@
 DISTNAME=	cogapp-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cogapp/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cogapp/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://nedbatchelder.com/code/cog

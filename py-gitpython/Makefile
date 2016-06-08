@@ -3,7 +3,7 @@
 DISTNAME=	GitPython-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/G/GitPython/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/GitPython/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/gitpython-developers/GitPython

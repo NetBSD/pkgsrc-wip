@@ -3,10 +3,10 @@
 DISTNAME=	empirical-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/e/empirical/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/empirical/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/e/empirical/
+HOMEPAGE=	${MASTER_SITE_PYPI:=e/empirical/}
 COMMENT=	Emperical Method of Fundamental Solutions solver for Python
 LICENSE=	gnu-gpl-v3
 

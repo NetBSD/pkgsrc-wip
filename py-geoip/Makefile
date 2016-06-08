@@ -3,7 +3,7 @@
 DISTNAME=	pygeoip-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pygeoip/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygeoip/}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://github.com/appliedsec/pygeoip

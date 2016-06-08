@@ -3,7 +3,7 @@
 DISTNAME=	naima-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/n/naima/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/naima/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/zblz/naima

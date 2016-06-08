@@ -3,7 +3,7 @@
 DISTNAME=	deltasigma-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/d/deltasigma/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/deltasigma/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/ggventurini/python-deltasigma

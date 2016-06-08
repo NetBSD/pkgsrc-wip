@@ -3,7 +3,7 @@
 DISTNAME=	python-snappy-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-snappy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-snappy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/andrix/python-snappy

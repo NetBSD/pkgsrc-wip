@@ -3,7 +3,7 @@
 DISTNAME=	yams-0.39.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc www
-MASTER_SITES=	https://pypi.python.org/packages/source/y/yams/
+MASTER_SITES=	${MASTER_SITE_PYPI:=y/yams/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.logilab.org/project/yams

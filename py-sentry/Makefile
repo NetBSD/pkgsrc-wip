@@ -3,7 +3,7 @@
 DISTNAME=	sentry-7.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sentry/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sentry/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://www.getsentry.com

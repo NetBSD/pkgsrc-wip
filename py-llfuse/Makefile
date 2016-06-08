@@ -3,7 +3,7 @@
 DISTNAME=	llfuse-0.41
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	filesystems
-MASTER_SITES=	https://pypi.python.org/packages/source/l/llfuse/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/llfuse/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

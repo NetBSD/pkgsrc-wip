@@ -3,10 +3,10 @@
 DISTNAME=	pygauss-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pygauss/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygauss/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pygauss/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pygauss/}
 COMMENT=	Python API for Analysis of Gaussian Quantum Chemical Compuations
 LICENSE=	gnu-gpl-v3
 

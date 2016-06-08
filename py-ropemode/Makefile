@@ -4,7 +4,7 @@
 DISTNAME=	ropemode-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/r/ropemode/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/ropemode/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://rope.sf.net/

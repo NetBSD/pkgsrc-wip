@@ -3,7 +3,7 @@
 DISTNAME=	inflection-0.3.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/i/inflection/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/inflection/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/jpvanhal/inflection

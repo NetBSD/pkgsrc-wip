@@ -3,7 +3,7 @@
 DISTNAME=	bloscpack-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/b/bloscpack/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bloscpack/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/esc/bloscpack

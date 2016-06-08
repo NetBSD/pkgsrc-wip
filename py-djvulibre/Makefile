@@ -3,7 +3,7 @@
 DISTNAME=	python-djvulibre-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	graphics textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/p/python-djvulibre/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-djvulibre/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://jwilk.net/software/python-djvulibre

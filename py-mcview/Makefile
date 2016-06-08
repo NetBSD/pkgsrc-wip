@@ -4,7 +4,7 @@
 DISTNAME=	mcview-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics
-MASTER_SITES=	http://pypi.python.org/packages/source/m/mcview/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mcview/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi?%3Aaction=search&term=mcview&submit=search

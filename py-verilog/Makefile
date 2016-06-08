@@ -3,7 +3,7 @@
 DISTNAME=	pyverilog-1.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	category
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyverilog/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyverilog/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/PyHDI/Pyverilog

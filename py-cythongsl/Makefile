@@ -4,7 +4,7 @@
 DISTNAME=	CythonGSL-0.1
 PKGNAME=	${PYPKGPREFIX}-cythongsl-0.1
 CATEGORIES=	devel math python
-MASTER_SITES=	http://pypi.python.org/packages/source/C/CythonGSL/
+MASTER_SITES=	${MASTER_SITE_PYPI:=C/CythonGSL/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/twiecki/CythonGSL

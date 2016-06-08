@@ -3,7 +3,7 @@
 DISTNAME=	EasyModeler-2.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/E/EasyModeler/
+MASTER_SITES=	${MASTER_SITE_PYPI:=E/EasyModeler/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

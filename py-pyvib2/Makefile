@@ -4,7 +4,7 @@ DISTNAME=	pyvib2-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	biology python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyvib2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyvib2/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyvib2.sourceforge.net/

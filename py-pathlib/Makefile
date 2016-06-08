@@ -3,7 +3,7 @@
 DISTNAME=	pathlib-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pathlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathlib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pathlib.readthedocs.org/

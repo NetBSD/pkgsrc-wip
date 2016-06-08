@@ -3,7 +3,7 @@
 DISTNAME=	shutilwhich-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/shutilwhich/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/shutilwhich/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/mbr/shutilwhich

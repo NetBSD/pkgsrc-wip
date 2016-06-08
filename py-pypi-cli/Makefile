@@ -3,7 +3,7 @@
 DISTNAME=	pypi-cli-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pypi-cli/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypi-cli/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/sloria/pypi-cli

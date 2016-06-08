@@ -3,7 +3,7 @@
 DISTNAME=	dclab-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dclab/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dclab/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ZellMechanik-Dresden/dclab

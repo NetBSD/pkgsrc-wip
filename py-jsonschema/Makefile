@@ -3,7 +3,7 @@
 DISTNAME=	jsonschema-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/j/jsonschema/
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema/}
 EXTRACT_SUFX=	.zip#md5=0275f70c5f7c65657555ff478a4fc89c
 
 MAINTAINER=	kamelderouiche@yahoo.com

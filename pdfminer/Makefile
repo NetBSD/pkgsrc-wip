@@ -4,7 +4,7 @@
 DISTNAME=	pdfminer-20100424.tar
 PKGNAME=	${DISTNAME:S/.tar//}
 CATEGORIES=	print python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pdfminer/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdfminer/}
 EXTRACT_SUFX=	.gz#md5=d69836472cd1d555a7340e0fe75c5e20
 
 MAINTAINER=	kamelderouiche@yahoo.com

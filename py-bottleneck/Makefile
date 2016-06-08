@@ -3,7 +3,7 @@
 DISTNAME=	Bottleneck-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/B/Bottleneck/
+MASTER_SITES=	${MASTER_SITE_PYPI:=B/Bottleneck/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://berkeleyanalytics.com/bottleneck/

@@ -3,7 +3,7 @@
 DISTNAME=	holoviews-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	cad
-MASTER_SITES=	https://pypi.python.org/packages/source/h/holoviews/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/holoviews/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://ioam.github.com/holoviews/

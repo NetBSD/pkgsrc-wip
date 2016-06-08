@@ -3,7 +3,7 @@
 DISTNAME=	kitchen-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/k/kitchen/
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/kitchen/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://fedorahosted.org/kitchen

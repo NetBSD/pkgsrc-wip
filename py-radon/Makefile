@@ -3,7 +3,7 @@
 DISTNAME=	radon-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/radon/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/radon/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://radon.readthedocs.org/

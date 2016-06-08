@@ -4,7 +4,7 @@
 DISTNAME=	dexml-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/dexml/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dexml/}
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://www.rfk.id.au/software/

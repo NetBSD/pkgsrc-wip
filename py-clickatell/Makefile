@@ -3,10 +3,10 @@
 DISTNAME=	clickatell-0.1.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=     net
-MASTER_SITES=	https://pypi.python.org/packages/source/c/clickatell/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/clickatell/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/packages/source/c/clickatell/
+HOMEPAGE=	${MASTER_SITE_PYPI:=c/clickatell/}
 COMMENT=        Library for interacting with the Clickatell SMS Gateway
 LICENSE=        gnu-gpl-v2
 

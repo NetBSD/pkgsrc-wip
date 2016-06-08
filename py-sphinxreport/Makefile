@@ -3,7 +3,7 @@
 DISTNAME=	SphinxReport-2.0
 PKGNAME=        ${PYPKGPREFIX}-sphinxreport-2.0
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/S/SphinxReport/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SphinxReport/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/sphinx-report/

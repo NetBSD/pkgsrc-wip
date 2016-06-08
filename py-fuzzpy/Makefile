@@ -3,7 +3,7 @@
 DISTNAME=	fuzzpy-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fuzzpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fuzzpy/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com

@@ -4,7 +4,7 @@
 DISTNAME=	amqplib-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/a/amqplib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/amqplib/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kamel.derouiche@gmail.com

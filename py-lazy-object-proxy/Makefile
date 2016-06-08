@@ -3,7 +3,7 @@
 DISTNAME=	lazy-object-proxy-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devels
-MASTER_SITES=	https://pypi.python.org/packages/source/l/lazy-object-proxy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazy-object-proxy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/ionelmc/python-lazy-object-proxy

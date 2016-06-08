@@ -3,7 +3,7 @@
 DISTNAME=	WebTest-2.0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/W/WebTest/
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebTest/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

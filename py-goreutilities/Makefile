@@ -3,7 +3,7 @@
 DISTNAME=	GoreUtilities-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	wip
-MASTER_SITES=	https://pypi.python.org/packages/source/G/GoreUtilities/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/GoreUtilities/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://bitbucket.org/gorelab/goreutilities/

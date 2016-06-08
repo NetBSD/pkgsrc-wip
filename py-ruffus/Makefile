@@ -3,7 +3,7 @@
 DISTNAME=	ruffus-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/r/ruffus/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruffus/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

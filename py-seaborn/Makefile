@@ -3,7 +3,7 @@
 DISTNAME=	seaborn-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/seaborn/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/seaborn/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://stanford.edu/~mwaskom/software/seaborn/

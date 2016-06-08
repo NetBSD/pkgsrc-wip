@@ -4,7 +4,7 @@
 DISTNAME=	Tashaphyne-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/T/Tashaphyne/
+MASTER_SITES=	${MASTER_SITE_PYPI:=T/Tashaphyne/}
 EXTRACT_SUFX=	.zip#md5=29cde2cc10c9f5e9ed1eafebda3c78e2
 
 MAINTAINER=	kamelderouiche@yahoo.com

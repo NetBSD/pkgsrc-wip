@@ -3,7 +3,7 @@
 DISTNAME=	hyperspy-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hyperspy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperspy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://hyperspy.org/

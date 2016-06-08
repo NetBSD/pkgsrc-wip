@@ -3,7 +3,7 @@
 DISTNAME=	affine-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/a/affine/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/affine/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/sgillies/affine

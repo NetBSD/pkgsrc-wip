@@ -3,10 +3,10 @@
 DISTNAME=	pyon-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyon/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyon/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pyon/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyon/}
 COMMENT=	Lattice QCD library including statistical, fitting, plotting functions
 #LICENSE=	# TODO: (see mk/license.mk)
 

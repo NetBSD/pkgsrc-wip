@@ -3,7 +3,7 @@
 DISTNAME=	scs-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/scs/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scs/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/cvxgrp/scs

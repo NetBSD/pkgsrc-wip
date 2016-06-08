@@ -3,7 +3,7 @@
 DISTNAME=	CosmoloPy-0.1.104
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/C/CosmoloPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=C/CosmoloPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://roban.github.com/CosmoloPy/

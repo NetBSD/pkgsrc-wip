@@ -4,7 +4,7 @@
 DISTNAME=	yt-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	http://pypi.python.org/packages/source/y/yt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://yt-project.org/

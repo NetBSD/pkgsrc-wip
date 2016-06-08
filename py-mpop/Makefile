@@ -3,7 +3,7 @@
 DISTNAME=	mpop-v1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-v/-/}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mpop/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mpop/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/mraspaud/mpop

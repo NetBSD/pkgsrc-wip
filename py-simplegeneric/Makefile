@@ -3,7 +3,7 @@
 DISTNAME=	simplegeneric-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/simplegeneric/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/simplegeneric/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

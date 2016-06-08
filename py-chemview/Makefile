@@ -3,7 +3,7 @@
 DISTNAME=	chemview-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/c/chemview/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/chemview/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/gabrielelanaro/chemview

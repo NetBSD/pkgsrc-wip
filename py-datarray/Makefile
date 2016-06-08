@@ -2,7 +2,7 @@
 
 DISTNAME=	datarray-0.0.6
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/d/datarray/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/datarray/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/fperez/datarray

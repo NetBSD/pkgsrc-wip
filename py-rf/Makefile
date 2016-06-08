@@ -3,10 +3,10 @@
 DISTNAME=	rf-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rf/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rf/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/r/rf/
+HOMEPAGE=	${MASTER_SITE_PYPI:=r/rf/}
 COMMENT=	Receiver function calculation in seismology
 LICENSE=	mit
 

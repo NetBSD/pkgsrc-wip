@@ -3,7 +3,7 @@
 DISTNAME=	nibabel-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/nibabel/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nibabel/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://nipy.org/nibabel

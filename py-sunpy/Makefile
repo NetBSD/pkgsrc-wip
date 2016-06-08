@@ -3,7 +3,7 @@
 DISTNAME=	sunpy-0.6.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sunpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sunpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.sunpy.org/

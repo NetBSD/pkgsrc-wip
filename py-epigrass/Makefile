@@ -3,7 +3,7 @@
 DISTNAME=	epigrass-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	https://pypi.python.org/packages/source/e/epigrass/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/epigrass/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/epigrass/

@@ -3,7 +3,7 @@
 DISTNAME=	rpaths-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rpaths/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpaths/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/remram44/rpaths

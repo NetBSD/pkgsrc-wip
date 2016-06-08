@@ -3,7 +3,7 @@
 DISTNAME=	pseudopy-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pseudopy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pseudopy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/andrenarchy/pseudopy

@@ -3,7 +3,7 @@
 DISTNAME=	statsmodels-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/statsmodels/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/statsmodels/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://statsmodels.sourceforge.net/

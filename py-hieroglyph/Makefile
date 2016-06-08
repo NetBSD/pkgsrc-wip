@@ -3,10 +3,10 @@
 DISTNAME=	hieroglyph-0.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hieroglyph/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hieroglyph/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/h/hieroglyph/
+HOMEPAGE=	${MASTER_SITE_PYPI:=h/hieroglyph/}
 COMMENT=	Sphinx which builds HTML5 slides from ReStructured Text documents
 LICENSE=	2-clause-bsd
 

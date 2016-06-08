@@ -3,7 +3,7 @@
 DISTNAME=	debacl-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/debacl/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/debacl/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/CoAxLab/DeBaCl

@@ -4,7 +4,7 @@
 DISTNAME=	Delny-0.4.1
 PKGNAME=	${PYPKGPREFIX}-delny-0.4.1
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/D/Delny/
+MASTER_SITES=	${MASTER_SITE_PYPI:=D/Delny/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://bitbucket.org/flub/delny

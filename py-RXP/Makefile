@@ -3,7 +3,7 @@
 DISTNAME=	pyRXP-2.1.0
 PKGNAME=	${PYPKGPREFIX}-rxp-2.1.0
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyRXP/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyRXP/}
 
 MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.reportlab.org/pyrxp.html

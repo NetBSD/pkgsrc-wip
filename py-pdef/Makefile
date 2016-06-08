@@ -3,7 +3,7 @@
 DISTNAME=	pdef-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pdef/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdef/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/pdef/pdef-python

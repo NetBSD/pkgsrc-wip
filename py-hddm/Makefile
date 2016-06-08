@@ -3,7 +3,7 @@
 DISTNAME=	HDDM-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/H/HDDM/
+MASTER_SITES=	${MASTER_SITE_PYPI:=H/HDDM/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/hddm-devs/hddm

@@ -4,7 +4,7 @@
 DISTNAME=	scikits.talkbox-0.2.5
 PKGNAME=	${PYPKGPREFIX}-scikits_talkbox-0.2.5
 CATEGORIES=	math  python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.talkbox/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.talkbox/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.scipy.org/scipy/scikits

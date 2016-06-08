@@ -3,7 +3,7 @@
 DISTNAME=	py-sphviewer-0.88
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	graphics math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/py-sphviewer/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/py-sphviewer/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://code.google.com/p/py-sphviewer/

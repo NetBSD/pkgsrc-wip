@@ -3,7 +3,7 @@
 DISTNAME=	algopy-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/algopy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/algopy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/algopy

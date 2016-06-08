@@ -3,7 +3,7 @@
 DISTNAME=	uptime-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://pypi.python.org/packages/source/u/uptime/
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/uptime/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/Cairnarvon/uptime

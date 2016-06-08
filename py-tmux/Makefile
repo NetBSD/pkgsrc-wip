@@ -3,10 +3,10 @@
 DISTNAME=	pytmux-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	misc python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pytmux/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytmux/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pytmux/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pytmux/}
 COMMENT=	Simple wrapper for tmux
 LICENSE=	apache-2.0
 

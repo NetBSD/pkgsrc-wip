@@ -3,10 +3,10 @@
 DISTNAME=	hurry.filesize-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hurry.filesize/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hurry.filesize/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/h/hurry.filesize/
+HOMEPAGE=	${MASTER_SITE_PYPI:=h/hurry.filesize/}
 COMMENT=	Simple Python library for human readable file sizes
 LICENSE=	zpl-2.0
 

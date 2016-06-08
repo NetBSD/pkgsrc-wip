@@ -3,7 +3,7 @@
 DISTNAME=	alfanous-0.7.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/alfanous/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/alfanous/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.alfanous.org/

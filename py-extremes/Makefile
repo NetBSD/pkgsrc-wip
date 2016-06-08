@@ -5,7 +5,7 @@ DISTNAME=	Extremes-1.1.1
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/E/e/}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/E/Extremes/
+MASTER_SITES=	${MASTER_SITE_PYPI:=E/Extremes/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

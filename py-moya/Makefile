@@ -3,7 +3,7 @@
 DISTNAME=	moya-0.5.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/m/moya/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/moya/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.moyaproject.com

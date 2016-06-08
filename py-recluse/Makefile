@@ -3,7 +3,7 @@
 DISTNAME=	recluse-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/r/recluse/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/recluse/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/lamber/recluse

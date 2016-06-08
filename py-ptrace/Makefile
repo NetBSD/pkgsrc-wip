@@ -4,7 +4,7 @@ DISTNAME=	python-ptrace-0.6.4
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
 PKGREVISION=	3
 CATEGORIES=	sysutils python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ptrace/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-ptrace/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://bitbucket.org/haypo/python-ptrace/wiki/Home

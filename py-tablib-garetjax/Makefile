@@ -3,7 +3,7 @@
 DISTNAME=	tablib-garetjax-0.9.12
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/t/tablib-garetjax/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tablib-garetjax/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://python-tablib.org/

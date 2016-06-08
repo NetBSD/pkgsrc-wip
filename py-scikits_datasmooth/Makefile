@@ -4,7 +4,7 @@
 DISTNAME=	scikits.datasmooth-0.5
 PKGNAME=	${PYPKGPREFIX}-scikits_datasmooth-0.5
 CATEGORIES=	misc python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.datasmooth/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.datasmooth/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://scikits.appspot.com/

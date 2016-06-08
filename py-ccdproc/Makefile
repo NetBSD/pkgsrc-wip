@@ -3,7 +3,7 @@
 DISTNAME=	ccdproc-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography
-MASTER_SITES=	https://pypi.python.org/packages/source/c/ccdproc/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/ccdproc/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://ccdproc.readthedocs.org/

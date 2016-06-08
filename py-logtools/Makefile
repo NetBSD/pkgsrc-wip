@@ -4,7 +4,7 @@
 DISTNAME=	logtools-0.8.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/l/logtools/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/logtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/adamhadani/logtools

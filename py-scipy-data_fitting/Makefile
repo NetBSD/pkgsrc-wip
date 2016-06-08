@@ -3,7 +3,7 @@
 DISTNAME=	scipy-data_fitting-0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/scipy-data_fitting/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy-data_fitting/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/razor-x/scipy-data_fitting

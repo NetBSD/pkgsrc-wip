@@ -4,7 +4,7 @@
 DISTNAME=	fatiando-0.0.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/f/fatiando/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fatiando/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.fatiando.org/

@@ -3,7 +3,7 @@
 DISTNAME=	neurolab-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/neurolab/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/neurolab/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/neurolab

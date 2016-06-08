@@ -4,7 +4,7 @@
 DISTNAME=	pyutilib.excel-3.0.4
 PKGNAME=	${PYPKGPREFIX}-utilib_excel-3.0.4
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutilib.excel/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.excel/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://software.sandia.gov/svn/public/pyutilib/pyutilib.excel

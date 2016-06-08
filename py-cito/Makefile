@@ -3,7 +3,7 @@
 DISTNAME=	cito-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cito/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cito/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/tunnell/cito

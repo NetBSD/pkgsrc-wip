@@ -3,7 +3,7 @@
 DISTNAME=	Nuitka-0.5.13.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	lang python
-MASTER_SITES=	https://pypi.python.org/packages/source/N/Nuitka/
+MASTER_SITES=	${MASTER_SITE_PYPI:=N/Nuitka/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://nuitka.net

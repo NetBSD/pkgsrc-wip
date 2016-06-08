@@ -4,7 +4,7 @@
 DISTNAME=	Tashaphyne-0.2
 PKGNAME=	${PYPKGPREFIX}-tashaphyne-0.2
 CATEGORIES=	textproc python #arabic
-MASTER_SITES=	http://pypi.python.org/packages/source/T/Tashaphyne/
+MASTER_SITES=	${MASTER_SITE_PYPI:=T/Tashaphyne/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

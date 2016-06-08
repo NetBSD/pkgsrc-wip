@@ -5,7 +5,7 @@ DISTNAME=	WebFlash-0.1a9.tar
 EGG_NAME=	WebFlash-0.1a9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/W/w/S/F/f/S/.tar//}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/W/WebFlash/
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebFlash/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com

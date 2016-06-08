@@ -3,7 +3,7 @@
 DISTNAME=	pyLuminous-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyLuminous/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyLuminous/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

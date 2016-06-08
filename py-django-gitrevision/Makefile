@@ -4,7 +4,7 @@ DISTNAME=	django-gitrevision-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-gitrevision/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-gitrevision/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/klen/django-gitrevision.git

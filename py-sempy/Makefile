@@ -4,10 +4,10 @@
 DISTNAME=	sempy-0.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/s/sempy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sempy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/s/sempy/
+HOMEPAGE=	${MASTER_SITE_PYPI:=s/sempy/}
 COMMENT=	Python implementation of the spectral element method
 LICENSE=	gnu-gpl-v2
 

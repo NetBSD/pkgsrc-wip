@@ -3,7 +3,7 @@
 DISTNAME=	pylzma-0.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	archivers python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pylzma/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylzma/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.joachim-bauch.de/projects/pylzma/

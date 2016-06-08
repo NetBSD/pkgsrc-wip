@@ -3,7 +3,7 @@
 DISTNAME=	sppy-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sppy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sppy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/sppy/

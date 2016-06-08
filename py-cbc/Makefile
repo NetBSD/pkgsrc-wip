@@ -3,7 +3,7 @@
 DISTNAME=	PyCBC-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/P/PyCBC/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyCBC/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ligo-cbc/pycbc

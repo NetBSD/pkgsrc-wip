@@ -3,7 +3,7 @@
 DISTNAME=	dsltools-0.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dsltools/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dsltools/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/iskandr/dsltools

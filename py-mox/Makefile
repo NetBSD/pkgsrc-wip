@@ -4,7 +4,7 @@
 DISTNAME=	mox-0.5.3
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mox/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mox/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/pymox/

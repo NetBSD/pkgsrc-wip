@@ -3,7 +3,7 @@
 DISTNAME=	vcversioner-2.14.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/v/vcversioner/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcversioner/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/habnabit/vcversioner

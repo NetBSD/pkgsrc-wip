@@ -4,10 +4,10 @@
 DISTNAME=	scikits.image-0.2.2
 PKGNAME=	${PYPKGPREFIX}-scikits_talkbox-0.2.5
 CATEGORIES=	graphics python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.image/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.image/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/s/scikits.image/
+HOMEPAGE=	${MASTER_SITE_PYPI:=s/scikits.image/}
 COMMENT=	Image processing routines for SciPy
 LICENSE=	modified-bsd
 

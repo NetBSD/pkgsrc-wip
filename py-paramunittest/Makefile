@@ -3,7 +3,7 @@
 DISTNAME=	ParamUnittest-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/P/ParamUnittest/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/ParamUnittest/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/rik0/ParamUnittest

@@ -4,7 +4,7 @@ DISTNAME=		MostAwesomeDude-bravo-1.8.1-0-gf6cb5fe
 BRAVO_VERSION=		1.8.1
 PKGNAME=		${PYPKGPREFIX}-bravo-${BRAVO_VERSION}
 CATEGORIES=		games
-# MASTER_SITES=		http://pypi.python.org/packages/source/B/Bravo/
+# MASTER_SITES=		${MASTER_SITE_PYPI:=B/Bravo/}
 MASTER_SITES=		https://github.com/MostAwesomeDude/bravo/tarball/${BRAVO_VERSION}/
 
 MAINTAINER=		eric@cirr.com

@@ -5,7 +5,7 @@ DISTNAME=	codepy-0.90
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/c/codepy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/codepy/}
 EXTRACT_SUFX=	.tar.gz#md5=72efff7486689f778f1b1f82a87b2d12
 
 MAINTAINER=	kamel.derouiche@gmail.com

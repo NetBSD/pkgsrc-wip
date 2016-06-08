@@ -3,7 +3,7 @@
 DISTNAME=	pyreport-0.3.4c
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyreport/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyreport/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://gael-varoquaux.info/computers/pyreport/

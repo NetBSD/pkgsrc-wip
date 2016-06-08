@@ -5,7 +5,7 @@ VERSION=	3.0.4
 DISTNAME=	pyutilib.ply-3.0.4
 PKGNAME=	${PYPKGPREFIX}-utilib_ply-${VERSION}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutilib.ply/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.ply/}
 
 
 MAINTAINER=	kamel.derouiche@gmail.com

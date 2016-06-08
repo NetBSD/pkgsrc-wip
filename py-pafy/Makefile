@@ -3,7 +3,7 @@
 DISTNAME=	pafy-0.3.74
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pafy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pafy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://np1.github.io/pafy/

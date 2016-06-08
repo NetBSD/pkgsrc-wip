@@ -3,7 +3,7 @@
 DISTNAME=	cloudlib-0.3.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cloudlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudlib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/cloudnull/cloudlib

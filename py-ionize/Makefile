@@ -3,7 +3,7 @@
 DISTNAME=	ionize-0.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	cad
-MASTER_SITES=	https://pypi.python.org/packages/source/i/ionize/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/ionize/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://lewisamarshall.github.io/ionize/

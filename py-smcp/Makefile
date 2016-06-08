@@ -3,7 +3,7 @@
 DISTNAME=	smcp-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/smcp/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/smcp/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cvxopt.github.io/smcp

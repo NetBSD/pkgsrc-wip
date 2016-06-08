@@ -3,7 +3,7 @@
 DISTNAME=	pyodesys-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyodesys/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyodesys/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 https://github.com/bjodah/pyodesys

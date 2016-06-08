@@ -3,11 +3,11 @@
 DISTNAME=	cameo-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	category
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cameo/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cameo/}
 
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/c/cameo/
+HOMEPAGE=	${MASTER_SITE_PYPI:=c/cameo/}
 COMMENT=	Computer aided metabolic engineering & optimziation
 LICENSE=	apache-2.0
 

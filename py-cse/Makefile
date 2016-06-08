@@ -3,7 +3,7 @@
 DISTNAME=	pycse-1.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pycse/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycse/}
 EXTRACT_SUFX=	.zip#md5=acb390d6ddb068c301ae5debabe0f37c
 
 MAINTAINER=	jihbed.research@gmail.com

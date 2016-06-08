@@ -5,7 +5,7 @@ DISTNAME=	pysofa-0.1.0a2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 PKGREVISION=	2
 CATEGORIES=	misc python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pysofa/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysofa/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pysofa/

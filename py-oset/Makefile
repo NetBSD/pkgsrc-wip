@@ -3,7 +3,7 @@
 DISTNAME=	oset-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/o/oset/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/oset/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://gitorious.com/sleipnir/python-oset

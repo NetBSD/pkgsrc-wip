@@ -3,10 +3,10 @@
 DISTNAME=	async-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/async/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/async/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/a/async/
+HOMEPAGE=	${MASTER_SITE_PYPI:=a/async/}
 COMMENT=	Framework to process interdependent tasks in a pool of workers
 LICENSE=	modified-bsd #Probably
 

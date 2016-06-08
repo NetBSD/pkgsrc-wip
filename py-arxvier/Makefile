@@ -3,7 +3,7 @@
 DISTNAME=	arxiver-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
-MASTER_SITES=	https://pypi.python.org/packages/source/a/arxiver/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/arxiver/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/jon--lee/arxiver

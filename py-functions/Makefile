@@ -3,7 +3,7 @@
 DISTNAME=	functions-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
-MASTER_SITES=	https://pypi.python.org/packages/source/f/functions/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/functions/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/creese/functions

@@ -3,7 +3,7 @@
 DISTNAME=	PyArabic-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	textproc python
-MASTER_SITES=	https://pypi.python.org/packages/source/P/PyArabic/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyArabic/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

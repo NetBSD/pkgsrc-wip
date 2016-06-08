@@ -3,10 +3,10 @@
 DISTNAME=	PyNFG-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/P/PyNFG/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyNFG/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/P/PyNFG/
+HOMEPAGE=	${MASTER_SITE_PYPI:=P/PyNFG/}
 COMMENT=	Python package for implementing and solving Network form games
 LICENSE=	gnu-agpl-v3
 

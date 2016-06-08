@@ -3,7 +3,7 @@
 DISTNAME=	fedmsg-0.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fedmsg/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fedmsg/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/fedora-infra/fedmsg/

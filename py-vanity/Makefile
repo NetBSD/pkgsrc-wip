@@ -3,7 +3,7 @@
 DISTNAME=	vanity-2.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/v/vanity/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/vanity/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

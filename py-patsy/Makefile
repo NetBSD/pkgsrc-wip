@@ -3,11 +3,11 @@
 DISTNAME=	patsy-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/patsy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/patsy/}
 EXTRACT_SUFX=	.zip#md5=7545518b413136ba8343dcebea07e5e2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/patsy/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/patsy/}
 COMMENT=	Python package for describing statistical models
 LICENSE=	2-clause-bsd
 

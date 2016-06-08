@@ -3,7 +3,7 @@
 DISTNAME=	dubins-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dubins/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dubins/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 http://github.com/AndrewWalker/pydubins

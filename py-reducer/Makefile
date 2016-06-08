@@ -3,7 +3,7 @@
 DISTNAME=	reducer-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/r/reducer/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/reducer/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/mwcraig/reducer

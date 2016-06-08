@@ -3,11 +3,11 @@
 DISTNAME=	Pint-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/P/Pint/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pint/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/P/Pint/
+HOMEPAGE=	${MASTER_SITE_PYPI:=P/Pint/}
 COMMENT=	Physical quantities module
 LICENSE=	modified-bsd
 

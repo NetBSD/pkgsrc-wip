@@ -3,7 +3,7 @@
 DISTNAME=	parameters-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/p/parameters/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/parameters/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://neuralensemble.org/parameters

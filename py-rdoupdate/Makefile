@@ -3,7 +3,7 @@
 DISTNAME=	rdoupdate-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rdoupdate/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdoupdate/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/yac/rdoupdate

@@ -3,7 +3,7 @@
 DISTNAME=	ift-nifty-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/i/ift_nifty/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/ift_nifty/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.mpa-garching.mpg.de/ift/nifty/

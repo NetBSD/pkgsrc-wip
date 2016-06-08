@@ -3,7 +3,7 @@
 DISTNAME=	Goulib-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/G/Goulib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/Goulib/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

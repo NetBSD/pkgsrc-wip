@@ -3,7 +3,7 @@
 DISTNAME=	numericalunits-1.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/n/numericalunits/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/numericalunits/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/numericalunits

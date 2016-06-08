@@ -3,7 +3,7 @@
 DISTNAME=	fnss-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fnss/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fnss/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://fnss.github.io/

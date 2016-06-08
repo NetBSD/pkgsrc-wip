@@ -3,7 +3,7 @@
 DISTNAME=	pysimulators-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pysimulators/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysimulators/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pchanial.github.com/pysimulators

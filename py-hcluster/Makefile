@@ -4,7 +4,7 @@
 DISTNAME=	hcluster-0.2.0.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	parallel math python
-MASTER_SITES=	http://pypi.python.org/packages/source/h/hcluster/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hcluster/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	jihbed.research@gmail.com

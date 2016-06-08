@@ -4,7 +4,7 @@
 DISTNAME=	piquant-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/p/piquant/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/piquant/}
 EXTRACT_SUFX=	.zip
 # XXX: all text file are DOS style.
 # XXX: if future version install binary file,

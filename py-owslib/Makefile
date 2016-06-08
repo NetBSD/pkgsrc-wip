@@ -3,7 +3,7 @@
 DISTNAME=	OWSLib-0.8.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/O/OWSLib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=O/OWSLib/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 https://geopython.github.io/OWSLib

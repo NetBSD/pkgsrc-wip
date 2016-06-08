@@ -5,7 +5,7 @@ DISTNAME=	SymbolType-1.0
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/S/T/t/}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/S/SymbolType/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SymbolType/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

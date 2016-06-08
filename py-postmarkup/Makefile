@@ -3,7 +3,7 @@
 DISTNAME=	postmarkup-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/p/postmarkup/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/postmarkup/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	 http://code.google.com/p/postmarkup/

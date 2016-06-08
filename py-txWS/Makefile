@@ -3,7 +3,7 @@
 DISTNAME=	txWS-0.9.1
 PKGNAME=	${PYPKGPREFIX}-txWS-0.9.1
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/t/txWS/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/txWS/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/MostAwesomeDude/txWS

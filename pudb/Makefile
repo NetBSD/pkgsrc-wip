@@ -4,7 +4,7 @@ DISTNAME=	pudb-0.92.15
 PKGNAME=	${EGG_NAME}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pudb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pudb/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/pudb/

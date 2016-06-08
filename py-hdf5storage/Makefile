@@ -3,11 +3,11 @@
 DISTNAME=	hdf5storage-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hdf5storage/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hdf5storage/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/h/hdf5storage/
+HOMEPAGE=	${MASTER_SITE_PYPI:=h/hdf5storage/}
 COMMENT=	Utilities to read/write Python types to/from HDF5 files
 LICENSE=	modified-bsd
 

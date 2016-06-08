@@ -3,7 +3,7 @@
 DISTNAME=	quaternionarray-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/q/quaternionarray/
+MASTER_SITES=	${MASTER_SITE_PYPI:=q/quaternionarray/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://andreazonca.com/software/quaternion-array/

@@ -3,10 +3,10 @@
 DISTNAME=	twilio-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	https://pypi.python.org/packages/source/t/twilio/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/twilio/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/t/twilio/
+HOMEPAGE=	${MASTER_SITE_PYPI:=t/twilio/}
 COMMENT=	Twilio API client and TwiML generator
 LICENSE=	mit
 

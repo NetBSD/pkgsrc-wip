@@ -3,7 +3,7 @@
 DISTNAME=	ProDy-1.4.10
 PKGNAME=	${PYPKGPREFIX}-prody-1.4.10
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/P/ProDy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/ProDy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.csb.pitt.edu/ProDy

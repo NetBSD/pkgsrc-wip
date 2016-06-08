@@ -4,11 +4,11 @@
 DISTNAME=	pyutilib.component.config-3.2.3
 PKGNAME=	${PYPKGPREFIX}-utilib_component_config-${VERSION}
 CATEGORIES=	math devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutilib.component.config/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.component.config/}
 
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/p/pyutilib.component.config/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyutilib.component.config/}
 COMMENT=	Extensions for configuring components in PyUtilib
 LICENSE=	modified-bsd
 

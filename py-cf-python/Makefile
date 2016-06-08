@@ -3,7 +3,7 @@
 DISTNAME=	cf-python-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cf-python/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cf-python/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cfpython.bitbucket.org/

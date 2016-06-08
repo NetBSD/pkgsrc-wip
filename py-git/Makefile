@@ -4,7 +4,7 @@ DISTNAME=	GitPython-0.3.2.RC1
 PKGNAME=	${PYPKGPREFIX}-git-0.3.2.rc1
 EGG_NAME=	${DISTNAME:S/.RC/rc/}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/G/GitPython/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/GitPython/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://gitorious.org/projects/git-python/

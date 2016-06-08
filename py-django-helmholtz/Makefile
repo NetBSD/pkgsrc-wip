@@ -4,7 +4,7 @@
 DISTNAME=	Helmholtz-0.1.0
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME:S/H/h/}
 CATEGORIES=	databases python
-MASTER_SITES=	http://pypi.python.org/packages/source/H/Helmholtz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=H/Helmholtz/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.dbunic.cnrs-gif.fr/helmholtz/

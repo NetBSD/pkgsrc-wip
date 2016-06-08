@@ -3,7 +3,7 @@
 DISTNAME=	djvusmooth-0.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/d/djvusmooth/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/djvusmooth/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://jwilk.net/software/djvusmooth

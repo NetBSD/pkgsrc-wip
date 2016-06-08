@@ -3,7 +3,7 @@
 DISTNAME=	ncpol2sdpa-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/ncpol2sdpa/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/ncpol2sdpa/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://peterwittek.github.io/ncpol2sdpa/

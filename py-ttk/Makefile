@@ -3,7 +3,7 @@
 DISTNAME=	pyttk-0.3.2
 PKGNAME=	${PYPKGPREFIX}-ttk-0.3.2
 CATEGORIES=	x11 python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyttk/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyttk/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/python-ttk/

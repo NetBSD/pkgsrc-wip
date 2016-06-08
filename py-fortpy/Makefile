@@ -3,7 +3,7 @@
 DISTNAME=	Fortpy-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	lang python
-MASTER_SITES=	https://pypi.python.org/packages/source/F/Fortpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Fortpy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/rosenbrockc/fortpy

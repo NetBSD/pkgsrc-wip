@@ -3,7 +3,7 @@
 DISTNAME=	DecoratorTools-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/D/d/S/T/t/}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/D/DecoratorTools/
+MASTER_SITES=	${MASTER_SITE_PYPI:=D/DecoratorTools/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

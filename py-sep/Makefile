@@ -3,7 +3,7 @@
 DISTNAME=	sep-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sep/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sep/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/kbarbary/sep

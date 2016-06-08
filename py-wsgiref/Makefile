@@ -3,7 +3,7 @@
 DISTNAME=	wsgiref-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/w/wsgiref/
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/wsgiref/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

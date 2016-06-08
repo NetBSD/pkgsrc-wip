@@ -4,7 +4,7 @@ DISTNAME=	python-igraph-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S|python-||}
 PKGREVISION=	3
 CATEGORIES=	graphics math python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/python-igraph/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-igraph/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://igraph.sourceforge.net/

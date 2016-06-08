@@ -3,7 +3,7 @@
 DISTNAME=	selenium-2.41.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/selenium/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/selenium/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	 http://code.google.com/p/selenium/

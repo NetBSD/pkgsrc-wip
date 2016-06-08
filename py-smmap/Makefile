@@ -3,7 +3,7 @@
 DISTNAME=	smmap-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/s/smmap/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/Byron/smmap

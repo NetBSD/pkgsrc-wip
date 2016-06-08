@@ -3,10 +3,10 @@
 DISTNAME=	SQLAlchemy-Searchable-0.9.3
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/S/SQLAlchemy-Searchable/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy-Searchable/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/packages/source/S/SQLAlchemy-Searchable/
+HOMEPAGE=	${MASTER_SITE_PYPI:=S/SQLAlchemy-Searchable/}
 COMMENT=        Provides fulltext search capabilities
 LICENSE=	modified-bsd # TODO: (see mk/license.mk)
 

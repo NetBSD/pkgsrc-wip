@@ -3,7 +3,7 @@
 DISTNAME=	etmtk-3.0.43
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time
-MASTER_SITES=	https://pypi.python.org/packages/source/e/etmtk/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/etmtk/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://people.duke.edu/~dgraham/etmtk

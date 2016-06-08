@@ -3,7 +3,7 @@
 DISTNAME=	ass-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/ass/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/ass/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/rfw/python-ass

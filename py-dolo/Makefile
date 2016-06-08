@@ -4,7 +4,7 @@ DISTNAME=	dolo-0.4.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	finance python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dolo/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dolo/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

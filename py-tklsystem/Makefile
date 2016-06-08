@@ -3,7 +3,7 @@
 DISTNAME=	TkLsystem-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/T/TkLsystem/
+MASTER_SITES=	${MASTER_SITE_PYPI:=T/TkLsystem/}
 EXTRACT_SUFX=	.zip#md5=af56cdc95cda767a7fdbf66db27c278e
 
 MAINTAINER=	jihbed.research@gmail.com

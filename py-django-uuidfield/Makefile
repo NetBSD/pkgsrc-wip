@@ -4,7 +4,7 @@ DISTNAME=	django-uuidfield-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-uuidfield/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-uuidfield/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/dcramer/django-uuidfield

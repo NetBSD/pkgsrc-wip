@@ -5,7 +5,7 @@ DISTNAME=	Kivy-1.0.9
 PKGNAME=   	${PYPKGPREFIX}-kivy-${VERSION}
 PKGREVISION=	2
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/K/Kivy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://kivy.org/#home

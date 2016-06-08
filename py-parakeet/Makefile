@@ -3,10 +3,10 @@
 DISTNAME=	parakeet-0.23.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/parakeet/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/parakeet/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/parakeet/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/parakeet/}
 COMMENT=	Runtime compiler for numerical Python
 LICENSE=	modified-bsd
 

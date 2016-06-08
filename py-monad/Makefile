@@ -3,7 +3,7 @@
 DISTNAME=	PyMonad-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	lang
-MASTER_SITES=	https://pypi.python.org/packages/source/P/PyMonad/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyMonad/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://bitbucket.org/jason_delaat/pymonad

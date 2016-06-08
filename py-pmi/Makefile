@@ -4,7 +4,7 @@
 DISTNAME=	pmi-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pmi/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pmi/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/olenz/pmi/

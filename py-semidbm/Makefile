@@ -3,10 +3,10 @@
 DISTNAME=	semidbm-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/semidbm/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/semidbm/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/s/semidbm/
+HOMEPAGE=	${MASTER_SITE_PYPI:=s/semidbm/}
 COMMENT=	Cross platform (fast) DBM interface in python
 #LICENSE=	# TODO: (see mk/license.mk)
 

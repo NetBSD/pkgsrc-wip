@@ -3,7 +3,7 @@
 DISTNAME=	librabbitmq-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/l/librabbitmq/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/librabbitmq/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/celery/librabbitmq

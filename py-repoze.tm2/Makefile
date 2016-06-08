@@ -5,7 +5,7 @@ DISTNAME=	repoze.tm2-1.0a5.tar
 EGG_NAME=	${DISTNAME:S/.tar//}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/r/repoze.tm2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/repoze.tm2/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com

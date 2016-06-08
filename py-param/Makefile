@@ -3,7 +3,7 @@
 DISTNAME=	param-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/param/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/param/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://ioam.github.com/param/

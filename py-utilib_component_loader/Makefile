@@ -4,7 +4,7 @@
 DISTNAME=	pyutilib.component.loader-3.2.3
 PKGNAME=	${PYPKGPREFIX}-utilib_component_loader-${VERSION}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutilib.component.loader/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.component.loader/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://software.sandia.gov/trac/pyutilib

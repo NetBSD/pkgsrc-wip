@@ -3,7 +3,7 @@
 DISTNAME=	exocode-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/e/exocode/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/exocode/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://bitbucket.org/leckman/exoplanets

@@ -3,7 +3,7 @@
 DISTNAME=	cvxpy-0.2.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cvxpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cvxpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/cvxgrp/cvxpy/

@@ -3,7 +3,7 @@
 DISTNAME=	arxiv2bib-1.0.5
 CPKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/arxiv2bib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/arxiv2bib/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

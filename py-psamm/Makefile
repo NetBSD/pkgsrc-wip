@@ -3,7 +3,7 @@
 DISTNAME=	psamm-0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/psamm/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/psamm/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/zhanglab/psamm

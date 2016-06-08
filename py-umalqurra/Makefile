@@ -3,7 +3,7 @@
 DISTNAME=	umalqurra-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/u/umalqurra/
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/umalqurra/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/tytkal/python-hijiri-ummalqura

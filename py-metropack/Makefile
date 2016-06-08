@@ -3,7 +3,7 @@
 DISTNAME=	metropack-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/m/metropack/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/metropack/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/eddiejessup/metropack

@@ -3,7 +3,7 @@
 DISTNAME=	yaprt-0.0.7
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
-MASTER_SITES=	https://pypi.python.org/packages/source/y/yaprt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=y/yaprt/}
 
 MAINTAINER=	derouiche@yahoo.com
 HOMEPAGE=	https://github.com/cloudnull/yaprt.git

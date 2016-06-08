@@ -3,7 +3,7 @@
 DISTNAME=	hgapi-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hgapi/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hgapi/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://bitbucket.org/haard/hgapi

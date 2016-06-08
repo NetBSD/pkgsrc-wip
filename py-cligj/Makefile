@@ -3,7 +3,7 @@
 DISTNAME=	cligj-0.2.0
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cligj/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cligj/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 https://github.com/mapbox/cligj

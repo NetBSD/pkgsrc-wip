@@ -3,7 +3,7 @@
 DISTNAME=	scikit-aero-v0.1.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/v//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-aero/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-aero/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/Pybonacci/scikit-aero

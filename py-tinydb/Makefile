@@ -3,7 +3,7 @@
 DISTNAME=	tinydb-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/t/tinydb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tinydb/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

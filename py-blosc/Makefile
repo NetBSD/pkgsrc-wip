@@ -3,7 +3,7 @@
 DISTNAME=	blosc-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/b/blosc/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/blosc/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/blosc/python-blosc

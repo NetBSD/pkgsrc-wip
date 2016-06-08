@@ -3,7 +3,7 @@
 DISTNAME=	nlib-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/n/nlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nlib/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/mdipierro/canvas

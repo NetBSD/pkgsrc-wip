@@ -3,7 +3,7 @@
 DISTNAME=	pylire-0.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pylire/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylire/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/fish2000/pylire/

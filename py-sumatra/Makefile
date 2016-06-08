@@ -5,7 +5,7 @@ DISTNAME=	Sumatra-${VER}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/}
 PKGREVISION=	1
 CATEGORIES=	biology python
-MASTER_SITES=	http://pypi.python.org/packages/source/S/Sumatra/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sumatra/}
 
 MAINTAINER=	jihbed.research@gmail.com
 COMMENT=	Tracking projects based on numerical simulation or analysis

@@ -3,10 +3,10 @@
 DISTNAME=	django-nose-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-nose/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-nose/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pypi.python.org/packages/source/d/django-nose/
+HOMEPAGE=	${MASTER_SITE_PYPI:=d/django-nose/}
 COMMENT=	Django test runner that uses nose
 LICENSE=	modified-bsd
 

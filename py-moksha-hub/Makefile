@@ -3,7 +3,7 @@
 DISTNAME=	moksha.hub-1.4.4
  PKGNAME=	${PYPKGPREFIX}-moksha-hub-1.4.4
 CATEGORIES=	wip
-MASTER_SITES=	https://pypi.python.org/packages/source/m/moksha.hub/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/moksha.hub/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://moksha.fedorahosted.org

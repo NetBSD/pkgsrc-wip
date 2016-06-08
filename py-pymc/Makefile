@@ -3,7 +3,7 @@
 
 DISTNAME=	pymc-2.1beta
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pymc/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymc/}
 EXTRACT_SUFX=	.zip#md5=265be6fe114f2d52359d59f2c8b912ff
 
 MAINTAINER=	jihbed.research@gmail.com

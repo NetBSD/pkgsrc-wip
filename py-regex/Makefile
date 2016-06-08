@@ -3,7 +3,7 @@
 DISTNAME=	regex-2015.10.01
 PKGNAME=	${PYPKGPREFIX}-regex-20151001
 CATEGORIES=	textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/r/regex/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/regex/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://bitbucket.org/mrabarnett/mrab-regex

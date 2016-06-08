@@ -3,7 +3,7 @@
 DISTNAME=	lsqfit-4.8
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/l/lsqfit/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lsqfit/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	  https://github.com/gplepage/lsqfit.git

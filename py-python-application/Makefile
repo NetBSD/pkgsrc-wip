@@ -3,7 +3,7 @@
 DISTNAME=	python-application-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/python-application/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-application/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ag-projects.com/

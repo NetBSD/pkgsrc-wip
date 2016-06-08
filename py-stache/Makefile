@@ -3,10 +3,10 @@
 DISTNAME=	pystache-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S//py/}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pystache/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pystache/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pystache/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pystache/}
 COMMENT=	Mustache for Python
 LICENSE=	mit
 

@@ -3,10 +3,10 @@
 DISTNAME=	IProgress-0.2
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/I/IProgress/
+MASTER_SITES=	${MASTER_SITE_PYPI:=I/IProgress/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/I/IProgress/
+HOMEPAGE=	${MASTER_SITE_PYPI:=I/IProgress/}
 COMMENT=	Text progress bar library for Python
 LICENSE=	modified-bsd OR gnu-lgpl-v2.1
 

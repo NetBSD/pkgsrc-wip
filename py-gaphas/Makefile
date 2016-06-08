@@ -4,7 +4,7 @@ DISTNAME=	gaphas-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gaphas/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gaphas/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gaphor.sourceforge.net/

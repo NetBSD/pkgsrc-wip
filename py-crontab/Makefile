@@ -3,7 +3,7 @@
 DISTNAME=	python-crontab-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	sysutils python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-crontab/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-crontab/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/python-crontab

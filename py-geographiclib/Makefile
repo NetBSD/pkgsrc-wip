@@ -3,7 +3,7 @@
 DISTNAME=	geographiclib-1.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography
-MASTER_SITES=	https://pypi.python.org/packages/source/g/geographiclib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/geographiclib/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://geographiclib.sourceforge.net/

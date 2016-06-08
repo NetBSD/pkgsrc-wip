@@ -3,7 +3,7 @@
 DISTNAME=	pykit-sci-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pykit-sci/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pykit-sci/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/androomerrill/pykit-sci

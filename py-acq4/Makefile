@@ -3,10 +3,10 @@
 DISTNAME=	acq4-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/a/acq4/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/acq4/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/a/acq4/
+HOMEPAGE=	${MASTER_SITE_PYPI:=a/acq4/}
 COMMENT=	Neurophysiology acquisition and analysis platform
 LICENSE = mit
 

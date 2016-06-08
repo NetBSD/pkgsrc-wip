@@ -3,7 +3,7 @@
 DISTNAME=	easydev-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/e/easydev/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/easydev/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://packages.python.org/easydev/

@@ -3,7 +3,7 @@
 DISTNAME=	larlib-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/l/larlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/larlib/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/cvdlab/lar-cc

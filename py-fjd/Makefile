@@ -3,7 +3,7 @@
 DISTNAME=	fjd-0.1.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fjd/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fjd/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/nhoening/fjd/

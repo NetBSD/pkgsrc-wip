@@ -4,7 +4,7 @@
 DISTNAME=	Louie-1.1
 PKGNAME=	${PYPKGPREFIX}-louie-1.1
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/L/Louie/
+MASTER_SITES=	${MASTER_SITE_PYPI:=L/Louie/}
 
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

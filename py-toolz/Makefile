@@ -3,7 +3,7 @@
 DISTNAME=	toolz-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/t/toolz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/toolz/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/pytoolz/toolz/

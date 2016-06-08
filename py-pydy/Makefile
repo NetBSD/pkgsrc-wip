@@ -3,7 +3,7 @@
 DISTNAME=	pydy-0.3.0
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pydy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pydy.org

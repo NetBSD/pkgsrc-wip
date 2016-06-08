@@ -5,10 +5,10 @@ EGG_NAME=	rdflib_django-0.2.dev201210061248
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/r/rdflib-django/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib-django/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pypi.python.org/packages/source/r/rdflib-django/
+HOMEPAGE=	${MASTER_SITE_PYPI:=r/rdflib-django/}
 COMMENT=	Store implementation for RDFlib using Django models as its backend
 LICENSE=	mit
 

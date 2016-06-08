@@ -3,7 +3,7 @@
 DISTNAME=	cobra-0.4.0b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cobra/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cobra/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://opencobra.github.io/cobrapy

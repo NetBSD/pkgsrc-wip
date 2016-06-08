@@ -3,7 +3,7 @@
 DISTNAME=	imreg_dft-1.0.2
 PKGNAME=	${PYPKGPREFIX}-imreg-dft-1.0.2
 CATEGORIES=	math graphics
-MASTER_SITES=	https://pypi.python.org/packages/source/i/imreg_dft/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/imreg_dft/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/matejak/imreg_dft

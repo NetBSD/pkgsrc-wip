@@ -3,7 +3,7 @@
 DISTNAME=	rogues-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rogues/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rogues/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/rogues

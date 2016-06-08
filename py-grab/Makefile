@@ -3,7 +3,7 @@
 DISTNAME=	grab-0.6.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/g/grab/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/grab/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://grablib.org

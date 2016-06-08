@@ -3,7 +3,7 @@
 DISTNAME=	django-mathjax-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math www python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/django-mathjax/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-mathjax/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/kaleidos/django-mathjax

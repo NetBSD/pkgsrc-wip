@@ -3,7 +3,7 @@
 DISTNAME=	cliff-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cliff/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cliff/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/python-cliff

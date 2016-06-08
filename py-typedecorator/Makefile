@@ -3,7 +3,7 @@
 DISTNAME=	typedecorator-0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/t/typedecorator/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/typedecorator/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/dobarkod/typedecorator/

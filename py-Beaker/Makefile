@@ -4,7 +4,7 @@ DISTNAME=	Beaker-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/B/Beaker/
+MASTER_SITES=	${MASTER_SITE_PYPI:=B/Beaker/}
 
 MAINTAINER=	jkuittinen@users.sourceforge.net
 HOMEPAGE=	http://beaker.groovie.org/

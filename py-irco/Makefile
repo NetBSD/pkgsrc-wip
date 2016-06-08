@@ -3,7 +3,7 @@
 DISTNAME=	irco-0.9.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/i/irco/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/irco/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/GaretJax/irco

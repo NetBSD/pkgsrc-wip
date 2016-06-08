@@ -5,7 +5,7 @@ DISTNAME=	django-audiofield-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www audio python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-audiofield/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-audiofield/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/Star2Billing/django-audiofield

@@ -3,7 +3,7 @@
 DISTNAME=	translationstring-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/t/translationstring/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/translationstring/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pylonsproject.org

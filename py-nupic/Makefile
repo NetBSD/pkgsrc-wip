@@ -3,7 +3,7 @@
 DISTNAME=	nupic-0.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/nupic/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nupic/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/numenta/nupic

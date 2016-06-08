@@ -3,7 +3,7 @@
 DISTNAME=	quantities-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/q/quantities/
+MASTER_SITES=	${MASTER_SITE_PYPI:=q/quantities/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

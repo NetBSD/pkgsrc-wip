@@ -3,7 +3,7 @@
 DISTNAME=	eventlet-0.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/e/eventlet/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/eventlet/}
 
 MAINTAINER= 	kamel.derouiche@gmail.com
 HOMEPAGE=	http://eventlet.net/

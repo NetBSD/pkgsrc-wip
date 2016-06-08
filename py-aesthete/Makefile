@@ -4,7 +4,7 @@ DISTNAME=	Aesthete-0.4.1-7
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-aesthete-0.4.1-7
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/A/Aesthete/
+MASTER_SITES=	${MASTER_SITE_PYPI:=A/Aesthete/}
 
 MAINTAINER= 	jihbed.research@gmail.com
 HOMEPAGE=       http://www.philtweir.co.uk/aesthete/wiki/pmwiki.php

@@ -3,7 +3,7 @@
 DISTNAME=	colorlog-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel sysutils misc
-MASTER_SITES=	https://pypi.python.org/packages/source/c/colorlog/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorlog/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/borntyping/python-colorlog

@@ -3,10 +3,10 @@
 DISTNAME=	dj-static-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dj-static/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dj-static/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/d/dj-static/
+HOMEPAGE=	${MASTER_SITE_PYPI:=d/dj-static/}
 COMMENT=	Serve production static files with Django
 LICENSE=	modified-bsd
 

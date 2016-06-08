@@ -3,7 +3,7 @@
 DISTNAME=	linop-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/l/linop/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/linop/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ghisvail/linop

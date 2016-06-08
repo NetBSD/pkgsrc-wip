@@ -3,7 +3,7 @@
 DISTNAME=	xcal_raman-0.1.5
 PKGNAME=	${PYPKGPREFIX}-xcal-raman-0.1.5
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/x/xcal_raman/
+MASTER_SITES=	${MASTER_SITE_PYPI:=x/xcal_raman/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/xcal_raman

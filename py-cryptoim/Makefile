@@ -3,7 +3,7 @@
 DISTNAME=	CryptoIM-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	security
-MASTER_SITES=	https://pypi.python.org/packages/source/C/CryptoIM/
+MASTER_SITES=	${MASTER_SITE_PYPI:=C/CryptoIM/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/CryptoIM/

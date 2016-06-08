@@ -4,7 +4,7 @@ DISTNAME=	aipy-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/aipy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/aipy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://casper.berkeley.edu/astrobaki/index.php/AIPY

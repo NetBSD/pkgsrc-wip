@@ -3,7 +3,7 @@
 DISTNAME=	chinup-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	https://pypi.python.org/packages/source/c/chinup/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/chinup/}
 
 MAINTAINER= kamelderouiche@yahoo.com	
 HOMEPAGE=	https://github.com/pagepart/chinup

@@ -3,7 +3,7 @@
 DISTNAME=	graphsim-0.2.6.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc math
-MASTER_SITES=	https://pypi.python.org/packages/source/g/graphsim/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/graphsim/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/caesar0301/graphsim

@@ -3,7 +3,7 @@
 DISTNAME=	moksha.common-1.2.3
 PKGNAME=	${PYPKGPREFIX}-moksha-common-1.2.3
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/moksha.common/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/moksha.common/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://mokshaproject.net/

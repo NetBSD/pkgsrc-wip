@@ -3,7 +3,7 @@
 DISTNAME=	pydy-viz-0.1.0
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pydy-viz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydy-viz/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/pydy/pydy-viz/

@@ -3,7 +3,7 @@
 DISTNAME=	npTDMS-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/npTDMS/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/npTDMS/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/adamreeve/npTDMS

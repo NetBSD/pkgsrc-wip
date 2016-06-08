@@ -3,7 +3,7 @@
 DISTNAME=	cerridwen-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cerridwen/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cerridwen/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cerridwen.viridian-project.de/

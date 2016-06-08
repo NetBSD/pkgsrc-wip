@@ -4,7 +4,7 @@
 DISTNAME=	tkinter.help-2.0
 PKGNAME=	${PYPKGPREFIX}-tkinter-help-2.0
 CATEGORIES=	x11 python
-MASTER_SITES=	http://pypi.python.org/packages/source/t/tkinter.help/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tkinter.help/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

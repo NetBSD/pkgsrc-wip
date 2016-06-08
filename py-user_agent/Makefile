@@ -3,7 +3,7 @@
 DISTNAME=	user_agent-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/u/user_agent/
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/user_agent/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.python.org/pypi/user_agent/

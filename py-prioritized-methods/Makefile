@@ -5,7 +5,7 @@ DISTNAME=	prioritized_methods-0.2.1.tar
 EGG_NAME=	${DISTNAME:S/.tar//}
 PKGNAME=	${PYPKGPREFIX}-prioritized-methods-0.2.1
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/prioritized_methods/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/prioritized_methods/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com

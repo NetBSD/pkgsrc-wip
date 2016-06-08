@@ -4,7 +4,7 @@
 DISTNAME=	prayertime-2.2
 PKGNAME=	${PYPKGPREFIX}-m${DISTNAME}
 CATEGORIES=	time python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/prayertime/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/prayertime/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bitbucket.org/xmonader/pyprayertime/

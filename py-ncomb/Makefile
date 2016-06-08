@@ -4,7 +4,7 @@
 DISTNAME=	pyncomb-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyncomb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyncomb/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/pyncomb/

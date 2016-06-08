@@ -4,7 +4,7 @@ DISTNAME=	WebError-0.10.2
 EGG_NAME=	${DISTNAME:S/.tar//}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/W/w/S/E/e/}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/W/WebError/
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebError/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/WebError/

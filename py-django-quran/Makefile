@@ -3,7 +3,7 @@
 DISTNAME=	django-quran-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-quran/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-quran/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/idris/django-quran

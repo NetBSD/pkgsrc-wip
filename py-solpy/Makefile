@@ -3,7 +3,7 @@
 DISTNAME=	solpy-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/solpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/solpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/nrcharles/solpy

@@ -3,7 +3,7 @@
 DISTNAME=	pyrsistent-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyrsistent/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrsistent/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/tobgu/pyrsistent/

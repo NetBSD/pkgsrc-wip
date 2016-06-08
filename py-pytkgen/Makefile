@@ -3,7 +3,7 @@
 DISTNAME=	pytkgen-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11 devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pytkgen/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytkgen/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/tmetsch/pytkgen

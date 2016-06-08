@@ -3,7 +3,7 @@
 DISTNAME=	AQoPA-0.5.3
 PKGNAME=	${PYPKGPREFIX}-aqopa-0.5.3
 CATEGORIES=	security python
-MASTER_SITES=	https://pypi.python.org/packages/source/A/AQoPA/
+MASTER_SITES=	${MASTER_SITE_PYPI:=A/AQoPA/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://qopml.org/aqopa/

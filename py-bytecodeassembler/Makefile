@@ -4,7 +4,7 @@
 DISTNAME=	BytecodeAssembler-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/B/b/S/A/a/}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/B/BytecodeAssembler/
+MASTER_SITES=	${MASTER_SITE_PYPI:=B/BytecodeAssembler/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

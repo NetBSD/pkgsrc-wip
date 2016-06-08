@@ -3,7 +3,7 @@
 DISTNAME=	brewer2mpl-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	https://pypi.python.org/packages/source/b/brewer2mpl/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/brewer2mpl/}
 EXTRACT_SUFX=	.zip#md5=4d467ade7b575ce0e39f51ebe8f6e1fb
 
 MAINTAINER=	kamelderouiche@yahoo.com

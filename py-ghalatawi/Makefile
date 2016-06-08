@@ -4,7 +4,7 @@
 DISTNAME=	ghalatawi-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/g/ghalatawi/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/ghalatawi/}
 EXTRACT_SUFX=	.zip#md5=7afa6950e1786db9729f2582c451a2a9
 
 MAINTAINER=	kamelderouiche@yahoo.com

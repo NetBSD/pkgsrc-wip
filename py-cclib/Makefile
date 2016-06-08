@@ -4,7 +4,7 @@ DISTNAME=	cclib-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	biology python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cclib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cclib/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cclib.sourceforge.net/wiki/index.php/Main_Page

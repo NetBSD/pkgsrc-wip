@@ -3,7 +3,7 @@
 DISTNAME=	fitsarray-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/f/fitsarray/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fitsarray/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi?%3Aaction=search&term=fitsarray&submit=search

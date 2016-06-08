@@ -3,7 +3,7 @@
 DISTNAME=	toeplitz-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/t/toeplitz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/toeplitz/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/trichter/toeplitz

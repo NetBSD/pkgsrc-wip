@@ -5,7 +5,7 @@ DISTNAME=	pylibtextcat-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pylibtextcat/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylibtextcat/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com

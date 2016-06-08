@@ -3,7 +3,7 @@
 DISTNAME=	pyrr-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyrr/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrr/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/adamlwgriffiths/Pyrr

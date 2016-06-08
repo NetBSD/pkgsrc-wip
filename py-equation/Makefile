@@ -4,7 +4,7 @@ DISTNAME=	Equation-1.2.01
 EGG_NAME=	Equation-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/E/Equation/
+MASTER_SITES=	${MASTER_SITE_PYPI:=E/Equation/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/alphaomega-technology/Equation

@@ -4,7 +4,7 @@ DISTNAME=	plex-2.0.0dev
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dev//}
 EGG_NAME=	${DISTNAME:S/dev/.dev0/}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/plex/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/plex/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/python-plex/

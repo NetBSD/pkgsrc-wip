@@ -3,7 +3,7 @@
 DISTNAME=	Numberjack-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/N/Numberjack/
+MASTER_SITES=	${MASTER_SITE_PYPI:=N/Numberjack/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://numberjack.ucc.ie/

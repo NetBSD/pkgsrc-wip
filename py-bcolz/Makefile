@@ -3,7 +3,7 @@
 DISTNAME=	bcolz-0.11.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/b/bcolz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcolz/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/Blosc/bcolz

@@ -3,7 +3,7 @@
 DISTNAME=	pypet-0.1b.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pypet/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypet/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/SmokinCaterpillar/pypet

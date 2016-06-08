@@ -3,7 +3,7 @@
 DISTNAME=	pyconsensus-0.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyconsensus/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyconsensus/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/AugurProject/pyconsensus

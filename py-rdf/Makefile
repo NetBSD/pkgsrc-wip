@@ -4,7 +4,7 @@
 DISTNAME=	rdf-0.9a6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/r/rdf/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdf/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://rdflib.net/

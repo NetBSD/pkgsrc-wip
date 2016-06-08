@@ -3,7 +3,7 @@
 DISTNAME=	scp-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	https://pypi.python.org/packages/source/s/scp/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jbardin/scp.py

@@ -3,7 +3,7 @@
 DISTNAME=	restkit-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
-MASTER_SITES=	https://pypi.python.org/packages/source/r/restkit/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/restkit/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/benoitc/restkit/

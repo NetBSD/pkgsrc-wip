@@ -4,7 +4,7 @@
 DISTNAME=	scikits.scattpy-0.1.0
 PKGNAME=	${PYPKGPREFIX}-scikits_scattpy-0.1.0
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.scattpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.scattpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://scattpy.github.com/

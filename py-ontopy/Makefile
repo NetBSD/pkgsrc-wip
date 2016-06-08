@@ -4,7 +4,7 @@
 DISTNAME=	ontopy-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/o/ontopy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/ontopy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/afternoon/ontopy/

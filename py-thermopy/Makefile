@@ -4,7 +4,7 @@
 DISTNAME=	thermopy-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	http://pypi.python.org/packages/source/t/thermopy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/thermopy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/thermopy

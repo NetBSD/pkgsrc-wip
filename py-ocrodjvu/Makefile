@@ -3,7 +3,7 @@
 DISTNAME=	ocrodjvu-0.7.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	https://pypi.python.org/packages/source/o/ocrodjvu/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/ocrodjvu/}
 
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/ocrodjvu/

@@ -3,10 +3,10 @@
 DISTNAME=	lifelines-0.2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/l/lifelines/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lifelines/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/l/lifelines/
+HOMEPAGE=	${MASTER_SITE_PYPI:=l/lifelines/}
 COMMENT=	Including Kaplan Meier, Nelson Aalen and regression
 LICENSE=	mit
 

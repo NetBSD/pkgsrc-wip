@@ -3,7 +3,7 @@
 DISTNAME=	decimalpy-0.101
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/decimalpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/decimalpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.bruunisejs.dk/PythonHacks/

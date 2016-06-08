@@ -3,7 +3,7 @@
 DISTNAME=	nimfa-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/nimfa/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nimfa/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://nimfa.biolab.si

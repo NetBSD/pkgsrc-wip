@@ -3,7 +3,7 @@
 DISTNAME=	conda-3.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel sysutils python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/conda/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/conda/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com

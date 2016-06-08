@@ -3,7 +3,7 @@
 DISTNAME=	xdress-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/x/xdress/
+MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdress/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://xdress.org/

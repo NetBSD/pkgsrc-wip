@@ -3,7 +3,7 @@
 DISTNAME=	ipython-sql-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/i/ipython-sql/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython-sql/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.python.org/pypi/ipython-sql/

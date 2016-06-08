@@ -3,7 +3,7 @@
 DISTNAME=	bxa-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/b/bxa/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bxa/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/JohannesBuchner/BXA/

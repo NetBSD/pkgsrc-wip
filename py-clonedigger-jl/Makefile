@@ -3,7 +3,7 @@
 DISTNAME=	clonedigger-jl-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/c/clonedigger-jl/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/clonedigger-jl/}
 
 MAINTAINER=	kamelderouiche@yaho..com
 HOMEPAGE=	https://github.com/jlachowski/clonedigger

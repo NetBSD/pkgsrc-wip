@@ -3,7 +3,7 @@
 DISTNAME=	cogent-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	 biology python
-MASTER_SITES=	http://pypi.python.org/packages/source/c/cogent/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cogent/}
 EXTRACT_SUFX=	.tgz#md5=732d19ab6f4ded2a75a3ae77eaea9872
 
 MAINTAINER=	jihbed.research@gmail.com

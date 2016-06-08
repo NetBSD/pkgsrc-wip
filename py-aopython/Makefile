@@ -4,7 +4,7 @@
 DISTNAME=	AOPython-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/AOP/aop/}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/A/AOPython/
+MASTER_SITES=	${MASTER_SITE_PYPI:=A/AOPython/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

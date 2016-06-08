@@ -3,10 +3,10 @@
 DISTNAME=	vegas-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/v/vegas/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/vegas/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/v/vegas/
+HOMEPAGE=	${MASTER_SITE_PYPI:=v/vegas/}
 COMMENT=	Tools for adaptive multidimensional Monte Carlo integration
 LICENSE=	gnu-gpl-v3
 

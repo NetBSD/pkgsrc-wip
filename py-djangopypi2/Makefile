@@ -3,7 +3,7 @@
 DISTNAME=	djangopypi2-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/d/djangopypi2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangopypi2/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/benliles/djangopypi/

@@ -3,7 +3,7 @@
 DISTNAME=	mendeleev-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mendeleev/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mendeleev/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://bitbucket.org/lukaszmentel/mendeleev

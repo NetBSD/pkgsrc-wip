@@ -3,7 +3,7 @@
 DISTNAME=	txZMQ-0.7.3
 PKGNAME=	${PYPKGPREFIX}-txZMQ-0.7.3
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/t/txZMQ/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/txZMQ/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/smira/txZMQ

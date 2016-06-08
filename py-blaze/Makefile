@@ -3,7 +3,7 @@
 DISTNAME=	blaze-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/b/blaze/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/blaze/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

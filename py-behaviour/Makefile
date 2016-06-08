@@ -5,7 +5,7 @@ DISTNAME=	Behaviour-0.1a4
 PKGNAME=	${PYPKGPREFIX}-behaviour-0.1
 PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/B/Behaviour/
+MASTER_SITES=	${MASTER_SITE_PYPI:=B/Behaviour/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/Behaviour/

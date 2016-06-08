@@ -4,7 +4,7 @@
 DISTNAME=	enre-0.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/e/enre/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/enre/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/enre

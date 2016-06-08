@@ -3,7 +3,7 @@
 DISTNAME=	gitdb-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gitdb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gitdb/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/gitpython-developers/gitdb

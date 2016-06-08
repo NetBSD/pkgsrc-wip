@@ -3,7 +3,7 @@
 DISTNAME=	Pyccuracy-1.2.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/P/Pyccuracy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pyccuracy/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.pyccuracy.org/

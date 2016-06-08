@@ -3,7 +3,7 @@
 DISTNAME=	algebraixlib-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/a/algebraixlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/algebraixlib/}
 EXTRACT_SUFX=	.zip#md5=9219b5fbb1acc17ee637a60c2877a7c9
 
 MAINTAINER=	jihbed.research@gmail.com

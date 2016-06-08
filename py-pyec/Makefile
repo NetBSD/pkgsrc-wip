@@ -4,7 +4,7 @@
 DISTNAME=	PyEC-0.2.5
 PKGNAME=	${PYPKGPREFIX}-pyec-0.2.5
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/P/PyEC/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyEC/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://nn.cs.utexas.edu/?pyec

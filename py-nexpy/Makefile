@@ -3,7 +3,7 @@
 DISTNAME=	NeXpy-0.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/N/NeXpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=N/NeXpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://nexpy.github.io/nexpy/

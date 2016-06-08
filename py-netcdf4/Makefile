@@ -3,7 +3,7 @@
 DISTNAME=	netCDF4-1.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/netCDF4/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/netCDF4/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/netcdf4-python/

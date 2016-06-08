@@ -3,7 +3,7 @@
 DISTNAME=	sas7bdat-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sas7bdat/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sas7bdat/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	 https://bitbucket.org/jaredhobbs/sas7bdat

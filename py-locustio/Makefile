@@ -3,7 +3,7 @@
 DISTNAME=	locustio-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www
-MASTER_SITES=	https://pypi.python.org/packages/source/l/locustio/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/locustio/}
 
 MAINTAINER=	angel.medinamoscat@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/locustio

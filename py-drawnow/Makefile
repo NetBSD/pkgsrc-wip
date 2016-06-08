@@ -3,10 +3,10 @@
 DISTNAME=	drawnow-0.44
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/d/drawnow/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/drawnow/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/d/drawnow/
+HOMEPAGE=	${MASTER_SITE_PYPI:=d/drawnow/}
 COMMENT=	MATLAB-like drawnow
 LICENSE=	mit
 

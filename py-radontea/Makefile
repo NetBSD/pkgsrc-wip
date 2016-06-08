@@ -3,7 +3,7 @@
 DISTNAME=	radontea-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/r/radontea/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/radontea/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/paulmueller/radontea

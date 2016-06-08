@@ -3,7 +3,7 @@
 DISTNAME=	otb-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/o/otb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/otb/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://bitbucket.org/forieux/otb/

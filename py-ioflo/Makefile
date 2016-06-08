@@ -3,7 +3,7 @@
 DISTNAME=	ioflo-1.3.8
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/i/ioflo/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/ioflo/}
 
 MAINTAINER=     jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ioflo/ioflo

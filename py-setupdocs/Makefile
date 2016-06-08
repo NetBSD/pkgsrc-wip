@@ -5,7 +5,7 @@ DISTNAME=	SetupDocs-1.0.4.tar
 EGG_NAME=	SetupDocs-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/:S/D/d/:S/.tar//}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/S/SetupDocs/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SetupDocs/}
 EXTRACT_SUFX=	.gz#md5=824bcf896b7e4e7c610d65544e28bdd1
 
 MAINTAINER=	kamelderouiche@yahoo.com

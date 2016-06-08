@@ -3,7 +3,7 @@
 DISTNAME=	gwpy-0.1b3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gwpy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gwpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://gwpy.github.io/

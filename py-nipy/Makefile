@@ -3,10 +3,10 @@
 DISTNAME=	nipy-0.3.0
 CATEGORIES=	biology
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-MASTER_SITES=	https://pypi.python.org/packages/source/n/nipy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nipy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/n/nipy/
+HOMEPAGE=	${MASTER_SITE_PYPI:=n/nipy/}
 COMMENT=	Python package for analysis of neuroimaging data
 LICENSE=	modified-bsd
 

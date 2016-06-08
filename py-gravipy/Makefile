@@ -3,10 +3,10 @@
 DISTNAME=	GraviPy-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/G/GraviPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=G/GraviPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/G/GraviPy/
+HOMEPAGE=	${MASTER_SITE_PYPI:=G/GraviPy/}
 COMMENT=	Tensor Calculus Package for General Relativity
 LICENSE=	2-clause-bsd
 

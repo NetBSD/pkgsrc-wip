@@ -3,7 +3,7 @@
 DISTNAME=	pygit2-0.21.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pygit2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libgit2/pygit2

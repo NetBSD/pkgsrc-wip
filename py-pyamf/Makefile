@@ -3,7 +3,7 @@
 DISTNAME=	PyAMF-0.5.1
 PKGNAME=	${PYPKGPREFIX}-pyamf-0.5.1
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/P/PyAMF/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyAMF/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com

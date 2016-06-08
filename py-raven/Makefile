@@ -3,7 +3,7 @@
 DISTNAME=	raven-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/raven/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/getsentry/raven-python

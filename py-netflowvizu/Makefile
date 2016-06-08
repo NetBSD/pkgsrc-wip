@@ -3,7 +3,7 @@
 DISTNAME=	NetFlowVizu-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/N/NetFlowVizu/
+MASTER_SITES=	${MASTER_SITE_PYPI:=N/NetFlowVizu/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.smallbulb.net/netflowvizu

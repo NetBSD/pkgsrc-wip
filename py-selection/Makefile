@@ -3,7 +3,7 @@
 DISTNAME=	selection-0.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/s/selection/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/selection/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.python.org/pypi/selection/

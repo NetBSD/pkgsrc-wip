@@ -3,7 +3,7 @@
 DISTNAME=	pycosat-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pycosat/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycosat/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ContinuumIO/pycosat

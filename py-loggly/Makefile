@@ -5,7 +5,7 @@ DISTNAME=	loggly-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/l/loggly/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/loggly/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/EA2D/loggly-python

@@ -4,7 +4,7 @@
 DISTNAME=	descartes-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/descartes/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/descartes/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://bitbucket.org/sgillies/descartes/

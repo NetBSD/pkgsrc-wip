@@ -3,7 +3,7 @@
 DISTNAME=	Theano-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/T/Theano/
+MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://deeplearning.net/software/theano/

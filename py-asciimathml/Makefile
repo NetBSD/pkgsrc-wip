@@ -3,7 +3,7 @@
 DISTNAME=	asciimathml-0.9.4.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/a/asciimathml/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciimathml/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/favalex/python-asciimathml

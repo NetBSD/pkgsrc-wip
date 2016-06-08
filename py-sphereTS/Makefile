@@ -3,7 +3,7 @@
 DISTNAME=	sphereTS-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sphereTS/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphereTS/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

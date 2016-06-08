@@ -3,7 +3,7 @@
 DISTNAME=	scikit-learn-0.17b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-learn/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://scikit-learn.org/

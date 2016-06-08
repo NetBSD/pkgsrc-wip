@@ -4,7 +4,7 @@
 DISTNAME=	multichain_mcmc-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/m/multichain_mcmc/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/multichain_mcmc/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi.python.org/pypi/multichain_mcmc

@@ -3,7 +3,7 @@
 DISTNAME=	mathjspy-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mathjspy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mathjspy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mathjspy.readthedocs.org/

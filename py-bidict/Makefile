@@ -4,7 +4,7 @@
 DISTNAME=	bidict-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/b/bidict/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bidict/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://bitbucket.org/jab/bidict

@@ -3,7 +3,7 @@
 DISTNAME=	dimarray-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dimarray/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dimarray/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dimarray.readthedocs.org

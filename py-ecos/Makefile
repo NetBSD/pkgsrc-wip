@@ -3,7 +3,7 @@
 DISTNAME=	ecos-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/e/ecos/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/ecos/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/embotech/ecos

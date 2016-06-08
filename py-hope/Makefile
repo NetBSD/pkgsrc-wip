@@ -3,7 +3,7 @@
 DISTNAME=	hope-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hope/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hope/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://hope.phys.ethz.ch/

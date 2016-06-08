@@ -3,7 +3,7 @@
 DISTNAME=	glespy-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/g/glespy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/glespy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/glespy

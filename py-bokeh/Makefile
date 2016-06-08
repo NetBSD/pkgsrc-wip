@@ -3,7 +3,7 @@
 DISTNAME=	bokeh-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/b/bokeh/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bokeh/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/bokeh/bokeh

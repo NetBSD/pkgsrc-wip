@@ -5,7 +5,7 @@ DISTNAME=	Divisi2-2.0b1.tar
 EGG_NAME=	${DISTNAME:S/.tar//}
 PKGNAME=	${PYPKGPREFIX}-divisi2-2.0b1
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/D/Divisi2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=D/Divisi2/}
 EXTRACT_SUFX=	.gz#md5=f7c6fe6443032f180bcd8dd0b9c3e8ec
 
 MAINTAINER=	jihbed.research@gmail.com

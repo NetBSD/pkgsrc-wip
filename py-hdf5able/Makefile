@@ -3,7 +3,7 @@
 DISTNAME=	hdf5able-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hdf5able/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hdf5able/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/hdf5able/

@@ -4,7 +4,7 @@
 DISTNAME=	setuptools_git-0.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/setuptools-git/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools-git/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/setuptools-git

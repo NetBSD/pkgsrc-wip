@@ -3,7 +3,7 @@
 DISTNAME=	latexcodec-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
-MASTER_SITES=	https://pypi.python.org/packages/source/l/latexcodec/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/latexcodec/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

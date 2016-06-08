@@ -3,7 +3,7 @@
 DISTNAME=	flipper-0.8.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/f/flipper/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/flipper/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://bitbucket.org/Mark_Bell/flipper

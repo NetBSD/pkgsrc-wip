@@ -3,7 +3,7 @@
 DISTNAME=	gsw-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gsw/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gsw/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/seawater/

@@ -3,7 +3,7 @@
 DISTNAME=	mando-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mando/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mando/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://mando.readthedocs.org/

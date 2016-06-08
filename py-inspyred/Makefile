@@ -3,7 +3,7 @@
 DISTNAME=	inspyred-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/i/inspyred/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/inspyred/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 https://aarongarrett.github.io/inspyred

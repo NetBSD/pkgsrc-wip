@@ -3,10 +3,10 @@
 DISTNAME=	pulsar-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pulsar/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pulsar/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pulsar/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pulsar/}
 COMMENT=	Event driven concurrent framework for Python
 LICENSE=	2-clause-bsd
 

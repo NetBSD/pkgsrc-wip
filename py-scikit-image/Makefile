@@ -3,7 +3,7 @@
 DISTNAME=	scikit-image-0.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/scikit-image/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://scikit-image.org

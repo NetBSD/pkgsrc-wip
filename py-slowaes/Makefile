@@ -3,7 +3,7 @@
 DISTNAME=	slowaes-0.1a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/slowaes/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/slowaes/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 NO_BUILD=	yes
 

@@ -3,7 +3,7 @@
 DISTNAME=	m2ext-0.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/m2ext/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/m2ext/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/abbot/m2ext

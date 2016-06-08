@@ -3,7 +3,7 @@
 DISTNAME=	clint-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel  python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/clint/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/clint/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/kennethreitz/clint

@@ -3,7 +3,7 @@
 DISTNAME=	chompack-2.0.0
 PKGNAME=   	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/chompack/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/chompack/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cvxopt.github.io/chompack/

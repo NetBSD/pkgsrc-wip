@@ -3,7 +3,7 @@
 DISTNAME=	gvar-4.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gvar/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gvar/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/gplepage/lsqfit.git

@@ -3,7 +3,7 @@
 DISTNAME=	rdopkg-0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rdopkg/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdopkg/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/redhat-openstack/rdopkg

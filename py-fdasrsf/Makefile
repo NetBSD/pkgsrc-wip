@@ -3,7 +3,7 @@
 DISTNAME=	fdasrsf-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fdasrsf/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fdasrsf/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://stat.fsu.edu/~dtucker/research.html

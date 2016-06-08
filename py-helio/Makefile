@@ -3,7 +3,7 @@
 DISTNAME=	helio-1.0.0b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/h/helio/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/helio/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/yellowpagesgroup/Helio

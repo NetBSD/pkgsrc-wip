@@ -4,7 +4,7 @@
 DISTNAME=	ChiantiPy-0.1.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/C/c/S/P/p/S/.tar//}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/C/ChiantiPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=C/ChiantiPy/}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	jihbed.research@gmail.com

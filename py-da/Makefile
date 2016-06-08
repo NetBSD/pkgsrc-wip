@@ -3,7 +3,7 @@
 DISTNAME=	pyda-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyda/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyda/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://hickmank.github.io/pyda

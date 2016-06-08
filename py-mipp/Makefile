@@ -3,7 +3,7 @@
 DISTNAME=	mipp-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mipp/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mipp/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/loerum/mipp

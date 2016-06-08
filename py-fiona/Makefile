@@ -3,7 +3,7 @@
 DISTNAME=	Fiona-1.6.0
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	geography python
-MASTER_SITES=	https://pypi.python.org/packages/source/F/Fiona/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Fiona/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 http://github.com/Toblerity/Fiona

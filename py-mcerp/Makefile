@@ -3,7 +3,7 @@
 DISTNAME=	mcerp-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/mcerp/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mcerp/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/tisimst/mcerp

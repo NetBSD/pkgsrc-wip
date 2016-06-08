@@ -3,7 +3,7 @@
 DISTNAME=	screenutils-0.0.1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://pypi.python.org/packages/source/s/screenutils/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/screenutils/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/Christophe31/screenutils

@@ -3,7 +3,7 @@
 DISTNAME=	ordered-set-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/o/ordered-set/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/ordered-set/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/LuminosoInsight/ordered-set

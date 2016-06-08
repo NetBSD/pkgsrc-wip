@@ -6,7 +6,7 @@ PKGNAME=	trac-plugins-AuthOpenId-${DISTVERS}
 PKGREVISION=	1
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/T/TracAuthOpenId/
+MASTER_SITES=	${MASTER_SITE_PYPI:=T/TracAuthOpenId/}
 
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac.sandbox.lt/auth/wiki/AuthOpenIdPlugin

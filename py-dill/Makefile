@@ -3,7 +3,7 @@
 DISTNAME=	dill-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/dill/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dill/}
 EXTRACT_SUFX=	.tgz#md5=8e7d1ec5a0f150b536da4d0623c3931b
 
 MAINTAINER=	kamelderouiche@yahoo.com

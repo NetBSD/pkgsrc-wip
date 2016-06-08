@@ -3,10 +3,10 @@
 DISTNAME=	fluiddyn-0.0.10a7
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/f/fluiddyn/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/fluiddyn/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/f/fluiddyn/
+HOMEPAGE=	${MASTER_SITE_PYPI:=f/fluiddyn/}
 COMMENT=	Framework for studying fluid dynamics.
 LICENSE=	modified-bsd
 

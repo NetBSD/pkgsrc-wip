@@ -4,7 +4,7 @@ DISTNAME=	pyslha-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyslha/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyslha/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.insectnation.org/projects/pyslha

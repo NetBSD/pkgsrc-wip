@@ -4,7 +4,7 @@
 DISTNAME=	paegan-0.9.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/p/paegan/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/paegan/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/asascience-open/paegan

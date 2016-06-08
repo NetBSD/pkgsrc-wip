@@ -4,7 +4,7 @@ DISTNAME=	AIGO-0.1.0
 PKGNAME=	${PYPKGPREFIX}-aigo-0.1.0
 PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/A/AIGO/
+MASTER_SITES=	${MASTER_SITE_PYPI:=A/AIGO/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/aigo/

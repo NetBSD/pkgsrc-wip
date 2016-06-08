@@ -3,10 +3,10 @@
 DISTNAME=	EMMSA-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/E/EMMSA/
+MASTER_SITES=	${MASTER_SITE_PYPI:=E/EMMSA/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/E/EMMSA/
+HOMEPAGE=	${MASTER_SITE_PYPI:=E/EMMSA/}
 COMMENT=	Multivariate Statistical Analysis for Electron Microscopy Data
 LICENSE=	mit
 

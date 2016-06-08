@@ -3,10 +3,10 @@
 DISTNAME=	atmos-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/a/atmos/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/atmos/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/a/atmos/
+HOMEPAGE=	${MASTER_SITE_PYPI:=a/atmos/}
 COMMENT=	Atmospheric sciences utility library
 LICENSE=	mit
 

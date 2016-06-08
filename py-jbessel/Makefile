@@ -3,7 +3,7 @@
 DISTNAME=	jBessel-0.1.4
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/j/jBessel/
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/jBessel/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/daron1337/jBessel

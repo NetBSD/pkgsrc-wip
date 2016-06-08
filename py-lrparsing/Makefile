@@ -3,7 +3,7 @@
 DISTNAME=	lrparsing-1.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
-MASTER_SITES=	https://pypi.python.org/packages/source/l/lrparsing/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lrparsing/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://lrparsing.sourceforge.net/

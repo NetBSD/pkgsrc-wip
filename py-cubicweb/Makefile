@@ -3,7 +3,7 @@
 DISTNAME=	cubicweb-3.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cubicweb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cubicweb/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.cubicweb.org/

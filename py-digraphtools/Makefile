@@ -4,7 +4,7 @@
 DISTNAME=	digraphtools-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/digraphtools/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/digraphtools/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/dbasden/python-digraphtools

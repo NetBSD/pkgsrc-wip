@@ -4,7 +4,7 @@
 DISTNAME=	pygnm-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	biology python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pygnm/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygnm/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.pitt.edu/~ahb12

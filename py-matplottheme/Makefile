@@ -3,7 +3,7 @@
 DISTNAME=	MatPlotTheme-0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/M/MatPlotTheme/
+MASTER_SITES=	${MASTER_SITE_PYPI:=M/MatPlotTheme/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/James-Yu/MatPlotTheme

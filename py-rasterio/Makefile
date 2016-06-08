@@ -4,10 +4,10 @@ DISTNAME=	rasterio-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rasterio/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rasterio/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/r/rasterio/
+HOMEPAGE=	${MASTER_SITE_PYPI:=r/rasterio/}
 COMMENT=	Fast and direct raster I/O for Python programmers who use Numpy
 LICENSE=	modified-bsd
 

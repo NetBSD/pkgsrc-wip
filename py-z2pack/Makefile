@@ -3,7 +3,7 @@
 DISTNAME=	z2pack-1.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/z/z2pack/
+MASTER_SITES=	${MASTER_SITE_PYPI:=z/z2pack/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://z2pack.ethz.ch

@@ -3,7 +3,7 @@
 DISTNAME=	rebound-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rebound/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rebound/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/hannorein/rebound

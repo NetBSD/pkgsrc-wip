@@ -2,10 +2,10 @@
 
 DISTNAME=	pyverilog-1.0.1
 CATEGORIES=	category
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyverilog/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyverilog/}
 
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pyverilog/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyverilog/}
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
 

@@ -3,7 +3,7 @@
 DISTNAME=	PySPH-0.9beta
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc python
-MASTER_SITES=	http://pypi.python.org/packages/source/P/PySPH/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySPH/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pysph.googlecode.com/

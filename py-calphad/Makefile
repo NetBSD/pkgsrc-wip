@@ -3,7 +3,7 @@
 DISTNAME=	pycalphad-0.1.1.post1
  PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pycalphad/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycalphad/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/richardotis/pycalphad

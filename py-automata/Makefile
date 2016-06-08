@@ -3,7 +3,7 @@
 DISTNAME=	automata-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/a/automata/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/automata/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/bniemczyk/automata

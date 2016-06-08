@@ -2,7 +2,7 @@
 
 DISTNAME=	gtimelog-0.5.0
 CATEGORIES=	time
-MASTER_SITES=	http://pypi.python.org/packages/source/g/gtimelog/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gtimelog/}
 
 MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://mg.pov.lt/gtimelog/

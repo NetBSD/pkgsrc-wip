@@ -5,7 +5,7 @@ DISTNAME=	genesis-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	python
-MASTER_SITES=	http://pypi.python.org/packages/source/g/genesis/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/genesis/}
 
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/genesis

@@ -3,7 +3,7 @@
 DISTNAME=	vispy-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/v/vispy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/vispy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 http://vispy.org

@@ -3,7 +3,7 @@
 DISTNAME=	venusian-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/v/venusian/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/venusian/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pylonsproject.org

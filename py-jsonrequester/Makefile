@@ -4,7 +4,7 @@
 DISTNAME=	jsonrequester-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/j/jsonrequester/
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonrequester/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/jsonrequester

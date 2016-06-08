@@ -3,10 +3,10 @@
 DISTNAME=	pydecode-0.2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pydecode/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydecode/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/p/pydecode/
+HOMEPAGE=	${MASTER_SITE_PYPI:=p/pydecode/}
 COMMENT=	Dynamic programming toolkit
 
 USE_LANGUAGES=	c c++

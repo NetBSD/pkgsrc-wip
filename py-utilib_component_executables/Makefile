@@ -4,7 +4,7 @@
 DISTNAME=	pyutilib.component.executables-3.4
 PKGNAME=	${PYPKGPREFIX}-utilib_component_executables-${VERSION}
 CATEGORIES=	math devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutilib.component.executables/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.component.executables/}
 
 
 MAINTAINER=	jihbed.research@gmail.com

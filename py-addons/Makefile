@@ -4,7 +4,7 @@
 DISTNAME=	AddOns-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/S/O/o/}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/A/AddOns/
+MASTER_SITES=	${MASTER_SITE_PYPI:=A/AddOns/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

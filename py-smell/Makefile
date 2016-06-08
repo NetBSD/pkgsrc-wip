@@ -3,7 +3,7 @@
 DISTNAME=	pysmell-0.7.3
 PKGNAME=	${PYPKGPREFIX}-smell-0.7.3
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pysmell/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysmell/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com

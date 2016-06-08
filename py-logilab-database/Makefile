@@ -3,7 +3,7 @@
 DISTNAME=	logilab-database-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	http://pypi.python.org/packages/source/l/logilab-database/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/logilab-database/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.logilab.org/project/logilab-database

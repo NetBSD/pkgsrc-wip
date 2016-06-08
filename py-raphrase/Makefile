@@ -4,7 +4,7 @@
 DISTNAME=	pyraphrase-0.1
 PKGNAME=        ${PYPKGPREFIX}-raphrase-0.1
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyraphrase/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyraphrase/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://unoyunodiez.wordpress.com/pyraphrase/

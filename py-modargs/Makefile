@@ -3,7 +3,7 @@
 DISTNAME=	python-modargs-1.7
 PKGNAME=	${PYPKGPREFIX}-modargs-1.7
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-modargs/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-modargs/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/python-modargs

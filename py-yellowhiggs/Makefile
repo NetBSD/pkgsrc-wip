@@ -4,7 +4,7 @@
 DISTNAME=	yellowhiggs-1.0a4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES= math
-MASTER_SITES=	http://pypi.python.org/packages/source/y/yellowhiggs/
+MASTER_SITES=	${MASTER_SITE_PYPI:=y/yellowhiggs/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://end.web.cern.ch/end/projects/yellowhiggs/

@@ -3,7 +3,7 @@
 DISTNAME=	conda-env-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/conda-env/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/conda-env/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/conda/conda-env

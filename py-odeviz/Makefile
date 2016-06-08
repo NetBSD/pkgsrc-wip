@@ -2,10 +2,10 @@
 
 DISTNAME=	odeViz-0.2
 CATEGORIES=	category
-MASTER_SITES=	https://pypi.python.org/packages/source/o/odeViz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/odeViz/}
 
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
-HOMEPAGE=	https://pypi.python.org/packages/source/o/odeViz/
+HOMEPAGE=	${MASTER_SITE_PYPI:=o/odeViz/}
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
 

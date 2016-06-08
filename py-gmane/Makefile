@@ -3,7 +3,7 @@
 DISTNAME=	gmane-0.1.dev25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gmane/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gmane/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/ttm/gmane

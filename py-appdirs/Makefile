@@ -3,7 +3,7 @@
 DISTNAME=	appdirs-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/a/appdirs/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/appdirs/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	 http://github.com/ActiveState/appdirs

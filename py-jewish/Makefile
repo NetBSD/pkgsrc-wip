@@ -3,7 +3,7 @@
 DISTNAME=	jewish-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
-MASTER_SITES=	https://pypi.python.org/packages/source/j/jewish/
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/jewish/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/emosenkis/jewish

@@ -4,7 +4,7 @@
 DISTNAME=	qit-0.9.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/q/qit/
+MASTER_SITES=	${MASTER_SITE_PYPI:=q/qit/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://qit.sourceforge.net/

@@ -3,7 +3,7 @@
 DISTNAME=	pymbolic-2013.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pymbolic/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymbolic/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mathema.tician.de/software/pymbolic

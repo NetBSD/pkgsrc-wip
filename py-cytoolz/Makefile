@@ -3,7 +3,7 @@
 DISTNAME=	cytoolz-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cytoolz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cytoolz/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/pytoolz/cytoolz

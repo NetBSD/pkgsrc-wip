@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math python
 CATEGORIES=	wip
-MASTER_SITES=	https://pypi.python.org/packages/source/o/openopt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/openopt/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://openopt.org/Welcome

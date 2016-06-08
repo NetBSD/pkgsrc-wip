@@ -4,10 +4,10 @@
 DISTNAME=	clnum-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/c/clnum/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/clnum/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/c/clnum/
+HOMEPAGE=	${MASTER_SITE_PYPI:=c/clnum/}
 COMMENT=	Rational and arbitrary precision floating point numbers
 LICENSE=	gnu-gpl-v3
 

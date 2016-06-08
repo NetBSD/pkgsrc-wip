@@ -3,7 +3,7 @@
 DISTNAME=	sdeint-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sdeint/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sdeint/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/mattja/sdeint/

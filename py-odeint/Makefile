@@ -3,7 +3,7 @@
 DISTNAME=	pyodeint-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyodeint/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyodeint/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/bjodah/

@@ -3,7 +3,7 @@
 DISTNAME=	PyODE-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/P/PyODE/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyODE/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyode.sourceforge.net/

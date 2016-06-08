@@ -4,7 +4,7 @@
 DISTNAME=	graphmin-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/g/graphmin/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/graphmin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://river.styx.org/ww/2010/10/graphmin

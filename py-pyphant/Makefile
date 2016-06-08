@@ -3,7 +3,7 @@
 DISTNAME=	pyphant-1.0b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyphant/ \
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyphant/ \}
 		http://garr.dl.sourceforge.net/project/pyphant/Pyphant-1.0/
 
 MAINTAINER=	jihbed.research@gmail.com

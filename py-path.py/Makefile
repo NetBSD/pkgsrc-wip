@@ -3,7 +3,7 @@
 DISTNAME=	path.py-7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/path.py/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/path.py/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

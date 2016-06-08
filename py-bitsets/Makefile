@@ -3,7 +3,7 @@
 DISTNAME=	bitsets-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	wip
-MASTER_SITES=	https://pypi.python.org/packages/source/b/bitsets/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitsets/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

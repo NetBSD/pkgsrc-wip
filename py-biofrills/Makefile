@@ -3,7 +3,7 @@
 DISTNAME=	biofrills-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
-MASTER_SITES=	https://pypi.python.org/packages/source/b/biofrills/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/biofrills/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/etal/biofrills

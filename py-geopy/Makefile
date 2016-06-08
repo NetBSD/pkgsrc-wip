@@ -3,10 +3,10 @@
 DISTNAME=	geopy-0.99
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
-MASTER_SITES=	https://pypi.python.org/packages/source/g/geopy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/geopy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://pypi.python.org/packages/source/g/geopy/
+HOMEPAGE=	${MASTER_SITE_PYPI:=g/geopy/}
 COMMENT=	Python Geocoding Toolbox
 LICENSE=	mit
 

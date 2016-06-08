@@ -4,7 +4,7 @@ DISTNAME=	FiPy-2.1.2
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-fipy-2.1.2
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/F/FiPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/FiPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.ctcms.nist.gov/fipy/

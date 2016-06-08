@@ -3,7 +3,7 @@
 DISTNAME=	kiwisolver-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/k/kiwisolver/
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/kiwisolver/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

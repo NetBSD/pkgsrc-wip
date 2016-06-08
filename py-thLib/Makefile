@@ -3,7 +3,7 @@
 DISTNAME=	thLib-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/t/thLib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/thLib/}
 EXTRACT_SUFX=	.zip#md5=4539622094282799aec58c3470923e8a
 
 MAINTAINER=	jihbed.research@gmail.com

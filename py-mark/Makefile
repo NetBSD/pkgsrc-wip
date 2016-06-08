@@ -4,7 +4,7 @@
 DISTNAME=	mark-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/m/mark/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mark/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/mark/

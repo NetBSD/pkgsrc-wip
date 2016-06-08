@@ -4,7 +4,7 @@
 DISTNAME=	dana-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/dana/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dana/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dana.loria.fr/

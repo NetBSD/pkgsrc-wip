@@ -4,7 +4,7 @@ VERS=		1.4.1
 DISTNAME=	xlutils-${VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/x/xlutils/
+MASTER_SITES=	${MASTER_SITE_PYPI:=x/xlutils/}
 
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.simplistix.co.uk/software/python/xlutils

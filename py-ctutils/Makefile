@@ -3,7 +3,7 @@
 DISTNAME=	ctutils-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/source/c/ctutils/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/ctutils/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/ctutils
