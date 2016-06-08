@@ -7,7 +7,7 @@
 PKGNAME=	${PYPKGPREFIX}-htseq-${PORTVERSION}
 DISTNAME=	HTSeq-${PORTVERSION}
 CATEGORIES=	python
-MASTER_SITES=	${MASTER_SITE_CHEESESHOP}/source/H/HTSeq/
+MASTER_SITES=	${MASTER_SITE_PYPI:=H/HTSeq/}
 
 MAINTAINER=	bacon4000@gmail.com
 
@@ -18,7 +18,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 
 PORTVERSION=	0.6.1p1
-MASTER_SITE_CHEESESHOP= http://pypi.python.org/packages
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
