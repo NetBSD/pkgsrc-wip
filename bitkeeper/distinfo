@@ -5,3 +5,4 @@ RMD160 (bk-7.2.1.tar.gz) = 00046627f2fb02c9e017a469f2f7917abda0b2e9
 SHA512 (bk-7.2.1.tar.gz) = c07ae760f70e0715f20e667207385a10124fe4e577b85f3a930ae845fb4aee94946bdc7713d1c71fff06f5c166ba7e318f7f0137de6732ebe2c207274f617e50
 Size (bk-7.2.1.tar.gz) = 28958626 bytes
 SHA1 (patch-src_gui_tcltk_tcl_win_configure) = 909c7c4092a198efa0f8edcc21a7d33023e25860
+SHA1 (patch-src_libc_utils_crc32c.c) = f5be9e423aade86282b3e596f5035381b50fac8c
