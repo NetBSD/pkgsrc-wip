@@ -15,8 +15,6 @@ USE_TOOLS+=	gmake bison lex groff perl bash
 
 BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
-USE_LANGUAGES=	c c++ fortran
-
 do-build:
 	${RUN} cd ${WRKSRC}/src && ${GMAKE}  # p
 
