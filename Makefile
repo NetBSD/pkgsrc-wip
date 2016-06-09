@@ -3836,7 +3836,6 @@ SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
 SUBDIR+=	spatt
 SUBDIR+=	spe
-SUBDIR+=	speedtest-cli
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	spidermonkey185
