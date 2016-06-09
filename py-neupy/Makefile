@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/neupy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=n/neupy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/n/neupy/
 COMMENT=	Artificial Neural Network library implemented in Python
 LICENSE=	mit
 

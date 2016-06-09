@@ -10,7 +10,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pawurb/termit/}
+HOMEPAGE=	https://github.com/pawurb/termit/
 COMMENT=	Google Translate in your terminal
 LICENSE=	mit
 

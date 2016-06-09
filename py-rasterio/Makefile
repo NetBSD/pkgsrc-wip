@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rasterio/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=r/rasterio/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/r/rasterio/
 COMMENT=	Fast and direct raster I/O for Python programmers who use Numpy
 LICENSE=	modified-bsd
 

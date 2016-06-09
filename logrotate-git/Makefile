@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=logrotate/logrotate/archive/}
 
 MAINTAINER=		nils@NetBSD.org
-HOMEPAGE=		${MASTER_SITE_GITHUB:=logrotate/logrotate/}
+HOMEPAGE=		https://github.com/logrotate/logrotate/
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
 

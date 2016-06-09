@@ -6,7 +6,7 @@ CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-nose/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=d/django-nose/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/d/django-nose/
 COMMENT=	Django test runner that uses nose
 LICENSE=	modified-bsd
 

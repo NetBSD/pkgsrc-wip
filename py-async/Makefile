@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/async/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=a/async/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/a/async/
 COMMENT=	Framework to process interdependent tasks in a pool of workers
 LICENSE=	modified-bsd #Probably
 

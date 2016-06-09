@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/redbaron/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=r/redbaron/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/r/redbaron/
 COMMENT=	FST for python to make writing refactoring code a realistic task
 LICENSE=	gnu-lgpl-v3
 

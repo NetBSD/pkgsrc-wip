@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pint/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=P/Pint/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/P/Pint/
 COMMENT=	Physical quantities module
 LICENSE=	modified-bsd
 

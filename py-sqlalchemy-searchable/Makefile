@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy-Searchable/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_PYPI:=S/SQLAlchemy-Searchable/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/S/SQLAlchemy-Searchable/
 COMMENT=        Provides fulltext search capabilities
 LICENSE=	modified-bsd # TODO: (see mk/license.mk)
 

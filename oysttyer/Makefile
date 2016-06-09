@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oysttyer/}
 
 MAINTAINER=	pkgsrc-wip@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=oysttyer/oysttyer/}
+HOMEPAGE=	https://github.com/oysttyer/oysttyer/
 COMMENT=	Interactive command-line Twitter client
 LICENSE=	ffsl-license
 

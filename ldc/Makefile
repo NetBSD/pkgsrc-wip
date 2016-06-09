@@ -8,7 +8,7 @@ CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ldc-developers/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=ldc-developers/ldc/}
+HOMEPAGE=	https://github.com/ldc-developers/ldc/
 COMMENT=	D compiler based on LLVM
 LICENSE=	modified-bsd					\
 		AND (artistic OR gnu-gpl-v1)			\

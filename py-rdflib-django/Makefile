@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib-django/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=r/rdflib-django/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/r/rdflib-django/
 COMMENT=	Store implementation for RDFlib using Django models as its backend
 LICENSE=	mit
 

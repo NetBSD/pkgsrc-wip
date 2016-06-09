@@ -6,7 +6,7 @@ CATEGORIES=     net
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/clickatell/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_PYPI:=c/clickatell/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/c/clickatell/
 COMMENT=        Library for interacting with the Clickatell SMS Gateway
 LICENSE=        gnu-gpl-v2
 

@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/empirical/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=e/empirical/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/e/empirical/
 COMMENT=	Emperical Method of Fundamental Solutions solver for Python
 LICENSE=	gnu-gpl-v3
 

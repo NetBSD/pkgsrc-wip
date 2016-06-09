@@ -6,7 +6,7 @@ DISTNAME=	libsysstat-0.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=lxde/libsysstat/}
+HOMEPAGE=	https://github.com/lxde/libsysstat/
 COMMENT=	Library used to query system info and statistics
 LICENSE=	gnu-lgpl-v2.1
 

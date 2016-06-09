@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=hawaii-desktop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=hawaii-desktop/qtaccountsservice/}
+HOMEPAGE=	https://github.com/hawaii-desktop/qtaccountsservice/
 COMMENT=	Qt-style API for freedesktop.org's AccountsService DBus service
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.3
 

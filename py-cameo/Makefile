@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/cameo/}
 
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=c/cameo/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/c/cameo/
 COMMENT=	Computer aided metabolic engineering & optimziation
 LICENSE=	apache-2.0
 

@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/clnum/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=c/clnum/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/c/clnum/
 COMMENT=	Rational and arbitrary precision floating point numbers
 LICENSE=	gnu-gpl-v3
 

@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lifelines/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=l/lifelines/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/l/lifelines/
 COMMENT=	Including Kaplan Meier, Nelson Aalen and regression
 LICENSE=	mit
 

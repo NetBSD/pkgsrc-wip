@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lingpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=l/lingpy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/l/lingpy/
 COMMENT=	Python library for automatic tasks in historical linguistics
 LICENSE=	gnu-gpl-v3
 

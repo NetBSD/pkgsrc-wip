@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/EMMSA/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=E/EMMSA/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/E/EMMSA/
 COMMENT=	Multivariate Statistical Analysis for Electron Microscopy Data
 LICENSE=	mit
 

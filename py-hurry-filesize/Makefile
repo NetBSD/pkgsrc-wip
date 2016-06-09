@@ -6,7 +6,7 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hurry.filesize/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=h/hurry.filesize/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/h/hurry.filesize/
 COMMENT=	Simple Python library for human readable file sizes
 LICENSE=	zpl-2.0
 

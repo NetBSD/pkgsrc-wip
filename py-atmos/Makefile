@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atmos/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=a/atmos/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/a/atmos/
 COMMENT=	Atmospheric sciences utility library
 LICENSE=	mit
 

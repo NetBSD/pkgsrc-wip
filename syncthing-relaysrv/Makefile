@@ -8,7 +8,7 @@ GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	izaac@setec.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=syncthing/relaysrv/}
+HOMEPAGE=	https://github.com/syncthing/relaysrv/
 COMMENT=	Syncthing relay server
 LICENSE=	mit
 

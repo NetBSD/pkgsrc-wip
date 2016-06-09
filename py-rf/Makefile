@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rf/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=r/rf/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/r/rf/
 COMMENT=	Receiver function calculation in seismology
 LICENSE=	mit
 

@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikits.image/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=s/scikits.image/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/s/scikits.image/
 COMMENT=	Image processing routines for SciPy
 LICENSE=	modified-bsd
 

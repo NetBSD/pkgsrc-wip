@@ -8,7 +8,7 @@ GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	izaac@setec.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=syncthing/discosrv/}
+HOMEPAGE=	https://github.com/syncthing/discosrv/
 COMMENT=	Syncthing discovery server
 LICENSE=	mit
 

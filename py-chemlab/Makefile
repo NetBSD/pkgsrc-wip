@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chemlab/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=c/chemlab/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/c/chemlab/
 COMMENT=	The python chemistry library you were waiting for
 LICENSE=	gnu-gpl-v3
 

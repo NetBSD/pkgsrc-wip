@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=I/IProgress/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=I/IProgress/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/I/IProgress/
 COMMENT=	Text progress bar library for Python
 LICENSE=	modified-bsd OR gnu-lgpl-v2.1
 

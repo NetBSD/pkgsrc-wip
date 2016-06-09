@@ -8,7 +8,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.math/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyutilib.math/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pyutilib.math/
 COMMENT=	PyUtilib math utilities
 LICENSE=	modified-bsd
 

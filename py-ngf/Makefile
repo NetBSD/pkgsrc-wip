@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyNFG/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=P/PyNFG/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/P/PyNFG/
 COMMENT=	Python package for implementing and solving Network form games
 LICENSE=	gnu-agpl-v3
 

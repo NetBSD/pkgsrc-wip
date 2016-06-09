@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=subrosa2/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=subrosa2/weatherman/}
+HOMEPAGE=	https://github.com/subrosa2/weatherman/
 COMMENT=	Display weather information from WeatherBug on the command line
 LICENSE=	2-clause-bsd
 

@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dj-static/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=d/dj-static/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/d/dj-static/
 COMMENT=	Serve production static files with Django
 LICENSE=	modified-bsd
 

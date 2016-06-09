@@ -7,7 +7,7 @@ GIT_REPOSITORIES=	TP
 GIT_REPO.TP=		https://github.com/camillo/TerminatorPlugins.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=camillo/TerminatorPlugins/}
+HOMEPAGE=	https://github.com/camillo/TerminatorPlugins/
 COMMENT=	Set of plugins for terminator
 LICENSE=	public-domain
 

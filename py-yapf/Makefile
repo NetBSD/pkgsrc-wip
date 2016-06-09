@@ -8,7 +8,7 @@ GITHUB_PROJECT= yapf
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=google/}
+HOMEPAGE=	https://github.com/google/
 COMMENT=	Python files formatter
 LICENSE=	apache-2.0
 

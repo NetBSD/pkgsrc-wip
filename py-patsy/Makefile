@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/patsy/}
 EXTRACT_SUFX=	.zip#md5=7545518b413136ba8343dcebea07e5e2
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/patsy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/patsy/
 COMMENT=	Python package for describing statistical models
 LICENSE=	2-clause-bsd
 

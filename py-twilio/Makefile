@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twilio/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=t/twilio/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/t/twilio/
 COMMENT=	Twilio API client and TwiML generator
 LICENSE=	mit
 

@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=twitter/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	gianni-pkgsrc-wip@daprile.net
-HOMEPAGE=	${MASTER_SITE_GITHUB:=twitter/twemproxy/}
+HOMEPAGE=	https://github.com/twitter/twemproxy/
 COMMENT=	Fast, light-weight proxy for memcached and redis
 LICENSE=	apache-2.0
 

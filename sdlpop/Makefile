@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=NagyD/SDLPoP/}
+HOMEPAGE=	https://github.com/NagyD/SDLPoP/
 COMMENT=	Open-source port of Prince of Persia
 LICENSE=	gnu-gpl-v3
 

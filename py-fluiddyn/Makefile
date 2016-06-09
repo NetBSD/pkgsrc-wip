@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fluiddyn/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=f/fluiddyn/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/f/fluiddyn/
 COMMENT=	Framework for studying fluid dynamics.
 LICENSE=	modified-bsd
 

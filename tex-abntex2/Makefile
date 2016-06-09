@@ -39,7 +39,7 @@ SUBST_SED.relinfo+=		-e 's/<COPYRIGHT_YEAR>/${RELYEAR}/g'
 SUBST_SED.relinfo+=		-e 's/<VERSION>/${VERSION}/g'
 
 MAINTAINER=	silasdb@gmail.com
-HOMEPAGE=	${MASTER_SITE_GITHUB:=abntex/abntex2/}
+HOMEPAGE=	https://github.com/abntex/abntex2/
 COMMENT=	Support for ABNT documentation standards
 #LICENSE=	# TODO: (see mk/license.mk)
 

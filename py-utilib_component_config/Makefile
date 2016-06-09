@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutilib.component.config/}
 
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyutilib.component.config/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pyutilib.component.config/
 COMMENT=	Extensions for configuring components in PyUtilib
 LICENSE=	modified-bsd
 

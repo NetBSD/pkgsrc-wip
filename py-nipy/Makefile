@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nipy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=n/nipy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/n/nipy/
 COMMENT=	Python package for analysis of neuroimaging data
 LICENSE=	modified-bsd
 

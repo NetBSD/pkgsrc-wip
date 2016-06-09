@@ -6,7 +6,7 @@ CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
 
 MAINTAINER=		erig@erig.me
-HOMEPAGE=		${MASTER_SITE_GITHUB:=martanne/vis/}
+HOMEPAGE=		https://github.com/martanne/vis/
 COMMENT=		Vim like text editor
 LICENSE=		isc
 

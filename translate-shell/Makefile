@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=soimort/translate-shell/}
+HOMEPAGE=	https://github.com/soimort/translate-shell/
 COMMENT=	Command-line translator
 LICENSE=	unlicense
 

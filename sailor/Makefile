@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NetBSDfr/sailor/archive/}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=NetBSDfr/sailor/}
+HOMEPAGE=	https://github.com/NetBSDfr/sailor/
 COMMENT=	Wannabe portable container system
 LICENSE=	modified-bsd
 

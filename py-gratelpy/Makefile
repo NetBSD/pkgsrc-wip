@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/GraTeLPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=G/GraTeLPy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/G/GraTeLPy/
 COMMENT=	Graph theoretic linear stability analysis
 LICENSE=	gnu-gpl-v3
 

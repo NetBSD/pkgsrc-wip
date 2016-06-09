@@ -11,7 +11,7 @@ USE_TOOLS+=	autoconf automake autoreconf perl gmake
 WRKSRC=		${WRKDIR}/opendylan
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=dylan-lang/opendylan/}
+HOMEPAGE=	https://github.com/dylan-lang/opendylan/
 COMMENT=	Multi-paradigm functional and OO programming language
 #LICENSE=	# TODO: (see mk/license.mk)
 GNU_CONFIGURE=	yes

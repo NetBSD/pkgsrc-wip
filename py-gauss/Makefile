@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygauss/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pygauss/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pygauss/
 COMMENT=	Python API for Analysis of Gaussian Quantum Chemical Compuations
 LICENSE=	gnu-gpl-v3
 

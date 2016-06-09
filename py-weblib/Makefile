@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/weblib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=w/weblib/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/w/weblib/
 COMMENT=	Set of tools for web scraping projects
 LICENSE=	mit
 

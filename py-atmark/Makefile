@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atmark/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=a/atmark/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/a/atmark/
 COMMENT=	Awk/Sed for humans
 LICENSE=	modified-bsd
 

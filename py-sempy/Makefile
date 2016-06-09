@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sempy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=s/sempy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/s/sempy/
 COMMENT=	Python implementation of the spectral element method
 LICENSE=	gnu-gpl-v2
 

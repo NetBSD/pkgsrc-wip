@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mave/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=m/mave/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/m/mave/
 COMMENT=	Library for Measurement and Verification
 LICENSE=	gnu-gpl-v3
 

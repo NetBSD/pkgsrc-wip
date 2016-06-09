@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=lxde/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=lxde/libqtxdg/}
+HOMEPAGE=	https://github.com/lxde/libqtxdg/
 COMMENT=	Qt implementation of freedesktop.org xdg specs
 LICENSE=	gnu-lgpl-v2.1
 

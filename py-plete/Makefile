@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyplete/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyplete/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pyplete/
 COMMENT=	Python,autocomplete,python autocomplete,python analizer
 LICENSE=	gnu-lgpl-v2.1
 

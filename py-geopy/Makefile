@@ -6,7 +6,7 @@ CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geopy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=g/geopy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/g/geopy/
 COMMENT=	Python Geocoding Toolbox
 LICENSE=	mit
 

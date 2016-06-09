@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/GraviPy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=G/GraviPy/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/G/GraviPy/
 COMMENT=	Tensor Calculus Package for General Relativity
 LICENSE=	2-clause-bsd
 

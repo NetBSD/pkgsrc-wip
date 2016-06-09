@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=warmcat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=warmcat/libwebsockets/}
+HOMEPAGE=	https://github.com/warmcat/libwebsockets/
 COMMENT=	Lightweight C library for websocket clients and servers
 # LGPL-2.1 with static link exceptions
 LICENSE=	gnu-lgpl-v2.1

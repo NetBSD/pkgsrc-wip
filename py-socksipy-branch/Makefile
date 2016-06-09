@@ -6,7 +6,7 @@ CATEGORIES=     net
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SocksiPy-branch/}
 
 MAINTAINER=     kethzer.dr@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=S/SocksiPy-branch/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/S/SocksiPy-branch/
 COMMENT=        Python SOCKS module
 LICENSE=        modified-bsd
 

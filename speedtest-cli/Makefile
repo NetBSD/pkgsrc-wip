@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=sivel/speedtest-cli/}
+HOMEPAGE=	https://github.com/sivel/speedtest-cli/
 COMMENT=	Command line interface for testing internet bandwidth
 LICENSE=	apache-2.0
 

@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmd2/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=c/cmd2/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/c/cmd2/
 COMMENT=	Extra features for standard library's cmd module
 LICENSE=	mit
 

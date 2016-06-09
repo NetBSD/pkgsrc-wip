@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	Tr@visPaul.me
-HOMEPAGE=	${MASTER_SITE_GITHUB:=antirez/sds/}
+HOMEPAGE=	https://github.com/antirez/sds/
 COMMENT=	Simple Dynamic Strings library for C
 LICENSE=	2-clause-bsd
 

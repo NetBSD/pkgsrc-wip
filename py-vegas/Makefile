@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vegas/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=v/vegas/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/v/vegas/
 COMMENT=	Tools for adaptive multidimensional Monte Carlo integration
 LICENSE=	gnu-gpl-v3
 

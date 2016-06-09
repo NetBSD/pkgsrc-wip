@@ -10,7 +10,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pawurb/delegate_it/}
+HOMEPAGE=	https://github.com/pawurb/delegate_it/
 COMMENT=	ActiveSupport like "delegate" method for non Rails projects
 LICENSE=	mit
 

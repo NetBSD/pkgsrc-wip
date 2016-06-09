@@ -6,7 +6,7 @@ DISTNAME=	obconf-qt-0.1.0
 CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=lxde/obconf-qt/}
+HOMEPAGE=	https://github.com/lxde/obconf-qt/
 COMMENT=	Qt based configurator of OpenBox window manager
 LICENSE=	gnu-gpl-v2
 

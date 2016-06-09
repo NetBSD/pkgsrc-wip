@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyon/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pyon/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pyon/
 COMMENT=	Lattice QCD library including statistical, fitting, plotting functions
 #LICENSE=	# TODO: (see mk/license.mk)
 

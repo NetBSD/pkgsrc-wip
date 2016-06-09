@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydecode/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pydecode/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pydecode/
 COMMENT=	Dynamic programming toolkit
 
 USE_LANGUAGES=	c c++

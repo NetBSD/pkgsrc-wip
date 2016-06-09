@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=H/Hamilton/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=H/Hamilton/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/H/Hamilton/
 COMMENT= Visualize and control mechanic systems through solving these systems
 LICENSE=	gnu-gpl-v3
 

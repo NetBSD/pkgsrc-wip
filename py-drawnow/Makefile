@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/drawnow/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=d/drawnow/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/d/drawnow/
 COMMENT=	MATLAB-like drawnow
 LICENSE=	mit
 

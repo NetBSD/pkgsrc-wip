@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=TimothyGu/libilbc/}
+HOMEPAGE=	https://github.com/TimothyGu/libilbc/
 COMMENT=	Packaged version of iLBC codec from the WebRTC project
 LICENSE=	modified-bsd
 

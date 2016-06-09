@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=segrax/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=segrax/openfodder/}
+HOMEPAGE=	https://github.com/segrax/openfodder/
 COMMENT=	Engine for the Cannon Fodder game
 LICENSE=	gnu-gpl-v3
 

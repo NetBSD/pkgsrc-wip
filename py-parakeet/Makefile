@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parakeet/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/parakeet/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/parakeet/
 COMMENT=	Runtime compiler for numerical Python
 LICENSE=	modified-bsd
 

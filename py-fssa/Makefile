@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fssa/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=f/fssa/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/f/fssa/
 COMMENT=	Package for finite-size scaling analysis at phase transitions
 LICENSE=	2-clause-bsd
 

@@ -6,7 +6,7 @@ CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytmux/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pytmux/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pytmux/
 COMMENT=	Simple wrapper for tmux
 LICENSE=	apache-2.0
 

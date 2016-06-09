@@ -3,7 +3,7 @@
 DISTNAME=	geoloc-${V}
 V=		1.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=devnexen/}
-HOMEPAGE=	${MASTER_SITE_GITHUB:=devnexen/geoloc/}
+HOMEPAGE=	https://github.com/devnexen/geoloc/
 GITHUB_TAG=	v1.0
 EXTRACT_SUFX=	.zip
 

@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hieroglyph/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=h/hieroglyph/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/h/hieroglyph/
 COMMENT=	Sphinx which builds HTML5 slides from ReStructured Text documents
 LICENSE=	2-clause-bsd
 

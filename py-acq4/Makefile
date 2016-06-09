@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/acq4/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=a/acq4/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/a/acq4/
 COMMENT=	Neurophysiology acquisition and analysis platform
 LICENSE = mit
 

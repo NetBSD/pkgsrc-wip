@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pystache/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pystache/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pystache/
 COMMENT=	Mustache for Python
 LICENSE=	mit
 

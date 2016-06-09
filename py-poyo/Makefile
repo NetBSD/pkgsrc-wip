@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=hackebrot/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	gde@llew.me
-HOMEPAGE=	${MASTER_SITE_GITHUB:=hackebrot/poyo/}
+HOMEPAGE=	https://github.com/hackebrot/poyo/
 COMMENT=	A YAML Parser for Python
 LICENSE=	mit
 

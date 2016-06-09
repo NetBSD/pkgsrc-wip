@@ -6,7 +6,7 @@ CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydcpf/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	${MASTER_SITE_PYPI:=p/pydcpf/}
+HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pydcpf/
 COMMENT=	Python device communications protocol framework
 LICENSE=	gnu-gpl-v3
 
