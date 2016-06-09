@@ -15,8 +15,8 @@ COMMENT=	Web interface tools which adhere to the UNIX philosophy
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake pkg-config
-# Disabled for now, as it is not stable yet.
-#MAKE_ENV+=	ENABLE_WEBKIT2=yes
+
+MAKE_JOBS_SAFE=	no
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=		yes
