@@ -23,11 +23,6 @@ REPLACE_FILES.python+=	test/DocTests.py test/LedgerHarness.py
 REPLACE_FILES.python+=	test/convert.py test/RegressTests.py test/convert.py
 REPLACE_FILES.python+=	tools/genuuid
 
-# A list of other things you need in order to configure and build using the Ledger acprep script, that I'm not sure where to put:
-# - python
-# - devel/editline?
-
-
 #These are the minimum libraries required for Ledger
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
