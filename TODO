@@ -5,7 +5,7 @@ Suggested package updates
 	o alive-2.0.2
 	o alt-ergo-0.99.1
 	o archimedes-2.0.1
-	o ardour-4.7
+	o ardour-5.0
 	o argouml-0.24
 	o atlas-3.11.20
 	o banshee-2.6.2
@@ -112,7 +112,7 @@ Suggested package updates
 	o rsyslog6-6.3.6
 	o rust-1.9
 	o rygel-0.26.0
-	o samhain-4.0.0
+	o samhain-4.1.3
 	o scantailor-0.9.11.1
 	o sflphoned-0.7.2
 	o sleuthkit-3.2.3
