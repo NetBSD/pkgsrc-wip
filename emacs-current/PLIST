@@ -2058,8 +2058,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/mail-source.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/mail-source.elc
 share/emacs/${PKGVERSION}/lisp/gnus/message.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/message.elc
-share/emacs/${PKGVERSION}/lisp/gnus/messcompat.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/messcompat.elc
 share/emacs/${PKGVERSION}/lisp/gnus/mm-archive.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/mm-archive.elc
 share/emacs/${PKGVERSION}/lisp/gnus/mm-bodies.el.gz
@@ -2942,6 +2940,7 @@ share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/messcompat.el
 share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/old-emacs-lock.el.gz
