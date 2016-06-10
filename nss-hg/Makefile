@@ -1,5 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2015/01/24 16:48:48 thomasklausner Exp $
 
+# necessary because hg-package.mk would override it
+PKGNAME=		nss-${NSS_RELEASE}
 DISTNAME=		nss-${NSS_RELEASE}
 # see lib/nss/nss.h
 NSS_RELEASE=		3.25.0

@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	nss
 .if !defined(NSS_BUILDLINK3_MK)
 NSS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.nss+=	nss-hg>=2014.09.01
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.25
 BUILDLINK_PKGSRCDIR.nss?=	../../wip/nss-hg
 
 BUILDLINK_LIBDIRS.nss+=		lib/nss
