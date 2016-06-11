@@ -2,6 +2,9 @@
 
 .include "../../wip/keystone/Makefile.common"
 
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES+=	python
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python bindings for keystone
 LICENSE=	modified-bsd
