@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix name clash with builtin 'round'.
+
 --- src/sim.h.orig	2000-08-20 13:29:44.000000000 +0000
 +++ src/sim.h
 @@ -89,7 +89,7 @@ extern int displayMode;

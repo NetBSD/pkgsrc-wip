@@ -11,7 +11,9 @@ COMMENT=		The official Core Wars simulator
 
 USE_TOOLS+=		gmake
 
-BUILD_MAKE_FLAGS=	-C src
+BUILD_MAKE_FLAGS+=	-C src
+BUILD_MAKE_FLAGS+=	CC=${CC}
+BUILD_MAKE_FLAGS+=	LIB="-Wl,-rpath,${BUILDLINK_PREFIX.libX11}/lib -lX11"
 
 INSTALLATION_DIRS+=	bin share/pmars share/pmars/config share/pmars/warriors ${PKGMANDIR}/man6
 

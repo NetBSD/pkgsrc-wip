@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix name clash with builtin 'round'.
+
 --- src/sim.c.orig	2000-12-25 00:49:08.000000000 +0000
 +++ src/sim.c
 @@ -177,7 +177,7 @@ ADDR_T AA_Value, AB_Value;

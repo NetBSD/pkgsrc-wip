@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix name clash with builtin 'round'.
+
 --- src/cdb.c.orig	2000-12-25 00:49:07.000000000 +0000
 +++ src/cdb.c
 @@ -1564,7 +1564,7 @@ subst_eval(inpStr, result)
