@@ -1302,7 +1302,6 @@ SUBDIR+=	hypatia
 SUBDIR+=	hyperrogue
 SUBDIR+=	hztool
 SUBDIR+=	i3-git
-SUBDIR+=	i3lock
 SUBDIR+=	i3status
 SUBDIR+=	iText
 SUBDIR+=	iTextXML

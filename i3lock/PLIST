@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/i3lock
-man/man1/i3lock.1
-share/examples/i3lock/pam.d/i3lock
