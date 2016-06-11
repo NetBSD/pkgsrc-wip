@@ -1,4 +1,0 @@
-- Tested only on NetBSD/amd64 7.0 and 7.99.25
-- Several hard coding for string gcc ar etc
-- ruby version handling is not properly setup
-- MAKE_JOBS= may not be in effect ?
