@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://knopwob.org/dunst/
-COMMENT=	A customizable and lightweight notification-daemon
+COMMENT=	Customizable and lightweight notification-daemon
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
