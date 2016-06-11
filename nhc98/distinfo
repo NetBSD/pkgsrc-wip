@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/07 20:58:49 bubuchka Exp $
-
-SHA1 (nhc98src-1.22.tar.gz) = a8adc8f22371998ee0657bc0e01058a57d876abc
-RMD160 (nhc98src-1.22.tar.gz) = 99a90d00f77f66938c817c813f11c3d0ea5bf244
-Size (nhc98src-1.22.tar.gz) = 29854160 bytes
