@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	uTox-0.9.0
+DISTNAME=	uTox-0.9.5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GrayHatter/}
 
@@ -15,6 +15,9 @@ LICENSE=	gnu-gpl-v3
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
+
+#TODO: remove the following line when filter_audio is packaged
+MAKE_FLAGS+=	FILTER_AUDIO=0
 
 .include "../../wip/toxcore/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
