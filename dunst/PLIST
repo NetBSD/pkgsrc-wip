@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/dunst
-man/man1/dunst.1
-share/dbus-1/services/org.knopwob.dunst.service
-share/dunst/dunstrc

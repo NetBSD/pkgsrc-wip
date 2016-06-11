@@ -561,7 +561,6 @@ SUBDIR+=	dune-common
 SUBDIR+=	dune-geometry
 SUBDIR+=	dune-istl
 SUBDIR+=	dunelegacy
-SUBDIR+=	dunst
 SUBDIR+=	duplo
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
