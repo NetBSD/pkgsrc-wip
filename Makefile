@@ -3851,7 +3851,6 @@ SUBDIR+=	stress
 SUBDIR+=	stress-ng
 SUBDIR+=	structure
 SUBDIR+=	stumpwm
-SUBDIR+=	sudo
 SUBDIR+=	suitesparse
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
