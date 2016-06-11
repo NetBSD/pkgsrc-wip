@@ -18,8 +18,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_TOOLS+=     gmake pkg-config gs:run
 
-FIND_PREFIX:= PSTOTEXT_DIR=pstotext
-.include "../../mk/find-prefix.mk"
 SUBST_CLASSES+=	pstotext
 SUBST_STAGE.pstotext=	do-configure
 SUBST_FILES.pstotext=	srcunx/gvxdll.c

@@ -18,8 +18,6 @@ WRKSRC=		${WRKDIR}/pink-pony
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-FIND_PREFIX:=	SCONSDIR=scons
-
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} ${SCONSDIR}/bin/scons prefix=${PREFIX}
 
@@ -33,5 +31,4 @@ do-install:
 .include "../../wip/audiere/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/devIL/buildlink3.mk"
-.include "../../mk/find-prefix.mk"
 .include "../../mk/bsd.pkg.mk"

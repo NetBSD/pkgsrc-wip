@@ -10,10 +10,6 @@ BUILDLINK_ABI_DEPENDS.gcc6snapshot+=	gcc6>=6.0
 BUILDLINK_PKGSRCDIR.gcc6snapshot=	../../wip/gcc6snapshot
 BUILDLINK_DEPMETHOD.gcc6snapshot?=	build
 
-FIND_PREFIX:=	BUILDLINK_PREFIX.gcc6snapshot=gcc6snapshot
-.include "../../mk/find-prefix.mk"
-BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc6snapshot}/gcc6snapshot
-
 BUILDLINK_FILES.gcc6snapshot=		#empty
 BUILDLINK_AUTO_VARS.gcc6snapshot=	no
 

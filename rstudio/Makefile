@@ -28,11 +28,6 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DRSTUDIO_TARGET=Desktop
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
-FIND_PREFIX:=	ANTDIR=apache-ant
-FIND_PREFIX+=	GWTDIR=gwt
-FIND_PREFIX+=	GINDIR=gin
-.include "../../mk/find-prefix.mk"
-
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fix pathes
