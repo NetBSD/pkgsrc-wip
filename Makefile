@@ -1448,7 +1448,6 @@ SUBDIR+=	kde5
 SUBDIR+=	kdecoration
 SUBDIR+=	kdelibs4support
 SUBDIR+=	keepassx-git
-SUBDIR+=	keystone
 SUBDIR+=	kgamma5
 SUBDIR+=	kget
 SUBDIR+=	kgrab
