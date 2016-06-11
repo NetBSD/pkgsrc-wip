@@ -17,13 +17,9 @@ USE_LANGUAGES=	c99
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
 MAKE_FLAGS+=	EGDIR=${EGDIR}
-
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 
 EGDIR=	${PREFIX}/share/examples/${PKGBASE}
-
-post-install:
-	cd ${WRKSRC} && ${INSTALL_MAN} i3lock.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
