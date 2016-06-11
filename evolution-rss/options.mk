@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-gecko
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebkit )
-.   include "../../www/webkit1-gtk/buildlink3.mk"
+.   include "../../www/webkit24-gtk/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webkit
 .else
 CONFIGURE_ARGS+=	--disable-webkit

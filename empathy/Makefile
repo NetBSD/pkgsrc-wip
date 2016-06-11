@@ -67,7 +67,6 @@ BUILDLINK_API_DEPENDS.gtk3+=		gtk3+>=3.9.4
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 # notyet
-#.include "../../www/webkit1-gtk/buildlink3.mk"
 #.include "../../graphics/clutter-mx/buildlink3.mk"
 #.include "../../chat/telepathy-logger/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"

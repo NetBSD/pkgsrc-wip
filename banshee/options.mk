@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-mtp
 
 .if !empty(PKG_OPTIONS:Mweb)
 PLIST.web=		yes
-.include "../../www/webkit1-gtk/buildlink3.mk"
+.include "../../www/webkit24-gtk/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mboo)
