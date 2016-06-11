@@ -1,3 +1,0 @@
- - make a proper buildlink3.mk
- - make the package compile shared libraries
- - perhaps fix a few errors that occur during configure (something about eval and a syntax error)
