@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (QLC+-4.10.4.tar.gz) = 9d574cb2693da3b45bec4be4b4d3c9360473cc67
+RMD160 (QLC+-4.10.4.tar.gz) = d5167862f0b5506a6f5abbb8acf7eeb9815c262e
+SHA512 (QLC+-4.10.4.tar.gz) = 1420402cff1101f70fe6a325a3903ea5e383996e0ca3f1817e163fb6cdb6e804f8f17e1667d0aaea916313047052c1b7d61ed7b47309b761f42d57632b85c35d
+Size (QLC+-4.10.4.tar.gz) = 9208262 bytes
+SHA1 (patch-create-rpm.sh) = 533adbab9d5691e4b2d3ed72a5cbf908a7da889b
