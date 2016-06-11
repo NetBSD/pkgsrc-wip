@@ -12,4 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD=all
+
 .include "../../mk/bsd.pkg.mk"

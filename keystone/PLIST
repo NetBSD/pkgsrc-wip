@@ -9,4 +9,5 @@ include/keystone/ppc.h
 include/keystone/sparc.h
 include/keystone/systemz.h
 include/keystone/x86.h
-lib/libkeystone.a
+lib/libkeystone.so
+lib/libkeystone.so.0
