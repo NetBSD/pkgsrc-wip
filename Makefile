@@ -2519,7 +2519,6 @@ SUBDIR+=	plod
 SUBDIR+=	plplot
 SUBDIR+=	plugger
 SUBDIR+=	pmacct
-SUBDIR+=	pmars
 SUBDIR+=	pmk
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
