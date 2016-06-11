@@ -2,12 +2,11 @@
 #
 
 DISTNAME=	i3lock-2.7
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://i3wm.org/i3lock/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pallegra@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://i3wm.org/i3lock/
 COMMENT=	Slightly improved screen locker based on slock
 LICENSE=	modified-bsd
@@ -17,16 +16,14 @@ USE_LANGUAGES=	c99
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
+MAKE_FLAGS+=	EGDIR=${EGDIR}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/${PKGBASE} ${EGDIR}
-CONF_FILES+=		${EGDIR}/pam.d/i3lock /etc/pam.d/i3lock
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 EGDIR=	${PREFIX}/share/examples/${PKGBASE}
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/i3lock.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/pam.d ${DESTDIR}${EGDIR}
+	cd ${WRKSRC} && ${INSTALL_MAN} i3lock.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

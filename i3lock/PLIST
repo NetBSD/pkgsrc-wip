@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/08 14:38:42 nros Exp $
+@comment $NetBSD$
 bin/i3lock
 man/man1/i3lock.1
-share/doc/i3lock/LICENSE
 share/examples/i3lock/pam.d/i3lock

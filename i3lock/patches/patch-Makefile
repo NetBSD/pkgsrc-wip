@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- Makefile.orig	2015-05-20 07:17:06.000000000 +0000
++++ Makefile
+@@ -37,9 +37,9 @@ clean:
+ 
+ install: all
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)/bin
+-	$(INSTALL) -d $(DESTDIR)$(SYSCONFDIR)/pam.d
++	$(INSTALL) -d $(DESTDIR)$(EGDIR)/pam.d
+ 	$(INSTALL) -m 755 i3lock $(DESTDIR)$(PREFIX)/bin/i3lock
+-	$(INSTALL) -m 644 i3lock.pam $(DESTDIR)$(SYSCONFDIR)/pam.d/i3lock
++	$(INSTALL) -m 644 i3lock.pam $(DESTDIR)$(EGDIR)/pam.d/i3lock
+ 
+ uninstall:
+ 	rm -f $(DESTDIR)$(PREFIX)/bin/i3lock
