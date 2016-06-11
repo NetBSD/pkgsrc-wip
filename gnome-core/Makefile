@@ -95,7 +95,7 @@ DEPENDS+=	libgxps-[0-9]*:../../print/libgxps
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 DEPENDS+=	libpeas-[0-9]*:../../devel/libpeas
 DEPENDS+=	libsecret-[0-9]*:../../security/libsecret
-# TODO libsigcplusplus
+DEPENDS+=	libsigc++-[0-9]*:../../devel/libsigc++
 DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 DEPENDS+=	libwnck-[0-9]*:../../devel/libwnck
 # TODO libzapojit
