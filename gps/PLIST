@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
-bin/gps
-share/doc/gps/features.html
-share/doc/gps/links.html
-share/doc/gps/usage.html
-share/gps/AUTHORS
-share/gps/COPYING
-share/gps/ChangeLog
