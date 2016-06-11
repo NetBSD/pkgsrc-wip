@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install example configuration into EGDIR.
+
 --- Makefile.orig	2015-05-20 07:17:06.000000000 +0000
 +++ Makefile
 @@ -37,9 +37,9 @@ clean:
