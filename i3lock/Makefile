@@ -20,6 +20,8 @@ MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 
 EGDIR=	${PREFIX}/share/examples/${PKGBASE}
 
+MESSAGE_SUBST+=	EGDIR=${EGDIR}
+
 .include "../../devel/libev/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
