@@ -1,0 +1,16 @@
+# $NetBSD$
+
+DISTNAME=	Function-Parameters-1.0704
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	devel perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MAUKE/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/Function-Parameters/
+COMMENT=	Perl5 subroutine definitions with parameter lists
+LICENSE=	${PERL5_LICENSE}
+
+PERL5_PACKLIST=	auto/Function/Parameters/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
