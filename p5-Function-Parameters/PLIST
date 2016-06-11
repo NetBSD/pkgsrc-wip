@@ -1,7 +1,0 @@
-@comment $NetBSD$
-${PERL5_SUB_INSTALLVENDORARCH}/Function/Parameters.pm
-${PERL5_SUB_INSTALLVENDORARCH}/Function/Parameters/Info.pm
-${PERL5_SUB_INSTALLVENDORARCH}/auto/Function/Parameters/.packlist
-${PERL5_SUB_INSTALLVENDORARCH}/auto/Function/Parameters/Parameters.so
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/Function::Parameters.3
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/Function::Parameters::Info.3
