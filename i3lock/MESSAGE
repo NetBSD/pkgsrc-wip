@@ -1,7 +1,7 @@
 ===========================================================================
 $NetBSD: MESSAGE,v 1.1.1.1 2006/05/01 07:22:29 jmmv Exp $
 
-You need to copy the cherokee PAM configuration file to your PAM
+You need to copy the i3lock PAM configuration file to your PAM
 configuration directory (typically /etc/pam.d).  You can find a sample
 file in:
 
