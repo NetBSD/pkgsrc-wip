@@ -16,10 +16,8 @@ LICENSE=	gnu-gpl-v3
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 
-#TODO: remove the following line when filter_audio is packaged
-MAKE_FLAGS+=	FILTER_AUDIO=0
-
 .include "../../wip/toxcore/buildlink3.mk"
+.include "../../wip/filter_audio/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../graphics/libv4l/buildlink3.mk"
