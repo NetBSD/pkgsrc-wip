@@ -4155,7 +4155,6 @@ SUBDIR+=	wmname
 SUBDIR+=	wmnetload
 SUBDIR+=	wmsupermon
 SUBDIR+=	wmswallow
-SUBDIR+=	wmutils-core
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
 SUBDIR+=	wolf4SDL
