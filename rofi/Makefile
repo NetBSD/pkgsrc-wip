@@ -10,9 +10,11 @@ HOMEPAGE=	https://davedavenport.github.io/rofi/
 COMMENT=	Window switcher, run dialog and dmenu replacement
 LICENSE=	x11
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config bash
 
 GNU_CONFIGURE=	yes
+
+REPLACE_BASH+=	script/rofi-sensible-terminal
 
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
