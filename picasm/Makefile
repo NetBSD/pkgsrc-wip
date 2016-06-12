@@ -15,7 +15,9 @@ LICENSE=	mit
 
 BUILD_TARGET=		picasm
 BUILD_MAKE_FLAGS=	CC=${CC:Q}
-BUILD_MAKE_FLAGS=	DEFS="-DUILTIN_INCLUDE1=${PREFIX}/share/picasm/include"
+# We need to construct -DBUILTIN_INCLUDE1=\"/usr/pkg/share/picasm/include\"
+# in order to process symbol correctly to the preprocessor
+BUILD_MAKE_FLAGS=	DEFS=-DBUILTIN_INCLUDE1=\\\"${PREFIX}/share/picasm/include\\\"
 
 INSTALLATION_DIRS=	bin share/examples/picasm share/doc/picasm \
 			share/picasm/include
