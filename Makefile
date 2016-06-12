@@ -728,6 +728,7 @@ SUBDIR+=	filelight
 SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	filevercmp
+SUBDIR+=	filter_audio
 SUBDIR+=	fio
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
