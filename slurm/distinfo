@@ -1,13 +1,8 @@
 $NetBSD: distinfo,v 1.3 2015/04/29 12:40:50 outpaddling Exp $
 
-SHA1 (slurm-15.08.11.tar.bz2) = 1a69b8e44c3c40ee5403874e3c3a66fc476f62c8
-RMD160 (slurm-15.08.11.tar.bz2) = 73100156c355ac2a05a70efcf00b949276438b77
-SHA512 (slurm-15.08.11.tar.bz2) = f152893fc1c8f54120d886c81d1651545c79cc67606608b871d2c5a7e6c396deb59a7573a61e2a73fd9b9742e3ac5d53ab4db69b8b1e6a533a26b02e5e733b33
-Size (slurm-15.08.11.tar.bz2) = 5870156 bytes
-SHA1 (patch-etc_init.d.slurm.in) = beaedd5385b4aad04583d2bc5a23557519f74ec5
-SHA1 (patch-src_common_callerid.c) = a6d743542f2c46d17a94b2473be703be41c24664
-SHA1 (patch-src_common_gres.c) = 9f8ba8fd5a8c4000da5bca67ee7d3ff529e37e99
-SHA1 (patch-src_plugins_burst__buffer_common_burst__buffer__common.c) = b21a852722c26b955ae51d8615c9d22304650d32
-SHA1 (patch-src_plugins_power_common_power__common.c) = 7527e0655efe6ea0243cb3a9ff21814002bed5d9
-SHA1 (patch-src_plugins_switch_generic_switch__generic.c) = acf9bcc6f8a787770cd8553de520edef5bdbda4a
-SHA1 (patch-src_slurmd_slurmstepd_task.c) = 7948c76ce65b0e5211486d2e7b1901664c1f7016
+SHA1 (slurm-15.08.12.tar.bz2) = 491b48a0395616d0cbcc8672f84285e5ee3a7e7f
+RMD160 (slurm-15.08.12.tar.bz2) = 6e3f336b947dd0936e8c23c6b4f180fc66899af3
+SHA512 (slurm-15.08.12.tar.bz2) = f9ff1654b90d5e6be20339eb68c503979286baffff229053d0a1d63e71c625ca85dcbc51dd79ccd1617d3644390fc66e9619fada8f7201388d2a312c29d3a7d1
+Size (slurm-15.08.12.tar.bz2) = 5805740 bytes
+SHA1 (patch-etc_init.d.slurm.in) = df8e6d578e5b525fccdb5468f875dafb95fc2f86
+SHA1 (patch-src_common_gres.c) = 913be598274884b453922e18cdb88eb43a2ef13f
