@@ -16,6 +16,8 @@ GNU_CONFIGURE=	yes
 
 REPLACE_BASH+=	script/rofi-sensible-terminal
 
+.include "../../wip/rofi/options.mk"
+
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
