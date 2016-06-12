@@ -2,10 +2,9 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rofi
 
-PKG_SUPPORTED_OPTIONS+=	i3
+PKG_SUPPORTED_OPTIONS=	i3
 PKG_SUGGESTED_OPTIONS=
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mi3)
