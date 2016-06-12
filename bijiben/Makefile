@@ -17,7 +17,7 @@ USE_TOOLS+=		intltool pkg-config
 
 .include "../../wip/evolution-data-server/buildlink3.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"
-.include "../../www/webkit24-gtk3/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../wip/gnome-tracker/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
