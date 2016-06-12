@@ -1,28 +1,38 @@
 # $NetBSD: Makefile,v 1.11 2012/11/25 23:32:29 othyro Exp $
 #
 
-DISTNAME=	picasm105
-PKGNAME=	picasm-1.05
+DISTNAME=	picasm114
+PKGNAME=	${DISTNAME:S/picasm/picasm-/}
 CATEGORIES=	devel
-MASTER_SITES=	http://hyvatti.iki.fi/~jaakko/pic/
+MASTER_SITES=	http://nsa.kpu-m.ac.jp/gijutu/kousaku/man-pic/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hyvatti.iki.fi/~jaakko/pic/
+# Mirror of the latest release notes
+HOMEPAGE=	http://nsa.kpu-m.ac.jp/gijutu/kousaku/man-pic/picasm.html
 COMMENT=	Assembler for Microchip PIC16Cxx microcontrollers
+LICENSE=	mit
 
-MAKE_FILE=	makefile.uni
-BUILD_TARGET=	picasm
-WRKSRC=		${WRKDIR}
+BUILD_TARGET=		picasm
+BUILD_MAKE_FLAGS=	CC=${CC:Q}
+BUILD_MAKE_FLAGS=	DEFS="-DUILTIN_INCLUDE1=${PREFIX}/share/picasm/include"
 
-USE_TOOLS+=	gmake
-
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/picasm share/doc/picasm \
+			share/picasm/include
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/picasm ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/picasm/
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/picasm/
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/picasm
-	${INSTALL_DATA} ${WRKSRC}/picasm.doc ${DESTDIR}${PREFIX}/share/doc/picasm
+	${INSTALL_PROGRAM} ${WRKSRC}/picasm ${DESTDIR}${PREFIX}/bin
+
+.for file in example.asm morse.asm morse.i pic16f84.i picmac.i
+	${INSTALL_DATA} ${WRKSRC}/examples/${file} \
+		${DESTDIR}${PREFIX}/share/examples/picasm
+.endfor
+
+	${INSTALL_DATA} ${WRKSRC}/device_definitions/*.i \
+		${DESTDIR}${PREFIX}/share/picasm/include
+
+.for file in picasm.txt  picasm.html
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/share/doc/picasm
+.endfor
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,1 +1,5 @@
-Assembler for Microchip PIC16Cxx microcontrollers.
+An assembler for the the Microchip PIC family of microcontrollers.
+
+Supports the majority of the Microchip PIC family.
+
+Uses Microchip (not Parallax) syntax.
