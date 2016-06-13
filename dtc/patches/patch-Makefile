@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- Makefile.orig	2014-11-12 03:29:16.000000000 +0000
++++ Makefile
+@@ -24,8 +24,8 @@ BISON = bison
+ LEX = flex
+ 
+ INSTALL = /usr/bin/install
+-DESTDIR =
+-PREFIX = $(HOME)
++#DESTDIR =
++#PREFIX = $(HOME)
+ BINDIR = $(PREFIX)/bin
+ LIBDIR = $(PREFIX)/lib
+ INCLUDEDIR = $(PREFIX)/include
