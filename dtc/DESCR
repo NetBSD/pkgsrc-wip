@@ -5,4 +5,3 @@ binary format.
 Both DTC and LIBFDT are made available under the terms of the GNU GPLv2.
 LIBFDT also available under the terms of the BSD license. For more information
 see README.license in the source tree.
-

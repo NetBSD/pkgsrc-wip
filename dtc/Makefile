@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	dtc-1.4.1
-CATEGORIES=	wip
+CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.kernel.org/pub/software/utils/dtc/
 
 MAINTAINER=	joe.davis512@gmail.com
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	gmake bison
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
 
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	DESTDIR=${DESTDIR}
