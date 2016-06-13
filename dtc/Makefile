@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	gmake bison
 
-.include "../../mk/bsd.pkg.mk"
-
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+
+.include "../../mk/bsd.pkg.mk"
