@@ -17,6 +17,8 @@ NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c
 
+.include "options.mk"
+
 .include "../../wip/toxcore/buildlink3.mk"
 
 .include "../../audio/openal-soft/buildlink3.mk"
