@@ -17,7 +17,7 @@ META_PACKAGE=   yes
 # Set of packages from http://downloads.lxqt.org/lxqt/0.9.0/
 DEPENDS+=       liblxqt>=0.9.0:../../wip/liblxqt
 DEPENDS+=       lximage-qt>=0.4.0:../../wip/lximage-qt
-DEPENDS+=       lxmenu-data>=0.1.4:../../wip/lxmenu-data
+DEPENDS+=       lxmenu-data>=0.1.4:../../sysutils/lxmenu-data
 DEPENDS+=       lxqt-about>=0.9.0:../../wip/lxqt-about
 DEPENDS+=       lxqt-admin>=0.9.0:../../wip/lxqt-admin
 DEPENDS+=       lxqt-common>=0.9.1:../../wip/lxqt-common
