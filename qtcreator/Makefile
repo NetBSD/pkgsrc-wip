@@ -12,8 +12,9 @@ COMMENT=	Cross-platform IDE for Qt and C++
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 
-INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}/%{PREFIX}
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}/${PREFIX}
 INSTALL_TARGET=		install install_inst_qch_docs
 
 do-configure:
