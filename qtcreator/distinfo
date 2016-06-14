@@ -1,25 +1,8 @@
 $NetBSD: distinfo,v 1.6 2012/11/26 01:05:10 fwsf Exp $
 
-SHA1 (qt-creator-2.5.2-src.tar.gz) = 703bcb2306abc41c7080726e1bde1c6ae3b74ebb
-RMD160 (qt-creator-2.5.2-src.tar.gz) = 4cbf69a0d59c821b775da39d3075576e020fb6d8
-Size (qt-creator-2.5.2-src.tar.gz) = 22523588 bytes
-SHA1 (patch-doc_doc.pri) = 11c4204a8632bd4357ff6f58a88192733f1d03ef
-SHA1 (patch-lib_qtcreator_qtcomponents_qtcomponents.pro) = a54209a0bbfd5b3ec04e60f3c55a4de8099d77a5
-SHA1 (patch-share_qtcreator_static.pro) = 21877a6c188ab430b7c6b610f9d6b660b9069156
-SHA1 (patch-share_qtcreator_translations_translations.pro) = 725902cf3b2f185de162ca54129df2edee280147
-SHA1 (patch-src_app_app.pro) = c4c2c6c5d814d9ea6621b15699c6b79935bccca4
-SHA1 (patch-src_libs_3rdparty_botan_src_src.pro) = a4214d580b427416421c63634b9aeeccfbc339da
-SHA1 (patch-src_libs_extensionsystem_extensionsystem.pro) = c7987035c14517f5b24cee6692d06d9ac7e0f275
-SHA1 (patch-src_libs_glsl_glsllexer.cpp) = 5b0f0200f2efcebbce0370330454811813035c84
-SHA1 (patch-src_libs_glsl_glslparsertable__p.h) = 258258679f56cebd646000b653535eeb1cf3b0ae
-SHA1 (patch-src_libs_qtcomponents_styleitem_styleitem.pro) = 19dfcb79e8ab81c2aaeb5dacf1dcb0fef384c021
-SHA1 (patch-src_libs_utils_process__stub.pro) = 6cccb475cebf7afc1310c367f9812b91a09b68c0
-SHA1 (patch-src_plugins_coreplugin_coreplugin.pro) = 6f31c48270b75fd64ec0cbb9b1ca31110bf500c7
-SHA1 (patch-src_plugins_debugger_gdb_gdbengine.cpp) = fd7dd253fca66886c430ec3a136cd36a327d1f84
-SHA1 (patch-src_plugins_genericprojectmanager_genericmakestep.cpp) = ec39b9ab739889141fbd7972e0b23fbb42d12d3a
-SHA1 (patch-src_plugins_glsleditor_glslhighlighter.cpp) = f7b116ac34081b6a900da7186479d3e15e1467bd
-SHA1 (patch-src_plugins_qt4projectmanager_qt4buildconfiguration.cpp) = 588d7af0359cff029f62d85cc28830dd0e91b4a3
-SHA1 (patch-src_qtcreatorlibrary.pri) = 6d54bb15650282111875a3a974ff5af140d01dbf
-SHA1 (patch-src_qtcreatorplugin.pri) = 7bd51003819ee63dbe4b53d46797c3973fc2bca4
-SHA1 (patch-src_tools_qmlprofilertool_qmlprofilertool.pro) = 1ec881fb804bd172262ae4794a5070b00ff745c7
-SHA1 (patch-src_tools_qtpromaker_qtpromaker.pro) = 8d0d828b8b38f1a89abb3a6efc2a96a0999faf6e
+SHA1 (qt-creator-opensource-src-4.0.1.zip) = 2ab795222850cf9735661c02ac7ee27abcbdb1ef
+RMD160 (qt-creator-opensource-src-4.0.1.zip) = 636d52578f0a7c9f5b32de1e78dfc09fe8a5c400
+SHA512 (qt-creator-opensource-src-4.0.1.zip) = 8685641b225186c121d1ad0e77817a0dd1c018240e9bfd095f66650eadd007711c291e79c01f2d307b65e2dd95a2408c72dd943a2484669d42da006a169b4045
+Size (qt-creator-opensource-src-4.0.1.zip) = 30243285 bytes
+SHA1 (patch-src_plugins_projectexplorer_abi.cpp) = 61f416b01fad576ed880bfbcc98647177462e3b6
+SHA1 (patch-src_shared_qbs_src_lib_corelib_tools_processutils.cpp) = 9a500ceedaf04b697dc8b709ba14bbd890c70923
