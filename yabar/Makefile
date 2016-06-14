@@ -17,7 +17,7 @@ WRKSRC=	${WRKDIR}/yabar-0.4.0
 
 USE_TOOLS+=	gmake
 
-MAKE_FLAGS+=	MANPREFIX=${PREFIX}/man
+MAKE_FLAGS+=	MANPREFIX=${PKGMANDIR}
 
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
