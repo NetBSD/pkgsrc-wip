@@ -24,6 +24,18 @@ PY_PATCHPLIST=		yes
 MAKE_ENV+=	PYTHON=${PYTHONBIN}
 MAKE_ENV+=	MANDIR=${DESTDIR}/${PREFIX}/${PKGMANDIR}
 
+SUBST_CLASSES+=			fix-share
+SUBST_STAGE.fix-share=		pre-configure
+SUBST_MESSAGE.fix-share=	Fixing absolute paths to /usr/share
+SUBST_FILES.fix-share=		bin/uzbl-tabbed uzbl/plugins/__init__.py
+SUBST_SED.fix-share=		-e 's,/usr/share,${PREFIX}/share,g'
+
+SUBST_CLASSES+=			fix-local-share
+SUBST_STAGE.fix-local-share=	pre-configure
+SUBST_MESSAGE.fix-local-share=	Fixing absolute paths to /usr/local/share
+SUBST_FILES.fix-local-share=	bin/uzbl-browser.in src/uzbl-core.c
+SUBST_SED.fix-local-share=	-e 's,/usr/local/share,${PREFIX}/share,g'
+
 REPLACE_PYTHON+=	bin/uzbl-tabbed
 REPLACE_PYTHON+=	examples/data/scripts/auth.py
 REPLACE_PYTHON+=	examples/data/scripts/uzblcat
