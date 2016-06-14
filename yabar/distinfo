@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (yabar/0.4.0.tar.gz) = 2155b7a538681d800ae873a623eb893e7d1dcebd
+RMD160 (yabar/0.4.0.tar.gz) = b442b69232dbaaa95f84b0ec40ed4e18dcbc4644
+SHA512 (yabar/0.4.0.tar.gz) = 52e9a41aa1d0214b7b56f9087f234de825970914f340c94ee6a9150ca71c28331006db63b20db7138e774558e59d72c3f3beaa745ed28e9cb0ea08945946ee04
+Size (yabar/0.4.0.tar.gz) = 878925 bytes
+SHA1 (patch-Makefile) = e813e857421d4710ee1b5a5019fdbaa9962cfa6d
+SHA1 (patch-src_intern__blks_ya__intern.c) = 337c5238b25bb0e990dbb562ed3a164574c21c69

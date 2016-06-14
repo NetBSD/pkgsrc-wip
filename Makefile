@@ -4262,6 +4262,7 @@ SUBDIR+=	xtrlock
 SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	xxdiff
+SUBDIR+=	yabar
 SUBDIR+=	yafray
 SUBDIR+=	yakuake
 SUBDIR+=	yaml-cpp
