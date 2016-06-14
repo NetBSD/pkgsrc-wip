@@ -13,10 +13,46 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS=	bash
+USE_TOOLS=	bash perl
 
-REPLACE_BASH+=		share/qtcreator/qbs/share/qbs/modules/bundle/update-specs.sh
+REPLACE_BASH+=	doc/api/examples/aggregation/test.sh
+REPLACE_BASH+=	share/qtcreator/scripts/openTerminal.command
+REPLACE_BASH+=	src/app/winicons/createicons.sh
+REPLACE_BASH+=	src/libs/qmljs/parser/gen-parser.sh
+REPLACE_BASH+=	src/shared/qbs/tests/auto/blackbox/testdata/badInterpreter/script-ok
+REPLACE_BASH+=	src/shared/qbs/tests/manual/run-qbs-tests.sh
+REPLACE_BASH+=	src/shared/qbs/share/qbs/modules/bundle/update-specs.sh
+REPLACE_BASH+=	tests/manual/distribution/elflint
+REPLACE_BASH+=	scripts/createSourcePackages.sh
+REPLACE_BASH+=	scripts/deployqtHelper_mac.sh
+REPLACE_BASH+=	scripts/makedmg.sh
+
+REPLACE_PYTHON+=	src/libs/qmljs/parser/changeLicense.py
 REPLACE_PYTHON+=	share/qtcreator/templates/wizards/files/python/file.py
+REPLACE_PYTHON+=	src/libs/3rdparty/botan/configure.py
+REPLACE_PYTHON+=	src/tools/icons/export.py
+REPLACE_PYTHON+=	tests/system/tools/findUnusedObjects.py
+REPLACE_PYTHON+=	tests/system/tools/objectsToTable.py
+REPLACE_PYTHON+=	scripts/checkInstalledFiles.py
+REPLACE_PYTHON+=	scripts/dependencyinfo.py
+REPLACE_PYTHON+=	scripts/deployqt.py
+REPLACE_PYTHON+=	scripts/packageIfw.py
+REPLACE_PYTHON+=	scripts/packagePlugins.py
+REPLACE_PYTHON+=	scripts/uichanges.py
+
+REPLACE_PERL+=	doc/fixnavi.pl
+REPLACE_PERL+=	share/qtcreator/translations/check-ts.pl
+REPLACE_PERL+=	src/shared/qbs/doc/fixnavi.pl
+REPLACE_PERL+=	tests/auto/qml/qmldesigner/bauhaustests/run_test.pl
+REPLACE_PERL+=	scripts/gcc2tasks.pl
+REPLACE_PERL+=	scripts/hasCopyright.pl
+REPLACE_PERL+=	scripts/krazy2tasks.pl
+REPLACE_PERL+=	scripts/msvc2tasks.pl
+REPLACE_PERL+=	scripts/mytasks.pl
+REPLACE_PERL+=	scripts/purify2tasks.pl
+REPLACE_PERL+=	scripts/qdoc2tasks.pl
+REPLACE_PERL+=	scripts/test2tasks.pl
+REPLACE_PERL+=	scripts/updateCopyright.pl
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}/${PREFIX}
 INSTALL_TARGET=		install install_inst_qch_docs
