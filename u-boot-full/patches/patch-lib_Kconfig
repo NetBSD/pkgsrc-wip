@@ -1,0 +1,13 @@
+$NetBSD$
+This forces U-Boot to use its own copy of libgcc rather than relying on it being 
+available from the host toolchain.
+--- lib/Kconfig.orig	2016-06-13 15:51:19.000000000 +0000
++++ lib/Kconfig
+@@ -13,6 +13,7 @@ config HAVE_PRIVATE_LIBGCC
+ 
+ config USE_PRIVATE_LIBGCC
+ 	bool "Use private libgcc"
++	default y
+ 	depends on HAVE_PRIVATE_LIBGCC
+ 	help
+ 	  This option allows you to use the built-in libgcc implementation

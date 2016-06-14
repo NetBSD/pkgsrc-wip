@@ -1,0 +1,7 @@
+U-Boot - The Universal Bootloader
+
+This package builds U-Boot and its associated tools for the platform
+indicated by the mk.conf variable UBOOT_TARGET.
+
+The loader itself still requires manual installation using target dependent
+files from the work tree, even after the installation of this package.
