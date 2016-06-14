@@ -9,11 +9,11 @@ HOMEPAGE=	https://github.com/geommer/yabar/
 COMMENT=	Modern and lightweight status bar for X window managers
 LICENSE=	mit
 
-WRKSRC=	${WRKDIR}/yabar-0.4.0
-
 USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
+# Package tries to run git to detect its version
+MAKE_FLAGS+=	VERSION=${PKGVERSION_NOREV}
 
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
