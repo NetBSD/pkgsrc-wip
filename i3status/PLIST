@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/08 14:33:19 nros Exp $
-bin/i3status
-man/man1/i3status.1
-share/doc/i3status/LICENSE
-share/examples/i3status/i3status.conf
