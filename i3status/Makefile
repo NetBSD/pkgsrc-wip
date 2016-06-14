@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	i3status-2.10
-CATEGORIES=	sysutils wm
+CATEGORIES=	sysutils
 MASTER_SITES=	http://i3wm.org/i3status/
 EXTRACT_SUFX=	.tar.bz2
 
