@@ -43,6 +43,12 @@ SUBST_MESSAGE.conf=	Change src/i3.mk to install conf files in share/examples
 SUBST_FILES.conf=	src/i3.mk
 SUBST_SED.conf=		-e s,$$\(SYSCONFDIR\),$$\(PREFIX\)/share/examples,g
 
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-install
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		i3-dmenu-desktop
+SUBST_SED.fix-paths+=		-e 's,/usr/local/share,${PREFIX}/share,g'
+
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 post-install:
