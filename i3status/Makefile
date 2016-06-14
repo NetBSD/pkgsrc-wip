@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://i3wm.org/i3status/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pallegra@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://i3wm.org/i3status/
 COMMENT=	Small program for generating a status bar
 LICENSE=	modified-bsd
