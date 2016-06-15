@@ -11,6 +11,5 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../wip/pcmanfm-qt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
