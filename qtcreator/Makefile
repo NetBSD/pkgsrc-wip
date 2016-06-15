@@ -7,13 +7,13 @@ MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NO
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.qt.io
+HOMEPAGE=	http://www.qt.io/
 COMMENT=	Cross-platform IDE for Qt and C++
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS=	bash perl
+USE_TOOLS+=	bash perl
 
 REPLACE_BASH+=	doc/api/examples/aggregation/test.sh
 REPLACE_BASH+=	share/qtcreator/scripts/openTerminal.command
@@ -57,9 +57,13 @@ REPLACE_PERL+=	scripts/updateCopyright.pl
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}/${PREFIX}
 INSTALL_TARGET=		install install_inst_qch_docs
 
-do-configure:
-	${RUN} cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake -o Makefile
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${QTDIR}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
+do-configure:
+	${RUN} cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake QMAKE_LFLAGS=${LDFLAGS:Q} -o Makefile
+
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
