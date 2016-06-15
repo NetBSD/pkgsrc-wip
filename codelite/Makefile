@@ -15,20 +15,25 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config bash
 
 CMAKE_ARGS+=		-DPREFIX:STRING=${PREFIX}
-#CMAKE_ARGS.FreeBSD+=	-DIS_FREEBSD:STRING=1
-#CMAKE_ARGS.NetBSD+=	-DIS_NETBSD:STRING=1
-#CMAKE_ARGS+=		-DIS_NETBSD:BOOL=ON
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Enable NetBSD
-SUBST_FILES.fix-paths=		CMakeLists.txt
-SUBST_SED.fix-paths+=		-e 's,IS_NETBSD 0,IS_NETBSD 1,g'
+# For some reason CMAKE_ARGS.NetBSD+=-DIS_NETBSD:STRING=1 doesn't work for me
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=			ena-netbsd
+SUBST_STAGE.ena-netbsd=		pre-configure
+SUBST_MESSAGE.ena-netbsd=	Enable NetBSD
+SUBST_FILES.ena-netbsd=		CMakeLists.txt
+SUBST_SED.ena-netbsd+=		-e 's,IS_NETBSD 0,IS_NETBSD 1,g'
+.endif
 
 SUBST_CLASSES+=			fix-bash
 SUBST_STAGE.fix-bash=		pre-configure
 SUBST_MESSAGE.fix-bash=		Fix bash path
-SUBST_FILES.fix-bash=		CodeLite/TerminalEmulator.cpp CodeLite/fileextmanager.cpp Runtime/codelite_xterm cmake/Modules/OSXInstall.cmake
+SUBST_FILES.fix-bash=		CodeLite/TerminalEmulator.cpp
+SUBST_FILES.fix-bash+=		CodeLite/fileextmanager.cpp
+SUBST_FILES.fix-bash+=		Runtime/codelite_xterm
+SUBST_FILES.fix-bash+=		cmake/Modules/OSXInstall.cmake
 SUBST_SED.fix-bash+=		-e 's,/bin/bash,${BASH},g'
 
 REPLACE_BASH+=		Runtime/clg++
