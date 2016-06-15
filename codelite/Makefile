@@ -14,5 +14,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
+.include "../../security/libssh/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
