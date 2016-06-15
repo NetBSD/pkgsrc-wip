@@ -57,12 +57,11 @@ REPLACE_PERL+=	scripts/updateCopyright.pl
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}/${PREFIX}
 INSTALL_TARGET=		install install_inst_qch_docs
 
-#LDFLAGS+=	${COMPILER_RPATH_FLAG}${QTDIR}/lib
-#LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${QTDIR}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 do-configure:
-	${RUN} cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake -o Makefile
-#	${RUN} cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake QMAKE_LFLAGS=${LDFLAGS:Q} -o Makefile
+	${RUN} cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake QMAKE_LFLAGS=${LDFLAGS:Q} -o Makefile
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
