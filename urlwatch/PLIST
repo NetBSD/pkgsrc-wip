@@ -37,5 +37,5 @@ ${PYSITELIB}/urlwatch/storage.py
 ${PYSITELIB}/urlwatch/util.py
 man/man1/urlwatch.1
 share/doc/urlwatch/README.md
-share/urlwatch/examples/hooks.py.example
-share/urlwatch/examples/urls.yaml.example
+share/examples/urlwatch/hooks.py.example
+share/examples/urlwatch/urls.yaml.example
