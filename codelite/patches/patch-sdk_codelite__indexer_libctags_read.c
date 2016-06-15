@@ -1,5 +1,7 @@
 $NetBSD$
 
+Handle fpos_t on NetBSD.
+
 --- sdk/codelite_indexer/libctags/read.c.orig	2016-01-30 10:49:18.000000000 +0000
 +++ sdk/codelite_indexer/libctags/read.c
 @@ -605,6 +605,9 @@ extern int readChars (char *buffer, size

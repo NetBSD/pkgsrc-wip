@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add switch for NetBSD to not fall under "other OS".
+
+Fix path of installation of manpages.
+
 --- LiteEditor/CMakeLists.txt.orig	2016-01-30 10:49:18.000000000 +0000
 +++ LiteEditor/CMakeLists.txt
 @@ -14,6 +14,9 @@ include( "${wxWidgets_USE_FILE}" )

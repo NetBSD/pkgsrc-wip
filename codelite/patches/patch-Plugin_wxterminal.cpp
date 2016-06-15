@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add switch for NetBSD to not fall under "other OS".
+
 --- Plugin/wxterminal.cpp.orig	2016-01-30 10:49:18.000000000 +0000
 +++ Plugin/wxterminal.cpp
 @@ -39,7 +39,7 @@

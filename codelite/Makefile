@@ -26,10 +26,10 @@ SUBST_FILES.fix-paths=		CMakeLists.txt
 SUBST_SED.fix-paths+=		-e 's,IS_NETBSD 0,IS_NETBSD 1,g'
 
 SUBST_CLASSES+=			fix-bash
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fix bash path
-SUBST_FILES.fix-paths=		CodeLite/TerminalEmulator.cpp CodeLite/fileextmanager.cpp Runtime/codelite_xterm cmake/Modules/OSXInstall.cmake
-SUBST_SED.fix-paths+=		-e 's,/bin/bash,${BASH},g'
+SUBST_STAGE.fix-bash=		pre-configure
+SUBST_MESSAGE.fix-bash=		Fix bash path
+SUBST_FILES.fix-bash=		CodeLite/TerminalEmulator.cpp CodeLite/fileextmanager.cpp Runtime/codelite_xterm cmake/Modules/OSXInstall.cmake
+SUBST_SED.fix-bash+=		-e 's,/bin/bash,${BASH},g'
 
 REPLACE_BASH+=		Runtime/clg++
 REPLACE_BASH+=		Runtime/clgcc

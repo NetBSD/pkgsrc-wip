@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add switch for NetBSD to not fall under "other OS".
+
 --- Plugin/CMakeLists.txt.orig	2016-01-30 10:49:18.000000000 +0000
 +++ Plugin/CMakeLists.txt
 @@ -64,6 +64,8 @@ set( ADDITIONAL_LIBRARIES "" )

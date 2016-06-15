@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add switch for NetBSD to not fall under "other OS".
+
 --- codelite_terminal/unixprocess_impl.cpp.orig	2016-01-30 10:49:18.000000000 +0000
 +++ codelite_terminal/unixprocess_impl.cpp
 @@ -18,6 +18,10 @@

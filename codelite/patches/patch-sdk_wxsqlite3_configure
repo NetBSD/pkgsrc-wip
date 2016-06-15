@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix shell portability issue.
+
 --- sdk/wxsqlite3/configure.orig	2016-01-30 10:49:18.000000000 +0000
 +++ sdk/wxsqlite3/configure
 @@ -5717,7 +5717,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
