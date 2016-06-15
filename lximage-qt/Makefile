@@ -2,7 +2,7 @@
 
 .include "../../wip/liblxqt/Makefile.common"
 
-DISTNAME=	lximage-qt-0.4.0
+DISTNAME=	lximage-qt-0.5.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../wip/pcmanfm-qt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
