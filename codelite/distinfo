@@ -4,3 +4,4 @@ SHA1 (codelite-9.1.tar.gz) = a177e3c04612d96918361fcaae226e23f68be90a
 RMD160 (codelite-9.1.tar.gz) = b0ccb31eeadc5a342eba3a562044131868f7ceca
 SHA512 (codelite-9.1.tar.gz) = e7caa895c5ba62def98a50a46132940f7135c77ebe3d2fce7f1d83755ed6ce7dfc6aeb013a665b28eb969afcc1004f49284a253297d2317e72bda5f3945ce978
 Size (codelite-9.1.tar.gz) = 90366396 bytes
+SHA1 (patch-sdk_wxsqlite3_configure) = 212eb522fe97a9d44f04fe183087210ac8c34372
