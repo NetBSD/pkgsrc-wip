@@ -12,8 +12,45 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config bash
 
+CMAKE_ARGS+=		-DPREFIX:STRING=${PREFIX}
+#CMAKE_ARGS.FreeBSD+=	-DIS_FREEBSD:STRING=1
+#CMAKE_ARGS.NetBSD+=	-DIS_NETBSD:STRING=1
+#CMAKE_ARGS+=		-DIS_NETBSD:BOOL=ON
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Enable NetBSD
+SUBST_FILES.fix-paths=		CMakeLists.txt
+SUBST_SED.fix-paths+=		-e 's,IS_NETBSD 0,IS_NETBSD 1,g'
+
+SUBST_CLASSES+=			fix-bash
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fix bash path
+SUBST_FILES.fix-paths=		CodeLite/TerminalEmulator.cpp CodeLite/fileextmanager.cpp Runtime/codelite_xterm cmake/Modules/OSXInstall.cmake
+SUBST_SED.fix-paths+=		-e 's,/bin/bash,${BASH},g'
+
+REPLACE_BASH+=		Runtime/clg++
+REPLACE_BASH+=		Runtime/clgcc
+REPLACE_BASH+=		Runtime/codelite_xterm
+REPLACE_BASH+=		codelite-icons-dark/pack-icons.sh
+REPLACE_BASH+=		codelite-icons-fresh-farm/pack-icons.sh
+REPLACE_BASH+=		codelite-icons/pack-icons.sh
+REPLACE_BASH+=		codelitephp/resources/pack-resources.sh
+REPLACE_BASH+=		make-weekly
+REPLACE_BASH+=		svgs/code-completion/convert-svg-to-png.sh
+REPLACE_BASH+=		svgs/convert-single-file.sh
+REPLACE_BASH+=		svgs/convert-svg-to-png.sh
+REPLACE_BASH+=		svgs/create-logo-root.sh
+REPLACE_BASH+=		svgs/create-logo.sh
+REPLACE_BASH+=		svgs/find-bar/convert-svg-to-png.sh
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

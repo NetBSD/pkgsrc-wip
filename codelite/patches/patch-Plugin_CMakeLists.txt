@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Plugin/CMakeLists.txt.orig	2016-01-30 10:49:18.000000000 +0000
++++ Plugin/CMakeLists.txt
+@@ -64,6 +64,8 @@ set( ADDITIONAL_LIBRARIES "" )
+ if (UNIX)
+     if ( IS_FREEBSD )
+         set(ADDITIONAL_LIBRARIES "-lkvm")
++    elseif ( IS_NETBSD )
++        set(ADDITIONAL_LIBRARIES "")
+     elseif ( UNIX AND NOT APPLE )
+         set(ADDITIONAL_LIBRARIES "-ldl -lutil")
+     else ( )
