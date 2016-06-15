@@ -1,0 +1,19 @@
+$NetBSD$
+
+Use appropriate options for dlopen.
+
+--- ./Engine/Makefile-defs.linux.orig	2016-06-03 17:47:02.000000000 +0000
++++ ./Engine/Makefile-defs.linux
+@@ -16,7 +16,11 @@ else
+ endif
+ LIBS += $(shell pkg-config --libs vorbisfile)
+ LIBS += $(shell pkg-config --libs freetype2)
+-LIBS += -ldl -lpthread -lc -lm -lstdc++
++LIBS += -lpthread -lc -lm -lstdc++
++
++CFLAGS += $(DL_CFLAGS)
++LDFLAGS += $(DL_LDFLAGS)
++LIBS += $(DL_LIBS)
+ 
+ ifeq ($(ALLEGRO_MAGIC_DRV), 1)
+   CFLAGS += -DALLEGRO_MAGIC_DRV
