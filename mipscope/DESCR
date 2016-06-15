@@ -1,0 +1,9 @@
+MipScope is a cross-platform Integrated Development Environment (IDE) for
+students learning MIPS r3000 / MIPS32 assembly programming. It features an
+editor with an integrated MIPS interpreter and debugger. The focus is on
+helping beginners write and debug meaningful programs quickly.
+
+MipScope was designed to replace the SPIM simulator in Brown University's
+Introduction to Computer Systems course. MipScope implements most of the
+r3000 and MIPS32 specifications. Floating point operations, exceptions, and
+self-modifying code aren't supported at this time.
