@@ -23,9 +23,15 @@ CMAKE_ARGS+=	-DCORECLR_SET_RPATH:BOOL=OFF
 REPLACE_BASH+=	build.sh src/pal/tests/palsuite/runpaltests.sh
 
 CORECLR_PREFIX=	${PREFIX}/CoreCLR
-# XXX 32-bit? Please set ONLY_FOR_PLATFORM and adjust these
-CORECLR_OBJDIR=		${WRKSRC}/bin/obj/${OPSYS}.x64.Debug
-CORECLR_PRODUCTDIR=	${WRKSRC}/bin/Product/${OPSYS}.x64.Debug
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "x86_64"
+CORECLR_ARCH=	x64
+.endif
+
+CORECLR_OBJDIR=		${WRKSRC}/bin/obj/${OPSYS}.${CORECLR_ARCH}.Debug
+CORECLR_PRODUCTDIR=	${WRKSRC}/bin/Product/${OPSYS}.${CORECLR_ARCH}.Debug
 
 # Handle subprefix
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${CORECLR_PREFIX:Q}
