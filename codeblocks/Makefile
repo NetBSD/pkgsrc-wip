@@ -3,7 +3,7 @@
 
 DISTNAME=	codeblocks_16.01
 PKGNAME=	${DISTNAME:S/_/-/}
-CATEGORIES=	devel
+CATEGORIES=	editors x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=codeblocks/}
 EXTRACT_SUFX=	.tar.gz
 
