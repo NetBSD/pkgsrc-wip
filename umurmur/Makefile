@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	umurmur-0.2.16
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=umurmur/}
 
@@ -36,5 +37,5 @@ do-install:
 
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../devel/protobuf-c/buildlink3.mk"
-.include "../../security/mbedtls/buildlink3.mk"
+.include "../../security/mbedtls1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
