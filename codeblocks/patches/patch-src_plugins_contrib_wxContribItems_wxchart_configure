@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix shell portability issue.
+
 --- src/plugins/contrib/wxContribItems/wxchart/configure.orig	2016-01-23 16:43:13.000000000 +0000
 +++ src/plugins/contrib/wxContribItems/wxchart/configure
 @@ -5618,7 +5618,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6

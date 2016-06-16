@@ -4,8 +4,7 @@
 DISTNAME=	codeblocks_16.01
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	editors x11
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=codeblocks/}
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=codeblocks/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.codeblocks.org/

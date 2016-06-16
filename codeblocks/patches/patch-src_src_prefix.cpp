@@ -1,5 +1,7 @@
 $NetBSD$
 
+Unbreak build on NetBSD. Stop redefining NULL as an arbitrary value.
+
 --- src/src/prefix.cpp.orig	2016-01-23 16:43:04.000000000 +0000
 +++ src/src/prefix.cpp
 @@ -55,9 +55,6 @@ extern "C" {
