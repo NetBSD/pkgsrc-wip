@@ -5,7 +5,6 @@ DISTNAME=	codeblocks_16.01
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=codeblocks/}
-# http://sourceforge.net/projects/codeblocks/files/Sources/16.01/codeblocks_16.01.tar.gz
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

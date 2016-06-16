@@ -7,4 +7,5 @@ Size (codeblocks_16.01.tar.gz) = 20250097 bytes
 SHA1 (patch-src_plugins_contrib_wxContribItems_wxchart_configure) = 92ba9d66a6e4c571cc224361eadd5c0bec6c1a1c
 SHA1 (patch-src_plugins_contrib_wxContribItems_wxthings_configure) = 32a041c92bcf4d40826b3fa476580b4d05814885
 SHA1 (patch-src_sdk_wxpropgrid_configure) = 287c8d28f68070d1855067dfca35d3792c5161d7
+SHA1 (patch-src_src_appglobals.cpp) = c2d9cac820137e3b9c2a61e0b016f1830ed18da8
 SHA1 (patch-src_src_prefix.cpp) = f7fe380a1e6453eb21ba8305d10ed3187db8f283
