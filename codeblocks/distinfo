@@ -1,9 +1,10 @@
 $NetBSD: distinfo,v 1.4 2015/09/15 11:26:40 realzhtw Exp $
 
-SHA1 (codeblocks_13.12-1.tar.gz) = 3d16f977c9dcc0d857f61af3233a76d6a68609e3
-RMD160 (codeblocks_13.12-1.tar.gz) = e5e469431b792687ba029689b1107a0d735bce8b
-Size (codeblocks_13.12-1.tar.gz) = 17221056 bytes
-SHA1 (patch-ac) = acfe18d848e959ed62885c5efc8f6f2129acff5a
-SHA1 (patch-src_plugins_contrib_wxContribItems_wxchart_configure) = 4dffe936b6cd21388771db2828f9f322cbec32e7
-SHA1 (patch-src_plugins_contrib_wxContribItems_wxthings_configure) = 0143703b7ebbd98bae83aea189dc016f667779b6
-SHA1 (patch-src_sdk_wxpropgrid_configure) = b796c0a5b0ad1b44c1757b5b7a0f480c9ec5b929
+SHA1 (codeblocks_16.01.tar.gz) = 70aabe8a948dbaa919eb4b87bc74a600e0d93516
+RMD160 (codeblocks_16.01.tar.gz) = e98b034eb8d6cf52a89312f2d5eaa10b17f1355e
+SHA512 (codeblocks_16.01.tar.gz) = 496ff2dbcf9a8248fa9f1060d50567d1fc6480cc9d8fc9f7d2cd532c82f4344deafe9b43f2b17d2510c74851e21acf2ca90d5cc7b61237d69a17e78e9907a63a
+Size (codeblocks_16.01.tar.gz) = 20250097 bytes
+SHA1 (patch-src_plugins_contrib_wxContribItems_wxchart_configure) = 92ba9d66a6e4c571cc224361eadd5c0bec6c1a1c
+SHA1 (patch-src_plugins_contrib_wxContribItems_wxthings_configure) = 32a041c92bcf4d40826b3fa476580b4d05814885
+SHA1 (patch-src_sdk_wxpropgrid_configure) = 287c8d28f68070d1855067dfca35d3792c5161d7
+SHA1 (patch-src_src_prefix.cpp) = f7fe380a1e6453eb21ba8305d10ed3187db8f283

@@ -1,21 +1,19 @@
 # $NetBSD: Makefile,v 1.10 2015/09/15 11:26:40 realzhtw Exp $
 #
 
-PKGVERSION=	13.12
-DISTNAME=	codeblocks_${PKGVERSION}-1
-PKGNAME=	codeblocks-${PKGVERSION}
+DISTNAME=	codeblocks_16.01
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
-MASTER_SITES=   http://downloads.sourceforge.net/project/codeblocks/Sources/13.12/
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=codeblocks/}
+# http://sourceforge.net/projects/codeblocks/files/Sources/16.01/codeblocks_16.01.tar.gz
 EXTRACT_SUFX=	.tar.gz
 
-BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
-
-MAINTAINER=	pkgsrc@blackmouse.biz
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.codeblocks.org/
 COMMENT=	Open source, cross platform, free C++ IDE
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.release
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
@@ -24,10 +22,12 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,byogames,cbkoders,codesnippets,codestat,dragscroll,envvars,help,keybinder,libfinder,profiler,regex,exporter,symtab
 # wxsmith makes error in build process
 
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
 PKGCONFIG_OVERRIDE+=	codeblocks.pc.in
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
