@@ -2,7 +2,7 @@
 
 DISTNAME=	urlwatch-2.2
 CATEGORIES=	net
-MASTER_SITES=	http://thp.io/2008/urlwatch/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://thp.io/2008/urlwatch/
