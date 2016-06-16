@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thp.io/2008/urlwatch/
+HOMEPAGE=	https://github.com/thp/urlwatch
 COMMENT=	Watch web pages and arbitrary URLs for changes
 LICENSE=	modified-bsd
 
