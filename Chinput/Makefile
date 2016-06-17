@@ -4,8 +4,7 @@
 DISTNAME=	Chinput-3.0.2
 PKGREVISION=	1
 CATEGORIES=	inputmethod
-MASTER_SITES=	ftp://linux.nctu.edu.tw/dists/gentoo/distfiles/ \
-		http://www.opencjk.org/~yumj/download/
+MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
