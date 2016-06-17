@@ -56,7 +56,7 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR} 			\
 			XINITRC_DIR=${EGDIR}/X11/xinit/xinitrc.d
 
 pre-configure:
-	cd ${WRKSRC} && ./autogen.sh #autoreconf -vi ${AUTORECONF_ARGS}
+	cd ${WRKSRC} && ./autogen.sh
 
 post-install:
 	${MKDIR} ${DESTDIR}${RULESDIR} &&		\
