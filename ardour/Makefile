@@ -132,7 +132,7 @@ pre-configure:
 	${SED} -e 's!REVISION!${PKGVERSION_NOREV}!' \
 		${FILESDIR}/revision.cc > ${WRKSRC}/libs/ardour/revision.cc
 
-WAF_ARGS+=	--prefix=/usr --configdir=/etc --libjack=weak --ptformat --with-backends=dummy --cxx11
+WAF_ARGS+=	--prefix=${PREFIX} --configdir=${PKG_SYSCONFDIR} --libjack=weak --ptformat --with-backends=dummy --cxx11
 WAF_REPLACE_EXECUTABLE=	no
 
 # ./waf i18n
