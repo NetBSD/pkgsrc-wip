@@ -1,18 +1,15 @@
 # $NetBSD: Makefile,v 1.1 2014/08/08 11:56:44 chybz Exp $
 
-DISTNAME=	nanomsg-0.4-beta
-PKGNAME=	nanomsg-0.4beta
+DISTNAME=	nanomsg-1.0.0
 CATEGORIES=	devel
-MASTER_SITES=	http://download.nanomsg.org/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=nanomsg/}
 
-MAINTAINER=	rchibois@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nanomsg.org/
 COMMENT=	Scalability protocols library
-LICENSE=	mit OR x11
+LICENSE=	x11
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_CMAKE=	yes
 
 PKGCONFIG_OVERRIDE+=	libnanomsg.pc.in
 
