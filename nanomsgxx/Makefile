@@ -12,6 +12,9 @@ LICENSE=	mit
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	waf>=1.8.4:../../devel/waf
+WAF_HAS_MANDIR=	no
+
+PKGCONFIG_OVERRIDE+=	libnnxx.pc.in
 
 .include "../../net/nanomsg/buildlink3.mk"
 .include "../../devel/waf/waf.mk"

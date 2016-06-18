@@ -8,7 +8,7 @@ NANOMSGXX_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.nanomsgxx+=	nanomsgxx>=0.2
 BUILDLINK_PKGSRCDIR.nanomsgxx?=		../../wip/nanomsgxx
 
-.include "../../wip/nanomsg/buildlink3.mk"
+.include "../../net/nanomsg/buildlink3.mk"
 .endif	# NANOMSGXX_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nanomsgxx
