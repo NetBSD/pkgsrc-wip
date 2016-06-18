@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ardour-4.4
+DISTNAME=	ardour-4.7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ardour/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -70,6 +70,7 @@ REPLACE_PYTHON+=	tools/autowaf.py
 REPLACE_PYTHON+=	tools/gccabicheck/wscript
 REPLACE_PYTHON+=	tools/sanity_check/wscript
 REPLACE_PYTHON+=	wscript
+REPLACE_PYTHON+=	waf
 
 REPLACE_PERL+=		tools/fmt-bindings
 REPLACE_PERL+=		tools/resample_session.pl
@@ -127,31 +128,16 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 35 # as of 4.4
 BUILDLINK_TRANSFORM+=   rm:-ldl
 .endif
 
-post-extract:
+pre-configure:
 	${SED} -e 's!REVISION!${PKGVERSION_NOREV}!' \
 		${FILESDIR}/revision.cc > ${WRKSRC}/libs/ardour/revision.cc
 
-#./waf configure --strict --prefix=/usr --configdir=/etc --libjack=weak --ptformat --with-backends=jack,alsa,dummy
-do-configure:
-	${RUN} cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
-			--prefix=${PREFIX} \
-			--configdir=${PKG_SYSCONFDIR} \
-			--destdir=${DESTDIR} \
-			--mandir=${PKGMANDIR} \
-			--with-backends=dummy \
-			--cxx11
+WAF_ARGS+=	--prefix=/usr --configdir=/etc --libjack=weak --ptformat --with-backends=dummy --cxx11
+WAF_REPLACE_EXECUTABLE=	no
 
-# ./waf
 # ./waf i18n
-do-build:
-	${RUN} cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./waf build
 
-do-install:
-	${RUN} cd ${WRKSRC} && \
-		${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
-
+.include "../../devel/waf/waf.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../audio/lilv/buildlink3.mk"
 .include "../../converters/sratom/buildlink3.mk"

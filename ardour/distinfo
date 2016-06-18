@@ -1,8 +1,7 @@
 $NetBSD$
 
-SHA1 (ardour-4.4.tar.gz) = 12e053e2b409e30771b99358ff0b926e68120507
-RMD160 (ardour-4.4.tar.gz) = 87564e05b8d1d7c1c7abc7e267144e392c6f6c63
-SHA512 (ardour-4.4.tar.gz) = 8df3e4552b0ccdd76c5ccf06224594325bb8c02f897bb79bd983531a2f4f56c60185b6080e2f8eddb6a274b9d48dc93a47ddc5471e05b253d492c09be816dde0
-Size (ardour-4.4.tar.gz) = 9511090 bytes
-SHA1 (patch-libs_midi++2_run-tests.sh) = 8d9ac9f1c918a89e69f722b78aab42a0b78587ea
-SHA1 (patch-libs_pbd_wscript) = 5660f358a689e51785c24c22f4f518194ccb33f4
+SHA1 (ardour-4.7.tar.gz) = 95047ccb3fc599ce11c473a0fd7f1eb012c3e440
+RMD160 (ardour-4.7.tar.gz) = 366f7057fab9878ac425dd70a751899984abc030
+SHA512 (ardour-4.7.tar.gz) = 5daff563ec0b2dc38ec6ca55bb12526ef54da9d8d5a29a9fd6d869f54b83e6fe5ff3c28ef654e6700455110b4a46ce42a33902eb66d96330c6c0948eb3cd3096
+Size (ardour-4.7.tar.gz) = 9863149 bytes
+SHA1 (patch-libs_pbd_fpu.cc) = bec4f67f8b52482b5b1cf582a4631c335efec8c7
