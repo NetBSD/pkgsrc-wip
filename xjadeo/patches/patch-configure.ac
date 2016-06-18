@@ -1,0 +1,33 @@
+$NetBSD$
+
+Fix shell portability problem.
+
+--- configure.ac.orig	2015-11-25 14:17:19.000000000 +0000
++++ configure.ac
+@@ -89,7 +89,7 @@ case $target_os in
+ 		;;
+ esac
+ 
+-if test "x$enable_embed_font" == "xyes"; then
++if test "x$enable_embed_font" = "xyes"; then
+ 	AM_CONDITIONAL([EMBED_FONT], true)
+ else
+ 	AM_CONDITIONAL([EMBED_FONT], false)
+@@ -170,7 +170,7 @@ if test "x$enable_timescale" != "xyes"; 
+ 	AC_DEFINE(TIMEMAP)
+ fi
+ 
+-if test "x$enable_framecrop" == "xyes"; then
++if test "x$enable_framecrop" = "xyes"; then
+ 	AC_DEFINE(CROPIMG)
+ fi
+ 
+@@ -462,7 +462,7 @@ else
+ 	else
+ 		OSDREPORT="${OSDREPORT}-"
+ 	fi
+-	if test "x$enable_embed_font" == "xyes"; then
++	if test "x$enable_embed_font" = "xyes"; then
+ 		OSDREPORT="${OSDREPORT}
+    - embed font:     yes"
+ 	 else
