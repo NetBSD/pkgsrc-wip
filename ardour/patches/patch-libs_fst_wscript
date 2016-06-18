@@ -1,7 +1,13 @@
 $NetBSD$
 
---- libs/fst/wscript.orig	2016-06-18 14:53:24.121637455 +0000
+--- libs/fst/wscript.orig	2016-02-19 01:28:56.000000000 +0000
 +++ libs/fst/wscript
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/pkg/bin/python2.7
+ from waflib.extras import autowaf as autowaf
+ from waflib import Options, TaskGen
+ import waflib.Logs as Logs, waflib.Utils as Utils
 @@ -83,6 +83,7 @@ def build(bld):
      obj.includes  = [ '../pbd/', '../ardour/', '.' ]
      obj.defines = [
