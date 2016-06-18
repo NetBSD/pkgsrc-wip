@@ -1,14 +1,10 @@
 # $NetBSD: Makefile,v 1.9 2015/04/19 15:10:39 othyro Exp $
-#
 
 GITHUB_PROJECT=	pcsx2
 DISTNAME=	v1.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PCSX2/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-
-# The DISTFILE to download is an HTTP-only attachment.
-# The getsite.sh script uses cURL download the attached file.
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcsx2.net/
@@ -34,7 +30,6 @@ CMAKE_ARGS+=		-Dlibdl=NO
 .else
 CMAKE_ARGS+=		-Dlibdl=${DL_LIBS}
 .endif
-
 
 BUILDLINK_DEPMETHOD.gtk2=	build
 .include "../../x11/gtk2/buildlink3.mk"
