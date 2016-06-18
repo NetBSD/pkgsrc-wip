@@ -6,7 +6,7 @@ CATEGORIES=	devel p5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PL/PLICEASE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/
+HOMEPAGE=	http://search.cpan.org/dist/URI-ws/
 COMMENT=	WebSocket support for URI package
 LICENSE=	${PERL5_LICENSE}
 
