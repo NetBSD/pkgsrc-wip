@@ -4,4 +4,5 @@ SHA1 (xjadeo-0.8.5.tar.gz) = ed72634312e2d1d5b13a4eeef444895c3f3abfc5
 RMD160 (xjadeo-0.8.5.tar.gz) = 7794ace9bb5b84b4b4fa603347c48d482b95541d
 SHA512 (xjadeo-0.8.5.tar.gz) = 124644df6b18518fd7cfabea47cf4b466d41f771891df6805c95a63f18ab9b71ac1568e1d0cdb7df5361f19e742e850fc57ea1239547c00484c15f1a85aa2b18
 Size (xjadeo-0.8.5.tar.gz) = 996023 bytes
-SHA1 (patch-configure.ac) = cfa8d89d0e8f6e0977e725642108ae3d9c5b47f5
+SHA1 (patch-configure.ac) = 59dec1d2b0d1922ef8cde791d7c8ac1f349eaa82
+SHA1 (patch-src_xjadeo_Makefile.am) = 7b1d2374ec71a6f64698bc5ffb35db1e6cdee829
