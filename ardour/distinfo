@@ -5,3 +5,4 @@ RMD160 (ardour-4.7.tar.gz) = 366f7057fab9878ac425dd70a751899984abc030
 SHA512 (ardour-4.7.tar.gz) = 5daff563ec0b2dc38ec6ca55bb12526ef54da9d8d5a29a9fd6d869f54b83e6fe5ff3c28ef654e6700455110b4a46ce42a33902eb66d96330c6c0948eb3cd3096
 Size (ardour-4.7.tar.gz) = 9863149 bytes
 SHA1 (patch-libs_pbd_fpu.cc) = bec4f67f8b52482b5b1cf582a4631c335efec8c7
+SHA1 (patch-libs_pbd_mountpoint.cc) = 1c19b7fd593dbc9773a0e344b543e5842c8880a4
