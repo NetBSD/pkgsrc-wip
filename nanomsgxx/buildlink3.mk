@@ -1,12 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/08/08 11:55:56 chybz Exp $
+# $NetBSD$
 
 BUILDLINK_TREE+=	nanomsgxx
 
 .if !defined(NANOMSGXX_BUILDLINK3_MK)
 NANOMSGXX_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.nanomsgxx+=	nanomsgxx>=0.1
-BUILDLINK_PKGSRCDIR.nanomsgxx?=	../../wip/nanomsgxx
+BUILDLINK_API_DEPENDS.nanomsgxx+=	nanomsgxx>=0.2
+BUILDLINK_PKGSRCDIR.nanomsgxx?=		../../wip/nanomsgxx
+
+.include "../../wip/nanomsg/buildlink3.mk"
 .endif	# NANOMSGXX_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nanomsgxx
