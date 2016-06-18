@@ -1,8 +1,12 @@
 # $NetBSD: Makefile,v 1.9 2015/04/19 15:10:39 othyro Exp $
 #
 
-DISTNAME=	pcsx2-1.0.0r5412
+GITHUB_PROJECT=	pcsx2
+DISTNAME=	v1.0
 CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=PCSX2/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
+
 # The DISTFILE to download is an HTTP-only attachment.
 # The getsite.sh script uses cURL download the attached file.
 
@@ -11,7 +15,8 @@ HOMEPAGE=	http://pcsx2.net/
 COMMENT=	Playstation 2 Emulator
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND mit AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND public-domain AND sgi-free-software-b-v2.0
 
-WRKSRC=		${WRKDIR}/pcsx2-1.0.0
+EXTRACT_USING=	gtar
+WRKSRC=		${WRKDIR}/pcsx2-1.0
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake msgmerge
 USE_CMAKE=	yes
