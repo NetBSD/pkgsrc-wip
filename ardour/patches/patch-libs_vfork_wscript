@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- libs/vfork/wscript.orig	2016-02-19 01:28:56.000000000 +0000
++++ libs/vfork/wscript
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/pkg/bin/python2.7
+ from waflib.extras import autowaf as autowaf
+ from waflib import TaskGen
+ import os
+@@ -25,4 +25,5 @@ def build(bld):
+     obj.defines = [
+             '_POSIX_SOURCE',
+             '_XOPEN_SOURCE=500',
++            '_NETBSD_SOURCE',
+     ]
