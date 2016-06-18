@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/08 11:55:56 chybz Exp $
+@comment $NetBSD$
 include/nanomsg/ext/nnxx_ext.h
 include/nnxx/bus.h
 include/nnxx/chrono.h
@@ -29,5 +29,5 @@ include/nnxx/tcp.h
 include/nnxx/testing
 include/nnxx/timeout.h
 include/nnxx/unittest.h
-lib/libnnxx.dylib
+lib/libnnxx.so
 lib/pkgconfig/libnnxx.pc
