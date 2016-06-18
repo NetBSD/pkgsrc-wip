@@ -1932,7 +1932,6 @@ SUBDIR+=	mythtv
 SUBDIR+=	n2n
 SUBDIR+=	naev
 SUBDIR+=	nag
-SUBDIR+=	nanomsg
 SUBDIR+=	nanomsgxx
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	natali
