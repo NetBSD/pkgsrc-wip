@@ -2,7 +2,7 @@
 
 DISTNAME=	URI-ws-0.03
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	devel p5
+CATEGORIES=	www p5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PL/PLICEASE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
