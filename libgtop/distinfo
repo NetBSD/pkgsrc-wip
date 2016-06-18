@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.32 2016/04/28 22:18:58 jperkin Exp $
+
+SHA1 (libgtop-2.34.0.tar.xz) = c3fa90b1e71bbd12cf9a8d0018d0d975bceb5b7e
+RMD160 (libgtop-2.34.0.tar.xz) = 0cf7a8cbd51ccc6a507bff81222d3597022c9e58
+SHA512 (libgtop-2.34.0.tar.xz) = d9b8a34f9aedcf73e56a29cbde8a404911d04e87e4edf286720d7e16644a99a5e543605ed489fcf3a7a005ada7f5c15fef524c90e7ae0770793f1f2711959b93
+Size (libgtop-2.34.0.tar.xz) = 677392 bytes
