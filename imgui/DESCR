@@ -1,0 +1,13 @@
+dear imgui (AKA ImGui), is a bloat-free graphical user interface library for
+C++. It outputs vertex buffers that you can render in your 3D-pipeline enabled
+application. It is fast, portable, renderer agnostic and self-contained (no
+external dependencies).
+
+ImGui is designed to enable fast iteration and empower programmers to create
+content creation tools and visualization/debug tools (as opposed to UI for the
+average end-user). It favors simplicity and productivity toward this goal, and
+thus lacks certain features normally found in more high-level libraries.
+
+ImGui is particularly suited to integration in realtime 3D applications,
+fullscreen applications, embedded applications, games, or any applications on
+consoles platforms where operating system features are non-standard. 
