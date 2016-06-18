@@ -3,12 +3,13 @@
 DISTNAME=	harvid-0.8.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=x42/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://x42.github.com/harvid/
 COMMENT=	HTTP Ardour Video Daemon
 LICENSE=	gnu-gpl-v2
+
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_TOOLS+=	pkg-config gmake
 
