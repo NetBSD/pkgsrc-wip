@@ -128,6 +128,15 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 35 # as of 4.4
 BUILDLINK_TRANSFORM+=   rm:-ldl
 .endif
 
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/LV2/reasonablesynth.lv2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/backends
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/engines
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/panners
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/surfaces
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/utils
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour4/vamp
+
 pre-configure:
 	${SED} -e 's!REVISION!${PKGVERSION_NOREV}!' \
 		${FILESDIR}/revision.cc > ${WRKSRC}/libs/ardour/revision.cc
