@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2012/10/03 15:09:55 asau Exp $
-#
 
 DISTNAME=	mingw-w64-v2.0
 PKGNAME=	mingw-w64-crt-2.0
 CATEGORIES=	cross
-MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-release/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-release/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +16,7 @@ DEPENDS+=		mingw-w64-headers-[0-9]*:../../wip/mingw-w64-headers
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-snapshot//}
 GNU_CONFIGURE=		yes
-USE_CROSSBASE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 USE_TOOLS+=		gmake
 
 USE_GNU_CONFIGURE_HOST=	no

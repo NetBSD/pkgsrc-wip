@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.6 2012/10/03 15:09:55 asau Exp $
-#
 
 DISTNAME=	mingw-w64-v2.0
 PKGNAME=	mingw-w64-headers-2.0
@@ -14,7 +13,7 @@ COMMENT=	Headers for win32/64 cross-development
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-snapshot//}
 GNU_CONFIGURE=		yes
-USE_CROSSBASE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 USE_TOOLS+=		gmake
 
 USE_GNU_CONFIGURE_HOST=	no
@@ -33,7 +32,7 @@ post-extract:
 	mkdir ${WRKDIR}/build
 
 post-install:
-	ln -sf x86_64-w64-mingw32 ${DESTDIR}${PREFIX}/mingw
-	ln -sf lib ${DESTDIR}${PREFIX}/x86_64-w64-mingw32/lib64
+	ln -sf x86_64-w64-mingw32 ${DESTDIR}${PREFIX}/cross/mingw
+	ln -sf lib ${DESTDIR}${PREFIX}/cross/x86_64-w64-mingw32/lib64
 
 .include "../../mk/bsd.pkg.mk"

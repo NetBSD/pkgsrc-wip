@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.1.1.1 2010/08/11 15:11:01 tnn2 Exp $
-#
 
 PKGNAME=	mingw-w64-lib${DISTNAME:S/4.5-/4.5./}
 COMMENT=	GCC target libraries for win32/64 cross-development

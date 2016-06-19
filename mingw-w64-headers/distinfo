@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.3 2011/10/25 01:57:18 makoto Exp $
 
 SHA1 (mingw-w64-v2.0.tar.bz2) = e81715cbe6de607cd16fbea254ece4e07e47b818
 RMD160 (mingw-w64-v2.0.tar.bz2) = da089aec34849f86334901a2d8cccddbcfe4aa74
+SHA512 (mingw-w64-v2.0.tar.bz2) = b6f8c4bef5228a89597eff12332378a29527561018b1f64665c5ca40fb33e877bd483e69b14a50c3eb189c6d4fb2aa130bdf6692c61f7dc5a0590c9cdeeed52f
 Size (mingw-w64-v2.0.tar.bz2) = 5553116 bytes

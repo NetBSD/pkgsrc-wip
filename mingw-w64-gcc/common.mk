@@ -1,5 +1,4 @@
 # $NetBSD: common.mk,v 1.2 2012/10/03 15:09:55 asau Exp $
-#
 
 DISTNAME=	gcc-4.5.1
 CATEGORIES=	cross
@@ -19,9 +18,8 @@ PATCHDIR=		${.CURDIR}/../mingw-w64-gcc/patches
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_CROSSBASE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 USE_TOOLS+=		gmake flex bison makeinfo perl
 INFO_FILES=		yes
 

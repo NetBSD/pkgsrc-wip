@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.2 2012/10/03 15:09:55 asau Exp $
-#
 
 DISTNAME=	binutils-2.20.1
 PKGNAME=	mingw-w64-${DISTNAME}
@@ -14,9 +13,8 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_CROSSBASE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
