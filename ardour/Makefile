@@ -143,14 +143,17 @@ pre-configure:
 
 WAF_ARGS+=	--prefix=${PREFIX}
 WAF_ARGS+=	--configdir=${PKG_SYSCONFDIR}
+# Use dlopen(3) for the JACK library
 WAF_ARGS+=	--libjack=weak
 WAF_ARGS+=	--optimize
-WAF_ARGS+=	--with-backends=dummy
+# Required to build on NetBSD
 WAF_ARGS+=	--cxx11
 
 WAF_REPLACE_EXECUTABLE=	no
 
 # ./waf i18n
+
+.include "options.mk"
 
 .include "../../devel/waf/waf.mk"
 .include "../../x11/gtkmm/buildlink3.mk"

@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- libs/backends/jack/wscript.orig	2016-06-19 10:00:50.209065188 +0000
++++ libs/backends/jack/wscript
+@@ -110,9 +110,8 @@ def build(bld):
+ 
+     #
+     # device discovery code in the jack backend needs ALSA
+-    # on Linux.
++    # on Linux/NetBSD.
+     #
+ 
+-    if re.search ("linux", sys.platform) != None:
++    if re.search ("linux", sys.platform) != None and not sys.platform.startswith('netbsd'):
+        obj.uselib += [ 'ALSA' ]
+-
