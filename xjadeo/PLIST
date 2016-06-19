@@ -1,6 +1,0 @@
-@comment $NetBSD$
-bin/xjadeo
-bin/xjremote
-man/man1/xjadeo.1
-man/man1/xjremote.1
-share/xjadeo/ArdourMono.ttf
