@@ -1,16 +1,6 @@
 @comment $NetBSD$
 bin/ardour4
 ${PLIST.dummy}bin/ardour4-export
-etc/ardour4/ardour.menus
-etc/ardour4/clearlooks.rc
-etc/ardour4/dark.colors
-etc/ardour4/default_ui_config
-etc/ardour4/export/CD.format
-etc/ardour4/mixer.bindings
-etc/ardour4/mnemonic-us.bindings
-etc/ardour4/step_editing.bindings
-etc/ardour4/system_config
-etc/ardour4/trx.menus
 lib/ardour4/LV2/reasonablesynth.lv2/manifest.ttl
 lib/ardour4/LV2/reasonablesynth.lv2/reasonablesynth.so
 lib/ardour4/LV2/reasonablesynth.lv2/reasonablesynth.ttl
@@ -417,3 +407,13 @@ share/ardour4/pixmaps/zoom_in.xpm
 share/ardour4/pixmaps/zoom_out.xpm
 share/ardour4/small-splash.png
 share/ardour4/splash.png
+share/examples/ardour4/ardour4/ardour.menus
+share/examples/ardour4/ardour4/clearlooks.rc
+share/examples/ardour4/ardour4/dark.colors
+share/examples/ardour4/ardour4/default_ui_config
+share/examples/ardour4/ardour4/export/CD.format
+share/examples/ardour4/ardour4/mixer.bindings
+share/examples/ardour4/ardour4/mnemonic-us.bindings
+share/examples/ardour4/ardour4/step_editing.bindings
+share/examples/ardour4/ardour4/system_config
+share/examples/ardour4/ardour4/trx.menus

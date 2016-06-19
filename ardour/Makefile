@@ -117,6 +117,22 @@ PKGCONFIG_OVERRIDE+=	libs/gtkmm2ext/libgtkmm2ext.pc.in
 PKGCONFIG_OVERRIDE+=	libs/midi++2/libmidi++.pc.in
 PKGCONFIG_OVERRIDE+=	libs/pbd/libpbd.pc.in
 
+BUILD_DEFS+=		PKG_SYSCONFBASE
+
+EGDIR=			${PREFIX}/share/examples/ardour4
+PKG_SYSCONFSUBDIR=	ardour4
+
+CONF_FILES+=		${EGDIR}/ardour4/ardour.menus ${PKG_SYSCONFBASE}/menus/ardour.menus
+CONF_FILES+=		${EGDIR}/ardour4/clearlooks.rc ${PKG_SYSCONFDIR}/clearlooks.rc
+CONF_FILES+=		${EGDIR}/ardour4/dark.colors ${PKG_SYSCONFDIR}/dark.colors
+CONF_FILES+=		${EGDIR}/ardour4/default_ui_config ${PKG_SYSCONFDIR}/default_ui_config
+CONF_FILES+=		${EGDIR}/ardour4/export/CD.format ${PKG_SYSCONFDIR}/export/CD.format
+CONF_FILES+=		${EGDIR}/ardour4/mixer.bindings ${PKG_SYSCONFDIR}/mixer.bindings
+CONF_FILES+=		${EGDIR}/ardour4/mnemonic-us.bindings ${PKG_SYSCONFDIR}/mnemonic-us.bindings
+CONF_FILES+=		${EGDIR}/ardour4/step_editing.bindings ${PKG_SYSCONFDIR}/step_editing.bindings
+CONF_FILES+=		${EGDIR}/ardour4/system_config ${PKG_SYSCONFDIR}/system_config
+CONF_FILES+=		${EGDIR}/ardour4/trx.menus ${PKG_SYSCONFBASE}/menus/trx.menus
+
 # As of NetBSD-7.99.21 pkgsrc's checks cannot open file with rare unicode characters
 CHECK_PORTABILITY_SKIP+=	libs/pbd/test/i18n_test/*.tst
 
@@ -142,7 +158,7 @@ pre-configure:
 		${FILESDIR}/revision.cc > ${WRKSRC}/libs/ardour/revision.cc
 
 WAF_ARGS+=	--prefix=${PREFIX}
-WAF_ARGS+=	--configdir=${PKG_SYSCONFDIR}
+WAF_ARGS+=	--configdir=${EGDIR}
 # Use dlopen(3) for the JACK library
 WAF_ARGS+=	--libjack=weak
 WAF_ARGS+=	--optimize
