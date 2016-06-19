@@ -16,11 +16,11 @@ LICENSE=		gnu-gpl-v3 AND gnu-lgpl-v3
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-USE_CROSSBASE=		yes
 USE_TOOLS+=		gm4 pod2man yacc
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 CONFIGURE_ARGS+=	--with-windres
 CONFIGURE_ARGS+=	--enable-64-bit-bfd
 CONFIGURE_ARGS+=	--enable-targets=all
@@ -35,7 +35,7 @@ BUILD_TARGET=		all-binutils all-ld
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
 
-BINDIR=			${PREFIX}/libexec/binutils
+BINDIR=			${PREFIX}/cross/libexec/binutils
 
 # Prevent the need to run texi2pod.pl and pod2man hence
 # the need for perl as build dependency.
@@ -47,9 +47,9 @@ post-patch:
 .endfor
 	${RM} -rf ${WRKSRC}/etc ${WRKSRC}/gas
 
-# we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
+INSTALLATION_DIRS=	${BINDIR} cross/lib/ldscripts cross/include bin
+
 do-install:
-	${MKDIR} ${DESTDIR}${BINDIR} ${DESTDIR}${PREFIX}/lib/ldscripts ${DESTDIR}${PREFIX}/include
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${DESTDIR}${BINDIR}
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${DESTDIR}${BINDIR}
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/coffdump ${DESTDIR}${BINDIR}
@@ -69,18 +69,19 @@ do-install:
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/windres ${DESTDIR}${BINDIR}
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/ld/ld-new ${DESTDIR}${BINDIR}/ld
 	libtool --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${DESTDIR}${BINDIR}
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${DESTDIR}${PREFIX}/lib
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/intl/libintl.a ${DESTDIR}${PREFIX}/lib
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${DESTDIR}${PREFIX}/lib
-	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/symcat.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${DESTDIR}${PREFIX}/include
-	for f in ${WRKSRC}/ld/ldscripts/*; do ${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/lib/ldscripts; done
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/bfd/libbfd.la ${DESTDIR}${PREFIX}/cross/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/intl/libintl.a ${DESTDIR}${PREFIX}/cross/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/opcodes/libopcodes.la ${DESTDIR}${PREFIX}/cross/lib
+	libtool --mode=install ${INSTALL_DATA} ${WRKSRC}/libiberty/libiberty.a ${DESTDIR}${PREFIX}/cross/lib
+	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${DESTDIR}${PREFIX}/cross/include
+	${INSTALL_DATA} ${WRKSRC}/include/symcat.h ${DESTDIR}${PREFIX}/cross/include
+	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${DESTDIR}${PREFIX}/cross/include
+	for f in ${WRKSRC}/ld/ldscripts/*; do ${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/cross/lib/ldscripts; done
 	${INSTALL_SCRIPT} ${WRKSRC}/cross-env ${DESTDIR}${BINDIR}
+	${LN} -s ${PREFIX}/cross/libexec/binutils/cross-env ${DESTDIR}${PREFIX}/bin/cross-env
 
 post-build:
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|' < ${FILESDIR}/cross-env > \
+	${SED} -e 's|@@PREFIX@@|${PREFIX}/cross|' < ${FILESDIR}/cross-env > \
 		${WRKSRC}/cross-env
 
 .include "../../mk/bsd.pkg.mk"
