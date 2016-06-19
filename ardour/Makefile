@@ -122,7 +122,10 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 EGDIR=			${PREFIX}/share/examples/ardour4
 PKG_SYSCONFSUBDIR=	ardour4
 
-CONF_FILES+=		${EGDIR}/ardour4/ardour.menus ${PKG_SYSCONFBASE}/menus/ardour.menus
+OWN_DIRS=		${PKG_SYSCONFDIR}
+OWN_DIRS=		${PKG_SYSCONFDIR}/export
+
+CONF_FILES+=		${EGDIR}/ardour4/ardour.menus ${PKG_SYSCONFDIR}/ardour.menus
 CONF_FILES+=		${EGDIR}/ardour4/clearlooks.rc ${PKG_SYSCONFDIR}/clearlooks.rc
 CONF_FILES+=		${EGDIR}/ardour4/dark.colors ${PKG_SYSCONFDIR}/dark.colors
 CONF_FILES+=		${EGDIR}/ardour4/default_ui_config ${PKG_SYSCONFDIR}/default_ui_config
@@ -131,7 +134,7 @@ CONF_FILES+=		${EGDIR}/ardour4/mixer.bindings ${PKG_SYSCONFDIR}/mixer.bindings
 CONF_FILES+=		${EGDIR}/ardour4/mnemonic-us.bindings ${PKG_SYSCONFDIR}/mnemonic-us.bindings
 CONF_FILES+=		${EGDIR}/ardour4/step_editing.bindings ${PKG_SYSCONFDIR}/step_editing.bindings
 CONF_FILES+=		${EGDIR}/ardour4/system_config ${PKG_SYSCONFDIR}/system_config
-CONF_FILES+=		${EGDIR}/ardour4/trx.menus ${PKG_SYSCONFBASE}/menus/trx.menus
+CONF_FILES+=		${EGDIR}/ardour4/trx.menus ${PKG_SYSCONFDIR}/trx.menus
 
 # As of NetBSD-7.99.21 pkgsrc's checks cannot open file with rare unicode characters
 CHECK_PORTABILITY_SKIP+=	libs/pbd/test/i18n_test/*.tst
