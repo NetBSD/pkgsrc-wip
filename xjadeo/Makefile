@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
-USE_TOOLS=	automake aclocal autoheader autoconf pkg-config
+USE_TOOLS+=	automake aclocal autoheader autoconf pkg-config
 
 GNU_CONFIGURE=	yes
 

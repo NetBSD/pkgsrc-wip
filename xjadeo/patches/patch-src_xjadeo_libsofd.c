@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add NetBSD support.
+
+Backport getmntent() from sysutils/fam.
+
 --- src/xjadeo/libsofd.c.orig	2015-11-25 14:17:19.000000000 +0000
 +++ src/xjadeo/libsofd.c
 @@ -334,8 +334,167 @@ const char *x_fib_recent_file(const char
