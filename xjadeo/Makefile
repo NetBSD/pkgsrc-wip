@@ -17,7 +17,7 @@ USE_TOOLS+=	automake aclocal autoheader autoconf pkg-config
 GNU_CONFIGURE=	yes
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ./autogen.sh
+	${RUN} cd ${WRKSRC} && ./autogen.sh
 
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"
