@@ -6,3 +6,4 @@ SHA512 (xjadeo-0.8.5.tar.gz) = 124644df6b18518fd7cfabea47cf4b466d41f771891df6805
 Size (xjadeo-0.8.5.tar.gz) = 996023 bytes
 SHA1 (patch-configure.ac) = 59dec1d2b0d1922ef8cde791d7c8ac1f349eaa82
 SHA1 (patch-src_xjadeo_Makefile.am) = 7b1d2374ec71a6f64698bc5ffb35db1e6cdee829
+SHA1 (patch-src_xjadeo_libsofd.c) = 5f2cd871879217ad4dfa10ee855a2fad3ae34397
