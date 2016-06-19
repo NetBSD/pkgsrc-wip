@@ -1,5 +1,5 @@
 # $NetBSD: Makefile,v 1.1 2013/11/17 01:03:27 makoto Exp $
-.include		"../../wip/nios2/Makefile.common"
+.include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-gdb-${PKG_VERSION}
 PKG_VERSION=		7.6.1
 
@@ -12,7 +12,6 @@ USE_TOOLS+=		tar makeinfo
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
 USE_GNU_CONFIGURE_HOST=	no
-#BUILD_DEFS+=		CROSSBASE	#included in ../nios2/Makefile.common
 WRKSRC=			${WRKDIR}/gdb-nios2
 
 CONFIGURE_ARGS+=	--disable-threads
@@ -32,6 +31,6 @@ do-extract:
 
 # to avoid conflict with binutils (to be fixed by more sophisticated way)
 post-install:
-	${RM}  ${DESTDIR}${CROSSBASE}/lib/libiberty.a
+	${RM}  ${DESTDIR}${PREFIX}/cross/lib/libiberty.a
 
 .include "../../mk/bsd.pkg.mk"
