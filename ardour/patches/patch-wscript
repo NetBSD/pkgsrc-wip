@@ -34,3 +34,12 @@ ALSA and PortAudio are supported on NetBSD.
          sys.exit(1)
  
      set_compiler_flags (conf, Options.options)
+@@ -1241,7 +1241,7 @@ def build(bld):
+     for i in children:
+         bld.recurse(i)
+ 
+-    bld.install_files (bld.env['CONFDIR'], 'system_config')
++    bld.install_files (os.environ['EGDIR'], 'system_config')
+ 
+     if bld.env['RUN_TESTS']:
+         bld.add_post_fun(test)

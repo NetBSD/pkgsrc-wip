@@ -125,16 +125,16 @@ PKG_SYSCONFSUBDIR=	ardour4
 OWN_DIRS=		${PKG_SYSCONFDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/export
 
-CONF_FILES+=		${EGDIR}/ardour4/ardour.menus ${PKG_SYSCONFDIR}/ardour.menus
-CONF_FILES+=		${EGDIR}/ardour4/clearlooks.rc ${PKG_SYSCONFDIR}/clearlooks.rc
-CONF_FILES+=		${EGDIR}/ardour4/dark.colors ${PKG_SYSCONFDIR}/dark.colors
-CONF_FILES+=		${EGDIR}/ardour4/default_ui_config ${PKG_SYSCONFDIR}/default_ui_config
-CONF_FILES+=		${EGDIR}/ardour4/export/CD.format ${PKG_SYSCONFDIR}/export/CD.format
-CONF_FILES+=		${EGDIR}/ardour4/mixer.bindings ${PKG_SYSCONFDIR}/mixer.bindings
-CONF_FILES+=		${EGDIR}/ardour4/mnemonic-us.bindings ${PKG_SYSCONFDIR}/mnemonic-us.bindings
-CONF_FILES+=		${EGDIR}/ardour4/step_editing.bindings ${PKG_SYSCONFDIR}/step_editing.bindings
-CONF_FILES+=		${EGDIR}/ardour4/system_config ${PKG_SYSCONFDIR}/system_config
-CONF_FILES+=		${EGDIR}/ardour4/trx.menus ${PKG_SYSCONFDIR}/trx.menus
+CONF_FILES+=		${EGDIR}/ardour.menus ${PKG_SYSCONFDIR}/ardour.menus
+CONF_FILES+=		${EGDIR}/clearlooks.rc ${PKG_SYSCONFDIR}/clearlooks.rc
+CONF_FILES+=		${EGDIR}/dark.colors ${PKG_SYSCONFDIR}/dark.colors
+CONF_FILES+=		${EGDIR}/default_ui_config ${PKG_SYSCONFDIR}/default_ui_config
+CONF_FILES+=		${EGDIR}/export/CD.format ${PKG_SYSCONFDIR}/export/CD.format
+CONF_FILES+=		${EGDIR}/mixer.bindings ${PKG_SYSCONFDIR}/mixer.bindings
+CONF_FILES+=		${EGDIR}/mnemonic-us.bindings ${PKG_SYSCONFDIR}/mnemonic-us.bindings
+CONF_FILES+=		${EGDIR}/step_editing.bindings ${PKG_SYSCONFDIR}/step_editing.bindings
+CONF_FILES+=		${EGDIR}/system_config ${PKG_SYSCONFDIR}/system_config
+CONF_FILES+=		${EGDIR}/trx.menus ${PKG_SYSCONFDIR}/trx.menus
 
 # As of NetBSD-7.99.21 pkgsrc's checks cannot open file with rare unicode characters
 CHECK_PORTABILITY_SKIP+=	libs/pbd/test/i18n_test/*.tst
@@ -161,12 +161,15 @@ pre-configure:
 		${FILESDIR}/revision.cc > ${WRKSRC}/libs/ardour/revision.cc
 
 WAF_ARGS+=	--prefix=${PREFIX}
-WAF_ARGS+=	--configdir=${EGDIR}
+WAF_ARGS+=	--configdir=${PKG_SYSCONFBASE}
 # Use dlopen(3) for the JACK library
 WAF_ARGS+=	--libjack=weak
 WAF_ARGS+=	--optimize
 # Required to build on NetBSD
 WAF_ARGS+=	--cxx11
+
+# Sources are patched to install configuration into EGDIR instead of CONFDIR
+WAF_ENV+=	EGDIR=${EGDIR}
 
 WAF_REPLACE_EXECUTABLE=	no
 

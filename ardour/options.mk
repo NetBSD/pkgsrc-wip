@@ -9,6 +9,12 @@ PLIST_VARS=		alsa jack dummy
 
 .include "../../mk/bsd.options.mk"
 
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Linux"
+.  if !empty(PKG_OPTIONS:Malsa)
+.    error ALSA is required on this platform
+.  endif
+.endif
+
 .if !empty(PKG_OPTIONS:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
 ARDOUR_BACKENDS_ALSA=	yes
