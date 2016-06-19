@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/ardour4
-bin/ardour4-export
+${PLIST.dummy}bin/ardour4-export
 etc/ardour4/ardour.menus
 etc/ardour4/clearlooks.rc
 etc/ardour4/dark.colors
@@ -17,12 +17,17 @@ lib/ardour4/LV2/reasonablesynth.lv2/reasonablesynth.ttl
 lib/ardour4/${PKGNAME}.0
 lib/ardour4/ardour-exec-wrapper
 lib/ardour4/ardour-vst-scanner
-lib/ardour4/backends/libdummy_audiobackend.so
+${PLIST.alsa}lib/ardour4/backends/libalsa_audiobackend.so
+${PLIST.dummy}lib/ardour4/backends/libdummy_audiobackend.so
+${PLIST.jack}lib/ardour4/backends/libjack_audiobackend.so
 lib/ardour4/engines/libclearlooks.so
 lib/ardour4/h${PKGNAME}.0
 lib/ardour4/libardour.so
 lib/ardour4/libardour.so.3
 lib/ardour4/libardour.so.3.0.0
+${PLIST.alsa}lib/ardour4/libardouralsautil.so
+${PLIST.alsa}lib/ardour4/libardouralsautil.so.0
+${PLIST.alsa}lib/ardour4/libardouralsautil.so.0.0.1
 lib/ardour4/libardourcp.so
 lib/ardour4/libaudiographer.so
 lib/ardour4/libaudiographer.so.0
@@ -58,8 +63,8 @@ lib/ardour4/surfaces/libardour_faderport.so
 lib/ardour4/surfaces/libardour_generic_midi.so
 lib/ardour4/surfaces/libardour_mcp.so
 lib/ardour4/surfaces/libardour_osc.so
-lib/ardour4/utils/ardour-util.sh
-lib/ardour4/utils/ardour4-export
+${PLIST.dummy}lib/ardour4/utils/ardour-util.sh
+${PLIST.dummy}lib/ardour4/utils/ardour4-export
 lib/ardour4/vamp/libardourvampplugins.so
 lib/ardour4/vamp/libardourvampplugins.so.0
 lib/ardour4/vamp/libardourvampplugins.so.0.0.0

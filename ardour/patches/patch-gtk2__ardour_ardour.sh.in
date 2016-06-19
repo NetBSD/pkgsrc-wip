@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix ldd(1) parsing on NetBSD.
+
 --- gtk2_ardour/ardour.sh.in.orig	2016-02-19 01:28:56.000000000 +0000
 +++ gtk2_ardour/ardour.sh.in
 @@ -23,7 +23,7 @@ fi

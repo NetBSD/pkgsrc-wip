@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add support for NetBSD:
+- ppoll() on Linux is close to pollts(2) on NetBSD
+- NetBSD ships with <sys/endian.h>, not <endian.h>
+
 --- libs/backends/alsa/zita-alsa-pcmi.cc.orig	2016-02-19 01:28:56.000000000 +0000
 +++ libs/backends/alsa/zita-alsa-pcmi.cc
 @@ -18,7 +18,11 @@

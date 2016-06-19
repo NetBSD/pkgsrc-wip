@@ -1,20 +1,25 @@
 $NetBSD$
 
+ALSA and PortAudio are supported on NetBSD.
+
 --- wscript.orig	2016-02-19 01:28:56.000000000 +0000
 +++ wscript
-@@ -1,4 +1,4 @@
--#!/usr/bin/env python
-+#!/usr/pkg/bin/python2.7
- from waflib.extras import autowaf as autowaf
- from waflib import Options
- import os
+@@ -924,7 +924,7 @@ def configure(conf):
+                   okmsg = 'ok',
+                   errmsg = 'too old\nPlease install boost version 1.39 or higher.')
+ 
+-    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw':
++    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw' or sys.platform.startswith('netbsd'):
+         autowaf.check_pkg(conf, 'alsa', uselib_store='ALSA')
+ 
+     autowaf.check_pkg(conf, 'glib-2.0', uselib_store='GLIB', atleast_version='2.28', mandatory=True)
 @@ -1093,16 +1093,16 @@ int main () { return 0; }
      conf.env['BUILD_PABACKEND'] = any('portaudio' in b for b in backends)
      conf.env['BUILD_CORECRAPPITA'] = any('coreaudio' in b for b in backends)
  
 -    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw' and conf.env['BUILD_PABACKEND']:
 -        print("PortAudio Backend is not for Linux")
-+    if re.search ("linux", sys.platform) != None and not sys.platform.startswith('netbsd') and Options.options.dist_target != 'mingw' and conf.env['BUILD_PABACKEND']:
++    if (re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd')) and Options.options.dist_target != 'mingw' and conf.env['BUILD_PABACKEND']:
 +        print("PortAudio Backend is not for Linux/NetBSD")
          sys.exit(1)
  

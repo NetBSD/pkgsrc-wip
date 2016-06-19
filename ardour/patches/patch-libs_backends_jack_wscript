@@ -1,6 +1,8 @@
 $NetBSD$
 
---- libs/backends/jack/wscript.orig	2016-06-19 10:00:50.209065188 +0000
+ALSA is supported on NetBSD
+
+--- libs/backends/jack/wscript.orig	2016-02-19 01:28:56.000000000 +0000
 +++ libs/backends/jack/wscript
 @@ -110,9 +110,8 @@ def build(bld):
  
@@ -11,6 +13,6 @@ $NetBSD$
      #
  
 -    if re.search ("linux", sys.platform) != None:
-+    if re.search ("linux", sys.platform) != None and not sys.platform.startswith('netbsd'):
++    if re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd'):
         obj.uselib += [ 'ALSA' ]
 -

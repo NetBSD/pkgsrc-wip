@@ -1,5 +1,7 @@
 $NetBSD$
 
+Detect free space on NetBSD.
+
 --- libs/ardour/session_state.cc.orig	2016-02-19 01:28:56.000000000 +0000
 +++ libs/ardour/session_state.cc
 @@ -2180,7 +2180,7 @@ Session::save_template (string template_

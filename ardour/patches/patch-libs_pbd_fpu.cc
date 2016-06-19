@@ -1,5 +1,7 @@
 $NetBSD$
 
+There are problems with C++11 heavy code on NetBSD when building against _XOPEN_SOURCE.
+
 --- libs/pbd/fpu.cc.orig	2016-02-19 01:28:56.000000000 +0000
 +++ libs/pbd/fpu.cc
 @@ -19,7 +19,9 @@
