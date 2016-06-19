@@ -29,4 +29,4 @@ PLIST.dummy=	yes
 
 ARDOUR_BACKENDS=	${ARDOUR_BACKENDS_ALSA:Dalsa},${ARDOUR_BACKENDS_JACK:Djack},${ARDOUR_BACKENDS_DUMMY:Ddummy}
 
-WAF_ARGS+=      --with-backends=${ARDOUR_BACKENDS:S/,$//}
+WAF_ARGS+=      --with-backends=${ARDOUR_BACKENDS:C/,+$//}
