@@ -12,9 +12,7 @@ MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	http://www.cygwin.com/
 COMMENT=	GNU binutils ported to Win32/Cygwin environment
 
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_CROSSBASE=		yes
 USE_TOOLS+=		pax
 INFO_FILES=		yes
 
