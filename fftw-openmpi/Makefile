@@ -11,21 +11,24 @@ HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
 LICENSE=		gnu-gpl-v2
 
-INSTALLATION_PREFIX=	$(BUILDLINK_PREFIX.openmpi:Q)
-
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-HAS_CONFIGURE=		yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/openmpi
 
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
 INFO_FILES=		yes
 
 TEST_TARGET=		check
 
-CONFIGURE_ARGS+=	--enable-shared \
-			--enable-mpi \
-			--prefix=$(INSTALLATION_PREFIX)
+# for finding openmpi
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.openmpi}/openmpi/include
+LDFLAGS+=		-L${BUILDLINK_PREFIX.openmpi}/openmpi/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openmpi}/openmpi/lib
+
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-mpi
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,5 +37,6 @@ USE_TOOLS+=		perl
 TEST_MAKE_FLAGS+=	MPIRUN=$(MPI_PREFIX)/bin/mpirun
 .endif
 
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../wip/openmpi163/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

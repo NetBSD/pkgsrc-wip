@@ -13,7 +13,6 @@ COMMENT=	Open source MPI-2 implementation
 
 MPI_SUBPREFIX=		openmpi
 MPI_PREFIX=		$(LOCALBASE)/$(MPI_SUBPREFIX)
-INSTALLATION_PREFIX=	$(MPI_PREFIX)
 
 .include "../../mk/bsd.prefs.mk"
 

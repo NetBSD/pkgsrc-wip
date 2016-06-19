@@ -11,27 +11,30 @@ HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
 LICENSE=		gnu-gpl-v2
 
-INSTALLATION_PREFIX=	$(BUILDLINK_PREFIX.mpich:Q)
-
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-HAS_CONFIGURE=		yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/mpich
 
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
 INFO_FILES=		yes
 
 TEST_TARGET=		check
 
-CONFIGURE_ARGS+=	--enable-shared \
-			--enable-mpi \
-			--prefix=$(INSTALLATION_PREFIX)
+# for finding mpi-ch
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.mpich}/mpich/include
+LDFLAGS+=		-L${BUILDLINK_PREFIX.mpich}/mpich/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mpich}/mpich/lib
+
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-mpi
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(PKGSRC_RUN_TEST) && !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 USE_TOOLS+=		perl
-TEST_MAKE_FLAGS+=	MPIRUN=$(BUILDLINK_PREFIX.mpich:Q)/bin/mpirun
+TEST_MAKE_FLAGS+=	MPIRUN=$(PREFIX}/mpich/bin/mpirun
 .endif
 
 .include "../../wip/mpi-ch/buildlink3.mk"

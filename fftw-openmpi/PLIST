@@ -1,14 +1,14 @@
 @comment $NetBSD: PLIST,v 1.2 2013/03/08 06:24:49 asau Exp $
-bin/fftw-wisdom
-bin/fftw-wisdom-to-conf
-include/fftw3.f
-include/fftw3.f03
-include/fftw3.h
-include/fftw3-mpi.f03
-include/fftw3-mpi.h
-lib/libfftw3.la
-lib/libfftw3_mpi.la
-lib/pkgconfig/fftw3.pc
-share/info/fftw3.info
-share/man/man1/fftw-wisdom.1
-share/man/man1/fftw-wisdom-to-conf.1
+openmpi/bin/fftw-wisdom
+openmpi/bin/fftw-wisdom-to-conf
+openmpi/include/fftw3-mpi.f03
+openmpi/include/fftw3-mpi.h
+openmpi/include/fftw3.f
+openmpi/include/fftw3.f03
+openmpi/include/fftw3.h
+openmpi/info/fftw3.info
+openmpi/lib/libfftw3.la
+openmpi/lib/libfftw3_mpi.la
+openmpi/lib/pkgconfig/fftw3.pc
+openmpi/man/man1/fftw-wisdom-to-conf.1
+openmpi/man/man1/fftw-wisdom.1

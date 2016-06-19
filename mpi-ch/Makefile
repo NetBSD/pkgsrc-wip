@@ -8,13 +8,12 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mpich.org/
 COMMENT=	Open source MPI, MPI-2, and MPI-3 implementation from Univ. of Chicago
 
-MAKE_JOBS_SAFE=		no
-
 DEPENDS+=	bash-[0-9]*:../../shells/bash
+
+MAKE_JOBS_SAFE=		no
 
 MPI_SUBPREFIX=		mpich
 MPI_PREFIX=		$(LOCALBASE)/$(MPI_SUBPREFIX)
-INSTALLATION_PREFIX=	$(MPI_PREFIX)
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -37,11 +36,11 @@ USE_TOOLS+=		perl:run
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	$(MPI_PREFIX)/lib
 
-CONF_FILES+=		share/$(PKGBASE)/examples/mpicc.conf \
+CONF_FILES+=		${MPI_SUBPREFIX}/share/$(PKGBASE)/examples/mpicc.conf \
 			$(PKG_SYSCONFDIR)/mpicc.conf
-CONF_FILES+=		share/$(PKGBASE)/examples/mpicxx.conf \
+CONF_FILES+=		${MPI_SUBPREFIX}/share/$(PKGBASE)/examples/mpicxx.conf \
 			$(PKG_SYSCONFDIR)/mpicxx.conf
-CONF_FILES+=		share/$(PKGBASE)/examples/mpif77.conf \
+CONF_FILES+=		${MPI_SUBPREFIX}/share/$(PKGBASE)/examples/mpif77.conf \
 			$(PKG_SYSCONFDIR)/mpif77.conf
 
 # FreeBSD 6 hack:
