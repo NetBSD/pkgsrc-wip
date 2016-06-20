@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install configuration into a custom EGDIR.
+
 --- gtk2_ardour/wscript.orig	2016-02-19 01:28:56.000000000 +0000
 +++ gtk2_ardour/wscript
 @@ -651,13 +651,13 @@ def build(bld):
