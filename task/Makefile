@@ -2,20 +2,22 @@
 #
 
 DISTNAME=	task-2.5.1
+PKGNAME=	${DISTNAME:S/task/taskwarrior/}
 CATEGORIES=	time
 MASTER_SITES=	http://www.taskwarrior.org/download/
 
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://taskwarrior.org/projects/show/taskwarrior/
-COMMENT=	Task is an open source, command-line, TODO list manager
+COMMENT=	Open source, command-line, TODO list manager
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-#GCC_REQD+=	4.7
+# C++11 required
+GCC_REQD+=	4.8
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.task
+PKG_OPTIONS_VAR=	PKG_OPTIONS.taskwarrior
 PKG_SUPPORTED_OPTIONS=	lua
 PKG_SUGGESTED_OPTIONS=	lua
 
