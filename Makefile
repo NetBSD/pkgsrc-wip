@@ -3910,7 +3910,6 @@ SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tamago-tsunagi
 SUBDIR+=	tardy
-SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
 SUBDIR+=	taskserver
