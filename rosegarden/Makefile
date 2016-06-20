@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	bin lib/X11/app-defaults
 .include "../../audio/jack/buildlink3.mk"
 .include "../../wip/dssi/buildlink3.mk"
 #.include "../../wip/libdssialsacompat/buildlink3.mk"
-#.include "../../wip/liblo/buildlink3.mk"
+#.include "../../audio/liblo/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../textproc/liblrdf/buildlink3.mk"

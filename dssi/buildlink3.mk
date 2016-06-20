@@ -22,7 +22,7 @@ pkgbase := dssi
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../wip/libdssialsacompat/buildlink3.mk"
-.include "../../wip/liblo/buildlink3.mk"
+.include "../../audio/liblo/buildlink3.mk"
 .endif # DSSI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-dssi

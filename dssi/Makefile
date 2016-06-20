@@ -31,5 +31,5 @@ BUILDLINK_TRANSFORM=	rm:-ldl
 .include "../../audio/ladspa/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libdssialsacompat=	full
 .include "../../wip/libdssialsacompat/buildlink3.mk"
-.include "../../wip/liblo/buildlink3.mk"
+.include "../../audio/liblo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

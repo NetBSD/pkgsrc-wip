@@ -192,7 +192,7 @@ WAF_REPLACE_EXECUTABLE=	no
 .include "../../audio/rubberband/buildlink3.mk"
 .include "../../audio/vamp-plugin-sdk/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../wip/liblo/buildlink3.mk"
+.include "../../audio/liblo/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
