@@ -48,6 +48,7 @@ lib/munin/plugins/hp2000_
 lib/munin/plugins/http_loadtime
 lib/munin/plugins/ifx_concurrent_sessions_
 lib/munin/plugins/ipac-ng
+lib/munin/plugins/ipmi_
 lib/munin/plugins/ipmi_sensor_
 lib/munin/plugins/ircu
 lib/munin/plugins/loggrep
