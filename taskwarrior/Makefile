@@ -17,20 +17,12 @@ USE_LANGUAGES=	c c++
 # C++11 required
 GCC_REQD+=	4.8
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.taskwarrior
-PKG_SUPPORTED_OPTIONS=	lua
-PKG_SUGGESTED_OPTIONS=	lua
-
-.include "../../mk/bsd.options.mk"
-
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 CMAKE_ARGS+=	-DTASK_MAN1DIR=${PREFIX}/${PKGMANDIR}/man1
 CMAKE_ARGS+=	-DTASK_MAN5DIR=${PREFIX}/${PKGMANDIR}/man5
 
-.if !empty(PKG_OPTIONS:Mlua)
-.include "../../lang/lua/buildlink3.mk"
-.endif
+.include "options.mk"
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
