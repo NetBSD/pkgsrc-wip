@@ -5,7 +5,7 @@ DISTNAME=	liblo-0.28
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=liblo/}
 
-MAINTAINER=	jfranz@bsdprojects.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://liblo.sourceforge.net/
 COMMENT=	Lightweight Open Sound Control implementation
 LICENSE=	gnu-lgpl-v2.1
