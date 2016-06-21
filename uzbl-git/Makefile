@@ -16,8 +16,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake pkg-config
 
-MAKE_JOBS_SAFE=	no
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=		yes
 .include "../../lang/python/extension.mk"
