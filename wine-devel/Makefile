@@ -20,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
-USE_TOOLS+=		bison flex gmake mktemp msgfmt
+USE_TOOLS+=		bison flex gmake mktemp msgfmt autoconf
 FLEX_REQD=		2.5.33
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests
@@ -63,6 +63,9 @@ PLIST.oss=		yes
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 .include "options.mk"
 

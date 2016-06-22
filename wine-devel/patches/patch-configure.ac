@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add check for pthread_mutexattr_setprotocol.
+
+--- configure.ac.orig	2016-06-10 14:04:01.000000000 +0000
++++ configure.ac
+@@ -1452,6 +1452,8 @@ then
+         [AC_CHECK_HEADERS(pulse/pulseaudio.h,
+             [AC_CHECK_LIB(pulse, pa_stream_is_corked,[:],[PULSE_LIBS=""],[$PULSE_LIBS])],
+             [PULSE_LIBS=""])])
++	AC_CHECK_FUNCS(pthread_mutexattr_setprotocol, [HAVE_PTHREAD_MUTEXATTR_SETPROTOCOL=1],
++	[HAVE_PTHREAD_MUTEXATTR_SETPROTOCOL=0])
+ fi
+ WINE_NOTICE_WITH(pulse, [test -z "$PULSE_LIBS"],
+         [libpulse ${notice_platform}development files not found or too old, Pulse won't be supported.],
