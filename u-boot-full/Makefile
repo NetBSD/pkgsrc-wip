@@ -11,7 +11,7 @@ HOMEPAGE=	ftp://ftp.denx.de/pub/u-boot/
 COMMENT=	Das U-Boot -- the Universal Boot Loader
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 USE_LANGUAGES=	c c++
 
@@ -22,7 +22,7 @@ AUTO_MKDIRS=	yes
 .include "../../mk/bsd.prefs.mk"
 
 post-patch:
-.if ${OPSYS:tl} == "netbsd"
+.if ${OPSYS} == "NetBSD"
 	cp ${FILESDIR}/stdarg.h ${WRKSRC}/include/
 	cp ${FILESDIR}/stddef.h ${WRKSRC}/include/
 	cp ${FILESDIR}/stdbool.h ${WRKSRC}/include/
