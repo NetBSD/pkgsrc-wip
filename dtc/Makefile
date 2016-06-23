@@ -9,7 +9,7 @@ HOMEPAGE=	http://devicetree.org/
 COMMENT=	Device Tree Compiler (dtc)
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake bison
+USE_TOOLS+=	gmake bison
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
