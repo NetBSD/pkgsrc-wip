@@ -2,7 +2,7 @@ $NetBSD: patch-contrib_inventory_openstack.py,v 1.0 2016/02/24 22:43:12 tty Exp 
 
 Fix hardcoded path.
 
---- contrib/inventory/openstack.py.orig	2016-02-24 13:04:04.000000000 +0000
+--- contrib/inventory/openstack.py.orig	2016-05-25 13:00:55.000000000 +0000
 +++ contrib/inventory/openstack.py
 @@ -26,7 +26,7 @@
  #  - Current directory
@@ -17,8 +17,8 @@ Fix hardcoded path.
  import shade
  import shade.inventory
  
--CONFIG_FILES = ['/etc/ansible/openstack.yaml']
-+CONFIG_FILES = ['@PKG_SYSCONFDIR@/ansible/openstack.yaml']
+-CONFIG_FILES = ['/etc/ansible/openstack.yaml', '/etc/ansible/openstack.yml']
++CONFIG_FILES = ['@PKG_SYSCONFDIR@/ansible/openstack.yaml', '@PKG_SYSCONFDIR@/ansible/openstack.yml']
  
  
  def get_groups_from_server(server_vars, namegroup=True):

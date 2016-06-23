@@ -2,10 +2,10 @@ $NetBSD: patch-lib_ansible_cli_galaxy.py,v 1.0 2016/02/24 22:44:30 tty Exp $
 
 Fix hardcoded path.
 
---- lib/ansible/cli/galaxy.py.orig	2016-02-24 13:57:06.000000000 +0000
+--- lib/ansible/cli/galaxy.py.orig	2016-05-25 13:00:55.000000000 +0000
 +++ lib/ansible/cli/galaxy.py
-@@ -122,7 +122,7 @@ class GalaxyCLI(CLI):
-             self.parser.add_option('-p', '--roles-path', dest='roles_path', default=C.DEFAULT_ROLES_PATH,
+@@ -127,7 +127,7 @@ class GalaxyCLI(CLI):
+                                    type=str, default=C.DEFAULT_ROLES_PATH,
                  help='The path to the directory containing your roles. '
                       'The default is the roles_path configured in your '
 -                     'ansible.cfg file (/etc/ansible/roles if not configured)')
