@@ -50,6 +50,8 @@ SUBST_FILES.fix-paths=		i3-dmenu-desktop
 SUBST_SED.fix-paths+=		-e 's,/usr/local/share,${PREFIX}/share,g'
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+# for i3-save-tree
+DEPENDS+=	p5-AnyEvent-I3-[0-9]*:../../wip/p5-AnyEvent-I3
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
