@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/04/06 17:22:22 nros Exp $
 
 DISTNAME=	AnyEvent-I3-0.16
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MS/MSTPLBG/
 
