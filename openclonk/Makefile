@@ -15,7 +15,7 @@ LICENSE=	isc
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-GCC_REQD=	4.9
+GCC_REQD+=	4.9
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
