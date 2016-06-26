@@ -3541,6 +3541,7 @@ SUBDIR+=	pythoncad
 SUBDIR+=	pythontoolkit
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
+SUBDIR+=	q
 SUBDIR+=	qbittorrent
 SUBDIR+=	qcad
 SUBDIR+=	qcdloop
