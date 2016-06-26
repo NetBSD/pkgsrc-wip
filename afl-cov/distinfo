@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (afl-cov-0.6.tar.gz) = d71c3bdb6c5ebc3a5613412ea3c977c06db3dbd3
+RMD160 (afl-cov-0.6.tar.gz) = cbbdaafa62101fb0fd21c6a0a16bc402d121d65b
+SHA512 (afl-cov-0.6.tar.gz) = c59cce1b6d075adf716c57d5c818b1056814a3aeebc547bf5eca7f36941c8f21bcfd3497deefeebd916f015fda5aaad136bc29e0af86f4eb32f1287b426ae332
+Size (afl-cov-0.6.tar.gz) = 654998 bytes
