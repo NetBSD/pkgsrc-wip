@@ -1,1 +1,8 @@
 This is a skeleton which does not yet build.
+
+* figure out why qt5 is required but the README.md says that 4.7+ is
+  sufficient
+
+* package gnuradio-osmosdr
+
+* [find/fix next problems]
