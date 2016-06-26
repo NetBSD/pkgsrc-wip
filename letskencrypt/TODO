@@ -1,0 +1,6 @@
+Fails to build on NetBSD with:
+revokeproc.c:144: undefined reference to `sandbox_before'
+revokeproc.c:144: undefined reference to `sandbox_before'
+revokeproc.c:149: undefined reference to `dropfs'
+revokeproc.c:151: undefined reference to `dropprivs'
+revokeproc.c:153: undefined reference to `sandbox_after'
