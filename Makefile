@@ -451,6 +451,7 @@ SUBDIR+=	darcs-to-git
 SUBDIR+=	darkcoin
 SUBDIR+=	dart
 SUBDIR+=	dasm
+SUBDIR+=	datamash
 SUBDIR+=	datapipe
 SUBDIR+=	dates
 SUBDIR+=	dateutils

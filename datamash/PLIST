@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/datamash
+info/datamash.info
+man/man1/datamash.1
+share/datamash/bash-completion.d/datamash
+share/datamash/examples/genes.txt
+share/datamash/examples/genes_h.txt
+share/datamash/examples/readme.md
+share/datamash/examples/scores.txt
+share/datamash/examples/scores_h.txt
