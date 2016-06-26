@@ -966,6 +966,7 @@ SUBDIR+=	gpak
 SUBDIR+=	gplbasic
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
+SUBDIR+=	gqrx
 SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	gradle
