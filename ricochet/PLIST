@@ -1,2 +1,5 @@
 @comment $NetBSD$
 bin/ricochet
+share/applications/ricochet.desktop
+share/icons/hicolor/48x48/apps/ricochet.png
+share/icons/hicolor/scalable/apps/ricochet.svg
