@@ -187,6 +187,7 @@ share/davical/po/sv.values
 share/davical/scripts/archive-old-events.php
 share/davical/scripts/build-always.sh
 share/davical/scripts/cron-sync-ldap.php
+share/davical/scripts/davical-cli
 share/davical/scripts/export_calendar.php
 share/davical/scripts/load_calendar.php
 share/davical/scripts/po/rebuild-translations.sh

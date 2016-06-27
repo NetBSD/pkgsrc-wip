@@ -68,6 +68,7 @@ CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
 			${APACHE_USER} ${APACHE_GROUP} 0640
 
 REPLACE_PERL=		dba/update-davical-database
+REPLACE_PERL+=		scripts/davical-cli
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
