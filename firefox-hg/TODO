@@ -4,12 +4,4 @@ At runtime, it warns about:
 [Child 28642] ###!!! ABORT: Aborting on channel error.: file /scratch/wip/firefox-hg/work/mozilla/ipc/glue/MessageChannel.cpp, line 2046
 [Child 28642] ###!!! ABORT: Aborting on channel error.: file /scratch/wip/firefox-hg/work/mozilla/ipc/glue/MessageChannel.cpp, line 2046
 
-
-and on exit, it leaves behind two core files:
-
-firefox.core
-plugin-container.core
-
-on NetBSD-7.99.28/amd64
-
 -- wiz 20160430
