@@ -11,6 +11,7 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info_
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = ba581d0edc7cfa4a43e6f0dc8a75a914fef18ea9
 SHA1 (patch-modules_libpref_init_all.js) = 73dbe0c7001f9bfadb6ff7b50c340f7d135cb42a
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_platform_macros.h) = 4abe361ffcab9f923e9ae7b9bdc0dfdb9ddce820
+SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = a8cbba3cea0987291aed3646196b3a9c72dc0342
 SHA1 (patch-toolkit_library_moz.build) = 3f65d42f4e8a3a11c9411a7b1b7315a410fc051f
 SHA1 (patch-xg) = 2b472858270a109c2b317bb08698c12717174510
 SHA1 (patch-xl) = 337960ba518f1f142b45ae91d3f122ee5e0c9da3
