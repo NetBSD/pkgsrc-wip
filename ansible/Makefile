@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.9 2016/02/24 22:32:59 tty Exp $
 
 DISTNAME=	ansible-2.1.0.0
-#PKGREVISION=	1
+PKGREVISION=	1
 #PKGNAME=	${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/
