@@ -1962,6 +1962,7 @@ SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	necpp-git
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nemo
+SUBDIR+=	neomutt
 SUBDIR+=	neovim
 SUBDIR+=	nestopia
 SUBDIR+=	nestopia-rpi
