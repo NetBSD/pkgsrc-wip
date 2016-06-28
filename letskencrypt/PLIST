@@ -1,1 +1,3 @@
 @comment $NetBSD$
+bin/letskencrypt
+man/man1/letskencrypt.1
