@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-discosrv-0.13.7
+PKGNAME=	syncthing-discosrv-0.13.9
 CATEGORIES=	local
-DISTNAME=	syncthing-0.13.7
+DISTNAME=	syncthing-0.13.9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ COMMENT=	Syncthing discovery server
 LICENSE=	mit
 
 EXTRACT_USING=		bsdtar
-WRKSRC=			${WRKDIR}/syncthing-0.13.7
+WRKSRC=			${WRKDIR}/syncthing-0.13.9
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 NO_CONFIGURE=		yes
 USE_LANGUAGES= 		c # and go
