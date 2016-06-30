@@ -16,10 +16,10 @@ LICENSE=		gnu-gpl-v2
 # do that..)
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.4.1:../../chat/py-xmpppy
 
-PYTHON_VERSIONED_DEPENDENCIES=	dns
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xmpppy
 
 # Fifth paragraph - all build definitions that describe things used by
@@ -81,6 +81,5 @@ SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

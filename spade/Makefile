@@ -10,6 +10,7 @@ HOMEPAGE=	http://code.google.com/p/spade2/
 COMMENT=	SPADE is an agent platform based on the XMPP/Jabber technology
 LICENSE=	gnu-lgpl-v2.1
 
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.01:../../math/py-gmpy
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
@@ -20,7 +21,6 @@ DEPENDS+=	jython>=2.5.1:../../wip/jython
 WRKSRC=	${WRKDIR}/spade
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONED_DEPENDENCIES=	dns
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-m2crypto, py-twisted
 
@@ -45,5 +45,4 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

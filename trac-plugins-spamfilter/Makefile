@@ -12,8 +12,7 @@ HOMEPAGE=	http://trac.edgewall.org/wiki/SpamFilter
 COMMENT=	Spam Filter plugin for Trac
 
 DEPENDS+=	trac>=0.12:../../www/trac
-
-PYTHON_VERSIONED_DEPENDENCIES=	dns
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.3.2dev/9935
 
@@ -30,7 +29,6 @@ PRIVILEGED_STAGES+=	clean
 post-extract:
 	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"

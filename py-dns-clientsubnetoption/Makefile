@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 # note the LICENSE document is missing part of final sentence
 # I reported this to them.
 
-PYTHON_VERSIONED_DEPENDENCIES+=	dns
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 EGG_NAME=	clientsubnetoption-${PKGVERSION_NOREV}
 
 .include "../../lang/python/egg.mk"
