@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (preload-0.6.4.tar.gz) = 2313a7f9c8713fbc0efaf649b29dbe36ed0b3945
+RMD160 (preload-0.6.4.tar.gz) = 93de2090e7d5c21cdb5e74531dab480117f95c36
+SHA512 (preload-0.6.4.tar.gz) = ffb533059b8c9cd171b0d02d52fc8c9bc45284fb16e12b9698ab74345d0e4f66cee61e17922074f7fbfaa90db254e473f815718fc72a689bb55346fcda9e823c
+Size (preload-0.6.4.tar.gz) = 140750 bytes
+SHA1 (patch-configure) = 16560fbfa008e2d118f09a2296059b6a0e69a7dd
+SHA1 (patch-preload.init.in) = 2f73b46366a9133ee244eeedd3f6b012a62333b5
+SHA1 (patch-src_Makefile.in) = f7614afeaedb9672120025e3d10fdefcadf0f6c4
+SHA1 (patch-src_gen.preload.conf.sh) = 1f34459dd35f09e01498af4d6ca03e072416307e
+SHA1 (patch-src_readahead.c) = e381c44ceec51f40cb5cd21a58f38c44ccaf27d1

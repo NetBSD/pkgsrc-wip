@@ -1,0 +1,3 @@
+* Tweak autoconf and readahead.c to use readahead if it’s available.
+* Allow custom VARBASE.
+* Try to make makefiles compatible with BSD make.

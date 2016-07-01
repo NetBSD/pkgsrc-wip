@@ -1,0 +1,11 @@
+@comment $NetBSD$
+man/man8/preload.8
+sbin/preload
+share/doc/${PKGNAME}/index.txt
+share/doc/${PKGNAME}/proposal.txt
+share/examples/preload/init.d/preload
+share/examples/preload/logrotate.d/preload
+share/examples/preload/preload.conf
+share/examples/preload/sysconfig/preload
+var/lib/preload/preload.state
+var/log/preload.log

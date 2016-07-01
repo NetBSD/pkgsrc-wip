@@ -1,0 +1,24 @@
+$NetBSD$
+
+Require posix_fadvise instead of readahead for greater portability.
+
+--- configure.orig	2009-04-15 21:49:29.000000000 +0000
++++ configure
+@@ -5735,7 +5735,7 @@ fi
+ 
+ # Checks for library functions and headers.
+ 
+-for ac_func in readahead
++for ac_func in posix_fadvise
+ do
+ as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { $as_echo "$as_me:$LINENO: checking for $ac_func" >&5
+@@ -5833,7 +5833,7 @@ as_val=`eval 'as_val=${'$as_ac_var'}
+ _ACEOF
+ 
+ else
+-  echo "*** readahead(2) system call required but not found.";
++  echo "*** posix_fadvise(2) system call required but not found.";
+ 			   echo "*** get yourself a recent Linux and glibc";
+ 			   echo "*** Exiting";
+ 			   exit 1;

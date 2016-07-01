@@ -2546,6 +2546,7 @@ SUBDIR+=	povray
 SUBDIR+=	ppp
 SUBDIR+=	ppr
 SUBDIR+=	praat
+SUBDIR+=	preload
 SUBDIR+=	premake
 SUBDIR+=	premake4
 SUBDIR+=	premake5
