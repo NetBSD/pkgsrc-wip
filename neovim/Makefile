@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2015/06/18 20:53:01 jonthn Exp $
 
-PKGNAME=	neovim-0.1.3
+PKGNAME=	neovim-0.1.5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 
@@ -18,10 +18,10 @@ LUA_VERSIONS_ACCEPTED=51
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
-USE_TOOLS+=	gmake
 
 DEPENDS+=       ${LUA_PKGPREFIX}-MessagePack-[0-9]*:../../wip/lua-MessagePack
 DEPENDS+=       ${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
+DEPENDS+=       ${LUA_PKGPREFIX}-mpack-[0-9]*:../../wip/lua-mpack
 
 .include "options.mk"
 

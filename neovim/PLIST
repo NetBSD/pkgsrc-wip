@@ -46,6 +46,7 @@ share/nvim/runtime/autoload/csscomplete.vim
 share/nvim/runtime/autoload/decada.vim
 share/nvim/runtime/autoload/gnat.vim
 share/nvim/runtime/autoload/gzip.vim
+share/nvim/runtime/autoload/health.vim
 share/nvim/runtime/autoload/htmlcomplete.vim
 share/nvim/runtime/autoload/javascriptcomplete.vim
 share/nvim/runtime/autoload/man.vim
@@ -185,7 +186,6 @@ share/nvim/runtime/doc/fold.txt
 share/nvim/runtime/doc/ft_ada.txt
 share/nvim/runtime/doc/ft_sql.txt
 share/nvim/runtime/doc/gui.txt
-share/nvim/runtime/doc/gui_w32.txt
 share/nvim/runtime/doc/hebrew.txt
 share/nvim/runtime/doc/help.txt
 share/nvim/runtime/doc/helphelp.txt
@@ -206,10 +206,6 @@ share/nvim/runtime/doc/mlang.txt
 share/nvim/runtime/doc/motion.txt
 share/nvim/runtime/doc/msgpack_rpc.txt
 share/nvim/runtime/doc/nvim.txt
-share/nvim/runtime/doc/nvim_clipboard.txt
-share/nvim/runtime/doc/nvim_from_vim.txt
-share/nvim/runtime/doc/nvim_provider.txt
-share/nvim/runtime/doc/nvim_python.txt
 share/nvim/runtime/doc/nvim_terminal_emulator.txt
 share/nvim/runtime/doc/options.txt
 share/nvim/runtime/doc/os_win32.txt
@@ -225,6 +221,7 @@ share/nvim/runtime/doc/pi_tutor.txt
 share/nvim/runtime/doc/pi_vimball.txt
 share/nvim/runtime/doc/pi_zip.txt
 share/nvim/runtime/doc/print.txt
+share/nvim/runtime/doc/provider.txt
 share/nvim/runtime/doc/quickfix.txt
 share/nvim/runtime/doc/quickref.txt
 share/nvim/runtime/doc/quotes.txt
@@ -301,6 +298,7 @@ share/nvim/runtime/ftplugin/automake.vim
 share/nvim/runtime/ftplugin/bdf.vim
 share/nvim/runtime/ftplugin/bst.vim
 share/nvim/runtime/ftplugin/btm.vim
+share/nvim/runtime/ftplugin/bzl.vim
 share/nvim/runtime/ftplugin/c.vim
 share/nvim/runtime/ftplugin/calendar.vim
 share/nvim/runtime/ftplugin/cdrdaoconf.vim
@@ -356,6 +354,8 @@ share/nvim/runtime/ftplugin/haml.vim
 share/nvim/runtime/ftplugin/hamster.vim
 share/nvim/runtime/ftplugin/haskell.vim
 share/nvim/runtime/ftplugin/help.vim
+share/nvim/runtime/ftplugin/hgcommit.vim
+share/nvim/runtime/ftplugin/hog.vim
 share/nvim/runtime/ftplugin/hostconf.vim
 share/nvim/runtime/ftplugin/hostsaccess.vim
 share/nvim/runtime/ftplugin/html.vim
@@ -457,6 +457,7 @@ share/nvim/runtime/ftplugin/sshconfig.vim
 share/nvim/runtime/ftplugin/sudoers.vim
 share/nvim/runtime/ftplugin/svg.vim
 share/nvim/runtime/ftplugin/sysctl.vim
+share/nvim/runtime/ftplugin/systemd.vim
 share/nvim/runtime/ftplugin/systemverilog.vim
 share/nvim/runtime/ftplugin/tcl.vim
 share/nvim/runtime/ftplugin/tcsh.vim
@@ -496,6 +497,7 @@ share/nvim/runtime/indent/automake.vim
 share/nvim/runtime/indent/awk.vim
 share/nvim/runtime/indent/bib.vim
 share/nvim/runtime/indent/bst.vim
+share/nvim/runtime/indent/bzl.vim
 share/nvim/runtime/indent/c.vim
 share/nvim/runtime/indent/cdl.vim
 share/nvim/runtime/indent/ch.vim
@@ -529,6 +531,7 @@ share/nvim/runtime/indent/gitolite.vim
 share/nvim/runtime/indent/go.vim
 share/nvim/runtime/indent/haml.vim
 share/nvim/runtime/indent/hamster.vim
+share/nvim/runtime/indent/hog.vim
 share/nvim/runtime/indent/html.vim
 share/nvim/runtime/indent/htmldjango.vim
 share/nvim/runtime/indent/idlang.vim
@@ -579,6 +582,7 @@ share/nvim/runtime/indent/sh.vim
 share/nvim/runtime/indent/sml.vim
 share/nvim/runtime/indent/sql.vim
 share/nvim/runtime/indent/sqlanywhere.vim
+share/nvim/runtime/indent/systemd.vim
 share/nvim/runtime/indent/systemverilog.vim
 share/nvim/runtime/indent/tcl.vim
 share/nvim/runtime/indent/tcsh.vim
@@ -682,6 +686,7 @@ share/nvim/runtime/menu.vim
 share/nvim/runtime/mswin.vim
 share/nvim/runtime/optwin.vim
 share/nvim/runtime/plugin/gzip.vim
+share/nvim/runtime/plugin/health.vim
 share/nvim/runtime/plugin/man.vim
 share/nvim/runtime/plugin/matchit.vim
 share/nvim/runtime/plugin/matchparen.vim
@@ -778,6 +783,7 @@ share/nvim/runtime/syntax/bindzone.vim
 share/nvim/runtime/syntax/blank.vim
 share/nvim/runtime/syntax/bst.vim
 share/nvim/runtime/syntax/btm.vim
+share/nvim/runtime/syntax/bzl.vim
 share/nvim/runtime/syntax/bzr.vim
 share/nvim/runtime/syntax/c.vim
 share/nvim/runtime/syntax/cabal.vim
@@ -1221,6 +1227,7 @@ share/nvim/runtime/syntax/syncolor.vim
 share/nvim/runtime/syntax/synload.vim
 share/nvim/runtime/syntax/syntax.vim
 share/nvim/runtime/syntax/sysctl.vim
+share/nvim/runtime/syntax/systemd.vim
 share/nvim/runtime/syntax/systemverilog.vim
 share/nvim/runtime/syntax/tads.vim
 share/nvim/runtime/syntax/tags.vim
