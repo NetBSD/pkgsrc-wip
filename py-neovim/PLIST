@@ -65,3 +65,6 @@ ${PYSITELIB}/neovim/plugin/host.pyo
 ${PYSITELIB}/neovim/plugin/script_host.py
 ${PYSITELIB}/neovim/plugin/script_host.pyc
 ${PYSITELIB}/neovim/plugin/script_host.pyo
+${PYSITELIB}/neovim/util.py
+${PYSITELIB}/neovim/util.pyc
+${PYSITELIB}/neovim/util.pyo
