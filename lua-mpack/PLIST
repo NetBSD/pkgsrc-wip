@@ -1,0 +1,2 @@
+@comment $NetBSD$
+${LUA_CDIR}/mpack.so
