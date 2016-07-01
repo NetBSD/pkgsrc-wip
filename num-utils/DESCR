@@ -1,0 +1,4 @@
+Description - num-utils are a set of utilities that aim to provide
+the numeric equivilent of the GNU text-utils.  These programs do
+operations on numbers such as filtering, adding, averaging and so on.
+They help expand and complete the shell vocabulary.
