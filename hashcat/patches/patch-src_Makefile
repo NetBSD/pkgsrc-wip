@@ -1,0 +1,52 @@
+$NetBSD$
+
+Add minimal NetBSD support.
+
+--- src/Makefile.orig	2016-06-28 09:47:32.000000000 +0000
++++ src/Makefile
+@@ -17,7 +17,7 @@ UNAME                    := $(shell unam
+ # we need to strip the windows version number to be able to build hashcat on cygwin hosts
+ UNAME                    := $(patsubst CYGWIN_NT-%,CYGWIN_NT-,$(UNAME))
+ 
+-ifeq (,$(filter $(UNAME),Linux Darwin CYGWIN_NT-))
++ifeq (,$(filter $(UNAME),Linux Darwin NetBSD CYGWIN_NT-))
+ $(error "! Your Operating System ($(UNAME)) is not supported by $(PROG_NAME) Makefile")
+ endif
+ 
+@@ -87,7 +87,7 @@ VERSION_TAG              := $(shell test
+ ## Compiler flags
+ ##
+ 
+-CFLAGS                   := -pipe -W -Wall -std=c99 -Iinclude/ -IOpenCL/ -I$(OPENCL_HEADERS_KHRONOS)/
++CFLAGS                   := -pipe -W -Wall -std=c99 -Iinclude/ -IOpenCL/ -I$(OPENCL_HEADERS_KHRONOS)/ -I../include
+ 
+ ifndef DEBUG
+ CFLAGS                   += -O2
+@@ -122,6 +122,16 @@ LFLAGS_NATIVE            := -lpthread -l
+ CFLAGS_NATIVE            += -DHAVE_HWMON
+ endif # linux
+ 
++ifeq ($(UNAME),NetBSD)
++CFLAGS_NATIVE            := -D_POSIX
++ifndef DEBUG
++CFLAGS_NATIVE            += -s
++endif
++CFLAGS_NATIVE            += $(CFLAGS)
++LFLAGS_NATIVE            := -lpthread
++CFLAGS_NATIVE            += -DHAVE_HWMON
++endif # linux
++
+ ##
+ ## Cross compilation target
+ ##
+@@ -150,9 +160,9 @@ LFLAGS_CROSS_WIN         := -lpsapi
+ ## Objects
+ ##
+ 
++ifeq ($(UNAME),Linux)
+ NATIVE_OBJS              := obj/ext_OpenCL.NATIVE.o obj/shared.NATIVE.o obj/rp_kernel_on_cpu.NATIVE.o
+ 
+-ifeq ($(UNAME),Linux)
+ NATIVE_OBJS              += obj/ext_ADL.NATIVE.o
+ NATIVE_OBJS              += obj/ext_nvapi.NATIVE.o
+ NATIVE_OBJS              += obj/ext_nvml.NATIVE.o

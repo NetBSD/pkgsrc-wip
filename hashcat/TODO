@@ -1,0 +1,1 @@
+Does not build on NetBSD due to missing OpenCL support.
