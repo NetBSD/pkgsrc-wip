@@ -18,14 +18,22 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
-CONFIGURE_ARGS+=	--target=x86_64-w64-mingw32	\
-			  --enable-targets=x86_64-w64-mingw32,i686-w64-mingw32
+CONFIGURE_ARGS+=	--target=x86_64-w64-mingw32
+CONFIGURE_ARGS+=	--enable-targets=x86_64-w64-mingw32,i686-w64-mingw32
+CONFIGURE_ARGS+=	--disable-werror
+CONFIGURE_ARGS+=	--disable-debug
 
 CONFIGURE_DIRS=		../build
 BUILD_DIRS=		../build
 INSTALL_DIRS=		../build
 
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=		-fbracket-depth=1024
+.endif
 
 post-extract:
 	mkdir ${WRKDIR}/build
