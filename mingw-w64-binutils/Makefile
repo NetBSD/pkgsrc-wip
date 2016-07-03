@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2012/10/03 15:09:55 asau Exp $
 
-DISTNAME=	binutils-2.20.1
+DISTNAME=	binutils-2.26
 PKGNAME=	mingw-w64-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/binutils/
@@ -28,12 +27,6 @@ BUILD_DIRS=		../build
 INSTALL_DIRS=		../build
 
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=		-fbracket-depth=1024
-.endif
 
 post-extract:
 	mkdir ${WRKDIR}/build
