@@ -61,7 +61,7 @@ SUBST_CLASSES+=		texinfo
 SUBST_MESSAGE.texinfo=	Unknown problem fix at the stage of generating doc/tc.texinfo
 SUBST_STAGE.texinfo=	post-configure
 SUBST_FILES.texinfo=	doc/Makefile
-SUBST_SED.texinfo=	'-e /if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLAGS\) $$\(srcdir\)/s/ -I ./tc.texinfo/'
+SUBST_SED.texinfo=	'-e /if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLAGS\) -I $$\(srcdir\)/s/ -I ./tc.texinfo/'
 
 .include "options.mk"
 
