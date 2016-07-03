@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.4 2014/07/03 03:11:31 schmonz Exp $
+
+SHA1 (rustc-1.9.0-src.tar.gz) = a698496c5244bbb5b2332b70f239f5af93752cce
+RMD160 (rustc-1.9.0-src.tar.gz) = 8ff733691ae3df739d780a7236186f4ca3e0d442
+SHA512 (rustc-1.9.0-src.tar.gz) = bb23d529daaea17cd6358057ad7c219b1bf2206331a9813520f9e3a519698f6d274a6c25f579dab9e8e48fe0c6e51e7eb473885cb1fb65128e715e06778b62f7
+Size (rustc-1.9.0-src.tar.gz) = 25859714 bytes
+SHA1 (patch-src_llvm_utils_buildit_build__llvm) = ec9bd4a28541a8cfd0a33cae2ae5d097116ac4de

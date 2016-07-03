@@ -3685,6 +3685,7 @@ SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runit
 SUBDIR+=	rust
+SUBDIR+=	rustc
 SUBDIR+=	rygel
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
