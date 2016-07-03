@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2012/03/05 13:19:08 fhajny Exp $
-
-SHA1 (rsyslog-6.2.0.tar.gz) = caa20926efe0ff7291fc85c3242fb41c85f2949a
-RMD160 (rsyslog-6.2.0.tar.gz) = c0cd552cb4b1caf2d7dc43c40808469c66d901e1
-Size (rsyslog-6.2.0.tar.gz) = 2411196 bytes
-SHA1 (patch-configure) = 72cacf67241f86ff6ff799761e735d9db423aab2
-SHA1 (patch-plugins_imsolaris_imsolaris.c) = 2e11ba13223345ee03a1a387ef8ec27d021a1c53
-SHA1 (patch-rsyslog.conf) = 7b9583631c42c4bfb646fd7ecf0070ffbf219530

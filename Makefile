@@ -3653,7 +3653,6 @@ SUBDIR+=	rsound
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
-SUBDIR+=	rsyslog6
 SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtl-sdr-git
