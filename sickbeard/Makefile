@@ -1,8 +1,11 @@
 # $NetBSD$
 
 DISTNAME=	sickbeard-507
+PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	-https://github.com/midgetspy/Sick-Beard/archive/build-${PKGVERSION}.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=midgetspy/}
+GITHUB_PROJECT=	Sick-Beard
+GITHUB_TAG=	build-${PKGVERSION_NOREV}
 
 MAINTAINER=	js@heap.zone
 HOMEPAGE=	http://sickbeard.com/
@@ -14,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-WRKSRC=		${WRKDIR}/Sick-Beard-build-${PKGVERSION}
+WRKSRC=		${WRKDIR}/Sick-Beard-build-${PKGVERSION_NOREV}
 NO_BUILD=	yes
 USE_TOOLS=	pax
 
@@ -38,18 +41,18 @@ SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_STAGE.paths=	post-patch
 
+INSTALLATION_DIRS += lib/sickbeard ${PKG_SYSCONFDIR}/sickbeard
+
 post-extract:
 	${CP} ${FILESDIR}/sickbeard.sh ${WRKSRC}/sickbeard.sh
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/lib/sickbeard
 .for i in ${INSTALL_FILES} ${INSTALL_DIRS}
 	cd ${WRKSRC} && pax -rw -pmp ${i} ${DESTDIR}${PREFIX}/lib/sickbeard/
 .endfor
 	${RM} -rf ${DESTDIR}${PREFIX}/lib/sickbeard/lib/tvdb_api/tests
 	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL} -m 755 ${WRKSRC}/sickbeard.sh ${DESTDIR}${PREFIX}/bin/sickbeard
-	${MKDIR} ${PKG_SYSCONFDIR}/sickbeard
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

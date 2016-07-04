@@ -605,3 +605,4 @@ lib/sickbeard/sickbeard/versionChecker.py
 lib/sickbeard/sickbeard/webapi.py
 lib/sickbeard/sickbeard/webserve.py
 lib/sickbeard/sickbeard/webserveInit.py
+@pkgdir etc/sickbeard
