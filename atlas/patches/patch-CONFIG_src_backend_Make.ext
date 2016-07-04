@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- CONFIG/src/backend/Make.ext.orig	2014-07-10 16:22:02.000000000 +0000
 +++ CONFIG/src/backend/Make.ext
 @@ -23,7 +23,7 @@ basf = $(basdRCW)/atlconf.base

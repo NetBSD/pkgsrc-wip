@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- CONFIG/src/Makefile.orig	2014-07-10 16:22:02.000000000 +0000
 +++ CONFIG/src/Makefile
 @@ -381,6 +381,11 @@ IRunArchInfo_freebsd: xarchinfo_freebsd

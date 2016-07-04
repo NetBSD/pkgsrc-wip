@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://math-atlas.sourceforge.net/
 COMMENT=	Automatically Tuned Linear Algebra Software
+LICENSE=	modified-bsd
 
 CONFLICTS=	lapack-[0-9]*
 
@@ -24,10 +25,10 @@ USE_TOOLS+=	gmake
 .include "../../mk/bsd.prefs.mk"
 
 ATLAS_CPUBITS=			32
-.for P in ${LP64PLATFORMS}
-.if ${MACHINE_PLATFORM:M${P}}
+.for p in ${LP64PLATFORMS}
+.  if ${MACHINE_PLATFORM:M${p}}
 ATLAS_CPUBITS=			64
-.endif
+.  endif
 .endfor
 
 CONFIGURE_DIRS=		obj
