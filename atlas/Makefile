@@ -1,9 +1,7 @@
 # $NetBSD: Makefile,v 1.12 2013/09/14 23:46:50 asau Exp $
 
-ATLAS_VERSION=	3.11.11
-
-DISTNAME=	atlas${ATLAS_VERSION}
-PKGNAME=	atlas-${ATLAS_VERSION}
+DISTNAME=	atlas3.10.2
+PKGNAME=	${DISTNAME:C/atlas/atlas-/}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=math-atlas/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,15 +17,19 @@ HAS_CONFIGURE=	yes
 
 MAKE_JOBS_SAFE=	no
 
+PKGSRC_FORTRAN=	gfortran
 USE_LANGUAGES=	c fortran77
+USE_TOOLS+=	gmake
 
 CONFIGURE_DIRS=		obj
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--incdir=${DESTDIR}${PREFIX}/include
 CONFIGURE_ARGS+=	--libdir=${DESTDIR}${PREFIX}/lib
 CONFIGURE_ARGS+=	-b 32
+CONFIGURE_ARGS+=	-t ${MAKE_JOBS}
 
 TEST_TARGET=	check
+BUILD_TAGET=	build shared ptshared
 
 pre-configure:
 	${RUN} cd ${WRKSRC}; mkdir ${CONFIGURE_DIRS}

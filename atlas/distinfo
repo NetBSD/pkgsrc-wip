@@ -1,7 +1,11 @@
 $NetBSD: distinfo,v 1.7 2013/09/14 23:46:50 asau Exp $
 
-SHA1 (atlas3.11.11.tar.bz2) = 8e26a499606762464b70d09df6915fa9b9e3d687
-RMD160 (atlas3.11.11.tar.bz2) = 6b9895301becdf1ef35c7951c40672119256fe78
-Size (atlas3.11.11.tar.bz2) = 5238482 bytes
+SHA1 (atlas3.10.2.tar.bz2) = f1f883e201d70ff60d54a2af016b4afc83a2499b
+RMD160 (atlas3.10.2.tar.bz2) = af4099e8bb65f5d771618ca1580f5bc8210f83fe
+SHA512 (atlas3.10.2.tar.bz2) = 9fe04cfa1f89449db047d1a4659a656964d13117c783cbbe43344eb32555736f037d9cd30c5ae1514c08ad5b8949a3982d7fe102d707ddb62288e76b2607fbb1
+Size (atlas3.10.2.tar.bz2) = 4904923 bytes
+SHA1 (patch-CONFIG_src_Makefile) = b62d96b61d6bd16c9a214076e9260f4f6064e04a
+SHA1 (patch-CONFIG_src_backend_Make.ext) = 9b3140112d4db1646446f564a9efb1d6a72ea457
+SHA1 (patch-CONFIG_src_backend_archinfo__netbsd.c) = f611ef725eb8e6ff1c8fe24c15f2d2d3d25c2cbc
 SHA1 (patch-aa) = 1cfe4f7ad66ec006a2d6ee9186d1d91b9d656c44
 SHA1 (patch-ab) = 45a535eb378de2cfcc4cf64e5f76d0ae0fc28a0f

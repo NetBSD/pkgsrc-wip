@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- CONFIG/src/Makefile.orig	2014-07-10 16:22:02.000000000 +0000
++++ CONFIG/src/Makefile
+@@ -381,6 +381,11 @@ IRunArchInfo_freebsd: xarchinfo_freebsd
+ 	$(MAKE) $(atlrun) atldir=$(mydir) exe=xarchinfo_freebsd args="$(args)" \
+                 redir=config0.out
+ 	- cat config0.out
++IRunArchInfo_freebsd: xarchinfo_netbsd
++	- rm -f config0.out
++	$(MAKE) $(atlrun) atldir=$(mydir) exe=xarchinfo_netbsd args="$(args)" \
++                redir=config0.out
++	- cat config0.out
+ IRunArchInfo_linux: xarchinfo_linux
+ 	- rm -f config0.out
+ 	$(MAKE) $(atlrun) atldir=$(mydir) exe=xarchinfo_linux args="$(args)" \
+@@ -412,6 +417,9 @@ xarchinfo_sunos : $(SRCdir)/backend/arch
+ xarchinfo_freebsd : $(SRCdir)/backend/archinfo_freebsd.c atlconf_misc_BE.o
+ 	$(CC) $(CCFLAGS) -o xarchinfo_freebsd $(SRCdir)/backend/archinfo_freebsd.c \
+               atlconf_misc_BE.o
++xarchinfo_netbsd : $(SRCdir)/backend/archinfo_netbsd.c atlconf_misc_BE.o
++	$(CC) $(CCFLAGS) -o xarchinfo_netbsd $(SRCdir)/backend/archinfo_netbsd.c \
++              atlconf_misc_BE.o
+ xarchinfo_linux : $(SRCdir)/backend/archinfo_linux.c atlconf_misc_BE.o
+ 	$(CC) $(CCFLAGS) -o xarchinfo_linux $(SRCdir)/backend/archinfo_linux.c \
+               atlconf_misc_BE.o
