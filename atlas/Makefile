@@ -21,11 +21,22 @@ PKGSRC_FORTRAN=	gfortran
 USE_LANGUAGES=	c fortran77
 USE_TOOLS+=	gmake
 
+.include "../../mk/bsd.prefs.mk"
+
+ATLAS_CPUBITS=			32
+.for P in ${LP64PLATFORMS}
+.warning hello
+.if ${MACHINE_PLATFORM:M${P}}
+.warning MAM!
+ATLAS_CPUBITS=			64
+.endif
+.endfor
+
 CONFIGURE_DIRS=		obj
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--incdir=${DESTDIR}${PREFIX}/include
 CONFIGURE_ARGS+=	--libdir=${DESTDIR}${PREFIX}/lib
-CONFIGURE_ARGS+=	-b 32
+CONFIGURE_ARGS+=	-b ${ATLAS_CPUBITS}
 CONFIGURE_ARGS+=	-t ${MAKE_JOBS}
 
 TEST_TARGET=	check
@@ -33,5 +44,10 @@ BUILD_TAGET=	build shared ptshared
 
 pre-configure:
 	${RUN} cd ${WRKSRC}; mkdir ${CONFIGURE_DIRS}
+
+# Ignore messages from ./xprobe_comp like:
+#   cd /tmp/pkgsrc-tmp/wip/atlas/work/ATLAS/obj ; ./xprobe_comp -v 0 -o atlconf.txt -O 13 -A 27 -Si nof77 0 -V 480   -b 32 -d b /tmp/pkgsrc-tmp/wip/atlas/work/ATLAS/obj > config1.out
+#   find:: not found
+# Atlas iterates over all paths from PATH and executes find(1)
 
 .include "../../mk/bsd.pkg.mk"

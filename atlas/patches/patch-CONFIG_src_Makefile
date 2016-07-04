@@ -6,7 +6,7 @@ $NetBSD$
  	$(MAKE) $(atlrun) atldir=$(mydir) exe=xarchinfo_freebsd args="$(args)" \
                  redir=config0.out
  	- cat config0.out
-+IRunArchInfo_freebsd: xarchinfo_netbsd
++IRunArchInfo_netbsd: xarchinfo_netbsd
 +	- rm -f config0.out
 +	$(MAKE) $(atlrun) atldir=$(mydir) exe=xarchinfo_netbsd args="$(args)" \
 +                redir=config0.out

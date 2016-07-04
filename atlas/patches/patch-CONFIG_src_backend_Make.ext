@@ -2,6 +2,15 @@ $NetBSD$
 
 --- CONFIG/src/backend/Make.ext.orig	2014-07-10 16:22:02.000000000 +0000
 +++ CONFIG/src/backend/Make.ext
+@@ -23,7 +23,7 @@ basf = $(basdRCW)/atlconf.base
+ basA = $(basdRCW)/atlarch.base
+ 
+ 
+-files = archinfo_aix.c archinfo_freebsd.c archinfo_irix.c archinfo_linux.c \
++files = archinfo_aix.c archinfo_freebsd.c archinfo_netbsd.c archinfo_irix.c archinfo_linux.c \
+         archinfo_sfu.c archinfo_sunos.c archinfo_win.c archinfo_x86.c \
+         c2cmaster.c c2cslave.c comptestC.c comptestF.f cpuid.S f2cintC.c \
+         f2cintF.f f2cnameC.c f2cnameF.f f2cstrC.c f2cstrF.f flibchkC.c \
 @@ -137,6 +137,8 @@ archinfo_linux.c : $(basA)
  	$(extC) -b $(basA) -o archinfo_linux.c rout=archinfo_linux
  archinfo_freebsd.c : $(basA)

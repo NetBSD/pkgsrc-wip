@@ -1,6 +1,6 @@
 $NetBSD$
 
---- CONFIG/src/backend/archinfo_netbsd.c.orig	2016-07-04 21:48:40.614798806 +0000
+--- CONFIG/src/backend/archinfo_netbsd.c.orig	2016-07-04 21:52:43.983232504 +0000
 +++ CONFIG/src/backend/archinfo_netbsd.c
 @@ -0,0 +1,279 @@
 +#include "atlconf.h"
