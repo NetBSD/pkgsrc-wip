@@ -1,0 +1,4 @@
+The next release (after 1.9.0) will change the bootstrapping
+procedure. Stage0 snapshot will no longer be required, which
+will simplify packaging. It is probably a good idea to wait
+for the release or to package one of the beta versions.

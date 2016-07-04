@@ -1,14 +1,7 @@
 $NetBSD: distinfo,v 1.4 2014/07/03 03:11:31 schmonz Exp $
 
-SHA1 (rust-0.11.0.tar.gz) = f849e16e03b474143c575503ae82da7577a2170f
-RMD160 (rust-0.11.0.tar.gz) = 09f2fd0f5da3a7851b1984602d2acd0304764618
-Size (rust-0.11.0.tar.gz) = 21555837 bytes
-SHA1 (patch-configure) = b61fe8c9fc5fdebadb4b00f114a74afefb479c04
-SHA1 (patch-mk_platform.mk) = 54dfb3f51829afd030ad5dced69f8f3b4272e9f3
-SHA1 (patch-mk_rt.mk) = 346efd7fe59130c3ac3ebaabb999ecd81beb5ae8
-SHA1 (patch-src_jemalloc_config.guess) = 27045502d2fb9ee824fb297df7901acd67583bd9
-SHA1 (patch-src_jemalloc_configure) = fc620c770fefe7e50da62ab7170562aa30513b5d
-SHA1 (patch-src_libbacktrace_config.guess) = dbcb072c90fa3f492d153b52e74847b2dd3115bb
-SHA1 (patch-src_llvm_autoconf_config.guess) = a38f7019c24d7523d2eab7baf7122f4a021484e7
-SHA1 (patch-src_llvm_unittests_ADT_TripleTest.cpp) = 62d10c18a11f939e9121a0e36fdfc285841fe00f
+SHA1 (rustc-nightly-src.tar.gz) = 5f3ceb435c88e6e35215c96caac0f5830dd99b12
+RMD160 (rustc-nightly-src.tar.gz) = a196af452e34b02717650c77a76261ad0212d9bf
+SHA512 (rustc-nightly-src.tar.gz) = f62d66b522922194f7f0d845ae2d706171e838cb0579b1b1f56dc877a39fe8660f6c0c28987ce69e2733708599f9c7d257d0da48241849bc5b12cb0c74a489ef
+Size (rustc-nightly-src.tar.gz) = 26026047 bytes
 SHA1 (patch-src_llvm_utils_buildit_build__llvm) = 05a49ef5249ca610948fa9f7359de04c8a79c1e7

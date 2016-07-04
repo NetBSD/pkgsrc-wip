@@ -1,13 +1,17 @@
 # $NetBSD: Makefile,v 1.5 2014/07/30 13:33:55 schmonz Exp $
 
-DISTNAME=	rust-0.11.0
+PKGNAME=	rust-${VER}
+DISTNAME=	rustc-nightly-src
 CATEGORIES=	lang
-MASTER_SITES=	http://static.rust-lang.org/dist/
+MASTER_SITES=	http://static.rust-lang.org/dist/2016-06-24/
+VER=		1.11.0-dev-nightly20160624
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rust-lang.org/
 COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
+
+WRKSRC=	${WRKDIR}/rustc-nightly
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
