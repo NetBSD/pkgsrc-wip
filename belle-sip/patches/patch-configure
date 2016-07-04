@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- configure.orig	2015-11-02 13:36:49.000000000 +0000
++++ configure
+@@ -16822,7 +16822,7 @@ else
+   foo=bar
+ fi
+ 
+-if test "${libresolv_have_res_get_servers}${resolv_h_hav_res_ndestroy}" == "yesyes" ; then
++if test "${libresolv_have_res_get_servers}${resolv_h_hav_res_ndestroy}" = "yesyes" ; then
+ 
+ $as_echo "#define HAVE_RESINIT 1" >>confdefs.h
+ 
+@@ -20250,4 +20250,3 @@ if test -n "$ac_unrecognized_opts" && te
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+-
