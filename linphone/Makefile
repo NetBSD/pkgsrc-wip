@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.38 2015/07/11 15:01:43 thomasklausner Exp $
 
-DISTNAME=	linphone-3.5.2
-PKGREVISION=	2
+DISTNAME=	linphone-3.9.1
 CATEGORIES=	net
-MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/3.5.x/sources/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/${PKGVERSION_NOREV:R}.x/sources/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
