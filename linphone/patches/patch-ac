@@ -1,12 +1,2 @@
 $NetBSD: patch-ac,v 1.7 2012/04/13 20:02:17 gschwarz Exp $
 
---- console/Makefile.in.orig	2012-04-06 20:28:35.000000000 +0200
-+++ console/Makefile.in	2012-04-06 20:28:39.000000000 +0200
-@@ -351,6 +351,7 @@
- @BUILD_CONSOLE_TRUE@		$(ORTP_LIBS) \
- @BUILD_CONSOLE_TRUE@		$(SPEEX_LIBS) \
- @BUILD_CONSOLE_TRUE@		$(OSIP_LIBS) \
-+@BUILD_CONSOLE_TRUE@		$(INTLLIBS) \
- @BUILD_CONSOLE_TRUE@		$(X11_LIBS)
- 
- 
