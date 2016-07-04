@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (rmilter/1.8.6.tar.gz) = fd728478ea3dd13c34b76a8aaae5d6797b0fd4ba
+RMD160 (rmilter/1.8.6.tar.gz) = 4e38724b198e7e59af97dbcfe10b959529943262
+SHA512 (rmilter/1.8.6.tar.gz) = 34304fd1f515cd6b5ce53e0e3ba42d6d58c41b604626afa742f22e5da1d8470b1f70d627457988d824ee3cd91d3be0591b41a1342da80440601c779e5bb65f66
+Size (rmilter/1.8.6.tar.gz) = 263883 bytes
+SHA1 (patch-src__libclamc.c) = 7a709bc8e97c3b814f11c1e033de126315322a06
+SHA1 (patch-src__libspamd.c) = 94c46415ede843b58644f03a0ff5a645f1c8e788

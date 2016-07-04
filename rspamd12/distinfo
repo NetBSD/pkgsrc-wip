@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:19 agc Exp $
+
+SHA1 (rspamd-1.2.8.tar.xz) = 751de94071afc5ece2fcb5b8a3fbdd5fae107ef3
+RMD160 (rspamd-1.2.8.tar.xz) = 1bde109c9a57f3bf39dd3a922e615fc28f8e1cd8
+SHA512 (rspamd-1.2.8.tar.xz) = 21ca76636ce1482233cb3631343e827678d07e0db21e8c0b3961a8124aba4260f2c4f1a4dc110c5689b02707951f28c2ee0e72d1e8cd5c49d9b73fbf688a6056
+Size (rspamd-1.2.8.tar.xz) = 1423888 bytes
+SHA1 (patch-CMakeLists.txt) = 4f91bbfec454891c0875c54515c5fe5deb292932
