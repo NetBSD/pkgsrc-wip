@@ -25,9 +25,7 @@ USE_TOOLS+=	gmake
 
 ATLAS_CPUBITS=			32
 .for P in ${LP64PLATFORMS}
-.warning hello
 .if ${MACHINE_PLATFORM:M${P}}
-.warning MAM!
 ATLAS_CPUBITS=			64
 .endif
 .endfor
