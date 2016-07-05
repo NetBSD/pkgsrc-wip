@@ -24,6 +24,10 @@ REPLACE_BASH+=	*
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 BUILDLINK_TRANSFORM+=		opt:-std=c++0x:-std=gnu++11
 
+# HACK
+post-install:
+	${RUN} chmod go-w ${DESTDIR}${PREFIX}/bin/*
+
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
