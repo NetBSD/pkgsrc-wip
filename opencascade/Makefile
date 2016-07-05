@@ -22,6 +22,7 @@ REPLACE_BASH+=	*
 CHECK_PORTABILITY_SKIP+=	samples/qt/*
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+# Required for proper alloca(3) support on NetBSD
 BUILDLINK_TRANSFORM+=		opt:-std=c++0x:-std=gnu++11
 
 # HACK
