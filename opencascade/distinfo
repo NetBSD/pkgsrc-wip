@@ -1,6 +1,12 @@
 $NetBSD: distinfo,v 1.1 2010/11/02 13:24:38 silasdb Exp $
 
-SHA1 (OpenCASCADE_src.tgz) = 21a177fae5fa73263517aedbe60a4ee4926156f2
-RMD160 (OpenCASCADE_src.tgz) = b71f1b9a57d9624d2f079d4f7a8090f700c6126f
-Size (OpenCASCADE_src.tgz) = 105877329 bytes
-SHA1 (patch-aa) = 06b60c0fb4f6b56e76800173b00c5c6f8c5a18c2
+SHA1 (opencascade-7.0.0.tgz) = 24982382cbf5f3ea8c181ea760282116a027165d
+RMD160 (opencascade-7.0.0.tgz) = e37d5bdcb68bc4f58610bd45dae9632b96d76a35
+SHA512 (opencascade-7.0.0.tgz) = 0c8e1a6c4a589a28e5baef10ccff1d94ad76c9e7ac827881fc7265e6f6d44d4332820034efc1f348d67663f7f508c2edc265c5e01da062c6ca4f94b1c47c2753
+Size (opencascade-7.0.0.tgz) = 220147192 bytes
+SHA1 (patch-src_DrawResources_InitEnvironment.tcl) = d9610865bf3b19c8bfd6c20ea1d34f902abbbb78
+SHA1 (patch-src_OSD_OSD__Chronometer.cxx) = 906db48e39e3081d3376ef154b2d38b98f90acb5
+SHA1 (patch-src_OSD_OSD__Host.cxx) = 0eec5970b04bbadfd721278308a223fde0d9ee1c
+SHA1 (patch-src_OSD_OSD__Path.cxx) = a0265bc1c300a5d49144c486f2e23d53dd35929d
+SHA1 (patch-src_Standard_Standard__CString.cxx) = 7fe21f256cd1ea3c3b589472a5bd8cf3d084ba6e
+SHA1 (patch-src_Standard_Standard__MMgrOpt.cxx) = 45776006b997d82a2cc9136bf49bed0022ad0efe
