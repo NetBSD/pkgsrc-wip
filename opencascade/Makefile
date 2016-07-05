@@ -13,15 +13,12 @@ COMMENT=	Software development platform for 3D CAD CAM CAE
 
 LICENSE=	gnu-lgpl-v2.1
 
-#GNU_CONFIGURE_PREFIX=	${PREFIX}/opencascade
-
-#GNU_CONFIGURE=		yes
-#USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 
-#WRKSRC=		${WRKDIR}/OpenCASCADE6.3.0/ros
 USE_LANGUAGES=	c c++
 
-.include "options.mk"
+BUILDLINK_TRANSFORM.NetBSD+=   rm:-ldl
 
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
