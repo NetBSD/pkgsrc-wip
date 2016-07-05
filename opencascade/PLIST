@@ -8570,7 +8570,6 @@ share/opencascade/resources/DrawResources/DrawTK.tcl
 share/opencascade/resources/DrawResources/FILES
 share/opencascade/resources/DrawResources/Geometry.tcl
 share/opencascade/resources/DrawResources/InitEnvironment.tcl
-share/opencascade/resources/DrawResources/InitEnvironment.tcl.orig
 share/opencascade/resources/DrawResources/Move.tcl
 share/opencascade/resources/DrawResources/OCC_logo.png
 share/opencascade/resources/DrawResources/PROFIL.tcl

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/DrawResources/InitEnvironment.tcl.orig	2016-04-04 14:58:02.000000000 +0000
 +++ src/DrawResources/InitEnvironment.tcl
 @@ -30,6 +30,8 @@ proc wokstation {} {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/OSD/OSD_Path.cxx.orig	2016-04-04 14:58:12.000000000 +0000
 +++ src/OSD/OSD_Path.cxx
 @@ -23,7 +23,7 @@

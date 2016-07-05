@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/Standard/Standard_CString.cxx.orig	2016-04-04 14:58:18.000000000 +0000
 +++ src/Standard/Standard_CString.cxx
 @@ -80,7 +80,7 @@ Standard_Integer HashCodes (const Standa
