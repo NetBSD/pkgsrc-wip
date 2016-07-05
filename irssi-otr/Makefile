@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/08/02 09:44:46 rhialto Exp $
 
 DISTNAME=		irssi-otr-1.01
+PKGREVISION=		1
 CATEGORIES=		chat
 
 MAINTAINER=		rhialto@falu.nl
@@ -12,7 +13,9 @@ GIT_REPOSITORIES=	github
 GIT_REPO.github= 	git://github.com/cryptodotis/irssi-otr.git
 GIT_MODULE.github=	irssi-otr
 # v1.01 is not tagged; use a version slightly after that.
-GIT_REVISION.github=	4ad3b7b6c85be0154ab3694fe9831796db20c4fe
+#GIT_REVISION.github=	4ad3b7b6c85be0154ab3694fe9831796db20c4fe
+# libotr >= 4.1.0 in configure.ac and spec file; Jan 12, 2015
+GIT_REVISION.github=	f75eb260c168b708873f2770d95b9a1b66144edd
 
 WRKSRC=			${WRKDIR}/${PKGBASE}
 
