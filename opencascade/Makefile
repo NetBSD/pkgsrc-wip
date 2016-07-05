@@ -21,7 +21,8 @@ REPLACE_BASH+=	adm/templates/*
 REPLACE_BASH+=	samples/qt/IESample/*
 REPLACE_BASH+=	*
 
-BUILDLINK_TRANSFORM.NetBSD+=   rm:-ldl
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+BUILDLINK_TRANSFORM+=		opt:-std=c++0x:-std=gnu++11
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
