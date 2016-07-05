@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/ltc.h
+lib/libltc.la
+lib/pkgconfig/ltc.pc
+man/man3/ltc.h.3
