@@ -14,8 +14,12 @@ COMMENT=	Software development platform for 3D CAD CAM CAE
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=		yes
-
+USE_TOOLS=	bash
 USE_LANGUAGES=	c c++
+
+REPLACE_BASH+=	adm/templates/*
+REPLACE_BASH+=	samples/qt/IESample/*
+REPLACE_BASH+=	*
 
 BUILDLINK_TRANSFORM.NetBSD+=   rm:-ldl
 
