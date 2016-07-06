@@ -22,7 +22,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-BUILD_DEPENDS+=	kBuild>=0.1.999:../../wip/kBuild-svn
+BUILD_DEPENDS+=	kbuild-[0-9]*:../../wip/kbuild
 
 USE_TOOLS+=	gtar pkg-config gmake
 

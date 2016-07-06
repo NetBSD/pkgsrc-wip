@@ -1,5 +1,5 @@
  - This wip version is purely experimental, it is on the way, not completed 
-   at all, or just started to compile by wip/kBuild-svn
+   at all, or just started to compile by wip/kbuild
     kBuild-0.1.5nb20150905 Build framework based on GNU make
 
  - This is ported from FreeBSD/ports (4.3.30)
@@ -39,4 +39,3 @@ In file included from /export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.3
  void rtPathFreeIprt(const char *pszPath, const char *pszNativePath);
       ^
 kmk: *** [/export/WRKOBJDIR/wip/virtualbox-ose/work/VirtualBox-4.3.30/out/netbsd.amd64/release/obj/RuntimeBldProg/r3/freebsd/rtProcInitExePath-freebsd.o] Error 1
-
