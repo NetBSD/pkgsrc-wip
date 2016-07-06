@@ -1724,6 +1724,7 @@ SUBDIR+=	lpdsrv
 SUBDIR+=	lrslib
 SUBDIR+=	lsw
 SUBDIR+=	lsyncd
+SUBDIR+=	ltc-tools
 SUBDIR+=	ltp
 SUBDIR+=	ltrace
 SUBDIR+=	lua-MessagePack
