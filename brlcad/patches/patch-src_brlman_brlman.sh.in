@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/brlman/brlman.sh.in.orig	2014-06-02 15:45:53.000000000 +0000
++++ src/brlman/brlman.sh.in
+@@ -43,7 +43,7 @@
+ 
+ man_file="`@BTCLSH_BIN_DIR@/brlman.tcl $@`"
+ 
+-if test "$man_file" == "Graphical mode done." ; then
++if test "$man_file" = "Graphical mode done." ; then
+   exit 0
+ fi
+ 
