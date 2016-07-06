@@ -3,9 +3,9 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.6 2015/04/20 10:01:53 thomas
 Partially revert https://bugzilla.mozilla.org/show_bug.cgi?id=791305
 to allow building against jpeg (not jpeg-turbo).
 
---- image/decoders/nsJPEGDecoder.cpp.orig	2015-04-20 02:19:51.000000000 +0000
+--- image/decoders/nsJPEGDecoder.cpp.orig	2016-07-06 07:39:37.205420975 +0000
 +++ image/decoders/nsJPEGDecoder.cpp
-@@ -23,13 +23,28 @@
+@@ -28,13 +28,28 @@
  
  extern "C" {
  #include "iccjpeg.h"
@@ -35,7 +35,7 @@ to allow building against jpeg (not jpeg-turbo).
  
  static void cmyk_convert_rgb(JSAMPROW row, JDIMENSION width);
  
-@@ -373,6 +388,7 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -366,6 +381,7 @@ nsJPEGDecoder::ReadJPEGData(const char* 
          case JCS_GRAYSCALE:
          case JCS_RGB:
          case JCS_YCbCr:
@@ -43,7 +43,7 @@ to allow building against jpeg (not jpeg-turbo).
            // if we're not color managing we can decode directly to
            // MOZ_JCS_EXT_NATIVE_ENDIAN_XRGB
            if (mCMSMode != eCMSMode_All) {
-@@ -381,6 +397,9 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -374,6 +390,9 @@ nsJPEGDecoder::ReadJPEGData(const char* 
            } else {
                mInfo.out_color_space = JCS_RGB;
            }
@@ -53,8 +53,8 @@ to allow building against jpeg (not jpeg-turbo).
            break;
          case JCS_CMYK:
          case JCS_YCCK:
-@@ -448,6 +467,15 @@ nsJPEGDecoder::WriteInternal(const char*
-       return; // I/O suspension
+@@ -448,6 +467,15 @@ nsJPEGDecoder::ReadJPEGData(const char* 
+       return Transition::ContinueUnbuffered(State::JPEG_DATA); // I/O suspension
      }
  
 +#ifndef JCS_EXTENSIONS
@@ -69,7 +69,7 @@ to allow building against jpeg (not jpeg-turbo).
      // If this is a progressive JPEG ...
      mState = mInfo.buffered_image ?
               JPEG_DECOMPRESS_PROGRESSIVE : JPEG_DECOMPRESS_SEQUENTIAL;
-@@ -629,7 +657,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
+@@ -645,7 +673,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
  
        MOZ_ASSERT(imageRow, "Should have a row buffer here");
  
@@ -81,7 +81,7 @@ to allow building against jpeg (not jpeg-turbo).
          // Special case: scanline will be directly converted into packed ARGB
          if (jpeg_read_scanlines(&mInfo, (JSAMPARRAY)&imageRow, 1) != 1) {
            *suspend = true; // suspend
-@@ -953,6 +985,282 @@ term_source (j_decompress_ptr jd)
+@@ -969,6 +1001,282 @@ term_source (j_decompress_ptr jd)
  } // namespace image
  } // namespace mozilla
  
