@@ -23,5 +23,6 @@ pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "../../x11/xcb-util/buildlink3.mk"
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
