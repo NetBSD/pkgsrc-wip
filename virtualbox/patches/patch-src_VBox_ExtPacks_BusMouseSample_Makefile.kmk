@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/VBox/ExtPacks/BusMouseSample/Makefile.kmk.orig	2016-03-04 19:28:27.000000000 +0000
++++ src/VBox/ExtPacks/BusMouseSample/Makefile.kmk
+@@ -133,6 +133,12 @@ endif
+ if1of (freebsd.x86, $(VBOX_WITH_EXTPACK_OS_ARCHS))
+  VBOX_BUSMOUSE_FILES += $(call VBOX_BUSMOUSE_FILES_MACRO,freebsd.x86,bin,so)
+ endif
++if1of (netbsd.amd64, $(VBOX_WITH_EXTPACK_OS_ARCHS))
++ VBOX_BUSMOUSE_FILES += $(call VBOX_BUSMOUSE_FILES_MACRO,netbsd.amd64,bin,so)
++endif
++if1of (netbsd.x86, $(VBOX_WITH_EXTPACK_OS_ARCHS))
++ VBOX_BUSMOUSE_FILES += $(call VBOX_BUSMOUSE_FILES_MACRO,netbsd.x86,bin,so)
++endif
+ if1of (linux.amd64, $(VBOX_WITH_EXTPACK_OS_ARCHS))
+  VBOX_BUSMOUSE_FILES += $(call VBOX_BUSMOUSE_FILES_MACRO,linux.amd64,bin,so)
+ endif
+@@ -184,4 +190,3 @@ $(VBOX_PATH_PACKAGES)/$(VBOX_BUSMOUSE_MA
+ BLDDIRS += $(VBOX_PATH_PACKAGES)/
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

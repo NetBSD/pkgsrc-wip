@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/VBox/Installer/darwin/VirtualBox/preflight.orig	2016-03-04 19:29:32.000000000 +0000
++++ src/VBox/Installer/darwin/VirtualBox/preflight
+@@ -15,7 +15,7 @@
+ set -e
+ 
+ # Check environment.
+-if [ "${INSTALLER_TEMP}x" == "x" ]; then
++if [ "${INSTALLER_TEMP}x" = "x" ]; then
+     echo "Required environment variable INSTALLER_TEMP is missing. Aborting installation."
+     exit 1;
+ fi

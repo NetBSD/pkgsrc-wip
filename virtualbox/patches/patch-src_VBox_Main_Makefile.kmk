@@ -1,0 +1,47 @@
+$NetBSD$
+
+--- src/VBox/Main/Makefile.kmk.orig	2016-03-04 19:29:35.000000000 +0000
++++ src/VBox/Main/Makefile.kmk
+@@ -444,6 +444,10 @@ VBoxSVC_SOURCES.freebsd = \
+ 	src-server/freebsd/HostHardwareFreeBSD.cpp \
+ 	src-server/HostDnsServiceResolvConf.cpp
+ 
++VBoxSVC_SOURCES.netbsd = \
++	src-server/netbsd/HostHardwareNetBSD.cpp \
++	src-server/HostDnsServiceResolvConf.cpp
++
+ 
+ ifdef VBOX_WITH_USB
+  ifdef VBOX_WITH_SYSFS_BY_DEFAULT
+@@ -460,6 +464,7 @@ ifdef VBOX_WITH_USB
+  VBoxSVC_SOURCES.solaris += src-server/solaris/USBProxyServiceSolaris.cpp
+  VBoxSVC_SOURCES.win     +=     src-server/win/USBProxyServiceWindows.cpp
+  VBoxSVC_SOURCES.freebsd += src-server/freebsd/USBProxyServiceFreeBSD.cpp
++ VBoxSVC_SOURCES.netbsd  += src-server/netbsd/USBProxyServiceNetBSD.cpp
+ endif
+ 
+ ifdef VBOX_WITH_NETFLT
+@@ -487,6 +492,7 @@ ifdef VBOX_WITH_RESOURCE_USAGE_API
+ 	src-server/Performance.cpp
+  VBoxSVC_SOURCES.darwin  +=  src-server/darwin/PerformanceDarwin.cpp
+  VBoxSVC_SOURCES.freebsd += src-server/freebsd/PerformanceFreeBSD.cpp
++ VBoxSVC_SOURCES.netbsd += src-server/netbsd/PerformanceNetBSD.cpp
+  VBoxSVC_SOURCES.linux   +=   src-server/linux/PerformanceLinux.cpp
+  VBoxSVC_SOURCES.os2     +=     src-server/os2/PerformanceOs2.cpp
+  VBoxSVC_SOURCES.solaris += src-server/solaris/PerformanceSolaris.cpp
+@@ -503,8 +509,9 @@ ifdef VBOX_WITH_HOSTNETIF_API
+  VBoxSVC_SOURCES.darwin  +=  src-server/darwin/NetIf-darwin.cpp
+  VBoxSVC_SOURCES.solaris += src-server/solaris/NetIf-solaris.cpp
+  VBoxSVC_SOURCES.freebsd += src-server/freebsd/NetIf-freebsd.cpp
++ VBoxSVC_SOURCES.netbsd  += src-server/netbsd/NetIf-netbsd.cpp
+  VBoxSVC_DEFS            += VBOX_WITH_HOSTNETIF_API
+- if1of ($(KBUILD_TARGET), linux darwin solaris freebsd)
++ if1of ($(KBUILD_TARGET), linux darwin solaris freebsd netbsd)
+   VBoxSVC_SOURCES        += src-server/generic/NetIf-generic.cpp
+  endif
+ endif
+@@ -1273,4 +1280,3 @@ testapiwrappers:: \
+ updatenls::
+ 	$(VBOX_LUPDATE) $(VBoxSVC_SOURCES) $(VBoxSVC_VBOX_HEADERS) -ts $(VBoxSVC_VBOX_TRANSLATIONS)
+ 	$(VBOX_LUPDATE) $(VBoxC_SOURCES) $(VBoxC_VBOX_HEADERS) -ts $(VBoxC_VBOX_TRANSLATIONS)
+-

@@ -1,0 +1,23 @@
+$NetBSD$
+
+--- src/VBox/HostServices/auth/Makefile.kmk.orig	2016-03-04 19:29:32.000000000 +0000
++++ src/VBox/HostServices/auth/Makefile.kmk
+@@ -28,11 +28,13 @@ VBoxAuth_TEMPLATE = VBOXR3
+ VBoxAuth_SOURCES.linux = pam/VBoxAuthPAM.c
+ VBoxAuth_SOURCES.solaris = pam/VBoxAuthPAM.c
+ VBoxAuth_SOURCES.freebsd = pam/VBoxAuthPAM.c
++VBoxAuth_SOURCES.netbsd = pam/VBoxAuthPAM.c
+ VBoxAuth_SOURCES.win = winlogon/winlogon.cpp winlogon/VBoxAuth.rc
+ VBoxAuth_SOURCES.darwin = directoryservice/directoryservice.cpp
+ VBoxAuth_LIBS.linux = $(LIB_RUNTIME) dl
+ VBoxAuth_LIBS.solaris = $(LIB_RUNTIME) dl
+ VBoxAuth_LIBS.freebsd = $(LIB_RUNTIME)
++VBoxAuth_LIBS.netbsd = $(LIB_RUNTIME)
+ VBoxAuth_LIBS.darwin = $(LIB_RUNTIME)
+ VBoxAuth_LDFLAGS.darwin = -framework DirectoryService
+ 
+@@ -62,4 +64,3 @@ VBoxAuth-sdkhdr_SOURCES = $(PATH_ROOT)/i
+ 
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

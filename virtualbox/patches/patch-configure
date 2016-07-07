@@ -1,0 +1,117 @@
+$NetBSD$
+
+--- configure.orig	2016-03-04 19:22:54.000000000 +0000
++++ configure
+@@ -51,6 +51,8 @@ case "$OS" in
+     ;;
+   freebsd)
+     ;;
++  netbsd)
++    ;;
+   sunos)
+     OS='solaris'
+     ;;
+@@ -134,19 +136,12 @@ LIBVNCSERVER="-lvncserver"
+ INCDEVMAPPER=""
+ LIBDEVMAPPER="-ldevmapper"
+ CXX_FLAGS=""
+-if [ "$OS" = "freebsd" ]; then
+-  INCCURL="-I/usr/local/include"
+-  LIBCURL="-L/usr/local/lib -lcurl"
+-  INCPULSE="-I/usr/local/include"
+-  LIBPULSE="-L/usr/local/lib"
+-  INCPNG="-I/usr/local/include"
+-  LIBPNG="-L/usr/local/lib -lpng"
+-else
+-  INCCURL=""
+-  LIBCURL="-lcurl"
+-  INCPNG=""
+-  LIBPNG="-lpng"
+-fi
++INCCURL="-I/usr/local/include"
++LIBCURL="-L/usr/local/lib -lcurl"
++INCPULSE="-I/usr/local/include"
++LIBPULSE="-L/usr/local/lib"
++INCPNG="-I/usr/local/include"
++LIBPNG="-L/usr/local/lib -lpng"
+ INCVPX=""
+ LIBVPX="-lvpx"
+ PKGCONFIG="`which_wrapper pkg-config`"
+@@ -438,7 +433,7 @@ check_gcc()
+              -o \( $cc_maj -eq 5 -a $cc_min -gt 3 \) \
+              -o $cc_maj -gt 5 ]; then
+         log_failure "gcc version $cc_maj.$cc_min found, expected gcc 3.x with x>1 or gcc 4.x with 0<x<10 or gcc 5.3"
+-        fail really
++#        fail really
+       else
+         log_success "found version $cc_ver"
+       fi
+@@ -529,6 +524,7 @@ check_open_watcom()
+     "darwin")   wc_bin="binosx";;  # ??
+     "dos")      wc_bin="binw";;
+     "freebsd")  wc_bin="binfbsd";; # ??
++    "freebsd")  wc_bin="binnbsd";; # ??
+     "linux")    wc_bin="binl";;
+     "solaris")  wc_bin="binsol";;  # ??
+     "os2")      wc_bin="binp";;
+@@ -914,7 +910,7 @@ EOF
+   [ -n "$INCZ" ] && I_INCZ=`prefix_I "$INCZ"`
+   if test_compile "$LIBZ $I_INCZ" zlib zlib; then
+     if test_execute; then
+-      echo "if1of (\$(KBUILD_TARGET),darwin freebsd haiku linux)" >> $CNF
++      echo "if1of (\$(KBUILD_TARGET),darwin freebsd netbsd haiku linux)" >> $CNF
+       cnf_append " SDK_VBOX_ZLIB_LIBS" "`strip_l "$LIBZ"`"
+       cnf_append " SDK_VBOX_ZLIB_INCS" "$INCZ"
+       echo "endif" >> $CNF
+@@ -1932,20 +1928,16 @@ extern "C" int main(void)
+ }
+ EOF
+   found=
+-# For Solaris we use libpython2.4 for compatibility with Solaris 10 and passing IPS pkg audit
+-  if [ "$OS" != "solaris" ]; then
+-    SUPPYTHONLIBS="python2.7 python2.6 python2.5 python2.4 python2.3"
+-  else
+-    SUPPYTHONLIBS="python2.4"
+-  fi
++SUPPYTHONLIBS="python2.7 python2.6 python2.5 python2.4 python2.3"
++PYTHONLIBRPATH=""
+   for p in $PYTHONDIR; do
+     for d in $SUPPYTHONLIBS; do
+       for b in lib/x86_64-linux-gnu lib/i386-linux-gnu lib64 lib/64 lib; do
+         echo "compiling the following source file:" >> $LOG
+         cat $ODIR.tmp_src.cc >> $LOG
+         echo "using the following command line:" >> $LOG
+-        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so" >> $LOG
+-        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so >> $LOG 2>&1
++        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so $PYTHONLIBRPATH" >> $LOG
++        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so $PYTHONLIBRPATH >> $LOG 2>&1
+         if [ $? -eq 0 ]; then
+           found=1
+           break
+@@ -2287,7 +2279,7 @@ EOF
+ [ $OSE          -eq 0 ] && echo "  --disable-extpack        don't build the extpack"
+ [ $WITH_DOCS    -eq 1 ] && echo "  --disable-docs           don't build the documentation"
+ [ $WITH_LIBVPX  -eq 1 ] && echo "  --disable-libvpx         don't use libvpx for video capturing"
+-[ "$OS" = "linux" -o "$OS" = "freebsd" ] && echo "  --enable-vde             enable VDE networking"
++[ "$OS" = "linux" -o "$OS" = "freebsd" -o "$OS" = "netbsd" ] && echo "  --enable-vde             enable VDE networking"
+ cat << EOF
+   --disable-udptunnel      disable UDP tunnel networking
+   --disable-devmapper      disable device mapper library access
+@@ -2744,7 +2736,7 @@ if [ $ONLY_ADDITIONS -eq 0 ]; then
+   [ $WITH_JAVA   -eq 1 ] && check_java
+ 
+   # PulseAudio
+-  if [ "$OS" = "linux" -o "$OS" = "freebsd" ]; then
++  if [ "$OS" = "linux" -o "$OS" = "freebsd" -o "$OS" = "netbsd" ]; then
+     if [ $WITH_PULSE -eq 1 ]; then
+       check_pulse
+     elif [ $WITH_PULSE -eq 0 ]; then
+@@ -2803,7 +2795,7 @@ if [ $ONLY_ADDITIONS -eq 0 -a $WITH_UDPT
+ fi
+ 
+ # VDE
+-if [ $ONLY_ADDITIONS -eq 0 -a "$OS" = "linux" -o "$OS" = "freebsd" ]; then
++if [ $ONLY_ADDITIONS -eq 0 -a "$OS" = "linux" -o "$OS" = "freebsd" -o "$OS" = "netbsd" ]; then
+   if [ $WITH_VDE -eq 1 ]; then
+     cnf_append "VBOX_WITH_VDE" "1"
+   fi

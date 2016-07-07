@@ -1,0 +1,62 @@
+$NetBSD$
+
+--- src/VBox/HostDrivers/VBoxNetFlt/Makefile.kmk.orig	2016-03-04 19:29:26.000000000 +0000
++++ src/VBox/HostDrivers/VBoxNetFlt/Makefile.kmk
+@@ -450,7 +450,7 @@ $(PATH_TARGET)/VBoxNetAdpCat.dir/VBoxNet
+ 
+ endif #ifeq ($(KBUILD_TARGET), win)
+ 
+-else if1of ($(KBUILD_TARGET), linux solaris freebsd) ## @todo merge this with the mixed case stuff.
++else if1of ($(KBUILD_TARGET), linux solaris freebsd netbsd) ## @todo merge this with the mixed case stuff.
+ #
+ # vboxnetflt(.ko/.o/) - The lower case driver.
+ # Note! On Solaris the name has to be <= 8 chars long.
+@@ -479,6 +479,7 @@ else if1of ($(KBUILD_TARGET), linux sola
+   vboxnetflt_SOURCES.linux = linux/VBoxNetFlt-linux.c
+   vboxnetflt_SOURCES.solaris = solaris/VBoxNetFlt-solaris.c
+   vboxnetflt_SOURCES.freebsd = freebsd/VBoxNetFlt-freebsd.c
++  vboxnetflt_SOURCES.netbsd = netbsd/VBoxNetFlt-netbsd.c
+   vboxnetflt_SOURCES = VBoxNetFlt.c
+   solaris/VBoxNetFlt-solaris.c_DEFS = VBOX_SVN_REV=$(VBOX_SVN_REV)
+ 
+@@ -570,5 +571,39 @@ $(PATH_OUT)/opt_netgraph.h:
+  endif
+ endif # freebsd
+ 
+-include $(FILE_KBUILD_SUB_FOOTER)
++## @todo Properly generate opt_netgraph.h
++ifeq ($(KBUILD_TARGET),netbsd)
++ vboxnetflt_DEPS.netbsd += $(PATH_OUT)/opt_netgraph.h
++$(PATH_OUT)/opt_netgraph.h:
++	echo > $(PATH_OUT)/opt_netgraph.h
++
++ #
++ # Install source files for compilation on NetBSD.
++ # files_vboxnetflt defines VBOX_VBOXNETFLT_SOURCES.
++ #
++ include $(PATH_SUB_CURRENT)/netbsd/files_vboxnetflt
++ INSTALLS += VBoxNetFlt-src
++ VBoxNetFlt-src_INST    = bin/src/vboxnetflt/
++ VBoxNetFlt-src_SOURCES = \
++	$(subst $(DQUOTE),,$(VBOX_VBOXNETFLT_SOURCES)) \
++ 	$(VBoxNetFlt-src_0_OUTDIR)/Makefile
++ VBoxNetFlt-src_CLEAN   = \
++ 	$(VBoxNetFlt-src_0_OUTDIR)/Makefile	\
+ 
++ $$(VBoxNetFlt-src_0_OUTDIR)/Makefile: \
++		$(PATH_SUB_CURRENT)/netbsd/Makefile \
++		$$(if $$(eq $$(VBoxNetFlt/netbsd/Makefile_VBOX_HARDENED),$$(VBOX_WITH_HARDENING)),,FORCE) \
++		| $$(dir $$@)
++	$(QUIET)$(RM) -f -- $@
++	$(QUIET)$(CP) -f $< $@
++ ifndef VBOX_WITH_HARDENING
++	$(QUIET)$(SED) -e "s;-DVBOX_WITH_HARDENING;;g" --output $@.tmp $@
++	${QUIET}$(MV) -f $@.tmp $@
++ endif
++ ifndef VBOX_WITH_NETFLT_VIMAGE
++	$(QUIET)$(SED) -e "s;-DVIMAGE;;g" --output $@.tmp $@
++	${QUIET}$(MV) -f $@.tmp $@
++ endif
++endif # netbsd
++
++include $(FILE_KBUILD_SUB_FOOTER)
