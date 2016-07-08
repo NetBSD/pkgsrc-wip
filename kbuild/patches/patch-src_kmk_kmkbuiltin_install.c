@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/kmk/kmkbuiltin/install.c.orig	2015-06-21 21:21:29.000000000 +0000
 +++ src/kmk/kmkbuiltin/install.c
 @@ -87,6 +87,9 @@ __FBSDID("$FreeBSD: src/usr.bin/xinstall

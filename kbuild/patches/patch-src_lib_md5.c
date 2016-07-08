@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix memset(3) call.
+
 --- src/lib/md5.c.orig	2015-06-21 21:21:25.000000000 +0000
 +++ src/lib/md5.c
 @@ -144,7 +144,7 @@ void MD5Final(unsigned char digest[16], 

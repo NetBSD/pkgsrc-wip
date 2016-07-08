@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- kBuild/header.kmk.orig	2016-04-29 00:52:38.000000000 +0000
 +++ kBuild/header.kmk
 @@ -610,10 +610,11 @@ SUFF_OBJ    := .o

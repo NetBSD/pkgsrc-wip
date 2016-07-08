@@ -1,12 +1,14 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/kmk/Makefile.kmk.orig	2015-12-22 14:58:34.000000000 +0000
 +++ src/kmk/Makefile.kmk
 @@ -107,6 +107,10 @@ kmkmissing_SOURCES.dragonfly = \
  kmkmissing_SOURCES.freebsd = \
  	glob/fnmatch.c
  
-+kmkmissing_SOURCES.freebsd = \
++kmkmissing_SOURCES.netbsd = \
 +	glob/fnmatch.c \
 +	strtofflags.c
 +

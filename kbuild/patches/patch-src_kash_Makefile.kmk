@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/kash/Makefile.kmk.orig	2015-06-21 21:21:24.000000000 +0000
 +++ src/kash/Makefile.kmk
 @@ -54,6 +54,8 @@ kash_DEFS.freebsd = \

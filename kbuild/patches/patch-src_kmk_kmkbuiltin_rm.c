@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/kmk/kmkbuiltin/rm.c.orig	2015-06-21 21:21:29.000000000 +0000
 +++ src/kmk/kmkbuiltin/rm.c
 @@ -66,6 +66,9 @@ static char sccsid[] = "@(#)rm.c	8.5 (Be

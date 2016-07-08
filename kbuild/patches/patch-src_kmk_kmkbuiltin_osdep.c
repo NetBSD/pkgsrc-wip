@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/kmk/kmkbuiltin/osdep.c.orig	2015-06-21 21:21:29.000000000 +0000
 +++ src/kmk/kmkbuiltin/osdep.c
 @@ -41,8 +41,10 @@

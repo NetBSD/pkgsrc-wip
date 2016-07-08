@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- Config.kmk.orig	2016-04-29 00:52:38.000000000 +0000
 +++ Config.kmk
 @@ -361,7 +361,7 @@ endif
