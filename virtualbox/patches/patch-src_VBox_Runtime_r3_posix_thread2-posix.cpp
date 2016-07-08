@@ -20,6 +20,15 @@ $NetBSD$
          sched_yield();
  #else
          if (!pthread_yield())
+@@ -130,7 +130,7 @@ RTDECL(bool) RTThreadYield(void)
+ #endif
+ #ifdef RT_OS_DARWIN
+     pthread_yield_np();
+-#elif defined(RT_OS_SOLARIS) || defined(RT_OS_HAIKU)
++#elif defined(RT_OS_SOLARIS) || defined(RT_OS_HAIKU) || defined(RT_OS_NETBSD)
+     sched_yield();
+ #else
+     pthread_yield();
 @@ -144,4 +144,3 @@ RTDECL(bool) RTThreadYield(void)
  #endif
      return fRc;

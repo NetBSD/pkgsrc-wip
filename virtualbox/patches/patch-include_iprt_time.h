@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- include/iprt/time.h.orig	2016-03-04 19:23:02.000000000 +0000
++++ include/iprt/time.h
+@@ -353,7 +353,11 @@ DECLINLINE(void) RTTimeSpecGetSecondsAnd
+ 
+ 
+ /* PORTME: Add struct timeval guard macro here. */
+-#if defined(RTTIME_INCL_TIMEVAL) || defined(_STRUCT_TIMEVAL) || defined(_SYS__TIMEVAL_H_) || defined(_SYS_TIME_H) || defined(_TIMEVAL) || defined(_LINUX_TIME_H)
++// HACK TO GET RTTimeSpecGetTimeval defined on NetBSD
++#if defined(RTTIME_INCL_TIMEVAL) || defined(_STRUCT_TIMEVAL) || defined(_SYS__TIMEVAL_H_) || defined(_SYS_TIME_H) || defined(_TIMEVAL) || defined(_LINUX_TIME_H) || defined(__NetBSD__)
++#if defined(__NetBSD__)
++#include <sys/time.h>
++#endif
+ /**
+  * Gets the time as POSIX timeval.
+  *
+@@ -1031,4 +1035,3 @@ RTDECL(uint64_t) RTTimeProgramStartNanoT
+ RT_C_DECLS_END
+ 
+ #endif
+-
