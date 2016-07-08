@@ -2,7 +2,7 @@
 
 DISTNAME=	LVM2.2.02.98
 PKGNAME=	${DISTNAME:S/LVM2./lvm2-/}
-CATEGORIES=	local
+CATEGORIES=	sysutils
 MASTER_SITES=	ftp://sources.redhat.com/pub/lvm2/
 EXTRACT_SUFX=	.tgz
 
