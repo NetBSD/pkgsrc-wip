@@ -102,6 +102,5 @@ do-install:
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
