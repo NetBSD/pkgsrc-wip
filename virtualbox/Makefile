@@ -30,6 +30,11 @@ USE_LANGUAGES+=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Linux"
+# Required by Linux build
+BUILD_DEPENDS+=	makeself-[0-9]*:../../archivers/makeself
+.endif
+
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Adjust paths for pkgsrc
 SUBST_STAGE.paths=	pre-configure
@@ -45,6 +50,9 @@ SUBST_SED.paths+=	-e 's!^LIBZ=.*!LIBZ="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.
 .include "../../sysutils/lvm2/buildlink3.mk"
 SUBST_SED.paths+=	-e 's!^INCDEVMAPPER=.*!INCDEVMAPPER="-I${BUILDLINK_PREFIX.lvm2}/include"!g'
 SUBST_SED.paths+=	-e 's!^LIBDEVMAPPER=.*!LIBDEVMAPPER="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.lvm2}/lib -L${BUILDLINK_PREFIX.lvm2}/lib -ldevmapper"!g'
+.include "../../sysutils/libcap/buildlink3.mk"
+SUBST_SED.paths+=	-e 's!^INCCAP=.*!INCCAP="-I${BUILDLINK_PREFIX.libcap}/include"!g'
+SUBST_SED.paths+=	-e 's!^LIBCAP=.*!LIBCAP="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libcap}/lib -L${BUILDLINK_PREFIX.libcap}/lib -lcap"!g'
 .endif
 SUBST_SED.paths+=	-e 's!^INCCURL=.*!INCCURL="-I${BUILDLINK_PREFIX.curl}/include"!g'
 SUBST_SED.paths+=	-e 's!^LIBCURL=.*!LIBCURL="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib -L${BUILDLINK_PREFIX.curl}/lib -lcurl"!g'

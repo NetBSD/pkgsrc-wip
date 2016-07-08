@@ -11,7 +11,15 @@ $NetBSD$
    sunos)
      OS='solaris'
      ;;
-@@ -134,19 +136,12 @@ LIBVNCSERVER="-lvncserver"
+@@ -116,6 +118,7 @@ MKISOFS="mkisofs"
+ INCCRYPTO=""
+ LIBCRYPTO="-lssl -lcrypto"
+ LIBPTHREAD="-lpthread"
++INCCAP=""
+ LIBCAP="-lcap"
+ GSOAP=""
+ GSOAP_IMPORT=""
+@@ -134,19 +137,12 @@ LIBVNCSERVER="-lvncserver"
  INCDEVMAPPER=""
  LIBDEVMAPPER="-ldevmapper"
  CXX_FLAGS=""
@@ -37,7 +45,7 @@ $NetBSD$
  INCVPX=""
  LIBVPX="-lvpx"
  PKGCONFIG="`which_wrapper pkg-config`"
-@@ -438,7 +433,7 @@ check_gcc()
+@@ -438,7 +434,7 @@ check_gcc()
               -o \( $cc_maj -eq 5 -a $cc_min -gt 3 \) \
               -o $cc_maj -gt 5 ]; then
          log_failure "gcc version $cc_maj.$cc_min found, expected gcc 3.x with x>1 or gcc 4.x with 0<x<10 or gcc 5.3"
@@ -46,7 +54,7 @@ $NetBSD$
        else
          log_success "found version $cc_ver"
        fi
-@@ -529,6 +524,7 @@ check_open_watcom()
+@@ -529,6 +525,7 @@ check_open_watcom()
      "darwin")   wc_bin="binosx";;  # ??
      "dos")      wc_bin="binw";;
      "freebsd")  wc_bin="binfbsd";; # ??
@@ -54,7 +62,7 @@ $NetBSD$
      "linux")    wc_bin="binl";;
      "solaris")  wc_bin="binsol";;  # ??
      "os2")      wc_bin="binp";;
-@@ -914,7 +910,7 @@ EOF
+@@ -914,7 +911,7 @@ EOF
    [ -n "$INCZ" ] && I_INCZ=`prefix_I "$INCZ"`
    if test_compile "$LIBZ $I_INCZ" zlib zlib; then
      if test_execute; then
@@ -63,7 +71,7 @@ $NetBSD$
        cnf_append " SDK_VBOX_ZLIB_LIBS" "`strip_l "$LIBZ"`"
        cnf_append " SDK_VBOX_ZLIB_INCS" "$INCZ"
        echo "endif" >> $CNF
-@@ -1723,9 +1719,9 @@ EOF
+@@ -1723,9 +1720,9 @@ EOF
    echo "compiling the following source file:" >> $LOG
    cat $ODIR.tmp_src.c >> $LOG
    echo "using the following command line:" >> $LOG
@@ -75,7 +83,16 @@ $NetBSD$
        -I$LINUX/include/generated/uapi >> $LOG 2>&1
    if [ $? -ne 0 ]; then
      echo
-@@ -1932,20 +1928,16 @@ extern "C" int main(void)
+@@ -1854,7 +1851,7 @@ extern "C" int main(void)
+   return 0;
+ }
+ EOF
+-  if test_compile $LIBCAP libcap libcap; then
++  if test_compile $INCCAP $LIBCAP libcap libcap; then
+     if test_execute; then
+       log_success "found"
+     fi
+@@ -1932,20 +1929,16 @@ extern "C" int main(void)
  }
  EOF
    found=
@@ -100,7 +117,7 @@ $NetBSD$
          if [ $? -eq 0 ]; then
            found=1
            break
-@@ -2287,7 +2279,7 @@ EOF
+@@ -2287,7 +2280,7 @@ EOF
  [ $OSE          -eq 0 ] && echo "  --disable-extpack        don't build the extpack"
  [ $WITH_DOCS    -eq 1 ] && echo "  --disable-docs           don't build the documentation"
  [ $WITH_LIBVPX  -eq 1 ] && echo "  --disable-libvpx         don't use libvpx for video capturing"
@@ -109,7 +126,7 @@ $NetBSD$
  cat << EOF
    --disable-udptunnel      disable UDP tunnel networking
    --disable-devmapper      disable device mapper library access
-@@ -2744,7 +2736,7 @@ if [ $ONLY_ADDITIONS -eq 0 ]; then
+@@ -2744,7 +2737,7 @@ if [ $ONLY_ADDITIONS -eq 0 ]; then
    [ $WITH_JAVA   -eq 1 ] && check_java
  
    # PulseAudio
@@ -118,7 +135,7 @@ $NetBSD$
      if [ $WITH_PULSE -eq 1 ]; then
        check_pulse
      elif [ $WITH_PULSE -eq 0 ]; then
-@@ -2803,7 +2795,7 @@ if [ $ONLY_ADDITIONS -eq 0 -a $WITH_UDPT
+@@ -2803,7 +2796,7 @@ if [ $ONLY_ADDITIONS -eq 0 -a $WITH_UDPT
  fi
  
  # VDE
