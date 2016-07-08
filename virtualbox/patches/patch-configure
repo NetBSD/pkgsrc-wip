@@ -63,6 +63,18 @@ $NetBSD$
        cnf_append " SDK_VBOX_ZLIB_LIBS" "`strip_l "$LIBZ"`"
        cnf_append " SDK_VBOX_ZLIB_INCS" "$INCZ"
        echo "endif" >> $CNF
+@@ -1723,9 +1719,9 @@ EOF
+   echo "compiling the following source file:" >> $LOG
+   cat $ODIR.tmp_src.c >> $LOG
+   echo "using the following command line:" >> $LOG
+-  echo "$CC -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.c -nostdinc -I$LINUX/include " \
++  echo "$CC -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.c -I$LINUX/include " \
+       "-I$LINUX/include/generated/uapi" >> $LOG
+-  $CC -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.c -nostdinc -I$LINUX/include \
++  $CC -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.c -I$LINUX/include \
+       -I$LINUX/include/generated/uapi >> $LOG 2>&1
+   if [ $? -ne 0 ]; then
+     echo
 @@ -1932,20 +1928,16 @@ extern "C" int main(void)
  }
  EOF
