@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/VBox/Runtime/r0drv/netbsd/thread-r0drv-netbsd.c.orig	2016-07-07 07:08:47.004520434 +0000
+--- src/VBox/Runtime/r0drv/netbsd/thread-r0drv-netbsd.c.orig	2016-07-08 22:38:41.522099941 +0000
 +++ src/VBox/Runtime/r0drv/netbsd/thread-r0drv-netbsd.c
 @@ -0,0 +1,181 @@
 +/*  thread-r0drv-netbsd.c $ */
@@ -51,7 +51,7 @@ $NetBSD$
 +}
 +
 +
-+static int rtR0ThreadFbsdSleepCommon(RTMSINTERVAL cMillies)
++static int rtR0ThreadNbsdSleepCommon(RTMSINTERVAL cMillies)
 +{
 +    int rc;
 +    int cTicks;
@@ -107,13 +107,13 @@ $NetBSD$
 +
 +RTDECL(int) RTThreadSleep(RTMSINTERVAL cMillies)
 +{
-+    return rtR0ThreadFbsdSleepCommon(cMillies);
++    return rtR0ThreadNbsdSleepCommon(cMillies);
 +}
 +
 +
 +RTDECL(int) RTThreadSleepNoLog(RTMSINTERVAL cMillies)
 +{
-+    return rtR0ThreadFbsdSleepCommon(cMillies);
++    return rtR0ThreadNbsdSleepCommon(cMillies);
 +}
 +
 +

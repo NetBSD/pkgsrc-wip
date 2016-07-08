@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/VBox/Installer/netbsd/Makefile.kmk.orig	2016-07-07 07:08:46.625776932 +0000
+--- src/VBox/Installer/netbsd/Makefile.kmk.orig	2016-07-08 22:38:40.777304438 +0000
 +++ src/VBox/Installer/netbsd/Makefile.kmk
 @@ -0,0 +1,338 @@
 +#  Makefile.kmk $
@@ -30,30 +30,30 @@ $NetBSD$
 +#
 +# Globals and targets.
 +#
-+VBOX_PATH_FBSD_INST_SRC      := $(PATH_SUB_CURRENT)
-+VBOX_FBSD_INST_OUT_DIR       := $(PATH_TARGET)/Installer/netbsd
-+VBOX_FBSD_INST_STAGE_DIR     := $(PATH_TARGET)/Installer/netbsd/install
-+VBOX_FBSD_DBG_PATH           := usr/lib/debug/opt/VirtualBox
-+VBOX_FBSD_PACKAGE_NAME        = VirtualBox-$(VBOX_VERSION_STRING)-r$(VBOX_SVN_REV).tbz
-+VBOX_FBSD_INST_LIB_DIR       := $(VBOX_FBSD_INST_STAGE_DIR)/lib
-+VBOX_FBSD_INST_BIN_DIR       := $(VBOX_FBSD_INST_STAGE_DIR)/bin
-+VBOX_FBSD_INST_LIBVBOX_DIR   := $(VBOX_FBSD_INST_LIB_DIR)/virtualbox
-+VBOX_FBSD_INST_SHARE_DIR     := $(VBOX_FBSD_INST_STAGE_DIR)/share
-+VBOX_FBSD_INST_SHAREAPP_DIR  := $(VBOX_FBSD_INST_SHARE_DIR)/applications
-+VBOX_FBSD_INST_SHAREICON_DIR := $(VBOX_FBSD_INST_SHARE_DIR)/pixmaps
-+VBOX_FBSD_INST_SHAREVBOX_DIR := $(VBOX_FBSD_INST_SHARE_DIR)/virtualbox
++VBOX_PATH_NBSD_INST_SRC      := $(PATH_SUB_CURRENT)
++VBOX_NBSD_INST_OUT_DIR       := $(PATH_TARGET)/Installer/netbsd
++VBOX_NBSD_INST_STAGE_DIR     := $(PATH_TARGET)/Installer/netbsd/install
++VBOX_NBSD_DBG_PATH           := usr/lib/debug/opt/VirtualBox
++VBOX_NBSD_PACKAGE_NAME        = VirtualBox-$(VBOX_VERSION_STRING)-r$(VBOX_SVN_REV).tbz
++VBOX_NBSD_INST_LIB_DIR       := $(VBOX_NBSD_INST_STAGE_DIR)/lib
++VBOX_NBSD_INST_BIN_DIR       := $(VBOX_NBSD_INST_STAGE_DIR)/bin
++VBOX_NBSD_INST_LIBVBOX_DIR   := $(VBOX_NBSD_INST_LIB_DIR)/virtualbox
++VBOX_NBSD_INST_SHARE_DIR     := $(VBOX_NBSD_INST_STAGE_DIR)/share
++VBOX_NBSD_INST_SHAREAPP_DIR  := $(VBOX_NBSD_INST_SHARE_DIR)/applications
++VBOX_NBSD_INST_SHAREICON_DIR := $(VBOX_NBSD_INST_SHARE_DIR)/pixmaps
++VBOX_NBSD_INST_SHAREVBOX_DIR := $(VBOX_NBSD_INST_SHARE_DIR)/virtualbox
 +
 +# Unset this to speed up things during makefile hacking.
-+VBOX_FBSD_INST_DEP_ON_MAKEFILE := $(MAKEFILE_CURRENT)
++VBOX_NBSD_INST_DEP_ON_MAKEFILE := $(MAKEFILE_CURRENT)
 +
-+BLDDIRS  += $(VBOX_FBSD_INST_OUT_DIR) $(VBOX_FBSD_INST_STAGE_DIR)
-+PACKING  += $(PATH_STAGE_BIN)/$(VBOX_FBSD_PACKAGE_NAME)
++BLDDIRS  += $(VBOX_NBSD_INST_OUT_DIR) $(VBOX_NBSD_INST_STAGE_DIR)
++PACKING  += $(PATH_STAGE_BIN)/$(VBOX_NBSD_PACKAGE_NAME)
 +
 +OTHER_CLEAN   += \
-+	$(addprefix $(VBOX_FBSD_INST_STAGE_DIR)/,\
++	$(addprefix $(VBOX_NBSD_INST_STAGE_DIR)/,\
 +		pkg_plist \
 +		LICENSE) \
-+	$(wildcard $(VBOX_FBSD_INST_OUT_DIR)/VirtualBox-*)
++	$(wildcard $(VBOX_NBSD_INST_OUT_DIR)/VirtualBox-*)
 +
 +#
 +# NetBSD installs.
@@ -82,7 +82,7 @@ $NetBSD$
 +#
 +
 +# Strip these binaries
-+VBOX_FBSD_STRIP_BIN = \
++VBOX_NBSD_STRIP_BIN = \
 +	VBoxDD.so \
 +	VBoxDD2.so \
 +	VBoxREM.so \
@@ -118,7 +118,7 @@ $NetBSD$
 +	$(if $(VBOX_WITH_DTRACE),VBoxDTrace,)
 +
 +# Do not remove relocation information of these binaries
-+VBOX_FBSD_STRIP_OBJ = \
++VBOX_NBSD_STRIP_OBJ = \
 +	VBoxDD2RC.rc \
 +	VBoxDD2R0.r0 \
 +	VBoxDDRC.rc \
@@ -127,7 +127,7 @@ $NetBSD$
 +	VMMR0.r0
 +
 +# Do not strip anything of these files
-+VBOX_FBSD_NO_STRIP = \
++VBOX_NBSD_NO_STRIP = \
 +	$(if $(VBOX_OSE),,LICENSE) \
 +	$(if $(VBOX_WITH_MAIN), \
 +	  components/VBoxXPCOMBase.xpt \
@@ -136,13 +136,13 @@ $NetBSD$
 +
 +# EFI firmware
 +ifdef VBOX_WITH_EFIFW_PACKING
-+ VBOX_FBSD_NO_STRIP += \
++ VBOX_NBSD_NO_STRIP += \
 + 	VBoxEFI32.fd \
 + 	VBoxEFI64.fd
 +endif
 +
 +# Symlinks residing in bin/
-+VBOX_FBSD_SYMLINKS = \
++VBOX_NBSD_SYMLINKS = \
 +	$(if $(VBOX_WITH_MAIN), \
 +		VBoxManage \
 +		VBoxSVC) \
@@ -152,76 +152,76 @@ $NetBSD$
 +# Qt4 GUI
 +ifdef VBOX_WITH_QTGUI
 + include $(PATH_ROOT)/src/VBox/Frontends/VirtualBox/nls/ApprovedLanguages.kmk
-+ VBOX_FBSD_STRIP_BIN += \
++ VBOX_NBSD_STRIP_BIN += \
 + 	VBoxKeyboard.so \
 + 	VirtualBox \
 + 	$(if $(VBOX_WITH_HARDENING),VirtualBox.so) \
 +	$(if $(VBOX_WITH_DEBUGGER_GUI),VBoxDbg.so DbgPlugInDiggers.so,)
-+ VBOX_FBSD_SYMLINKS += \
++ VBOX_NBSD_SYMLINKS += \
 + 	VirtualBox
-+ VBOX_FBSD_NO_STRIP += \
++ VBOX_NBSD_NO_STRIP += \
 +	$(VBOX_LICENSE_FILES) \
 + 	$(if $(VBOX_WITH_QT4_SUN),$(notdir $(wildcard $(PATH_STAGE_BIN)/lib*VBox*)),) \
 +	$(if $(VBOX_WITH_QT4_SUN),accessible/libqtaccessiblewidgets.so,) \
 + 	$(foreach f,$(VBOX_APPROVED_GUI_LANGUAGES),nls/VirtualBox_$(f).qm nls/qt_$(f).qm)
-+ VBOX_FBSD_DESKTOP_FILE = \
++ VBOX_NBSD_DESKTOP_FILE = \
 +	virtualbox.desktop
-+ VBOX_FBSD_ICON_FILE = \
++ VBOX_NBSD_ICON_FILE = \
 +	VBox.png
 +endif
 +
 +# Guest Additions
 +ifdef VBOX_WITH_ADDITIONS_PACKING
-+ VBOX_FBSD_NO_STRIP += \
++ VBOX_NBSD_NO_STRIP += \
 + 	additions/VBoxGuestAdditions.iso
 +endif
 +
 +# Documentation
 +ifdef VBOX_WITH_DOCS_PACKING
-+ VBOX_FBSD_NO_STRIP += \
++ VBOX_NBSD_NO_STRIP += \
 +	VirtualBox.chm UserManual.pdf \
 +	$(foreach f,$(VBOX_MANUAL_ADD_LANGUAGES),VirtualBox_$(f).chm UserManual_$(f).pdf)
-+ VBOX_FBSD_STRIP_BIN += \
++ VBOX_NBSD_STRIP_BIN += \
 +	$(if $(VBOX_WITH_KCHMVIEWER),kchmviewer,)
 +endif
 +
 +# VRDP
 +ifdef VBOX_WITH_VRDP
-+ VBOX_FBSD_STRIP_BIN += \
++ VBOX_NBSD_STRIP_BIN += \
 +	VBoxVRDP.so \
 +	VBoxAuth.so
-+ VBOX_FBSD_NO_STRIP += \
++ VBOX_NBSD_NO_STRIP += \
 +	rdesktop-vrdp.tar.gz
 + ifdef VBOX_WITH_VRDP_RDESKTOP
-+#  VBOX_FBSD_NO_STRIP += \
++#  VBOX_NBSD_NO_STRIP += \
 +#	rdesktop-vrdp-keymaps
-+  VBOX_FBSD_STRIP_BIN += \
++  VBOX_NBSD_STRIP_BIN += \
 +	rdesktop-vrdp
 + endif
 +endif
 +
 +# Headless
 +ifdef VBOX_WITH_HEADLESS
-+ VBOX_FBSD_STRIP_BIN += \
++ VBOX_NBSD_STRIP_BIN += \
 +	VBoxHeadless \
 +	$(if $(VBOX_WITH_HARDENING),VBoxHeadless.so)
-+ VBOX_FBSD_SYMLINKS += \
++ VBOX_NBSD_SYMLINKS += \
 +	VBoxHeadless
 +endif
 +
 +# Webservices
 +ifdef VBOX_WITH_WEBSERVICES
-+ VBOX_FBSD_STRIP_BIN += \
++ VBOX_NBSD_STRIP_BIN += \
 +	vboxwebsrv \
 +	webtest
-+ VBOX_FBSD_SYMLINKS += \
++ VBOX_NBSD_SYMLINKS += \
 +	vboxwebsrv
 +endif
 +
 +# DTrace library, testcase and scripts (as the rest of this file, this makes bold
 +# ASSUMPTIONS about VBPX_INST_XXX variable values).
 +ifdef VBOX_WITH_DTRACE
-+ VBOX_FBSD_NO_STRIP += \
++ VBOX_NBSD_NO_STRIP += \
 +       $(addprefix dtrace/lib/$(KBUILD_TARGET_ARCH)/,$(VBOXINST_DTRACE_LIB_ARCH_FILES)) \
 +       $(addprefix dtrace/testcase/$(KBUILD_TARGET_ARCH)/,$(VBOXINST_DTRACE_TESTCASE_ARCH_FILES)) \
 +       $(addprefix dtrace/scripts/,$(VBOXINST_DTRACE_SCRIPTS_FILES))
@@ -230,10 +230,10 @@ $NetBSD$
 +#
 +# All the bin files that goes into the archives.
 +#
-+VBOX_FBSD_ARCH_FILES := $(VBOX_FBSD_STRIP_BIN) $(VBOX_FBSD_STRIP_OBJ) $(VBOX_FBSD_NO_STRIP)
++VBOX_NBSD_ARCH_FILES := $(VBOX_NBSD_STRIP_BIN) $(VBOX_NBSD_STRIP_OBJ) $(VBOX_NBSD_NO_STRIP)
 +
 +# Cleanup of the files we copy/symlink from bin.
-+OTHER_CLEAN += $(addprefix $(VBOX_FBSD_INST_LIBVBOX_DIR)/,$(VBOX_FBSD_ARCH_FILES))
++OTHER_CLEAN += $(addprefix $(VBOX_NBSD_INST_LIBVBOX_DIR)/,$(VBOX_NBSD_ARCH_FILES))
 +
 +#
 +# The module source archive
@@ -247,38 +247,38 @@ $NetBSD$
 +# The generic installer.
 +## @todo r=aeichner: Create pkg_plist dynamically based on the available features
 +#
-+$(PATH_STAGE_BIN)/$(VBOX_FBSD_PACKAGE_NAME): \
++$(PATH_STAGE_BIN)/$(VBOX_NBSD_PACKAGE_NAME): \
 +		$(VBOX_VERSION_STAMP) \
-+		$(VBOX_FBSD_INST_OUT_DIR)/pkg_plist \
-+		$(addprefix $(VBOX_FBSD_INST_LIBVBOX_DIR)/,$(VBOX_FBSD_ARCH_FILES)) \
-+		$(addprefix $(VBOX_FBSD_INST_BIN_DIR)/,$(VBOX_FBSD_SYMLINKS)) \
++		$(VBOX_NBSD_INST_OUT_DIR)/pkg_plist \
++		$(addprefix $(VBOX_NBSD_INST_LIBVBOX_DIR)/,$(VBOX_NBSD_ARCH_FILES)) \
++		$(addprefix $(VBOX_NBSD_INST_BIN_DIR)/,$(VBOX_NBSD_SYMLINKS)) \
 +		$(if $(VBOX_OSE),,$(VBOX_BRAND_LICENSE_TXT)) \
-+		$(if $(VBOX_WITH_QTGUI),$(addprefix $(VBOX_FBSD_INST_SHAREAPP_DIR)/,$(VBOX_FBSD_DESKTOP_FILE)),) \
-+		$(if $(VBOX_WITH_QTGUI),$(addprefix $(VBOX_FBSD_INST_SHAREICON_DIR)/,$(VBOX_FBSD_ICON_FILE)),) \
-+		$(VBOX_PATH_FBSD_INST_SRC)/postinstall.sh \
-+		$(VBOX_PATH_FBSD_INST_SRC)/postdeinstall.sh
++		$(if $(VBOX_WITH_QTGUI),$(addprefix $(VBOX_NBSD_INST_SHAREAPP_DIR)/,$(VBOX_NBSD_DESKTOP_FILE)),) \
++		$(if $(VBOX_WITH_QTGUI),$(addprefix $(VBOX_NBSD_INST_SHAREICON_DIR)/,$(VBOX_NBSD_ICON_FILE)),) \
++		$(VBOX_PATH_NBSD_INST_SRC)/postinstall.sh \
++		$(VBOX_PATH_NBSD_INST_SRC)/postdeinstall.sh
 +	$(call MSG_TOOL,pkg_create,,$@)
 +	$(QUIET)$(RM) -f $@
 +	$(QUIET)pkg_create \
-+		-I $(VBOX_PATH_FBSD_INST_SRC)/postinstall.sh \
-+		-K $(VBOX_PATH_FBSD_INST_SRC)/postdeinstall.sh \
-+		-c $(VBOX_PATH_FBSD_INST_SRC)/pkg-comment \
-+		-d $(VBOX_PATH_FBSD_INST_SRC)/pkg-descr \
-+		-f $(VBOX_FBSD_INST_OUT_DIR)/pkg_plist \
++		-I $(VBOX_PATH_NBSD_INST_SRC)/postinstall.sh \
++		-K $(VBOX_PATH_NBSD_INST_SRC)/postdeinstall.sh \
++		-c $(VBOX_PATH_NBSD_INST_SRC)/pkg-comment \
++		-d $(VBOX_PATH_NBSD_INST_SRC)/pkg-descr \
++		-f $(VBOX_NBSD_INST_OUT_DIR)/pkg_plist \
 +		-p /usr/local \
-+		-s $(VBOX_FBSD_INST_STAGE_DIR) \
++		-s $(VBOX_NBSD_INST_STAGE_DIR) \
 +		$@
-+	$(QUIET)$(RM) -Rf $(VBOX_FBSD_INST_STAGE_DIR)
++	$(QUIET)$(RM) -Rf $(VBOX_NBSD_INST_STAGE_DIR)
 +
-+$(addprefix $(VBOX_FBSD_INST_LIBVBOX_DIR)/,$(VBOX_FBSD_STRIP_BIN)): \
-+		$(VBOX_FBSD_INST_LIBVBOX_DIR)/% : $(PATH_STAGE_BIN)/%
++$(addprefix $(VBOX_NBSD_INST_LIBVBOX_DIR)/,$(VBOX_NBSD_STRIP_BIN)): \
++		$(VBOX_NBSD_INST_LIBVBOX_DIR)/% : $(PATH_STAGE_BIN)/%
 +	$(call MSG_INST_FILE,$<,$@)
 +	$(QUIET)$(INSTALL) -d $(dir $@)
 +	$(QUIET)$(INSTALL) -m 0755 $(if $(VBOX_DO_STRIP),-s,) $< $@
 +
-+# pattern rule for striping and copying the VBOX_FBSD_STRIP_OBJ files to install/lib/virtualbox
-+$(addprefix $(VBOX_FBSD_INST_LIBVBOX_DIR)/,$(VBOX_FBSD_STRIP_OBJ)): \
-+		$(VBOX_FBSD_INST_LIBVBOX_DIR)/% : $(PATH_STAGE_BIN)/%
++# pattern rule for striping and copying the VBOX_NBSD_STRIP_OBJ files to install/lib/virtualbox
++$(addprefix $(VBOX_NBSD_INST_LIBVBOX_DIR)/,$(VBOX_NBSD_STRIP_OBJ)): \
++		$(VBOX_NBSD_INST_LIBVBOX_DIR)/% : $(PATH_STAGE_BIN)/%
 +	$(call MSG_INST_FILE,$<,$@)
 +	$(QUIET)$(INSTALL) -d $(dir $@)
 +ifeq ($(VBOX_DO_STRIP),)
@@ -289,41 +289,41 @@ $NetBSD$
 +	$(QUIET)$(RM) -f -- $@.tmp
 +endif
 +
-+# pattern rule for linking the VBOX_FBSD_NO_STRIP into lib/virtualbox/
-+$(addprefix $(VBOX_FBSD_INST_LIBVBOX_DIR)/,$(VBOX_FBSD_NO_STRIP)): \
-+		$(VBOX_FBSD_INST_LIBVBOX_DIR)/% : $(PATH_STAGE_BIN)/%
++# pattern rule for linking the VBOX_NBSD_NO_STRIP into lib/virtualbox/
++$(addprefix $(VBOX_NBSD_INST_LIBVBOX_DIR)/,$(VBOX_NBSD_NO_STRIP)): \
++		$(VBOX_NBSD_INST_LIBVBOX_DIR)/% : $(PATH_STAGE_BIN)/%
 +	$(call MSG_INST_FILE,$<,$@)
 +	$(QUIET)$(INSTALL) -d $(dir $@)
 +	$(QUIET)$(RM) -f $@
 +	$(QUIET)$(INSTALL) -m 0644 $< $@
 +
-+# pattern rule for symlinking the VBOX_FBSD_SYMLINKS into bin/
-+$(addprefix $(VBOX_FBSD_INST_BIN_DIR)/,$(VBOX_FBSD_SYMLINKS)): \
-+		$(VBOX_FBSD_INST_BIN_DIR)/% : $(PATH_STAGE_BIN)/%
++# pattern rule for symlinking the VBOX_NBSD_SYMLINKS into bin/
++$(addprefix $(VBOX_NBSD_INST_BIN_DIR)/,$(VBOX_NBSD_SYMLINKS)): \
++		$(VBOX_NBSD_INST_BIN_DIR)/% : $(PATH_STAGE_BIN)/%
 +	$(call MSG_INST_SYM,$<,$@)
 +	$(QUIET)$(INSTALL) -d $(dir $@)
 +	$(QUIET)$(RM) -f $@
 +	$(QUIET)$(LN_SYMLINK) ../lib/virtualbox/$(notdir $@) $@
 +
-+# pattern rule for copying the VBOX_FBSD_DESKTOP_FILE into share/applications/
-+$(addprefix $(VBOX_FBSD_INST_SHAREAPP_DIR)/,$(VBOX_FBSD_DESKTOP_FILE)): \
-+		$(VBOX_FBSD_INST_SHAREAPP_DIR)/% : $(PATH_STAGE_BIN)/%
++# pattern rule for copying the VBOX_NBSD_DESKTOP_FILE into share/applications/
++$(addprefix $(VBOX_NBSD_INST_SHAREAPP_DIR)/,$(VBOX_NBSD_DESKTOP_FILE)): \
++		$(VBOX_NBSD_INST_SHAREAPP_DIR)/% : $(PATH_STAGE_BIN)/%
 +	$(call MSG_INST_FILE,$<,$@)
 +	$(QUIET)$(INSTALL) -d $(dir $@)
 +	$(QUIET)$(RM) -f $@
 +	$(QUIET)$(INSTALL) -m 0644 $< $@
 +
-+# pattern rule for copying the VBOX_FBSD_ICON_FILE into share/pixmaps/
-+$(addprefix $(VBOX_FBSD_INST_SHAREICON_DIR)/,$(VBOX_FBSD_ICON_FILE)): \
-+		$(VBOX_FBSD_INST_SHAREICON_DIR)/% : $(PATH_STAGE_BIN)/%
++# pattern rule for copying the VBOX_NBSD_ICON_FILE into share/pixmaps/
++$(addprefix $(VBOX_NBSD_INST_SHAREICON_DIR)/,$(VBOX_NBSD_ICON_FILE)): \
++		$(VBOX_NBSD_INST_SHAREICON_DIR)/% : $(PATH_STAGE_BIN)/%
 +	$(call MSG_INST_FILE,$<,$@)
 +	$(QUIET)$(INSTALL) -d $(dir $@)
 +	$(QUIET)$(RM) -f $@
 +	$(QUIET)$(INSTALL) -m 0644 $< $@
 +
 +# Create pkg_plist
-+$(VBOX_FBSD_INST_OUT_DIR)/pkg_plist: \
-+		$(VBOX_PATH_FBSD_INST_SRC)/pkg_plist
++$(VBOX_NBSD_INST_OUT_DIR)/pkg_plist: \
++		$(VBOX_PATH_NBSD_INST_SRC)/pkg_plist
 +	$(call MSG_INST_FILE,$<,$@)
 +	$(QUIET)$(INSTALL) -d $(dir $@)
 +	$(QUIET)$(SED) \

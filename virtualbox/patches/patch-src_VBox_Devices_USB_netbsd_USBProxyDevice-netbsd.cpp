@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/VBox/Devices/USB/netbsd/USBProxyDevice-netbsd.cpp.orig	2016-07-07 07:08:46.468615794 +0000
+--- src/VBox/Devices/USB/netbsd/USBProxyDevice-netbsd.cpp.orig	2016-07-08 22:38:39.836808295 +0000
 +++ src/VBox/Devices/USB/netbsd/USBProxyDevice-netbsd.cpp
 @@ -0,0 +1,1061 @@
 +/*  USBProxyDevice-netbsd.cpp $ */
@@ -62,8 +62,8 @@ $NetBSD$
 +#include "../USBProxyDevice.h"
 +
 +/** Maximum endpoints supported. */
-+#define USBFBSD_MAXENDPOINTS 127
-+#define USBFBSD_MAXFRAMES 56
++#define USBNBSD_MAXENDPOINTS 127
++#define USBNBSD_MAXFRAMES 56
 +
 +/** This really needs to be defined in vusb.h! */
 +#ifndef VUSB_DIR_TO_DEV
@@ -74,16 +74,16 @@ $NetBSD$
 +/*********************************************************************************************************************************
 +*   Structures and Typedefs                                                                                                      *
 +*********************************************************************************************************************************/
-+typedef struct USBENDPOINTFBSD
++typedef struct USBENDPOINTNBSD
 +{
 +    /** Flag whether it is opened. */
 +    bool     fOpen;
 +    /** Flag whether it is cancelling. */
 +    bool     fCancelling;
 +    /** Buffer pointers. */
-+    void    *apvData[USBFBSD_MAXFRAMES];
++    void    *apvData[USBNBSD_MAXFRAMES];
 +    /** Buffer lengths. */
-+    uint32_t acbData[USBFBSD_MAXFRAMES];
++    uint32_t acbData[USBNBSD_MAXFRAMES];
 +    /** Initial buffer length. */
 +    uint32_t cbData0;
 +    /** Pointer to the URB. */
@@ -94,12 +94,12 @@ $NetBSD$
 +    unsigned cMaxIo;
 +    /** Maximum frame count. */
 +    unsigned cMaxFrames;
-+} USBENDPOINTFBSD, *PUSBENDPOINTFBSD;
++} USBENDPOINTNBSD, *PUSBENDPOINTNBSD;
 +
 +/**
 + * Data for the NetBSD usb proxy backend.
 + */
-+typedef struct USBPROXYDEVFBSD
++typedef struct USBPROXYDEVNBSD
 +{
 +    /** The open file. */
 +    RTFILE                 hFile;
@@ -112,10 +112,10 @@ $NetBSD$
 +    /** Pipe handle for waking up - reading end. */
 +    RTPIPE                 hPipeWakeupR;
 +    /** Software endpoint structures */
-+    USBENDPOINTFBSD        aSwEndpoint[USBFBSD_MAXENDPOINTS];
++    USBENDPOINTNBSD        aSwEndpoint[USBNBSD_MAXENDPOINTS];
 +    /** Kernel endpoint structures */
-+    struct usb_fs_endpoint aHwEndpoint[USBFBSD_MAXENDPOINTS];
-+} USBPROXYDEVFBSD, *PUSBPROXYDEVFBSD;
++    struct usb_fs_endpoint aHwEndpoint[USBNBSD_MAXENDPOINTS];
++} USBPROXYDEVNBSD, *PUSBPROXYDEVNBSD;
 +
 +
 +/*********************************************************************************************************************************
@@ -140,13 +140,13 @@ $NetBSD$
 +                                  void *pvArg, bool fHandleNoDev)
 +{
 +    int rc = VINF_SUCCESS;
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +
 +    LogFlow(("usbProxyNetBSDDoIoCtl: iCmd=%#x\n", iCmd));
 +
 +    do
 +    {
-+        rc = ioctl(RTFileToNative(pDevFBSD->hFile), iCmd, pvArg);
++        rc = ioctl(RTFileToNative(pDevNBSD->hFile), iCmd, pvArg);
 +        if (rc >= 0)
 +            return VINF_SUCCESS;
 +    } while (errno == EINTR);
@@ -171,27 +171,27 @@ $NetBSD$
 +static int usbProxyNetBSDFsInit(PUSBPROXYDEV pProxyDev)
 +{
 +    struct usb_fs_init UsbFsInit;
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    int rc;
 +
 +    LogFlow(("usbProxyNetBSDFsInit: pProxyDev=%p\n", (void *)pProxyDev));
 +
 +    /* Sanity check */
-+    AssertPtrReturn(pDevFBSD, VERR_INVALID_PARAMETER);
++    AssertPtrReturn(pDevNBSD, VERR_INVALID_PARAMETER);
 +
-+    if (pDevFBSD->fInit == true)
++    if (pDevNBSD->fInit == true)
 +        return VINF_SUCCESS;
 +
 +    /* Zero default */
 +    memset(&UsbFsInit, 0, sizeof(UsbFsInit));
 +
-+    UsbFsInit.pEndpoints = pDevFBSD->aHwEndpoint;
-+    UsbFsInit.ep_index_max = USBFBSD_MAXENDPOINTS;
++    UsbFsInit.pEndpoints = pDevNBSD->aHwEndpoint;
++    UsbFsInit.ep_index_max = USBNBSD_MAXENDPOINTS;
 +
 +    /* Init USB subsystem */
 +    rc = usbProxyNetBSDDoIoCtl(pProxyDev, USB_FS_INIT, &UsbFsInit, false);
 +    if (RT_SUCCESS(rc))
-+        pDevFBSD->fInit = true;
++        pDevNBSD->fInit = true;
 +
 +    return rc;
 +}
@@ -202,19 +202,19 @@ $NetBSD$
 +static int usbProxyNetBSDFsUnInit(PUSBPROXYDEV pProxyDev)
 +{
 +    struct usb_fs_uninit UsbFsUninit;
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    int rc;
 +
 +    LogFlow(("usbProxyNetBSDFsUnInit: ProxyDev=%p\n", (void *)pProxyDev));
 +
 +    /* Sanity check */
-+    AssertPtrReturn(pDevFBSD, VERR_INVALID_PARAMETER);
++    AssertPtrReturn(pDevNBSD, VERR_INVALID_PARAMETER);
 +
-+    if (pDevFBSD->fInit != true)
++    if (pDevNBSD->fInit != true)
 +        return VINF_SUCCESS;
 +
 +    /* Close any open endpoints. */
-+    for (unsigned n = 0; n != USBFBSD_MAXENDPOINTS; n++)
++    for (unsigned n = 0; n != USBNBSD_MAXENDPOINTS; n++)
 +        usbProxyNetBSDEndpointClose(pProxyDev, n);
 +
 +    /* Zero default */
@@ -223,7 +223,7 @@ $NetBSD$
 +    /* Uninit USB subsystem */
 +    rc = usbProxyNetBSDDoIoCtl(pProxyDev, USB_FS_UNINIT, &UsbFsUninit, false);
 +    if (RT_SUCCESS(rc))
-+        pDevFBSD->fInit = false;
++        pDevNBSD->fInit = false;
 +
 +    return rc;
 +}
@@ -253,8 +253,8 @@ $NetBSD$
 +
 +static int usbProxyNetBSDEndpointOpen(PUSBPROXYDEV pProxyDev, int Endpoint, bool fIsoc, int index)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
-+    PUSBENDPOINTFBSD pEndpointFBSD = NULL; /* shut up gcc */
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
++    PUSBENDPOINTNBSD pEndpointNBSD = NULL; /* shut up gcc */
 +    struct usb_fs_endpoint *pXferEndpoint;
 +    struct usb_fs_open UsbFsOpen;
 +    int rc;
@@ -262,35 +262,35 @@ $NetBSD$
 +    LogFlow(("usbProxyNetBSDEndpointOpen: pProxyDev=%p Endpoint=%d\n",
 +             (void *)pProxyDev, Endpoint));
 +
-+    for (; index < USBFBSD_MAXENDPOINTS; index++)
++    for (; index < USBNBSD_MAXENDPOINTS; index++)
 +    {
-+        pEndpointFBSD = &pDevFBSD->aSwEndpoint[index];
-+        if (pEndpointFBSD->fCancelling)
++        pEndpointNBSD = &pDevNBSD->aSwEndpoint[index];
++        if (pEndpointNBSD->fCancelling)
 +            continue;
-+        if (   pEndpointFBSD->fOpen
-+            && !pEndpointFBSD->pUrb
-+            && (int)pEndpointFBSD->iEpNum == Endpoint)
++        if (   pEndpointNBSD->fOpen
++            && !pEndpointNBSD->pUrb
++            && (int)pEndpointNBSD->iEpNum == Endpoint)
 +            return index;
 +    }
 +
-+    if (index == USBFBSD_MAXENDPOINTS)
++    if (index == USBNBSD_MAXENDPOINTS)
 +    {
-+        for (index = 0; index != USBFBSD_MAXENDPOINTS; index++)
++        for (index = 0; index != USBNBSD_MAXENDPOINTS; index++)
 +        {
-+            pEndpointFBSD = &pDevFBSD->aSwEndpoint[index];
-+            if (pEndpointFBSD->fCancelling)
++            pEndpointNBSD = &pDevNBSD->aSwEndpoint[index];
++            if (pEndpointNBSD->fCancelling)
 +                continue;
-+            if (!pEndpointFBSD->fOpen)
++            if (!pEndpointNBSD->fOpen)
 +                break;
 +        }
-+        if (index == USBFBSD_MAXENDPOINTS)
++        if (index == USBNBSD_MAXENDPOINTS)
 +            return -1;
 +    }
 +    /* set ppBuffer and pLength */
 +
-+    pXferEndpoint = &pDevFBSD->aHwEndpoint[index];
-+    pXferEndpoint->ppBuffer = &pEndpointFBSD->apvData[0];
-+    pXferEndpoint->pLength = &pEndpointFBSD->acbData[0];
++    pXferEndpoint = &pDevNBSD->aHwEndpoint[index];
++    pXferEndpoint->ppBuffer = &pEndpointNBSD->apvData[0];
++    pXferEndpoint->pLength = &pEndpointNBSD->acbData[0];
 +
 +    LogFlow(("usbProxyNetBSDEndpointOpen: ep_index=%d ep_num=%d\n",
 +             index, Endpoint));
@@ -302,7 +302,7 @@ $NetBSD$
 +    UsbFsOpen.max_bufsize = 256 * 1024;
 +    /* Hardcoded assumption about the URBs we get. */
 +
-+    UsbFsOpen.max_frames = fIsoc ? USBFBSD_MAXFRAMES : 2;
++    UsbFsOpen.max_frames = fIsoc ? USBNBSD_MAXFRAMES : 2;
 +
 +    rc = usbProxyNetBSDDoIoCtl(pProxyDev, USB_FS_OPEN, &UsbFsOpen, true);
 +    if (RT_FAILURE(rc))
@@ -312,11 +312,11 @@ $NetBSD$
 +
 +        return -1;
 +    }
-+    pEndpointFBSD->fOpen = true;
-+    pEndpointFBSD->pUrb = NULL;
-+    pEndpointFBSD->iEpNum = Endpoint;
-+    pEndpointFBSD->cMaxIo = UsbFsOpen.max_bufsize;
-+    pEndpointFBSD->cMaxFrames = UsbFsOpen.max_frames;
++    pEndpointNBSD->fOpen = true;
++    pEndpointNBSD->pUrb = NULL;
++    pEndpointNBSD->iEpNum = Endpoint;
++    pEndpointNBSD->cMaxIo = UsbFsOpen.max_bufsize;
++    pEndpointNBSD->cMaxFrames = UsbFsOpen.max_frames;
 +
 +    return index;
 +}
@@ -328,8 +328,8 @@ $NetBSD$
 + */
 +static int usbProxyNetBSDEndpointClose(PUSBPROXYDEV pProxyDev, int Endpoint)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
-+    PUSBENDPOINTFBSD pEndpointFBSD = &pDevFBSD->aSwEndpoint[Endpoint];
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
++    PUSBENDPOINTNBSD pEndpointNBSD = &pDevNBSD->aSwEndpoint[Endpoint];
 +    struct usb_fs_close UsbFsClose;
 +    int rc = VINF_SUCCESS;
 +
@@ -337,16 +337,16 @@ $NetBSD$
 +             (void *)pProxyDev, Endpoint));
 +
 +    /* check for cancelling */
-+    if (pEndpointFBSD->pUrb != NULL)
++    if (pEndpointNBSD->pUrb != NULL)
 +    {
-+        pEndpointFBSD->fCancelling = true;
-+        pDevFBSD->fCancelling = true;
++        pEndpointNBSD->fCancelling = true;
++        pDevNBSD->fCancelling = true;
 +    }
 +
 +    /* check for opened */
-+    if (pEndpointFBSD->fOpen)
++    if (pEndpointNBSD->fOpen)
 +    {
-+        pEndpointFBSD->fOpen = false;
++        pEndpointNBSD->fOpen = false;
 +
 +        /* Zero default */
 +        memset(&UsbFsClose, 0, sizeof(UsbFsClose));
@@ -375,7 +375,7 @@ $NetBSD$
 +static DECLCALLBACK(int) usbProxyNetBSDOpen(PUSBPROXYDEV pProxyDev, const char *pszAddress,
 +                                             void *pvBackend)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    int rc;
 +
 +    LogFlow(("usbProxyNetBSDOpen: pProxyDev=%p pszAddress=%s\n", pProxyDev, pszAddress));
@@ -392,18 +392,18 @@ $NetBSD$
 +        /*
 +         * Initialize the NetBSD backend data.
 +         */
-+        pDevFBSD->hFile = hFile;
++        pDevNBSD->hFile = hFile;
 +        rc = usbProxyNetBSDFsInit(pProxyDev);
 +        if (RT_SUCCESS(rc))
 +        {
 +            /*
 +             * Create wakeup pipe.
 +             */
-+            rc = RTPipeCreate(&pDevFBSD->hPipeWakeupR, &pDevFBSD->hPipeWakeupW, 0);
++            rc = RTPipeCreate(&pDevNBSD->hPipeWakeupR, &pDevNBSD->hPipeWakeupW, 0);
 +            if (RT_SUCCESS(rc))
 +            {
 +                LogFlow(("usbProxyNetBSDOpen(%p, %s): returns successfully hFile=%RTfile iActiveCfg=%d\n",
-+                         pProxyDev, pszAddress, pDevFBSD->hFile, pProxyDev->iActiveCfg));
++                         pProxyDev, pszAddress, pDevNBSD->hFile, pProxyDev->iActiveCfg));
 +
 +                return VINF_SUCCESS;
 +            }
@@ -430,7 +430,7 @@ $NetBSD$
 + */
 +static DECLCALLBACK(int) usbProxyNetBSDInit(PUSBPROXYDEV pProxyDev)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    int rc;
 +
 +    LogFlow(("usbProxyNetBSDInit: pProxyDev=%s\n",
@@ -460,20 +460,20 @@ $NetBSD$
 + */
 +static DECLCALLBACK(void) usbProxyNetBSDClose(PUSBPROXYDEV pProxyDev)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +
 +    LogFlow(("usbProxyNetBSDClose: pProxyDev=%s\n", pProxyDev->pUsbIns->pszName));
 +
 +    /* sanity check */
-+    AssertPtrReturnVoid(pDevFBSD);
++    AssertPtrReturnVoid(pDevNBSD);
 +
 +    usbProxyNetBSDFsUnInit(pProxyDev);
 +
-+    RTPipeClose(pDevFBSD->hPipeWakeupR);
-+    RTPipeClose(pDevFBSD->hPipeWakeupW);
++    RTPipeClose(pDevNBSD->hPipeWakeupR);
++    RTPipeClose(pDevNBSD->hPipeWakeupW);
 +
-+    RTFileClose(pDevFBSD->hFile);
-+    pDevFBSD->hFile = NIL_RTFILE;
++    RTFileClose(pDevNBSD->hFile);
++    pDevNBSD->hFile = NIL_RTFILE;
 +
 +    LogFlow(("usbProxyNetBSDClose: returns\n"));
 +}
@@ -486,7 +486,7 @@ $NetBSD$
 + */
 +static DECLCALLBACK(int) usbProxyNetBSDReset(PUSBPROXYDEV pProxyDev, bool fResetOnNetBSD)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    int iParm;
 +    int rc = VINF_SUCCESS;
 +
@@ -543,7 +543,7 @@ $NetBSD$
 + */
 +static DECLCALLBACK(int) usbProxyNetBSDSetConfig(PUSBPROXYDEV pProxyDev, int iCfg)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    int iCfgIndex;
 +    int rc;
 +
@@ -632,7 +632,7 @@ $NetBSD$
 + */
 +static DECLCALLBACK(int) usbProxyNetBSDSetInterface(PUSBPROXYDEV pProxyDev, int iIf, int iAlt)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    struct usb_alt_interface UsbIntAlt;
 +    int rc;
 +
@@ -694,8 +694,8 @@ $NetBSD$
 + */
 +static DECLCALLBACK(int) usbProxyNetBSDUrbQueue(PUSBPROXYDEV pProxyDev, PVUSBURB pUrb)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
-+    PUSBENDPOINTFBSD pEndpointFBSD;
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
++    PUSBENDPOINTNBSD pEndpointNBSD;
 +    struct usb_fs_endpoint *pXferEndpoint;
 +    struct usb_fs_start UsbFsStart;
 +    unsigned cFrames;
@@ -724,8 +724,8 @@ $NetBSD$
 +    if (index < 0)
 +        return VERR_INVALID_PARAMETER;
 +
-+    pEndpointFBSD = &pDevFBSD->aSwEndpoint[index];
-+    pXferEndpoint = &pDevFBSD->aHwEndpoint[index];
++    pEndpointNBSD = &pDevNBSD->aSwEndpoint[index];
++    pXferEndpoint = &pDevNBSD->aHwEndpoint[index];
 +
 +    pbData = pUrb->abData;
 +
@@ -733,20 +733,20 @@ $NetBSD$
 +    {
 +        case VUSBXFERTYPE_MSG:
 +        {
-+            pEndpointFBSD->apvData[0] = pbData;
-+            pEndpointFBSD->acbData[0] = 8;
++            pEndpointNBSD->apvData[0] = pbData;
++            pEndpointNBSD->acbData[0] = 8;
 +
 +            /* check wLength */
 +            if (pbData[6] || pbData[7])
 +            {
-+                pEndpointFBSD->apvData[1] = pbData + 8;
-+                pEndpointFBSD->acbData[1] = pbData[6] | (pbData[7] << 8);
++                pEndpointNBSD->apvData[1] = pbData + 8;
++                pEndpointNBSD->acbData[1] = pbData[6] | (pbData[7] << 8);
 +                cFrames = 2;
 +            }
 +            else
 +            {
-+                pEndpointFBSD->apvData[1] = NULL;
-+                pEndpointFBSD->acbData[1] = 0;
++                pEndpointNBSD->apvData[1] = NULL;
++                pEndpointNBSD->acbData[1] = 0;
 +                cFrames = 1;
 +            }
 +
@@ -765,10 +765,10 @@ $NetBSD$
 +
 +            for (i = 0; i < pUrb->cIsocPkts; i++)
 +            {
-+                if (i >= pEndpointFBSD->cMaxFrames)
++                if (i >= pEndpointNBSD->cMaxFrames)
 +                    break;
-+                pEndpointFBSD->apvData[i] = pbData + pUrb->aIsocPkts[i].off;
-+                pEndpointFBSD->acbData[i] = pUrb->aIsocPkts[i].cb;
++                pEndpointNBSD->apvData[i] = pbData + pUrb->aIsocPkts[i].off;
++                pEndpointNBSD->acbData[i] = pUrb->aIsocPkts[i].cb;
 +            }
 +            /* Timeout handling will be done during reap. */
 +            pXferEndpoint->timeout = USB_FS_TIMEOUT_NONE;
@@ -778,14 +778,14 @@ $NetBSD$
 +        }
 +        default:
 +        {
-+            pEndpointFBSD->apvData[0] = pbData;
-+            pEndpointFBSD->cbData0 = pUrb->cbData;
++            pEndpointNBSD->apvData[0] = pbData;
++            pEndpointNBSD->cbData0 = pUrb->cbData;
 +
 +            /* XXX maybe we have to loop */
-+            if (pUrb->cbData > pEndpointFBSD->cMaxIo)
-+                pEndpointFBSD->acbData[0] = pEndpointFBSD->cMaxIo;
++            if (pUrb->cbData > pEndpointNBSD->cMaxIo)
++                pEndpointNBSD->acbData[0] = pEndpointNBSD->cMaxIo;
 +            else
-+                pEndpointFBSD->acbData[0] = pUrb->cbData;
++                pEndpointNBSD->acbData[0] = pUrb->cbData;
 +
 +            /* Timeout handling will be done during reap. */
 +            pXferEndpoint->timeout = USB_FS_TIMEOUT_NONE;
@@ -808,8 +808,8 @@ $NetBSD$
 +
 +    LogFlow(("usbProxyNetBSDUrbQueue: USB_FS_START returned rc=%d "
 +             "len[0]=%u len[1]=%u cbData=%u index=%u ep_num=%u\n", rc,
-+             (unsigned)pEndpointFBSD->acbData[0],
-+             (unsigned)pEndpointFBSD->acbData[1],
++             (unsigned)pEndpointNBSD->acbData[0],
++             (unsigned)pEndpointNBSD->acbData[1],
 +             (unsigned)pUrb->cbData,
 +             (unsigned)index, (unsigned)ep_num));
 +
@@ -823,7 +823,7 @@ $NetBSD$
 +        return rc;
 +    }
 +    pUrb->Dev.pvPrivate = (void *)(long)(index + 1);
-+    pEndpointFBSD->pUrb = pUrb;
++    pEndpointNBSD->pUrb = pUrb;
 +
 +    return rc;
 +}
@@ -839,8 +839,8 @@ $NetBSD$
 +static DECLCALLBACK(PVUSBURB) usbProxyNetBSDUrbReap(PUSBPROXYDEV pProxyDev, RTMSINTERVAL cMillies)
 +{
 +    struct usb_fs_endpoint *pXferEndpoint;
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
-+    PUSBENDPOINTFBSD pEndpointFBSD;
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
++    PUSBENDPOINTNBSD pEndpointNBSD;
 +    PVUSBURB pUrb;
 +    struct usb_fs_complete UsbFsComplete;
 +    struct pollfd pfd[2];
@@ -854,16 +854,16 @@ $NetBSD$
 +    pUrb = NULL;
 +
 +    /* check for cancelled transfers */
-+    if (pDevFBSD->fCancelling)
++    if (pDevNBSD->fCancelling)
 +    {
-+        for (unsigned n = 0; n < USBFBSD_MAXENDPOINTS; n++)
++        for (unsigned n = 0; n < USBNBSD_MAXENDPOINTS; n++)
 +        {
-+            pEndpointFBSD = &pDevFBSD->aSwEndpoint[n];
-+            if (pEndpointFBSD->fCancelling)
++            pEndpointNBSD = &pDevNBSD->aSwEndpoint[n];
++            if (pEndpointNBSD->fCancelling)
 +            {
-+                pEndpointFBSD->fCancelling = false;
-+                pUrb = pEndpointFBSD->pUrb;
-+                pEndpointFBSD->pUrb = NULL;
++                pEndpointNBSD->fCancelling = false;
++                pUrb = pEndpointNBSD->pUrb;
++                pEndpointNBSD->pUrb = NULL;
 +
 +                if (pUrb != NULL)
 +                    break;
@@ -891,7 +891,7 @@ $NetBSD$
 +            }
 +            return pUrb;
 +        }
-+        pDevFBSD->fCancelling = false;
++        pDevNBSD->fCancelling = false;
 +    }
 +    /* Zero default */
 +
@@ -901,17 +901,17 @@ $NetBSD$
 +    rc = usbProxyNetBSDDoIoCtl(pProxyDev, USB_FS_COMPLETE, &UsbFsComplete, true);
 +    if (RT_SUCCESS(rc))
 +    {
-+        pXferEndpoint = &pDevFBSD->aHwEndpoint[UsbFsComplete.ep_index];
-+        pEndpointFBSD = &pDevFBSD->aSwEndpoint[UsbFsComplete.ep_index];
++        pXferEndpoint = &pDevNBSD->aHwEndpoint[UsbFsComplete.ep_index];
++        pEndpointNBSD = &pDevNBSD->aSwEndpoint[UsbFsComplete.ep_index];
 +
 +        LogFlow(("usbProxyNetBSDUrbReap: Reaped "
-+                 "URB %#p\n", pEndpointFBSD->pUrb));
++                 "URB %#p\n", pEndpointNBSD->pUrb));
 +
 +        if (pXferEndpoint->status == USB_ERR_CANCELLED)
 +            goto repeat;
 +
-+        pUrb = pEndpointFBSD->pUrb;
-+        pEndpointFBSD->pUrb = NULL;
++        pUrb = pEndpointNBSD->pUrb;
++        pEndpointNBSD->pUrb = NULL;
 +        if (pUrb == NULL)
 +            goto repeat;
 +
@@ -933,7 +933,7 @@ $NetBSD$
 +        switch (pUrb->enmType)
 +        {
 +            case VUSBXFERTYPE_MSG:
-+                pUrb->cbData = pEndpointFBSD->acbData[0] + pEndpointFBSD->acbData[1];
++                pUrb->cbData = pEndpointNBSD->acbData[0] + pEndpointNBSD->acbData[1];
 +                break;
 +            case VUSBXFERTYPE_ISOC:
 +            {
@@ -944,10 +944,10 @@ $NetBSD$
 +                pUrb->cbData = 0;
 +                for (n = 0; n < (int)pUrb->cIsocPkts; n++)
 +                {
-+                    if (n >= (int)pEndpointFBSD->cMaxFrames)
++                    if (n >= (int)pEndpointNBSD->cMaxFrames)
 +                        break;
-+                    pUrb->cbData += pEndpointFBSD->acbData[n];
-+                    pUrb->aIsocPkts[n].cb = pEndpointFBSD->acbData[n];
++                    pUrb->cbData += pEndpointNBSD->acbData[n];
++                    pUrb->aIsocPkts[n].cb = pEndpointNBSD->acbData[n];
 +                }
 +                for (; n < (int)pUrb->cIsocPkts; n++)
 +                    pUrb->aIsocPkts[n].cb = 0;
@@ -955,7 +955,7 @@ $NetBSD$
 +                break;
 +            }
 +            default:
-+                pUrb->cbData = pEndpointFBSD->acbData[0];
++                pUrb->cbData = pEndpointNBSD->acbData[0];
 +                break;
 +        }
 +
@@ -963,19 +963,19 @@ $NetBSD$
 +                 "len[0]=%d len[1]=%d\n",
 +                 (int)pXferEndpoint->status,
 +                 (unsigned)UsbFsComplete.ep_index,
-+                 (unsigned)pEndpointFBSD->acbData[0],
-+                 (unsigned)pEndpointFBSD->acbData[1]));
++                 (unsigned)pEndpointNBSD->acbData[0],
++                 (unsigned)pEndpointNBSD->acbData[1]));
 +
 +    }
 +    else if (cMillies != 0 && rc == VERR_RESOURCE_BUSY)
 +    {
 +        for (;;)
 +        {
-+            pfd[0].fd = RTFileToNative(pDevFBSD->hFile);
++            pfd[0].fd = RTFileToNative(pDevNBSD->hFile);
 +            pfd[0].events = POLLIN | POLLRDNORM;
 +            pfd[0].revents = 0;
 +
-+            pfd[1].fd = RTPipeToNative(pDevFBSD->hPipeWakeupR);
++            pfd[1].fd = RTPipeToNative(pDevNBSD->hPipeWakeupR);
 +            pfd[1].events = POLLIN | POLLRDNORM;
 +            pfd[1].revents = 0;
 +
@@ -987,7 +987,7 @@ $NetBSD$
 +                    /* Got woken up, drain pipe. */
 +                    uint8_t bRead;
 +                    size_t cbIgnored = 0;
-+                    RTPipeRead(pDevFBSD->hPipeWakeupR, &bRead, 1, &cbIgnored);
++                    RTPipeRead(pDevNBSD->hPipeWakeupR, &bRead, 1, &cbIgnored);
 +                    /* Make sure we return from this function */
 +                    cMillies = 0;
 +                }
@@ -1013,7 +1013,7 @@ $NetBSD$
 +
 +    index = (int)(long)pUrb->Dev.pvPrivate - 1;
 +
-+    if (index < 0 || index >= USBFBSD_MAXENDPOINTS)
++    if (index < 0 || index >= USBNBSD_MAXENDPOINTS)
 +        return VINF_SUCCESS; /* invalid index, pretend success. */
 +
 +    LogFlow(("usbProxyNetBSDUrbCancel: epindex=%u\n", (unsigned)index));
@@ -1022,12 +1022,12 @@ $NetBSD$
 +
 +static DECLCALLBACK(int) usbProxyNetBSDWakeup(PUSBPROXYDEV pProxyDev)
 +{
-+    PUSBPROXYDEVFBSD pDevFBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVFBSD);
++    PUSBPROXYDEVNBSD pDevNBSD = USBPROXYDEV_2_DATA(pProxyDev, PUSBPROXYDEVNBSD);
 +    size_t cbIgnored;
 +
 +    LogFlowFunc(("pProxyDev=%p\n", pProxyDev));
 +
-+    return RTPipeWrite(pDevFBSD->hPipeWakeupW, "", 1, &cbIgnored);
++    return RTPipeWrite(pDevNBSD->hPipeWakeupW, "", 1, &cbIgnored);
 +}
 +
 +/**
@@ -1038,7 +1038,7 @@ $NetBSD$
 +    /* pszName */
 +    "host",
 +    /* cbBackend */
-+    sizeof(USBPROXYDEVFBSD),
++    sizeof(USBPROXYDEVNBSD),
 +    usbProxyNetBSDOpen,
 +    usbProxyNetBSDInit,
 +    usbProxyNetBSDClose,

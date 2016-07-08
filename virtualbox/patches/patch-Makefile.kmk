@@ -76,7 +76,7 @@ $NetBSD$
 +#	+ $(VBOX_KMK_TIME) $(KMK) $(VBOX_EXTPACKS_BUILD.amd64) all $(VBOX_EXTPACKS_HOST_BUILD_TWEAK)
 +#else
 +#	$(call VBOX_BLD_VM_MSG_BEGIN,NetBSD/amd64 extension packs)
-+#	$(VBOX_KMK_TIME) ssh vbox@$(VBOX_BLD_VM_FBSD_AMD64_IP) " echo $@ && cd /mnt/tinderbox/$(VBOX_EXTPACKS_BUILD_SUBDIRNAME) && tools/env.sh --no-wine kmk $(VBOX_EXTPACKS_BUILD.amd64) all"
++#	$(VBOX_KMK_TIME) ssh vbox@$(VBOX_BLD_VM_NBSD_AMD64_IP) " echo $@ && cd /mnt/tinderbox/$(VBOX_EXTPACKS_BUILD_SUBDIRNAME) && tools/env.sh --no-wine kmk $(VBOX_EXTPACKS_BUILD.amd64) all"
 +#	$(call VBOX_BLD_VM_MSG_END__,NetBSD/amd64 extension packs)
 +#endif
 +
@@ -85,7 +85,7 @@ $NetBSD$
 +#	+ $(VBOX_KMK_TIME) $(KMK) $(VBOX_EXTPACKS_BUILD.x86) all $(VBOX_EXTPACKS_HOST_BUILD_TWEAK)
 +#else
 +#	$(call VBOX_BLD_VM_MSG_BEGIN,NetBSD/x86 extension packs)
-+#	$(VBOX_KMK_TIME) ssh vbox@$(VBOX_BLD_VM_FBSD_X86_IP) " echo $@ && cd /mnt/tinderbox/$(VBOX_EXTPACKS_BUILD_SUBDIRNAME) && tools/env.sh --no-wine kmk $(VBOX_EXTPACKS_BUILD.x86) all"
++#	$(VBOX_KMK_TIME) ssh vbox@$(VBOX_BLD_VM_NBSD_X86_IP) " echo $@ && cd /mnt/tinderbox/$(VBOX_EXTPACKS_BUILD_SUBDIRNAME) && tools/env.sh --no-wine kmk $(VBOX_EXTPACKS_BUILD.x86) all"
 +#	$(call VBOX_BLD_VM_MSG_END__,NetBSD/x86 extension packs)
 +#endif
 +
