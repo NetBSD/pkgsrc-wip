@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config gmake perl
 
 ONLY_FOR_PLATFORM=	Linux-*-*
-NOT_FOR_UNPRIVILEGED=	yes
 
 PKGCONFIG_OVERRIDE+=	libcap/libcap.pc.in
 
