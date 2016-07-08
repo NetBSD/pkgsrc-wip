@@ -14,7 +14,7 @@ MASTER_SITES=	http://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/E
 EXTRACT_SUFX=	.src.rpm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	ftp://ftp.netlabs.org/pub/kbuild/
+HOMEPAGE=	http://trac.netlabs.org/kbuild/wiki/WikiStart
 COMMENT=	Framework for writing simple makefiles for complex tasks
 # but also various other licenses in 3rd party code
 LICENSE=	gnu-gpl-v3
