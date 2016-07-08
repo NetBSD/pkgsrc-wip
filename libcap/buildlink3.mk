@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcap
 LIBCAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcap+=	libcap>=2.25
-BUILDLINK_PKGSRCDIR.libcap?=	../../local/libcap
+BUILDLINK_PKGSRCDIR.libcap?=	../../wip/libcap
 .endif	# LIBCAP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libcap
