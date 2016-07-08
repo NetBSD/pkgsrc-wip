@@ -21,6 +21,8 @@ BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 BUILD_DEPENDS+=	kbuild-[0-9]*:../../devel/kbuild
 BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
+
 USE_TOOLS+=	gtar pkg-config bison flex
 
 WRKSRC=		${WRKDIR}/VirtualBox-${PKGVERSION_NOREV}
@@ -75,6 +77,7 @@ SUBST_SED.paths+=	-e 's!PYTHONLIBRPATH=.*!PYTHONLIBRPATH="${COMPILER_RPATH_FLAG}
 VBLIBDIR=	${PREFIX}/lib/virtualbox
 
 KMK_ENV_VARS+=	KBUILD_PATH=${WRKSRC}/kBuild
+KMK_ENV_VARS+=	KBUILD_LIB_SEARCH_ROOTS="/ /usr/ ${X11BASE}/ ${PREFIX}/"
 # Multiple jobs tend to be broken
 KMK_FLAGS+=	-j1
 

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/VBox/HostDrivers/Support/netbsd/files_vboxdrv.orig	2016-07-07 07:08:46.524933547 +0000
+--- src/VBox/HostDrivers/Support/netbsd/files_vboxdrv.orig	2016-07-08 15:09:53.340402555 +0000
 +++ src/VBox/HostDrivers/Support/netbsd/files_vboxdrv
-@@ -0,0 +1,213 @@
+@@ -0,0 +1,211 @@
 +#!/bin/sh
 +#  files_vboxdrv $
 +## @file
@@ -54,7 +54,6 @@ $NetBSD$
 +    ${PATH_ROOT}/include/iprt/mem.h=>include/iprt/mem.h \
 +    ${PATH_ROOT}/include/iprt/memobj.h=>include/iprt/memobj.h \
 +    ${PATH_ROOT}/include/iprt/mp.h=>include/iprt/mp.h \
-+    ${PATH_ROOT}/include/iprt/net.h=>include/iprt/net.h \
 +    ${PATH_ROOT}/include/iprt/param.h=>include/iprt/param.h \
 +    ${PATH_ROOT}/include/iprt/power.h=>include/iprt/power.h \
 +    ${PATH_ROOT}/include/iprt/process.h=>include/iprt/process.h \
@@ -71,7 +70,6 @@ $NetBSD$
 +    ${PATH_ROOT}/include/iprt/uni.h=>include/iprt/uni.h \
 +    ${PATH_ROOT}/include/iprt/utf16.h=>include/iprt/utf16.h \
 +    ${PATH_ROOT}/include/iprt/uuid.h=>include/iprt/uuid.h \
-+    ${PATH_ROOT}/include/iprt/crc.h=>include/iprt/crc.h \
 +    ${PATH_ROOT}/include/iprt/net.h=>include/iprt/net.h \
 +    ${PATH_ROOT}/include/iprt/rand.h=>include/iprt/rand.h \
 +    ${PATH_ROOT}/include/iprt/path.h=>include/iprt/path.h \
