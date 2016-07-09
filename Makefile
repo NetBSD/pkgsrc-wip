@@ -270,7 +270,6 @@ SUBDIR+=	bstone
 SUBDIR+=	bsvc
 SUBDIR+=	btscanner
 SUBDIR+=	bub-n-bros
-SUBDIR+=	bunny
 SUBDIR+=	bup-git
 SUBDIR+=	busybox
 SUBDIR+=	bwm-ng

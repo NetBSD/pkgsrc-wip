@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:36:20 jihbed Exp $
-bin/bunny-exec
-bin/bunny-flow
-bin/bunny-gcc
-bin/bunny-main
-bin/bunny-trace
