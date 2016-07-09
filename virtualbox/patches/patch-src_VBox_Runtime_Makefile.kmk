@@ -175,9 +175,9 @@ $NetBSD$
  	$(PATH_STAGE)/gen-sys-hdrs/bus_if.h \
  	$(PATH_STAGE)/gen-sys-hdrs/device_if.h
  
-+RuntimeR0Drv_ORDERDEPS.netbsd = \
-+	$(PATH_STAGE)/gen-sys-hdrs/bus_if.h \
-+	$(PATH_STAGE)/gen-sys-hdrs/device_if.h
++#RuntimeR0Drv_ORDERDEPS.netbsd = \
++#	$(PATH_STAGE)/gen-sys-hdrs/bus_if.h \
++#	$(PATH_STAGE)/gen-sys-hdrs/device_if.h
 +
  
  #
@@ -195,7 +195,7 @@ $NetBSD$
  	$(QUIET)$(RM) $(@D)/pci_if.m
  endif # FreeBSD
  
-+if "$(KBUILD_TARGET)" == "netbsd"
++#if "$(KBUILD_TARGET)" == "netbsd"
 +#
 +# NetBSDGeneratedKernelHeaders - Generate some kernel interface headers.
 +#
@@ -207,33 +207,33 @@ $NetBSD$
 +# generate the header next to the source. So, we'll have to temporarily copy
 +# the source file to the destination directory to work.
 +#
-+VBOX_AWK := /usr/bin/awk
-+INSTALLS += NetBSDGeneratedKernelHeaders
-+NetBSDGeneratedKernelHeaders_INST = gen-sys-hdrs/
-+NetBSDGeneratedKernelHeaders_SOURCES = \
-+	$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/bus_if.h \
-+	$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/device_if.h \
-+	$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/pci_if.h
-+NetBSDGeneratedKernelHeaders_CLEAN = $(NetBSDGeneratedKernelHeaders_SOURCES)
-+
-+$$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/bus_if.h: $(VBOX_NETBSD_SRC)/kern/bus_if.m | $$(dir $$@)
-+	$(call MSG_TOOL,awk,NetBSDGeneratedKernelHeaders,$<,$@)
-+	$(QUIET)$(CP) -f $< $(@D)/bus_if.m
-+	$(QUIET)$(VBOX_AWK) -f $(VBOX_NETBSD_SRC)/tools/makeobjops.awk $(@D)/bus_if.m -h -p
-+	$(QUIET)$(RM) $(@D)/bus_if.m
-+
-+$$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/device_if.h: $(VBOX_NETBSD_SRC)/kern/device_if.m | $$(dir $$@)
-+	$(call MSG_TOOL,awk,NetBSDGeneratedKernelHeaders,$<,$@)
-+	$(QUIET)$(CP) -f $< $(@D)/device_if.m
-+	$(QUIET)$(VBOX_AWK) -f $(VBOX_NETBSD_SRC)/tools/makeobjops.awk $(@D)/device_if.m -h -p
-+	$(QUIET)$(RM) $(@D)/device_if.m
-+
-+$$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/pci_if.h: $(VBOX_NETBSD_SRC)/dev/pci/pci_if.m | $$(dir $$@)
-+	$(call MSG_TOOL,awk,NetBSDGeneratedKernelHeaders,$<,$@)
-+	$(QUIET)$(CP) -f $< $(@D)/pci_if.m
-+	$(QUIET)$(VBOX_AWK) -f $(VBOX_NETBSD_SRC)/tools/makeobjops.awk $(@D)/pci_if.m -h -p
-+	$(QUIET)$(RM) $(@D)/pci_if.m
-+endif # NetBSD
++#VBOX_AWK := /usr/bin/awk
++#INSTALLS += NetBSDGeneratedKernelHeaders
++#NetBSDGeneratedKernelHeaders_INST = gen-sys-hdrs/
++#NetBSDGeneratedKernelHeaders_SOURCES = \
++#	$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/bus_if.h \
++#	$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/device_if.h \
++#	$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/pci_if.h
++#NetBSDGeneratedKernelHeaders_CLEAN = $(NetBSDGeneratedKernelHeaders_SOURCES)
++#
++#$$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/bus_if.h: $(VBOX_NETBSD_SRC)/kern/bus_if.m | $$(dir $$@)
++#	$(call MSG_TOOL,awk,NetBSDGeneratedKernelHeaders,$<,$@)
++#	$(QUIET)$(CP) -f $< $(@D)/bus_if.m
++#	$(QUIET)$(VBOX_AWK) -f $(VBOX_NETBSD_SRC)/tools/makeobjops.awk $(@D)/bus_if.m -h -p
++#	$(QUIET)$(RM) $(@D)/bus_if.m
++#
++#$$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/device_if.h: $(VBOX_NETBSD_SRC)/kern/device_if.m | $$(dir $$@)
++#	$(call MSG_TOOL,awk,NetBSDGeneratedKernelHeaders,$<,$@)
++#	$(QUIET)$(CP) -f $< $(@D)/device_if.m
++#	$(QUIET)$(VBOX_AWK) -f $(VBOX_NETBSD_SRC)/tools/makeobjops.awk $(@D)/device_if.m -h -p
++#	$(QUIET)$(RM) $(@D)/device_if.m
++#
++#$$(NetBSDGeneratedKernelHeaders_0_OUTDIR)/pci_if.h: $(VBOX_NETBSD_SRC)/dev/pci/pci_if.m | $$(dir $$@)
++#	$(call MSG_TOOL,awk,NetBSDGeneratedKernelHeaders,$<,$@)
++#	$(QUIET)$(CP) -f $< $(@D)/pci_if.m
++#	$(QUIET)$(VBOX_AWK) -f $(VBOX_NETBSD_SRC)/tools/makeobjops.awk $(@D)/pci_if.m -h -p
++#	$(QUIET)$(RM) $(@D)/pci_if.m
++#endif # NetBSD
 +
  
  #
