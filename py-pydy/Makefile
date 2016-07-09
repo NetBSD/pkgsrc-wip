@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-theano>=0.7.0:../../wip/py-theano
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE= 34 35
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"

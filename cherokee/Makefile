@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.15 2010/07/11 12:18:55 obache Exp $
-#
 
 PKGNAME=	cherokee-1.2.104
 GIT_COMMIT=	a917d76ed9b4272478ca973084ec1037a950c443
@@ -38,7 +37,7 @@ CONF_FILES+=		${EGDIR}/cherokee/cherokee.conf \
 
 RCD_SCRIPTS=		cherokee
 
-PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # not yet ported as of 1.2.101
+PYTHON_VERSIONS_INCOMPATIBLE=   34 35 # not yet ported as of 1.2.101
 
 .include "options.mk"
 

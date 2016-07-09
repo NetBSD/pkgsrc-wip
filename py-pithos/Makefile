@@ -28,7 +28,7 @@ DEPENDS+=	gnome-icon-theme-symbolic-[0-9]*:../../graphics/gnome-icon-theme-symbo
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	intltool
-PYTHON_VERSIONS_INCOMPATIBLE=	27 33
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		prefix

@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-txWS>=0.9.1:../../wip/py-txWS
 DEPENDS+=	${PYPKGPREFIX}-txZMQ>=0.7.3:../../wip/py-txZMQ
 DEPENDS+=	${PYPKGPREFIX}-moksha-common>=1.2.3:../../wip/py-moksha-common
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
 
 USE_LANGUAGES=	# none
 

@@ -19,7 +19,7 @@ COMMENT=	RoadmapHours plugin for Trac
 DEPENDS+=	trac>=0.11:../../www/trac
 DEPENDS+=	trac-plugins-TimingAndEstimation>=0.7.6:../../wip/trac-plugins-TimingAndEstimation
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # trac-plugins-TimingAndEstimation
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # trac-plugins-TimingAndEstimation
 
 SVN_REPOSITORIES=	plugin
 SVN_ROOT.plugin=	https://trac-hacks.org/svn/roadmaphoursplugin/0.11

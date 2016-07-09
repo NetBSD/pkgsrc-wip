@@ -22,7 +22,7 @@ GCONF_SCHEMAS=		gdesklets-display-thumbnail.schemas
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 REPLACE_PYTHON=		gdesklets
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ORBit via py-gnome2, py-gtk2
 
 SUBST_CLASSES+=		python
 SUBST_MESSAGE.python=	Fixing Python command name.

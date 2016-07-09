@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	share/doc/py-peak-rules
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test_rules.py

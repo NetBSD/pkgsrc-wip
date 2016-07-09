@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.8.0:../../wip/py-w3lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.0.5
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.0.5
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

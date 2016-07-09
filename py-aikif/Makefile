@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 27 33
+PYTHON_VERSIONS_INCOMPATIBLE= 27
 PYDISTUTILSPKG= yes
 
 .include "../../lang/python/extension.mk"

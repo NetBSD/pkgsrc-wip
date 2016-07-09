@@ -19,7 +19,7 @@ DEPENDS+=		${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
 
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-beautifulsoup, py-mxDateTime, py-imaging, py-twisted, py-elementtree, py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-beautifulsoup, py-mxDateTime, py-imaging, py-twisted, py-elementtree, py-xml
 USE_PKGLOCALEDIR=	yes
 
 CHECK_PORTABILITY_SKIP+=	boot/freevo

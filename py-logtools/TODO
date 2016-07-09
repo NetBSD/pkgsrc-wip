@@ -1,2 +1,0 @@
-* Requires py-dateutil>=2.1, which is limited to python33 in pkgsrc.
-  Seems to work with py27, though.

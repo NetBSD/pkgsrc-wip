@@ -26,7 +26,7 @@ EGG_NAME=		Bravo-${BRAVO_VERSION}
 # REPLACE_PYTHON+=	spectrumctl/spectrumctl.py
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
 
 .include "../../mk/bsd.prefs.mk"
 

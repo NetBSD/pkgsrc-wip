@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
 USE_LANGUAGES= c c++
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mysqldb, py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mysqldb, py-pyrex
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../lang/python/egg.mk"

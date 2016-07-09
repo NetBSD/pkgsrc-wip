@@ -25,7 +25,7 @@ REPLACE_PYTHON+=	scripts/Biskit/bis2.6 Biskit/data/pdb/remediator_python.1.56.08
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric
 
 post-extract:
 	${MV} ${WRKSRC}/scripts/Biskit/bis.py ${WRKSRC}/scripts/Biskit/bis${PYVERSSUFFIX}

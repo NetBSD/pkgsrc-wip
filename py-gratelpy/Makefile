@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 post-extract:
 	${MV} ${WRKSRC}/bin/gratelpy_benchmark ${WRKSRC}/bin/gratelpy_benchmark${PYVERSSUFFIX}

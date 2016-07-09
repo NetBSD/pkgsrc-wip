@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 WRKSRC=		${WRKDIR}/PySPH-0.9beta
 
 USE_LANGUAGES=	c c++
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # my-multiprocessing
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # my-multiprocessing
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

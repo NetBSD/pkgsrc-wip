@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.1
 
 USE_LANGUAGES=	# none
 

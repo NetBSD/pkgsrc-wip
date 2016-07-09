@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../wip/py-regex
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

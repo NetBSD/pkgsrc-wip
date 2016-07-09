@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-m2crypto, py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-m2crypto, py-twisted
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/extension.mk"

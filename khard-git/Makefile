@@ -22,7 +22,7 @@ DEPENDS+=		${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
 REPLACE_PYTHON+=	davcontroller/*.py
 REPLACE_PYTHON+=	khard/*.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 20150204
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 20150204
 
 INSTALLATION_DIRS+=	share/examples/khard
 

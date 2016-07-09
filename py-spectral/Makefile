@@ -11,7 +11,7 @@ COMMENT=	Python module for hyperspectral image processing
 LICENSE=	gnu-gpl-v3
 
 #DEPENDS+=	${PYPKGPREFIX}-OpenGL>=3.0.1:../../graphics/py-OpenGL
-#PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-Numeric via py-OpenGL
+#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric via py-OpenGL
 
 USE_LANGUAGES=	# none
 

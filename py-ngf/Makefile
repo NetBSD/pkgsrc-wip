@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/PyNFG-0.1.2
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 post-extract:
 	${MV} ${WRKSRC}/bin/hideandseek.py ${WRKSRC}/bin/hideandseek.py${PYVERSSUFFIX}

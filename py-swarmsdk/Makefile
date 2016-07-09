@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-PgSQL>=2.4:../../databases/py-PgSQL
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mxDateTime
 
 USE_LANGUAGES=	# none
 

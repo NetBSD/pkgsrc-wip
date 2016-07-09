@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.9:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 WRKSRC=	${WRKDIR}/scikit-image-0.11.3
 

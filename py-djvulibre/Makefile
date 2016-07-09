@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config #gsed
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-pyrex
 
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	pre-configure

@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	34 33
+PYTHON_VERSIONS_ACCEPTED=	34 35
 
 DEPENDS+=       ${PYPKGPREFIX}-greenlet>=0.4.1:../../devel/py-greenlet
 #DEPENDS+=	   ${PYPKGPREFIX}-rply>=0.16.1:../../devel/py-rply

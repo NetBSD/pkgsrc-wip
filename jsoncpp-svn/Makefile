@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/json-cpp
 
 # for tests
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.6.0rc2nb20140217
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.6.0rc2nb20140217
 
 .include "../../lang/python/application.mk"
 .include "../../wip/mk/svn-package.mk"

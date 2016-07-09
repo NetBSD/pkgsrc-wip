@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
 WRKSRC=		${WRKDIR}/dropbox-sdk-python
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33
-
 .include "../../lang/python/egg.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

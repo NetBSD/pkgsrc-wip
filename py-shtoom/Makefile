@@ -15,7 +15,7 @@ DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shtoom/ui/gnomeui/shtoom.glade \

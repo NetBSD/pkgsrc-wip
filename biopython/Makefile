@@ -11,7 +11,7 @@ COMMENT=	Python libraries for computational molecular biology
 LICENSE=	Biopython
 
 PYDISTUTILSPKG=		YES
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-reportlab
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-reportlab
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/biopython

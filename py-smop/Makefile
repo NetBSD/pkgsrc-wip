@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.2:../../math/py-networkx
 WRKSRC=		${WRKDIR}/smop-0.1.5
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

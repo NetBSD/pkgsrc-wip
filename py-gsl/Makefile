@@ -11,7 +11,7 @@ COMMENT=	Python interface for the GNU scientific library
 LICENSE=	gnu-gpl-v3
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-Numeric, py-numarray
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric, py-numarray
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_test.py
