@@ -2,6 +2,31 @@ $NetBSD$
 
 --- src/VBox/Runtime/Makefile.kmk.orig	2016-03-04 19:29:47.000000000 +0000
 +++ src/VBox/Runtime/Makefile.kmk
+@@ -34,7 +34,7 @@ ifdef VBOX_ONLY_ADDITIONS
+  LIBRARIES += RuntimeGuestR3 RuntimeGuestR3Shared
+  LIBRARIES.win.amd64 += RuntimeGuestR3-x86 RuntimeGuestR3Shared-x86
+  ifdef VBOX_WITH_ADDITION_DRIVERS
+-  LIBRARIES += RuntimeGuestR0
++#  LIBRARIES += RuntimeGuestR0
+   #LIBRARIES.os2 += RuntimeGuestR0OS2Warp3
+   LIBRARIES.win.x86 += RuntimeGuestR0NT4
+  endif
+@@ -84,13 +84,13 @@ else # !VBOX_ONLY_ADDITIONS && !VBOX_ONL
+   LIBRARIES.win += RuntimeRCStub
+  endif
+  ifdef VBOX_WITH_VBOXDRV
+-  LIBRARIES += RuntimeR0Drv
++#  LIBRARIES += RuntimeR0Drv
+  endif
+  ifdef VBOX_WITH_ADDITIONS
+   LIBRARIES += RuntimeGuestR3 RuntimeGuestR3Shared
+   LIBRARIES.win.amd64 += RuntimeGuestR3-x86 RuntimeGuestR3Shared-x86
+   ifdef VBOX_WITH_ADDITION_DRIVERS
+-   LIBRARIES += RuntimeGuestR0
++#   LIBRARIES += RuntimeGuestR0
+   endif
+   #LIBRARIES.os2 += RuntimeGuestR0OS2Warp3
+   LIBRARIES.win.x86 += RuntimeGuestR0NT4
 @@ -1094,6 +1094,81 @@ RuntimeR3_SOURCES.freebsd = \
  RuntimeR3_SOURCES.freebsd.x86   += common/string/memrchr.asm
  RuntimeR3_SOURCES.freebsd.amd64 += common/string/memrchr.asm
@@ -124,8 +149,8 @@ $NetBSD$
  RuntimeR0Drv_INCS      := $(PATH_SUB_CURRENT) include
  RuntimeR0Drv_INCS.freebsd = \
  	$(PATH_STAGE)/gen-sys-hdrs
-+RuntimeR0Drv_INCS.netbsd = \
-+	$(PATH_STAGE)/gen-sys-hdrs
++#RuntimeR0Drv_INCS.netbsd = \
++#	$(PATH_STAGE)/gen-sys-hdrs
  RuntimeR0Drv_INCS.linux = \
  	r0drv/linux
  RuntimeR0Drv_INCS.solaris = \

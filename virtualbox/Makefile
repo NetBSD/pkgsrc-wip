@@ -23,7 +23,7 @@ BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
-USE_TOOLS+=	gtar pkg-config bison flex
+USE_TOOLS+=	gtar pkg-config bison flex perl
 
 WRKSRC=		${WRKDIR}/VirtualBox-${PKGVERSION_NOREV}
 
