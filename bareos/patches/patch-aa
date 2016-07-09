@@ -1,3 +1,5 @@
+$NetBSD$
+
 - need termios.h, our term.h does not include it
 - t_insert_line and t_delete_line are macros in term.h; undef them
 - spell HAVE_TERM_H correctly

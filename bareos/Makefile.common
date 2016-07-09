@@ -1,13 +1,15 @@
-GITHUB_PROJECT= bareos
-PKGNAME=        ${GITHUB_PROJECT}-${VERSION}
-DISTNAME=	bareos
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=bareos/}
-DIST_SUBDIR=    ${GITHUB_PROJECT}
-TAG=		Release
-GITHUB_TAG=     ${TAG}/${PKGVERSION_NOREV}
-WRKSRC=         ${WRKDIR}/${DISTNAME}-${TAG}-${PKGVERSION_NOREV}
+# $NetBSD$
 
-VERSION=        15.2.2
+GITHUB_PROJECT=	bareos
+PKGNAME=	${GITHUB_PROJECT}-${VERSION}
+DISTNAME=	bareos
+MASTER_SITES=	${MASTER_SITE_GITHUB:=bareos/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
+TAG=		Release
+GITHUB_TAG=	${TAG}/${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/${DISTNAME}-${TAG}-${PKGVERSION_NOREV}
+
+VERSION=	15.2.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	paul@paulbsd.com
@@ -24,54 +26,54 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 # For make_catalog_backup.pl.in.
-USE_TOOLS+=             perl:run
+USE_TOOLS+=	perl:run
 
-BAREOS_GROUP?=          bareos
-BAREOS_DIR_USER?=       bareos-dir
-BAREOS_SD_USER?=        bareos-sd
+BAREOS_GROUP?=		bareos
+BAREOS_DIR_USER?=	bareos-dir
+BAREOS_SD_USER?=	bareos-sd
 
-PKG_GROUPS_VARS+=       BAREOS_GROUP
-PKG_USERS_VARS=         BAREOS_DIR_USER BAREOS_SD_USER
+PKG_GROUPS_VARS+=	BAREOS_GROUP
+PKG_USERS_VARS=		BAREOS_DIR_USER BAREOS_SD_USER
 
-PKG_SYSCONFSUBDIR?=     bareos
-BAREOS_PIDDIR?=         ${VARBASE}/run/bareos
-BAREOS_WORKINGDIR?=     ${VARBASE}/spool/bareos
+PKG_SYSCONFSUBDIR?=	bareos
+BAREOS_PIDDIR?=		${VARBASE}/run/bareos
+BAREOS_WORKINGDIR?=	${VARBASE}/spool/bareos
 
-BUILD_DEFS+=            VARBASE BAREOS_PIDDIR BAREOS_WORKINGDIR
+BUILD_DEFS+=	VARBASE BAREOS_PIDDIR BAREOS_WORKINGDIR
 
-FILES_SUBST+=           BAREOS_ETCDIR=${PKG_SYSCONFDIR}
-FILES_SUBST+=           BAREOS_PIDDIR=${BAREOS_PIDDIR}
-FILES_SUBST+=           BAREOS_GROUP=${BAREOS_GROUP}
-FILES_SUBST+=           BAREOS_DIR_USER=${BAREOS_DIR_USER}
-FILES_SUBST+=           BAREOS_SD_USER=${BAREOS_SD_USER}
+FILES_SUBST+=	BAREOS_ETCDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+=	BAREOS_PIDDIR=${BAREOS_PIDDIR}
+FILES_SUBST+=	BAREOS_GROUP=${BAREOS_GROUP}
+FILES_SUBST+=	BAREOS_DIR_USER=${BAREOS_DIR_USER}
+FILES_SUBST+=	BAREOS_SD_USER=${BAREOS_SD_USER}
 
-SUBST_CLASSES+=         egdir
-SUBST_STAGE.egdir=      pre-configure
-SUBST_FILES.egdir=      src/dird/Makefile.in
-SUBST_FILES.egdir+=     src/console/Makefile.in
-SUBST_FILES.egdir+=     src/filed/Makefile.in
-SUBST_FILES.egdir+=     src/stored/Makefile.in
-SUBST_FILES.egdir+=     src/gnome2-console/Makefile.in
-SUBST_FILES.egdir+=     src/wx-console/Makefile.in
-SUBST_FILES.egdir+=     src/tray-monitor/Makefile.in
-SUBST_SED.egdir=        -e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
+SUBST_CLASSES+=		egdir
+SUBST_STAGE.egdir=	pre-configure
+SUBST_FILES.egdir=	src/dird/Makefile.in
+SUBST_FILES.egdir+=	src/console/Makefile.in
+SUBST_FILES.egdir+=	src/filed/Makefile.in
+SUBST_FILES.egdir+=	src/stored/Makefile.in
+SUBST_FILES.egdir+=	src/gnome2-console/Makefile.in
+SUBST_FILES.egdir+=	src/wx-console/Makefile.in
+SUBST_FILES.egdir+=	src/tray-monitor/Makefile.in
+SUBST_SED.egdir=	-e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
 
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=        --with-scriptdir=${PREFIX}/libexec/bareos
-CONFIGURE_ARGS+=        --with-sbin-perm=0755
-CONFIGURE_ARGS+=        --with-working-dir=${BAREOS_WORKINGDIR}
-CONFIGURE_ARGS+=        --with-pid-dir=${BAREOS_PIDDIR}
-CONFIGURE_ARGS+=        --with-readline=${BUILDLINK_PREFIX.editlinereadline}/include/readline
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bareos
+CONFIGURE_ARGS+=	--with-sbin-perm=0755
+CONFIGURE_ARGS+=	--with-working-dir=${BAREOS_WORKINGDIR}
+CONFIGURE_ARGS+=	--with-pid-dir=${BAREOS_PIDDIR}
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 
 .if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=        --enable-smartalloc
+CONFIGURE_ARGS+=	--enable-smartalloc
 .endif
 .if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=        --disable-xattr
+CONFIGURE_ARGS+=	--disable-xattr
 .endif
 
-PTHREAD_OPTS+=          require
-PTHREAD_AUTO_VARS=      yes
+PTHREAD_OPTS+=		require
+PTHREAD_AUTO_VARS=	yes
 
 CONFLICTS=		bacula-[0-9]*
 

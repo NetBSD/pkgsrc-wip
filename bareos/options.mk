@@ -1,8 +1,10 @@
-PKG_OPTIONS_VAR=                PKG_OPTIONS.bareos
-PKG_SUPPORTED_OPTIONS=          ssl lzo
-PKG_OPTIONS_REQUIRED_GROUPS=    database
-PKG_OPTIONS_GROUP.database=     catalog-sqlite3 catalog-pgsql catalog-mysql
-PKG_SUGGESTED_OPTIONS=          ssl catalog-sqlite3
+# $NetBSD$
+
+PKG_OPTIONS_VAR=		PKG_OPTIONS.bareos
+PKG_SUPPORTED_OPTIONS=		ssl lzo
+PKG_OPTIONS_REQUIRED_GROUPS=	database
+PKG_OPTIONS_GROUP.database=	catalog-sqlite3 catalog-pgsql catalog-mysql
+PKG_SUGGESTED_OPTIONS=		ssl catalog-sqlite3
 
 .include "../../mk/bsd.options.mk"
 

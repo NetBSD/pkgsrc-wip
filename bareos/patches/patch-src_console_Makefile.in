@@ -1,3 +1,5 @@
+$NetBSD$
+
 --- src/console/Makefile.in.old	2016-01-04 21:54:23.000000000 +0100
 +++ src/console/Makefile.in	2016-01-04 21:55:33.000000000 +0100
 @@ -96,19 +96,19 @@

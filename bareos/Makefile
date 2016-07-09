@@ -1,3 +1,5 @@
+# $NetBSD$
+
 PKGREVISION=		1
 
 .include "options.mk"
@@ -15,7 +17,7 @@ CONFIGURE_ARGS+=	--with-dir-user=${BAREOS_DIR_USER}
 CONFIGURE_ARGS+=	--with-sd-group=${BAREOS_GROUP}
 CONFIGURE_ARGS+=	--with-sd-user=${BAREOS_SD_USER}
 
-OWN_DIRS_PERMS+=	${BAREOS_WORKINGDIR} ${ROOT_USER} ${BAREOS_GROUP} 770
+OWN_DIRS_PERMS+=	${BAREOS_WORKINGDIR} ${REAL_ROOT_USER} ${BAREOS_GROUP} 770
 
 PKG_USERS=		${BAREOS_DIR_USER}:${BAREOS_GROUP}
 PKG_USERS+=		${BAREOS_SD_USER}:${BAREOS_GROUP}
@@ -32,7 +34,7 @@ REPLACE_PERL+=		src/cats/make_catalog_backup.pl.in
 
 .include "Makefile.common"
 
-.if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
+.if defined(USE_DESTDIR)
 INSTALL_MAKE_FLAGS+=	dir_user= dir_group= sd_group=
 .endif
 
