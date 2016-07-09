@@ -1,0 +1,42 @@
+Fix conflict with lapack
+Install shared libraries
+Add options to install for SSE1/SSE2/... targets.
+
+Possible split of pkgsrc/math/lapack/Makefile.common:
+
+$ cvs -q diff -uN Makefile.common Makefile.version                                                                                                                                   
+Index: Makefile.common
+===================================================================
+RCS file: /public/netbsd-rsync/pkgsrc/math/lapack/Makefile.common,v
+retrieving revision 1.2
+diff -u -r1.2 Makefile.common
+--- Makefile.common     9 Oct 2014 14:06:41 -0000       1.2
++++ Makefile.common     9 Jul 2016 06:53:40 -0000
+@@ -2,10 +2,12 @@
+ # used by math/blas/Makefile
+ # used by math/lapack/Makefile
+ 
+-DISTNAME=      lapack-3.5.0
++.include "${.CURDIR}/../../math/lapack/Makefile.version"
++
++DISTNAME=      ${LAPACK_NAME}-${LAPACK_VERSION}
+ CATEGORIES=    math
+ MASTER_SITES=  ${MASTER_SITE_NETLIB:=lapack/}
+-EXTRACT_SUFX=  .tgz
++EXTRACT_SUFX=  ${LAPACK_SUFX}
+ 
+ MAINTAINER=    adam@NetBSD.org
+ HOMEPAGE=      http://www.netlib.org/lapack/
+Index: Makefile.version
+===================================================================
+RCS file: Makefile.version
+diff -N Makefile.version
+--- /dev/null   1 Jan 1970 00:00:00 -0000
++++ Makefile.version    9 Jul 2016 06:49:54 -0000
+@@ -0,0 +1,6 @@
++# $NetBSD: Makefile.common,v 1.2 2014/10/09 14:06:41 wiz Exp $
++# used by math/lapack/Makefile.common
++
++LAPACK_NAME=   lapack
++LAPACK_VERSION=        3.5.0
++LAPACK_SUFX=   .tgz

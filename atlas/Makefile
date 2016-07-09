@@ -33,12 +33,12 @@ CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--incdir=${DESTDIR}${PREFIX}/include
 CONFIGURE_ARGS+=	--libdir=${DESTDIR}${PREFIX}/lib
 CONFIGURE_ARGS+=	-b ${ATLAS_CPUBITS}
-CONFIGURE_ARGS+=	-t ${MAKE_JOBS}
 CONFIGURE_ARGS+=	-Ss flapack ${PREFIX}/lib/liblapack.a
 
 # atlas requires distfiles from lapack
-.include "../../math/lapack/Makefile.version"
-CONFIGURE_ARGS+=	--with-netlib-lapack-tarfile=${DISTDIR}/${LAPACK_NAME}-${LAPACK_VERSION}${LAPACK_SUFX}
+#.include "../../math/lapack/Makefile.version"
+#CONFIGURE_ARGS+=	--with-netlib-lapack-tarfile=${DISTDIR}/${LAPACK_NAME}-${LAPACK_VERSION}${LAPACK_SUFX}
+CONFIGURE_ARGS+=       --with-netlib-lapack-tarfile=${DISTDIR}/lapack-3.5.0.tgz
 
 TEST_TARGET=	check
 BUILD_TAGET=	build shared ptshared
