@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	sickbeard-507
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=midgetspy/}
 GITHUB_PROJECT=	Sick-Beard
@@ -36,12 +36,12 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-cheetah
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	sickbeard.sh
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
 SUBST_STAGE.paths=	post-patch
 
-INSTALLATION_DIRS += lib/sickbeard ${PKG_SYSCONFDIR}/sickbeard
+OWN_DIRS=		${VARBASE}/sickbeard
 
 post-extract:
 	${CP} ${FILESDIR}/sickbeard.sh ${WRKSRC}/sickbeard.sh
