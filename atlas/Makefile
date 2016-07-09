@@ -11,14 +11,11 @@ HOMEPAGE=	http://math-atlas.sourceforge.net/
 COMMENT=	Automatically Tuned Linear Algebra Software
 LICENSE=	modified-bsd
 
-CONFLICTS=	lapack-[0-9]*
-
 WRKSRC=		${WRKDIR}/ATLAS
 HAS_CONFIGURE=	yes
 
 MAKE_JOBS_SAFE=	no
 
-PKGSRC_FORTRAN=	gfortran
 USE_LANGUAGES=	c fortran77
 USE_TOOLS+=	gmake
 
@@ -37,6 +34,11 @@ CONFIGURE_ARGS+=	--incdir=${DESTDIR}${PREFIX}/include
 CONFIGURE_ARGS+=	--libdir=${DESTDIR}${PREFIX}/lib
 CONFIGURE_ARGS+=	-b ${ATLAS_CPUBITS}
 CONFIGURE_ARGS+=	-t ${MAKE_JOBS}
+CONFIGURE_ARGS+=	-Ss flapack ${PREFIX}/lib/liblapack.a
+
+# atlas requires distfiles from lapack
+.include "../../math/lapack/Makefile.version"
+CONFIGURE_ARGS+=	--with-netlib-lapack-tarfile=${DISTDIR}/${LAPACK_NAME}-${LAPACK_VERSION}${LAPACK_SUFX}
 
 TEST_TARGET=	check
 BUILD_TAGET=	build shared ptshared
@@ -49,4 +51,5 @@ pre-configure:
 #   find:: not found
 # Atlas iterates over all paths from PATH and executes find(1)
 
+.include "../../math/lapack/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

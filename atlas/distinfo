@@ -7,5 +7,6 @@ Size (atlas3.10.2.tar.bz2) = 4904923 bytes
 SHA1 (patch-CONFIG_src_Makefile) = fbe578eadf870863603ba5eaa33ff2e763f094e2
 SHA1 (patch-CONFIG_src_backend_Make.ext) = adde5aa439381d8a55e7c2d5fbba18aa44cd1257
 SHA1 (patch-CONFIG_src_backend_archinfo__netbsd.c) = e1644ca3b5d1610c36dfeb338afe1958e2a3268f
+SHA1 (patch-CONFIG_src_config.c) = 21f62d10b475570bbe085510e8c05c86240c0fdd
 SHA1 (patch-aa) = 1cfe4f7ad66ec006a2d6ee9186d1d91b9d656c44
 SHA1 (patch-ab) = 45a535eb378de2cfcc4cf64e5f76d0ae0fc28a0f
