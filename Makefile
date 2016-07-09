@@ -1389,7 +1389,6 @@ SUBDIR+=	jakarta-struts
 SUBDIR+=	jalview
 SUBDIR+=	jamaica
 SUBDIR+=	jason
-SUBDIR+=	java-BigDecimal
 SUBDIR+=	java-asm
 SUBDIR+=	java-basicplayer
 SUBDIR+=	java-bcel
