@@ -190,6 +190,7 @@ SHA1 (patch-src_VBox_Runtime_r3_posix_path2-posix.cpp) = 512e64a1ae953748f589e95
 SHA1 (patch-src_VBox_Runtime_r3_posix_semevent-posix.cpp) = a14adc94fc580c1b46bd0c090f97d97b0aed1996
 SHA1 (patch-src_VBox_Runtime_r3_posix_thread-posix.cpp) = c6e672e0a394cd013e71341689c680c4bff81d38
 SHA1 (patch-src_VBox_Runtime_r3_posix_thread2-posix.cpp) = cab9219ea9a423713c0a1e4381955bd9c78615d1
+SHA1 (patch-src_VBox_Runtime_r3_posix_utf8-posix.cpp) = fe28a89beddc6e6c1ddcc2df2b7ddd893b370af2
 SHA1 (patch-src_VBox_Storage_testcase_Makefile.kmk) = edafb43c93359d0b37fbe4bec839370f2d2db29e
 SHA1 (patch-src_VBox_VMM_VMMR0_GMMR0.cpp) = 08336e3aa159e2d2092cacbd16c2011963fe3908
 SHA1 (patch-src_VBox_VMM_VMMR0_VMMR0.cpp) = 57f17e39057edea79be1fa16a43f0624eaf2a15b
