@@ -1,7 +1,11 @@
 $NetBSD: distinfo,v 1.2 2015/05/08 22:58:43 i3enedek Exp $
 
-SHA1 (df_42_06_linux.tar.bz2) = 72a71fbd65f7efc22a2af09a74d57ea9fcacc336
-RMD160 (df_42_06_linux.tar.bz2) = 5b25c7765eb152526c33bd8c12d35647e5a5c51d
-SHA512 (df_42_06_linux.tar.bz2) = dfeb1406dcbd74091170eee4392c8eb876516d723b17e8aa291cab5b670be9fca4e22122788656e37afc03cd0e827e42b8cd27bc148d32639ebb7b8b7fa2bbf4
-Size (df_42_06_linux.tar.bz2) = 13857747 bytes
+SHA1 (df_43_05_linux.tar.bz2) = 1f0bfdb6a14a801b8f2cdc6fb6880b967e6a24bf
+RMD160 (df_43_05_linux.tar.bz2) = d2e99c1991f48c63096dfb301faf25d89b4f6ba7
+SHA512 (df_43_05_linux.tar.bz2) = 502e6bac0bdd5586fb6b4e1117caf144a0336a7eed3ed9350ec316e4a286e309a15e0738517c0dd7d32f182984c501c7a8756e942d3dde9fb87f72b153f38e7a
+Size (df_43_05_linux.tar.bz2) = 11580594 bytes
+SHA1 (df_43_05_linux32.tar.bz2) = bb855c363b14fbef5210644b6923feb8ce6e2774
+RMD160 (df_43_05_linux32.tar.bz2) = dcc935aa762acdd35ac94b35e6ad96e91a64fef6
+SHA512 (df_43_05_linux32.tar.bz2) = d0446ddb5c37ee45ade36b18b815595e8d7bfd9749af4ecd2f25b45859d797a9da70f2344e2c58544feafc7df06882ade8a10534c37754359747c0d37f084b7c
+Size (df_43_05_linux32.tar.bz2) = 12158550 bytes
 SHA1 (patch-df) = b2e2bfcb119f83f5308a809798365acaeae82925

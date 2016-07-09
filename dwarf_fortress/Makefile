@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/05/08 22:58:43 i3enedek Exp $
 
-DISTNAME=	df_42_06_linux
-PKGNAME=	dwarf_fortress-42.06
+DISTNAME=	df_43_05_linux
+PKGNAME=	dwarf_fortress-43.05
 CATEGORIES=	games
 MASTER_SITES=	http://www.bay12games.com/dwarves/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,16 +13,26 @@ COMMENT=	Single-player fantasy game in a randomly generated, persistent world
 
 UNPRIVILEGED= yes
 
+EMUL_PLATFORMS=         linux-i386 linux-x86_64
+EMUL_MODULES.linux=	base compat expat gtk2 libSDL glx x11
+
 NO_BUILD=	yes
 BUILD_TOOLS=    pax
 BUILD_DIRS=     # empty
 WRKSRC=		${WRKDIR}/df_linux
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${EMUL_PLATFORM} == "linux-i386"
+DISTFILES=      ${DISTNAME}32${EXTRACT_SUFX}
+.elif ${EMUL_PLATFORM} == "linux-x86_64"
+DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+.endif
+
+
 INSTALLATION_DIRS=bin df_linux
 #INSTALLATION_DIRS=bin df_linux/data df_linux/data/movies df_linux/data/art df_linux/data/init df_linux/data/init/macros df_linux/data/announcement df_linux/data/dipscript df_linux/data/dipscript/text df_linux/data/help df_linux/data/speech df_linux/data/initial_movies df_linux/data/sound df_linux/raw df_linux/raw/graphics df_linux/raw/graphics/example df_linux/raw/interaction\ examples df_linux/raw/objects df_linux/raw/objects/notes df_linux/raw/objects/text df_linux/sdl df_linux/libs
 
-EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	base compat expat gtk2 libSDL glx x11
 
 DFDIR=        df_linux
 
