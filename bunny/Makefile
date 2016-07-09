@@ -6,21 +6,18 @@ CATEGORIES=	security
 MASTER_SITES=	http://bunny-the-fuzzer.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/bunny-the-fuzzer/
 COMMENT=	Tools with C code security fuzzer
 LICENSE=	apache-2.0
 
-WRKSRC=	${WRKDIR}/bunny
+WRKSRC=		${WRKDIR}/bunny
 USE_TOOLS+=	gmake
-
-INSTALLATION_DIRS=	bin
-
-BUNNY_FILES=	bunny-exec bunny-flow bunny-gcc bunny-main bunny-trace
+AUTO_MKDIRS=	yes
 
 do-install:
-	for a in ${BUNNY_FILES}; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/$$a ${DESTDIR}${PREFIX}/bin/$$a; \
-	done
+.for program in bunny-exec bunny-flow bunny-gcc bunny-main bunny-trace
+	${INSTALL_PROGRAM} ${WRKSRC}/${program} ${DESTDIR}${PREFIX}/bin/${program}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
