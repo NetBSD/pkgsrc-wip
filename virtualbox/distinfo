@@ -131,6 +131,7 @@ SHA1 (patch-src_VBox_Main_Makefile.kmk) = 2f3cac33895b6e0cee14593bd0d85aa3c7e252
 SHA1 (patch-src_VBox_Main_cbinding_VBoxCAPIGlue.c) = f2ab8096d65b200bad3171875706d3acd3e86ea4
 SHA1 (patch-src_VBox_Main_cbinding_VBoxCAPI__v2__2.h) = 0a66eb2fa8ebcb1dd8a720dd3dadbb03a8a8c5b7
 SHA1 (patch-src_VBox_Main_cbinding_VBoxCAPI__v3__0.h) = 0c49c14b973ea74bdb0bf6e3c124d87ba1eaeb20
+SHA1 (patch-src_VBox_Main_glue_NativeEventQueue.cpp) = f566c3cd73c323f78c38487bde29b88ca86e9c96
 SHA1 (patch-src_VBox_Main_glue_tests_Makefile) = 19002fe2622195a6342eeec8cb180ced75ad7c0a
 SHA1 (patch-src_VBox_Main_include_ConsoleImpl.h) = 5bc4916830e8f7e2c47c5c98d9491312f9543f1d
 SHA1 (patch-src_VBox_Main_include_HostUSBDeviceImpl.h) = 6d4a8057ea6e52aefc605e23f0a770cc5adee9ae
