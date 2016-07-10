@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/04/11 12:50:04 jihbed Exp $
 
-SHA1 (libiptcdata-1.0.3.tar.gz) = 30ef5527c355420a90f123e801ebc9b4ded1fb45
-RMD160 (libiptcdata-1.0.3.tar.gz) = f25478bd1e5c6ab73814e0407601f1d168430936
-Size (libiptcdata-1.0.3.tar.gz) = 551796 bytes
+SHA1 (libiptcdata-1.0.4.tar.gz) = 2e967be3aee9ae5393f208a3df2b52e08dcd98c8
+RMD160 (libiptcdata-1.0.4.tar.gz) = 64e1b7cd1d5166091227eb651f9945bc3862e39b
+SHA512 (libiptcdata-1.0.4.tar.gz) = 8656b2febaec133d1a8783252047672bebd58ae9ceab5477c4acfa35bcc381dfda08b655a957b962878af28c69deff77d920e780c84b4debdff2f980b3de94e8
+Size (libiptcdata-1.0.4.tar.gz) = 569132 bytes
+SHA1 (patch-configure) = b11601961655180924ad212a57369dcfa6659cb2

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libiptcdata
 LIBIPTCDATA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libiptcdata+=	libiptcdata>=1.0.3
-BUILDLINK_PKGSRCDIR.libiptcdata?=	../../wip/libipctdata
+BUILDLINK_PKGSRCDIR.libiptcdata?=	../../wip/libiptcdata
 
 
 .endif	# LIBIPTCDATA_BUILDLINK3_MK

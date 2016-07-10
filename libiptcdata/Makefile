@@ -1,15 +1,14 @@
 # $NetBSD: Makefile,v 1.3 2012/10/03 09:10:39 asau Exp $
 #
 
-DISTNAME=	libiptcdata-1.0.3
+DISTNAME=	libiptcdata-1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libiptcdata/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libiptcdata.sourceforge.net/
 COMMENT=	Library to parse IPTC metadata
-
-CHECK_PORTABILITY_SKIP+=	configure
+LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=		yes
