@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2012/10/03 09:10:39 asau Exp $
-#
 
 DISTNAME=	libiptcdata-1.0.4
 CATEGORIES=	graphics
@@ -15,7 +14,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config intltool gettext
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES+=		c c++
-
 
 PKGCONFIG_OVERRIDE+=	libiptcdata/libiptcdata.pc.in
 

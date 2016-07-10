@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
+@comment $NetBSD$
 bin/iptc
 include/libiptcdata/_stdint.h
 include/libiptcdata/iptc-data.h
@@ -36,3 +36,5 @@ share/gtk-doc/html/libiptcdata/style.css
 share/gtk-doc/html/libiptcdata/up.png
 share/locale/de/LC_MESSAGES/iptc.mo
 share/locale/de/LC_MESSAGES/libiptcdata.mo
+share/locale/it/LC_MESSAGES/iptc.mo
+share/locale/it/LC_MESSAGES/libiptcdata.mo
