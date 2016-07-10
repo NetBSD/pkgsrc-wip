@@ -83,6 +83,25 @@ $NetBSD$
      if test_execute; then
        log_success "found"
      fi
+@@ -2116,15 +2113,15 @@ extern "C" int main(void)
+ }
+ EOF
+   found=
+-  SUPPYTHONLIBS="python2.7 python2.6"
++SUPPYTHONLIBS="python2.7 python2.6"
+   for p in $PYTHONDIR; do
+     for d in $SUPPYTHONLIBS; do
+       for b in lib/x86_64-linux-gnu lib/i386-linux-gnu lib64 lib/64 lib; do
+         echo "compiling the following source file:" >> $LOG
+         cat $ODIR.tmp_src.cc >> $LOG
+         echo "using the following command line:" >> $LOG
+-        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so" >> $LOG
+-        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so >> $LOG 2>&1
++        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so $PYTHONLIBRPATH" >> $LOG
++        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so $PYTHONLIBRPATH >> $LOG 2>&1
+         if [ $? -eq 0 ]; then
+           found=1
+           break
 @@ -2470,7 +2467,7 @@ EOF
  [ $OSE          -eq 0 ] && echo "  --disable-extpack        don't build the extpack"
  [ $WITH_DOCS    -eq 1 ] && echo "  --disable-docs           don't build the documentation"
