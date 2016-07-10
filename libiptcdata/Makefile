@@ -10,16 +10,16 @@ HOMEPAGE=	http://libiptcdata.sourceforge.net/
 COMMENT=	Library to parse IPTC metadata
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config intltool gettext
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=		c c++
 
 
 PKGCONFIG_OVERRIDE+=	libiptcdata/libiptcdata.pc.in
 
-CONFIGURE_ARGS+=		 --disable-python
+CONFIGURE_ARGS+=	--disable-python
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
