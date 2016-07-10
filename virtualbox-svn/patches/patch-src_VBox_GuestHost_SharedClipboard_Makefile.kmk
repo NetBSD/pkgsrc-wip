@@ -1,0 +1,9 @@
+$NetBSD$
+
+--- src/VBox/GuestHost/SharedClipboard/Makefile.kmk.orig	2016-03-04 19:29:23.000000000 +0000
++++ src/VBox/GuestHost/SharedClipboard/Makefile.kmk
+@@ -53,4 +53,3 @@ $$(tstClipboardX11Smoke_0_OUTDIR)/tstCli
+ endif
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

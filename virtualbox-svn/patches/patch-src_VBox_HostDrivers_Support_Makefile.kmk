@@ -1,0 +1,69 @@
+$NetBSD$
+
+--- src/VBox/HostDrivers/Support/Makefile.kmk.orig	2016-03-04 19:29:24.000000000 +0000
++++ src/VBox/HostDrivers/Support/Makefile.kmk
+@@ -58,6 +58,7 @@ if  !defined(VBOX_ONLY_DOCS) \
+  endif
+  INSTALLS.linux   += vboxdrv-mod
+  INSTALLS.freebsd += vboxdrv-mod
++ INSTALLS.netbsd += vboxdrv-mod
+ 
+  #
+  # Include sub-makefile(s).
+@@ -73,6 +74,9 @@ if  !defined(VBOX_ONLY_DOCS) \
+  ifeq ($(KBUILD_TARGET),freebsd)
+   include $(PATH_SUB_CURRENT)/freebsd/files_vboxdrv
+  endif
++ ifeq ($(KBUILD_TARGET),netbsd)
++  include $(PATH_SUB_CURRENT)/netbsd/files_vboxdrv
++ endif
+ endif # !VBOX_ONLY_DOCS && !VBOX_ONLY_EXTPACKS && !VBOX_ONLY_VALIDATIONKIT
+ 
+ #
+@@ -533,12 +537,13 @@ endif # os2
+ #
+ # New VBoxDrv target. TODO: Convert all the above to use this!
+ #
+-if1of ($(KBUILD_TARGET), darwin freebsd linux solaris win)
++if1of ($(KBUILD_TARGET), darwin freebsd netbsd linux solaris win)
+  ifdef VBOX_WITH_VBOXDRV
+   SYSMODS += VBoxDrv
+  endif
+  VBoxDrv_TEMPLATE         = VBOXR0DRV
+  VBoxDrv_NAME.freebsd     = vboxdrv
++ VBoxDrv_NAME.netbsd      = vboxdrv
+  VBoxDrv_NAME.linux       = vboxdrv
+  VBoxDrv_NAME.solaris     = vboxdrv
+  ifdef VBOX_SIGNING_MODE
+@@ -637,7 +642,7 @@ if1of ($(KBUILD_TARGET), darwin freebsd 
+   	SUPDrv-dtrace.cpp
+   SUPDrv-dtrace.cpp_DEFS.darwin += VBOX_PATH_MACOSX_DTRACE_H=\"$(VBOX_PATH_MACOSX_SDK)/usr/include/sys/dtrace.h\"
+  endif
+- ifn1of ($(KBUILD_TARGET), linux freebsd)
++ ifn1of ($(KBUILD_TARGET), linux freebsd netbsd)
+   VBoxDrv_SOURCES        += \
+  	SUPDrvTracerA.asm
+  endif
+@@ -687,7 +692,7 @@ if1of ($(KBUILD_TARGET), darwin solaris)
+ endif
+ 
+ 
+-if1of ($(KBUILD_TARGET), linux freebsd)
++if1of ($(KBUILD_TARGET), linux freebsd netbsd)
+  #
+  # Targets for installing the linux sources.
+  #
+@@ -717,7 +722,7 @@ if1of ($(KBUILD_TARGET), linux freebsd)
+ 		--output $@ $<
+ 	%$(QUIET2)$(APPEND) -t '$(PATH_TARGET)/vboxdrv-mod-1.dep' \
+ 		'Support/$(KBUILD_TARGET)/Makefile_VBOX_HARDENED=$(VBOX_WITH_HARDENING)'
+-endif # linux freebsd
++endif # linux freebsd netbsd
+ 
+ 
+ ifeq ($(KBUILD_TARGET), win)
+@@ -752,4 +757,3 @@ endif # win
+ 
+ endif # !VBOX_ONLY_DOCS && !VBOX_ONLY_EXTPACKS && !VBOX_ONLY_VALIDATIONKIT
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

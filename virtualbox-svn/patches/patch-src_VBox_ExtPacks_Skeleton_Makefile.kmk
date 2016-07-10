@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/VBox/ExtPacks/Skeleton/Makefile.kmk.orig	2016-03-04 19:28:27.000000000 +0000
++++ src/VBox/ExtPacks/Skeleton/Makefile.kmk
+@@ -108,6 +108,12 @@ endif
+ if1of (freebsd.x86, $(VBOX_WITH_EXTPACK_OS_ARCHS))
+  VBOX_SKELETON_FILES += $(call VBOX_SKELETON_FILES_MACRO,freebsd.x86,bin,so)
+ endif
++if1of (netbsd.amd64, $(VBOX_WITH_EXTPACK_OS_ARCHS))
++ VBOX_SKELETON_FILES += $(call VBOX_SKELETON_FILES_MACRO,netbsd.amd64,bin,so)
++endif
++if1of (netbsd.x86, $(VBOX_WITH_EXTPACK_OS_ARCHS))
++ VBOX_SKELETON_FILES += $(call VBOX_SKELETON_FILES_MACRO,netbsd.x86,bin,so)
++endif
+ if1of (linux.amd64, $(VBOX_WITH_EXTPACK_OS_ARCHS))
+  VBOX_SKELETON_FILES += $(call VBOX_SKELETON_FILES_MACRO,linux.amd64,bin,so)
+ endif
+@@ -159,4 +165,3 @@ $(VBOX_PATH_PACKAGES)/$(VBOX_SKELETON_MA
+ BLDDIRS += $(VBOX_PATH_PACKAGES)/
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

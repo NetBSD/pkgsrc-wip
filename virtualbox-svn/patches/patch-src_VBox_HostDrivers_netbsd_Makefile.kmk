@@ -1,0 +1,30 @@
+$NetBSD$
+
+--- src/VBox/HostDrivers/netbsd/Makefile.kmk.orig	2016-07-07 07:08:46.599051025 +0000
++++ src/VBox/HostDrivers/netbsd/Makefile.kmk
+@@ -0,0 +1,25 @@
++#  Makefile.kmk $
++## @file
++# Sub-makefile for the NetBSD host driver helper scripts.
++#
++
++#
++# Copyright (C) 2006-2015 Oracle Corporation
++#
++# This file is part of VirtualBox Open Source Edition (OSE), as
++# available from http://www.virtualbox.org. This file is free software;
++# you can redistribute it and/or modify it under the terms of the GNU
++# General Public License (GPL) as published by the Free Software
++# Foundation, in version 2 as it comes in the "COPYING" file of the
++# VirtualBox OSE distribution. VirtualBox OSE is distributed in the
++# hope that it will be useful, but WITHOUT ANY WARRANTY of any kind.
++#
++
++SUB_DEPTH = ../../../..
++include $(KBUILD_PATH)/subheader.kmk
++
++INSTALLS += HostDrivers-scripts
++HostDrivers-scripts_INST    = bin/src/
++HostDrivers-scripts_SOURCES = Makefile
++
++include $(FILE_KBUILD_SUB_FOOTER)

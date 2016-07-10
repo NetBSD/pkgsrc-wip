@@ -1,0 +1,33 @@
+$NetBSD$
+
+--- src/VBox/Frontends/VirtualBox/Makefile.kmk.orig	2016-07-10 20:58:24.000000000 +0000
++++ src/VBox/Frontends/VirtualBox/Makefile.kmk
+@@ -108,6 +108,7 @@ VirtualBox_DEFS.debug     = VBOX_CHECK_S
+ VirtualBox_DEFS.linux     = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.solaris   = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.freebsd   = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
++VirtualBox_DEFS.netbsd    = VBOX_WITH_MASKED_SEAMLESS VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.darwin    = VBOX_WITH_TRANSLUCENT_SEAMLESS # VBOX_WITH_MASKED_SEAMLESS
+ VirtualBox_DEFS.win       = VBOX_WITH_MASKED_SEAMLESS # VBOX_WITH_TRANSLUCENT_SEAMLESS
+ VirtualBox_DEFS.win       += UNICODE QT_DLL
+@@ -280,6 +281,7 @@ if defined(VBOX_WITH_VIDEOHWACCEL) || de
+  VirtualBox_LIBS.solaris   += GL
+  VirtualBox_LIBS.linux     += GL
+  VirtualBox_LIBS.freebsd   += GL
++ VirtualBox_LIBS.netbsd    += GL
+  VirtualBox_LDFLAGS.darwin += -framework OpenGL
+ endif
+ ifdef VBOX_WITH_CROGL
+@@ -1050,6 +1052,7 @@ endif
+  VirtualBoxPch_SOURCES.darwin  = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.solaris = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.freebsd = $(NO_SUCH_VARIABLE)
++ VirtualBoxPch_SOURCES.netbsd  = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.linux   = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_SOURCES.win     = $(NO_SUCH_VARIABLE)
+  VirtualBoxPch_QT_MODULES      = $(VirtualBox_QT_MODULES) # "bug" - not inherited.
+@@ -1331,4 +1334,3 @@ nls/VirtualBox_en.ts: \
+ 	$(QUIET)$(SED) -n -i -e \
+ 		'/<context>/,/<\/context>/!p;/<context>/h;/<name>/H;/<message numerus="yes">/,/<\/message>/H;/<\/context>/{H;x;/<message/p}' \
+ 	$@
+-

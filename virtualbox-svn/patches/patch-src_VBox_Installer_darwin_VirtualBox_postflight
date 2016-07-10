@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- src/VBox/Installer/darwin/VirtualBox/postflight.orig	2016-03-04 19:29:32.000000000 +0000
++++ src/VBox/Installer/darwin/VirtualBox/postflight
+@@ -69,7 +69,7 @@ if [[ -e "${LSREGISTER}" && "x" != "x${U
+ fi
+ 
+ # Check environment.
+-if [ "${INSTALLER_TEMP}x" == "x" ]; then
++if [ "${INSTALLER_TEMP}x" = "x" ]; then
+     echo "Required environment variable INSTALLER_TEMP is missing. Aborting installation."
+     exit 1;
+ fi
+@@ -96,4 +96,3 @@ for bin in ${SET_UID_BINARIES}; do
+ done
+ 
+ exit 0;
+-
