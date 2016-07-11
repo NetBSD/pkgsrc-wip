@@ -1,20 +1,6 @@
 @comment $NetBSD: PLIST,v 1.1 2015/08/19 19:47:08 yhardy Exp $
 bin/sil
 share/Sil/apex/tutorial
-share/Sil/apex/scores.raw
-share/Sil/data/ability.raw
-share/Sil/data/artefact.raw
-share/Sil/data/flavor.raw
-share/Sil/data/history.raw
-share/Sil/data/house.raw
-share/Sil/data/limits.raw
-share/Sil/data/monster.raw
-share/Sil/data/names.raw
-share/Sil/data/object.raw
-share/Sil/data/race.raw
-share/Sil/data/special.raw
-share/Sil/data/terrain.raw
-share/Sil/data/vault.raw
 share/Sil/edit/ability.txt
 share/Sil/edit/artefact.txt
 share/Sil/edit/flavor.txt
@@ -87,12 +73,15 @@ share/Sil/xtra/graf/16x16.png
 share/Sil/xtra/graf/32x32-less-noise.bmp
 share/Sil/xtra/graf/32x32.bmp
 share/Sil/xtra/graf/32x32.png
+share/Sil/xtra/graf/64x64.png
 share/Sil/xtra/graf/8x13.bmp
+share/Sil/xtra/graf/8x16.png
 share/Sil/xtra/graf/8x8.bmp
 share/Sil/xtra/graf/8x8.png
 share/Sil/xtra/graf/Makefile
 share/Sil/xtra/graf/TilePicker.html
 share/Sil/xtra/graf/backgrnd.bmp
+share/Sil/xtra/graf/graphics.txt
 share/Sil/xtra/graf/mask.bmp
 share/Sil/xtra/graf/mask32.bmp
 share/Sil/xtra/sound/breath.wav
@@ -116,6 +105,7 @@ share/Sil/xtra/sound/shutdoor.wav
 share/Sil/xtra/sound/sound.cfg
 share/Sil/xtra/sound/thump.wav
 share/Sil/xtra/sound/vomit.wav
-share/doc/Sil/Sil ${PKGVERSION} Manual.pdf
+share/doc/Sil/Sil Manual.pdf
+@pkgdir share/Sil/data
 @pkgdir share/Sil/user
 @pkgdir share/Sil/save

@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:47:08 yhardy Exp $
 
-SHA1 (Sil-121-src.zip) = 6531053c8df7e223fe8a2e04ef257c4f398f9f7b
-RMD160 (Sil-121-src.zip) = 9f9d846f74137c9c11b68fbcb86ddd59626981f9
-Size (Sil-121-src.zip) = 4279709 bytes
+SHA1 (Sil-130-src.zip) = 512928b7aaa35c37755121f0c1b4a39b22f1a2c5
+RMD160 (Sil-130-src.zip) = 511f97c709dc634a60a774930eda4ffc8988d7a1
+SHA512 (Sil-130-src.zip) = 6ecf2c53754a9b2015e1a3dbd0c670fcacafc3e7b0635add5c8cafa764d4de8bee60eb63f8b121734865dd054fc097d6f5ff53cb8f8b44f225fd6db379d498cf
+Size (Sil-130-src.zip) = 17916523 bytes
