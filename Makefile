@@ -3963,6 +3963,7 @@ SUBDIR+=	tex-blindtext
 SUBDIR+=	tex-blindtext-doc
 SUBDIR+=	tex-breqn-doc
 SUBDIR+=	tex-fancyref-doc
+SUBDIR+=	tex-lineno-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base

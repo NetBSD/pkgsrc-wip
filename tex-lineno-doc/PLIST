@@ -1,0 +1,10 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/lineno/CHANGEs.txt
+share/texmf-dist/doc/latex/lineno/COPYING.txt
+share/texmf-dist/doc/latex/lineno/README
+share/texmf-dist/doc/latex/lineno/README.txt
+share/texmf-dist/doc/latex/lineno/SRCFILEs.txt
+share/texmf-dist/doc/latex/lineno/fnlineno.pdf
+share/texmf-dist/doc/latex/lineno/lineno.pdf
+share/texmf-dist/doc/latex/lineno/lnosuppl.pdf
+share/texmf-dist/doc/latex/lineno/ulineno.pdf
