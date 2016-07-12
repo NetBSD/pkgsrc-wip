@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/relsize/README
+share/texmf-dist/doc/latex/relsize/relsize-doc.pdf
+share/texmf-dist/doc/latex/relsize/relsize-doc.tex
