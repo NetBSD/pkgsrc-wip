@@ -21,6 +21,8 @@ PKGCONFIG_OVERRIDE+=	libmenu/libcinnamon-menu-3.0.pc.in
 pre-configure:
 	cd ${WRKSRC} && ${SH} ./autogen.sh
 
+BUILD_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
+
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
