@@ -1,5 +1,8 @@
 $NetBSD: distinfo,v 1.1 2015/02/19 17:04:55 jihbed Exp $
 
-SHA1 (cinnamon-desktop_2.2.3.orig.tar.gz) = f11da96c06964ffcd3ee2d73b27f4ba144ed2aaa
-RMD160 (cinnamon-desktop_2.2.3.orig.tar.gz) = c7435f0ec31a84476e874748d298b56c8a123ec3
-Size (cinnamon-desktop_2.2.3.orig.tar.gz) = 558366 bytes
+SHA1 (3.0.2.tar.gz) = a79595448e846eae28df5cfc8a98daac0c6239f9
+RMD160 (3.0.2.tar.gz) = e999e426269ac985dcb5b389893186b5b59a17a4
+SHA512 (3.0.2.tar.gz) = 0adcc7bd9f9dace245a7d7528893f729947228e4c454e423cdb1d3ac2ae3c04d010226e340d5d9315cc45a84f96f7b0bb173ee1589169ddcfbfadba59e0787a6
+Size (3.0.2.tar.gz) = 577776 bytes
+SHA1 (patch-files_Makefile.am) = 349724eb13da390de2603bcbe2679171a879ee1c
+SHA1 (patch-libcinnamon-desktop_Makefile.am) = 9739ba04d803e41dd0b9ce0aa21e9cbb9634010b

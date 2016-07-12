@@ -1,0 +1,16 @@
+$NetBSD$
+
+Fix build.
+
+--- libcinnamon-desktop/Makefile.am.orig	2016-05-20 11:00:41.000000000 +0000
++++ libcinnamon-desktop/Makefile.am
+@@ -50,8 +50,7 @@ libcinnamon_desktop_la_LIBADD =	\
+ 	$(XLIB_LIBS)		\
+ 	$(LIBM)			\
+ 	$(CINNAMON_DESKTOP_LIBS)	\
+-	libgsystem.la           \
+-	-lrt
++	libgsystem.la
+ 
+ libcinnamon_desktop_la_LDFLAGS = \
+ 	-version-info $(LT_VERSION) \
