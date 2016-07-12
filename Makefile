@@ -3961,6 +3961,7 @@ SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-blindtext
 SUBDIR+=	tex-blindtext-doc
+SUBDIR+=	tex-breqn-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base

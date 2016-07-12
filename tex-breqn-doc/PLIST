@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/breqn/breqn.pdf
+share/texmf-dist/doc/latex/breqn/flexisym.pdf
+share/texmf-dist/doc/latex/breqn/mathstyle.pdf
