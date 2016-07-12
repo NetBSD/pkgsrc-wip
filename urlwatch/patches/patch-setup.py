@@ -1,15 +1,17 @@
 $NetBSD$
 
-Fix the case for an empty dirname.
+Use the pkgsrc directory structure.
 
---- setup.py.orig	2016-06-14 18:14:55.000000000 +0000
+--- setup.py.orig	2016-07-12 18:58:17.000000000 +0000
 +++ setup.py
-@@ -10,7 +10,7 @@ import re
- 
- PACKAGE_NAME = 'urlwatch'
- DEPENDENCIES = ['minidb', 'PyYAML', 'requests']
--HERE = os.path.dirname(__file__)
-+HERE = os.path.dirname(os.path.abspath(__file__))
- 
- # Assumptions:
- #  1. Package name equals main script file name (and only one script)
+@@ -18,8 +18,8 @@ m['scripts'] = ['urlwatch']
+ m['package_dir'] = {'': 'lib'}
+ m['packages'] = ['urlwatch']
+ m['data_files'] = [
+-    ('share/man/man1', ['share/man/man1/urlwatch.1']),
+-    ('share/urlwatch/examples', [
++    (os.getenv('PKGMANDIR') + '/man1', ['share/man/man1/urlwatch.1']),
++    ('share/examples/urlwatch', [
+         'share/urlwatch/examples/hooks.py.example',
+         'share/urlwatch/examples/urls.yaml.example',
+     ]),

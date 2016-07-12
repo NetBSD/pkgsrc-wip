@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/08/18 18:36:32 yhardy Exp $
 
-DISTNAME=	urlwatch-2.2
+DISTNAME=	urlwatch-2.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
 
@@ -20,13 +20,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/doc/${PKGBASE}
 # no support for 2.x
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-pre-configure:
-	cd ${WRKSRC} && ${MKDIR} -p share/examples \
-	             && ${MV} share/urlwatch/examples share/examples/urlwatch \
-	             && ${RMDIR} share/urlwatch
-
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/urlwatch.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/python/application.mk"
