@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cinnamon-menus
 PKG_SUPPORTED_OPTIONS=	introspection
-PKG_SUGGESTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
