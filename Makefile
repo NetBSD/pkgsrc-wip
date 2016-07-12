@@ -3966,6 +3966,7 @@ SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-mathtools-doc
 SUBDIR+=	tex-relsize-doc
+SUBDIR+=	tex-setspace-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
