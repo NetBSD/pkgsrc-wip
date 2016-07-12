@@ -1,0 +1,13 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/gopkg.in/natefinch/lumberjack.v2.a
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/LICENSE
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/README.md
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/chown.go
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/chown_linux.go
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/example_test.go
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/linux_test.go
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/lumberjack.go
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/lumberjack_test.go
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/rotate_test.go
+gopkg/src/gopkg.in/natefinch/lumberjack.v2/testing_test.go
+@pkgdir bin

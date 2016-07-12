@@ -1,0 +1,13 @@
+Lumberjack is a Go package for writing logs to rolling files.
+
+Lumberjack is intended to be one part of a logging infrastructure.
+It is not an all-in-one solution, but instead is a pluggable
+component at the bottom of the logging stack that simply controls the files
+to which logs are written.
+
+Lumberjack plays well with any logging package that can write to an
+io.Writer, including the standard library's log package.
+
+Lumberjack assumes that only one process is writing to the output files.
+Using the same lumberjack configuration from multiple processes on the same
+machine will result in improper behavior.
