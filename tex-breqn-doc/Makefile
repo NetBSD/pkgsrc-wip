@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	breqn.doc
-PKGNAME=	tex-${DISTNAME}-0.98c
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.98c
 TEXLIVE_REV=	38099
 TEXLIVE_USE_CTAN=	yes
 
