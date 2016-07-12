@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.48 2016/03/12 11:28:37 ryoon Exp $
+#
+
+DISTNAME=	libgnomekbd-3.6.0
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomekbd/3.6/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Gnome keyboard configuration library
+LICENSE=	gnu-gpl-v2
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
+
+PKGCONFIG_OVERRIDE+=	libgnomekbd.pc.in
+PKGCONFIG_OVERRIDE+=	libgnomekbdui.pc.in
+
+.include "../../devel/GConf/schemas.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=4.0
+.include "../../x11/libxklavier/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bsd.pkg.mk"
