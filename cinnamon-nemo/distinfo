@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2015/02/19 21:21:12 jihbed Exp $
+
+SHA1 (3.0.6.tar.gz) = 5a56afe3f3b231f753686e6c69aeb24674a73760
+RMD160 (3.0.6.tar.gz) = c3322c9edf93d20393d467aa06e333d6b367c1b2
+SHA512 (3.0.6.tar.gz) = a2741b13dd258c843a2b9096f6b3aca3cb22647e2d5e6b18013857bbbb4e9aceccbc80713365aff0d25faa31727ff86ec4a86dac2dd8a556cb0a6dc3346f7be2
+Size (3.0.6.tar.gz) = 1363302 bytes
+SHA1 (patch-files_Makefile.in) = 08a65f7ecfef2da87121f78abb3a234b5c6585f2
+SHA1 (patch-libnemo-private_nemo-global-preferences.c) = bbd46b896ad02c0dcb01e2c6976565a2cb8d73ea
+SHA1 (patch-libnemo-private_nemo-global-preferences.h) = d81fadd8212c969d950b3dde9838a170860348ee
+SHA1 (patch-src_nemo-action-config-widget.c) = 7df7d0cfc662e2ab52b48a0b65d252d4db6e227c
+SHA1 (patch-src_nemo-application.c) = cba81933351c4bb5e2f95ac2b10adc4b6b3ff9ae
+SHA1 (patch-src_nemo-desktop-icon-view.c) = 11d7e39a9bc318284e01e6819d17255d584e1874
+SHA1 (patch-src_nemo-file-management-properties.c) = 96f40cee3d080eb0f31692f11c5931b5734042a2
+SHA1 (patch-src_nemo-icon-view.c) = d5326deb9310231c536f3d0916ac77335b701b16
+SHA1 (patch-src_nemo-places-sidebar.c) = ed08952f34b49705c08638a155b6c8da58b6ecff
+SHA1 (patch-src_nemo-view.c) = 4b70ddd7adf82b83ce015b26206aa24dd4b9b70c
