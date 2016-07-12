@@ -24,6 +24,8 @@ PKGCONFIG_OVERRIDE+=	libcinnamon-desktop/cinnamon-desktop.pc.in
 pre-configure:
 	cd ${WRKSRC} && ${SH}  ./autogen.sh
 
+BUILD_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
+
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
