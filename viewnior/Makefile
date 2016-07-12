@@ -22,7 +22,8 @@ USE_TOOLS+=	autoconf automake
 USE_TOOLS+=	intltool pkg-config gmake msgfmt
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=		gnome-common-[0-9]*:../../devel/gnome-common
+BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+BUILD_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
