@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install config file in examples.
+
 --- data/Makefile.am.orig	2015-05-01 15:24:15.000000000 +0000
 +++ data/Makefile.am
 @@ -9,7 +9,7 @@ SUBDIRS = 						\
