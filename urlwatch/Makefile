@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/08/18 18:36:32 yhardy Exp $
 
-DISTNAME=	urlwatch-2.4
+DISTNAME=	urlwatch-2.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
 
