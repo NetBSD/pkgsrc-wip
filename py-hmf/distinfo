@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (hmf-2.0.1.tar.gz) = e4c6b8d6898942e6546079e0a95cbb4b1412f072
+RMD160 (hmf-2.0.1.tar.gz) = 99c6adceff0148a3b5af1224dcc0e450bccc3a4c
+SHA512 (hmf-2.0.1.tar.gz) = 85c4a69988cc41d3fcee718f82644dfed018326786574819b5c6acee984e2b4fb85dcb0998b01f79f3eddc8add6be6029ec7a3893e6b941c266dc0c9680166ae
+Size (hmf-2.0.1.tar.gz) = 56615 bytes
+SHA1 (patch-setup.py) = c59bf4626cc5846ea92ad4476a75fe8a98f3c95c

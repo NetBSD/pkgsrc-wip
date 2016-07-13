@@ -1,0 +1,3 @@
+hmf is a python application that provides a flexible and simple way to calculate
+the Halo Mass Function for a range of varying parameters. It is also the backend
+to HMFcalc, the online HMF calculator.
