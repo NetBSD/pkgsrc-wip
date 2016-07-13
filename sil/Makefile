@@ -30,7 +30,8 @@ INSTALLATION_DIRS+=	share/Sil/xtra/graf
 INSTALLATION_DIRS+=	share/Sil/xtra/sound
 
 OWN_DIRS_PERMS+=	${PREFIX}/share/Sil/data ${GAMEDIR_PERMS}
-REQD_FILES_PERMS+=      /dev/null ${PREFIX}/share/Sil/apex/scores.raw ${GAMEDATA_PERMS}
+REQD_FILES_PERMS+=	/dev/null ${PREFIX}/share/Sil/apex/scores.raw ${GAMEDATA_PERMS}
+SPECIAL_PERMS+=		${PREFIX}/bin/sil ${SETGID_GAMES_PERMS}
 
 CFLAGS+=		-DDEFAULT_PATH='\"${PREFIX}/share/Sil\"'
 CFLAGS+=		-DPRIVATE_USER_PATH
