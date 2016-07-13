@@ -4,7 +4,6 @@ bin/cd-fix-profile
 bin/cd-iccdump
 bin/cd-it8
 bin/colormgr
-etc/dbus-1/system.d/org.freedesktop.ColorManager.conf
 include/colord-1/colord-private.h
 include/colord-1/colord-session/cd-session.h
 include/colord-1/colord.h
@@ -35,7 +34,6 @@ include/colord-1/colord/cd-spectrum.h
 include/colord-1/colord/cd-transform.h
 include/colord-1/colord/cd-version.h
 lib/colord-sensors/libcolord_sensor_dummy.la
-lib/girepository-1.0/Colord-1.0.typelib
 lib/libcolord.la
 lib/libcolordprivate.la
 lib/pkgconfig/colord.pc
@@ -120,7 +118,7 @@ share/dbus-1/interfaces/org.freedesktop.ColorManager.Sensor.xml
 share/dbus-1/interfaces/org.freedesktop.ColorManager.xml
 share/dbus-1/services/org.freedesktop.ColorHelper.service
 share/dbus-1/system-services/org.freedesktop.ColorManager.service
-share/gir-1.0/Colord-1.0.gir
+share/examples/colord/org.freedesktop.ColorManager.conf
 share/glib-2.0/schemas/org.freedesktop.ColorHelper.gschema.xml
 share/locale/as/LC_MESSAGES/colord.mo
 share/locale/bn_IN/LC_MESSAGES/colord.mo
@@ -173,3 +171,4 @@ share/locale/uk/LC_MESSAGES/colord.mo
 share/locale/zh_CN/LC_MESSAGES/colord.mo
 share/locale/zh_TW/LC_MESSAGES/colord.mo
 share/polkit-1/actions/org.freedesktop.color.policy
+@pkgdir var/lib/colord/icc

@@ -4,3 +4,5 @@ SHA1 (colord-1.2.12.tar.xz) = 46c6fda75928b118a8c5d152bba6234a9ffca0a4
 RMD160 (colord-1.2.12.tar.xz) = 4eb97682fa69ba1e2c14ecc987e0529d73c5fb1f
 SHA512 (colord-1.2.12.tar.xz) = 5ce8f4fd10b92ec0cb54a05017ab050753381663a43e40d959606bb5f71ddce5456a3d67f8ce0538a2c945136834c66615f3615fdfb3e1eaaf5f5ca7a9e9c4eb
 Size (colord-1.2.12.tar.xz) = 1214992 bytes
+SHA1 (patch-configure.ac) = 374b225534ef3f1e18ceddacf67cfc0954ca748f
+SHA1 (patch-data_Makefile.am) = 6a6df47e3726651edab8c6e5836e2c7a54c37c23
