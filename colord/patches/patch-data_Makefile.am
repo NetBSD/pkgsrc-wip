@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- data/Makefile.am.orig	2015-05-01 15:24:15.000000000 +0000
++++ data/Makefile.am
+@@ -9,7 +9,7 @@ SUBDIRS = 						\
+ 	ti1
+ 
+ if HAVE_UNIX
+-dbusdir = $(sysconfdir)/dbus-1/system.d
++dbusdir = $(datadir)/examples/colord
+ dist_dbus_DATA = org.freedesktop.ColorManager.conf
+ 
+ dbusservicemaindir = $(datadir)/dbus-1/system-services
