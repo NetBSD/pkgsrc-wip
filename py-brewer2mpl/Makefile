@@ -4,7 +4,7 @@ DISTNAME=	brewer2mpl-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brewer2mpl/}
-EXTRACT_SUFX=	.zip#md5=4d467ade7b575ce0e39f51ebe8f6e1fb
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/jiffyclub/brewer2mpl/wiki
