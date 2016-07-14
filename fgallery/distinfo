@@ -1,14 +1,9 @@
 $NetBSD$
 
-SHA1 (fgallery-1.7.zip) = 2ca73247e2aebbb682ae6c1f03be24846276c393
-RMD160 (fgallery-1.7.zip) = fface70de739bd020528ae0ec180c0e27a8e5b72
-SHA512 (fgallery-1.7.zip) = 4786baecd809afadc4a4e431a6dd655fdb8b4dcd693dff177e557d7b163a4110b1d0468ad34171fc0d7e050aec85a7437fd7faa7d26203ed7342c7c874d044f0
-Size (fgallery-1.7.zip) = 145719 bytes
-SHA1 (patch-aa) = 783ec3d00952c5994fd151f301c80bd3b178afc4
-SHA1 (patch-ab) = 7fa15a19f5aaa3a2c26b911d3d41017a7830e660
-SHA1 (patch-ac) = c74d52d58e6511b7a612c589bbda1aced19f7af9
-SHA1 (patch-ad) = 13d6859887aeed7c8fe56216ef286eb09eae7f68
-SHA1 (patch-ae) = 83b177e68bfe85c8bb730cd37f721e581d68ead0
-SHA1 (patch-af) = 4b3b300a1e1963bdac453306dece595bee20e894
-SHA1 (patch-ag) = d5049e3fbb9a909a4c3a6cf3970da3ac679789d7
-SHA1 (patch-ah) = 703cd2398d33e8da4fd7911f4a6fb9fbb1c1ae34
+SHA1 (fgallery-1.8.2.zip) = a4164160f9e7d70fe1b135f11e175e8a470a94f2
+RMD160 (fgallery-1.8.2.zip) = 959854b675a813379e78d8e66022dd2f56e30561
+SHA512 (fgallery-1.8.2.zip) = 1e782b86c74b7cafbb61e46f346b2e42dab9cc3133cf8cedef827f916b5eb29316d86a52020305b56a42fa9d6555423b9d5a175dac4446a0f7f5d538beb9311f
+Size (fgallery-1.8.2.zip) = 158562 bytes
+SHA1 (patch-aa) = 36855dc0f88888a5a704b33dcafda551ab3cd806
+SHA1 (patch-ab) = 703cd2398d33e8da4fd7911f4a6fb9fbb1c1ae34
+SHA1 (patch-ac) = 838447749d4cde1836d377a498ffd56ee80e3ec0

@@ -1,14 +1,124 @@
 $NetBSD$
 
-Path to fgallery/view code
+Use a "cmd_exists" for tests of existence of commands in given environment
+Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
 
---- fgallery.orig	2015-10-03 21:35:52.000000000 +0200
-+++ fgallery	2015-10-03 21:39:40.000000000 +0200
-@@ -20,7 +20,6 @@
- use File::Basename qw{fileparse};
+--- fgallery.orig      2014-09-05 16:33:54.000000000 +0200
++++ fgallery   2015-10-02 11:10:05.000000000 +0200
+@@ -21,7 +21,6 @@
  use File::Find qw{find};
  use File::Path qw{make_path remove_tree};
+ use File::Spec::Functions qw{rel2abs};
 -use FindBin qw{$RealBin};
  use Getopt::Long qw{:config bundling};
  use IO::Handle;
  use Image::ExifTool qw{ImageInfo};
+@@ -38,7 +37,7 @@
+ our $ENCODING = encoding::_get_locale_encoding() || 'UTF-8';
+ 
+ # defaults
+-my $mode = 0644;
++my $mode = oct(644);
+ my $slim = 0;
+ my $ofile = 0;
+ my $orient = 1;
+@@ -73,6 +72,14 @@
+ }
+ 
+ 
++# see if our environment has a given command installed
++sub cmd_exists
++{
++  my ($c) = @_;
++  return qx{/bin/sh -c "command -v $c"};
++}
++
++
+ sub sys
+ {
+   my @cmd = @_;
+@@ -263,7 +270,7 @@
+ sub cap_from_str
+ {
+   my ($title, $desc) = split("\n", shift, 2);
+-  return undef if(!$title && !$desc);
++  return unless $title || $desc;
+   my $ret = [cap_clean_title($title), ($desc? cap_clean_desc($desc): '')];
+   return $ret;
+ }
+@@ -399,49 +406,27 @@
+ }
+ 
+ # check tools
+-if(system("identify -version >/dev/null 2>&1")
+-|| system("convert -version >/dev/null 2>&1")) {
+-  fatal("cannot run \"identify\" or \"convert\" (check if ImageMagick is installed)");
+-}
+-if(system("7za -h >/dev/null 2>&1"))
+-{
++fatal 'Missing identify or convert executable (from ImageMagick)'
++  unless cmd_exists('identify') || cmd_exists('convert');
++unless(cmd_exists('7za')) {
+   $p7zip = 0;
+-  if(system("zip -h >/dev/null 2>&1")) {
+-    fatal("cannot run \"zip\" (check if 7za or zip is installed)");
+-  }
+-}
+-if(system("jpegoptim -V >/dev/null 2>&1")) {
+-  $jpegoptim = 0;
+-}
+-if(system("pngcrush -h >/dev/null 2>&1")) {
+-  $pngoptim = 0;
++  cmd_exists('zip') || fatal('Missing 7z or zip command');
+ }
+-if($facedet && system("facedetect -h >/dev/null 2>&1")) {
+-  fatal("cannot run \"facedetect\" (see https://www.thregr.org/~wavexx/software/facedetect/)");
+-}
+-
+-my $tificccmd;
+-if($sRGB)
+-{
+-  if(!system("tificc >/dev/null 2>&1")) {
+-    $tificccmd = "tificc";
+-  } elsif(!system("tificc2 >/dev/null 2>&1")) {
+-    $tificccmd = "tificc2";
+-  } else {
+-    fatal("cannot run \"tificc\" or \"tificc2\" (check if liblcms2-utils is installed)");
+-  }
+-}
+-
++$jpegoptim = 0 unless cmd_exists('jpegoptim');
++$pngoptim = 0 unless cmd_exists('pngcrush');
++fatal 'Missing facedetect (see http://www.thregr.org/~wavexx/hacks/facedetect/'
++  if $facedet && !cmd_exists('facedetect');
++fatal 'Missing tificc executable (from lcms2 library)'
++  if $sRGB && !cmd_exists('tificc');
++my $tificccmd = 'tificc';
+ my $exiftrancmd;
+-if($orient)
++while($orient)
+ {
+-  if(!system("exiftran -h >/dev/null 2>&1")) {
+-    $exiftrancmd = "exiftran -aip";
+-  } elsif(!system("exifautotran >/dev/null 2>&1")) {
+-    $exiftrancmd = "exifautotran";
+-  } else {
+-    fatal("cannot execute exiftran or exifautotran for lossless JPEG autorotation");
+-  }
++  $exiftrancmd = "exiftran -aip" if cmd_exists('exiftran');
++  last if $exiftrancmd;
++  $exiftrancmd = "exifautotran" if cmd_exists('exifautotran');
++  fatal 'Missing exiftran or exifautotran executable for JPEG autorotation'
++    unless $exiftrancmd;
+ }
+ 
+ # list available files
+@@ -496,7 +481,7 @@
+ 
+   my $props = ImageInfo($file, {PrintConv => 0, Sort => 'File'});
+   unless(defined($props) && isin($props->{FileType}, @filetypes)) {
+-    return undef;
++    return;
+   }
+ 
+   # sanitize file name

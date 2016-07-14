@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGBASE=        fgallery
-DISTNAME=       ${PKGBASE}-1.7
+DISTNAME=       ${PKGBASE}-1.8.2
 PKGREVISION=    1
 CATEGORIES=     www
 
@@ -32,7 +32,7 @@ SUBST_FILES.fix-paths=   fgallery
 SUBST_SED.fix-paths=     -e "s,\"\$$RealBin/,\"${PREFIX}/share/fgallery/,g"
 
 FG_DOCSDIR=     share/doc/${PKGBASE}
-FG_DOCS=        COPYING NEWS.html NEWS.rst README.html README.rst
+FG_DOCS=        COPYING.txt NEWS.html NEWS.rst README.html README.rst
 FG_SHAREDIR=    share/${PKGBASE}/view
 FG_SRCDIR=      ${WRKDIR}/${DISTNAME}
 FG_VIEWDIR=     ${FG_SRCDIR}/view

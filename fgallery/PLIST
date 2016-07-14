@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/fgallery
-share/doc/fgallery/COPYING
+share/doc/fgallery/COPYING.txt
 share/doc/fgallery/NEWS.html
 share/doc/fgallery/NEWS.rst
 share/doc/fgallery/README.html

@@ -1,15 +1,15 @@
 $NetBSD$
 
-Don't use subroutine prototypes (Perl::Critic)
+Make the (optional) download/date area slightly less intrusive
 
---- fgallery.orig	2014-09-05 16:33:54.000000000 +0200
-+++ fgallery	2015-10-02 11:10:05.000000000 +0200
-@@ -86,7 +86,7 @@
+--- view/index.js.orig  2015-10-28 14:10:55.000000000 +0100
++++ view/index.js       2015-10-28 14:14:47.000000000 +0100
+@@ -461,7 +461,7 @@
+     el.inject(ehdr);
+   }
+   if(imgs.data[eidx].date)
+-    ehdr.adopt(new Element('span', { 'html': '<b>Date</b>: ' + imgs.data[eidx].date }));
++    ehdr.adopt(new Element('span', { 'html': imgs.data[eidx].date }));
+   ehdr.setStyle('display', (ehdr.children.length? 'block': 'none'));
  }
  
- 
--sub any(&@)
-+sub any
- {
-   my ($fun, @seq) = @_;
-   return (List::Util::first { &$fun() } @seq)? 1: 0;

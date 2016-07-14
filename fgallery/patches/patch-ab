@@ -1,15 +1,14 @@
 $NetBSD$
 
-Use oct instead of 0### (Perl::Critic)
+Make the (optional) download/date text slightly less conspicuous
 
---- fgallery.orig	2014-09-05 16:33:54.000000000 +0200
-+++ fgallery	2015-10-02 11:10:05.000000000 +0200
-@@ -29,7 +29,7 @@
- use Time::Piece;
+--- view/index.css.orig	2015-10-28 14:11:00.000000000 +0100
++++ view/index.css	2015-10-28 14:11:35.000000000 +0100
+@@ -105,6 +105,7 @@
+   background: #111; /* IE<9 */
+   background: rgba(0, 0, 0, 0.7);
+   font-family: sans-serif;
++  font-size: 60%;
+   padding: 0.5em;
+ }
  
- # defaults
--my $mode = 0644;
-+my $mode = oct(644);
- my $slim = 0;
- my $ofile = 0;
- my $orient = 1;
