@@ -26,9 +26,10 @@ pre-configure:
 
 BUILD_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
 
+.include "options.mk"
+
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
