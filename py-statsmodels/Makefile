@@ -11,8 +11,8 @@ COMMENT=	Statistical computations and models for use with SciPy
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.14.1:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-patsy>=0.3.0:../../math/py-patsy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-patsy>=0.3.0:../../wip/py-patsy
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"

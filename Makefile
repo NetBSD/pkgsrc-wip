@@ -3176,7 +3176,6 @@ SUBDIR+=	py-parameters
 SUBDIR+=	py-paramunittest
 SUBDIR+=	py-path.py
 SUBDIR+=	py-pathlib
-SUBDIR+=	py-patsy
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-pdef
 SUBDIR+=	py-pdfposter

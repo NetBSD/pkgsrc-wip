@@ -11,7 +11,7 @@ COMMENT=	Hierarchical Bayesian estimation of Drift Diffusion Models
 LICENSE=	modified-bsd
 
 DEPENDS+= ${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-patsy>=0.3.0:../../wip/py-patsy
+DEPENDS+=	${PYPKGPREFIX}-patsy>=0.3.0:../../math/py-patsy
 
 USE_LANGUAGES= c fortran
 
