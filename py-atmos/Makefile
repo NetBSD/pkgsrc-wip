@@ -10,11 +10,11 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/a/atmos/
 COMMENT=	Atmospheric sciences utility library
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-numexpr-[0-9]*:../../math/py-numexpr
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../math/py-numexpr/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

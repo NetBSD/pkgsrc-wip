@@ -11,11 +11,11 @@ COMMENT=	Python/Cython port of Lire image processing algorithms
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-h5py>=2.2.1:../../devel/py-h5py
+DEPENDS+=	${PYPKGPREFIX}-numexpr-[0-9]*:../../math/py-numexpr
 
 USE_LANGUAGES=	c
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../math/py-numexpr/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
