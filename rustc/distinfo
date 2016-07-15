@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2014/07/03 03:11:31 schmonz Exp $
+$NetBSD$
 
 SHA1 (rustc-1.9.0-src.tar.gz) = a698496c5244bbb5b2332b70f239f5af93752cce
 RMD160 (rustc-1.9.0-src.tar.gz) = 8ff733691ae3df739d780a7236186f4ca3e0d442
