@@ -3403,7 +3403,6 @@ SUBDIR+=	py-sshpt
 SUBDIR+=	py-ssp
 SUBDIR+=	py-stache
 SUBDIR+=	py-statgrap
-SUBDIR+=	py-statsmodels
 SUBDIR+=	py-stem
 SUBDIR+=	py-stevedore
 SUBDIR+=	py-storm
