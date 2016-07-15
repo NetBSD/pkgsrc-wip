@@ -1,18 +1,22 @@
 # $NetBSD$
 
-DISTNAME=	Theano-0.7.0
+DISTNAME=	Theano-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano/}
+MASTER_SITES=	https://pypi.python.org/packages/30/3d/2354fac96ca9594b755ec22d91133522a7db0caa0877165a522337d0ed73/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://deeplearning.net/software/theano/
 COMMENT= 	Optimizing compiler for evaluating mathematical expressions
 LICENSE=	modified-bsd
 
-WRKSRC=	${WRKDIR}/Theano-0.7.0
+DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
+
+USE_TOOLS+=	bash
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+REPLACE_BASH+=	theano/misc/check_blas_many.sh
 
 post-extract:
 	${MV} ${WRKSRC}/bin/theano-cache ${WRKSRC}/bin/theano-cache${PYVERSSUFFIX}
@@ -22,7 +26,8 @@ post-extract:
 do-test:
 	${RUN} cd {WRKSRC}/theano/tests ; ${SETENV} {TEST_ENV} ${PYTHONBIN} main.py
 
-.include "../../lang/python/egg.mk"
+
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"

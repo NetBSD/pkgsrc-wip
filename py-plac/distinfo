@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (plac-0.9.6.tar.gz) = cb8673c242231113518d71d19ccbae351322d201
+RMD160 (plac-0.9.6.tar.gz) = 475c777444a560f41b231a90b49b6c0008166096
+SHA512 (plac-0.9.6.tar.gz) = c49e5bf688ecd1eccba9043d17bb480fabf3c1db0c617b2e3698e46e58b0309eb04fb3ee11ae3d3104a091ce3b08c30c0c139276ae8bd27e441c5f3ba27f39d2
+Size (plac-0.9.6.tar.gz) = 122267 bytes
+SHA1 (patch-setup.py) = 37b140f9f73bd2c6542649018ac2b30a55f7d813

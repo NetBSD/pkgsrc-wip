@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/plac_runner.py2.7
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/plac.py
+${PYSITELIB}/plac.pyc
+${PYSITELIB}/plac.pyo
+${PYSITELIB}/plac_core.py
+${PYSITELIB}/plac_core.pyc
+${PYSITELIB}/plac_core.pyo
+${PYSITELIB}/plac_ext.py
+${PYSITELIB}/plac_ext.pyc
+${PYSITELIB}/plac_ext.pyo
+${PYSITELIB}/plac_tk.py
+${PYSITELIB}/plac_tk.pyc
+${PYSITELIB}/plac_tk.pyo

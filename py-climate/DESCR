@@ -1,0 +1,5 @@
+This package contains some basic command line utilities for Python:
+ o one wrapper over plac for quick command-line argument processing
+ o another for logging that lets us avoid copying that same horrid
+ logging.basicConfig(...) business in all of our scripts, and gives
+ a sensible default logging style
