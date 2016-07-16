@@ -1,0 +1,29 @@
+$NetBSD$
+
+Use pkgsrc libLLVM.
+
+--- configure.orig	2016-07-04 02:50:20.000000000 +0000
++++ configure
+@@ -968,11 +968,11 @@ then
+     putvar CFG_DISABLE_JEMALLOC
+ fi
+ 
+-if [ -n "$CFG_LLVM_ROOT" -a -z "$CFG_DISABLE_LLVM_VERSION_CHECK" -a -e "$CFG_LLVM_ROOT/bin/llvm-config" ]
++if [ -n "$CFG_LLVM_ROOT" -a -z "$CFG_DISABLE_LLVM_VERSION_CHECK" -a -e "$CFG_LLVM_ROOT/libexec/libLLVM/llvm-config" ]
+ then
+     step_msg "using custom LLVM at $CFG_LLVM_ROOT"
+ 
+-    LLVM_CONFIG="$CFG_LLVM_ROOT/bin/llvm-config"
++    LLVM_CONFIG="$CFG_LLVM_ROOT/libexec/libLLVM/llvm-config"
+     LLVM_VERSION=$($LLVM_CONFIG --version)
+ 
+     case $LLVM_VERSION in
+@@ -1500,7 +1500,7 @@ do
+         do_reconfigure=0
+         # Check that LLVm FileCheck is available. Needed for the tests
+         if [ -z "$CFG_DISABLE_CODEGEN_TESTS" ]; then
+-            need_cmd $LLVM_INST_DIR/bin/FileCheck
++            need_cmd $LLVM_INST_DIR/libexec/libLLVM/FileCheck
+         fi
+     fi
+ 
