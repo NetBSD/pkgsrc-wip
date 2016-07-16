@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.9 2015/08/18 20:48:41 yhardy Exp $
 #
 
-PKGNAME=	fs2_open-3.7.2
-DISTNAME=	fs2_open_3_7_2_src
+PKGNAME=	fs2_open-3.7.4
+DISTNAME=	fs2_open_${PKGVERSION_NOREV:S/./_/g}_src
 CATEGORIES=	games
 MASTER_SITES=	http://swc.fs2downloads.com/builds/
 EXTRACT_SUFX=	.tgz
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scp.indiegames.us/
 COMMENT=	Freespace 2 source code project
 
-WRKSRC=		${WRKDIR}/fs2_open_3_7_2
+WRKSRC=		${WRKDIR}/fs2_open_${PKGVERSION_NOREV:S/./_/g}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -25,7 +25,7 @@ pre-configure:
 	aclocal; libtoolize; automake -a --foreign -i; autoconf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/code/fs2_open_3.7.2 ${DESTDIR}${PREFIX}/bin/fs2_open
+	${INSTALL_PROGRAM} ${WRKSRC}/code/fs2_open_${PKGVERSION_NOREV} ${DESTDIR}${PREFIX}/bin/fs2_open
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

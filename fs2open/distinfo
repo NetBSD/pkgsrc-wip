@@ -1,7 +1,8 @@
 $NetBSD: distinfo,v 1.6 2015/08/18 20:48:41 yhardy Exp $
 
-SHA1 (fs2_open_3_7_2_src.tgz) = 0ca35304f17139a0a2bdf8bd5ae0b95b8781a061
-RMD160 (fs2_open_3_7_2_src.tgz) = e3e5bf6ae14215f391c041afdca6df46280580e7
-Size (fs2_open_3_7_2_src.tgz) = 10656705 bytes
+SHA1 (fs2_open_3_7_4_src.tgz) = d854d7bae403dc794019d8b39d7f64d114acc75d
+RMD160 (fs2_open_3_7_4_src.tgz) = 7ccae88fc0176bd835f0a1931472f65c643eb2df
+SHA512 (fs2_open_3_7_4_src.tgz) = d3624b1d2b5d0cb44932e1470095c953e2191bfa7f683e6d0a02f3b2e279f5a7380dd169fcd4420abcd5ebc2a8e1d1e3097ccf090916660fb84b05a6c8e6184a
+Size (fs2_open_3_7_4_src.tgz) = 9033640 bytes
 SHA1 (patch-aa) = 4991706153d66f1073022f8b55e4b7daa7d50450
 SHA1 (patch-ab) = 4918aa3c488d11fa1132b1659bb7931ddf61669e
