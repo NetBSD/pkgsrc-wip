@@ -18,7 +18,7 @@ CMAKE_ARGS+=	-D CMAKE_INSTALL_MANDIR:STRING:=${PKGMANDIR}
 CMAKE_ARGS+=	-D USE_QT4:BOOL=OFF
 CMAKE_ARGS+=	-D USE_QT5:BOOL=OFF
 
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
