@@ -28,7 +28,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/code/fs2_open_3.7.2 ${DESTDIR}${PREFIX}/bin/fs2_open
 
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
