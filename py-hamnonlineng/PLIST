@@ -1,0 +1,7 @@
+@comment $NetBSD$
+${PYSITELIB}/hamnonlineng/__init__.py
+${PYSITELIB}/hamnonlineng/__init__.pyc
+${PYSITELIB}/hamnonlineng/__init__.pyo
+${PYSITELIB}/hamnonlineng/core.py
+${PYSITELIB}/hamnonlineng/core.pyc
+${PYSITELIB}/hamnonlineng/core.pyo
