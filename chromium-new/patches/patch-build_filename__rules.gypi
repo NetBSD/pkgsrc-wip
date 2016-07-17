@@ -16,7 +16,7 @@ $NetBSD$
        ]
      }],
 -    ['<(use_aura)==0 or OS!="linux" or >(nacl_untrusted_build)==1', {
-+    ['<(use_aura)==0 or (OS!="linux" and OS!="openbsd" and OS!="freebsd") or >(nacl_untrusted_build)==1', {
++    ['<(use_aura)==0 or (OS!="linux" and OS!="openbsd" and OS!="freebsd" and OS!="netbsd") or >(nacl_untrusted_build)==1', {
        'sources/': [ ['exclude', '_auralinux\\.(h|cc)$'] ]
      }],
      ['<(use_ozone)==0 or >(nacl_untrusted_build)==1', {

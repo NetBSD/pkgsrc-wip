@@ -60,7 +60,7 @@ GYP_DEFINES+=	proprietary_codecs=1
 GYP_DEFINES+=	ffmpeg_branding=Chrome
 
 # Some gyp or gn files may be broken for NetBSD...
-GYP_DEFINES+=	desktop_linux=1
+#GYP_DEFINES+=	desktop_linux=1
 
 GYP_DEFINES+=	use_gconf=0
 GYP_DEFINES+=	use_pulseaudio=1
@@ -87,7 +87,7 @@ GYP_DEFINES+=	use_allocator=none
 GYP_DEFINES+=	use_cups=1
 GYP_DEFINES+=	linux_link_gsettings=1
 GYP_DEFINES+=	linux_link_libpci=1
-GYP_DEFINES+=	linux_link_libspeechd=0
+GYP_DEFINES+=	linux_link_libspeechd=1
 GYP_DEFINES+=	want_separate_host_toolset=0
 GYP_DEFINES+=	use_system_bzip2=1
 GYP_DEFINES+=	use_system_flac=1
@@ -322,6 +322,7 @@ do-build:
 	ninja -C out/${BUILDTYPE} ${target}
 .endfor
 
+.include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

@@ -7,7 +7,7 @@ $NetBSD$
        ],
        'conditions': [
 -        ['OS in ("win", "android", "linux")', {
-+        ['OS in ("win", "android", "linux", "freebsd", "openbsd")', {
++        ['OS in ("win", "android", "linux", "freebsd", "openbsd", "netbsd")', {
            'sources': [
              'egl_util.cc',
              'egl_util.h',
@@ -16,7 +16,7 @@ $NetBSD$
          ],
          }],
 -        ['OS in ("android", "linux")', {
-+        ['OS in ("android", "linux", "freebsd", "openbsd")', {
++        ['OS in ("android", "linux", "freebsd", "openbsd", "netbsd")', {
            'sources': [
              'gl_implementation_osmesa.cc',
              'gl_implementation_osmesa.h',
