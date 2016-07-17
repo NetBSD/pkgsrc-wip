@@ -1,0 +1,6 @@
+The cva library (pronounced see-va) implements a solver for problems
+in the domain of the calculus of variations. This includes such
+problems as finding geodesics on arbitrary surfaces, finding minimal
+paths in curved spacetime, or basically any path minimization problem
+that can be defined in terms of a surface or hypersurface model with an
+attached metric

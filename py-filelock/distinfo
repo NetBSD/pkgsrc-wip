@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (filelock-2.0.6.tar.gz) = de619c05085344ad79461b2cf96b5a29601b315d
+RMD160 (filelock-2.0.6.tar.gz) = 52b84cab56caf2f7f105a9af4774ac1214bc66c8
+SHA512 (filelock-2.0.6.tar.gz) = d6a3254cdd4b3316e9af22023fb82cbd3c694addb56f5bd3a9914a426617b76ff82ac6ebbaaaff8d977d23aa71cbd1ed83f70c24c48a8b6b061f15746a82c198
+Size (filelock-2.0.6.tar.gz) = 5023 bytes
+SHA1 (patch-setup.py) = 8391135ad54e5a4293fc250af5eb0414abc6f69b

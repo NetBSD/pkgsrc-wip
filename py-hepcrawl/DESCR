@@ -1,0 +1,5 @@
+HEPcrawl is a harvesting library based on Scrapy (http://scrapy.org)
+for INSPIRE-HEP (http://inspirehep.net) that focuses on automatic and
+semi-automatic retrieval of new content from all the sources the site
+aggregates. In particular content from major and minor publishers in
+the field of High-Energy Physics

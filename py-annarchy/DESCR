@@ -1,0 +1,4 @@
+ANNarchy (Artificial Neural Networks architect) is a parallel simulator for
+distributed rate-coded or spiking neural networks. The core of the library
+is generated in C++ and distributed using openMP or CUDA. It provides an
+interface in Python for the definition of the networks

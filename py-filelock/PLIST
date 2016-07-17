@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/filelock.py
+${PYSITELIB}/filelock.pyc
+${PYSITELIB}/filelock.pyo

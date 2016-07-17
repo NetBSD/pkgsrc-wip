@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/03/07 12:01:16 jihbed Exp $
 
-SHA1 (lmfit-3.2.tgz) = b6179921ba9a053cae2da2d5977ced5354906a5e
-RMD160 (lmfit-3.2.tgz) = d2f243183f5eaa911f257048fab7871351d4549b
-Size (lmfit-3.2.tgz) = 314065 bytes
+SHA1 (lmfit-6.1.tgz) = 34c60ff81072f960913cd6a876357c7c9d5bba63
+RMD160 (lmfit-6.1.tgz) = dd29f4c1a4fdb351dac19bbb7eedb1238b756198
+SHA512 (lmfit-6.1.tgz) = 3d15a566ca67dbdc70ecde3eca2e7479389caec20c2409c28bc19f881a7e7ebfe8d8693dfa992c8c60a8430b5034b036cd338e92d6f8f03970cfa6449bdfd18b
+Size (lmfit-6.1.tgz) = 363031 bytes

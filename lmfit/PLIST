@@ -1,12 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 12:01:16 jihbed Exp $
-bin/curve1
-bin/fourexp
-bin/hat
-bin/morobropro
-bin/powell
-bin/surface1
-include/lmmin.h
-lib/liblmmin.la
-man/man3/lmcurve_fit.3
-man/man3/lmfit.3
-man/man3/lmmin.3
+@comment $NetBSD$
