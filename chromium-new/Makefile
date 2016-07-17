@@ -1,62 +1,28 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
-DISTNAME=	chromium-48.0.2564.116
+DISTNAME=	chromium-51.0.2704.106
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://dev.chromium.org/Home
-COMMENT=	Open-source browser project
-LICENSE=	modified-bsd
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://www.chromium.org/Home
+COMMENT=	Chromium web browser
+LICENSE=	modified-bsd AND gnu-lgpl-v3 AND mpl-2.0
 
 USE_TOOLS+=	bash bison flex:pkgsrc gmake pax perl pkg-config
+TOOLS_PLATFORM.flex=   # override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
-BUILD_DEPENDS+=	yasm>=0:../../devel/yasm
-
-ONLY_FOR_PLATFORM=	*-*-arm *-*-i386 *-*-x86_64
-TOOLS_PLATFORM.flex=	# override the platform definition to use pkgsrc's flex.
-
-DATADIR=	${DESTDIR}${PREFIX}/share/chromium
+BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
-.include "../../audio/alsa-lib/buildlink3.mk"
-.endif
-
-GNU_CONFIGURE=	yes
-
-FFMPEG_ARGS+=	--disable-everything
-FFMPEG_ARGS+=	--disable-network
-FFMPEG_ARGS+=	--disable-bzlib
-FFMPEG_ARGS+=	--disable-zlib
-FFMPEG_ARGS+=	--disable-swscale
-FFMPEG_ARGS+=	--disable-amd3dnow
-FFMPEG_ARGS+=	--disable-amd3dnowext
-FFMPEG_ARGS+=	--enable-shared
-FFMPEG_ARGS+=	--enable-libvpx
-FFMPEG_ARGS+=	--enable-encoder=libvpx
-
-.include "options.mk"
-
-BUILD_DIRS=	.
-MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
-#MAKE_ENV+=	CC.host=${CC:Q}
-MAKE_ENV+=	CFLAGS.host=${CFLAGS:M*:Q}
-MAKE_ENV+=	CXX.host=${CXX:Q}
-MAKE_ENV+=	CXXFLAGS.host=${CXXFLAGS:M*:Q}
-MAKE_ENV+=	LINK.host=${CXX:Q}
-MAKE_ENV+=	LDFLAGS.host=${LDFLAGS:M*:Q}
-MAKE_ENV+=	AR.host=${AR:Q}
-.if ${OPSYS} != "Linux"
-# Override the LINK variable for the platforms which do not have flock(1).
-MAKE_ENV+=	LINK=${CXX:Q}
-.endif
-
-BUILDDIR=	${WRKSRC}/out # /${BUILDTYPE}
+ONLY_FOR_PLATFORM=	*-*-arm *-*-i386 *-*-x86_64
 
 SUBST_CLASSES+=		bash
 SUBST_MESSAGE.bash=	Fixing bash path
@@ -69,6 +35,7 @@ SUBST_SED.bash=		-e 's:/bin/bash:${BASH}:'
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing pkg path
 SUBST_STAGE.path=	post-patch
+SUBST_FILES.path+=	base/base.gyp
 SUBST_FILES.path+=	base/base_paths_linux.cc
 SUBST_FILES.path+=	base/process_util_openbsd.cc
 SUBST_FILES.path+=	build/common.gypi
@@ -77,16 +44,89 @@ SUBST_SED.path+=	-e 's:/usr/local/:${PREFIX}/:'
 SUBST_SED.path+=	-e 's:/usr/lib/:${BUILDLINK_DIR}/lib/:'
 SUBST_SED.path+=	-e 's:/usr/include/:${BUILDLINK_DIR}/include/:'
 
-BUILDTYPE=		Release
-MAKE_ENV+=		BUILDTYPE=${BUILDTYPE}
+CONFIGURE_ENV+=		CC=${CC:Q}
+CONFIGURE_ENV+=		CXX=${CXX:Q}
+CONFIGURE_ENV+=		GYP_GENERATORS=ninja
+CONFIGURE_ENV+=		GYP_DEFINES="${GYP_DEFINES}"
 
-do-configure:
-	set -e \
-	${PYTHONBIN} ${WRKSRC}/bootstrap/bootstrap.py -s
-	# phajdan-jr: list of things *not* to remove, so maybe the script
-	#             should be called "keep_bundled_libraries.py"
-	cd ${WRKSRC} && ${PYTHON_CMD} \
-		./build/linux/unbundle/remove_bundled_libraries.py \
+CFLAGS+=		-fno-stack-protector
+
+BUILDTYPE=	Release
+MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
+MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
+
+# Proprietary codecs are enabled.
+GYP_DEFINES+=	proprietary_codecs=1
+GYP_DEFINES+=	ffmpeg_branding=Chrome
+
+# Some gyp or gn files may be broken for NetBSD...
+GYP_DEFINES+=	desktop_linux=1
+
+GYP_DEFINES+=	use_gconf=0
+GYP_DEFINES+=	use_pulseaudio=1
+GYP_DEFINES+=	gcc_version=${CC_VERSION:S/gcc-//}
+GYP_DEFINES+=	use_kerberos=0
+GYP_DEFINES+=	linux_breakpad=0
+GYP_DEFINES+=	linux_use_heapchecker=0
+GYP_DEFINES+=	linux_strip_binary=1
+GYP_DEFINES+=	use_aura=1
+GYP_DEFINES+=	test_isolation_mode=noop
+GYP_DEFINES+=	disable_nacl=1
+GYP_DEFINES+=	enable_extensions=1
+GYP_DEFINES+=	enable_one_click_signin=1
+GYP_DEFINES+=	enable_webrtc=0
+GYP_DEFINES+=	enable_web_speech=0
+GYP_DEFINES+=	enable_service_discovery=1
+GYP_DEFINES+=	werror=
+GYP_DEFINES+=	no_gc_sections=1
+GYP_DEFINES+=	OS=${LOWER_OPSYS}
+GYP_DEFINES+=	os_ver=${OS_VERSION}
+GYP_DEFINES+=	prefix_dir=${PREFIX}
+GYP_DEFINES+=	python_ver=${PYVERSSUFFIX}
+GYP_DEFINES+=	use_allocator=none
+GYP_DEFINES+=	use_cups=1
+GYP_DEFINES+=	linux_link_gsettings=1
+GYP_DEFINES+=	linux_link_libpci=1
+GYP_DEFINES+=	linux_link_libspeechd=0
+GYP_DEFINES+=	want_separate_host_toolset=0
+GYP_DEFINES+=	use_system_bzip2=1
+GYP_DEFINES+=	use_system_flac=1
+GYP_DEFINES+=	use_system_ffmpeg=0
+GYP_DEFINES+=	use_system_harfbuzz=0
+GYP_DEFINES+=	use_system_icu=0
+GYP_DEFINES+=	use_system_jsoncpp=1
+GYP_DEFINES+=	use_system_libevent=1
+GYP_DEFINES+=	use_system_libexif=1
+GYP_DEFINES+=	use_system_libjpeg=1
+GYP_DEFINES+=	use_system_libpng=1
+GYP_DEFINES+=	use_system_libusb=1
+GYP_DEFINES+=	use_system_libwebp=1
+GYP_DEFINES+=	use_system_libxml=1
+GYP_DEFINES+=	use_system_libxslt=1
+GYP_DEFINES+=	use_system_nspr=1
+GYP_DEFINES+=	use_system_protobuf=0
+GYP_DEFINES+=	use_system_re2=1
+GYP_DEFINES+=	use_system_snappy=1
+GYP_DEFINES+=	use_system_speex=1
+GYP_DEFINES+=	use_system_xdg_utils=1
+GYP_DEFINES+=	use_system_yasm=1
+GYP_DEFINES+=	v8_use_external_startup_data=0
+GYP_DEFINES+=	flapper_version_h_file='${WRKSRC}/flapper_version.h'
+GYP_DEFINES+=	usb_ids_path=${PREFIX}/share/usbids/usb.ids
+
+# API key and OAuth credential for Google.
+# This is pkgsrc use only.
+GYP_DEFINES+=	google_api_key=AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg
+GYP_DEFINES+=	google_default_client_id=74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com
+GYP_DEFINES+=	google_default_client_secret=3R9TyUv14OXgzJnZi6Ismela
+
+pre-patch:
+	${RM} ${WRKSRC}/third_party/skia/tests/ImageFilterTest.cpp.*
+
+pre-configure:
+# Preserve third party source tree with remove_bundled_libraries.py script.
+	cd ${WRKSRC} && \
+	${PYTHONBIN} ./build/linux/unbundle/remove_bundled_libraries.py \
 		'base/third_party/dmg_fp' \
 		'base/third_party/dynamic_annotations' \
 		'base/third_party/icu' \
@@ -126,23 +166,26 @@ do-configure:
 		'third_party/ffmpeg' \
 		'third_party/gardiner_mod' \
 		'third_party/fips181' \
+		'third_party/flac' \
 		'third_party/flot' \
 		'third_party/google_input_tools' \
 		'third_party/google_input_tools/third_party/closure_library' \
 		'third_party/google_input_tools/third_party/closure_library/third_party/closure' \
+		'third_party/harfbuzz-ng' \
 		'third_party/hunspell' \
 		'third_party/iccjpeg' \
-		'third_party/icu/icu.isolate' \
+		'third_party/icu' \
 		'third_party/jinja2' \
 		'third_party/jstemplate' \
 		'third_party/khronos' \
 		'third_party/leveldatabase' \
 		'third_party/libaddressinput' \
-		'third_party/libjingle' \
 		'third_party/libphonenumber' \
+		'third_party/libjingle' \
 		'third_party/libsrtp' \
-		'third_party/libvpx_new' \
-		'third_party/libvpx_new/source/libvpx/third_party/x86inc' \
+		'third_party/libusb' \
+		'third_party/libvpx' \
+		'third_party/libvpx/source/libvpx/third_party/x86inc' \
 		'third_party/libwebm' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
@@ -151,10 +194,9 @@ do-configure:
 		'third_party/lzma_sdk' \
 		'third_party/markupsafe' \
 		'third_party/mesa' \
-		'third_party/mojo' \
 		'third_party/modp_b64' \
 		'third_party/mt19937ar' \
-		'third_party/npapi' \
+		'third_party/openh264' \
 		'third_party/openmax_dl' \
 		'third_party/opus' \
 		'third_party/ots' \
@@ -170,6 +212,7 @@ do-configure:
 		'third_party/sinonjs' \
 		'third_party/skia' \
 		'third_party/smhasher' \
+		'third_party/speech-dispatcher' \
 		'third_party/sqlite' \
 		'third_party/tcmalloc' \
 		'third_party/tlslite' \
@@ -178,88 +221,156 @@ do-configure:
 		'third_party/webdriver' \
 		'third_party/webrtc' \
 		'third_party/widevine' \
+		'third_party/woff2' \
 		'third_party/x86inc' \
 		'third_party/yasm' \
 		'third_party/zlib' \
 		'url/third_party/mozilla' \
 		'v8/src/third_party/valgrind' \
 		'v8/src/third_party/fdlibm' \
-		--do-remove || ${FALSE}
-	cd ${WRKSRC} && ${PYTHON_CMD} \
-		./build/linux/unbundle/replace_gyp_files.py \
-		${GYP_DEFINES:C/^/-D/} || ${FALSE}
-	# allow removal of third_party/adobe
-	${ECHO_CMD} > ${WRKSRC}/flapper_version.h
-	# missing file: file is in -testdata only, but configure stage
-	# will fail if it's not there. do not break TESTS build while
-	# allowing regular build without pulling in -testdata.
+		--do-remove
+	cd ${WRKSRC} && \
+	${PYTHONBIN} ./build/linux/unbundle/replace_gyp_files.py \
+		${GYP_DEFINES:C/^/-D/}
+# allow removal of third_party/adobe
+	${TOUCH} ${WRKSRC}/flapper_version.h
+# missing file: file is in -testdata only, but configure stage
+# will fail if it's not there. do not break TESTS build while
+# allowing regular build without pulling in -testdata.
 	${TOUCH} ${WRKSRC}/chrome/test/data/webui/i18n_process_css_test.html
 
-do-install:
-	@${MKDIR} ${STAGEDIR}${DATADIR}
-	${INSTALL_MAN} ${WRKSRC}/out/${BUILDTYPE}/chrome.1 ${STAGEDIR}${MANPREFIX}/man/man1
-.for s in 22 24 48 64 128 256
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
-	${INSTALL_DATA} ${WRKSRC}/chrome/app/theme/chromium/product_logo_${s}.png \
-		${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/chrome.png
-.endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/chrome/tools/build/linux/chrome-wrapper \
-		${STAGEDIR}${DATADIR}
-.for p in chrome_100_percent content_resources keyboard_resources resources
-	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${p}.pak \
-		${STAGEDIR}${DATADIR}
-.endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/chrome \
-		${STAGEDIR}${DATADIR}
-	cd ${WRKSRC}/out && \
-		${COPYTREE_SHARE} "locales resources" ${STAGEDIR}${DATADIR}
-	@${MKDIR} ${STAGEDIR}${DESKTOPDIR}
-	${INSTALL_DATA} ${WRKDIR}/chromium-browser.desktop \
-		${STAGEDIR}${DESKTOPDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/chrome ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/mksnapshot \
-		${STAGEDIR}${DATADIR}
-# END OF THINGS FROM FREEBSD PORTS
-	${INSTALL_DATA_DIR} ${PREFIX}/chrome
-	${INSTALL_PROGRAM} ${BUILDDIR}/chrome ${PREFIX}/chrome
-	${SUBST_PROGRAM} ${FILESDIR}/chrome ${PREFIX}/bin/chrome
-	${INSTALL_MAN} ${BUILDDIR}/chrome.1 ${PREFIX}/man/man1
+do-configure:
+	cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} \
+	${PYTHONBIN} ./build/gyp_chromium chrome/chrome.gyp --depth . \
+		${GYP_DEFINES:C/^/-D/}
 
-	${INSTALL_DATA} ${BUILDDIR}/*.pak ${PREFIX}/chrome
+# From OpenBSD Ports www/chromium
+NINJA_BUILD_TARGETS+=	generate_version_info
+NINJA_BUILD_TARGETS+=	cloud_policy_proto
+NINJA_BUILD_TARGETS+=	net_interfaces
+NINJA_BUILD_TARGETS+=	suggestions
+NINJA_BUILD_TARGETS+=	cacheinvalidation
+NINJA_BUILD_TARGETS+=	cacheinvalidation_proto_cpp
+NINJA_BUILD_TARGETS+=	gfx_vector_icons
+NINJA_BUILD_TARGETS+=	data_reduction_proxy_proto
+NINJA_BUILD_TARGETS+=	cloud_policy_code_generate
+NINJA_BUILD_TARGETS+=	common_constants
+NINJA_BUILD_TARGETS+=	profile_reset_report_proto
+NINJA_BUILD_TARGETS+=	autofill_server_proto
+NINJA_BUILD_TARGETS+=	ipc_mojo
+# Below is generated from ninja -t targets.
+NINJA_BUILD_TARGETS+=	app_list_resources
+NINJA_BUILD_TARGETS+=	app_shell_resources
+NINJA_BUILD_TARGETS+=	ash_resources
+NINJA_BUILD_TARGETS+=	blink_devtools_frontend_resources
+NINJA_BUILD_TARGETS+=	blink_image_resources
+NINJA_BUILD_TARGETS+=	blink_resources
+NINJA_BUILD_TARGETS+=	chrome_extra_resources
+NINJA_BUILD_TARGETS+=	chrome_resources
+NINJA_BUILD_TARGETS+=	chrome_unscaled_resources
+NINJA_BUILD_TARGETS+=	common_mojo_bindings
+NINJA_BUILD_TARGETS+=	components_resources
+NINJA_BUILD_TARGETS+=	content_common_mojo_bindings
+NINJA_BUILD_TARGETS+=	content_common_mojo_bindings_mojom
+NINJA_BUILD_TARGETS+=	content_resources
+NINJA_BUILD_TARGETS+=	content_shell_mojo_bindings
+NINJA_BUILD_TARGETS+=	content_shell_mojo_bindings_mojom
+NINJA_BUILD_TARGETS+=	content_shell_resources
+NINJA_BUILD_TARGETS+=	contextual_search_mojo_bindings
+NINJA_BUILD_TARGETS+=	device_battery_mojo_bindings
+NINJA_BUILD_TARGETS+=	device_usb_mojo_bindings
+NINJA_BUILD_TARGETS+=	device_vibration_mojo_bindings
+NINJA_BUILD_TARGETS+=	devtools_frontend_resources
+NINJA_BUILD_TARGETS+=	devtools_resources
+NINJA_BUILD_TARGETS+=	dom_distiller_mojo_bindings
+NINJA_BUILD_TARGETS+=	extensions_resources
+NINJA_BUILD_TARGETS+=	filesystem_bindings_mojom
+NINJA_BUILD_TARGETS+=	keyboard_resources
+NINJA_BUILD_TARGETS+=	leveldb_bindings_mojom
+NINJA_BUILD_TARGETS+=	mojo_application_bindings_mojom
+NINJA_BUILD_TARGETS+=	mojo_bindings
+NINJA_BUILD_TARGETS+=	mojo_bindings_mojom
+NINJA_BUILD_TARGETS+=	mojo_geometry_bindings_mojom
+NINJA_BUILD_TARGETS+=	mojo_interface_bindings_mojom
+NINJA_BUILD_TARGETS+=	net_resources
+NINJA_BUILD_TARGETS+=	packed_extra_resources
+NINJA_BUILD_TARGETS+=	packed_resources
+NINJA_BUILD_TARGETS+=	platform_verification_mojo_bindings
+NINJA_BUILD_TARGETS+=	profile_service_bindings_mojom
+NINJA_BUILD_TARGETS+=	provision_fetcher_mojo_bindings
+NINJA_BUILD_TARGETS+=	remoting_resources
+NINJA_BUILD_TARGETS+=	resources
+NINJA_BUILD_TARGETS+=	theme_resources
+NINJA_BUILD_TARGETS+=	tracing_resources
+NINJA_BUILD_TARGETS+=	tracing_service_bindings_mojom
+NINJA_BUILD_TARGETS+=	ui_resources
+NINJA_BUILD_TARGETS+=	views_resources
+NINJA_BUILD_TARGETS+=	web_cache_mojo_bindings
+NINJA_BUILD_TARGETS+=	web_ui_mojo_bindings
+NINJA_BUILD_TARGETS+=	widevinecdmadapter_resources
+NINJA_BUILD_TARGETS+=	browser_extensions
+NINJA_BUILD_TARGETS+=	chrome_strings
+# Real target
+NINJA_BUILD_TARGETS+=	chrome
 
-	${INSTALL_DATA_DIR} ${PREFIX}/chrome/locales
-	${INSTALL_DATA} ${BUILDDIR}/locales/* ${PREFIX}/chrome/locales
-	${INSTALL_DATA} ${BUILDDIR}/*.png ${PREFIX}/chrome
-	${INSTALL_DATA_DIR} ${PREFIX}/chrome/resources
-	@cp -Rp ${BUILDDIR}/resources/* ${PREFIX}/chrome/resources
-	@chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/chrome/resources
-.for f in libexif.so protoc icudtl.dat mksnapshot
-	${INSTALL_DATA} ${BUILDDIR}/${f} ${PREFIX}/chrome
+do-build:
+.for target in ${NINJA_BUILD_TARGETS}
+	${ECHO} TARGET is ${target} && \
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} \
+	ninja -C out/${BUILDTYPE} ${target}
 .endfor
-.for s in 22 24 48 64 128 256
-	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/hicolor/${s}x${s}/apps
-	${INSTALL_DATA} ${WRKSRC}/chrome/app/theme/chromium/product_logo_${s}.png \
-		${PREFIX}/share/icons/hicolor/${s}x${s}/apps/chrome.png
-.endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/applications
-	${INSTALL_DATA} ${FILESDIR}/chromium-browser.desktop \
-		${PREFIX}/share/applications/chromium-browser.desktop
 
-.include "../../security/libgnome-keyring/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../sysutils/pciutils/buildlink3.mk"
-.include "../../devel/GConf/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../security/libgnome-keyring/buildlink3.mk"
+#.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../textproc/jsoncpp/buildlink3.mk"
+.include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../sysutils/pciutils/buildlink3.mk"
+# Use -lpciutils instead of -lpci under NetBSD.
+BUILDLINK_TRANSFORM.NetBSD+=	opt:-lpci:-lpciutils
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../devel/re2/buildlink3.mk"
+.include "../../devel/snappy/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../devel/dconf/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/scrnsaverproto/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../misc/usbids/buildlink3.mk"
+#.include "../../textproc/icu/buildlink3.mk"
+
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

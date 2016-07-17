@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/base/BUILD.gn.orig	2016-06-24 01:02:52.000000000 +0000
++++ ui/base/BUILD.gn
+@@ -433,7 +433,7 @@ component("base") {
+     deps += [ "//ui/gfx/x" ]
+   }
+ 
+-  if (!use_aura || !is_linux) {
++  if (!use_aura) {
+     sources -= [ "resource/resource_bundle_auralinux.cc" ]
+   }
+ 

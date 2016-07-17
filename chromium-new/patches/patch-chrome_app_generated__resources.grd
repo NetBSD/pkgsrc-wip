@@ -1,0 +1,47 @@
+$NetBSD$
+
+* These conditional does not seems to work properly
+
+--- chrome/app/generated_resources.grd.orig	2016-06-24 01:02:11.000000000 +0000
++++ chrome/app/generated_resources.grd
+@@ -3590,11 +3590,11 @@ Even if you have downloaded files from t
+           PWG Raster Convertor
+         </message>
+       </if>
+-      <if expr="enable_service_discovery">
++<!--      <if expr="enable_service_discovery"> -->
+         <message name="IDS_UTILITY_PROCESS_SERVICE_DISCOVERY_HANDLER_NAME" desc="The name of the utility process used for handling service discovery.">
+           Service Discovery Handler
+         </message>
+-      </if>
++<!--      </if> -->
+ 
+       <!-- Theme preview info bar -->
+       <message name="IDS_THEME_INSTALL_INFOBAR_LABEL" desc="Text displayed on an infobar when a theme has been installed.">
+@@ -6595,7 +6595,7 @@ Keep your key file in a safe place. You 
+       <message name="IDS_FLAGS_FORCE_UI_DIRECTION_RTL" desc="Name for the option to force right-to-left UI direction mode.">
+           Right-to-left
+       </message>
+-      <if expr="is_win or is_linux">
++      <if expr="is_win or is_linux or is_posix">
+         <message name="IDS_FLAGS_ENABLE_INPUT_IME_API_NAME" desc="Name of the flag to enable che chrome.input.ime API.">
+           Enable Input IME API
+         </message>
+@@ -13546,7 +13546,7 @@ Please check your email at <ph name="ACC
+       </message>
+ 
+       <!-- Local Device Discovery display strings -->
+-      <if expr="enable_service_discovery">
++<!--      <if expr="enable_service_discovery"> -->
+         <message name="IDS_LOCAL_DISCOVERY_SERVICE_REGISTER" desc="Name for button to register device in the Cloud">
+           Register
+         </message>
+@@ -13671,7 +13671,7 @@ Please check your email at <ph name="ACC
+         <message name="IDS_LOCAL_DISCOVERY_NOTIFICATIONS_DISABLE_BUTTON_LABEL" desc="Label for button disabling local device notifications">
+           Don't show this again
+         </message>
+-      </if>
++<!--      </if> -->
+       <!-- People search strings -->
+       <message name="IDS_PEOPLE_SEARCH_ACTION_EMAIL_TOOLTIP" desc="Tooltip text for sending an email to the person in the result">
+         Email this person
