@@ -17,7 +17,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	cmake
 
 .include "../../audio/freealut/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
