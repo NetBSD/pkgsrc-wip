@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/sys_info_netbsd.cc.orig	2016-07-11 14:49:52.785554196 +0000
+--- base/sys_info_netbsd.cc.orig	2016-07-17 08:36:13.252201679 +0000
 +++ base/sys_info_netbsd.cc
-@@ -0,0 +1,78 @@
+@@ -0,0 +1,98 @@
 +// Copyright (c) 2011 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -53,18 +53,38 @@ $NetBSD$
 +
 +// static
 +int64_t SysInfo::AmountOfAvailablePhysicalMemory() {
-+  return AmountOfMemory(_SC_AVPHYS_PAGES);
++  int ret;
++  int mib[2];
++  int64_t memsize;
++  unsigned long size = sizeof(memsize);
++
++  mib[0] = CTL_HW;
++  mib[1] = HW_PHYSMEM64;
++
++  ret = sysctl(mib, 2, &memsize, &size, NULL, 0);
++  if (ret == -1) {
++    return 0;
++  }
++
++  return memsize;
 +}
 +
 +// static
 +uint64_t SysInfo::MaxSharedMemorySize() {
-+  int mib[] = { CTL_KERN, KERN_SHMINFO, KERN_SHMINFO_SHMMAX };
++  int mib[3];
 +  size_t limit;
 +  size_t size = sizeof(limit);
-+  if (sysctl(mib, arraysize(mib), &limit, &size, NULL, 0) < 0) {
-+    NOTREACHED();
++  int ret;
++
++  mib[0] = CTL_KERN;
++  mib[1] = KERN_SYSVIPC;
++  mib[2] = KERN_SYSVIPC_SHMMAX;
++
++  ret = sysctl(mib, 3, &limit, &size, NULL, 0);
++  if (ret == -1) {
 +    return 0;
 +  }
++
 +  return static_cast<uint64_t>(limit);
 +}
 +
