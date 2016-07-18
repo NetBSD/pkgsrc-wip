@@ -55,7 +55,7 @@ $NetBSD$
 +        '../build/linux/system.gyp:dbus',
 +      ],
 +    }],
-+    ['OS=="netbsd"', {
++    ['OS!="freebsd"', {
 +      'sources!': [
 +        'browser/geolocation/wifi_data_provider_freebsd.cc',
        ],

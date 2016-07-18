@@ -11,6 +11,15 @@ $NetBSD$
        'sources/': [
          ['exclude', '_linux(_unittest|_test)?\\.(h|cc)$'],
          ['exclude', '(^|/)linux/'],
+@@ -58,7 +58,7 @@
+         ['exclude', '_nacl(_unittest)?\\.(h|cc)$'],
+       ],
+     }],
+-    ['OS!="linux" and OS!="openbsd" and OS!="freebsd" or >(nacl_untrusted_build)==1', {
++    ['OS!="linux" and OS!="openbsd" and OS!="freebsd" and OS!="netbsd" or >(nacl_untrusted_build)==1', {
+       'sources/': [
+         ['exclude', '_xdg(_unittest)?\\.(h|cc)$'],
+       ],
 @@ -89,7 +89,7 @@
                      ['exclude', '_ashwin\\.(h|cc)$']
        ]

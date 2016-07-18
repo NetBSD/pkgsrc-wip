@@ -7,7 +7,7 @@ $NetBSD$
    return false;
  }
 -#elif defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_FREEBSD)
++#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_FREEBSD) || defined(OS_NETBSD)
  gfx::ImageSkia* ViewsDelegate::GetDefaultWindowIcon() const {
    return nullptr;
  }

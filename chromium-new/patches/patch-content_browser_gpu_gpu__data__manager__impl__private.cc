@@ -6,7 +6,7 @@ $NetBSD$
    gpu_info.gl_renderer = gl_renderer;
    gpu_info.gl_version = gl_version;
  
-+#if !defined(OS_FREEBSD)
++#if !defined(OS_FREEBSD) && !defined(OS_NETBSD)
    gpu::IdentifyActiveGPU(&gpu_info);
    gpu::CollectDriverInfoGL(&gpu_info);
 +#endif
@@ -17,7 +17,7 @@ $NetBSD$
      // Also declare the driver_vendor to be osmesa to be able to specify
      // exceptions based on driver_vendor==osmesa for some blacklist rules.
      gpu_info.driver_vendor = gfx::kGLImplementationOSMesaName;
-+#ifndef __FreeBSD__
++#if !defined(OS_FREEBSD) && !defined(OS_NETBSD)
    } else {
      TRACE_EVENT0("startup",
        "GpuDataManagerImpl::Initialize:CollectBasicGraphicsInfo");
@@ -30,7 +30,7 @@ $NetBSD$
      return;
  
    bool was_info_available = IsCompleteGpuInfoAvailable();
-+#ifndef __FreeBSD__
++#if !defined(OS_FREEBSD) && !defined(OS_NETBSD)
    gpu::MergeGPUInfo(&gpu_info_, gpu_info);
 +#endif
    if (IsCompleteGpuInfoAvailable()) {

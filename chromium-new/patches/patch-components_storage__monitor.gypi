@@ -2,7 +2,7 @@ $NetBSD$
 
 --- components/storage_monitor.gypi.orig	2016-06-24 01:02:19.000000000 +0000
 +++ components/storage_monitor.gypi
-@@ -50,6 +50,26 @@
+@@ -50,6 +50,32 @@
          'storage_monitor/volume_mount_watcher_win.h',
        ],
        'conditions': [
@@ -24,6 +24,12 @@ $NetBSD$
 +          'sources': [
 +            'storage_monitor/storage_monitor_freebsd.cc',
 +            'storage_monitor/storage_monitor_freebsd.h',
++          ],
++        }],
++        ['OS == "netbsd"', {
++          'sources': [
++            'storage_monitor/storage_monitor_netbsd.cc',
++            'storage_monitor/storage_monitor_netbsd.h',
 +          ],
 +        }],
          ['OS == "mac"', {

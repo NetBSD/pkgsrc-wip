@@ -7,7 +7,7 @@ $NetBSD$
  
  LocationProvider* LocationArbitratorImpl::NewSystemLocationProvider() {
 -#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_FREEBSD)
++#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_NETBSD)
    return NULL;
  #else
    return content::NewSystemLocationProvider();

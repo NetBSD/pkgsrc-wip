@@ -7,7 +7,7 @@ $NetBSD$
      "Apps.AppListSearchResultDistanceFromOrigin";
  
 -#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD)
++#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_NETBSD)
  #if defined(GOOGLE_CHROME_BUILD)
  const char kAppListWMClass[] = "chrome_app_list";
  #else  // CHROMIUM_BUILD

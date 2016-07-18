@@ -19,6 +19,8 @@ BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
@@ -50,6 +52,8 @@ CONFIGURE_ENV+=		GYP_GENERATORS=ninja
 CONFIGURE_ENV+=		GYP_DEFINES="${GYP_DEFINES}"
 
 CFLAGS+=		-fno-stack-protector
+# for #include <glib-2.0/gmodule.h>
+CFLAGS+=		-I${BUILDLINK_DIR}/include/glib
 
 BUILDTYPE=	Release
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
@@ -87,10 +91,10 @@ GYP_DEFINES+=	use_allocator=none
 GYP_DEFINES+=	use_cups=1
 GYP_DEFINES+=	linux_link_gsettings=1
 GYP_DEFINES+=	linux_link_libpci=1
-GYP_DEFINES+=	linux_link_libspeechd=1
+GYP_DEFINES+=	linux_link_libspeechd=0
 GYP_DEFINES+=	want_separate_host_toolset=0
 GYP_DEFINES+=	use_system_bzip2=1
-GYP_DEFINES+=	use_system_flac=1
+GYP_DEFINES+=	use_system_flac=0
 GYP_DEFINES+=	use_system_ffmpeg=0
 GYP_DEFINES+=	use_system_harfbuzz=0
 GYP_DEFINES+=	use_system_icu=0
@@ -123,7 +127,7 @@ GYP_DEFINES+=	google_default_client_secret=3R9TyUv14OXgzJnZi6Ismela
 pre-patch:
 	${RM} ${WRKSRC}/third_party/skia/tests/ImageFilterTest.cpp.*
 
-pre-configure:
+unused-pre-configure:
 # Preserve third party source tree with remove_bundled_libraries.py script.
 	cd ${WRKSRC} && \
 	${PYTHONBIN} ./build/linux/unbundle/remove_bundled_libraries.py \
@@ -229,6 +233,7 @@ pre-configure:
 		'v8/src/third_party/valgrind' \
 		'v8/src/third_party/fdlibm' \
 		--do-remove
+pre-configure:
 	cd ${WRKSRC} && \
 	${PYTHONBIN} ./build/linux/unbundle/replace_gyp_files.py \
 		${GYP_DEFINES:C/^/-D/}
