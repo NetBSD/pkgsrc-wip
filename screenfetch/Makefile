@@ -20,6 +20,10 @@ REPLACE_BASH+=	screenfetch-dev
 
 NO_BUILD=	yes
 
+# These are optional, however
+DEPENDS+=	curl-[0-9]*:../../www/curl
+DEPENDS+=	scrot-[0-9]*:../../graphics/scrot
+
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
