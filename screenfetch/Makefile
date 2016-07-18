@@ -20,7 +20,7 @@ REPLACE_BASH+=	screenfetch-dev
 
 NO_BUILD=	yes
 
-# These are optional, however
+# These are optional, however the purpose of screenfetch is to make use of them
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	scrot-[0-9]*:../../graphics/scrot
 
