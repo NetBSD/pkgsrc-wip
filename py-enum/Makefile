@@ -3,7 +3,7 @@
 DISTNAME=	enum-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/0c/4e/1ea357e7783c756bb579333c1e4a026fb331371ee771f616ffedc781e531/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/enum/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/enum/

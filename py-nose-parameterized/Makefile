@@ -3,7 +3,7 @@
 DISTNAME=	nose-parameterized-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/0d/22/44ff04785ff8a1e4f618a39b20e6d96e1dbb33088fc13d690a035b12b3f6/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose-parameterized/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/wolever/nose-parameterized

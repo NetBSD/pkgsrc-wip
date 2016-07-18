@@ -3,7 +3,7 @@
 DISTNAME=	poppy-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/5a/0f/3719002f4581effcbe8a792ce2405e3bdb6cd41d01bf98dddfa17905885d/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/poppy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pythonhosted.org/poppy/

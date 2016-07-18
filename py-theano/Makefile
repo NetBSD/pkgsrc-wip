@@ -3,7 +3,7 @@
 DISTNAME=	Theano-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/30/3d/2354fac96ca9594b755ec22d91133522a7db0caa0877165a522337d0ed73/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/Theano/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://deeplearning.net/software/theano/
@@ -27,7 +27,7 @@ do-test:
 	${RUN} cd {WRKSRC}/theano/tests ; ${SETENV} {TEST_ENV} ${PYTHONBIN} main.py
 
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"

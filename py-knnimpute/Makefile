@@ -3,7 +3,7 @@
 DISTNAME=	knnimpute-0.0.1
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/e0/be/c54045678e31c36c0d47d7c2ec2db3c3b13e74e94741c4c5a0031fc4f2a9/
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/knnimpute/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/hammerlab/knnimpute

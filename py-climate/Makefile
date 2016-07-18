@@ -3,7 +3,7 @@
 DISTNAME=	climate-0.4.6
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/6a/da/cc87a4d6c5bc6099a6c16b3b8eda49528e6eb9c039a2c6b45513a1d19990/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/climate/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/lmjohns3/py-cli/
