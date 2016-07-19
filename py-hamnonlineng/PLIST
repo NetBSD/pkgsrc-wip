@@ -1,4 +1,5 @@
 @comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hamnonlineng/__init__.py
 ${PYSITELIB}/hamnonlineng/__init__.pyc
 ${PYSITELIB}/hamnonlineng/__init__.pyo
