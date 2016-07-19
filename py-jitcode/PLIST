@@ -1,0 +1,19 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/jitcode/__init__.py
+${PYSITELIB}/jitcode/__init__.pyc
+${PYSITELIB}/jitcode/__init__.pyo
+${PYSITELIB}/jitcode/_helpers.py
+${PYSITELIB}/jitcode/_helpers.pyc
+${PYSITELIB}/jitcode/_helpers.pyo
+${PYSITELIB}/jitcode/_jitcode.py
+${PYSITELIB}/jitcode/_jitcode.pyc
+${PYSITELIB}/jitcode/_jitcode.pyo
+${PYSITELIB}/jitcode/jitced_template.c
+${PYSITELIB}/jitcode/version.py
+${PYSITELIB}/jitcode/version.pyc
+${PYSITELIB}/jitcode/version.pyo

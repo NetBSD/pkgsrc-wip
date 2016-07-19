@@ -1,0 +1,7 @@
+JiTCODE stands for just-in-time compilation for ordinary differential equations
+and is an extension of SciPy's ODE (scipy.integrate.ode). Where SciPy's ODE
+takes a Python function a7s an argument, JiTCODE takes an iterable (or generator
+function) of SymPy terms, which it translates to C code, compiles on the fly,
+and uses as the function to feed into SciPy's ODE. This can result in a
+considerable speed boost, making the integration en par with purely compiled
+programs for large differential equations

@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pyclid/__init__.py
+${PYSITELIB}/pyclid/__init__.pyc
+${PYSITELIB}/pyclid/__init__.pyo
+${PYSITELIB}/pyclid/matrix.py
+${PYSITELIB}/pyclid/matrix.pyc
+${PYSITELIB}/pyclid/matrix.pyo
+${PYSITELIB}/pyclid/quaternion.py
+${PYSITELIB}/pyclid/quaternion.pyc
+${PYSITELIB}/pyclid/quaternion.pyo
+${PYSITELIB}/pyclid/vector.py
+${PYSITELIB}/pyclid/vector.pyc
+${PYSITELIB}/pyclid/vector.pyo
