@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pickleshare/pickleshare
 COMMENT=	Tiny shelve-like database with concurrency support
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../wip/py-six
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 WRKSRC=		${WRKDIR}/pickleshare-0.7.3
 
