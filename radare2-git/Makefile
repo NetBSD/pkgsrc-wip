@@ -19,6 +19,14 @@ CONFIGURE_ARGS+=	--with-syszip
 PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
 USE_TOOLS+=	gmake
 
+# REPLACE_NODE?
+REPLACE_INTERPRETER+=	node
+REPLACE.node.old=	.*node[^ ]*
+REPLACE.node.new=	${LOCALBASE}/bin/node
+REPLACE_FILES.node=	shlr/www/m/vendors/fonts/iconjar-map.js
+
+DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+
 .include "options.mk"
 
 .include "../../devel/capstone/buildlink3.mk"
