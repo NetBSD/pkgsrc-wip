@@ -12,5 +12,6 @@ LICENSE=	modified-bsd OR gnu-lgpl-2.1
 
 PYDISTUTILSPKG= yes
 
+.include "../../wip/ode/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
