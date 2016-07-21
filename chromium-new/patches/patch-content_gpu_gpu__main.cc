@@ -7,7 +7,7 @@ $NetBSD$
  bool WarmUpSandbox(const base::CommandLine& command_line);
  
 -#if !defined(OS_MACOSX)
-+#if !defined(OS_MACOSX) && !defined(OS_FREEBSD) //XXX(rene) added !FreeBSD
++#if !defined(OS_MACOSX) && !defined(OS_FREEBSD) && !defined(OS_NETBSD) //XXX(rene) added !FreeBSD
  bool CollectGraphicsInfo(gpu::GPUInfo& gpu_info);
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD$
        base::TimeTicks before_collect_context_graphics_info =
            base::TimeTicks::Now();
 -#if !defined(OS_MACOSX)
-+#if !defined(OS_MACOSX) && !defined(OS_FREEBSD) //XXX(rene) added !FreeBSD
++#if !defined(OS_MACOSX) && !defined(OS_FREEBSD) && !defined(OS_NETBSD)//XXX(rene) added !FreeBSD
        if (!CollectGraphicsInfo(gpu_info))
          dead_on_arrival = true;
  
@@ -41,7 +41,7 @@ $NetBSD$
  }
  
 -#if !defined(OS_MACOSX)
-+#if !defined(OS_MACOSX) && !defined(OS_FREEBSD)//XXX(rene) added !FreeBSD
++#if !defined(OS_MACOSX) && !defined(OS_FREEBSD) && !defined(OS_NETBSD) //XXX(rene) added !FreeBSD
  bool CollectGraphicsInfo(gpu::GPUInfo& gpu_info) {
    TRACE_EVENT0("gpu,startup", "Collect Graphics Info");
  

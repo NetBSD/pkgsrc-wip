@@ -9,7 +9,7 @@ $NetBSD$
 -            NOTE_RENAME | NOTE_REVOKE | NOTE_EXTEND), 0, data);
 +            NOTE_RENAME | NOTE_REVOKE | NOTE_EXTEND), 0,
 +#if defined(__NetBSD__)
-+            reinterpret_cast<intptr_t>(data));
++            (intptr_t)data);
 +#else
 +            data);
 +#endif

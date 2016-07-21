@@ -26,6 +26,11 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 ONLY_FOR_PLATFORM=	*-*-arm *-*-i386 *-*-x86_64
 
+CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
+CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
+CHECK_PORTABILITY_SKIP+=	third_party/icu/source/configure
+CHECK_PORTABILITY_SKIP+=	third_party/icu/android/patch_locale.sh
+
 SUBST_CLASSES+=		bash
 SUBST_MESSAGE.bash=	Fixing bash path
 SUBST_STAGE.bash=	post-patch
@@ -56,15 +61,13 @@ CFLAGS+=		-fno-stack-protector
 CFLAGS+=		-I${BUILDLINK_DIR}/include/glib
 
 BUILDTYPE=	Release
+#BUILDTYPE=	Debug
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
 
 # Proprietary codecs are enabled.
 GYP_DEFINES+=	proprietary_codecs=1
 GYP_DEFINES+=	ffmpeg_branding=Chrome
-
-# Some gyp or gn files may be broken for NetBSD...
-#GYP_DEFINES+=	desktop_linux=1
 
 GYP_DEFINES+=	use_gconf=0
 GYP_DEFINES+=	use_pulseaudio=1
@@ -79,7 +82,7 @@ GYP_DEFINES+=	disable_nacl=1
 GYP_DEFINES+=	enable_extensions=1
 GYP_DEFINES+=	enable_one_click_signin=1
 GYP_DEFINES+=	enable_webrtc=0
-GYP_DEFINES+=	enable_web_speech=0
+GYP_DEFINES+=	enable_web_speech=1
 GYP_DEFINES+=	enable_service_discovery=1
 GYP_DEFINES+=	werror=
 GYP_DEFINES+=	no_gc_sections=1
@@ -88,13 +91,13 @@ GYP_DEFINES+=	os_ver=${OS_VERSION}
 GYP_DEFINES+=	prefix_dir=${PREFIX}
 GYP_DEFINES+=	python_ver=${PYVERSSUFFIX}
 GYP_DEFINES+=	use_allocator=none
-GYP_DEFINES+=	use_cups=1
+GYP_DEFINES+=	use_cups=0
 GYP_DEFINES+=	linux_link_gsettings=1
 GYP_DEFINES+=	linux_link_libpci=1
 GYP_DEFINES+=	linux_link_libspeechd=0
 GYP_DEFINES+=	want_separate_host_toolset=0
 GYP_DEFINES+=	use_system_bzip2=1
-GYP_DEFINES+=	use_system_flac=0
+GYP_DEFINES+=	use_system_flac=1
 GYP_DEFINES+=	use_system_ffmpeg=0
 GYP_DEFINES+=	use_system_harfbuzz=0
 GYP_DEFINES+=	use_system_icu=0
@@ -117,6 +120,7 @@ GYP_DEFINES+=	use_system_yasm=1
 GYP_DEFINES+=	v8_use_external_startup_data=0
 GYP_DEFINES+=	flapper_version_h_file='${WRKSRC}/flapper_version.h'
 GYP_DEFINES+=	usb_ids_path=${PREFIX}/share/usbids/usb.ids
+GYP_DEFINES+=	icu_use_data_file_flag=1
 
 # API key and OAuth credential for Google.
 # This is pkgsrc use only.
@@ -331,7 +335,7 @@ do-build:
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
+#.include "../../print/cups/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"

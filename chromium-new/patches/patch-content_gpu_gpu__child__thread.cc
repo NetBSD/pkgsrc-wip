@@ -6,7 +6,7 @@ $NetBSD$
  }
  
  void GpuChildThread::OnCollectGraphicsInfo() {
-+#if !defined(OS_FREEBSD)
++#if !defined(OS_FREEBSD) && !defined(OS_NETBSD)
  #if defined(OS_WIN)
    // GPU full info collection should only happen on un-sandboxed GPU process
    // or single process/in-process gpu mode on Windows.

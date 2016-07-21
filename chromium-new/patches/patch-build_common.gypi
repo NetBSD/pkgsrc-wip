@@ -91,7 +91,7 @@ $NetBSD$
            'use_openmax_dl_fft%': 0,
          }],
 -        ['OS=="win" or OS=="linux"', {
-+        ['OS=="win" or OS=="linux" or OS=="freebsd"', {
++        ['OS=="win" or OS=="linux" or OS=="freebsd" or OS=="netbsd"', {
            'enable_mdns%' : 1,
          }],
  
@@ -106,7 +106,13 @@ $NetBSD$
      # The release channel that this build targets. This is used to restrict
      # channel-specific build options, like which installer packages to create.
      # The default is 'all', which does no channel-specific filtering.
-@@ -4724,6 +4734,24 @@
+@@ -4719,11 +4729,18 @@
+     }],
+     # FreeBSD-specific options; note that most FreeBSD options are set above,
+     # with Linux.
+-    ['OS=="freebsd"', {
++    ['OS=="freebsd" or OS=="netbsd"', {
+       'target_defaults': {
          'ldflags': [
            '-Wl,--no-keep-memory',
          ],
@@ -117,21 +123,10 @@ $NetBSD$
 +        'libraries!': [
 +          '-ldl',
 +        ],
-+      },
-+    }],
-+    # NetBSD
-+    ['OS=="netbsd"', {
-+      'target_defaults': {
-+        'ldflags!': [
-+          '-ldl',
-+        ],
-+        'libraries!': [
-+          '-ldl',
-+        ],
        },
      }],
      # Android-specific options; note that most are set above with Linux.
-@@ -5240,7 +5268,7 @@
+@@ -5240,7 +5257,7 @@
            # 2. Further down, library_dirs is set to
            #    third_party/libc++-static, which contains a static
            #    libc++.a library.  The linker then links against that instead

@@ -11,7 +11,7 @@ $NetBSD$
 +    // we request the default pthread stack size by specifying 0 here.
 +    const size_t kShutdownDetectorThreadStackSize = 0;
 +#elif defined(__NetBSD__)
-+    const size_t kShutdownDetectorThreadStackSize = sysconf(_SC_THREAD_STACK_MIN) * 2;
++    const size_t kShutdownDetectorThreadStackSize = 0;
 +#else
  #if !defined(ADDRESS_SANITIZER) && !defined(KEEP_SHADOW_STACKS)
      const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 2;
