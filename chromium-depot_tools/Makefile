@@ -1,13 +1,10 @@
 # $NetBSD: Makefile,v 1.3 2014/09/01 11:00:08 fhajny Exp $
 
-SVN_REVISION=	291592
-DIST_VERSION=	0.1
-ORIG_NAME=	depot_tools
-DISTNAME=	${ORIG_NAME}-${DIST_VERSION}pre${SVN_REVISION}
-PKGNAME=	chromium-${DISTNAME}
-PKGREVISION=	1
+GIT_REVISION=	75c2cc859d3547a02edff5387ec75d47ed41afd5
+DISTNAME=	${GIT_REVISION}
+PKGNAME=	chromium-depot_tools-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	https://chromium.googlesource.com/chromium/tools/depot_tools.git/+archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dev.chromium.org/developers/how-tos/install-depot-tools
@@ -30,9 +27,7 @@ REPLACE_BASH+=	git-cache
 REPLACE_BASH+=	git-cherry-pick-upload
 REPLACE_BASH+=	git-cl
 REPLACE_BASH+=	git-crsync
-REPLACE_BASH+=	git-crup
 REPLACE_BASH+=	git-freeze
-REPLACE_BASH+=	git-lkgr
 REPLACE_BASH+=	git-map
 REPLACE_BASH+=	git-map-branches
 REPLACE_BASH+=	git-mark-merge-base
@@ -53,7 +48,6 @@ REPLACE_BASH+=	gn
 REPLACE_BASH+=	man/push_to_gs.sh
 REPLACE_BASH+=	man/src/*.sh
 REPLACE_BASH+=	ninja
-REPLACE_BASH+=	python_git_runner.sh
 REPLACE_BASH+=	roll-dep
 REPLACE_BASH+=	testing_support/*.sh
 REPLACE_BASH+=	tests/*.sh
@@ -75,8 +69,6 @@ REPLACE_PYTHON+=	cbuildbot
 REPLACE_PYTHON+=	chrome_set_ver
 REPLACE_PYTHON+=	cros
 REPLACE_PYTHON+=	cros_sdk
-REPLACE_PYTHON+=	git-cl-upload-hook
-REPLACE_PYTHON+=	git_utils/git-tree-prune
 REPLACE_PYTHON+=	repo
 REPLACE_PYTHON+=	support/chromite_wrapper
 REPLACE_PYTHON+=	tests/sample_pre_commit_hook
@@ -86,14 +78,12 @@ REPLACE_PYTHON+=	wtf
 
 INSTALLATION_DIRS+=	share/chromium-depot_tools
 
-do-configure:
+NO_BUILD=	yes
 
-do-build:
+WRKSRC=		${WRKDIR}
 
 do-install:
-	cd ${WRKSRC}; \
-	tar cf - . | \
-		(cd ${DESTDIR}/${PREFIX}/share/chromium-depot_tools; tar xf -)
+	cd ${WRKSRC}; ${PAX} -rw . ${DESTDIR}/${PREFIX}/share/chromium-depot_tools
 
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/application.mk"
