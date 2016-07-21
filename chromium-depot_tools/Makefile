@@ -67,7 +67,7 @@ REPLACE_BASH+=	update_depot_tools
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing pkg path
-SUBST_STAGE.path=	pre-build
+SUBST_STAGE.path=	post-extract
 SUBST_FILES.path+=	man/src/make_docs.sh
 SUBST_FILES.path+=	third_party/boto/services/sonofmmm.py
 SUBST_SED.path+=	-e 's:/usr/local/:${PREFIX}/:'
@@ -88,6 +88,25 @@ REPLACE_PYTHON+=	third_party/gsutil/gsutil
 REPLACE_PYTHON+=	weekly
 REPLACE_PYTHON+=	wtf
 
+SUBST_CLASSES+=		pypath
+SUBST_MESSAGE.pypath=	Fixing Python path
+SUBST_STAGE.pypath=	post-extract
+SUBST_FILES.pypath+=	apply_issue
+SUBST_FILES.pypath+=	cit
+SUBST_FILES.pypath+=	clang-format
+SUBST_FILES.pypath+=	commit_queue
+SUBST_FILES.pypath+=	fetch
+SUBST_FILES.pypath+=	gcl
+SUBST_FILES.pypath+=	depot-tools-auth
+SUBST_FILES.pypath+=	download_from_google_storage
+SUBST_FILES.pypath+=	drover
+SUBST_FILES.pypath+=	gclient
+SUBST_FILES.pypath+=	git-runhooks
+SUBST_FILES.pypath+=	gn
+SUBST_FILES.pypath+=	roll-dep
+SUBST_FILES.pypath+=	roll-dep-svn
+SUBST_SED.pypath+=	-e 's:exec python:exec ${PYTHONBIN}:'
+
 INSTALLATION_DIRS+=	share/chromium-depot_tools
 
 NO_BUILD=	yes
@@ -98,4 +117,5 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}/${PREFIX}/share/chromium-depot_tools
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
