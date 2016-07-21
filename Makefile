@@ -1424,6 +1424,7 @@ SUBDIR+=	jitsi
 SUBDIR+=	jlibtool
 SUBDIR+=	jmol
 SUBDIR+=	jmtpfs
+SUBDIR+=	jo
 SUBDIR+=	joomla
 SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
