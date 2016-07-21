@@ -83,8 +83,7 @@ NO_BUILD=	yes
 EXTRACT_DIR=	${WRKDIR}/${DISTNAME}
 
 do-install:
-	cd ${WRKSRC}; ${PAX} -rw . ${DESTDIR}/${PREFIX}/share/chromium-depot_tools
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}/${PREFIX}/share/chromium-depot_tools
 
-.include "../../lang/python/tool.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
