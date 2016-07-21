@@ -11,7 +11,7 @@ HOMEPAGE=	http://dev.chromium.org/developers/how-tos/install-depot-tools
 COMMENT=	Chromium depot tools
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	bash:run tar
+USE_TOOLS+=	bash:run tar pax:build
 
 REPLACE_BASH+=	apply_issue
 REPLACE_BASH+=	clang-format
@@ -80,7 +80,7 @@ INSTALLATION_DIRS+=	share/chromium-depot_tools
 
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}
+EXTRACT_DIR=	${WRKDIR}/${DISTNAME}
 
 do-install:
 	cd ${WRKSRC}; ${PAX} -rw . ${DESTDIR}/${PREFIX}/share/chromium-depot_tools
