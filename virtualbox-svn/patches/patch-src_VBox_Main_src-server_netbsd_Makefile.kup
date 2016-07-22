@@ -1,6 +1,0 @@
-$NetBSD$
-
---- src/VBox/Main/src-server/netbsd/Makefile.kup.orig	2016-07-06 19:26:53.627141891 +0000
-+++ src/VBox/Main/src-server/netbsd/Makefile.kup
-@@ -0,0 +1 @@
-+#

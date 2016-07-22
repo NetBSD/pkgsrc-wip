@@ -1,9 +1,0 @@
-$NetBSD$
-
---- src/VBox/HostServices/auth/Makefile.kmk.orig	2016-07-10 19:56:34.000000000 +0000
-+++ src/VBox/HostServices/auth/Makefile.kmk
-@@ -63,4 +63,3 @@ VBoxAuth-sdkhdr_SOURCES = $(PATH_ROOT)/i
- 
- 
- include $(FILE_KBUILD_SUB_FOOTER)
--
