@@ -1521,6 +1521,7 @@ SUBDIR+=	ldc
 SUBDIR+=	ldc-git
 SUBDIR+=	lde
 SUBDIR+=	ldtp
+SUBDIR+=	le
 SUBDIR+=	ledger
 SUBDIR+=	leim-current
 SUBDIR+=	leo
