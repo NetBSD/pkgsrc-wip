@@ -2034,8 +2034,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-start.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-start.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-sum.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-sum.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-sync.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-sync.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-topic.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-topic.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-undo.el.gz
