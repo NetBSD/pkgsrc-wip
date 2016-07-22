@@ -1,7 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	climate-0.4.6
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+# py-climate is already reserved
+PKGNAME=        ${PYPKGPREFIX}-cli
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/climate/}
 
