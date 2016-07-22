@@ -106,6 +106,7 @@ SUBDIR+=	angelscript
 SUBDIR+=	ann
 SUBDIR+=	ansible
 SUBDIR+=	ansible-junos-stdlib
+SUBDIR+=	ansilove
 SUBDIR+=	anthy-dic-jis34
 SUBDIR+=	antlr
 SUBDIR+=	antlr3-c
