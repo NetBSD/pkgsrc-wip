@@ -19,6 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-ode-[0-9]*:../../wip/py-ode
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
 REPLACE_PYTHON+=	accelerator.py
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric via py-OpenGL
 
 NO_BUILD=	yes
 
