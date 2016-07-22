@@ -25,7 +25,8 @@ REPLACE.node.old=	.*node[^ ]*
 REPLACE.node.new=	${LOCALBASE}/bin/node
 REPLACE_FILES.node=	shlr/www/m/vendors/fonts/iconjar-map.js
 
-DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+# Optional
+# DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 .include "options.mk"
 
