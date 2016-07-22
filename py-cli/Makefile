@@ -2,7 +2,7 @@
 
 DISTNAME=	climate-0.4.6
 # py-climate is already reserved
-PKGNAME=        ${PYPKGPREFIX}-cli
+PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/mate//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/climate/}
 
