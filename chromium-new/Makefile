@@ -131,112 +131,6 @@ GYP_DEFINES+=	google_default_client_secret=3R9TyUv14OXgzJnZi6Ismela
 pre-patch:
 	${RM} ${WRKSRC}/third_party/skia/tests/ImageFilterTest.cpp.*
 
-unused-pre-configure:
-# Preserve third party source tree with remove_bundled_libraries.py script.
-	cd ${WRKSRC} && \
-	${PYTHONBIN} ./build/linux/unbundle/remove_bundled_libraries.py \
-		'base/third_party/dmg_fp' \
-		'base/third_party/dynamic_annotations' \
-		'base/third_party/icu' \
-		'base/third_party/nspr' \
-		'base/third_party/superfasthash' \
-		'base/third_party/symbolize' \
-		'base/third_party/valgrind' \
-		'base/third_party/xdg_mime' \
-		'base/third_party/xdg_user_dirs' \
-		'breakpad/src/third_party/curl' \
-		'chrome/third_party/mock4js' \
-		'chrome/third_party/mozilla_security_manager' \
-		'courgette/third_party' \
-		'crypto/third_party/nss' \
-		'net/third_party/mozilla_security_manager' \
-		'net/third_party/nss' \
-		'third_party/WebKit' \
-		'third_party/analytics' \
-		'third_party/angle' \
-		'third_party/angle/src/third_party' \
-		'third_party/blanketjs' \
-		'third_party/brotli' \
-		'third_party/boringssl' \
-		'third_party/cacheinvalidation' \
-		'third_party/catapult' \
-		'third_party/catapult/third_party/beautifulsoup' \
-		'third_party/catapult/third_party/py_vulcanize' \
-		'third_party/catapult/third_party/py_vulcanize/py_vulcanize' \
-		'third_party/catapult/third_party/py_vulcanize/third_party/rcssmin' \
-		'third_party/catapult/third_party/py_vulcanize/third_party/rjsmin' \
-		'third_party/catapult/tracing' \
-		'third_party/catapult/tracing/third_party' \
-		'third_party/cld' \
-		'third_party/cros_system_api' \
-		'third_party/dom_distiller_js' \
-		'third_party/dom_distiller_js/dist/proto_gen/third_party/dom_distiller_js' \
-		'third_party/ffmpeg' \
-		'third_party/gardiner_mod' \
-		'third_party/fips181' \
-		'third_party/flac' \
-		'third_party/flot' \
-		'third_party/google_input_tools' \
-		'third_party/google_input_tools/third_party/closure_library' \
-		'third_party/google_input_tools/third_party/closure_library/third_party/closure' \
-		'third_party/harfbuzz-ng' \
-		'third_party/hunspell' \
-		'third_party/iccjpeg' \
-		'third_party/icu' \
-		'third_party/jinja2' \
-		'third_party/jstemplate' \
-		'third_party/khronos' \
-		'third_party/leveldatabase' \
-		'third_party/libaddressinput' \
-		'third_party/libphonenumber' \
-		'third_party/libjingle' \
-		'third_party/libsrtp' \
-		'third_party/libusb' \
-		'third_party/libvpx' \
-		'third_party/libvpx/source/libvpx/third_party/x86inc' \
-		'third_party/libwebm' \
-		'third_party/libxml/chromium' \
-		'third_party/libXNVCtrl' \
-		'third_party/libyuv' \
-		'third_party/lss' \
-		'third_party/lzma_sdk' \
-		'third_party/markupsafe' \
-		'third_party/mesa' \
-		'third_party/modp_b64' \
-		'third_party/mt19937ar' \
-		'third_party/openh264' \
-		'third_party/openmax_dl' \
-		'third_party/opus' \
-		'third_party/ots' \
-		'third_party/pdfium' \
-		'third_party/pdfium/third_party' \
-		'third_party/ply' \
-		'third_party/polymer' \
-		'third_party/protobuf' \
-		'third_party/pywebsocket' \
-		'third_party/qcms' \
-		'third_party/qunit' \
-		'third_party/sfntly' \
-		'third_party/sinonjs' \
-		'third_party/skia' \
-		'third_party/smhasher' \
-		'third_party/speech-dispatcher' \
-		'third_party/sqlite' \
-		'third_party/tcmalloc' \
-		'third_party/tlslite' \
-		'third_party/usrsctp' \
-		'third_party/web-animations-js' \
-		'third_party/webdriver' \
-		'third_party/webrtc' \
-		'third_party/widevine' \
-		'third_party/woff2' \
-		'third_party/x86inc' \
-		'third_party/yasm' \
-		'third_party/zlib' \
-		'url/third_party/mozilla' \
-		'v8/src/third_party/valgrind' \
-		'v8/src/third_party/fdlibm' \
-		--do-remove
 pre-configure:
 	cd ${WRKSRC} && \
 	${PYTHONBIN} ./build/linux/unbundle/replace_gyp_files.py \
@@ -329,6 +223,56 @@ do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
 	ninja -C out/${BUILDTYPE} ${target}
+.endfor
+
+CHROMIUM_DIR=		chrome
+INSTALLATION_DIRS+=	${CHROMIUM_DIR}
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+ICON_SIZES=		22 24 48 64 128 256
+.for i in ${ICON_SIZES}
+ICONS_DIR${i}+=		share/icons/hicolor/${i}x${i}/apps
+INSTALLATION_DIRS+=	${ICONS_DIR${i}}
+.endfor
+
+CHROMIUM_PROGS+=	chrome
+CHROMIUM_PROGS+=	mksnapshot
+
+CHROMIUM_FILES+=	libyuv.a
+CHROMIUM_FILES+=	chrome_100_percent.pak
+CHROMIUM_FILES+=	chrome_200_percent.pak
+CHROMIUM_FILES+=	chrome_material_100_percent.pak
+CHROMIUM_FILES+=	chrome_material_200_percent.pak
+CHROMIUM_FILES+=	content_browser_manifest.json
+CHROMIUM_FILES+=	content_renderer_manifest.json
+CHROMIUM_FILES+=	content_resources.pak
+CHROMIUM_FILES+=	icudtl.dat
+CHROMIUM_FILES+=	keyboard_resources.pak
+CHROMIUM_FILES+=	resources.pak
+CHROMIUM_FILES+=	shell_resources.pak
+
+do-install:
+.for i in ${CHROMIUM_PROGS}
+	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/${i} \
+		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
+.endfor
+.for i in ${CHROMIUM_FILES}
+	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${i} \
+		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
+.endfor
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${LN} -sf ../${CHROMIUM_DIR}/chrome .
+	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/chrome.1 \
+		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
+.for i in ${ICON_SIZES}
+	${INSTALL_DATA} ${WRKSRC}/chrome/app/theme/chromium/product_logo_${i}.png \
+		${DESTDIR}${PREFIX}/${ICONS_DIR${i}}/chrome.png
+.endfor
+.for i in catalog locales pseudo_locales remoting_locales resources
+	cd ${WRKSRC}/out/${BUILDTYPE} && \
+		${FIND} ${i} -type f -print | \
+		pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
 .endfor
 
 .include "../../audio/speech-dispatcher/buildlink3.mk"
