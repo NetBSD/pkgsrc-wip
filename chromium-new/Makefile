@@ -60,8 +60,8 @@ CFLAGS+=		-fno-stack-protector
 # for #include <glib-2.0/gmodule.h>
 CFLAGS+=		-I${BUILDLINK_DIR}/include/glib
 
-#BUILDTYPE=	Release
-BUILDTYPE=	Debug
+BUILDTYPE=	Release
+#BUILDTYPE=	Debug
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
 
