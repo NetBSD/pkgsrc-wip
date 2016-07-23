@@ -45,7 +45,7 @@ $NetBSD$
            ['OS == "win" and >(nacl_untrusted_build)==0', {
              'include_dirs': [
                '<(DEPTH)/third_party/wtl/include',
-@@ -1021,11 +1029,16 @@
+@@ -1021,11 +1029,17 @@
                'process/memory_stubs.cc',
              ],
              'sources/': [
@@ -56,6 +56,7 @@ $NetBSD$
 +              ['exclude', '^process/memory_linux\\.cc$'],
                ['exclude', '^process/process_linux\\.cc$'],
                ['exclude', '^sys_info_linux\\.cc$'],
++              ['exclude', '^process/process_handle_linux\\.cc$'],
 +              ['exclude', '^process/process_iterator_linux\\.cc$'],
 +              ['exclude', '^process/process_metrics_linux\\.cc$'],
 +              ['exclude', '^files/file_path_watcher_fsevents\\.cc$'],
