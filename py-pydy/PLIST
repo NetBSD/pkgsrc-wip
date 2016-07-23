@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/01 22:21:54 jihbed Exp $
-bin/benchmark_pydy_code_gen.py
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
