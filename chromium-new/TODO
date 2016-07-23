@@ -1,0 +1,6 @@
+To Do:
+
+* Unstable and sometimes,
+  System panicked: kernel diagnostic assertion "l->l_md.md_gc_ptp == NULL" failed: file "/usr/src/sys/arch/x86/x86/vm_machdep.c", line 262
+* Cannot signin to Chromium with Google account
+* No html5 audio (video has no problem)
