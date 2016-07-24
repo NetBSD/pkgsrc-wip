@@ -1,5 +1,7 @@
 $NetBSD$
 
+Adapt for new API.
+
 --- accelerator.py.orig	2016-07-20 19:56:58.692780436 +0000
 +++ accelerator.py
 @@ -274,7 +274,7 @@ def DisplayInit():
