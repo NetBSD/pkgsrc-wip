@@ -6,7 +6,7 @@
 PKGNAME=	${DISTNAME:S/.src//}
 COMMENT=	Tron clone in 3D with advanced gameplay and multiplayer
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 # Disable server, build client
 CONFIGURE_ARGS+=	--disable-dedicated
@@ -18,7 +18,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
-MAKE_DIRS+=     ${PKG_SYSCONFDIR}/examples
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/examples
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/examples/cvs_test
 
 .for f in aiplayers.cfg default.cfg master.srv rc.config settings.cfg settings_authentication.cfg settings_dedicated.cfg settings_visual.cfg subcultures.srv

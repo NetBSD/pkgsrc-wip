@@ -8,6 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=armagetronad/}
 
 HOMEPAGE=	http://www.armagetronad.org/
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}
 

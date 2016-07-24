@@ -6,7 +6,7 @@
 PKGNAME=	${DISTNAME:S/.src//:S/armagetronad/armagetronad-server/}
 COMMENT=	Server for the armagetronad game
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 # Enable server, don't build client
 CONFIGURE_ARGS+=	--enable-dedicated
@@ -16,7 +16,7 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 PKG_SYSCONFSUBDIR=	armagetronad-dedicated
 BUILD_DEFS+=		PKG_SYSCONFBASE
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
-INSTALL_MAKE_FLAGS+=    sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/examples
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/examples/cvs_test
