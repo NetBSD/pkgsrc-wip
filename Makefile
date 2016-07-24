@@ -158,7 +158,6 @@ SUBDIR+=	arm-eabi-gdb
 SUBDIR+=	arm-elf-binutils
 SUBDIR+=	arm-elf-gcc47
 SUBDIR+=	armadillo
-SUBDIR+=	armagetronad
 SUBDIR+=	arora
 SUBDIR+=	arpdig
 SUBDIR+=	arphic-ukai-ttf
