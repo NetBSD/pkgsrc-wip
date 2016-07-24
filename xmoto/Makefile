@@ -59,7 +59,7 @@ post-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/ode/buildlink3.mk"
+.include "../../devel/ode/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
