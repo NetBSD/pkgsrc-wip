@@ -17,15 +17,7 @@ USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE=	ode.pc.in
 
-INSTALLATION_DIRS=	include/ode lib
-
 CONFIGURE_ARGS+=	--enable-shared
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "x86_64"
-CFLAGS+= -fPIC
-.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
