@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 DEPENDS+=	${PYPKGPREFIX}-ode-[0-9]*:../../devel/py-ode
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
-REPLACE_PYTHON+=	accelerator.py
+REPLACE_PYTHON+=		accelerator.py
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric via py-OpenGL
 
 NO_BUILD=	yes
@@ -29,7 +29,7 @@ SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	accelerator.py
 SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|'snd'|'${PREFIX}/share/${PKGBASE}'|"
-SUBST_SED.prefix=	-e "s|'gfx'|'${PREFIX}/share/${PKGBASE}'|"
+SUBST_SED.prefix+=	-e "s|'gfx'|'${PREFIX}/share/${PKGBASE}'|"
 SUBST_STAGE.prefix=	pre-install
 
 INSTALLATION_DIRS+=	bin share/${PKGBASE}
