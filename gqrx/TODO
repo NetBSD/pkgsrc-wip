@@ -1,8 +1,9 @@
-This is a skeleton which does not yet build.
+* Figure out why qt5 is required but the README.md says that 4.7+ is
+  sufficient.  File bug upstream.
 
-* figure out why qt5 is required but the README.md says that 4.7+ is
-  sufficient
+* Figure out why boost is required and file bug upstream.
 
-* package gnuradio-osmosdr
+* Figure out if this should depend on multiple hardware backends
+  directly, or if there should be more.
 
-* [find/fix next problems]
+* test

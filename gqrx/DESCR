@@ -1,0 +1,4 @@
+Gqrx is a software defined radio receiver powered by the GNU Radio SDR
+framework and the Qt graphical toolkit.  Gqrx supports many of the SDR
+hardware available, including Funcube Dongles, rtl-sdr, HackRF and
+USRP devices.
