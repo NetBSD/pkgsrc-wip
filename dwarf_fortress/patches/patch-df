@@ -1,12 +1,12 @@
 $NetBSD$
-
+libGL fix
 --- df.orig	2016-01-17 21:44:56.000000000 +0000
 +++ df
 @@ -1,6 +1,7 @@
  #!/bin/sh
  DF_DIR=$(dirname "$0")
  cd "${DF_DIR}"
-+export LIBGL_DRIVERS_PATH=/usr/X11R7/lib/modules/dri
++export LIBGL_DRIVERS_PATH=${X11BASE}
  export SDL_DISABLE_LOCK_KEYS=1 # Work around for bug in Debian/Ubuntu SDL patch.
  #export SDL_VIDEO_CENTERED=1 # Centre the screen.  Messes up resizing.
  ./libs/Dwarf_Fortress "$@" # Go, go, go! :)
