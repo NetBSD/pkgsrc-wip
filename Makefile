@@ -67,7 +67,6 @@ SUBDIR+=	VASSAL
 SUBDIR+=	WEPCrack
 SUBDIR+=	a2ps-sharatype
 SUBDIR+=	abduco
-SUBDIR+=	accelerator3d
 SUBDIR+=	accountsservice
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
