@@ -1,12 +1,11 @@
 # $NetBSD: Makefile,v 1.8 2013/01/19 12:25:38 othyro Exp $
 
-DISTNAME=	ode-${ODE_VERSION}
+DISTNAME=	ode-0.13
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opende/}
 EXTRACT_SUFX=	.tar.bz2
-ODE_VERSION=	0.12
 
-MAINTAINER=	kh.p@no-log.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ode.org/
 COMMENT=	Library for the simulation of Rigid Body Dynamics
 LICENSE=	gnu-lgpl-v2.1

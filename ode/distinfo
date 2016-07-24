@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.5 2013/01/19 12:25:39 othyro Exp $
 
-SHA1 (ode-0.12.tar.bz2) = 10e7aae6cc6b1afe523ed52e76afd5e06461ea93
-RMD160 (ode-0.12.tar.bz2) = 3b3baa6e0321f2dc70e74fa469f1bff71eed189e
-Size (ode-0.12.tar.bz2) = 1816246 bytes
+SHA1 (ode-0.13.tar.bz2) = 0279d58cc390ff5cc048f2baf96cff23887f3838
+RMD160 (ode-0.13.tar.bz2) = 6397d3de8caa6a15625784a0ee8bcfab55626e13
+SHA512 (ode-0.13.tar.bz2) = d30c5228e10df5784802ceaea08353a3fd1088450b2ba69ad1da840b8aad2224484e5642145820621e105e08aa6da6f3e9957780d4c3b047647558b1abc32780
+Size (ode-0.13.tar.bz2) = 2008288 bytes
