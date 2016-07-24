@@ -5,18 +5,15 @@
 # This is separated in case someone wants to make
 # a dedicated server package.
 
-DISTNAME=	armagetronad-${ARMAD_VER}.src
+DISTNAME=	armagetronad-0.2.8.3.3.src
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=armagetronad/}
 
-ARMAD_VER=	0.2.8.2.1
-
 MAINTAINER=	adam.hoka@gmail.com
-HOMEPAGE=	http://armagetronad.sourceforge.net/
+HOMEPAGE=	http://www.armagetronad.org/
 
 PKG_DESTDIR_SUPPORT=	none
 
-WRKSRC=		${WRKDIR}/armagetronad-0.2.8.2.1
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake
@@ -27,4 +24,3 @@ CONFIGURE_ARGS+=	--disable-uninstall
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
