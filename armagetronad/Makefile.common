@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.armagetronad.org/
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}
 
-DISTINFO_FILE=	${.CURDIR}/../../local/armagetronad/distinfo
+DISTINFO_FILE=	${.CURDIR}/../../wip/armagetronad/distinfo
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
