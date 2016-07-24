@@ -19,8 +19,7 @@ PKGCONFIG_OVERRIDE=	ode.pc.in
 
 INSTALLATION_DIRS=	include/ode lib
 
-CONFIGURE_ARGS+=	--enable-shared \
-			--disable-double-precision # XXX Why?
+CONFIGURE_ARGS+=	--enable-shared
 
 .include "../../mk/bsd.prefs.mk"
 
