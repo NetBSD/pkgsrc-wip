@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/07/09 22:09:57 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	radon-1.2.2
+DISTNAME=	radon-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/radon/}
@@ -11,9 +11,11 @@ COMMENT=	Code Metrics in Python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.2:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.4:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-cElementTree>=2.7.10:../../textproc/py-cElementTree
-DEPENDS+=	${PYPKGPREFIX}-mando>=0.3.2:../../wip/py-mando
+DEPENDS+=	${PYPKGPREFIX}-flake8-polyfill>=1.0.1:../../wip/py-flake8-polyfill
+DEPENDS+=	${PYPKGPREFIX}-mando>=0.4:../../wip/py-mando
+
+WRKSRC=		${WRKDIR}/radon-1.4.2
 
 USE_LANGUAGES=	# none
 

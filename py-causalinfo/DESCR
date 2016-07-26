@@ -1,0 +1,7 @@
+causalinfo is a Python library to aid in experimenting with different
+information measures on causal graphs—a combination of information theory
+with recent work on causal graphs [Pearl2000]. These information measures
+can used to ascertain the degree to which one variable controls or explains
+other variables in the graph. The use of these measures has important
+connections to work on causal explanation in philosophy of science, and to
+understanding information processing in biological networks

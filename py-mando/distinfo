@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/07/09 21:31:56 jihbed Exp $
 
-SHA1 (mando-0.3.2.tar.gz) = 1f2bac9f04fa81706b00d81fc3ee502b83e41564
-RMD160 (mando-0.3.2.tar.gz) = 83822d016dd267f3f8df679736a4d46ef0cd5cd8
-Size (mando-0.3.2.tar.gz) = 10760 bytes
+SHA1 (mando-0.4.tar.gz) = 46aa01ff3ca62f9eeb4bf7ee1422c69552bb6578
+RMD160 (mando-0.4.tar.gz) = 2bf519bc9101cfc3706b412a59f0f2982e81924a
+SHA512 (mando-0.4.tar.gz) = a6d3ace765a3f1dfd46f5e6f1583fec514406e893ecafa54fa107096e93a04616ca484ef7a937d7015f0af3b2d89e1b1d72a208fe20a296f3efe21ec953cc6c2
+Size (mando-0.4.tar.gz) = 22663 bytes

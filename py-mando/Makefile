@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/07/09 21:31:56 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	mando-0.3.2
+DISTNAME=	mando-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mando/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://mando.readthedocs.org/
 COMMENT=	Create Python CLI apps with little to no effort at all
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/mando-0.3.2
+WRKSRC=		${WRKDIR}/mando-0.4
 
 USE_LANGUAGES=	# none
 
