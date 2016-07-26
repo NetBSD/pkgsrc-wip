@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:24 thomasklausner Exp $
-bin/wordwarvi
+@comment $NetBSD$
+games/wordwarvi
 man/man6/wordwarvi.6
-share/wordwarvi/sounds/Laser2.ogg
 share/wordwarvi/sounds/UseTheSource.ogg
 share/wordwarvi/sounds/aaaah_it_burns.ogg
 share/wordwarvi/sounds/abducted.ogg
@@ -15,6 +14,7 @@ share/wordwarvi/sounds/fallingscreamhi.ogg
 share/wordwarvi/sounds/flak_gun_sound.ogg
 share/wordwarvi/sounds/flak_hit.ogg
 share/wordwarvi/sounds/gravity_bomb.ogg
+share/wordwarvi/sounds/gunwheel_sound.ogg
 share/wordwarvi/sounds/help_down_here.ogg
 share/wordwarvi/sounds/help_up_here.ogg
 share/wordwarvi/sounds/highscoremusic.ogg
@@ -39,6 +39,8 @@ share/wordwarvi/sounds/new_ground_smack.ogg
 share/wordwarvi/sounds/nice_bank_shot.ogg
 share/wordwarvi/sounds/ooooof.ogg
 share/wordwarvi/sounds/ow_my_spine.ogg
+share/wordwarvi/sounds/radar_fail.ogg
+share/wordwarvi/sounds/radar_ready.ogg
 share/wordwarvi/sounds/rocket_exhaust_1.ogg
 share/wordwarvi/sounds/stonebang1.ogg
 share/wordwarvi/sounds/stonebang2.ogg
@@ -52,6 +54,7 @@ share/wordwarvi/sounds/synthetic_bomb.ogg
 share/wordwarvi/sounds/synthetic_gunshot_2.ogg
 share/wordwarvi/sounds/synthetic_laser.ogg
 share/wordwarvi/sounds/synthetic_thunder_short.ogg
+share/wordwarvi/sounds/tesla_tower.ogg
 share/wordwarvi/sounds/timpani_boing.ogg
 share/wordwarvi/sounds/toyota_celica_cardoor_sample.ogg
 share/wordwarvi/sounds/us_quarter.ogg

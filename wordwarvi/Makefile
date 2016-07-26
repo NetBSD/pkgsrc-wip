@@ -1,15 +1,15 @@
 # $NetBSD: Makefile,v 1.3 2012/10/07 20:11:07 asau Exp $
 #
 
-DISTNAME=	wordwarvi-0.24
-PKGREVISION=	1
+
+DISTNAME=	wordwarvi-1.0.2
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wordwarvi/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=smcameron/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wordwarvi.sourceforge.net/
+HOMEPAGE=	http://smcameron.github.io/wordwarvi/
 COMMENT=	Side-scrolling shoot 'em up '80s style arcade game
-
 
 USE_TOOLS+=	gmake pkg-config
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
