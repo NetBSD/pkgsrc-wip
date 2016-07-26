@@ -1,9 +1,3 @@
-* Figure out why qt5 is required but the README.md says that 4.7+ is
-  sufficient.  File bug upstream.
-
-* Figure out why boost is required and file bug upstream.
-
-* Figure out if this should depend on multiple hardware backends
-  directly, or if there should be more.
+* File bug upstream (or fix the README) about the boost requirement.
 
 * test

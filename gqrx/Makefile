@@ -19,16 +19,42 @@ WRKSRC=		${WRKDIR}/gqrx-sdr-${VERSION}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../ham/gnuradio-core/buildlink3.mk"
-.include "../../ham/gnuradio-digital/buildlink3.mk"
-.include "../../ham/gnuradio-utils/buildlink3.mk"
-.include "../../ham/gr-osmosdr/buildlink3.mk"
-#.include "../../ham/rtl-sdr/buildlink3.mk"
+## These dependencies are organized according to upstream's README
+## at https://github.com/csete/gqrx rather than alphabetically.
 
-# Upstream documents >=4.7, but with qt4-libs CMake complains that qt5
-# is not found.
+# upstream's README.md does not document a dependency on boost libraries,
+# probably because gnuradio-core depends on boost, but there is one.
+.include "../../devel/boost-libs/buildlink3.mk"
+
+# Upstream documents needing multiple gnuradio blocks.  These do not
+# obviously correspond to pkgsrc split package names, so we list the
+# required blocks ahead of each gnuradio split package.
+# core has runtime, analog, audio, blocks, fft, filter, pmt
+.include "../../ham/gnuradio-core/buildlink3.mk"
+# digital has digital
+.include "../../ham/gnuradio-digital/buildlink3.mk"
+
+# gr-iqbalance (optional) - not in pkgsrc
+
+# These are drivers for particular hardware.  They are smallish and
+# therefore not optional.  (Also, gr-osmosdr depends on them, so
+# avoiding dependencies would not save space.)
+.include "../../ham/gnuradio-fcd/buildlink3.mk"
+.include "../../ham/gnuradio-uhd/buildlink3.mk"
+.include "../../ham/gr-fcdproplus/buildlink3.mk"
+.include "../../ham/rtl-sdr/buildlink3.mk"
+.include "../../ham/osmo-sdr/buildlink3.mk"
+.include "../../ham/hackrf/buildlink3.mk"
+
+.include "../../ham/gr-osmosdr/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
+
+# Upstream documents that with qmake, 4.8 is needed, but the cmake
+# build requires qt5.  Upstream also outright recommends qt5.
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
+
+# Pointers to other packaging systems:
+# https://www.freshports.org/comms/gqrx/
