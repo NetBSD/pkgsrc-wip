@@ -4206,7 +4206,6 @@ SUBDIR+=	wmswallow
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
 SUBDIR+=	wolf4SDL
-SUBDIR+=	wordwarvi
 SUBDIR+=	workrave
 SUBDIR+=	wp2md
 SUBDIR+=	wpro
