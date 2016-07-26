@@ -9,10 +9,8 @@ HOMEPAGE=	http://nyancat.dakko.us/
 COMMENT=	Nyancat in your terminal
 LICENSE=	modified-bsd
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALL_MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/nyancat ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/nyancat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+MANCOMPRESSED=	yes
 
 .include "../../mk/bsd.pkg.mk"
