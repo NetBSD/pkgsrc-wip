@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/wordwarvi
 man/man6/wordwarvi.6
 share/wordwarvi/sounds/UseTheSource.ogg
 share/wordwarvi/sounds/aaaah_it_burns.ogg
@@ -61,4 +62,3 @@ share/wordwarvi/sounds/volcano_eruption.ogg
 share/wordwarvi/sounds/woohoo.ogg
 share/wordwarvi/sounds/yay_santa.ogg
 share/wordwarvi/sounds/zzzt.ogg
-wordwarvi
