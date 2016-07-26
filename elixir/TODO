@@ -1,2 +1,29 @@
 Documentation should be installed.
 We may want to pass LANG=en_US.UTF-8 as an environment variable.
+
+I did see these warnings during compile for 1.3.2, but I think this is an Elixir problem not a pkgsrc one:
+
+==> elixir (compile)
+warning: behaviour String.Chars undefined
+  lib/calendar.ex:292
+
+warning: behaviour Inspect undefined
+  lib/calendar.ex:298
+
+warning: variable status is unused
+  lib/enum.ex:864
+
+warning: the Dict module is deprecated
+  lib/hash_dict.ex:10
+
+Compiling lib/calendar/iso.ex (it's taking more than 5s)
+Compiling lib/file/stat.ex (it's taking more than 5s)
+warning: behaviour String.Chars undefined
+  lib/calendar.ex:556
+
+Compiling lib/gen_event.ex (it's taking more than 5s)
+warning: behaviour String.Chars undefined
+  lib/calendar.ex:907
+
+warning: behaviour String.Chars undefined
+  lib/calendar.ex:1212
