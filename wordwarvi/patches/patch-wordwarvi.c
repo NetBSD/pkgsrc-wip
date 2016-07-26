@@ -1,10 +1,27 @@
 $NetBSD: patch-ab,v 1.1.1.1 2008/12/25 12:27:03 thomasklausner Exp $
 
+Walk-around memory corruption (double-free(3)?)
+
 Use standard getopt_long(3) - fixes NetBSD.
 
---- wordwarvi.c.orig	2008-12-12 02:24:34.000000000 +0000
+--- wordwarvi.c.orig	2016-03-11 15:16:11.000000000 +0000
 +++ wordwarvi.c
-@@ -13078,7 +13078,7 @@ int main(int argc, char *argv[])
+@@ -11559,12 +11559,14 @@ void start_level()
+ 	srandom(level.random_seed);
+ 	generate_terrain(&terrain);
+ 
++#if 0
+ 	add_buildings(&terrain);/* Some FreeBSD users report that */
+ 				/*add_buildings() causes crashes. */
+ 				/* Commenting this out on FreeBSD */
+ 				/* may help, but, no buildings. */
+ 				/* I've looked at the code, but */
+ 				/* don't see anything wrong with it. */
++#endif
+ 	add_humanoids(&terrain);
+ 	add_bridges(&terrain);
+ 	add_socket(&terrain);
+@@ -13967,7 +13969,7 @@ int main(int argc, char *argv[])
  
  	while (1) {
  		int rc, n; 
