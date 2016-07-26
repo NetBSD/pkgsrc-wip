@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	letsenkrypt-0.1.7
+DISTNAME=	letsenkrypt-0.1.9
 CATEGORIES=	security www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kristapsdz/}
 GITHUB_PROJECT=	letskencrypt-portable
