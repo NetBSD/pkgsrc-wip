@@ -2032,7 +2032,6 @@ SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
-SUBDIR+=	nyancat
 SUBDIR+=	nzbget
 SUBDIR+=	obconf-qt
 SUBDIR+=	objfw
