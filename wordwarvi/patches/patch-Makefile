@@ -1,22 +1,19 @@
 $NetBSD: patch-aa,v 1.1.1.1 2008/12/25 12:27:03 thomasklausner Exp $
 
+Install executable into ${PREFIX}/bin
+
 --- Makefile.orig	2016-03-11 15:16:11.000000000 +0000
 +++ Makefile
-@@ -1,4 +1,3 @@
--PREFIX=/usr
- DATADIR=${PREFIX}/share/wordwarvi
- MANDIR?=${PREFIX}/share/man
- MANPAGEDIR=${MANDIR}/man6
-@@ -116,10 +115,10 @@ wordwarvi.6.gz:	wordwarvi.6
+@@ -116,10 +116,10 @@ wordwarvi.6.gz:	wordwarvi.6
  	gzip -c wordwarvi.6 > wordwarvi.6.gz
  
  install: wordwarvi wordwarvi.6.gz
 -	mkdir -p $(DESTDIR)$(PREFIX)/games
-+	mkdir -p $(DESTDIR)$(PREFIX)
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
  	mkdir -p $(DESTDIR)$(DATADIR)/sounds
  	mkdir -p $(DESTDIR)$(MANPAGEDIR)
 -	install -p -m 755 wordwarvi $(DESTDIR)$(PREFIX)/games
-+	install -p -m 755 wordwarvi $(DESTDIR)$(PREFIX)
++	install -p -m 755 wordwarvi $(DESTDIR)$(PREFIX)/bin
  	install -p -m 644 sounds/*.ogg $(DESTDIR)$(DATADIR)/sounds
  	install -p -m 644 wordwarvi.6.gz $(DESTDIR)$(MANPAGEDIR)
  
