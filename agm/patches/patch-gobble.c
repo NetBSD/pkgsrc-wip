@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gobble.c.orig	2016-07-27 20:00:36.480413430 +0000
+--- gobble.c.orig	2016-07-27 20:12:55.340913088 +0000
 +++ gobble.c
 @@ -22,8 +22,11 @@ char gobble_RCSid[] = "Revision: 1.4 $";
  

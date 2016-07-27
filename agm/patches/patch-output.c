@@ -1,6 +1,6 @@
 $NetBSD$
 
---- output.c.orig	2016-07-27 20:00:36.490687012 +0000
+--- output.c.orig	2016-07-27 20:12:55.351278093 +0000
 +++ output.c
 @@ -24,8 +24,8 @@ char output_RCSid[] = "Revision: 1.5 $";
  
@@ -13,12 +13,13 @@ $NetBSD$
  {
    int loop;
  
-@@ -46,8 +46,7 @@ print_prevs (percent)
+@@ -46,8 +46,8 @@ print_prevs (percent)
    spos += totlen + prevcount + 1;
  }
  
 -list_dictionary (p)
 -  struct wnode *p;
++void
 +list_dictionary (struct wnode *p)
  {
    while (p != NULL) {

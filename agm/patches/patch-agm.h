@@ -1,8 +1,8 @@
 $NetBSD$
 
---- agm.h.orig	2016-07-27 20:00:36.476968160 +0000
+--- agm.h.orig	2016-07-27 20:12:55.337407545 +0000
 +++ agm.h
-@@ -134,5 +134,10 @@ extern struct wnode *lstart, *lend;
+@@ -134,5 +134,15 @@ extern struct wnode *lstart, *lend;
  extern char main_RCSid[], gobble_RCSid[], listfuncs_RCSid[], output_RCSid[],
              process_RCSid[], sort_RCSid[], wordfuncs_RCSid[], progress_RCSid[];
  
@@ -12,6 +12,11 @@ $NetBSD$
 +extern void arm_timer(void), disarm_timer(void);
 +extern int contains (char *, char *, unsigned int *);
 +extern int addword (char *, struct wnode **, struct wnode **);
-+estern int eliminate (char *, char *, char *);
++extern int eliminate (char *, char *, char *);
 +extern void print_prevs (int);
 +extern void destroy_list (struct wnode *, struct wnode *);
++extern void gobble_file (char *, char *);
++extern void merge_sort (struct wnode **, int);
++extern void list_dictionary (struct wnode *);
++extern void minus_process (char *, char *);
++extern void process (char *, struct wnode *, struct wnode *, unsigned int, unsigned int, unsigned int);
