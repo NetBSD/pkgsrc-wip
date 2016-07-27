@@ -887,6 +887,7 @@ SUBDIR+=	glkgit
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globulation2
+SUBDIR+=	glucose-syrup
 SUBDIR+=	glulxe
 SUBDIR+=	gmap
 SUBDIR+=	gmc2mid
