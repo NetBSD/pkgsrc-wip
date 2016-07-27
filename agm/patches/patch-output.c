@@ -1,6 +1,6 @@
 $NetBSD$
 
---- output.c.orig	2016-07-27 19:51:51.440788492 +0000
+--- output.c.orig	2016-07-27 20:00:36.490687012 +0000
 +++ output.c
 @@ -24,8 +24,8 @@ char output_RCSid[] = "Revision: 1.5 $";
  

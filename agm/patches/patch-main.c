@@ -1,6 +1,6 @@
 $NetBSD$
 
---- main.c.orig	2016-07-27 19:51:51.437389107 +0000
+--- main.c.orig	2016-07-27 20:00:36.487265418 +0000
 +++ main.c
 @@ -60,6 +60,7 @@ char main_RCSid[] = "Revision: 1.11 $";
  #include "agm.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- listfuncs.c.orig	2016-07-27 19:51:51.433931684 +0000
+--- listfuncs.c.orig	2016-07-27 20:00:36.483808973 +0000
 +++ listfuncs.c
 @@ -18,8 +18,10 @@ char listfuncs_RCSid[] = "Revision: 1.3 
  

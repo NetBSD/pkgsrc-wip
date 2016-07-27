@@ -1,6 +1,6 @@
 $NetBSD$
 
---- progress.c.orig	2016-07-27 19:51:51.447604861 +0000
+--- progress.c.orig	2016-07-27 20:00:36.497489413 +0000
 +++ progress.c
 @@ -7,18 +7,20 @@ char progress_RCSid[] = "Revision: 1.1 $
  

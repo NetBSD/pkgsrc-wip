@@ -1,6 +1,6 @@
 $NetBSD$
 
---- wordfuncs.c.orig	2016-07-27 19:51:51.454404538 +0000
+--- wordfuncs.c.orig	2016-07-27 20:00:36.504275890 +0000
 +++ wordfuncs.c
 @@ -14,9 +14,9 @@ char wordfuncs_RCSid[] = "Revision: 1.2 
  
