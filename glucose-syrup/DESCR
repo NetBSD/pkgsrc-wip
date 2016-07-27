@@ -1,0 +1,3 @@
+Glucose-syrup is a parallel SAT solver
+It is based on a new scoring scheme for the clause learning mechanism
+of so called "Modern" SAT solvers.
