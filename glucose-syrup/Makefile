@@ -12,12 +12,10 @@ COMMENT=	Parallel SAT solver
 LICENSE=	glucose-syrup-license
 
 USE_TOOLS+=		gmake
+BUILD_TARGET=		rs
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/parallel
 INSTALLATION_DIRS+=	bin
-
-do-build:
-	set -e; cd ${WRKSRC}; ${GMAKE} rs
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/glucose-syrup_static ${DESTDIR}${PREFIX}/bin/glucose-syrup
