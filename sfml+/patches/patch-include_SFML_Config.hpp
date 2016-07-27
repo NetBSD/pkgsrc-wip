@@ -1,18 +1,16 @@
-$NetBSD: patch-include_SFML_Config.hpp,v 1.1 2012/10/03 15:05:59 othyro Exp $
+$NetBSD$
 
-Adds NetBSD support.
-
---- include/SFML/Config.hpp.orig	2010-01-27 13:54:01.000000000 +0000
+--- include/SFML/Config.hpp.orig	2015-08-24 16:01:06.000000000 +0000
 +++ include/SFML/Config.hpp
-@@ -54,6 +54,11 @@
-     // FreeBSD
-     #define SFML_SYSTEM_FREEBSD
+@@ -86,6 +86,11 @@
+         // FreeBSD
+         #define SFML_SYSTEM_FREEBSD
  
-+#elif defined(__NetBSD__) || defined(__NetBSD_kernel__)
++    #elif defined(__NetBSD__)
 +
-+    // NetBSD
-+    #define SFML_SYSTEM_NETBSD
++        // NetBSD
++        #define SFML_SYSTEM_NETBSD
 +
- #else
+     #else
  
-     // Unsupported system
+         // Unsupported UNIX system

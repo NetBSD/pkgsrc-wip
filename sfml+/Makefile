@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/24 17:25:10 blef Exp $
 
-DISTNAME=	SFML-1.6-sdk-linux-64
-PKGNAME=	sfml+-1.6
+DISTNAME=	SFML-2.3.2-sources
+PKGNAME=	sfml+-2.3.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.sfml-dev.org/files/
 
@@ -9,10 +9,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sfml-dev.org/
 COMMENT=	Free multimedia C++ API
 LICENSE=	zlib
+EXTRACT_SUFX=	.zip
 
-WRKSRC=			${WRKDIR}/SFML-1.6
+WRKSRC=			${WRKDIR}/SFML-2.3.2
+USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake rm
+USE_TOOLS+=		rm
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.glu}/include
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.freetype2}/include/freetype2
 LDFLAGS+=		-L${BUILDLINK_PREFIX.libsndfile}/lib
@@ -31,7 +33,7 @@ post-install:
 			${RM} ${DESTDIR}${PREFIX}/include/SFML/Window/WindowHandle.hpp.orig
 
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
