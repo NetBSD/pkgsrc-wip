@@ -28,7 +28,7 @@ pkgbase := rsound
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.rsound:Mopenal)
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.rsound:Moss)

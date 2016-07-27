@@ -17,6 +17,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}-${GITHUB_TAG}
 
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

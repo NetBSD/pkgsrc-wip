@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.sfml++=	sfml+>=1.6
 BUILDLINK_PKGSRCDIR.sfml+?=	../../wip/sfml+
 
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

@@ -39,7 +39,7 @@ BUILDLINK_DEPMETHOD.gtkmm=	build
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 #.include "../../x11/wxGTK28/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 CFLAGS+=		-DHAVE_OPENAL=1
 .else
 CFLAGS+=		-DHAVE_OPENAL=0

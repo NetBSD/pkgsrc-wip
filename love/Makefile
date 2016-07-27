@@ -24,7 +24,7 @@ LUA_VERSIONS_INCOMPATIBLE=	52
 .include "../../devel/SDL2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.physfs+=	physfs>=2.0
 .include "../../devel/physfs/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../devel/devIL/buildlink3.mk"

@@ -18,7 +18,7 @@ USE_CMAKE=	yes
 CMAKE_ARGS+=	-DLUGARU_INSTALL_PREFIX:PATH=${PREFIX} 
 
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"

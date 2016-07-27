@@ -23,7 +23,7 @@ GNU_CONFIGURE=		yes
 .include "../../x11/libXi/buildlink3.mk"
 .endif
 
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -16,6 +16,6 @@ PYDISTUTILSPKG=		yes
 
 
 .include "../../audio/freealut/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

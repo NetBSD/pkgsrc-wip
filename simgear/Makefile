@@ -20,7 +20,7 @@ USE_CMAKE=		yes
 BUILDLINK_API_DEPENDS.plib+= plib>=1.8.5
 
 .include "../../audio/freealut/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"

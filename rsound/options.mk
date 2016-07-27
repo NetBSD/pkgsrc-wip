@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--disable-samplerate
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-al
 .else
 CONFIGURE_ARGS+=	--disable-al

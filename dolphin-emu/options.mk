@@ -47,7 +47,7 @@ CMAKE_ARGS+=		-DENCODE_FRAMEDUMPS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)

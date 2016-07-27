@@ -19,7 +19,7 @@ CMAKE_ARGS+=		-DJPEG_FACTORY:BOOL=ON
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"

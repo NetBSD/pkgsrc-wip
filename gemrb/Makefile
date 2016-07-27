@@ -28,7 +28,7 @@ CFLAGS+=		-Wl,-R${PREFIX}/lib/gemrb
 CXXFLAGS+=		-Wl,-R${PREFIX}/lib/gemrb
 
 #.include "../../audio/freealut/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 # not properly found by cmake?
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

@@ -53,7 +53,7 @@ INSTALL_TARGET=		install datainstall
 #pre-configure:
 #	- cd ${WRKSRC} && ${RM} Make-config
 
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

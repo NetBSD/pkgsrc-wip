@@ -24,7 +24,7 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include/AL
 LDFLAGS+=	-L${BUILDLINK_DIR}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_DIR}/lib
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

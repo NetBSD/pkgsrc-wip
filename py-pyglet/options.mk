@@ -11,5 +11,5 @@ PKG_SUGGESTED_OPTIONS+=	openal
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .endif

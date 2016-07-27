@@ -37,7 +37,7 @@ do-install:
 .include "../../x11/videoproto/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
