@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- agm.h.orig	2016-07-27 20:12:55.337407545 +0000
 +++ agm.h
 @@ -134,5 +134,15 @@ extern struct wnode *lstart, *lend;

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- listfuncs.c.orig	2016-07-27 20:12:55.344357171 +0000
 +++ listfuncs.c
 @@ -18,8 +18,10 @@ char listfuncs_RCSid[] = "Revision: 1.3 

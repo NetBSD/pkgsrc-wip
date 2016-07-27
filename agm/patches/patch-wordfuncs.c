@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- wordfuncs.c.orig	2016-07-27 20:12:55.365038920 +0000
 +++ wordfuncs.c
 @@ -14,9 +14,9 @@ char wordfuncs_RCSid[] = "Revision: 1.2 

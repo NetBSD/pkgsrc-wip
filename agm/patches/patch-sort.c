@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- sort.c.orig	2016-07-27 20:12:55.361585478 +0000
 +++ sort.c
 @@ -14,9 +14,8 @@ char sort_RCSid[] = "Revision: 1.2 $";

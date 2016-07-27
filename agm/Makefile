@@ -26,13 +26,13 @@ SUBST_SED.rcsids=	-e "s!.Revision: !Revision: !"
 MAKE_FLAGS+=	BINDIR=${PREFIX}/bin
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	WORDDIR=${PREFIX}/share/agm
-MAKE_FLAGS+=	CC=${CC}
+MAKE_FLAGS+=	CC=${CC:Q}
 
 INSTALL_TARGET=		install install-words
 
 REPLACE_INTERPRETER+=	wish
 REPLACE.wish.old=	/usr/bin/wish
-REPLACE.wish.new=	${LOCALBASE}/bin/wish
+REPLACE.wish.new=	${PREFIX}/bin/wish
 REPLACE_FILES.wish=	xagm
 
 .include "../../mk/bsd.pkg.mk"

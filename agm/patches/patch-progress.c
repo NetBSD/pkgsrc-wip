@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- progress.c.orig	2016-07-27 20:12:55.358141535 +0000
 +++ progress.c
 @@ -7,18 +7,20 @@ char progress_RCSid[] = "Revision: 1.1 $

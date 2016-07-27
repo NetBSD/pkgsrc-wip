@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- process.c.orig	2016-07-27 20:12:55.354713027 +0000
 +++ process.c
 @@ -27,14 +27,11 @@ char process_RCSid[] = "Revision: 1.6 $"

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- main.c.orig	2016-07-27 20:12:55.347835407 +0000
 +++ main.c
 @@ -60,6 +60,7 @@ char main_RCSid[] = "Revision: 1.11 $";

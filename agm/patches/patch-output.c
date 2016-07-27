@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix K&R code.
+
 --- output.c.orig	2016-07-27 20:12:55.351278093 +0000
 +++ output.c
 @@ -24,8 +24,8 @@ char output_RCSid[] = "Revision: 1.5 $";

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Adapt install target for pkgsrc.
+
 --- Makefile.orig	1998-03-18 01:02:29.000000000 +0000
 +++ Makefile
 @@ -40,6 +40,7 @@
