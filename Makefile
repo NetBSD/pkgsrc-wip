@@ -4155,7 +4155,6 @@ SUBDIR+=	viewnior
 SUBDIR+=	vimprobable2
 SUBDIR+=	vimrc-mode
 SUBDIR+=	vino
-SUBDIR+=	violetland
 SUBDIR+=	vips
 SUBDIR+=	virtualbox
 SUBDIR+=	virtualjaguar
