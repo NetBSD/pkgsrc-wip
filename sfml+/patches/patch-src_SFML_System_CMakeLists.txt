@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/SFML/System/CMakeLists.txt.orig	2015-08-24 16:01:06.000000000 +0000
++++ src/SFML/System/CMakeLists.txt
+@@ -84,7 +84,7 @@ else()
+ endif()
+ 
+ # build the list of external libraries to link
+-if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_MACOSX)
++if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_NETBSD OR SFML_OS_MACOSX)
+     list(APPEND SYSTEM_EXT_LIBS pthread)
+ endif()
+ if(SFML_OS_LINUX)

@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2015-08-24 16:01:06.000000000 +0000
++++ CMakeLists.txt
+@@ -188,11 +188,14 @@ if(SFML_OS_MACOSX)
+     endif()
+ endif()
+ 
+-if(SFML_OS_LINUX OR SFML_OS_FREEBSD)
++if(SFML_OS_LINUX OR SFML_OS_FREEBSD OR SFML_OS_NETBSD)
+     set(PKGCONFIG_DIR lib${LIB_SUFFIX}/pkgconfig)
+     if(SFML_OS_FREEBSD)
+         set(PKGCONFIG_DIR libdata/pkgconfig)
+     endif()
++    if(SFML_OS_NETSD)
++        set(PKGCONFIG_DIR lib/pkgconfig)
++    endif()
+     if(BUILD_SHARED_LIBS)
+         sfml_set_option(SFML_INSTALL_PKGCONFIG_FILES FALSE BOOL "TRUE to automatically install pkg-config files so other projects can find SFML")
+         if(SFML_INSTALL_PKGCONFIG_FILES)
