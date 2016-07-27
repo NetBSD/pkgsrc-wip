@@ -1,17 +1,23 @@
 $NetBSD$
 
---- progress.c.orig	2016-07-27 09:17:40.624147412 +0000
+--- progress.c.orig	2016-07-27 19:51:51.447604861 +0000
 +++ progress.c
-@@ -7,6 +7,8 @@ char progress_RCSid[] = "Revision: 1.1 $
+@@ -7,18 +7,20 @@ char progress_RCSid[] = "Revision: 1.1 $
  
  #include "agm.h"
  
+-void print_progress () {
 +#include <signal.h>
 +
- void print_progress () {
++void print_progress (void) {
    printf ("%02d\b\b", pct);
    fflush (stdout);
-@@ -18,7 +20,7 @@ void arm_timer ()
+ }
+ 
+-void arm_timer ()
++void arm_timer (void)
+ {
+   struct sigaction action;
    struct itimerval tmr;
  
    action.sa_handler = &print_progress;
@@ -20,6 +26,15 @@ $NetBSD$
    action.sa_flags = 0;
    sigaction (SIGALRM, &action, NULL);
    
+@@ -29,7 +31,7 @@ void arm_timer ()
+   setitimer (ITIMER_REAL, &tmr, NULL);
+ }
+ 
+-void disarm_timer ()
++void disarm_timer (void)
+ {
+   struct sigaction action;
+   struct itimerval tmr;
 @@ -41,7 +43,7 @@ void disarm_timer ()
    setitimer (ITIMER_REAL, &tmr, NULL);
  

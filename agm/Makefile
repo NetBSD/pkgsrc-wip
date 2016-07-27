@@ -12,6 +12,7 @@ LICENSE=	generic-nonlicense
 SUBST_CLASSES+=		rcsids
 SUBST_MESSAGE.rcsids=	Strip RCS IDs as they cause problems when patching.
 SUBST_STAGE.rcsids=	pre-patch
+SUBST_FILES.rcsids+=	agm.h
 SUBST_FILES.rcsids+=	gobble.c
 SUBST_FILES.rcsids+=	listfuncs.c
 SUBST_FILES.rcsids+=	main.c
