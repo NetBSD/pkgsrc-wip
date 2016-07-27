@@ -83,6 +83,7 @@ SUBDIR+=	afflib
 SUBDIR+=	afl-cov
 SUBDIR+=	agfl
 SUBDIR+=	agile
+SUBDIR+=	agm
 SUBDIR+=	ags
 SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
