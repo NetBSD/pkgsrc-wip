@@ -3,7 +3,7 @@
 DISTNAME=	causalinfo-1.1.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/d6/95/27d28a0875dae4da0ab918f07056e2e1340f39da2b8abe641c2e6e2318f3/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/causalinfo/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github/brettc/causalinfo/
