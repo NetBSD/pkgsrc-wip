@@ -22,6 +22,15 @@ $NetBSD$
      // pthread_getattr_np() can fail if the thread is not invoked by
      // pthread_create() (e.g., the main thread of webkit_unit_tests).
      // If so, a conservative size estimate is returned.
+@@ -94,7 +98,7 @@ size_t StackFrameDepth::getUnderestimate
+         pthread_attr_destroy(&attr);
+         return size;
+     }
+-#if OS(FREEBSD)
++#if OS(FREEBSD) || OS(NETBSD)
+     pthread_attr_destroy(&attr);
+ #endif
+ 
 @@ -135,7 +139,7 @@ size_t StackFrameDepth::getUnderestimate
  
  void* StackFrameDepth::getStackStart()
@@ -31,3 +40,12 @@ $NetBSD$
      pthread_attr_t attr;
      int error;
  #if OS(FREEBSD)
+@@ -152,7 +156,7 @@ void* StackFrameDepth::getStackStart()
+         pthread_attr_destroy(&attr);
+         return reinterpret_cast<uint8_t*>(base) + size;
+     }
+-#if OS(FREEBSD)
++#if OS(FREEBSD) || OS(NETBSD)
+     pthread_attr_destroy(&attr);
+ #endif
+ #if defined(__GLIBC__)
