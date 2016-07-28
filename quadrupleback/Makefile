@@ -14,5 +14,6 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+.include "../../devel/SDL_gfx/buildlink3.mk"
 .include "../../devel/flatzebra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
