@@ -5,9 +5,36 @@ Fix use of CMAKE_MODULE_PATH (see also patch-cmake_VersionString.cmake)
 Resolve "Attempt at a recursive or nested TRY_COMPILE in directory"
 (see also patch-cmake_CompileCheck.cmake)
 
---- CMakeLists.txt.orig	2013-07-15 19:52:41.000000000 +0200
-+++ CMakeLists.txt	2013-07-15 19:53:24.000000000 +0200
-@@ -177,7 +177,8 @@
+and
+
+commit 60e43c3cbf3fb0aa10cc3092b2512ccebb60b80d
+Author: Daniel Scharrer <daniel@constexpr.org>
+Date:   Tue Feb 23 07:04:11 2016 +0100
+
+    CMake: Bump policy version to 3.4
+    
+    Amongst other things, this makes the build system more rubust against
+    stray variables coming from included CMake scripts provided by the
+    system by disabling variable expansion for quoted strings in if().
+    
+    Fixes build with CMake 3.5 (tested with 3.5.0-rc3).
+
+
+--- CMakeLists.txt.orig	2013-10-17 17:25:04.000000000 +0000
++++ CMakeLists.txt
+@@ -13,6 +13,11 @@ else()
+ 	cmake_minimum_required(VERSION 2.8)
+ endif()
+ 
++if(CMAKE_VERSION VERSION_GREATER 3.4)
++	cmake_policy(VERSION 3.4)
++else()
++	cmake_policy(VERSION ${CMAKE_VERSION})
++endif()
+ 
+ # Define configuration options
+ 
+@@ -177,7 +182,8 @@ include(CheckCXXSourceCompiles)
  include(CheckSymbolExists)
  include(CheckTypeSize)
  
@@ -17,7 +44,7 @@ Resolve "Attempt at a recursive or nested TRY_COMPILE in directory"
  include(BuildSystem)
  include(BuildType)
  include(CompileCheck)
-@@ -407,15 +408,15 @@
+@@ -406,15 +412,15 @@ if(NOT MSVC)
  	endif()
  	
  	# Not a symbol, so we can't use check_symbol_exists
