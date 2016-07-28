@@ -1,0 +1,27 @@
+$NetBSD$
+
+Adapt for pkgsrc
+
+--- Makefile.orig	1996-09-30 03:34:20.000000000 +0000
++++ Makefile
+@@ -20,6 +20,7 @@ LIBS=-lncurses
+ #LIBS=-lcurses -lterminfo
+ 
+ # change these if needed - they're used by 'make install'
++DESTDIR?=
+ BINDIR=/usr/games
+ MANDIR=/usr/man/man6
+ 
+@@ -34,8 +35,10 @@ ztrack: $(OBJS)
+ 	$(CC) $(CFLAGS) -o ztrack $(OBJS) $(LIBS)
+ 
+ install: ztrack
+-	install -s -m 511 ztrack $(BINDIR)
+-	install -m 444 ztrack.6 $(MANDIR)
++	install -d $(DESTDIR)$(BINDIR)
++	install -s -m 511 ztrack $(DESTDIR)$(BINDIR)
++	install -d $(DESTDIR)$(MANDIR)
++	install -m 444 ztrack.6 $(DESTDIR)$(MANDIR)
+ 
+ clean:
+ 	$(RM) *.o *~ ztrack
