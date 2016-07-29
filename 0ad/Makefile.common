@@ -1,0 +1,8 @@
+# $NetBSD$
+
+DISTVERSION=	0ad-0.0.20-alpha-unix
+CATEGORIES=	games
+MASTER_SITES=	http://releases.wildfiregames.com/
+EXTRACT_SUFX=	.tar.xz
+
+HOMEPAGE=	http://releases.wildfiregames.com/
