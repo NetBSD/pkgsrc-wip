@@ -1,0 +1,21 @@
+$NetBSD$
+
+SHA1 (0ad-0.0.20-alpha-unix-build.tar.xz) = 4c056ee114e6b50f456ad14be961a101728e99a3
+RMD160 (0ad-0.0.20-alpha-unix-build.tar.xz) = 0f1283fe287f539f32fa0466f93b881aeca45dc9
+SHA512 (0ad-0.0.20-alpha-unix-build.tar.xz) = 786f92b74c2e0c64c07ef2f5578dcb5c753fb4fed7238d385bca23549805fcfaeecb9bfbfae809a2ac09a7dfc804455237346588099db347c28a3ff0ae284c43
+Size (0ad-0.0.20-alpha-unix-build.tar.xz) = 25610932 bytes
+SHA1 (patch-build_premake_extern__libs4.lua) = dfdbce501c9506ebfe9be2a5bdf30f5f7cdbb86b
+SHA1 (patch-build_workspaces_clean-workspaces.sh) = fed7e867eb8e24e37860599269f9feb4d30c5a43
+SHA1 (patch-build_workspaces_update-workspaces.sh) = 26093813799b24ec86e91b1d51e8a6d1c9922087
+SHA1 (patch-libraries_source_fcollada_include_FCDocument_FCDocument.h) = 9f60871e9f05784b10ba97efffe756ece473f9b2
+SHA1 (patch-libraries_source_fcollada_include_FUtils_FUCriticalSection.h) = 1ece7ae54c07515fdbca12f71c97add7c9e496e1
+SHA1 (patch-libraries_source_fcollada_include_FUtils_Platforms.h) = 32308e3fe673903b4b1a17c364840818136411b9
+SHA1 (patch-libraries_source_fcollada_src_FCollada_FCDocument_FCDocument.h) = e7359366d4aa5f76feefe8c79768b341335a2c80
+SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_FUCriticalSection.h) = 55ee4470672e0e3a55bd208c0c1df9b6bedf604a
+SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_FUStringBuilder.hpp) = 8f9983120b63141ac3b342bc924d82748e23850d
+SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_Platforms.h) = d0dbefd34af4b87d24c486a6af19e05ae5231deb
+SHA1 (patch-libraries_source_nvtt_src_src_nvcore_Debug.cpp) = e1f16fedfa6cc22be43e799415ce91d8d9e7305f
+SHA1 (patch-libraries_source_nvtt_src_src_nvcore_nvcore.h) = 2cd3f056b75172ae5e15404746374d627e78ba09
+SHA1 (patch-libraries_source_nvtt_src_src_nvcore_poshlib_posh.h) = b0759ead96db78237c5fa400cf320ab02e8b262b
+SHA1 (patch-libraries_source_nvtt_src_src_nvmath_nvmath.h) = 218723373dc9f117eca33960cac045acc0eee97a
+SHA1 (patch-source_third__party_mikktspace_weldmesh.cpp) = 35df7dd5d5d2aa784ef03599a47cc69982ebe332
