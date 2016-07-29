@@ -1,13 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	0ad-0.0.20-alpha-unix-data
+.include "../../wip/0ad/Makefile.common"
+
+DISTNAME=	${DISTVERSION}-data
 PKGNAME=	${DISTNAME:S/-unix-data//:S/0ad-/0ad-data-/:S/-alpha/.alpha/}
-CATEGORIES=	games
-MASTER_SITES=	http://releases.wildfiregames.com/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://releases.wildfiregames.com/
 COMMENT=	Datafiles for the 0ad game
 LICENSE=	public-domain AND cc-by-sa-v3.0
 
