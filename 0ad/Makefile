@@ -22,6 +22,8 @@ do-configure:
 		--bindir=${PREFIX}/bin \
 		--datadir=${PREFIX}/share/${PKGBASE} \
 		--libdir=${PREFIX}/lib/${PKGBASE}
+# --with-system-mozjs31
+# --with-system-nvtt
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
