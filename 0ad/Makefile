@@ -1,13 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	0ad-0.0.20-alpha-unix-build
+.include "Makefile.common"
+
+DISTNAME=	${DISTVERSION}-build
 PKGNAME=	${DISTNAME:S/-unix-build//:S/-alpha/.alpha/}
-CATEGORIES=	games
-MASTER_SITES=	http://releases.wildfiregames.com/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://releases.wildfiregames.com/
 COMMENT=	Historical real-time strategy game
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
@@ -15,6 +13,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake perl bash
+
+DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
 
 do-configure:
 	${RUN} cd ${WRKSRC} && ./build/workspaces/clean-workspaces.sh
