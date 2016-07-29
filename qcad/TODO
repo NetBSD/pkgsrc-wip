@@ -1,10 +1,76 @@
-h97@makoto 09:15:48/160410(~)% qcad
-QCAD version  3.13.1.3 
-Warning:  "Folder 'plugins' does not exist" 
-Warning:  RPluginLoader::loadPlugins: No plugins directory found. 
-Warning:  RPluginLoader::loadPlugins: No plugins directory found. 
-Warning:  Autostart script not found at: 
- "scripts/autostart.js
-:scripts/autostart.js" 
-Warning:  RPluginLoader::loadPlugins: No plugins directory found. 
-h97@makoto 09:15:53/160410(~)% 
+The native build for QCad installs files to release/ and hopes they will
+run from there. pkgsrc needs to move them to the real locations but
+libtool fails to install some files, notably
+
+	release/libqcadecmaapi.la
+	release/libqcadspatialindex.la
+	release/libqcadzip.la
+	plugins/libqcadexample.la
+
+ with errors like:
+
+libtool --mode=install /usr/bin/install -c -o plunky -g staff -m 755 /var/work/pkgsrc/wip/qcad/work/qcad-3.15.4.0/release/libqcadecmaapi.la  /var/work/pkgsrc/wip/qcad/work/.destdir/usr/pkg/lib
+libtool: install: error: cannot install `/var/work/pkgsrc/wip/qcad/work/qcad-3.15.4.0/release/libqcadecmaapi.la' to a directory not ending in /
+*** Error code 1
+
+ -- I can't see any significant difference in the Makefiles for those libs
+
+ -- those generated .la files are the only ones which contain @inst_prefix_dir@
+
+ -- adding QMAKE_RPATHDIR=/usr/pkg/lib to .pro file doesn't seem to help (I hoped it would add it to the Makefile)
+
+ -- manually adding -rpath /usr/pkg/lib to the Makefile does mean that
+    libtool will install it later, but perhaps thats not quite the answer
+
+ -- looking at dependencies:
+
+   libqcadecmaapi => libquazip and libspatialindexnavel
+   libqcadexample => libquazip and libspatialindexnavel
+   libqcadspatialindex => libspatialindexnavel
+   libqcadzip => libquazip
+
+ nothing else depends on libquazip or libspatialindexnavel and there are warnings about this
+ being unportable during the build, for example while linking libqcadexample
+
+--- ../../../plugins/../../../plugins/libqcadexample.la ---
+libtool --silent --mode=link c++ -avoid-version -rpath / -module -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -lexecinfo -L/usr/lib -Wl,-R/usr/lib -L/usr/pkg/qt4/lib -Wl,-R/usr/pkg/qt4/lib -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib -L/usr/pkg/qt4/lib -pthread -Wl,-R/usr/pkg/qt4/lib -shared -o ../../../plugins/libqcadexample.la RExamplePlugin.lo  moc_RExamplePlugin.lo    -L/usr/pkg/lib -L/usr/pkg/qt4/lib -L/usr/X11R7/lib -L/var/work/pkgsrc/wip/qcad/work/qcad-3.15.4.0/release -lqcadcore -lqcadgui /var/work/pkgsrc/wip/qcad/work/qcad-3.15.4.0/release/libqcadecmaapi.la -lQtWebKit -lQtScript -lQtScriptTools -lQtSvg -lQtSql -lQtXmlPatterns -lQtXml -lQtOpenGL -lQtGui -lQtNetwork -lQtCore -lQtUiTools -lGLU -lGL -lXmu -lQtDesigner -lQtHelp
+*** [buildlink3] Warning: libtool replaced -lqcadcore with /var/work/pkgsrc/wip/qcad/work/qcad-3.15.4.0/release/libqcadcore.la
+*** [buildlink3] Warning: libtool replaced -lqcadgui with /var/work/pkgsrc/wip/qcad/work/qcad-3.15.4.0/release/libqcadgui.la
+*** Warning: This system can not link to static lib archive /var/work/pkgsrc/wip/qcad/work/qcad-3.15.4.0/release/libqcadecmaapi.la.
+*** I have the capability to make that library automatically link in when
+*** you link to this library.  But I can only do this if you have a
+*** shared version of the library, which you do not appear to have.
+*** But as you try to build a module library, libtool will still create
+*** a static module, that should work as long as the dlopening application
+*** is linked with the -dlopen flag to resolve symbols at runtime.
+*** Warning: Linking the shared library ../../../plugins/libqcadexample.la against the loadable module
+*** libspatialindexnavel.so is not portable!
+*** Warning: Linking the shared library ../../../plugins/libqcadexample.la against the loadable module
+*** libquazip.so is not portable!
+
+so perhaps this is the problem that needs to be surmounted?
+
+
+
+
+XXXX these files are currently disabled in the Makefile, use 'make FOO=' to include them XXXX
+
+
+
+
+Anyway, if I skip those four lib files the generated QCad binary fails, probably because something
+is missing. The application starts ok and asks for initial setup (language, page size, units etc)
+but then won't run any more:
+
+QCAD version  3.15.4
+Debug:    TIMER:  314000000 ns ( 314 ms )  -  "loading add-ons"
+Warning:  "QFormBuilder was unable to create a custom widget of the class 'RTextEdit'; defaulting to base class 'QTextBrowser'."
+Warning:  "QFormBuilder was unable to create a custom widget of the class 'RCommandLine'; defaulting to base class 'QLineEdit'."
+Warning:  RScriptHandlerEcma::eval: script engine exception:  "TypeError: Result of expression 'leCommand.commandConfirmed' [undefined] is not an object."
+Warning:  "<anonymous>()@/usr/pkg/lib/qcad/scripts/Widgets/CommandLine/CommandLine.js:181"
+Warning:  At least one uncaught exception:
+Warning:  "<anonymous>()@/usr/pkg/lib/qcad/scripts/Widgets/CommandLine/CommandLine.js:181"
+Debug:    "<global>() at -1"
+
+
+it seems that RTextEdit and RCommandLine have something to do with libqcadecmaapi at least, which was not installed

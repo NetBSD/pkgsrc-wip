@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 00:21:19 agc Exp $
+$NetBSD: distinfo,v 1.19 2011/09/23 03:26:57 ryoon Exp $
 
-SHA1 (qcad-3.13.1.3.tar.gz) = 9573ecd7924e1226aab8761fb294f54b2e074b88
-RMD160 (qcad-3.13.1.3.tar.gz) = 88b20ddd2d2f2754a3694fc2e117addcb3469bde
-SHA512 (qcad-3.13.1.3.tar.gz) = c02b5dfc6720f0a2ff579bcf29f1ed0070ff36af9878c42ba1c1974c7d8d81d67e1dacfaaed44bd56c270fbc40e100481759a9eefbb2198f2ad777c025620bf5
-Size (qcad-3.13.1.3.tar.gz) = 21212537 bytes
+SHA1 (qcad-3.15.4.0.zip) = 96962f35a94e0d124e009b43ae1a87d62926483d
+RMD160 (qcad-3.15.4.0.zip) = 1dd7b4c07548ada6c2524f01f6572847d4d483ed
+SHA512 (qcad-3.15.4.0.zip) = 7a6179b65c9f7720c3f2134bc5d11594ebdb3ec6f17cf2ec7030c3375235238851d8b396ecd123aada63ed1946de816587bb53b2dbdc46cc1e1bf1b53ed27ad3
+Size (qcad-3.15.4.0.zip) = 37420539 bytes
+SHA1 (patch-src_3rdparty_dxflib_src_dl__writer.h) = 3e8d283a3de10f8c06341eaaa36a00b1721dae43
+SHA1 (patch-src_core_RS.cpp) = 62c35a6b65fe2712707f47e79fef614af99fadbb
+SHA1 (patch-src_core_RSettings.cpp) = 427df969146c4ed212b820e25d6d464b0769c2ea
+SHA1 (patch-src_run_run.pri) = 66daaea352e183079064ee2a7a159e18dc0b5745

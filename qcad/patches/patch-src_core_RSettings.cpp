@@ -1,0 +1,34 @@
+$NetBSD$
+
+fix hardcoded paths
+
+--- src/core/RSettings.cpp.orig	2016-06-30 12:42:57.000000000 +0000
++++ src/core/RSettings.cpp
+@@ -133,27 +133,7 @@ bool RSettings::isDeployed() {
+ }
+
+ QString RSettings::getApplicationPath() {
+-    QDir ret(QApplication::applicationDirPath());
+-
+-#ifdef Q_OS_MAC
+-    if (ret.dirName() == "MacOS") {
+-        ret.cdUp();
+-        // deployed (scripts inside app bundle):
+-        if (ret.cd("Resources/scripts")) {
+-            ret.cdUp();
+-        }
+-        // development (scripts outside add bundle):
+-        else {
+-            ret.cdUp();
+-            ret.cdUp();
+-        }
+-    }
+-#endif
+-
+-    if (ret.dirName() == "debug" || ret.dirName() == "release") {
+-        ret.cdUp();
+-    }
+-
++    QDir ret("@PREFIX@/lib/qcad");
+     return ret.path();
+ }

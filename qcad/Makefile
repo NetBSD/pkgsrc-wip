@@ -1,59 +1,105 @@
-# $NetBSD: Makefile,v 1.61 2015/04/25 14:20:27 tnn Exp $
+# $NetBSD: Makefile$
 #
 
-DISTNAME=	qcad-3.13.1.3
-.include "./Makefile.common"
-COMMENT=	2D CAD system
-# See License.txt for info
-LICENSE=	gnu-gpl-v3
+DISTNAME=		qcad-3.15.4.0
+CATEGORIES=		cad
+MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
+EXTRACT_SUFX=		.zip
 
-USE_TOOLS+=	autoconf gmake pax
-# Possible: bsdtar, gtar, nbtar, pax
-# Default: nbtar
-EXTRACT_USING=	gtar
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-#BROKEN=		libtool handling is NOT correct
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.qcad.org/
+COMMENT=		2D CAD system
+LICENSE=		gnu-gpl-v3
 
-BUILD_TARGET=	all
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAKE_ENV+=	QMAKESPEC=${QTDIR}/mkspecs/default
-PREPEND_PATH+=	${QTDIR}/bin
-LDFLAGS+=	-lexecinfo
+DEPENDS+=		bash-[0-9]*:../../shells/bash
+DEPENDS+=		qt4-tiff-[0-9]*:../../x11/qt4-tiff
+DEPENDS+=		qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
+
+USE_TOOLS+=		pax
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	post-patch
+SUBST_MESSAGE.paths=	Attending to hard-coded paths.
+SUBST_FILES.paths+=	src/core/RS.cpp src/core/RSettings.cpp
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+
+# Note: Using pax to install the data files duplicates the lax permissions
+# from the source archive. We use 'umask 133' to prevent this, but we must
+# create the directories first otherwise they are not searchable.
+# When updating you may need to make the package, update the PLIST and then
+# remake the package to bootstrap the directory permissions
+#
 AUTO_MKDIRS=	yes
 
-# I really want this to be post-*patch* where it makes sense, but QTDIR isn't
-# available until after the wrapper phase because it depends on
-# BUILDLINK_PREFIX.qt3-libs, which buildlink3 sets.  Nothing is easy.  :) The
-# patches have replaced old hardcoded paths with fixed cookies @PREFIX@ and
-# @QTDIR@.  The SUBST framework will replace the cookies with the proper
-# values.
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	Attending to hard-coded paths.
-SUBST_FILES.paths+=	qcadlib/src/engine/rs_system.cpp
-SUBST_FILES.paths+=	qcad/src/qc_applicationwindow.cpp
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@QTDIR@,${QTDIR},g'
+SHLIBS=		libqcadcore.la \
+		libqcadentity.la \
+		libqcadgrid.la \
+		libqcadgui.la \
+		libqcadoperations.la \
+		libqcadsnap.la \
+		libqcadstemmer.la \
+		libquazip.la \
+		libspatialindexnavel.la \
+		libdxflib.a \
+		libopennurbs.a \
+		libstemmer.a \
+		libzlib.a
 
-REPLACE_BASH=		support/ecmagenerator/generate.sh
-INSTALLATION_DIRS=	bin share/qcad
+PLUGINS=	plugins/libqcaddxf.la \
+		plugins/libtransactionlistener.la \
+		plugins/designer/libqcadcustomwidgets.la \
+		plugins/script/libqcadqtscript_core.la \
+		plugins/script/libqcadqtscript_gui.la \
+		plugins/script/libqcadqtscript_network.la \
+		plugins/script/libqcadqtscript_opengl.la \
+		plugins/script/libqcadqtscript_sql.la \
+		plugins/script/libqcadqtscript_svg.la \
+		plugins/script/libqcadqtscript_uitools.la \
+		plugins/script/libqcadqtscript_webkit.la \
+		plugins/script/libqcadqtscript_xml.la \
+		plugins/script/libqcadqtscript_xmlpatterns.la
 
-# http://www.qcad.org/en/component/content/article/78-qcad/111-qcad-compilation-from-sources
+# XXX these are the files libtool is failing to install
+# XXX enable by 'make FOO='
+PLIST_VARS+=	foo
+.if defined(FOO)
+PLIST.foo=	yes
+SHLIBS+=	libqcadecmaapi.la \
+		libqcadspatialindex.la \
+		libqcadzip.la
+PLUGINS+=	plugins/libqcadexample.la
+.endif
+# XXX
+
 do-configure:
-	cd ${WRKSRC}  && \
-	env ${PKGSRC_ENV} ${CONFIGURE_ENV} QTDIR=${QTDIR} ${QTDIR}/bin/qmake -r
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake
 
 do-install:
-	cd ${WRKSRC}/release && \
-	for i in lib*a ; do libtool --mode=install install $$i ${DESTDIR}${PREFIX}/lib; done && \
-	libtool --mode=install install qcad-bin ${DESTDIR}${PREFIX}/bin/qcad
-	cd ${WRKSRC} && umask 022 && \
-	pax -rwpm support examples fonts patterns scripts ${DESTDIR}${PREFIX}/share/qcad
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/release/qcad-bin \
+	    ${DESTDIR}${PREFIX}/bin/qcad
+	${INSTALL_DATA} ${WRKSRC}/qcad.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_MAN} ${WRKSRC}/qcad.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for x in ${SHLIBS}
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/release/${x} \
+	    ${DESTDIR}${PREFIX}/lib
+.endfor
+.for x in ${PLUGINS}
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/${x} \
+	    ${DESTDIR}${PREFIX}/lib/qcad/${x:ts/:H}
+.endfor
+	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts libraries linetypes \
+	    patterns scripts themes ts ${DESTDIR}${PREFIX}/lib/qcad
+	cd ${WRKSRC} && umask 133 && ${PAX} -rw examples ${DESTDIR}${PREFIX}/share/qcad
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.7
 .include "../../x11/qt4-tools/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.7
-BUILDLINK_DEPMETHOD.qt4-tools=	full # uses assistant for help
+BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../mk/bsd.pkg.mk"
