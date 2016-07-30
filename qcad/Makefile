@@ -1,7 +1,7 @@
 # $NetBSD: Makefile$
 #
 
-DISTNAME=		qcad-3.15.4.0
+DISTNAME=		qcad-3.15.4.1
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_SUFX=		.zip
