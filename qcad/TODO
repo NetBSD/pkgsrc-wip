@@ -1,9 +1,9 @@
 
 The application starts ok and asks for initial setup (language, page size, units etc)
-but then won't run any more:
+but then at 70% initializing add-ons, showing AutoZoomView it fails:
 
-QCAD version  3.15.4
-Debug:    TIMER:  314000000 ns ( 314 ms )  -  "loading add-ons"
+QCAD version  3.15.4.1
+Debug:    TIMER:  377000000 ns ( 377 ms )  -  "loading add-ons"
 Warning:  "QFormBuilder was unable to create a custom widget of the class 'RTextEdit'; defaulting to base class 'QTextBrowser'."
 Warning:  "QFormBuilder was unable to create a custom widget of the class 'RCommandLine'; defaulting to base class 'QLineEdit'."
 Warning:  RScriptHandlerEcma::eval: script engine exception:  "TypeError: Result of expression 'leCommand.commandConfirmed' [undefined] is not an object."
@@ -12,4 +12,11 @@ Warning:  At least one uncaught exception:
 Warning:  "<anonymous>()@/usr/pkg/lib/qcad/scripts/Widgets/CommandLine/CommandLine.js:181"
 Debug:    "<global>() at -1"
 
-I started it with the qcad -enable-script-debugger and it shows that but I don't know anything about it or how to get past it
+
+I started it with the qcad -enable-script-debugger and it shows the same. It seems that
+leCommand is a QLineEdit object (should have been RCommandLine), and commandConfirmed is
+a signal provided by the RCommandLine class.
+
+I think this means that the library/plugins just haven't been libtooled and/or loaded correctly
+
+for some reason they are all .a files except for some of the plugins. I think they should be .so
