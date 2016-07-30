@@ -28,28 +28,36 @@ SUBST_FILES.paths+=	src/core/RS.cpp src/core/RSettings.cpp
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 
 # Note: Using pax to install the data files duplicates the lax permissions
-# from the source archive. We use 'umask 133' to prevent this, but we must
+# from the zip archive. We use 'umask 133' to prevent this, but we must
 # create the directories first otherwise they are not searchable.
 # When updating you may need to make the package, update the PLIST and then
 # remake the package to bootstrap the directory permissions
 #
+# XXX Or use the .tar.gz archive available from git but it won't extract properly for me
+#
+#INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/qcad \
+#			lib/qcad/plugins/designer lib/qcad/plugins/script
 AUTO_MKDIRS=	yes
 
-SHLIBS=		libqcadcore.la \
+QCADLIBS=	libqcadcore.la \
+		libqcadecmaapi.la \
 		libqcadentity.la \
 		libqcadgrid.la \
 		libqcadgui.la \
 		libqcadoperations.la \
 		libqcadsnap.la \
+		libqcadspatialindex.la \
 		libqcadstemmer.la \
-		libquazip.la \
-		libspatialindexnavel.la \
+		libqcadzip.la \
 		libdxflib.a \
 		libopennurbs.a \
+		libquazip.a \
+		libspatialindexnavel.a \
 		libstemmer.a \
 		libzlib.a
 
-PLUGINS=	plugins/libqcaddxf.la \
+QCADPLUGINS=	plugins/libqcaddxf.la \
+		plugins/libqcadexample.la \
 		plugins/libtransactionlistener.la \
 		plugins/designer/libqcadcustomwidgets.la \
 		plugins/script/libqcadqtscript_core.la \
@@ -63,33 +71,23 @@ PLUGINS=	plugins/libqcaddxf.la \
 		plugins/script/libqcadqtscript_xml.la \
 		plugins/script/libqcadqtscript_xmlpatterns.la
 
-# XXX these are the files libtool is failing to install
-# XXX enable by 'make FOO='
-PLIST_VARS+=	foo
-.if defined(FOO)
-PLIST.foo=	yes
-SHLIBS+=	libqcadecmaapi.la \
-		libqcadspatialindex.la \
-		libqcadzip.la
-PLUGINS+=	plugins/libqcadexample.la
-.endif
-# XXX
-
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/release/qcad-bin \
-	    ${DESTDIR}${PREFIX}/bin/qcad
-	${INSTALL_DATA} ${WRKSRC}/qcad.desktop ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_MAN} ${WRKSRC}/qcad.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.for x in ${SHLIBS}
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/release/${x} \
-	    ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+	    ${WRKSRC}/release/qcad-bin ${DESTDIR}${PREFIX}/bin/qcad
+	${INSTALL_DATA} ${WRKSRC}/qcad.desktop \
+	    ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for x in ${QCADLIBS}
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+	    ${WRKSRC}/release/${x} ${DESTDIR}${PREFIX}/lib
 .endfor
-.for x in ${PLUGINS}
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/${x} \
-	    ${DESTDIR}${PREFIX}/lib/qcad/${x:ts/:H}
+.for x in ${QCADPLUGINS}
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+	    ${WRKSRC}/${x} ${DESTDIR}${PREFIX}/lib/qcad/${x:ts/:H}
 .endfor
 	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts libraries linetypes \
 	    patterns scripts themes ts ${DESTDIR}${PREFIX}/lib/qcad
