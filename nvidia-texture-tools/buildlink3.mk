@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nvidia-texture-tools
 NVIDIA_TEXTURE_TOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nvidia-texture-tools+=	nvidia-texture-tools>=2.0.8
-BUILDLINK_PKGSRCDIR.nvidia-texture-tools?=	../../local/nvidia-texture-tools
+BUILDLINK_PKGSRCDIR.nvidia-texture-tools?=	../../wip/nvidia-texture-tools
 
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
