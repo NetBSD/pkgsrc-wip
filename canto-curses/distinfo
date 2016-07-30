@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (canto-curses/v0.9.7.tar.gz) = 796ad99ade278e4e18019c58117042a04c21bc12
+RMD160 (canto-curses/v0.9.7.tar.gz) = 50af1fcd7d73c7b4ad0111ebe0abebafcd1359aa
+SHA512 (canto-curses/v0.9.7.tar.gz) = b6a46a767f08b68a6b12d67ae4ac21e4063b0da0bbab9cb775cb08299d8bee244b52439159ba70168d70dd77b8559ef2953ee33e297ef31c2d1fb1b51a35307e
+Size (canto-curses/v0.9.7.tar.gz) = 79874 bytes
+SHA1 (patch-setup.py) = b027f9a0e5d2baa3a53702b621d957c3a20a1aac
