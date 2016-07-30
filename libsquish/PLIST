@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/squish.h
+lib/libsquish.so
+lib/libsquish.so.0.0
