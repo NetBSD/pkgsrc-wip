@@ -299,6 +299,7 @@ SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
 SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
+SUBDIR+=	canto-daemon-0.9.6
 SUBDIR+=	cardpeek
 SUBDIR+=	caribou
 SUBDIR+=	cartago
