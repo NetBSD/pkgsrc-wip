@@ -3616,6 +3616,7 @@ SUBDIR+=	rar4
 SUBDIR+=	raster3d
 SUBDIR+=	ratpoints
 SUBDIR+=	ratproxy
+SUBDIR+=	rawdog
 SUBDIR+=	rc.d.Interix
 SUBDIR+=	rc.subr
 SUBDIR+=	rcm
