@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/03/03 21:15:03 othyro Exp $
 
-SHA1 (opennurbs_20121024.zip) = eec20c102c7f7feff367d21f110cdb8f26bb5c3f
-RMD160 (opennurbs_20121024.zip) = 603b33f2e6a04171ade7b41918185c0f2329304f
-Size (opennurbs_20121024.zip) = 1781061 bytes
-SHA1 (patch-opennurbs__memory.c) = 6b14349e4d2beadf50dacf3c2a40d5555ef49e7e
+SHA1 (opennurbs_20130711.zip) = 7f85689e95e3cee4a4429fd4fcbeec849fa112ff
+RMD160 (opennurbs_20130711.zip) = cb74f3a036795def71d6dcc10d54bb4900abe493
+SHA512 (opennurbs_20130711.zip) = 49dffb0fa1198827e69bb7e43e659f6dc5113b10d5d865c3c31a535922482276f15004ad184cebecd673d7d424ab32b45f52306ac90cdc20f85542a0d394720b
+Size (opennurbs_20130711.zip) = 1807257 bytes

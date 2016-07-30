@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2013/03/03 21:15:03 othyro Exp $
 #
 
-DISTNAME=	opennurbs_20121024
+DISTNAME=	opennurbs_20130711
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
-MASTER_SITES=	http://files.na.mcneel.com/opennurbs/5.0/2012-10-24/
+MASTER_SITES=	http://files.mcneel.com/opennurbs/5.0/2013-07-11/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
