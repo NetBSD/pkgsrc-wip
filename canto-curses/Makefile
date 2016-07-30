@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/canto-curses-0.9.7
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYDISTUTILSPKG=			YES
 
-DEPENDS+=	canto-daemon-[0-9]*:../../local/canto-daemon
+DEPENDS+=	canto-daemon-[0-9]*:../../wip/canto-daemon
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 
