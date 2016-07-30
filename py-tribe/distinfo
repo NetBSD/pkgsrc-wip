@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (tribe-1.3.tar.gz) = 01c676b3dde3e734c2c4353a076142b835d6d374
+RMD160 (tribe-1.3.tar.gz) = 8735ab9894115027fc5b131c87cc11c609040ee3
+SHA512 (tribe-1.3.tar.gz) = 2d09c36cb04556f3d965f4b4a9309363ffc9c1c9d1a990c9859ef19ac22e682e9d637f537eb7ec0bc0c32591dc3cb06707652b7789a5ca72264e3edf650cab77
+Size (tribe-1.3.tar.gz) = 1300373 bytes
+SHA1 (patch-setup.py) = e4cedacbc70db8df43d32c4ffb34d13175a23046
