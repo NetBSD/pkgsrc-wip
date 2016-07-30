@@ -21,13 +21,14 @@ do-configure:
 	${RUN} cd ${WRKSRC} && ./build/workspaces/update-workspaces.sh \
 		--bindir=${PREFIX}/bin \
 		--datadir=${PREFIX}/share/${PKGBASE} \
-		--libdir=${PREFIX}/lib/${PKGBASE}
+		--libdir=${PREFIX}/lib/${PKGBASE} \
+		--with-system-nvtt
 # --with-system-mozjs31
-# --with-system-nvtt
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
 
+.include "../../wip/nvidia-texture-tools/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
