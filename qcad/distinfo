@@ -4,6 +4,7 @@ SHA1 (qcad-3.15.4.1.zip) = c78cfec4e0326a1122a45bef219f0f1b1125574c
 RMD160 (qcad-3.15.4.1.zip) = 7deec07e81d17c3a80ef67314a53b650c7509ebb
 SHA512 (qcad-3.15.4.1.zip) = d3d9ae386920ec5102ab8c49c0a3967994dbae0b9b04b256d64ccd6fcf865ae3c26770204fec3c2feecddf91b4cfe12997fe9a975f5ccc78bb5c88c2012d0696
 Size (qcad-3.15.4.1.zip) = 37420623 bytes
+SHA1 (patch-qcad.1) = 74501775e11319b8385867c944f17c9dd67e3377
 SHA1 (patch-src_3rdparty_dxflib_src_dl__writer.h) = 21e99b53bcb964c9dc010a6013a5ed9f028738d2
 SHA1 (patch-src_3rdparty_quazip_quazip.pro) = 76f0f38b8e8ac8fc441685ae13a12f68385b5298
 SHA1 (patch-src_3rdparty_spatialindexnavel_spatialindexnavel.pro) = b641f00398fb4d7bc5c80c6597d23252b0667dec
