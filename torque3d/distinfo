@@ -1,0 +1,16 @@
+$NetBSD$
+
+SHA1 (Torque3D-3.9.tar.gz) = ee1dcf360b1c8085e947a2d4b01cc70d2cf2f7fc
+RMD160 (Torque3D-3.9.tar.gz) = c88161909a120baaeea9908de77f97cfc0519716
+SHA512 (Torque3D-3.9.tar.gz) = 55fe619829f44e1a41d898b2658302e4f97d29f254adf27d340d84f9a823f31d4433dfb8af3008d66d8c5b51d25ad08d6bdfd7551fe879eea14b7603c358ccab
+Size (Torque3D-3.9.tar.gz) = 152712952 bytes
+SHA1 (patch-Engine_lib_libogg_include_ogg_os__types.h) = bfcd6a7e7cc62a4c735de3bb0c12f179859b493a
+SHA1 (patch-Engine_lib_ljpeg_jconfig.h) = e39fb89c13ec7ff9f5fddc84f698eab4c1a27c70
+SHA1 (patch-Engine_lib_pcre_pcre__stringpiece.h) = fca0b3578e8aa3fedc30fe2d64be2372445dd2d2
+SHA1 (patch-Engine_lib_zlib_gzwrite.c) = 8aed4872f780e61095776799066a47c19235d8a4
+SHA1 (patch-Engine_source_platformX86UNIX_x86UNIXFileio.cpp) = bea7e967c0a22ca939e45cc0477c24aa0f039115
+SHA1 (patch-Engine_source_platformX86UNIX_x86UNIXNet.cpp) = 23fc76773ddb1867ee75f03237d78760de95b832
+SHA1 (patch-Engine_source_platformX86UNIX_x86UNIXProcessControl.cpp) = c2d41dc5fb77d95ad281ccb4d9eca5f9391892ad
+SHA1 (patch-Engine_source_platform_types.gcc.h) = d69c849302ded243cf9ca3ae55b4026f8fc55e1d
+SHA1 (patch-Templates_Empty_web_source_npplugin_windows_nptypes.h) = 383eb30df544aead2601ac524c3400619c5ac5b3
+SHA1 (patch-Templates_Full_web_source_npplugin_windows_nptypes.h) = 008079b5a1a40e5d12f10e7bda5ccd8c51147803
