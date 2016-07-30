@@ -1,0 +1,28 @@
+$NetBSD$
+
+SHA1 (Torque2D-3.3.tar.gz) = 6448172be4cd749e51a28ba4635ed4f2142efad4
+RMD160 (Torque2D-3.3.tar.gz) = 81e1a8014398d8bb612c8066353d1a3936094d6f
+SHA512 (Torque2D-3.3.tar.gz) = 727c95cbb0b3df018e46d75f3ebd1b5d4d1d27da669a0cc410b54152fedf932b7c64b2410d963b57f63c7c0845279f520b4431e7571ea1d3a9089e71e75c77bc
+Size (Torque2D-3.3.tar.gz) = 69661432 bytes
+SHA1 (patch-engine_lib_ljpeg_jconfig.h) = 5e478af0291396c95de17537188a140b1e72a0c4
+SHA1 (patch-engine_lib_openal_NetBSD_AL_al.h) = a0d30f869b2ee835b19a884c5f63d76c99f4d07b
+SHA1 (patch-engine_lib_openal_NetBSD_AL_alc.h) = 8c1316ac3aae9697d74c260476c1d2b531564ea5
+SHA1 (patch-engine_lib_openal_NetBSD_AL_alctypes.h) = 321292fb76bf34725af0ac30367f3a6ff0056d2c
+SHA1 (patch-engine_lib_openal_NetBSD_AL_altypes.h) = 6cb5353d13ff3fa2c31787cf7c447dfc0c366c32
+SHA1 (patch-engine_lib_openal_NetBSD_AL_alu.h) = b9e830757eddad72d21a50b4762546514b628612
+SHA1 (patch-engine_lib_openal_NetBSD_AL_alut.h) = 86d61f75f551a666a39cf944e534cd98ddaa8749
+SHA1 (patch-engine_lib_openal_NetBSD_AL_aluttypes.h) = bdbc4aa8b8bf608175fe9c9e6cc7590317717c4d
+SHA1 (patch-engine_lib_openal_NetBSD_AL_alutypes.h) = e7b5b817508ba508e0d9546b841a35545333d0fb
+SHA1 (patch-engine_lib_openal_NetBSD_openALFn.h) = c223ed92b18205eb6b74486e042eef94e43fda3d
+SHA1 (patch-engine_source_audio_audio.cc) = 7bf51f9a81684ecf28eadb806e73a842d9a443b2
+SHA1 (patch-engine_source_network_serverQuery.cc) = 0a81c44d00beb390bcb134989d29205771edb765
+SHA1 (patch-engine_source_platformEmscripten_EmscriptenFileio.cpp) = b5c18445a8fe3ff87090081cc05fa0e353c485b5
+SHA1 (patch-engine_source_platformX86UNIX_x86UNIXFileio.cc) = 12077e1962df52df4bfa9428872a0fe7aa9b7e34
+SHA1 (patch-engine_source_platformX86UNIX_x86UNIXNet.cc) = fba3b6493cc7d2692ea279de5586b4534fb7c20e
+SHA1 (patch-engine_source_platformX86UNIX_x86UNIXProcessControl.cc) = c37e215d9deaa81bf7530d48179a27b12b92d218
+SHA1 (patch-engine_source_platformX86UNIX_x86UNIXWindow.cc) = 23257a8ae9eb0a84d3c4794a5f2118e76c90b72c
+SHA1 (patch-engine_source_platform_platformAL.h) = d1377f0045f34ec34b10503b9eb8924a2be268d6
+SHA1 (patch-engine_source_platform_platformFileIO.h) = 49bab59cbba7f971e57483e0b85d16261dd66993
+SHA1 (patch-engine_source_platform_platformGL.h) = 8ec024f8ac01d0bd950ac34217fa12823c1cb7b6
+SHA1 (patch-engine_source_platform_types.gcc.h) = 5997b107024b5d24372ee4232b3809ce30a36607
+SHA1 (patch-engine_source_testing_googleTest_configure) = 1a87344c720bfd6cb4a1471e35083c26c57ad87c
