@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--enable-strip
 CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--enable-threadsafe
+CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nspr
 
 PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
@@ -57,4 +58,5 @@ post-install:
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
