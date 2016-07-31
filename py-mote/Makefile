@@ -4,7 +4,7 @@ DISTNAME=	Pymote-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/Pymote/}
-EXTRACT_SUFX=	.zip#md5=cdf3b1648f1eded58ef02a234fe0a194
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/darbula/pymote
