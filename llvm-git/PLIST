@@ -1,7 +1,11 @@
 @comment $NetBSD$
+bin/FileCheck
 bin/bugpoint
+bin/count
 bin/llc
 bin/lli
+bin/lli-child-target
+bin/llvm-PerfectShuffle
 bin/llvm-ar
 bin/llvm-as
 bin/llvm-bcanalyzer
@@ -32,11 +36,13 @@ bin/llvm-split
 bin/llvm-stress
 bin/llvm-symbolizer
 bin/llvm-tblgen
+bin/not
 bin/obj2yaml
 bin/opt
 bin/sancov
 bin/sanstats
 bin/verify-uselistorder
+bin/yaml-bench
 bin/yaml2obj
 include/llvm-c/Analysis.h
 include/llvm-c/BitReader.h
