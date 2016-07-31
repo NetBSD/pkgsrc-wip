@@ -1,6 +1,22 @@
 @comment $NetBSD$
-bin/lldb
+${PYSITELIB}/lldb/__init__.py
+${PYSITELIB}/lldb/_lldb.so
+${PYSITELIB}/lldb/embedded_interpreter.py
+${PYSITELIB}/lldb/formatters/Logger.py
+${PYSITELIB}/lldb/formatters/__init__.py
+${PYSITELIB}/lldb/formatters/attrib_fromdict.py
+${PYSITELIB}/lldb/formatters/cache.py
+${PYSITELIB}/lldb/formatters/cpp/__init__.py
+${PYSITELIB}/lldb/formatters/cpp/gnu_libstdcpp.py
+${PYSITELIB}/lldb/formatters/cpp/libcxx.py
+${PYSITELIB}/lldb/formatters/metrics.py
+${PYSITELIB}/lldb/lldb-argdumper
+${PYSITELIB}/lldb/runtime/__init__.py
+${PYSITELIB}/lldb/utils/__init__.py
+${PYSITELIB}/lldb/utils/symbolication.py
+${PYSITELIB}/six.py
 bin/${PKGNAME}
+bin/lldb
 bin/lldb-argdumper
 bin/lldb-mi
 bin/lldb-mi-${PKGVERSION}
@@ -36,6 +52,8 @@ include/lldb/API/SBLanguageRuntime.h
 include/lldb/API/SBLaunchInfo.h
 include/lldb/API/SBLineEntry.h
 include/lldb/API/SBListener.h
+include/lldb/API/SBMemoryRegionInfo.h
+include/lldb/API/SBMemoryRegionInfoList.h
 include/lldb/API/SBModule.h
 include/lldb/API/SBModuleSpec.h
 include/lldb/API/SBPlatform.h
@@ -156,6 +174,7 @@ include/lldb/Core/StructuredData.h
 include/lldb/Core/ThreadSafeDenseMap.h
 include/lldb/Core/ThreadSafeDenseSet.h
 include/lldb/Core/ThreadSafeSTLMap.h
+include/lldb/Core/ThreadSafeSTLVector.h
 include/lldb/Core/ThreadSafeValue.h
 include/lldb/Core/Timer.h
 include/lldb/Core/UUID.h
@@ -214,7 +233,6 @@ include/lldb/Expression/Materializer.h
 include/lldb/Expression/REPL.h
 include/lldb/Expression/UserExpression.h
 include/lldb/Expression/UtilityFunction.h
-include/lldb/Host/Condition.h
 include/lldb/Host/Config.h
 include/lldb/Host/ConnectionFileDescriptor.h
 include/lldb/Host/Debug.h
@@ -241,7 +259,6 @@ include/lldb/Host/LockFileBase.h
 include/lldb/Host/MainLoop.h
 include/lldb/Host/MainLoopBase.h
 include/lldb/Host/MonitoringProcessLauncher.h
-include/lldb/Host/Mutex.h
 include/lldb/Host/OptionParser.h
 include/lldb/Host/Pipe.h
 include/lldb/Host/PipeBase.h
@@ -261,7 +278,6 @@ include/lldb/Host/XML.h
 include/lldb/Host/android/Android.h
 include/lldb/Host/android/Config.h
 include/lldb/Host/android/HostInfoAndroid.h
-include/lldb/Host/android/ProcessLauncherAndroid.h
 include/lldb/Host/common/GetOptInc.h
 include/lldb/Host/common/NativeBreakpoint.h
 include/lldb/Host/common/NativeBreakpointList.h
@@ -281,6 +297,7 @@ include/lldb/Host/linux/Config.h
 include/lldb/Host/linux/HostInfoLinux.h
 include/lldb/Host/linux/HostThreadLinux.h
 include/lldb/Host/linux/Personality.h
+include/lldb/Host/linux/ProcessLauncherLinux.h
 include/lldb/Host/linux/Ptrace.h
 include/lldb/Host/linux/Uio.h
 include/lldb/Host/macosx/Config.h
@@ -512,6 +529,7 @@ lib/liblldbInterpreter.a
 lib/liblldbPluginABIMacOSX_arm.a
 lib/liblldbPluginABIMacOSX_arm64.a
 lib/liblldbPluginABIMacOSX_i386.a
+lib/liblldbPluginABISysV_${MACHINE_ARCH}.a
 lib/liblldbPluginABISysV_arm.a
 lib/liblldbPluginABISysV_arm64.a
 lib/liblldbPluginABISysV_hexagon.a
@@ -521,7 +539,6 @@ lib/liblldbPluginABISysV_mips64.a
 lib/liblldbPluginABISysV_ppc.a
 lib/liblldbPluginABISysV_ppc64.a
 lib/liblldbPluginABISysV_s390x.a
-lib/liblldbPluginABISysV_${MACHINE_ARCH}.a
 lib/liblldbPluginAppleObjCRuntime.a
 lib/liblldbPluginCPlusPlusLanguage.a
 lib/liblldbPluginCXXItaniumABI.a
@@ -582,19 +599,3 @@ lib/liblldbPluginUnwindAssemblyX86.a
 lib/liblldbSymbol.a
 lib/liblldbTarget.a
 lib/liblldbUtility.a
-${PYSITELIB}/lldb/__init__.py
-${PYSITELIB}/lldb/_lldb.so
-${PYSITELIB}/lldb/embedded_interpreter.py
-${PYSITELIB}/lldb/formatters/Logger.py
-${PYSITELIB}/lldb/formatters/__init__.py
-${PYSITELIB}/lldb/formatters/attrib_fromdict.py
-${PYSITELIB}/lldb/formatters/cache.py
-${PYSITELIB}/lldb/formatters/cpp/__init__.py
-${PYSITELIB}/lldb/formatters/cpp/gnu_libstdcpp.py
-${PYSITELIB}/lldb/formatters/cpp/libcxx.py
-${PYSITELIB}/lldb/formatters/metrics.py
-${PYSITELIB}/lldb/lldb-argdumper
-${PYSITELIB}/lldb/runtime/__init__.py
-${PYSITELIB}/lldb/utils/__init__.py
-${PYSITELIB}/lldb/utils/symbolication.py
-${PYSITELIB}/six.py
