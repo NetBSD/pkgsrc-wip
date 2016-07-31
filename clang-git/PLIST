@@ -34,6 +34,7 @@ include/clang/AST/AttrImpl.inc
 include/clang/AST/AttrIterator.h
 include/clang/AST/AttrVisitor.inc
 include/clang/AST/Attrs.inc
+include/clang/AST/Availability.h
 include/clang/AST/BaseSubobject.h
 include/clang/AST/BuiltinTypes.def
 include/clang/AST/CXXInheritance.h
@@ -140,6 +141,7 @@ include/clang/Analysis/AnalysisDiagnostic.h
 include/clang/Analysis/CFG.h
 include/clang/Analysis/CFGStmtMap.h
 include/clang/Analysis/CallGraph.h
+include/clang/Analysis/CloneDetection.h
 include/clang/Analysis/CodeInjector.h
 include/clang/Analysis/DomainSpecific/CocoaConventions.h
 include/clang/Analysis/DomainSpecific/ObjCNoReturn.h
@@ -171,6 +173,7 @@ include/clang/Basic/BuiltinsXCore.def
 include/clang/Basic/CapturedStmt.h
 include/clang/Basic/CharInfo.h
 include/clang/Basic/CommentOptions.h
+include/clang/Basic/Cuda.h
 include/clang/Basic/DebugInfoOptions.h
 include/clang/Basic/Diagnostic.h
 include/clang/Basic/DiagnosticASTKinds.inc
@@ -353,6 +356,7 @@ include/clang/Sema/AttrSpellingListIndex.inc
 include/clang/Sema/AttrTemplateInstantiate.inc
 include/clang/Sema/AttributeList.h
 include/clang/Sema/CXXFieldCollector.h
+include/clang/Sema/CleanupInfo.h
 include/clang/Sema/CodeCompleteConsumer.h
 include/clang/Sema/CodeCompleteOptions.h
 include/clang/Sema/DeclSpec.h
@@ -396,6 +400,7 @@ include/clang/Serialization/SerializationDiagnostic.h
 include/clang/StaticAnalyzer/Checkers/Checkers.inc
 include/clang/StaticAnalyzer/Checkers/ClangCheckers.h
 include/clang/StaticAnalyzer/Checkers/LocalCheckers.h
+include/clang/StaticAnalyzer/Checkers/MPIFunctionClassifier.h
 include/clang/StaticAnalyzer/Checkers/ObjCRetainCount.h
 include/clang/StaticAnalyzer/Checkers/SValExplainer.h
 include/clang/StaticAnalyzer/Core/Analyses.def
@@ -464,7 +469,6 @@ include/clang/Tooling/Refactoring.h
 include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
-lib/clang/${PKGVERSION}/include/Intrin.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_intrinsics.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_math_forward_declares.h
@@ -495,6 +499,7 @@ lib/clang/${PKGVERSION}/include/avx512vlintrin.h
 lib/clang/${PKGVERSION}/include/avxintrin.h
 lib/clang/${PKGVERSION}/include/bmi2intrin.h
 lib/clang/${PKGVERSION}/include/bmiintrin.h
+lib/clang/${PKGVERSION}/include/clflushoptintrin.h
 lib/clang/${PKGVERSION}/include/cpuid.h
 lib/clang/${PKGVERSION}/include/cuda_builtin_vars.h
 lib/clang/${PKGVERSION}/include/emmintrin.h
@@ -507,6 +512,7 @@ lib/clang/${PKGVERSION}/include/htmintrin.h
 lib/clang/${PKGVERSION}/include/htmxlintrin.h
 lib/clang/${PKGVERSION}/include/ia32intrin.h
 lib/clang/${PKGVERSION}/include/immintrin.h
+lib/clang/${PKGVERSION}/include/intrin.h
 lib/clang/${PKGVERSION}/include/inttypes.h
 lib/clang/${PKGVERSION}/include/iso646.h
 lib/clang/${PKGVERSION}/include/limits.h
@@ -517,6 +523,7 @@ lib/clang/${PKGVERSION}/include/mmintrin.h
 lib/clang/${PKGVERSION}/include/module.modulemap
 lib/clang/${PKGVERSION}/include/mwaitxintrin.h
 lib/clang/${PKGVERSION}/include/nmmintrin.h
+lib/clang/${PKGVERSION}/include/opencl-c.h
 lib/clang/${PKGVERSION}/include/pkuintrin.h
 lib/clang/${PKGVERSION}/include/pmmintrin.h
 lib/clang/${PKGVERSION}/include/popcntintrin.h
