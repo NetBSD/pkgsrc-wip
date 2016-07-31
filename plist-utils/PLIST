@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/plist-sort
+man/man1/plist-sort.1
+@pkgdir man/cat1
