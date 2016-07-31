@@ -4,3 +4,5 @@ make show-var VARNAME=KEY
 And get the KEY value
 
 2. Port to !NetBSD platforms with libnbcompat
+
+3. Use popular precomputed ${KEYS} used in PLISTs like ${PKGBASE}
