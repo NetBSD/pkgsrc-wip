@@ -4,16 +4,15 @@ $NetBSD$
 * Adapt /var-paths for pkgsrc defaults.
 * Install default config files in example directory; pkgsrc config
   file framework will install them in the right place.
-* Avoid hardcoded SDK paths on Darwin.
 
---- configure.ac.orig	2016-01-22 10:15:37.000000000 +0000
+--- configure.ac.orig	2016-07-31 15:25:05.000000000 +0000
 +++ configure.ac
 @@ -21,7 +21,7 @@
  
  AC_PREREQ(2.63)
  
 -AC_INIT([pulseaudio],[m4_esyscmd(./git-version-gen .tarball-version)],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
-+AC_INIT([pulseaudio],[6.0],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
++AC_INIT([pulseaudio],[9.1],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
  AC_CONFIG_SRCDIR([src/daemon/main.c])
  AC_CONFIG_MACRO_DIR([m4])
  AC_CONFIG_HEADERS([config.h])
@@ -25,25 +24,7 @@ $NetBSD$
          os_is_linux=1
      ;;
      freebsd*)
-@@ -534,15 +533,9 @@ AC_SEARCH_LIBS([backtrace], [execinfo ub
- if test "x$os_is_darwin" = "x1" ; then
-     AC_MSG_CHECKING([looking for Apple CoreService Framework])
-     # How do I check a framework "library" - AC_CHECK_LIB prob. won't work??, just assign LIBS & hope
--    AC_CHECK_HEADER([/Developer/Headers/FlatCarbon/CoreServices.h],
-+    AC_CHECK_HEADER([CoreServices/CoreServices.h],
-         [LIBS="$LIBS -framework CoreServices"],
--        [AC_CHECK_HEADERS([/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h],
--            [LIBS="$LIBS -framework CoreServices"],
--            [AC_MSG_ERROR([CoreServices.h header file not found])]
--        )]
--    )
--
--    AC_MSG_RESULT([ok])
-+        [AC_MSG_ERROR([CoreServices.h header file not found])])
-     AC_DEFINE([HAVE_CLOCK_GETTIME], 1, [Using clock_gettime() replacement])
-     HAVE_BONJOUR=1
- fi
-@@ -1023,7 +1016,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
+@@ -1037,7 +1036,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
  
  PA_MACHINE_ID="${sysconfdir}/machine-id"
  AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
@@ -52,7 +33,7 @@ $NetBSD$
  AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
  	      [Fallback machine-id file])
  
-@@ -1346,9 +1339,9 @@ fi
+@@ -1360,9 +1359,9 @@ fi
  
  PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
  AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
@@ -64,7 +45,7 @@ $NetBSD$
  AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
  
  PA_BINARY=${bindir}/pulseaudio${EXEEXT}
-@@ -1360,8 +1353,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+@@ -1374,8 +1373,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
  AC_SUBST(PA_SOEXT, [.so])
  AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
  
@@ -72,17 +53,22 @@ $NetBSD$
 -AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdir, [Location of configuration files])
 +AC_SUBST(pulseconfdirreal, ["${sysconfdir}/pulse"])
 +AC_SUBST(pulseconfdir, ["${EGDIR}"])
-+AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdirreal, [Location of configuration files])
++AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdirreal, [Location of configuration files]
  
  #### Mac OSX specific stuff #####
  
-@@ -1377,17 +1371,6 @@ AC_ARG_WITH(mac-sysroot,
+@@ -1391,22 +1391,6 @@ AC_ARG_WITH(mac-sysroot,
      AS_HELP_STRING([--with-mac-sysroot=<path>], [SDK basedir to use as the logical root directory for headers and libraries.]),
-     mac_sysroot=$withval, mac_sysroot="/Developer/SDKs/MacOSX10.5.sdk")
+     mac_sysroot=$withval)
  
 -if test "x$os_is_darwin" = "x1" ; then
--    LDFLAGS="$LDFLAGS -isysroot $mac_sysroot -mmacosx-version-min=$mac_version_min"
--    CFLAGS="$CFLAGS -isysroot $mac_sysroot -mmacosx-version-min=$mac_version_min"
+-    LDFLAGS="$LDFLAGS -mmacosx-version-min=$mac_version_min"
+-    CFLAGS="$CFLAGS -mmacosx-version-min=$mac_version_min"
+-
+-    if test "x$mac_sysroot" != "x" ; then
+-        LDFLAGS="$LDFLAGS -isysroot $mac_sysroot"
+-        CFLAGS="$CFLAGS -isysroot $mac_sysroot"
+-    fi
 -
 -    if test "x$enable_mac_universal" = "xyes" ; then
 -        mac_arches="-arch i386 -arch x86_64"

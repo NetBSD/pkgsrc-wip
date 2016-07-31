@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.100 2015/11/02 13:40:41 ryoon Exp $
 
-DISTNAME=	pulseaudio-7.1
+DISTNAME=	pulseaudio-9.0
 CATEGORIES=	audio
 GIT_REPOSITORIES=	pulse
 GIT_REPO.pulse=		git://github.com/pulseaudio/pulseaudio.git
