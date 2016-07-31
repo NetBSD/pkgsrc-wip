@@ -3,8 +3,4 @@ Spawn a command like:
 make show-var VARNAME=KEY
 And get the KEY value
 
-2. Add plist-add
-
-3. Add plist-del
-
-4. Port to !NetBSD platforms with libnbcompat
+2. Port to !NetBSD platforms with libnbcompat

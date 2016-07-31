@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS=		nroff
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 PKGSRC_LOCKTYPE=	none	# avoid "bootstrapping problem"
 
 do-extract:
