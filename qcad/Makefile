@@ -49,12 +49,12 @@ QCADLIBS=	libqcadcore.la \
 		libqcadspatialindex.la \
 		libqcadstemmer.la \
 		libqcadzip.la \
-		libdxflib.a \
-		libopennurbs.a \
-		libquazip.a \
-		libspatialindexnavel.a \
-		libstemmer.a \
-		libzlib.a
+		libdxflib.la \
+		libopennurbs.la \
+		libquazip.la \
+		libspatialindexnavel.la \
+		libstemmer.la \
+		libzlib.la
 
 QCADPLUGINS=	plugins/libqcaddxf.la \
 		plugins/libqcadexample.la \

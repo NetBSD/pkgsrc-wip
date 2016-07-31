@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/qcad
-lib/libdxflib.a
-lib/libopennurbs.a
+lib/libdxflib.la
+lib/libopennurbs.la
 lib/libqcadcore.la
 lib/libqcadecmaapi.la
 lib/libqcadentity.la
@@ -12,10 +12,10 @@ lib/libqcadsnap.la
 lib/libqcadspatialindex.la
 lib/libqcadstemmer.la
 lib/libqcadzip.la
-lib/libquazip.a
-lib/libspatialindexnavel.a
-lib/libstemmer.a
-lib/libzlib.a
+lib/libquazip.la
+lib/libspatialindexnavel.la
+lib/libstemmer.la
+lib/libzlib.la
 lib/qcad/fonts/CourierCad.cxf
 lib/qcad/fonts/Cursive.cxf
 lib/qcad/fonts/Cyrillic_II.cxf
