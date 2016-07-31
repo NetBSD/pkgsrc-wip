@@ -25,7 +25,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
 SUBST_FILES.paths+=	src/core/RS.cpp src/core/RSettings.cpp
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g' -e 's,@PKGBASE@,${PKGBASE},g'
 
 # Note: Using pax to install the data files duplicates the lax permissions
 # from the zip archive. We use 'umask 133' to prevent this, but we must
@@ -35,8 +35,8 @@ SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 #
 # XXX Or use the .tar.gz archive available from git but it won't extract properly for me
 #
-#INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/qcad \
-#			lib/qcad/plugins/designer lib/qcad/plugins/script
+#INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/${PKGBASE} \
+#			lib/${PKGBASE}/plugins/designer lib/${PKGBASE}/plugins/script
 AUTO_MKDIRS=	yes
 
 QCADLIBS=	libqcadcore.la \
@@ -87,11 +87,11 @@ do-install:
 .endfor
 .for x in ${QCADPLUGINS}
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-	    ${WRKSRC}/${x} ${DESTDIR}${PREFIX}/lib/qcad/${x:ts/:H}
+	    ${WRKSRC}/${x} ${DESTDIR}${PREFIX}/lib/${PKGBASE}/${x:ts/:H}
 .endfor
 	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts libraries linetypes \
-	    patterns scripts themes ts ${DESTDIR}${PREFIX}/lib/qcad
-	cd ${WRKSRC} && umask 133 && ${PAX} -rw examples ${DESTDIR}${PREFIX}/share/qcad
+	    patterns scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	cd ${WRKSRC} && umask 133 && ${PAX} -rw examples ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"

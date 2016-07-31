@@ -2,8 +2,8 @@ $NetBSD$
 
 fix hardcoded paths
 
---- src/core/RSettings.cpp.orig	2016-06-30 12:42:57.000000000 +0000
-+++ src/core/RSettings.cpp
+--- RSettings.cpp.orig	2016-07-01 07:13:14.000000000 +0000
++++ RSettings.cpp
 @@ -133,27 +133,7 @@ bool RSettings::isDeployed() {
  }
 
@@ -29,6 +29,6 @@ fix hardcoded paths
 -        ret.cdUp();
 -    }
 -
-+    QDir ret("@PREFIX@/lib/qcad");
++    QDir ret("@PREFIX@/lib/@PKGBASE@");
      return ret.path();
  }

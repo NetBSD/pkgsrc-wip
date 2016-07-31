@@ -1,10 +1,28 @@
 
 The application starts and seems to find the libraries/plugins ok now
 
-  -- some button images are missing, eg the back button
 
-  -- parts library not working
+  -- some button images are missing, eg the back button (press the Line tool, the top button should be a < arrow)
 
-  -- eventually crashed with an undefined symbol?
+     the back button is scripts/Widgets/CadToolBar/Back.svg and it should be loaded by CadToolBarPanel.js
+
+  -- themes -> yes
+  -- languages -> yes
+  -- linetypes -> yes
+  -- patterns -> yes
+  -- fonts -> no?
+  -- library -> no
+     complains that database not loading
+     should library be in /usr/pkg/share/qcad/library?
+
+
+NB when changing preferences I get a warning
+  Warning:  AppPreferences.js: Exception:  Error: include: cannot read file 'scripts/Pro/Layer/AddLayerPro/AddLayerPro.js'
+
+I guess this is because we are not Pro version and do not have these scripts -- quit and restart to change language etc
+
+
+
+loading a .dxf file crashes with an error
 
 /usr/pkg/lib/qcad/plugins/libqcaddxf.so: Undefined PLT symbol "_ZN6DL_DxfC1Ev" (symnum = 1293)
