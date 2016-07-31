@@ -24,7 +24,7 @@ PKG_CC=			clang
 PKG_CXX=		clang++
 
 do-build:
-		${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
+	${RUN} cd ${WRKSRC} && PYTHON=${PYTHONBIN} ./build.sh
 
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../devel/lldb/buildlink3.mk"
