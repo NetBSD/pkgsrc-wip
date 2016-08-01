@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.5 2016/03/01 13:25:01 wiz Exp $
+
+SHA1 (swift-4.0beta2.tar.gz) = 54aa1505604094e99312c6cfd7d451e5ab01dfd9
+RMD160 (swift-4.0beta2.tar.gz) = 1adc3f6b38fa8e6e831629ba2c7c921f64af283d
+SHA512 (swift-4.0beta2.tar.gz) = b841ecca4177b65c872aa4a93ade97888db3a4f3424ee18dffa1c44587d52b05283e72b3b392a426a1c8988b4da0f9660678bc587f7e16830434947aec5c7d60
+Size (swift-4.0beta2.tar.gz) = 17250151 bytes
+SHA1 (patch-BuildTools_SCons_SConscript.boot) = c773dcace8d21f8f67d19adbd29256936f327c44
+SHA1 (patch-BuildTools_SCons_SConstruct) = 620084993487b49ca617be7439c2c4fd885962f1
