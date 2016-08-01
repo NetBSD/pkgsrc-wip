@@ -2,8 +2,8 @@ $NetBSD$
 
 fix hardcoded paths
 
---- RS.cpp.orig	2016-07-01 07:13:14.000000000 +0000
-+++ RS.cpp
+--- src/core/RS.cpp.orig	2016-07-01 07:13:14.000000000 +0000
++++ src/core/RS.cpp
 @@ -79,48 +79,9 @@ bool RS::compare(const QPair<QVariant, R
  QStringList RS::getDirectoryList(const QString& subDirectory) {
      QStringList dirList;
@@ -50,9 +50,9 @@ fix hardcoded paths
 -    // TODO: add a path to users home to be used to extend pattern, etc.
 -    //QString appDirName = QSettings.applicationName();
 -    //dirList.append(RSettings::getHomeLocation() + "/." + appDirName + "/" + subDirectory);
-+    dirList.append("@PREFIX@/lib/@PKGBASE@/" + subDirectory);
-+    dirList.append("@PREFIX@/share/@PKGBASE@/" + subDirectory);
-+    dirList.append(QDir::homePath() + "/.@PKGBASE@/" + subDirectory);
++    dirList.append("@PREFIX@/lib/qcad/" + subDirectory);
++    dirList.append("@PREFIX@/share/qcad/" + subDirectory);
++    dirList.append(QDir::homePath() + "/.qcad/" + subDirectory);
 
      QStringList ret;
      for (int i=0; i<dirList.size(); i++) {

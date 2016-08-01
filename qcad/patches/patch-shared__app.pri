@@ -1,5 +1,8 @@
 $NetBSD$
 
+fix build for pkgsrc, by allowing qmake to link binaries in situ
+and create an install target
+
 --- shared_app.pri.orig	2016-07-01 07:13:14.000000000 +0000
 +++ shared_app.pri
 @@ -1,24 +1,24 @@
@@ -19,26 +22,26 @@ $NetBSD$
 -    -lstemmer \
 -    -l$${RLIBNAME}zip \
 -    -lquazip
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}ecmaapi$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}gui$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}entity$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}operations$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}spatialindex$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}spatialindexnavel$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}grid$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}snap$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}core$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}stemmer$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}stemmer$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}$${RLIBNAME}zip$${RLIBPOSTDLL} \
-+    $${DESTDIR}/$${RLIBPRE}quazip$${RLIBPOSTDLL}
++    -L$$PWD/src/scripting/ecmaapi -l$${RLIBNAME}ecmaapi \
++    -L$$PWD/src/gui -l$${RLIBNAME}gui \
++    -L$$PWD/src/entity -l$${RLIBNAME}entity \
++    -L$$PWD/src/operations -l$${RLIBNAME}operations \
++    -L$$PWD/src/spatialindex -l$${RLIBNAME}spatialindex \
++    -L$$PWD/src/3rdparty/spatialindexnavel -lspatialindexnavel \
++    -L$$PWD/src/grid -l$${RLIBNAME}grid \
++    -L$$PWD/src/snap -l$${RLIBNAME}snap \
++    -L$$PWD/src/core -l$${RLIBNAME}core \
++    -L$$PWD/src/stemmer -l$${RLIBNAME}stemmer \
++    -L$$PWD/src/3rdparty/stemmer -lstemmer \
++    -L$$PWD/src/zip -l$${RLIBNAME}zip \
++    -L$$PWD/src/3rdparty/quazip -lquazip
 
  !r_no_opennurbs {
      LIBS += \
 -        -lopennurbs \
 -        -lzlib
-+        $${DESTDIR}/$${RLIBPRE}opennurbs$${RLIBPOSTDLL} \
-+        $${DESTDIR}/$${RLIBPRE}zlib$${RLIBPOSTDLL}
++        -L$$PWD/src/3rdparty/opennurbs/opennurbs -lopennurbs \
++        -L$$PWD/src/3rdparty/opennurbs/zlib -lzlib
  }
 
  win32 {

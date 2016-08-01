@@ -1,8 +1,19 @@
 $NetBSD$
 
+fix build for pkgsrc, by allowing qmake to link binaries in situ
+and create an install target
+
 --- src/scripting/ecmaapi/ecmaapi.pro.orig	2016-07-01 07:13:14.000000000 +0000
 +++ src/scripting/ecmaapi/ecmaapi.pro
-@@ -19,13 +19,13 @@ SOURCES += \
+@@ -2,6 +2,7 @@ include( ../../../shared.pri )
+ TEMPLATE = lib
+ CONFIG += plugin
+ TARGET = $${RLIBNAME}ecmaapi
++INSTALLS += target
+ CONFIG -= warn_on
+ CONFIG += warn_off
+ CONFIG += precompile_header
+@@ -19,13 +20,13 @@ SOURCES += \
  include(adapters/adapters.pri)
  include(generated/generated.pri)
  LIBS += \
@@ -16,13 +27,13 @@ $NetBSD$
 -    -l$${RLIBNAME}stemmer \
 -    -l$${RLIBNAME}zip \
 -    -lquazip
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}core$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}entity$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}grid$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}gui$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}operations$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}snap$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}spatialindex$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}stemmer$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}$${RLIBNAME}zip$${RLIBPOSTDLL} \
-+    ../../../$${ROUTDIR}/$${RLIBPRE}quazip$${RLIBPOSTDLL}
++    -L../../core -l$${RLIBNAME}core \
++    -L../../entity -l$${RLIBNAME}entity \
++    -L../../grid -l$${RLIBNAME}grid \
++    -L../../gui -l$${RLIBNAME}gui \
++    -L../../operations -l$${RLIBNAME}operations \
++    -L../../snap -l$${RLIBNAME}snap \
++    -L../../spatialindex -l$${RLIBNAME}spatialindex \
++    -L../../stemmer -l$${RLIBNAME}stemmer \
++    -L../../zip -l$${RLIBNAME}zip \
++    -L../../3rdparty/quazip -lquazip

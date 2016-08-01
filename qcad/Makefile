@@ -17,15 +17,17 @@ DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		qt4-tiff-[0-9]*:../../x11/qt4-tiff
 DEPENDS+=		qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 
-USE_TOOLS+=		pax
+MAKE_JOBS_SAFE=		no
+
+USE_TOOLS+=		pax make
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
-SUBST_FILES.paths+=	src/core/RS.cpp src/core/RSettings.cpp
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g' -e 's,@PKGBASE@,${PKGBASE},g'
+SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 
 # Note: Using pax to install the data files duplicates the lax permissions
 # from the zip archive. We use 'umask 133' to prevent this, but we must
@@ -39,56 +41,27 @@ SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g' -e 's,@PKGBASE@,${PKGBASE},g'
 #			lib/${PKGBASE}/plugins/designer lib/${PKGBASE}/plugins/script
 AUTO_MKDIRS=	yes
 
-QCADLIBS=	libqcadcore.la \
-		libqcadecmaapi.la \
-		libqcadentity.la \
-		libqcadgrid.la \
-		libqcadgui.la \
-		libqcadoperations.la \
-		libqcadsnap.la \
-		libqcadspatialindex.la \
-		libqcadstemmer.la \
-		libqcadzip.la \
-		libdxflib.la \
-		libopennurbs.la \
-		libquazip.la \
-		libspatialindexnavel.la \
-		libstemmer.la \
-		libzlib.la
-
-QCADPLUGINS=	plugins/libqcaddxf.la \
-		plugins/libqcadexample.la \
-		plugins/libtransactionlistener.la \
-		plugins/designer/libqcadcustomwidgets.la \
-		plugins/script/libqcadqtscript_core.la \
-		plugins/script/libqcadqtscript_gui.la \
-		plugins/script/libqcadqtscript_network.la \
-		plugins/script/libqcadqtscript_opengl.la \
-		plugins/script/libqcadqtscript_sql.la \
-		plugins/script/libqcadqtscript_svg.la \
-		plugins/script/libqcadqtscript_uitools.la \
-		plugins/script/libqcadqtscript_webkit.la \
-		plugins/script/libqcadqtscript_xml.la \
-		plugins/script/libqcadqtscript_xmlpatterns.la
-
+#
+# The QCad build system normally links direct to a release dir but this
+# causes a lot of problems with libtool dependencies. We patch it so that
+# the libs are linked in the source files and add an install target to
+# allow pkgsrc to use DESTDIR
+# The Qt script bindings are built in Qt version specific subdirectory
+# which we can't patch directly, so we create a fake qtscript.pro file
+# and use it to overwrite Makefiles. Makefile.qtscript is ignored
+#
 do-configure:
-	cd ${WRKSRC} && ${QTDIR}/bin/qmake
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake -r -after DESTDIR=
+	cd ${WRKSRC}/src/3rdparty && ${QTDIR}/bin/qmake -r -after DESTDIR= \
+	    INSTALLS+=target target.path=${PREFIX}/lib/${PKGBASE}/plugins/script \
+	    qtscript.pro -o Makefile.qtscript
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-	    ${WRKSRC}/release/qcad-bin ${DESTDIR}${PREFIX}/bin/qcad
+	cd ${WRKSRC} && make INSTALL_ROOT=${DESTDIR} install
 	${INSTALL_DATA} ${WRKSRC}/qcad.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.for x in ${QCADLIBS}
-	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-	    ${WRKSRC}/release/${x} ${DESTDIR}${PREFIX}/lib
-.endfor
-.for x in ${QCADPLUGINS}
-	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-	    ${WRKSRC}/${x} ${DESTDIR}${PREFIX}/lib/${PKGBASE}/${x:ts/:H}
-.endfor
 	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts libraries linetypes \
 	    patterns scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	cd ${WRKSRC} && umask 133 && ${PAX} -rw examples ${DESTDIR}${PREFIX}/share/${PKGBASE}

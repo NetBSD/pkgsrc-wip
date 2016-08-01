@@ -1,14 +1,19 @@
 $NetBSD$
 
+fix build for pkgsrc, by allowing qmake to link binaries in situ
+and create an install target
+
 --- src/core/core.pro.orig	2016-07-01 07:13:14.000000000 +0000
 +++ src/core/core.pro
-@@ -282,7 +282,8 @@ RESOURCES = resources/core.qrc
+@@ -281,8 +281,10 @@ TARGET = $${NAME}
+ RESOURCES = resources/core.qrc
  OTHER_FILES += core.dox math/math.dox
  DEFINES += QCADCORE_LIBRARY
++INSTALLS += target
 
 -LIBS += -lopennurbs -lzlib
-+LIBS += ../../$${ROUTDIR}/$${RLIBPRE}opennurbs$${RLIBPOSTDLL} \
-+	../../$${ROUTDIR}/$${RLIBPRE}zlib$${RLIBPOSTDLL}
++LIBS += -L../3rdparty/opennurbs/opennurbs -lopennurbs \
++	-L../3rdparty/opennurbs/zlib -lzlib
 
  win32 {
      LIBS += -lRpcrt4 -lAdvapi32

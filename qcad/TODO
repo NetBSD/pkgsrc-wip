@@ -1,28 +1,32 @@
 
 The application starts and seems to find the libraries/plugins ok now
 
-
   -- some button images are missing, eg the back button (press the Line tool, the top button should be a < arrow)
 
-     the back button is scripts/Widgets/CadToolBar/Back.svg and it should be loaded by CadToolBarPanel.js
+     the back button should be loaded by CadToolBarPanel.js using
+	 autoPath("scripts/Widgets/CadToolBar/Back.svg")
+
+     ktrace seems to show that the image is being loaded, its just not being used..
 
   -- themes -> yes
   -- languages -> yes
   -- linetypes -> yes
   -- patterns -> yes
-  -- fonts -> no?
+  -- fonts -> ?
   -- library -> no
      complains that database not loading
      should library be in /usr/pkg/share/qcad/library?
+
+
+I think that icon images not loading and database not loading are the same issue -- that QCad is not loading the Qt4 plugins
+the ktrace shows that it looks for /usr/pkg/lib/qcad/plugins/sqldrivers (which was not found) at least.. and Qt has plugins
+to handle icons and suchlike.
+
+Need to look into that -- the make system does say to copy plugins over from qt4/plugins but I don't think that should be necessary
+
 
 
 NB when changing preferences I get a warning
   Warning:  AppPreferences.js: Exception:  Error: include: cannot read file 'scripts/Pro/Layer/AddLayerPro/AddLayerPro.js'
 
 I guess this is because we are not Pro version and do not have these scripts -- quit and restart to change language etc
-
-
-
-loading a .dxf file crashes with an error
-
-/usr/pkg/lib/qcad/plugins/libqcaddxf.so: Undefined PLT symbol "_ZN6DL_DxfC1Ev" (symnum = 1293)

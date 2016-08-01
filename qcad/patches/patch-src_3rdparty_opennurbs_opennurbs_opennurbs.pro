@@ -1,8 +1,11 @@
 $NetBSD$
 
+fix build for pkgsrc, by allowing qmake to link binaries in situ
+and create an install target
+
 --- src/3rdparty/opennurbs/opennurbs/opennurbs.pro.orig	2016-07-01 07:13:14.000000000 +0000
 +++ src/3rdparty/opennurbs/opennurbs/opennurbs.pro
-@@ -218,14 +218,8 @@ HEADERS += \
+@@ -218,14 +218,9 @@ HEADERS += \
 
  TARGET = opennurbs
  TEMPLATE = lib
@@ -15,7 +18,8 @@ $NetBSD$
 -}
 -LIBS += -lzlib
 +CONFIG += plugin
-+LIBS += ../../../../$${ROUTDIR}/$${RLIBPRE}zlib$${RLIBPOSTDLL}
++LIBS += -L../zlib -lzlib
++INSTALLS += target
  win32 {
      #DEFINES += ON_DLL_EXPORTS ON_COMPILING_OPENNURBS NDEBUG
      DEFINES += ON_COMPILING_OPENNURBS NDEBUG
