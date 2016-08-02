@@ -1,32 +1,25 @@
+The application starts and seems to be fully working, except that because it
+expects to be in an application bundle, it expects to find the Qt plugins in
+its own plugins folder which the build system would copy there.
 
-The application starts and seems to find the libraries/plugins ok now
+The symptom of that is that library doesn't work as the Qt SQL plugin is not
+there, and some button images are missing because the Qt imageformat plugins
+are not loaded.  Perhaps other issues too, I don't know.
 
-  -- some button images are missing, eg the back button (press the Line tool, the top button should be a < arrow)
+A short term solution would be to copy the files from /usr/pkg/qt4/plugins/*
+to /usr/pkg/lib/qcad/plugins/*. The files needed (as of Qt 4.8.7) are
 
-     the back button should be loaded by CadToolBarPanel.js using
-	 autoPath("scripts/Widgets/CadToolBar/Back.svg")
+	imageformats/libqgif.so
+	imageformats/libqico.so
+	imageformats/libqjpeg.so
+	imageformats/libqsvg.so
+	imageformats/libqtiff.so
+	imageformats/libqtga.so
+	sqldrivers/libqsqlite.so
+	codecs/libqcncodecs.so
+	codecs/libqjpcodecs.so
+	codecs/libqkrcodecs.so
+	codecs/libqtwcodecs.so
 
-     ktrace seems to show that the image is being loaded, its just not being used..
-
-  -- themes -> yes
-  -- languages -> yes
-  -- linetypes -> yes
-  -- patterns -> yes
-  -- fonts -> ?
-  -- library -> no
-     complains that database not loading
-     should library be in /usr/pkg/share/qcad/library?
-
-
-I think that icon images not loading and database not loading are the same issue -- that QCad is not loading the Qt4 plugins
-the ktrace shows that it looks for /usr/pkg/lib/qcad/plugins/sqldrivers (which was not found) at least.. and Qt has plugins
-to handle icons and suchlike.
-
-Need to look into that -- the make system does say to copy plugins over from qt4/plugins but I don't think that should be necessary
-
-
-
-NB when changing preferences I get a warning
-  Warning:  AppPreferences.js: Exception:  Error: include: cannot read file 'scripts/Pro/Layer/AddLayerPro/AddLayerPro.js'
-
-I guess this is because we are not Pro version and do not have these scripts -- quit and restart to change language etc
+The proper fix would to make QCad load the plugins from the Qt directory but
+I'm not sure how to go about that and have no time at present.
