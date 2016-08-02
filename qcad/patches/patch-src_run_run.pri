@@ -5,18 +5,17 @@ and create an install target
 
 --- src/run/run.pri.orig	2016-07-01 07:13:14.000000000 +0000
 +++ src/run/run.pri
-@@ -26,22 +26,12 @@ win32 {
- SOURCES += $$PWD/main.cpp
+@@ -27,21 +27,12 @@ SOURCES += $$PWD/main.cpp
  TEMPLATE = app
  OTHER_FILES += $$PWD/run.dox
--
+ 
 -win32 {
 -    TARGET = $${RLIBNAME}
 -}
 -
 -macx {
 -    TARGET = QCAD
--}
+-} 
 -else {
 -    unix {
 -        TARGET = $${RLIBNAME}-bin
@@ -25,7 +24,7 @@ and create an install target
 +TARGET = $${RLIBNAME}
 +INSTALLS += target
 +target.path = $${PREFIX}/bin
-
+ 
  # copy Qt plugins to QCAD plugin folder:
 -!build_pass {
 +DISABLE_THIS {
