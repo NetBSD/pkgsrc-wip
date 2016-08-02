@@ -62,9 +62,10 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts libraries linetypes \
-	    patterns scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
-	cd ${WRKSRC} && umask 133 && ${PAX} -rw examples ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts linetypes patterns \
+	    plugins scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	cd ${WRKSRC} && umask 133 && ${PAX} -rw examples libraries \
+	    ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
