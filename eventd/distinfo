@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (eventd-0.18.1.tar.xz) = 0b8e289631b60422421e774a8c78753e1fc04bd8
-RMD160 (eventd-0.18.1.tar.xz) = 9ca63a051e26358d67fd240f2b4d5a200106ea7a
-SHA512 (eventd-0.18.1.tar.xz) = 924bb82c159d059878dc77015a2838cffe713fc043ccd789ca7355276026dad25e233ea2ea4f6e5b2b6f8d773e25147152f89ee76e22a02ceb06732d49103eb6
-Size (eventd-0.18.1.tar.xz) = 384008 bytes
+SHA1 (eventd-0.19.3.tar.xz) = 73be28acca46ab93930f1b87979e942f00e9bffa
+RMD160 (eventd-0.19.3.tar.xz) = 00a22bd030f7f9b59ea73954df979ffbaee1bf82
+SHA512 (eventd-0.19.3.tar.xz) = 345553aef2279da510fd1668c1046c653c5691c6eb092600d83dc03dffa88f654204df3b3b6f6abd3eb93c436f7b44bdfd7eec81043353ca5f562f13ecb7f507
+Size (eventd-0.19.3.tar.xz) = 389940 bytes

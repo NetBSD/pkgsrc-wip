@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	eventd-0.18.1
+DISTNAME=	eventd-0.19.3
 CATEGORIES=	wip
 MASTER_SITES=	https://www.eventd.org/download/eventd/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +21,8 @@ PKGCONFIG_OVERRIDE+=	server/libeventd/pkgconfig/libeventd-protocol-json.pc.in
 PKGCONFIG_OVERRIDE+=	server/libeventd-plugin/pkgconfig/libeventd-plugin.pc.in
 
 CONFIGURE_ARGS+= --disable-introspection
-CONFIGURE_ARGS+= --disable-avahi
+CONFIGURE_ARGS+= --disable-websocket
+CONFIGURE_ARGS+= --disable-dns-sd
 CONFIGURE_ARGS+= --disable-ssdp
 CONFIGURE_ARGS+= --disable-nd-wayland
 CONFIGURE_ARGS+= --disable-im
