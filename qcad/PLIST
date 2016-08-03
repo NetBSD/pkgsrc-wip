@@ -205,9 +205,19 @@ lib/qcad/patterns/metric/swamp.pat
 lib/qcad/patterns/metric/trans.pat
 lib/qcad/patterns/metric/triang.pat
 lib/qcad/patterns/metric/zigzag.pat
+lib/qcad/plugins/codecs/libqcncodecs.so
+lib/qcad/plugins/codecs/libqjpcodecs.so
+lib/qcad/plugins/codecs/libqkrcodecs.so
+lib/qcad/plugins/codecs/libqtwcodecs.so
 lib/qcad/plugins/codecs/readme.txt
 lib/qcad/plugins/designer/libqcadcustomwidgets.la
 lib/qcad/plugins/designer/readme.txt
+lib/qcad/plugins/imageformats/libqgif.so
+lib/qcad/plugins/imageformats/libqico.so
+lib/qcad/plugins/imageformats/libqjpeg.so
+lib/qcad/plugins/imageformats/libqsvg.so
+lib/qcad/plugins/imageformats/libqtga.so
+lib/qcad/plugins/imageformats/libqtiff.so
 lib/qcad/plugins/imageformats/readme.txt
 lib/qcad/plugins/libqcaddxf.la
 lib/qcad/plugins/libqcadexample.la
@@ -223,6 +233,7 @@ lib/qcad/plugins/script/libqcadqtscript_uitools.la
 lib/qcad/plugins/script/libqcadqtscript_webkit.la
 lib/qcad/plugins/script/libqcadqtscript_xml.la
 lib/qcad/plugins/script/libqcadqtscript_xmlpatterns.la
+lib/qcad/plugins/sqldrivers/libqsqlite.so
 lib/qcad/plugins/sqldrivers/readme.txt
 lib/qcad/scripts/.gitignore
 lib/qcad/scripts/AddOn.js
