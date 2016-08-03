@@ -1,0 +1,5 @@
+Timewarrior is a time tracking utility that offers simple stopwatch features as
+well as sophisticated calendar-base backfill, along with flexible reporting.
+
+Timewarrior records time, and associates blocks of time with tags. The recorded
+data can be exposed as JSON for any app to consume.
