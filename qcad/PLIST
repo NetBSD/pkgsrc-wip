@@ -8959,6 +8959,7 @@ lib/qcad/scripts/File/ts/File_zh_TW.qm
 lib/qcad/scripts/File/ts/File_zh_TW.ts
 lib/qcad/scripts/File/ts/ts.pro
 lib/qcad/scripts/Help/About/About.js
+lib/qcad/scripts/Help/About/About.js.orig
 lib/qcad/scripts/Help/About/About.pro
 lib/qcad/scripts/Help/About/AboutCredits.js
 lib/qcad/scripts/Help/About/AboutDialog.ui
@@ -9296,6 +9297,7 @@ lib/qcad/scripts/Help/ReportTranslationError/ts/ReportTranslationError_zh_CN.ts
 lib/qcad/scripts/Help/ReportTranslationError/ts/ReportTranslationError_zh_TW.qm
 lib/qcad/scripts/Help/ReportTranslationError/ts/ReportTranslationError_zh_TW.ts
 lib/qcad/scripts/Help/ShowReadme/ShowReadme.js
+lib/qcad/scripts/Help/ShowReadme/ShowReadme.js.orig
 lib/qcad/scripts/Help/ShowReadme/ShowReadme.pro
 lib/qcad/scripts/Help/ShowReadme/ShowReadmeDialog.ui
 lib/qcad/scripts/Help/ShowReadme/ShowReadmeInit.js
@@ -18809,3 +18811,4 @@ share/qcad/libraries/templates/metric/iso_en_a4_metric_portrait_aec.dxf
 share/qcad/libraries/templates/metric/iso_en_a4_metric_portrait_aec.rdf
 share/qcad/libraries/templates/metric/title_block_80mm_x_80mm.dxf
 share/qcad/libraries/templates/metric/title_block_80mm_x_80mm.rdf
+share/qcad/readme.txt

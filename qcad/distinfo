@@ -6,6 +6,7 @@ SHA512 (qcad-3.15.4.1.zip) = d3d9ae386920ec5102ab8c49c0a3967994dbae0b9b04b256d64
 Size (qcad-3.15.4.1.zip) = 37420623 bytes
 SHA1 (patch-qcad.1) = 64beab5b4d83e889352d80b64ab09aaa080421c2
 SHA1 (patch-scripts_Help_About_About.js) = a0425c9fab1a5828d4ec87eedfffe771c72e5f95
+SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 499fbae66f8f9c6267da7e7c0011d6caa48bb5d6
 SHA1 (patch-shared.pri) = fa940892d1deab185a752cab8e5346a04ba1bf03
 SHA1 (patch-shared__app.pri) = e0361f809815691b435d5112ee67e86918a85189
 SHA1 (patch-src_3rdparty_dxflib_dxflib.pro) = f16fb28a741a8a99e38adc2faa8037298bd174e2

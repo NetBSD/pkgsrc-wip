@@ -27,6 +27,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
 SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
+SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 
 # Note: Using pax to install the data files duplicates the lax permissions
@@ -64,7 +65,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts linetypes patterns \
 	    plugins scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
-	cd ${WRKSRC} && umask 133 && ${PAX} -rw examples libraries \
+	cd ${WRKSRC} && umask 133 && ${PAX} -rw readme.txt examples libraries \
 	    ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
