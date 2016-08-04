@@ -19,7 +19,7 @@ DEPENDS+=		qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		pax make
+USE_TOOLS+=		find make pax
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
@@ -63,6 +63,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${FIND} ${WRKSRC}/scripts -name \*.orig -rm
 	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts linetypes patterns \
 	    plugins scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	cd ${WRKSRC} && umask 133 && ${PAX} -rw readme.txt examples libraries \
