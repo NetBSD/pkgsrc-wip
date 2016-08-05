@@ -13,10 +13,7 @@ PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc
 PKG_SUGGESTED_OPTIONS+= pulseaudio
 .endif
 
-# On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
-.if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	webrtc
-.endif
 
 .include "../../mk/bsd.options.mk"
 
