@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (dnspython-clientsubnetoption-2.0.0.tar.gz) = 886f06230eebf2a7f5e9000bcb12ff9cb850eec6
-RMD160 (dnspython-clientsubnetoption-2.0.0.tar.gz) = 76e8af2fc5cc86f75850b476ca5a020bef7bd745
-SHA512 (dnspython-clientsubnetoption-2.0.0.tar.gz) = bd85911758dad05b0a3fa1b90712aa15756338fb620feea63b52429d6574b2ab3b89220604d3af0ff411d6352e1014bc11ae50d53d3feb6be48414ccb8f10655
-Size (dnspython-clientsubnetoption-2.0.0.tar.gz) = 4935 bytes
+SHA1 (dnspython-clientsubnetoption/be8ed04cf208f46eea542504f444982ab6fb4bc1-be8ed04cf208f46eea542504f444982ab6fb4bc1.tar.gz) = 2cc89d5857e1fa65edef1576ad189bfb288cd216
+RMD160 (dnspython-clientsubnetoption/be8ed04cf208f46eea542504f444982ab6fb4bc1-be8ed04cf208f46eea542504f444982ab6fb4bc1.tar.gz) = fc2794c6158f79ee19aaffbaf2059bd5a4d9969a
+SHA512 (dnspython-clientsubnetoption/be8ed04cf208f46eea542504f444982ab6fb4bc1-be8ed04cf208f46eea542504f444982ab6fb4bc1.tar.gz) = 094debe9c37812903966d6f57d8054e6667bb9fe068659699780ff69c0147fafd8f746c68629dc4a7c12f481171b08a688fa47cc78f57da7872f912cff7ff144
+Size (dnspython-clientsubnetoption/be8ed04cf208f46eea542504f444982ab6fb4bc1-be8ed04cf208f46eea542504f444982ab6fb4bc1.tar.gz) = 5102 bytes
