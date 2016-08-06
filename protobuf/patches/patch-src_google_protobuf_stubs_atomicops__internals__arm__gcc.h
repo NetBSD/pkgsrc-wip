@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add ARM support.
+
 --- src/google/protobuf/stubs/atomicops_internals_arm_gcc.h.orig	2016-04-28 21:34:30.000000000 +0000
 +++ src/google/protobuf/stubs/atomicops_internals_arm_gcc.h
 @@ -39,44 +39,19 @@ namespace google {

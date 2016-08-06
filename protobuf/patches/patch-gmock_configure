@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix shell portability issues.
+
 --- gmock/configure.orig	2016-07-15 19:19:42.000000000 +0000
 +++ gmock/configure
 @@ -15761,7 +15761,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix shell portability issues.
+
 --- gmock/configure.ac.orig	2016-04-28 21:34:11.000000000 +0000
 +++ gmock/configure.ac
 @@ -52,7 +52,7 @@ AS_IF([test "x$with_pthreads" != "xno"],
