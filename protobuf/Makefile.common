@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.2 2015/06/10 09:02:06 wiedi Exp $
+#
+# used by devel/protobuf/Makefile
+# used by devel/py-protobuf/Makefile
+
+PROTOBUFVER=	3.0.0
+
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_PROJECT=	protobuf
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+CATEGORIES=	devel
+HOMEPAGE=       http://code.google.com/p/protobuf/
+
+LICENSE=	modified-bsd
+
+WRKSRC=		${WRKDIR}/protobuf-${PKGVERSION_NOREV}
+
+PATCHDIR=	${.CURDIR}/../../wip/protobuf/patches
