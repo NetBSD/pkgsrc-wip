@@ -1,0 +1,52 @@
+$NetBSD$
+
+--- build/config/BUILDCONFIG.gn.orig	2016-08-05 17:13:38.000000000 +0000
++++ build/config/BUILDCONFIG.gn
+@@ -193,6 +193,18 @@ if (host_toolchain == "") {
+     } else {
+       host_toolchain = "//build/toolchain/win:$target_cpu"
+     }
++  } else if (host_os == "netbsd") {
++    if (target_os != "netbsd") {
++      # TODO(dpranke) - is_clang normally applies only to the target
++      # build, and there is no way to indicate that you want to override
++      # it for both the target build *and* the host build. Do we need to
++      # support this?
++      host_toolchain = "//build/toolchain/netbsd:clang_$host_cpu"
++    } else if (is_clang) {
++      host_toolchain = "//build/toolchain/netbsd:clang_$host_cpu"
++    } else {
++      host_toolchain = "//build/toolchain/netbsd:$host_cpu"
++    }
+   } else {
+     assert(false, "Unsupported host_os: $host_os")
+   }
+@@ -231,6 +243,12 @@ if (target_os == "android") {
+ } else if (target_os == "winrt_81" || target_os == "winrt_81_phone" ||
+            target_os == "winrt_10") {
+   _default_toolchain = "//build/toolchain/win:winrt_$target_cpu"
++} else if (target_os == "netbsd") {
++  if (is_clang) {
++    _default_toolchain = "//build/toolchain/netbsd:clang_$target_cpu"
++  } else {
++    _default_toolchain = "//build/toolchain/netbsd:$target_cpu"
++  }
+ } else {
+   assert(false, "Unsupported target_os: $target_os")
+ }
+@@ -328,6 +346,15 @@ if (current_os == "win" || current_os ==
+   is_nacl = false
+   is_posix = true
+   is_win = false
++} else if (current_os == "netbsd") {
++  is_android = false
++  is_chromeos = false
++  is_ios = false
++  is_linux = false
++  is_mac = false
++  is_nacl = false
++  is_posix = true
++  is_win = false
+ }
+ 
+ # =============================================================================

@@ -1,0 +1,32 @@
+$NetBSD$
+
+--- base/BUILD.gn.orig	2016-08-05 17:13:37.000000000 +0000
++++ base/BUILD.gn
+@@ -636,16 +636,19 @@ component("base") {
+     "process/process_iterator.h",
+ 
+     #"process/process_iterator_freebsd.cc",  # Unused in Chromium build.
++    "process/process_iterator_netbsd.cc",
+     "process/process_iterator_linux.cc",
+     "process/process_iterator_mac.cc",
+ 
+     #"process/process_iterator_openbsd.cc",  # Unused in Chromium build.
++    "process/process_iterator_netbsd.cc",
+     "process/process_iterator_win.cc",
+     "process/process_linux.cc",
+     "process/process_metrics.cc",
+     "process/process_metrics.h",
+ 
+     #"process/process_metrics_freebsd.cc",  # Unused in Chromium build.
++    "process/process_metrics_netbsd.cc",
+     "process/process_metrics_ios.cc",
+     "process/process_metrics_linux.cc",
+     "process/process_metrics_mac.cc",
+@@ -759,6 +762,7 @@ component("base") {
+     "sys_info_chromeos.cc",
+ 
+     #"sys_info_freebsd.cc",  # Unused in Chromium build.
++    "sys_info_netbsd.cc",  # Unused in Chromium build.
+     "sys_info_ios.mm",
+     "sys_info_linux.cc",
+     "sys_info_mac.mm",

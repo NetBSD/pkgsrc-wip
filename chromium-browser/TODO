@@ -1,0 +1,20 @@
+$NetBSD: TODO,v 1.12 2015/09/14 22:26:13 venture37 Exp $
+
+* debug
+* test on Linux/FreeBSD/OpenBSD
+* use libtool
+
+When updating this package, please have a look at:
+- http://secunia.com/advisories/46636/
+- http://secunia.com/advisories/47694/
+- http://www.secunia.com/advisories/62964/
+- http://secunia.com/advisories/63496/
+- http://googlechromereleases.blogspot.com/2015/04/stable-channel-update_28.html
+- http://googlechromereleases.blogspot.com/2015/09/stable-channel-update.html
+- https://www.debian.org/security/2015/dsa-3376
+- https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-6792
+- https://www.debian.org/security/2015/dsa-3418
+- http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-8664
+- http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-1643
+- http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-1644
+- http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-1645
