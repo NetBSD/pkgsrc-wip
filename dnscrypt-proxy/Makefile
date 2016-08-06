@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2015/03/30 07:31:03 adanbsd Exp $
+# $NetBSD$
 
-DISTNAME=	dnscrypt-proxy-1.4.3
+DISTNAME=	dnscrypt-proxy-1.7.0
 CATEGORIES=	security
-MASTER_SITES=	http://download.dnscrypt.org/dnscrypt-proxy/
-
+MASTER_SITES=	https://download.dnscrypt.org/dnscrypt-proxy/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ada@netbsdfr.org
 HOMEPAGE=	http://dnscrypt.org/
 COMMENT=	Securing DNS communication using DNSCrypt
 LICENSE=	mit
 
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
-
-BUILD_DEFS+=            DNSCRYPT_USER DNSCRYPT_GROUP VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,10 +26,10 @@ PKG_HOME.${DNSCRYPT_USER}?=	${VARBASE}/chroot/dnscrypt
 OWN_DIRS+=	${PKG_HOME.${DNSCRYPT_USER}}
 OWN_DIRS_PERMS+=	${PKG_HOME.${DNSCRYPT_USER}} ${DNSCRYPT_USER} ${DNSCRYPT_GROUP} 0700
 
-
-
-PKGCONFIG_OVERRIDE+=	src/libevent-modified/libevent_openssl.pc.in
+PKGCONFIG_OVERRIDE+=	src/libevent-modified/libevent_core.pc.in
 PKGCONFIG_OVERRIDE+=	src/libevent-modified/libevent.pc.in
+PKGCONFIG_OVERRIDE+=	src/libevent-modified/libevent_extra.pc.in
+PKGCONFIG_OVERRIDE+=	src/libevent-modified/libevent_openssl.pc.in
 PKGCONFIG_OVERRIDE+=	src/libevent-modified/libevent_pthreads.pc.in
 
 .include "../../devel/libltdl/convenience.mk"

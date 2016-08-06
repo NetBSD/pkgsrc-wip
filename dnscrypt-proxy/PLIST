@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/16 16:19:28 adanbsd Exp $
+@comment $NetBSD$
 bin/hostip
+include/dnscrypt/plugin.h
+include/dnscrypt/private.h
+include/dnscrypt/version.h
+lib/dnscrypt-proxy/libdcplugin_example.la
+lib/dnscrypt-proxy/libdcplugin_example_logging.la
 man/man8/dnscrypt-proxy.8
 man/man8/hostip.8
 sbin/dnscrypt-proxy
 share/dnscrypt-proxy/dnscrypt-resolvers.csv
+share/dnscrypt-proxy/minisign.pub
