@@ -108,7 +108,7 @@ do-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
+#.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
