@@ -465,6 +465,7 @@ SUBDIR+=	datapipe
 SUBDIR+=	dates
 SUBDIR+=	dateutils
 SUBDIR+=	davical-current
+SUBDIR+=	daq
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-explorer
