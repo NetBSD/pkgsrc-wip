@@ -29,7 +29,16 @@ pre-build:
 	${LN} -s ${PREFIX}/bin/protoc ${WRKSRC}/src
 
 do-build:
-	${RUN} cd ${WRKSRC}/java && ${PKGSRC_SETENV} ${MAKE_ENV} ${PREFIX}/bin/mvn ${MAVEN_FLAGS} package
+	${RUN} cd ${WRKSRC}/java && \
+		${PKGSRC_SETENV} ${MAKE_ENV} ${PREFIX}/bin/mvn ${MAVEN_FLAGS} package
+
+INSTALLATION_DIRS+=	lib/java/protobuf
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/java/util/target/protobuf-java-util-${PKGVERSION_NOREV}.jar \
+		${DESTDIR}${PREFIX}/lib/java/protobuf
+	${INSTALL_DATA} ${WRKSRC}/java/core/target/protobuf-java-${PKGVERSION_NOREV}.jar \
+		${DESTDIR}${PREFIX}/lib/java/protobuf
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/java-vm.mk"
