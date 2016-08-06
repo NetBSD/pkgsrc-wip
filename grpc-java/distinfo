@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (grpc-java-0.14.1.tar.gz) = 5de9f6409e431e62b6ec4defc0588cb9265f734b
-RMD160 (grpc-java-0.14.1.tar.gz) = bc953ee81c3bb1ed1cff0fb28cbadc558347252a
-SHA512 (grpc-java-0.14.1.tar.gz) = c2f1e621e265d6fde9fa24cdbdb35608d176b0c40cf8e224d0cffe45db6d7cdb115f9d9e8a35ff872e8522e8f17d38420ee40991b5c1606682374a3bf4731f1b
-Size (grpc-java-0.14.1.tar.gz) = 811794 bytes
+SHA1 (grpc-java-1.0.0.pre2.tar.gz) = cb39c828972ad98f39451b96afb656953928df41
+RMD160 (grpc-java-1.0.0.pre2.tar.gz) = 158b674c2d64249be6fdb5776c157cf10cf1b732
+SHA512 (grpc-java-1.0.0.pre2.tar.gz) = 64811ea14fe35d393e83ced3f6a0b8371b697bc7de4f5a94a738579607265cb433b154735b86f398dad8947d5b50c8feeed818319d9d106ee7e334597cff5fec
+Size (grpc-java-1.0.0.pre2.tar.gz) = 990765 bytes
