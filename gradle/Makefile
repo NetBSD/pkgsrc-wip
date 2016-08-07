@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-bin//}
 
 USE_JAVA=	run
 USE_JAVA2=	yes
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run pax:build
 NO_BUILD=	yes
 
 pre-configure:
@@ -36,8 +36,7 @@ INSTALLATION_DIRS+=	lib/java/gradle/media share/doc/java/gradle
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gradle-launcher ${DESTDIR}${PREFIX}/bin/gradle
-	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib
-	${INSTALL_DATA} ${WRKSRC}/lib/plugins/*.jar ${DESTDIR}${PREFIX}/lib/java/gradle/lib/plugins
+	cd ${WRKSRC}/lib && ${PAX} -wr * ${DESTDIR}${PREFIX}/lib/java/gradle/lib
 	${INSTALL_DATA} ${WRKSRC}/media/*.icns ${DESTDIR}${PREFIX}/lib/java/gradle/media
 	${INSTALL_DATA} ${WRKSRC}/getting-started.html ${DESTDIR}${PREFIX}/share/doc/java/gradle
 
