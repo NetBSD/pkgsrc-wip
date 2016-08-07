@@ -38,7 +38,6 @@ BUILD_DEPENDS+=	makeself-[0-9]*:../../archivers/makeself
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Adjust paths for pkgsrc
 SUBST_STAGE.paths=	pre-configure
-#SUBST_STAGE.paths=	post-build
 SUBST_FILES.paths+=	configure
 .if ${OPSYS} == "Linux"
 .include "../../sysutils/lvm2/buildlink3.mk"
@@ -48,12 +47,6 @@ SUBST_SED.paths+=	-e 's!^LIBDEVMAPPER=.*!LIBDEVMAPPER="${COMPILER_RPATH_FLAG}${B
 SUBST_SED.paths+=	-e 's!^INCCAP=.*!INCCAP="-I${BUILDLINK_PREFIX.libcap}/include"!g'
 SUBST_SED.paths+=	-e 's!^LIBCAP=.*!LIBCAP="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libcap}/lib -L${BUILDLINK_PREFIX.libcap}/lib -lcap"!g'
 .endif
-# These paths are used as a shell enumeration to check
-#SUBST_SED.paths+=	-e 's!^PYTHONDIR=.*!PYTHONDIR="${PREFIX}"!g'
-# Set proper path of Python libs under ${PREFIX}/lib..
-#SUBST_SED.paths+=	-e 's!lib/x86_64-linux-gnu lib/i386-linux-gnu lib64 lib/64 lib!lib!g'
-# Add needed rpath for testing execution of an application linked with libpython
-#SUBST_SED.paths+=	-e 's!PYTHONLIBRPATH=.*!PYTHONLIBRPATH="${COMPILER_RPATH_FLAG}${PREFIX}/lib"!g'
 
 VBLIBDIR=	${PREFIX}/lib/virtualbox
 
@@ -80,6 +73,7 @@ CONFIGURE_ARGS+=	--with-vpx-incset="-I${BUILDLINK_PREFIX.libvpx}/include"
 CONFIGURE_ARGS+=	--with-vpx-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libvpx}/lib -L${BUILDLINK_PREFIX.libvpx}/lib"
 CONFIGURE_ARGS+=	--with-iasl=${PREFIX}/bin/iasl
 CONFIGURE_ARGS+=	--with-python-dirset=${PREFIX}
+CONFIGURE_ARGS+=	--with-python-linkextraset=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-makeself=${PREFIX}/bin/makeself
 .endif

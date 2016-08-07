@@ -2,7 +2,26 @@ $NetBSD$
 
 --- configure.orig	2016-08-05 16:04:02.000000000 +0000
 +++ configure
-@@ -2605,6 +2605,62 @@ for option in "$@"; do
+@@ -154,6 +154,7 @@ INCVPX=""
+ LIBVPX="-lvpx"
+ PKGCONFIG="`which_wrapper pkg-config`"
+ PYTHONDIR="/usr /usr/local"
++PYTHONLINKEXTRA=""
+ QT4DIR="/usr/lib/qt4 /usr/share/qt4 /usr/lib64/qt4 /usr /usr/local"
+ QT4DIR_PKGCONFIG=1
+ QT5DIR="/usr/lib/qt5 /usr/share/qt5 /usr/lib64/qt5 /usr /usr/local"
+@@ -2126,8 +2127,8 @@ EOF
+         echo "compiling the following source file:" >> $LOG
+         cat $ODIR.tmp_src.cc >> $LOG
+         echo "using the following command line:" >> $LOG
+-        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so" >> $LOG
+-        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so >> $LOG 2>&1
++        echo "$CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so" $PYTHONLINKEXTRA >> $LOG
++        $CXX -O -Wall -o $ODIR.tmp_out $ODIR.tmp_src.cc -I$p/include/$d $p/$b/lib$d.so $PYTHONLINKEXTRA >> $LOG 2>&1
+         if [ $? -eq 0 ]; then
+           found=1
+           break
+@@ -2605,6 +2606,70 @@ for option in "$@"; do
        INCCRYPTO="-I${OPENSSLDIR}/include"
        LIBCRYPTO="${OPENSSLDIR}/lib/libcrypto.a ${OPENSSLDIR}/lib/libssl.a"
        ;;
@@ -61,6 +80,14 @@ $NetBSD$
 +    --with-vpx-libset=*)
 +      VPXLIBSET=`echo $option | cut -d'=' -f2`
 +      LIBVPX="${VPXLIBSET}"
++      ;;
++    --with-python-dirset=*)
++      PYTHONDIRSET=`echo $option | cut -d'=' -f2`
++      PYTHONDIR="${PYTHONDIRSET}"
++      ;;
++    --with-python-linkextraset=*)
++      PYTHONLINKEXTRASET=`echo $option | cut -d'=' -f2`
++      PYTHONLINKEXTRA="${PYTHONLINKEXTRA}"
 +      ;;
      --with-ow-dir=*)
        WATCOM=`echo $option | cut -d'=' -f2`
