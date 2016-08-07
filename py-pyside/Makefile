@@ -1,17 +1,19 @@
 # $NetBSD: Makefile,v 1.1 2013/11/15 12:16:48 rhialto Exp $
 
-VERSION=	1.2.1
-QTVERSION=	4.8
-DISTNAME=	pyside-qt${QTVERSION}+${VERSION}
-PKGNAME=	${PYPKGPREFIX}-pyside-qt${QTVERSION}-${VERSION}
-MASTER_SITES=	http://download.qt-project.org/official_releases/pyside/
-EXTRACT_SUFX=   .tar.bz2
+VERSION=	1.2.4
+DISTNAME=	pyside-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-pyside-${VERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=PySide/}
+GITHUB_PROJECT=	PySide
+EXTRACT_SUFX=   .tar.gz
 CATEGORIES=	devel
 
-MAINTAINER=	rhialto@falu.nl
+MAINTAINER=	rumko@netbsd.org
 HOMEPAGE=	http://qt-project.org/wiki/Category:LanguageBindings::PySide
 COMMENT=	Pyside Qt bindings for Python
 LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/PySide-${VERSION}
 
 USE_TOOLS+=	gmake cmake pkg-config
 USE_LANGUAGES+=	c c++

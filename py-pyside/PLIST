@@ -30,12 +30,12 @@ include/PySide/pysideqflags.h
 include/PySide/pysidesignal.h
 include/PySide/pysideweakref.h
 include/PySide/signalmanager.h
-lib/cmake/PySide-1.2.1/PySideConfig-python${PYVERSSUFFIX}.cmake
-lib/cmake/PySide-1.2.1/PySideConfig.cmake
-lib/cmake/PySide-1.2.1/PySideConfigVersion.cmake
+lib/cmake/PySide-${PKGVERSION}/PySideConfig-python${PYVERSSUFFIX}.cmake
+lib/cmake/PySide-${PKGVERSION}/PySideConfig.cmake
+lib/cmake/PySide-${PKGVERSION}/PySideConfigVersion.cmake
 lib/libpyside-python${PYVERSSUFFIX}.so
 lib/libpyside-python${PYVERSSUFFIX}.so.1.2
-lib/libpyside-python${PYVERSSUFFIX}.so.1.2.1
+lib/libpyside-python${PYVERSSUFFIX}.so.${PKGVERSION}
 lib/pkgconfig/pyside.pc
 ${PYSITELIB}/PySide/QtCore.so
 ${PYSITELIB}/PySide/QtDeclarative.so
