@@ -66,7 +66,7 @@ KMK_ENV_VARS+=	KBUILD_LIB_SEARCH_ROOTS="/ /usr/ ${X11BASE}/ ${PREFIX}/"
 KMK_FLAGS+=	-j1
 
 CONFIGURE_ARGS+=	--with-kbuild=${PREFIX}/share/kBuild/
-CONFIGURE_ARGS+=	--with-qt-dir=${PREFIX}/${QTDIR}
+CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 CONFIGURE_ARGS+=	--with-openssl-incset="-I${BUILDLINK_PREFIX.openssl}/include"
 CONFIGURE_ARGS+=	--with-openssl-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib -L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"
 CONFIGURE_ARGS+=	--with-curl-incset="-I${BUILDLINK_PREFIX.curl}/include"
