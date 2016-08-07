@@ -1,6 +1,13 @@
 $NetBSD: distinfo,v 1.1 2013/12/05 21:30:19 thomasklausner Exp $
 
-SHA1 (PokerTH-1.0.1-src.tar.bz2) = 09411bd52db16af1e833b8c90cfaca1feeb4d86e
-RMD160 (PokerTH-1.0.1-src.tar.bz2) = 637ea9b662cc94f835745a3cafc3fd33186c96b6
-Size (PokerTH-1.0.1-src.tar.bz2) = 19201790 bytes
+SHA1 (PokerTH-1.1.1-src.tar.bz2) = 2208aa41106dccefcd861d2b5e8021af46f07751
+RMD160 (PokerTH-1.1.1-src.tar.bz2) = 3e7fd6ad32a31dc966ffb3f6a89629d55420a1be
+SHA512 (PokerTH-1.1.1-src.tar.bz2) = bd822d15747d94b67657ea2fd0b9c8c1bdad0031a6eae30380217387a702e5f648d6f612b1bff0355c3c301ecaf47ca9d635a526e575f1bc1c5f88e38a7f73c1
+Size (PokerTH-1.1.1-src.tar.bz2) = 19326922 bytes
+SHA1 (patch-src_core_common_avatarmanager.cpp) = 19e550fde49ab04a4e8be56bc1b2b791e93e94f3
+SHA1 (patch-src_core_common_loghelper__server.cpp) = 8d2d12f80d99f4cd8cc4f314d1930e6538f16ce1
+SHA1 (patch-src_net_common_clientstate.cpp) = 7bdec191bebe06879e49040cecc947f1a1863859
+SHA1 (patch-src_net_common_clientthread.cpp) = d32d9eeb04f26c934f2395381f5b7c1ef42a0d36
+SHA1 (patch-src_net_common_downloaderthread.cpp) = f2bbf30753099878f267882fb3fa14277660aeb4
 SHA1 (patch-src_net_common_ircthread.cpp) = 85e491d01972a591bd0c86891dd552fe727e6f8f
+SHA1 (patch-src_pokerth__server.cpp) = e2e72a3f8dfa23ecc0a2e1ee539cc111af305c57

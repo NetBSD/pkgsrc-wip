@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2014/02/17 00:02:38 thomasklausner Exp $
 
-DISTNAME=	PokerTH-1.0.1-src
-PKGNAME=	pokerth-1.0.1
+DISTNAME=	PokerTH-1.1.1-src
+PKGNAME=	pokerth-1.1.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pokerth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,7 @@ MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://pokerth.sourceforge.net/
 COMMENT=	Texas Holdem poker with online play
 
+EXTRACT_USING=	gtar
 USE_TOOLS=	gmake
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
