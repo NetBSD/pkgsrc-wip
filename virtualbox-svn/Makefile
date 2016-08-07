@@ -79,6 +79,9 @@ CONFIGURE_ARGS+=	--with-python-linkextraset=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-makeself=${PREFIX}/bin/makeself
 .endif
 
+# Temporary option to get headless build functional first
+CONFIGURE_ARGS+=	--build-headless
+
 pre-configure:
 	${RUN} ${ECHO} "VBOX_GCC_OPT=${CXXFLAGS}" >> ${WRKSRC}/LocalConfig.kmk
 	${RUN} ${ECHO} "VBOX_WITH_ORIGIN:=" >> ${WRKSRC}/LocalConfig.kmk
