@@ -19,12 +19,12 @@ include/shiboken/shibokenbuffer.h
 include/shiboken/shibokenmacros.h
 include/shiboken/threadstatesaver.h
 include/shiboken/typeresolver.h
-lib/cmake/Shiboken-1.2.1/ShibokenConfig-python${PYVERSSUFFIX}.cmake
-lib/cmake/Shiboken-1.2.1/ShibokenConfig.cmake
-lib/cmake/Shiboken-1.2.1/ShibokenConfigVersion.cmake
+lib/cmake/Shiboken-${PKGVERSION}/ShibokenConfig-python${PYVERSSUFFIX}.cmake
+lib/cmake/Shiboken-${PKGVERSION}/ShibokenConfig.cmake
+lib/cmake/Shiboken-${PKGVERSION}/ShibokenConfigVersion.cmake
 lib/libshiboken-python${PYVERSSUFFIX}.so
 lib/libshiboken-python${PYVERSSUFFIX}.so.1.2
-lib/libshiboken-python${PYVERSSUFFIX}.so.1.2.1
+lib/libshiboken-python${PYVERSSUFFIX}.so.${PKGVERSION}
 lib/pkgconfig/shiboken.pc
 ${PYSITELIB}/shiboken.so
 man/man1/shiboken.1

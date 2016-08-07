@@ -1,16 +1,19 @@
 # $NetBSD: Makefile,v 1.1 2013/11/15 12:14:47 rhialto Exp $
 
-VERSION=	1.2.1
+VERSION=	1.2.4
 DISTNAME=	shiboken-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-pyside-shiboken-${VERSION}
-MASTER_SITES=	http://download.qt-project.org/official_releases/pyside/
-EXTRACT_SUFX=   .tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=PySide/}
+GITHUB_PROJECT=	Shiboken
+EXTRACT_SUFX=   .tar.gz
 CATEGORIES=	devel
 
-MAINTAINER=	rhialto@falu.nl
+MAINTAINER=	rumko@netbsd.org
 HOMEPAGE=	http://qt-project.org/wiki/Get-PySide
 COMMENT=	Pyside (shiboken prerequisite)
 LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/Shiboken-${VERSION}
 
 USE_TOOLS+=	gmake cmake pkg-config
 USE_LANGUAGES+=	c c++

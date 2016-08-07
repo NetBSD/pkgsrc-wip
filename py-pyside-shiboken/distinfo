@@ -1,7 +1,8 @@
 $NetBSD: distinfo,v 1.1 2013/11/15 12:14:47 rhialto Exp $
 
-SHA1 (shiboken-1.2.1.tar.bz2) = f310ac163f3407109051ccebfd192bc9620e9124
-RMD160 (shiboken-1.2.1.tar.bz2) = 1ad3ac82b6e41004e0bbe25c315482d7fd07a395
-Size (shiboken-1.2.1.tar.bz2) = 1067587 bytes
+SHA1 (shiboken-1.2.4.tar.gz) = cb93c497f2948b6ce2465f7ec25516bd3e643d95
+RMD160 (shiboken-1.2.4.tar.gz) = 4d5d2467e2195ecaab53ddccdd9aed6778af778a
+SHA512 (shiboken-1.2.4.tar.gz) = daa3fadf3daffaec52f199c0285a37431a4b6b0d450a43a035f49e5505a35b666a1cb0b334c7267af7530841dadbf0b97296812141c93de3b7cd07c7d9016a2a
+Size (shiboken-1.2.4.tar.gz) = 1039530 bytes
 SHA1 (patch-ApiExtractor_parser_rpp_pp-qt-configuration) = e41adb3c740d4a96f0e7e3b488f0586f2f78169b
 SHA1 (patch-doc_CMakeLists.txt) = 2f89c912db52a7043aca403250953f5003ca8e35
