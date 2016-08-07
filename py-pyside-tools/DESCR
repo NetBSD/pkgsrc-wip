@@ -1,0 +1,7 @@
+The PySide project provides LGPL-licensed Python bindings for the Qt.
+It also includes complete toolchain for rapidly generating bindings for
+any Qt-based C++ class hierarchies. PySide Qt bindings allow both free
+open source and proprietary software development and ultimately aim to
+support Qt platforms.
+
+This package installs PySide development tools (pyuic and pyrcc).

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2013/11/15 12:14:47 rhialto Exp $
+
+SHA1 (tools-0.2.15.tar.gz) = b668d15e8d67e25a653db5abf8f542802e2ee2dd
+RMD160 (tools-0.2.15.tar.gz) = 481654815c8fcdd5b805a155bc2ea9bfcbced9d4
+SHA512 (tools-0.2.15.tar.gz) = 7cee288b733e5f83a01683d7fc8f1017c044e46dbb02489c5e763e37db4e24f319ffd593e001ee6ca5a21a34cf1a6009ab1d4c9e4102c60693992b6f2f7c8991
+Size (tools-0.2.15.tar.gz) = 78989 bytes
+SHA1 (patch-CMakeLists.txt) = dfafef1be5d9764f0afc95e644a7297515f9a494
+SHA1 (patch-pylupdate_CMakeLists.txt) = 9ceca6b92998d7d072f3812a5eae9b867cb41b07
+SHA1 (patch-pyrcc_CMakeLists.txt) = 09294dace80149b8a07d9d9d7562a4ab9bee416d

@@ -1,0 +1,14 @@
+$NetBSD$
+
+Fix man page path
+
+--- pylupdate/CMakeLists.txt.orig	2013-08-16 07:29:17.000000000 +0000
++++ pylupdate/CMakeLists.txt
+@@ -33,6 +33,6 @@ install(TARGETS pyside-lupdate RUNTIME D
+ # Man pages
+ if (NOT win32)
+     file(GLOB manpages "${CMAKE_CURRENT_SOURCE_DIR}/*.1")
+-    install(FILES ${manpages} DESTINATION share/man/man1)
++    install(FILES ${manpages} DESTINATION man/man1)
+ endif()
+ 
