@@ -16,6 +16,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 BUILD_DEPENDS+=	kbuild-[0-9]*:../../devel/kbuild
 BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 

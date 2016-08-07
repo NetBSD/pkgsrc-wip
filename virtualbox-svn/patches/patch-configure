@@ -87,7 +87,7 @@ $NetBSD$
 +      ;;
 +    --with-python-linkextraset=*)
 +      PYTHONLINKEXTRASET=`echo $option | cut -d'=' -f2`
-+      PYTHONLINKEXTRA="${PYTHONLINKEXTRA}"
++      PYTHONLINKEXTRA="${PYTHONLINKEXTRASET}"
 +      ;;
      --with-ow-dir=*)
        WATCOM=`echo $option | cut -d'=' -f2`
