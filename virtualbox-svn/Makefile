@@ -40,12 +40,6 @@ SUBST_MESSAGE.paths=	Adjust paths for pkgsrc
 SUBST_STAGE.paths=	pre-configure
 #SUBST_STAGE.paths=	post-build
 SUBST_FILES.paths+=	configure
-SUBST_SED.paths+=	-e 's!^INCCRYPTO=.*!INCCRYPTO="-I${BUILDLINK_PREFIX.openssl}/include"!g'
-SUBST_SED.paths+=	-e 's!^LIBCRYPTO=.*!LIBCRYPTO="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib -L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"!g'
-SUBST_SED.paths+=	-e 's!^INCX11=.*!INCX11="-I${X11BASE}/include"!g'
-SUBST_SED.paths+=	-e 's!^LIBX11=.*!LIBX11="${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lXext -lX11"!g'
-SUBST_SED.paths+=	-e 's!^INCZ=.*!INCZ="-I${BUILDLINK_PREFIX.zlib}/include"!g'
-SUBST_SED.paths+=	-e 's!^LIBZ=.*!LIBZ="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.zlib}/lib -L${BUILDLINK_PREFIX.zlib}/lib -lz"!g'
 .if ${OPSYS} == "Linux"
 .include "../../sysutils/lvm2/buildlink3.mk"
 SUBST_SED.paths+=	-e 's!^INCDEVMAPPER=.*!INCDEVMAPPER="-I${BUILDLINK_PREFIX.lvm2}/include"!g'
@@ -54,14 +48,6 @@ SUBST_SED.paths+=	-e 's!^LIBDEVMAPPER=.*!LIBDEVMAPPER="${COMPILER_RPATH_FLAG}${B
 SUBST_SED.paths+=	-e 's!^INCCAP=.*!INCCAP="-I${BUILDLINK_PREFIX.libcap}/include"!g'
 SUBST_SED.paths+=	-e 's!^LIBCAP=.*!LIBCAP="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libcap}/lib -L${BUILDLINK_PREFIX.libcap}/lib -lcap"!g'
 .endif
-SUBST_SED.paths+=	-e 's!^INCCURL=.*!INCCURL="-I${BUILDLINK_PREFIX.curl}/include"!g'
-SUBST_SED.paths+=	-e 's!^LIBCURL=.*!LIBCURL="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib -L${BUILDLINK_PREFIX.curl}/lib -lcurl"!g'
-SUBST_SED.paths+=	-e 's!^INCPULSE=.*!INCPULSE="-I${BUILDLINK_PREFIX.pulseaudio}/include"!g'
-SUBST_SED.paths+=	-e 's!^LIBPULSE=.*!LIBPULSE="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib -L${BUILDLINK_PREFIX.pulseaudio}/lib"!g'
-SUBST_SED.paths+=	-e 's!^INCPNG=.*!INCPNG="-I${BUILDLINK_PREFIX.png}/include"!g'
-SUBST_SED.paths+=	-e 's!^LIBPNG=.*!LIBPNG="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.png}/lib -L${BUILDLINK_PREFIX.png}/lib"!g'
-SUBST_SED.paths+=	-e 's!^INCVPX=.*!INCVPX="-I${BUILDLINK_PREFIX.libvpx}/include"!g'
-SUBST_SED.paths+=	-e 's!^LIBVPX=.*!LIBVPX="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libvpx}/lib -L${BUILDLINK_PREFIX.libvpx}/lib -lvpx"!g'
 # These paths are used as a shell enumeration to check
 SUBST_SED.paths+=	-e 's!^PYTHONDIR=.*!PYTHONDIR="${PREFIX}"!g'
 SUBST_SED.paths+=	-e 's!^QT4DIR=.*!QT4DIR="${QTDIR}"!g'
@@ -78,6 +64,27 @@ KMK_ENV_VARS+=	KBUILD_PATH=${WRKSRC}/kBuild
 KMK_ENV_VARS+=	KBUILD_LIB_SEARCH_ROOTS="/ /usr/ ${X11BASE}/ ${PREFIX}/"
 # Multiple jobs tend to be broken
 KMK_FLAGS+=	-j1
+
+CONFIGURE_ARGS+=	--with-kbuild=${PREFIX}/share/kBuild/
+CONFIGURE_ARGS+=	--with-qt-dir=${PREFIX}/${QTDIR}
+CONFIGURE_ARGS+=	--with-openssl-incset="-I${BUILDLINK_PREFIX.openssl}/include"
+CONFIGURE_ARGS+=	--with-openssl-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib -L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"
+CONFIGURE_ARGS+=	--with-curl-incset="-I${BUILDLINK_PREFIX.curl}/include"
+CONFIGURE_ARGS+=	--with-curl-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib -L${BUILDLINK_PREFIX.curl}/lib -lcurl"
+CONFIGURE_ARGS+=	--with-zlib-incset="-I${BUILDLINK_PREFIX.zlib}/include"
+CONFIGURE_ARGS+=	--with-zlib-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.zlib}/lib -L${BUILDLINK_PREFIX.zlib}/lib -lz"
+CONFIGURE_ARGS+=	--with-x11-incset="-I${X11BASE}/include"
+CONFIGURE_ARGS+=	--with-x11-libset="${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lXext -lX11"
+CONFIGURE_ARGS+=	--with-pulse-incset="-I${BUILDLINK_PREFIX.pulseaudio}/include"
+CONFIGURE_ARGS+=	--with-pulse-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib -L${BUILDLINK_PREFIX.pulseaudio}/lib"
+CONFIGURE_ARGS+=	--with-png-incset="-I${BUILDLINK_PREFIX.png}/include"
+CONFIGURE_ARGS+=	--with-png-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.png}/lib -L${BUILDLINK_PREFIX.png}/lib"
+CONFIGURE_ARGS+=	--with-vpx-incset="-I${BUILDLINK_PREFIX.libvpx}/include"
+CONFIGURE_ARGS+=	--with-vpx-libset="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libvpx}/lib -L${BUILDLINK_PREFIX.libvpx}/lib"
+CONFIGURE_ARGS+=	--with-iasl=${PREFIX}/bin/iasl
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-makeself=${PREFIX}/bin/makeself
+.endif
 
 pre-configure:
 	${RUN} ${ECHO} "VBOX_GCC_OPT=${CXXFLAGS}" >> ${WRKSRC}/LocalConfig.kmk
@@ -108,7 +115,7 @@ do-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-#.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"

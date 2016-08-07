@@ -1,0 +1,117 @@
+$NetBSD$
+
+--- configure.orig	2016-08-05 16:04:02.000000000 +0000
++++ configure
+@@ -122,16 +122,16 @@ LIBPTHREAD="-lpthread"
+ LIBCAP="-lcap"
+ GSOAP=""
+ GSOAP_IMPORT=""
+-INCX11="/usr/local/include"
+-LIBX11="-L/usr/X11R6/lib -L/usr/X11R6/lib64 -L/usr/local/lib -lXext -lX11"
++INCX11="-I/usr/X11R7/include"
++LIBX11="-Wl,-R/usr/X11R7/lib -L/usr/X11R7/lib -lXext -lX11"
+ LIBXCURSOR="-lXcursor"
+ LIBXMU="-lXmu"
+ LIBXINERAMA="-lXinerama"
+ LIBXRANDR="-lXrandr"
+ MAKESELF="makeself"
+ MESA="-lGL"
+-INCZ=""
+-LIBZ="-lz"
++INCZ="-I/usr/include"
++LIBZ="-Wl,-R/usr/lib -L/usr/lib -lz"
+ INCVNCSERVER=""
+ LIBVNCSERVER="-lvncserver"
+ INCDEVMAPPER=""
+@@ -150,11 +150,11 @@ else
+   INCPNG=""
+   LIBPNG="-lpng"
+ fi
+-INCVPX=""
+-LIBVPX="-lvpx"
++INCVPX="-I/usr/pkg/include"
++LIBVPX="-Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lvpx"
+ PKGCONFIG="`which_wrapper pkg-config`"
+-PYTHONDIR="/usr /usr/local"
+-QT4DIR="/usr/lib/qt4 /usr/share/qt4 /usr/lib64/qt4 /usr /usr/local"
++PYTHONDIR="/usr/pkg"
++QT4DIR="/usr/pkg/qt5"
+ QT4DIR_PKGCONFIG=1
+ QT5DIR="/usr/lib/qt5 /usr/share/qt5 /usr/lib64/qt5 /usr /usr/local"
+ QT5DIR_PKGCONFIG=1
+@@ -2119,10 +2119,10 @@ extern "C" int main(void)
+ }
+ EOF
+   found=
+-  SUPPYTHONLIBS="python2.7 python2.6 python3.1 python3.2 python3.3 python3.4 python3.5 python3.5m"
++  SUPPYTHONLIBS="python2.7"
+   for p in $PYTHONDIR; do
+     for d in $SUPPYTHONLIBS; do
+-      for b in lib/x86_64-linux-gnu lib/i386-linux-gnu lib64 lib/64 lib; do
++      for b in lib; do
+         echo "compiling the following source file:" >> $LOG
+         cat $ODIR.tmp_src.cc >> $LOG
+         echo "using the following command line:" >> $LOG
+@@ -2605,6 +2605,62 @@ for option in "$@"; do
+       INCCRYPTO="-I${OPENSSLDIR}/include"
+       LIBCRYPTO="${OPENSSLDIR}/lib/libcrypto.a ${OPENSSLDIR}/lib/libssl.a"
+       ;;
++    --with-openssl-incset=*)
++      OPENSSLINCSET=`echo $option | cut -d'=' -f2`
++      INCCRYPTO="${OPENSSLINCSET}"
++      ;;
++    --with-openssl-libset=*)
++      OPENSSLLIBSET=`echo $option | cut -d'=' -f2`
++      LIBCRYPTO="${OPENSSLLIBSET}"
++      ;;
++    --with-curl-incset=*)
++      CURLINCSET=`echo $option | cut -d'=' -f2`
++      INCCURL="${CURLINCSET}"
++      ;;
++    --with-curl-libset=*)
++      CURLLIBSET=`echo $option | cut -d'=' -f2`
++      LIBCURL="${CURLLIBSET}"
++      ;;
++    --with-zlib-incset=*)
++      ZINCSET=`echo $option | cut -d'=' -f2`
++      INCZ="${ZINCSET}"
++      ;;
++    --with-zlib-libset=*)
++      ZLIBSET=`echo $option | cut -d'=' -f2`
++      LIBZ="${ZLIBSET}"
++      ;;
++    --with-x11-incset=*)
++      X11INCSET=`echo $option | cut -d'=' -f2`
++      INCX11="${X11INCSET}"
++      ;;
++    --with-x11-libset=*)
++      X11LIBSET=`echo $option | cut -d'=' -f2`
++      LIBX11="${X11LIBSET}"
++      ;;
++    --with-pulse-incset=*)
++      PULSEINCSET=`echo $option | cut -d'=' -f2`
++      INCPULSE="${PULSEINCSET}"
++      ;;
++    --with-pulse-libset=*)
++      PULSELIBSET=`echo $option | cut -d'=' -f2`
++      LIBPULSE="${PULSELIBSET}"
++      ;;
++    --with-png-incset=*)
++      PNGINCSET=`echo $option | cut -d'=' -f2`
++      INCPNG="${PNGINCSET}"
++      ;;
++    --with-png-libset=*)
++      PNGLIBSET=`echo $option | cut -d'=' -f2`
++      LIBPNG="${PNGLIBSET}"
++      ;;
++    --with-vpx-incset=*)
++      VPXINCSET=`echo $option | cut -d'=' -f2`
++      INCVPX="${VPXINCSET}"
++      ;;
++    --with-vpx-libset=*)
++      VPXLIBSET=`echo $option | cut -d'=' -f2`
++      LIBVPX="${VPXLIBSET}"
++      ;;
+     --with-ow-dir=*)
+       WATCOM=`echo $option | cut -d'=' -f2`
+       ;;
