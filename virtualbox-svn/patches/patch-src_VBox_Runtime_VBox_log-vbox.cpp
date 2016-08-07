@@ -11,7 +11,7 @@ $NetBSD$
  #  include <sys/param.h>
  #  include <sys/sysctl.h>
 -#  include <sys/user.h>
-+#  if  defined(RT_OS_FREEBSD)
++#  if defined(RT_OS_FREEBSD)
 +#    include <sys/user.h>
 +#  endif
  #  include <stdlib.h>
@@ -33,8 +33,8 @@ $NetBSD$
 +#  elif defined(RT_OS_NETBSD)
 +        aiName[0] = CTL_KERN;
 +        aiName[1] = KERN_PROC_ARGS;
-+        aiName[3] = getpid();
-+        aiName[2] = KERN_PROC_ARGV;
++        aiName[2] = getpid();
++        aiName[3] = KERN_PROC_ARGV;
 +#  endif
          size_t cchArgs = 0;
          int rcBSD = sysctl(aiName, RT_ELEMENTS(aiName), NULL, &cchArgs, NULL, 0);
