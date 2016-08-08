@@ -13,14 +13,17 @@ $NetBSD$
  #elif defined(__OpenBSD__)
  // Can not figure out how to get the proc's start time on OpenBSD
  #    undef kinfo_starttime_member 
-@@ -317,8 +321,13 @@ mono_process_get_times (gpointer pid, gi
+@@ -317,8 +321,16 @@ mono_process_get_times (gpointer pid, gi
  		{
  			KINFO_PROC processi;
  
 -			if (sysctl_kinfo_proc (pid, &processi))
 +			if (sysctl_kinfo_proc (pid, &processi)) {
 +#if defined(__NetBSD__)
-+				*start_time = (gint64)processi.kinfo_starttime_member;
++				struct timeval tv;
++				tv.tv_sec = processi.kinfo_starttime_member;
++				tv.tv_usec = processi.p_ustart_usec;
++				*start_time = mono_100ns_datetime_from_timeval(tv);
 +#else
  				*start_time = mono_100ns_datetime_from_timeval (processi.kinfo_starttime_member);
 +#endif
