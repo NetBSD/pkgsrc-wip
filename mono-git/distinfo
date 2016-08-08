@@ -6,3 +6,4 @@ SHA512 (mono-4.4.0.122.tar.bz2) = 264b3779fc94e40c44f8cc637169d7f3a6367ead75b932
 Size (mono-4.4.0.122.tar.bz2) = 84904723 bytes
 SHA1 (patch-eglib_src_giconv.c) = b56e6d328f614d7f70e156a2458b11b36b439f28
 SHA1 (patch-mono_utils_mono-logger.c) = 280e1bf49b79adf57823723287dbc88639d13551
+SHA1 (patch-mono_utils_mono-proclib.c) = 513cfbaef2221397ec7efa3b6a0babcf02a1fe43
