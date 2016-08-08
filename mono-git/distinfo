@@ -5,5 +5,6 @@ RMD160 (mono-4.4.0.122.tar.bz2) = 41d58720d7cb4f510cad64c1dbecdd9a6c9d19a1
 SHA512 (mono-4.4.0.122.tar.bz2) = 264b3779fc94e40c44f8cc637169d7f3a6367ead75b932069bc0498d53c13ea62ef5711784d1bc0767b85e0cb04424b9eee0ce7ed10772076902b55210097a10
 Size (mono-4.4.0.122.tar.bz2) = 84904723 bytes
 SHA1 (patch-eglib_src_giconv.c) = b56e6d328f614d7f70e156a2458b11b36b439f28
+SHA1 (patch-mono_io-layer_io.c) = 5acc0d4fdecc36e7aab5db9d0ca38d415923a996
 SHA1 (patch-mono_utils_mono-logger.c) = 280e1bf49b79adf57823723287dbc88639d13551
 SHA1 (patch-mono_utils_mono-proclib.c) = da14c51074c2d5096699834cc29b1a222177070e
