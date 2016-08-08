@@ -5,5 +5,6 @@ RMD160 (mono-4.4.0.122.tar.bz2) = 41d58720d7cb4f510cad64c1dbecdd9a6c9d19a1
 SHA512 (mono-4.4.0.122.tar.bz2) = 264b3779fc94e40c44f8cc637169d7f3a6367ead75b932069bc0498d53c13ea62ef5711784d1bc0767b85e0cb04424b9eee0ce7ed10772076902b55210097a10
 Size (mono-4.4.0.122.tar.bz2) = 84904723 bytes
 SHA1 (patch-eglib_configure.ac) = e9cac305765024018f01271786ed80ee7c44b814
+SHA1 (patch-eglib_src_giconv.c) = b56e6d328f614d7f70e156a2458b11b36b439f28
 SHA1 (patch-mono_utils_Makefile.am) = b3bf378d1576c98262dce0a1b08bf45d013fa323
 SHA1 (patch-mono_utils_mono-threads-netbsd.c) = 244d88cd407bc28f498bb2e35b44304a7c911325
