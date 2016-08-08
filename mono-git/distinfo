@@ -4,6 +4,7 @@ SHA1 (mono-4.4.0.122.tar.bz2) = 132a8e9aa422e82ccdb776c7cc1db89ce140b0b3
 RMD160 (mono-4.4.0.122.tar.bz2) = 41d58720d7cb4f510cad64c1dbecdd9a6c9d19a1
 SHA512 (mono-4.4.0.122.tar.bz2) = 264b3779fc94e40c44f8cc637169d7f3a6367ead75b932069bc0498d53c13ea62ef5711784d1bc0767b85e0cb04424b9eee0ce7ed10772076902b55210097a10
 Size (mono-4.4.0.122.tar.bz2) = 84904723 bytes
+SHA1 (patch-eglib_configure.ac) = e9cac305765024018f01271786ed80ee7c44b814
 SHA1 (patch-mono_io-layer_io.c) = 03b4b03abc2f6dbb5fed39f07b8a1bc23cca07b8
 SHA1 (patch-mono_metadata_mono-perfcounters.c) = 6b4b4019e09e529c2f6f8faa3936e3ac91ddfe17
 SHA1 (patch-mono_utils_Makefile.am) = b3bf378d1576c98262dce0a1b08bf45d013fa323
