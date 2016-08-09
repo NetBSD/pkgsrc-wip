@@ -1,11 +1,10 @@
 $NetBSD: distinfo,v 1.37 2016/07/18 20:37:40 bsiegert Exp $
 
-SHA1 (go1.6.3.src.tar.gz) = b487b9127afba37e6c62305165bf840758d6adaf
-RMD160 (go1.6.3.src.tar.gz) = 215142f0c2f67a49fec97056974113caca95672b
-SHA512 (go1.6.3.src.tar.gz) = 43e9b01220788112a185500bd53f091e7a0023a790092f428e2f40fc1a334dd148558b99d2a1c871b8cc79ad7d2d87a092b93eee7b5a27c2ee675c494de35306
-Size (go1.6.3.src.tar.gz) = 12617426 bytes
+SHA1 (go1.7rc6.src.tar.gz) = 6a3300446e98a1b7a195b526a6e753684027c525
+RMD160 (go1.7rc6.src.tar.gz) = fa115a1cb82f7dacf661bade413fb48ebbc23c2b
+SHA512 (go1.7rc6.src.tar.gz) = 1e6cb6f086450c472f405ad5baf46cd52c6c2f366116d2b62fbc27475c836c550420c835eb60224252daef4c29631d035a3d78b1f9c6ad2c84bfb5a4658a33b2
+Size (go1.7rc6.src.tar.gz) = 14092130 bytes
 SHA1 (patch-lib_time_update.bash) = bcf565b97ae7898a9e5cef7686fe42c69bc0bba1
 SHA1 (patch-misc_io_clangwrap.sh) = cd91c47ba0fe7b6eb8009dd261c0c26c7d581c29
-SHA1 (patch-src_cmd_go_pkg.go) = ccc470577951bd00741c39229599c0c06be52d0a
 SHA1 (patch-src_crypto_x509_root__bsd.go) = 0eca1eafa967268ae9b224be4aeda347ebc91901
 SHA1 (patch-src_syscall_syscall__solaris.go) = 436371947897dcba574a6dfecc6bbcd04f6e25b2
