@@ -1,0 +1,8 @@
+Quick Facts:
+ * It's a proxifier.
+ * Dedicated OS: Linux/BSD/Solaris.
+ * Intercepts and hooks TCP calls made by any given Internet client.
+ * Allows remote TCP tunneling through proxies.
+ * Supports HTTP-CONNECT, SOCKS4 and SOCKS5 proxy servers.
+ * Different proxy types can be mixed in the same chain.
+ * Proxy chain: user-defined list of proxies chained together.
