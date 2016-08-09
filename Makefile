@@ -2574,6 +2574,7 @@ SUBDIR+=	proplib
 SUBDIR+=	proselint
 SUBDIR+=	prover9
 SUBDIR+=	proxychains
+SUBDIR+=	proxychains-ng
 SUBDIR+=	proxyknife
 SUBDIR+=	prozilla
 SUBDIR+=	prpltwtr
