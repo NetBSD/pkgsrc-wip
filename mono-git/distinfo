@@ -4,5 +4,6 @@ SHA1 (mono-4.4.0.122.tar.bz2) = 132a8e9aa422e82ccdb776c7cc1db89ce140b0b3
 RMD160 (mono-4.4.0.122.tar.bz2) = 41d58720d7cb4f510cad64c1dbecdd9a6c9d19a1
 SHA512 (mono-4.4.0.122.tar.bz2) = 264b3779fc94e40c44f8cc637169d7f3a6367ead75b932069bc0498d53c13ea62ef5711784d1bc0767b85e0cb04424b9eee0ce7ed10772076902b55210097a10
 Size (mono-4.4.0.122.tar.bz2) = 84904723 bytes
+SHA1 (patch-mono_io-layer_io.c) = 1561bbcc949f4e5c459bdf0f6be60f572df8364c
 SHA1 (patch-mono_metadata_mono-perfcounters.c) = 8b5b6fb08333e3f2993e24e6799227daf8d5c903
 SHA1 (patch-mono_utils_mono-proclib.c) = da14c51074c2d5096699834cc29b1a222177070e
