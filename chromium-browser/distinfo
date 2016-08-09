@@ -1,12 +1,11 @@
 $NetBSD: distinfo,v 1.11 2012/11/17 02:57:11 gduzan Exp $
 
-SHA1 (chromium-browser/54.0.2820.1.tar.gz) = e190966d1f71a722dbd502d08566432103924448
-RMD160 (chromium-browser/54.0.2820.1.tar.gz) = 20c76bd182bb529a927d479e12039bac57733a31
-SHA512 (chromium-browser/54.0.2820.1.tar.gz) = b8d8e5144964217a367ff672326de729db29e1cd1fb07b51e5d21d7343e2d7d37212b41843f74965f675e473e04b9a75c5115a814a73e8593a02e9684af493e2
-Size (chromium-browser/54.0.2820.1.tar.gz) = 777748332 bytes
+SHA1 (chromium-browser/chromium-54.0.2823.2.tar.xz) = 376d0423d71bd975bd3ed36d5afb5913a6ac9076
+RMD160 (chromium-browser/chromium-54.0.2823.2.tar.xz) = 3ed9aa58b22677850bd447f6f215da3c373da7bb
+SHA512 (chromium-browser/chromium-54.0.2823.2.tar.xz) = f07d0410018cc243bb640f4b30234f081e1b9453088bb236acc6a837c40c084e98fe87c229b4ad3b96f64ca0bd307cdc8af166aad62d152b657c64b4964df7d3
+Size (chromium-browser/chromium-54.0.2823.2.tar.xz) = 459527568 bytes
 SHA1 (patch-base_BUILD.gn) = 86e371e11400408bb00efa0cd9950c3661a75241
 SHA1 (patch-base_debug_debugger__posix.cc) = d8e481b42d981d6a69c7bd4f48fc2b3a0e5fca3f
-SHA1 (patch-base_debug_debugging__flags.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-base_message__loop_message__loop.cc) = 134ab83da65cdba2bee7ea0f8aba58a9ae2a2934
 SHA1 (patch-base_process_process__handle__netbsd.cc) = ab7cfee4e3107edc8759fc8645570c9cbbe2f82b
 SHA1 (patch-base_process_process__iterator.h) = 5fd886e1cb2e514949a36d60bae7f81747199de2
@@ -25,14 +24,11 @@ SHA1 (patch-base_trace__event_process__memory__dump.cc) = 93f2cbf50de0101fb96e68
 SHA1 (patch-build_config_BUILDCONFIG.gn) = 8c4b8fc0ecb1f85a4fa496dc571c268a0dc0ce83
 SHA1 (patch-build_config_compiler_BUILD.gn) = 1fed5346671a1217fdcf24bfaa07dfee123ac5e1
 SHA1 (patch-build_toolchain_netbsd_BUILD.gn) = a725cd331e1da37a14f9d907ead139129fb096a8
-SHA1 (patch-chrome_common_extensions_docs_examples_api_nativeMessaging_host_install__host.sh) = f5ef66b075389663f6dbdce5dfb35643d15c6915
-SHA1 (patch-chrome_common_extensions_docs_examples_api_nativeMessaging_host_uninstall__host.sh) = 60e326221e112afa074eb9abdaf4c77024b5000c
 SHA1 (patch-third__party_icu_android_patch__locale.sh) = 136608a43c01d456f80e094c7d79a90dd5e35b76
 SHA1 (patch-third__party_icu_source_configure) = 288bb5fb8e0ad5320b1dd40463148b36943576a1
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = 37b9e9d045488d4363b004ac7622fc16ea1da377
 SHA1 (patch-tools_battor__agent_BUILD.gn) = 957316e0916dfc4063d6cea68a96d3154d0ade2a
 SHA1 (patch-tools_gn_bootstrap_bootstrap.py) = 5868d6842def588c3eaef5d69473543d8eff40d0
-SHA1 (patch-tools_gn_function__exec__script.cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-tools_gn_setup.cc) = aaa675ca5d96d981c6264e8332b26fc560d3101a
 SHA1 (patch-tools_gn_variables.cc) = f5b38601e616696f370e0a22b3dbbff7abb628f6
 SHA1 (patch-v8_tools_run-llprof.sh) = 8ea2932981ce8d89f0cc2cd8979bd5e07870645e
