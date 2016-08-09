@@ -11,6 +11,7 @@ SHA1 (patch-ao) = 737e5a29bd190b86690b83b3d66ccc804d12cbb7
 SHA1 (patch-ap) = e3f01d848a1e4fd0e2c4a13bfd6d58d11a5e1c77
 SHA1 (patch-aq) = 03f81f9d5d230631f137213348886740c4601515
 SHA1 (patch-bin_ad_ad__cp.c) = 800ccbcbf377df4138be68a63d31660cb90dffae
+SHA1 (patch-config_pam_Makefile.in) = 919d3336727d64ad4324501b010484465119af83
 SHA1 (patch-distrib_initscripts_Makefile.in) = fc9f9f437e5304996bf30ee666ef31b7f004561f
 SHA1 (patch-etc_afpd_quota_c) = bb439c3b293c7349ba53b1cdf98d2e6c961b8648
 SHA1 (patch-include_atalk_acl.h) = f4e3792af86839f3e71fda84c471c01f9ded275e
