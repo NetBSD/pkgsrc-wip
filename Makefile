@@ -3729,6 +3729,7 @@ SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-libv8
 SUBDIR+=	ruby-mustache
+SUBDIR+=	ruby-neovim
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-rdiscount
 SUBDIR+=	ruby-redmine
