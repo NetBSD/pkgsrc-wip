@@ -1,0 +1,13 @@
+$NetBSD$
+
+- This package should probably eventually replace wip/proxychains/
+  which uses a codebase that is apparently no longer maintained.
+- It does not use a standard GNU configure script, and with the
+  combination of NetBSD-7/pkgsrc-2016Q2, the build is broken if not
+  explicitely doing it in do-build:; it appears that although the
+  configure script does place its variables in its config.mak, and
+  its Makefile does include that file, the -D flags do not propagate
+  properly, causing a build failure in relation to inaddr OS-specifics.
+  It is unclear to me exactly why.  As a result of all this, the
+  package may not be as portable as it should be.
+- Lacks a manual page.
