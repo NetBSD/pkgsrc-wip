@@ -62,6 +62,7 @@ share/nvim/runtime/autoload/provider/python.vim
 share/nvim/runtime/autoload/provider/python3.vim
 share/nvim/runtime/autoload/provider/pythonx.vim
 share/nvim/runtime/autoload/provider/ruby.vim
+share/nvim/runtime/autoload/provider/script_host.rb
 share/nvim/runtime/autoload/python3complete.vim
 share/nvim/runtime/autoload/pythoncomplete.vim
 share/nvim/runtime/autoload/remote/define.vim
@@ -74,7 +75,6 @@ share/nvim/runtime/autoload/syntaxcomplete.vim
 share/nvim/runtime/autoload/tar.vim
 share/nvim/runtime/autoload/tohtml.vim
 share/nvim/runtime/autoload/tutor.vim
-share/nvim/runtime/autoload/vimball.vim
 share/nvim/runtime/autoload/vimexpect.vim
 share/nvim/runtime/autoload/xml/html32.vim
 share/nvim/runtime/autoload/xml/html401f.vim
@@ -192,6 +192,7 @@ share/nvim/runtime/doc/helphelp.txt
 share/nvim/runtime/doc/howto.txt
 share/nvim/runtime/doc/if_cscop.txt
 share/nvim/runtime/doc/if_pyth.txt
+share/nvim/runtime/doc/if_ruby.txt
 share/nvim/runtime/doc/indent.txt
 share/nvim/runtime/doc/index.txt
 share/nvim/runtime/doc/insert.txt
@@ -218,7 +219,6 @@ share/nvim/runtime/doc/pi_paren.txt
 share/nvim/runtime/doc/pi_spec.txt
 share/nvim/runtime/doc/pi_tar.txt
 share/nvim/runtime/doc/pi_tutor.txt
-share/nvim/runtime/doc/pi_vimball.txt
 share/nvim/runtime/doc/pi_zip.txt
 share/nvim/runtime/doc/print.txt
 share/nvim/runtime/doc/provider.txt
@@ -330,6 +330,7 @@ share/nvim/runtime/ftplugin/dosbatch.vim
 share/nvim/runtime/ftplugin/dosini.vim
 share/nvim/runtime/ftplugin/dtd.vim
 share/nvim/runtime/ftplugin/dtrace.vim
+share/nvim/runtime/ftplugin/eiffel.vim
 share/nvim/runtime/ftplugin/elinks.vim
 share/nvim/runtime/ftplugin/erlang.vim
 share/nvim/runtime/ftplugin/eruby.vim
@@ -685,6 +686,13 @@ share/nvim/runtime/makemenu.vim
 share/nvim/runtime/menu.vim
 share/nvim/runtime/mswin.vim
 share/nvim/runtime/optwin.vim
+share/nvim/runtime/pack/dist/opt/justify/plugin/justify.vim
+share/nvim/runtime/pack/dist/opt/shellmenu/plugin/shellmenu.vim
+share/nvim/runtime/pack/dist/opt/swapmouse/plugin/swapmouse.vim
+share/nvim/runtime/pack/dist/opt/vimball/autoload/vimball.vim
+share/nvim/runtime/pack/dist/opt/vimball/doc/tags
+share/nvim/runtime/pack/dist/opt/vimball/doc/vimball.txt
+share/nvim/runtime/pack/dist/opt/vimball/plugin/vimballPlugin.vim
 share/nvim/runtime/plugin/gzip.vim
 share/nvim/runtime/plugin/health.vim
 share/nvim/runtime/plugin/man.vim
@@ -698,7 +706,6 @@ share/nvim/runtime/plugin/spellfile.vim
 share/nvim/runtime/plugin/tarPlugin.vim
 share/nvim/runtime/plugin/tohtml.vim
 share/nvim/runtime/plugin/tutor.vim
-share/nvim/runtime/plugin/vimballPlugin.vim
 share/nvim/runtime/plugin/zipPlugin.vim
 share/nvim/runtime/print/ascii.ps
 share/nvim/runtime/print/cidfont.ps
