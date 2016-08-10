@@ -1,8 +1,8 @@
 $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
 
---- configure.orig	2015-08-04 07:48:54.000000000 +0000
+--- configure.orig	2014-09-04 07:28:57.000000000 +0000
 +++ configure
-@@ -3983,7 +3983,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+@@ -4025,7 +4025,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		mono_cv_clang=no
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
@@ -11,22 +11,7 @@ $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
  
  $as_echo "#define TARGET_WIN32 1" >>confdefs.h
  
-@@ -4020,10 +4020,13 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
- 		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
- 		libmono_ldflags="-pthread"
- 		need_link_unlink=yes
--		libdl="-ldl"
-+		libdl="-ldl /libexec/ld.elf_so"
- 		libgc_threads=pthreads
- 		with_sigaltstack=no
- 		use_sigposix=yes
-+		cat >>confdefs.h <<\_ACEOF
-+#define PTHREAD_POINTER_ID 1
-+_ACEOF
- 		;;
- 	*-*-kfreebsd*-gnu)
- 		host_win32=no
-@@ -4036,7 +4039,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4067,7 +4067,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		with_sigaltstack=no
  		use_sigposix=yes
  		;;
@@ -35,7 +20,7 @@ $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -4052,7 +4055,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4083,7 +4083,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS -L/usr/local/lib"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -45,7 +30,7 @@ $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -21999,9 +22003,7 @@ done
+@@ -21699,9 +21700,7 @@ done
  			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Solaris XPG4 support" >&5
  $as_echo_n "checking for Solaris XPG4 support... " >&6; }
  			if test -f /usr/lib/libxnet.so; then
@@ -55,16 +40,7 @@ $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
             			LIBS="$LIBS -lxnet"
    	    			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
-@@ -25084,7 +25086,7 @@ else
-   test_perf_events=no
- fi
- 
--if test "x$test_perf_events" == "xyes"; then
-+if test "x$test_perf_events" = "xyes"; then
- 
- $as_echo "#define ENABLE_PERF_EVENTS 1" >>confdefs.h
- 
-@@ -25422,7 +25424,7 @@ $as_echo_n "checking LLVM version... " >
+@@ -24919,7 +24918,7 @@ $as_echo_n "checking LLVM version... " >
     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $llvm_version" >&5
  $as_echo "$llvm_version" >&6; }
     if echo $llvm_version | grep -q 'mono'; then
@@ -73,16 +49,7 @@ $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
  	  	 if test "$llvm_version" != "$expected_llvm_version"; then
  	  	 	as_fn_error $? "Expected llvm version $expected_llvm_version, but llvm-config --version returned $llvm_version\"" "$LINENO" 5
  	  	 fi
-@@ -25504,7 +25506,7 @@ LIBC="libc.so.6"
- INTL="libc.so.6"
- SQLITE="libsqlite.so.0"
- SQLITE3="libsqlite3.so.0"
--X11="libX11.so"
-+X11="/usr/X11R7/lib/libX11.so"
- GDKX11="libgdk-x11-2.0.so.0"
- GTKX11="libgtk-x11-2.0.so.0"
- XINERAMA="libXinerama.so.1"
-@@ -25608,6 +25610,11 @@ $as_echo "#define __mono_ilp32__ 1" >>co
+@@ -25103,6 +25102,11 @@ $as_echo "#define __mono_ilp32__ 1" >>co
  			sizeof_register=8
  		fi
  		case $host_os in
@@ -94,26 +61,7 @@ $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
  		  linux*)
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
-@@ -25739,12 +25746,15 @@ fi
- 		CPPFLAGS="$CPPFLAGS -D__ARM_EABI__"
- 		sgen_supported=true
- 		;;
--	arm*-linux*)
-+	arm*-linux* | arm*-netbsd* | earm*-netbsd*)
- 		TARGET=ARM;
- 		arch_target=arm;
- 		ACCESS_UNALIGNED="no"
--		sgen_supported=true
--		AOT_SUPPORTED="yes"
-+		case $host_os in
-+		  *linux)
-+			sgen_supported=true
-+			AOT_SUPPORTED="yes"
-+		esac
- 		CPPFLAGS="$CPPFLAGS -D__ARM_EABI__"
- 		;;
- # TODO: make proper support for NaCl host.
-@@ -25854,7 +25864,7 @@ $as_echo "#define TARGET_X86 1" >>confde
+@@ -25361,7 +25365,7 @@ $as_echo "#define TARGET_X86 1" >>confde
  
  		sizeof_register=4
  		;;
@@ -122,28 +70,7 @@ $NetBSD: patch-configure,v 1.3 2015/08/25 12:23:00 wiz Exp $
  		TARGET=ARM;
  		arch_target=arm;
  
-@@ -26198,15 +26208,17 @@ case "$host" in
- 	GTKX11="libgtk-x11-2.0.dylib"
- 	;;
-      *-*-*netbsd*)
--	LIBC="libc.so.12"
--	INTL="libintl.so.0"
-+	LIBC="libc.so"
-+	INTL="libintl.so"
-+	SQLITE="libsqlite.so"
-+	SQLITE3="libsqlite3.so"
- 	;;
-      *-*-kfreebsd*-gnu)
- 	LIBC="libc.so.0.1"
- 	INTL="libc.so.0.1"
- 	X11="libX11.so.6"
- 	;;
--    *-*-*freebsd*)
-+    *-*-*freebsd* | *-*-*dragonfly*)
-     	LIBC="libc.so"
- 	INTL="libintl.so"
- 	SQLITE="libsqlite.so"
-@@ -27193,7 +27205,6 @@ else
+@@ -26693,7 +26697,6 @@ else
  fi
  
  
