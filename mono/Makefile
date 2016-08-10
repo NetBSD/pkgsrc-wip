@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.168 2016/02/24 16:48:09 jperkin Exp $
 
-DISTNAME=	mono-4.4.0.122
+DISTNAME=	mono-4.6.0.125
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,10 +10,11 @@ HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
+WRKSRC=		${WRKDIR}/${DISTNAME:R}
+
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q} PLATFORM=
-WRKSRC=		${WRKDIR}/mono-4.0.4
 
 USE_TOOLS+=	bash:run bison gmake gtar msgfmt perl:run pkg-config
 USE_LIBTOOL=	yes
