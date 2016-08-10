@@ -70,9 +70,6 @@ SUBST_FILES.python+=	tools/memory_inspector/memory_inspector_cli
 SUBST_FILES.python+=	tools/usb_gadget/server.py
 SUBST_STAGE.python=     pre-build
 
-# Fix building C++11 code
-CXXFLAGS+=		-std=gnu++11
-
 do-build:
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${PYTHONBIN} ./tools/gn/bootstrap/bootstrap.py
 
