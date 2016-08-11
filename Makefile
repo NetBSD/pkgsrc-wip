@@ -2977,6 +2977,7 @@ SUBDIR+=	py-hmf
 SUBDIR+=	py-holoviews
 SUBDIR+=	py-hope
 SUBDIR+=	py-hostlist
+SUBDIR+=	py-html
 SUBDIR+=	py-htmlparser
 SUBDIR+=	py-htseq
 SUBDIR+=	py-httpretty
