@@ -10,6 +10,6 @@ SHA1 (patch-src_VBox_Installer_darwin_VirtualBox_postflight) = d073de54d5de4f61e
 SHA1 (patch-src_VBox_Installer_darwin_VirtualBox_preflight) = f24f7d6dd449e6ad664b8e5a8f5861dd7e0f13e8
 SHA1 (patch-src_VBox_Main_cbinding_VBoxCAPIGlue.c) = 03d23375afaf4448751141bedb7771abc7635f3c
 SHA1 (patch-src_VBox_Main_glue_NativeEventQueue.cpp) = 58ff96858e861b03a495323fd5d6141044ac36f5
-SHA1 (patch-src_VBox_Runtime_Makefile.kmk) = 9b59aa4f151abecbbe25ce5d300789cc9ad0c86f
+SHA1 (patch-src_VBox_Runtime_Makefile.kmk) = deaa4e4f3d2fcbf0de22b430b547f63d075ca670
 SHA1 (patch-src_VBox_Runtime_r0drv_netbsd_the-netbsd-kernel.h) = 45e4d9f4a67449099651e96b54b7d108bebe606c
 SHA1 (patch-src_VBox_VMM_testcase_mkdsk.sh) = d949a78be396466636aa2c8d92e6ecf76725f336
