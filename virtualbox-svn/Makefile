@@ -52,7 +52,7 @@ VBLIBDIR=	${PREFIX}/lib/virtualbox
 KMK_ENV_VARS+=	KBUILD_PATH=${WRKSRC}/kBuild
 KMK_ENV_VARS+=	KBUILD_LIB_SEARCH_ROOTS="/ /usr/ ${X11BASE}/ ${PREFIX}/"
 # Multiple jobs tend to be broken
-KMK_FLAGS+=	-j1
+KMK_FLAGS+=	-j${MAKE_JOBS}
 
 .if ${OPSYS} == "NetBSD"
 BUILDLINK_PASSTHRU_DIRS+=	/usr/src
@@ -101,6 +101,7 @@ do-build:
 do-install:
 	${RUN} cd ${WRKSRC} && . ./env.sh && kmk install
 
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/mk/svn-package2.mk"
 .include "../../mk/java-vm.mk"
 .include "../../net/libIDL/buildlink3.mk"
