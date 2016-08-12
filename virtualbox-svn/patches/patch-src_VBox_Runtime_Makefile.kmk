@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- src/VBox/Runtime/Makefile.kmk.orig	2016-08-12 18:06:15.000000000 +0000
++++ src/VBox/Runtime/Makefile.kmk
+@@ -1984,6 +1984,8 @@ RuntimeR0Drv_INCS.freebsd = \
+ 	$(PATH_STAGE)/gen-sys-hdrs
+ RuntimeR0Drv_INCS.linux = \
+ 	r0drv/linux
++RuntimeR0Drv_INCS.netbsd  = \
++	/usr/src/sys
+ RuntimeR0Drv_INCS.solaris = \
+ 	r0drv/solaris/vbi/i86pc \
+ 	r0drv/solaris/vbi/i86pc/sys
+@@ -3127,4 +3129,3 @@ taf-template.o taf-template.obj: taf-cor
+ tsp-template.o tsp-template.obj: tsp-core.o tsp-asn1-decoder.o tsp-sanity.o tsp-init.o
+ x509-template.o x509-template.obj: x509-core.o x509-asn1-decoder.o x509-sanity.o x509-init.o
+ pkcs7-template.o pkcs7-template.obj: pkcs7-core.o pkcs7-asn1-decoder.o pkcs7-sanity.o pkcs7-init.o
+-
