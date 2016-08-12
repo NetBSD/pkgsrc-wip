@@ -2,9 +2,7 @@
 
 
 SVN_REPOSITORIES=	mirror
-SVN_ROOT.mirror=	https://www.virtualbox.org/svn/vbox
-
-.include "../../wip/mk/svn-package.mk"
+SVN_REPO.mirror=	https://www.virtualbox.org/svn/vbox
 
 PKGNAME=	virtualbox-0.0.0
 CATEGORIES=	emulators
@@ -99,6 +97,7 @@ do-build:
 do-install:
 	${RUN} cd ${WRKSRC} && . ./env.sh && kmk install
 
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/java-vm.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
