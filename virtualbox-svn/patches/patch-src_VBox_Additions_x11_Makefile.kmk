@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- src/VBox/Additions/x11/Makefile.kmk.orig	2016-08-05 17:44:25.000000000 +0000
++++ src/VBox/Additions/x11/Makefile.kmk
+@@ -20,7 +20,7 @@ include $(KBUILD_PATH)/subheader.kmk
+ # Include sub-makefiles.
+ if1of ($(KBUILD_TARGET), freebsd linux netbsd openbsd solaris)
+  include $(PATH_SUB_CURRENT)/VBoxClient/Makefile.kmk
+- include $(PATH_SUB_CURRENT)/vboxvideo/Makefile.kmk
++# include $(PATH_SUB_CURRENT)/vboxvideo/Makefile.kmk
+  ifneq ($(KBUILD_TARGET), solaris)
+   include $(PATH_SUB_CURRENT)/vboxmouse/Makefile.kmk
+  endif
+@@ -30,4 +30,3 @@ if1of ($(KBUILD_TARGET), freebsd linux n
+ endif
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-

@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- src/VBox/Additions/x11/vboxvideo/Makefile.kmk.orig	2016-08-05 17:26:18.000000000 +0000
++++ src/VBox/Additions/x11/vboxvideo/Makefile.kmk
+@@ -95,6 +95,7 @@ vboxvideo_drv_INCS = \
+ 	$(VBOX_PATH_X11_XFREE_4_3)/programs/Xserver/randr \
+ 	$(VBOX_PATH_X11_XFREE_4_3)/programs/Xserver/Xext
+ vboxvideo_drv_INCS += $(PATH_ROOT)/src/VBox/Runtime/include
++#vboxvideo_drv_INCS += /usr/X11R7/include
+ vboxvideo_drv_SOURCES = \
+ 	getmode.c \
+ 	helpers.c \
