@@ -11,7 +11,52 @@ $NetBSD$
  RuntimeR0Drv_INCS.solaris = \
  	r0drv/solaris/vbi/i86pc \
  	r0drv/solaris/vbi/i86pc/sys
-@@ -3127,4 +3129,3 @@ taf-template.o taf-template.obj: taf-cor
+@@ -2514,6 +2516,11 @@ RuntimeR0Drv_ORDERDEPS.freebsd = \
+ 	$(PATH_STAGE)/gen-sys-hdrs/bus_if.h \
+ 	$(PATH_STAGE)/gen-sys-hdrs/device_if.h
+ 
++RuntimeR0Drv_ORDERDEPS.netbsd = \
++	$(PATH_STAGE)/machine/bus_defs.h \
++	$(PATH_STAGE)/x86/bus_defs.h \
++	$(PATH_STAGE)/x86/busdefs.h
++
+ 
+ #
+ # RuntimeGuestR0 - Guest driver runtime.
+@@ -2830,6 +2837,32 @@ $$(FreeBSDGeneratedKernelHeaders_0_OUTDI
+ endif # FreeBSD
+ 
+ 
++if "$(KBUILD_TARGET)" == "netbsd"
++# Cherry-pick useful headers and simulate the <machine/*.h> header space
++INSTALLS += NetBSDGeneratedKernelHeadersMachine
++NetBSDGeneratedKernelHeadersMachine_INST = machine/
++NetBSDGeneratedKernelHeadersMachine_SOURCES = \
++	$(NetBSDGeneratedKernelHeadersMachine_0_OUTDIR)/bus_defs.h
++NetBSDGeneratedKernelHeadersMachine_CLEAN = $(NetBSDGeneratedKernelHeadersMachine_SOURCES)
++
++$$(NetBSDGeneratedKernelHeadersMachine_0_OUTDIR)/bus_defs.h: /usr/src/sys/arch/amd64/include/bus_defs.h | $$(dir $$@)
++	$(QUIET)$(CP) -f $< $(@D)/bus_defs.h
++
++# Cherry-pick useful headers and simulate the <x86/*.h> header space
++INSTALLS += NetBSDGeneratedKernelHeadersX86
++NetBSDGeneratedKernelHeadersX86_INST = x86/
++NetBSDGeneratedKernelHeadersX86_SOURCES = \
++	$(NetBSDGeneratedKernelHeadersX86_0_OUTDIR)/bus_defs.h \
++	$(NetBSDGeneratedKernelHeadersX86_0_OUTDIR)/busdefs.h
++NetBSDGeneratedKernelHeadersX86_CLEAN = $(NetBSDGeneratedKernelHeadersX86_SOURCES)
++
++$$(NetBSDGeneratedKernelHeadersX86_0_OUTDIR)/bus_defs.h: /usr/src/sys/arch/x86/include/bus_defs.h | $$(dir $$@)
++	$(QUIET)$(CP) -f $< $(@D)/bus_defs.h
++
++$$(NetBSDGeneratedKernelHeadersX86_0_OUTDIR)/busdefs.h: /usr/src/sys/arch/x86/include/busdefs.h | $$(dir $$@)
++	$(QUIET)$(CP) -f $< $(@D)/busdefs.h
++endif # NetBSD
++
+ #
+ # Aliases for .cpp.h files so we can more easily do syntax checking from the editor.
+ #
+@@ -3127,4 +3160,3 @@ taf-template.o taf-template.obj: taf-cor
  tsp-template.o tsp-template.obj: tsp-core.o tsp-asn1-decoder.o tsp-sanity.o tsp-init.o
  x509-template.o x509-template.obj: x509-core.o x509-asn1-decoder.o x509-sanity.o x509-init.o
  pkcs7-template.o pkcs7-template.obj: pkcs7-core.o pkcs7-asn1-decoder.o pkcs7-sanity.o pkcs7-init.o

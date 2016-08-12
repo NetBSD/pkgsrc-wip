@@ -54,6 +54,10 @@ KMK_ENV_VARS+=	KBUILD_LIB_SEARCH_ROOTS="/ /usr/ ${X11BASE}/ ${PREFIX}/"
 # Multiple jobs tend to be broken
 KMK_FLAGS+=	-j1
 
+.if ${OPSYS} == "NetBSD"
+BUILDLINK_PASSTHRU_DIRS+=	/usr/src
+.endif
+
 CONFIGURE_ARGS+=	--with-kbuild=${PREFIX}/share/kBuild/
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 CONFIGURE_ARGS+=	--with-openssl-incset="-I${BUILDLINK_PREFIX.openssl}/include"
