@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- src/Mod/Mesh/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Mesh/CMakeLists.txt
+@@ -11,5 +11,5 @@ INSTALL(
+         BuildRegularGeoms.py
+         App/MeshTestsApp.py
+     DESTINATION
+-        Mod/Mesh
++        freecad/Mod/Mesh
+ )

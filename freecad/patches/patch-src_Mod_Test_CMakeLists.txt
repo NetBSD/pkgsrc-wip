@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Mod/Test/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Test/CMakeLists.txt
+@@ -25,7 +25,7 @@ INSTALL(
+     FILES
+         ${Test_SRCS}
+     DESTINATION
+-        Mod/Test
++        freecad/Mod/Test
+ )
+ 
+ if(BUILD_GUI)

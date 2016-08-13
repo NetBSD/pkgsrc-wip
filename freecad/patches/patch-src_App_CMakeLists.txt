@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- src/App/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/App/CMakeLists.txt
+@@ -12,6 +12,10 @@ IF(DOCDIR)
+     add_definitions(-DDOCDIR="${DOCDIR}")
+ ENDIF(DOCDIR)
+ 
++IF(HOMEDIR)
++    add_definitions(-DHOMEDIR="${HOMEDIR}")
++ENDIF(HOMEDIR)
++
+ include_directories(
+     ${CMAKE_BINARY_DIR}/src
+     ${CMAKE_SOURCE_DIR}/src

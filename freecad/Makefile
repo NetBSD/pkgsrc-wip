@@ -1,27 +1,64 @@
 # $NetBSD$
+#
 
-DISTNAME=	FreeCAD-0.16
-PKGNAME=	${DISTNAME:tl}
+DISTNAME=	freecad-0.16
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FreeCAD/}
+GITHUB_PROJECT=	FreeCAD
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freecadweb.org
-COMMENT=	General purpose feature-based, parametric 3D modeler
+MAINTAINER=	rumko@NetBSD.org
+HOMEPAGE=	http://www.freecadweb.org/
+COMMENT=	General purpose parametric 3D CAD modeler
 LICENSE=	gnu-lgpl-v2
 
-WRKSRC=		${WRKDIR}/FreeCAD-0.16
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config bash
-USE_LANGUAGES=	c c++ fortran
+WRKSRC=		${WRKDIR}/FreeCAD-${PKGVERSION_NOREV}
 
-PKGCONFIG_OVERRIDE+=	src/Mod/Robot/App/kdl_cp/kdl.pc.in
+#USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
+USE_TOOLS+=		perl
 
-# Fix this
-.include "../../wip/py-pyside-shiboken/buildlink3.mk"
-.include "../../graphics/Coin/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../math/eigen3/buildlink3.mk"
+CXXFLAGS.FreeBSD+=	-fPIC
+LDFLAGS.FreeBSD+=	-fPIC
+
+CMAKE_ARGS+=		-DCMAKE_INSTALL_HOMEDIR:PATH=${PREFIX:Q}/freecad
+CMAKE_ARGS+=		-DCMAKE_CXX_FLAGS=${CXXFLAGS:Q}
+CMAKE_ARGS+=		-DCMAKE_SHARED_LINKER_FLAGS=${LDFLAGS:Q}
+
+CMAKE_ARGS+=		-DFREECAD_USE_EXTERNAL_KDL=ON
+
+
+REPLACE_PYTHON+=	src/Tools/wiki2qhelp.py src/Tools/PythonToCPP.py src/Tools/githubstats.py src/Tools/updatefromcrowdin.py src/Tools/updatecrowdin.py src/Tools/updateppa.py
+REPLACE_PYTHON+=	src/Tools/generateBase/generateModel_Module.py src/Tools/generateBase/generateDS.py
+REPLACE_PYTHON+=	src/Mod/Test/testmakeWireString.py src/Mod/Test/testPathArray.py src/Mod/Test/testPathArraySel.py src/Mod/Test/unittestgui.py
+REPLACE_PYTHON+=	src/Mod/Robot/MovieTool.py src/Mod/OpenSCAD/prototype.py
+
+# TODO - src/Mod/Draft/importDWG.py: teigha = "/usr/bin/TeighaFileConverter"
+
+# Arch module deps
+#.include "../../wip/py-pivy/buildlink3.mk"
+
+# Fem module deps
+#.include "../../wip/calculix/buildlink3.mk"
+
+# Plot module deps
+#.include "../../graphics/py-matplotlib/buildlink3.mk"
+
+.include "../../lang/python/application.mk"
+.include "../../wip/orocos-kdl/buildlink3.mk"
 .include "../../wip/oce/buildlink3.mk"
+.include "../../wip/py-pyside/buildlink3.mk"
+.include "../../wip/py-pyside-shiboken/buildlink3.mk"
+.include "../../wip/py-pyside-tools/buildlink3.mk"
+.include "../../devel/py-boost/buildlink3.mk"
+.include "../../wip/soqt/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt4-tools=    full
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../graphics/Coin/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

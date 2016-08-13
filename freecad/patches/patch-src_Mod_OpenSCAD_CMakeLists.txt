@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- src/Mod/OpenSCAD/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/OpenSCAD/CMakeLists.txt
+@@ -45,14 +45,14 @@ INSTALL(
+     FILES
+         ${ply_SRCS}
+     DESTINATION
+-        Mod/OpenSCAD/ply
++        freecad/Mod/OpenSCAD/ply
+ )
+ INSTALL(
+     FILES
+         ${OpenSCAD_SRCS}
+         ${OpenSCAD_QRC_SRCS}
+     DESTINATION
+-        Mod/OpenSCAD
++        freecad/Mod/OpenSCAD
+ )
+ 
+ SET(OpenSCADGuiIcon_SVG

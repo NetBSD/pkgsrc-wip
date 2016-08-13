@@ -1,0 +1,38 @@
+$NetBSD$
+
+--- src/Mod/PartDesign/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/PartDesign/CMakeLists.txt
+@@ -14,7 +14,7 @@ INSTALL(
+         InvoluteGearFeature.py
+         InvoluteGearFeature.ui
+     DESTINATION
+-        Mod/PartDesign
++        freecad/Mod/PartDesign
+ )
+ 
+ INSTALL(
+@@ -28,7 +28,7 @@ INSTALL(
+         Scripts/RadialCopy.py
+         Scripts/Spring.py
+     DESTINATION
+-        Mod/PartDesign/Scripts
++        freecad/Mod/PartDesign/Scripts
+        )
+         
+ INSTALL(
+@@ -39,7 +39,7 @@ INSTALL(
+         fcgear/involute.py
+         fcgear/svggear.py
+     DESTINATION
+-        Mod/PartDesign/fcgear
++        freecad/Mod/PartDesign/fcgear
+         
+ )
+ 
+@@ -69,5 +69,5 @@ INSTALL(
+     FILES
+         ${WizardShaft_SRCS}
+     DESTINATION
+-        Mod/PartDesign/WizardShaft
++        freecad/Mod/PartDesign/WizardShaft
+ )

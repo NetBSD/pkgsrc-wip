@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Mod/Robot/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Robot/CMakeLists.txt
+@@ -13,7 +13,7 @@ INSTALL(
+         RobotExample.py
+         RobotExampleTrajectoryOutOfShapes.py
+     DESTINATION
+-        Mod/Robot
++        freecad/Mod/Robot
+ )
+ 
+ INSTALL(

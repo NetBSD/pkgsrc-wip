@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- src/Mod/Start/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Start/CMakeLists.txt
+@@ -46,5 +46,5 @@ INSTALL(
+         Init.py
+         InitGui.py
+     DESTINATION
+-        Mod/Start
++        freecad/Mod/Start
+ )

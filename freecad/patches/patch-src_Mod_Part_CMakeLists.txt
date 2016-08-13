@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- src/Mod/Part/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Part/CMakeLists.txt
+@@ -13,5 +13,5 @@ INSTALL(
+         TestPartGui.py
+         JoinFeatures.py
+     DESTINATION
+-        Mod/Part
++        freecad/Mod/Part
+ )

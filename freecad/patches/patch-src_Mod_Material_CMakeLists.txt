@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/Mod/Material/CMakeLists.txt.orig	2016-04-02 13:29:08.000000000 +0000
++++ src/Mod/Material/CMakeLists.txt
+@@ -56,7 +56,7 @@ fc_target_copy_resource(MaterialLib 
+ 
+ INSTALL(
+     FILES ${Material_SRCS} ${Material_QRC_SRCS}
+-    DESTINATION Mod/Material
++    DESTINATION freecad/Mod/Material
+ )
+ 
+ INSTALL(
