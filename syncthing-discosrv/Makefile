@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-discosrv-0.13.9
+PKGNAME=	syncthing-discosrv-0.14.4
 CATEGORIES=	local
-DISTNAME=	syncthing-0.13.9
+DISTNAME=	syncthing-0.14.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ COMMENT=	Syncthing discovery server
 LICENSE=	mit
 
 EXTRACT_USING=		bsdtar
-WRKSRC=			${WRKDIR}/syncthing-0.13.9
+WRKSRC=			${WRKDIR}/syncthing-0.14.4
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 NO_CONFIGURE=		yes
 USE_LANGUAGES= 		c # and go
@@ -46,9 +46,9 @@ post-extract:
 	${LN} -s . ${WRKSRC}/src
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build discosrv
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build stdiscosrv
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/discosrv ${DESTDIR}${PREFIX}/bin/syncthing-discosrv
+	${INSTALL_PROGRAM} ${WRKSRC}/stdiscosrv ${DESTDIR}${PREFIX}/bin/syncthing-discosrv
 
 .include "../../mk/bsd.pkg.mk"

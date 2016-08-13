@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-relaysrv-0.13.9
+PKGNAME=	syncthing-relaysrv-0.14.4
 CATEGORIES=	local
-DISTNAME=	syncthing-0.13.9
+DISTNAME=	syncthing-0.14.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ COMMENT=	Syncthing relay server
 LICENSE=	mit
 
 EXTRACT_USING=		bsdtar
-WRKSRC=			${WRKDIR}/syncthing-0.13.9
+WRKSRC=			${WRKDIR}/syncthing-0.14.4
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c # and go
@@ -46,9 +46,9 @@ post-extract:
 	${LN} -s . ${WRKSRC}/src
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build relaysrv
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go build strelaysrv
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/relaysrv ${DESTDIR}${PREFIX}/bin/syncthing-relaysrv
+	${INSTALL_PROGRAM} ${WRKSRC}/strelaysrv ${DESTDIR}${PREFIX}/bin/syncthing-relaysrv
 
 .include "../../mk/bsd.pkg.mk"
