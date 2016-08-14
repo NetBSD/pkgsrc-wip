@@ -1380,7 +1380,6 @@ SUBDIR+=	ircII-current
 SUBDIR+=	ironpython
 SUBDIR+=	irrlicht
 SUBDIR+=	irrxml
-SUBDIR+=	irssi
 SUBDIR+=	irssi-otr
 SUBDIR+=	ised
 SUBDIR+=	islamic-menus

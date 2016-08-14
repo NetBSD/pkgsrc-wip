@@ -1,8 +1,0 @@
-irssi-0.8.18 breaks at least chat/irssi-icb and chat/irssi-xmpp.
-
-According to the 0.8.18 changelog probably the following is needed:
-
- Modules will now require to define a
- ``void MODULENAME ## _abicheck(int *version)''
- method to ensure that they are compiled against the correct Irssi
- version.
