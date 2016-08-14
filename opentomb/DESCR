@@ -1,0 +1,7 @@
+OpenTomb is a cross-platform reimplementation of classic Tomb Raider 5 engines
+that were developed by now defunct Core Design. It is not a patcher or DLL
+extension of already existing engines.
+
+The project does not use any old Tomb Raider source code, because all attempts
+to retrieve sources from Eidos / Core were in vain, despite many petitions by
+the community. Instead, everything is being developed completely from scratch.
