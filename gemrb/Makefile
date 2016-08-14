@@ -2,7 +2,8 @@
 
 DISTNAME=	gemrb-0.8.4
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gemrb/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gemrb/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gemrb.org/
@@ -21,18 +22,16 @@ CMAKE_ARGS+=		-DDISABLE_WERROR=1
 CMAKE_ARGS+=		-DINSOURCEBUILD=1
 CMAKE_ARGS+=		-DMAN_DIR:PATH=${PREFIX}/${PKGMANDIR}/man6
 CMAKE_ARGS+=		-DEXAMPLE_CONF_DIR:PATH=${PREFIX}/share/examples/gemrb
-CMAKE_ARGS+=		-DSDLMIXER_INCLUDE_DIR=${BUILDLINK_PREFIX.SDL_mixer}/include
 CMAKE_ARGS+=		-DCMAKE_SKIP_RPATH:BOOL=FALSE
+CMAKE_ARGS+=		-DUSE_SDL2:BOOL=TRUE
 
 CFLAGS+=		-Wl,-R${PREFIX}/lib/gemrb
 CXXFLAGS+=		-Wl,-R${PREFIX}/lib/gemrb
 
-#.include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
-# not properly found by cmake?
-.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
