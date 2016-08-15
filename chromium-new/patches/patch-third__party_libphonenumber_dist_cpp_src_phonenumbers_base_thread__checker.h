@@ -15,7 +15,7 @@ $NetBSD$
  
  #if !defined(NDEBUG) && !defined(I18N_PHONENUMBERS_USE_BOOST) && \
 -    (defined(__linux__) || defined(__apple__))
-+    (defined(__linux__) || defined(__apple__)) || defined(__FreeBSD__) || defined(__OpenBSD__) && !defined(__NetBSD__)
++    ((defined(__linux__) || defined(__apple__)) || defined(__FreeBSD__) || defined(__OpenBSD__)) && !defined(__NetBSD__)
  
  #include <pthread.h>
  
