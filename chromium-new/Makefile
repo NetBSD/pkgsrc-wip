@@ -277,7 +277,7 @@ do-install:
 
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../audio/alsa-lib/buildlink3.mk"
+#.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 #.include "../../print/cups/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
