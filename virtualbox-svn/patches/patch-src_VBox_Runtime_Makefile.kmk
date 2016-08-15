@@ -1,9 +1,9 @@
 $NetBSD$
 
---- src/VBox/Runtime/Makefile.kmk.orig	2016-08-12 18:06:15.000000000 +0000
+--- src/VBox/Runtime/Makefile.kmk.orig	2016-08-15 22:22:06.134606983 +0000
 +++ src/VBox/Runtime/Makefile.kmk
-@@ -1978,12 +1978,15 @@ RuntimeR0Drv_SDKS.win   = ReorderCompile
- RuntimeR0Drv_DEFS       = IN_RT_R0 RT_WITH_VBOX RT_WITHOUT_NOCRT_WRAPPERS RT_NO_EXPORT_SYMBOL
+@@ -1979,12 +1979,15 @@ RuntimeR0Drv_SDKS.win   = ReorderCompile
+ RuntimeR0Drv_DEFS       = IN_RT_R0 RT_WITH_VBOX RT_WITHOUT_NOCRT_WRAPPERS RT_NO_EXPORT_SYMBOL NOFILEID
  RuntimeR0Drv_DEFS.win   = IN_SUP_R0 LDR_ONLY_PE
  RuntimeR0Drv_DEFS.linux = MODULE KBUILD_MODNAME=KBUILD_STR\(vboxdrv\) KBUILD_BASENAME=KBUILD_STR\(vboxdrv\) IN_SUP_R0
 +RuntimeR0Drv_DEFS.netbsd = _KERNEL
@@ -13,12 +13,12 @@ $NetBSD$
  	$(PATH_STAGE)/gen-sys-hdrs
  RuntimeR0Drv_INCS.linux = \
  	r0drv/linux
-+RuntimeR0Drv_INCS.netbsd  = \
++RuntimeR0Drv_INCS.netbsd = \
 +	/usr/src/sys
  RuntimeR0Drv_INCS.solaris = \
  	r0drv/solaris/vbi/i86pc \
  	r0drv/solaris/vbi/i86pc/sys
-@@ -2514,6 +2517,17 @@ RuntimeR0Drv_ORDERDEPS.freebsd = \
+@@ -2515,6 +2518,17 @@ RuntimeR0Drv_ORDERDEPS.freebsd = \
  	$(PATH_STAGE)/gen-sys-hdrs/bus_if.h \
  	$(PATH_STAGE)/gen-sys-hdrs/device_if.h
  
@@ -36,7 +36,7 @@ $NetBSD$
  
  #
  # RuntimeGuestR0 - Guest driver runtime.
-@@ -2830,6 +2844,56 @@ $$(FreeBSDGeneratedKernelHeaders_0_OUTDI
+@@ -2831,6 +2845,56 @@ $$(FreeBSDGeneratedKernelHeaders_0_OUTDI
  endif # FreeBSD
  
  
@@ -93,7 +93,7 @@ $NetBSD$
  #
  # Aliases for .cpp.h files so we can more easily do syntax checking from the editor.
  #
-@@ -3127,4 +3191,3 @@ taf-template.o taf-template.obj: taf-cor
+@@ -3128,4 +3192,3 @@ taf-template.o taf-template.obj: taf-cor
  tsp-template.o tsp-template.obj: tsp-core.o tsp-asn1-decoder.o tsp-sanity.o tsp-init.o
  x509-template.o x509-template.obj: x509-core.o x509-asn1-decoder.o x509-sanity.o x509-init.o
  pkcs7-template.o pkcs7-template.obj: pkcs7-core.o pkcs7-asn1-decoder.o pkcs7-sanity.o pkcs7-init.o
