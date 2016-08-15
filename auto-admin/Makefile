@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/05/08 14:23:18 outpaddling Exp $
+# $NetBSD$
 #
 
-DISTNAME=	auto-admin-0.3.5
+DISTNAME=	auto-admin-0.3.8
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
@@ -14,6 +14,12 @@ EXTRACT_SUFX=	.tar.xz
 USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
+REPLACE_SH=	*/Scripts/*
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_FILES.prefix=	${WRKSRC}/Common/Scripts/auto-denyhosts-remove-ip
+SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
 
 .include "../../mk/bsd.prefs.mk"
 
