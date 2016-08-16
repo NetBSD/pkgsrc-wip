@@ -20,8 +20,6 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
-# FIXME: Make this an option
-CONFIGURE_ARGS+=	--with-ofed=no
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
 REPLACE_PYTHON+=	doc/man/man2html.py
@@ -51,6 +49,8 @@ SUBST_CLASSES+=		configure
 SUBST_STAGE.configure=	post-patch
 SUBST_FILES.configure=	configure
 SUBST_SED.configure=	-e 's|/usr/local|${PREFIX}|g'
+# Disable OFED check unless option is enabled
+SUBST_SED.configure+=	-e 's|_x_ac_ofed_dirs="/usr /usr/pkg"|_x_ac_ofed_dirs=""|g'
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
