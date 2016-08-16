@@ -60,7 +60,7 @@ post-install:
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/init.d.slurm
 
 .include "../../lang/python/tool.mk"
-.include "../../security/munge/buildlink3.mk" # optional
+.include "../../wip/munge/buildlink3.mk" # optional
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
