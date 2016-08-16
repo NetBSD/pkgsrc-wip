@@ -20,6 +20,8 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
+# FIXME: Make this an option
+CONFIGURE_ARGS+=	--with-ofed=no
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
 REPLACE_PYTHON+=	doc/man/man2html.py
