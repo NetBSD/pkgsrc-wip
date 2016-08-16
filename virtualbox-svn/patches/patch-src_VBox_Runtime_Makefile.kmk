@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/VBox/Runtime/Makefile.kmk.orig	2016-08-15 22:22:06.134606983 +0000
+--- src/VBox/Runtime/Makefile.kmk.orig	2016-08-15 22:22:06.000000000 +0000
 +++ src/VBox/Runtime/Makefile.kmk
 @@ -1979,12 +1979,15 @@ RuntimeR0Drv_SDKS.win   = ReorderCompile
  RuntimeR0Drv_DEFS       = IN_RT_R0 RT_WITH_VBOX RT_WITHOUT_NOCRT_WRAPPERS RT_NO_EXPORT_SYMBOL NOFILEID

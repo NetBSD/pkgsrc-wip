@@ -86,8 +86,8 @@ CONFIGURE_ARGS+=	--build-headless
 
 pre-configure:
 	${RUN} ${ECHO} "VBOX_GCC_OPT=${CXXFLAGS}" >> ${WRKSRC}/LocalConfig.kmk
-	${RUN} ${ECHO} "VBOX_WITH_ORIGIN:=" >> ${WRKSRC}/LocalConfig.kmk
-	${RUN} ${ECHO} "VBOX_WITH_RUNPATH:=${VBLIBDIR}" >> ${WRKSRC}/LocalConfig.kmk
+#	${RUN} ${ECHO} "VBOX_WITH_ORIGIN:=" >> ${WRKSRC}/LocalConfig.kmk
+	${RUN} ${ECHO} "VBOX_WITH_RUNPATH:=${VBLIBDIR}:${PREFIX}/lib" >> ${WRKSRC}/LocalConfig.kmk
 	${RUN} ${ECHO} "VBOX_PATH_APP_PRIVATE_ARCH:=${VBLIBDIR}" >> ${WRKSRC}/LocalConfig.kmk
 	${RUN} ${ECHO} "VBOX_PATH_APP_PRIVATE:=${VBLIBDIR}" >> ${WRKSRC}/LocalConfig.kmk
 	${RUN} ${ECHO} "VBOX_WITH_TESTCASES=" >> ${WRKSRC}/LocalConfig.kmk

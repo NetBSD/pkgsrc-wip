@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/VBox/Devices/Audio/DrvHostOSSAudio.cpp.orig	2016-08-15 22:22:04.307068286 +0000
+--- src/VBox/Devices/Audio/DrvHostOSSAudio.cpp.orig	2016-08-15 22:22:04.000000000 +0000
 +++ src/VBox/Devices/Audio/DrvHostOSSAudio.cpp
 @@ -137,6 +137,7 @@ static OSSAUDIOCFG s_OSSConf =
  };
