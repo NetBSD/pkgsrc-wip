@@ -38,10 +38,10 @@ RCD_SCRIPTS+=		slurmd slurmctld
 SUBST_CLASSES+=		linuxinit
 SUBST_STAGE.linuxinit=	post-patch
 SUBST_FILES.linuxinit=	${WRKSRC}/etc/init.d.slurm.in
-SUBST_SED.linuxinit+=	-e 's|@bindir@|${PREFIX}|'
-SUBST_SED.linuxinit+=	-e 's|@sbindir@|${PREFIX}|'
-SUBST_SED.linuxinit+=	-e 's|@libdir@|${PREFIX}|'
-SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|${PREFIX}|'
+SUBST_SED.linuxinit+=	-e 's|@bindir@|${PREFIX}/bin|'
+SUBST_SED.linuxinit+=	-e 's|@sbindir@|${PREFIX}/sbin|'
+SUBST_SED.linuxinit+=	-e 's|@libdir@|${PREFIX}/lib|'
+SUBST_SED.linuxinit+=	-e 's|@sysconfdir@|${PREFIX}/etc|'
 
 SUBST_CLASSES+=		configure
 SUBST_STAGE.configure=	post-patch
