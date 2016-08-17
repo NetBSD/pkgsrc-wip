@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.3.1
+DISTNAME=	vips-8.3.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/current/
 
