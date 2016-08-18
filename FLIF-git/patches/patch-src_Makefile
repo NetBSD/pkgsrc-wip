@@ -17,13 +17,13 @@ Make use of DESTDIR and MANDIR.
  install: all
 -	install -d $(PREFIX)/bin $(PREFIX)/lib $(PREFIX)/share/man/man1
 -	install -s -m 755 flif viewflif $(PREFIX)/bin
--	install -s -m 755 libflif$(LIBEXT)* $(PREFIX)/lib
+-	install -s -m 755 libflif$(LIBEXT) libflif$(LIBEXTV) $(PREFIX)/lib
 -	install -m 644 ../doc/flif.1 $(PREFIX)/share/man/man1
 -	install -m 755 ../tools/gif2flif $(PREFIX)/bin
 -	install -m 755 ../tools/apng2flif $(PREFIX)/bin
 +	install -d $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(PREFIX)/lib $(DESTDIR)$(MANDIR)/man1
 +	install -s -m 755 flif viewflif $(DESTDIR)$(PREFIX)/bin
-+	install -s -m 755 libflif$(LIBEXT)* $(DESTDIR)$(PREFIX)/lib
++	install -s -m 755 libflif$(LIBEXT) libflif$(LIBEXTV) $(DESTDIR)$(PREFIX)/lib
 +	install -m 644 ../doc/flif.1 $(DESTDIR)$(MANDIR)/man1
 +	install -m 755 ../tools/gif2flif $(DESTDIR)$(PREFIX)/bin
 +	install -m 755 ../tools/apng2flif $(DESTDIR)$(PREFIX)/bin
