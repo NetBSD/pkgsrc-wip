@@ -1,0 +1,23 @@
+$NetBSD$
+
+Install man-page into appropriate directory.
+
+--- CMakeLists.txt.orig	2016-02-13 21:01:52.000000000 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,7 @@
+ cmake_minimum_required(VERSION 2.6)
+ 
++include(GNUInstallDirs)
++
+ project (ympd)
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
+ set(CPACK_PACKAGE_VERSION_MAJOR "1")
+@@ -73,7 +75,7 @@ add_executable(ympd ${SOURCES})
+ target_link_libraries(ympd ${LIBMPDCLIENT_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES})
+ 
+ install(TARGETS ympd DESTINATION bin)
+-install(FILES ympd.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/share/man/man1)
++install(FILES ympd.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ if(WITH_DYNAMIC_ASSETS)
+     install(DIRECTORY htdocs DESTINATION share/${PROJECT_NAME})
+ endif()
