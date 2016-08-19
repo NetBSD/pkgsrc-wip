@@ -2,7 +2,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-GO_VERSION=	1.7rc6
+GO_VERSION=	1.7
 GO14_VERSION=	1.4.3
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-evbarm
