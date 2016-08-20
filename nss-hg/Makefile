@@ -4,7 +4,7 @@
 PKGNAME=		nss-${NSS_RELEASE}
 DISTNAME=		nss-${NSS_RELEASE}
 # see lib/nss/nss.h
-NSS_RELEASE=		3.26.0
+NSS_RELEASE=		3.27.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_RTM/src/}
 
