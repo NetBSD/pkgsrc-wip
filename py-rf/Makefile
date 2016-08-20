@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:45 thomasklausner Exp $
+# $NetBSD$
 
 DISTNAME=	rf-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-obspy>=0.8.4:../../geography/py-obspy
 DEPENDS+=	${PYPKGPREFIX}-toeplitz>=0.1.2:../../wip/py-toeplitz
 
 USE_LANGUAGES=	c fortran
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-suds via py-obspy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
