@@ -128,6 +128,9 @@ ${PYSITELIB}/prompt_toolkit/eventloop/posix.pyo
 ${PYSITELIB}/prompt_toolkit/eventloop/posix_utils.py
 ${PYSITELIB}/prompt_toolkit/eventloop/posix_utils.pyc
 ${PYSITELIB}/prompt_toolkit/eventloop/posix_utils.pyo
+${PYSITELIB}/prompt_toolkit/eventloop/select.py
+${PYSITELIB}/prompt_toolkit/eventloop/select.pyc
+${PYSITELIB}/prompt_toolkit/eventloop/select.pyo
 ${PYSITELIB}/prompt_toolkit/eventloop/utils.py
 ${PYSITELIB}/prompt_toolkit/eventloop/utils.pyc
 ${PYSITELIB}/prompt_toolkit/eventloop/utils.pyo
@@ -173,6 +176,9 @@ ${PYSITELIB}/prompt_toolkit/key_binding/bindings/completion.pyo
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/emacs.py
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/emacs.pyc
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/emacs.pyo
+${PYSITELIB}/prompt_toolkit/key_binding/bindings/named_commands.py
+${PYSITELIB}/prompt_toolkit/key_binding/bindings/named_commands.pyc
+${PYSITELIB}/prompt_toolkit/key_binding/bindings/named_commands.pyo
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/scroll.py
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/scroll.pyc
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/scroll.pyo

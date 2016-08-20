@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	prompt_toolkit-1.0.3
-PKGNAME=	${PYPKGPREFIX}-prompt-toolkit-1.0.3
-CATEGORIES=	devel
+DISTNAME=	prompt_toolkit-1.0.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prompt_toolkit/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
@@ -12,8 +12,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.7:../../wip/py-wcwidth
-
-WRKSRC=		${WRKDIR}/prompt_toolkit-1.0.3
 
 USE_LANGUAGES=	# none
 
