@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2016/08/18 14:53:24 richard Exp $
+
+SHA1 (meson-0.33.0.tar.gz) = 3007df0c8703e5b9c56580c1a8de252ef049fcfa
+RMD160 (meson-0.33.0.tar.gz) = 612a5b7611afdedad4450bbc12afd41d14fb8f9b
+SHA512 (meson-0.33.0.tar.gz) = de4bdc40574dfbbc5a29861c32984dc1c97d28992e849c32f1ec0e314d3c69861768583c29eea2b9708ec6b734759d7eac60a53015fd321e29f1e9b1dbbffc22
+Size (meson-0.33.0.tar.gz) = 482221 bytes
