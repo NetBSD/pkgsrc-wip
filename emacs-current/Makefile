@@ -21,7 +21,7 @@ MAKE_JOBS_SAFE=	no
 
 GIT_REPOSITORIES=	master
 GIT_MODULE.master=	emacs
-GIT_REPO.master=	git://repo.or.cz/emacs.git
+GIT_REPO.master=	git://git.sv.gnu.org/emacs.git
 _GIT_FLAGS?=		--depth 1
 
 GNU_CONFIGURE=		yes
