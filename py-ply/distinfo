@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/04 16:15:27 ura Exp $
-
-SHA1 (ply-3.3.tar.gz) = 23291d8127f9f7189957fe1ff8925494e389fca3
-RMD160 (ply-3.3.tar.gz) = 619fad2b4050d6125cab9c34ea794bda7a0c5aa3
-Size (ply-3.3.tar.gz) = 138663 bytes
