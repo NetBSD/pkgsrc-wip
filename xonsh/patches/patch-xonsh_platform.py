@@ -1,5 +1,8 @@
 $NetBSD$
 
+Cherry-pick upstream patch adding NetBSD support
+https://github.com/xonsh/xonsh/pull/1601
+
 --- xonsh/platform.py.orig	2016-08-17 00:35:49.000000000 +0000
 +++ xonsh/platform.py
 @@ -46,6 +46,12 @@ ON_POSIX = LazyBool(lambda: (os.name == 
