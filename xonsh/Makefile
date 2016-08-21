@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit-[0-9]*:../../wip/py-prompt_toolkit
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit-[0-9]*:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 PKG_SHELL=	${PREFIX}/bin/xon.sh

@@ -3261,7 +3261,6 @@ SUBDIR+=	py-professor
 SUBDIR+=	py-progressbar
 SUBDIR+=	py-progressbar2
 SUBDIR+=	py-proj
-SUBDIR+=	py-prompt_toolkit
 SUBDIR+=	py-prop
 SUBDIR+=	py-psamm
 SUBDIR+=	py-pseudopy
