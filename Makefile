@@ -3568,7 +3568,6 @@ SUBDIR+=	py-wafo
 SUBDIR+=	py-wahcade
 SUBDIR+=	py-wally
 SUBDIR+=	py-wasanbon
-SUBDIR+=	py-wcwidth
 SUBDIR+=	py-weave
 SUBDIR+=	py-weberror
 SUBDIR+=	py-webflash
