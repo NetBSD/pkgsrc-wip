@@ -19,7 +19,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/baloo5/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
-.include "../../wip/kdelibs4support/buildlink3.mk"
+.include "../../x11/kdelibs4support/buildlink3.mk"
 #.include "../../wip/libkdcraw5/buildlink3.mk"
 #.include "../../wip/libkipi5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
