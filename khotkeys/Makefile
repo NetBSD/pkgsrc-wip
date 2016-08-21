@@ -29,7 +29,7 @@ SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 #		${PKG_SYSCONFDIR}/xdg/plasmoids.knsrc
 
 .include "../../devel/kcmutils/buildlink3.mk"
-.include "../../wip/kdelibs4support/buildlink3.mk"
+.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../wip/plasma-workspace/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
