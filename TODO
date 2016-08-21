@@ -74,6 +74,7 @@ Suggested package updates
 	o lives-2.4.6
 	o love-0.10.0
 	o lucene-4.5.0
+	o lumina-1.0
 	o lxqt-0.10
 	o man-1.6f
 	o mcwm-20130209.2
@@ -108,7 +109,7 @@ Suggested package updates
 	o residualvm-0.2.1
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o rust-1.10
+	o rust-1.11
 	o rygel-0.26.0
 	o samhain-4.1.3
 	o scantailor-0.9.11.1
