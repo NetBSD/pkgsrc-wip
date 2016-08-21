@@ -14,7 +14,6 @@ qt5/plugins/kerfuffle/kerfuffle_libbz2.so
 qt5/plugins/kerfuffle/kerfuffle_libgz.so
 qt5/plugins/kerfuffle/kerfuffle_libxz.so
 qt5/plugins/kf5/kio_dnd/extracthere.so
-share/appdata/org.kde.ark.appdata.xml
 share/applications/org.kde.ark.desktop
 share/config.kcfg/ark.kcfg
 share/doc/HTML/en/ark/ark-mainwindow.png
@@ -22,8 +21,7 @@ share/doc/HTML/en/ark/create-protected-archive.png
 share/doc/HTML/en/ark/extract-dialog.png
 share/doc/HTML/en/ark/index.cache.bz2
 share/doc/HTML/en/ark/index.docbook
-share/doc/HTML/en/ark/man-ark.1.docbook
-share/examples/ark/ark.categories
+share/examples/kde-xdg/ark.categories
 share/icons/hicolor/128x128/apps/ark.png
 share/icons/hicolor/48x48/apps/ark.png
 share/icons/hicolor/64x64/apps/ark.png
@@ -34,3 +32,4 @@ share/kservices5/ark_part.desktop
 share/kservicetypes5/kerfufflePlugin.desktop
 share/kxmlgui5/ark/ark_part.rc
 share/kxmlgui5/ark/arkui.rc
+share/metainfo/org.kde.ark.appdata.xml
