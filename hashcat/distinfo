@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (hashcat-3.00.tar.gz) = 3f882ab112b99da22fca59cd3fa4420376f3da86
-RMD160 (hashcat-3.00.tar.gz) = 98f09aa0e68fdccf6527a11221fe649676fdb8eb
-SHA512 (hashcat-3.00.tar.gz) = cdaf00830a1f4b52b008c5c6499cd6246eb328a1711be1446ea7b8b3d6ad9afeb9f3626cf9cef58a04b4a414d10e09e5a8429bc47684a9d6dbf511effbc2eedb
-Size (hashcat-3.00.tar.gz) = 4068649 bytes
-SHA1 (patch-src_Makefile) = d9701ff322492d1afd90c237fbc9b45d0b38b9db
-SHA1 (patch-src_hashcat.c) = 4f1c68d43d5bf28e70bf1b92a5cac8b20c610608
+SHA1 (hashcat-3.10.tar.gz) = 513621ab94f747063241fe9ad3c02b7f86220bed
+RMD160 (hashcat-3.10.tar.gz) = bc1f22dda0bebd989839c8b67765483da55eb710
+SHA512 (hashcat-3.10.tar.gz) = 2adf16513118b91085fe587c53b15f142abb7673f659b2721dcba8aacdac6f024b65e7b50b916f86c161c21e98eb4758f187d25ad1ca4c66cdb67a259b07ae04
+Size (hashcat-3.10.tar.gz) = 4077692 bytes
+SHA1 (patch-src_Makefile) = 0f1fe08dd012c5c15a126c8fac1f124663393722
+SHA1 (patch-src_hashcat.c) = d1b2ff3263d5464fe07c4ac67169d08e26bf7e4d

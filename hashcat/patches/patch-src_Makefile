@@ -2,38 +2,20 @@ $NetBSD$
 
 Add minimal NetBSD support.
 
---- src/Makefile.orig	2016-06-28 09:47:32.000000000 +0000
+--- src/Makefile.orig	2016-08-19 09:45:29.000000000 +0000
 +++ src/Makefile
 @@ -17,7 +17,7 @@ UNAME                    := $(shell unam
  # we need to strip the windows version number to be able to build hashcat on cygwin hosts
  UNAME                    := $(patsubst CYGWIN_NT-%,CYGWIN_NT-,$(UNAME))
  
--ifeq (,$(filter $(UNAME),Linux Darwin CYGWIN_NT-))
-+ifeq (,$(filter $(UNAME),Linux Darwin NetBSD CYGWIN_NT-))
+-ifeq (,$(filter $(UNAME),Linux Darwin CYGWIN_NT- FreeBSD))
++ifeq (,$(filter $(UNAME),Linux Darwin CYGWIN_NT- FreeBSD NetBSD))
  $(error "! Your Operating System ($(UNAME)) is not supported by $(PROG_NAME) Makefile")
  endif
  
-@@ -87,7 +87,7 @@ VERSION_TAG              := $(shell test
- ## Compiler flags
- ##
- 
--CFLAGS                   := -pipe -W -Wall -std=c99 -Iinclude/ -IOpenCL/ -I$(OPENCL_HEADERS_KHRONOS)/
-+CFLAGS                   += -pipe -W -Wall -std=c99 -Iinclude/ -IOpenCL/ -I$(OPENCL_HEADERS_KHRONOS)/ -I../include
- 
- ifndef DEBUG
- CFLAGS                   += -O2
-@@ -105,8 +105,6 @@ endif
- BINARY_NATIVE            := $(PROG_NAME)
- 
- ifeq ($(UNAME),Darwin)
--export MACOSX_DEPLOYMENT_TARGET=10.9
--BINARY_NATIVE            := $(BINARY_NATIVE).app
- CFLAGS_NATIVE            := -D_POSIX -DDARWIN
- CFLAGS_NATIVE            += $(CFLAGS)
- LFLAGS_NATIVE            := -lpthread
-@@ -122,6 +120,16 @@ LFLAGS_NATIVE            := -lpthread -l
- CFLAGS_NATIVE            += -DHAVE_HWMON
- endif # linux
+@@ -137,6 +137,16 @@ LFLAGS_NATIVE            := -lpthread
+ LFLAGS_NATIVE            += $(LDFLAGS)
+ endif # freebsd
  
 +ifeq ($(UNAME),NetBSD)
 +CFLAGS_NATIVE            := -D_POSIX
@@ -43,7 +25,7 @@ Add minimal NetBSD support.
 +CFLAGS_NATIVE            += $(CFLAGS)
 +LFLAGS_NATIVE            := -lpthread
 +CFLAGS_NATIVE            += -DHAVE_HWMON
-+endif # linux
++endif # netbsd
 +
  ##
  ## Cross compilation target

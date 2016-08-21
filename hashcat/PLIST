@@ -378,6 +378,9 @@ share/hashcat/OpenCL/m13753.cl
 share/hashcat/OpenCL/m13800_a0.cl
 share/hashcat/OpenCL/m13800_a1.cl
 share/hashcat/OpenCL/m13800_a3.cl
+share/hashcat/OpenCL/m13900_a0.cl
+share/hashcat/OpenCL/m13900_a1.cl
+share/hashcat/OpenCL/m13900_a3.cl
 share/hashcat/OpenCL/markov_be.cl
 share/hashcat/OpenCL/markov_le.cl
 share/hashcat/charsets/combined/Bulgarian.hcchr
