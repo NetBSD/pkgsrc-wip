@@ -3311,6 +3311,7 @@ SUBDIR+=	py-pysal
 SUBDIR+=	py-pysb
 SUBDIR+=	py-pyside
 SUBDIR+=	py-pyside-shiboken
+SUBDIR+=	py-pyside-tools
 SUBDIR+=	py-pyslha
 SUBDIR+=	py-pysph
 SUBDIR+=	py-pysphere
