@@ -29,6 +29,13 @@ CMAKE_ARGS+=	-DOCE_INSTALL_PREFIX:PATH=${PREFIX}
 
 LIBS.SunOS+=	-lresolv
 
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing PREFIX path.
+SUBST_STAGE.prefix=	post-configure
+SUBST_FILES.prefix=	CMakeFiles/Export/lib/oce/OCE-libraries-release.cmake
+SUBST_SED.prefix=	-e "s|${BUILDLINK_DIR}/lib/lib\([0-9a-zA-Z_-]*\)\.so|\1|g"
+
 .include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
