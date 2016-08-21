@@ -25,6 +25,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khelpcenter.categories \
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../devel/kdoctools/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
-.include "../../wip/khtml/buildlink3.mk"
+.include "../../www/khtml/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
