@@ -19,7 +19,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/menus/kinfocenter.menu \
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
-.include "../../wip/kdelibs4support/buildlink3.mk"
+.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../wip/kwayland/buildlink3.mk"
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
