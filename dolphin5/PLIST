@@ -21,7 +21,6 @@ qt5/plugins/kcm_dolphingeneral.so
 qt5/plugins/kcm_dolphinnavigation.so
 qt5/plugins/kcm_dolphinservices.so
 qt5/plugins/kcm_dolphinviewmodes.so
-share/appdata/org.kde.dolphin.appdata.xml
 share/applications/org.kde.dolphin.desktop
 share/config.kcfg/dolphin_compactmodesettings.kcfg
 share/config.kcfg/dolphin_detailsmodesettings.kcfg
@@ -61,3 +60,4 @@ share/kservices5/kcmdolphinviewmodes.desktop
 share/kservicetypes5/fileviewversioncontrolplugin.desktop
 share/kxmlgui5/dolphin/dolphinui.rc
 share/kxmlgui5/dolphinpart/dolphinpart.rc
+share/metainfo/org.kde.dolphin.appdata.xml
