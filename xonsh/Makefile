@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	xonsh-0.4.0
+DISTNAME=	xonsh-0.4.5
 CATEGORIES=	shells python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xonsh/}
 
@@ -24,7 +24,6 @@ SUBST_CLASSES+=		xonsh
 SUBST_STAGE.xonsh=	post-patch
 SUBST_FILES.xonsh=	scripts/xon.sh
 SUBST_SED.xonsh=	-e 's,python3,${PYTHONBIN},'
-#SUBST_SED.xonsh+=	-e 's, xonsh , ${PREFIX}/xonsh ,'
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

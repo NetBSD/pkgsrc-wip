@@ -55,6 +55,8 @@ ${PYSITELIB}/xonsh/jupyter_kernel.pyo
 ${PYSITELIB}/xonsh/jupyter_kernel.pyc
 ${PYSITELIB}/xonsh/lazyasd.pyo
 ${PYSITELIB}/xonsh/lazyasd.pyc
+${PYSITELIB}/xonsh/lazyimps.pyo
+${PYSITELIB}/xonsh/lazyimps.pyc
 ${PYSITELIB}/xonsh/lazyjson.pyo
 ${PYSITELIB}/xonsh/lazyjson.pyc
 ${PYSITELIB}/xonsh/lexer.pyo
@@ -89,8 +91,6 @@ ${PYSITELIB}/xonsh/tools.pyo
 ${PYSITELIB}/xonsh/tools.pyc
 ${PYSITELIB}/xonsh/tracer.pyo
 ${PYSITELIB}/xonsh/tracer.pyc
-${PYSITELIB}/xonsh/vox.pyo
-${PYSITELIB}/xonsh/vox.pyc
 ${PYSITELIB}/xonsh/winutils.pyo
 ${PYSITELIB}/xonsh/winutils.pyc
 ${PYSITELIB}/xonsh/wizard.pyo
@@ -107,7 +107,10 @@ ${PYSITELIB}/xonsh/built_ins.py
 ${PYSITELIB}/xonsh/codecache.py
 ${PYSITELIB}/xonsh/commands_cache.py
 ${PYSITELIB}/xonsh/completer.py
+${PYSITELIB}/xonsh/completers/__amalgam__.py
 ${PYSITELIB}/xonsh/completers/__init__.py
+${PYSITELIB}/xonsh/completers/__amalgam__.pyo
+${PYSITELIB}/xonsh/completers/__amalgam__.pyc
 ${PYSITELIB}/xonsh/completers/__init__.pyo
 ${PYSITELIB}/xonsh/completers/__init__.pyc
 ${PYSITELIB}/xonsh/completers/_aliases.pyo
@@ -122,10 +125,14 @@ ${PYSITELIB}/xonsh/completers/completer.pyo
 ${PYSITELIB}/xonsh/completers/completer.pyc
 ${PYSITELIB}/xonsh/completers/dirs.pyo
 ${PYSITELIB}/xonsh/completers/dirs.pyc
+${PYSITELIB}/xonsh/completers/init.pyo
+${PYSITELIB}/xonsh/completers/init.pyc
 ${PYSITELIB}/xonsh/completers/man.pyo
 ${PYSITELIB}/xonsh/completers/man.pyc
 ${PYSITELIB}/xonsh/completers/path.pyo
 ${PYSITELIB}/xonsh/completers/path.pyc
+${PYSITELIB}/xonsh/completers/pip.pyo
+${PYSITELIB}/xonsh/completers/pip.pyc
 ${PYSITELIB}/xonsh/completers/python.pyo
 ${PYSITELIB}/xonsh/completers/python.pyc
 ${PYSITELIB}/xonsh/completers/tools.pyo
@@ -136,8 +143,10 @@ ${PYSITELIB}/xonsh/completers/bash.py
 ${PYSITELIB}/xonsh/completers/commands.py
 ${PYSITELIB}/xonsh/completers/completer.py
 ${PYSITELIB}/xonsh/completers/dirs.py
+${PYSITELIB}/xonsh/completers/init.py
 ${PYSITELIB}/xonsh/completers/man.py
 ${PYSITELIB}/xonsh/completers/path.py
+${PYSITELIB}/xonsh/completers/pip.py
 ${PYSITELIB}/xonsh/completers/python.py
 ${PYSITELIB}/xonsh/completers/tools.py
 ${PYSITELIB}/xonsh/contexts.py
@@ -152,6 +161,7 @@ ${PYSITELIB}/xonsh/inspectors.py
 ${PYSITELIB}/xonsh/jobs.py
 ${PYSITELIB}/xonsh/jupyter_kernel.py
 ${PYSITELIB}/xonsh/lazyasd.py
+${PYSITELIB}/xonsh/lazyimps.py
 ${PYSITELIB}/xonsh/lazyjson.py
 ${PYSITELIB}/xonsh/lexer.py
 ${PYSITELIB}/xonsh/main.py
@@ -217,7 +227,6 @@ ${PYSITELIB}/xonsh/timings.py
 ${PYSITELIB}/xonsh/tokenize.py
 ${PYSITELIB}/xonsh/tools.py
 ${PYSITELIB}/xonsh/tracer.py
-${PYSITELIB}/xonsh/vox.py
 ${PYSITELIB}/xonsh/winutils.py
 ${PYSITELIB}/xonsh/wizard.py
 ${PYSITELIB}/xonsh/xonfig.py
@@ -235,6 +244,12 @@ ${PYSITELIB}/xontrib/mpl.pyo
 ${PYSITELIB}/xontrib/mpl.pyc
 ${PYSITELIB}/xontrib/mplhooks.pyo
 ${PYSITELIB}/xontrib/mplhooks.pyc
+${PYSITELIB}/xontrib/vox.pyo
+${PYSITELIB}/xontrib/vox.pyc
+${PYSITELIB}/xontrib/voxapi.pyo
+${PYSITELIB}/xontrib/voxapi.pyc
 ${PYSITELIB}/xontrib/distributed.py
 ${PYSITELIB}/xontrib/mpl.py
 ${PYSITELIB}/xontrib/mplhooks.py
+${PYSITELIB}/xontrib/vox.py
+${PYSITELIB}/xontrib/voxapi.py
