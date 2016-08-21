@@ -20,17 +20,17 @@ SUBST_FILES.paths=	info/kde-info2html.conf
 SUBST_VARS.paths=	LOCALBASE
 SUBST_STAGE.paths=	post-patch
 
+.include "../../devel/kpty/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
+.include "../../net/kdnssd/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../net/samba/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
+.include "../../www/khtml/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
-.include "../../wip/kdelibs4support/buildlink3.mk"
-.include "../../net/kdnssd/buildlink3.mk"
-.include "../../wip/khtml/buildlink3.mk"
-.include "../../devel/kpty/buildlink3.mk"
+.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
