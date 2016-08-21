@@ -16,7 +16,7 @@ USE_TOOLS+=	msgmerge
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/kdelibs4support/buildlink3.mk"
+.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../wip/plasma-workspace/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
