@@ -4345,7 +4345,6 @@ SUBDIR+=	xmms2
 SUBDIR+=	xmoto
 SUBDIR+=	xnee
 SUBDIR+=	xombrero
-SUBDIR+=	xonsh
 SUBDIR+=	xoo
 SUBDIR+=	xoreos
 SUBDIR+=	xoreos-tools
