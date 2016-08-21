@@ -53,10 +53,10 @@ REPLACE_BASH+=	src/nacltest.bash
 REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
 REPLACE_BASH+=	src/runtime/mknacl.sh
+REPLACE_BASH+=	src/naclmake.bash
 REPLACE_BASH+=	src/syscall/mkall.sh
 REPLACE_BASH+=	src/syscall/mkerrors.sh
 REPLACE_BASH+=	src/syscall/mksysnum_plan9.sh
-
 REPLACE_PERL+=	src/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
 REPLACE_PERL+=	src/syscall/*.pl
