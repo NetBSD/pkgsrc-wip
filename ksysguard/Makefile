@@ -31,7 +31,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ksysguard.knsrc \
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
-.include "../../wip/kdelibs4support/buildlink3.mk"
+.include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
