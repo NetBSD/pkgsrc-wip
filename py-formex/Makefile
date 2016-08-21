@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-OpenGL>=3.0.1:../../graphics/py-OpenGL
 USE_TOOLS+=	bash
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric via py-OpenGL
 
 REPLACE_BASH+=	pyformex-search
 
