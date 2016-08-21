@@ -337,6 +337,7 @@ share/locale/zh_CN/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/zh_CN/LC_MESSAGES/breeze_style_config.mo
 share/locale/zh_TW/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/zh_TW/LC_MESSAGES/breeze_style_config.mo
+share/metainfo/org.kde.breezedark.desktop.appdata.xml
 share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/defaults
 share/plasma/look-and-feel/org.kde.breezedark.desktop/contents/previews/preview.png
 share/plasma/look-and-feel/org.kde.breezedark.desktop/metadata.desktop
