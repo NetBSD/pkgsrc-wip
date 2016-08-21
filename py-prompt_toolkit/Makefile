@@ -11,7 +11,7 @@ COMMENT=	Library for building powerful interactive command lines
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.7:../../wip/py-wcwidth
+DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 
 USE_LANGUAGES=	# none
 
