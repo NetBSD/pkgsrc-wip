@@ -5,7 +5,6 @@ lib/libkdeinit5_konsole.so
 lib/libkonsoleprivate.so.16
 lib/libkonsoleprivate.so.${PKGVERSION}
 qt5/plugins/konsolepart.so
-share/appdata/org.kde.konsole.appdata.xml
 share/applications/org.kde.konsole.desktop
 share/doc/HTML/en/konsole/draganddrop-contextmenu.png
 share/doc/HTML/en/konsole/index.cache.bz2
@@ -33,3 +32,4 @@ share/kservicetypes5/terminalemulator.desktop
 share/kxmlgui5/konsole/konsoleui.rc
 share/kxmlgui5/konsole/partui.rc
 share/kxmlgui5/konsole/sessionui.rc
+share/metainfo/org.kde.konsole.appdata.xml
