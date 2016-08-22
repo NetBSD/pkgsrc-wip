@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/05/10 07:41:59 thomasklausner Exp $
 
-DISTNAME=	fswatch-1.9.2
+DISTNAME=	fswatch-1.9.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emcrisostomo/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
