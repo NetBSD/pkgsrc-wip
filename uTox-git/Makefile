@@ -25,6 +25,11 @@ USE_TOOLS+=	gmake pkg-config
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
