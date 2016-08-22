@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=1.1.3.1
+DAVICAL_VERSION=1.1.4
 PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	www
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
