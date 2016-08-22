@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=kristapsdz/}
 GITHUB_PROJECT=	letskencrypt-portable
 GITHUB_TAG=	VERSION_${PKGVERSION_NOREV:S/./_/g}
 
-MAINTAINER=	pkgsrc-users@NetBSD.0rg
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kristapsdz/letskencrypt-portable/
 COMMENT=	Secure Let's Encrypt client
 LICENSE=	isc
