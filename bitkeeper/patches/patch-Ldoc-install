@@ -1,5 +1,7 @@
 $NetBSD$
 
+Ignore error if little.html isn't generated
+
 --- src/gui/tcltk/tcl/doc/L/Makefile.orig	2016-07-15 19:21:30.000000000 +0000
 +++ src/gui/tcltk/tcl/doc/L/Makefile
 @@ -35,7 +35,8 @@
