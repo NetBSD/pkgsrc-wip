@@ -34,4 +34,5 @@ do-install:
 .include "../../math/ltm/buildlink3.mk"
 .include "../../security/libtomcrypt/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

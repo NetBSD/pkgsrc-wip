@@ -1,0 +1,15 @@
+$NetBSD$
+
+To make sure not only '-lX11' is on the linker command line.
+
+--- src/gui/tcltk/tktable/configure.orig	2016-07-15 19:21:31.000000000 +0000
++++ src/gui/tcltk/tktable/configure
+@@ -7097,7 +7097,7 @@ echo "${ECHO_T}could not find any!  Usin
+     fi
+     # TEA specific:
+     if test x"${XLIBSW}" != x ; then
+-	PKG_LIBS="${PKG_LIBS} ${XLIBSW}"
++	PKG_LIBS="${PKG_LIBS} -L${PREFIX}/lib -Wl,-R${PREFIX}/lib ${XLIBSW}"
+     fi
+ 
+     fi
