@@ -1,0 +1,15 @@
+$NetBSD$
+
+Must see Tcl's tommath.h before the system version
+
+--- src/gui/tcltk/tcl/unix/Makefile.in.orig	2016-07-15 19:21:31.000000000 +0000
++++ src/gui/tcltk/tcl/unix/Makefile.in
+@@ -107,7 +107,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
+ #CFLAGS			= $(CFLAGS_DEBUG)
+ #CFLAGS			= $(CFLAGS_OPTIMIZE)
+ #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
+-CFLAGS			= @CFLAGS_DEFAULT@ @CFLAGS@
++CFLAGS			= -I${GENERIC_DIR}  @CFLAGS_DEFAULT@ @CFLAGS@
+ 
+ # Flags to pass to the linker
+ LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@

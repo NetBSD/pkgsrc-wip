@@ -5,3 +5,4 @@ RMD160 (bk-7.3ce.src.tar.gz) = 6573ddcaef75dfa5b0c8578cbb3525754c351825
 SHA512 (bk-7.3ce.src.tar.gz) = 671828afe094a2c834f70ea2e70070eec823e6c67e0e3eaa84fb7f7259caf026764194c04356ba5b6439f3813124a20eed7fc283f82de324b587c3bf779a8678
 Size (bk-7.3ce.src.tar.gz) = 20257094 bytes
 SHA1 (patch-Ldoc-install) = f7d8f10d501240f08f7a27d058a700ce5b09a6d6
+SHA1 (patch-src_gui_tcltk_tcl_unix_Makefile.in) = 4811d75e4b37a8be0c2389c6d8265ce7ecae536c
