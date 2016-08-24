@@ -28,6 +28,7 @@ SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
 SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
+SUBST_FILES.paths+=	scripts/Widgets/LibraryBrowser/LibraryBrowser.js
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 
 AUTO_MKDIRS=	yes
