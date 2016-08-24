@@ -19,7 +19,7 @@ DEPENDS+=		qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		find make pax
+USE_TOOLS+=		chmod find make pax
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
@@ -30,23 +30,20 @@ SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 
-# Note: Using pax to install the data files duplicates the lax permissions
-# from the zip archive. We use 'umask 133' to prevent this, but we must
-# create the directories first otherwise they are not searchable.
-# When updating you may need to make the package, update the PLIST and then
-# remake the package to bootstrap the directory permissions
-#
-# XXX Or use the .tar.gz archive available from git but it won't extract properly for me
-#
-#INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/${PKGBASE} \
-#			lib/${PKGBASE}/plugins/designer lib/${PKGBASE}/plugins/script
 AUTO_MKDIRS=	yes
+
+#
+# Fix permissions from zip file
+#
+post-extract:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} u=rw,go=r "{}" "+"
 
 #
 # The QCad build system normally links direct to a release dir but this
 # causes a lot of problems with libtool dependencies. We patch it so that
-# the libs are linked in the source files and add an install target to
+# the libs are linked from the source dirs and add an install target to
 # allow pkgsrc to use DESTDIR
+#
 # The Qt script bindings are built in Qt version specific subdirectory
 # which we can't patch directly, so we create a fake qtscript.pro file
 # and use it to overwrite Makefiles. Makefile.qtscript is ignored
@@ -64,9 +61,9 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${FIND} ${WRKSRC}/scripts -name \*.orig -rm
-	cd ${WRKSRC} && umask 133 && ${PAX} -rw fonts linetypes patterns \
+	cd ${WRKSRC} && ${PAX} -rwpm fonts linetypes patterns \
 	    plugins scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
-	cd ${WRKSRC} && umask 133 && ${PAX} -rw readme.txt examples libraries \
+	cd ${WRKSRC} && ${PAX} -rwpm readme.txt examples libraries \
 	    ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
