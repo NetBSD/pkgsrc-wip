@@ -12,4 +12,4 @@ and create an install target
 -CONFIG += staticlib
 -#CONFIG += plugin
 +CONFIG += plugin
-+INSTALLS = target
++INSTALLS += target

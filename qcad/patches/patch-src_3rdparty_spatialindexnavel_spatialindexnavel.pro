@@ -9,7 +9,7 @@ and create an install target
  else {
      CONFIG += plugin
  }
-+INSTALLS = target
++INSTALLS += target
 
  # this is required to compile the spatial index library from navel ltd:
  #DEFINES += PACKAGE_BUGREPORT=\\\"mhadji@gmail.com\\\"
