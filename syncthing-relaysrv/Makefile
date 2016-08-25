@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-relaysrv-0.14.4
+PKGNAME=	syncthing-relaysrv-0.14.5
 CATEGORIES=	local
-DISTNAME=	syncthing-0.14.4
+DISTNAME=	syncthing-0.14.5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ COMMENT=	Syncthing relay server
 LICENSE=	mit
 
 EXTRACT_USING=		bsdtar
-WRKSRC=			${WRKDIR}/syncthing-0.14.4
+WRKSRC=			${WRKDIR}/syncthing-0.14.5
 BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c # and go
