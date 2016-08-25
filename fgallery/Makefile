@@ -37,6 +37,9 @@ FG_SHAREDIR=    share/${PKGBASE}/view
 FG_SRCDIR=      ${WRKDIR}/${DISTNAME}
 FG_VIEWDIR=     ${FG_SRCDIR}/view
 FG_VIEWFILES=   back.png \
+		cap-always.png \
+		cap-never.png \
+		cap-normal.png \
                 cut-left.png \
                 cut-mov.png \
                 cut-right.png \

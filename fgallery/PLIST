@@ -6,6 +6,9 @@ share/doc/fgallery/NEWS.rst
 share/doc/fgallery/README.html
 share/doc/fgallery/README.rst
 share/fgallery/view/back.png
+share/fgallery/view/cap-always.png
+share/fgallery/view/cap-never.png
+share/fgallery/view/cap-normal.png
 share/fgallery/view/cut-left.png
 share/fgallery/view/cut-mov.png
 share/fgallery/view/cut-right.png
