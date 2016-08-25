@@ -16,11 +16,15 @@ USE_LANGUAGES=	c
 
 PLIST_SUBST+=	THIS_EGG_FILE=${EGG_NAME:S|python-|python_|}-py${PYVERSSUFFIX}.egg-info
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2 via py-webkit
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2 via py-webkit
 
 BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.13
 .include "../../devel/py-cython/buildlink3.mk"
+
+# This most come before including wip/py-webkit/buildlink3.mk, because py-webkit
+# also sets PYTHON_VERSIONS_INCOMPATIBLE.
+.include "../../lang/python/distutils.mk"
+
 .include "../../wip/py-webkit/buildlink3.mk"
 
-.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
