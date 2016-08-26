@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-CMakeLists.txt) = 2350418aa883ab0e7e494443d8373234882be2c9
+SHA1 (patch-lib_Runtime_PlatformAgnostic_Platform_CMakeLists.txt) = 686eaed18ceb2ad0e88bf9777131ee576a39f2bc

@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- lib/Runtime/PlatformAgnostic/Platform/CMakeLists.txt.orig	2016-08-26 18:28:16.000000000 +0000
++++ lib/Runtime/PlatformAgnostic/Platform/CMakeLists.txt
+@@ -19,6 +19,16 @@ set(PL_SOURCE_FILES
+   Unix/SystemInfo.cpp
+   Common/UnicodeText.Common.cpp
+   )
++elseif(CMAKE_SYSTEM_NAME STREQUAL NetBSD)
++set(PL_SOURCE_FILES
++  # xplat-todo: implement them for unix! or carry them into common
++  Linux/UnicodeText.ICU.cpp
++  Unix/DateTime.cpp
++  Linux/HiResTimer.cpp
++  Linux/NumbersUtility.cpp
++  Unix/SystemInfo.cpp
++  Common/UnicodeText.Common.cpp
++  )
+ endif()
+ 
+ if(NOT STATIC_LIBRARY)
