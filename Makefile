@@ -323,6 +323,7 @@ SUBDIR+=	cgminer297
 SUBDIR+=	cgnslib
 SUBDIR+=	cgterm
 SUBDIR+=	chani
+SUBDIR+=	chakracore-git
 SUBDIR+=	chbg
 SUBDIR+=	checkstyle
 SUBDIR+=	cheese
