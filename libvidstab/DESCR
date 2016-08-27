@@ -1,0 +1,9 @@
+Vidstab is a video stabilization library which can be plugged-in
+with Ffmpeg and Transcode.
+
+A video acquired using a hand-held camera or a camera mounted on
+a vehicle, typically suffers from undesirable shakes and jitters.
+Activities such as surfing, skiing, riding and walking while shooting
+videos are especially prone to erratic camera shakes. Vidstab
+targets these video contents to help create smoother and stable
+videos.

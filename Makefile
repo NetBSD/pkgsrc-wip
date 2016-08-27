@@ -1677,6 +1677,7 @@ SUBDIR+=	libunwind-git
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
+SUBDIR+=	libvidstab
 SUBDIR+=	libvterm
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libwebsockets
