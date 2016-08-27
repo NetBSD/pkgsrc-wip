@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/02/09 15:44:25 thomasklausner Exp $
 
-DISTNAME=	gcalcli-3.2
+DISTNAME=	gcalcli-3.4.0
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/insanum/gcalcli/
 
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-parsedatetime-[0-9]*:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gflags, py-google-api-python-client, py-vobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gflags, py-google-api-python-client
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
