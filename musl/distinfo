@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (musl-1.1.15.tar.gz) = 027c3ae2182fa53c2b554ca98a28dc5cfca4b2c3
+RMD160 (musl-1.1.15.tar.gz) = 9c0f1a71f7099cb116808683dd5fb6363f389ac8
+SHA512 (musl-1.1.15.tar.gz) = 9e923572c0d6bad3dc2d2646d4b0699c10b477ce6300ac6c6224895192a90667f581ddf6eda2ab8c4c16f47bde4bccb03bb90478638d136d9df721430f4d0163
+Size (musl-1.1.15.tar.gz) = 911600 bytes

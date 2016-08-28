@@ -1,0 +1,3 @@
+musl is a C standard library intended for operating systems based on the Linux
+kernel, with the goal to write a clean, efficient and standards-conformant libc
+implementation.
