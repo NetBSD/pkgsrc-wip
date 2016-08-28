@@ -197,9 +197,13 @@ lib/radare2/${PKGVERSION}-git/fcnsign/cc-x86-64.sdb
 lib/radare2/${PKGVERSION}-git/fcnsign/darwin-x86-64.sdb
 lib/radare2/${PKGVERSION}-git/fcnsign/linux-x86-32.sdb
 lib/radare2/${PKGVERSION}-git/fcnsign/linux-x86-64.sdb
+lib/radare2/${PKGVERSION}-git/fcnsign/types-windows.sdb
+lib/radare2/${PKGVERSION}-git/fcnsign/types-x86-16.sdb
 lib/radare2/${PKGVERSION}-git/fcnsign/types-x86-32.sdb
 lib/radare2/${PKGVERSION}-git/fcnsign/types-x86-64.sdb
-lib/radare2/${PKGVERSION}-git/fcnsign/windows-types.sdb
+lib/radare2/${PKGVERSION}-git/fcnsign/types-x86-windows-32.sdb
+lib/radare2/${PKGVERSION}-git/fcnsign/types-x86-windows-64.sdb
+lib/radare2/${PKGVERSION}-git/fcnsign/types.sdb
 lib/radare2/${PKGVERSION}-git/fcnsign/windows-x86-32.sdb
 lib/radare2/${PKGVERSION}-git/fcnsign/windows-x86-64.sdb
 lib/radare2/${PKGVERSION}-git/hud/main
@@ -350,6 +354,7 @@ share/doc/radare2/solaris
 share/doc/radare2/static
 share/doc/radare2/static-plugins
 share/doc/radare2/strings
+share/doc/radare2/types.md
 share/doc/radare2/vim
 share/doc/radare2/vim2r2.js
 share/doc/radare2/windbg
@@ -382,9 +387,11 @@ share/radare2/${PKGVERSION}-git/format/dll/cabinet.sdb
 share/radare2/${PKGVERSION}-git/format/dll/comctl32.sdb
 share/radare2/${PKGVERSION}-git/format/dll/csmfpapi.sdb
 share/radare2/${PKGVERSION}-git/format/dll/dsound.sdb
+share/radare2/${PKGVERSION}-git/format/dll/gsprop32.sdb
 share/radare2/${PKGVERSION}-git/format/dll/kernel32.sdb
 share/radare2/${PKGVERSION}-git/format/dll/mfc42.sdb
 share/radare2/${PKGVERSION}-git/format/dll/mfc42u.sdb
+share/radare2/${PKGVERSION}-git/format/dll/mfc90u.sdb
 share/radare2/${PKGVERSION}-git/format/dll/msi.sdb
 share/radare2/${PKGVERSION}-git/format/dll/mstlsapi.sdb
 share/radare2/${PKGVERSION}-git/format/dll/msvbvm50.sdb
@@ -398,6 +405,7 @@ share/radare2/${PKGVERSION}-git/format/dll/olesvr32.sdb
 share/radare2/${PKGVERSION}-git/format/dll/shdocvw.sdb
 share/radare2/${PKGVERSION}-git/format/dll/shell32.sdb
 share/radare2/${PKGVERSION}-git/format/dll/shlwapi.sdb
+share/radare2/${PKGVERSION}-git/format/dll/spr32d70.sdb
 share/radare2/${PKGVERSION}-git/format/dll/uxtheme.sdb
 share/radare2/${PKGVERSION}-git/format/dll/vb40032.sdb
 share/radare2/${PKGVERSION}-git/format/dll/vssapi.sdb
@@ -453,6 +461,9 @@ share/radare2/${PKGVERSION}-git/www/graph/sf-homepage.css
 share/radare2/${PKGVERSION}-git/www/index.html
 share/radare2/${PKGVERSION}-git/www/index.old.html
 share/radare2/${PKGVERSION}-git/www/log.html
+share/radare2/${PKGVERSION}-git/www/m/disasmNavProvider.js
+share/radare2/${PKGVERSION}-git/www/m/disasmProvider.js
+share/radare2/${PKGVERSION}-git/www/m/hexchunkProvider.js
 share/radare2/${PKGVERSION}-git/www/m/hsplit
 share/radare2/${PKGVERSION}-git/www/m/images/icon.png
 share/radare2/${PKGVERSION}-git/www/m/images/rlogo256.png
@@ -461,6 +472,8 @@ share/radare2/${PKGVERSION}-git/www/m/index.html
 share/radare2/${PKGVERSION}-git/www/m/index.js
 share/radare2/${PKGVERSION}-git/www/m/r2.js
 share/radare2/${PKGVERSION}-git/www/m/stylesheet.css
+share/radare2/${PKGVERSION}-git/www/m/tools.js
+share/radare2/${PKGVERSION}-git/www/m/vendors/FileSaver.min.js
 share/radare2/${PKGVERSION}-git/www/m/vendors/dialog-polyfill.css
 share/radare2/${PKGVERSION}-git/www/m/vendors/dialog-polyfill.js
 share/radare2/${PKGVERSION}-git/www/m/vendors/fonts/MaterialIcons-Regular.eot
@@ -491,6 +504,8 @@ share/radare2/${PKGVERSION}-git/www/m/vendors/jquery.min.js
 share/radare2/${PKGVERSION}-git/www/m/vendors/material-design-icons.css
 share/radare2/${PKGVERSION}-git/www/m/vendors/material.min.css
 share/radare2/${PKGVERSION}-git/www/m/vendors/material.min.js
+share/radare2/${PKGVERSION}-git/www/m/vendors/mdl-selectfield.min.css
+share/radare2/${PKGVERSION}-git/www/m/vendors/mdl-selectfield.min.js
 share/radare2/${PKGVERSION}-git/www/m/vsplit
 share/radare2/${PKGVERSION}-git/www/old/index.html
 share/radare2/${PKGVERSION}-git/www/old/rlogo2.png
