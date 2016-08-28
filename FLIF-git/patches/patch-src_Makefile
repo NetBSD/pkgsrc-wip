@@ -2,16 +2,16 @@ $NetBSD$
 
 Make use of DESTDIR and MANDIR.
 
---- src/Makefile.orig	2016-04-21 13:40:29.000000000 +0000
+--- src/Makefile.orig	2016-08-26 20:56:57.000000000 +0000
 +++ src/Makefile
 @@ -1,4 +1,5 @@
 -PREFIX := $(DESTDIR)/usr
 +PREFIX ?= $(DESTDIR)/usr
 +MANDIR ?= $(PREFIX)/share/man
- CXXFLAGS := $(shell pkg-config --cflags zlib libpng)
+ CXXFLAGS := $(shell pkg-config --cflags zlib libpng) -DLODEPNG_NO_COMPILE_PNG -DLODEPNG_NO_COMPILE_DISK
  LDFLAGS := $(shell pkg-config --libs libpng)
  
-@@ -60,16 +61,16 @@ viewflif: libflif$(LIBEXT) viewflif.c
+@@ -63,16 +64,16 @@ viewflif: libflif$(LIBEXT) viewflif.c
  
  
  install: all
