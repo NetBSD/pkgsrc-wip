@@ -1,0 +1,21 @@
+@comment $NetBSD$
+bin/mosquitto_passwd
+bin/mosquitto_pub
+bin/mosquitto_sub
+lib/libmosquitto.a
+lib/libmosquitto.so.1
+lib/libmosquittopp.so.1
+man/man1/mosquitto.passwd.1
+man/man1/mosquitto.pub.1
+man/man1/mosquitto.sub.1
+man/man3/libmosquitto.3
+man/man5/mosquitto.conf.5
+man/man7/mosquitto-tls.7
+man/man7/mqtt.7
+man/man8/mosquitto.8
+sbin/mosquitto
+share/examples/mosquitto/
+share/examples/mosquitto/aclfile.example
+share/examples/mosquitto/mosquitto.conf
+share/examples/mosquitto/pskfile.example
+share/examples/mosquitto/pwfile.example

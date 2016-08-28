@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- lib/memory_mosq.h.orig	2016-06-02 21:20:22.000000000 +0000
++++ lib/memory_mosq.h	2016-08-28 14:30:34.000000000 +0000
+@@ -20,7 +20,7 @@
+ #include <stdio.h>
+ #include <sys/types.h>
+ 
+-#if defined(WITH_MEMORY_TRACKING) && defined(WITH_BROKER) && !defined(WIN32) && !defined(__SYMBIAN32__) && !defined(__ANDROID__) && !defined(__UCLIBC__) && !defined(__OpenBSD__)
++#if defined(WITH_MEMORY_TRACKING) && defined(WITH_BROKER) && !defined(WIN32) && !defined(__SYMBIAN32__) && !defined(__ANDROID__) && !defined(__UCLIBC__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+ #define REAL_WITH_MEMORY_TRACKING
+ #endif
+ 

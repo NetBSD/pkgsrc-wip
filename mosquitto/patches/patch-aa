@@ -1,0 +1,25 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2016-06-02 21:20:22.000000000 +0000
++++ CMakeLists.txt	2016-08-28 15:50:53.430205374 +0000
+@@ -37,18 +40,12 @@
+ else (WIN32)
+ 	set (BINDIR bin)
+ 	set (SBINDIR sbin)
+-	if ("${CMAKE_INSTALL_PREFIX}" STREQUAL /usr)
+-		set (SYSCONFDIR /etc/mosquitto)
+-	else ("${CMAKE_INSTALL_PREFIX}" STREQUAL /usr)
+-		set (SYSCONFDIR etc/mosquitto)
+-	endif ("${CMAKE_INSTALL_PREFIX}" STREQUAL /usr)
+ 	
+ 	set (LIBDIR lib${LIB_SUFFIX})
+-	set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${LIBDIR}")
+ 	set (INCLUDEDIR include)
+ 	set (DATAROOTDIR share)
+-	set (MANDIR "${DATAROOTDIR}/man")
+-	set (SHAREDIR "${DATAROOTDIR}/mosquitto")
++	set (MANDIR "man")
++	set (SYSCONFDIR "${DATAROOTDIR}/examples/mosquitto")
+ endif (WIN32)
+ 
+ option(WITH_TLS

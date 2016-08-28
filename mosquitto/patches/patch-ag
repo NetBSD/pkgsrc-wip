@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- lib/tls_mosq.c.orig	2016-06-02 21:20:22.000000000 +0000
++++ lib/tls_mosq.c	2016-08-28 14:31:56.000000000 +0000
+@@ -20,6 +20,7 @@
+ #  include <winsock2.h>
+ #  include <ws2tcpip.h>
+ #else
++#  include <sys/socket.h>
+ #  include <arpa/inet.h>
+ #  include <sys/socket.h>
+ #endif

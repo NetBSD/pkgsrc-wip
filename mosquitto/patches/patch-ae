@@ -1,0 +1,36 @@
+$NetBSD$
+
+--- src/CMakeLists.txt.orig	2016-06-02 21:20:22.000000000 +0000
++++ src/CMakeLists.txt	2016-08-28 14:13:03.999103447 +0000
+@@ -85,6 +85,8 @@
+ if (UNIX)
+ 	if (APPLE)
+ 		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
++	elseif (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
++		set (MOSQ_LIBS ${MOSQ_LIBS} m)
+ 	else (APPLE)
+ 		set (MOSQ_LIBS ${MOSQ_LIBS} rt dl m)
+ 	endif (APPLE)
+@@ -101,10 +103,11 @@
+ # Simple detect libuuid
+ if(NOT APPLE)
+ 	FIND_PATH(UUID_HEADER uuid/uuid.h)
+-	if (UUID_HEADER)
++	FIND_LIBRARY(UUID_LIBRARY NAMES uuid)
++	IF (UUID_HEADER AND UUID_LIBRARY)
+ 		add_definitions(-DWITH_UUID)
+-		set (MOSQ_LIBS ${MOSQ_LIBS} uuid)
+-	endif (UUID_HEADER)
++		set (MOSQ_LIBS ${MOSQ_LIBS} ${UUID_LIBRARY})
++	endif ()
+ endif(NOT APPLE)
+ 
+ target_link_libraries(mosquitto ${MOSQ_LIBS})
+@@ -126,7 +129,3 @@
+ 	install(TARGETS mosquitto_passwd RUNTIME DESTINATION "${BINDIR}" LIBRARY DESTINATION "${LIBDIR}")
+ endif (${WITH_TLS} STREQUAL ON)
+ 
+-if (UNIX)
+-	install(CODE "EXEC_PROGRAM(/sbin/ldconfig)")
+-endif (UNIX)
+-
