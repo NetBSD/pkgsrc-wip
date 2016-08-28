@@ -1,0 +1,54 @@
+--- gtk/makefile.orig	2016-05-17 23:50:39.000000000 +0000
++++ gtk/makefile	2016-08-21 23:04:04.169401815 +0000
+@@ -15,6 +15,7 @@
+ SANITIZE = address
+ #SANITIZE = undefined
+ endif
++AR= ar
+ RANLIB = touch
+ 
+ ifdef GTK3
+@@ -42,7 +43,8 @@
+ COMPLIB=..\bin\scintilla.a
+ else
+ DEL = rm -f
+-COMPLIB=../bin/scintilla.a
++COMPLIB=../bin/libscintilla.a
++LEXERLIB=../bin/libscintilla_lexers.a
+ endif
+ 
+ vpath %.h ../src ../include ../lexlib
+@@ -95,7 +97,7 @@
+ 
+ LEXOBJS:=$(addsuffix .o,$(basename $(notdir $(wildcard ../lexers/Lex*.cxx))))
+ 
+-all: $(COMPLIB)
++all: $(COMPLIB) $(LEXERLIB)
+ 
+ clean:
+ 	$(DEL) *.o $(COMPLIB) *.plist
+@@ -105,16 +107,22 @@
+ 
+ deps:
+ 	$(CXX) -MM $(CONFIGFLAGS) $(CXXTFLAGS) *.cxx ../src/*.cxx ../lexlib/*.cxx ../lexers/*.cxx | sed -e 's/\/usr.* //' | grep [a-zA-Z] >deps.mak
+-
+-$(COMPLIB): Accessor.o CharacterSet.o LexerBase.o LexerModule.o LexerSimple.o StyleContext.o WordList.o \
++LIBOBJS= Accessor.o CharacterSet.o LexerBase.o LexerModule.o LexerSimple.o StyleContext.o WordList.o \
+ 	CharClassify.o Decoration.o Document.o PerLine.o Catalogue.o CallTip.o CaseConvert.o CaseFolder.o \
+ 	ScintillaBase.o ContractionState.o EditModel.o Editor.o EditView.o ExternalLexer.o MarginView.o \
+ 	PropSetSimple.o PlatGTK.o \
+ 	KeyMap.o LineMarker.o PositionCache.o ScintillaGTK.o CellBuffer.o CharacterCategory.o ViewStyle.o \
+ 	RESearch.o RunStyles.o Selection.o Style.o Indicator.o AutoComplete.o UniConversion.o XPM.o \
+ 	$(MARSHALLER) $(LEXOBJS)
++	
++$(COMPLIB): $(LIBOBJS)
++	$(AR) rc $@ $^
++	$(RANLIB) $@
++
++$(LEXERLIB): $(LEXOBJS)
+ 	$(AR) rc $@ $^
+ 	$(RANLIB) $@
++	
+ 
+ # Automatically generate header dependencies with "make deps"
+ include deps.mak

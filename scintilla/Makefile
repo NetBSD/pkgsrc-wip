@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.23 2015/04/25 14:20:40 tnn Exp $
 #
 
-DISTNAME=	scintilla339
-PKGNAME=	scintilla-3.3.9
-PKGREVISION=	2
+DISTNAME=	scintilla366
+PKGNAME=	scintilla-3.6.6
+PKGREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz
@@ -24,9 +24,14 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/Scintilla.h \
 		${WRKSRC}/include/ScintillaWidget.h \
 		${WRKSRC}/include/SciLexer.h \
+		${WRKSRC}/include/Platform.h \
+		${WRKSRC}/include/Sci_Position.h \
+		${WRKSRC}/include/Scintilla.iface \
 		${WRKSRC}/include/ILexer.h \
 		${DESTDIR}${PREFIX}/include/scintilla
-	${INSTALL_LIB} ${WRKSRC}/bin/scintilla.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/bin/libscintilla.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/bin/libscintilla_lexers.a ${DESTDIR}${PREFIX}/lib
+	
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
