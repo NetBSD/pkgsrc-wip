@@ -1,5 +1,5 @@
 # $NetBSD$
-PKGNAME=	mosquitto-1.4.9
+PKGNAME=	mosquitto-1.4.10
 DISTNAME=	${PKGNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://mosquitto.org/files/source/
