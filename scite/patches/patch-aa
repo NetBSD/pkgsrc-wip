@@ -1,44 +1,89 @@
-$NetBSD: patch-aa,v 1.5 2015/02/13 16:58:17 jperkin Exp $
-
-Use --version-script=file form so we can rm it if necessary.
-
---- gtk/makefile.orig	2013-10-13 21:38:06.000000000 +0000
-+++ gtk/makefile
-@@ -43,10 +43,10 @@ PROG	= ../bin/SciTE
+--- gtk/makefile.orig	2015-09-22 00:04:06.000000000 +0000
++++ gtk/makefile	2016-08-21 21:11:56.272068426 +0000
+@@ -29,13 +29,14 @@
+ ifdef gnomeprefix
+   prefix=$(gnomeprefix)
+ else
+-  prefix=/usr
++  prefix=$(PREFIX)
+ endif
+ endif
+ datadir=$(prefix)/share
+ pixmapdir=$(datadir)/pixmaps
+ bindir=$(prefix)/bin
+ SYSCONF_PATH=$(prefix)/share/scite
++DOCPATH=$(PREFIX)/share/doc/scite
+ 
+ INSTALL=install
+ 
+@@ -43,22 +44,24 @@
  
  all: $(PROG)
  
 -vpath %.h ../src ../../scintilla/include
-+vpath %.h ../src $(prefix)/include/scintilla
++vpath %.h ../src scintilla
  vpath %.cxx ../src
  
 -INCLUDEDIRS=-I ../../scintilla/include -I ../src
-+INCLUDEDIRS=-I $(prefix)/include/scintilla -I ../src
++INCLUDEDIRS=-I $(PREFIX)/include/scintilla -I ../src -I $(prefix)/include
  ifdef CHECK_DEPRECATED
  DEPRECATED=-DGDK_PIXBUF_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
  endif
-@@ -74,7 +74,7 @@ LUA_OBJS = LuaExtension.o $(LUA_CORE_OBJ
+-CXXBASEFLAGS=-W -Wall -pedantic -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(INCLUDEDIRS) $(DEPRECATED)
++CXXBASEFLAGS=-W -Wall -Dunix -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(INCLUDEDIRS) $(DEPRECATED)
+ 
+ ifdef DEBUG
+-CXXTFLAGS=-DDEBUG -g $(CXXBASEFLAGS)
++CXXTFLAGS+=-DDEBUG -g $(CXXBASEFLAGS)
+ else
+-CXXTFLAGS=-DNDEBUG -Os $(CXXBASEFLAGS)
++CXXTFLAGS+=-DNDEBUG $(CXXBASEFLAGS)
+ endif
+ 
+-ifndef NO_LUA
++LIBS = -L $(PREFIX)/lib -lscintilla -lscintilla_lexers
++
++ifdef LUA
+ LUA_CORE_OBJS = lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o \
+ 		lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o \
+ 		ltable.o ltm.o lundump.o lvm.o lzio.o
+@@ -70,7 +73,7 @@
  
  vpath %.c ../lua/src ../lua/src/lib
  
 -INCLUDEDIRS=-I ../../scintilla/include -I ../src -I../lua/include
-+INCLUDEDIRS=-I $(prefix)/include/scintilla -I ../src -I../lua/include
++INCLUDEDIRS+=-I../lua/include
  
  .c.o:
- 	$(CCOMP) $(CFLAGS) $(INCLUDEDIRS) -DLUA_USE_POSIX $(CXXTFLAGS) -c $< -o $@
-@@ -111,13 +111,13 @@ deps:
- 	$(CC) -MM $(CONFIGFLAGS) $(CXXTFLAGS) *.cxx ../src/*.cxx | sed -e 's/\/usr.* //' | grep [a-zA-Z] >deps.mak
+ 	$(CC) $(CFLAGS) $(INCLUDEDIRS) -DLUA_USE_POSIX $(CXXTFLAGS) -c $< -o $@
+@@ -106,16 +109,13 @@
+ deps:
+ 	$(CXX) -MM $(CONFIGFLAGS) $(CXXTFLAGS) *.cxx ../src/*.cxx | sed -e 's/\/usr.* //' | grep [a-zA-Z] >deps.mak
  
- # make should be run in ../../scintilla/gtk to compile all the lexers.
+-# make should be run in ../../scintilla/gtk to compile all the lexers.
 -COMPLIB=../../scintilla/bin/scintilla.a
-+COMPLIB=$(prefix)/lib/scintilla.a
- 
+-
  $(PROG): SciTEGTK.o GUIGTK.o Widget.o \
- FilePath.o SciTEBase.o FileWorker.o Cookie.o Credits.o SciTEBuffers.o SciTEIO.o StringList.o Exporters.o StringHelpers.o \
- PropSetFile.o MultiplexExtension.o DirectorExtension.o SciTEProps.o StyleDefinition.o StyleWriter.o Utf8_16.o \
+-FilePath.o SciTEBase.o FileWorker.o Cookie.o Credits.o SciTEBuffers.o SciTEIO.o StringList.o \
+-ExportHTML.o ExportPDF.o ExportRTF.o ExportTEX.o ExportXML.o \
+-MatchMarker.o StringHelpers.o \
+-PropSetFile.o MultiplexExtension.o DirectorExtension.o SciTEProps.o StyleDefinition.o StyleWriter.o Utf8_16.o \
++	FilePath.o SciTEBase.o FileWorker.o Cookie.o Credits.o SciTEBuffers.o SciTEIO.o StringList.o \
++	ExportHTML.o ExportPDF.o ExportRTF.o ExportTEX.o ExportXML.o \
++	MatchMarker.o StringHelpers.o \
++	PropSetFile.o MultiplexExtension.o DirectorExtension.o SciTEProps.o StyleDefinition.o StyleWriter.o Utf8_16.o \
  	JobQueue.o GTKMutex.o IFaceTable.o $(COMPLIB) $(LUA_OBJS)
--	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--as-needed -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB) $(LIBDL) -lm -lstdc++
-+	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--as-needed -Wl,--version-script=lua.vers -DGTK $^ -o $@ $(CONFIGLIB) $(LIBDL) -lm -lstdc++
+-	$(CXX) `$(CONFIGTHREADS)` -rdynamic -Wl,--as-needed -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB) $(LIBDL) -lm -lstdc++
++	$(CXX) `$(CONFIGTHREADS)` $(LIBS) -rdynamic -Wl,--as-needed -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB) $(LIBDL) -lm -lstdc++
  
  # Automatically generate header dependencies with "make deps"
  include deps.mak
+@@ -136,7 +136,7 @@
+ ifdef gnomeprefix
+ 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/applications $(DESTDIR)$(pixmapdir)
+ 	$(INSTALL) -m 755 SciTE.desktop $(DESTDIR)$(datadir)/applications/SciTE.desktop
+-	$(INSTALL) -m 644 Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
++	$(INSTALL) -m 444 Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
+ endif
+ 
+ uninstall:
