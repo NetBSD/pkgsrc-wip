@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.5 2015/02/13 16:58:17 jperkin Exp $
+
+Use --version-script=file form so we can rm it if necessary.
+
+--- gtk/makefile.orig	2013-10-13 21:38:06.000000000 +0000
++++ gtk/makefile
+@@ -43,10 +43,10 @@ PROG	= ../bin/SciTE
+ 
+ all: $(PROG)
+ 
+-vpath %.h ../src ../../scintilla/include
++vpath %.h ../src $(prefix)/include/scintilla
+ vpath %.cxx ../src
+ 
+-INCLUDEDIRS=-I ../../scintilla/include -I ../src
++INCLUDEDIRS=-I $(prefix)/include/scintilla -I ../src
+ ifdef CHECK_DEPRECATED
+ DEPRECATED=-DGDK_PIXBUF_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
+ endif
+@@ -74,7 +74,7 @@ LUA_OBJS = LuaExtension.o $(LUA_CORE_OBJ
+ 
+ vpath %.c ../lua/src ../lua/src/lib
+ 
+-INCLUDEDIRS=-I ../../scintilla/include -I ../src -I../lua/include
++INCLUDEDIRS=-I $(prefix)/include/scintilla -I ../src -I../lua/include
+ 
+ .c.o:
+ 	$(CCOMP) $(CFLAGS) $(INCLUDEDIRS) -DLUA_USE_POSIX $(CXXTFLAGS) -c $< -o $@
+@@ -111,13 +111,13 @@ deps:
+ 	$(CC) -MM $(CONFIGFLAGS) $(CXXTFLAGS) *.cxx ../src/*.cxx | sed -e 's/\/usr.* //' | grep [a-zA-Z] >deps.mak
+ 
+ # make should be run in ../../scintilla/gtk to compile all the lexers.
+-COMPLIB=../../scintilla/bin/scintilla.a
++COMPLIB=$(prefix)/lib/scintilla.a
+ 
+ $(PROG): SciTEGTK.o GUIGTK.o Widget.o \
+ FilePath.o SciTEBase.o FileWorker.o Cookie.o Credits.o SciTEBuffers.o SciTEIO.o StringList.o Exporters.o StringHelpers.o \
+ PropSetFile.o MultiplexExtension.o DirectorExtension.o SciTEProps.o StyleDefinition.o StyleWriter.o Utf8_16.o \
+ 	JobQueue.o GTKMutex.o IFaceTable.o $(COMPLIB) $(LUA_OBJS)
+-	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--as-needed -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB) $(LIBDL) -lm -lstdc++
++	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--as-needed -Wl,--version-script=lua.vers -DGTK $^ -o $@ $(CONFIGLIB) $(LIBDL) -lm -lstdc++
+ 
+ # Automatically generate header dependencies with "make deps"
+ include deps.mak
