@@ -1,4 +1,0 @@
-pyswarm is an active light-weight MDA-style code-generator for model-driven
-development (MDD) of database-centric n-tier server applications. Easily
-customizable business-logic with Python & PostgreSQL. Applications
-are modeled in UML 2.0 / XMI 2.1 (XML)

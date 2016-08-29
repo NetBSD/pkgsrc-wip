@@ -3463,7 +3463,6 @@ SUBDIR+=	py-storm
 SUBDIR+=	py-strategies
 SUBDIR+=	py-sumatra
 SUBDIR+=	py-sunpy
-SUBDIR+=	py-swarmsdk
 SUBDIR+=	py-swiginac
 SUBDIR+=	py-symath
 SUBDIR+=	py-symboltype
