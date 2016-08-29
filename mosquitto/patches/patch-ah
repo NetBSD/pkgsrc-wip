@@ -19,6 +19,6 @@ $NetBSD$
 -mandir=${prefix}/share/man
 -localedir=${prefix}/share/locale
 +prefix=${PREFIX}
-+mandir=${PREFIX}/share/man
++mandir=${PREFIX}/man
 +localedir=${PREFIX}/share/locale
  STRIP?=strip

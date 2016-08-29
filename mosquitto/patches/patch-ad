@@ -7,7 +7,7 @@ $NetBSD$
  # being run automatically on boot with an init script and 
  # start-stop-daemon or similar.
 -#pid_file
-+pid_file /var/run/mosquitto.pid
++#pid_file /var/run/mosquitto.pid
  
  # When run as root, drop privileges to this user and its primary 
  # group.
