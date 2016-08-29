@@ -2834,7 +2834,6 @@ SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-dj-database-url
 SUBDIR+=	py-dj-static
 SUBDIR+=	py-django-audiofield
-SUBDIR+=	py-django-diario
 SUBDIR+=	py-django-gitrevision
 SUBDIR+=	py-django-helmholtz
 SUBDIR+=	py-django-idmap

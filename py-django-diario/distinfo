@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/17 23:07:16 jihbed Exp $
-
-SHA1 (django-diario-0.2-grigoropoulos.tar.gz) = f3ec845522daff429aa279cdc3187eca2f04684b
-RMD160 (django-diario-0.2-grigoropoulos.tar.gz) = a7841d5e128661b728e159a12c272ebc86015214
-Size (django-diario-0.2-grigoropoulos.tar.gz) = 27384 bytes
