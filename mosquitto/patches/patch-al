@@ -1,0 +1,17 @@
+--- src/Makefile.orig	2016-08-29 21:52:55.923491416 +0000
++++ src/Makefile	2016-08-29 21:53:27.614743795 +0000
+@@ -103,12 +103,12 @@
+ 
+ install : all
+ 	$(INSTALL) -d ${DESTDIR}$(prefix)/sbin
+-	$(INSTALL) -s --strip-program=${CROSS_COMPILE}${STRIP} mosquitto ${DESTDIR}${prefix}/sbin/mosquitto
++	$(INSTALL) -s mosquitto ${DESTDIR}${prefix}/sbin/mosquitto
+ 	$(INSTALL) -d ${DESTDIR}$(prefix)/include
+ 	$(INSTALL) mosquitto_plugin.h ${DESTDIR}${prefix}/include/mosquitto_plugin.h
+ ifeq ($(WITH_TLS),yes)
+ 	$(INSTALL) -d ${DESTDIR}$(prefix)/bin
+-	$(INSTALL) -s --strip-program=${CROSS_COMPILE}${STRIP} mosquitto_passwd ${DESTDIR}${prefix}/bin/mosquitto_passwd
++	$(INSTALL) -s mosquitto_passwd ${DESTDIR}${prefix}/bin/mosquitto_passwd
+ endif
+ 
+ uninstall :
