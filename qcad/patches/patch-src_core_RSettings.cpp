@@ -2,11 +2,11 @@ $NetBSD$
 
 fix hardcoded paths
 
---- src/core/RSettings.cpp.orig	2016-07-01 07:13:14.000000000 +0000
+--- src/core/RSettings.cpp.orig	2016-08-29 06:49:22.000000000 +0000
 +++ src/core/RSettings.cpp
-@@ -133,27 +133,7 @@ bool RSettings::isDeployed() {
- }
-
+@@ -148,27 +148,7 @@ bool RSettings::isDeployed() {
+  * \return Path where all application resources are stored ('scripts', 'patterns', 'ts', 'doc', 'linetypes', ...)
+  */
  QString RSettings::getApplicationPath() {
 -    QDir ret(QApplication::applicationDirPath());
 -

@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.19 2011/09/23 03:26:57 ryoon Exp $
 
-SHA1 (qcad-3.15.4.1.zip) = c78cfec4e0326a1122a45bef219f0f1b1125574c
-RMD160 (qcad-3.15.4.1.zip) = 7deec07e81d17c3a80ef67314a53b650c7509ebb
-SHA512 (qcad-3.15.4.1.zip) = d3d9ae386920ec5102ab8c49c0a3967994dbae0b9b04b256d64ccd6fcf865ae3c26770204fec3c2feecddf91b4cfe12997fe9a975f5ccc78bb5c88c2012d0696
-Size (qcad-3.15.4.1.zip) = 37420623 bytes
+SHA1 (qcad-3.15.5.3.zip) = 76d88b865cc446ccb4b8cf045b93a8873c571139
+RMD160 (qcad-3.15.5.3.zip) = 40ffbf8aa7232e476520d4acc5657b391f818d20
+SHA512 (qcad-3.15.5.3.zip) = 63ac774ab2721522ce304799ddc46e964c920858e583e3a6f1e526fb548c545db373b3d9b0a5a6ed68989af4f446362eaed6095c3f7ba19b2f5fb3a94a9f2a19
+Size (qcad-3.15.5.3.zip) = 37508749 bytes
 SHA1 (patch-qcad.1) = 64beab5b4d83e889352d80b64ab09aaa080421c2
 SHA1 (patch-scripts_Help_About_About.js) = 011bf46171a3363cca3cd84b5a3f2479414023ba
 SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 362ef9b608bb4c4960b7a79103f9d1b171e93ab6
@@ -20,7 +20,7 @@ SHA1 (patch-src_3rdparty_spatialindexnavel_spatialindexnavel.pro) = 64bf1fb27be3
 SHA1 (patch-src_3rdparty_stemmer_stemmer.pro) = aae5dbeba3f0d3abf2f9bb536817138ce9089f58
 SHA1 (patch-src_core_RS.cpp) = 6cb504d409737058c9eb7ab8058ce0ec889a71c4
 SHA1 (patch-src_core_RSPlatform.cpp) = e61695b3f364b0c5d28d070a075f9d7cd0081757
-SHA1 (patch-src_core_RSettings.cpp) = 9dbb2137268b79f8f1e871712b830ae1fbc1b8bd
+SHA1 (patch-src_core_RSettings.cpp) = 3b4137892ae3a1c16b6ac6d15f9d7fa33b040404
 SHA1 (patch-src_core_core.pro) = 3bcef6ba1a499808271c45c58693f2380d8a00c0
 SHA1 (patch-src_customwidgets_customwidgets.pro) = 2fc0b1f4b0110e8031f2d0b06ad22c823b2e26a6
 SHA1 (patch-src_entity_entity.pro) = a7fe3dbe450a3e8ad8549bf32d2eabe21b221177
