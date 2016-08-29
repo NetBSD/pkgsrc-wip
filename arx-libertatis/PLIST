@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/18 20:14:58 yhardy Exp $
+@comment $NetBSD$
 bin/arx
 bin/arx-install-data
 bin/arxsavetool
@@ -6,5 +6,3 @@ bin/arxunpak
 man/man1/arxsavetool.1
 man/man1/arxunpak.1
 man/man6/arx.6
-share/applications/arx-libertatis.desktop
-share/pixmaps/arx-libertatis.png
