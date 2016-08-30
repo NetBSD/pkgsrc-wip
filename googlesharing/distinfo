@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/07 14:52:23 hfath Exp $
-
-SHA1 (googleshare-0.9.tar.gz) = 8377b31d46ac5521493da1ff3674416e90b6564e
-RMD160 (googleshare-0.9.tar.gz) = f676e6adff5fd783940d828053c783e789544a43
-Size (googleshare-0.9.tar.gz) = 44977 bytes
-SHA1 (patch-aa) = 6f862be1e55d84c5d6a3bfd9aef81ee1d6c55013

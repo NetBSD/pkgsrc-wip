@@ -976,7 +976,6 @@ SUBDIR+=	godura
 SUBDIR+=	gonepass-git
 SUBDIR+=	google-perftools
 SUBDIR+=	googlecl
-SUBDIR+=	googlesharing
 SUBDIR+=	gosmore
 SUBDIR+=	gpak
 SUBDIR+=	gplbasic
