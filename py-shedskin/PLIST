@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/02/11 20:31:14 jihbed Exp $
-bin/shedskin2.7
+@comment $NetBSD$
+bin/shedskin${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/shedskin/FLAGS
 ${PYSITELIB}/shedskin/FLAGS.mingw
 ${PYSITELIB}/shedskin/FLAGS.msvc

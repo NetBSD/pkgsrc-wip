@@ -12,11 +12,12 @@ COMMENT=	Python library for simulation of distributed algorithms
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ipython>=3.2.1:../../devel/py-ipython
-
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"

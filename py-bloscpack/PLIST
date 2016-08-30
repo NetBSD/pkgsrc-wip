@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/09 23:11:15 jihbed Exp $
-bin/blpk2.7
+@comment $NetBSD$
+bin/blpk${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/bloscpack/__init__.py
 ${PYSITELIB}/bloscpack/__init__.pyc
 ${PYSITELIB}/bloscpack/__init__.pyo

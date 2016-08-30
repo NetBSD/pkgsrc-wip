@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 12:22:32 jihbed Exp $
-bin/bkchem2.6
+@comment $NetBSD$
+bin/bkchem${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/bkchem/CDML_versions.py
 ${PYSITELIB}/bkchem/CDML_versions.pyc
 ${PYSITELIB}/bkchem/CDML_versions.pyo

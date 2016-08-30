@@ -1,13 +1,13 @@
 @comment $NetBSD$
-bin/theano-cache2.7
-bin/theano-nose2.7
-bin/theano-test2.7
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/pbr.json
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+bin/theano-cache${PYVERSSUFFIX}
+bin/theano-nose${PYVERSSUFFIX}
+bin/theano-test${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/theano/__init__.py
 ${PYSITELIB}/theano/__init__.pyc
 ${PYSITELIB}/theano/__init__.pyo

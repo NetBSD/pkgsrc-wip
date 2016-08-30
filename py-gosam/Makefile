@@ -14,10 +14,9 @@ DEPENDS+=       ${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-700//}
 
-USE_LANGUAGES=	c c++
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 2.0.0-700
 
-PYDISTUTILSPKG= yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+USE_LANGUAGES=	c c++
 
 post-extract:
 	${MV} ${WRKSRC}/src/python/golem/gosam-config.py \
@@ -25,5 +24,5 @@ post-extract:
 	${MV} ${WRKSRC}/src/python/golem/gosam.py \
 			${WRKSRC}/src/python/golem/gosam.py${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

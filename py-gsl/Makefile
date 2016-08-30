@@ -10,7 +10,8 @@ HOMEPAGE=	http://pygsl.sourceforge.net/
 COMMENT=	Python interface for the GNU scientific library
 LICENSE=	gnu-gpl-v3
 
-PYDISTUTILSPKG=	yes
+USE_TOOLS+=	pkg-config
+
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric, py-numarray
 
 do-test:
@@ -21,8 +22,8 @@ INSTALLATION_DIRS=	share/doc/py-gsl/ref
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/ref/* ${DESTDIR}${PREFIX}/share/doc/py-gsl/ref
 
-.include "../../lang/python/extension.mk"
-BUILDLINK_API_DEPENDS.gsl+=		gsl>=1.4
+.include "../../lang/python/distutils.mk"
+BUILDLINK_API_DEPENDS.gsl+=		gsl>=1.9
 .include "../../math/gsl/buildlink3.mk"
 # furur replace py-Numeric; py-numarray by py-numpy
 .include "../../math/py-Numeric/buildlink3.mk"

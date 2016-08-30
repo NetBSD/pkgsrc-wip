@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/03 18:48:15 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/winspec.py
 ${PYSITELIB}/winspec.pyc
 ${PYSITELIB}/winspec.pyo
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/xcal_raman.py
 ${PYSITELIB}/xcal_raman.pyc
 ${PYSITELIB}/xcal_raman.pyo

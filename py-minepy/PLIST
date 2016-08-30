@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/14 17:52:32 jihbed Exp $
-bin/mine2.7
+@comment $NetBSD$
+bin/mine${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/minepy/__init__.py
 ${PYSITELIB}/minepy/__init__.pyc
 ${PYSITELIB}/minepy/__init__.pyo

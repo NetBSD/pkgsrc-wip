@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
-WRKSRC=	${WRKDIR}/scikit-image-0.11.3
-
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

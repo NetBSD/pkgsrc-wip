@@ -1,9 +1,9 @@
 @comment $NetBSD$
-bin/batch_koifpp_condor2.7
-bin/calcfpp2.7
-bin/get_trilegal2.7
-bin/koifpp-config2.7
-bin/koifpp2.7
+bin/batch_koifpp_condor${PYVERSSUFFIX}
+bin/calcfpp${PYVERSSUFFIX}
+bin/get_trilegal${PYVERSSUFFIX}
+bin/koifpp-config${PYVERSSUFFIX}
+bin/koifpp${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

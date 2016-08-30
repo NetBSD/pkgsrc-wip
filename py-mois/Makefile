@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.2 2012/10/07 12:25:24 asau Exp $
-#
 
 DISTNAME=	PyMois-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/P/p/S/M/m/}
@@ -12,7 +11,8 @@ COMMENT=	Applications for interactive visualization of numerical methods
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric, py-numarray via py-gsl
 
 post-extract:
 	${MV} ${WRKSRC}/pymois/chebychev_app.py   ${WRKSRC}/pymois/chebychev${PYVERSSUFFIX}

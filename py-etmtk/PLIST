@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/18 21:33:00 jihbed Exp $
-bin/etm2.7
+@comment $NetBSD$
+bin/etm${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/etmTk/CHANGES
 ${PYSITELIB}/etmTk/__init__.py
 ${PYSITELIB}/etmTk/__init__.pyc
@@ -30,11 +35,6 @@ ${PYSITELIB}/etmTk/version.pyo
 ${PYSITELIB}/etmTk/view.py
 ${PYSITELIB}/etmTk/view.pyc
 ${PYSITELIB}/etmTk/view.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/etm.1
 share/appdata/etm.appdata.xml
 share/applications/etm.desktop

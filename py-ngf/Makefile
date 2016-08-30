@@ -10,11 +10,11 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/P/PyNFG/
 COMMENT=	Python package for implementing and solving Network form games
 LICENSE=	gnu-agpl-v3
 
-WRKSRC=		${WRKDIR}/PyNFG-0.1.2
+DEPENDS+=	${PYPKGPREFIX}-networkx>=1.8.1:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 post-extract:
@@ -23,7 +23,5 @@ post-extract:
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-DEPENDS+=		${PYPKGPREFIX}-networkx>=1.8.1:../../math/py-networkx
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=		${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"

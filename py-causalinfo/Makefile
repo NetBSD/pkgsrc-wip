@@ -12,5 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

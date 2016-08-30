@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2014/01/03 21:41:13 jihbed Exp $
 
-SHA1 (event-0.4.2.zip) = 8effe5c67dd72a617360183e0c88ea4383f10871
-RMD160 (event-0.4.2.zip) = 50ea074fbc2e4870aaa2556576466b8fe6c7891a
-Size (event-0.4.2.zip) = 56538 bytes
+SHA1 (pyevent-0.4.3.tar.gz) = 2a9978d0f3e6acbfd18bb548ccf0b65a102110b7
+RMD160 (pyevent-0.4.3.tar.gz) = 4426a3ee7b120c2f2c5acca99669f1ff94908bae
+SHA512 (pyevent-0.4.3.tar.gz) = e1c343370fe2b3b7e0d4adca179c4de43cbae2e5f7caf4b4d832a68474a86f59d8ca9eb51410fbf026820aa6a8107eacf5666f51e7acdef9bccecddad3512bfb
+Size (pyevent-0.4.3.tar.gz) = 79692 bytes

@@ -15,7 +15,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 USE_TOOLS+=		bash
 PY_PATCHPLIST=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-imaging
 
 REPLACE_BASH+=		doc/samples/run_mess.sh
@@ -46,5 +45,5 @@ DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

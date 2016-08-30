@@ -10,7 +10,6 @@ COMMENT=	Perforce SCM Python API
 .include "../../wip/p4/Makefile.common"
 
 USE_LANGUAGES=	c c++
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 PYSETUPARGS+=	--apidir ${BUILDLINK_DIR}/share/examples/p4
 EGG_NAME=	${DISTNAME}-${P4_VER}.${P4_VER_PL}

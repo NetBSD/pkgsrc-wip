@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/01 22:15:24 jihbed Exp $
-bin/nuitka2.7
+@comment $NetBSD$
+bin/nuitka${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/nuitka/Builtins.py
 ${PYSITELIB}/nuitka/Builtins.pyc
 ${PYSITELIB}/nuitka/Builtins.pyo

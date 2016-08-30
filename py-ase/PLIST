@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/12/07 16:05:47 jihbed Exp $
+@comment $NetBSD$
 bin/ase-build2.7
 bin/ase-db2.7
 bin/ase-gui2.7
@@ -1273,6 +1273,7 @@ ${PYSITELIB}/ase/visualize/vtk/volume.pyo
 ${PYSITELIB}/ase/xrdebye.py
 ${PYSITELIB}/ase/xrdebye.pyc
 ${PYSITELIB}/ase/xrdebye.pyo
+${PYSITELIB}/${EGG_FILE}
 share/python-ase/doc/ASE.bib
 share/python-ase/doc/_static/044482-glossy-black-icon-sports-hobbies-film-clapper.png
 share/python-ase/doc/_static/China.png

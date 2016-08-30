@@ -13,8 +13,6 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2, py-gobject
 
 post-extract:
@@ -31,6 +29,6 @@ post-extract:
 .include "../../x11/py-gtk2/buildlink3.mk"
 
 ##required for basic ASE functionality
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

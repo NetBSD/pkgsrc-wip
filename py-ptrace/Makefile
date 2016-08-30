@@ -15,12 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-x86_64  FreeBSD-*-i386 Linux-*-*
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYDISTUTILSPKG= 	yes
-
 post-extract:
 	${MV} ${WRKSRC}/strace.py ${WRKSRC}/strace.py${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/gdb.py ${WRKSRC}/gdb.py${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

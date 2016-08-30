@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/06 23:08:58 jihbed Exp $
-bin/gosam-config.py2.7
-bin/gosam.py2.7
+@comment $NetBSD$
+bin/gosam-config.py${PYVERSSUFFIX}
+bin/gosam.py${PYVERSSUFFIX}
 ${PYSITELIB}/golem/__init__.py
 ${PYSITELIB}/golem/__init__.pyc
 ${PYSITELIB}/golem/__init__.pyo
@@ -154,3 +154,4 @@ ${PYSITELIB}/golem/util/path.pyo
 ${PYSITELIB}/golem/util/tools.py
 ${PYSITELIB}/golem/util/tools.pyc
 ${PYSITELIB}/golem/util/tools.pyo
+${PYSITELIB}/gosam-2.0.0_701-py${PYVERSSUFFIX}.egg-info

@@ -20,8 +20,6 @@ DEPENDS+=	jython>=2.5.1:../../wip/jython
 
 WRKSRC=	${WRKDIR}/spade
 
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-m2crypto, py-twisted
 
 SUBST_CLASSES+=		paths
@@ -44,5 +42,5 @@ do-test:
 	${SETENV} ${TEST_ENV} ${PYTHONBIN} unittests.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

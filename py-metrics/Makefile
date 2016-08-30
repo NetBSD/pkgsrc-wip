@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.4 2015/03/14 17:49:21 jihbed Exp $
-#
 
 DISTNAME=	pymetrics-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,13 +11,11 @@ COMMENT=	Metrics for python files
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=	yes
 
-PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.8.1
 
 post-extract:
 	${MV} ${WRKSRC}/pymetrics ${WRKSRC}/pymetrics${PYVERSSUFFIX}
 
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

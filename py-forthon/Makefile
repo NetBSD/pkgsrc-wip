@@ -12,17 +12,11 @@ HOMEPAGE=	http://hifweb.lbl.gov/Forthon/
 COMMENT=	Fortran95 wrapper/code development package
 LICENSE=	modified-bsd
 
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
-
 USE_LANGUAGES=	c fortran
-
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${MV} ${WRKSRC}/Forthon ${WRKSRC}/Forthon${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

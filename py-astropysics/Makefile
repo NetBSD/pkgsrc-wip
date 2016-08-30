@@ -16,10 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-fits>=2.3.1:../../graphics/py-fits
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
-#WRKSRC=		${WRKDIR}/Astropysics-0.1.dev-r596
-EGG_NAME=	${DISTNAME:S/-r596//}
+EGG_NAME=	${DISTNAME:S/-r596//}0
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.1dev-r596
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

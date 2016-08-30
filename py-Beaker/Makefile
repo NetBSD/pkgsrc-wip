@@ -14,7 +14,5 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${EGG_NAME}
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -12,16 +12,16 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.2:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.14.0:../../security/py-paramiko
-#DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil2
+#DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
 
 USE_LANGUAGES=	# none
-
-PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
+REPLACE_PYTHON+=	fortpy/scripts/*.py*
 
 post-extract:
 	${MV} ${WRKSRC}/fortpy/scripts/compare.py ${WRKSRC}/fortpy/scripts/compare.py${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/fortpy/scripts/convert.py ${WRKSRC}/fortpy/scripts/convert.py${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/fortpy/scripts/runtests.py ${WRKSRC}/fortpy/scripts/runtests.py${PYVERSSUFFIX}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

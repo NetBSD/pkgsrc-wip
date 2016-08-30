@@ -13,10 +13,9 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
 
-WRKSRC=		${WRKDIR}/tribe-1.3
 USE_LANGUAGES=	# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 post-extract:
 	${MV} ${WRKSRC}/tribe-admin.py ${WRKSRC}/tribe-admin.py${PYVERSSUFFIX}

@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2012/11/16 11:13:16 slitvinov Exp $
+@comment $NetBSD$
 bin/smt${PYVERSSUFFIX}
 bin/smtweb${PYVERSSUFFIX}
-${PYSITELIB}/${THIS_EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${THIS_EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${THIS_EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${THIS_EGG_INFODIR}/requires.txt
-${PYSITELIB}/${THIS_EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sumatra/__init__.py
 ${PYSITELIB}/sumatra/__init__.pyc
 ${PYSITELIB}/sumatra/__init__.pyo
@@ -27,6 +27,9 @@ ${PYSITELIB}/sumatra/datastore/base.pyo
 ${PYSITELIB}/sumatra/datastore/filesystem.py
 ${PYSITELIB}/sumatra/datastore/filesystem.pyc
 ${PYSITELIB}/sumatra/datastore/filesystem.pyo
+${PYSITELIB}/sumatra/datastore/mirroredfs.py
+${PYSITELIB}/sumatra/datastore/mirroredfs.pyc
+${PYSITELIB}/sumatra/datastore/mirroredfs.pyo
 ${PYSITELIB}/sumatra/decorators.py
 ${PYSITELIB}/sumatra/decorators.pyc
 ${PYSITELIB}/sumatra/decorators.pyo
@@ -78,6 +81,25 @@ ${PYSITELIB}/sumatra/programs.pyo
 ${PYSITELIB}/sumatra/projects.py
 ${PYSITELIB}/sumatra/projects.pyc
 ${PYSITELIB}/sumatra/projects.pyo
+${PYSITELIB}/sumatra/publishing/__init__.py
+${PYSITELIB}/sumatra/publishing/__init__.pyc
+${PYSITELIB}/sumatra/publishing/__init__.pyo
+${PYSITELIB}/sumatra/publishing/latex/__init__.py
+${PYSITELIB}/sumatra/publishing/latex/__init__.pyc
+${PYSITELIB}/sumatra/publishing/latex/__init__.pyo
+${PYSITELIB}/sumatra/publishing/latex/includefigure.py
+${PYSITELIB}/sumatra/publishing/latex/includefigure.pyc
+${PYSITELIB}/sumatra/publishing/latex/includefigure.pyo
+${PYSITELIB}/sumatra/publishing/latex/sumatra.sty
+${PYSITELIB}/sumatra/publishing/sphinxext/__init__.py
+${PYSITELIB}/sumatra/publishing/sphinxext/__init__.pyc
+${PYSITELIB}/sumatra/publishing/sphinxext/__init__.pyo
+${PYSITELIB}/sumatra/publishing/sphinxext/sumatra_rst.py
+${PYSITELIB}/sumatra/publishing/sphinxext/sumatra_rst.pyc
+${PYSITELIB}/sumatra/publishing/sphinxext/sumatra_rst.pyo
+${PYSITELIB}/sumatra/publishing/utils.py
+${PYSITELIB}/sumatra/publishing/utils.pyc
+${PYSITELIB}/sumatra/publishing/utils.pyo
 ${PYSITELIB}/sumatra/records.py
 ${PYSITELIB}/sumatra/records.pyc
 ${PYSITELIB}/sumatra/records.pyo
@@ -105,6 +127,9 @@ ${PYSITELIB}/sumatra/recordstore/shelve_store.pyo
 ${PYSITELIB}/sumatra/tee.py
 ${PYSITELIB}/sumatra/tee.pyc
 ${PYSITELIB}/sumatra/tee.pyo
+${PYSITELIB}/sumatra/users.py
+${PYSITELIB}/sumatra/users.pyc
+${PYSITELIB}/sumatra/users.pyo
 ${PYSITELIB}/sumatra/versioncontrol/__init__.py
 ${PYSITELIB}/sumatra/versioncontrol/__init__.pyc
 ${PYSITELIB}/sumatra/versioncontrol/__init__.pyo
@@ -198,6 +223,7 @@ ${PYSITELIB}/sumatra/web/templates/show_file.html
 ${PYSITELIB}/sumatra/web/templates/show_file_base.html
 ${PYSITELIB}/sumatra/web/templates/show_image.html
 ${PYSITELIB}/sumatra/web/templates/tag_list.html
+${PYSITELIB}/sumatra/web/templates/timeline.html
 ${PYSITELIB}/sumatra/web/templatetags/__init__.py
 ${PYSITELIB}/sumatra/web/templatetags/__init__.pyc
 ${PYSITELIB}/sumatra/web/templatetags/__init__.pyo
@@ -227,6 +253,7 @@ share/doc/py-sumatra/managing_a_project.txt
 share/doc/py-sumatra/migration.txt
 share/doc/py-sumatra/parallel_computations.txt
 share/doc/py-sumatra/parameter_files.txt
+share/doc/py-sumatra/publishing.txt
 share/doc/py-sumatra/release_notes.txt
 share/doc/py-sumatra/support.txt
 share/doc/py-sumatra/upgrading.txt

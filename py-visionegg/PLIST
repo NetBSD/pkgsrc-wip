@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/30 03:49:47 noud4 Exp $
+@comment $NetBSD$
 ${PYSITELIB}/VisionEgg/Configuration.py
 ${PYSITELIB}/VisionEgg/Configuration.pyc
 ${PYSITELIB}/VisionEgg/Configuration.pyo
@@ -157,6 +157,7 @@ ${PYSITELIB}/VisionEgg/win32_getrefresh.pyo
 ${PYSITELIB}/VisionEgg/win32_maxpriority.py
 ${PYSITELIB}/VisionEgg/win32_maxpriority.pyc
 ${PYSITELIB}/VisionEgg/win32_maxpriority.pyo
+${PYSITELIB}/${EGG_FILE}
 share/VisionEgg-${PYVERSSUFFIX}/LICENSE.txt
 share/VisionEgg-${PYVERSSUFFIX}/README.txt
 share/VisionEgg-${PYVERSSUFFIX}/VisionEgg.cfg

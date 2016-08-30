@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.8 2015/03/18 01:52:34 othyro Exp $
-#
 
 DISTNAME=	blink-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,8 +22,6 @@ REPLACE_PYTHON+=	resources/chat/styles/Smooth\ Operator/test/view.py
 REPLACE_PYTHON+=	resources/chat/styles/Stockholm/test/view.py
 PY_PATCHPLIST=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-python-application, py-python-gnutls
-
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/blink \

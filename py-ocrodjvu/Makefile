@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-djvulibre-[0-9]*:../../wip/py-djvulibre
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-djvulibre
-
 REPLACE_PYTHON+=	lib/logger.py
 
 .include "../../lang/python/application.mk"

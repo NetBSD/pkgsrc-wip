@@ -1,15 +1,19 @@
 # $NetBSD: Makefile,v 1.4 2014/02/11 18:12:46 jihbed Exp $
 
-DISTNAME=	event-0.4.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	pyevent-0.4.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
-MASTER_SITES=	http://pyevent.googlecode.com/files/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jaraco/}
+GITHUB_PROJECT=	pyevent
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://code.google.com/p/pyevent/
+HOMEPAGE=	https://github.com/jaraco/pyevent
 COMMENT=	Python extension module for libevent
 LICENSE=	modified-bsd
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.4.3
+BROKEN=		touches libevent internals
+# event.c:4157:87: error: dereferencing pointer to incomplete type 'struct evbuffer'
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test.py

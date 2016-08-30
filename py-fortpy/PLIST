@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/06 21:34:53 jihbed Exp $
-bin/compare.py2.7
-bin/convert.py2.7
-bin/runtests.py2.7
+@comment $NetBSD$
+bin/compare.py${PYVERSSUFFIX}
+bin/convert.py${PYVERSSUFFIX}
+bin/runtests.py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -87,9 +87,9 @@ ${PYSITELIB}/fortpy/printing/__init__.pyo
 ${PYSITELIB}/fortpy/printing/docs.py
 ${PYSITELIB}/fortpy/printing/docs.pyc
 ${PYSITELIB}/fortpy/printing/docs.pyo
-${PYSITELIB}/fortpy/scripts/compare.py2.7
-${PYSITELIB}/fortpy/scripts/convert.py2.7
-${PYSITELIB}/fortpy/scripts/runtests.py2.7
+${PYSITELIB}/fortpy/scripts/compare.py${PYVERSSUFFIX}
+${PYSITELIB}/fortpy/scripts/convert.py${PYVERSSUFFIX}
+${PYSITELIB}/fortpy/scripts/runtests.py${PYVERSSUFFIX}
 ${PYSITELIB}/fortpy/serialize.py
 ${PYSITELIB}/fortpy/serialize.pyc
 ${PYSITELIB}/fortpy/serialize.pyo

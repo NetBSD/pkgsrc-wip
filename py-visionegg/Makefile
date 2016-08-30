@@ -17,13 +17,15 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_LANGUAGES= c c++
 
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
-
 MAKE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric
+REPLACE_PYTHON+=	check-config.py
+REPLACE_PYTHON+=	test/display_dc_restoration.py
+REPLACE_PYTHON+=	test/opengl_info.py
 
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2012/10/27 16:52:10 noud4 Exp $
-#
 
 DISTNAME=	genesis-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +12,6 @@ COMMENT=	Run Genesis on a copy of a project template to create a new project
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

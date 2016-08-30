@@ -33,7 +33,6 @@ OWN_DIRS_PERMS= ${PREFIX}/sabnzbd sabnzbd sabnzbd 0755
 INSTALLATION_DIRS+=	cherrypy gntp interfaces locale po tools util
 
 PY_PATCHPLIST=          yes
-PLIST_SUBST+=           PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON=		*.py */*.py */*/*.py
 
 SUBST_CLASSES+=	fix-paths

@@ -12,6 +12,8 @@ HOMEPAGE=	https://storm.canonical.com/
 COMMENT=	Object-relational mapper (ORM) for Python
 LICENSE=	gnu-lgpl-v2.1
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.20
+
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} test )
 

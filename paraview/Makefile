@@ -48,8 +48,6 @@ CMAKE_ARG_PATH= 		..
 CONFIGURE_DIRS= 		_ParaView_build
 
 PY_PATCHPLIST=			yes
-#PYDISTUTILSPKG=         yes
-#PLIST_SUBST+=           PYVERSSUFFIX=${PYVERSSUFFIX}
 
 # to make protoc work during installation
 # http://paraview.org/Bug/view.php?id=12852

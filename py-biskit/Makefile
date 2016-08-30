@@ -22,16 +22,13 @@ USE_LANGUAGES=	# none
 REPLACE_PERL+=	Biskit/data/spectrum.pl
 REPLACE_PYTHON+=	scripts/Biskit/bis2.6 Biskit/data/pdb/remediator_python.1.56.080328.py
 
-PYDISTUTILSPKG=	yes
-PY_PATCHPLIST=		yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric
 
 post-extract:
 	${MV} ${WRKSRC}/scripts/Biskit/bis.py ${WRKSRC}/scripts/Biskit/bis${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

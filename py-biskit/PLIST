@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/09/07 21:27:50 noud4 Exp $
+@comment $NetBSD$
 bin/bis${PYVERSSUFFIX}
 ${PYSITELIB}/Biskit/AmberCrdEntropist.py
 ${PYSITELIB}/Biskit/AmberCrdEntropist.pyc
@@ -774,3 +774,4 @@ ${PYSITELIB}/Biskit/testdata/test_multidock.zsh
 ${PYSITELIB}/Biskit/tools.py
 ${PYSITELIB}/Biskit/tools.pyc
 ${PYSITELIB}/Biskit/tools.pyo
+${PYSITELIB}/${EGG_FILE}

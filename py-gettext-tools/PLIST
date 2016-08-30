@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/18 05:35:01 mpasternak Exp $
+@comment $NetBSD$
 bin/msgfmt.py-${PYVERSSUFFIX}
 bin/pygettext.py-${PYVERSSUFFIX}

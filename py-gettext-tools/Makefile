@@ -13,10 +13,7 @@ AUTO_MKDIRS=	yes
 EXTRACT_ELEMENTS=		${PYSUBDIR}/Tools/i18n/*
 
 REPLACE_PYTHON=		Tools/i18n/msgfmt.py Tools/i18n/pygettext.py
-
-# Why the hell it is not declared in python/pyvers.mk ?!
-# 	-- tech-pkg@NetBSD.org
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 do-patch:
 	@echo "Patches ignored"

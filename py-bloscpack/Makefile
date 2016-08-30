@@ -10,16 +10,15 @@ HOMEPAGE=	https://github.com/esc/bloscpack
 COMMENT=	Command line interface to and serialization format for Blosc
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-blosc>=1.2.3:../../wip/py-blosc
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.6.0
+
+USE_LANGUAGES=	# none
 
 post-extract:
 	${MV} ${WRKSRC}/blpk ${WRKSRC}/blpk${PYVERSSUFFIX}
 
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DEPENDS+=	${PYPKGPREFIX}-blosc>=1.2.3:../../wip/py-blosc
 .include "../../mk/bsd.pkg.mk"

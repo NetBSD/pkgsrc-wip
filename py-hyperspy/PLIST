@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/08/22 21:57:16 jihbed Exp $
-bin/hyperspy2.7
+@comment $NetBSD$
+bin/hyperspy${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hyperspy/Release.py
 ${PYSITELIB}/hyperspy/Release.pyc
 ${PYSITELIB}/hyperspy/Release.pyo

@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.4 2015/02/08 22:11:58 jihbed Exp $
-#
 
 VERSION= 0.3.1.dev-20120112
 DISTNAME=	python-algebraic-0.3.1.dev-20120112
@@ -16,7 +15,6 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-PY_PATCHPLIST=		yes
 PLIST_SUBST+=		EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 .include "../../lang/python/egg.mk"

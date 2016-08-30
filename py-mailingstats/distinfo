@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (MailingListStats/0.4.1.tar.gz) = 2696873c75016f1767da1c602a945ef88c91ffdb
-RMD160 (MailingListStats/0.4.1.tar.gz) = a65b014e4c66ee3d54c05693e5c74daeba08ab5f
-SHA512 (MailingListStats/0.4.1.tar.gz) = 94f5786c34baf03284561c45f51fe9d436a46d901bbe760183750f3f88af66273d4cfc56f0ad0e749ea0b61e4e8c32521a706fe1f5f88d04a345af2ec01a6a82
-Size (MailingListStats/0.4.1.tar.gz) = 74898 bytes
+SHA1 (MailingListStats-0.4.1.tar.gz) = 2696873c75016f1767da1c602a945ef88c91ffdb
+RMD160 (MailingListStats-0.4.1.tar.gz) = a65b014e4c66ee3d54c05693e5c74daeba08ab5f
+SHA512 (MailingListStats-0.4.1.tar.gz) = 94f5786c34baf03284561c45f51fe9d436a46d901bbe760183750f3f88af66273d4cfc56f0ad0e749ea0b61e4e8c32521a706fe1f5f88d04a345af2ec01a6a82
+Size (MailingListStats-0.4.1.tar.gz) = 74898 bytes
 SHA1 (patch-setup.py) = 3b676ad83b10b2b86db79d977401e9ba1fed5576

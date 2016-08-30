@@ -13,11 +13,8 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.3.2
 PYTHON_VERSIONED_DEPENDENCIES=	X
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${MV} ${WRKSRC}/mkfeyndiag ${WRKSRC}/mkfeyndiag${PYVERSSUFFIX}

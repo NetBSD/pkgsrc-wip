@@ -1,8 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	${PYPKGPREFIX}-pithos-1.1.2
+DISTNAME=	pithos-1.1.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pithos/}
+GITHUB_PROJECT=	pithos
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pithos.github.io/
@@ -29,7 +31,6 @@ DEPENDS+=	gnome-icon-theme-symbolic-[0-9]*:../../graphics/gnome-icon-theme-symbo
 USE_LANGUAGES=	# none
 USE_TOOLS+=	intltool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		prefix
 SUBST_SED.prefix+=	-e "s,/usr,${PREFIX},g"

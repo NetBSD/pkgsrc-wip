@@ -5,10 +5,12 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=	${DISTNAME:S|scitools|SciTools|:Q}
 PKGREVISION=	4
 CATEGORIES=	math python
-MASTER_SITES=	http://scitools.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hplgit/}
+GITHUB_PROJECT=	scitools
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://code.google.com/p/scitools/
+HOMEPAGE=	https://github.com/hplgit/scitools
 COMMENT=	Python library for scientific computing
 LICENSE=	modified-bsd
 
@@ -17,10 +19,9 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-gtk>=1.1.1:../../graphics/py-matplotlib-gtk2
 USE_TOOLS+=	gzip
 USE_LANGUAGES=	# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 35 35 34 34 # py-gtk2 via py-matplotlib-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2 via py-matplotlib-gtk2
 
 post-extract:
 	gzip -d ${WRKSRC}/doc/man/man1/*.gz

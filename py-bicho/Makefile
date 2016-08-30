@@ -13,14 +13,12 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3.2:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-storm>=0.20:../../wip/py-storm
 
-WRKSRC=		${WRKDIR}/bicho-0.9
-
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-storm
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 
 post-extract:
 	${MV} ${WRKSRC}/bin/bicho ${WRKSRC}/bin/bicho${PYVERSSUFFIX}
-
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -4,7 +4,7 @@ DISTNAME=	shedskin-0.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	lang python
-MASTER_SITES=	http://shedskin.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/shedskin/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kamelderouiche@yahoo.com
@@ -14,9 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c++
 
-PYDISTUTILSPKG=yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.9.4
 
 post-extract:
 	cd ${WRKSRC}/scripts && ${MV} shedskin shedskin${PYVERSSUFFIX}
@@ -24,6 +22,5 @@ post-extract:
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test.py
 
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

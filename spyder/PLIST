@@ -1,6 +1,7 @@
 @comment $NetBSD$
-bin/spyder2.7
+bin/spyder${PYVERSSUFFIX}
 bin/spyder_win_post_install.py
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/spyderlib/__init__.py
 ${PYSITELIB}/spyderlib/__init__.pyc
 ${PYSITELIB}/spyderlib/__init__.pyo

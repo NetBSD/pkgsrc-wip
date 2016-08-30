@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2013/12/02 16:06:17 jihbed Exp $
-bin/pyflation_combine.py2.7
-bin/pyflation_firstorder.py2.7
-bin/pyflation_newrun.py2.7
-bin/pyflation_qsubstart.py2.7
-bin/pyflation_secondorder.py2.7
-bin/pyflation_source.py2.7
-bin/pyflation_srcmerge.py2.7
+@comment $NetBSD$
+bin/pyflation_combine.py${PYVERSSUFFIX}
+bin/pyflation_firstorder.py${PYVERSSUFFIX}
+bin/pyflation_newrun.py${PYVERSSUFFIX}
+bin/pyflation_qsubstart.py${PYVERSSUFFIX}
+bin/pyflation_secondorder.py${PYVERSSUFFIX}
+bin/pyflation_source.py${PYVERSSUFFIX}
+bin/pyflation_srcmerge.py${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pyflation/__init__.py
 ${PYSITELIB}/pyflation/__init__.pyc
 ${PYSITELIB}/pyflation/__init__.pyo

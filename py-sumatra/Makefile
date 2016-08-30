@@ -22,16 +22,12 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.2.1:../../www/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../www/py-httplib2
-DEPENDS+=	${PYPKGPREFIX}-mpi4py>=1.2.1:../../wip/py-mpich4py
-DEPENDS+=	${PYPKGPREFIX}-genesis>=0:../../wip/py-genesis
+DEPENDS+=	${PYPKGPREFIX}-mpi4py>=1.2.1:../../wip/py-mpi4py
+DEPENDS+=	${PYPKGPREFIX}-genesis-[0-9]*:../../wip/py-genesis
 
-WRKSRC=		${WRKDIR}/Sumatra-${VER}
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-django-tagging
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PLIST_SUBST+=	THIS_EGG_INFODIR=${EGG_NAME:S|.tar||}-py${PYVERSSUFFIX}.egg-info
 
 INSTALLATION_DIRS=	share/doc/py-sumatra
 
@@ -39,7 +35,7 @@ post-extract:
 	${MV} ${WRKSRC}/bin/smt ${WRKSRC}/bin/smt${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/bin/smtweb ${WRKSRC}/bin/smtweb${PYVERSSUFFIX}
 
-# test requers devel/py-coverage
+# test requires devel/py-coverage
 do-test:
 	${RUN} cd ${WRKSRC}/test/unittests; ${TEST_ENV} ${SH} all_tests.sh
 

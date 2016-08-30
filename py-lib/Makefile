@@ -15,7 +15,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
 
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-docutils
 REPLACE_PYTHON+=	py/cmdline/pycleanup.py

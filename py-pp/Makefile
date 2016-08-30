@@ -12,8 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 1.6.4
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/py-pp
 
@@ -26,5 +25,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ppdoc.html\
 			${DESTDIR}${PREFIX}/share/doc/py-pp
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

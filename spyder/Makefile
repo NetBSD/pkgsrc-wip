@@ -13,18 +13,17 @@ LICENSE=	mit
 DEPENDS+= 	${PYPKGPREFIX}-rope>=0.9.3:../../devel/py-rope
 DEPENDS+= 	${PYPKGPREFIX}-sphinx>=1.2.3:../../textproc/py-sphinx
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-rope
+
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
-
-PYDISTUTILSPKG= yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${MV} ${WRKSRC}/scripts/spyder ${WRKSRC}/scripts/spyder${PYVERSSUFFIX}
 
 .include "options.mk"
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2013/12/02 16:58:52 jihbed Exp $
-bin/Forthon2.7
+@comment $NetBSD$
+bin/Forthon${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/Forthon/Forthon.c
 ${PYSITELIB}/Forthon/Forthon.h
 ${PYSITELIB}/Forthon/ForthonTimer.py

@@ -10,11 +10,7 @@ HOMEPAGE=	https://github.com/micheles/plac
 COMMENT=	The smartest command line arguments parser in the world
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/plac-0.9.6
-
 USE_LANGUAGES=	# none
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${MV} ${WRKSRC}/plac_runner.py ${WRKSRC}/plac_runner.py${PYVERSSUFFIX}

@@ -12,9 +12,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PY_PATCHPLIST=  yes
-
 post-extract:
 	${MV} ${WRKSRC}/bin/mn-fnss ${WRKSRC}/bin/mn-fnss${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/bin/fnss-troubleshoot ${WRKSRC}/bin/fnss-troubleshoot${PYVERSSUFFIX}

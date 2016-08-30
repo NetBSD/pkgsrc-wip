@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.4 2012/10/16 08:32:49 thomasklausner Exp $
-#
 
 DISTNAME=	scikits.ann-${PYPKGVERSION}
 EGG_NAME=	${DISTNAME}
@@ -15,12 +14,11 @@ LICENSE=	gnu-lgpl-v3
 
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 
-#WRKSRC=		${WRKDIR}/scikits.ann-0.2.dev-r803
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.2.dev-r803, uses ConfigParser
 
 USE_LANGUAGES=	c c++
 
 PYPKGVERSION=	0.2.dev-r803
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYPKGVERSION=${PYPKGVERSION:S|-|_|}
 
 do-test:

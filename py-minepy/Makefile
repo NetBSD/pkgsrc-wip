@@ -10,15 +10,11 @@ HOMEPAGE=	minepy.sourceforge.net
 COMMENT=	Maximal Information-based Nonparametric Exploration
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/minepy-1.0.0
-
 USE_LANGUAGES=	c c++
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${MV} ${WRKSRC}/minepy/scripts/mine ${WRKSRC}/minepy/scripts/mine${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

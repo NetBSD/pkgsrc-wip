@@ -1,7 +1,8 @@
 @comment $NetBSD$
-bin/activate2.7
-bin/conda-env2.7
-bin/deactivate2.7
+bin/activate${PYVERSSUFFIX}
+bin/conda-env${PYVERSSUFFIX}
+bin/deactivate${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/conda_env/__init__.py
 ${PYSITELIB}/conda_env/__init__.pyc
 ${PYSITELIB}/conda_env/__init__.pyo

@@ -14,10 +14,9 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
-USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.4.9.2
 
-PY_PATCHPLIST=         yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+USE_LANGUAGES=	# none
 
 post-extract:
 	${MV} ${WRKSRC}/bin/dolo \

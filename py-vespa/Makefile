@@ -14,8 +14,6 @@ LICENSE=	mit
 
 USE_TOOLS+=	perl
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-
 REPLACE_PERL=	scripts/get_trilegal${PYVERSSUFFIX}
 
 post-extract:
@@ -24,7 +22,6 @@ post-extract:
 	${MV} ${WRKSRC}/scripts/batch_koifpp_condor ${WRKSRC}/scripts/batch_koifpp_condor${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/scripts/calcfpp ${WRKSRC}/scripts/calcfpp${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/scripts/koifpp-config ${WRKSRC}/scripts/koifpp-config${PYVERSSUFFIX}
-
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"

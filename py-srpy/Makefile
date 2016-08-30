@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.8 2012/10/12 11:47:00 asau Exp $
-#
 
 DISTNAME=	srpy-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,12 +17,11 @@ DEPENDS+=	${PYPKGPREFIX}-Pyro4>=-3.4:../../devel/py-Pyro
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.2.3
 
 HTMLDIR=	${PREFIX}/share/doc/html/py-srpy
 
 INSTALLATION_DIRS+=	share/doc/py-srpy ${HTMLDIR}
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt \

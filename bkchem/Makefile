@@ -18,8 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=		# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.13.0
 
 PY_EXEC=${PREFIX}/bin/python${PYVERSSUFFIX}
 PY_APPAPATH=${PREFIX}/${PYSITELIB}/bkchem/bkchem.py
@@ -31,7 +30,7 @@ post-extract:
 	    ${ECHO} exec ${PY_EXEC} -OO  ${PY_APPAPATH} >> ${WRKSRC}/bkchem${PYVERSSUFFIX}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

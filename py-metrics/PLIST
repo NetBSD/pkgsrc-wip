@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2015/03/14 17:49:21 jihbed Exp $
-bin/pymetrics2.7
+@comment $NetBSD$
+bin/pymetrics${PYVERSSUFFIX}
+${PYSITELIB}/PyMetrics-PYMETRICS_VERSION-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/PyMetrics/PyMetrics.py
 ${PYSITELIB}/PyMetrics/PyMetrics.pyc
 ${PYSITELIB}/PyMetrics/PyMetrics.pyo
