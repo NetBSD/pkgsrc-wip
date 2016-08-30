@@ -13,10 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	 ${PYPKGPREFIX}-creole-[0-9]*
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-wxWidgets
 
 post-extract:
@@ -26,7 +22,7 @@ do-test:
 	${RUN} cd ${WRKSRC}/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testAIGO.py
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/11 11:40:49 noud4 Exp $
+@comment $NetBSD$
 bin/AIGO-gui.py${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/AIGO/Analyse.py
 ${PYSITELIB}/AIGO/Analyse.pyc
 ${PYSITELIB}/AIGO/Analyse.pyo
