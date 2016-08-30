@@ -1247,8 +1247,10 @@ lib/qcad/scripts/Block/ts/Block_zh_TW.qm
 lib/qcad/scripts/Block/ts/Block_zh_TW.ts
 lib/qcad/scripts/Block/ts/ts.pro
 lib/qcad/scripts/CrosshairCursor.png
+lib/qcad/scripts/CrosshairCursor@2x.png
 lib/qcad/scripts/CrosshairCursorImg.png
 lib/qcad/scripts/CrosshairCursorMask.png
+lib/qcad/scripts/CrosshairCursorMask@2x.png
 lib/qcad/scripts/DbConnection.js
 lib/qcad/scripts/DefaultAction.js
 lib/qcad/scripts/Draw/Arc/Arc-inverse.svg
@@ -8963,6 +8965,7 @@ lib/qcad/scripts/Help/About/About.pro
 lib/qcad/scripts/Help/About/AboutCredits.js
 lib/qcad/scripts/Help/About/AboutDialog.ui
 lib/qcad/scripts/Help/About/AboutInit.js
+lib/qcad/scripts/Help/About/BuiltWithQt.png
 lib/qcad/scripts/Help/About/doc/About_de.html
 lib/qcad/scripts/Help/About/doc/About_desc_de.html
 lib/qcad/scripts/Help/About/doc/About_desc_en.html
@@ -12289,11 +12292,16 @@ lib/qcad/scripts/Modify/Explode/ExplodeInit.js
 lib/qcad/scripts/Modify/Explode/PreferencesPage.ui
 lib/qcad/scripts/Modify/Explode/Tests/ExplodeTest00.js
 lib/qcad/scripts/Modify/Explode/Tests/ExplodeTest01.js
+lib/qcad/scripts/Modify/Explode/Tests/ExplodeTest02.js
+lib/qcad/scripts/Modify/Explode/Tests/ExplodeTest03.js
 lib/qcad/scripts/Modify/Explode/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/Explode/Tests/data/block.dxf
 lib/qcad/scripts/Modify/Explode/Tests/data/explodable.dxf
+lib/qcad/scripts/Modify/Explode/Tests/data/splines.dxf
 lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest00_000.dxf
 lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest01_000.dxf
+lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest02_000.dxf
+lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest03_000.dxf
 lib/qcad/scripts/Modify/Explode/doc/Explode_de.html
 lib/qcad/scripts/Modify/Explode/doc/Explode_desc_de.html
 lib/qcad/scripts/Modify/Explode/doc/Explode_desc_en.html
@@ -17031,7 +17039,9 @@ lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoom.js
 lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoom.pro
 lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoom.svg
 lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomCursor.png
+lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomCursor@2x.png
 lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomCursorMask.png
+lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomCursorMask@2x.png
 lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomInit.js
 lib/qcad/scripts/View/Zoom/WindowZoom/doc/WindowZoom.html
 lib/qcad/scripts/View/Zoom/WindowZoom/doc/WindowZoom_de.html
