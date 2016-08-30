@@ -3114,7 +3114,6 @@ SUBDIR+=	py-minepy
 SUBDIR+=	py-minidb
 SUBDIR+=	py-mipp
 SUBDIR+=	py-mistune
-SUBDIR+=	py-mlstats
 SUBDIR+=	py-mmLib
 SUBDIR+=	py-mne
 SUBDIR+=	py-mochi

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/11/16 23:19:39 noud4 Exp $
-
-SHA1 (mlstats-0.4.tar.gz) = d49fcf6f4fc970e2a9495be9eb69f61d2c7f92ba
-RMD160 (mlstats-0.4.tar.gz) = f2829c0f7abfeaffdae711f23624ab225ef3fe2d
-Size (mlstats-0.4.tar.gz) = 26440 bytes
-SHA1 (patch-aa) = 6e77b97af7cb806b01383b42f9b68b99628cc4e9
