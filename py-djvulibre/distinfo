@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.4 2011/04/17 00:53:34 ryo-on Exp $
 
-SHA1 (python-djvulibre-0.3.3.tar.gz) = 449d6c21aa42c257f75335762f01f1dd1bd02ce5
-RMD160 (python-djvulibre-0.3.3.tar.gz) = 6f2a5eb64912e7efddc458ef900c41953afbbeec
-Size (python-djvulibre-0.3.3.tar.gz) = 119209 bytes
+SHA1 (python-djvulibre-0.8.tar.gz) = cad0c4d2710e6631f3a5ba5670c0b2145aea367f
+RMD160 (python-djvulibre-0.8.tar.gz) = b3f2707e8918f3a582aa0a28f5d6ca9b0d552633
+SHA512 (python-djvulibre-0.8.tar.gz) = c817fc518f398bf16664a5f5dc80e8bd086015c13f82c5265548e5ca5d90f293cb2132961ba8a73cb184bc7883bb5868d2d49ecd950d045d0729f876703e710c
+Size (python-djvulibre-0.8.tar.gz) = 85436 bytes
+SHA1 (patch-setup.py) = e64fe7d968b9ad9ceef2607cae008e7bf3270463
