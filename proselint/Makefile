@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	proselint-0.5.3
+DISTNAME=	proselint-0.7.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=amperser/}
 
