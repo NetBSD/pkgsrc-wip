@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/09/05 09:23:43 thomasklausner Exp $
 
-DISTNAME=	nltk-3.0.4
+DISTNAME=	nltk-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nltk/}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.nltk.org/
 COMMENT=	Natural Language Toolkit (NLTK)
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.1.2:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
