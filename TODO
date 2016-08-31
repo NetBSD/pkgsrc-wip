@@ -12,6 +12,7 @@ Suggested package updates
 	o bitcoin-0.9.1
 	o blam-1.8.12
 	o bleachbit-0.9.6
+	o blink-2.0.0
 	o cairo-java-1.0.8
 	o cinelerra-4.5
 	o d4x-2.5.7.1
@@ -101,6 +102,7 @@ Suggested package updates
 	o py-PyPE-2.9
 	o py-bitstring-3.1.3
 	o py-rpyc-3.2.1
+	o py-xpra-0.17.5
 	o py-zeitgeist-0.9.16
 	o qmc2-0.59
 	o qtcreator-4.0.0
