@@ -1,6 +1,6 @@
 $NetBSD$
 
---- setup.py.orig	2016-06-04 03:39:58.000000000 +0000
+--- setup.py.orig	2016-08-22 12:50:38.000000000 +0000
 +++ setup.py
 @@ -992,7 +992,6 @@ if 'clean' in sys.argv or 'sdist' in sys
                     "xpra/codecs/v4l2/pusher.c",
