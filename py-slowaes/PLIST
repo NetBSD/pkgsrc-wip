@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2013/01/17 08:52:58 akihabara Exp $
-${PYSITELIB}/aes.py
-${PYSITELIB}/aes.pyc
-${PYSITELIB}/aes.pyo
-${PYSITELIB}/slowaes-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/slowaes-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/slowaes-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/slowaes-${PKGVERSION}-py2.7.egg-info/top_level.txt
