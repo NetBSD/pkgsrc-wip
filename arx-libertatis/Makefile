@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.1 2015/08/18 20:14:58 yhardy Exp $
-#
 
 DISTNAME=	arx-libertatis-1.1.2
 CATEGORIES=	games
@@ -19,6 +18,8 @@ CMAKE_ARGS+=	-D USE_QT4:BOOL=OFF
 CMAKE_ARGS+=	-D USE_QT5:BOOL=OFF
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	NotDarwin
 
 .if ${OPSYS} != "Darwin"
 PLIST.NotDarwin= yes
