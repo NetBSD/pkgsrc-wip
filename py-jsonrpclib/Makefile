@@ -2,7 +2,7 @@
 
 DISTNAME=	jsonrpclib-0.1.7
 PKGNAME=	${PYPKGPREFIX}-jsonrpclib-0.1.7
-CATEGORIES=	devel
+CATEGORIES=	textproc net devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonrpclib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
