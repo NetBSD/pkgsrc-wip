@@ -1,23 +1,24 @@
-$NetBSD: patch-aa,v 1.4 2013/06/08 15:01:16 othyro Exp $
-
-Always define RM and user-destdir support.
-
---- Makefile.orig	2013-05-03 19:24:54.000000000 +0000
-+++ Makefile
-@@ -49,6 +49,7 @@ JAVA = java
- JNAERATOR = jnaerator-0.11-shaded.jar
- JNAERATORARGS = -mode StandaloneJar -runtime JNAerator -library miniupnpc
- JNAERATORBASEURL = http://jnaerator.googlecode.com/files/
-+RM = rm
- 
- ifeq (SunOS, $(OS))
-   LDFLAGS=-lsocket -lnsl -lresolv
-@@ -119,7 +120,7 @@ endif
+--- Makefile.orig	2016-09-02 21:28:01.797166785 +0200
++++ Makefile	2016-09-02 21:31:44.033654151 +0200
+@@ -36,8 +36,11 @@
+ CFLAGS += -fno-common
+ CFLAGS += -DMINIUPNPC_SET_SOCKET_TIMEOUT
+ CFLAGS += -DMINIUPNPC_GET_SRC_ADDR
+-CFLAGS += -D_BSD_SOURCE
++CFLAGS += -D_BSD_SOURCE -D_POSIX_C_SOURCE=1
+ CFLAGS += -D_DEFAULT_SOURCE
++ifeq ($(OS), NetBSD)
++CFLAGS += -D_NETBSD_SOURCE
++endif
+ ifneq ($(OS), FreeBSD)
+ ifneq ($(OS), Darwin)
+ #CFLAGS += -D_POSIX_C_SOURCE=200112L
+@@ -136,7 +139,7 @@
  
  LIBDIR ?= lib
  # install directories
 -INSTALLPREFIX ?= $(PREFIX)/usr
-+INSTALLPREFIX ?= $(DESTDIR)$(PREFIX)
++INSTALLPREFIX ?= $(PREFIX)
  INSTALLDIRINC = $(INSTALLPREFIX)/include/miniupnpc
  INSTALLDIRLIB = $(INSTALLPREFIX)/$(LIBDIR)
  INSTALLDIRBIN = $(INSTALLPREFIX)/bin
