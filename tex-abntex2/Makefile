@@ -45,5 +45,4 @@ COMMENT=	Support for ABNT documentation standards
 
 .include "../../print/kpathsea/texmf.mk"
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

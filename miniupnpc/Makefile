@@ -11,5 +11,4 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
