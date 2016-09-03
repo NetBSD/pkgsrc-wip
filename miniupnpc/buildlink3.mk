@@ -1,5 +1,4 @@
 # $NetBSD$
-# $NetBSD buildlink3.mk, v 1.0 2016/09/02 21:46:00 erde74 Exp$
 
 BUILDLINK_TREE+=	miniupnpc
 
