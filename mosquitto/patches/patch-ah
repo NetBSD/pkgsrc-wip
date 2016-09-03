@@ -1,5 +1,5 @@
 $NetBSD$
-
+Support exception for NetBSD, taken from FreeBSD
 --- config.mk.orig	2016-06-02 21:20:22.000000000 +0000
 +++ config.mk	2016-08-28 15:27:03.968104814 +0000
 @@ -115,7 +115,7 @@

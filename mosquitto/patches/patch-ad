@@ -1,5 +1,5 @@
 $NetBSD$
-
+Better defaults for configuration, inspired by FreeBSD
 --- mosquitto.conf.orig	2016-06-02 21:20:22.000000000 +0000
 +++ mosquitto.conf	2016-08-28 15:28:28.495612360 +0000
 @@ -32,7 +32,7 @@
@@ -11,15 +11,6 @@ $NetBSD$
  
  # When run as root, drop privileges to this user and its primary 
  # group.
-@@ -40,7 +40,7 @@
- # If run as a non-root user, this setting has no effect.
- # Note that on Windows this has no effect and so mosquitto should 
- # be started by the user you wish it to run as.
--#user mosquitto
-+user mosquitto
- 
- # The maximum number of QoS 1 and 2 messages currently inflight per 
- # client.
 @@ -133,7 +133,7 @@
  #bind_address
  

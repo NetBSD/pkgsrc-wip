@@ -1,5 +1,5 @@
 $NetBSD$
-
+Supports configuration for NetBSD, taken from OpenBSD
 --- src/CMakeLists.txt.orig	2016-06-02 21:20:22.000000000 +0000
 +++ src/CMakeLists.txt	2016-08-28 14:13:03.999103447 +0000
 @@ -85,6 +85,8 @@

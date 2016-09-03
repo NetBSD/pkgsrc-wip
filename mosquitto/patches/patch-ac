@@ -1,5 +1,5 @@
 $NetBSD$
-
+Taken from OpenBSD
 --- lib/cpp/CMakeLists.txt.orig	2016-06-02 21:20:22.000000000 +0000
 +++ lib/cpp/CMakeLists.txt	2016-08-28 14:01:52.611842007 +0000
 @@ -13,6 +13,3 @@

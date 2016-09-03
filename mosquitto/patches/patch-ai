@@ -1,5 +1,5 @@
 $NetBSD$
-
+Missing NetBSD detection, opened upstream pull request
 --- src/net.c.orig	2016-06-02 21:20:22.000000000 +0000
 +++ src/net.c	2016-08-28 15:15:07.413097823 +0000
 @@ -35,7 +35,7 @@

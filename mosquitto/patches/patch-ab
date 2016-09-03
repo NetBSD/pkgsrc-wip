@@ -1,5 +1,5 @@
 $NetBSD$
-
+Supports NetBSD detection, opened upstream pull request 
 --- lib/CMakeLists.txt.orig	2016-06-02 21:20:22.000000000 +0000
 +++ lib/CMakeLists.txt	2016-08-28 14:00:33.700421980 +0000
 @@ -43,9 +43,9 @@

@@ -18,7 +18,7 @@ man/man7/mosquitto-tls.7
 man/man7/mqtt.7
 man/man8/mosquitto.8
 sbin/mosquitto
-share/examples/mosquitto/aclfile.example
-share/examples/mosquitto/mosquitto.conf
-share/examples/mosquitto/pskfile.example
-share/examples/mosquitto/pwfile.example
+etc/mosquitto/aclfile.example
+etc/mosquitto/mosquitto.conf
+etc/mosquitto/pskfile.example
+etc/mosquitto/pwfile.example

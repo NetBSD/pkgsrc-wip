@@ -1,3 +1,5 @@
+$NetBSD$
+BSDs don't support long options
 --- client/Makefile.orig	2016-08-29 21:52:12.870263205 +0000
 +++ client/Makefile	2016-08-29 21:52:39.329840759 +0000
 @@ -24,8 +24,8 @@

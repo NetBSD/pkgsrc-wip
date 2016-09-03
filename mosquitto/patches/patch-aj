@@ -1,5 +1,5 @@
 $NetBSD$
-
+Missing NetBSD detection, opened upstream pull request
 --- lib/net_mosq.c.orig	2016-06-02 21:20:22.000000000 +0000
 +++ lib/net_mosq.c	2016-08-28 15:15:43.540861477 +0000
 @@ -34,7 +34,7 @@
