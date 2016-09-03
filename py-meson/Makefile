@@ -18,10 +18,16 @@ USE_LANGUAGES=	c c++
 SUBST_CLASSES+=		man
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
 SUBST_FILES.man+=	setup.py
-SUBST_STAGE.man+=	pre-configure
-SUBST_MESSAGE.man+=	Fixing man page installation path.
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing man page installation path.
+
+post-extract:
+	# see https://github.com/mesonbuild/meson/issues/695
+	# patching does not work, perhaps due to spaces in path?
+	${CP} ${FILESDIR}/meson.build ${WRKSRC}/test\ cases/frameworks/6\ gettext/src/meson.build
 
 do-test:
+	${LN} -s ${PYTHONBIN} ${BUILDLINK_DIR}/bin/python3
 	cd ${WRKSRC} && ${PYTHONBIN} run_tests.py
 
 .include "../../lang/python/egg.mk"
