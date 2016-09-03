@@ -53,7 +53,7 @@ PLIST_SRC=	PLIST.wine32
 .endif
 # Needs GCC >= 4.4; Experimental
 .if !empty(MACHINE_ARCH:Mx86_64)
-CONFIGURE_ARGS+=	--enable-win64
+CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
 PLIST_SRC=	PLIST.wine64
 #PLIST.wine64=		yes
 .endif
