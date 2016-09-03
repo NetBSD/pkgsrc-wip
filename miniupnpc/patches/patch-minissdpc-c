@@ -1,3 +1,7 @@
+$NetBSD$
+
+on NetBSD include net/if.h
+
 --- minissdpc.c.orig	2016-09-02 21:23:33.298069375 +0200
 +++ minissdpc.c	2016-09-02 21:29:22.527967038 +0200
 @@ -11,6 +11,9 @@

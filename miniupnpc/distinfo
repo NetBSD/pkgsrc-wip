@@ -4,5 +4,5 @@ SHA1 (miniupnpc-2.0.tar.gz) = 21181b364be330436922459c1f81ee641ac182a6
 RMD160 (miniupnpc-2.0.tar.gz) = b3038dc6a78be0bc161dc226f79fd0fd8b66fdb3
 SHA512 (miniupnpc-2.0.tar.gz) = e8bca24265086518fa3bdc25fc31371ddf878adaa2bd6a80b30f33a3e5adb831220e906302832f2250e489a73ecd7e6c9a6bfcb1c70258a90e4c4712196275de
 Size (miniupnpc-2.0.tar.gz) = 85287 bytes
-SHA1 (patch-aa) = dec3ce8eb1183064c393e9aeb8690f37f8baa9f0
-SHA1 (patch-ab) = 884068fbed0d7f435cc906d0b0a27f665ef51b7c
+SHA1 (patch-Makefile) = a27b7e907833dccbefcffe8043e64d3fcbd1bf42
+SHA1 (patch-minissdpc-c) = 5c395e69df9d68987b485230ad258cfdd17961e3
