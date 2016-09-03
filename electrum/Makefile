@@ -15,7 +15,7 @@ NO_BUILD=	yes
 PYDISTUTILSPKG= yes
 
 DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
-DEPENDS+=	${PYPKGPREFIX}-slowaes-[0-9]*:../../wip/py-slowaes
+DEPENDS+=	${PYPKGPREFIX}-slowaes-[0-9]*:../../security/py-slowaes
 DEPENDS+=	${PYPKGPREFIX}-ecdsa-[0-9]*:../../security/py-ecdsa
 
 REPLACE_PYTHON+=	lib/*.py
