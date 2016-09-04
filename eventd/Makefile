@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	eventd-0.19.3
+DISTNAME=	eventd-0.20.0
 CATEGORIES=	wip
 MASTER_SITES=	https://www.eventd.org/download/eventd/
 EXTRACT_SUFX=	.tar.xz
