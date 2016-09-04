@@ -4,3 +4,4 @@ SHA1 (gemrb-0.8.4.tar.gz) = 10e972000999f205dc385d79fd73120fbfb6a2e1
 RMD160 (gemrb-0.8.4.tar.gz) = 16e1c1a20626c3e87644e571e231366c5af83887
 SHA512 (gemrb-0.8.4.tar.gz) = 4a64745481b3533efe3bfe333600b2c3f191eaff37a560be1e73c35c638cf737bae51305fe19e9e78bfd2eab9a9841b3403e89f91f0a968b6abdc5ce39a807f7
 Size (gemrb-0.8.4.tar.gz) = 12373930 bytes
+SHA1 (patch-gemrb_plugins_VLCPlayer_CMakeLists.txt) = be1c9462ceb5bc64ab8d735b7802bad6fb799202
