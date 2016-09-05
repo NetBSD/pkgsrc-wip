@@ -10,8 +10,8 @@ GITHUB_TAG=	build-${PKGVERSION_NOREV}
 MAINTAINER=	js@heap.zone
 HOMEPAGE=	http://sickbeard.com/
 COMMENT=	PVR application to search and manage TV shows
-# sickbeard, cherrypy, simplejson, jquery, gntp, tvdb_api
-LICENSE=	gnu-gpl-v3 AND modified-bsd AND mit AND unlicense
+# Licenses of all the installed files
+LICENSE=	dynamic-drive AND gnu-agpl-v3 AND gnu-gpl-v3 AND gnu-lgpl-v2.1 AND mit AND modified-bsd AND python-software-foundation AND unlicense
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
