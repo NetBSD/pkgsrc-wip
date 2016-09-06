@@ -15,6 +15,7 @@ include/re/re_http.h
 include/re/re_httpauth.h
 include/re/re_ice.h
 include/re/re_jbuf.h
+include/re/re_json.h
 include/re/re_list.h
 include/re/re_lock.h
 include/re/re_main.h
@@ -26,6 +27,7 @@ include/re/re_mqueue.h
 include/re/re_msg.h
 include/re/re_natbd.h
 include/re/re_net.h
+include/re/re_odict.h
 include/re/re_rtp.h
 include/re/re_sa.h
 include/re/re_sdp.h
@@ -48,4 +50,5 @@ include/re/re_uri.h
 include/re/re_websock.h
 lib/libre.a
 lib/libre.so
+lib/pkgconfig/libre.pc
 share/re/re.mk

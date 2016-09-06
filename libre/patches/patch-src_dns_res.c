@@ -2,9 +2,9 @@ $NetBSD: patch-src_dns_res.c,v 1.1 2014/08/17 10:57:07 thomasklausner Exp $
 
 Fix NetBSD, from upstream.
 
---- src/dns/res.c.orig	2012-08-16 08:43:50.000000000 +0000
+--- src/dns/res.c.orig	2015-12-17 14:07:00.000000000 +0000
 +++ src/dns/res.c
-@@ -32,26 +32,28 @@
+@@ -33,26 +33,28 @@
   */
  int get_resolv_dns(char *domain, size_t dsize, struct sa *nsv, uint32_t *n)
  {
@@ -20,7 +20,7 @@ Fix NetBSD, from upstream.
  
 -	if (_res.dnsrch[0])
 -		str_ncpy(domain, _res.dnsrch[0], dsize);
--	else if (_res.defdname)
+-	else if ((char *)_res.defdname)
 -		str_ncpy(domain, _res.defdname, dsize);
 +	if (state.dnsrch[0])
 +		str_ncpy(domain, state.dnsrch[0], dsize);
@@ -41,7 +41,7 @@ Fix NetBSD, from upstream.
  		err |= sa_set_sa(&nsv[i], (struct sockaddr *)addr);
  	}
  	if (err)
-@@ -60,7 +62,7 @@ int get_resolv_dns(char *domain, size_t 
+@@ -61,7 +63,7 @@ int get_resolv_dns(char *domain, size_t 
  	*n = i;
  
   out:
