@@ -1,4 +1,4 @@
 $NetBSD: distinfo,v 1.9 2015/11/09 11:05:44 nros Exp $
 
-SHA1 (patch-common.mk) = ea0a488c62ed0fbbc4a59d820077351df747ecd9
+SHA1 (patch-common.mk) = 2591b31f59b018d0aa65a0ff969a8f47eaaf7664
 SHA1 (patch-src_log.c) = bdcb87df351ad9f4c3346726da8de18732813b8f
