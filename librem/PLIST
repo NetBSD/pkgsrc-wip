@@ -2,6 +2,7 @@
 include/rem/rem.h
 include/rem/rem_au.h
 include/rem/rem_aubuf.h
+include/rem/rem_auconv.h
 include/rem/rem_audio.h
 include/rem/rem_aufile.h
 include/rem/rem_aumix.h
@@ -16,3 +17,4 @@ include/rem/rem_video.h
 include/rem/rem_vidmix.h
 lib/librem.a
 lib/librem.so
+lib/pkgconfig/librem.pc

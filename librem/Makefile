@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2014/08/10 00:06:55 thomasklausner Exp $
 
-DISTNAME=	rem-0.4.6
+DISTNAME=	rem-0.4.7
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	net audio
 MASTER_SITES=	http://www.creytiv.com/pub/
