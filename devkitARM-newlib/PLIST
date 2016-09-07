@@ -1,6 +1,6 @@
 @comment $NetBSD$
 devkitpro/devkitARM/arm-none-eabi/include/_ansi.h
-devkitpro/devkitARM/arm-none-eabi/include/_${PKGVERSION}_version.h
+devkitpro/devkitARM/arm-none-eabi/include/_newlib_version.h
 devkitpro/devkitARM/arm-none-eabi/include/_syslist.h
 devkitpro/devkitARM/arm-none-eabi/include/alloca.h
 devkitpro/devkitARM/arm-none-eabi/include/ar.h
@@ -45,7 +45,7 @@ devkitpro/devkitARM/arm-none-eabi/include/machine/time.h
 devkitpro/devkitARM/arm-none-eabi/include/machine/types.h
 devkitpro/devkitARM/arm-none-eabi/include/malloc.h
 devkitpro/devkitARM/arm-none-eabi/include/math.h
-devkitpro/devkitARM/arm-none-eabi/include/${PKGVERSION}.h
+devkitpro/devkitARM/arm-none-eabi/include/newlib.h
 devkitpro/devkitARM/arm-none-eabi/include/paths.h
 devkitpro/devkitARM/arm-none-eabi/include/pthread.h
 devkitpro/devkitARM/arm-none-eabi/include/pwd.h
