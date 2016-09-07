@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.3 2015/09/13 20:13:47 yhardy Exp $
 
-SHA1 (termit/v2.13.0.tar.gz) = 8220217cf86082d34ef7d61f1562392b1cfd5a34
-RMD160 (termit/v2.13.0.tar.gz) = ce29e6faef696ec5916fbb4b20f137ec5cf4f364
-Size (termit/v2.13.0.tar.gz) = 14145 bytes
-SHA1 (patch-termit.gemspec) = 186fa2583c5d56f2e07a1298c5a58966f445435d
+SHA1 (termit/v3.7.0.tar.gz) = 8c18d3c4b782aa1158c3d44777fec0945732cb97
+RMD160 (termit/v3.7.0.tar.gz) = ce1f8b96cf00c5244703f51dd10670ea34dda424
+SHA512 (termit/v3.7.0.tar.gz) = c1bbac91852c105ac529c429f5f9a213529710ebcefd227f23afddc594288a947b0fb8c972412fb91566cced3e420300f23be39855cc229fe4b1ab6afcbce9c1
+Size (termit/v3.7.0.tar.gz) = 80359 bytes
+SHA1 (patch-termit.gemspec) = 888fb227ce3ca717dfea94427ab51985ac1cac89

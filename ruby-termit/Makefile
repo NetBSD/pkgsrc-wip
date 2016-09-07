@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	termit
 DISTNAME=	${GITHUB_TAG}
-PKGNAME=	ruby-${GITHUB_PROJECT}-2.13.0
+PKGNAME=	${RUBY_PKGPREFIX}-${GITHUB_PROJECT}-3.7.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pawurb/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -20,7 +20,8 @@ USE_LANGUAGES=	# none
 GEM_NAME=	termit-${PKGVERSION_NOREV}
 GEM_SPECFILE=	termit.gemspec
 
-DEPENDS+=	ruby-delegate_it-[0-9]*:../../wip/ruby-delegate_it
+DEPENDS+=	${RUBY_PKGPREFIX}-delegate_it-[0-9]*:../../wip/ruby-delegate_it
+DEPENDS+=	${RUBY_PKGPREFIX}-rest-client-[0-9]*:../../www/ruby-rest-client
 
 .include "../../lang/ruby/gem.mk"
 .include "../../audio/mpg123/buildlink3.mk"

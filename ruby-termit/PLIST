@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/31 19:13:30 yhardy Exp $
+@comment $NetBSD$
 bin/termit
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -11,20 +11,21 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/termit
 ${GEM_LIBDIR}/lib/termit.rb
 ${GEM_LIBDIR}/lib/termit/can_output.rb
-${GEM_LIBDIR}/lib/termit/data_fetcher.rb
+${GEM_LIBDIR}/lib/termit/data_fetcher_base.rb
 ${GEM_LIBDIR}/lib/termit/main.rb
 ${GEM_LIBDIR}/lib/termit/output_manager.rb
+${GEM_LIBDIR}/lib/termit/sound_fetcher.rb
 ${GEM_LIBDIR}/lib/termit/sound_response_handler.rb
 ${GEM_LIBDIR}/lib/termit/speech_synthesizer.rb
+${GEM_LIBDIR}/lib/termit/text_fetcher.rb
 ${GEM_LIBDIR}/lib/termit/text_response_handler.rb
 ${GEM_LIBDIR}/lib/termit/text_translator.rb
 ${GEM_LIBDIR}/lib/termit/url_constructor.rb
 ${GEM_LIBDIR}/lib/termit/user_input_parser.rb
 ${GEM_LIBDIR}/lib/termit/version.rb
-${GEM_LIBDIR}/spec/fixtures/google_1.yml
-${GEM_LIBDIR}/spec/fixtures/google_2.yml
-${GEM_LIBDIR}/spec/fixtures/text_response_with_synonyms
-${GEM_LIBDIR}/spec/fixtures/text_response_without_synonyms
+${GEM_LIBDIR}/spec/fixtures/bing_1.yml
+${GEM_LIBDIR}/spec/fixtures/bing_2.yml
+${GEM_LIBDIR}/spec/fixtures/text_response
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/termit/main_spec.rb
 ${GEM_LIBDIR}/spec/termit/output_manager_spec.rb
@@ -36,4 +37,5 @@ ${GEM_LIBDIR}/spec/termit/url_constructor_spec.rb
 ${GEM_LIBDIR}/spec/termit/user_input_parser_spec.rb
 ${GEM_LIBDIR}/termit.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
+@pkgdir lib/ruby/gems/2.2.0/extensions
+@pkgdir lib/ruby/gems/2.2.0/build_info
