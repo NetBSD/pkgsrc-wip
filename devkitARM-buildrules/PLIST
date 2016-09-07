@@ -1,0 +1,7 @@
+@comment $NetBSD$
+devkitpro/devkitARM/3ds_rules
+devkitpro/devkitARM/base_rules
+devkitpro/devkitARM/base_tools
+devkitpro/devkitARM/ds_rules
+devkitpro/devkitARM/gba_rules
+devkitpro/devkitARM/gp32_rules
