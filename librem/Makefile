@@ -2,6 +2,7 @@
 
 DISTNAME=	rem-0.4.7
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net audio
 MASTER_SITES=	http://www.creytiv.com/pub/
 
@@ -20,6 +21,7 @@ SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	Makefile
 SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
+SUBST_SED.prefix+=	-e "s|} -lre|} ${COMPILER_RPATH_FLAG}"'$$$$'"{libdir} -lre|"
 SUBST_STAGE.prefix=	post-patch
 
 post-install:
