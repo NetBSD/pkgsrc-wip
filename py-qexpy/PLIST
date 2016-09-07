@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/qexpy/__init__.py
+${PYSITELIB}/qexpy/__init__.pyc
+${PYSITELIB}/qexpy/__init__.pyo
+${PYSITELIB}/qexpy/_test.py
+${PYSITELIB}/qexpy/_test.pyc
+${PYSITELIB}/qexpy/_test.pyo
+${PYSITELIB}/qexpy/error.py
+${PYSITELIB}/qexpy/error_operations.py
+${PYSITELIB}/qexpy/fitting.py
+${PYSITELIB}/qexpy/fitting.pyc
+${PYSITELIB}/qexpy/fitting.pyo
+${PYSITELIB}/qexpy/plot_utils.py
+${PYSITELIB}/qexpy/plot_utils.pyc
+${PYSITELIB}/qexpy/plot_utils.pyo
+${PYSITELIB}/qexpy/plotting.py
+${PYSITELIB}/qexpy/plotting.pyc
+${PYSITELIB}/qexpy/plotting.pyo
+${PYSITELIB}/qexpy/utils.py
+${PYSITELIB}/qexpy/utils.pyc
+${PYSITELIB}/qexpy/utils.pyo
