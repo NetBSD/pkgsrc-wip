@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/07/04 04:17:56 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	bokeh-0.9.1
+DISTNAME=	bokeh-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bokeh/}
@@ -11,6 +11,7 @@ COMMENT=	Statistical and novel interactive HTML plots for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.2:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-futures>=3.0.5:../../devel/py-futures
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.1:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
@@ -29,7 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-flask>=0.10.1:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 
-WRKSRC=		${WRKDIR}/bokeh-0.9.1
+WRKSRC=		${WRKDIR}/bokeh-0.12.2
 
 USE_LANGUAGES=	# none
 
