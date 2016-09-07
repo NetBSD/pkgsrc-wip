@@ -4,7 +4,7 @@ DISTNAME=	le-1.16.3
 CATEGORIES=	editors
 MASTER_SITES=	http://lav.yar.ru/download/le/
 
-MAINTAINER=	fred@statdns.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lav.yar.ru/programs.html
 COMMENT=	Full screen text editor inspired by Norton Editor
 LICENSE=	gnu-gpl-v2

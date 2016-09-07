@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:S/timew/timewarrior/}
 CATEGORIES=	time
 MASTER_SITES=	http://taskwarrior.org/download/
 
-MAINTAINER=	fred@statdns.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://taskwarrior.org/
 COMMENT=	Command-line time tracking application
 LICENSE=	mit
