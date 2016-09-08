@@ -4194,6 +4194,7 @@ SUBDIR+=	varnish
 SUBDIR+=	varnish4
 SUBDIR+=	vba-m
 SUBDIR+=	vcftools
+SUBDIR+=	vcg
 SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vee
