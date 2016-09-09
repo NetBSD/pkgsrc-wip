@@ -3,7 +3,7 @@
 DISTNAME=	qexpy-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/61/87/15cf8be5acc2523b26eaf96f1e44630d11e0220903688ba80633c86768a0/
+MASTER_SITES=	${MASTER_SITE_PYPI:=q/qexpy/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/Queens-Physics/QExPy
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-bokeh>=0.12.2:../../wip/py-bokeh
-
-WRKSRC=		${WRKDIR}/qexpy-0.3.2
 
 USE_LANGUAGES=	# none
 
