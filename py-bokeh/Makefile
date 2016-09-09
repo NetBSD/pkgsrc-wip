@@ -11,7 +11,6 @@ COMMENT=	Statistical and novel interactive HTML plots for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.2:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-futures>=3.0.5:../../devel/py-futures
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.1:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
@@ -34,8 +33,11 @@ WRKSRC=		${WRKDIR}/bokeh-0.12.2
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
+.include "../../lang/python/pyversion.mk"
 
+.if ${_PYTHON_VERSION} < 30
+DEPENDS+=	${PYPKGPREFIX}-futures>=3.0.5:../../devel/py-futures
+.endif
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

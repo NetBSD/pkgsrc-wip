@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/bokeh
 bin/bokeh-server
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/bokeh/LICENSE.txt
 ${PYSITELIB}/bokeh/__conda_version__.py
 ${PYSITELIB}/bokeh/__conda_version__.pyc
