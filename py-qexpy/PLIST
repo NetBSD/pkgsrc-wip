@@ -7,7 +7,11 @@ ${PYSITELIB}/qexpy/_test.py
 ${PYSITELIB}/qexpy/_test.pyc
 ${PYSITELIB}/qexpy/_test.pyo
 ${PYSITELIB}/qexpy/error.py
+${PYSITELIB}/qexpy/error.pyc
+${PYSITELIB}/qexpy/error.pyo
 ${PYSITELIB}/qexpy/error_operations.py
+${PYSITELIB}/qexpy/error_operations.pyc
+${PYSITELIB}/qexpy/error_operations.pyo
 ${PYSITELIB}/qexpy/fitting.py
 ${PYSITELIB}/qexpy/fitting.pyc
 ${PYSITELIB}/qexpy/fitting.pyo
