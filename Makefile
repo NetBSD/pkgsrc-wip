@@ -1885,6 +1885,7 @@ SUBDIR+=	mpb
 SUBDIR+=	mpb-openmpi
 SUBDIR+=	mpc-el
 SUBDIR+=	mpfi
+SUBDIR+=	mpg123-jack
 SUBDIR+=	mpg123-nightly
 SUBDIR+=	mpgedit
 SUBDIR+=	mpi-ch
