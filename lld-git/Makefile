@@ -4,7 +4,7 @@ PKGNAME=	lld-4.0.0
 CATEGORIES=	devel
 
 GIT_REPOSITORIES=	lld
-GIT_REPO.lldb=		git://github.com/llvm-mirror/lld.git
+GIT_REPO.lld=		git://github.com/llvm-mirror/lld.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lld.llvm.org/
@@ -21,6 +21,7 @@ GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
+CMAKE_ARGS+=	-DPACKAGE_VERSION=${PKGVERSION_NOREV}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
