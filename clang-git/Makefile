@@ -9,4 +9,9 @@ CMAKE_ARGS+=	-DCLANG_ENABLE_STATIC_ANALYZER=OFF
 # We don't want to add a python runtime dependency for that.
 CHECK_INTERPRETER_SKIP+=	share/clang/*
 
+.PHONY: install-clang-cpp
+post-install: install-clang-cpp
+install-clang-cpp:
+	${LN} -fs clang ${DESTDIR}${PREFIX}/bin/clang-cpp
+
 .include "../../wip/clang-git/Makefile.common"
