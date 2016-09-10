@@ -3,6 +3,7 @@ include/__libunwind_config.h
 include/libunwind.h
 include/mach-o/compact_unwind_encoding.h
 include/unwind.h
+lib/libunwind.a
 lib/libunwind.so
 lib/libunwind.so.1
 lib/libunwind.so.1.0
