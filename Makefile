@@ -96,6 +96,7 @@ SUBDIR+=	aldo
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib-git
 SUBDIR+=	alsa-plugins
+SUBDIR+=	alsa-plugins-jack
 SUBDIR+=	alt-ergo
 SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
