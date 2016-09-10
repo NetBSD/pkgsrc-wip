@@ -1,18 +1,14 @@
 # $NetBSD$
 
-BUILDLINK_TREE+=	lldb
+BUILDLINK_TREE+=	lld
 
-.if !defined(LLDB_BUILDLINK3_MK)
-LLDB_BUILDLINK3_MK:=
+.if !defined(LLD_BUILDLINK3_MK)
+LLD_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.lldb+=	lldb>=3.9.0nb20160121
-BUILDLINK_PKGSRCDIR.lldb?=	../../wip/lldb-git
+BUILDLINK_API_DEPENDS.lld+=	lld>=4.0.0nb20160910
+BUILDLINK_PKGSRCDIR.lld?=	../../wip/lld-git
 
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/llvm-git/buildlink3.mk"
-.include "../../wip/clang-git/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/swig/buildlink3.mk"
-.endif	# LLDB_BUILDLINK3_MK
+.endif	# LLD_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-lldb
+BUILDLINK_TREE+=	-lld
