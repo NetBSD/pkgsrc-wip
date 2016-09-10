@@ -783,6 +783,7 @@ SUBDIR+=	freedup16
 SUBDIR+=	freefem++
 SUBDIR+=	freej
 SUBDIR+=	freeradius2
+SUBDIR+=	freesynd
 SUBDIR+=	freeswitch-core
 SUBDIR+=	freevo
 SUBDIR+=	freevrrpd
