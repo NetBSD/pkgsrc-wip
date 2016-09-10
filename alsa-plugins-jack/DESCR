@@ -11,4 +11,4 @@ significant features:
     * Support for the older Open Sound System (OSS) API, providing binary
       compatibility for most OSS programs.
 
-This package provides an jack plugin for ALSA.
+This package provides a jack plugin for ALSA.
