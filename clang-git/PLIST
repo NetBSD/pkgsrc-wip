@@ -6,6 +6,7 @@ bin/clang-${LLVM_MAJOR}
 bin/clang-cl
 bin/clang-cpp
 bin/clang-format
+bin/clang-offload-bundler
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
 include/clang-c/CXErrorCode.h
@@ -481,6 +482,7 @@ lib/clang/${PKGVERSION}/include/altivec.h
 lib/clang/${PKGVERSION}/include/ammintrin.h
 lib/clang/${PKGVERSION}/include/arm_acle.h
 lib/clang/${PKGVERSION}/include/arm_neon.h
+lib/clang/${PKGVERSION}/include/armintr.h
 lib/clang/${PKGVERSION}/include/avx2intrin.h
 lib/clang/${PKGVERSION}/include/avx512bwintrin.h
 lib/clang/${PKGVERSION}/include/avx512cdintrin.h
