@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/06/16 22:28:52 jihbed Exp $
 
-SHA1 (pulsar-1.0.2.tar.gz) = e75b1b855c548bc2940a7db6be3589583211e093
-RMD160 (pulsar-1.0.2.tar.gz) = f143c99270637a3bfa6a414cc64377ab99c318b4
-Size (pulsar-1.0.2.tar.gz) = 1124851 bytes
+SHA1 (pulsar-1.4.1.tar.gz) = 6f37e873fe8617acf396450b29907d223e3bf172
+RMD160 (pulsar-1.4.1.tar.gz) = aa964e25b2beb2e083df0c1d5fe9c4f4bfafb2fb
+SHA512 (pulsar-1.4.1.tar.gz) = 5f835dcd2d65e286dbb1199d7d621b5c5386eea14686dedce2b9b59356283f520077001d053fe607b0933498b07473d51f71cdb476b1eac5d1c328392c430f79
+Size (pulsar-1.4.1.tar.gz) = 1422558 bytes

@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	fluids-0.1.50
+DISTNAME=	fluids-0.1.51
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://pypi.python.org/packages/fb/cb/b9a0c5ee64140bc0875c8da3711862695ccbdd24156007e5face040f19d4/
+MASTER_SITES=	https://pypi.python.org/packages/1f/53/be2696d0085bc16095b3a50f2e431363e2e1ccdcc76b7fa8dacfdd808103/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/CalebBell/fluids

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (qexpy-0.3.2.tar.gz) = 6356f3e9154fd0806983a207be10c16ced2abf72
-RMD160 (qexpy-0.3.2.tar.gz) = 8f3d0767d0f8db54e13e6174f1baebc4fda69f9f
-SHA512 (qexpy-0.3.2.tar.gz) = 0d0e0f3e67230ed7778282b2295312be9f0f63a80f99ac59ee3eb1b43d29fb80b79e38235d331cc38c9bb8889afcad3eebe8c797defd147945f6ca2d19df1969
-Size (qexpy-0.3.2.tar.gz) = 31917 bytes
+SHA1 (qexpy-0.3.5.tar.gz) = 66b0f2aa6a11776f3228a9cec0d0220afc7f24ac
+RMD160 (qexpy-0.3.5.tar.gz) = fd671a038908464590b63f041e9b09bdf9278775
+SHA512 (qexpy-0.3.5.tar.gz) = fe93abf4558f41ad9f7c3237fa434ef30e2bdc1074c38617daa454a2c0d7ee21619a0b897a721dc313027204cf4584d8edd3eddeb0d4bedd54fe99e806c907e1
+Size (qexpy-0.3.5.tar.gz) = 32382 bytes

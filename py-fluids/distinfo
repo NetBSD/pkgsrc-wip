@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (fluids-0.1.50.tar.gz) = dc7ba5c024c5abcfd9b315960f60a99e1a3fb80a
-RMD160 (fluids-0.1.50.tar.gz) = fe9fb7573f7499ddbfc5354e1c9f0e469917fedf
-SHA512 (fluids-0.1.50.tar.gz) = e145639030e16d1f43dfa0411fa3bc84d41d48e71065a05b5be899b4e6dd6b0d7b91b86c96bb164d20557642bdd75eb93b341f8057a80a57960a2f85b42c4469
-Size (fluids-0.1.50.tar.gz) = 135320 bytes
+SHA1 (fluids-0.1.51.tar.gz) = 7d7dac0337b188be7aecf242f50d3b650d7c6feb
+RMD160 (fluids-0.1.51.tar.gz) = 709729e32efa729bccd5fb12433d8b2a806264b6
+SHA512 (fluids-0.1.51.tar.gz) = 4af54e67ccef71cad0ac4b973927be138ffe3f9abfed717692849ddba742e225c4e7b57569851d982e236039ec354d90f43be65924b3231fd7ddf6d758a4dbbb
+Size (fluids-0.1.51.tar.gz) = 137235 bytes

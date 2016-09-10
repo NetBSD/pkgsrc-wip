@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.1 2015/06/16 22:28:52 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	pulsar-1.0.2
+DISTNAME=	pulsar-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pulsar/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://files.pythonhosted.org/packages/source/p/pulsar/
+HOMEPAGE=	https://github.com/quantmind/pulsar
 COMMENT=	Event driven concurrent framework for Python
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.9:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.10.0:../../devel/py-requests
 
-.include "../../lang/python/distutils.mk"
+WRKSRC=	${WRKDIR}/pulsar-1.4.1
+
+.include "../../devel/py-cython/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

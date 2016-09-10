@@ -14,6 +14,9 @@ ${PYSITELIB}/fluids/core.pyc
 ${PYSITELIB}/fluids/core.pyo
 ${PYSITELIB}/fluids/data/3 phase power.csv
 ${PYSITELIB}/fluids/data/residential power.csv
+${PYSITELIB}/fluids/drag.py
+${PYSITELIB}/fluids/drag.pyc
+${PYSITELIB}/fluids/drag.pyo
 ${PYSITELIB}/fluids/filters.py
 ${PYSITELIB}/fluids/filters.pyc
 ${PYSITELIB}/fluids/filters.pyo
@@ -47,6 +50,9 @@ ${PYSITELIB}/fluids/pump.pyo
 ${PYSITELIB}/fluids/safety_valve.py
 ${PYSITELIB}/fluids/safety_valve.pyc
 ${PYSITELIB}/fluids/safety_valve.pyo
+${PYSITELIB}/fluids/saltation.py
+${PYSITELIB}/fluids/saltation.pyc
+${PYSITELIB}/fluids/saltation.pyo
 ${PYSITELIB}/fluids/two_phase_voidage.py
 ${PYSITELIB}/fluids/two_phase_voidage.pyc
 ${PYSITELIB}/fluids/two_phase_voidage.pyo
