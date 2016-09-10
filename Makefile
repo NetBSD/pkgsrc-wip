@@ -1719,6 +1719,7 @@ SUBDIR+=	lire
 SUBDIR+=	lissac
 SUBDIR+=	litecoin
 SUBDIR+=	lives
+SUBDIR+=	lld-git
 SUBDIR+=	lldb-git
 SUBDIR+=	llilc-git
 SUBDIR+=	llvm-git
