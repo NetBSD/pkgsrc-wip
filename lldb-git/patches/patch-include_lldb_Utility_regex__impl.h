@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/lldb/Utility/regex_impl.h.orig	2016-09-10 18:58:55.099440800 +0000
+--- include/lldb/Utility/regex_impl.h.orig	2016-09-10 19:10:13.249235714 +0000
 +++ include/lldb/Utility/regex_impl.h
 @@ -0,0 +1,108 @@
 +/*-

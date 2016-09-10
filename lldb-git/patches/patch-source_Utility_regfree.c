@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Utility/regfree.c.orig	2016-09-10 18:58:55.128475693 +0000
+--- source/Utility/regfree.c.orig	2016-09-10 19:10:13.278146465 +0000
 +++ source/Utility/regfree.c
 @@ -0,0 +1,72 @@
 +/*-

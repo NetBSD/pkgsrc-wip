@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/lldb/Utility/regengine.inc.orig	2016-09-10 18:58:55.089821866 +0000
+--- include/lldb/Utility/regengine.inc.orig	2016-09-10 19:10:13.239450425 +0000
 +++ include/lldb/Utility/regengine.inc
 @@ -0,0 +1,1034 @@
 +/*-

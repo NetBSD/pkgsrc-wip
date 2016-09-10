@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Utility/regstrlcpy.c.orig	2016-09-10 18:58:55.133201813 +0000
+--- source/Utility/regstrlcpy.c.orig	2016-09-10 19:10:13.282794397 +0000
 +++ source/Utility/regstrlcpy.c
 @@ -0,0 +1,52 @@
 +/*

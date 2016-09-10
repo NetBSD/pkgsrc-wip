@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/lldb/Utility/regutils.h.orig	2016-09-10 18:58:55.104081376 +0000
+--- include/lldb/Utility/regutils.h.orig	2016-09-10 19:10:13.253949266 +0000
 +++ include/lldb/Utility/regutils.h
 @@ -0,0 +1,58 @@
 +/*-

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Utility/regexec.c.orig	2016-09-10 18:58:55.123743061 +0000
+--- source/Utility/regexec.c.orig	2016-09-10 19:10:13.273448592 +0000
 +++ source/Utility/regexec.c
 @@ -0,0 +1,162 @@
 +/*-
