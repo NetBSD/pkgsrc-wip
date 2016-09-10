@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
-LLVM_TARGETS=	AArch64 AMDGPU ARM BPF CppBackend Hexagon MSP430 Mips NVPTX PowerPC Sparc SystemZ X86 XCore
+LLVM_TARGETS=	AArch64 AMDGPU ARM BPF Hexagon MSP430 Mips NVPTX PowerPC Sparc SystemZ X86 XCore
 
 .for tgt in ${LLVM_TARGETS}
 PLIST_VARS+=			${tgt}
