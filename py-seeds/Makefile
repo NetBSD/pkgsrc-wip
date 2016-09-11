@@ -14,7 +14,5 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
-
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

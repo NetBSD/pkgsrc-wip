@@ -12,7 +12,6 @@ COMMENT=	Matlab/Octave to Python compiler
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.2:../../math/py-networkx
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

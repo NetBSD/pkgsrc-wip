@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.10:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-typedecorator>=0.0.4:../../wip/py-typedecorator
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
-
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

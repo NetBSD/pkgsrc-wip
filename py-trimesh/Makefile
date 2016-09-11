@@ -12,8 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.10:../../math/py-networkx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
-
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

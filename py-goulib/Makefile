@@ -20,8 +20,6 @@ DEPENDS+=		${PYPKGPREFIX}-xlrd>=0.9.2:../../textproc/py-xlrd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
-
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"

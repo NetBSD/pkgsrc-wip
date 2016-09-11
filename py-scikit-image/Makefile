@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.9:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
-
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

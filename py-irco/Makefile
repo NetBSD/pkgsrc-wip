@@ -26,8 +26,6 @@ DEPENDS+=	${PYPKGPREFIX}-raven>=4.2.1:../../wip/py-raven
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx, py-tablib-garetjax
-
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/irco-convert \
 		${DESTDIR}${PREFIX}/bin/irco-convert${PYVERSSUFFIX}

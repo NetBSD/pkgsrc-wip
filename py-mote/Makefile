@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-networkx
-
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
