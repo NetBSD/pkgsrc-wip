@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.3
+
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

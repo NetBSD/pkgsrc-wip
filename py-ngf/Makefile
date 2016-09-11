@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.1.2
+
 post-extract:
 	${MV} ${WRKSRC}/bin/hideandseek.py ${WRKSRC}/bin/hideandseek.py${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/bin/stackelberg.py ${WRKSRC}/bin/stackelberg.py${PYVERSSUFFIX}
