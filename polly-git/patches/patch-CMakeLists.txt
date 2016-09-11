@@ -1,0 +1,235 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2016-09-11 11:52:23.000000000 +0000
++++ CMakeLists.txt
+@@ -1,103 +1,125 @@
+ # Check if this is a in tree build.
+ if (NOT DEFINED LLVM_MAIN_SRC_DIR)
+   project(Polly)
+-  cmake_minimum_required(VERSION 2.8)
++  cmake_minimum_required(VERSION 3.4.3)
+ 
+-  # Where is LLVM installed?
+-  set(LLVM_INSTALL_ROOT "" CACHE PATH "Root of LLVM install.")
+-  # Check if the LLVM_INSTALL_ROOT valid.
+-  if( NOT EXISTS ${LLVM_INSTALL_ROOT}/include/llvm )
+-    message(FATAL_ERROR "LLVM_INSTALL_ROOT (${LLVM_INSTALL_ROOT}) is not a valid LLVM installation.")
+-  endif(NOT EXISTS ${LLVM_INSTALL_ROOT}/include/llvm)
+-  # FileCheck, not and llvm-lit are not install by default, warn the user to copy them.
+-  if( NOT EXISTS ${LLVM_INSTALL_ROOT}/bin/FileCheck
+-      OR NOT EXISTS ${LLVM_INSTALL_ROOT}/bin/not
+-      OR NOT EXISTS ${LLVM_INSTALL_ROOT}/bin/llvm-lit )
+-    message(WARNING "'FileCheck', 'not' and 'llvm-lit' are required by running regress tests, "
+-                    "but they are not installed! Please copy them to "
+-                    "${LLVM_INSTALL_ROOT}/bin.")
+-  endif()
+-  # Add the llvm header path.
+-  include_directories(${LLVM_INSTALL_ROOT}/include/)
+-
+-  # Get the system librarys that will link into LLVM.
+-  execute_process(COMMAND "${LLVM_INSTALL_ROOT}/bin/llvm-config" --system-libs
+-                  OUTPUT_VARIABLE LLVM_SYSTEM_LIBS
+-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  message(STATUS "System libs required by LLVM: ${LLVM_SYSTEM_LIBS}")
+-
+-  # Determine where LLVM stores its libraries.
+-  execute_process(COMMAND "${LLVM_INSTALL_ROOT}/bin/llvm-config" --libdir
+-                  OUTPUT_VARIABLE LLVM_LIBRARY_DIR
+-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  link_directories("${LLVM_LIBRARY_DIR}")
++  if (POLICY CMP0022)
++    cmake_policy(SET CMP0022 NEW) # automatic when 2.8.12 is required
++  endif()
+ 
+-  # Now set the header paths.
+-  execute_process(COMMAND "${LLVM_INSTALL_ROOT}/bin/llvm-config" --includedir
+-                  OUTPUT_VARIABLE LLVM_INCLUDE_DIR
+-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  include_directories( ${LLVM_INCLUDE_DIR} )
+-
+-  # Get the TARGET_TRIPLE
+-  execute_process(COMMAND "${LLVM_INSTALL_ROOT}/bin/llvm-config" --host-target
+-                  OUTPUT_VARIABLE TARGET_TRIPLE
+-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-
+-  # And then set the cxx flags.
+-  execute_process(COMMAND "${LLVM_INSTALL_ROOT}/bin/llvm-config" --cxxflags
+-                  OUTPUT_VARIABLE LLVM_CXX_FLAGS
+-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} ${LLVM_CXX_FLAGS})
+-
+-  # Check LLVM_ENABLE_ASSERTIONS
+-  execute_process(COMMAND "${LLVM_INSTALL_ROOT}/bin/llvm-config" --assertion-mode
+-                  OUTPUT_VARIABLE LLVM_ENABLE_ASSERTIONS
+-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  # Copied from LLVM's HandleLLVMOptions.cmake
+-  if( LLVM_ENABLE_ASSERTIONS )
+-    # MSVC doesn't like _DEBUG on release builds. See PR 4379.
+-    if( NOT MSVC )
+-      add_definitions( -D_DEBUG )
++  option(LLVM_INSTALL_TOOLCHAIN_ONLY "Only include toolchain files in the 'install' target." OFF)
++
++  # Rely on llvm-config.
++  set(CONFIG_OUTPUT)
++  find_program(LLVM_CONFIG "llvm-config")
++  if(LLVM_CONFIG)
++    message(STATUS "Found LLVM_CONFIG as ${LLVM_CONFIG}")
++    set(CONFIG_COMMAND ${LLVM_CONFIG}
++      "--assertion-mode"
++      "--bindir"
++      "--libdir"
++      "--includedir"
++      "--prefix"
++      "--src-root")
++    execute_process(
++      COMMAND ${CONFIG_COMMAND}
++      RESULT_VARIABLE HAD_ERROR
++      OUTPUT_VARIABLE CONFIG_OUTPUT
++    )
++    if(NOT HAD_ERROR)
++      string(REGEX REPLACE
++        "[ \t]*[\r\n]+[ \t]*" ";"
++        CONFIG_OUTPUT ${CONFIG_OUTPUT})
++    else()
++      string(REPLACE ";" " " CONFIG_COMMAND_STR "${CONFIG_COMMAND}")
++      message(STATUS "${CONFIG_COMMAND_STR}")
++      message(FATAL_ERROR "llvm-config failed with status ${HAD_ERROR}")
+     endif()
+-    # On non-Debug builds cmake automatically defines NDEBUG, so we
+-    # explicitly undefine it:
+-    if( NOT uppercase_CMAKE_BUILD_TYPE STREQUAL "DEBUG" )
+-      add_definitions( -UNDEBUG )
+-      # Also remove /D NDEBUG to avoid MSVC warnings about conflicting defines.
+-      foreach (flags_var_to_scrub
+-          CMAKE_CXX_FLAGS_RELEASE
+-          CMAKE_CXX_FLAGS_RELWITHDEBINFO
+-          CMAKE_CXX_FLAGS_MINSIZEREL
+-          CMAKE_C_FLAGS_RELEASE
+-          CMAKE_C_FLAGS_RELWITHDEBINFO
+-          CMAKE_C_FLAGS_MINSIZEREL)
+-        string (REGEX REPLACE "(^| )[/-]D *NDEBUG($| )" " "
+-          "${flags_var_to_scrub}" "${${flags_var_to_scrub}}")
+-      endforeach()
++  else()
++    message(FATAL_ERROR "llvm-config not found -- ${LLVM_CONFIG}")
++  endif()
++
++  list(GET CONFIG_OUTPUT 0 ENABLE_ASSERTIONS)
++  list(GET CONFIG_OUTPUT 1 TOOLS_BINARY_DIR)
++  list(GET CONFIG_OUTPUT 2 LIBRARY_DIR)
++  list(GET CONFIG_OUTPUT 3 INCLUDE_DIR)
++  list(GET CONFIG_OUTPUT 4 LLVM_OBJ_ROOT)
++  list(GET CONFIG_OUTPUT 5 MAIN_SRC_DIR)
++      
++  if(NOT MSVC_IDE)  
++    set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS}
++      CACHE BOOL "Enable assertions")
++    # Assertions should follow llvm-config's.
++    mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
++  endif()
++      
++  set(LLVM_TOOLS_BINARY_DIR ${TOOLS_BINARY_DIR} CACHE PATH "Path to llvm/bin")
++  set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
++  set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
++  set(LLVM_DIR ${LLVM_OBJ_ROOT}/cmake/modules/CMakeFiles CACHE PATH "Path to LLVM build tree CMake files")
++  set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
++  set(LLVM_MAIN_SRC_DIR ${MAIN_SRC_DIR} CACHE PATH "Path to LLVM source tree")
++    
++  find_program(LLVM_TABLEGEN_EXE "llvm-tblgen" ${LLVM_TOOLS_BINARY_DIR}
++    NO_DEFAULT_PATH)
++  
++  set(LLVM_CMAKE_PATH "${LLVM_BINARY_DIR}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm")
++  set(LLVMCONFIG_FILE "${LLVM_CMAKE_PATH}/LLVMConfig.cmake")
++  if(EXISTS ${LLVMCONFIG_FILE})
++    list(APPEND CMAKE_MODULE_PATH "${LLVM_CMAKE_PATH}")                                                                                                                                     
++    include(${LLVMCONFIG_FILE})
++  else()
++    message(FATAL_ERROR "Not found: ${LLVMCONFIG_FILE}")
++  endif()
++
++  # They are used as destination of target generators.
++  set(LLVM_RUNTIME_OUTPUT_INTDIR ${CMAKE_BINARY_DIR}/${CMAKE_CFG_INTDIR}/bin)
++  set(LLVM_LIBRARY_OUTPUT_INTDIR ${CMAKE_BINARY_DIR}/${CMAKE_CFG_INTDIR}/lib${LLVM_LIBDIR_SUFFIX})
++  if(WIN32 OR CYGWIN)
++    # DLL platform -- put DLLs into bin.
++    set(LLVM_SHLIB_OUTPUT_INTDIR ${LLVM_RUNTIME_OUTPUT_INTDIR})
++  else()
++    set(LLVM_SHLIB_OUTPUT_INTDIR ${LLVM_LIBRARY_OUTPUT_INTDIR})
++  endif()
++
++  include(AddLLVM)
++  include(HandleLLVMOptions)
++  include(CheckAtomic)
++  include(TableGen)
++
++  if (PYTHON_EXECUTABLE STREQUAL "")
++    set(Python_ADDITIONAL_VERSIONS 3.5 3.4 3.3 3.2 3.1 3.0 2.7 2.6 2.5)
++    include(FindPythonInterp)
++    if( NOT PYTHONINTERP_FOUND )
++      message(FATAL_ERROR                                                                                                                                                                   
++              "Unable to find Python interpreter, required for builds and testing.
++               Please install Python or specify the PYTHON_EXECUTABLE CMake variable.")
+     endif()
++  else()
++    message("-- Found PythonInterp: ${PYTHON_EXECUTABLE}")
+   endif()
+ 
+-  # Sources available, too?
+-  execute_process(COMMAND "${LLVM_INSTALL_ROOT}/bin/llvm-config" --src-root
+-                  OUTPUT_VARIABLE MAIN_SRC_DIR
+-                  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  set(LLVM_SOURCE_ROOT ${MAIN_SRC_DIR} CACHE PATH "Path to LLVM source tree")
+-
+-  # Enable unit tests if available.
+-  set(UNITTEST_DIR ${LLVM_SOURCE_ROOT}/utils/unittest)
+-  if(EXISTS ${UNITTEST_DIR}/googletest/include/gtest/gtest.h)
+-    add_library(gtest ${UNITTEST_DIR}/googletest/src/gtest-all.cc)
+-    target_include_directories(gtest PUBLIC "${UNITTEST_DIR}/googletest/include" PRIVATE "${UNITTEST_DIR}/googletest")
+-    target_link_libraries(gtest ${LLVM_SYSTEM_LIBS})
++  # Import CMake library targets from LLVM and Clang.
++  include("${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm/LLVMConfig.cmake")
+ 
+-    add_library(gtest_main ${UNITTEST_DIR}/UnitTestMain/TestMain.cpp)
+-    target_link_libraries(gtest_main gtest)
++  set(PACKAGE_VERSION "${LLVM_PACKAGE_VERSION}")
+ 
+-    set(POLLY_GTEST_AVAIL 1)
++  set(LLVM_BINARY_DIR ${CMAKE_BINARY_DIR})
++
++  set(CMAKE_INCLUDE_CURRENT_DIR ON)
++  include_directories("${LLVM_BINARY_DIR}/include" "${LLVM_MAIN_INCLUDE_DIR}")
++  # Next three include directories are needed when llvm-config is located in build directory.
++  # LLVM and Cland are assumed to be built together
++  if (EXISTS "${LLVM_OBJ_ROOT}/include")
++    include_directories("${LLVM_OBJ_ROOT}/include")
+   endif()
++  link_directories("${LLVM_LIBRARY_DIR}")
++
++  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
++  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib${LLVM_LIBDIR_SUFFIX})                                                                                                          
++  set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib${LLVM_LIBDIR_SUFFIX})
+ 
+-  # Make sure the isl c files are built as fPIC
+-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
++  set(POLLY_BUILT_STANDALONE 1)
+ else ()
+   set(LLVM_SOURCE_ROOT "${LLVM_MAIN_SRC_DIR}")
+   set(POLLY_GTEST_AVAIL 1)
+@@ -127,7 +149,7 @@ else ()
+ endif ()
+ 
+ # Add path for custom modules
+-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${POLLY_SOURCE_DIR}/cmake")
++set (CMAKE_MODULE_PATH "/tmp/pkgsrc-tmp/wip/polly-git/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} "${POLLY_SOURCE_DIR}/cmake")
+ 
+ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+ 
+@@ -179,7 +201,7 @@ add_definitions( -D_GNU_SOURCE )
+ 
+ add_subdirectory(docs)
+ add_subdirectory(lib)
+-add_subdirectory(test)
++#add_subdirectory(test)
+ if (POLLY_GTEST_AVAIL)
+   add_subdirectory(unittests)
+ endif ()

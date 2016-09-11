@@ -1,14 +1,14 @@
 # $NetBSD$
 
-BUILDLINK_TREE+=	lld
+BUILDLINK_TREE+=	polly
 
-.if !defined(LLD_BUILDLINK3_MK)
-LLD_BUILDLINK3_MK:=
+.if !defined(POLLY_BUILDLINK3_MK)
+POLLY_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.lld+=	lld>=4.0.0nb20160910
-BUILDLINK_PKGSRCDIR.lld?=	../../wip/lld-git
+BUILDLINK_API_DEPENDS.polly+=	polly>=4.0.0nb20160911
+BUILDLINK_PKGSRCDIR.polly?=	../../wip/polly-git
 
 .include "../../wip/llvm-git/buildlink3.mk"
-.endif	# LLD_BUILDLINK3_MK
+.endif	# POLLY_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-lld
+BUILDLINK_TREE+=	-polly
