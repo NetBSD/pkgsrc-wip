@@ -10,6 +10,8 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/l/lingpy/
 COMMENT=	Python library for automatic tasks in historical linguistics
 LICENSE=	gnu-gpl-v3
 
+BROKEN=		Needs py-distribute which conflicts with py-setuptools which is pulled in by dependencies
+
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../wip/py-regex
 
