@@ -17,8 +17,11 @@ DEPENDS+=		${PYPKGPREFIX}-networkx>=1.8.1:../../math/py-networkx
 DEPENDS+=		${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 DEPENDS+=		${PYPKGPREFIX}-lxml>=3.3.5:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-xlrd>=0.9.2:../../textproc/py-xlrd
+BUILD_DEPENDS+=		${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 1.7.1
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
