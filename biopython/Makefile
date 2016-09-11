@@ -10,8 +10,9 @@ HOMEPAGE=	http://biopython.org/
 COMMENT=	Python libraries for computational molecular biology
 LICENSE=	Biopython
 
+DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.5:../../print/py-reportlab
+
 PYDISTUTILSPKG=		YES
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-reportlab
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/biopython
@@ -32,5 +33,4 @@ post-install:
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.5:../../print/py-reportlab
 .include "../../mk/bsd.pkg.mk"
