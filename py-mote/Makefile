@@ -3,7 +3,7 @@
 DISTNAME=	Pymote-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/Pymote/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pymote/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.2.2
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
