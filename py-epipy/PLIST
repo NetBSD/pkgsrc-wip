@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/03 23:47:29 jihbed Exp $
+@comment $NetBSD$
 bin/analyses.py
 bin/basics.py
 bin/case_tree.py
 bin/checkerboard.py
 bin/data_generator.py
 bin/epicurve.py
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/epipy/__init__.py
 ${PYSITELIB}/epipy/__init__.pyc
 ${PYSITELIB}/epipy/__init__.pyo
