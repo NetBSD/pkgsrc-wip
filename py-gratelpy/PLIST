@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/03 00:29:25 jihbed Exp $
-bin/gratelpy_benchmark2.7
-bin/gratelpy_check_data2.7
-bin/gratelpy_fragment_server2.7
-bin/gratelpy_subclient2.7
-bin/gratelpy_test2.7
-bin/gratelpy_time2.7
+@comment $NetBSD$
+bin/gratelpy_benchmark
+bin/gratelpy_check_data
+bin/gratelpy_fragment_server
+bin/gratelpy_subclient
+bin/gratelpy_test
+bin/gratelpy_test_cluster
+bin/gratelpy_time
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -58,6 +59,9 @@ ${PYSITELIB}/gratelpy/subgraphs.pyo
 ${PYSITELIB}/gratelpy/tests/__init__.py
 ${PYSITELIB}/gratelpy/tests/__init__.pyc
 ${PYSITELIB}/gratelpy/tests/__init__.pyo
+${PYSITELIB}/gratelpy/tests/test_critical_fragments.py
+${PYSITELIB}/gratelpy/tests/test_critical_fragments.pyc
+${PYSITELIB}/gratelpy/tests/test_critical_fragments.pyo
 ${PYSITELIB}/gratelpy/tests/test_fragment_server.py
 ${PYSITELIB}/gratelpy/tests/test_fragment_server.pyc
 ${PYSITELIB}/gratelpy/tests/test_fragment_server.pyo
