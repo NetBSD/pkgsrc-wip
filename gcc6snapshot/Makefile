@@ -83,7 +83,12 @@ CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+# on NetBSD, use the native SSP code in libc
+CONFIGURE_ARGS+=	--disable-libssp
+.else
 CONFIGURE_ARGS+=	--enable-libssp
+.endif
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 .if ${OPSYS} == "NetBSD"
