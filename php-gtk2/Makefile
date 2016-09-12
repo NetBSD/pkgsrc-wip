@@ -20,6 +20,7 @@ BUILD_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
 
 CONFIGURE_ARGS+=	--without-libglade
 
+BROKEN=			phpize-module redefined and breaks the package framework
 #XXX phpize needs to be run with specific arguments
 phpize-module:
 	@cookie=${WRKDIR}/.phpize_module_done;				\
