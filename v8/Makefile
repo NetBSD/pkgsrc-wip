@@ -93,5 +93,5 @@ do-install:
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../wip/chromium-depot_tools/tool.mk"
+#.include "../../wip/chromium-depot_tools/tool.mk"
 .include "../../mk/bsd.pkg.mk"
