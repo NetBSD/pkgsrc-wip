@@ -1,13 +1,17 @@
 @comment $NetBSD: PLIST,v 1.1 2014/11/29 16:22:45 nros Exp $
 bin/gflags_completions.sh
-include/gflags/gflags.h
 include/gflags/gflags_completions.h
 include/gflags/gflags_declare.h
-lib/cmake/gflags/gflags-config-version.cmake
+include/gflags/gflags.h
 lib/cmake/gflags/gflags-config.cmake
-lib/cmake/gflags/gflags-export-noconfig.cmake
+lib/cmake/gflags/gflags-config-version.cmake
 lib/cmake/gflags/gflags-export.cmake
+lib/cmake/gflags/gflags-export-release.cmake
 lib/libgflags.a
-lib/libgflags.so
 lib/libgflags_nothreads.a
 lib/libgflags_nothreads.so
+lib/libgflags_nothreads.so.2
+lib/libgflags_nothreads.so.${PKGVERSION}
+lib/libgflags.so
+lib/libgflags.so.2
+lib/libgflags.so.${PKGVERSION}
