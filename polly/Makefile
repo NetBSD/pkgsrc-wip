@@ -12,7 +12,6 @@ HOMEPAGE=	http://polly.llvm.org/
 COMMENT=	Polyhedral optimizations for LLVM
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
