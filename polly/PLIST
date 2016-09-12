@@ -12,14 +12,10 @@ include/polly/CodeGen/RuntimeDebugBuilder.h
 include/polly/CodeGen/Utils.h
 include/polly/Config/config.h
 include/polly/DependenceInfo.h
-include/polly/FlattenAlgo.h
-include/polly/FlattenSchedule.h
 include/polly/LinkAllPasses.h
 include/polly/Options.h
-include/polly/PolyhedralInfo.h
 include/polly/RegisterPasses.h
 include/polly/ScheduleOptimizer.h
-include/polly/ScopBuilder.h
 include/polly/ScopDetection.h
 include/polly/ScopDetectionDiagnostic.h
 include/polly/ScopInfo.h
@@ -32,4 +28,3 @@ include/polly/Support/ScopLocation.h
 lib/LLVMPolly.so
 lib/libPolly.a
 lib/libPollyISL.a
-lib/libPollyPPCG.a

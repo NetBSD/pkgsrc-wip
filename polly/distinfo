@@ -4,5 +4,5 @@ SHA1 (polly-3.8.1.src.tar.xz) = 918f3c74369a3605f3d624ea3f20c97bc3c921ad
 RMD160 (polly-3.8.1.src.tar.xz) = 766873d4b88e0e9c5670aeb45313d47cca7bd79a
 SHA512 (polly-3.8.1.src.tar.xz) = e5d0d1625be47579cd337fce6d6a1c5b64c8991a6b073778c8d8f237fccbd29f3a8ab815f191bd75c550ac4404c9581c948400cd5c71f56d3ea8fb07fec05536
 Size (polly-3.8.1.src.tar.xz) = 7799188 bytes
-SHA1 (patch-CMakeLists.txt) = 3cb122dbe4a8229d4966574f691c94722ccb545e
-SHA1 (patch-lib_External_isl_configure) = 70e10b61186e2ff6087953f741e453b42f481185
+SHA1 (patch-CMakeLists.txt) = 51be0d9eca2ddbf9b9d0a64f46bb2e19cd7a2e8d
+SHA1 (patch-lib_External_isl_configure) = 9e35eb58f2211e3b1a8126a502fce7b2b31c15e5
