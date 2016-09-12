@@ -23,6 +23,6 @@ do-configure:
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../wip/ncbi-lib/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
-.include "../../x11/wxGTK24/buildlink3.mk"
+#.include "../../x11/wxGTK24/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
