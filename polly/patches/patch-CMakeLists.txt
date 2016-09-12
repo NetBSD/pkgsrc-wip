@@ -1,5 +1,9 @@
 $NetBSD$
 
+Bump minimal required CMake version to 3.4.3 like modern LLVM
+Add support for standalone builds
+Disable tests - they require missing files from standard LLVM build (lit tool)
+
 --- CMakeLists.txt.orig	2015-10-15 12:18:37.000000000 +0000
 +++ CMakeLists.txt
 @@ -1,90 +1,107 @@

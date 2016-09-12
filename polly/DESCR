@@ -9,4 +9,4 @@ area of automatic GPU code generation.
 For many users, however, it's not the existing optimizations in Polly that are
 of most interest, but the new analyses and optimizations enabled by the Polly
 infrastructure. At polyhedral.info you can get an idea of what has already been
-done and what is possible in the context of polyhedral compilation. 
+done and what is possible in the context of polyhedral compilation.
