@@ -1,4 +1,7 @@
-$NetBSD: patch-gcc_config_netbsd.h,v 1.1 2014/12/17 21:51:02 keckhardt Exp $
+$NetBSD: patch-gcc_config_netbsd.h,v 1.1 2016/09/12 22:13:54 maya Exp $
+
+when using shared, link against libc
+another unexplained change`
 
 --- gcc/config/netbsd.h.orig	2014-01-02 22:23:26.000000000 +0000
 +++ gcc/config/netbsd.h
@@ -12,7 +15,23 @@ $NetBSD: patch-gcc_config_netbsd.h,v 1.1 2014/12/17 21:51:02 keckhardt Exp $
  /* TARGET_OS_CPP_BUILTINS() common to all NetBSD targets.  */
  #define NETBSD_OS_CPP_BUILTINS_COMMON()		\
    do						\
-@@ -175,3 +178,9 @@ along with GCC; see the file COPYING3.  
+@@ -96,6 +99,7 @@ along with GCC; see the file COPYING3.  
+        %{!pg:-lposix}}		\
+      %{p:-lposix_p}		\
+      %{pg:-lposix_p}}		\
++   %{shared:-lc}		\
+    %{!shared:			\
+      %{!symbolic:		\
+        %{!p:			\
+@@ -109,6 +113,7 @@ along with GCC; see the file COPYING3.  
+        %{!pg:-lposix}}		\
+      %{p:-lposix_p}		\
+      %{pg:-lposix_p}}		\
++   %{shared:-lc}		\
+    %{!shared:			\
+      %{!symbolic:		\
+        %{!p:			\
+@@ -175,3 +180,9 @@ along with GCC; see the file COPYING3.  
  
  #undef WINT_TYPE
  #define WINT_TYPE "int"
