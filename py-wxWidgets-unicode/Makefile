@@ -36,6 +36,6 @@ PLIST_SUBST+=		GTKVER=2
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../wip/wxGTK-unicode/buildlink3.mk"
-.include "../../wip/wxGTK-contrib-unicode/buildlink3.mk"
+#.include "../../wip/wxGTK-unicode/buildlink3.mk"
+#.include "../../wip/wxGTK-contrib-unicode/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
