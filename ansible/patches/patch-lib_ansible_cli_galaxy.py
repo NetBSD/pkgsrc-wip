@@ -4,12 +4,12 @@ Fix hardcoded path.
 
 --- lib/ansible/cli/galaxy.py.orig	2016-05-25 13:00:55.000000000 +0000
 +++ lib/ansible/cli/galaxy.py
-@@ -127,7 +127,7 @@ class GalaxyCLI(CLI):
-                                    type=str, default=C.DEFAULT_ROLES_PATH,
-                 help='The path to the directory containing your roles. '
-                      'The default is the roles_path configured in your '
--                     'ansible.cfg file (/etc/ansible/roles if not configured)')
-+                     'ansible.cfg file (@PKG_SYSCONFDIR@/ansible/roles if not configured)')
+@@ -115,7 +115,7 @@ class GalaxyCLI(CLI):
+             # NOTE: while the option type=str, the default is a list, and the
+             # callback will set the value to a list.
+             self.parser.add_option('-p', '--roles-path', dest='roles_path', action="callback", callback=CLI.expand_paths, type=str, default=C.DEFAULT_ROLES_PATH,
+-                help='The path to the directory containing your roles. The default is the roles_path configured in your ansible.cfg file (/etc/ansible/roles if not configured)')
++                help='The path to the directory containing your roles. The default is the roles_path configured in your ansible.cfg file (@PKG_SYSCONFDIR@/ansible/roles if not configured)')
  
-         if self.action in ("import","info","init","install","login","search","setup","delete"):
-             self.parser.add_option('-s', '--server', dest='api_server', default=C.GALAXY_SERVER,
+         if self.action in ("init","install"):
+             self.parser.add_option('-f', '--force', dest='force', action='store_true', default=False, help='Force overwriting an existing role')

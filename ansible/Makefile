@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2016/02/24 22:32:59 tty Exp $
 
-DISTNAME=	ansible-2.1.0.0
-PKGREVISION=	2
+DISTNAME=	ansible-2.1.1.0
 #PKGNAME=	${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/
@@ -35,6 +34,7 @@ SUBST_FILES.prefix+=	lib/ansible/constants.py lib/ansible/cli/galaxy.py
 SUBST_FILES.prefix+=	lib/ansible/modules/core/system/ping.py
 SUBST_FILES.prefix+=	lib/ansible/modules/core/system/setup.py
 SUBST_FILES.prefix+=	lib/ansible/modules/extras/monitoring/nagios.py
+SUBST_FILES.prefix+=	lib/ansible/utils/module_docs_fragments/openstack.py
 SUBST_FILES.prefix+=	contrib/README.md contrib/inventory/cobbler.py
 SUBST_FILES.prefix+=	contrib/inventory/collins.py contrib/inventory/nova.py
 SUBST_FILES.prefix+=	contrib/inventory/openstack.py

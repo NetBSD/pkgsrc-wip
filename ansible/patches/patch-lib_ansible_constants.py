@@ -4,7 +4,7 @@ Fix hardcoded paths.
 
 --- lib/ansible/constants.py.orig	2016-05-25 13:00:55.000000000 +0000
 +++ lib/ansible/constants.py
-@@ -92,7 +92,7 @@ def _get_config(p, section, key, env_var
+@@ -99,7 +99,7 @@ def _get_config(p, section, key, env_var
      return default
  
  def load_config_file():
@@ -13,7 +13,7 @@ Fix hardcoded paths.
  
      p = configparser.ConfigParser()
  
-@@ -103,7 +103,7 @@ def load_config_file():
+@@ -110,7 +110,7 @@ def load_config_file():
              path0 += "/ansible.cfg"
      path1 = os.getcwd() + "/ansible.cfg"
      path2 = os.path.expanduser("~/.ansible.cfg")
@@ -22,7 +22,7 @@ Fix hardcoded paths.
  
      for path in [path0, path1, path2, path3]:
          if path is not None and os.path.exists(path):
-@@ -132,7 +132,7 @@ DEFAULTS='defaults'
+@@ -139,7 +139,7 @@ DEFAULTS='defaults'
  # FIXME: add deprecation warning when these get set
  #### DEPRECATED VARS #### 
  # use more sanely named 'inventory'
@@ -31,16 +31,16 @@ Fix hardcoded paths.
  # this is not used since 0.5 but people might still have in config
  DEFAULT_PATTERN           = get_config(p, DEFAULTS, 'pattern', None, None)
  
-@@ -140,7 +140,7 @@ DEFAULT_PATTERN           = get_config(p
+@@ -147,7 +147,7 @@ DEFAULT_PATTERN           = get_config(p
  DEFAULT_DEBUG             = get_config(p, DEFAULTS, 'debug',            'ANSIBLE_DEBUG',            False, boolean=True)
  DEFAULT_HOST_LIST         = get_config(p, DEFAULTS,'inventory', 'ANSIBLE_INVENTORY', DEPRECATED_HOST_LIST, ispath=True)
  DEFAULT_MODULE_PATH       = get_config(p, DEFAULTS, 'library',          'ANSIBLE_LIBRARY',          None, ispathlist=True)
--DEFAULT_ROLES_PATH        = get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '/etc/ansible/roles', ispathlist=True)
-+DEFAULT_ROLES_PATH        = get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '@PKG_SYSCONFDIR@/ansible/roles', ispathlist=True)
+-DEFAULT_ROLES_PATH        = get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '/etc/ansible/roles', ispathlist=True, expand_relative_paths=True)
++DEFAULT_ROLES_PATH        = get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '@PKG_SYSCONFDIR@/ansible/roles', ispathlist=True, expand_relative_paths=True)
  DEFAULT_REMOTE_TMP        = get_config(p, DEFAULTS, 'remote_tmp',       'ANSIBLE_REMOTE_TEMP',      '$HOME/.ansible/tmp')
  DEFAULT_LOCAL_TMP         = get_config(p, DEFAULTS, 'local_tmp',        'ANSIBLE_LOCAL_TEMP',      '$HOME/.ansible/tmp', istmppath=True)
  DEFAULT_MODULE_NAME       = get_config(p, DEFAULTS, 'module_name',      None,                       'command')
-@@ -222,16 +222,16 @@ DEFAULT_BECOME_ASK_PASS   = get_config(p
+@@ -229,16 +229,16 @@ DEFAULT_BECOME_ASK_PASS   = get_config(p
  # (mapping of param: squash field)
  DEFAULT_SQUASH_ACTIONS         = get_config(p, DEFAULTS, 'squash_actions',     'ANSIBLE_SQUASH_ACTIONS', "apk, apt, dnf, package, pacman, pkgng, yum, zypper", islist=True)
  # paths
