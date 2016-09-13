@@ -839,6 +839,7 @@ SUBDIR+=	gcalcli-git
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
 SUBDIR+=	gcc6snapshot
+SUBDIR+=	gcc7snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gcr
 SUBDIR+=	gdal-docs

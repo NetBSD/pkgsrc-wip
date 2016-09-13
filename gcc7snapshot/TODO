@@ -1,0 +1,47 @@
+TODO
+====
+
+
+I won't work on gcc any longer after gcc6 has been released in about 
+April 2016. So please step up as maintainer of gcc6/gcc7 for NetBSD.
+
+0) This package aims to keep the latest gcc usable on NetBSD, although
+any work on gcc should happen upstream as far as possible. But it is 
+hopeless without enough NetBSD developers working on it upstream. I have sent
+some patches for NetBSD to GCC a few month ago but there is no progress yet:
+
+PR 64271, the minimal patch set to bootstrap, extracted from pkgsrc.
+Jonathan Wakely is working on the libstdc++ patches involved.
+Without acceptance of patches for PR 64271, no other patches
+will be accepted upstream. 
+
+PR 39570, this bug causes all gfortran run tests to fail. I have developed
+the necessary patches and sent them upstream. For gcc50snapshot it means
+replacing a short patch by a bunch of complex patches, but they are gcc
+conforming and can be reused for other patches as well.
+
+PR 48244, for iso_c_binding support in gfortran. The patches are
+there but it is delayed by PR 64271.
+
+
+1) On NetBSD a working cabsl function must be present in libm to build gfortran.
+This has been added to NetBSD7 on 2014/10/13. Before this date it was defined
+in complex.h but missing from libm.
+
+2) Unless NetBSD gets proper support for C99, the number of test failures
+will stay high. The dozens of missing or inaccurate long double functions
+causes a misconception of NetBSD being an obscure platform, causing other
+projects like gcc or R to abandon support for NetBSD. And the race goes on,
+now we need support for C11 functions like aligned_alloc and the plethora
+of thread functions in our libc/libm.
+ 
+3) This package and the lang/gccXY need a cleanup or a complete new start. I
+think that SUBST_VARS could handle the platform dependencies in a much cleaner
+way.
+
+4) Patches from lang/gcc5 should be integrated as far as possible, especially
+patches for other platforms. Right now I just look at it from time to time.
+
+Have fun,
+
+Kai-Uwe Eckhardt
