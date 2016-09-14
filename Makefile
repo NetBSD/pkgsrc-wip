@@ -3953,6 +3953,7 @@ SUBDIR+=	superchic
 SUBDIR+=	superlfv
 SUBDIR+=	supermodel
 SUBDIR+=	surf
+SUBDIR+=	surf2-git
 SUBDIR+=	suse121_32_libbz2
 SUBDIR+=	suse121_32_libgcrypt
 SUBDIR+=	suse121_32_libgpg-error

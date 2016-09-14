@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- Makefile.orig	2016-09-12 08:04:20.000000000 +0000
++++ Makefile
+@@ -45,12 +45,12 @@ dist: clean
+ install: all
+ 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
+ 	@mkdir -p ${DESTDIR}${PREFIX}/bin
+-	@cp -f surf ${DESTDIR}${PREFIX}/bin
+-	@chmod 755 ${DESTDIR}${PREFIX}/bin/surf
++	@cp -f surf ${DESTDIR}${PREFIX}/bin/surf2
++	@chmod 755 ${DESTDIR}${PREFIX}/bin/surf2
+ 	@echo installing manual page to ${DESTDIR}${MANPREFIX}/man1
+ 	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
+-	@sed "s/VERSION/${VERSION}/g" < surf.1 > ${DESTDIR}${MANPREFIX}/man1/surf.1
+-	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/surf.1
++	@sed "s/VERSION/${VERSION}/g" < surf.1 > ${DESTDIR}${MANPREFIX}/man1/surf2.1
++	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/surf2.1
+ 
+ uninstall:
+ 	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
