@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/gendesc
+bin/genhtml
+bin/geninfo
+bin/genpng
+bin/lcov
+man/man1/gendesc.1
+man/man1/genhtml.1
+man/man1/geninfo.1
+man/man1/genpng.1
+man/man1/lcov.1
+man/man5/lcovrc.5
+share/examples/lcov/lcovrc

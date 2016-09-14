@@ -1,0 +1,16 @@
+LCOV is an extension of GCOV, a GNU tool which provides information
+about what parts of a program are actually executed (i.e. "covered")
+while running a particular test case. The extension consists of
+a set of Perl scripts which build on the textual GCOV output
+to implement the following enhanced functionality:
+
+  * HTML based output: coverage rates are additionally
+    indicated using bar graphs and specific colors.
+
+  * Support for large projects: overview pages allow quick
+    browsing of coverage data by providing three levels of
+    detail: directory view, file view and source code view.
+
+LCOV was initially designed to support Linux kernel
+coverage measurements, but works as well for coverage
+measurements on standard user space applications.

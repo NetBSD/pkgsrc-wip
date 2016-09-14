@@ -1521,6 +1521,7 @@ SUBDIR+=	lbt
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
 SUBDIR+=	lci
+SUBDIR+=	lcov-current
 SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
