@@ -3952,7 +3952,6 @@ SUBDIR+=	supercat
 SUBDIR+=	superchic
 SUBDIR+=	superlfv
 SUBDIR+=	supermodel
-SUBDIR+=	supertux
 SUBDIR+=	surf
 SUBDIR+=	suse121_32_libbz2
 SUBDIR+=	suse121_32_libgcrypt
