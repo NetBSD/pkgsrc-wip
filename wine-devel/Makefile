@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.56 2016/03/05 11:28:29 jperkin Exp $
 
-DISTNAME=	wine-1.9.12
+DISTNAME=	wine-1.9.18
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
@@ -49,11 +50,13 @@ PLIST_VARS+=		oss wine16 wine32 wine64
 #CONFIGURE_ENV+=		ac_cv_prog_LD=${LD:Q}\ -m\ elf_i386
 #PLIST.wine16=		yes
 PLIST_SRC=	PLIST.wine32
+NOT_PAX_MPROTECT_SAFE+=	bin/wine
 #PLIST.wine32=		yes
 .endif
 # Needs GCC >= 4.4; Experimental
 .if !empty(MACHINE_ARCH:Mx86_64)
 CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
+NOT_PAX_MPROTECT_SAFE+=	bin/wine64
 PLIST_SRC=	PLIST.wine64
 #PLIST.wine64=		yes
 .endif
