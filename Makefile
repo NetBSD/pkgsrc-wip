@@ -2549,6 +2549,7 @@ SUBDIR+=	plasti
 SUBDIR+=	plconfig
 SUBDIR+=	plist-utils
 SUBDIR+=	plod
+SUBDIR+=	plover-current
 SUBDIR+=	plplot
 SUBDIR+=	plugger
 SUBDIR+=	pmacct
