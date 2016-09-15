@@ -2996,6 +2996,7 @@ SUBDIR+=	py-hepcrawl
 SUBDIR+=	py-hessianfree
 SUBDIR+=	py-hfk
 SUBDIR+=	py-hgapi
+SUBDIR+=	py-hidapi
 SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-hmf
 SUBDIR+=	py-holoviews
