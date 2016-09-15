@@ -4265,7 +4265,6 @@ SUBDIR+=	which
 SUBDIR+=	why
 SUBDIR+=	why3
 SUBDIR+=	wicd
-SUBDIR+=	wine-devel
 SUBDIR+=	wings
 SUBDIR+=	winwrangler
 SUBDIR+=	wireless-tools
