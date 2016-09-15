@@ -1,3 +1,7 @@
 $NetBSD$
 
+SHA1 (hidapi-0.7.99.post18.tar.gz) = 6e936588d2c8471241162a1c0bb157192923a4f2
+RMD160 (hidapi-0.7.99.post18.tar.gz) = 6fdb805f673649f760410b4ceb2f8a3a23eff70e
+SHA512 (hidapi-0.7.99.post18.tar.gz) = 6b9f62d233be4e119dd77f9e67510fe8059cd81e94ce65a59fef6252a5ff52b0da38550be137ad763f81d1f4dbebf1850489dc16a8b5630e99bb7adf9b87746b
+Size (hidapi-0.7.99.post18.tar.gz) = 36474 bytes
 SHA1 (patch-setup.py) = 001f7c9d96fd4bd41693c49604ad031e858fdb81

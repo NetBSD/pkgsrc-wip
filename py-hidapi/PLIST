@@ -1,7 +1,7 @@
 @comment $NetBSD$
 ${PYSITELIB}/hid.so
-${PYSITELIB}/hidapi-${PKGVERSION}.7.99.post17${EGG_FILE}/PKG-INFO
-${PYSITELIB}/hidapi-${PKGVERSION}.7.99.post17${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/hidapi-${PKGVERSION}.7.99.post17${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/hidapi-${PKGVERSION}.7.99.post17${EGG_FILE}/requires.txt
-${PYSITELIB}/hidapi-${PKGVERSION}.7.99.post17${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
