@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/06/07 14:27:04 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	sync-server-dependencies-1.0
+DISTNAME=	sync-server-dependencies-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	#
@@ -12,6 +12,7 @@ LICENSE=	public-domain
 
 USE_TOOLS+=	gmake:run
 
+DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
 DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
