@@ -412,6 +412,7 @@ SUBDIR+=	coreclr-git
 SUBDIR+=	corefx-git
 SUBDIR+=	corert-git
 SUBDIR+=	courierpassd
+SUBDIR+=	coverity-analysis-bin
 SUBDIR+=	cowpatty
 SUBDIR+=	coxeter
 SUBDIR+=	cpdup

@@ -1,0 +1,11 @@
+Coverity Scan - Static Analysis
+
+Find and fix defects in your Java, C/C++, C#, JavaScript, Ruby, or
+Python open source project for free
+
+* Test every line of code and potential execution path.
+* The root cause of each defect is clearly explained, making it
+  easy to fix bugs
+
+This package contains the scanning tool for creating data
+to send to scan.coverity.com for analysis.
