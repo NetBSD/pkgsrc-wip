@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD$
+
+When running this on an unsupported operating system/release, set
+
+COVERITY_UNSUPPORTED=yes
+
+in the environment.
+
+===========================================================================
