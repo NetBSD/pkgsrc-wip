@@ -401,6 +401,7 @@ SUBDIR+=	compare
 SUBDIR+=	compiler-rt-git
 SUBDIR+=	compiz-boxmenu
 SUBDIR+=	concorde
+SUBDIR+=	conkeror
 SUBDIR+=	consul
 SUBDIR+=	contact-lookup-applet
 SUBDIR+=	contacts
