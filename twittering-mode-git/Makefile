@@ -24,6 +24,8 @@ USE_LANGUAGES=	# none
 # And directory name should get higher precedence, so begins with 'a'.
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/a-files
 
+# for make test only
+REPLACE_BASH=	test/run-test.sh
 TEST_TARGET=	check
 
 do-install:

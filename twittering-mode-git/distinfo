@@ -1,1 +1,2 @@
 $NetBSD: distinfo,v 1.5 2013/06/14 13:50:15 makoto Exp $
+SHA1 (patch-test_run-test.sh) = 480806870c6ef3ef472b6b814f1b95fa3b48bc36
