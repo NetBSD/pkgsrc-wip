@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nim-0.13.0
-PKGREVISION=	1
+DISTNAME=	nim-0.14.2
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz

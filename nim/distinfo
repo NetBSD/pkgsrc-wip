@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (nim-0.13.0.tar.xz) = 88450e9ffcc65625450c25e1ef73ebfb3c348955
-RMD160 (nim-0.13.0.tar.xz) = 03629c1b9be1df541023b170adc79a893382980a
-SHA512 (nim-0.13.0.tar.xz) = fd29b88146eaa7add24000b5c84b8f2dadd527bb827bbfd93e0ba7e01768bac70f2fcd5726161dc930cc5038a3f3eba7c4af86edb99bdaf20565abe92a17e9b0
-Size (nim-0.13.0.tar.xz) = 3145360 bytes
+SHA1 (nim-0.14.2.tar.xz) = 6a5a4c6804cd58d2412827feee8f94121b163d62
+RMD160 (nim-0.14.2.tar.xz) = 26ebeb69a9867317761236a638766bca9cbc6150
+SHA512 (nim-0.14.2.tar.xz) = 34afd07fafd066f6b4acc423c21e1cc275dce00f575d01f0d1edc147946930cf13c772abe0c4a081e2e0091ad41f6ae5cead20cc4d9a7cb3bc628ad7469f6459
+Size (nim-0.14.2.tar.xz) = 4778444 bytes
