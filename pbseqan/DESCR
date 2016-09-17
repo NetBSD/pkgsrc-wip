@@ -1,0 +1,3 @@
+Slimmed copy of the seqan repo from 2.0.0 with PacBio-specific changes.
+Will hopefully be eliminated in the future when patches are pulled into
+the standard seqan project.
