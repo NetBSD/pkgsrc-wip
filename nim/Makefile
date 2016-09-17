@@ -9,7 +9,6 @@ MAINTAINER=	cfkoch@edgebsd.org
 COMMENT=	The Nim programming language
 LICENSE=	mit
 
-NO_CONFIGURE=	yes
 AUTO_MKDIRS=	yes
 
 do-build:
