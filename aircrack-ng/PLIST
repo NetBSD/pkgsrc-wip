@@ -2,7 +2,6 @@
 bin/aircrack-ng
 bin/airdecap-ng
 bin/airdecloak-ng
-bin/besside-ng-crawler
 bin/ivstools
 bin/kstats
 bin/makeivs-ng
@@ -18,7 +17,6 @@ man/man1/makeivs-ng.1
 man/man1/packetforge-ng.1
 man/man1/wpaclean.1
 man/man8/airbase-ng.8
-man/man8/airdriver-ng.8
 man/man8/aireplay-ng.8
 man/man8/airmon-ng.8
 man/man8/airodump-ng-oui-update.8
@@ -32,4 +30,3 @@ sbin/airodump-ng
 sbin/airodump-ng-oui-update
 sbin/airserv-ng
 sbin/airtun-ng
-sbin/besside-ng

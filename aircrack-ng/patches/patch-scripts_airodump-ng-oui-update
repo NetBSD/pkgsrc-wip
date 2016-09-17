@@ -2,11 +2,11 @@ $NetBSD: patch-scripts_airodump-ng-oui-update,v 1.1 2015/02/07 01:35:39 tnn2 Exp
 
 Fix OUI_PATH. Note that this gets SUBST'ed, so /usr/local/etc is fine.
 
---- scripts/airodump-ng-oui-update.orig	2013-04-16 20:12:28.000000000 +0000
+--- scripts/airodump-ng-oui-update.orig	2015-07-02 23:53:33.000000000 +0000
 +++ scripts/airodump-ng-oui-update
 @@ -4,19 +4,7 @@ CURL=`which curl 2>/dev/null`
  WGET=`which wget 2>/dev/null`
- OUI_DOWNLOAD_URL="http://standards.ieee.org/develop/regauth/oui/oui.txt"
+ OUI_DOWNLOAD_URL="http://standards-oui.ieee.org/oui.txt"
  
 -OUI_PATH0="/etc/aircrack-ng"
 -OUI_PATH1="/usr/local/etc/aircrack-ng"
