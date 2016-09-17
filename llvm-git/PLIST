@@ -71,6 +71,7 @@ include/llvm-c/lto.h
 include/llvm/ADT/APFloat.h
 include/llvm/ADT/APInt.h
 include/llvm/ADT/APSInt.h
+include/llvm/ADT/AllocatorList.h
 include/llvm/ADT/ArrayRef.h
 include/llvm/ADT/BitVector.h
 include/llvm/ADT/BitmaskEnum.h
@@ -135,6 +136,7 @@ include/llvm/ADT/ilist_base.h
 include/llvm/ADT/ilist_iterator.h
 include/llvm/ADT/ilist_node.h
 include/llvm/ADT/ilist_node_base.h
+include/llvm/ADT/ilist_node_options.h
 include/llvm/ADT/iterator.h
 include/llvm/ADT/iterator_range.h
 include/llvm/ADT/simple_ilist.h
@@ -500,6 +502,7 @@ include/llvm/DebugInfo/PDB/Raw/RawError.h
 include/llvm/DebugInfo/PDB/Raw/RawSession.h
 include/llvm/DebugInfo/PDB/Raw/RawTypes.h
 include/llvm/DebugInfo/PDB/Raw/SymbolStream.h
+include/llvm/DebugInfo/PDB/Raw/TpiHashing.h
 include/llvm/DebugInfo/PDB/Raw/TpiStream.h
 include/llvm/DebugInfo/PDB/Raw/TpiStreamBuilder.h
 include/llvm/DebugInfo/Symbolize/DIPrinter.h
@@ -532,7 +535,8 @@ include/llvm/ExecutionEngine/Orc/OrcError.h
 include/llvm/ExecutionEngine/Orc/OrcRemoteTargetClient.h
 include/llvm/ExecutionEngine/Orc/OrcRemoteTargetRPCAPI.h
 include/llvm/ExecutionEngine/Orc/OrcRemoteTargetServer.h
-include/llvm/ExecutionEngine/Orc/RPCChannel.h
+include/llvm/ExecutionEngine/Orc/RPCByteChannel.h
+include/llvm/ExecutionEngine/Orc/RPCSerialization.h
 include/llvm/ExecutionEngine/Orc/RPCUtils.h
 include/llvm/ExecutionEngine/OrcMCJITReplacement.h
 include/llvm/ExecutionEngine/RTDyldMemoryManager.h
@@ -1020,7 +1024,7 @@ include/llvm/Transforms/Utils/LowerInvoke.h
 include/llvm/Transforms/Utils/Mem2Reg.h
 include/llvm/Transforms/Utils/MemorySSA.h
 include/llvm/Transforms/Utils/ModuleUtils.h
-include/llvm/Transforms/Utils/NameAnonFunctions.h
+include/llvm/Transforms/Utils/NameAnonGlobals.h
 include/llvm/Transforms/Utils/PromoteMemToReg.h
 include/llvm/Transforms/Utils/SSAUpdater.h
 include/llvm/Transforms/Utils/SSAUpdaterImpl.h
