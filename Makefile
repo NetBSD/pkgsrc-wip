@@ -4189,6 +4189,7 @@ SUBDIR+=	ukncbtl
 SUBDIR+=	umix
 SUBDIR+=	umurmur
 SUBDIR+=	unagi
+SUBDIR+=	unanimity
 SUBDIR+=	unarchiver-clt
 SUBDIR+=	undo-tree
 SUBDIR+=	unicorn5hc
