@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (pbcopper-2016.09.13-ce9a4b6d836d53997d7acce6b5dceaa8bb8f7c22.tar.gz) = dc1ad407d96562d7ae7d258ef5686e7c6b7888b6
+RMD160 (pbcopper-2016.09.13-ce9a4b6d836d53997d7acce6b5dceaa8bb8f7c22.tar.gz) = 314e5637aec372e9dbf3457a58d3f4cb9506cd45
+SHA512 (pbcopper-2016.09.13-ce9a4b6d836d53997d7acce6b5dceaa8bb8f7c22.tar.gz) = db1521dfb5c31f42aead50934cd614b61514e78ebfd70a5e54ff6736a872e23dfd8cc1c1eaa48012dc482d104331c7179de8c260e904112fe9ff7957447700b6
+Size (pbcopper-2016.09.13-ce9a4b6d836d53997d7acce6b5dceaa8bb8f7c22.tar.gz) = 448047 bytes
+SHA1 (patch-cmake_pbcopper-gitsha1.cmake) = 5331e4a27dd5268e31e142a25b158100fa0711a7
