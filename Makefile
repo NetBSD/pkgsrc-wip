@@ -2391,6 +2391,7 @@ SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	paxmirabilis
 SUBDIR+=	paxtest
+SUBDIR+=	pbbam
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbcopper
 SUBDIR+=	pcmanfm-qt
