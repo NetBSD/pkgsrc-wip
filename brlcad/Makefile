@@ -41,9 +41,11 @@ PKGCONFIG_OVERRIDE+=	src/other/libpng/scripts/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	src/other/libpng/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	src/other/libz/zlib.pc.in
 
-.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../devel/tinycthread/buildlink3.mk"
+.include "../../graphics/netpbm/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
