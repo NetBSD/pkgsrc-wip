@@ -29,6 +29,6 @@ do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
 
-.include "../../wip/nvidia-texture-tools/buildlink3.mk"
+.include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
