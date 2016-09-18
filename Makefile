@@ -73,6 +73,7 @@ SUBDIR+=	accountsservice
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
 SUBDIR+=	adamem
+SUBDIR+=	adaptagrams
 SUBDIR+=	adjustmtu
 SUBDIR+=	adms
 SUBDIR+=	admsmb
