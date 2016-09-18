@@ -15,6 +15,10 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
 
 #CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=ON
+CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=OFF
+
+MAKE_FLAGS+=	V=1
+MAKE_FLAGS+=	VERBOSE=1
 
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libanalyze.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/librt.pc.in

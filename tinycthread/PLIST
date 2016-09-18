@@ -1,3 +1,0 @@
-@comment $NetBSD$
-include/tinycthread.h
-lib/libtinycthread.la
