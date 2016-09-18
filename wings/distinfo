@@ -1,7 +1,8 @@
 $NetBSD: distinfo,v 1.2 2006/03/09 15:29:39 ghen Exp $
 
-SHA1 (wings-0.98.29b.tar.bz2) = f94bd16ad397334f16301d6e61058a39258dedff
-RMD160 (wings-0.98.29b.tar.bz2) = 2fee90cd1b7de353c5f2cad9034e14d792542efe
-Size (wings-0.98.29b.tar.bz2) = 777152 bytes
+SHA1 (wings-1.5.4.tar.bz2) = b4e6b2a7eb818a6d5b0644485dec56b8c90a80a0
+RMD160 (wings-1.5.4.tar.bz2) = 96c2825a3bfceea52a6355454d68727158f40491
+SHA512 (wings-1.5.4.tar.bz2) = fb0cab378703dad4a240f13b96b7522acb4c8466d01bc498e54baf8f4ff1ae497edc08f926889ff669f525ee9c6b787903a47fc78c66f2d9632a5fa45535ac3f
+Size (wings-1.5.4.tar.bz2) = 6213585 bytes
 SHA1 (patch-aa) = 11fc8006b791523e1520f147f2e73cb0255fff5b
 SHA1 (patch-ac) = 137a987f747a0c5de17144935999e5b5ac064f4a
