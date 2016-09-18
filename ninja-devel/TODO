@@ -1,8 +1,0 @@
-- The name 'ninja' is used for several context.
-At least, the name of executables in ${PREFIX}/bin/ninja
-should be negogiated with others.
-
-- PKGREVISION with date may be (should be) eliminated,
-the tag 'release' claims the version 1.5.1.git.
-
-- This is required at least by (OpenBSD) comms/rtl-sdr, just FYI
