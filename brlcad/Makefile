@@ -51,6 +51,7 @@ BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
+.include "../../wip/adaptagrams/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
