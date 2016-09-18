@@ -1,8 +1,6 @@
 $NetBSD$
 
-SHA1 (brlcad-7.24.2.tar.bz2) = 339b5445aebcf858f06ad1247332abae67997a25
-RMD160 (brlcad-7.24.2.tar.bz2) = cf74e6bad1e3ff4d62b474b3f58e03732af676e8
-SHA512 (brlcad-7.24.2.tar.bz2) = ce129f7fa88894576d7966a7336617e4f8acfcfbe8fb0b96b6a336e541da5f24719d5756e4ccc3bff33ca40f39c6e43a7772a80a333b94930581de974cd2ae61
-Size (brlcad-7.24.2.tar.bz2) = 72968459 bytes
-SHA1 (patch-regress_nightly.sh) = 9e310209986809f3928553869b76cfe4ebf94557
-SHA1 (patch-src_brlman_brlman.sh.in) = 8d85f82ee9fc4aa33a244aa068ad181ef9524777
+SHA1 (brlcad-7.26.0.tar.bz2) = b0e307016317bff87c3b49ea395b4829a6305156
+RMD160 (brlcad-7.26.0.tar.bz2) = bf391f887463ece786c5e1e4f3382c168bfc99b3
+SHA512 (brlcad-7.26.0.tar.bz2) = e4819da6e94ff7e5f777cb3c59a911f8818a10ddef42f02f3c3b95be9057a7a83427fdbc29bc3f610f16100b65bb14919438598bd5d59af16fcdbe9f6351006a
+Size (brlcad-7.26.0.tar.bz2) = 113073230 bytes

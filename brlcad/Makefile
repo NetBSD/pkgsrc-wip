@@ -1,16 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	brlcad-7.24.2
+DISTNAME=	brlcad-7.26.0
 CATEGORIES=	cad
-MASTER_SITES=	https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.24.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=brlcad/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
-HOMEPAGE=	https://sourceforge.net/projects/brlcad/files/BRL-CAD%20Source/7.24.2/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://brlcad.org/
+COMMENT=	Cross-platform solid modeling system
+LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
-HAS_CONFIGURE=	yes
+#HAS_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
