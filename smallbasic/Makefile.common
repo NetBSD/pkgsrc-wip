@@ -1,0 +1,31 @@
+# $NetBSD$
+#
+# used by wip/smallbasic-gui/Makefile
+
+GITHUB_PROJECT=	SmallBASIC
+DISTNAME=	SmallBASIC-0.12.6
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GITHUB:=smallbasic/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+HOMEPAGE=	http://smallbasic.sourceforge.net/
+LICENSE=	gnu-gpl-v3
+
+USE_TOOLS+=	aclocal autoheader autoconf automake bash pkg-config
+
+USE_LANGUAGES=	c c++
+
+# for xxd
+BUILD_DEPENDS+=	vim-[0-9]*:../../editors/vim
+
+GNU_CONFIGURE=		YES
+CONFIG_SHELL=		${BASH}
+
+BUILDLINK_TRANSFORM+=	rm:-ldl
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/smallbasic/distinfo
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${SH} ./autogen.sh
+
+.include "../../devel/pcre/buildlink3.mk"
