@@ -10,10 +10,11 @@ HOMEPAGE=	http://brlcad.org/
 COMMENT=	Cross-platform solid modeling system
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
-#HAS_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ fortran
+
+#CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=ON
 
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libanalyze.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/librt.pc.in
@@ -26,6 +27,7 @@ PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libicv.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libpkg.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libgcv.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libged.pc.in
+PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libgm.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libwdb.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libpc.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libbn.pc.in
