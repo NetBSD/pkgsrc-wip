@@ -21,4 +21,8 @@ do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
 	${INSTALL_SCRIPT} ${WRKSRC}/nim-wrapper.sh ${DESTDIR}${PREFIX}/bin/nim
 
+do-test:
+	cd ${WRKSRC} && ./bin/nim compile koch.nim
+	cd ${WRKSRC} && LD_LIBRARY_PATH=$PREFIX/lib ./koch tests
+
 .include "../../mk/bsd.pkg.mk"
