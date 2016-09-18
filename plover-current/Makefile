@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../wip/py-Xlib
 
 #TODO: Should the following line be a DEPENDS line?
-.include "../../wip/py-wxWidgets/buildlink3.mk"
+#.include "../../wip/py-wxWidgets/buildlink3.mk"
 
 .include "../../lang/python/distutils.mk"
 .include "../../wip/mk/git-package.mk"
