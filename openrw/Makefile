@@ -7,7 +7,7 @@ PKGNAME=	openrw-0
 CATEGORIES=	games
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	git@github.com:krytarowski/
+HOMEPAGE=	http://openrw.org
 COMMENT=	Open Source recreation of Grand Theft Auto III
 LICENSE=	gnu-gpl-v3
 
