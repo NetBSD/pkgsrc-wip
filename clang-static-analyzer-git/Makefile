@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	clang-static-analyzer-3.9.0
+PKGNAME=	clang-static-analyzer-4.0.0
 #PKGNAME=	${DISTNAME:S/clang/clang-static-analyzer/}
 
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git
