@@ -27,26 +27,36 @@
 .\" OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.Dd August 1, 2016
-.Dt PLIST-ADD 3
+.Dd September 18, 2016
+.Dt PLIST-ADD 1
 .Os
 .Sh NAME
 .Nm plist-add
 .Sh SYNOPSIS
 .Nm
 .Op Fl i
+.Ar PLIST
 .Op Ar
 .Sh DESCRIPTION
 The
 .Nm
-program was written to facilitate management of PLIST files with optional files and macros replacing variables to strings.
-The primary reason was to handle quick changes of file-lists in packages tracking upstream development of projects.
+utility adds entries regarding
+.Ar
+to
+.Ar PLIST .
+Afterwards, it sorts the output. If
+.Fl i
+is given,
+.Nm
+modifies
+.Ar PLIST
+in place. Otherwise it outputs to standard output.
 .Sh EXIT STATUS
 The
 .Nm
 utility exits 0 on success, and any other value if an error occurs.
 .Sh HISTORY  
-A  
+The
 .Nm
 utility appeared in pkgsrc-2016Q3.
 .Sh AUTHORS

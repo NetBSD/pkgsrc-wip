@@ -1,4 +1,4 @@
-The plist-utils programs were written to facilitate management of PLIST files
-with optional files and macros replacing variables to strings. The primary
-reason was to handle quick changes of file-lists in packages tracking upstream
-development of projects.
+The plist-utils suite aims to facilitate management of PLIST entries.
+It handles PLIST options and variables, and is especially useful for
+keeping PLISTs of packages with quickly changing file-lists, such
+as those closely tracking upstream development branch, up to date.
