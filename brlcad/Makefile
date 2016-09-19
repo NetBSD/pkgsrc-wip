@@ -46,12 +46,12 @@ BUILD_DEPENDS+=	astyle-[0-9]*:../../devel/astyle
 BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon
 
 .include "../../devel/tinycthread/buildlink3.mk"
+.include "../../graphics/adaptagrams/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
-.include "../../wip/adaptagrams/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
