@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (llvmlite-0.14.0.dev.tar.gz) = 6a20e83932585c82c2c0fb507e3f500ad5497846
+RMD160 (llvmlite-0.14.0.dev.tar.gz) = 8e81a7b84cfd7b3a165b9c6ac648d4855a2e4933
+SHA512 (llvmlite-0.14.0.dev.tar.gz) = 671dd9df4892d483904621809e0e6b914b1fe742b78823e1b3f9b8c5e485b8cc3e4fcd374c798390d88afc732d1c378c6c2b8231d531a31b6c855642641a1701
+Size (llvmlite-0.14.0.dev.tar.gz) = 139120 bytes
+SHA1 (patch-conda-recipes_llvmdev_build.sh) = fda7e75f79058e68f12630d087ec05e7d7466ee8
+SHA1 (patch-ffi_Makefile.netbsd) = 28a7a3363376e7b4e13a78afea5705b6009ba5f8
+SHA1 (patch-ffi_build.py) = a86eb25dd4172c61ed782bebf84597a910c7b030
