@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Portability
+
 --- configure.ac.orig	2015-12-15 16:34:33 UTC
 +++ configure.ac
 @@ -23,7 +23,7 @@

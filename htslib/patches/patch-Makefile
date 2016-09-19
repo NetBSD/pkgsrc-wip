@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Respect build env and filesystem hierarchy
+
 --- Makefile.orig	2015-12-15 16:34:33 UTC
 +++ Makefile
 @@ -22,16 +22,7 @@
