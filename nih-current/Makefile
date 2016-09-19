@@ -1,13 +1,12 @@
 # $NetBSD: Makefile,v 1.21 2015/03/01 14:59:36 cheusov Exp $
 
 DISTNAME=	pkg${PKGNAME}
-PKGNAME=	nih-0.14.0
+PKGNAME=	nih-0.14.1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://github.com/cheusov/pkgnih
 COMMENT=	Package manager for pkgsrc
-
 LICENSE=	2-clause-bsd
 
 GIT_REPOSITORIES=	pkgnih
