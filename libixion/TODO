@@ -1,0 +1,15 @@
+boost detection fails:
+
+checking for the toolset name used by Boost for c++... configure: WARNING: could not figure out which toolset name to use for c++
+
+checking boost/program_options.hpp usability... no
+checking boost/program_options.hpp presence... yes
+configure: WARNING: boost/program_options.hpp: present but cannot be compiled
+configure: WARNING: boost/program_options.hpp:     check for missing prerequisite headers?
+configure: WARNING: boost/program_options.hpp: see the Autoconf documentation
+configure: WARNING: boost/program_options.hpp:     section "Present But Cannot Be Compiled"
+configure: WARNING: boost/program_options.hpp: proceeding with the compiler's result
+checking for boost/program_options.hpp... no
+configure: error: cannot find boost/program_options.hpp
+*** Error code 1
+
