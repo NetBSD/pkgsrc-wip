@@ -1,11 +1,9 @@
 $NetBSD$
 
-SHA1 (samtools-1.3.tar.gz) = 88aab7f6d606e9443569c42b4c1722abd71f8e29
-RMD160 (samtools-1.3.tar.gz) = c263141a599710598734b56f77e137e997ad59c4
-SHA512 (samtools-1.3.tar.gz) = 8d34a3b61069a09c8ed2ddd6e66bef5e26f97686dc866936468925182c4a964ae11b0dc728bf8187d63e10b5a83c490f2145569b6eaf4f305766100f12423198
-Size (samtools-1.3.tar.gz) = 3742904 bytes
-SHA1 (patch-Makefile) = 21fd9eee20da586d962a74dfea3ded77c7a1e897
+SHA1 (samtools-1.3.1.tar.gz) = 1d5d2bca1742115ed0bc950b9c21132e9872768d
+RMD160 (samtools-1.3.1.tar.gz) = 8c559e3e4e548e8b8858e10b05ecf59e6d370101
+SHA512 (samtools-1.3.1.tar.gz) = 9ad5a7e25db73454c7f7661ebbfba372cfaa86f543d57302736a0021adefe068e6571d8095e13d0faa37a63c2051636b7ac232463117540b0d7571391af7cfb1
+Size (samtools-1.3.1.tar.gz) = 3757176 bytes
+SHA1 (patch-Makefile) = 25cc57e96740a2d209db1e1b358f692c2ae9ff6f
 SHA1 (patch-configure.ac) = 990c8588e07ce03b74821a634c27b70c055a2a84
-SHA1 (patch-dict.c) = 74073ae914046ae8b812be190c358d3f2ad3530c
-SHA1 (patch-errmod.c) = 72a6fe984aa7b53ec2b6d7e7e12cffdf72ee12ff
 SHA1 (patch-test_test.pl) = 3245d783901f98ba19f90253a15e455cd52dfd26
