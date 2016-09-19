@@ -1770,7 +1770,6 @@ SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-runner
 SUBDIR+=	lxqt-session
-SUBDIR+=	lz4jsoncat-git
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
 SUBDIR+=	mac-icon-standard
