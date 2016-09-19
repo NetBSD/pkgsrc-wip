@@ -970,7 +970,6 @@ SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-wxgui
 SUBDIR+=	gnuradio-zeromq
-SUBDIR+=	gnutls
 SUBDIR+=	go
 SUBDIR+=	go-backoff
 SUBDIR+=	go-fsnotify
