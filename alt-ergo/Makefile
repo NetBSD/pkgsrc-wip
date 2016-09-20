@@ -1,8 +1,10 @@
 # $NetBSD: Makefile,v 1.5 2015/07/10 12:37:44 thomasklausner Exp $
 
-DISTNAME=	alt-ergo-0.93
+GITHUB_PROJECT=	alt-ergo
+GITHUB_TAG=	4a61506e48300b386fee5b2e09a28a045beb4491
+DISTNAME=	alt-ergo-1.01
 CATEGORIES=	devel
-MASTER_SITES=	-http://alt-ergo.ocamlpro.com/download_manager.php?target=${DISTNAME}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OCamlPro/}
 
 MAINTAINER=	MarkoSchuetz@web.de
 HOMEPAGE=	http://ergo.lri.fr/

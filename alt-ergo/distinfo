@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2011/05/21 19:14:41 marko_schuetz Exp $
 
-SHA1 (alt-ergo-0.93.tar.gz) = b1ac27fab7812590e5e2fd3ee5d795b599429577
-RMD160 (alt-ergo-0.93.tar.gz) = fd1f7f1f75f0d1392343e7a73d25b391ad083bae
-Size (alt-ergo-0.93.tar.gz) = 178783 bytes
+SHA1 (alt-ergo-1.01-4a61506e48300b386fee5b2e09a28a045beb4491.tar.gz) = 3b0f8312f96cd8eb061099c7b3ea08af0c28007c
+RMD160 (alt-ergo-1.01-4a61506e48300b386fee5b2e09a28a045beb4491.tar.gz) = 492c30dd97187be455809c8346bb8099164704c9
+SHA512 (alt-ergo-1.01-4a61506e48300b386fee5b2e09a28a045beb4491.tar.gz) = ffe559af7175b22c1c99516703f8bdf8ef0ce1bab0f729b11adfa45a706db5cfea82df6df8ec6c88a45c60707b6c93f878e50b32af86360a76c1f18c1bc97333
+Size (alt-ergo-1.01-4a61506e48300b386fee5b2e09a28a045beb4491.tar.gz) = 336553 bytes
