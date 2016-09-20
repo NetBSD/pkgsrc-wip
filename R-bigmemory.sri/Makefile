@@ -9,7 +9,7 @@ COMMENT=	Shared resource interface for Bigmemory Project packages
 LICENSE=	gnu-lgpl-v3
 
 R_PKGNAME=	bigmemory.sri
-R_PKGVER=	0.1.2
+R_PKGVER=	0.1.3
 
 USE_LANGUAGES=	c++
 
