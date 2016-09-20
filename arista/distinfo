@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/05/31 10:02:19 jihbed Exp $
 
-SHA1 (arista-0.9.1.tar.gz) = 09970b48aba225a2c3f9f49f979d2ed912c87114
-RMD160 (arista-0.9.1.tar.gz) = c4006dec4a9e6f438fce461c296b766f9b151df0
-Size (arista-0.9.1.tar.gz) = 157743 bytes
+SHA1 (arista-0.9.7.tar.gz) = 037b961898a13cf2bb38eda22d1e9b1034d57405
+RMD160 (arista-0.9.7.tar.gz) = 6fb9cffcbe3a47da9fc1f2706800fdb0c36a63de
+SHA512 (arista-0.9.7.tar.gz) = df902a304b3cb75be00958c43b4c55abc4eb2c49b10bc63c0040a624fe2cb3c0a4d93055cf3815fff54bfbeee74e61c86726fd7022a47738d01db0be3599ea9f
+Size (arista-0.9.7.tar.gz) = 343679 bytes
 SHA1 (patch-aa) = 169eb7b4ace6a6f48c0bccf12fc83cdc518b3435
