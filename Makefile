@@ -1619,7 +1619,6 @@ SUBDIR+=	libinotify
 SUBDIR+=	libinstpatch
 SUBDIR+=	libircclient
 SUBDIR+=	libitl
-SUBDIR+=	libixion
 SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
 SUBDIR+=	libkscreen
