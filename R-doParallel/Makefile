@@ -9,7 +9,7 @@ COMMENT=	Foreach parallel adaptor for the parallel package
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	doParallel
-R_PKGVER=	1.0.1
+R_PKGVER=	1.0.10
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.14.0
 

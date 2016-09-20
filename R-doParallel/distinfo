@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/05/04 09:07:31 bubuchka Exp $
 
-SHA1 (R/doParallel_1.0.1.tar.gz) = 2e1e730257f1fbcfcf319f5df9c4d29d80f010b9
-RMD160 (R/doParallel_1.0.1.tar.gz) = c0df44963b5bb080805c2b05a44e4b81cdf3d139
-Size (R/doParallel_1.0.1.tar.gz) = 164687 bytes
+SHA1 (R/doParallel_1.0.10.tar.gz) = efc606d319c45386be00e3c3324689a233956986
+RMD160 (R/doParallel_1.0.10.tar.gz) = 4adb1ce1c7ec3cfdf951f3ca38a80fd1adf0cb01
+SHA512 (R/doParallel_1.0.10.tar.gz) = e3209abcab7cd030a9c7fe25533d7f7506c7ace6924fa0ac407605b0d0bd7c685720f9356eac53de8e416242c77db9036bbe30b409f81c72f6e7770d0e78615a
+Size (R/doParallel_1.0.10.tar.gz) = 173022 bytes
