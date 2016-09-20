@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/10/28 20:24:44 jihbed Exp $
 
-SHA1 (analizo_1.16.0.tar.gz) = 771f1d27cfac47667a28b8344a6f19d360a32311
-RMD160 (analizo_1.16.0.tar.gz) = 49321b8cc8a862b43a3915cd3491906ebd4c0257
-Size (analizo_1.16.0.tar.gz) = 75257 bytes
+SHA1 (analizo_1.19.1.tar.xz) = f10bfee9580efba6d143e2f7032cfbce65917b4a
+RMD160 (analizo_1.19.1.tar.xz) = d06350bf5bd5005bac5b9daa1464649641cb4ef6
+SHA512 (analizo_1.19.1.tar.xz) = 819b2198ecbedcc4bff888007f84ed8fe26e33d02fcae1d59b4326dd51c769e3db578ba4aec9d9dad0d82439146b495171b964404d0955db393ea0b7852caeaa
+Size (analizo_1.19.1.tar.xz) = 30560212 bytes

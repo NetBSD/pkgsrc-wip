@@ -1,10 +1,11 @@
 # $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
 #
 
-DISTNAME=	analizo_1.16.0
-PKGNAME=	analizo-1.16.0
+DISTNAME=	analizo_1.19.1
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 MASTER_SITES=	http://analizo.org/download/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://analizo.org/
