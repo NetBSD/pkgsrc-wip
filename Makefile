@@ -1533,7 +1533,6 @@ SUBDIR+=	le
 SUBDIR+=	ledger
 SUBDIR+=	leim-current
 SUBDIR+=	leo
-SUBDIR+=	letskencrypt
 SUBDIR+=	leveldb
 SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lhapdf

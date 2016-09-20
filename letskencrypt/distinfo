@@ -1,6 +1,0 @@
-$NetBSD$
-
-SHA1 (letsenkrypt-0.1.9.tar.gz) = d6b52536ceb85c6248b57f98c555460ae4bbd104
-RMD160 (letsenkrypt-0.1.9.tar.gz) = 3efbdf85b7df436cd47b362f568c2c3d28aa5884
-SHA512 (letsenkrypt-0.1.9.tar.gz) = 0d801d123c2619542a05cc99a3d9fc85a699daae2091a21d981be6c728566b6ee7b5520e14fee152a194e56f79435137b42a835b4606934204ba574f768c6583
-Size (letsenkrypt-0.1.9.tar.gz) = 41851 bytes
