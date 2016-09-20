@@ -1,7 +1,8 @@
 $NetBSD: distinfo,v 1.3 2013/01/24 00:01:28 thomasklausner Exp $
 
-SHA1 (R/Rserve_0.3-16.tar.gz) = 24a9c1cc8e868d51d96f97b6da6f1ec2d3692dff
-RMD160 (R/Rserve_0.3-16.tar.gz) = 66ca9ab37185c9cffde096ebb233a9b9bf4c1698
-Size (R/Rserve_0.3-16.tar.gz) = 77933 bytes
+SHA1 (R/Rserve_1.8-5.tar.gz) = 50d7b2e0c474a6886f2b05409a104c791c88b047
+RMD160 (R/Rserve_1.8-5.tar.gz) = 20bbce3787bd949a39b3e833b65b82039ca0412e
+SHA512 (R/Rserve_1.8-5.tar.gz) = a6a6b2e9f0750b885a357487147e11f6b24b689cb44d8780e46115560264d02733950177121c41c17d25051b4fd7e101fcbaf3e0bc92baf55fff35baa7360149
+Size (R/Rserve_1.8-5.tar.gz) = 497602 bytes
 SHA1 (patch-aa) = 90fff0282561f667a08564ac44f9d34c8aa7805c
 SHA1 (patch-version) = 0e8a564465478239dd9993938726f8b411ae3677
