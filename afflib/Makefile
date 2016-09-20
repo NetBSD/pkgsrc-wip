@@ -2,12 +2,11 @@
 #
 
 DISTNAME=		afflib-1.6.31
-PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.afflib.org/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.afflib.org/downloads/
+HOMEPAGE=		https://sourceforge.net/projects/afflib/
 COMMENT=		Advanced Forensic Format library
 
 USE_LANGUAGES= c++
