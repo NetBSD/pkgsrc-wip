@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/15 13:23:24 mpasternak Exp $
-
-SHA1 (xsdb.zip) = 6147550f027e1a0edaee9f0f7facca7d18cb8359
-RMD160 (xsdb.zip) = 5b0f79b098b48ca6d759f610934fe85b3d722a8a
-SHA512 (xsdb.zip) = a8e3bb59b201f59375c75f7dafcca5c21dcb31fb1ef386972dbbd11e64fcaf2695eb1f79443ec395d08eb4db9a1b2c3c8b29736c3e20ac30d6031d5d2516be3e
-Size (xsdb.zip) = 713471 bytes
