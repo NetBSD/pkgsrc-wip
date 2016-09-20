@@ -1,8 +1,18 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 06:41:05 rillig Exp $
 
-SHA1 (pp4sty.zip) = e6ce4135fac7574a952bb4c9b69aa3dd18b352eb
-RMD160 (pp4sty.zip) = 59fea8365f8510de1380b8f3a2b7e9bb8dad4a2a
-Size (pp4sty.zip) = 8077 bytes
+SHA1 (leveldemo.zip) = 1e056081ebb31957431696b14546509dacfe0bdb
+RMD160 (leveldemo.zip) = 7f20a20e87f97d54da335c962ef63593d9b780bf
+SHA512 (leveldemo.zip) = 1894d4148b135c14fa0967807d777183062901a1dcb6497c3c5d1b18e8b7ef1a1c8c5162943be4d01cbf6c94bee8fd1c948ee98ae4e079c764edb7084cf2d2c8
+Size (leveldemo.zip) = 12395 bytes
+SHA1 (manual.pdf) = f6ed5e93f86c2ab407e5cbaadcb1ae14a9eda973
+RMD160 (manual.pdf) = 2a2e40f00099271aa3699c070e6d4bd1e396d65d
+SHA512 (manual.pdf) = 8e5c24f951c9e687401f31b06c2baeb22694a2466a55e799c69698f8540d589116a72fe06967b4ed46d1b086949032f884368de7b3f4018e619449ffc5826cae
+Size (manual.pdf) = 143053 bytes
 SHA1 (pp4p.jar) = 8eef479db7c16c1c7a5ec48a024bc6aa7a382d90
 RMD160 (pp4p.jar) = 35ca235a63eeb3069c6d31ceb6937341a066c461
+SHA512 (pp4p.jar) = 8b359df717e303417d73b794de2fe805368811a48b2b43d8e281e391047fc8d3e1cd637f531c24a544be5dc1d5828fa7984f84e2598b1838bb654f34b0c8aa9d
 Size (pp4p.jar) = 285312 bytes
+SHA1 (pp4sty.zip) = e6ce4135fac7574a952bb4c9b69aa3dd18b352eb
+RMD160 (pp4sty.zip) = 59fea8365f8510de1380b8f3a2b7e9bb8dad4a2a
+SHA512 (pp4sty.zip) = 99b06b3e09e12f5f5b4d0dee9fe54b8d4c208305112abb4a1f7b28bba6458f15cd0c2620ef680e321b3776b694d2865467743e24c6ecb1c348e46cdd49270ddc
+Size (pp4sty.zip) = 8077 bytes

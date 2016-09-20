@@ -2,10 +2,9 @@
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
-PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
-DISTFILES=	pp4sty.zip pp4p.jar
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/ppower4/}
+DISTFILES=	pp4sty.zip pp4p.jar manual.pdf leveldemo.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
