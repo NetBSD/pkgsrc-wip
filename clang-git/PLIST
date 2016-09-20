@@ -523,6 +523,7 @@ lib/clang/${PKGVERSION}/include/mm3dnow.h
 lib/clang/${PKGVERSION}/include/mm_malloc.h
 lib/clang/${PKGVERSION}/include/mmintrin.h
 lib/clang/${PKGVERSION}/include/module.modulemap
+lib/clang/${PKGVERSION}/include/msa.h
 lib/clang/${PKGVERSION}/include/mwaitxintrin.h
 lib/clang/${PKGVERSION}/include/nmmintrin.h
 lib/clang/${PKGVERSION}/include/opencl-c.h
