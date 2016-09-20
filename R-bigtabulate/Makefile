@@ -9,7 +9,7 @@ COMMENT=	R table, tapply, and split-like functionality for (big.)matrix objects
 LICENSE=	gnu-lgpl-v3
 
 R_PKGNAME=	bigtabulate
-R_PKGVER=	1.1.0
+R_PKGVER=	1.1.5
 
 USE_LANGUAGES=	c++
 
