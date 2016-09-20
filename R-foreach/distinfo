@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/05/03 22:37:49 bubuchka Exp $
 
-SHA1 (R/foreach_1.4.0.tar.gz) = f338214d814c03ac6bba1873fe6c0115673827b5
-RMD160 (R/foreach_1.4.0.tar.gz) = ebb86b46bbb716a896d5a76678c3f3ce6f74f5df
-Size (R/foreach_1.4.0.tar.gz) = 359222 bytes
+SHA1 (R/foreach_1.4.3.tar.gz) = 5cd10fcdfa79539a1c9f04bf0842d7a2ecc6eb83
+RMD160 (R/foreach_1.4.3.tar.gz) = 9c0b6e9a0d6d62d217b35f4cec3feb18c8164d82
+SHA512 (R/foreach_1.4.3.tar.gz) = aabf4ccef1cf306afc265f188dc4bee6cd790a25483aff86cd6c9e33c20170491b8ef9a592cc77168285448f8b7d2580b046c4f1e58d2b494ddf8fe6aa23c790
+Size (R/foreach_1.4.3.tar.gz) = 359787 bytes

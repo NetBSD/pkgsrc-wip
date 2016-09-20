@@ -9,7 +9,7 @@ COMMENT=	Foreach looping construct for R
 LICENSE=	apache-2.0
 
 R_PKGNAME=	foreach
-R_PKGVER=	1.4.0
+R_PKGVER=	1.4.3
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.5.0
 
