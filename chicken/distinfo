@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.12 2015/09/01 19:05:03 leot1990 Exp $
-
-SHA1 (chicken-4.10.1.tar.gz) = 640093fa11eb1213d4fe4138c1651613e3b96c49
-RMD160 (chicken-4.10.1.tar.gz) = 8fed55485ee8a05b930eedf3ea22ddb6b5a32dad
-Size (chicken-4.10.1.tar.gz) = 4051334 bytes
