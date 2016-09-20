@@ -3,11 +3,11 @@
 
 DISTNAME=	aoeui-1.6
 CATEGORIES=	editors
-MASTER_SITES=	http://aoeui.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aoeui/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	a@zta.lk
-HOMEPAGE=	http://code.google.com/p/aoeui/
+HOMEPAGE=	https://code.google.com/archive/p/aoeui/
 COMMENT=	Lightweight text editor optimized for Dvorak
 LICENSE=	gnu-gpl-v2
 
