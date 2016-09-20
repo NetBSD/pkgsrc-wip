@@ -13,16 +13,14 @@ LICENSE=	mpl-2.0
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c++
-
-CXXFLAGS+=	-std=c++11
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
 
 PKGCONFIG_OVERRIDE+=	libixion.pc.in
 
-.include "../../devel/boost-headers/buildlink3.mk"
+PTHREAD_AUTO_VARS=	yes
+
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/mdds1.2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
