@@ -3607,7 +3607,6 @@ SUBDIR+=	py-xdress
 SUBDIR+=	py-xlutils
 SUBDIR+=	py-xmltodict
 SUBDIR+=	py-xpra
-SUBDIR+=	py-xsdb
 SUBDIR+=	py-yams
 SUBDIR+=	py-yapf
 SUBDIR+=	py-yapgvb
