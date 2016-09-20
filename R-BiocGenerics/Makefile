@@ -9,7 +9,7 @@ COMMENT=	Generic functions for Bioconductor
 LICENSE=	artistic-2.0
 
 R_PKGNAME=	BiocGenerics
-R_PKGVER=	0.4.0
+R_PKGVER=	0.18.0
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
