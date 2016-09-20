@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2012/11/15 23:19:50 bubuchka Exp $
 
-SHA1 (R/bigtabulate_1.1.0.tar.gz) = 67c317cafdc647f221134089214409a80c292d07
-RMD160 (R/bigtabulate_1.1.0.tar.gz) = 4c485d3f23d95e336660f5ca4e45552c87747ca0
-Size (R/bigtabulate_1.1.0.tar.gz) = 16705 bytes
+SHA1 (R/bigtabulate_1.1.5.tar.gz) = 9a643b9b5eaffc07827a83b3117c151a3d7956e8
+RMD160 (R/bigtabulate_1.1.5.tar.gz) = d557dffbc5ab8528ac6e14a38a599a9acded9789
+SHA512 (R/bigtabulate_1.1.5.tar.gz) = fbde2d34b9b81f4b8790d19982c62dfc6c9e356302529dde481ea803f9bb20f85a86d451f2b6c36534a621f9932e1ee5863b1d81168679085ba329e037738740
+Size (R/bigtabulate_1.1.5.tar.gz) = 14409 bytes
