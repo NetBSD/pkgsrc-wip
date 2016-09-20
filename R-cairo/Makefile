@@ -9,7 +9,7 @@ COMMENT=	R graphics device using cairo graphics library f
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	Cairo
-R_PKGVER=	1.5-8
+R_PKGVER=	1.5-9
 
 .include "../../math/R/Makefile.extension"
 .include "../../graphics/cairo/buildlink3.mk"
