@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/acme-client
+man/man1/acme-client.1
