@@ -9,7 +9,7 @@ COMMENT=	Estimation of Entropy, Mutual Information and Related Quantities
 LICENSE=	gnu-gpl-v3
 
 R_PKGNAME=	entropy
-R_PKGVER=	1.2.0
+R_PKGVER=	1.2.1
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.15.1
 
