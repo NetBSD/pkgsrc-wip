@@ -9,7 +9,7 @@ COMMENT=	Library of utilities for big.matrix objects of package bigmemory
 LICENSE=	gnu-lgpl-v3
 
 R_PKGNAME=	biganalytics
-R_PKGVER=	1.1.0
+R_PKGVER=	1.1.14
 
 USE_LANGUAGES=	c++
 
