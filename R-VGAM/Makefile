@@ -9,7 +9,7 @@ COMMENT=	Vector Generalized Linear and Additive Models
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	VGAM
-R_PKGVER=	0.9-1
+R_PKGVER=	1.0-2
 
 USE_LANGUAGES=	c fortran
 
