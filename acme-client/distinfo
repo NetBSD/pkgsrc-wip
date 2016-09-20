@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (acme-client-portable/VERSION_0_1_11.tar.gz) = 4f84c09f737eafbf94db7ac8bc0399614d438415
-RMD160 (acme-client-portable/VERSION_0_1_11.tar.gz) = 2748d40a9d2e113da49989a3de65c12f11ce9ec3
-SHA512 (acme-client-portable/VERSION_0_1_11.tar.gz) = 8fb0a73076ddcfd6a0a8da9a810d2f65e1cace051a8841fca7f466c9a6488307239be669a951c95481a2bb1c703e9e53e3149c4369a9fd71cfe6af4f5a31736f
-Size (acme-client-portable/VERSION_0_1_11.tar.gz) = 43232 bytes
+SHA1 (acme-client-0.1.11.tar.gz) = 4f84c09f737eafbf94db7ac8bc0399614d438415
+RMD160 (acme-client-0.1.11.tar.gz) = 2748d40a9d2e113da49989a3de65c12f11ce9ec3
+SHA512 (acme-client-0.1.11.tar.gz) = 8fb0a73076ddcfd6a0a8da9a810d2f65e1cace051a8841fca7f466c9a6488307239be669a951c95481a2bb1c703e9e53e3149c4369a9fd71cfe6af4f5a31736f
+Size (acme-client-0.1.11.tar.gz) = 43232 bytes
