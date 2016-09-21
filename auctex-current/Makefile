@@ -30,8 +30,8 @@ INFO_FILES=		YES
 CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}
 CONFIGURE_ARGS.xemacs=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp||}
 
-CVS_ROOT.auctex=	:pserver:anonymous:@cvs.savannah.gnu.org:/sources/auctex
-CVS_REPOSITORIES=	auctex
+GIT_REPOSITORIES=	auctex
+GIT_REPO.auctex=	git://git.sv.gnu.org/auctex.git
 
 # separate TeX dependency.
 .include "options.mk"
@@ -40,5 +40,5 @@ pre-configure:
 			(cd ${WRKSRC} && ./autogen.sh)
 
 .include "../../editors/emacs/modules.mk"
-.include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
