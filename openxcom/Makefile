@@ -36,5 +36,5 @@ CMAKE_ARGS+=	-DDATADIR=${OPENXCOM_BASE}
 .include "../../devel/SDL_gfx/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../wip/yaml-cpp/buildlink3.mk"
+.include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
