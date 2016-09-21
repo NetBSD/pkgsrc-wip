@@ -46,9 +46,6 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 #SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM:Q}/update-game-score ${SETGID_GAMES_PERMS}
 
-REPLACE_PERL=		lib-src/grep-changelog
-CHECK_INTERPRETER_SKIP=	bin/grep-changelog
-
 .include "options.mk"
 
 # build PATH in the dumped emacs is not a problem
