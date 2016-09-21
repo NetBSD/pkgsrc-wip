@@ -2,16 +2,14 @@
 
 DISTNAME=	logfmon
 CATEGORIES=	sysutils
-MASTER_SITES=	#
-DISTFILES=	#
+
 
 MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://logfmon.sourceforge.net/
 COMMENT=	Log file monitor
 
-CVS_PROJECT=		logfmon
-CVS_REPOSITORIES=	${CVS_PROJECT}
-CVS_ROOT.logfmon=	${CVS_ROOT_SOURCEFORGE}
+GIT_REPOSITORIES=	logfmon
+GIT_REPO.logfmon=	git@github.com:nicm/logfmon.git
 
 USE_TOOLS+=		yacc
 
@@ -36,5 +34,5 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	INSTALLBIN=${INSTALL_PROGRAM:Q}
 INSTALL_MAKE_FLAGS+=	INSTALLMAN=${INSTALL_MAN:Q}
 
-.include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
