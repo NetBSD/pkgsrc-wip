@@ -87,6 +87,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf	${DESTDIR}${PREFIX}/share/tc
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.tc 	${DESTDIR}${PREFIX}/share/examples/tc
 
-.include "../../wip/emacs-current/modules.mk"
+.include "../../wip/emacs-git/modules.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.8 2012/11/23 22:33:29 othyro Exp $
-#
 
 DISTNAME=	emacs-nox11-24.0.90
 PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
@@ -30,11 +29,11 @@ INFO_FILES=		yes
 REPLACE_PERL=		lib-src/grep-changelog
 CHECK_INTERPRETER_SKIP=	bin/grep-changelog
 
-DISTINFO_FILE=	${PKGDIR}/../emacs-current/distinfo
-PATCHDIR=	${PKGDIR}/../emacs-current/patches
-DESCR_SRC=	${PKGDIR}/../emacs-current/DESCR
-#ESSAGE_SRC=	${PKGDIR}/../emacs-current/MESSAGE
-PLIST_SRC=	${PKGDIR}/../emacs-current/PLIST
+DISTINFO_FILE=	${PKGDIR}/../emacs-git/distinfo
+PATCHDIR=	${PKGDIR}/../emacs-git/patches
+DESCR_SRC=	${PKGDIR}/../emacs-git/DESCR
+#ESSAGE_SRC=	${PKGDIR}/../emacs-git/MESSAGE
+PLIST_SRC=	${PKGDIR}/../emacs-git/PLIST
 
 WRKSRC=		${WRKDIR}/emacs
 

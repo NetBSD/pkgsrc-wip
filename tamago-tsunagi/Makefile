@@ -17,5 +17,5 @@ GNU_CONFIGURE=		yes
 
 .include "options.mk"
 
-.include "../../wip/emacs-current/modules.mk"
+.include "../../wip/emacs-git/modules.mk"
 .include "../../mk/bsd.pkg.mk"

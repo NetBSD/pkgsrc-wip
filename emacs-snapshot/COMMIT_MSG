@@ -8,7 +8,7 @@ Update from 20140101 to 20150415(22).
    - (This may require adding emacs25 on
      EMACS_VERSIONS_ACCEPTED in some packages)
 (pkgsrc)
- - (Makefile.common) sequence now resembles (wip)/emacs-current/Makefile
+ - (Makefile.common) sequence now resembles (wip)/emacs-git/Makefile
  - (Makefile)
    Add missing send-pr.el setup (at /usr/share/gnats) in site-init.el
  - (files/site-init.el)
@@ -17,7 +17,7 @@ Update from 20140101 to 20150415(22).
         patch-configure.ac:  ksh bad substitution problem
 	patch-src_image.c:   Fix build with giflib 5.1.
  - (options.mk)
-   * configuration now resembles (wip)/emacs-current/options.mk
+   * configuration now resembles (wip)/emacs-git/options.mk
    * Add options xaw3d and xml (also in PKG_SUGGESTED_OPTIONS)
    * Correction typo on CONFIGURE_ARGS on --without-imagemagic(k)
  

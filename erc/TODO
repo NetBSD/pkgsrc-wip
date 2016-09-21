@@ -1,7 +1,7 @@
 * Fix some compile issues that are raised
   - surpress openssl related warnings.  - emacs with openssl support requires
     more work outside the scope of this package ( and additional elisp package)
-    emacs-current has this support
+    emacs-git has this support
   - fix other erc related errors 
   - missing dependencies: misc/bbdb 
     	Collection of Emacs Development Environment Tools (http://cedet.sf.net)

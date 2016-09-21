@@ -24,6 +24,6 @@ do-install:
 		${INSTALL_DATA_DIR}	${INSTALLATION_DIRS}
 		${INSTALL_DATA} ${WRKSRC}/*.el  ${WRKSRC}/*.elc ${INSTALLATION_DIRS}
 
-.include "../../wip/emacs-current/modules.mk"
+.include "../../wip/emacs-git/modules.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

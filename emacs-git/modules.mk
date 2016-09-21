@@ -41,7 +41,7 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
-#			emacs25, emacs24, emacs24nox,
+#			emacs25, emacs25nox, emacs24, emacs24nox,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
@@ -63,12 +63,12 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs25, emacs24, emacs24nox,
+#			emacs25, emacs25nox, emacs24, emacs24nox,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
-#			emacs25, emacs24, emacs24nox,
+#			emacs25, emacs25nox, emacs24, emacs24nox,
 #			emacs23, emacs23nox, emacs22, emacs22nox,
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
@@ -241,7 +241,9 @@ _EMACS_PKGDIR_MAP= \
 	emacs23nox@../../editors/emacs23-nox11 \
 	emacs24@../../editors/emacs24 \
 	emacs24nox@../../editors/emacs24-nox11 \
-	emacs25@../../wip/emacs-current \
+	emacs25@../../editors/emacs25 \
+	emacs25nox@../../editors/emacs25-nox11 \
+	emacs26@../../wip/emacs-git \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \

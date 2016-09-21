@@ -16,7 +16,7 @@ CVS_MODULE.emacs=	emacs
 
 #WRKSRC=		${WRKDIR}/emacs-${VERSION}/leim
 WRKSRC=		${WRKDIR}/emacs/leim
-PATCHDIR=	${PKGDIR}/../emacs-current/patches
+PATCHDIR=	${PKGDIR}/../emacs-git/patches
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
