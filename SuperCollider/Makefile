@@ -33,7 +33,7 @@ DL_AUTO_VARS=		yes
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../wip/yaml-cpp0.3/buildlink3.mk"
+.include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
