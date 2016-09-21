@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/04/19 10:58:37 thomasklausner Exp $
-
-SHA1 (yaml-cpp-0.3.0.tar.gz) = 28766efa95f1b0f697c4b4a1580a9972be7c9c41
-RMD160 (yaml-cpp-0.3.0.tar.gz) = 0b777f95d858d9e840afa9f92eeffef77eca24b5
-Size (yaml-cpp-0.3.0.tar.gz) = 82674 bytes
-SHA1 (patch-CMakeLists.txt) = 9af44a8806e6e098f37ea06abd1aacc4c88a90f0
-SHA1 (patch-test_CMakeLists.txt) = 2f1bafafb6e7acc47f76ef65195d666088297918
-SHA1 (patch-util_CMakeLists.txt) = 3af6e27758e65ec3b54322c0ca9b41e9292816ab
