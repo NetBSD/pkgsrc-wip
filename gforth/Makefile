@@ -3,15 +3,13 @@
 DISTNAME=	gforth-0.7.99
 PKGNAME=	gforth-0.7.99 # needed because of cvs-package.mk
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gforth/} \
-		http://www.complang.tuwien.ac.at/forth/gforth/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.complang.tuwien.ac.at/forth/gforth/
 COMMENT=	Fast interpreter for the Forth language
 
-CVS_REPOSITORIES=	gforth
-CVS_ROOT.gforth=	:pserver:anonymous:@c1.complang.tuwien.ac.at:/nfs/unsafe/cvs-repository/src-master
+GIT_REPOSITORIES=	gforth
+GIT_REPO.gforth=	git://git.savannah.gnu.org/gforth.git
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
@@ -55,5 +53,5 @@ pre-configure:
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/ffcall/buildlink3.mk"
 
-.include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
