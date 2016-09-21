@@ -1,13 +1,15 @@
 # $NetBSD: Makefile,v 1.1 2014/09/06 22:22:36 thomasklausner Exp $
 
-DISTNAME=	SuperCollider-3.6.6-Source
+DISTNAME=	SuperCollider-3.7.2-Source
+GITHUB_PROJECT=	supercollider
+GITHUB_RELEASE=	Version-${PKGVERSION_NOREV}
 PKGNAME=	${DISTNAME:C/-Source//}
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=supercollider/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=supercollider/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://supercollider.sourceforge.net/
+HOMEPAGE=	http://supercollider.github.io/
 COMMENT=	Real time audio synthesis and composition programming language
 LICENSE=	gnu-gpl-v3
 

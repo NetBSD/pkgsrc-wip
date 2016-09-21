@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.1 2014/09/06 22:22:36 thomasklausner Exp $
 
-SHA1 (SuperCollider-3.6.6-Source.tar.bz2) = 36a1a6c81f14cd4a85f5ea7f89d6c7be59072bef
-RMD160 (SuperCollider-3.6.6-Source.tar.bz2) = 9a793673a368fe99c16f6fff44adf9df9dc8db11
-Size (SuperCollider-3.6.6-Source.tar.bz2) = 11038364 bytes
+SHA1 (SuperCollider-3.7.2-Source.tar.bz2) = 823e35d3a347f02a4cbd6074b4a5cbbdd201cdf3
+RMD160 (SuperCollider-3.7.2-Source.tar.bz2) = 439594ff49145eae43f8b63d11699745a361b084
+SHA512 (SuperCollider-3.7.2-Source.tar.bz2) = 8ce249b60ccf0ae05bef5f31ca3705e78ed6f58edafb331bf6f0028b20fa1d3394b6abf665f190b77ace108979afea7b2ece8ef3c8aeed7348a0b45d4b668292
+Size (SuperCollider-3.7.2-Source.tar.bz2) = 10526566 bytes
 SHA1 (patch-CMakeLists.txt) = 4f61abf2d4b7747630ee616c0def1847d04ce7be
 SHA1 (patch-common_SC__DirUtils.cpp) = 756d8369df95c6d3e6f485bcb7b234c7c410bcac
 SHA1 (patch-editors_sc-ide_widgets_code__editor_autocompleter.cpp) = 8eaef8e153ef25b4bde37081286c1f5c21d6f126
