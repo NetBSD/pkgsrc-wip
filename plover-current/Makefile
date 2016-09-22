@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/plover
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../wip/py-appdirs
-DEPENDS+=	${PYPKGPREFIX}-hidapi-[0-9]*:../../wip/py-hidapi
+DEPENDS+=	${PYPKGPREFIX}-hidapi-[0-9]*:../../wip/py-hidapi-git
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 # XXX at least 0.15 required.
 DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../wip/py-Xlib
