@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	filter_audio
 FILTER_AUDIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.filter_audio+=	filter_audio>=0.0.0.0
-BUILDLINK_PKGSRCDIR.filter_audio?=	../../wip/filter_audio
+BUILDLINK_PKGSRCDIR.filter_audio?=	../../wip/filter_audio-git
 .endif	# FILTER_AUDIO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-filter_audio
