@@ -805,7 +805,6 @@ SUBDIR+=	fuse-smbfs
 SUBDIR+=	fuse-zip
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
-SUBDIR+=	fuzzy-el-current
 SUBDIR+=	fvcom2
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
