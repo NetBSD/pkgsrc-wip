@@ -1,4 +1,0 @@
-$NetBSD: distinfo,v 1.4 2012/03/11 02:18:22 makoto Exp $
-
-SHA1 (patch-emacs-w3m_w3m.el) = efd8ce5823a77776fe7a615b43764693ca50cdb7
-SHA1 (patch-w3m.el) = ede59b622df640b7ece95da16eec5c10f92bae9f
