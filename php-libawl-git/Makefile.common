@@ -1,6 +1,6 @@
 # $NetBSD: Makefile.common,v 1.1 2013/12/13 13:14:08 hfath Exp $
 # used by wip/php-libawl-git/Makefile
-# used by wip/davical-current/Makefile
+# used by wip/davical-git/Makefile
 #
 
 # Include path of AWL
