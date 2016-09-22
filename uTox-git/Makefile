@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 
-.include "../../wip/toxcore/buildlink3.mk"
+.include "../../wip/toxcore-git/buildlink3.mk"
 .include "../../wip/filter_audio/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

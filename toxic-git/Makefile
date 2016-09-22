@@ -19,7 +19,7 @@ USE_LANGUAGES+=	c
 
 .include "options.mk"
 
-.include "../../wip/toxcore/buildlink3.mk"
+.include "../../wip/toxcore-git/buildlink3.mk"
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../converters/qrencode/buildlink3.mk"
