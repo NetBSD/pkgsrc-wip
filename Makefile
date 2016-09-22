@@ -627,7 +627,6 @@ SUBDIR+=	elinks-snapshot
 SUBDIR+=	elixir
 SUBDIR+=	elk
 SUBDIR+=	elscreen-git
-SUBDIR+=	emacs-ditz
 SUBDIR+=	emacs-git
 SUBDIR+=	emacs-nox11-git
 SUBDIR+=	emacs-pr-el
