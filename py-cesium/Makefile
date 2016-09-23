@@ -11,7 +11,6 @@ COMMENT=	Machine Learning for Time Series Analysis Platform
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=0.2.1:../../devel/py-cloudpickle
-#DEPENDS+=	${PYPKGPREFIX}-netcdf4>=0.2.1:../../wip/py-netcdf4
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.18.1:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-dask>=0.11.0:../../wip/py-dask
