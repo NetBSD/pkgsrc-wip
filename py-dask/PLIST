@@ -371,6 +371,9 @@ ${PYSITELIB}/dask/tests/test_distributed.pyo
 ${PYSITELIB}/dask/tests/test_dot.py
 ${PYSITELIB}/dask/tests/test_dot.pyc
 ${PYSITELIB}/dask/tests/test_dot.pyo
+${PYSITELIB}/dask/tests/test_flake8.py
+${PYSITELIB}/dask/tests/test_flake8.pyc
+${PYSITELIB}/dask/tests/test_flake8.pyo
 ${PYSITELIB}/dask/tests/test_multiprocessing.py
 ${PYSITELIB}/dask/tests/test_multiprocessing.pyc
 ${PYSITELIB}/dask/tests/test_multiprocessing.pyo
