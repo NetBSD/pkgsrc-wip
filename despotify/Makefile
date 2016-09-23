@@ -21,7 +21,7 @@ post-extract:
 	cp ${WRKSRC}/Makefile.local.mk.dist ${WRKSRC}/Makefile.local.mk
 
 SVN_REPOSITORIES=	despotify
-SVN_ROOT.despotify=	http://despotify.svn.sourceforge.net/svnroot/despotify
+SVN_ROOT.despotify=	http://svn.code.sf.net/p/despotify/code/
 SVN_MODULE.despotify=	despotify
 
 PTHREAD_AUTO_VARS=	yes
