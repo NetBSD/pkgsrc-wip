@@ -19,13 +19,10 @@ WRKSRC=		${WRKDIR}/scummvm
 
 .include "options.mk"
 
-SVN_REPOSITORIES=	scummvm
-SVN_TAG=		{${SCM_TAG}}
-SVN_CERTS=		files/dbd39a6ed632407eb1510e5009956117
-SVN_ROOT.scummvm=	https://scummvm.svn.sourceforge.net/svnroot/scummvm/scummvm/trunk
-SVN_MODULE.scummvm=	scummvm
+GIT_REPOSITORIES=	scummvm
+GIT_REPO.scummvm=	git@github.com:scummvm/scummvm.git
 
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
