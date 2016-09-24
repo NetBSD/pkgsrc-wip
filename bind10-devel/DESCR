@@ -1,9 +1,0 @@
-BIND is the popular implementation of a DNS server, developer
-interfaces, and DNS tools. BIND 10 is a rewrite of BIND 9. BIND 10
-is written in C++ and Python and provides a modular environment
-for serving, maintaining, and developing DNS.
-
-BIND10-devel is new development leading up to the production
-BIND 10 release. It contains prototype code and experimental
-interfaces. Nevertheless it is ready to use now for testing the
-new BIND 10 infrastructure ideas.

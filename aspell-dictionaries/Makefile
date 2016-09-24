@@ -10,7 +10,7 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	"meta-package" for aspell spell checker dictionaries
-LICENSE=	# blank
+#LICENSE=	# blank
 
 USE_LANGUAGES=	# none
 
