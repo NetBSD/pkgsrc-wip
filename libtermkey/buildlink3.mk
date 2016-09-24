@@ -12,7 +12,7 @@ pkgbase := libtermkey
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.termkey:Mncurses)
-.include "../../mk/termcap/termcap.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .endif
 .if !empty(PKG_BUILD_OPTIONS.termkey:Munibilium)
 .include "../../wip/libunibilium/buildlink3.mk"
