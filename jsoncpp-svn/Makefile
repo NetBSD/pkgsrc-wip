@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.2 2014/05/09 07:38:43 thomasklausner Exp $
 
-DISTNAME=	jsoncpp-0.6.0rc2
+DISTNAME=	jsoncpp-0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jsoncpp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/open-source-parsers/jsoncpp
 COMMENT=	JSON reader and writer in C++
-LICENSE=	mit
+LICENSE=	public-domain OR mit
 
 GIT_REPOSITORIES=	json-cpp
 GIT_REPO.json-cpp=	git@github.com:open-source-parsers/jsoncpp.git
