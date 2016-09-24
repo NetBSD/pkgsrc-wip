@@ -2,9 +2,7 @@
 
 DISTNAME=	dateutils-0.3.1
 CATEGORIES=	time
-MASTER_SITES=	https://github.com/hroptatyr/dateutils/releases/download/v0.3.1/
-MASTER_SITES+=	https://bitbucket.org/hroptatyr/dateutils/downloads/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hroptatyr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fresse.org/dateutils/
