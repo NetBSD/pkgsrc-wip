@@ -22,8 +22,8 @@ DEPENDS+=	trac-plugins-TimingAndEstimation>=0.7.6:../../wip/trac-plugins-TimingA
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # trac-plugins-TimingAndEstimation
 
 SVN_REPOSITORIES=	plugin
-SVN_ROOT.plugin=	https://trac-hacks.org/svn/roadmaphoursplugin/0.11
-SVN_TAG.plugin=		${SVNVERSION}
+SVN_REPO.plugin=	https://trac-hacks.org/svn/roadmaphoursplugin/0.11
+SVN_REVISION.plugin=	${SVNVERSION}
 
 NO_CHECKSUM=	yes
 
@@ -35,5 +35,5 @@ post-extract:
 	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
