@@ -52,12 +52,12 @@ CHECK_WRKREF_SKIP=     lib/*/hypertex lib/*/viewAlone lib/*/view2D lib/*/view3D 
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	open-axiom
-SVN_ROOT.open-axiom=	http://open-axiom.svn.sf.net/svnroot/open-axiom/trunk
-SVN_MODULE.open-axiom=	open-axiom
+SVN_REPO.open-axiom=	http://open-axiom.svn.sf.net/svnroot/open-axiom/trunk
+
 
 WRKSRC=			${WRKDIR}/open-axiom
 
 PKGNAME=		openaxiom-1.99	# VCS-based
 
-.include "../mk/svn-package.mk"
+.include "../mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
