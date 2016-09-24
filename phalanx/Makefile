@@ -14,7 +14,7 @@ HOMEPAGE=	http://sourceforge.net/projects/phalanx/
 COMMENT=	Xboard/Winboard compatible chess engine
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=	${WRKDIR}/Phalanx-${PHALANX_VER_ROMAN}
+WRKSRC=		${WRKDIR}/Phalanx-${PHALANX_VER_ROMAN}
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile
