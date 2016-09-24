@@ -31,7 +31,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.rezound
 
 .if !empty(PKG_OPTIONS:Malsa)
 CONFIGURE_ARGS+=	--enable-alsa=yes
-.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
 .endif
