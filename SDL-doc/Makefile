@@ -4,7 +4,7 @@
 DISTNAME=		SDL-doc-1.0
 CATEGORIES=		devel
 
-META_PACKAGE=		# empty
+META_PACKAGE=		YES
 
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://www.libsdl.org/docs.php
