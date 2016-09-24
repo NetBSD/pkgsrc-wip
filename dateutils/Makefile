@@ -1,8 +1,12 @@
 # $NetBSD: Makefile,v 1.6 2014/12/16 13:44:40 makoto Exp $
 
-DISTNAME=	dateutils-0.3.1
+DISTNAME=	dateutils-0.4.0
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hroptatyr/}
+EXTRACT_SUFX=	.tar.xz
+#https://github.com/hroptatyr/dateutils/releases/download/v0.4.0/dateutils-0.4.0.tar.xz
+#https://github.com/hroptatyr/dateutils/archive/0.3.1.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fresse.org/dateutils/
