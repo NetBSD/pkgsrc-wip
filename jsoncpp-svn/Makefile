@@ -5,12 +5,12 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jsoncpp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jsoncpp.sourceforge.net/
+HOMEPAGE=	https://github.com/open-source-parsers/jsoncpp
 COMMENT=	JSON reader and writer in C++
 LICENSE=	mit
 
-SVN_REPOSITORIES=	json-cpp
-SVN_ROOT.json-cpp=	http://svn.code.sf.net/p/jsoncpp/code/trunk/jsoncpp
+GIT_REPOSITORIES=	json-cpp
+GIT_REPO.json-cpp=	git@github.com:open-source-parsers/jsoncpp.git
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
@@ -21,5 +21,5 @@ PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.6.0rc2nb20140217
 
 .include "../../lang/python/application.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
