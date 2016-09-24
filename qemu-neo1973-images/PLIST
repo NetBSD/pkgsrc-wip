@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/01 14:34:50 noud4 Exp $
-qemu-neo1973/libexec/openmoko/uImage-2.6.24+git20080430-r0-om-gta01.bin
-qemu-neo1973/libexec/openmoko/u-boot-gta01bv4-1.3.1+svnr4297+gitb29661fc1151077776454288051bc9a488351ce8-r3.bin
-qemu-neo1973/libexec/openmoko/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080430-om-gta01.rootfs.jffs2
