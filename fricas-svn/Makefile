@@ -41,11 +41,10 @@ post-build:
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	fricas
-SVN_ROOT.fricas=	http://fricas.svn.sourceforge.net/svnroot/fricas/trunk
-SVN_MODULE.fricas=	fricas
+SVN_REPO.fricas=	http://fricas.svn.sourceforge.net/svnroot/fricas/trunk
 
 WRKSRC=			${WRKDIR}/fricas
 
-.include "../mk/svn-package.mk"
+.include "../mk/svn-package2.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
