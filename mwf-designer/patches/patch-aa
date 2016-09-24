@@ -1,7 +1,0 @@
-$NetBSD: patch-aa,v 1.2 2008/10/12 14:36:09 koifren Exp $
---- /dev/null	2008-05-01 20:16:49.000000000 +0300
-+++ mwf-designer	2008-05-01 20:13:01.000000000 +0300
-@@ -0,0 +1,3 @@
-+#!/bin/sh
-+
-+MONO_PATH=%PREFIX%/lib/mono/2.0 %PREFIX%/bin/mono %PREFIX%/bin/mwf-designer.exe

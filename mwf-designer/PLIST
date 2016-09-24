@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/01 17:24:49 koifren Exp $
-bin/mwf-designer
-bin/mwf-designer.exe
-lib/mono/2.0/ICSharpCode.NRefactory.dll
