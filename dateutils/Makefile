@@ -5,8 +5,6 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hroptatyr/}
 EXTRACT_SUFX=	.tar.xz
-#https://github.com/hroptatyr/dateutils/releases/download/v0.4.0/dateutils-0.4.0.tar.xz
-#https://github.com/hroptatyr/dateutils/archive/0.3.1.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fresse.org/dateutils/
@@ -15,7 +13,7 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake makeinfo bison flex
+USE_TOOLS+=	automake pkg-config gmake makeinfo bison flex
 USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE= no
 
