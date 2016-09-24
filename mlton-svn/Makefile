@@ -20,8 +20,8 @@ BUILD_TARGET=	smlnj-mlton all
 .endif
 BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
-SVN_REPOSITORIES=	mlton
-SVN_ROOT.mlton=		svn://mlton.org/mlton/trunk
+GIT_REPOSITORIES=	mlton
+GIT_REPO.mlton=		git://github.com/MLton/mlton.git
 WRKSRC=		$(WRKDIR)/mlton
 
 REPLACE_PERL=	lib/mlrisc-lib/MLRISC/Doc/html/mltex2html \
@@ -44,5 +44,5 @@ SUBST_SED.fix-sh=		-e '1s|^\#!.*|\#!${SH}|'
 
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
