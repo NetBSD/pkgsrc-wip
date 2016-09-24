@@ -187,7 +187,7 @@ do-install:
 	${FIND} -d ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME} -type d -exec ${RMDIR} {} \; >/dev/null 2>&1 || true
 
 .else
-.error "Common Lisp system ${COMMON_LISP_SYSTEM} is not supported."
+PKG_FAIL_REASON+= "Common Lisp system ${COMMON_LISP_SYSTEM} is not supported."
 .endif
 .endif
 .endif
