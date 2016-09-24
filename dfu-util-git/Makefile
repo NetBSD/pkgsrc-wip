@@ -6,7 +6,7 @@ CATEGORIES=		comms
 MASTER_SITES=		#
 
 MAINTAINER=		noud4@users.sourceforge.net
-HOMEPAGE=		http://wiki.openmoko.org/wiki/Dfu-util
+HOMEPAGE=		http://dfu-util.sourceforge.net/
 COMMENT=		Host side of the USB DFU protocol
 LICENSE=		gnu-gpl-v2
 
