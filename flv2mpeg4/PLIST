@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:36 thomasklausner Exp $
-bin/flv2mpeg4
-share/doc/${PKGNAME}/CREDITS
-share/doc/${PKGNAME}/INSTALL
-share/doc/${PKGNAME}/README
