@@ -172,7 +172,7 @@ Suggested ready to import packages
 	o marathon-tempus-irae
 	o matiec
 	o pear-Net_URL2
-	o phalanx
+	o phalanx [kamil]
 	o pnmcurve
 	o py-csp # XXX import this as py-pycsp
 	o py-jswebkit
