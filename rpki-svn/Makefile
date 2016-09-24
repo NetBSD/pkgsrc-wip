@@ -9,10 +9,8 @@ HOMEPAGE=	http://rpki.net/
 COMMENT=	RPKI package collection
 LICENSE=	original-bsd
 
-SVN_REPOSITORIES=	rpki
-SVN_ROOT.rpki=		http://subvert-rpki.hactrn.net/
-SVN_MODULE.rpki=	rpki
-NO_CHECKSUM=		yes
+GIT_REPOSITORIES=	rpki
+GIT_REPO.rpki=		git@github.com:dragonresearch/rpki.net.git
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
@@ -32,5 +30,5 @@ INSTALLATION_DIRS=	bin
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
