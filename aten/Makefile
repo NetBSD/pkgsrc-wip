@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_GNU_READLINE=	YES
-
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
