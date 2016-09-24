@@ -11,9 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 
-SVN_REPOSITORIES=	kmymoney
-SVN_ROOT.kmymoney=	svn://anonsvn.kde.org/home/kde/trunk/extragear/office/kmymoney
-NO_CHECKSUM=YES
+GIT_REPOSITORIES=	kmymoney
+GIT_REPO.kmymoney=	git://anongit.kde.org/kmymoney.git
 
 USE_CMAKE=		yes
 USE_TOOLS+=		msgfmt pkg-config perl
@@ -41,5 +40,5 @@ REPLACE_PERL+=	kmymoney/misc/financequote.pl
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
