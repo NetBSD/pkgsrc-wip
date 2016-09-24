@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/06 21:50:36 f8l Exp $
+@comment $NetBSD$
 bin/phalanx
 lib/eco.phalanx
 lib/pbook.phalanx

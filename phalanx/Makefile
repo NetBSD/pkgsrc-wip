@@ -1,7 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2015/05/06 21:50:36 f8l Exp $
 
-DISTNAME=	phalanx-XXIV-source
-PKGNAME=	phalanx-24
+PHALANX_VER=		25
+PHALANX_VER_ROMAN=	XXV
+
+DISTNAME=	phalanx-${PHALANX_VER_ROMAN}-source
+PKGNAME=	phalanx-${PHALANX_VER}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phalanx/}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +14,7 @@ HOMEPAGE=	http://sourceforge.net/projects/phalanx/
 COMMENT=	Xboard/Winboard compatible chess engine
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=	${WRKDIR}/Phalanx-XXIV
+WRKSRC=	${WRKDIR}/Phalanx-${PHALANX_VER_ROMAN}
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile
