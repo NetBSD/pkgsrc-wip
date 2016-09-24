@@ -29,6 +29,7 @@ post-install:
 	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/compiz/boxmenu/menu.xml
 	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/compiz/boxmenu/precache.ini
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
