@@ -1,4 +1,0 @@
-
-given
-hw/wm8750.c:24: error: parse error before "QEMUSoundCard"
-all audio is disabled.
