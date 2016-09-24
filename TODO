@@ -174,7 +174,7 @@ Suggested ready to import packages
 	o pear-Net_URL2
 	o phalanx [kamil]
 	o pnmcurve
-	o py-csp # XXX import this as py-pycsp
+	o py-csp [kamil; some tests hang but it seems good enough; need for wip/py-uuid]
 	o py-jswebkit
 	o rar4
 	o send-pr
