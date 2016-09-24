@@ -4,7 +4,6 @@
 DISTNAME=		virtualjaguar-1.1.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.xs4all.nl/~shalafi/
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdlemu.ngemu.com/
@@ -17,11 +16,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/virtualjaguar
 
-# Get it from Subversion repository:
-SVN_REPOSITORIES=		virtualjaguar
-SVN_ROOT.virtualjaguar=		https://shamusworld.gotdns.org/svn/virtualjaguar/trunk/
-SVN_MODULE.virtualjaguar=	virtualjaguar
-SVN_CERTS=			files/74ccc9063b5068b616abdcf0a1b04cec
+GIT_REPOSITORIES=		virtualjaguar
+GIT_REPO.virtualjaguar=		http://shamusworld.gotdns.org/git/virtualjaguar
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vj ${DESTDIR}${PREFIX}/bin
@@ -31,5 +27,5 @@ do-install:
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
