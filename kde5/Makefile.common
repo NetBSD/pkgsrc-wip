@@ -1,6 +1,7 @@
 # $NetBSD$
 #
-# used by wip/kde5/applications.mk"
+# used by wip/kde5/applications.mk
+# used by wip/kde5/plasma.mk
 
 MAINTAINER?=	markd@NetBSD.org
 
