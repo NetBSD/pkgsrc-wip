@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.le-web.org/download/backintime/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://http://backintime.le-web.org/
+HOMEPAGE=	http://backintime.le-web.org/
 COMMENT=	Simple backup system for the GNOME desktop
 
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
