@@ -45,6 +45,6 @@ SVN_REPO.fricas=	http://fricas.svn.sourceforge.net/svnroot/fricas/trunk
 
 WRKSRC=			${WRKDIR}/fricas
 
-.include "../mk/svn-package.mk"
+.include "../../wip/mk/svn-package.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
