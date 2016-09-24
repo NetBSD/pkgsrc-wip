@@ -3998,7 +3998,6 @@ SUBDIR+=	tasks
 SUBDIR+=	taskserver
 SUBDIR+=	tc-git
 SUBDIR+=	tc-hasida-table
-SUBDIR+=	tc-svn
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
 SUBDIR+=	tcl-curl
