@@ -25,7 +25,7 @@ MAKE_ENV+=	OSS_LIBS=${LIBOSSAUDIO}
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
