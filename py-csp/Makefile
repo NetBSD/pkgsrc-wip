@@ -1,17 +1,18 @@
 # $NetBSD: Makefile,v 1.16 2013/12/31 18:29:37 othyro Exp $
 #
 
-DISTNAME=	pycsp-complete-0.9.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-complete//1}
+DISTNAME=	pycsp-0.9.2
+GITHUB_PROJECT=	pycsp
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pycsp.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=runefriborg/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pycsp/
 COMMENT=	Brings CSP (communicating sequential processes) to Python
 LICENSE=	mit
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/${PYPKGPREFIX}-//1}
 EGDIR=			${PREFIX}/share/examples/py-csp
 EGG_NAME=		${DISTNAME:S/-complete//1}
 INSTALLATION_DIRS+=	${EGDIR}

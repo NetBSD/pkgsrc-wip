@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/12/31 18:29:38 othyro Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,6 +15,9 @@ ${PYSITELIB}/pycsp/common/const.pyo
 ${PYSITELIB}/pycsp/common/plugNplay.py
 ${PYSITELIB}/pycsp/common/plugNplay.pyc
 ${PYSITELIB}/pycsp/common/plugNplay.pyo
+${PYSITELIB}/pycsp/common/six.py
+${PYSITELIB}/pycsp/common/six.pyc
+${PYSITELIB}/pycsp/common/six.pyo
 ${PYSITELIB}/pycsp/common/toolkit.py
 ${PYSITELIB}/pycsp/common/toolkit.pyc
 ${PYSITELIB}/pycsp/common/toolkit.pyo
@@ -69,6 +72,9 @@ ${PYSITELIB}/pycsp/parallel/altselect.pyo
 ${PYSITELIB}/pycsp/parallel/channel.py
 ${PYSITELIB}/pycsp/parallel/channel.pyc
 ${PYSITELIB}/pycsp/parallel/channel.pyo
+${PYSITELIB}/pycsp/parallel/clusterprocess.py
+${PYSITELIB}/pycsp/parallel/clusterprocess.pyc
+${PYSITELIB}/pycsp/parallel/clusterprocess.pyo
 ${PYSITELIB}/pycsp/parallel/compat.py
 ${PYSITELIB}/pycsp/parallel/compat.pyc
 ${PYSITELIB}/pycsp/parallel/compat.pyo
@@ -93,6 +99,9 @@ ${PYSITELIB}/pycsp/parallel/header.pyo
 ${PYSITELIB}/pycsp/parallel/multiprocess.py
 ${PYSITELIB}/pycsp/parallel/multiprocess.pyc
 ${PYSITELIB}/pycsp/parallel/multiprocess.pyo
+${PYSITELIB}/pycsp/parallel/noderunner.py
+${PYSITELIB}/pycsp/parallel/noderunner.pyc
+${PYSITELIB}/pycsp/parallel/noderunner.pyo
 ${PYSITELIB}/pycsp/parallel/ossocket.py
 ${PYSITELIB}/pycsp/parallel/ossocket.pyc
 ${PYSITELIB}/pycsp/parallel/ossocket.pyo
@@ -102,6 +111,12 @@ ${PYSITELIB}/pycsp/parallel/process.pyo
 ${PYSITELIB}/pycsp/parallel/protocol.py
 ${PYSITELIB}/pycsp/parallel/protocol.pyc
 ${PYSITELIB}/pycsp/parallel/protocol.pyo
+${PYSITELIB}/pycsp/parallel/server.py
+${PYSITELIB}/pycsp/parallel/server.pyc
+${PYSITELIB}/pycsp/parallel/server.pyo
+${PYSITELIB}/pycsp/parallel/sshprocess.py
+${PYSITELIB}/pycsp/parallel/sshprocess.pyc
+${PYSITELIB}/pycsp/parallel/sshprocess.pyo
 share/examples/py-csp/autotest.py
 share/examples/py-csp/buffertest.py
 share/examples/py-csp/check.py
