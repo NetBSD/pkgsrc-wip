@@ -19,8 +19,8 @@ DEPENDS+=	trac>=0.11:../../www/trac
 EGG_NAME=	graphviz-${UPSTREAM_VERSION}dev_r0
 
 SVN_REPOSITORIES=	graphviz
-SVN_ROOT.graphviz=	https://trac-hacks.org/svn/graphvizplugin/trunk
-SVN_TAG.graphviz=	${SVNVERSION}
+SVN_REPO.graphviz=	https://trac-hacks.org/svn/graphvizplugin/trunk
+SVN_REVISION.graphviz=	${SVNVERSION}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 13275/0.7.7
 
@@ -35,5 +35,5 @@ post-extract:
 
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
