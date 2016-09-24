@@ -30,6 +30,7 @@ BUILDLINK_PASSTHRU_DIRS+=	/Developer
 BUILDLINK_PASSTHRU_DIRS+=	/Applications/Xcode.app
 .endif
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
