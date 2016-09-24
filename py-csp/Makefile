@@ -17,11 +17,22 @@ EGDIR=			${PREFIX}/share/examples/py-csp
 EGG_NAME=		${DISTNAME:S/-complete//1}
 INSTALLATION_DIRS+=	${EGDIR}
 
+SUBST_CLASSES+=         prefix
+SUBST_STAGE.prefix=     pre-configure
+SUBST_FILES.prefix=     test/runtests.sh
+SUBST_MESSAGE.prefix=   Fixing Python's path
+SUBST_SED.prefix=       -e "s|PYTHON=python|PYTHON=${PYTHONBIN}|1"
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/test/*.py ${DESTDIR}${EGDIR}
 
-DEPENDS+=	${PYPKGPREFIX}-Pyro4>=3.4:../../devel/py-Pyro
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.2:../../devel/py-greenlet
-DEPENDS+=	${PYPKGPREFIX}-uuid>=1.30:../../wip/py-uuid
+do-test:
+	${RUN} cd ${WRKSRC}/test && \
+		./runtests.sh
+
+DEPENDS+=	${PYPKGPREFIX}-Pyro4-[0-9]*:../../devel/py-Pyro
+DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-uuid-[0-9]*:../../wip/py-uuid
+DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
