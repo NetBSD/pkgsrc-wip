@@ -8,10 +8,8 @@ MAINTAINER=		jihbed.research@gmail.com
 HOMEPAGE=		http://pilemc.hepforge.org/
 COMMENT=	Tool for the simulation of pile-up events at HepMC level
 
-# Get it from Subversion repository:
 SVN_REPOSITORIES=	pilemc
-SVN_ROOT.pilemc=		http://pilemc.hepforge.org/svn/trunk/
-SVN_MODULE.pilemc=	pilemc
+SVN_REPO.pilemc=		http://pilemc.hepforge.org/svn/trunk/
 
 WRKSRC=			${WRKDIR}/$(SVN_MODULE.pilemc)
 
@@ -25,5 +23,5 @@ pre-configure:
 
 .include "../../math/gsl/buildlink3.mk"
 .include "../../wip/hepmc/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
