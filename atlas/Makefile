@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	-Ss flapack ${PREFIX}/lib/liblapack.a
 CONFIGURE_ARGS+=       --with-netlib-lapack-tarfile=${DISTDIR}/lapack-3.5.0.tgz
 
 TEST_TARGET=	check
-BUILD_TAGET=	build shared ptshared
+BUILD_TARGET=	build shared ptshared
 
 pre-configure:
 	${RUN} cd ${WRKSRC}; mkdir ${CONFIGURE_DIRS}
