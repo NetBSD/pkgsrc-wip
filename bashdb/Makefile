@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bashdb/}
 
 MAINTAINER=		splitscreen@users.sourceforge.net
-HOMEPAGE=		http://bashdb.sourceforge.net
+HOMEPAGE=		http://bashdb.sourceforge.net/
 COMMENT=		The Bash debugger project
 LICENSE=		gnu-gpl-v2
 
