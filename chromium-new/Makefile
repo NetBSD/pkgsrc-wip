@@ -275,6 +275,7 @@ do-install:
 		pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
 .endfor
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 #.include "../../audio/alsa-lib/buildlink3.mk"
