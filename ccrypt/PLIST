@@ -4,7 +4,6 @@ bin/ccdecrypt
 bin/ccencrypt
 bin/ccguess
 bin/ccrypt
-lib/charset.alias
 man/man1/ccat.1
 man/man1/ccdecrypt.1
 man/man1/ccencrypt.1
