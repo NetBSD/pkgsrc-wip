@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl
 INSTALLATION_DIRS+=	share/autopsy/lib share/autopsy/pict
-INSTALLATION_DIRS+=	bin man/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-build:
 	cd ${WRKSRC} && sh build ${DESTDIR}${PREFIX}
