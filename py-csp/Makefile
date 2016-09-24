@@ -28,6 +28,8 @@ post-install:
 
 do-test:
 	${RUN} cd ${WRKSRC}/test && \
+		${SETENV} ${TEST_ENV} \
+		PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
 		./runtests.sh
 
 DEPENDS+=	${PYPKGPREFIX}-Pyro4-[0-9]*:../../devel/py-Pyro
