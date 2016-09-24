@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jsoncpp
 JSONCPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jsoncpp+=	jsoncpp>=0.6.0rc2nb20140216
-BUILDLINK_PKGSRCDIR.jsoncpp?=	../../wip/jsoncpp-svn
+BUILDLINK_PKGSRCDIR.jsoncpp?=	../../wip/jsoncpp-git
 BUILDLINK_DEPMETHOD.jsoncpp?=	build
 .endif	# JSONCPP_BUILDLINK3_MK
 
