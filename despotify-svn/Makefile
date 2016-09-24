@@ -21,13 +21,12 @@ post-extract:
 	cp ${WRKSRC}/Makefile.local.mk.dist ${WRKSRC}/Makefile.local.mk
 
 SVN_REPOSITORIES=	despotify
-SVN_ROOT.despotify=	http://svn.code.sf.net/p/despotify/code/
-SVN_MODULE.despotify=	despotify
+SVN_REPO.despotify=	http://svn.code.sf.net/p/despotify/code
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
