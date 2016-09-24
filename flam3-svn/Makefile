@@ -15,11 +15,11 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 SVN_REPOSITORIES=	flam3
-SVN_ROOT.flam3=		http://svn.code.sf.net/p/flam3/code/trunk
+SVN_REPO.flam3=		http://svn.code.sf.net/p/flam3/code/trunk
 WRKSRC=			${WRKDIR}/flam3/src
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
