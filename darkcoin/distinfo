@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.1 2014/09/22 11:17:11 othyro Exp $
 
-SHA1 (v0.9.12.32.tar.gz) = 6fda90bf19939071a5d511d5440130387b852b6a
-RMD160 (v0.9.12.32.tar.gz) = 99184a7edcb3460003b7d8c54473fea573a1c135
-Size (v0.9.12.32.tar.gz) = 2772937 bytes
+SHA1 (darkcoin-0.9.12.32.tar.gz) = 7de52ecd8ae24a2f3552eb27a9c9a69887bc9274
+RMD160 (darkcoin-0.9.12.32.tar.gz) = 6528abbbfd3e737f20cd9444fb91216cbd12a63d
+SHA512 (darkcoin-0.9.12.32.tar.gz) = 001e40d9140d8a96af50d20e03f72607afdd5875dd165c0a2e2ae3b73ff415b180a64511d5599b10082aa8ac8f4be3e214598c64138e9588cf36ca3ebefcf7b0
+Size (darkcoin-0.9.12.32.tar.gz) = 2774229 bytes
 SHA1 (patch-bitcoin-qt.pro) = 3b6d692739101e16667103deffa45bed36a0eaaf
 SHA1 (patch-src_db.h) = fffef4f31cd8b68757210062d0a2e78dafa8870a
 SHA1 (patch-src_makefile.unix) = d3f16280a597f288568eb8055cb0b9e898ea5498

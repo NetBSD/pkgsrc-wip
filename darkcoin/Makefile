@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.1 2014/09/22 11:17:11 othyro Exp $
 
-DISTNAME=	v0.9.12.32
-PKGNAME=	darkcoin-${DISTNAME:S/v//1}
+DISTNAME=	darkcoin-0.9.12.32
 CATEGORIES=	finance
-MASTER_SITES=	https://github.com/darkcoinproject/darkcoin/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=darkcoinproject/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@users.sourceforge.net
 HOMEPAGE=	http://www.darkcoin.io/
