@@ -1,4 +1,3 @@
-# $Id: Makefile,v 1.9 2014/06/22 19:57:10 thomasklausner Exp $
 # $NetBSD: Makefile,v 1.9 2014/06/22 19:57:10 thomasklausner Exp $
 
 DISTNAME=	mod_auth_imap2-2.2.0
@@ -22,7 +21,7 @@ do-build:
 	 	${APXS} -c -n ${APACHE_MODULE_NAME} mod_auth_imap.c
 
 do-install:
-	(cd ${WRKSRC} && ${APXS} -n ${APACHE_MODULE_NAME} -i mod_auth_imap.la && )
+	cd ${WRKSRC} && ${APXS} -n ${APACHE_MODULE_NAME} -i mod_auth_imap.la
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/ap2-auth-imap
