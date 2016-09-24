@@ -25,6 +25,7 @@ CONFIGURE_ARGS+= --enable-tiff
 CONFIGURE_ARGS+= --enable-jasper
 CONFIGURE_ARGS+= --disable-ocaml
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 #.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
