@@ -17,8 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.3.2dev/9935
 
 SVN_REPOSITORIES=	spamfilter
-SVN_ROOT.spamfilter=	http://svn.edgewall.org/repos/trac/plugins/0.12/spam-filter-captcha
-SVN_TAG.spamfilter=	${SVNREV}
+SVN_REPO.spamfilter=	https://svn.edgewall.org/repos/trac/plugins/0.12/spam-filter-captcha
+SVN_REVISION.spamfilter=${SVNREV}
 
 NO_CHECKSUM=	yes
 
@@ -30,5 +30,5 @@ post-extract:
 	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
