@@ -21,10 +21,9 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		pkg-config gmake
 
-SVN_REPOSITORIES=	client
-SVN_ROOT.client=	http://svn.code.sf.net/p/electricsheep/code/trunk/client
-			# OLD! Should now be 
-			# Our SVN is now hosted by Google: http://code.google.com/p/electricsheep/source/checkout
+GIT_REPOSITORIES=	client
+GIT_REPO.client=	git@github.com:scottdraves/electricsheep.git
+
 WRKSRC=			${WRKDIR}/client
 
 SHARE_DIR=		${DESTDIR}/${PREFIX}/share/electricsheep
@@ -48,5 +47,5 @@ do-install:
 .include "../../devel/libglade/buildlink3.mk"
 #.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../wip/flam3-svn/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
