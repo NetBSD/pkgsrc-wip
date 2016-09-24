@@ -10,6 +10,11 @@
 #	SVN_REPO.${id}
 #		The svn repository
 #
+#	SVN_MODULE.${id}
+#		The svn module to check out.
+#
+#               Default value: ${id}
+#
 # It may define the following variables:
 #
 #	SVN_BRANCH.${id}
