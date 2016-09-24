@@ -24,7 +24,7 @@ HOMEPAGE=
 COMMENT=	Swiss army knife for genome arithmetic
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++ python
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/bedtools2-${PORTVERSION}
