@@ -21,8 +21,8 @@ DEPENDS+=	trac>=0.12:../../www/trac
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.2.8/11739
 
 SVN_REPOSITORIES=	plugin
-SVN_ROOT.plugin=	https://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12
-SVN_TAG.plugin=		${SVNVERSION}
+SVN_REPO.plugin=	https://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12
+SVN_REVISION.plugin=		${SVNVERSION}
 
 NO_CHECKSUM=	yes
 
@@ -44,5 +44,5 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
