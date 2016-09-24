@@ -1,14 +1,14 @@
 # $NetBSD$
 
-BUILDLINK_TREE+=	libcxx
+BUILDLINK_TREE+=	compiler-rt
 
-.if !defined(LIBCXX_BUILDLINK3_MK)
-LIBCXX_BUILDLINK3_MK:=
+.if !defined(COMPILER_RT_BUILDLINK3_MK)
+COMPILER_RT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libcxx+=	libcxx>=3.9.0nb20151127
-BUILDLINK_PKGSRCDIR.libcxx?=	../../wip/libcxx-git
+BUILDLINK_API_DEPENDS.compiler-rt+=	compiler-rt>=4.0.0nb20160924
+BUILDLINK_PKGSRCDIR.compiler-rt?=	../../wip/compiler-rt-git
 
 .include "../../wip/llvm-git/buildlink3.mk"
-.endif	# LIBCXX_BUILDLINK3_MK
+.endif	# COMPILER_RT_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-libcxx
+BUILDLINK_TREE+=	-compiler-rt
