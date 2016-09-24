@@ -19,7 +19,7 @@ DEPENDS+=	trac>=1.0:../../www/trac
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 3.0.4/r12946
 
 SVN_REPOSITORIES=		mastertickets
-SVN_ROOT.mastertickets=		https://trac-hacks.org/svn/masterticketsplugin/trunk
+SVN_REPO.mastertickets=		https://trac-hacks.org/svn/masterticketsplugin/trunk
 
 # Upstream has labeled 4.0.0dev at r14695.  Since it appears release
 # are not forthcoming, I have adopted 3.90.rSVN to have version
@@ -40,5 +40,5 @@ WRKSRC=		${WRKDIR}/mastertickets
 # \todo Make this optional.
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
