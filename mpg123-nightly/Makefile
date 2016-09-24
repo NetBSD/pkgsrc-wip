@@ -40,18 +40,17 @@ CPPFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO:Q}\"
 CPPFLAGS+=		-DDEVOSSSOUND=\"${DEVOSSSOUND:Q}\"
 
 SVN_REPOSITORIES=	mpg123
-SVN_TAG=		{${MPG123_TAG}}
-SVN_ROOT.mpg123=	svn://orgis.org/mpg123/trunk
-SVN_MODULE.mpg123=	mpg123
+#SVN_TAG=		{${MPG123_TAG}}
+SVN_REPO.mpg123=	svn://orgis.org/mpg123/trunk
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -iv
 
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.fast.prefs.mk"
 
-YESTERDAY!=	expr `date +%s` - 86399
-MPG123_VERSION!=${DATE} -r ${YESTERDAY} +%Y%m%d
-MPG123_TAG!=	${DATE} +%Y%m%d
+#YESTERDAY!=	expr `date +%s` - 86399
+#MPG123_VERSION!=${DATE} -r ${YESTERDAY} +%Y%m%d
+#MPG123_TAG!=	${DATE} +%Y%m%d
 
 .include "../../mk/bsd.pkg.mk"
