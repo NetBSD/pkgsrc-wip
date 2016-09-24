@@ -10,9 +10,8 @@ HOMEPAGE=	http://code.google.com/p/ukncbtl/
 COMMENT=	Emulator of 'UKNC', a Soviet school computer
 LICENSE=	gnu-lgpl-v3
 
-NO_CHECKSUM=	yes
-SVN_REPOSITORIES=	ukncbtl-read-only
-SVN_ROOT.ukncbtl-read-only=	http://ukncbtl.googlecode.com/svn/trunk/
+GIT_REPOSITORIES=	ukncbtl-read-only
+GIT_REPO.ukncbtl-read-only=	git@github.com:nzeemin/ukncbtl.git
 
 WRKSRC=		${WRKDIR}/ukncbtl-read-only/src/UKNCBTL.Qt
 
@@ -30,5 +29,5 @@ do-install:
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
