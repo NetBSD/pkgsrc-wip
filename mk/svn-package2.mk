@@ -23,9 +23,6 @@
 #	SVN_REVISION.${id}
 #		The revision to check out.
 #
-#	SVN_TAG.${id}
-#		Overridable SVN tag for a repository.
-#
 #	SVN_ENV.${id}
 #		The environment for svn
 
