@@ -1,4 +1,9 @@
-You should edit bindgraph_flags in your /etc/rc.conf to configure the bindgraph
-daemon:
-* bindgraph_flags="--logfile /path/to/query.log" to prevent bindgraph to look
-in /var/log/syslog
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/01/17 21:45:52 veego Exp $
+
+You should edit bindgraph_flags in your /etc/rc.conf to configure the
+bindgraph daemon:
+* bindgraph_flags="--logfile /path/to/query.log" to prevent bindgraph to
+look in /var/log/syslog
+
+===========================================================================
