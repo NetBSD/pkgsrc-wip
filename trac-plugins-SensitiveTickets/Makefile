@@ -23,8 +23,8 @@ DEPENDS+=	trac>=0.11:../../www/trac
 EGG_NAME=	sensitivetickets-${UPSTREAM_VERSION}
 
 SVN_REPOSITORIES=	sensitivetickets
-SVN_ROOT.sensitivetickets=	https://trac-hacks.org/svn/sensitiveticketsplugin/trunk
-SVN_TAG.sensitivetickets=	${SVN_VERSION}
+SVN_REPO.sensitivetickets=	https://trac-hacks.org/svn/sensitiveticketsplugin/trunk
+SVN_REVISION.sensitivetickets=	${SVN_VERSION}
 WRKSRC=		${WRKDIR}/sensitivetickets
 
 NO_CHECKSUM=	yes
@@ -35,5 +35,5 @@ post-extract:
 	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
+.include "../../wip/mk/svn-package2.mk"
 .include "../../mk/bsd.pkg.mk"
