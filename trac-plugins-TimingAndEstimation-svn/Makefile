@@ -44,5 +44,5 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package2.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -46,7 +46,7 @@ SVN_REPO.mpg123=	svn://orgis.org/mpg123/trunk
 pre-configure:
 	cd ${WRKSRC} && autoreconf -iv
 
-.include "../../wip/mk/svn-package2.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.fast.prefs.mk"
 
 #YESTERDAY!=	expr `date +%s` - 86399

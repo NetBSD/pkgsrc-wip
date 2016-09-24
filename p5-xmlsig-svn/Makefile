@@ -35,5 +35,5 @@ pre-configure:
 .include "../../security/xmlsec1/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../wip/mk/svn-package2.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"

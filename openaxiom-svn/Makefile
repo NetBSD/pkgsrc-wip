@@ -59,5 +59,5 @@ WRKSRC=			${WRKDIR}/open-axiom
 
 PKGNAME=		openaxiom-1.99	# VCS-based
 
-.include "../mk/svn-package2.mk"
+.include "../mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"

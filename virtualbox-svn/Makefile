@@ -102,7 +102,7 @@ do-install:
 	${RUN} cd ${WRKSRC} && . ./env.sh && kmk install
 
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/mk/svn-package2.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/java-vm.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"

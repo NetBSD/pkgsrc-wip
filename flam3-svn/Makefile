@@ -21,5 +21,5 @@ WRKSRC=			${WRKDIR}/flam3/src
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/mk/svn-package2.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
