@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.00 2015/12/03 01:40:00 coypu Exp $
 
-VER=		0_pre20151022
+VER=		0_pre20160305
 DISTNAME=	pangoterm-0.${VER}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
