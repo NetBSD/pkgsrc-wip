@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.beremiz.org/documentation/the-iec-to-c-compiler
 
 MAINTAINER=	conti.ma@alice.it
-HOMEPAGE=	http://www.beremiz.org/documentation/the-iec-to-c-compiler
+HOMEPAGE=	https://bitbucket.org/mjsousa/matiec/
 COMMENT= 	IEC61131-3 Compiler
 LICENSE=	gnu-gpl-v3
 
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
 HG_REPOSITORIES=	matiec
-HG_REPO.matiec=	http://dev.automforge.net/matiec
+HG_REPO.matiec=		https://bitbucket.org/mjsousa/matiec
 
 .include "../mk/hg-package.mk"
 .include "../../mk/bsd.pkg.mk"
