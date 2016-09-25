@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2015/06/10 21:42:58 jihbed Exp $
 
-SHA1 (netCDF4-1.1.8.tar.gz) = 697e25b263e5df26cb3a9fe72655de9e0cedae24
-RMD160 (netCDF4-1.1.8.tar.gz) = 048a6ae548ffcdfc6a453b18d0082ab11bf1f972
-Size (netCDF4-1.1.8.tar.gz) = 630108 bytes
+SHA1 (netCDF4-1.2.4.tar.gz) = 155021854112ee33da61ccd202122529f67e1946
+RMD160 (netCDF4-1.2.4.tar.gz) = 1127a3aeb794ea69a1ed9d340f7bbda240648500
+SHA512 (netCDF4-1.2.4.tar.gz) = 6d4f6bef8c52a76b37f01332401263d132d5fb9904c87ece676a5b09ce5f123775f76bd60bb8e1cb9659edcb361e8392a623354309b19b150010161fc3e28b9f
+Size (netCDF4-1.2.4.tar.gz) = 679019 bytes
