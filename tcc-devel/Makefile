@@ -27,10 +27,11 @@ SUBST_SED.ldl=		-e 's,LIBS=,\#LIBS,'
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-HG_REPOSITORIES=	tcc
-HG_REPO.tcc=		http://landley.net/hg/tinycc
+GIT_REPOSITORIES=	tcc
+GIT_REPO.tcc=		http://repo.or.cz/tinycc.git
+GIT_BRANCH.tcc=		mob
 
-WRKSRC=		${WRKDIR}/tinycc
+WRKSRC=		${WRKDIR}/tcc
 
-.include "../../wip/mk/hg-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
