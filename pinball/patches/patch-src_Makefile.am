@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/Makefile.am.orig	2003-11-20 16:46:17.000000000 +0000
++++ src/Makefile.am
+@@ -7,7 +7,7 @@ bin_PROGRAMS = pinball
+ 
+ pinlib_LIBRARIES = libemilia_pin.a
+ 
+-INCLUDES = -I../base -I../addon @INCLTDL@
++AM_CPPFLAGS = -I../base -I../addon @INCLTDL@
+ 
+ pinball_LDADD = ../src/libemilia_pin.a ../addon/libemilia_addon.a ../base/libemilia_base.a @LIBLTDL@
+ pinball_LDFLAGS = -export-dynamic
+@@ -29,8 +29,6 @@ Script.cpp \
+ StateBehavior.cpp \
+ Table.cpp
+ 
+-dnl libemilia_pin_la_SOURCES = $(libemilia_pin_a_SOURCES)
+-
+ pininclude_HEADERS = \
+ ArmBehavior.h \
+ BallGroup.h \

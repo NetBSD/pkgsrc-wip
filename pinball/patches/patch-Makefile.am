@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- Makefile.am.orig	2003-12-10 10:15:35.000000000 +0000
++++ Makefile.am
+@@ -1,6 +1,8 @@
+ AUTOMAKE_OPTIONS = gnu
+ 
+-SUBDIRS = libltdl addon base data src test
++ACLOCAL_AMFLAGS = -I m4
++
++SUBDIRS =  libltdl addon base data src test
+ 
+ EXTRA_DIST = bootstrap pinball.spec clean pinball.desktop
+ 

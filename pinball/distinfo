@@ -1,5 +1,15 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
 
-SHA1 (pinball-0.2.0a.tar.gz) = 7bf3b5aae189f4d23cc7de5089466471c1e3fd55
-RMD160 (pinball-0.2.0a.tar.gz) = df31b7b923e0319474d823717043d835393d293f
-Size (pinball-0.2.0a.tar.gz) = 1497194 bytes
+SHA1 (pinball-0.3.1.tar.gz) = 7daf63a7b7e586ede2a6ffae3e53abd0e23fff22
+RMD160 (pinball-0.3.1.tar.gz) = ba85469c9f53f7a0a46ab26aa4e45666b2dca806
+SHA512 (pinball-0.3.1.tar.gz) = d54f2635f583be8a7e4bf3463c69c1ab368e1c069dd7c4edffb95df0448faf7e82ddb8f8607d22a7336e2db176134555ca65b613e9d008b38fecb8ad5a818498
+Size (pinball-0.3.1.tar.gz) = 6082982 bytes
+SHA1 (patch-Makefile.am) = 817166a891b7598536bb1861ba30a4e97896a1aa
+SHA1 (patch-base_Behavior.cpp) = 761e33a2d990ff87ba16861e285ff1e3fabb876b
+SHA1 (patch-base_BehaviorVisitor.cpp) = a783660b7028e9f2fbba9d2b9dc2c01bb4632103
+SHA1 (patch-base_SignalSender.cpp) = 1be66720cc1bed0a48da0a7ad6958022c831f0a3
+SHA1 (patch-src_Makefile.am) = c1b12605b821bd901ecedc6d2ef065d7c2fd15a8
+SHA1 (patch-src_Makefile.in) = 759dc5d53e0b8911eeee1e48fad402820403d837
+SHA1 (patch-src_Obj3dsUtil.cpp) = 87b37420c44d12b4f9fd42e4a5a6b522c72fdbd7
+SHA1 (patch-test_Makefile.am) = 48a43d2d47e382732a4c32b65e49f4dcc32b1913
+SHA1 (patch-test_Makefile.in) = 0ef31ce315dfea72410a61e3b2c63188e52f220d
