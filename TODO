@@ -160,6 +160,7 @@ Suggested ready to import packages
 	o R-gsl
 	o R-iterators
 	o R-mclust
+	o aldo
 	o am-utils [pkg/35668]
 	o aspell-dictionaries
 	o bogomips
