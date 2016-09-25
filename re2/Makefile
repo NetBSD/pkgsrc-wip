@@ -3,10 +3,9 @@
 DISTNAME=	re2-0.99
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://code.google.com/p/re2/
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://code.google.com/p/re2/
+HOMEPAGE=	https://github.com/google/re2
 COMMENT=	RE2 is a fast, safe, thread-friendly regular expressions library
 LICENSE=	modified-bsd
 
@@ -15,8 +14,8 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake
 
-HG_REPOSITORIES=	re2
-HG_REPO.re2=		https://re2.googlecode.com/hg
+GIT_REPOSITORIES=	re2
+GIT_REPO.re2=		git@github.com:google/re2.git
 
-.include "../../wip/mk/hg-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
