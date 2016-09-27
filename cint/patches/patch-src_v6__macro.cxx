@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/v6_macro.cxx.orig	2006-11-23 13:34:01.000000000 +0000
 +++ src/v6_macro.cxx
 @@ -465,6 +465,9 @@ G__value G__execfuncmacro(char *item,int

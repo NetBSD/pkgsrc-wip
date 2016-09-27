@@ -1,5 +1,9 @@
 $NetBSD$
 
+Don't check for running bash on SunOS.
+Add NetBSD support.
+Fix readlinelib parameter handling.
+
 --- configure.orig	2006-11-24 08:30:23.000000000 +0000
 +++ configure
 @@ -6,21 +6,9 @@

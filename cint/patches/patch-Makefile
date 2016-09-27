@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix shell syntax
+
 --- Makefile.orig	2006-11-24 08:41:26.000000000 +0000
 +++ Makefile
 @@ -38,11 +38,11 @@ include/iosenum.h : cint$(G__CFG_EXEEXT)

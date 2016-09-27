@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/v6_pcode.cxx.orig	2007-02-16 23:46:45.000000000 +0000
 +++ src/v6_pcode.cxx
 @@ -9204,6 +9204,9 @@ int G__dasm(FILE *fout,int isthrow)

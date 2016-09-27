@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/Method.cxx.orig	2007-03-15 17:59:30.000000000 +0000
 +++ src/Method.cxx
 @@ -515,6 +515,8 @@ long Cint::G__MethodInfo::FilePosition()

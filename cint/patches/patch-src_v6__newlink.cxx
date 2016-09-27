@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix C++ syntax: strlen(3), atoi(3), strcpy(3) aren't in the std:: namespace.
+
 --- src/v6_newlink.cxx.orig	2007-03-15 17:59:30.000000000 +0000
 +++ src/v6_newlink.cxx
 @@ -7014,7 +7014,7 @@ int G__parse_parameter_link(char* paras)

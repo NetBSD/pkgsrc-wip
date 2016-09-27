@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/v6_parse.cxx.orig	2007-03-15 17:59:30.000000000 +0000
 +++ src/v6_parse.cxx
 @@ -297,6 +297,8 @@ int G__ignore_catch()
