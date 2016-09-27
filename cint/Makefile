@@ -8,6 +8,7 @@ MASTER_SITES=		https://root.cern.ch/download/
 MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://www.hanno.jp/gotom/Cint.html
 COMMENT=		C/C++ interpreter
+LICENSE=		mit
 
 USE_TOOLS+=		bash gmake pax
 USE_LANGUAGES=		c c++
@@ -23,7 +24,7 @@ CONFIGURE_ARGS+=	--readline=${PREFIX}/lib/libreadline.so
 USE_LANGUAGES=		c c++
 
 HAS_CONFIGURE=			yes
-BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+BUILDLINK_NETBSD_TRANSFORM+=	rm:-ldl
 # It does not work
 CFLAGS+=			-Wno-write-strings
 CXXFLAGS+=			-Wno-write-strings
@@ -53,8 +54,8 @@ pre-install:
 	${RM} -f ${WRKSRC}/include/make*
 
 do-install:
-.for _file_ in cint makecint # inc/G__ci.h
-	${INSTALL_PROGRAM} ${WRKSRC}/${_file_} ${DESTDIR}${PREFIX}/cint
+.for f in cint makecint # inc/G__ci.h
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/cint
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/inc/G__ci.h ${DESTDIR}${PREFIX}/cint
 	${INSTALL_PROGRAM} ${WRKSRC}/libcint.so ${DESTDIR}${PREFIX}/cint/lib
@@ -64,13 +65,13 @@ do-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/cint
 	${RUN} cd ${WRKSRC} && ${PAX} -rw include stl ${DESTDIR}${PREFIX}/cint
 	${RUN} cd ${WRKSRC}/lib && ${PAX} -rw prec_stl ${DESTDIR}${PREFIX}/cint/lib
-.for _file_ in bytecode.txt cint.txt cintapi.txt extlib.txt ifdef.txt limitati.txt limitnum.txt makecint.txt message.txt ref.txt
-	${INSTALL_DATA} ${WRKSRC}/doc/${_file_} \
+.for f in bytecode.txt cint.txt cintapi.txt extlib.txt ifdef.txt limitati.txt limitnum.txt makecint.txt message.txt ref.txt
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} \
 		${DESTDIR}${PREFIX}/share/doc/cint
 .endfor
-.for _file_ in cint.1 makecint.1 garbage.2 security.2 unique.2 array.h.3 fft.h.3 statistics.h.3
-	${INSTALL_MAN} ${WRKSRC}/doc/man${_file_:E}/${_file_} \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${_file_:E}
+.for f in cint.1 makecint.1 garbage.2 security.2 unique.2 array.h.3 fft.h.3 statistics.h.3
+	${INSTALL_MAN} ${WRKSRC}/doc/man${f:E}/${f} \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}
 .endfor
 
 .include "../../mk/readline.buildlink3.mk"
