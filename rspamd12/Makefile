@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rspamd-1.2.8
+DISTNAME=	rspamd-1.3.5
 CATEGORIES=	mail
 MASTER_SITES=	http://www.rspamd.com/downloads/
 EXTRACT_SUFX=	.tar.xz
@@ -9,6 +9,8 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://www.rspamd.com/
 COMMENT=	Fast, free and open-source spam filtering system
 LICENSE=	2-clause-bsd
+
+DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
 USE_CMAKE=	yes
 USE_TOOLS+=	perl pkg-config
@@ -44,6 +46,8 @@ CMAKE_ARGS+=	-DRSPAMD_USER=${RSPAMD_USER}
 CMAKE_ARGS+=	-DRSPAMD_GROUP=${RSPAMD_GROUP}
 CMAKE_ARGS+=	-DENABLE_LUAJIT=OFF
 
+REPLACE_PERL+=	utils/rspamd_stats.pl
+
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/modules.d
 
 OWN_DIRS_PERMS+=	${DBDIR} ${RSPAMD_USER} ${RSPAMD_GROUP} 0700
@@ -57,12 +61,15 @@ CONF_FILES+=	${EGDIR}/logging.inc ${PKG_SYSCONFDIR}/logging.inc
 CONF_FILES+=	${EGDIR}/metrics.conf ${PKG_SYSCONFDIR}/metrics.conf
 CONF_FILES+=	${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/modules.conf
 CONF_FILES+=	${EGDIR}/options.inc ${PKG_SYSCONFDIR}/options.inc
+CONF_FILES+=	${EGDIR}/redirectors.inc ${PKG_SYSCONFDIR}/redirectors.inc
 CONF_FILES+=	${EGDIR}/rspamd.conf ${PKG_SYSCONFDIR}/rspamd.conf
 CONF_FILES+=	${EGDIR}/statistic.conf ${PKG_SYSCONFDIR}/statistic.conf
 CONF_FILES+=	${EGDIR}/surbl-whitelist.inc \
 	${PKG_SYSCONFDIR}/surbl-whitelist.inc
 CONF_FILES+=	${EGDIR}/worker-controller.inc \
 	${PKG_SYSCONFDIR}/worker-controller.inc
+CONF_FILES+=	${EGDIR}/worker-fuzzy.inc \
+	${PKG_SYSCONFDIR}/worker-fuzzy.inc
 CONF_FILES+=	${EGDIR}/worker-normal.inc \
 	${PKG_SYSCONFDIR}/worker-normal.inc
 CONF_FILES+=	${EGDIR}/modules.d/chartable.conf \
