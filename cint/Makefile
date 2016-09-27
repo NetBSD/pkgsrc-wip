@@ -25,10 +25,18 @@ USE_LANGUAGES=		c c++
 HAS_CONFIGURE=			yes
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 # It does not work
-CPPFLAGS+=			-Wno-write-strings
+CFLAGS+=			-Wno-write-strings
+CXXFLAGS+=			-Wno-write-strings
 # For some reason I cannot get BUILDLINK path for .readline
 LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib
 LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/cint/lib
+CONFIGURE_ENV+=			CFLAGS_ADD=${CFLAGS:Q}
+CONFIGURE_ENV+=			CXXFLAGS_ADD=${CXXFLAGS:Q}
+CONFIGURE_ENV+=			LDFLAGS_ADD=${LDFLAGS:Q}
+CONFIGURE_ENV+=			SOFLAGS_ADD=${LDFLAGS:Q}
+
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/cint/lib
+BUILDLINK_PASSTHRU_RPATHDIRS+=  ${PREFIX}/cint/lib
 
 BUILD_TARGET=			# empty string required
 
