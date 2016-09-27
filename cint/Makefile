@@ -18,17 +18,13 @@ CONFIG_SHELL=		${BASH}
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 CONFIGURE_ARGS+=	--arch=netbsd
-# For some reason I cannot get BUILDLINK path for .readline
 CONFIGURE_ARGS+=	--readline=${PREFIX}/lib/libreadline.so
 
 USE_LANGUAGES=		c c++
 
 HAS_CONFIGURE=			yes
-BUILDLINK_NETBSD_TRANSFORM+=	rm:-ldl
-# It does not work
 CFLAGS+=			-Wno-write-strings
 CXXFLAGS+=			-Wno-write-strings
-# For some reason I cannot get BUILDLINK path for .readline
 LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib
 LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/cint/lib
 CONFIGURE_ENV+=			CFLAGS_ADD=${CFLAGS:Q}
@@ -37,7 +33,7 @@ CONFIGURE_ENV+=			LDFLAGS_ADD=${LDFLAGS:Q}
 CONFIGURE_ENV+=			SOFLAGS_ADD=${LDFLAGS:Q}
 
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/cint/lib
-BUILDLINK_PASSTHRU_RPATHDIRS+=  ${PREFIX}/cint/lib
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/cint/lib
 
 BUILD_TARGET=			# empty string required
 
@@ -47,6 +43,9 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man2 ${PKGMANDIR}/man3
 post-extract:
 	${FIND} ${WRKSRC} -depth -type d -name CVS -exec ${RM} -rf {} \;
 	${FIND} ${WRKSRC} -type f -name .cvsignore -exec ${RM} -f {} \;
+	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/cint.sh \
+		>${WRKSRC}/cint.sh
+
 
 # We do not want these files to be installed
 pre-install:
@@ -59,8 +58,7 @@ do-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/inc/G__ci.h ${DESTDIR}${PREFIX}/cint
 	${INSTALL_PROGRAM} ${WRKSRC}/libcint.so ${DESTDIR}${PREFIX}/cint/lib
-	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/cint.sh \
-		>${DESTDIR}${PREFIX}/bin/cint
+	${INSTALL_SCRIPT} ${WRKSRC}/cint.sh ${DESTDIR}${PREFIX}/bin/cint
 	${RUN} cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf cint makecint
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/cint
 	${RUN} cd ${WRKSRC} && ${PAX} -rw include stl ${DESTDIR}${PREFIX}/cint
