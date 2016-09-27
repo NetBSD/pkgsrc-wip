@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/cint
 bin/makecint
+cint/G__ci.h
 cint/cint
 cint/include/Common.h
 cint/include/GL/gl.h
@@ -139,6 +140,7 @@ cint/include/windows.h
 cint/include/winsock.h
 cint/include/xgraph.c
 cint/include/xygraphbuf.h
+cint/lib/libcint.so
 cint/lib/prec_stl/README.txt
 cint/lib/prec_stl/algorithm
 cint/lib/prec_stl/bitset

@@ -28,6 +28,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 CPPFLAGS+=			-Wno-write-strings
 # For some reason I cannot get BUILDLINK path for .readline
 LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/cint/lib
 
 BUILD_TARGET=			# empty string required
 
@@ -45,11 +46,13 @@ pre-install:
 
 do-install:
 .for _file_ in cint makecint # inc/G__ci.h
-	${INSTALL_PROGRAM} ${WRKSRC}/${_file_} ${DESTDIR}${PREFIX}/cint/
+	${INSTALL_PROGRAM} ${WRKSRC}/${_file_} ${DESTDIR}${PREFIX}/cint
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/inc/G__ci.h ${DESTDIR}${PREFIX}/cint
+	${INSTALL_PROGRAM} ${WRKSRC}/libcint.so ${DESTDIR}${PREFIX}/cint/lib
 	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/cint.sh \
 		>${DESTDIR}${PREFIX}/bin/cint
-	${RUN} cd ${DESTDIR}${PREFIX}/bin && ${LN} -s cint makecint
+	${RUN} cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf cint makecint
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/cint
 	${RUN} cd ${WRKSRC} && ${PAX} -rw include stl ${DESTDIR}${PREFIX}/cint
 	${RUN} cd ${WRKSRC}/lib && ${PAX} -rw prec_stl ${DESTDIR}${PREFIX}/cint/lib
