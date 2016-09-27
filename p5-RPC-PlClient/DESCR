@@ -1,0 +1,4 @@
+PlRPC (Perl RPC) is a package that simplifies the writing of Perl based
+client/server applications. RPC::PlServer is the package used on the server
+side, and you guess what RPC::PlClient is for. See RPC::PlServer(3) for
+this part.

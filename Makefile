@@ -2288,6 +2288,7 @@ SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Pod-Constants
 SUBDIR+=	p5-Pod-Xhtml
 SUBDIR+=	p5-Proc-Fork
+SUBDIR+=	p5-RPC-PlClient
 SUBDIR+=	p5-RT-Authen-ExternalAuth
 SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-SDL
