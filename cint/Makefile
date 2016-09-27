@@ -35,10 +35,11 @@ CONFIGURE_ENV+=			SOFLAGS_ADD=${LDFLAGS:Q}
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/cint/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/cint/lib
 
-BUILD_TARGET=			# empty string required
+BUILD_TARGET=			# empty string required (override "all")
 
 INSTALLATION_DIRS+=	bin cint cint/lib share/doc/cint
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man2 ${PKGMANDIR}/man3
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1cint ${PKGMANDIR}/man2cint
+INSTALLATION_DIRS+=	${PKGMANDIR}/man3cint
 
 post-extract:
 	${FIND} ${WRKSRC} -depth -type d -name CVS -exec ${RM} -rf {} \;
@@ -53,7 +54,7 @@ pre-install:
 	${RM} -f ${WRKSRC}/include/make*
 
 do-install:
-.for f in cint makecint # inc/G__ci.h
+.for f in cint makecint
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/cint
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/inc/G__ci.h ${DESTDIR}${PREFIX}/cint
@@ -62,15 +63,23 @@ do-install:
 	${RUN} cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf cint makecint
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/cint
 	${RUN} cd ${WRKSRC} && ${PAX} -rw include stl ${DESTDIR}${PREFIX}/cint
-	${RUN} cd ${WRKSRC}/lib && ${PAX} -rw prec_stl ${DESTDIR}${PREFIX}/cint/lib
-.for f in bytecode.txt cint.txt cintapi.txt extlib.txt ifdef.txt limitati.txt limitnum.txt makecint.txt message.txt ref.txt
+# Install demos
+	${RUN} cd ${WRKSRC} && ${PAX} -rw demo ${DESTDIR}${PREFIX}/cint
+	${RUN} cd ${WRKSRC}/lib \
+		&& ${PAX} -rw prec_stl ${DESTDIR}${PREFIX}/cint/lib
+.for f in \
+	bytecode.txt cint.txt cintapi.txt extlib.txt ifdef.txt limitati.txt \
+	limitnum.txt makecint.txt message.txt ref.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} \
 		${DESTDIR}${PREFIX}/share/doc/cint
 .endfor
-.for f in cint.1 makecint.1 garbage.2 security.2 unique.2 array.h.3 fft.h.3 statistics.h.3
+.for f in \
+	cint.1 makecint.1 garbage.2 security.2 unique.2 array.h.3 fft.h.3 \
+	statistics.h.3
 	${INSTALL_MAN} ${WRKSRC}/doc/man${f:E}/${f} \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}cint
 .endfor
+
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
