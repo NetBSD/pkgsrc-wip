@@ -77,7 +77,7 @@ do-install:
 	cint.1 makecint.1 garbage.2 security.2 unique.2 array.h.3 fft.h.3 \
 	statistics.h.3
 	${INSTALL_MAN} ${WRKSRC}/doc/man${f:E}/${f} \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}cint
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}cint/${f}cint
 .endfor
 
 
