@@ -457,7 +457,6 @@ SUBDIR+=	dart-git
 SUBDIR+=	datamash
 SUBDIR+=	datapipe
 SUBDIR+=	dates
-SUBDIR+=	dateutils
 SUBDIR+=	davical-git
 SUBDIR+=	db1
 SUBDIR+=	dbf
