@@ -730,6 +730,7 @@ SUBDIR+=	filelight
 SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	filevercmp
+SUBDIR+=	file-roller
 SUBDIR+=	filter_audio-git
 SUBDIR+=	fio
 SUBDIR+=	firebird
