@@ -1,5 +1,7 @@
 $NetBSD$
 
+LP64 fixes.
+
 --- tool/ifdef/get.c.orig	2006-07-26 13:00:37.000000000 +0000
 +++ tool/ifdef/get.c
 @@ -2582,7 +2582,7 @@ struct G__param *libp;

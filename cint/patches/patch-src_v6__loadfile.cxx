@@ -1,5 +1,7 @@
 $NetBSD$
 
+Handle BSDs.
+
 --- src/v6_loadfile.cxx.orig	2007-03-15 17:59:30.000000000 +0000
 +++ src/v6_loadfile.cxx
 @@ -2494,7 +2494,7 @@ char* G__tmpnam(char *name)

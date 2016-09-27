@@ -1,5 +1,7 @@
 $NetBSD$
 
+Don't fail for clean.
+
 --- tool/ifdef/Makefile.base.orig	2005-05-04 10:25:33.000000000 +0000
 +++ tool/ifdef/Makefile.base
 @@ -18,4 +18,4 @@ get.o: get.c

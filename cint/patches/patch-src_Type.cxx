@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix syntax.
+
 --- src/Type.cxx.orig	2006-11-29 01:59:05.000000000 +0000
 +++ src/Type.cxx
 @@ -125,7 +125,7 @@ const char* Cint::G__TypeInfo::TrueName(

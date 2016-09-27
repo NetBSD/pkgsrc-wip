@@ -1,5 +1,7 @@
 $NetBSD$
 
+Reuse getopt(3) prototype on BSDs from standard header.
+
 --- tool/ifdef/ifdef.cxx.orig	2006-07-26 13:00:37.000000000 +0000
 +++ tool/ifdef/ifdef.cxx
 @@ -20,6 +20,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add support for NetBSD
+
 --- lib/posix/posix.h.orig	2006-11-28 15:08:01.000000000 +0000
 +++ lib/posix/posix.h
 @@ -283,7 +283,7 @@ extern int setpgrp(pid_t _pid,pid_t _pgr
