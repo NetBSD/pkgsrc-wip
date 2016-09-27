@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	rmilter
-DISTNAME=	1.8.6
+DISTNAME=	1.9.2
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/vstakhov/rmilter/
 COMMENT=	Milter for rspamd
 LICENSE=	2-clause-bsd
 
-WRKSRC=		${WRKDIR}/rmilter-1.8.6
+WRKSRC=		${WRKDIR}/rmilter-1.9.2
 USE_CMAKE=	yes
 
 BUILD_DEFS+=	VARBASE
@@ -55,6 +55,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/rmilter-grey.conf \
 		${DESTDIR}${EGDIR}/rmilter-grey.conf
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"
