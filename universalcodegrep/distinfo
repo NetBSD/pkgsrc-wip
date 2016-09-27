@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (universalcodegrep-0.2.2.tar.gz) = 54722fc7bf9e3ef6710bba6416d4b758269c20c1
+RMD160 (universalcodegrep-0.2.2.tar.gz) = 8bd24ad61e2684dc8042211fd63502fca422d3e2
+SHA512 (universalcodegrep-0.2.2.tar.gz) = 18f58cb867a4c08bbeb0c9f26b3578140d4331ee35d247b6df9aa6a89fef1e9d2760c4a0429a4c95ed7642607401c3c98705748eaf656b6926cd8d8e135a6708
+Size (universalcodegrep-0.2.2.tar.gz) = 230219 bytes
+SHA1 (patch-src_ArgParse.cpp) = c4852079cd586a6a397ab5899f2043ef4bc94cb1
+SHA1 (patch-src_MemDiags.cpp) = 21da5c4e8134a56963cd7c5716cc90d267378308

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/ucg
+share/doc/universalcodegrep/AUTHORS
+share/doc/universalcodegrep/COPYING
+share/doc/universalcodegrep/NEWS.md
+share/doc/universalcodegrep/README.md
