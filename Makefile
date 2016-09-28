@@ -2480,6 +2480,7 @@ SUBDIR+=	php-doc-zh
 SUBDIR+=	php-gtk2
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
+SUBDIR+=	php-msgpack
 SUBDIR+=	php-tclink
 SUBDIR+=	php-zmq
 SUBDIR+=	picosat
