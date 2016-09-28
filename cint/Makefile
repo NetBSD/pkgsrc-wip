@@ -38,8 +38,7 @@ BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/cint/lib
 BUILD_TARGET=			# empty string required (override "all")
 
 INSTALLATION_DIRS+=	bin cint cint/lib share/doc/cint
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1cint ${PKGMANDIR}/man2cint
-INSTALLATION_DIRS+=	${PKGMANDIR}/man3cint
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man2 ${PKGMANDIR}/man3
 
 post-extract:
 	${FIND} ${WRKSRC} -depth -type d -name CVS -exec ${RM} -rf {} \;
@@ -74,10 +73,15 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/cint
 .endfor
 .for f in \
-	cint.1 makecint.1 garbage.2 security.2 unique.2 array.h.3 fft.h.3 \
-	statistics.h.3
+	cint.1 makecint.1 garbage.2 unique.2 array.h.3 fft.h.3 statistics.h.3
 	${INSTALL_MAN} ${WRKSRC}/doc/man${f:E}/${f} \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}cint/${f}cint
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}/${f}
+.endfor
+# Resolve conflict with devel/man-pages
+.for f in \
+	security.2
+	${INSTALL_MAN} ${WRKSRC}/doc/man${f:E}/${f} \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}/cint_${f}
 .endfor
 
 
