@@ -2481,6 +2481,7 @@ SUBDIR+=	php-gtk2
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
 SUBDIR+=	php-tclink
+SUBDIR+=	php-zmq
 SUBDIR+=	picosat
 SUBDIR+=	picprog
 SUBDIR+=	pidgin-evolution

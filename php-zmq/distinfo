@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:01 agc Exp $
+
+SHA1 (php-zmq/zmq-1.1.3.tgz) = 04274be5deb53240d9f182475b7841a313038ecf
+RMD160 (php-zmq/zmq-1.1.3.tgz) = 0b20bbda1ce29d28b8627a5d1c364dca801b0f57
+SHA512 (php-zmq/zmq-1.1.3.tgz) = 0f03016e315a6c6a1e1d6eca1e20564834d2a924cef06af1b38693933f1e5a094c37e9c432705a64f61d95e82655f61358fc7783e7a6f06c7dd9ad84fc6f7bbc
+Size (php-zmq/zmq-1.1.3.tgz) = 82397 bytes
