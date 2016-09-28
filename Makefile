@@ -334,7 +334,6 @@ SUBDIR+=	cinnamon-desktop
 SUBDIR+=	cinnamon-menus
 SUBDIR+=	cinnamon-nemo
 SUBDIR+=	cinnamon-settings-daemon
-SUBDIR+=	cint
 SUBDIR+=	circe2
 SUBDIR+=	ciwiki
 SUBDIR+=	cjs
