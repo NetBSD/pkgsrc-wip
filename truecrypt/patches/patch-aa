@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.2 2010/07/22 06:40:30 schaecsn Exp $
+
+--- Makefile.orig	2010-07-21 21:49:30.000000000 -0700
++++ Makefile	2010-07-21 21:56:54.000000000 -0700
+@@ -41,7 +41,7 @@
+ export ASFLAGS := -Ox -D __GNUC__
+ export LFLAGS :=
+ 
+-export PKG_CONFIG_PATH ?= /usr/local/lib/pkgconfig
++# export PKG_CONFIG_PATH ?= /usr/local/lib/pkgconfig
+ 
+ export WX_CONFIG ?= wx-config
+ export WX_CONFIG_ARGS := --unicode
+@@ -65,8 +65,8 @@
+ 	WX_CONFIGURE_FLAGS += --disable-gui
+ endif
+ 
+-ifdef PKCS11_INC
+-	C_CXX_FLAGS += -I$(PKCS11_INC)
++ifdef PKCS11
++	C_CXX_FLAGS += $(shell pkg-config nss --cflags) $(shell pkg-config nspr --cflags)
+ endif
+ 
+ ifeq "$(origin RESOURCEDIR)" "command line"
+@@ -293,6 +293,5 @@
+ 	mkdir -p "$(WX_BUILD_DIR)"
+ 	@echo Configuring wxWidgets library...
+ 	cd "$(WX_BUILD_DIR)" && "$(WX_ROOT)/configure" $(WX_CONFIGURE_FLAGS) >/dev/null
+-	
+ 	@echo Building wxWidgets library...
+ 	cd "$(WX_BUILD_DIR)" && $(MAKE)
