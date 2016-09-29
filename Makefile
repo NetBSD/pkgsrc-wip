@@ -4118,6 +4118,7 @@ SUBDIR+=	triangle
 SUBDIR+=	trimmomatic
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
+SUBDIR+=	truecrypt
 SUBDIR+=	tsh
 SUBDIR+=	tsm
 SUBDIR+=	tsm62
