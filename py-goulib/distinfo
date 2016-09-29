@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/06/20 21:36:49 jihbed Exp $
 
-SHA1 (Goulib-1.7.1.zip) = 7ed76468dce2208c69e174d44c0718d9d66297e1
-RMD160 (Goulib-1.7.1.zip) = 92ed4bfb23719dbe3228340a317a68f2e988c58b
-Size (Goulib-1.7.1.zip) = 88520 bytes
+SHA1 (Goulib-1.9.11.zip) = ab94285994305b19baad1638fd14f2aed1fe82b5
+RMD160 (Goulib-1.9.11.zip) = b490d614bd0ed182fe993905248f48eef78f1d8f
+SHA512 (Goulib-1.9.11.zip) = 7ab6f03e1b4934b09e07b757c4a99bf644a23e09d21c4f8a0eefb474c5c9230423573d4f64edeb04c3b593a066aa60c6e24d275f5cfb52242187c8168a45b630
+Size (Goulib-1.9.11.zip) = 147569 bytes

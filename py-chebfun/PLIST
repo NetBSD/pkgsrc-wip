@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pychebfun/__init__.py
+${PYSITELIB}/pychebfun/__init__.pyc
+${PYSITELIB}/pychebfun/__init__.pyo
+${PYSITELIB}/pychebfun/chebfun.py
+${PYSITELIB}/pychebfun/chebfun.pyc
+${PYSITELIB}/pychebfun/chebfun.pyo
+${PYSITELIB}/pychebfun/plotting.py
+${PYSITELIB}/pychebfun/plotting.pyc
+${PYSITELIB}/pychebfun/plotting.pyo
+${PYSITELIB}/pychebfun/polyfun.py
+${PYSITELIB}/pychebfun/polyfun.pyc
+${PYSITELIB}/pychebfun/polyfun.pyo

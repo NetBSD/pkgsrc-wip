@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/Christofides/__init__.py
+${PYSITELIB}/Christofides/__init__.pyc
+${PYSITELIB}/Christofides/__init__.pyo
+${PYSITELIB}/Christofides/christofides.py
+${PYSITELIB}/Christofides/christofides.pyc
+${PYSITELIB}/Christofides/christofides.pyo
