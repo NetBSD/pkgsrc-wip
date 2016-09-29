@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/xdiff.h
+lib/libxdiff.la
+man/man3/xdiff.3

@@ -1668,6 +1668,7 @@ SUBDIR+=	libvterm
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libwebsockets
 SUBDIR+=	libxc
+SUBDIR+=	libxdiff
 SUBDIR+=	libzn-poly
 SUBDIR+=	lidia
 SUBDIR+=	light-desktop

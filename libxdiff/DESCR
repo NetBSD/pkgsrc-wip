@@ -1,0 +1,8 @@
+The LibXDiff package provides file differential library support functions.
+It implements basic and yet complete functionalities to create and apply
+file differences (patches) to both binary and text files. The library
+uses memory files as file abstraction to achieve both performance and
+portability. The proprietary output format of the binary patch file is
+binary and it is basically a collection of copy and insert commands. The
+text file differential output uses the raw unified output format (without
+the header).
