@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:01 agc Exp $
+
+SHA1 (php-xdiff/xdiff-2.0.1.tgz) = 1f3b5375e7319777b38e6125c0be0fb1bd77b01b
+RMD160 (php-xdiff/xdiff-2.0.1.tgz) = 31297409cf3641f5434fd4ce615f781f5ca17a20
+SHA512 (php-xdiff/xdiff-2.0.1.tgz) = 43f2bddac82ac19ac688ae7dad3fef65b0d8887c0e6adefd1fc15236582c31d78a54538903760270dee294ca8b8ba3def48bfa9b1d44160bcc450f5c6516402a
+Size (php-xdiff/xdiff-2.0.1.tgz) = 10418 bytes

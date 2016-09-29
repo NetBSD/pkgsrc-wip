@@ -1,0 +1,2 @@
+php-xdiff provides bindings to the functions of LibXDiff,
+for creating or applying patches for both text and binary files.
