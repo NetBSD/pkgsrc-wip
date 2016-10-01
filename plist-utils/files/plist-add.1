@@ -36,32 +36,33 @@
 .Nm
 .Op Fl i
 .Ar PLIST
+.Ar file
 .Op Ar
 .Sh DESCRIPTION
 The
 .Nm
 utility adds entries regarding
-.Ar
+.Ar file
 to
 .Ar PLIST .
-Afterwards, it sorts the output. If
+Afterwards, it sorts the output.
+If
 .Fl i
 is given,
 .Nm
-modifies
+modifies the
 .Ar PLIST
-in place. Otherwise it outputs to standard output.
+in place.
+Otherwise it outputs to standard output.
 .Sh EXIT STATUS
-The
-.Nm
-utility exits 0 on success, and any other value if an error occurs.
-.Sh HISTORY  
+.Ex -std plist-add
+.Sh HISTORY
 The
 .Nm
 utility appeared in pkgsrc-2016Q3.
 .Sh AUTHORS
-.An -nosplit  
+.An -nosplit
 The
-.Nm 
+.Nm
 utility was written by
 .An Kamil Rytarowski .
