@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	toxic-0.7.0
+DISTNAME=	toxic-0.7.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JFreegman/}
 

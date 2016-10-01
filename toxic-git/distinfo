@@ -4,4 +4,4 @@ SHA1 (patch-Makefile) = c996154317aedaaa4b3a1bac2a69e4fc1b89173b
 SHA1 (patch-cfg_global__vars.mk) = 5aad096f067f485c439135d3838b8912d1ad7d5e
 SHA1 (patch-src_name__lookup.c) = 212742961593ff970e5d108af2f14b8f93199a76
 SHA1 (patch-src_toxic.c) = 0c466bb767a77f5bf25aeef934ca61e5dc550923
-SHA1 (patch-src_video__device.c) = 27ca66738b98cbcf7be002ccd9c768f29e221297
+SHA1 (patch-src_video__device.c) = 85c8f85c9cfe7f3d478b95ca732d69b33fa0b43b
