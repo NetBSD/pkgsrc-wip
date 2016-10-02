@@ -4368,7 +4368,6 @@ SUBDIR+=	xxdiff
 SUBDIR+=	yabar
 SUBDIR+=	yafray
 SUBDIR+=	yakuake
-SUBDIR+=	yaml-mode
 SUBDIR+=	yateclient
 SUBDIR+=	yauap
 SUBDIR+=	yaupspe
