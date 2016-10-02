@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/16 10:58:15 lkundrak Exp $
-
-SHA1 (fontedit-1.1.tar.gz) = e83bf55a25a95444e972e7ab1380d9fd81d69b4c
-RMD160 (fontedit-1.1.tar.gz) = 47e98df9522eb98c0240ec516a310b0dc75f753c
-Size (fontedit-1.1.tar.gz) = 1658 bytes
-SHA1 (patch-aa) = efeb4a5ea88d43b8927f415ade15094f740feecc
