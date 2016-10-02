@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/06 04:38:39 phonohawk Exp $
-share/doc/yaml-mode/Changes
-share/doc/yaml-mode/README
-${EMACS_LISPPREFIX}/yaml-mode.el
-${EMACS_LISPPREFIX}/yaml-mode.elc
