@@ -757,7 +757,6 @@ SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	font-bitstream-speedo
 SUBDIR+=	fontaine
-SUBDIR+=	fontedit
 SUBDIR+=	fonttosfnt
 SUBDIR+=	fortunes-it
 SUBDIR+=	foxtrotgps
