@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/06/21 16:53:41 cfkoch Exp $
-
-SHA1 (memo-1.6.tar.gz) = 5d0156c1ea7e1bee6b5b18824caefa2d3872c98e
-RMD160 (memo-1.6.tar.gz) = e61ea07add6ef7d06c6a7eb8d3f3f39e68e6b2e3
-Size (memo-1.6.tar.gz) = 29816 bytes
-SHA1 (patch-Makefile) = 0b73e0e43940029763372c6c623d90c5b6441343
