@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:56 thomasklausner Exp $
-bin/map-browse
-share/doc/map-browse/map-browse.tex
-share/doc/map-browse/map-browse-init.ps
-share/doc/map-browse/map-browse-moved.ps
-share/doc/map-browse/map-browse-shrunk.ps
-share/doc/map-browse/map-browse-solid.ps
-share/examples/map-browse/sample.data
-share/examples/map-browse/zpow.m
