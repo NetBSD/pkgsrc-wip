@@ -1,7 +1,0 @@
-Simple DirectMedia Layer introduction.
-
-This package does not contain anything by itself -- it is a
-"meta-package" that depends on other SDL-intro packages.
-Its sole purpose is to require dependencies so users can install
-this package only and have all the SDL-intro stuff pulled in by
-the port/package dependency mechanism.

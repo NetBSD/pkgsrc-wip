@@ -1,7 +1,0 @@
-Simple DirectMedia Layer documentation.
-
-This package does not contain anything by itself -- it is a
-"meta-package" that depends on other SDL-doc packages.
-Its sole purpose is to require dependencies so users can install
-this package only and have all the SDL-doc stuff pulled in by
-the port/package dependency mechanism.
