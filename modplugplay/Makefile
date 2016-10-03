@@ -3,10 +3,10 @@
 
 DISTNAME=	modplugplay-1.0
 CATEGORIES=	audio
-MASTER_SITES=	http://gnu.ethz.ch/linuks.mine.nu/modplugplay/
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
 MAINTAINER=	pallegra@gmail.com
-HOMEPAGE=	http://gnu.ethz.ch/linuks.mine.nu/modplugplay/
+HOMEPAGE=	# Old page: http://gnu.ethz.ch/linuks.mine.nu/modplugplay/
 COMMENT=	Commandline music mod player using libmodplug
 LICENSE=	gnu-gpl-v2
 
