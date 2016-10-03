@@ -1,9 +1,11 @@
 # $NetBSD: Makefile,v 1.9 2015/07/13 15:11:02 thomasklausner Exp $
 
-DISTNAME=	mapnik-0.4.0
-PKGREVISION=	4
+DISTNAME=	mapnik-v3.0.12
+PKGNAME=	${DISTNAME:S/-v/-/}
+GITHUB_RELEASE= v${PKGVERSION_NOREV}
 CATEGORIES=	geography
-MASTER_SITES=	http://download.berlios.de/mapnik/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mapnik/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mapnik.org/

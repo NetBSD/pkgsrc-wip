@@ -1,8 +1,9 @@
 $NetBSD: distinfo,v 1.1.1.1 2007/09/23 13:37:21 tnn2 Exp $
 
-SHA1 (mapnik-0.4.0.tar.gz) = 3f39a3d63c9a6c1633c88250e5b033bc60672e4a
-RMD160 (mapnik-0.4.0.tar.gz) = 3260eb9736f50b4371ade1f72e2c900e239e7d8e
-Size (mapnik-0.4.0.tar.gz) = 6058951 bytes
+SHA1 (mapnik-v3.0.12.tar.bz2) = 29e1ed0356df0f9e3d82561e41a6720ef4b6f197
+RMD160 (mapnik-v3.0.12.tar.bz2) = d29c5365b59ac0b049a3ed8f0ebbaedfa1d527b8
+SHA512 (mapnik-v3.0.12.tar.bz2) = db87cd76f21b46e1b92d303f02b4c3927e520e7b309f717967283831adfec53f15aab23e7e737ee4a79ff2c06948b94df7d193621aff99197d4dede9a4e329b7
+Size (mapnik-v3.0.12.tar.bz2) = 12147492 bytes
 SHA1 (patch-aa) = 6dd1da5cbdffdfd54d7100080538e91c6f5edb77
 SHA1 (patch-ab) = 02de9a0a0ff96b471a223fa26f9eb07f1d374519
 SHA1 (patch-ac) = 4b9efe47c927eec5ca9d7b53e5253917872d0ac7
