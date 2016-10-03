@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2008/03/26 04:07:11 bsadewitz Exp $
-
-SHA1 (monotone-cvsimport-20080325.tar.bz2) = 9c70bc7de0ce80b927992708fc9505d22b6b8713
-RMD160 (monotone-cvsimport-20080325.tar.bz2) = 798b0cc01ec4cd46ee5954bda4b9d6d2bc3c174e
-Size (monotone-cvsimport-20080325.tar.bz2) = 4069536 bytes
-SHA1 (patch-aa) = 7cbf76b7bbae73aeacbe7d0f582fdd6c2682be07
