@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2013/12/05 11:26:28 noud4 Exp $
-
-SHA1 (moeclock.tar.gz) = 0d32151ce268de6654d7eef07e372e32d70b7a33
-RMD160 (moeclock.tar.gz) = 5f19ae7f7a2449c8a2a3ae55b22ffd6741203bb6
-Size (moeclock.tar.gz) = 881162 bytes
-SHA1 (patch-aa) = 3b3fc1d0b9f71be1e5904fcc7135ed745baa8b9f
