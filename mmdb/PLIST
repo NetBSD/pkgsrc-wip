@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/08 19:09:31 jihbed Exp $
+@comment $NetBSD$
 include/mmdb/bfgs_min.h
 include/mmdb/file_.h
 include/mmdb/hybrid_36.h
@@ -34,3 +34,4 @@ include/mmdb/mmdb_xml.h
 include/mmdb/random_n.h
 include/mmdb/stream_.h
 lib/libmmdb.la
+lib/pkgconfig/mmdb.pc

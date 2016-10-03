@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/08/08 19:09:31 jihbed Exp $
 
-SHA1 (mmdb_1.21.orig.tar.gz) = a015b5565d207d7537068947c446c683bf353d0e
-RMD160 (mmdb_1.21.orig.tar.gz) = f41e0118bf2531642b5c9d201e4b5ecf272be6a3
-Size (mmdb_1.21.orig.tar.gz) = 680994 bytes
+SHA1 (mmdb-1.25.6.1.tar.gz) = f548c76c665513d399731daebd0e08bffdcfc023
+RMD160 (mmdb-1.25.6.1.tar.gz) = 596ebc4b241cffda5d5efd0b87408625c5573301
+SHA512 (mmdb-1.25.6.1.tar.gz) = b253ee6096ea90202c061d579d98f324a53de17dad9db0a426e1a2106b23eecf6ec90667697f1e88a5f7b05fc45a0bbd2faada997de3ecca5b0f2b548520bd5c
+Size (mmdb-1.25.6.1.tar.gz) = 992256 bytes
