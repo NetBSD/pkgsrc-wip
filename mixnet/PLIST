@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/22 13:11:31 jihbed Exp $
-bin/mixnet
-bin/mixnet-cl
-bin/mixnet-sim
-bin/mixneto
-man/man1/mixnet.1
-man/man1/mixneto.1
