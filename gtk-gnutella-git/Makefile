@@ -40,7 +40,7 @@ distclean:
 
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/gtk-gnutella-current/Makefile.version"
+.include "../../wip/gtk-gnutella-git/Makefile.version"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
