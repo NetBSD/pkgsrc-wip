@@ -1,17 +1,15 @@
 # $NetBSD: Makefile,v 1.19 2012/10/03 15:09:50 asau Exp $
 
-DISTNAME=		man-db_${VERSION}.orig
-PKGNAME=		man-db-${VERSION}
-PKGREVISION=		1
+DISTNAME=		man-db-2.7.5
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/man-db/}
+MASTER_SITES=		http://download.savannah.gnu.org/releases/man-db/
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.chiark.greenend.org.uk/~cjwatson/code/man-db/
 COMMENT=		Manual pager and related man page utilities
 
 CONFLICTS+=		man-[0-9]*
-
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -25,7 +23,7 @@ DEPENDS+=		groff-[0-9]*:../../textproc/groff
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 .endif
 
-VERSION=		2.4.2
+
 
 MAN_DB_CAT_DIR?=	/var/cache/man
 
