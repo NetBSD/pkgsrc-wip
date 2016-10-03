@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2005/09/28 06:41:14 rillig Exp $
 
-SHA1 (freevrrpd-0.9.3.tar.gz) = 2bed2755e034ab066410485f949ca12f2fc552df
-RMD160 (freevrrpd-0.9.3.tar.gz) = 4e8acb3abcc0ee55260d6da7d9b84ddc3a9e1c4f
-Size (freevrrpd-0.9.3.tar.gz) = 41273 bytes
+SHA1 (freevrrpd-1.1.tar.gz) = 182d665bb5513b2b78d53dbf782f28f76a54e9db
+RMD160 (freevrrpd-1.1.tar.gz) = 899bd069e08aa7958d5c1e8f045037a27ea9bbd7
+SHA512 (freevrrpd-1.1.tar.gz) = 342203c766678aca6b211c7f7ca4fa1189efec4fa7bd26fdf1999b8f824274ec0302cb2b2570a24ea1a3ed561f152fb1c886ecb16fa794b5dcd29799906e4f05
+Size (freevrrpd-1.1.tar.gz) = 41852 bytes
