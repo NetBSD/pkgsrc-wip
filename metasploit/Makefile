@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.4 2012/10/03 15:09:54 asau Exp $
 #
 
-DISTNAME=	framework-3.2
-PKGNAME=	metasploit-${DISTNAME}
-CATEGORIES=	security
-MASTER_SITES=	http://spool.metasploit.com/releases/
+GITHUB_PROJECT=	metasploit-framework
+DISTNAME=	metasploit-framework-4.12.29
+CATEGORIES=	security ruby
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rapid7/}
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
 HOMEPAGE=	http://spool.metasploit.com/releases/

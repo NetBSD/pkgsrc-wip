@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/08/15 01:10:55 prudhvikrishna Exp $
 
-SHA1 (framework-3.2.tar.gz) = 9c59fb958bdf6ea05eb437bb7624c5e07a84efac
-RMD160 (framework-3.2.tar.gz) = 7d851e8693377de49127e66c23baff9fbc8fc3d4
-Size (framework-3.2.tar.gz) = 13099756 bytes
+SHA1 (metasploit-framework-4.12.29.tar.gz) = c3a69793bbaee47ea65a55226902678d0118b41e
+RMD160 (metasploit-framework-4.12.29.tar.gz) = 4098f63debbc1a3b4b38ca92ab60f36659075ce4
+SHA512 (metasploit-framework-4.12.29.tar.gz) = 298096eca9750f318f1234165730e2ee504e2abd215563cc98c365e3017aeda72bb2a12b5b5c8b250a1611751bf0d2c36e42153afb5018cea8e75889659e30f8
+Size (metasploit-framework-4.12.29.tar.gz) = 23292351 bytes
