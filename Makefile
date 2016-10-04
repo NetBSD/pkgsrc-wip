@@ -4036,6 +4036,7 @@ SUBDIR+=	tex-sfmath
 SUBDIR+=	tex-tcolorbox
 SUBDIR+=	tex-tcolorbox-doc
 SUBDIR+=	tex-urlbst
+SUBDIR+=	tex-urlbst-doc
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
