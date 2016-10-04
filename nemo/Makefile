@@ -2,13 +2,16 @@
 #
 
 DISTNAME=	nemo-0.2.4
-PKGREVISION=	4
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.iola.dk/nemo/downloads/
+MASTER_SITES=	http://www.nemo-docs.com/media/static/
 EXTRACT_SUFX=	.tar.bz2
 
+# http://www.nemo-docs.com/media/static/nemo-documents-setup.exe?_=1t5ATJ
+
+BROKEN_REASON=	Unversioned sources
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.iola.dk/nemo/
+HOMEPAGE=	http://www.nemo-docs.com/
 COMMENT=	File manager based on labels and timestamps
 #LICENSE=	LICENSE
 
