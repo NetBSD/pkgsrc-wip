@@ -76,6 +76,13 @@ post-extract:
 	${MV} ${WRKSRC}/${ISL14} ${WRKSRC}/isl
 .endif
 
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+# on NetBSD, use the native SSP code in libc
+CONFIGURE_ARGS+=	--disable-libssp
+.else
+CONFIGURE_ARGS+=	--enable-libssp
+.endif
+
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
@@ -83,7 +90,6 @@ CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 .if ${OPSYS} == "NetBSD"
@@ -98,8 +104,6 @@ MAKE_ENV+=		ac_cv_func_uselocale=no
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
-
-
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
@@ -161,10 +165,6 @@ post-test:
 post-install:
 	${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || \
 		( cd ${DESTDIR}${GCC_PREFIX}/bin ; ${LN} -f gcc cc )
-.if !empty(PKG_OPTIONS:Mgcc-java)
-	${RM} -f ${DESTDIR}${JAVA_HOME}/bin/javadoc
-	${RM} -f ${DESTDIR}${JAVA_HOME}/jre/lib/${JAVA_ARCH}/libjawt.so
-.endif
 .if !empty(MACHINE_PLATFORM:MSunOS-*-*86*) && ${OS_VERSION} != "5.11"
 	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m32 || ${TRUE}
 	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m64 || ${TRUE}
