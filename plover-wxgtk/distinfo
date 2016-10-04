@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (plover/v4.0.0.dev0.tar.gz) = 3c42d143c7afe333873a45f09648ddf5e2f99479
+RMD160 (plover/v4.0.0.dev0.tar.gz) = 41f057c0257e10840a8c7ea5a82b0e51f8ff15dd
+SHA512 (plover/v4.0.0.dev0.tar.gz) = ed3f4608337dd10a825511bcd42e7f27f77d2730efd9d381632a97913e546731424437c39ce29c0d2b58a849b6b7be9701dcbbf8a2569397e38ca335bdef8aac
+Size (plover/v4.0.0.dev0.tar.gz) = 3175248 bytes
+SHA1 (patch-plover_oslayer_keyboardcontrol.py) = d4c56d2d0125ec7a661192fa1e801726666c2381

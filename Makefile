@@ -2515,6 +2515,7 @@ SUBDIR+=	plasti
 SUBDIR+=	plconfig
 SUBDIR+=	plod
 SUBDIR+=	plover-git
+SUBDIR+=	plover-wxgtk
 SUBDIR+=	plplot
 SUBDIR+=	plugger
 SUBDIR+=	pmacct

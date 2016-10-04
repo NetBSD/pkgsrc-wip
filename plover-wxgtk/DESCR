@@ -1,0 +1,11 @@
+Plover (rhymes with "hover") is a free, open source
+stenography engine. It allows individuals to write into
+any program at speeds of over 200 words per minute.
+
+Supported stenotype protocols:
+* QWERTY keyboards with n-key rollover (e.g. Microsoft SideWinder X4)
+* Gemini PR (a.k.a. Gemini Enhanced)
+* TX Bolt (a.k.a. Gemini TX)
+* Stentura
+* Treal
+* Passport
