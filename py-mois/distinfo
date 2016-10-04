@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:18:36 jihbed Exp $
-
-SHA1 (PyMois-0.1.tar.gz) = 642df8fb621007ade52f02e1e056711827d84300
-RMD160 (PyMois-0.1.tar.gz) = 6a4413f962e289d70e38758a8f01c7c241239434
-Size (PyMois-0.1.tar.gz) = 83210 bytes
-SHA1 (patch-aa) = c7cdb0e5769f9205fa509badcd4ae63c2568c7fa
