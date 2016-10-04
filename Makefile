@@ -4019,6 +4019,7 @@ SUBDIR+=	tex-diagbox
 SUBDIR+=	tex-ellipse
 SUBDIR+=	tex-ellipse-doc
 SUBDIR+=	tex-eqparbox
+SUBDIR+=	tex-eqparbox-doc
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-fncychap
 SUBDIR+=	tex-fncychap-doc
