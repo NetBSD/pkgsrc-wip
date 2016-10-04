@@ -2604,6 +2604,7 @@ SUBDIR+=	py-PythonMagick
 SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
+SUBDIR+=	py-Xlib
 SUBDIR+=	py-abcpmc
 SUBDIR+=	py-achemkit
 SUBDIR+=	py-acme
