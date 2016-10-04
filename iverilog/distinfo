@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (iverilog-10.0.tar.gz) = aea63ced71cc9deafd51d53f119c442c9ea85edd
-RMD160 (iverilog-10.0.tar.gz) = 0e1f025875b65aa66931050f8bf894014dbac99f
-Size (iverilog-10.0.tar.gz) = 1584145 bytes
+SHA1 (iverilog-10.1.tar.gz) = 5aeabe8553bd42d5788f4ebba995c37b4bd966bc
+RMD160 (iverilog-10.1.tar.gz) = 90ae1db06dc309ce7afb94f75434e57c58a02596
+SHA512 (iverilog-10.1.tar.gz) = d1fa6e899ea2db3aadadbfc9317df40a8193fb846196d81f595f77500f03b26a426e8802bcfed28337644460a48a7f0bf6bfdb9c2656646d489e4d804f9e9314
+Size (iverilog-10.1.tar.gz) = 1586164 bytes

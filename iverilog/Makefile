@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	iverilog-10.0
+DISTNAME=	iverilog-10.1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=steveicarus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/./_/}
@@ -18,7 +18,9 @@ GNU_CONFIGURE=	yes
 
 TEST_TARGET=	check
 
+BUILD_DEPENDS+= gperf-[0-9]*:../../devel/gperf
+
 pre-configure:
-	${RUN} cd ${WRKSRC} && autoconf
+	${RUN} cd ${WRKSRC} && ${SH} ./autoconf.sh
 
 .include "../../mk/bsd.pkg.mk"
