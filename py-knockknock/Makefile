@@ -1,14 +1,13 @@
 # $NetBSD: Makefile,v 1.5 2012/10/07 12:25:13 asau Exp $
 #
 
-VER=		0.7
-DISTNAME=	knockknock-${VER}
-PKGNAME=        ${PYPKGPREFIX}-knockknock-${VER}
+DISTNAME=	knockknock-0.8
+PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
-MASTER_SITES=	http://www.thoughtcrime.org/software/knockknock/
+MASTER_SITES=	https://moxie.org/software/knockknock/
 
 MAINTAINER=	pettai@nordu.net
-HOMEPAGE=	http://www.thoughtcrime.org/software/knockknock/
+HOMEPAGE=	https://moxie.org/software/knockknock/
 COMMENT=	Simple & secure port knocking client/server written in python
 #LICENSE=	# TODO: (see mk/license.mk)
 

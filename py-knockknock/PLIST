@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2010/01/26 23:40:39 pettai Exp $
+@comment $NetBSD$
 bin/knockknock
 bin/knockknock-daemon
 bin/knockknock-genprofile
 bin/knockknock-proxy
+knockknock-daemon.py
+knockknock-genprofile.py
+knockknock-proxy.py
+knockknock.py
 ${PYSITELIB}/knockknock/CryptoEngine.py
 ${PYSITELIB}/knockknock/CryptoEngine.pyc
 ${PYSITELIB}/knockknock/CryptoEngine.pyo
@@ -51,6 +55,7 @@ ${PYSITELIB}/knockknock/proxy/SocksRequestHandler.pyo
 ${PYSITELIB}/knockknock/proxy/__init__.py
 ${PYSITELIB}/knockknock/proxy/__init__.pyc
 ${PYSITELIB}/knockknock/proxy/__init__.pyo
+minimal-firewall.sh
 share/knockknock/COPYING
 share/knockknock/INSTALL
 share/knockknock/README

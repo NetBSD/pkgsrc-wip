@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2010/01/26 23:40:39 pettai Exp $
 
-SHA1 (knockknock-0.7.tar.gz) = c12291a80ee74388d753ecf31ae775dec7c736d1
-RMD160 (knockknock-0.7.tar.gz) = 4ebe03a56237d6f4ae56267a39471d1944f8b8e1
-Size (knockknock-0.7.tar.gz) = 27056 bytes
+SHA1 (knockknock-0.8.tar.gz) = b8f9b8e6eca34ec7417852c211106480affac114
+RMD160 (knockknock-0.8.tar.gz) = 7843ff4ce5375c032344d8ee6e9ee68d429eb15f
+SHA512 (knockknock-0.8.tar.gz) = 99c29fcd70b3ac7d1dc2ac73878edbfbce22787ca0a7bcccbe37ff4978b53af58f1356fca1cbbf302e569474308ed6133dc1a7638104fe2b76ab3355ee4ae698
+Size (knockknock-0.8.tar.gz) = 27691 bytes
