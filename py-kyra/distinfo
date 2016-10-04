@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2013/01/01 00:56:47 othyro Exp $
-
-SHA1 (PyKyra-0.4.0.tar.gz) = 981e4b5c151d59a0d2f393875d3543cd295fc71a
-RMD160 (PyKyra-0.4.0.tar.gz) = 24611a1c5b075d1ee1ee1dcdf6d6d804a63b812a
-Size (PyKyra-0.4.0.tar.gz) = 304815 bytes
-SHA1 (patch-aa) = 7f0c3da4a7fdd0005ae25f466fbcd673b8400865
-SHA1 (patch-ab) = 167bd0c6ac90eda70562fbe453d9c1e062f97b03
