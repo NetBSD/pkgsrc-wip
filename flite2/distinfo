@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.8 2013/11/18 02:22:30 dholland Exp $
+
+SHA1 (flite-2.0.0-release.tar.bz2) = aeb4d33de079004c0eb9f9e0fe5bba1e0def75f4
+RMD160 (flite-2.0.0-release.tar.bz2) = b815fe6d674cbba63780a74f4005612351aa260e
+Size (flite-2.0.0-release.tar.bz2) = 14761376 bytes
+#SHA1 (patch-config_all.lv) = 94576f13e07ec024b381e1b7b51bb86050cd3510
+SHA1 (patch-config_common__make__rules) = fbc5a6e7ba83ea181cc6d096110d59741c10cc1d
+SHA1 (patch-doc_Makefile) = a81e20d9dceaa7ac378220a984144e48cdd5f896
+SHA1 (patch-doc_flite.texi) = c262c5091372798684cd4cd6bf03a841ac126d0d
+SHA1 (patch-main_Makefile) = 6d220cac57371dd8004f246dd17d59c0f58a4ea5
+SHA1 (patch-main_flite__time__main.c) = 45d33127d45dc237135308de2254c5a173ef02da
+SHA1 (patch-src_audio_au__sun.c) = 5dab734c512038c12e084b55ac99545c8ab5e462
+SHA1 (patch-tools_find__sts__main.c) = bec9f3961e4eec995b6a58668f931d2bb0c30d3a

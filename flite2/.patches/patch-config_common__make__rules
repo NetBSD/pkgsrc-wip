@@ -1,0 +1,27 @@
+$NetBSD: patch-config_common__make__rules,v 1.2 2013/11/18 02:22:30 dholland Exp $
+
+Work around PR 48385, a tmpfs bug that combined with this package's
+build system causes gmake 4.0 to loop forever making depend.
+
+The problem in tmpfs, which assigns file and directory timestamps
+lazily and therefore frequently out of order, gets tickled because the
+depend file depends on the directory containing it.
+
+It is, in any event, almost never a good idea to depend on directories
+in makefiles. The workaround is to not do that and explicitly run a
+sub-make to create the object directory.
+
+--- config/common_make_rules.orig	2004-12-19 22:20:43.000000000 +0000
++++ config/common_make_rules
+@@ -188,7 +188,10 @@ ifdef ALL_DIRS
+ 	done
+ endif
+ 
+-$(DEPEND): $(SRCS) $(OBJDIR)
++$(DEPEND): $(SRCS)
++	@ echo Doing implicit make depend.
++	@ touch $(DEPEND)
++	@ $(MAKE) $(OBJDIR)
+ 	@ rm -f $(DEPEND)
+ 	@ for i in $(SRCS) ; \
+ 	  do \

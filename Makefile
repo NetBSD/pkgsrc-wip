@@ -737,6 +737,7 @@ SUBDIR+=	flightgear
 SUBDIR+=	flightgear-data
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
+SUBDIR+=	flite2
 SUBDIR+=	flpsed
 SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace

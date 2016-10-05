@@ -51,4 +51,5 @@ do-install:
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../databases/php-pdo/buildlink3.mk"
 .include "../../lang/php/common.mk"
+.include "../../devel/libmemcached/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
