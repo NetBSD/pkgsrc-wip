@@ -2,7 +2,7 @@
 
 DISTNAME=	uuid-1.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net python
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uuid/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
