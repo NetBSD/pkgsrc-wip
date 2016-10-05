@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/08 18:55:57 jihbed Exp $
-${PYSITELIB}/uuid.py
-${PYSITELIB}/uuid.pyc
-${PYSITELIB}/uuid.pyo
