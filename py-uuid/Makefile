@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.30
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
