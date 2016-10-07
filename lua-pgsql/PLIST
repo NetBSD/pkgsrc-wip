@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 15:03:07 poppnk Exp $
-lib/libluasqlpostgres.${PKGVERSION}.a
-lib/libluasqlpostgres.${PKGVERSION}.so
+@comment $NetBSD$
+lib/lua/5.2/luasql/postgres.so
