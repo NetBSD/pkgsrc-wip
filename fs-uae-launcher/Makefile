@@ -1,9 +1,10 @@
 # $NetBSD$
 
-VERSION=	2.7.13dev
+VERSION=	2.8.0
 DISTNAME=	fs-uae-launcher-${VERSION}
 CATEGORIES=	emulators
-MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
+#MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${VERSION}/
+MASTER_SITES=	http://fs-uae.net/stable/${VERSION}/
 
 MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	http://fs-uae.net/

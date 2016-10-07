@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2015/06/22 16:21:18 rhialto Exp $
+# $NetBSD$
 
-DISTNAME=	fs-uae-2.7.13dev
+DISTNAME=	fs-uae-2.8.0
 CATEGORIES=	emulators
-MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${PKGVERSION_NOREV}/
+#MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
 MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	http://fs-uae.net/
@@ -14,6 +15,8 @@ USE_TOOLS+=		pkg-config zip
 GNU_CONFIGURE=		yes
 
 #CONFIGURE_ARGS += --enable-lua
+# patchelf is sometimes used, for something with steam or so?
+#BUILD_DEPENDS +=	patchelf-*:../../devel/patchelf
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
@@ -28,7 +31,6 @@ GNU_CONFIGURE=		yes
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
