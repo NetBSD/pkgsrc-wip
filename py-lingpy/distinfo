@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/01/17 20:55:33 jihbed Exp $
 
-SHA1 (lingpy-2.0.tar.gz) = a0132df54a8f6fc746910efa26d400b89e33989a
-RMD160 (lingpy-2.0.tar.gz) = 3bf9b71d75b34abab797428c2216c7a77126b143
-Size (lingpy-2.0.tar.gz) = 8358117 bytes
+SHA1 (lingpy-2.5.tar.gz) = 3ad1c6668194c87b52b18cb339762865e8e367a6
+RMD160 (lingpy-2.5.tar.gz) = 325b793edea41b8a37f401215a0066c662095f07
+SHA512 (lingpy-2.5.tar.gz) = 16bbfab8f64b6ab5e99f42233a363029c6e10e8129ee188556f667afe4cb1c14818cb17bd8f7cc03dddeddd3c4f6b0a161ec13a73b8327fcaeaf67bc09e9d22f
+Size (lingpy-2.5.tar.gz) = 9291752 bytes
