@@ -27,6 +27,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--prefix=${BUILDLINK_PREFIX.irssi}
+CONFIGURE_ARGS+=	--with-irssi-headers=${BUILDLINK_PREFIX.irssi}
 CONFIGURE_ARGS+=	--with-irssi-module-dir=${BUILDLINK_PREFIX.irssi}/lib/irssi/modules
 
 DEPENDS+=		irssi>=0.8.15:../../chat/irssi
