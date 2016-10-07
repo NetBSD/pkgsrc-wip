@@ -1,16 +1,18 @@
 # $NetBSD: Makefile,v 1.9 2012/11/25 23:32:27 othyro Exp $
 #
 
-DISTNAME=		luasql-2.0b
-PKGNAME=		lua-pgsql-2.0b
-PKGREVISION=		1
-CATEGORIES=		databases
-MASTER_SITES=		http://www.keplerproject.org/luasql/
+GITHUB_PROJECT=	luasql
+DISTNAME=	luasql-2.3.2
+PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-postgres/}
+CATEGORIES=	databases lua
+MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.keplerproject.org/luasql/
-COMMENT=		PostgreSQL bindings for LUA
+#https://github.com/keplerproject/luasql/archive/v2.3.2.zip
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.keplerproject.org/luasql/
+COMMENT=	PostgreSQL bindings for Lua
 
 BUILD_TARGET=		pglinux
 
