@@ -20,10 +20,8 @@ INSTALLATION_DIRS=	lib
 MAKE_FLAGS+=		DRIVER_LIBS_postgres="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${PGSQL_TYPE}}/lib -L${BUILDLINK_PREFIX.${PGSQL_TYPE}}/lib"
 MAKE_FLAGS+=		DRIVER_INCS_postgres=-I${BUILDLINK_PREFIX.${PGSQL_TYPE}}/include
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	LUA_LIBDIR=${DESTDIR}${PREFIX}/${LUA_CDIR}
 
-#  	%make_install PREFIX=%{buildroot}%{_prefix} LUA_LIBDIR=%{buildroot}%{lualibdir} LUA_DIR=%{buildroot}%{luapkgdir}
-# DRIVER_INCS="`pkg-config --cflags sqlite3`" DRIVER_LIBS="`pkg-config --libs sqlite3`" DEFS="%{optflags}" sqlite3
-
-.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua/module.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
