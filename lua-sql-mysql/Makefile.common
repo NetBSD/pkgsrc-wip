@@ -18,4 +18,7 @@ USE_TOOLS+=		gmake
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	LUA_LIBDIR=${DESTDIR}${PREFIX}/${LUA_CDIR}
 
+DISTINFO_FILE=	${.CURDIR}/../../wip/lua-sql-mysql/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/lua-sql-mysql/patches
+
 .include "../../lang/lua/module.mk"
