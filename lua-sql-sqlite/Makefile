@@ -9,17 +9,17 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.keplerproject.org/luasql/
-COMMENT=	MySQL bindings for Lua
+COMMENT=	SQLite 2.x bindings for Lua
 
 USE_TOOLS=		gmake
-BUILD_TARGET=		mysql
+BUILD_TARGET=		sqlite
 
 INSTALLATION_DIRS=	lib
-MAKE_FLAGS+=		DRIVER_LIBS_mysql="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib -L${BUILDLINK_PREFIX.mysql-client}/lib -lmysqlclient"
-MAKE_FLAGS+=		DRIVER_INCS_mysql=-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
+MAKE_FLAGS+=		DRIVER_LIBS_sqlite="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite}/lib -L${BUILDLINK_PREFIX.sqlite}/lib -lsqlite"
+MAKE_FLAGS+=		DRIVER_INCS_sqlite=-I${BUILDLINK_PREFIX.sqlite}/includel
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	LUA_LIBDIR=${DESTDIR}${PREFIX}/${LUA_CDIR}
 
 .include "../../lang/lua/module.mk"
-.include "../../mk/mysql.buildlink3.mk"
+.include "../../databases/sqlite/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
