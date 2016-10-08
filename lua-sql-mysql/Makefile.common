@@ -2,13 +2,13 @@
 
 GITHUB_PROJECT=	luasql
 DISTNAME=	luasql-2.3.2
-CATEGORIES=	databases lua
+CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HOMEPAGE=	http://www.keplerproject.org/luasql/
 
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	LUA_LIBDIR=${DESTDIR}${PREFIX}/${LUA_CDIR}
