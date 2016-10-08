@@ -1,2 +1,2 @@
 @comment $NetBSD$
-${LUA_CDIR}/luasql/sqlite.so
+${LUA_CDIR}/luasql/sqlite3.so
