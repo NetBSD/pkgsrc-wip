@@ -1,6 +1,0 @@
-- Verilog 0.8 revived. Newer version said dropped the
-  synthesis capability.
-- But no co-existing mechnism with Verilog-0.9 (yet)
-  ... Yes, seems OK ...
-  All executable's, include's, lib's and even man have -0.8 suffix
-- Ready to import to pkgsrc proper ?

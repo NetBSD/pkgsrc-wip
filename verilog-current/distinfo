@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/04/01 02:40:52 makoto Exp $
-
-SHA1 (verilog-20150105.tar.gz) = be40492878f2597659ff0165d1dd72c0cfd5ab38
-RMD160 (verilog-20150105.tar.gz) = d05cee4ade030fe3583c9edbdef923537fc94ce8
-Size (verilog-20150105.tar.gz) = 1660568 bytes
-SHA1 (patch-ad) = 54c9b292a4b7085d287d7251fdda3b06d6ef04a4
-SHA1 (patch-vpi_Makefile.in) = 7ce1e645119fa9500cc6e153b85160dce1c738d5
