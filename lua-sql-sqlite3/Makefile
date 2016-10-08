@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	luasql
 DISTNAME=	luasql-2.3.2
-PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-mysql/}
+PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-sqlite3/}
 CATEGORIES=	databases lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
