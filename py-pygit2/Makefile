@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/12/04 23:44:45 othyro Exp $
 
-DISTNAME=	pygit2-0.21.4
+DISTNAME=	pygit2-0.24.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
@@ -12,15 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	c
-PY_PATCHPLIST=	yes
-
-#do-install:
-#	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR} --prefix=${PREFIX}
 
 .include "../../devel/libgit2/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
-#.include "../../lang/python/application.mk"
-#.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
