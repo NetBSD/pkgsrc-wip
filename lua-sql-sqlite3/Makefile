@@ -1,5 +1,7 @@
 # $NetBSD: Makefile,v 1.9 2012/11/25 23:32:27 othyro Exp $
 
+.include "../../wip/lua-sql-mysql/Makefile.common"
+
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-sqlite3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

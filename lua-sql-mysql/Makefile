@@ -6,7 +6,6 @@ PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-mysql/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MySQL bindings for Lua
-LICENSE=	mit
 
 BUILD_TARGET=	mysql
 
