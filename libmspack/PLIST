@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/01 13:49:58 makoto Exp $
-include/mspack.h
-lib/libmspack.la
-lib/pkgconfig/libmspack.pc

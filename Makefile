@@ -1600,7 +1600,6 @@ SUBDIR+=	libltc
 SUBDIR+=	liblxqt
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmpg123
-SUBDIR+=	libmspack
 SUBDIR+=	libmusclecard
 SUBDIR+=	libncl
 SUBDIR+=	libnestedsums
