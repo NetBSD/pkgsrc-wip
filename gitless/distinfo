@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gitless-0.8.3.tar.gz) = f7e45ca3245caedb5adf48acafcafb9dab78f7f2
+RMD160 (gitless-0.8.3.tar.gz) = 7d5d3fae309083689f058e5ca0d38e329c69a461
+SHA512 (gitless-0.8.3.tar.gz) = 3eb523ea70a15e88e8b77f5573069ba6af2391dbc8021f110d57eff04c9da5bdf64335f41eb8023a5f82b09c9176e4a1d7481034ce5d60c72ca60e6073689f3b
+Size (gitless-0.8.3.tar.gz) = 37530 bytes
+SHA1 (patch-setup.py) = 2e3fbe8ac9499ea6398d557a9022809bfac9abe2
