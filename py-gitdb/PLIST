@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2015/07/04 03:04:36 jihbed Exp $
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gitdb/__init__.py
 ${PYSITELIB}/gitdb/__init__.pyc
 ${PYSITELIB}/gitdb/__init__.pyo

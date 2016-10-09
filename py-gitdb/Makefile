@@ -12,7 +12,5 @@ LICENSE=	modified-bsd #Probably
 
 DEPENDS+=	${PYPKGPREFIX}-smmap>=0.8.4:../../wip/py-smmap
 
-PYDISTUTILSPKG=	yes
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
