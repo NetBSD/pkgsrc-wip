@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (verilator-3.878.tgz) = 51d08bc91b3ad58e3eed69df78ed9d8b6e4c0cf9
-RMD160 (verilator-3.878.tgz) = 973b7599791657bc90d2f035557c71e5dacda4e6
-Size (verilator-3.878.tgz) = 1992325 bytes
+SHA1 (verilator-3.886.tgz) = d50e4ef59f318082f7a8aadb6e423db27e733135
+RMD160 (verilator-3.886.tgz) = a2f6d64d4fbdcec94634d8470e181ad3a4dddb2e
+SHA512 (verilator-3.886.tgz) = 0b151d595b88b5c4a829cdd6b4fbbaa9e0cf1181de91835160481f2500bc7b1bb053c052253abf3bd2960dc2a0151db9a065f1452add733cc938a4e53c8003b5
+Size (verilator-3.886.tgz) = 2007242 bytes

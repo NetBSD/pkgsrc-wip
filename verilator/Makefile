@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	verilator-3.878
-CATEGORIES=	wip
+DISTNAME=	verilator-3.886
+CATEGORIES=	cad
 MASTER_SITES=	http://www.veripool.org/ftp/
 EXTRACT_SUFX=	.tgz
 
