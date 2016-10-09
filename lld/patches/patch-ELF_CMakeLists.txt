@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- ELF/CMakeLists.txt.orig	2016-01-07 00:14:04.000000000 +0000
++++ ELF/CMakeLists.txt
+@@ -23,4 +23,5 @@ add_lld_library(lldELF2
+   Support
+   )
+ 
+-add_dependencies(lldELF2 ELFOptionsTableGen)
++#add_dependencies(lldELF intrinsics_gen ELFOptionsTableGen)
++add_dependencies(lldELF ELFOptionsTableGen)

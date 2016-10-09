@@ -1,8 +1,10 @@
 $NetBSD: distinfo,v 1.2 2016/09/19 22:32:41 kamil Exp $
 
-SHA1 (polly-3.8.1.src.tar.xz) = 918f3c74369a3605f3d624ea3f20c97bc3c921ad
-RMD160 (polly-3.8.1.src.tar.xz) = 766873d4b88e0e9c5670aeb45313d47cca7bd79a
-SHA512 (polly-3.8.1.src.tar.xz) = e5d0d1625be47579cd337fce6d6a1c5b64c8991a6b073778c8d8f237fccbd29f3a8ab815f191bd75c550ac4404c9581c948400cd5c71f56d3ea8fb07fec05536
-Size (polly-3.8.1.src.tar.xz) = 7799188 bytes
-SHA1 (patch-CMakeLists.txt) = 82b05a2ef4b83533a47474f5289110fe69a06fff
-SHA1 (patch-lib_External_isl_configure) = dad55f0d959b64f0cb910dad412bfe5bb3702ec9
+SHA1 (lld-3.8.1.src.tar.xz) = f9dffb129f3a6c67d24425a470500b318702889b
+RMD160 (lld-3.8.1.src.tar.xz) = a89056ab90f85e9c4921945907a008cec4bf5ad8
+SHA512 (lld-3.8.1.src.tar.xz) = f006110c36e3784741d5e815af1c27e61648d1289156f3c3fba157d1d2287e34f191b23b5e5d72bd6eed50d13d0838d73198236ca39b4825975934ddb472de81
+Size (lld-3.8.1.src.tar.xz) = 632288 bytes
+SHA1 (patch-CMakeLists.txt) = 46beb1b16c90fd568104d3d0e86ed9fbe049edb7
+SHA1 (patch-ELF_CMakeLists.txt) = bd14969a524e83df98908f26dab448ea250b21f9
+SHA1 (patch-lib_ReaderWriter_ELF_ELFLinkingContext.cpp) = aaf74f7e23e4faf142f4c9c265a049bd7f22c660
+SHA1 (patch-lib_ReaderWriter_MachO_MachOLinkingContext.cpp) = d0eaafa96436a3269d21ee0543e18d1c30849965
