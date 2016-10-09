@@ -1,0 +1,68 @@
+$NetBSD$
+
+Slideshow on/off: click (tap) on center image (or type 's' with keyboard)
+
+--- view/index.js.orig  2016-09-22 18:14:00.000000000 +0200
++++ view/index.js       2016-10-09 18:48:23.000000000 +0200
+@@ -66,6 +66,7 @@
+ var clayout;	// current layout
+ var csr;	// current scaling ratio
+ var sdir;	// scrolling direction
++var slideshow;	// slideshow status
+ 
+ function resize()
+ {
+@@ -429,6 +430,24 @@
+   showHdr();
+ }
+ 
++function toggleSlideshow()
++{
++  if(slideshow == 'on')
++  {
++    idle.removeEvent('idle', next);
++    showHdr();
++    showNav();
++    idle.addEvent('idle', hideHdr);
++    slideshow = 'off';
++  } else {
++    idle.removeEvent('idle', hideHdr);
++    hideNav();
++    hideHdr();
++    idle.addEvent('idle', next);
++    slideshow = 'on';
++  }
++}
++
+ function setupHeader()
+ {
+   ehdr.empty();
+@@ -549,7 +568,8 @@
+ 
+   tthr = resetTimeout(tthr);
+   idle.start();
+-  showHdr();
++  if(slideshow != 'on')
++    showHdr();
+   centerThumb(d);
+ 
+   // prefetch next image
+@@ -775,6 +795,7 @@
+   eright.addEvent('click', next);
+   window.addEvent('resize', onResize);
+   window.addEvent('hashchange', change);
++  window.addEvent('click', toggleSlideshow);
+ 
+   window.addEvent('keydown', function(ev)
+   {
+@@ -792,6 +813,10 @@
+     {
+       toggleCap();
+     }
++    else if(ev.key == 's')
++    {
++      toggleSlideshow();
++    }
+   });
+ 
+   econt.addEvent('mousewheel', function(ev)
