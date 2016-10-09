@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-threadsafe
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nspr
 
+MAKE_JOBS_SAFE=	no
+
 PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
 PKGCONFIG_OVERRIDE+=	js.pc.in
 
@@ -35,6 +37,8 @@ PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=			PYTHON=${PYTHONBIN:Q}
+
+CXXFLAGS+=	-fpermissive #  converting to 'bool' from 'std::nullptr_t'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -46,13 +50,13 @@ PLIST_SUBST+=	ARCH=${MACHINE_ARCH}
 
 post-install:
 .if ${OPSYS} == "Darwin"
-	install_name_tool -id ${PREFIX}/lib/libmozjs-24.dylib \
-		${DESTDIR}${PREFIX}/lib/libmozjs-24.dylib
+	install_name_tool -id ${PREFIX}/lib/libmozjs-31.dylib \
+		${DESTDIR}${PREFIX}/lib/libmozjs-31.dylib
 .endif
-	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-24/*.*
-	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-24/*/*.*
-	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-24.a
-	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-24.pc
+	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-31/*.*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-31/*/*.*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-31.a
+	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-31.pc
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
