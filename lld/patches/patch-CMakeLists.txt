@@ -2,7 +2,7 @@ $NetBSD$
 
 --- CMakeLists.txt.orig	2016-01-07 00:14:09.000000000 +0000
 +++ CMakeLists.txt
-@@ -1,3 +1,130 @@
+@@ -1,3 +1,118 @@
 +cmake_minimum_required(VERSION 3.4.3)
 +
 +# If we are not building as a part of LLVM, build LLD as an
@@ -70,7 +70,7 @@ $NetBSD$
 +  find_program(LLVM_TABLEGEN_EXE "llvm-tblgen" ${LLVM_TOOLS_BINARY_DIR}
 +    NO_DEFAULT_PATH)
 +                                                                                                                                                             
-+  set(LLVM_CMAKE_PATH "${LLVM_BINARY_DIR}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm")
++  set(LLVM_CMAKE_PATH "${LLVM_BINARY_DIR}/share/llvm/cmake") # this will change in 3.9.0
 +  set(LLVMCONFIG_FILE "${LLVM_CMAKE_PATH}/LLVMConfig.cmake")
 +  if(EXISTS ${LLVMCONFIG_FILE})
 +    list(APPEND CMAKE_MODULE_PATH "${LLVM_CMAKE_PATH}")
@@ -91,23 +91,11 @@ $NetBSD$
 +
 +  include(AddLLVM)
 +  include(HandleLLVMOptions)
-+  include(CheckAtomic)                                                                                                                                       
++  include(cmake/modules/CheckAtomic.cmake)
 +  include(TableGen)
 +
-+  if (PYTHON_EXECUTABLE STREQUAL "")
-+    set(Python_ADDITIONAL_VERSIONS 3.5 3.4 3.3 3.2 3.1 3.0 2.7 2.6 2.5)
-+    include(FindPythonInterp)
-+    if( NOT PYTHONINTERP_FOUND )
-+      message(FATAL_ERROR
-+              "Unable to find Python interpreter, required for builds and testing.
-+               Please install Python or specify the PYTHON_EXECUTABLE CMake variable.")
-+    endif()
-+  else()
-+    message("-- Found PythonInterp: ${PYTHON_EXECUTABLE}")                                                                                                   
-+  endif()
-+
 +  # Import CMake library targets from LLVM and Clang.
-+  include("${LLVM_OBJ_ROOT}/lib${LLVM_LIBDIR_SUFFIX}/cmake/llvm/LLVMConfig.cmake")
++  #include("${LLVM_CMAKE_PATH}/share/llvm/cmake/LLVMConfig.cmake")
 +
 +  set(PACKAGE_VERSION "${LLVM_PACKAGE_VERSION}")
 +                                                                                                                                                             
