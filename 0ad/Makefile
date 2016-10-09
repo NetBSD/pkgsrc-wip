@@ -22,13 +22,15 @@ do-configure:
 		--bindir=${PREFIX}/bin \
 		--datadir=${PREFIX}/share/${PKGBASE} \
 		--libdir=${PREFIX}/lib/${PKGBASE} \
-		--with-system-nvtt
-# --with-system-mozjs31
+		--with-system-nvtt \
+		--with-system-mozjs31
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
 
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../wip/spidermonkey31/buildlink3.mk"
 .include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
