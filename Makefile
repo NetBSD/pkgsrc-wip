@@ -2448,6 +2448,7 @@ SUBDIR+=	phantomjs
 SUBDIR+=	phantomjs2
 SUBDIR+=	pheanstalk
 SUBDIR+=	phonon-backend-xine
+SUBDIR+=	php-composer
 #SUBDIR+=	php-doc			# not a package
 SUBDIR+=	php-doc-br
 SUBDIR+=	php-doc-de
