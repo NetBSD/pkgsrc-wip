@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- doc/CMakeLists.txt.orig	2015-08-03 05:52:11.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -163,6 +163,8 @@ install (FILES omp.html
+          DESTINATION share/doc/openvas-manager/html/
+          COMPONENT doc)
+ 
++include(GNUInstallDirs)
++
+ install (FILES openvasmd.8
+-  DESTINATION share/man/man8/
++  DESTINATION ${CMAKE_INSTALL_MANDIR}/man8/
+   COMPONENT doc)

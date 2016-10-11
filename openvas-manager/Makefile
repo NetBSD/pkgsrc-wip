@@ -16,5 +16,6 @@ USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../wip/openvas-libraries/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
