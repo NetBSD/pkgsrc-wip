@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix path to install man-pages.
+
 --- doc/CMakeLists.txt.orig	2015-08-03 05:52:11.000000000 +0000
 +++ doc/CMakeLists.txt
 @@ -163,6 +163,8 @@ install (FILES omp.html

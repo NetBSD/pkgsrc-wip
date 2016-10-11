@@ -1,5 +1,7 @@
 $NetBSD$
 
+Don't overwrite _*_SOURCE, it breaks build on NetBSD.
+
 --- src/manage.c.orig	2016-08-25 12:15:47.000000000 +0000
 +++ src/manage.c
 @@ -37,10 +37,12 @@
