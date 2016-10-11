@@ -3536,7 +3536,6 @@ SUBDIR+=	py-utilib_ply
 SUBDIR+=	py-validictory
 SUBDIR+=	py-vanity
 SUBDIR+=	py-varify
-SUBDIR+=	py-vcversioner
 SUBDIR+=	py-vdirsyncer-git
 SUBDIR+=	py-vegas
 SUBDIR+=	py-venusian
