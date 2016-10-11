@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- doc/CMakeLists.txt.orig	2014-09-24 06:37:24.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -96,5 +96,7 @@ else (XMLMANTOHTML_EXECUTABLE)
+     COMMAND echo "[Error: xmlmantohtml required to see manpage here]" > omp.html)
+ endif (XMLMANTOHTML_EXECUTABLE)
+ 
++include(GNUInstallDirs)
++
+ install (FILES omp.8
+-  DESTINATION ${DATADIR}/man/man8 )
++  DESTINATION ${CMAKE_INSTALL_MANDIR}/man8 )
