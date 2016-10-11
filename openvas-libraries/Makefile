@@ -18,14 +18,14 @@ CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 # DragonFly-2.8.2 has dn_expand(3) in libc, and not have libresolv.
 BUILDLINK_TRANSFORM.DragonFly+=	rm:-lresolv
 
-.include "../../security/libksba/buildlink3.mk"
-.include "../../databases/openldap-client/buildlink3.mk"
-.include "../../devel/libuuid/buildlink3.mk"
-.include "../../security/libssh/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libksba/buildlink3.mk"
+.include "../../security/libssh/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
