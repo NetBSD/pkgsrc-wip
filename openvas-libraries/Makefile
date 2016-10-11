@@ -15,9 +15,6 @@ USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 
-# DragonFly-2.8.2 has dn_expand(3) in libc, and not have libresolv.
-BUILDLINK_TRANSFORM.DragonFly+=	rm:-lresolv
-
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
