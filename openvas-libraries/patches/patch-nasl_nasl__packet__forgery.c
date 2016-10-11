@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- nasl/nasl_packet_forgery.c.orig	2015-08-03 10:14:31.000000000 +0000
 +++ nasl/nasl_packet_forgery.c
 @@ -146,7 +146,11 @@ forge_ip_packet (lex_ctxt * lexic)

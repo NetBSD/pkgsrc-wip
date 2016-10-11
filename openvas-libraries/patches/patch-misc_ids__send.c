@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- misc/ids_send.c.orig	2015-08-03 10:14:29.000000000 +0000
 +++ misc/ids_send.c
 @@ -36,6 +36,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install man-pages into proper dir.
+
 --- CMakeLists.txt.orig	2016-02-26 14:31:03.000000000 +0000
 +++ CMakeLists.txt
 @@ -343,8 +343,10 @@ add_subdirectory (doc)

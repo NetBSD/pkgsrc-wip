@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- nasl/nasl_builtin_synscan.c.orig	2015-08-03 10:14:31.000000000 +0000
 +++ nasl/nasl_builtin_synscan.c
 @@ -692,7 +692,11 @@ scan (struct arglist * env, char* hostna

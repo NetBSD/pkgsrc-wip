@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- misc/network.c.orig	2016-08-25 12:02:52.000000000 +0000
 +++ misc/network.c
 @@ -2068,7 +2068,11 @@ open_sock_opt_hn (const char *hostname, 

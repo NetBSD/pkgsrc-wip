@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- misc/pcap.c.orig	2015-08-03 10:14:29.000000000 +0000
 +++ misc/pcap.c
 @@ -126,7 +126,13 @@ v6_is_local_ip (struct in6_addr *addr)

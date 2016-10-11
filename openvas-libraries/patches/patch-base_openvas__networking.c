@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- base/openvas_networking.c.orig	2016-04-22 13:45:43.000000000 +0000
 +++ base/openvas_networking.c
 @@ -44,7 +44,7 @@ char global_source_iface[IFNAMSIZ] = { '

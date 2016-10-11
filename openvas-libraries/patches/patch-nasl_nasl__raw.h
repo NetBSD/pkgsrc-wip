@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- nasl/nasl_raw.h.orig	2015-08-03 10:14:31.000000000 +0000
 +++ nasl/nasl_raw.h
 @@ -43,6 +43,11 @@

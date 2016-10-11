@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- nasl/nasl_socket.c.orig	2016-07-22 06:15:35.000000000 +0000
 +++ nasl/nasl_socket.c
 @@ -266,7 +266,11 @@ tryagain:
