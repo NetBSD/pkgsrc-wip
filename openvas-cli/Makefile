@@ -12,11 +12,13 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	YES
 BUILD_DEFS+=	VARBASE
 USE_LANGUAGES=	c++ c
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config bash
 
 CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 
 BUILDLINK_TRANSFORM+=	rm:-Werror # -Wmissing-field-initializers
+
+REPLACE_BASH+=	dialog/omp-dialog
 
 .include "../../wip/openvas-libraries/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
