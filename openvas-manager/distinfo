@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.6 2015/11/04 01:17:52 agc Exp $
+
+SHA1 (openvas-scanner-5.0.7.tar.gz) = ca5ba1a65ff34a8cb8c014cb09129434e319d689
+RMD160 (openvas-scanner-5.0.7.tar.gz) = 985332a803577eb9a1a7f964f776a5f672d802d3
+SHA512 (openvas-scanner-5.0.7.tar.gz) = 302adb2933dc7467dd189da632631f67c763e0b163b10502807922a6734fa693c8bf3f591d0ddba67cd335c57e60148c308c01cec64cac28cb9dca0345ffbb33
+Size (openvas-scanner-5.0.7.tar.gz) = 238419 bytes
+SHA1 (patch-CMakeLists.txt) = 14ba35b3d347ee17954a40d1a5828e8cadc4411f
+SHA1 (patch-src_CMakeLists.txt) = 054e43b35ed3a933ea421f27260e28409fc66333
+SHA1 (patch-src_attack.c) = 841ced33c0cdc34ff3662b719e81810f8c3f6419
