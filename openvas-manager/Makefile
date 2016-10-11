@@ -20,7 +20,7 @@ REPLACE_PYTHON+=	tools/extra/xml_split
 
 EGDIR=		${PREFIX}/share/examples/openvas-manager
 
-OWN_DIRS=       ${PKG_SYSCONFDIR}/openvas
+OWN_DIRS=	${PKG_SYSCONFDIR}/openvas
 
 CONF_FILES+=	${EGDIR}/openvasmd_log.conf ${PKG_SYSCONFDIR}/openvas/openvasmd_log.conf
 CONF_FILES+=	${EGDIR}/pwpolicy.conf ${PKG_SYSCONFDIR}/openvas/pwpolicy.conf
