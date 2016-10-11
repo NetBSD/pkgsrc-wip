@@ -1,5 +1,12 @@
-OpenVAS stands for Open Vulnerability Assessment System and is a
-network security scanner with associated tools like a graphical
-user front-end. The core component is a server with a set of network
-vulnerability tests (NVTs) to detect security problems in remote
-systems and applications.
+The Open Vulnerability Assessment System (OpenVAS) is a framework of several
+services and tools offering a comprehensive and powerful vulnerability scanning
+and vulnerability management solution.
+
+The OpenVAS Manager is a layer between the OpenVAS Scanner and various client
+applications such as the web client GSA (Greenbone Security Assistant), the
+command line client omp (of openvas-cli) and the classic application GSD
+(Greenbone Security Desktop).  Among other features, it adds server-side
+storage of scan results and it removes the need for a scan client to keep the
+connection open until the scan finishes. All communication between OpenVAS
+Manager and its clients is done via the XML-based OpenVAS Management Protocol
+(OMP).
