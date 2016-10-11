@@ -1,5 +1,8 @@
 $NetBSD$
 
+Bump minimum CMake version to 3.0 to get libbacktrace detection.
+Fix path for installing man-pages.
+
 --- CMakeLists.txt.orig	2016-08-30 12:27:33.000000000 +0000
 +++ CMakeLists.txt
 @@ -27,7 +27,7 @@ message ("-- Configuring the Scanner..."

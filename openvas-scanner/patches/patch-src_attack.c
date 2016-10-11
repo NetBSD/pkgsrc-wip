@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/attack.c.orig	2016-08-25 12:07:28.000000000 +0000
 +++ src/attack.c
 @@ -647,7 +647,11 @@ attack_start (struct attack_start_args *
