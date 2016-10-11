@@ -2,6 +2,7 @@
 bin/aircrack-ng
 bin/airdecap-ng
 bin/airdecloak-ng
+bin/besside-ng-crawler
 bin/ivstools
 bin/kstats
 bin/makeivs-ng
