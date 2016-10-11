@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2016-02-26 14:31:03.000000000 +0000
++++ CMakeLists.txt
+@@ -343,8 +343,10 @@ add_subdirectory (doc)
+ 
+ ## Install
+ 
++include(GNUInstallDirs)
++
+ install (FILES doc/openvas-nasl.1
+-         DESTINATION ${DATADIR}/man/man1 )
++         DESTINATION ${CMAKE_INSTALL_MANDIR}/man1 )
+ 
+ install (FILES ${CMAKE_BINARY_DIR}/libopenvas_base.pc
+          DESTINATION ${LIBDIR}/pkgconfig)
