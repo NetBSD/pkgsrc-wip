@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2016-08-30 12:27:33.000000000 +0000
++++ CMakeLists.txt
+@@ -27,7 +27,7 @@ message ("-- Configuring the Scanner..."
+ 
+ project (openvas-scanner C)
+ 
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.0)
+ 
+ if (POLICY CMP0005)
+   cmake_policy (SET CMP0005 OLD)

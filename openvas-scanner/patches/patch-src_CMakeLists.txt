@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- src/CMakeLists.txt.orig	2015-08-03 10:14:45.000000000 +0000
++++ src/CMakeLists.txt
+@@ -112,10 +112,12 @@ if (NVT_TIMEOUT)
+   add_definitions (-DNVT_TIMEOUT=${NVT_TIMEOUT})
+ endif (NVT_TIMEOUT)
+ 
++find_package(Backtrace)
++
+ target_link_libraries (openvassd ${LIBOPENVAS_NASL_LDFLAGS}
+                        ${LIBOPENVAS_BASE_LDFLAGS} ${LIBOPENVAS_MISC_LDFLAGS}
+                        ${LIBOPENVAS_OMP_LDFLAGS} ${GLIB_LDFLAGS}
+-                       ${GCRYPT_LDFLAGS})
++                       ${GCRYPT_LDFLAGS} ${Backtrace_LIBRARY})
+ 
+ ## Tests
+ 
