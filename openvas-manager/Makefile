@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.17 2016/09/19 13:04:27 wiz Exp $
 
-DISTNAME=	openvas-scanner-5.0.7
+DISTNAME=	openvas-manager-6.0.9
 CATEGORIES=	security
-MASTER_SITES=	http://wald.intevation.org/frs/download.php/2367/
+MASTER_SITES=	http://wald.intevation.org/frs/download.php/2359/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvas.org/
-COMMENT=	Open Vulnerability Assessment System Scanner
+COMMENT=	Manager for OpenVAS
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	YES
