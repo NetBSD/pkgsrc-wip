@@ -1,6 +1,4 @@
 @comment $NetBSD$
-etc/openvas/openvasmd_log.conf
-etc/openvas/pwpolicy.conf
 man/man8/openvasmd.8
 sbin/greenbone-certdata-sync
 sbin/greenbone-scapdata-sync
@@ -10,6 +8,8 @@ sbin/openvas-portnames-update
 sbin/openvas-scapdata-sync
 sbin/openvasmd
 share/doc/openvas-manager/html/omp.html
+share/examples/openvas-manager/openvasmd_log.conf
+share/examples/openvas-manager/pwpolicy.conf
 share/openvas/cert/cert_bund_getbyname.xsl
 share/openvas/cert/cert_bund_update.xsl
 share/openvas/cert/cert_db_init.sql
