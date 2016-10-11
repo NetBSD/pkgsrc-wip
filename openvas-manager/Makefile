@@ -16,6 +16,9 @@ USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 
+REPLACE_PYTHON+=	tools/extra/xml_split
+
+.include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../wip/openvas-libraries/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
