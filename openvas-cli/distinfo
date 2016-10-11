@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.6 2015/11/04 01:17:52 agc Exp $
 
-SHA1 (openvas-manager-6.0.9.tar.gz) = bb8b1652e2c6539a80fe861584a844f1ae38c4ff
-RMD160 (openvas-manager-6.0.9.tar.gz) = c9c230ecf4ddce8c2ce1b3ae6cadd55d142e8081
-SHA512 (openvas-manager-6.0.9.tar.gz) = 1111ad3ef4e1286cc71129ecd552bac00386347c30b6e8b706a8fa989d58fff19fff2e1c5cbdfde921d83c5812358cb089e5bc45ae56bb5b87b3bfe5fab1ece8
-Size (openvas-manager-6.0.9.tar.gz) = 1954878 bytes
+SHA1 (openvas-cli-1.4.4.tar.gz) = 352fdfa30713321e74f0052c87cd4dce7a3c3321
+RMD160 (openvas-cli-1.4.4.tar.gz) = 569b28ba5b6ac8794477e6be039cbb154de7e871
+SHA512 (openvas-cli-1.4.4.tar.gz) = 9533beaa7daf38fd57c6c6e934d6d30b5ee5ec0b1f47ca3a131583260e5cbb9794bc3d3ff634f9548999fe62658a906d67875e703e5dfec59df18086cf721d07
+Size (openvas-cli-1.4.4.tar.gz) = 107455 bytes
+SHA1 (patch-doc_CMakeLists.txt) = 76b0b94653fa32e2c580ad2c608486d8df41d2ad
