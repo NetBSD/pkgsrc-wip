@@ -1,13 +1,13 @@
 @comment $NetBSD$
 bin/openvas-mkcert-client
+man/man1/openvas-mkcert-client.1
+man/man8/greenbone-nvt-sync.8
+man/man8/openvas-mkcert.8
+man/man8/openvas-nvt-sync.8
+man/man8/openvassd.8
 sbin/greenbone-nvt-sync
 sbin/openvas-mkcert
 sbin/openvas-nvt-sync
 sbin/openvassd
 share/doc/openvas-scanner/example_redis_2_4.conf
 share/doc/openvas-scanner/example_redis_2_6.conf
-share/man/man1/openvas-mkcert-client.1
-share/man/man8/greenbone-nvt-sync.8
-share/man/man8/openvas-mkcert.8
-share/man/man8/openvas-nvt-sync.8
-share/man/man8/openvassd.8

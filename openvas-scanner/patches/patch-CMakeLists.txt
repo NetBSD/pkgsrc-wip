@@ -11,3 +11,25 @@ $NetBSD$
  
  if (POLICY CMP0005)
    cmake_policy (SET CMP0005 OLD)
+@@ -263,16 +263,18 @@ install (FILES ${CMAKE_BINARY_DIR}/tools
+          PERMISSIONS OWNER_EXECUTE OWNER_READ OWNER_WRITE
+                      GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+ 
++include(GNUInstallDirs)
++
+ install (FILES ${CMAKE_SOURCE_DIR}/doc/openvas-mkcert-client.1
+-          DESTINATION ${DATADIR}/man/man1 )
++          DESTINATION ${CMAKE_INSTALL_MANDIR}/man1 )
+ 
+ install (FILES ${CMAKE_BINARY_DIR}/doc/openvassd.8
+-         DESTINATION ${DATADIR}/man/man8 )
++         DESTINATION ${CMAKE_INSTALL_MANDIR}/man8 )
+ 
+ install (FILES ${CMAKE_SOURCE_DIR}/doc/openvas-mkcert.8
+                ${CMAKE_SOURCE_DIR}/doc/openvas-nvt-sync.8
+                ${CMAKE_SOURCE_DIR}/doc/greenbone-nvt-sync.8
+-         DESTINATION ${DATADIR}/man/man8 )
++         DESTINATION ${CMAKE_INSTALL_MANDIR}/man8 )
+ 
+ install (FILES ${CMAKE_BINARY_DIR}/doc/example_redis_2_4.conf
+                ${CMAKE_BINARY_DIR}/doc/example_redis_2_6.conf
