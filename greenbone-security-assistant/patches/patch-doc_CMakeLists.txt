@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install man-pages to proper directory.
+
 --- doc/CMakeLists.txt.orig	2015-08-03 08:55:54.000000000 +0000
 +++ doc/CMakeLists.txt
 @@ -101,6 +101,7 @@ endif (XMLMANTOHTML_EXECUTABLE)
