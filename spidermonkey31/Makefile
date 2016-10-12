@@ -31,6 +31,8 @@ MAKE_JOBS_SAFE=	no
 PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
 PKGCONFIG_OVERRIDE+=	js.pc.in
 
+TEST_TARGET=		check
+
 CHECK_PORTABILITY_SKIP+=	tests/update-test262.sh
 
 PYTHON_VERSIONS_ACCEPTED=	27
@@ -58,6 +60,8 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-31.a
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-31.pc
 
+PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -4,3 +4,5 @@ SHA1 (mozjs-31.2.0.rc0.tar.bz2) = db818cfc36382253301d0f0f14495fd186d5d28a
 RMD160 (mozjs-31.2.0.rc0.tar.bz2) = b62057d85933362f4e431180424a39c2d3231386
 SHA512 (mozjs-31.2.0.rc0.tar.bz2) = 6a2025f0c419e56b89876a3543aabc459cdcf915a4cf4aedc55d89fc59d469d23aee2d505a930442e887705f0d62762e2218b312c5d56741cdb5aa54433cb71b
 Size (mozjs-31.2.0.rc0.tar.bz2) = 21410352 bytes
+SHA1 (patch-assembler_assembler_MIPSAssembler.h) = 2698ee3eb71b28fd412e8a33284e251e1ed5a013
+SHA1 (patch-jsnativestack.cpp) = a07cfa38f2005d29399c06b3ce5ac22a326a2193
