@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.6 2015/11/04 01:17:52 agc Exp $
+
+SHA1 (openvas-manager-6.0.9.tar.gz) = bb8b1652e2c6539a80fe861584a844f1ae38c4ff
+RMD160 (openvas-manager-6.0.9.tar.gz) = c9c230ecf4ddce8c2ce1b3ae6cadd55d142e8081
+SHA512 (openvas-manager-6.0.9.tar.gz) = 1111ad3ef4e1286cc71129ecd552bac00386347c30b6e8b706a8fa989d58fff19fff2e1c5cbdfde921d83c5812358cb089e5bc45ae56bb5b87b3bfe5fab1ece8
+Size (openvas-manager-6.0.9.tar.gz) = 1954878 bytes
+SHA1 (patch-CMakeLists.txt) = 97d41cd6ca02c8ee85c04ba0b1c2a90ce927a7bd
+SHA1 (patch-doc_CMakeLists.txt) = c1e2af99b86f3c0fcd60d80621fbc70e2f202b19
+SHA1 (patch-src_CMakeLists.txt) = a76c0b0fa6eda9736c6c9bdd9cea1d396e701dd9
+SHA1 (patch-src_manage.c) = 7b2a9f7abc6e25cc1217ddde89299f7772260f9a
+SHA1 (patch-src_manage__migrators.c) = ca42e85b32d6750aad7a8f338084e380110dda13
+SHA1 (patch-src_manage__sql.c) = 868b20a4a0583664fe7c7151f855927716e46cc2
+SHA1 (patch-src_manage__sqlite3.c) = 5ca8910449c2034ece9e8a56b9aab0017afa960e
