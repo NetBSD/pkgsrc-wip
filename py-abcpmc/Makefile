@@ -2,7 +2,7 @@
 
 DISTNAME=	abcpmc-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/abcpmc/}
 
 MAINTAINER=	jihbed.research@gmail.com
