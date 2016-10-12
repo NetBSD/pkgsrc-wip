@@ -1,6 +1,6 @@
 @comment $NetBSD$
-bin/js
-bin/js-config
+bin/js31
+bin/js31-config
 include/mozjs-31/js.msg
 include/mozjs-31/js/Anchor.h
 include/mozjs-31/js/CallArgs.h
