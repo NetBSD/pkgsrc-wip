@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	YES
 BUILD_DEFS+=	VARBASE
 USE_LANGUAGES=	c++ c
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gsed:run
 
 CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 
@@ -30,6 +30,12 @@ SUBST_FILES.confdir=	CMakeLists.txt
 SUBST_SED.confdir=	-e 's,DESTINATION $${OPENVAS_SYSCONF_DIR},DESTINATION ${EGDIR}/,'
 SUBST_STAGE.confdir=	post-patch
 
+SUBST_CLASSES+=		gnused
+SUBST_FILES.gnused=	tools/openvas-portnames-update.in
+SUBST_SED.gnused=	-e 's,sed -s,${TOOLS_PATH.gsed} -s,' # parameter "-s" is a gnu extension
+SUBST_STAGE.gnused=	post-patch
+
+.include "../../textproc/libxslt/buildlink3.mk" # tool xsltproc used
 .include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../wip/openvas-libraries/buildlink3.mk"
