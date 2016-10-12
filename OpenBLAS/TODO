@@ -1,0 +1,101 @@
+The aim of this package is to build a blas library for pkgsrc with optimized
+kernels for all processors, dynamically chosen at runtime, to allow distribution
+as a binary package. This gets quite large (~ 100 MB) and pkgsrc has to deal with
+different types of processor architectures, operating systems and compilers. In my
+opinion the only way to deal with this is to build all of pkgsrc with the most recent
+GCC in lang/gcc.
+
+OpenBLAS has support for the processors listed in '* Supported List'
+at the end of this TODO. There should be an option to choose 64 or 32
+bit depending on build system. Right now only 64 bit kernels are built. 
+ONLY_FOR_PLATFORM should be adjusted for all possible platforms. 
+
+If you ask three people involved in Numerics, they want over a dozen ways to build
+OpenBLAS for the special purposes of different simulation codes. In fact I use
+four different ways at work, but this package should only have a small number of
+options to keep it managable. 
+
+If you want to use other C and Fortran compilers besides gcc 6.2, then change
+GCC_REQD or fiddle with PKGSRC variables. Good luck and may the force be with you.
+
+Kai-Uwe
+
+
+
+* Supported List:
+1.X86/X86_64
+a)Intel CPU:
+P2
+KATMAI
+COPPERMINE
+NORTHWOOD
+PRESCOTT
+BANIAS
+YONAH
+CORE2
+PENRYN
+DUNNINGTON
+NEHALEM
+SANDYBRIDGE
+HASWELL
+ATOM
+
+b)AMD CPU:
+ATHLON
+OPTERON
+OPTERON_SSE3
+BARCELONA
+SHANGHAI
+ISTANBUL
+BOBCAT
+BULLDOZER
+PILEDRIVER
+STEAMROLLER
+EXCAVATOR
+
+c)VIA CPU:
+SSE_GENERIC
+VIAC3
+NANO
+
+2.Power CPU:
+POWER4
+POWER5
+POWER6
+POWER7
+POWER8
+PPCG4
+PPC970
+PPC970MP
+PPC440
+PPC440FP2
+CELL
+
+3.MIPS CPU:
+P5600
+
+4.MIPS64 CPU:
+SICORTEX
+LOONGSON3A
+LOONGSON3B
+I6400
+P6600
+
+5.IA64 CPU:
+ITANIUM2
+
+6.SPARC CPU:
+SPARC
+SPARCV7
+
+7.ARM CPU:
+CORTEXA15
+CORTEXA9
+ARMV7
+ARMV6
+ARMV5
+
+8.ARM 64-bit CPU:
+ARMV8
+CORTEXA57
+

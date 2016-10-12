@@ -18,6 +18,7 @@ SUBDIR+=	GoogleEarth
 SUBDIR+=	I2util
 SUBDIR+=	LabPlot
 SUBDIR+=	MoleInvasion
+SUBDIR+=	OpenBLAS
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4

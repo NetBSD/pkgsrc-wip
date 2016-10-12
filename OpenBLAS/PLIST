@@ -1,0 +1,15 @@
+@comment $NetBSD$
+include/cblas.h
+include/f77blas.h
+include/lapacke.h
+include/lapacke_config.h
+include/lapacke_mangling.h
+include/lapacke_utils.h
+include/openblas_config.h
+lib/cmake/openblas/OpenBLASConfig.cmake
+lib/cmake/openblas/OpenBLASConfigVersion.cmake
+lib/libopenblas.a
+lib/libopenblas.so
+lib/libopenblasp-r${PKGVERSION}.a
+lib/libopenblasp-r${PKGVERSION}.so
+@pkgdir bin

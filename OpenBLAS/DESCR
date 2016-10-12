@@ -1,0 +1,6 @@
+OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD. It is a
+prerequisite to get decent performance for anything based on BLAS (like octave
+or R) and contains a complete implementation of LAPACK and LAPACKE as well.
+
+The aim of this package is to build a blas library for pkgsrc with optimized
+kernels for all processors, dynamically chosen at runtime.
