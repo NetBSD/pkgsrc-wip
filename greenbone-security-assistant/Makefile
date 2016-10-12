@@ -16,5 +16,10 @@ USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../wip/openvas-libraries/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

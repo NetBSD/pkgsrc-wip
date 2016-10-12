@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- doc/CMakeLists.txt.orig	2015-08-03 08:55:54.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -101,6 +101,7 @@ endif (XMLMANTOHTML_EXECUTABLE)
+ 
+ ## Install
+ 
+-install (FILES gsad.8
+-  DESTINATION ${DATADIR}/man/man8 )
++include(GNUInstallDirs)
+ 
++install (FILES gsad.8
++  DESTINATION ${CMAKE_INSTALL_MANDIR}/man8 )
