@@ -7,7 +7,7 @@ MASTER_SITES=	http://wald.intevation.org/frs/download.php/2363/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openvas.org/
 COMMENT=	Manager for OpenVAS
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 AND mit AND modified-bsd
 
 USE_CMAKE=	YES
 BUILD_DEFS+=	VARBASE
