@@ -1,7 +1,7 @@
 @comment $NetBSD$
-etc/openvas/gsad_log.conf
 man/man8/gsad.8
 sbin/gsad
+share/examples/greenbone-security-assistant/gsad_log.conf
 share/locale/de/LC_MESSAGES/gsad_xsl.mo
 share/locale/ru/LC_MESSAGES/gsad_xsl.mo
 share/locale/zh_CN/LC_MESSAGES/gsad_xsl.mo
