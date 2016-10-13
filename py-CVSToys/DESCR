@@ -1,6 +1,0 @@
-CVSToys is a collection of companion tools for the Concurrent Versions
-System, better known as CVS. The biggest best and only toy we've got is
-Fresh CVS, a commit monitoring daemon which can keep a mirror of the
-repository or checked-out working copy up to date, and send out
-notifications by e-mail, on the web as HTML or RSS, or to a chat service
-such as IRC.
