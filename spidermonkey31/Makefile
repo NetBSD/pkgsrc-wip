@@ -57,13 +57,18 @@ post-install:
 	install_name_tool -id ${PREFIX}/lib/libmozjs-31.dylib \
 		${DESTDIR}${PREFIX}/lib/libmozjs-31.dylib
 .endif
-	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-31/*.*
-	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-31/*/*.*
-	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-31.a
-	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-31.pc
 # Remove conflict with alternative spidermonkey releases
 	${MV} ${DESTDIR}${PREFIX}/bin/js ${DESTDIR}${PREFIX}/bin/js31
 	${MV} ${DESTDIR}${PREFIX}/bin/js-config ${DESTDIR}${PREFIX}/bin/js31-config
+# This package installs dummy headers as symlinks to.. ${WRKSRC} - fix it here
+# There won't be updates of this spidermonkey release so it's not necessary
+# to produce a more accurate fix in package's install target.
+	${RUN} cd ${DESTDIR}${PREFIX}/include && \
+		for lnk in `find . -type l`; do \
+			hdr=`readlink $$lnk`; \
+			${RM} -f $$lnk; \
+		${INSTALL} $$hdr $$lnk; \
+	done
 # Install missing files
 	${INSTALL} ${WRKSRC}/js/src/js-config.h ${DESTDIR}${PREFIX}/include/mozjs-31/
 
