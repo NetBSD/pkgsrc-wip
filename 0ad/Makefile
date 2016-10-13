@@ -29,6 +29,9 @@ do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
 
+.include "../../www/curl/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../chat/gloox/buildlink3.mk"
 .include "../../wip/miniupnpc/buildlink3.mk"
 .include "../../wip/enet/buildlink3.mk"
