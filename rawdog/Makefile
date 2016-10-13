@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rawdog-2.21
+DISTNAME=	rawdog-2.22
 CATEGORIES=	news
 MASTER_SITES=	http://offog.org/files/
 
