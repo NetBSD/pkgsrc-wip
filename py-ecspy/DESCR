@@ -3,4 +3,7 @@ for creating evolutionary computations in Python. Additionally, ECsPy provides
 an easy-to-use canonical genetic algorithm (GA), evolution strategy (ES),
 estimation of distribution algorithm (EDA), differential evolution algorithm
 (DEA), and particle swarm optimizer (PSO) for users who don't need much
-customization
+customization.
+
+As of April 3, 2012, ECsPy has been deprecated. New users should instead use
+the inspyred library. ECsPy will no longer be maintained.
