@@ -61,8 +61,11 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/include/mozjs-31/*/*.*
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmozjs-31.a
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/pkgconfig/mozjs-31.pc
+# Remove conflict with alternative spidermonkey releases
 	${MV} ${DESTDIR}${PREFIX}/bin/js ${DESTDIR}${PREFIX}/bin/js31
 	${MV} ${DESTDIR}${PREFIX}/bin/js-config ${DESTDIR}${PREFIX}/bin/js31-config
+# Install missing files
+	${CP} ${WRKSRC}/js/src/js-config.h ${DESTDIR}${PREFIX}/include/mozjs-31/
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		yes
