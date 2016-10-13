@@ -65,7 +65,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/js ${DESTDIR}${PREFIX}/bin/js31
 	${MV} ${DESTDIR}${PREFIX}/bin/js-config ${DESTDIR}${PREFIX}/bin/js31-config
 # Install missing files
-	${CP} ${WRKSRC}/js/src/js-config.h ${DESTDIR}${PREFIX}/include/mozjs-31/
+	${INSTALL} ${WRKSRC}/js/src/js-config.h ${DESTDIR}${PREFIX}/include/mozjs-31/
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		yes

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- jsnativestack.cpp.orig	2014-10-10 18:31:12.000000000 +0000
 +++ jsnativestack.cpp
 @@ -98,7 +98,7 @@ js::GetNativeStackBaseImpl()

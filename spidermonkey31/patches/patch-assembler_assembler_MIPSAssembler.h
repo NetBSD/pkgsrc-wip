@@ -1,5 +1,7 @@
 $NetBSD$
 
+Improve NOP-like function usage.
+
 --- assembler/assembler/MIPSAssembler.h.orig	2014-10-10 18:31:12.000000000 +0000
 +++ assembler/assembler/MIPSAssembler.h
 @@ -226,7 +226,10 @@ public:
