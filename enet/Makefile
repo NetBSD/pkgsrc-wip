@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2012/09/28 22:07:34 asau Exp $
 #
 
-DISTNAME=	enet-1.0
+DISTNAME=	enet-1.3.13
 CATEGORIES=	net
 MASTER_SITES=	http://enet.bespin.org/download/
 
