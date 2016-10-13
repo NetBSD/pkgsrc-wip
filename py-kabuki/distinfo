@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/07/26 18:35:37 jihbed Exp $
 
-SHA1 (kabuki-0.5.4.tar.gz) = 4fc40130a7933e0d617e785d09bbef407b99ee84
-RMD160 (kabuki-0.5.4.tar.gz) = f98bbc2ef19007b71c1e6dc45f944d1195933608
-Size (kabuki-0.5.4.tar.gz) = 44698 bytes
+SHA1 (kabuki-0.6.1.tar.gz) = 6dc7775ee95f0167d31a79e34aa33b969322b108
+RMD160 (kabuki-0.6.1.tar.gz) = fa58a30598915f70dcf5d645b44320555e4d381b
+SHA512 (kabuki-0.6.1.tar.gz) = 14f7a9fd87b47d159874df8dfb5cd7583c0a3896cca6559177c699b0a49e208fc489de7d12c2058fa092fcdf09d96425d7011c2be89751177269565107153f83
+Size (kabuki-0.6.1.tar.gz) = 44925 bytes
