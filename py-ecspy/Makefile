@@ -3,10 +3,10 @@
 DISTNAME=	ecspy-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://ecspy.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/ecspy/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://code.google.com/p/ecspy/
+HOMEPAGE=	http://ecspy.googlecode.com
 COMMENT=	Framework for creating evolutionary computations in Python
 LICENSE=	gnu-gpl-v3
 

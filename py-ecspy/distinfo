@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2012/10/16 10:57:18 jihbed Exp $
 
-SHA1 (ecspy-1.1.tar.gz) = 53c7e0fe5d2b7f64d36048b580d0dac02ecb3cf2
-RMD160 (ecspy-1.1.tar.gz) = d79c51444ed6434e6209a1a7a79f31b7bce3d0c0
-Size (ecspy-1.1.tar.gz) = 173128 bytes
+SHA1 (ecspy-1.1.tar.gz) = 6f1bf0cc6e087599b70a3b88642f49eaa6bcc323
+RMD160 (ecspy-1.1.tar.gz) = b92161805a5e2e604721818b9bafcd38c1cd1cd1
+SHA512 (ecspy-1.1.tar.gz) = 4c99cfc6298a6781409b36853f24a57dac5c910f16f535d8109abded57722b950c9aad6a2a4d2a716486d3607caa4b1548e254b86be4663378b91e1d8c8e27ba
+Size (ecspy-1.1.tar.gz) = 173045 bytes
