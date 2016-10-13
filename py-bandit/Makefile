@@ -18,10 +18,5 @@ DEPENDS+=       ${PYPKGPREFIX}-stevedore>=1.7.0:../../wip/py-stevedore
 
 USE_LANGUAGES=	# none
 
-USE_LANGUAGES=	c
-
-#EGDIR=			${PREFIX}/share/bandit/wordlist
-#CONF_FILES=		${PKG_SYSCONFDIR}/bandit.yaml
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
