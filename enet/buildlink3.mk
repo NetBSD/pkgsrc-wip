@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	enet
+
+.if !defined(ENET_BUILDLINK3_MK)
+ENET_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.enet+=	enet>=1.3.13
+BUILDLINK_PKGSRCDIR.enet?=	../../wip/enet
+.endif	# ENET_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-enet
