@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bandit-0.16.0
+DISTNAME=	bandit-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bandit/}
@@ -15,8 +15,6 @@ DEPENDS+=       ${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=       ${PYPKGPREFIX}-yaml>=3.1.0:../../textproc/py-yaml
 DEPENDS+=       ${PYPKGPREFIX}-appdirs>=1.4.0:../../wip/py-appdirs
 DEPENDS+=       ${PYPKGPREFIX}-stevedore>=1.7.0:../../wip/py-stevedore
-
-WRKSRC=		${WRKDIR}/bandit-0.16.0
 
 USE_LANGUAGES=	# none
 
