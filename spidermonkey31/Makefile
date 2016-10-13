@@ -42,6 +42,8 @@ CONFIGURE_ENV+=			PYTHON=${PYTHONBIN:Q}
 
 CXXFLAGS+=	-fpermissive #  converting to 'bool' from 'std::nullptr_t'
 
+NOT_PAX_MPROTECT_SAFE+=	bin/js
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "x86_64"
