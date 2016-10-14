@@ -29,6 +29,8 @@ do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
 
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
