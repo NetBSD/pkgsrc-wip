@@ -5,6 +5,7 @@ RMD160 (0ad-0.0.20-alpha-unix-build.tar.xz) = 0f1283fe287f539f32fa0466f93b881aec
 SHA512 (0ad-0.0.20-alpha-unix-build.tar.xz) = 786f92b74c2e0c64c07ef2f5578dcb5c753fb4fed7238d385bca23549805fcfaeecb9bfbfae809a2ac09a7dfc804455237346588099db347c28a3ff0ae284c43
 Size (0ad-0.0.20-alpha-unix-build.tar.xz) = 25610932 bytes
 SHA1 (patch-build_premake_extern__libs4.lua) = dfdbce501c9506ebfe9be2a5bdf30f5f7cdbb86b
+SHA1 (patch-build_premake_premake4.lua) = c160648a3891546471a4ac9c831071eab43b9296
 SHA1 (patch-build_workspaces_clean-workspaces.sh) = fed7e867eb8e24e37860599269f9feb4d30c5a43
 SHA1 (patch-build_workspaces_update-workspaces.sh) = 3e92f823e3204451522055a5f4cd2ee1d5819b2f
 SHA1 (patch-libraries_source_fcollada_include_FCDocument_FCDocument.h) = 9f60871e9f05784b10ba97efffe756ece473f9b2
