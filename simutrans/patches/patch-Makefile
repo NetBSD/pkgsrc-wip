@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- Makefile.orig	2016-01-09 22:36:24.000000000 +0000
++++ Makefile
+@@ -1,6 +1,11 @@
+ CFG ?= default
+ -include config.$(CFG)
+ 
++BACKEND=mixer_sdl
++COLOUR_DEPTH=16
++OSTYPE=freebsd
++VERBOSE=1
++
+ 
+ BACKENDS      = allegro gdi opengl sdl sdl2 mixer_sdl posix
+ COLOUR_DEPTHS = 0 16

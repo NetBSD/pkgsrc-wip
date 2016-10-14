@@ -1,0 +1,2 @@
+#!/bin/sh
+sim -use_workdir ${PREFIX}/share/simutrans/

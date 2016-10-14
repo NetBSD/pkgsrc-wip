@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (simutrans-src-120-1-3.zip) = a8ec53a5de48c834abdb1cc86866954e97f645df
+RMD160 (simutrans-src-120-1-3.zip) = 43a4e0589d0168cc35b1a528ba3690b3a84aa87a
+SHA512 (simutrans-src-120-1-3.zip) = ae31dda7bdbd057aaf9c40914eb7ec0c60b21d2790d1ca12aa8db698cd112043a291934f6f460b1d5a8a1984b7defb4a0c4bc9839c81c674834062cc1e49c8bd
+Size (simutrans-src-120-1-3.zip) = 3447115 bytes
+SHA1 (patch-Makefile) = a567c94861eb28736f7b367f3dcaab312162dbdf
+SHA1 (patch-boden_wege_weg.cc) = 02c674692c85401cb6484090195fe60ba923d429
+SHA1 (patch-obj_crossing.cc) = 283d895dfce853e5c71176674379e25bbb5a888a
+SHA1 (patch-obj_tunnel.cc) = 5fcc032c12115e11068a9c3ea7a42cf277716eba
+SHA1 (patch-obj_wayobj.cc) = 267a67e79160009226af3eb27762ebf1833fb190
+SHA1 (patch-simworld.cc) = d95eccc13864d2293c0dab9ba8c2178ad05a7d2c
+SHA1 (patch-utils_simthread.h) = 8b04ec231a5c861637ac3e41db3d7141308bcc93
