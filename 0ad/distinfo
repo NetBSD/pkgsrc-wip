@@ -19,4 +19,5 @@ SHA1 (patch-libraries_source_nvtt_src_src_nvcore_nvcore.h) = 2cd3f056b75172ae5e1
 SHA1 (patch-libraries_source_nvtt_src_src_nvcore_poshlib_posh.h) = b0759ead96db78237c5fa400cf320ab02e8b262b
 SHA1 (patch-libraries_source_nvtt_src_src_nvmath_nvmath.h) = 218723373dc9f117eca33960cac045acc0eee97a
 SHA1 (patch-source_graphics_TextureConverter.cpp) = d4e3920cd507468adc37dc92e27e6cbb50b5c5e2
+SHA1 (patch-source_lib_secure__crt.cpp) = 1e56aa627c8f2343884968ab4ebd4b4eec73b777
 SHA1 (patch-source_third__party_mikktspace_weldmesh.cpp) = 35df7dd5d5d2aa784ef03599a47cc69982ebe332
