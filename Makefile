@@ -3893,6 +3893,7 @@ SUBDIR+=	spade
 SUBDIR+=	spai
 SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
+SUBDIR+=	sparse
 SUBDIR+=	spatt
 SUBDIR+=	spe
 SUBDIR+=	speedx

@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (sparse-0.5.0.tar.gz) = 9a5a4fe98a8ba64465ec93d7b6ab419a9ef368e2
+RMD160 (sparse-0.5.0.tar.gz) = 566823986ca01eb924b74b03496b772972d3314a
+SHA512 (sparse-0.5.0.tar.gz) = 6c21735a4c9548771d51a8f22256122ee6f17489e830efd9b94ba28f58ee07038db4a55b13114b9ff9a70dbed7a668cab26275761ee12ff9be62a272c6be4221
+Size (sparse-0.5.0.tar.gz) = 239809 bytes
+SHA1 (patch-Makefile) = 2f31f0b28bf64b6c24fff2cd786f420f853222fb
+SHA1 (patch-cgcc) = 2525546ee8ea3ed52b3f3adc33add0365cf5cf49

@@ -1,0 +1,30 @@
+$NetBSD$
+
+Allow ovrride of PREFIX
+
+--- Makefile.orig	2014-02-16 22:44:57.000000000 +0000
++++ Makefile
+@@ -42,7 +42,7 @@ BASIC_CFLAGS += -Wp,-MD,$(@D)/.$(@F).d
+ endif
+ 
+ DESTDIR=
+-PREFIX=$(HOME)
++PREFIX?=$(HOME)
+ BINDIR=$(PREFIX)/bin
+ LIBDIR=$(PREFIX)/lib
+ MANDIR=$(PREFIX)/share/man
+@@ -128,12 +128,12 @@ QUIET_INST_SH = $(Q:@=echo -n  '     INS
+ QUIET_INST    = $(Q:@=@echo -n '     INSTALL  ';)
+ 
+ define INSTALL_EXEC
+-	$(QUIET_INST)install -v $1 $(DESTDIR)$2/$1 || exit 1;
++	$(QUIET_INST)install $1 $(DESTDIR)$2/$1 || exit 1;
+ 
+ endef
+ 
+ define INSTALL_FILE
+-	$(QUIET_INST)install -v -m 644 $1 $(DESTDIR)$2/$1 || exit 1;
++	$(QUIET_INST)install -m 644 $1 $(DESTDIR)$2/$1 || exit 1;
+ 
+ endef
+ 
