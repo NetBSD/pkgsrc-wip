@@ -3481,6 +3481,7 @@ SUBDIR+=	py-teng
 SUBDIR+=	py-termcolor
 SUBDIR+=	py-terminator-plugins-git
 SUBDIR+=	py-texml
+SUBDIR+=	py-textblob
 SUBDIR+=	py-thLib
 SUBDIR+=	py-theano
 SUBDIR+=	py-thermistor
