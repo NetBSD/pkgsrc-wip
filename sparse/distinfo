@@ -6,3 +6,5 @@ SHA512 (sparse-0.5.0.tar.gz) = 6c21735a4c9548771d51a8f22256122ee6f17489e830efd9b
 Size (sparse-0.5.0.tar.gz) = 239809 bytes
 SHA1 (patch-Makefile) = 2f31f0b28bf64b6c24fff2cd786f420f853222fb
 SHA1 (patch-cgcc) = 2525546ee8ea3ed52b3f3adc33add0365cf5cf49
+SHA1 (patch-dissect.h) = 850271dbec6758380134c3e36fb5a885cf69259e
+SHA1 (patch-pre-process.c) = d374d94d9284764124c053e32036958a430d2da7
