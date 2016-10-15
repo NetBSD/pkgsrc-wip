@@ -5,8 +5,14 @@ pkglint checks:
 
 Makefile:
 
-- Add in Tiff buildlink? Also, should these be includes or DEPENDS, I'm still not sure?
+- Add in Tiff buildlink? Also, should these be includes or DEPENDS, I'm still
+  not sure?
+- For whatever reason, since they switched to autogen with 8.4 I can't get this
+  to build via Pkgsrc without having libexif as a requirement. Even though it
+  should build fine without it; If I just extract the source and ./configure
+  and make it builds fine without libexif, it's just via this Makefile, etc.
 
 options.mk:
 
 - Should add in all the optional dependencies.
+

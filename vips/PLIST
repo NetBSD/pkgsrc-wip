@@ -5,7 +5,7 @@ bin/batch_rubber_sheet
 bin/light_correct
 bin/shrink_width
 bin/vips
-bin/vips-8.3
+bin/vips-8.4
 bin/vipsedit
 bin/vipsheader
 bin/vipsprofile
@@ -83,6 +83,13 @@ man/man1/vipsedit.1
 man/man1/vipsheader.1
 man/man1/vipsprofile.1
 man/man1/vipsthumbnail.1
+share/gtk-doc/html/libvips/VipsForeignSave.html
+share/gtk-doc/html/libvips/VipsImage.html
+share/gtk-doc/html/libvips/VipsInterpolate.html
+share/gtk-doc/html/libvips/VipsObject.html
+share/gtk-doc/html/libvips/VipsOperation.html
+share/gtk-doc/html/libvips/VipsRegion.html
+share/gtk-doc/html/libvips/VipsThreadState.html
 share/gtk-doc/html/libvips/annotation-glossary.html
 share/gtk-doc/html/libvips/api-index-full.html
 share/gtk-doc/html/libvips/binding.html
@@ -98,13 +105,6 @@ share/gtk-doc/html/libvips/index.html
 share/gtk-doc/html/libvips/interconvert.png
 share/gtk-doc/html/libvips/left-insensitive.png
 share/gtk-doc/html/libvips/left.png
-share/gtk-doc/html/libvips/libvips-VipsForeignSave.html
-share/gtk-doc/html/libvips/libvips-VipsImage.html
-share/gtk-doc/html/libvips/libvips-VipsInterpolate.html
-share/gtk-doc/html/libvips/libvips-VipsObject.html
-share/gtk-doc/html/libvips/libvips-VipsOperation.html
-share/gtk-doc/html/libvips/libvips-VipsRegion.html
-share/gtk-doc/html/libvips/libvips-VipsThreadState.html
 share/gtk-doc/html/libvips/libvips-arithmetic.html
 share/gtk-doc/html/libvips/libvips-basic.html
 share/gtk-doc/html/libvips/libvips-buf.html
@@ -141,5 +141,5 @@ share/gtk-doc/html/libvips/using-from-c.html
 share/gtk-doc/html/libvips/using-from-cpp.html
 share/gtk-doc/html/libvips/using-from-python.html
 share/gtk-doc/html/libvips/using-threads.html
-share/locale/de/LC_MESSAGES/vips8.3.mo
-share/locale/en_GB/LC_MESSAGES/vips8.3.mo
+share/locale/de/LC_MESSAGES/vips8.4.mo
+share/locale/en_GB/LC_MESSAGES/vips8.4.mo
