@@ -15,6 +15,7 @@ share/scite/SciTEExtension.html
 share/scite/SciTEExternalLexer.html
 share/scite/SciTEExtras.html
 share/scite/SciTEFAQ.html
+share/scite/SciTE.properties
 share/scite/SciTEGlobal.properties
 share/scite/SciTEIco.png
 share/scite/SciTEImage.html
@@ -37,6 +38,7 @@ share/scite/bullant.properties
 share/scite/caml.properties
 share/scite/cmake.properties
 share/scite/cobol.properties
+share/scite/coffeescript.properties
 share/scite/conf.properties
 share/scite/cpp.properties
 share/scite/csound.properties
@@ -52,8 +54,10 @@ share/scite/fortran.properties
 share/scite/freebasic.properties
 share/scite/gap.properties
 share/scite/haskell.properties
+share/scite/hex.properties
 share/scite/html.properties
 share/scite/inno.properties
+share/scite/json.properties
 share/scite/kix.properties
 share/scite/latex.properties
 share/scite/lisp.properties
@@ -80,6 +84,7 @@ share/scite/purebasic.properties
 share/scite/python.properties
 share/scite/r.properties
 share/scite/rebol.properties
+share/scite/registry.properties
 share/scite/ruby.properties
 share/scite/rust.properties
 share/scite/scriptol.properties
