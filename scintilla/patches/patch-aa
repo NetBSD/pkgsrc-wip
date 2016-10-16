@@ -1,37 +1,36 @@
---- gtk/makefile.orig	2016-05-17 23:50:39.000000000 +0000
-+++ gtk/makefile	2016-08-21 23:04:04.169401815 +0000
-@@ -15,6 +15,7 @@
+--- gtk/makefile.orig	2016-08-30 04:39:06.000000000 +0000
++++ gtk/makefile	2016-10-16 20:17:20.234493124 +0000
+@@ -17,6 +17,7 @@
  SANITIZE = address
  #SANITIZE = undefined
  endif
 +AR= ar
+ ARFLAGS = rc
  RANLIB = touch
  
- ifdef GTK3
-@@ -42,7 +43,8 @@
- COMPLIB=..\bin\scintilla.a
+@@ -45,7 +46,8 @@
+ COMPLIB=$(srcdir)\..\bin\scintilla.a
  else
  DEL = rm -f
--COMPLIB=../bin/scintilla.a
-+COMPLIB=../bin/libscintilla.a
-+LEXERLIB=../bin/libscintilla_lexers.a
+-COMPLIB=$(srcdir)/../bin/scintilla.a
++COMPLIB=$(srcdir)/../bin/libscintilla.a
++LEXERLIB=$(srcdir)/../bin/libscintilla_lexers.a
  endif
  
- vpath %.h ../src ../include ../lexlib
-@@ -95,7 +97,7 @@
+ vpath %.h $(srcdir) $(srcdir)/../src $(srcdir)/../include $(srcdir)/../lexlib
+@@ -98,7 +100,7 @@
  
- LEXOBJS:=$(addsuffix .o,$(basename $(notdir $(wildcard ../lexers/Lex*.cxx))))
+ LEXOBJS:=$(addsuffix .o,$(basename $(notdir $(wildcard $(srcdir)/../lexers/Lex*.cxx))))
  
 -all: $(COMPLIB)
 +all: $(COMPLIB) $(LEXERLIB)
  
  clean:
  	$(DEL) *.o $(COMPLIB) *.plist
-@@ -105,16 +107,22 @@
+@@ -110,15 +112,22 @@
+ deps.mak:
+ 	$(CXX) -MM $(CONFIGFLAGS) $(CXXTFLAGS) $(srcdir)/*.cxx $(srcdir)/../src/*.cxx $(srcdir)/../lexlib/*.cxx $(srcdir)/../lexers/*.cxx | sed -e 's/\/usr.* //' | grep [a-zA-Z] > $@
  
- deps:
- 	$(CXX) -MM $(CONFIGFLAGS) $(CXXTFLAGS) *.cxx ../src/*.cxx ../lexlib/*.cxx ../lexers/*.cxx | sed -e 's/\/usr.* //' | grep [a-zA-Z] >deps.mak
--
 -$(COMPLIB): Accessor.o CharacterSet.o LexerBase.o LexerModule.o LexerSimple.o StyleContext.o WordList.o \
 +LIBOBJS= Accessor.o CharacterSet.o LexerBase.o LexerModule.o LexerSimple.o StyleContext.o WordList.o \
  	CharClassify.o Decoration.o Document.o PerLine.o Catalogue.o CallTip.o CaseConvert.o CaseFolder.o \
@@ -40,15 +39,16 @@
  	KeyMap.o LineMarker.o PositionCache.o ScintillaGTK.o CellBuffer.o CharacterCategory.o ViewStyle.o \
  	RESearch.o RunStyles.o Selection.o Style.o Indicator.o AutoComplete.o UniConversion.o XPM.o \
  	$(MARSHALLER) $(LEXOBJS)
-+	
+-	$(AR) $(ARFLAGS) $@ $^
++
 +$(COMPLIB): $(LIBOBJS)
 +	$(AR) rc $@ $^
 +	$(RANLIB) $@
-+
-+$(LEXERLIB): $(LEXOBJS)
- 	$(AR) rc $@ $^
- 	$(RANLIB) $@
 +	
++$(LEXERLIB): $(LEXOBJS)
++	$(AR) rc $@ $^
+ 	$(RANLIB) $@
  
++
  # Automatically generate header dependencies with "make deps"
  include deps.mak
