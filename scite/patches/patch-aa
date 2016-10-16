@@ -1,3 +1,5 @@
+$NetBSD$
+Overwrite paths and defaults, patch inspired by OpenBSD port version 3.5.2
 --- gtk/makefile.orig	2016-10-16 03:10:33.000000000 +0000
 +++ gtk/makefile	2016-10-16 20:44:27.385048978 +0000
 @@ -33,13 +33,14 @@

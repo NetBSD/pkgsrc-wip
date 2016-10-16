@@ -3,7 +3,7 @@
 
 DISTNAME=	scintilla370
 PKGNAME=	scintilla-3.7.0
-PKGREVISION=	0
+#PKGREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scintilla.sourceforge.net/
 COMMENT=	Source code editing component
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/scintilla
 USE_LANGUAGES=	c c++
@@ -31,7 +31,7 @@ do-install:
 		${DESTDIR}${PREFIX}/include/scintilla
 	${INSTALL_LIB} ${WRKSRC}/bin/libscintilla.a ${DESTDIR}${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/bin/libscintilla_lexers.a ${DESTDIR}${PREFIX}/lib
-	
+
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
