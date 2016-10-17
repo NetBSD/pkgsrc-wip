@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake perl bash
+USE_TOOLS+=	gmake perl bash pkg-config
 
 DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
 
@@ -29,6 +29,8 @@ do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
 
+.include "../../devel/nspr/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
