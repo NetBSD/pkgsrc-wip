@@ -3,13 +3,12 @@
 
 DISTNAME=		Soya-0.6.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://download.gna.org/soya/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://home.gna.org/oomadness/en/soya/index.html
+HOMEPAGE=		http://www.lesfleursdunormal.fr/static/informatique/soya3d/index_en.html
 COMMENT=		High level 3D engine for Python
 
 
