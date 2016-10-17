@@ -13,6 +13,4 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
 
-GNU_CONFIGURE=	yes
-
 .include "../../mk/bsd.pkg.mk"
