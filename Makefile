@@ -3925,6 +3925,7 @@ SUBDIR+=	stksolver
 SUBDIR+=	stmd-git
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
+SUBDIR+=	streamlink
 SUBDIR+=	stress
 SUBDIR+=	stress-ng
 SUBDIR+=	structure
