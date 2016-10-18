@@ -2687,6 +2687,7 @@ SUBDIR+=	py-booktype
 SUBDIR+=	py-bottleneck
 SUBDIR+=	py-bravo
 SUBDIR+=	py-brian
+SUBDIR+=	py-brotlipy
 SUBDIR+=	py-bruce
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-bxa
