@@ -26,5 +26,4 @@ TEST_TARGET=	test
 
 .include "options.mk"
 
-.include "../../graphics/glew/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

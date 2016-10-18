@@ -9,6 +9,7 @@ PLIST_VARS+=		opengl doc # ptex has no extra PLIST entries
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 CMAKE_ARGS+=	-DGLEW_LOCATION:PATH=${PREFIX}
 PLIST.opengl=	yes
 .else
