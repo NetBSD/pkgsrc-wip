@@ -11,7 +11,10 @@ COMMENT=	Python Bindings to the Brotli Compression Algorithm
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
+
+.if ${PYPKGPREFIX} == "py27"
 DEPENDS+=	${PYPKGPREFIX}-enum34>=1.0.4:../../devel/py-enum34
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
