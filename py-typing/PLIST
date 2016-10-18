@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/typing.py
+${PYSITELIB}/typing.pyc
+${PYSITELIB}/typing.pyo
