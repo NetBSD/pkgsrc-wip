@@ -1,6 +1,6 @@
 $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
 
---- debootstrap.orig	2015-05-16 18:24:16.000000000 +0000
+--- debootstrap.orig	2016-09-14 03:01:54.000000000 +0000
 +++ debootstrap
 @@ -14,7 +14,7 @@ if [ -z "$DEBOOTSTRAP_DIR" ]; then
  	if [ -x /debootstrap/debootstrap ]; then
@@ -11,16 +11,16 @@ $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
  	fi
  fi
  
-@@ -30,7 +30,7 @@ DISABLE_KEYRING=""
- FORCE_KEYRING=""
+@@ -29,7 +29,7 @@ FORCE_KEYRING=""
  VARIANT=""
+ MERGED_USR="no"
  ARCH=""
 -HOST_ARCH=""
 +HOST_ARCH="$(uname -m)"
  HOST_OS=""
  KEEP_DEBOOTSTRAP_DIR=""
  USE_DEBIANINSTALLER_INTERACTION=""
-@@ -421,7 +421,7 @@ elif in_path udpkg && \
+@@ -428,7 +428,7 @@ elif in_path udpkg && \
  elif [ -e $DEBOOTSTRAP_DIR/arch ]; then
  	HOST_ARCH=`cat $DEBOOTSTRAP_DIR/arch`
  fi
@@ -29,7 +29,7 @@ $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
  # basic host OS guessing for non-Debian systems
  if [ -z "$HOST_OS" ]; then
  	case `uname` in
-@@ -437,6 +437,9 @@ if [ -z "$HOST_OS" ]; then
+@@ -444,6 +444,9 @@ if [ -z "$HOST_OS" ]; then
  		FreeBSD*)
  			HOST_OS=freebsd
  		;;
@@ -39,7 +39,7 @@ $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
  	esac
  fi
  
-@@ -468,7 +471,7 @@ elif doing_variant scratchbox; then
+@@ -475,7 +478,7 @@ elif doing_variant scratchbox; then
  	[ "x$SB2_TARGET" != "x" ] || error 1 SBOXTARGETREQ "No scratchbox target configured for $TARGET"
  	CHROOT_CMD="sb2 -eR -t $SB2_TARGET"
  else
@@ -48,7 +48,7 @@ $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
  fi
  
  if [ -z "$SHA_SIZE" ]; then
-@@ -499,6 +502,7 @@ fi
+@@ -506,6 +509,7 @@ fi
  
  if [ "$TARGET" != "" ]; then
  	mkdir -p "$TARGET/debootstrap"

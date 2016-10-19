@@ -2,9 +2,9 @@ $NetBSD: patch-Makefile,v 1.1 2015/03/21 23:37:22 tnn2 Exp $
 
 Allow user-destdir installation
 
---- Makefile.orig	2014-12-30 04:00:48.000000000 +0000
+--- Makefile.orig	2016-09-07 03:01:46.000000000 +0000
 +++ Makefile
-@@ -20,10 +20,10 @@ install:
+@@ -12,8 +12,8 @@ install:
  	mkdir -p $(DESTDIR)/usr/sbin
  
  	cp -a scripts/* $(DSDIR)/scripts/
@@ -15,5 +15,3 @@ Allow user-destdir installation
 -	chown root:root $(DESTDIR)/usr/sbin/debootstrap
 +#	chown root:root $(DESTDIR)/usr/sbin/debootstrap
  	chmod 0755 $(DESTDIR)/usr/sbin/debootstrap
- 
- ifeq ($(shell uname),Linux)
