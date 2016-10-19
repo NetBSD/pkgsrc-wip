@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/shellinaboxd
+man/man1/shellinaboxd.1
+share/examples/rc.d/shellinaboxd

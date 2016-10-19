@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# Shell in a Box Daemon startup script
+#
+# PROVIDE: shellinaboxd
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+#
+# Add the following to /etc/rc.conf[.local] to enable this service
+#
+# shellinaboxd="YES"
+#
+# You can fine tune others variables too:
+# shellinaboxd_pidfile="/var/run/shellinabox.pid"
+# shellinaboxd_user="@SIB_USER@"
+# shellinaboxd_group="@SIB_GROUP@"
+# shellinaboxd_port="4200"
+# shellinaboxd_flags="--disable-ssl --localhost-only --linkify=normal --service=/shell:SSH:127.0.0.1"
+
+. /etc/rc.subr
+
+name="shellinaboxd"
+rcvar=${name}
+
+command="@PREFIX@/bin/${name}"
+
+load_rc_config $name
+
+shellinaboxd_enable=${shellinaboxd_enable:-"NO"}
+shellinaboxd_user=${shellinaboxd_user:-"@SIB_USER@"}
+shellinaboxd_group=${shellinaboxd_group:-"@SIB_GROUP@"}
+shellinaboxd_port=${shellinaboxd_port:-"4200"}
+
+pidfile=${shellinaboxd_pidfile:-"/var/run/shellinaboxd.pid"}
+
+command_args="--user=${shellinaboxd_user} --group=${shellinaboxd_group} --port=${shellinaboxd_port} --background=${pidfile}"
+
+# avoid unnecessary su(1) initiated by rc.subr
+unset shellinaboxd_user shellinaboxd_group
+
+load_rc_config $name
+run_rc_command "$1"
