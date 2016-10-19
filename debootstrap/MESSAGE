@@ -3,7 +3,7 @@ $NetBSD: MESSAGE,v 1.2 2015/03/22 00:28:40 tnn2 Exp $
 
 To setup a Debian "wheezy" chroot on NetBSD/amd64 system:
 
-host# debootstrap --arch=amd64 wheezy /emul/wheezy
+host# PATH=${PATH}:${PREFIX}/gnu/bin debootstrap --arch=amd64 wheezy /emul/wheezy
 host# cp ${PREFIX}/share/debootstrap/libfakesyscall-amd64.so /emul/wheezy
 host# mount -t procfs -o linux proc /emul/wheezy/proc
 host# chroot /emul/wheezy /bin/bash

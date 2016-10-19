@@ -17,6 +17,7 @@ LICENSE=	mit
 
 DEPENDS+=	wget-[0-9]*:../../net/wget
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
+DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 #WRKSRC=		${WRKDIR}/debootstrap
