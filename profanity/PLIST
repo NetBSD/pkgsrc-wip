@@ -1,9 +1,13 @@
 @comment $NetBSD$
 bin/profanity
 man/man1/profanity.1
+share/profanity/icons/proIcon.png
+share/profanity/icons/proIconMsg.png
 share/profanity/themes/aqua
 share/profanity/themes/batman
+share/profanity/themes/bios
 share/profanity/themes/boothj5
+share/profanity/themes/boothj5_slack
 share/profanity/themes/complex
 share/profanity/themes/forest
 share/profanity/themes/hacker

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	profanity-0.4.7
+DISTNAME=	profanity-0.5.0
 CATEGORIES=	chat
 MASTER_SITES=	http://www.profanity.im/
 
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--with-libxml2
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libstrophe+=	libstrophe>=0.9.1
 .include "../../wip/libstrophe/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

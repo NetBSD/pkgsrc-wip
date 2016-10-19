@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2016-09-14 21:13:42.000000000 +0000
++++ configure
+@@ -11970,7 +11970,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-    if test "$PYTHON_CONFIG_EXISTS" == "yes"; then
++    if test "$PYTHON_CONFIG_EXISTS" = "yes"; then
+ 
+ 	#
+ 	# Allow the use of a (user set) custom python version
