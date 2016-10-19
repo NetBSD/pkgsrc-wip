@@ -6,7 +6,7 @@ CATEGORIES=	sysutils emulators
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/debootstrap/}
 DISTFILES=	${DEFAULT_DISTFILES} ${DEBIAN_KEYRING_DEB} ${UBUNTU_KEYRING_DEB}
 DEBIAN_KEYRING_DEB=	debian-archive-keyring_2014.3_all.deb
-UBUNTU_KEYRING_DEB=	ubuntu-archive-keyring_2012.05.19-5_all.deb
+UBUNTU_KEYRING_DEB=	ubuntu-archive-keyring_2012.05.19-1_all.deb
 SITES.${DEBIAN_KEYRING_DEB}=	${MASTER_SITE_DEBIAN:=pool/main/d/debian-archive-keyring/}
 SITES.${UBUNTU_KEYRING_DEB}=	${MASTER_SITE_DEBIAN:=pool/main/u/ubuntu-keyring/}
 
