@@ -170,6 +170,7 @@ include/clang/Basic/BuiltinsPPC.def
 include/clang/Basic/BuiltinsSystemZ.def
 include/clang/Basic/BuiltinsWebAssembly.def
 include/clang/Basic/BuiltinsX86.def
+include/clang/Basic/BuiltinsX86_64.def
 include/clang/Basic/BuiltinsXCore.def
 include/clang/Basic/CapturedStmt.h
 include/clang/Basic/CharInfo.h
@@ -470,7 +471,9 @@ include/clang/Tooling/Refactoring.h
 include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_builtin_vars.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_complex_builtins.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_intrinsics.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_math_forward_declares.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_runtime_wrapper.h
@@ -503,7 +506,8 @@ lib/clang/${PKGVERSION}/include/bmi2intrin.h
 lib/clang/${PKGVERSION}/include/bmiintrin.h
 lib/clang/${PKGVERSION}/include/clflushoptintrin.h
 lib/clang/${PKGVERSION}/include/cpuid.h
-lib/clang/${PKGVERSION}/include/cuda_builtin_vars.h
+lib/clang/${PKGVERSION}/include/cuda_wrappers/algorithm
+lib/clang/${PKGVERSION}/include/cuda_wrappers/complex
 lib/clang/${PKGVERSION}/include/emmintrin.h
 lib/clang/${PKGVERSION}/include/f16cintrin.h
 lib/clang/${PKGVERSION}/include/float.h
@@ -564,6 +568,7 @@ lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang.${SOEXT}
 ${PLIST.notdylib}lib/libclang.${SOEXT}.${LLVM_MAJOR}
+lib/libclang.${SOEXT}.40
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a
