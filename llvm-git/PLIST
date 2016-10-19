@@ -28,6 +28,7 @@ bin/llvm-mc
 bin/llvm-mcmarkup
 bin/llvm-nm
 bin/llvm-objdump
+bin/llvm-opt-report
 bin/llvm-pdbdump
 bin/llvm-profdata
 bin/llvm-ranlib
