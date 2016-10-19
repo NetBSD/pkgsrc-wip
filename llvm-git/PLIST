@@ -75,6 +75,7 @@ include/llvm/ADT/AllocatorList.h
 include/llvm/ADT/ArrayRef.h
 include/llvm/ADT/BitVector.h
 include/llvm/ADT/BitmaskEnum.h
+include/llvm/ADT/CachedHashString.h
 include/llvm/ADT/DAGDeltaAlgorithm.h
 include/llvm/ADT/DeltaAlgorithm.h
 include/llvm/ADT/DenseMap.h
@@ -259,10 +260,10 @@ include/llvm/CodeGen/GlobalISel/GISelAccessor.h
 include/llvm/CodeGen/GlobalISel/IRTranslator.h
 include/llvm/CodeGen/GlobalISel/InstructionSelect.h
 include/llvm/CodeGen/GlobalISel/InstructionSelector.h
+include/llvm/CodeGen/GlobalISel/Legalizer.h
+include/llvm/CodeGen/GlobalISel/LegalizerHelper.h
+include/llvm/CodeGen/GlobalISel/LegalizerInfo.h
 include/llvm/CodeGen/GlobalISel/MachineIRBuilder.h
-include/llvm/CodeGen/GlobalISel/MachineLegalizeHelper.h
-include/llvm/CodeGen/GlobalISel/MachineLegalizePass.h
-include/llvm/CodeGen/GlobalISel/MachineLegalizer.h
 include/llvm/CodeGen/GlobalISel/RegBankSelect.h
 include/llvm/CodeGen/GlobalISel/RegisterBank.h
 include/llvm/CodeGen/GlobalISel/RegisterBankInfo.h
@@ -377,9 +378,12 @@ include/llvm/DebugInfo/CodeView/MethodListRecordBuilder.h
 include/llvm/DebugInfo/CodeView/ModuleSubstream.h
 include/llvm/DebugInfo/CodeView/ModuleSubstreamVisitor.h
 include/llvm/DebugInfo/CodeView/RecordSerialization.h
+include/llvm/DebugInfo/CodeView/SymbolDeserializer.h
 include/llvm/DebugInfo/CodeView/SymbolDumpDelegate.h
 include/llvm/DebugInfo/CodeView/SymbolDumper.h
 include/llvm/DebugInfo/CodeView/SymbolRecord.h
+include/llvm/DebugInfo/CodeView/SymbolVisitorCallbackPipeline.h
+include/llvm/DebugInfo/CodeView/SymbolVisitorCallbacks.h
 include/llvm/DebugInfo/CodeView/SymbolVisitorDelegate.h
 include/llvm/DebugInfo/CodeView/TypeDeserializer.h
 include/llvm/DebugInfo/CodeView/TypeDumper.h
@@ -408,6 +412,7 @@ include/llvm/DebugInfo/DWARF/DWARFDebugLoc.h
 include/llvm/DebugInfo/DWARF/DWARFDebugMacro.h
 include/llvm/DebugInfo/DWARF/DWARFDebugRangeList.h
 include/llvm/DebugInfo/DWARF/DWARFFormValue.h
+include/llvm/DebugInfo/DWARF/DWARFGdbIndex.h
 include/llvm/DebugInfo/DWARF/DWARFRelocMap.h
 include/llvm/DebugInfo/DWARF/DWARFSection.h
 include/llvm/DebugInfo/DWARF/DWARFTypeUnit.h
@@ -545,8 +550,8 @@ include/llvm/ExecutionEngine/RuntimeDyldChecker.h
 include/llvm/ExecutionEngine/SectionMemoryManager.h
 include/llvm/IR/Argument.h
 include/llvm/IR/AssemblyAnnotationWriter.h
+include/llvm/IR/Attributes.gen
 include/llvm/IR/Attributes.h
-include/llvm/IR/Attributes.inc
 include/llvm/IR/Attributes.td
 include/llvm/IR/AutoUpgrade.h
 include/llvm/IR/BasicBlock.h
@@ -850,6 +855,7 @@ include/llvm/Support/MemoryObject.h
 include/llvm/Support/MipsABIFlags.h
 include/llvm/Support/Mutex.h
 include/llvm/Support/MutexGuard.h
+include/llvm/Support/NativeFormatting.h
 include/llvm/Support/OnDiskHashTable.h
 include/llvm/Support/Options.h
 include/llvm/Support/Path.h
@@ -905,6 +911,7 @@ include/llvm/Support/raw_ostream.h
 include/llvm/Support/raw_sha1_ostream.h
 include/llvm/Support/thread.h
 include/llvm/Support/type_traits.h
+include/llvm/Support/xxhash.h
 include/llvm/TableGen/Error.h
 include/llvm/TableGen/Main.h
 include/llvm/TableGen/Record.h
@@ -1016,6 +1023,7 @@ include/llvm/Transforms/Utils/GlobalStatus.h
 include/llvm/Transforms/Utils/ImportedFunctionsInliningStatistics.h
 include/llvm/Transforms/Utils/IntegerDivision.h
 include/llvm/Transforms/Utils/LCSSA.h
+include/llvm/Transforms/Utils/LibCallsShrinkWrap.h
 include/llvm/Transforms/Utils/Local.h
 include/llvm/Transforms/Utils/LoopSimplify.h
 include/llvm/Transforms/Utils/LoopUtils.h
@@ -1187,3 +1195,5 @@ ${PLIST.XCore}lib/libLLVMXCoreDisassembler.a
 ${PLIST.XCore}lib/libLLVMXCoreInfo.a
 lib/libLLVMipo.a
 lib/libLTO.${SOEXT}
+lib/libLTO.${SOEXT}.40
+lib/libLTO.${SOEXT}.40.0svn
