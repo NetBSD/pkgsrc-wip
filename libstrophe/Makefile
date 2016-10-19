@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libstrophe-0.8.8
+DISTNAME=	libstrophe-0.9.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strophe/}
 
