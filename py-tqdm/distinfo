@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (tqdm-3.1.4.tar.gz) = 38b1d31ddb10c79febc045473a53a1ac8cfa477b
-RMD160 (tqdm-3.1.4.tar.gz) = 0bab8ec5739e7a7a41a5b00c24eb6715cf906274
-SHA512 (tqdm-3.1.4.tar.gz) = 4adb7ee449f8a76df40ca2bee8309c7d3c3b9f092b1327d377dc8584b4f07a966b83d2580617302c9aa67021c2ce4b8cdeefe36b4bc05085024649f9ddc5772a
-Size (tqdm-3.1.4.tar.gz) = 35462 bytes
+SHA1 (tqdm-4.8.4.tar.gz) = 2898b3ec814cca0571af9b60712b8436c212772f
+RMD160 (tqdm-4.8.4.tar.gz) = 147c5bac063eabc38a227d79812aaf69ab342eff
+SHA512 (tqdm-4.8.4.tar.gz) = 99bda421dbca019e5462732971da1c5c2b8561e9c55b1b5c446459a4494d872be82e4eafe02d9bc3037a9d186a06410db754c41f3fd621eaf0e9a44e749f365c
+Size (tqdm-4.8.4.tar.gz) = 77229 bytes

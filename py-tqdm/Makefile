@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tqdm-3.1.4
+DISTNAME=	tqdm-4.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tqdm/}
@@ -12,6 +12,9 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
