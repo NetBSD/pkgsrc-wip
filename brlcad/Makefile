@@ -47,6 +47,8 @@ BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon
 BUILD_DEPENDS+=	re2c-[0-9]*:../../devel/re2c
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # for xsltproc
 BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
+BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
+BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../devel/tinycthread/buildlink3.mk"
 .include "../../graphics/adaptagrams/buildlink3.mk"
