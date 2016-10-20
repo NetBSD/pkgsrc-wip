@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.1 2014/09/22 11:20:28 othyro Exp $
+$NetBSD$
 
-SHA1 (v0.8.7.2.tar.gz) = b8d6923ebbdfe281c5ee6b23fe8467ea0b23253c
-RMD160 (v0.8.7.2.tar.gz) = 20c48002ed33bc4c626753142520c9a4eeacdbe1
-Size (v0.8.7.2.tar.gz) = 4808488 bytes
-SHA1 (patch-bitcoin-qt.pro) = 03120113e411980457c28afe3ba6b223481103c9
-SHA1 (patch-src_db.h) = ad2523f17c9025492875bc275b28fcf8f12fcb98
-SHA1 (patch-src_makefile.unix) = 8d3d90394d39c4153d28af528e7b5d434a9391ed
-SHA1 (patch-src_netbase.cpp) = 16d5c1133fbba972e9b8bee07571a2a6d85ea6ff
-SHA1 (patch-src_walletdb.cpp) = d6bf080791d64371c4aad6c1ff2bab0b640f3798
+SHA1 (v0.10.2.2.tar.gz) = 140aae5c1cce8a69b03a7f36c1adad9602fbd3aa
+RMD160 (v0.10.2.2.tar.gz) = 99f88b4055fcbd43d8352b894c1cf842767f2103
+Size (v0.10.2.2.tar.gz) = 4700783 bytes
+SHA1 (patch-src_chainparams.cpp) = 7e775c1f9d5890a6d49b94f8cde1cb9dca157833
+SHA1 (patch-src_crypto_scrypt-sse2.cpp) = 0548ce1fe5388cd3ea4e461aa40a2cba8237bc8b
+SHA1 (patch-src_crypto_scrypt.cpp) = 35b7a5c0ea59f7309f4e4ccd3f092f6223fd6e33
+SHA1 (patch-src_crypto_scrypt.h) = 9595a2c0a722958d27879e7f1f2dc4ccbae2bf13
+SHA1 (patch-src_db.h) = bd65519b99e4486cf6be7e42da535e465496a00b
+SHA1 (patch-src_netbase.cpp) = 72bcfc3b65a7ede4adc99da914715cf65df442b4
+#SHA1 (patch-src_utilstrencodings.cpp) = bade934fc481a1597c604a93a96c8a46877c1477
+SHA1 (patch-src_walletdb.cpp) = 7c70770a3e0de7b7daf6799b86ff67a511e2c0ff

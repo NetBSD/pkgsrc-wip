@@ -1,9 +1,9 @@
-$NetBSD: patch-src_makefile.unix,v 1.1 2014/09/22 11:21:19 othyro Exp $
+$NetBSD$
 
 miniupnp doesn't build at the moment.
 libs.
 
---- src/makefile.unix.orig	2014-04-05 03:59:47.000000000 +0000
+--- src/makefile.unix.orig	2015-07-27 20:55:24.000000000 +0000
 +++ src/makefile.unix
 @@ -3,12 +3,12 @@
  # Distributed under the MIT/X11 software license, see the accompanying
@@ -37,7 +37,7 @@ libs.
 +   -lboost_filesystem$(BOOST_LIB_SUFFIX) \
 +   -lboost_program_options$(BOOST_LIB_SUFFIX) \
 +   -lboost_thread$(BOOST_LIB_SUFFIX) \
-+   -ldb4_cxx$(BDB_LIB_SUFFIX) \
++   -ldb_cxx$(BDB_LIB_SUFFIX) \
 +   -lssl \
 +   -lcrypto
  

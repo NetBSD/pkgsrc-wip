@@ -1,9 +1,6 @@
-$NetBSD: patch-src_makefile.unix,v 1.1 2014/09/22 11:19:42 othyro Exp $
+$NetBSD$
 
-miniupnp doesn't build at the moment.
-libs.
-
---- src/makefile.unix.orig	2014-04-16 19:46:36.000000000 +0000
+--- src/makefile.unix.orig	2014-10-31 15:32:32.000000000 +0000
 +++ src/makefile.unix
 @@ -5,7 +5,7 @@
  # :=0 --> UPnP support turned off by default at runtime
@@ -23,11 +20,9 @@ libs.
  
  TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
  
-@@ -33,14 +33,15 @@ endif
- 
+@@ -34,13 +34,13 @@ endif
  # for boost 1.37, add -mt to the boost libraries
  LIBS += \
-+ -L/usr/lib -Wl,-R/usr/lib -L/usr/pkg/lib -Wl,-R/usr/pkg/lib \
   -Wl,-B$(LMODE) \
 -   -l boost_system$(BOOST_LIB_SUFFIX) \
 -   -l boost_filesystem$(BOOST_LIB_SUFFIX) \
@@ -40,13 +35,13 @@ libs.
 +   -lboost_filesystem$(BOOST_LIB_SUFFIX) \
 +   -lboost_program_options$(BOOST_LIB_SUFFIX) \
 +   -lboost_thread$(BOOST_LIB_SUFFIX) \
-+   -ldb4_cxx$(BDB_LIB_SUFFIX) \
++   -ldb_cxx$(BDB_LIB_SUFFIX) \
 +   -lssl \
 +   -lcrypto
  
  TESTLIBS += \
   -Wl,-B$(LMODE) \
-@@ -50,7 +51,7 @@ ifndef USE_UPNP
+@@ -50,7 +50,7 @@ ifndef USE_UPNP
  	override USE_UPNP = -
  endif
  ifneq (${USE_UPNP}, -)
@@ -55,20 +50,22 @@ libs.
  	DEFS += -DUSE_UPNP=$(USE_UPNP)
  endif
  
-@@ -60,9 +61,9 @@ endif
+@@ -60,10 +60,10 @@ endif
  
  LIBS+= \
   -Wl,-B$(LMODE2) \
 -   -l z \
 -   -l dl \
--   -l pthread
+-   -l pthread \
+-   -l rt
 +   -lz \
-+   ${DL_LIBS} \
-+   -lpthread
++   -ldl \
++   -lpthread \
++   -lrt
  
- 
- # Hardening
-@@ -174,7 +175,9 @@ leveldb/libleveldb.a:
+ # Strip symbols from the daemon; disable if debugging
+ LDHARDENING+=-Wl,-s
+@@ -143,10 +143,12 @@ obj/neoscrypt_asm.o: neoscrypt_asm.S
  obj/build.h: FORCE
  	/bin/sh ../share/genbuild.sh obj/build.h
  version.cpp: obj/build.h
@@ -76,12 +73,8 @@ libs.
  DEFS += -DHAVE_BUILD_INFO
 +endif
  
- obj/%-sse2.o: %-sse2.cpp
- 	$(CXX) -c $(xCXXFLAGS) -msse2 -MMD -MF $(@:%.o=%.d) -o $@ $<
-@@ -185,6 +188,7 @@ obj/%-sse2.o: %-sse2.cpp
- 
  obj/%.o: %.cpp
- 	$(CXX) -c $(xCXXFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
+-	$(CXX) -c $(xCXXFLAGS) -MMD -MF $(@:%.o=%.d) -o $@ $<
 +	$(CXX) -c $(xCXXFLAGS) -Iobj -MMD -MF $(@:%.o=%.d) -o $@ $<
  	@cp $(@:%.o=%.d) $(@:%.o=%.P); \
  	  sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \

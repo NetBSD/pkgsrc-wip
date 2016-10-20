@@ -1,8 +1,8 @@
-$NetBSD: patch-src_netbase.cpp,v 1.1 2014/09/22 11:19:42 othyro Exp $
+$NetBSD$
 
 be nbsd specific.
 
---- src/netbase.cpp.orig	2014-04-16 19:46:36.000000000 +0000
+--- src/netbase.cpp.orig	2014-10-31 15:32:32.000000000 +0000
 +++ src/netbase.cpp
 @@ -77,7 +77,7 @@ bool static LookupIntern(const char *psz
  #else

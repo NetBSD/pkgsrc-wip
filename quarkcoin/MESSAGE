@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/09/22 11:22:56 othyro Exp $
+$NetBSD$
 
 To use quarkcoind, you must set a rpcpassword in the configuration file:
 ${PKG_SYSCONFDIR}/quarkcoin.conf

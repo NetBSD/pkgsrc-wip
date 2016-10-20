@@ -1,10 +1,8 @@
-$NetBSD: patch-src_leveldb_port_port__posix.h,v 1.1 2013/12/12 20:45:11 noud4 Exp $
+$NetBSD$
 
-Be nbsd specific.
-
---- src/leveldb/port/port_posix.h.orig	2013-09-12 10:43:31.000000000 +0000
+--- src/leveldb/port/port_posix.h.orig	2015-07-10 17:23:55.000000000 +0000
 +++ src/leveldb/port/port_posix.h
-@@ -50,8 +50,12 @@
+@@ -47,8 +47,12 @@
  #include "port/atomic_pointer.h"
  
  #ifndef PLATFORM_IS_LITTLE_ENDIAN

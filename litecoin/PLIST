@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:20:28 othyro Exp $
-bin/litecoin-qt
+@comment $NetBSD$
+lib/litecoin/libsecp256k1.la
+lib/litecoin/libsecp256k1.so
+lib/litecoin/libsecp256k1.so.0
 sbin/litecoind
+bin/litecoin-cli
+bin/litecoin-tx
 share/examples/litecoin/litecoin.conf
 share/examples/rc.d/litecoind

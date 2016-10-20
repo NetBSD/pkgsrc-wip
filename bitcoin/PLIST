@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/20 09:49:29 noud4 Exp $
-bin/bitcoin-qt
+@comment $NetBSD$
 sbin/bitcoind
+bin/bitcoin-cli
+lib/bitcoin/libsecp256k1.la
+lib/bitcoin/libsecp256k1.so
+lib/bitcoin/libsecp256k1.so.0
 share/applications/bitcoin-qt.desktop
 share/examples/bitcoin/bitcoin.conf
 share/examples/rc.d/bitcoind

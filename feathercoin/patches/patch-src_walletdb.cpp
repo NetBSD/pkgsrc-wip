@@ -1,6 +1,6 @@
 --- src/walletdb.cpp~	2014-06-19 00:51:15.000000000 -0700
 +++ src/walletdb.cpp	2014-08-19 03:50:42.757367359 -0700
---- src/walletdb.cpp.orig	2014-04-16 19:46:36.000000000 +0000
+--- src/walletdb.cpp.orig	2014-10-31 15:32:32.000000000 +0000
 +++ src/walletdb.cpp
 @@ -550,11 +550,7 @@ bool BackupWallet(const CWallet& wallet,
                      pathDest /= wallet.strWalletFile;

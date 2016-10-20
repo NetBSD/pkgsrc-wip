@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/22 11:22:07 othyro Exp $
+# $NetBSD$
 
 DISTNAME=	primecoin-0.1.2-linux
 PKGNAME=	${DISTNAME:S/-linux//1}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 AUTO_MKDIRS=	yes
 
-CXXFLAGS+=	-std=c++0x
+CXXFLAGS+=	-DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT
 
 QMAKE_OPTIONS+=	BOOST_INCLUDE_PATH=${PREFIX}/include/boost
 QMAKE_OPTIONS+=	BDB_INCLUDE_PATH=${PREFIX}/include/db4
@@ -42,7 +42,7 @@ do-build:
 	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} CFLAGS+=-Iobj ${QMAKE_OPTIONS} ${GMAKE} -f makefile.unix
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/primecoin-qt ${DESTDIR}${PREFIX}/bin
+#	${INSTALL_PROGRAM} ${WRKSRC}/primecoin-qt ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/primecoind ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} -m 600 ${FILESDIR}/primecoin.conf ${DESTDIR}${EGDIR}
 

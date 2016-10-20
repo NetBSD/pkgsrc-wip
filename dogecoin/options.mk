@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2014/09/22 11:18:54 othyro Exp $
+# $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dogecoin
-PKG_SUPPORTED_OPTIONS+=	miniupnpc qrcode qt tests
+PKG_SUPPORTED_OPTIONS+=	miniupnpc qrcode qt qtdbus tests
 PKG_SUGGESTED_OPTIONS=	qt # blank
 PLIST_VARS+=		qt tests
 
@@ -24,10 +24,13 @@ QMAKE_OPTIONS+=	USE_QRCODE=1
 QMAKE_OPTIONS+=	USE_IPV6=0
 .endif
 
-.if !empty(PKG_OPTIONS:Mqt)
+.if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mqtdbus)
 PLIST.qt=	yes
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-QMAKE_OPTIONS+=	USE_DBUS=1 # XXX still needed?
+.if !empty(PKG_OPTIONS:Mqtdbus)
+QMAKE_OPTIONS+=	USE_DBUS=1
+.include "../../x11/qt5-dbus/buildlink3.mk"
+.endif
 .endif
 
 .if empty(PKG_OPTIONS:Mqt)

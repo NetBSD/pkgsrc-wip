@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2014/09/22 11:18:54 othyro Exp $
+$NetBSD$
 
-SHA1 (dogecoin/v1.8.0.tar.gz) = 06db28717d2c74da576143311c61031f25bc9a78
-RMD160 (dogecoin/v1.8.0.tar.gz) = 202163ca4d272006cedff2c27d1c63a04f1623e2
-Size (dogecoin/v1.8.0.tar.gz) = 8049653 bytes
-SHA1 (patch-src_db.h) = 2ade59e27b6e2a7fee271e5d2846e0b0986c85ec
-SHA1 (patch-src_leveldb_port_port__posix.h) = 7bef0b13dd861ecf0d5514572f97b622f93573fa
-SHA1 (patch-src_netbase.cpp) = 32cd4d131667cf706cafa9808f607cd6f697161e
-SHA1 (patch-src_walletdb.cpp) = c5b0d528a5ec5c9ada13b218139164e76861ba74
+SHA1 (dogecoin-1.10.0nbRC/v1.10.0.tar.gz) = 86900940084a78e731aeae37979913de007225fd
+RMD160 (dogecoin-1.10.0nbRC/v1.10.0.tar.gz) = bbd969f7d8fc5995200408230eeb4bd283cd4811
+Size (dogecoin-1.10.0nbRC/v1.10.0.tar.gz) = 6537704 bytes
+SHA1 (patch-src_crypto_scrypt-sse2.cpp) = 2106a27ec7a9b3fcda9e50dacd049ebdc065034e
+SHA1 (patch-src_crypto_scrypt.cpp) = 66b2531c2a6500ea02cf32ea910605ceb02cfead
+SHA1 (patch-src_crypto_scrypt.h) = 1bea0f186c9465bd467c09756ef6bb815daf6007
+SHA1 (patch-src_leveldb_port_port__posix.h) = 783fecbb583731f96dc261030e48eb499451ab1b

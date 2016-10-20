@@ -1,8 +1,8 @@
---- src/walletdb.cpp~	2014-06-19 00:51:15.000000000 -0700
-+++ src/walletdb.cpp	2014-08-19 03:50:42.757367359 -0700
---- src/walletdb.cpp.orig	2014-06-13 21:36:21.000000000 +0000
+$NetBSD$
+
+--- src/walletdb.cpp.orig	2015-06-15 08:51:30.000000000 +0000
 +++ src/walletdb.cpp
-@@ -548,11 +548,7 @@ bool BackupWallet(const CWallet& wallet,
+@@ -871,11 +871,7 @@ bool BackupWallet(const CWallet& wallet,
                      pathDest /= wallet.strWalletFile;
  
                  try {
@@ -12,6 +12,6 @@
 -                    filesystem::copy_file(pathSrc, pathDest);
 -#endif
 +                    filesystem::copy(pathSrc, pathDest);
-                     printf("copied wallet.dat to %s\n", pathDest.string().c_str());
+                     LogPrintf("copied wallet.dat to %s\n", pathDest.string());
                      return true;
                  } catch(const filesystem::filesystem_error &e) {

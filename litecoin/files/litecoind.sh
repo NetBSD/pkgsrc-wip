@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: litecoind.sh,v 1.1 2014/09/22 11:20:28 othyro Exp $
+# $NetBSD$
 #
 
 # PROVIDE: primed

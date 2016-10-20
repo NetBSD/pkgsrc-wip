@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:19:42 othyro Exp $
-bin/feathercoin-qt
+@comment $NetBSD$
 sbin/feathercoind
 share/examples/feathercoin/feathercoin.conf
 share/examples/rc.d/feathercoind

@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1 2014/09/22 11:19:42 othyro Exp $
+$NetBSD$
 
-SHA1 (feathercoin/v0.8.6.2.tar.gz) = b4eab30d57a7e0eeac91bc6083b5fd254c749e8f
-RMD160 (feathercoin/v0.8.6.2.tar.gz) = 725e1f51a8abefae8caf59190a9caa337a9fa363
-Size (feathercoin/v0.8.6.2.tar.gz) = 3687650 bytes
-SHA1 (patch-feathercoin-qt.pro) = 2a37375316c4d298479593e36ed3f0dbecb9a8bf
-SHA1 (patch-src_db.h) = 26c2bbffceeae0d12a2f9f009aef4d298429dc62
-SHA1 (patch-src_makefile.unix) = 46c0327002a5ac1ff09fb1fe486ba38822bebcf7
-SHA1 (patch-src_netbase.cpp) = 75a971994d937248b570e6e40c29586afd515b25
-SHA1 (patch-src_walletdb.cpp) = 7dd655a4be9576b42d67705b199982ccf8ff5481
+SHA1 (feathercoin/v0.8.7.1.tar.gz) = b7aef7205458bd2e2c403e15f88b97e70f560b98
+RMD160 (feathercoin/v0.8.7.1.tar.gz) = e8502841168483f4ac49d87711a9a86ca46bc336
+Size (feathercoin/v0.8.7.1.tar.gz) = 3622006 bytes
+SHA1 (patch-feathercoin-qt.pro) = 49d496354d247c0003a71c95b56a455841c08be9
+SHA1 (patch-src_db.h) = 04952fb0c889b5b6913e11b57c7252fe9dcf9150
+SHA1 (patch-src_makefile.unix) = c99c31181cd2cb3cbfd65ee948aca474b29514e8
+SHA1 (patch-src_netbase.cpp) = 9d53499bd171511076d52abef5920902a450bce5
+SHA1 (patch-src_rpcrawtransaction.cpp) = c4de9d15bead17b2edbaaf561ff1aea4ec6e08f7
+SHA1 (patch-src_walletdb.cpp) = fb2f8382e362ee99c3600db14380bea0286726be

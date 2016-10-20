@@ -1,13 +1,11 @@
-$NetBSD: patch-src_netbase.cpp,v 1.1 2014/09/22 11:22:57 othyro Exp $
+$NetBSD$
 
-be nbsd specific.
-
---- src/netbase.cpp.orig	2014-08-09 16:55:31.000000000 +0000
+--- src/netbase.cpp.orig	2015-05-31 10:15:00.000000000 +0000
 +++ src/netbase.cpp
-@@ -77,7 +77,7 @@ bool static LookupIntern(const char *psz
- #else
-     aiHint.ai_family = AF_INET;
- #endif
+@@ -79,7 +79,7 @@ bool static LookupIntern(const char *psz
+     aiHint.ai_socktype = SOCK_STREAM;
+     aiHint.ai_protocol = IPPROTO_TCP;
+     aiHint.ai_family = AF_UNSPEC;
 -#ifdef WIN32
 +#if defined(WIN32) || defined(__NetBSD__)
      aiHint.ai_flags = fAllowLookup ? 0 : AI_NUMERICHOST;

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: bitcoind.sh,v 1.2 2013/12/22 22:25:59 noud4 Exp $
+# $NetBSD$
 #
 
 # PROVIDE: bitcoind

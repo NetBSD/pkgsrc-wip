@@ -1,10 +1,10 @@
-$NetBSD: patch-feathercoin-qt.pro,v 1.1 2014/09/22 11:19:42 othyro Exp $
+$NetBSD$
 
 Use pkgsrc databases/db4.
 
---- feathercoin-qt.pro.orig	2014-04-16 19:46:36.000000000 +0000
+--- feathercoin-qt.pro.orig	2014-10-31 15:32:32.000000000 +0000
 +++ feathercoin-qt.pro
-@@ -377,22 +377,26 @@ isEmpty(BOOST_THREAD_LIB_SUFFIX) {
+@@ -387,22 +387,26 @@ isEmpty(BOOST_THREAD_LIB_SUFFIX) {
  
  isEmpty(BDB_LIB_PATH) {
      macx:BDB_LIB_PATH = /opt/local/lib/db48
@@ -32,7 +32,7 @@ Use pkgsrc databases/db4.
  }
  
  win32:DEFINES += WIN32
-@@ -429,7 +433,7 @@ macx:QMAKE_INFO_PLIST = share/qt/Info.pl
+@@ -439,7 +443,7 @@ macx:QMAKE_INFO_PLIST = share/qt/Info.pl
  # Set libraries and includes at end, to use platform-defined defaults if not overridden
  INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH
  LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)

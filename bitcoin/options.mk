@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/12/12 20:45:11 noud4 Exp $
+# $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bitcoin
 PKG_SUPPORTED_OPTIONS+=		miniupnpc dbus qrcode

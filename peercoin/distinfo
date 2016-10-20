@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.1 2014/09/22 11:21:19 othyro Exp $
+$NetBSD$
 
-SHA1 (peercoin/v0.4.0ppc.tar.gz) = f089dca157d30232559b54e92a5b544ae16a6d96
-RMD160 (peercoin/v0.4.0ppc.tar.gz) = 2eaa85e779871b7a026233462447505eaf897dbd
-Size (peercoin/v0.4.0ppc.tar.gz) = 1698817 bytes
-SHA1 (patch-bitcoin-qt.pro) = 650f651fcdf0a18f27ae28d552cba720514d5760
-SHA1 (patch-src_db.h) = 48c97d3bdf04cce97391fcae7f55c8d631c4244f
-SHA1 (patch-src_makefile.unix) = 24b306de9f551cc1d66a1c33aa0d561727dad257
-SHA1 (patch-src_netbase.cpp) = 402bb1c78e0ecbe38306b75ad24fc07abbc8df2b
-SHA1 (patch-src_walletdb.cpp) = 4ed3fcb1c30a8966c8a53dbae997efcda9b80a63
+SHA1 (peercoin/master.tar.gz) = d23e96c5e9860fc598e6833dc6d07fd4c689192b
+RMD160 (peercoin/master.tar.gz) = 69d50b5923ec3f7aa909facb6528ade337d328ab
+Size (peercoin/master.tar.gz) = 1710278 bytes
+SHA1 (patch-bitcoin-qt.pro) = 85bf0be2e987eb52c910f861e4810c45342b1b62
+SHA1 (patch-src_db.h) = 1c258f1534144f7c7335473e2466ae0eb58f6ba4
+SHA1 (patch-src_makefile.unix) = 62408c6babfc0c24bfa2cfe4f0881ae03c6a2e70
+SHA1 (patch-src_netbase.cpp) = aa9fa4038b417426c0f176486a22d04b4777ac47
+SHA1 (patch-src_qt_transactiondesc.cpp) = 20ff326ee3f3eccc50868aae5a70c621b5d6c35b
+SHA1 (patch-src_serialize.h) = b376b4c2c8fb5f0393200efbecee3dd6038bacf3
+SHA1 (patch-src_walletdb.cpp) = 0146d65052eb9f6f0f80ba47f5826982b1f92541

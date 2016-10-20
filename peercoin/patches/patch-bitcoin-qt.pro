@@ -1,8 +1,8 @@
-$NetBSD: patch-bitcoin-qt.pro,v 1.1 2014/09/22 11:21:19 othyro Exp $
+$NetBSD$
 
 Use pkgsrc databases/db4.
 
---- bitcoin-qt.pro.orig	2014-04-05 03:59:47.000000000 +0000
+--- bitcoin-qt.pro.orig	2015-07-27 20:55:24.000000000 +0000
 +++ bitcoin-qt.pro
 @@ -289,22 +289,26 @@ isEmpty(BOOST_THREAD_LIB_SUFFIX) {
  

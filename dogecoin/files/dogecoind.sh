@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dogecoind.sh,v 1.1 2014/09/22 11:18:54 othyro Exp $
+# $NetBSD$
 #
 
 # PROVIDE: dogecoind

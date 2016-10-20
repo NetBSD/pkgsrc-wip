@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: feathercoind.sh,v 1.1 2014/09/22 11:19:42 othyro Exp $
+# $NetBSD$
 #
 
 # PROVIDE: ppcoind

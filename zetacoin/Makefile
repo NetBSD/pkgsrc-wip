@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2014/09/22 11:29:53 othyro Exp $
+# $NetBSD$
 
-DISTNAME=	v0.9.2.2
+#DISTNAME=	v0.9.2.2
+DISTNAME=	v0.9.2.6
 PKGNAME=	zetacoin-${DISTNAME:S/v//1}
 CATEGORIES=	finance
 MASTER_SITES=	https://github.com/zetacoin/zetacoin/archive/

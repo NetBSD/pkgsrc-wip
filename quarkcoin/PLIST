@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:22:56 othyro Exp $
-bin/quarkcoin-qt
+@comment $NetBSD$
+bin/quark-cli
 sbin/quarkcoind
 share/examples/quarkcoin/quarkcoin.conf
 share/examples/rc.d/quarkcoind

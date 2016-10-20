@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:21:19 othyro Exp $
+@comment $NetBSD$
 sbin/ppcoind
 share/examples/peercoin/peercoin.conf
 share/examples/rc.d/peercoind

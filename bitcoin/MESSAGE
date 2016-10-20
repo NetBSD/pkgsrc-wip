@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2013/12/22 22:25:59 noud4 Exp $
+$NetBSD$
 
 To use bitcoind, you must set a rpcpassword in the configuration file:
 ${PKG_SYSCONFDIR}/bitcoin.conf

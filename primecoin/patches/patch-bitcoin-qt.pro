@@ -1,4 +1,4 @@
-$NetBSD: patch-bitcoin-qt.pro,v 1.1 2014/09/22 11:22:07 othyro Exp $
+$NetBSD$
 
 Use pkgsrc databases/db4.
 

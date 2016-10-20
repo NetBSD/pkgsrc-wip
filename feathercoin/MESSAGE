@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/09/22 11:19:42 othyro Exp $
+$NetBSD$
 
 To use feathercoind, you must set a rpcpassword in the configuration file:
 ${PKG_SYSCONFDIR}/feathercoin.conf

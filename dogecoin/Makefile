@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/09/22 11:18:54 othyro Exp $
+# $NetBSD$
 
-DISTNAME=	v1.8.0
+#DISTNAME=	v1.8.3
+DISTNAME=       v1.10.0
+PKGREVISION=    RC-1
 PKGNAME=	dogecoin-${DISTNAME:S/v//1}
 CATEGORIES=	finance
 MASTER_SITES=	https://github.com/dogecoin/dogecoin/archive/
@@ -15,8 +17,20 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	aclocal autoconf autoheader automake gmake libtoolize pkg-config
 USE_LANGUAGES=	c c++
+AUTO_MKDIRS=    yes
+HAS_CONFIGURE=  yes
+
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 #CXXFLAGS+=	-std=c++0x
+CXXFLAGS+=      -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1
+CXXFLAGS+=      -std=c++0x -I${BUILDLINK_PREFIX.boost-libs}/include/boost
+CXXFLAGS+=      -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/dogecoin -L${BUILDLINK_PREFIX.boost-libs}/lib/dogecoin
+CFLAGS+=        -fPIC -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/dogecoin -L${BUILDLINK_PREFIX.boost-libs}/lib/dogecoin
+BOOST_LDFLAGS=  -L${BUILDLINK_PREFIX.boost-libs}/lib
+BOOST_CPPFLAGS= -I${BUILDLINK_PREFIX.boost-libs}/include
+CPPFLAGS+=-I${BUILDLINK_PREFIX.boost-headers}/include/boost, -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/dogecoin
+CPPFLAGS+=-L${BUILDLINK_PREFIX.boost-libs}/lib/dogecoin
+
 LIBTOOLIZE=	${PREFIX}/bin/libtoolize
 
 SUBST_CLASSES+=			autotools
@@ -29,6 +43,7 @@ CONFIGURE_ARGS+=		--enable-hardening --enable-debug
 CONFIGURE_ARGS+=		--with-boost=${BUILDLINK_PREFIX.boost-libs}
 CONFIGURE_ARGS+=		--with-incompatible-bdb
 BUILDLINK_TRANSFORM+=		l:db_cxx:db5_cxx
+CONFIGURE_ARGS+=  		${PREFIX}/include/db5
 INSTALLATION_DIRS+=		bin sbin share/examples/dogecoin
 
 #CHECK_PORTABILITY_SKIP=configure
@@ -60,3 +75,4 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+

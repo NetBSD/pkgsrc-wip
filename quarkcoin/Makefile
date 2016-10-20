@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/09/22 11:22:56 othyro Exp $
+# $NetBSD$
 
-DISTNAME=	v0.8.3.25
+#DISTNAME=	v0.8.3.25
+DISTNAME=	v0.9.2.4
 PKGNAME=	quarkcoin-${DISTNAME:S/v//1}
 CATEGORIES=	finance
 MASTER_SITES=	https://github.com/MaxGuevara/quark/archive/
@@ -12,12 +13,29 @@ COMMENT=	Open source Internet currency
 LICENSE=	mit
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake libtoolize
 USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:S/coin//1}
 AUTO_MKDIRS=	yes
+HAS_CONFIGURE=  yes
+GNU_CONFIGURE=  yes
 
-CXXFLAGS+=	-std=c++0x
+CFLAGS+=        -fPIC
+#CXXFLAGS+=	-std=c++0x
+CXXFLAGS+= -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/quarkcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/quarkcoin
+CXXFLAGS+=      -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1
+CXXFLAGS+=      -I${BUILDLINK_PREFIX.boost-libs}/include/boost
+
+
+BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
+
+CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_ARGS+=  --enable-hardening
+CONFIGURE_ARGS+=  ${PREFIX}/include/db4
+
+LIBTOOLIZE=     ${PREFIX}/bin/libtoolize
+
+
 
 QMAKE_OPTIONS+=	BOOST_INCLUDE_PATH=${PREFIX}/include/boost
 QMAKE_OPTIONS+=	BDB_INCLUDE_PATH=${PREFIX}/include/db4
@@ -34,16 +52,25 @@ EGDIR=		${PREFIX}/share/examples/quarkcoin
 CONF_FILES=	${EGDIR}/quarkcoin.conf ${PKG_SYSCONFDIR}/quarkcoin.conf
 CONF_FILES_PERMS=	${EGDIR}/quarkcoin.conf ${PKG_SYSCONFDIR}/quarkcoin.conf ${ROOT_USER} ${ROOT_GROUP} 0600
 
-do-configure:
-	(cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake "PREFIX=${PREFIX}" "QMAKE_CXXFLAGS=${CXXFLAGS}" ${QMAKE_OPTIONS} quarkcoin-qt.pro)
+pre-configure:
+	cd ${WRKSRC};             \
+        ${LIBTOOLIZE} --force;    \
+        ${PREFIX}/bin/aclocal;    \
+        ${PREFIX}/bin/autoheader; \
+        ${PREFIX}/bin/automake -a --foreign -i  --add-missing; \
+        ${PREFIX}/bin/autoconf; \
+        ${PREFIX}/bin/autoreconf -i
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE_OPTIONS} ${GMAKE};	\
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} CFLAGS+=-Iobj ${QMAKE_OPTIONS} ${GMAKE} -f makefile.unix
-
+#do-configure:
+#	(cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake "PREFIX=${PREFIX}" "QMAKE_CXXFLAGS=${CXXFLAGS}" ${QMAKE_OPTIONS} quarkcoin-qt.pro)
+#
+#do-build:
+#	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE_OPTIONS} ${GMAKE};	\
+#	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} CFLAGS+=-Iobj ${QMAKE_OPTIONS} ${GMAKE} -f makefile.unix
+#
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/quarkcoin-qt ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/src/quarkcoind ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/quark-cli ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/quarkd ${DESTDIR}${PREFIX}/sbin/quarkcoind
 	${INSTALL_DATA} -m 600 ${FILESDIR}/quarkcoin.conf ${DESTDIR}${EGDIR}
 
 .include "options.mk"

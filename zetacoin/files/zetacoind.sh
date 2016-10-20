@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zetacoind.sh,v 1.1 2014/09/22 11:23:59 othyro Exp $
+# $NetBSD$
 #
 
 # PROVIDE: zetacoind

@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.1 2014/09/22 11:22:07 othyro Exp $
+$NetBSD$
 
 SHA1 (primecoin-0.1.2-linux.tar.gz) = e8f0a1f700d666af46228fbbed2d9f40d475a8ac
 RMD160 (primecoin-0.1.2-linux.tar.gz) = 84deec1c901e039f8172a226d0a81607f82e0021
 Size (primecoin-0.1.2-linux.tar.gz) = 16521236 bytes
 SHA1 (patch-bitcoin-qt.pro) = 065f52b10b8da1d76d3c98c5537da647665e8197
 SHA1 (patch-src_db.h) = bb24554af13e6a052835ef7a985306314119f887
+SHA1 (patch-src_init.cpp) = 252dbb34a712f1b0a533d600dfac6bcd5b719869
 SHA1 (patch-src_makefile.unix) = 7b1148f55cebb8a0c7381a0b96511b241fb9805e
 SHA1 (patch-src_netbase.cpp) = a5f11aa485070d00e635b07a75b98c45537ab401
+SHA1 (patch-src_serialize.h) = f64051b2a14e9ad0e52da0079d8781df55a0716e
 SHA1 (patch-src_walletdb.cpp) = 66bc458acac265b35473458028bd3860f96cf4fe

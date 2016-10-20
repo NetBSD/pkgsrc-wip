@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/22 11:23:59 othyro Exp $
+@comment $NetBSD$
 bin/zetacoin-cli
 ${PLIST.qt}bin/zetacoin-qt
 sbin/zetacoind
