@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $NetBSD$
 #
 # Shell in a Box Daemon startup script
 #
@@ -9,7 +9,7 @@
 # KEYWORD: shutdown
 
 #
-# Add the following to /etc/rc.conf[.local] to enable this service
+# Add the following to /etc/rc.conf to enable this service
 #
 # shellinaboxd="YES"
 #
@@ -27,9 +27,7 @@ rcvar=${name}
 
 command="@PREFIX@/bin/${name}"
 
-load_rc_config $name
-
-shellinaboxd_enable=${shellinaboxd_enable:-"NO"}
+shellinaboxd=${shellinaboxd:-"NO"}
 shellinaboxd_user=${shellinaboxd_user:-"@SIB_USER@"}
 shellinaboxd_group=${shellinaboxd_group:-"@SIB_GROUP@"}
 shellinaboxd_port=${shellinaboxd_port:-"4200"}

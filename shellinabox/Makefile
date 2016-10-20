@@ -15,9 +15,11 @@ COMMENT=        Shell In A Box implements a web server for terminal emulation
 LICENSE=        gnu-gpl-v2
 
 EXTRACT_USING=  gtar
+
 USE_TOOLS+=     gtar aclocal automake autoconf gm4 gmake autoheader
 USE_LANGUAGES=  c
 USE_LIBTOOL=    yes
+
 GNU_CONFIGURE=  yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -33,7 +35,7 @@ RCD_SCRIPT_SRC.shellinaboxd = ${WRKSRC}/shellinaboxd.in
 
 SUBST_CLASSES+=         sib
 SUBST_STAGE.sib=        pre-configure
-SUBST_MESSAGE.sib=      Fixing shellinaboxd user/group defaults
+SUBST_MESSAGE.sib=      Crafting a shellinaboxd rc.d script with sane defaults
 SUBST_FILES.sib+=       ${WRKSRC}/shellinaboxd.in
 SUBST_VARS.sib+=        PREFIX SIB_USER SIB_GROUP
 
@@ -49,5 +51,7 @@ pre-configure:
 		autoheader && \
 		autoconf && \
 		automake --copy --add-missing --foreign
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
