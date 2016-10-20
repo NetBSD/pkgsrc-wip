@@ -11,7 +11,7 @@ COMMENT=	Cross-platform solid modeling system
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config wish
+USE_TOOLS+=	pkg-config wish flex
 USE_LANGUAGES=	c c++ fortran
 
 #CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=ON
@@ -44,6 +44,7 @@ PKGCONFIG_OVERRIDE+=	src/other/libz/zlib.pc.in
 
 BUILD_DEPENDS+=	astyle-[0-9]*:../../devel/astyle
 BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon
+BUILD_DEPENDS+=	re2c-[0-9]*:../../devel/re2c
 
 .include "../../devel/tinycthread/buildlink3.mk"
 .include "../../graphics/adaptagrams/buildlink3.mk"
