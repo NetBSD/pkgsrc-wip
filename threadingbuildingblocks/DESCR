@@ -1,0 +1,3 @@
+Threading Building Blocks (TBB) lets you easily write parallel C++ programs
+that take full advantage of multicore performance, that are portable and
+composable, and that have future-proof scalability.
