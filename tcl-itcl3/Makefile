@@ -2,14 +2,14 @@
 #
 
 DISTNAME=	itcl3.4.3
-PKGNAME=	tcl-${DISTNAME:S/l/l-/}
+PKGNAME=	tcl-${DISTNAME:S/itcl/itcl3-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=incrtcl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://incrtcl.sourceforge.net/
 COMMENT=	Framework for building mega-widgets using [incr Tcl]
-LICENSE=	2-clause-bsd # ?
+LICENSE=	mit # Standard ML of New Jersey Variant
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include/X11
