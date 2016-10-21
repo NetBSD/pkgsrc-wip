@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/itcl3
 USE_TOOLS+=		grep
 
+# Remove conflict with itcl 4.x from Tcl's bundled library
 post-install:
 .for file in body.n class.n code.n configbody.n delete.n ensemble.n find.n \
 	is.n itcl.n itclvars.n local.n scope.n
