@@ -20,7 +20,7 @@ USE_TOOLS+=		grep
 post-install:
 .for file in body.n class.n code.n configbody.n delete.n ensemble.n find.n \
 	is.n itcl.n itclvars.n local.n scope.n
-	${RUN} cd ${DESTDIR}${PREFIX}/man/mann/ && \
+	${RUN} cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/mann/ && \
 		${MV} ${file} itcl3-${file}
 .endfor
 
