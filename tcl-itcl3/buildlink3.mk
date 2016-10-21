@@ -1,19 +1,14 @@
 # $NetBSD$
 
-BUILDLINK_TREE+=	tcl-itcl
+BUILDLINK_TREE+=	tcl-itcl3
 
-.if !defined(TCL_ITCL_BUILDLINK3_MK)
-TCL_ITCL_BUILDLINK3_MK:=
+.if !defined(TCL_ITCL3_BUILDLINK3_MK)
+TCL_ITCL3_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.tcl-itcl+=	tcl-itcl>=itcl3.4.3
-BUILDLINK_PKGSRCDIR.tcl-itcl?=	../../wip/tcl-itcl
+BUILDLINK_API_DEPENDS.tcl-itcl3+=	tcl-itcl3>=3.4.3
+BUILDLINK_PKGSRCDIR.tcl-itcl3?=	../../wip/tcl-itcl3
 
-ITCL3_VERSION=	3.4.3
-
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
-.endif	# TCL_ITCL_BUILDLINK3_MK
+.endif	# TCL_ITCL3_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-tcl-itcl
+BUILDLINK_TREE+=	-tcl-itcl3
