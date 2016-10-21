@@ -23,7 +23,6 @@ CMAKE_ARGS+=	-DTERMLIB_INCLUDE_DIR=${BUILDLINK_PREFIX.terminfo}/include
 CMAKE_ARGS+=	-DNETPBM_LIBRARIES=${BUILDLINK_PREFIX.netpbm}/lib/libnetpbm.so
 CMAKE_ARGS+=	-DNETPBM_INCLUDE_DIR=${BUILDLINK_PREFIX.netpbm}/include/netpbm
 
-# XXX: It needs a patch to be committed in ../../mk/configure/cmake.mk
 CMAKE_INSTALL_PREFIX=	${PREFIX}/brlcad
 
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libanalyze.pc.in
