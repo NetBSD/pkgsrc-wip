@@ -14,6 +14,8 @@ LICENSE=	2-clause-bsd # ?
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include/X11
 CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--with-itcl=${BUILDLINK_PREFIX.tcl}/lib
+
 USE_TOOLS+=		grep
 
 WRKSRC=		${WRKDIR}/${DISTNAME:R}
