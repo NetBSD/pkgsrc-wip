@@ -1,18 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.4 2013/01/07 13:30:24 thomasklausner Exp $
+# $NetBSD$
 
-BUILDLINK_TREE+=	tk-itk
+BUILDLINK_TREE+=	tk-itk3
 
-.if !defined(TK_ITK_BUILDLINK3_MK)
-TK_ITK_BUILDLINK3_MK:=
+.if !defined(TK_ITK3_BUILDLINK3_MK)
+TK_ITK3_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.tk-itk+=	tk-itk>=3.3
-BUILDLINK_PKGSRCDIR.tk-itk?=	../../wip/tk-itk
+BUILDLINK_API_DEPENDS.tk-itk3+=	tk-itk3>=3.4.2
+BUILDLINK_PKGSRCDIR.tk-itk3?=	../../wip/tk-itk
 
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../lang/tcl-itcl/buildlink3.mk"
+.include "../../wip/tcl-itcl3/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.endif	# TK_ITK_BUILDLINK3_MK
+.endif	# TK_ITK3_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-tk-itk
+BUILDLINK_TREE+=	-tk-itk3
