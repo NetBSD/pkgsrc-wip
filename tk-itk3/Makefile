@@ -15,10 +15,17 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include/X11
 CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
 CONFIGURE_ARGS+=	--with-itcl=${BUILDLINK_PREFIX.tcl-itcl3}/lib
-
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/itk3
 USE_TOOLS+=		grep
 
 WRKSRC=		${WRKDIR}/${DISTNAME:R}
+
+# Remove conflict with itk 4.x
+post-install:
+.for file in Archetype.n Toplevel.n Widget.n itk.n itkvars.n usual.n
+	${RUN} cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/mann/ && \
+		${MV} ${file} itk3-${file}
+.endfor
 
 .include "../../wip/tcl-itcl3/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"

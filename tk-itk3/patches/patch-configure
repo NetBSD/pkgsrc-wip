@@ -1,0 +1,45 @@
+$NetBSD$
+
+--- configure.orig	2016-02-16 19:45:14.000000000 +0000
++++ configure
+@@ -3370,7 +3370,7 @@ $as_echo "could not find ${TCL_BIN_DIR}/
+ 		    done
+ 		fi
+ 		if test -f "${TCL_BIN_DIR}/${TCL_STUB_LIB_FILE}"; then
+-		    TCL_STUB_LIB_SPEC="-L`echo "${TCL_BIN_DIR}"  | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
++		    TCL_STUB_LIB_SPEC="-L`echo "${TCL_BIN_DIR}"  | sed -e 's/ /\\\\ /g'` ${COMPILER_RPATH_FLAG}`echo "${TCL_BIN_DIR}"  | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
+ 		    TCL_STUB_LIB_PATH="${TCL_BIN_DIR}/${TCL_STUB_LIB_FILE}"
+ 		fi
+ 		;;
+@@ -3680,7 +3680,7 @@ $as_echo "could not find ${TK_BIN_DIR}/t
+ 		    done
+ 		fi
+ 		if test -f "${TK_BIN_DIR}/${TK_STUB_LIB_FILE}"; then
+-		    TK_STUB_LIB_SPEC="-L` echo "${TK_BIN_DIR}"  | sed -e 's/ /\\\\ /g'` ${TK_STUB_LIB_FLAG}"
++		    TK_STUB_LIB_SPEC="-L` echo "${TK_BIN_DIR}"  | sed -e 's/ /\\\\ /g'` ${COMPILER_RPATH_FLAG}` echo "${TK_BIN_DIR}"  | sed -e 's/ /\\\\ /g'` ${TK_STUB_LIB_FLAG}"
+ 		    TK_STUB_LIB_PATH="${TK_BIN_DIR}/${TK_STUB_LIB_FILE}"
+ 		fi
+ 		;;
+@@ -6597,7 +6597,7 @@ $as_echo_n "checking for X11 libraries..
+ 	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl -o -r $i/libX11.dylib; then
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $i" >&5
+ $as_echo "$i" >&6; }
+-		XLIBSW="-L$i -lX11"
++		XLIBSW="-L$i ${COMPILER_RPATH_FLAG}$i -lX11"
+ 		x_libraries="$i"
+ 		break
+ 	    fi
+@@ -6606,7 +6606,7 @@ $as_echo "$i" >&6; }
+ 	if test "$x_libraries" = ""; then
+ 	    XLIBSW=-lX11
+ 	else
+-	    XLIBSW="-L$x_libraries -lX11"
++	    XLIBSW="-L$x_libraries ${COMPILER_RPATH_FLAG}$x_libraries -lX11"
+ 	fi
+     fi
+     if test "$XLIBSW" = nope ; then
+@@ -10659,4 +10659,3 @@ if test -n "$ac_unrecognized_opts" && te
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+-

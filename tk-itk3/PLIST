@@ -1,6 +1,6 @@
 @comment $NetBSD$
-include/itk.h
-include/itkDecls.h
+include/itk3/itk.h
+include/itk3/itkDecls.h
 lib/itk3.4/Archetype.itk
 lib/itk3.4/Toplevel.itk
 lib/itk3.4/Widget.itk
@@ -8,10 +8,10 @@ lib/itk3.4/itk.tcl
 lib/itk3.4/libitk3.4.so
 lib/itk3.4/pkgIndex.tcl
 lib/itk3.4/tclIndex
-man/mann/Archetype.n
-man/mann/Toplevel.n
-man/mann/Widget.n
-man/mann/itk.n
-man/mann/itkvars.n
-man/mann/usual.n
+man/mann/itk3-Archetype.n
+man/mann/itk3-Toplevel.n
+man/mann/itk3-Widget.n
+man/mann/itk3-itk.n
+man/mann/itk3-itkvars.n
+man/mann/itk3-usual.n
 @pkgdir bin
