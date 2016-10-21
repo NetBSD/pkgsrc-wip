@@ -14,7 +14,15 @@ LICENSE=	2-clause-bsd # ?
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include/X11
 CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/itcl3
 USE_TOOLS+=		grep
+
+post-install:
+.for file in body.n class.n code.n configbody.n delete.n ensemble.n find.n \
+	is.n itcl.n itclvars.n local.n scope.n
+	${RUN} cd ${DESTDIR}${PREFIX}/man/mann/ && \
+		${MV} ${file} itcl3-${file}
+.endfor
 
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

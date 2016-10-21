@@ -8,6 +8,8 @@ TCL_ITCL_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.tcl-itcl+=	tcl-itcl>=itcl3.4.3
 BUILDLINK_PKGSRCDIR.tcl-itcl?=	../../wip/tcl-itcl
 
+ITCL3_VERSION=	3.4.3
+
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
