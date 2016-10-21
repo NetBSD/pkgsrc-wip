@@ -3,7 +3,6 @@
 
 DISTNAME=	tkhtml3-alpha-16
 PKGNAME=	${DISTNAME:S/alpha-/1.0alpha/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://tkhtml.tcl.tk/
 
