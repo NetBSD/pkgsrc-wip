@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	itcl3.4.3
-PKGNAME=	tcl-${DISTNAME:S/k/k-/}
+PKGNAME=	tcl-${DISTNAME:S/l/l-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=incrtcl/}
 
