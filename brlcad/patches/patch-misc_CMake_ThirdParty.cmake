@@ -1,8 +1,6 @@
 $NetBSD$
 
 Allow to pass library defintion from command-line.
-CMake part in this project is broken and fails to detect some libraries/headers
-for unknown reason.
 
 --- misc/CMake/ThirdParty.cmake.orig	2016-08-09 06:52:32.000000000 +0000
 +++ misc/CMake/ThirdParty.cmake
