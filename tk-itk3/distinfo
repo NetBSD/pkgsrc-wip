@@ -4,5 +4,5 @@ SHA1 (itk3.4.2.tar.gz) = 56172df469e799102c4e18b5ae64c1976c4fcef2
 RMD160 (itk3.4.2.tar.gz) = 4c7f70a9c77b2390d41071777dfb47c0599da36e
 SHA512 (itk3.4.2.tar.gz) = 4906f4b28645edb6fc4a1350e8de228db06364bc1f401a638fa9ef478bef45af641ede3d50994d1f56686c8ec8f394cf6f97e40d6dade436e89d452d8e6e0445
 Size (itk3.4.2.tar.gz) = 185468 bytes
-SHA1 (patch-configure) = 9022942cb6ad02658f9163dd3014fb5f8ddd5fbf
+SHA1 (patch-configure) = 567749d7761a5333a925f3916e73f3618c7bdcdc
 SHA1 (patch-generic_itk.h) = 2977eab8946c084abee5c63ca8a29e9ebc53ef18

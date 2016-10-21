@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add needed entries for RPATH.
+
 --- configure.orig	2016-02-16 19:45:14.000000000 +0000
 +++ configure
 @@ -3370,7 +3370,7 @@ $as_echo "could not find ${TCL_BIN_DIR}/
