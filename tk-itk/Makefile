@@ -18,6 +18,7 @@ USE_TOOLS+=		grep
 
 WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
+.include "../../wip/tcl-itcl/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
