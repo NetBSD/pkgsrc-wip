@@ -9,7 +9,7 @@ TAG=		Release
 GITHUB_TAG=	${TAG}/${PKGVERSION_NOREV}
 WRKSRC=		${WRKDIR}/${DISTNAME}-${TAG}-${PKGVERSION_NOREV}
 
-VERSION=	15.2.2
+VERSION=	15.2.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	paul@paulbsd.com
@@ -59,11 +59,13 @@ SUBST_FILES.egdir+=	src/tray-monitor/Makefile.in
 SUBST_SED.egdir=	-e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bareos
 CONFIGURE_ARGS+=	--with-sbin-perm=0755
 CONFIGURE_ARGS+=	--with-working-dir=${BAREOS_WORKINGDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${BAREOS_PIDDIR}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}/include/readline
+CONFIGURE_ARGS+=	--with-jansson
 
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-smartalloc
@@ -83,3 +85,4 @@ INSTALLATION_DIRS+=	${EXAMPLESDIR}
 .include "../../mk/readline.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../textproc/jansson/buildlink3.mk"

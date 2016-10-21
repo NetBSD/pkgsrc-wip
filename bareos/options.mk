@@ -16,6 +16,7 @@ BAREOS_DB=              sqlite3
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=        --with-postgresql=${PGSQL_PREFIX}
 BAREOS_DB=              postgresql
+PGSQL_VERSIONS_ACCEPTED=   95 94 93 92 91
 .elif !empty(PKG_OPTIONS:Mcatalog-mysql)
 .  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=        --with-mysql=${PREFIX}

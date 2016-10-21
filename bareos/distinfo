@@ -1,8 +1,9 @@
 $NetBSD$
 
-SHA1 (bareos/bareos.tar.gz) = 2a3792389fe4c337d95dda54429dfc854cd7d225
-RMD160 (bareos/bareos.tar.gz) = 2fbb0176e0aba7de5eae2765e006cab0800b0c60
-Size (bareos/bareos.tar.gz) = 3928036 bytes
+SHA1 (bareos/bareos.tar.gz) = 1e19d66606da78d4018eaeb6a8aaa98f43ad9845
+RMD160 (bareos/bareos.tar.gz) = 106ee92a9df4df94dc0c83b74a6a2ead35af6979
+SHA512 (bareos/bareos.tar.gz) = 35d06f48fc96b397598918af1346874f323a9f87abf85d8b3ccf39d7383667e8e7b454ff5e4311bfdec99ca2da13f06b348b03262ed6c671dfcb91fab2baa85e
+Size (bareos/bareos.tar.gz) = 4175538 bytes
 SHA1 (patch-GNUmakefile.in) = 9afa4bf9e0818b2e969174b898c10eadcc6768b6
 SHA1 (patch-Makefile.in) = 020827dae3b780a3f8e9716ed15bae90ce40a44b
 SHA1 (patch-aa) = 2bdf72f63f6063da1fa3bd9533459ecb9aba9eb6
