@@ -26,9 +26,6 @@ CMAKE_ARGS+=	-DNETPBM_INCLUDE_DIR=${BUILDLINK_PREFIX.netpbm}/include/netpbm
 # XXX: It needs a patch to be committed in ../../mk/configure/cmake.mk
 CMAKE_INSTALL_PREFIX=	${PREFIX}/brlcad
 
-MAKE_FLAGS+=	V=1
-MAKE_FLAGS+=	VERBOSE=1
-
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libanalyze.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/librt.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libfft.pc.in
@@ -58,6 +55,7 @@ BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
+#.include "../../wip/tk-itk/buildlink3.mk"
 .include "../../wip/tkpng/buildlink3.mk"
 .include "../../x11/tktable/buildlink3.mk"
 .include "../../wip/tcl-iwidgets/buildlink3.mk"
