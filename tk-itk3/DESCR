@@ -4,3 +4,5 @@ notebook that act like ordinary Tk widgets but are constructed using Tk widgets
 as component parts, without having to write C code. In effect, a mega-widget
 looks and acts exactly like a Tk widget, but is considerably easier to
 implement.
+
+This package provides itk version 3.x.

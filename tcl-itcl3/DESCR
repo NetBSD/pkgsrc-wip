@@ -6,3 +6,6 @@ with identical characteristics, and classes can inherit functionality from one
 another. This object-oriented paradigm adds another level of organization on
 top of the basic variable/procedure elements, and the resulting code is easier
 to understand and maintain.
+
+This package provides itcl version 3.x. For newer version refer to the builtin
+library in the mail Tcl package.

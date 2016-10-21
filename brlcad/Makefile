@@ -56,7 +56,6 @@ BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../wip/tk-itk3/buildlink3.mk"
 .include "../../wip/tkpng/buildlink3.mk"
-.include "../../x11/tktable/buildlink3.mk"
 .include "../../wip/tcl-iwidgets/buildlink3.mk"
 .include "../../wip/tkhtml3/buildlink3.mk"
 .include "../../devel/tinycthread/buildlink3.mk"
@@ -68,4 +67,5 @@ BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 .include "../../mk/terminfo.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../x11/tktable/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
