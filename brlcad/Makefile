@@ -58,6 +58,7 @@ BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
+.include "../../wip/tkpng/buildlink3.mk"
 .include "../../x11/tktable/buildlink3.mk"
 .include "../../wip/tcl-iwidgets/buildlink3.mk"
 .include "../../wip/tkhtml3/buildlink3.mk"
