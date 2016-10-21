@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2012/10/01 13:42:30 othyro Exp $
 
-SHA1 (itk3.3.tar.gz) = 313fc2ddbe3f5b213372bc7ef870d644f38a95af
-RMD160 (itk3.3.tar.gz) = 74da1a9dfb6d6049f9d90a208d3b3166cfd2de20
-Size (itk3.3.tar.gz) = 211722 bytes
-SHA1 (patch-configure) = 6a49246a32e90cf19c7df4bb770f549107e35487
+SHA1 (itk3.4.2.tar.gz) = 56172df469e799102c4e18b5ae64c1976c4fcef2
+RMD160 (itk3.4.2.tar.gz) = 4c7f70a9c77b2390d41071777dfb47c0599da36e
+SHA512 (itk3.4.2.tar.gz) = 4906f4b28645edb6fc4a1350e8de228db06364bc1f401a638fa9ef478bef45af641ede3d50994d1f56686c8ec8f394cf6f97e40d6dade436e89d452d8e6e0445
+Size (itk3.4.2.tar.gz) = 185468 bytes
