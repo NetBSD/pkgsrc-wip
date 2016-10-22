@@ -5,3 +5,4 @@ RMD160 (brlcad-7.26.0.tar.bz2) = bf391f887463ece786c5e1e4f3382c168bfc99b3
 SHA512 (brlcad-7.26.0.tar.bz2) = e4819da6e94ff7e5f777cb3c59a911f8818a10ddef42f02f3c3b95be9057a7a83427fdbc29bc3f610f16100b65bb14919438598bd5d59af16fcdbe9f6351006a
 Size (brlcad-7.26.0.tar.bz2) = 113073230 bytes
 SHA1 (patch-misc_CMake_ThirdParty.cmake) = 03cb989aa4de0a07e146bc80facd649946a9688b
+SHA1 (patch-src_librt_primitives_bot_gct__decimation_meshdecimation.c) = c76104ad99c8714379ad7e01b806a2f30cda4f05
