@@ -4,5 +4,7 @@ SHA1 (brlcad-7.26.0.tar.bz2) = b0e307016317bff87c3b49ea395b4829a6305156
 RMD160 (brlcad-7.26.0.tar.bz2) = bf391f887463ece786c5e1e4f3382c168bfc99b3
 SHA512 (brlcad-7.26.0.tar.bz2) = e4819da6e94ff7e5f777cb3c59a911f8818a10ddef42f02f3c3b95be9057a7a83427fdbc29bc3f610f16100b65bb14919438598bd5d59af16fcdbe9f6351006a
 Size (brlcad-7.26.0.tar.bz2) = 113073230 bytes
+SHA1 (patch-CMakeLists.txt) = 230ac7ce5c1b98c08651e4d74d92658836a8dfbc
 SHA1 (patch-misc_CMake_ThirdParty.cmake) = 03cb989aa4de0a07e146bc80facd649946a9688b
 SHA1 (patch-src_librt_primitives_bot_gct__decimation_meshdecimation.c) = c76104ad99c8714379ad7e01b806a2f30cda4f05
+SHA1 (patch-src_other_openscenegraph_CMakeLists.txt) = 1508f2fc2da4cc2c303ad11b49ab40fca379eaec

@@ -56,6 +56,8 @@ BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
+
 .include "../../wip/tk-itk3/buildlink3.mk"
 .include "../../wip/tkpng/buildlink3.mk"
 .include "../../wip/tcl-iwidgets/buildlink3.mk"

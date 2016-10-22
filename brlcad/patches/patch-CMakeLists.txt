@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2016-08-09 06:49:57.000000000 +0000
++++ CMakeLists.txt
+@@ -725,7 +725,7 @@ endif("${CMAKE_BUILD_TYPE}" MATCHES "Deb
+ # Documentation of these options is available at
+ # http://www.cmake.org/Wiki/CMake_RPATH_handling
+ 
+-include("${BRLCAD_CMAKE_DIR}/RPath_Setup.cmake")
++# include("${BRLCAD_CMAKE_DIR}/RPath_Setup.cmake")
+ 
+ #---------------------------------------------------------------------
+ # We will need a brlcad_config.h.in file to hold all the #cmakedefine

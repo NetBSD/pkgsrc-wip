@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/other/openscenegraph/CMakeLists.txt.orig	2016-08-09 06:51:40.000000000 +0000
++++ src/other/openscenegraph/CMakeLists.txt
+@@ -381,7 +381,7 @@ endif(NOT CMAKE_CONFIGURATION_TYPES)
+ 
+ ################################################################################
+ # Installation stuff
+-include(${OpenSceneGraph_SOURCE_DIR}/CMakeModules/RPath_Setup.cmake)
++#include(${OpenSceneGraph_SOURCE_DIR}/CMakeModules/RPath_Setup.cmake)
+ include(${OpenSceneGraph_SOURCE_DIR}/CMakeModules/Path_Setup.cmake)
+ 
+ ################################################################################
