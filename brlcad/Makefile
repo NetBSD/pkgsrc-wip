@@ -11,13 +11,13 @@ COMMENT=	Cross-platform solid modeling system
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config wish flex
+USE_TOOLS+=	pkg-config wish flex perl awk
 USE_LANGUAGES=	c c++ fortran
 
-MAKE_JOBS_SAFE=	no # as of 7.26.0
-
-CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=OFF
-CMAKE_ARGS+=	-DLEMON_TEMPLATE:PATH=${PREFIX}/share/lemon/lempar.c
+# brlcad uses modified mundled tools and libraries (openNURBS, lemon, ...)
+# tools like adaptagrams (libavoid) are unused code for years and no longer
+# compatible with existing libraries
+CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=ON
 
 CMAKE_ARGS+=	-DTERMLIB_LIBRARY=${BUILDLINK_PREFIX.terminfo}/lib/lib${BUILDLINK_LIBNAME.terminfo}.so
 CMAKE_ARGS+=	-DTERMLIB_INCLUDE_DIR=${BUILDLINK_PREFIX.terminfo}/include
@@ -25,7 +25,19 @@ CMAKE_ARGS+=	-DTERMLIB_INCLUDE_DIR=${BUILDLINK_PREFIX.terminfo}/include
 CMAKE_ARGS+=	-DNETPBM_LIBRARIES=${BUILDLINK_PREFIX.netpbm}/lib/libnetpbm.so
 CMAKE_ARGS+=	-DNETPBM_INCLUDE_DIR=${BUILDLINK_PREFIX.netpbm}/include/netpbm
 
-CMAKE_INSTALL_PREFIX=	${PREFIX}/brlcad
+# brlcad must be installed into subprefix as it has conflicting files and it
+# will try overwrite them. brlcad will also blacklist existing libraries in
+# install subprefix
+BRLCAD_PREFIX=		${PREFIX}/brlcad
+CMAKE_INSTALL_PREFIX=	${BRLCAD_PREFIX}
+
+# Pass RPATH out of standard prefix
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${BRLCAD_PREFIX:Q}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${BRLCAD_PREFIX:Q}/lib/libgcv_plugins
+
+# Allow RPATH out of standard prefix
+BUILDLINK_PASSTHRU_DIRS+=	${BRLCAD_PREFIX:Q}
+BUILDLINK_PASSTHRU_RPATHDIRS+=  ${BRLCAD_PREFIX:Q}
 
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/libanalyze.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/librt.pc.in
@@ -49,24 +61,60 @@ PKGCONFIG_OVERRIDE+=	src/other/libpng/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	src/other/libz/zlib.pc.in
 
 BUILD_DEPENDS+=	astyle-[0-9]*:../../devel/astyle
-BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon
-BUILD_DEPENDS+=	re2c-[0-9]*:../../devel/re2c
+# BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon # built in
+# BUILD_DEPENDS+=	re2c-[0-9]*:../../devel/re2c # built in
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # for xsltproc
 BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
 BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
+# brlcad builds intermediate tools and uses it to process files to be built
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
+
+BUILDLINK_TRANSFORM+=	rm:-Werror # unused-but-set-variable, deprecated-declarations ..
+BUILDLINK_TRANSFORM+=	rm:-pedantic rm:-pedantic-errors # C99 style comments..
+
+REPLACE_BASH+=		sh/footer.sh
+REPLACE_BASH+=		sh/fs2org.sh
+
+REPLACE_RUBY+=		doc/docbook/resources/other/standard/xsl/epub/bin/dbtoepub
+
+REPLACE_PYTHON+=	misc/flawfinder
+REPLACE_PYTHON+=	misc/svn2git/svnlog2csv
+REPLACE_PYTHON+=	src/conv/intaval-g.py
+REPLACE_PYTHON+=	src/other/freetype/builds/mac/ascii2mpw.py
+REPLACE_PYTHON+=	src/other/freetype/src/tools/chktrcmp.py
+REPLACE_PYTHON+=	src/other/freetype/src/tools/docmaker/docbeauty.py
+REPLACE_PYTHON+=	src/other/freetype/src/tools/docmaker/docmaker.py
+REPLACE_PYTHON+=	src/other/freetype/src/tools/glnames.py
+REPLACE_PYTHON+=	src/other/stepcode/misc/flawfinder
+REPLACE_PYTHON+=	src/other/stepcode/misc/wiki-scripts/update-matrix.py
+REPLACE_PYTHON+=	src/other/stepcode/src/exp2python/python/setup.py
+
+REPLACE_INTERPRETER+=	tclsh
+REPLACE.tclsh.old=	.*tclsh
+REPLACE.tclsh.new=	${TCLSH}
+REPLACE_FILES.tclsh=	src/other/tkhtml/doc/tkhtml_requirements.tcl
+
+REPLACE_INTERPRETER+=	awk
+REPLACE.tclsh.awk=	.*tclsh
+REPLACE.tclsh.awk=	${AWK}
+REPLACE_FILES.awk=	src/other/tkhtml/doc/tkhtml_requirements.tcl
+
+REPLACE_PERL+=		src/proc-db/metaballs.pl
+REPLACE_PERL+=		src/proc-db/spiral.pl
 
 .include "../../wip/tk-itk3/buildlink3.mk"
 .include "../../wip/tkpng/buildlink3.mk"
 .include "../../wip/tcl-iwidgets/buildlink3.mk"
 .include "../../wip/tkhtml3/buildlink3.mk"
 .include "../../devel/tinycthread/buildlink3.mk"
-.include "../../graphics/adaptagrams/buildlink3.mk"
+#.include "../../graphics/adaptagrams/buildlink3.mk" # not any longer compatible, unused by upstream
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
