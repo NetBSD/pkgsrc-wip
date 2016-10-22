@@ -14,6 +14,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config wish flex
 USE_LANGUAGES=	c c++ fortran
 
+MAKE_JOBS_SAFE=	no # as of 7.26.0
+
 CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=OFF
 CMAKE_ARGS+=	-DLEMON_TEMPLATE:PATH=${PREFIX}/share/lemon/lempar.c
 
