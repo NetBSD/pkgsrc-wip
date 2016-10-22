@@ -91,15 +91,16 @@ REPLACE_PYTHON+=	src/other/stepcode/misc/flawfinder
 REPLACE_PYTHON+=	src/other/stepcode/misc/wiki-scripts/update-matrix.py
 REPLACE_PYTHON+=	src/other/stepcode/src/exp2python/python/setup.py
 
+# Private copy of TCL
 REPLACE_INTERPRETER+=	tclsh
 REPLACE.tclsh.old=	.*tclsh
-REPLACE.tclsh.new=	${TCLSH}
+REPLACE.tclsh.new=	${BRLCAD_PREFIX}/bin/tclsh
 REPLACE_FILES.tclsh=	src/other/tkhtml/doc/tkhtml_requirements.tcl
 
 REPLACE_INTERPRETER+=	awk
-REPLACE.tclsh.awk=	.*tclsh
-REPLACE.tclsh.awk=	${AWK}
-REPLACE_FILES.awk=	src/other/tkhtml/doc/tkhtml_requirements.tcl
+REPLACE.awk.old=	.*awk
+REPLACE.awk.new=	${AWK}
+REPLACE_FILES.awk=	src/other/freetype/builds/atari/deflinejoiner.awk
 
 REPLACE_PERL+=		src/proc-db/metaballs.pl
 REPLACE_PERL+=		src/proc-db/spiral.pl

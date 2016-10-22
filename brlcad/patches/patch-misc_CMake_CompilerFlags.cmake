@@ -1,5 +1,7 @@
 $NetBSD$
 
+Nullify CLEAR_BUILD_FLAGS macro, it abuses pkgsrc settings.
+
 --- misc/CMake/CompilerFlags.cmake.orig	2016-08-09 06:52:30.000000000 +0000
 +++ misc/CMake/CompilerFlags.cmake
 @@ -101,26 +101,26 @@ endmacro(RESTORE_CACHED_BUILD_FLAGS)
