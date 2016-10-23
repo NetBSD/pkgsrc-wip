@@ -102,6 +102,12 @@ benchmark: build
 		${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_PROGRAM}		\
 			${MAKE_FLAGS} ${TEST_MAKE_FLAGS} benchmark
 
+regress: build
+	${_ULIMIT_CMD}							\
+		cd ${WRKSRC} &&						\
+		${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_PROGRAM}		\
+			${MAKE_FLAGS} ${TEST_MAKE_FLAGS} regress
+
 # .include "../../wip/tk-itk3/buildlink3.mk" # built-in
 # .include "../../wip/tkpng/buildlink3.mk" # built-in
 # .include "../../wip/tcl-iwidgets/buildlink3.mk" # built-in
