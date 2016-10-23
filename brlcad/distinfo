@@ -7,6 +7,7 @@ Size (brlcad-7.26.0.tar.bz2) = 113073230 bytes
 SHA1 (patch-CMakeLists.txt) = ec1955dc1543fd2b6ba5a56ebf350980ac42f7df
 SHA1 (patch-misc_CMake_CompilerFlags.cmake) = 0831bd3376e2838fbd4a08be2121db73fba3db56
 SHA1 (patch-misc_CMake_ThirdParty.cmake) = 03cb989aa4de0a07e146bc80facd649946a9688b
+SHA1 (patch-regress_repository.sh) = ec31fe38033f33201e7fe709a121754b74f478df
 SHA1 (patch-src_conv_iges_main.c) = 67d9315e43313e57efd3cfeb489f035cfa8f58f6
 SHA1 (patch-src_libbu_uce-dirent.h) = 82c0f1c67316b5ddcde50c69a0f746471eaf10c6
 SHA1 (patch-src_librt_primitives_bot_gct__decimation_meshdecimation.c) = c76104ad99c8714379ad7e01b806a2f30cda4f05
