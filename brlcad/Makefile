@@ -97,13 +97,13 @@ REPLACE_PERL+=		src/proc-db/spiral.pl
 TEST_TARGET=		test
 
 benchmark: build
-	${_ULIMIT_CMD}							\
+	${RUN}${_ULIMIT_CMD}						\
 		cd ${WRKSRC} &&						\
 		${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_PROGRAM}		\
 			${MAKE_FLAGS} ${TEST_MAKE_FLAGS} benchmark
 
 regress: build
-	${_ULIMIT_CMD}							\
+	${RUN}${_ULIMIT_CMD}						\
 		cd ${WRKSRC} &&						\
 		${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_PROGRAM}		\
 			${MAKE_FLAGS} ${TEST_MAKE_FLAGS} regress
