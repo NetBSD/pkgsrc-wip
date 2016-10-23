@@ -17,21 +17,20 @@ WRKSRC=		${WRKDIR}/libsearpc-${GHCOMMIT}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-AUTOCONF_VERSION=2.61
-AUTOMAKE_VERSION=1.9
-
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config gmake automake autoreconf
+USE_TOOLS+=	pkg-config gmake automake autoconf aclocal autoheader
 
-#DEPENDS+=	${PYPKGPREFIX}-simplejson>=../../converters/py-simplejson
+DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 
+
+PY_PATCHPLIST=	yes
 
 pre-configure:
-	cd ${WRKSRC} && env AUTOCONF_VERSION=${AUTOCONF_VERSION} && AUTOMAKE_VERSION=${AUTOMAKE_VERSION} autoreconf -fi
+	set -e; cd ${WRKSRC}; libtoolize; aclocal; autoheader; automake -a --foreign -i; autoconf
 
 
 .include "../../textproc/jansson/buildlink3.mk"
-.include "../../lang/python/tool.mk"
+.include "../../lang/python/extension.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
