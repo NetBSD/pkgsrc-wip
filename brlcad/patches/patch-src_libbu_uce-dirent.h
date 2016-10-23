@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/libbu/uce-dirent.h.orig	2016-08-09 06:47:43.000000000 +0000
 +++ src/libbu/uce-dirent.h
 @@ -123,6 +123,8 @@

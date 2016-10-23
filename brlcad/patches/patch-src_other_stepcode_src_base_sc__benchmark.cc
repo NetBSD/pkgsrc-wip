@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/other/stepcode/src/base/sc_benchmark.cc.orig	2016-08-09 06:47:32.000000000 +0000
 +++ src/other/stepcode/src/base/sc_benchmark.cc
 @@ -3,6 +3,12 @@

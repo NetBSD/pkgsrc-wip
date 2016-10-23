@@ -1,5 +1,7 @@
 $NetBSD$
 
+Disable gethostbyname_r/gethostbyaddr_r on NetBSD.
+
 --- src/other/tcl/unix/tclUnixCompat.c.orig	2016-08-09 06:47:10.000000000 +0000
 +++ src/other/tcl/unix/tclUnixCompat.c
 @@ -101,7 +101,7 @@ static Tcl_ThreadDataKey dataKey;

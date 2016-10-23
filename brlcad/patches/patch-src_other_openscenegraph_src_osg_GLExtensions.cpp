@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/other/openscenegraph/src/osg/GLExtensions.cpp.orig	2016-08-09 06:51:57.000000000 +0000
 +++ src/other/openscenegraph/src/osg/GLExtensions.cpp
 @@ -376,7 +376,7 @@ OSG_INIT_SINGLETON_PROXY(GLExtensionDisa

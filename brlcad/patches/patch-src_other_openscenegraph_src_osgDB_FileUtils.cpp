@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/other/openscenegraph/src/osgDB/FileUtils.cpp.orig	2016-08-09 06:52:02.000000000 +0000
 +++ src/other/openscenegraph/src/osgDB/FileUtils.cpp
 @@ -76,7 +76,7 @@ typedef char TCHAR;

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Baskport patch from TCL 8.6.
+
 --- src/other/tcl/generic/tclInt.h.orig	2016-08-09 06:47:11.000000000 +0000
 +++ src/other/tcl/generic/tclInt.h
 @@ -40,21 +40,9 @@

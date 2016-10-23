@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD support.
+
 --- src/other/openscenegraph/src/OpenThreads/pthreads/PThread.cpp.orig	2016-08-09 06:51:54.000000000 +0000
 +++ src/other/openscenegraph/src/OpenThreads/pthreads/PThread.cpp
 @@ -31,7 +31,7 @@

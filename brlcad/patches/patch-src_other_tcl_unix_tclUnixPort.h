@@ -1,5 +1,7 @@
 $NetBSD$
 
+Baskport patch from TCL 8.6.
+
 --- src/other/tcl/unix/tclUnixPort.h.orig	2016-08-09 06:47:12.000000000 +0000
 +++ src/other/tcl/unix/tclUnixPort.h
 @@ -112,11 +112,7 @@ typedef off_t		Tcl_SeekOffset;

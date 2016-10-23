@@ -1,5 +1,7 @@
 $NetBSD$
 
+Baskport patch from TCL 8.6.
+
 --- src/other/tcl/unix/tclUnixInit.c.orig	2016-08-09 06:47:10.000000000 +0000
 +++ src/other/tcl/unix/tclUnixInit.c
 @@ -54,6 +54,11 @@

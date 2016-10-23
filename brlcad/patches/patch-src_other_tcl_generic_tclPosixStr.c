@@ -1,5 +1,7 @@
 $NetBSD$
 
+Baskport patch from TCL 8.6.
+
 --- src/other/tcl/generic/tclPosixStr.c.orig	2016-08-09 06:47:08.000000000 +0000
 +++ src/other/tcl/generic/tclPosixStr.c
 @@ -337,7 +337,7 @@ Tcl_ErrnoId(void)
