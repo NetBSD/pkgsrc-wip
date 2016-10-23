@@ -19,12 +19,6 @@ USE_LANGUAGES=	c c++ fortran
 # compatible with existing libraries
 CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=ON
 
-CMAKE_ARGS+=	-DTERMLIB_LIBRARY=${BUILDLINK_PREFIX.terminfo}/lib/lib${BUILDLINK_LIBNAME.terminfo}.so
-CMAKE_ARGS+=	-DTERMLIB_INCLUDE_DIR=${BUILDLINK_PREFIX.terminfo}/include
-
-CMAKE_ARGS+=	-DNETPBM_LIBRARIES=${BUILDLINK_PREFIX.netpbm}/lib/libnetpbm.so
-CMAKE_ARGS+=	-DNETPBM_INCLUDE_DIR=${BUILDLINK_PREFIX.netpbm}/include/netpbm
-
 # brlcad must be installed into subprefix as it has conflicting files and it
 # will try overwrite them. brlcad will also blacklist existing libraries in
 # install subprefix
@@ -60,6 +54,9 @@ PKGCONFIG_OVERRIDE+=	src/other/libpng/scripts/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	src/other/libpng/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	src/other/libz/zlib.pc.in
 
+# What else?
+NOT_PAX_MPROTECT_SAFE+=	${BRLCAD_PREFIX:Q}/bin/mged
+
 BUILD_DEPENDS+=	astyle-[0-9]*:../../devel/astyle
 # BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon # built in
 # BUILD_DEPENDS+=	re2c-[0-9]*:../../devel/re2c # built in
@@ -77,8 +74,6 @@ BUILDLINK_TRANSFORM+=	rm:-pedantic rm:-pedantic-errors # C99 style comments..
 REPLACE_BASH+=		sh/footer.sh
 REPLACE_BASH+=		sh/fs2org.sh
 
-REPLACE_RUBY+=		doc/docbook/resources/other/standard/xsl/epub/bin/dbtoepub
-
 REPLACE_PYTHON+=	misc/flawfinder
 REPLACE_PYTHON+=	misc/svn2git/svnlog2csv
 REPLACE_PYTHON+=	src/conv/intaval-g.py
@@ -91,12 +86,6 @@ REPLACE_PYTHON+=	src/other/stepcode/misc/flawfinder
 REPLACE_PYTHON+=	src/other/stepcode/misc/wiki-scripts/update-matrix.py
 REPLACE_PYTHON+=	src/other/stepcode/src/exp2python/python/setup.py
 
-# Private copy of TCL
-REPLACE_INTERPRETER+=	tclsh
-REPLACE.tclsh.old=	.*tclsh
-REPLACE.tclsh.new=	${BRLCAD_PREFIX}/bin/tclsh
-REPLACE_FILES.tclsh=	src/other/tkhtml/doc/tkhtml_requirements.tcl
-
 REPLACE_INTERPRETER+=	awk
 REPLACE.awk.old=	.*awk
 REPLACE.awk.new=	${AWK}
@@ -105,20 +94,21 @@ REPLACE_FILES.awk=	src/other/freetype/builds/atari/deflinejoiner.awk
 REPLACE_PERL+=		src/proc-db/metaballs.pl
 REPLACE_PERL+=		src/proc-db/spiral.pl
 
-.include "../../wip/tk-itk3/buildlink3.mk"
-.include "../../wip/tkpng/buildlink3.mk"
-.include "../../wip/tcl-iwidgets/buildlink3.mk"
-.include "../../wip/tkhtml3/buildlink3.mk"
-.include "../../devel/tinycthread/buildlink3.mk"
-#.include "../../graphics/adaptagrams/buildlink3.mk" # not any longer compatible, unused by upstream
+TEST_TARGET=		benchmark test
+
+# .include "../../wip/tk-itk3/buildlink3.mk" # built-in
+# .include "../../wip/tkpng/buildlink3.mk" # built-in
+# .include "../../wip/tcl-iwidgets/buildlink3.mk" # built-in
+# .include "../../wip/tkhtml3/buildlink3.mk" # built-in
+# .include "../../devel/tinycthread/buildlink3.mk" # built-in
+# .include "../../graphics/adaptagrams/buildlink3.mk" # not any longer compatible, unused by upstream
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/netpbm/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+# .include "../../graphics/netpbm/buildlink3.mk" # built-in
+# .include "../../graphics/png/buildlink3.mk" # built-in
 .include "../../lang/python/application.mk"
-.include "../../lang/ruby/replace.mk"
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../mk/terminfo.buildlink3.mk"
+# .include "../../lang/tcl/buildlink3.mk" # built-in
+# .include "../../mk/terminfo.buildlink3.mk" # built-in
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
-.include "../../x11/tktable/buildlink3.mk"
+# .include "../../x11/tk/buildlink3.mk" # built-in
+# .include "../../x11/tktable/buildlink3.mk" # built-in
 .include "../../mk/bsd.pkg.mk"

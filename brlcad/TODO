@@ -1,3 +1,2 @@
-- update lemon (?) - -T option isn't supported by the pkgsrc version
-- switch to tk/tcl 8.5 as it's oficially supported
-- package itk for tk 8.5 as it's the version supported
+- add NetBSD support to upstream version of OpenThreads
+- add NetBSD support to upstream version of TCL

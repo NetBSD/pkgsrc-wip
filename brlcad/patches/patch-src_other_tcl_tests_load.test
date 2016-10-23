@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/other/tcl/tests/load.test.orig	2016-08-09 06:50:57.000000000 +0000
++++ src/other/tcl/tests/load.test
+@@ -23,7 +23,7 @@ if {![info exists ext]} {
+     set ext [info sharedlibextension]
+ }
+ # Tests require the existence of one of the DLLs in the dltest directory.
+-set testDir [file join [file dirname [info nameofexecutable]] dltest]
++set testDir [file join [file dirname [info nameofexecutable]] .. dltest .libs ]
+ set x [file join $testDir pkga$ext]
+ set dll "[file tail $x]Required"
+ testConstraint $dll [file readable $x]
