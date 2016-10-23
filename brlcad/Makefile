@@ -94,7 +94,13 @@ REPLACE_FILES.awk=	src/other/freetype/builds/atari/deflinejoiner.awk
 REPLACE_PERL+=		src/proc-db/metaballs.pl
 REPLACE_PERL+=		src/proc-db/spiral.pl
 
-TEST_TARGET=		benchmark test
+TEST_TARGET=		test
+
+benchmark: build
+	${_ULIMIT_CMD}							\
+		cd ${WRKSRC} &&						\
+		${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_PROGRAM}		\
+			${MAKE_FLAGS} ${TEST_MAKE_FLAGS} benchmark
 
 # .include "../../wip/tk-itk3/buildlink3.mk" # built-in
 # .include "../../wip/tkpng/buildlink3.mk" # built-in
