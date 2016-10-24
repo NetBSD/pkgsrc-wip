@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	universalcodegrep-0.2.2
+DISTNAME=	universalcodegrep-0.3.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gvansickle/}
 GITHUB_PROJECT=	ucg
-#GITHUB_RELEASE=	${PKGVERSION_NOREV}
-GITHUB_TAG=	038e498679dcce932469089ff794176e44d7024c
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+#GITHUB_TAG=	038e498679dcce932469089ff794176e44d7024c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gvansickle/ucg/
@@ -19,8 +19,8 @@ USE_TOOLS+=	autoconf automake pkg-config
 
 NOT_PAX_MPROTECT_SAFE=	bin/ucg
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
+#pre-configure:
+#	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../lang/python/application.mk"
 .include "../../devel/argp/buildlink3.mk"
