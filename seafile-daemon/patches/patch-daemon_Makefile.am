@@ -1,0 +1,14 @@
+$NetBSD$
+Fix build error due missing inotify lib, patch adapted from OpenBSDs version
+
+--- daemon/Makefile.am.orig	2016-10-24 00:46:06.023235453 +0000
++++ daemon/Makefile.am	2016-10-24 00:46:35.667980995 +0000
+@@ -123,7 +123,7 @@
+ 
+ seaf_daemon_LDADD = $(top_builddir)/lib/libseafile_common.la \
+ 	@LIB_INTL@ \
+-	@GLIB2_LIBS@  @GOBJECT_LIBS@ @SSL_LIBS@ @LIB_RT@ @LIB_UUID@ -lsqlite3 @LIBEVENT_LIBS@ \
++	@GLIB2_LIBS@  @GOBJECT_LIBS@ @SSL_LIBS@ @LIB_RT@ @LIB_UUID@ -lsqlite3 @LIBEVENT_LIBS@ -linotify \
+ 	$(top_builddir)/common/cdc/libcdc.la \
+ 	$(top_builddir)/common/index/libindex.la @LIB_WS32@ @LIB_CRYPT32@ \
+ 	@SEARPC_LIBS@ @CCNET_LIBS@ @GNOME_KEYRING_LIBS@ @JANSSON_LIBS@ @LIB_MAC@ @ZLIB_LIBS@ @CURL_LIBS@ @BPWRAPPER_LIBS@

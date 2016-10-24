@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (seafile/bea8cc526ed37b8c9599e5f526d934c8ec90d288.zip) = 96b06cf74a9e12a9a6e78dca49dbe4458700aba0
+RMD160 (seafile/bea8cc526ed37b8c9599e5f526d934c8ec90d288.zip) = 366fcee5372146af431f1dbe7d95860512b9594d
+SHA512 (seafile/bea8cc526ed37b8c9599e5f526d934c8ec90d288.zip) = a6021391914068edd84fe5f98feea555ca4d564dfccb76cb3e7fc6bd03509a271c47f58224ce2892470543bc7457919c73c798e4f22372f987b56d0002d0bee5
+Size (seafile/bea8cc526ed37b8c9599e5f526d934c8ec90d288.zip) = 1468287 bytes
+SHA1 (patch-daemon_Makefile.am) = d0a43e73e12c584e24e240f430a759f8f5c7d67c
+SHA1 (patch-daemon_http_tx_mgr.c) = 00b1ff983c45f35116b7fb3a8ea6481f604ec00a
+SHA1 (patch-lib_utils.h) = 37a61821d65385dff8141f42e5545990bc2ed57f
+SHA1 (patch-vc_utils.c) = a892b11127a3f39b5a818c7a511e594c0bd1a564

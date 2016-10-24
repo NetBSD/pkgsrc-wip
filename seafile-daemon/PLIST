@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/seaf-cli
+bin/seaf-daemon
+include/seafile/monitor-rpc.h
+include/seafile/seafile-object.h
+include/seafile/seafile-rpc.h
+include/seafile/seafile.h
+lib/libseafile.la
+lib/pkgconfig/libseafile.pc
+${PYSITELIB}/seafile/__init__.py
+${PYSITELIB}/seafile/__init__.pyc
+${PYSITELIB}/seafile/__init__.pyo
+${PYSITELIB}/seafile/rpcclient.py
+${PYSITELIB}/seafile/rpcclient.pyc
+${PYSITELIB}/seafile/rpcclient.pyo
+${PYSITELIB}/seaserv/__init__.py
+${PYSITELIB}/seaserv/__init__.pyc
+${PYSITELIB}/seaserv/__init__.pyo
+${PYSITELIB}/seaserv/api.py
+${PYSITELIB}/seaserv/api.pyc
+${PYSITELIB}/seaserv/api.pyo
+${PYSITELIB}/seaserv/service.py
+${PYSITELIB}/seaserv/service.pyc
+${PYSITELIB}/seaserv/service.pyo
+man/man1/seaf-cli.1
+man/man1/seaf-daemon.1

@@ -3791,6 +3791,7 @@ SUBDIR+=	sdif-git
 SUBDIR+=	sdlpop
 SUBDIR+=	sds
 SUBDIR+=	seafile-ccnet
+SUBDIR+=	seafile-daemon
 SUBDIR+=	seafile-libsearpc
 SUBDIR+=	seagull
 SUBDIR+=	sector-decomposition
