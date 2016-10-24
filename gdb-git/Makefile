@@ -3,7 +3,10 @@
 
 DISTNAME=	gdb-7.9
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
+GIT_REPOSITORIES=	gdb
+GIT_REPO.gdb=		git://sourceware.org/git/binutils-gdb.git
+GIT_DEEP_CLONE.gdb=	# defined - server dies on shallow clones
+WRKSRC=         ${WRKDIR}/gdb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
@@ -77,6 +80,7 @@ post-install:
 	     fi;						\
 	  done;	)
 
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
