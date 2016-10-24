@@ -27,6 +27,12 @@ CMAKE_ARGS+=		-DCMAKE_SHARED_LINKER_FLAGS=${LDFLAGS:Q}
 
 CMAKE_ARGS+=		-DFREECAD_USE_EXTERNAL_KDL=ON
 
+SUBST_CLASSES+=		eol
+SUBST_MESSAGE.eol=	Removing DOS line-ends
+SUBST_STAGE.eol=	post-extract
+SUBST_FILES.eol=	src/App/Application.cpp src/App/FreeCADInit.py src/Main/CMakeLists.txt src/Main/Main*.cpp src/Mod/Inspection/CMakeLists.txt src/Mod/Start/StartPage/CMakeLists.txt
+SUBST_FILTER_CMD.eol=	${TR} -d '\r'
+
 
 REPLACE_PYTHON+=	src/Tools/wiki2qhelp.py src/Tools/PythonToCPP.py src/Tools/githubstats.py src/Tools/updatefromcrowdin.py src/Tools/updatecrowdin.py src/Tools/updateppa.py
 REPLACE_PYTHON+=	src/Tools/generateBase/generateModel_Module.py src/Tools/generateBase/generateDS.py
