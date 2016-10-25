@@ -12,8 +12,8 @@ COMMENT=	Framework for building mega-widgets using [incr Tcl]
 LICENSE=	mit # Standard ML of New Jersey Variant
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include/X11
-CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include/X11
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/itcl3
 USE_TOOLS+=		grep
 

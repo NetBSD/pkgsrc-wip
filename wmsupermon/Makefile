@@ -18,7 +18,7 @@ SUBST_CLASSES+=		x11
 SUBST_FILES.x11=	Makefile
 SUBST_STAGE.x11=	post-patch
 SUBST_MESSAGE.x11=	Fixing X11 LIBDIR.
-SUBST_SED.x11=		-e "s|/usr/X11R6/lib|${BUILDLINK_PREFIX.libX11}/lib -Wl,-rpath,${BUILDLINK_PREFIX.libX11}/lib|"
+SUBST_SED.x11=		-e "s|/usr/X11R6/lib|${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib|"
 
 do-install:
 			${INSTALL_PROGRAM} ${WRKSRC}/wmsupermon ${DESTDIR}${PREFIX}/bin/wmsupermon

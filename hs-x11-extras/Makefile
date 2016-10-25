@@ -33,8 +33,8 @@ CONFIGURE_ARGS+=	--configure-option="--x-libraries=${XLIBRARIES}"
 
 
 .if ${X11_TYPE} == "modular"
-XINCLUDES=		${BUILDLINK_PREFIX.libX11}/include
-XLIBRARIES+=		${BUILDLINK_PREFIX.libX11}/lib
+XINCLUDES=		${X11BASE}/include
+XLIBRARIES+=		${X11BASE}/lib
 .else
 XINCLUDES=		${X11BASE}/include
 XLIBRARIES=		${X11BASE}/lib

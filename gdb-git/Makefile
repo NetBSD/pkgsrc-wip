@@ -19,14 +19,14 @@ BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt makeinfo
+USE_TOOLS+=		gmake msgfmt makeinfo perl
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
-AUTO_MKDIRS=		yes
+USE_LANGUAGES=	c c++
 
 .include "options.mk"
 

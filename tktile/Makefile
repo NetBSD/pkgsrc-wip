@@ -16,8 +16,8 @@ GNU_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11:Q}/include
-CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11:Q}/lib
+CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib
 .endif
 
 .include "../../lang/tcl/buildlink3.mk"

@@ -22,8 +22,8 @@ USE_LANGUAGES+=		c c++ fortran
 USE_TOOLS+=		msgfmt perl pkg-config xgettext
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include
-CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF_SCHEMAS+=		gnome-jabber.schemas

@@ -18,8 +18,8 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		grep intltool msgfmt msgmerge xgettext
-CONFIGURE_ARGS+=	--with-x --x-includes=${BUILDLINK_PREFIX.libX11}/include
-CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--with-x --x-includes=${X11BASE}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 CONFIGURE_ARGS+=	--includedir=${BUILDLINK_PREFIX.MesaLib}/include/GL
 
 post-install:
