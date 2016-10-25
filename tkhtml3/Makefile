@@ -15,8 +15,8 @@ WRKSRC=		${WRKDIR}/htmlwidget
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include \
-			--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 
 .include "options.mk"
 
