@@ -1980,6 +1980,7 @@ SUBDIR+=	nih-current
 SUBDIR+=	ninja-ide
 SUBDIR+=	ninka
 SUBDIR+=	nios2-gdb
+SUBDIR+=	nitrogen
 SUBDIR+=	njb-sharp
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau

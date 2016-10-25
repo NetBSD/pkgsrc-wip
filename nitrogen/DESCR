@@ -1,0 +1,4 @@
+Nitrogen is a background browser and setter for X windows. It is written in
+C++ using the gtkmm toolkit. It can be used in two modes: browser and
+recall. Nitrogen has been in development for over 5 years, due to real life
+and laziness. For more info, check out the features section.
