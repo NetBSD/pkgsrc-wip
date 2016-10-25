@@ -3,3 +3,4 @@ $NetBSD: distinfo,v 1.10 2015/03/15 14:22:19 bsiegert Exp $
 SHA1 (gdb-7.9.tar.gz) = 8f89aa6847dc87de2f720779a87ba360bdbc7efd
 RMD160 (gdb-7.9.tar.gz) = 939dda771a073e82e7d72fd584246f3d1d8e9bdc
 Size (gdb-7.9.tar.gz) = 33225783 bytes
+SHA1 (patch-gdb_config_djgpp_djconfig.sh) = 38dd7868eaac20170b96664e0caec1cad86b8b4d
