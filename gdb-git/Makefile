@@ -5,7 +5,7 @@ DISTNAME=	gdb-7.9
 CATEGORIES=	devel
 GIT_REPOSITORIES=	gdb
 GIT_REPO.gdb=		git://sourceware.org/git/binutils-gdb.git
-GIT_DEEP_CLONE.gdb=	# defined - server dies on shallow clones
+GIT_DEEP_CLONE.gdb=	yes # server dies on shallow clones
 WRKSRC=         ${WRKDIR}/gdb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

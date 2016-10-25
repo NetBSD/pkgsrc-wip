@@ -32,7 +32,7 @@ DEPENDS+=	anthy-[0-9]*:../../inputmethod/anthy
 GIT_REPOSITORIES=	master
 GIT_MODULE.master=	egg
 GIT_REPO.master=	git://git.debian.org/git/pkg-anthy/egg.git
-GIT_DEEP_CLONE.master=	# defined
+GIT_DEEP_CLONE.master=	yes # defined
 
 GNU_CONFIGURE=	yes
 WRKSRC=			${WRKDIR}/egg

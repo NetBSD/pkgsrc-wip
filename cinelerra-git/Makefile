@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	http://cinelerra.org/git-repo/cinelerra
-GIT_DEEP_CLONE.master=	# defined - server offers repository over dump protocol
+GIT_DEEP_CLONE.master=	yes # server offers repository over dumb protocol
 .include "../../wip/mk/git-package.mk"
 
 WRKSRC=			${WRKDIR}/cinelerra
