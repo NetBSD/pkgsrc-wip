@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.93 2016/10/21 11:45:44 kamil Exp $
 
-DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
+
+FOSSIL_REPOSITORIES=	tcl
+FOSSIL_REPO.tcl=	http://core.tcl.tk/tcl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
@@ -67,6 +68,7 @@ post-build:
 .  endfor
 .endif
 
+.include "../../wip/mk/fossil-package.mk"
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.13.0
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
