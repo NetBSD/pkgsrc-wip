@@ -5,9 +5,9 @@
 # used by lang/tcl-otcl/Makefile
 # used by print/tcl-pdflib/Makefile
 
-TCL_SONUM=	86
-TCL_BASEVER=	8.6
-TCL_VERSION=	8.6.6
+TCL_SONUM=	87
+TCL_BASEVER=	8.7
+TCL_VERSION=	8.7.0
 
 # Update bundled versions in lang/tcl/buildlink3.mk
 ITCL_VERSION=	4.0.5
