@@ -74,34 +74,59 @@ _FOSSIL_DISTDIR=	${DISTDIR}/fossil-packages
 FOSSIL_MODULE.${repo}?=	${repo}
 _FOSSIL_ENV.${repo}=	${FOSSIL_ENV.${repo}}
 
+# In reality there is no difference for fossil
+.  if defined(FOSSIL_BRANCH.${repo})
+_FOSSIL_VERSION.${repo}=	${FOSSIL_BRANCH.${repo}}
+.  elif defined(FOSSIL_REVISION.${repo})
+_FOSSIL_VERSION.${repo}=	${FOSSIL_REVISION.${repo}}
+.  elif defined(FOSSIL_TAG.${repo})
+_FOSSIL_VERSION.${repo}=	${FOSSIL_TAG.${repo}}
+.  else
+_FOSSIL_VERSION.${repo}=	--latest
+.  endif
+
+# Ignore modified files in the current checkout
+_FOSSIL_FLAG.${repo}=	--force ${_FOSSIL_VERSION.${repo}}
+
 # Cache support:
 #   cache file name
-_FOSSIL_DISTFILE.${repo}=	${PKGBASE}-${FOSSIL_MODULE.${repo}}-fossilarchive.tar.gz
+_FOSSIL_DISTFILE.${repo}=	${PKGBASE}-${FOSSIL_MODULE.${repo}}.clone
+_FOSSIL_CLONE.${repo}=		${_FOSSIL_DISTDIR:Q}/${_FOSSIL_DISTFILE.${repo}:Q}
 
-#   command to extract cache file
-_FOSSIL_EXTRACT_CACHED.${repo}=	\
-	if [ -f ${_FOSSIL_DISTDIR}/${_FOSSIL_DISTFILE.${repo}:Q} ]; then		\
-	  ${STEP_MSG} "Extracting cached FOSSIL archive "${_FOSSIL_DISTFILE.${repo}:Q}"."; \
-	  gzip -d -c ${_FOSSIL_DISTDIR}/${_FOSSIL_DISTFILE.${repo}:Q} | pax -r;	\
-	fi
-
-#   create cache archive
-_FOSSIL_CREATE_CACHE.${repo}=	\
-	${STEP_MSG} "Creating cached FOSSIL archive "${_FOSSIL_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_FOSSIL_DISTDIR:Q};					\
-	pax -w ${FOSSIL_MODULE.${repo}:Q} | gzip > ${_FOSSIL_DISTDIR}/${_FOSSIL_DISTFILE.${repo}:Q}.tmp;	\
-	${MV} '${_FOSSIL_DISTDIR}/${_FOSSIL_DISTFILE.${repo}:Q}.tmp' '${_FOSSIL_DISTDIR}/${_FOSSIL_DISTFILE.${repo}:Q}'
-
-#   fetch fossil repo or update cached one
-_FOSSIL_FETCH_REPO.${repo}=	\
-	if [ ! -d ${FOSSIL_MODULE.${repo}:Q} ]; then				\
-	  ${STEP_MSG} "Cloning FOSSIL archive "${FOSSIL_MODULE.${repo}:Q}".";	\
+#   clone remote repository and save it in directory with distfiles
+_FOSSIL_CLONE_REPO.${repo}=	\
+	if [ ! -f ${_FOSSIL_DISTDIR}/${_FOSSIL_DISTFILE.${repo}:Q} ]; then	\
+	  ${STEP_MSG} "Cloning FOSSIL archive "${_FOSSIL_DISTFILE.${repo}:Q}".";\
 	  ${SETENV} ${_FOSSIL_ENV.${repo}} ${_FOSSIL_CMD}			\
 	    clone ${_FOSSIL_CLONE_FLAGS.${repo}}				\
-	    ${FOSSIL_REPO.${repo}:Q} ${FOSSIL_MODULE.${repo}:Q};		\
+	    ${FOSSIL_REPO.${repo}:Q} ${_FOSSIL_CLONE.${repo}};			\
+	fi
+
+#   open cloned repository
+_FOSSIL_OPEN_REPO.${repo}=	\
+	${MKDIR} -p ${FOSSIL_MODULE.${repo}:Q};					\
+	(									\
+		${STEP_MSG} "Opening FOSSIL repo "${_FOSSIL_DISTFILE.${repo}:Q}".";\
+		cd ${FOSSIL_MODULE.${repo}:Q}; 					\
+		${SETENV} ${_FOSSIL_ENV.${repo}} ${_FOSSIL_CMD}			\
+		  open ${_FOSSIL_CLONE.${repo}};				\
+	)
+
+#   pull changs from remote repository, save in local clone and checkout it
+_FOSSIL_PULL_VERSION.${repo}=	\
+	if [ ! -d ${FOSSIL_MODULE.${repo}:Q} ]; then				\
+	  ${STEP_MSG} "Cannot pull changes. Missing "${FOSSIL_MODULE.${repo}:Q}".";	\
 	fi;									\
-	${STEP_MSG} "Fetching remote repo of "${_FOSSIL_FLAG.${repo}:Q}".";	\
-	( cd ${FOSSIL_MODULE.${repo}:Q} && ${_FOSSIL_CMD} pull )
+	(									\
+		cd ${FOSSIL_MODULE.${repo}:Q};					\
+		${STEP_MSG} "Pulling changes from "${_FOSSIL_FLAG.${repo}:Q}".";\
+		${SETENV} ${_FOSSIL_ENV.${repo}} ${_FOSSIL_CMD}			\
+		  pull ${FOSSIL_REPO.${repo}:Q};				\
+		${STEP_MSG} "Checkout "${_FOSSIL_VERSION.${repo}:Q}".";		\
+		${SETENV} ${_FOSSIL_ENV.${repo}} ${_FOSSIL_CMD}			\
+		  checkout ${_FOSSIL_FLAG.${repo}}				\
+	)
+
 .endfor
 
 pre-extract: do-fossil-extract
@@ -113,9 +138,9 @@ do-fossil-extract:
 	if [ ! -d ${_FOSSIL_DISTDIR:Q} ]; then 					\
 		mkdir -p ${_FOSSIL_DISTDIR:Q};					\
 	fi;									\
-	${_FOSSIL_EXTRACT_CACHED.${_repo_}};					\
-	${_FOSSIL_FETCH_REPO.${_repo_}};					\
-	${_FOSSIL_CREATE_CACHE.${_repo_}};
+	${_FOSSIL_CLONE_REPO.${_repo_}};					\
+	${_FOSSIL_OPEN_REPO.${_repo_}};						\
+	${_FOSSIL_PULL_VERSION.${_repo_}};
 
 .endfor
 
