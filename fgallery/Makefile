@@ -1,8 +1,9 @@
 # $NetBSD$
 
+PORTVERSION=    1.8.2
 PKGBASE=        fgallery
-DISTNAME=       ${PKGBASE}-1.8.2
-PKGREVISION=    1
+DISTNAME=       ${PKGBASE}-${PORTVERSION}
+PKGREVISION=    2
 CATEGORIES=     www
 
 MASTER_SITES=   http://www.thregr.org/~wavexx/software/fgallery/releases/
@@ -24,12 +25,19 @@ DEPENDS+=       pngcrush>=1.7:../../graphics/pngcrush
 DEPENDS+=       lcms2>=2.7:../../graphics/lcms2
 DEPENDS+=       p7zip>=9.38:../../archivers/p7zip
 DEPENDS+=       p5-Image-ExifTool>=10.0:../../graphics/p5-Image-ExifTool
+DEPENDS+=       p5-JSON-PP>=2.27:../../converters/p5-JSON-PP
 
 SUBST_CLASSES+=          fix-paths
 SUBST_STAGE.fix-paths=   post-patch
 SUBST_MESSAGE.fix-paths= Fixing absolute paths.
 SUBST_FILES.fix-paths=   fgallery
-SUBST_SED.fix-paths=     -e "s,\"\$$RealBin/,\"${PREFIX}/share/fgallery/,g"
+SUBST_SED.fix-paths=     -e "s,%%REALBIN%%,${PREFIX}/share/fgallery,g"
+
+SUBST_CLASSES+=          fix-vers
+SUBST_STAGE.fix-vers=    post-patch
+SUBST_MESSAGE.fix-vers=  Fixing fgallery version.
+SUBST_FILES.fix-vers=    fgallery
+SUBST_SED.fix-vers=      -e "s,\"${PORTVERSION}\",\"${PKGVERSION:C/^.*-//}\","
 
 FG_DOCSDIR=     share/doc/${PKGBASE}
 FG_DOCS=        COPYING.txt NEWS.html NEWS.rst README.html README.rst
@@ -49,13 +57,11 @@ FG_VIEWFILES=   back.png \
                 index.css \
                 index.html \
                 index.js \
-                left.png \
                 mootools-core-1.4.js \
                 mootools-idle.js \
                 mootools-mooswipe.js \
                 mootools-more-1.4.js \
                 noise.png \
-                right.png \
                 throbber.gif
 
 INSTALLATION_DIRS= bin ${FG_DOCSDIR} ${FG_SHAREDIR}
