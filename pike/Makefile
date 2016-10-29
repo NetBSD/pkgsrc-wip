@@ -1,15 +1,13 @@
 # $NetBSD: Makefile,v 1.4 2012/10/05 11:31:52 asau Exp $
-#
 
-DISTNAME=		Pike-v7.6.66
-PKGNAME=		pike-7.6.66
+DISTNAME=		Pike-v8.0.276
+PKGNAME=		${DISTNAME:tl:S/-v//}
 CATEGORIES=		lang
-MASTER_SITES=		http://pike.ida.liu.se/pub/pike/latest-stable/
+MASTER_SITES=		http://pike.lysator.liu.se/pub/pike/latest-stable/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pike.ida.liu.se/
+HOMEPAGE=		https://pike.lysator.liu.se/
 COMMENT=		Dynamic programming language similar to Java and C
-
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
