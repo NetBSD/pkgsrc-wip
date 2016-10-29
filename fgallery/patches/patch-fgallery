@@ -2,18 +2,32 @@ $NetBSD$
 
 Use a "cmd_exists" for tests of existence of commands in given environment
 Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
+Adaptions for keeping all fgallery files in view subdirectory
+Pretty print json for easier customization
 
---- fgallery.orig      2014-09-05 16:33:54.000000000 +0200
-+++ fgallery   2015-10-02 11:10:05.000000000 +0200
-@@ -21,7 +21,6 @@
+--- fgallery.orig	2016-05-25 09:53:19.000000000 +0000
++++ fgallery
+@@ -20,25 +20,20 @@ use Fcntl;
+ use File::Basename qw{fileparse};
  use File::Find qw{find};
  use File::Path qw{make_path remove_tree};
- use File::Spec::Functions qw{rel2abs};
+-use File::Spec::Functions qw{rel2abs};
 -use FindBin qw{$RealBin};
++use File::Spec::Functions qw{rel2abs canonpath catfile};
  use Getopt::Long qw{:config bundling};
  use IO::Handle;
  use Image::ExifTool qw{ImageInfo};
-@@ -38,7 +37,7 @@
+ use Time::Piece;
+ 
+-# We require either Cpanel::JSON::XS or JSON::PP (JSON::XS does not support ithreads)
+-my $JSON_cls = eval { require Cpanel::JSON::XS; "Cpanel::JSON::XS"; } //
+-	       eval { require JSON::PP; "JSON::PP"; } //
+-	       fatal("either Cpanel::JSON::XS or JSON::PP is required");
+-$JSON_cls->import(qw{encode_json});
++use JSON::PP;
+ 
+ # constants
+ our $VERSION = "1.8.2";
  our $ENCODING = encoding::_get_locale_encoding() || 'UTF-8';
  
  # defaults
@@ -22,7 +36,7 @@ Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
  my $slim = 0;
  my $ofile = 0;
  my $orient = 1;
-@@ -73,6 +72,14 @@
+@@ -73,6 +68,14 @@ sub fatal
  }
  
  
@@ -37,7 +51,23 @@ Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
  sub sys
  {
    my @cmd = @_;
-@@ -263,7 +270,7 @@
+@@ -87,13 +90,13 @@ sub sys
+   }
+ 
+   local $/ = undef;
+-  my $out = <$fd>;
++  my $output = <$fd>;
+ 
+   unless(close($fd)) {
+     fatal("command \"@cmd\" failed");
+   }
+ 
+-  return split("\n", $out);
++  return split("\n", $output);
+ }
+ 
+ 
+@@ -263,7 +266,7 @@ sub cap_clean_desc
  sub cap_from_str
  {
    my ($title, $desc) = split("\n", shift, 2);
@@ -46,7 +76,36 @@ Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
    my $ret = [cap_clean_title($title), ($desc? cap_clean_desc($desc): '')];
    return $ret;
  }
-@@ -399,49 +406,27 @@
+@@ -383,8 +386,16 @@ my $out = $ARGV[1];
+ my $name = (@ARGV < 3? undef: decode($ARGV[2]));
+ 
+ # check paths
+-my $absDir = rel2abs($dir) . '/';
+-my $absOut = rel2abs($out) . '/';
++my $absDir = canonpath(rel2abs($dir));
++my $absOut = canonpath(rel2abs($out));
++
++sub is_fgallery_dir
++{
++    return unless -d catfile($out, 'view');
++    return unless -e catfile($out, 'index.html');
++    return unless -e catfile($out, 'data.json');
++    return 1;
++}
+ 
+ if(!-d $dir) {
+   fatal("input directory \"$dir\" does not exist");
+@@ -393,55 +404,34 @@ if(!-d $dir) {
+ } elsif(substr($absOut, 0, length($absDir)) eq $absDir) {
+   fatal("output directory is a sub-directory of input, refusing to scan");
+ } elsif(!-d $out) {
+-  sys('cp', '-L', '-R', "$RealBin/view", $out);
+-} elsif(!-f "$out/index.html") {
+-  fatal("output directory already exists, but doesn't look like a template copy");
++  mkdir($out);
++  sys('cp', '-L', '-R', '%%REALBIN%%/view', $out);
++} elsif(!is_fgallery_dir) {
++  fatal("output directory exists, but doesn't look like a fgallery template");
  }
  
  # check tools
@@ -66,11 +125,11 @@ Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
 -}
 -if(system("jpegoptim -V >/dev/null 2>&1")) {
 -  $jpegoptim = 0;
--}
--if(system("pngcrush -h >/dev/null 2>&1")) {
--  $pngoptim = 0;
 +  cmd_exists('zip') || fatal('Missing 7z or zip command');
  }
+-if(system("pngcrush -h >/dev/null 2>&1")) {
+-  $pngoptim = 0;
+-}
 -if($facedet && system("facedetect -h >/dev/null 2>&1")) {
 -  fatal("cannot run \"facedetect\" (see https://www.thregr.org/~wavexx/software/facedetect/)");
 -}
@@ -113,7 +172,7 @@ Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
  }
  
  # list available files
-@@ -496,7 +481,7 @@
+@@ -496,7 +486,7 @@ sub analyze_file
  
    my $props = ImageInfo($file, {PrintConv => 0, Sort => 'File'});
    unless(defined($props) && isin($props->{FileType}, @filetypes)) {
@@ -122,3 +181,14 @@ Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
    }
  
    # sanitize file name
+@@ -851,7 +841,9 @@ my $fd;
+ unless(open($fd, ">:raw", "$out/data.json")) {
+   fatal("cannot write data file: $!");
+ }
+-print($fd encode_json(\%json));
++print($fd JSON::PP->new->ascii->pretty->canonical->allow_blessed->encode(\%json));
+ close($fd);
+ 
++chdir($out) && symlink(catfile('view', 'index.html'), 'index.html');
++
+ print("completed\n");
