@@ -125,11 +125,11 @@ Pretty print json for easier customization
 -}
 -if(system("jpegoptim -V >/dev/null 2>&1")) {
 -  $jpegoptim = 0;
-+  cmd_exists('zip') || fatal('Missing 7z or zip command');
- }
+-}
 -if(system("pngcrush -h >/dev/null 2>&1")) {
 -  $pngoptim = 0;
--}
++  cmd_exists('zip') || fatal('Missing 7z or zip command');
+ }
 -if($facedet && system("facedetect -h >/dev/null 2>&1")) {
 -  fatal("cannot run \"facedetect\" (see https://www.thregr.org/~wavexx/software/facedetect/)");
 -}
@@ -181,7 +181,7 @@ Pretty print json for easier customization
    }
  
    # sanitize file name
-@@ -851,7 +841,9 @@ my $fd;
+@@ -851,7 +841,11 @@ my $fd;
  unless(open($fd, ">:raw", "$out/data.json")) {
    fatal("cannot write data file: $!");
  }
@@ -189,6 +189,8 @@ Pretty print json for easier customization
 +print($fd JSON::PP->new->ascii->pretty->canonical->allow_blessed->encode(\%json));
  close($fd);
  
-+chdir($out) && symlink(catfile('view', 'index.html'), 'index.html');
++for ('index.html', 'overview.html') {
++    chdir($out) && symlink(catfile('view', $_), $_);
++}
 +
  print("completed\n");

@@ -64,7 +64,17 @@ FG_VIEWFILES=   back.png \
                 noise.png \
                 throbber.gif
 
+OV_FILES=       overview.css \
+                overview.html \
+                overview.js \
+                overview.png
+
 INSTALLATION_DIRS= bin ${FG_DOCSDIR} ${FG_SHAREDIR}
+
+pre-patch:
+.for file in ${OV_FILES}
+	${CP} ${FILESDIR}/${file} ${WRKSRC}/view
+.endfor
 
 do-install:
 	${INSTALL_SCRIPT} ${FG_SRCDIR}/${PKGBASE} ${DESTDIR}${PREFIX}/bin/${PKGBASE}
@@ -73,7 +83,7 @@ post-install:
 .for file in ${FG_DOCS}
 	${INSTALL_DATA} ${FG_SRCDIR}/${file} ${DESTDIR}${PREFIX}/${FG_DOCSDIR}
 .endfor
-.for file in ${FG_VIEWFILES}
+.for file in ${FG_VIEWFILES} ${OV_FILES}
 	${INSTALL_DATA} ${FG_VIEWDIR}/${file} ${DESTDIR}${PREFIX}/${FG_SHAREDIR}
 .endfor
 

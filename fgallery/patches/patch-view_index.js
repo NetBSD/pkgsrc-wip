@@ -58,18 +58,44 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    if(imgrt > (contSize.x / contSize.y))
    {
-@@ -425,8 +424,31 @@ function toggleCap()
- 
+@@ -390,11 +389,9 @@ function showCap(nodelay)
+   if(capst == 'never') return;
+   captm = resetTimeout(captm);
+   ecap.get('tween').cancel();
+-
+   if(nodelay) ecap.fade('show');
+   else ecap.tween('opacity', 1);
+   ecap.setStyle('display', 'block');
+-
+   if(capst != 'always')
+   {
+     // calculate a decent reading time
+@@ -408,7 +405,6 @@ function showCap(nodelay)
+ function toggleCap()
+ {
+   if(!imgs.captions) return;
+-
+   // switch mode
+   if(capst == 'normal')
+     capst = 'never';
+@@ -416,53 +412,76 @@ function toggleCap()
+     capst = 'always';
+   else
+     capst = 'normal';
+-
+   // update visual state
+   if(capst == 'never')
+     hideCap(true);
+   else if(ecap.eidx == eidx)
+     showCap(true);
+-
    // update indicator
    var img = document.id('togglecap', ehdr);
 -  img.src = 'cap-' + capst + '.png';
 +  img.src = 'view/cap-' + capst + '.png';
    showHdr();
-+
-+  //resume slideshow (as click stopped it)
-+  toggleSlideshow();
-+}
-+
+ }
+ 
 +function toggleSlideshow()
 +{
 +  if(slideshow == 'on')
@@ -88,36 +114,41 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
 +    slideshow = 'on';
 +  }
 +  resize();
- }
- 
++}
++
  function setupHeader()
-@@ -435,33 +457,33 @@ function setupHeader()
+ {
+   ehdr.empty();
++  var el;
    if(imgs.index)
    {
-     var el = new Element('a', { 'title': 'Back to index', 'href': imgs.index });
+-    var el = new Element('a', { 'title': 'Back to index', 'href': imgs.index });
 -    el.set('html', '<img src=\"back.png\"/>');
++    el = new Element('a', { 'title': 'Back to index', 'href': imgs.index });
 +    el.set('html', '<img src="view/back.png"/>');
      ehdr.adopt(el);
    }
    if(imgs.data[eidx].file)
    {
      var file = imgs.data[eidx].file[0];
-     var el = new Element('a', { 'title': 'Download image', 'href': file });
+-    var el = new Element('a', { 'title': 'Download image', 'href': file });
 -    el.set('html', '<img src=\"eye.png\"/>');
++    el = new Element('a', { 'title': 'Download image', 'href': file });
 +    el.set('html', '<img src="view/eye.png"/>');
      ehdr.adopt(el);
    }
    if(imgs.download)
    {
-     var el = new Element('a', { 'title': 'Download album', 'href': imgs.download });
+-    var el = new Element('a', { 'title': 'Download album', 'href': imgs.download });
 -    el.set('html', '<img src=\"download.png\"/>');
++    el = new Element('a', { 'title': 'Download album', 'href': imgs.download });
 +    el.set('html', '<img src="view/download.png"/>');
      ehdr.adopt(el);
    }
    if(imgs.captions)
    {
 -    var el = new Element('a', { 'title': 'Toggle captions (shortcut: c)' });
-+    var el = new Element('a', { 'title': 'Toggle captions' });
++    el = new Element('a', { 'title': 'Toggle captions' });
      el.setStyle('cursor', 'pointer');
      el.addEvent('click', toggleCap);
 -    var img = new Element('img', { 'id': 'togglecap', 'src': 'cap-' + capst + '.png' });
@@ -128,10 +159,15 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    if(imgs.data[eidx].date)
 -    ehdr.adopt(new Element('span', { 'html': '<b>Date</b>: ' + imgs.data[eidx].date }));
 +    ehdr.adopt(new Element('span', { 'title': 'EXIF timestamp', 'html': imgs.data[eidx].date }));
++  el = new Element('a', { 'title': 'Overview', 'href': 'view/overview.html' });
++  el.set('html', '<img src="view/overview.png"/>');
++  ehdr.adopt(el);
    ehdr.setStyle('display', (ehdr.children.length? 'block': 'none'));
++  ehdr.removeEvent('click', toggleSlideshow);
  }
  
-@@ -549,7 +571,8 @@ function onMainReady()
+ function onMainReady()
+@@ -549,7 +568,8 @@ function onMainReady()
  
    tthr = resetTimeout(tthr);
    idle.start();
@@ -141,7 +177,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    centerThumb(d);
  
    // prefetch next image
-@@ -563,7 +586,7 @@ function onMainReady()
+@@ -563,7 +583,7 @@ function onMainReady()
  function showThrobber()
  {
    var img = new Element('img', { id: 'throbber' });
@@ -150,7 +186,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr.empty();
    img.inject(ehdr);
    ehdr.setStyle('display', 'block');
-@@ -574,31 +597,19 @@ function showThrobber()
+@@ -574,31 +594,19 @@ function showThrobber()
  function hideHdr()
  {
    if(idle.started)
@@ -186,7 +222,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  function flash()
  {
    eflash.setStyle('display', 'block');
-@@ -722,16 +733,6 @@ function initGallery(data)
+@@ -722,16 +730,6 @@ function initGallery(data)
    ecap = new Element('div', { id: 'caption' });
    ecap.inject(econt);
  
@@ -203,7 +239,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr = new Element('div', { id: 'header' });
    ehdr.set('tween', { link: 'ignore' })
    ehdr.inject(econt);
-@@ -771,10 +772,9 @@ function initGallery(data)
+@@ -771,10 +769,9 @@ function initGallery(data)
  
    // events and navigation shortcuts
    elist.addEvent('scroll', onScroll);
@@ -215,7 +251,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    window.addEvent('keydown', function(ev)
    {
-@@ -788,10 +788,6 @@ function initGallery(data)
+@@ -788,10 +785,6 @@ function initGallery(data)
        ev.stop();
        next();
      }
@@ -226,7 +262,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    });
  
    econt.addEvent('mousewheel', function(ev)
-@@ -819,8 +815,7 @@ function initGallery(data)
+@@ -819,8 +812,7 @@ function initGallery(data)
      timeout: hidedelay,
      events: ['mousemove', 'mousedown', 'mousewheel']
    }).start();
@@ -236,7 +272,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    // general idle callback
    idle = new IdleTimer(window, { timeout: hidedelay }).start();
-@@ -871,12 +866,12 @@ function init()
+@@ -871,12 +863,11 @@ function init()
    }).get();
  
    // preload some resources
@@ -246,8 +282,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
 -		'cap-normal.png', 'cap-always.png', 'cap-never.png',
 -		'cut-left.png', 'cut-right.png',
 -		'cut-top.png', 'cut-mov.png']);
-+  Asset.images(['view/throbber.gif',
-+		'view/left.png', 'view/right.png',
++  Asset.images(['view/throbber.gif', 'view/overview.png',
 +		'view/eye.png', 'view/download.png', 'view/back.png',
 +		'view/cap-normal.png', 'view/cap-always.png', 'view/cap-never.png',
 +		'view/cut-left.png', 'view/cut-right.png',
