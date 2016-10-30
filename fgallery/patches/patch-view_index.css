@@ -5,7 +5,11 @@ Make the (optional) download/date text slightly less conspicuous
 
 --- view/index.css.orig	2016-01-11 19:17:15.000000000 +0000
 +++ view/index.css
-@@ -5,6 +5,7 @@ html, body
+@@ -1,10 +1,10 @@
+-/* General reset */
+ html, body
+ {
+   overflow: hidden; /* IE<9 */
    padding: 0;
    margin: 0;
    border: 0;
@@ -13,7 +17,7 @@ Make the (optional) download/date text slightly less conspicuous
  }
  
  img
-@@ -110,6 +111,7 @@ img
+@@ -110,6 +110,7 @@ img
    background: #111; /* IE<9 */
    background: rgba(0, 0, 0, 0.7);
    font-family: sans-serif;

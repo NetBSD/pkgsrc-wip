@@ -1,4 +1,4 @@
-/* General reset */
+/* General reset of index.css */
 html, body
 {
   overflow: hidden; /* IE<9 */
@@ -10,6 +10,7 @@ html, body
 
 body
 {
+  overflow: scroll;
   background-color: #eee;
 }
 
@@ -51,4 +52,3 @@ body
 .overview-img-div:hover img {
   opacity: 0.7;
 }
-
