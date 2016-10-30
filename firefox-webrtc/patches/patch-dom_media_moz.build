@@ -1,0 +1,34 @@
+$NetBSD: patch-dom_media_moz.build,v 1.5 2016/08/06 08:46:59 ryoon Exp $
+
+* Support system libraries
+
+--- dom/media/moz.build.orig	2016-07-25 20:22:03.000000000 +0000
++++ dom/media/moz.build
+@@ -327,6 +327,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
+ if CONFIG['MOZ_GONK_MEDIACODEC']:
+     DEFINES['MOZ_GONK_MEDIACODEC'] = True
+ 
++if CONFIG['MOZ_SYSTEM_OGG']:
++    CXXFLAGS += CONFIG['MOZ_OGG_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_THEORA']:
++    CXXFLAGS += CONFIG['MOZ_THEORA_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_VORBIS']:
++    CXXFLAGS += CONFIG['MOZ_VORBIS_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_TREMOR']:
++    CXXFLAGS += CONFIG['MOZ_TREMOR_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_OPUS']:
++    CXXFLAGS += CONFIG['MOZ_OPUS_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_SPEEX']:
++    CXXFLAGS += CONFIG['MOZ_SPEEX_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
++    CXXFLAGS += CONFIG['MOZ_SOUNDTOUCH_CFLAGS']
++
+ include('/ipc/chromium/chromium-config.mozbuild')
+ 
+ # Suppress some GCC warnings being treated as errors:

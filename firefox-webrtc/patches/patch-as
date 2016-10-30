@@ -1,0 +1,34 @@
+$NetBSD: patch-as,v 1.20 2016/08/06 08:46:59 ryoon Exp $
+
+* Treat DragonFly like FreeBSD.
+* Add system ICU support
+
+--- js/src/old-configure.in.orig	2016-07-25 20:22:08.000000000 +0000
++++ js/src/old-configure.in
+@@ -1263,8 +1263,7 @@ AC_LANG_CPLUSPLUS
+ 
+ MOZ_CXX11
+ 
+-dnl Check for .hidden assembler directive and visibility attribute.
+-dnl Borrowed from glibc configure.in
++dnl Setup default hidden visibility and wrapped system headers.
+ dnl ===============================================================
+ if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
+   AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
+@@ -2613,6 +2612,16 @@ MOZ_CONFIG_ICU()
+ dnl ========================================================
+ dnl JavaScript shell
+ dnl ========================================================
++ICU_LIB_NAMES=
++MOZ_SYSTEM_ICU=
++MOZ_ARG_WITH_BOOL(system-icu,
++[  --with-system-icu
++                          Use system icu (located with pkgconfig)],
++    MOZ_SYSTEM_ICU=1)
++
++if test -n "$MOZ_SYSTEM_ICU"; then
++    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
++fi
+ 
+ MOZ_CHECK_ALLOCATOR
+ 
