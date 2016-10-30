@@ -1,19 +1,18 @@
 # $NetBSD$
 
-PORTVERSION=    2.21.3
-PKGNAME=        js-Gallery-${PORTVERSION}
-DISTNAME=       Gallery-${PORTVERSION}
-GITHUB_TAG=     v${PORTVERSION}
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=blueimp/}
-
-EXTRACT_USING=	bsdtar
-
+DISTNAME=       Gallery-2.21.3
+PKGNAME=        js-${DISTNAME}
 CATEGORIES=     www graphics
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=blueimp/}
+GITHUB_PROJECT=	Gallery
+GITHUB_TAG=     v${PKGVERSION_NOREV}
 
 MAINTAINER=     ast@NetBSD.org
 HOMEPAGE=       https://github.com/blueimp/Gallery/
 COMMENT=        JavaScript library to create image/video galleries
 LICENSE=        mit
+
+EXTRACT_USING=	bsdtar
 
 NO_BUILD=            yes
 NO_INSTALL_MANPAGES= yes
