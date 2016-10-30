@@ -196,7 +196,7 @@ Pretty print json for easier customization
 +  mkdir($out);
 +  unless ($use_symlinks) {
 +      sys('cp', '-L', '-R', '%%FG_VIEWDIR%%', $out);
-+      sys('mv', '%%FG_VIEWDIR%%/index.html', $out);
++      sys('mv', "$out/view/index.html", $out);
 +  }
 +} elsif(!is_fgallery_dir) {
 +  fatal("output directory exists, but doesn't look like a fgallery template");
