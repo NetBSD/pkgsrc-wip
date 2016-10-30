@@ -58,8 +58,16 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    if(imgrt > (contSize.x / contSize.y))
    {
-@@ -390,11 +389,9 @@ function showCap(nodelay)
+@@ -388,17 +387,20 @@ function hideCap(nodelay)
+ function showCap(nodelay)
+ {
    if(capst == 'never') return;
++  var cap = imgs.data[ecap.eidx]['caption'];
++  if(!cap || (cap[0].length + cap[1].length == 0))
++  {
++    hideCap(true);
++    return;
++  }
    captm = resetTimeout(captm);
    ecap.get('tween').cancel();
 -
@@ -70,7 +78,11 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    if(capst != 'always')
    {
      // calculate a decent reading time
-@@ -408,7 +405,6 @@ function showCap(nodelay)
+-    var cap = imgs.data[ecap.eidx]['caption'];
+     var words = cap[0].split(' ').length + cap[1].split(' ').length;
+     var delay = Math.max(capdelay, rdwdelay * words);
+     captm = hideCap.delay(delay);
+@@ -408,7 +410,6 @@ function showCap(nodelay)
  function toggleCap()
  {
    if(!imgs.captions) return;
@@ -78,7 +90,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    // switch mode
    if(capst == 'normal')
      capst = 'never';
-@@ -416,53 +412,76 @@ function toggleCap()
+@@ -416,53 +417,76 @@ function toggleCap()
      capst = 'always';
    else
      capst = 'normal';
@@ -167,7 +179,18 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  }
  
  function onMainReady()
-@@ -549,7 +568,8 @@ function onMainReady()
+@@ -544,26 +568,31 @@ function onMainReady()
+   fx.start('opacity', 1);
+ 
+   var rp = Math.floor(Math.random() * 100);
+-  eback.src = imgs.data[eidx].blur;
+-  enoise.setStyle('background-position', rp + 'px ' + rp + 'px');
++  eback.src = '';
++  if (imgs.data[eidx].blur)
++  {
++    eback.src = imgs.data[eidx].blur;
++    enoise.setStyle('background-position', rp + 'px ' + rp + 'px');
++  }
  
    tthr = resetTimeout(tthr);
    idle.start();
@@ -177,7 +200,14 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    centerThumb(d);
  
    // prefetch next image
-@@ -563,7 +583,7 @@ function onMainReady()
+   if(prefetch && sdir != 0)
+   {
+     var data = imgs.data[umod(eidx + sdir, imgs.data.length)];
+-    Asset.images([data.img[0], data.blur]);
++    Asset.images([data.img[0], data.blur? data.blur :[]]);
+   }
+ }
+ 
  function showThrobber()
  {
    var img = new Element('img', { id: 'throbber' });
@@ -186,7 +216,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr.empty();
    img.inject(ehdr);
    ehdr.setStyle('display', 'block');
-@@ -574,31 +594,19 @@ function showThrobber()
+@@ -574,31 +603,19 @@ function showThrobber()
  function hideHdr()
  {
    if(idle.started)
@@ -222,7 +252,16 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  function flash()
  {
    eflash.setStyle('display', 'block');
-@@ -722,16 +730,6 @@ function initGallery(data)
+@@ -637,7 +654,7 @@ function load(i)
+   if(i == eidx) return;
+ 
+   var data = imgs.data[i];
+-  var assets = Asset.images([data.img[0], data.blur],
++  var assets = Asset.images([data.img[0], data.blur? data.blur: []],
+   {
+     onComplete: function() { if(i == eidx) onMainReady(); }
+   });
+@@ -722,16 +739,6 @@ function initGallery(data)
    ecap = new Element('div', { id: 'caption' });
    ecap.inject(econt);
  
@@ -239,7 +278,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr = new Element('div', { id: 'header' });
    ehdr.set('tween', { link: 'ignore' })
    ehdr.inject(econt);
-@@ -771,10 +769,9 @@ function initGallery(data)
+@@ -771,10 +778,9 @@ function initGallery(data)
  
    // events and navigation shortcuts
    elist.addEvent('scroll', onScroll);
@@ -251,7 +290,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    window.addEvent('keydown', function(ev)
    {
-@@ -788,10 +785,6 @@ function initGallery(data)
+@@ -788,10 +794,6 @@ function initGallery(data)
        ev.stop();
        next();
      }
@@ -262,7 +301,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    });
  
    econt.addEvent('mousewheel', function(ev)
-@@ -819,8 +812,7 @@ function initGallery(data)
+@@ -819,8 +821,7 @@ function initGallery(data)
      timeout: hidedelay,
      events: ['mousemove', 'mousedown', 'mousewheel']
    }).start();
@@ -272,7 +311,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    // general idle callback
    idle = new IdleTimer(window, { timeout: hidedelay }).start();
-@@ -871,12 +863,11 @@ function init()
+@@ -871,12 +872,11 @@ function init()
    }).get();
  
    // preload some resources
