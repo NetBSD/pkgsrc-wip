@@ -1,5 +1,6 @@
 $NetBSD$
 
+Merge from https://raw.githubusercontent.com/wavexx/fgallery/master/fgallery
 Use a "cmd_exists" for tests of existence of commands in given environment
 Use oct instead of 0### and don't return undef explicitely (Perl::Critic)
 Adaptions for keeping all fgallery files in view subdirectory
@@ -7,7 +8,16 @@ Pretty print json for easier customization
 
 --- fgallery.orig	2016-05-25 09:53:19.000000000 +0000
 +++ fgallery
-@@ -20,25 +20,20 @@ use Fcntl;
+@@ -8,6 +8,8 @@ use warnings;
+ 
+ use locale;
+ use utf8;
++use if $^V lt v5.23.4, open => qw{:std :utf8};
++use if $^V ge v5.23.4, open => qw{:std :locale};
+ require Encode;
+ require encoding;
+ 
+@@ -20,25 +22,20 @@ use Fcntl;
  use File::Basename qw{fileparse};
  use File::Find qw{find};
  use File::Path qw{make_path remove_tree};
@@ -36,7 +46,23 @@ Pretty print json for easier customization
  my $slim = 0;
  my $ofile = 0;
  my $orient = 1;
-@@ -73,6 +68,14 @@ sub fatal
+@@ -55,6 +52,7 @@ my $fullpano = 1;
+ my $nodown = 0;
+ my $panort = 2.;
+ my $facedet = 0;
++my $keeporig = 0;
+ my $jpegoptim = 1;
+ my $pngoptim = 1;
+ my $p7zip = 1;
+@@ -63,6 +61,7 @@ my $workers = 0;
+ my $sRGB = 1;
+ my $indexUrl = undef;
+ my @capmethods = ("txt", "xmp", "exif");
++my $use_symlinks = 0;
+ 
+ 
+ # support functions
+@@ -73,6 +72,14 @@ sub fatal
  }
  
  
@@ -51,7 +77,7 @@ Pretty print json for easier customization
  sub sys
  {
    my @cmd = @_;
-@@ -87,13 +90,13 @@ sub sys
+@@ -87,13 +94,13 @@ sub sys
    }
  
    local $/ = undef;
@@ -67,7 +93,28 @@ Pretty print json for easier customization
  }
  
  
-@@ -263,7 +266,7 @@ sub cap_clean_desc
+@@ -110,7 +117,10 @@ sub isin
+ sub slurp
+ {
+   my ($fn) = @_;
+-  open(my $fd, "<:encoding($ENCODING)", "$fn") or fatal("cannot read $fn: $!");
++  open(my $fd, '<', $fn) or fatal("cannot read $fn: $!");
++  if($^V lt v5.23.4) {
++    binmode($fd, ":encoding($ENCODING)");
++  }
+   local $/;
+   return <$fd> // "";
+ }
+@@ -154,7 +164,7 @@ sub par_map
+ 
+   dispatch(sub
+   {
+-    my $i = shift;
++    my ($i) = @_;
+     my $r = &$fun($seq[$i]);
+     $res[$i] = defined($r)? freeze($r): undef;
+   },
+@@ -263,7 +273,7 @@ sub cap_clean_desc
  sub cap_from_str
  {
    my ($title, $desc) = split("\n", shift, 2);
@@ -76,7 +123,51 @@ Pretty print json for easier customization
    my $ret = [cap_clean_title($title), ($desc? cap_clean_desc($desc): '')];
    return $ret;
  }
-@@ -383,8 +386,16 @@ my $out = $ARGV[1];
+@@ -322,7 +332,7 @@ sub parse_cap
+ 
+ sub print_version
+ {
+-  print("fgallery $VERSION\n");
++  print("$0 $VERSION\n");
+   exit(0);
+ }
+ 
+@@ -336,6 +346,7 @@ sub print_help
+   -i			include individual originals
+   -c methods		caption extraction methods (txt,xmp,exif,cmt or none)
+   -o			do not auto-orient
++  -k			do not modify files, keep original
+   -t			do not time-sort
+   -r			reverse album order
+   -p			do not automatically include full-sized panoramas
+@@ -348,6 +359,7 @@ sub print_help
+   --no-sRGB		do not remap preview/thumbnail color profiles to sRGB
+   --quality Q		preview image quality (0-100, currently: $imgq)
+   --index url		specify the URL location for the index/back button
++  --use-symlinks        symlink instead of copying %%FG_VIEWDIR%%
+ });
+   exit(shift);
+ }
+@@ -363,6 +375,7 @@ my ($ret, @ARGS) = GetOptions(
+   'i' => sub { $ofile = 1; },
+   'j=i' => sub { $workers = parse_int($_[0], $_[1], 1, undef); },
+   'o' => sub { $orient = 0; },
++  'k' => sub { $keeporig = 1; },
+   'p' => sub { $fullpano = 0; },
+   'r' => sub { $revsort = 1; },
+   's' => sub { $slim = 1; },
+@@ -373,7 +386,9 @@ my ($ret, @ARGS) = GetOptions(
+   'min-thumb=s' => sub { @minthumb = parse_wh(@_); },
+   'no-sRGB' => sub { $sRGB = 0; },
+   'quality=i' => sub { $imgq = parse_int($_[0], $_[1], 0, 100); },
+-  'index=s' => sub { $indexUrl = decode($_[1]); });
++  'index=s' => sub { $indexUrl = decode($_[1]); },
++  'use-symlinks' => sub { $use_symlinks = 1; },
++);
+ 
+ if(@ARGV < 2 || @ARGV > 3 || !$ret) {
+   print_help(2);
+@@ -383,8 +398,16 @@ my $out = $ARGV[1];
  my $name = (@ARGV < 3? undef: decode($ARGV[2]));
  
  # check paths
@@ -95,7 +186,7 @@ Pretty print json for easier customization
  
  if(!-d $dir) {
    fatal("input directory \"$dir\" does not exist");
-@@ -393,55 +404,34 @@ if(!-d $dir) {
+@@ -393,55 +416,37 @@ if(!-d $dir) {
  } elsif(substr($absOut, 0, length($absDir)) eq $absDir) {
    fatal("output directory is a sub-directory of input, refusing to scan");
  } elsif(!-d $out) {
@@ -103,7 +194,10 @@ Pretty print json for easier customization
 -} elsif(!-f "$out/index.html") {
 -  fatal("output directory already exists, but doesn't look like a template copy");
 +  mkdir($out);
-+  sys('cp', '-L', '-R', '%%REALBIN%%/view', $out);
++  unless ($use_symlinks) {
++      sys('cp', '-L', '-R', '%%FG_VIEWDIR%%', $out);
++      sys('mv', '%%FG_VIEWDIR%%/index.html', $out);
++  }
 +} elsif(!is_fgallery_dir) {
 +  fatal("output directory exists, but doesn't look like a fgallery template");
  }
@@ -128,8 +222,7 @@ Pretty print json for easier customization
 -}
 -if(system("pngcrush -h >/dev/null 2>&1")) {
 -  $pngoptim = 0;
-+  cmd_exists('zip') || fatal('Missing 7z or zip command');
- }
+-}
 -if($facedet && system("facedetect -h >/dev/null 2>&1")) {
 -  fatal("cannot run \"facedetect\" (see https://www.thregr.org/~wavexx/software/facedetect/)");
 -}
@@ -144,7 +237,8 @@ Pretty print json for easier customization
 -  } else {
 -    fatal("cannot run \"tificc\" or \"tificc2\" (check if liblcms2-utils is installed)");
 -  }
--}
++  cmd_exists('zip') || fatal('Missing 7z or zip command');
+ }
 -
 +$jpegoptim = 0 unless cmd_exists('jpegoptim');
 +$pngoptim = 0 unless cmd_exists('pngcrush');
@@ -172,7 +266,7 @@ Pretty print json for easier customization
  }
  
  # list available files
-@@ -496,7 +486,7 @@ sub analyze_file
+@@ -496,7 +501,7 @@ sub analyze_file
  
    my $props = ImageInfo($file, {PrintConv => 0, Sort => 'File'});
    unless(defined($props) && isin($props->{FileType}, @filetypes)) {
@@ -181,7 +275,98 @@ Pretty print json for easier customization
    }
  
    # sanitize file name
-@@ -851,7 +841,11 @@ my $fd;
+@@ -635,22 +640,24 @@ sub process_img
+ 
+   # copy source file
+   sys('cp', '-L', $file, $fout);
+-  chmod(0600, $fout);
+ 
+   # apply lossless transforms
+-  if($orient && $props{FileType} eq "JPEG" && ($props{'Orientation'} // 0))
++  if(!$keeporig)
+   {
+-    sys("$exiftrancmd $fout 2>/dev/null");
+-    if(($props{'Orientation'} // 0) > 4) {
+-      ($props{ImageWidth}, $props{ImageHeight}) = ($props{ImageHeight}, $props{ImageWidth});
++    if($orient && $props{FileType} eq "JPEG" && ($props{'Orientation'} // 0))
++    {
++      sys("$exiftrancmd $fout 2>/dev/null");
++      if(($props{'Orientation'} // 0) > 4) {
++        ($props{ImageWidth}, $props{ImageHeight}) = ($props{ImageHeight}, $props{ImageWidth});
++      }
++    }
++    if($jpegoptim && $props{FileType} eq "JPEG") {
++      sys('jpegoptim', '-q', $fout);
++    } elsif($pngoptim && $props{FileType} eq "PNG")
++    {
++      sys('pngcrush', '-q', $fout, $ftmp);
++      rename($ftmp, $fout);
+     }
+-  }
+-  if($jpegoptim && $props{FileType} eq "JPEG") {
+-    sys('jpegoptim', '-q', $fout);
+-  } elsif($pngoptim && $props{FileType} eq "PNG")
+-  {
+-    sys('pngcrush', '-q', $fout, $ftmp);
+-    rename($ftmp, $fout);
+   }
+ 
+   # final file mode
+@@ -658,11 +665,12 @@ sub process_img
+   sys('touch', '-r', $file, $fout);
+ 
+   # intermediate sRGB colorspace conversion
+-  if(!$sRGB || ($props{ColorSpace} // 65535) == 1 || !defined($props{ProfileID})) {
+-    link($fout, $ftmp) or sys('cp', '-L', $fout, $ftmp);
++  if(!$sRGB || !defined($props{ProfileID}) || ($props{ColorSpace} // 65535) == 1
++  || ($props{DeviceModel} // '') eq 'sRGB') {
++    $ftmp = $fout;
+   } else
+   {
+-    sys('convert', $fout, '-compress', 'LZW', "tiff:$ftmp");
++    sys('convert', '-quiet', $fout, '-compress', 'LZW', '-type', 'truecolor', "tiff:$ftmp");
+     sys($tificccmd, '-t0', $ftmp, "$ftmp.tmp");
+     rename("$ftmp.tmp", $ftmp);
+   }
+@@ -674,7 +682,7 @@ sub process_img
+ 
+   # generate main image
+   my @sfile = ($props{ImageWidth}, $props{ImageHeight});
+-  my @simg = sys('convert', $ftmp,
++  my @simg = sys('convert', '-quiet', $ftmp,
+ 		 '-gamma', '0.454545',
+ 		 '-geometry', "$maxfull[0]x$maxfull[1]>",
+ 		 '-print', '%w\n%h',
+@@ -710,7 +718,7 @@ sub process_img
+   my $dy = $sthumb[1] - $mthumb[1];
+   my $cy = clamp(0, $dy, int($center[1] * $sthumb[1] - $sthumb[1] / 2 + $dy / 2));
+ 
+-  sys('convert', $ftmp,
++  sys('convert', '-quiet', $ftmp,
+       '-gamma', '0.454545',
+       '-resize', "$sthumb[0]x$sthumb[1]!",
+       '-gravity', 'NorthWest',
+@@ -720,7 +728,7 @@ sub process_img
+       '-quality', $imgq, "$out/$fthumb");
+ 
+   # blur
+-  sys('convert', "$out/$fthumb",
++  sys('convert', '-quiet', "$out/$fthumb",
+       '-virtual-pixel', 'Mirror',
+       '-gaussian-blur', "0x$backblur",
+       '-scale', "$backsize[0]x$backsize[1]",
+@@ -747,7 +755,9 @@ sub process_img
+   }
+ 
+   # remove temporary files
+-  unlink($ftmp);
++  if($ftmp ne $fout) {
++    unlink($ftmp);
++  }
+ 
+   return \%fdata;
+ }
+@@ -851,7 +861,12 @@ my $fd;
  unless(open($fd, ">:raw", "$out/data.json")) {
    fatal("cannot write data file: $!");
  }
@@ -189,8 +374,10 @@ Pretty print json for easier customization
 +print($fd JSON::PP->new->ascii->pretty->canonical->allow_blessed->encode(\%json));
  close($fd);
  
-+for ('index.html', 'overview.html') {
-+    chdir($out) && symlink(catfile('view', $_), $_);
+-print("completed\n");
++if ($use_symlinks) {
++    chdir($out) || die "Failed to 'cd $out' for symlink creation";
++    symlink(catfile('view', $_), '.') for ('index.html', '%%FG_VIEWDIR%%');
 +}
 +
- print("completed\n");
++print("$0 $VERSION done\n");

@@ -27,23 +27,23 @@ DEPENDS+=       p7zip>=9.38:../../archivers/p7zip
 DEPENDS+=       p5-Image-ExifTool>=10.0:../../graphics/p5-Image-ExifTool
 DEPENDS+=       p5-JSON-PP>=2.27:../../converters/p5-JSON-PP
 
+FG_SHAREDIR=    share/${PKGBASE}
+FG_VIEWDIR=     share/${PKGBASE}/view
+
 SUBST_CLASSES+=          fix-paths
 SUBST_STAGE.fix-paths=   post-patch
-SUBST_MESSAGE.fix-paths= Fixing absolute paths.
+SUBST_MESSAGE.fix-paths= Fixing ${FG_VIEWDIR} path.
 SUBST_FILES.fix-paths=   fgallery
-SUBST_SED.fix-paths=     -e "s,%%REALBIN%%,${PREFIX}/share/fgallery,g"
+SUBST_SED.fix-paths=     -e "s,%%FG_VIEWDIR%%,${PREFIX}/${FG_VIEWDIR},g"
 
 SUBST_CLASSES+=          fix-vers
 SUBST_STAGE.fix-vers=    post-patch
-SUBST_MESSAGE.fix-vers=  Fixing fgallery version.
+SUBST_MESSAGE.fix-vers=  Setting version to ${PKGVERSION:C/^.*-//}.
 SUBST_FILES.fix-vers=    fgallery
 SUBST_SED.fix-vers=      -e "s,\"${PORTVERSION}\",\"${PKGVERSION:C/^.*-//}\","
 
-FG_DOCSDIR=     share/doc/${PKGBASE}
 FG_DOCS=        COPYING.txt NEWS.html NEWS.rst README.html README.rst
-FG_SHAREDIR=    share/${PKGBASE}/view
 FG_SRCDIR=      ${WRKDIR}/${DISTNAME}
-FG_VIEWDIR=     ${FG_SRCDIR}/view
 FG_VIEWFILES=   back.png \
 		cap-always.png \
 		cap-never.png \
@@ -69,7 +69,7 @@ OV_FILES=       overview.css \
                 overview.js \
                 overview.png
 
-INSTALLATION_DIRS= bin ${FG_DOCSDIR} ${FG_SHAREDIR}
+INSTALLATION_DIRS= bin ${FG_SHAREDIR}
 
 pre-patch:
 .for file in ${OV_FILES}
@@ -81,10 +81,10 @@ do-install:
 
 post-install:
 .for file in ${FG_DOCS}
-	${INSTALL_DATA} ${FG_SRCDIR}/${file} ${DESTDIR}${PREFIX}/${FG_DOCSDIR}
+	${INSTALL_DATA} ${FG_SRCDIR}/${file} ${DESTDIR}${PREFIX}/${FG_SHAREDIR}
 .endfor
 .for file in ${FG_VIEWFILES} ${OV_FILES}
-	${INSTALL_DATA} ${FG_VIEWDIR}/${file} ${DESTDIR}${PREFIX}/${FG_SHAREDIR}
+	${INSTALL_DATA} ${FG_SRCDIR}/view/${file} ${DESTDIR}${PREFIX}/${FG_VIEWDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
