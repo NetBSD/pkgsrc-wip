@@ -3,7 +3,7 @@
 PORTVERSION=    1.8.2
 PKGBASE=        fgallery
 DISTNAME=       ${PKGBASE}-${PORTVERSION}
-PKGREVISION=    2
+PKGREVISION=    3
 CATEGORIES=     www
 
 MASTER_SITES=   http://www.thregr.org/~wavexx/software/fgallery/releases/
@@ -69,7 +69,7 @@ OV_FILES=       overview.css \
                 overview.js \
                 overview.png
 
-INSTALLATION_DIRS= bin ${FG_SHAREDIR}
+INSTALLATION_DIRS= bin ${FG_SHAREDIR} ${FG_VIEWDIR}
 
 pre-patch:
 .for file in ${OV_FILES}

@@ -1,10 +1,10 @@
 @comment $NetBSD$
 bin/fgallery
-share/doc/fgallery/COPYING.txt
-share/doc/fgallery/NEWS.html
-share/doc/fgallery/NEWS.rst
-share/doc/fgallery/README.html
-share/doc/fgallery/README.rst
+share/fgallery/COPYING.txt
+share/fgallery/NEWS.html
+share/fgallery/NEWS.rst
+share/fgallery/README.html
+share/fgallery/README.rst
 share/fgallery/view/back.png
 share/fgallery/view/cap-always.png
 share/fgallery/view/cap-never.png

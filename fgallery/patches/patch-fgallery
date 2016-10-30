@@ -105,15 +105,24 @@ Pretty print json for easier customization
    local $/;
    return <$fd> // "";
  }
-@@ -154,7 +164,7 @@ sub par_map
+@@ -132,7 +142,7 @@ sub dispatch
+     my $thr = threads->create(sub
+     {
+       while(defined(my $v = $queue->dequeue_nb())) {
+-	&$fun($v);
++        &$fun($v);
+       }
+     });
+     push(@threads, $thr);
+@@ -187,7 +197,7 @@ sub clamp
  
-   dispatch(sub
-   {
--    my $i = shift;
-+    my ($i) = @_;
-     my $r = &$fun($seq[$i]);
-     $res[$i] = defined($r)? freeze($r): undef;
-   },
+ sub decode
+ {
+-  return Encode::decode($ENCODING, @_);
++  return Encode::decode($ENCODING, $_[0]);
+ }
+ 
+ 
 @@ -263,7 +273,7 @@ sub cap_clean_desc
  sub cap_from_str
  {
@@ -123,7 +132,7 @@ Pretty print json for easier customization
    my $ret = [cap_clean_title($title), ($desc? cap_clean_desc($desc): '')];
    return $ret;
  }
-@@ -322,7 +332,7 @@ sub parse_cap
+@@ -322,32 +332,34 @@ sub parse_cap
  
  sub print_version
  {
@@ -132,23 +141,53 @@ Pretty print json for easier customization
    exit(0);
  }
  
-@@ -336,6 +346,7 @@ sub print_help
-   -i			include individual originals
-   -c methods		caption extraction methods (txt,xmp,exif,cmt or none)
-   -o			do not auto-orient
-+  -k			do not modify files, keep original
-   -t			do not time-sort
-   -r			reverse album order
-   -p			do not automatically include full-sized panoramas
-@@ -348,6 +359,7 @@ sub print_help
-   --no-sRGB		do not remap preview/thumbnail color profiles to sRGB
-   --quality Q		preview image quality (0-100, currently: $imgq)
-   --index url		specify the URL location for the index/back button
-+  --use-symlinks        symlink instead of copying %%FG_VIEWDIR%%
+ sub print_help
+ {
+   print(STDERR qq{Usage: $0 [options] input-dir output-dir [album name]
+-  -h, --help		this help
+-  --version		output current fgallery version
+-  -v			verbose (show commands as being executed)
+-  -s			slim output (no original files and downloads)
+-  -i			include individual originals
+-  -c methods		caption extraction methods (txt,xmp,exif,cmt or none)
+-  -o			do not auto-orient
+-  -t			do not time-sort
+-  -r			reverse album order
+-  -p			do not automatically include full-sized panoramas
+-  -d			do not generate a full album download
+-  -f			improve thumbnail cutting by performing face detection
+-  -j N			set process-level parallelism
+-  --max-full WxH	maximum full image size ($maxfull[0]x$maxfull[1])
+-  --max-thumb WxH	maximum thumbnail size ($maxthumb[0]x$maxthumb[1])
+-  --min-thumb WxH	minimum thumbnail size ($minthumb[0]x$minthumb[1])
+-  --no-sRGB		do not remap preview/thumbnail color profiles to sRGB
+-  --quality Q		preview image quality (0-100, currently: $imgq)
+-  --index url		specify the URL location for the index/back button
++  -h, --help            this help
++  --version             output current fgallery version
++  -v                    verbose (show commands as being executed)
++  -s                    slim output (no original files and downloads)
++  -i                    include individual originals
++  -c methods            caption extraction (txt, xmp, exif, cmt, or none)
++  -o                    do not auto-orient
++  -k                    do not modify files, keep original
++  -t                    do not time-sort
++  -r                    reverse album order
++  -p                    do not automatically include full-sized panoramas
++  -d                    do not generate a full album download
++  -f                    improve thumbnail cutting by performing face detection
++  -j N                  set process-level parallelism
++  -L                    symlink %%FG_VIEWDIR%% (instead of copy)
++  --max-full WxH        maximum full image size ($maxfull[0]x$maxfull[1])
++  --max-thumb WxH       maximum thumbnail size ($maxthumb[0]x$maxthumb[1])
++  --min-thumb WxH       minimum thumbnail size ($minthumb[0]x$minthumb[1])
++  --no-sRGB             do not remap preview/thumbnail color profiles to sRGB
++  --quality Q           preview image quality (0-100, currently: $imgq)
++  --index url           specify the URL location for the index/back button
  });
    exit(shift);
  }
-@@ -363,6 +375,7 @@ my ($ret, @ARGS) = GetOptions(
+@@ -363,17 +375,20 @@ my ($ret, @ARGS) = GetOptions(
    'i' => sub { $ofile = 1; },
    'j=i' => sub { $workers = parse_int($_[0], $_[1], 1, undef); },
    'o' => sub { $orient = 0; },
@@ -156,13 +195,16 @@ Pretty print json for easier customization
    'p' => sub { $fullpano = 0; },
    'r' => sub { $revsort = 1; },
    's' => sub { $slim = 1; },
-@@ -373,7 +386,9 @@ my ($ret, @ARGS) = GetOptions(
+   't' => sub { $timesort = 0; },
+   'v' => sub { $verbose = 1; },
++  'L' => sub { $use_symlinks = 1; },
+   'max-full=s' => sub { @maxfull = parse_wh(@_); },
+   'max-thumb=s' => sub { @maxthumb = parse_wh(@_); },
    'min-thumb=s' => sub { @minthumb = parse_wh(@_); },
    'no-sRGB' => sub { $sRGB = 0; },
    'quality=i' => sub { $imgq = parse_int($_[0], $_[1], 0, 100); },
 -  'index=s' => sub { $indexUrl = decode($_[1]); });
 +  'index=s' => sub { $indexUrl = decode($_[1]); },
-+  'use-symlinks' => sub { $use_symlinks = 1; },
 +);
  
  if(@ARGV < 2 || @ARGV > 3 || !$ret) {
@@ -173,12 +215,12 @@ Pretty print json for easier customization
  # check paths
 -my $absDir = rel2abs($dir) . '/';
 -my $absOut = rel2abs($out) . '/';
-+my $absDir = canonpath(rel2abs($dir));
-+my $absOut = canonpath(rel2abs($out));
++my $absDir = canonpath(rel2abs($dir)) . '/';
++my $absOut = canonpath(rel2abs($out)) . '/';
 +
 +sub is_fgallery_dir
 +{
-+    return unless -d catfile($out, 'view');
++    return unless -e catfile($out, 'view');
 +    return unless -e catfile($out, 'index.html');
 +    return unless -e catfile($out, 'data.json');
 +    return 1;
@@ -199,7 +241,7 @@ Pretty print json for easier customization
 +      sys('mv', "$out/view/index.html", $out);
 +  }
 +} elsif(!is_fgallery_dir) {
-+  fatal("output directory exists, but doesn't look like a fgallery template");
++  fatal("Output directory '$absOut' exists but wasn't generated by fgallery");
  }
  
  # check tools
@@ -275,6 +317,51 @@ Pretty print json for easier customization
    }
  
    # sanitize file name
+@@ -535,9 +540,9 @@ sub analyze_file
+     {
+       if($props->{'Comment'})
+       {
+-	my $cmt = Encode::decode_utf8($props->{'Comment'});
+-	$props->{'caption'} = cap_from_str($cmt);
+-	last;
++        my $cmt = Encode::decode_utf8($props->{'Comment'});
++        $props->{'caption'} = cap_from_str($cmt);
++        last;
+       }
+     }
+     elsif($m eq "txt")
+@@ -545,16 +550,16 @@ sub analyze_file
+       my $txt = "$dir$base.txt";
+       if(-f $txt)
+       {
+-	$props->{'caption'} = cap_from_str(slurp($txt));
+-	last;
++        $props->{'caption'} = cap_from_str(slurp($txt));
++        last;
+       }
+     }
+     elsif($m eq "exif")
+     {
+       if($props->{'Title'} || $props->{'Description'})
+       {
+-	$props->{'caption'} = cap_from_props($props);
+-	last;
++        $props->{'caption'} = cap_from_props($props);
++        last;
+       }
+     }
+     elsif($m eq "xmp")
+@@ -562,8 +567,8 @@ sub analyze_file
+       my $xmp = ImageInfo("$file.xmp", {PrintConv => 0, Sort => 'File'});
+       if(defined($xmp) && ($xmp->{'Title'} || $xmp->{'Description'}))
+       {
+-	$props->{'caption'} = cap_from_props($xmp);
+-	last;
++        $props->{'caption'} = cap_from_props($xmp);
++        last;
+       }
+     }
+   }
 @@ -635,22 +640,24 @@ sub process_img
  
    # copy source file
@@ -328,15 +415,36 @@ Pretty print json for easier customization
      sys($tificccmd, '-t0', $ftmp, "$ftmp.tmp");
      rename("$ftmp.tmp", $ftmp);
    }
-@@ -674,7 +682,7 @@ sub process_img
+@@ -674,13 +682,13 @@ sub process_img
  
    # generate main image
    my @sfile = ($props{ImageWidth}, $props{ImageHeight});
 -  my @simg = sys('convert', $ftmp,
+-		 '-gamma', '0.454545',
+-		 '-geometry', "$maxfull[0]x$maxfull[1]>",
+-		 '-print', '%w\n%h',
+-		 '-gamma', '2.2',
+-		 '+profile', '!icc,*',
+-		 '-quality', $imgq, "$out/$fimg");
 +  my @simg = sys('convert', '-quiet', $ftmp,
- 		 '-gamma', '0.454545',
- 		 '-geometry', "$maxfull[0]x$maxfull[1]>",
- 		 '-print', '%w\n%h',
++                 '-gamma', '0.454545',
++                 '-geometry', "$maxfull[0]x$maxfull[1]>",
++                 '-print', '%w\n%h',
++                 '-gamma', '2.2',
++                 '+profile', '!icc,*',
++                 '-quality', $imgq, "$out/$fimg");
+ 
+   # face/center detection
+   my @center = (0.5, 0.5);
+@@ -701,7 +709,7 @@ sub process_img
+     $thumbrt = $minthumb[1] / $sfile[1];
+   }
+   my @sthumb = (max(int($sfile[0] * $thumbrt + 0.5), $minthumb[0]),
+-		max(int($sfile[1] * $thumbrt + 0.5), $minthumb[1]));
++                max(int($sfile[1] * $thumbrt + 0.5), $minthumb[1]));
+   my @mthumb = (min($maxthumb[0], $sthumb[0]), min($maxthumb[1], $sthumb[1]));
+ 
+   # cropping window
 @@ -710,7 +718,7 @@ sub process_img
    my $dy = $sthumb[1] - $mthumb[1];
    my $cy = clamp(0, $dy, int($center[1] * $sthumb[1] - $sthumb[1] / 2 + $dy / 2));
@@ -366,7 +474,16 @@ Pretty print json for easier customization
  
    return \%fdata;
  }
-@@ -851,7 +861,12 @@ my $fd;
+@@ -807,7 +817,7 @@ if(!$ofile || $slim)
+       my $omp = ($ox * $oy / 1e6);
+ 
+       if($mp >= $omp && $mp > $amp && abs($x / $y) >= $panort) {
+-	$keep = 1;
++        $keep = 1;
+       }
+     }
+ 
+@@ -851,7 +861,13 @@ my $fd;
  unless(open($fd, ">:raw", "$out/data.json")) {
    fatal("cannot write data file: $!");
  }
@@ -376,8 +493,9 @@ Pretty print json for easier customization
  
 -print("completed\n");
 +if ($use_symlinks) {
-+    chdir($out) || die "Failed to 'cd $out' for symlink creation";
-+    symlink(catfile('view', $_), '.') for ('index.html', '%%FG_VIEWDIR%%');
++    chdir($absOut) || die "Failed to 'cd $absOut' for symlink creation";
++    sys('ln', '-s', '%%FG_VIEWDIR%%');
++    sys('ln', '-s', 'view/index.html');
 +}
 +
-+print("$0 $VERSION done\n");
++print("$0 version $VERSION done for $absOut\n");
