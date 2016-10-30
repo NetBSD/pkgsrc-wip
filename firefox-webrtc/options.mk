@@ -15,6 +15,9 @@ PKG_SUGGESTED_OPTIONS+= pulseaudio dbus
 # On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
 PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
 
+# However we do not care
+PKG_SUGGESTED_OPTIONS.NetBSD+=	webrtc
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Malsa)
