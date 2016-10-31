@@ -4128,6 +4128,7 @@ SUBDIR+=	trayion
 SUBDIR+=	treetool
 SUBDIR+=	treeviewx
 SUBDIR+=	triangle
+SUBDIR+=	triforce-afl
 SUBDIR+=	trimmomatic
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
