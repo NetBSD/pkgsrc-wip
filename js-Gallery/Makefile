@@ -66,7 +66,7 @@ VENDOR_FILES= ${WRKSRC}/js/vendor/jquery.js
 MY_DIR= ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 do-install:
-	for d in ${INSTALLATION_DIRS}; do ${MKDIR} -m 0755 ${PREFIX}/$${d}; done
+	for d in ${INSTALLATION_DIRS}; do ${MKDIR} -m 0755 ${DESTDIR}${PREFIX}/$${d}; done
 	${INSTALL_DATA} -m 444 ${GALLERY_FILES} ${MY_DIR}
 	${INSTALL_DATA} -m 444 ${CSS_FILES}     ${MY_DIR}/css
 	${INSTALL_DATA} -m 444 ${IMG_FILES}     ${MY_DIR}/img
