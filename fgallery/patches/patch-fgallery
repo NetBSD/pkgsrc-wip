@@ -133,7 +133,7 @@ Pretty print json for easier customization
    my $ret = [cap_clean_title($title), ($desc? cap_clean_desc($desc): '')];
    return $ret;
  }
-@@ -322,32 +333,35 @@ sub parse_cap
+@@ -322,32 +333,84 @@ sub parse_cap
  
  sub print_version
  {
@@ -142,6 +142,55 @@ Pretty print json for easier customization
    exit(0);
  }
  
++sub init_noscript
++{
++  my ($d) = @_;
++  fatal("init_noscript: $d not a directory")
++    unless $d && -d $d;
++  my $fd;
++  my $f = "$d/noscript.html";
++  unless(open($fd, ">:raw", $f)) {
++    fatal("init_noscript: cannot write file '$f': $!");
++  }
++  chmod($mode, $f);
++  select $fd;
++  print join "\n",
++    '<!DOCTYPE html>',
++    '<html>',
++    '<head>',
++    '  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />',
++    '  <meta name="viewport" '
++       . 'content="width=device-width,initial-scale=1,'
++       . 'minimum-scale=1,minimal-ui" />',
++    '  <link href="view/noscript.css" rel="stylesheet" type="text/css" />',
++    '</head>',
++    '<body>',
++    '  <section id="photos">',
++    '';
++}
++
++sub print_noscript
++# <a href="imgs/DSC00712.jpg"><img src="thumbs/DSC00712.jpg" alt="c1 c2"></a>
++{
++  my ($f, $t, $c) = @_;
++  return unless @_ == 3 && $f && $t;
++  $c = [] unless $c && ref $c eq 'ARRAY';
++  my $x = '';
++  for (@$c) {
++    $x .= ' ' if $c =~ /\S$/o;
++    $x .= $_ if defined $_ && /\S/o;
++  }
++  my $a = '';
++  $a = sprintf ' alt="%s"', $x if $x && $x =~ /\S/o;
++  printf '    <a href="%s"><img src="%s"%s></a>' . "\n", $f, $t, $a;
++}
++
++sub finish_noscript
++{
++  print join "\n", '  </section>', '</body>', '</html>', '';
++  select STDOUT;
++}
++
  sub print_help
  {
    print(STDERR qq{Usage: $0 [options] input-dir output-dir [album name]
@@ -189,7 +238,7 @@ Pretty print json for easier customization
  });
    exit(shift);
  }
-@@ -363,17 +377,21 @@ my ($ret, @ARGS) = GetOptions(
+@@ -363,17 +426,21 @@ my ($ret, @ARGS) = GetOptions(
    'i' => sub { $ofile = 1; },
    'j=i' => sub { $workers = parse_int($_[0], $_[1], 1, undef); },
    'o' => sub { $orient = 0; },
@@ -212,7 +261,7 @@ Pretty print json for easier customization
  
  if(@ARGV < 2 || @ARGV > 3 || !$ret) {
    print_help(2);
-@@ -383,8 +401,16 @@ my $out = $ARGV[1];
+@@ -383,8 +450,16 @@ my $out = $ARGV[1];
  my $name = (@ARGV < 3? undef: decode($ARGV[2]));
  
  # check paths
@@ -231,7 +280,7 @@ Pretty print json for easier customization
  
  if(!-d $dir) {
    fatal("input directory \"$dir\" does not exist");
-@@ -393,55 +419,37 @@ if(!-d $dir) {
+@@ -393,55 +468,37 @@ if(!-d $dir) {
  } elsif(substr($absOut, 0, length($absDir)) eq $absDir) {
    fatal("output directory is a sub-directory of input, refusing to scan");
  } elsif(!-d $out) {
@@ -264,7 +313,8 @@ Pretty print json for easier customization
 -}
 -if(system("jpegoptim -V >/dev/null 2>&1")) {
 -  $jpegoptim = 0;
--}
++  cmd_exists('zip') || fatal('Missing 7z or zip command');
+ }
 -if(system("pngcrush -h >/dev/null 2>&1")) {
 -  $pngoptim = 0;
 -}
@@ -282,8 +332,7 @@ Pretty print json for easier customization
 -  } else {
 -    fatal("cannot run \"tificc\" or \"tificc2\" (check if liblcms2-utils is installed)");
 -  }
-+  cmd_exists('zip') || fatal('Missing 7z or zip command');
- }
+-}
 -
 +$jpegoptim = 0 unless cmd_exists('jpegoptim');
 +$pngoptim = 0 unless cmd_exists('pngcrush');
@@ -311,7 +360,7 @@ Pretty print json for easier customization
  }
  
  # list available files
-@@ -475,6 +483,7 @@ my @backsize = (int($minthumb[0] * 4), i
+@@ -475,6 +532,7 @@ my @backsize = (int($minthumb[0] * 4), i
  for my $path("$out/thumbs", "$out/blurs", "$out/imgs", "$out/files")
  {
    remove_tree($path);
@@ -319,7 +368,7 @@ Pretty print json for easier customization
    make_path($path);
  }
  
-@@ -496,7 +505,7 @@ sub analyze_file
+@@ -496,7 +554,7 @@ sub analyze_file
  
    my $props = ImageInfo($file, {PrintConv => 0, Sort => 'File'});
    unless(defined($props) && isin($props->{FileType}, @filetypes)) {
@@ -328,7 +377,7 @@ Pretty print json for easier customization
    }
  
    # sanitize file name
-@@ -535,9 +544,9 @@ sub analyze_file
+@@ -535,9 +593,9 @@ sub analyze_file
      {
        if($props->{'Comment'})
        {
@@ -341,7 +390,7 @@ Pretty print json for easier customization
        }
      }
      elsif($m eq "txt")
-@@ -545,16 +554,16 @@ sub analyze_file
+@@ -545,16 +603,16 @@ sub analyze_file
        my $txt = "$dir$base.txt";
        if(-f $txt)
        {
@@ -362,7 +411,7 @@ Pretty print json for easier customization
        }
      }
      elsif($m eq "xmp")
-@@ -562,8 +571,8 @@ sub analyze_file
+@@ -562,8 +620,8 @@ sub analyze_file
        my $xmp = ImageInfo("$file.xmp", {PrintConv => 0, Sort => 'File'});
        if(defined($xmp) && ($xmp->{'Title'} || $xmp->{'Description'}))
        {
@@ -373,7 +422,7 @@ Pretty print json for easier customization
        }
      }
    }
-@@ -635,22 +644,24 @@ sub process_img
+@@ -635,22 +693,24 @@ sub process_img
  
    # copy source file
    sys('cp', '-L', $file, $fout);
@@ -410,7 +459,7 @@ Pretty print json for easier customization
    }
  
    # final file mode
-@@ -658,11 +669,12 @@ sub process_img
+@@ -658,11 +718,12 @@ sub process_img
    sys('touch', '-r', $file, $fout);
  
    # intermediate sRGB colorspace conversion
@@ -426,7 +475,7 @@ Pretty print json for easier customization
      sys($tificccmd, '-t0', $ftmp, "$ftmp.tmp");
      rename("$ftmp.tmp", $ftmp);
    }
-@@ -674,13 +686,13 @@ sub process_img
+@@ -674,13 +735,13 @@ sub process_img
  
    # generate main image
    my @sfile = ($props{ImageWidth}, $props{ImageHeight});
@@ -447,7 +496,7 @@ Pretty print json for easier customization
  
    # face/center detection
    my @center = (0.5, 0.5);
-@@ -701,7 +713,7 @@ sub process_img
+@@ -701,7 +762,7 @@ sub process_img
      $thumbrt = $minthumb[1] / $sfile[1];
    }
    my @sthumb = (max(int($sfile[0] * $thumbrt + 0.5), $minthumb[0]),
@@ -456,7 +505,7 @@ Pretty print json for easier customization
    my @mthumb = (min($maxthumb[0], $sthumb[0]), min($maxthumb[1], $sthumb[1]));
  
    # cropping window
-@@ -710,7 +722,7 @@ sub process_img
+@@ -710,7 +771,7 @@ sub process_img
    my $dy = $sthumb[1] - $mthumb[1];
    my $cy = clamp(0, $dy, int($center[1] * $sthumb[1] - $sthumb[1] / 2 + $dy / 2));
  
@@ -465,7 +514,7 @@ Pretty print json for easier customization
        '-gamma', '0.454545',
        '-resize', "$sthumb[0]x$sthumb[1]!",
        '-gravity', 'NorthWest',
-@@ -720,17 +732,17 @@ sub process_img
+@@ -720,17 +781,17 @@ sub process_img
        '-quality', $imgq, "$out/$fthumb");
  
    # blur
@@ -486,7 +535,7 @@ Pretty print json for easier customization
  
    # do not store duplicate information
    my @tdata = ($fthumb, [map { int } @mthumb]);
-@@ -747,7 +759,9 @@ sub process_img
+@@ -747,7 +808,9 @@ sub process_img
    }
  
    # remove temporary files
@@ -497,7 +546,7 @@ Pretty print json for easier customization
  
    return \%fdata;
  }
-@@ -807,7 +821,7 @@ if(!$ofile || $slim)
+@@ -807,7 +870,7 @@ if(!$ofile || $slim)
        my $omp = ($ox * $oy / 1e6);
  
        if($mp >= $omp && $mp > $amp && abs($x / $y) >= $panort) {
@@ -506,7 +555,7 @@ Pretty print json for easier customization
        }
      }
  
-@@ -828,7 +842,7 @@ $json{version} = $VERSION;
+@@ -828,9 +891,11 @@ $json{version} = $VERSION;
  $json{name} = $name if($name);
  $json{download} = $fdownload if($fdownload);
  $json{index} = $indexUrl if($indexUrl);
@@ -514,10 +563,25 @@ Pretty print json for easier customization
 +$json{blur} = \@backsize if $do_blur;
  $json{thumb} = { min => \@minthumb, max => \@maxthumb };
  
++# prepare data.json and print out noscript.html file
++init_noscript($out);
  foreach my $fdata(@adata)
-@@ -851,7 +865,13 @@ my $fd;
- unless(open($fd, ">:raw", "$out/data.json")) {
-   fatal("cannot write data file: $!");
+ {
+   my %data;
+@@ -845,13 +910,22 @@ foreach my $fdata(@adata)
+     }
+   }
+   push(@{$json{data}}, \%data);
++  print_noscript($data{img}->[0], $data{thumb}->[0], $data{caption});
+ }
++finish_noscript();
+ 
+ my $fd;
+-unless(open($fd, ">:raw", "$out/data.json")) {
+-  fatal("cannot write data file: $!");
++my $dj = "$out/data.json";
++unless(open($fd, ">:raw", $dj)) {
++  fatal("cannot write file '$dj': $!");
  }
 -print($fd encode_json(\%json));
 +print($fd JSON::PP->new->ascii->pretty->canonical->allow_blessed->encode(\%json));

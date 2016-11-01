@@ -8,7 +8,21 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
 
 --- view/index.js.orig	2016-04-25 19:57:44.000000000 +0000
 +++ view/index.js
-@@ -52,8 +52,6 @@ var elist;	// thumbnail list
+@@ -5,9 +5,10 @@
+ 
+ var datafile = 'data.json';
+ var padding = 22;
+-var duration = 500;
+-var thrdelay = 1500;
+-var hidedelay = 3000;
++var duration = 500;      // for scrolling
++var thrdelay = 1500;     // throbber delay
++var hidedelay = 3000;    // header and caption hiding delay
++var slidedelay = 5000;   // slide show delay
+ var prefetch = 1;
+ var minupscale = 640 * 480;
+ var thumbrt = 16/9 - 5/3;
+@@ -52,8 +53,6 @@ var elist;	// thumbnail list
  var fscr;	// thumbnail list scroll fx
  var econt;	// picture container
  var ebuff;	// picture buffer
@@ -17,7 +31,13 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  var oimg;	// old image
  var eimg;	// new image
  var cthumb;	// current thumbnail
-@@ -66,6 +64,7 @@ var idle;	// idle timer
+@@ -62,10 +61,12 @@ var eidx;	// current index
+ var tthr;	// throbber timeout
+ var imgs;	// image list
+ var first;	// first image
+-var idle;	// idle timer
++var idle;	// general idle timer
++var idleMouse;	// idle mouse timer
  var clayout;	// current layout
  var csr;	// current scaling ratio
  var sdir;	// scrolling direction
@@ -25,7 +45,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
  function resize()
  {
-@@ -100,7 +99,7 @@ function resize()
+@@ -100,7 +101,7 @@ function resize()
    {
      econt.setStyles(
      {
@@ -34,7 +54,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
        'height': msize.y
      });
    }
-@@ -109,7 +108,7 @@ function resize()
+@@ -109,7 +110,7 @@ function resize()
      econt.setStyles(
      {
        'width': msize.x,
@@ -43,7 +63,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
      });
    }
  
-@@ -244,12 +243,12 @@ function resizeMainImg(img)
+@@ -244,12 +245,12 @@ function resizeMainImg(img)
  {
    var contSize = econt.getSize();
    var listSize = elist.getSize();
@@ -58,7 +78,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    if(imgrt > (contSize.x / contSize.y))
    {
-@@ -388,17 +387,20 @@ function hideCap(nodelay)
+@@ -388,17 +389,20 @@ function hideCap(nodelay)
  function showCap(nodelay)
  {
    if(capst == 'never') return;
@@ -82,7 +102,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
      var words = cap[0].split(' ').length + cap[1].split(' ').length;
      var delay = Math.max(capdelay, rdwdelay * words);
      captm = hideCap.delay(delay);
-@@ -408,7 +410,6 @@ function showCap(nodelay)
+@@ -408,7 +412,6 @@ function showCap(nodelay)
  function toggleCap()
  {
    if(!imgs.captions) return;
@@ -90,7 +110,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    // switch mode
    if(capst == 'normal')
      capst = 'never';
-@@ -416,53 +417,76 @@ function toggleCap()
+@@ -416,53 +419,75 @@ function toggleCap()
      capst = 'always';
    else
      capst = 'normal';
@@ -114,14 +134,13 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
 +  {
 +    idle.removeEvent('idle', next);
 +    showHdr();
-+    idle.addEvent('idle', hideHdr);
 +    elist.setStyle('display', 'block');
 +    slideshow = 'off';
 +  }
 +  else
 +  {
-+    hideHdr();
 +    idle.addEvent('idle', next);
++    hideHdr();
 +    elist.setStyle('display', 'none');
 +    slideshow = 'on';
 +  }
@@ -179,7 +198,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  }
  
  function onMainReady()
-@@ -544,26 +568,31 @@ function onMainReady()
+@@ -544,26 +569,31 @@ function onMainReady()
    fx.start('opacity', 1);
  
    var rp = Math.floor(Math.random() * 100);
@@ -216,21 +235,20 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr.empty();
    img.inject(ehdr);
    ehdr.setStyle('display', 'block');
-@@ -574,31 +603,19 @@ function showThrobber()
+@@ -573,32 +603,17 @@ function showThrobber()
+ 
  function hideHdr()
  {
-   if(idle.started)
-+  {
-     ehdr.tween('opacity', 0);
+-  if(idle.started)
+-    ehdr.tween('opacity', 0);
 -}
 -
 -function hideNav()
 -{
--  emain.addClass('no-cursor');
++  ehdr.tween('opacity', 0);
+   emain.addClass('no-cursor');
 -  eleft.tween('opacity', 0);
 -  eright.tween('opacity', 0);
-+    emain.addClass('no-cursor');
-+  }
  }
  
  function showHdr()
@@ -252,7 +270,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  function flash()
  {
    eflash.setStyle('display', 'block');
-@@ -637,7 +654,7 @@ function load(i)
+@@ -637,7 +652,7 @@ function load(i)
    if(i == eidx) return;
  
    var data = imgs.data[i];
@@ -261,7 +279,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    {
      onComplete: function() { if(i == eidx) onMainReady(); }
    });
-@@ -722,16 +739,6 @@ function initGallery(data)
+@@ -722,16 +737,6 @@ function initGallery(data)
    ecap = new Element('div', { id: 'caption' });
    ecap.inject(econt);
  
@@ -278,7 +296,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr = new Element('div', { id: 'header' });
    ehdr.set('tween', { link: 'ignore' })
    ehdr.inject(econt);
-@@ -771,10 +778,9 @@ function initGallery(data)
+@@ -771,10 +776,9 @@ function initGallery(data)
  
    // events and navigation shortcuts
    elist.addEvent('scroll', onScroll);
@@ -290,7 +308,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    window.addEvent('keydown', function(ev)
    {
-@@ -788,10 +794,6 @@ function initGallery(data)
+@@ -788,10 +792,6 @@ function initGallery(data)
        ev.stop();
        next();
      }
@@ -301,17 +319,28 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    });
  
    econt.addEvent('mousewheel', function(ev)
-@@ -819,8 +821,7 @@ function initGallery(data)
+@@ -815,16 +815,15 @@ function initGallery(data)
+   });
+ 
+   // setup an idle callback for mouse movement only
+-  var idleTmp = new IdleTimer(window, {
++  idleMouse = new IdleTimer(window, {
      timeout: hidedelay,
      events: ['mousemove', 'mousedown', 'mousewheel']
    }).start();
 -  idleTmp.addEvent('idle', hideNav);
 -  idleTmp.addEvent('active', function() { showNav(); showHdr(); });
-+  idleTmp.addEvent('active', showHdr);
++  idleMouse.addEvent('active', showHdr);
++  idleMouse.addEvent('idle', hideHdr);
  
    // general idle callback
-   idle = new IdleTimer(window, { timeout: hidedelay }).start();
-@@ -871,12 +872,11 @@ function init()
+-  idle = new IdleTimer(window, { timeout: hidedelay }).start();
+-  idle.addEvent('idle', hideHdr);
++  idle = new IdleTimer(window, { timeout: slidedelay }).start();
+ 
+   // prepare first image
+   sdir = 1;
+@@ -871,12 +870,11 @@ function init()
    }).get();
  
    // preload some resources
