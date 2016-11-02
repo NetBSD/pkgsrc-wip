@@ -1,0 +1,5 @@
+Put a real compiler triple into BUILD_DIRS instead of a hardcoded one.
+Resolve the __VA_ARGS__ macro problem.
+Make sure manuals and other auxiliary files are installed.
+Mark the version as non-release properly.
+Clean the makefile. Some parts are no longer needed after move to autotools.

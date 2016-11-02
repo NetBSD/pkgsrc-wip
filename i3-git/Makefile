@@ -17,9 +17,13 @@ HOMEPAGE=	http://i3wm.org/
 COMMENT=	Improved dynamic tiling window manager
 LICENSE=	modified-bsd
 
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake bison lex yacc pkg-config perl
+USE_TOOLS+=	autoconf autoreconf automake
 USE_LANGUAGES=	c99
-BUILD_TARGET=	all mans
+#BUILD_TARGET=	all mans
+# XXX put a real compiler triple here
+BUILD_DIRS+=	x86_64--netbsd
 
 PKG_SYSCONFSUBDIR=	i3
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/${PKGBASE}
@@ -53,9 +57,12 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 # for i3-save-tree
 DEPENDS+=	p5-AnyEvent-I3-[0-9]*:../../wip/p5-AnyEvent-I3
 
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+pre-configure:
+	cd ${WRKSRC} && autoreconf -i
+
+#post-install:
+#	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+#	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
