@@ -55,7 +55,7 @@ PKGCONFIG_OVERRIDE+=	src/other/libpng/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	src/other/libz/zlib.pc.in
 
 # What else?
-NOT_PAX_MPROTECT_SAFE+=	${BRLCAD_PREFIX:Q}/bin/mged
+NOT_PAX_MPROTECT_SAFE+=	brlcad/bin/mged
 
 BUILD_DEPENDS+=	astyle-[0-9]*:../../devel/astyle
 # BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon # built in
