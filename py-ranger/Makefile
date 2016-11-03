@@ -18,9 +18,16 @@ CHECK_PORTABILITY_SKIP+=	examples/rifle_sxiv.sh
 
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	pre-install
-SUBST_MESSAGE.install=	correcting installation path
+SUBST_MESSAGE.install=	Fixing installation path.
 SUBST_FILES.install=	${WRKSRC}/setup.py
 SUBST_SED.install=	-e 's,share/man,man,g'
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		${WRKSRC}/doc/ranger.1
+SUBST_SED.fix-paths=		-e 's,/usr/share,/usr/pkg/share,g'
+SUBST_SED.fix-paths+=		-e 's,/usr/lib,/usr/pkg/libexec,g'
 
 REPLACE_PYTHON+=	.py	*/*.py	*/*/*.py	*/*/*.py
 
@@ -28,7 +35,5 @@ USE_LANGUAGES=	# none
 
 .include	"../../lang/python/distutils.mk"
 .include	"../../lang/python/application.mk"
-
-USE_LANGUAGES=	# none
 
 .include "../../mk/bsd.pkg.mk"
