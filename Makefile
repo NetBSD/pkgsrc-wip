@@ -3338,6 +3338,7 @@ SUBDIR+=	py-qutip
 SUBDIR+=	py-qutrub
 SUBDIR+=	py-radon
 SUBDIR+=	py-radontea
+SUBDIR+=	py-ranger
 SUBDIR+=	py-raphrase
 SUBDIR+=	py-rasterio
 SUBDIR+=	py-raven
