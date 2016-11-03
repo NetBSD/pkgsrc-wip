@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fs-uae-2.8.0
+DISTNAME=	fs-uae-2.8.0u3
 CATEGORIES=	emulators
 #MASTER_SITES=	http://fs-uae.net/fs-uae/devel/${PKGVERSION_NOREV}/
 MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/

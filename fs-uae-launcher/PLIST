@@ -4332,7 +4332,6 @@ share/fs-uae-launcher/arcade/glui/__pycache__/text.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/arcade/glui/__pycache__/texture.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/arcade/glui/__pycache__/texturemanager.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/arcade/glui/__pycache__/topmenu.cpython-${PYVERS}.pyc
-share/fs-uae-launcher/arcade/glui/__pycache__/util.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/arcade/glui/__pycache__/window.cpython-${PYVERS}.pyc
 share/fs-uae-launcher/arcade/glui/animation.py
 share/fs-uae-launcher/arcade/glui/bezier.py
@@ -4365,7 +4364,6 @@ share/fs-uae-launcher/arcade/glui/text.py
 share/fs-uae-launcher/arcade/glui/texture.py
 share/fs-uae-launcher/arcade/glui/texturemanager.py
 share/fs-uae-launcher/arcade/glui/topmenu.py
-share/fs-uae-launcher/arcade/glui/util.py
 share/fs-uae-launcher/arcade/glui/window.py
 share/fs-uae-launcher/arcade/gnome3.py
 share/fs-uae-launcher/arcade/notification.py
@@ -5044,6 +5042,8 @@ share/fs-uae-launcher/fsgs/res/input/wisegroup_ltd/tigergame_ps_ps2_game_control
 share/fs-uae-launcher/fsgs/res/input/x360controller_16_6_0_0_macosx.conf
 share/fs-uae-launcher/fsgs/res/input/xbox_360_wired_controller_15_6_0_0_macosx.conf
 share/fs-uae-launcher/fsgs/res/input/xbox_360_wireless_receiver_15_6_0_0_linux.conf
+share/fs-uae-launcher/fsgs/res/input/xbox_360_wireless_receiver_15_6_1_0_linux.conf
+share/fs-uae-launcher/fsgs/res/input/xbox_360_wireless_receiver_17_4_1_0_linux.conf
 share/fs-uae-launcher/fsgs/res/input/xbox_one_wired_controller_15_6_0_0_macosx.conf
 share/fs-uae-launcher/fsgs/res/input/xeox_gamepad_sl_6556_bk_12_4_1_0_linux.conf
 share/fs-uae-launcher/fsgs/res/input/xeox_gamepad_sl_6556_bk_12_4_1_0_windows.conf
