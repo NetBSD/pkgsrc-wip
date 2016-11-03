@@ -19,7 +19,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax
 USE_CMAKE=	yes
-GCC_REQD=	4.9
+GCC_REQD=	4.9	# pbcopper requires 4.9 due to use of json
 
 MAKE_JOBS_SAFE=	yes
 

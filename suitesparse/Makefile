@@ -6,7 +6,8 @@
 DISTNAME=	SuiteSparse-4.0.2
 PKGNAME=	suitesparse-4.0.2
 CATEGORIES=	math
-MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
+MASTER_SITES=	http://faculty.cse.tamu.edu/davis/SuiteSparse/
+#MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 
 MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/

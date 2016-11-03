@@ -24,7 +24,7 @@ MAKE_JOBS_SAFE=	yes
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
-GCC_REQD=	4.9
+GCC_REQD=	4.9	# pbcopper requires 4.9 due to use of json
 CMAKE_ARGS=	-DHTSLIB_INCLUDE_DIRS:STRING=${PREFIX}/include/htslib \
 		-DHTSLIB_LIBRARIES:STRING="-L${PREFIX}/lib -lhts" \
 		-DPacBioBAM_INCLUDE_DIRS:STRING=${PREFIX}/include/pbbam \
