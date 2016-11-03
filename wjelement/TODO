@@ -1,5 +1,3 @@
-Don't install doc to /doc,  see CMakeList.txt:62
-
 Is this warning OK?
 
   MACOSX_RPATH is not specified for the following targets:

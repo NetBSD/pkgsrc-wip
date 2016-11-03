@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (wjelement/v1.1.tar.gz) = f83c836e69079320160278c01feb706b7dd283c4
-RMD160 (wjelement/v1.1.tar.gz) = 084f96f2c9afdada5ca459c4203b0c093390a50e
-Size (wjelement/v1.1.tar.gz) = 80362 bytes
+SHA1 (wjelement/wjelement-v1.1.tar.gz) = f83c836e69079320160278c01feb706b7dd283c4
+RMD160 (wjelement/wjelement-v1.1.tar.gz) = 084f96f2c9afdada5ca459c4203b0c093390a50e
+SHA512 (wjelement/wjelement-v1.1.tar.gz) = b9c0214c0136e1cf188d0c6967c14f97632cb176f2d889019bc4932424d95bb6372e69951bada57fc8fe0b6c7997c74244d1e631a9ce2ad5833ddc1dcc462e74
+Size (wjelement/wjelement-v1.1.tar.gz) = 80362 bytes
 SHA1 (patch-CMakeLists.txt) = 8f61ca825e771ac383ffaf8a5dc69a136cd0598f
-SHA1 (patch-src_wjelement_CMakeLists.txt) = 9a8cf17fd14ca1d95f3ed832447224b52deda402
