@@ -1,9 +1,9 @@
 # $NetBSD$
-
-DISTNAME=	lumina-0.9.0
+PKGNAME=	lumina-1.1.0
+DISTNAME=	lumina-qt5-1.1.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=pcbsd/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}-Release
+MASTER_SITES=	${MASTER_SITE_GITHUB:=trueos/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lumina-desktop.org/
@@ -21,18 +21,20 @@ DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
 DEPENDS+=	numlockx-[0-9]*:../../x11/numlockx
+DEPENDS+=	libxcb-[0-9]*:../../x11/libxcb
+DEPENDS+=	libXdamage-[0-9]*:../../x11/libXdamage
 
 INSTALL_MAKE_FLAGS=		INSTALL_ROOT=${DESTDIR}
 
-# The NO_I18N option results in regeneration of empty translation files
-# These files are available via lumina-i18n
 pre-build:
-	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} CONFIG+="configure NO_I18N"
+	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} CONFIG+="configure WITH_I18N"
 
 pre-install:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${RUN} ${INSTALL_DATA} ${WRKSRC}/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf ${DESTDIR}${EGDIR}
 
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
