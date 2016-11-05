@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gcc/config/netbsd.c.orig	2015-10-06 16:35:05.000000000 +0000
+--- gcc/config/netbsd.c.orig	2016-11-04 16:18:21.025368203 +0000
 +++ gcc/config/netbsd.c
-@@ -0,0 +1,97 @@
+@@ -0,0 +1,99 @@
 +/* Functions for generic NetBSD as target machine for GNU C compiler.
 +   Copyright (C) 1989-2014 Free Software Foundation, Inc.
 +   Contributed by Apple Computer Inc.
@@ -28,11 +28,13 @@ $NetBSD$
 +#include "system.h"
 +#include "coretypes.h"
 +#include "backend.h"
++#include "target.h"
 +#include "cfghooks.h"
 +#include "tree.h"
 +#include "gimple.h"
 +#include "rtl.h"
 +#include "df.h"
++#include "memmodel.h"
 +#include "regs.h"
 +#include "insn-config.h"
 +#include "conditions.h"
