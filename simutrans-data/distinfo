@@ -1,6 +1,14 @@
 $NetBSD$
 
-SHA1 (language_pack-Base+texts.zip) = 6df0294bfd0c65ba05d2f032c60b6e8daf781d4a
-RMD160 (language_pack-Base+texts.zip) = dbefa9b4b41b05477efe26b4e4bf9399032e11a4
-SHA512 (language_pack-Base+texts.zip) = 4af20eb2f73d4406d58c65c3f76e72d7a8960b8c45063d4ee64624db56f9b67507aad2be88bd840fc530c1aa4fcf5ed6a0617bd2f59b8d6f91bc785b88c20458
-Size (language_pack-Base+texts.zip) = 1098037 bytes
+SHA1 (language_pack-Base+texts.zip) = 33c9c7b80bf8215da0a513dbf6eeba4c44e2e77c
+RMD160 (language_pack-Base+texts.zip) = b38fd83258b137a909378c4d962073a6236b5e45
+SHA512 (language_pack-Base+texts.zip) = 6beddca57ee331b00a8fe0f20aa74041d12aa45f8e1aa4400ef3bec228c4ccf0a1d7bf1837618778ad458b4e9a082416932a7aff88ac259405288db2b3c724f0
+Size (language_pack-Base+texts.zip) = 1098245 bytes
+SHA1 (simupak64-120-0-1.zip) = ceb70ef7b61867f8af129b8af30935c7fef61c11
+RMD160 (simupak64-120-0-1.zip) = 813d097c1701cf4839363e98ef6c7fb589ca8da5
+SHA512 (simupak64-120-0-1.zip) = 21badd251b9018bef55531923e23cb1935c3831784fab028febd3879384330e843329499ab08a08e71238fb92bf7db36e18ecbbc4e719a942e427f58fc634afc
+Size (simupak64-120-0-1.zip) = 4051769 bytes
+SHA1 (simutrans-data.zip) = 33c9c7b80bf8215da0a513dbf6eeba4c44e2e77c
+RMD160 (simutrans-data.zip) = b38fd83258b137a909378c4d962073a6236b5e45
+SHA512 (simutrans-data.zip) = 6beddca57ee331b00a8fe0f20aa74041d12aa45f8e1aa4400ef3bec228c4ccf0a1d7bf1837618778ad458b4e9a082416932a7aff88ac259405288db2b3c724f0
+Size (simutrans-data.zip) = 1098245 bytes

@@ -4,6 +4,7 @@ PKGNAME=	simutrans-120.1.3
 DISTNAME=	simutrans-src-120-1-3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simutrans/}
+#DISTFILES+=     language_pack-Base+texts.zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,15 +12,22 @@ HOMEPAGE=	http://www.simutrans.com/
 COMMENT=	Simutrans is a freeware and open-source transportation simulator
 LICENSE=	artistic
 
-USE_TOOLS+=	pkg-config unzip gmake pax
+USE_TOOLS+=	pkg-config unzip gmake pax grep
 USE_LANGUAGES=	c++ c
 
-GNU_CONFIGURE=	yes
-CONFIGURE_SCRIPT=	${WRKDIR}/configure.sh
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-pthread
 
-WRKSRC=	${WRKDIR}
+GNU_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	${WRKSRC}/configure.sh
+
+CONFIGURE_ENV+=		
+CONFIGURE_ARGS+=	--prefix=${PREFIX}/share/simutrans
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
+PTHREAD_OPTS+=          require
+#CONFIGURE_ARGS+=	--with-pthread
+
+#AUTO_MKDIRS=		yes
+WRKSRC=			${WRKDIR}/simutrans
 
 SUBST_CLASSES+=	testeq
 SUBST_STAGE.testeq=	post-extract
@@ -30,16 +38,33 @@ SUBST_FILES.testeq+=	script/*.sh
 SUBST_FILES.testeq+=	Makefile
 SUBST_SED.testeq=	-e 's/==/=/g'
 
+
+do-extract:
+		unzip ${DISTDIR}/${DISTNAME}.zip -d ${WRKSRC} -o
+		unzip ${DISTDIR}/language_pack-Base+texts.zip -d ${WRKSRC}/simutrans/text -o
+
+
+
 do-install:
+	cd ${WRKSRC} && ${PAX} -rw -pp simutrans ${DESTDIR}${PREFIX}/share/
 	${MKDIR} ${DESTDIR}${PREFIX}/bin/
-	cd ${WRKDIR} && ${PAX} -rw -pp simutrans ${DESTDIR}${PREFIX}/share/
-	${INSTALL_PROGRAM} ${WRKDIR}/sim ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/sim ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${FILESDIR}/simutrans ${DESTDIR}${PREFIX}/bin/
 	${FIND} ${DESTDIR}${PREFIX}/share -type f -exec ${CHMOD} 0644 {} \;
 
 # url2pkg-marker (please do not remove this line.)
 #.include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/SDL_gfx/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/SDL_sound/buildlink3.mk"
+#.include "../../audio/timidity/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/sim
+bin/simutrans
 share/simutrans/change_request.txt
 share/simutrans/config/simuconf.tab
 share/simutrans/copyright.txt
@@ -62,6 +63,11 @@ share/simutrans/readme.txt
 share/simutrans/script/new_scenario_template.nut
 share/simutrans/script/scenario_base.nut
 share/simutrans/script/scenario_compat.nut
+share/simutrans/text/be.tab
+share/simutrans/text/bg.tab
+share/simutrans/text/ca.tab
+share/simutrans/text/ce.tab
+share/simutrans/text/cn.tab
 share/simutrans/text/cn/baum_build.txt
 share/simutrans/text/cn/color.txt
 share/simutrans/text/cn/enlarge_map.txt
@@ -71,6 +77,7 @@ share/simutrans/text/cn/scenario.txt
 share/simutrans/text/cn/settings.txt
 share/simutrans/text/cn/simutrans.txt
 share/simutrans/text/cn/trafficlight_info.txt
+share/simutrans/text/cz.tab
 share/simutrans/text/cz/airtools.txt
 share/simutrans/text/cz/baum_build.txt
 share/simutrans/text/cz/bridges.txt
@@ -134,6 +141,7 @@ share/simutrans/text/cz/trafficlight_info.txt
 share/simutrans/text/cz/tramtools.txt
 share/simutrans/text/cz/underground.txt
 share/simutrans/text/cz/window.txt
+share/simutrans/text/de.tab
 share/simutrans/text/de/airtools.txt
 share/simutrans/text/de/baum_build.txt
 share/simutrans/text/de/citybuilding_build.txt
@@ -194,6 +202,7 @@ share/simutrans/text/de/trafficlight_info.txt
 share/simutrans/text/de/tramtools.txt
 share/simutrans/text/de/underground.txt
 share/simutrans/text/de/window.txt
+share/simutrans/text/dk.tab
 share/simutrans/text/dk/color.txt
 share/simutrans/text/dk/convoi.txt
 share/simutrans/text/dk/convoi_filter.txt
@@ -217,6 +226,7 @@ share/simutrans/text/dk/schedule.txt
 share/simutrans/text/dk/shiptools.txt
 share/simutrans/text/dk/sound.txt
 share/simutrans/text/dk/station.txt
+share/simutrans/text/en.tab
 share/simutrans/text/en/airtools.txt
 share/simutrans/text/en/baum_build.txt
 share/simutrans/text/en/citybuilding_build.txt
@@ -275,6 +285,7 @@ share/simutrans/text/en/station_details.txt
 share/simutrans/text/en/trafficlight_info.txt
 share/simutrans/text/en/tramtools.txt
 share/simutrans/text/en/window.txt
+share/simutrans/text/es.tab
 share/simutrans/text/es/airtools.txt
 share/simutrans/text/es/citylist_filter.txt
 share/simutrans/text/es/citywindow.txt
@@ -321,7 +332,10 @@ share/simutrans/text/es/station.txt
 share/simutrans/text/es/station_details.txt
 share/simutrans/text/es/tramtools.txt
 share/simutrans/text/es/window.txt
+share/simutrans/text/et.tab
+share/simutrans/text/fi.tab
 share/simutrans/text/fi/new_world.txt
+share/simutrans/text/fr.tab
 share/simutrans/text/fr/airtools.txt
 share/simutrans/text/fr/baum_build.txt
 share/simutrans/text/fr/climates.txt
@@ -347,6 +361,9 @@ share/simutrans/text/fr/schedule.txt
 share/simutrans/text/fr/shiptools.txt
 share/simutrans/text/fr/sound.txt
 share/simutrans/text/fr/station.txt
+share/simutrans/text/frp.tab
+share/simutrans/text/gr.tab
+share/simutrans/text/hr.tab
 share/simutrans/text/hr/baum_build.txt
 share/simutrans/text/hr/citybuilding_build.txt
 share/simutrans/text/hr/citylist_filter.txt
@@ -367,6 +384,7 @@ share/simutrans/text/hr/sound.txt
 share/simutrans/text/hr/station_details.txt
 share/simutrans/text/hr/underground.txt
 share/simutrans/text/hr/window.txt
+share/simutrans/text/hu.tab
 share/simutrans/text/hu/citylist_filter.txt
 share/simutrans/text/hu/citywindow.txt
 share/simutrans/text/hu/color.txt
@@ -397,6 +415,10 @@ share/simutrans/text/hu/special.txt
 share/simutrans/text/hu/station.txt
 share/simutrans/text/hu/station_details.txt
 share/simutrans/text/hu/tramtools.txt
+share/simutrans/text/id.tab
+share/simutrans/text/id/general.txt
+share/simutrans/text/id/simutrans.txt
+share/simutrans/text/it.tab
 share/simutrans/text/it/airtools.txt
 share/simutrans/text/it/baum_build.txt
 share/simutrans/text/it/citylist_filter.txt
@@ -428,22 +450,27 @@ share/simutrans/text/it/station.txt
 share/simutrans/text/it/station_details.txt
 share/simutrans/text/it/trafficlight_info.txt
 share/simutrans/text/it/window.txt
+share/simutrans/text/ja.tab
 share/simutrans/text/ja/citylist_filter.txt
 share/simutrans/text/ja/citywindow.txt
 share/simutrans/text/ja/color.txt
 share/simutrans/text/ja/depot.txt
 share/simutrans/text/ja/display.txt
+share/simutrans/text/ja/enlarge_map.txt
 share/simutrans/text/ja/finances.txt
 share/simutrans/text/ja/general.txt
 share/simutrans/text/ja/language.txt
 share/simutrans/text/ja/load.txt
+share/simutrans/text/ja/load_relief.txt
 share/simutrans/text/ja/mailbox.txt
 share/simutrans/text/ja/map.txt
+share/simutrans/text/ja/monorailtools.txt
 share/simutrans/text/ja/new_world.txt
 share/simutrans/text/ja/options.txt
 share/simutrans/text/ja/password.txt
 share/simutrans/text/ja/players.txt
 share/simutrans/text/ja/railtools.txt
+share/simutrans/text/ja/removal_tool.txt
 share/simutrans/text/ja/roadtools.txt
 share/simutrans/text/ja/save.txt
 share/simutrans/text/ja/schedule.txt
@@ -456,6 +483,7 @@ share/simutrans/text/ja/sound.txt
 share/simutrans/text/ja/station.txt
 share/simutrans/text/ja/station_details.txt
 share/simutrans/text/ja/trafficlight_info.txt
+share/simutrans/text/ko.tab
 share/simutrans/text/ko/citylist_filter.txt
 share/simutrans/text/ko/citywindow.txt
 share/simutrans/text/ko/color.txt
@@ -480,6 +508,8 @@ share/simutrans/text/ko/slopetools.txt
 share/simutrans/text/ko/sound.txt
 share/simutrans/text/ko/station.txt
 share/simutrans/text/ko/station_details.txt
+share/simutrans/text/lt.tab
+share/simutrans/text/nl.tab
 share/simutrans/text/nl/airtools.txt
 share/simutrans/text/nl/citylist_filter.txt
 share/simutrans/text/nl/citywindow.txt
@@ -498,6 +528,8 @@ share/simutrans/text/nl/map.txt
 share/simutrans/text/nl/monorailtools.txt
 share/simutrans/text/nl/mouse.txt
 share/simutrans/text/nl/signals.txt
+share/simutrans/text/no.tab
+share/simutrans/text/pl.tab
 share/simutrans/text/pl/color.txt
 share/simutrans/text/pl/depot.txt
 share/simutrans/text/pl/display.txt
@@ -515,6 +547,7 @@ share/simutrans/text/pl/schedule.txt
 share/simutrans/text/pl/shiptools.txt
 share/simutrans/text/pl/sound.txt
 share/simutrans/text/pl/station.txt
+share/simutrans/text/pt.tab
 share/simutrans/text/pt/airtools.txt
 share/simutrans/text/pt/baum_build.txt
 share/simutrans/text/pt/citybuilding_build.txt
@@ -569,6 +602,7 @@ share/simutrans/text/pt/trafficlight_info.txt
 share/simutrans/text/pt/tramtools.txt
 share/simutrans/text/pt/window.txt
 share/simutrans/text/readme_citylist.txt
+share/simutrans/text/ro.tab
 share/simutrans/text/ro/airtools.txt
 share/simutrans/text/ro/color.txt
 share/simutrans/text/ro/depot.txt
@@ -588,7 +622,12 @@ share/simutrans/text/ro/shiptools.txt
 share/simutrans/text/ro/sound.txt
 share/simutrans/text/ro/station.txt
 share/simutrans/text/ro/station_details.txt
+share/simutrans/text/ru.tab
+share/simutrans/text/ru/airtools.txt
+share/simutrans/text/ru/baum_build.txt
+share/simutrans/text/ru/citybuilding_build.txt
 share/simutrans/text/ru/color.txt
+share/simutrans/text/sk.tab
 share/simutrans/text/sk/bridges.txt
 share/simutrans/text/sk/color.txt
 share/simutrans/text/sk/convoi.txt
@@ -610,6 +649,8 @@ share/simutrans/text/sk/schedule.txt
 share/simutrans/text/sk/shiptools.txt
 share/simutrans/text/sk/sound.txt
 share/simutrans/text/sk/station.txt
+share/simutrans/text/sq.tab
+share/simutrans/text/sv.tab
 share/simutrans/text/sv/airtools.txt
 share/simutrans/text/sv/baum_build.txt
 share/simutrans/text/sv/citybuilding_build.txt
@@ -619,7 +660,15 @@ share/simutrans/text/sv/players.txt
 share/simutrans/text/sv/signal_spacing.txt
 share/simutrans/text/sv/simutrans.txt
 share/simutrans/text/sv/underground.txt
+share/simutrans/text/th.tab
+share/simutrans/text/tr.tab
 share/simutrans/text/tr/airtools.txt
+share/simutrans/text/uk.tab
+share/simutrans/text/uk/airtools.txt
+share/simutrans/text/uk/baum_build.txt
+share/simutrans/text/uk/bridges.txt
+share/simutrans/text/uk/citybuilding_build.txt
+share/simutrans/text/zh.tab
 share/simutrans/text/zh/baum_build.txt
 share/simutrans/text/zh/color.txt
 share/simutrans/text/zh/enlarge_map.txt
