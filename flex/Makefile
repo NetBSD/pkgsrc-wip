@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.50 2016/08/11 03:23:44 mef Exp $
 
-VERSION=	2.6.1
+VERSION=	2.6.2
 DISTNAME=	flex-${VERSION}
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=westes/}

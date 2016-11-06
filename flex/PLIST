@@ -10,7 +10,7 @@ share/doc/flex/AUTHORS
 share/doc/flex/COPYING
 share/doc/flex/NEWS
 share/doc/flex/ONEWS
-share/doc/flex/README
+share/doc/flex/README.md
 share/locale/ca/LC_MESSAGES/flex.mo
 share/locale/da/LC_MESSAGES/flex.mo
 share/locale/de/LC_MESSAGES/flex.mo
