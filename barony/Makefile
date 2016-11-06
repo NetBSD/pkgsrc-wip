@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-user@NetBSD.org
 HOMEPAGE=	https://github.com/TurningWheel/Barony/
-COMMENT=	Open source release of Barony
+COMMENT=	First person rogue-like
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
