@@ -1,2 +1,0 @@
-- Bison is required without pre generated files
-  but Bison needs (this) flex, so introducing cyclic dependency

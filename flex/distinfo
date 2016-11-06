@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.23 2016/08/11 03:23:44 mef Exp $
-
-SHA1 (flex-2.6.2.tar.gz) = 55aa44b8a945a51727d0e5ce6e79c58bbe0e3d43
-RMD160 (flex-2.6.2.tar.gz) = f7e1027d664728e1140b3f95a21f18f7e49e202d
-SHA512 (flex-2.6.2.tar.gz) = 4ad798f41c77b51ae0d3f306a90ed21e08ab36a21a9c673d7f7758c4c7013bc93f0cec2c85c31741d314a20971ca13f8542b6d55215be0e53e97fb4a368ac536
-Size (flex-2.6.2.tar.gz) = 440777 bytes
-SHA1 (patch-tests_Makefile.am) = 793dbe7c31554bc7d84d9c57ce99d3590bafc2d5
