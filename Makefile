@@ -28,6 +28,7 @@ SUBDIR+=	R-BiocGenerics
 SUBDIR+=	R-C50
 SUBDIR+=	R-MySQL
 SUBDIR+=	R-Rgraphviz
+SUBDIR+=	R-RNetCDF
 SUBDIR+=	R-Rserve
 SUBDIR+=	R-VGAM
 SUBDIR+=	R-biganalytics
