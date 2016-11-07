@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.13 2015/11/09 11:05:44 nros Exp $
 #
 
-DISTNAME=	i3-${VERSION}
-VERSION=	4.12
+DISTNAME=	i3-4.12
 CATEGORIES=	wm
 MASTER_SITES=	http://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,9 +20,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake bison lex yacc pkg-config perl
 USE_TOOLS+=	autoconf autoreconf automake
 USE_LANGUAGES=	c99
-#BUILD_TARGET=	all mans
-# XXX put a real compiler triple here
-BUILD_DIRS+=	x86_64--netbsd
+
+BUILD_DIRS+=	${MACHINE_GNU_PLATFORM}
 
 PKG_SYSCONFSUBDIR=	i3
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/${PKGBASE}
@@ -32,20 +30,11 @@ EGDIR=		${PREFIX}/share/examples/i3
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/config
 CONF_FILES+=	${EGDIR}/config.keycodes ${PKG_SYSCONFDIR}/config.keycodes
 
-MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR:C/\/i3//}
-#MAKE_ENV+=	DEBUG=0
-#MAKE_ENV+=	SHM_SUPPORT=0
-MAKE_ENV+=	VERSION=${VERSION}
+MAKE_FLAGS+=	i3confdir=${EGDIR}
 
 REPLACE_PERL+=	i3-dmenu-desktop
 REPLACE_PERL+=	i3-migrate-config-to-v4
 REPLACE_PERL+=	i3-save-tree
-
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-install
-SUBST_MESSAGE.conf=	Change src/i3.mk to install conf files in share/examples
-SUBST_FILES.conf=	src/i3.mk
-SUBST_SED.conf=		-e s,$$\(SYSCONFDIR\),$$\(PREFIX\)/share/examples,g
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-install
@@ -60,9 +49,8 @@ DEPENDS+=	p5-AnyEvent-I3-[0-9]*:../../wip/p5-AnyEvent-I3
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
-#post-install:
-#	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-#	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"

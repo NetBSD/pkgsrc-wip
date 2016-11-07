@@ -29,6 +29,17 @@ man/man1/i3.1
 man/man1/i3bar.1
 share/applications/i3.desktop
 share/doc/i3/LICENSE
+share/doc/i3/debugging.html
+share/doc/i3/hacking-howto.html
+share/doc/i3/i3bar-protocol.html
+share/doc/i3/ipc.html
+share/doc/i3/layout-saving.html
+share/doc/i3/lib-i3test-test.html
+share/doc/i3/lib-i3test.html
+share/doc/i3/multi-monitor.html
+share/doc/i3/testsuite.html
+share/doc/i3/userguide.html
+share/doc/i3/wsbar.html
 share/examples/i3/config
 share/examples/i3/config.keycodes
 share/xsessions/i3-with-shmlog.desktop

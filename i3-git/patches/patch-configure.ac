@@ -1,0 +1,17 @@
+$NetBSD$
+
+Get the version from autoconf configuration instead of from git
+
+--- configure.ac.orig	2016-11-07 19:55:04.000000000 +0000
++++ configure.ac
+@@ -25,8 +25,8 @@ AX_EXTEND_SRCDIR
+ 
+ AS_IF([test -d ${srcdir}/.git],
+       [
+-        VERSION="$(git describe --tags --abbrev=0)"
+-        I3_VERSION="$(git describe --tags --always) ($(git log --pretty=format:%cd --date=short -n1), branch \\\"$(git describe --tags --always --all | sed s:heads/::)\\\")"
++        VERSION=${PACKAGE_VERSION}
++        I3_VERSION="${PACKAGE_VERSION}-$(git describe --tags --always) ($(git log --pretty=format:%cd --date=short -n1), branch \\\"$(git describe --tags --always --all | sed s:heads/::)\\\")"
+         # Mirrors what libi3/is_debug_build.c does:
+         is_release=$(test $(echo "${I3_VERSION}" | cut -d '(' -f 1 | wc -m) -lt 10 && echo yes || echo no)
+       ],
