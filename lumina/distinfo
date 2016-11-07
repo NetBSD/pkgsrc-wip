@@ -5,4 +5,4 @@ RMD160 (lumina-qt5-1.1.0.tar.gz) = 95bc1c1bdc0b59880693c5985105e921d0033652
 SHA512 (lumina-qt5-1.1.0.tar.gz) = 79b48e70fd7be3708966221c25025a8013a3ef96e00681056e99dfdd60809a3ff9d2048b3767d9fbc57c1c4f7e00fb36659cdca86fa41a322f125e9e061e88e0
 Size (lumina-qt5-1.1.0.tar.gz) = 55828227 bytes
 SHA1 (patch-OS-detect.pri) = d92d95bc56083d131c1029038a7c5d59433cfb3e
-SHA1 (patch-src-qt5_core_menu-scripts_ls.json.sh) = 8e4d157367391ff0bb3f69840c5dc19d44f9ac11
+SHA1 (patch-src-qt5_core_menu-scripts_ls.json.sh) = 779fde39e0490abc542c4f4689e41642d4b26036

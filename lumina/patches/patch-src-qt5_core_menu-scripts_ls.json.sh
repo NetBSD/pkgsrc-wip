@@ -1,5 +1,8 @@
 $NetBSD$
 
+Fix unportable test(1) operator.
+https://github.com/trueos/lumina/pull/299
+
 --- src-qt5/core/menu-scripts/ls.json.sh.orig	2016-10-21 14:48:55.000000000 +0000
 +++ src-qt5/core/menu-scripts/ls.json.sh
 @@ -1,6 +1,6 @@
