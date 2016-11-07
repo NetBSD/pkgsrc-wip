@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.21 2015/09/07 13:10:43 thomasklausner Exp $
 
-SHA1 (xpra-0.17.5.tar.xz) = 72cc041b390200e68ac6bdd2b1f474f91ea7d482
-RMD160 (xpra-0.17.5.tar.xz) = 9570bb0c36ec593c53d725938cf5208489262b64
-SHA512 (xpra-0.17.5.tar.xz) = 90e70ba556c1ddc63b15945739b9b006968e3b168dffebf1ab5ef46d8345c0823c2cb33cc2800fbb36fa7195a85d4a03cf74a0f68f93db9b9f1add986bd657a1
-Size (xpra-0.17.5.tar.xz) = 1418192 bytes
+SHA1 (xpra-0.17.6.tar.xz) = 9559c384531aaba051182b9a9c50dde82435fa17
+RMD160 (xpra-0.17.6.tar.xz) = 05de32c262b0f2fed970e09cc2e703e7c27465d9
+SHA512 (xpra-0.17.6.tar.xz) = 9a553e446390792907ec90038b680e5e63a4b91b0dd1e741b65e4dc6e4c899ea550a2e5728057104419686339a3aa557585437d38913f82fa59be013afa2d8f2
+Size (xpra-0.17.6.tar.xz) = 1402560 bytes
 SHA1 (patch-setup.py) = 19d6834e3e62361e230b250383e5ef56dbe84dd1
 SHA1 (patch-xpra_codecs_v4l2_pusher.pyx) = c45fb604c635a9d57478755f178ae16b6d166368
 SHA1 (patch-xpra_codecs_v4l2_video.h) = 001cc17b7549c2ec62c503dc86d33489fae3cd88
