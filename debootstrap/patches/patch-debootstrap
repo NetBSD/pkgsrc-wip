@@ -1,6 +1,6 @@
 $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
 
---- debootstrap.orig	2016-09-14 03:01:54.000000000 +0000
+--- debootstrap.orig	2016-10-27 19:53:47.000000000 +0000
 +++ debootstrap
 @@ -14,7 +14,7 @@ if [ -z "$DEBOOTSTRAP_DIR" ]; then
  	if [ -x /debootstrap/debootstrap ]; then
@@ -13,7 +13,7 @@ $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
  
 @@ -29,7 +29,7 @@ FORCE_KEYRING=""
  VARIANT=""
- MERGED_USR="no"
+ MERGED_USR="yes"
  ARCH=""
 -HOST_ARCH=""
 +HOST_ARCH="$(uname -m)"

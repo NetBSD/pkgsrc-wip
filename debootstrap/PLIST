@@ -9,6 +9,8 @@ share/debootstrap/libfakesyscall.c
 share/debootstrap/scripts/aequorea
 share/debootstrap/scripts/bartholomea
 share/debootstrap/scripts/breezy
+share/debootstrap/scripts/bullseye
+share/debootstrap/scripts/buster
 share/debootstrap/scripts/chromodoris
 share/debootstrap/scripts/dapper
 share/debootstrap/scripts/dasyatis
@@ -29,6 +31,7 @@ share/debootstrap/scripts/lenny
 share/debootstrap/scripts/lucid
 share/debootstrap/scripts/maverick
 share/debootstrap/scripts/natty
+share/debootstrap/scripts/oldoldstable
 share/debootstrap/scripts/oldstable
 share/debootstrap/scripts/oneiric
 share/debootstrap/scripts/potato
@@ -56,4 +59,5 @@ share/debootstrap/scripts/woody
 share/debootstrap/scripts/woody.buildd
 share/debootstrap/scripts/xenial
 share/debootstrap/scripts/yakkety
+share/debootstrap/scripts/zesty
 share/debootstrap/ubuntu-archive-keyring.gpg
