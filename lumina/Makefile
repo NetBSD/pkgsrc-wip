@@ -33,6 +33,9 @@ pre-install:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${RUN} ${INSTALL_DATA} ${WRKSRC}/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf ${DESTDIR}${EGDIR}
 
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/lumina-desktop/menu-scripts/ls.json.sh.orig
+
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
