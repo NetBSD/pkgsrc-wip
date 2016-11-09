@@ -13,8 +13,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-hpricot-[0-9]*:../../textproc/ruby-hpricot
 DEPENDS+=	${RUBY_PKGPREFIX}-mustache-[0-9]*:../../wip/ruby-mustache
 DEPENDS+=	${RUBY_PKGPREFIX}-rdiscount-[0-9]*:../../wip/ruby-rdiscount
 
-RUBY_VERSION_SUPPORTED=		21 # ruby-mustache
-
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1/ ${PKGMANDIR}/man7/
 
 post-install:
