@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/25 21:55:59 ahp-nils Exp $
+@comment $NetBSD$
 bin/rdiscount
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/rdiscount.${RUBY_DLEXT}
 ${GEM_LIBDIR}/BUILDING
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/README.markdown
@@ -40,8 +42,8 @@ ${GEM_LIBDIR}/ext/version.c
 ${GEM_LIBDIR}/ext/xml.c
 ${GEM_LIBDIR}/ext/xmlpage.c
 ${GEM_LIBDIR}/lib/markdown.rb
-${GEM_LIBDIR}/lib/rdiscount.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/rdiscount.rb
+${GEM_LIBDIR}/lib/rdiscount.${RUBY_DLEXT}
 ${GEM_LIBDIR}/man/markdown.7
 ${GEM_LIBDIR}/man/rdiscount.1
 ${GEM_LIBDIR}/man/rdiscount.1.ronn
@@ -52,4 +54,4 @@ ${GEM_LIBDIR}/test/markdown_test.rb
 ${GEM_LIBDIR}/test/rdiscount_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 man/man1/rdiscount.1
-@pkgdir lib/ruby/gems/2.0.0/build_info
+@pkgdir lib/ruby/gems/2.2.0/build_info

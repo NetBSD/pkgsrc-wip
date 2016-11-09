@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/04/25 21:55:59 ahp-nils Exp $
 
-DISTNAME=	rdiscount-2.1.8
+DISTNAME=	rdiscount-2.2.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 
