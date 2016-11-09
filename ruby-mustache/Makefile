@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/04/25 21:58:17 ahp-nils Exp $
 
-DISTNAME=	mustache-1.0.1
+DISTNAME=	mustache-1.0.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
@@ -8,8 +8,6 @@ MAINTAINER=	nils@NetBSD.org
 HOMEPAGE=	https://mustache.github.io/
 COMMENT=	Logic-less Ruby templates
 LICENSE=	mit
-
-RUBY_VERSION_SUPPORTED=		21
 
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1/ ${PKGMANDIR}/man5/
 
