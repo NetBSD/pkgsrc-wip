@@ -2,6 +2,7 @@
 
 DISTNAME=	xpra-0.17.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xpra.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -43,7 +44,7 @@ post-install:
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

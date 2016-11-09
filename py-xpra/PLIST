@@ -193,6 +193,10 @@ ${PYSITELIB}/xpra/codecs/csc_swscale/__init__.py
 ${PYSITELIB}/xpra/codecs/csc_swscale/__init__.pyc
 ${PYSITELIB}/xpra/codecs/csc_swscale/__init__.pyo
 ${PYSITELIB}/xpra/codecs/csc_swscale/colorspace_converter.so
+${PYSITELIB}/xpra/codecs/dec_avcodec2/__init__.py
+${PYSITELIB}/xpra/codecs/dec_avcodec2/__init__.pyc
+${PYSITELIB}/xpra/codecs/dec_avcodec2/__init__.pyo
+${PYSITELIB}/xpra/codecs/dec_avcodec2/decoder.so
 ${PYSITELIB}/xpra/codecs/enc_proxy/__init__.py
 ${PYSITELIB}/xpra/codecs/enc_proxy/__init__.pyc
 ${PYSITELIB}/xpra/codecs/enc_proxy/__init__.pyo
