@@ -102,6 +102,7 @@ share/gtk-doc/html/libvips/file-format.html
 share/gtk-doc/html/libvips/func-list.html
 share/gtk-doc/html/libvips/home.png
 share/gtk-doc/html/libvips/index.html
+share/gtk-doc/html/libvips/index.sgml
 share/gtk-doc/html/libvips/interconvert.png
 share/gtk-doc/html/libvips/left-insensitive.png
 share/gtk-doc/html/libvips/left.png
