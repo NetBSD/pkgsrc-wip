@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2015/08/10 22:59:31 jonthn Exp $
 
-DISTNAME=	py-neovim-0.1.9
+DISTNAME=	py-neovim-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	devel editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
