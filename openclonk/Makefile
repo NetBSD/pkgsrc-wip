@@ -18,9 +18,11 @@ USE_TOOLS+=	pkg-config
 GCC_REQD+=	4.9
 
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
