@@ -76,11 +76,13 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
 SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
-CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
+MOZ_OBJDIR=obj.${MACHINE_ARCH}
+
+CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}${MOZ_OBJDIR}/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.guess
-CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}${MOZ_OBJDIR}/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
@@ -95,7 +97,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
-OBJDIR=			../build
+OBJDIR=			../${MOZ_OBJDIR}
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
