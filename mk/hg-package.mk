@@ -144,7 +144,7 @@ hg-cleandir:
 		cd ${HG_MODULE.${_repo_}:Q} && rm -rf *;		\
 	fi
 .endfor
-	${RUN} cd ${WRKDIR} && rm -f .*_done
+	${RUN} cd ${WRKDIR} && rm -f .*_done && rm -rf .cwrapper
 
 pre-extract: do-hg-extract
 
