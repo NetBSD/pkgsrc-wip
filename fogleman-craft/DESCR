@@ -1,0 +1,3 @@
+Craft is a Minecraft clone for Windows, Mac OS X and Linux. It is written in
+just a few thousand lines of C and uses modern OpenGL (shaders). Online
+multiplayer support is included using a Python-based server.
