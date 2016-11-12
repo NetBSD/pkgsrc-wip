@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (skalibs-2.3.9.0.tar.gz) = 18fa3e5d40e44e76ae1f5114126d3c8331cbe808
-RMD160 (skalibs-2.3.9.0.tar.gz) = 5b156562826f42b8e8b15a54690ad7ee493c4ad2
-Size (skalibs-2.3.9.0.tar.gz) = 211781 bytes
+SHA1 (skalibs-2.4.0.1.tar.gz) = 326d668dbb7b111a179e32546ef7610b51bc263b
+RMD160 (skalibs-2.4.0.1.tar.gz) = 99dd24b5e8e38fe76f9971947a4af5422bd363bd
+SHA512 (skalibs-2.4.0.1.tar.gz) = b4fde1382b22c4b2b5af0172ae0a8959463ec52ab3871ad163f4b3e8dd2792c93cbe6a49b3145fec76af365130d865f537a69918c5c169959459b4234b355325
+Size (skalibs-2.4.0.1.tar.gz) = 214071 bytes

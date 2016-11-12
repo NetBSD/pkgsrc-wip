@@ -1,4 +1,5 @@
 @comment $NetBSD$
+include/skalibs/alarm.h
 include/skalibs/alloc.h
 include/skalibs/allreadwrite.h
 include/skalibs/avlnode.h
@@ -45,7 +46,6 @@ include/skalibs/nsig.h
 include/skalibs/random.h
 include/skalibs/randomegd.h
 include/skalibs/rc4.h
-include/skalibs/rrandom.h
 include/skalibs/segfault.h
 include/skalibs/selfpipe.h
 include/skalibs/setgroups.h
@@ -72,10 +72,6 @@ include/skalibs/uint16.h
 include/skalibs/uint32.h
 include/skalibs/uint64.h
 include/skalibs/ulong.h
-include/skalibs/unirandom.h
-include/skalibs/unirandomdev.h
-include/skalibs/unirandomegd.h
-include/skalibs/unisurf.h
 include/skalibs/unix-timed.h
 include/skalibs/unix-transactional.h
 include/skalibs/unixconnection.h
@@ -84,15 +80,16 @@ include/skalibs/unixonacid.h
 include/skalibs/ushort.h
 include/skalibs/webipc.h
 ${PLIST.include-shared-objects}lib/libskarnet.so
-${PLIST.include-shared-objects}lib/libskarnet.so.2.3
-${PLIST.include-shared-objects}lib/libskarnet.so.2.3.9
 ${PLIST.include-shared-objects}lib/libskarnet.so.${PKGVERSION}
+${PLIST.include-shared-objects}lib/libskarnet.so.2.4
+${PLIST.include-shared-objects}lib/libskarnet.so.2.4.0
 lib/skalibs/libskarnet.a
-lib/skalibs/sysdeps/rt.lib
 lib/skalibs/sysdeps/socket.lib
+lib/skalibs/sysdeps/spawn.lib
 lib/skalibs/sysdeps/sysclock.lib
 lib/skalibs/sysdeps/sysdeps
 lib/skalibs/sysdeps/sysdeps.h
 lib/skalibs/sysdeps/tainnow.lib
 lib/skalibs/sysdeps/target
+lib/skalibs/sysdeps/timer.lib
 lib/skalibs/sysdeps/util.lib
