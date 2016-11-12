@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	execline-2.1.4.5
+DISTNAME=	execline-2.2.0.0
 CATEGORIES=	devel
 MASTER_SITES=	http://skarnet.org/software/execline/
 LICENSE=	isc
