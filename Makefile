@@ -1639,6 +1639,7 @@ SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	librem
 SUBDIR+=	libreoffice-git
+SUBDIR+=	librocket
 SUBDIR+=	libscscp
 SUBDIR+=	libslab
 SUBDIR+=	libsocialweb
