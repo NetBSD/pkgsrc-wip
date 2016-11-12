@@ -3764,6 +3764,7 @@ SUBDIR+=	rygel
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
 SUBDIR+=	s6
+SUBDIR+=	s6-dns
 SUBDIR+=	s6-portable-utils
 SUBDIR+=	sabnzbdplus
 SUBDIR+=	safekeep
