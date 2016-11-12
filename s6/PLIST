@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/s6-accessrules-cdb-from-fs
 bin/s6-accessrules-fs-from-cdb
+bin/s6-applyuidgid
 bin/s6-cleanfifodir
 bin/s6-connlimit
 bin/s6-envdir
@@ -37,6 +38,7 @@ bin/s6-log
 bin/s6-mkfifodir
 bin/s6-setlock
 bin/s6-setsid
+bin/s6-setuidgid
 bin/s6-softlimit
 bin/s6-sudo
 bin/s6-sudoc
@@ -64,5 +66,3 @@ include/s6/s6.h
 include/s6/s6lock.h
 lib/s6/libs6.a
 libexec/s6lockd-helper
-sbin/s6-applyuidgid
-sbin/s6-setuidgid

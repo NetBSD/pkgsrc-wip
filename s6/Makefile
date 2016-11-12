@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	s6-2.2.4.3
+DISTNAME=	s6-2.4.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://skarnet.org/software/s6/
 LICENSE=	isc
