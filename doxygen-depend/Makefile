@@ -59,9 +59,11 @@ DEPENDS+=	aqsis-[0-9]*:../../graphics/aqsis	# unknown
 DEPENDS+=	gnuradio-doxygen-[0-9]*:../../ham/gnuradio-doxygen # YES
 DEPENDS+=	ibus-qt-[0-9]*:../../inputmethod/ibus-qt # TOOLS_NOOP= doxygen
 
+.if 0
 DEPENDS+=	gcc44-[0-9]*:../../lang/gcc44
 DEPENDS+=	gcc45-[0-9]*:../../lang/gcc45
 DEPENDS+=	gcc46-[0-9]*:../../lang/gcc46
+.endif
 
 #EPENDS+=	blitz++-[0-9]*:../../math/blitz++	# disabled by configure
 DEPENDS+=	libcarddav-[0-9]*:../../misc/libcarddav	# unknown
@@ -85,4 +87,4 @@ DEPENDS+=	tidy-[0-9]*:../../www/tidy		# YES
 #EPENDS+=	gnome-mag-[0-9]*:../../x11/gnome-mag	# disabled by SUBST
 DEPENDS+=	kdelibdocs-[0-9]*:../../x11/kdelibdocs3	# YES
 #EPENDS+=	libxcb-[0-9]*:../../x11/libxcb		# disabled by configure
-DEPENDS+=	razorqt-[0-9]*:../../x11/razor-qt	# YES
+#DEPENDS+=	razorqt-[0-9]*:../../x11/razor-qt	# removed ?
