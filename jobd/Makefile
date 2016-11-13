@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mheily/}
 MAINTAINER=	cfkoch@edgebsd.org
 COMMENT=	Job management framework
 HOMEPAGE=	https://github.com/mheily/jobd/
-LICENSE=	mit
+LICENSE=	isc
 
 USE_LANGUAGES+=		c c++
 HAS_CONFIGURE=		yes
