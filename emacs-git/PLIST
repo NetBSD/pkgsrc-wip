@@ -67,6 +67,7 @@ info/viper.info.gz
 info/widget.info.gz
 info/wisent.info.gz
 info/woman.info.gz
+lib/systemd/user/emacs.service
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/profile
@@ -261,6 +262,7 @@ share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
 share/emacs/${PKGVERSION}/etc/emacs.appdata.xml
 share/emacs/${PKGVERSION}/etc/emacs.desktop
 share/emacs/${PKGVERSION}/etc/emacs.icon
+share/emacs/${PKGVERSION}/etc/emacs.service
 share/emacs/${PKGVERSION}/etc/enriched.txt
 share/emacs/${PKGVERSION}/etc/forms/README
 share/emacs/${PKGVERSION}/etc/forms/forms-d2.dat
