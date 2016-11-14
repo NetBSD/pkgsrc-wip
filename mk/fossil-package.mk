@@ -1,5 +1,5 @@
-# This file provides simple access to git repositories, so that packages
-# can be created from git instead of from released tarballs.
+# This file provides simple access to Fossil repositories, so that packages
+# can be created from Fossil instead of from released tarballs.
 #
 # A package using this file shall define the following variables:
 #
