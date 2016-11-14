@@ -43,3 +43,9 @@ haskell.mk - generalised .mk file for Haskell Cabal packages.
 git-package.mk   -  retrieve sources from git repositories, much like
 		    svn-package.mk and cvs-package.mk handle SVN and CVS
 		    repositories. 
+
+yesno.mk - Standardizes how to specify boolean values in Makefiles, both
+   internally and in individual package Makefiles. Makes "yes" and "no"
+   universal and actual first-class words (there's nothing special about
+   them otherwise).  Eliminates subtle inconsistencies (does this variable
+   support "YES" uppercase or not?) and significantly DRYs up code.
