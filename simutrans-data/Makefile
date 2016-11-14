@@ -12,7 +12,6 @@ COMMENT=	Game data for Simutrans
 
 NO_BUILD=      yes
 
-WRKSRC=		${WRKDIR}/simutrans
 
 #DEPENDS+=       unzip-[0-9]*:../../archivers/unzip
 

@@ -1,3 +1,3 @@
 #!/bin/sh
-cd ${PREFIX}/share/simutrans/
-sim -use_workdir -use_hw $@ 
+cd XXXPREFIXXXX/share/simutrans/
+sim -use_workdir $@ 

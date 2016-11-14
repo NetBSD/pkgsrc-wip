@@ -5,4 +5,5 @@ RMD160 (simutrans-src-120-1-3.zip) = 43a4e0589d0168cc35b1a528ba3690b3a84aa87a
 SHA512 (simutrans-src-120-1-3.zip) = ae31dda7bdbd057aaf9c40914eb7ec0c60b21d2790d1ca12aa8db698cd112043a291934f6f460b1d5a8a1984b7defb4a0c4bc9839c81c674834062cc1e49c8bd
 Size (simutrans-src-120-1-3.zip) = 3447115 bytes
 SHA1 (patch-Makefile) = 5f6629257a6685002c98cd3279b69afb72669434
+SHA1 (patch-boden_wege_weg.cc) = 6982abea4218fc810d63dd5d77edccb23faa9224
 SHA1 (patch-utils_simthread.h) = 89f88a753f467b2eb9e11ad76c6d2427663f8f2a

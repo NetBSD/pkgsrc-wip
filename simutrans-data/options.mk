@@ -3,6 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.simutrans
 PKG_SUPPORTED_OPTIONS+=		pak64 pak128 pak128de pak64jp pak96hd
 PKG_SUGGESTED_OPTIONS=		pak64
+PLIST_VARS+=			pak64 pak128
 
 .include "../../mk/bsd.options.mk"
 
@@ -21,8 +22,13 @@ DISTFILES=PAK128.german_0.9_120.x.zip
 .if !empty(PKG_OPTIONS:Mpak64)
 DISTFILES+=simupak64-120-0-1.zip
 DISTNAME=simupak64-120-0-1
+WRKSRC=		${WRKDIR}/simutrans
+PLIST.pak64=             yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mpak128)
 DISTFILES=pak128-2.6--ST120.zip
+DISTNAME=pak128-2.6
+WRKSRC=		${WRKDIR}/pak128
+PLIST.pak128=             yes
 .endif

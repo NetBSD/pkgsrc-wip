@@ -20,10 +20,10 @@ GNU_CONFIGURE=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/configure.sh
 
-CONFIGURE_ENV+=		
+#This does nothing.
 CONFIGURE_ARGS+=	--prefix=${PREFIX}/share/simutrans
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
-PTHREAD_OPTS+=          require
+PTHREAD_OPTS+=		require
 #CONFIGURE_ARGS+=	--with-pthread
 
 #AUTO_MKDIRS=		yes
@@ -43,13 +43,14 @@ do-extract:
 		unzip ${DISTDIR}/${DISTNAME}.zip -d ${WRKSRC} -o
 		unzip ${DISTDIR}/language_pack-Base+texts.zip -d ${WRKSRC}/simutrans/text -o
 
-
-
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw -pp simutrans ${DESTDIR}${PREFIX}/share/
 	${MKDIR} ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/sim ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${FILESDIR}/simutrans ${DESTDIR}${PREFIX}/bin/
+	${SED} <${FILESDIR}/simutrans >${WRKSRC}/script/simutrans \
+	-e "s,XXXPREFIXXXX,${PREFIX},g" \
+	#${INSTALL_SCRIPT} ${FILESDIR}/simutrans ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/script/simutrans ${DESTDIR}${PREFIX}/bin/
 	${FIND} ${DESTDIR}${PREFIX}/share -type f -exec ${CHMOD} 0644 {} \;
 
 # url2pkg-marker (please do not remove this line.)
