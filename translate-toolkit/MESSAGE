@@ -1,0 +1,30 @@
+The following are required for parsing certain filetypes:
+
+###############
+# Recommended #
+###############
+
+# lxml - for XML processing (XLIFF, TMX, TBX, ts, Android)
+lxml>=3.5
+
+# Faster matching in e.g. pot2po
+python-Levenshtein>=0.12
+
+# Encoding detection
+chardet==2.3.0
+
+##################
+# Format support #
+##################
+BeautifulSoup4>=4.3  # Trados TM
+iniparse==0.4 ;python_version < '3.0'      # INI (ini2po)
+vobject==0.9.3       # iCal (ical2po)
+
+#aeidon>=0.14        # Subtitles (sub2po)
+# aeidon not available through pip/PyPI,
+# so recording this dependency here is pointless except as a comment
+
+Babel==2.3.4         # Android plurals
+l20n==4.0.0a1        # l20n (l20n2po)
+PyYAML==3.12         # yaml
+

@@ -1,0 +1,4 @@
+The Translate Toolkit is a localization and translation toolkit. It provides
+a set of tools for working with localization file formats and files that might
+need localization. The toolkit also provides an API on which to develop other
+localization tools.
