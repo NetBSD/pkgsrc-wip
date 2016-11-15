@@ -1,3 +1,0 @@
-The lang/go-package.mk framework is not used, because the Consul build
-only results in a single fat binary, and doesn't need the hundreds of
-source files. Also this helps avoid #1 above.
