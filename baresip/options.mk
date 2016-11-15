@@ -83,6 +83,7 @@ MAKE_FLAGS+=	USE_AVFORMAT=yes
 LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg3}/${BUILDLINK_LIBDIRS.ffmpeg3}
 LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg3}/${BUILDLINK_LIBDIRS.ffmpeg3}
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
+.include "../../multimedia/x264-devel/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_AVCODEC=
 MAKE_FLAGS+=	USE_AVFORMAT=
