@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (brumbrumrally-0.6.tar.gz) = dccd1eda6caa7a3054f59a6e652e2b494afbc850
+RMD160 (brumbrumrally-0.6.tar.gz) = d766adce243b95e37969f8de863d060b4f114a80
+SHA512 (brumbrumrally-0.6.tar.gz) = 4a34fc66141f2d0d8aa245c532321b5c9057a46ed6e055f8be0e2165afdc50166581b01fe10d0055fc8fa235a9beb238253dc769c4359e42840b2a3a46240151
+Size (brumbrumrally-0.6.tar.gz) = 150193 bytes
+SHA1 (patch-Makefile) = 3e2df324aa269bf356e77566c8b8b6384b5bf840
+SHA1 (patch-src_Path.cpp) = 126e60e407205dc1a168a1c06f41ba88310b1542

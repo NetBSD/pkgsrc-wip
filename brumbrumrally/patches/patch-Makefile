@@ -1,0 +1,49 @@
+$NetBSD$
+
+--- Makefile.orig	2016-03-23 12:05:46.000000000 +0000
++++ Makefile
+@@ -1,16 +1,16 @@
+ OBJS := $(patsubst %.cpp,%.o,$(wildcard src/*.cpp src/hqx/*.cpp))
+ 
+ DESTDIR = 
+-PREFIX  = /usr/local
++PREFIX  ?= /usr/local
+ DATADIR = $(PREFIX)/share
+ BINDIR  = $(PREFIX)/bin
+ ICONDIR  = $(DATADIR)/pixmaps
+ APPDIR  = $(DATADIR)/applications
+ 
+-CXX = g++
++CXX ?= g++
+ 
+-CXXFLAGS = -Wall -std=c++98 -pedantic `sdl-config --cflags` -pipe
+-all   : CXXFLAGS += -O2 -s -DNDEBUG -fno-threadsafe-statics -march=native -fomit-frame-pointer -ffast-math -fno-exceptions -fno-rtti
++CXXFLAGS = -Wall -std=c++98 -pedantic `sdl-config --cflags`
++all   : CXXFLAGS += -O2 -s -DNDEBUG -fno-threadsafe-statics -fomit-frame-pointer -ffast-math -fno-exceptions -fno-rtti
+ debug : CXXFLAGS += -O0 -g
+ 
+ LDFLAGS = `sdl-config --libs` -lSDL_image -lSDL_net
+@@ -37,7 +37,7 @@ $(EXE): $(OBJS)
+ 	@$(CXX) -MM $(CXXFLAGS) $*.cpp > $*.d
+ 	@mv -f $*.d $*.d.tmp
+ 	@sed -e 's|.*:|$*.o:|' < $*.d.tmp > $*.d
+-	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -1 | \
++	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt | \
+ 	  sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
+ 	@rm -f $*.d.tmp
+ 
+@@ -56,10 +56,10 @@ install-data:
+ 	cp -R data/* $(DESTDIR)$(DATADIR)/$(EXE)
+ 
+ install-desktop:
+-	install -d $(DESTDIR)$(ICONDIR)
+-	cp data/images/icon.png $(DESTDIR)$(ICONDIR)/$(EXE).png
+-	install -d $(DESTDIR)$(APPDIR)
+-	cp desktop $(DESTDIR)$(APPDIR)/$(EXE).desktop
++	#install -d $(DESTDIR)$(ICONDIR)
++	#cp data/images/icon.png $(DESTDIR)$(ICONDIR)/$(EXE).png
++	#install -d $(DESTDIR)$(APPDIR)
++	#cp desktop $(DESTDIR)$(APPDIR)/$(EXE).desktop
+ 
+ uninstall: uninstall-exec uninstall-data uninstall-desktop
+ 
