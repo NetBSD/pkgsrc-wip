@@ -1,8 +1,8 @@
 # $NetBSD$
 
-PKGNAME=	syncthing-relaysrv-0.14.10
+PKGNAME=	syncthing-relaysrv-0.14.11
 CATEGORIES=	net
-DISTNAME=	syncthing-0.14.10
+DISTNAME=	syncthing-0.14.11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_PROJECT=	syncthing
 GITHUB_TAG=	v${PKGVERSION_NOREV}
