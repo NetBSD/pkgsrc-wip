@@ -1,8 +1,8 @@
 @comment $NetBSD$
-bin/meson.py
-bin/mesonconf.py
-bin/mesonintrospect.py
-bin/wraptool.py
+bin/meson
+bin/mesonconf
+bin/mesonintrospect
+bin/wraptool
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -139,6 +139,9 @@ ${PYSITELIB}/mesonbuild/scripts/symbolextractor.pyo
 ${PYSITELIB}/mesonbuild/scripts/vcstagger.py
 ${PYSITELIB}/mesonbuild/scripts/vcstagger.pyc
 ${PYSITELIB}/mesonbuild/scripts/vcstagger.pyo
+${PYSITELIB}/mesonbuild/scripts/yelphelper.py
+${PYSITELIB}/mesonbuild/scripts/yelphelper.pyc
+${PYSITELIB}/mesonbuild/scripts/yelphelper.pyo
 ${PYSITELIB}/mesonbuild/wrap/__init__.py
 ${PYSITELIB}/mesonbuild/wrap/__init__.pyc
 ${PYSITELIB}/mesonbuild/wrap/__init__.pyo

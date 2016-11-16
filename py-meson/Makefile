@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2016/08/18 14:53:24 richard Exp $
 
-DISTNAME=	meson-0.33.0
+DISTNAME=	meson-0.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
@@ -21,6 +21,8 @@ SUBST_FILES.man+=	setup.py
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page installation path.
 
+REPLACE_PYTHON+=	*.py
+
 post-extract:
 	# see https://github.com/mesonbuild/meson/issues/695
 	# patching does not work, perhaps due to spaces in path?
@@ -30,5 +32,6 @@ do-test:
 	${LN} -s ${PYTHONBIN} ${BUILDLINK_DIR}/bin/python3
 	cd ${WRKSRC} && ${PYTHONBIN} run_tests.py
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
