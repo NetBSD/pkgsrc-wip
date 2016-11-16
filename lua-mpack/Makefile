@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libmpack-1.0.2
+DISTNAME=	libmpack-1.0.3
 PKGNAME=	${DISTNAME:S/libmpack/${LUA_PKGPREFIX}-mpack/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tarruda/}
