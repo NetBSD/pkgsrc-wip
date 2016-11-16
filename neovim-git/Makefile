@@ -25,6 +25,7 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 DEPENDS+=       ${LUA_PKGPREFIX}-MessagePack-[0-9]*:../../wip/lua-MessagePack
 DEPENDS+=       ${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
+DEPENDS+=       ${LUA_PKGPREFIX}-mpack-[0-9]*:../../wip/lua-mpack
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
