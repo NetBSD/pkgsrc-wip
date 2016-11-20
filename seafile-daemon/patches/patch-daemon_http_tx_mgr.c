@@ -7,7 +7,7 @@ Missing BSD detection causes undefined USER_AGENT_OS, adapted from OpenBSDs port
  #define USER_AGENT_OS "Linux"
  #endif
  
-+#if defined __FreeBSD__ || defined __NetBSD__ || defined __OpenBSD__
++#if defined __FreeBSD__ || defined __NetBSD__ || defined __OpenBSD__ || defined __DragonFly__
 +#define USER_AGENT_OS "BSD"
 +#endif
 +

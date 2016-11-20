@@ -11,7 +11,7 @@ HOMEPAGE=	http://seafile.com/
 COMMENT=	Seafile daemon
 LICENSE=	gnu-gpl-v2
 
-DIST_SUBDIR=	seafile
+DIST_SUBDIR=	seafile-daemon
 WRKSRC=		${WRKDIR}/seafile-${GHCOMMIT}
 
 GNU_CONFIGURE=	yes

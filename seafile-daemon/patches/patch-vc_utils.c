@@ -8,7 +8,7 @@ Add missing BSD detection, patch adapted from OpenBSDs port
  }
  
 -#if defined WIN32 || defined __APPLE__
-+#if defined WIN32 || defined __APPLE__ || defined __FreeBSD__ || defined __NetBSD__ || defined __OpenBSD__
++#if defined WIN32 || defined __APPLE__ || defined __FreeBSD__ || defined __NetBSD__ || defined __OpenBSD__ || defined __DragonFly__
  
  /*
   * If the names are different case-sensitively but the same case-insensitively,
