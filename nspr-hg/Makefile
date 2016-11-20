@@ -3,7 +3,7 @@
 # necessary because hg-package.mk would override it
 PKGNAME=	nspr-${NSPR_RELEASE}
 DISTNAME=	nspr-${NSPR_RELEASE}
-NSPR_RELEASE=	4.12beta2
+NSPR_RELEASE=	4.14beta1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE}/src/}
 
