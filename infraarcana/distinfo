@@ -1,7 +1,14 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-SHA1 (ia-17.0.tar.gz) = 27cf4e37cf727367899208ad3cec67d2e4c28027
-RMD160 (ia-17.0.tar.gz) = ec57372405bc8f106aa6f1ff0616c1da4f214d78
-Size (ia-17.0.tar.gz) = 19962153 bytes
-SHA1 (patch-src_Config.cpp) = 3de8baf11b217d8640d921b468be579451592896
-SHA1 (patch-src_SaveHandling.cpp) = e57e5674ec255c7205d6d8992a4e32d69134c3d2
+SHA1 (infraarcana/ia-18.2.tar.gz) = 73e21a3c41b130d937b123268678765612b7c7da
+RMD160 (infraarcana/ia-18.2.tar.gz) = 9b7d499506246fe1246e562c4cf81ee64f3630d4
+SHA512 (infraarcana/ia-18.2.tar.gz) = 4a6d09c0836ad0337e0e92e1f554551c2f93c65767779072abce9d9482b5aabc20da14eeb66bfda80d18254e1b42b71c93c4c1da8b5e449ce526db07be73885d
+Size (infraarcana/ia-18.2.tar.gz) = 33576360 bytes
+SHA1 (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = bc96a273a940cd218b9f7ea0819eda2ef45cc920
+RMD160 (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = 51ba0809f8fb915164039eb396a68d34534f9515
+SHA512 (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = 9ad70df01991302fa2b33739c1971072447daf65db1fc5d550208be7f31037bc2558a4f83b2eb5f769a127743949b177b9ac8c979d33c4da80cea3a5edacbf97
+Size (infraarcana/rl_utils-757bef657fa43e2d7f41192e07227a00c62236e4.zip) = 13629 bytes
+SHA1 (patch-Makefile) = fee6998b86b63e1e67ee3d55561865d2f4565013
+SHA1 (patch-src_config.cpp) = ac2ee03728e5dc0e7cd851bd5f9ef0392ae27f22
+SHA1 (patch-src_input.cpp) = a84f3c470d08c9fa84de766fd951286a93dc1855
+SHA1 (patch-src_save__handling.cpp) = 634c7a6db5870861e0d8e1a70a341776c16464a6

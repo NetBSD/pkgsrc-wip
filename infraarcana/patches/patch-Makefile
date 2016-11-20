@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add X11 search path for libraries.
+Is this a bug in devel/SDL2 ?
+
+--- Makefile.orig	2016-07-02 15:42:10.000000000 +0000
++++ Makefile
+@@ -91,6 +91,7 @@ release debug: LD_FLAGS = \
+   $(shell sdl2-config --libs) \
+   -lSDL2_image \
+   -lSDL2_mixer \
++  ${X11_LDFLAGS} \
+   #
+ 
+ # Executable
