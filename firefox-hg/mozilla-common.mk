@@ -45,7 +45,8 @@ CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-hunspell
 CONFIGURE_ARGS+=	--enable-system-ffi
-CONFIGURE_ARGS+=	--with-system-icu
+# needs 58.1, but pkgsrc is stuck at 57
+#CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
@@ -169,7 +170,7 @@ PLIST_SUBST+=	DLL_SUFFIX=".so"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+#.include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
