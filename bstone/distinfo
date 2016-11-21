@@ -4,3 +4,4 @@ SHA1 (bstone/v1.1.7.tar.gz) = eedfdba8e145a84ffa1294b718bc952a36008055
 RMD160 (bstone/v1.1.7.tar.gz) = b360489aa8cf19404056f57bb91216019748ba71
 SHA512 (bstone/v1.1.7.tar.gz) = b2df39afe409e06c473aad4e87d6a9c2e4d4e55e0de9b9eed60b9cd6e9343c1ba95d07d5f53843c9b6c85c4914de4aafc69260bc53e764e8f625c6eb524cb6f0
 Size (bstone/v1.1.7.tar.gz) = 396501 bytes
+SHA1 (patch-bstone__memory__binary__reader.h) = 49cb2be6a6061948a6563dbfb924cc6643d8017b
