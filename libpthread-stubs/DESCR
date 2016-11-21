@@ -1,9 +1,9 @@
-Provide dummy implementations of pthread functions like mutex operations
-to enable libraries to be used in both thread-aware and non-threaded programs.
-
-This package is derived from Matthias Drochner's stubs package for older
-versions of NetBSD.  The intent is to use this with libX11 (or xcb), or perhaps
-elsewhere in pkgsrc as needed.  Included is a pkg-config file that is
-identical to the libpthread-stubs package from libxcb.  This library
-contains more functions and no GNU autoconf cruft.  Great taste, less
-filling! ;)
+This library provides weak aliases for pthread functions not provided in libc
+or otherwise available by default.  Libraries like libxcb rely on pthread
+stubs to use pthreads optionally, becoming thread-safe when linked to
+libpthread, while avoiding any performance hit when running single-threaded.
+libpthread-stubs supports this behavior even on platforms which do not supply
+all the necessary pthread stubs.  On platforms which already supply all the
+necessary pthread stubs, this package ships only the pkg-config file
+pthread-stubs.pc, to allow libraries to unconditionally express a dependency
+on pthread-stubs and still obtain correct behavior.
