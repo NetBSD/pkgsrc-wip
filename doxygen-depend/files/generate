@@ -115,7 +115,7 @@ sub wanted(){
 	    }
 	}
 	close(FILE);
-	if ($yes &&  $directory =~ m|/| ) {
+	if ($yes &&  $directory =~ m|/| ) { # avoid category/Makefile
 	    $count++;
 	    my ($leaf) = $directory;
 	    $leaf =~ s|.*/||;
@@ -126,12 +126,12 @@ sub wanted(){
 	    my ($comment) = $COMMENT{$leaf};
 	    $directory =~ s/[\t ]*$//;
 	    my ($string) =
-	    sprintf "%s-[0-9]*:../../%s", $leaf, $directory;	    
-	    if ( ! $comment =~ m|^[\t ]+$|) {
-		printf "%sUILD_DEPENDS+=\t%s+%s+\n", $B, $string, $comment;
+		sprintf "%s-[0-9]*:../../%s", $leaf, $directory;
+	    if ( $comment =~ m|[\t ]*\#|) {
+		printf "%sUILD_DEPENDS+=\t%-35s\t%s\n", $B, $string, $comment;
 
 	    } else {
-		printf "%sUILD_DEPENDS+=\t%-45s\n", $B, $string;
+		printf "%sUILD_DEPENDS+=\t%s%s\n", $B, $string;
 
 	    }
 	}
