@@ -1907,6 +1907,7 @@ SUBDIR+=	munge
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node
+SUBDIR+=	mupdf
 SUBDIR+=	mupen64
 SUBDIR+=	mupen64-base
 SUBDIR+=	mupen64-plugin-input
