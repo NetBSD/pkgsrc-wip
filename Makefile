@@ -4417,6 +4417,7 @@ SUBDIR+=	zabbix-server
 SUBDIR+=	zabbix-server-mysql
 SUBDIR+=	zabbix-server-pgsql
 SUBDIR+=	zapping
+SUBDIR+=	zathura-pdf-mupdf
 SUBDIR+=	zbackup
 SUBDIR+=	zbar
 SUBDIR+=	zenity
