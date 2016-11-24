@@ -84,6 +84,7 @@ SUBDIR+=	alac_decoder
 SUBDIR+=	alberta
 SUBDIR+=	aldo
 SUBDIR+=	alive
+SUBDIR+=	allegro52
 SUBDIR+=	alsa-lib-git
 SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-plugins-jack
