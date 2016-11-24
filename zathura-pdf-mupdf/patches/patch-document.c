@@ -1,7 +1,7 @@
 $NetBSD: patch-document.c,v 1.2 2016/04/27 12:38:45 leot Exp $
 
 o Correct the glib-2.0 include header file path.
-o Update to mupdf-1.9 API
+o Update to mupdf-1.10 API
 
 --- document.c.orig	2016-02-14 22:49:46.000000000 +0000
 +++ document.c

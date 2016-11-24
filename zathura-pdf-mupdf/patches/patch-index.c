@@ -1,5 +1,7 @@
 $NetBSD$
 
+Update to mupdf-1.10 API.
+
 --- index.c.orig	2016-02-14 22:49:46.000000000 +0000
 +++ index.c
 @@ -6,7 +6,7 @@

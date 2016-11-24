@@ -1,5 +1,7 @@
 $NetBSD$
 
+Update to mupdf-1.10 API.
+
 --- links.c.orig	2016-02-14 22:49:46.000000000 +0000
 +++ links.c
 @@ -44,48 +44,22 @@ pdf_page_links_get(zathura_page_t* page,
@@ -57,7 +59,7 @@ $NetBSD$
 -        break;
 -      default:
 -        continue;
-+	target.page_number = fz_resolve_link(mupdf_document->ctx, mupdf_document->document, link->uri, &tx, &ty);
++        target.page_number = fz_resolve_link(mupdf_document->ctx, mupdf_document->document, link->uri, &tx, &ty);
 +        target.left             = tx;
 +        target.top              = ty;
      }

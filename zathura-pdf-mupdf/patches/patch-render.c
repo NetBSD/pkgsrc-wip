@@ -1,5 +1,7 @@
 $NetBSD$
 
+Update to mupdf-1.10 API.
+
 --- render.c.orig	2016-02-14 22:49:46.000000000 +0000
 +++ render.c
 @@ -20,7 +20,10 @@ pdf_page_render_to_buffer(mupdf_document

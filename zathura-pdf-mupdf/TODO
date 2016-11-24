@@ -1,1 +1,8 @@
-- Review patches and add comments to them
+Everything seems working but there are probably new regression due to 1.10 API
+migration that needs to be further investigated in order to update
+print/zathura-pdf-mupdf:
+
+- Gtk-WARNING **: Allocating size to zathura [address] without calling
+  gtk_widget_get_preferred_width/height().  How does the code know the size to
+  allocate?
+- warning: dropping unclosed device [probably related to the `search' command]
