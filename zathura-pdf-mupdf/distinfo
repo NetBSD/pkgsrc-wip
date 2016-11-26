@@ -12,4 +12,4 @@ SHA1 (patch-page.c) = bc3bd7325f4005986182949c5e66b1ee3040431b
 SHA1 (patch-plugin.h) = 8b12c096d265b397ae9f3a8aee7057a23dea3def
 SHA1 (patch-render.c) = c65ec3d6e9622149d987798b69c680c886b7f970
 SHA1 (patch-search.c) = 1cbed6cc8a8cf672e6330bd2e91e0976f90bc352
-SHA1 (patch-utils.c) = f27a00e812133b93fbdd7922906c091d78412138
+SHA1 (patch-utils.c) = 914ca7ea673be3bcb1a76661762ac7e343f57264

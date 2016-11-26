@@ -5,5 +5,3 @@ print/zathura-pdf-mupdf:
 - Gtk-WARNING **: Allocating size to zathura [address] without calling
   gtk_widget_get_preferred_width/height().  How does the code know the size to
   allocate? [seems to happen when `Tab' is pressed, i.e. in the `Index mode']
-- warning: dropping unclosed device [probably related to the `search' command
-  (i.e. via `/') that no longer works]

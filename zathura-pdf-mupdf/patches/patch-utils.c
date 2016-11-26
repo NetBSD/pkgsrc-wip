@@ -13,3 +13,11 @@ Update to mupdf-1.10 API.
  
      /* Disable FZ_IGNORE_IMAGE to collect image blocks */
      fz_disable_device_hints(mupdf_page->ctx, text_device, FZ_IGNORE_IMAGE);
+@@ -23,6 +23,7 @@ mupdf_page_extract_text(mupdf_document_t
+     fz_scale(&ctm, 1.0, 1.0);
+     fz_run_page(mupdf_page->ctx, mupdf_page->page, text_device, &ctm, NULL);
+   } fz_always (mupdf_document->ctx) {
++    fz_close_device(mupdf_page->ctx, text_device);
+     fz_drop_device(mupdf_page->ctx, text_device);
+   } fz_catch(mupdf_document->ctx) {
+   }
