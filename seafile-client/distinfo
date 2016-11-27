@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (seafile-client/92b27c6953419508a0df7e28a286b79e914fed4f.zip) = c440d0bcad9639a512c9d7cc5993da7191eadab4
-RMD160 (seafile-client/92b27c6953419508a0df7e28a286b79e914fed4f.zip) = dced8e7339830f6d3f690a60b3272a706e38bccd
-SHA512 (seafile-client/92b27c6953419508a0df7e28a286b79e914fed4f.zip) = 7ab7c5470f8efc1c5ae95f582f9b54f2ec6d261dcc12e0e10cd71661637a2eddce3156c6c08453ee3ecc74938be2009cb616a0e107d6622f6ae2d047a18f08ac
-Size (seafile-client/92b27c6953419508a0df7e28a286b79e914fed4f.zip) = 2421967 bytes
+SHA1 (seafile-client/seafile-client-6.0.0.tar.gz) = c4dc007625d597af70715d13999b62f04a950d8b
+RMD160 (seafile-client/seafile-client-6.0.0.tar.gz) = 94fec0102763fd1d181090f41d16c5f63e4d7e79
+SHA512 (seafile-client/seafile-client-6.0.0.tar.gz) = 4d658c78ee269d03b0bfbce10c57465ec1ae4d04b8dc31c3ec69ffcdbb59b98e3169f450d188b8c5634ad707237ec182110d2e7b2d71929d38b06cb3566194e0
+Size (seafile-client/seafile-client-6.0.0.tar.gz) = 2131535 bytes
