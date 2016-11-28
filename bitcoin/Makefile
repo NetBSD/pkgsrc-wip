@@ -1,12 +1,10 @@
 # $NetBSD$
 
 DISTNAME=       bitcoin-0.11.2
-PKGREVISION=    rc1
-PKGNAME=        ${DISTNAME}
+PKGREVISION=    2
 CATEGORIES=	finance
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
-
 
 MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://bitcoin.sourceforge.net/
@@ -16,26 +14,29 @@ LICENSE=	mit
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake libtoolize
 USE_LANGUAGES=	c c++
-WRKSRC=		${WRKDIR}/${DISTNAME}
 AUTO_MKDIRS=	yes
 HAS_CONFIGURE=	yes
 GNU_CONFIGURE=  yes
 
+# TODO: explain why this is necessary
 CXXFLAGS+=	-std=c++0x -I${BUILDLINK_PREFIX.boost-libs}/include/boost
 CXXFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
 CFLAGS+=        -fPIC -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
 BOOST_LDFLAGS=  -L${BUILDLINK_PREFIX.boost-libs}/lib
 BOOST_CPPFLAGS= -I${BUILDLINK_PREFIX.boost-libs}/include
 
-BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
 
+# TODO: explain why this is necessary, and whether it duplicates the above
 CPPFLAGS+=-I${BUILDLINK_PREFIX.boost-headers}/include/boost, -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
 CPPFLAGS+=-L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
 CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
-#CONFIGURE_ARGS+=  --with-boost=${PREFIX}/include/boost
-#CONFIGURE_ARGS+=  --with-boost-libdir=${PREFIX}/lib
+
 CONFIGURE_ARGS+=  --enable-hardening
+
+# TODO: explain why adding a prefix without a -- command makes sense
 CONFIGURE_ARGS+=  ${PREFIX}/include/db4
+# TODO: explain why this is necessary
+BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
 
 LIBTOOLIZE=     ${PREFIX}/bin/libtoolize
 
@@ -60,11 +61,9 @@ SUBST_STAGE.pkg= 	post-patch
 SUBST_SED.pkg=		-e "s|/usr/|${PREFIX}/|g"
 SUBST_MESSAGE.pkg=	"Fixing dirs."
 
+# TODO: explain why this is necessary versus some more compact
+# invocation
 pre-configure:
-#	cd ${WRKDIR}/${DISTNAME}/src && \
-#	${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ../autogen.sh;
-#	cd ${WRKDIR}/${DISTNAME}/src;             \
-#	${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ../configure;
 	cd ${WRKSRC};             \
         ${LIBTOOLIZE} --force;    \
         ${PREFIX}/bin/aclocal;    \
@@ -73,24 +72,8 @@ pre-configure:
         ${PREFIX}/bin/autoconf; \
         ${PREFIX}/bin/autoreconf -i
 
-#do-configure:
-#	(cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake "PREFIX=${PREFIX}" "QMAKE_CXXFLAGS=${CXXFLAGS}" ${QMAKE_OPTIONS} bitcoin-qt.pro)
-#
-#do-build:
-#	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE_OPTIONS} ${GMAKE};	\
-#	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} CFLAGS+=-Iobj ${QMAKE_OPTIONS} ${GMAKE} -f makefile.unix
-#
-#do-install:
-#	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/bin
-#	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/sbin
-#	${INSTALL_PROGRAM} ${WRKSRC}/bitcoin-qt ${DESTDIR}${PREFIX}/bin
-#	${INSTALL_PROGRAM} ${WRKSRC}/src/bitcoind ${DESTDIR}${PREFIX}/sbin
-#	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-#	${INSTALL_DATA} -m 600 ${FILESDIR}/bitcoin.conf ${DESTDIR}${EGDIR}
-#	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
-#	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
-#	${INSTALL_DATA} ${WRKSRC}/share/pixmaps/bitcoin128.png ${DESTDIR}${PREFIX}/share/pixmaps
-#	${INSTALL_DATA} ${WRKSRC}/contrib/debian/bitcoin-qt.desktop ${DESTDIR}${PREFIX}/share/applications/
+# TODO: explain why this is necessary
+# TODO: explain why bitcoint-qt is commented out
 do-install:
 #       ${INSTALL_PROGRAM} ${WRKSRC}/bitcoin-qt ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/bitcoin-cli ${DESTDIR}${PREFIX}/bin
