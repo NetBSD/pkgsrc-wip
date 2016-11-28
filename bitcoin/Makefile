@@ -58,11 +58,11 @@ SUBST_STAGE.pkg= 	post-patch
 SUBST_SED.pkg=		-e "s|/usr/|${PREFIX}/|g"
 SUBST_MESSAGE.pkg=	"Fixing dirs."
 
-# TODO: explain why this is necessary versus some more compact
-# invocation
+# bitcoin does not actually have releases; only snapshots of the
+# repository from which a release would have been made.  Remedially
+# create configure.in and similar.
 pre-configure:
-	cd ${WRKSRC};             \
-	./autogen.sh
+	cd ${WRKSRC} && ./autogen.sh
 
 # TODO: explain why this is necessary
 # TODO: explain why bitcoint-qt is commented out
