@@ -22,12 +22,6 @@ CFLAGS+=        -fPIC
 # TODO: Explain why this is necessary.
 CXXFLAGS+=	-std=c++0x
 
-# TODO: Explain why these are necessary.
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.boost-headers}/include/boost, -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
-CPPFLAGS+=	-L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
-CFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
-CXXFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
-
 # configure does not look in PREFIX for boost unless instructed.
 CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
 # TODO: Explain why this is necessary; the -I of the include dir
@@ -39,6 +33,10 @@ CONFIGURE_ARGS+=  --enable-hardening
 
 # pkgsrc's db4 package installs as db4_, but bitcoin looks for db_.
 BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
+
+# TODO: (After updating,) file bug with bitcoin about not having
+# proper RPATH to its own libary.
+LDFLAGS+=	-Wl,-R${PREFIX}/lib/bitcoin -L${PREFIX}/lib/bitcoin
 
 RCD_SCRIPTS=	bitcoind
 BUILD_DEFS+=	VARBASE
