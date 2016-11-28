@@ -21,9 +21,6 @@ GNU_CONFIGURE=  yes
 CXXFLAGS+=	-std=c++0x -I${BUILDLINK_PREFIX.boost-libs}/include/boost
 CXXFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
 CFLAGS+=        -fPIC -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
-BOOST_LDFLAGS=  -L${BUILDLINK_PREFIX.boost-libs}/lib
-BOOST_CPPFLAGS= -I${BUILDLINK_PREFIX.boost-libs}/include
-
 
 # TODO: explain why this is necessary, and whether it duplicates the above
 CPPFLAGS+=-I${BUILDLINK_PREFIX.boost-headers}/include/boost, -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
@@ -36,15 +33,6 @@ CONFIGURE_ARGS+=  --enable-hardening
 CONFIGURE_ARGS+=  ${PREFIX}/include/db4
 # TODO: explain why this is necessary
 BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
-
-QMAKE_OPTIONS+=	BOOST_INCLUDE_PATH=${PREFIX}/include/boost
-QMAKE_OPTIONS+=	BDB_INCLUDE_PATH=${PREFIX}/include/db4
-QMAKE_OPTIONS+=	OPENSSL_INCLUDE_PATH=${PREFIX}/include/openssl
-
-QMAKE_OPTIONS+=	BOOST_LIB_PATH=${PREFIX}/lib
-QMAKE_OPTIONS+=	BDB_LIB_PATH=${PREFIX}/lib
-QMAKE_OPTIONS+=	OPENSSL_LIB_PATH=${PREFIX}/lib
-QMAKE_OPTIONS+=	LIB_RPATH=${PREFIX}/lib
 
 RCD_SCRIPTS=	bitcoind
 BUILD_DEFS+=	VARBASE
