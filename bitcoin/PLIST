@@ -1,10 +1,7 @@
 @comment $NetBSD$
-sbin/bitcoind
 bin/bitcoin-cli
 lib/bitcoin/libsecp256k1.la
 lib/bitcoin/libsecp256k1.so
 lib/bitcoin/libsecp256k1.so.0
-share/applications/bitcoin-qt.desktop
+sbin/bitcoind
 share/examples/bitcoin/bitcoin.conf
-share/examples/rc.d/bitcoind
-share/pixmaps/bitcoin128.png

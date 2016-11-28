@@ -54,20 +54,15 @@ SUBST_MESSAGE.pkg=	Fixing /usr references to ${PREFIX}.
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
-# TODO: explain why this is necessary
-# TODO: explain why bitcoint-qt is commented out
+# bitcoin appears to have a functioning install target, so this should
+# not be necessary.
 do-install:
-#       ${INSTALL_PROGRAM} ${WRKSRC}/bitcoin-qt ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/bitcoin-cli ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/.libs/bitcoind ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_LIB} -m 644 ${WRKSRC}/src/secp256k1/libsecp256k1.la ${DESTDIR}${PREFIX}/lib/bitcoin
 	${INSTALL_LIB} ${WRKSRC}/src/secp256k1/.libs/libsecp256k1.so.0 ${DESTDIR}${PREFIX}/lib/bitcoin
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/bitcoin/libsecp256k1.so.0 ${DESTDIR}${PREFIX}/lib/bitcoin/libsecp256k1.so
 	${INSTALL_DATA} -m 600 ${FILESDIR}/bitcoin.conf ${DESTDIR}${EGDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/share/pixmaps/bitcoin128.png ${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKSRC}/contrib/debian/bitcoin-qt.desktop ${DESTDIR}${PREFIX}/share/applications/
 
 .include "options.mk"
 
