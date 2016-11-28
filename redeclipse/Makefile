@@ -4,7 +4,7 @@ PKGNAME=	redeclipse-${VERSION}
 DISTNAME=	red-eclipse-v${VERSION}
 CATEGORIES=	games
 VERSION=	1.5.3
-MASTER_SITES=	-https://s3-us-west-2.amazonaws.com/red-eclipse/${DISTNAME}
+MASTER_SITES=	https://s3-us-west-2.amazonaws.com/red-eclipse/
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	http://redeclipse.net/
