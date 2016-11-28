@@ -17,21 +17,27 @@ USE_LANGUAGES=	c c++
 AUTO_MKDIRS=	yes
 GNU_CONFIGURE=  yes
 
-# TODO: explain why this is necessary
-CXXFLAGS+=	-std=c++0x -I${BUILDLINK_PREFIX.boost-libs}/include/boost
-CXXFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
-CFLAGS+=        -fPIC -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
+# TODO: Explain why this is necessary.
+CFLAGS+=        -fPIC
+# TODO: Explain why this is necessary.
+CXXFLAGS+=	-std=c++0x
 
-# TODO: explain why this is necessary, and whether it duplicates the above
-CPPFLAGS+=-I${BUILDLINK_PREFIX.boost-headers}/include/boost, -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
-CPPFLAGS+=-L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
+# TODO: Explain why these are necessary.
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.boost-headers}/include/boost, -Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
+CPPFLAGS+=	-L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
+CFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
+CXXFLAGS+=	-Wl,-R${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin -L${BUILDLINK_PREFIX.boost-libs}/lib/bitcoin
+
+# configure does not look in PREFIX for boost unless instructed.
 CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
+# TODO: Explain why this is necessary; the -I of the include dir
+# should be present, and bitcoin's configure should know about what
+# appears to be a standard include sub-directory.
+CXXFLAGS+=	-I${BUILDLINK_PREFIX.boost-libs}/include/boost
 
 CONFIGURE_ARGS+=  --enable-hardening
 
-# TODO: explain why adding a prefix without a -- command makes sense
-CONFIGURE_ARGS+=  ${PREFIX}/include/db4
-# TODO: explain why this is necessary
+# pkgsrc's db4 package installs as db4_, but bitcoin looks for db_.
 BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
 
 RCD_SCRIPTS=	bitcoind
