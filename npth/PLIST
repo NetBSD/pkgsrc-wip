@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/20 15:09:57 adanbsd Exp $
-bin/npth-config
-include/npth.h
-lib/libnpth.la
-share/aclocal/npth.m4
