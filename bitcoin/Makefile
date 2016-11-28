@@ -46,7 +46,7 @@ CONF_FILES_PERMS=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf ${REAL_RO
 SUBST_CLASSES+= 	pkg
 SUBST_STAGE.pkg= 	post-patch
 SUBST_SED.pkg=		-e "s|/usr/|${PREFIX}/|g"
-SUBST_MESSAGE.pkg=	"Fixing /usr references to ${PREFIX}."
+SUBST_MESSAGE.pkg=	Fixing /usr references to ${PREFIX}.
 
 # bitcoin does not actually have releases; only snapshots of the
 # repository from which a release would have been made.  Remedially
