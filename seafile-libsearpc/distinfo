@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (seafile/258d508e6cbc7e80e3e3f51a66390c162049deff.zip) = e97ad7daa4f1039a15e3c167a884392640731f9b
-RMD160 (seafile/258d508e6cbc7e80e3e3f51a66390c162049deff.zip) = 37b798fef424667a5a7c678a8782d78dfffba36f
-SHA512 (seafile/258d508e6cbc7e80e3e3f51a66390c162049deff.zip) = b0047de42f2d86b34d97c76335e45197faff15a0306e9ccf117545b0a02cca07cbfee3ec581ff7e9ad4ee811f429e81b3d3687af92e326ff69393146cd21cf85
-Size (seafile/258d508e6cbc7e80e3e3f51a66390c162049deff.zip) = 69666 bytes
+SHA1 (seafile-libsearpc/v3.0-latest.tar.gz) = cdff106886441205f46a592100ae324314127107
+RMD160 (seafile-libsearpc/v3.0-latest.tar.gz) = b20f046f1f7659c98b32d0f3c942e71b82b68b63
+SHA512 (seafile-libsearpc/v3.0-latest.tar.gz) = f5706d5490eb6abd05a25963ae204b358e7ebdcf153ab4bfe76819fd4538f1a957d7eaf84d8e60e076d978f9c1605adb2e6ec7ded55950c551304eb7665b15e8
+Size (seafile-libsearpc/v3.0-latest.tar.gz) = 43275 bytes

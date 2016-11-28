@@ -1,18 +1,18 @@
 # $NetBSD$
-PKGNAME=	seafile-ccnet-6.0.0
+VERSION=	6.0.0
+PKGNAME=	ccnet-${VERSION}
 CATEGORIES=	net
-GHCOMMIT=	478d9b8a6ccef878b7c886e98989ff1ff3075116
-DISTNAME=	${GHCOMMIT}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/ccnet/archive/}
-EXTRACT_SUFX=	.zip
+GITHUB_TAG=	v${VERSION}-server
+DISTNAME=	${GITHUB_TAG}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/}
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	http://seafile.com/
 COMMENT=	Framework for writing networked applications in C
 LICENSE=	gnu-gpl-v3
 
-DIST_SUBDIR=	seafile
-WRKSRC=		${WRKDIR}/ccnet-${GHCOMMIT}
+DIST_SUBDIR=	seafile-ccnet
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-server
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -22,7 +22,9 @@ USE_TOOLS+=	pkg-config gmake aclocal autoheader automake autoconf
 
 PY_PATCHPLIST=	yes
 
-DEPENDS+=		seafile-libsearpc-3.0{,nb*}:../../wip/seafile-libsearpc
+PYTHON_VERSIONS_INCOMPATIBLE=	30 31 32 33 34 35 36 37
+
+DEPENDS+=		libsearpc-3.0{,nb*}:../../wip/seafile-libsearpc
 
 CONFIGURE_ARGS+=	--enable-server \
 			--disable-compile-demo

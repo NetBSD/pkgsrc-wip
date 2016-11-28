@@ -1,18 +1,20 @@
 # $NetBSD$
-PKGNAME=	seafile-daemon-6.0.0
+
 CATEGORIES=	net
-GHCOMMIT=	bea8cc526ed37b8c9599e5f526d934c8ec90d288
-DISTNAME=	${GHCOMMIT}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/seafile/archive/}
-EXTRACT_SUFX=	.zip
+GITHUB_PROJECT=	seafile
+VERSION=	6.0.0
+PKGNAME=	${GITHUB_PROJECT}-daemon-${VERSION}
+GITHUB_TAG=	v${VERSION}-server
+DISTNAME=	${GITHUB_TAG}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/}
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	http://seafile.com/
 COMMENT=	Seafile daemon
 LICENSE=	gnu-gpl-v2
 
-DIST_SUBDIR=	seafile-daemon
-WRKSRC=		${WRKDIR}/seafile-${GHCOMMIT}
+DIST_SUBDIR=	${GITHUB_PROJECT}-daemon
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${VERSION}-server
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -23,12 +25,20 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config automake aclocal autoheader autoconf gmake
 
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_INCOMPATIBLE= 30 31 32 33 34 35 36 37
+
 
 CONFIGURE_ARGS+=	--disable-fuse \
 			--disable-server
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
-DEPENDS+=	seafile-libsearpc-3.0{,nb*}:../../wip/seafile-libsearpc
+DEPENDS+=	libsearpc-3.0{,nb*}:../../wip/seafile-libsearpc
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_FILES.python=	app/seaf-cli
+
+SUBST_SED.python=	-e 's,/usr/bin/env python,${PYTHONBIN},'
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
