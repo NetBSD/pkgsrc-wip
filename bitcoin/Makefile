@@ -12,7 +12,7 @@ COMMENT=	P2P electronic cash system
 LICENSE=	mit
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake libtoolize
+USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake
 USE_LANGUAGES=	c c++
 AUTO_MKDIRS=	yes
 GNU_CONFIGURE=  yes
@@ -47,10 +47,11 @@ QMAKE_OPTIONS+=	OPENSSL_LIB_PATH=${PREFIX}/lib
 QMAKE_OPTIONS+=	LIB_RPATH=${PREFIX}/lib
 
 RCD_SCRIPTS=	bitcoind
+BUILD_DEFS+=	VARBASE
 OWN_DIRS=	${VARBASE}/bitcoin
 EGDIR=		${PREFIX}/share/examples/bitcoin
 CONF_FILES=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf
-CONF_FILES_PERMS=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf ${ROOT_USER} ${ROOT_GROUP} 0600
+CONF_FILES_PERMS=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 
 # This is currently unnecessary, but it seems likely we will find a
 # file that references /usr when ${PREFIX} is appropriate.
