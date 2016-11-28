@@ -15,7 +15,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake libtoolize
 USE_LANGUAGES=	c c++
 AUTO_MKDIRS=	yes
-HAS_CONFIGURE=	yes
 GNU_CONFIGURE=  yes
 
 # TODO: explain why this is necessary
@@ -37,8 +36,6 @@ CONFIGURE_ARGS+=  --enable-hardening
 CONFIGURE_ARGS+=  ${PREFIX}/include/db4
 # TODO: explain why this is necessary
 BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
-
-LIBTOOLIZE=     ${PREFIX}/bin/libtoolize
 
 QMAKE_OPTIONS+=	BOOST_INCLUDE_PATH=${PREFIX}/include/boost
 QMAKE_OPTIONS+=	BDB_INCLUDE_PATH=${PREFIX}/include/db4
@@ -65,12 +62,7 @@ SUBST_MESSAGE.pkg=	"Fixing dirs."
 # invocation
 pre-configure:
 	cd ${WRKSRC};             \
-        ${LIBTOOLIZE} --force;    \
-        ${PREFIX}/bin/aclocal;    \
-        ${PREFIX}/bin/autoheader; \
-        ${PREFIX}/bin/automake -a --foreign -i  --add-missing; \
-        ${PREFIX}/bin/autoconf; \
-        ${PREFIX}/bin/autoreconf -i
+	./autogen.sh
 
 # TODO: explain why this is necessary
 # TODO: explain why bitcoint-qt is commented out
