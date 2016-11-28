@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/mujstest
 bin/mupdf
+${PLIST.glfw}bin/mupdf-gl
 bin/muraster
 bin/mutool
 include/mupdf/fitz.h
