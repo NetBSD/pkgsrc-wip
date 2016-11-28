@@ -52,11 +52,12 @@ EGDIR=		${PREFIX}/share/examples/bitcoin
 CONF_FILES=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf
 CONF_FILES_PERMS=	${EGDIR}/bitcoin.conf ${PKG_SYSCONFDIR}/bitcoin.conf ${ROOT_USER} ${ROOT_GROUP} 0600
 
+# This is currently unnecessary, but it seems likely we will find a
+# file that references /usr when ${PREFIX} is appropriate.
 SUBST_CLASSES+= 	pkg
 SUBST_STAGE.pkg= 	post-patch
-#SUBST_FILES.pkg+=	contrib/debian/bitcoin-qt.desktop
 SUBST_SED.pkg=		-e "s|/usr/|${PREFIX}/|g"
-SUBST_MESSAGE.pkg=	"Fixing dirs."
+SUBST_MESSAGE.pkg=	"Fixing /usr references to ${PREFIX}."
 
 # bitcoin does not actually have releases; only snapshots of the
 # repository from which a release would have been made.  Remedially
