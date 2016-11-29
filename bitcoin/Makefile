@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=       bitcoin-0.11.2
-PKGREVISION=    2
+PKGREVISION=    3
 CATEGORIES=	finance
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
@@ -13,14 +13,17 @@ LICENSE=	mit
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config autoconf aclocal autoheader automake
-USE_LANGUAGES=	c c++
 AUTO_MKDIRS=	yes
 GNU_CONFIGURE=  yes
 
+USE_LANGUAGES=	c c++
+# It's not clear what dialect of C++ bitcoin is in, and
+# if it needs explicit flags (c++0x was previously set).
+# For now, leave it out.
+#CXXFLAGS+=	-std=c++0x
+
 # TODO: Explain why this is necessary.
 CFLAGS+=        -fPIC
-# TODO: Explain why this is necessary.
-CXXFLAGS+=	-std=c++0x
 
 # configure does not look in PREFIX for boost unless instructed.
 CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
