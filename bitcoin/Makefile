@@ -1,8 +1,7 @@
 # $NetBSD$
 
 # TODO: update to latest release
-DISTNAME=       bitcoin-0.11.2
-PKGREVISION=    6
+DISTNAME=       bitcoin-0.12.1
 CATEGORIES=	finance
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
@@ -59,9 +58,9 @@ SUBST_MESSAGE.pkg=	Fixing /usr references to ${PREFIX}.
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
-# TODO: Decide if secp256k1 is supposed to be installed, and if so
-# where, or it if should be linked with privately.
-INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1
+# TODO: Decide if secp256k1 and univalue are supposed to be installed,
+# and if so where, or if they should be linked with privately.
+INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 src/univalue
 
 post-install:
 	# Install the Debian example config file.
@@ -72,6 +71,7 @@ post-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

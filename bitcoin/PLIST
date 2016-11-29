@@ -1,12 +1,17 @@
 @comment $NetBSD$
+bin/bench_bitcoin
 bin/bitcoin-cli
 bin/bitcoin-tx
 bin/bitcoind
 bin/test_bitcoin
 include/bitcoinconsensus.h
 include/secp256k1.h
+include/secp256k1_recovery.h
+include/univalue.h
 lib/libbitcoinconsensus.la
 lib/libsecp256k1.la
+lib/libunivalue.la
 lib/pkgconfig/libbitcoinconsensus.pc
 lib/pkgconfig/libsecp256k1.pc
+lib/pkgconfig/libunivalue.pc
 share/examples/bitcoin/bitcoin.conf
