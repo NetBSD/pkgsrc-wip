@@ -1,5 +1,7 @@
 $NetBSD$
 
+Accomodate NetBSD's BYTE_ORDER macros.  Not known to be filed upstream.
+
 --- src/leveldb/port/port_posix.h.orig	2015-07-10 17:23:55.000000000 +0000
 +++ src/leveldb/port/port_posix.h
 @@ -47,8 +47,12 @@

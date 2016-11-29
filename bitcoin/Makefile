@@ -23,7 +23,8 @@ USE_LANGUAGES=	c c++
 # For now, leave it out.
 #CXXFLAGS+=	-std=c++0x
 
-# TODO: Explain why this is necessary.
+# TODO: File bug upstream - configure should add this where it is
+# needed.  Without -fPIC, linking of test_bitcoin fails.
 CFLAGS+=        -fPIC
 
 # configure does not look in PREFIX for boost unless instructed.
