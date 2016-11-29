@@ -2,7 +2,7 @@
 
 # TODO: update to latest release
 DISTNAME=       bitcoin-0.11.2
-PKGREVISION=    5
+PKGREVISION=    6
 CATEGORIES=	finance
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
@@ -38,10 +38,6 @@ CONFIGURE_ARGS+=  --enable-hardening
 # pkgsrc's db4 package installs as db4_, but bitcoin looks for db_.
 BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
 
-# TODO: (After updating,) file bug with bitcoin about not having
-# proper RPATH to its own libary.
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/bitcoin -L${PREFIX}/lib/bitcoin
-
 RCD_SCRIPTS=	bitcoind
 BUILD_DEFS+=	VARBASE
 OWN_DIRS=	${VARBASE}/bitcoin
@@ -62,18 +58,12 @@ SUBST_MESSAGE.pkg=	Fixing /usr references to ${PREFIX}.
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
-# TODO: bitcoin appears to have a functioning install target, so this should
-# not be necessary.
-# TODO: bitcoind is a bin_PROGRAM, not sbin_PROGRAM, per upstream.
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/bitcoin-cli ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/src/.libs/bitcoind ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_LIB} -m 644 ${WRKSRC}/src/secp256k1/libsecp256k1.la ${DESTDIR}${PREFIX}/lib/bitcoin
-	${INSTALL_LIB} ${WRKSRC}/src/secp256k1/.libs/libsecp256k1.so.0 ${DESTDIR}${PREFIX}/lib/bitcoin
-	${LN} -fs ${DESTDIR}${PREFIX}/lib/bitcoin/libsecp256k1.so.0 ${DESTDIR}${PREFIX}/lib/bitcoin/libsecp256k1.so
+# TODO: Decide if secp256k1 is supposed to be installed, and if so
+# where, or it if should be linked with privately.
+INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1
 
-# Use the Debian example config file.
 post-install:
+	# Install the Debian example config file.
 	${INSTALL_DATA} -m 600 ${WRKSRC}/contrib/debian/examples/bitcoin.conf ${DESTDIR}${EGDIR}
 
 .include "options.mk"

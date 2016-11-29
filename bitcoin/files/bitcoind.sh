@@ -13,7 +13,7 @@ fi
 
 name="bitcoind"
 rcvar=$name
-command="@PREFIX@/sbin/bitcoind"
+command="@PREFIX@/bin/bitcoind"
 pidfile="@VARBASE@/run/bitcoind.pid"
 required_directory="@VARBASE@/bitcoin"
 command_args="-daemon -conf=@PREFIX@/etc/bitcoin.conf -pid=${pidfile} -datadir=${required_directory}"

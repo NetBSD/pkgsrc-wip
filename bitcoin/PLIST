@@ -1,7 +1,12 @@
 @comment $NetBSD$
 bin/bitcoin-cli
-lib/bitcoin/libsecp256k1.la
-lib/bitcoin/libsecp256k1.so
-lib/bitcoin/libsecp256k1.so.0
-sbin/bitcoind
+bin/bitcoin-tx
+bin/bitcoind
+bin/test_bitcoin
+include/bitcoinconsensus.h
+include/secp256k1.h
+lib/libbitcoinconsensus.la
+lib/libsecp256k1.la
+lib/pkgconfig/libbitcoinconsensus.pc
+lib/pkgconfig/libsecp256k1.pc
 share/examples/bitcoin/bitcoin.conf
