@@ -2,7 +2,7 @@
 
 # TODO: update to latest release
 DISTNAME=       bitcoin-0.11.2
-PKGREVISION=    4
+PKGREVISION=    5
 CATEGORIES=	finance
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
@@ -71,7 +71,10 @@ do-install:
 	${INSTALL_LIB} -m 644 ${WRKSRC}/src/secp256k1/libsecp256k1.la ${DESTDIR}${PREFIX}/lib/bitcoin
 	${INSTALL_LIB} ${WRKSRC}/src/secp256k1/.libs/libsecp256k1.so.0 ${DESTDIR}${PREFIX}/lib/bitcoin
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/bitcoin/libsecp256k1.so.0 ${DESTDIR}${PREFIX}/lib/bitcoin/libsecp256k1.so
-	${INSTALL_DATA} -m 600 ${FILESDIR}/bitcoin.conf ${DESTDIR}${EGDIR}
+
+# Use the Debian example config file.
+post-install:
+	${INSTALL_DATA} -m 600 ${WRKSRC}/contrib/debian/examples/bitcoin.conf ${DESTDIR}${EGDIR}
 
 .include "options.mk"
 
