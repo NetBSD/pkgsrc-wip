@@ -39,7 +39,7 @@ BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
 
 # TODO: (After updating,) file bug with bitcoin about not having
 # proper RPATH to its own libary.
-LDFLAGS+=	-Wl,-R${PREFIX}/lib/bitcoin -L${PREFIX}/lib/bitcoin
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/bitcoin -L${PREFIX}/lib/bitcoin
 
 RCD_SCRIPTS=	bitcoind
 BUILD_DEFS+=	VARBASE
