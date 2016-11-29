@@ -24,8 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 
 
 PY_PATCHPLIST=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	30 31 32 33 34 35 36 37
+PYTHON_VERSIONS_ACCEPTED=	27
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure

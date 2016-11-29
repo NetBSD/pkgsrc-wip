@@ -22,7 +22,7 @@ USE_TOOLS+=	pkg-config gmake aclocal autoheader automake autoconf
 
 PY_PATCHPLIST=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	30 31 32 33 34 35 36 37
+PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=		libsearpc-3.0{,nb*}:../../wip/seafile-libsearpc
 

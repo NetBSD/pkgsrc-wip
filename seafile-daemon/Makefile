@@ -25,7 +25,7 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config automake aclocal autoheader autoconf gmake
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE= 30 31 32 33 34 35 36 37
+PYTHON_VERSIONS_ACCEPTED= 27
 
 
 CONFIGURE_ARGS+=	--disable-fuse \
