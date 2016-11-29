@@ -1,5 +1,6 @@
 # $NetBSD$
 
+# TODO: update to latest release
 DISTNAME=       bitcoin-0.11.2
 PKGREVISION=    3
 CATEGORIES=	finance
@@ -61,8 +62,9 @@ SUBST_MESSAGE.pkg=	Fixing /usr references to ${PREFIX}.
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
-# bitcoin appears to have a functioning install target, so this should
+# TODO: bitcoin appears to have a functioning install target, so this should
 # not be necessary.
+# TODO: bitcoind is a bin_PROGRAM, not sbin_PROGRAM, per upstream.
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/bitcoin-cli ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/.libs/bitcoind ${DESTDIR}${PREFIX}/sbin

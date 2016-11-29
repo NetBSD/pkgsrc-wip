@@ -1,6 +1,0 @@
-* Update to latest release;
-* Make Qt optional in options.mk;
-* Add bitcoin-qt4 and bitcoin-qt5 packages using qt{4,5} options, respectively;
-* If both Qt4 and Qt5 are installed, package will default to Qt4;
-* Check documentation for other package options;
-* Fix configure/build/install phases for latest version;
