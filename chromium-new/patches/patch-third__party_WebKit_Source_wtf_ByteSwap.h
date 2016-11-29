@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/WebKit/Source/wtf/ByteSwap.h.orig	2016-06-24 01:02:47.000000000 +0000
+--- third_party/WebKit/Source/wtf/ByteSwap.h.orig	2016-11-10 20:02:27.000000000 +0000
 +++ third_party/WebKit/Source/wtf/ByteSwap.h
 @@ -52,9 +52,15 @@ ALWAYS_INLINE uint16_t bswap16(uint16_t 
  

@@ -1,22 +1,20 @@
 $NetBSD$
 
---- chrome/browser/chrome_browser_main_posix.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/chrome_browser_main_posix.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/chrome_browser_main_posix.cc
-@@ -274,6 +274,13 @@ void ChromeBrowserMainPartsPosix::PostMa
+@@ -275,6 +275,11 @@ void ChromeBrowserMainPartsPosix::PostMa
      g_pipe_pid = getpid();
      g_shutdown_pipe_read_fd = pipefd[0];
      g_shutdown_pipe_write_fd = pipefd[1];
-+#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_NETBSD)
 +    // PTHREAD_STACK_MIN causes chromium to crash under FreeBSD,
 +    // we request the default pthread stack size by specifying 0 here.
-+    const size_t kShutdownDetectorThreadStackSize = 0;
-+#elif defined(__NetBSD__)
 +    const size_t kShutdownDetectorThreadStackSize = 0;
 +#else
  #if !defined(ADDRESS_SANITIZER) && !defined(KEEP_SHADOW_STACKS)
      const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 2;
  #else
-@@ -282,6 +289,7 @@ void ChromeBrowserMainPartsPosix::PostMa
+@@ -283,6 +288,7 @@ void ChromeBrowserMainPartsPosix::PostMa
      // size to avoid hitting the guard page.
      const size_t kShutdownDetectorThreadStackSize = PTHREAD_STACK_MIN * 4;
  #endif

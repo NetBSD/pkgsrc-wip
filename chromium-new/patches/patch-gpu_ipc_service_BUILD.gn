@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- gpu/ipc/service/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
++++ gpu/ipc/service/BUILD.gn
+@@ -98,11 +98,12 @@ target(link_target_type, "ipc_service_so
+     ]
+     libs += [ "android" ]
+   }
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [ "image_transport_surface_linux.cc" ]
+   }
+   if (use_x11) {
+     sources += [ "x_util.h" ]
++    configs += [ "//build/config/linux:x11" ]
+   }
+   if (use_ozone) {
+     sources += [

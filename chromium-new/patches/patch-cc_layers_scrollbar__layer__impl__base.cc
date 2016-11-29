@@ -1,8 +1,8 @@
 $NetBSD$
 
---- cc/layers/scrollbar_layer_impl_base.cc.orig	2016-06-24 01:02:09.000000000 +0000
+--- cc/layers/scrollbar_layer_impl_base.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ cc/layers/scrollbar_layer_impl_base.cc
-@@ -181,8 +181,8 @@ gfx::Rect ScrollbarLayerImplBase::Comput
+@@ -174,8 +174,8 @@ gfx::Rect ScrollbarLayerImplBase::Comput
    int thumb_offset = TrackStart();
    if (maximum > 0) {
      float ratio = clamped_current_pos / maximum;

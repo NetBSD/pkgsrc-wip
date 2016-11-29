@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- components/plugins/renderer/BUILD.gn.orig	2016-11-10 20:02:13.000000000 +0000
++++ components/plugins/renderer/BUILD.gn
+@@ -25,6 +25,7 @@ static_library("renderer") {
+   }
+ 
+   deps = [
++    "//v8",
+     "//content/public/child",
+     "//content/public/common",
+     "//content/public/renderer",
+@@ -33,6 +34,5 @@ static_library("renderer") {
+     "//third_party/WebKit/public:blink",
+     "//third_party/re2",
+     "//ui/base",
+-    "//v8",
+   ]
+ }

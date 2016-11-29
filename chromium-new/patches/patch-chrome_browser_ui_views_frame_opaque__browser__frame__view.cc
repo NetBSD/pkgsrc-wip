@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.cc
-@@ -53,7 +53,7 @@
+@@ -38,7 +38,7 @@
  #include "ui/views/window/frame_background.h"
  #include "ui/views/window/window_shape.h"
  
@@ -11,7 +11,7 @@ $NetBSD$
  #include "ui/views/controls/menu/menu_runner.h"
  #endif
  
-@@ -309,7 +309,7 @@ void OpaqueBrowserFrameView::ButtonPress
+@@ -293,7 +293,7 @@ void OpaqueBrowserFrameView::ButtonPress
  void OpaqueBrowserFrameView::OnMenuButtonClicked(views::MenuButton* source,
                                                   const gfx::Point& point,
                                                   const ui::Event* event) {

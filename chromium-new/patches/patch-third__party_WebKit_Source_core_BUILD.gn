@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/WebKit/Source/core/BUILD.gn.orig	2016-11-10 20:02:25.000000000 +0000
++++ third_party/WebKit/Source/core/BUILD.gn
+@@ -282,7 +282,7 @@ target(link_target_type, "remaining") {
+     ]
+   }
+ 
+-  if (!is_linux) {
++  if (!(is_linux || is_bsd)) {
+     sources -= [
+       "layout/LayoutThemeLinux.cpp",
+       "layout/LayoutThemeLinux.h",

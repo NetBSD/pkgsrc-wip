@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/chrome_browser_main.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/chrome_browser_main.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/chrome_browser_main.cc
-@@ -173,7 +173,7 @@
+@@ -188,7 +188,7 @@
  #include "chrome/browser/feedback/feedback_profile_observer.h"
  #endif  // defined(OS_ANDROID)
  
@@ -11,7 +11,7 @@ $NetBSD$
  #include "chrome/browser/first_run/upgrade_util_linux.h"
  #endif  // defined(OS_LINUX) && !defined(OS_CHROMEOS)
  
-@@ -1109,11 +1109,11 @@ int ChromeBrowserMainParts::PreCreateThr
+@@ -1325,11 +1325,11 @@ int ChromeBrowserMainParts::PreCreateThr
    }
  #endif  // !defined(OS_ANDROID) && !defined(OS_CHROMEOS)
  

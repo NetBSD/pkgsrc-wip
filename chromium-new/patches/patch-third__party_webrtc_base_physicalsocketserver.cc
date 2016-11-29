@@ -1,8 +1,17 @@
 $NetBSD$
 
---- third_party/webrtc/base/physicalsocketserver.cc.orig	2016-06-24 01:04:14.000000000 +0000
+--- third_party/webrtc/base/physicalsocketserver.cc.orig	2016-11-10 20:03:05.000000000 +0000
 +++ third_party/webrtc/base/physicalsocketserver.cc
-@@ -245,7 +245,7 @@ int PhysicalSocket::GetOption(Option opt
+@@ -59,7 +59,7 @@ typedef void* SockOptArg;
+ 
+ #endif  // WEBRTC_POSIX
+ 
+-#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && !defined(__native_client__)
++#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && !defined(__native_client__) && !defined(WEBRTC_BSD)
+ 
+ int64_t GetSocketRecvTimestamp(int socket) {
+   struct timeval tv_ioctl;
+@@ -276,7 +276,7 @@ int PhysicalSocket::GetOption(Option opt
    socklen_t optlen = sizeof(*value);
    int ret = ::getsockopt(s_, slevel, sopt, (SockOptArg)value, &optlen);
    if (ret != -1 && opt == OPT_DONTFRAGMENT) {
@@ -11,7 +20,7 @@ $NetBSD$
      *value = (*value != IP_PMTUDISC_DONT) ? 1 : 0;
  #endif
    }
-@@ -258,7 +258,7 @@ int PhysicalSocket::SetOption(Option opt
+@@ -289,7 +289,7 @@ int PhysicalSocket::SetOption(Option opt
    if (TranslateOption(opt, &slevel, &sopt) == -1)
      return -1;
    if (opt == OPT_DONTFRAGMENT) {
@@ -20,7 +29,7 @@ $NetBSD$
      value = (value) ? IP_PMTUDISC_DO : IP_PMTUDISC_DONT;
  #endif
    }
-@@ -533,10 +533,10 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -571,10 +571,10 @@ int PhysicalSocket::TranslateOption(Opti
        *slevel = IPPROTO_IP;
        *sopt = IP_DONTFRAGMENT;
        break;

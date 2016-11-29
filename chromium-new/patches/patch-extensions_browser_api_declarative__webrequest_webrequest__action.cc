@@ -1,6 +1,6 @@
 $NetBSD$
 
---- extensions/browser/api/declarative_webrequest/webrequest_action.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- extensions/browser/api/declarative_webrequest/webrequest_action.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ extensions/browser/api/declarative_webrequest/webrequest_action.cc
 @@ -28,7 +28,11 @@
  #include "net/base/registry_controlled_domains/registry_controlled_domain.h"

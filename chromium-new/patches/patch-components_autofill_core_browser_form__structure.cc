@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/autofill/core/browser/form_structure.cc.orig	2016-06-24 01:02:17.000000000 +0000
+--- components/autofill/core/browser/form_structure.cc.orig	2016-11-10 20:02:13.000000000 +0000
 +++ components/autofill/core/browser/form_structure.cc
 @@ -33,7 +33,11 @@
  #include "components/autofill/core/common/form_field_data_predictions.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/base/ime/input_method_initializer.cc.orig	2016-06-24 01:02:52.000000000 +0000
+--- ui/base/ime/input_method_initializer.cc.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/base/ime/input_method_initializer.cc
 @@ -8,14 +8,14 @@
  

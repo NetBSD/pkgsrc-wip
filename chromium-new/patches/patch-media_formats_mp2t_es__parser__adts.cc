@@ -1,6 +1,6 @@
 $NetBSD$
 
---- media/formats/mp2t/es_parser_adts.cc.orig	2016-06-24 01:02:23.000000000 +0000
+--- media/formats/mp2t/es_parser_adts.cc.orig	2016-11-10 20:02:15.000000000 +0000
 +++ media/formats/mp2t/es_parser_adts.cc
 @@ -54,11 +54,11 @@ bool EsParserAdts::LookForAdtsFrame(Adts
    const uint8_t* es;

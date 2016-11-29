@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/webrtc/base/systeminfo.cc.orig	2016-06-24 01:04:14.000000000 +0000
+--- third_party/webrtc/base/systeminfo.cc.orig	2016-11-10 20:03:05.000000000 +0000
 +++ third_party/webrtc/base/systeminfo.cc
 @@ -20,8 +20,12 @@
  #elif defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)

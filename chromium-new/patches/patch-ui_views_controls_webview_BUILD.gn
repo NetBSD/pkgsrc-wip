@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/views/controls/webview/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
++++ ui/views/controls/webview/BUILD.gn
+@@ -39,7 +39,7 @@ component("webview") {
+     "//ui/views",
+   ]
+ 
+-  if (is_linux || is_android) {
++  if (is_linux || is_bsd || is_android) {
+     sources += [ "unhandled_keyboard_event_handler_default.cc" ]
+   }
+ }

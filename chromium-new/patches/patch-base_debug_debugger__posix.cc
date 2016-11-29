@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/debug/debugger_posix.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/debug/debugger_posix.cc.orig	2016-11-12 05:46:21.381633820 +0000
 +++ base/debug/debugger_posix.cc
 @@ -54,8 +54,48 @@
  namespace base {

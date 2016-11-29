@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/common/chrome_paths.h.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/common/chrome_paths.h.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/common/chrome_paths.h
-@@ -46,7 +46,7 @@ enum {
+@@ -48,7 +48,7 @@ enum {
                                  // to set policies for chrome. This directory
                                  // contains subdirectories.
  #endif
@@ -11,7 +11,7 @@ $NetBSD$
      defined(OS_MACOSX)
    DIR_USER_EXTERNAL_EXTENSIONS,  // Directory for per-user external extensions
                                   // on Chrome Mac and Chromium Linux.
-@@ -55,7 +55,7 @@ enum {
+@@ -57,7 +57,7 @@ enum {
                                   // create it.
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
    DIR_STANDALONE_EXTERNAL_EXTENSIONS,  // Directory for 'per-extension'
                                         // definition manifest files that
                                         // describe extensions which are to be
-@@ -109,7 +109,7 @@ enum {
+@@ -111,7 +111,7 @@ enum {
    DIR_SUPERVISED_USER_INSTALLED_WHITELISTS,  // Directory where sanitized
                                               // supervised user whitelists are
                                               // installed.

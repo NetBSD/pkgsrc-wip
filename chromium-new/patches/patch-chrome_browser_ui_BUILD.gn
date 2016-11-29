@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- chrome/browser/ui/BUILD.gn.orig	2016-11-10 20:02:11.000000000 +0000
++++ chrome/browser/ui/BUILD.gn
+@@ -521,7 +521,7 @@ split_static_library("ui") {
+       "//ui/events:dom_keycode_converter",
+     ]
+   }
+-  if (is_linux) {  # Both desktop Linux and ChromeOS.
++  if (is_linux || is_bsd) {  # Both desktop Linux and ChromeOS.
+     sources += rebase_path(gypi_values.chrome_browser_ui_linux_sources,
+                            ".",
+                            "//chrome")

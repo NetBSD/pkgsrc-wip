@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/webrtc/base/network.cc.orig	2016-06-24 01:04:14.000000000 +0000
+--- third_party/webrtc/base/network.cc.orig	2016-11-10 20:03:05.000000000 +0000
 +++ third_party/webrtc/base/network.cc
 @@ -14,7 +14,7 @@
  // linux/if.h can't be included at the same time as the posix sys/if.h, and
@@ -11,7 +11,7 @@ $NetBSD$
  #include <linux/if.h>
  #include <linux/route.h>
  #elif !defined(__native_client__)
-@@ -631,7 +631,7 @@ bool BasicNetworkManager::CreateNetworks
+@@ -656,7 +656,7 @@ bool BasicNetworkManager::CreateNetworks
  }
  #endif  // WEBRTC_WIN
  
@@ -20,7 +20,7 @@ $NetBSD$
  bool IsDefaultRoute(const std::string& network_name) {
    FileStream fs;
    if (!fs.Open("/proc/net/route", "r", NULL)) {
-@@ -674,7 +674,7 @@ bool BasicNetworkManager::IsIgnoredNetwo
+@@ -699,7 +699,7 @@ bool BasicNetworkManager::IsIgnoredNetwo
        strncmp(network.name().c_str(), "vboxnet", 7) == 0) {
      return true;
    }

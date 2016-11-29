@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/sys_info_freebsd.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/sys_info_freebsd.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/sys_info_freebsd.cc
 @@ -12,12 +12,34 @@
  
@@ -41,11 +41,14 @@ $NetBSD$
      NOTREACHED();
      return 0;
    }
-@@ -35,4 +57,25 @@ uint64_t SysInfo::MaxSharedMemorySize() 
-   return static_cast<uint64_t>(limit);
+@@ -25,14 +47,24 @@ int64_t SysInfo::AmountOfPhysicalMemory(
  }
  
-+// static
+ // static
+-uint64_t SysInfo::MaxSharedMemorySize() {
+-  size_t limit;
+-  size_t size = sizeof(limit);
+-  if (sysctlbyname("kern.ipc.shmmax", &limit, &size, NULL, 0) < 0) {
 +std::string SysInfo::CPUModelName() {
 +  int mib[] = { CTL_HW, HW_MODEL };
 +  char name[256];
@@ -60,10 +63,12 @@ $NetBSD$
 +  int ncpu;
 +  size_t size = sizeof(ncpu);
 +  if (sysctl(mib, arraysize(mib), &ncpu, &size, NULL, 0) == -1) {
-+    NOTREACHED();
+     NOTREACHED();
+-    return 0;
 +    return 1;
-+  }
+   }
+-  return static_cast<uint64_t>(limit);
 +  return ncpu;
-+}
-+
+ }
+ 
  }  // namespace base

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gpu/config/gpu_control_list_unittest.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- gpu/config/gpu_control_list_unittest.cc.orig	2016-11-10 20:02:15.000000000 +0000
 +++ gpu/config/gpu_control_list_unittest.cc
 @@ -175,8 +175,7 @@ TEST_F(GpuControlListTest, VendorOnAllOs
    features = control_list->MakeDecision(

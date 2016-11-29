@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/WebKit/Source/platform/heap/StackFrameDepth.cpp.orig	2016-06-24 01:02:46.000000000 +0000
+--- third_party/WebKit/Source/platform/heap/StackFrameDepth.cpp.orig	2016-11-10 20:02:27.000000000 +0000
 +++ third_party/WebKit/Source/platform/heap/StackFrameDepth.cpp
 @@ -6,6 +6,10 @@
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ppapi/proxy/file_io_resource.cc.orig	2016-06-24 01:02:26.000000000 +0000
+--- ppapi/proxy/file_io_resource.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ ppapi/proxy/file_io_resource.cc
 @@ -285,17 +285,19 @@ int32_t FileIOResource::Write(int64_t of
  

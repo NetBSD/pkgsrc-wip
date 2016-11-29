@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- chrome/common/extensions/api/schemas.gni.orig	2016-11-10 20:02:11.000000000 +0000
++++ chrome/common/extensions/api/schemas.gni
+@@ -19,7 +19,7 @@ if (enable_task_manager) {
+ }
+ if (is_chromeos) {
+   schema_sources += gypi_values.chromeos_schema_files
+-} else if (is_linux || is_win) {
++} else if (is_linux || is_win || is_bsd) {
+   schema_sources += gypi_values.input_ime_schema_file
+ }
+ if (enable_service_discovery) {

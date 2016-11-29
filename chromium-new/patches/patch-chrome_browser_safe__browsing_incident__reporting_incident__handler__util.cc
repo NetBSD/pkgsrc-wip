@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/safe_browsing/incident_reporting/incident_handler_util.cc.orig	2016-06-24 01:02:13.000000000 +0000
+--- chrome/browser/safe_browsing/incident_reporting/incident_handler_util.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/safe_browsing/incident_reporting/incident_handler_util.cc
 @@ -8,7 +8,12 @@
  

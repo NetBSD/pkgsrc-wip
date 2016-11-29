@@ -1,6 +1,6 @@
 $NetBSD$
 
---- extensions/common/image_util.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- extensions/common/image_util.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ extensions/common/image_util.cc
 @@ -11,7 +11,11 @@
  #include "base/strings/string_number_conversions.h"

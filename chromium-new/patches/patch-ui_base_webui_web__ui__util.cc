@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/base/webui/web_ui_util.cc.orig	2016-06-24 01:02:52.000000000 +0000
+--- ui/base/webui/web_ui_util.cc.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/base/webui/web_ui_util.cc
 @@ -165,7 +165,7 @@ std::string GetFontFamily() {
  

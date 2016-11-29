@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/test/launcher/test_launcher.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/test/launcher/test_launcher.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/test/launcher/test_launcher.cc
-@@ -53,6 +53,10 @@
+@@ -55,6 +55,10 @@
  #include "base/win/windows_version.h"
  #endif
  

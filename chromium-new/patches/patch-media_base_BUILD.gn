@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- media/base/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
++++ media/base/BUILD.gn
+@@ -294,7 +294,7 @@ target(link_target_type, "base") {
+     allow_circular_includes_from += [ "//media/base/android" ]
+   }
+ 
+-  if (is_linux && use_x11) {
++  if ((is_linux || is_bsd) && use_x11) {
+     configs += [
+       "//build/config/linux:x11",
+       "//build/config/linux:xext",
+@@ -330,7 +330,7 @@ target(link_target_type, "base") {
+     deps += [ ":media_yasm" ]
+   }
+ 
+-  if (is_linux || is_win) {
++  if (is_linux || is_bsd || is_win) {
+     sources += [
+       "keyboard_event_counter.cc",
+       "keyboard_event_counter.h",

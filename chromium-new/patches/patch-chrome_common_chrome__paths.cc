@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/common/chrome_paths.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/common/chrome_paths.cc
-@@ -170,7 +170,7 @@ bool PathProvider(int key, base::FilePat
+@@ -190,7 +190,7 @@ bool PathProvider(int key, base::FilePat
          return false;
        break;
      case chrome::DIR_DEFAULT_DOWNLOADS_SAFE:
@@ -11,7 +11,7 @@ $NetBSD$
        if (!GetUserDownloadsDirectorySafe(&cur))
          return false;
        break;
-@@ -448,10 +448,12 @@ bool PathProvider(int key, base::FilePat
+@@ -472,10 +472,12 @@ bool PathProvider(int key, base::FilePat
        if (!base::PathExists(cur))  // We don't want to create this
          return false;
        break;
@@ -25,7 +25,7 @@ $NetBSD$
  #else
        cur = base::FilePath(FILE_PATH_LITERAL("/etc/chromium/policies"));
  #endif
-@@ -502,7 +504,7 @@ bool PathProvider(int key, base::FilePat
+@@ -526,7 +528,7 @@ bool PathProvider(int key, base::FilePat
  #endif
        break;
  
@@ -34,7 +34,7 @@ $NetBSD$
      case chrome::DIR_NATIVE_MESSAGING:
  #if defined(OS_MACOSX)
  #if defined(GOOGLE_CHROME_BUILD)
-@@ -516,6 +518,9 @@ bool PathProvider(int key, base::FilePat
+@@ -540,6 +542,9 @@ bool PathProvider(int key, base::FilePat
  #if defined(GOOGLE_CHROME_BUILD)
        cur = base::FilePath(FILE_PATH_LITERAL(
            "/etc/opt/chrome/native-messaging-hosts"));
@@ -44,7 +44,7 @@ $NetBSD$
  #else
        cur = base::FilePath(FILE_PATH_LITERAL(
            "/etc/chromium/native-messaging-hosts"));
-@@ -528,7 +533,7 @@ bool PathProvider(int key, base::FilePat
+@@ -552,7 +557,7 @@ bool PathProvider(int key, base::FilePat
          return false;
        cur = cur.Append(FILE_PATH_LITERAL("NativeMessagingHosts"));
        break;

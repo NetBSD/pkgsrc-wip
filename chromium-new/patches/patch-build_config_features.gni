@@ -1,0 +1,39 @@
+$NetBSD$
+
+--- build/config/features.gni.orig	2016-11-10 20:02:09.000000000 +0000
++++ build/config/features.gni
+@@ -22,7 +22,7 @@ if (is_android) {
+ 
+ declare_args() {
+   # Multicast DNS.
+-  enable_mdns = is_win || is_linux
++  enable_mdns = is_win || is_linux || is_bsd
+ 
+   enable_extensions = !is_android && !is_ios
+   enable_plugins = (!is_android && !is_ios) || is_chromecast
+@@ -104,13 +104,13 @@ declare_args() {
+   # libudev usage. This currently only affects the content layer.
+   use_udev = is_linux && !is_chromecast
+ 
+-  use_dbus = is_linux && !is_chromecast
++  use_dbus = (is_linux || is_bsd) && !is_chromecast
+ 
+   # Option controlling the use of GConf (the classic GNOME configuration
+   # system).
+-  use_gconf = is_linux && !is_chromeos && !is_chromecast
++  use_gconf = (is_linux || is_bsd) && !is_chromeos && !is_chromecast
+ 
+-  use_gio = is_linux && !is_chromeos && !is_chromecast
++  use_gio = (is_linux || is_bsd) && !is_chromeos && !is_chromecast
+ 
+   # Enable basic printing support and UI.
+   enable_basic_printing = !is_chromecast && !is_ios
+@@ -142,7 +142,7 @@ use_minikin_hyphenation = is_android
+ 
+ # Enables the use of CDMs in pepper plugins.
+ enable_pepper_cdms =
+-    enable_plugins && (is_linux || is_mac || is_win) && !is_chromecast
++    enable_plugins && (is_linux || is_bsd || is_mac || is_win) && !is_chromecast
+ 
+ # The seccomp-bpf sandbox is only supported on five architectures
+ # currently.

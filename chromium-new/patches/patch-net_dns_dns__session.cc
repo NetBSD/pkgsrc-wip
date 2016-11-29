@@ -1,8 +1,8 @@
 $NetBSD$
 
---- net/dns/dns_session.cc.orig	2016-06-24 01:02:25.000000000 +0000
+--- net/dns/dns_session.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ net/dns/dns_session.cc
-@@ -224,7 +224,7 @@ void DnsSession::RecordRTT(unsigned serv
+@@ -228,7 +228,7 @@ void DnsSession::RecordRTT(unsigned serv
    base::TimeDelta current_error = rtt - estimate;
    estimate += current_error / 8;  // * alpha
    base::TimeDelta abs_error = base::TimeDelta::FromInternalValue(

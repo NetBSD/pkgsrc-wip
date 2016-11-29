@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/webrtc/base/httpcommon.cc.orig	2016-06-24 01:04:14.000000000 +0000
+--- third_party/webrtc/base/httpcommon.cc.orig	2016-11-10 20:03:05.000000000 +0000
 +++ third_party/webrtc/base/httpcommon.cc
 @@ -384,7 +384,7 @@ bool HttpDateToSeconds(const std::string
      gmt = non_gmt + kTimeZoneOffsets[zindex] * 60 * 60;

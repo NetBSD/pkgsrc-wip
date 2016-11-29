@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- tools/gn/gn_unittests.isolate.orig	2016-11-10 20:02:30.000000000 +0000
++++ tools/gn/gn_unittests.isolate
+@@ -3,7 +3,7 @@
+ # found in the LICENSE file.
+ {
+   'conditions': [
+-    ['OS=="linux" or OS=="mac" or OS=="win"', {
++    ['OS=="linux" or OS=="bsd" or OS=="mac" or OS=="win"', {
+       'variables': {
+         'command': [
+           '<(PRODUCT_DIR)/gn_unittests<(EXECUTABLE_SUFFIX)',

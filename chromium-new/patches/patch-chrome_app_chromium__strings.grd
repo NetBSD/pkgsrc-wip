@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/app/chromium_strings.grd.orig	2016-06-24 01:02:10.000000000 +0000
+--- chrome/app/chromium_strings.grd.orig	2016-11-10 20:02:09.000000000 +0000
 +++ chrome/app/chromium_strings.grd
-@@ -937,7 +937,7 @@ Signing in anyway will merge Chromium in
+@@ -938,7 +938,7 @@ Signing in anyway will merge Chromium in
        </message>
  
        <!-- ProcessSingleton -->

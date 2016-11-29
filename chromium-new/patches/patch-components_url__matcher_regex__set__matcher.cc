@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/url_matcher/regex_set_matcher.cc.orig	2016-06-24 01:02:19.000000000 +0000
+--- components/url_matcher/regex_set_matcher.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ components/url_matcher/regex_set_matcher.cc
 @@ -10,8 +10,13 @@
  #include "base/stl_util.h"

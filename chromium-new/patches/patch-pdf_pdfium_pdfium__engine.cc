@@ -1,8 +1,8 @@
 $NetBSD$
 
---- pdf/pdfium/pdfium_engine.cc.orig	2016-06-24 01:02:26.000000000 +0000
+--- pdf/pdfium/pdfium_engine.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ pdf/pdfium/pdfium_engine.cc
-@@ -121,7 +121,7 @@ std::vector<uint32_t> GetPageNumbersFrom
+@@ -123,7 +123,7 @@ std::vector<uint32_t> GetPageNumbersFrom
    return page_numbers;
  }
  
@@ -11,7 +11,7 @@ $NetBSD$
  
  PP_Instance g_last_instance_id;
  
-@@ -507,7 +507,7 @@ bool InitializeSDK() {
+@@ -509,7 +509,7 @@ bool InitializeSDK() {
    config.m_v8EmbedderSlot = gin::kEmbedderPDFium;
    FPDF_InitLibraryWithConfig(&config);
  
@@ -20,7 +20,7 @@ $NetBSD$
    // Font loading doesn't work in the renderer sandbox in Linux.
    FPDF_SetSystemFontInfo(&g_font_info);
  #endif
-@@ -620,7 +620,7 @@ PDFiumEngine::PDFiumEngine(PDFEngine::Cl
+@@ -622,7 +622,7 @@ PDFiumEngine::PDFiumEngine(PDFEngine::Cl
    IFSDK_PAUSE::user = nullptr;
    IFSDK_PAUSE::NeedToPauseNow = Pause_NeedToPauseNow;
  
@@ -29,7 +29,7 @@ $NetBSD$
    // PreviewModeClient does not know its pp::Instance.
    pp::Instance* instance = client_->GetPluginInstance();
    if (instance)
-@@ -1330,7 +1330,7 @@ pp::Buffer_Dev PDFiumEngine::PrintPagesA
+@@ -1331,7 +1331,7 @@ pp::Buffer_Dev PDFiumEngine::PrintPagesA
      FPDF_ClosePage(pdf_page);
    }
  
@@ -38,7 +38,7 @@ $NetBSD$
    g_last_instance_id = client_->GetPluginInstance()->pp_instance();
  #endif
  
-@@ -2692,7 +2692,7 @@ bool PDFiumEngine::ContinuePaint(int pro
+@@ -2736,7 +2736,7 @@ bool PDFiumEngine::ContinuePaint(int pro
    DCHECK_LT(static_cast<size_t>(progressive_index), progressive_paints_.size());
    DCHECK(image_data);
  
@@ -47,7 +47,7 @@ $NetBSD$
    g_last_instance_id = client_->GetPluginInstance()->pp_instance();
  #endif
  
-@@ -3146,7 +3146,7 @@ void PDFiumEngine::SetCurrentPage(int in
+@@ -3191,7 +3191,7 @@ void PDFiumEngine::SetCurrentPage(int in
      FORM_DoPageAAction(old_page, form_, FPDFPAGE_AACTION_CLOSE);
    }
    most_visible_page_ = index;

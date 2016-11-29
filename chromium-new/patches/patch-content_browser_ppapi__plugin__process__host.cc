@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/browser/ppapi_plugin_process_host.cc.orig	2016-06-24 01:02:20.000000000 +0000
+--- content/browser/ppapi_plugin_process_host.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/browser/ppapi_plugin_process_host.cc
-@@ -49,7 +49,7 @@
+@@ -52,7 +52,7 @@
  
  namespace content {
  
@@ -11,7 +11,7 @@ $NetBSD$
  ZygoteHandle g_ppapi_zygote;
  #endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
  
-@@ -113,7 +113,7 @@ class PpapiPluginSandboxedProcessLaunche
+@@ -119,7 +119,7 @@ class PpapiPluginSandboxedProcessLaunche
    }
  
  #elif defined(OS_POSIX)
@@ -20,7 +20,7 @@ $NetBSD$
    ZygoteHandle* GetZygote() override {
      const base::CommandLine& browser_command_line =
          *base::CommandLine::ForCurrentProcess();
-@@ -213,7 +213,7 @@ PpapiPluginProcessHost* PpapiPluginProce
+@@ -222,7 +222,7 @@ PpapiPluginProcessHost* PpapiPluginProce
    return NULL;
  }
  
@@ -29,3 +29,12 @@ $NetBSD$
  // static
  void PpapiPluginProcessHost::EarlyZygoteLaunch() {
    DCHECK(!g_ppapi_zygote);
+@@ -380,7 +380,7 @@ bool PpapiPluginProcessHost::Init(const 
+   base::CommandLine::StringType plugin_launcher =
+       browser_command_line.GetSwitchValueNative(switches::kPpapiPluginLauncher);
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+   int flags = plugin_launcher.empty() ? ChildProcessHost::CHILD_ALLOW_SELF :
+                                         ChildProcessHost::CHILD_NORMAL;
+ #else

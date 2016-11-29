@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/views/chrome_views_delegate.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/views/chrome_views_delegate.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/views/chrome_views_delegate.cc
-@@ -51,7 +51,7 @@
+@@ -56,7 +56,7 @@
  #include "ui/views/widget/native_widget_aura.h"
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD$
  #include "ui/views/linux_ui/linux_ui.h"
  #endif
  
-@@ -294,7 +294,7 @@ HICON ChromeViewsDelegate::GetSmallWindo
+@@ -305,7 +305,7 @@ HICON ChromeViewsDelegate::GetSmallWindo
    return GetSmallAppIcon();
  }
  
@@ -20,7 +20,7 @@ $NetBSD$
  gfx::ImageSkia* ChromeViewsDelegate::GetDefaultWindowIcon() const {
    ui::ResourceBundle& rb = ui::ResourceBundle::GetSharedInstance();
    return rb.GetImageSkiaNamed(IDR_PRODUCT_LOGO_64);
-@@ -426,7 +426,7 @@ void ChromeViewsDelegate::OnBeforeWidget
+@@ -444,7 +444,7 @@ void ChromeViewsDelegate::OnBeforeWidget
  #endif
  }
  

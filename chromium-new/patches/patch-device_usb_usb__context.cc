@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/usb/usb_context.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- device/usb/usb_context.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ device/usb/usb_context.cc
 @@ -9,8 +9,13 @@
  #include "base/macros.h"
@@ -20,7 +20,7 @@ $NetBSD$
  
  void UsbContext::UsbEventHandler::Stop() {
    base::subtle::Release_Store(&running_, 0);
-+#if !defined(OS_FREEBSD) && !defined(OS_NETBSD) // XXX(rene) not available in base version
++#if !defined(OS_FREEBSD) // XXX(rene) not available in base version
    libusb_interrupt_handle_event(context_);
 +#endif
  }

@@ -1,13 +1,13 @@
 $NetBSD$
 
---- ui/views/style/platform_style.cc.orig	2016-06-24 01:02:54.000000000 +0000
+--- ui/views/style/platform_style.cc.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/views/style/platform_style.cc
-@@ -55,7 +55,7 @@ scoped_ptr<ScrollBar> PlatformStyle::Cre
- }
+@@ -17,7 +17,7 @@
+ #include "ui/views/controls/focusable_border.h"
+ #include "ui/views/controls/scrollbar/native_scroll_bar.h"
+ 
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
++#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
+ #define DESKTOP_LINUX
  #endif
  
--#if !defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#if (!defined(OS_LINUX) && !defined(OS_BSD)) || defined(OS_CHROMEOS)
- // static
- scoped_ptr<Border> PlatformStyle::CreateThemedLabelButtonBorder(
-     LabelButton* button) {

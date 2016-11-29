@@ -1,8 +1,8 @@
 $NetBSD$
 
---- cc/trees/property_tree.cc.orig	2016-06-24 01:02:09.000000000 +0000
+--- cc/trees/property_tree.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ cc/trees/property_tree.cc
-@@ -1488,13 +1488,13 @@ gfx::ScrollOffset ScrollTree::MaxScrollO
+@@ -1300,13 +1300,13 @@ gfx::ScrollOffset ScrollTree::MaxScrollO
  
    gfx::Size clip_layer_bounds = scroll_clip_layer_bounds(scroll_node->id);
  

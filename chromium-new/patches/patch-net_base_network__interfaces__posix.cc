@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/base/network_interfaces_posix.cc.orig	2016-06-24 01:02:25.000000000 +0000
+--- net/base/network_interfaces_posix.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ net/base/network_interfaces_posix.cc
 @@ -20,6 +20,7 @@ namespace net {
  #if !defined(OS_NACL)

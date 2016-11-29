@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/process_iterator_freebsd.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/process/process_iterator_freebsd.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/process/process_iterator_freebsd.cc
 @@ -10,6 +10,10 @@
  #include <sys/sysctl.h>

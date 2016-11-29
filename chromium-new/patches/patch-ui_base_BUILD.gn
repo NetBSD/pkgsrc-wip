@@ -1,13 +1,63 @@
 $NetBSD$
 
---- ui/base/BUILD.gn.orig	2016-06-24 01:02:52.000000000 +0000
+--- ui/base/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/base/BUILD.gn
-@@ -433,7 +433,7 @@ component("base") {
-     deps += [ "//ui/gfx/x" ]
+@@ -347,7 +347,7 @@ component("base") {
+     sources += [ "touch/touch_device_android.cc" ]
+   } else if (is_ios) {
+     sources += [ "touch/touch_device_ios.cc" ]
+-  } else if (is_linux) {
++  } else if (is_linux || is_bsd) {
+     sources += [ "touch/touch_device_linux.cc" ]
+   } else {
+     # Empty implementation for all other cases.
+@@ -449,11 +449,11 @@ component("base") {
+     ]
    }
  
 -  if (!use_aura || !is_linux) {
-+  if (!use_aura) {
++  if (!use_aura || !(is_linux || is_bsd)) {
      sources -= [ "resource/resource_bundle_auralinux.cc" ]
    }
  
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//build/linux:fontconfig" ]
+   }
+ 
+@@ -461,7 +461,7 @@ component("base") {
+     configs += [ "//build/config/linux:glib" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     if (!toolkit_views && !use_aura) {
+       sources -= [
+         "dragdrop/drag_utils.cc",
+@@ -794,7 +794,7 @@ test("ui_base_unittests") {
+       "ime/win/imm32_manager_unittest.cc",
+       "ime/win/tsf_input_scope_unittest.cc",
+     ]
+-    if (is_linux && use_aura && !is_chromeos) {
++    if ((is_linux || is_bsd) && use_aura && !is_chromeos) {
+       sources += [ "ime/input_method_auralinux_unittest.cc" ]
+     }
+     if (use_x11) {
+@@ -917,7 +917,7 @@ test("ui_base_unittests") {
+     ]
+   }
+ 
+-  if (is_android || is_linux || is_mac || is_win) {
++  if (is_android || is_linux || is_bsd || is_mac || is_win) {
+     # TODO(brettw): We should be able to depend on //ui/resources:ui_test_pak
+     # instead of depending directly on the non-test .pak files, but depending
+     # on ui_test_pak seems to have no effect.
+@@ -930,7 +930,7 @@ test("ui_base_unittests") {
+       "//third_party/mesa:osmesa",
+     ]
+   }
+-  if (is_linux || is_win) {
++  if (is_linux || is_bsd || is_win) {
+     data += [
+       # TODO(brettw): Remove these two lines.
+       "$root_out_dir/ui/en-US.pak",

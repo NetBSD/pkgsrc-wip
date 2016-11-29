@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/common/set_process_title_linux.cc.orig	2016-06-24 01:02:21.000000000 +0000
+--- content/common/set_process_title_linux.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/common/set_process_title_linux.cc
 @@ -49,6 +49,8 @@
  extern char** environ;

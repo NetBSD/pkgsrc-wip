@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- components/policy/BUILD.gn.orig	2016-11-10 20:02:13.000000000 +0000
++++ components/policy/BUILD.gn
+@@ -108,7 +108,7 @@ if (enable_configuration_policy) {
+     if (is_android) {
+       outputs += policy_templates_android_outputs
+     }
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       outputs += policy_templates_linux_outputs
+     }
+     if (is_mac) {

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/webui/resources/js/cr.js.orig	2016-06-24 01:02:54.000000000 +0000
+--- ui/webui/resources/js/cr.js.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/webui/resources/js/cr.js
 @@ -451,6 +451,11 @@ var cr = cr || function() {
      get doc() {

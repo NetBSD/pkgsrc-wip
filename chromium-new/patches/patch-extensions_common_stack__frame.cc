@@ -1,6 +1,6 @@
 $NetBSD$
 
---- extensions/common/stack_frame.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- extensions/common/stack_frame.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ extensions/common/stack_frame.cc
 @@ -7,7 +7,11 @@
  #include <string>

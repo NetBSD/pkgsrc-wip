@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/webui/extensions/extension_loader_handler.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/webui/extensions/extension_loader_handler.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/webui/extensions/extension_loader_handler.cc
-@@ -25,7 +25,11 @@
+@@ -27,7 +27,11 @@
  #include "extensions/common/constants.h"
  #include "extensions/common/extension.h"
  #include "extensions/common/manifest_constants.h"

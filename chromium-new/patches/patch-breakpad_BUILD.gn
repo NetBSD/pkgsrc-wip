@@ -1,0 +1,23 @@
+$NetBSD$
+
+--- breakpad/BUILD.gn.orig	2016-11-10 20:02:09.000000000 +0000
++++ breakpad/BUILD.gn
+@@ -433,7 +433,7 @@ if (is_mac) {
+   }
+ }
+ 
+-if (is_linux || is_android) {
++if (is_linux || is_bsd || is_android) {
+   if (current_toolchain == host_toolchain) {
+     executable("symupload") {
+       sources = [
+@@ -451,7 +451,9 @@ if (is_linux || is_android) {
+ 
+       configs += [ ":tools_config" ]
+ 
++    if (is_linux || is_android) {
+       libs = [ "dl" ]
++    }
+ 
+       deps = [
+         "//build/config/sanitizers:deps",

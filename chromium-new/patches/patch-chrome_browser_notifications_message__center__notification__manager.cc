@@ -1,9 +1,9 @@
 $NetBSD$
 
---- chrome/browser/notifications/message_center_notification_manager.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/notifications/message_center_notification_manager.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/notifications/message_center_notification_manager.cc
-@@ -75,7 +75,7 @@ MessageCenterNotificationManager::Messag
-       new FullscreenNotificationBlocker(message_center)));
+@@ -67,7 +67,7 @@ MessageCenterNotificationManager::Messag
+       base::WrapUnique(new FullscreenNotificationBlocker(message_center)));
  
  #if defined(OS_WIN) || defined(OS_MACOSX) \
 -  || (defined(OS_LINUX) && !defined(OS_CHROMEOS))

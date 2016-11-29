@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- gpu/gles2_conform_support/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
++++ gpu/gles2_conform_support/BUILD.gn
+@@ -61,7 +61,7 @@ executable("gles2_conform_support") {
+     "//gpu/gles2_conform_support/egl",
+     "//ui/gl",
+   ]
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "native/egl_native_aura.cc",
+       "native/egl_native_x11.cc",
+@@ -131,7 +131,7 @@ if (internal_gles2_conform_tests) {
+       # Must be done this way for warning flags to be ordered correctly.
+       ":gles2_conform_test_warnings",
+     ]
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       if (!is_chromeos) {
+         deps += [ "//build/config/linux/gtk2" ]
+       }

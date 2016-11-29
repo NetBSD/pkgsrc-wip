@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/web_applications/web_app.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/web_applications/web_app.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/web_applications/web_app.cc
-@@ -514,7 +514,7 @@ void GetIconsInfo(const WebApplicationIn
+@@ -507,7 +507,7 @@ void GetIconsInfo(const WebApplicationIn
  }
  #endif
  

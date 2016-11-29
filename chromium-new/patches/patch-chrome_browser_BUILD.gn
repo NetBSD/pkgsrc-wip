@@ -1,0 +1,54 @@
+$NetBSD$
+
+--- chrome/browser/BUILD.gn.orig	2016-11-10 20:02:10.000000000 +0000
++++ chrome/browser/BUILD.gn
+@@ -536,7 +536,7 @@ split_static_library("browser") {
+     deps += [ "//device/udev_linux" ]
+   }
+ 
+-  if (is_linux && !is_chromeos) {
++  if ((is_linux || is_bsd) && !is_chromeos) {
+     deps += [ "//third_party/speech-dispatcher" ]
+   }
+ 
+@@ -727,6 +727,22 @@ split_static_library("browser") {
+     sources += rebase_path(gypi_values.chrome_browser_non_mobile_sources,
+                            ".",
+                            "//chrome")
++    if (is_bsd) {
++      sources -= [
++        "media_galleries/linux/mtp_device_delegate_impl_linux.cc",
++        "media_galleries/linux/mtp_device_delegate_impl_linux.h",
++        "media_galleries/linux/mtp_device_object_enumerator.cc",
++        "media_galleries/linux/mtp_device_object_enumerator.h",
++        "media_galleries/linux/mtp_device_task_helper.cc",
++        "media_galleries/linux/mtp_device_task_helper.h",
++        "media_galleries/linux/mtp_device_task_helper_map_service.cc",
++        "media_galleries/linux/mtp_device_task_helper_map_service.h",
++        "media_galleries/linux/mtp_read_file_worker.cc",
++        "media_galleries/linux/mtp_read_file_worker.h",
++        "media_galleries/linux/snapshot_file_details.cc",
++        "media_galleries/linux/snapshot_file_details.h",
++      ]
++    }
+   }
+ 
+   if (!is_chrome_branded) {
+@@ -854,7 +870,7 @@ split_static_library("browser") {
+     }
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     if (use_aura) {
+       deps += [ "//build/linux:fontconfig" ]
+       if (use_dbus) {
+@@ -867,7 +883,7 @@ split_static_library("browser") {
+     }
+   }
+ 
+-  if (is_linux || is_win) {
++  if (is_linux || is_bsd || is_win) {
+     sources += rebase_path(gypi_values.chrome_browser_non_mac_desktop_sources,
+                            ".",
+                            "//chrome")

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/cookie_config/cookie_store_util.cc.orig	2016-06-24 01:02:17.000000000 +0000
+--- components/cookie_config/cookie_store_util.cc.orig	2016-11-10 20:02:13.000000000 +0000
 +++ components/cookie_config/cookie_store_util.cc
 @@ -11,7 +11,7 @@
  

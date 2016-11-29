@@ -1,8 +1,8 @@
 $NetBSD$
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2016-06-24 01:02:23.000000000 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2016-11-10 20:02:15.000000000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
-@@ -129,7 +129,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -135,7 +135,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;
  
    // Loop through the sound cards to get ALSA device hints.
@@ -12,7 +12,7 @@ $NetBSD$
      void** hints = NULL;
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
-@@ -141,7 +143,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -147,7 +149,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
        DLOG(WARNING) << "GetAlsaAudioDevices: unable to get device hints: "
                      << wrapper_->StrError(error);
      }
@@ -22,7 +22,7 @@ $NetBSD$
  }
  
  void AudioManagerAlsa::GetAlsaDevicesInfo(
-@@ -227,7 +231,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
+@@ -230,7 +234,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
      // goes through software conversion if needed (e.g. incompatible
      // sample rate).
      // TODO(joi): Should we prefer "hw" instead?
@@ -34,7 +34,7 @@ $NetBSD$
      return strncmp(kDeviceTypeDesired,
                     device_name,
                     arraysize(kDeviceTypeDesired) - 1) == 0;
-@@ -251,7 +259,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+@@ -254,7 +262,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
    // Loop through the sound cards.
    // Don't use snd_device_name_hint(-1,..) since there is a access violation
    // inside this ALSA API with libasound.so.2.0.0.
@@ -44,7 +44,7 @@ $NetBSD$
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
        for (void** hint_iter = hints; *hint_iter != NULL; hint_iter++) {
-@@ -275,7 +285,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+@@ -278,7 +288,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
        DLOG(WARNING) << "HasAnyAudioDevice: unable to get device hints: "
                      << wrapper_->StrError(error);
      }

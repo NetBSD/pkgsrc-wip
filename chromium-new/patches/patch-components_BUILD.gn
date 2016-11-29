@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- components/BUILD.gn.orig	2016-11-10 20:02:13.000000000 +0000
++++ components/BUILD.gn
+@@ -173,8 +173,8 @@ test("components_unittests") {
+       "//components/cast_certificate:unit_tests",
+       "//components/certificate_reporting:unit_tests",
+       "//components/certificate_transparency:unit_tests",
+-      "//components/crash/content/app:unit_tests",
+-      "//components/crash/core/common:unit_tests",
++      #"//components/crash/content/app:unit_tests",
++      #"//components/crash/core/common:unit_tests",
+       "//components/data_reduction_proxy/content/browser:unit_tests",
+       "//components/data_use_measurement/content:unit_tests",
+       "//components/devtools_http_handler:unit_tests",

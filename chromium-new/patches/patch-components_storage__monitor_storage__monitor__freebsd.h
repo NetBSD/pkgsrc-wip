@@ -1,8 +1,8 @@
 $NetBSD$
 
---- components/storage_monitor/storage_monitor_freebsd.h.orig	2016-07-10 13:25:12.308178834 +0000
+--- components/storage_monitor/storage_monitor_freebsd.h.orig	2016-11-12 02:51:25.408237260 +0000
 +++ components/storage_monitor/storage_monitor_freebsd.h
-@@ -0,0 +1,46 @@
+@@ -0,0 +1,45 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -22,7 +22,6 @@ $NetBSD$
 +#include "base/compiler_specific.h"
 +#include "base/files/file_path.h"
 +#include "base/files/file_path_watcher.h"
-+#include "base/memory/scoped_ptr.h"
 +#include "base/memory/weak_ptr.h"
 +#include "components/storage_monitor/storage_monitor.h"
 +#include "content/public/browser/browser_thread.h"

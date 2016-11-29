@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/app/resources/locale_settings.grd.orig	2016-06-24 01:02:11.000000000 +0000
+--- chrome/app/resources/locale_settings.grd.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/app/resources/locale_settings.grd
 @@ -156,7 +156,7 @@
          55

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/gpu/gpu_feature_checker.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/gpu/gpu_feature_checker.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/gpu/gpu_feature_checker.cc
 @@ -34,7 +34,7 @@ void GPUFeatureChecker::CheckGPUFeatureA
    CHECK(content::BrowserThread::CurrentlyOn(content::BrowserThread::UI));

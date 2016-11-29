@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/browser/time_zone_monitor_linux.cc.orig	2016-06-24 01:02:20.000000000 +0000
+--- content/browser/time_zone_monitor_linux.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/browser/time_zone_monitor_linux.cc
 @@ -53,6 +53,9 @@ class TimeZoneMonitorLinuxImpl
        : base::RefCountedThreadSafe<TimeZoneMonitorLinuxImpl>(),

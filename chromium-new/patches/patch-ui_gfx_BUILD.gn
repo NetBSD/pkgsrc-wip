@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- ui/gfx/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
++++ ui/gfx/BUILD.gn
+@@ -376,7 +376,7 @@ component("gfx") {
+   }
+ 
+   # Linux.
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//build/linux:fontconfig" ]
+   }
+ 
+@@ -577,7 +577,7 @@ static_library("test_support") {
+       "test/ui_cocoa_test_helper.mm",
+     ]
+   }
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//build/linux:fontconfig" ]
+   }
+ }

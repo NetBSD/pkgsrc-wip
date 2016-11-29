@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- device/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
++++ device/BUILD.gn
+@@ -173,7 +173,7 @@ test("device_unittests") {
+     ]
+   }
+ 
+-  if ((is_chromeos || is_linux) && use_dbus) {
++  if ((is_chromeos || is_linux || is_bsd) && use_dbus) {
+     configs += [ "//build/config/linux/dbus" ]
+ 
+     sources += [

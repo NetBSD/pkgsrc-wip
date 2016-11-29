@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/webui/about_ui.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/webui/about_ui.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/webui/about_ui.cc
-@@ -73,7 +73,7 @@
+@@ -75,7 +75,7 @@
  #include "chrome/browser/ui/webui/theme_source.h"
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD$
  #include "content/public/browser/zygote_host_linux.h"
  #include "content/public/common/sandbox_linux.h"
  #endif
-@@ -642,7 +642,7 @@ class AboutDnsHandler : public base::Ref
+@@ -644,7 +644,7 @@ class AboutDnsHandler : public base::Ref
    DISALLOW_COPY_AND_ASSIGN(AboutDnsHandler);
  };
  
@@ -20,7 +20,7 @@ $NetBSD$
  std::string AboutLinuxProxyConfig() {
    std::string data;
    AppendHeader(&data, 0,
-@@ -658,6 +658,7 @@ std::string AboutLinuxProxyConfig() {
+@@ -660,6 +660,7 @@ std::string AboutLinuxProxyConfig() {
    return data;
  }
  
@@ -28,15 +28,31 @@ $NetBSD$
  void AboutSandboxRow(std::string* data, int name_id, bool good) {
    data->append("<tr><td>");
    data->append(l10n_util::GetStringUTF8(name_id));
-@@ -759,6 +760,7 @@ void AboutUIHTMLSource::StartDataRequest
-     else if (path == kKeyboardUtilsPath)
-       idr = IDR_KEYBOARD_UTILS_JS;
- #endif
+@@ -674,6 +675,7 @@ void AboutSandboxRow(std::string* data, 
+   }
+   data->append("</td></tr>");
+ }
 +#endif
  
-     response = ResourceBundle::GetSharedInstance().GetRawDataResource(
-         idr).as_string();
-@@ -769,7 +771,7 @@ void AboutUIHTMLSource::StartDataRequest
+ std::string AboutSandbox() {
+   std::string data;
+@@ -683,6 +685,7 @@ std::string AboutSandbox() {
+   data.append(l10n_util::GetStringUTF8(IDS_ABOUT_SANDBOX_TITLE));
+   data.append("</h1>");
+ 
++#if !defined(OS_BSD)
+   // Get expected sandboxing status of renderers.
+   const int status =
+       content::ZygoteHost::GetInstance()->GetRendererSandboxStatus();
+@@ -723,6 +726,7 @@ std::string AboutSandbox() {
+     data.append(l10n_util::GetStringUTF8(IDS_ABOUT_SANDBOX_BAD));
+   }
+   data.append("</p>");
++#endif
+ 
+   AppendFooter(&data);
+   return data;
+@@ -788,7 +792,7 @@ void AboutUIHTMLSource::StartDataRequest
    } else if (source_name_ == chrome::kChromeUIDNSHost) {
      AboutDnsHandler::Start(profile(), callback);
      return;
@@ -45,12 +61,12 @@ $NetBSD$
    } else if (source_name_ == chrome::kChromeUILinuxProxyConfigHost) {
      response = AboutLinuxProxyConfig();
  #endif
-@@ -778,7 +780,7 @@ void AboutUIHTMLSource::StartDataRequest
+@@ -797,7 +801,7 @@ void AboutUIHTMLSource::StartDataRequest
      ChromeOSCreditsHandler::Start(path, callback);
      return;
  #endif
 -#if defined(OS_LINUX) || defined(OS_OPENBSD)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_FREEBSD) && !defined(OS_NETBSD)
++#if defined(OS_LINUX) || defined(OS_BSD)
    } else if (source_name_ == chrome::kChromeUISandboxHost) {
      response = AboutSandbox();
  #endif

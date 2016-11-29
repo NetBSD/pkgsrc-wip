@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- base/third_party/libevent/BUILD.gn.orig	2016-11-10 20:02:09.000000000 +0000
++++ base/third_party/libevent/BUILD.gn
+@@ -29,6 +29,12 @@ static_library("libevent") {
+   } else if (is_linux) {
+     sources += [ "epoll.c" ]
+     include_dirs = [ "linux" ]
++  } else if (is_freebsd) {
++    sources += [ "kqueue.c" ]
++    include_dirs = [ "freebsd" ]
++  } else if (is_netbsd) {
++    sources += [ "kqueue.c" ]
++    include_dirs = [ "netbsd" ]
+   } else if (is_android) {
+     sources += [ "epoll.c" ]
+     include_dirs = [ "android" ]

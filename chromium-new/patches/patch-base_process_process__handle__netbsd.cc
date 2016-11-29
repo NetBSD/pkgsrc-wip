@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/process/process_handle_netbsd.cc.orig	2016-07-22 03:20:51.176420341 +0000
+--- base/process/process_handle_netbsd.cc.orig	2016-11-16 08:03:06.205887318 +0000
 +++ base/process/process_handle_netbsd.cc
-@@ -0,0 +1,67 @@
+@@ -0,0 +1,66 @@
 +// Copyright (c) 2011 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -42,7 +42,6 @@ $NetBSD$
 +}
 +
 +FilePath GetProcessExecutablePath(ProcessHandle process) {
-+  struct kinfo_proc2 info;
 +  size_t size = sizeof(struct kinfo_proc2);
 +  int mib[4];
 +  int ret;

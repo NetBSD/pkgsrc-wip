@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- third_party/swiftshader/third_party/LLVM/utils/buildit/build_llvm.orig	2016-11-10 20:03:06.000000000 +0000
++++ third_party/swiftshader/third_party/LLVM/utils/buildit/build_llvm
+@@ -187,7 +187,7 @@ make $LOCAL_MAKEFLAGS $OPTIMIZE_OPTS UNI
+     LLVM_SUBMIT_SUBVERSION=$LLVM_SUBMIT_SUBVERSION \
+     OPTIMIZE_OPTION='-O3' VERBOSE=1 install
+ 
+-if ! test $? == 0 ; then
++if ! test $? = 0 ; then
+     echo "error: LLVM 'make install' failed!"
+     exit 1
+ fi 
+@@ -305,7 +305,7 @@ if [ "$INSTALL_LIBLTO" = "yes" ]; then
+   # PPC objects!
+   $STRIP -arch all -Sl $DT_HOME/lib/libLTO.dylib
+ 
+-  if [ "x$DISABLE_USR_LINKS" == "x" ]; then
++  if [ "x$DISABLE_USR_LINKS" = "x" ]; then
+     # Add a symlink in /usr/lib for B&I.
+     mkdir -p $DEST_DIR/usr/lib/
+     (cd $DEST_DIR/usr/lib && \

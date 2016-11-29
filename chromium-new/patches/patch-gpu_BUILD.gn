@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- gpu/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
++++ gpu/BUILD.gn
+@@ -123,7 +123,7 @@ test("command_buffer_gles2_tests") {
+     libs += [ "android" ]
+     deps += [ "//ui/android:ui_java" ]
+   }
+-  if (is_linux && !is_component_build) {
++  if ((is_linux || is_bsd) && !is_component_build) {
+     configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+   }
+ }

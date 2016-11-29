@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/message_center/message_center_style.h.orig	2016-06-24 01:02:53.000000000 +0000
+--- ui/message_center/message_center_style.h.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/message_center/message_center_style.h
-@@ -111,7 +111,7 @@ const int kButtonHorizontalPadding = 16;
+@@ -115,7 +115,7 @@ const int kButtonHorizontalPadding = 16;
  const int kButtonIconTopPadding = 11;      // In DIPs.
  const int kButtonIconToTitlePadding = 16;  // In DIPs.
  

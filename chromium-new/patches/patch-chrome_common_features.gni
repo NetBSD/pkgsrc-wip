@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- chrome/common/features.gni.orig	2016-11-10 20:02:11.000000000 +0000
++++ chrome/common/features.gni
+@@ -22,7 +22,7 @@ declare_args() {
+   enable_background = !is_ios && !is_android && !is_chromecast
+ 
+   enable_one_click_signin =
+-      is_win || is_mac || (is_linux && !is_chromeos && !is_chromecast)
++      is_win || is_mac || is_bsd || (is_linux && !is_chromeos && !is_chromecast)
+ 
+   # Google Now is disabled to prepare for its removal.
+   # http://crbug.com/539674

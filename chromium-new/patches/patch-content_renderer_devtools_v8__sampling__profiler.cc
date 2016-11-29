@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/renderer/devtools/v8_sampling_profiler.cc.orig	2016-06-24 01:02:21.000000000 +0000
+--- content/renderer/devtools/v8_sampling_profiler.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/renderer/devtools/v8_sampling_profiler.cc
-@@ -548,6 +548,14 @@ void V8SamplingThread::HandleProfilerSig
+@@ -547,6 +547,14 @@ void V8SamplingThread::HandleProfilerSig
    state.pc = reinterpret_cast<void*>(mcontext->__ss.REG_64_32(__rip, __eip));
    state.sp = reinterpret_cast<void*>(mcontext->__ss.REG_64_32(__rsp, __esp));
    state.fp = reinterpret_cast<void*>(mcontext->__ss.REG_64_32(__rbp, __ebp));

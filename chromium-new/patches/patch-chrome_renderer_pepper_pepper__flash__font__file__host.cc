@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/renderer/pepper/pepper_flash_font_file_host.cc.orig	2016-06-24 01:02:15.000000000 +0000
+--- chrome/renderer/pepper/pepper_flash_font_file_host.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/renderer/pepper/pepper_flash_font_file_host.cc
 @@ -14,7 +14,7 @@
  #include "ppapi/proxy/ppapi_messages.h"
@@ -21,8 +21,8 @@ $NetBSD$
        description.face,
        description.weight >= PP_BROWSERFONT_TRUSTED_WEIGHT_BOLD,
 @@ -44,7 +44,7 @@ PepperFlashFontFileHost::PepperFlashFont
-   skia::RefPtr<SkFontMgr> font_mgr = skia::AdoptRef(SkFontMgr::RefDefault());
-   typeface_ = skia::AdoptRef(
+   sk_sp<SkFontMgr> font_mgr(SkFontMgr::RefDefault());
+   typeface_ = sk_sp<SkTypeface>(
        font_mgr->matchFamilyStyle(description.face.c_str(), style));
 -#endif  // defined(OS_LINUX) || defined(OS_OPENBSD)
 +#endif  // defined(OS_LINUX) || defined(OS_BSD)

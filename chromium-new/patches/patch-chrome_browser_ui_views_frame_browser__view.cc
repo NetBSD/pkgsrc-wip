@@ -1,9 +1,9 @@
 $NetBSD$
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
-@@ -187,7 +187,7 @@
- #include "content/public/common/mojo_shell_connection.h"
+@@ -180,7 +180,7 @@
+ #include "chrome/browser/ui/views/sync/one_click_signin_dialog_view.h"
  #endif
  
 -#if defined(OS_LINUX)
@@ -11,7 +11,7 @@ $NetBSD$
  #include "ui/native_theme/native_theme_dark_aura.h"
  #endif
  
-@@ -1977,7 +1977,7 @@ void BrowserView::OnThemeChanged() {
+@@ -1990,7 +1990,7 @@ void BrowserView::OnThemeChanged() {
  #if defined(OS_WIN)
      ui::NativeThemeDarkWin::instance()->NotifyObservers();
      ui::NativeThemeWin::instance()->NotifyObservers();

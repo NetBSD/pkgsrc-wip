@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/download/chrome_download_manager_delegate.cc
-@@ -736,7 +736,7 @@ void ChromeDownloadManagerDelegate::OnDo
+@@ -774,7 +774,7 @@ void ChromeDownloadManagerDelegate::OnDo
          target_info->is_filetype_handled_safely)
        DownloadItemModel(item).SetShouldPreferOpeningInBrowser(true);
  
@@ -11,7 +11,7 @@ $NetBSD$
      if (item->GetOriginalMimeType() == "application/x-x509-user-cert")
        DownloadItemModel(item).SetShouldPreferOpeningInBrowser(true);
  #endif
-@@ -751,7 +751,7 @@ void ChromeDownloadManagerDelegate::OnDo
+@@ -789,7 +789,7 @@ void ChromeDownloadManagerDelegate::OnDo
  
  bool ChromeDownloadManagerDelegate::IsOpenInBrowserPreferreredForFile(
      const base::FilePath& path) {

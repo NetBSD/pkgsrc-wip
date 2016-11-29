@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
-@@ -57,12 +57,14 @@ void ChromeBrowserMainPartsLinux::PrePro
+@@ -75,12 +75,14 @@ void ChromeBrowserMainPartsLinux::PrePro
  void ChromeBrowserMainPartsLinux::PostProfileInit() {
    ChromeBrowserMainPartsPosix::PostProfileInit();
  
@@ -18,7 +18,7 @@ $NetBSD$
    bluez::DBusThreadManagerLinux::Initialize();
    bluez::BluezDBusManager::Initialize(
        bluez::DBusThreadManagerLinux::Get()->GetSystemBus(), false);
-@@ -72,7 +74,7 @@ void ChromeBrowserMainPartsLinux::PostMa
+@@ -90,7 +92,7 @@ void ChromeBrowserMainPartsLinux::PostMa
  }
  
  void ChromeBrowserMainPartsLinux::PostDestroyThreads() {

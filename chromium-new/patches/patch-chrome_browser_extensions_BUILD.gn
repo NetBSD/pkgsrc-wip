@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- chrome/browser/extensions/BUILD.gn.orig	2016-11-10 20:02:10.000000000 +0000
++++ chrome/browser/extensions/BUILD.gn
+@@ -186,7 +186,7 @@ static_library("extensions") {
+     sources -= [ "global_shortcut_listener_ozone.cc" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//build/linux:fontconfig" ]
+ 
+     if (use_dbus) {
+@@ -252,6 +252,12 @@ static_library("extensions") {
+     defines += [ "ENABLE_HOTWORDING" ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "api/image_writer_private/removable_storage_provider_linux.cc",
++    ]
++  }
++
+   if (enable_service_discovery) {
+     sources += rebase_path(
+             gypi_values.chrome_browser_extensions_service_discovery_sources,

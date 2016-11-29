@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/sync/chrome_sync_client.cc.orig	2016-06-24 01:02:13.000000000 +0000
+--- chrome/browser/sync/chrome_sync_client.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/sync/chrome_sync_client.cc
-@@ -577,7 +577,7 @@ void ChromeSyncClient::RegisterDesktopDa
+@@ -573,7 +573,7 @@ void ChromeSyncClient::RegisterDesktopDa
    }
  #endif
  

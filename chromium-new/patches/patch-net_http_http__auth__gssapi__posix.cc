@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/http/http_auth_gssapi_posix.cc.orig	2016-06-24 01:02:25.000000000 +0000
+--- net/http/http_auth_gssapi_posix.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ net/http/http_auth_gssapi_posix.cc
 @@ -431,8 +431,8 @@ base::NativeLibrary GSSAPISharedLibrary:
      static const char* const kDefaultLibraryNames[] = {

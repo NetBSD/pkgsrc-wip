@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/browser/accessibility/browser_accessibility.h.orig	2016-06-24 01:02:20.000000000 +0000
+--- content/browser/accessibility/browser_accessibility.h.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility.h
 @@ -38,7 +38,7 @@
  #define PLATFORM_HAS_NATIVE_ACCESSIBILITY_IMPL 1

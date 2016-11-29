@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ppapi/shared_impl/private/net_address_private_impl.cc.orig	2016-06-24 01:02:26.000000000 +0000
+--- ppapi/shared_impl/private/net_address_private_impl.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ ppapi/shared_impl/private/net_address_private_impl.cc
 @@ -26,9 +26,12 @@
  #include <arpa/inet.h>

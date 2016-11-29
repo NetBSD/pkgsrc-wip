@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/libyuv/include/libyuv/row.h.orig	2016-06-24 01:03:54.000000000 +0000
+--- third_party/libyuv/include/libyuv/row.h.orig	2016-11-10 20:03:02.000000000 +0000
 +++ third_party/libyuv/include/libyuv/row.h
-@@ -160,10 +160,14 @@ extern "C" {
+@@ -167,10 +167,14 @@ extern "C" {
  #define HAS_ARGBSHADEROW_SSE2
  #define HAS_ARGBSUBTRACTROW_SSE2
  #define HAS_ARGBUNATTENUATEROW_SSE2
@@ -17,7 +17,7 @@ $NetBSD$
  #define HAS_RGBCOLORTABLEROW_X86
  #define HAS_SOBELROW_SSE2
  #define HAS_SOBELTOPLANEROW_SSE2
-@@ -173,8 +177,7 @@ extern "C" {
+@@ -180,8 +184,7 @@ extern "C" {
  
  // The following functions fail on gcc/clang 32 bit with fpic and framepointer.
  // caveat: clangcl uses row_win.cc which works.
@@ -27,7 +27,7 @@ $NetBSD$
  // TODO(fbarchard): fix build error on x86 debug
  // https://code.google.com/p/libyuv/issues/detail?id=524
  #define HAS_I411TOARGBROW_SSSE3
-@@ -202,7 +205,7 @@ extern "C" {
+@@ -209,7 +212,7 @@ extern "C" {
  #define HAS_COPYROW_AVX
  #define HAS_H422TOARGBROW_AVX2
  #define HAS_I400TOARGBROW_AVX2
@@ -36,7 +36,7 @@ $NetBSD$
  // TODO(fbarchard): fix build error on android_full_debug=1
  // https://code.google.com/p/libyuv/issues/detail?id=517
  #define HAS_I422ALPHATOARGBROW_AVX2
-@@ -215,7 +218,9 @@ extern "C" {
+@@ -222,7 +225,9 @@ extern "C" {
  #define HAS_I422TORGB565ROW_AVX2
  #define HAS_I422TORGBAROW_AVX2
  #define HAS_I444TOARGBROW_AVX2
@@ -46,7 +46,7 @@ $NetBSD$
  #define HAS_J422TOARGBROW_AVX2
  #define HAS_MERGEUVROW_AVX2
  #define HAS_MIRRORROW_AVX2
-@@ -238,8 +243,10 @@ extern "C" {
+@@ -245,8 +250,10 @@ extern "C" {
  #define HAS_ARGBMULTIPLYROW_AVX2
  #define HAS_ARGBSUBTRACTROW_AVX2
  #define HAS_ARGBUNATTENUATEROW_AVX2

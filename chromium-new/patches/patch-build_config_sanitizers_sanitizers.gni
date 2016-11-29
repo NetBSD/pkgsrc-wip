@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- build/config/sanitizers/sanitizers.gni.orig	2016-11-10 20:02:09.000000000 +0000
++++ build/config/sanitizers/sanitizers.gni
+@@ -53,8 +53,8 @@ declare_args() {
+   # See http://clang.llvm.org/docs/ControlFlowIntegrity.html
+   #
+   # TODO(pcc): Remove this flag if/when CFI is enabled in all official builds.
+-  is_cfi = target_os == "linux" && !is_chromeos && target_cpu == "x64" &&
+-           is_chrome_branded && is_official_build
++  is_cfi = (target_os == "linux" || target_os == "bsd") && !is_chromeos &&
++           target_cpu == "x64" && is_chrome_branded && is_official_build
+ 
+   # Enable checks for bad casts: derived cast and unrelated cast.
+   # TODO(krasin): remove this, when we're ready to add these checks by default.

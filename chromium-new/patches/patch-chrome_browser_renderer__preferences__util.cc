@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/renderer_preferences_util.cc.orig	2016-06-24 01:02:13.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
-@@ -15,7 +15,7 @@
+@@ -18,7 +18,7 @@
  #include "content/public/common/webrtc_ip_handling_policy.h"
  #include "third_party/skia/include/core/SkColor.h"
  
@@ -11,7 +11,7 @@ $NetBSD$
  #include "ui/gfx/font_render_params.h"
  #endif
  
-@@ -27,7 +27,7 @@
+@@ -26,7 +26,7 @@
  #include "ui/views/controls/textfield/textfield.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include "chrome/browser/themes/theme_service.h"
  #include "chrome/browser/themes/theme_service_factory.h"
  #include "ui/views/linux_ui/linux_ui.h"
-@@ -95,7 +95,7 @@ void UpdateFromSystemSettings(content::R
+@@ -120,7 +120,7 @@ void UpdateFromSystemSettings(content::R
    prefs->caret_blink_interval = views::Textfield::GetCaretBlinkMs() / 1000.0;
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD$
    views::LinuxUI* linux_ui = views::LinuxUI::instance();
    if (linux_ui) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
-@@ -117,7 +117,7 @@ void UpdateFromSystemSettings(content::R
+@@ -142,7 +142,7 @@ void UpdateFromSystemSettings(content::R
    }
  #endif
  

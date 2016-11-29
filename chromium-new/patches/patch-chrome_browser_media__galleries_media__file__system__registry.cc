@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/media_galleries/media_file_system_registry.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/media_galleries/media_file_system_registry.cc
 @@ -757,7 +757,10 @@ class MediaFileSystemRegistry::MediaFile
  // Constructor in 'private' section because depends on private class definition.

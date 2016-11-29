@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- media/capture/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
++++ media/capture/BUILD.gn
+@@ -111,6 +111,16 @@ component("capture") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "video/linux/video_capture_device_linux.cc",
++      "video/linux/video_capture_device_linux.h",
++      "video/linux/video_capture_device_factory_linux.cc",
++      "video/linux/video_capture_device_factory_linux.h",
++      "video/linux/v4l2_capture_delegate.cc",
++    ]
++  }
++
+   if (is_win) {
+     deps += [
+       "//media/base",  # For media_switches.

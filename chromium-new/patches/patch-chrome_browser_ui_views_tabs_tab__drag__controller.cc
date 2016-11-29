@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/views/tabs/tab_drag_controller.cc
-@@ -269,7 +269,7 @@ void TabDragController::Init(
+@@ -281,7 +281,7 @@ void TabDragController::Init(
    //     synchronous on desktop Linux, so use that.
    // - Ash
    //     Releasing capture on Ash cancels gestures so avoid it.
@@ -11,7 +11,7 @@ $NetBSD$
    can_release_capture_ = false;
  #endif
    start_point_in_screen_ = gfx::Point(source_tab_offset, mouse_offset.y());
-@@ -627,7 +627,7 @@ TabDragController::DragBrowserToNewTabSt
+@@ -631,7 +631,7 @@ TabDragController::DragBrowserToNewTabSt
      // that to effect the position of any windows.
      SetWindowPositionManaged(browser_widget->GetNativeWindow(), false);
  
@@ -20,7 +20,7 @@ $NetBSD$
      // EndMoveLoop is going to snap the window back to its original location.
      // Hide it so users don't see this. Hiding a window in Linux aura causes
      // it to lose capture so skip it.
-@@ -1817,7 +1817,7 @@ TabDragController::Liveness TabDragContr
+@@ -1830,7 +1830,7 @@ TabDragController::Liveness TabDragContr
      if (dragged_window)
        exclude.insert(dragged_window);
    }

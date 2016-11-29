@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- services/ui/ws/BUILD.gn.orig	2016-11-10 20:02:16.000000000 +0000
++++ services/ui/ws/BUILD.gn
+@@ -103,6 +103,11 @@ static_library("lib") {
+     "window_tree_host_factory.h",
+   ]
+ 
++  # Work around base r261801
++  if (is_bsd) {
++    defines = ["_LIBCPP_TRIVIAL_PAIR_COPY_CTOR=1"]
++  }
++
+   deps = [
+     # TODO(sad): Temporary, until the GPU process is split out of ws.
+     "//services/ui/gpu",

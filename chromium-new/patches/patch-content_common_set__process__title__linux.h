@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/common/set_process_title_linux.h.orig	2016-06-24 01:02:21.000000000 +0000
+--- content/common/set_process_title_linux.h.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/common/set_process_title_linux.h
 @@ -5,6 +5,9 @@
  #ifndef CONTENT_COMMON_SET_PROCESS_TITLE_LINUX_H_

@@ -1,14 +1,14 @@
 $NetBSD$
 
---- content/renderer/webscrollbarbehavior_impl_gtkoraura.cc.orig	2016-06-24 01:02:21.000000000 +0000
+--- content/renderer/webscrollbarbehavior_impl_gtkoraura.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/renderer/webscrollbarbehavior_impl_gtkoraura.cc
 @@ -14,7 +14,7 @@ bool WebScrollbarBehaviorImpl::shouldCen
-       blink::WebScrollbarBehavior::Button mouseButton,
+       blink::WebPointerProperties::Button mouseButton,
        bool shiftKeyPressed,
        bool altKeyPressed) {
 -#if (defined(OS_LINUX) && !defined(OS_CHROMEOS))
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
-   if (mouseButton == blink::WebScrollbarBehavior::ButtonMiddle)
++#if ((defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS))
+   if (mouseButton == blink::WebPointerProperties::Button::Middle)
      return true;
  #endif
 @@ -50,7 +50,7 @@ bool WebScrollbarBehaviorImpl::shouldSna

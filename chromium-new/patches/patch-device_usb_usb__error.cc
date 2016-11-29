@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/usb/usb_error.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- device/usb/usb_error.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ device/usb/usb_error.cc
 @@ -4,7 +4,11 @@
  

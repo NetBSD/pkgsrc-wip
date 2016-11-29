@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gpu/command_buffer/service/program_manager.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- gpu/command_buffer/service/program_manager.cc.orig	2016-11-10 20:02:15.000000000 +0000
 +++ gpu/command_buffer/service/program_manager.cc
 @@ -29,7 +29,11 @@
  #include "gpu/command_buffer/service/gpu_preferences.h"

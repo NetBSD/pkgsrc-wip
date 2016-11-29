@@ -1,0 +1,36 @@
+$NetBSD$
+
+--- components/metrics/BUILD.gn.orig	2016-11-10 20:02:13.000000000 +0000
++++ components/metrics/BUILD.gn
+@@ -107,6 +107,13 @@ static_library("metrics") {
+   if (is_win) {
+     sources -= [ "machine_id_provider_stub.cc" ]
+   }
++
++  if (is_bsd) {
++    sources -= [
++      "system_memory_stats_recorder_linux.cc"
++    ]
++  }
++
+ }
+ 
+ if (!is_ios) {
+@@ -266,7 +273,7 @@ static_library("test_support") {
+   ]
+ }
+ 
+-if (is_linux) {
++if (is_linux || is_bsd) {
+   # GYP version: components/metrics.gypi:metrics_serialization
+   static_library("serialization") {
+     sources = [
+@@ -321,7 +328,7 @@ source_set("unit_tests") {
+     "//ui/gfx/geometry",
+   ]
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [ "serialization/serialization_utils_unittest.cc" ]
+     deps += [ ":serialization" ]
+   }

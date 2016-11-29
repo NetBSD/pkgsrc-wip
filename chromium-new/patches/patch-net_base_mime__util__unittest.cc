@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/base/mime_util_unittest.cc.orig	2016-06-24 01:02:25.000000000 +0000
+--- net/base/mime_util_unittest.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ net/base/mime_util_unittest.cc
 @@ -241,7 +241,7 @@ TEST(MimeUtilTest, TestGetExtensionsForM
      { "MeSsAge/*",  1, "eml" },

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/usb/usb_context_unittest.cc.orig	2016-06-24 01:02:22.000000000 +0000
+--- device/usb/usb_context_unittest.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ device/usb/usb_context_unittest.cc
 @@ -7,7 +7,11 @@
  #include "build/build_config.h"

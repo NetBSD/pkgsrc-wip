@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/WebKit/Source/platform/fonts/FontCache.h.orig	2016-06-24 01:02:46.000000000 +0000
+--- third_party/WebKit/Source/platform/fonts/FontCache.h.orig	2016-11-10 20:02:26.000000000 +0000
 +++ third_party/WebKit/Source/platform/fonts/FontCache.h
-@@ -174,7 +174,7 @@ private:
+@@ -179,7 +179,7 @@ private:
      // Implemented on skia platforms.
      PassRefPtr<SkTypeface> createTypeface(const FontDescription&, const FontFaceCreationParams&, CString& name);
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/cacheinvalidation/src/google/cacheinvalidation/include/types.h.orig	2016-06-24 01:02:47.000000000 +0000
+--- third_party/cacheinvalidation/src/google/cacheinvalidation/include/types.h.orig	2016-11-10 20:02:28.000000000 +0000
 +++ third_party/cacheinvalidation/src/google/cacheinvalidation/include/types.h
 @@ -334,6 +334,8 @@ class Status {
       */

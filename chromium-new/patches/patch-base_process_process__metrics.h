@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/process/process_metrics.h.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/process/process_metrics.h.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/process/process_metrics.h
-@@ -21,6 +21,13 @@
+@@ -22,6 +22,12 @@
  #include "base/values.h"
  #include "build/build_config.h"
  
@@ -10,19 +10,18 @@ $NetBSD$
 +#include <kvm.h>
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
-+#include <sys/user.h>
 +#endif
 +
  #if defined(OS_MACOSX)
  #include <mach/mach.h>
  #include "base/process/port_provider_mac.h"
-@@ -317,13 +324,17 @@ BASE_EXPORT bool GetSystemMemoryInfo(Sys
+@@ -326,13 +332,17 @@ BASE_EXPORT bool GetSystemMemoryInfo(Sys
  // CPU-related ticks.  Returns -1 on parse error.
  // Exposed for testing.
  BASE_EXPORT int ParseProcStatCPU(const std::string& input);
 +#endif
  
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_FREEBSD) || defined(OS_NETBSD)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_FREEBSD)
  // Get the number of threads of |process| as available in /proc/<pid>/stat.
  // This should be used with care as no synchronization with running threads is
  // done. This is mostly useful to guarantee being single-threaded.

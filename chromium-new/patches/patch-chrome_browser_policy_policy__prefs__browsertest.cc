@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/policy/policy_prefs_browsertest.cc.orig	2016-06-24 01:02:13.000000000 +0000
+--- chrome/browser/policy/policy_prefs_browsertest.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/policy/policy_prefs_browsertest.cc
-@@ -174,6 +174,8 @@ class PolicyTestCase {
+@@ -175,6 +175,8 @@ class PolicyTestCase {
      const std::string os("chromeos");
  #elif defined(OS_LINUX)
      const std::string os("linux");

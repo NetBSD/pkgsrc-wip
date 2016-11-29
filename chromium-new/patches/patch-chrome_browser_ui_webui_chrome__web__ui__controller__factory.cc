@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -269,7 +269,7 @@ bool IsAboutUI(const GURL& url) {
+@@ -287,7 +287,7 @@ bool IsAboutUI(const GURL& url) {
  #if !defined(OS_ANDROID)
            || url.host() == chrome::kChromeUITermsHost
  #endif

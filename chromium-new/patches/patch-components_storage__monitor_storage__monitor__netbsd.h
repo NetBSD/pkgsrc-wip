@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/storage_monitor/storage_monitor_netbsd.h.orig	2016-07-18 10:41:14.673955086 +0000
+--- components/storage_monitor/storage_monitor_netbsd.h.orig	2016-11-12 02:51:25.481044810 +0000
 +++ components/storage_monitor/storage_monitor_netbsd.h
 @@ -0,0 +1,46 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.

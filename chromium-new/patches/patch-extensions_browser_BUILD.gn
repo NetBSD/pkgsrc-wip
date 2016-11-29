@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- extensions/browser/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
++++ extensions/browser/BUILD.gn
+@@ -85,7 +85,7 @@ source_set("browser") {
+               "//extensions")
+       sources += nonchromeos_sources
+ 
+-      if (is_linux) {
++      if (is_linux || is_bsd) {
+         if (use_dbus) {
+           deps += [ "//dbus" ]
+         }

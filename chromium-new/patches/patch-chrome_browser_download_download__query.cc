@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/download/download_query.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/download/download_query.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/download/download_query.cc
 @@ -28,7 +28,11 @@
  #include "components/url_formatter/url_formatter.h"

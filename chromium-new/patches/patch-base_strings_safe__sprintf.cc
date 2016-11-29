@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/strings/safe_sprintf.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/strings/safe_sprintf.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/strings/safe_sprintf.cc
 @@ -115,8 +115,11 @@ class Buffer {
          count_(0) {

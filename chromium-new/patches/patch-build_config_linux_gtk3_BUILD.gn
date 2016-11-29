@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- build/config/linux/gtk3/BUILD.gn.orig	2016-11-10 20:02:09.000000000 +0000
++++ build/config/linux/gtk3/BUILD.gn
+@@ -4,7 +4,7 @@
+ 
+ import("//build/config/linux/pkg_config.gni")
+ 
+-assert(is_linux, "This file should only be referenced on Linux")
++assert(is_linux || is_bsd, "This file should only be referenced on Linux")
+ 
+ # Depend on //build/config/linux/gtk3 to use GTKv3.
+ #

@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- chrome/common/BUILD.gn.orig	2016-11-10 20:02:11.000000000 +0000
++++ chrome/common/BUILD.gn
+@@ -147,6 +147,13 @@ static_library("common") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "component_flash_hint_file_linux.cc",
++      "component_flash_hint_file_linux.h",
++    ]
++  }
++
+   if (enable_extensions) {
+     sources += rebase_path(gypi_values.chrome_common_extensions_sources,
+                            ".",

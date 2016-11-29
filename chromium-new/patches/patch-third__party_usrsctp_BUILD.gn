@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- third_party/usrsctp/BUILD.gn.orig	2016-11-10 20:02:29.000000000 +0000
++++ third_party/usrsctp/BUILD.gn
+@@ -112,6 +112,12 @@ static_library("usrsctp") {
+       "__Userspace_os_Linux",
+       "_GNU_SOURCE",
+     ]
++  } else if (is_bsd) {
++    # For now, freebsd hard coding, differentiate different bsd is a plan
++    defines += [
++      "__Userspace_os_FreeBSD",
++    ]
++    cflags += [ "-U__FreeBSD__" ]
+   } else if (is_mac || is_ios) {
+     defines += [
+       "HAVE_SA_LEN",

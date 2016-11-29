@@ -1,23 +1,19 @@
 $NetBSD$
 
---- v8/src/base/platform/platform-posix.cc.orig	2016-06-24 01:04:22.000000000 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2016-11-10 20:03:08.000000000 +0000
 +++ v8/src/base/platform/platform-posix.cc
-@@ -55,6 +55,14 @@
- #include <sys/prctl.h>  // NOLINT, for prctl
+@@ -27,6 +27,10 @@
+ #include <sys/sysctl.h>  // NOLINT, for sysctl
  #endif
  
-+#if V8_OS_FREEBSD && !defined(__DragonFly__)
-+#include <sys/thr.h>   // for thr_self
++#if defined(__NetBSD__)
++#include <lwp.h>	// for _lwp_self
 +#endif
 +
-+#if V8_OS_NETBSD
-+#include <lwp.h>       // for _lwp_self
-+#endif
-+
- #if !defined(V8_OS_NACL) && !defined(_AIX)
- #include <sys/syscall.h>
- #endif
-@@ -343,6 +351,12 @@ int OS::GetCurrentThreadId() {
+ #undef MAP_TYPE
+ 
+ #if defined(ANDROID) && !defined(V8_ANDROID_LOG_STDOUT)
+@@ -329,6 +333,12 @@ int OS::GetCurrentThreadId() {
    return static_cast<int>(syscall(__NR_gettid));
  #elif V8_OS_ANDROID
    return static_cast<int>(gettid());
@@ -30,7 +26,7 @@ $NetBSD$
  #elif V8_OS_AIX
    return static_cast<int>(thread_self());
  #elif V8_OS_SOLARIS
-@@ -550,8 +564,13 @@ Thread::Thread(const Options& options)
+@@ -532,8 +542,13 @@ Thread::Thread(const Options& options)
      : data_(new PlatformData),
        stack_size_(options.stack_size()),
        start_semaphore_(NULL) {
@@ -44,7 +40,7 @@ $NetBSD$
    }
    set_name(options.name());
  }
-@@ -567,7 +586,7 @@ static void SetThreadName(const char* na
+@@ -549,7 +564,7 @@ static void SetThreadName(const char* na
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    STATIC_ASSERT(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);

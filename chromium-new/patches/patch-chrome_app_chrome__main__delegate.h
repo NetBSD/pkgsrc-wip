@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/app/chrome_main_delegate.h.orig	2016-06-24 01:02:10.000000000 +0000
+--- chrome/app/chrome_main_delegate.h.orig	2016-11-10 20:02:09.000000000 +0000
 +++ chrome/app/chrome_main_delegate.h
-@@ -38,7 +38,7 @@ class ChromeMainDelegate : public conten
+@@ -39,7 +39,7 @@ class ChromeMainDelegate : public conten
        const std::string& process_type) override;
    bool ShouldSendMachPort(const std::string& process_type) override;
    bool DelaySandboxInitialization(const std::string& process_type) override;

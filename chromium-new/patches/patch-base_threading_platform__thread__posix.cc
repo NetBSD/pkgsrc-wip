@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/threading/platform_thread_posix.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/threading/platform_thread_posix.cc
-@@ -55,7 +55,7 @@ void* ThreadFunc(void* params) {
+@@ -56,7 +56,7 @@ void* ThreadFunc(void* params) {
      if (!thread_params->joinable)
        base::ThreadRestrictions::SetSingletonAllowed(false);
  

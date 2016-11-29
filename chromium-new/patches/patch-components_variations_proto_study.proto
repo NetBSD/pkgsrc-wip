@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- components/variations/proto/study.proto.orig	2016-11-10 20:02:14.000000000 +0000
++++ components/variations/proto/study.proto
+@@ -189,6 +189,7 @@ message Study {
+     PLATFORM_CHROMEOS = 3;
+     PLATFORM_ANDROID  = 4;
+     PLATFORM_IOS      = 5;
++    PLATFORM_BSD      = 6;
+   }
+ 
+   // Possible form factors Chrome is running on.

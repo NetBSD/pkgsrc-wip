@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/resources/ui_resources.grd.orig	2016-06-24 01:02:53.000000000 +0000
+--- ui/resources/ui_resources.grd.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/resources/ui_resources.grd
 @@ -15,7 +15,7 @@
        <!-- KEEP THESE IN ALPHABETICAL ORDER!  DO NOT ADD TO RANDOM PLACES JUST

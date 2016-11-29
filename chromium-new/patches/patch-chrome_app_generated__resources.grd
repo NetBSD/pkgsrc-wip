@@ -1,47 +1,40 @@
 $NetBSD$
 
-* These conditional does not seems to work properly
-
---- chrome/app/generated_resources.grd.orig	2016-06-24 01:02:11.000000000 +0000
+--- chrome/app/generated_resources.grd.orig	2016-11-10 20:02:09.000000000 +0000
 +++ chrome/app/generated_resources.grd
-@@ -3590,11 +3590,11 @@ Even if you have downloaded files from t
-           PWG Raster Convertor
-         </message>
-       </if>
--      <if expr="enable_service_discovery">
-+<!--      <if expr="enable_service_discovery"> -->
-         <message name="IDS_UTILITY_PROCESS_SERVICE_DISCOVERY_HANDLER_NAME" desc="The name of the utility process used for handling service discovery.">
-           Service Discovery Handler
-         </message>
--      </if>
-+<!--      </if> -->
- 
-       <!-- Theme preview info bar -->
-       <message name="IDS_THEME_INSTALL_INFOBAR_LABEL" desc="Text displayed on an infobar when a theme has been installed.">
-@@ -6595,7 +6595,7 @@ Keep your key file in a safe place. You 
+@@ -6841,7 +6841,7 @@ Keep your key file in a safe place. You 
        <message name="IDS_FLAGS_FORCE_UI_DIRECTION_RTL" desc="Name for the option to force right-to-left UI direction mode.">
            Right-to-left
        </message>
 -      <if expr="is_win or is_linux">
-+      <if expr="is_win or is_linux or is_posix">
++      <if expr="is_win or is_linux or is_bsd">
          <message name="IDS_FLAGS_ENABLE_INPUT_IME_API_NAME" desc="Name of the flag to enable che chrome.input.ime API.">
            Enable Input IME API
          </message>
-@@ -13546,7 +13546,7 @@ Please check your email at <ph name="ACC
+@@ -10140,7 +10140,7 @@ I don't think this site should be blocke
+       <message name="IDS_APPEARANCE_GROUP_NAME" desc="The title of the appearance group">
+         Appearance
+       </message>
+-      <if expr="not is_linux or chromeos">
++      <if expr="not is_linux or not is_bsd or chromeos">
+         <message name="IDS_THEMES_GROUP_NAME" desc="The title of the themes group">
+           Themes
+         </message>
+@@ -10148,7 +10148,7 @@ I don't think this site should be blocke
+       <message name="IDS_THEMES_RESET_BUTTON" desc="The button to reset your theme">
+         Reset to default theme
+       </message>
+-      <if expr="is_linux and not chromeos">
++      <if expr="is_linux or is_bsd and not chromeos">
+         <message name="IDS_THEMES_GTK_BUTTON" desc="The button to choose GTK colors and icons as the current theme.">
+           Use GTK+ theme
+         </message>
+@@ -11435,7 +11435,7 @@ Tell us what happened exactly before you
+         Set as default
        </message>
  
-       <!-- Local Device Discovery display strings -->
--      <if expr="enable_service_discovery">
-+<!--      <if expr="enable_service_discovery"> -->
-         <message name="IDS_LOCAL_DISCOVERY_SERVICE_REGISTER" desc="Name for button to register device in the Cloud">
-           Register
+-      <if expr="is_linux and not chromeos">
++      <if expr="is_linux or is_bsd and not chromeos">
+         <message name="IDS_SHOW_WINDOW_DECORATIONS_MENU" desc="The menu entry text in the tab strip context menu.  This toggles the system title bar and window borders (window decorations) on linux.">
+           Use system title bar and borders
          </message>
-@@ -13671,7 +13671,7 @@ Please check your email at <ph name="ACC
-         <message name="IDS_LOCAL_DISCOVERY_NOTIFICATIONS_DISABLE_BUTTON_LABEL" desc="Label for button disabling local device notifications">
-           Don't show this again
-         </message>
--      </if>
-+<!--      </if> -->
-       <!-- People search strings -->
-       <message name="IDS_PEOPLE_SEARCH_ACTION_EMAIL_TOOLTIP" desc="Tooltip text for sending an email to the person in the result">
-         Email this person

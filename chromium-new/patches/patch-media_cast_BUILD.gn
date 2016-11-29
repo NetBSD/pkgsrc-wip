@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- media/cast/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
++++ media/cast/BUILD.gn
+@@ -343,7 +343,7 @@ test("cast_unittests") {
+   }
+ }
+ 
+-if (is_win || is_mac || (is_linux && !is_chromeos)) {
++if (is_win || is_mac || (is_linux && !is_chromeos) || is_bsd) {
+   # This is a target for the collection of cast development tools.  They are
+   # not built/linked into the Chromium browser.
+   group("testing_tools") {
+@@ -388,7 +388,7 @@ if (is_win || is_mac || (is_linux && !is
+       "//build/win:default_exe_manifest",
+     ]
+ 
+-    if (is_linux && !is_chromeos && use_x11) {
++    if ((is_linux || is_bsd) && !is_chromeos && use_x11) {
+       sources += [
+         "test/linux_output_window.cc",
+         "test/linux_output_window.h",
+@@ -483,7 +483,7 @@ if (is_win || is_mac || (is_linux && !is
+   }
+ }
+ 
+-if (is_linux && !is_chromeos) {
++if ((is_linux || is_bsd) && !is_chromeos) {
+   test("tap_proxy") {
+     sources = [
+       "test/utility/tap_proxy.cc",

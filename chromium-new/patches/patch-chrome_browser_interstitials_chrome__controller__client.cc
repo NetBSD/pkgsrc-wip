@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/interstitials/chrome_controller_client.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/interstitials/chrome_controller_client.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/interstitials/chrome_controller_client.cc
 @@ -55,7 +55,7 @@ void LaunchDateAndTimeSettingsOnFile() {
    chrome::ShowSettingsSubPageForProfile(ProfileManager::GetActiveUserProfile(),

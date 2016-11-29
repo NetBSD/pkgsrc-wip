@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/compositor/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
++++ ui/compositor/BUILD.gn
+@@ -200,7 +200,7 @@ test("compositor_unittests") {
+     "//ui/gl",
+     "//ui/resources",
+   ]
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//third_party/mesa:osmesa" ]
+   }
+ }

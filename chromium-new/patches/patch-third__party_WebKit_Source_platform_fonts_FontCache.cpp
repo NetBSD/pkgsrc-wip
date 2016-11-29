@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/WebKit/Source/platform/fonts/FontCache.cpp.orig	2016-06-24 01:02:46.000000000 +0000
+--- third_party/WebKit/Source/platform/fonts/FontCache.cpp.orig	2016-11-10 20:02:26.000000000 +0000
 +++ third_party/WebKit/Source/platform/fonts/FontCache.cpp
-@@ -59,13 +59,13 @@ using namespace WTF;
+@@ -61,13 +61,13 @@ using namespace WTF;
  
  namespace blink {
  
@@ -16,5 +16,5 @@ $NetBSD$
 -#endif // !OS(WIN) && !OS(LINUX)
 +#endif // !OS(WIN) && !OS(LINUX) && !OS(FREEBSD) && !OS(OPENBSD) && !OS(NETBSD)
  
- typedef HashMap<FontCacheKey, OwnPtr<FontPlatformData>, FontCacheKeyHash, FontCacheKeyTraits> FontPlatformDataCache;
- typedef HashMap<FallbackListCompositeKey, OwnPtr<ShapeCache>, FallbackListCompositeKeyHash, FallbackListCompositeKeyTraits> FallbackListShaperCache;
+ typedef HashMap<unsigned, std::unique_ptr<FontPlatformData>, WTF::IntHash<unsigned>, WTF::UnsignedWithZeroKeyHashTraits<unsigned>> SizedFontPlatformDataSet;
+ typedef HashMap<FontCacheKey, SizedFontPlatformDataSet, FontCacheKeyHash, FontCacheKeyTraits> FontPlatformDataCache;

@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/webrtc/system_wrappers/BUILD.gn.orig	2016-11-10 20:03:06.000000000 +0000
++++ third_party/webrtc/system_wrappers/BUILD.gn
+@@ -115,7 +115,7 @@ source_set("system_wrappers") {
+     libs += [ "rt" ]
+   }
+ 
+-  if (is_linux || is_android) {
++  if (is_linux || is_android || is_bsd) {
+     sources += [ "source/atomic32_non_darwin_unix.cc" ]
+   }
+ 

@@ -1,10 +1,10 @@
 $NetBSD$
 
---- third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp.orig	2016-06-24 01:03:59.000000000 +0000
+--- third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp.orig	2016-11-10 20:03:03.000000000 +0000
 +++ third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp
-@@ -61,6 +61,103 @@ static const FX_WCHAR* const fullmonths[
-     L"May",       L"June",     L"July",     L"August",
-     L"September", L"October",  L"November", L"December"};
+@@ -64,6 +64,103 @@ const FX_WCHAR* const fullmonths[] = {L"
+                                       L"July",    L"August",   L"September",
+                                       L"October", L"November", L"December"};
  
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
 +/*
@@ -103,6 +103,6 @@ $NetBSD$
 +}
 +#endif // defined(__FreeBSD__)
 +
- bool CJS_PublicMethods::IsNumber(const FX_WCHAR* str) {
-   CFX_WideString sTrim = StrTrim(str);
-   const FX_WCHAR* pTrim = sTrim.c_str();
+ CFX_ByteString StrTrim(const CFX_ByteString& pStr) {
+   CFX_ByteString result(pStr);
+   result.TrimLeft(' ');

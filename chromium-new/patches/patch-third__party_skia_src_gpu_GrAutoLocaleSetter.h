@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/skia/src/gpu/GrAutoLocaleSetter.h.orig	2016-06-24 01:04:04.000000000 +0000
+--- third_party/skia/src/gpu/GrAutoLocaleSetter.h.orig	2016-11-01 21:00:04.000000000 +0000
 +++ third_party/skia/src/gpu/GrAutoLocaleSetter.h
 @@ -22,7 +22,7 @@
  #include <xlocale.h>

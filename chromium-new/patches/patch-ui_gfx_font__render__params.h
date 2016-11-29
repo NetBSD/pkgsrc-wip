@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/gfx/font_render_params.h.orig	2016-06-24 01:02:53.000000000 +0000
+--- ui/gfx/font_render_params.h.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/gfx/font_render_params.h
-@@ -102,13 +102,13 @@ GFX_EXPORT FontRenderParams GetFontRende
+@@ -106,13 +106,13 @@ GFX_EXPORT FontRenderParams GetFontRende
      const FontRenderParamsQuery& query,
      std::string* family_out);
  

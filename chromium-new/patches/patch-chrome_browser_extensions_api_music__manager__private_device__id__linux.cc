@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/extensions/api/music_manager_private/device_id_linux.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/extensions/api/music_manager_private/device_id_linux.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/extensions/api/music_manager_private/device_id_linux.cc
 @@ -4,6 +4,10 @@
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/process_iterator_netbsd.cc.orig	2016-07-17 08:36:13.001685522 +0000
+--- base/process/process_iterator_netbsd.cc.orig	2016-11-12 02:51:19.578931241 +0000
 +++ base/process/process_iterator_netbsd.cc
 @@ -0,0 +1,146 @@
 +// Copyright (c) 2013 The Chromium Authors. All rights reserved.

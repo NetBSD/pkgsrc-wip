@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/security_unittest.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/security_unittest.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/security_unittest.cc
 @@ -74,7 +74,7 @@ bool IsTcMallocBypassed() {
  // FAILS_ is too clunky.

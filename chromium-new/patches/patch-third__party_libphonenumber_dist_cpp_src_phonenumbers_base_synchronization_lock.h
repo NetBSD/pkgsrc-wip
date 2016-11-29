@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h.orig	2016-06-24 01:03:50.000000000 +0000
+--- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h.orig	2016-11-10 20:03:01.000000000 +0000
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
 @@ -37,7 +37,7 @@ typedef boost::mutex::scoped_lock AutoLo
  // Dummy lock implementation on non-POSIX platforms. If you are running on a

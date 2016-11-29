@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- ui/aura/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
++++ ui/aura/BUILD.gn
+@@ -280,7 +280,7 @@ test("aura_unittests") {
+     "//ui/gl:test_support",
+   ]
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//third_party/mesa" ]
+   }
+ 

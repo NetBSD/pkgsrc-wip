@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/download/download_shelf_context_menu.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/download/download_shelf_context_menu.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/download/download_shelf_context_menu.cc
-@@ -142,7 +142,7 @@ base::string16 DownloadShelfContextMenu:
+@@ -127,7 +127,7 @@ base::string16 DownloadShelfContextMenu:
                     : IDS_DOWNLOAD_MENU_PLATFORM_OPEN_ALWAYS;
            break;
          }

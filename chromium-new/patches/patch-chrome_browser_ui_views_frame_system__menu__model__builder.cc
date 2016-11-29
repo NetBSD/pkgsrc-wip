@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -85,7 +85,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);

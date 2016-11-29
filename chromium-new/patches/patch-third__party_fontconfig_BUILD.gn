@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/fontconfig/BUILD.gn.orig	2016-11-10 20:02:28.000000000 +0000
++++ third_party/fontconfig/BUILD.gn
+@@ -2,7 +2,7 @@
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+ 
+-assert(is_linux)
++assert(is_linux || is_bsd)
+ 
+ config("fontconfig_config") {
+   include_dirs = [ "src" ]

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- components/json_schema/json_schema_validator.cc.orig	2016-06-24 01:02:18.000000000 +0000
+--- components/json_schema/json_schema_validator.cc.orig	2016-11-10 20:02:13.000000000 +0000
 +++ components/json_schema/json_schema_validator.cc
-@@ -20,7 +20,11 @@
+@@ -21,7 +21,11 @@
  #include "base/strings/stringprintf.h"
  #include "base/values.h"
  #include "components/json_schema/json_schema_constants.h"

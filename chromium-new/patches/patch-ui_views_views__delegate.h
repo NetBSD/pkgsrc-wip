@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/views/views_delegate.h.orig	2016-06-24 01:02:54.000000000 +0000
+--- ui/views/views_delegate.h.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/views/views_delegate.h
 @@ -141,7 +141,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // Returns true if the window passed in is in the Windows 8 metro

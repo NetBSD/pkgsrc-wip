@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/webrtc/base/ipaddress.h.orig	2016-06-24 01:04:14.000000000 +0000
+--- third_party/webrtc/base/ipaddress.h.orig	2016-11-10 20:03:05.000000000 +0000
 +++ third_party/webrtc/base/ipaddress.h
 @@ -17,6 +17,10 @@
  #include <arpa/inet.h>

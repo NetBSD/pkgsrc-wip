@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- chromecast/BUILD.gn.orig	2016-11-10 20:02:12.000000000 +0000
++++ chromecast/BUILD.gn
+@@ -44,7 +44,7 @@ cast_test_group("cast_tests") {
+     "//ui/base:ui_base_unittests",
+   ]
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     tests += [ "//chromecast/crash:cast_crash_unittests" ]
+   }
+ 

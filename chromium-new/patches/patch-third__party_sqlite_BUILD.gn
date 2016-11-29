@@ -1,0 +1,40 @@
+$NetBSD$
+
+--- third_party/sqlite/BUILD.gn.orig	2016-11-10 20:02:29.000000000 +0000
++++ third_party/sqlite/BUILD.gn
+@@ -20,7 +20,7 @@ if (!use_system_sqlite) {
+       # sqlite3Fts3InitTok).
+       cflags += [ "-Wno-unused-function" ]
+     }
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       cflags += [
+         # SQLite doesn"t believe in compiler warnings,
+         # preferring testing.
+@@ -177,7 +177,7 @@ if (!use_system_sqlite) {
+     public_configs = [ ":sqlite_export" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     executable("sqlite_shell") {
+       # So shell.c can find the correct sqlite3.h.
+       include_dirs = [ "amalgamation" ]
+@@ -206,7 +206,7 @@ if (use_system_sqlite) {
+ 
+   config("sqlite_config") {
+     defines = [ "USE_SYSTEM_SQLITE" ]
+-    if (is_ios) {
++    if (is_ios || is_bsd) {
+       libs = [ "sqlite3" ]
+     } else {
+       assert(false, "extra flags to use system sqlite3 library missing")
+@@ -225,7 +225,7 @@ if (use_system_sqlite) {
+     }
+   }
+ 
+-  if (is_ios) {
++  if (is_ios || is_bsd) {
+     source_set("sqlite_recover") {
+       sources = [
+         # TODO(shess): Move out of the SQLite source tree, perhaps to ext/.

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/sys_info_netbsd.cc.orig	2016-07-17 08:36:13.252201679 +0000
+--- base/sys_info_netbsd.cc.orig	2016-11-12 07:18:17.632595486 +0000
 +++ base/sys_info_netbsd.cc
-@@ -0,0 +1,98 @@
+@@ -0,0 +1,77 @@
 +// Copyright (c) 2011 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -34,19 +34,6 @@ $NetBSD$
 +
 +namespace base {
 +
-+// static
-+int SysInfo::NumberOfProcessors() {
-+  int mib[] = { CTL_HW, HW_NCPU };
-+  int ncpu;
-+  size_t size = sizeof(ncpu);
-+  if (sysctl(mib, arraysize(mib), &ncpu, &size, NULL, 0) < 0) {
-+    NOTREACHED();
-+    return 1;
-+  }
-+  return ncpu;
-+}
-+
-+// static
 +int64_t SysInfo::AmountOfPhysicalMemory() {
 +  return AmountOfMemory(_SC_PHYS_PAGES);
 +}
@@ -70,25 +57,6 @@ $NetBSD$
 +}
 +
 +// static
-+uint64_t SysInfo::MaxSharedMemorySize() {
-+  int mib[3];
-+  size_t limit;
-+  size_t size = sizeof(limit);
-+  int ret;
-+
-+  mib[0] = CTL_KERN;
-+  mib[1] = KERN_SYSVIPC;
-+  mib[2] = KERN_SYSVIPC_SHMMAX;
-+
-+  ret = sysctl(mib, 3, &limit, &size, NULL, 0);
-+  if (ret == -1) {
-+    return 0;
-+  }
-+
-+  return static_cast<uint64_t>(limit);
-+}
-+
-+// static
 +std::string SysInfo::CPUModelName() {
 +  int mib[] = { CTL_HW, HW_MODEL };
 +  char name[256];
@@ -98,6 +66,17 @@ $NetBSD$
 +    return std::string();
 +  }
 +  return name;
++}
++
++int SysInfo::NumberOfProcessors() {
++  int mib[] = { CTL_HW, HW_NCPU };
++  int ncpu;
++  size_t size = sizeof(ncpu);
++  if (sysctl(mib, arraysize(mib), &ncpu, &size, NULL, 0) < 0) {
++    NOTREACHED();
++    return 1;
++  }
++  return ncpu;
 +}
 +
 +}  // namespace base

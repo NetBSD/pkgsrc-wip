@@ -1,18 +1,18 @@
 $NetBSD$
 
---- media/audio/audio_manager.cc.orig	2016-06-24 01:02:23.000000000 +0000
+--- media/audio/audio_manager.cc.orig	2016-11-10 20:02:15.000000000 +0000
 +++ media/audio/audio_manager.cc
-@@ -193,7 +193,7 @@ class AudioManagerHelper : public base::
+@@ -95,7 +95,7 @@ class AudioManagerHelper : public base::
    }
  #endif
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_NETBSD)
-   void set_app_name(const std::string& app_name) {
-     app_name_ = app_name;
-   }
-@@ -243,7 +243,7 @@ class AudioManagerHelper : public base::
-   scoped_ptr<base::win::ScopedCOMInitializer> com_initializer_for_testing_;
+   void set_app_name(const std::string& app_name) { app_name_ = app_name; }
+   const std::string& app_name() const { return app_name_; }
+ #endif
+@@ -253,7 +253,7 @@ class AudioManagerHelper : public base::
+   std::unique_ptr<base::win::ScopedCOMInitializer> com_initializer_for_testing_;
  #endif
  
 -#if defined(OS_LINUX)
@@ -20,7 +20,7 @@ $NetBSD$
    std::string app_name_;
  #endif
  
-@@ -321,7 +321,7 @@ void AudioManager::EnableCrashKeyLogging
+@@ -365,7 +365,7 @@ void AudioManager::EnableCrashKeyLogging
    g_helper.Pointer()->enable_crash_key_logging();
  }
  

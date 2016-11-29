@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- chromecast/crash/BUILD.gn.orig	2016-11-10 20:02:12.000000000 +0000
++++ chromecast/crash/BUILD.gn
+@@ -78,7 +78,7 @@ source_set("test_support") {
+   ]
+ }
+ 
+-if (is_linux) {
++if (is_linux || is_bsd) {
+   test("cast_crash_unittests") {
+     sources = [
+       "cast_crashdump_uploader_unittest.cc",

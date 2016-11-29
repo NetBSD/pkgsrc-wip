@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- device/geolocation/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
++++ device/geolocation/BUILD.gn
+@@ -93,7 +93,7 @@ component("device_geolocation") {
+   if (is_android) {
+     sources -= [ "wifi_data_provider_common.cc" ]
+   }
+-  if (is_chromeos || (is_linux && !use_dbus)) {
++  if (is_chromeos || (is_linux && !use_dbus) || is_bsd) {
+     sources -= [ "wifi_data_provider_linux.cc" ]
+   }
+   if (is_linux && use_dbus) {

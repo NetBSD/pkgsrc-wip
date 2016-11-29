@@ -1,8 +1,8 @@
 $NetBSD$
 
---- net/udp/udp_socket_unittest.cc.orig	2016-06-24 01:02:25.000000000 +0000
+--- net/udp/udp_socket_unittest.cc.orig	2016-11-10 20:02:16.000000000 +0000
 +++ net/udp/udp_socket_unittest.cc
-@@ -266,7 +266,7 @@ TEST_F(UDPSocketTest, ConnectNonBlocking
+@@ -271,7 +271,7 @@ TEST_F(UDPSocketTest, ConnectNonBlocking
  }
  #endif
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/base_paths_posix.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/base_paths_posix.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/base_paths_posix.cc
 @@ -24,9 +24,10 @@
  #include "base/process/process_metrics.h"

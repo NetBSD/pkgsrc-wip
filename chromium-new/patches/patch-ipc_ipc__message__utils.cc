@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ipc/ipc_message_utils.cc.orig	2016-06-24 01:02:23.000000000 +0000
+--- ipc/ipc_message_utils.cc.orig	2016-11-10 20:02:15.000000000 +0000
 +++ ipc/ipc_message_utils.cc
 @@ -423,7 +423,7 @@ void ParamTraits<unsigned int>::Log(cons
    l->append(base::UintToString(p));

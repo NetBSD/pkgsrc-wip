@@ -1,8 +1,8 @@
 $NetBSD$
 
---- base/process/process_metrics_netbsd.cc.orig	2016-07-17 08:36:13.090234675 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2016-11-12 06:32:44.816301555 +0000
 +++ base/process/process_metrics_netbsd.cc
-@@ -0,0 +1,201 @@
+@@ -0,0 +1,203 @@
 +// Copyright (c) 2013 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -15,6 +15,7 @@ $NetBSD$
 +#include <unistd.h>
 +
 +#include "base/macros.h"
++#include "base/memory/ptr_util.h"
 +#include "base/sys_info.h"
 +
 +#include <unistd.h> /* getpagesize() */
@@ -32,8 +33,9 @@ $NetBSD$
 +}
 +
 +// static
-+ProcessMetrics* ProcessMetrics::CreateProcessMetrics(ProcessHandle process) {
-+  return new ProcessMetrics(process);
++std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
++    ProcessHandle process) {
++  return WrapUnique(new ProcessMetrics(process));
 +}
 +
 +size_t ProcessMetrics::GetPagefileUsage() const {

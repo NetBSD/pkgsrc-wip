@@ -1,8 +1,8 @@
 $NetBSD$
 
---- media/audio/audio_manager.h.orig	2016-06-24 01:02:23.000000000 +0000
+--- media/audio/audio_manager.h.orig	2016-11-10 20:02:15.000000000 +0000
 +++ media/audio/audio_manager.h
-@@ -68,7 +68,7 @@ class MEDIA_EXPORT AudioManager {
+@@ -84,7 +84,7 @@ class MEDIA_EXPORT AudioManager {
    // See http://crbug.com/422522
    static void EnableCrashKeyLoggingForAudioThreadHangs();
  

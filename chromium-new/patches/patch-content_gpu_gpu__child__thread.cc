@@ -1,16 +1,16 @@
 $NetBSD$
 
---- content/gpu/gpu_child_thread.cc.orig	2016-06-24 01:02:21.000000000 +0000
+--- content/gpu/gpu_child_thread.cc.orig	2016-11-10 20:02:14.000000000 +0000
 +++ content/gpu/gpu_child_thread.cc
-@@ -435,6 +435,7 @@ void GpuChildThread::StopWatchdog() {
- }
+@@ -419,6 +419,7 @@ void GpuChildThread::OnCollectGraphicsIn
+   if (dead_on_arrival_)
+     return;
  
- void GpuChildThread::OnCollectGraphicsInfo() {
-+#if !defined(OS_FREEBSD) && !defined(OS_NETBSD)
++#if !defined(OS_BSD)
  #if defined(OS_WIN)
    // GPU full info collection should only happen on un-sandboxed GPU process
    // or single process/in-process gpu mode on Windows.
-@@ -477,6 +478,7 @@ void GpuChildThread::OnCollectGraphicsIn
+@@ -461,6 +462,7 @@ void GpuChildThread::OnCollectGraphicsIn
      base::MessageLoop::current()->QuitWhenIdle();
    }
  #endif  // OS_WIN

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
 @@ -38,12 +38,14 @@
  
@@ -17,4 +17,4 @@ $NetBSD$
 +#endif
  
  #if defined(USE_OZONE) || defined(USE_X11)
- #include "ui/events/devices/device_data_manager.h"
+ #include "ui/events/devices/input_device_event_observer.h"

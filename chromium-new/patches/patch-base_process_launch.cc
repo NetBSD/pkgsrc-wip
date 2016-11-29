@@ -1,18 +1,13 @@
 $NetBSD$
 
---- base/process/launch.cc.orig	2016-06-24 01:02:08.000000000 +0000
+--- base/process/launch.cc.orig	2016-11-10 20:02:09.000000000 +0000
 +++ base/process/launch.cc
-@@ -25,11 +25,11 @@ LaunchOptions::LaunchOptions()
-       fds_to_remap(NULL),
-       maximize_rlimits(NULL),
-       new_process_group(false)
+@@ -15,7 +15,7 @@ LaunchOptions::~LaunchOptions() = defaul
+ 
+ LaunchOptions LaunchOptionsForTest() {
+   LaunchOptions options;
 -#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_NETBSD)
-       , clone_flags(0)
-       , allow_new_privs(false)
-       , kill_on_parent_death(false)
--#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_FREEBSD || OS_NETBSD
- #if defined(OS_POSIX)
-       , pre_exec_delegate(NULL)
- #endif  // OS_POSIX
++#if defined(OS_LINUX) || defined(OS_BSD)
+   // To prevent accidental privilege sharing to an untrusted child, processes
+   // are started with PR_SET_NO_NEW_PRIVS. Do not set that here, since this
+   // new child will be used for testing only.

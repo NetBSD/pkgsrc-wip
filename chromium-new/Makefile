@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
-DISTNAME=	chromium-51.0.2704.106
+DISTNAME=	chromium-54.0.2840.100
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
@@ -24,210 +24,241 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-ONLY_FOR_PLATFORM=	*-*-arm *-*-i386 *-*-x86_64
+#ONLY_FOR_PLATFORM+=	*-*-arm *-*-i386 # not tested yet
+ONLY_FOR_PLATFORM+=	*-*-x86_64
 
-CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
-CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
-CHECK_PORTABILITY_SKIP+=	third_party/icu/source/configure
-CHECK_PORTABILITY_SKIP+=	third_party/icu/android/patch_locale.sh
-
-SUBST_CLASSES+=		bash
-SUBST_MESSAGE.bash=	Fixing bash path
-SUBST_STAGE.bash=	post-patch
-SUBST_FILES.bash+=	build/linux/python_arch.sh
-SUBST_FILES.bash+=	chrome/tools/build/linux/chrome-wrapper
-SUBST_FILES.bash+=	chrome/tools/build/linux/sed.sh
-SUBST_SED.bash=		-e 's:/bin/bash:${BASH}:'
+# Workaround
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	Fixing pkg path
 SUBST_STAGE.path=	post-patch
-SUBST_FILES.path+=	base/base.gyp
-SUBST_FILES.path+=	base/base_paths_linux.cc
-SUBST_FILES.path+=	base/process_util_openbsd.cc
-SUBST_FILES.path+=	build/common.gypi
-SUBST_FILES.path+=	chrome/chrome_tests.gypi
+SUBST_MESSAGE.path=	Fixing pkg path
+SUBST_FILES.path+=	chrome/common/chrome_paths.cc
 SUBST_SED.path+=	-e 's:/usr/local/:${PREFIX}/:'
-SUBST_SED.path+=	-e 's:/usr/lib/:${BUILDLINK_DIR}/lib/:'
-SUBST_SED.path+=	-e 's:/usr/include/:${BUILDLINK_DIR}/include/:'
-
-CONFIGURE_ENV+=		CC=${CC:Q}
-CONFIGURE_ENV+=		CXX=${CXX:Q}
-CONFIGURE_ENV+=		GYP_GENERATORS=ninja
-CONFIGURE_ENV+=		GYP_DEFINES="${GYP_DEFINES}"
 
 CFLAGS+=		-fno-stack-protector
-# for #include <glib-2.0/gmodule.h>
-CFLAGS+=		-I${BUILDLINK_DIR}/include/glib
 
-BUILDTYPE=	Release
-#BUILDTYPE=	Debug
+.include "options.mk"
+
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
 
-# Proprietary codecs are enabled.
-GYP_DEFINES+=	proprietary_codecs=1
-GYP_DEFINES+=	ffmpeg_branding=Chrome
+KEEPLIBS+= \
+		base/third_party/dmg_fp \
+		base/third_party/dynamic_annotations \
+		base/third_party/icu \
+		base/third_party/nspr \
+		base/third_party/superfasthash \
+		base/third_party/symbolize \
+		base/third_party/valgrind \
+		base/third_party/xdg_mime \
+		base/third_party/xdg_user_dirs \
+		breakpad/src/third_party/curl \
+		chrome/third_party/mozilla_security_manager \
+		courgette/third_party \
+		net/third_party/mozilla_security_manager \
+		net/third_party/nss \
+		third_party/WebKit \
+		third_party/analytics \
+		third_party/angle \
+		third_party/angle/src/common/third_party/numerics \
+		third_party/angle/src/third_party/compiler \
+		third_party/angle/src/third_party/libXNVCtrl \
+		third_party/angle/src/third_party/murmurhash \
+		third_party/angle/src/third_party/trace_event \
+		third_party/boringssl \
+		third_party/brotli \
+		third_party/cacheinvalidation \
+		third_party/catapult \
+		third_party/catapult/third_party/polymer \
+		third_party/catapult/third_party/py_vulcanize \
+		third_party/catapult/third_party/py_vulcanize/third_party/rcssmin \
+		third_party/catapult/third_party/py_vulcanize/third_party/rjsmin \
+		third_party/catapult/tracing/third_party/d3 \
+		third_party/catapult/tracing/third_party/gl-matrix \
+		third_party/catapult/tracing/third_party/jszip \
+		third_party/catapult/tracing/third_party/mannwhitneyu \
+		third_party/ced \
+		third_party/cld_2 \
+		third_party/cld_3 \
+		third_party/cros_system_api \
+		third_party/cython/python_flags.py \
+		third_party/devscripts \
+		third_party/dom_distiller_js \
+		third_party/fips181 \
+		third_party/flatbuffers \
+		third_party/flot \
+		third_party/google_input_tools \
+		third_party/google_input_tools/third_party/closure_library \
+		third_party/google_input_tools/third_party/closure_library/third_party/closure \
+		third_party/hunspell \
+		third_party/iccjpeg \
+		third_party/icu \
+		third_party/jstemplate \
+		third_party/khronos \
+		third_party/leveldatabase \
+		third_party/libXNVCtrl \
+		third_party/libaddressinput \
+		third_party/libjingle \
+		third_party/libphonenumber \
+		third_party/libsecret \
+		third_party/libsrtp \
+		third_party/libudev \
+		third_party/libusb \
+		third_party/libwebm \
+		third_party/libxml/chromium \
+		third_party/libyuv \
+		third_party/lss \
+		third_party/lzma_sdk \
+		third_party/mesa \
+		third_party/modp_b64 \
+		third_party/mt19937ar \
+		third_party/openh264 \
+		third_party/openmax_dl \
+		third_party/opus \
+		third_party/ots \
+		third_party/pdfium \
+		third_party/pdfium/third_party/agg23 \
+		third_party/pdfium/third_party/base \
+		third_party/pdfium/third_party/bigint \
+		third_party/pdfium/third_party/freetype \
+		third_party/pdfium/third_party/lcms2-2.6 \
+		third_party/pdfium/third_party/libjpeg \
+		third_party/pdfium/third_party/libopenjpeg20 \
+		third_party/pdfium/third_party/libpng16 \
+		third_party/pdfium/third_party/libtiff \
+		third_party/pdfium/third_party/zlib_v128 \
+		third_party/polymer \
+		third_party/protobuf \
+		third_party/protobuf/third_party/six \
+		third_party/qcms \
+		third_party/sfntly \
+		third_party/skia \
+		third_party/smhasher \
+		third_party/sqlite \
+		third_party/tcmalloc \
+		third_party/usrsctp \
+		third_party/web-animations-js \
+		third_party/webdriver \
+		third_party/webrtc \
+		third_party/widevine \
+		third_party/woff2 \
+		third_party/x86inc \
+		third_party/zlib/google \
+		url/third_party/mozilla \
+		v8/src/third_party/valgrind \
+		base/third_party/libevent \
+		third_party/adobe \
+		third_party/speech-dispatcher \
+		third_party/usb_ids \
+		third_party/xdg-utils \
+		third_party/yasm/run_yasm.py \
+		third_party/jinja2 \
+		third_party/ply \
+		third_party/ffmpeg \
+		third_party/markupsafe \
+		third_party/harfbuzz-ng \
+		third_party/zlib
 
-GYP_DEFINES+=	use_gconf=0
-GYP_DEFINES+=	use_pulseaudio=1
-GYP_DEFINES+=	gcc_version=${CC_VERSION:S/gcc-//}
-GYP_DEFINES+=	use_kerberos=0
-GYP_DEFINES+=	linux_breakpad=0
-GYP_DEFINES+=	linux_use_heapchecker=0
-GYP_DEFINES+=	linux_strip_binary=1
-GYP_DEFINES+=	use_aura=1
-GYP_DEFINES+=	test_isolation_mode=noop
-GYP_DEFINES+=	disable_nacl=1
-GYP_DEFINES+=	enable_extensions=1
-GYP_DEFINES+=	enable_one_click_signin=1
-GYP_DEFINES+=	enable_webrtc=0
-GYP_DEFINES+=	enable_web_speech=1
-GYP_DEFINES+=	enable_service_discovery=1
-GYP_DEFINES+=	werror=
-GYP_DEFINES+=	no_gc_sections=1
-GYP_DEFINES+=	OS=${LOWER_OPSYS}
-GYP_DEFINES+=	os_ver=${OS_VERSION}
-GYP_DEFINES+=	prefix_dir=${PREFIX}
-GYP_DEFINES+=	python_ver=${PYVERSSUFFIX}
-GYP_DEFINES+=	use_allocator=none
-GYP_DEFINES+=	use_cups=0
-GYP_DEFINES+=	linux_link_gsettings=1
-GYP_DEFINES+=	linux_link_libpci=1
-GYP_DEFINES+=	linux_link_libspeechd=0
-GYP_DEFINES+=	want_separate_host_toolset=0
-GYP_DEFINES+=	use_system_bzip2=1
-GYP_DEFINES+=	use_system_flac=1
-GYP_DEFINES+=	use_system_ffmpeg=0
-GYP_DEFINES+=	use_system_harfbuzz=0
-GYP_DEFINES+=	use_system_icu=0
-GYP_DEFINES+=	use_system_jsoncpp=1
-GYP_DEFINES+=	use_system_libevent=1
-GYP_DEFINES+=	use_system_libexif=1
-GYP_DEFINES+=	use_system_libjpeg=1
-GYP_DEFINES+=	use_system_libpng=1
-GYP_DEFINES+=	use_system_libusb=1
-GYP_DEFINES+=	use_system_libwebp=1
-GYP_DEFINES+=	use_system_libxml=1
-GYP_DEFINES+=	use_system_libxslt=1
-GYP_DEFINES+=	use_system_nspr=1
-GYP_DEFINES+=	use_system_protobuf=0
-GYP_DEFINES+=	use_system_re2=1
-GYP_DEFINES+=	use_system_snappy=1
-GYP_DEFINES+=	use_system_speex=1
-GYP_DEFINES+=	use_system_xdg_utils=1
-GYP_DEFINES+=	use_system_yasm=1
-GYP_DEFINES+=	v8_use_external_startup_data=0
-GYP_DEFINES+=	flapper_version_h_file='${WRKSRC}/flapper_version.h'
-GYP_DEFINES+=	usb_ids_path=${PREFIX}/share/usbids/usb.ids
-GYP_DEFINES+=	icu_use_data_file_flag=1
+# Proprietary codecs are enabled.
+GN_ARGS+=	proprietary_codecs=true \
+		ffmpeg_branding="Chrome"
+
+GN_ARGS+=	use_gconf=false \
+		use_pulseaudio=true \
+		use_kerberos=false \
+		use_cups=false \
+		use_aura=true \
+		enable_nacl=false \
+		enable_hevc_demuxing=true \
+		enable_media_router=true \
+		enable_remoting=false \
+		toolkit_views=true \
+		treat_warnings_as_errors=false \
+		use_sysroot=false \
+		use_system_libjpeg=true \
+		use_system_sqlite=false \
+		use_alsa=false \
+		enable_webrtc=false \
+		enable_one_click_signin=true \
+		use_allocator="none" \
+		use_experimental_allocator_shim=false \
+		enable_widevine=true \
+		is_clang=false \
+		enable_webrtc=false \
+		use_gnome_keyring=true
+GN_ARGS+=	extra_cppflags="-I${BUILDLINK_DIR}/include \
+			-I${BUILDLINK_DIR}/include/glib \
+			-I${BUILDLINK_DIR}/include/nss/nss " \
+		extra_ldflags="-L${PREFIX}/lib \
+			-L${X11BASE}/lib \
+			${COMPILER_RPATH_FLAG}${PREFIX}/lib \
+			${COMPILER_RPATH_FLAG}${X11BASE}/lib"
+# To avoid error from sem_destroy(3) in mksnapshot
+GN_ARGS+=	v8_use_snapshot=false
+
+GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild
 
 # API key and OAuth credential for Google.
 # This is pkgsrc use only.
-GYP_DEFINES+=	google_api_key=AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg
-GYP_DEFINES+=	google_default_client_id=74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com
-GYP_DEFINES+=	google_default_client_secret=3R9TyUv14OXgzJnZi6Ismela
+GN_ARGS+=	google_api_key="AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg" \
+		google_default_client_id="74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com" \
+		google_default_client_secret="3R9TyUv14OXgzJnZi6Ismela"
 
-pre-patch:
-	${RM} ${WRKSRC}/third_party/skia/tests/ImageFilterTest.cpp.*
+NOT_PAX_MPROTECT_SAFE+=	bin/chrome
+NOT_PAX_ASLR_SAFE+=	bin/chrome
+
+post-extract:
+	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
+		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
 
 pre-configure:
 	cd ${WRKSRC} && \
-	${PYTHONBIN} ./build/linux/unbundle/replace_gyp_files.py \
-		${GYP_DEFINES:C/^/-D/}
-# allow removal of third_party/adobe
-	${TOUCH} ${WRKSRC}/flapper_version.h
-# missing file: file is in -testdata only, but configure stage
-# will fail if it's not there. do not break TESTS build while
-# allowing regular build without pulling in -testdata.
-	${TOUCH} ${WRKSRC}/chrome/test/data/webui/i18n_process_css_test.html
+	${PYTHONBIN} ./build/linux/unbundle/remove_bundled_libraries.py \
+		${KEEPLIBS} --do-remove \
+			|| ${FALSE}
+
+	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
+		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
+# a wrapper for rpath $ORIGIN removal
+#	echo "#! /bin/sh" > ${WRKSRC}/python
+#	echo "LD_LIBRARY_PATH=./ ${PYTHONBIN} \"\$$@\"" >> ${WRKSRC}/python
+#	chmod 755 ${WRKSRC}/python
+
+# Sadly rpath $ORIGIN/. is needed.
+#	rm -rf ${WRAPPER_DIR}
+
+	cd ${WRKSRC} && \
+	${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
+		--system-libraries \
+		flac libjpeg libpng libvpx libwebp libxml libxslt \
+		re2 snappy yasm \
+			|| ${FALSE}
 
 do-configure:
 	cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} \
-	${PYTHONBIN} ./build/gyp_chromium chrome/chrome.gyp --depth . \
-		${GYP_DEFINES:C/^/-D/}
-
-# From OpenBSD Ports www/chromium
-NINJA_BUILD_TARGETS+=	generate_version_info
-NINJA_BUILD_TARGETS+=	cloud_policy_proto
-NINJA_BUILD_TARGETS+=	net_interfaces
-NINJA_BUILD_TARGETS+=	suggestions
-NINJA_BUILD_TARGETS+=	cacheinvalidation
-NINJA_BUILD_TARGETS+=	cacheinvalidation_proto_cpp
-NINJA_BUILD_TARGETS+=	gfx_vector_icons
-NINJA_BUILD_TARGETS+=	data_reduction_proxy_proto
-NINJA_BUILD_TARGETS+=	cloud_policy_code_generate
-NINJA_BUILD_TARGETS+=	common_constants
-NINJA_BUILD_TARGETS+=	profile_reset_report_proto
-NINJA_BUILD_TARGETS+=	autofill_server_proto
-NINJA_BUILD_TARGETS+=	ipc_mojo
-# Below is generated from ninja -t targets.
-NINJA_BUILD_TARGETS+=	app_list_resources
-NINJA_BUILD_TARGETS+=	app_shell_resources
-NINJA_BUILD_TARGETS+=	ash_resources
-NINJA_BUILD_TARGETS+=	blink_devtools_frontend_resources
-NINJA_BUILD_TARGETS+=	blink_image_resources
-NINJA_BUILD_TARGETS+=	blink_resources
-NINJA_BUILD_TARGETS+=	chrome_extra_resources
-NINJA_BUILD_TARGETS+=	chrome_resources
-NINJA_BUILD_TARGETS+=	chrome_unscaled_resources
-NINJA_BUILD_TARGETS+=	common_mojo_bindings
-NINJA_BUILD_TARGETS+=	components_resources
-NINJA_BUILD_TARGETS+=	content_common_mojo_bindings
-NINJA_BUILD_TARGETS+=	content_common_mojo_bindings_mojom
-NINJA_BUILD_TARGETS+=	content_resources
-NINJA_BUILD_TARGETS+=	content_shell_mojo_bindings
-NINJA_BUILD_TARGETS+=	content_shell_mojo_bindings_mojom
-NINJA_BUILD_TARGETS+=	content_shell_resources
-NINJA_BUILD_TARGETS+=	contextual_search_mojo_bindings
-NINJA_BUILD_TARGETS+=	device_battery_mojo_bindings
-NINJA_BUILD_TARGETS+=	device_usb_mojo_bindings
-NINJA_BUILD_TARGETS+=	device_vibration_mojo_bindings
-NINJA_BUILD_TARGETS+=	devtools_frontend_resources
-NINJA_BUILD_TARGETS+=	devtools_resources
-NINJA_BUILD_TARGETS+=	dom_distiller_mojo_bindings
-NINJA_BUILD_TARGETS+=	extensions_resources
-NINJA_BUILD_TARGETS+=	filesystem_bindings_mojom
-NINJA_BUILD_TARGETS+=	keyboard_resources
-NINJA_BUILD_TARGETS+=	leveldb_bindings_mojom
-NINJA_BUILD_TARGETS+=	mojo_application_bindings_mojom
-NINJA_BUILD_TARGETS+=	mojo_bindings
-NINJA_BUILD_TARGETS+=	mojo_bindings_mojom
-NINJA_BUILD_TARGETS+=	mojo_geometry_bindings_mojom
-NINJA_BUILD_TARGETS+=	mojo_interface_bindings_mojom
-NINJA_BUILD_TARGETS+=	net_resources
-NINJA_BUILD_TARGETS+=	packed_extra_resources
-NINJA_BUILD_TARGETS+=	packed_resources
-NINJA_BUILD_TARGETS+=	platform_verification_mojo_bindings
-NINJA_BUILD_TARGETS+=	profile_service_bindings_mojom
-NINJA_BUILD_TARGETS+=	provision_fetcher_mojo_bindings
-NINJA_BUILD_TARGETS+=	remoting_resources
-NINJA_BUILD_TARGETS+=	resources
-NINJA_BUILD_TARGETS+=	theme_resources
-NINJA_BUILD_TARGETS+=	tracing_resources
-NINJA_BUILD_TARGETS+=	tracing_service_bindings_mojom
-NINJA_BUILD_TARGETS+=	ui_resources
-NINJA_BUILD_TARGETS+=	views_resources
-NINJA_BUILD_TARGETS+=	web_cache_mojo_bindings
-NINJA_BUILD_TARGETS+=	web_ui_mojo_bindings
-NINJA_BUILD_TARGETS+=	widevinecdmadapter_resources
-NINJA_BUILD_TARGETS+=	browser_extensions
-NINJA_BUILD_TARGETS+=	chrome_strings
-# Real target
-NINJA_BUILD_TARGETS+=	chrome
-
+		${SETENV} ${CONFIGURE_ENV} \
+		${PYTHONBIN} ./tools/gn/bootstrap/bootstrap.py \
+			${GN_BOOTSTRAP_FLAGS} \
+			--gn-gen-args '${GN_ARGS}'
+	cd ${WRKSRC} && \
+		${SETENV} ${CONFIGURE_ENV} \
+		./out/${BUILDTYPE}/gn \
+			gen --args='${GN_ARGS}' \
+			--script-executable="${PYTHONBIN}" \
+			${GN_VERBOSE} \
+			out/${BUILDTYPE}
+	
 do-build:
-.for target in ${NINJA_BUILD_TARGETS}
-	${ECHO} TARGET is ${target} && \
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} \
-	ninja -C out/${BUILDTYPE} ${target}
-.endfor
+		ninja -j ${MAKE_JOBS} -C out/${BUILDTYPE} \
+			chrome
 
 CHROMIUM_DIR=		chrome
 INSTALLATION_DIRS+=	${CHROMIUM_DIR}
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 ICON_SIZES=		22 24 48 64 128 256
@@ -237,26 +268,32 @@ INSTALLATION_DIRS+=	${ICONS_DIR${i}}
 .endfor
 
 CHROMIUM_PROGS+=	chrome
-CHROMIUM_PROGS+=	mksnapshot
+CHROMIUM_SCRIPTS+=	chrome-wrapper
+# Installed, however may not work.
+CHROMIUM_LIBS+=		libwidevinecdmadapter.so
 
-CHROMIUM_FILES+=	libyuv.a
+CHROMIUM_FILES+=	chrome.1
 CHROMIUM_FILES+=	chrome_100_percent.pak
 CHROMIUM_FILES+=	chrome_200_percent.pak
-CHROMIUM_FILES+=	chrome_material_100_percent.pak
-CHROMIUM_FILES+=	chrome_material_200_percent.pak
-CHROMIUM_FILES+=	content_browser_manifest.json
-CHROMIUM_FILES+=	content_renderer_manifest.json
-CHROMIUM_FILES+=	content_resources.pak
 CHROMIUM_FILES+=	icudtl.dat
 CHROMIUM_FILES+=	keyboard_resources.pak
 CHROMIUM_FILES+=	resources.pak
-CHROMIUM_FILES+=	shell_resources.pak
 
 do-install:
 .for i in ${CHROMIUM_PROGS}
 	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/${i} \
 		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
 .endfor
+.for i in ${CHROMIUM_SCRIPTS}
+	${INSTALL_SCRIPT} ${WRKSRC}/out/${BUILDTYPE}/${i} \
+		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
+.endfor
+.for i in ${CHROMIUM_LIBS}
+	${INSTALL_LIB} ${WRKSRC}/out/${BUILDTYPE}/${i} \
+		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
+.endfor
+	${INSTALL_LIB} ${WRKSRC}/out/${BUILDTYPE}/libwidevinecdm.so \
+		${DESTDIR}${PREFIX}/lib
 .for i in ${CHROMIUM_FILES}
 	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${i} \
 		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
@@ -269,7 +306,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/theme/chromium/product_logo_${i}.png \
 		${DESTDIR}${PREFIX}/${ICONS_DIR${i}}/chrome.png
 .endfor
-.for i in catalog locales pseudo_locales remoting_locales resources
+.for i in locales resources
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		${FIND} ${i} -type f -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
@@ -278,8 +315,10 @@ do-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
+# Not tested
 #.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+# This introduces OpenSSL dependency and it conflicts with bundled BoringSSL.
 #.include "../../print/cups/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
@@ -288,8 +327,9 @@ do-install:
 .include "../../audio/flac/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
+# Not yet
 #.include "../../fonts/harfbuzz/buildlink3.mk"
-.include "../../devel/libevent/buildlink3.mk"
+#.include "../../devel/libevent/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
@@ -325,7 +365,12 @@ BUILDLINK_TRANSFORM.NetBSD+=	opt:-lpci:-lpciutils
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
+# Not yet
 #.include "../../textproc/icu/buildlink3.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+# Conflict between OpenSSL and BoringSSL.
+#.include "../../multimedia/ffmpeg3/buildlink3.mk"
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

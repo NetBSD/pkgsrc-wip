@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/diagnostics/diagnostics_writer.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/diagnostics/diagnostics_writer.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/diagnostics/diagnostics_writer.cc
 @@ -263,7 +263,7 @@ bool DiagnosticsWriter::WriteResult(bool
        console_->SetColor(color);

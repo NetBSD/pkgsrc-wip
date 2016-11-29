@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/accessibility/platform/ax_platform_node.h.orig	2016-06-24 01:02:52.000000000 +0000
+--- ui/accessibility/platform/ax_platform_node.h.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/accessibility/platform/ax_platform_node.h
 @@ -22,7 +22,7 @@
  #define PLATFORM_HAS_AX_PLATFORM_NODE_IMPL 1

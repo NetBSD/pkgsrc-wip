@@ -1,9 +1,9 @@
 $NetBSD$
 
---- chrome/browser/chrome_content_browser_client.cc.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.cc
-@@ -196,7 +196,7 @@
- #include "chrome/browser/chromeos/system/input_device_settings.h"
+@@ -211,7 +211,7 @@
+ #include "chrome/browser/ui/browser_dialogs.h"
  #include "chromeos/chromeos_switches.h"
  #include "components/user_manager/user_manager.h"
 -#elif defined(OS_LINUX)
@@ -11,7 +11,7 @@ $NetBSD$
  #include "chrome/browser/chrome_browser_main_linux.h"
  #elif defined(OS_ANDROID)
  #include "chrome/browser/chrome_browser_main_android.h"
-@@ -209,7 +209,7 @@
+@@ -223,7 +223,7 @@
  #include "chrome/browser/chrome_browser_main_posix.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD$
  #include "base/debug/leak_annotations.h"
  #include "components/crash/content/app/breakpad_linux.h"
  #include "components/crash/content/browser/crash_handler_host_linux.h"
-@@ -231,7 +231,7 @@
+@@ -245,7 +245,7 @@
  #include "chrome/browser/ui/views/chrome_browser_main_extra_parts_views.h"
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD$
  #include "chrome/browser/ui/views/chrome_browser_main_extra_parts_views_linux.h"
  #endif
  
-@@ -508,7 +508,7 @@ bool CertMatchesFilter(const net::X509Ce
+@@ -534,7 +534,7 @@ bool CertMatchesFilter(const net::X509Ce
    return false;
  }
  
@@ -38,7 +38,7 @@ $NetBSD$
  breakpad::CrashHandlerHostLinux* CreateCrashHandlerHost(
      const std::string& process_type) {
    base::FilePath dumps_path;
-@@ -779,7 +779,7 @@ content::BrowserMainParts* ChromeContent
+@@ -840,7 +840,7 @@ content::BrowserMainParts* ChromeContent
    main_parts = new ChromeBrowserMainPartsMac(parameters);
  #elif defined(OS_CHROMEOS)
    main_parts = new chromeos::ChromeBrowserMainPartsChromeos(parameters);
@@ -47,7 +47,7 @@ $NetBSD$
    main_parts = new ChromeBrowserMainPartsLinux(parameters);
  #elif defined(OS_ANDROID)
    main_parts = new ChromeBrowserMainPartsAndroid(parameters);
-@@ -795,7 +795,7 @@ content::BrowserMainParts* ChromeContent
+@@ -856,7 +856,7 @@ content::BrowserMainParts* ChromeContent
    // Construct additional browser parts. Stages are called in the order in
    // which they are added.
  #if defined(TOOLKIT_VIEWS)
@@ -56,7 +56,7 @@ $NetBSD$
    main_parts->AddParts(new ChromeBrowserMainExtraPartsViewsLinux());
  #else
    main_parts->AddParts(new ChromeBrowserMainExtraPartsViews());
-@@ -1407,7 +1407,7 @@ void ChromeContentBrowserClient::AppendE
+@@ -1451,7 +1451,7 @@ void ChromeContentBrowserClient::AppendE
      command_line->AppendSwitchASCII(switches::kMetricsClientID,
                                      client_info->client_id);
    }
@@ -64,8 +64,8 @@ $NetBSD$
 +#elif defined(OS_POSIX) && !defined(OS_BSD)
    if (breakpad::IsCrashReporterEnabled()) {
      std::string switch_value;
-     scoped_ptr<metrics::ClientInfo> client_info =
-@@ -2604,7 +2604,7 @@ void ChromeContentBrowserClient::GetAddi
+     std::unique_ptr<metrics::ClientInfo> client_info =
+@@ -2732,7 +2732,7 @@ void ChromeContentBrowserClient::GetAddi
    PathService::Get(base::DIR_ANDROID_APP_DATA, &app_data_path);
    DCHECK(!app_data_path.empty());
  }

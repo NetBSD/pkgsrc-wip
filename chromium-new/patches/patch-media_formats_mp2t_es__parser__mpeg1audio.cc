@@ -1,8 +1,8 @@
 $NetBSD$
 
---- media/formats/mp2t/es_parser_mpeg1audio.cc.orig	2016-06-24 01:02:23.000000000 +0000
+--- media/formats/mp2t/es_parser_mpeg1audio.cc.orig	2016-11-10 20:02:15.000000000 +0000
 +++ media/formats/mp2t/es_parser_mpeg1audio.cc
-@@ -111,11 +111,11 @@ bool EsParserMpeg1Audio::LookForMpeg1Aud
+@@ -109,11 +109,11 @@ bool EsParserMpeg1Audio::LookForMpeg1Aud
    const uint8_t* es;
    es_queue_->Peek(&es, &es_size);
  
@@ -17,7 +17,7 @@ $NetBSD$
      const uint8_t* cur_buf = &es[offset];
      if (cur_buf[0] != 0xff)
        continue;
-@@ -156,7 +156,7 @@ bool EsParserMpeg1Audio::LookForMpeg1Aud
+@@ -154,7 +154,7 @@ bool EsParserMpeg1Audio::LookForMpeg1Aud
      return true;
    }
  

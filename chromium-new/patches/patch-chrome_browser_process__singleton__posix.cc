@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/process_singleton_posix.cc.orig	2016-06-24 01:02:13.000000000 +0000
+--- chrome/browser/process_singleton_posix.cc.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/process_singleton_posix.cc
-@@ -87,11 +87,11 @@
+@@ -90,11 +90,11 @@
  #include "net/base/network_interfaces.h"
  #include "ui/base/l10n/l10n_util.h"
  
@@ -16,7 +16,7 @@ $NetBSD$
  #include "ui/views/linux_ui/linux_ui.h"
  #endif
  
-@@ -315,7 +315,7 @@ bool DisplayProfileInUseError(const base
+@@ -318,7 +318,7 @@ bool DisplayProfileInUseError(const base
    if (g_disable_prompt)
      return false;
  

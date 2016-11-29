@@ -1,8 +1,8 @@
 $NetBSD$
 
---- net/net.gyp.orig	2016-06-24 01:02:25.000000000 +0000
+--- net/net.gyp.orig	2016-11-10 20:02:16.000000000 +0000
 +++ net/net.gyp
-@@ -148,7 +148,7 @@
+@@ -186,7 +186,7 @@
          '<@(net_test_sources)',
        ],
        'conditions': [
@@ -11,7 +11,7 @@ $NetBSD$
            'dependencies': [
              'epoll_quic_tools',
              'epoll_server',
-@@ -672,6 +672,11 @@
+@@ -713,6 +713,11 @@
              'url_request/test_url_request_interceptor.h',
            ],
          }],

@@ -1,22 +1,26 @@
 $NetBSD$
 
---- ui/base/ime/input_method_factory.cc.orig	2016-06-24 01:02:52.000000000 +0000
+--- ui/base/ime/input_method_factory.cc.orig	2016-11-10 20:02:30.000000000 +0000
 +++ ui/base/ime/input_method_factory.cc
-@@ -14,7 +14,7 @@
+@@ -14,8 +14,8 @@
+ #include "ui/base/ime/input_method_win.h"
  #elif defined(OS_MACOSX)
  #include "ui/base/ime/input_method_mac.h"
- #elif defined(USE_AURA) && defined(OS_LINUX) && defined(USE_X11) && \
+-#elif defined(USE_AURA) && defined(OS_LINUX) && defined(USE_X11) && \
 -      !defined(OS_CHROMEOS)
-+      !defined(OS_CHROMEOS) || defined(OS_BSD)
++#elif defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD)) && \
++	defined(USE_X11) && !defined(OS_CHROMEOS)
  #include "ui/base/ime/input_method_auralinux.h"
  #elif defined(OS_ANDROID)
  #include "ui/base/ime/input_method_android.h"
-@@ -56,7 +56,7 @@ scoped_ptr<InputMethod> CreateInputMetho
+@@ -56,8 +56,8 @@ std::unique_ptr<InputMethod> CreateInput
+   return base::MakeUnique<InputMethodWin>(delegate, widget);
  #elif defined(OS_MACOSX)
-   return make_scoped_ptr(new InputMethodMac(delegate));
- #elif defined(USE_AURA) && defined(OS_LINUX) && defined(USE_X11) && \
+   return base::MakeUnique<InputMethodMac>(delegate);
+-#elif defined(USE_AURA) && defined(OS_LINUX) && defined(USE_X11) && \
 -      !defined(OS_CHROMEOS)
-+      !defined(OS_CHROMEOS) || defined(OS_BSD)
-   return make_scoped_ptr(new InputMethodAuraLinux(delegate));
++#elif defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD)) && \
++  defined(USE_X11) && !defined(OS_CHROMEOS)
+   return base::MakeUnique<InputMethodAuraLinux>(delegate);
  #elif defined(OS_ANDROID)
-   return make_scoped_ptr(new InputMethodAndroid(delegate));
+   return base::MakeUnique<InputMethodAndroid>(delegate);

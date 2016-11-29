@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- chrome/common/variations/BUILD.gn.orig	2016-11-10 20:02:11.000000000 +0000
++++ chrome/common/variations/BUILD.gn
+@@ -12,7 +12,7 @@ action("fieldtrial_testing_config_action
+   if (is_mac) {
+     source = "//testing/variations/fieldtrial_testing_config_mac.json"
+   }
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     source = "//testing/variations/fieldtrial_testing_config_linux.json"
+   }
+   if (is_chromeos) {

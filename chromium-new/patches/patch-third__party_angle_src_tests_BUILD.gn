@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- third_party/angle/src/tests/BUILD.gn.orig	2016-11-10 20:02:57.000000000 +0000
++++ third_party/angle/src/tests/BUILD.gn
+@@ -41,7 +41,7 @@ test("angle_unittests") {
+   ]
+ }
+ 
+-if (is_win || is_linux || is_mac || is_android) {
++if (is_win || is_linux || is_mac || is_android || is_bsd) {
+   end2end_gypi = exec_script("//build/gypi_to_gn.py",
+                              [
+                                rebase_path("angle_end2end_tests.gypi"),

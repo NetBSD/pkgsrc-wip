@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/metrics/drive_metrics_provider_linux.cc.orig	2016-06-24 01:02:18.000000000 +0000
+--- components/metrics/drive_metrics_provider_linux.cc.orig	2016-11-10 20:02:13.000000000 +0000
 +++ components/metrics/drive_metrics_provider_linux.cc
 @@ -4,7 +4,13 @@
  

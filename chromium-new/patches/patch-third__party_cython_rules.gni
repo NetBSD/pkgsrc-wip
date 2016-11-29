@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- third_party/cython/rules.gni.orig	2016-11-10 20:02:28.000000000 +0000
++++ third_party/cython/rules.gni
+@@ -6,7 +6,7 @@ import("//build/toolchain/toolchain.gni"
+ 
+ template("python_binary_source_set") {
+   # Only available on linux for now.
+-  assert(is_linux)
++  assert(is_linux || is_bsd)
+   assert(defined(invoker.cython_sources) || defined(invoker.sources))
+ 
+   config_name = target_name + "_python_config"
+@@ -81,7 +81,7 @@ template("python_binary_source_set") {
+ 
+ template("python_binary_module") {
+   # Only available on linux for now.
+-  assert(is_linux)
++  assert(is_linux || is_bsd)
+ 
+   has_sources = defined(invoker.cython_sources) || defined(invoker.sources)
+ 
+@@ -92,7 +92,7 @@ template("python_binary_module") {
+   sources_target_name = target_name + "_cython_sources"
+   shared_library_name = target_name + "_shared_library"
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     shared_library_prefix = "lib"
+     shared_library_suffix = ".so"
+     python_module_suffix = ".so"

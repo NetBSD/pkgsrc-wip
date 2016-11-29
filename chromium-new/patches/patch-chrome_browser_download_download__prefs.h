@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/download/download_prefs.h.orig	2016-06-24 01:02:12.000000000 +0000
+--- chrome/browser/download/download_prefs.h.orig	2016-11-10 20:02:10.000000000 +0000
 +++ chrome/browser/download/download_prefs.h
 @@ -79,7 +79,7 @@ class DownloadPrefs {
    // Disables auto-open based on file extension.

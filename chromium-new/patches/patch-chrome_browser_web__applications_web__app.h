@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/web_applications/web_app.h.orig	2016-06-24 01:02:14.000000000 +0000
+--- chrome/browser/web_applications/web_app.h.orig	2016-11-10 20:02:11.000000000 +0000
 +++ chrome/browser/web_applications/web_app.h
-@@ -227,7 +227,7 @@ typedef std::vector<WebApplicationInfo::
+@@ -224,7 +224,7 @@ typedef std::vector<WebApplicationInfo::
  void GetIconsInfo(const WebApplicationInfo& app_info, IconInfoList* icons);
  #endif
  
