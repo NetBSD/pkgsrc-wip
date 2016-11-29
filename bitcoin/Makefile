@@ -2,7 +2,7 @@
 
 # TODO: update to latest release
 DISTNAME=       bitcoin-0.11.2
-PKGREVISION=    3
+PKGREVISION=    4
 CATEGORIES=	finance
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=bitcoin/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
@@ -79,8 +79,5 @@ do-install:
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt4-tools=	full
-.include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
