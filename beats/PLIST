@@ -1,8 +1,14 @@
 @comment $NetBSD$
 bin/filebeat
 bin/libbeat
+bin/metricbeat
 bin/packetbeat
+share/examples/beats/filebeat.template-es2x.json
 share/examples/beats/filebeat.template.json
 share/examples/beats/filebeat.yml
+share/examples/beats/metricbeat.template-es2x.json
+share/examples/beats/metricbeat.template.json
+share/examples/beats/metricbeat.yml
+share/examples/beats/packetbeat.template-es2x.json
 share/examples/beats/packetbeat.template.json
 share/examples/beats/packetbeat.yml
