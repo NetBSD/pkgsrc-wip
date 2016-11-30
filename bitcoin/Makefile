@@ -17,10 +17,7 @@ AUTO_MKDIRS=	yes
 GNU_CONFIGURE=  yes
 
 USE_LANGUAGES=	c c++
-# It's not clear what dialect of C++ bitcoin is in, and
-# if it needs explicit flags (c++0x was previously set).
-# For now, leave it out.
-#CXXFLAGS+=	-std=c++0x
+# bitcoin-core requires c++11 (but does not need manual --std=c++11).
 
 # TODO: File bug upstream - configure should add this where it is
 # needed.  Without -fPIC, linking of test_bitcoin fails.
@@ -28,10 +25,6 @@ CFLAGS+=        -fPIC
 
 # configure does not look in PREFIX for boost unless instructed.
 CONFIGURE_ARGS+=  --with-boost=${BUILDLINK_PREFIX.boost-libs}
-# TODO: Explain why this is necessary; the -I of the include dir
-# should be present, and bitcoin's configure should know about what
-# appears to be a standard include sub-directory.
-CXXFLAGS+=	-I${BUILDLINK_PREFIX.boost-libs}/include/boost
 
 CONFIGURE_ARGS+=  --enable-hardening
 
@@ -62,8 +55,8 @@ pre-configure:
 # and if so where, or if they should be linked with privately.
 INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 src/univalue
 
+# Install the Debian example config file.
 post-install:
-	# Install the Debian example config file.
 	${INSTALL_DATA} -m 600 ${WRKSRC}/contrib/debian/examples/bitcoin.conf ${DESTDIR}${EGDIR}
 
 .include "options.mk"
