@@ -3148,7 +3148,6 @@ SUBDIR+=	py-mystic
 SUBDIR+=	py-naftawayh
 SUBDIR+=	py-naima
 SUBDIR+=	py-napalm
-SUBDIR+=	py-natsort
 SUBDIR+=	py-ncomb
 SUBDIR+=	py-ncpol2sdpa
 SUBDIR+=	py-neo
