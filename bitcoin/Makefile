@@ -33,6 +33,8 @@ BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
 
 TEST_TARGET=	check
 
+PLIST_VARS+=	qt4
+
 RCD_SCRIPTS=	bitcoind
 BUILD_DEFS+=	VARBASE
 OWN_DIRS=	${VARBASE}/bitcoin

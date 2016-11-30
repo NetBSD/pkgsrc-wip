@@ -1,9 +1,11 @@
 @comment $NetBSD$
 bin/bench_bitcoin
 bin/bitcoin-cli
+${PLIST.qt4}bin/bitcoin-qt
 bin/bitcoin-tx
 bin/bitcoind
 bin/test_bitcoin
+${PLIST.qt4}bin/test_bitcoin-qt
 include/bitcoinconsensus.h
 include/secp256k1.h
 include/secp256k1_recovery.h

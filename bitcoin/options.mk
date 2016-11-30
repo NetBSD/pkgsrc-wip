@@ -13,11 +13,16 @@ PKG_SUGGESTED_OPTIONS+=		dbus
 # by configure.  Until fixed, leave the option off.
 .if !empty(PKG_OPTIONS:Mqt4)
 BUILDLINK_DEPMETHOD.qt4-tools=	full
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 
 # qrencode is only used by the qt gui, and it is tiny compared to qt.
 .include "../../converters/qrencode/buildlink3.mk"
+
+CONFIGURE_ARGS+=	--with-qt-bindir=${QTDIR}/bin
+
+PLIST.qt4=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mminiupnpc)
