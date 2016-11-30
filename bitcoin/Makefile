@@ -31,6 +31,8 @@ CONFIGURE_ARGS+=  --enable-hardening
 # pkgsrc's db4 package installs as db4_, but bitcoin looks for db_.
 BUILDLINK_TRANSFORM+=   l:db_cxx:db4_cxx
 
+TEST_TARGET=	check
+
 RCD_SCRIPTS=	bitcoind
 BUILD_DEFS+=	VARBASE
 OWN_DIRS=	${VARBASE}/bitcoin
