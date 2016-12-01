@@ -12,7 +12,7 @@ COMMENT=	DeforaOS desktop virtual keyboard
 
 LICENSE=	gnu-gpl-v3
 
-CONFLICTS+=	gnome-control-center>=2.20.1{,nb*}
+CONFLICTS+=	gnome-control-center>=2.20.1
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
