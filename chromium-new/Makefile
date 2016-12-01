@@ -18,6 +18,8 @@ BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+BUILD_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+BUILD_DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
@@ -165,7 +167,6 @@ GN_ARGS+=	proprietary_codecs=true \
 		ffmpeg_branding="Chrome"
 
 GN_ARGS+=	use_gconf=false \
-		use_pulseaudio=true \
 		use_kerberos=false \
 		use_cups=false \
 		use_aura=true \
@@ -314,9 +315,6 @@ do-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
-# Not tested
-#.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 # This introduces OpenSSL dependency and it conflicts with bundled BoringSSL.
 #.include "../../print/cups/buildlink3.mk"
