@@ -1823,7 +1823,6 @@ SUBDIR+=	mingw-w64-gcc
 SUBDIR+=	mingw-w64-headers
 SUBDIR+=	mingw-w64-libgcc
 SUBDIR+=	mini18n
-SUBDIR+=	miniupnpc
 SUBDIR+=	minuit2
 SUBDIR+=	mipscope
 SUBDIR+=	miracl
