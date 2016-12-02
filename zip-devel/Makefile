@@ -3,8 +3,10 @@
 DISTNAME=	zip31d
 PKGNAME=	zip-3.1pre4
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/beta/
+MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/beta/ \
+		ftp://ftp.info-zip.org/pub/infozip/crypt/
 EXTRACT_SUFX=	.zip
+DISTFILES=	${DISTNAME}.zip iz_aes_wg15.zip
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/Zip.html
@@ -20,6 +22,9 @@ MAKE_FLAGS+=	-DUNICODE_SUPPORT
 BUILD_TARGET=	generic
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+post-extract:
+	${MV} ${WRKDIR}/aes_wg ${WRKSRC}
 
 do-install:
 	cd ${WRKSRC} && \
