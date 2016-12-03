@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/20 13:03:04 noud4 Exp $
-bin/dfu-util
-bin/dfu-util_static
