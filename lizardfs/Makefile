@@ -3,10 +3,11 @@
 PKGNAME=	lizardfs-${VERSION}
 VERSION=	3.10.4
 CATEGORIES=	filesystems
+MASTER_SITES=	# defined
 
 GIT_REPOSITORIES=	lizardfs
-GIT_REPO.lizardfs=	https://github.com/lizardfs/lizardfs.git
-GIT_TAG.lizardfs=	v${PKGVERSION_NOREV}
+GIT_REPO.lizardfs=	https://github.com/christiank/lizardfs.git
+GIT_BRANCH.lizardfs=	cfkoch_netbsdrefuse
 
 MAINTANER=	cfkoch@edgebsd.org
 HOMEPAGE=	http://lizardfs.com/
@@ -24,6 +25,7 @@ pre-configure:
 	mkdir -p ${WRKSRC}/${dir}
 .endfor
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
