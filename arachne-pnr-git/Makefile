@@ -2,10 +2,10 @@
 
 DISTNAME=	arachne-pnr-52e69ed
 CATEGORIES=	cross
-MASTER_SITES=	${MASTER_SITE_GITHUB:=cliffordwolf/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cseed/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/cliffordwolf/
+HOMEPAGE=	https://github.com/cseed/
 COMMENT=	Place and route tool for FPGAs
 LICENSE=	mit
 
