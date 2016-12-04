@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/icebox.py
+bin/icebox_chipdb
+bin/icebox_colbuf
+bin/icebox_diff
+bin/icebox_explain
+bin/icebox_html
+bin/icebox_maps
+bin/icebox_vlog
+bin/iceboxdb.py
+bin/icebram
+bin/icemulti
+bin/icepack
+bin/icepll
+bin/iceprog
+bin/icetime
+bin/iceunpack
+share/icebox/chipdb-1k.txt
+share/icebox/chipdb-8k.txt
