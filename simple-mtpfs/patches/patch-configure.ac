@@ -1,0 +1,18 @@
+$NetBSD$
+Fix warning
+
+--- configure.ac.orig	2016-12-04 17:10:05.571134076 +0000
++++ configure.ac	2016-12-04 17:10:22.306680792 +0000
+@@ -21,10 +21,10 @@
+ 
+ dnl Enable fdatasync, but not on OSX
+ os_name=$(uname -s)
+-test "x$os_name" == "xDarwin" || AC_CHECK_FUNCS([fdatasync])
++test "x$os_name" = "xDarwin" || AC_CHECK_FUNCS([fdatasync])
+ 
+ PKG_CHECK_MODULES([FUSE], [fuse >= 2.7.3])
+-if test "x$os_name" == "xDarwin"; then
++if test "x$os_name" = "xDarwin"; then
+     AC_SUBST([FUSE_CFLAGS],["-D_FILE_OFFSET_BITS=64 -D_DARWIN_USE_64_BIT_INODE -I/usr/local/include/osxfuse"])
+     AC_SUBST([FUSE_LIBS],["-L/usr/local/lib -losxfuse -pthread -liconv"])
+ fi

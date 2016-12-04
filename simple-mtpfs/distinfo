@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (simple-mtpfs/ea08fdb1299a2f53ac758f15c0377434ac0bbf89.zip) = 4e851d94aa14aada524ddcccd08cea81ff7c9ac0
-RMD160 (simple-mtpfs/ea08fdb1299a2f53ac758f15c0377434ac0bbf89.zip) = 87904ce0084ff21f0e1d2fc40b72d2de4471dd33
-SHA512 (simple-mtpfs/ea08fdb1299a2f53ac758f15c0377434ac0bbf89.zip) = a8c889086f6ddd6b9ab6c08e353bcc7235e43b96e68780f416224c8a62b88cd58b0ae47a9a6271bf138d55f77e37dc2e5669f27ca29aaca24ebcf879f3a2cfd3
-Size (simple-mtpfs/ea08fdb1299a2f53ac758f15c0377434ac0bbf89.zip) = 63996 bytes
+SHA1 (simple-mtpfs/simple-mtpfs-0.2.1.tar.gz) = 1208e27fffee7e34fac488d6e955c30d7dc6a69b
+RMD160 (simple-mtpfs/simple-mtpfs-0.2.1.tar.gz) = dfc634b392781696f51b1f65a4edacc7151f379f
+SHA512 (simple-mtpfs/simple-mtpfs-0.2.1.tar.gz) = 5facd84048233d4a00007a9ad445d0f4a6e270dc155d0ab8c92808b24e7101aa666563c51a23dddb7685aa39b52f80f7341e33e0867fab7aff17c02529fb4b0d
+Size (simple-mtpfs/simple-mtpfs-0.2.1.tar.gz) = 36591 bytes
+SHA1 (patch-configure.ac) = d6bda3861bd1321f2fdd5004b19f3cd823ef937c
