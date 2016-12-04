@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/arachne-pnr
+share/arachne-pnr/chipdb-1k.bin
+share/arachne-pnr/chipdb-8k.bin
