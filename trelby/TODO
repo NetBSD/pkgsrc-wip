@@ -1,0 +1,7 @@
+- "make manual.html" doesn't work -- I don't think it's expecting XSLT to be
+  installed at our ${PREFIX}
+
+- "make trelby.1.gz" fails similarly, I think
+
+- evidently we need to provide a package for python bindings for wxWidgets
+  >= 3
