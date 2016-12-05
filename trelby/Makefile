@@ -6,6 +6,8 @@ MASTER_SITES=	# defined
 
 GIT_REPOSITORIES=	trelby
 GIT_REPO.trelby=	https://github.com/oskusalerma/trelby.git
+# This is the latest version which requires wxWidgets 2.8.
+GIT_REVISION.trelby=	4fe88ba0efbd7e047586d2eb92b162996ea67724
 
 MAINTAINER=	cfkoch@edgebsd.org
 COMMENT=	Screenplay writing program
@@ -35,7 +37,7 @@ DEPENDS+=	py27-lxml>=3:../../textproc/py-lxml
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/pyversion.mk"
-#.include "../../x11/py-wxWidgets/buildlink3.mk" XXX wrong version
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/py-wxWidgets/buildlink3.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
