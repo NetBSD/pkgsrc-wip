@@ -63,22 +63,44 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
      });
    }
  
-@@ -244,12 +245,12 @@ function resizeMainImg(img)
+@@ -119,6 +120,7 @@ function resize()
+ 
+ function onResize()
+ {
++  setSlideshowOff();
+   resize();
+   onScroll();
+ }
+@@ -244,13 +246,17 @@ function resizeMainImg(img)
  {
    var contSize = econt.getSize();
    var listSize = elist.getSize();
 -  var thumbWidth = (clayout == 'horizontal'? listSize.x: listSize.y);
-+  var thumbWidth = (slideshow == 'on'? 0: clayout == 'horizontal'? listSize.x: listSize.y);
    var data = imgs.data[img.idx].img;
    var width = data[1][0];
    var height = data[1][1];
    var imgrt = width / height;
 -  var pad = padding * 2;
-+  var pad = (slideshow == 'on'? 0: padding * 2);
- 
+-
++  var thumbWidth = 0;
++  var pad = 0;
++  if(slideshow != 'on')
++  {
++    thumbWidth = clayout == 'horizontal'? listSize.x: listSize.y;
++    pad = padding * 2;
++  }
    if(imgrt > (contSize.x / contSize.y))
    {
-@@ -388,17 +389,20 @@ function hideCap(nodelay)
+     img.width = Math.max(thumbWidth + pad, contSize.x - pad);
+@@ -333,7 +339,6 @@ function onScroll()
+     beg = Math.max(0, beg - psize);
+     end = Math.min(imgs.data.length, end + psize);
+   }
+-
+   for(var i = beg; i != end; ++i)
+   {
+     if(!imgs.data[i].thumbLoaded)
+@@ -388,17 +393,20 @@ function hideCap(nodelay)
  function showCap(nodelay)
  {
    if(capst == 'never') return;
@@ -102,7 +124,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
      var words = cap[0].split(' ').length + cap[1].split(' ').length;
      var delay = Math.max(capdelay, rdwdelay * words);
      captm = hideCap.delay(delay);
-@@ -408,7 +412,6 @@ function showCap(nodelay)
+@@ -408,7 +416,6 @@ function showCap(nodelay)
  function toggleCap()
  {
    if(!imgs.captions) return;
@@ -110,7 +132,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    // switch mode
    if(capst == 'normal')
      capst = 'never';
-@@ -416,53 +419,75 @@ function toggleCap()
+@@ -416,53 +423,83 @@ function toggleCap()
      capst = 'always';
    else
      capst = 'normal';
@@ -125,28 +147,36 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    var img = document.id('togglecap', ehdr);
 -  img.src = 'cap-' + capst + '.png';
 +  img.src = 'view/cap-' + capst + '.png';
++  showHdr();
++}
++
++function setSlideshowOff()
++{
++  if(slideshow == 'off') return;
++  idle.removeEvent('idle', next);
    showHdr();
- }
- 
++  elist.setStyle('display', 'block');
++  slideshow = 'off';
++}
++
++function setSlideshowOn()
++{
++  if(slideshow == 'on') return;
++  idle.addEvent('idle', next);
++  hideHdr();
++  elist.setStyle('display', 'none');
++  slideshow = 'on';
++}
++
 +function toggleSlideshow()
 +{
 +  if(slideshow == 'on')
-+  {
-+    idle.removeEvent('idle', next);
-+    showHdr();
-+    elist.setStyle('display', 'block');
-+    slideshow = 'off';
-+  }
++    setSlideshowOff()
 +  else
-+  {
-+    idle.addEvent('idle', next);
-+    hideHdr();
-+    elist.setStyle('display', 'none');
-+    slideshow = 'on';
-+  }
++    setSlideshowOn();
 +  resize();
-+}
-+
+ }
+ 
  function setupHeader()
  {
    ehdr.empty();
@@ -198,7 +228,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  }
  
  function onMainReady()
-@@ -544,26 +569,31 @@ function onMainReady()
+@@ -544,26 +581,31 @@ function onMainReady()
    fx.start('opacity', 1);
  
    var rp = Math.floor(Math.random() * 100);
@@ -235,7 +265,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr.empty();
    img.inject(ehdr);
    ehdr.setStyle('display', 'block');
-@@ -573,32 +603,17 @@ function showThrobber()
+@@ -573,32 +615,17 @@ function showThrobber()
  
  function hideHdr()
  {
@@ -270,7 +300,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  function flash()
  {
    eflash.setStyle('display', 'block');
-@@ -637,7 +652,7 @@ function load(i)
+@@ -637,7 +664,7 @@ function load(i)
    if(i == eidx) return;
  
    var data = imgs.data[i];
@@ -279,7 +309,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    {
      onComplete: function() { if(i == eidx) onMainReady(); }
    });
-@@ -722,16 +737,6 @@ function initGallery(data)
+@@ -722,16 +749,6 @@ function initGallery(data)
    ecap = new Element('div', { id: 'caption' });
    ecap.inject(econt);
  
@@ -296,7 +326,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    ehdr = new Element('div', { id: 'header' });
    ehdr.set('tween', { link: 'ignore' })
    ehdr.inject(econt);
-@@ -771,10 +776,9 @@ function initGallery(data)
+@@ -771,10 +788,9 @@ function initGallery(data)
  
    // events and navigation shortcuts
    elist.addEvent('scroll', onScroll);
@@ -308,7 +338,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    window.addEvent('keydown', function(ev)
    {
-@@ -788,10 +792,6 @@ function initGallery(data)
+@@ -788,10 +804,6 @@ function initGallery(data)
        ev.stop();
        next();
      }
@@ -319,7 +349,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
    });
  
    econt.addEvent('mousewheel', function(ev)
-@@ -815,16 +815,15 @@ function initGallery(data)
+@@ -815,16 +827,15 @@ function initGallery(data)
    });
  
    // setup an idle callback for mouse movement only
@@ -340,7 +370,7 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
  
    // prepare first image
    sdir = 1;
-@@ -871,12 +870,11 @@ function init()
+@@ -871,12 +882,13 @@ function init()
    }).get();
  
    // preload some resources
@@ -355,6 +385,8 @@ webserver to /usr/pkg/share/fgallery/view in DocumentRoot hierarchies
 +		'view/cap-normal.png', 'view/cap-always.png', 'view/cap-never.png',
 +		'view/cut-left.png', 'view/cut-right.png',
 +		'view/cut-top.png', 'view/cut-mov.png']);
++
++  setSlideshowOff();
  }
  
  window.addEvent('domready', init);
