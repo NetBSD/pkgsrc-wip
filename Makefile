@@ -4111,6 +4111,7 @@ SUBDIR+=	tome
 SUBDIR+=	tome2
 SUBDIR+=	tophat
 SUBDIR+=	tops-bin
+SUBDIR+=	tor-dev
 SUBDIR+=	torcs
 SUBDIR+=	torque2d
 SUBDIR+=	torque3d
