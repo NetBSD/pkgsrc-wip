@@ -3902,6 +3902,7 @@ SUBDIR+=	snes9express
 SUBDIR+=	snotes
 SUBDIR+=	socklog
 SUBDIR+=	softflowd
+SUBDIR+=	softvms
 SUBDIR+=	soil
 SUBDIR+=	solarus-zsdx
 SUBDIR+=	sollya
