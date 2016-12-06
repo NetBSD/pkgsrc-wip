@@ -846,7 +846,6 @@ SUBDIR+=	gf2x
 SUBDIR+=	gfa
 SUBDIR+=	gfan
 SUBDIR+=	gfeedline
-SUBDIR+=	gflags
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	gforth-git
