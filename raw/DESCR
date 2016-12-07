@@ -1,0 +1,10 @@
+raw is a re-implmentation of the engine used in the game Another World.
+This game, released under the name Out Of This World in non-European
+countries, was written by Eric Chahi at the beginning of the '90s.
+
+Supported Version:
+    * English PC DOS version is supported("Out of this World)
+
+You need the original files, here is the required list:
+    * BANK*
+    * MEMLIST.BIN
