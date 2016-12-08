@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.0 2016/12/08 10:14:50 tm Exp $
+bin/rview
+bin/rvim
+bin/vim
