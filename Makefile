@@ -4239,6 +4239,7 @@ SUBDIR+=	viewglob
 SUBDIR+=	viewnior
 SUBDIR+=	vimprobable2
 SUBDIR+=	vimrc-mode
+SUBDIR+=	vim-nox
 SUBDIR+=	vino
 SUBDIR+=	vips
 SUBDIR+=	virtualbox
