@@ -1,8 +1,8 @@
 @comment $NetBSD$
 bin/chsh.ldap
 bin/getent.ldap
-lib/nss_ldap.so.0
-lib/security/pam_ldap.so
+lib/${NSS_LDAP_SONAME}
+lib/security/${PAM_LDAP_SONAME}
 man/man1/chsh.ldap.1
 man/man1/getent.ldap.1
 man/man5/nslcd.conf.5
