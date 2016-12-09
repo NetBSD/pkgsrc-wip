@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.2 2012/12/13 18:20:29 ftigeot Exp $
 
-DISTNAME=	nss-pam-ldapd-0.8.13
+DISTNAME=	nss-pam-ldapd-0.9.7
 CATEGORIES=	databases
 MASTER_SITES=	http://arthurdejong.org/nss-pam-ldapd/
 
-MAINTAINER=	ftigeot@wolfpond.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://arthurdejong.org/nss-pam-ldapd/
 COMMENT=	LDAP client for nsswitch
 LICENSE=	gnu-lgpl-v2
@@ -23,7 +23,7 @@ PKG_GROUPS_VARS+=	NSLCD_GROUP
 USE_TOOLS+=		autoconf
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-ldap-conf-file=${EGDIR}/nslcd.conf
+CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/nslcd.conf
 CONFIGURE_ARGS+=	--with-nslcd-pidfile=${NSLCD_PIDFILE}
 CONFIGURE_ARGS+=	--with-nslcd-socket=${NSLCD_SOCKET}
 CONFIGURE_ARGS+=	--with-ldap-lib=openldap
@@ -33,6 +33,12 @@ CONFIGURE_ARGS+=	--with-pam-seclib-dir=${PREFIX}/lib/security
 CONFIGURE_ARGS+=	--with-nss-flavour=freebsd
 .endif
 
+REPLACE_PYTHON+=	utils/chsh.py
+REPLACE_PYTHON+=	utils/getent.py
+
+# Don't stip the .so objects, they will then be useless
+# e.g. because nss_module_register can't be looked up
+INSTALL_UNSTRIPPED=	yes
 
 FILES_SUBST+=		PIDFILE=${NSLCD_PIDFILE}
 
@@ -46,7 +52,7 @@ NSLCD_PIDFILE?=		${VARDIR}/nslcd.pid
 NSLCD_SOCKET?=		${VARDIR}/socket
 BUILD_DEFS+=		VARBASE NSLCD_PIDFILE NSLCD_SOCKET
 
-INSTALL_MAKE_FLAGS+=	NSLCD_CONF_PATH=${EGDIR}/nslcd.conf
+INSTALL_MAKE_FLAGS+=	NSLCD_CONF_PATH=${PKG_SYSCONFDIR}/nslcd.conf
 
 # Install FreeBSD's nss_compat.c and later patch it
 pre-patch:
@@ -107,5 +113,6 @@ SUBST_FILES.usergroup=	nslcd.conf
 SUBST_SED.usergroup=	-e 's/^uid nslcd/uid ${NSLCD_USER}/'
 SUBST_SED.usergroup+=	-e 's/^gid nslcd/gid ${NSLCD_GROUP}/'
 
+.include "../../lang/python/application.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,33 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/13 18:20:29 ftigeot Exp $
-lib/${NSS_LDAP_SONAME}
-lib/security/${PAM_LDAP_SONAME}
+@comment $NetBSD$
+bin/chsh.ldap
+bin/getent.ldap
+lib/nss_ldap.so.0
+lib/security/pam_ldap.so
+man/man1/chsh.ldap.1
+man/man1/getent.ldap.1
 man/man5/nslcd.conf.5
 man/man8/nslcd.8
 man/man8/pam_ldap.8
 sbin/nslcd
 share/examples/nss-pam-ldapd/nslcd.conf
-share/examples/rc.d/nslcd
+share/nslcd-utils/chsh.py
+share/nslcd-utils/chsh.pyc
+share/nslcd-utils/chsh.pyo
+share/nslcd-utils/cmdline.py
+share/nslcd-utils/cmdline.pyc
+share/nslcd-utils/cmdline.pyo
+share/nslcd-utils/constants.py
+share/nslcd-utils/constants.pyc
+share/nslcd-utils/constants.pyo
+share/nslcd-utils/getent.py
+share/nslcd-utils/getent.pyc
+share/nslcd-utils/getent.pyo
+share/nslcd-utils/nslcd.py
+share/nslcd-utils/nslcd.pyc
+share/nslcd-utils/nslcd.pyo
+share/nslcd-utils/shells.py
+share/nslcd-utils/shells.pyc
+share/nslcd-utils/shells.pyo
+share/nslcd-utils/users.py
+share/nslcd-utils/users.pyc
+share/nslcd-utils/users.pyo

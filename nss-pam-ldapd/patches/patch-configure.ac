@@ -1,24 +1,24 @@
-$NetBSD: patch-configure.ac,v 1.1 2012/12/13 18:20:29 ftigeot Exp $
+$NetBSD$
 
-DragonFly uses the same libc interface as FreeBSD.
+Avoid test ==
 
---- configure.ac.orig	2012-11-18 20:02:03.000000000 +0000
-+++ configure.ac
-@@ -235,7 +235,7 @@ if test "x$NSS_LDAP_SONAME" = "xauto"
- then
-   case "$target_os" in
-     solaris*) NSS_LDAP_SONAME="nss_ldap.so.1" ;;
--    freebsd*) NSS_LDAP_SONAME="nss_ldap.so.1" ;;
-+    freebsd*|dragonfly*) NSS_LDAP_SONAME="nss_ldap.so.1" ;;
-     *)        NSS_LDAP_SONAME="libnss_ldap.so.2" ;;
-   esac
- fi
-@@ -435,7 +435,7 @@ then
-     # do the guessing game
-     case "$target_os" in
-       solaris*) with_nss_flavour=solaris ;;
--      freebsd*) with_nss_flavour=freebsd ;;
-+      freebsd*|dragonfly*) with_nss_flavour=freebsd ;;
-       *)        with_nss_flavour=glibc ;;
-     esac
-   fi
+--- configure.ac.orig	2016-08-14 21:50:01.000000000 +0200
++++ configure.ac	2016-12-09 13:20:41.000000000 +0100
+@@ -821,7 +821,7 @@
+     AC_CHECK_FUNCS(krb5_is_thread_safe)
+ 
+     # see if krb5 is thread safe
+-    if test "x$ac_cv_func_krb5_is_thread_safe" == "xyes"
++    if test "x$ac_cv_func_krb5_is_thread_safe" = "xyes"
+     then
+       AC_CACHE_CHECK(
+           [krb5 thread safety],
+@@ -836,7 +836,7 @@
+                   [nslcd_cv_krb5_is_thread_safe=yes],
+                   [nslcd_cv_krb5_is_thread_safe=no],
+                   [nslcd_cv_krb5_is_thread_safe=unknown])])
+-      if test "x$nslcd_cv_krb5_is_thread_safe" == "xno"
++      if test "x$nslcd_cv_krb5_is_thread_safe" = "xno"
+       then
+         AC_MSG_WARN([krb5 is NOT thread safe])
+       fi

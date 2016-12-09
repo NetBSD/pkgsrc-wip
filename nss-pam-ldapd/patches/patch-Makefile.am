@@ -1,0 +1,27 @@
+$NetBSD$
+
+Install nslcd.conf in the example directory;
+pkgsrc handles making a copy in the pkgsrc config directory.
+
+--- Makefile.am.orig	2016-08-14 19:50:01.000000000 +0000
++++ Makefile.am
+@@ -52,14 +52,12 @@ NSLCD_CONF_PATH = @NSLCD_CONF_PATH@
+ install-data-local: install-nslcd_conf
+ uninstall-local: uninstall-nslcd_conf
+ 
+-# install a default configuration file if it is not already there
++# install an example config file for pkgsrc
++# pkgsrc handles making a copy in $(NSLCD_CONF_PATH)
+ install-nslcd_conf:
+-	@if [ -f $(DESTDIR)$(NSLCD_CONF_PATH) ]; then \
+-	  echo "$(DESTDIR)$(NSLCD_CONF_PATH) already exists, install will not overwrite"; \
+-	else \
+-	  $(mkinstalldirs) `dirname $(DESTDIR)$(NSLCD_CONF_PATH)`; \
+-	  $(INSTALL) -m 600 $(srcdir)/nslcd.conf $(DESTDIR)$(NSLCD_CONF_PATH); \
+-	fi
++	$(mkinstalldirs) $(DESTDIR)/$(PREFIX)/share/examples/nss-pam-ldapd
++	$(INSTALL) -m 600 $(srcdir)/nslcd.conf $(DESTDIR)/$(PREFIX)/share/examples/nss-pam-ldapd
++
+ uninstall-nslcd_conf:
+ 	-rm -f $(DESTDIR)$(NSLCD_CONF_PATH)
+ 
