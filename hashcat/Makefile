@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	hashcat-3.10
+DISTNAME=	hashcat-3.20
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashcat/}
 
