@@ -1,0 +1,11 @@
+MEKA is a multi-machine emulator for MS-Windows and GNU/Linux(older versions
+support MS-DOS). The following machines are supported by MEKA:
+
+    * Sega Game 1000 (SG-1000)
+    * Sega Computer 3000 (SC-3000)
+    * Sega Super Control Station (SF-7000)
+    * Sega Mark III (+ FM Unit)
+    * Sega Master System (SMS)
+    * Sega Game Gear (GG)
+    * ColecoVision (COLECO)
+    * Othello Multivision (OMV)
