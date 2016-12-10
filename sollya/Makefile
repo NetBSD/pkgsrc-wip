@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/05/20 22:33:29 alnsn Exp $
 
-DISTNAME=	sollya-4.1
+DISTNAME=	sollya-5.0
 CATEGORIES=	math
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/33151/
 
@@ -19,6 +19,8 @@ NO_SRC_ON_FTP=          ${RESTRICTED}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+WRKSRC=	${WRKDIR}/sollya-4.1
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"

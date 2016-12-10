@@ -1,6 +1,7 @@
 $NetBSD: distinfo,v 1.1 2015/05/20 22:33:29 alnsn Exp $
 
-SHA1 (sollya-4.1.tar.gz) = ec8505a7e47d475b88de8e84a8668aa1dc5570c8
-RMD160 (sollya-4.1.tar.gz) = d6d997c7e27efb11053043292f2e6e3272f7339e
-Size (sollya-4.1.tar.gz) = 2831736 bytes
+SHA1 (sollya-5.0.tar.gz) = ec8505a7e47d475b88de8e84a8668aa1dc5570c8
+RMD160 (sollya-5.0.tar.gz) = d6d997c7e27efb11053043292f2e6e3272f7339e
+SHA512 (sollya-5.0.tar.gz) = 200f99439978c8aaf5c121cb568dbdeb1f28d2edded1e53a2bf630fd18969b4e436a96b3ac3fd47840655f50c3406cf776b0c6adf8e766d1f9a7341342a09661
+Size (sollya-5.0.tar.gz) = 2831736 bytes
 SHA1 (patch-configure) = fa56ea70faf199470aa709f3f8a8e0f8cb40a62c
