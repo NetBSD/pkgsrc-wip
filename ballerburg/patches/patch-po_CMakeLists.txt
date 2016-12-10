@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- po/CMakeLists.txt.orig	2015-03-29 15:04:01.000000000 +0000
++++ po/CMakeLists.txt
+@@ -9,8 +9,7 @@ if (GETTEXT_FOUND)
+ 		DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.pot)
+ 	add_custom_command(
+ 		OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.pot
+-		COMMAND xgettext -k_ -kN_  --package-version=${VERSION}
+-				--package-name=${CMAKE_PROJECT_NAME}
++		COMMAND xgettext -k_ -kN_  
+ 				-o ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.pot
+ 				${CMAKE_CURRENT_SOURCE_DIR}/../src/*.c
+ 		COMMAND sed -i	-e s/charset=CHARSET/charset=ISO-8859-1/
