@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ballerburg-1.2.0.tar.gz) = d72a04f1e0058db4c746858db3446b5b62e54aa7
+RMD160 (ballerburg-1.2.0.tar.gz) = 9d5947c8ad4adc2a3de6c1fa8e80ab2d42fbb4a3
+SHA512 (ballerburg-1.2.0.tar.gz) = d9a911e811871604650df0224633c5338570ed5eee9a2f3eecb35bc012388b9296878b62b2459965c0766dd7e7cded9a23168f39346a2300aac9e9fe4f478760
+Size (ballerburg-1.2.0.tar.gz) = 99910 bytes
+SHA1 (patch-po_CMakeLists.txt) = 7f9a3d41e1d538398a49ef7e0cb4e85a9850f64a

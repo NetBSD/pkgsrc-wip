@@ -1,0 +1,5 @@
+Ballerburg SDL is a classical castle combat game for GNU/Linux and other
+systems that are supported by the SDL library. Two castles, separated by
+a mountain, try to defeat each other with their cannonballs, either by
+killing the opponent's king or by weakening the opponent enough so that
+the king capitulates.
