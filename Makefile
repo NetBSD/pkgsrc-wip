@@ -6,6 +6,7 @@ COMMENT=	WIP pkgsrc packages
 SUBDIR+=	0ad
 SUBDIR+=	0ad-data
 SUBDIR+=	389-ds-base
+SUBDIR+=	7kaa
 SUBDIR+=	8cc-git
 SUBDIR+=	Bear
 SUBDIR+=	Chinput
