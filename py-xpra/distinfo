@@ -4,6 +4,6 @@ SHA1 (xpra-1.0.tar.xz) = 455c0d93b07abd9678d3412d5c7a800cf66972e0
 RMD160 (xpra-1.0.tar.xz) = 9572a47fae0b4e75efaf6eb38faa6188eba66709
 SHA512 (xpra-1.0.tar.xz) = 5e762363e190a1657687e6bf3198e4df1409a428bd9f3bc7286ce9efb83720126ad4bb64066caf1ad75d458179dce1be75255bf1a11ef28aa7426a7180ff0014
 Size (xpra-1.0.tar.xz) = 1886636 bytes
-SHA1 (patch-service_xpra) = 12a2fff551582a8f8ddb88b950aeed3f13ca2c3f
+SHA1 (patch-service_xpra) = 36c0c0716c4dd9e2d31c9568b1bef389a318713e
 SHA1 (patch-xpra_x11_gtk2_gdk__bindings.pyx) = 66e9688758e777de440ab047e9444309d543aac1
 SHA1 (patch-xpra_x11_gtk2_gdk__display__source.pyx) = 22184d73ed547373762070a550a5379eb6b4561b

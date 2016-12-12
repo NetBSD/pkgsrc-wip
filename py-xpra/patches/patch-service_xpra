@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix unportable test operator.
+
 --- service/xpra.orig	2016-12-06 10:56:26.000000000 +0000
 +++ service/xpra
 @@ -28,7 +28,7 @@ start() {
