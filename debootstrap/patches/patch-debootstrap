@@ -1,6 +1,6 @@
 $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
 
---- debootstrap.orig	2016-10-27 19:53:47.000000000 +0000
+--- debootstrap.orig	2016-11-14 04:01:52.000000000 +0000
 +++ debootstrap
 @@ -14,7 +14,7 @@ if [ -z "$DEBOOTSTRAP_DIR" ]; then
  	if [ -x /debootstrap/debootstrap ]; then
@@ -13,7 +13,7 @@ $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
  
 @@ -29,7 +29,7 @@ FORCE_KEYRING=""
  VARIANT=""
- MERGED_USR="yes"
+ MERGED_USR="no"
  ARCH=""
 -HOST_ARCH=""
 +HOST_ARCH="$(uname -m)"
@@ -39,16 +39,16 @@ $NetBSD: patch-debootstrap,v 1.2 2015/07/10 07:45:00 thomasklausner Exp $
  	esac
  fi
  
-@@ -475,7 +478,7 @@ elif doing_variant scratchbox; then
- 	[ "x$SB2_TARGET" != "x" ] || error 1 SBOXTARGETREQ "No scratchbox target configured for $TARGET"
- 	CHROOT_CMD="sb2 -eR -t $SB2_TARGET"
+@@ -465,7 +468,7 @@ fi
+ if [ "$TARGET" = "/" ]; then
+ 	CHROOT_CMD=""
  else
 -	CHROOT_CMD="chroot $TARGET"
 +	CHROOT_CMD="chroot $TARGET /usr/bin/env LD_PRELOAD=/debootstrap/libfakesyscall-${ARCH}.so"
  fi
  
  if [ -z "$SHA_SIZE" ]; then
-@@ -506,6 +509,7 @@ fi
+@@ -496,6 +499,7 @@ fi
  
  if [ "$TARGET" != "" ]; then
  	mkdir -p "$TARGET/debootstrap"
