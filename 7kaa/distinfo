@@ -4,3 +4,4 @@ SHA1 (7kaa-2.14.6.tar.gz) = 2d3c718495703904c163a74227baebe34ad9ca8b
 RMD160 (7kaa-2.14.6.tar.gz) = 390ab97cae779cfd93e6d818d57395471333bfad
 SHA512 (7kaa-2.14.6.tar.gz) = 4b8e005a45eec8bc56bcd7561f665afc462f364c288c472d1ebffccd6d574e88eb3ea9b501b8328c3d71ad675d62d06eefb44a0be3f65f665f8a3fe4de0745a2
 Size (7kaa-2.14.6.tar.gz) = 42966967 bytes
+SHA1 (patch-autogen.sh) = 57a396ac6bb1983d8c05f2f0d6b0e6d269cf0dec
