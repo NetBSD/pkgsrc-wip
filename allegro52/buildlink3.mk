@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	allegro
 ALLEGRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.allegro+=	allegro>=5.2.0
-BUILDLINK_PKGSRCDIR.allegro?=	../../devel/allegro
+BUILDLINK_PKGSRCDIR.allegro?=	../../wip/allegro52
 
 .include "../../x11/libXcursor/buildlink3.mk"
 .endif	# ALLEGRO_BUILDLINK3_MK
