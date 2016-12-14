@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	paxtest-0.9.14
+DISTNAME=	paxtest-0.9.15
 CATEGORIES=	security
 MASTER_SITES=	https://www.grsecurity.net/~spender/
 
