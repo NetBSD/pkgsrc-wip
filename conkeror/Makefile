@@ -2,7 +2,7 @@
 
 PKGNAME=	conkeror-1.0.3
 DISTNAME=	11121bed996ce84e3536c3c8266cdf3164e02b5a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://repo.or.cz/conkeror.git/snapshot/
 DIST_SUBDIR=	conkeror
@@ -23,7 +23,7 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
 
 post-patch:
-	${RM} ${WRKSRC}/modules/*.orig
+	${RM} ${WRKSRC}/modules/*.orig ${WRKSRC}/modules/page-modes/*.orig
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
