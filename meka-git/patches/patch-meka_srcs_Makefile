@@ -1,0 +1,16 @@
+$NetBSD$
+
+Make it buildable for all allegro version >= 5
+Add required link option
+
+--- meka/srcs/Makefile.orig	2016-12-14 16:51:57.000000000 +0000
++++ meka/srcs/Makefile
+@@ -203,7 +203,7 @@ LIB_ALLEG = -lalleg
+ endif
+ 
+ ifeq ($(SYSTEM), unix)
+-LIB_ALLEG = `pkg-config --cflags --libs allegro-5.0 allegro_image-5.0 allegro_audio-5.0 allegro_font-5.0 allegro_primitives-5.0 allegro_ttf-5.0`
++LIB_ALLEG = `pkg-config --cflags --libs allegro-5 allegro_image-5 allegro_audio-5 allegro_font-5 allegro_primitives-5 allegro_ttf-5` -Wl,-R${PREFIX}/lib
+ endif
+ 
+ ifeq ($(SYSTEM), macosx)
