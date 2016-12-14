@@ -2154,8 +2154,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/spam-wash.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/spam-wash.elc
 share/emacs/${PKGVERSION}/lisp/gnus/spam.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/spam.elc
-share/emacs/${PKGVERSION}/lisp/gs.el.gz
-share/emacs/${PKGVERSION}/lisp/gs.elc
 share/emacs/${PKGVERSION}/lisp/help-at-pt.el.gz
 share/emacs/${PKGVERSION}/lisp/help-at-pt.elc
 share/emacs/${PKGVERSION}/lisp/help-fns.el.gz
@@ -2389,6 +2387,8 @@ share/emacs/${PKGVERSION}/lisp/language/viet-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/viet-util.elc
 share/emacs/${PKGVERSION}/lisp/language/vietnamese.el.gz
 share/emacs/${PKGVERSION}/lisp/language/vietnamese.elc
+share/emacs/${PKGVERSION}/lisp/ldefs-boot-auto.el
+share/emacs/${PKGVERSION}/lisp/ldefs-boot-manual.el
 share/emacs/${PKGVERSION}/lisp/ldefs-boot.el
 share/emacs/${PKGVERSION}/lisp/leim/ja-dic/ja-dic.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/ja-dic/ja-dic.elc
@@ -2918,6 +2918,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/gs.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/gs.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
