@@ -126,6 +126,7 @@ include/clang/Analysis/Analyses/Consumed.h
 include/clang/Analysis/Analyses/Dominators.h
 include/clang/Analysis/Analyses/FormatString.h
 include/clang/Analysis/Analyses/LiveVariables.h
+include/clang/Analysis/Analyses/OSLog.h
 include/clang/Analysis/Analyses/PostOrderCFGView.h
 include/clang/Analysis/Analyses/PseudoConstantAnalysis.h
 include/clang/Analysis/Analyses/ReachableCode.h
@@ -251,6 +252,7 @@ include/clang/CodeGen/SwiftCallingConv.h
 include/clang/Config/config.h
 include/clang/Driver/Action.h
 include/clang/Driver/Compilation.h
+include/clang/Driver/Distro.h
 include/clang/Driver/Driver.h
 include/clang/Driver/DriverDiagnostic.h
 include/clang/Driver/Job.h
@@ -563,6 +565,7 @@ lib/clang/${PKGVERSION}/include/xsaveintrin.h
 lib/clang/${PKGVERSION}/include/xsaveoptintrin.h
 lib/clang/${PKGVERSION}/include/xsavesintrin.h
 lib/clang/${PKGVERSION}/include/xtestintrin.h
+lib/clang/${PKGVERSION}/include/cuda_wrappers/new
 lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
