@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- src/opts.def.orig	2016-03-06 21:09:07.000000000 +0000
++++ src/opts.def
+@@ -67,9 +67,9 @@ export = <<- _EOExport_
+ 	extern  char const assert_fail_fmt[];
+ 
+ 	#define CX_ASSERT(_e)   \
+-	\	if (!(_e))      \
+-	\	    die(COMPLEXITY_EXIT_ASSERT, assert_fail_fmt, \
+-	\	        __FILE__, __LINE__, #_e);
++		if (!(_e))      \
++		    die(COMPLEXITY_EXIT_ASSERT, assert_fail_fmt, \
++		        __FILE__, __LINE__, #_e);
+ 	_EOExport_;
+ 
+ include = <<- _EOInclude_
+@@ -77,7 +77,7 @@ include = <<- _EOInclude_
+ 	FILE *  trace_fp = NULL;
+ 	int     score_ct = 0;
+ 	char const assert_fail_fmt[] =
+-	\	"COMPLEX ASSERTION FAILURE in %s line %u:  %s\n";
++		"COMPLEX ASSERTION FAILURE in %s line %u:  %s\n";
+ 	_EOInclude_;
+ 
+ main = {

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (complexity-1.10.tar.xz) = a2c48ae8b1625825e5d4b3d47ba4fb7c45d07eae
+RMD160 (complexity-1.10.tar.xz) = b922b667e6b532da76203f95ccaa9f7ed188ce59
+SHA512 (complexity-1.10.tar.xz) = 3c9a935b55981a420f5f81b055c921fee96f294bf052fa8f7b7299a538b154659161e24bcce549e2a20706273c48870477cb26c4b4120658de985ab653a90bf1
+Size (complexity-1.10.tar.xz) = 422012 bytes
+SHA1 (patch-src_opts.def) = 423a9cdd6d148f4d0b0d65c3605824aa4c851b4a
