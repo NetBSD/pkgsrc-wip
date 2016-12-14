@@ -24,6 +24,7 @@ SUBDIR+=	OpenBLAS
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
+SUBDIR+=	PatternPaint
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
 SUBDIR+=	R-BiocGenerics
