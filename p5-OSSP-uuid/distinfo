@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (uuid-1.6.2.tar.gz) = 3e22126f0842073f4ea6a50b1f59dcb9d094719f
+RMD160 (uuid-1.6.2.tar.gz) = f9cd513577557c4f1d7de869f80035b8844b56d7
+SHA512 (uuid-1.6.2.tar.gz) = 16c7e016ce08d7679cc6ee7dec43a886a8c351960acdde99f8f9b590c7232d521bc6e66e4766d969d22c3f835dcc2814fdecc44eef1cd11e7b9b0f9c41b5c03e
+Size (uuid-1.6.2.tar.gz) = 397048 bytes
+SHA1 (patch-perl_Makefile.PL) = 21be77416a551afd15debe0894f62d822ce78101
+SHA1 (patch-perl_uuid.xs) = 075b1bb78ef625c6df333dd4c1b38d7d2770c91a

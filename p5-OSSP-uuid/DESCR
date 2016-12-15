@@ -1,0 +1,12 @@
+OSSP uuid is a ISO-C:1999 application programming interface (API)
+and corresponding command line interface (CLI) for the generation
+of DCE 1.1, ISO/IEC 11578:1996 and RFC 4122 compliant Universally
+Unique Identifier (UUID). It supports DCE 1.1 variant UUIDs of version
+1 (time and node based), version 3 (name based, MD5), version 4
+(random number based) and version 5 (name based, SHA-1). Additional
+API bindings are provided for the languages ISO-C++:1998, Perl:5 and
+PHP:4/5. Optional backward compatibility exists for the ISO-C DCE-1.1
+and Perl Data::UUID APIs.
+
+OSSP::uuid is the Perl binding to the OSSP uuid API. Three variants
+are provided - tie-style, OO-style, and C-style.
