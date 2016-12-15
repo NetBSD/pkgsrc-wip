@@ -2206,6 +2206,7 @@ SUBDIR+=	p5-Class-DBI-Plugin-Type
 SUBDIR+=	p5-Class-DBI-SQLite
 SUBDIR+=	p5-Class-DBI-Sweet
 SUBDIR+=	p5-Class-Date
+SUBDIR+=	p5-Config-YAML
 SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBIx-Easy
