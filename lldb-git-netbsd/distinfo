@@ -1,0 +1,31 @@
+$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
+
+SHA1 (cfe-3.6.2.src.tar.xz) = 7ba809c9c17819a16b668640a642ed134d7052f0
+RMD160 (cfe-3.6.2.src.tar.xz) = 10d913b4d5317f8c2520e5fc6117df30937317a8
+Size (cfe-3.6.2.src.tar.xz) = 8617576 bytes
+SHA1 (compiler-rt-3.6.2.src.tar.xz) = c6c52d2923a60f1a2ca2f22fea1770fd2e25728d
+RMD160 (compiler-rt-3.6.2.src.tar.xz) = 9b68a32d49d4bef4603d550934192f39fea42895
+Size (compiler-rt-3.6.2.src.tar.xz) = 1128080 bytes
+SHA1 (libcxx-3.6.2.src.tar.xz) = 6c5aee9f05ecf17d1e3ecb1add34a33a5a904469
+RMD160 (libcxx-3.6.2.src.tar.xz) = 42b8832d01d4e6b553babc93cb5dbd4ce2bb1931
+Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
+SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
+RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
+Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
+SHA1 (patch-cmake_LLDBDependencies.cmake) = c74b2e92695bd5e0ef2f6aca2b1157024c20e89e
+SHA1 (patch-include_lldb_Host_linux_Personality.h) = c9bb2773987b871c000043a9fd3ac143110f79a4
+SHA1 (patch-source_CMakeLists.txt) = d280b1a64b272c4bbdcdab838e69301eb17af732
+SHA1 (patch-source_Plugins_Process_CMakeLists.txt) = be993a6f54da5b09a44e0ca9e4dea96012e539d9
+SHA1 (patch-source_Plugins_Process_Linux_CMakeLists.txt) = a3b5431f8b52d04c838c3a12eaa1fd66cc521c68
+SHA1 (patch-source_Plugins_Process_Linux_NativeProcessLinux.cpp) = 97e0338ef52ce243dda3875ec5e5c218ddff1929
+SHA1 (patch-source_Plugins_Process_Linux_NativeRegisterContextLinux.cpp) = 755cf9dce3aa8d1c32cff9fe3281a09f6d0e6c69
+SHA1 (patch-source_Plugins_Process_Linux_NativeRegisterContextLinux__x86__64.cpp) = f5219581c97d6179222e437122449673eac1cf59
+SHA1 (patch-source_Plugins_Process_Linux_NativeThreadLinux.cpp) = 7d72c5be16304bf2a2cd7b2441828c513e2e8160
+SHA1 (patch-source_Plugins_Process_Linux_NativeThreadLinux.h) = d3685ac9995b4b0c98a94c5a6b2383f386c3fff6
+SHA1 (patch-source_Plugins_Process_Linux_Procfs.h) = 9621cc9494a96d5d4c4fef06dcd9a85bd018f5a1
+SHA1 (patch-tools_lldb-mi_MICmnBase.cpp) = 851c82ac61e1241018755fbd7236af00379ac986
+SHA1 (patch-tools_lldb-mi_MICmnBase.h) = f550d5e10bcf02fb46472733acdbb820791f22e5
+SHA1 (patch-tools_lldb-mi_MIDriver.cpp) = bf1b5399e82bcfe54d6d852f64ed155328f2064d
+SHA1 (patch-tools_lldb-mi_MIUtilString.cpp) = 200d9712753b5559da79c2e16fa0889fea1e9432
+SHA1 (patch-tools_lldb-mi_MIUtilString.h) = 7e7befec383f88502a97aec509ba39477efde37d
+SHA1 (patch-tools_lldb-server_CMakeLists.txt) = ce9c14973f98fe3669b56886d6bf2033630c5aa7
