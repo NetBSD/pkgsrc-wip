@@ -149,7 +149,6 @@ include/llvm/ADT/simple_ilist.h
 include/llvm/Analysis/AliasAnalysis.h
 include/llvm/Analysis/AliasAnalysisEvaluator.h
 include/llvm/Analysis/AliasSetTracker.h
-include/llvm/Analysis/AssumptionCache.h
 include/llvm/Analysis/BasicAliasAnalysis.h
 include/llvm/Analysis/BlockFrequencyInfo.h
 include/llvm/Analysis/BlockFrequencyInfoImpl.h
@@ -666,6 +665,7 @@ include/llvm/LinkAllPasses.h
 include/llvm/Linker/IRMover.h
 include/llvm/Linker/Linker.h
 include/llvm/MC/ConstantPools.h
+include/llvm/MC/LaneBitmask.h
 include/llvm/MC/MCAsmBackend.h
 include/llvm/MC/MCAsmInfo.h
 include/llvm/MC/MCAsmInfoCOFF.h

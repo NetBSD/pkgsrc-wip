@@ -5,6 +5,7 @@ CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	llvm
 GIT_REPO.llvm=		git://github.com/llvm-mirror/llvm.git
+GIT_REVISION.llvm=	a07f27643c7e5334f2fd5bd6c84c7bde32a759d7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvm.org/
