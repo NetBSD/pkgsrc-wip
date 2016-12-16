@@ -1,0 +1,16 @@
+$NetBSD$
+
+git-clang-format is a git integration for clang-format,
+written in python. It could be moved to a separate package
+to avoid a python runtime dependency here, but for now I just opted
+to move it to share/clang and skip the interpreter check.
+
+--- tools/clang-format/CMakeLists.txt.orig	2016-02-23 23:55:19.000000000 +0000
++++ tools/clang-format/CMakeLists.txt
+@@ -35,5 +35,5 @@ install(PROGRAMS clang-format.py
+   DESTINATION share/clang
+   COMPONENT clang-format)
+ install(PROGRAMS git-clang-format
+-  DESTINATION bin
++  DESTINATION share/clang
+   COMPONENT clang-format)

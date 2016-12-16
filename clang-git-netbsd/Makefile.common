@@ -1,0 +1,126 @@
+# $NetBSD$
+# used by wip/clang-git/Makefile
+# used by wip/clang-static-analyzer-git/Makefile
+
+CATEGORIES=	lang devel
+
+GIT_REPOSITORIES=	clang
+GIT_REPO.clang=		git://github.com/llvm-mirror/clang.git
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://clang.llvm.org/
+COMMENT=	C language family frontend for LLVM
+LICENSE=	modified-bsd
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/clang-git/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/clang-git/patches
+WRKSRC=			${WRKDIR}/clang
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
+
+USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
+GCC_REQD+=		4.8
+
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
+# XXX can't disable static-analyzer without also disabling ARCMT
+CMAKE_ARGS+=	-DCLANG_ENABLE_ARCMT=OFF
+
+REPLACE_PERL+=		test/make_test_dirs.pl
+REPLACE_PERL+=		tools/scan-build/bin/scan-build
+REPLACE_PERL+=		tools/scan-build/libexec/c++-analyzer
+REPLACE_PERL+=		tools/scan-build/libexec/ccc-analyzer
+REPLACE_PERL+=		utils/TestUtils/pch-test.pl
+REPLACE_PERL+=		utils/analyzer/reducer.pl
+REPLACE_PERL+=		utils/analyzer/update_plist_test.pl
+REPLACE_PERL+=		www/demo/index.cgi
+
+REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-dump.py
+REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-includes.py
+REPLACE_PYTHON+=	docs/tools/dump_ast_matchers.py
+REPLACE_PYTHON+=	docs/tools/dump_format_style.py
+REPLACE_PYTHON+=	tools/clang-format/clang-format-diff.py
+REPLACE_PYTHON+=	tools/clang-format/git-clang-format
+REPLACE_PYTHON+=	tools/scan-build/bin/set-xcode-analyzer
+REPLACE_PYTHON+=	tools/scan-view/bin/scan-view
+REPLACE_PYTHON+=	utils/ABITest/ABITestGen.py
+REPLACE_PYTHON+=	utils/CIndex/completion_logger_server.py
+REPLACE_PYTHON+=	utils/CaptureCmd
+REPLACE_PYTHON+=	utils/CmpDriver
+REPLACE_PYTHON+=	utils/FindSpecRefs
+REPLACE_PYTHON+=	utils/FuzzTest
+REPLACE_PYTHON+=	utils/TestUtils/deep-stack.py
+REPLACE_PYTHON+=	utils/analyzer/CmpRuns.py
+REPLACE_PYTHON+=	utils/analyzer/SATestAdd.py
+REPLACE_PYTHON+=	utils/analyzer/SATestBuild.py
+REPLACE_PYTHON+=	utils/analyzer/SumTimerInfo.py
+REPLACE_PYTHON+=	utils/analyzer/ubiviz
+REPLACE_PYTHON+=	utils/check_cfc/check_cfc.py
+REPLACE_PYTHON+=	utils/check_cfc/obj_diff.py
+REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
+REPLACE_PYTHON+=	utils/token-delta.py
+REPLACE_PYTHON+=	www/builtins.py
+
+.include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang)
+# command to check if clang is using libc++ or libstdc++
+LIBCPP_CHECK_SH=	printf "\#include <ciso646>\n\#ifdef _LIBCPP_VERSION\nYES\n\#endif" | ${CLANGBASE}/bin/clang++ -x c++ -E - 2>&1 | grep YES || true
+.else
+LIBCPP_CHECK_SH=	echo NO
+.endif
+
+# patch NetBSD::GetCXXStdlibType
+.if ${OPSYS} == "NetBSD" && empty(LIBCPP_CHECK_SH:sh:MYES)
+SUBST_CLASSES+=			libcxx
+SUBST_STAGE.libcxx=		pre-configure
+SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ (matching the host compiler)
+SUBST_FILES.libcxx=		lib/Driver/ToolChains.cpp
+SUBST_FILES.libcxx+=		lib/Driver/Tools.cpp
+SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
+
+CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
+.endif
+
+# 3.8.0 -> 3.8
+LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
+PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
+
+PLIST_VARS+=	notdylib
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+SOEXT=		dylib
+.else
+SOEXT=		so
+PLIST.notdylib=	yes
+.endif
+PLIST_SUBST+=	SOEXT=${SOEXT}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
+PKG_SUPPORTED_OPTIONS=	tests
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mtests)
+CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=ON
+CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=ON
+TEST_TARGET=		clang-test
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+.include "../../devel/googletest/buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
+CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
+.endif
+
+post-extract:
+	${RUN} mkdir -p ${WRKDIR}/build
+
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../wip/mk/git-package.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
+.include "../../wip/llvm-git/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
