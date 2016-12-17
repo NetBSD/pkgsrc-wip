@@ -422,9 +422,9 @@ $NetBSD$
 +        }
 +
 +        int status;
-+        // Need to use __WALL otherwise we receive an error with errno=ECHLD
++        // Need to use WALLSIG otherwise we receive an error with errno=ECHLD
 +        // At this point we should have a thread stopped if waitpid succeeds.
-+        if ((status = waitpid(tid, NULL, __WALL)) < 0) {
++        if ((status = waitpid(tid, NULL, WALLSIG)) < 0) {
 +          // No such thread. The thread may have exited.
 +          // More error handling may be needed.
 +          if (errno == ESRCH) {
@@ -698,7 +698,7 @@ $NetBSD$
 +                  "tid %" PRIu32
 +                  ". tid not tracked yet, waiting for thread to appear...",
 +                  __FUNCTION__, tid);
-+    wait_pid = waitpid(tid, &status, __WALL);
++    wait_pid = waitpid(tid, &status, WALLSIG);
 +  } while (wait_pid == -1 && errno == EINTR);
 +  // Since we are waiting on a specific tid, this must be the creation event.
 +  // But let's do
@@ -2535,7 +2535,7 @@ $NetBSD$
 +  // Process all pending waitpid notifications.
 +  while (true) {
 +    int status = -1;
-+    ::pid_t wait_pid = waitpid(-1, &status, __WALL | __WNOTHREAD | WNOHANG);
++    ::pid_t wait_pid = waitpid(-1, &status, WALLSIG | WNOHANG);
 +
 +    if (wait_pid == 0)
 +      break; // We are done.
@@ -2546,8 +2546,8 @@ $NetBSD$
 +
 +      Error error(errno, eErrorTypePOSIX);
 +      if (log)
-+        log->Printf("NativeProcessNetBSD::%s waitpid (-1, &status, __WALL | "
-+                    "__WNOTHREAD | WNOHANG) failed: %s",
++        log->Printf("NativeProcessNetBSD::%s waitpid (-1, &status, WALLSIG | "
++                    "WNOHANG) failed: %s",
 +                    __FUNCTION__, error.AsCString());
 +      break;
 +    }
@@ -2574,8 +2574,8 @@ $NetBSD$
 +      status_cstr = "(\?\?\?)";
 +
 +    if (log)
-+      log->Printf("NativeProcessNetBSD::%s: waitpid (-1, &status, __WALL | "
-+                  "__WNOTHREAD | WNOHANG)"
++      log->Printf("NativeProcessNetBSD::%s: waitpid (-1, &status, WALLSIG | "
++                  "WNOHANG)"
 +                  "=> pid = %" PRIi32
 +                  ", status = 0x%8.8x (%s), signal = %i, exit_state = %i",
 +                  __FUNCTION__, wait_pid, status, status_cstr, signal,
