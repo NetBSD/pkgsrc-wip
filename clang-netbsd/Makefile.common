@@ -13,8 +13,8 @@ HOMEPAGE=	http://clang.llvm.org/
 COMMENT=	C language family frontend for LLVM
 LICENSE=	modified-bsd
 
-DISTINFO_FILE=		${.CURDIR}/../../wip/clang-git/distinfo
-PATCHDIR=		${.CURDIR}/../../wip/clang-git/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/clang-netbsd/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/clang-netbsd/patches
 WRKSRC=			${WRKDIR}/clang
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
@@ -122,6 +122,6 @@ post-extract:
 .include "../../wip/mk/svn-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git-netbsd
-.include "../../wip/llvm-git-netbsd/buildlink3.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
+.include "../../wip/llvm-netbsd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

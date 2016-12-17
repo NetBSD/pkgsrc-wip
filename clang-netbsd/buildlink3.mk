@@ -6,11 +6,11 @@ BUILDLINK_TREE+=	clang
 CLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clang+=	clang>=3.9.0
-BUILDLINK_PKGSRCDIR.clang?=	../../wip/clang-git
+BUILDLINK_PKGSRCDIR.clang?=	../../wip/clang-netbsd
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/llvm-git/buildlink3.mk"
+.include "../../wip/llvm-netbsd/buildlink3.mk"
 .endif	# CLANG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-clang

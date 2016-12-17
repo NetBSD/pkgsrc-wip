@@ -68,10 +68,10 @@ post-extract:
 	${RM} ${WRKSRC}/source/Plugins/Process/Linux/NativeRegisterContextLinux_s390x.cpp
 
 .include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git-netbsd
-.include "../../wip/llvm-git-netbsd/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git-netbsd
-.include "../../wip/clang-git-netbsd/buildlink3.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
+.include "../../wip/llvm-netbsd/buildlink3.mk"
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-netbsd
+.include "../../wip/clang-netbsd/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
 PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../devel/zlib/buildlink3.mk"

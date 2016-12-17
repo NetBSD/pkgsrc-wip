@@ -14,4 +14,4 @@ post-install: install-clang-cpp
 install-clang-cpp:
 	${LN} -fs clang ${DESTDIR}${PREFIX}/bin/clang-cpp
 
-.include "../../wip/clang-git-netbsd/Makefile.common"
+.include "../../wip/clang-netbsd/Makefile.common"
