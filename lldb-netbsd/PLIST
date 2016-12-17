@@ -16,13 +16,6 @@ ${PYSITELIB}/lldb/runtime/__init__.py
 ${PYSITELIB}/lldb/utils/__init__.py
 ${PYSITELIB}/lldb/utils/symbolication.py
 ${PYSITELIB}/six.py
-bin/${PKGNAME}
-bin/lldb
-bin/lldb-argdumper
-bin/lldb-mi
-bin/lldb-mi-${PKGVERSION}
-bin/lldb-server
-bin/lldb-server-${PKGVERSION}
 include/lldb/API/LLDB.h
 include/lldb/API/SBAddress.h
 include/lldb/API/SBAttachInfo.h
@@ -294,7 +287,6 @@ include/lldb/Host/linux/AbstractSocket.h
 include/lldb/Host/linux/Config.h
 include/lldb/Host/linux/HostInfoLinux.h
 include/lldb/Host/linux/HostThreadLinux.h
-include/lldb/Host/linux/Personality.h
 include/lldb/Host/linux/ProcessLauncherLinux.h
 include/lldb/Host/linux/Ptrace.h
 include/lldb/Host/linux/Uio.h
