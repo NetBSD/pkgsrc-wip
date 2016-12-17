@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,2753 @@
+@@ -0,0 +1,2747 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -149,49 +149,51 @@ $NetBSD$
 +  }
 +}
 +
-+void PtraceDisplayBytes(int &req, void *data, size_t data_size) {
++void PtraceDisplayBytes(int &req, void *addr, int data) {
 +  StreamString buf;
 +  Log *verbose_log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(
 +      POSIX_LOG_PTRACE | POSIX_LOG_VERBOSE));
 +
 +  if (verbose_log) {
 +    switch (req) {
-+    case PTRACE_POKETEXT: {
-+      DisplayBytes(buf, &data, 8);
-+      verbose_log->Printf("PTRACE_POKETEXT %s", buf.GetData());
++    case PT_WRITE_I: {
++      DisplayBytes(buf, &data, sizeof(int));
++      verbose_log->Printf("PT_WRITE_I %s", buf.GetData());
 +      break;
 +    }
-+    case PTRACE_POKEDATA: {
-+      DisplayBytes(buf, &data, 8);
-+      verbose_log->Printf("PTRACE_POKEDATA %s", buf.GetData());
++    case PT_WRITE_D: {
++      DisplayBytes(buf, &data, sizeof(int));
++      verbose_log->Printf("PT_WRITE_I %s", buf.GetData());
 +      break;
 +    }
-+    case PTRACE_POKEUSER: {
-+      DisplayBytes(buf, &data, 8);
-+      verbose_log->Printf("PTRACE_POKEUSER %s", buf.GetData());
++#ifdef PT_SETREGS
++    case PT_SETREGS: {
++      DisplayBytes(buf, addr, sizeof(struct reg));
++      verbose_log->Printf("PT_SETREGS %s", buf.GetData());
 +      break;
 +    }
-+    case PTRACE_SETREGS: {
-+      DisplayBytes(buf, data, data_size);
-+      verbose_log->Printf("PTRACE_SETREGS %s", buf.GetData());
++#endif
++#ifdef PT_SETFPREGS
++    case PT_SETFPREGS: {
++      DisplayBytes(buf, addr, sizeof(struct fpreg));
++      verbose_log->Printf("PT_SETFPREGS %s", buf.GetData());
 +      break;
 +    }
-+    case PTRACE_SETFPREGS: {
-+      DisplayBytes(buf, data, data_size);
-+      verbose_log->Printf("PTRACE_SETFPREGS %s", buf.GetData());
++#endif
++#ifdef PT_SETXMMREGS
++    case PT_SETXMMREGS: {
++      DisplayBytes(buf, addr, sizeof(struct xmmregs));
++      verbose_log->Printf("PT_SETXMMREGS %s", buf.GetData());
 +      break;
 +    }
-+    case PTRACE_SETSIGINFO: {
-+      DisplayBytes(buf, data, sizeof(siginfo_t));
-+      verbose_log->Printf("PTRACE_SETSIGINFO %s", buf.GetData());
++#endif
++#ifdef PT_SETVECREGS
++    case PT_SETVECREGS: {
++      DisplayBytes(buf, addr, sizeof(struct vreg));
++      verbose_log->Printf("PT_SETVECREGS %s", buf.GetData());
 +      break;
 +    }
-+    case PTRACE_SETREGSET: {
-+      // Extract iov_base from data, which is a pointer to the struct IOVEC
-+      DisplayBytes(buf, *(void **)data, data_size);
-+      verbose_log->Printf("PTRACE_SETREGSET %s", buf.GetData());
-+      break;
-+    }
++#endif
 +    default: {}
 +    }
 +  }
@@ -2702,24 +2704,18 @@ $NetBSD$
 +
 +// Wrapper for ptrace to catch errors and log calls.
 +// Note that ptrace sets errno on error because -1 can be a valid result (i.e.
-+// for PTRACE_PEEK*)
++// for PT_READ*)
 +Error NativeProcessNetBSD::PtraceWrapper(int req, lldb::pid_t pid, void *addr,
-+                                        void *data, size_t data_size,
-+                                        long *result) {
++                                        int data, long *result) {
 +  Error error;
 +  long int ret;
 +
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PTRACE));
 +
-+  PtraceDisplayBytes(req, data, data_size);
++  PtraceDisplayBytes(req, addr, data);
 +
 +  errno = 0;
-+  if (req == PTRACE_GETREGSET || req == PTRACE_SETREGSET)
-+    ret = ptrace(static_cast<__ptrace_request>(req), static_cast<::pid_t>(pid),
-+                 *(unsigned int *)addr, data);
-+  else
-+    ret = ptrace(static_cast<__ptrace_request>(req), static_cast<::pid_t>(pid),
-+                 addr, data);
++  ret = ptrace(req, static_cast<::pid_t>(pid), addr, data);
 +
 +  if (ret == -1)
 +    error.SetErrorToErrno();
@@ -2728,10 +2724,8 @@ $NetBSD$
 +    *result = ret;
 +
 +  if (log)
-+    log->Printf("ptrace(%d, %" PRIu64 ", %p, %p, %zu)=%lX", req, pid, addr,
-+                data, data_size, ret);
-+
-+  PtraceDisplayBytes(req, data, data_size);
++    log->Printf("ptrace(%d, %d, %p, %d, %zu)=%lX", req, pid, addr,
++                data, ret);
 +
 +  if (log && error.GetError() != 0) {
 +    const char *str;
