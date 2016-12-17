@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/ProcFileReader.cpp.orig	2016-12-17 13:00:53.158464035 +0000
+--- source/Plugins/Process/NetBSD/ProcFileReader.cpp.orig	2016-12-17 13:23:23.785197270 +0000
 +++ source/Plugins/Process/NetBSD/ProcFileReader.cpp
 @@ -0,0 +1,103 @@
 +//===-- ProcFileReader.cpp --------------------------------------*- C++ -*-===//
@@ -29,7 +29,7 @@ $NetBSD$
 +#include "lldb/Core/Error.h"
 +
 +using namespace lldb_private;
-+using namespace lldb_private::process_linux;
++using namespace lldb_private::process_netbsd;
 +
 +lldb::DataBufferSP ProcFileReader::ReadIntoDataBuffer(lldb::pid_t pid,
 +                                                      const char *name) {

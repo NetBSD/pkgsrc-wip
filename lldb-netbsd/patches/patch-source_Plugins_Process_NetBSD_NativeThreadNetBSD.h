@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-17 13:00:53.156704200 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-17 13:23:23.784994923 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,117 @@
+@@ -0,0 +1,116 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -25,7 +25,7 @@ $NetBSD$
 +#include <string>
 +
 +namespace lldb_private {
-+namespace process_linux {
++namespace process_netbsd {
 +
 +class NativeProcessNetBSD;
 +
@@ -112,11 +112,10 @@ $NetBSD$
 +  std::string m_stop_description;
 +  using WatchpointIndexMap = std::map<lldb::addr_t, uint32_t>;
 +  WatchpointIndexMap m_watchpoint_index_map;
-+  cpu_set_t m_original_cpu_set; // For single-step workaround.
 +};
 +
 +typedef std::shared_ptr<NativeThreadNetBSD> NativeThreadNetBSDSP;
-+} // namespace process_linux
++} // namespace process_netbsd
 +} // namespace lldb_private
 +
 +#endif // #ifndef liblldb_NativeThreadNetBSD_H_

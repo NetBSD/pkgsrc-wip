@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/SingleStepCheck.h.orig	2016-12-17 13:00:53.165484448 +0000
+--- source/Plugins/Process/NetBSD/SingleStepCheck.h.orig	2016-12-17 13:23:23.785649014 +0000
 +++ source/Plugins/Process/NetBSD/SingleStepCheck.h
 @@ -0,0 +1,40 @@
 +//===-- SingleStepCheck.h ------------------------------------- -*- C++ -*-===//
@@ -16,13 +16,13 @@ $NetBSD$
 +#define liblldb_SingleStepCheck_H_
 +
 +namespace lldb_private {
-+namespace process_linux {
++namespace process_netbsd {
 +
 +namespace impl {
 +extern bool SingleStepWorkaroundNeeded();
 +}
 +
-+// arm64 linux had a bug which prevented single-stepping and watchpoints from
++// arm64 netbsd had a bug which prevented single-stepping and watchpoints from
 +// working on non-boot
 +// cpus, due to them being incorrectly initialized after coming out of suspend.
 +// This issue is
@@ -32,14 +32,14 @@ $NetBSD$
 +// step operations on
 +// the boot cpu.
 +//
-+// The underlying issue has been fixed in android N and linux 4.4. This code can
++// The underlying issue has been fixed in android N and netbsd 4.4. This code can
 +// be removed once
 +// these systems become obsolete.
 +inline bool SingleStepWorkaroundNeeded() {
 +  static bool value = impl::SingleStepWorkaroundNeeded();
 +  return value;
 +}
-+} // end namespace process_linux
++} // end namespace process_netbsd
 +} // end namespace lldb_private
 +
 +#endif // #ifndef liblldb_SingleStepCheck_H_

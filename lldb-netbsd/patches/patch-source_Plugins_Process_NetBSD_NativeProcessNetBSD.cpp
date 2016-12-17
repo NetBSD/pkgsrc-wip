@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:00:53.143603907 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,2756 @@
+@@ -0,0 +1,2753 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -38,7 +38,7 @@ $NetBSD$
 +#include "lldb/Host/ThreadLauncher.h"
 +#include "lldb/Host/common/NativeBreakpoint.h"
 +#include "lldb/Host/common/NativeRegisterContext.h"
-+#include "lldb/Host/linux/ProcessLauncherNetBSD.h"
++#include "lldb/Host/netbsd/ProcessLauncherNetBSD.h"
 +#include "lldb/Symbol/ObjectFile.h"
 +#include "lldb/Target/Process.h"
 +#include "lldb/Target/ProcessLaunchInfo.h"
@@ -50,12 +50,10 @@ $NetBSD$
 +#include "NativeThreadNetBSD.h"
 +#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
 +#include "ProcFileReader.h"
-+#include "Procfs.h"
 +
 +// System includes - They have to be included after framework includes because
 +// they define some
 +// macros which collide with variable names in other modules
-+#include <linux/unistd.h>
 +#include <sys/socket.h>
 +
 +#include <sys/syscall.h>
@@ -63,8 +61,7 @@ $NetBSD$
 +#include <sys/user.h>
 +#include <sys/wait.h>
 +
-+#include "lldb/Host/linux/Ptrace.h"
-+#include "lldb/Host/linux/Uio.h"
++#include "lldb/Host/netbsd/Ptrace.h"
 +
 +// Support hardware breakpoints in case it has not been defined
 +#ifndef TRAP_HWBKPT
@@ -73,7 +70,7 @@ $NetBSD$
 +
 +using namespace lldb;
 +using namespace lldb_private;
-+using namespace lldb_private::process_linux;
++using namespace lldb_private::process_netbsd;
 +using namespace llvm;
 +
 +// Private bits we only need internally.
@@ -284,19 +281,19 @@ $NetBSD$
 +  if (!error.Success())
 +    return error;
 +
-+  std::shared_ptr<NativeProcessNetBSD> native_process_linux_sp(
++  std::shared_ptr<NativeProcessNetBSD> native_process_netbsd_sp(
 +      new NativeProcessNetBSD());
 +
-+  if (!native_process_linux_sp->RegisterNativeDelegate(native_delegate)) {
++  if (!native_process_netbsd_sp->RegisterNativeDelegate(native_delegate)) {
 +    error.SetErrorStringWithFormat("failed to register the native delegate");
 +    return error;
 +  }
 +
-+  native_process_linux_sp->AttachToInferior(mainloop, pid, error);
++  native_process_netbsd_sp->AttachToInferior(mainloop, pid, error);
 +  if (!error.Success())
 +    return error;
 +
-+  native_process_sp = native_process_linux_sp;
++  native_process_sp = native_process_netbsd_sp;
 +  return error;
 +}
 +
@@ -1927,7 +1924,7 @@ $NetBSD$
 +  // architecture.  Need MIPS support here.
 +  static const uint8_t g_aarch64_opcode[] = {0x00, 0x00, 0x20, 0xd4};
 +  // The ARM reference recommends the use of 0xe7fddefe and 0xdefe but the
-+  // linux kernel does otherwise.
++  // netbsd kernel does otherwise.
 +  static const uint8_t g_arm_breakpoint_opcode[] = {0xf0, 0x01, 0xf0, 0xe7};
 +  static const uint8_t g_i386_opcode[] = {0xCC};
 +  static const uint8_t g_mips64_opcode[] = {0x00, 0x00, 0x00, 0x0d};

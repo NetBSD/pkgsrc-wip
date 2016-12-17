@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/SingleStepCheck.cpp.orig	2016-12-17 13:00:53.163732700 +0000
+--- source/Plugins/Process/NetBSD/SingleStepCheck.cpp.orig	2016-12-17 13:23:23.785537353 +0000
 +++ source/Plugins/Process/NetBSD/SingleStepCheck.cpp
 @@ -0,0 +1,166 @@
 +//===-- SingleStepCheck.cpp ----------------------------------- -*- C++ -*-===//
@@ -25,9 +25,9 @@ $NetBSD$
 +
 +#include "lldb/Core/Error.h"
 +#include "lldb/Core/Log.h"
-+#include "lldb/Host/linux/Ptrace.h"
++#include "lldb/Host/netbsd/Ptrace.h"
 +
-+using namespace lldb_private::process_linux;
++using namespace lldb_private::process_netbsd;
 +
 +#if defined(__arm64__) || defined(__aarch64__)
 +namespace {

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2016-12-17 13:00:53.149085298 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2016-12-17 13:23:23.783738014 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
 @@ -0,0 +1,92 @@
 +//===-- NativeRegisterContextNetBSD.h ----------------------------*- C++ -*-===//
@@ -21,7 +21,7 @@ $NetBSD$
 +#include "Plugins/Process/NetBSD/NativeProcessNetBSD.h"
 +
 +namespace lldb_private {
-+namespace process_linux {
++namespace process_netbsd {
 +
 +class NativeRegisterContextNetBSD : public NativeRegisterContextRegisterInfo {
 +public:
@@ -91,7 +91,7 @@ $NetBSD$
 +  virtual Error DoWriteFPR(void *buf, size_t buf_size);
 +};
 +
-+} // namespace process_linux
++} // namespace process_netbsd
 +} // namespace lldb_private
 +
 +#endif // #ifndef lldb_NativeRegisterContextNetBSD_h

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/ProcFileReader.h.orig	2016-12-17 13:00:53.160209898 +0000
+--- source/Plugins/Process/NetBSD/ProcFileReader.h.orig	2016-12-17 13:23:23.785303988 +0000
 +++ source/Plugins/Process/NetBSD/ProcFileReader.h
 @@ -0,0 +1,37 @@
 +//===-- ProcFileReader.h ----------------------------------------*- C++ -*-===//
@@ -21,7 +21,7 @@ $NetBSD$
 +#include "lldb/lldb-types.h"
 +
 +namespace lldb_private {
-+namespace process_linux {
++namespace process_netbsd {
 +
 +class ProcFileReader {
 +public:
@@ -36,7 +36,7 @@ $NetBSD$
 +                    std::function<bool(const std::string &line)> line_parser);
 +};
 +
-+} // namespace process_linux
++} // namespace process_netbsd
 +} // namespace lldb_private
 +
 +#endif // #ifndef liblldb_ProcFileReader_h_

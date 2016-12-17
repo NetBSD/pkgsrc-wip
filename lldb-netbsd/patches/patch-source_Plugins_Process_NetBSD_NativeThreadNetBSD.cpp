@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-17 13:00:53.154921656 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-17 13:23:23.784878149 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
 @@ -0,0 +1,481 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
@@ -24,7 +24,7 @@ $NetBSD$
 +#include "lldb/Core/Log.h"
 +#include "lldb/Core/State.h"
 +#include "lldb/Host/HostNativeThread.h"
-+#include "lldb/Host/linux/Ptrace.h"
++#include "lldb/Host/netbsd/Ptrace.h"
 +#include "lldb/Utility/LLDBAssert.h"
 +#include "lldb/lldb-enumerations.h"
 +
@@ -40,7 +40,7 @@ $NetBSD$
 +
 +using namespace lldb;
 +using namespace lldb_private;
-+using namespace lldb_private::process_linux;
++using namespace lldb_private::process_netbsd;
 +
 +namespace {
 +void LogThreadStopInfo(Log &log, const ThreadStopInfo &stop_info,

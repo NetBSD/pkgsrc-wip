@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2016-12-17 13:00:53.147290220 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2016-12-17 13:23:23.783623245 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
 @@ -0,0 +1,213 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
@@ -17,12 +17,12 @@ $NetBSD$
 +#include "lldb/Core/RegisterValue.h"
 +#include "lldb/Host/common/NativeProcessProtocol.h"
 +#include "lldb/Host/common/NativeThreadProtocol.h"
-+#include "lldb/Host/linux/Ptrace.h"
++#include "lldb/Host/netbsd/Ptrace.h"
 +
 +#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
 +
 +using namespace lldb_private;
-+using namespace lldb_private::process_linux;
++using namespace lldb_private::process_netbsd;
 +
 +NativeRegisterContextNetBSD::NativeRegisterContextNetBSD(
 +    NativeThreadProtocol &native_thread, uint32_t concrete_frame_idx,

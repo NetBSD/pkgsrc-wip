@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-17 13:00:53.145447707 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-17 13:23:23.783483302 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
 @@ -0,0 +1,225 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
@@ -33,7 +33,7 @@ $NetBSD$
 +class Error;
 +class Scalar;
 +
-+namespace process_linux {
++namespace process_netbsd {
 +/// @class NativeProcessNetBSD
 +/// @brief Manages communication with the inferior (debugee) process.
 +///
@@ -224,7 +224,7 @@ $NetBSD$
 +  void SigchldHandler();
 +};
 +
-+} // namespace process_linux
++} // namespace process_netbsd
 +} // namespace lldb_private
 +
 +#endif // #ifndef liblldb_NativeProcessNetBSD_H_

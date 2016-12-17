@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/Procfs.h.orig	2016-12-17 13:00:53.161956039 +0000
+--- source/Plugins/Process/NetBSD/Procfs.h.orig	2016-12-17 13:23:23.785403906 +0000
 +++ source/Plugins/Process/NetBSD/Procfs.h
 @@ -0,0 +1,31 @@
 +//===-- Procfs.h ---------------------------------------------- -*- C++ -*-===//

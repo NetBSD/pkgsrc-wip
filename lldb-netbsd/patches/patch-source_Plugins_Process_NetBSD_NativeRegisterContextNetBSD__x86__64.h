@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2016-12-17 13:00:53.153013274 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2016-12-17 13:23:23.784681789 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
 @@ -0,0 +1,146 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.h ---------------------*- C++ -*-===//
@@ -22,7 +22,7 @@ $NetBSD$
 +#include "Plugins/Process/Utility/lldb-x86-register-enums.h"
 +
 +namespace lldb_private {
-+namespace process_linux {
++namespace process_netbsd {
 +
 +class NativeProcessNetBSD;
 +
@@ -143,7 +143,7 @@ $NetBSD$
 +  bool IsMPX(uint32_t reg_index) const;
 +};
 +
-+} // namespace process_linux
++} // namespace process_netbsd
 +} // namespace lldb_private
 +
 +#endif // #ifndef lldb_NativeRegisterContextNetBSD_x86_64_h

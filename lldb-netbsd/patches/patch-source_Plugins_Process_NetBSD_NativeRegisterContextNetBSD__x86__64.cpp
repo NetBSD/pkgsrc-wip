@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2016-12-17 13:00:53.151215810 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2016-12-17 13:23:23.784160224 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,1221 @@
+@@ -0,0 +1,1220 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -22,13 +22,12 @@ $NetBSD$
 +#include "lldb/Core/RegisterValue.h"
 +#include "lldb/Host/HostInfo.h"
 +
-+#include "Plugins/Process/Utility/RegisterContextNetBSD_i386.h"
 +#include "Plugins/Process/Utility/RegisterContextNetBSD_x86_64.h"
 +
-+#include <linux/elf.h>
++#include <netbsd/elf.h>
 +
 +using namespace lldb_private;
-+using namespace lldb_private::process_linux;
++using namespace lldb_private::process_netbsd;
 +
 +// ----------------------------------------------------------------------------
 +// Private namespace.
