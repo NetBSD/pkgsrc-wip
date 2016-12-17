@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,2747 @@
+@@ -0,0 +1,2685 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -524,25 +524,6 @@ $NetBSD$
 +  }
 +
 +  return pid;
-+}
-+
-+Error NativeProcessNetBSD::SetDefaultPtraceOpts(lldb::pid_t pid) {
-+  long ptrace_opts = 0;
-+
-+  // Have the child raise an event on exit.  This is used to keep the child in
-+  // limbo until it is destroyed.
-+  ptrace_opts |= PTRACE_O_TRACEEXIT;
-+
-+  // Have the tracer trace threads which spawn in the inferior process.
-+  // TODO: if we want to support tracing the inferiors' child, add the
-+  // appropriate ptrace flags here (PTRACE_O_TRACEFORK, PTRACE_O_TRACEVFORK)
-+  ptrace_opts |= PTRACE_O_TRACECLONE;
-+
-+  // Have the tracer notify us before execve returns
-+  // (needed to disable legacy SIGTRAP generation)
-+  ptrace_opts |= PTRACE_O_TRACEEXEC;
-+
-+  return PtraceWrapper(PTRACE_SETOPTIONS, pid, nullptr, (void *)ptrace_opts);
 +}
 +
 +static ExitType convert_pid_status_to_exit_type(int status) {
@@ -2135,39 +2116,8 @@ $NetBSD$
 +
 +Error NativeProcessNetBSD::ReadMemory(lldb::addr_t addr, void *buf, size_t size,
 +                                     size_t &bytes_read) {
-+  if (ProcessVmReadvSupported()) {
-+    // The process_vm_readv path is about 50 times faster than ptrace api. We
-+    // want to use
-+    // this syscall if it is supported.
-+
-+    const ::pid_t pid = GetID();
-+
-+    struct iovec local_iov, remote_iov;
-+    local_iov.iov_base = buf;
-+    local_iov.iov_len = size;
-+    remote_iov.iov_base = reinterpret_cast<void *>(addr);
-+    remote_iov.iov_len = size;
-+
-+    bytes_read = process_vm_readv(pid, &local_iov, 1, &remote_iov, 1, 0);
-+    const bool success = bytes_read == size;
-+
-+    Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s using process_vm_readv to read %zd "
-+                  "bytes from inferior address 0x%" PRIx64 ": %s",
-+                  __FUNCTION__, size, addr,
-+                  success ? "Success" : strerror(errno));
-+
-+    if (success)
-+      return Error();
-+    // else
-+    //     the call failed for some reason, let's retry the read using ptrace
-+    //     api.
-+  }
-+
 +  unsigned char *dst = static_cast<unsigned char *>(buf);
-+  size_t remainder;
-+  long data;
++  struct ptrace_io_desc io;
 +
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_ALL));
 +  if (log)
@@ -2177,36 +2127,24 @@ $NetBSD$
 +    log->Printf("NativeProcessNetBSD::%s(%p, %p, %zd, _)", __FUNCTION__,
 +                (void *)addr, buf, size);
 +
-+  for (bytes_read = 0; bytes_read < size; bytes_read += remainder) {
++  bytes_read = 0;
++  io.piod_op = PIOD_READ_D;
++
++  do {
++    io.piod_offs = (void *)(addr + bytes_read);
++    io.piod_offs = dst + bytes_read;
++    io.piod_len = buf;
++
 +    Error error = NativeProcessNetBSD::PtraceWrapper(
-+        PTRACE_PEEKDATA, GetID(), (void *)addr, nullptr, 0, &data);
++        PT_IO, GetID(), &io);
 +    if (error.Fail()) {
 +      if (log)
 +        ProcessPOSIXLog::DecNestLevel();
 +      return error;
 +    }
 +
-+    remainder = size - bytes_read;
-+    remainder = remainder > k_ptrace_word_size ? k_ptrace_word_size : remainder;
-+
-+    // Copy the data into our buffer
-+    memcpy(dst, &data, remainder);
-+
-+    if (log && ProcessPOSIXLog::AtTopNestLevel() &&
-+        (log->GetMask().Test(POSIX_LOG_MEMORY_DATA_LONG) ||
-+         (log->GetMask().Test(POSIX_LOG_MEMORY_DATA_SHORT) &&
-+          size <= POSIX_LOG_MEMORY_SHORT_BYTES))) {
-+      uintptr_t print_dst = 0;
-+      // Format bytes from data by moving into print_dst for log output
-+      for (unsigned i = 0; i < remainder; ++i)
-+        print_dst |= (((data >> i * 8) & 0xFF) << i * 8);
-+      log->Printf("NativeProcessNetBSD::%s() [0x%" PRIx64 "]:0x%" PRIx64
-+                  " (0x%" PRIx64 ")",
-+                  __FUNCTION__, addr, uint64_t(print_dst), uint64_t(data));
-+    }
-+    addr += k_ptrace_word_size;
-+    dst += k_ptrace_word_size;
-+  }
++    bytes_read = io.piod_len;
++  } while(bytes_read < size);
 +
 +  if (log)
 +    ProcessPOSIXLog::DecNestLevel();
@@ -2706,9 +2644,9 @@ $NetBSD$
 +// Note that ptrace sets errno on error because -1 can be a valid result (i.e.
 +// for PT_READ*)
 +Error NativeProcessNetBSD::PtraceWrapper(int req, lldb::pid_t pid, void *addr,
-+                                        int data, long *result) {
++                                        int data, int *result) {
 +  Error error;
-+  long int ret;
++  int ret;
 +
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PTRACE));
 +
@@ -2724,7 +2662,7 @@ $NetBSD$
 +    *result = ret;
 +
 +  if (log)
-+    log->Printf("ptrace(%d, %d, %p, %d, %zu)=%lX", req, pid, addr,
++    log->Printf("ptrace(%d, %d, %p, %d, %d)=%lX", req, pid, addr,
 +                data, ret);
 +
 +  if (log && error.GetError() != 0) {
