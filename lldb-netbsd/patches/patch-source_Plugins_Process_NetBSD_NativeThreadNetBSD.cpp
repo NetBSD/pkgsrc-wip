@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-17 13:23:23.784878149 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,481 @@
+@@ -0,0 +1,429 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -225,63 +225,11 @@ $NetBSD$
 +                                           reinterpret_cast<void *>(data));
 +}
 +
-+void NativeThreadNetBSD::MaybePrepareSingleStepWorkaround() {
-+  if (!SingleStepWorkaroundNeeded())
-+    return;
-+
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+
-+  if (sched_getaffinity(static_cast<::pid_t>(m_tid), sizeof m_original_cpu_set,
-+                        &m_original_cpu_set) != 0) {
-+    // This should really not fail. But, just in case...
-+    if (log) {
-+      Error error(errno, eErrorTypePOSIX);
-+      log->Printf(
-+          "NativeThreadNetBSD::%s Unable to get cpu affinity for thread %" PRIx64
-+          ": %s",
-+          __FUNCTION__, m_tid, error.AsCString());
-+    }
-+    return;
-+  }
-+
-+  cpu_set_t set;
-+  CPU_ZERO(&set);
-+  CPU_SET(0, &set);
-+  if (sched_setaffinity(static_cast<::pid_t>(m_tid), sizeof set, &set) != 0 &&
-+      log) {
-+    // This may fail in very locked down systems, if the thread is not allowed
-+    // to run on
-+    // cpu 0. If that happens, only thing we can do is it log it and continue...
-+    Error error(errno, eErrorTypePOSIX);
-+    log->Printf(
-+        "NativeThreadNetBSD::%s Unable to set cpu affinity for thread %" PRIx64
-+        ": %s",
-+        __FUNCTION__, m_tid, error.AsCString());
-+  }
-+}
-+
-+void NativeThreadNetBSD::MaybeCleanupSingleStepWorkaround() {
-+  if (!SingleStepWorkaroundNeeded())
-+    return;
-+
-+  if (sched_setaffinity(static_cast<::pid_t>(m_tid), sizeof m_original_cpu_set,
-+                        &m_original_cpu_set) != 0) {
-+    Error error(errno, eErrorTypePOSIX);
-+    Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+    log->Printf(
-+        "NativeThreadNetBSD::%s Unable to reset cpu affinity for thread %" PRIx64
-+        ": %s",
-+        __FUNCTION__, m_tid, error.AsCString());
-+  }
-+}
-+
 +Error NativeThreadNetBSD::SingleStep(uint32_t signo) {
 +  const StateType new_state = StateType::eStateStepping;
 +  MaybeLogStateChange(new_state);
 +  m_state = new_state;
 +  m_stop_info.reason = StopReason::eStopReasonNone;
-+
-+  MaybePrepareSingleStepWorkaround();
 +
 +  intptr_t data = 0;
 +  if (signo != LLDB_INVALID_SIGNAL_NUMBER)
