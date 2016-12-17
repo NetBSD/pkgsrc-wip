@@ -1,0 +1,27 @@
+$NetBSD$
+
+--- tools/lldb-server/CMakeLists.txt.orig	2016-12-17 10:30:54.000000000 +0000
++++ tools/lldb-server/CMakeLists.txt
+@@ -17,6 +17,7 @@ endif ()
+ if ( CMAKE_SYSTEM_NAME MATCHES "NetBSD" )
+ include_directories(
+   ../../../../llvm/include
++  ../../source/Plugins/Process/NetBSD
+   ../../source/Plugins/Process/POSIX
+   )
+ endif ()
+@@ -84,6 +85,14 @@ if ( CMAKE_SYSTEM_NAME MATCHES "Linux" )
+    )
+ endif ()
+ 
++# Linux-only libraries
++if ( CMAKE_SYSTEM_NAME MATCHES "NetBSD" )
++  list(APPEND LLDB_USED_LIBS
++    lldbPluginProcessNetBSD
++    lldbPluginProcessPOSIX
++   )
++endif ()
++
+ # Darwin-only libraries
+ if ( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
+   list(APPEND LLDB_USED_LIBS
