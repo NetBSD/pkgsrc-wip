@@ -510,6 +510,7 @@ lib/clang/${PKGVERSION}/include/clflushoptintrin.h
 lib/clang/${PKGVERSION}/include/cpuid.h
 lib/clang/${PKGVERSION}/include/cuda_wrappers/algorithm
 lib/clang/${PKGVERSION}/include/cuda_wrappers/complex
+lib/clang/${PKGVERSION}/include/cuda_wrappers/new
 lib/clang/${PKGVERSION}/include/emmintrin.h
 lib/clang/${PKGVERSION}/include/f16cintrin.h
 lib/clang/${PKGVERSION}/include/float.h
@@ -565,7 +566,6 @@ lib/clang/${PKGVERSION}/include/xsaveintrin.h
 lib/clang/${PKGVERSION}/include/xsaveoptintrin.h
 lib/clang/${PKGVERSION}/include/xsavesintrin.h
 lib/clang/${PKGVERSION}/include/xtestintrin.h
-lib/clang/${PKGVERSION}/include/cuda_wrappers/new
 lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake

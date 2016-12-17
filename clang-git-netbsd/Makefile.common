@@ -4,8 +4,9 @@
 
 CATEGORIES=	lang devel
 
-GIT_REPOSITORIES=	clang
-GIT_REPO.clang=		git://github.com/llvm-mirror/clang.git
+SVN_REPOSITORIES=	clang
+SVN_REPO.clang=		http://llvm.org/svn/llvm-project/cfe/trunk
+SVN_REVISION.clang=	289997
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://clang.llvm.org/
@@ -118,9 +119,9 @@ post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
-.include "../../wip/llvm-git/buildlink3.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git-netbsd
+.include "../../wip/llvm-git-netbsd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

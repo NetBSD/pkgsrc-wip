@@ -3,9 +3,9 @@
 PKGNAME=	llvm-4.0.0
 CATEGORIES=	lang devel
 
-GIT_REPOSITORIES=	llvm
-GIT_REPO.llvm=		git://github.com/llvm-mirror/llvm.git
-GIT_REVISION.llvm=	a07f27643c7e5334f2fd5bd6c84c7bde32a759d7
+SVN_REPOSITORIES=	llvm
+SVN_REPO.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
+SVN_REVISION.llvm=	289997
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvm.org/
@@ -78,7 +78,7 @@ post-extract:
 	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
-.include "../../wip/mk/git-package.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

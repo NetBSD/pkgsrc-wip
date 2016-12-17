@@ -3,8 +3,9 @@
 PKGNAME=	lldb-4.0.0
 CATEGORIES=	lang devel
 
-GIT_REPOSITORIES=	lldb
-GIT_REPO.lldb=		git://github.com/llvm-mirror/lldb.git
+SVN_REPOSITORIES=	lldb
+SVN_REPO.lldb=		http://llvm.org/svn/llvm-project/lldb/trunk
+SVN_REVISION.lldb=	289997
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
@@ -67,11 +68,11 @@ post-extract:
 	${RM} ${WRKSRC}/source/Plugins/Process/Linux/NativeRegisterContextLinux_s390x.cpp
 
 .include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
-.include "../../wip/llvm-git/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git
-.include "../../wip/clang-git/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git-netbsd
+.include "../../wip/llvm-git-netbsd/buildlink3.mk"
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git-netbsd
+.include "../../wip/clang-git-netbsd/buildlink3.mk"
+.include "../../wip/mk/svn-package.mk"
 PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
