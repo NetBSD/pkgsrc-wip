@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,2685 @@
+@@ -0,0 +1,2630 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -72,42 +72,6 @@ $NetBSD$
 +using namespace lldb_private;
 +using namespace lldb_private::process_netbsd;
 +using namespace llvm;
-+
-+// Private bits we only need internally.
-+
-+static bool ProcessVmReadvSupported() {
-+  static bool is_supported;
-+  static std::once_flag flag;
-+
-+  std::call_once(flag, [] {
-+    Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+
-+    uint32_t source = 0x47424742;
-+    uint32_t dest = 0;
-+
-+    struct iovec local, remote;
-+    remote.iov_base = &source;
-+    local.iov_base = &dest;
-+    remote.iov_len = local.iov_len = sizeof source;
-+
-+    // We shall try if cross-process-memory reads work by attempting to read a
-+    // value from our own process.
-+    ssize_t res = process_vm_readv(getpid(), &local, 1, &remote, 1, 0);
-+    is_supported = (res == sizeof(source) && source == dest);
-+    if (log) {
-+      if (is_supported)
-+        log->Printf("%s: Detected kernel support for process_vm_readv syscall. "
-+                    "Fast memory reads enabled.",
-+                    __FUNCTION__);
-+      else
-+        log->Printf("%s: syscall process_vm_readv failed (error: %s). Fast "
-+                    "memory reads disabled.",
-+                    __FUNCTION__, strerror(errno));
-+    }
-+  });
-+
-+  return is_supported;
-+}
 +
 +namespace {
 +void MaybeLogLaunchInfo(const ProcessLaunchInfo &info) {
@@ -378,21 +342,6 @@ $NetBSD$
 +    log->Printf("NativeProcessNetBSD::%s inferior started, now in stopped state",
 +                __FUNCTION__);
 +
-+  error = SetDefaultPtraceOpts(pid);
-+  if (error.Fail()) {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s inferior failed to set default "
-+                  "ptrace options: %s",
-+                  __FUNCTION__, error.AsCString());
-+
-+    // Mark the inferior as invalid.
-+    // FIXME this could really use a new state - eStateLaunchFailure.  For now,
-+    // using eStateInvalid.
-+    SetState(StateType::eStateInvalid);
-+
-+    return error;
-+  }
-+
 +  // Release the master terminal descriptor and pass it off to the
 +  // NativeProcessNetBSD instance.  Similarly stash the inferior pid.
 +  m_terminal_fd = launch_info.GetPTY().ReleaseMasterFileDescriptor();
@@ -486,10 +435,6 @@ $NetBSD$
 +            return -1;
 +          }
 +        }
-+
-+        error = SetDefaultPtraceOpts(tid);
-+        if (error.Fail())
-+          return -1;
 +
 +        if (log)
 +          log->Printf("NativeProcessNetBSD::%s() adding tid = %" PRIu64,

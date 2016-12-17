@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-17 13:23:23.783483302 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,225 @@
+@@ -0,0 +1,223 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -144,8 +144,6 @@ $NetBSD$
 +  void AttachToInferior(MainLoop &mainloop, lldb::pid_t pid, Error &error);
 +
 +  ::pid_t Attach(lldb::pid_t pid, Error &error);
-+
-+  static Error SetDefaultPtraceOpts(const lldb::pid_t);
 +
 +  static void *MonitorThread(void *baton);
 +

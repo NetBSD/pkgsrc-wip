@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2016-12-17 13:23:23.784160224 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,1220 @@
+@@ -0,0 +1,1215 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -24,7 +24,7 @@ $NetBSD$
 +
 +#include "Plugins/Process/Utility/RegisterContextNetBSD_x86_64.h"
 +
-+#include <netbsd/elf.h>
++#include <sys/exec_elf.h>
 +
 +using namespace lldb_private;
 +using namespace lldb_private::process_netbsd;
@@ -261,16 +261,11 @@ $NetBSD$
 +
 +static RegisterInfoInterface *
 +CreateRegisterInfoInterface(const ArchSpec &target_arch) {
-+  if (HostInfo::GetArchitecture().GetAddressByteSize() == 4) {
-+    // 32-bit hosts run with a RegisterContextNetBSD_i386 context.
-+    return new RegisterContextNetBSD_i386(target_arch);
-+  } else {
-+    assert((HostInfo::GetArchitecture().GetAddressByteSize() == 8) &&
-+           "Register setting path assumes this is a 64-bit host");
-+    // X86_64 hosts know how to work with 64-bit and 32-bit EXEs using the
-+    // x86_64 register context.
-+    return new RegisterContextNetBSD_x86_64(target_arch);
-+  }
++  assert((HostInfo::GetArchitecture().GetAddressByteSize() == 8) &&
++         "Register setting path assumes this is a 64-bit host");
++  // X86_64 hosts know how to work with 64-bit and 32-bit EXEs using the
++  // x86_64 register context.
++  return new RegisterContextNetBSD_x86_64(target_arch);
 +}
 +
 +NativeRegisterContextNetBSD_x86_64::NativeRegisterContextNetBSD_x86_64(
