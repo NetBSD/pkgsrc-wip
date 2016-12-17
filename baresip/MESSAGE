@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD$
+The "oss" module opens an audio device for playback and an audio device
+for recording. On NetBSD current, baresip fails to open the same device
+for both playback and recording. A workaround is to use
+
+ audio_player oss,/dev/fd/4
+ audio_source oss,/dev/fd/4
+ module oss.so
+
+in the baresip config file, and run baresip using
+
+ baresip 4<>/dev/audio
+
+Another option is to use the "jack" module.
+===========================================================================
