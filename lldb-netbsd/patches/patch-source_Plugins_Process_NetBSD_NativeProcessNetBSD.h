@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-17 13:23:23.783483302 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,223 @@
+@@ -0,0 +1,192 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -153,30 +153,8 @@ $NetBSD$
 +
 +  void MonitorSIGTRAP(const siginfo_t &info, NativeThreadNetBSD &thread);
 +
-+  void MonitorTrace(NativeThreadNetBSD &thread);
-+
-+  void MonitorBreakpoint(NativeThreadNetBSD &thread);
-+
-+  void MonitorWatchpoint(NativeThreadNetBSD &thread, uint32_t wp_index);
-+
-+  void MonitorSignal(const siginfo_t &info, NativeThreadNetBSD &thread,
-+                     bool exited);
-+
 +  Error SetupSoftwareSingleStepping(NativeThreadNetBSD &thread);
 +
-+#if 0
-+        static ::ProcessMessage::CrashReason
-+        GetCrashReasonForSIGSEGV(const siginfo_t *info);
-+
-+        static ::ProcessMessage::CrashReason
-+        GetCrashReasonForSIGILL(const siginfo_t *info);
-+
-+        static ::ProcessMessage::CrashReason
-+        GetCrashReasonForSIGFPE(const siginfo_t *info);
-+
-+        static ::ProcessMessage::CrashReason
-+        GetCrashReasonForSIGBUS(const siginfo_t *info);
-+#endif
 +
 +  bool HasThreadNoLock(lldb::tid_t thread_id);
 +
@@ -201,13 +179,6 @@ $NetBSD$
 +
 +  Error Detach(lldb::tid_t tid);
 +
-+  // This method is requests a stop on all threads which are still running. It
-+  // sets up a
-+  // deferred delegate notification, which will fire once threads report as
-+  // stopped. The
-+  // triggerring_tid will be set as the current thread (main stop reason).
-+  void StopRunningThreads(lldb::tid_t triggering_tid);
-+
 +  // Notify the delegate if all threads have stopped.
 +  void SignalIfAllThreadsStopped();
 +
@@ -216,8 +187,6 @@ $NetBSD$
 +  // operation (continue, single-step) depends on the state parameter.
 +  Error ResumeThread(NativeThreadNetBSD &thread, lldb::StateType state,
 +                     int signo);
-+
-+  void ThreadWasCreated(NativeThreadNetBSD &thread);
 +
 +  void SigchldHandler();
 +};

@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-17 13:23:23.784878149 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,423 @@
+@@ -0,0 +1,397 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -370,32 +370,6 @@ $NetBSD$
 +  m_state = new_state;
 +
 +  m_stop_info.reason = StopReason::eStopReasonThreadExiting;
-+}
-+
-+Error NativeThreadNetBSD::RequestStop() {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+
-+  NativeProcessNetBSD &process = GetProcess();
-+
-+  lldb::pid_t pid = process.GetID();
-+  lldb::tid_t tid = GetID();
-+
-+  if (log)
-+    log->Printf("NativeThreadNetBSD::%s requesting thread stop(pid: %" PRIu64
-+                ", tid: %" PRIu64 ")",
-+                __FUNCTION__, pid, tid);
-+
-+  Error err;
-+  errno = 0;
-+  if (::tgkill(pid, tid, SIGSTOP) != 0) {
-+    err.SetErrorToErrno();
-+    if (log)
-+      log->Printf("NativeThreadNetBSD::%s tgkill(%" PRIu64 ", %" PRIu64
-+                  ", SIGSTOP) failed: %s",
-+                  __FUNCTION__, pid, tid, err.AsCString());
-+  }
-+
-+  return err;
 +}
 +
 +void NativeThreadNetBSD::MaybeLogStateChange(lldb::StateType new_state) {

@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1949 @@
+@@ -0,0 +1,1850 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -368,7 +368,6 @@ $NetBSD$
 +  NativeThreadNetBSDSP thread_sp = AddThread(pid);
 +  assert(thread_sp && "AddThread() returned a nullptr thread");
 +  thread_sp->SetStoppedBySignal(SIGSTOP);
-+  ThreadWasCreated(*thread_sp);
 +
 +  // Let our process instance know the thread has stopped.
 +  SetCurrentThreadID(thread_sp->GetID());
@@ -564,61 +563,6 @@ $NetBSD$
 +
 +  new_thread_sp = AddThread(tid);
 +  ResumeThread(*new_thread_sp, eStateRunning, LLDB_INVALID_SIGNAL_NUMBER);
-+  ThreadWasCreated(*new_thread_sp);
-+}
-+
-+void NativeProcessNetBSD::MonitorTrace(NativeThreadNetBSD &thread) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s() received trace event, pid = %" PRIu64
-+                " (single stepping)",
-+                __FUNCTION__, thread.GetID());
-+
-+  // This thread is currently stopped.
-+  thread.SetStoppedByTrace();
-+
-+  StopRunningThreads(thread.GetID());
-+}
-+
-+void NativeProcessNetBSD::MonitorBreakpoint(NativeThreadNetBSD &thread) {
-+  Log *log(
-+      GetLogIfAnyCategoriesSet(LIBLLDB_LOG_PROCESS | LIBLLDB_LOG_BREAKPOINTS));
-+  if (log)
-+    log->Printf(
-+        "NativeProcessNetBSD::%s() received breakpoint event, pid = %" PRIu64,
-+        __FUNCTION__, thread.GetID());
-+
-+  // Mark the thread as stopped at breakpoint.
-+  thread.SetStoppedByBreakpoint();
-+  Error error = FixupBreakpointPCAsNeeded(thread);
-+  if (error.Fail())
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s() pid = %" PRIu64 " fixup: %s",
-+                  __FUNCTION__, thread.GetID(), error.AsCString());
-+
-+  if (m_threads_stepping_with_breakpoint.find(thread.GetID()) !=
-+      m_threads_stepping_with_breakpoint.end())
-+    thread.SetStoppedByTrace();
-+
-+  StopRunningThreads(thread.GetID());
-+}
-+
-+void NativeProcessNetBSD::MonitorWatchpoint(NativeThreadNetBSD &thread,
-+                                           uint32_t wp_index) {
-+  Log *log(
-+      GetLogIfAnyCategoriesSet(LIBLLDB_LOG_PROCESS | LIBLLDB_LOG_WATCHPOINTS));
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s() received watchpoint event, "
-+                "pid = %" PRIu64 ", wp_index = %" PRIu32,
-+                __FUNCTION__, thread.GetID(), wp_index);
-+
-+  // Mark the thread as stopped at watchpoint.
-+  // The address is at (lldb::addr_t)info->si_addr if we need it.
-+  thread.SetStoppedByWatchpoint(wp_index);
-+
-+  // We need to tell all other running threads before we notify the delegate
-+  // about this stop.
-+  StopRunningThreads(thread.GetID());
 +}
 +
 +namespace {
@@ -958,8 +902,6 @@ $NetBSD$
 +                __FUNCTION__, GetID(),
 +                running_thread_sp ? "running" : "stopped",
 +                deferred_signal_thread_sp->GetID());
-+
-+  StopRunningThreads(deferred_signal_thread_sp->GetID());
 +
 +  return Error();
 +}
@@ -1777,31 +1719,6 @@ $NetBSD$
 +
 +//===----------------------------------------------------------------------===//
 +
-+void NativeProcessNetBSD::StopRunningThreads(const lldb::tid_t triggering_tid) {
-+  Log *const log = GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD);
-+
-+  if (log) {
-+    log->Printf("NativeProcessNetBSD::%s about to process event: "
-+                "(triggering_tid: %" PRIu64 ")",
-+                __FUNCTION__, triggering_tid);
-+  }
-+
-+  m_pending_notification_tid = triggering_tid;
-+
-+  // Request a stop for all the thread stops that need to be stopped
-+  // and are not already known to be stopped.
-+  for (const auto &thread_sp : m_threads) {
-+    if (StateIsRunningState(thread_sp->GetState()))
-+      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->RequestStop();
-+  }
-+
-+  SignalIfAllThreadsStopped();
-+
-+  if (log) {
-+    log->Printf("NativeProcessNetBSD::%s event processing done", __FUNCTION__);
-+  }
-+}
-+
 +void NativeProcessNetBSD::SignalIfAllThreadsStopped() {
 +  if (m_pending_notification_tid == LLDB_INVALID_THREAD_ID)
 +    return; // No pending notification. Nothing to do.
@@ -1831,22 +1748,6 @@ $NetBSD$
 +  SetCurrentThreadID(m_pending_notification_tid);
 +  SetState(StateType::eStateStopped, true);
 +  m_pending_notification_tid = LLDB_INVALID_THREAD_ID;
-+}
-+
-+void NativeProcessNetBSD::ThreadWasCreated(NativeThreadNetBSD &thread) {
-+  Log *const log = GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD);
-+
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s (tid: %" PRIu64 ")", __FUNCTION__,
-+                thread.GetID());
-+
-+  if (m_pending_notification_tid != LLDB_INVALID_THREAD_ID &&
-+      StateIsRunningState(thread.GetState())) {
-+    // We will need to wait for this new thread to stop as well before firing
-+    // the
-+    // notification.
-+    thread.RequestStop();
-+  }
 +}
 +
 +void NativeProcessNetBSD::SigchldHandler() {

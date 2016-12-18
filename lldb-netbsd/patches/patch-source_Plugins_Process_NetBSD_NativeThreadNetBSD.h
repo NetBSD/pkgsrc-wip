@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-17 13:23:23.784994923 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,116 @@
+@@ -0,0 +1,114 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -87,8 +87,6 @@ $NetBSD$
 +  void SetStoppedWithNoReason();
 +
 +  void SetExited();
-+
-+  Error RequestStop();
 +
 +  // ---------------------------------------------------------------------
 +  // Private interface
