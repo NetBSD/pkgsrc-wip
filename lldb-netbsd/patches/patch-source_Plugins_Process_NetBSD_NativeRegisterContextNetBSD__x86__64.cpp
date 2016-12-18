@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2016-12-17 13:23:23.784160224 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,1215 @@
+@@ -0,0 +1,546 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -51,46 +51,6 @@ $NetBSD$
 +                  k_num_gpr_registers_i386,
 +              "g_gpr_regnums_i386 has wrong number of register infos");
 +
-+// x86 32-bit floating point registers.
-+const uint32_t g_fpu_regnums_i386[] = {
-+    lldb_fctrl_i386,    lldb_fstat_i386,     lldb_ftag_i386,  lldb_fop_i386,
-+    lldb_fiseg_i386,    lldb_fioff_i386,     lldb_foseg_i386, lldb_fooff_i386,
-+    lldb_mxcsr_i386,    lldb_mxcsrmask_i386, lldb_st0_i386,   lldb_st1_i386,
-+    lldb_st2_i386,      lldb_st3_i386,       lldb_st4_i386,   lldb_st5_i386,
-+    lldb_st6_i386,      lldb_st7_i386,       lldb_mm0_i386,   lldb_mm1_i386,
-+    lldb_mm2_i386,      lldb_mm3_i386,       lldb_mm4_i386,   lldb_mm5_i386,
-+    lldb_mm6_i386,      lldb_mm7_i386,       lldb_xmm0_i386,  lldb_xmm1_i386,
-+    lldb_xmm2_i386,     lldb_xmm3_i386,      lldb_xmm4_i386,  lldb_xmm5_i386,
-+    lldb_xmm6_i386,     lldb_xmm7_i386,
-+    LLDB_INVALID_REGNUM // register sets need to end with this flag
-+};
-+static_assert((sizeof(g_fpu_regnums_i386) / sizeof(g_fpu_regnums_i386[0])) -
-+                      1 ==
-+                  k_num_fpr_registers_i386,
-+              "g_fpu_regnums_i386 has wrong number of register infos");
-+
-+// x86 32-bit AVX registers.
-+const uint32_t g_avx_regnums_i386[] = {
-+    lldb_ymm0_i386,     lldb_ymm1_i386, lldb_ymm2_i386, lldb_ymm3_i386,
-+    lldb_ymm4_i386,     lldb_ymm5_i386, lldb_ymm6_i386, lldb_ymm7_i386,
-+    LLDB_INVALID_REGNUM // register sets need to end with this flag
-+};
-+static_assert((sizeof(g_avx_regnums_i386) / sizeof(g_avx_regnums_i386[0])) -
-+                      1 ==
-+                  k_num_avx_registers_i386,
-+              " g_avx_regnums_i386 has wrong number of register infos");
-+
-+// x64 32-bit MPX registers.
-+static const uint32_t g_mpx_regnums_i386[] = {
-+    lldb_bnd0_i386,     lldb_bnd1_i386, lldb_bnd2_i386, lldb_bnd3_i386,
-+    lldb_bndcfgu_i386,  lldb_bndstatus_i386,
-+    LLDB_INVALID_REGNUM // register sets need to end with this flag
-+};
-+static_assert((sizeof(g_mpx_regnums_i386) / sizeof(g_mpx_regnums_i386[0])) -
-+                      1 ==
-+                  k_num_mpx_registers_i386,
-+              "g_mpx_regnums_x86_64 has wrong number of register infos");
-+
 +// x86 64-bit general purpose registers.
 +static const uint32_t g_gpr_regnums_x86_64[] = {
 +    lldb_rax_x86_64,    lldb_rbx_x86_64,    lldb_rcx_x86_64, lldb_rdx_x86_64,
@@ -137,123 +97,16 @@ $NetBSD$
 +                  k_num_gpr_registers_x86_64,
 +              "g_gpr_regnums_x86_64 has wrong number of register infos");
 +
-+// x86 64-bit floating point registers.
-+static const uint32_t g_fpu_regnums_x86_64[] = {
-+    lldb_fctrl_x86_64,     lldb_fstat_x86_64, lldb_ftag_x86_64,
-+    lldb_fop_x86_64,       lldb_fiseg_x86_64, lldb_fioff_x86_64,
-+    lldb_foseg_x86_64,     lldb_fooff_x86_64, lldb_mxcsr_x86_64,
-+    lldb_mxcsrmask_x86_64, lldb_st0_x86_64,   lldb_st1_x86_64,
-+    lldb_st2_x86_64,       lldb_st3_x86_64,   lldb_st4_x86_64,
-+    lldb_st5_x86_64,       lldb_st6_x86_64,   lldb_st7_x86_64,
-+    lldb_mm0_x86_64,       lldb_mm1_x86_64,   lldb_mm2_x86_64,
-+    lldb_mm3_x86_64,       lldb_mm4_x86_64,   lldb_mm5_x86_64,
-+    lldb_mm6_x86_64,       lldb_mm7_x86_64,   lldb_xmm0_x86_64,
-+    lldb_xmm1_x86_64,      lldb_xmm2_x86_64,  lldb_xmm3_x86_64,
-+    lldb_xmm4_x86_64,      lldb_xmm5_x86_64,  lldb_xmm6_x86_64,
-+    lldb_xmm7_x86_64,      lldb_xmm8_x86_64,  lldb_xmm9_x86_64,
-+    lldb_xmm10_x86_64,     lldb_xmm11_x86_64, lldb_xmm12_x86_64,
-+    lldb_xmm13_x86_64,     lldb_xmm14_x86_64, lldb_xmm15_x86_64,
-+    LLDB_INVALID_REGNUM // register sets need to end with this flag
-+};
-+static_assert((sizeof(g_fpu_regnums_x86_64) / sizeof(g_fpu_regnums_x86_64[0])) -
-+                      1 ==
-+                  k_num_fpr_registers_x86_64,
-+              "g_fpu_regnums_x86_64 has wrong number of register infos");
-+
-+// x86 64-bit AVX registers.
-+static const uint32_t g_avx_regnums_x86_64[] = {
-+    lldb_ymm0_x86_64,   lldb_ymm1_x86_64,  lldb_ymm2_x86_64,  lldb_ymm3_x86_64,
-+    lldb_ymm4_x86_64,   lldb_ymm5_x86_64,  lldb_ymm6_x86_64,  lldb_ymm7_x86_64,
-+    lldb_ymm8_x86_64,   lldb_ymm9_x86_64,  lldb_ymm10_x86_64, lldb_ymm11_x86_64,
-+    lldb_ymm12_x86_64,  lldb_ymm13_x86_64, lldb_ymm14_x86_64, lldb_ymm15_x86_64,
-+    LLDB_INVALID_REGNUM // register sets need to end with this flag
-+};
-+static_assert((sizeof(g_avx_regnums_x86_64) / sizeof(g_avx_regnums_x86_64[0])) -
-+                      1 ==
-+                  k_num_avx_registers_x86_64,
-+              "g_avx_regnums_x86_64 has wrong number of register infos");
-+
-+// x86 64-bit MPX registers.
-+static const uint32_t g_mpx_regnums_x86_64[] = {
-+    lldb_bnd0_x86_64,    lldb_bnd1_x86_64,    lldb_bnd2_x86_64,
-+    lldb_bnd3_x86_64,    lldb_bndcfgu_x86_64, lldb_bndstatus_x86_64,
-+    LLDB_INVALID_REGNUM // register sets need to end with this flag
-+};
-+static_assert((sizeof(g_mpx_regnums_x86_64) / sizeof(g_mpx_regnums_x86_64[0])) -
-+                      1 ==
-+                  k_num_mpx_registers_x86_64,
-+              "g_mpx_regnums_x86_64 has wrong number of register infos");
-+
 +// Number of register sets provided by this context.
 +enum { k_num_extended_register_sets = 2, k_num_register_sets = 4 };
-+
-+// Register sets for x86 32-bit.
-+static const RegisterSet g_reg_sets_i386[k_num_register_sets] = {
-+    {"General Purpose Registers", "gpr", k_num_gpr_registers_i386,
-+     g_gpr_regnums_i386},
-+    {"Floating Point Registers", "fpu", k_num_fpr_registers_i386,
-+     g_fpu_regnums_i386},
-+    {"Advanced Vector Extensions", "avx", k_num_avx_registers_i386,
-+     g_avx_regnums_i386},
-+    { "Memory Protection Extensions", "mpx", k_num_mpx_registers_i386,
-+     g_mpx_regnums_i386}};
 +
 +// Register sets for x86 64-bit.
 +static const RegisterSet g_reg_sets_x86_64[k_num_register_sets] = {
 +    {"General Purpose Registers", "gpr", k_num_gpr_registers_x86_64,
-+     g_gpr_regnums_x86_64},
-+    {"Floating Point Registers", "fpu", k_num_fpr_registers_x86_64,
-+     g_fpu_regnums_x86_64},
-+    {"Advanced Vector Extensions", "avx", k_num_avx_registers_x86_64,
-+     g_avx_regnums_x86_64},
-+    { "Memory Protection Extensions", "mpx", k_num_mpx_registers_x86_64,
-+     g_mpx_regnums_x86_64}};
++     g_gpr_regnums_x86_64}};
 +}
 +
-+#define REG_CONTEXT_SIZE (GetRegisterInfoInterface().GetGPRSize() + sizeof(FPR))
-+
-+// ----------------------------------------------------------------------------
-+// Required ptrace defines.
-+// ----------------------------------------------------------------------------
-+
-+// Support ptrace extensions even when compiled without required kernel support
-+#ifndef NT_X86_XSTATE
-+#define NT_X86_XSTATE 0x202
-+#endif
-+#ifndef NT_PRXFPREG
-+#define NT_PRXFPREG 0x46e62b7f
-+#endif
-+
-+// On x86_64 NT_PRFPREG is used to access the FXSAVE area. On i386, we need to
-+// use NT_PRXFPREG.
-+static inline unsigned int fxsr_regset(const ArchSpec &arch) {
-+  return arch.GetAddressByteSize() == 8 ? NT_PRFPREG : NT_PRXFPREG;
-+}
-+
-+// ----------------------------------------------------------------------------
-+// Required MPX define.
-+// ----------------------------------------------------------------------------
-+
-+// Support MPX extensions also if compiled with compiler without MPX support.
-+#ifndef bit_MPX
-+#define bit_MPX 0x4000
-+#endif
-+
-+// ----------------------------------------------------------------------------
-+// XCR0 extended register sets masks.
-+// ----------------------------------------------------------------------------
-+#define mask_XSTATE_AVX (1ULL << 2)
-+#define mask_XSTATE_BNDREGS (1ULL << 3)
-+#define mask_XSTATE_BNDCFG (1ULL << 4)
-+#define mask_XSTATE_MPX (mask_XSTATE_BNDREGS | mask_XSTATE_BNDCFG)
-+
-+NativeRegisterContextNetBSD *
-+NativeRegisterContextNetBSD::CreateHostNativeRegisterContextNetBSD(
-+    const ArchSpec &target_arch, NativeThreadProtocol &native_thread,
-+    uint32_t concrete_frame_idx) {
-+  return new NativeRegisterContextNetBSD_x86_64(target_arch, native_thread,
-+                                               concrete_frame_idx);
-+}
++#define REG_CONTEXT_SIZE (GetRegisterInfoInterface().GetGPRSize())
 +
 +// ----------------------------------------------------------------------------
 +// NativeRegisterContextNetBSD_x86_64 members.
@@ -273,75 +126,17 @@ $NetBSD$
 +    uint32_t concrete_frame_idx)
 +    : NativeRegisterContextNetBSD(native_thread, concrete_frame_idx,
 +                                 CreateRegisterInfoInterface(target_arch)),
-+      m_xstate_type(XStateType::Invalid), m_fpr(), m_iovec(), m_ymm_set(),
-+      m_mpx_set(), m_reg_info(), m_gpr_x86_64() {
++      m_reg_info(), m_gpr_x86_64() {
 +  // Set up data about ranges of valid registers.
 +  switch (target_arch.GetMachine()) {
-+  case llvm::Triple::x86:
-+    m_reg_info.num_registers = k_num_registers_i386;
-+    m_reg_info.num_gpr_registers = k_num_gpr_registers_i386;
-+    m_reg_info.num_fpr_registers = k_num_fpr_registers_i386;
-+    m_reg_info.num_avx_registers = k_num_avx_registers_i386;
-+    m_reg_info.num_mpx_registers = k_num_mpx_registers_i386;
-+    m_reg_info.last_gpr = k_last_gpr_i386;
-+    m_reg_info.first_fpr = k_first_fpr_i386;
-+    m_reg_info.last_fpr = k_last_fpr_i386;
-+    m_reg_info.first_st = lldb_st0_i386;
-+    m_reg_info.last_st = lldb_st7_i386;
-+    m_reg_info.first_mm = lldb_mm0_i386;
-+    m_reg_info.last_mm = lldb_mm7_i386;
-+    m_reg_info.first_xmm = lldb_xmm0_i386;
-+    m_reg_info.last_xmm = lldb_xmm7_i386;
-+    m_reg_info.first_ymm = lldb_ymm0_i386;
-+    m_reg_info.last_ymm = lldb_ymm7_i386;
-+    m_reg_info.first_mpxr = lldb_bnd0_i386;
-+    m_reg_info.last_mpxr = lldb_bnd3_i386;
-+    m_reg_info.first_mpxc = lldb_bndcfgu_i386;
-+    m_reg_info.last_mpxc = lldb_bndstatus_i386;
-+    m_reg_info.first_dr = lldb_dr0_i386;
-+    m_reg_info.gpr_flags = lldb_eflags_i386;
-+    break;
 +  case llvm::Triple::x86_64:
 +    m_reg_info.num_registers = k_num_registers_x86_64;
 +    m_reg_info.num_gpr_registers = k_num_gpr_registers_x86_64;
-+    m_reg_info.num_fpr_registers = k_num_fpr_registers_x86_64;
-+    m_reg_info.num_avx_registers = k_num_avx_registers_x86_64;
-+    m_reg_info.num_mpx_registers = k_num_mpx_registers_x86_64;
-+    m_reg_info.last_gpr = k_last_gpr_x86_64;
-+    m_reg_info.first_fpr = k_first_fpr_x86_64;
-+    m_reg_info.last_fpr = k_last_fpr_x86_64;
-+    m_reg_info.first_st = lldb_st0_x86_64;
-+    m_reg_info.last_st = lldb_st7_x86_64;
-+    m_reg_info.first_mm = lldb_mm0_x86_64;
-+    m_reg_info.last_mm = lldb_mm7_x86_64;
-+    m_reg_info.first_xmm = lldb_xmm0_x86_64;
-+    m_reg_info.last_xmm = lldb_xmm15_x86_64;
-+    m_reg_info.first_ymm = lldb_ymm0_x86_64;
-+    m_reg_info.last_ymm = lldb_ymm15_x86_64;
-+    m_reg_info.first_mpxr = lldb_bnd0_x86_64;
-+    m_reg_info.last_mpxr = lldb_bnd3_x86_64;
-+    m_reg_info.first_mpxc = lldb_bndcfgu_x86_64;
-+    m_reg_info.last_mpxc = lldb_bndstatus_x86_64;
-+    m_reg_info.first_dr = lldb_dr0_x86_64;
-+    m_reg_info.gpr_flags = lldb_rflags_x86_64;
 +    break;
 +  default:
 +    assert(false && "Unhandled target architecture.");
 +    break;
 +  }
-+
-+  // Initialize m_iovec to point to the buffer and buffer size
-+  // using the conventions of Berkeley style UIO structures, as required
-+  // by PTRACE extensions.
-+  m_iovec.iov_base = &m_fpr.xstate.xsave;
-+  m_iovec.iov_len = sizeof(m_fpr.xstate.xsave);
-+
-+  // Clear out the FPR state.
-+  ::memset(&m_fpr, 0, sizeof(FPR));
-+
-+  // Store byte offset of fctrl (i.e. first register of FPR)
-+  const RegisterInfo *reg_info_fctrl = GetRegisterInfoByName("fctrl");
-+  m_fctrl_offset_in_userarea = reg_info_fctrl->byte_offset;
 +}
 +
 +// CONSIDER after local and llgs debugging are merged, register set support can
@@ -403,128 +198,29 @@ $NetBSD$
 +    return error;
 +  }
 +
-+  if (IsFPR(reg) || IsAVX(reg) || IsMPX(reg)) {
-+    error = ReadFPR();
-+    if (error.Fail())
-+      return error;
-+  } else {
-+    uint32_t full_reg = reg;
-+    bool is_subreg = reg_info->invalidate_regs &&
-+                     (reg_info->invalidate_regs[0] != LLDB_INVALID_REGNUM);
++  uint32_t full_reg = reg;
++  bool is_subreg = reg_info->invalidate_regs &&
++                   (reg_info->invalidate_regs[0] != LLDB_INVALID_REGNUM);
 +
-+    if (is_subreg) {
-+      // Read the full aligned 64-bit register.
-+      full_reg = reg_info->invalidate_regs[0];
-+    }
-+
-+    error = ReadRegisterRaw(full_reg, reg_value);
-+
-+    if (error.Success()) {
-+      // If our read was not aligned (for ah,bh,ch,dh), shift our returned value
-+      // one byte to the right.
-+      if (is_subreg && (reg_info->byte_offset & 0x1))
-+        reg_value.SetUInt64(reg_value.GetAsUInt64() >> 8);
-+
-+      // If our return byte size was greater than the return value reg size,
-+      // then
-+      // use the type specified by reg_info rather than the uint64_t default
-+      if (reg_value.GetByteSize() > reg_info->byte_size)
-+        reg_value.SetType(reg_info);
-+    }
-+    return error;
++  if (is_subreg) {
++    // Read the full aligned 64-bit register.
++    full_reg = reg_info->invalidate_regs[0];
 +  }
 +
-+  if (reg_info->encoding == lldb::eEncodingVector) {
-+    lldb::ByteOrder byte_order = GetByteOrder();
++  error = ReadRegisterRaw(full_reg, reg_value);
 +
-+    if (byte_order != lldb::eByteOrderInvalid) {
-+      if (reg >= m_reg_info.first_st && reg <= m_reg_info.last_st)
-+        reg_value.SetBytes(
-+            m_fpr.xstate.fxsave.stmm[reg - m_reg_info.first_st].bytes,
-+            reg_info->byte_size, byte_order);
-+      if (reg >= m_reg_info.first_mm && reg <= m_reg_info.last_mm)
-+        reg_value.SetBytes(
-+            m_fpr.xstate.fxsave.stmm[reg - m_reg_info.first_mm].bytes,
-+            reg_info->byte_size, byte_order);
-+      if (reg >= m_reg_info.first_xmm && reg <= m_reg_info.last_xmm)
-+        reg_value.SetBytes(
-+            m_fpr.xstate.fxsave.xmm[reg - m_reg_info.first_xmm].bytes,
-+            reg_info->byte_size, byte_order);
-+      if (reg >= m_reg_info.first_ymm && reg <= m_reg_info.last_ymm) {
-+        // Concatenate ymm using the register halves in xmm.bytes and ymmh.bytes
-+        if (CopyXSTATEtoYMM(reg, byte_order))
-+          reg_value.SetBytes(m_ymm_set.ymm[reg - m_reg_info.first_ymm].bytes,
-+                             reg_info->byte_size, byte_order);
-+        else {
-+          error.SetErrorString("failed to copy ymm register value");
-+          return error;
-+        }
-+      }
-+      if (reg >= m_reg_info.first_mpxr && reg <= m_reg_info.last_mpxr) {
-+        if (CopyXSTATEtoMPX(reg))
-+          reg_value.SetBytes(m_mpx_set.mpxr[reg - m_reg_info.first_mpxr].bytes,
-+                             reg_info->byte_size, byte_order);
-+        else {
-+          error.SetErrorString("failed to copy mpx register value");
-+          return error;
-+        }
-+      }
-+      if (reg >= m_reg_info.first_mpxc && reg <= m_reg_info.last_mpxc) {
-+        if (CopyXSTATEtoMPX(reg))
-+          reg_value.SetBytes(m_mpx_set.mpxc[reg - m_reg_info.first_mpxc].bytes,
-+                             reg_info->byte_size, byte_order);
-+        else {
-+          error.SetErrorString("failed to copy mpx register value");
-+          return error;
-+        }
-+      }
++  if (error.Success()) {
++    // If our read was not aligned (for ah,bh,ch,dh), shift our returned value
++    // one byte to the right.
++    if (is_subreg && (reg_info->byte_offset & 0x1))
++      reg_value.SetUInt64(reg_value.GetAsUInt64() >> 8);
 +
-+      if (reg_value.GetType() != RegisterValue::eTypeBytes)
-+        error.SetErrorString(
-+            "write failed - type was expected to be RegisterValue::eTypeBytes");
-+
-+      return error;
-+    }
-+
-+    error.SetErrorString("byte order is invalid");
-+    return error;
++    // If our return byte size was greater than the return value reg size,
++    // then
++    // use the type specified by reg_info rather than the uint64_t default
++    if (reg_value.GetByteSize() > reg_info->byte_size)
++      reg_value.SetType(reg_info);
 +  }
-+
-+  // Get pointer to m_fpr.xstate.fxsave variable and set the data from it.
-+
-+  // Byte offsets of all registers are calculated wrt 'UserArea' structure.
-+  // However, ReadFPR() reads fpu registers {using ptrace(PTRACE_GETFPREGS,..)}
-+  // and stores them in 'm_fpr' (of type FPR structure). To extract values of
-+  // fpu
-+  // registers, m_fpr should be read at byte offsets calculated wrt to FPR
-+  // structure.
-+
-+  // Since, FPR structure is also one of the member of UserArea structure.
-+  // byte_offset(fpu wrt FPR) = byte_offset(fpu wrt UserArea) -
-+  // byte_offset(fctrl wrt UserArea)
-+  assert((reg_info->byte_offset - m_fctrl_offset_in_userarea) < sizeof(m_fpr));
-+  uint8_t *src =
-+      (uint8_t *)&m_fpr + reg_info->byte_offset - m_fctrl_offset_in_userarea;
-+  switch (reg_info->byte_size) {
-+  case 1:
-+    reg_value.SetUInt8(*(uint8_t *)src);
-+    break;
-+  case 2:
-+    reg_value.SetUInt16(*(uint16_t *)src);
-+    break;
-+  case 4:
-+    reg_value.SetUInt32(*(uint32_t *)src);
-+    break;
-+  case 8:
-+    reg_value.SetUInt64(*(uint64_t *)src);
-+    break;
-+  default:
-+    assert(false && "Unhandled data size.");
-+    error.SetErrorStringWithFormat("unhandled byte size: %" PRIu32,
-+                                   reg_info->byte_size);
-+    break;
-+  }
-+
 +  return error;
 +}
 +
@@ -541,101 +237,7 @@ $NetBSD$
 +  if (IsGPR(reg_index))
 +    return WriteRegisterRaw(reg_index, reg_value);
 +
-+  if (IsFPR(reg_index) || IsAVX(reg_index) || IsMPX(reg_index)) {
-+    if (reg_info->encoding == lldb::eEncodingVector) {
-+      if (reg_index >= m_reg_info.first_st && reg_index <= m_reg_info.last_st)
-+        ::memcpy(
-+            m_fpr.xstate.fxsave.stmm[reg_index - m_reg_info.first_st].bytes,
-+            reg_value.GetBytes(), reg_value.GetByteSize());
-+
-+      if (reg_index >= m_reg_info.first_mm && reg_index <= m_reg_info.last_mm)
-+        ::memcpy(
-+            m_fpr.xstate.fxsave.stmm[reg_index - m_reg_info.first_mm].bytes,
-+            reg_value.GetBytes(), reg_value.GetByteSize());
-+
-+      if (reg_index >= m_reg_info.first_xmm && reg_index <= m_reg_info.last_xmm)
-+        ::memcpy(
-+            m_fpr.xstate.fxsave.xmm[reg_index - m_reg_info.first_xmm].bytes,
-+            reg_value.GetBytes(), reg_value.GetByteSize());
-+
-+      if (reg_index >= m_reg_info.first_ymm &&
-+          reg_index <= m_reg_info.last_ymm) {
-+        // Store ymm register content, and split into the register halves in
-+        // xmm.bytes and ymmh.bytes
-+        ::memcpy(m_ymm_set.ymm[reg_index - m_reg_info.first_ymm].bytes,
-+                 reg_value.GetBytes(), reg_value.GetByteSize());
-+        if (!CopyYMMtoXSTATE(reg_index, GetByteOrder()))
-+          return Error("CopyYMMtoXSTATE() failed");
-+      }
-+
-+      if (reg_index >= m_reg_info.first_mpxr &&
-+          reg_index <= m_reg_info.last_mpxr) {
-+        ::memcpy(m_mpx_set.mpxr[reg_index - m_reg_info.first_mpxr].bytes,
-+                 reg_value.GetBytes(), reg_value.GetByteSize());
-+        if (!CopyMPXtoXSTATE(reg_index))
-+          return Error("CopyMPXtoXSTATE() failed");
-+      }
-+
-+      if (reg_index >= m_reg_info.first_mpxc &&
-+          reg_index <= m_reg_info.last_mpxc) {
-+        ::memcpy(m_mpx_set.mpxc[reg_index - m_reg_info.first_mpxc].bytes,
-+                 reg_value.GetBytes(), reg_value.GetByteSize());
-+        if (!CopyMPXtoXSTATE(reg_index))
-+          return Error("CopyMPXtoXSTATE() failed");
-+      }
-+    } else {
-+      // Get pointer to m_fpr.xstate.fxsave variable and set the data to it.
-+
-+      // Byte offsets of all registers are calculated wrt 'UserArea' structure.
-+      // However, WriteFPR() takes m_fpr (of type FPR structure) and writes only
-+      // fpu
-+      // registers using ptrace(PTRACE_SETFPREGS,..) API. Hence fpu registers
-+      // should
-+      // be written in m_fpr at byte offsets calculated wrt FPR structure.
-+
-+      // Since, FPR structure is also one of the member of UserArea structure.
-+      // byte_offset(fpu wrt FPR) = byte_offset(fpu wrt UserArea) -
-+      // byte_offset(fctrl wrt UserArea)
-+      assert((reg_info->byte_offset - m_fctrl_offset_in_userarea) <
-+             sizeof(m_fpr));
-+      uint8_t *dst = (uint8_t *)&m_fpr + reg_info->byte_offset -
-+                     m_fctrl_offset_in_userarea;
-+      switch (reg_info->byte_size) {
-+      case 1:
-+        *(uint8_t *)dst = reg_value.GetAsUInt8();
-+        break;
-+      case 2:
-+        *(uint16_t *)dst = reg_value.GetAsUInt16();
-+        break;
-+      case 4:
-+        *(uint32_t *)dst = reg_value.GetAsUInt32();
-+        break;
-+      case 8:
-+        *(uint64_t *)dst = reg_value.GetAsUInt64();
-+        break;
-+      default:
-+        assert(false && "Unhandled data size.");
-+        return Error("unhandled register data size %" PRIu32,
-+                     reg_info->byte_size);
-+      }
-+    }
-+
-+    Error error = WriteFPR();
-+    if (error.Fail())
-+      return error;
-+
-+    if (IsAVX(reg_index)) {
-+      if (!CopyYMMtoXSTATE(reg_index, GetByteOrder()))
-+        return Error("CopyYMMtoXSTATE() failed");
-+    }
-+
-+    if (IsMPX(reg_index)) {
-+      if (!CopyMPXtoXSTATE(reg_index))
-+        return Error("CopyMPXtoXSTATE() failed");
-+    }
-+    return Error();
-+  }
-+  return Error("failed - register wasn't recognized to be a GPR or an FPR, "
++  return Error("failed - register wasn't recognized to be a GPR, "
 +               "write strategy unknown");
 +}
 +
@@ -655,10 +257,6 @@ $NetBSD$
 +  if (error.Fail())
 +    return error;
 +
-+  error = ReadFPR();
-+  if (error.Fail())
-+    return error;
-+
 +  uint8_t *dst = data_sp->GetBytes();
 +  if (dst == nullptr) {
 +    error.SetErrorStringWithFormat("DataBufferHeap instance of size %" PRIu64
@@ -669,51 +267,6 @@ $NetBSD$
 +
 +  ::memcpy(dst, &m_gpr_x86_64, GetRegisterInfoInterface().GetGPRSize());
 +  dst += GetRegisterInfoInterface().GetGPRSize();
-+  if (m_xstate_type == XStateType::FXSAVE)
-+    ::memcpy(dst, &m_fpr.xstate.fxsave, sizeof(m_fpr.xstate.fxsave));
-+  else if (m_xstate_type == XStateType::XSAVE) {
-+    lldb::ByteOrder byte_order = GetByteOrder();
-+
-+    if (IsCPUFeatureAvailable(RegSet::avx)) {
-+      // Assemble the YMM register content from the register halves.
-+      for (uint32_t reg = m_reg_info.first_ymm; reg <= m_reg_info.last_ymm;
-+           ++reg) {
-+        if (!CopyXSTATEtoYMM(reg, byte_order)) {
-+          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextNetBSD_x86_64::%s "
-+              "CopyXSTATEtoYMM() failed for reg num "
-+              "%" PRIu32,
-+              __FUNCTION__, reg);
-+          return error;
-+        }
-+      }
-+    }
-+
-+    if (IsCPUFeatureAvailable(RegSet::mpx)) {
-+      for (uint32_t reg = m_reg_info.first_mpxr; reg <= m_reg_info.last_mpxc;
-+           ++reg) {
-+        if (!CopyXSTATEtoMPX(reg)) {
-+          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextNetBSD_x86_64::%s "
-+              "CopyXSTATEtoMPX() failed for reg num "
-+              "%" PRIu32,
-+              __FUNCTION__, reg);
-+          return error;
-+        }
-+      }
-+    }
-+    // Copy the extended register state including the assembled ymm registers.
-+    ::memcpy(dst, &m_fpr, sizeof(m_fpr));
-+  } else {
-+    assert(false && "how do we save the floating point registers?");
-+    error.SetErrorString("unsure how to save the floating point registers");
-+  }
-+  /** The following code is specific to NetBSD x86 based architectures,
-+   *  where the register orig_eax (32 bit)/orig_rax (64 bit) is set to
-+   *  -1 to solve the bug 23659, such a setting prevents the automatic
-+   *  decrement of the instruction pointer which was causing the SIGILL
-+   *  exception.
-+   * **/
 +
 +  RegisterValue value((uint64_t)-1);
 +  const RegisterInfo *reg_info =
@@ -761,71 +314,16 @@ $NetBSD$
 +    return error;
 +
 +  src += GetRegisterInfoInterface().GetGPRSize();
-+  if (m_xstate_type == XStateType::FXSAVE)
-+    ::memcpy(&m_fpr.xstate.fxsave, src, sizeof(m_fpr.xstate.fxsave));
-+  else if (m_xstate_type == XStateType::XSAVE)
-+    ::memcpy(&m_fpr.xstate.xsave, src, sizeof(m_fpr.xstate.xsave));
-+
-+  error = WriteFPR();
-+  if (error.Fail())
-+    return error;
-+
-+  if (m_xstate_type == XStateType::XSAVE) {
-+    lldb::ByteOrder byte_order = GetByteOrder();
-+
-+    if (IsCPUFeatureAvailable(RegSet::avx)) {
-+      // Parse the YMM register content from the register halves.
-+      for (uint32_t reg = m_reg_info.first_ymm; reg <= m_reg_info.last_ymm;
-+           ++reg) {
-+        if (!CopyYMMtoXSTATE(reg, byte_order)) {
-+          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextNetBSD_x86_64::%s "
-+              "CopyYMMtoXSTATE() failed for reg num "
-+              "%" PRIu32,
-+              __FUNCTION__, reg);
-+          return error;
-+        }
-+      }
-+    }
-+
-+    if (IsCPUFeatureAvailable(RegSet::mpx)) {
-+      for (uint32_t reg = m_reg_info.first_mpxr; reg <= m_reg_info.last_mpxc;
-+           ++reg) {
-+        if (!CopyMPXtoXSTATE(reg)) {
-+          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextNetBSD_x86_64::%s "
-+              "CopyMPXtoXSTATE() failed for reg num "
-+              "%" PRIu32,
-+              __FUNCTION__, reg);
-+          return error;
-+        }
-+      }
-+    }
-+  }
 +
 +  return error;
 +}
 +
 +bool NativeRegisterContextNetBSD_x86_64::IsCPUFeatureAvailable(
 +    RegSet feature_code) const {
-+  if (m_xstate_type == XStateType::Invalid) {
-+    if (const_cast<NativeRegisterContextNetBSD_x86_64 *>(this)->ReadFPR().Fail())
-+      return false;
-+  }
++
 +  switch (feature_code) {
 +  case RegSet::gpr:
-+  case RegSet::fpu:
 +    return true;
-+  case RegSet::avx: // Check if CPU has AVX and if there is kernel support, by
-+                    // reading in the XCR0 area of XSAVE.
-+    if ((m_fpr.xstate.xsave.i387.xcr0 & mask_XSTATE_AVX) == mask_XSTATE_AVX)
-+      return true;
-+     break;
-+  case RegSet::mpx: // Check if CPU has MPX and if there is kernel support, by
-+                    // reading in the XCR0 area of XSAVE.
-+    if ((m_fpr.xstate.xsave.i387.xcr0 & mask_XSTATE_MPX) == mask_XSTATE_MPX)
-+      return true;
-+    break;
 +  }
 +  return false;
 +}
@@ -836,12 +334,6 @@ $NetBSD$
 +
 +  switch (static_cast<RegSet>(set_index)) {
 +  case RegSet::gpr:
-+  case RegSet::fpu:
-+    return (set_index < num_sets);
-+  case RegSet::avx:
-+    return IsCPUFeatureAvailable(RegSet::avx);
-+  case RegSet::mpx:
-+    return IsCPUFeatureAvailable(RegSet::mpx);
 +  }
 +  return false;
 +}
@@ -849,167 +341,6 @@ $NetBSD$
 +bool NativeRegisterContextNetBSD_x86_64::IsGPR(uint32_t reg_index) const {
 +  // GPRs come first.
 +  return reg_index <= m_reg_info.last_gpr;
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::IsFPR(uint32_t reg_index) const {
-+  return (m_reg_info.first_fpr <= reg_index &&
-+          reg_index <= m_reg_info.last_fpr);
-+}
-+
-+Error NativeRegisterContextNetBSD_x86_64::WriteFPR() {
-+  switch (m_xstate_type) {
-+  case XStateType::FXSAVE:
-+    return WriteRegisterSet(
-+        &m_iovec, sizeof(m_fpr.xstate.xsave),
-+        fxsr_regset(GetRegisterInfoInterface().GetTargetArchitecture()));
-+  case XStateType::XSAVE:
-+    return WriteRegisterSet(&m_iovec, sizeof(m_fpr.xstate.xsave),
-+                            NT_X86_XSTATE);
-+  default:
-+    return Error("Unrecognized FPR type.");
-+  }
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::IsAVX(uint32_t reg_index) const {
-+  if (!IsCPUFeatureAvailable(RegSet::avx))
-+    return false;
-+  return (m_reg_info.first_ymm <= reg_index &&
-+          reg_index <= m_reg_info.last_ymm);
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::CopyXSTATEtoYMM(
-+    uint32_t reg_index, lldb::ByteOrder byte_order) {
-+  if (!IsAVX(reg_index))
-+    return false;
-+
-+  if (byte_order == lldb::eByteOrderLittle) {
-+    ::memcpy(m_ymm_set.ymm[reg_index - m_reg_info.first_ymm].bytes,
-+             m_fpr.xstate.fxsave.xmm[reg_index - m_reg_info.first_ymm].bytes,
-+             sizeof(XMMReg));
-+    ::memcpy(m_ymm_set.ymm[reg_index - m_reg_info.first_ymm].bytes +
-+                 sizeof(XMMReg),
-+             m_fpr.xstate.xsave.ymmh[reg_index - m_reg_info.first_ymm].bytes,
-+             sizeof(YMMHReg));
-+    return true;
-+  }
-+
-+  if (byte_order == lldb::eByteOrderBig) {
-+    ::memcpy(m_ymm_set.ymm[reg_index - m_reg_info.first_ymm].bytes +
-+                 sizeof(XMMReg),
-+             m_fpr.xstate.fxsave.xmm[reg_index - m_reg_info.first_ymm].bytes,
-+             sizeof(XMMReg));
-+    ::memcpy(m_ymm_set.ymm[reg_index - m_reg_info.first_ymm].bytes,
-+             m_fpr.xstate.xsave.ymmh[reg_index - m_reg_info.first_ymm].bytes,
-+             sizeof(YMMHReg));
-+    return true;
-+  }
-+  return false; // unsupported or invalid byte order
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::CopyYMMtoXSTATE(
-+    uint32_t reg, lldb::ByteOrder byte_order) {
-+  if (!IsAVX(reg))
-+    return false;
-+
-+  if (byte_order == lldb::eByteOrderLittle) {
-+    ::memcpy(m_fpr.xstate.fxsave.xmm[reg - m_reg_info.first_ymm].bytes,
-+             m_ymm_set.ymm[reg - m_reg_info.first_ymm].bytes, sizeof(XMMReg));
-+    ::memcpy(m_fpr.xstate.xsave.ymmh[reg - m_reg_info.first_ymm].bytes,
-+             m_ymm_set.ymm[reg - m_reg_info.first_ymm].bytes + sizeof(XMMReg),
-+             sizeof(YMMHReg));
-+    return true;
-+  }
-+
-+  if (byte_order == lldb::eByteOrderBig) {
-+    ::memcpy(m_fpr.xstate.fxsave.xmm[reg - m_reg_info.first_ymm].bytes,
-+             m_ymm_set.ymm[reg - m_reg_info.first_ymm].bytes + sizeof(XMMReg),
-+             sizeof(XMMReg));
-+    ::memcpy(m_fpr.xstate.xsave.ymmh[reg - m_reg_info.first_ymm].bytes,
-+             m_ymm_set.ymm[reg - m_reg_info.first_ymm].bytes, sizeof(YMMHReg));
-+    return true;
-+  }
-+  return false; // unsupported or invalid byte order
-+}
-+
-+void *NativeRegisterContextNetBSD_x86_64::GetFPRBuffer() {
-+  switch (m_xstate_type) {
-+  case XStateType::FXSAVE:
-+    return &m_fpr.xstate.fxsave;
-+  case XStateType::XSAVE:
-+    return &m_iovec;
-+  default:
-+    return nullptr;
-+  }
-+}
-+
-+size_t NativeRegisterContextNetBSD_x86_64::GetFPRSize() {
-+  switch (m_xstate_type) {
-+  case XStateType::FXSAVE:
-+    return sizeof(m_fpr.xstate.fxsave);
-+  case XStateType::XSAVE:
-+    return sizeof(m_iovec);
-+  default:
-+    return 0;
-+  }
-+}
-+
-+Error NativeRegisterContextNetBSD_x86_64::ReadFPR() {
-+  Error error;
-+
-+  // Probe XSAVE and if it is not supported fall back to FXSAVE.
-+  if (m_xstate_type != XStateType::FXSAVE) {
-+    error =
-+        ReadRegisterSet(&m_iovec, sizeof(m_fpr.xstate.xsave), NT_X86_XSTATE);
-+    if (!error.Fail()) {
-+      m_xstate_type = XStateType::XSAVE;
-+      return error;
-+    }
-+  }
-+  error = ReadRegisterSet(
-+      &m_iovec, sizeof(m_fpr.xstate.xsave),
-+      fxsr_regset(GetRegisterInfoInterface().GetTargetArchitecture()));
-+  if (!error.Fail()) {
-+    m_xstate_type = XStateType::FXSAVE;
-+    return error;
-+  }
-+  return Error("Unrecognized FPR type.");
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::IsMPX(uint32_t reg_index) const {
-+  if (!IsCPUFeatureAvailable(RegSet::mpx))
-+    return false;
-+  return (m_reg_info.first_mpxr <= reg_index &&
-+          reg_index <= m_reg_info.last_mpxc);
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::CopyXSTATEtoMPX(uint32_t reg) {
-+  if (!IsMPX(reg))
-+    return false;
-+
-+  if (reg >= m_reg_info.first_mpxr && reg <= m_reg_info.last_mpxr) {
-+    ::memcpy(m_mpx_set.mpxr[reg - m_reg_info.first_mpxr].bytes,
-+             m_fpr.xstate.xsave.mpxr[reg - m_reg_info.first_mpxr].bytes,
-+             sizeof(MPXReg));
-+  } else {
-+    ::memcpy(m_mpx_set.mpxc[reg - m_reg_info.first_mpxc].bytes,
-+             m_fpr.xstate.xsave.mpxc[reg - m_reg_info.first_mpxc].bytes,
-+             sizeof(MPXCsr));
-+  }
-+  return true;
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::CopyMPXtoXSTATE(uint32_t reg) {
-+  if (!IsMPX(reg))
-+    return false;
-+
-+  if (reg >= m_reg_info.first_mpxr && reg <= m_reg_info.last_mpxr) {
-+    ::memcpy(m_fpr.xstate.xsave.mpxr[reg - m_reg_info.first_mpxr].bytes,
-+             m_mpx_set.mpxr[reg - m_reg_info.first_mpxr].bytes, sizeof(MPXReg));
-+  } else {
-+    ::memcpy(m_fpr.xstate.xsave.mpxc[reg - m_reg_info.first_mpxc].bytes,
-+             m_mpx_set.mpxc[reg - m_reg_info.first_mpxc].bytes, sizeof(MPXCsr));
-+  }
-+  return true;
 +}
 +
 +Error NativeRegisterContextNetBSD_x86_64::IsWatchpointHit(uint32_t wp_index,
