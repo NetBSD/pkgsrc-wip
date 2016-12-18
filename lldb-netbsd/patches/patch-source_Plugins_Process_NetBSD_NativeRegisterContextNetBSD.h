@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2016-12-17 13:23:23.783738014 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -0,0 +1,92 @@
+@@ -0,0 +1,74 @@
 +//===-- NativeRegisterContextNetBSD.h ----------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -49,29 +49,15 @@ $NetBSD$
 +  virtual Error WriteRegisterRaw(uint32_t reg_index,
 +                                 const RegisterValue &reg_value);
 +
-+  virtual Error ReadRegisterSet(void *buf, size_t buf_size,
-+                                unsigned int regset);
-+
-+  virtual Error WriteRegisterSet(void *buf, size_t buf_size,
-+                                 unsigned int regset);
-+
 +  virtual Error ReadGPR();
 +
 +  virtual Error WriteGPR();
-+
-+  virtual Error ReadFPR();
-+
-+  virtual Error WriteFPR();
 +
 +  virtual void *GetGPRBuffer() { return nullptr; }
 +
 +  virtual size_t GetGPRSize() {
 +    return GetRegisterInfoInterface().GetGPRSize();
 +  }
-+
-+  virtual void *GetFPRBuffer() { return nullptr; }
-+
-+  virtual size_t GetFPRSize() { return 0; }
 +
 +  // The Do*** functions are executed on the privileged thread and can perform
 +  // ptrace
@@ -85,10 +71,6 @@ $NetBSD$
 +  virtual Error DoReadGPR(void *buf, size_t buf_size);
 +
 +  virtual Error DoWriteGPR(void *buf, size_t buf_size);
-+
-+  virtual Error DoReadFPR(void *buf, size_t buf_size);
-+
-+  virtual Error DoWriteFPR(void *buf, size_t buf_size);
 +};
 +
 +} // namespace process_netbsd
