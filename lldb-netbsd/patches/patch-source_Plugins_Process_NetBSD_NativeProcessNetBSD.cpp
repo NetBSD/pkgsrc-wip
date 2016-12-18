@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1963 @@
+@@ -0,0 +1,1949 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -890,14 +890,7 @@ $NetBSD$
 +  if (GetID() == LLDB_INVALID_PROCESS_ID)
 +    return error;
 +
-+  for (auto thread_sp : m_threads) {
-+    Error e = Detach(thread_sp->GetID());
-+    if (e.Fail())
-+      error =
-+          e; // Save the error, but still attempt to detach from other threads.
-+  }
-+
-+  return error;
++  return PtraceWrapper(PT_DETACH, GetID());
 +}
 +
 +Error NativeProcessNetBSD::Signal(int signo) {
@@ -1518,13 +1511,6 @@ $NetBSD$
 +Error NativeProcessNetBSD::GetEventMessage(lldb::tid_t tid,
 +                                          unsigned long *message) {
 +  return PtraceWrapper(PTRACE_GETEVENTMSG, tid, nullptr, message);
-+}
-+
-+Error NativeProcessNetBSD::Detach(lldb::tid_t tid) {
-+  if (tid == LLDB_INVALID_THREAD_ID)
-+    return Error();
-+
-+  return PtraceWrapper(PTRACE_DETACH, tid);
 +}
 +
 +bool NativeProcessNetBSD::HasThreadNoLock(lldb::tid_t thread_id) {
