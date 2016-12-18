@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,2013 @@
+@@ -0,0 +1,1963 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -397,71 +397,21 @@ $NetBSD$
 +    return -1;
 +  }
 +
-+  while (Host::FindProcessThreads(pid, tids_to_attach)) {
-+    for (Host::TidMap::iterator it = tids_to_attach.begin();
-+         it != tids_to_attach.end();) {
-+      if (it->second == false) {
-+        lldb::tid_t tid = it->first;
-+
-+        // Attach to the requested process.
-+        // An attach will cause the thread to stop with a SIGSTOP.
-+        error = PtraceWrapper(PTRACE_ATTACH, tid);
-+        if (error.Fail()) {
-+          // No such thread. The thread may have exited.
-+          // More error handling may be needed.
-+          if (error.GetError() == ESRCH) {
-+            it = tids_to_attach.erase(it);
-+            continue;
-+          } else
-+            return -1;
-+        }
-+
-+        int status;
-+        // Need to use WALLSIG otherwise we receive an error with errno=ECHLD
-+        // At this point we should have a thread stopped if waitpid succeeds.
-+        if ((status = waitpid(tid, NULL, WALLSIG)) < 0) {
-+          // No such thread. The thread may have exited.
-+          // More error handling may be needed.
-+          if (errno == ESRCH) {
-+            it = tids_to_attach.erase(it);
-+            continue;
-+          } else {
-+            error.SetErrorToErrno();
-+            return -1;
-+          }
-+        }
-+
-+        if (log)
-+          log->Printf("NativeProcessNetBSD::%s() adding tid = %" PRIu64,
-+                      __FUNCTION__, tid);
-+
-+        it->second = true;
-+
-+        // Create the thread, mark it as stopped.
-+        NativeThreadNetBSDSP thread_sp(AddThread(static_cast<lldb::tid_t>(tid)));
-+        assert(thread_sp && "AddThread() returned a nullptr");
-+
-+        // This will notify this is a new thread and tell the system it is
-+        // stopped.
-+        thread_sp->SetStoppedBySignal(SIGSTOP);
-+        ThreadWasCreated(*thread_sp);
-+        SetCurrentThreadID(thread_sp->GetID());
-+      }
-+
-+      // move the loop forward
-+      ++it;
-+    }
-+  }
-+
-+  if (tids_to_attach.size() > 0) {
-+    m_pid = pid;
-+    // Let our process instance know the thread has stopped.
-+    SetState(StateType::eStateStopped);
-+  } else {
-+    error.SetErrorToGenericError();
-+    error.SetErrorString("No such process.");
++  // Attach to the requested process.
++  // An attach will cause the thread to stop with a SIGSTOP.
++  error = PtraceWrapper(PT_ATTACH, pid);
++  if (error.Fail())
 +    return -1;
-+  }
++
++  int status;
++  // Need to use WALLSIG otherwise we receive an error with errno=ECHLD
++  // At this point we should have a thread stopped if waitpid succeeds.
++  if ((status = waitpid(tid, NULL, WALLSIG)) < 0)
++    return -1;
++
++  m_pid = pid;
++  // Let our process instance know the thread has stopped.
++  SetState(StateType::eStateStopped);
 +
 +  return pid;
 +}
