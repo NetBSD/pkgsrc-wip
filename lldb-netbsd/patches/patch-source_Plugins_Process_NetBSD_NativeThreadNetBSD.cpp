@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-17 13:23:23.784878149 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,429 @@
+@@ -0,0 +1,423 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -19,7 +19,6 @@ $NetBSD$
 +
 +#include "NativeProcessNetBSD.h"
 +#include "NativeRegisterContextNetBSD.h"
-+#include "SingleStepCheck.h"
 +
 +#include "lldb/Core/Log.h"
 +#include "lldb/Core/State.h"
@@ -221,8 +220,8 @@ $NetBSD$
 +  if (signo != LLDB_INVALID_SIGNAL_NUMBER)
 +    data = signo;
 +
-+  return NativeProcessNetBSD::PtraceWrapper(PTRACE_CONT, GetID(), nullptr,
-+                                           reinterpret_cast<void *>(data));
++  return NativeProcessNetBSD::PtraceWrapper(PT_CONTINUE, GetID(), (void *)1,
++                                           data);
 +}
 +
 +Error NativeThreadNetBSD::SingleStep(uint32_t signo) {
@@ -239,9 +238,9 @@ $NetBSD$
 +  // breakpoint on the
 +  // next instruction has been setup in NativeProcessNetBSD::Resume.
 +  return NativeProcessNetBSD::PtraceWrapper(
-+      GetProcess().SupportHardwareSingleStepping() ? PTRACE_SINGLESTEP
-+                                                   : PTRACE_CONT,
-+      m_tid, nullptr, reinterpret_cast<void *>(data));
++      GetProcess().SupportHardwareSingleStepping() ? PT_STEP
++                                                   : PT_CONTINUE,
++      GetID(), (void *)1, data);
 +}
 +
 +void NativeThreadNetBSD::SetStoppedBySignal(uint32_t signo,
@@ -263,10 +262,8 @@ $NetBSD$
 +    case SIGBUS:
 +    case SIGFPE:
 +    case SIGILL:
-+      // In case of MIPS64 target, SI_KERNEL is generated for invalid 64bit
-+      // address.
 +      const auto reason =
-+          (info->si_signo == SIGBUS && info->si_code == SI_KERNEL)
++          (info->si_signo == SIGBUS)
 +              ? CrashReason::eInvalidAddress
 +              : GetCrashReason(*info);
 +      m_stop_description = GetCrashReasonString(reason, *info);
@@ -290,9 +287,6 @@ $NetBSD$
 +}
 +
 +void NativeThreadNetBSD::SetStopped() {
-+  if (m_state == StateType::eStateStepping)
-+    MaybeCleanupSingleStepWorkaround();
-+
 +  const StateType new_state = StateType::eStateStopped;
 +  MaybeLogStateChange(new_state);
 +  m_state = new_state;
