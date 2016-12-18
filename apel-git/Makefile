@@ -20,8 +20,6 @@ USE_LANGUAGES=		# none
 USE_TOOLS+=		gmake makeinfo
 NO_CONFIGURE=		yes
 
-.include "../../editors/emacs/modules.mk"
-
 TEST_TARGET=		check
 
 INSTALLATION_DIRS+=	${DOCDIR} \
@@ -38,7 +36,7 @@ MAKE_FLAGS+=	${MAKE_FLAGS.${EMACS_FLAVOR}}
 
 # apel is included in xemacs-packages
 EMACS_VERSIONS_ACCEPTED=emacs24 emacs24nox emacs23 emacs23nox emacs22 emacs22nox \
-			emacs21 emacs21nox emacs20 emacs25
+			emacs21 emacs21nox emacs20 emacs25 emacs26
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
@@ -47,7 +45,7 @@ INSTALL_TARGET.xemacs=	install-package
 MAKE_FLAGS.emacs=
 MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
-.include "../../editors/emacs/modules.mk"
+.include "../../wip/emacs-git/modules.mk"
 
 PLIST_VARS+=	emacs23 emacs19
 .if empty(EMACS_TYPE:Mxemacs)
