@@ -228,7 +228,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
 _EMACS_VERSIONS_ALL= \
 	emacs20 emacs21 emacs21nox emacs22 emacs22nox emacs23 emacs23nox \
-	emacs24 emacs24nox emacs25 \
+	emacs24 emacs24nox emacs25 emacs26\
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -354,7 +354,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
-.  if empty(EMACS_TYPE:Memacs25)
+.  if empty(EMACS_TYPE:Memacs25) && empty(EMACS_TYPE:Memacs26)
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp
 .  else
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
