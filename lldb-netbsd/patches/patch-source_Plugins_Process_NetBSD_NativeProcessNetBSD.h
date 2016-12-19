@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-17 13:23:23.783483302 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-19 01:22:58.087120268 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,191 @@
+@@ -0,0 +1,186 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -168,11 +168,6 @@ $NetBSD$
 +  /// Writes a siginfo_t structure corresponding to the given thread ID to the
 +  /// memory region pointed to by @p siginfo.
 +  Error GetSignalInfo(lldb::tid_t tid, void *siginfo);
-+
-+  /// Writes the raw event message code (vis-a-vis PTRACE_GETEVENTMSG)
-+  /// corresponding to the given thread ID to the memory pointed to by @p
-+  /// message.
-+  Error GetEventMessage(lldb::tid_t tid, unsigned long *message);
 +
 +  void NotifyThreadDeath(lldb::tid_t tid);
 +

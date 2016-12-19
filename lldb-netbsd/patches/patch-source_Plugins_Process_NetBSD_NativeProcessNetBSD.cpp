@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-19 01:22:58.080559848 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1853 @@
+@@ -0,0 +1,1820 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -1383,8 +1383,8 @@ $NetBSD$
 +Error NativeProcessNetBSD::WriteMemory(lldb::addr_t addr, const void *buf,
 +                                      size_t size, size_t &bytes_written) {
 +  const unsigned char *src = static_cast<const unsigned char *>(buf);
-+  size_t remainder;
 +  Error error;
++  struct ptrace_io_desc io;
 +
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_ALL));
 +  if (log)
@@ -1394,68 +1394,29 @@ $NetBSD$
 +    log->Printf("NativeProcessNetBSD::%s(0x%" PRIx64 ", %p, %zu)", __FUNCTION__,
 +                addr, buf, size);
 +
-+  for (bytes_written = 0; bytes_written < size; bytes_written += remainder) {
-+    remainder = size - bytes_written;
-+    remainder = remainder > k_ptrace_word_size ? k_ptrace_word_size : remainder;
++  bytes_written = 0;
++  io.piod_op = PIOD_WRITE_D;
++  io.piod_len = size;
 +
-+    if (remainder == k_ptrace_word_size) {
-+      unsigned long data = 0;
-+      memcpy(&data, src, k_ptrace_word_size);
++  do {
++    io.piod_offs = (void *)(src + bytes_written);
++    io.piod_offs = (void *)(addr + bytes_written);
 +
-+      if (log && ProcessPOSIXLog::AtTopNestLevel() &&
-+          (log->GetMask().Test(POSIX_LOG_MEMORY_DATA_LONG) ||
-+           (log->GetMask().Test(POSIX_LOG_MEMORY_DATA_SHORT) &&
-+            size <= POSIX_LOG_MEMORY_SHORT_BYTES)))
-+        log->Printf("NativeProcessNetBSD::%s() [%p]:0x%lx (0x%lx)", __FUNCTION__,
-+                    (void *)addr, *(const unsigned long *)src, data);
-+
-+      error = NativeProcessNetBSD::PtraceWrapper(PTRACE_POKEDATA, GetID(),
-+                                                (void *)addr, (void *)data);
-+      if (error.Fail()) {
-+        if (log)
-+          ProcessPOSIXLog::DecNestLevel();
-+        return error;
-+      }
-+    } else {
-+      unsigned char buff[8];
-+      size_t bytes_read;
-+      error = ReadMemory(addr, buff, k_ptrace_word_size, bytes_read);
-+      if (error.Fail()) {
-+        if (log)
-+          ProcessPOSIXLog::DecNestLevel();
-+        return error;
-+      }
-+
-+      memcpy(buff, src, remainder);
-+
-+      size_t bytes_written_rec;
-+      error = WriteMemory(addr, buff, k_ptrace_word_size, bytes_written_rec);
-+      if (error.Fail()) {
-+        if (log)
-+          ProcessPOSIXLog::DecNestLevel();
-+        return error;
-+      }
-+
-+      if (log && ProcessPOSIXLog::AtTopNestLevel() &&
-+          (log->GetMask().Test(POSIX_LOG_MEMORY_DATA_LONG) ||
-+           (log->GetMask().Test(POSIX_LOG_MEMORY_DATA_SHORT) &&
-+            size <= POSIX_LOG_MEMORY_SHORT_BYTES)))
-+        log->Printf("NativeProcessNetBSD::%s() [%p]:0x%lx (0x%lx)", __FUNCTION__,
-+                    (void *)addr, *(const unsigned long *)src,
-+                    *(unsigned long *)buff);
++    Error error = NativeProcessNetBSD::PtraceWrapper(
++        PT_IO, GetID(), &io);
++    if (error.Fail()) {
++      if (log)
++        ProcessPOSIXLog::DecNestLevel();
++      return error;
 +    }
 +
-+    addr += k_ptrace_word_size;
-+    src += k_ptrace_word_size;
-+  }
++    bytes_written = io.piod_len;
++    io.piod_len = size - bytes_written;
++  } while(bytes_written < size);
++
 +  if (log)
 +    ProcessPOSIXLog::DecNestLevel();
 +  return error;
-+}
-+
-+Error NativeProcessNetBSD::GetEventMessage(lldb::tid_t tid,
-+                                          unsigned long *message) {
-+  return PtraceWrapper(PTRACE_GETEVENTMSG, tid, nullptr, message);
 +}
 +
 +bool NativeProcessNetBSD::HasThreadNoLock(lldb::tid_t thread_id) {
@@ -1618,6 +1579,7 @@ $NetBSD$
 +
 +  bool found = false;
 +  file_spec.Clear();
++#if 0
 +  ProcFileReader::ProcessLineByLine(
 +      GetID(), "maps", [&](const std::string &line) {
 +        SmallVector<StringRef, 16> columns;
@@ -1633,6 +1595,7 @@ $NetBSD$
 +        found = true;
 +        return false; // we are done
 +      });
++#endif
 +
 +  if (!found)
 +    return Error("Module file (%s) not found in /proc/%" PRIu64 "/maps file!",
@@ -1644,6 +1607,7 @@ $NetBSD$
 +Error NativeProcessNetBSD::GetFileLoadAddress(const llvm::StringRef &file_name,
 +                                             lldb::addr_t &load_addr) {
 +  load_addr = LLDB_INVALID_ADDRESS;
++#if 0
 +  Error error = ProcFileReader::ProcessLineByLine(
 +      GetID(), "maps", [&](const std::string &line) -> bool {
 +        StringRef maps_row(line);
@@ -1667,6 +1631,9 @@ $NetBSD$
 +        // Return true to continue reading the proc file
 +        return true;
 +      });
++#else
++  Error error;
++#endif
 +  return error;
 +}
 +
