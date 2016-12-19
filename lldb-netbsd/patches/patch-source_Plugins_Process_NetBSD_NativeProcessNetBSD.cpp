@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-19 00:44:29.116428500 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-19 01:22:58.080559848 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1847 @@
+@@ -0,0 +1,1852 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -26,6 +26,7 @@ $NetBSD$
 +#include <sstream>
 +#include <string>
 +#include <unordered_map>
++
 +
 +// Other libraries and framework includes
 +#include "lldb/Core/EmulateInstruction.h"
@@ -55,6 +56,7 @@ $NetBSD$
 +// macros which collide with variable names in other modules
 +#include <sys/socket.h>
 +
++#include <sys/ptrace.h>
 +#include <sys/syscall.h>
 +#include <sys/types.h>
 +#include <sys/user.h>
@@ -98,7 +100,7 @@ $NetBSD$
 +
 +void DisplayBytes(StreamString &s, void *bytes, uint32_t count) {
 +  uint8_t *ptr = (uint8_t *)bytes;
-+  const uint32_t loop_count = std::min<uint32_t>(DEBUG_PTRACE_MAXBYTES, count);
++  const uint32_t loop_count = count;
 +  for (uint32_t i = 0; i < loop_count; i++) {
 +    s.Printf("[%x]", *ptr);
 +    ptr++;
@@ -1046,6 +1048,7 @@ $NetBSD$
 +    return error;
 +  }
 +
++#if 0
 +  // If our cache is empty, pull the latest.  There should always be at least
 +  // one memory region
 +  // if memory region handling is supported.
@@ -1093,7 +1096,9 @@ $NetBSD$
 +
 +    // We support memory retrieval, remember that.
 +    m_supports_mem_region = LazyBool::eLazyBoolYes;
-+  } else {
++  } else
++#endif
++ {
 +    if (log)
 +      log->Printf("NativeProcessNetBSD::%s reusing %" PRIu64
 +                  " cached memory region entries",

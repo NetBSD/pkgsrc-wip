@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-19 00:44:29.153254744 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-19 01:22:58.093122208 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,318 @@
+@@ -0,0 +1,313 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -18,7 +18,6 @@ $NetBSD$
 +#include <sstream>
 +
 +#include "NativeProcessNetBSD.h"
-+#include "NativeRegisterContextNetBSD.h"
 +
 +#include "lldb/Core/Log.h"
 +#include "lldb/Core/State.h"
@@ -31,10 +30,6 @@ $NetBSD$
 +#include "Plugins/Process/POSIX/CrashReason.h"
 +
 +#include <sys/syscall.h>
-+// Try to define a macro to encapsulate the tgkill syscall
-+#define tgkill(pid, tid, sig)                                                  \
-+  syscall(__NR_tgkill, static_cast<::pid_t>(pid), static_cast<::pid_t>(tid),   \
-+          sig)
 +
 +using namespace lldb;
 +using namespace lldb_private;

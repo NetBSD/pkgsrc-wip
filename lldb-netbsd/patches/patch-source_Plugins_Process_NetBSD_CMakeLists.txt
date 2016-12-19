@@ -1,15 +1,13 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/CMakeLists.txt.orig	2016-12-19 00:44:29.110049715 +0000
+--- source/Plugins/Process/NetBSD/CMakeLists.txt.orig	2016-12-19 01:22:58.074182561 +0000
 +++ source/Plugins/Process/NetBSD/CMakeLists.txt
-@@ -0,0 +1,10 @@
+@@ -0,0 +1,8 @@
 +include_directories(.)
 +include_directories(../POSIX)
 +include_directories(../Utility)
 +
 +add_lldb_library(lldbPluginProcessNetBSD
 +  NativeProcessNetBSD.cpp
-+  NativeRegisterContextNetBSD.cpp
-+  NativeRegisterContextNetBSD_x86_64.cpp
 +  NativeThreadNetBSD.cpp
 +  )
