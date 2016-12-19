@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-19 01:22:58.093122208 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,293 @@
+@@ -0,0 +1,306 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -134,6 +134,19 @@ $NetBSD$
 +    return false;
 +  }
 +  llvm_unreachable("unhandled StateType!");
++}
++
++NativeRegisterContextSP NativeThreadNetBSD::GetRegisterContext() {
++  return m_reg_context_sp; /* XXX: dummy */
++}
++
++Error NativeThreadNetBSD::SetWatchpoint(lldb::addr_t addr, size_t size,
++                                       uint32_t watch_flags, bool hardware) {
++  return Error();
++}
++
++Error NativeThreadNetBSD::RemoveWatchpoint(lldb::addr_t addr) {
++  return Error();
 +}
 +
 +Error NativeThreadNetBSD::Resume(uint32_t signo) {

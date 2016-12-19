@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-17 13:23:23.784994923 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-19 01:22:58.099098436 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,103 @@
+@@ -0,0 +1,108 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -46,6 +46,11 @@ $NetBSD$
 +                     std::string &description) override;
 +
 +  NativeRegisterContextSP GetRegisterContext() override;
++
++  Error SetWatchpoint(lldb::addr_t addr, size_t size, uint32_t watch_flags,
++                      bool hardware) override;
++
++  Error RemoveWatchpoint(lldb::addr_t addr) override;
 +
 +private:
 +  // ---------------------------------------------------------------------
