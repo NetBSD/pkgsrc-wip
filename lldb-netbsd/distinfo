@@ -16,6 +16,7 @@ SHA1 (patch-cmake_LLDBDependencies.cmake) = 81673d8624ca7a9ad60bcaf530587fbfbd69
 SHA1 (patch-include_lldb_Host_netbsd_HostThreadNetBSD.h) = 79f207cdb9da2ef57d39eeb307ec6d10cf828925
 SHA1 (patch-include_lldb_Host_netbsd_ProcessLauncherNetBSD.h) = 5422ae06ff064f0b522148a576a7e8d3b4ea1974
 SHA1 (patch-source_CMakeLists.txt) = 5dacabc3f39c23bdfd432b5a4895866157b97aa0
+SHA1 (patch-source_Host_common_NativeProcessProtocol.cpp) = 2446b1727d87e9d5e6e7a12f66d7263798ad554d
 SHA1 (patch-source_Host_netbsd_HostThreadNetBSD.cpp) = a1b0fbdad062309a845cfefe4469614fbbe9d20e
 SHA1 (patch-source_Host_netbsd_ThisThread.cpp) = f0d32c81bc1b8fe9aeb86519ea46ba2cb16571c2
 SHA1 (patch-source_Plugins_Process_CMakeLists.txt) = c0168f81da56d9896eb414e6b8bb7262de04ac33
