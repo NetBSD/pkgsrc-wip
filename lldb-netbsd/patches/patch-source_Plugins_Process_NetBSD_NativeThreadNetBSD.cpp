@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-17 13:23:23.784878149 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,397 @@
+@@ -0,0 +1,319 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -54,10 +54,6 @@ $NetBSD$
 +    return;
 +  case eStopReasonBreakpoint:
 +    log.Printf("%s: %s breakpoint, stopping signal 0x%" PRIx32, __FUNCTION__,
-+               header, stop_info.details.signal.signo);
-+    return;
-+  case eStopReasonWatchpoint:
-+    log.Printf("%s: %s watchpoint, stopping signal 0x%" PRIx32, __FUNCTION__,
 +               header, stop_info.details.signal.signo);
 +    return;
 +  case eStopReasonSignal:
@@ -166,34 +162,6 @@ $NetBSD$
 +  return m_reg_context_sp;
 +}
 +
-+Error NativeThreadNetBSD::SetWatchpoint(lldb::addr_t addr, size_t size,
-+                                       uint32_t watch_flags, bool hardware) {
-+  if (!hardware)
-+    return Error("not implemented");
-+  if (m_state == eStateLaunching)
-+    return Error();
-+  Error error = RemoveWatchpoint(addr);
-+  if (error.Fail())
-+    return error;
-+  NativeRegisterContextSP reg_ctx = GetRegisterContext();
-+  uint32_t wp_index = reg_ctx->SetHardwareWatchpoint(addr, size, watch_flags);
-+  if (wp_index == LLDB_INVALID_INDEX32)
-+    return Error("Setting hardware watchpoint failed.");
-+  m_watchpoint_index_map.insert({addr, wp_index});
-+  return Error();
-+}
-+
-+Error NativeThreadNetBSD::RemoveWatchpoint(lldb::addr_t addr) {
-+  auto wp = m_watchpoint_index_map.find(addr);
-+  if (wp == m_watchpoint_index_map.end())
-+    return Error();
-+  uint32_t wp_index = wp->second;
-+  m_watchpoint_index_map.erase(wp);
-+  if (GetRegisterContext()->ClearHardwareWatchpoint(wp_index))
-+    return Error();
-+  return Error("Clearing hardware watchpoint failed.");
-+}
-+
 +Error NativeThreadNetBSD::Resume(uint32_t signo) {
 +  const StateType new_state = StateType::eStateRunning;
 +  MaybeLogStateChange(new_state);
@@ -202,20 +170,7 @@ $NetBSD$
 +  m_stop_info.reason = StopReason::eStopReasonNone;
 +  m_stop_description.clear();
 +
-+  // If watchpoints have been set, but none on this thread,
-+  // then this is a new thread. So set all existing watchpoints.
-+  if (m_watchpoint_index_map.empty()) {
-+    NativeProcessNetBSD &process = GetProcess();
-+
-+    const auto &watchpoint_map = process.GetWatchpointMap();
-+    GetRegisterContext()->ClearAllHardwareWatchpoints();
-+    for (const auto &pair : watchpoint_map) {
-+      const auto &wp = pair.second;
-+      SetWatchpoint(wp.m_addr, wp.m_size, wp.m_watch_flags, wp.m_hardware);
-+    }
-+  }
-+
-+  intptr_t data = 0;
++  int data = 0;
 +
 +  if (signo != LLDB_INVALID_SIGNAL_NUMBER)
 +    data = signo;
@@ -312,42 +267,9 @@ $NetBSD$
 +  m_stop_description.clear();
 +}
 +
-+void NativeThreadNetBSD::SetStoppedByWatchpoint(uint32_t wp_index) {
-+  SetStopped();
-+
-+  lldbassert(wp_index != LLDB_INVALID_INDEX32 && "wp_index cannot be invalid");
-+
-+  std::ostringstream ostr;
-+  ostr << GetRegisterContext()->GetWatchpointAddress(wp_index) << " ";
-+  ostr << wp_index;
-+
-+  /*
-+   * MIPS: Last 3bits of the watchpoint address are masked by the kernel. For
-+   * example:
-+   * 'n' is at 0x120010d00 and 'm' is 0x120010d04. When a watchpoint is set at
-+   * 'm', then
-+   * watch exception is generated even when 'n' is read/written. To handle this
-+   * case,
-+   * find the base address of the load/store instruction and append it in the
-+   * stop-info
-+   * packet.
-+  */
-+  ostr << " " << GetRegisterContext()->GetWatchpointHitAddress(wp_index);
-+
-+  m_stop_description = ostr.str();
-+
-+  m_stop_info.reason = StopReason::eStopReasonWatchpoint;
-+  m_stop_info.details.signal.signo = SIGTRAP;
-+}
-+
 +bool NativeThreadNetBSD::IsStoppedAtBreakpoint() {
 +  return GetState() == StateType::eStateStopped &&
 +         m_stop_info.reason == StopReason::eStopReasonBreakpoint;
-+}
-+
-+bool NativeThreadNetBSD::IsStoppedAtWatchpoint() {
-+  return GetState() == StateType::eStateStopped &&
-+         m_stop_info.reason == StopReason::eStopReasonWatchpoint;
 +}
 +
 +void NativeThreadNetBSD::SetStoppedByTrace() {

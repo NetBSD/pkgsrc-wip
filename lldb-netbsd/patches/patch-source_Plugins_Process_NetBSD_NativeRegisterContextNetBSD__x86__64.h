@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2016-12-17 13:23:23.784681789 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
-@@ -0,0 +1,146 @@
+@@ -0,0 +1,79 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.h ---------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -48,37 +48,8 @@ $NetBSD$
 +
 +  Error WriteAllRegisterValues(const lldb::DataBufferSP &data_sp) override;
 +
-+  Error IsWatchpointHit(uint32_t wp_index, bool &is_hit) override;
-+
-+  Error GetWatchpointHitIndex(uint32_t &wp_index,
-+                              lldb::addr_t trap_addr) override;
-+
-+  Error IsWatchpointVacant(uint32_t wp_index, bool &is_vacant) override;
-+
-+  bool ClearHardwareWatchpoint(uint32_t wp_index) override;
-+
-+  Error ClearAllHardwareWatchpoints() override;
-+
-+  Error SetHardwareWatchpointWithIndex(lldb::addr_t addr, size_t size,
-+                                       uint32_t watch_flags, uint32_t wp_index);
-+
-+  uint32_t SetHardwareWatchpoint(lldb::addr_t addr, size_t size,
-+                                 uint32_t watch_flags) override;
-+
-+  lldb::addr_t GetWatchpointAddress(uint32_t wp_index) override;
-+
-+  uint32_t NumSupportedHardwareWatchpoints() override;
-+
 +protected:
 +  void *GetGPRBuffer() override { return &m_gpr_x86_64; }
-+
-+  void *GetFPRBuffer() override;
-+
-+  size_t GetFPRSize() override;
-+
-+  Error ReadFPR() override;
-+
-+  Error WriteFPR() override;
 +
 +private:
 +  // Private member types.
@@ -89,34 +60,10 @@ $NetBSD$
 +  struct RegInfo {
 +    uint32_t num_registers;
 +    uint32_t num_gpr_registers;
-+    uint32_t num_fpr_registers;
-+    uint32_t num_avx_registers;
-+    uint32_t num_mpx_registers;
-+    uint32_t last_gpr;
-+    uint32_t first_fpr;
-+    uint32_t last_fpr;
-+    uint32_t first_st;
-+    uint32_t last_st;
-+    uint32_t first_mm;
-+    uint32_t last_mm;
-+    uint32_t first_xmm;
-+    uint32_t last_xmm;
-+    uint32_t first_ymm;
-+    uint32_t last_ymm;
-+    uint32_t first_mpxr;
-+    uint32_t last_mpxr;
-+    uint32_t first_mpxc;
-+    uint32_t last_mpxc;
-+    uint32_t first_dr;
-+    uint32_t gpr_flags;
 +  };
 +
 +  // Private member variables.
-+  mutable XStateType m_xstate_type;
-+  FPR m_fpr; // Extended States Area, named FPR for historical reasons.
 +  IOVEC m_iovec;
-+  YMM m_ymm_set;
-+  MPX m_mpx_set;
 +  RegInfo m_reg_info;
 +  uint64_t m_gpr_x86_64[k_num_gpr_registers_x86_64];
 +  uint32_t m_fctrl_offset_in_userarea;
@@ -127,20 +74,6 @@ $NetBSD$
 +  bool IsRegisterSetAvailable(uint32_t set_index) const;
 +
 +  bool IsGPR(uint32_t reg_index) const;
-+
-+  bool IsFPR(uint32_t reg_index) const;
-+
-+  bool CopyXSTATEtoYMM(uint32_t reg_index, lldb::ByteOrder byte_order);
-+
-+  bool CopyYMMtoXSTATE(uint32_t reg, lldb::ByteOrder byte_order);
-+
-+  bool IsAVX(uint32_t reg_index) const;
-+
-+  bool CopyXSTATEtoMPX(uint32_t reg);
-+
-+  bool CopyMPXtoXSTATE(uint32_t reg);
-+
-+  bool IsMPX(uint32_t reg_index) const;
 +};
 +
 +} // namespace process_netbsd

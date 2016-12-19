@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-17 13:23:23.784994923 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,114 @@
+@@ -0,0 +1,103 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -47,11 +47,6 @@ $NetBSD$
 +
 +  NativeRegisterContextSP GetRegisterContext() override;
 +
-+  Error SetWatchpoint(lldb::addr_t addr, size_t size, uint32_t watch_flags,
-+                      bool hardware) override;
-+
-+  Error RemoveWatchpoint(lldb::addr_t addr) override;
-+
 +private:
 +  // ---------------------------------------------------------------------
 +  // Interface for friend classes
@@ -76,11 +71,7 @@ $NetBSD$
 +
 +  void SetStoppedByBreakpoint();
 +
-+  void SetStoppedByWatchpoint(uint32_t wp_index);
-+
 +  bool IsStoppedAtBreakpoint();
-+
-+  bool IsStoppedAtWatchpoint();
 +
 +  void SetStoppedByTrace();
 +
@@ -108,8 +99,6 @@ $NetBSD$
 +  ThreadStopInfo m_stop_info;
 +  NativeRegisterContextSP m_reg_context_sp;
 +  std::string m_stop_description;
-+  using WatchpointIndexMap = std::map<lldb::addr_t, uint32_t>;
-+  WatchpointIndexMap m_watchpoint_index_map;
 +};
 +
 +typedef std::shared_ptr<NativeThreadNetBSD> NativeThreadNetBSDSP;
