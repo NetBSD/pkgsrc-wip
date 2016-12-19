@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-19 01:22:58.093122208 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,313 @@
+@@ -0,0 +1,293 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -29,6 +29,7 @@ $NetBSD$
 +
 +#include "Plugins/Process/POSIX/CrashReason.h"
 +
++#include <sys/ptrace.h>
 +#include <sys/syscall.h>
 +
 +using namespace lldb;
@@ -133,27 +134,6 @@ $NetBSD$
 +    return false;
 +  }
 +  llvm_unreachable("unhandled StateType!");
-+}
-+
-+NativeRegisterContextSP NativeThreadNetBSD::GetRegisterContext() {
-+  // Return the register context if we already created it.
-+  if (m_reg_context_sp)
-+    return m_reg_context_sp;
-+
-+  NativeProcessProtocolSP m_process_sp = m_process_wp.lock();
-+  if (!m_process_sp)
-+    return NativeRegisterContextSP();
-+
-+  ArchSpec target_arch;
-+  if (!m_process_sp->GetArchitecture(target_arch))
-+    return NativeRegisterContextSP();
-+
-+  const uint32_t concrete_frame_idx = 0;
-+  m_reg_context_sp.reset(
-+      NativeRegisterContextNetBSD::CreateHostNativeRegisterContextNetBSD(
-+          target_arch, *this, concrete_frame_idx));
-+
-+  return m_reg_context_sp;
 +}
 +
 +Error NativeThreadNetBSD::Resume(uint32_t signo) {

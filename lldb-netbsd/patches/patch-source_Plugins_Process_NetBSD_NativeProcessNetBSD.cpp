@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-19 01:22:58.080559848 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1852 @@
+@@ -0,0 +1,1853 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -404,7 +404,7 @@ $NetBSD$
 +  int status;
 +  // Need to use WALLSIG otherwise we receive an error with errno=ECHLD
 +  // At this point we should have a thread stopped if waitpid succeeds.
-+  if ((status = waitpid(tid, NULL, WALLSIG)) < 0)
++  if ((status = waitpid(pid, NULL, WALLSIG)) < 0)
 +    return -1;
 +
 +  m_pid = pid;
@@ -1348,11 +1348,11 @@ $NetBSD$
 +
 +  bytes_read = 0;
 +  io.piod_op = PIOD_READ_D;
++  io.piod_len = size;
 +
 +  do {
 +    io.piod_offs = (void *)(addr + bytes_read);
 +    io.piod_offs = dst + bytes_read;
-+    io.piod_len = buf;
 +
 +    Error error = NativeProcessNetBSD::PtraceWrapper(
 +        PT_IO, GetID(), &io);
@@ -1363,6 +1363,7 @@ $NetBSD$
 +    }
 +
 +    bytes_read = io.piod_len;
++    io.piod_len = size - bytes_read;
 +  } while(bytes_read < size);
 +
 +  if (log)
