@@ -65,7 +65,7 @@ $NetBSD$
    return PlatformSP();
  }
  
-@@ -73,8 +104,6 @@ const char *PlatformNetBSD::GetDescripti
+@@ -73,14 +104,11 @@ const char *PlatformNetBSD::GetDescripti
      return "Remote NetBSD user platform plug-in.";
  }
  
@@ -74,7 +74,13 @@ $NetBSD$
  void PlatformNetBSD::Initialize() {
    Platform::Initialize();
  
-@@ -92,8 +121,11 @@ void PlatformNetBSD::Initialize() {
+   if (g_initialize_count++ == 0) {
+ #if defined(__NetBSD__)
+-    // Force a host flag to true for the default platform object.
+     PlatformSP default_platform_sp(new PlatformNetBSD(true));
+     default_platform_sp->SetSystemArchitecture(HostInfo::GetArchitecture());
+     Platform::SetHostPlatform(default_platform_sp);
+@@ -92,8 +120,11 @@ void PlatformNetBSD::Initialize() {
  }
  
  void PlatformNetBSD::Terminate() {
@@ -88,7 +94,7 @@ $NetBSD$
  
    Platform::Terminate();
  }
-@@ -127,20 +159,19 @@ Error PlatformNetBSD::RunShellCommand(co
+@@ -127,20 +158,19 @@ Error PlatformNetBSD::RunShellCommand(co
  }
  
  Error PlatformNetBSD::ResolveExecutable(
@@ -113,7 +119,7 @@ $NetBSD$
        resolved_module_spec.GetFileSpec().SetFile(exe_path, true);
      }
  
-@@ -163,24 +194,46 @@ Error PlatformNetBSD::ResolveExecutable(
+@@ -163,25 +193,46 @@ Error PlatformNetBSD::ResolveExecutable(
        // We may connect to a process and use the provided executable (Don't use
        // local $PATH).
  
@@ -166,21 +172,24 @@ $NetBSD$
 +                                              exe_module_sp, NULL, NULL, NULL);
 +        }
 +      }
-+
-+      // TODO find out why exe_module_sp might be NULL
  
++      // TODO find out why exe_module_sp might be NULL
        if (!exe_module_sp || exe_module_sp->GetObjectFile() == NULL) {
          exe_module_sp.reset();
-@@ -199,7 +252,7 @@ Error PlatformNetBSD::ResolveExecutable(
+         error.SetErrorStringWithFormat(
+@@ -197,9 +248,8 @@ Error PlatformNetBSD::ResolveExecutable(
+       for (uint32_t idx = 0; GetSupportedArchitectureAtIndex(
+                idx, resolved_module_spec.GetArchitecture());
             ++idx) {
-         error =
-             ModuleList::GetSharedModule(resolved_module_spec, exe_module_sp,
+-        error =
+-            ModuleList::GetSharedModule(resolved_module_spec, exe_module_sp,
 -                                        module_search_paths_ptr, NULL, NULL);
-+                                        NULL, NULL, NULL);
++        error = ModuleList::GetSharedModule(resolved_module_spec, exe_module_sp,
++                                            NULL, NULL, NULL);
          // Did we find an executable using one of the
          if (error.Success()) {
            if (exe_module_sp && exe_module_sp->GetObjectFile())
-@@ -234,8 +287,8 @@ Error PlatformNetBSD::ResolveExecutable(
+@@ -234,8 +284,8 @@ Error PlatformNetBSD::ResolveExecutable(
  
  // From PlatformMacOSX only
  Error PlatformNetBSD::GetFileWithUUID(const FileSpec &platform_file,
