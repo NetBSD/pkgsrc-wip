@@ -167,12 +167,12 @@ $NetBSD$
 +            module_triple.setVendorName(host_triple.getVendorName());
 +          if (!is_os_specified)
 +            module_triple.setOSName(host_triple.getOSName());
-+
+ 
 +          error = ModuleList::GetSharedModule(resolved_module_spec,
 +                                              exe_module_sp, NULL, NULL, NULL);
 +        }
 +      }
- 
++
 +      // TODO find out why exe_module_sp might be NULL
        if (!exe_module_sp || exe_module_sp->GetObjectFile() == NULL) {
          exe_module_sp.reset();
@@ -200,3 +200,43 @@ $NetBSD$
    if (IsRemote()) {
      if (m_remote_platform_sp)
        return m_remote_platform_sp->GetFileWithUUID(platform_file, uuid_ptr,
+@@ -471,27 +521,23 @@ bool PlatformNetBSD::GetSupportedArchite
+ }
+ 
+ void PlatformNetBSD::GetStatus(Stream &strm) {
++  Platform::GetStatus(strm);
++
+ #ifndef LLDB_DISABLE_POSIX
+-  struct ::utsname un;
++  // Display local kernel information only when we are running in host mode.
++  // Otherwise, we would end up printing non-Linux information (when running
++  // on Mac OS for example).
++  if (IsHost()) {
++    struct utsname un;
+ 
+-  strm << "      Host: ";
++    if (uname(&un))
++      return;
+ 
+-  ::memset(&un, 0, sizeof(utsname));
+-  if (::uname(&un) == -1) {
+-    strm << "NetBSD" << '\n';
+-  } else {
+-    strm << un.sysname << ' ' << un.release;
+-    if (un.nodename[0] != '\0')
+-      strm << " (" << un.nodename << ')';
+-    strm << '\n';
+-
+-    // Dump a common information about the platform status.
+-    strm << "Host: " << un.sysname << ' ' << un.release << ' ' << un.version
+-         << '\n';
++    strm.Printf("    Kernel: %s\n", un.sysname);
++    strm.Printf("   Release: %s\n", un.release);
++    strm.Printf("   Version: %s\n", un.version);
+   }
+ #endif
+-
+-  Platform::GetStatus(strm);
+ }
+ 
+ void PlatformNetBSD::CalculateTrapHandlerSymbolNames() {
