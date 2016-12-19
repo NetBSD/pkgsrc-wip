@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2016-12-17 13:23:23.784160224 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,321 @@
+@@ -0,0 +1,315 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -215,8 +215,7 @@ $NetBSD$
 +                                              ? reg_info->name
 +                                              : "<unknown register>");
 +
-+  if (IsGPR(reg_index))
-+    return WriteRegisterRaw(reg_index, reg_value);
++  return WriteRegisterRaw(reg_index, reg_value);
 +
 +  return Error("failed - register wasn't recognized to be a GPR, "
 +               "write strategy unknown");
@@ -316,11 +315,6 @@ $NetBSD$
 +  switch (static_cast<RegSet>(set_index)) {
 +  }
 +  return false;
-+}
-+
-+bool NativeRegisterContextNetBSD_x86_64::IsGPR(uint32_t reg_index) const {
-+  // GPRs come first.
-+  return reg_index <= m_reg_info.last_gpr;
 +}
 +
 +#endif // defined(__x86_64__)

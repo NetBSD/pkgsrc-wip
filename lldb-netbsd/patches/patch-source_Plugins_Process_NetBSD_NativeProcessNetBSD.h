@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-17 13:23:23.783483302 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,192 @@
+@@ -0,0 +1,191 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -105,8 +105,7 @@ $NetBSD$
 +  // Interface used by NativeRegisterContext-derived classes.
 +  // ---------------------------------------------------------------------
 +  static Error PtraceWrapper(int req, lldb::pid_t pid, void *addr = nullptr,
-+                             void *data = nullptr, size_t data_size = 0,
-+                             long *result = nullptr);
++                             int data = 0, int *result = nullptr);
 +
 +  bool SupportHardwareSingleStepping() const;
 +

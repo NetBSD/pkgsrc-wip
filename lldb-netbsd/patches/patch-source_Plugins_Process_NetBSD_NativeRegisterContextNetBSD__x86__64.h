@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2016-12-17 13:23:23.784681789 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
-@@ -0,0 +1,79 @@
+@@ -0,0 +1,77 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.h ---------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -12,7 +12,7 @@ $NetBSD$
 +//
 +//===----------------------------------------------------------------------===//
 +
-+#if defined(__i386__) || defined(__x86_64__)
++#if defined(__x86_64__)
 +
 +#ifndef lldb_NativeRegisterContextNetBSD_x86_64_h
 +#define lldb_NativeRegisterContextNetBSD_x86_64_h
@@ -72,8 +72,6 @@ $NetBSD$
 +  bool IsCPUFeatureAvailable(RegSet feature_code) const;
 +
 +  bool IsRegisterSetAvailable(uint32_t set_index) const;
-+
-+  bool IsGPR(uint32_t reg_index) const;
 +};
 +
 +} // namespace process_netbsd
@@ -81,4 +79,4 @@ $NetBSD$
 +
 +#endif // #ifndef lldb_NativeRegisterContextNetBSD_x86_64_h
 +
-+#endif // defined(__i386__) || defined(__x86_64__)
++#endif defined(__x86_64__)

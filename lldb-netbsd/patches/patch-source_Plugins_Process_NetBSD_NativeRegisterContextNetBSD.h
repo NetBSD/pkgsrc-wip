@@ -68,9 +68,9 @@ $NetBSD$
 +  virtual Error DoWriteRegisterValue(uint32_t offset, const char *reg_name,
 +                                     const RegisterValue &value);
 +
-+  virtual Error DoReadGPR(void *buf, size_t buf_size);
++  virtual Error DoReadGPR(void *buf);
 +
-+  virtual Error DoWriteGPR(void *buf, size_t buf_size);
++  virtual Error DoWriteGPR(void *buf);
 +};
 +
 +} // namespace process_netbsd

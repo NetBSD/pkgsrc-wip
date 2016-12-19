@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2016-12-17 13:23:23.783623245 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,171 @@
+@@ -0,0 +1,169 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -115,18 +115,16 @@ $NetBSD$
 +  void *buf = GetGPRBuffer();
 +  if (!buf)
 +    return Error("GPR buffer is NULL");
-+  size_t buf_size = GetGPRSize();
 +
-+  return DoReadGPR(buf, buf_size);
++  return DoReadGPR(buf);
 +}
 +
 +Error NativeRegisterContextNetBSD::WriteGPR() {
 +  void *buf = GetGPRBuffer();
 +  if (!buf)
 +    return Error("GPR buffer is NULL");
-+  size_t buf_size = GetGPRSize();
 +
-+  return DoWriteGPR(buf, buf_size);
++  return DoWriteGPR(buf);
 +}
 +
 +Error NativeRegisterContextNetBSD::DoReadRegisterValue(uint32_t offset,
@@ -165,12 +163,12 @@ $NetBSD$
 +      PTRACE_POKEUSER, m_thread.GetID(), reinterpret_cast<void *>(offset), buf);
 +}
 +
-+Error NativeRegisterContextNetBSD::DoReadGPR(void *buf, size_t buf_size) {
-+  return NativeProcessNetBSD::PtraceWrapper(PTRACE_GETREGS, m_thread.GetID(),
-+                                           nullptr, buf, buf_size);
++Error NativeRegisterContextNetBSD::DoReadGPR(void *buf) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, GetID(), buf,
++                                           m_thread.GetID());
 +}
 +
-+Error NativeRegisterContextNetBSD::DoWriteGPR(void *buf, size_t buf_size) {
-+  return NativeProcessNetBSD::PtraceWrapper(PTRACE_SETREGS, m_thread.GetID(),
-+                                           nullptr, buf, buf_size);
++Error NativeRegisterContextNetBSD::DoWriteGPR(void *buf) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, GetID(), buf,
++                                           m_thread.GetID());
 +}
