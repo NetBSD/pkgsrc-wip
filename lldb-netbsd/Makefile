@@ -59,13 +59,6 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
-	# Temporary hack to nullify !amd64 platforms
-	# Required to port the process plugin from linux to NetBSD
-	# amd64/NetBSD goes first
-	${RM} ${WRKSRC}/source/Plugins/Process/Linux/NativeRegisterContextLinux_arm.cpp
-	${RM} ${WRKSRC}/source/Plugins/Process/Linux/NativeRegisterContextLinux_arm64.cpp
-	${RM} ${WRKSRC}/source/Plugins/Process/Linux/NativeRegisterContextLinux_mips64.cpp
-	${RM} ${WRKSRC}/source/Plugins/Process/Linux/NativeRegisterContextLinux_s390x.cpp
 
 .include "../../textproc/libxml2/buildlink3.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
