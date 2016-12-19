@@ -74,7 +74,21 @@ $NetBSD$
  void PlatformNetBSD::Initialize() {
    Platform::Initialize();
  
-@@ -127,20 +156,19 @@ Error PlatformNetBSD::RunShellCommand(co
+@@ -92,8 +121,11 @@ void PlatformNetBSD::Initialize() {
+ }
+ 
+ void PlatformNetBSD::Terminate() {
+-  if (g_initialize_count > 0 && --g_initialize_count == 0)
+-    PluginManager::UnregisterPlugin(PlatformNetBSD::CreateInstance);
++  if (g_initialize_count > 0) {
++    if (--g_initialize_count == 0) {
++      PluginManager::UnregisterPlugin(PlatformNetBSD::CreateInstance);
++    }
++  }
+ 
+   Platform::Terminate();
+ }
+@@ -127,20 +159,19 @@ Error PlatformNetBSD::RunShellCommand(co
  }
  
  Error PlatformNetBSD::ResolveExecutable(
@@ -99,7 +113,7 @@ $NetBSD$
        resolved_module_spec.GetFileSpec().SetFile(exe_path, true);
      }
  
-@@ -163,24 +191,46 @@ Error PlatformNetBSD::ResolveExecutable(
+@@ -163,24 +194,46 @@ Error PlatformNetBSD::ResolveExecutable(
        // We may connect to a process and use the provided executable (Don't use
        // local $PATH).
  
@@ -157,7 +171,7 @@ $NetBSD$
  
        if (!exe_module_sp || exe_module_sp->GetObjectFile() == NULL) {
          exe_module_sp.reset();
-@@ -199,7 +249,7 @@ Error PlatformNetBSD::ResolveExecutable(
+@@ -199,7 +252,7 @@ Error PlatformNetBSD::ResolveExecutable(
             ++idx) {
          error =
              ModuleList::GetSharedModule(resolved_module_spec, exe_module_sp,
@@ -166,7 +180,7 @@ $NetBSD$
          // Did we find an executable using one of the
          if (error.Success()) {
            if (exe_module_sp && exe_module_sp->GetObjectFile())
-@@ -234,8 +284,8 @@ Error PlatformNetBSD::ResolveExecutable(
+@@ -234,8 +287,8 @@ Error PlatformNetBSD::ResolveExecutable(
  
  // From PlatformMacOSX only
  Error PlatformNetBSD::GetFileWithUUID(const FileSpec &platform_file,
