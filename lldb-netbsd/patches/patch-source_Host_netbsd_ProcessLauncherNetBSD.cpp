@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Host/netbsd/ProcessLauncherNetBSD.cpp.orig	2016-12-19 03:03:08.647656376 +0000
+--- source/Host/netbsd/ProcessLauncherNetBSD.cpp.orig	2016-12-19 03:34:17.128573979 +0000
 +++ source/Host/netbsd/ProcessLauncherNetBSD.cpp
 @@ -0,0 +1,170 @@
 +//===-- ProcessLauncherNetBSD.cpp --------------------------------*- C++ -*-===//
@@ -119,7 +119,7 @@ $NetBSD$
 +        close(fd);
 +
 +    // Start tracing this child that is about to exec.
-+    if (ptrace(PTRACE_TRACEME, 0, nullptr, nullptr) == -1)
++    if (ptrace(PT_TRACE_ME, 0, nullptr, 0) == -1)
 +      ExitWithError(error_fd, "ptrace");
 +  }
 +
