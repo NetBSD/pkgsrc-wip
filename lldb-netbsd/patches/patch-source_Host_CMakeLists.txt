@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- source/Host/CMakeLists.txt.orig	2016-12-17 10:30:35.000000000 +0000
++++ source/Host/CMakeLists.txt
+@@ -141,6 +141,7 @@ else()
+       netbsd/HostInfoNetBSD.cpp
+       netbsd/HostThreadNetBSD.cpp
+       netbsd/ThisThread.cpp
++      netbsd/ProcessLauncherNetBSD.cpp
+       )
+   endif()
+ endif()
