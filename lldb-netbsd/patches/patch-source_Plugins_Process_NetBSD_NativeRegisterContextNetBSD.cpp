@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2016-12-17 13:23:23.783623245 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2016-12-19 00:41:57.955678495 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,169 @@
+@@ -0,0 +1,168 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -17,7 +17,6 @@ $NetBSD$
 +#include "lldb/Core/RegisterValue.h"
 +#include "lldb/Host/common/NativeProcessProtocol.h"
 +#include "lldb/Host/common/NativeThreadProtocol.h"
-+#include "lldb/Host/netbsd/Ptrace.h"
 +
 +#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
 +

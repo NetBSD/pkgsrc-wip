@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-17 13:23:23.782610208 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-19 00:41:57.942787306 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1850 @@
+@@ -0,0 +1,1848 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -60,8 +60,6 @@ $NetBSD$
 +#include <sys/types.h>
 +#include <sys/user.h>
 +#include <sys/wait.h>
-+
-+#include "lldb/Host/netbsd/Ptrace.h"
 +
 +using namespace lldb;
 +using namespace lldb_private;

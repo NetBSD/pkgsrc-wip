@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-17 13:23:23.784878149 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-19 00:41:57.980537698 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,319 @@
+@@ -0,0 +1,318 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -23,7 +23,6 @@ $NetBSD$
 +#include "lldb/Core/Log.h"
 +#include "lldb/Core/State.h"
 +#include "lldb/Host/HostNativeThread.h"
-+#include "lldb/Host/netbsd/Ptrace.h"
 +#include "lldb/Utility/LLDBAssert.h"
 +#include "lldb/lldb-enumerations.h"
 +
