@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-19 00:44:29.116428500 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1848 @@
+@@ -0,0 +1,1847 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -49,7 +49,6 @@ $NetBSD$
 +
 +#include "NativeThreadNetBSD.h"
 +#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
-+#include "ProcFileReader.h"
 +
 +// System includes - They have to be included after framework includes because
 +// they define some
