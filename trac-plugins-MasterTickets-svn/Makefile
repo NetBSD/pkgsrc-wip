@@ -27,7 +27,7 @@ SVN_REPO.mastertickets=		https://trac-hacks.org/svn/masterticketsplugin/trunk
 SVN_TAG.mastertickets=		14695
 
 # TODO: do this more cleanly
-EGG_INFODIR=		TracMasterTickets-4.0.0dev_r0-py2.7.egg-info
+EGG_INFODIR=		TracMasterTickets-4.0.0.dev0-py2.7.egg-info
 
 NO_CHECKSUM=	yes
 
