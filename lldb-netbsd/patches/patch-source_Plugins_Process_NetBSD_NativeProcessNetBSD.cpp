@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-21 17:21:58.154060411 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1681 @@
+@@ -0,0 +1,1654 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -453,7 +453,7 @@ $NetBSD$
 +          __FUNCTION__, signal, pid);
 +
 +    // This is a thread that exited.  Ensure we're not tracking it anymore.
-+    const bool thread_found = StopTrackingThread(pid);
++    /* XXX: Stop tracking process? */
 +
 +    // We only set the exit status and notify the delegate if we haven't
 +    // already set the process
@@ -464,14 +464,11 @@ $NetBSD$
 +                                    (GetState() == StateType::eStateCrashed);
 +    if (!already_notified) {
 +      if (log)
-+        log->Printf("NativeProcessNetBSD::%s() pid = %d"
-+                    " handling main thread exit (%s), expected exit state "
++        log->Printf("NativeProcessNetBSD::%s() pid = %d "
++                    "handling process exit, expected exit state "
 +                    "already set but state was %s instead, setting exit "
 +                    "state now",
-+                    __FUNCTION__, pid,
-+                    thread_found ? "stopped tracking thread metadata"
-+                                 : "thread metadata not found",
-+                    StateAsCString(GetState()));
++                    __FUNCTION__, pid, StateAsCString(GetState()));
 +      // The main thread exited.  We're done monitoring.  Report to delegate.
 +      SetExitStatus(convert_pid_status_to_exit_type(status),
 +                    convert_pid_status_to_return_code(status), nullptr, true);
@@ -481,10 +478,8 @@ $NetBSD$
 +    } else {
 +      if (log)
 +        log->Printf("NativeProcessNetBSD::%s() pid = %d"
-+                    " main thread now exited (%s)",
-+                    __FUNCTION__, pid,
-+                    thread_found ? "stopped tracking thread metadata"
-+                                 : "thread metadata not found");
++                    " main thread now exited",
++                    __FUNCTION__, pid);
 +    }
 +  }
 +}
@@ -1340,28 +1335,6 @@ $NetBSD$
 +
 +  // We don't have this thread.
 +  return false;
-+}
-+
-+bool NativeProcessNetBSD::StopTrackingThread(lldb::tid_t thread_id) {
-+  Log *const log = GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD);
-+
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s (tid: %" PRIu64 ")", __FUNCTION__,
-+                thread_id);
-+
-+  bool found = false;
-+
-+  for (auto it = m_threads.begin(); it != m_threads.end(); ++it) {
-+    if (*it && ((*it)->GetID() == thread_id)) {
-+      m_threads.erase(it);
-+      found = true;
-+      break;
-+    }
-+  }
-+
-+  SignalIfAllThreadsStopped();
-+
-+  return found;
 +}
 +
 +NativeThreadNetBSDSP NativeProcessNetBSD::AddThread(lldb::tid_t thread_id) {

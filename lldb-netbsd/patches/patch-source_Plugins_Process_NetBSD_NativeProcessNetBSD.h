@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-21 15:47:29.506673013 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-21 17:21:58.161130776 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,184 @@
+@@ -0,0 +1,182 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -154,8 +154,6 @@ $NetBSD$
 +
 +
 +  bool HasThreadNoLock(lldb::tid_t thread_id);
-+
-+  bool StopTrackingThread(lldb::tid_t thread_id);
 +
 +  NativeThreadNetBSDSP AddThread(lldb::tid_t thread_id);
 +
