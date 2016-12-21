@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-21 15:47:29.514533040 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-21 17:21:58.167664787 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,303 @@
+@@ -0,0 +1,286 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -147,23 +147,6 @@ $NetBSD$
 +
 +Error NativeThreadNetBSD::RemoveWatchpoint(lldb::addr_t addr) {
 +  return Error();
-+}
-+
-+Error NativeThreadNetBSD::Resume(uint32_t signo) {
-+  const StateType new_state = StateType::eStateRunning;
-+  MaybeLogStateChange(new_state);
-+  m_state = new_state;
-+
-+  m_stop_info.reason = StopReason::eStopReasonNone;
-+  m_stop_description.clear();
-+
-+  int data = 0;
-+
-+  if (signo != LLDB_INVALID_SIGNAL_NUMBER)
-+    data = signo;
-+
-+  return NativeProcessNetBSD::PtraceWrapper(PT_CONTINUE, GetID(), (void *)1,
-+                                           data);
 +}
 +
 +Error NativeThreadNetBSD::SingleStep(uint32_t signo) {

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-19 01:22:58.099098436 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-21 17:21:58.174128330 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,108 @@
+@@ -0,0 +1,104 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -56,10 +56,6 @@ $NetBSD$
 +  // ---------------------------------------------------------------------
 +  // Interface for friend classes
 +  // ---------------------------------------------------------------------
-+
-+  /// Resumes the thread.  If @p signo is anything but
-+  /// LLDB_INVALID_SIGNAL_NUMBER, deliver that signal to the thread.
-+  Error Resume(uint32_t signo);
 +
 +  /// Single steps the thread.  If @p signo is anything but
 +  /// LLDB_INVALID_SIGNAL_NUMBER, deliver that signal to the thread.

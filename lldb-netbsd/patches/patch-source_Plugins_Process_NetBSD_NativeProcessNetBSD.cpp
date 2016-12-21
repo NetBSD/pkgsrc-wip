@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-21 15:47:29.499519618 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-21 17:21:58.154060411 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1766 @@
+@@ -0,0 +1,1681 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -541,7 +541,7 @@ $NetBSD$
 +                __FUNCTION__, GetID(), tid);
 +
 +  new_thread_sp = AddThread(tid);
-+  ResumeThread(*new_thread_sp, eStateRunning, LLDB_INVALID_SIGNAL_NUMBER);
++  /* XXX: ResumeThread */
 +}
 +
 +namespace {
@@ -714,54 +714,14 @@ $NetBSD$
 +Error NativeProcessNetBSD::Resume(const ResumeActionList &resume_actions) {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS | LIBLLDB_LOG_THREAD));
 +  if (log)
-+    log->Printf("NativeProcessNetBSD::%s called: pid %" PRIu64, __FUNCTION__,
++    log->Printf("NativeProcessNetBSD::%s called: pid %d", __FUNCTION__,
 +                GetID());
 +
-+  for (auto thread_sp : m_threads) {
-+    assert(thread_sp && "thread list should not contain NULL threads");
++  /* XXX: resume_actions unused */
++  /* XXX: Pass signal to ptrace(2) */
 +
-+    const ResumeAction *const action =
-+        resume_actions.GetActionForThread(thread_sp->GetID(), true);
-+
-+    if (action == nullptr) {
-+      if (log)
-+        log->Printf(
-+            "NativeProcessNetBSD::%s no action specified for pid %" PRIu64
-+            " tid %" PRIu64,
-+            __FUNCTION__, GetID(), thread_sp->GetID());
-+      continue;
-+    }
-+
-+    if (log) {
-+      log->Printf("NativeProcessNetBSD::%s processing resume action state %s "
-+                  "for pid %" PRIu64 " tid %" PRIu64,
-+                  __FUNCTION__, StateAsCString(action->state), GetID(),
-+                  thread_sp->GetID());
-+    }
-+
-+    switch (action->state) {
-+    case eStateRunning:
-+    case eStateStepping: {
-+      // Run the thread, possibly feeding it the signal.
-+      const int signo = action->signal;
-+      ResumeThread(static_cast<NativeThreadNetBSD &>(*thread_sp), action->state,
-+                   signo);
-+      break;
-+    }
-+
-+    case eStateSuspended:
-+    case eStateStopped:
-+      lldbassert(0 && "Unexpected state");
-+
-+    default:
-+      return Error("NativeProcessNetBSD::%s (): unexpected state %s specified "
-+                   "for pid %" PRIu64 ", tid %" PRIu64,
-+                   __FUNCTION__, StateAsCString(action->state), GetID(),
-+                   thread_sp->GetID());
-+    }
-+  }
-+
-+  return Error();
++  return NativeProcessNetBSD::PtraceWrapper(PT_CONTINUE, GetID(),(void *)1,
++                                            0);
 +}
 +
 +Error NativeProcessNetBSD::Halt() {
@@ -1590,51 +1550,6 @@ $NetBSD$
 +NativeThreadNetBSDSP NativeProcessNetBSD::GetThreadByID(lldb::tid_t tid) {
 +  return std::static_pointer_cast<NativeThreadNetBSD>(
 +      NativeProcessProtocol::GetThreadByID(tid));
-+}
-+
-+Error NativeProcessNetBSD::ResumeThread(NativeThreadNetBSD &thread,
-+                                       lldb::StateType state, int signo) {
-+  Log *const log = GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD);
-+
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s (tid: %" PRIu64 ")", __FUNCTION__,
-+                thread.GetID());
-+
-+  // Before we do the resume below, first check if we have a pending
-+  // stop notification that is currently waiting for
-+  // all threads to stop.  This is potentially a buggy situation since
-+  // we're ostensibly waiting for threads to stop before we send out the
-+  // pending notification, and here we are resuming one before we send
-+  // out the pending stop notification.
-+  if (m_pending_notification_tid != LLDB_INVALID_THREAD_ID && log) {
-+    log->Printf("NativeProcessNetBSD::%s about to resume tid %" PRIu64
-+                " per explicit request but we have a pending stop notification "
-+                "(tid %" PRIu64 ") that is actively waiting for this thread to "
-+                                "stop. Valid sequence of events?",
-+                __FUNCTION__, thread.GetID(), m_pending_notification_tid);
-+  }
-+
-+  // Request a resume.  We expect this to be synchronous and the system
-+  // to reflect it is running after this completes.
-+  switch (state) {
-+  case eStateRunning: {
-+    const auto resume_result = thread.Resume(signo);
-+    if (resume_result.Success())
-+      SetState(eStateRunning, true);
-+    return resume_result;
-+  }
-+  case eStateStepping: {
-+    const auto step_result = thread.SingleStep(signo);
-+    if (step_result.Success())
-+      SetState(eStateRunning, true);
-+    return step_result;
-+  }
-+  default:
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s Unhandled state %s.", __FUNCTION__,
-+                  StateAsCString(state));
-+    llvm_unreachable("Unhandled state for resume");
-+  }
 +}
 +
 +//===----------------------------------------------------------------------===//
