@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-19 01:22:58.093122208 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-21 15:47:29.514533040 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,306 @@
+@@ -0,0 +1,303 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -179,10 +179,7 @@ $NetBSD$
 +  // If hardware single-stepping is not supported, we just do a continue. The
 +  // breakpoint on the
 +  // next instruction has been setup in NativeProcessNetBSD::Resume.
-+  return NativeProcessNetBSD::PtraceWrapper(
-+      GetProcess().SupportHardwareSingleStepping() ? PT_STEP
-+                                                   : PT_CONTINUE,
-+      GetID(), (void *)1, data);
++  return NativeProcessNetBSD::PtraceWrapper(PT_STEP, GetID(), (void *)1, data);
 +}
 +
 +void NativeThreadNetBSD::SetStoppedBySignal(uint32_t signo,

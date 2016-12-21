@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-19 01:22:58.080559848 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-21 15:47:29.499519618 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1820 @@
+@@ -0,0 +1,1790 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -731,41 +731,11 @@ $NetBSD$
 +  return Error();
 +}
 +
-+bool NativeProcessNetBSD::SupportHardwareSingleStepping() const {
-+  if (m_arch.GetMachine() == llvm::Triple::arm ||
-+      m_arch.GetMachine() == llvm::Triple::mips64 ||
-+      m_arch.GetMachine() == llvm::Triple::mips64el ||
-+      m_arch.GetMachine() == llvm::Triple::mips ||
-+      m_arch.GetMachine() == llvm::Triple::mipsel)
-+    return false;
-+  return true;
-+}
-+
 +Error NativeProcessNetBSD::Resume(const ResumeActionList &resume_actions) {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS | LIBLLDB_LOG_THREAD));
 +  if (log)
 +    log->Printf("NativeProcessNetBSD::%s called: pid %" PRIu64, __FUNCTION__,
 +                GetID());
-+
-+  bool software_single_step = !SupportHardwareSingleStepping();
-+
-+  if (software_single_step) {
-+    for (auto thread_sp : m_threads) {
-+      assert(thread_sp && "thread list should not contain NULL threads");
-+
-+      const ResumeAction *const action =
-+          resume_actions.GetActionForThread(thread_sp->GetID(), true);
-+      if (action == nullptr)
-+        continue;
-+
-+      if (action->state == eStateStepping) {
-+        Error error = SetupSoftwareSingleStepping(
-+            static_cast<NativeThreadNetBSD &>(*thread_sp));
-+        if (error.Fail())
-+          return error;
-+      }
-+    }
-+  }
 +
 +  for (auto thread_sp : m_threads) {
 +    assert(thread_sp && "thread list should not contain NULL threads");
