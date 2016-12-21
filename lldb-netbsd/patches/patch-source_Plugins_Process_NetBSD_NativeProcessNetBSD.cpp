@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-21 15:47:29.499519618 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1786 @@
+@@ -0,0 +1,1766 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -445,67 +445,47 @@ $NetBSD$
 +                                         int signal, int status) {
 +  Log *log(GetLogIfAnyCategoriesSet(LIBLLDB_LOG_PROCESS));
 +
-+  // Certain activities differ based on whether the pid is the tid of the main
-+  // thread.
-+  const bool is_main_thread = (pid == GetID());
-+
 +  // Handle when the thread exits.
 +  if (exited) {
 +    if (log)
 +      log->Printf(
-+          "NativeProcessNetBSD::%s() got exit signal(%d) , tid = %" PRIu64
-+          " (%s main thread)",
-+          __FUNCTION__, signal, pid, is_main_thread ? "is" : "is not");
++          "NativeProcessNetBSD::%s() got exit signal(%d) , pid = %d",
++          __FUNCTION__, signal, pid);
 +
 +    // This is a thread that exited.  Ensure we're not tracking it anymore.
 +    const bool thread_found = StopTrackingThread(pid);
 +
-+    if (is_main_thread) {
-+      // We only set the exit status and notify the delegate if we haven't
-+      // already set the process
-+      // state to an exited state.  We normally should have received a SIGTRAP |
-+      // (PTRACE_EVENT_EXIT << 8)
-+      // for the main thread.
-+      const bool already_notified = (GetState() == StateType::eStateExited) ||
++    // We only set the exit status and notify the delegate if we haven't
++    // already set the process
++    // state to an exited state.  We normally should have received a SIGTRAP |
++    // (PTRACE_EVENT_EXIT << 8)
++    // for the main thread.
++    const bool already_notified = (GetState() == StateType::eStateExited) ||
 +                                    (GetState() == StateType::eStateCrashed);
-+      if (!already_notified) {
-+        if (log)
-+          log->Printf("NativeProcessNetBSD::%s() tid = %" PRIu64
-+                      " handling main thread exit (%s), expected exit state "
-+                      "already set but state was %s instead, setting exit "
-+                      "state now",
-+                      __FUNCTION__, pid,
-+                      thread_found ? "stopped tracking thread metadata"
-+                                   : "thread metadata not found",
-+                      StateAsCString(GetState()));
-+        // The main thread exited.  We're done monitoring.  Report to delegate.
-+        SetExitStatus(convert_pid_status_to_exit_type(status),
-+                      convert_pid_status_to_return_code(status), nullptr, true);
-+
-+        // Notify delegate that our process has exited.
-+        SetState(StateType::eStateExited, true);
-+      } else {
-+        if (log)
-+          log->Printf("NativeProcessNetBSD::%s() tid = %" PRIu64
-+                      " main thread now exited (%s)",
-+                      __FUNCTION__, pid,
-+                      thread_found ? "stopped tracking thread metadata"
-+                                   : "thread metadata not found");
-+      }
-+    } else {
-+      // Do we want to report to the delegate in this case?  I think not.  If
-+      // this was an orderly
-+      // thread exit, we would already have received the SIGTRAP |
-+      // (PTRACE_EVENT_EXIT << 8) signal,
-+      // and we would have done an all-stop then.
++    if (!already_notified) {
 +      if (log)
-+        log->Printf("NativeProcessNetBSD::%s() tid = %" PRIu64
-+                    " handling non-main thread exit (%s)",
++        log->Printf("NativeProcessNetBSD::%s() pid = %d"
++                    " handling main thread exit (%s), expected exit state "
++                    "already set but state was %s instead, setting exit "
++                    "state now",
++                    __FUNCTION__, pid,
++                    thread_found ? "stopped tracking thread metadata"
++                                 : "thread metadata not found",
++                    StateAsCString(GetState()));
++      // The main thread exited.  We're done monitoring.  Report to delegate.
++      SetExitStatus(convert_pid_status_to_exit_type(status),
++                    convert_pid_status_to_return_code(status), nullptr, true);
++
++      // Notify delegate that our process has exited.
++      SetState(StateType::eStateExited, true);
++    } else {
++      if (log)
++        log->Printf("NativeProcessNetBSD::%s() pid = %d"
++                    " main thread now exited (%s)",
 +                    __FUNCTION__, pid,
 +                    thread_found ? "stopped tracking thread metadata"
 +                                 : "thread metadata not found");
 +    }
-+    return;
 +  }
 +}
 +
