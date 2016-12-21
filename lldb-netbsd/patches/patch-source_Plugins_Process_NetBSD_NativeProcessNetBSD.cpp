@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-21 15:47:29.499519618 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1790 @@
+@@ -0,0 +1,1786 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -1693,56 +1693,52 @@ $NetBSD$
 +void NativeProcessNetBSD::SigchldHandler() {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
 +  // Process all pending waitpid notifications.
-+  while (true) {
-+    int status = -1;
-+    ::pid_t wait_pid = waitpid(-1, &status, WALLSIG | WNOHANG);
++  int status;
++  ::pid_t wait_pid = waitpid(WAIT_ANY, &status, WALLSIG | WNOHANG);
 +
-+    if (wait_pid == 0)
-+      break; // We are done.
++  if (wait_pid == 0)
++    return; // We are done.
 +
-+    if (wait_pid == -1) {
-+      if (errno == EINTR)
-+        continue;
++  if (wait_pid == -1) {
++    if (errno == EINTR)
++      return;
 +
-+      Error error(errno, eErrorTypePOSIX);
-+      if (log)
-+        log->Printf("NativeProcessNetBSD::%s waitpid (-1, &status, WALLSIG | "
-+                    "WNOHANG) failed: %s",
-+                    __FUNCTION__, error.AsCString());
-+      break;
-+    }
-+
-+    bool exited = false;
-+    int signal = 0;
-+    int exit_status = 0;
-+    const char *status_cstr = nullptr;
-+    if (WIFSTOPPED(status)) {
-+      signal = WSTOPSIG(status);
-+      status_cstr = "STOPPED";
-+    } else if (WIFEXITED(status)) {
-+      exit_status = WEXITSTATUS(status);
-+      status_cstr = "EXITED";
-+      exited = true;
-+    } else if (WIFSIGNALED(status)) {
-+      signal = WTERMSIG(status);
-+      status_cstr = "SIGNALED";
-+      if (wait_pid == static_cast<::pid_t>(GetID())) {
-+        exited = true;
-+        exit_status = -1;
-+      }
-+    } else
-+      status_cstr = "(\?\?\?)";
-+
++    Error error(errno, eErrorTypePOSIX);
 +    if (log)
-+      log->Printf("NativeProcessNetBSD::%s: waitpid (-1, &status, WALLSIG | "
-+                  "WNOHANG)"
-+                  "=> pid = %" PRIi32
-+                  ", status = 0x%8.8x (%s), signal = %i, exit_state = %i",
-+                  __FUNCTION__, wait_pid, status, status_cstr, signal,
-+                  exit_status);
-+
-+    MonitorCallback(wait_pid, exited, signal, exit_status);
++      log->Printf("NativeProcessNetBSD::%s waitpid (WAIT_ANY, &status, "
++                  "WALLSIG | WNOHANG) failed: %s", __FUNCTION__,
++                  error.AsCString());
 +  }
++
++  bool exited = false;
++  int signal = 0;
++  int exit_status = 0;
++  const char *status_cstr = nullptr;
++  if (WIFSTOPPED(status)) {
++    signal = WSTOPSIG(status);
++    status_cstr = "STOPPED";
++  } else if (WIFEXITED(status)) {
++    exit_status = WEXITSTATUS(status);
++    status_cstr = "EXITED";
++    exited = true;
++  } else if (WIFSIGNALED(status)) {
++    signal = WTERMSIG(status);
++    status_cstr = "SIGNALED";
++    if (wait_pid == static_cast<::pid_t>(GetID())) {
++      exited = true;
++      exit_status = -1;
++    }
++  } else
++    status_cstr = "(\?\?\?)";
++
++  if (log)
++    log->Printf("NativeProcessNetBSD::%s: waitpid (WAIT_ANY, &status, "
++                "WALLSIG | WNOHANG) => pid = %" PRIi32
++                ", status = 0x%8.8x (%s), signal = %i, exit_state = %i",
++                __FUNCTION__, wait_pid, status, status_cstr, signal,
++                exit_status);
++
++  MonitorCallback(wait_pid, exited, signal, exit_status);
 +}
 +
 +// Wrapper for ptrace to catch errors and log calls.
