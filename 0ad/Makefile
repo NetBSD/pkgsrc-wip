@@ -37,7 +37,7 @@ do-build:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../chat/gloox/buildlink3.mk"
-.include "../../wip/miniupnpc/buildlink3.mk"
+.include "../../net/miniupnpc/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../wip/spidermonkey31/buildlink3.mk"
