@@ -1,10 +1,12 @@
 # $NetBSD: Makefile,v 1.1 2015/08/19 20:36:32 yhardy Exp $
 #
 
-DISTNAME=	eduke32_src_20150818-5334
-PKGNAME=	eduke32-5334
+EDUKE_SVN=	5948
+EDUKE_DATE=	20161204
+DISTNAME=	eduke32_src_${EDUKE_DATE}-${EDUKE_SVN}
+PKGNAME=	eduke32-${EDUKE_SVN}
 CATEGORIES=	games
-MASTER_SITES=	http://dukeworld.duke4.net/eduke32/synthesis/20150818-5334/
+MASTER_SITES=	http://dukeworld.duke4.net/eduke32/synthesis/${EDUKE_DATE}-${EDUKE_SVN}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +14,7 @@ HOMEPAGE=	http://eduke32.com/
 COMMENT=	Engine for Duke Nukem 3D
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/eduke32_20150818-5334
+WRKSRC=		${WRKDIR}/eduke32_${EDUKE_DATE}-${EDUKE_SVN}
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake pkg-config
