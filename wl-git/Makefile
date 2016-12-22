@@ -58,12 +58,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/samples/en/dot.* ${DESTDIR:Q}${EXAMPLESDIR:Q}/en
 	${INSTALL_DATA} ${WRKSRC:Q}/samples/ja/dot.* ${DESTDIR:Q}${EXAMPLESDIR:Q}/ja
 
-.include "../../editors/emacs/modules.mk"
+.include "../../wip/emacs-git/modules.mk"
 
 .include "options.mk"
 .include "../../wip/mk/git-package.mk"
 
-.include "../../devel/apel/buildlink3.mk"
+.include "../../wip/apel-git/buildlink3.mk"
 .include "../../devel/semi/buildlink3.mk"
 .include "../../misc/bbdb/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

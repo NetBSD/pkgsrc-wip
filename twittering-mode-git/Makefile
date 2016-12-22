@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/twittering-mode
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-.include "../../editors/emacs/modules.mk"
+.include "../../wip/emacs-git/modules.mk"
 # Avoid single file spread out just under site-lisp directory.
 # And directory name should get higher precedence, so begins with 'a'.
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/a-files
