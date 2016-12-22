@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS+=		qrcode
 
 .if !empty(PKG_OPTIONS:Mminiupnpc)
 QMAKE_OPTIONS+=	USE_UPNP=1
-.include "../../wip/miniupnpc/buildlink3.mk"
+.include "../../net/miniupnpc/buildlink3.mk"
 .else
 QMAKE_OPTIONS+=	USE_UPNP=-
 .endif

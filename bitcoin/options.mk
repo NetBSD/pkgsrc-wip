@@ -24,5 +24,5 @@ CONFIGURE_ARGS+=	--with-qt-bindir=${QTDIR}/bin
 .endif
 
 .if !empty(PKG_OPTIONS:Mminiupnpc)
-.include "../../wip/miniupnpc/buildlink3.mk"
+.include "../../net/miniupnpc/buildlink3.mk"
 .endif
