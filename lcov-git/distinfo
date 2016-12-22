@@ -3,4 +3,4 @@ $NetBSD$
 SHA1 (patch-bin_copy__dates.sh) = 8e7e04bda15321e5393d893fdcc2fcf68a5fbeb5
 SHA1 (patch-bin_get__changes.sh) = 86ce47d35cfea167eb3c73b4457c409a8dbbe198
 SHA1 (patch-bin_get__version.sh) = 4eb4ab689df37f1fcf0aa26a744a3baed5905975
-SHA1 (patch-bin_install.sh) = bcfc8504ad875aa92c504439d2cacdaa31d259b0
+SHA1 (patch-bin_install.sh) = 09946e2d7e80d2d69a554f3921e96d4531a331ef
