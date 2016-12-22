@@ -2827,8 +2827,6 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-gw.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tramp-gw.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.elc
