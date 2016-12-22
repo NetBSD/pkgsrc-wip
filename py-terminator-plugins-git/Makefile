@@ -1,17 +1,16 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-terminator-plugins-0
-CATEGORIES=	x11
-
-GIT_REPOSITORIES=	TP
-GIT_REPO.TP=		https://github.com/camillo/TerminatorPlugins.git
+GITHUB_PROJECT=	TerminatorPlugins
+DISTNAME=	${PYPKGPREFIX}-terminator-plugins-1.0
+CATEGORIES=	python x11
+MASTER_SITES=	${MASTER_SITE_GITHUB:=camillo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/camillo/TerminatorPlugins/
 COMMENT=	Set of plugins for terminator
 LICENSE=	public-domain
 
-WRKSRC=		${WRKDIR}/TP
+WRKSRC=		${WRKDIR}/TerminatorPlugins-${PKGVERSION_NOREV}
 
 NO_BUILD=	yes
 PY_PATCHPLIST=	yes
@@ -25,7 +24,6 @@ do-install:
 		${INSTALL_DATA} plugins/${plugin} ${DESTDIR}${TERMINATORLIB_PLUGINS}
 .endfor
 
-.include "../../wip/mk/git-package.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
