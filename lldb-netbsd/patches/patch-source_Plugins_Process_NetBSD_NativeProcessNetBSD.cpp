@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-23 23:19:01.279655164 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1656 @@
+@@ -0,0 +1,1632 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -447,42 +447,18 @@ $NetBSD$
 +                                         int signal, int status) {
 +  Log *log(GetLogIfAnyCategoriesSet(LIBLLDB_LOG_PROCESS));
 +
-+  // Handle when the thread exits.
++  // Handle when the process exits.
 +  if (exited) {
 +    if (log)
 +      log->Printf(
 +          "NativeProcessNetBSD::%s() got exit signal(%d) , pid = %d",
 +          __FUNCTION__, signal, pid);
 +
-+    // This is a thread that exited.  Ensure we're not tracking it anymore.
-+    /* XXX: Stop tracking process? */
++    SetExitStatus(convert_pid_status_to_exit_type(status),
++                  convert_pid_status_to_return_code(status), nullptr, true);
 +
-+    // We only set the exit status and notify the delegate if we haven't
-+    // already set the process
-+    // state to an exited state.  We normally should have received a SIGTRAP |
-+    // (PTRACE_EVENT_EXIT << 8)
-+    // for the main thread.
-+    const bool already_notified = (GetState() == StateType::eStateExited) ||
-+                                    (GetState() == StateType::eStateCrashed);
-+    if (!already_notified) {
-+      if (log)
-+        log->Printf("NativeProcessNetBSD::%s() pid = %d "
-+                    "handling process exit, expected exit state "
-+                    "already set but state was %s instead, setting exit "
-+                    "state now",
-+                    __FUNCTION__, pid, StateAsCString(GetState()));
-+      // The main thread exited.  We're done monitoring.  Report to delegate.
-+      SetExitStatus(convert_pid_status_to_exit_type(status),
-+                    convert_pid_status_to_return_code(status), nullptr, true);
-+
-+      // Notify delegate that our process has exited.
-+      SetState(StateType::eStateExited, true);
-+    } else {
-+      if (log)
-+        log->Printf("NativeProcessNetBSD::%s() pid = %d"
-+                    " main thread now exited",
-+                    __FUNCTION__, pid);
-+    }
++    // Notify delegate that our process has exited.
++    SetState(StateType::eStateExited, true);
 +  }
 +}
 +
