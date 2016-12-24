@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-23 23:19:01.279655164 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1637 @@
+@@ -0,0 +1,1652 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -364,14 +364,29 @@ $NetBSD$
 +                uint64_t(pid));
 +
 +  ResolveProcessArchitecture(m_pid, m_arch);
-+#if 0
-+  NativeThreadNetBSDSP thread_sp = AddThread(pid);
-+  assert(thread_sp && "AddThread() returned a nullptr thread");
-+  thread_sp->SetStoppedBySignal(SIGSTOP);
 +
-+  // Let our process instance know the thread has stopped.
++  /* Initialize threads */
++  struct ptrace_lwpinfo info = {};
++  error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
++  if (error.Fail()) {
++    SetState(StateType::eStateInvalid);
++    return error;
++  }
++  NativeThreadNetBSDSP thread_sp = AddThread(info.pl_lwpid);
++  assert(thread_sp && "AddThread() returned a nullptr thread");
++  /* It's unclear which thread is current - the first one? */
 +  SetCurrentThreadID(thread_sp->GetID());
-+#endif
++
++  while (info.pl_lwpid != 0) {
++    error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
++    if (error.Fail()) {
++      SetState(StateType::eStateInvalid);
++      return error;
++    }
++    AddThread(info.pl_lwpid);
++  }
++
++  /* Set process stopped */
 +  SetState(StateType::eStateStopped);
 +
 +  if (log) {
