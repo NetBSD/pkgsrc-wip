@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-24 04:33:38.213380608 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-24 07:25:32.142702421 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1597 @@
+@@ -0,0 +1,1592 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -372,18 +372,13 @@ $NetBSD$
 +    SetState(StateType::eStateInvalid);
 +    return error;
 +  }
-+  NativeThreadNetBSDSP thread_sp = AddThread(info.pl_lwpid);
-+  assert(thread_sp && "AddThread() returned a nullptr thread");
-+  /* It's unclear which thread is current - the first one? */
-+  SetCurrentThreadID(thread_sp->GetID());
-+
 +  while (info.pl_lwpid != 0) {
++    AddThread(info.pl_lwpid);
 +    error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
 +    if (error.Fail()) {
 +      SetState(StateType::eStateInvalid);
 +      return error;
 +    }
-+    AddThread(info.pl_lwpid);
 +  }
 +
 +  /* Set process stopped */
