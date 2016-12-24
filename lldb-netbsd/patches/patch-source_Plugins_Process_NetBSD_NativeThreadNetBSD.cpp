@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-23 23:19:01.292866969 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-24 04:33:38.226574254 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,190 @@
+@@ -0,0 +1,167 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -151,7 +151,6 @@ $NetBSD$
 +
 +Error NativeThreadNetBSD::SingleStep(uint32_t signo) {
 +  const StateType new_state = StateType::eStateStepping;
-+  MaybeLogStateChange(new_state);
 +  m_state = new_state;
 +  m_stop_info.reason = StopReason::eStopReasonNone;
 +
@@ -163,28 +162,6 @@ $NetBSD$
 +  // breakpoint on the
 +  // next instruction has been setup in NativeProcessNetBSD::Resume.
 +  return NativeProcessNetBSD::PtraceWrapper(PT_STEP, GetID(), (void *)1, data);
-+}
-+
-+void NativeThreadNetBSD::MaybeLogStateChange(lldb::StateType new_state) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+  // If we're not logging, we're done.
-+  if (!log)
-+    return;
-+
-+  // If this is a state change to the same state, we're done.
-+  lldb::StateType old_state = m_state;
-+  if (new_state == old_state)
-+    return;
-+
-+  NativeProcessProtocolSP m_process_sp = m_process_wp.lock();
-+  lldb::pid_t pid =
-+      m_process_sp ? m_process_sp->GetID() : LLDB_INVALID_PROCESS_ID;
-+
-+  // Log it.
-+  log->Printf("NativeThreadNetBSD: thread (pid=%" PRIu64 ", tid=%" PRIu64
-+              ") changing from state %s to %s",
-+              pid, GetID(), StateAsCString(old_state),
-+              StateAsCString(new_state));
 +}
 +
 +NativeProcessNetBSD &NativeThreadNetBSD::GetProcess() {

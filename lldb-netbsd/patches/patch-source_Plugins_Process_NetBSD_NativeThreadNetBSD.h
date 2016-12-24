@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-23 23:19:01.299120836 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-24 04:33:38.232811151 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,79 @@
+@@ -0,0 +1,77 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -64,8 +64,6 @@ $NetBSD$
 +  // ---------------------------------------------------------------------
 +  // Private interface
 +  // ---------------------------------------------------------------------
-+  void MaybeLogStateChange(lldb::StateType new_state);
-+
 +  NativeProcessNetBSD &GetProcess();
 +
 +  // ---------------------------------------------------------------------
