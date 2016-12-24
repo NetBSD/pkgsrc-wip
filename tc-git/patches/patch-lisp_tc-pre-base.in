@@ -1,5 +1,11 @@
---- /export/WRKOBJDIR/wip/tc-git/work/tc/lisp/tc-pre-base.in.orig	2016-03-21 18:53:18.000000000 +0900
-+++ /export/WRKOBJDIR/wip/tc-git/work/tc/lisp/tc-pre-base.in	2016-12-23 21:48:21.000000000 +0900
+$NetBSD$
+
+(1) string-to-int is an obsolete function; use `string-to-number' instead
+
+(2) use tc-is22 for emacs26 too
+
+--- ./lisp/tc-pre-base.in.orig	2016-03-21 18:53:18.000000000 +0900
++++ ./lisp/tc-pre-base.in	2016-12-23 21:48:21.000000000 +0900
 @@ -26,10 +26,10 @@
    (cond ((string-match "XEmacs" emacs-version)
  	 'xemacs)
