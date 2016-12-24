@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-24 04:33:38.213380608 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1652 @@
+@@ -0,0 +1,1597 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -480,61 +480,6 @@ $NetBSD$
 +    // Notify delegate that our process has exited.
 +    SetState(StateType::eStateExited, true);
 +  }
-+}
-+
-+void NativeProcessNetBSD::WaitForNewThread(::pid_t tid) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+
-+  NativeThreadNetBSDSP new_thread_sp = GetThreadByID(tid);
-+
-+  if (new_thread_sp) {
-+    // We are already tracking the thread - we got the event on the new thread
-+    // (see
-+    // MonitorSignal) before this one. We are done.
-+    return;
-+  }
-+
-+  // The thread is not tracked yet, let's wait for it to appear.
-+  int status = -1;
-+  ::pid_t wait_pid;
-+  do {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s() received thread creation event for "
-+                  "tid %" PRIu32
-+                  ". tid not tracked yet, waiting for thread to appear...",
-+                  __FUNCTION__, tid);
-+    wait_pid = waitpid(tid, &status, WALLSIG);
-+  } while (wait_pid == -1 && errno == EINTR);
-+  // Since we are waiting on a specific tid, this must be the creation event.
-+  // But let's do
-+  // some checks just in case.
-+  if (wait_pid != tid) {
-+    if (log)
-+      log->Printf(
-+          "NativeProcessNetBSD::%s() waiting for tid %" PRIu32
-+          " failed. Assuming the thread has disappeared in the meantime",
-+          __FUNCTION__, tid);
-+    // The only way I know of this could happen is if the whole process was
-+    // SIGKILLed in the mean time. In any case, we can't do anything about that
-+    // now.
-+    return;
-+  }
-+  if (WIFEXITED(status)) {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s() waiting for tid %" PRIu32
-+                  " returned an 'exited' event. Not tracking the thread.",
-+                  __FUNCTION__, tid);
-+    // Also a very improbable event.
-+    return;
-+  }
-+
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s() pid = %" PRIu64
-+                ": tracking new thread tid %" PRIu32,
-+                __FUNCTION__, GetID(), tid);
-+
-+  new_thread_sp = AddThread(tid);
-+  /* XXX: ResumeThread */
 +}
 +
 +namespace {

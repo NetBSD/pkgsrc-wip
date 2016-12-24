@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-21 17:21:58.161130776 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2016-12-24 04:33:38.220266609 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,182 @@
+@@ -0,0 +1,180 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -145,8 +145,6 @@ $NetBSD$
 +  static void *MonitorThread(void *baton);
 +
 +  void MonitorCallback(lldb::pid_t pid, bool exited, int signal, int status);
-+
-+  void WaitForNewThread(::pid_t tid);
 +
 +  void MonitorSIGTRAP(const siginfo_t &info, NativeThreadNetBSD &thread);
 +
