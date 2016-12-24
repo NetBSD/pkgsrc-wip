@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-23 23:19:01.279655164 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1632 @@
+@@ -0,0 +1,1637 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -453,6 +453,11 @@ $NetBSD$
 +      log->Printf(
 +          "NativeProcessNetBSD::%s() got exit signal(%d) , pid = %d",
 +          __FUNCTION__, signal, pid);
++
++    /* Stop Tracking All Threads attached to Process */
++    for (auto it = m_threads.begin(); it != m_threads.end(); ++it) {
++       m_threads.erase(it);
++    }
 +
 +    SetExitStatus(convert_pid_status_to_exit_type(status),
 +                  convert_pid_status_to_return_code(status), nullptr, true);
