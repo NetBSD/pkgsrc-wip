@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-21 17:21:58.167664787 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-23 23:19:01.292866969 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,286 @@
+@@ -0,0 +1,190 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -163,102 +163,6 @@ $NetBSD$
 +  // breakpoint on the
 +  // next instruction has been setup in NativeProcessNetBSD::Resume.
 +  return NativeProcessNetBSD::PtraceWrapper(PT_STEP, GetID(), (void *)1, data);
-+}
-+
-+void NativeThreadNetBSD::SetStoppedBySignal(uint32_t signo,
-+                                           const siginfo_t *info) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+  if (log)
-+    log->Printf("NativeThreadNetBSD::%s called with signal 0x%02" PRIx32,
-+                __FUNCTION__, signo);
-+
-+  SetStopped();
-+
-+  m_stop_info.reason = StopReason::eStopReasonSignal;
-+  m_stop_info.details.signal.signo = signo;
-+
-+  m_stop_description.clear();
-+  if (info) {
-+    switch (signo) {
-+    case SIGSEGV:
-+    case SIGBUS:
-+    case SIGFPE:
-+    case SIGILL:
-+      const auto reason =
-+          (info->si_signo == SIGBUS)
-+              ? CrashReason::eInvalidAddress
-+              : GetCrashReason(*info);
-+      m_stop_description = GetCrashReasonString(reason, *info);
-+      break;
-+    }
-+  }
-+}
-+
-+bool NativeThreadNetBSD::IsStopped(int *signo) {
-+  if (!StateIsStoppedState(m_state, false))
-+    return false;
-+
-+  // If we are stopped by a signal, return the signo.
-+  if (signo && m_state == StateType::eStateStopped &&
-+      m_stop_info.reason == StopReason::eStopReasonSignal) {
-+    *signo = m_stop_info.details.signal.signo;
-+  }
-+
-+  // Regardless, we are stopped.
-+  return true;
-+}
-+
-+void NativeThreadNetBSD::SetStopped() {
-+  const StateType new_state = StateType::eStateStopped;
-+  MaybeLogStateChange(new_state);
-+  m_state = new_state;
-+  m_stop_description.clear();
-+}
-+
-+void NativeThreadNetBSD::SetStoppedByExec() {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+  if (log)
-+    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
-+
-+  SetStopped();
-+
-+  m_stop_info.reason = StopReason::eStopReasonExec;
-+  m_stop_info.details.signal.signo = SIGSTOP;
-+}
-+
-+void NativeThreadNetBSD::SetStoppedByBreakpoint() {
-+  SetStopped();
-+
-+  m_stop_info.reason = StopReason::eStopReasonBreakpoint;
-+  m_stop_info.details.signal.signo = SIGTRAP;
-+  m_stop_description.clear();
-+}
-+
-+bool NativeThreadNetBSD::IsStoppedAtBreakpoint() {
-+  return GetState() == StateType::eStateStopped &&
-+         m_stop_info.reason == StopReason::eStopReasonBreakpoint;
-+}
-+
-+void NativeThreadNetBSD::SetStoppedByTrace() {
-+  SetStopped();
-+
-+  m_stop_info.reason = StopReason::eStopReasonTrace;
-+  m_stop_info.details.signal.signo = SIGTRAP;
-+}
-+
-+void NativeThreadNetBSD::SetStoppedWithNoReason() {
-+  SetStopped();
-+
-+  m_stop_info.reason = StopReason::eStopReasonNone;
-+  m_stop_info.details.signal.signo = 0;
-+}
-+
-+void NativeThreadNetBSD::SetExited() {
-+  const StateType new_state = StateType::eStateExited;
-+  MaybeLogStateChange(new_state);
-+  m_state = new_state;
-+
-+  m_stop_info.reason = StopReason::eStopReasonThreadExiting;
 +}
 +
 +void NativeThreadNetBSD::MaybeLogStateChange(lldb::StateType new_state) {

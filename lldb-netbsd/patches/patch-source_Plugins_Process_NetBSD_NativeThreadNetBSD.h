@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-21 17:21:58.174128330 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-23 23:19:01.299120836 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,104 @@
+@@ -0,0 +1,79 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -61,37 +61,12 @@ $NetBSD$
 +  /// LLDB_INVALID_SIGNAL_NUMBER, deliver that signal to the thread.
 +  Error SingleStep(uint32_t signo);
 +
-+  void SetStoppedBySignal(uint32_t signo, const siginfo_t *info = nullptr);
-+
-+  /// Return true if the thread is stopped.
-+  /// If stopped by a signal, indicate the signo in the signo argument.
-+  /// Otherwise, return LLDB_INVALID_SIGNAL_NUMBER.
-+  bool IsStopped(int *signo);
-+
-+  void SetStoppedByExec();
-+
-+  void SetStoppedByBreakpoint();
-+
-+  bool IsStoppedAtBreakpoint();
-+
-+  void SetStoppedByTrace();
-+
-+  void SetStoppedWithNoReason();
-+
-+  void SetExited();
-+
 +  // ---------------------------------------------------------------------
 +  // Private interface
 +  // ---------------------------------------------------------------------
 +  void MaybeLogStateChange(lldb::StateType new_state);
 +
 +  NativeProcessNetBSD &GetProcess();
-+
-+  void SetStopped();
-+
-+  inline void MaybePrepareSingleStepWorkaround();
-+
-+  inline void MaybeCleanupSingleStepWorkaround();
 +
 +  // ---------------------------------------------------------------------
 +  // Member Variables

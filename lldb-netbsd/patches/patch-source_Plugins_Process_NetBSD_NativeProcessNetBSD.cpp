@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-21 17:21:58.154060411 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-23 23:19:01.279655164 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1654 @@
+@@ -0,0 +1,1656 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -364,12 +364,14 @@ $NetBSD$
 +                uint64_t(pid));
 +
 +  ResolveProcessArchitecture(m_pid, m_arch);
++#if 0
 +  NativeThreadNetBSDSP thread_sp = AddThread(pid);
 +  assert(thread_sp && "AddThread() returned a nullptr thread");
 +  thread_sp->SetStoppedBySignal(SIGSTOP);
 +
 +  // Let our process instance know the thread has stopped.
 +  SetCurrentThreadID(thread_sp->GetID());
++#endif
 +  SetState(StateType::eStateStopped);
 +
 +  if (log) {
