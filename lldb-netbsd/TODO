@@ -5,3 +5,6 @@ warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-fo
 warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format.el: executable bit is set on non-executable file.
 warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format.py: executable bit is set on non-executable file.
 warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/man/man1/scan-build.1: executable bit is set on non-executable file.
+
+Debugging to file:
+    log enable -STagnpstv -f /tmp/log.txt lldb all
