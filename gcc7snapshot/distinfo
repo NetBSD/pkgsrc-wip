@@ -1,17 +1,16 @@
 $NetBSD: distinfo,v 1.23 2015/05/06 05:25:00 keckhardt Exp $
 
-SHA1 (gcc-7-20161113.tar.bz2) = ab3b1c5404e9ad7442d370c1530b055e6e1df90b
-RMD160 (gcc-7-20161113.tar.bz2) = 4de6c9714f18f4d66914cd9da2f165308360fc2e
-SHA512 (gcc-7-20161113.tar.bz2) = 174acfd9664b4e362fe41f3d91ea27c407d4714f98d0ad1bf1de6a2b7c506d91e5a4ed343efe82cec4e1897aea90853f00c26e01ebe03c783ccd23b557741d16
-Size (gcc-7-20161113.tar.bz2) = 79125504 bytes
+SHA1 (gcc-7-20161218.tar.bz2) = a6cb832b190842986e9bd7e87592fa0984ee7cb0
+RMD160 (gcc-7-20161218.tar.bz2) = 985f6730deab6299ba42da3b07670e5b7dafafce
+SHA512 (gcc-7-20161218.tar.bz2) = 0a63e66ef98e61f298e0d8de5692af157bc5557e2ba11162539739db944090f4fe86519bc68a6c8e5f13cc68b7e67cf5b8297f75a2468048bd94d618297aaba6
+Size (gcc-7-20161218.tar.bz2) = 78918286 bytes
 SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
 RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
 SHA512 (isl-0.14.tar.bz2) = 117c0c6f31d91a9284a8f54a748df6494ca2ac21507a45611e911403e9610579b9323ce624aea1de0b8089b3194e59d4364f01bdb71ddcf8f6c24c749d11c4b7
 Size (isl-0.14.tar.bz2) = 1399896 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
-SHA1 (patch-gcc_config.gcc) = 0e44e9a5f5436a0684937acda2f6d3dcdfd4f591
+SHA1 (patch-gcc_config.gcc) = fea8288c22bb2c4dd44a5e77c8f92dee8f8f6b18
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
-SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
 SHA1 (patch-gcc_config_netbsd.c) = 85f786bce881ef2fc348f98ef81fdbc001076183
 SHA1 (patch-gcc_config_netbsd.h) = 81891a83bb17b99fdb2c9381b8e8a1767391c695
 SHA1 (patch-gcc_config_t-netbsd) = 802ad5706aa7ca9629f8e237f08fbb1569d28846
@@ -21,7 +20,7 @@ SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
 SHA1 (patch-gcc_lto_lto.c) = 825b632e2a7ff5777d4fbfdcf6f0ea3f64c4742b
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-libcilkrts_configure) = 0d88069173cba34158f5b6b91d2d12ca81b0300c
-SHA1 (patch-libcilkrts_runtime_os-unix.c) = 7985df8877515214c14670f06ebc59bcb720cc47
+SHA1 (patch-libcilkrts_runtime_os-unix.c) = b25632587d9fbe8ff38377fe34cb16225355b521
 SHA1 (patch-libdecnumber_decNumber.c) = cec90e49c829bfc6ba1ec605d2fac7daaad62762
 SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 6321dde308579448c27c2b6e1e30633699dd145f

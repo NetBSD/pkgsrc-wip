@@ -4,7 +4,7 @@ NetBSD doesn't need additional include files too
 NetBSD can also obtain number of online cpus from sysconf
 NetBSD can use sched_yield for sleeping
 
---- libcilkrts/runtime/os-unix.c.orig	2014-05-21 11:08:58.000000000 +0000
+--- libcilkrts/runtime/os-unix.c.orig	2016-12-01 14:48:49.000000000 +0000
 +++ libcilkrts/runtime/os-unix.c
 @@ -73,6 +73,7 @@
  #elif defined __CYGWIN__ || \
@@ -30,9 +30,9 @@ NetBSD can use sched_yield for sleeping
      defined(__VXWORKS__)  || \
      (defined(__sun__) && defined(__svr4__))
      sched_yield();
-@@ -453,6 +456,7 @@ COMMON_SYSDEP void __cilkrts_yield(void)
- #if defined(__ANDROID__)  || \
+@@ -456,6 +459,7 @@ COMMON_SYSDEP void __cilkrts_yield(void)
      defined(__APPLE__)    || \
+     defined(__CYGWIN__)   || \
      defined(__FreeBSD__)  || \
 +    defined(__NetBSD__)   || \
      defined(__VXWORKS__)  || \

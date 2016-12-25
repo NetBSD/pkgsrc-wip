@@ -10,7 +10,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC7S_DIST_VERSION}
 ## PKGREVISION of this package!
 #PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC7S-DIST_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC7S_DIST_VERSION}/}
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/${GCC7S_DIST_VERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
