@@ -8,3 +8,9 @@ warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/man/man1/scan-
 
 Debugging to file:
     log enable -STagnpstv -f /tmp/log.txt lldb all
+
+"make test":
+    Build Command Output:
+    g++: error trying to exec 'cc1objplus': execvp: No such file or directory
+    g++: error trying to exec 'cc1objplus': execvp: No such file or directory
+    gmake[4]: *** [main.o] Error 1
