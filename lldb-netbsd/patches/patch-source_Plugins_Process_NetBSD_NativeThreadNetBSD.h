@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-26 00:06:02.439980709 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2016-12-26 05:32:46.186458822 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,77 @@
+@@ -0,0 +1,79 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -60,6 +60,8 @@ $NetBSD$
 +  /// Single steps the thread.  If @p signo is anything but
 +  /// LLDB_INVALID_SIGNAL_NUMBER, deliver that signal to the thread.
 +  Error SingleStep(uint32_t signo);
++
++  void SetStoppedBySignal(uint32_t signo, const siginfo_t *info = nullptr);
 +
 +  // ---------------------------------------------------------------------
 +  // Private interface

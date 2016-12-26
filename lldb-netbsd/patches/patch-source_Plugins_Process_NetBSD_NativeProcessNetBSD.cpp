@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-26 00:06:02.274927609 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-26 05:32:46.166552242 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1592 @@
+@@ -0,0 +1,1593 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -316,7 +316,7 @@ $NetBSD$
 +  // Wait for the child process to trap on its call to execve.
 +  ::pid_t wpid;
 +  int status;
-+  if ((wpid = waitpid(pid, &status, 0)) < 0) {
++  if ((wpid = waitpid( pid, &status, 0)) < 0) {
 +    error.SetErrorToErrno();
 +    if (log)
 +      log->Printf("NativeProcessNetBSD::%s waitpid for inferior failed with %s",
@@ -373,7 +373,8 @@ $NetBSD$
 +    return error;
 +  }
 +  while (info.pl_lwpid != 0) {
-+    AddThread(info.pl_lwpid);
++    NativeThreadNetBSDSP thread_sp = AddThread(info.pl_lwpid);
++    thread_sp->SetStoppedBySignal(SIGSTOP);
 +    error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
 +    if (error.Fail()) {
 +      SetState(StateType::eStateInvalid);
