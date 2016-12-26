@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-24 07:25:32.142702421 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-26 00:06:02.274927609 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -0,0 +1,1592 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
