@@ -1,0 +1,8 @@
+This package was forked from wip/ghc because wip/ghc doesn't build.
+
+The idea with this package is to use lang/ghc7 (which is a ghc 7.6.3) to build
+wip/ghc710 (which is ghc 7.10.3) and then use wip/ghc710 to build wip/ghc8
+(which is ghc 8.0.1) as ghc version 7.8 or later is required in order to build ghc 8.0.1.
+
+We already have lang/ghc7 in pkgsrc that manages to bootstrap and build. We use it to build
+ghc 7.10.3, which will be used to build ghc 8.0.1

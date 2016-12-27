@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (ghc-7.10.3-src.tar.xz) = 471a3df55c7f5ac6be75109d0c29de97842b98e9
+RMD160 (ghc-7.10.3-src.tar.xz) = 993a69f761e608fa2424d72a48509ff6247a2ed9
+SHA512 (ghc-7.10.3-src.tar.xz) = a39700ec6cb3396639c8d5349590d56d685777adabdec8ff6877dbce9f5f66daaab27fce205fdf3cceb6219b0a901b7cbe25b6fa228f765c725423b3c36e52b1
+Size (ghc-7.10.3-src.tar.xz) = 11731468 bytes
+SHA1 (ghc-7.10.3-testsuite.tar.xz) = 479a34c82a250145d5aa89f531ef78c75d00e282
+RMD160 (ghc-7.10.3-testsuite.tar.xz) = 0940b283d378b4f0fc1b57210996d0fcaff42384
+SHA512 (ghc-7.10.3-testsuite.tar.xz) = 8780d2823e1f94266b8ac8dbea838ce60384f03f85c04ac911e1f72a0cebece8070d82db195c2db1bbabaa5bc5da1b9648409a4595b66b41574ca27638189432
+Size (ghc-7.10.3-testsuite.tar.xz) = 1513212 bytes
