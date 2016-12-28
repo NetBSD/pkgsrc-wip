@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/09/08 12:22:14 thomasklausner Exp $
+@comment $NetBSD$
 bin/pan
 share/appdata/pan.appdata.xml
 share/applications/pan.desktop
@@ -34,6 +34,7 @@ share/locale/ms/LC_MESSAGES/pan.mo
 share/locale/nb/LC_MESSAGES/pan.mo
 share/locale/nl/LC_MESSAGES/pan.mo
 share/locale/oc/LC_MESSAGES/pan.mo
+share/locale/pl/LC_MESSAGES/pan.mo
 share/locale/pt/LC_MESSAGES/pan.mo
 share/locale/pt_BR/LC_MESSAGES/pan.mo
 share/locale/ro/LC_MESSAGES/pan.mo
