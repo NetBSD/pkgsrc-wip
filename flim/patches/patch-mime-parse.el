@@ -1,0 +1,24 @@
+$NetBSD$
+
+string-to-int -> string-to-number
+
+--- mime-parse.el~	2005-07-06 11:09:04.000000000 +0900
++++ mime-parse.el	2016-12-28 10:41:55.000000000 +0900
+@@ -97,7 +97,7 @@ be the result."
+     (insert text)
+     (goto-char (point-min))
+     (while (re-search-forward "%[0-9A-Fa-f][0-9A-Fa-f]" nil t)
+-      (insert (prog1 (string-to-int
++      (insert (prog1 (string-to-number
+ 		      (buffer-substring (point)(- (point) 2))
+ 		      16)
+                 (delete-region (point)(- (point) 3)))))
+@@ -147,7 +147,7 @@ property of the decoded-value."
+           (let* ((attribute (downcase
+ 			     (substring (car params) 0 (match-end 1))))
+                  (section (if (match-beginning 2)
+-			      (string-to-int
++			      (string-to-number
+ 			       (substring (car params)
+ 					  (1+ (match-beginning 2))
+ 					  (match-end 2)))
