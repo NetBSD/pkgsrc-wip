@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.2 2015/09/13 20:39:38 yhardy Exp $
 
-DISTNAME=	chocolate-doom-2.2.1
+DISTNAME=	chocolate-doom-2.3.0
 CATEGORIES=	games
-MASTER_SITES=	http://www.chocolate-doom.org/downloads/2.2.1/
+MASTER_SITES=	http://www.chocolate-doom.org/downloads/2.3.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chocolate-doom.org/

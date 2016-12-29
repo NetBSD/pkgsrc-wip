@@ -1,9 +1,8 @@
 $NetBSD: distinfo,v 1.2 2015/09/13 20:39:38 yhardy Exp $
 
-SHA1 (chocolate-doom-2.2.1.tar.gz) = be0f2b5d642beca8c9ef21ad0472ee9329bc2a78
-RMD160 (chocolate-doom-2.2.1.tar.gz) = 1c02c9cbff279a8710cc849c29568256fafa9319
-Size (chocolate-doom-2.2.1.tar.gz) = 2127538 bytes
+SHA1 (chocolate-doom-2.3.0.tar.gz) = c2881f61aa23db23282b196fa8ff4bc15f27e69b
+RMD160 (chocolate-doom-2.3.0.tar.gz) = 434cba83e4ac85f6277f5944936d24e4c4bfb407
+SHA512 (chocolate-doom-2.3.0.tar.gz) = 43353875f76432123336ac7f8a37d00c447286f5bf17c2a12f6307568fe2533370ca8e5e0f76fa475e353f20dfdea79e3948c47ea8b079ef5dd9d0a53c305bfc
+Size (chocolate-doom-2.3.0.tar.gz) = 2190744 bytes
 SHA1 (patch-configure) = 9b16bdbb8d146b45b482eee09f4b26299cb46fcf
 SHA1 (patch-configure.ac) = ce81387252f78556170aa42be8d4a11f5d2c48e6
-SHA1 (patch-src_Makefile.am) = 97ef865af24b3150f6421196c0aaccd945c2204e
-SHA1 (patch-src_Makefile.in) = b2e14d54a407681f100f1e343aa67c70b2785eb2
