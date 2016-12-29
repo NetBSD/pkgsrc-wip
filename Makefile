@@ -494,6 +494,7 @@ SUBDIR+=	deforaos-probe
 SUBDIR+=	deforaos-surfer
 SUBDIR+=	deforaos-terminal
 SUBDIR+=	deforaos-todo
+SUBDIR+=	dehydrated
 SUBDIR+=	denyhosts
 SUBDIR+=	depsolver
 SUBDIR+=	deskcribe
