@@ -6,7 +6,7 @@ GCC_PKGNAME=		gcc47
 DISTNAME=	gcc-${GCC47_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC47_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
-## lang/gcc47-libs needs to be bump to be at least 1 more than the
+## wip/gcc47-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
 PKGREVISION=	3
 CATEGORIES=	lang

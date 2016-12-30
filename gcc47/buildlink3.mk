@@ -7,7 +7,7 @@ GCC47_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc47+=	gcc47>=4.7
 BUILDLINK_ABI_DEPENDS.gcc47+=	gcc47>=4.7.0
-BUILDLINK_PKGSRCDIR.gcc47=	../../lang/gcc47
+BUILDLINK_PKGSRCDIR.gcc47=	../../wip/gcc47
 BUILDLINK_DEPMETHOD.gcc47?=	build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc47}/gcc47
@@ -17,8 +17,8 @@ BUILDLINK_AUTO_VARS.gcc47=	no
 
 # Packages that link against shared libraries need a full dependency.
 .if defined(_USE_GCC_SHLIB)
-DEPENDS+=	{gcc47,gcc47-libs}>=4.7:../../lang/gcc47-libs
-ABI_DEPENDS+=	{gcc47,gcc47-libs}>=4.7.0:../../lang/gcc47-libs
+DEPENDS+=	{gcc47,gcc47-libs}>=4.7:../../wip/gcc47-libs
+ABI_DEPENDS+=	{gcc47,gcc47-libs}>=4.7.0:../../wip/gcc47-libs
 .endif
 
 pkgbase := gcc47
