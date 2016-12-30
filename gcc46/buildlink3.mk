@@ -7,7 +7,7 @@ GCC46_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc46+=	gcc46>=4.6
 BUILDLINK_ABI_DEPENDS.gcc46+=	gcc46>=4.6.0
-BUILDLINK_PKGSRCDIR.gcc46=	../../lang/gcc46
+BUILDLINK_PKGSRCDIR.gcc46=	../../wip/gcc46
 BUILDLINK_DEPMETHOD.gcc46?=	build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc46}/gcc46
@@ -17,8 +17,8 @@ BUILDLINK_AUTO_VARS.gcc46=	no
 
 # Packages that link against shared libraries need a full dependency.
 .if defined(_USE_GCC_SHLIB)
-DEPENDS+=	{gcc46,gcc46-libs}>=4.6:../../lang/gcc46-libs
-ABI_DEPENDS+=	{gcc46,gcc46-libs}>=4.6.0:../../lang/gcc46-libs
+DEPENDS+=	{gcc46,gcc46-libs}>=4.6:../../wip/gcc46-libs
+ABI_DEPENDS+=	{gcc46,gcc46-libs}>=4.6.0:../../wip/gcc46-libs
 .endif
 
 pkgbase := gcc46
