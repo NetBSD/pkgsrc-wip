@@ -3,8 +3,6 @@
 PKGNAME=	gnuradio-uhd-${VERSION}
 COMMENT=	Uhd-based encoding and decoding algorithms for GNU Radio
 
-# (acutually, redundent for now)
-PKG_OPTIONS.gnuradio=
 .include	"../../wip/gnuradio-core/Makefile.common"
 .include	"../../wip/gnuradio-core/Nocore.mk"
 
