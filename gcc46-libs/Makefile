@@ -6,7 +6,7 @@ GCC46_DIST_VERSION:=	4.6.4
 DISTNAME=	gcc-${GCC46_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-libs-${GCC46_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
-## PKGREVISION of the lang/gcc46 package so that with the dependence pattern
+## PKGREVISION of the wip/gcc46 package so that with the dependence pattern
 ## '{gcc46,gcc46-libs}>=4.6.*' pkg_all will choose gcc46-libs over gcc46.
 PKGREVISION=	6
 CATEGORIES=	lang
@@ -23,7 +23,7 @@ USE_TOOLS+=	pax
 NO_BUILD=		yes
 
 ## Depend on exactly ${GCC46_DIST_VERSION}.
-BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC46_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc46
+BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC46_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc46
 
 .include "../../mk/bsd.prefs.mk"
 

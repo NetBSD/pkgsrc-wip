@@ -10,7 +10,7 @@ BUILDLINK_API_DEPENDS.gcc46-libs+=	gcc46-libs>=4.6.0
 .else
 BUILDLINK_API_DEPENDS.gcc46-libs+=	{gcc46,gcc46-libs}>=4.6.0
 .endif
-BUILDLINK_PKGSRCDIR.gcc46-libs=		../../lang/gcc46-libs
+BUILDLINK_PKGSRCDIR.gcc46-libs=		../../wip/gcc46-libs
 BUILDLINK_DEPMETHOD.gcc46-libs?=	full
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc46-libs}/gcc46
@@ -27,7 +27,7 @@ LIBGCC_SUBPREFIX=	gcc46
 LIBGCC_PREFIX=		${BUILDLINK_PREFIX.gcc46-libs}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
-# XXX: Using %M requires patched version of gcc (e.g. lang/gcc46)
+# XXX: Using %M requires patched version of gcc (e.g. wip/gcc46)
 ${SPECS_LIBGCC}:
 	@${ECHO} "*link_libgcc:" >${SPECS_LIBGCC}
 	@${ECHO} "%D $(LINKER_RPATH_FLAG)${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib/%M" >>${SPECS_LIBGCC}
