@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.4 2015/02/03 13:58:32 mef Exp $
+
+date: 2013-10-21 03:00:57 +0900;  author: joerg;  state: Exp;  lines: +12 -1;  commitid: 17vYRnrUrAvnK3ax;
+Prefix rpath options with -Wl.
+
+--- configure.orig	2013-07-28 18:57:59.000000000 +0000
++++ configure
+@@ -4442,12 +4442,8 @@ else
+ 				default_iproutedir="/etc/iproute2"
+ 				;;
+ 		ipv6:netbsd*)	sysdesc=bsd-v6
+-				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
+ 				;;
+ 		ipv4:netbsd*)	sysdesc=bsd
+-				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
+ 				;;
+ 		ipv6:freebsd*)	sysdesc=bsd-v6
+ 				;;
