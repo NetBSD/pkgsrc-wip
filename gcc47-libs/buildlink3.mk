@@ -10,7 +10,7 @@ BUILDLINK_API_DEPENDS.gcc47-libs+=	gcc47-libs>=4.7.0
 .else
 BUILDLINK_API_DEPENDS.gcc47-libs+=	{gcc47,gcc47-libs}>=4.7.0
 .endif
-BUILDLINK_PKGSRCDIR.gcc47-libs=		../../lang/gcc47-libs
+BUILDLINK_PKGSRCDIR.gcc47-libs=		../../wip/gcc47-libs
 BUILDLINK_DEPMETHOD.gcc47-libs?=	full
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc47-libs}/gcc47
@@ -27,7 +27,7 @@ LIBGCC_SUBPREFIX=	gcc47
 LIBGCC_PREFIX=		${BUILDLINK_PREFIX.gcc47-libs}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
-# XXX: Using %M requires patched version of gcc (e.g. lang/gcc47)
+# XXX: Using %M requires patched version of gcc (e.g. wip/gcc47)
 ${SPECS_LIBGCC}:
 	@${ECHO} "*link_libgcc:" >${SPECS_LIBGCC}
 	@${ECHO} "%D $(LINKER_RPATH_FLAG)${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib/%M" >>${SPECS_LIBGCC}

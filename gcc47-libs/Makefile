@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.24 2016/09/06 12:00:33 maya Exp $
 
 GCC_PKGNAME=	gcc47
-.include	"../../lang/${GCC_PKGNAME}/version.mk"
+.include	"../../wip/${GCC_PKGNAME}/version.mk"
 
 DISTNAME=	gcc-${GCC47_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-libs-${GCC47_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
-## PKGREVISION of the lang/gcc47 package so that with the dependence pattern
+## PKGREVISION of the wip/gcc47 package so that with the dependence pattern
 ## '{gcc47,gcc47-libs}>=4.7.*' pkg_all will choose gcc47-libs over gcc47.
 PKGREVISION=	4
 CATEGORIES=	lang
@@ -24,7 +24,7 @@ NO_BUILD=	yes
 CHECK_SHLIBS=	no
 
 ## Depend on exactly ${GCC47_DIST_VERSION}.
-BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC47_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc47
+BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC47_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc47
 
 .include "../../mk/bsd.prefs.mk"
 
