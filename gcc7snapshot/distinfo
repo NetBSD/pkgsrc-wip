@@ -10,6 +10,7 @@ SHA512 (isl-0.14.tar.bz2) = 117c0c6f31d91a9284a8f54a748df6494ca2ac21507a45611e91
 Size (isl-0.14.tar.bz2) = 1399896 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
 SHA1 (patch-gcc_config.gcc) = fea8288c22bb2c4dd44a5e77c8f92dee8f8f6b18
+SHA1 (patch-gcc_config_arm_arm.h) = 92c8bff1063e153fec4454e6dea5334a42b0dad6
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
 SHA1 (patch-gcc_config_netbsd.c) = 85f786bce881ef2fc348f98ef81fdbc001076183
 SHA1 (patch-gcc_config_netbsd.h) = 81891a83bb17b99fdb2c9381b8e8a1767391c695
