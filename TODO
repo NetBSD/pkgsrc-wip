@@ -37,7 +37,7 @@ Suggested package updates
 	o gforge-4.5.11
 	o giggle-0.6.1
 	o gitg-0.3.2
-	o gitlab-8.14
+	o gitlab-8.15
 	o gjs-1.42.0
 	o globulation2-0.9.4
 	o glsl-1.30
@@ -100,6 +100,7 @@ Suggested package updates
 	o pike-7.8.700
 	o py-PyPE-2.9
 	o py-bitstring-3.1.3
+	o py-pygit2-0.25.0
 	o py-rpyc-3.2.1
 	o py-scrapy-1.2.1
 	o py-sh-1.12.8
