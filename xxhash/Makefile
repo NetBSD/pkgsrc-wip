@@ -4,7 +4,6 @@ PKGNAME=	xxhash-0.6.2
 DISTNAME=	xxHash-${PKGVERSION_NOREV}
 CATEGORIES=	misc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
 
 MAINTAINER=	cfkoch@edgebsd.org
@@ -25,7 +24,3 @@ do-install:
 	${INSTALL_ENV} ${INSTALL_MAN} ${WRKSRC}/xxhsum.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
-
-
-#The library files `xxhash.c` and `xxhash.h` are BSD licensed.
-#The utility `xxhsum` is GPL licensed.
