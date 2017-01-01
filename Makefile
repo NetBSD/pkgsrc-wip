@@ -4417,6 +4417,7 @@ SUBDIR+=	xtrlock
 SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	xxdiff
+SUBDIR+=	xxhash
 SUBDIR+=	yabar
 SUBDIR+=	yafray
 SUBDIR+=	yakuake
