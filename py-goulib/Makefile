@@ -21,7 +21,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 1.9.11
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 1.9.11
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

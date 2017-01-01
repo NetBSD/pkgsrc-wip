@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	 ${PYPKGPREFIX}-creole-[0-9]*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-wxWidgets
 
 post-extract:
 	${MV} ${WRKSRC}/bin/AIGO-gui.py ${WRKSRC}/bin/AIGO-gui.py${PYVERSSUFFIX}

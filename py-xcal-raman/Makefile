@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.1.5
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.1.5
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

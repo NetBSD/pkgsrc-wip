@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-gnuplot-[0-9]*:../../graphics/py-gnuplot
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gnuplot, py-multiprocessing
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gnuplot, py-multiprocessing
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

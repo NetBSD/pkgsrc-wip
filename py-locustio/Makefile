@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.4.2:../../devel/py-msgpack
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gevent
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gevent
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/locust \

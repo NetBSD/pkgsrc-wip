@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-elementtree
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-elementtree
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"

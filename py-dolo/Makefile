@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.4.9.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.4.9.2
 
 USE_LANGUAGES=	# none
 

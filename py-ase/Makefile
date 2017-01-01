@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2, py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-gobject
 
 post-extract:
 	${MV} ${WRKSRC}/tools/ase-build ${WRKSRC}/tools/ase-build${PYVERSSUFFIX}

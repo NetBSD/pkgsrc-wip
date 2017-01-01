@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-gevent>=1.0.2:../../net/py-gevent
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gevent
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gevent
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

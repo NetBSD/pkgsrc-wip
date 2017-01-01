@@ -18,7 +18,7 @@ COMMENT=	TimingAndEstimation plugin for Trac
 
 DEPENDS+=	trac>=0.12:../../www/trac
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.2.8/11739
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.2.8/11739
 
 SVN_REPOSITORIES=	plugin
 SVN_REPO.plugin=	https://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12

@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 REPLACE_PYTHON+=	bin/reinteract.in
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

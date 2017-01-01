@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.4.1.:../../math/py-sympy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.0.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.0.1
 
 USE_LANGUAGES=	# none
 

@@ -14,7 +14,7 @@ DEPENDS+=		${PYPKGPREFIX}-twisted>=1.1.1rc1:../../net/py-twisted
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

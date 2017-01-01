@@ -18,7 +18,7 @@ DEPENDS+=	git>=1.7.0:../../devel/git
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
-#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.3.2.RC1
+#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.3.2.RC1
 
 USE_LANGUAGES=	# none
 

@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
 
 USE_TOOLS+=	gmake
 PYTHON_VERSIONS_ACCEPTED=		27
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-paramiko
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-paramiko
 
 EGDIR=		${PREFIX}/share/examples/ansible
 

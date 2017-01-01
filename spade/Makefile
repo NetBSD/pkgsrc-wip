@@ -20,7 +20,7 @@ DEPENDS+=	jython>=2.5.1:../../wip/jython
 
 WRKSRC=	${WRKDIR}/spade
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-m2crypto, py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-m2crypto, py-twisted
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

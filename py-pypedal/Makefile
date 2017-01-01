@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.0.1:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-dot>=1.0.2:../../graphics/py-dot
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mxDateTime
 
 USE_LANGUAGES=	# none
 

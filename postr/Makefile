@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ORBit via py-gnome2, py-gobject, py-twisted, py-elementtree
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gobject, py-twisted, py-elementtree
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

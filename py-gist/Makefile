@@ -12,7 +12,7 @@ COMMENT=	Gist is a scientific graphics library
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-Numeric
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/extension.mk"

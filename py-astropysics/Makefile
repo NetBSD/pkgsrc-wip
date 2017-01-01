@@ -18,7 +18,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 EGG_NAME=	${DISTNAME:S/-r596//}0
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.1dev-r596
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.1dev-r596
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
