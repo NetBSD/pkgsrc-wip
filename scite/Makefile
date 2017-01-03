@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.25 2016/02/25 08:27:03 jperkin Exp $
 #
-DISTNAME=	scite370
-PKGNAME=	scite-3.7.0
+DISTNAME=	scite372
+PKGNAME=	scite-3.7.2
 #PKGREVISION=	0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
@@ -29,7 +29,7 @@ post-extract:
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.scintilla+= scintilla>=3.2.4
+BUILDLINK_API_DEPENDS.scintilla+= scintilla>=3.7.2
 .include "../../devel/scintilla/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

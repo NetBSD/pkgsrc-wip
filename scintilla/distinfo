@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.6 2015/11/03 03:29:32 agc Exp $
 
-SHA1 (scintilla370.tgz) = 26293d8fc480be0944d44725ae145bc3bd886d3e
-RMD160 (scintilla370.tgz) = db7d16ccc4718dcb0769270c55f1fe0409003f47
-SHA512 (scintilla370.tgz) = 08747264695c439a5a3e04709562aac1867520e80e98c572c77fcd76f3788dad6dc72c794d4ee5cfd7de20131117b88ffcb2398d96ffb7025e59128bbaddd106
-Size (scintilla370.tgz) = 1370149 bytes
-SHA1 (patch-aa) = c98d15b0764cef95961f3e0beb091a7693d5a94a
+SHA1 (scintilla372.tgz) = 6b4fe5977e6f5b3a3ed4f5a615fc3a5e3f833f0e
+RMD160 (scintilla372.tgz) = c4cb21fce1a04f39eb36be1effca6a19feda212d
+SHA512 (scintilla372.tgz) = b28cd1bafbbf68962cddefd59137394ddb5f16faebb2e6e5f2f9f85962247fd8cd132a3193356ec9ee0f431aa0a489c5bf7c1e1045618516eef1a8ae14914ca1
+Size (scintilla372.tgz) = 1377448 bytes
+SHA1 (patch-aa) = f63a03876b3e4684c7bcdd6b1abf1278e5b8a5b8
