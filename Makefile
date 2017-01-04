@@ -1748,7 +1748,6 @@ SUBDIR+=	lucene
 SUBDIR+=	lugaru
 SUBDIR+=	lumberjack
 SUBDIR+=	lumina
-SUBDIR+=	lumina-i18n
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
 SUBDIR+=	lximage-qt
