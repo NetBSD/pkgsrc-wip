@@ -11,11 +11,11 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	autoconf automake gmake gzip makeinfo
+USE_TOOLS+=	autoconf automake gmake gsed gzip makeinfo
 # for example, Mac OS X 10.6.1 has 2.61 which fails
 AUTOCONF_REQD=	2.65
-
-CONFLICTS+=	emacs-nox11-[0-9]*
+# NetBSD has 4.8
+TEXINFO_REQD=	4.13
 
 MAKE_JOBS_SAFE=	no
 
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 # For wip special, following gives symbol names when back trace is shown.
 CFLAGS+=		-g
+CONFIGURE_ARGS+=	MAKEINFO=${LOCALBASE}/bin/makeinfo
 
 BUILD_TARGET=		bootstrap
 BUILD_DEFS+=		VARBASE

@@ -3577,6 +3577,8 @@ share/emacs/${PKGVERSION}/lisp/term/screen.el.gz
 share/emacs/${PKGVERSION}/lisp/term/screen.elc
 share/emacs/${PKGVERSION}/lisp/term/sun.el.gz
 share/emacs/${PKGVERSION}/lisp/term/sun.elc
+share/emacs/${PKGVERSION}/lisp/term/tmux.el.gz
+share/emacs/${PKGVERSION}/lisp/term/tmux.elc
 share/emacs/${PKGVERSION}/lisp/term/tty-colors.el.gz
 share/emacs/${PKGVERSION}/lisp/term/tty-colors.elc
 share/emacs/${PKGVERSION}/lisp/term/tvi970.el.gz
