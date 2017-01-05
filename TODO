@@ -13,6 +13,7 @@ Suggested package updates
 	o bleachbit-0.9.6
 	o blink-2.0.0
 	o cairo-java-1.0.8
+	o cde-2.2.4
 	o cinelerra-4.5
 	o d4x-2.5.7.1
 	o daphne-1.0
@@ -51,7 +52,7 @@ Suggested package updates
 	o gtkaml-0.4.3
 	o guichan-0.8.1
 	o guitone-0.9
-	o gwyddion-2.45
+	o gwyddion-2.47
 	o higan-100
 	o hitori-0.4.5
 	o hu-go-2.11
@@ -72,7 +73,7 @@ Suggested package updates
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
 	o libressl-2.3.1
-	o lives-2.6.4
+	o lives-2.8.2
 	o love-0.10.0
 	o lucene-4.5.0
 	o lxqt-0.11
@@ -136,7 +137,7 @@ Suggested package updates
 	o vidalia-0.2.21
 	o vidalia-devel-0.3.3
 	o virtualbox-5.1.10
-	o wkhtmltopdf-0.12.3
+	o wkhtmltopdf-0.12.4
 	o xaralx-bin-0.7.1692
 	o xf86-input-synaptics-1.8.0
 	o xf86-video-geode-2.11.19
