@@ -14,3 +14,10 @@ Debugging to file:
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
     gmake[4]: *** [main.o] Error 1
+
+
+std::call_once is broken in libstdc++
+hack for src:
+   curl https://github.com/jsonn/src/commit/78f4ee4c8349d68cf2279f2c7fc2196ae369e182.patch|gpatch -R -p1
+long term solution in LLVM:
+   replace std::call_once with llvm::call_once
