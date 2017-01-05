@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=		beats-5.0.2
+DISTNAME=		beats-5.1.1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=		beats
@@ -19,19 +19,32 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/src/github.com/elastic/beats
 
-EGFILES=		filebeat.template-es2x.json filebeat.template.json filebeat.yml
-EGFILES+=		metricbeat.template-es2x.json metricbeat.template.json metricbeat.yml
-EGFILES+=		packetbeat.template-es2x.json packetbeat.template.json packetbeat.yml
+# Components to build/install
+BEATS=			filebeat heartbeat metricbeat packetbeat
 
-.for file in ${EGFILES}
-CONF_FILES+=		share/examples/beats/${file} ${PKG_SYSCONFDIR}/${file}
+.for beat in ${BEATS}
+CONF_FILES+=		share/examples/beats/${beat}.yml			\
+				${PKG_SYSCONFDIR}/${beat}.yml
+CONF_FILES+=		share/examples/beats/${beat}.template.json		\
+				${PKG_SYSCONFDIR}/${beat}.template.json
+CONF_FILES+=		share/examples/beats/${beat}.template-es2x.json		\
+				${PKG_SYSCONFDIR}/${beat}.template-es2x.json
 .endfor
+
+BEATS_DIR?=		${VARBASE}/db/beats
+BEATS_LOGDIR?=		${VARBASE}/log/beats
+
+FILES_SUBST+=		BEATS_DIR=${BEATS_DIR}
+FILES_SUBST+=		BEATS_LOGDIR=${BEATS_LOGDIR}
 
 PKG_SYSCONFSUBDIR=	beats
 
-MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
-BUILD_DIRS=		libbeat filebeat metricbeat packetbeat
+SMF_INSTANCES+=		${BEATS}
 
+OWN_DIRS+=		${BEATS_DIR} ${BEATS_LOGDIR}
+
+MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
+BUILD_DIRS=		${BEATS}
 BUILD_TARGET=		#
 
 INSTALLATION_DIRS+=	bin share/examples/beats
@@ -41,12 +54,15 @@ post-extract:
 	${MV} ${WRKDIR}/${DISTNAME}/* ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/filebeat/filebeat ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/libbeat/libbeat ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/metricbeat/metricbeat ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/packetbeat/packetbeat ${DESTDIR}${PREFIX}/bin
-.for file in ${EGFILES}
-	${INSTALL_DATA} ${WRKSRC}/*/${file} \
+.for beat in ${BEATS}
+	${INSTALL_PROGRAM} ${WRKSRC}/${beat}/${beat} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/${beat}/${beat}.full.yml			\
+		${DESTDIR}${PREFIX}/share/examples/beats
+	${INSTALL_DATA} ${WRKSRC}/${beat}/${beat}.template-es2x.json		\
+		${DESTDIR}${PREFIX}/share/examples/beats
+	${INSTALL_DATA} ${WRKSRC}/${beat}/${beat}.template.json			\
+		${DESTDIR}${PREFIX}/share/examples/beats
+	${INSTALL_DATA} ${WRKSRC}/${beat}/${beat}.yml				\
 		${DESTDIR}${PREFIX}/share/examples/beats
 .endfor
 
