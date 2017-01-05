@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2015/04/01 13:14:20 yvs4sf Exp $
+# $NetBSD$
 
 CATEGORIES=	net
 PKGBASE=	mtr
 PKGVERSION=	0.85.99
-PKGREVISION=	8
+PKGREVISION=	10
 PKGNAME=	${PKGBASE}-graph-${PKGVERSION}
-DISTNAME=	${PKGBASE}-${GITVERSION}
-MASTER_SITES=	https://github.com/${GITHUB_USER}/${PKGBASE}/tarball/${GITVERSION}/
-WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITVERSION}
+DISTNAME=	${PKGBASE}-${GITHUB_HASH}
+MASTER_SITES=	https://github.com/${GITHUB_USER}/${PKGBASE}/tarball/${GITHUB_HASH}/
+WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITHUB_HASH}
 
-GITVERSION=	ca79a82
+GITHUB_HASH=	28f0506
 GITHUB_USER=	yvs2014
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -26,22 +26,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/mtr
 
 .include "options.mk"
 
-# mtr uses libtermcap by default, but needs wattr_{on,off} from (n)curses,
-# so we rewrite -ltermcap to -lncurses (which will be auto-mangled into
-# -lcurses on the appropriate platforms).
-BUILDLINK_TRANSFORM+=	l:termcap:ncurses
-
 SPECIAL_PERMS=	sbin/mtr ${SETUID_ROOT_PERMS}
-
-# Remove hard-coded compiler option that GCC 3.x doesn't support.
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-3.*)
-BUILDLINK_TRANSFORM+=	rm:-Wno-pointer-sign
-.endif
-
-.if !empty(MACHINE_PLATFORM:MDarwin-??.*-*)
-LIBS+=	-lresolv
-.endif
 
 pre-configure:
 	autoreconf -fi ${WRKSRC}
@@ -51,5 +36,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${DESTDIR}${PREFIX}/share/doc/mtr
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

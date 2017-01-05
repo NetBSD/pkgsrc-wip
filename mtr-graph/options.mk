@@ -1,18 +1,16 @@
-# $NetBSD: options.mk,v 1.4 2015/03/06 10:35:31 yvs4sf Exp $
+# $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mtr-graph
 PKG_SUPPORTED_OPTIONS=	gtk
 PKG_SUPPORTED_OPTIONS+=	inet6
 PKG_SUPPORTED_OPTIONS+=	ipinfo
-PKG_OPTIONS_OPTIONAL_GROUPS+=	graphcairo
-PKG_OPTIONS_GROUP.graphcairo+=	graphcairo-xcb
-PKG_OPTIONS_GROUP.graphcairo+=	graphcairo-xlib
 PKG_SUPPORTED_OPTIONS+=	libidn
 PKG_SUPPORTED_OPTIONS+=	unicode
 PKG_SUPPORTED_OPTIONS+=	sys-getopt
-PKG_SUGGESTED_OPTIONS=	inet6
+PKG_OPTIONS_OPTIONAL_GROUPS+=	graphcairo
+PKG_OPTIONS_GROUP.graphcairo+=	graphcairo-xcb
+PKG_OPTIONS_GROUP.graphcairo+=	graphcairo-xlib
 PKG_SUGGESTED_OPTIONS+=	ipinfo
-PKG_SUGGESTED_OPTIONS+=	graphcairo-xcb
 PKG_SUGGESTED_OPTIONS+=	unicode
 PKG_SUGGESTED_OPTIONS+=	sys-getopt
 
