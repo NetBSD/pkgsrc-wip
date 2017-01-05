@@ -15,6 +15,7 @@ LICENSE=		apache-2.0
 .include "../../lang/go/version.mk"
 BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
 
+EXTRACT_USING=		bsdtar
 USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/src/github.com/elastic/beats
