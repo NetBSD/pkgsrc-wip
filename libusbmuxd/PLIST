@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/iproxy
+include/usbmuxd-proto.h
+include/usbmuxd.h
+lib/libusbmuxd.la
+lib/pkgconfig/libusbmuxd.pc
