@@ -1,55 +1,88 @@
 # $NetBSD$
 
-DISTNAME=	clementine-1.3.1
+GITHUB_PROJECT=	Clementine
+DISTNAME=	1.3.1
+PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=clementine-player/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_PROJECT=	Clementine
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	weabot@protonmail.com
 HOMEPAGE=	https://www.clementine-player.org/
-COMMENT=	Cross-platform music player inspired by Amarok 1.4
+COMMENT=	Clementine is a music player made in qt4 based on Amarok 1.4
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/c/C/}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	3rdparty/libprojectm/libprojectM.pc.in
 
-LDFLAGS.NetBSD+=	-lexecinfo # for backtrace()
+CFLAGS+=	-Wno-inconsistent-missing-override \
+		-Wno-unused-variable \
+		-Wno-unused-function
 
-#   libgpod (optional, for iPod support)
-#   libplist (optional, for iPod support)
-#   libusbmuxd (optional, for iPod support)
-#   libmtp (optional, for MTP support)
-#   libgio (optional, for various device support)
-#   libcdio (optional, for CD support)
-.include "../../misc/libcdio/buildlink3.mk"
-#   libspotify (optional, for Spotify support)
-#   libcrypto++ (optional, for Spotify support)
-#   libsparsehash (optional, for Google Drive/Dropbox/Box/Skydrive support)
-#   libpulse (optional, for choosing output devices)
+CMAKE_ARGS+= 	-DENABLE_SPOTIFY_BLOB=OFF \
+		-DCRYPTOPP_LIBS=/usr/pkg/lib/libcryptopp.so \
+	     	-DCRYPTOPP_INCLUDEDIR=/usr/pkg/include/cryptopp \
+	     	-DCRYPTOPP_LIBDIR=/usr/pkg/lib \
+	     	-DCRYPTOPP_LDFLAGS=-lcryptopp \
+	     	-DCRYPTOPP_LIBRARIES=cryptopp \
+	     	-DCRYPTOPP_LIBRARY_DIRS=/usr/pkg/lib \
+	     	-DCRYPTOPP_cryptopp_INCLUDEDIR=/usr/pkg/include/cryptopp \
+	     	-DCRYPTOPP_cryptopp_LIBDIR=/usr/pkg/lib \
+	     	-DCRYPTOPP_FOUND=1 \
+		-DBUILD_WERROR=OFF
+
+
+BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake \
+		pkgconf>=0.9.10:../../devel/pkgconf
+
+DEPENDS+=	qt4-tiff>=4.5.0:../../x11/qt4-tiff \
+		qt4-sqlite3>=4.5.0:../../x11/qt4-sqlite3 \
+		gst-plugins1-cdparanoia>=1.4.0:../../audio/gst-plugins1-cdparanoia \
+		gst-plugins1-faac>=1.4.0:../../audio/gst-plugins1-faac \
+		gst-plugins1-faad>=1.4.0:../../audio/gst-plugins1-faad \
+		gst-plugins1-flac>=1.4.0:../../audio/gst-plugins1-flac \
+		gst-plugins1-gio>=1.4.0:../../sysutils/gst-plugins1-gio \
+		gst-plugins1-lame>=1.4.0:../../audio/gst-plugins1-lame \
+		gst-plugins1-mad>=1.4.0:../../audio/gst-plugins1-mad \
+		gst-plugins1-twolame>=1.4.0:../../audio/gst-plugins1-twolame \
+		gst-plugins1-vorbis>=1.4.0:../../audio/gst-plugins1-vorbis
+
+
+.include "../../audio/chromaprint/buildlink3.mk"
+.include "../libechonest/buildlink3.mk" # Will be moved to audio/
+.include "../../audio/taglib/buildlink3.mk"
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/qjson/buildlink3.mk"
+.include "../../devel/sparsehash/buildlink3.mk" # Flagged as optional but clementine refuses to build without it.
+
+.include "../../graphics/glew/buildlink3.mk"
+
+.include "../../math/fftw/buildlink3.mk"
+
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../audio/liblastfm/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../x11/qt4-qdbus/buildlink3.mk"
-.include "../../audio/taglib/buildlink3.mk"
-.include "../../audio/chromaprint/buildlink3.mk"
-.include "../../graphics/glew/buildlink3.mk"
-.include "../../devel/qjson/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/protobuf/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
+
+.include "../../security/crypto++/buildlink3.mk" # Said to be optional on github but CMake requires it
 .include "../../security/qca2/buildlink3.mk"
-# all below here supposedly optional, but not really
-.include "../../security/crypto++/buildlink3.mk"
+
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
+
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-qdbus/buildlink3.mk"
+
+.include "options.mk"
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

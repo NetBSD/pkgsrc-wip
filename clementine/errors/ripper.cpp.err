@@ -1,0 +1,808 @@
+#This error prevents me from enabling audiocd. The old package in ../clementine.old also seems to have had it.
+
+=> Bootstrap dependency digest>=20010302: found digest-20160304
+===> Building for Clementine-1.3.1
+[  0%] Automatic moc for target k8json
+[  0%] Automatic moc for target vreen
+[  0%] Built target qtiocompressor
+[  1%] Built target qtsingleapplication
+[  2%] Built target qsqlite
+[  2%] Built target k8json_automoc
+[  2%] Built target sha2
+[  2%] Built target qxt
+[  2%] Built target vreen_automoc
+[  2%] Built target Qocoa
+[  2%] Built target k8json
+[  3%] Built target libclementine-common
+[  3%] Built target clementine-spotifyblob-messages
+[  3%] Built target libclementine-remote
+[  4%] Built target libclementine-tagreader
+[ 10%] Built target mygpo-qt
+[ 10%] Built target clementine-tagreader
+[ 12%] Built target vreen
+[ 12%] Building CXX object src/CMakeFiles/clementine_lib.dir/ripper/ripper.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/clementine_lib.dir/internet/vk/vkurlhandler.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/clementine_lib.dir/internet/seafile/seafileurlhandler.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/clementine_lib.dir/internet/vk/vkservice.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/clementine_lib.dir/internet/seafile/seafileservice.cpp.o
+In file included from /usr/include/g++/bits/gthr.h:152:0,
+                 from /usr/include/g++/ext/atomicity.h:35,
+                 from /usr/include/g++/bits/basic_string.h:39,
+                 from /usr/include/g++/string:52,
+                 from /usr/pkg/qt4/include/QtCore/qstring.h:54,
+                 from /usr/pkg/qt4/include/QtCore/qobject.h:48,
+                 from /usr/pkg/qt4/include/QtCore/QObject:1,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:23,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/include/g++/bits/gthr-default.h: In function 'int __gthread_create(__pthread_st**, void* (*)(void*), void*)':
+/usr/include/g++/bits/gthr-default.h:662:68: error: invalid conversion from 'void*' to 'const pthread_attr_t* {aka const __pthread_attr_st*}' [-fpermissive]
+   return __gthrw_(pthread_create) (__threadid, NULL, __func, __args);
+                                                                    ^
+In file included from /usr/include/g++/bits/gthr-default.h:35:0,
+                 from /usr/include/g++/bits/gthr.h:152,
+                 from /usr/include/g++/ext/atomicity.h:35,
+                 from /usr/include/g++/bits/basic_string.h:39,
+                 from /usr/include/g++/string:52,
+                 from /usr/pkg/qt4/include/QtCore/qstring.h:54,
+                 from /usr/pkg/qt4/include/QtCore/qobject.h:48,
+                 from /usr/pkg/qt4/include/QtCore/QObject:1,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:23,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/include/pthread.h:45:5: note:   initializing argument 2 of 'int pthread_create(__pthread_st**, const pthread_attr_t*, void* (*)(void*), void*)'
+ int pthread_create(pthread_t * __restrict,
+     ^
+In file included from /usr/include/g++/bits/gthr.h:152:0,
+                 from /usr/include/g++/ext/atomicity.h:35,
+                 from /usr/include/g++/bits/basic_string.h:39,
+                 from /usr/include/g++/string:52,
+                 from /usr/pkg/qt4/include/QtCore/qstring.h:54,
+                 from /usr/pkg/qt4/include/QtCore/qobject.h:48,
+                 from /usr/pkg/qt4/include/QtCore/QObject:1,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:23,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/include/g++/bits/gthr-default.h: In function 'void __gthread_mutex_init_function(__gthread_mutex_t*)':
+/usr/include/g++/bits/gthr-default.h:732:48: error: invalid conversion from 'void*' to 'const pthread_mutexattr_t* {aka const __pthread_mutexattr_st*}' [-fpermissive]
+     __gthrw_(pthread_mutex_init) (__mutex, NULL);
+                                                ^
+In file included from /usr/include/g++/bits/gthr-default.h:35:0,
+                 from /usr/include/g++/bits/gthr.h:152,
+                 from /usr/include/g++/ext/atomicity.h:35,
+                 from /usr/include/g++/bits/basic_string.h:39,
+                 from /usr/include/g++/string:52,
+                 from /usr/pkg/qt4/include/QtCore/qstring.h:54,
+                 from /usr/pkg/qt4/include/QtCore/qobject.h:48,
+                 from /usr/pkg/qt4/include/QtCore/QObject:1,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:23,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/include/pthread.h:331:5: note:   initializing argument 2 of 'int __libc_mutex_init(pthread_mutex_t*, const pthread_mutexattr_t*)'
+ int __libc_mutex_init(pthread_mutex_t * __restrict, const pthread_mutexattr_t * __restrict);
+     ^
+In file included from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:22:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/core/tagreaderclient.h:25,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:26,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h: In constructor 'google::protobuf::ArenaOptions::ArenaOptions()':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h:156:33: error: invalid conversion from 'void*' to 'char*' [-fpermissive]
+         on_arena_allocation(NULL) {}
+                                 ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h:156:33: error: invalid conversion from 'void*' to 'void* (*)(google::protobuf::Arena*)' [-fpermissive]
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h:156:33: error: invalid conversion from 'void*' to 'void (*)(google::protobuf::Arena*, void*, google::protobuf::uint64) {aka void (*)(google::protobuf::Arena*, void*, long long unsigned int)}' [-fpermissive]
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h:156:33: error: invalid conversion from 'void*' to 'void (*)(google::protobuf::Arena*, void*, google::protobuf::uint64) {aka void (*)(google::protobuf::Arena*, void*, long long unsigned int)}' [-fpermissive]
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h:156:33: error: invalid conversion from 'void*' to 'void (*)(const std::type_info*, google::protobuf::uint64, void*) {aka void (*)(const std::type_info*, long long unsigned int, void*)}' [-fpermissive]
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h: In member function 'void* google::protobuf::Arena::AllocateAligned(size_t)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h:860:35: error: invalid conversion from 'void*' to 'const std::type_info*' [-fpermissive]
+     return AllocateAligned(NULL, n);
+                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arena.h:856:9: note:   initializing argument 1 of 'void* google::protobuf::Arena::AllocateAligned(const std::type_info*, size_t)'
+   void* AllocateAligned(const std::type_info* allocated, size_t n);
+         ^
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:36:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h: In member function 'std::__cxx11::string* google::protobuf::internal::ArenaStringPtr::Release(const string*, google::protobuf::Arena*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'std::__cxx11::string* {aka std::__cxx11::basic_string<char>*}' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h:86:14: note: in expansion of macro 'NULL'
+       return NULL;
+              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'std::__cxx11::string* {aka std::__cxx11::basic_string<char>*}' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h:88:31: note: in expansion of macro 'NULL'
+     ::std::string* released = NULL;
+                               ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h: In member function 'std::__cxx11::string* google::protobuf::internal::ArenaStringPtr::UnsafeArenaRelease(const string*, google::protobuf::Arena*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'std::__cxx11::string* {aka std::__cxx11::basic_string<char>*}' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h:107:14: note: in expansion of macro 'NULL'
+       return NULL;
+              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h: In member function 'std::__cxx11::string* google::protobuf::internal::ArenaStringPtr::ReleaseNoArena(const string*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'std::__cxx11::string* {aka std::__cxx11::basic_string<char>*}' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h:232:14: note: in expansion of macro 'NULL'
+       return NULL;
+              ^
+In file included from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:23:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/core/tagreaderclient.h:25,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:26,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h: In member function 'void google::protobuf::internal::ArenaStringPtr::DestroyNoArena(const string*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/arenastring.h:256:10: error: invalid conversion from 'void*' to 'std::__cxx11::string* {aka std::__cxx11::basic_string<char>*}' [-fpermissive]
+     ptr_ = NULL;
+          ^
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/metadata.h:43:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:25,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/core/tagreaderclient.h:25,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:26,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/unknown_field_set.h: In constructor 'google::protobuf::UnknownFieldSet::UnknownFieldSet()':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/unknown_field_set.h:252:57: error: invalid conversion from 'void*' to 'std::vector<google::protobuf::UnknownField>*' [-fpermissive]
+ inline UnknownFieldSet::UnknownFieldSet() : fields_(NULL) {}
+                                                         ^
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:36:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message_lite.h: In member function 'virtual google::protobuf::Arena* google::protobuf::MessageLite::GetArena() const':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message_lite.h:104:64: note: in expansion of macro 'NULL'
+   virtual ::google::protobuf::Arena* GetArena() const { return NULL; }
+                                                                ^
+In file included from /usr/include/sys/types.h:354:0,
+                 from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:35,
+                 from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:36,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/include/g++/ext/concurrence.h: At global scope:
+/usr/include/g++/ext/concurrence.h:122:34: error: invalid conversion from 'void*' to 'pthread_t {aka __pthread_st*}' [-fpermissive]
+     __gthread_mutex_t _M_mutex = __GTHREAD_MUTEX_INIT;
+                                  ^
+/usr/include/g++/ext/concurrence.h:122:34: error: invalid conversion from 'void*' to '__pthread_st**' [-fpermissive]
+/usr/include/g++/ext/concurrence.h:255:32: error: invalid conversion from 'void*' to '__pthread_st*' [-fpermissive]
+     __gthread_cond_t _M_cond = __GTHREAD_COND_INIT;
+                                ^
+/usr/include/g++/ext/concurrence.h:255:32: error: invalid conversion from 'void*' to '__pthread_st**' [-fpermissive]
+/usr/include/g++/ext/concurrence.h:255:32: error: invalid conversion from 'void*' to 'pthread_mutex_t* {aka __pthread_mutex_st*}' [-fpermissive]
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:36:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::DescriptorPool::ErrorCollector*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/descriptor.h:1395:61: note: in expansion of macro 'NULL'
+                           ErrorCollector* error_collector = NULL);
+                                                             ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::MessageFactory*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:527:63: note: in expansion of macro 'NULL'
+                                     MessageFactory* factory = NULL) const = 0;
+                                                               ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::MessageFactory*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:592:61: note: in expansion of macro 'NULL'
+                                   MessageFactory* factory = NULL) const = 0;
+                                                             ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::MessageFactory*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:609:61: note: in expansion of macro 'NULL'
+                                   MessageFactory* factory = NULL) const = 0;
+                                                             ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::MessageFactory*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:736:57: note: in expansion of macro 'NULL'
+                               MessageFactory* factory = NULL) const = 0;
+                                                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h: In member function 'virtual const google::protobuf::FieldDescriptor* google::protobuf::Reflection::GetOneofFieldDescriptor(const google::protobuf::Message&, const google::protobuf::OneofDescriptor*) const':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:452:12: note: in expansion of macro 'NULL'
+     return NULL;
+            ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h: In member function 'virtual google::protobuf::internal::MapFieldBase* google::protobuf::Reflection::MapData(google::protobuf::Message*, const google::protobuf::FieldDescriptor*) const':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::internal::MapFieldBase*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:999:12: note: in expansion of macro 'NULL'
+     return NULL;
+            ^
+In file included from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:26:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/core/tagreaderclient.h:25,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:26,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h: In member function 'const google::protobuf::RepeatedPtrField<T>& google::protobuf::Reflection::GetRepeatedPtrField(const google::protobuf::Message&, const google::protobuf::FieldDescriptor*) const [with T = google::protobuf::Message]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:1119:35: error: invalid conversion from 'void*' to 'const google::protobuf::Descriptor*' [-fpermissive]
+                           -1, NULL));
+                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:896:23: note:   initializing argument 5 of 'virtual const void* google::protobuf::Reflection::GetRawRepeatedField(const google::protobuf::Message&, const google::protobuf::FieldDescriptor*, google::protobuf::FieldDescriptor::CppType, int, const google::protobuf::Descriptor*) const'
+   virtual const void* GetRawRepeatedField(
+                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h: In member function 'google::protobuf::RepeatedPtrField<T>* google::protobuf::Reflection::MutableRepeatedPtrField(google::protobuf::Message*, const google::protobuf::FieldDescriptor*) const [with T = google::protobuf::Message]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:1128:15: error: invalid conversion from 'void*' to 'const google::protobuf::Descriptor*' [-fpermissive]
+           NULL));
+               ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/message.h:891:17: note:   initializing argument 5 of 'virtual void* google::protobuf::Reflection::MutableRawRepeatedField(google::protobuf::Message*, const google::protobuf::FieldDescriptor*, google::protobuf::FieldDescriptor::CppType, int, const google::protobuf::Descriptor*) const'
+   virtual void* MutableRawRepeatedField(
+                 ^
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:36:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h: In static member function 'static const Type& google::protobuf::internal::GenericTypeHandler<Type>::default_instance() [with GenericType = google::protobuf::MessageLite; google::protobuf::internal::GenericTypeHandler<Type>::Type = google::protobuf::MessageLite]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::MessageLite*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:671:23: note: in expansion of macro 'NULL'
+   MessageLite* null = NULL;
+                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h: In static member function 'static const Type& google::protobuf::internal::GenericTypeHandler<Type>::default_instance() [with GenericType = google::protobuf::Message; google::protobuf::internal::GenericTypeHandler<Type>::Type = google::protobuf::Message]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::Message*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:680:19: note: in expansion of macro 'NULL'
+   Message* null = NULL;
+                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h: In static member function 'static google::protobuf::Arena* google::protobuf::internal::StringTypeHandlerBase::GetArena(std::__cxx11::string*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:706:12: note: in expansion of macro 'NULL'
+     return NULL;
+            ^
+In file included from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:27:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/core/tagreaderclient.h:25,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:26,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h: In constructor 'google::protobuf::internal::RepeatedPtrFieldBase::RepeatedPtrFieldBase()':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:1366:14: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+     rep_(NULL) {
+              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:1366:14: error: invalid conversion from 'void*' to 'google::protobuf::internal::RepeatedPtrFieldBase::Rep*' [-fpermissive]
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h: In constructor 'google::protobuf::internal::RepeatedPtrFieldBase::RepeatedPtrFieldBase(google::protobuf::Arena*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:1373:14: error: invalid conversion from 'void*' to 'google::protobuf::internal::RepeatedPtrFieldBase::Rep*' [-fpermissive]
+     rep_(NULL) {
+              ^
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:36:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h: In member function 'void* const* google::protobuf::internal::RepeatedPtrFieldBase::raw_data() const':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'void* const*' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:1555:34: note: in expansion of macro 'NULL'
+   return rep_ ? rep_->elements : NULL;
+                                  ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h: In member function 'void** google::protobuf::internal::RepeatedPtrFieldBase::raw_mutable_data() const':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/types.h:183:25: error: invalid conversion from 'void*' to 'void**' [-fpermissive]
+ # define NULL ((void*) 0)
+                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/repeated_field.h:1559:54: note: in expansion of macro 'NULL'
+   return rep_ ? const_cast<void**>(rep_->elements) : NULL;
+                                                      ^
+In file included from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:28:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/core/tagreaderclient.h:25,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:26,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In constructor 'google::protobuf::internal::ExtensionInfo::ExtensionInfo(google::protobuf::internal::FieldType, bool, bool)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:96:24: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+         descriptor(NULL) {}
+                        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::PrimitiveTypeTraits<Type>::Set(int, google::protobuf::internal::FieldType, google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType, google::protobuf::internal::ExtensionSet*) [with Type = int; google::protobuf::internal::FieldType = unsigned char; google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType = int]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:771:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Set##METHOD(number, field_type, value, NULL);                       \
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:811:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( int32,  Int32)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:247:8: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetInt32(int, google::protobuf::internal::FieldType, google::protobuf::int32, const google::protobuf::FieldDescriptor*)'
+   void SetInt32 (int number, FieldType type, int32  value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::Add(int, google::protobuf::internal::FieldType, bool, Type, google::protobuf::internal::ExtensionSet*) [with Type = int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:785:62: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Add##METHOD(number, field_type, is_packed, value, NULL);            \
+                                                              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:811:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( int32,  Int32)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:323:8: note:   initializing argument 5 of 'void google::protobuf::internal::ExtensionSet::AddInt32(int, google::protobuf::internal::FieldType, bool, google::protobuf::int32, const google::protobuf::FieldDescriptor*)'
+   void AddInt32 (int number, FieldType type, bool packed, int32  value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*) [with Type = int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:808:71: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+       set->MutableRawRepeatedField(number, field_type, is_packed, NULL));  \
+                                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:811:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( int32,  Int32)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::PrimitiveTypeTraits<Type>::Set(int, google::protobuf::internal::FieldType, google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType, google::protobuf::internal::ExtensionSet*) [with Type = long long int; google::protobuf::internal::FieldType = unsigned char; google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType = long long int]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:771:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Set##METHOD(number, field_type, value, NULL);                       \
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:812:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( int64,  Int64)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:248:8: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetInt64(int, google::protobuf::internal::FieldType, google::protobuf::int64, const google::protobuf::FieldDescriptor*)'
+   void SetInt64 (int number, FieldType type, int64  value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::Add(int, google::protobuf::internal::FieldType, bool, Type, google::protobuf::internal::ExtensionSet*) [with Type = long long int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:785:62: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Add##METHOD(number, field_type, is_packed, value, NULL);            \
+                                                              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:812:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( int64,  Int64)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:324:8: note:   initializing argument 5 of 'void google::protobuf::internal::ExtensionSet::AddInt64(int, google::protobuf::internal::FieldType, bool, google::protobuf::int64, const google::protobuf::FieldDescriptor*)'
+   void AddInt64 (int number, FieldType type, bool packed, int64  value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*) [with Type = long long int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:808:71: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+       set->MutableRawRepeatedField(number, field_type, is_packed, NULL));  \
+                                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:812:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( int64,  Int64)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::PrimitiveTypeTraits<Type>::Set(int, google::protobuf::internal::FieldType, google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType, google::protobuf::internal::ExtensionSet*) [with Type = unsigned int; google::protobuf::internal::FieldType = unsigned char; google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType = unsigned int]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:771:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Set##METHOD(number, field_type, value, NULL);                       \
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:813:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(uint32, UInt32)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:249:8: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetUInt32(int, google::protobuf::internal::FieldType, google::protobuf::uint32, const google::protobuf::FieldDescriptor*)'
+   void SetUInt32(int number, FieldType type, uint32 value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::Add(int, google::protobuf::internal::FieldType, bool, Type, google::protobuf::internal::ExtensionSet*) [with Type = unsigned int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:785:62: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Add##METHOD(number, field_type, is_packed, value, NULL);            \
+                                                              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:813:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(uint32, UInt32)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:325:8: note:   initializing argument 5 of 'void google::protobuf::internal::ExtensionSet::AddUInt32(int, google::protobuf::internal::FieldType, bool, google::protobuf::uint32, const google::protobuf::FieldDescriptor*)'
+   void AddUInt32(int number, FieldType type, bool packed, uint32 value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*) [with Type = unsigned int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:808:71: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+       set->MutableRawRepeatedField(number, field_type, is_packed, NULL));  \
+                                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:813:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(uint32, UInt32)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::PrimitiveTypeTraits<Type>::Set(int, google::protobuf::internal::FieldType, google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType, google::protobuf::internal::ExtensionSet*) [with Type = long long unsigned int; google::protobuf::internal::FieldType = unsigned char; google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType = long long unsigned int]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:771:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Set##METHOD(number, field_type, value, NULL);                       \
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:814:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(uint64, UInt64)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:250:8: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetUInt64(int, google::protobuf::internal::FieldType, google::protobuf::uint64, const google::protobuf::FieldDescriptor*)'
+   void SetUInt64(int number, FieldType type, uint64 value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::Add(int, google::protobuf::internal::FieldType, bool, Type, google::protobuf::internal::ExtensionSet*) [with Type = long long unsigned int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:785:62: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Add##METHOD(number, field_type, is_packed, value, NULL);            \
+                                                              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:814:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(uint64, UInt64)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:326:8: note:   initializing argument 5 of 'void google::protobuf::internal::ExtensionSet::AddUInt64(int, google::protobuf::internal::FieldType, bool, google::protobuf::uint64, const google::protobuf::FieldDescriptor*)'
+   void AddUInt64(int number, FieldType type, bool packed, uint64 value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*) [with Type = long long unsigned int; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:808:71: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+       set->MutableRawRepeatedField(number, field_type, is_packed, NULL));  \
+                                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:814:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(uint64, UInt64)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::PrimitiveTypeTraits<Type>::Set(int, google::protobuf::internal::FieldType, google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType, google::protobuf::internal::ExtensionSet*) [with Type = float; google::protobuf::internal::FieldType = unsigned char; google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType = float]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:771:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Set##METHOD(number, field_type, value, NULL);                       \
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:815:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( float,  Float)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:251:8: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetFloat(int, google::protobuf::internal::FieldType, float, const google::protobuf::FieldDescriptor*)'
+   void SetFloat (int number, FieldType type, float  value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::Add(int, google::protobuf::internal::FieldType, bool, Type, google::protobuf::internal::ExtensionSet*) [with Type = float; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:785:62: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Add##METHOD(number, field_type, is_packed, value, NULL);            \
+                                                              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:815:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( float,  Float)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:327:8: note:   initializing argument 5 of 'void google::protobuf::internal::ExtensionSet::AddFloat(int, google::protobuf::internal::FieldType, bool, float, const google::protobuf::FieldDescriptor*)'
+   void AddFloat (int number, FieldType type, bool packed, float  value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*) [with Type = float; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:808:71: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+       set->MutableRawRepeatedField(number, field_type, is_packed, NULL));  \
+                                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:815:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE( float,  Float)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::PrimitiveTypeTraits<Type>::Set(int, google::protobuf::internal::FieldType, google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType, google::protobuf::internal::ExtensionSet*) [with Type = double; google::protobuf::internal::FieldType = unsigned char; google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType = double]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:771:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Set##METHOD(number, field_type, value, NULL);                       \
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:816:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(double, Double)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:252:8: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetDouble(int, google::protobuf::internal::FieldType, double, const google::protobuf::FieldDescriptor*)'
+   void SetDouble(int number, FieldType type, double value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::Add(int, google::protobuf::internal::FieldType, bool, Type, google::protobuf::internal::ExtensionSet*) [with Type = double; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:785:62: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Add##METHOD(number, field_type, is_packed, value, NULL);            \
+                                                              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:816:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(double, Double)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:328:8: note:   initializing argument 5 of 'void google::protobuf::internal::ExtensionSet::AddDouble(int, google::protobuf::internal::FieldType, bool, double, const google::protobuf::FieldDescriptor*)'
+   void AddDouble(int number, FieldType type, bool packed, double value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*) [with Type = double; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:808:71: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+       set->MutableRawRepeatedField(number, field_type, is_packed, NULL));  \
+                                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:816:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(double, Double)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::PrimitiveTypeTraits<Type>::Set(int, google::protobuf::internal::FieldType, google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType, google::protobuf::internal::ExtensionSet*) [with Type = bool; google::protobuf::internal::FieldType = unsigned char; google::protobuf::internal::PrimitiveTypeTraits<Type>::ConstType = bool]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:771:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Set##METHOD(number, field_type, value, NULL);                       \
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:817:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(  bool,   Bool)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:253:8: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetBool(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void SetBool  (int number, FieldType type, bool   value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::Add(int, google::protobuf::internal::FieldType, bool, Type, google::protobuf::internal::ExtensionSet*) [with Type = bool; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:785:62: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+   set->Add##METHOD(number, field_type, is_packed, value, NULL);            \
+                                                              ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:817:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(  bool,   Bool)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:329:8: note:   initializing argument 5 of 'void google::protobuf::internal::ExtensionSet::AddBool(int, google::protobuf::internal::FieldType, bool, bool, const google::protobuf::FieldDescriptor*)'
+   void AddBool  (int number, FieldType type, bool packed, bool   value, desc);
+        ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedPrimitiveTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*) [with Type = bool; google::protobuf::internal::FieldType = unsigned char]':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:808:71: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+       set->MutableRawRepeatedField(number, field_type, is_packed, NULL));  \
+                                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:817:1: note: in expansion of macro 'PROTOBUF_DEFINE_PRIMITIVE_TYPE'
+ PROTOBUF_DEFINE_PRIMITIVE_TYPE(  bool,   Bool)
+ ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::StringTypeTraits::Set(int, google::protobuf::internal::FieldType, const string&, google::protobuf::internal::ExtensionSet*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:837:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+     set->SetString(number, field_type, value, NULL);
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:638:13: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::SetString(int, google::protobuf::internal::FieldType, const string&, const google::protobuf::FieldDescriptor*)'
+ inline void ExtensionSet::SetString(int number, FieldType type,
+             ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static std::__cxx11::string* google::protobuf::internal::StringTypeTraits::Mutable(int, google::protobuf::internal::FieldType, google::protobuf::internal::ExtensionSet*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:841:55: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+     return set->MutableString(number, field_type, NULL);
+                                                       ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:256:12: note:   initializing argument 3 of 'std::__cxx11::string* google::protobuf::internal::ExtensionSet::MutableString(int, google::protobuf::internal::FieldType, const google::protobuf::FieldDescriptor*)'
+   string * MutableString (int number, FieldType type, desc);
+            ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static void google::protobuf::internal::RepeatedStringTypeTraits::Add(int, google::protobuf::internal::FieldType, bool, const string&, google::protobuf::internal::ExtensionSet*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:869:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+     set->AddString(number, field_type, value, NULL);
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:647:13: note:   initializing argument 4 of 'void google::protobuf::internal::ExtensionSet::AddString(int, google::protobuf::internal::FieldType, const string&, const google::protobuf::FieldDescriptor*)'
+ inline void ExtensionSet::AddString(int number, FieldType type,
+             ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static std::__cxx11::string* google::protobuf::internal::RepeatedStringTypeTraits::Add(int, google::protobuf::internal::FieldType, google::protobuf::internal::ExtensionSet*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:873:51: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+     return set->AddString(number, field_type, NULL);
+                                                   ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:332:12: note:   initializing argument 3 of 'std::__cxx11::string* google::protobuf::internal::ExtensionSet::AddString(int, google::protobuf::internal::FieldType, const google::protobuf::FieldDescriptor*)'
+   string * AddString (int number, FieldType type, desc);
+            ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedPtrField<std::__cxx11::basic_string<char> >* google::protobuf::internal::RepeatedStringTypeTraits::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:886:53: error: invalid conversion from 'void*' to 'const google::protobuf::FieldDescriptor*' [-fpermissive]
+                                      is_packed, NULL));
+                                                     ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   initializing argument 4 of 'void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*)'
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedField<T>* google::protobuf::internal::RepeatedEnumTypeTraits<Type, IsValid>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:962:73: error: no matching function for call to 'google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int&, google::protobuf::internal::FieldType&, bool&, void*)'
+         set->MutableRawRepeatedField(number, field_type, is_packed, NULL));
+                                                                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note: candidate: void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*) <near match>
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   conversion of argument 4 would be ill-formed:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:297:9: note: candidate: void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int)
+   void* MutableRawRepeatedField(int number);
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:297:9: note:   candidate expects 1 argument, 4 provided
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h: In static member function 'static google::protobuf::RepeatedPtrField<T>* google::protobuf::internal::RepeatedMessageTypeTraits<Type>::MutableRepeated(int, google::protobuf::internal::FieldType, bool, google::protobuf::internal::ExtensionSet*)':
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:1061:73: error: no matching function for call to 'google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int&, google::protobuf::internal::FieldType&, bool&, void*)'
+         set->MutableRawRepeatedField(number, field_type, is_packed, NULL));
+                                                                         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note: candidate: void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int, google::protobuf::internal::FieldType, bool, const google::protobuf::FieldDescriptor*) <near match>
+   void* MutableRawRepeatedField(int number, FieldType field_type,
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:290:9: note:   conversion of argument 4 would be ill-formed:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:297:9: note: candidate: void* google::protobuf::internal::ExtensionSet::MutableRawRepeatedField(int)
+   void* MutableRawRepeatedField(int number);
+         ^
+/usr/pkgsrc/local/clementine/work/.buildlink/include/google/protobuf/extension_set.h:297:9: note:   candidate expects 1 argument, 4 provided
+In file included from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/core/tagreaderclient.h:25:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:26,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::SongMetadata* pb::tagreader::SongMetadata::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:122:53: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline SongMetadata* New() const { return New(NULL); }
+                                                     ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:124:17: note:   initializing argument 1 of 'virtual pb::tagreader::SongMetadata* pb::tagreader::SongMetadata::New(google::protobuf::Arena*) const'
+   SongMetadata* New(::google::protobuf::Arena* arena) const;
+                 ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::ReadFileRequest* pb::tagreader::ReadFileRequest::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:672:56: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline ReadFileRequest* New() const { return New(NULL); }
+                                                        ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:674:20: note:   initializing argument 1 of 'virtual pb::tagreader::ReadFileRequest* pb::tagreader::ReadFileRequest::New(google::protobuf::Arena*) const'
+   ReadFileRequest* New(::google::protobuf::Arena* arena) const;
+                    ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::ReadFileResponse* pb::tagreader::ReadFileResponse::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:775:57: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline ReadFileResponse* New() const { return New(NULL); }
+                                                         ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:777:21: note:   initializing argument 1 of 'virtual pb::tagreader::ReadFileResponse* pb::tagreader::ReadFileResponse::New(google::protobuf::Arena*) const'
+   ReadFileResponse* New(::google::protobuf::Arena* arena) const;
+                     ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::SaveFileRequest* pb::tagreader::SaveFileRequest::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:875:56: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline SaveFileRequest* New() const { return New(NULL); }
+                                                        ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:877:20: note:   initializing argument 1 of 'virtual pb::tagreader::SaveFileRequest* pb::tagreader::SaveFileRequest::New(google::protobuf::Arena*) const'
+   SaveFileRequest* New(::google::protobuf::Arena* arena) const;
+                    ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::SaveFileResponse* pb::tagreader::SaveFileResponse::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:990:57: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline SaveFileResponse* New() const { return New(NULL); }
+                                                         ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:992:21: note:   initializing argument 1 of 'virtual pb::tagreader::SaveFileResponse* pb::tagreader::SaveFileResponse::New(google::protobuf::Arena*) const'
+   SaveFileResponse* New(::google::protobuf::Arena* arena) const;
+                     ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::IsMediaFileRequest* pb::tagreader::IsMediaFileRequest::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1088:59: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline IsMediaFileRequest* New() const { return New(NULL); }
+                                                           ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1090:23: note:   initializing argument 1 of 'virtual pb::tagreader::IsMediaFileRequest* pb::tagreader::IsMediaFileRequest::New(google::protobuf::Arena*) const'
+   IsMediaFileRequest* New(::google::protobuf::Arena* arena) const;
+                       ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::IsMediaFileResponse* pb::tagreader::IsMediaFileResponse::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1191:60: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline IsMediaFileResponse* New() const { return New(NULL); }
+                                                            ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1193:24: note:   initializing argument 1 of 'virtual pb::tagreader::IsMediaFileResponse* pb::tagreader::IsMediaFileResponse::New(google::protobuf::Arena*) const'
+   IsMediaFileResponse* New(::google::protobuf::Arena* arena) const;
+                        ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::LoadEmbeddedArtRequest* pb::tagreader::LoadEmbeddedArtRequest::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1289:63: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline LoadEmbeddedArtRequest* New() const { return New(NULL); }
+                                                               ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1291:27: note:   initializing argument 1 of 'virtual pb::tagreader::LoadEmbeddedArtRequest* pb::tagreader::LoadEmbeddedArtRequest::New(google::protobuf::Arena*) const'
+   LoadEmbeddedArtRequest* New(::google::protobuf::Arena* arena) const;
+                           ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::LoadEmbeddedArtResponse* pb::tagreader::LoadEmbeddedArtResponse::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1392:64: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline LoadEmbeddedArtResponse* New() const { return New(NULL); }
+                                                                ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1394:28: note:   initializing argument 1 of 'virtual pb::tagreader::LoadEmbeddedArtResponse* pb::tagreader::LoadEmbeddedArtResponse::New(google::protobuf::Arena*) const'
+   LoadEmbeddedArtResponse* New(::google::protobuf::Arena* arena) const;
+                            ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::ReadCloudFileRequest* pb::tagreader::ReadCloudFileRequest::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1495:61: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline ReadCloudFileRequest* New() const { return New(NULL); }
+                                                             ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1497:25: note:   initializing argument 1 of 'virtual pb::tagreader::ReadCloudFileRequest* pb::tagreader::ReadCloudFileRequest::New(google::protobuf::Arena*) const'
+   ReadCloudFileRequest* New(::google::protobuf::Arena* arena) const;
+                         ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::ReadCloudFileResponse* pb::tagreader::ReadCloudFileResponse::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1653:62: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline ReadCloudFileResponse* New() const { return New(NULL); }
+                                                              ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1655:26: note:   initializing argument 1 of 'virtual pb::tagreader::ReadCloudFileResponse* pb::tagreader::ReadCloudFileResponse::New(google::protobuf::Arena*) const'
+   ReadCloudFileResponse* New(::google::protobuf::Arena* arena) const;
+                          ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::SaveSongStatisticsToFileRequest* pb::tagreader::SaveSongStatisticsToFileRequest::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1753:72: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline SaveSongStatisticsToFileRequest* New() const { return New(NULL); }
+                                                                        ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1755:36: note:   initializing argument 1 of 'virtual pb::tagreader::SaveSongStatisticsToFileRequest* pb::tagreader::SaveSongStatisticsToFileRequest::New(google::protobuf::Arena*) const'
+   SaveSongStatisticsToFileRequest* New(::google::protobuf::Arena* arena) const;
+                                    ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::SaveSongStatisticsToFileResponse* pb::tagreader::SaveSongStatisticsToFileResponse::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1868:73: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline SaveSongStatisticsToFileResponse* New() const { return New(NULL); }
+                                                                         ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1870:37: note:   initializing argument 1 of 'virtual pb::tagreader::SaveSongStatisticsToFileResponse* pb::tagreader::SaveSongStatisticsToFileResponse::New(google::protobuf::Arena*) const'
+   SaveSongStatisticsToFileResponse* New(::google::protobuf::Arena* arena) const;
+                                     ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::SaveSongRatingToFileRequest* pb::tagreader::SaveSongRatingToFileRequest::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1966:68: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline SaveSongRatingToFileRequest* New() const { return New(NULL); }
+                                                                    ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:1968:32: note:   initializing argument 1 of 'virtual pb::tagreader::SaveSongRatingToFileRequest* pb::tagreader::SaveSongRatingToFileRequest::New(google::protobuf::Arena*) const'
+   SaveSongRatingToFileRequest* New(::google::protobuf::Arena* arena) const;
+                                ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::SaveSongRatingToFileResponse* pb::tagreader::SaveSongRatingToFileResponse::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:2081:69: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline SaveSongRatingToFileResponse* New() const { return New(NULL); }
+                                                                     ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:2083:33: note:   initializing argument 1 of 'virtual pb::tagreader::SaveSongRatingToFileResponse* pb::tagreader::SaveSongRatingToFileResponse::New(google::protobuf::Arena*) const'
+   SaveSongRatingToFileResponse* New(::google::protobuf::Arena* arena) const;
+                                 ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'virtual pb::tagreader::Message* pb::tagreader::Message::New() const':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:2179:48: error: invalid conversion from 'void*' to 'google::protobuf::Arena*' [-fpermissive]
+   inline Message* New() const { return New(NULL); }
+                                                ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:2181:12: note:   initializing argument 1 of 'virtual pb::tagreader::Message* pb::tagreader::Message::New(google::protobuf::Arena*) const'
+   Message* New(::google::protobuf::Arena* arena) const;
+            ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SongMetadata* pb::tagreader::ReadFileResponse::release_metadata()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:3758:13: error: invalid conversion from 'void*' to 'pb::tagreader::SongMetadata*' [-fpermissive]
+   metadata_ = NULL;
+             ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SongMetadata* pb::tagreader::SaveFileRequest::release_metadata()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:3864:13: error: invalid conversion from 'void*' to 'pb::tagreader::SongMetadata*' [-fpermissive]
+   metadata_ = NULL;
+             ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SongMetadata* pb::tagreader::ReadCloudFileResponse::release_metadata()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4408:13: error: invalid conversion from 'void*' to 'pb::tagreader::SongMetadata*' [-fpermissive]
+   metadata_ = NULL;
+             ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SongMetadata* pb::tagreader::SaveSongStatisticsToFileRequest::release_metadata()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4514:13: error: invalid conversion from 'void*' to 'pb::tagreader::SongMetadata*' [-fpermissive]
+   metadata_ = NULL;
+             ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SongMetadata* pb::tagreader::SaveSongRatingToFileRequest::release_metadata()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4651:13: error: invalid conversion from 'void*' to 'pb::tagreader::SongMetadata*' [-fpermissive]
+   metadata_ = NULL;
+             ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::ReadFileRequest* pb::tagreader::Message::release_read_file_request()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4758:22: error: invalid conversion from 'void*' to 'pb::tagreader::ReadFileRequest*' [-fpermissive]
+   read_file_request_ = NULL;
+                      ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::ReadFileResponse* pb::tagreader::Message::release_read_file_response()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4803:23: error: invalid conversion from 'void*' to 'pb::tagreader::ReadFileResponse*' [-fpermissive]
+   read_file_response_ = NULL;
+                       ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SaveFileRequest* pb::tagreader::Message::release_save_file_request()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4848:22: error: invalid conversion from 'void*' to 'pb::tagreader::SaveFileRequest*' [-fpermissive]
+   save_file_request_ = NULL;
+                      ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SaveFileResponse* pb::tagreader::Message::release_save_file_response()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4893:23: error: invalid conversion from 'void*' to 'pb::tagreader::SaveFileResponse*' [-fpermissive]
+   save_file_response_ = NULL;
+                       ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::IsMediaFileRequest* pb::tagreader::Message::release_is_media_file_request()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4938:26: error: invalid conversion from 'void*' to 'pb::tagreader::IsMediaFileRequest*' [-fpermissive]
+   is_media_file_request_ = NULL;
+                          ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::IsMediaFileResponse* pb::tagreader::Message::release_is_media_file_response()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:4983:27: error: invalid conversion from 'void*' to 'pb::tagreader::IsMediaFileResponse*' [-fpermissive]
+   is_media_file_response_ = NULL;
+                           ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::LoadEmbeddedArtRequest* pb::tagreader::Message::release_load_embedded_art_request()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5028:30: error: invalid conversion from 'void*' to 'pb::tagreader::LoadEmbeddedArtRequest*' [-fpermissive]
+   load_embedded_art_request_ = NULL;
+                              ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::LoadEmbeddedArtResponse* pb::tagreader::Message::release_load_embedded_art_response()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5073:31: error: invalid conversion from 'void*' to 'pb::tagreader::LoadEmbeddedArtResponse*' [-fpermissive]
+   load_embedded_art_response_ = NULL;
+                               ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::ReadCloudFileRequest* pb::tagreader::Message::release_read_cloud_file_request()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5118:28: error: invalid conversion from 'void*' to 'pb::tagreader::ReadCloudFileRequest*' [-fpermissive]
+   read_cloud_file_request_ = NULL;
+                            ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::ReadCloudFileResponse* pb::tagreader::Message::release_read_cloud_file_response()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5163:29: error: invalid conversion from 'void*' to 'pb::tagreader::ReadCloudFileResponse*' [-fpermissive]
+   read_cloud_file_response_ = NULL;
+                             ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SaveSongStatisticsToFileRequest* pb::tagreader::Message::release_save_song_statistics_to_file_request()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5208:41: error: invalid conversion from 'void*' to 'pb::tagreader::SaveSongStatisticsToFileRequest*' [-fpermissive]
+   save_song_statistics_to_file_request_ = NULL;
+                                         ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SaveSongStatisticsToFileResponse* pb::tagreader::Message::release_save_song_statistics_to_file_response()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5253:42: error: invalid conversion from 'void*' to 'pb::tagreader::SaveSongStatisticsToFileResponse*' [-fpermissive]
+   save_song_statistics_to_file_response_ = NULL;
+                                          ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SaveSongRatingToFileRequest* pb::tagreader::Message::release_save_song_rating_to_file_request()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5298:37: error: invalid conversion from 'void*' to 'pb::tagreader::SaveSongRatingToFileRequest*' [-fpermissive]
+   save_song_rating_to_file_request_ = NULL;
+                                     ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h: In member function 'pb::tagreader::SaveSongRatingToFileResponse* pb::tagreader::Message::release_save_song_rating_to_file_response()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/ext/libclementine-tagreader/tagreadermessages.pb.h:5343:38: error: invalid conversion from 'void*' to 'pb::tagreader::SaveSongRatingToFileResponse*' [-fpermissive]
+   save_song_rating_to_file_response_ = NULL;
+                                      ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp: In constructor 'Ripper::Ripper(QObject*)':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:48:41: error: invalid conversion from 'void*' to 'const char*' [-fpermissive]
+   cdio_ = cdio_open(NULL, DRIVER_UNKNOWN);
+                                         ^
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:56:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/device.h:504:12: note:   initializing argument 1 of 'CdIo_t* cdio_open(const char*, driver_id_t)'
+   CdIo_t * cdio_open (const char *psz_source, driver_id_t driver_id);
+            ^
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp: In member function 'bool Ripper::CheckCDIOIsValid()':
+/usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:110:41: error: invalid conversion from 'void*' to 'const char*' [-fpermissive]
+   cdio_ = cdio_open(NULL, DRIVER_UNKNOWN);
+                                         ^
+In file included from /usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/cdio.h:56:0,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.h:21,
+                 from /usr/pkgsrc/local/clementine/work/Clementine-1.3.1/src/ripper/ripper.cpp:18:
+/usr/pkgsrc/local/clementine/work/.buildlink/include/cdio/device.h:504:12: note:   initializing argument 1 of 'CdIo_t* cdio_open(const char*, driver_id_t)'
+   CdIo_t * cdio_open (const char *psz_source, driver_id_t driver_id);
+            ^
+At global scope:
+cc1plus: warning: unrecognized command line option '-Wno-unknown-warning-option'
+cc1plus: warning: unrecognized command line option '-Wno-unused-private-field'
+cc1plus: warning: unrecognized command line option '-Wno-inconsistent-missing-override'
+--- src/CMakeFiles/clementine_lib.dir/ripper/ripper.cpp.o ---
+*** [src/CMakeFiles/clementine_lib.dir/ripper/ripper.cpp.o] Error code 1
+
+make[2]: stopped in /usr/pkgsrc/local/clementine/work/Clementine-1.3.1
+1 error
+
+make[2]: stopped in /usr/pkgsrc/local/clementine/work/Clementine-1.3.1
+--- src/CMakeFiles/clementine_lib.dir/all ---
+*** [src/CMakeFiles/clementine_lib.dir/all] Error code 2
+
+make[1]: stopped in /usr/pkgsrc/local/clementine/work/Clementine-1.3.1
+1 error
+
+make[1]: stopped in /usr/pkgsrc/local/clementine/work/Clementine-1.3.1
+*** [all] Error code 2
+
+make: stopped in /usr/pkgsrc/local/clementine/work/Clementine-1.3.1
+
+make: stopped in /usr/pkgsrc/local/clementine/work/Clementine-1.3.1
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/local/clementine
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/local/clementine

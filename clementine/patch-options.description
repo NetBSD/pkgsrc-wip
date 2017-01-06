@@ -1,0 +1,98 @@
+--- ../../mk/defaults/options.description.orig	2017-01-05 21:25:14.704130195 +0000
++++ ../../mk/defaults/options.description	2017-01-05 21:34:52.855017538 +0000
+@@ -11,6 +11,7 @@
+ amanda-fqdn		Use FQDN's in Amanda.
+ amanda-smb		Enable SMB backup support.
+ amanda-ssh		Enable ssh as a transport.
++amazon-cloud-drive	Enable support for Amazon Cloud Drive.
+ amtterm-gamt		Build amtterm GUI version (gamt).
+ amule-alc		Build aMule LinkCreator GUI version.
+ amule-alcc		Build aMule LinkCreator for console.
+@@ -43,6 +44,7 @@
+ aterm-kanji		Enable kanji support.
+ aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
+ atheme-large-net	Enable support for large networks (i.e. > 2000 users).
++audiocd			Enable support for reading audio from CDs.
+ audiofile		Enable audio conversion using libaudiofile.
+ auth-db			Use Berkley DB for the jabberd2 authorization database.
+ auth-ldap		Use LDAP for jabberd2 authorization.
+@@ -61,6 +63,7 @@
+ bittorrent		Enable bittorrent support.
+ blender-exppython	Enable the Experimental Python support.
+ boehm-gc		Use Boehm's garbage collector for memory allocation.
++box			Enable support for Box Drive.
+ bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
+ bugzilla-charts		Enable generation of charts.
+ bugzilla-imagemagick	Compress .BMPs to save space.
+@@ -114,6 +117,7 @@
+ debug			Enable debugging facilities in the package.
+ debug-info		Enable debug info in generated binaries (e.g. for crash analysis), but not full scale debugging.
+ deliver-suid		Install deliver executable setuid root.
++devicekit		Enable support for the DeviceKit backend.
+ disable-compile-inits	Disable compile time implicit initialization.
+ djbdns-cachestats	Patch to add stats for cache hits/misses.
+ djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
+@@ -134,6 +138,7 @@
+ doxygen			Include doxygen based document.
+ drac			Enable DRAC support.
+ dri			Enable Direct Rendering support.
++dropbox			Enable DropBox support.
+ drupal-xmlservices	Enable XML-based services.
+ dspam-preferences-extension	Enable preferences extension.
+ dspam-verbose-debug	Enable verbose debugging support.
+@@ -236,6 +241,7 @@
+ gif			Enable GIF support.
+ gimp			Enable GIMP support.
+ gimp1-helpbrowser	Link against gnome1 to get a help browser.
++gio			Enable support for Gnome Input/Output.
+ git			Enable Git support.
+ git-gui			Build the GUI in Tcl/Tk.
+ glade			Enable Glade support
+@@ -252,6 +258,7 @@
+ gnuplot-pdf-doc		Install PDF document.
+ gnutls			Enable GNU TLS support.
+ goffice			Enable goffice support.
++google-drive		Enable Google Drive support.
+ gopher			Enable support for the Gopher information system.
+ gpgme			Enable gpg support, by using the gpgme library.
+ gqmpeg-japanese		Japanese ID3 tag support.
+@@ -406,6 +413,7 @@
+ lang-zh			Add Chinese language support.
+ lang-zh-cn		Add Chinese Simplified language support.
+ lang-zh-tw		Add Chinese Traditional language support.
++lastfm			Enable LastFM support.
+ latex			Depend on latex for build-time or run-time documentation.
+ lcms			Enable Light Color Management System support.
+ ldap			Enable LDAP support.
+@@ -484,6 +492,7 @@
+ modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
+ modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
+ modplug			Use for decoding mod-like music formats.
++moodbar			Enable Moodbar support.
+ motif			Enable motif support.
+ motoya			Add motoya fonts.
+ mozilla			Use mozilla as gecko rendering engine.
+@@ -662,6 +671,7 @@
+ skey			Enable S/Key support.
+ skk			Use SKK for Kana-to-Kanji conversion.
+ skkdic-expr2		Enable fast skkdic-expr tool.
++skydrive		Enable Microsoft SkyDrive support.
+ slang			Enable S-Lang support.
+ slp			Enable Service Location Protocol support.
+ small-net		Tune for a smaller networks.
+@@ -786,6 +796,7 @@
+ vice-hwscaling		Enable hardware-assisted screen scaling.
+ vidix			Enable VIDIX (Video Interface for *niX support).
+ viewvc-php		Use php to colorize .php and .inc files.
++visualisations		Enable Visualisations from ProjectM.
+ vlc-skins		Enable skins support in VLC.
+ vorbis			Enable Ogg Vorbis support.
+ w3m			Use and enable support for the w3m browser.
+@@ -800,6 +811,7 @@
+ websocket		Websocket protocol support (as specified in RFC6455)
+ webvmail		Install CGI script for voicemail.
+ wide-curses		Enable wide curses support.
++wiimote			Enable Wiimote support.
+ winbind			Enable name-service switch daemon support using Windows Servers.
+ wiredtiger		Enable WiredTiger support.
+ wmf			Enable WMF support.
