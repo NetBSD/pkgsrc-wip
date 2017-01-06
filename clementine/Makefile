@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	weabot@protonmail.com
 HOMEPAGE=	https://www.clementine-player.org/
-COMMENT=	Clementine is a music player made in qt4 based on Amarok 1.4
+COMMENT=	Cross-platform music player inspired by Amarok 1.4
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
