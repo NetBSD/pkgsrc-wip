@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2016-12-26 05:32:46.166552242 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-05 14:32:45.880405612 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1593 @@
+@@ -0,0 +1,1637 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -475,6 +475,50 @@ $NetBSD$
 +
 +    // Notify delegate that our process has exited.
 +    SetState(StateType::eStateExited, true);
++  }
++
++  ptrace_siginfo_t info;
++  const auto siginfo_err = PtraceWrapper(PT_GET_SIGINFO, pid, &info, sizeof(info));
++
++  ptrace_state_t state;
++  const auto state_err = PtraceWrapper(PT_GET_PROCESS_STATE, pid, &state, sizeof(state));
++
++  printf("Signal received signo=%d errno=%d code=%d\n", info.psi_siginfo.si_signo,
++    info.psi_siginfo.si_errno, info.psi_siginfo.si_code);
++
++  // Get details on the signal raised.
++  if (siginfo_err.Success() && state_err.Success()) {
++    switch(info.psi_siginfo.si_signo) {
++    case SIGTRAP:
++      // breakpoint
++      if ((info.psi_siginfo.si_code & TRAP_BRKPT) != 0)
++          printf("Breakpoint reported\n");
++      // single step (and temporarily also hardware watchpoint on x86)
++      else if ((info.psi_siginfo.si_code & TRAP_TRACE) != 0)
++          printf("Single step reported\n");
++      // fork(2)
++      else if ((state.pe_report_event & PTRACE_FORK) != 0)
++          printf("Fork reported\n");
++      // TODO: vfork(2)
++      // TODO: vfork(2) finished (parent resumed)
++      // TODO: LWP created
++      // TODO: LWP terminated
++      // ????: clone(2)/__clone(2) -- seems to be split between fork(2) and vfork(2)
++      // ????: posix_spawn(2)
++      // TODO: execve(2)
++      // Unknown
++      else
++        printf("Unknown event for SIGTRAP\n");
++      break;
++    case SIGSTOP:
++      // Handle SIGSTOP from LLGS (LLDB GDB Server)
++      if (info.psi_siginfo.si_code == SI_USER && info.psi_siginfo.si_pid == ::getpid()) {
++        /* Stop Tracking All Threads attached to Process */
++        for (const auto &thread_sp : m_threads) {
++          static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(SIGSTOP, &info.psi_siginfo);
++        }
++      }
++    }
 +  }
 +}
 +
