@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	libechonest
 LIBECHONEST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libechonest+=	libechonest>=2.3.1
-BUILDLINK_PKGSRCDIR.libechonest?=	../../local/libechonest
+BUILDLINK_PKGSRCDIR.libechonest?=	../../wip/libechonest
 .endif	# LIBECHONEST_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libechonest
