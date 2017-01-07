@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-05 14:32:45.880405612 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1637 @@
+@@ -0,0 +1,1640 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -496,6 +496,9 @@ $NetBSD$
 +      // single step (and temporarily also hardware watchpoint on x86)
 +      else if ((info.psi_siginfo.si_code & TRAP_TRACE) != 0)
 +          printf("Single step reported\n");
++      // exec()
++      else if ((info.psi_siginfo.si_code & TRAP_EXEC) != 0)
++          printf("exec() reported\n");
 +      // fork(2)
 +      else if ((state.pe_report_event & PTRACE_FORK) != 0)
 +          printf("Fork reported\n");
