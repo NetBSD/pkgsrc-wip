@@ -104,9 +104,10 @@ Suggested package updates
 	o py-pygit2-0.25.0
 	o py-rpyc-3.2.1
 	o py-scrapy-1.2.1
-	o py-sh-1.12.8
+	o py-sh-1.12.9
 	o py-smmap-2.0.1
 	o py-smop-0.29
+	o py-xpra-1.0.1
 	o py-zeitgeist-0.9.16
 	o qmc2-0.59
 	o qtcreator-4.1
