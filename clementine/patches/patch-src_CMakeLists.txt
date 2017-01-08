@@ -1,0 +1,15 @@
+$NetBSD$
+
+Disables optimization in src/ when the wiimote option is enabled.
+optimization seems to cause a few problems in the dbus/ dir.
+
+--- src/CMakeLists.txt.orig	2017-01-07 20:24:27.340872864 +0000
++++ src/CMakeLists.txt
+@@ -969,6 +969,7 @@ if(HAVE_DBUS)
+ 
+   # Wiimotedev interface classes
+   if(ENABLE_WIIMOTEDEV)
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O1")
+     qt4_add_dbus_interface(SOURCES
+         dbus/org.wiimotedev.deviceEvents.xml
+         dbus/wiimotedev)
