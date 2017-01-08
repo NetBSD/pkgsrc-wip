@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.8 2011/01/02 10:38:53 mjoellnir Exp $
 
-SHA1 (nzbget-0.7.0.tar.gz) = e47cfcc37adbb756f4b449914cbfc6dcaaeebaec
-RMD160 (nzbget-0.7.0.tar.gz) = b8ff4d454a51f5d1a5b4246437adad57c918500c
-Size (nzbget-0.7.0.tar.gz) = 316059 bytes
-SHA1 (patch-aa) = be7151d7c2bc3b1bd57cec5a7a18d542ad1a6204
+SHA1 (nzbget-17.1.tar.gz) = b72c99ccbd60bf87b000223e7d560107c31d0dff
+RMD160 (nzbget-17.1.tar.gz) = 464df7627689e8095df4951dafcce53df9b87ccf
+SHA512 (nzbget-17.1.tar.gz) = 85647087492443c93eba9bf1b02606585975f7194b400ee20252465141eb9dce9800bb7e7d89645f9e08c421710d0a9762aee337c63e218eeaad03802a5faf78
+Size (nzbget-17.1.tar.gz) = 1612896 bytes
