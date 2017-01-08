@@ -20,12 +20,13 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake
 
-CXXFLAGS+=	-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_ 
+CXXFLAGS+=	-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=0 \
 		-DUSE_FRIBIDI=0
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

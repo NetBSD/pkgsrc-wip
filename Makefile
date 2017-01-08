@@ -3976,6 +3976,7 @@ SUBDIR+=	superchic
 SUBDIR+=	supercollider
 SUBDIR+=	superlfv
 SUBDIR+=	supermodel
+SUBDIR+=	supertuxkart
 SUBDIR+=	surf
 SUBDIR+=	surf2-git
 SUBDIR+=	suse121_32_libbz2

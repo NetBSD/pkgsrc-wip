@@ -9,4 +9,4 @@ SHA1 (patch-IrrCompileConfig.h) = 597d7e542bc7f0aeac95e55871e4aa542d463eaa
 SHA1 (patch-as_config.h) = 0f1c3703fcdfe7db6f495b3d2e4434f0a537685a
 SHA1 (patch-as_memory.cpp) = 028c69a42b67cb60f8467d2ad38d496f63f4af09
 SHA1 (patch-os.cpp) = b5569351322777f12f339261820501887f1274bd
-SHA1 (patch-src_utils_log.hpp) = 3a3ff1f331da387dcfa0bc621b765904c4afc1d3
+SHA1 (patch-src_utils_log.hpp) = 918be9edb061c9b6a4ab8d69fdf241007020290c
