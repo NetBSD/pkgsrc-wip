@@ -4,16 +4,16 @@ Fix hardcoded paths.
 
 --- docs/man/man1/ansible.1.asciidoc.in.orig	2016-01-14 22:33:27.000000000 +0000
 +++ docs/man/man1/ansible.1.asciidoc.in
-@@ -98,7 +98,7 @@ Show help message and exit.
+@@ -102,7 +102,7 @@ Show help message and exit.
  
  *-i* 'PATH', *--inventory=*'PATH'::
  
 -The 'PATH' to the inventory, which defaults to '/etc/ansible/hosts'.
 +The 'PATH' to the inventory, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
- Alternatively you can use a comma separated list of hosts or single host with traling comma 'host,'.
+ Alternatively you can use a comma separated list of hosts or single host with trailing comma 'host,'.
  
  *-l* 'SUBSET', *--limit=*'SUBSET'::
-@@ -117,7 +117,7 @@ Execute the module called 'NAME'.
+@@ -121,7 +121,7 @@ Execute the module called 'NAME'.
  *-M* 'DIRECTORY', *--module-path=*'DIRECTORY'::
  
  The 'DIRECTORY' search path to load modules from. The default is
@@ -22,7 +22,7 @@ Fix hardcoded paths.
  environment variable.
  
  *-o*, *--one-line*::
-@@ -223,11 +223,11 @@ Many more are available for most options
+@@ -227,11 +227,11 @@ Many more are available for most options
  FILES
  -----
  

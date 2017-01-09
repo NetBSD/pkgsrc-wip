@@ -4,7 +4,7 @@ Fix hardcoded paths.
 
 --- lib/ansible/constants.py.orig	2016-05-25 13:00:55.000000000 +0000
 +++ lib/ansible/constants.py
-@@ -99,7 +99,7 @@ def _get_config(p, section, key, env_var
+@@ -105,7 +105,7 @@ def _get_config(p, section, key, env_var
      return default
  
  def load_config_file():
@@ -13,25 +13,25 @@ Fix hardcoded paths.
  
      p = configparser.ConfigParser()
  
-@@ -110,7 +110,7 @@ def load_config_file():
-             path0 += "/ansible.cfg"
-     path1 = os.getcwd() + "/ansible.cfg"
+@@ -119,7 +119,7 @@ def load_config_file():
+     except OSError:
+         path1 = None
      path2 = os.path.expanduser("~/.ansible.cfg")
 -    path3 = "/etc/ansible/ansible.cfg"
 +    path3 = "@PKG_SYSCONFDIR@/ansible/ansible.cfg"
  
      for path in [path0, path1, path2, path3]:
          if path is not None and os.path.exists(path):
-@@ -139,7 +139,7 @@ DEFAULTS='defaults'
+@@ -148,7 +148,7 @@ DEFAULTS='defaults'
  # FIXME: add deprecation warning when these get set
- #### DEPRECATED VARS #### 
+ #### DEPRECATED VARS ####
  # use more sanely named 'inventory'
 -DEPRECATED_HOST_LIST  = get_config(p, DEFAULTS, 'hostfile', 'ANSIBLE_HOSTS', '/etc/ansible/hosts', ispath=True)
 +DEPRECATED_HOST_LIST  = get_config(p, DEFAULTS, 'hostfile', 'ANSIBLE_HOSTS', '@PKG_SYSCONFDIR@/ansible/hosts', ispath=True)
  # this is not used since 0.5 but people might still have in config
  DEFAULT_PATTERN           = get_config(p, DEFAULTS, 'pattern', None, None)
  
-@@ -147,7 +147,7 @@ DEFAULT_PATTERN           = get_config(p
+@@ -156,7 +156,7 @@ DEFAULT_PATTERN           = get_config(p
  DEFAULT_DEBUG             = get_config(p, DEFAULTS, 'debug',            'ANSIBLE_DEBUG',            False, boolean=True)
  DEFAULT_HOST_LIST         = get_config(p, DEFAULTS,'inventory', 'ANSIBLE_INVENTORY', DEPRECATED_HOST_LIST, ispath=True)
  DEFAULT_MODULE_PATH       = get_config(p, DEFAULTS, 'library',          'ANSIBLE_LIBRARY',          None, ispathlist=True)
@@ -40,9 +40,9 @@ Fix hardcoded paths.
  DEFAULT_REMOTE_TMP        = get_config(p, DEFAULTS, 'remote_tmp',       'ANSIBLE_REMOTE_TEMP',      '$HOME/.ansible/tmp')
  DEFAULT_LOCAL_TMP         = get_config(p, DEFAULTS, 'local_tmp',        'ANSIBLE_LOCAL_TEMP',      '$HOME/.ansible/tmp', istmppath=True)
  DEFAULT_MODULE_NAME       = get_config(p, DEFAULTS, 'module_name',      None,                       'command')
-@@ -229,16 +229,16 @@ DEFAULT_BECOME_ASK_PASS   = get_config(p
+@@ -241,16 +241,16 @@ DEFAULT_BECOME_ASK_PASS   = get_config(p
  # (mapping of param: squash field)
- DEFAULT_SQUASH_ACTIONS         = get_config(p, DEFAULTS, 'squash_actions',     'ANSIBLE_SQUASH_ACTIONS', "apk, apt, dnf, package, pacman, pkgng, yum, zypper", islist=True)
+ DEFAULT_SQUASH_ACTIONS         = get_config(p, DEFAULTS, 'squash_actions',     'ANSIBLE_SQUASH_ACTIONS', "apk, apt, dnf, homebrew, package, pacman, pkgng, yum, zypper", islist=True)
  # paths
 -DEFAULT_ACTION_PLUGIN_PATH     = get_config(p, DEFAULTS, 'action_plugins',     'ANSIBLE_ACTION_PLUGINS', '~/.ansible/plugins/action:/usr/share/ansible/plugins/action', ispathlist=True)
 -DEFAULT_CACHE_PLUGIN_PATH      = get_config(p, DEFAULTS, 'cache_plugins',      'ANSIBLE_CACHE_PLUGINS', '~/.ansible/plugins/cache:/usr/share/ansible/plugins/cache', ispathlist=True)
