@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
-DEPENDS+=	${PYPKGPREFIX}-jxmleasy-[0-9]*:../../wip/py-jxmlease
+DEPENDS+=	${PYPKGPREFIX}-jxmlease-[0-9]*:../../wip/py-jxmlease
 
 USE_TOOLS+=	gmake
 PYTHON_VERSIONS_ACCEPTED=		27
