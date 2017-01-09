@@ -11,11 +11,12 @@ HOMEPAGE=	https://7kfans.com/
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
 EXTRACT_USING=	bsdtar
 USE_LANGUAGES+=	c c++
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoreconf automake
+USE_TOOLS+=	autoreconf autoconf automake
 
 REPLACE_SH+=	autogen.sh
 
