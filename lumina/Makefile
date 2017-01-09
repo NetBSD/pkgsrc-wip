@@ -37,6 +37,8 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/lumina-desktop/menu-scripts/ls.json.sh.orig
 
 .include "../../x11/libXdamage/buildlink3.mk"
+# for libxcb-xinput
+BUILDLINK_ABI_DEPENDS.libxcb+=	libxcb>=1.12nb1
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
