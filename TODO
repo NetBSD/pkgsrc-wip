@@ -13,6 +13,7 @@ Suggested package updates
 	o bleachbit-0.9.6
 	o blink-2.0.0
 	o cairo-java-1.0.8
+	o calligra-3.0
 	o cde-2.2.4
 	o cinelerra-4.5
 	o d4x-2.5.7.1
@@ -43,6 +44,7 @@ Suggested package updates
 	o globulation2-0.9.4
 	o glsl-1.30
 	o gnome-do-0.9
+	o gnome3-3.22.2
 	o gnunet-0.10.1
 	o gnupod-0.99.8
 	o grandr-0.1
@@ -109,7 +111,7 @@ Suggested package updates
 	o py-xpra-1.0.1
 	o py-zeitgeist-0.9.16
 	o qmc2-0.59
-	o qtcreator-4.1
+	o qtcreator-4.2
 	o qupzilla-2.0.2
 	o rdup-1.1.13
 	o recoll-1.19.14
