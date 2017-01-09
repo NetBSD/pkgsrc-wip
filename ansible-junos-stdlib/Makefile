@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ansible-junos-stdlib-1.3.1
+DISTNAME=	ansible-junos-stdlib-1.4.0
 CATEGORIES=	sysutils net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Juniper/}
 
