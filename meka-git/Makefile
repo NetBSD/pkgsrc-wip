@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	nasm>=2.0:../../devel/nasm
 BUILD_TARGET=	exe
 
 GIT_REPOSITORIES=	meka
-GIT_REPO.meka=	https://github.com/ocornut/meka
+GIT_REPO.meka=	git://github.com/ocornut/meka
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
