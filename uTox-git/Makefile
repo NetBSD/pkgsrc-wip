@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	uTox-0.9.8
+DISTNAME=	uTox-0.11.1
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=GrayHatter/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=uTox/}
 
 GIT_REPOSITORIES=	uTox
-GIT_REPO.uTox=	http://github.com/GrayHatter/uTox.git
+GIT_REPO.uTox=	http://github.com/uTox/uTox.git
 WRKSRC=	${WRKDIR}/uTox
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,8 +13,7 @@ HOMEPAGE=	http://utox.org/
 COMMENT=	Lightweight Tox client for the desktop
 LICENSE=	gnu-gpl-v3
 
-NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_CMAKE=	yes
 
 .include "../../wip/toxcore-git/buildlink3.mk"
 .include "../../wip/filter_audio-git/buildlink3.mk"
