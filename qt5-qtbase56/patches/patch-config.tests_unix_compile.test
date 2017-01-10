@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- config.tests/unix/compile.test.orig	2016-12-01 08:17:04.000000000 +0000
++++ config.tests/unix/compile.test
+@@ -42,7 +42,7 @@ while [ "$#" -gt 0 ]; do
+         CFLAGS="$CFLAGS \"$PARAM\""
+         CXXFLAGS="$CXXFLAGS \"$PARAM\""
+         ;;
+-    -L*|-l*|-pthread)
++    -L*|-l*|-Wl*|-pthread)
+         LFLAGS="$LFLAGS \"$PARAM\""
+ 	;;
+     -I*)

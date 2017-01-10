@@ -1,0 +1,95 @@
+$NetBSD: patch-configure,v 1.4 2016/03/14 06:12:17 dbj Exp $
+
+* Don't use SDKs on OS X
+* Add NetBSD/sparc{,64} support
+
+--- configure.orig	2016-12-01 08:17:04.000000000 +0000
++++ configure
+@@ -328,7 +328,6 @@ getQMakeConf()
+ {
+     if [ -z "$specvals" ]; then
+         specvals=`expandQMakeConf "$QMAKESPEC/qmake.conf" "$HOST_VARS_FILE" | extractQMakeVariables "host_build"`
+-        if [ "$BUILD_ON_MAC" = "yes" ]; then specvals=$(macSDKify "$specvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$specvals"
+ }
+@@ -337,7 +336,6 @@ getXQMakeConf()
+ {
+     if [ -z "$xspecvals" ]; then
+         xspecvals=`expandQMakeConf "$XQMAKESPEC/qmake.conf" "$DEVICE_VARS_FILE" | extractQMakeVariables "!host_build"`
+-        if [ "$XPLATFORM_MAC" = "yes" ]; then xspecvals=$(macSDKify "$xspecvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$xspecvals"
+ }
+@@ -548,7 +546,7 @@ if [ "$BUILD_ON_MAC" = "yes" ]; then
+         exit 2
+     fi
+ 
+-    if ! /usr/bin/xcrun -find xcodebuild >/dev/null 2>&1; then
++    if ! /usr/bin/xcrun -find cc >/dev/null 2>&1; then
+         echo >&2
+         echo "   Xcode not set up properly. You may need to confirm the license" >&2
+         echo "   agreement by running /usr/bin/xcodebuild without arguments." >&2
+@@ -2993,6 +2991,19 @@ if [ -z "$PLATFORM" ]; then
+      UNIX_SV:*)
+         PLATFORM=unixware-g++
+         ;;
++    NetBSD:*:sparc)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC"
++        fi
++        CFG_HOST_ARCH=sparc
++        ;;
++    NetBSD:*:sparc64)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC64"
++        fi
++        CFG_HOST_ARCH=sparc
++        CFG_HOST_BITSIZE=64
++        ;;
+      QNX:*)
+         PLATFORM=unsupported/qnx-g++
+         ;;
+@@ -4003,10 +4014,12 @@ if true; then ###[ '!' -f "$outpath/bin/
+             EXTRA_CXXFLAGS="$EXTRA_CXXFLAGS \$(CARBON_CFLAGS)"
+             EXTRA_OBJS="$EXTRA_OBJS \
+                         qsettings_mac.o \
++                        qstring_mac.o \
+                         qcore_mac.o \
+                         qcore_mac_objc.o"
+             EXTRA_SRCS="$EXTRA_SRCS \
+                         \"\$(SOURCE_PATH)/src/corelib/io/qsettings_mac.cpp\" \
++                        \"\$(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm\" \
+                         \"\$(SOURCE_PATH)/src/corelib/kernel/qcore_mac.cpp\" \
+                         \"\$(SOURCE_PATH)/src/corelib/kernel/qcore_mac_objc.mm\""
+         fi
+@@ -4368,11 +4381,11 @@ if [ "$CFG_USE_GOLD_LINKER" != "no" ]; t
+ fi
+ 
+ # auto-detect --enable-new-dtags support
+-if linkerSupportsFlag $TEST_COMPILER --enable-new-dtags; then
+-    CFG_ENABLE_NEW_DTAGS=yes
+-else
++#if linkerSupportsFlag $TEST_COMPILER --enable-new-dtags; then
++#    CFG_ENABLE_NEW_DTAGS=yes
++#else
+     CFG_ENABLE_NEW_DTAGS=no
+-fi
++#fi
+ 
+ # auto-detect -fstack-protector-strong support (for QNX only currently)
+ if [ "$XPLATFORM_QNX" = "yes" ]; then
+@@ -4621,13 +4634,7 @@ if [ "${CFG_AVX512}" = "auto" ]; then
+         CFG_AVX512=f
+         CFG_AVX512_UPPER=AVX512F
+         for feature in er cd pf dq bw vl ifma vbmi; do
+-            if [ -n "$BASH_VERSION" ] && [ "${BASH_VERSION%%.*}" -gt 3 ]; then
+-                upper=${feature^^*}
+-            elif [ -n "$ZSH_VERSION" ]; then
+-                upper=${(U)feature}
+-            else
+                 upper=`echo $feature | tr a-z A-Z`
+-            fi
+             if compileTest common/avx512 "avx512$feature" AVX512=$upper; then
+                 CFG_AVX512="$CFG_AVX512 $feature"
+                 CFG_AVX512_UPPER="$CFG_AVX512_UPPER AVX512$upper"

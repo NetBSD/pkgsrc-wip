@@ -1,0 +1,42 @@
+$NetBSD: patch-qmake_Makefile.unix,v 1.2 2015/10/26 19:03:59 adam Exp $
+
+* Pass environmental variables from pkgsrc
+
+--- qmake/Makefile.unix.orig	2016-12-01 08:17:04.000000000 +0000
++++ qmake/Makefile.unix
+@@ -75,6 +75,7 @@ DEPEND_SRC = \
+ 	   $(SOURCE_PATH)/src/corelib/tools/qlocale_win.cpp \
+ 	   $(SOURCE_PATH)/src/corelib/tools/qlinkedlist.cpp \
+ 	   $(SOURCE_PATH)/src/corelib/tools/qhash.cpp $(SOURCE_PATH)/src/corelib/kernel/qcore_mac.cpp \
++	   $(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm \
+ 	   $(SOURCE_PATH)/src/corelib/kernel/qcore_mac_objc.mm \
+ 	   $(SOURCE_PATH)/src/corelib/io/qtemporaryfile.cpp $(SOURCE_PATH)/src/corelib/kernel/qmetatype.cpp \
+ 	   $(SOURCE_PATH)/src/corelib/io/qsettings.cpp $(SOURCE_PATH)/src/corelib/kernel/qvariant.cpp \
+@@ -94,7 +95,7 @@ DEPEND_SRC = \
+ 	   $(SOURCE_PATH)/src/corelib/json/qjsonvalue.cpp \
+ 	   $(QTSRCS)
+ 
+-CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
++CPPFLAGS += -g $(EXTRA_CPPFLAGS) \
+ 	   -I$(QMKSRC) -I$(QMKLIBSRC) -I$(QMKSRC)/generators -I$(QMKSRC)/generators/unix -I$(QMKSRC)/generators/win32 \
+ 	   -I$(QMKSRC)/generators/mac -I$(QMKSRC)/generators/integrity \
+ 	   -I$(INC_PATH) -I$(INC_PATH)/QtCore \
+@@ -109,7 +110,7 @@ CPPFLAGS = -g $(EXTRA_CPPFLAGS) \
+ 	   -DQT_NO_FOREACH \
+ 	   -DQT_CRYPTOGRAPHICHASH_ONLY_SHA1 -DQT_JSON_READONLY -DQT_NO_STANDARDPATHS
+ 
+-CXXFLAGS = $(EXTRA_CXXFLAGS) $(CPPFLAGS)
++CXXFLAGS += $(EXTRA_CXXFLAGS) $(CPPFLAGS)
+ 
+ first all: $(BUILD_PATH)/bin/qmake$(EXEEXT)
+ qmake: $(BUILD_PATH)/bin/qmake$(EXEEXT)
+@@ -290,6 +291,9 @@ qstring.o: $(SOURCE_PATH)/src/corelib/to
+ qstring_compat.o: $(SOURCE_PATH)/src/corelib/tools/qstring_compat.cpp
+ 	$(CXX) -c -o $@ $(CXXFLAGS) $(SOURCE_PATH)/src/corelib/tools/qstring_compat.cpp
+ 
++qstring_mac.o: $(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm
++	$(CXX) -c -o $@ $(CXXFLAGS) $(SOURCE_PATH)/src/corelib/tools/qstring_mac.mm
++
+ qstringbuilder.o: $(SOURCE_PATH)/src/corelib/tools/qstringbuilder.cpp
+ 	$(CXX) -c -o $@ $(CXXFLAGS) $(SOURCE_PATH)/src/corelib/tools/qstringbuilder.cpp
+ 
