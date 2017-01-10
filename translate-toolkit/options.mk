@@ -26,13 +26,14 @@ DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3:../../www/py-beautifulsoup4
 
 .if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=0.4:../../textproc/py-sphinx
-SUBST_CLASSES+=         sphinx
-SUBST_SED.sphinx+=      -e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"
-SUBST_FILES.sphinx+=    docs/Makefile
-SUBST_STAGE.sphinx=     pre-configure
-SUBST_MESSAGE.sphinx=   Fix sphinx command names.
+SUBST_CLASSES+=		sphinx
+SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"
+SUBST_FILES.sphinx+=	docs/Makefile
+SUBST_STAGE.sphinx=	pre-configure
+SUBST_MESSAGE.sphinx=	Fix sphinx command names.
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-PLIST.doc=             yes
+PLIST.doc=	yes
+
 pre-build:
 		${MKDIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 		cd ${WRKSRC}/docs && ${MAKE} man
@@ -40,6 +41,5 @@ pre-build:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 		${RM} -rf ${WRKSRC}/docs
 		${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/translate/docs/
-	
-.endif
 
+.endif
