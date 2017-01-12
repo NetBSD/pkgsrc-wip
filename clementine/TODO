@@ -1,2 +1,2 @@
--Get the AudioCD option to work
--Fix the errors in errors/
+-Get the AudioCD option to compile
+-Fix coredump/segfaults when clementine starts
