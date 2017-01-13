@@ -2,18 +2,18 @@ $NetBSD$
 
 Add minimal NetBSD support.
 
---- src/Makefile.orig	2016-12-02 14:00:23.000000000 +0000
+--- src/Makefile.orig	2017-01-06 07:54:39.000000000 +0000
 +++ src/Makefile
-@@ -19,7 +19,7 @@ UNAME                   := $(patsubst MS
+@@ -17,7 +17,7 @@ UNAME                   := $(patsubst MS
  UNAME                   := $(patsubst MINGW32_NT-%,MSYS2,$(UNAME))
  UNAME                   := $(patsubst MINGW64_NT-%,MSYS2,$(UNAME))
  
 -ifeq (,$(filter $(UNAME),Linux FreeBSD Darwin CYGWIN MSYS2))
 +ifeq (,$(filter $(UNAME),Linux FreeBSD NetBSD Darwin CYGWIN MSYS2))
- $(error "! Your Operating System ($(UNAME)) is not supported by $(PROG_NAME) Makefile")
+ $(error "! Your Operating System ($(UNAME)) is not supported by this Makefile")
  endif
  
-@@ -149,6 +149,16 @@ CFLAGS                  += -fsanitize=ad
+@@ -168,6 +168,16 @@ CFLAGS                  += -fsanitize=ad
  endif
  endif
  
@@ -30,3 +30,12 @@ Add minimal NetBSD support.
  ##
  ## Native compilation target
  ##
+@@ -388,7 +398,7 @@ $(HASHCAT_LIBRARY): $(NATIVE_SHARED_OBJS
+ 	$(CC) -o $@ $^ $(LFLAGS_NATIVE_SHARED) -shared
+ 
+ $(HASHCAT_FRONTEND): $(NATIVE_OBJS) $(HASHCAT_LIBRARY) src/main.c
+-	$(CC)    $(CFLAGS_NATIVE) -o $@ $^ $(LFLAGS_NATIVE) -L. -lhashcat -Wl,-rpath . -DCOMPTIME=$(COMPTIME) -DVERSION_TAG=\"$(VERSION_TAG)\" -DINSTALL_FOLDER=\"$(INSTALL_FOLDER)\" -DSHARED_FOLDER=\"$(SHARED_FOLDER)\" -DDOCUMENT_FOLDER=\"$(DOCUMENT_FOLDER)\"
++	$(CC)    $(CFLAGS_NATIVE) -o $@ $^ $(LFLAGS_NATIVE) -L. -lhashcat -Wl,-rpath. -DCOMPTIME=$(COMPTIME) -DVERSION_TAG=\"$(VERSION_TAG)\" -DINSTALL_FOLDER=\"$(INSTALL_FOLDER)\" -DSHARED_FOLDER=\"$(SHARED_FOLDER)\" -DDOCUMENT_FOLDER=\"$(DOCUMENT_FOLDER)\"
+ 
+ ##
+ ## cross compiled hashcat
