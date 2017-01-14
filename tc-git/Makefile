@@ -56,19 +56,19 @@ SUBST_STAGE.tc-pre=	pre-configure
 SUBST_FILES.tc-pre+=	lisp/tc-pre.el
 SUBST_SED.tc-pre+=	-e s\|/usr/local/share\|${PREFIX}/share\|g
 
-# Usually said: Nothing changed. (but hope to help some situation ;-) 
+# Usually said: Nothing changed. (but hope to help some situation ;-)
 SUBST_CLASSES+=		texinfo
 SUBST_MESSAGE.texinfo=	Unknown problem fix at the stage of generating doc/tc.texinfo
 SUBST_STAGE.texinfo=	post-configure
 SUBST_FILES.texinfo=	doc/Makefile
-SUBST_SED.texinfo=	'-e /if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLAGS\) -I $$\(srcdir\)/s/ -I ./tc.texinfo/'
+SUBST_SED.texinfo=	-e /if $$\(MAKEINFO\) $$\(AM_MAKEINFOFLAGS\) $$\(MAKEINFOFLAGS\) -I $$\(srcdir\)/s/ -I ./tc.texinfo/
 
 # string-to-int to string-to-number
 SUBST_CLASSES+=                s2i
 SUBST_MESSAGE.s2i=     string-to-int is an obsolete function; use `string-to-number' instead
 SUBST_STAGE.s2i=       post-patch
 SUBST_FILES.s2i=       lisp/eelll.el lisp/tc-is22.el lisp/tc-pre.el lisp/tc-pre-base.in
-SUBST_SED.s2i=         '-e s/string-to-int/string-to-number/g'
+SUBST_SED.s2i=         -e s/string-to-int/string-to-number/g
 
 .include "options.mk"
 
