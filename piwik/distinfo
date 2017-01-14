@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.7 2015/07/12 07:18:21 makoto Exp $
 
-SHA1 (piwik-2.16.0.tar.gz) = 495832721feb1c809fd1a96190ae686f4ff3f011
-RMD160 (piwik-2.16.0.tar.gz) = c175c00c23c45af2c0fac431ab9ac5b1778b7d1b
-SHA512 (piwik-2.16.0.tar.gz) = 78dcceafba66a59f8e33e9dc3efa13c2e126367795634429869b32e50e39ad341e2d678add8a980027840422efdf7f8b6a380b1690fb707a097e95db06bb5093
-Size (piwik-2.16.0.tar.gz) = 19233177 bytes
+SHA1 (piwik-2.17.1.tar.gz) = 9112adfe8ef071e6ed7cfcfbf98527f9d49c0e82
+RMD160 (piwik-2.17.1.tar.gz) = aba8efe42bf29f2e6af8cf56d2256271ec11f928
+SHA512 (piwik-2.17.1.tar.gz) = 55caa3500fef184c6636c65f8e61218f0d8fad69552507e5ca8cdc4e1ddeaa9711acff585a81fb6a40415a8b19914ca7946fe3cc76f08db166bd8350d551f6a2
+Size (piwik-2.17.1.tar.gz) = 19451385 bytes

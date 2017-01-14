@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2015/07/12 07:18:21 makoto Exp $
 
-DISTNAME=		piwik-2.16.0
+DISTNAME=		piwik-2.17.1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=piwik/}
 
