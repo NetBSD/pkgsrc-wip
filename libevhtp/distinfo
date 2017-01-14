@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (libevhtp/1.2.11.tar.gz) = 9750a39574a0195164f2f84315ae41f0db25ab65
+RMD160 (libevhtp/1.2.11.tar.gz) = dde9dd2f95757403c4952dbae8369fbfea34bb48
+SHA512 (libevhtp/1.2.11.tar.gz) = 849102c9e5ec54f4bbe4b4106e72ddd0864c8636bdd1f821e70d6dc4dc0b8b0039257e67d597199161187d522ff65dc826862adfc7c60e755a1ffa95fcd2ac44
+Size (libevhtp/1.2.11.tar.gz) = 429931 bytes
+SHA1 (patch-CMakeLists.txt) = d329dffb908f2524fc76fe2b384a880e183a4e15
