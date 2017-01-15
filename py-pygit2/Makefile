@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/12/04 23:44:45 othyro Exp $
 
-DISTNAME=	pygit2-0.24.2
+DISTNAME=	pygit2-0.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
