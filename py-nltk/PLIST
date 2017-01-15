@@ -3,6 +3,7 @@ ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/nltk/VERSION
 ${PYSITELIB}/nltk/__init__.py
@@ -158,6 +159,9 @@ ${PYSITELIB}/nltk/cluster/kmeans.pyo
 ${PYSITELIB}/nltk/cluster/util.py
 ${PYSITELIB}/nltk/cluster/util.pyc
 ${PYSITELIB}/nltk/cluster/util.pyo
+${PYSITELIB}/nltk/collections.py
+${PYSITELIB}/nltk/collections.pyc
+${PYSITELIB}/nltk/collections.pyo
 ${PYSITELIB}/nltk/collocations.py
 ${PYSITELIB}/nltk/collocations.pyc
 ${PYSITELIB}/nltk/collocations.pyo
@@ -398,6 +402,9 @@ ${PYSITELIB}/nltk/metrics/__init__.pyo
 ${PYSITELIB}/nltk/metrics/agreement.py
 ${PYSITELIB}/nltk/metrics/agreement.pyc
 ${PYSITELIB}/nltk/metrics/agreement.pyo
+${PYSITELIB}/nltk/metrics/aline.py
+${PYSITELIB}/nltk/metrics/aline.pyc
+${PYSITELIB}/nltk/metrics/aline.pyo
 ${PYSITELIB}/nltk/metrics/association.py
 ${PYSITELIB}/nltk/metrics/association.pyc
 ${PYSITELIB}/nltk/metrics/association.pyo
@@ -554,9 +561,6 @@ ${PYSITELIB}/nltk/sentiment/util.pyo
 ${PYSITELIB}/nltk/sentiment/vader.py
 ${PYSITELIB}/nltk/sentiment/vader.pyc
 ${PYSITELIB}/nltk/sentiment/vader.pyo
-${PYSITELIB}/nltk/six.py
-${PYSITELIB}/nltk/six.pyc
-${PYSITELIB}/nltk/six.pyo
 ${PYSITELIB}/nltk/stem/__init__.py
 ${PYSITELIB}/nltk/stem/__init__.pyc
 ${PYSITELIB}/nltk/stem/__init__.pyo
@@ -762,6 +766,9 @@ ${PYSITELIB}/nltk/test/unit/__init__.pyo
 ${PYSITELIB}/nltk/test/unit/test_2x_compat.py
 ${PYSITELIB}/nltk/test/unit/test_2x_compat.pyc
 ${PYSITELIB}/nltk/test/unit/test_2x_compat.pyo
+${PYSITELIB}/nltk/test/unit/test_aline.py
+${PYSITELIB}/nltk/test/unit/test_aline.pyc
+${PYSITELIB}/nltk/test/unit/test_aline.pyo
 ${PYSITELIB}/nltk/test/unit/test_classify.py
 ${PYSITELIB}/nltk/test/unit/test_classify.pyc
 ${PYSITELIB}/nltk/test/unit/test_classify.pyo
@@ -786,6 +793,9 @@ ${PYSITELIB}/nltk/test/unit/test_naivebayes.pyo
 ${PYSITELIB}/nltk/test/unit/test_seekable_unicode_stream_reader.py
 ${PYSITELIB}/nltk/test/unit/test_seekable_unicode_stream_reader.pyc
 ${PYSITELIB}/nltk/test/unit/test_seekable_unicode_stream_reader.pyo
+${PYSITELIB}/nltk/test/unit/test_senna.py
+${PYSITELIB}/nltk/test/unit/test_senna.pyc
+${PYSITELIB}/nltk/test/unit/test_senna.pyo
 ${PYSITELIB}/nltk/test/unit/test_stem.py
 ${PYSITELIB}/nltk/test/unit/test_stem.pyc
 ${PYSITELIB}/nltk/test/unit/test_stem.pyo
@@ -853,6 +863,9 @@ ${PYSITELIB}/nltk/tokenize/api.pyo
 ${PYSITELIB}/nltk/tokenize/casual.py
 ${PYSITELIB}/nltk/tokenize/casual.pyc
 ${PYSITELIB}/nltk/tokenize/casual.pyo
+${PYSITELIB}/nltk/tokenize/moses.py
+${PYSITELIB}/nltk/tokenize/moses.pyc
+${PYSITELIB}/nltk/tokenize/moses.pyo
 ${PYSITELIB}/nltk/tokenize/mwe.py
 ${PYSITELIB}/nltk/tokenize/mwe.pyc
 ${PYSITELIB}/nltk/tokenize/mwe.pyo
@@ -862,6 +875,9 @@ ${PYSITELIB}/nltk/tokenize/punkt.pyo
 ${PYSITELIB}/nltk/tokenize/regexp.py
 ${PYSITELIB}/nltk/tokenize/regexp.pyc
 ${PYSITELIB}/nltk/tokenize/regexp.pyo
+${PYSITELIB}/nltk/tokenize/repp.py
+${PYSITELIB}/nltk/tokenize/repp.pyc
+${PYSITELIB}/nltk/tokenize/repp.pyo
 ${PYSITELIB}/nltk/tokenize/sexpr.py
 ${PYSITELIB}/nltk/tokenize/sexpr.pyc
 ${PYSITELIB}/nltk/tokenize/sexpr.pyo
@@ -877,6 +893,9 @@ ${PYSITELIB}/nltk/tokenize/stanford_segmenter.pyo
 ${PYSITELIB}/nltk/tokenize/texttiling.py
 ${PYSITELIB}/nltk/tokenize/texttiling.pyc
 ${PYSITELIB}/nltk/tokenize/texttiling.pyo
+${PYSITELIB}/nltk/tokenize/toktok.py
+${PYSITELIB}/nltk/tokenize/toktok.pyc
+${PYSITELIB}/nltk/tokenize/toktok.pyo
 ${PYSITELIB}/nltk/tokenize/treebank.py
 ${PYSITELIB}/nltk/tokenize/treebank.pyc
 ${PYSITELIB}/nltk/tokenize/treebank.pyo
@@ -895,12 +914,18 @@ ${PYSITELIB}/nltk/translate/api.pyo
 ${PYSITELIB}/nltk/translate/bleu_score.py
 ${PYSITELIB}/nltk/translate/bleu_score.pyc
 ${PYSITELIB}/nltk/translate/bleu_score.pyo
+${PYSITELIB}/nltk/translate/chrf_score.py
+${PYSITELIB}/nltk/translate/chrf_score.pyc
+${PYSITELIB}/nltk/translate/chrf_score.pyo
 ${PYSITELIB}/nltk/translate/gale_church.py
 ${PYSITELIB}/nltk/translate/gale_church.pyc
 ${PYSITELIB}/nltk/translate/gale_church.pyo
 ${PYSITELIB}/nltk/translate/gdfa.py
 ${PYSITELIB}/nltk/translate/gdfa.pyc
 ${PYSITELIB}/nltk/translate/gdfa.pyo
+${PYSITELIB}/nltk/translate/gleu_score.py
+${PYSITELIB}/nltk/translate/gleu_score.pyc
+${PYSITELIB}/nltk/translate/gleu_score.pyo
 ${PYSITELIB}/nltk/translate/ibm1.py
 ${PYSITELIB}/nltk/translate/ibm1.pyc
 ${PYSITELIB}/nltk/translate/ibm1.pyo
