@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	openfodder
-DISTNAME=	1.0.0
+DISTNAME=	1.1.0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=segrax/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/segrax/openfodder/
 COMMENT=	Engine for the Cannon Fodder game
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/openfodder-1.0.0
+WRKSRC=		${WRKDIR}/openfodder-1.1.0
 USE_LANGUAGES=	c++
 
 CXXFLAGS+=	-std=c++0x
