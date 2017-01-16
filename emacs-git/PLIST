@@ -2389,7 +2389,6 @@ share/emacs/${PKGVERSION}/lisp/language/vietnamese.el.gz
 share/emacs/${PKGVERSION}/lisp/language/vietnamese.elc
 share/emacs/${PKGVERSION}/lisp/ldefs-boot-auto.el
 share/emacs/${PKGVERSION}/lisp/ldefs-boot-manual.el
-share/emacs/${PKGVERSION}/lisp/ldefs-boot.el
 share/emacs/${PKGVERSION}/lisp/leim/ja-dic/ja-dic.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/lisp/leim/leim-list.el
