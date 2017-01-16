@@ -2,19 +2,19 @@ $NetBSD$
 
 Avoid using Linux-specific headers when not compiling for Linux.
 
---- src/xlib/main.c.orig	2017-01-09 21:54:26.000000000 +0000
+--- src/xlib/main.c.orig	2017-01-16 21:01:20.000000000 +0000
 +++ src/xlib/main.c
-@@ -36,7 +36,9 @@ void postmessage_utox(UTOX_MSG msg, uint
+@@ -38,7 +38,9 @@ void postmessage_utox(UTOX_MSG msg, uint
      XFlush(display);
  }
  
 +#ifdef __LINUX__
  #include <linux/input.h>
 +#endif
- FILE *   ptt_keyboard_handle;
+ FILE    *ptt_keyboard_handle;
  Display *ptt_display;
  void     init_ptt(void) {
-@@ -61,6 +63,7 @@ bool check_ptt_key(void) {
+@@ -63,6 +65,7 @@ bool check_ptt_key(void) {
      int ptt_key;
  
      /* First, we try for direct access to the keyboard. */
