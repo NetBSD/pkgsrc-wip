@@ -14,14 +14,10 @@ PKG_SUPPORTED_OPTIONS=	wiimote \
 			google-drive \
 			amazon-cloud-drive \
 			skydrive \
+			seafile \
+			vk \
 			pulseaudio
-PKG_SUGGESTED_OPTIONS=	devicekit libmtp libgpod moodbar visualisations box dropbox google-drive amazon-cloud-drive skydrive
-ARCH=			`uname -m`
-
-
-.if  ${ARCH} == "x86"  ||  ${ARCH} == "x86_64"
-PKG_SUGGESTED_OPTIONS+=	lastfm
-.endif
+PKG_SUGGESTED_OPTIONS=	devicekit libmtp libgpod moodbar visualisations box dropbox google-drive amazon-cloud-drive skydrive seafile vk audiocd
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -175,12 +171,32 @@ CMAKE_ARGS+=	-DENABLE_SKYDRIVE=OFF
 .endif
 
 ###
+### seafile
+###
+
+.if !empty(PKG_OPTIONS:Mseafile)
+CMAKE_ARGS+=	-DENABLE_SEAFILE=ON
+.else
+CMAKE_ARGS+=	-DENABLE_SEAFILE=OFF
+.endif
+
+###
+### vk
+###
+
+.if !empty(PKG_OPTIONS:Mvk)
+CMAKE_ARGS+=	-DENABLE_VK=ON
+.else
+CMAKE_ARGS+=	-DENABLE_VK=OFF
+.endif
+
+###
 ### pulseaudio
 ###
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .	include "../../audio/pulseaudio/buildlink3.mk"
-CMAKE_ARGS+=	-DENABLE_PULSEAUDIO=ON
+CMAKE_ARGS+=	-DENABLE_LIBPULSE=ON
 .else
-CMAKE_ARGS+=	-DENABLE_PULSEAUDIO=OFF
+CMAKE_ARGS+=	-DENABLE_LIBPULSE=OFF
 .endif

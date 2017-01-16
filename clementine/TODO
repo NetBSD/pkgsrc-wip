@@ -1,2 +1,2 @@
--Get the AudioCD option to compile
--Fix coredump/segfaults when clementine starts
+- Fix no sound output
+- Add more audio codecs to dependencies (for ogg, for example)
