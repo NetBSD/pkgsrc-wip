@@ -7,3 +7,4 @@ Size (Clementine/1.3.1.tar.gz) = 8501827 bytes
 SHA1 (patch-src_CMakeLists.txt) = 08e7dcf38751d557ed867d279226159210f7dfc1
 SHA1 (patch-src_core_database.cpp) = f8d68df17b1b3cafbbc1751f10ad34bbe1099d88
 SHA1 (patch-src_musicbrainz_chromaprinter.cpp) = b2f9916aa77cbf8aa0b5929d6fe6c2b78e652301
+SHA1 (patch-src_ripper_ripper.h) = f75435b3ebd0491238a7aee03b9a71c26e80d7ef
