@@ -463,6 +463,7 @@ SUBDIR+=	dates
 SUBDIR+=	davical-git
 SUBDIR+=	db1
 SUBDIR+=	dbf
+SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer
 SUBDIR+=	ddate
 SUBDIR+=	deadbeef
