@@ -43,14 +43,17 @@ BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake \
 DEPENDS+=	qt4-tiff>=4.5.0:../../x11/qt4-tiff \
 		qt4-sqlite3>=4.5.0:../../x11/qt4-sqlite3 \
 		gst-plugins1-cdparanoia>=1.4.0:../../audio/gst-plugins1-cdparanoia \
+		gst-plugins1-oss>=1.4.0:../../audio/gst-plugins1-oss \
 		gst-plugins1-faac>=1.4.0:../../audio/gst-plugins1-faac \
 		gst-plugins1-faad>=1.4.0:../../audio/gst-plugins1-faad \
 		gst-plugins1-flac>=1.4.0:../../audio/gst-plugins1-flac \
 		gst-plugins1-gio>=1.4.0:../../sysutils/gst-plugins1-gio \
 		gst-plugins1-lame>=1.4.0:../../audio/gst-plugins1-lame \
 		gst-plugins1-mad>=1.4.0:../../audio/gst-plugins1-mad \
+		gst-plugins1-opus>=1.4.0:../../audio/gst-plugins1-opus \
 		gst-plugins1-twolame>=1.4.0:../../audio/gst-plugins1-twolame \
-		gst-plugins1-vorbis>=1.4.0:../../audio/gst-plugins1-vorbis
+		gst-plugins1-vorbis>=1.4.0:../../audio/gst-plugins1-vorbis \
+		gst-plugins1-ogg>=1.4.0:../../multimedia/gst-plugins1-ogg
 
 
 .include "../../audio/chromaprint/buildlink3.mk"
@@ -70,8 +73,10 @@ DEPENDS+=	qt4-tiff>=4.5.0:../../x11/qt4-tiff \
 .include "../../math/fftw/buildlink3.mk"
 
 .include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-ugly/buildlink3.mk"
 
 .include "../../security/crypto++/buildlink3.mk" # Said to be optional on github but CMake requires it
 .include "../../security/qca2/buildlink3.mk"

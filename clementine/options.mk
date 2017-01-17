@@ -200,6 +200,7 @@ CMAKE_ARGS+=	-DENABLE_VK=OFF
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .	include "../../audio/pulseaudio/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_LIBPULSE=ON
+DEPENDS+=	gst-plugins1-pulse>=1.4.0:../../audio/gst-plugins1-pulse
 .else
 CMAKE_ARGS+=	-DENABLE_LIBPULSE=OFF
 .endif
