@@ -4352,6 +4352,7 @@ SUBDIR+=	xdotool
 SUBDIR+=	xebece
 SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
+SUBDIR+=	xf86-input-mouse-dfbsd
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-input-vboxmouse
 SUBDIR+=	xf86-video-geode

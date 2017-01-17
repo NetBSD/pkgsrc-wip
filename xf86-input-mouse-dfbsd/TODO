@@ -1,0 +1,5 @@
+Copy port to x11/xf86-input-mouse, do not install from wip.
+
+Implements patches from FreeBSD ports / DragonFly dports
+discussed in pkg/50068
+(x11/xf86-input-mouse dports patches for DragonFly and FreeBSD)
