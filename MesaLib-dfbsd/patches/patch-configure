@@ -1,0 +1,35 @@
+$NetBSD$
+
+--- configure.orig	2016-11-28 15:16:01.000000000 +0000
++++ configure
+@@ -24711,7 +24711,7 @@ if test -n "$with_vulkan_drivers"; then
+             if test "x$HAVE_I965_DRI" != xyes; then
+                 as_fn_error $? "Intel Vulkan driver requires the i965 dri driver" "$LINENO" 5
+             fi
+-            if test "x$with_sha1" == "x"; then
++            if test "x$with_sha1" = "x"; then
+                 as_fn_error $? "Intel Vulkan driver requires SHA1" "$LINENO" 5
+             fi
+             HAVE_INTEL_VULKAN=yes;
+@@ -24810,7 +24810,7 @@ $as_echo "yes" >&6; }
+ 
+ fi
+             HAVE_RADEON_VULKAN=yes;
+-            if test "x$with_sha1" == "x"; then
++            if test "x$with_sha1" = "x"; then
+                 as_fn_error $? "radv vulkan driver requires SHA1" "$LINENO" 5
+             fi
+ 	    ;;
+@@ -26375,9 +26375,9 @@ fi
+ strip_unwanted_llvm_flags() {
+     # Use \> (marks the end of the word)
+     echo `$1` | sed \
+-	-e 's/-march=\S*//g' \
+-	-e 's/-mtune=\S*//g' \
+-	-e 's/-mcpu=\S*//g' \
++	-e 's/-march=[-a-zA-Z0-9]*//g' \
++	-e 's/-mtune=[-a-zA-Z0-9]*//g' \
++	-e 's/-mcpu=[-a-zA-Z0-9]*//g' \
+ 	-e 's/-DNDEBUG\>//g' \
+ 	-e 's/-D_GNU_SOURCE\>//g' \
+ 	-e 's/-pedantic\>//g' \

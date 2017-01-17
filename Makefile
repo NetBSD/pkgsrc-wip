@@ -19,6 +19,7 @@ SUBDIR+=	GoogleEarth
 SUBDIR+=	I2util
 SUBDIR+=	LabPlot
 SUBDIR+=	MesaLib
+SUBDIR+=	MesaLib-dfbsd
 SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenBLAS
 SUBDIR+=	OpenGLUT
