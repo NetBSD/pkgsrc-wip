@@ -2,3 +2,4 @@ Add options or separate packages for uzbl-browser and uzbl-tabbed
 Add option for GTK+ version for uzbl-tabbed:
  Resolve Python version conflict for uzbl-tabbed with GTK+ 2
  Add missing dependencies for uzbl-tabbed with GTK+ 3
+Resolve the EGG_FILE in PLIST problem properly

@@ -41,6 +41,15 @@ REPLACE_PYTHON+=	examples/data/scripts/per-site-settings.py
 REPLACE_PYTHON+=	examples/data/scripts/scheme.py
 .include "../../lang/python/application.mk"
 
+# adapted from ../../lang/python/distutils.mk
+# Set the egg file basename.
+EGG_NAME?=	uzbl-201100808
+
+# Egg files have the version encoded, so generalize in PLIST.
+PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+PRINT_PLIST_AWK+=	{ gsub("${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
+				"$${EGG_FILE}") }
+
 # for uzbl-browser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # for uzbl-tabbed with GTK+ 2

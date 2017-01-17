@@ -3,11 +3,11 @@ bin/uzbl-browser
 bin/uzbl-core
 bin/uzbl-event-manager
 bin/uzbl-tabbed
-${PYSITELIB}/uzbl-201100808-py3.5.egg-info/PKG-INFO
-${PYSITELIB}/uzbl-201100808-py3.5.egg-info/SOURCES.txt
-${PYSITELIB}/uzbl-201100808-py3.5.egg-info/dependency_links.txt
-${PYSITELIB}/uzbl-201100808-py3.5.egg-info/entry_points.txt
-${PYSITELIB}/uzbl-201100808-py3.5.egg-info/top_level.txt
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/uzbl/__init__.py
 ${PYSITELIB}/uzbl/__init__.pyc
 ${PYSITELIB}/uzbl/arguments.pyc
