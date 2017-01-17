@@ -1,0 +1,5 @@
+Copy port to x11/xf86-video-ati, do not install from wip.
+
+Implements changes discussed in pkg/50067
+(x11/xf86-video-ati dports patch-src_radeon__kms.c
+ for newer DragonFly and FreeBSD)
