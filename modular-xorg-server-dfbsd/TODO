@@ -1,0 +1,6 @@
+Copy port to x11/modular-xorg-server, do not install from wip.
+
+Waiting for devd patches required on latest FreeBSD and DragonFly
+submitted in
+pkg/50200 (x11/modular-xorg-server)
+to be accepted.
