@@ -4357,6 +4357,7 @@ SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-input-vboxmouse
 SUBDIR+=	xf86-video-ati-dfbsd
 SUBDIR+=	xf86-video-geode
+SUBDIR+=	xf86-video-intel-dfbsd
 SUBDIR+=	xf86-video-intel-git
 SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-virtualbox

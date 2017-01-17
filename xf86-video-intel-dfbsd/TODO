@@ -1,0 +1,12 @@
+Copy this port to replace x11/xf86-video-intel,
+do not install from wip.
+
+Implemented changes discussed in pkg/50090
+(x11/xf86-video-intel fix build and enable functionality
+ on newer DragonFly and FreeBSD)
+
+Also includes fixes not quite added discussed in pkg/51687
+(x11/xf86-video-intel fix build post xserver 1.19)
+
+Needs to switch to latest git snapshot from freedesktop.org
+since no release since 2014.
