@@ -33,6 +33,7 @@ CMAKE_ARGS+= 	-DENABLE_SPOTIFY_BLOB=OFF \
 	     	-DCRYPTOPP_cryptopp_INCLUDEDIR=${LOCALBASE}/include/cryptopp \
 	     	-DCRYPTOPP_cryptopp_LIBDIR=${LOCALBASE}/lib \
 	     	-DCRYPTOPP_FOUND=1 \
+		-DENABLE_DBUS=ON \
 		-DBUILD_WERROR=OFF
 
 

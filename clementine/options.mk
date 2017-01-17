@@ -22,6 +22,8 @@ PKG_SUGGESTED_OPTIONS=	devicekit libmtp libgpod moodbar visualisations box dropb
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		visualisations
+
 # Options
 
 ###
@@ -95,6 +97,7 @@ CMAKE_ARGS+=	-DENABLE_AUDIOCD=OFF
 
 .if !empty(PKG_OPTIONS:Mvisualisations)
 CMAKE_ARGS+=	-DENABLE_VISUALISATIONS=ON
+PLIST.visualisations= yes
 .else
 CMAKE_ARGS+=	-DENABLE_VISUALISATIONS=OFF
 .endif
