@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-05 14:32:45.880405612 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-17 18:02:38.694275947 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1640 @@
+@@ -0,0 +1,1651 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -492,23 +492,34 @@ $NetBSD$
 +    case SIGTRAP:
 +      // breakpoint
 +      if ((info.psi_siginfo.si_code & TRAP_BRKPT) != 0)
-+          printf("Breakpoint reported\n");
++        printf("Breakpoint reported\n");
 +      // single step (and temporarily also hardware watchpoint on x86)
 +      else if ((info.psi_siginfo.si_code & TRAP_TRACE) != 0)
-+          printf("Single step reported\n");
++        printf("Single step reported\n");
 +      // exec()
 +      else if ((info.psi_siginfo.si_code & TRAP_EXEC) != 0)
-+          printf("exec() reported\n");
-+      // fork(2)
-+      else if ((state.pe_report_event & PTRACE_FORK) != 0)
++        printf("exec() reported\n");
++      else if ((info.psi_siginfo.si_code & TRAP_CHLD) != 0) {
++        // fork(2)
++        if ((state.pe_report_event & PTRACE_FORK) != 0)
 +          printf("Fork reported\n");
-+      // TODO: vfork(2)
-+      // TODO: vfork(2) finished (parent resumed)
-+      // TODO: LWP created
-+      // TODO: LWP terminated
-+      // ????: clone(2)/__clone(2) -- seems to be split between fork(2) and vfork(2)
-+      // ????: posix_spawn(2)
-+      // TODO: execve(2)
++        // vfork(2)
++        else if ((state.pe_report_event & PTRACE_VFORK) != 0)
++          printf("VFork reported\n");
++        // vfork(2) done
++        else if ((state.pe_report_event & PTRACE_VFORK_DONE) != 0)
++          printf("VFork Done reported\n");
++      } else if ((info.psi_siginfo.si_code & TRAP_LWP) != 0) {
++        // _lwp_create(2)
++        if ((state.pe_report_event & PTRACE_LWP_CREATE) != 0)
++          printf("LWP created reported\n");
++        // _lwp_exit(2)
++        if ((state.pe_report_event & PTRACE_LWP_EXIT) != 0)
++          printf("LWP terminated reported\n");
++      } else if ((info.psi_siginfo.si_code & TRAP_HWWPT) != 0) {
++        // hardware watchpoint
++        printf("hw watchpoint reported\n");
++      }
 +      // Unknown
 +      else
 +        printf("Unknown event for SIGTRAP\n");
