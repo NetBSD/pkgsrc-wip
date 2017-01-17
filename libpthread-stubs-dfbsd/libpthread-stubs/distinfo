@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (libpthread-stubs-0.3.tar.bz2) = 7fc486ad0ec54938f8b781cc374218f50eac8b99
+RMD160 (libpthread-stubs-0.3.tar.bz2) = a3a5f76e103c645749d7b8a8fc00ad472e59987b
+SHA512 (libpthread-stubs-0.3.tar.bz2) = c7cf63fa82ce9e8c37c6dc3b8cc30f8883655f95683c4466c54b617b086dd26a43bfa36363e47dc5730af6d59ac70443d211eb01b07d276edd144030a3580b15
+Size (libpthread-stubs-0.3.tar.bz2) = 203468 bytes
+SHA1 (patch-Makefile.in) = 1534afd01e02922f9c193d6f2eb51ca12422dcc7
+SHA1 (patch-stubs.c) = ffb82c0d7700a025c2eb1c4067623b064314924f

@@ -1646,6 +1646,7 @@ SUBDIR+=	libparsifal
 SUBDIR+=	libpsl
 SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
+SUBDIR+=	libpthread-stubs-dfbsd
 SUBDIR+=	libpusb
 SUBDIR+=	libpwquality
 SUBDIR+=	libqtxdg

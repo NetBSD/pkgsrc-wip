@@ -1,0 +1,5 @@
+Copy port to devel/libpthread-stubs, do not install from wip.
+
+libpthread-stubs last release is from 2009 and actually does
+nothing on any OS tested.  Perhaps update to latest git snapshot
+from freedesktop.org
