@@ -1,0 +1,5 @@
+Copy port to x11/libdrm, do not install from wip.
+
+Implements changes to libdrm to work with mesa 13.0.2 discussed in
+pkg/51795
+(x11/libdrm update xf86drm.c for mesa 13.0.2 needs negotiation)

@@ -1569,6 +1569,7 @@ SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole
 SUBDIR+=	libdmx
 SUBDIR+=	libdoozer
+SUBDIR+=	libdrm-dfbsd
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libecc
 SUBDIR+=	libee
