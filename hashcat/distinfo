@@ -4,4 +4,4 @@ SHA1 (hashcat-3.30.tar.gz) = 8295ecc0be053aad75f3ef3d25263505e21acb58
 RMD160 (hashcat-3.30.tar.gz) = cfebc1103809155d35d010436b314c069f033a84
 SHA512 (hashcat-3.30.tar.gz) = 8f160a5ec4bd9add83cfc468e9335dcfc9297585180c67263fce18235a8b748f75205fa5bd5ddd1c34efc65569d94408ba98c6181a2b1ab760f33371f92c3c54
 Size (hashcat-3.30.tar.gz) = 3970267 bytes
-SHA1 (patch-src_Makefile) = 36beb7cdc645243299939aed3a414e5c6e1ace89
+SHA1 (patch-src_Makefile) = a9513b22cb28ddeb48b38fcc4cace6c101873cf0

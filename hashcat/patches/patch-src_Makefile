@@ -1,6 +1,9 @@
 $NetBSD$
 
 Add minimal NetBSD support.
+Don't override CC nor optimisation flags in CFLAGS.
+Avoid -march=native.
+Fix shared dynamic library handing on Darwin.
 
 --- src/Makefile.orig	2017-01-06 07:54:39.000000000 +0000
 +++ src/Makefile
@@ -13,29 +16,108 @@ Add minimal NetBSD support.
  $(error "! Your Operating System ($(UNAME)) is not supported by this Makefile")
  endif
  
-@@ -168,6 +168,16 @@ CFLAGS                  += -fsanitize=ad
+@@ -52,7 +52,11 @@ DOCUMENT_FOLDER         ?= $(PREFIX)/sha
+ ##
+ 
+ HASHCAT_FRONTEND        := hashcat
++ifeq ($(UNAME),Darwin)
++HASHCAT_LIBRARY         := libhashcat.dylib
++else
+ HASHCAT_LIBRARY         := libhashcat.so
++endif
+ 
+ ifeq ($(UNAME),CYGWIN)
+ HASHCAT_FRONTEND        := hashcat.exe
+@@ -76,22 +80,20 @@ OPENCL_HEADERS_KHRONOS  := deps/OpenCL-H
+ ## Native compiler paths
+ ##
+ 
+-CC                      := gcc
+ FIND                    := find
+ INSTALL                 := install
+ RM                      := rm
+ SED                     := sed
+ 
+ ifeq ($(UNAME),Darwin)
+-CC                      := clang
+ SED                     := gsed
+ endif
+ 
+ ifeq ($(UNAME),FreeBSD)
+-CC                      := cc
+ SED                     := gsed
+ endif
+ 
++
+ ##
+ ## Cross compiler paths
+ ##
+@@ -158,16 +160,20 @@ endif
+ 
+ LFLAGS                  := $(LDFLAGS)
+ 
+-ifndef DEBUG
+-CFLAGS                  += -O2
+-LFLAGS                  += -s
+-else
++ifdef DEBUG
+ CFLAGS                  += -DDEBUG -g -ggdb
+ ifeq ($(DEBUG),2)
+ CFLAGS                  += -fsanitize=address -fno-omit-frame-pointer
  endif
  endif
  
 +ifeq ($(UNAME),NetBSD)
 +CFLAGS_NATIVE            := -D_POSIX
-+ifndef DEBUG
-+CFLAGS_NATIVE            += -s
-+endif
 +CFLAGS_NATIVE            += $(CFLAGS)
 +LFLAGS_NATIVE            := -lpthread
 +CFLAGS_NATIVE            += -DHAVE_HWMON
-+endif # netbsd
++endif # NetBSD
 +
  ##
  ## Native compilation target
  ##
-@@ -388,7 +398,7 @@ $(HASHCAT_LIBRARY): $(NATIVE_SHARED_OBJS
+@@ -175,7 +181,6 @@ endif
+ ifeq ($(UNAME),Linux)
+ CFLAGS_NATIVE           := $(CFLAGS)
+ CFLAGS_NATIVE           += -I$(OPENCL_HEADERS_KHRONOS)/
+-CFLAGS_NATIVE           += -march=native
+ CFLAGS_NATIVE           += -DWITH_HWMON
+ LFLAGS_NATIVE           := $(LFLAGS)
+ LFLAGS_NATIVE           += -lpthread -ldl
+@@ -185,7 +190,6 @@ ifeq ($(UNAME),FreeBSD)
+ ifndef PORTNAME
+ CFLAGS_NATIVE           := $(CFLAGS)
+ CFLAGS_NATIVE           += -I$(OPENCL_HEADERS_KHRONOS)/
+-CFLAGS_NATIVE           += -march=native
+ LFLAGS_NATIVE           := $(LFLAGS)
+ LFLAGS_NATIVE           += -lpthread
+ endif
+@@ -194,7 +198,6 @@ endif # FreeBSD
+ ifeq ($(UNAME),Darwin)
+ export MACOSX_DEPLOYMENT_TARGET=10.9
+ CFLAGS_NATIVE           := $(CFLAGS)
+-CFLAGS_NATIVE           += -march=native
+ LFLAGS_NATIVE           := $(LFLAGS)
+ LFLAGS_NATIVE           += -framework OpenCL
+ LFLAGS_NATIVE           += -lpthread
+@@ -227,6 +230,10 @@ endif # MSYS2
+ CFLAGS_NATIVE_SHARED    := $(CFLAGS_NATIVE)
+ CFLAGS_NATIVE_SHARED    += -fpic
+ LFLAGS_NATIVE_SHARED    := $(LFLAGS_NATIVE)
++ifeq ($(UNAME),Darwin)
++LFLAGS_NATIVE_SHARED    += -dylib
++LFLAGS_NATIVE_SHARED    += -install_name $(DESTDIR)$(LIBRARY_FOLDER)/$(HASHCAT_LIBRARY)
++endif
+ 
+ ##
+ ## Cross compilation targets
+@@ -388,7 +395,7 @@ $(HASHCAT_LIBRARY): $(NATIVE_SHARED_OBJS
  	$(CC) -o $@ $^ $(LFLAGS_NATIVE_SHARED) -shared
  
  $(HASHCAT_FRONTEND): $(NATIVE_OBJS) $(HASHCAT_LIBRARY) src/main.c
 -	$(CC)    $(CFLAGS_NATIVE) -o $@ $^ $(LFLAGS_NATIVE) -L. -lhashcat -Wl,-rpath . -DCOMPTIME=$(COMPTIME) -DVERSION_TAG=\"$(VERSION_TAG)\" -DINSTALL_FOLDER=\"$(INSTALL_FOLDER)\" -DSHARED_FOLDER=\"$(SHARED_FOLDER)\" -DDOCUMENT_FOLDER=\"$(DOCUMENT_FOLDER)\"
-+	$(CC)    $(CFLAGS_NATIVE) -o $@ $^ $(LFLAGS_NATIVE) -L. -lhashcat -Wl,-rpath. -DCOMPTIME=$(COMPTIME) -DVERSION_TAG=\"$(VERSION_TAG)\" -DINSTALL_FOLDER=\"$(INSTALL_FOLDER)\" -DSHARED_FOLDER=\"$(SHARED_FOLDER)\" -DDOCUMENT_FOLDER=\"$(DOCUMENT_FOLDER)\"
++	$(CC)    $(CFLAGS_NATIVE) -o $@ $^ $(LFLAGS_NATIVE) -L. -lhashcat -Wl,-rpath=. -DCOMPTIME=$(COMPTIME) -DVERSION_TAG=\"$(VERSION_TAG)\" -DINSTALL_FOLDER=\"$(INSTALL_FOLDER)\" -DSHARED_FOLDER=\"$(SHARED_FOLDER)\" -DDOCUMENT_FOLDER=\"$(DOCUMENT_FOLDER)\"
  
  ##
  ## cross compiled hashcat
