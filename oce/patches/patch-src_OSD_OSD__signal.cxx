@@ -1,8 +1,9 @@
 $NetBSD: patch-src_OSD_OSD__signal.cxx,v 1.2 2015/06/25 12:41:09 fhajny Exp $
 
 Define SIGFPE macros on SunOS.
+Avoid duplicate reference in case statements.
 Respect the reality as CMake found it, there might not be libsunmath.
---- src/OSD/OSD_signal.cxx.orig	2015-03-08 22:19:42.000000000 +0000
+--- src/OSD/OSD_signal.cxx.orig	2017-01-13 05:34:36.000000000 +0000
 +++ src/OSD/OSD_signal.cxx
 @@ -55,6 +55,17 @@ ACT_SIGIO_HANDLER *ADR_ACT_SIGIO_HANDLER
  typedef void (* SIG_PFV) (int);
@@ -22,7 +23,31 @@ Respect the reality as CMake found it, there might not be libsunmath.
  #ifdef __GNUC__
  # include <stdlib.h>
  # include <stdio.h>
-@@ -379,7 +390,7 @@ void OSD::SetSignal(const Standard_Boole
+@@ -265,6 +276,7 @@ static void Handler (const int theSignal
+     break;
+ #endif
+   case SIGFPE:
++  {
+     sigaddset(&set, SIGFPE);
+     sigprocmask(SIG_UNBLOCK, &set, NULL) ;
+ #ifdef DECOSF1
+@@ -277,6 +289,7 @@ static void Handler (const int theSignal
+     break;
+ #else
+     // Reste SOLARIS
++    siginfo_t * aSigInfo = NULL;
+     if (aSigInfo) {
+       switch(aSigInfo->si_code) {
+       case FPE_FLTDIV_TRAP :
+@@ -309,6 +322,7 @@ static void Handler (const int theSignal
+     }
+ #endif
+     break;
++  }
+ #if defined (__sgi) || defined(IRIX)
+   case SIGTRAP:
+     sigaddset(&set, SIGTRAP);
+@@ -380,7 +394,7 @@ void OSD::SetSignal(const Standard_Boole
  
    if( aFloatingSignal ) {
      //==== Enable the floating point exceptions ===============

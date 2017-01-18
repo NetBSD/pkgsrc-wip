@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2015/06/25 12:41:09 fhajny Exp $
+# $NetBSD$
 
 BUILDLINK_TREE+=	oce
 
 .if !defined(OCE_BUILDLINK3_MK)
 OCE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.oce+=	oce>=0.17
+BUILDLINK_API_DEPENDS.oce+=	oce>=0.18
 BUILDLINK_PKGSRCDIR.oce?=	../../wip/oce
 
 BUILDLINK_INCDIRS.oce+=	include/oce
