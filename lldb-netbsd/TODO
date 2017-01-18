@@ -21,3 +21,11 @@ hack for src:
    curl https://github.com/jsonn/src/commit/78f4ee4c8349d68cf2279f2c7fc2196ae369e182.patch|gpatch -R -p1
 long term solution in LLVM:
    replace std::call_once with llvm::call_once
+
+Short-term goals:
+ - fix conflict with system-wide py-six
+ - add support for auxv read operation
+ - switch resolution of pid -> path to executable from /proc to sysctl(7)
+ - recognize Real-Time Signals (SIGRTMIN-SIGRTMAX)
+ - upstream !NetBSDProcessPlugin code
+ - switch std::call_once to llvm::call_once
