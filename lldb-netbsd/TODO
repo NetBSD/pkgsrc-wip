@@ -7,20 +7,19 @@ Introduce objc++ setup with gcc(1) for "make test":
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
     gmake[4]: *** [main.o] Error 1
 
-
 llvm::call_once hack for src:
    curl https://github.com/jsonn/src/commit/78f4ee4c8349d68cf2279f2c7fc2196ae369e182.patch|gpatch -R -p1
-
 
 The current milestone is to detect in Monitor Callback the following events:
  - process termination - works, appropriate return status passed to LLDB
  - execve(2) - detected but process hangs
  - software breakpoint (TRAP_BRKPT) - detected but process hangs
  - single step - detected but process hangs
- - fork/vfork-done - ?
+ - fork - not detected (hangs earlier?)
+ - vfork-done - detected but process hangs
  - lwp creation/termination - detected but process hangs
- - hardware breakpoint - ?
- - other signal passed to tracee - hangs
+ - hardware breakpoint - currently not easily testable (skipped)
+ - other signal passed to tracee - detected but process hangs
 
 Short-term goals in next milestone:
  - fix conflict with system-wide py-six
