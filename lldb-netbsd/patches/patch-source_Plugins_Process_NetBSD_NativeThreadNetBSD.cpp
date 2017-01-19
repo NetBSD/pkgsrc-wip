@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2016-12-26 05:32:46.180058637 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-19 01:40:16.657343698 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,340 @@
+@@ -0,0 +1,355 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -166,7 +166,7 @@ $NetBSD$
 +                                            const siginfo_t *info) {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
 +  if (log)
-+    log->Printf("NativeThreadLinux::%s called with signal %s (value 0x%02" PRIx32 ")",
++    log->Printf("NativeThreadNetBSD::%s called with signal %s (value 0x%02" PRIx32 ")",
 +                __FUNCTION__, strsignal(signo), signo);
 +
 +  m_state = eStateStopped;
@@ -335,6 +335,21 @@ $NetBSD$
 +    }
 +  }
 +  m_stop_description = stringStream.str();
++}
++
++void NativeThreadNetBSD::SetStopped() {
++  const StateType new_state = StateType::eStateStopped;
++  m_state = new_state;
++  m_stop_description.clear();
++}
++
++void NativeThreadNetBSD::SetStoppedByExec() {
++  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
++  if (log)
++    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
++  SetStopped();
++  m_stop_info.reason = StopReason::eStopReasonExec;
++  m_stop_info.details.signal.signo = SIGTRAP;
 +}
 +
 +NativeProcessNetBSD &NativeThreadNetBSD::GetProcess() {

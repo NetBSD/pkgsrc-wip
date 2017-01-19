@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-19 01:40:16.619517153 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1651 @@
+@@ -0,0 +1,1681 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -488,18 +488,47 @@ $NetBSD$
 +
 +  // Get details on the signal raised.
 +  if (siginfo_err.Success() && state_err.Success()) {
-+    switch(info.psi_siginfo.si_signo) {
++    switch (info.psi_siginfo.si_signo) {
 +    case SIGTRAP:
-+      // breakpoint
-+      if ((info.psi_siginfo.si_code & TRAP_BRKPT) != 0)
++      switch (info.psi_siginfo.si_code) {
++      case TRAP_BRKPT:
 +        printf("Breakpoint reported\n");
-+      // single step (and temporarily also hardware watchpoint on x86)
-+      else if ((info.psi_siginfo.si_code & TRAP_TRACE) != 0)
++        break;
++      case TRAP_TRACE:
 +        printf("Single step reported\n");
-+      // exec()
-+      else if ((info.psi_siginfo.si_code & TRAP_EXEC) != 0)
-+        printf("exec() reported\n");
-+      else if ((info.psi_siginfo.si_code & TRAP_CHLD) != 0) {
++        break;
++      case TRAP_EXEC:
++        {
++        // Clear old threads
++        m_threads.clear();
++
++        // Initialize new thread
++        struct ptrace_lwpinfo info = {};
++        Error error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
++        if (error.Fail()) {
++          SetState(StateType::eStateInvalid);
++          return;
++        }
++
++        // Reinitialize from scratch threads and register them in process
++        while (info.pl_lwpid != 0) {
++          NativeThreadNetBSDSP thread_sp = AddThread(info.pl_lwpid);
++          thread_sp->SetStoppedByExec();
++          error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
++          if (error.Fail()) {
++            SetState(StateType::eStateInvalid);
++            return;
++          }
++        }
++
++        // Let our delegate know we have just exec'd.
++        NotifyDidExec();
++
++        SetState(StateType::eStateStopped, true);
++        }
++        break;
++      case TRAP_CHLD:
++        {
 +        // fork(2)
 +        if ((state.pe_report_event & PTRACE_FORK) != 0)
 +          printf("Fork reported\n");
@@ -509,21 +538,22 @@ $NetBSD$
 +        // vfork(2) done
 +        else if ((state.pe_report_event & PTRACE_VFORK_DONE) != 0)
 +          printf("VFork Done reported\n");
-+      } else if ((info.psi_siginfo.si_code & TRAP_LWP) != 0) {
++        }
++        break;
++      case TRAP_LWP:
++        {
 +        // _lwp_create(2)
 +        if ((state.pe_report_event & PTRACE_LWP_CREATE) != 0)
 +          printf("LWP created reported\n");
 +        // _lwp_exit(2)
 +        if ((state.pe_report_event & PTRACE_LWP_EXIT) != 0)
 +          printf("LWP terminated reported\n");
-+      } else if ((info.psi_siginfo.si_code & TRAP_HWWPT) != 0) {
-+        // hardware watchpoint
++        }
++        break;
++      case TRAP_HWWPT:
 +        printf("hw watchpoint reported\n");
++        break;
 +      }
-+      // Unknown
-+      else
-+        printf("Unknown event for SIGTRAP\n");
-+      break;
 +    case SIGSTOP:
 +      // Handle SIGSTOP from LLGS (LLDB GDB Server)
 +      if (info.psi_siginfo.si_code == SI_USER && info.psi_siginfo.si_pid == ::getpid()) {
