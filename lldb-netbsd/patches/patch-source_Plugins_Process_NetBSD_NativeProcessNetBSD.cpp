@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-19 01:40:16.619517153 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1681 @@
+@@ -0,0 +1,1727 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -316,7 +316,7 @@ $NetBSD$
 +  // Wait for the child process to trap on its call to execve.
 +  ::pid_t wpid;
 +  int status;
-+  if ((wpid = waitpid( pid, &status, 0)) < 0) {
++  if ((wpid = waitpid(pid, &status, 0)) < 0) {
 +    error.SetErrorToErrno();
 +    if (log)
 +      log->Printf("NativeProcessNetBSD::%s waitpid for inferior failed with %s",
@@ -335,6 +335,8 @@ $NetBSD$
 +  if (log)
 +    log->Printf("NativeProcessNetBSD::%s inferior started, now in stopped state",
 +                __FUNCTION__);
++
++  SetDefaultPtraceOpts(pid);
 +
 +  // Release the master terminal descriptor and pass it off to the
 +  // NativeProcessNetBSD instance.  Similarly stash the inferior pid.
@@ -420,11 +422,55 @@ $NetBSD$
 +  if ((status = waitpid(pid, NULL, WALLSIG)) < 0)
 +    return -1;
 +
++  SetDefaultPtraceOpts(pid);
++
 +  m_pid = pid;
++
++  /* Initialize threads */
++  struct ptrace_lwpinfo info = {};
++  error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
++  if (error.Fail()) {
++    SetState(StateType::eStateInvalid);
++    return -1;
++  }
++  while (info.pl_lwpid != 0) {
++    NativeThreadNetBSDSP thread_sp = AddThread(info.pl_lwpid);
++    thread_sp->SetStoppedBySignal(SIGSTOP);
++    error = PtraceWrapper(PT_LWPINFO, pid, &info, sizeof(info));
++    if (error.Fail()) {
++      SetState(StateType::eStateInvalid);
++      return -1;
++    }
++  }
++
 +  // Let our process instance know the thread has stopped.
 +  SetState(StateType::eStateStopped);
 +
 +  return pid;
++}
++
++Error NativeProcessNetBSD::SetDefaultPtraceOpts(lldb::pid_t pid) {
++  ptrace_event_t event = {};
++
++  // Report forks
++  event.pe_set_event |= PTRACE_FORK;
++
++  // Report vforks
++  // TODO: Currently unsupported in NetBSD
++#if notyet
++  event.pe_set_event |= PTRACE_VFORK;
++#endif
++
++  // Report finished vforks - the parent unblocked after execve(2) or exit(2) of the child
++  event.pe_set_event |= PTRACE_VFORK_DONE;
++
++  // Report LWP (thread) creation
++  event.pe_set_event |= PTRACE_LWP_CREATE;
++
++  // Report LWP (thread) termination
++  event.pe_set_event |= PTRACE_LWP_EXIT;
++
++  return PtraceWrapper(PT_SET_EVENT_MASK, pid, &event, sizeof(struct ptrace_event));
 +}
 +
 +static ExitType convert_pid_status_to_exit_type(int status) {
