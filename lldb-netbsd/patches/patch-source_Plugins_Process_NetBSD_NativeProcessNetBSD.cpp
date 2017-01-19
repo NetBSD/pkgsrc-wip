@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-17 18:02:38.694275947 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-19 01:40:16.619517153 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -0,0 +1,1651 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
@@ -466,15 +466,15 @@ $NetBSD$
 +          __FUNCTION__, signal, pid);
 +
 +    /* Stop Tracking All Threads attached to Process */
-+    for (auto it = m_threads.begin(); it != m_threads.end(); ++it) {
-+       m_threads.erase(it);
-+    }
++    m_threads.clear();
 +
 +    SetExitStatus(convert_pid_status_to_exit_type(status),
 +                  convert_pid_status_to_return_code(status), nullptr, true);
 +
 +    // Notify delegate that our process has exited.
 +    SetState(StateType::eStateExited, true);
++
++    return;
 +  }
 +
 +  ptrace_siginfo_t info;
