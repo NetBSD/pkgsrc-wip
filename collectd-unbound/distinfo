@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (collectd-unbound-e751f86301.tar.gz) = 5de9eb486314f28f789f79fb69fa464409ea1ce1
+RMD160 (collectd-unbound-e751f86301.tar.gz) = ecb3b6e4e858de57c7913dba3617bf468611ddf1
+Size (collectd-unbound-e751f86301.tar.gz) = 2639 bytes
+SHA1 (patch-collectd-unbound.go) = 8c9b7aee55b78897fe49bdec46a28020ee409071

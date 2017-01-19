@@ -1,0 +1,15 @@
+This utility allows you to access Unbound statistics from collectd
+using the exec plugin. It hasn't been thoroughly tested, use it at
+your own risk...
+
+Once the collectd-unbound binary is compiled, copy it wherever you
+want and add the following lines to you collectd configuration:
+
+LoadPlugin exec
+<Plugin "exec">
+    Exec "unbound" "/usr/pkg/bin/collectd-unbound"
+</Plugin>
+
+Note: the utility executes the command unbound-control stats to
+fetch the statistics: make sure the user specified in your exec
+plugin block has the permissions to execute the command.
