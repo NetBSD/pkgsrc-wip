@@ -29,3 +29,16 @@ Short-term goals in next milestone:
  - recognize Real-Time Signals (SIGRTMIN-SIGRTMAX)
  - upstream !NetBSDProcessPlugin code
  - switch std::call_once to llvm::call_once
+
+To be done later:
+ - registers' accessors
+ - single step support
+ - thread resume/suspend operation
+ - i386 support
+ - upstream NetBSD support
+ - adapt upstream Python tests to run on NetBSD and pass as many of them as
+   possible
+ - import LLDB into base
+ - add NetBSD specific ATF tests verifying fundamental functionality of LLDB
+
+and of course fix as many bugs as possible
