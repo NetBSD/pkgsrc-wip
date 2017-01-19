@@ -1,28 +1,28 @@
-Installs a bundled copy of lang/py-six, and conflicts with it.
-
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format-bbedit.applescript: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format-sublime.py: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format.el: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/clang/clang-format.py: executable bit is set on non-executable file.
-warning: /tmp/pkgsrc-tmp/wip/lldb-git/work/.destdir/usr/pkg/share/man/man1/scan-build.1: executable bit is set on non-executable file.
-
-Debugging to file:
+Debugging to a file:
     log enable -STagnpstv -f /tmp/log.txt lldb all
 
-"make test":
+Introduce objc++ setup with gcc(1) for "make test":
     Build Command Output:
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
     gmake[4]: *** [main.o] Error 1
 
 
-std::call_once is broken in libstdc++
-hack for src:
+llvm::call_once hack for src:
    curl https://github.com/jsonn/src/commit/78f4ee4c8349d68cf2279f2c7fc2196ae369e182.patch|gpatch -R -p1
-long term solution in LLVM:
-   replace std::call_once with llvm::call_once
 
-Short-term goals:
+
+The current milestone is to detect in Monitor Callback the following events:
+ - process termination - works, appropriate return status passed to LLDB
+ - execve(2) - detected but process hangs
+ - software breakpoint (TRAP_BRKPT) - ?
+ - single step - ?
+ - fork/vfork-done - ?
+ - lwp creation/termination - ?
+ - hardware breakpoint - ?
+ - other signal passed to tracee - hangs
+
+Short-term goals in next milestone:
  - fix conflict with system-wide py-six
  - add support for auxv read operation
  - switch resolution of pid -> path to executable from /proc to sysctl(7)
