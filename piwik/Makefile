@@ -26,19 +26,20 @@ PKHOME=			${PREFIX}/share/piwik
 FILES_SUBST+=		PKHOME=${PKHOME}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
 
-DEPENDS+=	php5[0-9]-zlib-[0-9]*:../../archivers/php-zlib
-DEPENDS+=	php5[0-9]-iconv-[0-9]*:../../converters/php-iconv
-DEPENDS+=	php5[0-9]-gd-[0-9]*:../../graphics/php-gd
-DEPENDS+=	php5[0-9]-json-[0-9]*:../../textproc/php-json
+#DEPENDS+=	php5[0-9]-cli-[0-9]*:../../databases/php-cli
 DEPENDS+=	php5[0-9]-curl-[0-9]*:../../www/php-curl
 DEPENDS+=	php5[0-9]-dom-[0-9]*:../../textproc/php-dom
-DEPENDS+=	php5[0-9]-mysql-[0-9]*:../../databases/php-mysql
-DEPENDS+=	php5[0-9]-mbstring-[0-9]*:../../converters/php-mbstring
-#DEPENDS+=	php5[0-9]-cli-[0-9]*:../../databases/php-cli
+DEPENDS+=	php5[0-9]-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	php5[0-9]-geoip-[0-9]*:../../net/php-geoip
-DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
-DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	php5[0-9]-iconv-[0-9]*:../../converters/php-iconv
+DEPENDS+=	php5[0-9]-json-[0-9]*:../../textproc/php-json
+DEPENDS+=	php5[0-9]-mbstring-[0-9]*:../../converters/php-mbstring
+DEPENDS+=	php5[0-9]-mysql-[0-9]*:../../databases/php-mysql
+DEPENDS+=	php5[0-9]-zlib-[0-9]*:../../archivers/php-zlib
+
 DEPENDS+=	bash-[0-9]*:../../shells/bash
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 PHP_VERSIONS_ACCEPTED= 54 55 56
 #PHP_VERSION_REQD= 56
