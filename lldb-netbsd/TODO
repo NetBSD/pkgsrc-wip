@@ -16,7 +16,7 @@ The current milestone is to detect in Monitor Callback the following events:
  - process termination - works, appropriate return status passed to LLDB
  - execve(2) - detected but process hangs
  - software breakpoint (TRAP_BRKPT) - ?
- - single step - ?
+ - single step - detected but process hangs
  - fork/vfork-done - ?
  - lwp creation/termination - detected but process hangs
  - hardware breakpoint - ?
