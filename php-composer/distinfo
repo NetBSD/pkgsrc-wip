@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (php-composer/1.2.1/composer.phar) = b6b3fb668c913c874f891601eaac6eb08b060416
-RMD160 (php-composer/1.2.1/composer.phar) = 7a6ba0e8e45b2cde53dd35261914fb0a3927ed30
-SHA512 (php-composer/1.2.1/composer.phar) = 1fee0f09cf73fe177754648a5c8a2f97b9cf8f7943f2b5c1325ace677573f2b623300197af5863e588737a49d43ca075ce4af07e0752e139797815450bd6f9a0
-Size (php-composer/1.2.1/composer.phar) = 1704783 bytes
+SHA1 (php-composer/1.3.1/composer.phar) = 14e4aa42727b621c86ae108bf46c7737a6527a18
+RMD160 (php-composer/1.3.1/composer.phar) = 3d4dd365ea67f5a50464eab2cba7d38b5d6cf0de
+SHA512 (php-composer/1.3.1/composer.phar) = bf7aeca290f80ab9b68b8dd3144eb19877b46b63248335824e0f020fd035c0c53194e8eb3e80f294e042249205e6f66d593be1bb69fe09b3feec6915d0d88aac
+Size (php-composer/1.3.1/composer.phar) = 1815925 bytes
