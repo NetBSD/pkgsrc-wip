@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-19 01:40:16.619517153 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-19 22:12:22.349530366 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1727 @@
+@@ -0,0 +1,1733 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -608,6 +608,12 @@ $NetBSD$
 +          static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(SIGSTOP, &info.psi_siginfo);
 +        }
 +      }
++    default:
++      // Other signals
++      for (const auto &thread_sp : m_threads) {
++        static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(info.psi_siginfo.si_signo, &info.psi_siginfo);
++      }
++      SetState(StateType::eStateStopped, true);
 +    }
 +  }
 +}

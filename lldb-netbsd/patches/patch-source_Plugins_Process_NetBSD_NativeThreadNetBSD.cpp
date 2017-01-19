@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-19 01:40:16.657343698 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-19 22:12:22.362789785 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
 @@ -0,0 +1,355 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
