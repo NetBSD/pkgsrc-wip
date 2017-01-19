@@ -18,7 +18,7 @@ The current milestone is to detect in Monitor Callback the following events:
  - software breakpoint (TRAP_BRKPT) - ?
  - single step - ?
  - fork/vfork-done - ?
- - lwp creation/termination - ?
+ - lwp creation/termination - detected but process hangs
  - hardware breakpoint - ?
  - other signal passed to tracee - hangs
 
