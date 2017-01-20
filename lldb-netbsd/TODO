@@ -22,14 +22,14 @@ llvm::call_once hack for src:
 
 The current milestone is to detect in Monitor Callback the following events:
  - process termination - works, appropriate return status passed to LLDB
- - execve(2) - detected but process hangs
+ - execve(2) - works, switch to new image not tested but all the code seems to be there
  - software breakpoint (TRAP_BRKPT) - detected but process hangs
  - single step - detected but process hangs
  - fork - not detected (hangs earlier?)
  - vfork-done - detected but process hangs
  - lwp creation/termination - detected but process hangs
  - hardware breakpoint - currently not easily testable (skipped)
- - other signal passed to tracee - detected but process hangs
+ - other signal passed to tracee - works
 
 Short-term goals in next milestone:
  - fix conflict with system-wide py-six
