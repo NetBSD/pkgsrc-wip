@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-19 22:12:22.362789785 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-20 20:30:48.343442890 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,355 @@
+@@ -0,0 +1,373 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -350,6 +350,24 @@ $NetBSD$
 +  SetStopped();
 +  m_stop_info.reason = StopReason::eStopReasonExec;
 +  m_stop_info.details.signal.signo = SIGTRAP;
++}
++
++void NativeThreadNetBSD::SetRunning() {
++  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
++  if (log)
++    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
++
++  m_state = StateType::eStateRunning;
++  m_stop_info.reason = StopReason::eStopReasonNone;
++}
++
++void NativeThreadNetBSD::SetStepping() {
++  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
++  if (log)
++    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
++
++  m_state = StateType::eStateStepping;
++  m_stop_info.reason = StopReason::eStopReasonNone;
 +}
 +
 +NativeProcessNetBSD &NativeThreadNetBSD::GetProcess() {

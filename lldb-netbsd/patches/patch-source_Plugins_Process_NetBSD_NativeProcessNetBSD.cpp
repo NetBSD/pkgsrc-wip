@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-19 22:12:22.349530366 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-20 20:30:48.330267591 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1733 @@
+@@ -0,0 +1,1774 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -791,11 +791,52 @@ $NetBSD$
 +    log->Printf("NativeProcessNetBSD::%s called: pid %d", __FUNCTION__,
 +                GetID());
 +
-+  /* XXX: resume_actions unused */
-+  /* XXX: Pass signal to ptrace(2) */
++  const auto &thread_sp = m_threads[0];
++  const ResumeAction *const action = resume_actions.GetActionForThread(thread_sp->GetID(), true);
 +
-+  return NativeProcessNetBSD::PtraceWrapper(PT_CONTINUE, GetID(),(void *)1,
-+                                            0);
++  if (action == nullptr) {
++    if (log)
++      log->Printf("NativeProcessLinux::%s no action specified for pid %" PRIu64 " tid %" PRIu64,
++                  __FUNCTION__, GetID(), thread_sp->GetID());
++     return Error();
++  }
++
++  switch (action->state) {
++  case eStateRunning: {
++    // Run the thread, possibly feeding it the signal.
++    Error error = NativeProcessNetBSD::PtraceWrapper(PT_CONTINUE, GetID(),(void *)1, action->signal);
++    if (!error.Success())
++      return error;
++    for (const auto &thread_sp : m_threads) {
++      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetRunning();
++    }
++    SetState(eStateRunning, true);
++    break;
++  }
++  case eStateStepping: {
++    // Run the thread, possibly feeding it the signal.
++    Error error = NativeProcessNetBSD::PtraceWrapper(PT_STEP, GetID(),(void *)1, action->signal);
++    if (!error.Success())
++      return error;
++    for (const auto &thread_sp : m_threads) {
++      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStepping();
++    }
++    SetState(eStateStepping, true);
++    break;
++  }
++
++  case eStateSuspended:
++  case eStateStopped:
++    lldbassert(0 && "Unexpected state");
++ 
++  default:
++    return Error("NativeProcessLinux::%s (): unexpected state %s specified "
++                 "for pid %" PRIu64 ", tid %" PRIu64,
++                 __FUNCTION__, StateAsCString(action->state), GetID(),
++                 thread_sp->GetID());
++  }
++
++  return Error();
 +}
 +
 +Error NativeProcessNetBSD::Halt() {

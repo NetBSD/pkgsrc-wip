@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2017-01-19 22:12:22.368977024 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2017-01-20 20:30:48.349697339 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,83 @@
+@@ -0,0 +1,87 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -64,6 +64,10 @@ $NetBSD$
 +  void SetStoppedBySignal(uint32_t signo, const siginfo_t *info = nullptr);
 +
 +  void SetStoppedByExec();
++
++  void SetRunning();
++
++  void SetStepping();
 +
 +  // ---------------------------------------------------------------------
 +  // Private interface
