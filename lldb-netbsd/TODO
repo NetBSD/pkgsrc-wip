@@ -1,6 +1,16 @@
 Debugging to a file:
     log enable -STagnpstv -f /tmp/log.txt lldb all
 
+Debugging with gdb(1):
+    Start the server:
+        gdb --args lldb-server g *:1234 -- ./signal
+
+    Start the client:
+        lldb
+    Inside it:
+        process connect connect://localhost:1234
+
+
 Introduce objc++ setup with gcc(1) for "make test":
     Build Command Output:
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
