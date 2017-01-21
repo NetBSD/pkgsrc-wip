@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-20 20:30:48.330267591 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1375 @@
+@@ -0,0 +1,1384 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -600,8 +600,17 @@ $NetBSD$
 +        }
 +        // _lwp_exit(2)
 +        if ((state.pe_report_event & PTRACE_LWP_EXIT) != 0)
-+          printf("LWP terminated reported\n");
++          for (size_t i; i < m_threads.size(); i++) {
++            if (static_pointer_cast<NativeThreadNetBSD>(m_threads[i])->GetID() == state.pe_lwp) {
++              m_threads.erase(m_threads.begin() + i);
++              break;
++            }
++          }
++          for (const auto &thread_sp : m_threads) {
++            static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(info.psi_siginfo.si_signo, &info.psi_siginfo);
++          }
 +        }
++        SetState(StateType::eStateStopped, true);
 +        break;
 +      case TRAP_HWWPT:
 +        printf("hw watchpoint reported\n");
