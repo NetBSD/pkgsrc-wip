@@ -151,7 +151,10 @@ PLIST.vc4=		yes
 PLIST.r600=		yes
 GALLIUM_DRIVERS+=	r600
 
-.if ${OPSYS} != "FreeBSD" || empty(OS_VERSION:M12.*)
+FULL_OS_VERSION_CMD=	${UNAME} -r
+FULL_OS_VERSION=	${FULL_OS_VERSION_CMD:sh}
+
+.if ${OPSYS} != "FreeBSD" || (empty(FULL_OS_VERSION:M11.0-STABLE) && empty(OS_VERSION:M12.*))
 # nVidia
 PLIST.nouveau=		yes
 GALLIUM_DRIVERS+=	nouveau
@@ -165,7 +168,7 @@ DRI_DRIVERS+=		radeon
 PLIST.r200_dri=		yes
 DRI_DRIVERS+=		r200
 
-.if ${OPSYS} != "FreeBSD" || empty(OS_VERSION:M12.*)
+.if ${OPSYS} != "FreeBSD" || (empty(FULL_OS_VERSION:M11.0-STABLE) && empty(OS_VERSION:M12.*))
 # classic DRI nouveau
 PLIST.nouveau_dri=	yes
 DRI_DRIVERS+=		nouveau
