@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-20 20:30:48.330267591 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1777 @@
+@@ -0,0 +1,1781 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -592,8 +592,12 @@ $NetBSD$
 +      case TRAP_LWP:
 +        {
 +        // _lwp_create(2)
-+        if ((state.pe_report_event & PTRACE_LWP_CREATE) != 0)
-+          printf("LWP created reported\n");
++        if ((state.pe_report_event & PTRACE_LWP_CREATE) != 0) {
++          AddThread(state.pe_lwp);
++          for (const auto &thread_sp : m_threads) {
++            static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(info.psi_siginfo.si_signo, &info.psi_siginfo);
++          }
++        }
 +        // _lwp_exit(2)
 +        if ((state.pe_report_event & PTRACE_LWP_EXIT) != 0)
 +          printf("LWP terminated reported\n");
