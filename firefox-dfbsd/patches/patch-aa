@@ -1,0 +1,429 @@
+$NetBSD: patch-aa,v 1.48 2016/12/03 09:58:26 ryoon Exp $
+
+* MOZ_ENABLE_PROFILER_SPS is not for users, Disable it
+* Disable libjpeg-turbo check
+* Add system libraries option
+* Add OSS audio support
+
+--- old-configure.in.orig	2016-10-31 20:15:28.000000000 +0000
++++ old-configure.in
+@@ -2304,11 +2304,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
+                      #include <jpeglib.h> ],
+                    [ #if JPEG_LIB_VERSION < $MOZJPEG
+                      #error "Insufficient JPEG library version ($MOZJPEG required)."
+-                     #endif
+-                     #ifndef JCS_EXTENSIONS
+-                     #error "libjpeg-turbo JCS_EXTENSIONS required"
+-                     #endif
+-                     ],
++                     #endif ],
+                    MOZ_SYSTEM_JPEG=1,
+                    AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
+ fi
+@@ -3220,6 +3216,9 @@ if test -n "$MOZ_WEBRTC"; then
+     MOZ_RAW=1
+     MOZ_VPX_ERROR_CONCEALMENT=1
+ 
++    dnl with libv4l2 we can support more cameras
++    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
++
+ dnl enable once Signaling lands
+     MOZ_WEBRTC_SIGNALING=1
+     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
+@@ -3262,7 +3261,7 @@ dnl Use integers over floats for audio o
+ dnl (regarless of the CPU architecture, because audio
+ dnl backends for those platforms don't support floats. We also
+ dnl use integers on ARM with other OS, because it's more efficient.
+-if test "$OS_TARGET" = "Android" -o "$CPU_ARCH" = "arm"; then
++if test -n "$MOZ_INTEGER_SAMPLES"; then
+     MOZ_SAMPLE_TYPE_S16=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
+     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
+@@ -3362,6 +3361,155 @@ if test "${ac_cv_c_attribute_aligned}" !
+ fi
+ 
+ dnl ========================================================
++dnl Check for libogg
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-ogg,
++[  --with-system-ogg       Use system libogg (located with pkgconfig)],
++MOZ_SYSTEM_OGG=1,
++MOZ_SYSTEM_OGG=)
++
++if test -n "$MOZ_SYSTEM_OGG"; then
++    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
++
++    _SAVE_LIBS=$LIBS
++    LIBS="$LIBS $MOZ_OGG_LIBS"
++    AC_CHECK_FUNC(ogg_set_mem_functions, [],
++      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
++    LIBS=$_SAVE_LIBS
++fi
++
++AC_SUBST(MOZ_SYSTEM_OGG)
++
++dnl ========================================================
++dnl Check for libvorbis
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-vorbis,
++[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
++MOZ_SYSTEM_VORBIS=1,
++MOZ_SYSTEM_VORBIS=)
++
++if test -n "$MOZ_SYSTEM_VORBIS"; then
++    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.5)
++fi
++
++AC_SUBST(MOZ_SYSTEM_VORBIS)
++
++dnl ========================================================
++dnl Check for integer-only libvorbis aka tremor
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-tremor,
++[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
++MOZ_SYSTEM_TREMOR=1,
++MOZ_SYSTEM_TREMOR=)
++
++if test -n "$MOZ_SYSTEM_TREMOR"; then
++    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
++fi
++
++AC_SUBST(MOZ_SYSTEM_TREMOR)
++
++dnl ========================================================
++dnl Check for libcelt
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-celt,
++[  --with-system-celt      Use system libcelt (located with pkgconfig)],
++MOZ_SYSTEM_CELT=1,
++MOZ_SYSTEM_CELT=)
++
++if test -n "$MOZ_SYSTEM_CELT"; then
++    PKG_CHECK_MODULES(MOZ_CELT, celt)
++else
++    MOZ_CELT_CFLAGS='-I$(topsrcdir)/media/libopus'
++fi
++
++AC_SUBST(MOZ_SYSTEM_CELT)
++
++dnl ========================================================
++dnl Check for libopus
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-opus,
++[  --with-system-opus      Use system libopus (located with pkgconfig)],
++MOZ_SYSTEM_OPUS=1,
++MOZ_SYSTEM_OPUS=)
++
++if test -n "$MOZ_SYSTEM_OPUS"; then
++    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
++else
++    MOZ_OPUS_CFLAGS='-I$(topsrcdir)/media/libopus/include'
++fi
++
++AC_SUBST(MOZ_SYSTEM_OPUS)
++
++dnl ========================================================
++dnl Check for libtheora
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-theora,
++[  --with-system-theora    Use system libtheora (located with pkgconfig)],
++MOZ_SYSTEM_THEORA=1,
++MOZ_SYSTEM_THEORA=)
++
++if test -n "$MOZ_SYSTEM_THEORA"; then
++    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
++fi
++
++AC_SUBST(MOZ_SYSTEM_THEORA)
++
++dnl ========================================================
++dnl Check for libsoundtouch
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-soundtouch,
++[  --with-system-soundtouch Use system libsoundtouch (located with pkgconfig)],
++MOZ_SYSTEM_SOUNDTOUCH=1,
++MOZ_SYSTEM_SOUNDTOUCH=)
++
++if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
++    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.8.0)
++
++    AC_LANG_SAVE
++    AC_LANG_CPLUSPLUS
++    _SAVE_CXXFLAGS=$CXXFLAGS
++    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
++    AC_CACHE_CHECK(for soundtouch sample type,
++                   ac_cv_soundtouch_sample_type,
++                   [AC_TRY_COMPILE([#include <SoundTouch.h>
++                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
++                                    #error soundtouch expects float samples
++                                    #endif],
++                                   [],
++                                   [ac_cv_soundtouch_sample_type=short],
++                                   [ac_cv_soundtouch_sample_type=float])])
++    CXXFLAGS=$_SAVE_CXXFLAGS
++    AC_LANG_RESTORE
++
++    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
++         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
++        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
++    fi
++fi
++
++AC_SUBST(MOZ_SYSTEM_SOUNDTOUCH)
++
++dnl ========================================================
++dnl = Disable VP8 decoder support
++dnl ========================================================
++MOZ_ARG_DISABLE_BOOL(webm,
++[  --disable-webm          Disable support for WebM media (VP8 video and Vorbis audio)],
++    MOZ_WEBM=,
++    MOZ_WEBM=1)
++
++if test -n "$MOZ_WEBM"; then
++    AC_DEFINE(MOZ_WEBM)
++    MOZ_VPX=1
++fi;
++
++dnl ========================================================
+ dnl = Apple platform decoder support
+ dnl ========================================================
+ if test "$COMPILE_ENVIRONMENT"; then
+@@ -3445,6 +3593,111 @@ if test -n "$MOZ_OMX_PLUGIN"; then
+     fi
+ fi
+ 
++dnl ========================================================
++dnl Check for libogg
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-ogg,
++[  --with-system-ogg       Use system libogg (located with pkgconfig)],
++MOZ_SYSTEM_OGG=1,
++MOZ_SYSTEM_OGG=)
++
++if test -n "$MOZ_SYSTEM_OGG"; then
++    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
++
++    _SAVE_LIBS=$LIBS
++    LIBS="$LIBS $MOZ_OGG_LIBS"
++    AC_CHECK_FUNC(ogg_set_mem_functions, [],
++      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
++    LIBS=$_SAVE_LIBS
++fi
++
++AC_SUBST(MOZ_SYSTEM_OGG)
++
++dnl ========================================================
++dnl Check for libvorbis
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-vorbis,
++[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
++MOZ_SYSTEM_VORBIS=1,
++MOZ_SYSTEM_VORBIS=)
++
++if test -n "$MOZ_SYSTEM_VORBIS"; then
++    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.5)
++fi
++
++AC_SUBST(MOZ_SYSTEM_VORBIS)
++
++dnl ========================================================
++dnl Check for integer-only libvorbis aka tremor
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-tremor,
++[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
++MOZ_SYSTEM_TREMOR=1,
++MOZ_SYSTEM_TREMOR=)
++
++if test -n "$MOZ_SYSTEM_TREMOR"; then
++    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
++fi
++
++AC_SUBST(MOZ_SYSTEM_TREMOR)
++
++dnl ========================================================
++dnl Check for libtheora
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-theora,
++[  --with-system-theora    Use system libtheora (located with pkgconfig)],
++MOZ_SYSTEM_THEORA=1,
++MOZ_SYSTEM_THEORA=)
++
++if test -n "$MOZ_SYSTEM_THEORA"; then
++    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
++fi
++
++AC_SUBST(MOZ_SYSTEM_THEORA)
++
++dnl ========================================================
++dnl Check for libSoundTouch
++dnl ========================================================
++
++MOZ_ARG_WITH_BOOL(system-soundtouch,
++[  --with-system-soundtouch Use system libSoundTouch (located with pkgconfig)],
++MOZ_SYSTEM_SOUNDTOUCH=1,
++MOZ_SYSTEM_SOUNDTOUCH=)
++
++if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
++    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.9.0)
++
++    AC_LANG_SAVE
++    AC_LANG_CPLUSPLUS
++    _SAVE_CXXFLAGS=$CXXFLAGS
++    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
++    AC_CACHE_CHECK(for soundtouch sample type,
++                   ac_cv_soundtouch_sample_type,
++                   [AC_TRY_COMPILE([#include <SoundTouch.h>
++                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
++                                    #error soundtouch expects float samples
++                                    #endif],
++                                   [],
++                                   [ac_cv_soundtouch_sample_type=short],
++                                   [ac_cv_soundtouch_sample_type=float])])
++    CXXFLAGS=$_SAVE_CXXFLAGS
++    AC_LANG_RESTORE
++
++    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
++         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
++        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
++    fi
++fi
++
++if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
++    AC_DEFINE(MOZ_SYSTEM_SOUNDTOUCH)
++fi
++AC_SUBST(MOZ_SYSTEM_SOUNDTOUCH)
++
+ dnl system libvpx Support
+ dnl ========================================================
+ MOZ_ARG_WITH_BOOL(system-libvpx,
+@@ -3609,6 +3862,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+ AC_SUBST(MOZ_WEBM_ENCODER)
+ 
+ dnl ==================================
++dnl = Check OSS availability
++dnl ==================================
++
++dnl If using Linux, Solaris or BSDs, ensure that OSS is available
++case "$OS_TARGET" in
++Linux|SunOS|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD)
++    MOZ_OSS=1
++    ;;
++esac
++
++MOZ_ARG_WITH_STRING(oss,
++[  --with-oss[=PFX]        Enable OpenSoundSystem support [installed at prefix PFX]],
++   OSSPREFIX=$withval)
++
++if test -n "$OSSPREFIX"; then
++    if test "$OSSPREFIX" != "no"; then
++        MOZ_OSS=1
++    else
++        MOZ_OSS=
++    fi
++fi
++
++_SAVE_CFLAGS=$CFLAGS
++_SAVE_LIBS=$LIBS
++if test -n "$MOZ_OSS"; then
++    dnl Prefer 4Front implementation
++    AC_MSG_CHECKING([MOZ_OSS_CFLAGS])
++    if test "$OSSPREFIX" != "yes"; then
++        oss_conf=${OSSPREFIX%/usr}/etc/oss.conf
++        if test -f "$oss_conf"; then
++            . "$oss_conf"
++        else
++            OSSLIBDIR=$OSSPREFIX/lib/oss
++        fi
++        if test -d "$OSSLIBDIR"; then
++            MOZ_OSS_CFLAGS="$MOZ_OSS_CFLAGS -I$OSSLIBDIR/include"
++        fi
++    fi
++    AC_MSG_RESULT([$MOZ_OSS_CFLAGS])
++
++    CFLAGS="$CFLAGS $MOZ_OSS_CFLAGS"
++    MOZ_CHECK_HEADERS(sys/soundcard.h soundcard.h)
++
++    if test "$ac_cv_header_sys_soundcard_h" != "yes" -a \
++            "$ac_cv_header_soundcard_h" != "yes"; then
++        AC_MSG_ERROR([Need OSS for Ogg, Wave or WebM decoding on $OS_TARGET.  Disable with --without-oss.])
++    fi
++
++    dnl Assume NetBSD implementation over SunAudio
++    AC_CHECK_LIB(ossaudio, _oss_ioctl,
++        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/sound")
++         MOZ_OSS_LIBS="$MOZ_OSS_LIBS -lossaudio"])
++fi
++CFLAGS=$_SAVE_CFLAGS
++LIBS=$_SAVE_LIBS
++
++AC_SUBST(MOZ_OSS)
++AC_SUBST_LIST(MOZ_OSS_CFLAGS)
++AC_SUBST_LIST(MOZ_OSS_LIBS)
++
++dnl ==================================
+ dnl = Check alsa availability on Linux
+ dnl ==================================
+ 
+@@ -3622,12 +3936,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+    MOZ_ALSA=1,
+    MOZ_ALSA=)
+ 
++MOZ_ARG_DISABLE_BOOL(alsa-dlopen,
++[  --disable-alsa-dlopen   Disable runtime linking of libasound.so],
++   DISABLE_LIBASOUND_DLOPEN=1,
++   DISABLE_LIBASOUND_DLOPEN=)
++
+ if test -n "$MOZ_ALSA"; then
+     PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for audio output on Linux. (On Ubuntu, you might try installing the package libasound2-dev.)])])
+ fi
+ 
++if test -n "$DISABLE_LIBASOUND_DLOPEN"; then
++    AC_DEFINE(DISABLE_LIBASOUND_DLOPEN)
++else
++    MOZ_ALSA_LIBS=
++fi
++
+ AC_SUBST(MOZ_ALSA)
+ 
+ dnl ========================================================
+@@ -5764,6 +6089,27 @@ if test "$USE_FC_FREETYPE"; then
+ fi
+ 
+ dnl ========================================================
++dnl Check for graphite2
++dnl ========================================================
++if test -n "$MOZ_SYSTEM_GRAPHITE2"; then
++    dnl graphite2.pc has bogus version, check manually
++    _SAVE_CFLAGS=$CFLAGS
++    CFLAGS="$CFLAGS $MOZ_GRAPHITE2_CFLAGS"
++    AC_TRY_COMPILE([ #include <graphite2/Font.h>
++                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
++                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
++                               * 100 + GR2_VERSION_BUGFIX >= \
++                               (major) * 10000 + (minor) * 100 + (bugfix) )
++                   ], [
++                     #if !GR2_VERSION_REQUIRE(1,3,8)
++                     #error "Insufficient graphite2 version."
++                     #endif
++                   ], [],
++                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
++    CFLAGS=$_SAVE_CFLAGS
++fi
++
++dnl ========================================================
+ dnl Check for pixman and cairo
+ dnl ========================================================
+ 

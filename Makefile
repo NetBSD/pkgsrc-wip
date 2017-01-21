@@ -741,6 +741,7 @@ SUBDIR+=	filter_audio-git
 SUBDIR+=	fio
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
+SUBDIR+=	firefox-dfbsd
 SUBDIR+=	firefox-hg
 SUBDIR+=	firefox-webrtc
 SUBDIR+=	firefox-wrapper
