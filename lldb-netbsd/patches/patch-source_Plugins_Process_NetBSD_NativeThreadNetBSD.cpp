@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-20 20:30:48.343442890 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,382 @@
+@@ -0,0 +1,391 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -237,6 +237,15 @@ $NetBSD$
 +        break;
 +      case TRAP_TRACE:
 +        stringStream << "Process Trace Trap type";
++        break;
++      case TRAP_EXEC:
++        stringStream << "Process Exec Trap type";
++        break;
++      case TRAP_CHLD:
++        stringStream << "Process Child Trap type";
++        break;
++      case TRAP_LWP:
++        stringStream << "Process LWP Trap type";
 +        break;
 +      default:
 +        stringStream << "unknown si_code value " << std::hex << std::showbase
