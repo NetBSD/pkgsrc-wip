@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-20 20:30:48.343442890 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,391 @@
+@@ -0,0 +1,388 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -148,18 +148,6 @@ $NetBSD$
 +
 +Error NativeThreadNetBSD::RemoveWatchpoint(lldb::addr_t addr) {
 +  return Error();
-+}
-+
-+Error NativeThreadNetBSD::SingleStep(uint32_t signo) {
-+  const StateType new_state = StateType::eStateStepping;
-+  m_state = new_state;
-+  m_stop_info.reason = StopReason::eStopReasonNone;
-+
-+  intptr_t data = 0;
-+  if (signo != LLDB_INVALID_SIGNAL_NUMBER)
-+    data = signo;
-+
-+  return NativeProcessNetBSD::PtraceWrapper(PT_STEP, GetID(), (void *)1, data);
 +}
 +
 +void NativeThreadNetBSD::SetStoppedBySignal(uint32_t signo,
@@ -385,6 +373,15 @@ $NetBSD$
 +    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
 +  SetStopped();
 +  m_stop_info.reason = StopReason::eStopReasonTrace;
++  m_stop_info.details.signal.signo = SIGTRAP;
++}
++
++void NativeThreadNetBSD::SetStoppedByBreakpoint() {
++  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
++  if (log)
++    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
++  SetStopped();
++  m_stop_info.reason = StopReason::eStopReasonBreakpoint;
 +  m_stop_info.details.signal.signo = SIGTRAP;
 +}
 +

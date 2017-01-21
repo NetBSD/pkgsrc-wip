@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-20 20:30:48.330267591 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1384 @@
+@@ -0,0 +1,1387 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -538,7 +538,10 @@ $NetBSD$
 +    case SIGTRAP:
 +      switch (info.psi_siginfo.si_code) {
 +      case TRAP_BRKPT:
-+        printf("Breakpoint reported\n");
++        for (const auto &thread_sp : m_threads) {
++          static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedByBreakpoint();
++        }
++        SetState(StateType::eStateStopped, true);
 +        break;
 +      case TRAP_TRACE:
 +        for (const auto &thread_sp : m_threads) {
