@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-20 20:30:48.330267591 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1774 @@
+@@ -0,0 +1,1777 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -541,7 +541,10 @@ $NetBSD$
 +        printf("Breakpoint reported\n");
 +        break;
 +      case TRAP_TRACE:
-+        printf("Single step reported\n");
++        for (const auto &thread_sp : m_threads) {
++          static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedByTrace();
++        }
++        SetState(StateType::eStateStopped, true);
 +        break;
 +      case TRAP_EXEC:
 +        {
