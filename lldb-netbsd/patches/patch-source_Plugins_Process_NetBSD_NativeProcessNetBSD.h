@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-01-19 22:12:22.356554617 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-01-20 20:30:48.337095578 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,182 @@
+@@ -0,0 +1,183 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -111,6 +111,7 @@ $NetBSD$
 +  // ---------------------------------------------------------------------
 +  // NativeProcessProtocol protected interface
 +  // ---------------------------------------------------------------------
++
 +  Error
 +  GetSoftwareBreakpointTrapOpcode(size_t trap_opcode_size_hint,
 +                                  size_t &actual_opcode_size,

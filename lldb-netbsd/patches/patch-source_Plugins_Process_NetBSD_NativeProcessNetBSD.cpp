@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-20 20:30:48.330267591 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1781 @@
+@@ -0,0 +1,1375 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -701,97 +701,6 @@ $NetBSD$
 +                                                  LLDB_INVALID_ADDRESS);
 +}
 +
-+Error NativeProcessNetBSD::SetupSoftwareSingleStepping(
-+    NativeThreadNetBSD &thread) {
-+  Error error;
-+  NativeRegisterContextSP register_context_sp = thread.GetRegisterContext();
-+
-+  std::unique_ptr<EmulateInstruction> emulator_ap(
-+      EmulateInstruction::FindPlugin(m_arch, eInstructionTypePCModifying,
-+                                     nullptr));
-+
-+  if (emulator_ap == nullptr)
-+    return Error("Instruction emulator not found!");
-+
-+  EmulatorBaton baton(this, register_context_sp.get());
-+  emulator_ap->SetBaton(&baton);
-+  emulator_ap->SetReadMemCallback(&ReadMemoryCallback);
-+  emulator_ap->SetReadRegCallback(&ReadRegisterCallback);
-+  emulator_ap->SetWriteMemCallback(&WriteMemoryCallback);
-+  emulator_ap->SetWriteRegCallback(&WriteRegisterCallback);
-+
-+  if (!emulator_ap->ReadInstruction())
-+    return Error("Read instruction failed!");
-+
-+  bool emulation_result =
-+      emulator_ap->EvaluateInstruction(eEmulateInstructionOptionAutoAdvancePC);
-+
-+  const RegisterInfo *reg_info_pc = register_context_sp->GetRegisterInfo(
-+      eRegisterKindGeneric, LLDB_REGNUM_GENERIC_PC);
-+  const RegisterInfo *reg_info_flags = register_context_sp->GetRegisterInfo(
-+      eRegisterKindGeneric, LLDB_REGNUM_GENERIC_FLAGS);
-+
-+  auto pc_it =
-+      baton.m_register_values.find(reg_info_pc->kinds[eRegisterKindDWARF]);
-+  auto flags_it =
-+      baton.m_register_values.find(reg_info_flags->kinds[eRegisterKindDWARF]);
-+
-+  lldb::addr_t next_pc;
-+  lldb::addr_t next_flags;
-+  if (emulation_result) {
-+    assert(pc_it != baton.m_register_values.end() &&
-+           "Emulation was successfull but PC wasn't updated");
-+    next_pc = pc_it->second.GetAsUInt64();
-+
-+    if (flags_it != baton.m_register_values.end())
-+      next_flags = flags_it->second.GetAsUInt64();
-+    else
-+      next_flags = ReadFlags(register_context_sp.get());
-+  } else if (pc_it == baton.m_register_values.end()) {
-+    // Emulate instruction failed and it haven't changed PC. Advance PC
-+    // with the size of the current opcode because the emulation of all
-+    // PC modifying instruction should be successful. The failure most
-+    // likely caused by a not supported instruction which don't modify PC.
-+    next_pc =
-+        register_context_sp->GetPC() + emulator_ap->GetOpcode().GetByteSize();
-+    next_flags = ReadFlags(register_context_sp.get());
-+  } else {
-+    // The instruction emulation failed after it modified the PC. It is an
-+    // unknown error where we can't continue because the next instruction is
-+    // modifying the PC but we don't  know how.
-+    return Error("Instruction emulation failed unexpectedly.");
-+  }
-+
-+  if (m_arch.GetMachine() == llvm::Triple::arm) {
-+    if (next_flags & 0x20) {
-+      // Thumb mode
-+      error = SetSoftwareBreakpoint(next_pc, 2);
-+    } else {
-+      // Arm mode
-+      error = SetSoftwareBreakpoint(next_pc, 4);
-+    }
-+  } else if (m_arch.GetMachine() == llvm::Triple::mips64 ||
-+             m_arch.GetMachine() == llvm::Triple::mips64el ||
-+             m_arch.GetMachine() == llvm::Triple::mips ||
-+             m_arch.GetMachine() == llvm::Triple::mipsel)
-+    error = SetSoftwareBreakpoint(next_pc, 4);
-+  else {
-+    // No size hint is given for the next breakpoint
-+    error = SetSoftwareBreakpoint(next_pc, 0);
-+  }
-+
-+  // If setting the breakpoint fails because next_pc is out of
-+  // the address space, ignore it and let the debugee segfault.
-+  if (error.GetError() == EIO || error.GetError() == EFAULT) {
-+    return Error();
-+  } else if (error.Fail())
-+    return error;
-+
-+  m_threads_stepping_with_breakpoint.insert({thread.GetID(), next_pc});
-+
-+  return Error();
-+}
-+
 +Error NativeProcessNetBSD::Resume(const ResumeActionList &resume_actions) {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS | LIBLLDB_LOG_THREAD));
 +  if (log)
@@ -1080,56 +989,6 @@ $NetBSD$
 +    return error;
 +  }
 +
-+#if 0
-+  // If our cache is empty, pull the latest.  There should always be at least
-+  // one memory region
-+  // if memory region handling is supported.
-+  if (m_mem_region_cache.empty()) {
-+    error = ProcFileReader::ProcessLineByLine(
-+        GetID(), "maps", [&](const std::string &line) -> bool {
-+          MemoryRegionInfo info;
-+          const Error parse_error =
-+              ParseMemoryRegionInfoFromProcMapsLine(line, info);
-+          if (parse_error.Success()) {
-+            m_mem_region_cache.push_back(info);
-+            return true;
-+          } else {
-+            if (log)
-+              log->Printf("NativeProcessNetBSD::%s failed to parse proc maps "
-+                          "line '%s': %s",
-+                          __FUNCTION__, line.c_str(), error.AsCString());
-+            return false;
-+          }
-+        });
-+
-+    // If we had an error, we'll mark unsupported.
-+    if (error.Fail()) {
-+      m_supports_mem_region = LazyBool::eLazyBoolNo;
-+      return error;
-+    } else if (m_mem_region_cache.empty()) {
-+      // No entries after attempting to read them.  This shouldn't happen if
-+      // /proc/{pid}/maps
-+      // is supported.  Assume we don't support map entries via procfs.
-+      if (log)
-+        log->Printf("NativeProcessNetBSD::%s failed to find any procfs maps "
-+                    "entries, assuming no support for memory region metadata "
-+                    "retrieval",
-+                    __FUNCTION__);
-+      m_supports_mem_region = LazyBool::eLazyBoolNo;
-+      error.SetErrorString("not supported");
-+      return error;
-+    }
-+
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s read %" PRIu64
-+                  " memory region entries from /proc/%" PRIu64 "/maps",
-+                  __FUNCTION__,
-+                  static_cast<uint64_t>(m_mem_region_cache.size()), GetID());
-+
-+    // We support memory retrieval, remember that.
-+    m_supports_mem_region = LazyBool::eLazyBoolYes;
-+  } else
-+#endif
 + {
 +    if (log)
 +      log->Printf("NativeProcessNetBSD::%s reusing %" PRIu64
@@ -1259,39 +1118,6 @@ $NetBSD$
 +  return true;
 +}
 +
-+Error NativeProcessNetBSD::GetSoftwareBreakpointPCOffset(
-+    uint32_t &actual_opcode_size) {
-+  // FIXME put this behind a breakpoint protocol class that can be
-+  // set per architecture.  Need ARM, MIPS support here.
-+  static const uint8_t g_i386_opcode[] = {0xCC};
-+  static const uint8_t g_s390x_opcode[] = {0x00, 0x01};
-+
-+  switch (m_arch.GetMachine()) {
-+  case llvm::Triple::x86:
-+  case llvm::Triple::x86_64:
-+    actual_opcode_size = static_cast<uint32_t>(sizeof(g_i386_opcode));
-+    return Error();
-+
-+  case llvm::Triple::systemz:
-+    actual_opcode_size = static_cast<uint32_t>(sizeof(g_s390x_opcode));
-+    return Error();
-+
-+  case llvm::Triple::arm:
-+  case llvm::Triple::aarch64:
-+  case llvm::Triple::mips64:
-+  case llvm::Triple::mips64el:
-+  case llvm::Triple::mips:
-+  case llvm::Triple::mipsel:
-+    // On these architectures the PC don't get updated for breakpoint hits
-+    actual_opcode_size = 0;
-+    return Error();
-+
-+  default:
-+    assert(false && "CPU type not supported!");
-+    return Error("CPU type not supported");
-+  }
-+}
-+
 +Error NativeProcessNetBSD::SetBreakpoint(lldb::addr_t addr, uint32_t size,
 +                                        bool hardware) {
 +  if (hardware)
@@ -1303,66 +1129,7 @@ $NetBSD$
 +Error NativeProcessNetBSD::GetSoftwareBreakpointTrapOpcode(
 +    size_t trap_opcode_size_hint, size_t &actual_opcode_size,
 +    const uint8_t *&trap_opcode_bytes) {
-+  // FIXME put this behind a breakpoint protocol class that can be set per
-+  // architecture.  Need MIPS support here.
-+  static const uint8_t g_aarch64_opcode[] = {0x00, 0x00, 0x20, 0xd4};
-+  // The ARM reference recommends the use of 0xe7fddefe and 0xdefe but the
-+  // netbsd kernel does otherwise.
-+  static const uint8_t g_arm_breakpoint_opcode[] = {0xf0, 0x01, 0xf0, 0xe7};
-+  static const uint8_t g_i386_opcode[] = {0xCC};
-+  static const uint8_t g_mips64_opcode[] = {0x00, 0x00, 0x00, 0x0d};
-+  static const uint8_t g_mips64el_opcode[] = {0x0d, 0x00, 0x00, 0x00};
-+  static const uint8_t g_s390x_opcode[] = {0x00, 0x01};
-+  static const uint8_t g_thumb_breakpoint_opcode[] = {0x01, 0xde};
-+
-+  switch (m_arch.GetMachine()) {
-+  case llvm::Triple::aarch64:
-+    trap_opcode_bytes = g_aarch64_opcode;
-+    actual_opcode_size = sizeof(g_aarch64_opcode);
-+    return Error();
-+
-+  case llvm::Triple::arm:
-+    switch (trap_opcode_size_hint) {
-+    case 2:
-+      trap_opcode_bytes = g_thumb_breakpoint_opcode;
-+      actual_opcode_size = sizeof(g_thumb_breakpoint_opcode);
-+      return Error();
-+    case 4:
-+      trap_opcode_bytes = g_arm_breakpoint_opcode;
-+      actual_opcode_size = sizeof(g_arm_breakpoint_opcode);
-+      return Error();
-+    default:
-+      assert(false && "Unrecognised trap opcode size hint!");
-+      return Error("Unrecognised trap opcode size hint!");
-+    }
-+
-+  case llvm::Triple::x86:
-+  case llvm::Triple::x86_64:
-+    trap_opcode_bytes = g_i386_opcode;
-+    actual_opcode_size = sizeof(g_i386_opcode);
-+    return Error();
-+
-+  case llvm::Triple::mips:
-+  case llvm::Triple::mips64:
-+    trap_opcode_bytes = g_mips64_opcode;
-+    actual_opcode_size = sizeof(g_mips64_opcode);
-+    return Error();
-+
-+  case llvm::Triple::mipsel:
-+  case llvm::Triple::mips64el:
-+    trap_opcode_bytes = g_mips64el_opcode;
-+    actual_opcode_size = sizeof(g_mips64el_opcode);
-+    return Error();
-+
-+  case llvm::Triple::systemz:
-+    trap_opcode_bytes = g_s390x_opcode;
-+    actual_opcode_size = sizeof(g_s390x_opcode);
-+    return Error();
-+
-+  default:
-+    assert(false && "CPU type not supported!");
-+    return Error("CPU type not supported");
-+  }
++  return Error();
 +}
 +
 +Error NativeProcessNetBSD::ReadMemory(lldb::addr_t addr, void *buf, size_t size,
@@ -1485,127 +1252,12 @@ $NetBSD$
 +  return thread_sp;
 +}
 +
-+Error NativeProcessNetBSD::FixupBreakpointPCAsNeeded(NativeThreadNetBSD &thread) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_BREAKPOINTS));
-+
-+  Error error;
-+
-+  // Find out the size of a breakpoint (might depend on where we are in the
-+  // code).
-+  NativeRegisterContextSP context_sp = thread.GetRegisterContext();
-+  if (!context_sp) {
-+    error.SetErrorString("cannot get a NativeRegisterContext for the thread");
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s failed: %s", __FUNCTION__,
-+                  error.AsCString());
-+    return error;
-+  }
-+
-+  uint32_t breakpoint_size = 0;
-+  error = GetSoftwareBreakpointPCOffset(breakpoint_size);
-+  if (error.Fail()) {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s GetBreakpointSize() failed: %s",
-+                  __FUNCTION__, error.AsCString());
-+    return error;
-+  } else {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s breakpoint size: %" PRIu32,
-+                  __FUNCTION__, breakpoint_size);
-+  }
-+
-+  // First try probing for a breakpoint at a software breakpoint location: PC -
-+  // breakpoint size.
-+  const lldb::addr_t initial_pc_addr =
-+      context_sp->GetPCfromBreakpointLocation();
-+  lldb::addr_t breakpoint_addr = initial_pc_addr;
-+  if (breakpoint_size > 0) {
-+    // Do not allow breakpoint probe to wrap around.
-+    if (breakpoint_addr >= breakpoint_size)
-+      breakpoint_addr -= breakpoint_size;
-+  }
-+
-+  // Check if we stopped because of a breakpoint.
-+  NativeBreakpointSP breakpoint_sp;
-+  error = m_breakpoint_list.GetBreakpoint(breakpoint_addr, breakpoint_sp);
-+  if (!error.Success() || !breakpoint_sp) {
-+    // We didn't find one at a software probe location.  Nothing to do.
-+    if (log)
-+      log->Printf(
-+          "NativeProcessNetBSD::%s pid %" PRIu64
-+          " no lldb breakpoint found at current pc with adjustment: 0x%" PRIx64,
-+          __FUNCTION__, GetID(), breakpoint_addr);
-+    return Error();
-+  }
-+
-+  // If the breakpoint is not a software breakpoint, nothing to do.
-+  if (!breakpoint_sp->IsSoftwareBreakpoint()) {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s pid %" PRIu64
-+                  " breakpoint found at 0x%" PRIx64
-+                  ", not software, nothing to adjust",
-+                  __FUNCTION__, GetID(), breakpoint_addr);
-+    return Error();
-+  }
-+
-+  //
-+  // We have a software breakpoint and need to adjust the PC.
-+  //
-+
-+  // Sanity check.
-+  if (breakpoint_size == 0) {
-+    // Nothing to do!  How did we get here?
-+    if (log)
-+      log->Printf(
-+          "NativeProcessNetBSD::%s pid %" PRIu64
-+          " breakpoint found at 0x%" PRIx64
-+          ", it is software, but the size is zero, nothing to do (unexpected)",
-+          __FUNCTION__, GetID(), breakpoint_addr);
-+    return Error();
-+  }
-+
-+  // Change the program counter.
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s pid %" PRIu64 " tid %" PRIu64
-+                ": changing PC from 0x%" PRIx64 " to 0x%" PRIx64,
-+                __FUNCTION__, GetID(), thread.GetID(), initial_pc_addr,
-+                breakpoint_addr);
-+
-+  error = context_sp->SetPC(breakpoint_addr);
-+  if (error.Fail()) {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s pid %" PRIu64 " tid %" PRIu64
-+                  ": failed to set PC: %s",
-+                  __FUNCTION__, GetID(), thread.GetID(), error.AsCString());
-+    return error;
-+  }
-+
-+  return error;
-+}
-+
 +Error NativeProcessNetBSD::GetLoadedModuleFileSpec(const char *module_path,
 +                                                  FileSpec &file_spec) {
 +  FileSpec module_file_spec(module_path, true);
 +
 +  bool found = false;
 +  file_spec.Clear();
-+#if 0
-+  ProcFileReader::ProcessLineByLine(
-+      GetID(), "maps", [&](const std::string &line) {
-+        SmallVector<StringRef, 16> columns;
-+        StringRef(line).split(columns, " ", -1, false);
-+        if (columns.size() < 6)
-+          return true; // continue searching
-+
-+        FileSpec this_file_spec(columns[5].str(), false);
-+        if (this_file_spec.GetFilename() != module_file_spec.GetFilename())
-+          return true; // continue searching
-+
-+        file_spec = this_file_spec;
-+        found = true;
-+        return false; // we are done
-+      });
-+#endif
 +
 +  if (!found)
 +    return Error("Module file (%s) not found in /proc/%" PRIu64 "/maps file!",
@@ -1617,34 +1269,7 @@ $NetBSD$
 +Error NativeProcessNetBSD::GetFileLoadAddress(const llvm::StringRef &file_name,
 +                                             lldb::addr_t &load_addr) {
 +  load_addr = LLDB_INVALID_ADDRESS;
-+#if 0
-+  Error error = ProcFileReader::ProcessLineByLine(
-+      GetID(), "maps", [&](const std::string &line) -> bool {
-+        StringRef maps_row(line);
-+
-+        SmallVector<StringRef, 16> maps_columns;
-+        maps_row.split(maps_columns, StringRef(" "), -1, false);
-+
-+        if (maps_columns.size() < 6) {
-+          // Return true to continue reading the proc file
-+          return true;
-+        }
-+
-+        if (maps_columns[5] == file_name) {
-+          StringExtractor addr_extractor(maps_columns[0].str().c_str());
-+          load_addr = addr_extractor.GetHexMaxU64(false, LLDB_INVALID_ADDRESS);
-+
-+          // Return false to stop reading the proc file further
-+          return false;
-+        }
-+
-+        // Return true to continue reading the proc file
-+        return true;
-+      });
-+#else
-+  Error error;
-+#endif
-+  return error;
++  return Error();
 +}
 +
 +NativeThreadNetBSDSP NativeProcessNetBSD::GetThreadByID(lldb::tid_t tid) {
@@ -1653,37 +1278,6 @@ $NetBSD$
 +}
 +
 +//===----------------------------------------------------------------------===//
-+
-+void NativeProcessNetBSD::SignalIfAllThreadsStopped() {
-+  if (m_pending_notification_tid == LLDB_INVALID_THREAD_ID)
-+    return; // No pending notification. Nothing to do.
-+
-+  for (const auto &thread_sp : m_threads) {
-+    if (StateIsRunningState(thread_sp->GetState()))
-+      return; // Some threads are still running. Don't signal yet.
-+  }
-+
-+  // We have a pending notification and all threads have stopped.
-+  Log *log(
-+      GetLogIfAnyCategoriesSet(LIBLLDB_LOG_PROCESS | LIBLLDB_LOG_BREAKPOINTS));
-+
-+  // Clear any temporary breakpoints we used to implement software single
-+  // stepping.
-+  for (const auto &thread_info : m_threads_stepping_with_breakpoint) {
-+    Error error = RemoveBreakpoint(thread_info.second);
-+    if (error.Fail())
-+      if (log)
-+        log->Printf("NativeProcessNetBSD::%s() pid = %" PRIu64
-+                    " remove stepping breakpoint: %s",
-+                    __FUNCTION__, thread_info.first, error.AsCString());
-+  }
-+  m_threads_stepping_with_breakpoint.clear();
-+
-+  // Notify the delegate about the stop
-+  SetCurrentThreadID(m_pending_notification_tid);
-+  SetState(StateType::eStateStopped, true);
-+  m_pending_notification_tid = LLDB_INVALID_THREAD_ID;
-+}
 +
 +void NativeProcessNetBSD::SigchldHandler() {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
