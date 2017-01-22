@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-20 20:30:48.330267591 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-21 18:35:30.311662060 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -0,0 +1,1387 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
@@ -452,17 +452,17 @@ $NetBSD$
 +Error NativeProcessNetBSD::SetDefaultPtraceOpts(lldb::pid_t pid) {
 +  ptrace_event_t event = {};
 +
++#if notyet
 +  // Report forks
 +  event.pe_set_event |= PTRACE_FORK;
 +
 +  // Report vforks
 +  // TODO: Currently unsupported in NetBSD
-+#if notyet
 +  event.pe_set_event |= PTRACE_VFORK;
-+#endif
 +
 +  // Report finished vforks - the parent unblocked after execve(2) or exit(2) of the child
 +  event.pe_set_event |= PTRACE_VFORK_DONE;
++#endif
 +
 +  // Report LWP (thread) creation
 +  event.pe_set_event |= PTRACE_LWP_CREATE;

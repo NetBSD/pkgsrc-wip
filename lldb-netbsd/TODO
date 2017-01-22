@@ -1,6 +1,11 @@
 Debugging to a file:
     log enable -STagnpstv -f /tmp/log.txt lldb all
 
+Debugging GDB remote protocol commands:
+    log enable gdb-remote packets
+
+    https://sourceware.org/gdb/onlinedocs/gdb/Remote-Protocol.html
+
 Debugging with gdb(1):
     Start the server:
         gdb --args lldb-server g *:1234 -- ./signal
@@ -20,24 +25,15 @@ Introduce objc++ setup with gcc(1) for "make test":
 llvm::call_once hack for src:
    curl https://github.com/jsonn/src/commit/78f4ee4c8349d68cf2279f2c7fc2196ae369e182.patch|gpatch -R -p1
 
-The current milestone is to detect in Monitor Callback the following events:
- - process termination - works, appropriate return status passed to LLDB
- - execve(2) - works, switch to new image not tested but all the code seems to be there
- - software breakpoint (TRAP_BRKPT) - works, stop on breakpoint and resume from breakpoint OK
- - single step - seems to work, but doesn't return to user for each step
- - fork - should be detected, but for now skipped
- - vfork-done - detected, but for now skipped
- - lwp creation/termination - works, stop on it and resume works, LWP list updated correctly
- - hardware breakpoint - currently not easily testable (skipped)
- - other signal passed to tracee - works, stop on it and resume works
-
-Short-term goals in next milestone:
+Short-term goals in current milestone:
  - fix conflict with system-wide py-six
  - add support for auxv read operation
  - switch resolution of pid -> path to executable from /proc to sysctl(7)
  - recognize Real-Time Signals (SIGRTMIN-SIGRTMAX)
  - upstream !NetBSDProcessPlugin code
  - switch std::call_once to llvm::call_once
+ + ptrace(2) interface to lock and unlock threads from execution
+ + switch the current PT_WATCHPOINT interface to PT_GETDBREGS and PT_SETDBREGS
 
 To be done later:
  - registers' accessors
