@@ -1,0 +1,7 @@
+libpatterns is a small, embeddable C library which gives your program a
+pretty decent regular expression engine. You can think of it as PCRE on a
+diet.
+
+This library is essentially just a redistribution of the code from
+patterns(7) from OpenBSD's httpd(8), which in turn is based on the
+pattern-matching code from the Lua language.
