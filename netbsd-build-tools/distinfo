@@ -1,0 +1,18 @@
+$NetBSD$
+
+SHA1 (gnusrc.tgz) = e5abb53328c6a2e1a485d3d5b568fcde3f8ff5e0
+RMD160 (gnusrc.tgz) = 77cd44c0c24cd92fb9a7497e1e0f8e86bbe4c948
+SHA512 (gnusrc.tgz) = f13315a211740e26455caecdd9550beb69d4ebf192a805b47fe315feaf87d73196b8a2a02a877a2945c882d516d15dcfc581eae2c80fe7ab2d94d4cb615e930e
+Size (gnusrc.tgz) = 135678729 bytes
+SHA1 (sharesrc.tgz) = 9d5e8f458312a2fd997db7b3287b71ebf8290de5
+RMD160 (sharesrc.tgz) = 85b92d827336becd96155c779ce1c81557e7db48
+SHA512 (sharesrc.tgz) = b9cb078388a3b05e2064a957685331b3c6965b5d45004b381999a8f18804b2021a5f0ca14796a9ef338b99572500fe758f82b6ef77f42f8c6451e8d5ab1e3d84
+Size (sharesrc.tgz) = 7398262 bytes
+SHA1 (src.tgz) = de527286c28ee68ec7c72c1ce76dc8568da1dc3d
+RMD160 (src.tgz) = 2adc550cf0a93e5d709b45a5a99642e476a5d45b
+SHA512 (src.tgz) = a2e3be5dc325ce9e8d191611eab3042a2eae1eb4c47a908665a14f6aab1a33b265179b9c1f7afa57e04c2e0c891a468ec136fb798047f18e5d431369db76d84f
+Size (src.tgz) = 145050183 bytes
+SHA1 (syssrc.tgz) = 3fc5639874a1ed5c00ffcff009d74aae0d17dda2
+RMD160 (syssrc.tgz) = b88bdb54c8366a020447b3ba6f635eb29afe1fd4
+SHA512 (syssrc.tgz) = 68fa17f17f657c530f5fc662306106ccd889c8316a9d74cf97e80b6c3cb9b1fa0c6dd4584e95121547af6ed9ccdd85de70fe492452846017c66bfdbb9f21bfdd
+Size (syssrc.tgz) = 50056446 bytes
