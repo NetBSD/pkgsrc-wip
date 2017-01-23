@@ -1,7 +1,19 @@
 $NetBSD$
 
+chunk 1: test(1) operator portability
+chunk 2: simplify check for readline
+
 --- configure.ac.orig	2016-09-14 20:52:04.000000000 +0000
 +++ configure.ac
+@@ -78,7 +78,7 @@ elif test "x$enable_python_plugins" != x
+         rm -f Python.framework
+         ln -s $PYTHON_FRAMEWORK Python.framework ])
+     AC_CHECK_PROG(PYTHON_CONFIG_EXISTS, python-config, yes, no)
+-    if test "$PYTHON_CONFIG_EXISTS" == "yes"; then
++    if test "$PYTHON_CONFIG_EXISTS" = "yes"; then
+         AX_PYTHON_DEVEL
+         AM_CONDITIONAL([BUILD_PYTHON_API], [true])
+         AC_DEFINE([HAVE_PYTHON], [1], [Python support])
 @@ -172,15 +172,8 @@ AS_IF([test "x$enable_icons" != xno],
              [AC_MSG_ERROR([gtk+-2.0 or higher is required for icons])],
              [AC_MSG_NOTICE([gtk+-2.0 not found, icons not enabled])])])])
