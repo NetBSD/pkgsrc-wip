@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/fq
+bin/nq
+bin/tq
+man/man1/fq.1
+man/man1/nq.1
+man/man1/tq.1

@@ -2027,6 +2027,7 @@ SUBDIR+=	nos-tun
 SUBDIR+=	nostromo
 SUBDIR+=	notify-sharp
 SUBDIR+=	noto-cjk
+SUBDIR+=	nq
 SUBDIR+=	nqp
 SUBDIR+=	nrg4iso
 SUBDIR+=	nsc2ke
