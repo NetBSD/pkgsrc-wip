@@ -2,14 +2,13 @@
 
 CATEGORIES=	net
 PKGBASE=	mtr
-PKGVERSION=	0.87.203
-#PKGREVISION=	0
+PKGVERSION=	0.87.216
 PKGNAME=	${PKGBASE}-${PKGVERSION}
 DISTNAME=	${PKGBASE}-${GITHUB_HASH}
 MASTER_SITES=	https://github.com/${GITHUB_USER}/${PKGBASE}/tarball/${GITHUB_HASH}/
 WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITHUB_HASH}
 
-GITHUB_HASH=	0e5edbd
+GITHUB_HASH=	7476ad5
 GITHUB_USER=	traviscross
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -37,6 +36,12 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-pointer-sign
 .if !empty(MACHINE_PLATFORM:MDarwin-??.*-*)
 LIBS+=	-lresolv
 .endif
+
+SUBST_CLASSES+=	fix-version
+SUBST_STAGE.fix-version=	post-patch
+SUBST_MESSAGE.fix-version=	Fixing version
+SUBST_FILES.fix-version=	configure.ac
+SUBST_SED.fix-version=		-e '/build-aux\/git-version-gen/s/\[.*\]/[${PKGVERSION}]/'
 
 pre-configure:
 	autoreconf -fi ${WRKSRC}
