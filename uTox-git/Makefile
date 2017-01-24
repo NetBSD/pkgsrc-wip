@@ -1,12 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	uTox-0.11.1
+DISTNAME=	uTox-0.12.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uTox/}
 
 GIT_REPOSITORIES=	uTox
-GIT_REPO.uTox=	http://github.com/uTox/uTox.git
-WRKSRC=	${WRKDIR}/uTox
+GIT_REPO.uTox=		http://github.com/uTox/uTox.git
+GIT_BRANCH.uTox=	master
+WRKSRC=			${WRKDIR}/uTox
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://utox.org/
