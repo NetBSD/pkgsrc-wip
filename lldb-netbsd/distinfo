@@ -33,6 +33,7 @@ SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp) = 46ca5bd672a
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.h) = bdd9fe37e47de8fa626c7eacf81e07d47a76787c
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.cpp) = a92c655c447cc0829fdb48786f474929f09e1a71
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.h) = d251c4f1b52089f96d435a99f45353aa3992924a
+SHA1 (patch-source_Plugins_Process_Utility_NetBSDSignals.cpp) = b7bee2c33b0cdebc4928e3c5053c7f5915e9aff2
 SHA1 (patch-tools_lldb-mi_MICmnBase.cpp) = 851c82ac61e1241018755fbd7236af00379ac986
 SHA1 (patch-tools_lldb-mi_MICmnBase.h) = f550d5e10bcf02fb46472733acdbb820791f22e5
 SHA1 (patch-tools_lldb-mi_MIDriver.cpp) = bf1b5399e82bcfe54d6d852f64ed155328f2064d
