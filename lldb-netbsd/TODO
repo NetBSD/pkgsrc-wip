@@ -25,7 +25,13 @@ Introduce objc++ setup with gcc(1) for "make test":
 llvm::call_once hack for src:
    curl https://github.com/jsonn/src/commit/78f4ee4c8349d68cf2279f2c7fc2196ae369e182.patch|gpatch -R -p1
 
-Short-term goals in current milestone:
+Short-term goals in current milestone
+=====================================
+Done:
+ - switch resolution of pid -> path to executable from /proc to sysctl(7)
+   https://reviews.llvm.org/D29089
+
+TODO:
  - fix conflict with system-wide py-six
  - add support for auxv read operation
  - switch resolution of pid -> path to executable from /proc to sysctl(7)
