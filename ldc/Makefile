@@ -23,6 +23,8 @@ LICENSE=	modified-bsd					\
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
+
 EGDIR=	${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/ldc2.conf ${PKG_SYSCONFDIR}/ldc2.conf
@@ -95,6 +97,6 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/d/core/threadasm.S.orig
 	${RM} ${DESTDIR}${PREFIX}/include/d/core/time.d.orig
 
-.include "../../lang/llvm/buildlink3.mk"
+.include "../../wip/libLLVM35/buildlink3.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
