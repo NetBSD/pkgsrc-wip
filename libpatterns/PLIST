@@ -1,4 +1,5 @@
 @comment $NetBSD$
+include/patterns.h
 lib/libpatterns.a
 lib/libpatterns.so
 man/man7/patterns.7

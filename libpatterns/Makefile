@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libpatterns-0.1.0
+DISTNAME=	libpatterns-0.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=christiank/}
 
