@@ -2389,6 +2389,7 @@ SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	paxmirabilis
 SUBDIR+=	paxtest
+SUBDIR+=	payara41
 SUBDIR+=	pbbam
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbcopper

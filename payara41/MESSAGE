@@ -1,0 +1,7 @@
+===========================================================================
+
+The ${PAYARA_HOME}/glassfish/domains directory may be overwritten in
+future updates, so it is advised to move the "domains" directory to another
+location.
+
+===========================================================================
