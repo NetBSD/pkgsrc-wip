@@ -4122,7 +4122,6 @@ SUBDIR+=	thepeg
 SUBDIR+=	threadingbuildingblocks
 SUBDIR+=	thrift
 SUBDIR+=	tidy
-SUBDIR+=	tigervnc
 SUBDIR+=	tilda
 SUBDIR+=	timewarrior
 SUBDIR+=	tinyca2
