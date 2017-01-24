@@ -256,7 +256,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.4
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../converters/libmwaw/buildlink3.mk"
-.include "../../converters/orcus0.8/buildlink3.mk"
+.include "../../converters/orcus0.12/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
