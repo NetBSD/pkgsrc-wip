@@ -17,11 +17,12 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--with-libxml2
 
-PKGCONFIG_OVERRIDE+=	libstrophe.pc.in
+PKGCONFIG_OVERRIDE+=	libmesode.pc.in
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
