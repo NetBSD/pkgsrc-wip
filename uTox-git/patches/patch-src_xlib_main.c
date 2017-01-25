@@ -8,7 +8,7 @@ Avoid using Linux-specific headers when not compiling for Linux.
      XFlush(display);
  }
  
-+#ifdef __LINUX__
++#ifdef __linux__
  #include <linux/input.h>
 +#endif
  FILE    *ptt_keyboard_handle;
@@ -18,7 +18,7 @@ Avoid using Linux-specific headers when not compiling for Linux.
      int ptt_key;
  
      /* First, we try for direct access to the keyboard. */
-+#ifdef __LINUX__
++#ifdef __linux__
      ptt_key = KEY_LEFTCTRL; // TODO allow user to change this...
      if (ptt_keyboard_handle) {
          /* Nice! we have direct access to the keyboard! */

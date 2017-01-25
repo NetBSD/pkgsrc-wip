@@ -11,7 +11,7 @@ Use Linux headers when on Linux, not when not on OpenBSD.
 -#ifdef __OpenBSD__
 -#include <sys/videoio.h>
 -#else
-+#ifdef __Linux__
++#ifdef __linux__
  #include <linux/videodev2.h>
 +#else
 +#include <sys/videoio.h>
