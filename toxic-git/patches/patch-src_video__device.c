@@ -16,7 +16,7 @@ Do not assume what is not Linux or FreeBSD is OSX.
  #include <sys/stat.h>
  #include <sys/mman.h>
  #include <fcntl.h>
-+#ifdef __Linux__
++#ifdef __linux__
  #include <linux/videodev2.h>
 -#else /* __OSX__ */
 -#import "osx_video.h"
