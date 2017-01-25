@@ -3940,6 +3940,7 @@ SUBDIR+=	softvms
 SUBDIR+=	soil
 SUBDIR+=	solarus-zsdx
 SUBDIR+=	sollya
+SUBDIR+=	solvespace-git
 SUBDIR+=	songwrite2
 SUBDIR+=	sonic-visualiser
 SUBDIR+=	sophia

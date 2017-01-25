@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (solvespace/v2.1.rc1.tar.gz) = 4b716d86811e780473368ab616b11d2bbc09a05d
+RMD160 (solvespace/v2.1.rc1.tar.gz) = 4fb817cba16db664a3b9ed336e58e56384ca7404
+SHA512 (solvespace/v2.1.rc1.tar.gz) = ac89cc634c2d463cca3e0afa652b11646776f9e95a79a0b470c1553a7a16a44ee4ac979813ce408654be70d9a9e3ff8f0fc1db325237977c0fe3d1c9130fb056
+Size (solvespace/v2.1.rc1.tar.gz) = 2049653 bytes
+SHA1 (patch-src_platform_unixutil.cpp) = d45197e0e55f9f9dd8de85f862e63f283968a7c8
