@@ -1,0 +1,52 @@
+$NetBSD: patch-configure,v 1.4 2016/03/14 06:12:17 dbj Exp $
+
+* Don't use SDKs on OS X
+* Add NetBSD/sparc{,64} support
+
+--- configure.orig	2017-01-18 14:20:58.000000000 +0000
++++ configure
+@@ -326,7 +326,6 @@ getQMakeConf()
+ {
+     if [ -z "$specvals" ]; then
+         specvals=`expandQMakeConf "$QMAKESPEC/qmake.conf" "$HOST_VARS_FILE" | extractQMakeVariables "host_build"`
+-        if [ "$BUILD_ON_MAC" = "yes" ]; then specvals=$(macSDKify "$specvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$specvals"
+ }
+@@ -335,7 +334,6 @@ getXQMakeConf()
+ {
+     if [ -z "$xspecvals" ]; then
+         xspecvals=`expandQMakeConf "$XQMAKESPEC/qmake.conf" "$DEVICE_VARS_FILE" | extractQMakeVariables "!host_build"`
+-        if [ "$XPLATFORM_MAC" = "yes" ]; then xspecvals=$(macSDKify "$xspecvals"); fi
+     fi
+     getSingleQMakeVariable "$1" "$xspecvals"
+ }
+@@ -429,7 +427,7 @@ if [ "$BUILD_ON_MAC" = "yes" ]; then
+         exit 2
+     fi
+ 
+-    if ! /usr/bin/xcrun -find xcodebuild >/dev/null 2>&1; then
++    if ! /usr/bin/xcrun -find cc >/dev/null 2>&1; then
+         echo >&2
+         echo "   Xcode not set up properly. You may need to confirm the license" >&2
+         echo "   agreement by running /usr/bin/xcodebuild without arguments." >&2
+@@ -955,6 +953,19 @@ if [ -z "$PLATFORM" ]; then
+      UNIX_SV:*)
+         PLATFORM=unixware-g++
+         ;;
++    NetBSD:*:sparc)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC"
++        fi
++        CFG_HOST_ARCH=sparc
++        ;;
++    NetBSD:*:sparc64)
++        if [ "$OPT_VERBOSE" = "yes" ]; then
++            echo "    NetBSD on SPARC64"
++        fi
++        CFG_HOST_ARCH=sparc
++        CFG_HOST_BITSIZE=64
++        ;;
+      QNX:*)
+         PLATFORM=unsupported/qnx-g++
+         ;;

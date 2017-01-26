@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.31 2016/12/04 21:46:54 marino Exp $
+
+SHA1 (qtbase-opensource-src-5.8.0.tar.xz) = eacdd022615734ccdba4e7a92f1f5f3366c0c415
+RMD160 (qtbase-opensource-src-5.8.0.tar.xz) = d395139af720a9c3bf00f962e2c3ebe01cd75702
+SHA512 (qtbase-opensource-src-5.8.0.tar.xz) = 36a1ba4b0dba02ae65c3b2b0aa3fb3767cbee4dbdf204c9ded7d1700e70144ce85a3a66167f86cc716a1fdd38d832962b2a752e803b0647d03032b2685da5ced
+Size (qtbase-opensource-src-5.8.0.tar.xz) = 44318700 bytes
+SHA1 (patch-config.tests_unix_iconv_iconv.cpp) = 05131870b21ff778b1e6f3d1e7287060b6b88764
+SHA1 (patch-configure) = 2de096b861be296dc6a5986f87cee0f7bd78d032
+SHA1 (patch-mkspecs_features_create__cmake.prf) = 3f6b3a592e29f5529e5c87dbac036c165470eac4
+SHA1 (patch-mkspecs_features_qt__module__pris.prf) = 623df7b7ffa1c8e56ceebc565efe936c74ae1c48
+SHA1 (patch-mkspecs_features_simd.prf) = 7dbe61df6252adebeac374e3541bc5ff4c93909b
+SHA1 (patch-qmake_Makefile.unix) = acee02d93c060e5af4ec84eeef2226399854af46
+SHA1 (patch-qmake_generators_makefile.cpp) = 457453c2027081fe7db5bc4a87e8b62af0993022
+SHA1 (patch-qmake_generators_unix_unixmake.cpp) = e670b4a27f5f48ae73e851b887a8309e81266d6e
+SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = ad739a3eb3806a6962ae224dc090d22102685904
+SHA1 (patch-qmake_qmake.pri) = 142f2b7d0dbfbc829afc9f83bf8be8b3054b8cf7
+SHA1 (patch-src_corelib_codecs_qiconvcodec.cpp) = 4387447f0f23f0f8c623c0c019ab632bc1cb5617
+SHA1 (patch-src_corelib_io_io.pri) = fd2f93b5af4dda729b274dd0d8f82ca29b3cb62a
+SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = de4b6c6be89524763e40698bcf5e8f413abdb938
+SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 49e63522770c3c7863ccc04cc8841a73fa781a94
+SHA1 (patch-src_network_kernel_qhostinfo__unix.cpp) = 04f5137a5530d69c183ce188df6eee65550ba2f8
+SHA1 (patch-src_openglextensions_openglextensions.pro) = 575d31c3a48f36d82dc1f342078e636f4c25e33f
+SHA1 (patch-src_tools_bootstrap_bootstrap.pro) = 0eb333ed8193ef056dc2c4ed99fb9d207c31fa02
+SHA1 (patch-src_tools_moc_main.cpp) = ebdddd657ba1c24657a9ca5624907e31a5d0c8bb
+SHA1 (patch-src_widgets_graphicsview_qgraphicsitem__p.h) = fd55d5ef6fde506849aab07f7ba23e856373b3a1
+SHA1 (patch-tests_auto_corelib_io_qprocess_qprocess.pro) = 1dbb08e5ec6715cbe239efdfb45389959b179ea3
+SHA1 (patch-tests_auto_widgets_itemviews_qtreewidgetitemiterator_qtreewidgetitemiterator.pro) = a0534c3fe05ea1d7a23170811d1da7fa740e31d1

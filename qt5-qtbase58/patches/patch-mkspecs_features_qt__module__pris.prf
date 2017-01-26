@@ -1,0 +1,15 @@
+$NetBSD: patch-mkspecs_features_qt__module__pris.prf,v 1.1 2014/12/30 17:23:46 adam Exp $
+
+* Build libtoolized shared libraries
+
+--- mkspecs/features/qt_module_pris.prf.orig	2016-12-01 08:17:04.000000000 +0000
++++ mkspecs/features/qt_module_pris.prf
+@@ -51,7 +51,7 @@ MODULE_FWD_PRI = $$mod_work_pfx/qt_lib_$
+         module_rundep =
+     module_build_type = v2
+     static: \
+-        module_build_type += staticlib
++        module_build_type += 
+     lib_bundle {
+         module_build_type += lib_bundle
+         MODULE_FRAMEWORKS = " \$\$QT_MODULE_LIB_BASE"
