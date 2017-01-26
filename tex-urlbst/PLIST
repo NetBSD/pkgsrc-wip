@@ -1,6 +1,0 @@
-@comment $NetBSD$
-share/texmf-dist/bibtex/bst/urlbst/abbrvurl.bst
-share/texmf-dist/bibtex/bst/urlbst/alphaurl.bst
-share/texmf-dist/bibtex/bst/urlbst/plainurl.bst
-share/texmf-dist/bibtex/bst/urlbst/unsrturl.bst
-share/texmf-dist/scripts/urlbst/urlbst
