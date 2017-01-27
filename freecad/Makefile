@@ -52,7 +52,7 @@ REPLACE_PYTHON+=	src/Mod/Robot/MovieTool.py src/Mod/OpenSCAD/prototype.py
 
 .include "../../lang/python/application.mk"
 .include "../../wip/orocos-kdl/buildlink3.mk"
-.include "../../wip/oce/buildlink3.mk"
+.include "../../cad/oce/buildlink3.mk"
 .include "../../wip/py-pyside/buildlink3.mk"
 .include "../../wip/py-pyside-shiboken/buildlink3.mk"
 .include "../../wip/py-pyside-tools/buildlink3.mk"
