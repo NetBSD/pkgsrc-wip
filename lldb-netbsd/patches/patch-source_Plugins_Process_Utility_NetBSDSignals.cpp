@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/Utility/NetBSDSignals.cpp.orig	2017-01-24 18:23:17.672929519 +0000
+--- source/Plugins/Process/Utility/NetBSDSignals.cpp.orig	2016-12-17 10:29:59.000000000 +0000
 +++ source/Plugins/Process/Utility/NetBSDSignals.cpp
 @@ -24,7 +24,35 @@ void NetBSDSignals::Reset() {
    //        ===================================================
