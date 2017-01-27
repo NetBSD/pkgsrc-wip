@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.15 2010/07/11 12:18:55 obache Exp $
 
 PKGNAME=	cherokee-1.2.104
-GIT_COMMIT=	a917d76ed9b4272478ca973084ec1037a950c443
+GIT_COMMIT=	dad221a914fe4f3285e205d2fe6f89c393e5a705
 DISTNAME=	${PKGNAME}-${GIT_COMMIT}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	-https://github.com/cherokee/webserver/archive/${GIT_COMMIT}.tar.gz
 
