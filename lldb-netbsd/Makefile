@@ -54,12 +54,6 @@ TEST_TARGET=		check-lldb
 #TEST_TARGET=		check-lldb-expr # unknown
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
-.if exists(/usr/include/panel.h)
-CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
-.else
-CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
-.endif
-
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
