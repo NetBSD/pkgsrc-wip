@@ -30,12 +30,12 @@ Short-term goals in current milestone
 Done:
  - switch resolution of pid -> path to executable from /proc to sysctl(7)
    https://reviews.llvm.org/D29089
+ - recognize Real-Time Signals (SIGRTMIN-SIGRTMAX)
+   https://reviews.llvm.org/D29091
 
 TODO:
  - fix conflict with system-wide py-six
  - add support for auxv read operation
- - switch resolution of pid -> path to executable from /proc to sysctl(7)
- - recognize Real-Time Signals (SIGRTMIN-SIGRTMAX)
  - upstream !NetBSDProcessPlugin code
  - switch std::call_once to llvm::call_once
  + ptrace(2) interface to lock and unlock threads from execution
