@@ -294,7 +294,6 @@ include/lldb/Host/linux/AbstractSocket.h
 include/lldb/Host/linux/Config.h
 include/lldb/Host/linux/HostInfoLinux.h
 include/lldb/Host/linux/HostThreadLinux.h
-include/lldb/Host/linux/Personality.h
 include/lldb/Host/linux/ProcessLauncherLinux.h
 include/lldb/Host/linux/Ptrace.h
 include/lldb/Host/linux/Uio.h
@@ -515,7 +514,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-lib/liblldb.so.40
+lib/liblldb.so.5
 lib/liblldbBase.a
 lib/liblldbBreakpoint.a
 lib/liblldbCommands.a
