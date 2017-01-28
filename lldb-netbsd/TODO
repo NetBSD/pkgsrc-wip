@@ -31,9 +31,11 @@ Done:
  - switch resolution of pid -> path to executable from /proc to sysctl(7)
    https://reviews.llvm.org/D29089
    committed as SVN revision 293392
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293392
  - recognize Real-Time Signals (SIGRTMIN-SIGRTMAX)
    https://reviews.llvm.org/D29091
    committed as SVN revision 293391
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293391
 
 TODO:
  - fix conflict with system-wide py-six
