@@ -4,10 +4,7 @@ DISTNAME=	util-linux-2.12r
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/misc/} \
-		http://www.kernel.org/pub/linux/utils/util-linux/ \
-		ftp://ftp.fr.kernel.org/pub/linux/utils/util-linux/ \
-		ftp://ftp.cn.kernel.org/pub/linux/utils/util-linux/ \
-		ftp://ftp.win.tue.nl/pub/linux-local/utils/util-linux/
+		http://www.kernel.org/pub/linux/utils/util-linux/
 # old: ftp://ftp.cwi.nl/pub/aeb/util-linux/
 #EXTRACT_SUFX=	.tar.bz2
 

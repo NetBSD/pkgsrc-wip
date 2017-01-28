@@ -4,10 +4,7 @@
 DISTNAME=		ypbind-mt-1.12
 PKGREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.kernel.org/pub/linux/utils/net/NIS/ \
-			http://www.us.kernel.org/pub/linux/utils/net/NIS/ \
-			ftp://ftp.kr.kernel.org/pub/linux/utils/net/NIS/ \
-			http://www.de.kernel.org/pub/linux/utils/net/NIS/
+MASTER_SITES=		http://ftp.kernel.org/pub/linux/utils/net/NIS/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net

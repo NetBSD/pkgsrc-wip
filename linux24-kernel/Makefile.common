@@ -5,9 +5,7 @@ LINUX_VERSION=		2.4.25
 
 DISTNAME=		linux-${LINUX_VERSION}
 CATEGORIES=		misc
-MASTER_SITES=		http://www.kernel.org/pub/linux/kernel/v2.4/	\
-			http://www.de.kernel.org/pub/linux/kernel/v2.4/	\
-			ftp://ftp.jp.kernel.org/pub/linux/kernel/v2.4/
+MASTER_SITES=		http://www.kernel.org/pub/linux/kernel/v2.4/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net

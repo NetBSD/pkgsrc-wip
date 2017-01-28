@@ -3,10 +3,7 @@
 
 DISTNAME=		yp-tools-2.8
 CATEGORIES=		net sysutils
-MASTER_SITES=		http://www.us.kernel.org/pub/linux/utils/net/NIS/ \
-			ftp://ftp.kernel.org/pub/linux/utils/net/NIS/ \
-			http://www.de.kernel.org/pub/linux/utils/net/NIS/ \
-			ftp://ftp.kr.kernel.org/pub/linux/utils/net/NIS/
+MASTER_SITES=		http://ftp.kernel.org/pub/linux/utils/net/NIS/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net

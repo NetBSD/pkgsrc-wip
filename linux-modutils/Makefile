@@ -4,9 +4,7 @@ DISTNAME=		modutils-2.4.24
 PKGNAME=		linux-${DISTNAME}
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.kernel.org/pub/linux/utils/kernel/modutils/v2.4/ \
-			http://www.br.kernel.org/pub/linux/utils/kernel/modutils/v2.4/ \
-			ftp://ftp.cn.kernel.org/pub/linux/utils/kernel/modutils/v2.4/
+MASTER_SITES=		http://ftp.kernel.org/pub/linux/utils/kernel/modutils/v2.4/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
