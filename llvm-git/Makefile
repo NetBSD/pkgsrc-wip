@@ -1,6 +1,6 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	llvm-4.0.0
+PKGNAME=	llvm-5.0.0
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	llvm
