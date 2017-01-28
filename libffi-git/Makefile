@@ -4,7 +4,7 @@ DISTNAME=	libffi-3.2.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
-MAINTAINER=	asau@inbox.ru
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.sourceware.org/libffi/
 COMMENT=	Foreign function interface (development version from git)
 LICENSE=	mit
