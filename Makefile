@@ -2817,7 +2817,6 @@ SUBDIR+=	py-cosmolopy
 SUBDIR+=	py-coveralls
 SUBDIR+=	py-cracklib
 SUBDIR+=	py-crontab
-SUBDIR+=	py-cryptography-git
 SUBDIR+=	py-cryptoidlib
 SUBDIR+=	py-cryptoim
 SUBDIR+=	py-csa
