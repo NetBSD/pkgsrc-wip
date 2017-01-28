@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.4 2012/09/14 23:45:27 asau Exp $
+include/ffi.h
+include/ffitarget.h
+info/libffi.info
+lib/libffi.la
+lib/pkgconfig/libffi.pc
+man/man3/ffi.3
+man/man3/ffi_call.3
+man/man3/ffi_prep_cif.3
+man/man3/ffi_prep_cif_var.3
