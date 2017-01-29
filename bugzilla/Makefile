@@ -117,11 +117,11 @@ INSTALLATION_DIRS+=	${BZDIR}/docs/en/html/api/Bugzilla
 
 do-configure:
 	(cd ${WRKSRC}; ./checksetup.pl)
-#post-extract:
+post-extract:
 #	${FIND} ${WRKSRC} -type d -name CVS | ${XARGS} ${RM} -rf
 #	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
-#	${CP} ${FILESDIR}/bugzilla.conf ${WRKSRC}
-#	${CP} ${FILESDIR}/localconfig ${WRKSRC}
+	${CP} ${FILESDIR}/bugzilla.conf	${WRKSRC}
+	${CP} ${FILESDIR}/localconfig	${WRKSRC}
 
 
 do-install:
@@ -135,13 +135,13 @@ do-install:
 	${INSTALL_DATA} Bugzilla.pm 	${DESTDIR}${BZDIR}  ;\
 	${INSTALL_DATA} README 		${DESTDIR}${DOCDIR} ;\
 	${INSTALL_DATA} localconfig	${DESTDIR}${EGDIR}  ;\
+	${INSTALL_DATA} bugzilla.conf	${DESTDIR}${EGDIR}  ;\
 	${INSTALL_DATA} images/*.png	${DESTDIR}${BZDIR}/images  ;\
 	${INSTALL_DATA} images/favicon.ico	${DESTDIR}${BZDIR} ;\
 	pax -rw -pmp Bugzilla 		${DESTDIR}${BZDIR}  ;\
 	pax -rw -pmp js			${DESTDIR}${BZDIR}  ;\
 	pax -rw -pmp template		${DESTDIR}${BZDIR} ;\
 	)
-	${INSTALL_DATA} ${PKGDIR}/files/bugzilla.conf	${DESTDIR}${EGDIR}
 
 #.for i in ${PAX_DIRS}
 #	cd ${WRKSRC}/${i} && pax -rw . ${DESTDIR}${BZDIR}/${i}
