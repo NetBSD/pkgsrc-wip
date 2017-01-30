@@ -24,6 +24,7 @@ SHA1 (patch-examples_ansible.cfg) = 35bc550e1d4e498d4d4f588ce2fe6bd8af8ad5bc
 SHA1 (patch-examples_hosts) = d6df854be7ea6fa4978681238f722cc9698bd34e
 SHA1 (patch-lib_ansible_cli_galaxy.py) = 9701c4434c5a39c0d3ce244007e7663fb06d97d3
 SHA1 (patch-lib_ansible_constants.py) = 2ba1813f47e89dc79c4c8ee5698292aa9017c9da
+SHA1 (patch-lib_ansible_modules_core_network_junos_junos__config.py) = c0c4c7710f81464deb687096cbdd1f262288b2ce
 SHA1 (patch-lib_ansible_modules_core_system_ping.py) = 5fbb798d79e22de60ec736a7e7e96be0fadf4b1f
 SHA1 (patch-lib_ansible_modules_core_system_setup.py) = 44c35e7ba94cb96b1fc4a0501470d2d4d9747150
 SHA1 (patch-lib_ansible_modules_extras_monitoring_nagios.py) = d263a9414d9fdd3c061d7ef2653f0ef648bf359b

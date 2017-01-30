@@ -2,6 +2,7 @@
 
 DISTNAME=	ansible-2.2.0.0
 #PKGNAME=	${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
+PKGREVISION=	1
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/
 
