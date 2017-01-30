@@ -12,7 +12,6 @@ LICENSE=	mpl-2.0
 
 # mod_perl
 DEPENDS+=	ap2[0-9]-perl-[0-9]*:../../www/ap2-perl
-#DEPENDS+=	p5-Apache2-SizeLimit-[0-9]*:../../wip/p5-Apache2-SizeLimit
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=       p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=       p5-TimeDate-[0-9]*:../../time/p5-TimeDate
@@ -51,8 +50,8 @@ DEPENDS+=       p5-Encode-[0-9]*:../../textproc/p5-Encode
 DEPENDS+=       p5-Encode-Detect-[0-9]*:../../textproc/p5-Encode-Detect
 DEPENDS+=       p5-Email-Reply-[0-9]*:../../mail/p5-Email-Reply
 DEPENDS+=       p5-HTML-FormatText-WithLinks-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks
-DEPENDS+=       p5-TheSchwartz-[0-9]*:../../wip/p5-TheSchwartz
-DEPENDS+=	p5-Daemon-Generic-[0-9]*:../../wip/p5-Daemon-Generic
+DEPENDS+=       p5-TheSchwartz-[0-9]*:../../devel/p5-TheSchwartz
+DEPENDS+=	p5-Daemon-Generic-[0-9]*:../../sysutils/p5-Daemon-Generic
 DEPENDS+=       p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
 DEPENDS+=       p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=       p5-Cache-Memcached-[0-9]*:../../devel/p5-Cache-Memcached
