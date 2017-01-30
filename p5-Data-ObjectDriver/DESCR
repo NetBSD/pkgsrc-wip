@@ -1,3 +1,0 @@
-Data::ObjectDriver providing a simple and generic abstraction
-to databases (DBI and otherwise), along with support for
-partitioning and caching.
