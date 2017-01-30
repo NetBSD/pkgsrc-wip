@@ -1,0 +1,37 @@
+--- ./source/gmqcc/Makefile.old	2017-01-29 00:58:59.253045990 -0800
++++ ./source/gmqcc/Makefile	2017-01-29 00:59:06.869507333 -0800
+@@ -4,34 +4,6 @@
+ CYGWIN  = $(findstring CYGWIN, $(UNAME))
+ MINGW   = $(findstring MINGW,  $(UNAME))
+ 
+-# turn on tons of warnings if clang is present
+-# but also turn off the STUPID ONES
+-ifeq ($(CC), clang)
+-	CFLAGS +=                              \
+-	    -Weverything                       \
+-	    -Wno-padded                        \
+-	    -Wno-format-nonliteral             \
+-	    -Wno-disabled-macro-expansion      \
+-	    -Wno-conversion                    \
+-	    -Wno-float-equal                   \
+-	    -Wno-unknown-warning-option        \
+-	    -Wno-cast-align                    \
+-	    -Wno-assign-enum                   \
+-	    -Wno-empty-body                    \
+-	    -Wno-date-time                     \
+-	    -pedantic-errors
+-else
+-	ifneq ($(CC), g++)
+-		CFLAGS += -Wmissing-prototypes -Wstrict-prototypes
+-	endif
+-
+-	ifneq ($(CC), tcc)
+-		CFLAGS += -pedantic-errors
+-	else
+-		CFLAGS += -Wno-pointer-sign -fno-common
+-	endif
+-endif
+-
+ ifneq ($(shell git describe --always 2>/dev/null),)
+ 	CFLAGS += -DGMQCC_GITINFO="\"$(shell git describe --always)\""
+ endif

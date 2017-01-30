@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (xonotic-0.8.1.zip) = 2f6d46caa35a6778845c0c927d889af57677f8d2
+RMD160 (xonotic-0.8.1.zip) = cf5d5c7535aca52877770e9abea8cdb79e6463dd
+SHA512 (xonotic-0.8.1.zip) = adfce546257bdc7cfebe94f53eaa9cc9b19eaa546c6405e31ed6af080e3948732c960a024126202e5853cb98b955daadeeb5a96c602a6d4d83e284d3540214a4
+Size (xonotic-0.8.1.zip) = 984854761 bytes
+SHA1 (patch-Makefile) = 5062b2e3366d3ce3aa060228c6121c30c63d7285
+SHA1 (patch-source_darkplaces_hmac.c) = 2fae84c009f8808c814e4b68ba8c5640a001f699
+SHA1 (patch-source_darkplaces_hmac.h) = 62e3c7a657b8bef5a0dbb7fb0367379bcaae6347
+SHA1 (patch-source_darkplaces_makefile.inc) = e6b145ac7bd945a4cb957a3cc6a8a0eefc35b980
+SHA1 (patch-source_gmqcc_Makefile) = 40716c8fd9b46307bf7996300151822a704e6c48
+SHA1 (patch-source_gmqcc_gmqcc.h) = 1703136b3022637885bfa51a3e08ec8a86d20b05

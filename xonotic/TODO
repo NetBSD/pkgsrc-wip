@@ -1,0 +1,2 @@
+- I only have been testing with NetBSD so far
+- darkplaces-sdl builds and links OK except for some rpath strangeness

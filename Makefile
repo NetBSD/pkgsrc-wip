@@ -4427,6 +4427,7 @@ SUBDIR+=	xplore
 SUBDIR+=	xrdp
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
+SUBDIr+=	xonotic
 SUBDIR+=	xspread
 SUBDIR+=	xtags
 SUBDIR+=	xtraceroute
