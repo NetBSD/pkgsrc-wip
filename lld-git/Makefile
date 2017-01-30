@@ -1,6 +1,6 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
 
-PKGNAME=	lld-4.0.0
+PKGNAME=	lld-5.0.0
 CATEGORIES=	devel
 
 GIT_REPOSITORIES=	lld

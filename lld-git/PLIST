@@ -29,6 +29,7 @@ include/lld/Core/Writer.h
 include/lld/Driver/Driver.h
 include/lld/ReaderWriter/MachOLinkingContext.h
 include/lld/ReaderWriter/YamlContext.h
+include/lld/Support/Memory.h
 lib/liblldCOFF.a
 lib/liblldConfig.a
 lib/liblldCore.a
