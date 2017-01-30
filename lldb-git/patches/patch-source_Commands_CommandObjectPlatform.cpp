@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Commands/CommandObjectPlatform.cpp.orig	2016-12-14 14:10:24.000000000 +0000
 +++ source/Commands/CommandObjectPlatform.cpp
-@@ -30,9 +30,11 @@
+@@ -30,6 +30,7 @@
  #include "lldb/Utility/Utils.h"
  
  #include "llvm/ADT/SmallString.h"
@@ -10,11 +10,7 @@ $NetBSD$
  
  using namespace lldb;
  using namespace lldb_private;
-+using namespace llvm;
- 
- static mode_t ParsePermissionString(const char *) = delete;
- 
-@@ -1249,8 +1251,8 @@ protected:
+@@ -1249,8 +1250,8 @@ protected:
    public:
      CommandOptions()
          : Options(), match_info(), show_args(false), verbose(false) {

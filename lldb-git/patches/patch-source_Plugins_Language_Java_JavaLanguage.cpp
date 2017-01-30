@@ -10,15 +10,7 @@ $NetBSD$
  
  // Project includes
  #include "JavaFormatterFunctions.h"
-@@ -28,6 +29,7 @@
- using namespace lldb;
- using namespace lldb_private;
- using namespace lldb_private::formatters;
-+using namespace llvm;
- 
- void JavaLanguage::Initialize() {
-   PluginManager::RegisterPlugin(GetPluginNameStatic(), "Java Language",
-@@ -64,10 +66,10 @@ bool JavaLanguage::IsNilReference(ValueO
+@@ -64,10 +65,10 @@ bool JavaLanguage::IsNilReference(ValueO
  }
  
  lldb::TypeCategoryImplSP JavaLanguage::GetFormatters() {

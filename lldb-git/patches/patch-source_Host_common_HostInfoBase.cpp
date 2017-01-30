@@ -10,15 +10,7 @@ $NetBSD$
  #include "llvm/Support/raw_ostream.h"
  
  #include <mutex> // std::once
-@@ -29,6 +30,7 @@
- 
- using namespace lldb;
- using namespace lldb_private;
-+using namespace llvm;
- 
- namespace {
- //----------------------------------------------------------------------
-@@ -79,8 +81,8 @@ void HostInfoBase::Terminate() {
+@@ -79,8 +80,8 @@ void HostInfoBase::Terminate() {
  }
  
  uint32_t HostInfoBase::GetNumberCPUS() {
@@ -29,7 +21,7 @@ $NetBSD$
      g_fields->m_number_cpus = std::thread::hardware_concurrency();
    });
    return g_fields->m_number_cpus;
-@@ -89,8 +91,8 @@ uint32_t HostInfoBase::GetNumberCPUS() {
+@@ -89,8 +90,8 @@ uint32_t HostInfoBase::GetNumberCPUS() {
  uint32_t HostInfoBase::GetMaxThreadNameLength() { return 0; }
  
  llvm::StringRef HostInfoBase::GetVendorString() {
@@ -40,7 +32,7 @@ $NetBSD$
      g_fields->m_vendor_string =
          HostInfo::GetArchitecture().GetTriple().getVendorName().str();
    });
-@@ -98,8 +100,8 @@ llvm::StringRef HostInfoBase::GetVendorS
+@@ -98,8 +99,8 @@ llvm::StringRef HostInfoBase::GetVendorS
  }
  
  llvm::StringRef HostInfoBase::GetOSString() {
@@ -51,7 +43,7 @@ $NetBSD$
      g_fields->m_os_string =
          std::move(HostInfo::GetArchitecture().GetTriple().getOSName());
    });
-@@ -107,8 +109,8 @@ llvm::StringRef HostInfoBase::GetOSStrin
+@@ -107,8 +108,8 @@ llvm::StringRef HostInfoBase::GetOSStrin
  }
  
  llvm::StringRef HostInfoBase::GetTargetTriple() {
@@ -62,7 +54,7 @@ $NetBSD$
      g_fields->m_host_triple =
          HostInfo::GetArchitecture().GetTriple().getTriple();
    });
-@@ -116,8 +118,8 @@ llvm::StringRef HostInfoBase::GetTargetT
+@@ -116,8 +117,8 @@ llvm::StringRef HostInfoBase::GetTargetT
  }
  
  const ArchSpec &HostInfoBase::GetArchitecture(ArchitectureKind arch_kind) {
@@ -73,7 +65,7 @@ $NetBSD$
      HostInfo::ComputeHostArchitectureSupport(g_fields->m_host_arch_32,
                                               g_fields->m_host_arch_64);
    });
-@@ -144,9 +146,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -144,9 +145,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
    FileSpec *result = nullptr;
    switch (type) {
    case lldb::ePathTypeLLDBShlibDir: {
@@ -85,7 +77,7 @@ $NetBSD$
        success =
            HostInfo::ComputeSharedLibraryDirectory(g_fields->m_lldb_so_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
-@@ -158,9 +160,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -158,9 +159,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_so_dir;
    } break;
    case lldb::ePathTypeSupportExecutableDir: {
@@ -97,7 +89,7 @@ $NetBSD$
        success = HostInfo::ComputeSupportExeDirectory(
            g_fields->m_lldb_support_exe_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
-@@ -173,9 +175,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -173,9 +174,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_support_exe_dir;
    } break;
    case lldb::ePathTypeHeaderDir: {
@@ -109,7 +101,7 @@ $NetBSD$
        success = HostInfo::ComputeHeaderDirectory(g_fields->m_lldb_headers_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
        if (log)
-@@ -186,9 +188,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -186,9 +187,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_headers_dir;
    } break;
    case lldb::ePathTypePythonDir: {
@@ -121,7 +113,7 @@ $NetBSD$
        success = HostInfo::ComputePythonDirectory(g_fields->m_lldb_python_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
        if (log)
-@@ -199,9 +201,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -199,9 +200,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_python_dir;
    } break;
    case lldb::ePathTypeClangDir: {
@@ -133,7 +125,7 @@ $NetBSD$
        success =
            HostInfo::ComputeClangDirectory(g_fields->m_lldb_clang_resource_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
-@@ -214,9 +216,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -214,9 +215,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_clang_resource_dir;
    } break;
    case lldb::ePathTypeLLDBSystemPlugins: {
@@ -145,7 +137,7 @@ $NetBSD$
        success = HostInfo::ComputeSystemPluginsDirectory(
            g_fields->m_lldb_system_plugin_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
-@@ -229,9 +231,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -229,9 +230,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_system_plugin_dir;
    } break;
    case lldb::ePathTypeLLDBUserPlugins: {
@@ -157,7 +149,7 @@ $NetBSD$
        success = HostInfo::ComputeUserPluginsDirectory(
            g_fields->m_lldb_user_plugin_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
-@@ -244,9 +246,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -244,9 +245,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_user_plugin_dir;
    } break;
    case lldb::ePathTypeLLDBTempSystemDir: {
@@ -169,7 +161,7 @@ $NetBSD$
        success = HostInfo::ComputeProcessTempFileDirectory(
            g_fields->m_lldb_process_tmp_dir);
        Log *log = lldb_private::GetLogIfAllCategoriesSet(LIBLLDB_LOG_HOST);
-@@ -259,9 +261,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
+@@ -259,9 +260,9 @@ bool HostInfoBase::GetLLDBPath(lldb::Pat
        result = &g_fields->m_lldb_process_tmp_dir;
    } break;
    case lldb::ePathTypeGlobalLLDBTempSystemDir: {

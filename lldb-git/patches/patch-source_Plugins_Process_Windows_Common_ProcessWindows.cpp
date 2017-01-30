@@ -2,15 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/Windows/Common/ProcessWindows.cpp.orig	2016-12-14 14:10:24.000000000 +0000
 +++ source/Plugins/Process/Windows/Common/ProcessWindows.cpp
-@@ -41,6 +41,7 @@
- 
- using namespace lldb;
- using namespace lldb_private;
-+using namespace llvm;
- 
- namespace {
- std::string GetProcessExecutableName(HANDLE process_handle) {
-@@ -102,9 +103,9 @@ ProcessSP ProcessWindows::CreateInstance
+@@ -102,9 +102,9 @@ ProcessSP ProcessWindows::CreateInstance
  }
  
  void ProcessWindows::Initialize() {

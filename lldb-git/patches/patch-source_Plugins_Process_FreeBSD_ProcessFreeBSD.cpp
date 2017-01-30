@@ -2,15 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/FreeBSD/ProcessFreeBSD.cpp.orig	2017-01-28 19:35:15.000000000 +0000
 +++ source/Plugins/Process/FreeBSD/ProcessFreeBSD.cpp
-@@ -48,6 +48,7 @@
- 
- using namespace lldb;
- using namespace lldb_private;
-+using namespace llvm;
- 
- namespace {
- UnixSignalsSP &GetFreeBSDSignals() {
-@@ -71,9 +72,9 @@ ProcessFreeBSD::CreateInstance(lldb::Tar
+@@ -71,9 +71,9 @@ ProcessFreeBSD::CreateInstance(lldb::Tar
  }
  
  void ProcessFreeBSD::Initialize() {

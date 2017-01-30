@@ -2,15 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/MacOSX-Kernel/ProcessKDP.cpp.orig	2017-01-28 19:35:15.000000000 +0000
 +++ source/Plugins/Process/MacOSX-Kernel/ProcessKDP.cpp
-@@ -50,6 +50,7 @@
- 
- using namespace lldb;
- using namespace lldb_private;
-+using namespace llvm;
- 
- namespace {
- 
-@@ -718,9 +719,9 @@ Error ProcessKDP::DoSignal(int signo) {
+@@ -718,9 +718,9 @@ Error ProcessKDP::DoSignal(int signo) {
  }
  
  void ProcessKDP::Initialize() {

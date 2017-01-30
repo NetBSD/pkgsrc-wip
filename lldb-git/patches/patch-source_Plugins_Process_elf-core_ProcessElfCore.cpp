@@ -10,15 +10,7 @@ $NetBSD$
  
  #include "Plugins/DynamicLoader/POSIX-DYLD/DynamicLoaderPOSIXDYLD.h"
  #include "Plugins/ObjectFile/ELF/ObjectFileELF.h"
-@@ -36,6 +37,7 @@
- #include "ThreadElfCore.h"
- 
- using namespace lldb_private;
-+using namespace llvm;
- 
- ConstString ProcessElfCore::GetPluginNameStatic() {
-   static ConstString g_name("elf-core");
-@@ -398,9 +400,9 @@ void ProcessElfCore::Clear() {
+@@ -398,9 +399,9 @@ void ProcessElfCore::Clear() {
  }
  
  void ProcessElfCore::Initialize() {

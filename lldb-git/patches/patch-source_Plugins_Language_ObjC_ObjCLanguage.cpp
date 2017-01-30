@@ -2,15 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Language/ObjC/ObjCLanguage.cpp.orig	2016-12-14 14:10:24.000000000 +0000
 +++ source/Plugins/Language/ObjC/ObjCLanguage.cpp
-@@ -36,6 +36,7 @@
- using namespace lldb;
- using namespace lldb_private;
- using namespace lldb_private::formatters;
-+using namespace llvm;
- 
- void ObjCLanguage::Initialize() {
-   PluginManager::RegisterPlugin(GetPluginNameStatic(), "Objective-C Language",
-@@ -857,10 +858,10 @@ static void LoadCoreMediaFormatters(Type
+@@ -857,10 +857,10 @@ static void LoadCoreMediaFormatters(Type
  }
  
  lldb::TypeCategoryImplSP ObjCLanguage::GetFormatters() {

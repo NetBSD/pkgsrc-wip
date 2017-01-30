@@ -11,15 +11,7 @@ $NetBSD$
  // Project includes
  #include "Utility/StringExtractorGDBRemote.h"
  #include "Utility/UriParser.h"
-@@ -43,6 +45,7 @@
- using namespace lldb;
- using namespace lldb_private;
- using namespace lldb_private::process_gdb_remote;
-+using namespace llvm;
- 
- //----------------------------------------------------------------------
- // GDBRemoteCommunicationServerPlatform constructor
-@@ -528,9 +531,9 @@ bool GDBRemoteCommunicationServerPlatfor
+@@ -528,9 +530,9 @@ bool GDBRemoteCommunicationServerPlatfor
  
  const FileSpec &GDBRemoteCommunicationServerPlatform::GetDomainSocketDir() {
    static FileSpec g_domainsocket_dir;

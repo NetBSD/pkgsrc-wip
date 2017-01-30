@@ -2,21 +2,15 @@ $NetBSD$
 
 --- source/Core/ConstString.cpp.orig	2016-09-10 17:36:23.000000000 +0000
 +++ source/Core/ConstString.cpp
-@@ -19,10 +19,13 @@
+@@ -18,6 +18,7 @@
+ #include "llvm/ADT/StringExtras.h"
  #include "llvm/ADT/StringMap.h"
  #include "llvm/Support/RWMutex.h"
++#include "llvm/Support/Threading.h"
  
-+#include "llvm/Support/Atomic.h"
-+
  // Project includes
  #include "lldb/Core/Stream.h"
- 
- using namespace lldb_private;
-+using namespace llvm;
- 
- class Pool {
- public:
-@@ -191,10 +194,10 @@ protected:
+@@ -191,10 +192,10 @@ protected:
  // touch ConstStrings is difficult.  So we leak the pool instead.
  //----------------------------------------------------------------------
  static Pool &StringPool() {

@@ -2,15 +2,7 @@ $NetBSD$
 
 --- source/Host/windows/HostInfoWindows.cpp.orig	2016-09-10 17:36:23.000000000 +0000
 +++ source/Host/windows/HostInfoWindows.cpp
-@@ -21,6 +21,7 @@
- #include "llvm/Support/raw_ostream.h"
- 
- using namespace lldb_private;
-+using namespace llvm;
- 
- FileSpec HostInfoWindows::m_program_filespec;
- 
-@@ -90,8 +91,8 @@ bool HostInfoWindows::GetHostname(std::s
+@@ -90,8 +90,8 @@ bool HostInfoWindows::GetHostname(std::s
  }
  
  FileSpec HostInfoWindows::GetProgramFileSpec() {

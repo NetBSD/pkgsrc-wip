@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/minidump/ProcessMinidump.cpp.orig	2016-12-14 14:10:24.000000000 +0000
 +++ source/Plugins/Process/minidump/ProcessMinidump.cpp
-@@ -25,11 +25,14 @@
+@@ -25,6 +25,8 @@
  #include "lldb/Target/UnixSignals.h"
  #include "lldb/Utility/LLDBAssert.h"
  
@@ -11,13 +11,7 @@ $NetBSD$
  // C includes
  // C++ includes
  
- using namespace lldb_private;
- using namespace minidump;
-+using namespace llvm;
- 
- ConstString ProcessMinidump::GetPluginNameStatic() {
-   static ConstString g_name("minidump");
-@@ -92,9 +95,9 @@ ProcessMinidump::~ProcessMinidump() {
+@@ -92,9 +94,9 @@ ProcessMinidump::~ProcessMinidump() {
  }
  
  void ProcessMinidump::Initialize() {

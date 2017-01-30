@@ -2,15 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/Windows/Common/ProcessWindowsLog.cpp.orig	2016-09-10 17:36:23.000000000 +0000
 +++ source/Plugins/Process/Windows/Common/ProcessWindowsLog.cpp
-@@ -17,6 +17,7 @@
- 
- using namespace lldb;
- using namespace lldb_private;
-+using namespace llvm;
- 
- // We want to avoid global constructors where code needs to be run so here we
- // control access to our static g_log_sp by hiding it in a singleton function
-@@ -25,12 +26,12 @@ using namespace lldb_private;
+@@ -25,12 +25,12 @@ using namespace lldb_private;
  static bool g_log_enabled = false;
  static Log *g_log = nullptr;
  

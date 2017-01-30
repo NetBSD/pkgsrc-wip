@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/ScriptInterpreter/Python/ScriptInterpreterPython.cpp.orig	2017-01-28 19:35:15.000000000 +0000
 +++ source/Plugins/ScriptInterpreter/Python/ScriptInterpreterPython.cpp
-@@ -51,9 +51,11 @@
+@@ -51,6 +51,7 @@
  
  #include "llvm/ADT/STLExtras.h"
  #include "llvm/ADT/StringRef.h"
@@ -10,11 +10,7 @@ $NetBSD$
  
  using namespace lldb;
  using namespace lldb_private;
-+using namespace llvm;
- 
- static ScriptInterpreterPython::SWIGInitCallback g_swig_init_callback = nullptr;
- static ScriptInterpreterPython::SWIGBreakpointCallbackFunction
-@@ -338,9 +340,9 @@ ScriptInterpreterPython::~ScriptInterpre
+@@ -338,9 +339,9 @@ ScriptInterpreterPython::~ScriptInterpre
  }
  
  void ScriptInterpreterPython::Initialize() {

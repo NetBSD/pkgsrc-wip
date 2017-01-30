@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/gdb-remote/ProcessGDBRemoteLog.cpp.orig	2016-10-19 22:25:12.000000000 +0000
 +++ source/Plugins/Process/gdb-remote/ProcessGDBRemoteLog.cpp
-@@ -14,11 +14,14 @@
+@@ -14,6 +14,8 @@
  #include "lldb/Core/StreamFile.h"
  #include "lldb/Interpreter/Args.h"
  
@@ -11,13 +11,7 @@ $NetBSD$
  #include "ProcessGDBRemote.h"
  
  using namespace lldb;
- using namespace lldb_private;
- using namespace lldb_private::process_gdb_remote;
-+using namespace llvm;
- 
- // We want to avoid global constructors where code needs to be run so here we
- // control access to our static g_log_sp by hiding it in a singleton function
-@@ -34,9 +37,9 @@ static Log *GetLog() {
+@@ -34,9 +36,9 @@ static Log *GetLog() {
  
  void ProcessGDBRemoteLog::Initialize() {
    static ConstString g_name("gdb-remote");

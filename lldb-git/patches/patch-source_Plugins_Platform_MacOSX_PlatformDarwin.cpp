@@ -10,15 +10,7 @@ $NetBSD$
  
  #if defined(__APPLE__)
  #include <TargetConditionals.h> // for TARGET_OS_TV, TARGET_OS_WATCH
-@@ -47,6 +48,7 @@
- 
- using namespace lldb;
- using namespace lldb_private;
-+using namespace llvm;
- 
- //------------------------------------------------------------------
- /// Default Constructor
-@@ -1452,8 +1454,8 @@ static FileSpec CheckPathForXcode(const 
+@@ -1452,8 +1453,8 @@ static FileSpec CheckPathForXcode(const 
  
  static FileSpec GetXcodeContentsPath() {
    static FileSpec g_xcode_filespec;
@@ -29,7 +21,7 @@ $NetBSD$
  
      FileSpec fspec;
  
-@@ -1835,8 +1837,8 @@ lldb_private::FileSpec PlatformDarwin::L
+@@ -1835,8 +1836,8 @@ lldb_private::FileSpec PlatformDarwin::L
  
    // Find the global list of directories that we will search for
    // executables once so we don't keep doing the work over and over.

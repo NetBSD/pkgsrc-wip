@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Core/ModuleList.cpp.orig	2016-12-14 14:10:24.000000000 +0000
 +++ source/Core/ModuleList.cpp
-@@ -26,8 +26,11 @@
+@@ -26,6 +26,8 @@
  #include "lldb/Symbol/SymbolFile.h"
  #include "lldb/Symbol/VariableList.h"
  
@@ -10,11 +10,8 @@ $NetBSD$
 +
  using namespace lldb;
  using namespace lldb_private;
-+using namespace llvm;
  
- ModuleList::ModuleList()
-     : m_modules(), m_modules_mutex(), m_notifier(nullptr) {}
-@@ -644,8 +647,8 @@ size_t ModuleList::GetIndexForModule(con
+@@ -644,8 +646,8 @@ size_t ModuleList::GetIndexForModule(con
  
  static ModuleList &GetSharedModuleList() {
    static ModuleList *g_shared_module_list = nullptr;
