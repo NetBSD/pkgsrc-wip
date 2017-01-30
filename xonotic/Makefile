@@ -15,6 +15,8 @@ USE_LANGUAGES+=	c c++
 
 WRKSRC=		${WRKDIR}/Xonotic
 BUILD_TARGET=	all-zip-source
+INSTALL_TARGET=	install-data-zip-source install-engine-zip-source install-links
+INSTALL_ENV+=	LIBDIR=$(PREFIX)/lib
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"

@@ -1,2 +1,5 @@
 - I only have been testing with NetBSD so far
-- darkplaces-sdl builds and links OK except for some rpath strangeness
+
+- No proper installation yet, instead do this: 
+
+    $ cd ${WRKSRC} && ./source/darkplaces/darkplaces-sdl -xonotic

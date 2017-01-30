@@ -1,5 +1,5 @@
---- Makefile.old	2017-01-29 15:33:05.816238729 -0800
-+++ Makefile	2017-01-29 15:33:11.893156479 -0800
+--- ./Makefile.orig	2015-08-25 15:05:04.000000000 -0700
++++ ./Makefile	2017-01-29 22:14:53.212882308 -0800
 @@ -30,7 +30,7 @@
  	( cd source/d0_blind_id && ./configure --enable-static --disable-shared $(RIJNDAELDETECT_CONFIGURE) )
  	$(MAKE) -C source/d0_blind_id
@@ -9,3 +9,12 @@
  	$(MAKE) -C source/darkplaces sv-release DP_CRYPTO_STATIC_LIBDIR=$(CURDIR)/source/d0_blind_id/.libs
  	$(MAKE) -C source/darkplaces cl-release DP_CRYPTO_STATIC_LIBDIR=$(CURDIR)/source/d0_blind_id/.libs
  	$(MAKE) -C source/darkplaces sdl-release DP_CRYPTO_STATIC_LIBDIR=$(CURDIR)/source/d0_blind_id/.libs
+@@ -115,7 +115,7 @@
+ 
+ .PHONY: install-links
+ install-links:
+-	$(INSTALL) -d $(BINDIR)
++	$(INSTALL) -d $(DESTDIR)$(BINDIR)
+ 	$(LN) -snf $(LIBDIR)/xonotic-linux-sdl.sh $(DESTDIR)$(BINDIR)/xonotic-sdl
+ 	$(LN) -snf $(LIBDIR)/xonotic-linux-glx.sh $(DESTDIR)$(BINDIR)/xonotic-glx
+ 	$(LN) -snf $(LIBDIR)/xonotic-linux-dedicated.sh $(DESTDIR)$(BINDIR)/xonotic-dedicated
