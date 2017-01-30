@@ -10,16 +10,25 @@ $NetBSD$
  
  #include "lldb/Core/ArchSpec.h"
  #include "lldb/Core/Module.h"
-@@ -553,7 +554,8 @@ uint32_t SymbolFileDWARF::CalculateAbili
+@@ -87,6 +88,7 @@
+ 
+ using namespace lldb;
+ using namespace lldb_private;
++using namespace llvm;
+ 
+ // static inline bool
+ // child_requires_parent_class_union_or_struct_to_be_completed (dw_tag_t tag)
+@@ -553,8 +555,8 @@ uint32_t SymbolFileDWARF::CalculateAbili
  const DWARFDataExtractor &
  SymbolFileDWARF::GetCachedSectionData(lldb::SectionType sect_type,
                                        DWARFDataSegment &data_segment) {
 -  std::call_once(data_segment.m_flag, &SymbolFileDWARF::LoadSectionData, this,
+-                 sect_type, std::ref(data_segment.m_data));
 +  LLVM_DEFINE_ONCE_FLAG(m_flag);
-+  llvm::call_once(m_flag, &SymbolFileDWARF::LoadSectionData, this,
-                  sect_type, std::ref(data_segment.m_data));
++  llvm::call_once(m_flag,  [this, sect_type, &data_segment]{ this->LoadSectionData(sect_type, std::ref(data_segment.m_data));});
    return data_segment.m_data;
  }
+ 
 @@ -1630,13 +1632,13 @@ SymbolFileDWARF::GlobalVariableMap &Symb
                VariableSP var_sp = globals_sp->GetVariableAtIndex(g);
                if (var_sp && !var_sp->GetLocationIsConstantValueData()) {
