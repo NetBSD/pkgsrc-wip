@@ -1,7 +1,0 @@
-The blindtext package provides commands to create dummy ("blind") text
-for testing new classes, packages, etc.  The commands generate text,
-paragraphs, nested lists, mathematics, and entire documents containing
-sections, lists, mathematics, and table of contents.  Supported languages
-include, english, (n)german, french, catalan, and latin; the latin option
-provides a short "lorem ipsum" (for a longer lorem ipsum text, see the
-lipsum package).
