@@ -16,8 +16,10 @@ USE_LANGUAGES+=	c c++
 WRKSRC=		${WRKDIR}/Xonotic
 BUILD_TARGET=	all-zip-source
 
-.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
