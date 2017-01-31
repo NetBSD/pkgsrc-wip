@@ -1,8 +1,8 @@
 $NetBSD$
 
---- CMakeLists.txt.orig	2017-01-31 17:20:58.000000000 +0000
-+++ CMakeLists.txt
-@@ -1,3 +1,11 @@
+--- source/Plugins/Process/NetBSD/CMakeLists.txt.orig	2017-01-31 18:01:27.487996944 +0000
++++ source/Plugins/Process/NetBSD/CMakeLists.txt
+@@ -0,0 +1,8 @@
 +include_directories(.)
 +include_directories(../POSIX)
 +include_directories(../Utility)
@@ -11,6 +11,3 @@ $NetBSD$
 +  NativeProcessNetBSD.cpp
 +  NativeThreadNetBSD.cpp
 +  )
- cmake_minimum_required(VERSION 3.4.3)
- 
- include(cmake/modules/LLDBStandalone.cmake)

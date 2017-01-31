@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Host/netbsd/ProcessLauncherNetBSD.cpp.orig	2017-01-31 17:46:22.072872642 +0000
+--- source/Host/netbsd/ProcessLauncherNetBSD.cpp.orig	2017-01-31 18:01:27.339780598 +0000
 +++ source/Host/netbsd/ProcessLauncherNetBSD.cpp
 @@ -0,0 +1,170 @@
 +//===-- ProcessLauncherNetBSD.cpp --------------------------------*- C++ -*-===//
