@@ -51,6 +51,9 @@ In progress:
 
    "Synchronize PlatformNetBSD with Linux"
    https://reviews.llvm.org/D29266
+
+   "Add ProcessLauncherNetBSD to spawn a tracee"
+   https://reviews.llvm.org/D29347
  - switch std::call_once to llvm::call_once
    lldb-netbsd works with base libstdc++ with local patches
 
