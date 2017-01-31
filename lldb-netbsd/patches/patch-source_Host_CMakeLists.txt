@@ -2,11 +2,19 @@ $NetBSD$
 
 --- source/Host/CMakeLists.txt.orig	2017-01-31 17:20:57.000000000 +0000
 +++ source/Host/CMakeLists.txt
-@@ -140,6 +140,7 @@ else()
-       netbsd/HostInfoNetBSD.cpp
-       netbsd/HostThreadNetBSD.cpp
-       netbsd/ThisThread.cpp
-+      netbsd/ProcessLauncherNetBSD.cpp
+@@ -86,6 +86,7 @@ else()
+     posix/LockFilePosix.cpp
+     posix/MainLoopPosix.cpp
+     posix/PipePosix.cpp
++    posix/ProcessLauncherPosixFork.cpp
+     )
+ 
+   if (NOT (CMAKE_SYSTEM_NAME MATCHES "Android"))
+@@ -117,7 +118,6 @@ else()
+       linux/HostInfoLinux.cpp
+       linux/HostThreadLinux.cpp
+       linux/LibcGlue.cpp
+-      linux/ProcessLauncherLinux.cpp
+       linux/ThisThread.cpp
        )
-   endif()
- endif()
+     if (CMAKE_SYSTEM_NAME MATCHES "Android")

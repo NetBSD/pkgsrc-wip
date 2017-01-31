@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-31 18:01:27.497302816 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-01-31 18:03:04.646466474 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -0,0 +1,1387 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
@@ -39,7 +39,7 @@ $NetBSD$
 +#include "lldb/Host/ThreadLauncher.h"
 +#include "lldb/Host/common/NativeBreakpoint.h"
 +#include "lldb/Host/common/NativeRegisterContext.h"
-+#include "lldb/Host/netbsd/ProcessLauncherNetBSD.h"
++#include "lldb/Host/posix/ProcessLauncherPosixFork.h"
 +#include "lldb/Symbol/ObjectFile.h"
 +#include "lldb/Target/Process.h"
 +#include "lldb/Target/ProcessLaunchInfo.h"
@@ -307,7 +307,7 @@ $NetBSD$
 +  MaybeLogLaunchInfo(launch_info);
 +
 +  ::pid_t pid =
-+      ProcessLauncherNetBSD().LaunchProcess(launch_info, error).GetProcessId();
++      ProcessLauncherPosixFork().LaunchProcess(launch_info, error).GetProcessId();
 +  if (error.Fail())
 +    return error;
 +
