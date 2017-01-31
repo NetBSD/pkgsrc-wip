@@ -6,6 +6,7 @@ bin/clang-${LLVM_MAJOR}
 bin/clang-cl
 bin/clang-cpp
 bin/clang-format
+bin/clang-import-test
 bin/clang-offload-bundler
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
@@ -463,9 +464,11 @@ include/clang/Tooling/ArgumentsAdjusters.h
 include/clang/Tooling/CommonOptionsParser.h
 include/clang/Tooling/CompilationDatabase.h
 include/clang/Tooling/CompilationDatabasePluginRegistry.h
+include/clang/Tooling/Core/Diagnostic.h
 include/clang/Tooling/Core/Lookup.h
 include/clang/Tooling/Core/QualTypeNames.h
 include/clang/Tooling/Core/Replacement.h
+include/clang/Tooling/DiagnosticsYaml.h
 include/clang/Tooling/FileMatchTrie.h
 include/clang/Tooling/FixIt.h
 include/clang/Tooling/JSONCompilationDatabase.h
@@ -571,7 +574,7 @@ lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang.${SOEXT}
 ${PLIST.notdylib}lib/libclang.${SOEXT}.${LLVM_MAJOR}
-lib/libclang.${SOEXT}.40
+lib/libclang.${SOEXT}.5
 lib/libclangAST.a
 lib/libclangASTMatchers.a
 lib/libclangAnalysis.a
