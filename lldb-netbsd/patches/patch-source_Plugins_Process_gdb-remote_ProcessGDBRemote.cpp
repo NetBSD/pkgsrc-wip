@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/gdb-remote/ProcessGDBRemote.cpp.orig	2016-12-17 10:30:03.000000000 +0000
+--- source/Plugins/Process/gdb-remote/ProcessGDBRemote.cpp.orig	2017-01-31 17:20:57.000000000 +0000
 +++ source/Plugins/Process/gdb-remote/ProcessGDBRemote.cpp
-@@ -81,11 +81,13 @@
+@@ -81,6 +81,7 @@
  
  #include "llvm/ADT/StringSwitch.h"
  #include "llvm/Support/raw_ostream.h"
@@ -10,13 +10,7 @@ $NetBSD$
  
  #define DEBUGSERVER_BASENAME "debugserver"
  using namespace lldb;
- using namespace lldb_private;
- using namespace lldb_private::process_gdb_remote;
-+using namespace llvm;
- 
- namespace lldb {
- // Provide a function that can easily dump the packet history if we know a
-@@ -3427,9 +3429,9 @@ void ProcessGDBRemote::KillDebugserverPr
+@@ -3434,9 +3435,9 @@ void ProcessGDBRemote::KillDebugserverPr
  }
  
  void ProcessGDBRemote::Initialize() {

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/Linux/NativeProcessLinux.cpp.orig	2016-12-17 10:30:08.000000000 +0000
+--- source/Plugins/Process/Linux/NativeProcessLinux.cpp.orig	2017-01-31 17:20:57.000000000 +0000
 +++ source/Plugins/Process/Linux/NativeProcessLinux.cpp
 @@ -75,9 +75,9 @@ using namespace llvm;
  
@@ -11,6 +11,6 @@ $NetBSD$
  
 -  std::call_once(flag, [] {
 +  llvm::call_once(flag, [] {
-     Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
+     Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
  
      uint32_t source = 0x47424742;

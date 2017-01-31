@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Language/CPlusPlus/CPlusPlusLanguage.cpp.orig	2016-12-17 10:29:29.000000000 +0000
+--- source/Plugins/Language/CPlusPlus/CPlusPlusLanguage.cpp.orig	2017-01-31 17:20:57.000000000 +0000
 +++ source/Plugins/Language/CPlusPlus/CPlusPlusLanguage.cpp
-@@ -28,6 +28,7 @@
+@@ -33,6 +33,7 @@
  #include "lldb/DataFormatters/DataVisualization.h"
  #include "lldb/DataFormatters/FormattersHelpers.h"
  #include "lldb/DataFormatters/VectorType.h"
@@ -10,15 +10,7 @@ $NetBSD$
  
  #include "BlockPointer.h"
  #include "CxxStringTypes.h"
-@@ -38,6 +39,7 @@
- using namespace lldb;
- using namespace lldb_private;
- using namespace lldb_private::formatters;
-+using namespace llvm;
- 
- void CPlusPlusLanguage::Initialize() {
-   PluginManager::RegisterPlugin(GetPluginNameStatic(), "C++ Language",
-@@ -936,10 +938,10 @@ std::unique_ptr<Language::TypeScavenger>
+@@ -1036,10 +1037,10 @@ std::unique_ptr<Language::TypeScavenger>
  }
  
  lldb::TypeCategoryImplSP CPlusPlusLanguage::GetFormatters() {
@@ -31,7 +23,7 @@ $NetBSD$
      DataVisualization::Categories::GetCategory(GetPluginName(), g_category);
      if (g_category) {
        LoadLibCxxFormatters(g_category);
-@@ -952,11 +954,11 @@ lldb::TypeCategoryImplSP CPlusPlusLangua
+@@ -1052,11 +1053,11 @@ lldb::TypeCategoryImplSP CPlusPlusLangua
  
  HardcodedFormatters::HardcodedSummaryFinder
  CPlusPlusLanguage::GetHardcodedSummaries() {
@@ -45,7 +37,7 @@ $NetBSD$
      g_formatters.push_back(
          [](lldb_private::ValueObject &valobj, lldb::DynamicValueType,
             FormatManager &) -> TypeSummaryImpl::SharedPointer {
-@@ -1016,11 +1018,11 @@ CPlusPlusLanguage::GetHardcodedSummaries
+@@ -1116,11 +1117,11 @@ CPlusPlusLanguage::GetHardcodedSummaries
  
  HardcodedFormatters::HardcodedSyntheticFinder
  CPlusPlusLanguage::GetHardcodedSynthetics() {

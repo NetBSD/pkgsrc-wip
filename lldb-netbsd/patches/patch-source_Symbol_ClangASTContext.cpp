@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Symbol/ClangASTContext.cpp.orig	2016-12-17 10:30:17.000000000 +0000
+--- source/Symbol/ClangASTContext.cpp.orig	2017-01-31 17:20:57.000000000 +0000
 +++ source/Symbol/ClangASTContext.cpp
 @@ -127,8 +127,8 @@ typedef lldb_private::ThreadSafeDenseMap
  

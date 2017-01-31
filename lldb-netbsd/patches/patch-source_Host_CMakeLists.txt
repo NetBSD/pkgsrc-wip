@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Host/CMakeLists.txt.orig	2016-12-17 10:30:35.000000000 +0000
+--- source/Host/CMakeLists.txt.orig	2017-01-31 17:20:57.000000000 +0000
 +++ source/Host/CMakeLists.txt
-@@ -141,6 +141,7 @@ else()
+@@ -140,6 +140,7 @@ else()
        netbsd/HostInfoNetBSD.cpp
        netbsd/HostThreadNetBSD.cpp
        netbsd/ThisThread.cpp

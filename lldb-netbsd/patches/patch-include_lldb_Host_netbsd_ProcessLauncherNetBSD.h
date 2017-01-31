@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/lldb/Host/netbsd/ProcessLauncherNetBSD.h.orig	2016-12-26 05:32:46.084693165 +0000
+--- include/lldb/Host/netbsd/ProcessLauncherNetBSD.h.orig	2017-01-31 17:38:38.919303170 +0000
 +++ include/lldb/Host/netbsd/ProcessLauncherNetBSD.h
 @@ -0,0 +1,25 @@
 +//===-- ProcessLauncherNetBSD.h --------------------------------*- C++ -*-===//

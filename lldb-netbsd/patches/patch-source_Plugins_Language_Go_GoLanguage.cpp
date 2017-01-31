@@ -2,15 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Language/Go/GoLanguage.cpp.orig	2016-12-17 10:29:28.000000000 +0000
 +++ source/Plugins/Language/Go/GoLanguage.cpp
-@@ -27,6 +27,7 @@
- using namespace lldb;
- using namespace lldb_private;
- using namespace lldb_private::formatters;
-+using namespace llvm;
- 
- void GoLanguage::Initialize() {
-   PluginManager::RegisterPlugin(GetPluginNameStatic(), "Go Language",
-@@ -62,10 +63,10 @@ Language *GoLanguage::CreateInstance(lld
+@@ -62,10 +62,10 @@ Language *GoLanguage::CreateInstance(lld
  
  HardcodedFormatters::HardcodedSummaryFinder
  GoLanguage::GetHardcodedSummaries() {
@@ -23,7 +15,7 @@ $NetBSD$
      g_formatters.push_back(
          [](lldb_private::ValueObject &valobj, lldb::DynamicValueType,
             FormatManager &) -> TypeSummaryImpl::SharedPointer {
-@@ -104,10 +105,10 @@ GoLanguage::GetHardcodedSummaries() {
+@@ -104,10 +104,10 @@ GoLanguage::GetHardcodedSummaries() {
  
  HardcodedFormatters::HardcodedSyntheticFinder
  GoLanguage::GetHardcodedSynthetics() {

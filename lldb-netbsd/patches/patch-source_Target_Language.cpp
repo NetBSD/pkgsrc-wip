@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Target/Language.cpp.orig	2016-12-17 10:30:23.000000000 +0000
 +++ source/Target/Language.cpp
-@@ -20,18 +20,21 @@
+@@ -20,6 +20,8 @@
  #include "lldb/Symbol/TypeList.h"
  #include "lldb/Target/Target.h"
  
@@ -11,10 +11,7 @@ $NetBSD$
  using namespace lldb;
  using namespace lldb_private;
  using namespace lldb_private::formatters;
-+using namespace llvm;
- 
- typedef std::unique_ptr<Language> LanguageUP;
- typedef std::map<lldb::LanguageType, LanguageUP> LanguagesMap;
+@@ -29,9 +31,9 @@ typedef std::map<lldb::LanguageType, Lan
  
  static LanguagesMap &GetLanguagesMap() {
    static LanguagesMap *g_map = nullptr;
@@ -26,7 +23,7 @@ $NetBSD$
      g_map = new LanguagesMap(); // NOTE: INTENTIONAL LEAK due to global
                                  // destructor chain
    });
-@@ -40,9 +43,9 @@ static LanguagesMap &GetLanguagesMap() {
+@@ -40,9 +42,9 @@ static LanguagesMap &GetLanguagesMap() {
  }
  static std::mutex &GetLanguagesMutex() {
    static std::mutex *g_mutex = nullptr;

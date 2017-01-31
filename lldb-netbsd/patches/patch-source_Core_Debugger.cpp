@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Core/Debugger.cpp.orig	2016-12-17 10:30:30.000000000 +0000
+--- source/Core/Debugger.cpp.orig	2017-01-31 17:20:57.000000000 +0000
 +++ source/Core/Debugger.cpp
 @@ -61,8 +61,11 @@
  #include "lldb/Utility/AnsiTerminal.h"

@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Symbol/GoASTContext.cpp.orig	2016-12-17 10:30:17.000000000 +0000
 +++ source/Symbol/GoASTContext.cpp
-@@ -25,10 +25,13 @@
+@@ -25,6 +25,8 @@
  #include "lldb/Target/ExecutionContext.h"
  #include "lldb/Target/Target.h"
  
@@ -11,12 +11,7 @@ $NetBSD$
  #include "Plugins/ExpressionParser/Go/GoUserExpression.h"
  #include "Plugins/SymbolFile/DWARF/DWARFASTParserGo.h"
  
- using namespace lldb;
-+using namespace llvm;
- 
- namespace lldb_private {
- class GoArray;
-@@ -593,8 +596,8 @@ GoASTContext::GetBasicTypeEnumeration(ll
+@@ -593,8 +595,8 @@ GoASTContext::GetBasicTypeEnumeration(ll
    if (name) {
      typedef UniqueCStringMap<lldb::BasicType> TypeNameToBasicTypeMap;
      static TypeNameToBasicTypeMap g_type_map;
