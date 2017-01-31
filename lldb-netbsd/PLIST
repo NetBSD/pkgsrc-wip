@@ -515,7 +515,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-lib/liblldb.so.40
+lib/liblldb.so.5
 lib/liblldbBase.a
 lib/liblldbBreakpoint.a
 lib/liblldbCommands.a
