@@ -46,8 +46,19 @@ In progress:
 
    "Add NetBSD support in Host::GetCurrentThreadID"
    https://reviews.llvm.org/D29264
+   committed as SVN revision 293625
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293625
+
+   "Synchronize PlatformNetBSD with Linux"
+   https://reviews.llvm.org/D29266
  - switch std::call_once to llvm::call_once
    lldb-netbsd works with base libstdc++ with local patches
+
+   "Switch std::call_once to llvm::call_once"
+   https://reviews.llvm.org/D29288
+
+   "Make llvm::call_once more convenient to reuse out of LLVM"
+   https://reviews.llvm.org/D29296
 
 Unscheduled done
  - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
