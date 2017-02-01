@@ -1447,6 +1447,7 @@ SUBDIR+=	jlibtool
 SUBDIR+=	jmol
 SUBDIR+=	jmtpfs
 SUBDIR+=	jobd
+SUBDIR+=	john-jumbo
 SUBDIR+=	joomla
 SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
