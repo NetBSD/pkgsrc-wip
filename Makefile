@@ -3409,7 +3409,6 @@ SUBDIR+=	py-repoze.tm2
 SUBDIR+=	py-restkit
 SUBDIR+=	py-rf
 SUBDIR+=	py-rlcompleter2
-SUBDIR+=	py-robobrowser
 SUBDIR+=	py-rogues
 SUBDIR+=	py-ropemode
 SUBDIR+=	py-rpaths
