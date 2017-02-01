@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	src
 
+LDFLAGS+=	-ldes
+
 USE_TOOLS+=	gmake
 
 .include "../../archivers/bzip2/buildlink3.mk"
