@@ -43,6 +43,8 @@ In progress:
  - upstream !NetBSDProcessPlugin code
    "Do not pass non-POD type variables through variadic function"
    https://reviews.llvm.org/D29256
+   committed as SVN revision 293774
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293774
 
    "Add NetBSD support in Host::GetCurrentThreadID"
    https://reviews.llvm.org/D29264
