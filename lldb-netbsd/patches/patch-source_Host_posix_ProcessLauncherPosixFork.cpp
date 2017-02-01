@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Host/posix/ProcessLauncherPosixFork.cpp.orig	2017-01-31 22:19:11.628280905 +0000
 +++ source/Host/posix/ProcessLauncherPosixFork.cpp
-@@ -0,0 +1,250 @@
+@@ -0,0 +1,231 @@
 +//===-- ProcessLauncherLinux.cpp --------------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -77,26 +77,6 @@ $NetBSD$
 +#endif
 +}
 +
-+static int PtraceMe() {
-+#if defined(__linux__)
-+  return ptrace(PTRACE_TRACEME, 0, nullptr, nullptr);
-+#elif defined(__NetBSD__)
-+  return ptrace(PT_TRACE_ME, 0, nullptr, 0);
-+#else
-+#error portme
-+#endif
-+}
-+
-+static int SignalSetMask(const sigset_t *set) {
-+#if defined(__linux__)
-+  return pthread_sigmask(SIG_SETMASK, set, nullptr);
-+#elif defined(__NetBSD__)
-+  return sigprocmask(SIG_SETMASK, set, nullptr);
-+#else
-+#error portme
-+#endif
-+}
-+
 +static void DupDescriptor(int error_fd, const FileSpec &file_spec, int fd,
 +                          int flags) {
 +  int target_fd = ::open(file_spec.GetCString(), flags, 0666);
@@ -165,7 +145,8 @@ $NetBSD$
 +  // Clear the signal mask to prevent the child from being affected by
 +  // any masking done by the parent.
 +  sigset_t set;
-+  if (sigemptyset(&set) != 0 || SignalSetMask(&set) != 0)
++  if (sigemptyset(&set) != 0 ||
++      pthread_sigmask(SIG_SETMASK, &set, nullptr) != 0)
 +    ExitWithError(error_fd, "pthread_sigmask");
 +
 +  if (info.GetFlags().Test(eLaunchFlagDebug)) {
@@ -179,7 +160,7 @@ $NetBSD$
 +        close(fd);
 +
 +    // Start tracing this child that is about to exec.
-+    if (PtraceMe() == -1)
++    if (ptrace(PT_TRACE_ME, 0, nullptr, 0) == -1)
 +      ExitWithError(error_fd, "ptrace");
 +  }
 +
