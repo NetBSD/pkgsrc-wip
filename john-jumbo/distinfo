@@ -5,4 +5,6 @@ RMD160 (john-1.8.0-jumbo-1.tar.xz) = 2ed5b5b5e55eefadf2e2eb8d28d15cfc27c82655
 SHA512 (john-1.8.0-jumbo-1.tar.xz) = 163cd71f634c2d1e9d0fa760984cc05001bfeef8300098d6b9cc8bf7e1719fec1d37142c39d7fd65ef37ee96c95681f01d7f0b1941058b7f9926442e2df5cd8e
 Size (john-1.8.0-jumbo-1.tar.xz) = 23232492 bytes
 SHA1 (patch-src_configure) = e55e49a45311bdcfc6270bac18b73caa6b8bec27
+SHA1 (patch-src_escrypt_sysendian.h) = 226555f467e12f1de1fab2c3a21f3ab724faa213
 SHA1 (patch-src_osx__as__wrapper.sh) = 7820903bb3b82dc8defe1ae028b452c361e1f169
+SHA1 (patch-src_sysendian.h) = 0a538e2b82b4b911a2da2222d073915a589ff763
