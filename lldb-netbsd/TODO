@@ -56,6 +56,12 @@ In progress:
    renamed to:
    "Transform ProcessLauncherLinux to ProcessLauncherPosixFork"
    https://reviews.llvm.org/D29347
+   committed as SVN 293768
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293768
+
+   "Document that LaunchProcessPosixSpawn is used on NetBSD"
+   committed as SVN 293770
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293770
  - switch std::call_once to llvm::call_once
    lldb-netbsd works with base libstdc++ with local patches
 
