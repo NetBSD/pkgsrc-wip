@@ -53,6 +53,8 @@ In progress:
    https://reviews.llvm.org/D29266
 
    "Add ProcessLauncherNetBSD to spawn a tracee"
+   renamed to:
+   "Transform ProcessLauncherLinux to ProcessLauncherPosixFork"
    https://reviews.llvm.org/D29347
  - switch std::call_once to llvm::call_once
    lldb-netbsd works with base libstdc++ with local patches
