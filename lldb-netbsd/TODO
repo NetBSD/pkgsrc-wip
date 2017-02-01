@@ -37,6 +37,9 @@ Done:
    committed as SVN revision 293391
    http://llvm.org/viewvc/llvm-project/?view=rev&revision=293391
 
+Unscheduled done
+ - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
+
 In progress:
  - add support for auxv read operation
    added test io_read_auxv1
@@ -73,16 +76,15 @@ In progress:
    "Make llvm::call_once more convenient to reuse out of LLVM"
    https://reviews.llvm.org/D29296
 
-Unscheduled done
- - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
+Unscheduled in progress:
+ - investigate and address false-positives in "check-lldb"
+   "Fix multi-process-driver.cpp build on NetBSD"
+   https://reviews.llvm.org/D29403
 
 TODO:
  - fix conflict with system-wide py-six
  + ptrace(2) interface to lock and unlock threads from execution
  + switch the current PT_WATCHPOINT interface to PT_GETDBREGS and PT_SETDBREGS
-
-Unscheduled TODO:
- - investigate and address false-positives in "check-lldb"
 
 To be done later
 ================
