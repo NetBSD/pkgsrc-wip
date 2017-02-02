@@ -12,3 +12,6 @@ Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
 SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
 RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
+SHA1 (patch-cmake_modules_LLDBConfig.cmake) = f2f743a350afbaeeda30d87e08424def3ce70f0c
+SHA1 (patch-scripts_CMakeLists.txt) = 8e04d88d88fb1346d0e6824ec36f95ec3e811a6b
+SHA1 (patch-scripts_Python_finishSwigPythonLLDB.py) = 67fb908ec3d6312f9e014330dd4eb842aa8c21e4

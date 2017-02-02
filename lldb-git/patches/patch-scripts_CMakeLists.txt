@@ -1,0 +1,23 @@
+$NetBSD$
+
+--- scripts/CMakeLists.txt.orig	2017-01-28 19:35:15.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -56,5 +56,18 @@ add_custom_target(swig_wrapper ALL DEPEN
+ # Install the LLDB python module
+ install(DIRECTORY ${SWIG_PYTHON_DIR} DESTINATION ${SWIG_INSTALL_DIR})
+ 
++execute_process(
++  COMMAND "${PYTHON_EXECUTABLE}" -c "if True:
++    from distutils import sysconfig as sc
++    print(sc.get_python_lib(prefix='', plat_specific=True))"
++  OUTPUT_VARIABLE PYTHON_SITE
++  OUTPUT_STRIP_TRAILING_WHITESPACE)
++
++if(NOT LLDB_USE_SYSTEM_SIX)
++  install(FILES
++    ${LLDB_SOURCE_DIR}/third_party/Python/module/six/six.py
++    DESTINATION ${PYTHON_SITE}/)
++endif()
++
+ # build Python modules
+ add_subdirectory(Python/modules)
