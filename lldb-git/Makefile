@@ -11,6 +11,8 @@ HOMEPAGE=	http://lldb.org/
 COMMENT=	Next generation, high-performance debugger
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
 WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
