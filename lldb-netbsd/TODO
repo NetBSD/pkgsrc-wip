@@ -76,13 +76,18 @@ In progress:
    "Make llvm::call_once more convenient to reuse out of LLVM"
    https://reviews.llvm.org/D29296
 
+ - fix conflict with system-wide py-six
+   "Install six.py copy into subdirectory lldb"
+   https://reviews.llvm.org/D29405
+
 Unscheduled in progress:
  - investigate and address false-positives in "check-lldb"
    "Fix multi-process-driver.cpp build on NetBSD"
    https://reviews.llvm.org/D29403
+   committed as SVN 293895
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293895
 
 TODO:
- - fix conflict with system-wide py-six
  + ptrace(2) interface to lock and unlock threads from execution
  + switch the current PT_WATCHPOINT interface to PT_GETDBREGS and PT_SETDBREGS
 
