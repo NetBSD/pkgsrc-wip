@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	acme-client-0.1.15
+DISTNAME=	acme-client-0.1.16
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kristapsdz/}
 
