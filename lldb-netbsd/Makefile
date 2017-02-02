@@ -5,7 +5,7 @@ CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	lldb
 SVN_REPO.lldb=		http://llvm.org/svn/llvm-project/lldb/trunk
-SVN_REVISION.lldb=	293770
+SVN_REVISION.lldb=	293902
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
