@@ -99,7 +99,6 @@ include/lldb/Core/Broadcaster.h
 include/lldb/Core/ClangForward.h
 include/lldb/Core/Communication.h
 include/lldb/Core/Connection.h
-include/lldb/Core/ConstString.h
 include/lldb/Core/DataBuffer.h
 include/lldb/Core/DataBufferHeap.h
 include/lldb/Core/DataBufferMemoryMap.h
@@ -108,7 +107,6 @@ include/lldb/Core/DataExtractor.h
 include/lldb/Core/Debugger.h
 include/lldb/Core/Disassembler.h
 include/lldb/Core/EmulateInstruction.h
-include/lldb/Core/Error.h
 include/lldb/Core/Event.h
 include/lldb/Core/FastDemangle.h
 include/lldb/Core/FileLineResolver.h
@@ -133,21 +131,17 @@ include/lldb/Core/PluginInterface.h
 include/lldb/Core/PluginManager.h
 include/lldb/Core/RangeMap.h
 include/lldb/Core/RegisterValue.h
-include/lldb/Core/RegularExpression.h
 include/lldb/Core/STLUtils.h
 include/lldb/Core/Scalar.h
 include/lldb/Core/SearchFilter.h
 include/lldb/Core/Section.h
 include/lldb/Core/SourceManager.h
 include/lldb/Core/State.h
-include/lldb/Core/Stream.h
 include/lldb/Core/StreamAsynchronousIO.h
 include/lldb/Core/StreamBuffer.h
 include/lldb/Core/StreamCallback.h
 include/lldb/Core/StreamFile.h
 include/lldb/Core/StreamGDBRemote.h
-include/lldb/Core/StreamString.h
-include/lldb/Core/StreamTee.h
 include/lldb/Core/StringList.h
 include/lldb/Core/StructuredData.h
 include/lldb/Core/ThreadSafeDenseMap.h
@@ -461,7 +455,9 @@ include/lldb/Target/Unwind.h
 include/lldb/Target/UnwindAssembly.h
 include/lldb/Utility/AnsiTerminal.h
 include/lldb/Utility/CleanUp.h
+include/lldb/Utility/ConstString.h
 include/lldb/Utility/Either.h
+include/lldb/Utility/Error.h
 include/lldb/Utility/Iterable.h
 include/lldb/Utility/JSON.h
 include/lldb/Utility/LLDBAssert.h
@@ -470,10 +466,14 @@ include/lldb/Utility/ProcessStructReader.h
 include/lldb/Utility/PseudoTerminal.h
 include/lldb/Utility/Range.h
 include/lldb/Utility/RegisterNumber.h
+include/lldb/Utility/RegularExpression.h
 include/lldb/Utility/SafeMachO.h
 include/lldb/Utility/SelectHelper.h
 include/lldb/Utility/SharedCluster.h
 include/lldb/Utility/SharingPtr.h
+include/lldb/Utility/Stream.h
+include/lldb/Utility/StreamString.h
+include/lldb/Utility/StreamTee.h
 include/lldb/Utility/StringExtractor.h
 include/lldb/Utility/StringLexer.h
 include/lldb/Utility/TaskPool.h
@@ -594,3 +594,4 @@ ${PYSITELIB}/lldb/lldb-argdumper
 ${PYSITELIB}/lldb/runtime/__init__.py
 ${PYSITELIB}/lldb/utils/__init__.py
 ${PYSITELIB}/lldb/utils/symbolication.py
+${PYSITELIB}/six.py
