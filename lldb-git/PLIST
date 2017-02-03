@@ -594,4 +594,3 @@ ${PYSITELIB}/lldb/lldb-argdumper
 ${PYSITELIB}/lldb/runtime/__init__.py
 ${PYSITELIB}/lldb/utils/__init__.py
 ${PYSITELIB}/lldb/utils/symbolication.py
-${PYSITELIB}/six.py

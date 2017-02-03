@@ -51,6 +51,8 @@ REPLACE_PYTHON+=	scripts/shush
 TEST_TARGET=		check-lldb
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
+MAKE_FLAGS+=		VERBOSE=1
+
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
