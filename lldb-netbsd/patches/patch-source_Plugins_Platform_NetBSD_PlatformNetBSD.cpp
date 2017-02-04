@@ -8,7 +8,6 @@ $NetBSD$
  #include "lldb/Breakpoint/BreakpointLocation.h"
 -#include "lldb/Breakpoint/BreakpointSite.h"
  #include "lldb/Core/Debugger.h"
-+#include "lldb/Utility/Error.h"
 +#include "lldb/Core/Log.h"
  #include "lldb/Core/Module.h"
 +#include "lldb/Core/ModuleList.h"
@@ -16,14 +15,14 @@ $NetBSD$
  #include "lldb/Core/PluginManager.h"
 -#include "lldb/Host/Host.h"
 +#include "lldb/Core/State.h"
-+#include "lldb/Utility/StreamString.h"
 +#include "lldb/Host/FileSpec.h"
  #include "lldb/Host/HostInfo.h"
 +#include "lldb/Interpreter/OptionValueProperties.h"
 +#include "lldb/Interpreter/Property.h"
  #include "lldb/Target/Process.h"
--#include "lldb/Utility/Error.h"
 +#include "lldb/Target/Target.h"
+ #include "lldb/Utility/Error.h"
++#include "lldb/Utility/StreamString.h"
 +
 +// Define these constants from NetBSD mman.h for use when targeting
 +// remote linux systems even when host has different values.
@@ -297,9 +296,7 @@ $NetBSD$
 -
 -  return error;
 -}
-+    : PlatformPOSIX(is_host) // This is the local host platform
-+{}
- 
+-
 -Error PlatformNetBSD::DisconnectRemote() {
 -  Error error;
 -
@@ -353,7 +350,9 @@ $NetBSD$
 -          old_module_sp_ptr, did_create_ptr);
 -    }
 -  }
--
++    : PlatformPOSIX(is_host) // This is the local host platform
++{}
+ 
 -  if (!module_sp) {
 -    // Fall back to the local platform and find the file locally
 -    error = Platform::GetSharedModule(module_spec, process, module_sp,

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-01 14:48:47.318295132 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-04 19:17:06.215419277 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -0,0 +1,1387 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
@@ -30,7 +30,7 @@ $NetBSD$
 +
 +// Other libraries and framework includes
 +#include "lldb/Core/EmulateInstruction.h"
-+#include "lldb/Core/Error.h"
++#include "lldb/Utility/Error.h"
 +#include "lldb/Core/ModuleSpec.h"
 +#include "lldb/Core/RegisterValue.h"
 +#include "lldb/Core/State.h"
