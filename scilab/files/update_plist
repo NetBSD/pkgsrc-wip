@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# $NetBSD: update_plist,v 1.2 2009/06/14 22:58:04 joerg Exp $
+#
+
+# The scilab install uses tar which preserves times and makes
+# 'make print-PLIST' not work.  Be sure to watch out for the 
+# ocaml stuff in PLIST.opt if you are on i386
+#
+
+grep "@comment" PLIST > plist.new
+grep "^bin" PLIST >> plist.new
+
+find /usr/pkg/lib/scilab-4.1 -type f -print | sort | sed 's;/usr/pkg/lib/scilab-4.1;lib/${PKGNAME};g' >> plist.new
+find /usr/pkg/share/doc/scilab-4.1 -type f -print | sort | sed 's;/usr/pkg/share/doc/scilab-4.1;share/doc/${PKGNAME};g' >> plist.new
