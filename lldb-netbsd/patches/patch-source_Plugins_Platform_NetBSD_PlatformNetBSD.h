@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Platform/NetBSD/PlatformNetBSD.h.orig	2016-12-17 10:29:30.000000000 +0000
+--- source/Plugins/Platform/NetBSD/PlatformNetBSD.h.orig	2017-02-04 18:35:35.000000000 +0000
 +++ source/Plugins/Platform/NetBSD/PlatformNetBSD.h
-@@ -14,109 +14,73 @@
+@@ -14,96 +14,59 @@
  // C++ Includes
  // Other libraries and framework includes
  // Project includes
@@ -63,10 +63,6 @@ $NetBSD$
 -                        std::string *command_output,
 -                        uint32_t timeout_sec) override;
 -
-   Error ResolveExecutable(const ModuleSpec &module_spec,
-                           lldb::ModuleSP &module_sp,
-                           const FileSpecList *module_search_paths_ptr) override;
- 
 -  bool GetRemoteOSVersion() override;
 -
 -  bool GetRemoteOSBuildString(std::string &s) override;
@@ -83,33 +79,22 @@ $NetBSD$
 -  Error DisconnectRemote() override;
 -
 -  const char *GetHostname() override;
+-
+-  const char *GetUserName(uint32_t uid) override;
+-
+-  const char *GetGroupName(uint32_t gid) override;
+-
+-  Error LaunchProcess(ProcessLaunchInfo &launch_info) override;
 +  const char *GetDescription() override {
 +    return GetPluginDescriptionStatic(IsHost());
 +  }
  
--  const char *GetUserName(uint32_t uid) override;
-+  void GetStatus(Stream &strm) override;
- 
--  const char *GetGroupName(uint32_t gid) override;
-+  Error GetFileWithUUID(const FileSpec &platform_file, const UUID *uuid,
-+                        FileSpec &local_file) override;
- 
-   bool GetProcessInfo(lldb::pid_t pid, ProcessInstanceInfo &proc_info) override;
- 
-   uint32_t FindProcesses(const ProcessInstanceInfoMatch &match_info,
-                          ProcessInstanceInfoList &process_infos) override;
- 
--  Error LaunchProcess(ProcessLaunchInfo &launch_info) override;
--
 -  lldb::ProcessSP Attach(ProcessAttachInfo &attach_info, Debugger &debugger,
 -                         Target *target, Error &error) override;
--
++  void GetStatus(Stream &strm) override;
+ 
 -  // NetBSD processes can not be launched by spawning and attaching.
 -  bool CanDebugProcess() override { return false; }
--
--  // Only on PlatformMacOSX:
--  Error GetFileWithUUID(const FileSpec &platform_file, const UUID *uuid,
--                        FileSpec &local_file) override;
 +  bool GetSupportedArchitectureAtIndex(uint32_t idx, ArchSpec &arch) override;
  
 -  Error GetSharedModule(const ModuleSpec &module_spec, Process *process,
@@ -134,8 +119,6 @@ $NetBSD$
 -                                         // remote netbsd OS
 +  uint64_t ConvertMmapFlagsToPlatform(const ArchSpec &arch,
 +                                      unsigned flags) override;
-+
-+  ConstString GetFullNameForDylib(ConstString basename) override;
  
  private:
    DISALLOW_COPY_AND_ASSIGN(PlatformNetBSD);
