@@ -384,6 +384,13 @@ go/misc/cgo/testplugin/altpath/src/common/common.go
 go/misc/cgo/testplugin/altpath/src/plugin-mismatch/main.go
 go/misc/cgo/testplugin/src/common/common.go
 go/misc/cgo/testplugin/src/host/host.go
+go/misc/cgo/testplugin/src/iface/main.go
+go/misc/cgo/testplugin/src/iface_a/a.go
+go/misc/cgo/testplugin/src/iface_b/b.go
+go/misc/cgo/testplugin/src/iface_i/i.go
+go/misc/cgo/testplugin/src/issue18676/dynamodbstreamsevt/definition.go
+go/misc/cgo/testplugin/src/issue18676/main.go
+go/misc/cgo/testplugin/src/issue18676/plugin.go
 go/misc/cgo/testplugin/src/plugin1/plugin1.go
 go/misc/cgo/testplugin/src/plugin2/plugin2.go
 go/misc/cgo/testplugin/src/sub/plugin1/plugin1.go
@@ -418,6 +425,10 @@ go/misc/cgo/testshared/src/exe2/exe2.go
 go/misc/cgo/testshared/src/exe3/exe3.go
 go/misc/cgo/testshared/src/execgo/exe.go
 go/misc/cgo/testshared/src/explicit/explicit.go
+go/misc/cgo/testshared/src/iface/main.go
+go/misc/cgo/testshared/src/iface_a/a.go
+go/misc/cgo/testshared/src/iface_b/b.go
+go/misc/cgo/testshared/src/iface_i/i.go
 go/misc/cgo/testshared/src/implicit/implicit.go
 go/misc/cgo/testshared/src/implicitcmd/implicitcmd.go
 go/misc/cgo/testshared/src/trivial/trivial.go
@@ -657,6 +668,7 @@ go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/lca_test.go
 go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/likelyadjust.go
 go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/location.go
 go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/loopbce.go
+go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/loopreschedchecks.go
 go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/lower.go
 go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/magic.go
 go/pkg/bootstrap/src/bootstrap/cmd/compile/internal/ssa/nilcheck.go
@@ -1200,7 +1212,6 @@ go/src/archive/zip/register.go
 go/src/archive/zip/struct.go
 go/src/archive/zip/testdata/crc32-not-streamed.zip
 go/src/archive/zip/testdata/dd.zip
-go/src/archive/zip/testdata/extra-timestamp.zip
 go/src/archive/zip/testdata/go-no-datadesc-sig.zip
 go/src/archive/zip/testdata/go-with-datadesc-sig.zip
 go/src/archive/zip/testdata/gophercolor16x16.png
@@ -1478,6 +1489,7 @@ go/src/cmd/compile/internal/ssa/lca_test.go
 go/src/cmd/compile/internal/ssa/likelyadjust.go
 go/src/cmd/compile/internal/ssa/location.go
 go/src/cmd/compile/internal/ssa/loopbce.go
+go/src/cmd/compile/internal/ssa/loopreschedchecks.go
 go/src/cmd/compile/internal/ssa/lower.go
 go/src/cmd/compile/internal/ssa/magic.go
 go/src/cmd/compile/internal/ssa/nilcheck.go
@@ -1690,6 +1702,18 @@ go/src/cmd/go/testdata/src/dupload/dupload.go
 go/src/cmd/go/testdata/src/dupload/p/p.go
 go/src/cmd/go/testdata/src/dupload/p2/p2.go
 go/src/cmd/go/testdata/src/dupload/vendor/p/p.go
+go/src/cmd/go/testdata/src/empty/pkg/pkg.go
+go/src/cmd/go/testdata/src/empty/pkgtest/pkg.go
+go/src/cmd/go/testdata/src/empty/pkgtest/test_test.go
+go/src/cmd/go/testdata/src/empty/pkgtestxtest/pkg.go
+go/src/cmd/go/testdata/src/empty/pkgtestxtest/test_test.go
+go/src/cmd/go/testdata/src/empty/pkgtestxtest/xtest_test.go
+go/src/cmd/go/testdata/src/empty/pkgxtest/pkg.go
+go/src/cmd/go/testdata/src/empty/pkgxtest/xtest_test.go
+go/src/cmd/go/testdata/src/empty/test/test_test.go
+go/src/cmd/go/testdata/src/empty/testxtest/test_test.go
+go/src/cmd/go/testdata/src/empty/testxtest/xtest_test.go
+go/src/cmd/go/testdata/src/empty/xtest/xtest_test.go
 go/src/cmd/go/testdata/src/gencycle/gencycle.go
 go/src/cmd/go/testdata/src/go-cmd-test/helloworld.go
 go/src/cmd/go/testdata/src/importmain/ismain/main.go
@@ -2740,7 +2764,6 @@ go/src/go/build/read_test.go
 go/src/go/build/syslist.go
 go/src/go/build/syslist_test.go
 go/src/go/build/testdata/empty/dummy
-go/src/go/build/testdata/ignored/ignored.go
 go/src/go/build/testdata/multi/file.go
 go/src/go/build/testdata/multi/file_appengine.go
 go/src/go/build/testdata/other/file/file.go
@@ -5988,6 +6011,7 @@ go/test/fixedbugs/gcc65755.go
 go/test/fixedbugs/gcc67968.dir/a.go
 go/test/fixedbugs/gcc67968.dir/b.go
 go/test/fixedbugs/gcc67968.go
+go/test/fixedbugs/gcc78763.go
 go/test/fixedbugs/issue10047.go
 go/test/fixedbugs/issue10066.dir/a.go
 go/test/fixedbugs/issue10066.dir/b.go
@@ -6012,6 +6036,7 @@ go/test/fixedbugs/issue10700.dir/other.go
 go/test/fixedbugs/issue10700.dir/test.go
 go/test/fixedbugs/issue10700.go
 go/test/fixedbugs/issue10925.go
+go/test/fixedbugs/issue10958.go
 go/test/fixedbugs/issue10975.go
 go/test/fixedbugs/issue10977.go
 go/test/fixedbugs/issue11053.dir/p.go
@@ -6217,6 +6242,10 @@ go/test/fixedbugs/issue17752.go
 go/test/fixedbugs/issue17918.go
 go/test/fixedbugs/issue18092.go
 go/test/fixedbugs/issue18149.go
+go/test/fixedbugs/issue18392.go
+go/test/fixedbugs/issue18410.go
+go/test/fixedbugs/issue18459.go
+go/test/fixedbugs/issue18661.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go
@@ -6417,6 +6446,7 @@ go/test/fixedbugs/issue6703x.go
 go/test/fixedbugs/issue6703y.go
 go/test/fixedbugs/issue6703z.go
 go/test/fixedbugs/issue6750.go
+go/test/fixedbugs/issue6772.go
 go/test/fixedbugs/issue6789.dir/a.go
 go/test/fixedbugs/issue6789.dir/b.go
 go/test/fixedbugs/issue6789.go
