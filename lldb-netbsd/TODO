@@ -83,6 +83,9 @@ In progress:
    "Make llvm::call_once more convenient to reuse out of LLVM"
    https://reviews.llvm.org/D29296
 
+   "Make llvm::call_once more convenient to reuse out of LLVM"
+   https://reviews.llvm.org/D29552
+
 Unscheduled in progress:
  - investigate and address false-positives in "check-lldb"
    "Fix multi-process-driver.cpp build on NetBSD"
