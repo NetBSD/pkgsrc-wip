@@ -742,7 +742,6 @@ SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	filevercmp
 SUBDIR+=	filter_audio-git
-SUBDIR+=	fio
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox-dfbsd
