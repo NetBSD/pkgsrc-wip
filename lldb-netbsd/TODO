@@ -36,6 +36,13 @@ Done:
    https://reviews.llvm.org/D29091
    committed as SVN revision 293391
    http://llvm.org/viewvc/llvm-project/?view=rev&revision=293391
+ - fix conflict with system-wide py-six
+   "Install six.py copy into subdirectory lldb"
+   renamed to
+   "Install six.py conditionally"
+   https://reviews.llvm.org/D29405
+   committed as SVN 294071
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294071
 
 Unscheduled done
  - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
@@ -75,10 +82,6 @@ In progress:
 
    "Make llvm::call_once more convenient to reuse out of LLVM"
    https://reviews.llvm.org/D29296
-
- - fix conflict with system-wide py-six
-   "Install six.py copy into subdirectory lldb"
-   https://reviews.llvm.org/D29405
 
 Unscheduled in progress:
  - investigate and address false-positives in "check-lldb"
