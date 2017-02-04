@@ -2,10 +2,9 @@
 #
 
 DISTNAME=	${SCIBASE}-src
-PKGREVISION=	19
 PKGNAME=	${SCIBASE}
 CATEGORIES=	math
-MASTER_SITES=	http://www.scilab.org/download/4.1/
+MASTER_SITES=	http://www.scilab.org/download/5.5.2/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.scilab.org/
@@ -13,12 +12,10 @@ COMMENT=	High-level scientific math programming environment with graphics
 
 MAKE_JOBS_SAFE=	no
 
-SCIBASE=	scilab-4.1
+SCIBASE=	scilab-5.5.2
 # don't forget to update SCI and SCIVERSION in the buildlink3.mk file when
 # SCIBASE is updated.
 WRKSRC=		${WRKDIR}/${SCIBASE}
-
-BROKEN_ON_PLATFORM+=	${LP64PLATFORMS}
 
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
