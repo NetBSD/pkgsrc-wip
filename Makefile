@@ -3829,6 +3829,7 @@ SUBDIR+=	scantailor
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
 SUBDIR+=	schur
+SUBDIR+=	scilab
 SUBDIR+=	scim-git
 SUBDIR+=	scimark
 SUBDIR+=	scintilla
