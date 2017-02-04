@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/08/16 21:18:25 leot1990 Exp $
 
-DISTNAME=	fio-2.2.9
-PKGREVISION=	2
+DISTNAME=	fio-2.17
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://brick.kernel.dk/snaps/
 
@@ -16,15 +15,12 @@ USE_TOOLS+=	bash gmake lex yacc
 DOCDIR=		${PREFIX}/share/doc/fio
 EGDIR=		${PREFIX}/share/examples/fio
 
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.makefile=	Fixing paths in Makefile
-SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile=	-E -e 's,^(prefix =).*,\1 ${PREFIX},'
-SUBST_SED.makefile+=	-E -e 's,^(mandir =).*,\1 ${PREFIX}/${PKGMANDIR},'
-SUBST_SED.makefile+=	-E -e 's,^(sharedir =).*,\1 ${PREFIX}/share/fio,'
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 REPLACE_BASH+=		tools/genfio
+REPLACE_PYTHON+=	tools/fio_latency2csv.py
+REPLACE_PYTHON+=	tools/fiologparser.py
+REPLACE_PYTHON+=	tools/hist/fiologparser_hist.py
 REPLACE_PYTHON+=	tools/plot/fio2gnuplot
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
