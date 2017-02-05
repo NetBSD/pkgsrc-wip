@@ -16,7 +16,7 @@ $NetBSD$
          : Options(), match_info(), show_args(false), verbose(false) {
 -      static std::once_flag g_once_flag;
 -      std::call_once(g_once_flag, []() {
-+      LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++      static llvm::once_flag g_once_flag;
 +      llvm::call_once(g_once_flag, []() {
          PosixPlatformCommandOptionValidator *posix_validator =
              new PosixPlatformCommandOptionValidator();

@@ -17,7 +17,7 @@ $NetBSD$
        static std::set<int> *g_init_terminal_fds_ptr = nullptr;
 -      static std::once_flag g_once_flag;
 -      std::call_once(g_once_flag, [&]() {
-+      LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++      static llvm::once_flag g_once_flag;
 +      llvm::call_once(g_once_flag, [&]() {
          g_init_terminal_fds_mutex_ptr =
              new std::mutex(); // NOTE: Leak to avoid C++ destructor chain issues

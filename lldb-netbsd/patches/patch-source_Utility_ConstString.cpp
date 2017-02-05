@@ -15,7 +15,7 @@ $NetBSD$
  //----------------------------------------------------------------------
  static Pool &StringPool() {
 -  static std::once_flag g_pool_initialization_flag;
-+  LLVM_DEFINE_ONCE_FLAG(g_pool_initialization_flag);
++  static llvm::once_flag g_pool_initialization_flag;
    static Pool *g_string_pool = nullptr;
  
 -  std::call_once(g_pool_initialization_flag,

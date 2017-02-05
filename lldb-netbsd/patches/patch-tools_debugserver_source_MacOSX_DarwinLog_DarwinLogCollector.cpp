@@ -7,7 +7,7 @@ $NetBSD$
  
  bool LookupSPICalls() {
 -  static std::once_flag s_once_flag;
-+  LLVM_DEFINE_ONCE_FLAG(s_once_flag);
++  static llvm::once_flag s_once_flag;
    static bool s_has_spi;
  
 -  std::call_once(s_once_flag, [] {

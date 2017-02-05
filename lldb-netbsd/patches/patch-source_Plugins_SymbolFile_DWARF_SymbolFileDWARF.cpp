@@ -10,17 +10,21 @@ $NetBSD$
  
  #include "lldb/Core/ArchSpec.h"
  #include "lldb/Core/Module.h"
-@@ -553,8 +554,11 @@ uint32_t SymbolFileDWARF::CalculateAbili
+@@ -553,8 +554,16 @@ uint32_t SymbolFileDWARF::CalculateAbili
  const DWARFDataExtractor &
  SymbolFileDWARF::GetCachedSectionData(lldb::SectionType sect_type,
                                        DWARFDataSegment &data_segment) {
 -  std::call_once(data_segment.m_flag, &SymbolFileDWARF::LoadSectionData, this,
--                 sect_type, std::ref(data_segment.m_data));
++#if 0
++  llvm::call_once(data_segment.m_flag, &SymbolFileDWARF::LoadSectionData, this,
+                  sect_type, std::ref(data_segment.m_data));
++#else
 +  llvm::call_once(data_segment.m_flag,
 +    [this, sect_type, &data_segment] {
 +      this->LoadSectionData(sect_type, std::ref(data_segment.m_data));
 +    }
 +  );
++#endif
    return data_segment.m_data;
  }
  

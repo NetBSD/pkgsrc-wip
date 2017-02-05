@@ -20,7 +20,7 @@ $NetBSD$
  uint32_t HostInfoBase::GetNumberCPUS() {
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
      g_fields->m_number_cpus = std::thread::hardware_concurrency();
    });
@@ -31,7 +31,7 @@ $NetBSD$
  llvm::StringRef HostInfoBase::GetVendorString() {
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
      g_fields->m_vendor_string =
          HostInfo::GetArchitecture().GetTriple().getVendorName().str();
@@ -42,7 +42,7 @@ $NetBSD$
  llvm::StringRef HostInfoBase::GetOSString() {
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
      g_fields->m_os_string =
          std::move(HostInfo::GetArchitecture().GetTriple().getOSName());
@@ -53,7 +53,7 @@ $NetBSD$
  llvm::StringRef HostInfoBase::GetTargetTriple() {
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
      g_fields->m_host_triple =
          HostInfo::GetArchitecture().GetTriple().getTriple();
@@ -64,7 +64,7 @@ $NetBSD$
  const ArchSpec &HostInfoBase::GetArchitecture(ArchitectureKind arch_kind) {
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
      HostInfo::ComputeHostArchitectureSupport(g_fields->m_host_arch_32,
                                               g_fields->m_host_arch_64);
@@ -74,7 +74,7 @@ $NetBSD$
    switch (type) {
    case lldb::ePathTypeLLDBShlibDir: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -86,7 +86,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypeSupportExecutableDir: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -98,7 +98,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypeHeaderDir: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -110,7 +110,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypePythonDir: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -122,7 +122,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypeClangDir: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -134,7 +134,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypeLLDBSystemPlugins: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -146,7 +146,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypeLLDBUserPlugins: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -158,7 +158,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypeLLDBTempSystemDir: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {
@@ -170,7 +170,7 @@ $NetBSD$
    } break;
    case lldb::ePathTypeGlobalLLDBTempSystemDir: {
 -    static std::once_flag g_once_flag;
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
      static bool success = false;
 -    std::call_once(g_once_flag, []() {
 +    llvm::call_once(g_once_flag, []() {

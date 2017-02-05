@@ -15,7 +15,7 @@ $NetBSD$
  HardcodedFormatters::HardcodedSummaryFinder
  GoLanguage::GetHardcodedSummaries() {
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
    static HardcodedFormatters::HardcodedSummaryFinder g_formatters;
  
 -  std::call_once(g_initialize, []() -> void {
@@ -28,7 +28,7 @@ $NetBSD$
  HardcodedFormatters::HardcodedSyntheticFinder
  GoLanguage::GetHardcodedSynthetics() {
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
    static HardcodedFormatters::HardcodedSyntheticFinder g_formatters;
  
 -  std::call_once(g_initialize, []() -> void {

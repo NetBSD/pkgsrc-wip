@@ -7,7 +7,7 @@ $NetBSD$
  static bool ProcessVmReadvSupported() {
    static bool is_supported;
 -  static std::once_flag flag;
-+  LLVM_DEFINE_ONCE_FLAG(flag);
++  static llvm::once_flag flag;
  
 -  std::call_once(flag, [] {
 +  llvm::call_once(flag, [] {
