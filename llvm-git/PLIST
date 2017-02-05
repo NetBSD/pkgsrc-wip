@@ -381,6 +381,7 @@ include/llvm/DebugInfo/CodeView/CodeView.h
 include/llvm/DebugInfo/CodeView/CodeViewError.h
 include/llvm/DebugInfo/CodeView/CodeViewRecordIO.h
 include/llvm/DebugInfo/CodeView/EnumTables.h
+include/llvm/DebugInfo/CodeView/Formatters.h
 include/llvm/DebugInfo/CodeView/FunctionId.h
 include/llvm/DebugInfo/CodeView/Line.h
 include/llvm/DebugInfo/CodeView/ModuleSubstream.h
@@ -1095,6 +1096,7 @@ include/llvm/Transforms/Utils/ValueMapper.h
 include/llvm/Transforms/Vectorize.h
 include/llvm/Transforms/Vectorize/LoopVectorize.h
 include/llvm/Transforms/Vectorize/SLPVectorizer.h
+include/llvm/XRay/InstrumentationMap.h
 include/llvm/XRay/Trace.h
 include/llvm/XRay/XRayRecord.h
 include/llvm/XRay/YAMLXRayRecord.h
