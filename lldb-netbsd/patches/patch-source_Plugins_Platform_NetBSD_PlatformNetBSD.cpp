@@ -2,30 +2,28 @@ $NetBSD$
 
 --- source/Plugins/Platform/NetBSD/PlatformNetBSD.cpp.orig	2017-02-04 18:35:35.000000000 +0000
 +++ source/Plugins/Platform/NetBSD/PlatformNetBSD.cpp
-@@ -20,24 +20,107 @@
+@@ -19,25 +19,45 @@
+ // C++ Includes
  // Other libraries and framework includes
  // Project includes
- #include "lldb/Breakpoint/BreakpointLocation.h"
+-#include "lldb/Breakpoint/BreakpointLocation.h"
 -#include "lldb/Breakpoint/BreakpointSite.h"
  #include "lldb/Core/Debugger.h"
+-#include "lldb/Core/Module.h"
+-#include "lldb/Core/ModuleSpec.h"
 +#include "lldb/Core/Log.h"
- #include "lldb/Core/Module.h"
-+#include "lldb/Core/ModuleList.h"
- #include "lldb/Core/ModuleSpec.h"
  #include "lldb/Core/PluginManager.h"
 -#include "lldb/Host/Host.h"
 +#include "lldb/Core/State.h"
 +#include "lldb/Host/FileSpec.h"
  #include "lldb/Host/HostInfo.h"
-+#include "lldb/Interpreter/OptionValueProperties.h"
-+#include "lldb/Interpreter/Property.h"
  #include "lldb/Target/Process.h"
 +#include "lldb/Target/Target.h"
  #include "lldb/Utility/Error.h"
 +#include "lldb/Utility/StreamString.h"
 +
 +// Define these constants from NetBSD mman.h for use when targeting
-+// remote linux systems even when host has different values.
++// remote netbsd systems even when host has different values.
 +#define MAP_PRIVATE 0x0002
 +#define MAP_ANON 0x1000
  
@@ -34,63 +32,6 @@ $NetBSD$
  using namespace lldb_private::platform_netbsd;
  
 +static uint32_t g_initialize_count = 0;
-+
-+//------------------------------------------------------------------
-+/// Code to handle the PlatformNetBSD settings
-+//------------------------------------------------------------------
-+
-+namespace {
-+class PlatformNetBSDProperties : public Properties {
-+public:
-+  PlatformNetBSDProperties();
-+
-+  ~PlatformNetBSDProperties() override = default;
-+
-+  static ConstString &GetSettingName();
-+
-+private:
-+  static const PropertyDefinition *GetStaticPropertyDefinitions();
-+};
-+
-+typedef std::shared_ptr<PlatformNetBSDProperties> PlatformNetBSDPropertiesSP;
-+
-+} // anonymous namespace
-+
-+PlatformNetBSDProperties::PlatformNetBSDProperties() : Properties() {
-+  m_collection_sp.reset(new OptionValueProperties(GetSettingName()));
-+  m_collection_sp->Initialize(GetStaticPropertyDefinitions());
-+}
-+
-+ConstString &PlatformNetBSDProperties::GetSettingName() {
-+  static ConstString g_setting_name("netbsd");
-+  return g_setting_name;
-+}
-+
-+const PropertyDefinition *
-+PlatformNetBSDProperties::GetStaticPropertyDefinitions() {
-+  static PropertyDefinition g_properties[] = {
-+      {NULL, OptionValue::eTypeInvalid, false, 0, NULL, NULL, NULL}};
-+
-+  return g_properties;
-+}
-+
-+static const PlatformNetBSDPropertiesSP &GetGlobalProperties() {
-+  static PlatformNetBSDPropertiesSP g_settings_sp;
-+  if (!g_settings_sp)
-+    g_settings_sp.reset(new PlatformNetBSDProperties());
-+  return g_settings_sp;
-+}
-+
-+void PlatformNetBSD::DebuggerInitialize(Debugger &debugger) {
-+  if (!PluginManager::GetSettingForPlatformPlugin(
-+          debugger, PlatformNetBSDProperties::GetSettingName())) {
-+    const bool is_global_setting = true;
-+    PluginManager::CreateSettingForPlatformPlugin(
-+        debugger, GetGlobalProperties()->GetValueProperties(),
-+        ConstString("Properties for the PlatformNetBSD plug-in."),
-+        is_global_setting);
-+  }
-+}
 +
 +//------------------------------------------------------------------
 +
@@ -115,7 +56,7 @@ $NetBSD$
  
    bool create = force;
    if (create == false && arch && arch->IsValid()) {
-@@ -51,8 +134,19 @@ PlatformSP PlatformNetBSD::CreateInstanc
+@@ -51,8 +71,19 @@ PlatformSP PlatformNetBSD::CreateInstanc
        break;
      }
    }
@@ -137,7 +78,7 @@ $NetBSD$
    return PlatformSP();
  }
  
-@@ -66,211 +160,51 @@ ConstString PlatformNetBSD::GetPluginNam
+@@ -66,211 +97,51 @@ ConstString PlatformNetBSD::GetPluginNam
    }
  }
  
@@ -171,7 +112,7 @@ $NetBSD$
 +    PluginManager::RegisterPlugin(
 +        PlatformNetBSD::GetPluginNameStatic(false),
 +        PlatformNetBSD::GetPluginDescriptionStatic(false),
-+        PlatformNetBSD::CreateInstance, PlatformNetBSD::DebuggerInitialize);
++        PlatformNetBSD::CreateInstance, nullptr);
    }
  }
  
@@ -228,7 +169,9 @@ $NetBSD$
 -        m_major_os_version, m_minor_os_version, m_update_os_version);
 -  return false;
 -}
--
++    : PlatformPOSIX(is_host) // This is the local host platform
++{}
+ 
 -bool PlatformNetBSD::GetRemoteOSBuildString(std::string &s) {
 -  if (m_remote_platform_sp)
 -    return m_remote_platform_sp->GetRemoteOSBuildString(s);
@@ -350,9 +293,7 @@ $NetBSD$
 -          old_module_sp_ptr, did_create_ptr);
 -    }
 -  }
-+    : PlatformPOSIX(is_host) // This is the local host platform
-+{}
- 
+-
 -  if (!module_sp) {
 -    // Fall back to the local platform and find the file locally
 -    error = Platform::GetSharedModule(module_spec, process, module_sp,
@@ -367,7 +308,7 @@ $NetBSD$
  
  bool PlatformNetBSD::GetSupportedArchitectureAtIndex(uint32_t idx,
                                                       ArchSpec &arch) {
-@@ -323,79 +257,239 @@ bool PlatformNetBSD::GetSupportedArchite
+@@ -323,79 +194,239 @@ bool PlatformNetBSD::GetSupportedArchite
  }
  
  void PlatformNetBSD::GetStatus(Stream &strm) {

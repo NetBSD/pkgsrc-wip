@@ -2,10 +2,14 @@ $NetBSD$
 
 --- source/Plugins/Platform/NetBSD/PlatformNetBSD.h.orig	2017-02-04 18:35:35.000000000 +0000
 +++ source/Plugins/Platform/NetBSD/PlatformNetBSD.h
-@@ -14,96 +14,59 @@
- // C++ Includes
- // Other libraries and framework includes
- // Project includes
+@@ -10,100 +10,57 @@
+ #ifndef liblldb_PlatformNetBSD_h_
+ #define liblldb_PlatformNetBSD_h_
+ 
+-// C Includes
+-// C++ Includes
+-// Other libraries and framework includes
+-// Project includes
 -#include "lldb/Target/Platform.h"
 +#include "Plugins/Platform/POSIX/PlatformPOSIX.h"
  
@@ -18,13 +22,12 @@ $NetBSD$
    PlatformNetBSD(bool is_host);
  
 -  ~PlatformNetBSD() override = default;
-+  ~PlatformNetBSD() override;
- 
+-
 -  //------------------------------------------------------------
 -  // Class functions
 -  //------------------------------------------------------------
 -  static lldb::PlatformSP CreateInstance(bool force, const ArchSpec *arch);
-+  static void DebuggerInitialize(Debugger &debugger);
++  ~PlatformNetBSD() override;
  
    static void Initialize();
  
