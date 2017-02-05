@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Utility/ConstString.cpp.orig	2017-02-02 23:56:41.000000000 +0000
+--- source/Utility/ConstString.cpp.orig	2017-02-05 16:52:24.757854153 +0000
 +++ source/Utility/ConstString.cpp
 @@ -20,6 +20,7 @@
  #include "llvm/Support/RWMutex.h"
@@ -15,7 +15,7 @@ $NetBSD$
  //----------------------------------------------------------------------
  static Pool &StringPool() {
 -  static std::once_flag g_pool_initialization_flag;
-+  LLVM_DEFINE_ONCE_FLAG(g_pool_initialization_flag);
++  static llvm::once_flag g_pool_initialization_flag;
    static Pool *g_string_pool = nullptr;
  
 -  std::call_once(g_pool_initialization_flag,

@@ -21,7 +21,7 @@ $NetBSD$
    static ConstString g_name("windows");
  
 -  std::call_once(*g_once_flag, []() {
-+  llvm::call_once(g_once_flag, []() {
++  llvm::call_once(*g_once_flag, []() {
      Log::Callbacks log_callbacks = {DisableLog, EnableLog, ListLogCategories};
  
      Log::RegisterLogChannel(g_name, log_callbacks);

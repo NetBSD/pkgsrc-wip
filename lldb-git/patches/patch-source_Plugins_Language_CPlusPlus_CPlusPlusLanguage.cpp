@@ -15,7 +15,7 @@ $NetBSD$
  
  lldb::TypeCategoryImplSP CPlusPlusLanguage::GetFormatters() {
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
    static TypeCategoryImplSP g_category;
  
 -  std::call_once(g_initialize, [this]() -> void {
@@ -28,7 +28,7 @@ $NetBSD$
  HardcodedFormatters::HardcodedSummaryFinder
  CPlusPlusLanguage::GetHardcodedSummaries() {
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
    static ConstString g_vectortypes("VectorTypes");
    static HardcodedFormatters::HardcodedSummaryFinder g_formatters;
  
@@ -42,7 +42,7 @@ $NetBSD$
  HardcodedFormatters::HardcodedSyntheticFinder
  CPlusPlusLanguage::GetHardcodedSynthetics() {
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
    static ConstString g_vectortypes("VectorTypes");
    static HardcodedFormatters::HardcodedSyntheticFinder g_formatters;
  

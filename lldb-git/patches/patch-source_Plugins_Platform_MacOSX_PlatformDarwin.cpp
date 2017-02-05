@@ -16,7 +16,7 @@ $NetBSD$
    static FileSpec g_xcode_filespec;
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
  
      FileSpec fspec;
@@ -27,7 +27,7 @@ $NetBSD$
    // executables once so we don't keep doing the work over and over.
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
  
      // When locating executables, trust the DEVELOPER_DIR first if it is set

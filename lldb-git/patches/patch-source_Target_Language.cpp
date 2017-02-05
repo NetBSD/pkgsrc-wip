@@ -16,7 +16,7 @@ $NetBSD$
  static LanguagesMap &GetLanguagesMap() {
    static LanguagesMap *g_map = nullptr;
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
  
 -  std::call_once(g_initialize, [] {
 +  llvm::call_once(g_initialize, [] {
@@ -28,7 +28,7 @@ $NetBSD$
  static std::mutex &GetLanguagesMutex() {
    static std::mutex *g_mutex = nullptr;
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
  
 -  std::call_once(g_initialize, [] {
 +  llvm::call_once(g_initialize, [] {

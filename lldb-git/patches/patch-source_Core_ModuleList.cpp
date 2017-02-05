@@ -17,7 +17,7 @@ $NetBSD$
    static ModuleList *g_shared_module_list = nullptr;
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
      // NOTE: Intentionally leak the module list so a program doesn't have to
      // cleanup all modules and object files as it exits. This just wastes time

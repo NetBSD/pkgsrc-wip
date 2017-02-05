@@ -16,7 +16,7 @@ $NetBSD$
  
  lldb::TypeCategoryImplSP ObjCLanguage::GetFormatters() {
 -  static std::once_flag g_initialize;
-+  LLVM_DEFINE_ONCE_FLAG(g_initialize);
++  static llvm::once_flag g_initialize;
    static TypeCategoryImplSP g_category;
  
 -  std::call_once(g_initialize, [this]() -> void {

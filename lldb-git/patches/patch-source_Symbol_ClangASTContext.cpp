@@ -25,7 +25,7 @@ $NetBSD$
    static ClangASTMap *g_map_ptr = nullptr;
 -  static std::once_flag g_once_flag;
 -  std::call_once(g_once_flag, []() {
-+  LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++  static llvm::once_flag g_once_flag;
 +  llvm::call_once(g_once_flag, []() {
      g_map_ptr = new ClangASTMap(); // leaked on purpose to avoid spins
    });
@@ -36,7 +36,7 @@ $NetBSD$
      static TypeNameToBasicTypeMap g_type_map;
 -    static std::once_flag g_once_flag;
 -    std::call_once(g_once_flag, []() {
-+    LLVM_DEFINE_ONCE_FLAG(g_once_flag);
++    static llvm::once_flag g_once_flag;
 +    llvm::call_once(g_once_flag, []() {
        // "void"
        g_type_map.Append(ConstString("void").GetStringRef(), eBasicTypeVoid);
