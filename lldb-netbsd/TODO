@@ -43,13 +43,6 @@ Done:
    https://reviews.llvm.org/D29405
    committed as SVN 294071
    http://llvm.org/viewvc/llvm-project/?view=rev&revision=294071
-
-Unscheduled done
- - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
-
-In progress:
- - add support for auxv read operation
-   added test io_read_auxv1
  - upstream !NetBSDProcessPlugin code
    "Do not pass non-POD type variables through variadic function"
    https://reviews.llvm.org/D29256
@@ -63,6 +56,8 @@ In progress:
 
    "Synchronize PlatformNetBSD with Linux"
    https://reviews.llvm.org/D29266
+   committed as SVN 294145
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294145
 
    "Add ProcessLauncherNetBSD to spawn a tracee"
    renamed to:
@@ -74,17 +69,33 @@ In progress:
    "Document that LaunchProcessPosixSpawn is used on NetBSD"
    committed as SVN 293770
    http://llvm.org/viewvc/llvm-project/?view=rev&revision=293770
+
+Unscheduled done
+ - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
+
+In progress:
+ - add support for auxv read operation
+   added test io_read_auxv1
  - switch std::call_once to llvm::call_once
    lldb-netbsd works with base libstdc++ with local patches
+   (this approach has been abandoned)
 
    "Switch std::call_once to llvm::call_once"
    https://reviews.llvm.org/D29288
 
    "Make llvm::call_once more convenient to reuse out of LLVM"
    https://reviews.llvm.org/D29296
+   committed as SVN 293902
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293902
 
    "Make llvm::call_once more convenient to reuse out of LLVM"
    https://reviews.llvm.org/D29552
+   abandoned
+
+   "Revamp llvm::once_flag to be closer to std::once_flag"
+   https://reviews.llvm.org/D29566
+   committed as SVN 294143
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294143
 
 Unscheduled in progress:
  - investigate and address false-positives in "check-lldb"
