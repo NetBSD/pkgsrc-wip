@@ -1406,6 +1406,7 @@ SUBDIR+=	ja-ptex
 #SUBDIR+=	jabberd			# not a real package
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jabref
+SUBDIR+=	jabref3
 SUBDIR+=	jacorb-lib
 SUBDIR+=	jad
 SUBDIR+=	jakarta-log4j

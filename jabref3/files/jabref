@@ -1,0 +1,3 @@
+#!@SH@
+
+@JAVA_BINPREFIX@-java -jar @JABREF_PREFIX@/@JABREF_JAR@ $@
