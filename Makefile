@@ -2381,7 +2381,6 @@ SUBDIR+=	p5-qt3
 SUBDIR+=	p5-spf-policyd
 SUBDIR+=	p5-transdecoder
 SUBDIR+=	p5-xmlsig-svn
-SUBDIR+=	p6-panda
 SUBDIR+=	packman
 SUBDIR+=	pagetools
 SUBDIR+=	pal
