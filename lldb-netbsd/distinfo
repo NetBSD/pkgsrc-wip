@@ -17,6 +17,7 @@ SHA1 (patch-include_lldb_Host_netbsd_HostThreadNetBSD.h) = 79f207cdb9da2ef57d39e
 SHA1 (patch-source_CMakeLists.txt) = 5dacabc3f39c23bdfd432b5a4895866157b97aa0
 SHA1 (patch-source_Host_common_Host.cpp) = 7d48b8bb1e4350ba6d3ddc6357b9b8dc82d6b32d
 SHA1 (patch-source_Host_common_NativeProcessProtocol.cpp) = 23cc7da280b2123cf0206f3d5660d2647935edbc
+SHA1 (patch-source_Host_netbsd_Host.cpp) = bc19754c964ea8242f6bf83ef7b3d3c4bf02c35b
 SHA1 (patch-source_Host_netbsd_HostThreadNetBSD.cpp) = a1b0fbdad062309a845cfefe4469614fbbe9d20e
 SHA1 (patch-source_Host_netbsd_ThisThread.cpp) = f0d32c81bc1b8fe9aeb86519ea46ba2cb16571c2
 SHA1 (patch-source_Initialization_SystemInitializerCommon.cpp) = 80c850b980fe2902f10e441df7a18f428dd1154a
