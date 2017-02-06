@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	Argyll_V1.8.3_src
-CATEGORIES=	wip
+CATEGORIES=	graphics
 MASTER_SITES=	http://www.argyllcms.com/
 EXTRACT_SUFX=	.zip
 

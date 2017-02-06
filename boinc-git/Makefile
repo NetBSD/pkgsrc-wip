@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	boinc-7.6
-CATEGORIES=	wip
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BOINC/}
 
 GIT_REPOSITORIES=	boinc
@@ -9,7 +9,7 @@ GIT_REPO.boinc=		https://github.com/BOINC/boinc.git
 WRKSRC=			${WRKDIR}/boinc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.boinc.berkeley.edu/
+HOMEPAGE=	https://boinc.berkeley.edu/
 COMMENT=	Open-source software for volunteer computing
 LICENSE=	gnu-gpl-v3
 

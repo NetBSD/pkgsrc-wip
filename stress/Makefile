@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	stress-1.0.4
-CATEGORIES=	wip
+CATEGORIES=	benchmark
 MASTER_SITES=	http://people.seas.harvard.edu/~apw/stress/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

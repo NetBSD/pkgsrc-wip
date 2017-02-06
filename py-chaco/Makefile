@@ -3,7 +3,6 @@
 DISTNAME=	chaco-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-CATEGORIES=	wip
 MASTER_SITES=	https://www.enthought.com/repo/ets/
 
 MAINTAINER=	jihbed.research@gmail.com

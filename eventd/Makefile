@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	eventd-0.20.0
-CATEGORIES=	wip
+CATEGORIES=	net sysutils
 MASTER_SITES=	https://www.eventd.org/download/eventd/
 EXTRACT_SUFX=	.tar.xz
 

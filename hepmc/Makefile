@@ -2,7 +2,7 @@
 
 DISTNAME=	HepMC-2.06.09
 PKGNAME=	${DISTNAME:S/H/h/S/MC/mc/}
-CATEGORIES=	wip
+CATEGORIES=	math
 MASTER_SITES=	http://lcgapp.cern.ch/project/simu/HepMC/download/
 
 MAINTAINER=	jihbed.research@gmail.com

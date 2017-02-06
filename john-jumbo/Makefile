@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	john-1.8.0-jumbo-1
-CATEGORIES=	wip
+CATEGORIES=	security
 MASTER_SITES=	http://openwall.com/john/j/
 EXTRACT_SUFX=	.tar.xz
 

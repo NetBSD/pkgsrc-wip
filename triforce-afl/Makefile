@@ -2,14 +2,14 @@
 
 DISTNAME=	${GIT_COMMIT}
 PKGNAME=	TriforceAFL-0.0
-CATEGORIES=	wip
+CATEGORIES=	emulators
 MASTER_SITES=	https://github.com/nccgroup/TriforceAFL/archive/
 
 GIT_COMMIT=	73ec279d5ee3aa84fd7e4e8c3818428d437d8fa7
 
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	https://github.com/nccgroup/
-COMMENT=	TODO: Short description of the package
+COMMENT=	AFL/QEMU fuzzing with full-system emulation
 #LICENSE=	# TODO: (see mk/license.mk)
 
 EXTRACT_USING=	gtar

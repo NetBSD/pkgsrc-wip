@@ -1,6 +1,6 @@
 
 DISTNAME=	payara-${PAYARA_VER}
-CATEGORIES=	wip www
+CATEGORIES=	www
 MASTER_SITES=	https://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/Payara+${PAYARA_VER}/
 EXTRACT_SUFX=	.zip
 

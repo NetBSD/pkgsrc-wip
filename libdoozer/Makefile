@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2013/02/18 00:31:27 asau Exp $
-#
 
 DISTNAME=	libdoozer-0.1
-CATEGORIES=	wip
+CATEGORIES=	databases devel
 MASTER_SITES=	ftp://ftp.bsdprojects.net/pub/bsdprojects/libdoozer/
 EXTRACT_SUFX=	.tar.bz2
 

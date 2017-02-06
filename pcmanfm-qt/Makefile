@@ -3,10 +3,10 @@
 .include "../../wip/liblxqt/Makefile.common"
 
 DISTNAME=	pcmanfm-qt-0.9.0
-CATEGORIES=	wip
+CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	file manager + desktop manager
+COMMENT=	File manager + desktop manager
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config

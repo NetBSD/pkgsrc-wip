@@ -1,12 +1,12 @@
 # $NetBSD$
 
 DISTNAME=	fswebcam-20140113
-CATEGORIES=	wip
+CATEGORIES=	graphics www
 MASTER_SITES=	http://www.firestorm.cx/fswebcam/files/
 
 MAINTAINER=	catskillmarina@gmail.com
 HOMEPAGE=	http://www.firestorm.cx/fswebcam/files/
-COMMENT=	TODO: pulls single images off of webcams without graphic bloat
+COMMENT=	Pulls single images off of webcams without graphic bloat
 #LICENSE=	# TODO: (see mk/license.mk)
 
 GNU_CONFIGURE=	yes

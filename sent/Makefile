@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	sent-0.2
-CATEGORIES=	wip
+CATEGORIES=	textproc
 MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

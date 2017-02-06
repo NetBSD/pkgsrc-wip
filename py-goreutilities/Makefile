@@ -2,7 +2,7 @@
 
 DISTNAME=	GoreUtilities-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	wip
+CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/GoreUtilities/}
 
 MAINTAINER=	jihbed.research@gmail.com

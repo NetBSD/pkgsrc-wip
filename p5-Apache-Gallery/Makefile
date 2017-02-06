@@ -2,7 +2,7 @@
 
 DISTNAME=	Apache-Gallery-1.0.2-withoutworldwriteables
 PKGNAME=	${DISTNAME:C/-without.*//}
-CATEGORIES=	wip
+CATEGORIES=	graphics www
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/L/LE/LEGART/
 
 MAINTAINER=	kim@tac.nyc.ny.us

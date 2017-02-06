@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/06/03 00:37:05 mbowie Exp $
 
 DISTNAME=	I2util-1.2
-CATEGORIES=	wip
+CATEGORIES=	devel
 MASTER_SITES=	http://software.internet2.edu/sources/I2util/
 
 MAINTAINER=	mbowie@rocketspace.com

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	colord-gtk-0.1.26
-CATEGORIES=	wip
+CATEGORIES=	graphics
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz
 

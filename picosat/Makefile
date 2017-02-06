@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2013/09/21 15:51:50 jihbed Exp $
 
 DISTNAME=	picosat-957
-CATEGORIES=	wip
+CATEGORIES=	math
 MASTER_SITES=	http://fmv.jku.at/picosat/
 
 MAINTAINER=	jihbed.research@gmail.com

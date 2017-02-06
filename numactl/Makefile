@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	numactl-2.0.11
-CATEGORIES=	wip
+CATEGORIES=	sysutils
 MASTER_SITES=	ftp://oss.sgi.com/www/projects/libnuma/download/
 
 MAINTAINER=	bacon4000@gmail.com

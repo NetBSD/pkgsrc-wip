@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	stress-ng-0.05.18
-CATEGORIES=	wip
+CATEGORIES=	benchmark
 MASTER_SITES=	http://kernel.ubuntu.com/~cking/tarballs/stress-ng/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	preload-0.6.4
-CATEGORIES=	wip
+CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=preload/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

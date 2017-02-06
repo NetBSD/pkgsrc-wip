@@ -2,7 +2,7 @@
 
 DISTNAME=		vis-0.2
 PKGNAME=		${DISTNAME:S/vis/vis-editor/}
-CATEGORIES=		wip
+CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
 
 MAINTAINER=		erig@erig.me

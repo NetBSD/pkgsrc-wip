@@ -3,7 +3,7 @@
 PKGNAME=	translate-toolkit-2.0.0
 DISTNAME=	translate-toolkit-2.0.0rc1
 GITHUB_PROJECT=	translate
-CATEGORIES=	wip
+CATEGORIES=	misc
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
 MASTER_SITES=	https://github.com/translate/translate/releases/download/2.0.0rc1/
 EXTRACT_SUFX=	.tar.bz2

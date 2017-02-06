@@ -2,14 +2,14 @@
 
 GITHUB_PROJECT=	aws-cli
 DISTNAME=	1.11.8
-CATEGORIES=	wip
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aws/}
 EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	gde@llew.me
 HOMEPAGE=	https://github.com/aws/aws-cli/
-COMMENT=	universal Command Line Interface for Amazon Web Services
+COMMENT=	Universal Command Line Interface for Amazon Web Services
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-botocore==1.4.65:../../wip/py-botocore

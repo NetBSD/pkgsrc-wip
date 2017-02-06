@@ -3,13 +3,13 @@
 GITHUB_PROJECT=	botocore
 DISTNAME=	${GITHUB_PROJECT}-1.4.65
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	wip
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=boto/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	gde@llew.me
 HOMEPAGE=	https://github.com/boto/
-COMMENT=	low-level interface to a growing number of Amazon Web Services
+COMMENT=	Low-level interface to a growing number of Amazon Web Services
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.9.0:../../wip/py-jmespath

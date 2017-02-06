@@ -4,7 +4,6 @@ DISTNAME=	openopt-0.5404
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math python
-CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openopt/}
 
 MAINTAINER=	jihbed.research@gmail.com
