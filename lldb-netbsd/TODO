@@ -69,19 +69,17 @@ Done:
    "Document that LaunchProcessPosixSpawn is used on NetBSD"
    committed as SVN 293770
    http://llvm.org/viewvc/llvm-project/?view=rev&revision=293770
-
-Unscheduled done
- - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
-
-In progress:
  - add support for auxv read operation
    added test io_read_auxv1
+   (local patch added, function not used in the current code)
  - switch std::call_once to llvm::call_once
    lldb-netbsd works with base libstdc++ with local patches
    (this approach has been abandoned)
 
    "Switch std::call_once to llvm::call_once"
    https://reviews.llvm.org/D29288
+   committed as SVN 294202
+   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294202
 
    "Make llvm::call_once more convenient to reuse out of LLVM"
    https://reviews.llvm.org/D29296
@@ -96,6 +94,12 @@ In progress:
    https://reviews.llvm.org/D29566
    committed as SVN 294143
    http://llvm.org/viewvc/llvm-project/?view=rev&revision=294143
+
+Unscheduled done
+ - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
+
+In progress:
+NONE
 
 Unscheduled in progress:
  - investigate and address false-positives in "check-lldb"
