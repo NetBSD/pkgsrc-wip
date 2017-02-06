@@ -2,3 +2,17 @@ This package is incomplete.
 
 It is missing a bunch of Go packages required to compile. I  will be adding
 these over time.
+
+Here are some missing dependencies:
+
+github.com/dustin/go-humanize
+github.com/flynn/go-shlex
+github.com/gorilla/websocket
+github.com/hashicorp/go-syslog
+github.com/jimstudt/http-authentication/basic
+github.com/lucas-clemente/quic-go/h2quic
+github.com/naoina/toml
+github.com/russross/blackfriday
+github.com/xenolf/lego/acme
+gopkg.in/natefinch/lumberjack.v2
+gopkg.in/yaml.v2
