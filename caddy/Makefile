@@ -17,6 +17,8 @@ GO_DIST_BASE=	${PKGNAME_NOREV}
 GO_SRCPATH=	github.com/mholt/caddy
 GO_BUILD_PATTERN= ${GO_SRCPATH}/caddy
 
+.include "../../net/go-net/buildlink3.mk"
+.include "../../security/go-crypto/buildlink3.mk"
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
