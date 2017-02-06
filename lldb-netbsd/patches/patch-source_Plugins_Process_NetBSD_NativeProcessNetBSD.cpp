@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-05 01:46:10.616321206 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-06 19:51:43.599155992 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -0,0 +1,1387 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
@@ -110,7 +110,7 @@ $NetBSD$
 +void PtraceDisplayBytes(int &req, void *addr, int data) {
 +  StreamString buf;
 +  Log *verbose_log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(
-+      POSIX_LOG_PTRACE | POSIX_LOG_VERBOSE));
++      POSIX_LOG_PTRACE));
 +
 +  if (verbose_log) {
 +    switch (req) {
@@ -232,7 +232,7 @@ $NetBSD$
 +    lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
 +    MainLoop &mainloop, NativeProcessProtocolSP &native_process_sp) {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+  if (log && log->GetMask().Test(POSIX_LOG_VERBOSE))
++  if (log)
 +    log->Printf("NativeProcessNetBSD::%s(pid = %" PRIi64 ")", __FUNCTION__, pid);
 +
 +  // Retrieve the architecture for the running process.
