@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	dehydrated-0.3.1
+DISTNAME=	dehydrated-0.4.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lukas2511/}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	https://github.com/lukas2511/
+HOMEPAGE=	https://github.com/lukas2511/dehydrated
 COMMENT=	Letsencrypt/acme client implemented as a shell-script
 LICENSE=	mit
 
