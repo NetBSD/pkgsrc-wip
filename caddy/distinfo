@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (caddy/v0.8.3.tar.gz) = 59f0d164797a0f3a19322b279841670398873686
-RMD160 (caddy/v0.8.3.tar.gz) = 7898022f9ffdfc84bcc1f2d716234d5d00ae0f68
-SHA512 (caddy/v0.8.3.tar.gz) = cd4ec092f8804816ae95719ea6496abcad017520cc175f28f46e7887036cb4fd41a70f4f4224d5702a834220bff21a504a20797feca517a8661b164d44b23ab1
-Size (caddy/v0.8.3.tar.gz) = 222923 bytes
+SHA1 (caddy/v0.9.5.tar.gz) = 32de6f88b98b3eb45aa07b45d3d47ac918c22e9c
+RMD160 (caddy/v0.9.5.tar.gz) = 31fa0d729f9922aa5a1b7388de86b1729edf9c8f
+SHA512 (caddy/v0.9.5.tar.gz) = c4def1a7cbd26c5eba2cdaf0c4c069d07186ce1f17415e15bf86de509ab4f61c7a45042dbdcd8461892e0f166cdb892b9c024a2b4723b58e75c74564582fd59c
+Size (caddy/v0.9.5.tar.gz) = 287976 bytes
