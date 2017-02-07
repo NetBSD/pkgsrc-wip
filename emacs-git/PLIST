@@ -3893,6 +3893,8 @@ share/emacs/${PKGVERSION}/lisp/woman.el.gz
 share/emacs/${PKGVERSION}/lisp/woman.elc
 share/emacs/${PKGVERSION}/lisp/x-dnd.el.gz
 share/emacs/${PKGVERSION}/lisp/x-dnd.elc
+share/emacs/${PKGVERSION}/lisp/xdg.el.gz
+share/emacs/${PKGVERSION}/lisp/xdg.elc
 share/emacs/${PKGVERSION}/lisp/xml.el.gz
 share/emacs/${PKGVERSION}/lisp/xml.elc
 share/emacs/${PKGVERSION}/lisp/xt-mouse.el.gz

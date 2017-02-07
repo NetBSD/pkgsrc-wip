@@ -13,7 +13,8 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 DEPENDS+=       ${PYPKGPREFIX}-decorator>=3.3.2:../../devel/py-decorator
-.include "../../lang/python/egg.mk"
 DEPENDS+=       ${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-DEPENDS+=       ${PYPKGPREFIX}-appdirs>=1.4.0:../../wip/py-appdirs
+DEPENDS+=       ${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
