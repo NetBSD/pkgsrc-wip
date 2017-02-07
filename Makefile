@@ -1629,6 +1629,7 @@ SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libifstat
 SUBDIR+=	libilbc
+SUBDIR+=	libimobiledevice
 SUBDIR+=	libinotify
 SUBDIR+=	libinstpatch
 SUBDIR+=	libircclient
