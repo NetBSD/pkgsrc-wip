@@ -106,7 +106,7 @@ SUBST_CLASSES+=		diff
 SUBST_STAGE.diff=	post-configure
 SUBST_MESSAGE.diff=	Fixing diff path used for Patch Viewer
 SUBST_FILES.diff=	localconfig
-SUBST_SED.diff=		-e "s|\$diffpath = .*|\$diffpath = \'${DIFF}\'|" -e "s|/diff||"
+SUBST_SED.diff=		-e "s|\$diffpath = .*|\$diffpath = \'${DIFF}\';|" -e "s|/diff||"
 
 INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla
 INSTALLATION_DIRS+=	${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
