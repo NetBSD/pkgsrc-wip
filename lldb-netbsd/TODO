@@ -22,98 +22,21 @@ Introduce objc++ setup with gcc(1) for "make test":
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
     gmake[4]: *** [main.o] Error 1
 
-llvm::call_once hack for src:
-   curl https://github.com/jsonn/src/commit/78f4ee4c8349d68cf2279f2c7fc2196ae369e182.patch|gpatch -R -p1
-
-Short-term goals in current milestone
-=====================================
-Done:
- - switch resolution of pid -> path to executable from /proc to sysctl(7)
-   https://reviews.llvm.org/D29089
-   committed as SVN revision 293392
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293392
- - recognize Real-Time Signals (SIGRTMIN-SIGRTMAX)
-   https://reviews.llvm.org/D29091
-   committed as SVN revision 293391
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293391
- - fix conflict with system-wide py-six
-   "Install six.py copy into subdirectory lldb"
-   renamed to
-   "Install six.py conditionally"
-   https://reviews.llvm.org/D29405
-   committed as SVN 294071
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294071
- - upstream !NetBSDProcessPlugin code
-   "Do not pass non-POD type variables through variadic function"
-   https://reviews.llvm.org/D29256
-   committed as SVN revision 293774
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293774
-
-   "Add NetBSD support in Host::GetCurrentThreadID"
-   https://reviews.llvm.org/D29264
-   committed as SVN revision 293625
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293625
-
-   "Synchronize PlatformNetBSD with Linux"
-   https://reviews.llvm.org/D29266
-   committed as SVN 294145
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294145
-
-   "Add ProcessLauncherNetBSD to spawn a tracee"
-   renamed to:
-   "Transform ProcessLauncherLinux to ProcessLauncherPosixFork"
-   https://reviews.llvm.org/D29347
-   committed as SVN 293768
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293768
-
-   "Document that LaunchProcessPosixSpawn is used on NetBSD"
-   committed as SVN 293770
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293770
- - add support for auxv read operation
-   added test io_read_auxv1
-   (local patch added, function not used in the current code)
- - switch std::call_once to llvm::call_once
-   lldb-netbsd works with base libstdc++ with local patches
-   (this approach has been abandoned)
-
-   "Switch std::call_once to llvm::call_once"
-   https://reviews.llvm.org/D29288
-   committed as SVN 294202
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294202
-
-   "Make llvm::call_once more convenient to reuse out of LLVM"
-   https://reviews.llvm.org/D29296
-   committed as SVN 293902
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293902
-
-   "Make llvm::call_once more convenient to reuse out of LLVM"
-   https://reviews.llvm.org/D29552
-   abandoned
-
-   "Revamp llvm::once_flag to be closer to std::once_flag"
-   https://reviews.llvm.org/D29566
-   committed as SVN 294143
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=294143
-
-Unscheduled done
- - signal issues PR/51918 and added tests signal{1,2,3,4,5,6,7,8,9,10}
-
-In progress:
-NONE
-
-Unscheduled in progress:
+Short-term TODO in the current milestone
+======================---===============
+ - switch the current PT_WATCHPOINT interface to PT_GETDBREGS and PT_SETDBREGS
+   and integrate it in NetBSD's userdata in LLDB
  - investigate and address false-positives in "check-lldb"
    "Fix multi-process-driver.cpp build on NetBSD"
    https://reviews.llvm.org/D29403
    committed as SVN 293895
    http://llvm.org/viewvc/llvm-project/?view=rev&revision=293895
 
-TODO:
- + ptrace(2) interface to lock and unlock threads from execution
- + switch the current PT_WATCHPOINT interface to PT_GETDBREGS and PT_SETDBREGS
-
 To be done later
 ================
+ - auxv reading verified and upstreamed
+ - getthreadname / setthreadname verified and upstreamed
+ - Host::LaunchProcessPosixSpawn verify ::posix_spawnattr_setsigdefault on NetBSD
  - registers' accessors
  - single step support
  - thread resume/suspend operation
