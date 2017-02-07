@@ -10,7 +10,7 @@ PKG_SUPPORTED_OPTIONS+=	bugzilla-inboundemail bugzilla-movebugs
 PKG_SUPPORTED_OPTIONS+=	bugzilla-imagemagick bugzilla-patchviewer
 PKG_SUPPORTED_OPTIONS+=	bugzilla-descriptions bugzilla-xmlrpc
 PKG_SUPPORTED_OPTIONS+=	bugzilla-modperl radius
-PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap sqlite
+PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap
 PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
@@ -26,9 +26,6 @@ DEPENDS+=	p5-DBD-postgresql>=1.45:../../databases/p5-DBD-postgresql
 DBDRIVER=	pg
 .elif !empty(PKG_OPTIONS:Moracle)
 DEPENDS+=	p5-DBD-Oracle>=1.19:../../databases/p5-DBD-Oracle
-DBDRIVER=	oracle
-.elif !empty(PKG_OPTIONS:Msqlite3)
-DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 DBDRIVER=	oracle
 .endif
 
