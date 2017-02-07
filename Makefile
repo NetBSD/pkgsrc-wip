@@ -1345,6 +1345,7 @@ SUBDIR+=	icmpchat
 SUBDIR+=	id3
 SUBDIR+=	idled
 SUBDIR+=	ifstat
+SUBDIR+=	ifuse
 SUBDIR+=	igal
 SUBDIR+=	igowin
 SUBDIR+=	igraph

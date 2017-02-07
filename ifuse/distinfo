@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ifuse-1.1.3.tar.bz2) = d186dd713bbff8e15cd8cbb5f7f2c5b5be62d594
+RMD160 (ifuse-1.1.3.tar.bz2) = d14867d26ae79cb8643bba8634cfdf04cfa50ab6
+SHA512 (ifuse-1.1.3.tar.bz2) = bacf0b00ebc7681022f6e85daa005ee19c99f3222e5db5c4ea6630c2c46111dd3ccd7efcfdbcfabf06cc18ceb58b054c1adb2d106d9b3b7d60a12f3b79c64a3c
+Size (ifuse-1.1.3.tar.bz2) = 90803 bytes
+SHA1 (patch-configure.ac) = 953c7fba82eb54e8488d0ee71e2b2d61ffe5d8ce
