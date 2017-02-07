@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (libimobiledevice-1.2.0.tar.bz2) = 793fbf40a2679531e930f0f8a3d8a427ff7fe846
-RMD160 (libimobiledevice-1.2.0.tar.bz2) = 32ff22ff331cb380f614a0129fa17a3dff6cd48c
-SHA512 (libimobiledevice-1.2.0.tar.bz2) = 2b0947308f70e1baa62fbea22d6cd630a0f700ea94552345158add2d3adf13f81e6dc673fbc35ead05745e77d1c89bb1a283ed5e3eb98eded7d2d25d43381ed0
-Size (libimobiledevice-1.2.0.tar.bz2) = 175998 bytes
+SHA1 (libimobiledevice-1.2.0.tar.bz2) = a8e3f21180b1d6df754d04a4080a29cf6891e701
+RMD160 (libimobiledevice-1.2.0.tar.bz2) = 0d1ec5a088abd73ac85c0c708524069cb22daf0f
+SHA512 (libimobiledevice-1.2.0.tar.bz2) = 0de5f768aeb5d62445892855d84ceaff776f6667733c351ed6c34bf9d500802762d1a06e5efdf57f33cafc9ee788041cd9b6748fb9bad6c2e4ae2f9b9aa93589
+Size (libimobiledevice-1.2.0.tar.bz2) = 631495 bytes
 SHA1 (patch-configure.ac) = 946788d4ad269457b7593b3de5e504b4d330c1bd
