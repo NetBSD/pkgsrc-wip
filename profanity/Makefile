@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	profanity-0.5.0
+DISTNAME=	profanity-0.5.1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.profanity.im/
 
