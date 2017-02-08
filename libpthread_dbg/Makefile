@@ -12,7 +12,7 @@ LICENSE=	original-bsd
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS=		nroff
 
-INSTALLATION_DIRS+=	include ${PKGMANDIR}/man3
+INSTALLATION_DIRS+=	include lib ${PKGMANDIR}/man3
 PKGSRC_LOCKTYPE=	none	# avoid "bootstrapping problem"
 
 do-extract:
