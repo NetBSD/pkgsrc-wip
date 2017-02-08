@@ -7,7 +7,7 @@ CATEGORIES=	pkgtools
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	POSIX Debug Threads Library
-LICENSE=	2-clause-bsd
+LICENSE=	original-bsd
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS=		nroff

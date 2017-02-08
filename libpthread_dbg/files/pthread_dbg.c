@@ -53,10 +53,10 @@ __RCSID("$NetBSD: pthread_dbg.c,v 1.51 2016/11/22 04:51:06 kamil Exp $");
 
 #include <machine/reg.h>
 
-#include <pthread.h>
-#include <pthread_int.h>
-#include <pthread_dbg.h>
-#include <pthread_dbg_int.h>
+#include "pthread.h"
+#include "pthread_int.h"
+#include "pthread_dbg.h"
+#include "pthread_dbg_int.h"
 
 #define PT_STACKMASK (proc->stackmask)
 #define OFFSET(thread, field) \

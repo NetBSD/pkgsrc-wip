@@ -47,7 +47,7 @@
 #include "pthread_md.h"
 
 /* Need to use libc-private names for atomic operations. */
-#include "../../common/lib/libc/atomic/atomic_op_namespace.h"
+//#include "../../common/lib/libc/atomic/atomic_op_namespace.h"
 
 #include <sys/atomic.h>
 #include <sys/rbtree.h>
