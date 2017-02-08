@@ -18,4 +18,8 @@ PKGSRC_LOCKTYPE=	none	# avoid "bootstrapping problem"
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
 
+# XXX: What's wrong with files/Makefile?
+post-install:
+	${CP} ${WRKSRC}/pthread_dbg.h ${DESTDIR}${PREFIX}/include
+
 .include "../../mk/bsd.pkg.mk"

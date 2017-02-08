@@ -1,4 +1,5 @@
 @comment $NetBSD$
+include/pthread_dbg.h
 lib/libpthread_dbg.a
 lib/libpthread_dbg.so
 lib/libpthread_dbg.so.2
@@ -12,4 +13,3 @@ man/man3/td_open.3
 man/man3/td_thr_getname.3
 man/man3/td_thr_info.3
 man/man3/td_thr_iter.3
-@pkgdir include
