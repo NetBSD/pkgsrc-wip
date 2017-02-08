@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.30 2017/01/28 15:33:25 wiz Exp $
 
-DISTNAME=	libffi-3.2.1
+DISTNAME=	libffi-3.99999
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
@@ -23,6 +23,9 @@ PKGCONFIG_OVERRIDE+=	libffi.pc.in
 INFO_FILES=		yes
 
 TEST_TARGET=		check
+
+CFLAGS+=		-O0 -g
+CXXFLAGS+=		-O0 -g
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv

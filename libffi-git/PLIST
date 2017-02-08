@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2012/09/14 23:45:27 asau Exp $
-include/ffi.h
-include/ffitarget.h
+@comment $NetBSD$
 info/libffi.info
+lib/${PKGNAME}/include/ffi.h
+lib/${PKGNAME}/include/ffitarget.h
 lib/libffi.la
 lib/pkgconfig/libffi.pc
 man/man3/ffi.3
