@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (openfodder/1.1.0.tar.gz) = defdf7351640f4c4d1cb4737405ad73e7173a5cc
-RMD160 (openfodder/1.1.0.tar.gz) = 0edde07d6bfa73318d76de6a50bd2a997686f7f6
-SHA512 (openfodder/1.1.0.tar.gz) = 07322382d6cceaff3ae1c8b2b4e03fd717c069ea178c130c4a31e170ce7e62598c9ff964a6cf05d04af62f84187a363b424027c07bf3249992f299b59bcbdb64
-Size (openfodder/1.1.0.tar.gz) = 34366394 bytes
+SHA1 (openfodder/1.3.0.tar.gz) = 853b44fc1b0fe6ffc9e85215a78e0673db905abd
+RMD160 (openfodder/1.3.0.tar.gz) = b991ae99b1be3660d32e31f0b17075c554016437
+SHA512 (openfodder/1.3.0.tar.gz) = c2f754e1654786e9d9f66aef543ac88842a735d8d71cc0149ee7f52f187de0b4aa5c868b50d05e69150b3c2806807bbea504dbdb5b1ccd15c6b861f3cbaee865
+Size (openfodder/1.3.0.tar.gz) = 34369304 bytes
 SHA1 (patch-Source_stdafx.cpp) = cfac2ac52d190d80c2e361271f8bce3ee5da34b5

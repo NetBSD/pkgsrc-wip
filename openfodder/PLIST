@@ -22,6 +22,8 @@ share/openfodder/Data/AmigaFormat_XMAS/mapm2.map
 share/openfodder/Data/AmigaFormat_XMAS/mapm2.spt
 share/openfodder/Data/AmigaFormat_XMAS/pstuff.lbm
 share/openfodder/Data/Amiga_CD/_AmigaCD32DataHere
+share/openfodder/Data/Custom/Segras First.map
+share/openfodder/Data/Custom/Segras First.spt
 share/openfodder/Data/Dos2_CD/_Dos2CDDataHere
 share/openfodder/Data/Dos_CD/_DosCDDataHere
 share/openfodder/Data/Plus/1.lbm
