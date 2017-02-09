@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/03/21 21:01:51 krytarowski Exp $
 
-DISTNAME=	radare2-0.10.6
+DISTNAME=	radare2-1.3.0
 CATEGORIES=	devel
 GIT_REPOSITORIES=	radare2
 GIT_REPO.radare2=	https://github.com/radare/radare2.git
@@ -19,14 +19,7 @@ CONFIGURE_ARGS+=	--with-syszip
 PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
 USE_TOOLS+=	gmake
 
-# REPLACE_NODE?
-REPLACE_INTERPRETER+=	node
-REPLACE.node.old=	.*node[^ ]*
-REPLACE.node.new=	${LOCALBASE}/bin/node
-REPLACE_FILES.node=	shlr/www/m/vendors/fonts/iconjar-map.js
-
-# Optional
-# DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+CHECK_INTERPRETER_SKIP=	share/radare2/${PKGVERSION_NOREV}-git/www/m/vendors/fonts/iconjar-map.js
 
 .include "options.mk"
 
