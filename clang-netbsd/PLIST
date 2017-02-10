@@ -510,6 +510,7 @@ lib/clang/${PKGVERSION}/include/avxintrin.h
 lib/clang/${PKGVERSION}/include/bmi2intrin.h
 lib/clang/${PKGVERSION}/include/bmiintrin.h
 lib/clang/${PKGVERSION}/include/clflushoptintrin.h
+lib/clang/${PKGVERSION}/include/clzerointrin.h
 lib/clang/${PKGVERSION}/include/cpuid.h
 lib/clang/${PKGVERSION}/include/cuda_wrappers/algorithm
 lib/clang/${PKGVERSION}/include/cuda_wrappers/complex
