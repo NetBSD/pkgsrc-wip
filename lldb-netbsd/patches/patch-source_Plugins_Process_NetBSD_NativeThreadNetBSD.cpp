@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-01-31 18:01:27.515752282 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-02-10 22:41:02.014389855 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
 @@ -0,0 +1,388 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
@@ -325,7 +325,7 @@ $NetBSD$
 +    case SIGBUS:
 +    case SIGFPE:
 +    case SIGILL:
-+      stringStream << GetCrashReasonString(GetCrashReason(*info), *info);
++//      stringStream << GetCrashReasonString(GetCrashReason(*info), *info);
 +      break;
 +    default:
 +      stringStream << "The signal " << strsignal(info->si_signo) << " was caught";

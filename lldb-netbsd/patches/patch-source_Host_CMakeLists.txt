@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- source/Host/CMakeLists.txt.orig	2017-02-01 14:45:44.000000000 +0000
++++ source/Host/CMakeLists.txt
+@@ -147,6 +147,7 @@ else()
+       netbsd/HostThreadNetBSD.cpp
+       netbsd/ThisThread.cpp
+       )
++    list(APPEND LLDB_PLUGINS lldbPluginProcessNetBSD)
+   endif()
+ endif()
+ 
