@@ -114,6 +114,9 @@ INSTALLATION_DIRS+=	${BZDIR}/docs ${BZDIR}/docs/en ${BZDIR}/docs/en/html
 INSTALLATION_DIRS+=	${BZDIR}/images ${BZDIR}/docs/en/html/api
 INSTALLATION_DIRS+=	${BZDIR}/docs/en/html/api/Bugzilla
 
+# file user group mode
+#SPECIAL_PERMS=	* www data 0600
+
 do-configure:
 	(cd ${WRKSRC}; ./checksetup.pl)
 

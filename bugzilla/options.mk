@@ -3,14 +3,14 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=		mysql pgsql oracle
+PKG_OPTIONS_GROUP.db=		mysql pgsql oracle sqlite
 
 PKG_SUPPORTED_OPTIONS=	bugzilla-notify bugzilla-graphicalreports
 PKG_SUPPORTED_OPTIONS+=	bugzilla-inboundemail bugzilla-movebugs
 PKG_SUPPORTED_OPTIONS+=	bugzilla-imagemagick bugzilla-patchviewer
 PKG_SUPPORTED_OPTIONS+=	bugzilla-descriptions bugzilla-xmlrpc
 PKG_SUPPORTED_OPTIONS+=	bugzilla-modperl radius
-PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap
+PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap sqlite
 PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
@@ -21,6 +21,10 @@ PKG_SUGGESTED_OPTIONS=	mysql
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	p5-DBD-mysql>=4.000:../../databases/p5-DBD-mysql
 DBDRIVER=	mysql
+.elif !empty(PKG_OPTIONS:Msqlite)
+DEPENDS+=	p5-DBD-SQLite>=1.54:../../databases/p5-DBD-SQLite
+DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
+DBDRIVER=	sqlite
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	p5-DBD-postgresql>=1.45:../../databases/p5-DBD-postgresql
 DBDRIVER=	pg

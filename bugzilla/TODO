@@ -1,3 +1,4 @@
 TODO
  - options.mk is not checked
  - options gets too many pkglint warning
+ - SPECIAL_PERMS not set yet
