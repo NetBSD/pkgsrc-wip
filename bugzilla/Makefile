@@ -104,7 +104,7 @@ SUBST_SED.conf+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 
 SUBST_CLASSES+=		diff
 SUBST_STAGE.diff=	post-configure
-SUBST_MESSAGE.diff=	Fixing diff path used for Patch Viewer
+SUBST_MESSAGE.diff=	Fixing diff path used for Patch Viewer (Ignore depending on OS)
 SUBST_FILES.diff=	localconfig
 SUBST_SED.diff=		-e "s|\$diffpath = .*|\$diffpath = \'${DIFF}\';|" -e "s|/diff||"
 
@@ -116,12 +116,10 @@ INSTALLATION_DIRS+=	${BZDIR}/docs/en/html/api/Bugzilla
 
 do-configure:
 	(cd ${WRKSRC}; ./checksetup.pl)
+
 post-extract:
-#	${FIND} ${WRKSRC} -type d -name CVS | ${XARGS} ${RM} -rf
-#	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
 	${CP} ${FILESDIR}/bugzilla.conf	${WRKSRC}
 	${CP} ${FILESDIR}/localconfig	${WRKSRC}
-
 
 do-install:
 .for i in ${BZDIR} ${EGDIR} ${DOCDIR}
@@ -141,13 +139,9 @@ do-install:
 	pax -rw -pmp js			${DESTDIR}${BZDIR}  ;\
 	pax -rw -pmp template		${DESTDIR}${BZDIR} ;\
 	)
-
-#.for i in ${PAX_DIRS}
-#	cd ${WRKSRC}/${i} && pax -rw . ${DESTDIR}${BZDIR}/${i}
-#	${FIND} ${DESTDIR}${BZDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
-#	${FIND} ${DESTDIR}${BZDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-#	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${BZDIR}/${i}
-#.endfor
+.for i in data contrib t xt template lib graphs skins
+	${INSTALL_DATA_DIR} 	${DESTDIR}${BZDIR}/${i}
+.endfor
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"

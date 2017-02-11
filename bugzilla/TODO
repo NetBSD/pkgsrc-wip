@@ -1,6 +1,3 @@
 TODO
- - Just packaged. Function is not tested yet
- - Some unnecessary comments line in Makefile
  - options.mk is not checked
- - bugzilla.conf and localconfig are NOT checked
  - options gets too many pkglint warning
