@@ -13,7 +13,6 @@ privilege,
 You will need to make Bugzilla accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
 
-	DirectoryIndex index.cgi index.html
 	Include ${PKG_SYSCONFDIR}/bugzilla.conf
 
 to make Bugzilla accessible through:
