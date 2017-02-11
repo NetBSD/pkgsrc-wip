@@ -28,7 +28,10 @@ DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 ###
 .if !empty(PKG_OPTIONS:Mcaca)
 .include "../../graphics/libcaca/buildlink3.mk"
-.include "../../mk/pkg-build-options.mk"                                                                                                                                                                                                                                                                                       .if !empty(PKG_BUILD_OPTIONS.libcaca:Mimlib2)                                                                                                                                                                                                                                                                                  CONFIGURE_ARGS+=        --enable-imlib2                                                                                                                                                                                                                                                                                        .endif
+.include "../../mk/pkg-build-options.mk"
+.  if !empty(PKG_BUILD_OPTIONS.libcaca:Mimlib2)
+CONFIGURE_ARGS+=        --enable-imlib2
+.  endif
 .endif
 
 ###
