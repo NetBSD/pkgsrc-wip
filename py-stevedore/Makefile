@@ -10,11 +10,9 @@ HOMEPAGE=	https://github.com/dreamhost/stevedore
 COMMENT=	Manage dynamic plugins for Python applications
 LICENSE=	apache-2.0
 
-
-DEPENDS+=       ${PYPKGPREFIX}-pbr>=1.3.0:../../devel/py-pbr
-DEPENDS+=       ${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-
-WRKSRC=		${WRKDIR}/stevedore-1.7.0
+DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
+DEPENDS+=	${PYPKGPREFIX}-pbr>=1.3.0:../../devel/py-pbr
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
