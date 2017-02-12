@@ -2888,6 +2888,7 @@ SUBDIR+=	py-djangopypi2
 SUBDIR+=	py-djvulibre
 SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-dns-clientsubnetoption
+SUBDIR+=	py-dogpile-cache
 SUBDIR+=	py-dolo
 SUBDIR+=	py-downhill
 SUBDIR+=	py-drawnow
