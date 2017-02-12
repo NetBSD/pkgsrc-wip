@@ -2909,6 +2909,7 @@ SUBDIR+=	py-emcee
 SUBDIR+=	py-emmsa
 SUBDIR+=	py-empirical
 SUBDIR+=	py-engfmt
+SUBDIR+=	py-enzyme
 SUBDIR+=	py-enre
 SUBDIR+=	py-enumit
 SUBDIR+=	py-epigrass
