@@ -4006,6 +4006,7 @@ SUBDIR+=	stress
 SUBDIR+=	stress-ng
 SUBDIR+=	structure
 SUBDIR+=	stumpwm
+SUBDIR+=	subliminal
 SUBDIR+=	suitesparse
 SUBDIR+=	sulley
 SUBDIR+=	sun-j2me
