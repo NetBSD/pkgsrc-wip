@@ -1061,6 +1061,7 @@ SUBDIR+=	gts
 SUBDIR+=	gts-snapshot
 SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
+SUBDIR+=	guessit
 SUBDIR+=	guichan
 SUBDIR+=	guile-scsh
 SUBDIR+=	guilerxspencer
