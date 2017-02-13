@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/06/21 18:14:18 jihbed Exp $
-
-SHA1 (mistune-0.6.tar.gz) = a29f7a3e584c9874c8a51201bfaad1f091d83665
-RMD160 (mistune-0.6.tar.gz) = 30653cc8aa16d157c8710afe61cced7cdf7d06c4
-Size (mistune-0.6.tar.gz) = 47026 bytes
