@@ -15,6 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-rebulk>=0.8.2:../../wip/py-rebulk
 
 USE_LANGUAGES=	# none
 
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/guessit ${DESTDIR}${PREFIX}/bin/guessit-${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
