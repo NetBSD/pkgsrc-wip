@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (translate-toolkit-2.0.0rc1.tar.bz2) = 05907bebbbb54c3945b2cee9595580f99e3a462b
-RMD160 (translate-toolkit-2.0.0rc1.tar.bz2) = 24647b4b005e32022f2d9658dcb1f83d3eabb640
-SHA512 (translate-toolkit-2.0.0rc1.tar.bz2) = efbb22810454d30defdd86f0f7ae4ba5c80244a356de1ddd746ba140ee69c2d69fcf5db69780380d8bafd4028e0fe93d23e8f80df7f2f51102f27216b74650bf
-Size (translate-toolkit-2.0.0rc1.tar.bz2) = 4817266 bytes
+SHA1 (translate-toolkit-2.0.0.tar.bz2) = fbccda35cc13c881208403a147daca642114564b
+RMD160 (translate-toolkit-2.0.0.tar.bz2) = 09f96f5e4e940d20ad844a1164e2a91187b978bb
+SHA512 (translate-toolkit-2.0.0.tar.bz2) = 77db5c7794da453509192400c1a6ebaeee4b36350548165250dab489918df4fd944095b62027889201d608012a1b2bfc1504c22ebe883a341a864fac063e1817
+Size (translate-toolkit-2.0.0.tar.bz2) = 4881461 bytes
 SHA1 (patch-setup.cfg) = 801180bfe2a38a0489b719f512d951c05d961cdc
 SHA1 (patch-setup.py) = 6c756e2b606283d3cc30360b700f00b35d5c7a34
