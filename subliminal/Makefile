@@ -32,5 +32,8 @@ DEPENDS+=	${PYPKGPREFIX}-futures>=3.0:../../devel/py-futures
 
 USE_LANGUAGES=	# none
 
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/subliminal ${DESTDIR}${PREFIX}/bin/subliminal-${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
