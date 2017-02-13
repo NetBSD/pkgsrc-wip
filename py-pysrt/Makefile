@@ -14,6 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 
 USE_LANGUAGES=	# none
 
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/srt ${DESTDIR}${PREFIX}/bin/srt-${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
