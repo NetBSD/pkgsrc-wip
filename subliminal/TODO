@@ -1,0 +1,8 @@
+- Investigate PLIST issues for python36.
+  Two extra files installed if subliminal is built with python27 (but missing if
+  it is built with python36):
+
+  .../.destdir/usr/pkg/lib/python3.6/site-packages/subliminal/subtitles/__pycache__/__init__.cpython-36.opt-1.pyc
+  .../.destdir/usr/pkg/lib/python3.6/site-packages/subliminal/subtitles/__pycache__/__init__.cpython-36.pyc
+
+- Add an ALTERNATIVES file (maybe?).
