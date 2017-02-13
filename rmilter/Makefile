@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	rmilter
-DISTNAME=	1.9.2
+DISTNAME=	1.10.0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/vstakhov/rmilter/
 COMMENT=	Milter for rspamd
 LICENSE=	2-clause-bsd
 
-WRKSRC=		${WRKDIR}/rmilter-1.9.2
+WRKSRC=		${WRKDIR}/rmilter-1.10.0
 USE_CMAKE=	yes
 
 BUILD_DEFS+=	VARBASE

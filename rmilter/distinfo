@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (rmilter/1.9.2.tar.gz) = d79446ba70d64851c83ca378e658e6ad29a2a4bb
-RMD160 (rmilter/1.9.2.tar.gz) = 31cecac132abed06f54127042bc84ad9a1d0a958
-SHA512 (rmilter/1.9.2.tar.gz) = 4938515d18d4cff363266348cbd00b85690f889cb479a0e2fb61fa74e1e0deb3e78ec06132537ae001ccec375d0bab10af77c4a4c6fb248dc7f9f929c5a57eb9
-Size (rmilter/1.9.2.tar.gz) = 264637 bytes
+SHA1 (rmilter/1.10.0.tar.gz) = 325a8160b0b4a4f4a3468eb4fe8e29d1082f6208
+RMD160 (rmilter/1.10.0.tar.gz) = eac503d571bd8c79214be74de5c1005f7ed314fc
+SHA512 (rmilter/1.10.0.tar.gz) = bef62d6dd4190b9a28e751cc598d201f0f994a08def46ae68587d1cc956e7e209ae540d91241545dc4efd055b4bf2b95039f0e9649448e5506f17ec37240adf8
+Size (rmilter/1.10.0.tar.gz) = 390583 bytes
