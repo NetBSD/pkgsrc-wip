@@ -2,7 +2,8 @@
 ${PYSITELIB}/brotli/__init__.py
 ${PYSITELIB}/brotli/__init__.pyc
 ${PYSITELIB}/brotli/__init__.pyo
-${PYSITELIB}/brotli/_brotli.so
+${PLIST.py2x}${PYSITELIB}/brotli/_brotli.so
+${PLIST.py3x}${PYSITELIB}/brotli/_brotli.abi3.so
 ${PYSITELIB}/brotli/brotli.py
 ${PYSITELIB}/brotli/brotli.pyc
 ${PYSITELIB}/brotli/brotli.pyo
