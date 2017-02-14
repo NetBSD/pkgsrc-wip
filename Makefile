@@ -2663,7 +2663,6 @@ SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-achemkit
-SUBDIR+=	py-acme-tiny
 SUBDIR+=	py-acq4
 SUBDIR+=	py-addons
 SUBDIR+=	py-adsbibdesk

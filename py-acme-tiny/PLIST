@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/acme_tiny
-share/doc/${PYPKGPREFIX}-acme-tiny/README.md
