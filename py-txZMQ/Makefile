@@ -15,7 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=14.4.1:../../net/py-zmq
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

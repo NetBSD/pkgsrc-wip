@@ -23,13 +23,8 @@ BROKEN=		Source tarballs have disappeared.
 DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0.1:../../security/py-crypto
 
-# it's a python package using the standard Python packager
-PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted
-
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
-
 
 JABBER_USER?=		jabberd
 JABBER_GROUP?=		jabberd
@@ -66,5 +61,5 @@ SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g'
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

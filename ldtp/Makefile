@@ -15,11 +15,10 @@ DEPENDS+=	${PYPKGPREFIX}-at-spi-[0-9]*:../../devel/py-at-spi
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
 REPLACE_PYTHON+=	bin/ldtp
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit and py-gnome2 via py-at-spi, py-gobject, py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit and py-gnome2 via py-at-spi, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

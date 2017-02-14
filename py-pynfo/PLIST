@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
+@comment $NetBSD$
 bin/respond
 ${PYSITELIB}/Pynfo/__init__.py
 ${PYSITELIB}/Pynfo/__init__.pyc
@@ -94,3 +94,4 @@ ${PYSITELIB}/Pynfo/tap.pyo
 ${PYSITELIB}/Pynfo/util.py
 ${PYSITELIB}/Pynfo/util.pyc
 ${PYSITELIB}/Pynfo/util.pyo
+${PYSITELIB}/${EGG_FILE}

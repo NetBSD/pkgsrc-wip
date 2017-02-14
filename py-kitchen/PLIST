@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/19 23:05:37 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -27,9 +27,6 @@ ${PYSITELIB}/kitchen/pycompat24/__init__.pyo
 ${PYSITELIB}/kitchen/pycompat24/base64/__init__.py
 ${PYSITELIB}/kitchen/pycompat24/base64/__init__.pyc
 ${PYSITELIB}/kitchen/pycompat24/base64/__init__.pyo
-${PYSITELIB}/kitchen/pycompat24/base64/_base64.py
-${PYSITELIB}/kitchen/pycompat24/base64/_base64.pyc
-${PYSITELIB}/kitchen/pycompat24/base64/_base64.pyo
 ${PYSITELIB}/kitchen/pycompat24/sets/__init__.py
 ${PYSITELIB}/kitchen/pycompat24/sets/__init__.pyc
 ${PYSITELIB}/kitchen/pycompat24/sets/__init__.pyo
@@ -42,18 +39,12 @@ ${PYSITELIB}/kitchen/pycompat25/__init__.pyo
 ${PYSITELIB}/kitchen/pycompat25/collections/__init__.py
 ${PYSITELIB}/kitchen/pycompat25/collections/__init__.pyc
 ${PYSITELIB}/kitchen/pycompat25/collections/__init__.pyo
-${PYSITELIB}/kitchen/pycompat25/collections/_defaultdict.py
-${PYSITELIB}/kitchen/pycompat25/collections/_defaultdict.pyc
-${PYSITELIB}/kitchen/pycompat25/collections/_defaultdict.pyo
 ${PYSITELIB}/kitchen/pycompat27/__init__.py
 ${PYSITELIB}/kitchen/pycompat27/__init__.pyc
 ${PYSITELIB}/kitchen/pycompat27/__init__.pyo
 ${PYSITELIB}/kitchen/pycompat27/subprocess/__init__.py
 ${PYSITELIB}/kitchen/pycompat27/subprocess/__init__.pyc
 ${PYSITELIB}/kitchen/pycompat27/subprocess/__init__.pyo
-${PYSITELIB}/kitchen/pycompat27/subprocess/_subprocess.py
-${PYSITELIB}/kitchen/pycompat27/subprocess/_subprocess.pyc
-${PYSITELIB}/kitchen/pycompat27/subprocess/_subprocess.pyo
 ${PYSITELIB}/kitchen/release.py
 ${PYSITELIB}/kitchen/release.pyc
 ${PYSITELIB}/kitchen/release.pyo
