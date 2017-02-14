@@ -22,18 +22,10 @@ Introduce objc++ setup with gcc(1) for "make test":
     g++: error trying to exec 'cc1objplus': execvp: No such file or directory
     gmake[4]: *** [main.o] Error 1
 
-Short-term TODO in the current milestone
-======================---===============
+To be done
+==========
  - switch the current PT_WATCHPOINT interface to PT_GETDBREGS and PT_SETDBREGS
    and integrate it in NetBSD's userdata in LLDB
- - investigate and address false-positives in "check-lldb"
-   "Fix multi-process-driver.cpp build on NetBSD"
-   https://reviews.llvm.org/D29403
-   committed as SVN 293895
-   http://llvm.org/viewvc/llvm-project/?view=rev&revision=293895
-
-To be done later
-================
  - auxv reading verified and upstreamed
  - getthreadname / setthreadname verified and upstreamed
  - Host::LaunchProcessPosixSpawn verify ::posix_spawnattr_setsigdefault on NetBSD
