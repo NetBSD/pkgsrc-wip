@@ -2743,7 +2743,6 @@ SUBDIR+=	py-bolos
 SUBDIR+=	py-booktype
 SUBDIR+=	py-botocore
 SUBDIR+=	py-bottleneck
-SUBDIR+=	py-bravo
 SUBDIR+=	py-brian
 SUBDIR+=	py-brotlipy
 SUBDIR+=	py-bruce
