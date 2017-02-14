@@ -789,7 +789,6 @@ SUBDIR+=	freej
 SUBDIR+=	freeradius2
 SUBDIR+=	freeswitch-core
 SUBDIR+=	freesynd
-SUBDIR+=	freevo
 SUBDIR+=	freevrrpd
 SUBDIR+=	fribid
 SUBDIR+=	fricas-svn
