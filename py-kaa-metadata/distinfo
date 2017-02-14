@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/02/18 03:01:24 dhowland Exp $
-
-SHA1 (kaa-metadata-0.7.2.tar.gz) = f7180e26f81a613edf94d5b3cd8828719cbb33be
-RMD160 (kaa-metadata-0.7.2.tar.gz) = 177ac372e249e1e8015117bdbd6b9965458a7be8
-Size (kaa-metadata-0.7.2.tar.gz) = 145605 bytes
-SHA1 (patch-aa) = 45f14730365fe5876a830e11553eab4c6431a0ac
-SHA1 (patch-ab) = f77898493ea5d94e6aa9f0e4958da830455fcbac
-SHA1 (patch-ac) = 4b0a5f5514c5b825cbfcf7ac6274db2e0b7e1a38
