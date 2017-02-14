@@ -3253,7 +3253,6 @@ SUBDIR+=	py-operators
 SUBDIR+=	py-ordered-set
 SUBDIR+=	py-ordereddict
 SUBDIR+=	py-orm
-SUBDIR+=	py-osd
 SUBDIR+=	py-oset
 SUBDIR+=	py-otb
 SUBDIR+=	py-othman

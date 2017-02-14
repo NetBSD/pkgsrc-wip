@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
-${PYSITELIB}/_pyosd.so
-${PYSITELIB}/pyosd/__init__.py
-${PYSITELIB}/pyosd/__init__.pyc
-${PYSITELIB}/pyosd/__init__.pyo
-${PYSITELIB}/pyosd/daemon.py
-${PYSITELIB}/pyosd/daemon.pyc
-${PYSITELIB}/pyosd/daemon.pyo

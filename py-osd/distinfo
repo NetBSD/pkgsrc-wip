@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/06 23:34:20 rillig Exp $
-
-SHA1 (pyosd-0.2.14.tar.gz) = e3d1c83563bfbeb88e91b8f1c73ebc468b014773
-RMD160 (pyosd-0.2.14.tar.gz) = b9c8fcee64784216d7e9059f55c606c192a2558b
-Size (pyosd-0.2.14.tar.gz) = 20845 bytes
-SHA1 (patch-aa) = acef6aca11517434a471e970adb3e9e37aed2608
