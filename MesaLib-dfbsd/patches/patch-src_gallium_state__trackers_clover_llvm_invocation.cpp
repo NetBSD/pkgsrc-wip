@@ -3,7 +3,7 @@ $NetBSD$
 From freebsd-base-ports
 https://github.com/FreeBSDDesktop/freebsd-ports-graphics/tree/xserver-mesa-next-udev
 
---- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2016-11-10 22:06:40.000000000 +0000
+--- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2017-02-06 13:49:09.000000000 +0000
 +++ src/gallium/state_trackers/clover/llvm/invocation.cpp
 @@ -85,6 +85,14 @@ namespace {
        }
@@ -20,7 +20,7 @@ https://github.com/FreeBSDDesktop/freebsd-ports-graphics/tree/xserver-mesa-next-
     std::unique_ptr<LLVMContext>
     create_context(std::string &r_log) {
        init_targets();
-@@ -104,8 +112,14 @@ namespace {
+@@ -105,8 +113,14 @@ namespace {
        // Parse the compiler options.  A file name should be present at the end
        // and must have the .cl extension in order for the CompilerInvocation
        // class to recognize it as an OpenCL source file.

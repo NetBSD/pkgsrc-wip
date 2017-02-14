@@ -8,11 +8,11 @@ Fix --enable-glx-tls with clang. From FreeBSD.
 HACK: Renamed non-linking table_noop_array to locally created
 netbsd_table_noop_array.
 
---- src/mapi/entry_x86-64_tls.h.orig	2016-11-10 22:05:17.000000000 +0000
+--- src/mapi/entry_x86-64_tls.h.orig	2017-01-25 13:26:34.000000000 +0000
 +++ src/mapi/entry_x86-64_tls.h
-@@ -41,10 +41,19 @@ __asm__(".text\n"
-    ".balign 32\n"                                        \
-    func ":"
+@@ -43,10 +43,19 @@ __asm__(".text\n"
+ 
+ #ifndef __ILP32__
  
 +#if defined(__NetBSD__) && defined(GLX_USE_TLS)
  #define STUB_ASM_CODE(slot)                              \
@@ -28,5 +28,5 @@ netbsd_table_noop_array.
 +   "jmp *(8 * " slot ")(%r11)"
 +#endif
  
- #define MAPI_TMP_STUB_ASM_GCC
- #include "mapi_tmp.h"
+ #else
+ 

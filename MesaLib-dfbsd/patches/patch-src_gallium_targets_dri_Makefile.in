@@ -3,13 +3,17 @@ $NetBSD: patch-src_gallium_targets_dri_Makefile.in,v 1.1 2015/04/25 11:19:18 tnn
 DRI drivers need explicit linkage to glapi. FDO bug 57702. We only need to do
 this for the "mega" drivers since that's where final linking takes place.
 
---- src/gallium/targets/dri/Makefile.in.orig	2015-03-28 18:43:38.000000000 +0000
+--- src/gallium/targets/dri/Makefile.in.orig	2017-01-25 13:26:47.000000000 +0000
 +++ src/gallium/targets/dri/Makefile.in
-@@ -735,6 +735,7 @@ GALLIUM_TARGET_CFLAGS = \
+@@ -800,7 +800,10 @@ GALLIUM_TARGET_CFLAGS = \
+ 	$(LIBDRM_CFLAGS) \
  	$(VISIBILITY_CFLAGS)
  
- GALLIUM_COMMON_LIB_DEPS = \
+-GALLIUM_COMMON_LIB_DEPS = -lm $(LIBSENSORS_LIBS) $(CLOCK_LIB) \
++GALLIUM_COMMON_LIB_DEPS = \
 +	$(top_srcdir)/src/mapi/shared-glapi/libglapi.la \
- 	-lm \
- 	$(CLOCK_LIB) \
- 	$(PTHREAD_LIBS) \
++	-lm \
++	$(LIBSENSORS_LIBS) $(CLOCK_LIB) \
+ 	$(PTHREAD_LIBS) $(DLOPEN_LIBS) $(am__append_1)
+ GALLIUM_WINSYS_CFLAGS = \
+ 	-I$(top_srcdir)/src \

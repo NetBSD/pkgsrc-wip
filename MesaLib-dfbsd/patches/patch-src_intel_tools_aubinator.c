@@ -5,12 +5,12 @@ https://github.com/FreeBSDDesktop/freebsd-ports-graphics/tree/xserver-mesa-next-
 
 Not sure if these mmap() flags are right ...
 
---- src/intel/tools/aubinator.c.orig	2016-11-10 22:06:40.000000000 +0000
+--- src/intel/tools/aubinator.c.orig	2017-01-25 13:26:34.000000000 +0000
 +++ src/intel/tools/aubinator.c
-@@ -1225,8 +1225,14 @@ int main(int argc, char *argv[])
+@@ -1298,8 +1298,14 @@ int main(int argc, char *argv[])
  
     /* mmap a terabyte for our gtt space. */
-    gtt_size = 1ul << 40;
+    gtt_size = 1ull << 40;
 +/* MAP_NORESERVE removed in FreeBSD 11 and never was implemented before */
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
 +   gtt = mmap(NULL, gtt_size, PROT_READ | PROT_WRITE,

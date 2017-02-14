@@ -23,9 +23,9 @@ headless system that is used for opencl.
 
 v2: Clarify the linking topic in the commit message.
 
---- src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c.orig	2016-11-10 22:05:17.000000000 +0000
+--- src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c.orig	2017-02-06 13:49:09.000000000 +0000
 +++ src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c
-@@ -214,6 +214,16 @@ pipe_loader_drm_probe_fd(struct pipe_loa
+@@ -224,6 +224,16 @@ pipe_loader_drm_probe_fd(struct pipe_loa
     return false;
  }
  
@@ -42,7 +42,7 @@ v2: Clarify the linking topic in the commit message.
  static int
  open_drm_render_node_minor(int minor)
  {
-@@ -226,7 +236,19 @@ open_drm_render_node_minor(int minor)
+@@ -236,7 +246,19 @@ open_drm_render_node_minor(int minor)
  int
  pipe_loader_drm_probe(struct pipe_loader_device **devs, int ndev)
  {
@@ -62,7 +62,7 @@ v2: Clarify the linking topic in the commit message.
  
     for (i = DRM_RENDER_NODE_MIN_MINOR, j = 0;
          i <= DRM_RENDER_NODE_MAX_MINOR; i++) {
-@@ -241,6 +263,11 @@ pipe_loader_drm_probe(struct pipe_loader
+@@ -251,6 +273,11 @@ pipe_loader_drm_probe(struct pipe_loader
           continue;
        }
  
@@ -74,7 +74,7 @@ v2: Clarify the linking topic in the commit message.
        if (j < ndev) {
           devs[j] = dev;
        } else {
-@@ -250,6 +277,48 @@ pipe_loader_drm_probe(struct pipe_loader
+@@ -260,6 +287,48 @@ pipe_loader_drm_probe(struct pipe_loader
        j++;
     }
  

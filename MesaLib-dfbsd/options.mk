@@ -45,10 +45,8 @@ PLIST_VARS+=	gbm wayland xatracker osmesa xvmc
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-egl
 .if ${OPSYS} != "Darwin"
-.if ${OPSYS} != "DragonFly" && ${OPSYS} != "NetBSD"
 CFLAGS+=		-DHAVE_DRI3
 CONFIGURE_ARGS+=	--enable-dri3
-.endif
 CONFIGURE_ARGS+=	--enable-gbm
 PLIST.gbm=		yes
 .endif
@@ -118,9 +116,10 @@ GALLIUM_DRIVERS+=	i915
 PLIST.i915_dri=		yes
 DRI_DRIVERS+=		i915
 
+# ilo is being phased out in favor of Vulkan
 # Experimental Intel driver
-PLIST.ilo=		yes
-GALLIUM_DRIVERS+=	ilo
+# PLIST.ilo=		yes
+# GALLIUM_DRIVERS+=	ilo
 
 PLIST.i965_dri=		yes
 DRI_DRIVERS+=		i965
