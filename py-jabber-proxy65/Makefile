@@ -3,7 +3,7 @@
 DISTNAME=	Proxy65-1.2.0
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME:S/P/p/}
 CATEGORIES=	chat python
-MASTER_SITES=	http://proxy65.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/proxy65/
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://proxy65.googlecode.com/

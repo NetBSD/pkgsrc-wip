@@ -6,7 +6,7 @@ CATEGORIES=	devel x11 python
 MASTER_SITES=	http://download.freedesktop.org/ldtp/2.x/2.0.x/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://ldtp.freedesktop.org/wiki/Home
+HOMEPAGE=	https://ldtp.freedesktop.org/wiki/
 COMMENT=	GNU/Linux Desktop Testing Project
 LICENSE=	gnu-lgpl-v2
 

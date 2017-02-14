@@ -6,8 +6,9 @@ CATEGORIES=	chat python
 MASTER_SITES=	http://idavoll.ik.nu/releases/0.9.1/
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://idavoll.ik.nu/
-COMMENT=	XMPP publish-subscribe (XEP-0060) component (via twistd)
+#HOMEPAGE=	http://idavoll.ik.nu/
+HOMEPAGE=	https://github.com/ralphm/idavoll
+COMMENT=	XMPP publish-subscribe (XEP-0060) component (via twisted)
 
 #
 # jabberd isn't really a dependency since the transport can run on a

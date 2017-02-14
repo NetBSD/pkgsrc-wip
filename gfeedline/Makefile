@@ -3,7 +3,7 @@
 DISTNAME=	gfeedline-2.4.1
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://gfeedline.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gfeedline/
 
 MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://code.google.com/p/gfeedline/
