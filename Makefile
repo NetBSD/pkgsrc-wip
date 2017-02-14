@@ -2871,7 +2871,6 @@ SUBDIR+=	py-distob
 SUBDIR+=	py-distutils-extra
 SUBDIR+=	py-divisi2
 SUBDIR+=	py-divmod-epsilon
-SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-dj-database-url
 SUBDIR+=	py-dj-static
 SUBDIR+=	py-django-audiofield
