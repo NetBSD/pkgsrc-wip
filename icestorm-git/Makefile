@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	icestorm-01b9822
+DISTNAME=	icestorm-ce4e1bc
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliffordwolf/}
+GITHUB_TAG= 	ce4e1bcfd8c791fe3fb6f991fbfaed309bc1f5ad
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cliffordwolf/
@@ -13,12 +14,9 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+= 		pkg-config gmake
 LIBS+= 			-lm -lstdc++
 
-GIT_REPOSITORIES=	icestorm
-GIT_REPO.icestorm=	git://github.com/cliffordwolf/icestorm.git
-GIT_REVISION.icestorm=	01b9822638d60e048c295d005257daa4c147761f
-WRKSRC=			${WRKDIR}/icestorm
+WRKSRC=			${WRKDIR}/icestorm-${GITHUB_TAG}
 
 .include "../../lang/python34/buildlink3.mk"
 .include "../../devel/libftdi/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
+#.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
