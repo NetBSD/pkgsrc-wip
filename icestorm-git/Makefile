@@ -13,10 +13,31 @@ LICENSE=	mit
 USE_LANGUAGES+=		c c++
 USE_TOOLS+= 		pkg-config gmake
 LIBS+= 			-lm -lstdc++
+PYTHON_VERSIONS_ACCEPTED= 34 35 36
 
 WRKSRC=			${WRKDIR}/icestorm-${GITHUB_TAG}
 
+SUBST_CLASSES+= 	python
+SUBST_MESSAGE.python= 	Fixing non-shellbang references to python3.
+SUBST_STAGE.python= 	pre-configure
+SUBST_SED.python= 	-e 's,python3,${PYTHONBIN},g'
+SUBST_FILES.python=	icebox/Makefile icefuzz/Makefile icetime/Makefile
+
+REPLACE_INTERPRETER+= 	usrbinenv
+REPLACE.usrbinenv.old= 	'/usr/bin/env\ python3'
+REPLACE.usrbinenv.new= 	${PYTHONBIN}
+REPLACE_FILES.usrbinenv= 	icebox/icebox.py
+REPLACE_FILES.usrbinenv+= 	icebox/icebox_chipdb.py
+REPLACE_FILES.usrbinenv+= 	icefuzz/timings.py
+REPLACE_FILES.usrbinenv+=	icebox/icebox_colbuf.py
+REPLACE_FILES.usrbinenv+= 	icebox/icebox_diff.py
+REPLACE_FILES.usrbinenv+= 	icebox/icebox_explain.py
+REPLACE_FILES.usrbinenv+= 	icebox/icebox_html.py
+REPLACE_FILES.usrbinenv+= 	icebox/icebox_maps.py
+REPLACE_FILES.usrbinenv+= 	icebox/icebox_stat.py
+REPLACE_FILES.usrbinenv+= 	icebox/icebox_vlog.py
+
 .include "../../lang/python34/buildlink3.mk"
 .include "../../devel/libftdi/buildlink3.mk"
-#.include "../../lang/python/application.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -6,6 +6,7 @@ bin/icebox_diff
 bin/icebox_explain
 bin/icebox_html
 bin/icebox_maps
+bin/icebox_stat
 bin/icebox_vlog
 bin/iceboxdb.py
 bin/icebram
