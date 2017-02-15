@@ -14,13 +14,9 @@ USE_LANGUAGES+=		c++
 USE_TOOLS+= 		gmake
 LIBS+= 			-lm
 
-#GIT_REPOSITORIES=	arachne-pnr
-#GIT_REPO.arachne-pnr=	git://github.com/cseed/arachne-pnr.git
-#GIT_REVISION.arachne-pnr=	52e69ed207342710080d85c7c639480e74a021d7
 WRKSRC=			${WRKDIR}/arachne-pnr-${GITHUB_TAG}
 MAKE_ENV+=		ICEBOX=${PREFIX}/share/icebox
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 MAKE_ENV+= 		PREFIX=${PREFIX}
 
-#.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
