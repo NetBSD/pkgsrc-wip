@@ -12,25 +12,39 @@ LICENSE=	isc
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config bison
-#PYTHON_VERSIONS_ACCEPTED= 36 35 34
-PYTHON_VERSIONS_INCOMPATIBLE= 	27
+PYTHON_VERSIONS_ACCEPTED= 34
+#PYTHON_VERSIONS_INCOMPATIBLE= 	27
 PKGCONFIG_CONFIG= 	${PKG_CONFIG:Q}
 
 WRKSRC= 		${WRKDIR}/yosys-${GITHUB_TAG}
 
-SUBST_CLASSES+= 	python
-SUBST_MESSAGE.python= 	Fixing non-shellbang references to python3.
-SUBST_STAGE.python= 	pre-configure
-SUBST_SED.python= 	-e 's,python3,${PYTHONBIN},g'
-SUBST_FILES.python= 	techlibs/common/cellhelp.py \
-		techlibs/common/Makefile.inc techlibs/ice40/brams_init.py \
-		techlibs/ice40/Makefile.inc techlibs/xilinx/brams_init.py \
-		techlibs/xilinx/Makefile.inc tests/bram/generate.py tests/bram/run-test.sh \
-		tests/fsm/generate.py tests/fsm/run-test.sh tests/realmath/generate.py \
-		tests/realmath/run-test.sh tests/share/generate.py tests/share/run-test.sh \
-		tests/tools/txt2tikztiming.py
+SUBST_CLASSES+= 	python3
+SUBST_MESSAGE.python3= 	Fixing non-shellbang references to python3.
+SUBST_STAGE.python3= 	pre-configure
+SUBST_SED.python3= 	-e 's,python3,${PYTHONBIN},g'
+SUBST_FILES.python3+= 	techlibs/common/Makefile.inc
+SUBST_FILES.python3+= 	techlibs/ice40/Makefile.inc
+SUBST_FILES.python3+= 	techlibs/xilinx/Makefile.inc
+SUBST_FILES.python3+= 	tests/bram/run-test.sh
+SUBST_FILES.python3+= 	tests/fsm/run-test.sh
+SUBST_FILES.python3+= 	tests/realmath/run-test.sh
+SUBST_FILES.python3+= 	tests/share/run-test.sh
 
-.include "../../mk/readline.buildlink3.mk"
+
+SUBST_CLASSES+= 	python
+SUBST_MESSAGE.python= 	Fixing shellbang references to python3.
+SUBST_STAGE.python= 	pre-configure
+SUBST_SED.python= 	-e 's,/usr/bin/env\ python3,${PYTHONBIN},g'
+SUBST_FILES.python= 	backends/smt2/smtbmc.py
+SUBST_FILES.python+= 	techlibs/common/cellhelp.py
+SUBST_FILES.python+= 	techlibs/ice40/brams_init.py
+SUBST_FILES.python+= 	techlibs/xilinx/brams_init.py
+SUBST_FILES.python+= 	tests/bram/generate.py
+SUBST_FILES.python+=	tests/fsm/generate.py
+SUBST_FILES.python+= 	tests/realmath/generate.py
+SUBST_FILES.python+= 	tests/share/generate.py
+SUBST_FILES.python+= 	tests/tools/txt2tikztiming.py
+
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/libffi/buildlink3.mk"
