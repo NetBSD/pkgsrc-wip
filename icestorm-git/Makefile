@@ -1,6 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	icestorm-ce4e1bc
+PKGNAME=	icestorm-1.0
+DISTNAME=	icestorm
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliffordwolf/}
 GITHUB_TAG= 	ce4e1bcfd8c791fe3fb6f991fbfaed309bc1f5ad
@@ -13,7 +14,7 @@ LICENSE=	mit
 USE_LANGUAGES+=		c c++
 USE_TOOLS+= 		pkg-config gmake
 LIBS+= 			-lm -lstdc++
-PYTHON_VERSIONS_ACCEPTED= 34 35 36
+PYTHON_VERSIONS_ACCEPTED= 36 35 34
 
 WRKSRC=			${WRKDIR}/icestorm-${GITHUB_TAG}
 
@@ -37,7 +38,6 @@ REPLACE_FILES.usrbinenv+= 	icebox/icebox_maps.py
 REPLACE_FILES.usrbinenv+= 	icebox/icebox_stat.py
 REPLACE_FILES.usrbinenv+= 	icebox/icebox_vlog.py
 
-.include "../../lang/python34/buildlink3.mk"
 .include "../../devel/libftdi/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
