@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rspamd-1.3.5
+DISTNAME=	rspamd-1.4.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.rspamd.com/downloads/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +16,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c99
 BUILD_DEFS+=	VARBASE
+
+LUA_VERSIONS_ACCEPTED=	53
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/rspamd
