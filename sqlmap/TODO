@@ -1,0 +1,4 @@
+- Test it!
+- Investigate if the extra bash shell scripts and Perl scripts are really extras
+  (i.e. just nice to have and use but not strictly needed). If this is not true
+  it is needed to add `USE_TOOLS=	bash:run perl:run'

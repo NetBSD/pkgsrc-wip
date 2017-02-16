@@ -3974,6 +3974,7 @@ SUBDIR+=	spidermonkey31
 SUBDIR+=	splix
 SUBDIR+=	spread4
 SUBDIR+=	spyder
+SUBDIR+=	sqlmap
 SUBDIR+=	squirrel
 SUBDIR+=	squirrelmail-avelsieve
 SUBDIR+=	squirrelmail-chg_sasl_passwd
