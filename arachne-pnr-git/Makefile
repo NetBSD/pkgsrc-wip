@@ -13,6 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES+=		c++
 USE_TOOLS+= 		gmake
 LIBS+= 			-lm
+DEPENDS+= 		icestorm-[0-9]*:../../wip/icestorm-git
 
 WRKSRC=			${WRKDIR}/arachne-pnr-${GITHUB_TAG}
 MAKE_ENV+=		ICEBOX=${PREFIX}/share/icebox
