@@ -3,7 +3,7 @@ $NetBSD$
 Do not use /bin/echo, on e.g. SunOS it does not support -n.
 Avoid CDPATH issues.
 
---- src/rust-installer/gen-installer.sh.orig	2016-05-31 21:13:01.000000000 +0000
+--- src/rust-installer/gen-installer.sh.orig	2017-02-09 01:39:01.000000000 +0000
 +++ src/rust-installer/gen-installer.sh
 @@ -1,4 +1,4 @@
 -#!/bin/sh
@@ -11,16 +11,7 @@ Avoid CDPATH issues.
  # Copyright 2014 The Rust Project Developers. See the COPYRIGHT
  # file at the top-level directory of this distribution and at
  # http://rust-lang.org/COPYRIGHT.
-@@ -11,7 +11,7 @@
- 
- set -u
- 
--if [ -x /bin/echo ]; then
-+if [ -x /bin/donotuseecho ]; then
-     ECHO='/bin/echo'
- else
-     ECHO='echo'
-@@ -287,7 +287,7 @@ cp -r "$CFG_IMAGE_DIR/"* "$CFG_WORK_DIR/
+@@ -281,7 +281,7 @@ cp -r "$CFG_IMAGE_DIR/"* "$CFG_WORK_DIR/
  need_ok "couldn't copy source image"
  
  # Create the manifest
@@ -29,7 +20,7 @@ Avoid CDPATH issues.
  
  # Remove files in bulk dirs
  bulk_dirs=`echo "$CFG_BULK_DIRS" | tr "," " "`
-@@ -324,7 +324,7 @@ echo "$rust_installer_version" > "$versi
+@@ -317,7 +317,7 @@ echo "$rust_installer_version" > "$versi
  
  # Copy the overlay
  if [ -n "$CFG_NON_INSTALLED_OVERLAY" ]; then
