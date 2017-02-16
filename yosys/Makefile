@@ -11,10 +11,10 @@ COMMENT=	Yosys is a framework for Verilog RTL synthesis
 LICENSE=	isc
 
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	gmake pkg-config bison
-PYTHON_VERSIONS_ACCEPTED= 34
-#PYTHON_VERSIONS_INCOMPATIBLE= 	27
+USE_TOOLS+=	gmake pkg-config bison gawk flex
+PYTHON_VERSIONS_ACCEPTED= 36 35 34
 PKGCONFIG_CONFIG= 	${PKG_CONFIG:Q}
+DEPENDS+= 	py27-mercurial-[0-9]*:../../devel/py-mercurial
 
 WRKSRC= 		${WRKDIR}/yosys-${GITHUB_TAG}
 
@@ -45,6 +45,8 @@ SUBST_FILES.python+= 	tests/realmath/generate.py
 SUBST_FILES.python+= 	tests/share/generate.py
 SUBST_FILES.python+= 	tests/tools/txt2tikztiming.py
 
+.include "../../lang/python/pyversion.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/libffi/buildlink3.mk"
