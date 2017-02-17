@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gpu/ipc/service/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
+--- gpu/ipc/service/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
 +++ gpu/ipc/service/BUILD.gn
-@@ -98,11 +98,12 @@ target(link_target_type, "ipc_service_so
+@@ -104,11 +104,12 @@ target(link_target_type, "ipc_service_so
      ]
      libs += [ "android" ]
    }

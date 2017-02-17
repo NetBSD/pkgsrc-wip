@@ -7,7 +7,7 @@ $NetBSD$
  #include "build/build_config.h"
  
 -#if defined(OS_FREEBSD)
-+#if defined(OS_FREEBSD) || defined(OS_NETBSD)
++#if defined(OS_BSD)
  #include <sys/param.h>
  #include <sys/sysctl.h>
 +#include <unistd.h>

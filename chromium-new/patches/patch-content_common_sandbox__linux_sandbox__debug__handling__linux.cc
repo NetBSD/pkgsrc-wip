@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/common/sandbox_linux/sandbox_debug_handling_linux.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/common/sandbox_linux/sandbox_debug_handling_linux.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/common/sandbox_linux/sandbox_debug_handling_linux.cc
 @@ -7,7 +7,9 @@
  #include <errno.h>

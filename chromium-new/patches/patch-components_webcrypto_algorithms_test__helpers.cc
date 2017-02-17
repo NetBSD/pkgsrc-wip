@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/webcrypto/algorithms/test_helpers.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- components/webcrypto/algorithms/test_helpers.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ components/webcrypto/algorithms/test_helpers.cc
 @@ -25,7 +25,11 @@
  #include "components/webcrypto/status.h"

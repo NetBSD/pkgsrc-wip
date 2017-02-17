@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/browser/gpu/gpu_process_host.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/browser/gpu/gpu_process_host.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/browser/gpu/gpu_process_host.cc
-@@ -989,7 +989,7 @@ bool GpuProcessHost::LaunchGpuProcess(gp
+@@ -984,7 +984,7 @@ bool GpuProcessHost::LaunchGpuProcess(gp
    base::CommandLine* cmd_line =
        new base::CommandLine(base::CommandLine::NO_PROGRAM);
  #else

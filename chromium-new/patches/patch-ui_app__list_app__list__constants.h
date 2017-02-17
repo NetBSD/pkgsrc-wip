@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/app_list/app_list_constants.h.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/app_list/app_list_constants.h.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/app_list/app_list_constants.h
-@@ -95,8 +95,8 @@ APP_LIST_EXPORT extern const char kSearc
+@@ -89,8 +89,8 @@ APP_LIST_EXPORT extern const char kSearc
  APP_LIST_EXPORT extern const char kSearchQueryLength[];
  APP_LIST_EXPORT extern const char kSearchResultDistanceFromOrigin[];
  

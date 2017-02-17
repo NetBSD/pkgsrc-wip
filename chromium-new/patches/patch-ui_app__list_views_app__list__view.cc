@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/app_list/views/app_list_view.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/app_list/views/app_list_view.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/app_list/views/app_list_view.cc
 @@ -70,7 +70,7 @@ const int kArrowOffset = 10;
  
@@ -11,7 +11,7 @@ $NetBSD$
    // Shadows are not supported on (non-ChromeOS) Linux.
    return false;
  #endif
-@@ -567,7 +567,7 @@ void AppListView::OnBeforeBubbleWidgetIn
+@@ -538,7 +538,7 @@ void AppListView::OnBeforeBubbleWidgetIn
    if (!params->native_widget && delegate_ && delegate_->ForceNativeDesktop())
      params->native_widget = new views::DesktopNativeWidgetAura(widget);
  #endif

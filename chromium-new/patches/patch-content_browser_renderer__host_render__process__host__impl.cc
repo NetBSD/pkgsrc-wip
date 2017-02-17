@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/browser/renderer_host/render_process_host_impl.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/browser/renderer_host/render_process_host_impl.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/browser/renderer_host/render_process_host_impl.cc
-@@ -369,7 +369,7 @@ SiteProcessMap* GetSiteProcessMapForBrow
+@@ -368,11 +368,11 @@ SiteProcessMap* GetSiteProcessMapForBrow
    return map;
  }
  
@@ -11,16 +11,21 @@ $NetBSD$
  // This static member variable holds the zygote communication information for
  // the renderer.
  ZygoteHandle g_render_zygote;
-@@ -402,7 +402,7 @@ class RendererSandboxedProcessLauncherDe
+-#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
++#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX) && !defined(OS_BSD)
+ 
+ // NOTE: changes to this class need to be reviewed by the security team.
+ class RendererSandboxedProcessLauncherDelegate
+@@ -395,7 +395,7 @@ class RendererSandboxedProcessLauncherDe
+     return GetContentClient()->browser()->PreSpawnRenderer(policy);
    }
  
- #elif defined(OS_POSIX)
--#if !defined(OS_MACOSX) && !defined(OS_ANDROID)
-+#if !defined(OS_MACOSX) && !defined(OS_ANDROID) && !defined(OS_BSD)
+-#elif defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_ANDROID)
++#elif defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_ANDROID) && !defined(OS_BSD)
    ZygoteHandle* GetZygote() override {
      const base::CommandLine& browser_command_line =
          *base::CommandLine::ForCurrentProcess();
-@@ -639,7 +639,7 @@ void RenderProcessHost::SetMaxRendererPr
+@@ -635,7 +635,7 @@ void RenderProcessHost::SetMaxRendererPr
    g_max_renderer_count_override = count;
  }
  
@@ -29,7 +34,16 @@ $NetBSD$
  // static
  void RenderProcessHostImpl::EarlyZygoteLaunch() {
    DCHECK(!g_render_zygote);
-@@ -835,7 +835,7 @@ bool RenderProcessHostImpl::Init() {
+@@ -645,7 +645,7 @@ void RenderProcessHostImpl::EarlyZygoteL
+   ZygoteHostImpl::GetInstance()->SetRendererSandboxStatus(
+       (*GetGenericZygote())->GetSandboxStatus());
+ }
+-#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
++#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX) && !defined(OS_BSD)
+ 
+ RenderProcessHostImpl::RenderProcessHostImpl(
+     BrowserContext* browser_context,
+@@ -788,7 +788,7 @@ bool RenderProcessHostImpl::Init() {
    renderer_prefix =
        browser_command_line.GetSwitchValueNative(switches::kRendererCmdPrefix);
  

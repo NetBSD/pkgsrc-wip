@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/policy/tools/generate_policy_source.py.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/policy/tools/generate_policy_source.py.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/policy/tools/generate_policy_source.py
 @@ -102,7 +102,7 @@ class PolicyDetails:
        if platform.startswith('chrome.'):

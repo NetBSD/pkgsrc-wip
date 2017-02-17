@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/common/chrome_switches.h.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/common/chrome_switches.h
-@@ -378,7 +378,7 @@ extern const char kAllowNaClSocketAPI[];
+@@ -385,7 +385,7 @@ extern const char kAllowNaClSocketAPI[];
  extern const char kEnableWaylandServer[];
  #endif
  

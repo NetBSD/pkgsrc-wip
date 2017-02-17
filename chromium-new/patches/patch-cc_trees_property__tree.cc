@@ -1,8 +1,8 @@
 $NetBSD$
 
---- cc/trees/property_tree.cc.orig	2016-11-10 20:02:09.000000000 +0000
+--- cc/trees/property_tree.cc.orig	2017-02-02 02:02:47.000000000 +0000
 +++ cc/trees/property_tree.cc
-@@ -1300,13 +1300,13 @@ gfx::ScrollOffset ScrollTree::MaxScrollO
+@@ -1113,13 +1113,13 @@ gfx::ScrollOffset ScrollTree::MaxScrollO
  
    gfx::Size clip_layer_bounds = scroll_clip_layer_bounds(scroll_node->id);
  
@@ -19,4 +19,4 @@ $NetBSD$
 +  return _max_offset;
  }
  
- gfx::Size ScrollTree::scroll_clip_layer_bounds(int scroll_node_id) const {
+ void ScrollTree::OnScrollOffsetAnimated(int layer_id,

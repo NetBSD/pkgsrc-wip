@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/crash/content/browser/BUILD.gn.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/crash/content/browser/BUILD.gn.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/crash/content/browser/BUILD.gn
 @@ -16,7 +16,7 @@ source_set("browser") {
  

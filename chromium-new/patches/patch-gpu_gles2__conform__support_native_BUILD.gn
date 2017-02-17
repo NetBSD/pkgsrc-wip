@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gpu/gles2_conform_support/native/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
+--- gpu/gles2_conform_support/native/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
 +++ gpu/gles2_conform_support/native/BUILD.gn
-@@ -21,7 +21,7 @@ source_set("native") {
+@@ -20,7 +20,7 @@ source_set("native") {
      "//gpu/gles2_conform_support/egl",
      "//ui/gl",
    ]

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/webui/options/browser_options_handler.h.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/ui/webui/options/browser_options_handler.h.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/browser/ui/webui/options/browser_options_handler.h
-@@ -206,7 +206,7 @@ class BrowserOptionsHandler
+@@ -208,7 +208,7 @@ class BrowserOptionsHandler
  
    void ObserveThemeChanged();
    void ThemesReset(const base::ListValue* args);

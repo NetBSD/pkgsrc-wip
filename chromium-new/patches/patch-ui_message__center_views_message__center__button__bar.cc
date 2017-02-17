@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/message_center/views/message_center_button_bar.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/message_center/views/message_center_button_bar.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/message_center/views/message_center_button_bar.cc
 @@ -95,7 +95,7 @@ MessageCenterButtonBar::MessageCenterBut
      const base::string16& title)

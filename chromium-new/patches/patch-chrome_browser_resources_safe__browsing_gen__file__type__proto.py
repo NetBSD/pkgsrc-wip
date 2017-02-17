@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/resources/safe_browsing/gen_file_type_proto.py.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/resources/safe_browsing/gen_file_type_proto.py.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/resources/safe_browsing/gen_file_type_proto.py
-@@ -41,6 +41,7 @@ def PlatformTypes():
+@@ -50,6 +50,7 @@ def PlatformTypes():
      "android": config_pb2.DownloadFileType.PLATFORM_ANDROID,
      "chromeos": config_pb2.DownloadFileType.PLATFORM_CHROME_OS,
      "linux": config_pb2.DownloadFileType.PLATFORM_LINUX,
@@ -10,7 +10,7 @@ $NetBSD$
      "mac": config_pb2.DownloadFileType.PLATFORM_MAC,
      "win": config_pb2.DownloadFileType.PLATFORM_WINDOWS,
    }
-@@ -192,7 +193,7 @@ def main():
+@@ -201,7 +202,7 @@ def main():
                      'Outfile must have a %d for version and %s for platform.')
    parser.add_option('-t', '--type',
                      help='The platform type. One of android, chromeos, ' +

@@ -1,17 +1,20 @@
 $NetBSD$
 
---- content/browser/utility_process_host_impl.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/browser/utility_process_host_impl.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/browser/utility_process_host_impl.cc
-@@ -44,7 +44,7 @@
- #include "services/shell/public/cpp/interface_provider.h"
+@@ -43,9 +43,9 @@
+ #include "services/service_manager/public/cpp/interface_provider.h"
  #include "ui/base/ui_base_switches.h"
  
 -#if defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
 +#if defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX) && !defined(OS_BSD)
  #include "content/public/browser/zygote_handle_linux.h"
- #endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
+-#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
++#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX) && !defined(OS_BSD)
  
-@@ -55,7 +55,7 @@
+ #if defined(OS_WIN)
+ #include "sandbox/win/src/sandbox_policy.h"
+@@ -54,11 +54,11 @@
  
  namespace content {
  
@@ -20,16 +23,25 @@ $NetBSD$
  namespace {
  ZygoteHandle g_utility_zygote;
  }  // namespace
-@@ -75,7 +75,7 @@ class UtilitySandboxedProcessLauncherDel
+-#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
++#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX) && !defined(OS_BSD)
+ 
+ // NOTE: changes to this class need to be reviewed by the security team.
+ class UtilitySandboxedProcessLauncherDelegate
+@@ -73,10 +73,10 @@ class UtilitySandboxedProcessLauncherDel
          launch_elevated_(launch_elevated)
  #elif defined(OS_POSIX)
-         env_(env),
+         env_(env)
 -#if !defined(OS_MACOSX) && !defined(OS_ANDROID)
 +#if !defined(OS_MACOSX) && !defined(OS_ANDROID) && !defined(OS_BSD)
-         no_sandbox_(no_sandbox),
- #endif  // !defined(OS_MACOSX)  && !defined(OS_ANDROID)
-         ipc_fd_(host->TakeClientFileDescriptor())
-@@ -107,7 +107,7 @@ class UtilitySandboxedProcessLauncherDel
+         ,
+         no_sandbox_(no_sandbox)
+-#endif  // !defined(OS_MACOSX)  && !defined(OS_ANDROID)
++#endif  // !defined(OS_MACOSX)  && !defined(OS_ANDROID) && !defined(OS_BSD)
+ #endif  // OS_WIN
+   {}
+ 
+@@ -105,13 +105,13 @@ class UtilitySandboxedProcessLauncherDel
  
  #elif defined(OS_POSIX)
  
@@ -38,16 +50,26 @@ $NetBSD$
    ZygoteHandle* GetZygote() override {
      if (no_sandbox_ || !exposed_dir_.empty())
        return nullptr;
-@@ -129,7 +129,7 @@ class UtilitySandboxedProcessLauncherDel
+     return GetGenericZygote();
+   }
+-#endif  // !defined(OS_MACOSX) && !defined(OS_ANDROID)
++#endif  // !defined(OS_MACOSX) && !defined(OS_ANDROID) && !defined(OS_BSD)
+   base::EnvironmentMap GetEnvironment() override { return env_; }
+ #endif  // OS_WIN
+ 
+@@ -126,9 +126,9 @@ class UtilitySandboxedProcessLauncherDel
    bool launch_elevated_;
  #elif defined(OS_POSIX)
    base::EnvironmentMap env_;
 -#if !defined(OS_MACOSX) && !defined(OS_ANDROID)
 +#if !defined(OS_MACOSX) && !defined(OS_ANDROID) && !defined(OS_BSD)
    bool no_sandbox_;
- #endif  // !defined(OS_MACOSX) && !defined(OS_ANDROID)
-   base::ScopedFD ipc_fd_;
-@@ -157,7 +157,7 @@ UtilityProcessHostImpl::UtilityProcessHo
+-#endif  // !defined(OS_MACOSX) && !defined(OS_ANDROID)
++#endif  // !defined(OS_MACOSX) && !defined(OS_ANDROID) && !defined(OS_BSD)
+ #endif  // OS_WIN
+ };
+ 
+@@ -153,7 +153,7 @@ UtilityProcessHostImpl::UtilityProcessHo
        is_batch_mode_(false),
        no_sandbox_(false),
        run_elevated_(false),
@@ -56,7 +78,7 @@ $NetBSD$
        child_flags_(ChildProcessHost::CHILD_ALLOW_SELF),
  #else
        child_flags_(ChildProcessHost::CHILD_NORMAL),
-@@ -238,7 +238,7 @@ void UtilityProcessHostImpl::SetName(con
+@@ -235,13 +235,13 @@ void UtilityProcessHostImpl::SetName(con
    name_ = name;
  }
  
@@ -65,3 +87,10 @@ $NetBSD$
  // static
  void UtilityProcessHostImpl::EarlyZygoteLaunch() {
    DCHECK(!g_utility_zygote);
+   g_utility_zygote = CreateZygote();
+ }
+-#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX)
++#endif  // defined(OS_POSIX) && !defined(OS_ANDROID) && !defined(OS_MACOSX) && !defined(OS_BSD)
+ 
+ bool UtilityProcessHostImpl::StartProcess() {
+   if (started_)

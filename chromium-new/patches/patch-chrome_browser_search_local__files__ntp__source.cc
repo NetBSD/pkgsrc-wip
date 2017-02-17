@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/search/local_files_ntp_source.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/search/local_files_ntp_source.cc.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/search/local_files_ntp_source.cc
 @@ -20,8 +20,13 @@
  #include "chrome/common/url_constants.h"

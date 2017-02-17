@@ -1,8 +1,8 @@
 $NetBSD$
 
---- components/autofill/content/renderer/password_form_conversion_utils.cc.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/autofill/content/renderer/password_form_conversion_utils.cc.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/autofill/content/renderer/password_form_conversion_utils.cc
-@@ -25,7 +25,11 @@
+@@ -28,7 +28,11 @@
  #include "third_party/WebKit/public/web/WebFormControlElement.h"
  #include "third_party/WebKit/public/web/WebFrame.h"
  #include "third_party/WebKit/public/web/WebInputElement.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- build/config/ui.gni.orig	2016-11-10 20:02:09.000000000 +0000
+--- build/config/ui.gni.orig	2017-02-02 02:02:47.000000000 +0000
 +++ build/config/ui.gni
 @@ -31,7 +31,7 @@ declare_args() {
  
@@ -20,14 +20,12 @@ $NetBSD$
  
    # Indicates if Wayland display server support is enabled.
    enable_wayland_server = is_chromeos
-@@ -65,19 +65,19 @@ declare_args() {
+@@ -62,17 +62,17 @@ declare_args() {
  
  # Use GPU accelerated cross process image transport by default on linux builds
  # with the Aura window manager.
 -ui_compositor_image_transport = use_aura && is_linux
 +ui_compositor_image_transport = use_aura && (is_linux || is_bsd)
- 
- use_default_render_theme = use_aura && !is_android
  
  # Indicates if the UI toolkit depends on X11.
 -use_x11 = is_linux && !use_ozone

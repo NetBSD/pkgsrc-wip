@@ -1,8 +1,8 @@
 $NetBSD$
 
---- device/serial/serial_io_handler_posix.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- device/serial/serial_io_handler_posix.cc.orig	2017-02-02 02:02:54.000000000 +0000
 +++ device/serial/serial_io_handler_posix.cc
-@@ -60,7 +60,7 @@ bool BitrateToSpeedConstant(int bitrate,
+@@ -61,7 +61,7 @@ bool BitrateToSpeedConstant(int bitrate,
      BITRATE_TO_SPEED_CASE(9600)
      BITRATE_TO_SPEED_CASE(19200)
      BITRATE_TO_SPEED_CASE(38400)

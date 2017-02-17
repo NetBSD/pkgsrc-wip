@@ -1,6 +1,6 @@
 $NetBSD$
 
---- media/formats/mp2t/es_parser_mpeg1audio.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- media/formats/mp2t/es_parser_mpeg1audio.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ media/formats/mp2t/es_parser_mpeg1audio.cc
 @@ -109,11 +109,11 @@ bool EsParserMpeg1Audio::LookForMpeg1Aud
    const uint8_t* es;

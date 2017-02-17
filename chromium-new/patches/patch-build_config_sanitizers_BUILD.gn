@@ -1,8 +1,8 @@
 $NetBSD$
 
---- build/config/sanitizers/BUILD.gn.orig	2016-11-10 20:02:09.000000000 +0000
+--- build/config/sanitizers/BUILD.gn.orig	2017-02-02 02:02:47.000000000 +0000
 +++ build/config/sanitizers/BUILD.gn
-@@ -364,7 +364,7 @@ config("lsan_flags") {
+@@ -405,7 +405,7 @@ config("lsan_flags") {
  
  config("msan_flags") {
    if (is_msan) {
@@ -11,7 +11,7 @@ $NetBSD$
      msan_blacklist_path =
          rebase_path("//tools/msan/blacklist.txt", root_build_dir)
      cflags = [
-@@ -377,7 +377,7 @@ config("msan_flags") {
+@@ -418,7 +418,7 @@ config("msan_flags") {
  
  config("tsan_flags") {
    if (is_tsan) {

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/defaults.cc.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/defaults.cc.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/browser/defaults.cc
 @@ -44,7 +44,7 @@ const bool kSyncAutoStarts = true;
  const bool kSyncAutoStarts = false;

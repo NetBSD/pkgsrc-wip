@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/leveldatabase/env_chromium.cc.orig	2016-11-10 20:02:28.000000000 +0000
+--- third_party/leveldatabase/env_chromium.cc.orig	2017-02-02 02:03:11.000000000 +0000
 +++ third_party/leveldatabase/env_chromium.cc
-@@ -23,7 +23,11 @@
+@@ -25,7 +25,11 @@
  #include "base/trace_event/trace_event.h"
  #include "third_party/leveldatabase/chromium_logger.h"
  #include "third_party/leveldatabase/src/include/leveldb/options.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/protobuf/post_process_dist.sh.orig	2016-11-10 20:02:28.000000000 +0000
+--- third_party/protobuf/post_process_dist.sh.orig	2017-02-02 02:03:11.000000000 +0000
 +++ third_party/protobuf/post_process_dist.sh
 @@ -15,7 +15,7 @@
  #    non-testdata .txt files are converted to Windows-style line endings.

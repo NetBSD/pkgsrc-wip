@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/app/chrome_command_ids.h.orig	2016-11-10 20:02:09.000000000 +0000
+--- chrome/app/chrome_command_ids.h.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/app/chrome_command_ids.h
 @@ -75,7 +75,7 @@
  #define IDC_VISIT_DESKTOP_OF_LRU_USER_2 34049

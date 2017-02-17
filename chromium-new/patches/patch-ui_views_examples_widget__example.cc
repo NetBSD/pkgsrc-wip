@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/views/examples/widget_example.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/views/examples/widget_example.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/views/examples/widget_example.cc
 @@ -77,7 +77,7 @@ void WidgetExample::CreateExampleView(Vi
    BuildButton(container, "Popup widget", POPUP);

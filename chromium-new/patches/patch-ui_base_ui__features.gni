@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/base/ui_features.gni.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/base/ui_features.gni.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/base/ui_features.gni
 @@ -2,4 +2,4 @@
  # Use of this source code is governed by a BSD-style license that can be

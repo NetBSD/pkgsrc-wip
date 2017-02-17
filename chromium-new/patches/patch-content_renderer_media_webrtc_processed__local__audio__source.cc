@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/renderer/media/webrtc/processed_local_audio_source.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/renderer/media/webrtc/processed_local_audio_source.cc.orig	2017-02-02 02:02:54.000000000 +0000
 +++ content/renderer/media/webrtc/processed_local_audio_source.cc
 @@ -269,8 +269,8 @@ void ProcessedLocalAudioSource::Capture(
                                          bool key_pressed) {

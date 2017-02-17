@@ -4,7 +4,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.chromium
 PKG_OPTIONS_REQUIRED_GROUPS=	audio
 PKG_OPTIONS_GROUP.audio=	alsa pulseaudio
 PKG_SUPPORTED_OPTIONS+=		debug
-PKG_SUGGESTED_OPTIONS=		alsa
+PKG_SUGGESTED_OPTIONS=		pulseaudio
 
 .include "../../mk/bsd.options.mk"
 

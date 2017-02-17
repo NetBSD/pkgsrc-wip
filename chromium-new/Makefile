@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
-DISTNAME=	chromium-54.0.2840.100
+DISTNAME=	chromium-56.0.2924.87
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=	.tar.xz
@@ -84,7 +84,6 @@ KEEPLIBS+= \
 		third_party/cld_2 \
 		third_party/cld_3 \
 		third_party/cros_system_api \
-		third_party/cython/python_flags.py \
 		third_party/devscripts \
 		third_party/dom_distiller_js \
 		third_party/fips181 \
@@ -96,6 +95,7 @@ KEEPLIBS+= \
 		third_party/hunspell \
 		third_party/iccjpeg \
 		third_party/icu \
+		third_party/inspector_protocol \
 		third_party/jstemplate \
 		third_party/khronos \
 		third_party/leveldatabase \
@@ -149,6 +149,7 @@ KEEPLIBS+= \
 		third_party/zlib/google \
 		url/third_party/mozilla \
 		v8/src/third_party/valgrind \
+		v8/third_party/inspector_protocol \
 		base/third_party/libevent \
 		third_party/adobe \
 		third_party/speech-dispatcher \
@@ -184,11 +185,10 @@ GN_ARGS+=	use_gconf=false \
 		enable_one_click_signin=true \
 		use_allocator="none" \
 		use_experimental_allocator_shim=false \
-		enable_widevine=true \
 		is_clang=false \
 		enable_webrtc=false \
 		use_gnome_keyring=true
-GN_ARGS+=	extra_cppflags="-I${BUILDLINK_DIR}/include \
+GN_ARGS+=	extra_cxxflags="-I${BUILDLINK_DIR}/include \
 			-I${BUILDLINK_DIR}/include/glib \
 			-I${BUILDLINK_DIR}/include/nss/nss " \
 		extra_ldflags="-L${PREFIX}/lib \
@@ -270,8 +270,6 @@ INSTALLATION_DIRS+=	${ICONS_DIR${i}}
 
 CHROMIUM_PROGS+=	chrome
 CHROMIUM_SCRIPTS+=	chrome-wrapper
-# Installed, however may not work.
-CHROMIUM_LIBS+=		libwidevinecdmadapter.so
 
 CHROMIUM_FILES+=	chrome.1
 CHROMIUM_FILES+=	chrome_100_percent.pak
@@ -293,8 +291,6 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/out/${BUILDTYPE}/${i} \
 		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
 .endfor
-	${INSTALL_LIB} ${WRKSRC}/out/${BUILDTYPE}/libwidevinecdm.so \
-		${DESTDIR}${PREFIX}/lib
 .for i in ${CHROMIUM_FILES}
 	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${i} \
 		${DESTDIR}${PREFIX}/${CHROMIUM_DIR}
@@ -346,6 +342,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	opt:-lpci:-lpciutils
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"

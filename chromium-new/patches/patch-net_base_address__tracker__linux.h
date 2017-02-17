@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/base/address_tracker_linux.h.orig	2016-11-10 20:02:16.000000000 +0000
+--- net/base/address_tracker_linux.h.orig	2017-02-02 02:02:56.000000000 +0000
 +++ net/base/address_tracker_linux.h
 @@ -6,10 +6,12 @@
  #define NET_BASE_ADDRESS_TRACKER_LINUX_H_
@@ -15,7 +15,7 @@ $NetBSD$
  #include <stddef.h>
  
  #include <map>
-@@ -33,8 +35,11 @@ namespace internal {
+@@ -34,8 +36,11 @@ namespace internal {
  class NET_EXPORT_PRIVATE AddressTrackerLinux :
      public base::MessageLoopForIO::Watcher {
   public:

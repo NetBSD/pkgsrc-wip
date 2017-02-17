@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/base/network_change_notifier.h.orig	2016-11-10 20:02:16.000000000 +0000
+--- net/base/network_change_notifier.h.orig	2017-02-02 02:02:56.000000000 +0000
 +++ net/base/network_change_notifier.h
 @@ -26,7 +26,7 @@ struct NetworkInterface;
  typedef std::vector<NetworkInterface> NetworkInterfaceList;

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- build/toolchain/get_concurrent_links.py.orig	2016-11-10 20:02:09.000000000 +0000
+--- build/toolchain/get_concurrent_links.py.orig	2017-02-02 02:02:47.000000000 +0000
 +++ build/toolchain/get_concurrent_links.py
 @@ -45,6 +45,14 @@ def _GetTotalMemoryInBytes():
        return int(subprocess.check_output(['sysctl', '-n', 'hw.memsize']))

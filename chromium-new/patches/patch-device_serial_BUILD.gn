@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/serial/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
+--- device/serial/BUILD.gn.orig	2017-02-02 02:02:54.000000000 +0000
 +++ device/serial/BUILD.gn
 @@ -6,7 +6,7 @@ import("//build/config/features.gni")
  import("//mojo/public/tools/bindings/mojom.gni")
@@ -11,7 +11,7 @@ $NetBSD$
  
  config("platform_support") {
    visibility = [ ":serial" ]
-@@ -70,6 +70,12 @@ static_library("serial") {
+@@ -55,6 +55,12 @@ static_library("serial") {
    if (use_udev) {
      deps += [ "//device/udev_linux" ]
    }

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/resources/safe_browsing/BUILD.gn.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/resources/safe_browsing/BUILD.gn.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/resources/safe_browsing/BUILD.gn
 @@ -29,6 +29,8 @@ action("make_file_types_protobuf") {
      target_arch = "mac"

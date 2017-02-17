@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/hid/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
+--- device/hid/BUILD.gn.orig	2017-02-02 02:02:54.000000000 +0000
 +++ device/hid/BUILD.gn
 @@ -56,6 +56,13 @@ source_set("hid") {
      deps += [ "//device/udev_linux" ]

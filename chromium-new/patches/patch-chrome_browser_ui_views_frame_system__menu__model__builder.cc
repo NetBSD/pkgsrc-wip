@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
 @@ -85,7 +85,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);
@@ -11,7 +11,7 @@ $NetBSD$
    model->AddSeparator(ui::NORMAL_SEPARATOR);
    model->AddCheckItemWithStringId(IDC_USE_SYSTEM_TITLE_BAR,
                                    IDS_SHOW_WINDOW_DECORATIONS_MENU);
-@@ -123,7 +123,7 @@ void SystemMenuModelBuilder::BuildSystem
+@@ -119,7 +119,7 @@ void SystemMenuModelBuilder::BuildSystem
      model->AddSeparator(ui::NORMAL_SEPARATOR);
      model->AddItemWithStringId(IDC_TASK_MANAGER, IDS_TASK_MANAGER);
    }

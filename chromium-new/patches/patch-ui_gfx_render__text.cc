@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/gfx/render_text.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/gfx/render_text.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/gfx/render_text.cc
-@@ -999,32 +999,33 @@ void RenderText::SetDisplayOffset(int ho
+@@ -972,32 +972,33 @@ void RenderText::SetDisplayOffset(int ho
    const int extra_content = GetContentWidth() - display_rect_.width();
    const int cursor_width = cursor_enabled_ ? 1 : 0;
  

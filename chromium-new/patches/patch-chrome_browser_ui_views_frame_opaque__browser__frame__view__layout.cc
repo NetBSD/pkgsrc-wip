@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view_layout.cc
-@@ -21,7 +21,7 @@ namespace {
+@@ -20,7 +20,7 @@ namespace {
  
  const int kCaptionButtonHeight = 18;
  

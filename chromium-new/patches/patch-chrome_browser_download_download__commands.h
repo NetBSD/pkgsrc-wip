@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/download/download_commands.h.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/download/download_commands.h.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/browser/download/download_commands.h
 @@ -43,7 +43,8 @@ class DownloadCommands {
    void ExecuteCommand(Command command);

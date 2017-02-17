@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/usb/usb_device_handle_impl.h.orig	2016-11-10 20:02:14.000000000 +0000
+--- device/usb/usb_device_handle_impl.h.orig	2017-02-02 02:02:54.000000000 +0000
 +++ device/usb/usb_device_handle_impl.h
 @@ -18,7 +18,12 @@
  #include "base/memory/ref_counted.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/app_list/views/app_list_item_view.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/app_list/views/app_list_item_view.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/app_list/views/app_list_item_view.cc
 @@ -55,7 +55,7 @@ gfx::FontList GetFontList() {
    const gfx::FontList& font_list = rb.GetFontList(kItemTextFontStyle);

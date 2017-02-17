@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/url_matcher/url_matcher_factory.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- components/url_matcher/url_matcher_factory.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ components/url_matcher/url_matcher_factory.cc
 @@ -16,7 +16,11 @@
  #include "base/values.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/renderer/pepper/pepper_flash_font_file_host.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/renderer/pepper/pepper_flash_font_file_host.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/renderer/pepper/pepper_flash_font_file_host.cc
 @@ -14,7 +14,7 @@
  #include "ppapi/proxy/ppapi_messages.h"

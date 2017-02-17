@@ -1,6 +1,6 @@
 $NetBSD$
 
---- media/capture/video/linux/video_capture_device_linux.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- media/capture/video/linux/video_capture_device_linux.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ media/capture/video/linux/video_capture_device_linux.cc
 @@ -21,6 +21,7 @@
  
@@ -40,9 +40,9 @@ $NetBSD$
  void VideoCaptureDeviceLinux::StopAndDeAllocate() {
    if (!v4l2_thread_.IsRunning())
      return;  // Wrong state.
-@@ -81,7 +90,11 @@ void VideoCaptureDeviceLinux::StopAndDeA
- 
-   capture_impl_ = NULL;
+@@ -110,7 +119,11 @@ void VideoCaptureDeviceLinux::SetPhotoOp
+       base::Bind(&V4L2CaptureDelegate::SetPhotoOptions, capture_impl_,
+                  base::Passed(&settings), base::Passed(&callback)));
  }
 +#else // !defined(OS_FREEBSD)
 +void VideoCaptureDeviceLinux::StopAndDeAllocate() {}
@@ -52,7 +52,7 @@ $NetBSD$
  void VideoCaptureDeviceLinux::SetRotation(int rotation) {
    if (v4l2_thread_.IsRunning()) {
      v4l2_thread_.task_runner()->PostTask(
-@@ -89,6 +102,9 @@ void VideoCaptureDeviceLinux::SetRotatio
+@@ -118,6 +131,9 @@ void VideoCaptureDeviceLinux::SetRotatio
          base::Bind(&V4L2CaptureDelegate::SetRotation, capture_impl_, rotation));
    }
  }

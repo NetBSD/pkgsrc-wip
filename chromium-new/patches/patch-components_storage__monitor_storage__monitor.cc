@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/storage_monitor/storage_monitor.cc.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/storage_monitor/storage_monitor.cc.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/storage_monitor/storage_monitor.cc
 @@ -85,6 +85,7 @@ std::vector<StorageInfo> StorageMonitor:
  

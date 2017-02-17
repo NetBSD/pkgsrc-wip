@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/ui/webui/about_ui.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/ui/webui/about_ui.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/browser/ui/webui/about_ui.cc
 @@ -75,7 +75,7 @@
  #include "chrome/browser/ui/webui/theme_source.h"
@@ -52,7 +52,7 @@ $NetBSD$
  
    AppendFooter(&data);
    return data;
-@@ -788,7 +792,7 @@ void AboutUIHTMLSource::StartDataRequest
+@@ -794,7 +798,7 @@ void AboutUIHTMLSource::StartDataRequest
    } else if (source_name_ == chrome::kChromeUIDNSHost) {
      AboutDnsHandler::Start(profile(), callback);
      return;
@@ -61,7 +61,7 @@ $NetBSD$
    } else if (source_name_ == chrome::kChromeUILinuxProxyConfigHost) {
      response = AboutLinuxProxyConfig();
  #endif
-@@ -797,7 +801,7 @@ void AboutUIHTMLSource::StartDataRequest
+@@ -803,7 +807,7 @@ void AboutUIHTMLSource::StartDataRequest
      ChromeOSCreditsHandler::Start(path, callback);
      return;
  #endif

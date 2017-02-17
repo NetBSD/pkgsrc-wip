@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/usb/usb_device_handle_impl.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- device/usb/usb_device_handle_impl.cc.orig	2017-02-02 02:02:54.000000000 +0000
 +++ device/usb/usb_device_handle_impl.cc
 @@ -25,7 +25,11 @@
  #include "device/usb/usb_error.h"

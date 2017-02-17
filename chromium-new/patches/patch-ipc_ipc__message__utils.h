@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ipc/ipc_message_utils.h.orig	2016-11-10 20:02:15.000000000 +0000
+--- ipc/ipc_message_utils.h.orig	2017-02-02 02:02:55.000000000 +0000
 +++ ipc/ipc_message_utils.h
-@@ -209,7 +209,7 @@ struct ParamTraits<unsigned int> {
+@@ -210,7 +210,7 @@ struct ParamTraits<unsigned int> {
  //   3) Android 64 bit also has int64_t typedef'd to long.
  // Since we want to support Android 32<>64 bit IPC, as long as we don't have
  // these traits for 32 bit ARM then that'll catch any errors.

@@ -1,17 +1,17 @@
 $NetBSD$
 
---- media/cdm/ppapi/ppapi_cdm_adapter.gni.orig	2016-11-10 20:02:15.000000000 +0000
+--- media/cdm/ppapi/ppapi_cdm_adapter.gni.orig	2017-02-02 02:02:55.000000000 +0000
 +++ media/cdm/ppapi/ppapi_cdm_adapter.gni
-@@ -7,7 +7,7 @@
- # depend on media/media_cdm_adapter.gyp:cdmadapter which would in turn modify
- # your target with direct_dependent_settings.
+@@ -5,7 +5,7 @@
+ # This template defines a CDM adapter target. Just use this as you would a
+ # normal target and everything should work correctly.
  template("ppapi_cdm_adapter") {
 -  if (is_mac || is_linux) {
 +  if (is_mac || is_linux || is_bsd) {
      _target_type = "loadable_module"
    } else {
      _target_type = "shared_library"
-@@ -59,7 +59,7 @@ template("ppapi_cdm_adapter") {
+@@ -57,7 +57,7 @@ template("ppapi_cdm_adapter") {
        libs += [ "rt" ]
      }
  

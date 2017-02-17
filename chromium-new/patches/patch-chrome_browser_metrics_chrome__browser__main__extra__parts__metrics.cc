@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
-@@ -38,12 +38,14 @@
+@@ -42,12 +42,14 @@
  
  #if defined(OS_LINUX) && !defined(OS_CHROMEOS)
  #include <gnu/libc-version.h>

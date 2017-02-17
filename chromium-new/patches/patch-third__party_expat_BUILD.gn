@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/expat/BUILD.gn.orig	2016-11-10 20:02:28.000000000 +0000
+--- third_party/expat/BUILD.gn.orig	2017-02-02 02:03:11.000000000 +0000
 +++ third_party/expat/BUILD.gn
 @@ -9,7 +9,7 @@ import("//testing/libfuzzer/fuzzer_test.
  # let's not pull it in twice.

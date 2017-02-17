@@ -1,47 +1,45 @@
 $NetBSD$
 
---- content/gpu/gpu_main.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/gpu/gpu_main.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/gpu/gpu_main.cc
-@@ -104,7 +104,7 @@ void GetGpuInfoFromCommandLine(gpu::GPUI
-                                const base::CommandLine& command_line);
- bool WarmUpSandbox(const base::CommandLine& command_line);
+@@ -92,7 +92,7 @@ namespace content {
  
--#if !defined(OS_MACOSX)
-+#if !defined(OS_MACOSX) && !defined(OS_BSD)
- bool CollectGraphicsInfo(gpu::GPUInfo& gpu_info);
- #endif
+ namespace {
  
-@@ -195,13 +195,13 @@ int GpuMain(const MainFunctionParams& pa
-   // create child windows to render to.
-   base::MessagePumpForGpu::InitFactory();
-   base::MessageLoop main_message_loop(base::MessageLoop::TYPE_UI);
--#elif defined(OS_LINUX) && defined(USE_X11)
-+#elif (defined(OS_LINUX) || defined(OS_BSD)) && defined(USE_X11)
-   // We need a UI loop so that we can grab the Expose events. See GLSurfaceGLX
-   // and https://crbug.com/326995.
-   base::MessageLoop main_message_loop(base::MessageLoop::TYPE_UI);
-   std::unique_ptr<ui::PlatformEventSource> event_source =
-       ui::PlatformEventSource::CreateDefault();
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
-   base::MessageLoop main_message_loop(base::MessageLoop::TYPE_DEFAULT);
- #elif defined(OS_MACOSX)
-   // This is necessary for CoreAnimation layers hosted in the GPU process to be
-@@ -312,7 +312,7 @@ int GpuMain(const MainFunctionParams& pa
-       // and we already registered them through SetGpuInfo() above.
-       base::TimeTicks before_collect_context_graphics_info =
-           base::TimeTicks::Now();
--#if !defined(OS_MACOSX)
-+#if !defined(OS_MACOSX) && !defined(OS_BSD)
-       if (!CollectGraphicsInfo(gpu_info))
-         dead_on_arrival = true;
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+ bool StartSandboxLinux(gpu::GpuWatchdogThread*);
+ #elif defined(OS_WIN)
+ bool StartSandboxWindows(const sandbox::SandboxInterfaceInfo*);
+@@ -145,7 +145,7 @@ class ContentSandboxHelper : public gpu:
  
-@@ -495,7 +495,7 @@ bool WarmUpSandbox(const base::CommandLi
-   return true;
+   bool EnsureSandboxInitialized(
+       gpu::GpuWatchdogThread* watchdog_thread) override {
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+     return StartSandboxLinux(watchdog_thread);
+ #elif defined(OS_WIN)
+     return StartSandboxWindows(sandbox_info_);
+@@ -292,12 +292,13 @@ int GpuMain(const MainFunctionParams& pa
+ 
+ namespace {
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+ bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread) {
+   TRACE_EVENT0("gpu,startup", "Initialize sandbox");
+ 
+   bool res = false;
+ 
++#if !defined(OS_BSD)
+   if (watchdog_thread) {
+     // LinuxSandbox needs to be able to ensure that the thread
+     // has really been stopped.
+@@ -322,6 +323,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
+     options.timer_slack = base::TIMER_SLACK_MAXIMUM;
+     watchdog_thread->StartWithOptions(options);
+   }
++#endif
+ 
+   return res;
  }
- 
--#if !defined(OS_MACOSX)
-+#if !defined(OS_MACOSX) && !defined(OS_BSD)
- bool CollectGraphicsInfo(gpu::GPUInfo& gpu_info) {
-   TRACE_EVENT0("gpu,startup", "Collect Graphics Info");
- 

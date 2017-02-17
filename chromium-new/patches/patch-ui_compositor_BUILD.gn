@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/compositor/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/compositor/BUILD.gn.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/compositor/BUILD.gn
-@@ -200,7 +200,7 @@ test("compositor_unittests") {
+@@ -201,7 +201,7 @@ test("compositor_unittests") {
      "//ui/gl",
      "//ui/resources",
    ]

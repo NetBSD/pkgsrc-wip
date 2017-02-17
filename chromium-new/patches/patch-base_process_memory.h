@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/memory.h.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/process/memory.h.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/process/memory.h
 @@ -32,7 +32,7 @@ BASE_EXPORT void EnableTerminationOnOutO
  // Crash reporting classifies such crashes as OOM.

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/test/base/in_process_browser_test.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/test/base/in_process_browser_test.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/test/base/in_process_browser_test.cc
-@@ -88,6 +88,10 @@
+@@ -93,6 +93,10 @@
  
  namespace {
  

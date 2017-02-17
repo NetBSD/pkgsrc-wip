@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/gfx/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/gfx/BUILD.gn.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/gfx/BUILD.gn
-@@ -376,7 +376,7 @@ component("gfx") {
+@@ -371,7 +371,7 @@ component("gfx") {
    }
  
    # Linux.
@@ -11,7 +11,7 @@ $NetBSD$
      deps += [ "//build/linux:fontconfig" ]
    }
  
-@@ -577,7 +577,7 @@ static_library("test_support") {
+@@ -549,7 +549,7 @@ static_library("test_support") {
        "test/ui_cocoa_test_helper.mm",
      ]
    }

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- net/proxy/proxy_service.cc.orig	2016-11-10 20:02:16.000000000 +0000
+--- net/proxy/proxy_service.cc.orig	2017-02-02 02:02:56.000000000 +0000
 +++ net/proxy/proxy_service.cc
-@@ -47,7 +47,7 @@
+@@ -49,7 +49,7 @@
  #elif defined(OS_MACOSX)
  #include "net/proxy/proxy_config_service_mac.h"
  #include "net/proxy/proxy_resolver_mac.h"
@@ -11,7 +11,7 @@ $NetBSD$
  #include "net/proxy/proxy_config_service_linux.h"
  #elif defined(OS_ANDROID)
  #include "net/proxy/proxy_config_service_android.h"
-@@ -1531,7 +1531,7 @@ ProxyService::CreateSystemProxyConfigSer
+@@ -1520,7 +1520,7 @@ ProxyService::CreateSystemProxyConfigSer
               << "profile_io_data.cc::CreateProxyConfigService and this should "
               << "be used only for examples.";
    return base::WrapUnique(new UnsetProxyConfigService);

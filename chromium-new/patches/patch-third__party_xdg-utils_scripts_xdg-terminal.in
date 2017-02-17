@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/xdg-utils/scripts/xdg-terminal.in.orig	2016-11-10 20:03:05.000000000 +0000
+--- third_party/xdg-utils/scripts/xdg-terminal.in.orig	2017-02-02 02:03:57.000000000 +0000
 +++ third_party/xdg-utils/scripts/xdg-terminal.in
 @@ -35,7 +35,7 @@ terminal_kde()
      terminal_exec=`which $terminal 2>/dev/null`

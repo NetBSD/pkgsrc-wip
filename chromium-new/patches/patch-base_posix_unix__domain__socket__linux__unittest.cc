@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/posix/unix_domain_socket_linux_unittest.cc.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/posix/unix_domain_socket_linux_unittest.cc.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/posix/unix_domain_socket_linux_unittest.cc
 @@ -2,10 +2,15 @@
  // Use of this source code is governed by a BSD-style license that can be

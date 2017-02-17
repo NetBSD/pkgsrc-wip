@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gpu/config/gpu_test_config.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- gpu/config/gpu_test_config.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ gpu/config/gpu_test_config.cc
 @@ -24,7 +24,7 @@ namespace {
  GPUTestConfig::OS GetCurrentOS() {
@@ -15,9 +15,9 @@ $NetBSD$
    bool rt;
    if (gpu_info == NULL) {
      GPUInfo my_gpu_info;
-+#if defined(OS_FREEBSD) || defined(OS_NETBSD)
++#if defined(OS_BSD)
 +    rt = false;
-+    LOG(WARNING) << "CollectGpuID not present on FreeBSD";
++    LOG(WARNING) << "CollectGpuID not present on BSD";
 +#else
      CollectInfoResult result = CollectGpuID(
          &my_gpu_info.gpu.vendor_id, &my_gpu_info.gpu.device_id);

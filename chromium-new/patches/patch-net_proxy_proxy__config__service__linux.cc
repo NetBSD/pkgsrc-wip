@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/proxy/proxy_config_service_linux.cc.orig	2016-11-10 20:02:16.000000000 +0000
+--- net/proxy/proxy_config_service_linux.cc.orig	2017-02-02 02:02:56.000000000 +0000
 +++ net/proxy/proxy_config_service_linux.cc
 @@ -11,7 +11,14 @@
  #include <limits.h>

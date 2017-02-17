@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/gpu/gl_string_manager.cc.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/gpu/gl_string_manager.cc.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/gpu/gl_string_manager.cc
 @@ -33,7 +33,7 @@ GLStringManager::~GLStringManager() {
  

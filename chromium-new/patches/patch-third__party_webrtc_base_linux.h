@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/webrtc/base/linux.h.orig	2016-11-10 20:03:05.000000000 +0000
+--- third_party/webrtc/base/linux.h.orig	2017-02-02 02:03:57.000000000 +0000
 +++ third_party/webrtc/base/linux.h
 @@ -11,7 +11,7 @@
  #ifndef WEBRTC_BASE_LINUX_H_

@@ -22,7 +22,7 @@ $NetBSD$
 +#elif V8_OS_FREEBSD
 +  return static_cast<int>(pthread_getthreadid_np());
 +#elif V8_OS_NETBSD
-+  return static_cast<int>(_lwp_self());
++  return reinterpret_cast<uint64_t>(pthread_self());
  #elif V8_OS_AIX
    return static_cast<int>(thread_self());
  #elif V8_OS_SOLARIS

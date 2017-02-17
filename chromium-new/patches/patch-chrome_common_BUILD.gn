@@ -1,9 +1,9 @@
 $NetBSD$
 
---- chrome/common/BUILD.gn.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/common/BUILD.gn.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/common/BUILD.gn
-@@ -147,6 +147,13 @@ static_library("common") {
-     ]
+@@ -243,6 +243,13 @@ static_library("common") {
+     public_deps += [ "//ppapi/shared_impl" ]
    }
  
 +  if (is_bsd) {
@@ -14,5 +14,5 @@ $NetBSD$
 +  }
 +
    if (enable_extensions) {
-     sources += rebase_path(gypi_values.chrome_common_extensions_sources,
-                            ".",
+     sources += [
+       "cast_messages.cc",

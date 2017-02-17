@@ -1,13 +1,13 @@
 $NetBSD$
 
---- chrome/common/features.gni.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/common/features.gni.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/common/features.gni
-@@ -22,7 +22,7 @@ declare_args() {
-   enable_background = !is_ios && !is_android && !is_chromecast
+@@ -43,7 +43,7 @@ declare_args() {
+   enable_hotwording = is_chrome_branded && is_chromeos
  
    enable_one_click_signin =
 -      is_win || is_mac || (is_linux && !is_chromeos && !is_chromecast)
 +      is_win || is_mac || is_bsd || (is_linux && !is_chromeos && !is_chromecast)
  
-   # Google Now is disabled to prepare for its removal.
-   # http://crbug.com/539674
+   # Set to true to bundle all the mash related mojo services into chrome.
+   # Specify --mash to chrome to have chrome start the mash environment.

@@ -1,8 +1,19 @@
 $NetBSD$
 
---- content/browser/browser_main_loop.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/browser/browser_main_loop.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/browser/browser_main_loop.cc
-@@ -204,7 +204,7 @@
+@@ -203,6 +203,10 @@
+ #include "gpu/vulkan/vulkan_implementation.h"
+ #endif
+ 
++#if defined(OS_BSD)
++#include "content/common/child_process_sandbox_support_impl_linux.h"
++#endif
++
+ // One of the linux specific headers defines this as a macro.
+ #ifdef DestroyAll
+ #undef DestroyAll
+@@ -211,7 +215,7 @@
  namespace content {
  namespace {
  
@@ -10,8 +21,8 @@ $NetBSD$
 +#if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_ANDROID) && !defined(OS_BSD)
  void SetupSandbox(const base::CommandLine& parsed_command_line) {
    TRACE_EVENT0("startup", "SetupSandbox");
- 
-@@ -432,7 +432,7 @@ void BrowserMainLoop::Init() {
+   if (parsed_command_line.HasSwitch(switches::kNoZygote)) {
+@@ -482,10 +486,15 @@ void BrowserMainLoop::Init() {
  void BrowserMainLoop::EarlyInitialization() {
    TRACE_EVENT0("startup", "BrowserMainLoop::EarlyInitialization");
  
@@ -20,12 +31,11 @@ $NetBSD$
    // No thread should be created before this call, as SetupSandbox()
    // will end-up using fork().
    SetupSandbox(parsed_command_line_);
-@@ -472,7 +472,7 @@ void BrowserMainLoop::EarlyInitializatio
-   // We use quite a few file descriptors for our IPC, and the default limit on
-   // the Mac is low (256), so bump it up.
-   base::SetFdLimit(1024);
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
-   // Same for Linux. The default various per distro, but it is 1024 on Fedora.
-   // Low soft limits combined with liberal use of file descriptors means power
-   // users can easily hit this limit with many open tabs. Bump up the limit to
++#elif defined(OS_BSD)
++  RenderSandboxHostLinux::GetInstance()->Init();
++  base::FileHandleMappingVector fds_to_map;
++  const int sfd = RenderSandboxHostLinux::GetInstance()->GetRendererSocket();
++  fds_to_map.push_back(std::make_pair(sfd, GetSandboxFD()));
+ #endif
+ 
+ #if defined(USE_X11)

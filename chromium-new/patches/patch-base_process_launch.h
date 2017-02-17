@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/launch.h.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/process/launch.h.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/process/launch.h
 @@ -138,7 +138,7 @@ struct BASE_EXPORT LaunchOptions {
    // will be the same as its pid.
@@ -19,4 +19,4 @@ $NetBSD$
 +#endif  // defined(OS_LINUX) || defined(OS_BSD)
  
  #if defined(OS_POSIX)
-   // If non-null, a delegate to be run immediately prior to executing the new
+   // If not empty, launch the specified executable instead of

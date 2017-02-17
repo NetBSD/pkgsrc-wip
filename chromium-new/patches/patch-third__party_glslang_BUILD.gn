@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/glslang/BUILD.gn.orig	2016-11-10 20:02:28.000000000 +0000
+--- third_party/glslang/BUILD.gn.orig	2017-02-02 02:03:11.000000000 +0000
 +++ third_party/glslang/BUILD.gn
 @@ -8,7 +8,7 @@ config("glslang_config") {
    include_dirs = [ "src" ]

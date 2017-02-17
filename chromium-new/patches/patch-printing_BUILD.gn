@@ -1,8 +1,8 @@
 $NetBSD$
 
---- printing/BUILD.gn.orig	2016-11-10 20:02:16.000000000 +0000
+--- printing/BUILD.gn.orig	2017-02-02 02:02:57.000000000 +0000
 +++ printing/BUILD.gn
-@@ -125,7 +125,7 @@ component("printing") {
+@@ -129,7 +129,7 @@ component("printing") {
    if (use_cups) {
      configs += [ ":cups" ]
  
@@ -11,7 +11,7 @@ $NetBSD$
        # rebase_path does not accept an empty string
        if (use_sysroot) {
          cups_sysroot = rebase_path(sysroot)
-@@ -202,7 +202,7 @@ component("printing") {
+@@ -206,7 +206,7 @@ component("printing") {
        "printing_context_no_system_dialog.cc",
        "printing_context_no_system_dialog.h",
      ]

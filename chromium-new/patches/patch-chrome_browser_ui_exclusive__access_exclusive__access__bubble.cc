@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/ui/exclusive_access/exclusive_access_bubble.cc
-@@ -19,7 +19,7 @@
+@@ -16,7 +16,7 @@
  
  // NOTE(koz): Linux doesn't use the thick shadowed border, so we add padding
  // here.

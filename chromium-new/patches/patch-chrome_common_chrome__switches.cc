@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/common/chrome_switches.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/common/chrome_switches.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/common/chrome_switches.cc
-@@ -1277,7 +1277,7 @@ const char kAllowNaClSocketAPI[]        
+@@ -1263,7 +1263,7 @@ const char kAllowNaClSocketAPI[]        
  const char kEnableWaylandServer[] = "enable-wayland-server";
  #endif
  

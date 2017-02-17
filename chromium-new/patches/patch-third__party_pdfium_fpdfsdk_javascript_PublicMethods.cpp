@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp.orig	2016-11-10 20:03:03.000000000 +0000
+--- third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp.orig	2017-02-02 02:03:53.000000000 +0000
 +++ third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp
-@@ -64,6 +64,103 @@ const FX_WCHAR* const fullmonths[] = {L"
+@@ -68,6 +68,103 @@ const FX_WCHAR* const fullmonths[] = {L"
                                        L"July",    L"August",   L"September",
                                        L"October", L"November", L"December"};
  

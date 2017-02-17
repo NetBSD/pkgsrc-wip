@@ -1,8 +1,8 @@
 $NetBSD$
 
---- device/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
+--- device/BUILD.gn.orig	2017-02-02 02:02:54.000000000 +0000
 +++ device/BUILD.gn
-@@ -173,7 +173,7 @@ test("device_unittests") {
+@@ -184,7 +184,7 @@ test("device_unittests") {
      ]
    }
  

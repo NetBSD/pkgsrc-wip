@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/drive/drive_api_util.cc.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/drive/drive_api_util.cc.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/drive/drive_api_util.cc
 @@ -22,7 +22,11 @@
  #include "google_apis/drive/drive_api_parser.h"

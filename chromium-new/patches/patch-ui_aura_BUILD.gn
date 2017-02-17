@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/aura/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/aura/BUILD.gn.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/aura/BUILD.gn
-@@ -280,7 +280,7 @@ test("aura_unittests") {
+@@ -361,7 +361,7 @@ test("aura_unittests") {
      "//ui/gl:test_support",
    ]
  

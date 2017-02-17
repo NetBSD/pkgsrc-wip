@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cc/layers/scrollbar_layer_impl_base.cc.orig	2016-11-10 20:02:09.000000000 +0000
+--- cc/layers/scrollbar_layer_impl_base.cc.orig	2017-02-02 02:02:47.000000000 +0000
 +++ cc/layers/scrollbar_layer_impl_base.cc
 @@ -174,8 +174,8 @@ gfx::Rect ScrollbarLayerImplBase::Comput
    int thumb_offset = TrackStart();

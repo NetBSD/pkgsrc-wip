@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/download/download_prefs.cc.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/download/download_prefs.cc.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/browser/download/download_prefs.cc
 @@ -56,7 +56,7 @@ namespace {
  // Consider downloads 'dangerous' if they go to the home directory on Linux and
@@ -18,9 +18,9 @@ $NetBSD$
 -#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
 +#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
    should_open_pdf_in_system_reader_ =
-       prefs->GetBoolean(prefs::kOpenPdfDownloadInSystemReader);
- #endif
-@@ -213,7 +213,7 @@ void DownloadPrefs::RegisterProfilePrefs
+       prefs->GetBoolean(prefs::kOpenPdfDownloadInSystemReader) ||
+       prefs->GetBoolean(prefs::kPluginsAlwaysOpenPdfExternally);
+@@ -215,7 +215,7 @@ void DownloadPrefs::RegisterProfilePrefs
                                   default_download_path);
    registry->RegisterFilePathPref(prefs::kSaveFileDefaultDirectory,
                                   default_download_path);
@@ -29,7 +29,7 @@ $NetBSD$
    registry->RegisterBooleanPref(prefs::kOpenPdfDownloadInSystemReader, false);
  #endif
  }
-@@ -290,7 +290,7 @@ bool DownloadPrefs::IsDownloadPathManage
+@@ -292,7 +292,7 @@ bool DownloadPrefs::IsDownloadPathManage
  }
  
  bool DownloadPrefs::IsAutoOpenUsed() const {
@@ -38,7 +38,7 @@ $NetBSD$
    if (ShouldOpenPdfInSystemReader())
      return true;
  #endif
-@@ -304,7 +304,7 @@ bool DownloadPrefs::IsAutoOpenEnabledBas
+@@ -306,7 +306,7 @@ bool DownloadPrefs::IsAutoOpenEnabledBas
      return false;
    DCHECK(extension[0] == base::FilePath::kExtensionSeparator);
    extension.erase(0, 1);
@@ -47,16 +47,16 @@ $NetBSD$
    if (extension == FILE_PATH_LITERAL("pdf") && ShouldOpenPdfInSystemReader())
      return true;
  #endif
-@@ -338,7 +338,7 @@ void DownloadPrefs::DisableAutoOpenBased
+@@ -340,7 +340,7 @@ void DownloadPrefs::DisableAutoOpenBased
    SaveAutoOpenState();
  }
  
 -#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
 +#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
  void DownloadPrefs::SetShouldOpenPdfInSystemReader(bool should_open) {
-   if (should_open_pdf_in_system_reader_ == should_open)
-     return;
-@@ -359,7 +359,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
+   should_open_pdf_in_system_reader_ = should_open ||
+      profile_->GetPrefs()->GetBoolean(prefs::kPluginsAlwaysOpenPdfExternally);
+@@ -365,7 +365,7 @@ void DownloadPrefs::DisableAdobeVersionC
  #endif
  
  void DownloadPrefs::ResetAutoOpen() {

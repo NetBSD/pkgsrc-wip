@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/gpu/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/gpu/BUILD.gn.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/gpu/BUILD.gn
-@@ -98,6 +98,7 @@ target(link_target_type, "gpu_sources") 
+@@ -96,6 +96,7 @@ target(link_target_type, "gpu_sources") 
  
    if (use_x11) {
      deps += [ "//ui/events/platform/x11" ]

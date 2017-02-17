@@ -1,13 +1,19 @@
 $NetBSD$
 
---- third_party/webrtc/base/stringutils.h.orig	2016-11-10 20:03:05.000000000 +0000
+--- third_party/webrtc/base/stringutils.h.orig	2017-02-02 02:03:57.000000000 +0000
 +++ third_party/webrtc/base/stringutils.h
-@@ -23,7 +23,7 @@
+@@ -23,11 +23,11 @@
  #endif  // WEBRTC_WIN 
  
  #if defined(WEBRTC_POSIX)
 -#ifdef BSD
-+#if defined(BSD) || defined(WEBRTC_BSD)
++#if defined(WEBRTC_BSD) || defined(BSD)
  #include <stdlib.h>
- #else  // BSD
+-#else  // BSD
++#else  // WEBRTC_BSD
  #include <alloca.h>
+-#endif  // !BSD
++#endif  // !WEBRTC_BSD
+ #endif  // WEBRTC_POSIX
+ 
+ #include <string>

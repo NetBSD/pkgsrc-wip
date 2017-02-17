@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gpu/config/gpu_control_list.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- gpu/config/gpu_control_list.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ gpu/config/gpu_control_list.cc
 @@ -19,7 +19,11 @@
  #include "base/sys_info.h"
@@ -23,7 +23,7 @@ $NetBSD$
    return kGLTypeGL;
  #elif defined(OS_MACOSX)
    return kGLTypeGL;
-@@ -1593,7 +1597,7 @@ GpuControlList::OsType GpuControlList::G
+@@ -1606,7 +1610,7 @@ GpuControlList::OsType GpuControlList::G
    return kOsWin;
  #elif defined(OS_ANDROID)
    return kOsAndroid;

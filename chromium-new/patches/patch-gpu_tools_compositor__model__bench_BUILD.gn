@@ -1,6 +1,6 @@
 $NetBSD$
 
---- gpu/tools/compositor_model_bench/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
+--- gpu/tools/compositor_model_bench/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
 +++ gpu/tools/compositor_model_bench/BUILD.gn
 @@ -4,7 +4,7 @@
  
@@ -8,6 +8,6 @@ $NetBSD$
  
 -if (is_linux && !is_chromeos && current_cpu != "arm" && use_x11) {
 +if ((is_linux || is_bsd) && !is_chromeos && current_cpu != "arm" && use_x11) {
-   # GYP version: //gpu/tools/tools.gyp:compositor_model_bench
    executable("compositor_model_bench") {
      sources = [
+       "compositor_model_bench.cc",

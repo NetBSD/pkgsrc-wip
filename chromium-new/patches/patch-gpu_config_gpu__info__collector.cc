@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gpu/config/gpu_info_collector.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- gpu/config/gpu_info_collector.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ gpu/config/gpu_info_collector.cc
-@@ -181,8 +181,10 @@ CollectInfoResult CollectGraphicsInfoGL(
+@@ -193,8 +193,10 @@ CollectInfoResult CollectGraphicsInfoGL(
    gpu_info->pixel_shader_version = glsl_version;
    gpu_info->vertex_shader_version = glsl_version;
  

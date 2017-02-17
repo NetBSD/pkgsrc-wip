@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/views/window/custom_frame_view.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/views/window/custom_frame_view.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/views/window/custom_frame_view.cc
 @@ -287,7 +287,7 @@ int CustomFrameView::NonClientTopBorderH
  int CustomFrameView::CaptionButtonY() const {

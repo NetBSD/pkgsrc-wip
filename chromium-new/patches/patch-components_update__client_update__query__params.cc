@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/update_client/update_query_params.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- components/update_client/update_query_params.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ components/update_client/update_query_params.cc
 @@ -31,6 +31,10 @@ const char kOs[] =
      "linux";

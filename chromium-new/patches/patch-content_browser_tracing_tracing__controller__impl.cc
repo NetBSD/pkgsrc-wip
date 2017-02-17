@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/browser/tracing/tracing_controller_impl.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/browser/tracing/tracing_controller_impl.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/browser/tracing/tracing_controller_impl.cc
-@@ -515,7 +515,7 @@ void TracingControllerImpl::AddTraceMess
+@@ -475,7 +475,7 @@ void TracingControllerImpl::AddTraceMess
      return;
    }
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/allocator/allocator_shim_unittest.cc.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/allocator/allocator_shim_unittest.cc.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/allocator/allocator_shim_unittest.cc
 @@ -4,7 +4,6 @@
  

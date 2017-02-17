@@ -1,12 +1,12 @@
 $NetBSD$
 
---- chrome/browser/extensions/api/music_manager_private/device_id_linux.cc.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/extensions/api/music_manager_private/device_id_linux.cc.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/extensions/api/music_manager_private/device_id_linux.cc
 @@ -4,6 +4,10 @@
  
  #include "chrome/browser/extensions/api/music_manager_private/device_id.h"
  
-+#if defined(OS_FREEBSD) || defined(OS_NETBSD)
++#if defined(OS_BSD)
 +#include <sys/types.h>
 +#include <net/if_dl.h>
 +#endif
@@ -17,7 +17,7 @@ $NetBSD$
                          const char* const prefixes[],
                          size_t prefixes_count) {
      const int MAC_LENGTH = 6;
-+#if defined(OS_FREEBSD) || defined(OS_NETBSD)
++#if defined(OS_BSD)
 +    struct ifaddrs *ifap, *ifinfo;
 +#else
      struct ifreq ifinfo;
@@ -26,7 +26,7 @@ $NetBSD$
      memset(&ifinfo, 0, sizeof(ifinfo));
 -    strncpy(ifinfo.ifr_name, ifaddr->ifa_name, sizeof(ifinfo.ifr_name) - 1);
  
-+#if defined(OS_FREEBSD) || defined(OS_NETBSD)
++#if defined(OS_BSD)
 +    int result = getifaddrs(&ifap);
 +    if (result != 0)
 +      return true;
@@ -56,7 +56,7 @@ $NetBSD$
      if (!is_valid_mac_address_.Run(mac_address, MAC_LENGTH))
        return true;
  
-+#if defined(OS_FREEBSD) || defined(OS_NETBSD)
++#if defined(OS_BSD)
 +    if (!IsValidPrefix(ifinfo->ifa_name, prefixes, prefixes_count))
 +      return true;
 +#else

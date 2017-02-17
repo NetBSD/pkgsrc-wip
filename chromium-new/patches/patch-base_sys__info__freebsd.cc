@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/sys_info_freebsd.cc.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/sys_info_freebsd.cc.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/sys_info_freebsd.cc
 @@ -12,12 +12,34 @@
  

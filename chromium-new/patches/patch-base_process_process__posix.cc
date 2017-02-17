@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/process_posix.cc.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/process/process_posix.cc.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/process/process_posix.cc
 @@ -21,8 +21,18 @@
  #include <sys/event.h>
@@ -26,7 +26,7 @@ $NetBSD$
    base::ProcessHandle our_pid = base::GetCurrentProcessHandle();
    if (parent_pid != our_pid) {
 -#if defined(OS_MACOSX)
-+#if defined(OS_MACOSX) || defined(OS_BSD)
++#if defined(OS_MACOSX) || defined(OS_FREEBSD)
      // On Mac we can wait on non child processes.
 -    return WaitForSingleNonChildProcess(handle, timeout);
 +    /* return WaitForSingleNonChildProcess(handle, timeout); */
@@ -34,7 +34,7 @@ $NetBSD$
      // Currently on Linux we can't handle non child processes.
      NOTIMPLEMENTED();
 -#endif  // OS_MACOSX
-+#endif  // OS_MACOSX || OS_BSD
++#endif  // OS_MACOSX || OS_FREEBSD
    }
  
    int status;
@@ -42,18 +42,18 @@ $NetBSD$
    return Process(handle);
  }
  
--#if !defined(OS_LINUX)
-+#if !defined(OS_LINUX) && !defined(OS_FREEBSD)
+-#if !defined(OS_LINUX) && !defined(OS_MACOSX)
++#if !defined(OS_LINUX) && !defined(OS_MACOSX) && !defined(OS_FREEBSD)
  // static
  bool Process::CanBackgroundProcesses() {
    return false;
  }
--#endif  // !defined(OS_LINUX)
+-#endif  // !defined(OS_LINUX) && !defined(OS_MACOSX)
 +#elif defined(OS_FREEBSD)
 +bool Process::CanBackgroundProcesses() {
 +  return true;
 +}
-+#endif  // !defined(OS_LINUX) && !defined(OS_FREEBSD)
++#endif  // !defined(OS_LINUX) && !defined(OS_MACOSX) && !defined(OS_FREEBSD)
  
  bool Process::IsValid() const {
    return process_ != kNullProcessHandle;
@@ -70,9 +70,9 @@ $NetBSD$
  
  bool Process::SetProcessBackgrounded(bool value) {
 +#if !defined(OS_FREEBSD)
-   // Not implemented for POSIX systems other than Linux. With POSIX, if we were
-   // to lower the process priority we wouldn't be able to raise it back to its
-   // initial priority.
+   // Not implemented for POSIX systems other than Linux and Mac. With POSIX, if
+   // we were to lower the process priority we wouldn't be able to raise it back
+   // to its initial priority.
    NOTIMPLEMENTED();
    return false;
 +#else
@@ -88,5 +88,5 @@ $NetBSD$
 +  return result == 0;
 +#endif // !defined(OS_FREEBSD)
  }
- #endif  // !defined(OS_LINUX)
+ #endif  // !defined(OS_LINUX) && !defined(OS_MACOSX)
  

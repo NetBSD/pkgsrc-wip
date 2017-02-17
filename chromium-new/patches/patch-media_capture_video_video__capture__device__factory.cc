@@ -1,6 +1,6 @@
 $NetBSD$
 
---- media/capture/video/video_capture_device_factory.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- media/capture/video/video_capture_device_factory.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ media/capture/video/video_capture_device_factory.cc
 @@ -18,6 +18,10 @@ namespace media {
  std::unique_ptr<VideoCaptureDeviceFactory>

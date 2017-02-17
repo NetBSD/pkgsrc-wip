@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/public/common/content_switches.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/public/common/content_switches.cc.orig	2017-02-02 02:02:54.000000000 +0000
 +++ content/public/common/content_switches.cc
-@@ -1007,7 +1007,7 @@ const char kDisableVaapiAcceleratedVideo
+@@ -992,7 +992,7 @@ const char kDisableVaapiAcceleratedVideo
      "disable-vaapi-accelerated-video-encode";
  #endif
  

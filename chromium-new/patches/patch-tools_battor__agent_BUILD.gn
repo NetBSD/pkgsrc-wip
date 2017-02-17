@@ -1,6 +1,6 @@
 $NetBSD$
 
---- tools/battor_agent/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
+--- tools/battor_agent/BUILD.gn.orig	2017-02-02 02:03:12.000000000 +0000
 +++ tools/battor_agent/BUILD.gn
 @@ -5,7 +5,7 @@
  import("//testing/test.gni")

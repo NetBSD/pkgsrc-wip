@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/xdg-utils/scripts/xdg-terminal.orig	2016-11-10 20:03:05.000000000 +0000
+--- third_party/xdg-utils/scripts/xdg-terminal.orig	2017-02-02 02:03:57.000000000 +0000
 +++ third_party/xdg-utils/scripts/xdg-terminal
 @@ -302,7 +302,7 @@ detectDE()
      elif [ x"$GNOME_DESKTOP_SESSION_ID" != x"" ]; then DE=gnome;

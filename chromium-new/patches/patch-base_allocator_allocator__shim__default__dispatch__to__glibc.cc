@@ -1,11 +1,13 @@
 $NetBSD$
 
---- base/allocator/allocator_shim_default_dispatch_to_glibc.cc.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/allocator/allocator_shim_default_dispatch_to_glibc.cc.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/allocator/allocator_shim_default_dispatch_to_glibc.cc
-@@ -3,17 +3,46 @@
+@@ -3,19 +3,46 @@
  // found in the LICENSE file.
  
  #include "base/allocator/allocator_shim.h"
+-
+-#include <malloc.h>
 +#include <stdio.h>
 +#include <stdlib.h>
 +#if defined(OS_FREEBSD)
@@ -30,12 +32,12 @@ $NetBSD$
 +void* __memalign(size_t alignment, size_t size) {
 +  void *ret;
 +  if (__posix_memalign(&ret, alignment, size) != 0) {
-+    return nullptr;
++      return nullptr;
 +  } else {
-+    return ret;
++      return ret;
 +  }
 +}
-+int  __posix_memalign(void **ptr, size_t alignment, size_t size);
++int __posix_memalign(void **ptr, size_t alignment, size_t size);
 +void __free(void* ptr);
 +#else
 +#define __malloc malloc
@@ -55,7 +57,7 @@ $NetBSD$
  }  // extern "C"
  
  namespace {
-@@ -21,23 +50,27 @@ namespace {
+@@ -23,23 +50,23 @@ namespace {
  using base::allocator::AllocatorDispatch;
  
  void* GlibcMalloc(const AllocatorDispatch*, size_t size) {
@@ -78,13 +80,9 @@ $NetBSD$
 +  return __memalign(alignment, size);
  }
  
-+/* int GlibcPosixMemalign(const AllocatorDispatch*, void** ptr, size_t alignment, size_t size) { */
-+/*   return __posix_memalign(ptr, alignment, size); */
-+/* } */
-+
  void GlibcFree(const AllocatorDispatch*, void* address) {
 -  __libc_free(address);
 +  __free(address);
  }
  
- }  // namespace
+ size_t GlibcGetSizeEstimate(const AllocatorDispatch*, void* address) {

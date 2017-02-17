@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/chrome_browser_main_linux.cc.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/chrome_browser_main_linux.cc.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/browser/chrome_browser_main_linux.cc
 @@ -75,12 +75,14 @@ void ChromeBrowserMainPartsLinux::PrePro
  void ChromeBrowserMainPartsLinux::PostProfileInit() {

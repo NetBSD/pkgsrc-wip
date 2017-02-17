@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/allocator/allocator_shim_override_libc_symbols.h.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/allocator/allocator_shim_override_libc_symbols.h.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/allocator/allocator_shim_override_libc_symbols.h
 @@ -10,7 +10,7 @@
  #endif

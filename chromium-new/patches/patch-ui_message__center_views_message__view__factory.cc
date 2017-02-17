@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/message_center/views/message_view_factory.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/message_center/views/message_view_factory.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/message_center/views/message_view_factory.cc
 @@ -43,7 +43,7 @@ MessageView* MessageViewFactory::Create(
        notification_view = new NotificationView(controller, notification);

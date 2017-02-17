@@ -1,6 +1,6 @@
 $NetBSD$
 
---- mojo/edk/test/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
+--- mojo/edk/test/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
 +++ mojo/edk/test/BUILD.gn
 @@ -48,7 +48,7 @@ source_set("run_all_unittests") {
      "//testing/gtest",

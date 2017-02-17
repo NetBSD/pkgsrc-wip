@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/shell/BUILD.gn.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/shell/BUILD.gn.orig	2017-02-02 02:02:54.000000000 +0000
 +++ content/shell/BUILD.gn
-@@ -290,7 +290,7 @@ static_library("content_shell_lib") {
+@@ -296,7 +296,7 @@ static_library("content_shell_lib") {
      ]
    }
  
@@ -11,7 +11,7 @@ $NetBSD$
      deps += [
        "//build/linux:fontconfig",
        "//ui/gfx:test_support",
-@@ -311,7 +311,7 @@ static_library("content_shell_lib") {
+@@ -317,7 +317,7 @@ static_library("content_shell_lib") {
      deps += [ "//content/shell/android:content_shell_jni_headers" ]
    }
  
@@ -20,7 +20,7 @@ $NetBSD$
      deps += [
        "//components/crash/content/app",
        "//components/crash/content/browser",
-@@ -359,7 +359,7 @@ static_library("content_shell_lib") {
+@@ -366,7 +366,7 @@ static_library("content_shell_lib") {
      ]
    }
  
@@ -29,7 +29,7 @@ $NetBSD$
      deps += [ "//third_party/freetype2" ]
    }
  
-@@ -525,7 +525,7 @@ if (is_android) {
+@@ -532,7 +532,7 @@ if (is_android) {
        }
      }
  

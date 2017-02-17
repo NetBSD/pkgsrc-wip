@@ -1,6 +1,6 @@
 $NetBSD$
 
---- media/audio/alsa/audio_manager_alsa.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ media/audio/alsa/audio_manager_alsa.cc
 @@ -135,7 +135,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
    int card = -1;

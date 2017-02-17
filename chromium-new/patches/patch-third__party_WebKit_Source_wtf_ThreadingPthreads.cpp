@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/WebKit/Source/wtf/ThreadingPthreads.cpp.orig	2016-11-10 20:02:27.000000000 +0000
+--- third_party/WebKit/Source/wtf/ThreadingPthreads.cpp.orig	2017-02-02 02:03:10.000000000 +0000
 +++ third_party/WebKit/Source/wtf/ThreadingPthreads.cpp
 @@ -49,11 +49,15 @@
  #include <objc/objc-auto.h>
@@ -12,7 +12,7 @@ $NetBSD$
  #endif
  
 -#if OS(LINUX) || OS(ANDROID)
-+#if OS(BSD) && !defined(__NetBSD__)
++#if OS(FREEBSD)
 +#include <pthread_np.h>
 +#endif
 +
@@ -20,12 +20,12 @@ $NetBSD$
  #include <unistd.h>
  #endif
  
-@@ -95,6 +99,8 @@ ThreadIdentifier currentThread()
-     return pthread_mach_thread_np(pthread_self());
+@@ -91,6 +95,8 @@ ThreadIdentifier currentThread() {
+   return pthread_mach_thread_np(pthread_self());
  #elif OS(LINUX)
-     return syscall(__NR_gettid);
-+#elif defined(__FreeBSD__)
-+    return pthread_getthreadid_np();
+   return syscall(__NR_gettid);
++#elif OS(FREEBSD)
++  return pthread_getthreadid_np();
  #elif OS(ANDROID)
-     return gettid();
+   return gettid();
  #else

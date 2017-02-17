@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ui/events/keycodes/dom/keycode_converter.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/events/keycodes/dom/keycode_converter.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/events/keycodes/dom/keycode_converter.cc
 @@ -19,7 +19,7 @@ namespace {
  // and DOM Level 3 |code| strings.

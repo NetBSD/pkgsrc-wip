@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/platform_util.h.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/platform_util.h.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/platform_util.h
 @@ -40,7 +40,7 @@ enum OpenOperationResult {
  enum OpenItemType {

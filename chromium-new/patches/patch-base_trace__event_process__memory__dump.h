@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/trace_event/process_memory_dump.h.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/trace_event/process_memory_dump.h.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/trace_event/process_memory_dump.h
 @@ -24,7 +24,7 @@
  

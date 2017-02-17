@@ -1,8 +1,8 @@
 $NetBSD$
 
---- gpu/vulkan/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
+--- gpu/vulkan/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
 +++ gpu/vulkan/BUILD.gn
-@@ -13,7 +13,7 @@ if (enable_vulkan) {
+@@ -14,7 +14,7 @@ if (enable_vulkan) {
    component("vulkan") {
      output_name = "vulkan_wrapper"
  

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- media/formats/common/offset_byte_queue.cc.orig	2016-11-10 20:02:15.000000000 +0000
+--- media/formats/common/offset_byte_queue.cc.orig	2017-02-02 02:02:55.000000000 +0000
 +++ media/formats/common/offset_byte_queue.cc
 @@ -46,13 +46,13 @@ void OffsetByteQueue::PeekAt(int64_t off
    *size = tail() - offset;

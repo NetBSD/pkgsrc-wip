@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/os_crypt/os_crypt.h.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/os_crypt/os_crypt.h.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/os_crypt/os_crypt.h
 @@ -13,7 +13,7 @@
  #include "base/strings/string16.h"

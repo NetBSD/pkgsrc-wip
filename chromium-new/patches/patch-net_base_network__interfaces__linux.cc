@@ -1,6 +1,6 @@
 $NetBSD$
 
---- net/base/network_interfaces_linux.cc.orig	2016-11-10 20:02:16.000000000 +0000
+--- net/base/network_interfaces_linux.cc.orig	2017-02-02 02:02:56.000000000 +0000
 +++ net/base/network_interfaces_linux.cc
 @@ -6,12 +6,14 @@
  
@@ -13,7 +13,7 @@ $NetBSD$
  #include <linux/if.h>
  #include <linux/sockios.h>
  #include <linux/wireless.h>
-+#endif  // !defined(OS_FREEBSD)
++#endif  // !defined(OS_FREEBSD) && !defined(OS_NETBSD)
  #include <set>
  #include <sys/ioctl.h>
  #include <sys/types.h>
@@ -32,7 +32,7 @@ $NetBSD$
 +#else
 +  // the flags tested above are not present on FreeBSD
 +  return false;
-+#endif  // !OS_FREEBSD
++#endif  // !OS_FREEBSD && !OS_NETBSD
  }
  
  }  // namespace
@@ -46,7 +46,7 @@ $NetBSD$
    strncpy(pwrq.ifr_name, ifname.c_str(), IFNAMSIZ - 1);
    if (ioctl(s.get(), SIOCGIWNAME, &pwrq) != -1)
      return NetworkChangeNotifier::CONNECTION_WIFI;
-+#endif  // !defined(OS_FREEBSD)
++#endif  // !defined(OS_FREEBSD) && !defined(OS_NETBSD)
  
 -#if !defined(OS_ANDROID)
 +#if !defined(OS_ANDROID) && !defined(OS_FREEBSD) && !defined(OS_NETBSD)
@@ -58,7 +58,7 @@ $NetBSD$
    if (ioctl(s.get(), SIOCETHTOOL, &ifr) != -1)
      return NetworkChangeNotifier::CONNECTION_ETHERNET;
 -#endif  // !defined(OS_ANDROID)
-+#endif  // !defined(OS_ANDROID) && !defined(OS_FREEBSD)
++#endif  // !defined(OS_ANDROID) && !defined(OS_FREEBSD) && !defined(OS_NETBSD)
  
    return NetworkChangeNotifier::CONNECTION_UNKNOWN;
  }
@@ -72,7 +72,7 @@ $NetBSD$
    wreq.u.essid.length = IW_ESSID_MAX_SIZE;
    if (ioctl(ioctl_socket.get(), SIOCGIWESSID, &wreq) != -1)
      return ssid;
-+#endif  // !defined(OS_FREEBSD)
++#endif  // !defined(OS_FREEBSD) && !defined(OS_NETBSD)
    return "";
  }
  
@@ -84,7 +84,7 @@ $NetBSD$
  
    return true;
  }
-+#endif  // !defined(OS_FREEBSD)
++#endif  // !defined(OS_FREEBSD) && !defined(OS_NETBSD)
  
  std::string GetWifiSSIDFromInterfaceListInternal(
      const NetworkInterfaceList& interfaces,

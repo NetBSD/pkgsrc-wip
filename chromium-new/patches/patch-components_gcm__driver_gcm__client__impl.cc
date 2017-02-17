@@ -1,8 +1,8 @@
 $NetBSD$
 
---- components/gcm_driver/gcm_client_impl.cc.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/gcm_driver/gcm_client_impl.cc.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/gcm_driver/gcm_client_impl.cc
-@@ -137,6 +137,9 @@ void ToCheckinProtoVersion(
+@@ -136,6 +136,9 @@ void ToCheckinProtoVersion(
      case GCMClient::PLATFORM_CROS:
        platform = checkin_proto::ChromeBuildProto_Platform_PLATFORM_CROS;
        break;

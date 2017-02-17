@@ -1,8 +1,8 @@
 $NetBSD$
 
---- media/cast/BUILD.gn.orig	2016-11-10 20:02:15.000000000 +0000
+--- media/cast/BUILD.gn.orig	2017-02-02 02:02:55.000000000 +0000
 +++ media/cast/BUILD.gn
-@@ -343,7 +343,7 @@ test("cast_unittests") {
+@@ -356,7 +356,7 @@ test("cast_unittests") {
    }
  }
  
@@ -11,8 +11,8 @@ $NetBSD$
    # This is a target for the collection of cast development tools.  They are
    # not built/linked into the Chromium browser.
    group("testing_tools") {
-@@ -388,7 +388,7 @@ if (is_win || is_mac || (is_linux && !is
-       "//build/win:default_exe_manifest",
+@@ -410,7 +410,7 @@ if (is_win || is_mac || (is_linux && !is
+       "//ui/gfx/geometry",
      ]
  
 -    if (is_linux && !is_chromeos && use_x11) {
@@ -20,7 +20,7 @@ $NetBSD$
        sources += [
          "test/linux_output_window.cc",
          "test/linux_output_window.h",
-@@ -483,7 +483,7 @@ if (is_win || is_mac || (is_linux && !is
+@@ -513,7 +513,7 @@ if (is_win || is_mac || (is_linux && !is
    }
  }
  

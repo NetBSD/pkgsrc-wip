@@ -1,8 +1,8 @@
 $NetBSD$
 
---- third_party/boringssl/BUILD.gn.orig	2016-11-10 20:02:28.000000000 +0000
+--- third_party/boringssl/BUILD.gn.orig	2017-02-02 02:03:10.000000000 +0000
 +++ third_party/boringssl/BUILD.gn
-@@ -88,7 +88,7 @@ if (is_win && !is_msan) {
+@@ -83,7 +83,7 @@ if (is_win && !is_msan) {
      } else if (current_cpu == "x64") {
        if (is_mac) {
          sources += crypto_sources_mac_x86_64
@@ -11,7 +11,7 @@ $NetBSD$
          sources += crypto_sources_linux_x86_64
        } else {
          public_configs = [ ":no_asm_config" ]
-@@ -96,14 +96,14 @@ if (is_win && !is_msan) {
+@@ -91,14 +91,14 @@ if (is_win && !is_msan) {
      } else if (current_cpu == "x86") {
        if (is_mac) {
          sources += crypto_sources_mac_x86
@@ -27,5 +27,5 @@ $NetBSD$
 -    } else if (current_cpu == "arm64" && (is_linux || is_android)) {
 +    } else if (current_cpu == "arm64" && (is_linux || is_bsd || is_android)) {
        sources += crypto_sources_linux_aarch64
- 
-       # TODO(davidben): Remove explicit arch flag once https://crbug.com/576858
+     } else {
+       public_configs = [ ":no_asm_config" ]

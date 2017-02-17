@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/storage_monitor/storage_monitor_freebsd.cc.orig	2016-11-12 02:51:25.371759033 +0000
+--- components/storage_monitor/storage_monitor_freebsd.cc.orig	2017-02-14 09:15:22.293048520 +0000
 +++ components/storage_monitor/storage_monitor_freebsd.cc
 @@ -0,0 +1,101 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.

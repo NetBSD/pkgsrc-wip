@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/app/content_main_runner.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/app/content_main_runner.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/app/content_main_runner.cc
 @@ -97,10 +97,10 @@
  #include "base/posix/global_descriptors.h"
@@ -15,7 +15,7 @@ $NetBSD$
  #include "content/zygote/zygote_main.h"
  #endif
  
-@@ -297,7 +297,7 @@ struct MainFunction {
+@@ -290,7 +290,7 @@ struct MainFunction {
    int (*function)(const MainFunctionParams&);
  };
  
@@ -24,7 +24,7 @@ $NetBSD$
  // On platforms that use the zygote, we have a special subset of
  // subprocesses that are launched via the zygote.  This function
  // fills in some process-launching bits around ZygoteMain().
-@@ -349,7 +349,7 @@ int RunZygote(const MainFunctionParams& 
+@@ -342,7 +342,7 @@ int RunZygote(const MainFunctionParams& 
    NOTREACHED() << "Unknown zygote process type: " << process_type;
    return 1;
  }
@@ -33,7 +33,7 @@ $NetBSD$
  
  static void RegisterMainThreadFactories() {
  #if !defined(CHROME_MULTIPLE_DLL_BROWSER) && !defined(CHROME_MULTIPLE_DLL_CHILD)
-@@ -419,7 +419,7 @@ int RunNamedProcessTypeMain(
+@@ -409,7 +409,7 @@ int RunNamedProcessTypeMain(
      }
    }
  

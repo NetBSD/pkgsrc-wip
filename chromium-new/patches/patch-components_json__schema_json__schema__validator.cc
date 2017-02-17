@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/json_schema/json_schema_validator.cc.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/json_schema/json_schema_validator.cc.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/json_schema/json_schema_validator.cc
 @@ -21,7 +21,11 @@
  #include "base/strings/stringprintf.h"

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/process/process_metrics.h.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/process/process_metrics.h.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/process/process_metrics.h
 @@ -22,6 +22,12 @@
  #include "base/values.h"
@@ -21,7 +21,7 @@ $NetBSD$
  BASE_EXPORT int ParseProcStatCPU(const std::string& input);
 +#endif
  
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_FREEBSD)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
  // Get the number of threads of |process| as available in /proc/<pid>/stat.
  // This should be used with care as no synchronization with running threads is
  // done. This is mostly useful to guarantee being single-threaded.

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- base/files/file_path_watcher_kqueue.h.orig	2016-11-10 20:02:09.000000000 +0000
+--- base/files/file_path_watcher_kqueue.h.orig	2017-02-02 02:02:47.000000000 +0000
 +++ base/files/file_path_watcher_kqueue.h
 @@ -5,6 +5,10 @@
  #ifndef BASE_FILES_FILE_PATH_WATCHER_KQUEUE_H_
@@ -11,5 +11,5 @@ $NetBSD$
 +#include <sys/types.h>
 +#endif
  #include <sys/event.h>
- #include <vector>
  
+ #include <memory>

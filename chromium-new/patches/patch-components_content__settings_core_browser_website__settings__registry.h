@@ -1,6 +1,6 @@
 $NetBSD$
 
---- components/content_settings/core/browser/website_settings_registry.h.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/content_settings/core/browser/website_settings_registry.h.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/content_settings/core/browser/website_settings_registry.h
 @@ -36,10 +36,11 @@ class WebsiteSettingsRegistry {
      PLATFORM_MAC = 1 << 3,

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/renderer/renderer_main_platform_delegate_linux.cc.orig	2017-02-02 02:02:54.000000000 +0000
 +++ content/renderer/renderer_main_platform_delegate_linux.cc
 @@ -29,6 +29,7 @@ void RendererMainPlatformDelegate::Platf
  }

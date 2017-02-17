@@ -1,6 +1,6 @@
 $NetBSD$
 
---- build/config/linux/pkg-config.py.orig	2016-11-10 20:02:09.000000000 +0000
+--- build/config/linux/pkg-config.py.orig	2017-02-02 02:02:47.000000000 +0000
 +++ build/config/linux/pkg-config.py
 @@ -57,8 +57,12 @@ def SetConfigPath(options):
      print "You must specify an architecture via -a if using a sysroot."

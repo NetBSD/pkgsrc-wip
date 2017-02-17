@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/browser_process_impl.h.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/browser_process_impl.h.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/browser/browser_process_impl.h
-@@ -336,7 +336,7 @@ class BrowserProcessImpl : public Browse
+@@ -340,7 +340,7 @@ class BrowserProcessImpl : public Browse
  
    std::unique_ptr<ChromeDeviceClient> device_client_;
  

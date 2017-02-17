@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/browser/accessibility/browser_accessibility_manager.h.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/browser/accessibility/browser_accessibility_manager.h.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility_manager.h
-@@ -33,7 +33,7 @@ class BrowserAccessibilityManager;
+@@ -34,7 +34,7 @@ class BrowserAccessibilityManager;
  class BrowserAccessibilityManagerAndroid;
  #elif defined(OS_WIN)
  class BrowserAccessibilityManagerWin;
@@ -11,7 +11,7 @@ $NetBSD$
  class BrowserAccessibilityManagerAuraLinux;
  #elif defined(OS_MACOSX)
  class BrowserAccessibilityManagerMac;
-@@ -273,7 +273,7 @@ class CONTENT_EXPORT BrowserAccessibilit
+@@ -244,7 +244,7 @@ class CONTENT_EXPORT BrowserAccessibilit
    BrowserAccessibilityManagerAndroid* ToBrowserAccessibilityManagerAndroid();
  #endif
  

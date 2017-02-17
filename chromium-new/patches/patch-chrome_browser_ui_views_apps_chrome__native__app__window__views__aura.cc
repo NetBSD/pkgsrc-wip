@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/browser/ui/views/apps/chrome_native_app_window_views_aura.cc
 @@ -19,7 +19,7 @@
  #include "ui/gfx/image/image_skia.h"

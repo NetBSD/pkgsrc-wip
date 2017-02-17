@@ -1,31 +1,31 @@
 $NetBSD$
 
---- third_party/WebKit/Source/platform/fonts/SimpleFontData.cpp.orig	2016-11-10 20:02:26.000000000 +0000
+--- third_party/WebKit/Source/platform/fonts/SimpleFontData.cpp.orig	2017-02-02 02:03:10.000000000 +0000
 +++ third_party/WebKit/Source/platform/fonts/SimpleFontData.cpp
-@@ -51,7 +51,7 @@ namespace blink {
+@@ -50,7 +50,7 @@ namespace blink {
  const float smallCapsFontSizeMultiplier = 0.7f;
  const float emphasisMarkFontSizeMultiplier = 0.5f;
  
 -#if OS(LINUX) || OS(ANDROID)
 +#if OS(LINUX) || OS(ANDROID) || OS(BSD)
  // This is the largest VDMX table which we'll try to load and parse.
- static const size_t maxVDMXTableSize = 1024 * 1024; // 1 MB
+ static const size_t maxVDMXTableSize = 1024 * 1024;  // 1 MB
  #endif
-@@ -102,7 +102,7 @@ void SimpleFontData::platformInit()
-     int vdmxAscent = 0, vdmxDescent = 0;
-     bool isVDMXValid = false;
+@@ -105,7 +105,7 @@ void SimpleFontData::platformInit(bool s
+   int vdmxAscent = 0, vdmxDescent = 0;
+   bool isVDMXValid = false;
  
 -#if OS(LINUX) || OS(ANDROID)
 +#if OS(LINUX) || OS(ANDROID) || OS(BSD)
-     // Manually digging up VDMX metrics is only applicable when bytecode hinting using FreeType.
-     // With DirectWrite or CoreText, no bytecode hinting is ever done.
-     // This code should be pushed into FreeType (hinted font metrics).
-@@ -135,7 +135,7 @@ void SimpleFontData::platformInit()
-     } else {
-         ascent = SkScalarRoundToInt(-metrics.fAscent);
-         descent = SkScalarRoundToInt(metrics.fDescent);
+   // Manually digging up VDMX metrics is only applicable when bytecode hinting
+   // using FreeType.  With DirectWrite or CoreText, no bytecode hinting is ever
+   // done.  This code should be pushed into FreeType (hinted font metrics).
+@@ -149,7 +149,7 @@ void SimpleFontData::platformInit(bool s
+       ascent = SkScalarRoundToScalar(-metrics.fAscent);
+       descent = SkScalarRoundToScalar(metrics.fDescent);
+     }
 -#if OS(LINUX) || OS(ANDROID)
 +#if OS(LINUX) || OS(ANDROID) || OS(BSD)
-         // When subpixel positioning is enabled, if the descent is rounded down, the descent part
-         // of the glyph may be truncated when displayed in a 'overflow: hidden' container.
-         // To avoid that, borrow 1 unit from the ascent when possible.
+     // When subpixel positioning is enabled, if the descent is rounded down, the
+     // descent part of the glyph may be truncated when displayed in a 'overflow:
+     // hidden' container.  To avoid that, borrow 1 unit from the ascent when

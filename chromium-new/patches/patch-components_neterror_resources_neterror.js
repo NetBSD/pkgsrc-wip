@@ -1,8 +1,8 @@
 $NetBSD$
 
---- components/neterror/resources/neterror.js.orig	2016-11-10 20:02:13.000000000 +0000
+--- components/neterror/resources/neterror.js.orig	2017-02-02 02:02:52.000000000 +0000
 +++ components/neterror/resources/neterror.js
-@@ -147,7 +147,7 @@ function setUpCachedButton(buttonStrings
+@@ -150,7 +150,7 @@ function setUpCachedButton(buttonStrings
  }
  
  var primaryControlOnLeft = true;

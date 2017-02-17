@@ -1,6 +1,6 @@
 $NetBSD$
 
---- device/usb/usb_context.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- device/usb/usb_context.cc.orig	2017-02-02 02:02:54.000000000 +0000
 +++ device/usb/usb_context.cc
 @@ -9,8 +9,13 @@
  #include "base/macros.h"

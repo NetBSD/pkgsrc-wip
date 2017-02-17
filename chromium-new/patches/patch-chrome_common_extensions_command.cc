@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/common/extensions/command.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/common/extensions/command.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/common/extensions/command.cc
-@@ -304,7 +304,7 @@ std::string Command::CommandPlatform() {
+@@ -302,7 +302,7 @@ std::string Command::CommandPlatform() {
    return values::kKeybindingPlatformMac;
  #elif defined(OS_CHROMEOS)
    return values::kKeybindingPlatformChromeOs;

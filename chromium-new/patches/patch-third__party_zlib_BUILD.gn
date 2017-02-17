@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/zlib/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
+--- third_party/zlib/BUILD.gn.orig	2017-02-02 02:03:12.000000000 +0000
 +++ third_party/zlib/BUILD.gn
 @@ -115,7 +115,7 @@ static_library("minizip") {
        "contrib/minizip/iowin32.h",

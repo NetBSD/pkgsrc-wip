@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/webrtc/base/network.cc.orig	2016-11-10 20:03:05.000000000 +0000
+--- third_party/webrtc/base/network.cc.orig	2017-02-02 02:03:57.000000000 +0000
 +++ third_party/webrtc/base/network.cc
 @@ -14,7 +14,7 @@
  // linux/if.h can't be included at the same time as the posix sys/if.h, and

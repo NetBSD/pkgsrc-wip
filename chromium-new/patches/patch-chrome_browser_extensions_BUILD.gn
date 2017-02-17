@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/extensions/BUILD.gn.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/extensions/BUILD.gn.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/browser/extensions/BUILD.gn
-@@ -186,7 +186,7 @@ static_library("extensions") {
+@@ -1024,7 +1024,7 @@ static_library("extensions") {
      sources -= [ "global_shortcut_listener_ozone.cc" ]
    }
  
@@ -11,7 +11,7 @@ $NetBSD$
      deps += [ "//build/linux:fontconfig" ]
  
      if (use_dbus) {
-@@ -252,6 +252,12 @@ static_library("extensions") {
+@@ -1115,6 +1115,12 @@ static_library("extensions") {
      defines += [ "ENABLE_HOTWORDING" ]
    }
  
@@ -22,5 +22,5 @@ $NetBSD$
 +  }
 +
    if (enable_service_discovery) {
-     sources += rebase_path(
-             gypi_values.chrome_browser_extensions_service_discovery_sources,
+     sources += [
+       "api/gcd_private/gcd_private_api.cc",

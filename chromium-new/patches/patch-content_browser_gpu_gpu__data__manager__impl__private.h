@@ -1,8 +1,8 @@
 $NetBSD$
 
---- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/browser/gpu/gpu_data_manager_impl_private.h.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/browser/gpu/gpu_data_manager_impl_private.h
-@@ -155,7 +155,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
+@@ -154,7 +154,7 @@ class CONTENT_EXPORT GpuDataManagerImplP
                             UnblockOtherDomainFrom3DAPIs);
    FRIEND_TEST_ALL_PREFIXES(GpuDataManagerImplPrivateTest,
                             UnblockThisDomainFrom3DAPIs);

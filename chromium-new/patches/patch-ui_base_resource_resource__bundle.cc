@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/base/resource/resource_bundle.cc.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/base/resource/resource_bundle.cc.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/base/resource/resource_bundle.cc
-@@ -638,7 +638,7 @@ void ResourceBundle::ReloadFonts() {
+@@ -651,7 +651,7 @@ void ResourceBundle::ReloadFonts() {
  }
  
  ScaleFactor ResourceBundle::GetMaxScaleFactor() const {
@@ -11,7 +11,7 @@ $NetBSD$
    return max_scale_factor_;
  #else
    return GetSupportedScaleFactors().back();
-@@ -698,7 +698,7 @@ void ResourceBundle::InitSharedInstance(
+@@ -711,7 +711,7 @@ void ResourceBundle::InitSharedInstance(
      supported_scale_factors.push_back(SCALE_FACTOR_100P);
    }
  #elif defined(OS_MACOSX) || defined(OS_CHROMEOS) || defined(OS_LINUX) || \

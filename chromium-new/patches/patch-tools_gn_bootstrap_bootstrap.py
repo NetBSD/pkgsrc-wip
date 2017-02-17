@@ -1,6 +1,6 @@
 $NetBSD$
 
---- tools/gn/bootstrap/bootstrap.py.orig	2016-11-10 20:02:30.000000000 +0000
+--- tools/gn/bootstrap/bootstrap.py.orig	2017-02-02 02:03:12.000000000 +0000
 +++ tools/gn/bootstrap/bootstrap.py
 @@ -23,6 +23,7 @@ import os
  import shutil
@@ -15,10 +15,10 @@ $NetBSD$
  is_win = sys.platform.startswith('win')
  is_linux = sys.platform.startswith('linux')
 +is_bsd = platform.system().lower().endswith('bsd')
-+is_freebsd = sys.platform.startswith('freebsd')
-+is_netbsd = sys.platform.startswith('netbsd')
  is_mac = sys.platform.startswith('darwin')
 -is_posix = is_linux or is_mac
++is_freebsd = sys.platform.startswith('freebsd')
++is_netbsd = sys.platform.startswith('netbsd')
 +is_posix = is_linux or is_mac or is_bsd
  
  def check_call(cmd, **kwargs):

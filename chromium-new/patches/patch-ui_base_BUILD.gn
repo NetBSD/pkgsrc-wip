@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/base/BUILD.gn.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/base/BUILD.gn.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/base/BUILD.gn
-@@ -347,7 +347,7 @@ component("base") {
+@@ -348,7 +348,7 @@ component("base") {
      sources += [ "touch/touch_device_android.cc" ]
    } else if (is_ios) {
      sources += [ "touch/touch_device_ios.cc" ]
@@ -11,7 +11,7 @@ $NetBSD$
      sources += [ "touch/touch_device_linux.cc" ]
    } else {
      # Empty implementation for all other cases.
-@@ -449,11 +449,11 @@ component("base") {
+@@ -450,11 +450,11 @@ component("base") {
      ]
    }
  
@@ -25,7 +25,7 @@ $NetBSD$
      deps += [ "//build/linux:fontconfig" ]
    }
  
-@@ -461,7 +461,7 @@ component("base") {
+@@ -462,7 +462,7 @@ component("base") {
      configs += [ "//build/config/linux:glib" ]
    }
  
@@ -34,7 +34,7 @@ $NetBSD$
      if (!toolkit_views && !use_aura) {
        sources -= [
          "dragdrop/drag_utils.cc",
-@@ -794,7 +794,7 @@ test("ui_base_unittests") {
+@@ -801,7 +801,7 @@ test("ui_base_unittests") {
        "ime/win/imm32_manager_unittest.cc",
        "ime/win/tsf_input_scope_unittest.cc",
      ]
@@ -43,7 +43,7 @@ $NetBSD$
        sources += [ "ime/input_method_auralinux_unittest.cc" ]
      }
      if (use_x11) {
-@@ -917,7 +917,7 @@ test("ui_base_unittests") {
+@@ -924,7 +924,7 @@ test("ui_base_unittests") {
      ]
    }
  
@@ -52,7 +52,7 @@ $NetBSD$
      # TODO(brettw): We should be able to depend on //ui/resources:ui_test_pak
      # instead of depending directly on the non-test .pak files, but depending
      # on ui_test_pak seems to have no effect.
-@@ -930,7 +930,7 @@ test("ui_base_unittests") {
+@@ -937,7 +937,7 @@ test("ui_base_unittests") {
        "//third_party/mesa:osmesa",
      ]
    }

@@ -1,19 +1,25 @@
 $NetBSD$
 
---- third_party/WebKit/Source/wtf/ByteSwap.h.orig	2016-11-10 20:02:27.000000000 +0000
+--- third_party/WebKit/Source/wtf/ByteSwap.h.orig	2017-02-02 02:03:10.000000000 +0000
 +++ third_party/WebKit/Source/wtf/ByteSwap.h
-@@ -52,9 +52,15 @@ ALWAYS_INLINE uint16_t bswap16(uint16_t 
+@@ -60,15 +60,21 @@ ALWAYS_INLINE uint16_t bswap16(uint16_t 
  
  #else
  
 +#ifndef bswap64
- ALWAYS_INLINE uint64_t bswap64(uint64_t x) { return __builtin_bswap64(x); }
+ ALWAYS_INLINE uint64_t bswap64(uint64_t x) {
+   return __builtin_bswap64(x);
+ }
 +#endif
 +#ifndef bswap32
- ALWAYS_INLINE uint32_t bswap32(uint32_t x) { return __builtin_bswap32(x); }
+ ALWAYS_INLINE uint32_t bswap32(uint32_t x) {
+   return __builtin_bswap32(x);
+ }
 +#endif
 +#ifndef bswap16
- ALWAYS_INLINE uint16_t bswap16(uint16_t x) { return __builtin_bswap16(x); }
+ ALWAYS_INLINE uint16_t bswap16(uint16_t x) {
+   return __builtin_bswap16(x);
+ }
 +#endif
  
  #endif

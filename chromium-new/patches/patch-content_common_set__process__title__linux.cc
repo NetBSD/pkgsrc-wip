@@ -1,13 +1,13 @@
 $NetBSD$
 
---- content/common/set_process_title_linux.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- content/common/set_process_title_linux.cc.orig	2017-02-02 02:02:53.000000000 +0000
 +++ content/common/set_process_title_linux.cc
 @@ -49,6 +49,8 @@
  extern char** environ;
  
  static char** g_main_argv = NULL;
 +
-+#if !defined(OS_FREEBSD)
++#if !defined(OS_BSD)
  static char* g_orig_argv0 = NULL;
  
  void setproctitle(const char* fmt, ...) {

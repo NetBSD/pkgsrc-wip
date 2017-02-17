@@ -1,6 +1,6 @@
 $NetBSD$
 
---- crypto/nss_util.cc.orig	2016-11-10 20:02:14.000000000 +0000
+--- crypto/nss_util.cc.orig	2017-02-02 02:02:54.000000000 +0000
 +++ crypto/nss_util.cc
 @@ -20,7 +20,7 @@
  #include "base/threading/thread_task_runner_handle.h"

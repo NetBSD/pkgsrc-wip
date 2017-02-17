@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/browser/ui/input_method/input_method_engine_base.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/browser/ui/input_method/input_method_engine_base.cc.orig	2017-02-02 02:02:49.000000000 +0000
 +++ chrome/browser/ui/input_method/input_method_engine_base.cc
 @@ -37,7 +37,7 @@
  #elif defined(OS_WIN)

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/browser/extensions/activity_log/activity_log.cc.orig	2016-11-10 20:02:10.000000000 +0000
+--- chrome/browser/extensions/activity_log/activity_log.cc.orig	2017-02-02 02:02:48.000000000 +0000
 +++ chrome/browser/extensions/activity_log/activity_log.cc
-@@ -46,7 +46,11 @@
+@@ -48,7 +48,11 @@
  #include "extensions/common/extension.h"
  #include "extensions/common/extension_messages.h"
  #include "extensions/common/one_shot_event.h"

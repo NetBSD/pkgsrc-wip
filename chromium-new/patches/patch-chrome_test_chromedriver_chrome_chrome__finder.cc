@@ -1,6 +1,6 @@
 $NetBSD$
 
---- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/test/chromedriver/chrome/chrome_finder.cc
 @@ -45,7 +45,7 @@ void GetApplicationDirs(std::vector<base
          installation_locations[i].Append(L"Chromium\\Application"));

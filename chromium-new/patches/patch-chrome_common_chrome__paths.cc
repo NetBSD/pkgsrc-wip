@@ -1,8 +1,8 @@
 $NetBSD$
 
---- chrome/common/chrome_paths.cc.orig	2016-11-10 20:02:11.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2017-02-02 02:02:50.000000000 +0000
 +++ chrome/common/chrome_paths.cc
-@@ -190,7 +190,7 @@ bool PathProvider(int key, base::FilePat
+@@ -197,7 +197,7 @@ bool PathProvider(int key, base::FilePat
          return false;
        break;
      case chrome::DIR_DEFAULT_DOWNLOADS_SAFE:
@@ -11,7 +11,7 @@ $NetBSD$
        if (!GetUserDownloadsDirectorySafe(&cur))
          return false;
        break;
-@@ -472,10 +472,12 @@ bool PathProvider(int key, base::FilePat
+@@ -480,10 +480,12 @@ bool PathProvider(int key, base::FilePat
        if (!base::PathExists(cur))  // We don't want to create this
          return false;
        break;
@@ -21,11 +21,11 @@ $NetBSD$
  #if defined(GOOGLE_CHROME_BUILD)
        cur = base::FilePath(FILE_PATH_LITERAL("/etc/opt/chrome/policies"));
 +#elif defined(OS_BSD)
-+      cur = base::FilePath(FILE_PATH_LITERAL("/usr/local/etc/chrome/policies"));
++      cur = base::FilePath(FILE_PATH_LITERAL("/usr/pkg/etc/chrome/policies"));
  #else
        cur = base::FilePath(FILE_PATH_LITERAL("/etc/chromium/policies"));
  #endif
-@@ -526,7 +528,7 @@ bool PathProvider(int key, base::FilePat
+@@ -534,7 +536,7 @@ bool PathProvider(int key, base::FilePat
  #endif
        break;
  
@@ -34,17 +34,17 @@ $NetBSD$
      case chrome::DIR_NATIVE_MESSAGING:
  #if defined(OS_MACOSX)
  #if defined(GOOGLE_CHROME_BUILD)
-@@ -540,6 +542,9 @@ bool PathProvider(int key, base::FilePat
+@@ -548,6 +550,9 @@ bool PathProvider(int key, base::FilePat
  #if defined(GOOGLE_CHROME_BUILD)
        cur = base::FilePath(FILE_PATH_LITERAL(
            "/etc/opt/chrome/native-messaging-hosts"));
 +#elif defined(OS_BSD)
 +      cur = base::FilePath(FILE_PATH_LITERAL(
-+          "/usr/local/etc/chrome/native-messaging-hosts"));
++          "/usr/pkg/etc/chrome/native-messaging-hosts"));
  #else
        cur = base::FilePath(FILE_PATH_LITERAL(
            "/etc/chromium/native-messaging-hosts"));
-@@ -552,7 +557,7 @@ bool PathProvider(int key, base::FilePat
+@@ -560,7 +565,7 @@ bool PathProvider(int key, base::FilePat
          return false;
        cur = cur.Append(FILE_PATH_LITERAL("NativeMessagingHosts"));
        break;

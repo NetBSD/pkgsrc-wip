@@ -1,10 +1,10 @@
 $NetBSD$
 
---- ipc/ipc_channel.h.orig	2016-11-10 20:02:15.000000000 +0000
+--- ipc/ipc_channel.h.orig	2017-02-02 02:02:55.000000000 +0000
 +++ ipc/ipc_channel.h
-@@ -290,7 +290,7 @@ class IPC_EXPORT Channel : public Endpoi
-       IPC::ChannelHandle* handle0,
-       IPC::ChannelHandle* handle1);
+@@ -245,7 +245,7 @@ class IPC_EXPORT Channel : public Sender
+   static std::string GenerateUniqueRandomChannelID();
+ #endif
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)

@@ -1,8 +1,8 @@
 $NetBSD$
 
---- ui/message_center/views/message_center_button_bar.h.orig	2016-11-10 20:02:30.000000000 +0000
+--- ui/message_center/views/message_center_button_bar.h.orig	2017-02-02 02:03:13.000000000 +0000
 +++ ui/message_center/views/message_center_button_bar.h
-@@ -76,7 +76,7 @@ class MessageCenterButtonBar : public vi
+@@ -74,7 +74,7 @@ class MessageCenterButtonBar : public vi
    // close-on-deactivation is off. This is a tentative solution. Once pkotwicz
    // Fixes the problem of focus-follow-mouse, close-on-deactivation will be
    // back and this field will be removed. See crbug.com/319516.

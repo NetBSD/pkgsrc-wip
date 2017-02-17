@@ -1,6 +1,6 @@
 $NetBSD$
 
---- third_party/pdfium/fpdfsdk/javascript/JS_Value.cpp.orig	2016-11-10 20:03:03.000000000 +0000
+--- third_party/pdfium/fpdfsdk/javascript/JS_Value.cpp.orig	2017-02-02 02:03:53.000000000 +0000
 +++ third_party/pdfium/fpdfsdk/javascript/JS_Value.cpp
 @@ -458,11 +458,12 @@ v8::Local<v8::Date> CJS_Date::ToV8Date(C
  }
