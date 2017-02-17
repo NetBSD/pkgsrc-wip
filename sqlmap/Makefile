@@ -9,6 +9,8 @@ HOMEPAGE=	http://sqlmap.org/
 COMMENT=	Automatic SQL injection and database takeover tool
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+
 REPLACE_BASH+=	sqlmap/extra/shutils/blanks.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/pep8.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/precommit-hook.sh
