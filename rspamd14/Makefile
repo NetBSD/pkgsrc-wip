@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rspamd-1.4.1
+DISTNAME=	rspamd-1.4.3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.rspamd.com/downloads/
 EXTRACT_SUFX=	.tar.xz
