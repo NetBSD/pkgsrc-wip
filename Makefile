@@ -3767,7 +3767,6 @@ SUBDIR+=	rpm5
 SUBDIR+=	rsem
 SUBDIR+=	rsget
 SUBDIR+=	rsound
-SUBDIR+=	rspamd14
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
