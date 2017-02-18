@@ -1,10 +1,10 @@
 $NetBSD$
 
---- plugins/DebuggerCore/unix/netbsd/PlatformProcess.h.orig	2017-02-18 23:32:09.463008446 +0000
-+++ plugins/DebuggerCore/unix/netbsd/PlatformProcess.h
-@@ -0,0 +1,27 @@
+--- plugins/DebuggerCore/unix/netbsd/DialogMemoryAccess.h.orig	2017-02-18 23:34:04.145523175 +0000
++++ plugins/DebuggerCore/unix/netbsd/DialogMemoryAccess.h
+@@ -0,0 +1,44 @@
 +/*
-+Copyright (C) 2015 - 2015 Evan Teran
++Copyright (C) 2016 - 2016 Evan Teran
 +                          evan.teran@gmail.com
 +
 +This program is free software: you can redistribute it and/or modify
@@ -21,12 +21,29 @@ $NetBSD$
 +along with this program.  If not, see <http://www.gnu.org/licenses/>.
 +*/
 +
-+#ifndef PLATOFORM_PROCESS_20150517_H_
-+#define PLATOFORM_PROCESS_20150517_H_
++#ifndef DIALOG_MEMORY_ACCESS_20160930_H_
++#define DIALOG_MEMORY_ACCESS_20160930_H_
 +
-+#include "IProcess.h"
++#include <QDialog>
 +
-+class PlatformProcess : public IProcess {
++namespace DebuggerCorePlugin {
++
++namespace Ui { class DialogMemoryAccess; }
++
++class DialogMemoryAccess : public QDialog {
++	Q_OBJECT
++
++public:
++	DialogMemoryAccess(QWidget *parent = 0);
++	virtual ~DialogMemoryAccess();
++
++public:
++	bool warnNextTime() const;
++
++private:
++	 Ui::DialogMemoryAccess *const ui;
 +};
++
++}
 +
 +#endif

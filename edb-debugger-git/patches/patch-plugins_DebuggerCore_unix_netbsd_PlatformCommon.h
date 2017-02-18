@@ -1,6 +1,6 @@
 $NetBSD$
 
---- plugins/DebuggerCore/unix/netbsd/PlatformCommon.h.orig	2017-02-18 23:31:00.955171803 +0000
+--- plugins/DebuggerCore/unix/netbsd/PlatformCommon.h.orig	2017-02-18 23:32:09.441357375 +0000
 +++ plugins/DebuggerCore/unix/netbsd/PlatformCommon.h
 @@ -0,0 +1,97 @@
 +/*

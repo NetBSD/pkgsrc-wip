@@ -1,10 +1,10 @@
 $NetBSD$
 
---- plugins/DebuggerCore/unix/netbsd/PlatformProcess.h.orig	2017-02-18 23:32:09.463008446 +0000
-+++ plugins/DebuggerCore/unix/netbsd/PlatformProcess.h
-@@ -0,0 +1,27 @@
+--- plugins/DebuggerCore/unix/netbsd/DialogMemoryAccess.cpp.orig	2017-02-18 23:34:06.650717163 +0000
++++ plugins/DebuggerCore/unix/netbsd/DialogMemoryAccess.cpp
+@@ -0,0 +1,38 @@
 +/*
-+Copyright (C) 2015 - 2015 Evan Teran
++Copyright (C) 2006 - 2015 Evan Teran
 +                          evan.teran@gmail.com
 +
 +This program is free software: you can redistribute it and/or modify
@@ -21,12 +21,23 @@ $NetBSD$
 +along with this program.  If not, see <http://www.gnu.org/licenses/>.
 +*/
 +
-+#ifndef PLATOFORM_PROCESS_20150517_H_
-+#define PLATOFORM_PROCESS_20150517_H_
++#include "DialogMemoryAccess.h"
++#include "ui_DialogMemoryAccess.h"
 +
-+#include "IProcess.h"
++namespace DebuggerCorePlugin {
 +
-+class PlatformProcess : public IProcess {
-+};
++DialogMemoryAccess::DialogMemoryAccess(QWidget *parent) : QDialog(parent), ui(new Ui::DialogMemoryAccess) {
++	ui->setupUi(this);
++	adjustSize();
++	setFixedSize(width(), height());
++}
 +
-+#endif
++DialogMemoryAccess::~DialogMemoryAccess() {
++	delete ui;
++}
++
++bool DialogMemoryAccess::warnNextTime() const {
++	return !ui->checkNeverShowAgain->isChecked();
++}
++
++}

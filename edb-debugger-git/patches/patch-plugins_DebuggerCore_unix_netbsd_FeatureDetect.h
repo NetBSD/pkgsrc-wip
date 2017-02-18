@@ -1,10 +1,10 @@
 $NetBSD$
 
---- plugins/DebuggerCore/unix/netbsd/PlatformProcess.h.orig	2017-02-18 23:32:09.463008446 +0000
-+++ plugins/DebuggerCore/unix/netbsd/PlatformProcess.h
-@@ -0,0 +1,27 @@
+--- plugins/DebuggerCore/unix/netbsd/FeatureDetect.h.orig	2017-02-18 23:33:33.499776061 +0000
++++ plugins/DebuggerCore/unix/netbsd/FeatureDetect.h
+@@ -0,0 +1,30 @@
 +/*
-+Copyright (C) 2015 - 2015 Evan Teran
++Copyright (C) 2016 - 2016 Evan Teran
 +                          evan.teran@gmail.com
 +
 +This program is free software: you can redistribute it and/or modify
@@ -21,12 +21,15 @@ $NetBSD$
 +along with this program.  If not, see <http://www.gnu.org/licenses/>.
 +*/
 +
-+#ifndef PLATOFORM_PROCESS_20150517_H_
-+#define PLATOFORM_PROCESS_20150517_H_
++#ifndef FEATURE_DETECT_H_
++#define FEATURE_DETECT_H_
 +
-+#include "IProcess.h"
++namespace DebuggerCorePlugin {
++namespace feature {
 +
-+class PlatformProcess : public IProcess {
-+};
++bool detect_proc_access(bool *read_broken, bool *write_broken);
++
++}
++}
 +
 +#endif
