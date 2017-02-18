@@ -26,12 +26,13 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-#ONLY_FOR_PLATFORM+=	*-*-arm *-*-i386 # not tested yet
+#ONLY_FOR_PLATFORM+=	*-*-arm # not tested yet
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 
 # Workaround
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
+REPLACE_BASH=		chrome/tools/build/linux/chrome-wrapper
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_MESSAGE.path=	Fixing pkg path
