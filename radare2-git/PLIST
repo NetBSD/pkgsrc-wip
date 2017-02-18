@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/r2
+bin/r2-indent
 bin/r2agent
 bin/r2pm
 bin/rabin2
@@ -57,6 +58,7 @@ include/libr/r_types.h
 include/libr/r_types_base.h
 include/libr/r_userconf.h
 include/libr/r_util.h
+include/libr/r_util/r_asn1.h
 include/libr/r_util/r_base64.h
 include/libr/r_util/r_base91.h
 include/libr/r_util/r_big.h
@@ -75,6 +77,7 @@ include/libr/r_util/r_mem.h
 include/libr/r_util/r_mixed.h
 include/libr/r_util/r_name.h
 include/libr/r_util/r_num.h
+include/libr/r_util/r_pkcs7.h
 include/libr/r_util/r_pool.h
 include/libr/r_util/r_punycode.h
 include/libr/r_util/r_queue.h
@@ -92,6 +95,7 @@ include/libr/r_util/r_sys.h
 include/libr/r_util/r_tree.h
 include/libr/r_util/r_uleb128.h
 include/libr/r_util/r_utf8.h
+include/libr/r_util/r_x509.h
 include/libr/r_version.h
 include/libr/sdb.h
 include/libr/sdb/buffer.h
@@ -193,6 +197,7 @@ lib/pkgconfig/r_search.pc
 lib/pkgconfig/r_socket.pc
 lib/pkgconfig/r_syscall.pc
 lib/pkgconfig/r_util.pc
+lib/radare2/${PKGVERSION}-git/${PKGVERSION}-git
 lib/radare2/${PKGVERSION}-git/asm_LM32.so
 lib/radare2/${PKGVERSION}-git/asm_propeller.so
 lib/radare2/${PKGVERSION}-git/bin_xtr_dyldcache.so
@@ -266,6 +271,7 @@ share/doc/radare2/static
 share/doc/radare2/static-plugins
 share/doc/radare2/strings
 share/doc/radare2/types.md
+share/doc/radare2/uncrustify.cfg
 share/doc/radare2/vim
 share/doc/radare2/vim2r2.js
 share/doc/radare2/windbg
