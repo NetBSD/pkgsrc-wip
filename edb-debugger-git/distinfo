@@ -4,3 +4,6 @@ SHA1 (edb-debugger-0.9.21.tar.gz) = eff050b5ec53f02ebc96dbbb80f1731036e2c6f6
 RMD160 (edb-debugger-0.9.21.tar.gz) = d7821e07b607667090b1158b559053856ef077de
 SHA512 (edb-debugger-0.9.21.tar.gz) = 88a04cafb2c27a3af6bcfc48c841c795fb5bba348f64fe52957716c2c03e4cd056d045b241135c5be7fd7174d2c5a35fa5c95dc2b6aad4fb5c04f4fe36ab4f0d
 Size (edb-debugger-0.9.21.tar.gz) = 996932 bytes
+SHA1 (patch-plugins_HeapAnalyzer_DialogHeap.cpp) = a11c5aeb91168f4bf2f58fa35137fec2d5107ea4
+SHA1 (patch-plugins_ProcessProperties_DialogProcessProperties.cpp) = 31d9915e63a963fdd597dc141e3424fa8f05e81b
+SHA1 (patch-src_Debugger.cpp) = 6e680dfecf7fe690c3d557002515f21313b85ca7
