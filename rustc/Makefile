@@ -24,7 +24,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 #CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.libLLVM}
 #CONFIGURE_ARGS+=	--python=python
 CONFIGURE_ARGS+=	--disable-jemalloc  # XXX NetBSD only?
-CONFIGURE_ARGS+=	--disable-codegen-tests # otherwise needs LLVM's FileCheck executable, which libLLVM doesn't install
+#CONFIGURE_ARGS+=	--disable-codegen-tests # otherwise needs LLVM's FileCheck executable, which libLLVM doesn't install
 
 USE_LANGUAGES=	c c++
 GCC_REQD=	4.7 4.8
@@ -46,7 +46,6 @@ REPLACE_BASH+=	src/rust-installer/gen-installer.sh
 #
 CONFIGURE_ARGS+=	--disable-docs
 
-
 TEST_TARGET=	check
 
 #
@@ -66,7 +65,8 @@ RUST_CARGO0_DISTHASH:=	fbeea902d2c9a5be6d99cc35681565d8f7832592
 DISTFILES:=		${DEFAULT_DISTFILES}
 
 # Tier 1:
-.if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
+.if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || \
+	make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
 RUST_ARCH:=		i686-apple-darwin
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
@@ -76,7 +76,8 @@ SITES.${RUST_CARGO0}= \
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
+.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || \
+	make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
 RUST_ARCH:=		x86_64-apple-darwin
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
@@ -86,7 +87,8 @@ SITES.${RUST_CARGO0}= \
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
+.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || \
+	make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
 RUST_ARCH:=		i686-unknown-linux-gnu
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
@@ -96,7 +98,8 @@ SITES.${RUST_CARGO0}= \
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || \
+	make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
 RUST_ARCH:=		x86_64-unknown-linux-gnu
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
@@ -107,7 +110,8 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
 
 # Tier 2 (XXX currently incomplete):
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || \
+	make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
 RUST_ARCH:=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
@@ -117,7 +121,8 @@ SITES.${RUST_CARGO0}= \
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
+.if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || \
+	make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
 RUST_ARCH:=		x86_64-unknown-freebsd
 RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 RUST_STD0:=		rust-std-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
@@ -128,7 +133,8 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
 .endif
 
 # Tier 3
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
+#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || \
+#	make(makesum) || make(mirror-distfiles) || make(upload-distfiles)
 #RUST_ARCH:=		x86_64-sun-solaris
 #RUST_STAGE0:=		rustc-${RUST_STAGE0_VERSION}-${RUST_ARCH}.tar.gz
 #DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD0} ${RUST_CARGO0}
@@ -157,14 +163,8 @@ PLIST_VARS+=		jemalloc
 
 CONFIGURE_ARGS+=	--build=${RUST_ARCH}
 
-MAKE_ENV+=	RUSTC_FLAGS=-C\ link-args=${COMPILER_RPATH_FLAG}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib
-MAKE_ENV+=	RUSTFLAGS=-C\ link-args=${COMPILER_RPATH_FLAG}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib
-
-post-wrapper:
-	${RUN}${ECHO} 'transform=R:$$ORIGIN/../lib:'${PREFIX}/lib/rustlib/${RUST_ARCH}/lib >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.cc}
-	${RUN}${ECHO} 'transform=R:$$ORIGIN/../lib:'${PREFIX}/lib/rustlib/${RUST_ARCH}/lib >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.cxx}
-	${RUN}${ECHO} append=${COMPILER_RPATH_FLAG}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.cc}
-	${RUN}${ECHO} append=${COMPILER_RPATH_FLAG}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.cxx}
+#MAKE_ENV+=	RUSTC_FLAGS=-C\ link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib
+MAKE_ENV+=	RUSTFLAGS=-C\ link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib
 
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
@@ -172,6 +172,7 @@ PLIST_SUBST+=		RUST_ARCH=${RUST_ARCH:Q}
 PLIST_SUBST+=		SOEXT=${SOEXT:Q}
 PRINT_PLIST_AWK+=	{ gsub(/${RUST_ARCH}/, "$${RUST_ARCH}") }
 PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
+GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && ${FIND} lib lib/rustlib/${RUST_ARCH}/lib \( -type f -or -type l \) -and -name 'lib*-*.*' | ${SORT} -dr;
 
 post-extract:
 	${MKDIR} ${WRKSRC}/build/cache/${RUST_STAGE0_DATE}
@@ -193,6 +194,8 @@ SUBST_FILES.ranlib=	mk/rt.mk
 SUBST_SED.ranlib=	-e 's,RANLIB=.* \\,RANLIB="true" \\,g'
 .endif
 
+INSTALL_TARGET=		dist
+
 post-install:
 	cd ${WRKDIR} && \
 	${TAR} -pzxf ${WRKSRC}/build/dist/rust-std-${RUST_VERSION}-${RUST_ARCH}.tar.gz && \
@@ -204,7 +207,6 @@ post-install:
 	./install.sh --disable-ldconfig --disable-verify --destdir=${DESTDIR} --prefix=${PREFIX} --mandir=${PKGMANDIR}
 	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/install.log
 
-GENERATE_PLIST+=  cd ${DESTDIR}${PREFIX} && ${FIND} lib lib/rustlib/${RUST_ARCH}/lib \( -type f -or -type l \) -and -name 'lib*-*.*' | ${SORT} -dr;
 
 #.include "../../lang/libLLVM/buildlink3.mk"
 #.include "../../lang/llvm/buildlink3.mk"
