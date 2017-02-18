@@ -1,6 +1,6 @@
 $NetBSD$
 
---- plugins/DebuggerCore/unix/netbsd/PlatformProcess.cpp.orig	2017-02-18 22:55:39.962587886 +0000
+--- plugins/DebuggerCore/unix/netbsd/PlatformProcess.cpp.orig	2017-02-18 23:29:40.681119972 +0000
 +++ plugins/DebuggerCore/unix/netbsd/PlatformProcess.cpp
 @@ -0,0 +1,19 @@
 +/*
