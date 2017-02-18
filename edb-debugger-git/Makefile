@@ -1,10 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	edb-debugger-0.9.21
+PKGNAME=	edb-debugger-0.9.21
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=eteran/}
 
-#WRKSRC=		${WRKDIR}/debugger
+GIT_REPOSITORIES=	edb
+GIT_REPO.edb=		git://github.com/eteran/edb-debugger.git
+
+WRKSRC=		${WRKDIR}/edb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://codef00.com/projects#debugger
@@ -15,12 +17,10 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-#do-configure:
-#	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake -makefile DEFAULT_PLUGIN_PATH="${PREFIX}/lib/${PKGBASE}/"
-#
-#.include "../../devel/boost-headers/buildlink3.mk"
-#.include "../../x11/qt4-libs/buildlink3.mk"
-#.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../wip/mk/git-package.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../graphics/graphviz/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../devel/capstone/buildlink3.mk"
