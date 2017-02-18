@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.amirrorclear.net/flowers/game/sil/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.amirrorclear.net/flowers/game/sil/
+HOMEPAGE=	http://www.amirrorclear.net/flowers/game/sil/index.html
 COMMENT=	Roguelike that stays true to the writing of Tolkien
 LICENSE=	gnu-gpl-v2 OR angband
 
