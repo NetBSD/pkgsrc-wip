@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	cov-analysis-netbsd64-8.5.0.3
-PKGNAME=	coverity-analysis-bin-8.5.0.3
+DISTNAME=	cov-analysis-netbsd64-8.7.0
+PKGNAME=	coverity-analysis-bin-8.7.0
 CATEGORIES=	devel
 MASTER_SITES=	# http://scan.coverity.com/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scan.coverity.com/
-COMMENT=	Static Analysis for Java, C/C++, C#, JavaScript, Ruby, or Python
+COMMENT=	Static Analysis for Java, C/C++, C\#, JavaScript, Ruby, or Python
 #LICENSE=	# TODO: (see mk/license.mk)
 
 INSTALLATION_DIRS+=	${PREFIX}/coverity
