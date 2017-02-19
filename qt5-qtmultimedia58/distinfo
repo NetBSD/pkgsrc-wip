@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/07/16 00:37:44 markd Exp $
+
+SHA1 (qtmultimedia-opensource-src-5.8.0.tar.xz) = bd4ca8efda80b0f206d373425225ec13c59c6505
+RMD160 (qtmultimedia-opensource-src-5.8.0.tar.xz) = 2ec53aff67f3cf5fd45b3d9f5d71899dc102f395
+SHA512 (qtmultimedia-opensource-src-5.8.0.tar.xz) = 71f8f93bf55a59c36cfa52bea8b226b29d6cfd88c1906e784e3b0b5ca7511e5ce17fc09c92e906df697305895d7e0ece8408dd864293330dcf686d2f7cc55ecb
+Size (qtmultimedia-opensource-src-5.8.0.tar.xz) = 3560672 bytes

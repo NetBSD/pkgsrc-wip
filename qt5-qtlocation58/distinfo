@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.2 2015/10/26 19:04:00 adam Exp $
+
+SHA1 (qtlocation-opensource-src-5.8.0.tar.xz) = 13eecddfa6cb350c5d16f03d995b7de1f64fe12d
+RMD160 (qtlocation-opensource-src-5.8.0.tar.xz) = 7b161c72dd8a05f7b54a845a586da0e082730d52
+SHA512 (qtlocation-opensource-src-5.8.0.tar.xz) = 78165ad95b3021fb9f4f81b7ae8029c05dae2a65982d5bb4f1f6b93b59dc95401892a9ff7ef164308f71f2b318224b3cf0b92c152cda381dad640f65eb9d9c5e
+Size (qtlocation-opensource-src-5.8.0.tar.xz) = 3217248 bytes
+SHA1 (patch-src_3rdparty_clip2tri_clip2tri.pro) = cf40588066fd6618dcf05803627cf16dd611d134
+SHA1 (patch-src_3rdparty_clipper_clipper.pro) = 71199f7c1eb2e1c96f8d1b90849887a0a9402761
+SHA1 (patch-src_3rdparty_poly2tri_poly2tri.pro) = 7495a2d6171c64330246f3d0fa821ade36a33a9e
