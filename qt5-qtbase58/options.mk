@@ -15,7 +15,7 @@ PLIST.cups=		yes
 CONFIGURE_ARGS+=	-no-cups
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtk2)
+.if !empty(PKG_OPTIONS:Mgtk3)
 .  include "../../x11/gtk3/buildlink3.mk"
 CONFIGURE_ARGS+=	-gtk
 PLIST.gtk3=		yes

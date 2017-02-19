@@ -58,8 +58,8 @@ PLIST.unix=		yes
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if empty(PKGPATH:Mwip/qt5-qtbase58) \
-	&& empty(PKGPATH:Mx11/qt5-odbc) && empty(PKGPATH:Mx11/qt5-mysql) \
-	&& empty(PKGPATH:Mx11/qt5-psql) && empty(PKGPATH:Mx11/qt5-sqlite3)
+	&& empty(PKGPATH:Mwip/qt5-odbc58) && empty(PKGPATH:Mwip/qt5-mysql58) \
+	&& empty(PKGPATH:Mwip/qt5-psql58) && empty(PKGPATH:Mwip/qt5-sqlite358)
 do-configure:
 	cd ${WRKSRC} && ${QTPREFIX}/bin/qmake -o Makefile
 .endif

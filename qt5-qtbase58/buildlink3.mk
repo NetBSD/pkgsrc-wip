@@ -5,9 +5,9 @@ BUILDLINK_TREE+=	qt5-qtbase
 .if !defined(QT5_QTBASE_BUILDLINK3_MK)
 QT5_QTBASE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.5.1nb9
-BUILDLINK_PKGSRCDIR.qt5-qtbase?=	../../x11/qt5-qtbase
+BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.8.0
+BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.8.0
+BUILDLINK_PKGSRCDIR.qt5-qtbase?=	../../wip/qt5-qtbase58
 
 BUILDLINK_INCDIRS.qt5-qtbase+=	qt5/include
 BUILDLINK_LIBDIRS.qt5-qtbase+=	qt5/lib

@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	-no-sql-sqlite
 CONFIGURE_ARGS+=        -no-sql-sqlite2
 CONFIGURE_ARGS+=	-no-sql-tds
 CONFIGURE_ARGS+=	-no-strip
+CONFIGURE_ARGS+=	-no-use-gold-linker
 CONFIGURE_ARGS+=	-system-harfbuzz
 CONFIGURE_ARGS+=	-system-libjpeg
 CONFIGURE_ARGS+=	-system-libpng
@@ -102,7 +103,7 @@ LDFLAGS+=		-lexecinfo
 LDFLAGS+=		-lkvm	# see patch-src_corelib_io_qlockfile__unix.cpp
 .endif
 
-REPLACE_PERL+=		bin/syncqt.pl
+REPLACE_PERL+=		bin/syncqt.pl bin/fixqt4headers.pl
 
 PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize
@@ -121,7 +122,7 @@ CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaintplugins/extrafilt
 CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
 CHECK_INTERPRETER_SKIP+=qt5/mkspecs/macx-ios-clang/rename_main.sh
 
-SUBST_CLASSES+=		opt path
+SUBST_CLASSES+=		opt path static
 SUBST_STAGE.opt=	pre-configure
 SUBST_MESSAGE.opt=	Removing some Qt5 default compiler flags.
 SUBST_FILES.opt=	mkspecs/common/gcc-base.conf
@@ -133,11 +134,31 @@ SUBST_MESSAGE.path=	Add to default XDG path.
 SUBST_FILES.path=	src/corelib/io/qstandardpaths_unix.cpp
 SUBST_VARS.path=	LOCALBASE
 
-BROKEN_FILES=		qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
+SUBST_STAGE.static=	post-patch
+SUBST_MESSAGE.static=	Build shared libraries.
+SUBST_FILES.static=	src/platformsupport/accessibility/accessibility.pro
+SUBST_FILES.static+=	src/platformsupport/cglconvenience/cglconvenience.pro
+SUBST_FILES.static+=	src/platformsupport/clipboard/clipboard.pro
+SUBST_FILES.static+=	src/platformsupport/devicediscovery/devicediscovery.pro
+SUBST_FILES.static+=	src/platformsupport/eglconvenience/eglconvenience.pro
+SUBST_FILES.static+=	src/platformsupport/eventdispatchers/eventdispatchers.pro
+SUBST_FILES.static+=	src/platformsupport/fbconvenience/fbconvenience.pro
+SUBST_FILES.static+=	src/platformsupport/fontdatabases/fontdatabases.pro
+SUBST_FILES.static+=	src/platformsupport/glxconvenience/glxconvenience.pro
+SUBST_FILES.static+=	src/platformsupport/graphics/graphics.pro
+SUBST_FILES.static+=	src/platformsupport/input/input.pro
+SUBST_FILES.static+=	src/platformsupport/linuxaccessibility/linuxaccessibility.pro
+SUBST_FILES.static+=	src/platformsupport/platformcompositor/platformcompositor.pro
+SUBST_FILES.static+=	src/platformsupport/services/services.pro
+SUBST_FILES.static+=	src/platformsupport/themes/themes.pro
+SUBST_SED.static=	-e 's,static internal_module,internal_module,'
 
-PC_FILES=		Qt5Bootstrap.pc Qt5Concurrent.pc Qt5Core.pc \
+BROKEN_FILES=		qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
+BROKEN_FILES1=		qt5/mkspecs/qmodule.pri
+
+PC_FILES=		Qt5Concurrent.pc Qt5Core.pc Qt5DBus.pc \
 			Qt5Gui.pc Qt5Network.pc Qt5OpenGL.pc \
-			Qt5OpenGLExtensions.pc Qt5PlatformSupport.pc \
+			Qt5OpenGLExtensions.pc \
 			Qt5PrintSupport.pc Qt5Sql.pc Qt5Test.pc \
 			Qt5Widgets.pc Qt5Xml.pc
 
@@ -168,8 +189,8 @@ pre-configure:
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/default_pre.prf
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/objective_c.prf.orig
 
-post-configure:
-	cd ${WRKSRC} && ./bin/qmake -o Makefile
+#post-configure:
+#	cd ${WRKSRC} && ./bin/qmake -o Makefile
 
 post-install:
 .for i in ${PC_FILES}
@@ -184,6 +205,11 @@ post-install:
 		> ${DESTDIR}${PREFIX}/${BROKEN_FILES}.1
 	${MV} -f ${DESTDIR}${PREFIX}/${BROKEN_FILES}.1 \
 		${DESTDIR}${PREFIX}/${BROKEN_FILES}
+	${SED} -e 's,PKG_CONFIG_EXECUTABLE = .*,PKG_CONFIG_EXECUTABLE = ${TOOLS_PATH.pkg-config},' \
+		${DESTDIR}${PREFIX}/${BROKEN_FILES1} \
+		> ${DESTDIR}${PREFIX}/${BROKEN_FILES1}.1
+	${MV} -f ${DESTDIR}${PREFIX}/${BROKEN_FILES1}.1 \
+		${DESTDIR}${PREFIX}/${BROKEN_FILES1}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
