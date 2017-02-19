@@ -94,3 +94,12 @@ $NetBSD$
  	// we attempt to reuse an open output window
  	if(edb::v1::config().tty_enabled && tty_proc_->state() != QProcess::Running) {
  		const QString command = edb::v1::config().tty_command;
+@@ -2130,7 +2171,7 @@ edb::EVENT_STATUS Debugger::handle_trap(
+ 		state.set_instruction_pointer(previous_ip);
+ 		edb::v1::debugger_core->set_state(state);
+ 
+-#if defined(Q_OS_LINUX)
++#if defined(Q_OS_LINUX) || defined(Q_OS_NETBSD)
+ 		// test if we have hit our internal LD hook BP. If so, read in the r_debug
+ 		// struct so we can get the state, then we can just resume
+ 		// TODO(eteran): add an option to let the user stop of debug events
