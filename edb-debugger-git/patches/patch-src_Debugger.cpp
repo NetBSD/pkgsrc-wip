@@ -11,7 +11,75 @@ $NetBSD$
  #include <unistd.h>
  #include <fcntl.h>
  #endif
-@@ -533,7 +533,7 @@ QString Debugger::create_tty() {
+@@ -105,6 +105,7 @@ const quint64 ld_loader_tag     = Q_UINT
+ 
+ template <class Addr>
+ void handle_library_event(IProcess *process, edb::address_t debug_pointer) {
++#if defined(Q_OS_LINUX)
+ 	edb::linux::r_debug<Addr> dynamic_info;
+ 	const bool ok = process->read_bytes(debug_pointer, &dynamic_info, sizeof(dynamic_info));
+ 	if(ok) {
+@@ -130,11 +131,40 @@ void handle_library_event(IProcess *proc
+ 			break;
+ 		}
+ 	}
++#elif defined(Q_OS_NETBSD)
++	edb::netbsd::r_debug<Addr> dynamic_info;
++	const bool ok = process->read_bytes(debug_pointer, &dynamic_info, sizeof(dynamic_info));
++	if(ok) {
++
++		// NOTE(eteran): at least on my system, the name of
++		//               what is being loaded is either in
++		//               r8 or r13 depending on which event
++		//               we are looking at.
++		// TODO(eteran): find a way to get the name reliably
++
++		switch(dynamic_info.r_state) {
++		case edb::netbsd::r_debug<Addr>::RT_CONSISTENT:
++			// TODO(eteran): enable this once we are confident
++	#if 0
++			edb::v1::memory_regions().sync();
++	#endif
++			break;
++		case edb::netbsd::r_debug<Addr>::RT_ADD:
++			//qDebug("LIBRARY LOAD EVENT");
++			break;
++		case edb::netbsd::r_debug<Addr>::RT_DELETE:
++			//qDebug("LIBRARY UNLOAD EVENT");
++			break;
++		}
++	}
++#else
++#error portme
++#endif
+ }
+ 
+ template <class Addr>
+ edb::address_t find_linker_hook_address(IProcess *process, edb::address_t debug_pointer) {
+-
++#if defined(Q_OS_LINUX)
+ 	edb::linux::r_debug<Addr> dynamic_info;
+ 	const bool ok = process->read_bytes(debug_pointer, &dynamic_info, sizeof(dynamic_info));
+ 	if(ok) {
+@@ -142,6 +172,17 @@ edb::address_t find_linker_hook_address(
+ 	}
+ 
+ 	return 0;
++#elif defined(Q_OS_NETBSD)
++	edb::netbsd::r_debug<Addr> dynamic_info;
++	const bool ok = process->read_bytes(debug_pointer, &dynamic_info, sizeof(dynamic_info));
++	if(ok) {
++		return edb::address_t::fromZeroExtended(dynamic_info.r_brk);
++	}
++
++	return 0;
++#else
++#error portme
++#endif
+ }
+ 
+ //--------------------------------------------------------------------------
+@@ -533,7 +574,7 @@ QString Debugger::create_tty() {
  
  	QString result_tty = tty_file_;
  
