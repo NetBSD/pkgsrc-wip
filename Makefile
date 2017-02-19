@@ -3682,7 +3682,6 @@ SUBDIR+=	qt5-libqtlua
 SUBDIR+=	qt5-qscintilla
 SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qt5-qtbase56
-SUBDIR+=	qt5-qtbase57
 SUBDIR+=	qt5-qtbase58
 SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtcreator
