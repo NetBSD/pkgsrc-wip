@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2017-02-19 00:51:34.453399346 +0000
++++ CMakeLists.txt
+@@ -52,6 +52,10 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux"
+ 	include_directories("include/os/unix/linux")
+ endif()
+ 
++if(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
++	include_directories("include/os/unix/netbsd")
++endif()
++
+ if((${CMAKE_SYSTEM_PROCESSOR} MATCHES "i[3456]86") OR (${CMAKE_SYSTEM_PROCESSOR} STREQUAL "x86_64"))
+ 	include_directories("include/arch/x86-generic")
+ endif()
