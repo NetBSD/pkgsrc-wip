@@ -3573,7 +3573,6 @@ SUBDIR+=	py-txWS
 SUBDIR+=	py-txZMQ
 SUBDIR+=	py-txdbus
 SUBDIR+=	py-typedecorator
-SUBDIR+=	py-typing
 SUBDIR+=	py-ufl
 SUBDIR+=	py-umalqurra
 SUBDIR+=	py-uncertainties
