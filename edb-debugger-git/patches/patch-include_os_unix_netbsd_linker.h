@@ -1,6 +1,6 @@
 $NetBSD$
 
---- include/os/unix/netbsd/linker.h.orig	2017-02-18 23:49:30.670243602 +0000
+--- include/os/unix/netbsd/linker.h.orig	2017-02-19 00:13:28.896273546 +0000
 +++ include/os/unix/netbsd/linker.h
 @@ -0,0 +1,52 @@
 +/*
@@ -26,7 +26,7 @@ $NetBSD$
 +#define LINKER_20170103_H_
 +
 +namespace edb {
-+namespace linux {
++namespace netbsd {
 +
 +// Bitness-templated version of struct r_debug defined in link.h
 +template <class Addr>

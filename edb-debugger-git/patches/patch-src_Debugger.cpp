@@ -2,7 +2,7 @@ $NetBSD$
 
 --- src/Debugger.cpp.orig	2017-02-18 21:21:09.000000000 +0000
 +++ src/Debugger.cpp
-@@ -78,7 +78,7 @@ along with this program.  If not, see <h
+@@ -78,12 +78,12 @@ along with this program.  If not, see <h
  
  #include <sys/types.h>
  #include <sys/stat.h>
@@ -11,6 +11,12 @@ $NetBSD$
  #include <unistd.h>
  #include <fcntl.h>
  #endif
+ 
+-#if defined(Q_OS_LINUX)
++#if defined(Q_OS_LINUX) || defined(Q_OS_NETBSD)
+ #include "linker.h"
+ #endif
+ 
 @@ -105,6 +105,7 @@ const quint64 ld_loader_tag     = Q_UINT
  
  template <class Addr>
