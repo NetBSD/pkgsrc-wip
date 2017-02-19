@@ -1,6 +1,6 @@
 $NetBSD$
 
---- plugins/DebuggerCore/unix/netbsd/PlatformState.h.orig	2017-02-19 00:51:04.649508333 +0000
+--- plugins/DebuggerCore/unix/netbsd/PlatformState.h.orig	2017-02-19 02:10:30.332431989 +0000
 +++ plugins/DebuggerCore/unix/netbsd/PlatformState.h
 @@ -0,0 +1,68 @@
 +/*

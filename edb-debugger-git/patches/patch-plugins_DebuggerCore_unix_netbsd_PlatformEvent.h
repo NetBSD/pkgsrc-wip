@@ -1,8 +1,8 @@
 $NetBSD$
 
---- plugins/DebuggerCore/unix/netbsd/PlatformEvent.h.orig	2017-02-19 00:51:04.612693828 +0000
+--- plugins/DebuggerCore/unix/netbsd/PlatformEvent.h.orig	2017-02-19 02:09:05.373398707 +0000
 +++ plugins/DebuggerCore/unix/netbsd/PlatformEvent.h
-@@ -0,0 +1,61 @@
+@@ -0,0 +1,70 @@
 +/*
 +Copyright (C) 2006 - 2015 Evan Teran
 +                          evan.teran@gmail.com
@@ -24,41 +24,50 @@ $NetBSD$
 +#ifndef PLATFORM_EVENT_20121005_H_
 +#define PLATFORM_EVENT_20121005_H_
 +
-+#include <QCoreApplication>
 +#include "IDebugEvent.h"
 +
-+namespace DebuggerCore {
++#include <QCoreApplication>
++#include <signal.h> // for the SIG* definitions
 +
-+class PlatformEvent : IDebugEvent {
++namespace DebuggerCorePlugin {
++
++class PlatformEvent : public IDebugEvent {
 +	Q_DECLARE_TR_FUNCTIONS(PlatformEvent)
 +	friend class DebuggerCore;
 +
 +public:
 +	PlatformEvent();
 +
-+public:
-+	virtual PlatformEvent *clone() const;
++private:
++	PlatformEvent(const PlatformEvent &) = default;
++	PlatformEvent& operator=(const PlatformEvent &) = default;
 +
 +public:
-+	virtual Message error_description() const;
-+	virtual REASON reason() const;
-+	virtual TRAP_REASON trap_reason() const;
-+	virtual bool exited() const;
-+	virtual bool is_error() const;
-+	virtual bool is_kill() const;
-+	virtual bool is_stop() const;
-+	virtual bool is_trap() const;
-+	virtual bool terminated() const;
-+	virtual bool stopped() const;
-+	virtual edb::pid_t process() const;
-+	virtual edb::tid_t thread() const;
-+	virtual int code() const;
++	virtual IDebugEvent *clone() const override;
++
++public:
++	virtual Message error_description() const override;
++	virtual REASON reason() const override;
++	virtual TRAP_REASON trap_reason() const override;
++	virtual bool exited() const override;
++	virtual bool is_error() const override;
++	virtual bool is_kill() const override;
++	virtual bool is_stop() const override;
++	virtual bool is_trap() const override;
++	virtual bool stopped() const override;
++	virtual bool terminated() const override;
++	virtual edb::pid_t process() const override;
++	virtual edb::tid_t thread() const override;
++	virtual int code() const override;
 +
 +private:
-+	ptrace_siginfo_t siginfo_;
-+	edb::pid_t       pid_;
-+	edb::tid_t       tid_;
-+	int              status_;
++	static IDebugEvent::Message createUnexpectedSignalMessage(const QString &name, int number);
++
++private:
++	ptrace_siginfo_t  siginfo_;
++	edb::pid_t        pid_;
++	edb::tid_t        tid_;
++	int               status_;
 +};
 +
 +}
