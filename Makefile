@@ -3832,7 +3832,6 @@ SUBDIR+=	safekeep
 SUBDIR+=	sailor
 SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
-SUBDIR+=	samba
 SUBDIR+=	samhain
 SUBDIR+=	samtools
 SUBDIR+=	samtools0119
