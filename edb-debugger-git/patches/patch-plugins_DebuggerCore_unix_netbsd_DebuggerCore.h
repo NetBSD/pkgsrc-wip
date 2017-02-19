@@ -2,7 +2,7 @@ $NetBSD$
 
 --- plugins/DebuggerCore/unix/netbsd/DebuggerCore.h.orig	2017-02-19 00:51:04.563698490 +0000
 +++ plugins/DebuggerCore/unix/netbsd/DebuggerCore.h
-@@ -0,0 +1,110 @@
+@@ -0,0 +1,119 @@
 +/*
 +Copyright (C) 2006 - 2015 Evan Teran
 +                          evan.teran@gmail.com
@@ -25,89 +25,98 @@ $NetBSD$
 +#define DEBUGGERCORE_20090529_H_
 +
 +#include "DebuggerCoreUNIX.h"
++#include "PlatformState.h"
++#include "PlatformThread.h"
 +#include <QHash>
++#include <QSet>
++#include <csignal>
++#include <sys/syscall.h>   /* For SYS_xxx definitions */
++#include <unistd.h>
++#include <sys/ptrace.h>
 +
-+namespace DebuggerCore {
++class IBinary;
++
++namespace DebuggerCorePlugin {
 +
 +class DebuggerCore : public DebuggerCoreUNIX {
 +	Q_OBJECT
++#if QT_VERSION >= 0x050000
++	Q_PLUGIN_METADATA(IID "edb.IDebugger/1.0")
++#endif
 +	Q_INTERFACES(IDebugger)
 +	Q_CLASSINFO("author", "Evan Teran")
 +	Q_CLASSINFO("url", "http://www.codef00.com")
++	friend class PlatformProcess;
++	friend class PlatformThread;
 +
 +public:
 +	DebuggerCore();
-+	virtual ~DebuggerCore();
++	virtual ~DebuggerCore() override;
 +
 +public:
-+	virtual edb::address_t page_size() const;
-+	virtual bool has_extension(quint64 ext) const;
-+	virtual IDebugEvent::const_pointer wait_debug_event(int msecs);
-+	virtual bool attach(edb::pid_t pid);
-+	virtual void detach();
-+	virtual void kill();
-+	virtual void pause();
-+	virtual void resume(edb::EVENT_STATUS status);
-+	virtual void step(edb::EVENT_STATUS status);
-+	virtual void get_state(State *state);
-+	virtual void set_state(const State &state);
-+	virtual bool open(const QString &path, const QString &cwd, const QList<QByteArray> &args, const QString &tty);
++	virtual std::size_t pointer_size() const override;
++	virtual edb::address_t page_size() const override;
++	virtual bool has_extension(quint64 ext) const override;
++	virtual IDebugEvent::const_pointer wait_debug_event(int msecs) override;
++	virtual QString attach(edb::pid_t pid) override;
++	virtual void detach() override;
++	virtual void kill() override;
++	virtual void get_state(State *state) override;
++	virtual void set_state(const State &state) override;
++	virtual QString open(const QString &path, const QString &cwd, const QList<QByteArray> &args, const QString &tty) override;
++	virtual MeansOfCapture last_means_of_capture() override;
 +
 +public:
-+	// thread support stuff (optional)
-+	virtual QList<edb::tid_t> thread_ids() const { return threads_.keys(); }
-+	virtual edb::tid_t active_thread() const     { return active_thread_; }
-+	virtual void set_active_thread(edb::tid_t);
++	virtual edb::pid_t parent_pid(edb::pid_t pid) const override;
 +
 +public:
-+	virtual QList<IRegion::pointer> memory_regions() const;
-+	virtual edb::address_t process_code_address() const;
-+	virtual edb::address_t process_data_address() const;
++	virtual IState *create_state() const override;
 +
 +public:
-+	virtual IState *create_state() const;
-+
-+public:
-+	// process properties
-+	virtual QList<QByteArray> process_args(edb::pid_t pid) const;
-+	virtual QString process_exe(edb::pid_t pid) const;
-+	virtual QString process_cwd(edb::pid_t pid) const;
-+	virtual edb::pid_t parent_pid(edb::pid_t pid) const;
-+	virtual QDateTime process_start(edb::pid_t pid) const;
-+	virtual quint64 cpu_type() const;
-+
-+public:
-+	virtual QMap<edb::pid_t, ProcessInfo> enumerate_processes() const;
-+	virtual QList<Module> loaded_modules() const;
-+
-+public:
-+	virtual QString stack_pointer() const;
-+	virtual QString frame_pointer() const;
-+	virtual QString instruction_pointer() const;
-+
-+public:
-+	virtual QString format_pointer(edb::address_t address) const;
++	virtual quint64 cpu_type() const override;
 +
 +private:
-+	virtual long read_data(edb::address_t address, bool *ok);
-+	virtual bool write_data(edb::address_t address, long value);
++	virtual QMap<edb::pid_t, IProcess::pointer> enumerate_processes() const override;
++
++public:
++	virtual QString stack_pointer() const override;
++	virtual QString frame_pointer() const override;
++	virtual QString instruction_pointer() const override;
++	virtual QString flag_register() const override;
++
++public:
++	virtual QString format_pointer(edb::address_t address) const override;
++
++public:
++	virtual IProcess *process() const override;
 +
 +private:
-+	struct thread_info {
-+	public:
-+		thread_info() : status(0) {
-+		}
++	long ptrace_getsiginfo(edb::pid_t tid, ptrace_siginfo_t *siginfo);
++	long ptrace_continue(edb::pid_t tid, long status);
++	long ptrace_step(edb::pid_t tid, long status);
++	long ptrace_traceme();
 +
-+		thread_info(int s) : status(s) {
-+		}
++private:
++	void reset();
++	void stop_threads();
++	IDebugEvent::const_pointer handle_event(edb::tid_t tid, int status);
++	int attach_thread(edb::tid_t tid);
++	void detectDebuggeeBitness();
 +
-+		int status;
-+	};
++private:
++	typedef QHash<edb::tid_t, PlatformThread::pointer> threadmap_t;
 +
-+	typedef QHash<edb::tid_t, thread_info> threadmap_t;
-+
-+	edb::address_t page_size_;
-+	threadmap_t    threads_;
++private:
++	threadmap_t              threads_;
++	std::unique_ptr<IBinary> binary_info_;
++	IProcess                *process_;
++	std::size_t              pointer_size_;
++	const bool               edbIsIn64BitSegment;
++	const bool               osIs64Bit;
++	const edb::seg_reg_t     USER_CS_32;
++	const edb::seg_reg_t     USER_CS_64;
++	const edb::seg_reg_t     USER_SS;
++	MeansOfCapture	         lastMeansOfCapture = MeansOfCapture::NeverCaptured;
 +};
 +
 +}

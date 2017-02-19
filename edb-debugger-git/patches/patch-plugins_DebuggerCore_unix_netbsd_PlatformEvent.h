@@ -2,7 +2,7 @@ $NetBSD$
 
 --- plugins/DebuggerCore/unix/netbsd/PlatformEvent.h.orig	2017-02-19 00:51:04.612693828 +0000
 +++ plugins/DebuggerCore/unix/netbsd/PlatformEvent.h
-@@ -0,0 +1,62 @@
+@@ -0,0 +1,61 @@
 +/*
 +Copyright (C) 2006 - 2015 Evan Teran
 +                          evan.teran@gmail.com
@@ -55,11 +55,10 @@ $NetBSD$
 +	virtual int code() const;
 +
 +private:
-+	int        status;
-+	edb::pid_t pid;
-+	edb::tid_t tid;
-+	void *     fault_address_;
-+	long       fault_code_;
++	ptrace_siginfo_t siginfo_;
++	edb::pid_t       pid_;
++	edb::tid_t       tid_;
++	int              status_;
 +};
 +
 +}

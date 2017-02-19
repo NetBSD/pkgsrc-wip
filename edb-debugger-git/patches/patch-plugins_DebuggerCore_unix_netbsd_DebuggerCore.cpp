@@ -2,7 +2,7 @@ $NetBSD$
 
 --- plugins/DebuggerCore/unix/netbsd/DebuggerCore.cpp.orig	2017-02-19 00:51:04.557463589 +0000
 +++ plugins/DebuggerCore/unix/netbsd/DebuggerCore.cpp
-@@ -0,0 +1,596 @@
+@@ -0,0 +1,760 @@
 +/*
 +Copyright (C) 2006 - 2015 Evan Teran
 +                          evan.teran@gmail.com
@@ -21,69 +21,149 @@ $NetBSD$
 +along with this program.  If not, see <http://www.gnu.org/licenses/>.
 +*/
 +
++
++// TODO(eteran): research usage of process_vm_readv, process_vm_writev
++
 +#include "DebuggerCore.h"
++#include "Configuration.h"
++#include "FeatureDetect.h"
++#include "MemoryRegions.h"
++#include "PlatformCommon.h"
 +#include "PlatformEvent.h"
++#include "PlatformProcess.h"
 +#include "PlatformRegion.h"
 +#include "PlatformState.h"
++#include "DialogMemoryAccess.h"
 +#include "State.h"
++#include "edb.h"
 +#include "string_hash.h"
 +
 +#include <QDebug>
-+#include <QMessageBox>
++#include <QDir>
++#include <QSettings>
 +
 +#include <cerrno>
 +#include <cstring>
 +
-+#include <fcntl.h>
-+#include <kvm.h>
-+#include <machine/reg.h>
-+#include <paths.h>
-+#include <signal.h>
-+#include <sys/mman.h>
-+#include <sys/param.h>
++#include <cpuid.h>
 +#include <sys/ptrace.h>
-+#include <sys/sysctl.h>
-+#include <sys/user.h>
++#include <sys/mman.h>
 +#include <sys/wait.h>
 +#include <unistd.h>
 +
-+namespace DebuggerCore {
++namespace DebuggerCorePlugin {
 +
 +namespace {
 +
-+void SET_OK(bool &ok, long value) {
-+	ok = (value != -1) || (errno == 0);
++const edb::address_t PageSize = getpagesize();
++
++//------------------------------------------------------------------------------
++// Name: is_numeric
++// Desc: returns true if the string only contains decimal digits
++//------------------------------------------------------------------------------
++bool is_numeric(const QString &s) {
++	for(QChar ch: s) {
++		if(!ch.isDigit()) {
++			return false;
++		}
++	}
++
++	return true;
 +}
 +
-+int resume_code(int status) {
-+	if(WIFSIGNALED(status)) {
-+		return WTERMSIG(status);
-+	} else if(WIFSTOPPED(status)) {
-+		return WSTOPSIG(status);
-+	}
-+	return 0;
++bool in64BitSegment() {
++	bool edbIsIn64BitSegment;
++	// Check that we're running in 64 bit segment: this can be in cases
++	// of LP64 and ILP32 programming models, so we can't rely on sizeof(void*)
++	asm(R"(
++		   .byte 0x33,0xc0 # XOR EAX,EAX
++		   .byte 0x48      # DEC EAX for 32 bit, REX prefix for 64 bit
++		   .byte 0xff,0xc0 # INC EAX for 32 bit, INC RAX due to REX.W in 64 bit
++		 )":"=a"(edbIsIn64BitSegment));
++	return edbIsIn64BitSegment;
 +}
++
++bool os64Bit(bool edbIsIn64BitSegment) {
++	bool osIs64Bit;
++	if(edbIsIn64BitSegment)
++		osIs64Bit=true;
++	else {
++		// We want to be really sure the OS is 32 bit, so we can't rely on such easy
++		// to (even unintentionally) fake mechanisms as uname(2) (e.g. see setarch(8))
++		asm(R"(.intel_syntax noprefix
++			   mov eax,cs
++			   cmp ax,0x23 # this value is set for 32-bit processes on 64-bit kernel
++			   mov ah,0    # not sure this is really needed: usually the compiler will do
++						   # MOVZX EAX,AL, but we have to be certain the result is correct
++			   sete al
++			   .att_syntax # restore default syntax
++			   )":"=a"(osIs64Bit));
++	}
++	return osIs64Bit;
++}
++
++
++
++
 +}
 +
 +//------------------------------------------------------------------------------
 +// Name: DebuggerCore
 +// Desc: constructor
 +//------------------------------------------------------------------------------
-+DebuggerCore::DebuggerCore() {
-+#if defined(_SC_PAGESIZE)
-+	page_size_ = sysconf(_SC_PAGESIZE);
-+#elif defined(_SC_PAGE_SIZE)
-+	page_size_ = sysconf(_SC_PAGE_SIZE);
-+#else
-+	page_size_ = PAGE_SIZE;
-+#endif
++DebuggerCore::DebuggerCore() :
++	binary_info_(nullptr),
++	process_(0),
++	pointer_size_(sizeof(void*)),
++	edbIsIn64BitSegment(in64BitSegment()),
++	osIs64Bit(os64Bit(edbIsIn64BitSegment)),
++	USER_CS_32(osIs64Bit?0x23:0x73),
++	USER_CS_64(osIs64Bit?0x33:0xfff8), // RPL 0 can't appear in user segment registers, so 0xfff8 is safe
++	USER_SS(osIs64Bit?0x2b:0x7b)
++{
++	qDebug() << "EDB is in" << (edbIsIn64BitSegment?"64":"32") << "bit segment";
++	qDebug() << "OS is" << (osIs64Bit?"64":"32") << "bit";
 +}
 +
 +//------------------------------------------------------------------------------
-+// Name:
++// Name: has_extension
 +// Desc:
 +//------------------------------------------------------------------------------
 +bool DebuggerCore::has_extension(quint64 ext) const {
++
++	const auto mmxHash=edb::string_hash("MMX");
++	const auto xmmHash=edb::string_hash("XMM");
++	const auto ymmHash=edb::string_hash("YMM");
++	if(EDB_IS_64_BIT && (ext==xmmHash || ext==mmxHash))
++		return true;
++
++	quint32 eax;
++	quint32 ebx;
++	quint32 ecx;
++	quint32 edx;
++	__cpuid(1, eax, ebx, ecx, edx);
++
++	switch(ext) {
++	case mmxHash:
++		return (edx & bit_MMX);
++	case xmmHash:
++		return (edx & bit_SSE);
++	case ymmHash:
++	{
++		// Check OSXSAVE and AVX feature flags
++		if((ecx&0x18000000)!=0x18000000)
++			return false;
++		// Get XCR0, must be exactly after OSXSAVE feature check, otherwise #UD
++		asm volatile("xgetbv" : "=a"(eax),"=d"(edx) : "c"(0));
++		// Check that the OS has enabled XMM and YMM state support
++		if((eax&0x6)!=0x6)
++			return false;
++		return true;
++	}
++	default:
++		return false;
++	}
++
 +	return false;
 +}
 +
@@ -92,15 +172,106 @@ $NetBSD$
 +// Desc: returns the size of a page on this system
 +//------------------------------------------------------------------------------
 +edb::address_t DebuggerCore::page_size() const {
-+	return page_size_;
++	return PageSize;
++}
++
++std::size_t DebuggerCore::pointer_size() const {
++	return pointer_size_;
 +}
 +
 +//------------------------------------------------------------------------------
 +// Name: ~DebuggerCore
-+// Desc:
++// Desc: destructor
 +//------------------------------------------------------------------------------
 +DebuggerCore::~DebuggerCore() {
-+	detach();
++	end_debug_session();
++}
++
++//------------------------------------------------------------------------------
++// Name: ptrace_getsiginfo
++// Desc:
++//------------------------------------------------------------------------------
++long DebuggerCore::ptrace_getsiginfo(edb::pid_t pid, ptrace_siginfo_t *siginfo) {
++	Q_ASSERT(siginfo != 0);
++	return ptrace(PT_GET_SIGINFO, pid, siginfo, sizeof(struct ptrace_siginfo));
++}
++
++//------------------------------------------------------------------------------
++// Name: ptrace_traceme
++// Desc:
++//------------------------------------------------------------------------------
++long DebuggerCore::ptrace_traceme() {
++	return ptrace(PT_TRACE_ME, 0, NULL, 0);
++}
++
++//------------------------------------------------------------------------------
++// Name: ptrace_continue
++// Desc:
++//------------------------------------------------------------------------------
++long DebuggerCore::ptrace_continue(edb::pid_t pid, long status) {
++	Q_ASSERT(pid != 0);
++	return ptrace(PT_CONTINUE, pid, (void *)1, status);
++}
++
++//------------------------------------------------------------------------------
++// Name: ptrace_step
++// Desc:
++//------------------------------------------------------------------------------
++long DebuggerCore::ptrace_step(edb::pid_t pid, long status) {
++	Q_ASSERT(pid != 0);
++	return ptrace(PT_STEP, pid, (void *)1, status);
++}
++
++//------------------------------------------------------------------------------
++// Name: handle_event
++// Desc:
++//------------------------------------------------------------------------------
++IDebugEvent::const_pointer DebuggerCore::handle_event(edb::pid_t pid, int status) {
++
++	// was it a thread exit event?
++	if(WIFEXITED(status)) {
++		threads_.clear();
++		return nullptr;
++	}
++
++	auto e = std::make_shared<PlatformEvent>();
++
++	e->pid_    = pid();
++	e->tid_    = tid;
++	e->status_ = status;
++	ptrace_getsiginfo(tid, &e->siginfo_);
++
++	return e;
++}
++
++//------------------------------------------------------------------------------
++// Name: stop_threads
++// Desc:
++//------------------------------------------------------------------------------
++void DebuggerCore::stop_threads() {
++	if(process_) {
++		for(auto &thread: process_->threads()) {
++			const edb::tid_t tid = thread->tid();
++
++			if(!waited_threads_.contains(tid)) {
++
++				if(auto thread_ptr = std::static_pointer_cast<PlatformThread>(thread)) {
++
++					thread->stop();
++
++					int thread_status;
++					if(native::waitpid(tid, &thread_status, __WALL) > 0) {
++						waited_threads_.insert(tid);
++						thread_ptr->status_ = thread_status;
++
++						if(!WIFSTOPPED(thread_status) || WSTOPSIG(thread_status) != SIGSTOP) {
++							qDebug("stop_threads(): [warning] paused thread [%d] received an event besides SIGSTOP: status=0x%x", tid,thread_status);
++						}
++					}
++				}
++			}
++		}
++	}
 +}
 +
 +//------------------------------------------------------------------------------
@@ -109,47 +280,13 @@ $NetBSD$
 +//      it will return false if an error or timeout occurs
 +//------------------------------------------------------------------------------
 +IDebugEvent::const_pointer DebuggerCore::wait_debug_event(int msecs) {
-+	if(attached()) {
-+		int status;
-+		bool timeout;
 +
-+		const edb::tid_t tid = native::waitpid_timeout(pid(), &status, 0, msecs, &timeout);
-+		if(!timeout) {
-+			if(tid > 0) {
-+
-+				// normal event
-+				auto e = std::make_shared<PlatformEvent>();
-+				e->pid    = pid();
-+				e->tid    = tid;
-+				e->status = status;
-+
-+				char errbuf[_POSIX2_LINE_MAX];
-+				if(kvm_t *const kd = kvm_openfiles(NULL, NULL, NULL, O_RDONLY, errbuf)) {
-+					int rc;
-+					struct kinfo_proc *const proc = kvm_getprocs(kd, KERN_PROC_PID, pid(), &rc);
-+
-+					struct proc p;
-+					kvm_read(kd, (unsigned long)proc->ki_paddr, &p, sizeof(p));
-+
-+					struct ksiginfo siginfo;
-+					kvm_read(kd, (unsigned long)p.p_ksi, &siginfo, sizeof(siginfo));
-+
-+					// TODO: why doesn't this get the fault address correctly?
-+					// perhaps I need to target the tid instead?
-+					e->fault_code_    = siginfo.ksi_code;
-+					e->fault_address_ = siginfo.ksi_addr;
-+
-+					//printf("ps_sig   : %d\n", siginfo.ksi_signo);
-+					//printf("ps_type  : %d\n", p.p_stype);
-+					kvm_close(kd);
-+				} else {
-+					e->fault_code_    = 0;
-+					e->fault_address_ = 0;
-+				}
-+
-+				active_thread_       = tid;
-+				threads_[tid].status = status;
-+				return e;
++	if(process_) {
++		if(!native::wait_for_sigchld(msecs)) {
++			int status;
++			const edb::pid_t pid = native::waitpid(thread->tid(), &status, __WALL | WNOHANG);
++			if(pid > 0) {
++				return handle_event(tid, status);
 +			}
 +		}
 +	}
@@ -157,44 +294,95 @@ $NetBSD$
 +}
 +
 +//------------------------------------------------------------------------------
-+// Name: read_data
-+// Desc:
++// Name: attach_thread
++// Desc: returns 0 if successful, errno if failed
 +//------------------------------------------------------------------------------
-+long DebuggerCore::read_data(edb::address_t address, bool *ok) {
++int DebuggerCore::attach_thread(edb::tid_t tid) {
++	if(ptrace(PTRACE_ATTACH, tid, 0, 0) == 0) {
++		// I *think* that the PTRACE_O_TRACECLONE is only valid on
++		// stopped threads
++		int status;
++		const auto ret=native::waitpid(tid, &status, __WALL);
++		if(ret > 0) {
 +
-+	Q_ASSERT(ok);
-+	errno = 0;
-+	const long v = ptrace(PT_READ_D, pid(), reinterpret_cast<char*>(address), 0);
-+	SET_OK(*ok, v);
-+	return v;
-+}
++			auto newThread            = std::make_shared<PlatformThread>(this, process_, tid);
++			newThread->status_        = status;
++			newThread->signal_status_ = PlatformThread::Stopped;
 +
-+//------------------------------------------------------------------------------
-+// Name: write_data
-+// Desc:
-+//------------------------------------------------------------------------------
-+bool DebuggerCore::write_data(edb::address_t address, long value) {
-+	return ptrace(PT_WRITE_D, pid(), reinterpret_cast<char*>(address), value) != -1;
++			threads_[tid] = newThread;
++
++			waited_threads_.insert(tid);
++			if(ptrace_set_options(tid, PTRACE_O_TRACECLONE) == -1) {
++				qDebug("[DebuggerCore] failed to set PTRACE_O_TRACECLONE: [%d] %s", tid, strerror(errno));
++			}
++
++			if(edb::v1::config().close_behavior==Configuration::Kill ||
++			   (edb::v1::config().close_behavior==Configuration::KillIfLaunchedDetachIfAttached &&
++				  last_means_of_capture()==MeansOfCapture::Launch)) {
++				if(ptrace_set_options(tid, PTRACE_O_EXITKILL) == -1) {
++					qDebug("[DebuggerCore] failed to set PTRACE_O_EXITKILL: [%d] %s", tid, strerror(errno));
++				}
++			}
++			return 0;
++		}
++		else if(ret==-1) {
++			return errno;
++		}
++		else return -1; // unknown error
++	}
++	else return errno;
 +}
 +
 +//------------------------------------------------------------------------------
 +// Name: attach
 +// Desc:
 +//------------------------------------------------------------------------------
-+bool DebuggerCore::attach(edb::pid_t pid) {
-+	detach();
++QString DebuggerCore::attach(edb::pid_t pid) {
 +
-+	const long ret = ptrace(PT_ATTACH, pid, 0, 0);
-+	if(ret == 0) {
-+		pid_           = pid;
-+		active_thread_ = pid;
-+		threads_.clear();
-+		threads_.insert(pid, thread_info());
++	static const QString statusOK{};
 +
-+		// TODO: attach to all of the threads
++	end_debug_session();
++
++	lastMeansOfCapture=MeansOfCapture::Attach;
++
++	// create this, so the threads created can refer to it
++	process_ = new PlatformProcess(this, pid);
++
++	int lastErr=attach_thread(pid); // Fail early if we are going to
++	if(lastErr) return std::strerror(lastErr);
++	lastErr=-2;
++	bool attached;
++	do {
++		attached = false;
++		QDir proc_directory(QString("/proc/%1/task/").arg(pid));
++		for(const QString &s: proc_directory.entryList(QDir::NoDotAndDotDot | QDir::Dirs)) {
++			// this can get tricky if the threads decide to spawn new threads
++			// when we are attaching. I wish that linux had an atomic way to do this
++			// all in one shot
++			const edb::tid_t tid = s.toUInt();
++			if(!threads_.contains(tid)) {
++				const auto errnum=attach_thread(tid);
++				if(errnum==0)
++					attached = true;
++				else
++					lastErr=errnum;
++			}
++		}
++	} while(attached);
++
++
++	if(!threads_.empty()) {
++		pid_            = pid;
++		active_thread_  = pid;
++		binary_info_    = edb::v1::get_binary_info(edb::v1::primary_code_region());
++		detectDebuggeeBitness();
++		return statusOK;
++	} else {
++		delete process_;
++		process_ = nullptr;
 +	}
 +
-+	return ret == 0;
++	return std::strerror(lastErr);
 +}
 +
 +//------------------------------------------------------------------------------
@@ -202,17 +390,20 @@ $NetBSD$
 +// Desc:
 +//------------------------------------------------------------------------------
 +void DebuggerCore::detach() {
-+	if(attached()) {
++	if(process_) {
 +
-+		// TODO: do i need to stop each thread first, and wait for them?
++		stop_threads();
 +
 +		clear_breakpoints();
-+		for(auto it = threads_.begin(); it != threads_.end(); ++it) {
-+			ptrace(PT_DETACH, it.key(), 0, 0);
++
++		for(auto thread: process_->threads()) {
++			ptrace(PTRACE_DETACH, thread->tid(), 0, 0);
 +		}
 +
-+		pid_ = 0;
-+		threads_.clear();
++		delete process_;
++		process_ = nullptr;
++
++		reset();
 +	}
 +}
 +
@@ -223,53 +414,41 @@ $NetBSD$
 +void DebuggerCore::kill() {
 +	if(attached()) {
 +		clear_breakpoints();
-+		ptrace(PT_KILL, pid(), 0, 0);
-+		native::waitpid(pid(), 0, WAIT_ANY);
-+		pid_ = 0;
-+		threads_.clear();
++
++		::kill(pid(), SIGKILL);
++
++		// TODO: do i need to actually do this wait?
++		native::waitpid(pid(), 0, __WALL);
++
++		delete process_;
++		process_ = 0;
++
++		reset();
 +	}
 +}
 +
-+//------------------------------------------------------------------------------
-+// Name: pause
-+// Desc: stops *all* threads of a process
-+//------------------------------------------------------------------------------
-+void DebuggerCore::pause() {
-+	if(attached()) {
-+		for(auto it = threads_.begin(); it != threads_.end(); ++it) {
-+			::kill(it.key(), SIGSTOP);
-+		}
-+	}
-+}
++void DebuggerCore::detectDebuggeeBitness() {
 +
-+//------------------------------------------------------------------------------
-+// Name: resume
-+// Desc:
-+//------------------------------------------------------------------------------
-+void DebuggerCore::resume(edb::EVENT_STATUS status) {
-+	// TODO: assert that we are paused
-+
-+	if(attached()) {
-+		if(status != edb::DEBUG_STOP) {
-+			const edb::tid_t tid = active_thread();
-+			const int code = (status == edb::DEBUG_EXCEPTION_NOT_HANDLED) ? resume_code(threads_[tid].status) : 0;
-+			ptrace(PT_CONTINUE, tid, reinterpret_cast<caddr_t>(1), code);
-+		}
-+	}
-+}
-+
-+//------------------------------------------------------------------------------
-+// Name: step
-+// Desc:
-+//------------------------------------------------------------------------------
-+void DebuggerCore::step(edb::EVENT_STATUS status) {
-+	// TODO: assert that we are paused
-+
-+	if(attached()) {
-+		if(status != edb::DEBUG_STOP) {
-+			const edb::tid_t tid = active_thread();
-+			const int code = (status == edb::DEBUG_EXCEPTION_NOT_HANDLED) ? resume_code(threads_[tid].status) : 0;
-+			ptrace(PT_STEP, tid, reinterpret_cast<caddr_t>(1), code);
++	const size_t offset=EDB_IS_64_BIT ?
++						offsetof(UserRegsStructX86_64, cs) :
++						offsetof(UserRegsStructX86,   xcs);
++	errno=0;
++	const edb::seg_reg_t cs=ptrace(PTRACE_PEEKUSER, active_thread_, offset, 0);
++	if(!errno) {
++		if(cs==USER_CS_32) {
++			if(pointer_size_==sizeof(quint64)) {
++				qDebug() << "Debuggee is now 32 bit";
++				CapstoneEDB::init(CapstoneEDB::Architecture::ARCH_X86);
++			}
++			pointer_size_=sizeof(quint32);
++			return;
++		} else if(cs==USER_CS_64) {
++			if(pointer_size_==sizeof(quint32)) {
++				qDebug() << "Debuggee is now 64 bit";
++				CapstoneEDB::init(CapstoneEDB::Architecture::ARCH_AMD64);
++			}
++			pointer_size_=sizeof(quint64);
++			return;
 +		}
 +	}
 +}
@@ -279,23 +458,11 @@ $NetBSD$
 +// Desc:
 +//------------------------------------------------------------------------------
 +void DebuggerCore::get_state(State *state) {
-+
-+	Q_ASSERT(state);
-+
 +	// TODO: assert that we are paused
-+
-+	auto state_impl = static_cast<PlatformState *>(state->impl_);
-+
-+	if(attached()) {
-+	#if defined(EDB_X86)
-+		if(ptrace(PT_GETREGS, active_thread(), reinterpret_cast<char*>(&state_impl->regs_), 0) != -1) {
-+			state_impl->gs_base = 0;
-+			state_impl->fs_base = 0;
++	if(process_) {
++		if(IThread::pointer thread = process_->current_thread()) {
++			thread->get_state(state);
 +		}
-+	#endif
-+		// TODO implement this
-+	} else {
-+		state->clear();
 +	}
 +}
 +
@@ -306,13 +473,10 @@ $NetBSD$
 +void DebuggerCore::set_state(const State &state) {
 +
 +	// TODO: assert that we are paused
-+
-+	auto state_impl = static_cast<PlatformState *>(state.impl_);
-+
-+	if(attached()) {
-+		ptrace(PT_SETREGS, active_thread(), reinterpret_cast<char*>(&state_impl->regs_), 0);
-+		// TODO: FPU
-+		// TODO: Debug Registers
++	if(process_) {
++		if(IThread::pointer thread = process_->current_thread()) {
++			thread->set_state(state);
++		}
 +	}
 +}
 +
@@ -320,16 +484,25 @@ $NetBSD$
 +// Name: open
 +// Desc:
 +//------------------------------------------------------------------------------
-+bool DebuggerCore::open(const QString &path, const QString &cwd, const QList<QByteArray> &args, const QString &tty) {
-+	detach();
-+	pid_t pid;
++QString DebuggerCore::open(const QString &path, const QString &cwd, const QList<QByteArray> &args, const QString &tty) {
 +
-+	switch(pid = fork()) {
++	static const QString statusOK{};
++
++	end_debug_session();
++
++	lastMeansOfCapture=MeansOfCapture::Launch;
++
++	static constexpr std::size_t sharedMemSize=4096;
++	const auto sharedMem=static_cast<QChar*>(::mmap(nullptr,sharedMemSize,PROT_READ|PROT_WRITE,MAP_SHARED|MAP_ANONYMOUS,-1,0));
++	std::memset(sharedMem,0,sharedMemSize);
++
++	switch(pid_t pid = fork()) {
 +	case 0:
++	{
 +		// we are in the child now...
 +
 +		// set ourselves (the child proc) up to be traced
-+		ptrace(PT_TRACE_ME, 0, 0, 0);
++		ptrace_traceme();
 +
 +		// redirect it's I/O
 +		if(!tty.isEmpty()) {
@@ -342,50 +515,125 @@ $NetBSD$
 +			Q_UNUSED(std_err);
 +		}
 +
++		if(edb::v1::config().disableASLR) {
++			const auto curPers=::personality(UINT32_MAX);
++			// This shouldn't fail, but let's at least perror if it does anyway
++			if(curPers==-1)
++				perror("Failed to get current personality");
++			else if(::personality(curPers|ADDR_NO_RANDOMIZE)==-1)
++				perror("Failed to disable ASLR");
++		}
++
++		if(edb::v1::config().disableLazyBinding && setenv("LD_BIND_NOW","1",true)==-1)
++			perror("Failed to disable lazy binding");
++
 +		// do the actual exec
-+		execute_process(path, cwd, args);
++		const QString error=execute_process(path, cwd, args);
++#if defined __GNUG__ && __GNUC__ >= 5 || !defined __GNUG__ || \
++		defined __clang__ && __clang_major__*100+__clang_minor__>=306
++		static_assert(std::is_trivially_copyable<QChar>::value,"Can't copy string of QChar to shared memory");
++#endif
++		std::memcpy(sharedMem,error.constData(),std::min(sizeof(QChar)*error.size(),sharedMemSize-sizeof(QChar)/*prevent overwriting of last null*/));
 +
 +		// we should never get here!
 +		abort();
 +		break;
++	}
 +	case -1:
-+		// error!
-+		pid_ = 0;
-+		return false;
++		// error! for some reason we couldn't fork
++		reset();
++		return QObject::tr("Failed to fork");
 +	default:
 +		// parent
 +		do {
-+			threads_.clear();
++			reset();
 +
 +			int status;
-+			if(native::waitpid(pid, &status, 0) == -1) {
-+				return false;
-+			}
++			const auto wpidRet=native::waitpid(pid, &status, __WALL);
++			const QString childError(sharedMem);
++			::munmap(sharedMem,sharedMemSize);
++
++			if(wpidRet == -1)
++				return QObject::tr("waitpid() failed: %1").arg(std::strerror(errno))+(childError.isEmpty()?"":QObject::tr(".\nError returned by child:\n%1.").arg(childError));
++
++			if(WIFEXITED(status))
++				return QObject::tr("The child unexpectedly exited with code %1. Error returned by child:\n%2").arg(WEXITSTATUS(status)).arg(childError);
++			if(WIFSIGNALED(status))
++				return QObject::tr("The child was unexpectedly killed by signal %1. Error returned by child:\n%2").arg(WTERMSIG(status)).arg(childError);
++
++			// This happens when exec failed, but just in case it's something another return some description.
++			if(WIFSTOPPED(status) && WSTOPSIG(status) == SIGABRT)
++				return childError.isEmpty() ? QObject::tr("The child unexpectedly aborted") : childError;
 +
 +			// the very first event should be a STOP of type SIGTRAP
 +			if(!WIFSTOPPED(status) || WSTOPSIG(status) != SIGTRAP) {
-+				detach();
-+				return false;
++				end_debug_session();
++				return QObject::tr("First event after waitpid() should be a STOP of type SIGTRAP, but wasn't, instead status=0x%1")
++											.arg(status,0,16)+(childError.isEmpty()?"":QObject::tr(".\nError returned by child:\n%1.").arg(childError));
 +			}
 +
++			waited_threads_.insert(pid);
++
++			// enable following clones (threads)
++			if(ptrace_set_options(pid, PTRACE_O_TRACECLONE) == -1) {
++				const auto strerr=strerror(errno); // NOTE: must be called before end_debug_session, otherwise errno can change
++				end_debug_session();
++				return QObject::tr("[DebuggerCore] failed to set PTRACE_O_TRACECLONE: %1").arg(strerr);
++			}
++
++#ifdef PTRACE_O_EXITKILL
++			if(ptrace_set_options(pid, PTRACE_O_EXITKILL) == -1) {
++				const auto strerr=strerror(errno); // NOTE: must be called before any other syscall, otherwise errno can change
++				// Don't consider the error fatal: the option is only supported since Linux 3.8
++				qDebug() << "[DebuggerCore] failed to set PTRACE_O_EXITKILL:" << strerr;
++			}
++#endif
++
 +			// setup the first event data for the primary thread
-+			threads_.insert(pid, thread_info());
-+			pid_                 = pid;
-+			active_thread_       = pid;
-+			threads_[pid].status = status;
-+			return true;
++			waited_threads_.insert(pid);
++
++			// create the process
++			process_ = new PlatformProcess(this, pid);
++
++
++			// the PID == primary TID
++			auto newThread            = std::make_shared<PlatformThread>(this, process_, pid);
++			newThread->status_        = status;
++			newThread->signal_status_ = PlatformThread::Stopped;
++
++			threads_[pid]   = newThread;
++
++			pid_            = pid;
++			active_thread_   = pid;
++			binary_info_    = edb::v1::get_binary_info(edb::v1::primary_code_region());
++
++			detectDebuggeeBitness();
++
++			return statusOK;
 +		} while(0);
 +		break;
 +	}
 +}
 +
++
 +//------------------------------------------------------------------------------
-+// Name: set_active_thread
++// Name: last_means_of_capture
++// Desc: Returns how the last process was captured to debug
++//------------------------------------------------------------------------------
++DebuggerCore::MeansOfCapture DebuggerCore::last_means_of_capture() {
++	return lastMeansOfCapture;
++}
++
++//------------------------------------------------------------------------------
++// Name: reset
 +// Desc:
 +//------------------------------------------------------------------------------
-+void DebuggerCore::set_active_thread(edb::tid_t tid) {
-+	Q_ASSERT(threads_.contains(tid));
-+	active_thread_ = tid;
++void DebuggerCore::reset() {
++	threads_.clear();
++	waited_threads_.clear();
++	pid_           = 0;
++	active_thread_ = 0;
++	binary_info_   = nullptr;
 +}
 +
 +//------------------------------------------------------------------------------
@@ -400,162 +648,62 @@ $NetBSD$
 +// Name: enumerate_processes
 +// Desc:
 +//------------------------------------------------------------------------------
-+QMap<edb::pid_t, ProcessInfo> DebuggerCore::enumerate_processes() const {
-+	QMap<edb::pid_t, ProcessInfo> ret;
++QMap<edb::pid_t, IProcess::pointer> DebuggerCore::enumerate_processes() const {
++	QMap<edb::pid_t, IProcess::pointer> ret;
 +
-+	char ebuffer[_POSIX2_LINE_MAX];
-+	int numprocs;
-+	if(kvm_t *const kaccess = kvm_openfiles(_PATH_DEVNULL, _PATH_DEVNULL, 0, O_RDONLY, ebuffer)) {
-+		if(struct kinfo_proc *const kprocaccess = kvm_getprocs(kaccess, KERN_PROC_ALL, 0, &numprocs)) {
-+			for(int i = 0; i < numprocs; ++i) {
-+				ProcessInfo procInfo;
++	QDir proc_directory("/proc/");
++	QFileInfoList entries = proc_directory.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
 +
-+				procInfo.pid   = kprocaccess[i].ki_pid;
-+				procInfo.uid   = kprocaccess[i].ki_uid;
-+				procInfo.name  = kprocaccess[i].ki_comm;
-+				ret.insert(procInfo.pid, procInfo);
-+			}
++	for(const QFileInfo &info: entries) {
++		const QString filename = info.fileName();
++		if(is_numeric(filename)) {
++			const edb::pid_t pid = filename.toULong();
++
++			// NOTE(eteran): the const_cast is reasonable here.
++			// While we don't want THIS function to mutate the DebuggerCore object
++			// we do want the associated PlatformProcess to be able to trigger
++			// non-const operations in the future, at least hypothetically.
++			ret.insert(pid, std::make_shared<PlatformProcess>(const_cast<DebuggerCore*>(this), pid));
 +		}
-+		kvm_close(kaccess);
-+	} else {
-+		QMessageBox::warning(0, "Error Listing Processes", ebuffer);
 +	}
 +
 +	return ret;
 +}
 +
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+QString DebuggerCore::process_exe(edb::pid_t pid) const {
-+	// TODO: implement this
-+	return QString();
-+}
-+
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+QString DebuggerCore::process_cwd(edb::pid_t pid) const {
-+	// TODO: implement this
-+	return QString();
-+}
 +
 +//------------------------------------------------------------------------------
 +// Name:
 +// Desc:
 +//------------------------------------------------------------------------------
 +edb::pid_t DebuggerCore::parent_pid(edb::pid_t pid) const {
-+	// TODO: implement this
-+	return -1;
-+}
 +
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+QList<IRegion::pointer> DebuggerCore::memory_regions() const {
-+	QList<IRegion::pointer> regions;
-+
-+	if(pid_ != 0) {
-+		char buffer[PATH_MAX] = {};
-+		struct ptrace_vm_entry vm_entry;
-+		memset(&vm_entry, 0, sizeof(vm_entry));
-+		vm_entry.pve_entry = 0;
-+
-+		while(ptrace(PT_VM_ENTRY, pid_, reinterpret_cast<char*>(&vm_entry), NULL) == 0) {
-+			vm_entry.pve_path    = buffer;
-+			vm_entry.pve_pathlen = sizeof(buffer);
-+
-+			const edb::address_t start               = vm_entry.pve_start;
-+			const edb::address_t end                 = vm_entry.pve_end;
-+			const edb::address_t base                = vm_entry.pve_start - vm_entry.pve_offset;
-+			const QString name                       = vm_entry.pve_path;
-+			const IRegion::permissions_t permissions = vm_entry.pve_prot;
-+
-+			regions.push_back(std::make_shared<PlatformRegion>(start, end, base, name, permissions));
-+			memset(buffer, 0, sizeof(buffer));
-+		}
++	struct user_stat user_stat;
++	int n = get_user_stat(pid, &user_stat);
++	if(n >= 4) {
++		return user_stat.ppid;
 +	}
 +
-+	return regions;
-+}
-+
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+QList<QByteArray> DebuggerCore::process_args(edb::pid_t pid) const {
-+	QList<QByteArray> ret;
-+	if(pid != 0) {
-+		// TODO: assert attached!
-+	}
-+	return ret;
-+
-+}
-+
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+edb::address_t DebuggerCore::process_code_address() const {
-+	qDebug() << "TODO: implement DebuggerCore::process_code_address";
 +	return 0;
 +}
 +
 +//------------------------------------------------------------------------------
 +// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+edb::address_t DebuggerCore::process_data_address() const {
-+	qDebug() << "TODO: implement DebuggerCore::process_data_address";
-+	return 0;
-+}
-+
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+QList<Module> DebuggerCore::loaded_modules() const {
-+    QList<Module> modules;
-+	qDebug() << "TODO: implement DebuggerCore::loaded_modules";
-+    return modules;
-+}
-+
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
-+//------------------------------------------------------------------------------
-+QDateTime DebuggerCore::process_start(edb::pid_t pid) const {
-+	qDebug() << "TODO: implement DebuggerCore::process_start";
-+	return QDateTime();
-+}
-+
-+//------------------------------------------------------------------------------
-+// Name:
-+// Desc:
++// Desc: Returns EDB's native CPU type
 +//------------------------------------------------------------------------------
 +quint64 DebuggerCore::cpu_type() const {
-+#ifdef EDB_X86
-+	return edb::string_hash<'x', '8', '6'>::value;
-+#elif defined(EDB_X86_64)
-+	return edb::string_hash<'x', '8', '6', '-', '6', '4'>::value;
-+#endif
++	if(EDB_IS_32_BIT)
++		return edb::string_hash("x86");
++	else
++		return edb::string_hash("x86-64");
 +}
++
 +
 +//------------------------------------------------------------------------------
 +// Name:
 +// Desc:
 +//------------------------------------------------------------------------------
 +QString DebuggerCore::format_pointer(edb::address_t address) const {
-+	char buf[32];
-+#ifdef EDB_X86
-+	qsnprintf(buf, sizeof(buf), "%08x", address);
-+#elif defined(EDB_X86_64)
-+	qsnprintf(buf, sizeof(buf), "%016llx", address);
-+#endif
-+	return buf;
++	return address.toPointerString();
 +}
 +
 +//------------------------------------------------------------------------------
@@ -563,11 +711,10 @@ $NetBSD$
 +// Desc:
 +//------------------------------------------------------------------------------
 +QString DebuggerCore::stack_pointer() const {
-+#ifdef EDB_X86
-+	return "esp";
-+#elif defined(EDB_X86_64)
-+	return "rsp";
-+#endif
++	if(edb::v1::debuggeeIs32Bit())
++		return "esp";
++	else
++		return "rsp";
 +}
 +
 +//------------------------------------------------------------------------------
@@ -575,11 +722,10 @@ $NetBSD$
 +// Desc:
 +//------------------------------------------------------------------------------
 +QString DebuggerCore::frame_pointer() const {
-+#ifdef EDB_X86
-+	return "ebp";
-+#elif defined(EDB_X86_64)
-+	return "rbp";
-+#endif
++	if(edb::v1::debuggeeIs32Bit())
++		return "ebp";
++	else
++		return "rbp";
 +}
 +
 +//------------------------------------------------------------------------------
@@ -587,11 +733,29 @@ $NetBSD$
 +// Desc:
 +//------------------------------------------------------------------------------
 +QString DebuggerCore::instruction_pointer() const {
-+#ifdef EDB_X86
-+	return "eip";
-+#elif defined(EDB_X86_64)
-+	return "rip";
-+#endif
++	if(edb::v1::debuggeeIs32Bit())
++		return "eip";
++	else
++		return "rip";
++}
++
++//------------------------------------------------------------------------------
++// Name: flag_register
++// Desc: Returns the name of the flag register as a QString.
++//------------------------------------------------------------------------------
++QString DebuggerCore::flag_register() const {
++	if(edb::v1::debuggeeIs32Bit())
++		return "eflags";
++	else
++		return "rflags";
++}
++
++//------------------------------------------------------------------------------
++// Name: process
++// Desc:
++//------------------------------------------------------------------------------
++IProcess *DebuggerCore::process() const {
++	return process_;
 +}
 +
 +#if QT_VERSION < 0x050000
