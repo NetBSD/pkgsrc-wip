@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	oysttyer-2.5.0
+DISTNAME=	oysttyer-2.8.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oysttyer/}
 
@@ -9,7 +9,6 @@ HOMEPAGE=	https://github.com/oysttyer/oysttyer/
 COMMENT=	Interactive command-line Twitter client
 LICENSE=	ffsl-license
 
-WRKSRC=		${WRKDIR}/oysttyer-2.5.0
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl
 
@@ -17,7 +16,7 @@ NO_BUILD=	yes
 
 REPLACE_PERL+=	oysttyer.pl
 
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS+=	bin
 
 do-install:
 	${RUN} cd ${WRKSRC} && \
