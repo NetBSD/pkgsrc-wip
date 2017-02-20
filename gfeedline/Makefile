@@ -11,6 +11,7 @@ COMMENT=	Social network client for GNOME
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-gobject-[0-9]*:../../devel/py-gobject
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 #gir1.2-webkit-3.0
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 #python-openssl
@@ -19,7 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-oauth-[0-9]*:../../security/py-oauth
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
 
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-beautifulsoup, py-gobject
 
 USE_LANGUAGES=	# none
@@ -66,5 +66,4 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

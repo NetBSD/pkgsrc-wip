@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/adamhadani/logtools
 COMMENT=	Log files analysis/filtering framework written in Python
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-prettytable>=0.5:../../textproc/py-prettytable
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.9:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlsoup>=0.9.0:../../databases/py-sqlsoup
@@ -18,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-acora>=1.7:../../textproc/py-acora
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash
-
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 REPLACE_BASH+=	scripts/*
 
@@ -35,5 +34,4 @@ REPLACE_PYTHON+=	logtools/test/test_logtools.py logtools/utils.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -11,7 +11,9 @@ HOMEPAGE=	http://www.openastro.org/
 COMMENT=	Open source astrology program, openastro.org
 LICENSE=	gnu-gpl-v3
 
-PYTHON_VERSIONED_DEPENDENCIES=	cairo dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2, py-gtk2
 
 WRKSRC=			${WRKDIR}/openastro.org-1.1.38

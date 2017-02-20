@@ -9,9 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/attachment/wiki/download/
 COMMENT=	Moto plugin for opensync (for Motorola phones)
 
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-libopensync-plugin>=0.22:../../wip/py-libopensync-plugin
-
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 USE_TOOLS+=			pkg-config:run
 
@@ -32,5 +31,4 @@ do-install:
 
 .include "../../comms/libopensync/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

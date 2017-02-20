@@ -11,10 +11,9 @@ HOMEPAGE=	http://www.physics.uci.edu/~etolleru/software.html#astropysics
 COMMENT=	Astrophysics libraries for Python
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-fits>=2.3.1:../../graphics/py-fits
-
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 EGG_NAME=	${DISTNAME:S/-r596//}0
 USE_LANGUAGES=	# none
@@ -23,5 +22,4 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.1dev-r596
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
