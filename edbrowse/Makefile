@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	edbrowse-3.6.0.1
+DISTNAME=	edbrowse-3.6.2
 CATEGORIES=	www
 MASTER_SITES=	http://edbrowse.org/
 EXTRACT_SUFX=	.zip
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_TOOLS+=	perl:build
 USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DTIDY_ROOT=${PREFIX}/include/tidy
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-patch
@@ -29,8 +31,8 @@ post-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/edbrowse.1
 
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../wip/spidermonkey24/buildlink3.mk"
-.include "../../wip/tidy/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../www/tidy/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
