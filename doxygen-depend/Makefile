@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/10 08:56:25 makoto Exp $
 # $Id: Makefile,v 1.6 2015/02/10 08:56:25 makoto Exp $
 
-DISTNAME=	doxygen-dependent-1.02
+DISTNAME=	doxygen-depend-1.02
 CATEGORIES=	meta-pkgs
 LICENSE=	generic-nonlicense
 
@@ -40,9 +40,9 @@ BUILD_DEPENDS+=	gnuradio-doxygen-[0-9]*:../../ham/gnuradio-doxygen	# YES
 BUILD_DEPENDS+=	uhd-[0-9]*:../../ham/uhd
 BUILD_DEPENDS+=	ibus-qt-[0-9]*:../../inputmethod/ibus-qt	# TOOLS_NOOP= doxygen
 .if 0
-BUILD_DEPENDS+=	gcc44-[0-9]*:../../lang/gcc44
-BUILD_DEPENDS+=	gcc45-[0-9]*:../../lang/gcc45
-BUILD_DEPENDS+=	gcc46-[0-9]*:../../lang/gcc46
+BUILD_DEPENDS+=	gcc44-[0-9]*:../../wip/gcc44
+BUILD_DEPENDS+=	gcc45-[0-9]*:../../wip/gcc45
+BUILD_DEPENDS+=	gcc46-[0-9]*:../../wip/gcc46
 .endif
 BUILD_DEPENDS+=	qore-[0-9]*:../../lang/qore
 #UILD_DEPENDS+=	blitz++-[0-9]*:../../math/blitz++  	# disabled by configure
