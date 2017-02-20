@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/10 08:56:25 makoto Exp $
 # $Id: Makefile,v 1.6 2015/02/10 08:56:25 makoto Exp $
 
-DISTNAME=	doxygen-depend-1.02
+DISTNAME=	doxygen-depend-1.03
 CATEGORIES=	meta-pkgs
 LICENSE=	generic-nonlicense
 
@@ -60,7 +60,6 @@ BUILD_DEPENDS+=	open-vm-tools-[0-9]*:../../sysutils/open-vm-tools
 BUILD_DEPENDS+=	serd-[0-9]*:../../textproc/serd
 BUILD_DEPENDS+=	sord-[0-9]*:../../textproc/sord
 #UILD_DEPENDS+=	xmltooling-[0-9]*:../../textproc/xmltooling	# disabled by configure
-BUILD_DEPENDS+=	tidy-[0-9]*:../../www/tidy         	# YES
 #UILD_DEPENDS+=	gnome-mag-[0-9]*:../../x11/gnome-mag	# disabled by SUBST
 BUILD_DEPENDS+=	kdelibdocs-[0-9]*:../../x11/kdelibdocs3	# YES
 #UILD_DEPENDS+=	libxcb-[0-9]*:../../x11/libxcb     	# disabled by configure
