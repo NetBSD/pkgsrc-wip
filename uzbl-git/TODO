@@ -1,3 +1,4 @@
+Check whether py-wheel build dependency is correct
 Add options or separate packages for uzbl-browser and uzbl-tabbed
 Add option for GTK+ version for uzbl-tabbed:
  Resolve Python version conflict for uzbl-tabbed with GTK+ 2
