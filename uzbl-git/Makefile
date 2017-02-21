@@ -50,11 +50,14 @@ PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PRINT_PLIST_AWK+=	{ gsub("${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
 				"$${EGG_FILE}") }
 
+pre-configure:
+	${RM} ${WRKSRC}/examples/data/scripts/auth.py.orig
+
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # for uzbl-browser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-# for uzbl-tabbed with GTK+ 2
-#DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
+# for auth.py
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
