@@ -3,11 +3,14 @@ bin/uzbl-browser
 bin/uzbl-core
 bin/uzbl-event-manager
 bin/uzbl-tabbed
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${PKGNAME}.dist-info/DESCRIPTION.rst
+${PYSITELIB}/${PKGNAME}.dist-info/INSTALLER
+${PYSITELIB}/${PKGNAME}.dist-info/METADATA
+${PYSITELIB}/${PKGNAME}.dist-info/RECORD
+${PYSITELIB}/${PKGNAME}.dist-info/WHEEL
+${PYSITELIB}/${PKGNAME}.dist-info/entry_points.txt
+${PYSITELIB}/${PKGNAME}.dist-info/metadata.json
+${PYSITELIB}/${PKGNAME}.dist-info/top_level.txt
 ${PYSITELIB}/uzbl/__init__.py
 ${PYSITELIB}/uzbl/__init__.pyc
 ${PYSITELIB}/uzbl/arguments.pyc
@@ -70,6 +73,7 @@ share/uzbl/docs/README.event-manager.md
 share/uzbl/docs/README.md
 share/uzbl/docs/README.scripts.md
 share/uzbl/docs/config.h
+share/uzbl/examples/config/README.md
 share/uzbl/examples/config/config
 share/uzbl/examples/config/style.css
 share/uzbl/examples/data/bookmarks

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Avoid paths based on commit hash
+
+--- Makefile.orig	2017-02-20 17:49:47.000000000 +0000
++++ Makefile
+@@ -35,7 +35,7 @@ ARCH := $(shell uname -m)
+ COMMIT_HASH := $(shell ./misc/hash.sh)
+ 
+ # Convert version to pip format, v0.9.1-23-g69480a3 becomes 0.9.1+23.g69480a3
+-PYVERSION := $(shell echo ${COMMIT_HASH} | sed 's/^v//;s/-/+/;s/-/./g')
++PYVERSION := $(shell echo ${COMMIT_HASH} | sed 's/^v//;s/-.*//')
+ PYWHEEL := uzbl-${PYVERSION}-py3-none-any.whl
+ 
+ CPPFLAGS += -D_XOPEN_SOURCE=500 -DARCH=\"$(ARCH)\" -DCOMMIT=\"$(COMMIT_HASH)\" -DLIBDIR=\"$(LIBDIR)\"

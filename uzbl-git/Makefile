@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	uzbl-0.9.0
+DISTNAME=	uzbl-0.9.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uzbl/}
 
@@ -21,6 +21,7 @@ PY_PATCHPLIST=		yes
 .include "../../lang/python/extension.mk"
 MAKE_ENV+=	PYTHON=${PYTHONBIN}
 MAKE_ENV+=	MANDIR=${DESTDIR}/${PREFIX}/${PKGMANDIR}
+INSTALL_ENV+=	PIP=pip${PYVERSSUFFIX}
 
 SUBST_CLASSES+=			fix-share
 SUBST_STAGE.fix-share=		pre-configure
@@ -41,18 +42,10 @@ REPLACE_PYTHON+=	examples/data/scripts/per-site-settings.py
 REPLACE_PYTHON+=	examples/data/scripts/scheme.py
 .include "../../lang/python/application.mk"
 
-# adapted from ../../lang/python/distutils.mk
-# Set the egg file basename.
-EGG_NAME?=	uzbl-201100808
-
-# Egg files have the version encoded, so generalize in PLIST.
-PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-PRINT_PLIST_AWK+=	{ gsub("${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
-				"$${EGG_FILE}") }
-
 pre-configure:
 	${RM} ${WRKSRC}/examples/data/scripts/auth.py.orig
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # for uzbl-browser
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
