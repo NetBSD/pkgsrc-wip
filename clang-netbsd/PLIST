@@ -84,6 +84,7 @@ include/clang/AST/Mangle.h
 include/clang/AST/MangleNumberingContext.h
 include/clang/AST/NSAPI.h
 include/clang/AST/NestedNameSpecifier.h
+include/clang/AST/ODRHash.h
 include/clang/AST/OpenMPClause.h
 include/clang/AST/OperationKinds.def
 include/clang/AST/OperationKinds.h
