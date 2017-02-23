@@ -278,6 +278,7 @@ include/llvm/CodeGen/GlobalISel/Utils.h
 include/llvm/CodeGen/ISDOpcodes.h
 include/llvm/CodeGen/IntrinsicLowering.h
 include/llvm/CodeGen/LatencyPriorityQueue.h
+include/llvm/CodeGen/LazyMachineBlockFrequencyInfo.h
 include/llvm/CodeGen/LexicalScopes.h
 include/llvm/CodeGen/LinkAllAsmWriterComponents.h
 include/llvm/CodeGen/LinkAllCodegenComponents.h
@@ -407,6 +408,7 @@ include/llvm/DebugInfo/CodeView/TypeRecordBuilder.h
 include/llvm/DebugInfo/CodeView/TypeRecordMapping.h
 include/llvm/DebugInfo/CodeView/TypeRecords.def
 include/llvm/DebugInfo/CodeView/TypeSerializer.h
+include/llvm/DebugInfo/CodeView/TypeServerHandler.h
 include/llvm/DebugInfo/CodeView/TypeStreamMerger.h
 include/llvm/DebugInfo/CodeView/TypeSymbolEmitter.h
 include/llvm/DebugInfo/CodeView/TypeTableBuilder.h
@@ -484,6 +486,7 @@ include/llvm/DebugInfo/PDB/Native/NativeRawSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeSession.h
 include/llvm/DebugInfo/PDB/Native/PDBFile.h
 include/llvm/DebugInfo/PDB/Native/PDBFileBuilder.h
+include/llvm/DebugInfo/PDB/Native/PDBTypeServerHandler.h
 include/llvm/DebugInfo/PDB/Native/PublicsStream.h
 include/llvm/DebugInfo/PDB/Native/RawConstants.h
 include/llvm/DebugInfo/PDB/Native/RawError.h
@@ -554,7 +557,6 @@ include/llvm/ExecutionEngine/Orc/IndirectionUtils.h
 include/llvm/ExecutionEngine/Orc/LambdaResolver.h
 include/llvm/ExecutionEngine/Orc/LazyEmittingLayer.h
 include/llvm/ExecutionEngine/Orc/NullResolver.h
-include/llvm/ExecutionEngine/Orc/ObjectLinkingLayer.h
 include/llvm/ExecutionEngine/Orc/ObjectTransformLayer.h
 include/llvm/ExecutionEngine/Orc/OrcABISupport.h
 include/llvm/ExecutionEngine/Orc/OrcError.h
@@ -563,6 +565,7 @@ include/llvm/ExecutionEngine/Orc/OrcRemoteTargetRPCAPI.h
 include/llvm/ExecutionEngine/Orc/OrcRemoteTargetServer.h
 include/llvm/ExecutionEngine/Orc/RPCSerialization.h
 include/llvm/ExecutionEngine/Orc/RPCUtils.h
+include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
 include/llvm/ExecutionEngine/Orc/RawByteChannel.h
 include/llvm/ExecutionEngine/OrcMCJITReplacement.h
 include/llvm/ExecutionEngine/RTDyldMemoryManager.h
@@ -687,6 +690,7 @@ include/llvm/MC/MCAsmInfo.h
 include/llvm/MC/MCAsmInfoCOFF.h
 include/llvm/MC/MCAsmInfoDarwin.h
 include/llvm/MC/MCAsmInfoELF.h
+include/llvm/MC/MCAsmInfoWasm.h
 include/llvm/MC/MCAsmLayout.h
 include/llvm/MC/MCAssembler.h
 include/llvm/MC/MCCodeEmitter.h
@@ -732,15 +736,19 @@ include/llvm/MC/MCSection.h
 include/llvm/MC/MCSectionCOFF.h
 include/llvm/MC/MCSectionELF.h
 include/llvm/MC/MCSectionMachO.h
+include/llvm/MC/MCSectionWasm.h
 include/llvm/MC/MCStreamer.h
 include/llvm/MC/MCSubtargetInfo.h
 include/llvm/MC/MCSymbol.h
 include/llvm/MC/MCSymbolCOFF.h
 include/llvm/MC/MCSymbolELF.h
 include/llvm/MC/MCSymbolMachO.h
+include/llvm/MC/MCSymbolWasm.h
 include/llvm/MC/MCTargetOptions.h
 include/llvm/MC/MCTargetOptionsCommandFlags.h
 include/llvm/MC/MCValue.h
+include/llvm/MC/MCWasmObjectWriter.h
+include/llvm/MC/MCWasmStreamer.h
 include/llvm/MC/MCWin64EH.h
 include/llvm/MC/MCWinCOFFObjectWriter.h
 include/llvm/MC/MCWinCOFFStreamer.h
@@ -831,6 +839,7 @@ include/llvm/Support/DOTGraphTraits.h
 include/llvm/Support/DataExtractor.h
 include/llvm/Support/DataTypes.h
 include/llvm/Support/Debug.h
+include/llvm/Support/DebugCounter.h
 include/llvm/Support/Dwarf.def
 include/llvm/Support/Dwarf.h
 include/llvm/Support/DynamicLibrary.h
