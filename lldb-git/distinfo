@@ -12,5 +12,3 @@ Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
 SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
 RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
-SHA1 (patch-source_Host_common_Socket.cpp) = ca346f85b393f309d526bb2a55a072d1d0455a5b
-SHA1 (patch-source_Plugins_Process_Utility_RegisterContextNetBSD__x86__64.cpp) = fef8c0a1c462eca936879a1c7447e2545aaea971
