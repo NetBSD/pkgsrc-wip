@@ -21,7 +21,7 @@ $NetBSD$
  
  /*
   * src/sys/arch/amd64/include/mcontext.h
-@@ -66,276 +70,24 @@ struct UserArea {
+@@ -66,276 +70,21 @@ struct UserArea {
    GPR gpr;
    uint64_t mc_tlsbase;
    FPR fpr;
@@ -88,8 +88,7 @@ $NetBSD$
 -             LLDB_INVALID_REGNUM, lldb_st##i##_x86_64 },                       \
 -             nullptr, nullptr, nullptr, 0                                      \
 -  }
-+#define DR_OFFSET(reg_index) (LLVM_EXTENSION offsetof(DBG, dr[reg_index]))
- 
+-
 -#define DEFINE_FP_MM(reg, i)                                                   \
 -  {                                                                            \
 -    #reg #i, nullptr, sizeof(uint64_t),                                        \
@@ -122,7 +121,10 @@ $NetBSD$
 -                                   lldb_##reg##i##_x86_64 },                   \
 -                                   nullptr, nullptr, nullptr, 0                \
 -  }
--
++#define DR_OFFSET(reg_index)                                                   \
++  (LLVM_EXTENSION offsetof(UserArea, dbg) +                                    \
++   LLVM_EXTENSION offsetof(DBG, dr[reg_index]))
+ 
 -#define DEFINE_GPR_PSEUDO_32(reg32, reg64)                                     \
 -  {                                                                            \
 -    #reg32, nullptr, 4,                                                        \
@@ -302,11 +304,6 @@ $NetBSD$
 +#define DECLARE_REGISTER_INFOS_X86_64_STRUCT
 +#include "RegisterInfos_x86_64.h"
 +#undef DECLARE_REGISTER_INFOS_X86_64_STRUCT
-+
-+static std::vector<lldb_private::RegisterInfo> &GetSharedRegisterInfoVector() {
-+  static std::vector<lldb_private::RegisterInfo> register_infos;
-+  return register_infos;
-+}
  
  static const RegisterInfo *
  PrivateGetRegisterInfoPtr(const lldb_private::ArchSpec &target_arch) {
