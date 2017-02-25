@@ -1,17 +1,17 @@
 $NetBSD$
 Supports configuration for NetBSD, taken from OpenBSD
---- src/CMakeLists.txt.orig	2016-06-02 21:20:22.000000000 +0000
-+++ src/CMakeLists.txt	2016-08-28 14:13:03.999103447 +0000
-@@ -85,6 +85,8 @@
+--- src/CMakeLists.txt.orig	2017-02-20 22:06:57.000000000 +0000
++++ src/CMakeLists.txt	2017-02-25 12:18:04.360077118 +0000
+@@ -95,6 +95,8 @@
  if (UNIX)
  	if (APPLE)
  		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
 +	elseif (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
 +		set (MOSQ_LIBS ${MOSQ_LIBS} m)
  	else (APPLE)
- 		set (MOSQ_LIBS ${MOSQ_LIBS} rt dl m)
- 	endif (APPLE)
-@@ -101,10 +103,11 @@
+ 		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
+ 		find_library(LIBRT rt)
+@@ -115,10 +117,11 @@
  # Simple detect libuuid
  if(NOT APPLE)
  	FIND_PATH(UUID_HEADER uuid/uuid.h)
@@ -26,7 +26,7 @@ Supports configuration for NetBSD, taken from OpenBSD
  endif(NOT APPLE)
  
  target_link_libraries(mosquitto ${MOSQ_LIBS})
-@@ -126,7 +129,3 @@
+@@ -140,7 +143,3 @@
  	install(TARGETS mosquitto_passwd RUNTIME DESTINATION "${BINDIR}" LIBRARY DESTINATION "${LIBDIR}")
  endif (${WITH_TLS} STREQUAL ON)
  
