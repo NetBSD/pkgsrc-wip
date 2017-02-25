@@ -38,5 +38,6 @@ To be done
    possible
  - import LLDB into base
  - add NetBSD specific ATF tests verifying fundamental functionality of LLDB
+ - support F_GETPATH path in source/Host/common/File.cpp
 
 and of course fix as many bugs as possible
