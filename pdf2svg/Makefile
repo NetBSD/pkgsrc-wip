@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.5 2012/10/05 08:46:09 asau Exp $
 #
 
-DISTNAME=	pdf2svg-0.2.1
-PKGREVISION=	2
+DISTNAME=	pdf2svg-0.2.3
 CATEGORIES=	converters
-MASTER_SITES=	http://www.cityinthesky.co.uk/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dawbarton/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bsd@cs.ubc.ca
 HOMEPAGE=	http://www.cityinthesky.co.uk/files/
