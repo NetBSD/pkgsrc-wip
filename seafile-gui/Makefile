@@ -2,7 +2,7 @@
 
 CATEGORIES=	net
 GITHUB_PROJECT=	seafile-client
-VERSION=	6.0.2
+VERSION=	6.0.3
 DISTNAME=	v${VERSION}
 PKGNAME=	seafile-gui-${VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/}
@@ -23,15 +23,12 @@ USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config cmake
 
-DEPENDS+=	seafile-client>=6.0:../../wip/seafile-client
-
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../wip/ccnet-server/buildlink3.mk"
 .include "../../wip/libsearpc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../wip/seafile-server/buildlink3.mk"
-#.include "../../wip/seafile-client/buildlink3.mk"
-#.include "../../devel/libuuid/buildlink3.mk"
+.include "../../wip/seafile-client/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 #.include "../../x11/qt5-qtwebsockets/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 #.include "../../x11/qt5-sqlite3/buildlink3.mk"

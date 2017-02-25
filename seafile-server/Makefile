@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--disable-fuse \
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 
+CONFLICTS=	seafile-client-[0-9]*
+
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	tools/seafile-admin

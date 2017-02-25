@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (seafile/v6.0.2.tar.gz) = 92cf107c11569ea09fde8ffde21a9611ad5f66e7
-RMD160 (seafile/v6.0.2.tar.gz) = 863740c6859153814b323ecaeed7aaa9737e0bd8
-SHA512 (seafile/v6.0.2.tar.gz) = ae79265927b3c2e2fd955affbc2f61c44f29071ede8b4dead66030afda271405c3cd3d3b6c136229ea1c6c994bd0f46a5667143ca89d0d3174efa75101162585
-Size (seafile/v6.0.2.tar.gz) = 455040 bytes
+SHA1 (seafile/v6.0.3.tar.gz) = 417f60f3b52b571eea533c3c62594e418a1473e0
+RMD160 (seafile/v6.0.3.tar.gz) = 3c0517e525146cdcc42d1bac088145e1356ddafe
+SHA512 (seafile/v6.0.3.tar.gz) = f494ea4509e721675fbc6014743933b29f22ada6b5bb38e70cdc3d129695b61980dfc1f6473bcf7ee5a0cd4db7a54ddff9296e7b5c76612896197ff4290054d7
+Size (seafile/v6.0.3.tar.gz) = 454398 bytes
 SHA1 (patch-common_obj-backend-fs.c) = a02039cb7b7e18094acfdf03603aaaf65a04257e
 SHA1 (patch-configure.ac) = 31dd263769416c447a2fe25ef3b0ab6324057919
 SHA1 (patch-daemon_Makefile.am) = 577bb58378dec7777272b11f6431832a75fce59d

@@ -2,7 +2,7 @@
 
 CATEGORIES=	net
 GITHUB_PROJECT=	seafile
-VERSION=	6.0.2
+VERSION=	6.0.3
 DISTNAME=	v${VERSION}
 PKGNAME=	seafile-client-${VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/}
@@ -25,6 +25,8 @@ AUTOMAKE_REQD=	1.9
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config automake aclocal autoheader autoconf gmake
 
+CONFLICTS=	seafile-server-[0-9]*
+
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	app/seaf-cli daemon/seaf-daemon
@@ -34,11 +36,11 @@ pre-configure:
 	set -e; cd ${WRKSRC}; \
 	libtoolize; aclocal; autoheader; automake -a --foreign -i; autoconf
 
+.include "../../devel/libinotify/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../wip/ccnet-server/buildlink3.mk"
 .include "../../wip/libsearpc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../wip/seafile-server/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -46,5 +48,4 @@ pre-configure:
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../wip/libevhtp/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-#.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
