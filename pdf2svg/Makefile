@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dawbarton/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bsd@cs.ubc.ca
-HOMEPAGE=	http://www.cityinthesky.co.uk/files/
+HOMEPAGE=	http://www.cityinthesky.co.uk/opensource/pdf2svg/
 COMMENT=	Small utility to convert PDF files to SVG files
 LICENSE=	gnu-gpl-v2
 
