@@ -23,6 +23,8 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	dvisvgm-[0-9]*:../../wip/dvisvgm
 DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam # pdfjoin
 DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
