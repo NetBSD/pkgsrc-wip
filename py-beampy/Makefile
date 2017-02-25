@@ -25,6 +25,11 @@ DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam # pdfjoin
 DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
+SUBST_CLASSES+=			ffmpeg3
+SUBST_STAGE.ffmpeg3=		post-extract
+SUBST_FILES.ffmpeg3+=		beampy/document.py
+SUBST_SED.ffmpeg3=		-e "s,find_executable('ffmpeg'),find_executable('ffmpeg3'),"
+
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
