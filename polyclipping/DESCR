@@ -1,0 +1,9 @@
+The Clipper library performs line & polygon clipping - intersection, union,
+difference & exclusive-or, and line & polygon offsetting.
+
+The library is based on Vatti's clipping algorithm.
+
+Written in Delphi, C++ and C#, with numerous demos, a help file and links to
+third party Python, Perl, Ruby and Haskell modules.
+
+This package is limited to the C++ version.

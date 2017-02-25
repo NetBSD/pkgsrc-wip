@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/polyclipping/clipper.hpp
+lib/libpolyclipping.so
+lib/libpolyclipping.so.22
+lib/libpolyclipping.so.22.0.0
+share/pkgconfig/polyclipping.pc
