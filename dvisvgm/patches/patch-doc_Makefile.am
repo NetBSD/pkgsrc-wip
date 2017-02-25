@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- doc/Makefile.am.orig	2017-02-03 08:29:10.000000000 +0000
++++ doc/Makefile.am
+@@ -14,7 +14,7 @@ TWEAK_DB_ARTICLE  = $(top_srcdir)/doc/tw
+ DB_VARS = man.endnotes.list.enabled=0 man.endnotes.are.numbered=0 man.authors.section.enabled=0
+ 
+ dvisvgm.1: dvisvgm-man.xml $(CONF_DBLATEX_MAN)
+-	if [ `type -p xmlto` ]; then \
++	if [ `which xmlto` ]; then \
+ 		xmlto -m $(CONF_DBLATEX_MAN) $(addprefix --stringparam , $(DB_VARS)) man $<; \
+ 	fi
+ 

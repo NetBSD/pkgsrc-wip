@@ -14,11 +14,13 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+USE_TOOLS+=	automake # Makefile.am patch
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.kpathsea}/lib
 
 DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
+#.include "../../wip/polyclipping/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/potrace/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
