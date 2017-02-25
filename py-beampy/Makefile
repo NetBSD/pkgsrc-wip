@@ -18,6 +18,7 @@ EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/beampy-${GITHUB_TAG}/
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
