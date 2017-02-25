@@ -28,7 +28,7 @@ CMAKE_ARGS+=	-DUSE_WIIUSE=0 \
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
