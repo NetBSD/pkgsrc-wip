@@ -4,6 +4,7 @@ GITHUB_PROJECT=	beampy
 GITHUB_TAG=	6994aa6e66f77b56e0bf6c1fa4cdd94e106e7b84
 # Upstream does not generate tags
 DISTNAME=	beampy-0.4.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hchauvet/}
 
@@ -15,6 +16,8 @@ LICENSE=	gnu-gpl-v3
 EXTRACT_USING=	bsdtar
 
 WRKSRC=		${WRKDIR}/beampy-${GITHUB_TAG}/
+
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
