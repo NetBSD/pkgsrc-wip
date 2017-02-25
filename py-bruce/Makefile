@@ -3,7 +3,7 @@
 DISTNAME=	bruce-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	http://bruce-tpt.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/bruce-tpt/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/bruce-tpt/
