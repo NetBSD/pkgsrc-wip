@@ -2,5 +2,7 @@ $NetBSD$
 
 SHA1 (lugaru-rev269-src.tar.bz2) = 3788915dd3a792be45250c819a9411bf3d98d0c1
 RMD160 (lugaru-rev269-src.tar.bz2) = 3a1c4a2e1461aa948162b3686744fe30680a8742
+SHA512 (lugaru-rev269-src.tar.bz2) = ac7c04e53d1db6ba012a98e07cd5593d9a385a9b720031dc6c3a382cc45faa7345489ecaf1b9a42ab3f8ec553f20516dea6c6dad78f20c82d01c3b96d1820699
 Size (lugaru-rev269-src.tar.bz2) = 39250302 bytes
 SHA1 (patch-CMakeLists.txt) = 954bfa0fd1bf074ee7b65a4be0b5089880e0e468
+SHA1 (patch-Source_OpenGL_Windows.cpp) = 6bfdd0493f8445cf2649a7159174dae1123fe399
