@@ -1580,6 +1580,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-preloaded.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-preloaded.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl.el.gz
