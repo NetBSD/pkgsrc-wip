@@ -1,8 +1,8 @@
 $NetBSD$
 
---- CMakeLists.txt.orig	2015-10-06 10:00:00.000000000 +0000
+--- CMakeLists.txt.orig	2017-02-27 02:30:49.000000000 +0000
 +++ CMakeLists.txt
-@@ -35,11 +35,11 @@ if(X11_FOUND)
+@@ -33,11 +33,11 @@ if(X11_FOUND)
  	add_definitions(-DPIGLIT_HAS_X11)
  endif()
  
@@ -18,7 +18,7 @@ $NetBSD$
  
  option(PIGLIT_BUILD_GL_TESTS "Build tests for OpenGL" ON)
  option(PIGLIT_BUILD_GLES1_TESTS "Build tests for OpenGL ES1" ${PIGLIT_BUILD_GLES_TESTS_DEFAULT})
-@@ -51,11 +51,11 @@ if(PIGLIT_BUILD_GL_TESTS)
+@@ -49,11 +49,11 @@ if(PIGLIT_BUILD_GL_TESTS)
  	find_package(OpenGL REQUIRED)
  endif()
  
@@ -34,7 +34,7 @@ $NetBSD$
  
  if(PIGLIT_USE_WAFFLE)
  	if (NOT WIN32)
-@@ -130,7 +130,8 @@ if(PIGLIT_BUILD_CL_TESTS)
+@@ -128,7 +128,8 @@ if(PIGLIT_BUILD_CL_TESTS)
  	find_package(OpenCL REQUIRED)
  endif(PIGLIT_BUILD_CL_TESTS)
  
@@ -44,13 +44,12 @@ $NetBSD$
  	if(X11_FOUND AND OPENGL_gl_LIBRARY)
  		# Assume the system has GLX. In the future, systems may exist
  		# with libGL and libX11 but no GLX, but that world hasn't
-@@ -389,7 +390,8 @@ if(HAVE_LIBCACA)
+@@ -418,7 +419,7 @@ if(HAVE_LIBCACA)
  endif(HAVE_LIBCACA)
  endif(GBM_FOUND)
  
 -if(PIGLIT_USE_WAFFLE AND ${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-+#if(PIGLIT_USE_WAFFLE AND ${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
 +if(PIGLIT_USE_WAFFLE)
- 	pkg_check_modules(EGL egl)
+ 	pkg_check_modules(EGL egl>=11.0)
  endif()
  
