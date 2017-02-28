@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2017-01-31 18:01:27.524682904 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2017-02-28 07:44:53.264708785 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,87 @@
+@@ -0,0 +1,91 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -51,6 +51,10 @@ $NetBSD$
 +                      bool hardware) override;
 +
 +  Error RemoveWatchpoint(lldb::addr_t addr) override;
++
++  Error SetHardwareBreakpoint(lldb::addr_t addr, size_t size) override;
++
++  Error RemoveHardwareBreakpoint(lldb::addr_t addr) override;
 +
 +private:
 +  // ---------------------------------------------------------------------

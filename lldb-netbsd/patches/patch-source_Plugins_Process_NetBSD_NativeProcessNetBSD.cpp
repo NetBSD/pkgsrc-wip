@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-28 07:44:53.246937953 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1285 @@
+@@ -0,0 +1,1288 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -942,6 +942,7 @@ $NetBSD$
 +
 +Error NativeProcessNetBSD::GetMemoryRegionInfo(lldb::addr_t load_addr,
 +                                              MemoryRegionInfo &range_info) {
++#if 0
 +  // FIXME review that the final memory region returned extends to the end of
 +  // the virtual address space,
 +  // with no perms if it is not mapped.
@@ -1003,6 +1004,8 @@ $NetBSD$
 +  range_info.SetExecutable(MemoryRegionInfo::OptionalBool::eNo);
 +  range_info.SetMapped(MemoryRegionInfo::OptionalBool::eNo);
 +  return error;
++#endif
++  return Error();
 +}
 +
 +void NativeProcessNetBSD::DoStopIDBumped(uint32_t newBumpId) {

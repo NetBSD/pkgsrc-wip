@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-02-10 22:41:02.014389855 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-02-28 07:44:53.258980602 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,388 @@
+@@ -0,0 +1,397 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -390,4 +390,13 @@ $NetBSD$
 +      NativeThreadProtocol::GetProcess());
 +  assert(process_sp);
 +  return *process_sp;
++}
++
++Error NativeThreadNetBSD::SetHardwareBreakpoint(lldb::addr_t addr,
++                                                   size_t size) {
++  return Error();
++}
++
++Error NativeThreadNetBSD::RemoveHardwareBreakpoint(lldb::addr_t addr) {
++  return Error();
 +}
