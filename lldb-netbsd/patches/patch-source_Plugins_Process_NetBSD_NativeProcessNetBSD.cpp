@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-06 19:51:43.599155992 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-28 07:44:53.246937953 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1387 @@
+@@ -0,0 +1,1285 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -45,7 +45,7 @@ $NetBSD$
 +#include "lldb/Target/ProcessLaunchInfo.h"
 +#include "lldb/Target/Target.h"
 +#include "lldb/Utility/LLDBAssert.h"
-+#include "lldb/Utility/PseudoTerminal.h"
++#include "lldb/Host/PseudoTerminal.h"
 +#include "lldb/Utility/StringExtractor.h"
 +
 +#include "NativeThreadNetBSD.h"
@@ -69,33 +69,29 @@ $NetBSD$
 +
 +namespace {
 +void MaybeLogLaunchInfo(const ProcessLaunchInfo &info) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +  if (!log)
 +    return;
 +
 +  if (const FileAction *action = info.GetFileActionForFD(STDIN_FILENO))
-+    log->Printf("%s: setting STDIN to '%s'", __FUNCTION__,
-+                action->GetFileSpec().GetCString());
++    LLDB_LOG(log, "setting STDIN to '{0}'", action->GetFileSpec());
 +  else
-+    log->Printf("%s leaving STDIN as is", __FUNCTION__);
++    LLDB_LOG(log, "leaving STDIN as is");
 +
 +  if (const FileAction *action = info.GetFileActionForFD(STDOUT_FILENO))
-+    log->Printf("%s setting STDOUT to '%s'", __FUNCTION__,
-+                action->GetFileSpec().GetCString());
++    LLDB_LOG(log, "setting STDOUT to '{0}'", action->GetFileSpec());
 +  else
-+    log->Printf("%s leaving STDOUT as is", __FUNCTION__);
++    LLDB_LOG(log, "leaving STDOUT as is");
 +
 +  if (const FileAction *action = info.GetFileActionForFD(STDERR_FILENO))
-+    log->Printf("%s setting STDERR to '%s'", __FUNCTION__,
-+                action->GetFileSpec().GetCString());
++    LLDB_LOG(log, "setting STDERR to '{0}'", action->GetFileSpec());
 +  else
-+    log->Printf("%s leaving STDERR as is", __FUNCTION__);
++    LLDB_LOG(log, "leaving STDERR as is");
 +
 +  int i = 0;
 +  for (const char **args = info.GetArguments().GetConstArgumentVector(); *args;
 +       ++args, ++i)
-+    log->Printf("%s arg %d: \"%s\"", __FUNCTION__, i,
-+                *args ? *args : "nullptr");
++    LLDB_LOG(log, "arg {0}: '{1}'", i, *args);
 +}
 +
 +void DisplayBytes(StreamString &s, void *bytes, uint32_t count) {
@@ -109,51 +105,58 @@ $NetBSD$
 +
 +void PtraceDisplayBytes(int &req, void *addr, int data) {
 +  StreamString buf;
-+  Log *verbose_log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(
-+      POSIX_LOG_PTRACE));
 +
-+  if (verbose_log) {
-+    switch (req) {
-+    case PT_WRITE_I: {
-+      DisplayBytes(buf, &data, sizeof(int));
-+      verbose_log->Printf("PT_WRITE_I %s", buf.GetData());
-+      break;
-+    }
-+    case PT_WRITE_D: {
-+      DisplayBytes(buf, &data, sizeof(int));
-+      verbose_log->Printf("PT_WRITE_I %s", buf.GetData());
-+      break;
-+    }
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PTRACE));
++  if (!log)
++    return;
++
++  switch (req) {
++  case PT_WRITE_I: {
++    DisplayBytes(buf, &data, sizeof(int));
++    LLDB_LOG(log, "PT_WRITE_I {0}", buf.GetData());
++    break;
++  }
++  case PT_WRITE_D: {
++    DisplayBytes(buf, &data, sizeof(int));
++    LLDB_LOG(log, "PT_WRITE_D {0}", buf.GetData());
++    break;
++  }
 +#ifdef PT_SETREGS
-+    case PT_SETREGS: {
-+      DisplayBytes(buf, addr, sizeof(struct reg));
-+      verbose_log->Printf("PT_SETREGS %s", buf.GetData());
-+      break;
-+    }
++  case PT_SETREGS: {
++    DisplayBytes(buf, addr, sizeof(struct reg));
++    LLDB_LOG(log, "PT_SETREGS {0}", buf.GetData());
++    break;
++  }
 +#endif
 +#ifdef PT_SETFPREGS
-+    case PT_SETFPREGS: {
-+      DisplayBytes(buf, addr, sizeof(struct fpreg));
-+      verbose_log->Printf("PT_SETFPREGS %s", buf.GetData());
-+      break;
-+    }
++  case PT_SETFPREGS: {
++    DisplayBytes(buf, addr, sizeof(struct fpreg));
++    LLDB_LOG(log, "PT_SETFPREGS {0}", buf.GetData());
++    break;
++  }
++#endif
++#ifdef PT_SETDBREGS
++  case PT_SETDBREGS: {
++    DisplayBytes(buf, addr, sizeof(struct fpreg));
++    LLDB_LOG(log, "PT_SETDBREGS {0}", buf.GetData());
++    break;
++  }
 +#endif
 +#ifdef PT_SETXMMREGS
-+    case PT_SETXMMREGS: {
-+      DisplayBytes(buf, addr, sizeof(struct xmmregs));
-+      verbose_log->Printf("PT_SETXMMREGS %s", buf.GetData());
-+      break;
-+    }
++  case PT_SETXMMREGS: {
++    DisplayBytes(buf, addr, sizeof(struct xmmregs));
++    LLDB_LOG(log, "PT_SETXMMREGS {0}", buf.GetData());
++    break;
++  }
 +#endif
 +#ifdef PT_SETVECREGS
-+    case PT_SETVECREGS: {
-+      DisplayBytes(buf, addr, sizeof(struct vreg));
-+      verbose_log->Printf("PT_SETVECREGS %s", buf.GetData());
-+      break;
-+    }
++  case PT_SETVECREGS: {
++    DisplayBytes(buf, addr, sizeof(struct vreg));
++    LLDB_LOG(log, "PT_SETVECREGS {0}", buf.GetData());
++    break;
++  }
 +#endif
-+    default: {}
-+    }
++  default: {}
 +  }
 +}
 +
@@ -189,7 +192,7 @@ $NetBSD$
 +    ProcessLaunchInfo &launch_info,
 +    NativeProcessProtocol::NativeDelegate &native_delegate, MainLoop &mainloop,
 +    NativeProcessProtocolSP &native_process_sp) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +
 +  Error error;
 +
@@ -217,9 +220,7 @@ $NetBSD$
 +
 +  if (error.Fail()) {
 +    native_process_sp.reset();
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s failed to launch process: %s",
-+                  __FUNCTION__, error.AsCString());
++    LLDB_LOG(log, "failed to launch process: {0}", error);
 +    return error;
 +  }
 +
@@ -231,9 +232,8 @@ $NetBSD$
 +Error NativeProcessProtocol::Attach(
 +    lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
 +    MainLoop &mainloop, NativeProcessProtocolSP &native_process_sp) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s(pid = %" PRIi64 ")", __FUNCTION__, pid);
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
++    LLDB_LOG(log, "pid = {0:x}", pid);
 +
 +  // Retrieve the architecture for the running process.
 +  ArchSpec process_arch;
@@ -268,10 +268,8 @@ $NetBSD$
 +
 +void NativeProcessNetBSD::AttachToInferior(MainLoop &mainloop, lldb::pid_t pid,
 +                                          Error &error) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s (pid = %" PRIi64 ")", __FUNCTION__,
-+                pid);
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
++  LLDB_LOG(log, "pid = {0:x}", pid);
 +
 +  m_sigchld_handle = mainloop.RegisterSignal(
 +      SIGCHLD, [this](MainLoopBase &) { SigchldHandler(); }, error);
@@ -283,10 +281,8 @@ $NetBSD$
 +    return;
 +
 +  // Set the architecture to the exe architecture.
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s (pid = %" PRIi64
-+                ") detected architecture %s",
-+                __FUNCTION__, pid, m_arch.GetArchitectureName());
++  LLDB_LOG(log, "pid = {0:x}, detected architecture {1}", pid,
++           m_arch.GetArchitectureName());
 +
 +  m_pid = pid;
 +  SetState(eStateAttaching);
@@ -311,16 +307,14 @@ $NetBSD$
 +  if (error.Fail())
 +    return error;
 +
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +
 +  // Wait for the child process to trap on its call to execve.
 +  ::pid_t wpid;
 +  int status;
 +  if ((wpid = waitpid(pid, &status, 0)) < 0) {
 +    error.SetErrorToErrno();
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s waitpid for inferior failed with %s",
-+                  __FUNCTION__, error.AsCString());
++    LLDB_LOG(log, "waitpid for inferior failed with %s", error);
 +
 +    // Mark the inferior as invalid.
 +    // FIXME this could really use a new state - eStateLaunchFailure.  For now,
@@ -332,9 +326,7 @@ $NetBSD$
 +  assert(WIFSTOPPED(status) && (wpid == static_cast<::pid_t>(pid)) &&
 +         "Could not sync with inferior process.");
 +
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s inferior started, now in stopped state",
-+                __FUNCTION__);
++  LLDB_LOG(log, "inferior started, now in stopped state");
 +
 +  SetDefaultPtraceOpts(pid);
 +
@@ -347,10 +339,10 @@ $NetBSD$
 +  if (m_terminal_fd != -1) {
 +    error = EnsureFDFlags(m_terminal_fd, O_NONBLOCK);
 +    if (error.Fail()) {
-+      if (log)
-+        log->Printf("NativeProcessNetBSD::%s inferior EnsureFDFlags failed for "
-+                    "ensuring terminal O_NONBLOCK setting: %s",
-+                    __FUNCTION__, error.AsCString());
++      LLDB_LOG(log,
++               "inferior EnsureFDFlags failed for ensuring terminal "
++               "O_NONBLOCK setting: {0}",
++               error);
 +
 +      // Mark the inferior as invalid.
 +      // FIXME this could really use a new state - eStateLaunchFailure.  For
@@ -361,9 +353,7 @@ $NetBSD$
 +    }
 +  }
 +
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s() adding pid = %" PRIu64, __FUNCTION__,
-+                uint64_t(pid));
++  LLDB_LOG(log, "adding pid = {0}", pid);
 +
 +  ResolveProcessArchitecture(m_pid, m_arch);
 +
@@ -387,14 +377,8 @@ $NetBSD$
 +  /* Set process stopped */
 +  SetState(StateType::eStateStopped);
 +
-+  if (log) {
-+    if (error.Success())
-+      log->Printf("NativeProcessNetBSD::%s inferior launching succeeded",
-+                  __FUNCTION__);
-+    else
-+      log->Printf("NativeProcessNetBSD::%s inferior launching failed: %s",
-+                  __FUNCTION__, error.AsCString());
-+  }
++  if (error.Fail())
++    LLDB_LOG(log, "inferior launching failed {0}", error);
 +  return error;
 +}
 +
@@ -502,14 +486,11 @@ $NetBSD$
 +// Handles all waitpid events from the inferior process.
 +void NativeProcessNetBSD::MonitorCallback(lldb::pid_t pid, bool exited,
 +                                         int signal, int status) {
-+  Log *log(GetLogIfAnyCategoriesSet(LIBLLDB_LOG_PROCESS));
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +
 +  // Handle when the process exits.
 +  if (exited) {
-+    if (log)
-+      log->Printf(
-+          "NativeProcessNetBSD::%s() got exit signal(%d) , pid = %d",
-+          __FUNCTION__, signal, pid);
++    LLDB_LOG(log, "got exit signal({0}) , pid = {1}", signal, pid);
 +
 +    /* Stop Tracking All Threads attached to Process */
 +    m_threads.clear();
@@ -615,7 +596,7 @@ $NetBSD$
 +        }
 +        SetState(StateType::eStateStopped, true);
 +        break;
-+      case TRAP_HWWPT:
++      case TRAP_DBREG:
 +        printf("hw watchpoint reported\n");
 +        break;
 +      }
@@ -714,19 +695,16 @@ $NetBSD$
 +}
 +
 +Error NativeProcessNetBSD::Resume(const ResumeActionList &resume_actions) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS | LIBLLDB_LOG_THREAD));
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s called: pid %d", __FUNCTION__,
-+                GetID());
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
++  LLDB_LOG(log, "pid {0}", GetID());
 +
 +  const auto &thread_sp = m_threads[0];
 +  const ResumeAction *const action = resume_actions.GetActionForThread(thread_sp->GetID(), true);
 +
 +  if (action == nullptr) {
-+    if (log)
-+      log->Printf("NativeProcessLinux::%s no action specified for pid %" PRIu64 " tid %" PRIu64,
-+                  __FUNCTION__, GetID(), thread_sp->GetID());
-+     return Error();
++    LLDB_LOG(log, "no action specified for pid {0} tid {1}", GetID(),
++             thread_sp->GetID());
++    return Error();
 +  }
 +
 +  switch (action->state) {
@@ -755,7 +733,7 @@ $NetBSD$
 +
 +  case eStateSuspended:
 +  case eStateStopped:
-+    lldbassert(0 && "Unexpected state");
++    llvm_unreachable("Unexpected state");
 + 
 +  default:
 +    return Error("NativeProcessLinux::%s (): unexpected state %s specified "
@@ -792,11 +770,8 @@ $NetBSD$
 +Error NativeProcessNetBSD::Signal(int signo) {
 +  Error error;
 +
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+  if (log)
-+    log->Printf(
-+        "NativeProcessNetBSD::%s: sending signal %d (%s) to pid %" PRIu64,
-+        __FUNCTION__, signo, Host::GetSignalAsCString(signo), GetID());
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
++  LLDB_LOG(log, "selecting running thread for interrupt target");
 +
 +  if (kill(GetID(), signo))
 +    error.SetErrorToErrno();
@@ -807,15 +782,12 @@ $NetBSD$
 +Error NativeProcessNetBSD::Interrupt() {
 +  // Pick a running thread (or if none, a not-dead stopped thread) as
 +  // the chosen thread that will be the stop-reason thread.
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +
 +  NativeThreadProtocolSP running_thread_sp;
 +  NativeThreadProtocolSP stopped_thread_sp;
 +
-+  if (log)
-+    log->Printf(
-+        "NativeProcessNetBSD::%s selecting running thread for interrupt target",
-+        __FUNCTION__);
++  LLDB_LOG(log, "selecting running thread for interrupt target");
 +
 +  for (auto thread_sp : m_threads) {
 +    // The thread shouldn't be null but lets just cover that here.
@@ -838,31 +810,19 @@ $NetBSD$
 +  if (!running_thread_sp && !stopped_thread_sp) {
 +    Error error("found no running/stepping or live stopped threads as target "
 +                "for interrupt");
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s skipping due to error: %s",
-+                  __FUNCTION__, error.AsCString());
-+
++    LLDB_LOG(log, "skipping due to error: {0}", error);
 +    return error;
 +  }
 +
 +  NativeThreadProtocolSP deferred_signal_thread_sp =
 +      running_thread_sp ? running_thread_sp : stopped_thread_sp;
 +
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s pid %" PRIu64 " %s tid %" PRIu64
-+                " chosen for interrupt target",
-+                __FUNCTION__, GetID(),
-+                running_thread_sp ? "running" : "stopped",
-+                deferred_signal_thread_sp->GetID());
-+
 +  return Error();
 +}
 +
 +Error NativeProcessNetBSD::Kill() {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s called for PID %" PRIu64, __FUNCTION__,
-+                GetID());
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
++  LLDB_LOG(log, "pid {0}", GetID());
 +
 +  Error error;
 +
@@ -873,10 +833,8 @@ $NetBSD$
 +  case StateType::eStateDetached:
 +  case StateType::eStateUnloaded:
 +    // Nothing to do - the process is already dead.
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s ignored for PID %" PRIu64
-+                  " due to current state: %s",
-+                  __FUNCTION__, GetID(), StateAsCString(m_state));
++    LLDB_LOG(log, "ignored for PID {0} due to current state: {1}", GetID(),
++             StateAsCString(m_state));
 +    return error;
 +
 +  case StateType::eStateConnected:
@@ -992,21 +950,9 @@ $NetBSD$
 +  // Assume proc maps entries are in ascending order.
 +  // FIXME assert if we find differently.
 +
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
-+  Error error;
-+
 +  if (m_supports_mem_region == LazyBool::eLazyBoolNo) {
 +    // We're done.
-+    error.SetErrorString("unsupported");
-+    return error;
-+  }
-+
-+ {
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s reusing %" PRIu64
-+                  " cached memory region entries",
-+                  __FUNCTION__,
-+                  static_cast<uint64_t>(m_mem_region_cache.size()));
++    return Error("unsupported");
 +  }
 +
 +  lldb::addr_t prev_base_address = 0;
@@ -1149,13 +1095,8 @@ $NetBSD$
 +  unsigned char *dst = static_cast<unsigned char *>(buf);
 +  struct ptrace_io_desc io;
 +
-+  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_ALL));
-+  if (log)
-+    ProcessPOSIXLog::IncNestLevel();
-+  if (log && ProcessPOSIXLog::AtTopNestLevel() &&
-+      log->GetMask().Test(POSIX_LOG_MEMORY))
-+    log->Printf("NativeProcessNetBSD::%s(%p, %p, %zd, _)", __FUNCTION__,
-+                (void *)addr, buf, size);
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_MEMORY));
++  LLDB_LOG(log, "addr = {0}, buf = {1}, size = {2}", addr, buf, size);
 +
 +  bytes_read = 0;
 +  io.piod_op = PIOD_READ_D;
@@ -1167,18 +1108,13 @@ $NetBSD$
 +
 +    Error error = NativeProcessNetBSD::PtraceWrapper(
 +        PT_IO, GetID(), &io);
-+    if (error.Fail()) {
-+      if (log)
-+        ProcessPOSIXLog::DecNestLevel();
++    if (error.Fail())
 +      return error;
-+    }
 +
 +    bytes_read = io.piod_len;
 +    io.piod_len = size - bytes_read;
 +  } while(bytes_read < size);
 +
-+  if (log)
-+    ProcessPOSIXLog::DecNestLevel();
 +  return Error();
 +}
 +
@@ -1197,13 +1133,8 @@ $NetBSD$
 +  Error error;
 +  struct ptrace_io_desc io;
 +
-+  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_ALL));
-+  if (log)
-+    ProcessPOSIXLog::IncNestLevel();
-+  if (log && ProcessPOSIXLog::AtTopNestLevel() &&
-+      log->GetMask().Test(POSIX_LOG_MEMORY))
-+    log->Printf("NativeProcessNetBSD::%s(0x%" PRIx64 ", %p, %zu)", __FUNCTION__,
-+                addr, buf, size);
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_MEMORY));
++  LLDB_LOG(log, "addr = {0}, buf = {1}, size = {2}", addr, buf, size);
 +
 +  bytes_written = 0;
 +  io.piod_op = PIOD_WRITE_D;
@@ -1215,18 +1146,13 @@ $NetBSD$
 +
 +    Error error = NativeProcessNetBSD::PtraceWrapper(
 +        PT_IO, GetID(), &io);
-+    if (error.Fail()) {
-+      if (log)
-+        ProcessPOSIXLog::DecNestLevel();
++    if (error.Fail())
 +      return error;
-+    }
 +
 +    bytes_written = io.piod_len;
 +    io.piod_len = size - bytes_written;
 +  } while(bytes_written < size);
 +
-+  if (log)
-+    ProcessPOSIXLog::DecNestLevel();
 +  return error;
 +}
 +
@@ -1244,13 +1170,9 @@ $NetBSD$
 +}
 +
 +NativeThreadNetBSDSP NativeProcessNetBSD::AddThread(lldb::tid_t thread_id) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
 +
-+  if (log) {
-+    log->Printf("NativeProcessNetBSD::%s pid %" PRIu64
-+                " adding thread with tid %" PRIu64,
-+                __FUNCTION__, GetID(), thread_id);
-+  }
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_THREAD));
++  LLDB_LOG(log, "pid {0} adding thread with tid {1}", GetID(), thread_id);
 +
 +  assert(!HasThreadNoLock(thread_id) &&
 +         "attempted to add a thread by id that already exists");
@@ -1292,7 +1214,7 @@ $NetBSD$
 +//===----------------------------------------------------------------------===//
 +
 +void NativeProcessNetBSD::SigchldHandler() {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +  // Process all pending waitpid notifications.
 +  int status;
 +  ::pid_t wait_pid = waitpid(WAIT_ANY, &status, WALLSIG | WNOHANG);
@@ -1305,10 +1227,7 @@ $NetBSD$
 +      return;
 +
 +    Error error(errno, eErrorTypePOSIX);
-+    if (log)
-+      log->Printf("NativeProcessNetBSD::%s waitpid (WAIT_ANY, &status, "
-+                  "WALLSIG | WNOHANG) failed: %s", __FUNCTION__,
-+                  error.AsCString());
++    LLDB_LOG(log, "waitpid (-1, &status, _) failed: {0}", error);
 +  }
 +
 +  bool exited = false;
@@ -1332,12 +1251,10 @@ $NetBSD$
 +  } else
 +    status_cstr = "(\?\?\?)";
 +
-+  if (log)
-+    log->Printf("NativeProcessNetBSD::%s: waitpid (WAIT_ANY, &status, "
-+                "WALLSIG | WNOHANG) => pid = %" PRIi32
-+                ", status = 0x%8.8x (%s), signal = %i, exit_state = %i",
-+                __FUNCTION__, wait_pid, status, status_cstr, signal,
-+                exit_status);
++  LLDB_LOG(log,
++           "waitpid (-1, &status, _) => pid = {0}, status = {1:x} "
++           "({2}), signal = {3}, exit_state = {4}",
++           wait_pid, status, status_cstr, signal, exit_status);
 +
 +  MonitorCallback(wait_pid, exited, signal, exit_status);
 +}
@@ -1363,30 +1280,11 @@ $NetBSD$
 +  if (result)
 +    *result = ret;
 +
-+  if (log)
-+    log->Printf("ptrace(%d, %d, %p, %d, %d)=%lX", req, pid, addr,
-+                data, ret);
++  LLDB_LOG(log, "ptrace({0}, {1}, {2}, {3}, {4})={6:x}", req, pid, addr,
++           data, ret);
 +
-+  if (log && error.GetError() != 0) {
-+    const char *str;
-+    switch (error.GetError()) {
-+    case ESRCH:
-+      str = "ESRCH";
-+      break;
-+    case EINVAL:
-+      str = "EINVAL";
-+      break;
-+    case EBUSY:
-+      str = "EBUSY";
-+      break;
-+    case EPERM:
-+      str = "EPERM";
-+      break;
-+    default:
-+      str = error.AsCString();
-+    }
-+    log->Printf("ptrace() failed; errno=%d (%s)", error.GetError(), str);
-+  }
++  if (error.Fail())
++    LLDB_LOG(log, "ptrace() failed: {0}", error);
 +
 +  return error;
 +}
