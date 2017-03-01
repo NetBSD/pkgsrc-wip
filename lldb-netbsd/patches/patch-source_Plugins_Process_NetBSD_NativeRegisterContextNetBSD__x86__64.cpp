@@ -2,8 +2,8 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-01 11:04:48.447830223 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,1221 @@
-+//===-- NativeRegisterContextLinux_x86_64.cpp ---------------*- C++ -*-===//
+@@ -0,0 +1,1227 @@
++//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
 +//
@@ -14,7 +14,7 @@ $NetBSD$
 +
 +#if defined(__i386__) || defined(__x86_64__)
 +
-+#include "NativeRegisterContextLinux_x86_64.h"
++#include "NativeRegisterContextNetBSD_x86_64.h"
 +
 +#include "lldb/Core/DataBufferHeap.h"
 +#include "lldb/Core/Log.h"
@@ -22,13 +22,13 @@ $NetBSD$
 +#include "lldb/Host/HostInfo.h"
 +#include "lldb/Utility/Error.h"
 +
-+#include "Plugins/Process/Utility/RegisterContextLinux_i386.h"
-+#include "Plugins/Process/Utility/RegisterContextLinux_x86_64.h"
++//#include "Plugins/Process/Utility/RegisterContextNetBSD_i386.h"
++#include "Plugins/Process/Utility/RegisterContextNetBSD_x86_64.h"
 +
-+#include <linux/elf.h>
++#include <elf.h>
 +
 +using namespace lldb_private;
-+using namespace lldb_private::process_linux;
++using namespace lldb_private::process_netbsd;
 +
 +// ----------------------------------------------------------------------------
 +// Private namespace.
@@ -217,18 +217,14 @@ $NetBSD$
 +// Required ptrace defines.
 +// ----------------------------------------------------------------------------
 +
-+// Support ptrace extensions even when compiled without required kernel support
-+#ifndef NT_X86_XSTATE
-+#define NT_X86_XSTATE 0x202
-+#endif
-+#ifndef NT_PRXFPREG
-+#define NT_PRXFPREG 0x46e62b7f
-+#endif
-+
 +// On x86_64 NT_PRFPREG is used to access the FXSAVE area. On i386, we need to
 +// use NT_PRXFPREG.
 +static inline unsigned int fxsr_regset(const ArchSpec &arch) {
++#if 0
 +  return arch.GetAddressByteSize() == 8 ? NT_PRFPREG : NT_PRXFPREG;
++#else
++  return 0;
++#endif
 +}
 +
 +// ----------------------------------------------------------------------------
@@ -248,36 +244,40 @@ $NetBSD$
 +#define mask_XSTATE_BNDCFG (1ULL << 4)
 +#define mask_XSTATE_MPX (mask_XSTATE_BNDREGS | mask_XSTATE_BNDCFG)
 +
-+NativeRegisterContextLinux *
-+NativeRegisterContextLinux::CreateHostNativeRegisterContextLinux(
++NativeRegisterContextNetBSD *
++NativeRegisterContextNetBSD::CreateHostNativeRegisterContextNetBSD(
 +    const ArchSpec &target_arch, NativeThreadProtocol &native_thread,
 +    uint32_t concrete_frame_idx) {
-+  return new NativeRegisterContextLinux_x86_64(target_arch, native_thread,
++  return new NativeRegisterContextNetBSD_x86_64(target_arch, native_thread,
 +                                               concrete_frame_idx);
 +}
 +
 +// ----------------------------------------------------------------------------
-+// NativeRegisterContextLinux_x86_64 members.
++// NativeRegisterContextNetBSD_x86_64 members.
 +// ----------------------------------------------------------------------------
 +
 +static RegisterInfoInterface *
 +CreateRegisterInfoInterface(const ArchSpec &target_arch) {
++#if 0
 +  if (HostInfo::GetArchitecture().GetAddressByteSize() == 4) {
-+    // 32-bit hosts run with a RegisterContextLinux_i386 context.
-+    return new RegisterContextLinux_i386(target_arch);
++    // 32-bit hosts run with a RegisterContextNetBSD_i386 context.
++    return new RegisterContextNetBSD_i386(target_arch);
 +  } else {
++#endif
 +    assert((HostInfo::GetArchitecture().GetAddressByteSize() == 8) &&
 +           "Register setting path assumes this is a 64-bit host");
 +    // X86_64 hosts know how to work with 64-bit and 32-bit EXEs using the
 +    // x86_64 register context.
-+    return new RegisterContextLinux_x86_64(target_arch);
++    return new RegisterContextNetBSD_x86_64(target_arch);
++#if 0
 +  }
++#endif
 +}
 +
-+NativeRegisterContextLinux_x86_64::NativeRegisterContextLinux_x86_64(
++NativeRegisterContextNetBSD_x86_64::NativeRegisterContextNetBSD_x86_64(
 +    const ArchSpec &target_arch, NativeThreadProtocol &native_thread,
 +    uint32_t concrete_frame_idx)
-+    : NativeRegisterContextLinux(native_thread, concrete_frame_idx,
++    : NativeRegisterContextNetBSD(native_thread, concrete_frame_idx,
 +                                 CreateRegisterInfoInterface(target_arch)),
 +      m_xstate_type(XStateType::Invalid), m_fpr(), m_iovec(), m_ymm_set(),
 +      m_mpx_set(), m_reg_info(), m_gpr_x86_64() {
@@ -352,7 +352,7 @@ $NetBSD$
 +
 +// CONSIDER after local and llgs debugging are merged, register set support can
 +// be moved into a base x86-64 class with IsRegisterSetAvailable made virtual.
-+uint32_t NativeRegisterContextLinux_x86_64::GetRegisterSetCount() const {
++uint32_t NativeRegisterContextNetBSD_x86_64::GetRegisterSetCount() const {
 +  uint32_t sets = 0;
 +  for (uint32_t set_index = 0; set_index < k_num_register_sets; ++set_index) {
 +    if (IsRegisterSetAvailable(set_index))
@@ -362,7 +362,7 @@ $NetBSD$
 +  return sets;
 +}
 +
-+uint32_t NativeRegisterContextLinux_x86_64::GetUserRegisterCount() const {
++uint32_t NativeRegisterContextNetBSD_x86_64::GetUserRegisterCount() const {
 +  uint32_t count = 0;
 +  for (uint32_t set_index = 0; set_index < k_num_register_sets; ++set_index) {
 +    const RegisterSet *set = GetRegisterSet(set_index);
@@ -373,7 +373,7 @@ $NetBSD$
 +}
 +
 +const RegisterSet *
-+NativeRegisterContextLinux_x86_64::GetRegisterSet(uint32_t set_index) const {
++NativeRegisterContextNetBSD_x86_64::GetRegisterSet(uint32_t set_index) const {
 +  if (!IsRegisterSetAvailable(set_index))
 +    return nullptr;
 +
@@ -390,7 +390,7 @@ $NetBSD$
 +  return nullptr;
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::ReadRegister(
++Error NativeRegisterContextNetBSD_x86_64::ReadRegister(
 +    const RegisterInfo *reg_info, RegisterValue &reg_value) {
 +  Error error;
 +
@@ -534,7 +534,7 @@ $NetBSD$
 +  return error;
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::WriteRegister(
++Error NativeRegisterContextNetBSD_x86_64::WriteRegister(
 +    const RegisterInfo *reg_info, const RegisterValue &reg_value) {
 +  assert(reg_info && "reg_info is null");
 +
@@ -645,7 +645,7 @@ $NetBSD$
 +               "write strategy unknown");
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::ReadAllRegisterValues(
++Error NativeRegisterContextNetBSD_x86_64::ReadAllRegisterValues(
 +    lldb::DataBufferSP &data_sp) {
 +  Error error;
 +
@@ -686,7 +686,7 @@ $NetBSD$
 +           ++reg) {
 +        if (!CopyXSTATEtoYMM(reg, byte_order)) {
 +          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextLinux_x86_64::%s "
++              "NativeRegisterContextNetBSD_x86_64::%s "
 +              "CopyXSTATEtoYMM() failed for reg num "
 +              "%" PRIu32,
 +              __FUNCTION__, reg);
@@ -700,7 +700,7 @@ $NetBSD$
 +           ++reg) {
 +        if (!CopyXSTATEtoMPX(reg)) {
 +          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextLinux_x86_64::%s "
++              "NativeRegisterContextNetBSD_x86_64::%s "
 +              "CopyXSTATEtoMPX() failed for reg num "
 +              "%" PRIu32,
 +              __FUNCTION__, reg);
@@ -714,7 +714,7 @@ $NetBSD$
 +    assert(false && "how do we save the floating point registers?");
 +    error.SetErrorString("unsure how to save the floating point registers");
 +  }
-+  /** The following code is specific to Linux x86 based architectures,
++  /** The following code is specific to NetBSD x86 based architectures,
 +   *  where the register orig_eax (32 bit)/orig_rax (64 bit) is set to
 +   *  -1 to solve the bug 23659, such a setting prevents the automatic
 +   *  decrement of the instruction pointer which was causing the SIGILL
@@ -733,20 +733,20 @@ $NetBSD$
 +  return error;
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::WriteAllRegisterValues(
++Error NativeRegisterContextNetBSD_x86_64::WriteAllRegisterValues(
 +    const lldb::DataBufferSP &data_sp) {
 +  Error error;
 +
 +  if (!data_sp) {
 +    error.SetErrorStringWithFormat(
-+        "NativeRegisterContextLinux_x86_64::%s invalid data_sp provided",
++        "NativeRegisterContextNetBSD_x86_64::%s invalid data_sp provided",
 +        __FUNCTION__);
 +    return error;
 +  }
 +
 +  if (data_sp->GetByteSize() != REG_CONTEXT_SIZE) {
 +    error.SetErrorStringWithFormat(
-+        "NativeRegisterContextLinux_x86_64::%s data_sp contained mismatched "
++        "NativeRegisterContextNetBSD_x86_64::%s data_sp contained mismatched "
 +        "data size, expected %" PRIu64 ", actual %" PRIu64,
 +        __FUNCTION__, REG_CONTEXT_SIZE, data_sp->GetByteSize());
 +    return error;
@@ -754,7 +754,7 @@ $NetBSD$
 +
 +  uint8_t *src = data_sp->GetBytes();
 +  if (src == nullptr) {
-+    error.SetErrorStringWithFormat("NativeRegisterContextLinux_x86_64::%s "
++    error.SetErrorStringWithFormat("NativeRegisterContextNetBSD_x86_64::%s "
 +                                   "DataBuffer::GetBytes() returned a null "
 +                                   "pointer",
 +                                   __FUNCTION__);
@@ -785,7 +785,7 @@ $NetBSD$
 +           ++reg) {
 +        if (!CopyYMMtoXSTATE(reg, byte_order)) {
 +          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextLinux_x86_64::%s "
++              "NativeRegisterContextNetBSD_x86_64::%s "
 +              "CopyYMMtoXSTATE() failed for reg num "
 +              "%" PRIu32,
 +              __FUNCTION__, reg);
@@ -799,7 +799,7 @@ $NetBSD$
 +           ++reg) {
 +        if (!CopyMPXtoXSTATE(reg)) {
 +          error.SetErrorStringWithFormat(
-+              "NativeRegisterContextLinux_x86_64::%s "
++              "NativeRegisterContextNetBSD_x86_64::%s "
 +              "CopyMPXtoXSTATE() failed for reg num "
 +              "%" PRIu32,
 +              __FUNCTION__, reg);
@@ -812,10 +812,10 @@ $NetBSD$
 +  return error;
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::IsCPUFeatureAvailable(
++bool NativeRegisterContextNetBSD_x86_64::IsCPUFeatureAvailable(
 +    RegSet feature_code) const {
 +  if (m_xstate_type == XStateType::Invalid) {
-+    if (const_cast<NativeRegisterContextLinux_x86_64 *>(this)->ReadFPR().Fail())
++    if (const_cast<NativeRegisterContextNetBSD_x86_64 *>(this)->ReadFPR().Fail())
 +      return false;
 +  }
 +  switch (feature_code) {
@@ -836,7 +836,7 @@ $NetBSD$
 +  return false;
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::IsRegisterSetAvailable(
++bool NativeRegisterContextNetBSD_x86_64::IsRegisterSetAvailable(
 +    uint32_t set_index) const {
 +  uint32_t num_sets = k_num_register_sets - k_num_extended_register_sets;
 +
@@ -852,18 +852,19 @@ $NetBSD$
 +  return false;
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::IsGPR(uint32_t reg_index) const {
++bool NativeRegisterContextNetBSD_x86_64::IsGPR(uint32_t reg_index) const {
 +  // GPRs come first.
 +  return reg_index <= m_reg_info.last_gpr;
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::IsFPR(uint32_t reg_index) const {
++bool NativeRegisterContextNetBSD_x86_64::IsFPR(uint32_t reg_index) const {
 +  return (m_reg_info.first_fpr <= reg_index &&
 +          reg_index <= m_reg_info.last_fpr);
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::WriteFPR() {
++Error NativeRegisterContextNetBSD_x86_64::WriteFPR() {
 +  switch (m_xstate_type) {
++#if 0
 +  case XStateType::FXSAVE:
 +    return WriteRegisterSet(
 +        &m_iovec, sizeof(m_fpr.xstate.xsave),
@@ -871,19 +872,20 @@ $NetBSD$
 +  case XStateType::XSAVE:
 +    return WriteRegisterSet(&m_iovec, sizeof(m_fpr.xstate.xsave),
 +                            NT_X86_XSTATE);
++#endif
 +  default:
 +    return Error("Unrecognized FPR type.");
 +  }
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::IsAVX(uint32_t reg_index) const {
++bool NativeRegisterContextNetBSD_x86_64::IsAVX(uint32_t reg_index) const {
 +  if (!IsCPUFeatureAvailable(RegSet::avx))
 +    return false;
 +  return (m_reg_info.first_ymm <= reg_index &&
 +          reg_index <= m_reg_info.last_ymm);
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::CopyXSTATEtoYMM(
++bool NativeRegisterContextNetBSD_x86_64::CopyXSTATEtoYMM(
 +    uint32_t reg_index, lldb::ByteOrder byte_order) {
 +  if (!IsAVX(reg_index))
 +    return false;
@@ -912,7 +914,7 @@ $NetBSD$
 +  return false; // unsupported or invalid byte order
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::CopyYMMtoXSTATE(
++bool NativeRegisterContextNetBSD_x86_64::CopyYMMtoXSTATE(
 +    uint32_t reg, lldb::ByteOrder byte_order) {
 +  if (!IsAVX(reg))
 +    return false;
@@ -937,7 +939,7 @@ $NetBSD$
 +  return false; // unsupported or invalid byte order
 +}
 +
-+void *NativeRegisterContextLinux_x86_64::GetFPRBuffer() {
++void *NativeRegisterContextNetBSD_x86_64::GetFPRBuffer() {
 +  switch (m_xstate_type) {
 +  case XStateType::FXSAVE:
 +    return &m_fpr.xstate.fxsave;
@@ -948,7 +950,7 @@ $NetBSD$
 +  }
 +}
 +
-+size_t NativeRegisterContextLinux_x86_64::GetFPRSize() {
++size_t NativeRegisterContextNetBSD_x86_64::GetFPRSize() {
 +  switch (m_xstate_type) {
 +  case XStateType::FXSAVE:
 +    return sizeof(m_fpr.xstate.fxsave);
@@ -959,18 +961,21 @@ $NetBSD$
 +  }
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::ReadFPR() {
++Error NativeRegisterContextNetBSD_x86_64::ReadFPR() {
 +  Error error;
 +
 +  // Probe XSAVE and if it is not supported fall back to FXSAVE.
 +  if (m_xstate_type != XStateType::FXSAVE) {
++#if 0
 +    error =
 +        ReadRegisterSet(&m_iovec, sizeof(m_fpr.xstate.xsave), NT_X86_XSTATE);
 +    if (!error.Fail()) {
 +      m_xstate_type = XStateType::XSAVE;
 +      return error;
 +    }
++#endif
 +  }
++#if 0
 +  error = ReadRegisterSet(
 +      &m_iovec, sizeof(m_fpr.xstate.xsave),
 +      fxsr_regset(GetRegisterInfoInterface().GetTargetArchitecture()));
@@ -978,17 +983,18 @@ $NetBSD$
 +    m_xstate_type = XStateType::FXSAVE;
 +    return error;
 +  }
++#endif
 +  return Error("Unrecognized FPR type.");
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::IsMPX(uint32_t reg_index) const {
++bool NativeRegisterContextNetBSD_x86_64::IsMPX(uint32_t reg_index) const {
 +  if (!IsCPUFeatureAvailable(RegSet::mpx))
 +    return false;
 +  return (m_reg_info.first_mpxr <= reg_index &&
 +          reg_index <= m_reg_info.last_mpxc);
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::CopyXSTATEtoMPX(uint32_t reg) {
++bool NativeRegisterContextNetBSD_x86_64::CopyXSTATEtoMPX(uint32_t reg) {
 +  if (!IsMPX(reg))
 +    return false;
 +
@@ -1004,7 +1010,7 @@ $NetBSD$
 +  return true;
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::CopyMPXtoXSTATE(uint32_t reg) {
++bool NativeRegisterContextNetBSD_x86_64::CopyMPXtoXSTATE(uint32_t reg) {
 +  if (!IsMPX(reg))
 +    return false;
 +
@@ -1018,7 +1024,7 @@ $NetBSD$
 +  return true;
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::IsWatchpointHit(uint32_t wp_index,
++Error NativeRegisterContextNetBSD_x86_64::IsWatchpointHit(uint32_t wp_index,
 +                                                         bool &is_hit) {
 +  if (wp_index >= NumSupportedHardwareWatchpoints())
 +    return Error("Watchpoint index out of range");
@@ -1037,7 +1043,7 @@ $NetBSD$
 +  return error;
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::GetWatchpointHitIndex(
++Error NativeRegisterContextNetBSD_x86_64::GetWatchpointHitIndex(
 +    uint32_t &wp_index, lldb::addr_t trap_addr) {
 +  uint32_t num_hw_wps = NumSupportedHardwareWatchpoints();
 +  for (wp_index = 0; wp_index < num_hw_wps; ++wp_index) {
@@ -1054,7 +1060,7 @@ $NetBSD$
 +  return Error();
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::IsWatchpointVacant(uint32_t wp_index,
++Error NativeRegisterContextNetBSD_x86_64::IsWatchpointVacant(uint32_t wp_index,
 +                                                            bool &is_vacant) {
 +  if (wp_index >= NumSupportedHardwareWatchpoints())
 +    return Error("Watchpoint index out of range");
@@ -1073,7 +1079,7 @@ $NetBSD$
 +  return error;
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::SetHardwareWatchpointWithIndex(
++Error NativeRegisterContextNetBSD_x86_64::SetHardwareWatchpointWithIndex(
 +    lldb::addr_t addr, size_t size, uint32_t watch_flags, uint32_t wp_index) {
 +
 +  if (wp_index >= NumSupportedHardwareWatchpoints())
@@ -1136,7 +1142,7 @@ $NetBSD$
 +  return error;
 +}
 +
-+bool NativeRegisterContextLinux_x86_64::ClearHardwareWatchpoint(
++bool NativeRegisterContextNetBSD_x86_64::ClearHardwareWatchpoint(
 +    uint32_t wp_index) {
 +  if (wp_index >= NumSupportedHardwareWatchpoints())
 +    return false;
@@ -1166,7 +1172,7 @@ $NetBSD$
 +      .Success();
 +}
 +
-+Error NativeRegisterContextLinux_x86_64::ClearAllHardwareWatchpoints() {
++Error NativeRegisterContextNetBSD_x86_64::ClearAllHardwareWatchpoints() {
 +  RegisterValue reg_value;
 +
 +  // clear bits {0-4} of the debug status register (DR6)
@@ -1188,7 +1194,7 @@ $NetBSD$
 +  return WriteRegisterRaw(m_reg_info.first_dr + 7, RegisterValue(control_bits));
 +}
 +
-+uint32_t NativeRegisterContextLinux_x86_64::SetHardwareWatchpoint(
++uint32_t NativeRegisterContextNetBSD_x86_64::SetHardwareWatchpoint(
 +    lldb::addr_t addr, size_t size, uint32_t watch_flags) {
 +  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_WATCHPOINTS));
 +  const uint32_t num_hw_watchpoints = NumSupportedHardwareWatchpoints();
@@ -1201,7 +1207,7 @@ $NetBSD$
 +        return wp_index;
 +    }
 +    if (error.Fail() && log) {
-+      log->Printf("NativeRegisterContextLinux_x86_64::%s Error: %s",
++      log->Printf("NativeRegisterContextNetBSD_x86_64::%s Error: %s",
 +                  __FUNCTION__, error.AsCString());
 +    }
 +  }
@@ -1209,7 +1215,7 @@ $NetBSD$
 +}
 +
 +lldb::addr_t
-+NativeRegisterContextLinux_x86_64::GetWatchpointAddress(uint32_t wp_index) {
++NativeRegisterContextNetBSD_x86_64::GetWatchpointAddress(uint32_t wp_index) {
 +  if (wp_index >= NumSupportedHardwareWatchpoints())
 +    return LLDB_INVALID_ADDRESS;
 +  RegisterValue reg_value;
@@ -1218,7 +1224,7 @@ $NetBSD$
 +  return reg_value.GetAsUInt64();
 +}
 +
-+uint32_t NativeRegisterContextLinux_x86_64::NumSupportedHardwareWatchpoints() {
++uint32_t NativeRegisterContextNetBSD_x86_64::NumSupportedHardwareWatchpoints() {
 +  // Available debug address registers: dr0, dr1, dr2, dr3
 +  return 4;
 +}

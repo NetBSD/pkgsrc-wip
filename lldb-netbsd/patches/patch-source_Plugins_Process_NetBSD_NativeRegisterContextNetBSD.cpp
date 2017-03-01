@@ -2,8 +2,8 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-01 11:04:39.184136620 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,207 @@
-+//===-- NativeRegisterContextLinux.cpp --------------------------*- C++ -*-===//
+@@ -0,0 +1,200 @@
++//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
 +//
@@ -12,25 +12,28 @@ $NetBSD$
 +//
 +//===----------------------------------------------------------------------===//
 +
-+#include "NativeRegisterContextLinux.h"
++#include "NativeRegisterContextNetBSD.h"
 +
 +#include "lldb/Core/RegisterValue.h"
 +#include "lldb/Host/common/NativeProcessProtocol.h"
 +#include "lldb/Host/common/NativeThreadProtocol.h"
-+#include "lldb/Host/linux/Ptrace.h"
 +
 +#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
 +
-+using namespace lldb_private;
-+using namespace lldb_private::process_linux;
++#include <sys/param.h>
++#include <sys/types.h>
++#include <sys/ptrace.h>
 +
-+NativeRegisterContextLinux::NativeRegisterContextLinux(
++using namespace lldb_private;
++using namespace lldb_private::process_netbsd;
++
++NativeRegisterContextNetBSD::NativeRegisterContextNetBSD(
 +    NativeThreadProtocol &native_thread, uint32_t concrete_frame_idx,
 +    RegisterInfoInterface *reg_info_interface_p)
 +    : NativeRegisterContextRegisterInfo(native_thread, concrete_frame_idx,
 +                                        reg_info_interface_p) {}
 +
-+lldb::ByteOrder NativeRegisterContextLinux::GetByteOrder() const {
++lldb::ByteOrder NativeRegisterContextNetBSD::GetByteOrder() const {
 +  // Get the target process whose privileged thread was used for the register
 +  // read.
 +  lldb::ByteOrder byte_order = lldb::eByteOrderInvalid;
@@ -46,7 +49,7 @@ $NetBSD$
 +  return byte_order;
 +}
 +
-+Error NativeRegisterContextLinux::ReadRegisterRaw(uint32_t reg_index,
++Error NativeRegisterContextNetBSD::ReadRegisterRaw(uint32_t reg_index,
 +                                                  RegisterValue &reg_value) {
 +  const RegisterInfo *const reg_info = GetRegisterInfoAtIndex(reg_index);
 +  if (!reg_info)
@@ -56,7 +59,7 @@ $NetBSD$
 +                             reg_info->byte_size, reg_value);
 +}
 +
-+Error NativeRegisterContextLinux::WriteRegisterRaw(
++Error NativeRegisterContextNetBSD::WriteRegisterRaw(
 +    uint32_t reg_index, const RegisterValue &reg_value) {
 +  uint32_t reg_to_write = reg_index;
 +  RegisterValue value_to_write = reg_value;
@@ -104,14 +107,14 @@ $NetBSD$
 +  assert(register_to_write_info_p &&
 +         "register to write does not have valid RegisterInfo");
 +  if (!register_to_write_info_p)
-+    return Error("NativeRegisterContextLinux::%s failed to get RegisterInfo "
++    return Error("NativeRegisterContextNetBSD::%s failed to get RegisterInfo "
 +                 "for write register index %" PRIu32,
 +                 __FUNCTION__, reg_to_write);
 +
 +  return DoWriteRegisterValue(reg_info->byte_offset, reg_info->name, reg_value);
 +}
 +
-+Error NativeRegisterContextLinux::ReadGPR() {
++Error NativeRegisterContextNetBSD::ReadGPR() {
 +  void *buf = GetGPRBuffer();
 +  if (!buf)
 +    return Error("GPR buffer is NULL");
@@ -120,7 +123,7 @@ $NetBSD$
 +  return DoReadGPR(buf, buf_size);
 +}
 +
-+Error NativeRegisterContextLinux::WriteGPR() {
++Error NativeRegisterContextNetBSD::WriteGPR() {
 +  void *buf = GetGPRBuffer();
 +  if (!buf)
 +    return Error("GPR buffer is NULL");
@@ -129,7 +132,7 @@ $NetBSD$
 +  return DoWriteGPR(buf, buf_size);
 +}
 +
-+Error NativeRegisterContextLinux::ReadFPR() {
++Error NativeRegisterContextNetBSD::ReadFPR() {
 +  void *buf = GetFPRBuffer();
 +  if (!buf)
 +    return Error("FPR buffer is NULL");
@@ -138,7 +141,7 @@ $NetBSD$
 +  return DoReadFPR(buf, buf_size);
 +}
 +
-+Error NativeRegisterContextLinux::WriteFPR() {
++Error NativeRegisterContextNetBSD::WriteFPR() {
 +  void *buf = GetFPRBuffer();
 +  if (!buf)
 +    return Error("FPR buffer is NULL");
@@ -147,30 +150,16 @@ $NetBSD$
 +  return DoWriteFPR(buf, buf_size);
 +}
 +
-+Error NativeRegisterContextLinux::ReadRegisterSet(void *buf, size_t buf_size,
-+                                                  unsigned int regset) {
-+  return NativeProcessLinux::PtraceWrapper(PTRACE_GETREGSET, m_thread.GetID(),
-+                                           static_cast<void *>(&regset), buf,
-+                                           buf_size);
-+}
-+
-+Error NativeRegisterContextLinux::WriteRegisterSet(void *buf, size_t buf_size,
-+                                                   unsigned int regset) {
-+  return NativeProcessLinux::PtraceWrapper(PTRACE_SETREGSET, m_thread.GetID(),
-+                                           static_cast<void *>(&regset), buf,
-+                                           buf_size);
-+}
-+
-+Error NativeRegisterContextLinux::DoReadRegisterValue(uint32_t offset,
++Error NativeRegisterContextNetBSD::DoReadRegisterValue(uint32_t offset,
 +                                                      const char *reg_name,
 +                                                      uint32_t size,
 +                                                      RegisterValue &value) {
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_REGISTERS));
 +
 +  long data;
-+  Error error = NativeProcessLinux::PtraceWrapper(
++  Error error; /* = NativeProcessNetBSD::PtraceWrapper(
 +      PTRACE_PEEKUSER, m_thread.GetID(), reinterpret_cast<void *>(offset),
-+      nullptr, 0, &data);
++      nullptr, 0, &data); */
 +
 +  if (error.Success())
 +    // First cast to an unsigned of the same size to avoid sign extension.
@@ -180,33 +169,37 @@ $NetBSD$
 +  return error;
 +}
 +
-+Error NativeRegisterContextLinux::DoWriteRegisterValue(
++Error NativeRegisterContextNetBSD::DoWriteRegisterValue(
 +    uint32_t offset, const char *reg_name, const RegisterValue &value) {
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_REGISTERS));
 +
 +  void *buf = reinterpret_cast<void *>(value.GetAsUInt64());
 +  LLDB_LOG(log, "{0}: {1}", reg_name, buf);
 +
-+  return NativeProcessLinux::PtraceWrapper(
++#if 0
++  return NativeProcessNetBSD::PtraceWrapper(
 +      PTRACE_POKEUSER, m_thread.GetID(), reinterpret_cast<void *>(offset), buf);
++#else
++  return Error();
++#endif
 +}
 +
-+Error NativeRegisterContextLinux::DoReadGPR(void *buf, size_t buf_size) {
-+  return NativeProcessLinux::PtraceWrapper(PTRACE_GETREGS, m_thread.GetID(),
-+                                           nullptr, buf, buf_size);
++Error NativeRegisterContextNetBSD::DoReadGPR(void *buf, size_t buf_size) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
++                                           nullptr, 0);
 +}
 +
-+Error NativeRegisterContextLinux::DoWriteGPR(void *buf, size_t buf_size) {
-+  return NativeProcessLinux::PtraceWrapper(PTRACE_SETREGS, m_thread.GetID(),
-+                                           nullptr, buf, buf_size);
++Error NativeRegisterContextNetBSD::DoWriteGPR(void *buf, size_t buf_size) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
++                                           nullptr, 0);
 +}
 +
-+Error NativeRegisterContextLinux::DoReadFPR(void *buf, size_t buf_size) {
-+  return NativeProcessLinux::PtraceWrapper(PTRACE_GETFPREGS, m_thread.GetID(),
-+                                           nullptr, buf, buf_size);
++Error NativeRegisterContextNetBSD::DoReadFPR(void *buf, size_t buf_size) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETFPREGS, m_thread.GetID(),
++                                           nullptr, 0);
 +}
 +
-+Error NativeRegisterContextLinux::DoWriteFPR(void *buf, size_t buf_size) {
-+  return NativeProcessLinux::PtraceWrapper(PTRACE_SETFPREGS, m_thread.GetID(),
-+                                           nullptr, buf, buf_size);
++Error NativeRegisterContextNetBSD::DoWriteFPR(void *buf, size_t buf_size) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETFPREGS, m_thread.GetID(),
++                                           nullptr, 0);
 +}

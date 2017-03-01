@@ -2,8 +2,8 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-01 11:04:42.048407244 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -0,0 +1,92 @@
-+//===-- NativeRegisterContextLinux.h ----------------------------*- C++ -*-===//
+@@ -0,0 +1,86 @@
++//===-- NativeRegisterContextNetBSD.h ----------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
 +//
@@ -12,32 +12,32 @@ $NetBSD$
 +//
 +//===----------------------------------------------------------------------===//
 +
-+#ifndef lldb_NativeRegisterContextLinux_h
-+#define lldb_NativeRegisterContextLinux_h
++#ifndef lldb_NativeRegisterContextNetBSD_h
++#define lldb_NativeRegisterContextNetBSD_h
 +
 +#include "lldb/Host/common/NativeRegisterContextRegisterInfo.h"
 +#include "lldb/Host/common/NativeThreadProtocol.h"
 +
-+#include "Plugins/Process/Linux/NativeProcessLinux.h"
++#include "Plugins/Process/NetBSD/NativeProcessNetBSD.h"
 +
 +namespace lldb_private {
-+namespace process_linux {
++namespace process_netbsd {
 +
-+class NativeRegisterContextLinux : public NativeRegisterContextRegisterInfo {
++class NativeRegisterContextNetBSD : public NativeRegisterContextRegisterInfo {
 +public:
-+  NativeRegisterContextLinux(NativeThreadProtocol &native_thread,
++  NativeRegisterContextNetBSD(NativeThreadProtocol &native_thread,
 +                             uint32_t concrete_frame_idx,
 +                             RegisterInfoInterface *reg_info_interface_p);
 +
-+  // This function is implemented in the NativeRegisterContextLinux_* subclasses
++  // This function is implemented in the NativeRegisterContextNetBSD_* subclasses
 +  // to create a new
-+  // instance of the host specific NativeRegisterContextLinux. The
++  // instance of the host specific NativeRegisterContextNetBSD. The
 +  // implementations can't collide
-+  // as only one NativeRegisterContextLinux_* variant should be compiled into
++  // as only one NativeRegisterContextNetBSD_* variant should be compiled into
 +  // the final
 +  // executable.
-+  static NativeRegisterContextLinux *
-+  CreateHostNativeRegisterContextLinux(const ArchSpec &target_arch,
++  static NativeRegisterContextNetBSD *
++  CreateHostNativeRegisterContextNetBSD(const ArchSpec &target_arch,
 +                                       NativeThreadProtocol &native_thread,
 +                                       uint32_t concrete_frame_idx);
 +
@@ -48,12 +48,6 @@ $NetBSD$
 +
 +  virtual Error WriteRegisterRaw(uint32_t reg_index,
 +                                 const RegisterValue &reg_value);
-+
-+  virtual Error ReadRegisterSet(void *buf, size_t buf_size,
-+                                unsigned int regset);
-+
-+  virtual Error WriteRegisterSet(void *buf, size_t buf_size,
-+                                 unsigned int regset);
 +
 +  virtual Error ReadGPR();
 +
@@ -91,7 +85,7 @@ $NetBSD$
 +  virtual Error DoWriteFPR(void *buf, size_t buf_size);
 +};
 +
-+} // namespace process_linux
++} // namespace process_netbsd
 +} // namespace lldb_private
 +
-+#endif // #ifndef lldb_NativeRegisterContextLinux_h
++#endif // #ifndef lldb_NativeRegisterContextNetBSD_h

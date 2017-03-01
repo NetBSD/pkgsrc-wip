@@ -3,7 +3,7 @@ $NetBSD$
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2017-03-01 11:04:51.743978339 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
 @@ -0,0 +1,146 @@
-+//===-- NativeRegisterContextLinux_x86_64.h ---------------------*- C++ -*-===//
++//===-- NativeRegisterContextNetBSD_x86_64.h ---------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
 +//
@@ -14,21 +14,21 @@ $NetBSD$
 +
 +#if defined(__i386__) || defined(__x86_64__)
 +
-+#ifndef lldb_NativeRegisterContextLinux_x86_64_h
-+#define lldb_NativeRegisterContextLinux_x86_64_h
++#ifndef lldb_NativeRegisterContextNetBSD_x86_64_h
++#define lldb_NativeRegisterContextNetBSD_x86_64_h
 +
-+#include "Plugins/Process/Linux/NativeRegisterContextLinux.h"
++#include "Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h"
 +#include "Plugins/Process/Utility/RegisterContext_x86.h"
 +#include "Plugins/Process/Utility/lldb-x86-register-enums.h"
 +
 +namespace lldb_private {
-+namespace process_linux {
++namespace process_netbsd {
 +
-+class NativeProcessLinux;
++class NativeProcessNetBSD;
 +
-+class NativeRegisterContextLinux_x86_64 : public NativeRegisterContextLinux {
++class NativeRegisterContextNetBSD_x86_64 : public NativeRegisterContextNetBSD {
 +public:
-+  NativeRegisterContextLinux_x86_64(const ArchSpec &target_arch,
++  NativeRegisterContextNetBSD_x86_64(const ArchSpec &target_arch,
 +                                    NativeThreadProtocol &native_thread,
 +                                    uint32_t concrete_frame_idx);
 +
@@ -143,9 +143,9 @@ $NetBSD$
 +  bool IsMPX(uint32_t reg_index) const;
 +};
 +
-+} // namespace process_linux
++} // namespace process_netbsd
 +} // namespace lldb_private
 +
-+#endif // #ifndef lldb_NativeRegisterContextLinux_x86_64_h
++#endif // #ifndef lldb_NativeRegisterContextNetBSD_x86_64_h
 +
 +#endif // defined(__i386__) || defined(__x86_64__)
