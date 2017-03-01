@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-01 11:04:42.048407244 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -0,0 +1,86 @@
+@@ -0,0 +1,81 @@
 +//===-- NativeRegisterContextNetBSD.h ----------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -43,11 +43,6 @@ $NetBSD$
 +
 +protected:
 +  lldb::ByteOrder GetByteOrder() const;
-+
-+  virtual Error ReadRegisterRaw(uint32_t reg_index, RegisterValue &reg_value);
-+
-+  virtual Error WriteRegisterRaw(uint32_t reg_index,
-+                                 const RegisterValue &reg_value);
 +
 +  virtual Error ReadGPR();
 +

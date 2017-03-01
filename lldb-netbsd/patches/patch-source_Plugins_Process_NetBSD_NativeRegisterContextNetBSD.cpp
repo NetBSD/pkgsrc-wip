@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-01 11:04:39.184136620 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,200 @@
+@@ -0,0 +1,135 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -47,71 +47,6 @@ $NetBSD$
 +  }
 +
 +  return byte_order;
-+}
-+
-+Error NativeRegisterContextNetBSD::ReadRegisterRaw(uint32_t reg_index,
-+                                                  RegisterValue &reg_value) {
-+  const RegisterInfo *const reg_info = GetRegisterInfoAtIndex(reg_index);
-+  if (!reg_info)
-+    return Error("register %" PRIu32 " not found", reg_index);
-+
-+  return DoReadRegisterValue(reg_info->byte_offset, reg_info->name,
-+                             reg_info->byte_size, reg_value);
-+}
-+
-+Error NativeRegisterContextNetBSD::WriteRegisterRaw(
-+    uint32_t reg_index, const RegisterValue &reg_value) {
-+  uint32_t reg_to_write = reg_index;
-+  RegisterValue value_to_write = reg_value;
-+
-+  // Check if this is a subregister of a full register.
-+  const RegisterInfo *reg_info = GetRegisterInfoAtIndex(reg_index);
-+  if (reg_info->invalidate_regs &&
-+      (reg_info->invalidate_regs[0] != LLDB_INVALID_REGNUM)) {
-+    Error error;
-+
-+    RegisterValue full_value;
-+    uint32_t full_reg = reg_info->invalidate_regs[0];
-+    const RegisterInfo *full_reg_info = GetRegisterInfoAtIndex(full_reg);
-+
-+    // Read the full register.
-+    error = ReadRegister(full_reg_info, full_value);
-+    if (error.Fail())
-+      return error;
-+
-+    lldb::ByteOrder byte_order = GetByteOrder();
-+    uint8_t dst[RegisterValue::kMaxRegisterByteSize];
-+
-+    // Get the bytes for the full register.
-+    const uint32_t dest_size = full_value.GetAsMemoryData(
-+        full_reg_info, dst, sizeof(dst), byte_order, error);
-+    if (error.Success() && dest_size) {
-+      uint8_t src[RegisterValue::kMaxRegisterByteSize];
-+
-+      // Get the bytes for the source data.
-+      const uint32_t src_size = reg_value.GetAsMemoryData(
-+          reg_info, src, sizeof(src), byte_order, error);
-+      if (error.Success() && src_size && (src_size < dest_size)) {
-+        // Copy the src bytes to the destination.
-+        memcpy(dst + (reg_info->byte_offset & 0x1), src, src_size);
-+        // Set this full register as the value to write.
-+        value_to_write.SetBytes(dst, full_value.GetByteSize(), byte_order);
-+        value_to_write.SetType(full_reg_info);
-+        reg_to_write = full_reg;
-+      }
-+    }
-+  }
-+
-+  const RegisterInfo *const register_to_write_info_p =
-+      GetRegisterInfoAtIndex(reg_to_write);
-+  assert(register_to_write_info_p &&
-+         "register to write does not have valid RegisterInfo");
-+  if (!register_to_write_info_p)
-+    return Error("NativeRegisterContextNetBSD::%s failed to get RegisterInfo "
-+                 "for write register index %" PRIu32,
-+                 __FUNCTION__, reg_to_write);
-+
-+  return DoWriteRegisterValue(reg_info->byte_offset, reg_info->name, reg_value);
 +}
 +
 +Error NativeRegisterContextNetBSD::ReadGPR() {

@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2017-03-01 11:04:51.743978339 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
-@@ -0,0 +1,146 @@
+@@ -0,0 +1,125 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.h ---------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -47,27 +47,6 @@ $NetBSD$
 +  Error ReadAllRegisterValues(lldb::DataBufferSP &data_sp) override;
 +
 +  Error WriteAllRegisterValues(const lldb::DataBufferSP &data_sp) override;
-+
-+  Error IsWatchpointHit(uint32_t wp_index, bool &is_hit) override;
-+
-+  Error GetWatchpointHitIndex(uint32_t &wp_index,
-+                              lldb::addr_t trap_addr) override;
-+
-+  Error IsWatchpointVacant(uint32_t wp_index, bool &is_vacant) override;
-+
-+  bool ClearHardwareWatchpoint(uint32_t wp_index) override;
-+
-+  Error ClearAllHardwareWatchpoints() override;
-+
-+  Error SetHardwareWatchpointWithIndex(lldb::addr_t addr, size_t size,
-+                                       uint32_t watch_flags, uint32_t wp_index);
-+
-+  uint32_t SetHardwareWatchpoint(lldb::addr_t addr, size_t size,
-+                                 uint32_t watch_flags) override;
-+
-+  lldb::addr_t GetWatchpointAddress(uint32_t wp_index) override;
-+
-+  uint32_t NumSupportedHardwareWatchpoints() override;
 +
 +protected:
 +  void *GetGPRBuffer() override { return &m_gpr_x86_64; }
