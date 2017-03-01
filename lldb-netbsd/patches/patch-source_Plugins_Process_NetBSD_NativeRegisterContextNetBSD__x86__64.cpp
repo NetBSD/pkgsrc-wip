@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-01 11:04:48.447830223 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,1012 @@
+@@ -0,0 +1,1014 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -717,8 +717,10 @@ $NetBSD$
 +  if (reg_info == nullptr)
 +    reg_info = GetRegisterInfoInterface().GetDynamicRegisterInfo("orig_rax");
 +
++#if 0
 +  if (reg_info != nullptr)
 +    return DoWriteRegisterValue(reg_info->byte_offset, reg_info->name, value);
++#endif
 +
 +  return error;
 +}

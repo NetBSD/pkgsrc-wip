@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-01 11:04:42.048407244 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -0,0 +1,81 @@
+@@ -0,0 +1,72 @@
 +//===-- NativeRegisterContextNetBSD.h ----------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -62,22 +62,13 @@ $NetBSD$
 +
 +  virtual size_t GetFPRSize() { return 0; }
 +
-+  // The Do*** functions are executed on the privileged thread and can perform
-+  // ptrace
-+  // operations directly.
-+  virtual Error DoReadRegisterValue(uint32_t offset, const char *reg_name,
-+                                    uint32_t size, RegisterValue &value);
++  virtual Error DoReadGPR(void *buf);
 +
-+  virtual Error DoWriteRegisterValue(uint32_t offset, const char *reg_name,
-+                                     const RegisterValue &value);
++  virtual Error DoWriteGPR(void *buf);
 +
-+  virtual Error DoReadGPR(void *buf, size_t buf_size);
++  virtual Error DoReadFPR(void *buf);
 +
-+  virtual Error DoWriteGPR(void *buf, size_t buf_size);
-+
-+  virtual Error DoReadFPR(void *buf, size_t buf_size);
-+
-+  virtual Error DoWriteFPR(void *buf, size_t buf_size);
++  virtual Error DoWriteFPR(void *buf);
 +};
 +
 +} // namespace process_netbsd

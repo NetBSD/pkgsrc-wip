@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-01 11:04:39.184136620 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,135 @@
+@@ -0,0 +1,97 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -53,88 +53,50 @@ $NetBSD$
 +  void *buf = GetGPRBuffer();
 +  if (!buf)
 +    return Error("GPR buffer is NULL");
-+  size_t buf_size = GetGPRSize();
 +
-+  return DoReadGPR(buf, buf_size);
++  return DoReadGPR(buf);
 +}
 +
 +Error NativeRegisterContextNetBSD::WriteGPR() {
 +  void *buf = GetGPRBuffer();
 +  if (!buf)
 +    return Error("GPR buffer is NULL");
-+  size_t buf_size = GetGPRSize();
 +
-+  return DoWriteGPR(buf, buf_size);
++  return DoWriteGPR(buf);
 +}
 +
 +Error NativeRegisterContextNetBSD::ReadFPR() {
 +  void *buf = GetFPRBuffer();
 +  if (!buf)
 +    return Error("FPR buffer is NULL");
-+  size_t buf_size = GetFPRSize();
 +
-+  return DoReadFPR(buf, buf_size);
++  return DoReadFPR(buf);
 +}
 +
 +Error NativeRegisterContextNetBSD::WriteFPR() {
 +  void *buf = GetFPRBuffer();
 +  if (!buf)
 +    return Error("FPR buffer is NULL");
-+  size_t buf_size = GetFPRSize();
 +
-+  return DoWriteFPR(buf, buf_size);
++  return DoWriteFPR(buf);
 +}
 +
-+Error NativeRegisterContextNetBSD::DoReadRegisterValue(uint32_t offset,
-+                                                      const char *reg_name,
-+                                                      uint32_t size,
-+                                                      RegisterValue &value) {
-+  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_REGISTERS));
-+
-+  long data;
-+  Error error; /* = NativeProcessNetBSD::PtraceWrapper(
-+      PTRACE_PEEKUSER, m_thread.GetID(), reinterpret_cast<void *>(offset),
-+      nullptr, 0, &data); */
-+
-+  if (error.Success())
-+    // First cast to an unsigned of the same size to avoid sign extension.
-+    value.SetUInt(static_cast<unsigned long>(data), size);
-+
-+  LLDB_LOG(log, "{0}: {1:x}", reg_name, data);
-+  return error;
++Error NativeRegisterContextNetBSD::DoReadGPR(void *buf) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, 0,
++                                            buf, m_thread.GetID());
 +}
 +
-+Error NativeRegisterContextNetBSD::DoWriteRegisterValue(
-+    uint32_t offset, const char *reg_name, const RegisterValue &value) {
-+  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_REGISTERS));
-+
-+  void *buf = reinterpret_cast<void *>(value.GetAsUInt64());
-+  LLDB_LOG(log, "{0}: {1}", reg_name, buf);
-+
-+#if 0
-+  return NativeProcessNetBSD::PtraceWrapper(
-+      PTRACE_POKEUSER, m_thread.GetID(), reinterpret_cast<void *>(offset), buf);
-+#else
-+  return Error();
-+#endif
++Error NativeRegisterContextNetBSD::DoWriteGPR(void *buf) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, 0,
++                                            buf, m_thread.GetID());
 +}
 +
-+Error NativeRegisterContextNetBSD::DoReadGPR(void *buf, size_t buf_size) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
-+                                           nullptr, 0);
++Error NativeRegisterContextNetBSD::DoReadFPR(void *buf) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETFPREGS, 0,
++                                            buf, m_thread.GetID());
 +}
 +
-+Error NativeRegisterContextNetBSD::DoWriteGPR(void *buf, size_t buf_size) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
-+                                           nullptr, 0);
-+}
-+
-+Error NativeRegisterContextNetBSD::DoReadFPR(void *buf, size_t buf_size) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_GETFPREGS, m_thread.GetID(),
-+                                           nullptr, 0);
-+}
-+
-+Error NativeRegisterContextNetBSD::DoWriteFPR(void *buf, size_t buf_size) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_SETFPREGS, m_thread.GetID(),
-+                                           nullptr, 0);
++Error NativeRegisterContextNetBSD::DoWriteFPR(void *buf) {
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETFPREGS, 0,
++                                            buf, m_thread.GetID());
 +}
