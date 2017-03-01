@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/05 22:19:29 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,9 +25,6 @@ ${PYSITELIB}/stevedore/example/__init__.pyo
 ${PYSITELIB}/stevedore/example/base.py
 ${PYSITELIB}/stevedore/example/base.pyc
 ${PYSITELIB}/stevedore/example/base.pyo
-${PYSITELIB}/stevedore/example/fields.py
-${PYSITELIB}/stevedore/example/fields.pyc
-${PYSITELIB}/stevedore/example/fields.pyo
 ${PYSITELIB}/stevedore/example/load_as_driver.py
 ${PYSITELIB}/stevedore/example/load_as_driver.pyc
 ${PYSITELIB}/stevedore/example/load_as_driver.pyo
@@ -40,6 +37,18 @@ ${PYSITELIB}/stevedore/example/setup.pyo
 ${PYSITELIB}/stevedore/example/simple.py
 ${PYSITELIB}/stevedore/example/simple.pyc
 ${PYSITELIB}/stevedore/example/simple.pyo
+${PYSITELIB}/stevedore/example2/__init__.py
+${PYSITELIB}/stevedore/example2/__init__.pyc
+${PYSITELIB}/stevedore/example2/__init__.pyo
+${PYSITELIB}/stevedore/example2/fields.py
+${PYSITELIB}/stevedore/example2/fields.pyc
+${PYSITELIB}/stevedore/example2/fields.pyo
+${PYSITELIB}/stevedore/example2/setup.py
+${PYSITELIB}/stevedore/example2/setup.pyc
+${PYSITELIB}/stevedore/example2/setup.pyo
+${PYSITELIB}/stevedore/exception.py
+${PYSITELIB}/stevedore/exception.pyc
+${PYSITELIB}/stevedore/exception.pyo
 ${PYSITELIB}/stevedore/extension.py
 ${PYSITELIB}/stevedore/extension.pyc
 ${PYSITELIB}/stevedore/extension.pyo
