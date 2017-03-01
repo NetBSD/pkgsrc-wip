@@ -24,8 +24,6 @@ Introduce objc++ setup with gcc(1) for "make test":
 
 To be done
 ==========
- - switch the current PT_WATCHPOINT interface to PT_GETDBREGS and PT_SETDBREGS
-   and integrate it in NetBSD's userdata in LLDB
  - auxv reading verified and upstreamed
  - getthreadname / setthreadname verified and upstreamed
  - Host::LaunchProcessPosixSpawn verify ::posix_spawnattr_setsigdefault on NetBSD
