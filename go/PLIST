@@ -403,6 +403,7 @@ go/misc/cgo/testsanitizers/msan3.go
 go/misc/cgo/testsanitizers/msan4.go
 go/misc/cgo/testsanitizers/msan5.go
 go/misc/cgo/testsanitizers/msan_fail.go
+go/misc/cgo/testsanitizers/msan_shared.go
 go/misc/cgo/testsanitizers/test.bash
 go/misc/cgo/testsanitizers/tsan.go
 go/misc/cgo/testsanitizers/tsan2.go
@@ -1789,6 +1790,7 @@ go/src/cmd/go/testdata/testvendor/src/q/y/y.go
 go/src/cmd/go/testdata/testvendor/src/q/z/z.go
 go/src/cmd/go/testdata/testvendor2/src/p/p.go
 go/src/cmd/go/testdata/testvendor2/vendor/x/x.go
+go/src/cmd/go/testdata/timeoutbench_test.go
 go/src/cmd/go/testflag.go
 go/src/cmd/go/testgo.go
 go/src/cmd/go/tool.go
@@ -5187,6 +5189,7 @@ go/src/vendor/golang_org/x/crypto/chacha20poly1305/chacha20poly1305_test.go
 go/src/vendor/golang_org/x/crypto/chacha20poly1305/chacha20poly1305_test_vectors.go
 go/src/vendor/golang_org/x/crypto/chacha20poly1305/internal/chacha20/chacha_generic.go
 go/src/vendor/golang_org/x/crypto/chacha20poly1305/internal/chacha20/chacha_test.go
+go/src/vendor/golang_org/x/crypto/curve25519/const_amd64.h
 go/src/vendor/golang_org/x/crypto/curve25519/const_amd64.s
 go/src/vendor/golang_org/x/crypto/curve25519/cswap_amd64.s
 go/src/vendor/golang_org/x/crypto/curve25519/curve25519.go
@@ -6246,6 +6249,10 @@ go/test/fixedbugs/issue18392.go
 go/test/fixedbugs/issue18410.go
 go/test/fixedbugs/issue18459.go
 go/test/fixedbugs/issue18661.go
+go/test/fixedbugs/issue18725.go
+go/test/fixedbugs/issue18808.go
+go/test/fixedbugs/issue18906.go
+go/test/fixedbugs/issue18915.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go
