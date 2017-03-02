@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-01 11:04:39.184136620 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,97 @@
+@@ -0,0 +1,116 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -82,21 +82,40 @@ $NetBSD$
 +}
 +
 +Error NativeRegisterContextNetBSD::DoReadGPR(void *buf) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, 0,
++  NativeProcessNetBSD &process = GetProcess();
++  lldb::pid_t pid = process.GetID();
++
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, pid,
 +                                            buf, m_thread.GetID());
 +}
 +
 +Error NativeRegisterContextNetBSD::DoWriteGPR(void *buf) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, 0,
++  NativeProcessNetBSD &process = GetProcess();
++  lldb::pid_t pid = process.GetID();
++
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, pid,
 +                                            buf, m_thread.GetID());
 +}
 +
 +Error NativeRegisterContextNetBSD::DoReadFPR(void *buf) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_GETFPREGS, 0,
++  NativeProcessNetBSD &process = GetProcess();
++  lldb::pid_t pid = process.GetID();
++
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETFPREGS, pid,
 +                                            buf, m_thread.GetID());
 +}
 +
 +Error NativeRegisterContextNetBSD::DoWriteFPR(void *buf) {
-+  return NativeProcessNetBSD::PtraceWrapper(PT_SETFPREGS, 0,
++  NativeProcessNetBSD &process = GetProcess();
++  lldb::pid_t pid = process.GetID();
++
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETFPREGS, pid,
 +                                            buf, m_thread.GetID());
++}
++
++NativeProcessNetBSD &NativeRegisterContextNetBSD::GetProcess() {
++  auto process_sp = std::static_pointer_cast<NativeProcessNetBSD>(
++      m_thread.GetProcess());
++  assert(process_sp);
++  return *process_sp;
 +}
