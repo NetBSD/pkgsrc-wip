@@ -1,1 +1,2 @@
 @comment $NetBSD$
+lib/dri/i965_drv_video.la

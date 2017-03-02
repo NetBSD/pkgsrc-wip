@@ -9,17 +9,24 @@ HOMEPAGE=	https://github.com/01org/intel-vaapi-driver/
 COMMENT=	VA-API user mode driver for Intel GEN Graphics family
 LICENSE=	mit
 
-# TODO: Package seems to built fine but a way to properly install
-# TODO: it should be implemented and multimedia/libva/available.mk
-# TODO: should be checked to conditionally mark this package BROKEN
-# TODO: on such platforms.
-BROKEN=		Properly handle the installation and check for libva availability
+.include "../../multimedia/libva/available.mk"
+
+.if ${VAAPI_AVAILABLE} == "no"
+NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
+.endif
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-wayland
+
+# XXX: Force installation in PREFIX.
+# XXX: LIBVA_DRIVERS_PATH - if undefined - is obtained via
+# XXX: `pkg-config libva --variable driverdir'. This is not desiderable
+# XXX: for native X.org so handle installation similarly to graphics/MesaLib
+# XXX: in order to be native/pkgsrc X.org agnostic.
+CONFIGURE_ENV+=		LIBVA_DRIVERS_PATH=${PREFIX}/lib/dri/
 
 .include "../../mk/bsd.prefs.mk"
 
