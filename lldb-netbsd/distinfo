@@ -29,6 +29,6 @@ SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD.cpp) = 2df
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD.h) = d7f77fcd065f608a87e724a850dacf4e3fd8d056
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD__x86__64.cpp) = a5db8c3cf6cd7157093bf77944722f88cbff6325
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD__x86__64.h) = 58803697f65411d1ad62e45c6af68c9271633bac
-SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.cpp) = 0985eaefb605c06185cc14fa1c02c0b9f8318472
+SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.cpp) = cb8757705327e62273bfe9a84dbdbf9cb9b0751a
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.h) = c675af8495a75f99bb60cb4ab3fa36223f1cb6f4
 SHA1 (patch-tools_lldb-server_CMakeLists.txt) = 9804b083a1aa0cb7fa06b840a71c28424ad8e01d

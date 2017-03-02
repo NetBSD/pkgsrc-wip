@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-02-28 07:44:53.258980602 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,397 @@
+@@ -0,0 +1,415 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -13,6 +13,7 @@ $NetBSD$
 +//===----------------------------------------------------------------------===//
 +
 +#include "NativeThreadNetBSD.h"
++#include "NativeRegisterContextNetBSD.h"
 +
 +#include <signal.h>
 +#include <sstream>
@@ -138,7 +139,24 @@ $NetBSD$
 +}
 +
 +NativeRegisterContextSP NativeThreadNetBSD::GetRegisterContext() {
-+  return m_reg_context_sp; /* XXX: dummy */
++  // Return the register context if we already created it.
++  if (m_reg_context_sp)
++    return m_reg_context_sp;
++
++  NativeProcessProtocolSP m_process_sp = m_process_wp.lock();
++  if (!m_process_sp)
++    return NativeRegisterContextSP();
++
++  ArchSpec target_arch;
++  if (!m_process_sp->GetArchitecture(target_arch))
++    return NativeRegisterContextSP();
++
++  const uint32_t concrete_frame_idx = 0;
++  m_reg_context_sp.reset(
++      NativeRegisterContextNetBSD::CreateHostNativeRegisterContextNetBSD(
++          target_arch, *this, concrete_frame_idx));
++
++  return m_reg_context_sp;
 +}
 +
 +Error NativeThreadNetBSD::SetWatchpoint(lldb::addr_t addr, size_t size,
