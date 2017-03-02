@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-02-28 07:44:53.246937953 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1288 @@
+@@ -0,0 +1,1299 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -1090,7 +1090,18 @@ $NetBSD$
 +Error NativeProcessNetBSD::GetSoftwareBreakpointTrapOpcode(
 +    size_t trap_opcode_size_hint, size_t &actual_opcode_size,
 +    const uint8_t *&trap_opcode_bytes) {
-+  return Error();
++  static const uint8_t g_i386_opcode[] = {0xCC};
++
++  switch (m_arch.GetMachine()) {
++  case llvm::Triple::x86:
++  case llvm::Triple::x86_64:
++    trap_opcode_bytes = g_i386_opcode;
++    actual_opcode_size = sizeof(g_i386_opcode);
++    return Error();
++  default:
++    assert(false && "CPU type not supported!");
++    return Error("CPU type not supported");
++  }
 +}
 +
 +Error NativeProcessNetBSD::ReadMemory(lldb::addr_t addr, void *buf, size_t size,
