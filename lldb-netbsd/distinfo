@@ -32,4 +32,5 @@ SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD__x86__64.h
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.cpp) = cb8757705327e62273bfe9a84dbdbf9cb9b0751a
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.h) = c675af8495a75f99bb60cb4ab3fa36223f1cb6f4
 SHA1 (patch-source_Plugins_Process_gdb-remote_GDBRemoteCommunicationServerCommon.cpp) = 76e3f6a3e0a24a28a2f5a30e8812906f8a2b2649
+SHA1 (patch-source_Plugins_Process_gdb-remote_GDBRemoteCommunicationServerLLGS.cpp) = 150f5564b91eb4e39165e24cd68bda4182be8a7a
 SHA1 (patch-tools_lldb-server_CMakeLists.txt) = 9804b083a1aa0cb7fa06b840a71c28424ad8e01d
