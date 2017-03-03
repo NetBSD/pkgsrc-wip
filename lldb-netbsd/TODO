@@ -24,6 +24,7 @@ Introduce objc++ setup with gcc(1) for "make test":
 
 To be done
 ==========
+ - xmm2, ymm0-ymm15 unrecognized in qRegisterInfo??? calls
  - auxv reading verified and upstreamed
  - getthreadname / setthreadname verified and upstreamed
  - Host::LaunchProcessPosixSpawn verify ::posix_spawnattr_setsigdefault on NetBSD
