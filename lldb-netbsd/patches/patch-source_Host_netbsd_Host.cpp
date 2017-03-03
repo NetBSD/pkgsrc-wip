@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Host/netbsd/Host.cpp.orig	2017-02-04 18:35:35.000000000 +0000
+--- source/Host/netbsd/Host.cpp.orig	2017-02-27 20:47:53.000000000 +0000
 +++ source/Host/netbsd/Host.cpp
 @@ -1,5 +1,4 @@
 -//===-- source/Host/netbsd/Host.cpp ------------------------------*- C++
@@ -9,11 +9,15 @@ $NetBSD$
  //
  //                     The LLVM Compiler Infrastructure
  //
-@@ -260,7 +259,35 @@ bool Host::GetProcessInfo(lldb::pid_t pi
+@@ -260,7 +259,39 @@ bool Host::GetProcessInfo(lldb::pid_t pi
  }
  
  lldb::DataBufferSP Host::GetAuxvData(lldb_private::Process *process) {
 -  return lldb::DataBufferSP();
++  return GetAuxvData(process->GetID());
++}
++
++lldb::DataBufferSP Host::GetAuxvData(lldb::pid_t pid) {
 +  /*
 +   * ELF_AUX_ENTRIES is currently restricted to kernel
 +   * (<sys/exec_elf.h> r. 1.155 specifies 15)
@@ -33,7 +37,7 @@ $NetBSD$
 +    .piod_len = auxv_size
 +  };
 +
-+  if (ptrace(PT_IO, process->GetID(), &io, 0) == -1) {
++  if (ptrace(PT_IO, pid, &io, 0) == -1) {
 +    perror("ptrace failed on auxv");
 +  } else if (io.piod_len < 1) {
 +    perror("empty result for auxv");
