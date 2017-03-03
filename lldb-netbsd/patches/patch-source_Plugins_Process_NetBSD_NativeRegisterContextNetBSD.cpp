@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-01 11:04:39.184136620 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-03 15:35:02.265865750 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,116 @@
+@@ -0,0 +1,111 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -82,34 +82,22 @@ $NetBSD$
 +}
 +
 +Error NativeRegisterContextNetBSD::DoReadGPR(void *buf) {
-+  NativeProcessNetBSD &process = GetProcess();
-+  lldb::pid_t pid = process.GetID();
-+
-+  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, pid,
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETREGS, GetProcessPid(),
 +                                            buf, m_thread.GetID());
 +}
 +
 +Error NativeRegisterContextNetBSD::DoWriteGPR(void *buf) {
-+  NativeProcessNetBSD &process = GetProcess();
-+  lldb::pid_t pid = process.GetID();
-+
-+  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, pid,
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETREGS, GetProcessPid(),
 +                                            buf, m_thread.GetID());
 +}
 +
 +Error NativeRegisterContextNetBSD::DoReadFPR(void *buf) {
-+  NativeProcessNetBSD &process = GetProcess();
-+  lldb::pid_t pid = process.GetID();
-+
-+  return NativeProcessNetBSD::PtraceWrapper(PT_GETFPREGS, pid,
++  return NativeProcessNetBSD::PtraceWrapper(PT_GETFPREGS, GetProcessPid(),
 +                                            buf, m_thread.GetID());
 +}
 +
 +Error NativeRegisterContextNetBSD::DoWriteFPR(void *buf) {
-+  NativeProcessNetBSD &process = GetProcess();
-+  lldb::pid_t pid = process.GetID();
-+
-+  return NativeProcessNetBSD::PtraceWrapper(PT_SETFPREGS, pid,
++  return NativeProcessNetBSD::PtraceWrapper(PT_SETFPREGS, GetProcessPid(),
 +                                            buf, m_thread.GetID());
 +}
 +
@@ -118,4 +106,11 @@ $NetBSD$
 +      m_thread.GetProcess());
 +  assert(process_sp);
 +  return *process_sp;
++}
++
++pid_t NativeRegisterContextNetBSD::GetProcessPid() {
++  NativeProcessNetBSD &process = GetProcess();
++  lldb::pid_t pid = process.GetID();
++
++  return pid;
 +}

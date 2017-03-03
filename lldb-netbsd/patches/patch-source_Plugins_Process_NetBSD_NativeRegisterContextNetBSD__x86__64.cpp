@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-01 11:04:48.447830223 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-03 15:35:02.278989585 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,1014 @@
+@@ -0,0 +1,996 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -214,15 +214,6 @@ $NetBSD$
 +#define REG_CONTEXT_SIZE (GetRegisterInfoInterface().GetGPRSize() + sizeof(FPR))
 +
 +// ----------------------------------------------------------------------------
-+// Required MPX define.
-+// ----------------------------------------------------------------------------
-+
-+// Support MPX extensions also if compiled with compiler without MPX support.
-+#ifndef bit_MPX
-+#define bit_MPX 0x4000
-+#endif
-+
-+// ----------------------------------------------------------------------------
 +// XCR0 extended register sets masks.
 +// ----------------------------------------------------------------------------
 +#define mask_XSTATE_AVX (1ULL << 2)
@@ -244,20 +235,11 @@ $NetBSD$
 +
 +static RegisterInfoInterface *
 +CreateRegisterInfoInterface(const ArchSpec &target_arch) {
-+#if 0
-+  if (HostInfo::GetArchitecture().GetAddressByteSize() == 4) {
-+    // 32-bit hosts run with a RegisterContextNetBSD_i386 context.
-+    return new RegisterContextNetBSD_i386(target_arch);
-+  } else {
-+#endif
-+    assert((HostInfo::GetArchitecture().GetAddressByteSize() == 8) &&
-+           "Register setting path assumes this is a 64-bit host");
-+    // X86_64 hosts know how to work with 64-bit and 32-bit EXEs using the
-+    // x86_64 register context.
-+    return new RegisterContextNetBSD_x86_64(target_arch);
-+#if 0
-+  }
-+#endif
++  assert((HostInfo::GetArchitecture().GetAddressByteSize() == 8) &&
++         "Register setting path assumes this is a 64-bit host");
++  // X86_64 hosts know how to work with 64-bit and 32-bit EXEs using the
++  // x86_64 register context.
++  return new RegisterContextNetBSD_x86_64(target_arch);
 +}
 +
 +NativeRegisterContextNetBSD_x86_64::NativeRegisterContextNetBSD_x86_64(

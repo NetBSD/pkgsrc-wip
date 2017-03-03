@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-01 11:04:42.048407244 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-03 15:35:02.272170791 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -0,0 +1,74 @@
+@@ -0,0 +1,76 @@
 +//===-- NativeRegisterContextNetBSD.h ----------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -71,6 +71,8 @@ $NetBSD$
 +  virtual Error DoWriteFPR(void *buf);
 +
 +  virtual NativeProcessNetBSD &GetProcess();
++
++  virtual pid_t GetProcessPid();
 +};
 +
 +} // namespace process_netbsd
