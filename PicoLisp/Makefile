@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	picoLisp
-PKGNAME=	PicoLisp-17.2.24
+PKGNAME=	PicoLisp-17.3.4
 CATEGORIES=	lang
 MASTER_SITES=	http://software-lab.de/
 EXTRACT_SUFX=	.tgz
@@ -21,10 +21,10 @@ AUTO_MKDIRS=	yes
 BIN_DIR=	${PREFIX}/bin
 LIB_DIR=	${PREFIX}/lib
 
-SUBST_CLASSES+=		fix-paths
+SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths+=	bin/pil
+SUBST_FILES.fix-paths+=		bin/pil
 SUBST_SED.fix-paths+=		-e 's,/usr/bin,${BIN_DIR},g'
 SUBST_SED.fix-paths+=		-e 's,/usr/lib,${LIB_DIR},g'
 
