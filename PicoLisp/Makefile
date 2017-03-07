@@ -28,12 +28,31 @@ SUBST_FILES.fix-paths+=		bin/pil
 SUBST_SED.fix-paths+=		-e 's,/usr/bin,${BIN_DIR},g'
 SUBST_SED.fix-paths+=		-e 's,/usr/lib,${LIB_DIR},g'
 
+SUBST_CLASSES+=			move-tests
+SUBST_STAGE.move-tests=		pre-install
+SUBST_MESSAGE.move-tests=	Fixing paths of moved tests.
+SUBST_FILES.move-tests+=	lib/test.l
+SUBST_FILES.move-tests+=	test/src/*.l
+SUBST_SED.move-tests=		-e 's,"@test,"${PREFIX}/tests/picolisp/test,g'
+
+do-test:
+	${WRKSRC}/bin/picolisp ${WRKSRC}/lib.l @lib/misc.l @lib/pilog.l @lib/test.l -bye +
+
 do-install:
 	${INSTALL_ENV} ${INSTALL_PROGRAM} ${WRKSRC}/bin/picolisp ${DESTDIR}${BIN_DIR}
 	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/bin/pil ${DESTDIR}${BIN_DIR}
-	${INSTALL_ENV} ${INSTALL_MAN} ${WRKSRC}/man/man1/picolisp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_ENV} ${INSTALL_MAN} ${WRKSRC}/man/man1/pil.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/lib.l ${DESTDIR}${LIB_DIR}/picolisp
-	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/lib/*.l ${DESTDIR}${LIB_DIR}/picolisp/lib
+	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/lib.l ${DESTDIR}${LIB_DIR}/picolisp/
+	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/lib/*.l ${DESTDIR}${LIB_DIR}/picolisp/lib/
+	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/loc/*.l ${DESTDIR}${LIB_DIR}/picolisp/loc/
+	${INSTALL_ENV} ${INSTALL_DATA} ${WRKSRC}/loc/?? ${DESTDIR}${LIB_DIR}/picolisp/loc/
+	${INSTALL_ENV} ${INSTALL_LIB} ${WRKSRC}/lib/ext ${DESTDIR}${LIB_DIR}/picolisp/lib/
+	${INSTALL_ENV} ${INSTALL_LIB} ${WRKSRC}/lib/ht ${DESTDIR}${LIB_DIR}/picolisp/lib/
+	${INSTALL_ENV} ${INSTALL_DATA} ${WRKSRC}/lib/map ${DESTDIR}${LIB_DIR}/picolisp/lib/
+	${INSTALL_ENV} ${INSTALL_MAN} ${WRKSRC}/man/man1/picolisp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_ENV} ${INSTALL_MAN} ${WRKSRC}/man/man1/pil.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/lib/test.l ${DESTDIR}${PREFIX}/tests/picolisp/lib/
+	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/test/lib.l ${DESTDIR}${PREFIX}/tests/picolisp/test/
+	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/test/lib/*.l ${DESTDIR}${PREFIX}/tests/picolisp/test/lib/
+	${INSTALL_ENV} ${INSTALL_SCRIPT} ${WRKSRC}/test/src/*.l ${DESTDIR}${PREFIX}/tests/picolisp/test/src/
 
 .include "../../mk/bsd.pkg.mk"
