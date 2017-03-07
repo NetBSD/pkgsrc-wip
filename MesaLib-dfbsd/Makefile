@@ -1,9 +1,11 @@
 # $NetBSD: Makefile,v 1.129 2016/10/20 12:06:06 wiz Exp $
 
-DISTNAME=	mesa-17.0.0
+DISTNAME=	mesa-17.0.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
+# Waiting for 17.0.1 subdirectory to be created
+# MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PKGVERSION_NOREV}/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

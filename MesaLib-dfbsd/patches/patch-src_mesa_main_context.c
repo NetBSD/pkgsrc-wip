@@ -2,9 +2,9 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
 
 * Fix exit time segfault of qt5 application with modular xorg
 
---- src/mesa/main/context.c.orig	2015-09-11 17:41:47.000000000 +0000
+--- src/mesa/main/context.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/mesa/main/context.c
-@@ -350,11 +350,14 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
+@@ -348,11 +348,14 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
   * Calls all the various one-time-fini functions in Mesa
   */
  
@@ -22,7 +22,7 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
  }
  
  /**
-@@ -369,7 +372,6 @@ one_time_fini(void)
+@@ -367,7 +370,6 @@ one_time_fini(void)
  static void
  one_time_init( struct gl_context *ctx )
  {
@@ -30,7 +30,7 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
  
     mtx_lock(&OneTimeLock);
  
-@@ -394,8 +396,6 @@ one_time_init( struct gl_context *ctx )
+@@ -392,8 +394,6 @@ one_time_init( struct gl_context *ctx )
           _mesa_ubyte_to_float_color_tab[i] = (float) i / 255.0F;
        }
  

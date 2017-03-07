@@ -1,13 +1,13 @@
-$NetBSD: patch-src_mapi_glapi_gen_gl__gentable.py,v 1.1 2015/09/11 00:03:36 tnn Exp $
+$NetBSD$
 
-FreeBSD support.
+Why shouldn't FreeBSD define USE_BACKTRACE as well.
 
---- src/mapi/glapi/gen/gl_gentable.py.orig	2017-02-13 11:55:49.000000000 +0000
-+++ src/mapi/glapi/gen/gl_gentable.py
-@@ -44,7 +44,7 @@ header = """/* GLXEXT is the define used
+--- src/mapi/glapi/glapi_gentable.c.orig	2017-02-13 11:56:32.000000000 +0000
++++ src/mapi/glapi/glapi_gentable.c
+@@ -36,7 +36,7 @@
  #endif
  
- #if (defined(GLXEXT) && defined(HAVE_BACKTRACE)) \\
+ #if (defined(GLXEXT) && defined(HAVE_BACKTRACE)) \
 -	|| (!defined(GLXEXT) && defined(DEBUG) && !defined(__CYGWIN__) && !defined(__MINGW32__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__))
 +	|| (!defined(GLXEXT) && defined(DEBUG) && !defined(__CYGWIN__) && !defined(__MINGW32__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__))
  #define USE_BACKTRACE

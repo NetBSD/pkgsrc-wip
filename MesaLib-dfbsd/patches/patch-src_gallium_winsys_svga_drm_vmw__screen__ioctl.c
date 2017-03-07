@@ -2,7 +2,7 @@ $NetBSD: patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c,v 1.3 2015/05/15
 
 Make sure ERESTART gets defined.
 
---- src/gallium/winsys/svga/drm/vmw_screen_ioctl.c.orig	2015-04-24 21:09:35.000000000 +0000
+--- src/gallium/winsys/svga/drm/vmw_screen_ioctl.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/gallium/winsys/svga/drm/vmw_screen_ioctl.c
 @@ -48,6 +48,25 @@
  

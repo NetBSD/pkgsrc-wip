@@ -1,33 +1,37 @@
 $NetBSD$
 
-From freebsd-base-ports
-https://github.com/FreeBSDDesktop/freebsd-ports-graphics/tree/xserver-mesa-next-udev
+From FreeBSD ports for graphics/libGL mesa 13.0.5
 
---- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2017-02-06 13:49:09.000000000 +0000
+# fix errors like the following
+#
+# llvm/invocation.cpp:(.text+0x1275): undefined reference to `std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::c_str()
+ const'
+# /usr/bin/ld: ../../../../src/gallium/state_trackers/clover/.libs/libclover.a(libclllvm_la-invocation.o): relocation R_X86_64_PC32 against `_ZNKSt3__112bas
+ic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv' can not be used when making a shared object; recompile with -fPIC
+# /usr/bin/ld: final link failed: Bad value
+#
+
+--- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/gallium/state_trackers/clover/llvm/invocation.cpp
-@@ -85,6 +85,14 @@ namespace {
-       }
+@@ -93,6 +93,10 @@ namespace {
+       return ctx;
     }
  
 +#if defined(__FreeBSD__)
-+   char* convert(const std::string&s){
-+      char *pc = new char[s.size()+1];
-+      std::strcpy(pc, s.c_str());
-+      return pc;
-+   }
++   const char* cstr(const std::string& str) { return str.c_str(); }
 +#endif
 +
-    std::unique_ptr<LLVMContext>
-    create_context(std::string &r_log) {
-       init_targets();
-@@ -105,8 +113,14 @@ namespace {
+    std::unique_ptr<clang::CompilerInstance>
+    create_compiler_instance(const target &target,
+                             const std::vector<std::string> &opts,
+@@ -105,8 +109,14 @@ namespace {
        // Parse the compiler options.  A file name should be present at the end
        // and must have the .cl extension in order for the CompilerInvocation
        // class to recognize it as an OpenCL source file.
 +
 +#if defined(__FreeBSD__)
 +      std::vector<const char *> copts;
-+      std::transform(opts.begin(), opts.end(), std::back_inserter(copts), convert);
++      std::transform(opts.begin(), opts.end(), copts.begin(), cstr);
 +#else
        const std::vector<const char *> copts =
           map(std::mem_fn(&std::string::c_str), opts);

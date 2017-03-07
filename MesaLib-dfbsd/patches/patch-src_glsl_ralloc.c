@@ -1,11 +1,14 @@
 $NetBSD: patch-src_glsl_ralloc.c,v 1.4 2016/02/23 11:16:55 jperkin Exp $
 
+FreeBSD reported atexit bug for 10.6:
+https://bugs.freedesktop.org/show_bug.cgi?id=91869
+
 * Fix exit time segfault of qt5 application with modular xorg
 * Provide compat strnlen for older Darwin.
 
---- src/util/ralloc.c.orig	2016-01-29 12:21:30.000000000 +0000
+--- src/util/ralloc.c.orig	2017-02-13 11:55:50.000000000 +0000
 +++ src/util/ralloc.c
-@@ -312,7 +312,7 @@ ralloc_parent(const void *ptr)
+@@ -325,7 +325,7 @@ ralloc_parent(const void *ptr)
  
  static void *autofree_context = NULL;
  
@@ -14,7 +17,7 @@ $NetBSD: patch-src_glsl_ralloc.c,v 1.4 2016/02/23 11:16:55 jperkin Exp $
  autofree(void)
  {
     ralloc_free(autofree_context);
-@@ -323,7 +323,6 @@ ralloc_autofree_context(void)
+@@ -336,7 +336,6 @@ ralloc_autofree_context(void)
  {
     if (unlikely(autofree_context == NULL)) {
        autofree_context = ralloc_context(NULL);
@@ -22,7 +25,7 @@ $NetBSD: patch-src_glsl_ralloc.c,v 1.4 2016/02/23 11:16:55 jperkin Exp $
     }
     return autofree_context;
  }
-@@ -360,7 +359,14 @@ ralloc_strndup(const void *ctx, const ch
+@@ -373,7 +372,14 @@ ralloc_strndup(const void *ctx, const ch
     if (unlikely(str == NULL))
        return NULL;
  

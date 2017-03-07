@@ -1,11 +1,11 @@
 $NetBSD$
 
-From freebsd-base-ports
-https://github.com/FreeBSDDesktop/freebsd-ports-graphics/tree/xserver-mesa-next-udev
+From FreeBSD ports graphics/libGL mesa 13.0.5
 
-Not sure if these mmap() flags are right ...
+# We don't have MAP_NORESERVE so use MAP_NOSYNC | MAP_NOCORE and
+# hope for the best (this alloc is too big but it's only a test)
 
---- src/intel/tools/aubinator.c.orig	2017-01-25 13:26:34.000000000 +0000
+--- src/intel/tools/aubinator.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/intel/tools/aubinator.c
 @@ -1298,8 +1298,14 @@ int main(int argc, char *argv[])
  

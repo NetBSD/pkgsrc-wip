@@ -2,9 +2,9 @@ $NetBSD: patch-src_util_u__atomic.h,v 1.1 2015/04/25 11:19:18 tnn Exp $
 
 Fix SunOS atomic macros.
 
---- src/util/u_atomic.h.orig	2015-03-28 18:20:39.000000000 +0000
+--- src/util/u_atomic.h.orig	2017-02-13 11:55:50.000000000 +0000
 +++ src/util/u_atomic.h
-@@ -175,7 +175,7 @@ char _InterlockedCompareExchange8(char v
+@@ -177,7 +177,7 @@
     sizeof(*v) == sizeof(uint16_t) ? atomic_inc_16((uint16_t *)(v)) : \
     sizeof(*v) == sizeof(uint32_t) ? atomic_inc_32((uint32_t *)(v)) : \
     sizeof(*v) == sizeof(uint64_t) ? atomic_inc_64((uint64_t *)(v)) : \
@@ -13,7 +13,7 @@ Fix SunOS atomic macros.
  
  #define p_atomic_inc_return(v) ((__typeof(*v)) \
     sizeof(*v) == sizeof(uint8_t)  ? atomic_inc_8_nv ((uint8_t  *)(v)) : \
-@@ -184,12 +184,12 @@ char _InterlockedCompareExchange8(char v
+@@ -186,12 +186,12 @@
     sizeof(*v) == sizeof(uint64_t) ? atomic_inc_64_nv((uint64_t *)(v)) : \
                                      (assert(!"should not get here"), 0))
  

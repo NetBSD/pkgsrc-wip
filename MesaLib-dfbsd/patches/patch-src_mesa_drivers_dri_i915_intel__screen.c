@@ -6,7 +6,7 @@ to a two argument ALIGN.
 
 Fix build on older NetBSD w/o _SC_PHYS_PAGES.
 
---- src/mesa/drivers/dri/i915/intel_screen.c.orig	2017-01-25 13:26:34.000000000 +0000
+--- src/mesa/drivers/dri/i915/intel_screen.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/mesa/drivers/dri/i915/intel_screen.c
 @@ -28,6 +28,11 @@
  #include <errno.h>

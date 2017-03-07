@@ -2,7 +2,7 @@ $NetBSD$
 
 atexit() is not a good idea in shared libraries.
 
---- src/egl/main/eglglobals.c.orig	2016-11-10 22:05:17.000000000 +0000
+--- src/egl/main/eglglobals.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/egl/main/eglglobals.c
 @@ -72,11 +72,16 @@ struct _egl_global _eglGlobal =
     _EGL_DEBUG_BIT_CRITICAL | _EGL_DEBUG_BIT_ERROR, /* debugTypesEnabled */

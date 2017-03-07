@@ -2,7 +2,7 @@ $NetBSD: patch-src_gallium_auxiliary_util_u__network.c,v 1.1 2015/04/25 11:19:18
 
 BSD has sockets, silence warning about missing implementation.
 
---- src/gallium/auxiliary/util/u_network.c.orig	2014-09-12 21:30:32.000000000 +0000
+--- src/gallium/auxiliary/util/u_network.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/gallium/auxiliary/util/u_network.c
 @@ -7,7 +7,7 @@
  #  include <winsock2.h>

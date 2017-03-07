@@ -3,9 +3,9 @@ $NetBSD$
 Don't create pipe thread on NetBSD. It triggers some kernel bug.
 kern/49838.
 
---- src/gallium/winsys/radeon/drm/radeon_drm_winsys.c.orig	2016-11-10 22:05:17.000000000 +0000
+--- src/gallium/winsys/radeon/drm/radeon_drm_winsys.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/gallium/winsys/radeon/drm/radeon_drm_winsys.c
-@@ -819,8 +819,10 @@ radeon_drm_winsys_create(int fd, radeon_
+@@ -821,8 +821,10 @@ radeon_drm_winsys_create(int fd, radeon_
      /* TTM aligns the BO size to the CPU page size */
      ws->info.gart_page_size = sysconf(_SC_PAGESIZE);
  

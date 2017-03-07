@@ -2,9 +2,9 @@ $NetBSD: patch-src_egl_drivers_dri2_platform__x11.c,v 1.2 2016/05/18 12:55:28 wi
 
 Provide compat strndup for older Darwin.
 
---- src/egl/drivers/dri2/platform_x11.c.orig	2016-05-05 12:59:22.000000000 +0000
+--- src/egl/drivers/dri2/platform_x11.c.orig	2017-02-13 11:55:49.000000000 +0000
 +++ src/egl/drivers/dri2/platform_x11.c
-@@ -591,6 +591,23 @@ dri2_x11_local_authenticate(struct dri2_
+@@ -603,6 +603,23 @@ dri2_x11_local_authenticate(struct dri2_
     return EGL_TRUE;
  }
  

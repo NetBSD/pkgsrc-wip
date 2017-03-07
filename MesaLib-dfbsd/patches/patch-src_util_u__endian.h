@@ -1,9 +1,8 @@
 $NetBSD$
 
-From freebsd-base-ports
-https://github.com/FreeBSDDesktop/freebsd-ports-graphics/tree/xserver-mesa-next-udev
+From FreeBSD ports graphics/libGL mesa 13.0.5.
 
---- src/util/u_endian.h.orig	2016-11-10 22:05:17.000000000 +0000
+--- src/util/u_endian.h.orig	2017-02-13 11:55:50.000000000 +0000
 +++ src/util/u_endian.h
 @@ -54,7 +54,7 @@
  # define PIPE_ARCH_BIG_ENDIAN

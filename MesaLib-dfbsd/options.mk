@@ -2,8 +2,16 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
-PKG_SUPPORTED_OPTIONS+=		glamor debug xvmc
-PKG_SUGGESTED_OPTIONS=
+PKG_SUPPORTED_OPTIONS+=		glamor xvmc dri3 debug
+PKG_SUPPORTED_OPTIONS+=		vdpau vaapi
+
+PKG_SUGGESTED_OPTIONS+=		vdpau vaapi
+
+PKG_SUGGESTED_OPTIONS+=		dri3
+# dri3 working requires kernel support for dma_buf
+# .if ${OPSYS} == "Linux"
+# PKG_SUGGESTED_OPTIONS+=		dri3
+# .endif
 
 # The LLVM option enables JIT accelerated software rendering and
 # is also required to support the latest RADEON GPUs, so enable it
@@ -23,38 +31,18 @@ PKG_SUGGESTED_OPTIONS+=		llvm
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
+.if \
+	!empty(MACHINE_PLATFORM:MFreeBSD-1[0-9].*-x86_64) ||	\
+	!empty(MACHINE_PLATFORM:MDragonFly-*-x86_64)
+PKG_SUGGESTED_OPTIONS+=		llvm
+.endif
+
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" ||		\
 	${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" ||	\
 	${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" ||		\
 	${OPSYS} == "Darwin"
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
-
-.include "../../mk/bsd.options.mk"
-
-# gallium
-PLIST_VARS+=	freedreno ilo i915 i965 nouveau r300 r600 radeonsi	\
-		swrast svga vc4 virgl
-# classic DRI
-PLIST_VARS+=	dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
-# other features
-PLIST_VARS+=	gbm wayland xatracker osmesa xvmc
-
-.if !empty(PKG_OPTIONS:Mdri)
-
-CONFIGURE_ARGS+=	--enable-dri
-CONFIGURE_ARGS+=	--enable-egl
-.if ${OPSYS} != "Darwin"
-CFLAGS+=		-DHAVE_DRI3
-CONFIGURE_ARGS+=	--enable-dri3
-CONFIGURE_ARGS+=	--enable-gbm
-PLIST.gbm=		yes
-.endif
-CONFIGURE_ARGS+=	--enable-texture-float
-CONFIGURE_ARGS+=	--enable-osmesa
-PLIST.osmesa=		yes
-CONFIGURE_ARGS+=	--enable-gles1
-CONFIGURE_ARGS+=	--enable-gles2
 
 # Use Thread Local Storage in GLX where it is supported by Mesa and works.
 # XXX Fixme
@@ -68,16 +56,71 @@ CONFIGURE_ARGS+=	--enable-gles2
 PKG_SUGGESTED_OPTIONS+=		glamor	
 .endif
 
+.include "../../mk/bsd.options.mk"
+
+# gallium
+PLIST_VARS+=	freedreno ilo i915 i965 nouveau r300 r600 radeonsi	\
+		swrast svga vc4 virgl
+# classic DRI
+PLIST_VARS+=	dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
+# other features
+PLIST_VARS+=	gbm wayland xatracker
+PLIST_VARS+=	vaapi vdpau
+PLIST_VARS+=	osmesa xvmc
+
+.if !empty(PKG_OPTIONS:Mdri)
+
+CONFIGURE_ARGS+=	--enable-dri
+CONFIGURE_ARGS+=	--enable-egl
+
+.if !empty(PKG_OPTIONS:Mdri3)
+CFLAGS+=		-DHAVE_DRI3
+CONFIGURE_ARGS+=	--enable-dri3
+.if ${X11_TYPE} == "modular"
+.include "../../x11/dri3proto/buildlink3.mk"
+.endif
+.else
+CONFIGURE_ARGS+=	--disable-dri3
+.endif
+
+.if ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	--enable-gbm
+PLIST.gbm=		yes
+.endif
+
+CONFIGURE_ARGS+=	--enable-texture-float
+CONFIGURE_ARGS+=	--enable-osmesa
+PLIST.osmesa=		yes
+CONFIGURE_ARGS+=	--enable-gles1
+CONFIGURE_ARGS+=	--enable-gles2
+
+.if !empty(PKG_OPTIONS:Mvdpau)
+.include "../../multimedia/libvdpau/available.mk"
+.if ${VDPAU_AVAILABLE} == "yes"
+PLIST.vdpau=   yes
+.include "../../multimedia/libvdpau/buildlink3.mk"
+.endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mvaapi)
+.include "../../multimedia/libva/available.mk"
+.if ${VAAPI_AVAILABLE} == "yes"
+PLIST.vaapi=   yes
+.include "../../multimedia/libva/buildlink3.mk"
+.endif
+.endif
+
 .if !empty(PKG_OPTIONS:Mglamor)
+
 # Recommended by
 # http://www.freedesktop.org/wiki/Software/Glamor/
-
 CONFIGURE_ARGS+=	--enable-glx-tls
 
 .else
 
 # (EE) Failed to load /usr/pkg/lib/xorg/modules/extensions/libglx.so:
-# /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model initial-exec and dlopen is not supported
+# /usr/pkg/lib/libGL.so.1: Use of initialized Thread Local Storage with model
+# initial-exec and dlopen is not supported
 CONFIGURE_ARGS+=	--disable-glx-tls
 
 .endif
@@ -153,6 +196,7 @@ GALLIUM_DRIVERS+=	r600
 FULL_OS_VERSION_CMD=	${UNAME} -r
 FULL_OS_VERSION=	${FULL_OS_VERSION_CMD:sh}
 
+# Base llvm 3.9.x has problems building nouveau support
 .if ${OPSYS} != "FreeBSD" || (empty(FULL_OS_VERSION:M11.0-STABLE) && empty(OS_VERSION:M12.*))
 # nVidia
 PLIST.nouveau=		yes
@@ -167,6 +211,7 @@ DRI_DRIVERS+=		radeon
 PLIST.r200_dri=		yes
 DRI_DRIVERS+=		r200
 
+# Base llvm 3.9.x has problems building nouveau support
 .if ${OPSYS} != "FreeBSD" || (empty(FULL_OS_VERSION:M11.0-STABLE) && empty(OS_VERSION:M12.*))
 # classic DRI nouveau
 PLIST.nouveau_dri=	yes
@@ -232,4 +277,12 @@ CONFIGURE_ARGS+=	--enable-debug
 .if !empty(PKG_OPTIONS:Mxvmc)
 .include "../../x11/libXvMC/buildlink3.mk"
 PLIST.xvmc=		yes
+.endif
+
+
+# FreeBSD does not generate library names mylib.so.x.y
+.if ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=	FREEBSDVDPAU="@comment "
+.else
+PLIST_SUBST+=	FREEBSDVDPAU=""
 .endif

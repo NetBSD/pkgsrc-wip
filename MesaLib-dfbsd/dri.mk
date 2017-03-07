@@ -25,7 +25,8 @@ BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.9.3
 .  include "../../x11/dri2proto/buildlink3.mk"
 # XXX these do not have builtin.mk
 .  if ${X11_TYPE} == "modular"
-.    include "../../x11/dri3proto/buildlink3.mk"
+# Change to option to include in options.mk
+# .    include "../../x11/dri3proto/buildlink3.mk"
 .    include "../../x11/libxshmfence/buildlink3.mk"
 .    include "../../x11/presentproto/buildlink3.mk"
 .  endif
