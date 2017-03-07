@@ -3,8 +3,8 @@ $NetBSD$
 Use installed data path.
 Disable rumble/haptic support.
 
---- seg009.c.orig	2017-02-05 07:38:56.000000000 +0000
-+++ seg009.c
+--- src/seg009.c.orig	2017-02-05 07:38:56.000000000 +0000
++++ src/seg009.c
 @@ -152,7 +152,7 @@ static FILE* open_dat_from_root_or_data_
  	// if failed, try if the DAT file can be opened in the data/ directory, instead of the main folder
  	if (fp == NULL) {
