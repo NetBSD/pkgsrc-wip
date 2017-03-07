@@ -37,6 +37,7 @@ include/libdrm/savage_drm.h
 include/libdrm/sis_drm.h
 include/libdrm/tegra_drm.h
 include/libdrm/vc4_drm.h
+${PLIST.libkms}include/libkms/libkms.h
 ${PLIST.arm}include/libdrm/vc4_packet.h
 ${PLIST.arm}include/libdrm/vc4_qpu_defines.h
 include/libdrm/via_drm.h
@@ -51,6 +52,7 @@ ${PLIST.arm}lib/libdrm_freedreno.la
 ${PLIST.intel}lib/libdrm_intel.la
 lib/libdrm_nouveau.la
 lib/libdrm_radeon.la
+${PLIST.libkms}lib/libkms.la
 lib/pkgconfig/libdrm.pc
 lib/pkgconfig/libdrm_amdgpu.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_freedreno.pc
@@ -58,3 +60,4 @@ ${PLIST.intel}lib/pkgconfig/libdrm_intel.pc
 lib/pkgconfig/libdrm_nouveau.pc
 lib/pkgconfig/libdrm_radeon.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_vc4.pc
+${PLIST.libkms}lib/pkgconfig/libkms.pc

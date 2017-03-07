@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		atomic
 SUBST_FILES.atomic=	xf86drm.h
-SUBST_MESSAGE.atomic=	Configuring xf86drm.h's atomic operations.
+SUBST_MESSAGE.atomic=	Configuring xf86drm.h atomic operations.
 SUBST_STAGE.atomic=	pre-configure
 SUBST_VARS.atomic=	ATOMIC_OPS_CHECK
 
@@ -34,8 +34,6 @@ ATOMIC_OPS_CHECK=	1
 CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
 .endif
 
-CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
-			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-manpages
 CONFIGURE_ARGS+=	--disable-valgrind
 
@@ -52,4 +50,27 @@ PLIST.arm=	yes
 #.else
 #CONFIGURE_ARGS+=	--disable-intel
 .endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libdrm
+PKG_SUPPORTED_OPTIONS=	pthreadstubs libkms
+
+.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
+PKG_SUGGESTED_OPTIONS+=	libkms
+.endif
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpthreadstubs)
+CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
+			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
+.endif
+
+PLIST_VARS+=	libkms	
+.if !empty(PKG_OPTIONS:Mlibkms)
+PLIST.libkms=	yes
+CONFIGURE_ARGS+=	--enable-libkms
+.else
+CONFIGURE_ARGS+=	--disable-libkms
+.endif
+
 .include "../../mk/bsd.pkg.mk"

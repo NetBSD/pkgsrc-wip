@@ -1,6 +1,9 @@
 $NetBSD: patch-ab,v 1.8 2015/08/14 17:12:35 wiz Exp $
 
-Patches from OpenBSD xenocara adapted for NetBSD.
+Code for OpenBSD adapted for NetBSD.  Assumes NetBSD kernel has been
+patched to use drm ioctl number 0x0f.
+
+Patches from FreeBSD ports libdrm 2.4.75.
 
 Patches from https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=214580
 and code from libdevq 0.0.4.
@@ -8,6 +11,12 @@ and code from libdevq 0.0.4.
 Tries to account for DragonFly major number not well defined.
 
 Tries to account for FreeBSD device control64D to be ignored.
+
+Many debugging messages added for use with LIBGL_DEBUG=verbose.
+
+Added code to deduce node type from a device name such as dri/card0
+for FreeBSD, DragonFly, and NetBSD, OSes that support devname().
+Moved static drmGetNodeType() for drmGetNodeTypeFromFd().
 
 --- xf86drm.c.orig	2017-01-28 01:15:16.000000000 +0000
 +++ xf86drm.c
@@ -107,7 +116,22 @@ Tries to account for FreeBSD device control64D to be ignored.
  #endif
  
  #define DRM_MSG_VERBOSITY 3
-@@ -548,6 +596,7 @@ static int drmGetMinorType(int minor)
+@@ -189,7 +237,14 @@ drmIoctl(int fd, unsigned long request,
+ 
+     do {
+         ret = ioctl(fd, request, arg);
++#if defined(__FreeBSD__)
++/*
++ * FreeBSD Bug 204174: error code 512 (ERESTARTSYS) leaked from kernel space.
++ */
++    } while (ret == -1 && (errno == EINTR || errno == EAGAIN || errno == 512));
++#else
+     } while (ret == -1 && (errno == EINTR || errno == EAGAIN));
++#endif
+     return ret;
+ }
+ 
+@@ -548,6 +603,7 @@ static int drmGetMinorType(int minor)
      }
  }
  
@@ -115,7 +139,7 @@ Tries to account for FreeBSD device control64D to be ignored.
  static const char *drmGetMinorName(int type)
  {
      switch (type) {
-@@ -561,6 +610,7 @@ static const char *drmGetMinorName(int t
+@@ -561,6 +617,7 @@ static const char *drmGetMinorName(int t
          return NULL;
      }
  }
@@ -123,19 +147,86 @@ Tries to account for FreeBSD device control64D to be ignored.
  
  /**
   * Open the device by bus ID.
-@@ -2734,7 +2784,11 @@ int drmGetNodeTypeFromFd(int fd)
-     maj = major(sbuf.st_rdev);
+@@ -2723,11 +2780,35 @@ char *drmGetDeviceNameFromFd(int fd)
+     return strdup(name);
+ }
+ 
++static int drmGetNodeType(const char *name)
++{
++    if (strncmp(name, DRM_PRIMARY_MINOR_NAME,
++        sizeof(DRM_PRIMARY_MINOR_NAME) - 1) == 0)
++        return DRM_NODE_PRIMARY;
++
++    if (strncmp(name, DRM_CONTROL_MINOR_NAME,
++        sizeof(DRM_CONTROL_MINOR_NAME ) - 1) == 0)
++        return DRM_NODE_CONTROL;
++
++    if (strncmp(name, DRM_RENDER_MINOR_NAME,
++        sizeof(DRM_RENDER_MINOR_NAME) - 1) == 0)
++        return DRM_NODE_RENDER;
++
++    return -EINVAL;
++}
++
+ int drmGetNodeTypeFromFd(int fd)
+ {
+     struct stat sbuf;
+     int maj, min, type;
+ 
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
++    char name[64];
++    char base_name[64];
++#endif
++
++    drmMsg("libdrm, file xf86drm.c, drmGetNodeTypeFromFd(): fd (%d)\n", fd);
++
+     if (fstat(fd, &sbuf))
+         return -1;
+ 
+@@ -2735,11 +2816,42 @@ int drmGetNodeTypeFromFd(int fd)
      min = minor(sbuf.st_rdev);
  
-+#if defined(__DragonFly__)
-+    if (((maj != DRM_MAJOR) && (maj != maj_firstseen)) || (maj < 0) || !S_ISCHR(sbuf.st_mode)) {
-+#else
      if (maj != DRM_MAJOR || !S_ISCHR(sbuf.st_mode)) {
-+#endif
++#if defined(__DragonFly__)
++        if ((maj_firstseen < 0) && (maj >= 0) && S_ISCHR(sbuf.st_mode)) {
++            maj_firstseen = maj;
++            drmMsg("First seen maj (%d) != DRM_MAJOR (%d)\n", maj, DRM_MAJOR);
++        }
++        else if (maj == maj_firstseen) {
++            drmMsg("maj == maj_firstseen (%d)\n", maj_firstseen);
++        }
++        else {
++            errno = EINVAL;
++            return -1;
++        }
++#else
          errno = EINVAL;
          return -1;
++#endif
      }
-@@ -2833,6 +2887,15 @@ static char *drmGetMinorNameForFD(int fd
+ 
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
++    snprintf(name, sizeof(name), "%s",
++             devname(sbuf.st_rdev, S_IFCHR));
++
++    drmMsg("Name of device file (%s)\n", name);
++
++    memset(base_name, 0, sizeof(base_name));
++    sscanf(name, "dri/%s", base_name);
++
++    drmMsg("Basename of device file (%s)\n", base_name);
++
++    type = drmGetNodeType(base_name);
++#else
+     type = drmGetMinorType(min);
++#endif
++
++    drmMsg("Deduced fd node_type (%d)\n", type);
++
+     if (type == -1)
+         errno = ENODEV;
+     return type;
+@@ -2833,6 +2945,15 @@ static char *drmGetMinorNameForFD(int fd
  
  out_close_dir:
      closedir(sysdir);
@@ -151,7 +242,7 @@ Tries to account for FreeBSD device control64D to be ignored.
  #else
      struct stat sbuf;
      char buf[PATH_MAX + 1];
-@@ -2962,6 +3025,12 @@ static int drmParseSubsystemType(int maj
+@@ -2962,6 +3083,12 @@ static int drmParseSubsystemType(int maj
      return -EINVAL;
  #elif defined(__OpenBSD__)
      return DRM_BUS_PCI;
@@ -164,7 +255,7 @@ Tries to account for FreeBSD device control64D to be ignored.
  #else
  #warning "Missing implementation of drmParseSubsystemType"
      return -EINVAL;
-@@ -2993,18 +3062,27 @@ static int drmParsePciBusInfo(int maj, i
+@@ -2993,18 +3120,27 @@ static int drmParsePciBusInfo(int maj, i
      info->func = func;
  
      return 0;
@@ -193,12 +284,13 @@ Tries to account for FreeBSD device control64D to be ignored.
      if (drmIoctl(fd, DRM_IOCTL_GET_PCIINFO, &pinfo)) {
          close(fd);
          return -errno;
-@@ -3017,6 +3095,57 @@ static int drmParsePciBusInfo(int maj, i
+@@ -3017,6 +3153,58 @@ static int drmParsePciBusInfo(int maj, i
      info->func = pinfo.func;
  
      return 0;
 +#elif (defined(__FreeBSD__) || defined(__DragonFly__))
-+/* Read the hw.dri.$min.busid sysctl
++/*
++ * Read the hw.dri.$min.busid sysctl
 + * Adapted from function devq_device_get_pcibusaddr(),
 + * project devq version 0.0.4, file src/freebsd/device.c
 + */
@@ -224,7 +316,7 @@ Tries to account for FreeBSD device control64D to be ignored.
 +         busid_format = "%*s %*s pci:%d:%d:%d.%d";
 +         sysctl_value_len = sizeof(sysctl_value);
 +         memset(sysctl_value, 0, sysctl_value_len);
-+         sprintf(sysctl_name, "hw.dri.%d.name", dev);
++         snprintf(sysctl_name, 31, "hw.dri.%d.name", min);
 +
 +         drmMsg("Reading sysctl_name (%s)\n", sysctl_name);
 +
@@ -251,7 +343,31 @@ Tries to account for FreeBSD device control64D to be ignored.
  #else
  #warning "Missing implementation of drmParsePciBusInfo"
      return -EINVAL;
-@@ -3145,9 +3274,89 @@ static int parse_config_sysfs_file(int m
+@@ -3051,23 +3239,6 @@ static int drmCompareBusInfo(drmDevicePt
+     return -1;
+ }
+ 
+-static int drmGetNodeType(const char *name)
+-{
+-    if (strncmp(name, DRM_PRIMARY_MINOR_NAME,
+-        sizeof(DRM_PRIMARY_MINOR_NAME) - 1) == 0)
+-        return DRM_NODE_PRIMARY;
+-
+-    if (strncmp(name, DRM_CONTROL_MINOR_NAME,
+-        sizeof(DRM_CONTROL_MINOR_NAME ) - 1) == 0)
+-        return DRM_NODE_CONTROL;
+-
+-    if (strncmp(name, DRM_RENDER_MINOR_NAME,
+-        sizeof(DRM_RENDER_MINOR_NAME) - 1) == 0)
+-        return DRM_NODE_RENDER;
+-
+-    return -EINVAL;
+-}
+-
+ static int drmGetMaxNodeName(void)
+ {
+     return sizeof(DRM_DIR_NAME) +
+@@ -3145,9 +3316,89 @@ static int parse_config_sysfs_file(int m
  }
  #endif
  
@@ -341,7 +457,7 @@ Tries to account for FreeBSD device control64D to be ignored.
  {
  #ifdef __linux__
      if (!(flags & DRM_DEVICE_GET_PCI_REVISION))
-@@ -3157,18 +3366,27 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3157,18 +3408,27 @@ static int drmParsePciDeviceInfo(int maj
          return parse_config_sysfs_file(maj, min, device);
  
      return 0;
@@ -370,12 +486,13 @@ Tries to account for FreeBSD device control64D to be ignored.
      if (drmIoctl(fd, DRM_IOCTL_GET_PCIINFO, &pinfo)) {
          close(fd);
          return -errno;
-@@ -3182,6 +3400,82 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3182,6 +3442,88 @@ static int drmParsePciDeviceInfo(int maj
      device->subdevice_id = pinfo.subdevice_id;
  
      return 0;
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
-+/* Adapted from function devq_device_get_pciid_full_from_fd(),
++/*
++ * Adapted from function devq_device_get_pciid_full_from_fd(),
 + * from libdevq 0.0.4, file src/freebsd/device.c,
 + */
 +    unsigned int vendor_id = 0, device_id = 0, subvendor_id = 0, 
@@ -430,12 +547,17 @@ Tries to account for FreeBSD device control64D to be ignored.
 +#if defined(__DragonFly__)
 +/* DragonFly has a device class field following the subdevice field */
 +    ret = sscanf(sysctl_value,
-+       "vendor=0x%04x device=0x%04x subvendor=0x%04x subdevice=0x%04x %*s",
++        "vendor=0x%04x device=0x%04x subvendor=0x%04x subdevice=0x%04x %*s",
 +        &vendor_id, &device_id, &subvendor_id, &subdevice_id);
 +#else /* FreeBSD */
 +    ret = sscanf(sysctl_value,
-+       "vendor=0x%04x device=0x%04x subvendor=0x%04x subdevice=0x%04x",
++        "vendor=0x%04x device=0x%04x subvendor=0x%04x subdevice=0x%04x",
 +        &vendor_id, &device_id, &subvendor_id, &subdevice_id);
++    if (ret != 4) {
++        ret = sscanf(sysctl_value,
++            "vendor=0x%04x device=0x%04x subvendor=0x%04x subdevice=0x%04x %*s",
++            &vendor_id, &device_id, &subvendor_id, &subdevice_id);
++    }
 +#endif
 +    if (ret != 4) {
 +        errno = EINVAL;
@@ -453,7 +575,7 @@ Tries to account for FreeBSD device control64D to be ignored.
  #else
  #warning "Missing implementation of drmParsePciDeviceInfo"
      return -EINVAL;
-@@ -3299,6 +3593,9 @@ static int drmProcessPciDevice(drmDevice
+@@ -3299,6 +3641,9 @@ static int drmProcessPciDevice(drmDevice
      char *addr;
      int ret;
  
@@ -463,7 +585,7 @@ Tries to account for FreeBSD device control64D to be ignored.
      dev = drmDeviceAlloc(node_type, node, sizeof(drmPciBusInfo),
                           sizeof(drmPciDeviceInfo), &addr);
      if (!dev)
-@@ -3308,18 +3605,39 @@ static int drmProcessPciDevice(drmDevice
+@@ -3308,18 +3653,39 @@ static int drmProcessPciDevice(drmDevice
  
      dev->businfo.pci = (drmPciBusInfoPtr)addr;
  
@@ -503,10 +625,50 @@ Tries to account for FreeBSD device control64D to be ignored.
      }
  
      *device = dev;
-@@ -3773,6 +4091,11 @@ int drmGetDevice2(int fd, uint32_t flags
+@@ -3681,6 +4047,35 @@ drm_device_validate_flags(uint32_t flags
+         return (flags & ~DRM_DEVICE_GET_PCI_REVISION);
+ }
+ 
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++/*
++ * XXX temporary workaround, because FreeBSD doesn't provide 
++ * pcibus device sysctl trees for renderD and controlD nodes (yet)
++ * Finds the corresponding /dev/dri/cardn device and also
++ * returns the number n.
++ */
++static int 
++drmBSDDeviceNameHack(const char *path, char *hacked_path, int length,
++                     int node_type)
++{
++    int start, number, base;
++    const char *errstr;
++
++    base = drmGetMinorBase(node_type);
++    if (node_type == DRM_NODE_RENDER) {
++        start = sizeof(DRM_RENDER_MINOR_NAME) - 1;
++    } else if (node_type == DRM_NODE_CONTROL) {
++        start = sizeof(DRM_CONTROL_MINOR_NAME) - 1;
++    } else {
++        start = sizeof(DRM_PRIMARY_MINOR_NAME) - 1;
++    }
++    number = strtonum(&(path[start]), 0, 256, &errstr) - base;
++    snprintf(hacked_path, length, "card%i", number);
++
++    return number;
++}
++#endif
++
+ /**
+  * Get information about the opened drm device
+  *
+@@ -3773,6 +4168,15 @@ int drmGetDevice2(int fd, uint32_t flags
      int max_count = 16;
      dev_t find_rdev;
  
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++    char hacked_path[128];
++#endif
++
 +    drmMsg("libdrm, file xf86drm.c, drmGetDevice2(): fd (%d)\n", fd);
 +
 +    drmMsg("Before drm_device_validate_flags: flags (%d), DRM_DEVICE_GET_PCI_REVISION (%d)\n",
@@ -515,7 +677,7 @@ Tries to account for FreeBSD device control64D to be ignored.
      if (drm_device_validate_flags(flags))
          return -EINVAL;
  
-@@ -3786,15 +4109,35 @@ int drmGetDevice2(int fd, uint32_t flags
+@@ -3786,15 +4190,35 @@ int drmGetDevice2(int fd, uint32_t flags
      maj = major(sbuf.st_rdev);
      min = minor(sbuf.st_rdev);
  
@@ -551,10 +713,14 @@ Tries to account for FreeBSD device control64D to be ignored.
      sysdir = opendir(DRM_DIR_NAME);
      if (!sysdir) {
          ret = -errno;
-@@ -3803,10 +4146,22 @@ int drmGetDevice2(int fd, uint32_t flags
+@@ -3803,26 +4227,65 @@ int drmGetDevice2(int fd, uint32_t flags
  
      i = 0;
      while ((dent = readdir(sysdir))) {
++
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++        int number;
++#endif
 +
 +        drmMsg("Examining dent->d_name (%s)\n", dent->d_name);
 +
@@ -565,16 +731,17 @@ Tries to account for FreeBSD device control64D to be ignored.
          if (node_type < 0)
              continue;
  
-+#if defined(__FreeBSD__)
-+/* FreeBSD has /dev/dri/control64D devices which are not relevant */
-+        if (node_type > 0)
-+            continue;
-+#endif
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++        number = drmBSDDeviceNameHack(dent->d_name, hacked_path, 127,
++                                          node_type);
 +
++        snprintf(node, PATH_MAX, "%s/%s", DRM_DIR_NAME, hacked_path);
++#else
          snprintf(node, PATH_MAX, "%s/%s", DRM_DIR_NAME, dent->d_name);
++#endif
          if (stat(node, &sbuf))
              continue;
-@@ -3814,15 +4169,37 @@ int drmGetDevice2(int fd, uint32_t flags
+ 
          maj = major(sbuf.st_rdev);
          min = minor(sbuf.st_rdev);
  
@@ -593,34 +760,121 @@ Tries to account for FreeBSD device control64D to be ignored.
          if (drmParseSubsystemType(maj, min) != subsystem_type)
              continue;
  
-+#if defined (__FreeBSD__) || defined(__DragonFly__)
-+/* Use basically 0 from card0 instead of the minor number */
-+        if (sscanf(dent->d_name, "card%d", &min) != 1)
-+            min = 0;	
-+#endif
-+
          switch (subsystem_type) {
          case DRM_BUS_PCI:
 +
++#if defined (__FreeBSD__) || defined(__DragonFly__)
++            drmMsg("Before drmProcessPciDevice(): number (%d), node_type (%d)\n",
++                number, node_type);
++
++            ret = drmProcessPciDevice(&d, node, node_type, maj, number, true, flags);
++#else
 +            drmMsg("Before drmProcessPciDevice(): min (%d), node_type (%d)\n",
 +                min, node_type);
 +
              ret = drmProcessPciDevice(&d, node, node_type, maj, min, true, flags);
-+
++#endif
 +            drmMsg("After drmProcessPciDevice():  return value (%d)\n", ret);
 +
              if (ret)
                  continue;
  
-@@ -3964,7 +4341,11 @@ int drmGetDevices2(uint32_t flags, drmDe
-         maj = major(sbuf.st_rdev);
-         min = minor(sbuf.st_rdev);
+@@ -3938,6 +4401,15 @@ int drmGetDevices2(uint32_t flags, drmDe
+     int ret, i, node_count, device_count;
+     int max_count = 16;
  
-+#if defined(__DragonFly__)
-+        if (((maj != DRM_MAJOR) && (maj != maj_firstseen)) || (maj < 0) || !S_ISCHR(sbuf.st_mode))
-+#else
-         if (maj != DRM_MAJOR || !S_ISCHR(sbuf.st_mode))
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++    char hacked_path[128];
 +#endif
++
++    drmMsg("libdrm, file xf86drm.c, drmGetDevices2(): max_devices (%d)\n", max_devices);
++
++    drmMsg("Before drm_device_validate_flags: flags (%d), DRM_DEVICE_GET_PCI_REVISION (%d)\n",
++        flags, DRM_DEVICE_GET_PCI_REVISION);
++
+     if (drm_device_validate_flags(flags))
+         return -EINVAL;
+ 
+@@ -3953,11 +4425,23 @@ int drmGetDevices2(uint32_t flags, drmDe
+ 
+     i = 0;
+     while ((dent = readdir(sysdir))) {
++
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++        int number;
++#endif
++
+         node_type = drmGetNodeType(dent->d_name);
+         if (node_type < 0)
              continue;
  
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++        number = drmBSDDeviceNameHack(dent->d_name, hacked_path, 127,
++                                          node_type);
++
++        snprintf(node, PATH_MAX, "%s/%s", DRM_DIR_NAME, hacked_path);
++#else
+         snprintf(node, PATH_MAX, "%s/%s", DRM_DIR_NAME, dent->d_name);
++#endif
+         if (stat(node, &sbuf))
+             continue;
+ 
+@@ -3965,7 +4449,22 @@ int drmGetDevices2(uint32_t flags, drmDe
+         min = minor(sbuf.st_rdev);
+ 
+         if (maj != DRM_MAJOR || !S_ISCHR(sbuf.st_mode))
++#if defined(__DragonFly__)
++        {
++            if ((maj_firstseen < 0) && (maj >= 0) && S_ISCHR(sbuf.st_mode)) {
++                maj_firstseen = maj;
++                drmMsg("First seen maj (%d) != DRM_MAJOR (%d)\n", maj, DRM_MAJOR);
++            }
++            else if (maj == maj_firstseen) {
++                drmMsg("maj == maj_firstseen (%d)\n", maj_firstseen);
++            }
++            else {
++                continue;
++            }
++        }
++#else
+             continue;
++#endif
+ 
          subsystem_type = drmParseSubsystemType(maj, min);
+ 
+@@ -3974,8 +4473,13 @@ int drmGetDevices2(uint32_t flags, drmDe
+ 
+         switch (subsystem_type) {
+         case DRM_BUS_PCI:
++#if defined (__FreeBSD__) || defined(__DragonFly__)
++            ret = drmProcessPciDevice(&device, node, node_type,
++                                      maj, number, devices != NULL, flags);
++#else
+             ret = drmProcessPciDevice(&device, node, node_type,
+                                       maj, min, devices != NULL, flags);
++#endif
+             if (ret)
+                 continue;
+ 
+@@ -4095,6 +4599,21 @@ char *drmGetDeviceNameFromFd2(int fd)
+     free(value);
+ 
+     return strdup(path);
++#elif defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
++    struct stat sbuf;
++    char path[64];
++
++    drmMsg("libdrm, file xf86drm.c, drmGetDeviceFromFd2(): fd (%d)\n", fd);
++
++    if (fstat(fd, &sbuf))
++        return NULL;
++
++    snprintf(path, sizeof(path), "/dev/%s",
++             devname(sbuf.st_rdev, S_IFCHR));
++
++    drmMsg("path from devname (%s)\n", path);
++
++    return strdup(path);
+ #else
+     struct stat      sbuf;
+     char             node[PATH_MAX + 1];
