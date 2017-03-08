@@ -7,14 +7,12 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bitbucket.org/zzzeek/alembic
-COMMENT=    Database migration tool for SQLAlchemy
+COMMENT=	Database migration tool for SQLAlchemy
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.8:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-mako>=0.8.1:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.0:../../devel/py-nose
-
-
 
 USE_LANGUAGES=	# none
 
