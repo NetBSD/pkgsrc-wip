@@ -1,0 +1,53 @@
+$NetBSD$
+
+Add support for NetBSD
+
+--- src64/Makefile.orig	2016-12-05 12:09:18.000000000 +0000
++++ src64/Makefile
+@@ -28,11 +28,16 @@ else
+ 						UNAME = SunOS
+ 						MACHINE = x86_64
+ 					else
+-						UNAME = $(shell uname)
+-						ifeq ($(MAKECMDGOALS), emu)
+-							MACHINE = emu
++						ifeq ($(MAKECMDGOALS), x86-64.netBsd)
++							UNAME = NetBSD
++							MACHINE = x86_64
+ 						else
+-							MACHINE = $(shell uname -m)
++							UNAME = $(shell uname)
++							ifeq ($(MAKECMDGOALS), emu)
++								MACHINE = emu
++							else
++								MACHINE = $(shell uname -m)
++							endif
+ 						endif
+ 					endif
+ 				endif
+@@ -103,6 +108,17 @@ else
+ 				LD-MAIN = -m64 -lc -lm -ldl -lsocket -lnsl
+ 				LD-SHARED = -m64 -shared
+ 				STRIP = strip
++			else
++				ifeq ($(UNAME), NetBSD)
++					OS = NetBSD
++					SYS = .netBsd
++					FMT = .s
++					ARCH = x86-64
++					AS = as
++					LD-MAIN = -m64 -lc -lm
++					LD-SHARED = -m64 -shared -rdynamic
++					STRIP = strip
++				endif
+ 			endif
+ 		endif
+ 	endif
+@@ -124,6 +140,7 @@ ppc64.linux: $(sFiles)
+ x86-64.freeBsd: $(sFiles)
+ x86-64.openBsd: $(sFiles)
+ x86-64.sunOs: $(sFiles)
++x86-64.netBsd: $(sFiles)
+ emu: picolisp
+ 
+ picolisp: $(bin)/picolisp $(lib)/ext $(lib)/ht

@@ -27,6 +27,7 @@ SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
 SUBDIR+=	PatternPaint
 SUBDIR+=	PicoLisp
+SUBDIR+=	PicoLisp64
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
 SUBDIR+=	R-BiocGenerics
