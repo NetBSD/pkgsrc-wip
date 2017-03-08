@@ -1,0 +1,4 @@
+## 1.12.10 - 3/02/17
+
+*   bugfix for file descriptors over 1024 [#356](https://github.com/amoffat/sh/issues/356)
+*   bugfix when `_err_to_out` is True and `_out` is pipe or tty [#365](https://github.com/amoffat/sh/issues/365)
