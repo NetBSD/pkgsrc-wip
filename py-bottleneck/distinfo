@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/04/02 22:35:05 jihbed Exp $
 
-SHA1 (Bottleneck-1.0.0.tar.gz) = a7a9549c018bde8fcdb471d0d70b03f8d40e4387
-RMD160 (Bottleneck-1.0.0.tar.gz) = 60a2f149bc9f695ebd09313507e7880a523096c9
-Size (Bottleneck-1.0.0.tar.gz) = 363223 bytes
+SHA1 (Bottleneck-1.2.0.tar.gz) = 9b1c1fe139cfe38ea9b3ecc321cb884d91528b6e
+RMD160 (Bottleneck-1.2.0.tar.gz) = a9e5cee81b7f4d317db72188628884ab8f748a27
+SHA512 (Bottleneck-1.2.0.tar.gz) = 2dce3626b33923b4ab08047910b38e5531090a58f63a380392b78352c3dc657b947dc6dcad306734beaf130855c10ff9fb0048c027821720660fc62a242daafb
+Size (Bottleneck-1.2.0.tar.gz) = 92504 bytes
