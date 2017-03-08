@@ -7,7 +7,7 @@ CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jedi/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	 https://github.com/davidhalter/jedi
+HOMEPAGE=	https://github.com/davidhalter/jedi
 COMMENT=	Autocompletion tool for Python that can be used for text editors
 LICENSE=	mit
 
