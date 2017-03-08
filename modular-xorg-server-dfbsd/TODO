@@ -4,3 +4,10 @@ Waiting for devd patches required on latest FreeBSD and DragonFly
 submitted in
 pkg/50200 (x11/modular-xorg-server)
 to be accepted.
+
+Normal pkgsrc configure no longer works, need full autoreconf instead.
+Put autoreconf in pre-patch because not sure how else to apply
+patches to configure.
+
+Unsure whether RegisterBlockAndWakeupHandlers() and
+RemoveBlockAndWakeupHandlers() are used anymore after 1.19 API shift. 

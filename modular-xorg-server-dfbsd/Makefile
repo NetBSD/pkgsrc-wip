@@ -18,4 +18,7 @@ CONFIGURE_ARGS+=	--disable-kdrive
 
 .include "options.mk"
 
+pre-patch:
+	cd ${WRKSRC} && autoreconf -vif
+
 .include "../../mk/bsd.pkg.mk"

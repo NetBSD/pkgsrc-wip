@@ -4,9 +4,9 @@ devd support to detect devices from FreeBSD ports / DragonFly dports
 
 Further fix to use SetNotifyFd / RemoveNotifyFd
 
---- config/devd.c.orig	2016-11-19 17:36:01.195812000 +0000
+--- config/devd.c.orig	2017-02-27 17:13:49.368381000 +0000
 +++ config/devd.c
-@@ -0,0 +1,564 @@
+@@ -0,0 +1,571 @@
 +/*
 + * Copyright (c) 2012 Baptiste Daroussin
 + * Copyright (c) 2013, 2014 Alex Kozlov
@@ -72,7 +72,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +static int sock_devd;
 +static bool is_console_kbd = false;
 +static bool is_kbdmux = false;
-+OsTimerPtr rtimer;
++static OsTimerPtr rtimer = NULL;
 +
 +struct hw_type {
 +	const char *driver;
@@ -428,6 +428,7 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +			disconnect_devd(sock_devd);
 +			rtimer = TimerSet(NULL, 0, 1, reconnect_handler, NULL);
 +			LogMessage(X_WARNING, "config/devd: devd socket is lost\n");
++			free(buf);
 +			return -1;
 +		}
 +		if (c == '\n')
@@ -456,10 +457,10 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	return sz;
 +}
 +
++#if 0
 +static void
 +wakeup_handler(void *data, int err)
 +{
-+/*
 +	char *line = NULL;
 +	char *walk;
 +
@@ -484,8 +485,8 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +			break;
 +		}
 +		free(line);
-+*/
 +}
++#endif
 +
 +static void
 +devdInputHandlerNotify(int sock, int read, void *data)
@@ -507,16 +508,18 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	case DEVD_EVENT_REMOVE:
 +		device_removed(line + 1);
 +		break;
-+		default:
++	default:
 +		break;
 +	}
 +	free(line);
 +}
 +
++#if 0
 +static void
 +block_handler(void *data, struct timeval **tv)
 +{
 +}
++#endif
 +
 +int
 +config_devd_init(void)
@@ -548,7 +551,9 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +	if ((sock_devd = connect_devd()) < 0)
 +		return 0;
 +
++#if 0
 +	RegisterBlockAndWakeupHandlers(block_handler, wakeup_handler, NULL);
++#endif
 +
 +	return 1;
 +}
@@ -565,7 +570,9 @@ Further fix to use SetNotifyFd / RemoveNotifyFd
 +
 +	disconnect_devd(sock_devd);
 +
++#if 0
 +	RemoveBlockAndWakeupHandlers(block_handler, wakeup_handler, NULL);
++#endif
 +
 +	is_console_kbd = false;
 +}

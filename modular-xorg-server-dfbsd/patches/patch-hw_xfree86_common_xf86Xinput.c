@@ -4,6 +4,15 @@ devd support to detect devices from FreeBSD ports / DragonFly dports
 
 --- hw/xfree86/common/xf86Xinput.c.orig	2017-01-04 21:32:10.000000000 +0000
 +++ hw/xfree86/common/xf86Xinput.c
+@@ -871,7 +871,7 @@ xf86NewInputDevice(InputInfoPtr pInfo, D
+ {
+     InputDriverPtr drv = NULL;
+     DeviceIntPtr dev = NULL;
+-    Bool paused;
++    Bool paused = 0;
+     int rval;
+     char *path = NULL;
+ 
 @@ -1034,6 +1034,7 @@ NewInputDeviceRequest(InputOption *optio
          if (strcmp(key, "_source") == 0 &&
              (strcmp(value, "server/hal") == 0 ||

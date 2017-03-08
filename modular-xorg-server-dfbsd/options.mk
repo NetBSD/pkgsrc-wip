@@ -1,32 +1,44 @@
-# $NetBSD: options.mk,v 1.16 2016/11/22 16:02:54 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2017/02/21 14:56:14 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace
 PKG_SUPPORTED_OPTIONS+=	devd
 PKG_SUGGESTED_OPTIONS=	inet6
 .if ${X11_TYPE} == "modular"
-PKG_SUPPORTED_OPTIONS+=	dri
+PKG_SUPPORTED_OPTIONS+=	dri dri3
 PKG_SUGGESTED_OPTIONS+=	dri
+PKG_SUGGESTED_OPTIONS+=	dri3
 .endif
+
+# dri3 requires kernel support for dma_buf
+# .if ${OPSYS} == "Linux"
+# PKG_SUGGESTED_OPTIONS+=	dri3
+# .endif
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+= devd
 .endif
 
-# Enabled in FreeBSD ports / DragonFly dports
-CONFIGURE_ARGS+=	--enable-record=yes
-
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		dri dtrace
+PLIST_VARS+=		dri3
 
 .if !empty(PKG_OPTIONS:Mdri)
+
+.if !empty(PKG_OPTIONS:Mdri3)
+CONFIGURE_ARGS+=	--enable-dri3
+PLIST.dri3=		yes
+.include "../../x11/dri3proto/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-dri3
+.endif
+
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/dri2proto/buildlink3.mk"
-.include "../../x11/dri3proto/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxshmfence/buildlink3.mk"
 .include "../../x11/presentproto/buildlink3.mk"
@@ -34,7 +46,6 @@ BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 PLIST.dri=		yes
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-dri2
-CONFIGURE_ARGS+=	--enable-dri3
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-glamor
 CONFIGURE_ARGS+=	--enable-present
@@ -46,6 +57,7 @@ CONFIGURE_ARGS+=	--disable-dri
 CONFIGURE_ARGS+=	--disable-dri2
 CONFIGURE_ARGS+=	--disable-dri3
 CONFIGURE_ARGS+=	--disable-glx
+CONFIGURE_ARGS+=	--disable-glamor
 CONFIGURE_ARGS+=	--disable-present
 pre-build: disable-modesetting
 .PHONY: disable-modesetting

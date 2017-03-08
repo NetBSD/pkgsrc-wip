@@ -9,9 +9,9 @@ dri2.c:320:27: note: initialize the variable 'ref' to silence this warning
 dri2.c:601:27: note: initialize the variable 'ref' to silence this warning
     DRI2DrawableRefPtr ref;
 
---- hw/xfree86/dri2/dri2.c.orig	2015-01-26 18:42:23.000000000 +0000
+--- hw/xfree86/dri2/dri2.c.orig	2017-01-06 15:03:50.000000000 +0000
 +++ hw/xfree86/dri2/dri2.c
-@@ -279,7 +279,7 @@ typedef struct DRI2DrawableRefRec {
+@@ -312,7 +312,7 @@ typedef struct DRI2DrawableRefRec {
  static DRI2DrawableRefPtr
  DRI2LookupDrawableRef(DRI2DrawablePtr pPriv, XID id)
  {
@@ -20,7 +20,7 @@ dri2.c:601:27: note: initialize the variable 'ref' to silence this warning
  
      xorg_list_for_each_entry(ref, &pPriv->reference_list, link) {
          if (ref->id == id)
-@@ -359,7 +359,7 @@ static int
+@@ -392,7 +392,7 @@ static int
  DRI2DrawableGone(void *p, XID id)
  {
      DRI2DrawablePtr pPriv = p;
@@ -29,7 +29,7 @@ dri2.c:601:27: note: initialize the variable 'ref' to silence this warning
      WindowPtr pWin;
      PixmapPtr pPixmap;
      DrawablePtr pDraw;
-@@ -676,7 +676,7 @@ static void
+@@ -713,7 +713,7 @@ static void
  DRI2InvalidateDrawable(DrawablePtr pDraw)
  {
      DRI2DrawablePtr pPriv = DRI2GetDrawable(pDraw);
