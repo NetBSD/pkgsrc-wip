@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
+PKGCONFIG_OVERRIDE+=	libkms.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -53,6 +54,7 @@ PLIST.arm=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libdrm
 PKG_SUPPORTED_OPTIONS=	pthreadstubs libkms
+PKG_SUGGESTED_OPTIONS+=	pthreadstubs
 
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
 PKG_SUGGESTED_OPTIONS+=	libkms
