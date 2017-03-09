@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/02/14 09:24:01 jihbed Exp $
 
-DISTNAME=	toolz-0.7.1
+DISTNAME=	toolz-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toolz/}
