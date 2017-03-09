@@ -1364,4 +1364,4 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-man/man1/translatetoolkit.1
+${PLIST.doc}man/man1/translatetoolkit.1
