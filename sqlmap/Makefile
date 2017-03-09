@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sqlmap-1.1.2
+DISTNAME=	sqlmap-1.1.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -23,7 +23,7 @@ REPLACE_PERL+=	sqlmap/extra/icmpsh/icmpsh-m.pl
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.1.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.1.3
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

@@ -806,6 +806,9 @@ ${PYSITELIB}/sqlmap/tamper/percentage.pyo
 ${PYSITELIB}/sqlmap/tamper/plus2concat.py
 ${PYSITELIB}/sqlmap/tamper/plus2concat.pyc
 ${PYSITELIB}/sqlmap/tamper/plus2concat.pyo
+${PYSITELIB}/sqlmap/tamper/plus2fnconcat.py
+${PYSITELIB}/sqlmap/tamper/plus2fnconcat.pyc
+${PYSITELIB}/sqlmap/tamper/plus2fnconcat.pyo
 ${PYSITELIB}/sqlmap/tamper/randomcase.py
 ${PYSITELIB}/sqlmap/tamper/randomcase.pyc
 ${PYSITELIB}/sqlmap/tamper/randomcase.pyo
@@ -1080,12 +1083,6 @@ ${PYSITELIB}/sqlmap/thirdparty/oset/_abc.pyo
 ${PYSITELIB}/sqlmap/thirdparty/oset/pyoset.py
 ${PYSITELIB}/sqlmap/thirdparty/oset/pyoset.pyc
 ${PYSITELIB}/sqlmap/thirdparty/oset/pyoset.pyo
-${PYSITELIB}/sqlmap/thirdparty/pagerank/__init__.py
-${PYSITELIB}/sqlmap/thirdparty/pagerank/__init__.pyc
-${PYSITELIB}/sqlmap/thirdparty/pagerank/__init__.pyo
-${PYSITELIB}/sqlmap/thirdparty/pagerank/pagerank.py
-${PYSITELIB}/sqlmap/thirdparty/pagerank/pagerank.pyc
-${PYSITELIB}/sqlmap/thirdparty/pagerank/pagerank.pyo
 ${PYSITELIB}/sqlmap/thirdparty/prettyprint/__init__.py
 ${PYSITELIB}/sqlmap/thirdparty/prettyprint/__init__.pyc
 ${PYSITELIB}/sqlmap/thirdparty/prettyprint/__init__.pyo
