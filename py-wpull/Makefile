@@ -16,7 +16,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-yapsy>=1.2.1:../../wip/py-yapsy
+DEPENDS+=	${PYPKGPREFIX}-yapsy-[0-9]*:../../wip/py-yapsy
+DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
