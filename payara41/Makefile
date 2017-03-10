@@ -16,7 +16,7 @@ USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
-PAYARA_VER=	4.1.1.164
+PAYARA_VER=	4.1.1.171
 PAYARA_HOME=	${PREFIX}/share/payara
 EGDIR=		${PREFIX}/share/examples/payara
 RCD_SCRIPTS=	payara
