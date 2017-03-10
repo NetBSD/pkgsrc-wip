@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (squashfuse-0.1.100.tar.gz) = 004dc70712d2a6a0fb80ded0a7e6db4e7f11d085
+RMD160 (squashfuse-0.1.100.tar.gz) = c38b2904bcafe58f003fe86b963b8ed3f7d564d5
+SHA512 (squashfuse-0.1.100.tar.gz) = e6a56354e71991ccbcbd2f9e6967f1f5a1056edbee286e6a6d6c35f777ed6e6494243633d070da700cf43a8bf7b56269087a0db1d4b2d45ed49f4830caad7927
+Size (squashfuse-0.1.100.tar.gz) = 393548 bytes
+SHA1 (patch-m4_squashfuse.m4) = 4e797c644f5561622c46b2e1ba4e2036747e418e
