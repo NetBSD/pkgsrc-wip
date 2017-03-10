@@ -2,7 +2,8 @@ $NetBSD$
 
 Use malloc(3) and free(3) instead of alloca(3).
 
-Suggested by upstream via issue pull request #77.
+From upstream via issue pull request #77 (it will not needed
+for the next 1.8.0 version).
 
 --- src/i965_decoder_utils.c.orig	2016-11-10 05:04:36.000000000 +0000
 +++ src/i965_decoder_utils.c
@@ -23,12 +24,11 @@ Suggested by upstream via issue pull request #77.
      ret = dri_bo_get_subdata(
          slice_data_bo, slice_param->slice_data_offset,
          buf_size, buf
-@@ -355,6 +354,9 @@ avc_get_first_mb_bit_offset_with_epb(
+@@ -355,6 +354,8 @@ avc_get_first_mb_bit_offset_with_epb(
              i += 2, j++, n++;
      }
  
-+    if (buf)
-+        free(buf);
++    free(buf);
 +
      out_slice_data_bit_offset = in_slice_data_bit_offset + n * 8;
  
