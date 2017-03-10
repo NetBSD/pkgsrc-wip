@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-wayland
 # XXX: LIBVA_DRIVERS_PATH - if undefined - is obtained via
 # XXX: `pkg-config libva --variable driverdir'. This is not desiderable
 # XXX: for native X.org so handle installation similarly to graphics/MesaLib
-# XXX: in order to be native/pkgsrc X.org agnostic.
+# XXX: in order to be X11_TYPE agnostic.
 CONFIGURE_ENV+=		LIBVA_DRIVERS_PATH=${PREFIX}/lib/dri/
 
 .include "../../mk/bsd.prefs.mk"
