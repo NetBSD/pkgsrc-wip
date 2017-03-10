@@ -11,5 +11,5 @@ HOMEPAGE=	http://www.dnspython.org/
 COMMENT=	DNS toolkit for Python
 #LICENSE=	# TODO: (see mk/license.mk) # distinct, similar to isc
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
