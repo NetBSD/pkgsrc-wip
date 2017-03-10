@@ -18,5 +18,8 @@ USE_TOOLS+=	automake autoconf autoreconf
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
 
+.include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
