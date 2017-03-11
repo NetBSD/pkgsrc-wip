@@ -23,6 +23,8 @@ DEPENDS+=	${PYPKGPREFIX}-namedlist-[0-9]*:../../wip/py-namedlist
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-dnspython3-[0-9]*:../../wip/py-dnspython3
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
