@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		elixir-1.4.1
+DISTNAME=		elixir-1.4.2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elixir-lang/}
 EXTRACT_SUFX=		.zip
