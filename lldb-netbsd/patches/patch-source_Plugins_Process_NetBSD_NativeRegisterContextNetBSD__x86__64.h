@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2017-03-01 11:04:51.743978339 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2017-03-11 07:50:19.341693363 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
-@@ -0,0 +1,125 @@
+@@ -0,0 +1,82 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.h ---------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -12,10 +12,14 @@ $NetBSD$
 +//
 +//===----------------------------------------------------------------------===//
 +
-+#if defined(__i386__) || defined(__x86_64__)
++#if defined(__x86_64__)
 +
 +#ifndef lldb_NativeRegisterContextNetBSD_x86_64_h
 +#define lldb_NativeRegisterContextNetBSD_x86_64_h
++
++#include <sys/param.h>
++#include <sys/types.h>
++#include <machine/reg.h>
 +
 +#include "Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h"
 +#include "Plugins/Process/Utility/RegisterContext_x86.h"
@@ -36,8 +40,6 @@ $NetBSD$
 +
 +  const RegisterSet *GetRegisterSet(uint32_t set_index) const override;
 +
-+  uint32_t GetUserRegisterCount() const override;
-+
 +  Error ReadRegister(const RegisterInfo *reg_info,
 +                     RegisterValue &reg_value) override;
 +
@@ -51,75 +53,30 @@ $NetBSD$
 +protected:
 +  void *GetGPRBuffer() override { return &m_gpr_x86_64; }
 +
-+  void *GetFPRBuffer() override;
++  void *GetFPRBuffer() override { return &m_fpr_x86_64; }
 +
-+  size_t GetFPRSize() override;
++  void *GetDBRBuffer() override { return &m_dr_x86_64; }
 +
-+  Error ReadFPR() override;
++  size_t GetFPRSize() override { return 0; }
 +
-+  Error WriteFPR() override;
++  Error ReadFPR() override { return Error(); }
++
++  Error WriteFPR() override { return Error(); }
 +
 +private:
 +  // Private member types.
-+  enum class XStateType { Invalid, FXSAVE, XSAVE };
 +  enum class RegSet { gpr, fpu, avx, mpx };
 +
-+  // Info about register ranges.
-+  struct RegInfo {
-+    uint32_t num_registers;
-+    uint32_t num_gpr_registers;
-+    uint32_t num_fpr_registers;
-+    uint32_t num_avx_registers;
-+    uint32_t num_mpx_registers;
-+    uint32_t last_gpr;
-+    uint32_t first_fpr;
-+    uint32_t last_fpr;
-+    uint32_t first_st;
-+    uint32_t last_st;
-+    uint32_t first_mm;
-+    uint32_t last_mm;
-+    uint32_t first_xmm;
-+    uint32_t last_xmm;
-+    uint32_t first_ymm;
-+    uint32_t last_ymm;
-+    uint32_t first_mpxr;
-+    uint32_t last_mpxr;
-+    uint32_t first_mpxc;
-+    uint32_t last_mpxc;
-+    uint32_t first_dr;
-+    uint32_t gpr_flags;
-+  };
-+
 +  // Private member variables.
-+  mutable XStateType m_xstate_type;
-+  FPR m_fpr; // Extended States Area, named FPR for historical reasons.
-+  IOVEC m_iovec;
-+  YMM m_ymm_set;
-+  MPX m_mpx_set;
-+  RegInfo m_reg_info;
-+  uint64_t m_gpr_x86_64[k_num_gpr_registers_x86_64];
-+  uint32_t m_fctrl_offset_in_userarea;
++  struct reg m_gpr_x86_64;
++  struct fpreg m_fpr_x86_64;
++  struct dbreg m_dr_x86_64;
 +
-+  // Private member methods.
-+  bool IsCPUFeatureAvailable(RegSet feature_code) const;
++  int GetSetForNativeRegNum(int reg_num) const;
 +
-+  bool IsRegisterSetAvailable(uint32_t set_index) const;
++  enum { GPRegSet = 4, FPRegSet = 5, DBRegSet = 6 };
 +
-+  bool IsGPR(uint32_t reg_index) const;
-+
-+  bool IsFPR(uint32_t reg_index) const;
-+
-+  bool CopyXSTATEtoYMM(uint32_t reg_index, lldb::ByteOrder byte_order);
-+
-+  bool CopyYMMtoXSTATE(uint32_t reg, lldb::ByteOrder byte_order);
-+
-+  bool IsAVX(uint32_t reg_index) const;
-+
-+  bool CopyXSTATEtoMPX(uint32_t reg);
-+
-+  bool CopyMPXtoXSTATE(uint32_t reg);
-+
-+  bool IsMPX(uint32_t reg_index) const;
++  int ReadRegisterSet(uint32_t set, bool force);
 +};
 +
 +} // namespace process_netbsd
@@ -127,4 +84,4 @@ $NetBSD$
 +
 +#endif // #ifndef lldb_NativeRegisterContextNetBSD_x86_64_h
 +
-+#endif // defined(__i386__) || defined(__x86_64__)
++#endif // defined(__x86_64__)

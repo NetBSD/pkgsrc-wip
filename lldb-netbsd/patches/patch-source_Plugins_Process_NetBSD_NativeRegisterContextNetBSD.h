@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-03 15:35:02.272170791 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-11 07:50:19.328597210 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -0,0 +1,76 @@
+@@ -0,0 +1,78 @@
 +//===-- NativeRegisterContextNetBSD.h ----------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -59,6 +59,8 @@ $NetBSD$
 +  }
 +
 +  virtual void *GetFPRBuffer() { return nullptr; }
++
++  virtual void *GetDBRBuffer() { return nullptr; }
 +
 +  virtual size_t GetFPRSize() { return 0; }
 +

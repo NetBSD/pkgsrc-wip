@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-03 15:35:02.252988829 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-11 07:50:19.309994898 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -0,0 +1,1307 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
@@ -1126,7 +1126,7 @@ $NetBSD$
 +
 +  do {
 +    io.piod_offs = (void *)(addr + bytes_read);
-+    io.piod_offs = dst + bytes_read;
++    io.piod_addr = dst + bytes_read;
 +
 +    Error error = NativeProcessNetBSD::PtraceWrapper(
 +        PT_IO, GetID(), &io);

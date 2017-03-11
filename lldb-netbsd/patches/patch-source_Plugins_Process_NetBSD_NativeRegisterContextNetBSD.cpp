@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-03 15:35:02.265865750 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-11 07:50:19.322535530 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,111 @@
+@@ -0,0 +1,112 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -31,7 +31,8 @@ $NetBSD$
 +    NativeThreadProtocol &native_thread, uint32_t concrete_frame_idx,
 +    RegisterInfoInterface *reg_info_interface_p)
 +    : NativeRegisterContextRegisterInfo(native_thread, concrete_frame_idx,
-+                                        reg_info_interface_p) {}
++                                        reg_info_interface_p) {
++}
 +
 +lldb::ByteOrder NativeRegisterContextNetBSD::GetByteOrder() const {
 +  // Get the target process whose privileged thread was used for the register
