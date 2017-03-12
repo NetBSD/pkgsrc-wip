@@ -10,6 +10,7 @@ case "${STAGE}" in
 POST-INSTALL)
 	cd ${BZDIR} &&
 		${CHOWN} -R ${WWWOWN} ${BZDIR} &&
-		${CHGRP} -R ${WWWGRP} ${BZDIR}
+		${CHGRP} -R ${WWWGRP} ${BZDIR} &&
+		${CHMOD}         0755 ${BZDIR}
 	;;
 esac
