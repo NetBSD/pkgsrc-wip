@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	intel-vaapi-driver-1.7.3
-CATEGORIES=	x11
+CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
