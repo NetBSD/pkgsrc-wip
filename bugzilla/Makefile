@@ -113,9 +113,12 @@ INSTALLATION_DIRS+=	${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
 INSTALLATION_DIRS+=	${BZDIR}/docs ${BZDIR}/docs/en ${BZDIR}/docs/en/html
 INSTALLATION_DIRS+=	${BZDIR}/images ${BZDIR}/docs/en/html/api
 INSTALLATION_DIRS+=	${BZDIR}/docs/en/html/api/Bugzilla
+.for i in data contrib t xt template lib graphs skins
+INSTALLATION_DIRS+=	${BZDIR}/${i}
+.endfor
 
-# file user group mode
-#SPECIAL_PERMS=	* www data 0600
+FILES_SUBST+=   WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
+                BZDIR=${BZDIR}
 
 do-configure:
 	(cd ${WRKSRC}; ./checksetup.pl)
@@ -125,7 +128,8 @@ post-extract:
 	${CP} ${FILESDIR}/localconfig	${WRKSRC}
 
 do-install:
-.for i in ${BZDIR} ${EGDIR} ${DOCDIR}
+
+.for i in ${BZDIR} ${EGDIR} ${DOCDIR} ${BZDIR}/lib
 	${INSTALL_DATA_DIR} ${DESTDIR}${i}
 .endfor
 	(cd ${WRKSRC}					    ;\
@@ -142,9 +146,7 @@ do-install:
 	pax -rw -pmp js			${DESTDIR}${BZDIR}  ;\
 	pax -rw -pmp template		${DESTDIR}${BZDIR} ;\
 	)
-.for i in data contrib t xt template lib graphs skins
-	${INSTALL_DATA_DIR} 	${DESTDIR}${BZDIR}/${i}
-.endfor
+	${RM} ${DESTDIR}${BZDIR}/Bugzilla/Install/Filesystem.pm.orig
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
