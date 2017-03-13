@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fusionpbx-4.2
+DISTNAME=	fusionpbx-4.2.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	comms net audio
 GITHUB_PROJECT=	fusionpbx
