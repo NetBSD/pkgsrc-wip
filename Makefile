@@ -1442,6 +1442,7 @@ SUBDIR+=	jbmgen
 SUBDIR+=	jc
 SUBDIR+=	jellyfish
 SUBDIR+=	jellyfish2
+SUBDIR+=	jedit
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
