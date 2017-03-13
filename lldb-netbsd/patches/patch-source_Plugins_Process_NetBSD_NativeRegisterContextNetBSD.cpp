@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-11 07:50:19.322535530 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-13 11:59:28.714727351 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
 @@ -0,0 +1,112 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//

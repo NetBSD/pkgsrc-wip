@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-11 07:50:19.309994898 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-13 11:59:28.701374714 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1307 @@
+@@ -0,0 +1,1395 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -521,6 +521,7 @@ $NetBSD$
 +      case TRAP_BRKPT:
 +        for (const auto &thread_sp : m_threads) {
 +          static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedByBreakpoint();
++          FixupBreakpointPCAsNeeded(*static_pointer_cast<NativeThreadNetBSD>(thread_sp));
 +        }
 +        SetState(StateType::eStateStopped, true);
 +        break;
@@ -1087,6 +1088,78 @@ $NetBSD$
 +  return true;
 +}
 +
++
++Error NativeProcessNetBSD::FixupBreakpointPCAsNeeded(NativeThreadNetBSD &thread) {
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_BREAKPOINTS));
++  Error error;
++  // Find out the size of a breakpoint (might depend on where we are in the
++  // code).
++  NativeRegisterContextSP context_sp = thread.GetRegisterContext();
++  if (!context_sp) {
++    error.SetErrorString("cannot get a NativeRegisterContext for the thread");
++    LLDB_LOG(log, "failed: {0}", error);
++    return error;
++  }
++  uint32_t breakpoint_size = 0;
++  error = GetSoftwareBreakpointPCOffset(breakpoint_size);
++  if (error.Fail()) {
++    LLDB_LOG(log, "GetBreakpointSize() failed: {0}", error);
++    return error;
++  } else
++    LLDB_LOG(log, "breakpoint size: {0}", breakpoint_size);
++  // First try probing for a breakpoint at a software breakpoint location: PC -
++  // breakpoint size.
++  const lldb::addr_t initial_pc_addr =
++      context_sp->GetPCfromBreakpointLocation();
++  lldb::addr_t breakpoint_addr = initial_pc_addr;
++  if (breakpoint_size > 0) {
++    // Do not allow breakpoint probe to wrap around.
++    if (breakpoint_addr >= breakpoint_size)
++      breakpoint_addr -= breakpoint_size;
++  }
++  // Check if we stopped because of a breakpoint.
++  NativeBreakpointSP breakpoint_sp;
++  error = m_breakpoint_list.GetBreakpoint(breakpoint_addr, breakpoint_sp);
++  if (!error.Success() || !breakpoint_sp) {
++    // We didn't find one at a software probe location.  Nothing to do.
++    LLDB_LOG(log,
++             "pid {0} no lldb breakpoint found at current pc with "
++             "adjustment: {1}",
++             GetID(), breakpoint_addr);
++    return Error();
++  }
++  // If the breakpoint is not a software breakpoint, nothing to do.
++  if (!breakpoint_sp->IsSoftwareBreakpoint()) {
++    LLDB_LOG(
++        log,
++        "pid {0} breakpoint found at {1:x}, not software, nothing to adjust",
++        GetID(), breakpoint_addr);
++    return Error();
++  }
++  //
++  // We have a software breakpoint and need to adjust the PC.
++  //
++  // Sanity check.
++  if (breakpoint_size == 0) {
++    // Nothing to do!  How did we get here?
++    LLDB_LOG(log,
++             "pid {0} breakpoint found at {1:x}, it is software, but the "
++             "size is zero, nothing to do (unexpected)",
++             GetID(), breakpoint_addr);
++    return Error();
++  }
++  // Change the program counter.
++  LLDB_LOG(log, "pid {0} tid {1}: changing PC from {2:x} to {3:x}", GetID(),
++           thread.GetID(), initial_pc_addr, breakpoint_addr);
++  error = context_sp->SetPC(breakpoint_addr);
++  if (error.Fail()) {
++    LLDB_LOG(log, "pid {0} tid {1}: failed to set PC: {2}", GetID(),
++             thread.GetID(), error);
++    return error;
++  }
++  return error;
++}
++
 +Error NativeProcessNetBSD::SetBreakpoint(lldb::addr_t addr, uint32_t size,
 +                                        bool hardware) {
 +  if (hardware)
@@ -1105,6 +1178,21 @@ $NetBSD$
 +  case llvm::Triple::x86_64:
 +    trap_opcode_bytes = g_i386_opcode;
 +    actual_opcode_size = sizeof(g_i386_opcode);
++    return Error();
++  default:
++    assert(false && "CPU type not supported!");
++    return Error("CPU type not supported");
++  }
++}
++
++Error NativeProcessNetBSD::GetSoftwareBreakpointPCOffset(
++    uint32_t &actual_opcode_size) {
++  // FIXME put this behind a breakpoint protocol class that can be
++  // set per architecture.  Need ARM, MIPS support here.
++  static const uint8_t g_i386_opcode[] = {0xCC};
++  switch (m_arch.GetMachine()) {
++  case llvm::Triple::x86_64:
++    actual_opcode_size = static_cast<uint32_t>(sizeof(g_i386_opcode));
 +    return Error();
 +  default:
 +    assert(false && "CPU type not supported!");
@@ -1163,7 +1251,7 @@ $NetBSD$
 +  io.piod_len = size;
 +
 +  do {
-+    io.piod_offs = (void *)(src + bytes_written);
++    io.piod_addr = (void *)(src + bytes_written);
 +    io.piod_offs = (void *)(addr + bytes_written);
 +
 +    Error error = NativeProcessNetBSD::PtraceWrapper(
