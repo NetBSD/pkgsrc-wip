@@ -72,7 +72,6 @@ libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/profile
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
-libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
 man/man1/ctags.1
 man/man1/ebrowse.1
 man/man1/emacs.1
