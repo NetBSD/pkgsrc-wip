@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.translate-toolkit
 PKG_SUPPORTED_OPTIONS+=		lxml levenshtein chardet tradostm doc
-PKG_SUGGESTED_OPTIONS=		lxml chardet tradostm doc
+PKG_SUGGESTED_OPTIONS=		lxml levenshtein chardet tradostm
 PLIST_VARS+=			doc
 
 
@@ -13,7 +13,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5:../../textproc/py-lxml
 .endif
 
 .if !empty(PKG_OPTIONS:Mlevenshtein)
-DEPENDS+=       ${PYPKGPREFIX}-python-Levenshtein>=0.12:../../textproc/py-Levenshtein/
+DEPENDS+=       ${PYPKGPREFIX}-python-Levenshtein>=0.12:../../textproc/py-Levenshtein
 .endif
 
 .if !empty(PKG_OPTIONS:Mchardet)
