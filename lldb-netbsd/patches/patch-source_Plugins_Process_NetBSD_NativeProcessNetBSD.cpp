@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-13 11:59:28.701374714 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-14 16:45:14.522261905 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1395 @@
+@@ -0,0 +1,1397 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -601,6 +601,7 @@ $NetBSD$
 +        printf("hw watchpoint reported\n");
 +        break;
 +      }
++      break;
 +    case SIGSTOP:
 +      // Handle SIGSTOP from LLGS (LLDB GDB Server)
 +      if (info.psi_siginfo.si_code == SI_USER && info.psi_siginfo.si_pid == ::getpid()) {
@@ -609,6 +610,7 @@ $NetBSD$
 +          static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(SIGSTOP, &info.psi_siginfo);
 +        }
 +      }
++      break;
 +    default:
 +      // Other signals
 +
