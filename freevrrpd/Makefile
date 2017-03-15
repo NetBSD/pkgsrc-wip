@@ -28,4 +28,5 @@ do-install:
 		${DESTDIR}${PREFIX}/${EGDIR}/freevrrpd.conf
 	${INSTALL_MAN} ${WRKSRC}/freevrrpd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
