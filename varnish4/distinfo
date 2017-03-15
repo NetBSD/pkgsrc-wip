@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.13 2015/03/09 00:47:05 mspo Exp $
 
-SHA1 (varnish-4.0.3.tar.gz) = ba4668cb7d17f95c4c5e4baf964fe1412a269297
-RMD160 (varnish-4.0.3.tar.gz) = d9308329151ca2e0a2c7a494671b7903867deb63
-SHA512 (varnish-4.0.3.tar.gz) = db7bb141afd4617ac95573983dc30591b0eb9bc1af06df1094f2c1eeac539da936afb4a239d2f446d3c3a51b88a781b7f9f6d9a0b2028eaf0e7049ea2159d883
-Size (varnish-4.0.3.tar.gz) = 1866760 bytes
-SHA1 (patch-etc__Makefile.in) = 294da8aac5cc31d1d8e6a2714b48fbdbbe6c7f67
-SHA1 (patch-lib_libvarnish_vtcp.c) = 47d2da33ff566bb4c259a3b94a03698d04385ea6
+SHA1 (varnish-4.1.5.tar.gz) = c46a6573c8722181b6101593b452844d43e225a7
+RMD160 (varnish-4.1.5.tar.gz) = 66d46114350ee7a6f9bef0df69fc75bb39f1cd51
+SHA512 (varnish-4.1.5.tar.gz) = 8d54a59afbc9f485b313d2e036dcc8d874ec279e1dd2aab9daf2a169e169d15c98ff71307d44c6beb43968dcd7d69b9501486ea3b138c27d084bc4b16ed10d24
+Size (varnish-4.1.5.tar.gz) = 2199183 bytes
+SHA1 (patch-bin_varnishd_cache_cache__panic.c) = ad26bff5822c5bd34c8895f4ae636ec54c35adbf
+SHA1 (patch-etc_Makefile.in) = c2bc8dca2ff7bf47e8b8fdec58fc8aea220a4c3b

@@ -1,0 +1,48 @@
+$NetBSD$
+
+Use standard sysconfdir for vcl files.
+
+--- etc/Makefile.in.orig	2017-02-09 13:02:19.000000000 +0000
++++ etc/Makefile.in
+@@ -146,7 +146,7 @@ am__uninstall_files_from_dir = { \
+     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
+          $(am__cd) "$$dir" && rm -f $$files; }; \
+   }
+-am__installdirs = "$(DESTDIR)$(docdir)"
++am__installdirs = "$(DESTDIR)$(sysconfdir)"
+ DATA = $(dist_doc_DATA)
+ am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+@@ -343,18 +343,18 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-dist_docDATA: $(dist_doc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_doc_DATA)'; test -n "$(docdir)" || list=; \
++	@list='$(dist_doc_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(docdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(docdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(docdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(docdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
+ 	done
+ 
+ uninstall-dist_docDATA:
+@@ -403,7 +403,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(docdir)"; do \
++	for dir in "$(DESTDIR)$(sysconfdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
