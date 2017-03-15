@@ -1,8 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mtr-graph
-PKG_SUPPORTED_OPTIONS=	gtk
-PKG_SUPPORTED_OPTIONS+=	inet6
+PKG_SUPPORTED_OPTIONS=	inet6
 PKG_SUPPORTED_OPTIONS+=	ipinfo
 PKG_SUPPORTED_OPTIONS+=	libidn
 PKG_SUPPORTED_OPTIONS+=	unicode
@@ -15,13 +14,6 @@ PKG_SUGGESTED_OPTIONS+=	unicode
 PKG_SUGGESTED_OPTIONS+=	sys-getopt
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgtk)
-USE_TOOLS+=		pkg-config
-.include "../../x11/gtk2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-gtk
-.endif
 
 .if empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--disable-ipv6
