@@ -14,18 +14,21 @@ LICENSE=	2-clause-bsd
 #            -Wno-error=unused-but-set-variable etc.
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+DOCDIR=		share/doc/freevrrpd
 EGDIR=		share/examples/freevrrpd
 CONF_FILES=	${PREFIX}/${EGDIR}/freevrrpd.conf ${PKG_SYSCONFDIR}/freevrrpd.conf
 
 RCD_SCRIPTS=			freevrrpd
 RCD_SCRIPT_SRC.freevrrpd=	${FILESDIR}/freevrrpd.sh
 
-INSTALLATION_DIRS=		sbin ${PKGMANDIR}/man8 ${EGDIR}
+INSTALLATION_DIRS=		sbin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/freevrrpd ${DESTDIR}${PREFIX}/sbin/freevrrpd
 	${INSTALL_DATA} ${WRKSRC}/freevrrpd.conf.sample \
 		${DESTDIR}${PREFIX}/${EGDIR}/freevrrpd.conf
+	${INSTALL_DATA} ${WRKSRC}/ABOUTCISCOPATENT \
+		${DESTDIR}${PREFIX}/${DOCDIR}/ABOUTCISCOPATENT
 	${INSTALL_MAN} ${WRKSRC}/freevrrpd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/pthread.buildlink3.mk"
