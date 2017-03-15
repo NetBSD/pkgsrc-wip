@@ -5,7 +5,8 @@
 # PROVIDE: freevrrpd
 # KEYWORD: shutdown
 #
-# You will need to set some variables in /etc/rc.conf to start FreeVRRPd:
+# You will need to set the following variable in /etc/rc.conf to 
+# start FreeVRRPd:
 #
 # freevrrpd=YES 
 
@@ -15,10 +16,10 @@ fi
 
 name="freevrrpd"
 rcvar=${name}
-required_files="/usr/pkg/etc/freevrrpd.conf"
-command="/usr/pkg/sbin/${name}"
+required_files="%SYSCONFDIR%/freevrrpd.conf"
+command="%PREFIX%/sbin/${name}"
 command_args="-f ${required_files}"
-pidfile="/var/run/${name}.pid"
+pidfile="%VARBASE%/run/${name}.pid"
 extra_commands="reload"
 
 if [ -f /etc/rc.subr ]; then

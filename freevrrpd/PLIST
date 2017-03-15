@@ -1,5 +1,4 @@
-@comment $Id: PLIST,v 1.2 2005/11/23 04:43:57 rillig Exp $
-@unexec if cmp -s %D/etc/freevrrpd.conf %D/etc/freevrrpd.conf.sample; then rm -f %D/etc/freevrrpd.conf; fi
-etc/freevrrpd.conf.sample
-etc/rc.d/freevrrpd.sh
+@comment $NetBSD$
+man/man8/freevrrpd.8
 sbin/freevrrpd
+share/examples/freevrrpd/freevrrpd.conf
