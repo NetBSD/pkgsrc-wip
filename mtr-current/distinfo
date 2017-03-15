@@ -1,5 +1,6 @@
 $NetBSD$
 
-Size (mtr-7476ad5.tar.gz) = 128738 bytes
-SHA1 (mtr-7476ad5.tar.gz) = 390f737de49c3e8d3f77734bba5591b35d388675
-RMD160 (mtr-7476ad5.tar.gz) = cd4cb9bc2d1df812b33a641d4b7668d519c2e071
+SHA1 (mtr-e6d0a7e.tar.gz) = 3940fb8521580996bec8fff31d9dba08f7488123
+RMD160 (mtr-e6d0a7e.tar.gz) = 17164c61877058773ad08c02b7d581d870117096
+SHA512 (mtr-e6d0a7e.tar.gz) = 340c111bbdc1aea0b0117602969f0ac7f61924740f759a74b3e13b54f4edfbb8c1a4d056a5d928857ed0c159053ad7fa49f7c364c7171e7b8c12c60fbd73ba46
+Size (mtr-e6d0a7e.tar.gz) = 129100 bytes
