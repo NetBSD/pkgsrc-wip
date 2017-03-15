@@ -13,7 +13,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5:../../textproc/py-lxml
 .endif
 
 .if !empty(PKG_OPTIONS:Mlevenshtein)
-DEPENDS+=       ${PYPKGPREFIX}-python-Levenshtein>=0.12:../../textproc/py-Levenshtein
+DEPENDS+=       ${PYPKGPREFIX}-Levenshtein>=0.12:../../textproc/py-Levenshtein
 .endif
 
 .if !empty(PKG_OPTIONS:Mchardet)
