@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-01-31 18:01:27.506688091 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-03-14 16:45:14.529112718 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,183 @@
+@@ -0,0 +1,185 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -122,7 +122,7 @@ $NetBSD$
 +  ArchSpec m_arch;
 +
 +  LazyBool m_supports_mem_region;
-+  std::vector<MemoryRegionInfo> m_mem_region_cache;
++  std::vector<std::pair<MemoryRegionInfo, FileSpec>> m_mem_region_cache;
 +
 +  lldb::tid_t m_pending_notification_tid;
 +
@@ -180,6 +180,8 @@ $NetBSD$
 +                     int signo);
 +
 +  void SigchldHandler();
++
++  Error PopulateMemoryRegionCache();
 +};
 +
 +} // namespace process_netbsd

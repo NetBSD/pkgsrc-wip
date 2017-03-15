@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-14 16:45:14.522261905 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1397 @@
+@@ -0,0 +1,1376 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -15,10 +15,15 @@ $NetBSD$
 +#include "NativeProcessNetBSD.h"
 +
 +// C Includes
++#include <sys/param.h>
++#include <sys/types.h>
++#include <sys/sysctl.h>
++#include <uvm/uvm_prot.h>
 +#include <errno.h>
 +#include <stdint.h>
 +#include <string.h>
 +#include <unistd.h>
++#include <util.h>
 +
 +// C++ Includes
 +#include <fstream>
@@ -867,120 +872,31 @@ $NetBSD$
 +  return error;
 +}
 +
-+static Error
-+ParseMemoryRegionInfoFromProcMapsLine(const std::string &maps_line,
-+                                      MemoryRegionInfo &memory_region_info) {
-+  memory_region_info.Clear();
-+
-+  StringExtractor line_extractor(maps_line.c_str());
-+
-+  // Format: {address_start_hex}-{address_end_hex} perms offset  dev   inode
-+  // pathname
-+  // perms: rwxp   (letter is present if set, '-' if not, final character is
-+  // p=private, s=shared).
-+
-+  // Parse out the starting address
-+  lldb::addr_t start_address = line_extractor.GetHexMaxU64(false, 0);
-+
-+  // Parse out hyphen separating start and end address from range.
-+  if (!line_extractor.GetBytesLeft() || (line_extractor.GetChar() != '-'))
-+    return Error(
-+        "malformed /proc/{pid}/maps entry, missing dash between address range");
-+
-+  // Parse out the ending address
-+  lldb::addr_t end_address = line_extractor.GetHexMaxU64(false, start_address);
-+
-+  // Parse out the space after the address.
-+  if (!line_extractor.GetBytesLeft() || (line_extractor.GetChar() != ' '))
-+    return Error("malformed /proc/{pid}/maps entry, missing space after range");
-+
-+  // Save the range.
-+  memory_region_info.GetRange().SetRangeBase(start_address);
-+  memory_region_info.GetRange().SetRangeEnd(end_address);
-+
-+  // Any memory region in /proc/{pid}/maps is by definition mapped into the
-+  // process.
-+  memory_region_info.SetMapped(MemoryRegionInfo::OptionalBool::eYes);
-+
-+  // Parse out each permission entry.
-+  if (line_extractor.GetBytesLeft() < 4)
-+    return Error("malformed /proc/{pid}/maps entry, missing some portion of "
-+                 "permissions");
-+
-+  // Handle read permission.
-+  const char read_perm_char = line_extractor.GetChar();
-+  if (read_perm_char == 'r')
-+    memory_region_info.SetReadable(MemoryRegionInfo::OptionalBool::eYes);
-+  else if (read_perm_char == '-')
-+    memory_region_info.SetReadable(MemoryRegionInfo::OptionalBool::eNo);
-+  else
-+    return Error("unexpected /proc/{pid}/maps read permission char");
-+
-+  // Handle write permission.
-+  const char write_perm_char = line_extractor.GetChar();
-+  if (write_perm_char == 'w')
-+    memory_region_info.SetWritable(MemoryRegionInfo::OptionalBool::eYes);
-+  else if (write_perm_char == '-')
-+    memory_region_info.SetWritable(MemoryRegionInfo::OptionalBool::eNo);
-+  else
-+    return Error("unexpected /proc/{pid}/maps write permission char");
-+
-+  // Handle execute permission.
-+  const char exec_perm_char = line_extractor.GetChar();
-+  if (exec_perm_char == 'x')
-+    memory_region_info.SetExecutable(MemoryRegionInfo::OptionalBool::eYes);
-+  else if (exec_perm_char == '-')
-+    memory_region_info.SetExecutable(MemoryRegionInfo::OptionalBool::eNo);
-+  else
-+    return Error("unexpected /proc/{pid}/maps exec permission char");
-+
-+  line_extractor.GetChar();              // Read the private bit
-+  line_extractor.SkipSpaces();           // Skip the separator
-+  line_extractor.GetHexMaxU64(false, 0); // Read the offset
-+  line_extractor.GetHexMaxU64(false, 0); // Read the major device number
-+  line_extractor.GetChar();              // Read the device id separator
-+  line_extractor.GetHexMaxU64(false, 0); // Read the major device number
-+  line_extractor.SkipSpaces();           // Skip the separator
-+  line_extractor.GetU64(0, 10);          // Read the inode number
-+
-+  line_extractor.SkipSpaces();
-+  const char *name = line_extractor.Peek();
-+  if (name)
-+    memory_region_info.SetName(name);
-+
-+  return Error();
-+}
-+
 +Error NativeProcessNetBSD::GetMemoryRegionInfo(lldb::addr_t load_addr,
 +                                              MemoryRegionInfo &range_info) {
-+#if 0
-+  // FIXME review that the final memory region returned extends to the end of
-+  // the virtual address space,
-+  // with no perms if it is not mapped.
-+
-+  // Use an approach that reads memory regions from /proc/{pid}/maps.
-+  // Assume proc maps entries are in ascending order.
-+  // FIXME assert if we find differently.
 +
 +  if (m_supports_mem_region == LazyBool::eLazyBoolNo) {
 +    // We're done.
 +    return Error("unsupported");
 +  }
 +
-+  lldb::addr_t prev_base_address = 0;
++  Error error = PopulateMemoryRegionCache();
++  if (error.Fail()) {
++    return error;
++  }
 +
++  lldb::addr_t prev_base_address = 0;
 +  // FIXME start by finding the last region that is <= target address using
 +  // binary search.  Data is sorted.
 +  // There can be a ton of regions on pthreads apps with lots of threads.
 +  for (auto it = m_mem_region_cache.begin(); it != m_mem_region_cache.end();
 +       ++it) {
-+    MemoryRegionInfo &proc_entry_info = *it;
-+
++    MemoryRegionInfo &proc_entry_info = it->first;
 +    // Sanity check assumption that /proc/{pid}/maps entries are ascending.
 +    assert((proc_entry_info.GetRange().GetRangeBase() >= prev_base_address) &&
 +           "descending /proc/pid/maps entries detected, unexpected");
 +    prev_base_address = proc_entry_info.GetRange().GetRangeBase();
-+
++    UNUSED_IF_ASSERT_DISABLED(prev_base_address);
 +    // If the target address comes before this entry, indicate distance to next
 +    // region.
 +    if (load_addr < proc_entry_info.GetRange().GetRangeBase()) {
@@ -991,18 +907,15 @@ $NetBSD$
 +      range_info.SetWritable(MemoryRegionInfo::OptionalBool::eNo);
 +      range_info.SetExecutable(MemoryRegionInfo::OptionalBool::eNo);
 +      range_info.SetMapped(MemoryRegionInfo::OptionalBool::eNo);
-+
 +      return error;
 +    } else if (proc_entry_info.GetRange().Contains(load_addr)) {
 +      // The target address is within the memory region we're processing here.
 +      range_info = proc_entry_info;
 +      return error;
 +    }
-+
 +    // The target memory address comes somewhere after the region we just
 +    // parsed.
 +  }
-+
 +  // If we made it here, we didn't find an entry that contained the given
 +  // address. Return the
 +  // load_addr as start and the amount of bytes betwwen load address and the end
@@ -1015,7 +928,73 @@ $NetBSD$
 +  range_info.SetExecutable(MemoryRegionInfo::OptionalBool::eNo);
 +  range_info.SetMapped(MemoryRegionInfo::OptionalBool::eNo);
 +  return error;
-+#endif
++}
++
++
++Error NativeProcessNetBSD::PopulateMemoryRegionCache() {
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
++  // If our cache is empty, pull the latest.  There should always be at least
++  // one memory region if memory region handling is supported.
++  if (!m_mem_region_cache.empty()) {
++    LLDB_LOG(log, "reusing {0} cached memory region entries",
++             m_mem_region_cache.size());
++    return Error();
++  }
++
++  struct kinfo_vmentry *vm;
++  size_t count, i;
++  vm = kinfo_getvmmap(getpid(), &count);
++  if (vm == NULL) {
++    m_supports_mem_region = LazyBool::eLazyBoolNo;
++    Error error;
++    error.SetErrorString("not supported");
++    return error;
++  }
++  for (i = 0; i < count; i++) {
++    MemoryRegionInfo info;
++    info.Clear();
++    info.GetRange().SetRangeBase(vm[i].kve_start);
++    info.GetRange().SetRangeEnd(vm[i].kve_end);
++    info.SetMapped(MemoryRegionInfo::OptionalBool::eYes);
++
++    if (vm[i].kve_protection & VM_PROT_READ)
++      info.SetReadable(MemoryRegionInfo::OptionalBool::eYes);
++    else
++      info.SetReadable(MemoryRegionInfo::OptionalBool::eNo);
++
++    if (vm[i].kve_protection & VM_PROT_WRITE)
++      info.SetWritable(MemoryRegionInfo::OptionalBool::eYes);
++    else
++      info.SetWritable(MemoryRegionInfo::OptionalBool::eNo);
++
++    if (vm[i].kve_protection & VM_PROT_EXECUTE)
++      info.SetExecutable(MemoryRegionInfo::OptionalBool::eYes);
++    else
++      info.SetExecutable(MemoryRegionInfo::OptionalBool::eNo);
++
++    if (vm[i].kve_path)
++      info.SetName(vm[i].kve_path);
++
++    m_mem_region_cache.emplace_back(
++      info, FileSpec(info.GetName().GetCString(), true));
++  }
++  free(vm);
++
++  if (m_mem_region_cache.empty()) {
++    // No entries after attempting to read them.  This shouldn't happen.
++    // Assume we don't support map entries.
++    LLDB_LOG(log,
++             "failed to find any vmmap entries, assuming no support "
++             "for memory region metadata retrieval");
++    m_supports_mem_region = LazyBool::eLazyBoolNo;
++    Error error;
++    error.SetErrorString("not supported");
++    return error;
++  }
++  LLDB_LOG(log, "read {0} memory region entries from process {1}",
++           m_mem_region_cache.size(), GetID());
++  // We support memory retrieval, remember that.
++  m_supports_mem_region = LazyBool::eLazyBoolYes;
 +  return Error();
 +}
 +
