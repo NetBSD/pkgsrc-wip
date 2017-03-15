@@ -21,6 +21,12 @@ CONF_FILES=	${PREFIX}/${EGDIR}/freevrrpd.conf ${PKG_SYSCONFDIR}/freevrrpd.conf
 RCD_SCRIPTS=			freevrrpd
 RCD_SCRIPT_SRC.freevrrpd=	${FILESDIR}/freevrrpd.sh
 
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths
+SUBST_FILES.fix-paths=		freevrrpd.8
+SUBST_VARS.fix-paths+=		PREFIX PKG_SYSCONFDIR
+
 INSTALLATION_DIRS=		sbin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
 
 do-install:

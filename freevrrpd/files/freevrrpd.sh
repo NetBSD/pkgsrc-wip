@@ -16,10 +16,10 @@ fi
 
 name="freevrrpd"
 rcvar=${name}
-required_files="%SYSCONFDIR%/freevrrpd.conf"
-command="%PREFIX%/sbin/${name}"
+required_files="@PKG_SYSCONFDIR@/freevrrpd.conf"
+command="@PREFIX@/sbin/${name}"
 command_args="-f ${required_files}"
-pidfile="%VARBASE%/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 extra_commands="reload"
 
 if [ -f /etc/rc.subr ]; then
