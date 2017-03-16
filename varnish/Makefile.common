@@ -52,6 +52,14 @@ CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
 # Explicitly disable epoll on illumos, provided for Linux compat only.
 CONFIGURE_ARGS.SunOS+=	--disable-epoll
 
+.include "../../mk/compiler.mk"
+
+# Fixes build on at least SunOS/i386
+# See https://github.com/varnishcache/varnish-cache/issues/1875
+.if !empty(CC_VERSION:Mgcc*)
+CFLAGS+=		-fexcess-precision=standard
+.endif
+
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/varnish
 
 # not signed/unsigned char safe
