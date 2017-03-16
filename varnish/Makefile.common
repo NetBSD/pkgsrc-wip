@@ -49,20 +49,15 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-rst2html=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
 
-.if ${OPSYS} == "SunOS"
 # Explicitly disable epoll on illumos, provided for Linux compat only.
-CONFIGURE_ENV+=		ac_cv_func_epoll_ctl=no
-.  if !empty(PKGSRC_COMPILER:Msunpro)
-CONFIGURE_ENV+=		VCC_CC="cc ${_COMPILER_ABI_FLAG.${ABI}} -Kpic -G -o %o %s"
-.  else
-CONFIGURE_ENV+=		VCC_CC="gcc ${_COMPILER_ABI_FLAG.${ABI}} -fpic -shared -o %o %s"
-.  endif
-.endif
+CONFIGURE_ARGS.SunOS+=	--disable-epoll
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/varnish
 
 # not signed/unsigned char safe
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+PKGCONFIG_OVERRIDE+=	varnishapi.pc.in
 
 RCD_SCRIPTS=		varnishd varnishlog varnishncsa
 
