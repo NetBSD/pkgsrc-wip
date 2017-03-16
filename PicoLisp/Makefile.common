@@ -3,7 +3,7 @@
 # used by wip/PicoLisp64/Makefile
 
 DISTNAME=	picoLisp
-PIL_VERSION=	17.3.4
+PIL_VERSION=	17.3.16
 CATEGORIES=	lang
 MASTER_SITES=	http://software-lab.de/
 EXTRACT_SUFX=	.tgz
@@ -35,7 +35,7 @@ SUBST_STAGE.move-tests=		pre-install
 SUBST_MESSAGE.move-tests=	Fixing paths of moved tests.
 SUBST_FILES.move-tests+=	lib/test.l
 SUBST_FILES.move-tests+=	test/src/*.l
-SUBST_SED.move-tests=		-e 's,"@test,"${PREFIX}/tests/picolisp/test,g'
+SUBST_SED.move-tests+=		-e 's,"@test,"${PREFIX}/tests/picolisp/test,g'
 
 do-test:
 	${WRKSRC}/bin/picolisp ${WRKSRC}/lib.l @lib/misc.l @lib/pilog.l @lib/test.l -bye +

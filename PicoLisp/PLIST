@@ -3,6 +3,7 @@ bin/picolisp
 bin/pil
 lib/picolisp/lib.l
 lib/picolisp/lib/adm.l
+lib/picolisp/lib/android.l
 lib/picolisp/lib/app.l
 lib/picolisp/lib/boss.l
 lib/picolisp/lib/btree.l
@@ -21,6 +22,7 @@ lib/picolisp/lib/ext
 lib/picolisp/lib/form.l
 lib/picolisp/lib/frac.l
 lib/picolisp/lib/gcc.l
+lib/picolisp/lib/gis.l
 lib/picolisp/lib/heartbeat.l
 lib/picolisp/lib/ht
 lib/picolisp/lib/http.l
@@ -35,6 +37,7 @@ lib/picolisp/lib/math32.l
 lib/picolisp/lib/math64.l
 lib/picolisp/lib/misc.l
 lib/picolisp/lib/native.l
+lib/picolisp/lib/nodroid.l
 lib/picolisp/lib/openGl.l
 lib/picolisp/lib/pilog.l
 lib/picolisp/lib/prof.l
