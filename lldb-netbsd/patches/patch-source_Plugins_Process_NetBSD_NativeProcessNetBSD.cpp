@@ -943,7 +943,7 @@ $NetBSD$
 +
 +  struct kinfo_vmentry *vm;
 +  size_t count, i;
-+  vm = kinfo_getvmmap(getpid(), &count);
++  vm = kinfo_getvmmap(GetID(), &count);
 +  if (vm == NULL) {
 +    m_supports_mem_region = LazyBool::eLazyBoolNo;
 +    Error error;
@@ -972,7 +972,7 @@ $NetBSD$
 +    else
 +      info.SetExecutable(MemoryRegionInfo::OptionalBool::eNo);
 +
-+    if (vm[i].kve_path)
++    if (vm[i].kve_path[0])
 +      info.SetName(vm[i].kve_path);
 +
 +    m_mem_region_cache.emplace_back(

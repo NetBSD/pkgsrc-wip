@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-13 11:59:28.728169966 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-14 16:45:14.549668075 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,434 @@
+@@ -0,0 +1,553 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -226,6 +226,20 @@ $NetBSD$
 +  return -1;
 +}
 +
++int NativeRegisterContextNetBSD_x86_64::WriteRegisterSet(uint32_t set) {
++  switch (set) {
++  case GPRegSet:
++    WriteGPR();
++    return 0;
++  case FPRegSet:
++    WriteFPR();
++    return 0;
++  default:
++    break;
++  }
++  return -1;
++}
++
 +Error NativeRegisterContextNetBSD_x86_64::ReadRegister(
 +    const RegisterInfo *reg_info, RegisterValue &reg_value) {
 +  Error error;
@@ -342,16 +356,121 @@ $NetBSD$
 +
 +Error NativeRegisterContextNetBSD_x86_64::WriteRegister(
 +    const RegisterInfo *reg_info, const RegisterValue &reg_value) {
-+  assert(reg_info && "reg_info is null");
 +
-+  const uint32_t reg_index = reg_info->kinds[lldb::eRegisterKindLLDB];
-+  if (reg_index == LLDB_INVALID_REGNUM)
-+    return Error("no lldb regnum for %s", reg_info && reg_info->name
-+                                              ? reg_info->name
-+                                              : "<unknown register>");
++  Error error;
 +
-+  return Error("failed - register wasn't recognized to be a GPR or an FPR, "
-+               "write strategy unknown");
++  if (!reg_info) {
++    error.SetErrorString("reg_info NULL");
++    return error;
++  }
++
++  const uint32_t reg = reg_info->kinds[lldb::eRegisterKindLLDB];
++  if (reg == LLDB_INVALID_REGNUM) {
++    // This is likely an internal register for lldb use only and should not be
++    // directly queried.
++    error.SetErrorStringWithFormat("register \"%s\" is an internal-only lldb "
++                                   "register, cannot read directly",
++                                   reg_info->name);
++    return error;
++  }
++
++  int set = GetSetForNativeRegNum(reg);
++  if (set == -1) {
++    // This is likely an internal register for lldb use only and should not be
++    // directly queried.
++    error.SetErrorStringWithFormat("register \"%s\" is in unrecognized set",
++                                   reg_info->name);
++    return error;
++  }
++
++  if (ReadRegisterSet(set, false) != 0) {
++    // This is likely an internal register for lldb use only and should not be
++    // directly queried.
++    error.SetErrorStringWithFormat("reading register set for register \"%s\" failed",
++                                   reg_info->name);
++    return error;
++  }
++
++  switch (reg) {
++  case lldb_rax_x86_64:
++    m_gpr_x86_64.regs[_REG_RAX] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rbx_x86_64:
++    m_gpr_x86_64.regs[_REG_RBX] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rcx_x86_64:
++    m_gpr_x86_64.regs[_REG_RCX] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rdx_x86_64:
++    m_gpr_x86_64.regs[_REG_RDX] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rdi_x86_64:
++    m_gpr_x86_64.regs[_REG_RDI] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rsi_x86_64:
++    m_gpr_x86_64.regs[_REG_RSI] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rbp_x86_64:
++    m_gpr_x86_64.regs[_REG_RBP] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rsp_x86_64:
++    m_gpr_x86_64.regs[_REG_RSP] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r8_x86_64:
++    m_gpr_x86_64.regs[_REG_R8] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r9_x86_64:
++    m_gpr_x86_64.regs[_REG_R9] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r10_x86_64:
++    m_gpr_x86_64.regs[_REG_R10] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r11_x86_64:
++    m_gpr_x86_64.regs[_REG_R11] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r12_x86_64:
++    m_gpr_x86_64.regs[_REG_R12] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r13_x86_64:
++    m_gpr_x86_64.regs[_REG_R13] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r14_x86_64:
++    m_gpr_x86_64.regs[_REG_R14] = reg_value.GetAsUInt64();
++    break;
++  case lldb_r15_x86_64:
++    m_gpr_x86_64.regs[_REG_R15] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rip_x86_64:
++    m_gpr_x86_64.regs[_REG_RIP] = reg_value.GetAsUInt64();
++    break;
++  case lldb_rflags_x86_64:
++    m_gpr_x86_64.regs[_REG_RFLAGS] = reg_value.GetAsUInt64();
++    break;
++  case lldb_cs_x86_64:
++    m_gpr_x86_64.regs[_REG_CS] = reg_value.GetAsUInt64();
++    break;
++  case lldb_fs_x86_64:
++    m_gpr_x86_64.regs[_REG_FS] = reg_value.GetAsUInt64();
++    break;
++  case lldb_gs_x86_64:
++    m_gpr_x86_64.regs[_REG_GS] = reg_value.GetAsUInt64();
++    break;
++  case lldb_ss_x86_64:
++    m_gpr_x86_64.regs[_REG_SS] = reg_value.GetAsUInt64();
++    break;
++  case lldb_ds_x86_64:
++    m_gpr_x86_64.regs[_REG_DS] = reg_value.GetAsUInt64();
++    break;
++  case lldb_es_x86_64:
++    m_gpr_x86_64.regs[_REG_ES] = reg_value.GetAsUInt64();
++    break;
++  }
++
++  if (WriteRegisterSet(set) != 0)
++    error.SetErrorStringWithFormat(
++        "failed to write register set");
++
++  return error;
 +}
 +
 +Error NativeRegisterContextNetBSD_x86_64::ReadAllRegisterValues(
