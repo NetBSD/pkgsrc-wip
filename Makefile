@@ -3984,6 +3984,7 @@ SUBDIR+=	snark
 SUBDIR+=	sndio
 SUBDIR+=	snes9express
 SUBDIR+=	snotes
+SUBDIR+=	snort
 SUBDIR+=	socklog
 SUBDIR+=	softflowd
 SUBDIR+=	softvms
