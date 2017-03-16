@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.48 2013/02/22 12:05:34 jperkin Exp $
+
+SHA1 (snort-2.9.9.0.tar.gz) = c522b6130655e0d12299af6fd1a613b20259b4e3
+RMD160 (snort-2.9.9.0.tar.gz) = cfe3f7bb4203411e40376607c6bd1ee1fe7c4f84
+SHA512 (snort-2.9.9.0.tar.gz) = 2c17539c80484c90198a2e5d5efd1e70f26afb79ce7c28e745ded356b6f1a1f97763ff21fde986652af1768fa3bcdafbbcc3c82ee8ad6d2ef0471f360cfcab83
+Size (snort-2.9.9.0.tar.gz) = 6364482 bytes
+SHA1 (patch-src_target-based_sftarget__reader.c) = c0f4bde7a1a0fa00e4efecf26eb579cc2b1cb2ee
