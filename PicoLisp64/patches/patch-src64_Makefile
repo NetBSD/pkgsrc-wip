@@ -36,8 +36,8 @@ Add support for NetBSD
 +					FMT = .s
 +					ARCH = x86-64
 +					AS = as
-+					LD-MAIN = -m64 -lc -lm
-+					LD-SHARED = -m64 -shared -rdynamic
++					LD-MAIN = -m64 -rdynamic -lc -lm
++					LD-SHARED = -m64 -shared -export-dynamic
 +					STRIP = strip
 +				endif
  			endif

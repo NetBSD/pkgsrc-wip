@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD
 
---- src64/sys/x86-64.netBsd.code.l.orig	2017-03-06 21:09:34.700658304 +0000
+--- src64/sys/x86-64.netBsd.code.l.orig	2017-03-16 20:57:05.344048655 +0000
 +++ src64/sys/x86-64.netBsd.code.l
-@@ -0,0 +1,51 @@
+@@ -0,0 +1,61 @@
 +# 07jan13abu
 +# Mansur Mamkin <mmamkin@mail.ru>
 +
@@ -55,4 +55,14 @@ Add support for NetBSD
 +   zxt
 +   ret
 +
-+# vi:et:ts=3:sw=3
++(code 'sigprocmask 0)
++   jmp __sigprocmask14
++
++(code 'sigaction 0)
++   jmp __libc_sigaction14
++
++(code 'stat 0)
++   jmp __stat50
++
++(code 'readdir 0)
++   jmp __readdir30
