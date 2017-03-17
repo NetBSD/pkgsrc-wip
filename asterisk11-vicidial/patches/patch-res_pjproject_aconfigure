@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- res/pjproject/aconfigure.orig	2016-03-29 19:25:17.000000000 +0000
++++ res/pjproject/aconfigure
+@@ -6341,7 +6341,7 @@ $as_echo_n "checking ffmpeg packages... 
+ 				av_pkg="$av_pkg libavcore"
+ 			fi
+ 
+-			if test "x$av_pkg" == "x"; then
++			if test "x$av_pkg" = "x"; then
+ 			   { $as_echo "$as_me:${as_lineno-$LINENO}: result: none detected (check the prefix)! **" >&5
+ $as_echo "none detected (check the prefix)! **" >&6; }
+ 			else

@@ -1,0 +1,24 @@
+# $NetBSD$
+
+DISTNAME=	asterisk-11.22.0-vici
+CATEGORIES=	comms
+MASTER_SITES=	http://download.vicidial.com/required-apps/
+
+MAINTAINER=	pkgsrc-users@netbsd.org
+HOMEPAGE=	http://www.vicidial.org
+COMMENT=	Asterisk version for Vicidial
+DESCR=		Asterisk version for Vicidial
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/asterisk-11.22.0
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config libxml2 
+USE_LANGUAGES=	c c++
+
+PKGCONFIG_OVERRIDE+=	res/pjproject/third_party/portaudio/portaudio-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	res/pjproject/libpjproject.pc.in
+
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 831ae6442e23cbef1e7d1c84798778ad0b0524d1
+RMD160 (asterisk-extra-sounds-en-gsm-1.5.tar.gz) = d52df795201c53fc4cd7d99ed41516e312f6f0f3
+SHA512 (asterisk-extra-sounds-en-gsm-1.5.tar.gz) = c7d3c3fd2c854e6776801312d34bf69bbed78a443c16121637f508c5275f18b1d415cbb6e4f6f8c5aa3769cbbfa1a11485b9972053777f3ac39256c2c81729f1
+Size (asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 4256538 bytes
+SHA1 (patch-res_pjproject_aconfigure) = b74fffbd4e60178f5b9edc3b00fa4189af39a8a1
+SHA1 (patch-res_pjproject_build.symbian_makedef.sh) = a8aec9af77de3ab0d5933efed91da2a5c2985381
