@@ -438,13 +438,6 @@ include/llvm/DebugInfo/DWARF/DWARFSection.h
 include/llvm/DebugInfo/DWARF/DWARFTypeUnit.h
 include/llvm/DebugInfo/DWARF/DWARFUnit.h
 include/llvm/DebugInfo/DWARF/DWARFUnitIndex.h
-include/llvm/DebugInfo/MSF/BinaryByteStream.h
-include/llvm/DebugInfo/MSF/BinaryItemStream.h
-include/llvm/DebugInfo/MSF/BinaryStream.h
-include/llvm/DebugInfo/MSF/BinaryStreamArray.h
-include/llvm/DebugInfo/MSF/BinaryStreamReader.h
-include/llvm/DebugInfo/MSF/BinaryStreamRef.h
-include/llvm/DebugInfo/MSF/BinaryStreamWriter.h
 include/llvm/DebugInfo/MSF/IMSFFile.h
 include/llvm/DebugInfo/MSF/MSFBuilder.h
 include/llvm/DebugInfo/MSF/MSFCommon.h
@@ -473,6 +466,7 @@ include/llvm/DebugInfo/PDB/IPDBSourceFile.h
 include/llvm/DebugInfo/PDB/Native/DbiStream.h
 include/llvm/DebugInfo/PDB/Native/DbiStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/EnumTables.h
+include/llvm/DebugInfo/PDB/Native/Formatters.h
 include/llvm/DebugInfo/PDB/Native/GlobalsStream.h
 include/llvm/DebugInfo/PDB/Native/Hash.h
 include/llvm/DebugInfo/PDB/Native/HashTable.h
@@ -480,8 +474,11 @@ include/llvm/DebugInfo/PDB/Native/ISectionContribVisitor.h
 include/llvm/DebugInfo/PDB/Native/InfoStream.h
 include/llvm/DebugInfo/PDB/Native/InfoStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/ModInfo.h
+include/llvm/DebugInfo/PDB/Native/ModInfoBuilder.h
 include/llvm/DebugInfo/PDB/Native/ModStream.h
 include/llvm/DebugInfo/PDB/Native/NamedStreamMap.h
+include/llvm/DebugInfo/PDB/Native/NativeCompilandSymbol.h
+include/llvm/DebugInfo/PDB/Native/NativeEnumModules.h
 include/llvm/DebugInfo/PDB/Native/NativeRawSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeSession.h
 include/llvm/DebugInfo/PDB/Native/PDBFile.h
@@ -819,6 +816,14 @@ include/llvm/Support/Allocator.h
 include/llvm/Support/ArrayRecycler.h
 include/llvm/Support/Atomic.h
 include/llvm/Support/AtomicOrdering.h
+include/llvm/Support/BinaryByteStream.h
+include/llvm/Support/BinaryItemStream.h
+include/llvm/Support/BinaryStream.h
+include/llvm/Support/BinaryStreamArray.h
+include/llvm/Support/BinaryStreamError.h
+include/llvm/Support/BinaryStreamReader.h
+include/llvm/Support/BinaryStreamRef.h
+include/llvm/Support/BinaryStreamWriter.h
 include/llvm/Support/BlockFrequency.h
 include/llvm/Support/BranchProbability.h
 include/llvm/Support/CBindingWrapping.h
@@ -889,6 +894,7 @@ include/llvm/Support/LICENSE.TXT
 include/llvm/Support/LineIterator.h
 include/llvm/Support/Locale.h
 include/llvm/Support/LockFileManager.h
+include/llvm/Support/LowLevelTypeImpl.h
 include/llvm/Support/MD5.h
 include/llvm/Support/MachO.def
 include/llvm/Support/MachO.h
@@ -970,6 +976,7 @@ include/llvm/Target/CostTable.h
 include/llvm/Target/GenericOpcodes.td
 include/llvm/Target/GlobalISel/RegisterBank.td
 include/llvm/Target/GlobalISel/SelectionDAGCompat.td
+include/llvm/Target/GlobalISel/Target.td
 include/llvm/Target/Target.td
 include/llvm/Target/TargetCallingConv.h
 include/llvm/Target/TargetCallingConv.td
@@ -1106,6 +1113,7 @@ include/llvm/Transforms/Utils/SplitModule.h
 include/llvm/Transforms/Utils/SymbolRewriter.h
 include/llvm/Transforms/Utils/UnifyFunctionExitNodes.h
 include/llvm/Transforms/Utils/UnrollLoop.h
+include/llvm/Transforms/Utils/VNCoercion.h
 include/llvm/Transforms/Utils/ValueMapper.h
 include/llvm/Transforms/Vectorize.h
 include/llvm/Transforms/Vectorize/LoopVectorize.h
