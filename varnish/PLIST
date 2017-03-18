@@ -10,8 +10,8 @@ include/varnish/cache/cache.h
 include/varnish/cache/cache_backend.h
 include/varnish/cache/cache_director.h
 include/varnish/cache/cache_filter.h
+include/varnish/common/com_params.h
 include/varnish/common/common.h
-include/varnish/common/params.h
 include/varnish/miniobj.h
 include/varnish/tbl/acct_fields_bereq.h
 include/varnish/tbl/acct_fields_req.h
@@ -55,6 +55,7 @@ include/varnish/tbl/vsc_levels.h
 include/varnish/tbl/vsc_types.h
 include/varnish/tbl/vsl_tags.h
 include/varnish/tbl/vsl_tags_http.h
+include/varnish/tbl/waiters.h
 include/varnish/vapi/vapi_options.h
 include/varnish/vapi/voptget.h
 include/varnish/vapi/vsc.h
@@ -84,10 +85,6 @@ include/varnish/vtim.h
 include/varnish/waiter/waiter.h
 lib/libvarnishapi.la
 lib/pkgconfig/varnishapi.pc
-lib/varnish/libvarnish.la
-lib/varnish/libvarnishcompat.la
-lib/varnish/libvcc.la
-lib/varnish/libvgz.la
 lib/varnish/vmods/libvmod_directors.la
 lib/varnish/vmods/libvmod_std.la
 man/man1/varnishadm.1
