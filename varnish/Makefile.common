@@ -39,13 +39,15 @@ PKG_HOME.${VRNUSER}=	${VRNDIR}
 PKG_SHELL.${VRNUSER}=	${SH}
 PKG_GECOS.${VRNUSER}=	Varnish daemon user
 
+PKG_SYSCONFSUBDIR+=	varnish
+
 FILES_SUBST+=		VRNUSER=${VRNUSER}
 FILES_SUBST+=		VRNGROUP=${VRNGROUP}
 
 REPLACE_PYTHON+=	lib/libvcc/vmodtool.py
 
 CONFIGURE_ARGS+=	--localstatedir=${STATEDIR}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--with-rst2html=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
 
