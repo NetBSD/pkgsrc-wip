@@ -248,6 +248,8 @@ include/clang/CodeGen/BackendUtil.h
 include/clang/CodeGen/CGFunctionInfo.h
 include/clang/CodeGen/CodeGenABITypes.h
 include/clang/CodeGen/CodeGenAction.h
+include/clang/CodeGen/ConstantInitBuilder.h
+include/clang/CodeGen/ConstantInitFuture.h
 include/clang/CodeGen/ModuleBuilder.h
 include/clang/CodeGen/ObjectFilePCHContainerOperations.h
 include/clang/CodeGen/SwiftCallingConv.h
@@ -475,6 +477,7 @@ include/clang/Tooling/FileMatchTrie.h
 include/clang/Tooling/FixIt.h
 include/clang/Tooling/JSONCompilationDatabase.h
 include/clang/Tooling/Refactoring.h
+include/clang/Tooling/Refactoring/AtomicChange.h
 include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
@@ -598,6 +601,7 @@ lib/libclangSema.a
 lib/libclangSerialization.a
 lib/libclangTooling.a
 lib/libclangToolingCore.a
+lib/libclangToolingRefactor.a
 share/clang/clang-format-bbedit.applescript
 share/clang/clang-format-diff.py
 share/clang/clang-format-sublime.py
