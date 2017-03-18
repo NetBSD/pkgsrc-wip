@@ -3571,7 +3571,6 @@ SUBDIR+=	py-toro
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-tqdm
 SUBDIR+=	py-tracks
-SUBDIR+=	py-traitlets
 SUBDIR+=	py-traits
 SUBDIR+=	py-traitsgui
 SUBDIR+=	py-tranquil
