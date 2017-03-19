@@ -6,3 +6,4 @@
 - This package has known vulnerabilities, please investigate and fix
   if possible, see:
   http://secunia.com/advisories/45363/
+  https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9645
