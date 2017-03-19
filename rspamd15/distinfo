@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (rspamd-1.5.3.tar.xz) = bfadf6162dcf3d6c9dad85a607b631cb7f2fcea0
+RMD160 (rspamd-1.5.3.tar.xz) = 8b88e883aaf38db030cc0c4c3f5f2d357088be7a
+SHA512 (rspamd-1.5.3.tar.xz) = 68bdd593b03c299285d2cd56e945dbd38f823fbf7e9300318e7b05a3084eb751cb48134e69c13705e462838d814dd29bdca4631933eb23c0febf4d2fd223a153
+Size (rspamd-1.5.3.tar.xz) = 1854812 bytes
+SHA1 (patch-CMakeLists.txt) = 81b847220b8c8736b13209fb5bedf0020a8d7acf
+SHA1 (patch-src_CMakeLists.txt) = c80015bb275ba8b9ad31491311275bf353f8f30a

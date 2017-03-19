@@ -3806,6 +3806,7 @@ SUBDIR+=	rpm5
 SUBDIR+=	rsem
 SUBDIR+=	rsget
 SUBDIR+=	rsound
+SUBDIR+=	rspamd15
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
