@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-14 16:45:14.549668075 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-18 01:37:22.341045276 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
 @@ -0,0 +1,553 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
@@ -16,8 +16,8 @@ $NetBSD$
 +
 +#include "NativeRegisterContextNetBSD_x86_64.h"
 +
-+#include "lldb/Core/DataBufferHeap.h"
-+#include "lldb/Core/Log.h"
++#include "lldb/Utility/DataBufferHeap.h"
++#include "lldb/Utility/Log.h"
 +#include "lldb/Core/RegisterValue.h"
 +#include "lldb/Host/HostInfo.h"
 +#include "lldb/Utility/Error.h"

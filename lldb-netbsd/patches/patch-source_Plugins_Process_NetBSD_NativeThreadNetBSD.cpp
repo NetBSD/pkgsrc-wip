@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-02-28 07:44:53.258980602 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-18 01:37:22.354054370 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,415 @@
+@@ -0,0 +1,414 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -20,7 +20,7 @@ $NetBSD$
 +
 +#include "NativeProcessNetBSD.h"
 +
-+#include "lldb/Core/Log.h"
++#include "lldb/Utility/Log.h"
 +#include "lldb/Core/State.h"
 +#include "lldb/Host/HostNativeThread.h"
 +#include "lldb/Utility/LLDBAssert.h"
@@ -94,8 +94,7 @@ $NetBSD$
 +  // const NativeProcessNetBSD *const process =
 +  // reinterpret_cast<NativeProcessNetBSD*> (process_sp->get ());
 +  llvm::SmallString<32> thread_name;
-+  HostNativeThread::GetName(GetID(), thread_name);
-+  return thread_name.c_str();
++  return NULL;
 +}
 +
 +lldb::StateType NativeThreadNetBSD::GetState() { return m_state; }

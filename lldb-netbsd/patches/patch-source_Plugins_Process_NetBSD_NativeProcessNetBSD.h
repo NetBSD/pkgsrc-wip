@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-03-14 16:45:14.529112718 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-03-18 01:37:22.321590104 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -0,0 +1,185 @@
+@@ -0,0 +1,188 @@
 +//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -100,6 +100,9 @@ $NetBSD$
 +                           lldb::addr_t &load_addr) override;
 +
 +  NativeThreadNetBSDSP GetThreadByID(lldb::tid_t id);
++
++  llvm::ErrorOr<std::unique_ptr<llvm::MemoryBuffer>>
++  GetAuxvData() const override;
 +
 +  // ---------------------------------------------------------------------
 +  // Interface used by NativeRegisterContext-derived classes.

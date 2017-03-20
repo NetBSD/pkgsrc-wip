@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-14 16:45:14.522261905 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-18 01:37:22.314666401 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1376 @@
+@@ -0,0 +1,1414 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -19,6 +19,7 @@ $NetBSD$
 +#include <sys/types.h>
 +#include <sys/sysctl.h>
 +#include <uvm/uvm_prot.h>
++#include <elf.h>
 +#include <errno.h>
 +#include <stdint.h>
 +#include <string.h>
@@ -52,6 +53,7 @@ $NetBSD$
 +#include "lldb/Utility/LLDBAssert.h"
 +#include "lldb/Host/PseudoTerminal.h"
 +#include "lldb/Utility/StringExtractor.h"
++#include "lldb/Utility/DataBufferHeap.h"
 +
 +#include "NativeThreadNetBSD.h"
 +#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
@@ -205,7 +207,7 @@ $NetBSD$
 +  FileSpec working_dir{launch_info.GetWorkingDirectory()};
 +  if (working_dir &&
 +      (!working_dir.ResolvePath() ||
-+       working_dir.GetFileType() != FileSpec::eFileTypeDirectory)) {
++       !llvm::sys::fs::is_directory(working_dir.GetPath()))) {
 +    error.SetErrorStringWithFormat("No such file or directory: %s",
 +                                   working_dir.GetCString());
 +    return error;
@@ -1300,6 +1302,42 @@ $NetBSD$
 +NativeThreadNetBSDSP NativeProcessNetBSD::GetThreadByID(lldb::tid_t tid) {
 +  return std::static_pointer_cast<NativeThreadNetBSD>(
 +      NativeProcessProtocol::GetThreadByID(tid));
++}
++
++llvm::ErrorOr<std::unique_ptr<llvm::MemoryBuffer> > NativeProcessNetBSD::GetAuxvData() const {
++#if 0
++  /*
++   * ELF_AUX_ENTRIES is currently restricted to kernel
++   * (<sys/exec_elf.h> r. 1.155 specifies 15)
++   *
++   * ptrace(2) returns the whole AUXV including extra fiels after AT_NULL this
++   * information isn't needed.
++   */
++  size_t auxv_size = 100 * sizeof(AuxInfo);
++  DataBufferSP buf_sp;
++
++  std::unique_ptr<DataBufferHeap> buf_ap(new DataBufferHeap(auxv_size, 0));
++
++  struct ptrace_io_desc io = {
++    .piod_op = PIOD_READ_AUXV,
++    .piod_offs = 0,
++    .piod_addr = buf_ap->GetBytes(),
++    .piod_len = auxv_size
++  };
++
++  Error error = NativeProcessNetBSD::PtraceWrapper(
++        PT_IO, GetID(), &io);
++  if (error.Fail())
++    return error;
++  if (io.piod_len < 1) {
++    perror("empty result for auxv");
++  } else {
++    /* Everything fine */
++    buf_sp.reset(buf_ap.release());
++  }
++
++  return buf_sp;
++#endif
 +}
 +
 +//===----------------------------------------------------------------------===//
