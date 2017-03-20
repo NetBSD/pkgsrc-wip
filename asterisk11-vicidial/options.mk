@@ -73,6 +73,7 @@ post-configure:
 .endif
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
 	# this is a hack to work around a bug in menuselect
+
 	cd ${WRKSRC} && make menuselect.makeopts
 
 .if !empty(PKG_OPTIONS:Mwebvmail)

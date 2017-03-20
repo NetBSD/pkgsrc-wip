@@ -1,6 +1,6 @@
-$NetBSD$
+$NetBSD: patch-res_pjproject_build.symbian_makedef.sh,v 1.1 2012/12/11 08:22:49 jnemeth Exp $
 
---- res/pjproject/build.symbian/makedef.sh.orig	2016-03-29 19:25:17.000000000 +0000
+--- res/pjproject/build.symbian/makedef.sh.orig	2012-12-08 10:22:50.000000000 +0000
 +++ res/pjproject/build.symbian/makedef.sh
 @@ -1,13 +1,13 @@
  #!/bin/sh

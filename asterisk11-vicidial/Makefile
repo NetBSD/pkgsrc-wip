@@ -1,23 +1,28 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.152 2017/02/12 06:25:09 ryoon Exp $
+#
+# NOTE: when updating this package, there are two places that sound
+#       tarballs need to be checked; look win ${WRKSRC}/sounds/Makefile
+#       to find out the current sound file versions
 
 DISTNAME=	asterisk-11.22.0-vici
-CATEGORIES=	comms
-MASTER_SITES=	http://download.vicidial.com/required-apps/
-MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
+CATEGORIES=	comms net audio
+MASTER_SITES=   http://download.vicidial.com/required-apps/
+MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/sounds/releases/
+DIST_SUBDIR=	${PKGNAME_NOREV}
+DISTFILES=	${DEFAULT_DISTFILES}
 
-MAINTAINER=	alberto.m@futurelinkcorporation.com
-HOMEPAGE=	http://www.vicidial.org
-COMMENT=	Asterisk version for Vicidial
-DESCR=		Asterisk version for Vicidial
+COMMENT=	The Asterisk Software PBX
+OWNER=		alberto.m@futurelinkcorporation.com
+HOMEPAGE=	http://www.asterisk.org/
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/asterisk-11.22.0
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config libxml2 
-USE_LANGUAGES=	c c++
+WRKSRC=         ${WRKDIR}/asterisk-11.22.0
 
+EXTRACT_ONLY=	${DISTNAME}.tar.gz
+
+MAKE_JOBS_SAFE=	NO
 
 # known to have issues on i386, block the package until the bug is fixed
 BROKEN_ON_PLATFORM=	NetBSD-*-i386
