@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/10/05 14:32:12 slitvinov Exp $
-
-SHA1 (ledger-3.1.1.tar.gz) = 77ad24ce4947e2f130e58d8e8bc4c5b6920a0222
-RMD160 (ledger-3.1.1.tar.gz) = 07645c8d798e386eb4ed0a5a9e3dcf6fe0a184f8
-SHA512 (ledger-3.1.1.tar.gz) = 3f81b98a414cdfc0e272de4e958770149fb1acc8bda880d270e1459ce35294a220c52820bb9af49a751ac3a80b878f81fc7799ba41e0a1be43eba72081351bf5
-Size (ledger-3.1.1.tar.gz) = 842364 bytes

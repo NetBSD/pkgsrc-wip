@@ -1550,7 +1550,6 @@ SUBDIR+=	ldc-git
 SUBDIR+=	lde
 SUBDIR+=	ldtp
 SUBDIR+=	le
-SUBDIR+=	ledger
 SUBDIR+=	leo
 SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lhapdf

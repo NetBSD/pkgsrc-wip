@@ -1,5 +1,0 @@
-#Notes on the Makefile for pkgsrc/wip/ledger
-
-##Things that still need doing
-
-- Adding options (as in show-options) for all the optional dependencies
