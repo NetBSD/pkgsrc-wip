@@ -254,6 +254,7 @@ include/llvm/CodeGen/DIE.h
 include/llvm/CodeGen/DIEValue.def
 include/llvm/CodeGen/DwarfStringPoolEntry.h
 include/llvm/CodeGen/EdgeBundles.h
+include/llvm/CodeGen/ExecutionDepsFix.h
 include/llvm/CodeGen/FastISel.h
 include/llvm/CodeGen/FaultMaps.h
 include/llvm/CodeGen/FunctionLoweringInfo.h
