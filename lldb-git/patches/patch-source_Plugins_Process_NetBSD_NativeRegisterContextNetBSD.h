@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-20 16:20:31.692818842 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-21 14:39:27.419665433 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -0,0 +1,76 @@
+@@ -0,0 +1,41 @@
 +//===-- NativeRegisterContextNetBSD.h ---------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -38,41 +38,6 @@ $NetBSD$
 +  CreateHostNativeRegisterContextNetBSD(const ArchSpec &target_arch,
 +                                        NativeThreadProtocol &native_thread,
 +                                        uint32_t concrete_frame_idx);
-+
-+protected:
-+  lldb::ByteOrder GetByteOrder() const;
-+
-+  virtual Error ReadGPR();
-+
-+  virtual Error WriteGPR();
-+
-+  virtual Error ReadFPR();
-+
-+  virtual Error WriteFPR();
-+
-+  virtual void *GetGPRBuffer() { return nullptr; }
-+
-+  virtual size_t GetGPRSize() {
-+    return GetRegisterInfoInterface().GetGPRSize();
-+  }
-+
-+  virtual void *GetFPRBuffer() { return nullptr; }
-+
-+  virtual void *GetDBRBuffer() { return nullptr; }
-+
-+  virtual size_t GetFPRSize() { return 0; }
-+
-+  virtual Error DoReadGPR(void *buf);
-+
-+  virtual Error DoWriteGPR(void *buf);
-+
-+  virtual Error DoReadFPR(void *buf);
-+
-+  virtual Error DoWriteFPR(void *buf);
-+
-+  virtual NativeProcessNetBSD &GetProcess();
-+
-+  virtual ::pid_t GetProcessPid();
 +};
 +
 +} // namespace process_netbsd
