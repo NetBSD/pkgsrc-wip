@@ -2,7 +2,24 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -17,3 +17,85 @@ NativeRegisterContextNetBSD::NativeRegis
+@@ -9,6 +9,16 @@
+ 
+ #include "NativeRegisterContextNetBSD.h"
+ 
++#include "lldb/Core/RegisterValue.h"
++#include "lldb/Host/common/NativeProcessProtocol.h"
++#include "lldb/Host/common/NativeThreadProtocol.h"
++
++#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
++
++#include <sys/param.h>
++#include <sys/types.h>
++#include <sys/ptrace.h>
++
+ using namespace lldb_private;
+ using namespace lldb_private::process_netbsd;
+ 
+@@ -17,3 +27,85 @@ NativeRegisterContextNetBSD::NativeRegis
      RegisterInfoInterface *reg_info_interface_p)
      : NativeRegisterContextRegisterInfo(native_thread, concrete_frame_idx,
                                          reg_info_interface_p) {}

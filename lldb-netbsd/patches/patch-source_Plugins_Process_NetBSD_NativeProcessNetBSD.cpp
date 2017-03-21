@@ -2,11 +2,74 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -48,4 +48,1347 @@ Error NativeProcessProtocol::Attach(
- // -----------------------------------------------------------------------------
+@@ -10,16 +10,59 @@
+ #include "NativeProcessNetBSD.h"
  
- NativeProcessNetBSD::NativeProcessNetBSD()
--    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID) {}
+ // C Includes
++#include <sys/param.h>
++#include <sys/types.h>
++#include <sys/sysctl.h>
++#include <uvm/uvm_prot.h>
++#include <elf.h>
++#include <errno.h>
++#include <stdint.h>
++#include <string.h>
++#include <unistd.h>
++#include <util.h>
+ 
+ // C++ Includes
++#include <fstream>
++#include <mutex>
++#include <sstream>
++#include <string>
++#include <unordered_map>
+ 
+ // Other libraries and framework includes
++#include "lldb/Core/EmulateInstruction.h"
++#include "lldb/Utility/Error.h"
++#include "lldb/Core/ModuleSpec.h"
++#include "lldb/Core/RegisterValue.h"
++#include "lldb/Core/State.h"
++#include "lldb/Host/Host.h"
++#include "lldb/Host/HostProcess.h"
++#include "lldb/Host/ThreadLauncher.h"
++#include "lldb/Host/common/NativeBreakpoint.h"
++#include "lldb/Host/common/NativeRegisterContext.h"
++#include "lldb/Host/posix/ProcessLauncherPosixFork.h"
++#include "lldb/Symbol/ObjectFile.h"
++#include "lldb/Target/Process.h"
++#include "lldb/Target/ProcessLaunchInfo.h"
++#include "lldb/Target/Target.h"
++#include "lldb/Utility/LLDBAssert.h"
++#include "lldb/Host/PseudoTerminal.h"
++#include "lldb/Utility/StringExtractor.h"
++#include "lldb/Utility/DataBufferHeap.h"
+ 
++#include "NativeThreadNetBSD.h"
+ #include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
+ 
+ // System includes - They have to be included after framework includes because
+ // they define some
+ // macros which collide with variable names in other modules
++#include <sys/socket.h>
++
++#include <sys/ptrace.h>
++#include <sys/syscall.h>
++#include <sys/types.h>
++#include <sys/user.h>
++#include <sys/wait.h>
++
+ 
+ using namespace lldb;
+ using namespace lldb_private;
+@@ -27,6 +70,132 @@ using namespace lldb_private::process_ne
+ using namespace llvm;
+ 
+ // -----------------------------------------------------------------------------
++// Public Instance Methods
++// -----------------------------------------------------------------------------
++
++NativeProcessNetBSD::NativeProcessNetBSD()
 +    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID), m_arch(),
 +      m_supports_mem_region(eLazyBoolCalculate), m_mem_region_cache(),
 +      m_pending_notification_tid(LLDB_INVALID_THREAD_ID) {}
@@ -129,13 +192,14 @@ $NetBSD$
 +}
 +
 +// -----------------------------------------------------------------------------
-+// Public Static Methods
-+// -----------------------------------------------------------------------------
-+
-+Error NativeProcessProtocol::Launch(
-+    ProcessLaunchInfo &launch_info,
-+    NativeProcessProtocol::NativeDelegate &native_delegate, MainLoop &mainloop,
-+    NativeProcessProtocolSP &native_process_sp) {
+ // Public Static Methods
+ // -----------------------------------------------------------------------------
+ 
+@@ -34,18 +203,1218 @@ Error NativeProcessProtocol::Launch(
+     ProcessLaunchInfo &launch_info,
+     NativeProcessProtocol::NativeDelegate &native_delegate, MainLoop &mainloop,
+     NativeProcessProtocolSP &native_process_sp) {
+-  return Error();
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +
 +  Error error;
@@ -171,11 +235,12 @@ $NetBSD$
 +  launch_info.SetProcessID(native_process_sp->GetID());
 +
 +  return error;
-+}
-+
-+Error NativeProcessProtocol::Attach(
-+    lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
-+    MainLoop &mainloop, NativeProcessProtocolSP &native_process_sp) {
+ }
+ 
+ Error NativeProcessProtocol::Attach(
+     lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
+     MainLoop &mainloop, NativeProcessProtocolSP &native_process_sp) {
+-  return Error();
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +    LLDB_LOG(log, "pid = {0:x}", pid);
 +
@@ -199,12 +264,14 @@ $NetBSD$
 +
 +  native_process_sp = native_process_netbsd_sp;
 +  return error;
-+}
-+
-+// -----------------------------------------------------------------------------
-+// Public Instance Methods
-+// -----------------------------------------------------------------------------
-+
+ }
+ 
+ // -----------------------------------------------------------------------------
+ // Public Instance Methods
+ // -----------------------------------------------------------------------------
+ 
+-NativeProcessNetBSD::NativeProcessNetBSD()
+-    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID) {}
 +
 +
 +void NativeProcessNetBSD::AttachToInferior(MainLoop &mainloop, lldb::pid_t pid,
