@@ -2,17 +2,21 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -11,11 +11,394 @@
+@@ -11,11 +11,398 @@
  #include "NativeRegisterContextNetBSD.h"
  
  #include "NativeProcessNetBSD.h"
 +#include "lldb/Core/RegisterValue.h"
++#include "lldb/Core/State.h"
 +
 +#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
++
++#include <sstream>
 +
 +#include <sys/param.h>
 +#include <sys/types.h>
 +#include <sys/ptrace.h>
++#include <sys/poll.h>
  
  using namespace lldb;
  using namespace lldb_private;

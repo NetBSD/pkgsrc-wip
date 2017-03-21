@@ -2,22 +2,10 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -33,6 +33,53 @@ public:
+@@ -33,6 +33,41 @@ public:
    CreateHostNativeRegisterContextNetBSD(const ArchSpec &target_arch,
                                          NativeThreadProtocol &native_thread,
                                          uint32_t concrete_frame_idx);
-+
-+  // This function is implemented in the NativeRegisterContextNetBSD_* subclasses
-+  // to create a new
-+  // instance of the host specific NativeRegisterContextNetBSD. The
-+  // implementations can't collide
-+  // as only one NativeRegisterContextNetBSD_* variant should be compiled into
-+  // the final
-+  // executable.
-+  static NativeRegisterContextNetBSD *
-+  CreateHostNativeRegisterContextNetBSD(const ArchSpec &target_arch,
-+                                       NativeThreadProtocol &native_thread,
-+                                       uint32_t concrete_frame_idx);
 +
 +protected:
 +  lldb::ByteOrder GetByteOrder() const;
