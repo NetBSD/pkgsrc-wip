@@ -209,6 +209,7 @@ include/clang/Basic/LangOptions.def
 include/clang/Basic/LangOptions.h
 include/clang/Basic/Linkage.h
 include/clang/Basic/MacroBuilder.h
+include/clang/Basic/MemoryBufferCache.h
 include/clang/Basic/Module.h
 include/clang/Basic/ObjCRuntime.h
 include/clang/Basic/OpenCLExtensions.def
