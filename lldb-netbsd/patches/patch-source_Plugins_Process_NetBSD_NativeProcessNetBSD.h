@@ -2,54 +2,10 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -1,3 +1,191 @@
-+//===-- NativeProcessNetBSD.h ---------------------------------- -*- C++ -*-===//
-+//
-+//                     The LLVM Compiler Infrastructure
-+//
-+// This file is distributed under the University of Illinois Open Source
-+// License. See LICENSE.TXT for details.
-+//
-+//===----------------------------------------------------------------------===//
-+
-+#ifndef liblldb_NativeProcessNetBSD_H_
-+#define liblldb_NativeProcessNetBSD_H_
-+
-+// C++ Includes
-+#include <unordered_set>
-+
-+// Other libraries and framework includes
-+#include "lldb/Core/ArchSpec.h"
-+#include "lldb/Host/Debug.h"
-+#include "lldb/Host/FileSpec.h"
-+#include "lldb/Host/HostThread.h"
-+#include "lldb/Target/MemoryRegionInfo.h"
-+#include "lldb/lldb-types.h"
-+
-+#include "NativeThreadNetBSD.h"
-+#include "lldb/Host/common/NativeProcessProtocol.h"
-+
-+namespace lldb_private {
-+class Error;
-+class Scalar;
-+
-+namespace process_netbsd {
-+/// @class NativeProcessNetBSD
-+/// @brief Manages communication with the inferior (debugee) process.
-+///
-+/// Upon construction, this class prepares and launches an inferior process for
-+/// debugging.
-+///
-+/// Changes in the inferior process state are broadcasted.
-+class NativeProcessNetBSD : public NativeProcessProtocol {
-+  friend Error NativeProcessProtocol::Launch(
-+      ProcessLaunchInfo &launch_info, NativeDelegate &native_delegate,
-+      MainLoop &mainloop, NativeProcessProtocolSP &process_sp);
-+
-+  friend Error NativeProcessProtocol::Attach(
-+      lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
-+      MainLoop &mainloop, NativeProcessProtocolSP &process_sp);
-+
+@@ -39,8 +39,140 @@ class NativeProcessNetBSD : public Nativ
+       lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
+       MainLoop &mainloop, NativeProcessProtocolSP &process_sp);
+ 
 +public:
 +  // ---------------------------------------------------------------------
 +  // NativeProcessProtocol Interface
@@ -120,7 +76,7 @@ $NetBSD$
 +                                  size_t &actual_opcode_size,
 +                                  const uint8_t *&trap_opcode_bytes) override;
 +
-+private:
+ private:
 +  MainLoop::SignalHandleUP m_sigchld_handle;
 +  ArchSpec m_arch;
 +
@@ -136,7 +92,7 @@ $NetBSD$
 +  // ---------------------------------------------------------------------
 +  // Private Instance Methods
 +  // ---------------------------------------------------------------------
-+  NativeProcessNetBSD();
+   NativeProcessNetBSD();
 +
 +  Error LaunchInferior(MainLoop &mainloop, ProcessLaunchInfo &launch_info);
 +
@@ -155,7 +111,6 @@ $NetBSD$
 +  void MonitorSIGTRAP(const siginfo_t &info, NativeThreadNetBSD &thread);
 +
 +  Error SetupSoftwareSingleStepping(NativeThreadNetBSD &thread);
-+
 +
 +  bool HasThreadNoLock(lldb::tid_t thread_id);
 +
@@ -185,12 +140,6 @@ $NetBSD$
 +  void SigchldHandler();
 +
 +  Error PopulateMemoryRegionCache();
-+};
-+
-+} // namespace process_netbsd
-+} // namespace lldb_private
-+
-+#endif // #ifndef liblldb_NativeProcessNetBSD_H_
- //===-- NativeProcessNetBSD.h --------------------------------- -*- C++ -*-===//
- //
- //                     The LLVM Compiler Infrastructure
+ };
+ 
+ } // namespace process_netbsd

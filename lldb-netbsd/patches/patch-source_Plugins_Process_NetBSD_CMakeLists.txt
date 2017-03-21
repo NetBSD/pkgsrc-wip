@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- source/Plugins/Process/NetBSD/CMakeLists.txt.orig	2017-03-21 20:01:05.000000000 +0000
++++ source/Plugins/Process/NetBSD/CMakeLists.txt
+@@ -6,6 +6,7 @@ add_lldb_library(lldbPluginProcessNetBSD
+   NativeProcessNetBSD.cpp
+   NativeRegisterContextNetBSD.cpp
+   NativeThreadNetBSD.cpp
++  NativeRegisterContextNetBSD_x86_64.cpp
+ 
+   LINK_LIBS
+     lldbCore

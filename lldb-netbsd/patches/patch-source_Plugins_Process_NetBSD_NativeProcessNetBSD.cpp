@@ -2,77 +2,14 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -1,3 +1,1417 @@
-+//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
-+//
-+//                     The LLVM Compiler Infrastructure
-+//
-+// This file is distributed under the University of Illinois Open Source
-+// License. See LICENSE.TXT for details.
-+//
-+//===----------------------------------------------------------------------===//
-+
-+#include "NativeProcessNetBSD.h"
-+
-+// C Includes
-+#include <sys/param.h>
-+#include <sys/types.h>
-+#include <sys/sysctl.h>
-+#include <uvm/uvm_prot.h>
-+#include <elf.h>
-+#include <errno.h>
-+#include <stdint.h>
-+#include <string.h>
-+#include <unistd.h>
-+#include <util.h>
-+
-+// C++ Includes
-+#include <fstream>
-+#include <mutex>
-+#include <sstream>
-+#include <string>
-+#include <unordered_map>
-+
-+
-+// Other libraries and framework includes
-+#include "lldb/Core/EmulateInstruction.h"
-+#include "lldb/Utility/Error.h"
-+#include "lldb/Core/ModuleSpec.h"
-+#include "lldb/Core/RegisterValue.h"
-+#include "lldb/Core/State.h"
-+#include "lldb/Host/Host.h"
-+#include "lldb/Host/HostProcess.h"
-+#include "lldb/Host/ThreadLauncher.h"
-+#include "lldb/Host/common/NativeBreakpoint.h"
-+#include "lldb/Host/common/NativeRegisterContext.h"
-+#include "lldb/Host/posix/ProcessLauncherPosixFork.h"
-+#include "lldb/Symbol/ObjectFile.h"
-+#include "lldb/Target/Process.h"
-+#include "lldb/Target/ProcessLaunchInfo.h"
-+#include "lldb/Target/Target.h"
-+#include "lldb/Utility/LLDBAssert.h"
-+#include "lldb/Host/PseudoTerminal.h"
-+#include "lldb/Utility/StringExtractor.h"
-+#include "lldb/Utility/DataBufferHeap.h"
-+
-+#include "NativeThreadNetBSD.h"
-+#include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
-+
-+// System includes - They have to be included after framework includes because
-+// they define some
-+// macros which collide with variable names in other modules
-+#include <sys/socket.h>
-+
-+#include <sys/ptrace.h>
-+#include <sys/syscall.h>
-+#include <sys/types.h>
-+#include <sys/user.h>
-+#include <sys/wait.h>
-+
-+using namespace lldb;
-+using namespace lldb_private;
-+using namespace lldb_private::process_netbsd;
-+using namespace llvm;
+@@ -48,4 +48,1347 @@ Error NativeProcessProtocol::Attach(
+ // -----------------------------------------------------------------------------
+ 
+ NativeProcessNetBSD::NativeProcessNetBSD()
+-    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID) {}
++    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID), m_arch(),
++      m_supports_mem_region(eLazyBoolCalculate), m_mem_region_cache(),
++      m_pending_notification_tid(LLDB_INVALID_THREAD_ID) {}
 +
 +namespace {
 +void MaybeLogLaunchInfo(const ProcessLaunchInfo &info) {
@@ -268,10 +205,7 @@ $NetBSD$
 +// Public Instance Methods
 +// -----------------------------------------------------------------------------
 +
-+NativeProcessNetBSD::NativeProcessNetBSD()
-+    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID), m_arch(),
-+      m_supports_mem_region(eLazyBoolCalculate), m_mem_region_cache(),
-+      m_pending_notification_tid(LLDB_INVALID_THREAD_ID) {}
++
 +
 +void NativeProcessNetBSD::AttachToInferior(MainLoop &mainloop, lldb::pid_t pid,
 +                                          Error &error) {
@@ -1417,6 +1351,3 @@ $NetBSD$
 +
 +  return error;
 +}
- //===-- NativeProcessNetBSD.cpp ------------------------------- -*- C++ -*-===//
- //
- //                     The LLVM Compiler Infrastructure
