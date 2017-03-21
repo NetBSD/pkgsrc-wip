@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/quvi
+man/man1/quvi-dump.1
+man/man1/quvi-get.1
+man/man1/quvi-info.1
+man/man1/quvi-scan.1
+man/man1/quvi.1
+man/man5/quvirc.5

@@ -3744,6 +3744,7 @@ SUBDIR+=	quickfix
 SUBDIR+=	quickie
 SUBDIR+=	qupzilla
 SUBDIR+=	qutebrowser
+SUBDIR+=	quvi
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
 SUBDIR+=	radare2-git
