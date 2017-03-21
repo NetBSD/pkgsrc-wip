@@ -1680,6 +1680,7 @@ SUBDIR+=	libpusb
 SUBDIR+=	libpwquality
 SUBDIR+=	libqtxdg
 SUBDIR+=	libquantum
+SUBDIR+=	libquvi-scripts
 SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	librem
