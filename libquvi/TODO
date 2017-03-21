@@ -1,0 +1,2 @@
+Should libgcrypt be catched by a configure script?
+libquvi-scripts should be a runtime dependency.
