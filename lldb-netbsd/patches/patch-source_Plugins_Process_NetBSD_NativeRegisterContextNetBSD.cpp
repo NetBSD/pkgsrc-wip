@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-13 11:59:28.714727351 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.cpp
-@@ -0,0 +1,112 @@
+@@ -1,3 +1,115 @@
 +//===-- NativeRegisterContextNetBSD.cpp --------------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -115,3 +115,6 @@ $NetBSD$
 +
 +  return pid;
 +}
+ //===-- NativeRegisterContextNetBSD.cpp -------------------------*- C++ -*-===//
+ //
+ //                     The LLVM Compiler Infrastructure

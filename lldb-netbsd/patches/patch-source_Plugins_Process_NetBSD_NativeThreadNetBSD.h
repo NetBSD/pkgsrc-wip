@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2017-02-28 07:44:53.264708785 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.h.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.h
-@@ -0,0 +1,91 @@
+@@ -1,3 +1,94 @@
 +//===-- NativeThreadNetBSD.h ----------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -94,3 +94,6 @@ $NetBSD$
 +} // namespace lldb_private
 +
 +#endif // #ifndef liblldb_NativeThreadNetBSD_H_
+ //===-- NativeThreadNetBSD.h ---------------------------------- -*- C++ -*-===//
+ //
+ //                     The LLVM Compiler Infrastructure

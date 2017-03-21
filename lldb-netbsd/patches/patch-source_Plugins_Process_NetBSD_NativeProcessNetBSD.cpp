@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-18 01:37:22.314666401 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -0,0 +1,1414 @@
+@@ -1,3 +1,1417 @@
 +//===-- NativeProcessNetBSD.cpp -------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -1417,3 +1417,6 @@ $NetBSD$
 +
 +  return error;
 +}
+ //===-- NativeProcessNetBSD.cpp ------------------------------- -*- C++ -*-===//
+ //
+ //                     The LLVM Compiler Infrastructure

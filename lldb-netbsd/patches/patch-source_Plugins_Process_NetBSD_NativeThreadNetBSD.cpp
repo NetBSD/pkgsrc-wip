@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-18 01:37:22.354054370 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -0,0 +1,414 @@
+@@ -1,3 +1,417 @@
 +//===-- NativeThreadNetBSD.cpp --------------------------------- -*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -417,3 +417,6 @@ $NetBSD$
 +Error NativeThreadNetBSD::RemoveHardwareBreakpoint(lldb::addr_t addr) {
 +  return Error();
 +}
+ //===-- NativeThreadNetBSD.cpp -------------------------------- -*- C++ -*-===//
+ //
+ //                     The LLVM Compiler Infrastructure
