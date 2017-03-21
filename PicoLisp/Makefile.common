@@ -3,7 +3,7 @@
 # used by wip/PicoLisp64/Makefile
 
 DISTNAME=	picoLisp
-PIL_VERSION=	17.3.16
+PIL_VERSION=	17.3.21
 CATEGORIES=	lang
 MASTER_SITES=	http://software-lab.de/
 EXTRACT_SUFX=	.tgz
