@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- source/Plugins/Process/gdb-remote/CMakeLists.txt.orig	2017-03-18 01:35:30.000000000 +0000
++++ source/Plugins/Process/gdb-remote/CMakeLists.txt
+@@ -11,6 +11,10 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux|Andr
+   list(APPEND LLDB_PLUGINS lldbPluginProcessLinux)
+ endif()
+ 
++if(CMAKE_SYSTEM_NAME MATCHES "NetBSD")
++  list(APPEND LLDB_PLUGINS lldbPluginProcessNetBSD)
++endif()
++
+ add_lldb_library(lldbPluginProcessGDBRemote PLUGIN
+   GDBRemoteClientBase.cpp
+   GDBRemoteCommunication.cpp
