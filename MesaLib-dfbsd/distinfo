@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.117 2016/05/18 12:55:28 wiz Exp $
 
-SHA1 (mesa-17.0.1.tar.xz) = 7888c44300f25debb71d962a46d568349c3a081c
-RMD160 (mesa-17.0.1.tar.xz) = 0d9fcffaaee82f0f0ef43dc06504d053bfa93d18
-SHA512 (mesa-17.0.1.tar.xz) = f3a807fbf30327a1dccb690e484276ab1b2b1e33b0440884b6476607e08aa3513d5c9d4b6dd345415decb93747d334c70bffe9e49eae787b48ef6c08989aeb7c
-Size (mesa-17.0.1.tar.xz) = 9447712 bytes
+SHA1 (mesa-17.0.2.tar.xz) = efbba51e7f8cd13ba93984e98bae9d8822c20e70
+RMD160 (mesa-17.0.2.tar.xz) = 72b4e9e3e1a25af95a116569abfb0a27cc8e349a
+SHA512 (mesa-17.0.2.tar.xz) = df0cb47d01dee16d1d72e0a5fd9d49ab412294761ca647cbb6b411e16892b8be503d87911591339d4630d16b7c948897bfa4321b2c5a8a4219fa58b347015471
+Size (mesa-17.0.2.tar.xz) = 9451056 bytes
 SHA1 (patch-include_c11_threads__posix.h) = 0f80c61a2fcfb2ce039fec6b50f126c3e84c33f9
 SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = a08fc533940472bfa7634f0a2285e85d42c7a4e2
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 75144a5c2cbcda3f7ccd708ff2ac03c823c045d7
