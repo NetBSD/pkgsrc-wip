@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	PicoLisp-${PIL_VERSION}
+PKGNAME=	picolisp-${PIL_VERSION}
 
 .include "Makefile.common"
 .include "../../mk/bsd.pkg.mk"

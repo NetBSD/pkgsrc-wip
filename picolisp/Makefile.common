@@ -1,6 +1,6 @@
 # $NetBSD$
-# used by wip/PicoLisp/Makefile
-# used by wip/PicoLisp64/Makefile
+# used by wip/picolisp/Makefile
+# used by wip/picolisp64/Makefile
 
 DISTNAME=	picoLisp
 PIL_VERSION=	17.3.21
@@ -14,6 +14,8 @@ COMMENT=	Simple programming language and application server framework
 LICENSE=	mit
 
 WRKSRC=	${WRKDIR}/picoLisp
+
+DIST_SUBDIR=	${PKGBASE}/${PIL_VERSION}
 
 BUILD_DIRS+=	src
 USE_TOOLS+=	gmake
