@@ -14,7 +14,6 @@ RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
 SHA1 (patch-source_CMakeLists.txt) = 5dacabc3f39c23bdfd432b5a4895866157b97aa0
 SHA1 (patch-source_Host_common_Host.cpp) = 7d48b8bb1e4350ba6d3ddc6357b9b8dc82d6b32d
-SHA1 (patch-source_Host_common_NativeProcessProtocol.cpp) = 23cc7da280b2123cf0206f3d5660d2647935edbc
 SHA1 (patch-source_Host_netbsd_Host.cpp) = 92ea9aa9c21d11126e7532a860e59f408175d8d4
 SHA1 (patch-source_Plugins_DynamicLoader_POSIX-DYLD_DYLDRendezvous.cpp) = 32d683eb388ded96e7f9aedec827202b5b056392
 SHA1 (patch-source_Plugins_Process_NetBSD_CMakeLists.txt) = 558379a5f3b47235dbf670742467e64c05e5900f
@@ -27,5 +26,4 @@ SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD__x86__64.h
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.cpp) = 872d32b6f534c1fbcb1c6c2c584085b161d07f74
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.h) = cc8cfee5f3740e2495282f376428963bb388b844
 SHA1 (patch-source_Plugins_Process_elf-core_ThreadElfCore.cpp) = 3427bd2e2de3cd2947123c2f20ed8d5082a16ace
-SHA1 (patch-source_Plugins_Process_gdb-remote_CMakeLists.txt) = f26dd01a9a98a6d976d8aa8d559f7403529a5a64
 SHA1 (patch-source_Plugins_Process_minidump_ProcessMinidump.cpp) = a71464df2ef56b8b2c8905e8169a85a05cfd27ba
