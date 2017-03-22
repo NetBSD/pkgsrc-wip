@@ -24,11 +24,9 @@ Introduce objc++ setup with gcc(1) for "make test":
 
 To be done
 ==========
- - breakpoint support (amd64)
  - FPR registers' accessors (amd64)
  - debug registers support (amd64)
  - Host::LaunchProcessPosixSpawn verify ::posix_spawnattr_setsigdefault on NetBSD
- - single step support
  - thread resume/suspend operation
  - i386 support
  - upstream NetBSD support
