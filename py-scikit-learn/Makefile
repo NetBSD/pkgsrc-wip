@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	scikit-learn-0.17b1
+DISTNAME=	scikit-learn-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
@@ -17,5 +17,6 @@ USE_LANGUAGES=	c c++ fortran
 .include "../../lang/python/egg.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.6.1
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
