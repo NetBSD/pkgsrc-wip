@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	eventd-0.20.0
+DISTNAME=	eventd-0.21.0
 CATEGORIES=	net sysutils
 MASTER_SITES=	https://www.eventd.org/download/eventd/
 EXTRACT_SUFX=	.tar.xz
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+= --disable-im
 CONFIGURE_ARGS+= --disable-sound
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.14.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.0
 # Needed for TLS support in evp
 DEPENDS+=			glib-networking-[0-9]*:../../net/glib-networking
 # Needed for SVG support in nd and notify
