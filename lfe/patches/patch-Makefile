@@ -1,4 +1,5 @@
 $NetBSD$
+Fix up Makefile since it is hand-written
 
 --- Makefile.orig	2016-11-23 23:50:28.000000000 +0000
 +++ Makefile
