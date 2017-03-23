@@ -2920,6 +2920,7 @@ SUBDIR+=	py-easydev
 SUBDIR+=	py-easymodeler
 SUBDIR+=	py-ecos
 SUBDIR+=	py-ecspy
+SUBDIR+=	py-editor
 SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-eemeter
 SUBDIR+=	py-embedc
