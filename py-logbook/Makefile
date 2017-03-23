@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Logbook-0.10.1
+DISTNAME=	Logbook-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=L/Logbook/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://logbook.pocoo.org/
 COMMENT=	Logging replacement for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+USE_LANGUAGES=	c
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
