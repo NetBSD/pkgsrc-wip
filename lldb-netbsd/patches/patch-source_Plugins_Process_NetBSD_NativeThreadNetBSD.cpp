@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-23 15:49:53.244428227 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
 @@ -11,11 +11,398 @@
  #include "NativeRegisterContextNetBSD.h"
@@ -80,7 +80,7 @@ $NetBSD$
 +  // const NativeProcessNetBSD *const process =
 +  // reinterpret_cast<NativeProcessNetBSD*> (process_sp->get ());
 +  llvm::SmallString<32> thread_name;
-+  return NULL;
++  return std::string("");
 +}
 +
 +lldb::StateType NativeThreadNetBSD::GetState() { return m_state; }

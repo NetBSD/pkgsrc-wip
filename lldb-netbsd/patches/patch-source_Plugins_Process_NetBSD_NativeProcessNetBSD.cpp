@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-21 20:01:05.000000000 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-23 15:49:53.245269544 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -10,16 +10,59 @@
+@@ -10,16 +10,61 @@
  #include "NativeProcessNetBSD.h"
  
  // C Includes
@@ -45,6 +45,8 @@ $NetBSD$
 +#include "lldb/Utility/StringExtractor.h"
 +#include "lldb/Utility/DataBufferHeap.h"
  
++#include "llvm/Support/MemoryBuffer.h"
++
 +#include "NativeThreadNetBSD.h"
  #include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
  
@@ -62,7 +64,7 @@ $NetBSD$
  
  using namespace lldb;
  using namespace lldb_private;
-@@ -27,6 +70,132 @@ using namespace lldb_private::process_ne
+@@ -27,6 +72,132 @@ using namespace lldb_private::process_ne
  using namespace llvm;
  
  // -----------------------------------------------------------------------------
@@ -195,7 +197,7 @@ $NetBSD$
  // Public Static Methods
  // -----------------------------------------------------------------------------
  
-@@ -34,18 +203,1218 @@ Error NativeProcessProtocol::Launch(
+@@ -34,18 +205,1213 @@ Error NativeProcessProtocol::Launch(
      ProcessLaunchInfo &launch_info,
      NativeProcessProtocol::NativeDelegate &native_delegate, MainLoop &mainloop,
      NativeProcessProtocolSP &native_process_sp) {
@@ -1306,7 +1308,6 @@ $NetBSD$
 +}
 +
 +llvm::ErrorOr<std::unique_ptr<llvm::MemoryBuffer> > NativeProcessNetBSD::GetAuxvData() const {
-+#if 0
 +  /*
 +   * ELF_AUX_ENTRIES is currently restricted to kernel
 +   * (<sys/exec_elf.h> r. 1.155 specifies 15)
@@ -1315,30 +1316,26 @@ $NetBSD$
 +   * information isn't needed.
 +   */
 +  size_t auxv_size = 100 * sizeof(AuxInfo);
-+  DataBufferSP buf_sp;
 +
-+  std::unique_ptr<DataBufferHeap> buf_ap(new DataBufferHeap(auxv_size, 0));
++  ErrorOr<std::unique_ptr<MemoryBuffer>> buf = llvm::MemoryBuffer::getNewMemBuffer(auxv_size);
 +
 +  struct ptrace_io_desc io = {
 +    .piod_op = PIOD_READ_AUXV,
 +    .piod_offs = 0,
-+    .piod_addr = buf_ap->GetBytes(),
++    .piod_addr = (void *)buf.get()->getBufferStart(),
 +    .piod_len = auxv_size
 +  };
 +
 +  Error error = NativeProcessNetBSD::PtraceWrapper(
 +        PT_IO, GetID(), &io);
-+  if (error.Fail())
-+    return error;
-+  if (io.piod_len < 1) {
-+    perror("empty result for auxv");
-+  } else {
-+    /* Everything fine */
-+    buf_sp.reset(buf_ap.release());
-+  }
 +
-+  return buf_sp;
-+#endif
++  if (error.Fail())
++    return std::error_code(error.GetError(), std::generic_category());
++
++  if (io.piod_len < 1)
++    return std::error_code(ECANCELED, std::generic_category());
++
++  return buf;
 +}
 +
 +//===----------------------------------------------------------------------===//
