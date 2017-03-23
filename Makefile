@@ -4139,6 +4139,7 @@ SUBDIR+=	termit
 SUBDIR+=	tetrinet
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
+SUBDIR+=	tex-attachfile-doc
 SUBDIR+=	tex-breqn-doc
 SUBDIR+=	tex-continue
 SUBDIR+=	tex-continue-doc
