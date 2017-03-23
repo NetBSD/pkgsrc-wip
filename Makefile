@@ -3152,6 +3152,7 @@ SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-logtools
 SUBDIR+=	py-louie
 SUBDIR+=	py-lrparsing
+SUBDIR+=	py-lru-dict
 SUBDIR+=	py-lsqfit
 SUBDIR+=	py-luminous
 SUBDIR+=	py-lxmlproc
