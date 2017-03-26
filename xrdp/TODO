@@ -34,3 +34,6 @@ new maintainer):
 - fix bugs such as -n one 
   (I don't know what it means, but I assume it's the mismatch whether the
   parameter is called -nodaemon (as in reality) or -n (as in the manpage))
+
+Possible vulnerabilites to investigate:
+ - CVE-2017-6967
