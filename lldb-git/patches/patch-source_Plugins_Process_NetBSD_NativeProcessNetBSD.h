@@ -2,10 +2,11 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.h.orig	2017-03-21 17:54:57.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.h
-@@ -39,8 +39,28 @@ class NativeProcessNetBSD : public Nativ
+@@ -39,8 +39,29 @@ class NativeProcessNetBSD : public Nativ
        lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
        MainLoop &mainloop, NativeProcessProtocolSP &process_sp);
  
++public:
 +  // ---------------------------------------------------------------------
 +  // Interface used by NativeRegisterContext-derived classes.
 +  // ---------------------------------------------------------------------
