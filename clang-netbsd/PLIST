@@ -347,6 +347,7 @@ include/clang/Parse/AttrParserStringSwitches.inc
 include/clang/Parse/ParseAST.h
 include/clang/Parse/ParseDiagnostic.h
 include/clang/Parse/Parser.h
+include/clang/Parse/RAIIObjectsForParser.h
 include/clang/Rewrite/Core/DeltaTree.h
 include/clang/Rewrite/Core/HTMLRewrite.h
 include/clang/Rewrite/Core/RewriteBuffer.h
