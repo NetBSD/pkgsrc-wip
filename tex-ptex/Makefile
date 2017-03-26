@@ -34,9 +34,6 @@ TEX_KANJIMAP_FILES+=	morisawa.map
 
 .include "../../print/texlive/package.mk"
 
-post-extract:
-	${CP} -pr ${FILESDIR}/texmf-dist ${WRKSRC}
-
 post-install:
 	${LN} -sf eptex ${DESTDIR}${PREFIX}/bin/platex
 
