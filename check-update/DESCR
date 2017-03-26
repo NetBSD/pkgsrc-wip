@@ -1,0 +1,2 @@
+check-update is a tool for the pkgsrc tree. It reads the whole tree
+and generates a list of to-be-updated packges.

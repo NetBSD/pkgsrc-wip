@@ -1,0 +1,11 @@
+* Single package check works
+  cd /usr/pkgsrc/category/package; check-update
+
+* category mode works for now
+  mkdir /tmp/check-update
+  check-update -c mail -d /tmp/check-update
+      or if you have non-standard pkgsrc directory,
+  check-update -c mail -d /tmp/check-update -p /PATH/TO/pkgsrc
+
+* crontab driven bulk-check is not installed yet
+

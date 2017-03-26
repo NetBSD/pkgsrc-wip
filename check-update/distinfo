@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (check-update-0.9.tar.gz) = dec513c4b417a371f57097870a5173adae9e1426
+RMD160 (check-update-0.9.tar.gz) = 4ae9e7a6ff6ef0caa73dc021b6fc58d3fa198616
+SHA512 (check-update-0.9.tar.gz) = 4f87f6a95ecfaeb23a63b19a14e992246fb8bad7194105a03a7a501a8d4fd95b401862a2cab1e3143466f97478327d81e83d648e6bb92dd4c014d72a16ed46e9
+Size (check-update-0.9.tar.gz) = 69257 bytes
+SHA1 (patch-check-update) = 84ccdda9d9c81952dea8cbd615e0d63adc8b0b59

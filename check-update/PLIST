@@ -1,0 +1,7 @@
+@comment $NetBSD$
+sbin/check-update
+share/check-update/MaturedList
+share/check-update/collect-stats
+share/check-update/fork-w3m
+share/check-update/merge-check-update
+share/check-update/summary-diff

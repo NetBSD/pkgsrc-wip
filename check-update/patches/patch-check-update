@@ -1,0 +1,28 @@
+$NetBSD$
+
+Adjust executable PATH
+
+--- check-update.orig	2017-02-20 22:43:43.000000000 +0900
++++ check-update	2017-03-26 22:38:19.477500790 +0900
+@@ -26,7 +26,7 @@ use File::Basename qw(dirname);
+ my $path   = rel2abs( $0 );
+ our $directory = dirname( $path );
+ 
+-$fork_w3m = $directory.'/fork-w3m';
++$fork_w3m = '@PREFIX@/@CHECK_UPDATE_DIR@'.'/fork-w3m';
+ # ----------------------------------------------------
+ 
+ # prototype for subroutine called very early stage :-)
+@@ -69,10 +69,10 @@ our(@ARGV);
+ my($my_name) = $0;
+    $my_name =~ s#(.*)/##;
+ 
+-my ($pkgsrc) = '/usr/pkgsrc';	#
++my ($pkgsrc) = '@PREFIX@';	#
+ my ($summary);			# output file name
+ my (%TODO);			# found info in doc/TODO, $TODO{$package} = $version
+-my ($MaturedList) = 'MaturedList';# File name for the list of matured list category/package name format
++my ($MaturedList) = '@PREFIX@/@CHECK_UPDATE_DIR@'.'/MaturedList';# File name for the list of matured list category/package name format
+ 
+ my ($line); # SpecialPattern
+ # output to tmp name and rename it at the end of execution
