@@ -42,11 +42,11 @@ SUBST_CLASSES+=			binary-names
 SUBST_STAGE.binary-names=	pre-build
 SUBST_MESSAGE.binary-names=	Fixing binary names.
 SUBST_FILES.binary-names=	vis-complete vis-open man/*.1 lua/plugins/*.lua vis.c vis.h
-SUBST_SED.binary-names+=	-e 's,[[:<:]]'${DISTBASE}'-\(open\)[[:>:]],'${PKGBASE}'-\1,g'
-SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(clipboard\)[[:>:]],'${PKGBASE}'-\1,g'
-SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(complete\)[[:>:]],'${PKGBASE}'-\1,g'
-SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(digraph\)[[:>:]],'${PKGBASE}'-\1,g'
-SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(menu\)[[:>:]],'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names=		-e 's,'${DISTBASE}'-\(open\),'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+=	-e 's,'${DISTBASE}'-\(clipboard\),'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+=	-e 's,'${DISTBASE}'-\(complete\),'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+=	-e 's,'${DISTBASE}'-\(digraph\),'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+=	-e 's,'${DISTBASE}'-\(menu\),'${PKGBASE}'-\1,g'
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE} ${DESTDIR}${PREFIX}/bin/${PKGBASE}
