@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		vis-0.2
+DISTNAME=		vis-0.3
 PKGNAME=		${DISTNAME:S/vis/vis-editor/}
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
@@ -33,32 +33,34 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-build
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		vis-lua.c vis.1
+SUBST_FILES.fix-paths=		vis-lua.c man/vis.1 Makefile
 SUBST_SED.fix-paths=		-e "s,/usr/local,${PREFIX},g"
-SUBST_SED.fix-paths+=		-e "s,/share/vis,/share/${PKGBASE},g"
+SUBST_SED.fix-paths+=		-e "s,/share/${DISTBASE},/share/${PKGBASE},g"
+SUBST_SED.fix-paths+=		-e "s,$${SHAREPREFIX}/${DISTBASE},$${SHAREPREFIX}/${PKGBASE},g"
 
-SUBST_CLASSES+=			vis-open
-SUBST_STAGE.vis-open=		pre-build
-SUBST_FILES.vis-open=		vis-cmds.c
-SUBST_SED.vis-open=		-e 's,\("[^"]*\)'${DISTBASE}-open'\([^"]*"\),\1'${PKGBASE}-open'\2,g'
-
-SUBST_CLASSES+=				vis-clipboard
-SUBST_STAGE.vis-clipboard=		pre-build
-SUBST_FILES.vis-clipboard=		register.c
-SUBST_SED.vis-clipboard=		-e 's,\("[^"]*\)'${DISTBASE}-clipboard'\([^"]*"\),\1'${PKGBASE}-clipboard'\2,g'
-
-SUBST_CLASSES+=		fix-pie
-SUBST_STAGE.fix-pie=	pre-configure
-SUBST_MESSAGE.fix-pie=	Fixing LDFLAGS -pie flag.
-SUBST_FILES.fix-pie=	configure
-SUBST_SED.fix-pie=	-e "s,-Wl[,]-pie,-pie,g"
+SUBST_CLASSES+=			binary-names
+SUBST_STAGE.binary-names=	pre-build
+SUBST_MESSAGE.binary-names=	Fixing binary names.
+SUBST_FILES.binary-names=	vis-complete vis-open man/*.1 lua/plugins/*.lua vis.c vis.h
+SUBST_SED.binary-names+=	-e 's,[[:<:]]'${DISTBASE}'-\(open\)[[:>:]],'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(clipboard\)[[:>:]],'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(complete\)[[:>:]],'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(digraph\)[[:>:]],'${PKGBASE}'-\1,g'
+SUBST_SED.binary-names+		-e 's,[[:<:]]'${DISTBASE}'-\(menu\)[[:>:]],'${PKGBASE}'-\1,g'
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE} ${DESTDIR}${PREFIX}/bin/${PKGBASE}
 	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE}-open ${DESTDIR}${PREFIX}/bin/${PKGBASE}-open
 	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE}-clipboard ${DESTDIR}${PREFIX}/bin/${PKGBASE}-clipboard
+	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE}-complete ${DESTDIR}${PREFIX}/bin/${PKGBASE}-complete
+	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE}-digraph ${DESTDIR}${PREFIX}/bin/${PKGBASE}-digraph
+	${MV} ${DESTDIR}${PREFIX}/bin/${DISTBASE}-menu ${DESTDIR}${PREFIX}/bin/${PKGBASE}-menu
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${DISTBASE}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
-	${MV} ${DESTDIR}${PREFIX}/share/${DISTBASE} ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${DISTBASE}-open.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}-open.1
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${DISTBASE}-clipboard.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}-clipboard.1
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${DISTBASE}-complete.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}-complete.1
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${DISTBASE}-digraph.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}-digraph.1
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${DISTBASE}-menu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}-menu.1
 
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 .include "../../lang/lua/buildlink3.mk"
