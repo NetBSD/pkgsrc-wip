@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-21 17:54:57.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -14,18 +14,75 @@
+@@ -14,18 +14,77 @@
  // C++ Includes
  
  // Other libraries and framework includes
@@ -18,6 +18,7 @@ $NetBSD$
  // System includes - They have to be included after framework includes because
  // they define some
  // macros which collide with variable names in other modules
++// clang-format off
 +#include <sys/types.h>
 +#include <sys/ptrace.h>
 +#include <sys/sysctl.h>
@@ -25,6 +26,7 @@ $NetBSD$
 +#include <uvm/uvm_prot.h>
 +#include <elf.h>
 +#include <util.h>
++// clang-format on
  
  using namespace lldb;
  using namespace lldb_private;
@@ -79,7 +81,7 @@ $NetBSD$
  // -----------------------------------------------------------------------------
  // Public Static Methods
  // -----------------------------------------------------------------------------
-@@ -34,13 +91,68 @@ Error NativeProcessProtocol::Launch(
+@@ -34,13 +93,68 @@ Error NativeProcessProtocol::Launch(
      ProcessLaunchInfo &launch_info,
      NativeProcessProtocol::NativeDelegate &native_delegate, MainLoop &mainloop,
      NativeProcessProtocolSP &native_process_sp) {
@@ -150,12 +152,13 @@ $NetBSD$
  }
  
  // -----------------------------------------------------------------------------
-@@ -48,4 +160,842 @@ Error NativeProcessProtocol::Attach(
+@@ -48,4 +162,843 @@ Error NativeProcessProtocol::Attach(
  // -----------------------------------------------------------------------------
  
  NativeProcessNetBSD::NativeProcessNetBSD()
 -    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID) {}
-+    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID), m_arch() {}
++    : NativeProcessProtocol(LLDB_INVALID_PROCESS_ID), m_arch(),
++      m_supports_mem_region(eLazyBoolCalculate), m_mem_region_cache() {}
 +
 +// Handles all waitpid events from the inferior process.
 +void NativeProcessNetBSD::MonitorCallback(lldb::pid_t pid, int signal) {
@@ -503,9 +506,9 @@ $NetBSD$
 +  for (auto it = m_mem_region_cache.begin(); it != m_mem_region_cache.end();
 +       ++it) {
 +    MemoryRegionInfo &proc_entry_info = it->first;
-+    // Sanity check assumption that /proc/{pid}/maps entries are ascending.
++    // Sanity check assumption that memory map entries are ascending.
 +    assert((proc_entry_info.GetRange().GetRangeBase() >= prev_base_address) &&
-+           "descending /proc/pid/maps entries detected, unexpected");
++           "descending memory map entries detected, unexpected");
 +    prev_base_address = proc_entry_info.GetRange().GetRangeBase();
 +    UNUSED_IF_ASSERT_DISABLED(prev_base_address);
 +    // If the target address comes before this entry, indicate distance to next
