@@ -1,3 +1,2 @@
 @comment $NetBSD$
-bin/platex
 share/texmf-dist/fonts/map/dvipdfmx/ptex/morisawa.map

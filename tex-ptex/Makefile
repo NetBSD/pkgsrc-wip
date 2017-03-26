@@ -34,7 +34,4 @@ TEX_KANJIMAP_FILES+=	morisawa.map
 
 .include "../../print/texlive/package.mk"
 
-post-install:
-	${LN} -sf eptex ${DESTDIR}${PREFIX}/bin/platex
-
 .include "../../mk/bsd.pkg.mk"
