@@ -18,7 +18,7 @@ $NetBSD$
 +  virtual Error DoWriteGPR(void *buf);
 +
 +  virtual NativeProcessNetBSD &GetProcess();
-+  virtual pid_t GetProcessPid();
++  virtual ::pid_t GetProcessPid();
  };
  
  } // namespace process_netbsd

@@ -263,7 +263,7 @@ $NetBSD$
 +  if (result)
 +    *result = ret;
 +
-+  LLDB_LOG(log, "ptrace({0}, {1}, {2}, {3}, {4})={6:x}", req, pid, addr, data,
++  LLDB_LOG(log, "ptrace({0}, {1}, {2}, {3})={4:x}", req, pid, addr, data,
 +           ret);
 +
 +  if (error.Fail())

@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-21 17:54:57.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -12,10 +12,152 @@
+@@ -12,10 +12,145 @@
  
  #include "NativeProcessNetBSD.h"
  
@@ -72,13 +72,6 @@ $NetBSD$
 +}
 +
 +std::string NativeThreadNetBSD::GetName() {
-+  NativeProcessProtocolSP process_sp = m_process_wp.lock();
-+  if (!process_sp)
-+    return "<unknown: no process>";
-+
-+  // const NativeProcessNetBSD *const process =
-+  // reinterpret_cast<NativeProcessNetBSD*> (process_sp->get ());
-+  llvm::SmallString<32> thread_name;
 +  return std::string("");
 +}
 +

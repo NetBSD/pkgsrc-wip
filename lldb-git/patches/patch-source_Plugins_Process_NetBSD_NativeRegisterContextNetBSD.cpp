@@ -53,7 +53,7 @@ $NetBSD$
 +  return *process_sp;
 +}
 +
-+pid_t NativeRegisterContextNetBSD::GetProcessPid() {
++::pid_t NativeRegisterContextNetBSD::GetProcessPid() {
 +  NativeProcessNetBSD &process = GetProcess();
 +  lldb::pid_t pid = process.GetID();
 +
