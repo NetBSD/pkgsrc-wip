@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-23 15:49:53.244428227 +0000
+--- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-23 15:49:53.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
 @@ -11,11 +11,398 @@
  #include "NativeRegisterContextNetBSD.h"
