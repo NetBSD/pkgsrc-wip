@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2012/11/09 18:14:45 jihbed Exp $
 
-SHA1 (zipline-0.5.1.tar.gz) = 9227752679b3f1b2e3e8b7059be2db6e680461d0
-RMD160 (zipline-0.5.1.tar.gz) = b92f7a6a90e03e3989d4478af5c74cca731e95fe
-Size (zipline-0.5.1.tar.gz) = 65704 bytes
+SHA1 (zipline-1.1.1.tar.gz) = 3608c4cee6c485d57bb5f4cf937f34da6ee291fa
+RMD160 (zipline-1.1.1.tar.gz) = 96f1ad8215d0baa69069fb03d544995fb1399255
+SHA512 (zipline-1.1.1.tar.gz) = 05d899dbdf2c64d5bbcd26d6bf38e906714073c44396f12f9a427aeee0d3fe77ac1c1b6e89931fa70e1a1012fee166db9079d59ee9a76ce6e30523451ac84933
+Size (zipline-1.1.1.tar.gz) = 640796 bytes
