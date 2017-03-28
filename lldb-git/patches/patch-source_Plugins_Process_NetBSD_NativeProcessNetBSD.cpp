@@ -152,7 +152,7 @@ $NetBSD$
  }
  
  // -----------------------------------------------------------------------------
-@@ -48,4 +162,843 @@ Error NativeProcessProtocol::Attach(
+@@ -48,4 +162,831 @@ Error NativeProcessProtocol::Attach(
  // -----------------------------------------------------------------------------
  
  NativeProcessNetBSD::NativeProcessNetBSD()
@@ -441,9 +441,6 @@ $NetBSD$
 +Error NativeProcessNetBSD::Signal(int signo) {
 +  Error error;
 +
-+  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
-+  LLDB_LOG(log, "selecting running thread for interrupt target");
-+
 +  if (kill(GetID(), signo))
 +    error.SetErrorToErrno();
 +
@@ -612,11 +609,11 @@ $NetBSD$
 +
 +Error NativeProcessNetBSD::AllocateMemory(size_t size, uint32_t permissions,
 +                                          lldb::addr_t &addr) {
-+  return Error();
++  return Error("Unimplemented");
 +}
 +
 +Error NativeProcessNetBSD::DeallocateMemory(lldb::addr_t addr) {
-+  return Error();
++  return Error("Unimplemented");
 +}
 +
 +lldb::addr_t NativeProcessNetBSD::GetSharedLibraryInfoAddress() {
@@ -658,16 +655,7 @@ $NetBSD$
 +
 +Error NativeProcessNetBSD::GetLoadedModuleFileSpec(const char *module_path,
 +                                                   FileSpec &file_spec) {
-+  FileSpec module_file_spec(module_path, true);
-+
-+  bool found = false;
-+  file_spec.Clear();
-+
-+  if (!found)
-+    return Error("Module file (%s) not found in /proc/%" PRIu64 "/maps file!",
-+                 module_file_spec.GetFilename().AsCString(), GetID());
-+
-+  return Error();
++  return Error("Unimplemented");
 +}
 +
 +Error NativeProcessNetBSD::GetFileLoadAddress(const llvm::StringRef &file_name,
@@ -793,7 +781,7 @@ $NetBSD$
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_PROCESS));
 +  // Process all pending waitpid notifications.
 +  int status;
-+  ::pid_t wait_pid = waitpid(WAIT_ANY, &status, WALLSIG | WNOHANG);
++  ::pid_t wait_pid = waitpid(GetID(), &status, WALLSIG | WNOHANG);
 +
 +  if (wait_pid == 0)
 +    return; // We are done.
@@ -803,7 +791,7 @@ $NetBSD$
 +      return;
 +
 +    Error error(errno, eErrorTypePOSIX);
-+    LLDB_LOG(log, "waitpid (-1, &status, _) failed: {0}", error);
++    LLDB_LOG(log, "waitpid ({0}, &status, _) failed: {1}", GetID(), error);
 +  }
 +
 +  bool exited = false;
@@ -828,8 +816,8 @@ $NetBSD$
 +    status_cstr = "(\?\?\?)";
 +
 +  LLDB_LOG(log,
-+           "waitpid (-1, &status, _) => pid = {0}, status = {1:x} "
-+           "({2}), signal = {3}, exit_state = {4}",
++           "waitpid ({0}, &status, _) => pid = {1}, status = {2:x} "
++           "({3}), signal = {4}, exit_state = {5}", GetID(),
 +           wait_pid, status, status_cstr, signal, exit_status);
 +
 +  if (exited)

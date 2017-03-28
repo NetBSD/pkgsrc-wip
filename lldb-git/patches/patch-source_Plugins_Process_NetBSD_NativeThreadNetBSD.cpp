@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-21 17:54:57.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -12,10 +12,145 @@
+@@ -12,10 +12,132 @@
  
  #include "NativeProcessNetBSD.h"
  
@@ -23,10 +23,8 @@ $NetBSD$
 +
 +void NativeThreadNetBSD::SetStoppedBySignal(uint32_t signo,
 +                                            const siginfo_t *info) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+  if (log)
-+    log->Printf("NativeThreadNetBSD::%s called with signal 0x%02" PRIx32,
-+                __FUNCTION__, signo);
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_THREAD));
++  LLDB_LOG(log, "tid = {0} in called with signal {1}", GetID(), signo);
 +
 +  SetStopped();
 +
@@ -48,9 +46,6 @@ $NetBSD$
 +}
 +
 +void NativeThreadNetBSD::SetStoppedByBreakpoint() {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+  if (log)
-+    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
 +  SetStopped();
 +  m_stop_info.reason = StopReason::eStopReasonBreakpoint;
 +  m_stop_info.details.signal.signo = SIGTRAP;
@@ -63,10 +58,6 @@ $NetBSD$
 +}
 +
 +void NativeThreadNetBSD::SetRunning() {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
-+  if (log)
-+    log->Printf("NativeThreadNetBSD::%s()", __FUNCTION__);
-+
 +  m_state = StateType::eStateRunning;
 +  m_stop_info.reason = StopReason::eStopReasonNone;
 +}
@@ -79,7 +70,7 @@ $NetBSD$
 +
 +bool NativeThreadNetBSD::GetStopReason(ThreadStopInfo &stop_info,
 +                                       std::string &description) {
-+  Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_THREAD));
++  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_THREAD));
 +
 +  description.clear();
 +
@@ -101,11 +92,7 @@ $NetBSD$
 +  case eStateRunning:
 +  case eStateStepping:
 +  case eStateDetached:
-+    if (log) {
-+      log->Printf("NativeThreadNetBSD::%s tid %" PRIu64
-+                  " in state %s cannot answer stop reason",
-+                  __FUNCTION__, GetID(), StateAsCString(m_state));
-+    }
++    LLDB_LOG(log, "tid = {0} in state {1} cannot answer stop reason", GetID(), StateAsCString(m_state));
 +    return false;
 +  }
 +  llvm_unreachable("unhandled StateType!");
@@ -134,18 +121,18 @@ $NetBSD$
 +
 +Error NativeThreadNetBSD::SetWatchpoint(lldb::addr_t addr, size_t size,
 +                                        uint32_t watch_flags, bool hardware) {
-+  return Error();
++  return Error("Unimplemented");
 +}
 +
 +Error NativeThreadNetBSD::RemoveWatchpoint(lldb::addr_t addr) {
-+  return Error();
++  return Error("Unimplemented");
 +}
 +
 +Error NativeThreadNetBSD::SetHardwareBreakpoint(lldb::addr_t addr,
 +                                                size_t size) {
-+  return Error();
++  return Error("Unimplemented");
 +}
 +
 +Error NativeThreadNetBSD::RemoveHardwareBreakpoint(lldb::addr_t addr) {
-+  return Error();
++  return Error("Unimplemented");
 +}
