@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	check-update-0.9
+DISTNAME=	check-update-0.9.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makoto-fujiwara/}
 
@@ -21,10 +21,22 @@ USE_TOOLS+=	perl:run
 NO_BUILD=       YES
 
 CHECK_UPDATE_DIR= share/check-update
+MAKEDIR=	${VARBASE}/check-update
+EGDIR=		share/examples/check-update
+
+CONF_FILES+=	${EGDIR}/Makefile	   ${MAKEDIR}/Makefile
+CONF_FILES+=	${EGDIR}/environment-sample.mk	${MAKEDIR}/environment.mk
+CONF_FILES+=	${EGDIR}/check-update-sample.sh   ${MAKEDIR}/check-update.sh
+CONF_FILES+=	${EGDIR}/cd-and-sh-sample ${MAKEDIR}/cd-and-sh
+
+OWN_DIRS+=	${MAKEDIR}
+
+MAKE_FILES=	Makefile environment-sample.mk
+MAKE_SCRIPTS=	cd-and-sh-sample check-update-sample.sh
 
 INSTALLATION_SCRIPT+=	summary-diff collect-stats fork-w3m merge-check-update
 INSTALLATION_FILE=	MaturedList
-INSTALLATION_DIRS+=	sbin share/check-update
+INSTALLATION_DIRS+=	sbin share/check-update ${EGDIR}
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -37,10 +49,17 @@ REPLACE_PERL+=	${INSTALLATION_SCRIPT}
 
 do-install:
 
+	(cd ${WRKSRC};  ${INSTALL_SCRIPT} check-update ${DESTDIR}${PREFIX}/sbin )
 .for i in ${INSTALLATION_SCRIPT} ${INSTALLATION_FILE}
 	(cd ${WRKSRC};	${INSTALL_SCRIPT} ${i} ${DESTDIR}${PREFIX}/${CHECK_UPDATE_DIR} )
 .endfor
-	(cd ${WRKSRC};	${INSTALL_SCRIPT} check-update ${DESTDIR}${PREFIX}/sbin )
 
+.for i in ${MAKE_FILES}
+	(cd ${WRKSRC};	${INSTALL_DATA}   ${i} ${DESTDIR}${PREFIX}/${EGDIR})
+.endfor
+
+.for i in ${MAKE_SCRIPTS}
+	(cd ${WRKSRC};	${INSTALL_SCRIPT} ${i} ${DESTDIR}${PREFIX}/${EGDIR})
+.endfor
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/bsd.pkg.mk"

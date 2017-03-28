@@ -5,3 +5,7 @@ share/check-update/collect-stats
 share/check-update/fork-w3m
 share/check-update/merge-check-update
 share/check-update/summary-diff
+share/examples/check-update/Makefile
+share/examples/check-update/cd-and-sh-sample
+share/examples/check-update/check-update-sample.sh
+share/examples/check-update/environment-sample.mk
