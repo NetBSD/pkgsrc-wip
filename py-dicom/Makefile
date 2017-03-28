@@ -3,13 +3,14 @@
 DISTNAME=	pydicom-0.9.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	biology
-MASTER_SITES=	https://pydicom.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/pydicom/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://code.google.com/p/pydicom/
 COMMENT=	Read, modify and write DICOM files with python code
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.6.2:../../converters/py-simplejson
 
 USE_TOOLS+=	bash
 USE_LANGUAGES=	# none
@@ -19,12 +20,8 @@ REPLACE_PYTHON+=	dicom/contrib/dicom_dao.py
 
 PYTHON_VERSIONS_ACCEPTED= 27
 
-BROKEN=		tries to download in build phase
-
 do-test:
 	${RUN} cd ${WRKSRC}/dicom/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_test.py
-
-DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.6.2:../../converters/py-simplejson
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
