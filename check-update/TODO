@@ -7,5 +7,5 @@
       or if you have non-standard pkgsrc directory,
   check-update -c mail -d /tmp/check-update -p /PATH/TO/pkgsrc
 
-* crontab driven bulk-check is not installed yet
-
+* crontab driven bulk-check is imcompete now, not git pull on non-git dir
+  sh /var/check-update/cd-and-sh

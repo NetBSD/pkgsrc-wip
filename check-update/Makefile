@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	check-update-0.9.2
+DISTNAME=	check-update-0.9.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makoto-fujiwara/}
 
