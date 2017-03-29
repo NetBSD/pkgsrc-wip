@@ -4348,6 +4348,7 @@ SUBDIR+=	vncselector
 SUBDIR+=	vpnc
 SUBDIR+=	vpr
 SUBDIR+=	vreng
+SUBDIR+=	vsearch
 SUBDIR+=	vte
 SUBDIR+=	wackamole
 SUBDIR+=	waffle

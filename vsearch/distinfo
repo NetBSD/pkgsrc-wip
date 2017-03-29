@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (vsearch-2.4.2.tar.gz) = b11c32391da4c1b2476b8e13915be619e099613b
+RMD160 (vsearch-2.4.2.tar.gz) = 0f4b6ef5911a9e84dd664f93a5e5fd757be82da4
+SHA512 (vsearch-2.4.2.tar.gz) = e4652a9df664f2ba519364c880716c753045976084b9ba2c1aad1c46c967172bbb78537f9110a49c1719c5b7274f854c918fb123aa52fed866c1a04c52751554
+Size (vsearch-2.4.2.tar.gz) = 201460 bytes
+SHA1 (patch-src_city.cc) = bfe1c8cf6da32aef6f45dc47da1adb8197711090
