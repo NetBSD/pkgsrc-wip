@@ -5,7 +5,6 @@ CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	lldb
 GIT_REPO.lldb=		git://github.com/llvm-mirror/lldb.git
-GIT_REVISION.lldb=	85d8791e1dae0a7581cf439cc722182214aa80eb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
