@@ -9,3 +9,17 @@
 
 * crontab driven bulk-check is imcompete now, not git pull on non-git dir
   sh /var/check-update/cd-and-sh
+
+* on 2017-03-29
+    3  cd /export/CHROOT/usr/pkgsrc/wip/check-update/
+    7  git pull
+    8  make clean
+   12  make package-install
+   13  sudo pkg_delete check-update
+   14  make package-install
+----------------------
+CF-S9@makoto 21:23:15/170329(..wip/check-update)% (cd /var/check-update/; make)
+(if ! [ -d /var/check-update/htdocs/.20170329-12 ]; then mkdir /var/check-update/htdocs/.20170329-12 ; fi)
+mkdir: /var/check-update/htdocs/.20170329-12: No such file or directory
+*** Error code 1
+----------------------
