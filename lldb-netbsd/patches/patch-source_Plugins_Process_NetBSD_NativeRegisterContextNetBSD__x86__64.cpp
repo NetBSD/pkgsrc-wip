@@ -1,21 +1,11 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-18 01:37:22.341045276 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-29 00:14:15.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -0,0 +1,553 @@
-+//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
-+//
-+//                     The LLVM Compiler Infrastructure
-+//
-+// This file is distributed under the University of Illinois Open Source
-+// License. See LICENSE.TXT for details.
-+//
-+//===----------------------------------------------------------------------===//
-+
-+#if defined(__x86_64__)
-+
-+#include "NativeRegisterContextNetBSD_x86_64.h"
-+
+@@ -11,6 +11,559 @@
+ 
+ #include "NativeRegisterContextNetBSD_x86_64.h"
+ 
 +#include "lldb/Utility/DataBufferHeap.h"
 +#include "lldb/Utility/Log.h"
 +#include "lldb/Core/RegisterValue.h"
@@ -556,3 +546,19 @@ $NetBSD$
 +}
 +
 +#endif // defined(__x86_64__)
++//===-- NativeRegisterContextNetBSD_x86_64.cpp ---------------*- C++ -*-===//
++//
++//                     The LLVM Compiler Infrastructure
++//
++// This file is distributed under the University of Illinois Open Source
++// License. See LICENSE.TXT for details.
++//
++//===----------------------------------------------------------------------===//
++
++#if defined(__x86_64__)
++
++#include "NativeRegisterContextNetBSD_x86_64.h"
++
+ #include "lldb/Core/RegisterValue.h"
+ #include "lldb/Host/HostInfo.h"
+ #include "lldb/Utility/DataBufferHeap.h"

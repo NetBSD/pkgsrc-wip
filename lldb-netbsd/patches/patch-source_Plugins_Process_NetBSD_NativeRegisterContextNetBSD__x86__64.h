@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2017-03-14 16:45:14.556385063 +0000
+--- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2017-03-29 00:14:15.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
-@@ -0,0 +1,83 @@
+@@ -1,3 +1,86 @@
 +//===-- NativeRegisterContextNetBSD_x86_64.h ---------------------*- C++ -*-===//
 +//
 +//                     The LLVM Compiler Infrastructure
@@ -86,3 +86,6 @@ $NetBSD$
 +#endif // #ifndef lldb_NativeRegisterContextNetBSD_x86_64_h
 +
 +#endif // defined(__x86_64__)
+ //===-- NativeRegisterContextNetBSD_x86_64.h --------------------*- C++ -*-===//
+ //
+ //                     The LLVM Compiler Infrastructure
