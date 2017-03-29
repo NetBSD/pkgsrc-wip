@@ -23,4 +23,3 @@ SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.cpp) = bd6777974a75
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeThreadNetBSD.h) = 66782e7dce1533d4ccce1ab7518f9760c50ec675
 SHA1 (patch-source_Plugins_Process_elf-core_ProcessElfCore.cpp) = 0a64e526ed3eca089ee54d3bb54385f4d26fc7d1
 SHA1 (patch-source_Plugins_Process_elf-core_ThreadElfCore.cpp) = 3427bd2e2de3cd2947123c2f20ed8d5082a16ace
-SHA1 (patch-source_Plugins_Process_minidump_ProcessMinidump.cpp) = a71464df2ef56b8b2c8905e8169a85a05cfd27ba
