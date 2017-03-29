@@ -44,23 +44,37 @@ $NetBSD$
      }
    }
  }
-@@ -403,7 +438,14 @@ Error NativeProcessNetBSD::Resume(const 
+@@ -389,10 +424,12 @@ Error NativeProcessNetBSD::Resume(const 
+     return Error();
+   }
+ 
++  Error error;
++
+   switch (action->state) {
+   case eStateRunning: {
+     // Run the thread, possibly feeding it the signal.
+-    Error error = NativeProcessNetBSD::PtraceWrapper(PT_CONTINUE, GetID(),
++    error = NativeProcessNetBSD::PtraceWrapper(PT_CONTINUE, GetID(),
+                                                      (void *)1, action->signal);
+     if (!error.Success())
+       return error;
+@@ -403,7 +440,14 @@ Error NativeProcessNetBSD::Resume(const 
      break;
    }
    case eStateStepping:
 -    return Error("Not implemented");
 +    // Run the thread, possibly feeding it the signal.
-+    Error error = NativeProcessNetBSD::PtraceWrapper(PT_STEP, GetID(),(void *)1, action->signal);
++    error = NativeProcessNetBSD::PtraceWrapper(PT_STEP, GetID(),(void *)1, action->signal);
 +    if (!error.Success())
 +      return error;
 +    for (const auto &thread_sp : m_threads) {
 +      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStepping();
 +    }
-+    SetState(eStateStepping, true)
++    SetState(eStateStepping, true);
      break;
  
    case eStateSuspended:
-@@ -850,9 +892,6 @@ NativeThreadNetBSDSP NativeProcessNetBSD
+@@ -850,9 +894,6 @@ NativeThreadNetBSDSP NativeProcessNetBSD
  ::pid_t NativeProcessNetBSD::Attach(lldb::pid_t pid, Error &error) {
    Log *log(GetLogIfAllCategoriesSet(LIBLLDB_LOG_PROCESS));
  
