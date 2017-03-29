@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h.orig	2017-03-29 00:14:15.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD.h
-@@ -37,13 +37,26 @@ public:
+@@ -37,13 +37,24 @@ public:
  protected:
    virtual Error ReadGPR();
    virtual Error WriteGPR();
@@ -16,9 +16,7 @@ $NetBSD$
    }
 +
 +  virtual void *GetFPRBuffer() { return nullptr; }
-+  virtual size_t GetFPRSize() {
-+    return 0;
-+  }
++  virtual size_t GetFPRSize() { return 0; }
 +
    virtual Error DoReadGPR(void *buf);
    virtual Error DoWriteGPR(void *buf);
