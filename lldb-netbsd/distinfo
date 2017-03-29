@@ -14,7 +14,6 @@ RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
 SHA1 (patch-source_CMakeLists.txt) = 5dacabc3f39c23bdfd432b5a4895866157b97aa0
 SHA1 (patch-source_Host_common_Host.cpp) = 7d48b8bb1e4350ba6d3ddc6357b9b8dc82d6b32d
-SHA1 (patch-source_Host_netbsd_Host.cpp) = 92ea9aa9c21d11126e7532a860e59f408175d8d4
 SHA1 (patch-source_Plugins_DynamicLoader_POSIX-DYLD_DYLDRendezvous.cpp) = 32d683eb388ded96e7f9aedec827202b5b056392
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp) = 1915bc4243ca42d50d0014d076dddf3a412ab4a2
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD.cpp) = 1c4e5f6f6bf6f665ed659b195de02f7ca26827c9
