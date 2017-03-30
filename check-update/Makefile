@@ -53,7 +53,6 @@ SUBST_VARS.path=	CHECK_UPDATE_DIR PREFIX
 REPLACE_PERL+=	${INSTALLATION_SCRIPT}
 
 do-install:
-
 	(cd ${WRKSRC};  ${INSTALL_SCRIPT} check-update ${DESTDIR}${PREFIX}/sbin )
 
 .for i in ${INSTALLATION_SCRIPT}
@@ -71,5 +70,6 @@ do-install:
 .for i in ${MAKE_SCRIPTS}
 	(cd ${WRKSRC};	${INSTALL_SCRIPT} ${i} ${DESTDIR}${PREFIX}/${EGDIR})
 .endfor
+
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/bsd.pkg.mk"
