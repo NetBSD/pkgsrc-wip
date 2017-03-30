@@ -1,0 +1,21 @@
+@comment $NetBSD$
+bin/daligner
+bin/daligner_p
+bin/DAPipe.py
+bin/DAPI.py
+bin/DB2Falcon
+bin/DBLA_to_falcon.py
+bin/HPCdaligner
+bin/HPCmapper
+bin/LA4Falcon
+bin/LAcat
+bin/LAcheck
+bin/LAmerge
+bin/LAPipe.py
+bin/LAPI.py
+bin/LAshow
+bin/LAsort
+bin/LAsplit
+include/align.h
+include/filter.h
+lib/libdaligner.a

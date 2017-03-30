@@ -458,6 +458,7 @@ SUBDIR+=	d-feet
 SUBDIR+=	d1x-rebirth
 SUBDIR+=	d2x-rebirth
 SUBDIR+=	d4x
+SUBDIR+=	daligner
 SUBDIR+=	daphne
 SUBDIR+=	daq
 SUBDIR+=	darcnes-svgalib
