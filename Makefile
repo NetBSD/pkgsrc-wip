@@ -1863,6 +1863,7 @@ SUBDIR+=	metasploit
 SUBDIR+=	mg-cvs
 SUBDIR+=	mg-lsh
 SUBDIR+=	mic-paren
+SUBDIR+=	microbiomeutil
 SUBDIR+=	microblog-purple
 SUBDIR+=	microcom
 SUBDIR+=	microtetris
