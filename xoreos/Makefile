@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/xoreos-${PKGVERSION_NOREV}
 USE_TOOLS+=	aclocal autoconf autoheader automake gmake
+USE_LIBTOOL=	YES
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
