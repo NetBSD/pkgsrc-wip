@@ -11,7 +11,7 @@ COMMENT=	Side-scrolling shoot 'em up space game
 LICENSE=	gnu-gpl-v3 AND public-domain AND cc-by-sa-v3.0 AND cc0-1.0-universal
 
 USE_LANGUAGES=	c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 BUILD_MAKE_FLAGS+=	BINDIR=${PREFIX}/bin/
 INSTALL_MAKE_FLAGS+=	BINDIR=${PREFIX}/bin/
