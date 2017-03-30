@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 DEPENDS+=       httping-[0-9]*:../../net/httping
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	curl-[0-9]*:../../www/curl
+DEPENDS+=	w3m-[0-9]*:../../www/w3m
 DEPENDS+=       p5-Algorithm-Diff-[0-9]*:../../devel/p5-Algorithm-Diff
 DEPENDS+=	ruby[0-9]*-base-[0-9]*:../../lang/${RUBY_PKGPREFIX}-base
 DEPENDS+=	p5-Algorithm-Diff-[0-9]*:../../devel/p5-Algorithm-Diff
