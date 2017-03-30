@@ -1,7 +1,8 @@
 #!/bin/sh
-MAKEDIR=${MAKEDIR}
+WRKDIR_FOR_MAKE=${WRKDIR_FOR_MAKE}
 MKDIR=${MKDIR}
 
-if [ ! -d ${MAKEDIR} ]; then
-${MKDIR} -p ${MAKEDIR}
+if [ ! -d ${WRKDIR_FOR_MAKE} ]; then
+${MKDIR} -p ${WRKDIR_FOR_MAKE}
+${MKDIR} -p ${WRKDIR_FOR_MAKE}/htdocs
 fi

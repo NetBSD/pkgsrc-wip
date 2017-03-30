@@ -21,15 +21,19 @@ USE_TOOLS+=	perl:run
 NO_BUILD=       YES
 
 CHECK_UPDATE_DIR= share/check-update
-MAKEDIR=	${VARBASE}/check-update
+WRKDIR_FOR_MAKE=	${VARBASE}/check-update
 EGDIR=		share/examples/check-update
 
-CONF_FILES+=	${EGDIR}/Makefile	   ${MAKEDIR}/Makefile
-CONF_FILES+=	${EGDIR}/environment-sample.mk	${MAKEDIR}/environment.mk
-CONF_FILES+=	${EGDIR}/check-update-sample.sh   ${MAKEDIR}/check-update.sh
-CONF_FILES+=	${EGDIR}/cd-and-sh-sample ${MAKEDIR}/cd-and-sh
+CONF_FILES+=	${EGDIR}/Makefile	   	  ${WRKDIR_FOR_MAKE}/Makefile
+CONF_FILES+=	${EGDIR}/environment-sample.mk	  ${WRKDIR_FOR_MAKE}/environment.mk
+CONF_FILES+=	${EGDIR}/check-update-sample.sh   ${WRKDIR_FOR_MAKE}/check-update.sh
+CONF_FILES+=	${EGDIR}/cd-and-sh-sample         ${WRKDIR_FOR_MAKE}/cd-and-sh
 
-OWN_DIRS+=	${MAKEDIR}
+# see INSTALL file also
+OWN_DIRS+=	${WRKDIR_FOR_MAKE}
+OWN_DIRS+=	${WRKDIR_FOR_MAKE}/htdocs
+OWN_DIRS_PERMS+=${WRKDIR_FOR_MAKE}        ${SHAREOWN} ${SHAREGRP} 0755
+OWN_DIRS_PERMS+=${WRKDIR_FOR_MAKE}/htdocs ${SHAREOWN} ${SHAREGRP} 0755
 
 MAKE_FILES=	Makefile environment-sample.mk
 MAKE_SCRIPTS=	cd-and-sh-sample check-update-sample.sh

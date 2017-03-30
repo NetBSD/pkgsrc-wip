@@ -23,3 +23,11 @@ CF-S9@makoto 21:23:15/170329(..wip/check-update)% (cd /var/check-update/; make)
 mkdir: /var/check-update/htdocs/.20170329-12: No such file or directory
 *** Error code 1
 ----------------------
+
+
+* on 2017-03-30 ( my case, using non-standard path /export/CHROOT/usr/pkgsrc)
+   ----------------------
+   sudo pkg_delete -f check-update && make clean && \
+   make package-install && \
+   ( cd /var/check-update; env PKGSRC=/export/CHROOT/usr/pkgsrc make)
+   ----------------------
