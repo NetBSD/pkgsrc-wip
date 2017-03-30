@@ -310,6 +310,7 @@ SUBDIR+=	cataclysm-dda
 SUBDIR+=	cb2bib
 SUBDIR+=	ccnet-server
 SUBDIR+=	ccrypt
+SUBDIR+=	cdbfasta
 SUBDIR+=	cddlib
 SUBDIR+=	cde
 SUBDIR+=	cdirip

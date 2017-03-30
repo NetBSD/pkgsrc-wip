@@ -1,0 +1,61 @@
+$NetBSD$
+
+--- Makefile.orig	2015-02-18 10:08:59.000000000 -0600
++++ Makefile	2015-02-18 10:41:31.000000000 -0600
+@@ -18,7 +18,9 @@
+     MARCH = 
+ endif    
+ 
+-CC      := g++
++# Use the correct compiler (CXX, not CC) and respect the environment
+++CXX?=g++
++
+ BASEFLAGS  = -Wall ${SEARCHDIRS} $(MARCH) -DENABLE_COMPRESSION=0 -D_FILE_OFFSET_BITS=64 \
+ -D_LARGEFILE_SOURCE -fno-exceptions -fno-rtti -fno-strict-aliasing \
+ -D_REENTRANT 
+@@ -33,25 +35,25 @@
+ endif
+ 
+ ifeq ($(findstring nommap,$(MAKECMDGOALS)),)
+-  CFLAGS = $(DBGFLAGS) $(BASEFLAGS)
++  CXXFLAGS = $(DBGFLAGS) $(BASEFLAGS)
+ else
+-  CFLAGS = $(DBGFLAGS) $(BASEFLAGS) -DNO_MMAP
++  CXXFLAGS = $(DBGFLAGS) $(BASEFLAGS) -DNO_MMAP
+ endif
+ 
+ %.o : %.c
+-	${CC} ${CFLAGS} -c $< -o $@
++	${CXX} ${CXXFLAGS} -c $< -o $@
+ 
+ %.o : %.cc
+-	${CC} ${CFLAGS} -c $< -o $@
++	${CXX} ${CXXFLAGS} -c $< -o $@
+ 
+ %.o : %.C
+-	${CC} ${CFLAGS} -c $< -o $@
++	${CXX} ${CXXFLAGS} -c $< -o $@
+ 
+ %.o : %.cpp
+-	${CC} ${CFLAGS} -c $< -o $@
++	${CXX} ${CXXFLAGS} -c $< -o $@
+ 
+ %.o : %.cxx
+-	${CC} ${CFLAGS} -c $< -o $@
++	${CXX} ${CXXFLAGS} -c $< -o $@
+ 
+ # C/C++ linker
+ 
+@@ -65,10 +67,10 @@
+ debug:  all
+ nommap: all
+ cdbfasta:  ./cdbfasta.o ./gcdbz.o $(LIBS) ${GCLDIR}/gcdb.o ${GCLDIR}/GBase.o ${GCLDIR}/GStr.o ${GCLDIR}/GArgs.o
+-	${LINKER} -o $@ ${filter-out %.a %.so, $^} $(LDFLAGS)
++	${CXX} -o $@ ${filter-out %.a %.so, $^} $(LDFLAGS)
+ 
+ cdbyank :  ./cdbyank.o ./gcdbz.o ${GCLDIR}/gcdb.o ${GCLDIR}/GBase.o ${GCLDIR}/GStr.o ${GCLDIR}/GArgs.o
+-	${LINKER} -o $@ ${filter-out %.a %.so, $^} $(LDFLAGS)
++	${CXX} -o $@ ${filter-out %.a %.so, $^} $(LDFLAGS)
+ 
+ # target for removing all object files
+ 

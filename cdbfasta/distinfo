@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (cdbfasta-2010.07.22.tar.gz) = 2419421ab1d753d3bb8778c92236da74fee30526
+RMD160 (cdbfasta-2010.07.22.tar.gz) = c90e0ede03a01bf2da77f9beaa3c97fa7e46ff2a
+SHA512 (cdbfasta-2010.07.22.tar.gz) = 500b3cdf4bf4e21c78a285739c6544e3f2bed377f8e3858c8ace240a9107d765c89cff8004ca2ea001860abc04fc48bc37c03569da5b16115f4419f5fd9bcd5e
+Size (cdbfasta-2010.07.22.tar.gz) = 59735 bytes
+SHA1 (patch-Makefile) = 9ac728af0e7f1149ab1ae226759591df2e34096e
