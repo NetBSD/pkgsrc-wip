@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/SPARQLWrapper-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/SPARQLWrapper-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/SPARQLWrapper-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/SPARQLWrapper-${PKGVERSION}-py2.7.egg-info/requires.txt
+${PYSITELIB}/SPARQLWrapper-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.py
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyc
+${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyo
+${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.py
+${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.pyc
+${PYSITELIB}/SPARQLWrapper/SPARQLExceptions.pyo
+${PYSITELIB}/SPARQLWrapper/SPARQLUtils.py
+${PYSITELIB}/SPARQLWrapper/SPARQLUtils.pyc
+${PYSITELIB}/SPARQLWrapper/SPARQLUtils.pyo
+${PYSITELIB}/SPARQLWrapper/SmartWrapper.py
+${PYSITELIB}/SPARQLWrapper/SmartWrapper.pyc
+${PYSITELIB}/SPARQLWrapper/SmartWrapper.pyo
+${PYSITELIB}/SPARQLWrapper/Wrapper.py
+${PYSITELIB}/SPARQLWrapper/Wrapper.pyc
+${PYSITELIB}/SPARQLWrapper/Wrapper.pyo
+${PYSITELIB}/SPARQLWrapper/__init__.py
+${PYSITELIB}/SPARQLWrapper/__init__.pyc
+${PYSITELIB}/SPARQLWrapper/__init__.pyo
+${PYSITELIB}/SPARQLWrapper/jsonlayer.py
+${PYSITELIB}/SPARQLWrapper/jsonlayer.pyc
+${PYSITELIB}/SPARQLWrapper/jsonlayer.pyo

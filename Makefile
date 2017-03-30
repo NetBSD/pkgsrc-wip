@@ -3516,6 +3516,7 @@ SUBDIR+=	py-spambayes
 SUBDIR+=	py-spams
 SUBDIR+=	py-sparce
 SUBDIR+=	py-spark
+SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-spatialdata
 SUBDIR+=	py-spatious
 SUBDIR+=	py-spectral
