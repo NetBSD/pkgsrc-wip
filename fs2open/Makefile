@@ -15,7 +15,8 @@ WRKSRC=		${WRKDIR}/fs2_open_${PKGVERSION_NOREV:S/./_/g}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	aclocal autoconf automake libtool pkg-config
+USE_TOOLS+=	aclocal autoconf automake pkg-config
+USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS=	bin
 LUA_VERSIONS_ACCEPTED=	51
