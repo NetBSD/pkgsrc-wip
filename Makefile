@@ -3422,6 +3422,7 @@ SUBDIR+=	py-raven
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdf
 SUBDIR+=	py-rdflib-django
+SUBDIR+=	py-rdflib340
 SUBDIR+=	py-rdopkg
 SUBDIR+=	py-rdoupdate
 SUBDIR+=	py-rebound
