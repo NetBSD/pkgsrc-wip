@@ -4316,6 +4316,7 @@ SUBDIR+=	varnish4
 SUBDIR+=	vba-m
 SUBDIR+=	vcftools
 SUBDIR+=	vcg
+SUBDIR+=	vcglib
 SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vee
