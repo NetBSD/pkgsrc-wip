@@ -480,6 +480,7 @@ include/llvm/DebugInfo/PDB/Native/ModStream.h
 include/llvm/DebugInfo/PDB/Native/NamedStreamMap.h
 include/llvm/DebugInfo/PDB/Native/NativeCompilandSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeEnumModules.h
+include/llvm/DebugInfo/PDB/Native/NativeExeSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeRawSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeSession.h
 include/llvm/DebugInfo/PDB/Native/PDBFile.h
@@ -782,6 +783,7 @@ include/llvm/ObjectYAML/DWARFYAML.h
 include/llvm/ObjectYAML/ELFYAML.h
 include/llvm/ObjectYAML/MachOYAML.h
 include/llvm/ObjectYAML/ObjectYAML.h
+include/llvm/ObjectYAML/WasmYAML.h
 include/llvm/ObjectYAML/YAML.h
 include/llvm/Option/Arg.h
 include/llvm/Option/ArgList.h
