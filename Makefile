@@ -469,6 +469,7 @@ SUBDIR+=	datamash
 SUBDIR+=	datapipe
 SUBDIR+=	dates
 SUBDIR+=	davical-git
+SUBDIR+=	dazz_db
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-dfbsd

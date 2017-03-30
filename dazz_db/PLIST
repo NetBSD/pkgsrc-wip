@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/Catrack
+bin/DAM2fasta
+bin/DB2fasta
+bin/DB2quiva
+bin/DBdust
+bin/DBrm
+bin/DBshow
+bin/DBsplit
+bin/DBstats
+bin/fasta2DAM
+bin/fasta2DB
+bin/quiva2DB
+bin/simulator
+include/DB.h
+include/QV.h
+lib/libdazzdb.a
