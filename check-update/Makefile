@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	check-update-0.9.3
+DISTNAME=	check-update-0.9.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makoto-fujiwara/}
 
@@ -54,7 +54,12 @@ REPLACE_PERL+=	${INSTALLATION_SCRIPT}
 do-install:
 
 	(cd ${WRKSRC};  ${INSTALL_SCRIPT} check-update ${DESTDIR}${PREFIX}/sbin )
-.for i in ${INSTALLATION_SCRIPT} ${INSTALLATION_FILE}
+
+.for i in ${INSTALLATION_SCRIPT}
+	(cd ${WRKSRC};	${INSTALL_SCRIPT} ${i} ${DESTDIR}${PREFIX}/${CHECK_UPDATE_DIR} )
+.endfor
+
+.for i in ${INSTALLATION_FILE}
 	(cd ${WRKSRC};	${INSTALL_SCRIPT} ${i} ${DESTDIR}${PREFIX}/${CHECK_UPDATE_DIR} )
 .endfor
 
