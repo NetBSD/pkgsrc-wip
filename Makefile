@@ -3421,6 +3421,7 @@ SUBDIR+=	py-rasterio
 SUBDIR+=	py-raven
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdf
+SUBDIR+=	py-rdfextras
 SUBDIR+=	py-rdflib-django
 SUBDIR+=	py-rdflib340
 SUBDIR+=	py-rdopkg
