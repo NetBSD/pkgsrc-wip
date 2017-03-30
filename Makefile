@@ -3294,6 +3294,7 @@ SUBDIR+=	py-parserutils
 SUBDIR+=	py-path.py
 SUBDIR+=	py-pathlib
 SUBDIR+=	py-pattyrn
+SUBDIR+=	py-pbfalcon
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-pdef
 SUBDIR+=	py-pdfposter
