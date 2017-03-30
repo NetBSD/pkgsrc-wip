@@ -244,6 +244,7 @@ include/clang/Basic/Version.inc
 include/clang/Basic/VersionTuple.h
 include/clang/Basic/VirtualFileSystem.h
 include/clang/Basic/Visibility.h
+include/clang/Basic/XRayLists.h
 include/clang/Basic/arm_neon.inc
 include/clang/CodeGen/BackendUtil.h
 include/clang/CodeGen/CGFunctionInfo.h
@@ -271,6 +272,7 @@ include/clang/Driver/ToolChain.h
 include/clang/Driver/Types.def
 include/clang/Driver/Types.h
 include/clang/Driver/Util.h
+include/clang/Driver/XRayArgs.h
 include/clang/Edit/Commit.h
 include/clang/Edit/EditedSource.h
 include/clang/Edit/EditsReceiver.h
