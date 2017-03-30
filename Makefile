@@ -3369,6 +3369,7 @@ SUBDIR+=	py-pynfo
 SUBDIR+=	py-pynn
 SUBDIR+=	py-pyon
 SUBDIR+=	py-pypedal
+SUBDIR+=	py-pypeflow
 SUBDIR+=	py-pyphant
 SUBDIR+=	py-pypi-browser
 SUBDIR+=	py-pypi-cli
