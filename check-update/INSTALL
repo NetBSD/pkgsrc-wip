@@ -1,0 +1,7 @@
+#!/bin/sh
+MAKEDIR=${MAKEDIR}
+MKDIR=${MKDIR}
+
+if [ ! -d ${MAKEDIR} ]; then
+${MKDIR} -p ${MAKEDIR}
+fi
