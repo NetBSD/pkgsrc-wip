@@ -250,6 +250,7 @@ SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
 SUBDIR+=	bowtie
 SUBDIR+=	bowtie2
+SUBDIR+=	bpcscripts
 SUBDIR+=	bpmcounter
 SUBDIR+=	breeze
 SUBDIR+=	breeze-gtk
