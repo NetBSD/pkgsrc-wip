@@ -7,32 +7,22 @@
 DISTNAME=	rdflib-${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-rdflib-${PORTVERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	${CHEESESHOP}
+# Why isn't this working?
+#MASTER_SITES=	${MASTER_SITE_PYPI:=/R/rdflib/}
+MASTER_SITES=	http://pypi.python.org/packages/source/r/rdflib/
 
+HOMEPAGE=	https://pypi.python.org/pypi/rdflib/
 MAINTAINER=	bacon4000@gmail.com
 
 COMMENT=	Python library for RDF manipulation
-# Double-check this
 LICENSE=	modified-bsd
 
-# Pessimistic assumption.  Test and change if possible.
-MAKE_JOBS_SAFE=	no
-
-# Just assuming C and C++: Adjust this!
-USE_LANGUAGES=	c c++
-PYDISTUTILSPKG=	yes
-
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.1:../../devel/py-pyparsing \
-		${PYPKGPREFIX}-html5lib>=0:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.1:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-html5lib>=0:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-sparqlwrapper:../../wip/py-sparqlwrapper
 
 PORTVERSION=	3.4.0
-DATADIR=	${PREFIX}/share/rdflib
-DOCSDIR=	${PREFIX}/share/doc/rdflib
-CHEESESHOP=	http://pypi.python.org/packages/source/r/rdflib/
 
-#AUTO_MKDIRS=	yes
-
-.include "../../lang/python/distutils.mk"
-.include "../../wip/py-sparqlwrapper/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../wip/py-isodate/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
