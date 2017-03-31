@@ -3991,6 +3991,7 @@ SUBDIR+=	smallbasic
 SUBDIR+=	smallbasic-gui
 SUBDIR+=	smap
 SUBDIR+=	smc
+SUBDIR+=	smithwaterman
 SUBDIR+=	smplayer
 SUBDIR+=	smproxy
 SUBDIR+=	smstools
