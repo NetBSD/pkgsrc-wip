@@ -40,7 +40,7 @@ MAKE_FILES=	Makefile environment-sample.mk
 MAKE_SCRIPTS=	cd-and-sh-sample check-update-sample.sh
 
 INSTALLATION_SCRIPT+=	summary-diff collect-stats fork-w3m merge-check-update
-INSTALLATION_FILE=	MaturedList
+INSTALLATION_FILES=	MaturedList
 INSTALLATION_DIRS+=	sbin share/check-update ${EGDIR}
 
 SUBST_CLASSES+=		path
@@ -59,8 +59,8 @@ do-install:
 	(cd ${WRKSRC};	${INSTALL_SCRIPT} ${i} ${DESTDIR}${PREFIX}/${CHECK_UPDATE_DIR} )
 .endfor
 
-.for i in ${INSTALLATION_FILE}
-	(cd ${WRKSRC};	${INSTALL_SCRIPT} ${i} ${DESTDIR}${PREFIX}/${CHECK_UPDATE_DIR} )
+.for i in ${INSTALLATION_FILES}
+	(cd ${WRKSRC};	${INSTALL_DATA}   ${i} ${DESTDIR}${PREFIX}/${CHECK_UPDATE_DIR} )
 .endfor
 
 .for i in ${MAKE_FILES}
