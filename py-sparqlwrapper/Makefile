@@ -7,22 +7,21 @@
 DISTNAME=	SPARQLWrapper-${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-sparqlwrapper-${PORTVERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	${CHEESESHOP}
-
+MASTER_SITES=	${MASTER_SITE_PYPI:=/S/SPARQLWrapper/}
 MAINTAINER=	bacon4000@gmail.com
 
+HOMEPAGE=	http://rdflib.github.io/sparqlwrapper/
 COMMENT=	SPARQL endpoint interface to Python
-#LICENSE=	
+LICENSE=	w3c
 
 # Pessimistic assumption.  Test and change if possible.
-MAKE_JOBS_SAFE=	no
+# MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
 # USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes
 
 PORTVERSION=	1.6.2
-CHEESESHOP=	http://pypi.python.org/packages/source/S/SPARQLWrapper/
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
