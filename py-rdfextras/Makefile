@@ -7,27 +7,20 @@
 DISTNAME=	v${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-rdfextras-${PORTVERSION}
 CATEGORIES=	python
-MASTER_SITES=	https://github.com/RDFLib/rdfextras/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=RDFLib/rdfextras/archive/}
 
 MAINTAINER=	bacon4000@gmail.com
 
-COMMENT=
-#LICENSE=	
+COMMENT=	Collection of packages providing extras based on RDFLib 3
+LICENSE=	original-bsd
 
-# Pessimistic assumption.  Test and change if possible.
-MAKE_JOBS_SAFE=	no
-
-# Just assuming C and C++: Adjust this!
-USE_LANGUAGES=	c c++
-PYDISTUTILSPKG=	yes
+DEPENDS+=	${PYPKGPREFIX}-rdflib-3.4.0:../../wip/py-rdflib340
 
 WRKSRC=		${WRKDIR}/rdfextras-${PORTVERSION}
 
+EGG_NAME=	rdfextras-${PORTVERSION}
+
 PORTVERSION=	0.4
 
-#AUTO_MKDIRS=	yes
-
-.include "../../lang/python/distutils.mk"
-# FIXME: Actually requires exactly rdflib 3.4.0, but bl3 doesn't take ==
-.include "../../wip/py-rdflib340/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
