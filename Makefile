@@ -714,6 +714,7 @@ SUBDIR+=	farbfeld
 SUBDIR+=	farsi-ttf
 SUBDIR+=	fasm
 SUBDIR+=	fasta
+SUBDIR+=	fastaunique
 SUBDIR+=	fastbit
 SUBDIR+=	fasthack
 SUBDIR+=	fastjet
