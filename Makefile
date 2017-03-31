@@ -806,6 +806,7 @@ SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fs2open
 SUBDIR+=	fsharp
 SUBDIR+=	fslsfonts
+SUBDIR+=	fsom
 SUBDIR+=	fstobdf
 SUBDIR+=	fswatch
 SUBDIR+=	fswebcam
