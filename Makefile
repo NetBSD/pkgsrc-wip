@@ -785,6 +785,7 @@ SUBDIR+=	fortunes-it
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
+SUBDIR+=	freebayes
 SUBDIR+=	freecad
 SUBDIR+=	freecell
 SUBDIR+=	freedict-tools-xsl
