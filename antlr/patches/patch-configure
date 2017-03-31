@@ -1,6 +1,6 @@
 $NetBSD$
 
-$FreeBSD: head/devel/antlr/files/patch-configure 340725 2014-01-22 17:40:44Z mat $
+# Non-portable == in shell script
 
 --- configure.orig	2006-11-01 21:37:18.000000000 +0000
 +++ configure

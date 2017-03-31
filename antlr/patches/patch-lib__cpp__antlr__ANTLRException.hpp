@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Missing header
+
 --- lib/cpp/antlr/ANTLRException.hpp.orig	2006-11-01 21:37:17.000000000 +0000
 +++ lib/cpp/antlr/ANTLRException.hpp
 @@ -9,6 +9,7 @@
