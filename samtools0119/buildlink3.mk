@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	samtools01
 SAMTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.samtools01+=	samtools01>=0.1.19
-BUILDLINK_PKGSRCDIR.samtools01?=	../../uwm-pkgsrc-wip/samtools0119
+BUILDLINK_PKGSRCDIR.samtools01?=	../../wip/samtools0119
 .endif	# SAMTOOLS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-samtools01
