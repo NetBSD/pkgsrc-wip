@@ -1951,6 +1951,7 @@ SUBDIR+=	mu
 SUBDIR+=	mu-cite
 SUBDIR+=	muine
 SUBDIR+=	mule11
+SUBDIR+=	multichoose
 SUBDIR+=	multiminer
 SUBDIR+=	multisync
 SUBDIR+=	multisync-backup

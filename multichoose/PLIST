@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/cmultichoose
+bin/multichoose
+bin/multipermute
+include/multichoose/multichoose.h
+include/multichoose/multipermute.h
