@@ -4330,6 +4330,7 @@ SUBDIR+=	vamps
 SUBDIR+=	varnish
 SUBDIR+=	varnish4
 SUBDIR+=	vba-m
+SUBDIR+=	vcflib
 SUBDIR+=	vcftools
 SUBDIR+=	vcg
 SUBDIR+=	vcglib
