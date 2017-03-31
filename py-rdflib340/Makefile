@@ -7,9 +7,7 @@
 DISTNAME=	rdflib-${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-rdflib-${PORTVERSION}
 CATEGORIES=	textproc
-# Why isn't this working?
-#MASTER_SITES=	${MASTER_SITE_PYPI:=/R/rdflib/}
-MASTER_SITES=	http://pypi.python.org/packages/source/r/rdflib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
 HOMEPAGE=	https://pypi.python.org/pypi/rdflib/
 MAINTAINER=	bacon4000@gmail.com
