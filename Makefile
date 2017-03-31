@@ -477,6 +477,7 @@ SUBDIR+=	dbf
 SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer
 SUBDIR+=	ddate
+SUBDIR+=	ddocent
 SUBDIR+=	deadbeef
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib

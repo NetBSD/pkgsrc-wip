@@ -1,0 +1,24 @@
+$NetBSD$
+
+--- dDocent.orig	2015-11-30 19:35:04.016417718 -0600
++++ dDocent	2015-11-30 19:40:47.765418264 -0600
+@@ -27,15 +27,15 @@ do
+ 	fi
+ done
+ 
+-if find ${PATH//:/ } -maxdepth 1 -name trimmomatic*jar 2> /dev/null| grep -q 'trim' ; then
+-	TRIMMOMATIC=$(find ${PATH//:/ } -maxdepth 1 -name trimmomatic*jar 2> /dev/null | head -1)
++if [ -e %%PREFIX%%/lib/java/trimmomatic-0.35.jar ]; then
++	TRIMMOMATIC=%%PREFIX%%/lib/java/trimmomatic-0.35.jar
+ 	else
+     echo "The dependency trimmomatic is not installed or is not in your" '$PATH'"."
+     NUMDEP=$((NUMDEP + 1))
+ 	fi
+ 	
+-if find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | grep -q 'Tru' ; then
+-	ADAPTERS=$(find ${PATH//:/ } -maxdepth 1 -name TruSeq2-PE.fa 2> /dev/null | head -1)
++if [ -e %%PREFIX%%/share/Trimmomatic/adapters/TruSeq2-PE.fa ]; then
++	ADAPTERS=%%PREFIX%%/share/Trimmomatic/adapters/TruSeq2-PE.fa
+ 	else
+     echo "The file listing adapters (included with trimmomatic) is not installed or is not in your" '$PATH'"."
+     NUMDEP=$((NUMDEP + 1))
