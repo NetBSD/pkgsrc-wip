@@ -714,6 +714,7 @@ SUBDIR+=	farsi-ttf
 SUBDIR+=	fasm
 SUBDIR+=	fasta
 SUBDIR+=	fastbit
+SUBDIR+=	fasthack
 SUBDIR+=	fastjet
 SUBDIR+=	fastool
 SUBDIR+=	fastrpc
