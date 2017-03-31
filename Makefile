@@ -4111,6 +4111,7 @@ SUBDIR+=	syx
 SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	ta-lib
+SUBDIR+=	tabixpp
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	taglib-sharp
 SUBDIR+=	tagtool
