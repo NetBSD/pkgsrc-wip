@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/09/05 15:01:33 outpaddling Exp $
+# $NetBSD$
 
-BUILDLINK_TREE+=	samtools
+BUILDLINK_TREE+=	samtools01
 
 .if !defined(SAMTOOLS_BUILDLINK3_MK)
 SAMTOOLS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.samtools+=	samtools>=0.1.19
-BUILDLINK_PKGSRCDIR.samtools?=	../../wip/samtools
+BUILDLINK_API_DEPENDS.samtools01+=	samtools01>=0.1.19
+BUILDLINK_PKGSRCDIR.samtools01?=	../../uwm-pkgsrc-wip/samtools0119
 .endif	# SAMTOOLS_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-samtools
+BUILDLINK_TREE+=	-samtools01
