@@ -1,5 +1,3 @@
 pypeFLOW is a lightweight and reusable make/flow data process library written
 in Python. Features multiple concurrent task scheduling and a reasonable
 simple interface for declarative programming.
-
-WWW: http://github.com/PacificBiosciences/pypeFLOW

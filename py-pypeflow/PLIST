@@ -1,10 +1,13 @@
 @comment $NetBSD$
-${PYSITELIB}/pypeflow-0.1.1-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/pypeflow-0.1.1-py2.7.egg-info/not-zip-safe
-${PYSITELIB}/pypeflow-0.1.1-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/pypeflow-0.1.1-py2.7.egg-info/requires.txt
-${PYSITELIB}/pypeflow-0.1.1-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/pypeflow-0.1.1-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pypeflow/__init__.py
+${PYSITELIB}/pypeflow/__init__.pyc
+${PYSITELIB}/pypeflow/__init__.pyo
 ${PYSITELIB}/pypeflow/common.py
 ${PYSITELIB}/pypeflow/common.pyc
 ${PYSITELIB}/pypeflow/common.pyo
@@ -14,9 +17,6 @@ ${PYSITELIB}/pypeflow/controller.pyo
 ${PYSITELIB}/pypeflow/data.py
 ${PYSITELIB}/pypeflow/data.pyc
 ${PYSITELIB}/pypeflow/data.pyo
-${PYSITELIB}/pypeflow/__init__.py
-${PYSITELIB}/pypeflow/__init__.pyc
-${PYSITELIB}/pypeflow/__init__.pyo
 ${PYSITELIB}/pypeflow/task.py
 ${PYSITELIB}/pypeflow/task.pyc
 ${PYSITELIB}/pypeflow/task.pyo
