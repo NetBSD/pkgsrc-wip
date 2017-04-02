@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	translate-shell-0.9.5
+DISTNAME=	translate-shell-0.9.6.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soimort/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/soimort/translate-shell/
+HOMEPAGE=	https://www.soimort.org/translate-shell/
 COMMENT=	Command-line translator
 LICENSE=	unlicense
 

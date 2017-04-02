@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (translate-shell-0.9.5.tar.gz) = 7f5b191e5623c90e09bce5df83a635380c550c84
-RMD160 (translate-shell-0.9.5.tar.gz) = 0c567a84eb78906fa00d3bc46c687850fb78893c
-SHA512 (translate-shell-0.9.5.tar.gz) = b304bfc59ec2f373e566d694ec3fabd35abf64c8d3ea956f34ee7592716204aa64c3113f4b994c34fd1dc16b61b8f5b074beae19646489317580c0352a2a6ac4
-Size (translate-shell-0.9.5.tar.gz) = 69030 bytes
+SHA1 (translate-shell-0.9.6.1.tar.gz) = 00e90a85cee2e316204c1d1c3f780fc1cc26d77b
+RMD160 (translate-shell-0.9.6.1.tar.gz) = f576db46d4c9690ce9da03072e9b60debe0cd1c2
+SHA512 (translate-shell-0.9.6.1.tar.gz) = c4819dca5c5da176822b1e52a0fa8b77cea1f6f170aaeb39413f7a1f2983c825449822be28296ddb1eb9b68ae4164a3b5bb839e7308b4607ac8898fbb1cd86b9
+Size (translate-shell-0.9.6.1.tar.gz) = 69529 bytes
