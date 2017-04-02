@@ -2,7 +2,7 @@
 
 CATEGORIES=	net
 GITHUB_PROJECT=	seafile
-VERSION=	6.0.3
+VERSION=	6.0.4
 DISTNAME=	v${VERSION}
 PKGNAME=	seafile-client-${VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=haiwen/}
@@ -28,14 +28,16 @@ USE_TOOLS+=	pkg-config automake aclocal autoheader autoconf gmake
 CONFLICTS=	seafile-server-[0-9]*
 
 SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
+SUBST_STAGE.python=	post-patch
+SUBST_MESSAGE.python=	Fixing Python path
 SUBST_FILES.python=	app/seaf-cli daemon/seaf-daemon
-SUBST_SED.python=	-e 's,/usr/bin/env python,${PYTHONBIN},'
+SUBST_SED.python=	-e "s,/usr/bin/env python,${PYTHONBIN},"
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	libtoolize; aclocal; autoheader; automake -a --foreign -i; autoconf
 
+.include "../../lang/python/egg.mk"
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../wip/ccnet-server/buildlink3.mk"

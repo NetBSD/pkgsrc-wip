@@ -1,5 +1,5 @@
 # $NetBSD$
-VERSION=	6.0.7
+VERSION=	6.0.9
 PKGNAME=	ccnet-server-${VERSION}
 CATEGORIES=	net
 GITHUB_TAG=	v${VERSION}-server
