@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:21:33 yhardy Exp $
 
-SHA1 (refkeen-src-20150313.tar.bz2) = 67d72d2c855141bdd4a265359b2e63b44029e1fd
-RMD160 (refkeen-src-20150313.tar.bz2) = f1cab9c84f8cf5130d9d9c7f7362d7349d521e88
-Size (refkeen-src-20150313.tar.bz2) = 734211 bytes
+SHA1 (refkeen-20170401.tar.gz) = bb17078e8852e7e9ece3612bb6f6b4594386cfee
+RMD160 (refkeen-20170401.tar.gz) = 91b5d0663d42b3be9123929035801efcea456e83
+SHA512 (refkeen-20170401.tar.gz) = 9ecef406a794191c7e3cd24e411740412ea70d6c6c6446aecb075b6c5ae360347d96a867da626db57b538dd65ee8147d04930c8f9b600ae57dc0a36b4b9a23a2
+Size (refkeen-20170401.tar.gz) = 3013389 bytes

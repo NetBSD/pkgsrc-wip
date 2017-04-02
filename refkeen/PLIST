@@ -1,12 +1,7 @@
 @comment $NetBSD: PLIST,v 1.1 2015/08/19 19:21:33 yhardy Exp $
-bin/refcat3d-100
-bin/refcat3d-122
-bin/refcatabyss-113
-bin/refcatabyss-124
-bin/refcatapoc-101
-bin/refcatarm-102
-bin/refkdreams-cga105
-bin/refkdreams-reg193
-bin/refkdreams-shar113
-bin/refkdreams-shar120
+bin/reflection-cat3d
+bin/reflection-catabyss
+bin/reflection-catapoc
+bin/reflection-catarm
+bin/reflection-kdreams
 share/doc/${PKGNAME}/README.md

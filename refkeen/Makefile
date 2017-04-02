@@ -1,12 +1,11 @@
 # $NetBSD: Makefile,v 1.1 2015/08/19 19:21:33 yhardy Exp $
+https://github.com/NY00123/refkeen/archive/release-20170401.tar.gz
 
-DISTNAME=	refkeen-src-20150313
-PKGNAME=	${DISTNAME:S/-src//}
+DISTNAME=	refkeen-20170401
+GITHUB_PROJECT=	refkeen
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NY00123/}
-EXTRACT_SUFX=	.tar.bz2
-GITHUB_PROJECT=	refkeen
-GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
+GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NY00123/refkeen/
@@ -15,16 +14,11 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
-REFKEEN_PROGS+= refcat3d-100
-REFKEEN_PROGS+= refcat3d-122
-REFKEEN_PROGS+= refcatabyss-113
-REFKEEN_PROGS+= refcatabyss-124
-REFKEEN_PROGS+= refcatapoc-101
-REFKEEN_PROGS+= refcatarm-102
-REFKEEN_PROGS+= refkdreams-cga105
-REFKEEN_PROGS+= refkdreams-reg193
-REFKEEN_PROGS+= refkdreams-shar113
-REFKEEN_PROGS+= refkdreams-shar120
+REFKEEN_PROGS+= reflection-cat3d
+REFKEEN_PROGS+= reflection-catabyss
+REFKEEN_PROGS+= reflection-catapoc
+REFKEEN_PROGS+= reflection-catarm
+REFKEEN_PROGS+= reflection-kdreams
 
 INSTALLATION_DIRS=	bin share/doc/${PKGNAME}
 
@@ -34,5 +28,6 @@ do-install:
 	done
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/
 
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
