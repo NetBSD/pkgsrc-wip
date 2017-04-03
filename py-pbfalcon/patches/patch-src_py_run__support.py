@@ -1,3 +1,7 @@
+$NetBSD$
+
+# Add portable shebang
+
 --- src/py/run_support.py.orig	2015-10-28 12:31:41.000000000 -0500
 +++ src/py/run_support.py	2015-10-28 12:32:00.000000000 -0500
 @@ -33,6 +33,7 @@

@@ -28,15 +28,19 @@ COMMENT=	Experimental PacBio diploid assembler
 LICENSE=	modified-bsd
 
 # Pessimistic assumption.  Test and change if possible.
-MAKE_JOBS_SAFE=	no
+# MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
-PYDISTUTILSPKG=	yes
+# PYDISTUTILSPKG=	yes
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=0:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-pypeflow>=0:../../wip/py-pypeflow
+DEPENDS+=	${PYPKGPREFIX}-rdflib-3.4.0:../../wip/py-rdflib340
+DEPENDS+=	${PYPKGPREFIX}-rdfextras>=0:../../wip/py-rdfextras
 
 PORTVERSION=	2015.10.28
+EGG_NAME=	falcon_kit-0.4.0
 
 post-patch:
 	for f in ${WRKSRC}/src/py_scripts/*.py; do \
@@ -45,10 +49,7 @@ post-patch:
 		${MV} -f $$f.temp $$f; \
 	done
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../wip/dazz_db/buildlink3.mk"
 .include "../../wip/daligner/buildlink3.mk"
-.include "../../wip/py-pypeflow/buildlink3.mk"
-.include "../../wip/py-rdflib340/buildlink3.mk"
-.include "../../wip/py-rdfextras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
