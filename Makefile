@@ -3090,7 +3090,6 @@ SUBDIR+=	py-ionize
 SUBDIR+=	py-iprogress
 SUBDIR+=	py-ipython-sql
 SUBDIR+=	py-irco
-SUBDIR+=	py-isodate
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-idavoll
