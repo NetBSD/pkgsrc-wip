@@ -5,7 +5,7 @@
 ###########################################################
 
 DISTNAME=	samtools-${PORTVERSION}
-PKGNAME=	samtools01-${PORTVERSION}
+PKGNAME=	samtools0119-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=samtools/}
 EXTRACT_SUFX=	.tar.bz2
