@@ -3176,7 +3176,6 @@ SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
 SUBDIR+=	py-mailingstats
 SUBDIR+=	py-mailq
-SUBDIR+=	py-mando
 SUBDIR+=	py-mark
 SUBDIR+=	py-markovchain
 SUBDIR+=	py-math-snappy
