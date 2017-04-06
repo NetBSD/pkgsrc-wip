@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	translate-shell-0.9.6.1
+DISTNAME=	translate-shell-0.9.6.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soimort/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
