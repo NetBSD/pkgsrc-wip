@@ -9,7 +9,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gmarcais/}
 MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://www.genome.umd.edu/jellyfish.html
-DISTNAME=	jellyfish-v${PORTVERSION}
+GITHUB_TAG=	v${PORTVERSION}
 
 COMMENT=	Fast, memory-efficient counting of k-mers in DNA
 LICENSE=	gnu-gpl-v3
