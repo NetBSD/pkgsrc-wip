@@ -1,1 +1,3 @@
 Clean up and test
+
+Fails if git is not installed.  Patch to eliminate the check.
