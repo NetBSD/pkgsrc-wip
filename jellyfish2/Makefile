@@ -7,7 +7,7 @@
 DISTNAME=	jellyfish-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gmarcais/}
-MAINTAINER=	dsiercks@uwm.edu
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://www.genome.umd.edu/jellyfish.html
 DISTNAME=	jellyfish-v${PORTVERSION}
 
@@ -15,10 +15,11 @@ COMMENT=	Fast, memory-efficient counting of k-mers in DNA
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS=	autoreconf autoconf automake
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+DEPENDS+=	yaggo>=0:../../wip/yaggo
 
 CFLAGS=		-fopenmp
 
@@ -27,10 +28,8 @@ CXXFLAGS+=	-std=c++0x
 WRKSRC=		${WRKDIR}/Jellyfish-${PORTVERSION}
 
 PORTVERSION=	2.2.6
-INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1 share/doc share/examples
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
