@@ -4516,6 +4516,7 @@ SUBDIR+=	xxdiff
 SUBDIR+=	xxhash
 SUBDIR+=	yabar
 SUBDIR+=	yafray
+SUBDIR+=	yaggo
 SUBDIR+=	yakuake
 SUBDIR+=	yateclient
 SUBDIR+=	yauap

@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Some GCC installations appear to be missing certain to_string() morphs
+
 --- include/jellyfish/file_header.hpp.orig	2013-12-13 19:04:16 UTC
 +++ include/jellyfish/file_header.hpp
 @@ -21,6 +21,8 @@

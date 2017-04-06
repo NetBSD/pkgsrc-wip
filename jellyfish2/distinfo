@@ -1,5 +1,7 @@
 $NetBSD$
 
-SHA1 (jellyfish-2.2.0.tar.gz) = 9ac4817aed0c61a1819b913193b0e312fa4fa9bd
-RMD160 (jellyfish-2.2.0.tar.gz) = 01e5847c72bf1bf92989b1158988605b1155aec4
-Size (jellyfish-2.2.0.tar.gz) = 1085913 bytes
+SHA1 (jellyfish-v2.2.6.tar.gz) = 8654c50c56b506da24dd4a44fcbdc94c953e88da
+RMD160 (jellyfish-v2.2.6.tar.gz) = 238cbcf4340e5777e7a58e33e92979f07e069e0d
+SHA512 (jellyfish-v2.2.6.tar.gz) = 7d61d823feaaab05fbb43eaca22823a988bd05da318431e74092b42c7e33ce39f387ac15db30906341f084223b7c2726e199592555aea4b21a5b517e8d0c08f9
+Size (jellyfish-v2.2.6.tar.gz) = 660858 bytes
+SHA1 (patch-include_jellyfish_file__header.hpp) = 6876cf0e62b6c87118effe752d559e19b6c89cb5

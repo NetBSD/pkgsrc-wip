@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/yaggo
+man/man1/yaggo.1
+share/doc/yaggo/README.md
