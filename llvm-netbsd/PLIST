@@ -80,6 +80,7 @@ include/llvm/ADT/AllocatorList.h
 include/llvm/ADT/ArrayRef.h
 include/llvm/ADT/BitVector.h
 include/llvm/ADT/BitmaskEnum.h
+include/llvm/ADT/BreadthFirstIterator.
 include/llvm/ADT/CachedHashString.h
 include/llvm/ADT/DAGDeltaAlgorithm.h
 include/llvm/ADT/DeltaAlgorithm.h
@@ -203,6 +204,7 @@ include/llvm/Analysis/ModuleSummaryAnalysis.h
 include/llvm/Analysis/ObjCARCAliasAnalysis.h
 include/llvm/Analysis/ObjCARCAnalysisUtils.h
 include/llvm/Analysis/ObjCARCInstKind.h
+include/llvm/Analysis/ObjectUtils.h
 include/llvm/Analysis/OptimizationDiagnosticInfo.h
 include/llvm/Analysis/OrderedBasicBlock.h
 include/llvm/Analysis/PHITransAddr.h
@@ -767,6 +769,7 @@ include/llvm/Object/ELFObjectFile.h
 include/llvm/Object/ELFTypes.h
 include/llvm/Object/Error.h
 include/llvm/Object/IRObjectFile.h
+include/llvm/Object/IRSymtab.h
 include/llvm/Object/MachO.h
 include/llvm/Object/MachOUniversal.h
 include/llvm/Object/ModuleSummaryIndexObjectFile.h
