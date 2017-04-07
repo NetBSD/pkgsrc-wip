@@ -1,11 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	purple-facebook-0.9.0
+PKGNAME=	purple-facebook-0.9.3
 CATEGORIES=	chat
-DISTNAME=	purple-facebook-0.9.0-c9b74a765767
+DISTNAME=	purple-facebook-0.9.3-c9b74a765767
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=jgeboski/}
 GITHUB_PROJECT= purple-facebook
-GITHUB_RELEASE=	v0.9.0-c9b74a765767
+GITHUB_RELEASE=	v0.9.3-c9b74a765767
 
 MAINTAINER=	izaac@setec.org
 HOMEPAGE=	https://github.com/dequis/purple-facebook
