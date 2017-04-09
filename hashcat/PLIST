@@ -591,6 +591,7 @@ share/hashcat/OpenCL/m14900_a3.cl
 share/hashcat/OpenCL/m15000_a0.cl
 share/hashcat/OpenCL/m15000_a1.cl
 share/hashcat/OpenCL/m15000_a3.cl
+share/hashcat/OpenCL/m15100.cl
 share/hashcat/OpenCL/markov_be.cl
 share/hashcat/OpenCL/markov_le.cl
 share/hashcat/hashcat.hcstat
