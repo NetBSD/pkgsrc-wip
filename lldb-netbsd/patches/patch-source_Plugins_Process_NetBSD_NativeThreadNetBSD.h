@@ -12,7 +12,15 @@ $NetBSD$
  namespace lldb_private {
  namespace process_netbsd {
  
-@@ -64,6 +67,9 @@ private:
+@@ -53,6 +56,7 @@ private:
+   void SetStoppedByBreakpoint();
+   void SetStoppedByTrace();
+   void SetStoppedByExec();
++  void SetStoppedByWatchpoint(uint32_t wp_index);
+   void SetStopped();
+   void SetRunning();
+   void SetStepping();
+@@ -64,6 +68,9 @@ private:
    ThreadStopInfo m_stop_info;
    NativeRegisterContextSP m_reg_context_sp;
    std::string m_stop_description;

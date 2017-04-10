@@ -2,7 +2,41 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp.orig	2017-03-30 22:14:30.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeThreadNetBSD.cpp
-@@ -142,18 +142,61 @@ NativeRegisterContextSP NativeThreadNetB
+@@ -16,6 +16,9 @@
+ #include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
+ #include "lldb/Core/RegisterValue.h"
+ #include "lldb/Core/State.h"
++#include "lldb/Utility/LLDBAssert.h"
++
++#include <sstream>
+ 
+ using namespace lldb;
+ using namespace lldb_private;
+@@ -68,6 +71,23 @@ void NativeThreadNetBSD::SetStoppedByExe
+   m_stop_info.details.signal.signo = SIGTRAP;
+ }
+ 
++void NativeThreadNetBSD::SetStoppedByWatchpoint(uint32_t wp_index) {
++  SetStopped();
++
++  lldbassert(wp_index != LLDB_INVALID_INDEX32 && "wp_index cannot be invalid");
++
++  std::ostringstream ostr;
++  ostr << GetRegisterContext()->GetWatchpointAddress(wp_index) << " ";
++  ostr << wp_index;
++
++  ostr << " " << GetRegisterContext()->GetWatchpointHitAddress(wp_index);
++  
++  m_stop_description = ostr.str();
++  
++  m_stop_info.reason = StopReason::eStopReasonWatchpoint;
++  m_stop_info.details.signal.signo = SIGTRAP;
++}
++
+ void NativeThreadNetBSD::SetStopped() {
+   const StateType new_state = StateType::eStateStopped;
+   m_state = new_state;
+@@ -142,18 +162,61 @@ NativeRegisterContextSP NativeThreadNetB
  
  Error NativeThreadNetBSD::SetWatchpoint(lldb::addr_t addr, size_t size,
                                          uint32_t watch_flags, bool hardware) {
