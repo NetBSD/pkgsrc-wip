@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.9 2014/12/31 13:58:32 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	python-igraph-0.7.1.post6
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S|python-||}
-CATEGORIES=	graphics math python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-igraph/}
+DISTNAME=	igraph-0.1.11
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	math
+MASTER_SITES=	https://pypi.python.org/packages/b3/ae/9d956c334b21f404a512b50abeae018a81e5be939a35c73b8291a31f7e24/
 
-MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://igraph.org/
-COMMENT=	Manipulating Undirected and Directed Graphs for Python
-LICENSE=	gnu-gpl-v2
+MAINTAINER=     kamel.derouiche@gmail.com
+HOMEPAGE=       http://igraph.org/
+COMMENT=        Manipulating Undirected and Directed Graphs for Python
+LICENSE=        gnu-gpl-v2
 
-PYTHON_VERSIONED_DEPENDENCIES=	cairo
+WRKSRC=		${WRKDIR}/igraph-0.1.11
 
-USE_TOOLS+=	pkg-config
+PYTHON_VERSIONED_DEPENDENCIES=  cairo
 
-.include "../../lang/python/versioned_dependencies.mk"
+USE_TOOLS+=     pkg-config
+
+#.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../wip/igraph/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
