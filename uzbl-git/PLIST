@@ -53,6 +53,7 @@ ${PYSITELIB}/uzbl/plugins/on_event.py
 ${PYSITELIB}/uzbl/plugins/on_set.py
 ${PYSITELIB}/uzbl/plugins/progress_bar.py
 ${PYSITELIB}/uzbl/xdg.py
+lib/uzbl/web-extensions/uzbl-ext.so
 man/man1/uzbl-browser.1
 man/man1/uzbl-core.1
 man/man1/uzbl-event-manager.1
