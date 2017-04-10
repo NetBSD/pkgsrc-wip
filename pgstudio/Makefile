@@ -7,7 +7,7 @@ MASTER_SITES=	http://downloads.postgresqlstudio.org/2.0/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://downloads.postgresqlstudio.org/2.0/
+HOMEPAGE=	http://www.postgresqlstudio.org/about/
 COMMENT=	GUI to control PostgreSQL database
 LICENSE=	postgresql-license
 
