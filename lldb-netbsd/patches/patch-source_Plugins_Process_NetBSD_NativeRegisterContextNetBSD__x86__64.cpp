@@ -20,7 +20,7 @@ $NetBSD$
 +  else if (reg_num <= k_last_avx_x86_64)
 +    return -1; // AVX
 +  else if (reg_num <= lldb_dr7_x86_64)
-+    return -1; // AVX
++    return DBRegSet; // DBR
    else
      return -1;
  }
@@ -44,7 +44,41 @@ $NetBSD$
    default:
      break;
    }
-@@ -480,4 +498,214 @@ Error NativeRegisterContextNetBSD_x86_64
+@@ -285,6 +303,16 @@ Error NativeRegisterContextNetBSD_x86_64
+   case lldb_es_x86_64:
+     reg_value = (uint64_t)m_gpr_x86_64.regs[_REG_ES];
+     break;
++  case lldb_dr0_x86_64:
++  case lldb_dr1_x86_64:
++  case lldb_dr2_x86_64:
++  case lldb_dr3_x86_64:
++  case lldb_dr4_x86_64:
++  case lldb_dr5_x86_64:
++  case lldb_dr6_x86_64:
++  case lldb_dr7_x86_64:
++    reg_value = (uint64_t)m_dbr_x86_64.regs[reg - lldb_dr0_x86_64];
++    break;
+   }
+ 
+   return error;
+@@ -400,6 +428,16 @@ Error NativeRegisterContextNetBSD_x86_64
+   case lldb_es_x86_64:
+     m_gpr_x86_64.regs[_REG_ES] = reg_value.GetAsUInt64();
+     break;
++  case lldb_dr0_x86_64:
++  case lldb_dr1_x86_64:
++  case lldb_dr2_x86_64:
++  case lldb_dr3_x86_64:
++  case lldb_dr4_x86_64:
++  case lldb_dr5_x86_64:
++  case lldb_dr6_x86_64:
++  case lldb_dr7_x86_64:
++    m_dbr_x86_64.regs[reg - lldb_dr0_x86_64] = reg_value.GetAsUInt64();
++    break;
+   }
+ 
+   if (WriteRegisterSet(set) != 0)
+@@ -480,4 +518,227 @@ Error NativeRegisterContextNetBSD_x86_64
    return error;
  }
  
@@ -54,7 +88,9 @@ $NetBSD$
 +    return Error("Watchpoint index out of range");
 +  
 +  RegisterValue reg_value;
-+  Error error = ReadRegisterRaw(m_reg_info.first_dr + 6, reg_value);
++  const RegisterInfo *const reg_info =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr6_x86_64);
++  Error error = ReadRegister(reg_info, reg_value);
 +  if (error.Fail()) {
 +    is_hit = false;
 +    return error;
@@ -90,7 +126,9 @@ $NetBSD$
 +    return Error("Watchpoint index out of range");
 +
 +  RegisterValue reg_value;
-+  Error error = ReadRegisterRaw(m_reg_info.first_dr + 7, reg_value);
++  const RegisterInfo *const reg_info =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++  Error error = ReadRegister(reg_info, reg_value);
 +  if (error.Fail()) {
 +    is_vacant = false;
 +    return error;
@@ -130,7 +168,9 @@ $NetBSD$
 +    return Error("Watchpoint index not vacant");
 +
 +  RegisterValue reg_value;
-+  error = ReadRegisterRaw(m_reg_info.first_dr + 7, reg_value);
++  const RegisterInfo *const reg_info_dr7 =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++  error = ReadRegister(reg_info, reg_value);
 +  if (error.Fail())
 +    return error;
 +
@@ -153,17 +193,14 @@ $NetBSD$
 +
 +  control_bits |= enable_bit | rw_bits | size_bits;
 +
-+  error = WriteRegisterRaw(m_reg_info.first_dr + wp_index, RegisterValue(addr));
++  const RegisterInfo *const reg_info_drN =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr0_x86_64 + wp_index);
++  error = WriteRegister(reg_info_drN, RegisterValue(addr));
 +  if (error.Fail())
 +    return error;
 +
 +  error =
-+      WriteRegisterRaw(m_reg_info.first_dr + 7, RegisterValue(control_bits));
-+  if (error.Fail())
-+    return error;
-+
-+  error =
-+      WriteRegisterRaw(m_reg_info.first_dr + 7, RegisterValue(control_bits));
++      WriteRegisterRaw(reg_info_dr7, RegisterValue(control_bits));
 +  if (error.Fail())
 +    return error;
 +
@@ -180,24 +217,28 @@ $NetBSD$
 +    
 +  // for watchpoints 0, 1, 2, or 3, respectively,
 +  // clear bits 0, 1, 2, or 3 of the debug status register (DR6)
-+  Error error = ReadRegisterRaw(m_reg_info.first_dr + 6, reg_value);
++  const RegisterInfo *const reg_info_dr6 =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr6_x86_64);
++  Error error = ReadRegister(reg_info_dr6, reg_value);
 +  if (error.Fail())
 +    return false;
 +  uint64_t bit_mask = 1 << wp_index;
 +  uint64_t status_bits = reg_value.GetAsUInt64() & ~bit_mask;
-+  error = WriteRegisterRaw(m_reg_info.first_dr + 6, RegisterValue(status_bits));
++  error = WriteRegister(reg_info_dr6, RegisterValue(status_bits));
 +  if (error.Fail())
 +    return false;
 + 
 +  // for watchpoints 0, 1, 2, or 3, respectively,
 +  // clear bits {0-1,16-19}, {2-3,20-23}, {4-5,24-27}, or {6-7,28-31}
 +  // of the debug control register (DR7)
-+  error = ReadRegisterRaw(m_reg_info.first_dr + 7, reg_value);
++  const RegisterInfo *const reg_info_dr7 =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++  error = ReadRegisterRaw(reg_info_dr7, reg_value);
 +  if (error.Fail())
 +    return false;
 +  bit_mask = (0x3 << (2 * wp_index)) | (0xF << (16 + 4 * wp_index));
 +  uint64_t control_bits = reg_value.GetAsUInt64() & ~bit_mask;
-+  return WriteRegisterRaw(m_reg_info.first_dr + 7, RegisterValue(control_bits))
++  return WriteRegister(reg_info_dr7, RegisterValue(control_bits))
 +      .Success();
 +}
 +
@@ -205,22 +246,26 @@ $NetBSD$
 +  RegisterValue reg_value;
 +
 +  // clear bits {0-4} of the debug status register (DR6)
-+  Error error = ReadRegisterRaw(m_reg_info.first_dr + 6, reg_value);
++  const RegisterInfo *const reg_info_dr6 =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr6_x86_64);
++  Error error = ReadRegister(reg_info_dr6, reg_value);
 +  if (error.Fail())
 +    return error;
 +  uint64_t bit_mask = 0xF;
 +  uint64_t status_bits = reg_value.GetAsUInt64() & ~bit_mask;
-+  error = WriteRegisterRaw(m_reg_info.first_dr + 6, RegisterValue(status_bits));
++  error = WriteRegister(reg_info_dr6, RegisterValue(status_bits));
 +  if (error.Fail())
 +    return error;
 + 
 +  // clear bits {0-7,16-31} of the debug control register (DR7)
-+  error = ReadRegisterRaw(m_reg_info.first_dr + 7, reg_value);
++  const RegisterInfo *const reg_info_dr7 =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++  error = ReadRegister(reg_info_dr7, reg_value);
 +  if (error.Fail())
 +    return error;
 +  bit_mask = 0xFF | (0xFFFF << 16);
 +  uint64_t control_bits = reg_value.GetAsUInt64() & ~bit_mask;
-+  return WriteRegisterRaw(m_reg_info.first_dr + 7, RegisterValue(control_bits));
++  return WriteRegister(reg_info_dr7, RegisterValue(control_bits));
 +}
 +
 +uint32_t NativeRegisterContextNetBSD_x86_64::SetHardwareWatchpoint(
@@ -248,7 +293,9 @@ $NetBSD$
 +  if (wp_index >= NumSupportedHardwareWatchpoints())
 +    return LLDB_INVALID_ADDRESS;
 +  RegisterValue reg_value;
-+  if (ReadRegisterRaw(m_reg_info.first_dr + wp_index, reg_value).Fail())
++  const RegisterInfo *const reg_info_drN =
++    register_context_sp->GetRegisterInfoAtIndex(lldb_dr0_x86_64 + wp_index);
++  if (ReadRegisterRaw(reg_info_drN, reg_value).Fail())
 +    return LLDB_INVALID_ADDRESS;
 +  return reg_value.GetAsUInt64();
 +}                                                                                                                                     
