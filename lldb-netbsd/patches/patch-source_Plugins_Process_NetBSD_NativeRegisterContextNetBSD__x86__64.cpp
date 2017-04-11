@@ -2,6 +2,15 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-30 22:14:30.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
+@@ -114,7 +114,7 @@ NativeRegisterContextNetBSD_x86_64::Nati
+     uint32_t concrete_frame_idx)
+     : NativeRegisterContextNetBSD(native_thread, concrete_frame_idx,
+                                   CreateRegisterInfoInterface(target_arch)),
+-      m_gpr_x86_64() {}
++      m_gpr_x86_64(), m_fpr_x86_64(), m_dbr_x86_64() {}
+ 
+ // CONSIDER after local and llgs debugging are merged, register set support can
+ // be moved into a base x86-64 class with IsRegisterSetAvailable made virtual.
 @@ -143,8 +143,20 @@ NativeRegisterContextNetBSD_x86_64::GetR
  
  int NativeRegisterContextNetBSD_x86_64::GetSetForNativeRegNum(
@@ -56,7 +65,7 @@ $NetBSD$
 +  case lldb_dr5_x86_64:
 +  case lldb_dr6_x86_64:
 +  case lldb_dr7_x86_64:
-+    reg_value = (uint64_t)m_dbr_x86_64.regs[reg - lldb_dr0_x86_64];
++    reg_value = (uint64_t)m_dbr_x86_64.dr[reg - lldb_dr0_x86_64];
 +    break;
    }
  
@@ -73,7 +82,7 @@ $NetBSD$
 +  case lldb_dr5_x86_64:
 +  case lldb_dr6_x86_64:
 +  case lldb_dr7_x86_64:
-+    m_dbr_x86_64.regs[reg - lldb_dr0_x86_64] = reg_value.GetAsUInt64();
++    m_dbr_x86_64.dr[reg - lldb_dr0_x86_64] = reg_value.GetAsUInt64();
 +    break;
    }
  
@@ -89,7 +98,7 @@ $NetBSD$
 +  
 +  RegisterValue reg_value;
 +  const RegisterInfo *const reg_info =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr6_x86_64);
++    GetRegisterInfoAtIndex(lldb_dr6_x86_64);
 +  Error error = ReadRegister(reg_info, reg_value);
 +  if (error.Fail()) {
 +    is_hit = false;
@@ -127,7 +136,7 @@ $NetBSD$
 +
 +  RegisterValue reg_value;
 +  const RegisterInfo *const reg_info =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++    GetRegisterInfoAtIndex(lldb_dr7_x86_64);
 +  Error error = ReadRegister(reg_info, reg_value);
 +  if (error.Fail()) {
 +    is_vacant = false;
@@ -169,8 +178,8 @@ $NetBSD$
 +
 +  RegisterValue reg_value;
 +  const RegisterInfo *const reg_info_dr7 =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
-+  error = ReadRegister(reg_info, reg_value);
++    GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++  error = ReadRegister(reg_info_dr7, reg_value);
 +  if (error.Fail())
 +    return error;
 +
@@ -194,13 +203,13 @@ $NetBSD$
 +  control_bits |= enable_bit | rw_bits | size_bits;
 +
 +  const RegisterInfo *const reg_info_drN =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr0_x86_64 + wp_index);
++    GetRegisterInfoAtIndex(lldb_dr0_x86_64 + wp_index);
 +  error = WriteRegister(reg_info_drN, RegisterValue(addr));
 +  if (error.Fail())
 +    return error;
 +
 +  error =
-+      WriteRegisterRaw(reg_info_dr7, RegisterValue(control_bits));
++      WriteRegister(reg_info_dr7, RegisterValue(control_bits));
 +  if (error.Fail())
 +    return error;
 +
@@ -218,7 +227,7 @@ $NetBSD$
 +  // for watchpoints 0, 1, 2, or 3, respectively,
 +  // clear bits 0, 1, 2, or 3 of the debug status register (DR6)
 +  const RegisterInfo *const reg_info_dr6 =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr6_x86_64);
++    GetRegisterInfoAtIndex(lldb_dr6_x86_64);
 +  Error error = ReadRegister(reg_info_dr6, reg_value);
 +  if (error.Fail())
 +    return false;
@@ -232,8 +241,8 @@ $NetBSD$
 +  // clear bits {0-1,16-19}, {2-3,20-23}, {4-5,24-27}, or {6-7,28-31}
 +  // of the debug control register (DR7)
 +  const RegisterInfo *const reg_info_dr7 =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
-+  error = ReadRegisterRaw(reg_info_dr7, reg_value);
++    GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++  error = ReadRegister(reg_info_dr7, reg_value);
 +  if (error.Fail())
 +    return false;
 +  bit_mask = (0x3 << (2 * wp_index)) | (0xF << (16 + 4 * wp_index));
@@ -247,7 +256,7 @@ $NetBSD$
 +
 +  // clear bits {0-4} of the debug status register (DR6)
 +  const RegisterInfo *const reg_info_dr6 =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr6_x86_64);
++    GetRegisterInfoAtIndex(lldb_dr6_x86_64);
 +  Error error = ReadRegister(reg_info_dr6, reg_value);
 +  if (error.Fail())
 +    return error;
@@ -259,7 +268,7 @@ $NetBSD$
 + 
 +  // clear bits {0-7,16-31} of the debug control register (DR7)
 +  const RegisterInfo *const reg_info_dr7 =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr7_x86_64);
++    GetRegisterInfoAtIndex(lldb_dr7_x86_64);
 +  error = ReadRegister(reg_info_dr7, reg_value);
 +  if (error.Fail())
 +    return error;
@@ -294,8 +303,8 @@ $NetBSD$
 +    return LLDB_INVALID_ADDRESS;
 +  RegisterValue reg_value;
 +  const RegisterInfo *const reg_info_drN =
-+    register_context_sp->GetRegisterInfoAtIndex(lldb_dr0_x86_64 + wp_index);
-+  if (ReadRegisterRaw(reg_info_drN, reg_value).Fail())
++    GetRegisterInfoAtIndex(lldb_dr0_x86_64 + wp_index);
++  if (ReadRegister(reg_info_drN, reg_value).Fail())
 +    return LLDB_INVALID_ADDRESS;
 +  return reg_value.GetAsUInt64();
 +}                                                                                                                                     
