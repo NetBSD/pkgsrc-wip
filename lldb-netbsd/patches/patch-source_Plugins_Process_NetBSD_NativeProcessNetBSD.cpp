@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-03-30 22:14:30.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -224,36 +224,75 @@ void NativeProcessNetBSD::MonitorSIGTRAP
+@@ -224,36 +224,78 @@ void NativeProcessNetBSD::MonitorSIGTRAP
        PtraceWrapper(PT_GET_SIGINFO, pid, &info, sizeof(info));
  
    // Get details on the signal raised.
@@ -39,6 +39,9 @@ $NetBSD$
 +    // Let our delegate know we have just exec'd.
 +    NotifyDidExec();
 +
++    for (const auto &thread_sp : m_threads) {
++      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedByExec();
++    }
 +    SetState(StateType::eStateStopped, true);
 +  } break;
 +  case TRAP_DBREG: {
@@ -98,7 +101,7 @@ $NetBSD$
    }
  }
  
-@@ -328,8 +367,8 @@ Error NativeProcessNetBSD::FixupBreakpoi
+@@ -328,8 +370,8 @@ Error NativeProcessNetBSD::FixupBreakpoi
      return error;
    } else
      LLDB_LOG(log, "breakpoint size: {0}", breakpoint_size);
@@ -109,7 +112,7 @@ $NetBSD$
    const lldb::addr_t initial_pc_addr =
        context_sp->GetPCfromBreakpointLocation();
    lldb::addr_t breakpoint_addr = initial_pc_addr;
-@@ -439,7 +478,7 @@ Error NativeProcessNetBSD::Resume(const 
+@@ -439,7 +481,7 @@ Error NativeProcessNetBSD::Resume(const 
      llvm_unreachable("Unexpected state");
  
    default:
@@ -118,7 +121,7 @@ $NetBSD$
                   "for pid %" PRIu64 ", tid %" PRIu64,
                   __FUNCTION__, StateAsCString(action->state), GetID(),
                   thread_sp->GetID());
-@@ -540,8 +579,8 @@ Error NativeProcessNetBSD::GetMemoryRegi
+@@ -540,8 +582,8 @@ Error NativeProcessNetBSD::GetMemoryRegi
             "descending memory map entries detected, unexpected");
      prev_base_address = proc_entry_info.GetRange().GetRangeBase();
      UNUSED_IF_ASSERT_DISABLED(prev_base_address);
@@ -129,7 +132,7 @@ $NetBSD$
      if (load_addr < proc_entry_info.GetRange().GetRangeBase()) {
        range_info.GetRange().SetRangeBase(load_addr);
        range_info.GetRange().SetByteSize(
-@@ -561,9 +600,8 @@ Error NativeProcessNetBSD::GetMemoryRegi
+@@ -561,9 +603,8 @@ Error NativeProcessNetBSD::GetMemoryRegi
    }
    // If we made it here, we didn't find an entry that contained the given
    // address. Return the
@@ -141,7 +144,7 @@ $NetBSD$
    range_info.GetRange().SetRangeBase(load_addr);
    range_info.GetRange().SetRangeEnd(LLDB_INVALID_ADDRESS);
    range_info.SetReadable(MemoryRegionInfo::OptionalBool::eNo);
-@@ -722,8 +760,8 @@ Error NativeProcessNetBSD::LaunchInferio
+@@ -722,8 +763,8 @@ Error NativeProcessNetBSD::LaunchInferio
      LLDB_LOG(log, "waitpid for inferior failed with %s", error);
  
      // Mark the inferior as invalid.
@@ -152,3 +155,33 @@ $NetBSD$
      SetState(StateType::eStateInvalid);
  
      return error;
+@@ -766,6 +807,10 @@ Error NativeProcessNetBSD::LaunchInferio
+     return error;
+   }
+ 
++  for (const auto &thread_sp : m_threads) {
++    static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(SIGSTOP);
++  }
++
+   /* Set process stopped */
+   SetState(StateType::eStateStopped);
+ 
+@@ -894,6 +939,10 @@ NativeThreadNetBSDSP NativeProcessNetBSD
+     return -1;
+   }
+ 
++  for (const auto &thread_sp : m_threads) {  
++    static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(SIGSTOP);
++  }
++
+   // Let our process instance know the thread has stopped.
+   SetState(StateType::eStateStopped);
+ 
+@@ -1007,7 +1056,6 @@ Error NativeProcessNetBSD::ReinitializeT
+   // Reinitialize from scratch threads and register them in process
+   while (info.pl_lwpid != 0) {
+     NativeThreadNetBSDSP thread_sp = AddThread(info.pl_lwpid);
+-    thread_sp->SetStoppedByExec();
+     error = PtraceWrapper(PT_LWPINFO, GetID(), &info, sizeof(info));
+     if (error.Fail()) {
+       return error;
