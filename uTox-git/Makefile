@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	uTox-0.12.2
+DISTNAME=	uTox-0.14.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uTox/}
 
@@ -22,8 +22,7 @@ USE_CMAKE=	yes
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
-
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/check/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
@@ -31,5 +30,6 @@ USE_CMAKE=	yes
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
