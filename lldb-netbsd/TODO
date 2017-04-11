@@ -24,7 +24,6 @@ Introduce objc++ setup with gcc(1) for "make test":
 
 Known bugs
 ==========
- - curses application don't work - env broken?
  - attaching to process broken or violating PaX MPROTECT
    (violation is fine, just fix research the real reason)
  - core(5) isn't really functional
