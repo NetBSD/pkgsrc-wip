@@ -1,0 +1,11 @@
+Eigency is a Cython interface between Numpy arrays and Matrix/Array objects
+from the Eigen C++ library. It is intended to simplify the process of writing
+C++ extensions using the Eigen library. Eigency is designed to reuse the
+underlying storage of the arrays when passing data back and forth, and will
+thus avoid making unnecessary copies whenever possible. Only in cases where
+copies are explicitly requested by your C++ code will they be made
+(see example below)
+
+Below is a description of a range of common usage scenarios. A full working
+example of both setup and these different use cases is available in the test
+directory distributed with the this package.

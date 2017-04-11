@@ -4,6 +4,7 @@
 */work.*
 
 # Temporary files
+Makefile-url2pkg.bak
 *~
 \#*\#
 *.orig

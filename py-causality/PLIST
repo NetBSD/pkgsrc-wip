@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/causality/__init__.py
+${PYSITELIB}/causality/__init__.pyc
+${PYSITELIB}/causality/__init__.pyo
+${PYSITELIB}/causality/inference/__init__.py
+${PYSITELIB}/causality/inference/__init__.pyc
+${PYSITELIB}/causality/inference/__init__.pyo
+${PYSITELIB}/causality/inference/independence_tests/__init__.py
+${PYSITELIB}/causality/inference/independence_tests/__init__.pyc
+${PYSITELIB}/causality/inference/independence_tests/__init__.pyo
+${PYSITELIB}/causality/inference/search/__init__.py
+${PYSITELIB}/causality/inference/search/__init__.pyc
+${PYSITELIB}/causality/inference/search/__init__.pyo
+${PYSITELIB}/causality/nonparametric/__init__.py
+${PYSITELIB}/causality/nonparametric/__init__.pyc
+${PYSITELIB}/causality/nonparametric/__init__.pyo
+${PYSITELIB}/causality/nonparametric/causal_reg.py
+${PYSITELIB}/causality/nonparametric/causal_reg.pyc
+${PYSITELIB}/causality/nonparametric/causal_reg.pyo
