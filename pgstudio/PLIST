@@ -1,2 +1,2 @@
 @comment $NetBSD$
-share/tomcat/web-apps/pgstudio.war
+share/tomcat/webapps/pgstudio.war

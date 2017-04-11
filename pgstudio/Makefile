@@ -14,7 +14,7 @@ LICENSE=	postgresql-license
 DEPENDS+=	apache-tomcat-[0-9]*:../../www/apache-tomcat8
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
-INSTALLATION_DIRS+= share/tomcat/web-apps
+INSTALLATION_DIRS+= share/tomcat/webapps
 
 USE_LANGUAGES=	# none
 
@@ -24,6 +24,6 @@ do-build:
 	ant clean && ant deploy
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pgstudio.war  ${DESTDIR}${PREFIX}/share/tomcat/web-apps/
+	${INSTALL_DATA} ${WRKSRC}/pgstudio.war  ${DESTDIR}${PREFIX}/share/tomcat/webapps/
 
 .include "../../mk/bsd.pkg.mk"
