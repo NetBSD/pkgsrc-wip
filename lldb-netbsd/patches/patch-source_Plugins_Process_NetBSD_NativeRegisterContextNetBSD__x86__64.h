@@ -2,7 +2,7 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h.orig	2017-03-30 22:14:30.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.h
-@@ -46,17 +46,39 @@ public:
+@@ -46,17 +46,40 @@ public:
  
    Error WriteAllRegisterValues(const lldb::DataBufferSP &data_sp) override;
  
@@ -30,6 +30,7 @@ $NetBSD$
  protected:
    void *GetGPRBuffer() override { return &m_gpr_x86_64; }
    void *GetFPRBuffer() override { return &m_fpr_x86_64; }
++  void *GetDBRBuffer() override { return &m_dbr_x86_64; }
  
  private:
    // Private member types.
