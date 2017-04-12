@@ -26,9 +26,9 @@ $NetBSD$
 +  ostr << wp_index;
 +
 +  ostr << " " << GetRegisterContext()->GetWatchpointHitAddress(wp_index);
-+  
++
 +  m_stop_description = ostr.str();
-+  
++
 +  m_stop_info.reason = StopReason::eStopReasonWatchpoint;
 +  m_stop_info.details.signal.signo = SIGTRAP;
 +}

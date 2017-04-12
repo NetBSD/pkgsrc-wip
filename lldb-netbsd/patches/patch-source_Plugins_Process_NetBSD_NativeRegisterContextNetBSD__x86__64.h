@@ -7,7 +7,7 @@ $NetBSD$
    Error WriteAllRegisterValues(const lldb::DataBufferSP &data_sp) override;
  
 +  Error IsWatchpointHit(uint32_t wp_index, bool &is_hit) override;
-+                                    
++
 +  Error GetWatchpointHitIndex(uint32_t &wp_index,
 +                              lldb::addr_t trap_addr) override;
 +
@@ -15,11 +15,11 @@ $NetBSD$
 +
 +  bool ClearHardwareWatchpoint(uint32_t wp_index) override;
 +
-+  Error ClearAllHardwareWatchpoints() override;   
-+                     
++  Error ClearAllHardwareWatchpoints() override;
++
 +  Error SetHardwareWatchpointWithIndex(lldb::addr_t addr, size_t size,
 +                                       uint32_t watch_flags, uint32_t wp_index);
-+                      
++
 +  uint32_t SetHardwareWatchpoint(lldb::addr_t addr, size_t size,
 +                                 uint32_t watch_flags) override;
 +
