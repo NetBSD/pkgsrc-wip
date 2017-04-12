@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=		easy-rsa-3.0.1
-PKGNAME=		${DISTNAME:S/-//1}
+#PKGNAME=		${DISTNAME:S/-//1}
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=OpenVPN/}
 
