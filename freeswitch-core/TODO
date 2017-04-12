@@ -14,3 +14,10 @@ cd ..
 tar cvzjf /usr/NetBSD/cvs/pkgsrc/distfiles/freeswitch/freeswitch-1.2.3.tar.bz2 freeswitch-1.2.3
 cd /usr/NetBSD/cvs/pkgsrc/net/freeswitch-core
 make makesum
+
+
+1) Fix SRTP libs;
+2) Create $VARBASE/freeswitch as ${FREESWITCH_USER}:${FREESWITCH_GROUP};
+3) Create $VARBASE/lib/freeswitch/db as ${FREESWITCH_USER}:${FREESWITCH_GROUP};
+4) Package the remaining libs in the Makefile;
+5) Make some of the buildlink'd packages optional;
