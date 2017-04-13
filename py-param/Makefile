@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/07/07 00:55:38 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	param-1.3.2
+DISTNAME=	param-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/param/}
+MASTER_SITES=	https://pypi.python.org/packages/d4/2f/6a9b9d53c1f64f774a9da5083fab8ec8bf95c795e6a70640f7ff3336fb68/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://ioam.github.com/param/
