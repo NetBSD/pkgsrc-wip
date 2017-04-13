@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2016/09/12 22:49:23 kamil Exp $
 
-DISTNAME=	lld-3.8.1.src
+DISTNAME=	lld-4.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
