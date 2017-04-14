@@ -3041,7 +3041,6 @@ SUBDIR+=	py-gslodeiv2
 SUBDIR+=	py-gsw
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-gts
-SUBDIR+=	py-guessit
 SUBDIR+=	py-guppy
 SUBDIR+=	py-gvar
 SUBDIR+=	py-gwpy
