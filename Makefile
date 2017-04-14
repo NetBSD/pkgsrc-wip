@@ -2745,7 +2745,6 @@ SUBDIR+=	py-autokey
 SUBDIR+=	py-automata
 SUBDIR+=	py-awscli
 SUBDIR+=	py-b3j0f.aop
-SUBDIR+=	py-babelfish
 SUBDIR+=	py-bandicoot
 SUBDIR+=	py-bandit
 SUBDIR+=	py-bannock
