@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	jsbeautifier-1.6.4
+DISTNAME=	jsbeautifier-1.6.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsbeautifier/}
@@ -14,6 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-editorconfig-core>=0.12.0:../../wip/py-editorconfig-cor
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/js-beautify ${DESTDIR}${PREFIX}/bin/js-beautify-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

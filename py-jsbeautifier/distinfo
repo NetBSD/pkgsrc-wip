@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (jsbeautifier-1.6.4.tar.gz) = c16805d2cc6d7710b128b1b6f451d9df32b42b61
-RMD160 (jsbeautifier-1.6.4.tar.gz) = 1728ebfc50ff56ecd371dde0cb44a8d0c3d6eb2e
-SHA512 (jsbeautifier-1.6.4.tar.gz) = d58f4f0fb7f7a114891a8218c423b2fadaf2b6e1259f9ddf9e417564dcdb082f66ed24a924ba785784fdf02a7d8e3c851666f4c25e2fd6a0861ce34872a3196f
-Size (jsbeautifier-1.6.4.tar.gz) = 51139 bytes
+SHA1 (jsbeautifier-1.6.12.tar.gz) = 61307c7de64f9cb5e2eed79585e5aeb606c85289
+RMD160 (jsbeautifier-1.6.12.tar.gz) = 46f2f79018fdc30e0b8bcea6728c1719bbad6e36
+SHA512 (jsbeautifier-1.6.12.tar.gz) = b9281dd807f11f4bc419e7bfb55652471393be39daa61f0b72ae607864952a8ae576832d757ac31847eb8364c7cc08ed0899c8911c3416775359de4522c28824
+Size (jsbeautifier-1.6.12.tar.gz) = 55636 bytes
