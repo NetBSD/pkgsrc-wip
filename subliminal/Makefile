@@ -4,7 +4,7 @@ DISTNAME=	subliminal-2.0.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subliminal/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/Diaoul/subliminal/
 COMMENT=	Video subtitles downloader
 LICENSE=	mit
