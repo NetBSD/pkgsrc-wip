@@ -23,7 +23,7 @@ pre-configure:
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
-.include "../../wip/libmesode-git/buildlink3.mk"
+.include "../../wip/libmesode/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
