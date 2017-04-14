@@ -3106,7 +3106,6 @@ SUBDIR+=	py-jitcode
 SUBDIR+=	py-jmespath
 SUBDIR+=	py-joblib
 SUBDIR+=	py-jokosher
-SUBDIR+=	py-jsbeautifier
 SUBDIR+=	py-jsonpath
 SUBDIR+=	py-jsonrequester
 SUBDIR+=	py-jsonschema
