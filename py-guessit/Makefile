@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	guessit-2.1.1
+DISTNAME=	guessit-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://guessit.io/
 COMMENT=	Extracts as much information as possible from a video filename
 LICENSE=	gnu-lgpl-v3
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.5.5:../../wip/py-babelfish
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (guessit-2.1.1.tar.gz) = aa2c5361a943d6a561cc109d9eddedd99151f4a9
-RMD160 (guessit-2.1.1.tar.gz) = 1acbe4ea4cc73cf114a4a794860a5e2f1dc83011
-SHA512 (guessit-2.1.1.tar.gz) = 61ace43bacf4bf2289bd1f0cd5105080b8302d92be8bda77942355594e07db14b594c73e4bf42bd14840f9f9723d602a38cd443cc3e1fabdca335d364fa97e2f
-Size (guessit-2.1.1.tar.gz) = 86447 bytes
+SHA1 (guessit-2.1.2.tar.gz) = 330e0ea28392c175c6245d6f6f0346173b73deb1
+RMD160 (guessit-2.1.2.tar.gz) = 45befdf6f31ea1924d65a0255106af66c242cb79
+SHA512 (guessit-2.1.2.tar.gz) = 394098cb61cdd1d140e47a969dd86422d6856d2cda42dc7072ab9e482a0001d62f6ffe91d74a7bad04f274197e36e731ce203fe92930558969a94889d47c8e14
+Size (guessit-2.1.2.tar.gz) = 100478 bytes

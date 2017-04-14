@@ -22,6 +22,7 @@ ${PYSITELIB}/guessit/api.pyo
 ${PYSITELIB}/guessit/backports.py
 ${PYSITELIB}/guessit/backports.pyc
 ${PYSITELIB}/guessit/backports.pyo
+${PYSITELIB}/guessit/config/options.json
 ${PYSITELIB}/guessit/jsonutils.py
 ${PYSITELIB}/guessit/jsonutils.pyc
 ${PYSITELIB}/guessit/jsonutils.pyo
@@ -43,6 +44,9 @@ ${PYSITELIB}/guessit/rules/common/comparators.pyo
 ${PYSITELIB}/guessit/rules/common/date.py
 ${PYSITELIB}/guessit/rules/common/date.pyc
 ${PYSITELIB}/guessit/rules/common/date.pyo
+${PYSITELIB}/guessit/rules/common/expected.py
+${PYSITELIB}/guessit/rules/common/expected.pyc
+${PYSITELIB}/guessit/rules/common/expected.pyo
 ${PYSITELIB}/guessit/rules/common/formatters.py
 ${PYSITELIB}/guessit/rules/common/formatters.pyc
 ${PYSITELIB}/guessit/rules/common/formatters.pyo
@@ -124,6 +128,9 @@ ${PYSITELIB}/guessit/rules/properties/release_group.pyo
 ${PYSITELIB}/guessit/rules/properties/screen_size.py
 ${PYSITELIB}/guessit/rules/properties/screen_size.pyc
 ${PYSITELIB}/guessit/rules/properties/screen_size.pyo
+${PYSITELIB}/guessit/rules/properties/size.py
+${PYSITELIB}/guessit/rules/properties/size.pyc
+${PYSITELIB}/guessit/rules/properties/size.pyo
 ${PYSITELIB}/guessit/rules/properties/streaming_service.py
 ${PYSITELIB}/guessit/rules/properties/streaming_service.pyc
 ${PYSITELIB}/guessit/rules/properties/streaming_service.pyo
@@ -142,6 +149,10 @@ ${PYSITELIB}/guessit/rules/properties/website.pyo
 ${PYSITELIB}/guessit/test/__init__.py
 ${PYSITELIB}/guessit/test/__init__.pyc
 ${PYSITELIB}/guessit/test/__init__.pyo
+${PYSITELIB}/guessit/test/config/dummy.txt
+${PYSITELIB}/guessit/test/config/test.json
+${PYSITELIB}/guessit/test/config/test.yaml
+${PYSITELIB}/guessit/test/config/test.yml
 ${PYSITELIB}/guessit/test/episodes.yml
 ${PYSITELIB}/guessit/test/movies.yml
 ${PYSITELIB}/guessit/test/rules/__init__.py
@@ -165,6 +176,7 @@ ${PYSITELIB}/guessit/test/rules/processors_test.pyc
 ${PYSITELIB}/guessit/test/rules/processors_test.pyo
 ${PYSITELIB}/guessit/test/rules/release_group.yml
 ${PYSITELIB}/guessit/test/rules/screen_size.yml
+${PYSITELIB}/guessit/test/rules/size.yml
 ${PYSITELIB}/guessit/test/rules/title.yml
 ${PYSITELIB}/guessit/test/rules/video_codec.yml
 ${PYSITELIB}/guessit/test/rules/website.yml
@@ -181,6 +193,9 @@ ${PYSITELIB}/guessit/test/test_benchmark.pyo
 ${PYSITELIB}/guessit/test/test_main.py
 ${PYSITELIB}/guessit/test/test_main.pyc
 ${PYSITELIB}/guessit/test/test_main.pyo
+${PYSITELIB}/guessit/test/test_options.py
+${PYSITELIB}/guessit/test/test_options.pyc
+${PYSITELIB}/guessit/test/test_options.pyo
 ${PYSITELIB}/guessit/test/test_yml.py
 ${PYSITELIB}/guessit/test/test_yml.pyc
 ${PYSITELIB}/guessit/test/test_yml.pyo
