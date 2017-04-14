@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmesode
 LIBMESODE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
-BUILDLINK_PKGSRCDIR.libmesode?=		../../wip/libmesode-git
+BUILDLINK_PKGSRCDIR.libmesode?=		../../wip/libmesode
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
