@@ -3114,7 +3114,6 @@ SUBDIR+=	py-julio
 SUBDIR+=	py-junos-netconify
 SUBDIR+=	py-jxmlease
 SUBDIR+=	py-kabuki
-SUBDIR+=	py-kaitaistruct
 SUBDIR+=	py-karta
 SUBDIR+=	py-kcs11
 SUBDIR+=	py-keras
