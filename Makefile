@@ -2919,7 +2919,6 @@ SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-dns-clientsubnetoption
 SUBDIR+=	py-dnspython
 SUBDIR+=	py-dnspython3
-SUBDIR+=	py-dogpile-cache
 SUBDIR+=	py-dolo
 SUBDIR+=	py-downhill
 SUBDIR+=	py-drawnow
