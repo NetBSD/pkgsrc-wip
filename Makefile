@@ -3422,7 +3422,6 @@ SUBDIR+=	py-qutrub
 SUBDIR+=	py-radontea
 SUBDIR+=	py-ranger
 SUBDIR+=	py-raphrase
-SUBDIR+=	py-rarfile
 SUBDIR+=	py-rasterio
 SUBDIR+=	py-raven
 SUBDIR+=	py-rcsparse
