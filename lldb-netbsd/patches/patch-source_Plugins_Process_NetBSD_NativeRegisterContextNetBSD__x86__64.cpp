@@ -125,7 +125,7 @@ $NetBSD$
    default:
      break;
    }
-@@ -285,6 +360,76 @@ Error NativeRegisterContextNetBSD_x86_64
+@@ -285,6 +360,87 @@ Error NativeRegisterContextNetBSD_x86_64
    case lldb_es_x86_64:
      reg_value = (uint64_t)m_gpr_x86_64.regs[_REG_ES];
      break;
@@ -170,6 +170,17 @@ $NetBSD$
 +    reg_value.SetBytes(&m_fpr_x86_64.fxstate.fx_87_ac[reg - lldb_st0_x86_64],
 +                       reg_info->byte_size, endian::InlHostByteOrder());
 +    break;
++  case lldb_mm0_x86_64:
++  case lldb_mm1_x86_64:
++  case lldb_mm2_x86_64:
++  case lldb_mm3_x86_64:
++  case lldb_mm4_x86_64:
++  case lldb_mm5_x86_64:
++  case lldb_mm6_x86_64:
++  case lldb_mm7_x86_64:
++    reg_value.SetBytes(&m_fpr_x86_64.fxstate.fx_xmm[reg - lldb_mm0_x86_64],
++                       reg_info->byte_size, endian::InlHostByteOrder());
++    break;
 +  case lldb_xmm0_x86_64:
 +  case lldb_xmm1_x86_64:
 +  case lldb_xmm2_x86_64:
@@ -202,7 +213,7 @@ $NetBSD$
    }
  
    return error;
-@@ -400,6 +545,76 @@ Error NativeRegisterContextNetBSD_x86_64
+@@ -400,6 +556,87 @@ Error NativeRegisterContextNetBSD_x86_64
    case lldb_es_x86_64:
      m_gpr_x86_64.regs[_REG_ES] = reg_value.GetAsUInt64();
      break;
@@ -247,6 +258,17 @@ $NetBSD$
 +    ::memcpy(&m_fpr_x86_64.fxstate.fx_87_ac[reg - lldb_st0_x86_64],
 +             reg_value.GetBytes(), reg_value.GetByteSize());
 +    break;
++  case lldb_mm0_x86_64:
++  case lldb_mm1_x86_64:
++  case lldb_mm2_x86_64:
++  case lldb_mm3_x86_64:
++  case lldb_mm4_x86_64:
++  case lldb_mm5_x86_64:
++  case lldb_mm6_x86_64:
++  case lldb_mm7_x86_64:
++    ::memcpy(&m_fpr_x86_64.fxstate.fx_xmm[reg - lldb_mm0_x86_64],
++             reg_value.GetBytes(), reg_value.GetByteSize());
++    break;
 +  case lldb_xmm0_x86_64:
 +  case lldb_xmm1_x86_64:
 +  case lldb_xmm2_x86_64:
@@ -279,7 +301,7 @@ $NetBSD$
    }
  
    if (WriteRegisterSet(set) != 0)
-@@ -480,4 +695,223 @@ Error NativeRegisterContextNetBSD_x86_64
+@@ -480,4 +717,223 @@ Error NativeRegisterContextNetBSD_x86_64
    return error;
  }
  
