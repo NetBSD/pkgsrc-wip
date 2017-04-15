@@ -2,7 +2,81 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp.orig	2017-03-30 22:14:30.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeRegisterContextNetBSD_x86_64.cpp
-@@ -114,7 +114,7 @@ NativeRegisterContextNetBSD_x86_64::Nati
+@@ -19,7 +19,15 @@
+ 
+ #include "Plugins/Process/Utility/RegisterContextNetBSD_x86_64.h"
+ 
++// clang-format off
++#include <sys/types.h>
++#include <sys/sysctl.h>
++#include <x86/cpu.h>
+ #include <elf.h>
++#include <err.h>
++#include <stdint.h>
++#include <stdlib.h>
++// clang-format on
+ 
+ using namespace lldb_private;
+ using namespace lldb_private::process_netbsd;
+@@ -86,6 +94,57 @@ static const RegisterSet g_reg_sets_x86_
+ 
+ #define REG_CONTEXT_SIZE (GetRegisterInfoInterface().GetGPRSize())
+ 
++const int fpu_present = []() -> int {
++  int mib[2];
++  int error;
++  size_t len;
++  int val;
++
++  len = sizeof(val);
++  mib[0] = CTL_MACHDEP;
++  mib[1] = CPU_FPU_PRESENT;
++
++  error = sysctl(mib, __arraycount(mib), &val, &len, NULL, 0);
++  if (error)
++    errx(EXIT_FAILURE, "sysctl");
++
++  return val;
++}();
++
++const int osfxsr = []() -> int {
++  int mib[2];
++  int error;
++  size_t len;
++  int val;
++
++  len = sizeof(val);
++  mib[0] = CTL_MACHDEP;
++  mib[1] = CPU_OSFXSR;
++
++  error = sysctl(mib, __arraycount(mib), &val, &len, NULL, 0);
++  if (error)
++    errx(EXIT_FAILURE, "sysctl");
++
++  return val;
++}();
++
++const int fpu_save = []() -> int {
++  int mib[2];
++  int error;
++  size_t len;
++  int val;
++
++  len = sizeof(val);
++  mib[0] = CTL_MACHDEP;
++  mib[1] = CPU_FPU_SAVE;
++
++  error = sysctl(mib, __arraycount(mib), &val, &len, NULL, 0);
++  if (error)
++    errx(EXIT_FAILURE, "sysctl");
++
++  return val;
++}();
++
+ } // namespace
+ 
+ NativeRegisterContextNetBSD *
+@@ -114,7 +173,7 @@ NativeRegisterContextNetBSD_x86_64::Nati
      uint32_t concrete_frame_idx)
      : NativeRegisterContextNetBSD(native_thread, concrete_frame_idx,
                                    CreateRegisterInfoInterface(target_arch)),
@@ -11,7 +85,7 @@ $NetBSD$
  
  // CONSIDER after local and llgs debugging are merged, register set support can
  // be moved into a base x86-64 class with IsRegisterSetAvailable made virtual.
-@@ -143,8 +143,20 @@ NativeRegisterContextNetBSD_x86_64::GetR
+@@ -143,8 +202,18 @@ NativeRegisterContextNetBSD_x86_64::GetR
  
  int NativeRegisterContextNetBSD_x86_64::GetSetForNativeRegNum(
      int reg_num) const {
@@ -19,21 +93,19 @@ $NetBSD$
 +  if (reg_num <= k_last_gpr_x86_64)
      return GPRegSet;
 +  else if (reg_num <= k_last_fpr_x86_64)
-+    return FPRegSet;
++    return (fpu_present == 1 && osfxsr == 1 && fpu_save >= 1) ? FPRegSet : -1;
 +  else if (reg_num <= k_last_avx_x86_64)
 +    return -1; // AVX
 +  else if (reg_num <= k_last_mpxr_x86_64)
 +    return -1; // MPXR
 +  else if (reg_num <= k_last_mpxc_x86_64)
 +    return -1; // MPXC
-+  else if (reg_num <= k_last_avx_x86_64)
-+    return -1; // AVX
 +  else if (reg_num <= lldb_dr7_x86_64)
 +    return DBRegSet; // DBR
    else
      return -1;
  }
-@@ -157,6 +169,9 @@ int NativeRegisterContextNetBSD_x86_64::
+@@ -157,6 +226,9 @@ int NativeRegisterContextNetBSD_x86_64::
    case FPRegSet:
      ReadFPR();
      return 0;
@@ -43,7 +115,7 @@ $NetBSD$
    default:
      break;
    }
-@@ -170,6 +185,9 @@ int NativeRegisterContextNetBSD_x86_64::
+@@ -170,6 +242,9 @@ int NativeRegisterContextNetBSD_x86_64::
    case FPRegSet:
      WriteFPR();
      return 0;
@@ -53,10 +125,70 @@ $NetBSD$
    default:
      break;
    }
-@@ -285,6 +303,16 @@ Error NativeRegisterContextNetBSD_x86_64
+@@ -285,6 +360,76 @@ Error NativeRegisterContextNetBSD_x86_64
    case lldb_es_x86_64:
      reg_value = (uint64_t)m_gpr_x86_64.regs[_REG_ES];
      break;
++  case lldb_fctrl_x86_64:
++    reg_value = (uint16_t)m_fpr_x86_64.fxstate.fx_cw;
++    break;
++  case lldb_fstat_x86_64:
++    reg_value = (uint16_t)m_fpr_x86_64.fxstate.fx_sw;
++    break;
++  case lldb_ftag_x86_64:
++    reg_value = (uint8_t)m_fpr_x86_64.fxstate.fx_tw;
++    break;
++  case lldb_fop_x86_64:
++    reg_value = (uint64_t)m_fpr_x86_64.fxstate.fx_opcode;
++    break;
++  case lldb_fiseg_x86_64:
++    reg_value = (uint64_t)m_fpr_x86_64.fxstate.fx_ip.fa_64;
++    break;
++  case lldb_fioff_x86_64:
++    reg_value = (uint32_t)m_fpr_x86_64.fxstate.fx_ip.fa_32.fa_off;
++    break;
++  case lldb_foseg_x86_64:
++    reg_value = (uint64_t)m_fpr_x86_64.fxstate.fx_dp.fa_64;
++    break;
++  case lldb_fooff_x86_64:
++    reg_value = (uint32_t)m_fpr_x86_64.fxstate.fx_dp.fa_32.fa_off;
++    break;
++  case lldb_mxcsr_x86_64:
++    reg_value = (uint32_t)m_fpr_x86_64.fxstate.fx_mxcsr;
++    break;
++  case lldb_mxcsrmask_x86_64:
++    reg_value = (uint32_t)m_fpr_x86_64.fxstate.fx_mxcsr_mask;
++    break;
++  case lldb_st0_x86_64:
++  case lldb_st1_x86_64:
++  case lldb_st2_x86_64:
++  case lldb_st3_x86_64:
++  case lldb_st4_x86_64:
++  case lldb_st5_x86_64:
++  case lldb_st6_x86_64:
++  case lldb_st7_x86_64:
++    reg_value.SetBytes(&m_fpr_x86_64.fxstate.fx_87_ac[reg - lldb_st0_x86_64],
++                       reg_info->byte_size, endian::InlHostByteOrder());
++    break;
++  case lldb_xmm0_x86_64:
++  case lldb_xmm1_x86_64:
++  case lldb_xmm2_x86_64:
++  case lldb_xmm3_x86_64:
++  case lldb_xmm4_x86_64:
++  case lldb_xmm5_x86_64:
++  case lldb_xmm6_x86_64:
++  case lldb_xmm7_x86_64:
++  case lldb_xmm8_x86_64:
++  case lldb_xmm9_x86_64:
++  case lldb_xmm10_x86_64:
++  case lldb_xmm11_x86_64:
++  case lldb_xmm12_x86_64:
++  case lldb_xmm13_x86_64:
++  case lldb_xmm14_x86_64:
++  case lldb_xmm15_x86_64:
++    reg_value.SetBytes(&m_fpr_x86_64.fxstate.fx_xmm[reg - lldb_xmm0_x86_64],
++                       reg_info->byte_size, endian::InlHostByteOrder());
++    break;
 +  case lldb_dr0_x86_64:
 +  case lldb_dr1_x86_64:
 +  case lldb_dr2_x86_64:
@@ -70,10 +202,70 @@ $NetBSD$
    }
  
    return error;
-@@ -400,6 +428,16 @@ Error NativeRegisterContextNetBSD_x86_64
+@@ -400,6 +545,76 @@ Error NativeRegisterContextNetBSD_x86_64
    case lldb_es_x86_64:
      m_gpr_x86_64.regs[_REG_ES] = reg_value.GetAsUInt64();
      break;
++  case lldb_fctrl_x86_64:
++    m_fpr_x86_64.fxstate.fx_cw = reg_value.GetAsUInt16();
++    break;
++  case lldb_fstat_x86_64:
++    m_fpr_x86_64.fxstate.fx_sw = reg_value.GetAsUInt16();
++    break;
++  case lldb_ftag_x86_64:
++    m_fpr_x86_64.fxstate.fx_tw = reg_value.GetAsUInt8();
++    break;
++  case lldb_fop_x86_64:
++    m_fpr_x86_64.fxstate.fx_opcode = reg_value.GetAsUInt16();
++    break;
++  case lldb_fiseg_x86_64:
++    m_fpr_x86_64.fxstate.fx_ip.fa_64 = reg_value.GetAsUInt64();
++    break;
++  case lldb_fioff_x86_64:
++    m_fpr_x86_64.fxstate.fx_ip.fa_32.fa_off = reg_value.GetAsUInt32();
++    break;
++  case lldb_foseg_x86_64:
++    m_fpr_x86_64.fxstate.fx_dp.fa_64 = reg_value.GetAsUInt64();
++    break;
++  case lldb_fooff_x86_64:
++    m_fpr_x86_64.fxstate.fx_dp.fa_32.fa_off = reg_value.GetAsUInt32();
++    break;
++  case lldb_mxcsr_x86_64:
++    m_fpr_x86_64.fxstate.fx_mxcsr = reg_value.GetAsUInt32();
++    break;
++  case lldb_mxcsrmask_x86_64:
++    m_fpr_x86_64.fxstate.fx_mxcsr_mask = reg_value.GetAsUInt32();
++    break;
++  case lldb_st0_x86_64:
++  case lldb_st1_x86_64:
++  case lldb_st2_x86_64:
++  case lldb_st3_x86_64:
++  case lldb_st4_x86_64:
++  case lldb_st5_x86_64:
++  case lldb_st6_x86_64:
++  case lldb_st7_x86_64:
++    ::memcpy(&m_fpr_x86_64.fxstate.fx_87_ac[reg - lldb_st0_x86_64],
++             reg_value.GetBytes(), reg_value.GetByteSize());
++    break;
++  case lldb_xmm0_x86_64:
++  case lldb_xmm1_x86_64:
++  case lldb_xmm2_x86_64:
++  case lldb_xmm3_x86_64:
++  case lldb_xmm4_x86_64:
++  case lldb_xmm5_x86_64:
++  case lldb_xmm6_x86_64:
++  case lldb_xmm7_x86_64:
++  case lldb_xmm8_x86_64:
++  case lldb_xmm9_x86_64:
++  case lldb_xmm10_x86_64:
++  case lldb_xmm11_x86_64:
++  case lldb_xmm12_x86_64:
++  case lldb_xmm13_x86_64:
++  case lldb_xmm14_x86_64:
++  case lldb_xmm15_x86_64:
++    ::memcpy(&m_fpr_x86_64.fxstate.fx_xmm[reg - lldb_xmm0_x86_64],
++             reg_value.GetBytes(), reg_value.GetByteSize());
++    break;
 +  case lldb_dr0_x86_64:
 +  case lldb_dr1_x86_64:
 +  case lldb_dr2_x86_64:
@@ -87,7 +279,7 @@ $NetBSD$
    }
  
    if (WriteRegisterSet(set) != 0)
-@@ -480,4 +518,223 @@ Error NativeRegisterContextNetBSD_x86_64
+@@ -480,4 +695,223 @@ Error NativeRegisterContextNetBSD_x86_64
    return error;
  }
  
