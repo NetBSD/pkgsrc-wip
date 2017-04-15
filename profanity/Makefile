@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	profanity-0.5.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.profanity.im/
 
@@ -28,4 +29,5 @@ BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../chat/libotr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
