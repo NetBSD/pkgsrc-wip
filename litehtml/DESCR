@@ -1,0 +1,8 @@
+litehtml is the lightweight HTML rendering engine with CSS2/CSS3
+support. Note, litehtml itself does not draw any text, pictures or
+other graphics and litehtml does not depend of any image/draw/font
+library. You are free to use any library to draw images, fonts and
+any other graphics. litehtml just parses HTML/CSS and places the
+HTML elements into right position (renders HTML). To draw the html
+elemens you have to implement the simple callback interface
+document_container.
