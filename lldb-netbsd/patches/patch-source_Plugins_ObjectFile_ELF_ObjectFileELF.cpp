@@ -7,21 +7,21 @@ $NetBSD$
  const char *const LLDB_NT_OWNER_FREEBSD = "FreeBSD";
  const char *const LLDB_NT_OWNER_GNU = "GNU";
 -const char *const LLDB_NT_OWNER_NETBSD = "NetBSD";
-+const char *const LLDB_NT_OWNER_NETBSD = "NetBSD-CORE";
++const char *const LLDB_NT_OWNER_NETBSDCORE = "NetBSD-CORE";
  const char *const LLDB_NT_OWNER_OPENBSD = "OpenBSD";
  const char *const LLDB_NT_OWNER_CSR = "csr";
  const char *const LLDB_NT_OWNER_ANDROID = "Android";
-@@ -67,9 +67,6 @@ const elf_word LLDB_NT_GNU_ABI_SIZE = 16
+@@ -67,8 +67,7 @@ const elf_word LLDB_NT_GNU_ABI_SIZE = 16
  
  const elf_word LLDB_NT_GNU_BUILD_ID_TAG = 0x03;
  
 -const elf_word LLDB_NT_NETBSD_ABI_TAG = 0x01;
 -const elf_word LLDB_NT_NETBSD_ABI_SIZE = 4;
--
++const elf_word LLDB_NT_NETBSD_NT_PROCINFO = 1;
+ 
  // GNU ABI note OS constants
  const elf_word LLDB_NT_GNU_ABI_OS_LINUX = 0x00;
- const elf_word LLDB_NT_GNU_ABI_OS_HURD = 0x01;
-@@ -1371,24 +1368,10 @@ ObjectFileELF::RefineModuleDetailsFromNo
+@@ -1371,24 +1370,11 @@ ObjectFileELF::RefineModuleDetailsFromNo
          arch_spec.GetTriple().setOS(llvm::Triple::OSType::Linux);
      }
      // Process NetBSD ELF notes.
@@ -35,7 +35,8 @@ $NetBSD$
 -        return error;
 -      }
 -
-+    else if (note.n_name == LLDB_NT_OWNER_NETBSD) {
++    else if ((note.n_name == LLDB_NT_OWNER_NETBSDCORE) &&
++             (note.n_type == LLDB_NT_NETBSD_NT_PROCINFO)) {
        // Set the elf OS version to NetBSD.  Also clear the vendor.
        arch_spec.GetTriple().setOS(llvm::Triple::OSType::NetBSD);
        arch_spec.GetTriple().setVendor(llvm::Triple::VendorType::UnknownVendor);
