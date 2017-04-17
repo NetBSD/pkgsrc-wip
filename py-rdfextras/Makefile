@@ -6,7 +6,7 @@
 
 DISTNAME=	v${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-rdfextras-${PORTVERSION}
-CATEGORIES=	python
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RDFLib/rdfextras/archive/}
 
 MAINTAINER=	bacon4000@gmail.com

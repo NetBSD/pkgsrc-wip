@@ -3,7 +3,7 @@
 
 PKGNAME=	fvcom-2.7.1
 DISTNAME=	sourcecode1
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://fvcom.smast.umassd.edu/FVCOM/password_required/t2/
 
 MAINTAINER=	bacon4000@gmail.com

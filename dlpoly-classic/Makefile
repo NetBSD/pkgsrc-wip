@@ -2,7 +2,7 @@
 
 DISTNAME=	dl_class_1.8
 PKGNAME=	dlpoly-classic-1.8
-CATEGORIES=	math parallel
+CATEGORIES=	science
 MASTER_SITES=	http://ccpforge.cse.rl.ac.uk/gf/download/frsrelease/238/2028/
 
 MAINTAINER=	bacon4000@gmail.com

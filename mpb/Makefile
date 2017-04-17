@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	mpb-1.4.2
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://ab-initio.mit.edu/mpb/
 
 MAINTAINER=	bacon4000@gmail.com

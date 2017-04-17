@@ -38,7 +38,7 @@
 #.endif
 
 DISTNAME=	antlr-${PORTVERSION}
-CATEGORIES=	devel
+CATEGORIES=	science
 MASTER_SITES=	http://www.antlr2.org/download/
 
 MAINTAINER=	bacon4000@gmail.com

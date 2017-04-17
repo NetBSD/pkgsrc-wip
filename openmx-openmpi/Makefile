@@ -2,7 +2,7 @@
 
 DISTNAME=	openmx3.7
 PKGNAME=	openmx-openmpi-3.7
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://www.openmx-square.org/
 
 MAINTAINER=	bacon4000@gmail.com

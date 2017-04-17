@@ -3,7 +3,7 @@
 
 DISTNAME=	meep-1.1.1
 PKGNAME=	meep-mpi-1.1.1
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://ab-initio.mit.edu/meep/
 
 MAINTAINER=	bacon4000@gmail.com

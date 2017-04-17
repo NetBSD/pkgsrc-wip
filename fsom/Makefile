@@ -5,7 +5,7 @@
 ###########################################################
 
 DISTNAME=	fsom-${PORTVERSION}
-CATEGORIES=	biology
+CATEGORIES=	science
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
 MAINTAINER=	bacon4000@gmail.com
