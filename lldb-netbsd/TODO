@@ -26,12 +26,8 @@ Known bugs
 ==========
  - attaching to process broken or violating PaX MPROTECT
    (violation is fine, just fix research the real reason)
- - core(5) isn't really functional
  - no threads in process plugin
  - no x86-32 bit support
- - no FPR registers
- - no watchpoints
- - support F_GETPATH?
  - fix test suite bugs..
  - unknown ones
  - switch from kvm(3) to sysctl(7)
