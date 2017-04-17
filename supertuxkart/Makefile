@@ -25,18 +25,18 @@ CXXFLAGS+=	-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_
 CMAKE_ARGS+=	-DUSE_WIIUSE=0 \
 		-DUSE_FRIBIDI=0
 
+#.include "../../devel/SDL/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
