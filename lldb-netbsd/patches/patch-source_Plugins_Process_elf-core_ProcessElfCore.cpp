@@ -152,7 +152,7 @@ $NetBSD$
            thread_data->fpregset = note_data;
          break;
        case NT_PRPSINFO:
-@@ -717,6 +738,124 @@ Error ProcessElfCore::ParseThreadContext
+@@ -717,6 +738,132 @@ Error ProcessElfCore::ParseThreadContext
    return error;
  }
  
@@ -222,20 +222,24 @@ $NetBSD$
 +          m_thread_data.push_back(ThreadData());
 +          m_thread_data.back().gpregset = note_data;
 +          bool success;
-+          m_thread_data.back().tid = StringConvert::ToUInt32(note.n_name.substr(12).c_str(), UINT32_MAX, 0, &success);
++          m_thread_data.back().tid = StringConvert::ToUInt32(
++              note.n_name.substr(12).c_str(), UINT32_MAX, 0, &success);
 +          if (!success)
-+            return Error("Error parsing NetBSD core(5) notes: cannot convert LWP ID to integer");
++            return Error("Error parsing NetBSD core(5) notes: cannot convert "
++                         "LWP ID to integer");
 +        } else if (note.n_type == NETBSD::AMD64::NT_FPREGS) {
 +          if (m_thread_data.empty())
-+            return Error(
-+                "Error parsing NetBSD core(5) notes: Unexpected order of NOTEs PT_GETFPREG before PT_GETREG");
++            return Error("Error parsing NetBSD core(5) notes: Unexpected order "
++                         "of NOTEs PT_GETFPREG before PT_GETREG");
 +          m_thread_data.back().fpregset = note_data;
 +        } else {
-+          return Error("Error parsing NetBSD core(5) notes: Unsupported AMD64 NOTE");
++          return Error(
++              "Error parsing NetBSD core(5) notes: Unsupported AMD64 NOTE");
 +        }
 +      } break;
 +      default:
-+        return Error("Error parsing NetBSD core(5) notes: Unsupported architecture");
++        return Error(
++            "Error parsing NetBSD core(5) notes: Unsupported architecture");
 +      }
 +    } else {
 +      return Error("Error parsing NetBSD core(5) notes: Unrecognized note");
@@ -245,10 +249,13 @@ $NetBSD$
 +  }
 +
 +  if (m_thread_data.empty())
-+    return Error("Error parsing NetBSD core(5) notes: No threads information specified in notes");
++    return Error("Error parsing NetBSD core(5) notes: No threads information "
++                 "specified in notes");
 +
 +  if (m_thread_data.size() != nlwps)
-+    return Error("rror parsing NetBSD core(5) notes: Mismatch between the number of LWPs in netbsd_elfcore_procinfo and the number of LWPs specified by MD notes");
++    return Error("rror parsing NetBSD core(5) notes: Mismatch between the "
++                 "number of LWPs in netbsd_elfcore_procinfo and the number of "
++                 "LWPs specified by MD notes");
 +
 +  /* The whole process signal */
 +  if (siglwp == 0) {
@@ -268,7 +275,8 @@ $NetBSD$
 +      }
 +    }
 +    if (!passed)
-+      return Error("Error parsing NetBSD core(5) notes: Signal passed to unknown LWP");
++      return Error(
++          "Error parsing NetBSD core(5) notes: Signal passed to unknown LWP");
 +  }
 +
 +  return Error();
@@ -277,7 +285,7 @@ $NetBSD$
  uint32_t ProcessElfCore::GetNumThreadContexts() {
    if (!m_thread_data_valid)
      DoLoadCore();
-@@ -730,7 +869,7 @@ ArchSpec ProcessElfCore::GetArchitecture
+@@ -730,7 +877,7 @@ ArchSpec ProcessElfCore::GetArchitecture
    core_file->GetArchitecture(arch);
  
    ArchSpec target_arch = GetTarget().GetArchitecture();
