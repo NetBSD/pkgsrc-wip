@@ -45,7 +45,7 @@ $NetBSD$
  // Parse a FreeBSD NT_PRSTATUS note - see FreeBSD sys/procfs.h for details.
  static void ParseFreeBSDPrStatus(ThreadData &thread_data, DataExtractor &data,
                                   ArchSpec &arch) {
-@@ -497,15 +504,27 @@ static void ParseFreeBSDThrMisc(ThreadDa
+@@ -497,15 +504,29 @@ static void ParseFreeBSDThrMisc(ThreadDa
    thread_data.name = data.GetCStr(&offset, 20);
  }
  
@@ -58,13 +58,15 @@ $NetBSD$
 +  uint32_t version = data.GetU32(&offset);
    if (version != 1)
 -    return;
-+    return Error("Unsupported procinfo version");
++    return Error(
++        "Error parsing NetBSD core(5) notes: Unsupported procinfo version");
  
 -  offset += 4;
 -  thread_data.signo = data.GetU32(&offset);
 +  uint32_t cpisize = data.GetU32(&offset);
 +  if (cpisize != NETBSD::NT_PROCINFO_SIZE)
-+    return Error("Unsupported procinfo version");
++    return Error(
++        "Error parsing NetBSD core(5) notes: Unsupported procinfo size");
 +
 +  cpi_signo = data.GetU32(&offset); /* killing signal */
 +
@@ -78,7 +80,7 @@ $NetBSD$
  }
  
  static void ParseOpenBSDProcInfo(ThreadData &thread_data, DataExtractor &data) {
-@@ -524,12 +543,28 @@ static void ParseOpenBSDProcInfo(ThreadD
+@@ -524,12 +545,28 @@ static void ParseOpenBSDProcInfo(ThreadD
  /// 1) A PT_NOTE segment is composed of one or more NOTE entries.
  /// 2) NOTE Entry contains a standard header followed by variable size data.
  ///   (see ELFNote structure)
@@ -110,7 +112,7 @@ $NetBSD$
  /// forms
  ///    a) Each thread context(2 or more NOTE entries) contained in its own
  ///    segment (PT_NOTE)
-@@ -540,8 +575,9 @@ static void ParseOpenBSDProcInfo(ThreadD
+@@ -540,8 +577,9 @@ static void ParseOpenBSDProcInfo(ThreadD
  ///        new thread when it finds NT_PRSTATUS or NT_PRPSINFO NOTE entry.
  ///    For case (b) there may be either one NT_PRPSINFO per thread, or a single
  ///    one that applies to all threads (depending on the platform type).
@@ -121,7 +123,7 @@ $NetBSD$
    assert(segment_header && segment_header->p_type == llvm::ELF::PT_NOTE);
  
    lldb::offset_t offset = 0;
-@@ -607,21 +643,6 @@ Error ProcessElfCore::ParseThreadContext
+@@ -607,21 +645,6 @@ Error ProcessElfCore::ParseThreadContext
        default:
          break;
        }
@@ -143,7 +145,7 @@ $NetBSD$
      } else if (note.n_name.substr(0, 7) == "OpenBSD") {
        // OpenBSD per-thread information is stored in notes named
        // "OpenBSD@nnn" so match on the initial part of the string.
-@@ -659,7 +680,7 @@ Error ProcessElfCore::ParseThreadContext
+@@ -659,7 +682,7 @@ Error ProcessElfCore::ParseThreadContext
          // The result from FXSAVE is in NT_PRXFPREG for i386 core files
          if (arch.GetCore() == ArchSpec::eCore_x86_64_x86_64)
            thread_data->fpregset = note_data;
@@ -152,7 +154,7 @@ $NetBSD$
            thread_data->fpregset = note_data;
          break;
        case NT_PRPSINFO:
-@@ -717,6 +738,132 @@ Error ProcessElfCore::ParseThreadContext
+@@ -717,6 +740,134 @@ Error ProcessElfCore::ParseThreadContext
    return error;
  }
  
@@ -210,7 +212,9 @@ $NetBSD$
 +
 +    if ((note.n_name == "NetBSD-CORE") &&
 +        (note.n_type == NETBSD::NT_PROCINFO)) {
-+      ParseNetBSDProcInfo(note_data, nlwps, signo, siglwp);
++      Error error = ParseNetBSDProcInfo(note_data, nlwps, signo, siglwp);
++      if (error.Fail())
++        return error;
 +    } else if ((note.n_name == "NetBSD-CORE") &&
 +               (note.n_type == NETBSD::NT_AUXV)) {
 +      m_auxv = DataExtractor(note_data);
@@ -225,7 +229,7 @@ $NetBSD$
 +          m_thread_data.back().tid = StringConvert::ToUInt32(
 +              note.n_name.substr(12).c_str(), UINT32_MAX, 0, &success);
 +          if (!success)
-+            return Error("Error parsing NetBSD core(5) notes: cannot convert "
++            return Error("Error parsing NetBSD core(5) notes: Cannot convert "
 +                         "LWP ID to integer");
 +        } else if (note.n_type == NETBSD::AMD64::NT_FPREGS) {
 +          if (m_thread_data.empty())
@@ -285,7 +289,7 @@ $NetBSD$
  uint32_t ProcessElfCore::GetNumThreadContexts() {
    if (!m_thread_data_valid)
      DoLoadCore();
-@@ -730,7 +877,7 @@ ArchSpec ProcessElfCore::GetArchitecture
+@@ -730,7 +881,7 @@ ArchSpec ProcessElfCore::GetArchitecture
    core_file->GetArchitecture(arch);
  
    ArchSpec target_arch = GetTarget().GetArchitecture();
