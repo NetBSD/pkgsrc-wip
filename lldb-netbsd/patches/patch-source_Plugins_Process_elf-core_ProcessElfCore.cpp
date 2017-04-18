@@ -2,7 +2,15 @@ $NetBSD$
 
 --- source/Plugins/Process/elf-core/ProcessElfCore.cpp.orig	2017-04-07 18:27:43.000000000 +0000
 +++ source/Plugins/Process/elf-core/ProcessElfCore.cpp
-@@ -219,7 +219,7 @@ Error ProcessElfCore::DoLoadCore() {
+@@ -19,6 +19,7 @@
+ #include "lldb/Core/PluginManager.h"
+ #include "lldb/Core/Section.h"
+ #include "lldb/Core/State.h"
++#include "lldb/Host/StringConvert.h"
+ #include "lldb/Target/DynamicLoader.h"
+ #include "lldb/Target/MemoryRegionInfo.h"
+ #include "lldb/Target/Target.h"
+@@ -219,7 +220,7 @@ Error ProcessElfCore::DoLoadCore() {
    ArchSpec core_arch(m_core_module_sp->GetArchitecture());
    target_arch.MergeFrom(core_arch);
    GetTarget().SetArchitecture(target_arch);
@@ -11,7 +19,7 @@ $NetBSD$
    SetUnixSignals(UnixSignals::Create(GetArchitecture()));
  
    // Ensure we found at least one thread that was stopped on a signal.
-@@ -373,7 +373,8 @@ size_t ProcessElfCore::DoReadMemory(lldb
+@@ -373,7 +374,8 @@ size_t ProcessElfCore::DoReadMemory(lldb
    lldb::addr_t bytes_left =
        0; // Number of bytes available in the core file from the given address
  
@@ -21,7 +29,7 @@ $NetBSD$
    if (file_start == file_end)
      return 0;
  
-@@ -458,9 +459,14 @@ enum {
+@@ -458,9 +460,14 @@ enum {
  
  namespace NETBSD {
  
@@ -37,7 +45,7 @@ $NetBSD$
  // Parse a FreeBSD NT_PRSTATUS note - see FreeBSD sys/procfs.h for details.
  static void ParseFreeBSDPrStatus(ThreadData &thread_data, DataExtractor &data,
                                   ArchSpec &arch) {
-@@ -497,15 +503,27 @@ static void ParseFreeBSDThrMisc(ThreadDa
+@@ -497,15 +504,27 @@ static void ParseFreeBSDThrMisc(ThreadDa
    thread_data.name = data.GetCStr(&offset, 20);
  }
  
@@ -60,17 +68,17 @@ $NetBSD$
 +
 +  cpi_signo = data.GetU32(&offset); /* killing signal */
 +
-+  offset += 104;
++  offset += 108;
 +  cpi_nlwps = data.GetU32(&offset); /* number of LWPs */
 +
-+  offset += 31;
++  offset += 32;
 +  cpi_siglwp = data.GetU32(&offset); /* LWP target of killing signal */
 +
 +  return Error();
  }
  
  static void ParseOpenBSDProcInfo(ThreadData &thread_data, DataExtractor &data) {
-@@ -524,12 +542,28 @@ static void ParseOpenBSDProcInfo(ThreadD
+@@ -524,12 +543,28 @@ static void ParseOpenBSDProcInfo(ThreadD
  /// 1) A PT_NOTE segment is composed of one or more NOTE entries.
  /// 2) NOTE Entry contains a standard header followed by variable size data.
  ///   (see ELFNote structure)
@@ -102,7 +110,7 @@ $NetBSD$
  /// forms
  ///    a) Each thread context(2 or more NOTE entries) contained in its own
  ///    segment (PT_NOTE)
-@@ -540,8 +574,9 @@ static void ParseOpenBSDProcInfo(ThreadD
+@@ -540,8 +575,9 @@ static void ParseOpenBSDProcInfo(ThreadD
  ///        new thread when it finds NT_PRSTATUS or NT_PRPSINFO NOTE entry.
  ///    For case (b) there may be either one NT_PRPSINFO per thread, or a single
  ///    one that applies to all threads (depending on the platform type).
@@ -113,7 +121,7 @@ $NetBSD$
    assert(segment_header && segment_header->p_type == llvm::ELF::PT_NOTE);
  
    lldb::offset_t offset = 0;
-@@ -607,21 +642,6 @@ Error ProcessElfCore::ParseThreadContext
+@@ -607,21 +643,6 @@ Error ProcessElfCore::ParseThreadContext
        default:
          break;
        }
@@ -135,7 +143,7 @@ $NetBSD$
      } else if (note.n_name.substr(0, 7) == "OpenBSD") {
        // OpenBSD per-thread information is stored in notes named
        // "OpenBSD@nnn" so match on the initial part of the string.
-@@ -659,7 +679,7 @@ Error ProcessElfCore::ParseThreadContext
+@@ -659,7 +680,7 @@ Error ProcessElfCore::ParseThreadContext
          // The result from FXSAVE is in NT_PRXFPREG for i386 core files
          if (arch.GetCore() == ArchSpec::eCore_x86_64_x86_64)
            thread_data->fpregset = note_data;
@@ -144,7 +152,7 @@ $NetBSD$
            thread_data->fpregset = note_data;
          break;
        case NT_PRPSINFO:
-@@ -717,6 +737,121 @@ Error ProcessElfCore::ParseThreadContext
+@@ -717,6 +738,124 @@ Error ProcessElfCore::ParseThreadContext
    return error;
  }
  
@@ -213,31 +221,34 @@ $NetBSD$
 +        if (note.n_type == NETBSD::AMD64::NT_REGS) {
 +          m_thread_data.push_back(ThreadData());
 +          m_thread_data.back().gpregset = note_data;
-+          if (!llvm::StringRef(note.n_name.substr(12))
-+                   .getAsInteger(10, m_thread_data.back().tid))
-+            return Error("Unsupported NOTE type");
++          bool success;
++          m_thread_data.back().tid = StringConvert::ToUInt32(note.n_name.substr(12).c_str(), UINT32_MAX, 0, &success);
++          if (!success)
++            return Error("Error parsing NetBSD core(5) notes: cannot convert LWP ID to integer");
 +        } else if (note.n_type == NETBSD::AMD64::NT_FPREGS) {
 +          if (m_thread_data.empty())
 +            return Error(
-+                "Unexpected order of NOTEs PT_GETFPREG before PT_GETREG");
++                "Error parsing NetBSD core(5) notes: Unexpected order of NOTEs PT_GETFPREG before PT_GETREG");
 +          m_thread_data.back().fpregset = note_data;
 +        } else {
-+          return Error("Unsupported NOTE type");
++          return Error("Error parsing NetBSD core(5) notes: Unsupported AMD64 NOTE");
 +        }
 +      } break;
 +      default:
-+        return Error("Unsupported architecture");
++        return Error("Error parsing NetBSD core(5) notes: Unsupported architecture");
 +      }
 +    } else {
-+      return Error("Unsupported NOTE type");
++      return Error("Error parsing NetBSD core(5) notes: Unrecognized note");
 +    }
++
++    offset += note_size;
 +  }
 +
 +  if (m_thread_data.empty())
-+    return Error("Missing thread information in NOTEs");
++    return Error("Error parsing NetBSD core(5) notes: No threads information specified in notes");
 +
 +  if (m_thread_data.size() != nlwps)
-+    return Error("Mismatch number of LWPs in NOTEs");
++    return Error("rror parsing NetBSD core(5) notes: Mismatch between the number of LWPs in netbsd_elfcore_procinfo and the number of LWPs specified by MD notes");
 +
 +  /* The whole process signal */
 +  if (siglwp == 0) {
@@ -257,7 +268,7 @@ $NetBSD$
 +      }
 +    }
 +    if (!passed)
-+      return Error("Signal passed to unknown LWP");
++      return Error("Error parsing NetBSD core(5) notes: Signal passed to unknown LWP");
 +  }
 +
 +  return Error();
@@ -266,7 +277,7 @@ $NetBSD$
  uint32_t ProcessElfCore::GetNumThreadContexts() {
    if (!m_thread_data_valid)
      DoLoadCore();
-@@ -730,7 +865,7 @@ ArchSpec ProcessElfCore::GetArchitecture
+@@ -730,7 +869,7 @@ ArchSpec ProcessElfCore::GetArchitecture
    core_file->GetArchitecture(arch);
  
    ArchSpec target_arch = GetTarget().GetArchitecture();
