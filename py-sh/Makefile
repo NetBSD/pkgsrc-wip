@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.10 2014/05/09 07:38:49 thomasklausner Exp $
 
-DISTNAME=	sh-1.12.10
+DISTNAME=	sh-1.12.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sh/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+# some test failures, see https://github.com/amoffat/sh/issues/347
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
