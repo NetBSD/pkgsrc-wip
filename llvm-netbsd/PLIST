@@ -200,6 +200,8 @@ include/llvm/Analysis/LoopUnrollAnalyzer.h
 include/llvm/Analysis/MemoryBuiltins.h
 include/llvm/Analysis/MemoryDependenceAnalysis.h
 include/llvm/Analysis/MemoryLocation.h
+include/llvm/Analysis/MemorySSA.h
+include/llvm/Analysis/MemorySSAUpdater.h
 include/llvm/Analysis/ModuleSummaryAnalysis.h
 include/llvm/Analysis/ObjCARCAliasAnalysis.h
 include/llvm/Analysis/ObjCARCAnalysisUtils.h
@@ -535,6 +537,7 @@ include/llvm/DebugInfo/PDB/PDBSymbolTypeVTableShape.h
 include/llvm/DebugInfo/PDB/PDBSymbolUnknown.h
 include/llvm/DebugInfo/PDB/PDBSymbolUsingNamespace.h
 include/llvm/DebugInfo/PDB/PDBTypes.h
+include/llvm/DebugInfo/PDB/UDTLayout.h
 include/llvm/DebugInfo/Symbolize/DIPrinter.h
 include/llvm/DebugInfo/Symbolize/SymbolizableModule.h
 include/llvm/DebugInfo/Symbolize/Symbolize.h
@@ -955,6 +958,7 @@ include/llvm/Support/TypeName.h
 include/llvm/Support/Unicode.h
 include/llvm/Support/UnicodeCharRanges.h
 include/llvm/Support/UniqueLock.h
+include/llvm/Support/VCSRevision.h
 include/llvm/Support/Valgrind.h
 include/llvm/Support/Wasm.h
 include/llvm/Support/WasmRelocs/WebAssembly.def
@@ -1103,8 +1107,6 @@ include/llvm/Transforms/Utils/LoopVersioning.h
 include/llvm/Transforms/Utils/LowerInvoke.h
 include/llvm/Transforms/Utils/LowerMemIntrinsics.h
 include/llvm/Transforms/Utils/Mem2Reg.h
-include/llvm/Transforms/Utils/MemorySSA.h
-include/llvm/Transforms/Utils/MemorySSAUpdater.h
 include/llvm/Transforms/Utils/ModuleUtils.h
 include/llvm/Transforms/Utils/NameAnonGlobals.h
 include/llvm/Transforms/Utils/PredicateInfo.h
