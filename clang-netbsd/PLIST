@@ -76,6 +76,7 @@ include/clang/AST/Expr.h
 include/clang/AST/ExprCXX.h
 include/clang/AST/ExprObjC.h
 include/clang/AST/ExprOpenMP.h
+include/clang/AST/ExternalASTMerger.h
 include/clang/AST/ExternalASTSource.h
 include/clang/AST/GlobalDecl.h
 include/clang/AST/LambdaCapture.h
@@ -158,6 +159,8 @@ include/clang/Basic/AllDiagnostics.h
 include/clang/Basic/AttrHasAttributeImpl.inc
 include/clang/Basic/AttrKinds.h
 include/clang/Basic/AttrList.inc
+include/clang/Basic/AttrSubMatchRulesList.inc
+include/clang/Basic/AttrSubjectMatchRules.h
 include/clang/Basic/Attributes.h
 include/clang/Basic/Builtins.def
 include/clang/Basic/Builtins.h
@@ -346,6 +349,7 @@ include/clang/Lex/Token.h
 include/clang/Lex/TokenConcatenation.h
 include/clang/Lex/TokenLexer.h
 include/clang/Parse/AttrParserStringSwitches.inc
+include/clang/Parse/AttrSubMatchRulesParserStringSwitches.inc
 include/clang/Parse/ParseAST.h
 include/clang/Parse/ParseDiagnostic.h
 include/clang/Parse/Parser.h
