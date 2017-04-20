@@ -109,7 +109,7 @@ $NetBSD$
 +      //
 +      //     M = major version
 +      //     m = minor version; a minor number of 99 indicates current.
-+      //     r = 0 (*)
++      //     r = 0 (since NetBSD 3.0 not used)
 +      //     p = patchlevel
 +      const uint32_t version_major = version_info / 100000000;
 +      const uint32_t version_minor = (version_info % 100000000) / 1000000;
