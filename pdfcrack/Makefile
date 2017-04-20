@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/03/10 23:33:26 leot1990 Exp $
 
-DISTNAME=	pdfcrack-0.15
+DISTNAME=	pdfcrack-0.16
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdfcrack/}
 
