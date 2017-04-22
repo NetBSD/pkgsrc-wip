@@ -10,7 +10,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC7S_DIST_VERSION}
 ## PKGREVISION of this package!
 #PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC7S_DIST_VERSION}/}
+#MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC7S_DIST_VERSION}/}
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/${GCC7S_DIST_VERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -72,8 +72,8 @@ BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 
 post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL14}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL14} ${WRKSRC}/isl
+	${TAR} -jxf ${DISTDIR}/${ISL16}.tar.bz2 -C ${WRKSRC}
+	${MV} ${WRKSRC}/${ISL16} ${WRKSRC}/isl
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
