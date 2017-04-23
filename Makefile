@@ -3840,7 +3840,6 @@ SUBDIR+=	rthread
 SUBDIR+=	rtl-sdr-git
 SUBDIR+=	rtpbreak
 SUBDIR+=	rtspdump
-SUBDIR+=	rubinius
 SUBDIR+=	rubrica2
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-cabin
