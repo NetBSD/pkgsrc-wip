@@ -3456,6 +3456,7 @@ SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rpyc
 SUBDIR+=	py-rql
 SUBDIR+=	py-rsistent
+SUBDIR+=	py-rt
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-s3transfer
 SUBDIR+=	py-sage
