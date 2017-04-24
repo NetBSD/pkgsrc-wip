@@ -379,7 +379,6 @@ SUBDIR+=	cli-git
 SUBDIR+=	cliquer
 SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
-SUBDIR+=	cloc
 SUBDIR+=	clockspeed
 SUBDIR+=	cloog
 SUBDIR+=	clustalx
