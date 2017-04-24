@@ -1,2 +1,0 @@
-Crontab module for read and writing crontab files and accessing
-the system cron automatically and simply using a direct API.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/05 20:50:50 jihbed Exp $
-${PYSITELIB}/cronlog.py
-${PYSITELIB}/cronlog.pyc
-${PYSITELIB}/cronlog.pyo
-${PYSITELIB}/crontab.py
-${PYSITELIB}/crontab.pyc
-${PYSITELIB}/crontab.pyo
