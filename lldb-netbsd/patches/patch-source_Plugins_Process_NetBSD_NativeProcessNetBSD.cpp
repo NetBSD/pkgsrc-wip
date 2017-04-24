@@ -2,8 +2,59 @@ $NetBSD$
 
 --- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-04-19 03:59:21.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
-@@ -259,6 +259,30 @@ void NativeProcessNetBSD::MonitorSIGTRAP
+@@ -229,21 +229,32 @@ void NativeProcessNetBSD::MonitorSIGTRAP
+   }
+ 
+   switch (info.psi_siginfo.si_code) {
+-  case TRAP_BRKPT:
+-    for (const auto &thread_sp : m_threads) {
+-      static_pointer_cast<NativeThreadNetBSD>(thread_sp)
+-          ->SetStoppedByBreakpoint();
+-      FixupBreakpointPCAsNeeded(
+-          *static_pointer_cast<NativeThreadNetBSD>(thread_sp));
++  case TRAP_BRKPT: {
++    size_t index;
++    Error error = GetThreadIndexByTid(info.psi_lwpid, index);
++    if (error.Fail()) {
++      LLDB_LOG(log, "failed to find thread by tid: {0}", error);
++      SetState(StateType::eStateInvalid);
++      return;
      }
++    static_pointer_cast<NativeThreadNetBSD>(m_threads[index])
++        ->SetStoppedByBreakpoint();
++    FixupBreakpointPCAsNeeded(
++        *static_pointer_cast<NativeThreadNetBSD>(m_threads[index]));
+     SetState(StateType::eStateStopped, true);
+-    break;
+-  case TRAP_TRACE:
+-    for (const auto &thread_sp : m_threads) {
+-      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedByTrace();
++  } break;
++  case TRAP_TRACE: {
++    size_t index;
++    Error error = GetThreadIndexByTid(info.psi_lwpid, index);
++    if (error.Fail()) {
++      LLDB_LOG(log, "failed to find thread by tid: {0}", error);
++      SetState(StateType::eStateInvalid);
++      return;
+     }
++    static_pointer_cast<NativeThreadNetBSD>(m_threads[index])
++        ->SetStoppedByTrace();
+     SetState(StateType::eStateStopped, true);
+-    break;
++  } break;
+   case TRAP_EXEC: {
+     Error error = ReinitializeThreads();
+     if (error.Fail()) {
+@@ -254,11 +265,44 @@ void NativeProcessNetBSD::MonitorSIGTRAP
+     // Let our delegate know we have just exec'd.
+     NotifyDidExec();
+ 
+-    for (const auto &thread_sp : m_threads) {
+-      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedByExec();
+-    }
++    // There is only one thread
++    static_pointer_cast<NativeThreadNetBSD>(m_threads[0])->SetStoppedByExec();
      SetState(StateType::eStateStopped, true);
    } break;
 +  case TRAP_LWP: {
@@ -23,17 +74,95 @@ $NetBSD$
 +    case PTRACE_LWP_EXIT:
 +      error = RemoveThread(state.pe_lwp);
 +      if (error.Fail()) {
-+        LLDB_LOG(log, "received error while remiving thread: {0} ", error);
++        LLDB_LOG(log, "received error while remioving thread: {0} ", error);
 +      }
 +      break;
 +    default:
 +      llvm_unreachable("Unexpected state");
 +    };
++    if (GetState() == eStateRunning || GetState() == eStateStepping) {
++      error = NativeProcessNetBSD::PtraceWrapper(
++          GetState() == eStateRunning ? PT_CONTINUE : PT_STEP, GetID(),
++          (void *)1, 0);
++      if (error.Fail()) {
++        LLDB_LOG(log, "received error while resuming process: {0} ", error);
++      }
++    } else {
++      llvm_unreachable("Unexpected state");
++    }
 +  } break;
    case TRAP_DBREG: {
      // If a watchpoint was hit, report it
      uint32_t wp_index;
-@@ -812,6 +836,18 @@ Error NativeProcessNetBSD::LaunchInferio
+@@ -267,16 +311,25 @@ void NativeProcessNetBSD::MonitorSIGTRAP
+             ->GetRegisterContext()
+             ->GetWatchpointHitIndex(wp_index,
+                                     (uintptr_t)info.psi_siginfo.si_addr);
+-    if (error.Fail())
++    if (error.Fail()) {
+       LLDB_LOG(log,
+                "received error while checking for watchpoint hits, pid = "
+                "{0}, LWP = {1}, error = {2}",
+                GetID(), info.psi_lwpid, error);
++      SetState(StateType::eStateInvalid);
++      return;
++    }
+     if (wp_index != LLDB_INVALID_INDEX32) {
+-      for (const auto &thread_sp : m_threads) {
+-        static_pointer_cast<NativeThreadNetBSD>(thread_sp)
+-            ->SetStoppedByWatchpoint(wp_index);
++      size_t index;
++      Error error = GetThreadIndexByTid(info.psi_lwpid, index);
++      if (error.Fail()) {
++        LLDB_LOG(log, "failed to find thread by tid: {0}", error);
++        SetState(StateType::eStateInvalid);
++        return;
+       }
++      static_pointer_cast<NativeThreadNetBSD>(m_threads[index])
++          ->SetStoppedByWatchpoint(wp_index);
++
+       SetState(StateType::eStateStopped, true);
+       break;
+     }
+@@ -287,19 +340,33 @@ void NativeProcessNetBSD::MonitorSIGTRAP
+                 ->GetRegisterContext()
+                 ->GetHardwareBreakHitIndex(bp_index,
+                                            (uintptr_t)info.psi_siginfo.si_addr);
+-    if (error.Fail())
++    if (error.Fail()) {
+       LLDB_LOG(log,
+                "received error while checking for hardware "
+                "breakpoint hits, pid = {0}, LWP = {1}, error = {2}",
+                GetID(), info.psi_lwpid, error);
++      SetState(StateType::eStateInvalid);
++      return;
++    }
+     if (bp_index != LLDB_INVALID_INDEX32) {
+-      for (const auto &thread_sp : m_threads) {
+-        static_pointer_cast<NativeThreadNetBSD>(thread_sp)
+-            ->SetStoppedByBreakpoint();
++      size_t index;
++      Error error = GetThreadIndexByTid(info.psi_lwpid, index);
++      if (error.Fail()) {
++        LLDB_LOG(log, "failed to find thread by tid: {0}", error);
++        SetState(StateType::eStateInvalid);
++        return;
+       }
++      static_pointer_cast<NativeThreadNetBSD>(m_threads[index])
++          ->SetStoppedByBreakpoint();
+       SetState(StateType::eStateStopped, true);
+       break;
+     }
++
++    LLDB_LOG(log,
++             "received unknown hardware debug register trap, "
++             "pid = {0}, LWP = {1}",
++             GetID(), info.psi_lwpid);
++    SetState(StateType::eStateInvalid);
+   } break;
+   }
+ }
+@@ -812,6 +879,18 @@ Error NativeProcessNetBSD::LaunchInferio
      return error;
    }
  
@@ -52,29 +181,42 @@ $NetBSD$
    for (const auto &thread_sp : m_threads) {
      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(
          SIGSTOP);
-@@ -898,6 +934,29 @@ void NativeProcessNetBSD::SigchldHandler
+@@ -898,6 +977,42 @@ void NativeProcessNetBSD::SigchldHandler
      MonitorCallback(wait_pid, signal);
  }
  
++Error NativeProcessNetBSD::GetThreadIndexByTid(lldb::tid_t thread_id,
++                                               size_t &index) {
++
++  assert(thread_id > 0);
++
++  bool removed = false;
++  for (decltype(m_threads.size()) i = 0; i < m_threads.size(); i++) {
++    auto thread = static_pointer_cast<NativeThreadNetBSD>(m_threads[i]);
++
++    if (thread->GetID() == thread_id) {
++      index = i;
++      return Error();
++    }
++  }
++
++  return Error("Thread not registered");
++}
++
 +Error NativeProcessNetBSD::RemoveThread(lldb::tid_t thread_id) {
 +
 +  Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_THREAD));
 +  LLDB_LOG(log, "pid {0} removing thread with tid {1}", GetID(), thread_id);
 +
-+  bool removed = false;
-+  for (decltype(m_threads.size()) i = 0; i < m_threads.size(); i++) {
-+    auto thread =
-+        static_pointer_cast<NativeThreadNetBSD>(m_threads[i]);
++  size_t index;
++  Error error = GetThreadIndexByTid(thread_id, index);
 +
-+    if (thread->GetID() == thread_id) {
-+      m_threads.erase(m_threads.begin() + i);
-+      removed = true;
-+      break;
-+    }
++  if (error.Fail()) {
++    LLDB_LOG(log, "failed to find thread by tid: {0}", error);
++    return error;
 +  }
 +
-+  if (!remove)
-+    return Error("Attempt to remove invalid thread");
++  m_threads.erase(m_threads.begin() + index);
 +
 +  return Error();
 +}
@@ -82,7 +224,15 @@ $NetBSD$
  NativeThreadNetBSDSP NativeProcessNetBSD::AddThread(lldb::tid_t thread_id) {
  
    Log *log(ProcessPOSIXLog::GetLogIfAllCategoriesSet(POSIX_LOG_THREAD));
-@@ -945,6 +1004,10 @@ NativeThreadNetBSDSP NativeProcessNetBSD
+@@ -912,6 +1027,7 @@ NativeThreadNetBSDSP NativeProcessNetBSD
+ 
+   auto thread_sp = std::make_shared<NativeThreadNetBSD>(this, thread_id);
+   m_threads.push_back(thread_sp);
++  printf("Added thread thread_id=%" PRIu64 "\n", thread_id);
+   return thread_sp;
+ }
+ 
+@@ -945,6 +1061,10 @@ NativeThreadNetBSDSP NativeProcessNetBSD
      return -1;
    }
  
@@ -93,7 +243,7 @@ $NetBSD$
    for (const auto &thread_sp : m_threads) {
      static_pointer_cast<NativeThreadNetBSD>(thread_sp)->SetStoppedBySignal(
          SIGSTOP);
-@@ -1062,7 +1125,7 @@ Error NativeProcessNetBSD::ReinitializeT
+@@ -1062,7 +1182,7 @@ Error NativeProcessNetBSD::ReinitializeT
    }
    // Reinitialize from scratch threads and register them in process
    while (info.pl_lwpid != 0) {
@@ -102,7 +252,7 @@ $NetBSD$
      error = PtraceWrapper(PT_LWPINFO, GetID(), &info, sizeof(info));
      if (error.Fail()) {
        return error;
-@@ -1071,3 +1134,13 @@ Error NativeProcessNetBSD::ReinitializeT
+@@ -1071,3 +1191,13 @@ Error NativeProcessNetBSD::ReinitializeT
  
    return error;
  }
