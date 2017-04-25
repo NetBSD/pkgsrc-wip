@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2014/09/05 08:06:00 thomasklausner Exp $
 
-DISTNAME=	baresip-0.4.20
+DISTNAME=	baresip-0.5.2
 CATEGORIES=	net audio
 MASTER_SITES=	http://www.creytiv.com/pub/
 
