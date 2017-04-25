@@ -26,6 +26,7 @@ Known bugs
 ==========
  - attaching to process broken or violating PaX MPROTECT
    (violation is fine, just fix research the real reason)
+ - process interrupt does not work
  - no threads in process plugin
  - no x86-32 bit support
  - fix test suite bugs..
