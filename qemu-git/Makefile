@@ -2,8 +2,11 @@
 
 DISTNAME=	qemu-2.8.1
 CATEGORIES=	emulators
-MASTER_SITES=	http://download.qemu-project.org/
-EXTRACT_SUFX=	.tar.bz2
+
+GIT_REPOSITORIES=	qemu
+GIT_REPO.qemu=		git://git.qemu-project.org/qemu.git
+
+WRKSRC=		${WRKDIR}/qemu
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qemu-project.org/
@@ -132,6 +135,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
 		${DESTDIR}${PREFIX}/share/doc/qemu/
 
+.include "../../wip/mk/git-package.mk"
 # On Darwin, qemu uses Cocoa and CoreAudio
 .if empty(OPSYS:MDarwin)
 .include "../../mk/oss.buildlink3.mk"
