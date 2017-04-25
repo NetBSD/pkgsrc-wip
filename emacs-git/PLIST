@@ -2290,6 +2290,9 @@ share/emacs/${PKGVERSION}/lisp/international/uni-mirrored.el
 share/emacs/${PKGVERSION}/lisp/international/uni-name.el
 share/emacs/${PKGVERSION}/lisp/international/uni-numeric.el
 share/emacs/${PKGVERSION}/lisp/international/uni-old-name.el
+share/emacs/${PKGVERSION}/lisp/international/uni-special-lowercase.el
+share/emacs/${PKGVERSION}/lisp/international/uni-special-titlecase.el
+share/emacs/${PKGVERSION}/lisp/international/uni-special-uppercase.el
 share/emacs/${PKGVERSION}/lisp/international/uni-titlecase.el
 share/emacs/${PKGVERSION}/lisp/international/uni-uppercase.el
 share/emacs/${PKGVERSION}/lisp/international/utf-7.el.gz
@@ -3620,6 +3623,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/ispell.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/ispell.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/mhtml-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/mhtml-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/page-ext.el.gz
