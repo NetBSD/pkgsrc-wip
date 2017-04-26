@@ -15,6 +15,7 @@ EXTRACT_OPTS+=	-d ${WRKSRC}
 
 BUILD_DIRS=	t-vpack vpr
 MAKE_FILE=	makefile
+MAKE_FLAGS+=	OPT_FLAGS=${CFLAGS:Q}
 
 SUBST_CLASSES+=		x11
 SUBST_STAGE.x11=	post-patch
