@@ -1,0 +1,6 @@
+This is the core mailman3 package. Should be complemented by:
+- MailmanClient (an API client lib)
+- Postorius (web interface)
+- HyperKitty (archive interface)
+
+Sadly latest stable Django is typically not supported, which complicates laying down dependencies.
