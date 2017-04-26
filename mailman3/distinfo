@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (mailman-3.1.0b5.tar.gz) = ca0d77ecc294794b1796b73ef7bf30488f931c37
+RMD160 (mailman-3.1.0b5.tar.gz) = 45b77ccc658de24dc3649a55354c157cc7d8a06e
+SHA512 (mailman-3.1.0b5.tar.gz) = 8717de83a988dd2cabd8489a17c35e9c1c6e091070df57b9e735a29382b779b53aa1ce2cb5445b8d966bcc6631501e8a7d58ad8039c78c0e8ea3678090221e53
+Size (mailman-3.1.0b5.tar.gz) = 733530 bytes
+SHA1 (patch-src_mailman_config_mailman.cfg) = f15ab4c57a731760a99d0920213f941fa16ca6b5
+SHA1 (patch-src_mailman_config_schema.cfg) = ccdddea7ac214a64f9bb2e2c147dc8ef1a7445b5
+SHA1 (patch-src_mailman_core_initialize.py) = ed836acc6008ac55f5d7209ce595f131dd4c7294

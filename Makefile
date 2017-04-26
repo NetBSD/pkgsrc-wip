@@ -1827,6 +1827,7 @@ SUBDIR+=	macro11
 SUBDIR+=	magit-git
 SUBDIR+=	mago
 SUBDIR+=	mailfilter
+SUBDIR+=	mailman3
 SUBDIR+=	mailutils
 SUBDIR+=	majordomo-devel
 SUBDIR+=	makedict
