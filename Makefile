@@ -2025,6 +2025,7 @@ SUBDIR+=	ncbi-blast
 SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncp
+SUBDIR+=	ncrack
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	necpp-git
