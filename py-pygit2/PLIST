@@ -12,7 +12,8 @@ ${PYSITELIB}/pygit2/__init__.pyo
 ${PYSITELIB}/pygit2/_build.py
 ${PYSITELIB}/pygit2/_build.pyc
 ${PYSITELIB}/pygit2/_build.pyo
-${PYSITELIB}/pygit2/_libgit2.so
+${PLIST.py2x}${PYSITELIB}/pygit2/_libgit2.so
+${PLIST.py3x}${PYSITELIB}/pygit2/_libgit2.abi3.so
 ${PYSITELIB}/pygit2/_run.py
 ${PYSITELIB}/pygit2/_run.pyc
 ${PYSITELIB}/pygit2/_run.pyo
