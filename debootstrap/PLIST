@@ -7,6 +7,7 @@ share/debootstrap/libfakesyscall-amd64.so
 share/debootstrap/libfakesyscall-i386.so
 share/debootstrap/libfakesyscall.c
 share/debootstrap/scripts/aequorea
+share/debootstrap/scripts/artful
 share/debootstrap/scripts/bartholomea
 share/debootstrap/scripts/breezy
 share/debootstrap/scripts/bullseye
