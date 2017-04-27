@@ -390,8 +390,12 @@ include/llvm/DebugInfo/CodeView/EnumTables.h
 include/llvm/DebugInfo/CodeView/Formatters.h
 include/llvm/DebugInfo/CodeView/FunctionId.h
 include/llvm/DebugInfo/CodeView/Line.h
-include/llvm/DebugInfo/CodeView/ModuleSubstream.h
-include/llvm/DebugInfo/CodeView/ModuleSubstreamVisitor.h
+include/llvm/DebugInfo/CodeView/ModuleDebugFileChecksumFragment.h
+include/llvm/DebugInfo/CodeView/ModuleDebugFragment.h
+include/llvm/DebugInfo/CodeView/ModuleDebugFragmentRecord.h
+include/llvm/DebugInfo/CodeView/ModuleDebugFragmentVisitor.h
+include/llvm/DebugInfo/CodeView/ModuleDebugLineFragment.h
+include/llvm/DebugInfo/CodeView/ModuleDebugUnknownFragment.h
 include/llvm/DebugInfo/CodeView/RecordSerialization.h
 include/llvm/DebugInfo/CodeView/SymbolDeserializer.h
 include/llvm/DebugInfo/CodeView/SymbolDumpDelegate.h
@@ -406,7 +410,6 @@ include/llvm/DebugInfo/CodeView/TypeDatabase.h
 include/llvm/DebugInfo/CodeView/TypeDatabaseVisitor.h
 include/llvm/DebugInfo/CodeView/TypeDeserializer.h
 include/llvm/DebugInfo/CodeView/TypeDumpVisitor.h
-include/llvm/DebugInfo/CodeView/TypeDumperBase.h
 include/llvm/DebugInfo/CodeView/TypeIndex.h
 include/llvm/DebugInfo/CodeView/TypeRecord.h
 include/llvm/DebugInfo/CodeView/TypeRecordBuilder.h
@@ -468,6 +471,8 @@ include/llvm/DebugInfo/PDB/IPDBLineNumber.h
 include/llvm/DebugInfo/PDB/IPDBRawSymbol.h
 include/llvm/DebugInfo/PDB/IPDBSession.h
 include/llvm/DebugInfo/PDB/IPDBSourceFile.h
+include/llvm/DebugInfo/PDB/Native/DbiModuleDescriptor.h
+include/llvm/DebugInfo/PDB/Native/DbiModuleDescriptorBuilder.h
 include/llvm/DebugInfo/PDB/Native/DbiStream.h
 include/llvm/DebugInfo/PDB/Native/DbiStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/EnumTables.h
@@ -478,9 +483,7 @@ include/llvm/DebugInfo/PDB/Native/HashTable.h
 include/llvm/DebugInfo/PDB/Native/ISectionContribVisitor.h
 include/llvm/DebugInfo/PDB/Native/InfoStream.h
 include/llvm/DebugInfo/PDB/Native/InfoStreamBuilder.h
-include/llvm/DebugInfo/PDB/Native/ModInfo.h
-include/llvm/DebugInfo/PDB/Native/ModInfoBuilder.h
-include/llvm/DebugInfo/PDB/Native/ModStream.h
+include/llvm/DebugInfo/PDB/Native/ModuleDebugStream.h
 include/llvm/DebugInfo/PDB/Native/NamedStreamMap.h
 include/llvm/DebugInfo/PDB/Native/NativeCompilandSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeEnumModules.h
@@ -898,6 +901,7 @@ include/llvm/Support/GlobPattern.h
 include/llvm/Support/GraphWriter.h
 include/llvm/Support/Host.h
 include/llvm/Support/JamCRC.h
+include/llvm/Support/KnownBits.h
 include/llvm/Support/LEB128.h
 include/llvm/Support/LICENSE.TXT
 include/llvm/Support/LineIterator.h
@@ -1077,6 +1081,7 @@ include/llvm/Transforms/Scalar/PartiallyInlineLibCalls.h
 include/llvm/Transforms/Scalar/Reassociate.h
 include/llvm/Transforms/Scalar/SCCP.h
 include/llvm/Transforms/Scalar/SROA.h
+include/llvm/Transforms/Scalar/SimpleLoopUnswitch.h
 include/llvm/Transforms/Scalar/SimplifyCFG.h
 include/llvm/Transforms/Scalar/Sink.h
 include/llvm/Transforms/Scalar/SpeculativeExecution.h
