@@ -21,6 +21,12 @@ MAKE_ENV+=	INSTALLROOT="${DESTDIR}"
 
 .include 	"options.mk"
 
+.if !empty(PKG_OPTIONS:Minet6)
+# the following is needed at least on MacOS 10.11
+# and should not hurt on earlier versions
+CFLAGS.Darwin+= -D__APPLE_USE_RFC_3542
+.endif
+
 INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 .include "../../devel/readline/buildlink3.mk"
