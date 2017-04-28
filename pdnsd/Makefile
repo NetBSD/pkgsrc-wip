@@ -36,6 +36,12 @@ CONFIGURE_ARGS+=	--disable-src-addr-disc
 .endif
 CONFIGURE_ARGS+=	--with-default-id=${PDNSD_USER}
 
+.if !empty(PKG_OPTIONS:Minet6)
+# the following is needed at least on MacOS 10.11
+# and should not hurt on earlier versions
+CFLAGS.Darwin+=	-D__APPLE_USE_RFC_3542
+.endif
+
 PKG_GROUPS=		${PDNSD_GROUP}
 PKG_USERS=		${PDNSD_USER}:${PDNSD_GROUP}
 PKG_GECOS.${PDNSD_USER}=	proxy\ DNS\ server\ user
