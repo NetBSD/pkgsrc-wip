@@ -1,9 +1,12 @@
 # $NetBSD$
-PKGNAME=	lumina-1.2.0
-DISTNAME=	lumina-qt5-1.2.0
+VERSION=	1.2.0-p1
+PKGNAME=	lumina-${VERSION}
+DISTNAME=	${PKGNAME}
+DIST_SUBDIR=	lumina
 CATEGORIES=	x11
+GITHUB_PROJECT=	lumina
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trueos/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lumina-desktop.org/
@@ -26,8 +29,11 @@ DEPENDS+=	libXdamage-[0-9]*:../../x11/libXdamage
 
 INSTALL_MAKE_FLAGS=		INSTALL_ROOT=${DESTDIR}
 
+.include "options.mk"
+
+
 pre-build:
-	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} CONFIG+="configure WITH_I18N"
+	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} CONFIG+="configure WITH_I18N" ${EXTRA}
 
 pre-install:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
