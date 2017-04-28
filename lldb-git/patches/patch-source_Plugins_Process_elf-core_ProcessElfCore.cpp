@@ -79,24 +79,24 @@ $NetBSD$
 +
 +  cpi_signo = data.GetU32(&offset); /* killing signal */
 +
-+  offset += NT_PROCINFO_CPI_SIGCODE_SIZE;
-+  offset += NT_PROCINFO_CPI_SIGPEND_SIZE;
-+  offset += NT_PROCINFO_CPI_SIGMASK_SIZE;
-+  offset += NT_PROCINFO_CPI_SIGIGNORE_SIZE;
-+  offset += NT_PROCINFO_CPI_SIGCATCH_SIZE;
-+  offset += NT_PROCINFO_CPI_PID_SIZE;
-+  offset += NT_PROCINFO_CPI_PPID_SIZE;
-+  offset += NT_PROCINFO_CPI_PGRP_SIZE;
-+  offset += NT_PROCINFO_CPI_SID_SIZE;
-+  offset += NT_PROCINFO_CPI_RUID_SIZE;
-+  offset += NT_PROCINFO_CPI_EUID_SIZE;
-+  offset += NT_PROCINFO_CPI_SVUID_SIZE;
-+  offset += NT_PROCINFO_CPI_RGID_SIZE;
-+  offset += NT_PROCINFO_CPI_EGID_SIZE;
-+  offset += NT_PROCINFO_CPI_SVGID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SIGCODE_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SIGPEND_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SIGMASK_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SIGIGNORE_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SIGCATCH_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_PID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_PPID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_PGRP_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_RUID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_EUID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SVUID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_RGID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_EGID_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_SVGID_SIZE;
 +  cpi_nlwps = data.GetU32(&offset); /* number of LWPs */
 +
-+  offset += NT_PROCINFO_CPI_NAME_SIZE;
++  offset += NETBSD::NT_PROCINFO_CPI_NAME_SIZE;
 +  cpi_siglwp = data.GetU32(&offset); /* LWP target of killing signal */
 +
 +  return Error();
