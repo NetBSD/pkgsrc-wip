@@ -981,6 +981,8 @@ share/emacs/${PKGVERSION}/lisp/array.el.gz
 share/emacs/${PKGVERSION}/lisp/array.elc
 share/emacs/${PKGVERSION}/lisp/auth-source.el.gz
 share/emacs/${PKGVERSION}/lisp/auth-source.elc
+share/emacs/${PKGVERSION}/lisp/auth-source-pass.el.gz
+share/emacs/${PKGVERSION}/lisp/auth-source-pass.elc
 share/emacs/${PKGVERSION}/lisp/autoarg.el.gz
 share/emacs/${PKGVERSION}/lisp/autoarg.elc
 share/emacs/${PKGVERSION}/lisp/autoinsert.el.gz
