@@ -13,6 +13,7 @@ bin/llvm-c-test
 bin/llvm-cat
 bin/llvm-config
 bin/llvm-cov
+bin/llvm-cvtres
 bin/llvm-cxxdump
 bin/llvm-cxxfilt
 bin/llvm-diff
