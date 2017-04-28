@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	dtc-1.4.1
+DISTNAME=	dtc-1.4.4
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.kernel.org/pub/software/utils/dtc/
+MASTER_SITES=	https://www.kernel.org/pub/software/utils/dtc/
 
 MAINTAINER=	joe.davis512@gmail.com
 HOMEPAGE=	http://devicetree.org/
