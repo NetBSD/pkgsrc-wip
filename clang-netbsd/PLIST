@@ -27,6 +27,7 @@ include/clang/AST/ASTFwd.h
 include/clang/AST/ASTImporter.h
 include/clang/AST/ASTLambda.h
 include/clang/AST/ASTMutationListener.h
+include/clang/AST/ASTStructuralEquivalence.h
 include/clang/AST/ASTTypeTraits.h
 include/clang/AST/ASTUnresolvedSet.h
 include/clang/AST/ASTVector.h
