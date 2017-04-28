@@ -3,10 +3,10 @@
 DISTNAME=	gtk-imonc-0.6.4.1
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://zeank.in-berlin.de/download/
+MASTER_SITES=	http://stefan-strigler.de/download/ ftp://ftp.tw.freebsd.org/pub/FreeBSD/FreeBSD/distfiles/
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://zeank.in-berlin.de/gtkimonc/
+HOMEPAGE=	http://stefan-strigler.de/gtkimonc/
 COMMENT=	GTK version of the fli4l monitoring tool
 LICENSE=	gnu-gpl-v2
 
