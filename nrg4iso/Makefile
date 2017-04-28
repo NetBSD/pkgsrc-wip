@@ -3,7 +3,7 @@
 
 DISTNAME=	nrg4iso-1.0.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://nrg4iso.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/nrg4iso/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schwarz@NetBSD.org
