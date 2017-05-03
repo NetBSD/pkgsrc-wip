@@ -1,13 +1,14 @@
 # $NetBSD$
 
 PKGBASE=        shellinabox
-DISTNAME=       ${PKGBASE}-v2.19
+SIB_VER=        v2.20
+DISTNAME=       ${PKGBASE}-${SIB_VER}
 PKGREVISION=    1
 CATEGORIES=     www
 
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=shellinabox/}
 GITHUB_PROJECT= ${PKGBASE}
-GITHUB_TAG=     v2.19
+GITHUB_TAG=     ${SIB_VER}
 
 MAINTAINER=     ast@NetBSD.org
 HOMEPAGE=       https://code.google.com/archive/p/shellinabox/
