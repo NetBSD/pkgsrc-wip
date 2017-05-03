@@ -1,184 +1,187 @@
-# $NetBSD: Makefile,v 1.1 2014/08/07 17:40:11 darcycain Exp $
+# $NetBSD$
 
-DISTNAME=	freeswitch-${VERSION}
-PKGNAME=	freeswitch-core-${VERSION}
-VERSION=	1.6.5
-CATEGORIES=	net
-MASTER_SITES=	http://files.freeswitch.org/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=       freeswitch-${VERSION}
+VERSION=        1.6.17
+CATEGORIES=     net
+MASTER_SITES=   http://files.freeswitch.org/
+EXTRACT_SUFX=   .tar.xz
 
-MAINTAINER=	darcy@NetBSD.org
-HOMEPAGE=	http://www.freeswitch.org/
-COMMENT=	FreeSwitch SoftSwitch Port
-LICENSE=	mpl-1.1
+MAINTAINER=     pkgsrc-users@NetBSD.org
+HOMEPAGE=       http://www.freeswitch.org/
+COMMENT=        FreeSwitch SoftSwitch Port
+LICENSE=        mpl-1.1
 
-#DEPENDS+=	flite>=1.3.0:../../audio/flite
+GNU_CONFIGURE=  	yes
+USE_LIBTOOL=    	yes
+LIBTOOL_OVERRIDE=	libtool */libtool */*/libtool */*/*/libtool
+USE_LANGUAGES=  	c c++
+USE_TOOLS+=     	automake autoconf gmake perl pkg-config
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++ fortran
-USE_TOOLS+=	automake autoconf gmake perl pkg-config libtool
-ONLY_FOR_COMPILER=	gcc
-#GCC_REQD+=		4.9
+BUILD_DEFS+=		VARBASE
 
-PTLIB_CFLAGS+=          -I${BUILDLINK_PREFIX.ptlib}/share/ptlib/
-MP4V2_CFLAGS+=		-c -Wall -I${BUILDLINK_PREFIX.mp4v2}/include/mp4v2
-DATADIR=		${VARBASE}/db/freeswitch
+SYSCONFSUBDIR=		freeswitch
+
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
-CONFIGURE_ARGS+=	--datadir=${DATADIR}
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/freeswitch
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/freeswitch/lib
-CONFIGURE_ARGS+=	--localstatedir=/var
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc/freeswitch/conf
-CONFIGURE_ARGS+=	--with-htdocsdir=${PREFIX}/share/doc/html/freeswitch/htdocs
-CONFIGURE_ARGS+=	--with-soundsdir=${PREFIX}/share/freeswitch/sounds
-CONFIGURE_ARGS+=	--with-grammardir=${PREFIX}/etc/freeswitch/grammar
-CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/etc/freeswitch/scripts
-CONFIGURE_ARGS+=	--with-modinstdir=${PREFIX}/lib/freeswitch/mod
-CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
-CONFIGURE_ARGS+=	--with-storagedir=/var/freeswitch
-CONFIGURE_ARGS+=	--with-recordingsdir=/var/freeswitch/recordings
-CONFIGURE_ARGS+=	--with-memcached=yes	
-CONFIGURE_ARGS+=	--with-memcached=${PREFIX}
-CONFIGURE_ARGS+=	--with-memcached-libraries=${PREFIX}/lib
-CONFIGURE_ARGS+=	--with-memcached-includes=${PREFIX}/include
-CONFIGURE_ARGS+=	--with-ogg=${PREFIX}
-CONFIGURE_ARGS+=	--with-ogg-libraries=${PREFIX}/lib
-CONFIGURE_ARGS+=	--with-ogg-includes=${PREFIX}/include
-#CONFIGURE_ARGS+=	--disable-core-libedit-support
-CONFIGURE_ARGS+=	--with-libedit=${BUILDLINK_PREFIX.editline}
-CONFIGURE_ARGS+=	--enable-system-xmlrpc-c --enable-zrtp
-CONFIGURE_ARGS+=	--enable-core-pgsql-support
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/freeswitch
+CONFIGURE_ARGS+= 	--datarootdir=${PREFIX}/share
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--htmldir=${PREFIX}/doc
+CONFIGURE_ARGS+=	--dvidir=${PREFIX}/doc
+CONFIGURE_ARGS+=	--psdir=${PREFIX}/doc
+CONFIGURE_ARGS+=	--with-cachedir=${VARBASE}/cache/freeswitch
+CONFIGURE_ARGS+=	--with-storagedir=${VARBASE}/db/freeswitch
+CONFIGURE_ARGS+=	--with-rundir=${VARBASE}/run/freeswitch
+CONFIGURE_ARGS+=	--with-logfiledir=${VARBASE}/log/freeswitch
+CONFIGURE_ARGS+=	--with-dbdir=${VARBASE}/db/freeswitch
+CONFIGURE_ARGS+=	--with-imagesdir=${PREFIX}/share/freeswitch/images
+CONFIGURE_ARGS+=	--with-recordingsdir=${PREFIX}/freeswitch/recordings
+CONFIGURE_ARGS+=	--with-modinstdir=${PREFIX}/freeswitch/modules
+CONFIGURE_ARGS+=	--disable-libvpx
+CONFIGURE_ARGS+=	--enable-srtp
+CONFIGURE_ARGS+=	--enable-zrtp
 
-ETCDIR=			${PREFIX}/etc/freeswitch
-WWWDIR=			${PREFIX}/www/freeswitch
-
-.include "../../mk/bsd.prefs.mk"
-#.include "../../wip/freeswitch-core/options.mk"
-
-CFLAGS+=		-I${BUILDLINK_PREFIX.sofia-sip}/include/sofia-sip-1.12
-CFLAGS+=		-I${BUILDLINK_PREFIX.srtp}/include/srtp
-CFLAGS+=		-I${BUILDLINK_PREFIX.mp4v2}/include/mp4v2
-CFLAGS+=		-I${BUILDLINK_PREFIX.flite}/include/flite
-CFLAGS+=		-I${PREFIX}/include/flite
-FLITE_LIBS+=		-I${BUILDLINK_PREFIX.flite}/include/flite
-FLITE_LIBS+=		-I${PREFIX}/include/flite
-FLITE_CFLAGS+=		-I${BUILDLINK_PREFIX.flite}/include/flite -L${BUILDLINK_PREFIX.flite}/include/flite
-FLITE_CFLAGS+=		-I${PREFIX}/include/flite -L${PREFIX}/include/flite
-CXXFLAGS+=		-I${BUILDLINK_PREFIX.flite}/include/flite -L${BUILDLINK_PREFIX.flite}/include/flite
-CXXFLAGS+=		-I${PREFIX}/include/flite -L${PREFIX}/include/flite
-
-BUILDLINK_TRANSFORM+=	rm:-Werror
-LDFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.srtp}/lib
-LDFLAGS+=		-Wl,-L${BUILDLINK_PREFIX.srtp}/lib
-INSTALLATION_DIRS+=	lib/freeswitch/mod ${DATADIR}/sounds
+REPLACE_PERL+=	support-d/utils/filebug.pl
+REPLACE_PERL+=	support-d/utils/gl
+REPLACE_PERL+=	support-d/utils/hashfinder
+REPLACE_PERL+=	support-d/utils/rwlock.pl
+REPLACE_PERL+=	support-d/utils/fixbug.pl
+REPLACE_PERL+=	support-d/utils/btgrep
+REPLACE_PERL+=	build/strip.pl
+REPLACE_PERL+=	libs/xmlrpc-c/tools/binmode-rpc-kit/binmode-rpc2xml-rpc
+REPLACE_PERL+=	libs/xmlrpc-c/tools/binmode-rpc-kit/oct2bin
+REPLACE_PERL+=	libs/apr/helpers/apr_rename.pl
+REPLACE_PERL+=	libs/sofia-sip/libsofia-sip-ua/tport/make_node_cert.pl
+REPLACE_PERL+=	libs/sofia-sip/libsofia-sip-ua/tport/make_root_cert.pl
+REPLACE_PERL+=	libs/libzrtp/create_pack.pl
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tplfmt
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tplxml
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test13
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test6
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test9
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test12
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test2
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test21
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test16
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test8
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test22
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test14
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test4
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test7
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test15
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test18
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test1
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/do_tests
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test20
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test23
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test11
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test10
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/client.pl
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test3
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test19
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test5
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/server.pl
+REPLACE_PERL+=	libs/libtpl-1.5/lang/perl/tests/test17
+REPLACE_PERL+=	libs/libtpl-1.5/tests/other/do_tests
+REPLACE_PERL+=	libs/libtpl-1.5/tests/sizes
+REPLACE_PERL+=	libs/libtpl-1.5/tests/do_tests
+REPLACE_PERL+=	libs/libtpl-1.5/tests/do_tests.cygwin
+REPLACE_PERL+=	libs/libtpl-1.5/doc/txt/perl.txt
+REPLACE_PERL+=	libs/libtpl-1.5/doc/txt/perl.txt
+REPLACE_PERL+=	libs/libtpl-1.5/doc/txt/perl.txt
+REPLACE_PERL+=	libs/libtpl-1.5/doc/txt/perl.txt
+REPLACE_PERL+=	libs/libtpl-1.5/doc/txt/perl.txt
+REPLACE_PERL+=	libs/libtpl-1.5/doc/html/perl.html
+REPLACE_PERL+=	libs/libtpl-1.5/doc/html/perl.html
+REPLACE_PERL+=	libs/libtpl-1.5/doc/html/perl.html
+REPLACE_PERL+=	libs/libtpl-1.5/doc/html/perl.html
+REPLACE_PERL+=	libs/libtpl-1.5/doc/html/perl.html
+REPLACE_PERL+=	libs/esl/test.pl
+REPLACE_PERL+=	libs/esl/perl/send_notify.pl
+REPLACE_PERL+=	libs/esl/perl/single_command.pl
+REPLACE_PERL+=	libs/esl/perl/dump_events.pl
+REPLACE_PERL+=	libs/esl/perl/info.pl
+REPLACE_PERL+=	libs/esl/perl/sendevent.pl
+REPLACE_PERL+=	libs/esl/perl/send_info.pl
+REPLACE_PERL+=	libs/esl/perl/dispatch.pl
+REPLACE_PERL+=	scripts/rss/rss2ivr.pl
+REPLACE_PERL+=	scripts/rss/syncrss.pl
+REPLACE_PERL+=	scripts/fsxs.in
+REPLACE_PERL+=	scripts/perl/mkgws.pl
+REPLACE_PERL+=	scripts/perl/fslog
+REPLACE_PERL+=	scripts/perl/wplookup.cgi
+REPLACE_PERL+=	scripts/perl/analyze-debug-alloc.pl
+REPLACE_PERL+=	scripts/perl/cnam.cgi
+REPLACE_PERL+=	scripts/perl/call.cgi
+REPLACE_PERL+=	scripts/perl/timezone-gen.pl
+REPLACE_PERL+=	scripts/perl/f-off-friendly-scanner.pl
+REPLACE_PERL+=	scripts/perl/sock.pl
+REPLACE_PERL+=	scripts/perl/sendmail
+REPLACE_PERL+=	scripts/perl/honeypot.pl
+REPLACE_PERL+=	scripts/perl/randomize-passwords.pl
+REPLACE_PERL+=	scripts/perl/add_user
+REPLACE_PERL+=	scripts/perl/combineconf.pl
+REPLACE_PERL+=	scripts/perl/fsconsole.pl
+REPLACE_PERL+=	scripts/perl/multicast/send.pl
+REPLACE_PERL+=	scripts/perl/rpc.cgi
+REPLACE_PERL+=	scripts/perl/fs.pl
+REPLACE_PERL+=	scripts/perl/ftc_dnc_register.pl
+REPLACE_PERL+=	scripts/perl/extract_log_range.pl
+REPLACE_PERL+=	scripts/perl/blacklist.pl
+REPLACE_PERL+=	scripts/perl/POE-Filter-FSSocket/Makefile.PL
+REPLACE_PERL+=	scripts/perl/POE-Filter-FSSocket/examples/fsconsole.pl
+REPLACE_PERL+=	scripts/perl/POE-Filter-FSSocket/examples/poetest.pl
+REPLACE_PERL+=	scripts/perl/POE-Filter-FSSocket/lib/POE/Filter/FSSocket.pm
+REPLACE_PERL+=	scripts/perl/tag.pl
+REPLACE_PERL+=	scripts/perl/dhcp-inform.pl
+REPLACE_PERL+=	scripts/perl/g729_activate
+REPLACE_PERL+=	scripts/perl/puppet.cgi
+REPLACE_PERL+=	scripts/perl/fax.cgi
+REPLACE_PERL+=	scripts/perl/snom-pnpd.pl
+REPLACE_PERL+=	scripts/trace/sipgrep
+REPLACE_PERL+=	src/mod/applications/mod_httapi/examples/perl/ext_pin.cgi
+REPLACE_PERL+=	src/mod/applications/mod_httapi/examples/perl/dialer.cgi
+REPLACE_PERL+=	src/mod/applications/mod_httapi/examples/perl/speech.cgi
+REPLACE_PERL+=	src/mod/applications/mod_httapi/examples/perl/apps.cgi
+REPLACE_PERL+=	src/mod/applications/mod_httapi/examples/perl/record_name.cgi
+REPLACE_PERL+=	src/mod/applications/mod_avmd/scripts/avmd_test.pl
+REPLACE_PERL+=	src/mod/endpoints/mod_skinny/test-skinny.pl
+REPLACE_PERL+=	src/mod/endpoints/mod_skypopen/install/install.pl
+REPLACE_PERL+=	src/mod/endpoints/mod_gsmopen/asterisk/ciapalo
+REPLACE_PERL+=	docs/phrase/phrase.pl
 
 RCD_SCRIPTS=            freeswitch
-RCD_SCRIPT_SRC.bitlbee= ${FILESDIR}/freeswitch.in
 
-#post-extract:
-	#${RM} -rf ${WRKSRC}/libs/js
-	#${RM} -rf ${WRKSRC}/libs/xmlrpc-c
-	#${RM} -rf ${WRKSRC}/libs/win32/xmlrpc-c
-	#${RM} -rf ${WRKSRC}/src/mod/languages/mod_spidermonkey
-	#${RM} -rf ${WRKSRC}/src/mod/xml_int/mod_xml_rpc
-	#${RM} -rf ${WRKSRC}/w32
-	#${RM} -rf ${WRKSRC}/conf/curl/autoload_configs/spidermonkey.conf.xml
-	#${RM} -rf ${WRKSRC}/conf/vanilla/autoload_configs/spidermonkey.conf.xml
-	#${RM} -rf ${WRKSRC}/conf/insideout/autoload_configs/spidermonkey.conf.xml
+INSTALLATION_DIRS+= 	${PREFIX}/freeswitch
+INSTALLATION_DIRS+= 	${PREFIX}/freeswitch/modules
+INSTALLATION_DIRS+= 	${PREFIX}/freeswitch/sounds
+INSTALLATION_DIRS+= 	${PREFIX}/freeswitch/recordings
 
-#pre-install:
-	#${CHMOD} 664 ${WRKSRC}/libs/freetdm/conf/*
-	#${MKDIR} ${ETCDIR}/conf
+BUILDLINK_TRANSFORM+= rm:-Werror
 
 post-install:
-	#${SETENV} PKG_PREFIX=${PREFIX} 
-	    #${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-	#${CHOWN} -R ${USERS}:${GROUPS} ${ETCDIR} ${DATADIR} \
-		#${PREFIX}/include/freeswitch 
-		#${PREFIX}/lib/freeswitch
-	#${FIND} ${ETCDIR} -type d | ${XARGS} ${CHMOD} 770
-	#${CHMOD} -R 770 ${DATADIR}
-	#${FIND} ${ETCDIR} ${WWWDIR} -type f | ${XARGS} ${CHMOD} 660
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/srtp/libsrtp.la ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/spandsp/src/libspandsp.la ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/tiff-4.0.2/libtiff/libtiff.la ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/tiff-4.0.2/libtiff/libtiffxx.la ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --finish ${PREFIX}/lib
 
-# libtpl : https://github.com/troydhanson/tpl/releases
-.include "../../comms/spandsp/buildlink3.mk"
-# iksemel
-.include "../../textproc/iksemel/buildlink3.mk"
-.include "../../devel/sofia-sip/buildlink3.mk"
-# unimrcp : https://github.com/unispeech/unimrcp/releases
-# libwat : no releases
-.include "../../devel/check/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-#.include "../../graphics/tiff/buildlink3.mk"
-.include "../../comms/srtp/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../lang/erlang/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
-# php
-# java
-.include "../../security/openssl/buildlink3.mk"
-# ldap
-# libsmpp : http://cgit.osmocom.org/libsmpp34/
-# hiredis
-# libedit
-.include "../../devel/editline/buildlink3.mk"
-# tap
-#pgsql
-.include "../../mk/pgsql.buildlink3.mk"
-# libtool-fortran
-.include "../../mk/bsd.pkg.use.mk"
-# librmq
-# flite
-.include "../../audio/flite/buildlink3.mk"
-# libmemcached
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
-# mongo
-.include "../../audio/soundtouch/buildlink3.mk"
-.include "../../audio/libopus/buildlink3.mk"
-# codec2
-.include "../../ham/codec2/buildlink3.mk"
-# package g722
-.include "../../wip/libilbc/buildlink3.mk"
-# broadvoice
-# Package silk : https://tools.netsa.cert.org/silk/download.html
-.include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/opencv/buildlink3.mk"
-#.include "../../multimedia/vlc21/buildlink3.mk"
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
-#lame
-.include "../../audio/lame/buildlink3.mk"
-.include "../../audio/libshout/buildlink3.mk"
+.include "../../lang/lua52/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
-.include "../../audio/portaudio-devel/buildlink3.mk"
-#.include "../../textproc/xmlrpc-c/buildlink3.mk"
-.include "../../textproc/libyaml/buildlink3.mk"
-.include "../../audio/speexdsp/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
-# alsa
-.include "../../audio/alsa-lib/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
-.include "../../mk/resolv.buildlink3.mk"
-.include "../../archivers/xz/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
+.include "../../audio/libopus/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-#.include "../../devel/apr-util/buildlink3.mk"
-#.include "../../devel/apr/buildlink3.mk"
-.include "../../audio/mpg123/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../databases/unixodbc/buildlink3.mk"
-.include "../../devel/libuuid/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../www/libwww/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

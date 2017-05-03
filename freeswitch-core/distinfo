@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.1 2014/08/07 17:40:11 darcycain Exp $
+$NetBSD$
 
-SHA1 (freeswitch-1.6.5.tar.bz2) = 11f196b07678adea9a636dde4a53d4fa83c9fa7b
-RMD160 (freeswitch-1.6.5.tar.bz2) = 4760636b551f4e89ed4e3d5ee13584bed9291aba
-SHA512 (freeswitch-1.6.5.tar.bz2) = fe0f703443a0ab6df2874aa539c22892b7abcdf3882f3d7d824bfee12077e5b16ffa5eb8d0b2c8d6cbfdd3aafa6d6f67fe1dd53153c7f0b827c98a6ecca96e04
-Size (freeswitch-1.6.5.tar.bz2) = 44794105 bytes
-SHA1 (patch-configure) = 5633535198fd29a3f8efe13cb0ea43622e2f0b3f
-SHA1 (patch-modules.conf) = dc67c7df022ad77493284e8577414a52e222e7f3
-SHA1 (patch-src_mod_asr__tts_mod__flite_mod__flite.c) = a0cf2436853847818d07aa6233a44ce6532b4d14
-SHA1 (patch-src_mod_codecs_mod__codec2_mod__codec2.c) = 2ef907e8e440f8971128875d909fde2052c595a9
-SHA1 (patch-src_mod_formats_mod__shout_mod__shout.c) = 56337cbce4a5cbe67c26da0f933b601b68ab8d3d
+SHA1 (freeswitch-1.6.17.tar.xz) = feda8e9334410bee1e5ae4d959a0982cf18c5bee
+RMD160 (freeswitch-1.6.17.tar.xz) = d0ce212e924a77c7a9605f375bf2a61210195fc3
+SHA512 (freeswitch-1.6.17.tar.xz) = 09859c16fee07d6b7f8a54f7149bc56b49ef82d4fdf6df97df2611d117f3a6256f68bfaf19e4a307c9da0b7c80b942f02e5be4a85df3cc3f0f0a5f75ad731fa8
+Size (freeswitch-1.6.17.tar.xz) = 33626976 bytes
+SHA1 (patch-configure) = 9e75606d1f0edb7a29b2533af59e28adff5be03f
+SHA1 (patch-libs_spandsp_configure) = c5ca9b0ac06f598420712f42f73ed870b286e8dd
+SHA1 (patch-libs_spandsp_unpack__gsm0610__data.sh) = ade7a9c0e5a91eff5b947bca56d8100712b21642
+SHA1 (patch-libs_unimrcp_configure) = 4d6d9141bcdb2e629d5f9f421e724c2a7a2d64d3
