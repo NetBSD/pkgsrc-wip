@@ -1,4 +1,13 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
+#
+# when updating this, please also update:
+# devel/include-what-you-use
+# devel/lldb
+# devel/polly
+# lang/clang
+# lang/clang-static-analyzer
+# lang/libLLVM
+# lang/libunwind
 
 PKGNAME=	llvm-5.0.0
 CATEGORIES=	lang devel
