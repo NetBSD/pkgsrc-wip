@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.Darwin,v 1.2 2017/03/17 22:38:17 adam Exp $
+bin/darwin-debug
+bin/debugserver
+lib/liblldbPluginDynamicLoaderDarwinKernel.a
+lib/liblldbPluginProcessMacOSXKernel.a
+lib/liblldbPluginSymbolVendorMacOSX.a
+${PYSITELIB}/lldb/diagnose/__init__.py
+${PYSITELIB}/lldb/diagnose/diagnose_nsstring.py
+${PYSITELIB}/lldb/diagnose/diagnose_unwind.py
+${PYSITELIB}/lldb/macosx/__init__.py
+${PYSITELIB}/lldb/macosx/crashlog.py
+${PYSITELIB}/lldb/macosx/heap.py
+${PYSITELIB}/lldb/macosx/heap/Makefile
+${PYSITELIB}/lldb/macosx/heap/heap_find.cpp
