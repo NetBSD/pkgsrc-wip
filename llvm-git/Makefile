@@ -23,13 +23,19 @@ CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
+CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
+CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
 CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
+CMAKE_ARGS+=	-DLLVM_LINK_LLVM_DYLIB=ON
+
+CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 # XXX perl is not added as a tool as it does not seem to be required
 REPLACE_PERL+=		utils/*.pl
 REPLACE_PERL+=		utils/codegen-diff
+REPLACE_PERL+=		utils/llvm-native-gxx
 
 REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	*/*.py
@@ -48,23 +54,27 @@ REPLACE_PYTHON+=	utils/llvm-lit/llvm-lit.in
 TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
+# It may be that the Solaris linker is more strict here and they can be removed on
+# all platforms.  Change this to a patch if verified.
+SUBST_CLASSES.SunOS+=	lto
+SUBST_STAGE.lto=	pre-configure
+SUBST_FILES.lto=	tools/lto/lto.exports
+SUBST_SED.lto=		-e '/^LLVM/d'
+
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=	notdylib
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
 SOEXT=		dylib
 .else
 SOEXT=		so
+PLIST.notdylib=	yes
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
-.if ${OPSYS} == "Darwin"
-.PHONY: fix-darwin-install-name
-post-install: fix-darwin-install-name
-fix-darwin-install-name:
-.  for lib in BugpointPasses LLVMHello libLTO
-	install_name_tool -id ${PREFIX}/lib/${lib}.${SOEXT}	\
-		${DESTDIR}${PREFIX}/lib/${lib}.${SOEXT}
-.  endfor
+# needs std::atomic with 64-bit CAS
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=	-march=i586
 .endif
 
 .include "options.mk"
