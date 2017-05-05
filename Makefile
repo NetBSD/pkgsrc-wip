@@ -4383,6 +4383,7 @@ SUBDIR+=	wbox
 SUBDIR+=	weatherman
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
+SUBDIR+=	webkit-gtk
 SUBDIR+=	weland
 SUBDIR+=	weplab
 SUBDIR+=	west

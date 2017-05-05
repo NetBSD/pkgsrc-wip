@@ -1,0 +1,17 @@
+At the moment it fails during the `build' phase due:
+
+ [  5%] Linking CXX shared library ../../lib/libjavascriptcoregtk-4.0.so
+ CMakeFiles/JavaScriptCore.dir/runtime/CustomGetterSetter.cpp.o: In function `JSC::callCustomSetter(JSC::ExecState*, JSC::JSValue, bool, JSC::JSObject*, JSC::JSValue, JSC::JSValue)':
+ CustomGetterSetter.cpp:(.text+0x87): undefined reference to `JSC::HeapCell::vm() const'
+ CMakeFiles/JavaScriptCore.dir/runtime/FunctionExecutableDump.cpp.o: In function `JSC::FunctionExecutableDump::dump(WTF::PrintStream&) const':
+ FunctionExecutableDump.cpp:(.text+0x29): undefined reference to `JSC::HeapCell::vm() const'
+ FunctionExecutableDump.cpp:(.text+0x5b): undefined reference to `JSC::HeapCell::vm() const'
+ FunctionExecutableDump.cpp:(.text+0x8c): undefined reference to `JSC::HeapCell::vm() const'
+ FunctionExecutableDump.cpp:(.text+0xbe): undefined reference to `JSC::HeapCell::vm() const'
+ CMakeFiles/JavaScriptCore.dir/runtime/FunctionExecutableDump.cpp.o:FunctionExecutableDump.cpp:(.text+0xef): more undefined references to `JSC::HeapCell::vm() const' follow
+ Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/build.make:23840: recipe for target 'lib/libjavascriptcoregtk-4.0.so.18.5.8' failed
+ gmake[2]: *** [lib/libjavascriptcoregtk-4.0.so.18.5.8] Error 1
+ CMakeFiles/Makefile2:369: recipe for target 'Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/all' failed
+ gmake[1]: *** [Source/JavaScriptCore/CMakeFiles/JavaScriptCore.dir/all] Error 2
+ Makefile:151: recipe for target 'all' failed
+ gmake: *** [all] Error 2

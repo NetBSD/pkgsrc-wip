@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.7 2016/01/21 13:42:33 leot Exp $
+
+--- Source/WTF/wtf/ThreadIdentifierDataPthreads.cpp.orig	2016-01-04 10:38:34.000000000 +0000
++++ Source/WTF/wtf/ThreadIdentifierDataPthreads.cpp
+@@ -39,6 +39,12 @@
+ #if OS(HURD)
+ // PTHREAD_KEYS_MAX is not defined in bionic nor in Hurd, so explicitly define it here.
+ #define PTHREAD_KEYS_MAX 1024
++#elif OS(NETBSD)  
++#include <limits.h>
++// PTHREAD_KEYS_MAX is not defined in 5.x
++#ifndef PTHREAD_KEYS_MAX
++#define PTHREAD_KEYS_MAX 256
++#endif  
+ #else
+ #include <limits.h>
+ #endif
