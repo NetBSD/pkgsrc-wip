@@ -388,6 +388,7 @@ SUBDIR+=	clutter-gst
 SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
 SUBDIR+=	cmusfm
+SUBDIR+=	coccinelle
 SUBDIR+=	coldfire
 SUBDIR+=	collectd-unbound
 SUBDIR+=	colord
