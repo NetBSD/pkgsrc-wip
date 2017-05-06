@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.12 2014/06/29 17:16:25 cheusov Exp $
 
-SHA1 (bmake-20140620.tar.gz) = c2a2b6e4812a77640bbcf4824fb9a63b94684e4a
-RMD160 (bmake-20140620.tar.gz) = 1bc3c4112dc9b74be7fec0dd1df06a0c3245bd61
-Size (bmake-20140620.tar.gz) = 509263 bytes
+SHA1 (bmake-20170421.tar.gz) = 5c0bc5696c60e9938a80e215bf38c430dc628a80
+RMD160 (bmake-20170421.tar.gz) = 0d7b7f31d0ef5562dd70536accba410af7f0364c
+SHA512 (bmake-20170421.tar.gz) = f984dd7697ff74455690d9f0b6a355e3bd3de7545eb93def82aeaaf1899b5316a83e36502ffdd64ef53ad2b28fbfad61cfaee17b8ec29a1f0dd6640c13b4f04f
+Size (bmake-20170421.tar.gz) = 550626 bytes
