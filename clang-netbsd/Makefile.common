@@ -19,16 +19,18 @@ WRKSRC=			${WRKDIR}/clang
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 # XXX can't disable static-analyzer without also disabling ARCMT
 CMAKE_ARGS+=	-DCLANG_ENABLE_ARCMT=OFF
+
+CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 
 REPLACE_PERL+=		test/make_test_dirs.pl
 REPLACE_PERL+=		tools/scan-build/bin/scan-build

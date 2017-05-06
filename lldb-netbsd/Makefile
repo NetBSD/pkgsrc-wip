@@ -18,15 +18,18 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # compilation failure in 3.8.1 (3.8.0 worked)
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
+CMAKE_ARGS+=	-DHAVE_CXX_ATOMICS64_WITHOUT_LIB=ON
 CMAKE_ARGS+=	-DLLDB_USE_SYSTEM_SIX:BOOL=TRUE
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
@@ -55,21 +58,36 @@ TEST_TARGET=		check-lldb
 #TEST_TARGET=		check-lldb-expr # unknown
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		posix
+.if ${OPSYS} != "Darwin"
+PLIST.posix=		yes
+.endif
+
+.if ${OPSYS} == "NetBSD"
+.  if exists(/usr/include/panel.h)
+CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
+.  else
+CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
+.  endif
+.endif
+
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
-.include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
-.include "../../wip/llvm-netbsd/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-netbsd
-.include "../../wip/clang-netbsd/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
-PYTHON_VERSIONS_ACCEPTED=	27
+.include "../../devel/libatomic_ops/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/pyversion.mk"
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang-netbsd
+.include "../../wip/clang-netbsd/buildlink3.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm-netbsd
+.include "../../wip/llvm-netbsd/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../devel/swig/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
