@@ -52,6 +52,9 @@ REPLACE_PYTHON+=	*/*/*/*/*/*/*/*.py
 REPLACE_PYTHON+=	scripts/shush
 
 TEST_TARGET=		check-lldb
+#TEST_TARGET=		check-lldb-unit # doesn't work in standalone build
+#TEST_TARGET=		check-lldb-single # check-lldb -j1
+#TEST_TARGET=		check-lldb-expr # unknown
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
@@ -72,6 +75,7 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
+#.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

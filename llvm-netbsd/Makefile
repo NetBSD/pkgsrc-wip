@@ -8,6 +8,10 @@
 # lang/clang-static-analyzer
 # lang/libLLVM
 # lang/libunwind
+#
+# Always update all */buildlink3.mk to require the latest stable release
+# version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
+#
 
 PKGNAME=	llvm-5.0.0
 CATEGORIES=	lang devel
