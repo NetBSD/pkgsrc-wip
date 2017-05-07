@@ -75,7 +75,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PEP3147=	no
 .include		"../../lang/python/extension.mk"
 CONFIGURE_ARGS+=	--enable-python=python-${PYVERSSUFFIX}
-USE_TOOLS+=		perl
+USE_TOOLS+=		python
 PLIST_SRC+=		PLIST.python
 .endif
 
