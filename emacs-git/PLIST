@@ -2638,7 +2638,8 @@ share/emacs/${PKGVERSION}/lisp/mh-e/mh-buffers.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-buffers.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-comp.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-comp.elc
-share/emacs/${PKGVERSION}/lisp/mh-e/mh-compat.el
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-compat.el.gz
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-compat.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-e.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-e.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-folder.el.gz
