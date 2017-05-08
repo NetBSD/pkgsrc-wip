@@ -299,6 +299,7 @@ include/llvm/CodeGen/LiveStackAnalysis.h
 include/llvm/CodeGen/LiveVariables.h
 include/llvm/CodeGen/LowLevelType.h
 include/llvm/CodeGen/MIRParser/MIRParser.h
+include/llvm/CodeGen/MIRPrinter.h
 include/llvm/CodeGen/MIRYamlMapping.h
 include/llvm/CodeGen/MachORelocation.h
 include/llvm/CodeGen/MachineBasicBlock.h
@@ -395,9 +396,11 @@ include/llvm/DebugInfo/CodeView/ModuleDebugFileChecksumFragment.h
 include/llvm/DebugInfo/CodeView/ModuleDebugFragment.h
 include/llvm/DebugInfo/CodeView/ModuleDebugFragmentRecord.h
 include/llvm/DebugInfo/CodeView/ModuleDebugFragmentVisitor.h
+include/llvm/DebugInfo/CodeView/ModuleDebugInlineeLinesFragment.h
 include/llvm/DebugInfo/CodeView/ModuleDebugLineFragment.h
 include/llvm/DebugInfo/CodeView/ModuleDebugUnknownFragment.h
 include/llvm/DebugInfo/CodeView/RecordSerialization.h
+include/llvm/DebugInfo/CodeView/StringTable.h
 include/llvm/DebugInfo/CodeView/SymbolDeserializer.h
 include/llvm/DebugInfo/CodeView/SymbolDumpDelegate.h
 include/llvm/DebugInfo/CodeView/SymbolDumper.h
@@ -447,6 +450,7 @@ include/llvm/DebugInfo/DWARF/DWARFSection.h
 include/llvm/DebugInfo/DWARF/DWARFTypeUnit.h
 include/llvm/DebugInfo/DWARF/DWARFUnit.h
 include/llvm/DebugInfo/DWARF/DWARFUnitIndex.h
+include/llvm/DebugInfo/DWARF/DWARFVerifier.h
 include/llvm/DebugInfo/MSF/IMSFFile.h
 include/llvm/DebugInfo/MSF/MSFBuilder.h
 include/llvm/DebugInfo/MSF/MSFCommon.h
@@ -474,6 +478,7 @@ include/llvm/DebugInfo/PDB/IPDBSession.h
 include/llvm/DebugInfo/PDB/IPDBSourceFile.h
 include/llvm/DebugInfo/PDB/Native/DbiModuleDescriptor.h
 include/llvm/DebugInfo/PDB/Native/DbiModuleDescriptorBuilder.h
+include/llvm/DebugInfo/PDB/Native/DbiModuleList.h
 include/llvm/DebugInfo/PDB/Native/DbiStream.h
 include/llvm/DebugInfo/PDB/Native/DbiStreamBuilder.h
 include/llvm/DebugInfo/PDB/Native/EnumTables.h
@@ -494,13 +499,13 @@ include/llvm/DebugInfo/PDB/Native/NativeRawSymbol.h
 include/llvm/DebugInfo/PDB/Native/NativeSession.h
 include/llvm/DebugInfo/PDB/Native/PDBFile.h
 include/llvm/DebugInfo/PDB/Native/PDBFileBuilder.h
+include/llvm/DebugInfo/PDB/Native/PDBStringTable.h
+include/llvm/DebugInfo/PDB/Native/PDBStringTableBuilder.h
 include/llvm/DebugInfo/PDB/Native/PDBTypeServerHandler.h
 include/llvm/DebugInfo/PDB/Native/PublicsStream.h
 include/llvm/DebugInfo/PDB/Native/RawConstants.h
 include/llvm/DebugInfo/PDB/Native/RawError.h
 include/llvm/DebugInfo/PDB/Native/RawTypes.h
-include/llvm/DebugInfo/PDB/Native/StringTable.h
-include/llvm/DebugInfo/PDB/Native/StringTableBuilder.h
 include/llvm/DebugInfo/PDB/Native/SymbolStream.h
 include/llvm/DebugInfo/PDB/Native/TpiHashing.h
 include/llvm/DebugInfo/PDB/Native/TpiStream.h
@@ -1286,6 +1291,9 @@ ${PLIST.XCore}lib/libLLVMXCoreDisassembler.a
 ${PLIST.XCore}lib/libLLVMXCoreInfo.a
 lib/libLLVMXRay.a
 lib/libLLVMipo.a
+lib/libLLVM-5.0.0svn.${SOEXT}
+lib/libLLVM-5.0svn.${SOEXT}
+lib/libLLVM.${SOEXT}
 lib/libLTO.${SOEXT}
 lib/libLTO.${SOEXT}.5
 lib/libLTO.${SOEXT}.5.0.0svn
