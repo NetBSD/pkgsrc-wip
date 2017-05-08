@@ -860,6 +860,7 @@ SUBDIR+=	gcc47
 SUBDIR+=	gcc47-libs
 SUBDIR+=	gcc6snapshot
 SUBDIR+=	gcc7snapshot
+SUBDIR+=	gcc8snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gcr
 SUBDIR+=	gdal-docs
