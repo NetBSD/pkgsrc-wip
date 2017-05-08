@@ -1,8 +1,14 @@
 $NetBSD: patch-gcc_config.gcc,v 1.1 2017/05/03 00:21:03 maya Exp $
 
---- gcc/config.gcc.orig	2016-12-10 21:07:10.000000000 +0000
+Claim to support ifunc (all archs under libexec/ld.elf_so/arch
+should work)                      XXX DON'T UPSTREAM THIS PART
+
+workaround netbsd backwards compatible non-C99 cabs{,f}
+something else about crt
+
+--- gcc/config.gcc.orig	2017-05-05 17:31:57.000000000 +0000
 +++ gcc/config.gcc
-@@ -765,10 +765,15 @@ case ${target} in
+@@ -775,10 +775,15 @@ case ${target} in
    target_has_targetcm=yes
    ;;
  *-*-netbsd*)
@@ -15,11 +21,11 @@ $NetBSD: patch-gcc_config.gcc,v 1.1 2017/05/03 00:21:03 maya Exp $
 +  tm_p_file="${tm_p_file} netbsd-protos.h"
 +  target_gtfiles="${target_gtfiles} \$(srcdir)/config/netbsd.c"
 +  extra_objs="${extra_objs} netbsd.o"
-+
++  default_gnu_indirect_function=yes
  
    # NetBSD 2.0 and later get POSIX threads enabled by default.
    # Allow them to be explicitly enabled on any other version.
-@@ -1460,10 +1465,12 @@ x86_64-*-freebsd*)
+@@ -1474,10 +1479,12 @@ x86_64-*-freebsd*)
  i[34567]86-*-netbsdelf*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-stdint.h netbsd-elf.h i386/netbsd-elf.h"
  	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
