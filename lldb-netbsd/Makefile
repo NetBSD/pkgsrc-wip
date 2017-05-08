@@ -5,7 +5,7 @@ CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	lldb
 SVN_REPO.lldb=		http://llvm.org/svn/llvm-project/lldb/trunk
-SVN_REVISION.lldb=	301932
+SVN_REVISION.lldb=	302388
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
@@ -76,13 +76,14 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
+.include "../../wip/mk/svn-package.mk"
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang-netbsd
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-netbsd
 .include "../../wip/clang-netbsd/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm-netbsd
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
 .include "../../wip/llvm-netbsd/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
