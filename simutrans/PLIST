@@ -469,11 +469,13 @@ share/simutrans/text/ja/new_world.txt
 share/simutrans/text/ja/options.txt
 share/simutrans/text/ja/password.txt
 share/simutrans/text/ja/players.txt
+share/simutrans/text/ja/privatesign_info.txt
 share/simutrans/text/ja/railtools.txt
 share/simutrans/text/ja/removal_tool.txt
 share/simutrans/text/ja/roadtools.txt
 share/simutrans/text/ja/save.txt
 share/simutrans/text/ja/schedule.txt
+share/simutrans/text/ja/scenario.txt
 share/simutrans/text/ja/settings.txt
 share/simutrans/text/ja/shiptools.txt
 share/simutrans/text/ja/signal_spacing.txt

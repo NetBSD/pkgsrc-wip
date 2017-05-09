@@ -4,7 +4,8 @@ PKGNAME=	simutrans-120.1.3
 DISTNAME=	simutrans-src-120-1-3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simutrans/}
-#DISTFILES+=     language_pack-Base+texts.zip
+DISTFILES+=     language_pack-Base+texts.zip
+SITES.language_pack-Base+texts.zip=http://simutrans-germany.com/translator/data/tab/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
