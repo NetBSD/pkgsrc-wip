@@ -21,9 +21,5 @@ CHECK_INTERPRETER_SKIP+=	lib/elixir/bin/mix
 
 USE_TOOLS+=	gmake gsed
 BUILD_TARGET= compile
-MAKE_ENV+=	SED=gsed
-
-#do-build:
-#	cd ${WRKSRC} && ${GMAKE}
 
 .include "../../mk/bsd.pkg.mk"
