@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=		elixir-1.4.2
+PKGREVISION=	1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elixir-lang/}
 EXTRACT_SUFX=		.zip
@@ -15,15 +16,14 @@ GITHUB_TAG=		v${PKGVERSION_NOREV}
 BUILD_DEPENDS+=		erlang>=18.0:../../lang/erlang
 
 WRKSRC=			${WRKDIR}/${PKGBASE}-${PKGVERSION_NOREV}
+CHECK_INTERPRETER_SKIP+=	bin/mix
+CHECK_INTERPRETER_SKIP+=	lib/elixir/bin/mix
 
 USE_TOOLS+=	gmake gsed
+BUILD_TARGET= compile
+MAKE_ENV+=	SED=gsed
 
-SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	post-extract
-SUBST_FILES.fix-paths=	Makefile
-SUBST_SED.fix-paths=	-e 's,/share/man/,/man/,g'
-
-do-build:
-	cd ${WRKSRC} && ${GMAKE}
+#do-build:
+#	cd ${WRKSRC} && ${GMAKE}
 
 .include "../../mk/bsd.pkg.mk"

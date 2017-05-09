@@ -4,3 +4,5 @@ SHA1 (elixir-1.4.2.zip) = a674d09dbae9acf6c5ae46707dbfc81a613bc70e
 RMD160 (elixir-1.4.2.zip) = c0ae698076b5dea2681497716fc4f8d25c52e77e
 SHA512 (elixir-1.4.2.zip) = 44030cbab6680fd237c3f1b6f0edef7a92b06776e224e2d48a848b70950d35de550123a78924dee9015ff20f273285c0ee0f221b7bb9f138f4e0ea7033e4d3c1
 Size (elixir-1.4.2.zip) = 2055662 bytes
+SHA1 (patch-Makefile) = 938cedb5da9ededfb91b2410ff4097ec419a7563
+SHA1 (patch-bin_elixir) = 29007e4eb0ffac8c891856a3034618733fa971c4

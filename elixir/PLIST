@@ -385,7 +385,7 @@ lib/elixir/lib/mix/ebin/Elixir.Mix.TasksServer.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.Utils.beam
 lib/elixir/lib/mix/ebin/Elixir.Mix.beam
 lib/elixir/lib/mix/ebin/mix.app
-share/man/man1/elixir.1
-share/man/man1/elixirc.1
-share/man/man1/iex.1
-share/man/man1/mix.1
+man/man1/elixir.1
+man/man1/elixirc.1
+man/man1/iex.1
+man/man1/mix.1
