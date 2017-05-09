@@ -3109,7 +3109,6 @@ SUBDIR+=	py-jabberbot
 SUBDIR+=	py-jbessel
 SUBDIR+=	py-jedi
 SUBDIR+=	py-jelly
-SUBDIR+=	py-jellyfish
 SUBDIR+=	py-jewish
 SUBDIR+=	py-jitcode
 SUBDIR+=	py-jmespath
