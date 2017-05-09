@@ -2646,7 +2646,8 @@ share/emacs/${PKGVERSION}/lisp/mh-e/mh-folder.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-folder.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-funcs.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-funcs.elc
-share/emacs/${PKGVERSION}/lisp/mh-e/mh-gnus.el
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-gnus.el.gz
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-gnus.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-identity.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-identity.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-inc.el.gz
