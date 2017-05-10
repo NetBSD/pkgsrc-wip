@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD$
+
+By default, FUSE emulates a 48K Spectrum, which doesn't have enough memory
+or adequate sound hardware to run some newer software released after 1986.
+
+It can be configured to emulate a more powerful 128K Spectrum by adding a
+line to the RetroArch core options file:
+
+printf 'fuse_machine = "Spectrum 128K"\n' >>\
+	$HOME/.config/retroarch/retroarch-core-options.cfg
+
+FUSE supports various joystick interfaces. Cursor is the default type.
+
+To emulate a Kempston joystick (generally the type most commonly supported
+type in games), change input_libretro_device_p1 in retroarch.cfg to "513".
+
+===========================================================================
