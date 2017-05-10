@@ -76,6 +76,7 @@ share/solvespace/icons/text-window/shaded.png
 share/solvespace/icons/text-window/workplane.png
 share/solvespace/locales.txt
 share/solvespace/locales/en_US.po
+share/solvespace/locales/ru_RU.po
 share/solvespace/locales/uk_UA.po
 share/solvespace/shaders/edge.frag
 share/solvespace/shaders/edge.vert
