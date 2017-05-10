@@ -1,0 +1,22 @@
+$NetBSD$
+
+Avoid linuxisms.
+
+--- Makefile.orig	2017-03-16 20:39:20.000000000 +0000
++++ Makefile
+@@ -135,13 +135,13 @@ ifneq (,$(findstring unix,$(platform)))
+    REALCC ?= gcc
+    NATIVECC ?= g++
+    NATIVECFLAGS ?= -std=gnu99
+-   BASELIBS += -lpthread
++   BASELIBS += -pthread
+    CXX ?= g++
+    #workaround for mame bug (c++ in .c files)
+    CC := $(CXX)
+    AR ?= @ar
+    LD := $(CXX)
+-   LIBS += -lstdc++ -lpthread -ldl
++   LIBS += -pthread
+    ifeq ($(firstword $(filter x86_64,$(UNAME))),x86_64)
+       PTR64 = 1
+    endif

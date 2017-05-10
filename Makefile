@@ -1714,6 +1714,7 @@ SUBDIR+=	libretro-fceumm
 SUBDIR+=	libretro-fuse
 SUBDIR+=	libretro-gambatte
 SUBDIR+=	libretro-mame2003
+SUBDIR+=	libretro-mame2014
 SUBDIR+=	libretro-mednafen-ngp
 SUBDIR+=	libretro-mednafen-pce-fast
 SUBDIR+=	libretro-mednafen-wswan
