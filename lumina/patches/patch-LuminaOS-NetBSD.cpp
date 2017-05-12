@@ -1,23 +1,15 @@
 $NetBSD$
-Specific NetBSD support
 --- src-qt5/core/libLumina/LuminaOS-NetBSD.cpp.orig	2017-01-06 14:07:19.000000000 +0000
-+++ src-qt5/core/libLumina/LuminaOS-NetBSD.cpp	2017-04-29 21:57:48.210905316 +0000
-@@ -9,12 +9,14 @@
- #include <unistd.h>
- #include <stdio.h> // Needed for BUFSIZ
++++ src-qt5/core/libLumina/LuminaOS-NetBSD.cpp	2017-05-12 22:27:09.606898568 +0000
+@@ -11,6 +11,8 @@
+ 
+ QString LOS::OSName(){ return "NetBSD"; }
  
 +static int screenbrightness=-1;
 +
- QString LOS::OSName(){ return "NetBSD"; }
- 
  //OS-specific prefix(s)
  // NOTE: PREFIX, L_ETCDIR, L_SHAREDIR are defined in the OS-detect.pri project file and passed in
  QString LOS::LuminaShare(){ return (L_SHAREDIR+"/lumina-desktop/"); } //Install dir for Lumina share files
--QString LOS::AppPrefix(){ return "/usr/local/"; } //Prefix for applications
-+QString LOS::AppPrefix(){ return "/usr/pkg/"; } //Prefix for applications
- QString LOS::SysPrefix(){ return "/usr/"; } //Prefix for system
- 
- //OS-specific application shortcuts (*.desktop files)
 @@ -31,36 +33,117 @@
  QStringList LOS::ExternalDevicePaths(){
      //Returns: QStringList[<type>::::<filesystem>::::<path>]
