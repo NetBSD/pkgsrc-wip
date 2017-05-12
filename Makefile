@@ -3719,6 +3719,7 @@ SUBDIR+=	py-yapgvb
 SUBDIR+=	py-yapps2
 SUBDIR+=	py-yaprt
 SUBDIR+=	py-yapsy
+SUBDIR+=	py-yarl
 SUBDIR+=	py-yellowhiggs
 SUBDIR+=	py-yt
 SUBDIR+=	py-z2pack
