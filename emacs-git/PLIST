@@ -2223,7 +2223,6 @@ share/emacs/${PKGVERSION}/lisp/info.el.gz
 share/emacs/${PKGVERSION}/lisp/info.elc
 share/emacs/${PKGVERSION}/lisp/informat.el.gz
 share/emacs/${PKGVERSION}/lisp/informat.elc
-share/emacs/${PKGVERSION}/lisp/international/README
 share/emacs/${PKGVERSION}/lisp/international/ccl.el.gz
 share/emacs/${PKGVERSION}/lisp/international/ccl.elc
 share/emacs/${PKGVERSION}/lisp/international/characters.el.gz
