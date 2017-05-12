@@ -5,4 +5,3 @@ RMD160 (qemu-2.8.1.tar.bz2) = 93f71138d19c871195c9e0b1a7ba66275773f93a
 SHA512 (qemu-2.8.1.tar.bz2) = 0397b4029cdcb77ed053c44b3579a3f34894038e6fc6b4aa88de14515f5a78bf2f41c5e865f37111529f567c85d2f1c4deefae47dde54f76eac79410e5b2bdda
 Size (qemu-2.8.1.tar.bz2) = 28366270 bytes
 SHA1 (patch-configure) = cf38092c108e540aa686ce48a69020fddc83351d
-SHA1 (patch-scripts_qemu-binfmt-conf.sh) = 721017b17a6c00438c4b0b105376a488addf8eb1
