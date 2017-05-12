@@ -3248,6 +3248,7 @@ SUBDIR+=	py-msdas
 SUBDIR+=	py-mssql2
 SUBDIR+=	py-msumastro
 SUBDIR+=	py-multichain_mcmc
+SUBDIR+=	py-multidict
 SUBDIR+=	py-multimethods
 SUBDIR+=	py-multiprocess
 SUBDIR+=	py-mvpoly
