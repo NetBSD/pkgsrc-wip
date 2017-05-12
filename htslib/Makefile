@@ -8,14 +8,14 @@
 DISTNAME=	htslib-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
-GITHUB_PROJECT=	htslib
-GITHUB_TAG=	${PORTVERSION}
 
 MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
-
 LICENSE=	mit
+
+GITHUB_PROJECT=	htslib
+GITHUB_TAG=	${PORTVERSION}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake perl
 GNU_CONFIGURE=	yes
@@ -28,10 +28,10 @@ SUBST_FILES.version+=	${WRKSRC}/configure.ac
 
 CPPFLAGS+=	-I${PREFIX}/include
 
-MAKE_ENV=	INSTALL_LIB="${INSTALL_LIB}" \
-		INSTALL_DATA="${INSTALL_DATA}" \
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		INSTALL_DIR="${MKDIR}"
+MAKE_ENV=	INSTALL_LIB=${INSTALL_LIB:Q} \
+		INSTALL_DATA=${INSTALL_DATA:Q} \
+		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
+		INSTALL_DIR=${MKDIR:Q}
 
 PORTVERSION=	1.3.1
 
