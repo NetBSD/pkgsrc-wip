@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (hangups-0.4.2.tar.gz) = ab6ca381f075c6cb412d975110d13afd9ced8a04
+RMD160 (hangups-0.4.2.tar.gz) = fdf70d04cdfb62ccd07360c933b120ab3ea4b756
+SHA512 (hangups-0.4.2.tar.gz) = c07eaf4ab7ff5c4c78424b9f2bb97b53f42ab4634e66c3c019136008f8db2b749bd2de963029b65d3a30245efc17e4c241f53e5997ba3349e184b96b8765a48c
+Size (hangups-0.4.2.tar.gz) = 81653 bytes
+SHA1 (patch-setup.py) = c554e4a9239defca5c4b30a8e21c7a80ec9e187c

@@ -3084,6 +3084,7 @@ SUBDIR+=	py-hamilton
 SUBDIR+=	py-hamnonlineng
 SUBDIR+=	py-hamopy
 SUBDIR+=	py-handy
+SUBDIR+=	py-hangups
 SUBDIR+=	py-harvestingkit
 SUBDIR+=	py-hcluster
 SUBDIR+=	py-hddm
