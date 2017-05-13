@@ -12,7 +12,7 @@ printf 'fuse_machine = "Spectrum 128K"\n' >>\
 
 FUSE supports various joystick interfaces. Cursor is the default type.
 
-To emulate a Kempston joystick (generally the type most commonly supported
-type in games), change input_libretro_device_p1 in retroarch.cfg to "513".
+To emulate a Kempston joystick (generally the most commonly supported type
+in games), change input_libretro_device_p1 in retroarch.cfg to "513".
 
 ===========================================================================
