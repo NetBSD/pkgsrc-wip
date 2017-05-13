@@ -18,28 +18,3 @@ $NetBSD$
  }
  EOF
    IFS=:
-@@ -3840,6 +3839,8 @@ if compile_prog "" "" ; then
-   fallocate_zero_range=yes
- fi
- 
-+
-+
- # check for posix_fallocate
- posix_fallocate=no
- cat > $TMPC << EOF
-@@ -4116,10 +4117,15 @@ fi
- # support and one without. This means that the clock_gettime() don't
- # need -lrt. We still need it for timer_create() so we check for this
- # function in addition.
-+# NetBSD requires -lrt for shm_open() so check for it too.
- cat > $TMPC <<EOF
-+#include <sys/types.h>
-+#include <sys/mman.h>
-+#include <fcntl.h>
- #include <signal.h>
- #include <time.h>
- int main(void) {
-+  shm_open(NULL, O_RDWR, 0644);
-   timer_create(CLOCK_REALTIME, NULL, NULL);
-   return clock_gettime(CLOCK_REALTIME, NULL);
- }
