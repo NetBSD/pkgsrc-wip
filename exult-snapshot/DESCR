@@ -1,0 +1,15 @@
+As computers evolve, we risk losing classic games from the
+not-so-distant past. One of these, Ultima 7, an RPG from the early
+1990's, still has a huge following, and many consider it to be one of
+the most immersive games ever produced.
+
+Exult is a project to recreate Ultima 7 for modern operating systems,
+using the game's original plot, data, and graphics files.  It enables
+play of Ultima VII: The Black Gate and Ultima VII Part Two: Serpent
+Isle, and their corresponding expansion disks Forge of Virtue and
+Silver Seed, on modern machines.
+
+In order to play these games, data files from the original games are
+needed.
+
+This package is a snapshop of the development version of games/exult.

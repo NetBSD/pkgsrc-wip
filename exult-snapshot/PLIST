@@ -1,0 +1,31 @@
+@comment $NetBSD$
+bin/expack
+bin/exult
+bin/shp2pcx
+bin/splitshp
+bin/textpack
+bin/ucxt
+man/man1/expack.1
+man/man1/exult_studio.1
+man/man1/ipack.1
+man/man1/shp2pcx.1
+man/man1/splitshp.1
+man/man1/textpack.1
+man/man1/ucc.1
+man/man6/exult.6
+share/applications/exult.desktop
+share/exult/bg_mr_faces.vga
+share/exult/bg_paperdol.vga
+share/exult/exult.flx
+share/exult/exult_bg.flx
+share/exult/exult_iphone.flx
+share/exult/exult_si.flx
+share/exult/exultmsg.txt
+share/exult/midisfx.flx
+share/exult/u7bgintrinsics.data
+share/exult/u7misc.data
+share/exult/u7opcodes.data
+share/exult/u7sibetaintrinsics.data
+share/exult/u7siintrinsics.data
+share/icons/exult.png
+@pkgdir share/exult/estudio/new

@@ -705,6 +705,7 @@ SUBDIR+=	execline
 SUBDIR+=	exhume
 SUBDIR+=	expiretable
 SUBDIR+=	extra-cmake-modules
+SUBDIR+=	exult-snapshot
 SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
 SUBDIR+=	faast
