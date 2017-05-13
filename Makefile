@@ -3468,6 +3468,7 @@ SUBDIR+=	py-rdflib-django
 SUBDIR+=	py-rdflib340
 SUBDIR+=	py-rdopkg
 SUBDIR+=	py-rdoupdate
+SUBDIR+=	py-readlike
 SUBDIR+=	py-rebound
 SUBDIR+=	py-recluse
 SUBDIR+=	py-recommonmark
