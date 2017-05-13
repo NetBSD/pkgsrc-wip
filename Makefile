@@ -2559,6 +2559,7 @@ SUBDIR+=	pear-phpcpd
 SUBDIR+=	pear-phpdcd
 SUBDIR+=	pear-phploc
 SUBDIR+=	peercoin
+SUBDIR+=	pentagram
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
 SUBDIR+=	pgp6
