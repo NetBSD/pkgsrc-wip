@@ -201,7 +201,6 @@ share/conkeror/modules/walnut.js
 share/conkeror/modules/webjump.js
 share/conkeror/modules/window.js
 share/conkeror/modules/zoom.js
-share/conkeror/search-engines/answers.xml
 share/conkeror/search-engines/creativecommons.xml
 share/conkeror/search-engines/duckduckgo.xml
 share/conkeror/search-engines/eBay.xml
