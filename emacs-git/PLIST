@@ -3231,6 +3231,8 @@ share/emacs/${PKGVERSION}/lisp/pcmpl-x.el.gz
 share/emacs/${PKGVERSION}/lisp/pcmpl-x.elc
 share/emacs/${PKGVERSION}/lisp/pcomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/pcomplete.elc
+share/emacs/${PKGVERSION}/lisp/pixel-scroll.el.gz
+share/emacs/${PKGVERSION}/lisp/pixel-scroll.elc
 share/emacs/${PKGVERSION}/lisp/play/5x5.el.gz
 share/emacs/${PKGVERSION}/lisp/play/5x5.elc
 share/emacs/${PKGVERSION}/lisp/play/animate.el.gz
