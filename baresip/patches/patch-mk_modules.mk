@@ -1,14 +1,10 @@
 $NetBSD$
 
-Enable the experimental jack module. This provides an alternative for
-audio on systems where the full duplex oss/portaudio (opened separately
-for read and write) gives problems.
-
 Make sndio available for non-OpenBSD.
 
---- mk/modules.mk.orig	2016-07-22 19:17:45.000000000 +0000
+--- mk/modules.mk.orig	2017-05-14 06:58:08.000000000 +0000
 +++ mk/modules.mk
-@@ -241,7 +241,7 @@ USE_WINWAVE := yes
+@@ -251,7 +251,7 @@ USE_WINWAVE := yes
  MODULES   += wincons
  endif
  ifeq ($(OS),openbsd)
@@ -17,17 +13,7 @@ Make sndio available for non-OpenBSD.
  endif
  ifeq ($(OS),freebsd)
  MODULES   += dtmfio
-@@ -355,6 +355,9 @@ endif
- ifneq ($(USE_ISAC),)
- MODULES   += isac
- endif
-+ifneq ($(USE_JACK),)
-+MODULES   += jack
-+endif
- ifneq ($(USE_L16),)
- MODULES   += l16
- endif
-@@ -394,6 +397,9 @@ endif
+@@ -408,6 +408,9 @@ endif
  ifneq ($(USE_SNDFILE),)
  MODULES   += sndfile
  endif
