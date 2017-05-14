@@ -3,6 +3,7 @@
 DISTNAME=	libretro-snes9x2005-20170218
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=Snes9x_2005
 COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 LICENSE=	no-commercial-use
 

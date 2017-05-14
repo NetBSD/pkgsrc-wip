@@ -3,6 +3,7 @@
 DISTNAME=	libretro-fbalpha-20170415
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=Final_Burn_Alpha
 COMMENT=	Libretro core based on the FB Alpha arcade emulator
 LICENSE=	no-commercial-use
 

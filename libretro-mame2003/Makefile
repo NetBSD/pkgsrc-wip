@@ -3,6 +3,7 @@
 DISTNAME=	libretro-mame2003-20170306
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=MAME_2003
 COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.78)
 LICENSE=	no-commercial-use
 

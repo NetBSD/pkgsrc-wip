@@ -3,6 +3,7 @@
 DISTNAME=	libretro-mednafen-vb-20170501
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_VB
 COMMENT=	Libretro core based on the Mednafen VirtualBoy emulator
 LICENSE=	gnu-gpl-v2
 

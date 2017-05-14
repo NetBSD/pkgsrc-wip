@@ -3,6 +3,7 @@
 DISTNAME=	libretro-4do-20170423
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=4DO
 COMMENT=	Libretro core for 3DO emulation
 
 GITHUB_PROJECT=	4do-libretro

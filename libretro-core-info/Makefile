@@ -3,6 +3,7 @@
 DISTNAME=	libretro-core-info-20170410
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://www.libretro.com/
 COMMENT=	Libretro core information
 
 GITHUB_PROJECT=	libretro-super

@@ -3,6 +3,7 @@
 DISTNAME=	libretro-yabause-20170124
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=Yabause
 COMMENT=	Libretro core based on the Yabause Sega Saturn emulator
 LICENSE=	gnu-gpl-v2
 

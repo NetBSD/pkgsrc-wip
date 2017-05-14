@@ -3,6 +3,7 @@
 DISTNAME=	libretro-mednafen-ngp-20170321
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=Beetle/Mednafen_NGP
 COMMENT=	Libretro core based on the Mednafen Neo Geo Pocket emulator
 LICENSE=	gnu-gpl-v2
 

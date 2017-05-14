@@ -8,6 +8,7 @@ DISTNAME=	libretro-bsnes-mercury-20170510
 PKGNAME=	${DISTNAME:S/libretro-bsnes-mercury/libretro-bsnes-mercury-${BSNES_PROFILE}/}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=Bsnes-mercury
 LICENSE=	gnu-gpl-v3
 
 GITHUB_PROJECT=	bsnes-mercury

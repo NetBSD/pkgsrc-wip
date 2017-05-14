@@ -3,6 +3,7 @@
 DISTNAME=	libretro-genesis-plus-gx-20170420
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=Genesis_Plus_GX
 COMMENT=	Libretro core based on the Genesis Plus Sega 8/16 bit emulator
 
 GITHUB_PROJECT=	Genesis-Plus-GX

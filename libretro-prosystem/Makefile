@@ -3,6 +3,7 @@
 DISTNAME=	libretro-prosystem-20170124
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=ProSystem
 COMMENT=	Libretro core based on the ProSystem Atari 7800 emulator
 LICENSE=	gnu-gpl-v2
 
