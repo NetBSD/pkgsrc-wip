@@ -1723,6 +1723,7 @@ SUBDIR+=	libretro-fbalpha2012-cps1
 SUBDIR+=	libretro-fbalpha2012-cps2
 SUBDIR+=	libretro-fbalpha2012-neogeo
 SUBDIR+=	libretro-fceumm
+SUBDIR+=	libretro-fmsx
 SUBDIR+=	libretro-fuse
 SUBDIR+=	libretro-gambatte
 SUBDIR+=	libretro-genesis-plus-gx
