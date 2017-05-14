@@ -1737,6 +1737,7 @@ SUBDIR+=	libretro-mednafen-wswan
 SUBDIR+=	libretro-nestopia
 SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-picodrive
+SUBDIR+=	libretro-prboom
 SUBDIR+=	libretro-snes9x2005
 SUBDIR+=	libretro-snes9x2010
 SUBDIR+=	libretro-stella
