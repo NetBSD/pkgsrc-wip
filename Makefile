@@ -1731,6 +1731,7 @@ SUBDIR+=	libretro-mame2014
 SUBDIR+=	libretro-mednafen-ngp
 SUBDIR+=	libretro-mednafen-pce-fast
 SUBDIR+=	libretro-mednafen-psx
+SUBDIR+=	libretro-mednafen-supergrafx
 SUBDIR+=	libretro-mednafen-vb
 SUBDIR+=	libretro-mednafen-wswan
 SUBDIR+=	libretro-nestopia
