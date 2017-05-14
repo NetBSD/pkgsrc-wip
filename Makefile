@@ -1740,6 +1740,7 @@ SUBDIR+=	libretro-picodrive
 SUBDIR+=	libretro-snes9x2005
 SUBDIR+=	libretro-snes9x2010
 SUBDIR+=	libretro-stella
+SUBDIR+=	libretro-tyrquake
 SUBDIR+=	libretro-vba-next
 SUBDIR+=	libretro-virtualjaguar
 SUBDIR+=	libretro-yabause
