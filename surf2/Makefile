@@ -28,7 +28,7 @@ SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-# Install binary and man page as surf2 to avoid conflict with wip/surf
+# Install binary and man page as surf2 to avoid conflicts with wip/surf
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/surf ${DESTDIR}${PREFIX}/bin/surf2
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/surf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/surf2.1
