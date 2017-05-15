@@ -1,11 +1,10 @@
 $NetBSD: distinfo,v 1.95 2017/04/25 10:37:26 wiz Exp $
 
-SHA1 (webkitgtk-2.16.1.tar.xz) = d0b367ca1ac89da57b7068aa37efcc101aeb97f8
-RMD160 (webkitgtk-2.16.1.tar.xz) = 82e198ac35993d0e5a2ff9a76755b1c33849458f
-SHA512 (webkitgtk-2.16.1.tar.xz) = 4b8de15644d0d0f9814c674020cbbab8628347915b8010977dbe2365ce276ea05b3bf86171400ae8eb5bfdebbadcfabd1efce34a177b5c82aa765bd3351e7010
-Size (webkitgtk-2.16.1.tar.xz) = 14675996 bytes
+SHA1 (webkitgtk-2.16.2.tar.xz) = 076cd31c5c4ab7239ae770d8c8355c4cdebdeedc
+RMD160 (webkitgtk-2.16.2.tar.xz) = ea68eed084e98cdcb81a9d3cc78a218e58c165bf
+SHA512 (webkitgtk-2.16.2.tar.xz) = 0bd16f663dffd41d713a53e2186576c4a7c42e7f872605a1688c80e8b55408b5f96f1274a1fe24624b4974240e901df5b11d1ff27a03fa2d9950575f1260abc8
+Size (webkitgtk-2.16.2.tar.xz) = 14650116 bytes
 SHA1 (patch-CMakeLists.txt) = 07293fd11d19b6f09120a89a08ff612c36644649
-SHA1 (patch-Source_JavaScriptCore_API_JSStringRef.cpp) = 419425db19f685335eab01099d0a941614a2a99c
 SHA1 (patch-Source_JavaScriptCore_CMakeLists.txt) = 1b3485f72d809b2a1d6ec047b36331a6489fd10d
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 99e46f9d9b26a8d9ba6b29c66d7ce5326c4ffeb6
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = f78e6150ed8901b3fe046b2ef182f50f1c7500a4
@@ -20,8 +19,7 @@ SHA1 (patch-Source_WebCore_platform_FileSystem.cpp) = adef1a42c4e210f0a3dcb82807
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebKit2_CMakeLists.txt) = 10a3fca678095ad04ce43e6d291e3907a44f67b4
 SHA1 (patch-Source_WebKit2_NetworkProcess_cache_NetworkCacheFileSystem.cpp) = 2b38628e1e617ef87b20faabbbcd8be8b2cbc058
-SHA1 (patch-Source_WebKit2_Shared_API_c_WKString.cpp) = 0a735e069ad6412e5c7850067ade0abe24487c1f
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 03b72552414e7114bfa7ddc2d68fd97009a5ff7d
-SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 459bf361b03b8f4be57813d146423064adc47d8f
+SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 383e9e2785bbe0ed6278ea735e3b5e5705431927
 SHA1 (patch-ai) = b8a45f2f5c1aa5aed178527ecd6cbd93baf76f8e
 SHA1 (patch-aj) = cd9a280c3bbab82c1a7aeb62a27ee6eb96c67ec2
