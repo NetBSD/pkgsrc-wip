@@ -1735,6 +1735,7 @@ SUBDIR+=	libretro-mednafen-psx
 SUBDIR+=	libretro-mednafen-supergrafx
 SUBDIR+=	libretro-mednafen-vb
 SUBDIR+=	libretro-mednafen-wswan
+SUBDIR+=	libretro-mgba
 SUBDIR+=	libretro-nestopia
 SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-picodrive
