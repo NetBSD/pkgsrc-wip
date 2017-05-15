@@ -4412,6 +4412,7 @@ SUBDIR+=	viewer
 SUBDIR+=	viewglob
 SUBDIR+=	viewnior
 SUBDIR+=	vim-nox
+SUBDIR+=	vimb3-git
 SUBDIR+=	vimprobable2
 SUBDIR+=	vimrc-mode
 SUBDIR+=	vino
