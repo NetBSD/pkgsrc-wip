@@ -1,5 +1,7 @@
 $NetBSD$
 
+Git submodules should not be used.
+
 --- configure.orig	2016-05-13 16:59:20.000000000 +0000
 +++ configure
 @@ -288,22 +288,6 @@ if [ "$m" = "" -o ! -f boot/$m/scheme.bo

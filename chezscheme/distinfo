@@ -16,5 +16,5 @@ SHA1 (ChezScheme/zlib-1.2.8.tar.gz) = 730c4e75b553cafc0c081127de43174192ce98fd
 RMD160 (ChezScheme/zlib-1.2.8.tar.gz) = 820cab211e9311390e206c658c4c1ad3c6c84ccc
 SHA512 (ChezScheme/zlib-1.2.8.tar.gz) = 7e393976368975446b263ae4143fb404bc33bf3b436e72007700b5b88e5be332cd461cdec42d31a4b6dffdca2368550f01b9fa1165d81c0aa818bbf2b1ac191e
 Size (ChezScheme/zlib-1.2.8.tar.gz) = 604952 bytes
-SHA1 (patch-configure) = e85217732e4d4381b82940ed2ca147c8c2c5e97a
-SHA1 (patch-makefiles_installsh) = e3b114e27633cc2d9a0828a82f53151a9f00e520
+SHA1 (patch-configure) = 807402072a52d243945dec4c5305561d16441b0e
+SHA1 (patch-makefiles_installsh) = e0a597e2c63cfa088a6621bf6bc98f5a1fa5f746

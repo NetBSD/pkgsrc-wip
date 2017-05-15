@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Posix shell doesn't allow == (only bash does).
+
 --- makefiles/installsh.orig	2016-05-13 16:59:20.000000000 +0000
 +++ makefiles/installsh
 @@ -61,7 +61,7 @@ while ${TRUE} ; do
