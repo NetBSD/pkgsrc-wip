@@ -5,7 +5,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libretro.com/
+HOMEPAGE=	http://www.retroarch.com/
 COMMENT=	Official reference frontend for the libretro API
 LICENSE=	gnu-gpl-v3
 

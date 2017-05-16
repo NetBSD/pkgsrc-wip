@@ -53,4 +53,3 @@ CONFIGURE_ARGS+=        --enable-freetype
 .else
 CONFIGURE_ARGS+=        --disable-freetype
 .endif
-
