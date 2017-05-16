@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/04/25 14:20:47 tnn Exp $
 
-DISTNAME=	retroarch-1.3.6
+DISTNAME=	retroarch-1.5.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -14,10 +14,10 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--global-config-dir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+= BIN_DIR=${PREFIX}/bin
 CONFIGURE_ENV+= MAN_DIR=${PREFIX}/${PKGMANDIR}
-CONFIG_SHELL=	bash
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash pkg-config gmake
+USE_TOOLS+=	pkg-config gmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON=	tools/cg2glsl.py

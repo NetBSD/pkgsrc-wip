@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.4 2015/11/03 20:31:01 agc Exp $
 
-SHA1 (retroarch-1.3.6.tar.gz) = 4b634068bf1ff9ea8b8ace7253eb3781e70b8f84
-RMD160 (retroarch-1.3.6.tar.gz) = 29ec4417cebc3f09a2d15434f60cf52aa54c9843
-SHA512 (retroarch-1.3.6.tar.gz) = a0c5c66e24a7b1724f8f7371b2bb98a2b58d44f43d83b74ff188ca0a2ed5fbe989da761dc5e618011cb5900100f61c1fa071df957e5c85945413030f9fce9fe7
-Size (retroarch-1.3.6.tar.gz) = 11967473 bytes
-SHA1 (patch-Makefile) = fa670edc250194d8e32c78581de43f8c7a5068ea
+SHA1 (retroarch-1.5.0.tar.gz) = 6131b31dab7e193c08e14f3faec4788aab394bb7
+RMD160 (retroarch-1.5.0.tar.gz) = f5a221ea0b0d6cd052b741247442c89b99832397
+SHA512 (retroarch-1.5.0.tar.gz) = a94df710ac491bacc2e94eabecf2b01968019b8195ebaae893e43bb51a98b0eb75098a85d58477e78885f5e00345226b0204289e3b00d3f3d05cf93741576f38
+Size (retroarch-1.5.0.tar.gz) = 16332829 bytes
+SHA1 (patch-Makefile) = 32832b6861c05c95f86a94a0cc0bd8ace7c59846
 SHA1 (patch-Makefile.common) = 298fc9fef815d972aa76355c1c5610c6b5fff4c3
 SHA1 (patch-qb_qb.libs.sh) = bd92a7016e45fd6ee5a47300516c4028227384b2
