@@ -23,15 +23,15 @@ REPLACE_PERL=	test/compare_sam.pl test/test.pl test/test_view.pl
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	post-patch
-SUBST_SED.version+=	-e 's|@PORTVERSION@|${PORTVERSION}|g'
+SUBST_SED.version+=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PORTVERSION}]|"
 SUBST_FILES.version+=	${WRKSRC}/configure.ac
 
-CPPFLAGS+=	-I${PREFIX}/include
+#CPPFLAGS+=	-I${PREFIX}/include
 
 MAKE_ENV=	INSTALL_LIB=${INSTALL_LIB:Q} \
 		INSTALL_DATA=${INSTALL_DATA:Q} \
 		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
-		INSTALL_DIR=${MKDIR:Q}
+		INSTALL_DIR=${INSTALL_LIB_DIR:Q}
 
 PORTVERSION=	1.3.2
 
