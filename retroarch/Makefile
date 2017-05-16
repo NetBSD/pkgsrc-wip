@@ -13,9 +13,14 @@ GITHUB_PROJECT=	RetroArch
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HAS_CONFIGURE=	yes
+
 CONFIGURE_ARGS+=--global-config-dir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--disable-builtinminiupnpc
+CONFIGURE_ARGS+=--disable-builtinzlib
+
 CONFIGURE_ENV+= BIN_DIR=${PREFIX}/bin
 CONFIGURE_ENV+= MAN_DIR=${PREFIX}/${PKGMANDIR}
+
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
 
@@ -47,5 +52,6 @@ CONFIGURE_ARGS+=	--disable-x11	# broken, SDL2 works
 .include "options.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../net/miniupnpc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
