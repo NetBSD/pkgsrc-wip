@@ -26,8 +26,6 @@ SUBST_STAGE.version=	post-patch
 SUBST_SED.version+=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PORTVERSION}]|"
 SUBST_FILES.version+=	${WRKSRC}/configure.ac
 
-#CPPFLAGS+=	-I${PREFIX}/include
-
 MAKE_ENV=	INSTALL_LIB=${INSTALL_LIB:Q} \
 		INSTALL_DATA=${INSTALL_DATA:Q} \
 		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
