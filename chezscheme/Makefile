@@ -27,17 +27,21 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c
 
+.include "options.mk"
+
 pre-configure:
 	cd ${WRKSRC} && rmdir stex && mv ../stex-1.2.1 stex && \
 		        rmdir zlib && mv ../zlib-1.2.8 zlib &&  \
 			rmdir nanopass && mv ../nanopass-framework-scheme-1.9 nanopass
 do-configure:
-	cd ${WRKSRC} && ./configure --installprefix=${PREFIX} \
+	cd ${WRKSRC} && ./configure ${CONFIGURE_ARGS} \
+                                    --installprefix=${PREFIX} \
                                     --installman=${PREFIX}/${PKGMANDIR} \
                                     --temproot=${DESTDIR} \
                                     LDFLAGS="${LDFLAGS}"
 
-BUILD_TARGET=build
+BUILD_TARGET=	build
+PLIST_SUBST+=   T=${T}
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
