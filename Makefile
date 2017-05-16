@@ -1737,6 +1737,7 @@ SUBDIR+=	libretro-mednafen-vb
 SUBDIR+=	libretro-mednafen-wswan
 SUBDIR+=	libretro-mgba
 SUBDIR+=	libretro-nestopia
+SUBDIR+=	libretro-o2em
 SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-picodrive
 SUBDIR+=	libretro-prboom
