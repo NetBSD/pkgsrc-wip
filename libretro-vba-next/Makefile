@@ -5,7 +5,7 @@ CATEGORIES=	emulators games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/vbam-libretro
+HOMEPAGE=	https://wiki.libretro.com/index.php?title=VBA_Next
 COMMENT=	Libretro core based on the VBA Next Game Boy Advance emulator
 
 LICENSE=	gnu-gpl-v2
