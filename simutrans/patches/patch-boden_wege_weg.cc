@@ -1,23 +1,23 @@
 $NetBSD$
-Work around threading bug in simutrans
---- boden/wege/weg.cc.orig	2015-11-29 19:41:00.000000000 +0000
+
+--- boden/wege/weg.cc.orig	2017-03-04 01:40:29.000000000 +0000
 +++ boden/wege/weg.cc
 @@ -420,9 +420,6 @@ void weg_t::unlock_mutex()
  
  void weg_t::calc_image()
  {
 -#ifdef MULTI_THREAD
--	pthread_mutex_lock( &weg_calc_bild_mutex );
+-	pthread_mutex_lock( &weg_calc_image_mutex );
 -#endif
  	grund_t *from = welt->lookup(get_pos());
  	grund_t *to;
- 	image_id old_bild = bild;
+ 	image_id old_image = image;
 @@ -434,9 +431,6 @@ void weg_t::calc_image()
  		if(  from==NULL  ) {
- 			dbg->error( "weg_t::calc_bild()", "Own way at %s not found!", get_pos().get_str() );
+ 			dbg->error( "weg_t::calc_image()", "Own way at %s not found!", get_pos().get_str() );
  		}
 -#ifdef MULTI_THREAD
--		pthread_mutex_unlock( &weg_calc_bild_mutex );
+-		pthread_mutex_unlock( &weg_calc_image_mutex );
 -#endif
  		return;	// otherwise crashing during enlargement
  	}

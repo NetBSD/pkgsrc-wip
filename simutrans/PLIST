@@ -14,6 +14,7 @@ share/simutrans/font/ro_font.fnt
 share/simutrans/history.txt
 share/simutrans/license.txt
 share/simutrans/license_squirrel.txt
+share/simutrans/ai/readme.txt
 share/simutrans/music/01-Simutrans-Main-Theme.mid
 share/simutrans/music/02-Gotta-catch-that-train.mid
 share/simutrans/music/03-Sunday-drivers.mid
@@ -60,9 +61,6 @@ share/simutrans/music/music.tab
 share/simutrans/music/readme.txt
 share/simutrans/problem_report.txt
 share/simutrans/readme.txt
-share/simutrans/script/new_scenario_template.nut
-share/simutrans/script/scenario_base.nut
-share/simutrans/script/scenario_compat.nut
 share/simutrans/text/be.tab
 share/simutrans/text/bg.tab
 share/simutrans/text/ca.tab
@@ -183,7 +181,6 @@ share/simutrans/text/de/password.txt
 share/simutrans/text/de/players.txt
 share/simutrans/text/de/privatesign_info.txt
 share/simutrans/text/de/railtools.txt
-share/simutrans/text/de/readme.html
 share/simutrans/text/de/roadtools.txt
 share/simutrans/text/de/save.txt
 share/simutrans/text/de/scenario.txt
@@ -219,7 +216,6 @@ share/simutrans/text/dk/new_world.txt
 share/simutrans/text/dk/options.txt
 share/simutrans/text/dk/players.txt
 share/simutrans/text/dk/railtools.txt
-share/simutrans/text/dk/readme
 share/simutrans/text/dk/roadtools.txt
 share/simutrans/text/dk/save.txt
 share/simutrans/text/dk/schedule.txt
@@ -474,8 +470,8 @@ share/simutrans/text/ja/railtools.txt
 share/simutrans/text/ja/removal_tool.txt
 share/simutrans/text/ja/roadtools.txt
 share/simutrans/text/ja/save.txt
-share/simutrans/text/ja/schedule.txt
 share/simutrans/text/ja/scenario.txt
+share/simutrans/text/ja/schedule.txt
 share/simutrans/text/ja/settings.txt
 share/simutrans/text/ja/shiptools.txt
 share/simutrans/text/ja/signal_spacing.txt

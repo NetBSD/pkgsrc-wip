@@ -1,9 +1,13 @@
 $NetBSD$
 
-SHA1 (language_pack-Base+texts.zip) = 1ccaff0dc55d99f9666bab95e6c775849a1dad44
-RMD160 (language_pack-Base+texts.zip) = 442bc1ba6f077c3612cbb775f86323920b9e4171
-SHA512 (language_pack-Base+texts.zip) = 28d47db0d4c6b7a7df35494ba2fc4711bfaeacc2999f25227224a714254f2c96a03e171b9e99acc042daf32283c0d3285d4e29b8419c539a04db2ef882215aa5
-Size (language_pack-Base+texts.zip) = 1098668 bytes
-SHA1 (patch-Makefile) = 5f6629257a6685002c98cd3279b69afb72669434
-SHA1 (patch-boden_wege_weg.cc) = 6982abea4218fc810d63dd5d77edccb23faa9224
+SHA1 (language_pack-Base+texts.zip) = 13b1fa9f0eb0f38f163ff3336d25dfc5ea300220
+RMD160 (language_pack-Base+texts.zip) = 0cbb02e163f60ccdd11ea4491983ed5a8dd3429c
+SHA512 (language_pack-Base+texts.zip) = 580849d10d2a9561b53e893fc6618e2da0a6a7241e16a846a85ee0570741f12bf0272337f35ad958f2367eb4ae457977cee37c28c236eb12248f47359ecbc51c
+Size (language_pack-Base+texts.zip) = 1098522 bytes
+SHA1 (simutrans-src-120-2-2.zip) = 026d4780f33ae09b0afb22e73dc85f3fb4658c78
+RMD160 (simutrans-src-120-2-2.zip) = b7ebc754c12b6d053ff60399893d7f0619f35b82
+SHA512 (simutrans-src-120-2-2.zip) = db9797be132bb1936d8c3192e536523d1249d20a513f3758037097ef46c2bab40d4be8adb68cb21eda2b4820369e89bd0a6e2abc4fe2bbcefe40bb414a3d1ab2
+Size (simutrans-src-120-2-2.zip) = 3900947 bytes
+SHA1 (patch-Makefile) = 35574cd19658298a224dc40f989c19d064809ccb
+SHA1 (patch-boden_wege_weg.cc) = d29489ad2ca66d32a464a5571d9ca7e13c2e202d
 SHA1 (patch-utils_simthread.h) = 89f88a753f467b2eb9e11ad76c6d2427663f8f2a

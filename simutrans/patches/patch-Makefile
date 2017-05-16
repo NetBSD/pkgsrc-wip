@@ -1,8 +1,8 @@
 $NetBSD$
 
---- Makefile.orig	2016-01-09 22:36:24.000000000 +0000
+--- Makefile.orig	2017-03-29 09:04:15.000000000 +0000
 +++ Makefile
-@@ -1,6 +1,14 @@
+@@ -1,6 +1,15 @@
  CFG ?= default
  -include config.$(CFG)
  
@@ -14,6 +14,7 @@ $NetBSD$
 +OSTYPE=freebsd
 +VERBOSE=1
 +MULTI_THREAD=1
- 
++
  BACKENDS      = allegro gdi opengl sdl sdl2 mixer_sdl posix
  COLOUR_DEPTHS = 0 16
+ OSTYPES       = amiga beos cygwin freebsd haiku linux mingw mac

@@ -1,4 +1,16 @@
 @comment $NetBSD$
+${PLIST.pak64}share/simutrans/pak/scenario/millionaire/de.tab
+${PLIST.pak64}share/simutrans/pak/sound/buzzsaw.wav
+${PLIST.pak64}share/simutrans/pak/sound/tree-cutting.wav
+${PLIST.pak64}share/simutrans/pak/symbol.CompassIso.pak
+${PLIST.pak64}share/simutrans/pak/symbol.CompassMap.pak
+${PLIST.pak64}share/simutrans/pak/text/frp.tab
+${PLIST.pak64}share/simutrans/pak/tree.Tree10.pak
+${PLIST.pak64}share/simutrans/pak/tree.Tree11.pak
+${PLIST.pak64}share/simutrans/pak/tree.Tree12.pak
+${PLIST.pak64}share/simutrans/pak/vehicle.Fahrradrikscha.pak
+${PLIST.pak64}share/simutrans/pak/vehicle.Rikscha.pak
+${PLIST.pak64}share/simutrans/pak/vehicle.Saenfte.pak
 ${PLIST.pak64}share/simutrans/pak/bridge.ClassicRail.pak
 ${PLIST.pak64}share/simutrans/pak/bridge.ClassicRoad.pak
 ${PLIST.pak64}share/simutrans/pak/bridge.MaglevBridge.pak
@@ -158,7 +170,6 @@ ${PLIST.pak64}share/simutrans/pak/building.LeuchtturmShipStop.pak
 ${PLIST.pak64}share/simutrans/pak/building.Lighthouse.pak
 ${PLIST.pak64}share/simutrans/pak/building.LongBusStop.pak
 ${PLIST.pak64}share/simutrans/pak/building.MHzSmallStation.pak
-${PLIST.pak64}share/simutrans/pak/building.MaglevUndergroundStation.pak
 ${PLIST.pak64}share/simutrans/pak/building.MainTerminal1930.pak
 ${PLIST.pak64}share/simutrans/pak/building.ModernAirTerminal477.pak
 ${PLIST.pak64}share/simutrans/pak/building.MonorailDepot.pak
@@ -276,7 +287,6 @@ ${PLIST.pak64}share/simutrans/pak/config/cityrules.tab
 ${PLIST.pak64}share/simutrans/pak/config/menuconf.tab
 ${PLIST.pak64}share/simutrans/pak/config/simuconf.tab
 ${PLIST.pak64}share/simutrans/pak/config/speedbonus.tab
-${PLIST.pak64}share/simutrans/pak/config/speedbonus.tab.bak
 ${PLIST.pak64}share/simutrans/pak/crossing.rail-road-crossing.pak
 ${PLIST.pak64}share/simutrans/pak/crossing.rail-road-crossing_new.pak
 ${PLIST.pak64}share/simutrans/pak/cursor.Builder.pak
@@ -470,7 +480,6 @@ ${PLIST.pak64}share/simutrans/pak/symbol.pausesym.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.station_type.pak
 ${PLIST.pak64}share/simutrans/pak/symbol.timelinesym.pak
 ${PLIST.pak64}share/simutrans/pak/text/be.tab
-${PLIST.pak64}share/simutrans/pak/text/bg.tab
 ${PLIST.pak64}share/simutrans/pak/text/ca.tab
 ${PLIST.pak64}share/simutrans/pak/text/ce.tab
 ${PLIST.pak64}share/simutrans/pak/text/citylist_cz.txt
@@ -520,10 +529,7 @@ ${PLIST.pak64}share/simutrans/pak/text/pt.tab
 ${PLIST.pak64}share/simutrans/pak/text/ro.tab
 ${PLIST.pak64}share/simutrans/pak/text/ru.tab
 ${PLIST.pak64}share/simutrans/pak/text/sk.tab
-${PLIST.pak64}share/simutrans/pak/text/sq.tab
 ${PLIST.pak64}share/simutrans/pak/text/sv.tab
-${PLIST.pak64}share/simutrans/pak/text/th.tab
-${PLIST.pak64}share/simutrans/pak/text/tr.tab
 ${PLIST.pak64}share/simutrans/pak/text/uk.tab
 ${PLIST.pak64}share/simutrans/pak/text/zh.tab
 ${PLIST.pak64}share/simutrans/pak/tree.Ahorn-1.pak

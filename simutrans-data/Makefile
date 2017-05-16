@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	simutrans-data
+PKGNAME=	simutrans-data-0.1
 CATEGORIES=	games
 DISTNAME=	simutrans-data
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simutrans/}
