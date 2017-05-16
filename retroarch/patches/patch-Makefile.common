@@ -1,5 +1,7 @@
 $NetBSD$
 
+Don't build the OSS driver twice
+
 --- Makefile.common.orig	2016-07-16 23:05:18.000000000 +0000
 +++ Makefile.common
 @@ -321,9 +321,7 @@ endif

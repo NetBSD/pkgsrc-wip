@@ -1,5 +1,7 @@
 $NetBSD: patch-qb_qb.libs.sh,v 1.1 2015/02/04 22:56:43 jmcneill Exp $
 
+Add library dirs to the runtime search path
+
 --- qb/qb.libs.sh.orig  2015-02-03 06:43:44.000000000 +0000
 +++ qb/qb.libs.sh
 @@ -17,7 +17,7 @@ add_include_dirs()
