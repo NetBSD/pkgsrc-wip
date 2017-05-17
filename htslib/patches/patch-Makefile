@@ -2,7 +2,7 @@ $NetBSD$
 
 # Respect build env and filesystem hierarchy
 
---- Makefile.orig	2015-12-15 16:34:33 UTC
+--- Makefile.orig	2016-09-13 06:15:37.000000000 +0000
 +++ Makefile
 @@ -22,16 +22,7 @@
  # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
@@ -49,7 +49,22 @@ $NetBSD$
  
  HTSPREFIX =
  include htslib_vars.mk
-@@ -361,7 +346,7 @@ installdirs:
+@@ -352,15 +337,20 @@ install: libhts.a $(BUILT_PROGRAMS) $(BU
+ 	$(INSTALL_DATA) faidx.5 sam.5 vcf.5 $(DESTDIR)$(man5dir)
+ 
+ installdirs:
+-	$(INSTALL_DIR) $(DESTDIR)$(bindir) $(DESTDIR)$(includedir) $(DESTDIR)$(includedir)/htslib $(DESTDIR)$(libdir) $(DESTDIR)$(man1dir) $(DESTDIR)$(man5dir) $(DESTDIR)$(pkgconfigdir)
+-	if test -n "$(plugindir)"; then $(INSTALL_DIR) $(DESTDIR)$(plugindir); fi
++	$(INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
++	$(INSTALL_LIB_DIR) $(DESTDIR)$(includedir) \
++		$(DESTDIR)$(includedir)/htslib \
++		$(DESTDIR)$(libdir) \
++		$(DESTDIR)$(pkgconfigdir)
++	$(INSTALL_MAN_DIR) $(DESTDIR)$(man1dir) $(DESTDIR)$(man5dir)
++	if test -n "$(plugindir)"; then $(INSTALL_LIB_DIR) $(DESTDIR)$(plugindir); fi
+ 
+ # After installation, the real file in $(libdir) will be libhts.so.X.Y.Z,
+ # with symlinks libhts.so (used via -lhts during linking of client programs)
  # and libhts.so.NN (used by client executables at runtime).
  
  install-so: libhts.so installdirs
