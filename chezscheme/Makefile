@@ -40,8 +40,22 @@ do-configure:
                                     --temproot=${DESTDIR} \
                                     LDFLAGS="${LDFLAGS}"
 
+ONLY_FOR_PLATFORM+=	Linux-*-x86_64 Darwin-*-x86_64
+ONLY_FOR_PLATFORM+=	Linux-*-i386 Darwin-*-i386
+.if ${OPSYS} == Linux
+PLIST_SUBST+=	OS=le
+.elif ${OPSYS} == Darwin
+PLIST_SUBST+=	OS=osx
+.endif
+
+.if ${MACHINE_ARCH} == i386
+PLIST_SUBST+=	M=i3
+.elif ${MACHINE_ARCH} == x86_64
+PLIST_SUBST+=	M=a6
+.endif
+
 BUILD_TARGET=	build
-PLIST_SUBST+=   T=${T}
+PLIST_SUBST+=   T=${THR}
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

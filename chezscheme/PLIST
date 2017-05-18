@@ -28,9 +28,9 @@ lib/csv${PKGVERSION}/examples/setof.ss
 lib/csv${PKGVERSION}/examples/socket.ss
 lib/csv${PKGVERSION}/examples/template.ss
 lib/csv${PKGVERSION}/examples/unify.ss
-lib/csv${PKGVERSION}/${T}a6le/petite.boot
-lib/csv${PKGVERSION}/${T}a6le/scheme-script.boot
-lib/csv${PKGVERSION}/${T}a6le/scheme.boot
-lib/csv${PKGVERSION}/${T}a6le/scheme.h
+lib/csv${PKGVERSION}/${T}${M}${OS}/petite.boot
+lib/csv${PKGVERSION}/${T}${M}${OS}/scheme-script.boot
+lib/csv${PKGVERSION}/${T}${M}${OS}/scheme.boot
+lib/csv${PKGVERSION}/${T}${M}${OS}/scheme.h
 man/man1/petite.1
 man/man1/scheme.1

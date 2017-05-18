@@ -7,5 +7,5 @@ PKG_SUGGESTED_OPTIONS=	threads
 
 .if !empty(PKG_OPTIONS:Mthreads)
 CONFIGURE_ARGS+=--threads
-T=t
+THR=t
 .endif
