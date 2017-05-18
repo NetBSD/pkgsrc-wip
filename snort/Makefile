@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.snort.org/
 COMMENT=		The Open Source Network Intrusion Detection System
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=		daq>=2.0.0:../../wip/daq
+DEPENDS+=		daq>=2.0.0:../../net/daq
 
 CONFLICTS+=		snort-mysql-[0-9]*
 CONFLICTS+=		snort-pgsql-[0-9]*
