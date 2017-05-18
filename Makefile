@@ -466,7 +466,6 @@ SUBDIR+=	d2x-rebirth
 SUBDIR+=	d4x
 SUBDIR+=	daligner
 SUBDIR+=	daphne
-SUBDIR+=	daq
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
 SUBDIR+=	darcs-to-git
