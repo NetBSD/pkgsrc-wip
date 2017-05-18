@@ -26,6 +26,8 @@ SUBST_STAGE.version=	post-patch
 SUBST_SED.version+=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PORTVERSION}]|"
 SUBST_FILES.version+=	${WRKSRC}/configure.ac
 
+PKGCONFIG_OVERRIDE=	htslib.pc.in
+
 PORTVERSION=	1.3.2
 
 pre-configure:

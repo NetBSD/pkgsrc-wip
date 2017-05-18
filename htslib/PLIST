@@ -28,7 +28,7 @@ lib/libhts.a
 lib/libhts.so
 lib/libhts.so.1
 lib/libhts.so.${PKGVERSION}
-libdata/pkgconfig/htslib.pc
+lib/pkgconfig/htslib.pc
 man/man1/htsfile.1
 man/man1/tabix.1
 man/man5/faidx.5

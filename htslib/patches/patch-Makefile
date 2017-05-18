@@ -36,7 +36,7 @@ $NetBSD$
 -INSTALL_PROGRAM = $(INSTALL)
 -INSTALL_DATA    = $(INSTALL) -m 644
 -INSTALL_DIR     = $(MKDIR_P) -m 755
-+pkgconfigdir= $(exec_prefix)/libdata/pkgconfig
++pkgconfigdir= $(exec_prefix)/lib/pkgconfig
  
  # Set by config.mk if plugins are enabled
  plugindir =
