@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.167 2017/04/07 13:32:52 ryoon Exp $
 
-DISTNAME=	qemu-2.8.1
+DISTNAME=	qemu-2.9.0
 CATEGORIES=	emulators
 
 GIT_REPOSITORIES=	qemu

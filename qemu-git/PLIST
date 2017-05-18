@@ -121,6 +121,7 @@ share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
 share/qemu/qemu-icon.bmp
 share/qemu/qemu_logo_no_text.svg
+share/qemu/qemu_vga.ndrv
 share/qemu/s390-ccw.img
 share/qemu/sgabios.bin
 share/qemu/skiboot.lid
