@@ -19,19 +19,12 @@ GITHUB_TAG=	${PORTVERSION}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake perl
 GNU_CONFIGURE=	yes
-REPLACE_PERL=	test/compare_sam.pl test/test.pl test/test_view.pl
+REPLACE_PERL=	test/compare_sam.pl test/test.pl
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	post-patch
 SUBST_SED.version+=	-e "s|m4_esyscmd_s(\[make print-version\])|[${PORTVERSION}]|"
 SUBST_FILES.version+=	${WRKSRC}/configure.ac
-
-MAKE_ENV=	INSTALL_LIB=${INSTALL_LIB:Q} \
-		INSTALL_DATA=${INSTALL_DATA:Q} \
-		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
-		INSTALL_PROGRAM_DIR=${INSTALL_PROGRAM_DIR:Q} \
-		INSTALL_LIB_DIR=${INSTALL_LIB_DIR:Q} \
-		INSTALL_MAN_DIR=${INSTALL_MAN_DIR:Q}
 
 PORTVERSION=	1.3.2
 
