@@ -17,23 +17,10 @@ COMMENT=	Tools for manipulating next-generation sequencing data
 
 LICENSE=	mit
 
-#USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake autoreconf gmake perl
 GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/*.pl misc/plot-bamstats test/test.pl
 REPLACE_PYTHON=	misc/*.py
-
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	post-patch
-SUBST_SED.version+=	-e 's|@PORTVERSION@|${PORTVERSION}|g'
-SUBST_FILES.version+=	${WRKSRC}/configure.ac
-
-CPPFLAGS+=	-I${PREFIX}/include
-MAKE_ENV=	INSTALL_LIB="${INSTALL_LIB}" \
-		INSTALL_DATA="${INSTALL_DATA}" \
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-		INSTALL_DIR="${MKDIR}"
 
 PORTVERSION=	1.3.1
 
