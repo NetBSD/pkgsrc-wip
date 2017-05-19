@@ -3522,6 +3522,7 @@ SUBDIR+=	py-sage
 SUBDIR+=	py-sas7bdat
 SUBDIR+=	py-sasa
 SUBDIR+=	py-scalpy
+SUBDIR+=	py-scanless
 SUBDIR+=	py-scikit-aero
 SUBDIR+=	py-scikit-image
 SUBDIR+=	py-scikit-learn
