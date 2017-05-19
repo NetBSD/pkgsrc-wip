@@ -205,6 +205,7 @@ SUBDIR+=	banshee
 SUBDIR+=	bareos
 SUBDIR+=	baresip
 SUBDIR+=	barony
+SUBDIR+=	basepkg
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
 SUBDIR+=	beads

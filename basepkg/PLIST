@@ -1,0 +1,3 @@
+@comment $NetBSD$
+share/basepkg/README.md
+share/basepkg/basepkg.sh
