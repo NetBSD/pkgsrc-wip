@@ -14,8 +14,9 @@ USE_TOOLS+=	gmake autoconf automake autoreconf
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
-INSTALLATION_DIRS=	bin
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+INSTALL_TARGET=	install install-man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vifs
