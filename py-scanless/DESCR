@@ -1,0 +1,5 @@
+Scanless is a command-line utility for using websites
+that can perform port scans on your behalf.
+Useful for early stages of a penetration test or if
+you'd like to run a port scan on a host and have it
+not come from your IP address.
