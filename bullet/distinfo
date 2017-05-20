@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.5 2016/06/15 20:10:50 rumko Exp $
+
+SHA1 (bullet-2.86.1.tar.gz) = d0a4878ccc166902f0dcb822669d1a8e4ccc8642
+RMD160 (bullet-2.86.1.tar.gz) = 61f2da6c82db8a65477abe7cdff95489f6a63c7c
+SHA512 (bullet-2.86.1.tar.gz) = 28408bcc3496ae73490fbc18d811e73ce0e11f487b5951486d7cc3bbbf3bade78813b4dea8ec87606d1d6da8a30ea57134f0dc37a0b9538debf963a67a4ae830
+Size (bullet-2.86.1.tar.gz) = 26065278 bytes
+SHA1 (patch-examples_OpenGLWindow_X11OpenGLWindow.cpp) = e81367ba60231cbe985fa3c4d00714b54c0aa38a
+SHA1 (patch-examples_ThirdPartyLibs_Gwen_Macros.h) = 92bf4ddaddc2c46145ce2b10d2b522332aaaa295
