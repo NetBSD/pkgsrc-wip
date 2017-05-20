@@ -19,6 +19,8 @@ PKGCONFIG_OVERRIDE+=	packaging/pkgconfig/openthreads.pc.in
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 
+CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+
 PLIST_VARS+=	quartz x11
 
 .include "../../mk/bsd.prefs.mk"
