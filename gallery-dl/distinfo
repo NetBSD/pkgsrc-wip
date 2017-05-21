@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gallery_dl-0.8.4.tar.gz) = ccfe939da4855144ae74eeab806db7e7bc1de6af
+RMD160 (gallery_dl-0.8.4.tar.gz) = 33cf9c376cf918c7840fd557312911f50a6427a8
+SHA512 (gallery_dl-0.8.4.tar.gz) = e7444dcca90d48131bedc408320c4c6ced3a61e9bf55bdc2a985f3d59be927a47b8963a9fa1452a8bb5746a26fa9310ec0864a53d99857700da6a1d625409207
+Size (gallery_dl-0.8.4.tar.gz) = 77977 bytes
+SHA1 (patch-gallery__dl_version.py) = aa869f0441895fd7741c153fdd18ef6b35f6e355
