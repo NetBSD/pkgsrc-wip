@@ -1,11 +1,13 @@
-Rust is a curly-brace, block-structured expression language. It
-visually resembles the C language family, but differs significantly
-in syntactic and semantic details. Its design is oriented toward
-concerns of "programming in the large", that is, of creating and
-maintaining boundaries - both abstract and operational - that
-preserve large-system integrity, availability and concurrency.
+Rust is a systems programming language focused on three goals: safety,
+speed, and concurrency.  It maintains these goals without having a
+garbage collector, making it a useful language for a number of use cases
+other languages aren't good at: embedding in other languages, programs
+with specific space and time requirements, and writing low-level code,
+like device drivers and operating systems.
 
-It supports a mixture of imperative procedural, concurrent actor,
-object-oriented and pure functional styles. Rust also supports
-generic programming and metaprogramming, in both static and dynamic
-styles.
+It improves on current languages targeting this space by having a number
+of compile-time safety checks that produce no runtime overhead, while
+eliminating all data races.  Rust also aims to achieve "zero-cost
+abstractions" even though some of these abstractions feel like those of
+a high-level language.  Even then, Rust still allows precise control
+like a low-level language would.
