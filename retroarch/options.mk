@@ -27,29 +27,29 @@ CONFIGURE_ARGS+=	--disable-sdl2
 .endif
 
 .if !empty(PKG_OPTIONS:Malsa)
-CONFIGURE_ARGS+=        --enable-alsa
+CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --disable-alsa
+CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-CONFIGURE_ARGS+=        --enable-ffmpeg
+CONFIGURE_ARGS+=	--enable-ffmpeg
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --disable-ffmpeg
+CONFIGURE_ARGS+=	--disable-ffmpeg
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb-1)
-CONFIGURE_ARGS+=        --enable-libusb
+CONFIGURE_ARGS+=	--enable-libusb
 .include "../../devel/libusb1/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --disable-libusb
+CONFIGURE_ARGS+=	--disable-libusb
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreetype)
-CONFIGURE_ARGS+=        --enable-freetype
+CONFIGURE_ARGS+=	--enable-freetype
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --disable-freetype
+CONFIGURE_ARGS+=	--disable-freetype
 .endif
