@@ -1416,6 +1416,7 @@ SUBDIR+=	io-user
 SUBDIR+=	io-vm
 SUBDIR+=	io-zlib
 SUBDIR+=	ion3
+SUBDIR+=	ioquake3-snapshot
 SUBDIR+=	ipamjfont
 SUBDIR+=	ipax0208font-ttf
 SUBDIR+=	ipfm
