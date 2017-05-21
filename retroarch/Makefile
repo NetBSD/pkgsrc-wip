@@ -49,6 +49,16 @@ SUBST_SED.cfg+=		-e 's;\# assets_directory =.*;assets_directory = "${PREFIX}/sha
 
 CONFIGURE_ARGS+=	--disable-x11	# broken, SDL2 works
 
+.include "../../mk/bsd.fast.prefs.mk"
+
+# On exit:
+# assertion "pthread__tsd_destructors[key] != NULL" failed:
+# file "/usr/src/lib/libpthread/pthread_tsd.c", line 287, function "pthread_key_delete"
+# [1]   Abort trap (core dumped) retroarch
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-thread_storage
+.endif
+
 .include "options.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
