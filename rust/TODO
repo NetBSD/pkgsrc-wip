@@ -1,0 +1,10 @@
+IMPORTANT:
+Currently lacking an install / PLIST!
+Need bootstrap for platforms for which upstream doesn't release binaries
+
+Secondary:
+Test target doesn't work
+
+Maybe not worth caring about:
+LLVM is builtin, not a dependency (jakllsch mentions it might be hard to tear out)
+make distinfo is currently a lot more of a pain
