@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.1 2015/02/04 22:56:43 jmcneill Exp $
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
 PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype libusb-1
