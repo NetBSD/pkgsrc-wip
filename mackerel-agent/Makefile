@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mackerel-agent-0.41.2
+DISTNAME=	mackerel-agent-0.43.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mackerelio/}
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/src/${GO_SRCPATH}
 GOPATH=		${WRKDIR}
 EXTRACT_DIR=	${WRKDIR}/src/github.com/mackerelio
 USE_TOOLS+=	gmake perl
+BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
 
 INSTALLATION_DIRS+=	bin share/examples/mackerel-agent
 
