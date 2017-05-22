@@ -1,38 +1,30 @@
 # $NetBSD$
 
-DISTNAME=	napalm-0.51.0
+DISTNAME=	napalm-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=napalm-automation/}
+GITHUB_PROJECT=	napalm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/napalm-automation/napalm/
 COMMENT=	Interact with different router vendors using unified API
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-netmiko-[0-9]*:../../wip/py-netmiko
-DEPENDS+=	${PYPKGPREFIX}-IOSXR-[0-9]*:../../wip/py-IOSXR
-DEPENDS+=	${PYPKGPREFIX}-junos-eznc-[0-9]*:../../net/py-junos-eznc
-DEPENDS+=	${PYPKGPREFIX}-ncclient-[0-9]*:../../net/py-ncclient
-DEPENDS+=	${PYPKGPREFIX}-eapi-[0-9]*:../../wip/py-eapi
+DEPENDS+=	${PYPKGPREFIX}-napalm-junos-[0-9]*:../../wip/py-napalm-junos
+DEPENDS+=	${PYPKGPREFIX}-napalm-iosxr-[0-9]*:../../wip/py-napalm-iosxr
+DEPENDS+=	${PYPKGPREFIX}-napalm-ios-[0-9]*:../../wip/py-napalm-ios
 
-# Not yet packaged, this may depend on:
-# pyFG		API for FortiOS or how to turn FortiOS into JunOS
-# pycsco	Library for working with Cisco NX-OS switches
-# bnclient	Blade Network Technologies Netconf Python Client
+# Not yet packaged:
+#DEPENDS+=	${PYPKGPREFIX}-napalm-eos-[0-9]*:../../wip/py-napalm-eos
+#DEPENDS+=	${PYPKGPREFIX}-napalm-fortios-[0-9]*:../../wip/py-napalm-fortios
+#DEPENDS+=	${PYPKGPREFIX}-napalm-nxos-[0-9]*:../../wip/py-napalm-nxos
+#DEPENDS+=	${PYPKGPREFIX}-napalm-pluribus-[0-9]*:../../wip/py-napalm-pluribus
+#DEPENDS+=	${PYPKGPREFIX}-napalm-panos-[0-9]*:../../wip/py-napalm-panos
+#DEPENDS+=	${PYPKGPREFIX}-napalm-ros-[0-9]*:../../wip/py-napalm-ros
+#DEPENDS+=	${PYPKGPREFIX}-napalm-vyos-[0-9]*:../../wip/py-napalm-vyos
 
 USE_LANGUAGES=	# none
-
-# Target dir already exists...
-INSTALL_EXTRA_FILES=	napalm/utils/*.yml
-
-post-install:
-	cd ${WRKSRC}; \
-	for f in ${INSTALL_EXTRA_FILES}; do \
-		${INSTALL_DATA} $$f  \
-			${DESTDIR}/${PREFIX}/${PYSITELIB}/`dirname $$f`; \
-	done
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

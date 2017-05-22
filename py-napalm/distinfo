@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (napalm-0.51.0.tar.gz) = 0e6d1737799aa705d6d62e74ebe3c879196b5c73
-RMD160 (napalm-0.51.0.tar.gz) = d77028e76ed653304fca19cfea444b971b320943
-SHA512 (napalm-0.51.0.tar.gz) = 99d749a50ee7d09c1a0de994055d86fd5f9603daa14fd73c847ffe9dc6ed8315d27758c16cb22a8d8dfcc031d80f24e41b0870b1b52d60530df167677661cd56
-Size (napalm-0.51.0.tar.gz) = 292674 bytes
+SHA1 (napalm-1.2.0.tar.gz) = 4dedbafef06b4477a386012ffe8074a87470f89c
+RMD160 (napalm-1.2.0.tar.gz) = f0a30841f1010adf09a42547741dfbc8f20eb032
+SHA512 (napalm-1.2.0.tar.gz) = b8012d4d68078ea148a94c1c51f7923961916e074838bba4627042f167ef738c79e474e7a69737d8f822ec52a6c6378f2ae38d3ac6c4cd072aee633e6255033b
+Size (napalm-1.2.0.tar.gz) = 78077 bytes
 SHA1 (patch-napalm_____init____.py) = a63759bbf2262a12fa30c8698574f92255d82e61
 SHA1 (patch-napalm_exceptions.py) = 59f90a81d342e123c228332de5a338ce215b1c4f
 SHA1 (patch-napalm_ios.py) = 7e298cdd23eb2bbf3c4b20285f37a13e6a0ac9be
