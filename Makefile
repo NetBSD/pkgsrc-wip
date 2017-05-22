@@ -3294,6 +3294,7 @@ SUBDIR+=	py-naima
 SUBDIR+=	py-namedlist
 SUBDIR+=	py-napalm
 SUBDIR+=	py-napalm-base
+SUBDIR+=	py-napalm-ios
 SUBDIR+=	py-napalm-iosxr
 SUBDIR+=	py-napalm-junos
 SUBDIR+=	py-ncomb
