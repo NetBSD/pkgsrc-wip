@@ -3293,6 +3293,7 @@ SUBDIR+=	py-naftawayh
 SUBDIR+=	py-naima
 SUBDIR+=	py-namedlist
 SUBDIR+=	py-napalm
+SUBDIR+=	py-napalm-base
 SUBDIR+=	py-ncomb
 SUBDIR+=	py-ncpol2sdpa
 SUBDIR+=	py-neo
