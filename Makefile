@@ -3175,6 +3175,7 @@ SUBDIR+=	py-jsonpath
 SUBDIR+=	py-jsonrequester
 SUBDIR+=	py-jsonschema
 SUBDIR+=	py-jswebkit
+SUBDIR+=	py-jtextfsm
 SUBDIR+=	py-julio
 SUBDIR+=	py-junos-netconify
 SUBDIR+=	py-jxmlease
