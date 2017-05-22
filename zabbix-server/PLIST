@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/19 13:57:28 heidnes Exp $
-man/man8/zabbix_server.8
-sbin/zabbix_server
