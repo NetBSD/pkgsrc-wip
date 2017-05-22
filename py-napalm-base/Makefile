@@ -16,5 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
+# Mistakenly installed, prone to name conflicts (e.g. with napalm-iosxr)
+post-install:
+	rm -f ${DESTDIR}/${PREFIX}/${PYSITELIB}/test/__init__.*
+
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -74,6 +74,3 @@ ${PYSITELIB}/napalm_base/utils/string_parsers.pyo
 ${PYSITELIB}/napalm_base/validate.py
 ${PYSITELIB}/napalm_base/validate.pyc
 ${PYSITELIB}/napalm_base/validate.pyo
-${PYSITELIB}/test/__init__.py
-${PYSITELIB}/test/__init__.pyc
-${PYSITELIB}/test/__init__.pyo
