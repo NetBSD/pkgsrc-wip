@@ -31,6 +31,9 @@ ${PYSITELIB}/pyeapi/api/mlag.pyo
 ${PYSITELIB}/pyeapi/api/ntp.py
 ${PYSITELIB}/pyeapi/api/ntp.pyc
 ${PYSITELIB}/pyeapi/api/ntp.pyo
+${PYSITELIB}/pyeapi/api/ospf.py
+${PYSITELIB}/pyeapi/api/ospf.pyc
+${PYSITELIB}/pyeapi/api/ospf.pyo
 ${PYSITELIB}/pyeapi/api/routemaps.py
 ${PYSITELIB}/pyeapi/api/routemaps.pyc
 ${PYSITELIB}/pyeapi/api/routemaps.pyo
@@ -58,6 +61,9 @@ ${PYSITELIB}/pyeapi/api/varp.pyo
 ${PYSITELIB}/pyeapi/api/vlans.py
 ${PYSITELIB}/pyeapi/api/vlans.pyc
 ${PYSITELIB}/pyeapi/api/vlans.pyo
+${PYSITELIB}/pyeapi/api/vrfs.py
+${PYSITELIB}/pyeapi/api/vrfs.pyc
+${PYSITELIB}/pyeapi/api/vrfs.pyo
 ${PYSITELIB}/pyeapi/api/vrrp.py
 ${PYSITELIB}/pyeapi/api/vrrp.pyc
 ${PYSITELIB}/pyeapi/api/vrrp.pyo

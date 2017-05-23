@@ -1,13 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	pyeapi-0.6.0
+DISTNAME=	pyeapi-0.8.0
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=arista-eosplus/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyeapi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/fooelisa/${PKGBASE}
+HOMEPAGE=	https://github.com/arista-eosplus/${PKGBASE}
 COMMENT=	Library for Arista's eAPI command API implementation
 LICENSE=	modified-bsd
 
