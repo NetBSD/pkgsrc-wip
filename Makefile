@@ -3293,6 +3293,7 @@ SUBDIR+=	py-naima
 SUBDIR+=	py-namedlist
 SUBDIR+=	py-napalm
 SUBDIR+=	py-napalm-base
+SUBDIR+=	py-napalm-eos
 SUBDIR+=	py-napalm-ios
 SUBDIR+=	py-napalm-iosxr
 SUBDIR+=	py-napalm-junos
