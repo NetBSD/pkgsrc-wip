@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix unportable test(1) construct.
+
+--- scripts/uncovered.orig	2017-05-23 18:11:58.368458000 +0000
++++ scripts/uncovered
+@@ -11,7 +11,7 @@
+ 
+ usage()
+ {
+-  test X$1 == X0 || exec >&2
++  test X$1 = X0 || exec >&2
+   cat <<EOF
+ usage: uncovered OPTIONS
+ where OPTIONS are
