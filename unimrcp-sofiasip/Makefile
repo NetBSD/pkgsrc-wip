@@ -34,9 +34,5 @@ pre-configure:
 	set -x; cd ${WRKSRC}; autoreconf -fiv
 	${MAKE} ${PATCH}
 
-post-install:
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/sofia-sip-ua/libsofia-sip-ua.la ${DESTDIR}${PREFIX}/unimrcp/sofia-sip/lib
-
-
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
