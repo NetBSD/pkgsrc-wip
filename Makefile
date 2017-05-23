@@ -3297,6 +3297,7 @@ SUBDIR+=	py-napalm-eos
 SUBDIR+=	py-napalm-ios
 SUBDIR+=	py-napalm-iosxr
 SUBDIR+=	py-napalm-junos
+SUBDIR+=	py-napalm-nxos
 SUBDIR+=	py-ncomb
 SUBDIR+=	py-ncpol2sdpa
 SUBDIR+=	py-neo
