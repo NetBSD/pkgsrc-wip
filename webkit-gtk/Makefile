@@ -42,6 +42,7 @@ CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
 CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
+CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC=ON
 
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 		Source/WebCore/bindings/scripts/*.pl \
@@ -68,10 +69,6 @@ CXXFLAGS.SunOS+=	-fpermissive
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-Wno-c++11-narrowing
-.endif
-
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
-CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=ON
 .endif
 
 .include "options.mk"
