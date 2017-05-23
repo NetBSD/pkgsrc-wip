@@ -33,7 +33,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 # Request/Common.pm is part of www/p5-HTTP-Message
 # Status.pm is part of www/p5-HTTP-Message
-DEPENDS+=	p5-Carp-[0-9]*:../../wip/p5-Carp
+DEPENDS+=	p5-Carp-[0-9]*:../../devel/p5-Carp
 
 EGDIR=			${PREFIX}/share/examples/pulledpork
 PKG_SYSCONFSUBDIR=	pulledpork
