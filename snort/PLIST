@@ -83,7 +83,9 @@ share/doc/snort/WISHLIST
 share/doc/snort/generators
 share/doc/snort/snort_manual.pdf
 share/doc/snort/snort_manual.tex
+share/examples/snort/attribute_table.dtd
 share/examples/snort/classification.config
+share/examples/snort/file_magic.conf
 share/examples/snort/gen-msg.map
 share/examples/snort/generators
 share/examples/snort/reference.config
