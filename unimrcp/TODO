@@ -1,0 +1,6 @@
+* There are libtool errors in the install stage:
+	libtool: warning: 'path/to/file.la' has not been installed in 'path/to/install'
+* This package has been only tested in FreeBSD 11.
+* This package depends on some pre-installed patched dependencies that were previously
+  imported to pkgsrc-wip as: unimrcp-{apr|aprutil|sofiasip}. Thus, these dependencies
+  as well as this package, may need further review and optimization. 
