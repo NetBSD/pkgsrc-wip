@@ -111,7 +111,7 @@ post-install:
 			${WRKSRC}/doc/*.tex \
 			${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/share/doc/snort/
 	${INSTALL_DATA} ${FILESDIR}/black_list.rules \
-	${FILESDIR}/white_list.rules ${DESTDIR}${EGDIR}/rules/
+			${FILESDIR}/white_list.rules ${DESTDIR}${EGDIR}/rules/
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../net/daq/buildlink3.mk"
