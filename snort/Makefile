@@ -35,8 +35,8 @@ MAKE_JOBS_SAFE=		NO
 OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
 DOC_FILES=		BUGS INSTALL NEWS PROBLEMS README TODO USAGE WISHLIST
 OWN_DIRS=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/rules
-OWN_DIRS=		${PREFIX}/lib ${PREFIX}/lib/snort_dynamicrules
-INSTALLATION_DIRS+=	${EGDIR}/rules
+OWN_DIRS+=		${PREFIX}/lib ${PREFIX}/lib/snort_dynamicrules
+INSTALLATION_DIRS+=	${EGDIR}/rules 
 AUTO_MKDIRS=		yes
 
 CONF_FILES=		${EGDIR}/attribute_table.dtd \
@@ -49,7 +49,7 @@ CONF_FILES+=		${EGDIR}/gen-msg.map \
 			${PKG_SYSCONFDIR}/gen-msg.map
 CONF_FILES+=		${EGDIR}/reference.config \
 			${PKG_SYSCONFDIR}/reference.config
-CONF_FILES=		${EGDIR}/snort.conf.default \
+CONF_FILES+=		${EGDIR}/snort.conf.default \
 			${PKG_SYSCONFDIR}/snort.conf
 CONF_FILES+=		${EGDIR}/threshold.conf \
 			${PKG_SYSCONFDIR}/threshold.conf
@@ -98,6 +98,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/*.config \
 			${WRKSRC}/etc/*.map \
 			${WRKSRC}/etc/threshold.conf \
+			${WRKSRC}/etc/attribute_table.dtd \
+			${WRKSRC}/etc/file_magic.conf \
 			${WRKSRC}/etc/snort.conf.default ${DESTDIR}${EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/doc/generators ${DESTDIR}${EGDIR}
 
@@ -105,11 +107,11 @@ post-install:
 	${INSTALL_DATA}	${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/snort/
 .endfor
 
-	${INSTALL_DATA} ${WRKSRC}/doc/README.* ${DESTDIR}${PREFIX}/share/doc/snort/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.tex ${DESTDIR}${PREFIX}/share/doc/snort/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/share/doc/snort/
-	${INSTALL_DATA} ${FILESDIR}/black_list.rules ${DESTDIR}${EGDIR}/rules/
-	${INSTALL_DATA} ${FILESDIR}/white_list.rules ${DESTDIR}${EGDIR}/rules/
+	${INSTALL_DATA} ${WRKSRC}/doc/README.* \
+			${WRKSRC}/doc/*.tex \
+			${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/share/doc/snort/
+	${INSTALL_DATA} ${FILESDIR}/black_list.rules \
+	${FILESDIR}/white_list.rules ${DESTDIR}${EGDIR}/rules/
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../net/daq/buildlink3.mk"
