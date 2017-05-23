@@ -1936,6 +1936,7 @@ SUBDIR+=	microblog-purple
 SUBDIR+=	microcom
 SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
+SUBDIR+=	midori
 SUBDIR+=	milou
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	mime-support
