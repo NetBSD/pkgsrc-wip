@@ -14,9 +14,9 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-napalm-junos-[0-9]*:../../wip/py-napalm-junos
 DEPENDS+=	${PYPKGPREFIX}-napalm-iosxr-[0-9]*:../../wip/py-napalm-iosxr
 DEPENDS+=	${PYPKGPREFIX}-napalm-ios-[0-9]*:../../wip/py-napalm-ios
+DEPENDS+=	${PYPKGPREFIX}-napalm-eos-[0-9]*:../../wip/py-napalm-eos
 
 # Not yet packaged:
-#DEPENDS+=	${PYPKGPREFIX}-napalm-eos-[0-9]*:../../wip/py-napalm-eos
 #DEPENDS+=	${PYPKGPREFIX}-napalm-fortios-[0-9]*:../../wip/py-napalm-fortios
 #DEPENDS+=	${PYPKGPREFIX}-napalm-nxos-[0-9]*:../../wip/py-napalm-nxos
 #DEPENDS+=	${PYPKGPREFIX}-napalm-pluribus-[0-9]*:../../wip/py-napalm-pluribus
