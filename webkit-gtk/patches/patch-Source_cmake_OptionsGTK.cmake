@@ -14,9 +14,9 @@ o Do not conflict with CMAKE_MODULE_PATH during the linking phase of
 o Disable DatabaseProcess and IndexedDB support.
 o Do not use --version-script on SunOS
 
---- Source/cmake/OptionsGTK.cmake.orig	2017-05-09 07:47:09.000000000 +0000
+--- Source/cmake/OptionsGTK.cmake.orig	2017-05-24 11:17:50.000000000 +0000
 +++ Source/cmake/OptionsGTK.cmake
-@@ -6,12 +6,6 @@ set(PROJECT_VERSION_MICRO 2)
+@@ -6,12 +6,6 @@ set(PROJECT_VERSION_MICRO 3)
  set(PROJECT_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_MICRO})
  set(WEBKITGTK_API_VERSION 4.0)
  
@@ -28,7 +28,7 @@ o Do not use --version-script on SunOS
 -
  # Libtool library version, not to be confused with API version.
  # See http://www.gnu.org/software/libtool/manual/html_node/Libtool-versioning.html
- CALCULATE_LIBRARY_VERSIONS_FROM_LIBTOOL_TRIPLE(WEBKIT2 56 5 19)
+ CALCULATE_LIBRARY_VERSIONS_FROM_LIBTOOL_TRIPLE(WEBKIT2 56 6 19)
 @@ -122,8 +116,8 @@ if (DEVELOPER_MODE)
  else ()
      WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_MINIBROWSER PUBLIC OFF)
