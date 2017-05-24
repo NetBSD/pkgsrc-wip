@@ -6,17 +6,17 @@ $NetBSD$
    // ---------------------------------------------------------------------
    NativeProcessNetBSD();
  
-+  Error GetThreadIndexByTid(lldb::tid_t thread_id, size_t &index);
-+  Error RemoveThread(lldb::tid_t thread_id);
++  Status GetThreadIndexByTid(lldb::tid_t thread_id, size_t &index);
++  Status RemoveThread(lldb::tid_t thread_id);
    NativeThreadNetBSDSP AddThread(lldb::tid_t thread_id);
  
-   Error LaunchInferior(MainLoop &mainloop, ProcessLaunchInfo &launch_info);
+   Status LaunchInferior(MainLoop &mainloop, ProcessLaunchInfo &launch_info);
 @@ -133,6 +135,8 @@ private:
-   ::pid_t Attach(lldb::pid_t pid, Error &error);
+   ::pid_t Attach(lldb::pid_t pid, Status &error);
  
-   Error ReinitializeThreads();
+   Status ReinitializeThreads();
 +
-+  Error SetDefaultPtraceOpts();
++  Status SetDefaultPtraceOpts();
  };
  
  } // namespace process_netbsd

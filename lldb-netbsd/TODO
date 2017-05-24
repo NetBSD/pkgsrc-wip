@@ -32,3 +32,9 @@ Known bugs
  - fix test suite bugs..
  - unknown ones
  - switch from kvm(3) to sysctl(7)
+
+REMAINING MILESTONES
+====================
+1. Fix the kernel for multiple threads in tracee
+2. Add support for multiple threads in NetBSD Native Process Plugin
+3. Enable tests on the NetBSD buildbot
