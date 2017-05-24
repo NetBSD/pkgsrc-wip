@@ -543,6 +543,7 @@ lib/clang/${PKGVERSION}/include/intrin.h
 lib/clang/${PKGVERSION}/include/inttypes.h
 lib/clang/${PKGVERSION}/include/iso646.h
 lib/clang/${PKGVERSION}/include/limits.h
+lib/clang/${PKGVERSION}/include/lwpintrin.h
 lib/clang/${PKGVERSION}/include/lzcntintrin.h
 lib/clang/${PKGVERSION}/include/mm3dnow.h
 lib/clang/${PKGVERSION}/include/mm_malloc.h

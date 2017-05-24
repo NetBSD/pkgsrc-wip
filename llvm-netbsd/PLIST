@@ -260,6 +260,7 @@ include/llvm/CodeGen/DIEValue.def
 include/llvm/CodeGen/DwarfStringPoolEntry.h
 include/llvm/CodeGen/EdgeBundles.h
 include/llvm/CodeGen/ExecutionDepsFix.h
+include/llvm/CodeGen/ExpandReductions.h
 include/llvm/CodeGen/FastISel.h
 include/llvm/CodeGen/FaultMaps.h
 include/llvm/CodeGen/FunctionLoweringInfo.h
@@ -383,7 +384,6 @@ include/llvm/DebugInfo/CodeView/CVDebugRecord.h
 include/llvm/DebugInfo/CodeView/CVRecord.h
 include/llvm/DebugInfo/CodeView/CVSymbolTypes.def
 include/llvm/DebugInfo/CodeView/CVSymbolVisitor.h
-include/llvm/DebugInfo/CodeView/CVTypeDumper.h
 include/llvm/DebugInfo/CodeView/CVTypeVisitor.h
 include/llvm/DebugInfo/CodeView/CodeView.h
 include/llvm/DebugInfo/CodeView/CodeViewError.h
@@ -391,6 +391,7 @@ include/llvm/DebugInfo/CodeView/CodeViewRecordIO.h
 include/llvm/DebugInfo/CodeView/EnumTables.h
 include/llvm/DebugInfo/CodeView/Formatters.h
 include/llvm/DebugInfo/CodeView/FunctionId.h
+include/llvm/DebugInfo/CodeView/LazyRandomTypeCollection.h
 include/llvm/DebugInfo/CodeView/Line.h
 include/llvm/DebugInfo/CodeView/ModuleDebugFileChecksumFragment.h
 include/llvm/DebugInfo/CodeView/ModuleDebugFragment.h
@@ -410,6 +411,7 @@ include/llvm/DebugInfo/CodeView/SymbolSerializer.h
 include/llvm/DebugInfo/CodeView/SymbolVisitorCallbackPipeline.h
 include/llvm/DebugInfo/CodeView/SymbolVisitorCallbacks.h
 include/llvm/DebugInfo/CodeView/SymbolVisitorDelegate.h
+include/llvm/DebugInfo/CodeView/TypeCollection.h
 include/llvm/DebugInfo/CodeView/TypeDatabase.h
 include/llvm/DebugInfo/CodeView/TypeDatabaseVisitor.h
 include/llvm/DebugInfo/CodeView/TypeDeserializer.h
@@ -424,6 +426,7 @@ include/llvm/DebugInfo/CodeView/TypeServerHandler.h
 include/llvm/DebugInfo/CodeView/TypeStreamMerger.h
 include/llvm/DebugInfo/CodeView/TypeSymbolEmitter.h
 include/llvm/DebugInfo/CodeView/TypeTableBuilder.h
+include/llvm/DebugInfo/CodeView/TypeTableCollection.h
 include/llvm/DebugInfo/CodeView/TypeVisitorCallbackPipeline.h
 include/llvm/DebugInfo/CodeView/TypeVisitorCallbacks.h
 include/llvm/DebugInfo/DIContext.h
@@ -608,6 +611,7 @@ include/llvm/IR/DebugInfoFlags.def
 include/llvm/IR/DebugInfoMetadata.h
 include/llvm/IR/DebugLoc.h
 include/llvm/IR/DerivedTypes.h
+include/llvm/IR/DerivedUser.h
 include/llvm/IR/DiagnosticInfo.h
 include/llvm/IR/DiagnosticPrinter.h
 include/llvm/IR/Dominators.h
@@ -691,7 +695,6 @@ include/llvm/LTO/legacy/LTOCodeGenerator.h
 include/llvm/LTO/legacy/LTOModule.h
 include/llvm/LTO/legacy/ThinLTOCodeGenerator.h
 include/llvm/LTO/legacy/UpdateCompilerUsed.h
-include/llvm/LibDriver/LibDriver.h
 include/llvm/LineEditor/LineEditor.h
 include/llvm/LinkAllIR.h
 include/llvm/LinkAllPasses.h
@@ -776,6 +779,7 @@ include/llvm/Object/ArchiveWriter.h
 include/llvm/Object/Binary.h
 include/llvm/Object/COFF.h
 include/llvm/Object/COFFImportFile.h
+include/llvm/Object/COFFModuleDefinition.h
 include/llvm/Object/Decompressor.h
 include/llvm/Object/ELF.h
 include/llvm/Object/ELFObjectFile.h
@@ -792,6 +796,7 @@ include/llvm/Object/StackMapParser.h
 include/llvm/Object/SymbolSize.h
 include/llvm/Object/SymbolicFile.h
 include/llvm/Object/Wasm.h
+include/llvm/Object/WindowsResource.h
 include/llvm/ObjectYAML/COFFYAML.h
 include/llvm/ObjectYAML/DWARFEmitter.h
 include/llvm/ObjectYAML/DWARFYAML.h
@@ -927,6 +932,7 @@ include/llvm/Support/MutexGuard.h
 include/llvm/Support/NativeFormatting.h
 include/llvm/Support/OnDiskHashTable.h
 include/llvm/Support/Options.h
+include/llvm/Support/Parallel.h
 include/llvm/Support/Path.h
 include/llvm/Support/PluginLoader.h
 include/llvm/Support/PointerLikeTypeTraits.h
@@ -1014,6 +1020,7 @@ include/llvm/Target/TargetRegisterInfo.h
 include/llvm/Target/TargetSchedule.td
 include/llvm/Target/TargetSelectionDAG.td
 include/llvm/Target/TargetSubtargetInfo.h
+include/llvm/ToolDrivers/llvm-lib/LibDriver.h
 include/llvm/Transforms/Coroutines.h
 include/llvm/Transforms/GCOVProfiler.h
 include/llvm/Transforms/IPO.h
@@ -1170,6 +1177,9 @@ lib/cmake/llvm/LLVMInstallSymlink.cmake
 lib/cmake/llvm/LLVMProcessSources.cmake
 lib/cmake/llvm/TableGen.cmake
 lib/cmake/llvm/VersionFromVCS.cmake
+lib/libLLVM-5.0.0svn.${SOEXT}
+lib/libLLVM-5.0svn.${SOEXT}
+lib/libLLVM.${SOEXT}
 ${PLIST.AArch64}lib/libLLVMAArch64AsmParser.a
 ${PLIST.AArch64}lib/libLLVMAArch64AsmPrinter.a
 ${PLIST.AArch64}lib/libLLVMAArch64CodeGen.a
@@ -1291,9 +1301,6 @@ ${PLIST.XCore}lib/libLLVMXCoreDisassembler.a
 ${PLIST.XCore}lib/libLLVMXCoreInfo.a
 lib/libLLVMXRay.a
 lib/libLLVMipo.a
-lib/libLLVM-5.0.0svn.${SOEXT}
-lib/libLLVM-5.0svn.${SOEXT}
-lib/libLLVM.${SOEXT}
 lib/libLTO.${SOEXT}
 lib/libLTO.${SOEXT}.5
 lib/libLTO.${SOEXT}.5.0.0svn
