@@ -13,5 +13,5 @@ SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
 RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
 SHA1 (patch-source_Plugins_ObjectFile_ELF_ObjectFileELF.cpp) = d7d43c20b34068a5f535b8eeb1af2dc87c2b3175
-SHA1 (patch-source_Plugins_Process_elf-core_ProcessElfCore.cpp) = af35bb785ff14a164c2aa019309cc5e5f0e27989
-SHA1 (patch-source_Plugins_Process_elf-core_ProcessElfCore.h) = 5754bcca237decc7ef8519c54a34840b1869d476
+SHA1 (patch-source_Plugins_Process_elf-core_ProcessElfCore.cpp) = a40965c208b6b2c6d103cdca4b4e8eb9b691adca
+SHA1 (patch-source_Plugins_Process_elf-core_ProcessElfCore.h) = b74b851ce37ee83e1b6cbf32ee4ecad909b7088c
