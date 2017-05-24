@@ -1,6 +1,6 @@
 $NetBSD$
 
---- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-05-24 03:07:34.773664273 +0000
+--- source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp.orig	2017-05-24 01:55:02.000000000 +0000
 +++ source/Plugins/Process/NetBSD/NativeProcessNetBSD.cpp
 @@ -207,7 +207,8 @@ void NativeProcessNetBSD::MonitorSIGSTOP
      // Handle SIGSTOP from LLGS (LLDB GDB Server)
