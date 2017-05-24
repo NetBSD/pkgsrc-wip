@@ -75,13 +75,14 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
+.include "../../wip/mk/git-package.mk"
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang-git
+DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang-git
 .include "../../wip/clang-git/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm-git
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
