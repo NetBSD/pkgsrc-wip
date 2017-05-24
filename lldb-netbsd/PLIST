@@ -53,6 +53,8 @@ include/lldb/API/SBTarget.h
 include/lldb/API/SBThread.h
 include/lldb/API/SBThreadCollection.h
 include/lldb/API/SBThreadPlan.h
+include/lldb/API/SBTrace.h
+include/lldb/API/SBTraceOptions.h
 include/lldb/API/SBType.h
 include/lldb/API/SBTypeCategory.h
 include/lldb/API/SBTypeEnumMember.h
@@ -131,12 +133,14 @@ include/lldb/Core/StreamAsynchronousIO.h
 include/lldb/Core/StreamBuffer.h
 include/lldb/Core/StreamFile.h
 include/lldb/Core/StructuredData.h
+include/lldb/Core/StructuredDataImpl.h
 include/lldb/Core/ThreadSafeDenseMap.h
 include/lldb/Core/ThreadSafeDenseSet.h
 include/lldb/Core/ThreadSafeSTLMap.h
 include/lldb/Core/ThreadSafeSTLVector.h
 include/lldb/Core/ThreadSafeValue.h
 include/lldb/Core/Timer.h
+include/lldb/Core/TraceOptions.h
 include/lldb/Core/UniqueCStringMap.h
 include/lldb/Core/UserSettingsController.h
 include/lldb/Core/Value.h
@@ -230,7 +234,6 @@ include/lldb/Host/Terminal.h
 include/lldb/Host/ThreadLauncher.h
 include/lldb/Host/Time.h
 include/lldb/Host/XML.h
-include/lldb/Host/android/Config.h
 include/lldb/Host/android/HostInfoAndroid.h
 include/lldb/Host/common/GetOptInc.h
 include/lldb/Host/common/NativeBreakpoint.h
@@ -242,22 +245,15 @@ include/lldb/Host/common/NativeWatchpointList.h
 include/lldb/Host/common/SoftwareBreakpoint.h
 include/lldb/Host/common/TCPSocket.h
 include/lldb/Host/common/UDPSocket.h
-include/lldb/Host/freebsd/Config.h
 include/lldb/Host/freebsd/HostInfoFreeBSD.h
 include/lldb/Host/linux/AbstractSocket.h
-include/lldb/Host/linux/Config.h
 include/lldb/Host/linux/HostInfoLinux.h
 include/lldb/Host/linux/Ptrace.h
 include/lldb/Host/linux/Support.h
 include/lldb/Host/linux/Uio.h
-include/lldb/Host/macosx/Config.h
 include/lldb/Host/macosx/HostInfoMacOSX.h
 include/lldb/Host/macosx/HostThreadMacOSX.h
-include/lldb/Host/mingw/Config.h
-include/lldb/Host/msvc/Config.h
-include/lldb/Host/netbsd/Config.h
 include/lldb/Host/netbsd/HostInfoNetBSD.h
-include/lldb/Host/openbsd/Config.h
 include/lldb/Host/openbsd/HostInfoOpenBSD.h
 include/lldb/Host/posix/ConnectionFileDescriptorPosix.h
 include/lldb/Host/posix/DomainSocket.h
@@ -266,7 +262,6 @@ include/lldb/Host/posix/HostInfoPosix.h
 include/lldb/Host/posix/HostProcessPosix.h
 include/lldb/Host/posix/HostThreadPosix.h
 include/lldb/Host/posix/LockFilePosix.h
-include/lldb/Host/posix/MainLoopPosix.h
 include/lldb/Host/posix/PipePosix.h
 include/lldb/Host/posix/ProcessLauncherPosix.h
 include/lldb/Host/posix/ProcessLauncherPosixFork.h
@@ -447,7 +442,6 @@ include/lldb/Utility/DataEncoder.h
 include/lldb/Utility/DataExtractor.h
 include/lldb/Utility/Either.h
 include/lldb/Utility/Endian.h
-include/lldb/Utility/Error.h
 include/lldb/Utility/FastDemangle.h
 include/lldb/Utility/FileSpec.h
 include/lldb/Utility/Flags.h
@@ -464,6 +458,7 @@ include/lldb/Utility/SafeMachO.h
 include/lldb/Utility/SelectHelper.h
 include/lldb/Utility/SharedCluster.h
 include/lldb/Utility/SharingPtr.h
+include/lldb/Utility/Status.h
 include/lldb/Utility/Stream.h
 include/lldb/Utility/StreamCallback.h
 include/lldb/Utility/StreamGDBRemote.h
@@ -599,3 +594,5 @@ ${PYSITELIB}/lldb/runtime/__init__.py
 ${PYSITELIB}/lldb/utils/__init__.py
 ${PYSITELIB}/lldb/utils/symbolication.py
 @pkgdir include/lldb/Host/windows/getopt
+@pkgdir include/lldb/Host/msvc
+@pkgdir include/lldb/Host/mingw

@@ -612,6 +612,7 @@ lib/libclangSerialization.a
 lib/libclangTooling.a
 lib/libclangToolingCore.a
 lib/libclangToolingRefactor.a
+share/clang/bash-autocomplete.sh
 share/clang/clang-format-bbedit.applescript
 share/clang/clang-format-diff.py
 share/clang/clang-format-sublime.py
