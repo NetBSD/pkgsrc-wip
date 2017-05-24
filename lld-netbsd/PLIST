@@ -13,7 +13,6 @@ include/lld/Core/Instrumentation.h
 include/lld/Core/LLVM.h
 include/lld/Core/LinkingContext.h
 include/lld/Core/Node.h
-include/lld/Core/Parallel.h
 include/lld/Core/Pass.h
 include/lld/Core/PassManager.h
 include/lld/Core/Reader.h
@@ -30,7 +29,6 @@ include/lld/Core/Writer.h
 include/lld/Driver/Driver.h
 include/lld/ReaderWriter/MachOLinkingContext.h
 include/lld/ReaderWriter/YamlContext.h
-include/lld/Support/Memory.h
 lib/liblldCOFF.a
 lib/liblldConfig.a
 lib/liblldCore.a
