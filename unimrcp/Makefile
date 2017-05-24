@@ -8,7 +8,7 @@ GITHUB_TAG=	unimrcp-${PKGVERSION_NOREV}
 
 MAINTAINER=	angelmadames@gmail.com
 HOMEPAGE=	https://github.com/unispeech/unimrcp/
-COMMENT=	Open-souce cross-platform implementation of MRCP[v1-2]
+COMMENT=	Open-source cross-platform implementation of MRCP[v1-2]
 LICENSE=	apache-2.0
 
 HAS_CONFIGURE=		yes
@@ -20,9 +20,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}/unimrcp
 CONFIGURE_ARGS+=	--with-apr=${PREFIX}/unimrcp/apr
 CONFIGURE_ARGS+=	--with-apr-util=${PREFIX}/unimrcp/apr
 CONFIGURE_ARGS+=	--with-sofia-sip=${PREFIX}/unimrcp/sofia-sip
-
-#LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/apr/lib -L${PREFIX}/apr/lib
-#CPPFLAGS+=	-I${PREFIX}/apr/include/apr-1 -I${PREFIX}/include/
 
 INSTALLATION_DIRS+=	unimrcp/include
 INSTALLATION_DIRS+=	unimrcp/lib
