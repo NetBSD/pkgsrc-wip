@@ -17,7 +17,7 @@ COMMENT=	Tools for manipulating next-generation sequencing data
 
 LICENSE=	mit
 
-USE_TOOLS+=	autoconf automake autoreconf gmake perl
+USE_TOOLS+=	autoconf automake autoreconf gmake perl:run
 GNU_CONFIGURE=	yes
 REPLACE_PERL=	misc/*.pl misc/plot-bamstats test/test.pl
 REPLACE_PYTHON=	misc/*.py

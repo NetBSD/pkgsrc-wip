@@ -1,3 +1,0 @@
-
-KSORT_INIT_GENERIC(uint16_t) is expanded to KSORT_INIT_GENERIC(__uint16_t)
-on NetBSD, causing undefined reference to ks_introsort_uint32_t.
