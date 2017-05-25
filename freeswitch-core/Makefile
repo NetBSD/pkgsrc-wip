@@ -19,8 +19,6 @@ USE_TOOLS+=     	automake autoconf gmake perl pkg-config
 
 BUILD_DEFS+=		VARBASE
 
-SYSCONFSUBDIR=		freeswitch
-
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
@@ -46,6 +44,8 @@ CONFIGURE_ARGS+=	--with-modinstdir=${PREFIX}/freeswitch/modules
 CONFIGURE_ARGS+=	--disable-libvpx
 CONFIGURE_ARGS+=	--enable-srtp
 CONFIGURE_ARGS+=	--enable-zrtp
+CONFIGURE_ARGS+=	--enable-core-pgsql-support
+CONFIGURE_ARGS+=	--enable-xmlrpc-c
 
 REPLACE_PERL+=	support-d/utils/filebug.pl
 REPLACE_PERL+=	support-d/utils/gl
@@ -173,6 +173,7 @@ post-install:
 	${LIBTOOL} --finish ${PREFIX}/lib
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../lang/lua52/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
@@ -184,4 +185,5 @@ post-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

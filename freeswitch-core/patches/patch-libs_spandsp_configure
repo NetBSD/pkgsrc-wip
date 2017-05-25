@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix portability issues.
+
 --- libs/spandsp/configure.orig	2017-04-19 13:12:06.824318000 +0000
 +++ libs/spandsp/configure
 @@ -24108,7 +24108,7 @@ done

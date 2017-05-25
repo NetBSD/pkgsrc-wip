@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix portability issues.
+
 --- libs/unimrcp/configure.orig	2017-04-19 13:12:50.546788000 +0000
 +++ libs/unimrcp/configure
 @@ -18033,7 +18033,7 @@ fi

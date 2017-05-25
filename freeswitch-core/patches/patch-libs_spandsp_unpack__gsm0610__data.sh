@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix portability issues.
+
 --- libs/spandsp/unpack_gsm0610_data.sh.orig	2017-04-19 13:14:01.304432000 +0000
 +++ libs/spandsp/unpack_gsm0610_data.sh
 @@ -53,7 +53,7 @@ else

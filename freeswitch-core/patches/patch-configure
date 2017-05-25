@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix portability issues.
+
 --- configure.orig	2017-04-30 00:54:20.670300000 +0000
 +++ configure
 @@ -36856,7 +36856,7 @@ if test "$with_ldap" = "yes"; then
