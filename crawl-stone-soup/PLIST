@@ -167,6 +167,7 @@ share/${PKGNAME}/dat/des/variable/mini.des
 share/${PKGNAME}/dat/des/variable/mini_features.des
 share/${PKGNAME}/dat/des/variable/mini_monsters.des
 share/${PKGNAME}/dat/des/variable/polyominoes.des
+share/${PKGNAME}/dat/des/variable/the_bubble.des
 share/${PKGNAME}/dat/des/variable/the_grid.des
 share/${PKGNAME}/dat/descript/ability.txt
 share/${PKGNAME}/dat/descript/backgrounds.txt
@@ -471,11 +472,13 @@ share/${PKGNAME}/dat/dlua/lm_items.lua
 share/${PKGNAME}/dat/dlua/lm_mon_prop.lua
 share/${PKGNAME}/dat/dlua/lm_monst.lua
 share/${PKGNAME}/dat/dlua/lm_mslav.lua
+share/${PKGNAME}/dat/dlua/lm_named_hatch.lua
 share/${PKGNAME}/dat/dlua/lm_pdesc.lua
 share/${PKGNAME}/dat/dlua/lm_props.lua
 share/${PKGNAME}/dat/dlua/lm_timed.lua
 share/${PKGNAME}/dat/dlua/lm_tmsg.lua
 share/${PKGNAME}/dat/dlua/lm_toll.lua
+share/${PKGNAME}/dat/dlua/lm_trans.lua
 share/${PKGNAME}/dat/dlua/lm_trig.lua
 share/${PKGNAME}/dat/dlua/lm_trove.lua
 share/${PKGNAME}/dat/dlua/loadmaps.lua
@@ -508,10 +511,13 @@ share/${PKGNAME}/docs/changelog.txt
 share/${PKGNAME}/docs/crawl_manual.txt
 share/${PKGNAME}/docs/develop/IRC.txt
 share/${PKGNAME}/docs/develop/android.txt
+share/${PKGNAME}/docs/develop/background_creation.txt
 share/${PKGNAME}/docs/develop/coding_conventions.txt
+share/${PKGNAME}/docs/develop/contribution-process.txt
 share/${PKGNAME}/docs/develop/ctags.txt
 share/${PKGNAME}/docs/develop/editor_tips.txt
 share/${PKGNAME}/docs/develop/gdb_tips.txt
+share/${PKGNAME}/docs/develop/god_creation.txt
 share/${PKGNAME}/docs/develop/keys.txt
 share/${PKGNAME}/docs/develop/levels/advanced.txt
 share/${PKGNAME}/docs/develop/levels/introduction.txt
@@ -519,10 +525,10 @@ share/${PKGNAME}/docs/develop/levels/syntax.txt
 share/${PKGNAME}/docs/develop/levels/triggerables.txt
 share/${PKGNAME}/docs/develop/monster_creation.txt
 share/${PKGNAME}/docs/develop/monster_speech.txt
-share/${PKGNAME}/docs/develop/new_dev_checklist.txt
+share/${PKGNAME}/docs/develop/mutation_creation.txt
 share/${PKGNAME}/docs/develop/patch_guide.txt
-share/${PKGNAME}/docs/develop/process.txt
 share/${PKGNAME}/docs/develop/save_compatibility.txt
+share/${PKGNAME}/docs/develop/species_creation.txt
 share/${PKGNAME}/docs/develop/spells.txt
 share/${PKGNAME}/docs/develop/testing.txt
 share/${PKGNAME}/docs/develop/tiles_creation.txt
@@ -558,6 +564,7 @@ share/${PKGNAME}/settings/dec_glyphs.txt
 share/${PKGNAME}/settings/dvorak_command_keys.txt
 share/${PKGNAME}/settings/ibm_glyphs.txt
 share/${PKGNAME}/settings/init.txt
+share/${PKGNAME}/settings/mac/Crawl profile.terminal
 share/${PKGNAME}/settings/no_vi_command_keys.txt
 share/${PKGNAME}/settings/old_unicode_glyphs.txt
 share/${PKGNAME}/settings/safe_move_shift.txt
