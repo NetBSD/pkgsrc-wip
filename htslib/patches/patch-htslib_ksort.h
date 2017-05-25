@@ -1,5 +1,7 @@
 $NetBSD$
 
+# NetBSD expands uintXX_t to __unitXX_t, causing undefined refs.
+# See comments in patch below.
 --- htslib/ksort.h.orig	2017-05-19 15:11:35.000000000 +0000
 +++ htslib/ksort.h
 @@ -63,6 +63,7 @@
