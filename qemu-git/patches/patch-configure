@@ -2,14 +2,6 @@ $NetBSD$
 
 --- configure.orig	2017-05-12 22:04:02.000000000 +0000
 +++ configure
-@@ -179,6 +179,7 @@ audio_pt_int=""
- audio_win_int=""
- cc_i386=i386-pc-linux-gnu-gcc
- libs_qga=""
-+libs_shmlib=""
- debug_info="yes"
- stack_protector=""
- 
 @@ -3034,14 +3035,13 @@ if test "$curses" != "no" ; then
  #include <curses.h>
  #include <wchar.h>
@@ -26,36 +18,3 @@ $NetBSD$
  }
  EOF
    IFS=:
-@@ -4133,6 +4133,24 @@ elif compile_prog "" "$pthread_lib -lrt"
-   libs_qga="$libs_qga -lrt"
- fi
- 
-+##########################################
-+# Do we need librt for shm_open()
-+cat > $TMPC <<EOF
-+#include <sys/mman.h>
-+#include <sys/stat.h>
-+#include <fcntl.h>
-+#include <stddef.h>
-+int main(void) {
-+  return shm_open(NULL, O_RDWR, 0644);
-+}
-+EOF
-+
-+if compile_prog "" "" ; then
-+  :
-+elif compile_prog "" "-lrt" ; then
-+  libs_shmlib="$libs_shmlib -lrt"
-+fi
-+
- if test "$darwin" != "yes" -a "$mingw32" != "yes" -a "$solaris" != yes -a \
-         "$aix" != "yes" -a "$haiku" != "yes" ; then
-     libs_softmmu="-lutil $libs_softmmu"
-@@ -5949,6 +5967,7 @@ echo "EXESUF=$EXESUF" >> $config_host_ma
- echo "DSOSUF=$DSOSUF" >> $config_host_mak
- echo "LDFLAGS_SHARED=$LDFLAGS_SHARED" >> $config_host_mak
- echo "LIBS_QGA+=$libs_qga" >> $config_host_mak
-+echo "LIBS_SHMLIB+=$libs_shmlib" >> $config_host_mak
- echo "TASN1_LIBS=$tasn1_libs" >> $config_host_mak
- echo "TASN1_CFLAGS=$tasn1_cflags" >> $config_host_mak
- echo "POD2MAN=$POD2MAN" >> $config_host_mak
