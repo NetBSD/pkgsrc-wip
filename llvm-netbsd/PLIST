@@ -417,6 +417,7 @@ include/llvm/DebugInfo/CodeView/TypeDatabaseVisitor.h
 include/llvm/DebugInfo/CodeView/TypeDeserializer.h
 include/llvm/DebugInfo/CodeView/TypeDumpVisitor.h
 include/llvm/DebugInfo/CodeView/TypeIndex.h
+include/llvm/DebugInfo/CodeView/TypeIndexDiscovery.h
 include/llvm/DebugInfo/CodeView/TypeRecord.h
 include/llvm/DebugInfo/CodeView/TypeRecordBuilder.h
 include/llvm/DebugInfo/CodeView/TypeRecordMapping.h
