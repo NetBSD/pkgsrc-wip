@@ -19,7 +19,6 @@ libexec/dns-helper
 libexec/dump-clients
 libexec/fetch-testmsg-whitelist
 libexec/fetchblack
-libexec/fetchids
 libexec/fix-map
 libexec/hackmc
 libexec/list-clients
