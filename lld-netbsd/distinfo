@@ -12,5 +12,3 @@ Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
 SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
 RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
-SHA1 (patch-ELF_InputSection.cpp) = 4403850a2f2315d4761695032591df58ca0807fb
-SHA1 (patch-ELF_InputSection.h) = e327aeb44ee9cc6a693122fe7e4f3e8b6aec4755
