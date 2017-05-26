@@ -1,6 +1,4 @@
 @comment $NetBSD$
-bin/ivshmem-client
-bin/ivshmem-server
 bin/qemu-ga
 bin/qemu-i386
 bin/qemu-img
