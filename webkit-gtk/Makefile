@@ -75,10 +75,6 @@ CXXFLAGS+=	-Wno-c++11-narrowing
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
-BUILDLINK_DEPMETHOD.gobject-introspection+=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
-CMAKE_ARGS+=	-DENABLE_INTROSPECTION=ON
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 # A correct Webkit build requires flex 2.5.33
