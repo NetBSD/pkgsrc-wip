@@ -131,6 +131,8 @@ PLIST_VARS+=		${UE_ARCHS} nbd
 PLIST.${_var_}=		YES
 .endfor
 
+TEST_TARGET=		check
+
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
 		${DESTDIR}${PREFIX}/share/doc/qemu/
