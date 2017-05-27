@@ -423,6 +423,7 @@ SUBDIR+=	coverity-analysis-bin
 SUBDIR+=	cowpatty
 SUBDIR+=	coxeter
 SUBDIR+=	cpdup
+SUBDIR+=	cpluff
 SUBDIR+=	cpm
 SUBDIR+=	cpqarrayd
 SUBDIR+=	crabemu
