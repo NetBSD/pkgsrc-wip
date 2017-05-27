@@ -6,3 +6,6 @@ SHA512 (qemu-2.8.1.tar.bz2) = 0397b4029cdcb77ed053c44b3579a3f34894038e6fc6b4aa88
 Size (qemu-2.8.1.tar.bz2) = 28366270 bytes
 SHA1 (patch-configure) = 2b47ff025df21276443a3a45b9ea098964c9cd43
 SHA1 (patch-disas_libvixl_Makefile.objs) = 5bc8da5c29c95d18d415fad5936e7c2bf9d48b57
+SHA1 (patch-qemu-nbd.c) = 191b4082aedd0e5b8cc03aa20bc13b415a9df5b4
+SHA1 (patch-util_main-loop.c) = 06ef4669bd63cf05b0c57ceda639b09101471e12
+SHA1 (patch-util_systemd.c) = 85cd7fbfd064c05d31c1bc64ff9485ae57615ca0
