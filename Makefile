@@ -485,7 +485,6 @@ SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer
-SUBDIR+=	dcc
 SUBDIR+=	ddate
 SUBDIR+=	ddocent
 SUBDIR+=	deadbeef
