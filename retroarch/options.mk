@@ -3,8 +3,8 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype libusb-1
-PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype libusb-1
+PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype
+PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
 
 .if !empty(MACHINE_ARCH:M*arm*)
 PKG_SUPPORTED_OPTIONS+=	rpi
@@ -38,13 +38,6 @@ CONFIGURE_ARGS+=	--enable-ffmpeg
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ffmpeg
-.endif
-
-.if !empty(PKG_OPTIONS:Mlibusb-1)
-CONFIGURE_ARGS+=	--enable-libusb
-.include "../../devel/libusb1/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libusb
 .endif
 
 .if !empty(PKG_OPTIONS:Mfreetype)
