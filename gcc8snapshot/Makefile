@@ -12,7 +12,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC8S_DIST_VERSION}
 CATEGORIES=	lang
 #MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC8S_DIST_VERSION}/}
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/${GCC8S_DIST_VERSION}/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
