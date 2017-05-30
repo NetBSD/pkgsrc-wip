@@ -1,0 +1,20 @@
+@comment $NetBSD$
+${PERL5_SUB_INSTALLVENDORLIB}/Asterisk.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Asterisk/AGI.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Asterisk/Manager.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Asterisk/Outgoing.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Asterisk/QCall.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Asterisk/Voicemail.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/asterisk-perl/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Asterisk::AGI.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Asterisk::Manager.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Asterisk::Outgoing.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Asterisk::Voicemail.3
+share/examples/p5-Asterisk/agi-enum.agi
+share/examples/p5-Asterisk/agi-sayani.agi
+share/examples/p5-Asterisk/agi-test.agi
+share/examples/p5-Asterisk/calleridnamelookup.agi
+share/examples/p5-Asterisk/manager-test.pl
+share/examples/p5-Asterisk/tts-bofh.agi
+share/examples/p5-Asterisk/tts-line.agi
+share/examples/p5-Asterisk/tts-ping.agi
