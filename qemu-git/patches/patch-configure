@@ -23,7 +23,7 @@ $NetBSD$
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
      tools="qemu-nbd\$(EXESUF) $tools"
 +  fi
-+  if [ "$eventfd" != "no" ]; then
++  if [ "$eventfd" = "yes" ]; then
      tools="ivshmem-client\$(EXESUF) ivshmem-server\$(EXESUF) $tools"
    fi
  fi
