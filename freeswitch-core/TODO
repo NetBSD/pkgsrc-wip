@@ -1,25 +1,8 @@
 * There are some bundled libs that are currently imported to pkgsrc & pkgsrc-wip.
-  Nevertheless, these bundled libs, from what I could see, are modified by upstream.
+  Nevertheless, these bundled libs are patched by upstream developers.
   I ran into many errors while integrating pkgsrc libs instead of the bundled ones.
-  Thus, further work needs to be done to make them work. 
-
-* There are many modules that are not enabled by default. If an user requires them,
-  they have to be manually enabled in ${WRKSRC}/modules.conf file. As for now, 
-  defaults are enabled + some required by wip/fusionpbx (GUI interface).
-
-* Once installed, FS is unable to identify the local_ip_v4 value.
-  Meaning sofia-sip moduel cannot bind to an interface. The temporary workaround is,
-  to manually set the local_ip_v4 value in conf_dir/vars.xml.
-  Example:  <X-PRE-PROCESS cmd="set" date="local_ip_v4=[yo.ur.i.p]"/>
-
-* The event_socket_module, which is the one fs_cli connects to,
-  by default has an IPv6 configuration, therefore it is unable to load
-  properly. You'll need to set to your local IP or 0.0.0.0 un the
-  event_socket.conf.xml file inside autoloads/configs directory.
-
-* If you are willing to use FusionPBX as GUI, you'll need to copy
-  the scripts from FusionPBX to FS. Also, you may need to copy
-  FusionPBX templates, depending on your configuration scheme.
+  Thus, further work needs to be done to make them work or bundled libs are
+  unavoidable.  
 
 * Use of CONF_FILES framework to avoid pkglint errors. 
 
