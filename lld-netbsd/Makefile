@@ -5,7 +5,7 @@ CATEGORIES=	devel
 
 SVN_REPOSITORIES=	lld
 SVN_REPO.lld=		http://llvm.org/svn/llvm-project/lld/trunk
-SVN_REVISION.lld=	303965
+SVN_REVISION.lld=	304308
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lld.llvm.org/
