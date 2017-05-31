@@ -1,0 +1,5 @@
+* This software is installed by the PERL script provided by upstream.
+  Meaning, after running this script, ${MAKE} deinstall will not work
+  if you have the need to deinstall the files. Thus, you'll have to
+  manually delete the files.
+* The PLIST is empty for the same reason previously stated.
