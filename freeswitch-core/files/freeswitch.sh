@@ -12,9 +12,9 @@
 #
 . /etc/rc.subr
 name="freeswitch"
-rcvar=${name}_enable
+rcvar=${name}
 load_rc_config $name
-: ${freeswitch_enable="NO"}
+: ${freeswitch="NO"}
 : ${freeswitch_pidfile="${VARBASE}/run/freeswitch/freeswitch.pid"}
 start_cmd=${name}_start
 stop_cmd=${name}_stop
