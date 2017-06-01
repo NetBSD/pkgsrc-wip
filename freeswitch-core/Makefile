@@ -17,8 +17,7 @@ LIBTOOL_OVERRIDE=	libtool */libtool */*/libtool */*/*/libtool
 USE_LANGUAGES=  	c c++
 USE_TOOLS+=     	automake autoconf gmake perl pkg-config
 
-BUILD_DEFS+=		VARBASE FREESWITCH_CONFDIR FREESWITCH_DATADIR \
-			FREESWITCH_SHAREDIR FREESWITCH_LOGDIR FREESWITCH_DBDIR
+BUILD_DEFS+=		VARBASE
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
@@ -159,29 +158,35 @@ REPLACE_PERL+=	docs/phrase/phrase.pl
 
 RCD_SCRIPTS=            freeswitch
 
-INSTALLATION_DIRS+= 	${PREFIX}/freeswitch
-INSTALLATION_DIRS+= 	${PREFIX}/freeswitch/modules
-INSTALLATION_DIRS+= 	${PREFIX}/freeswitch/sounds
-INSTALLATION_DIRS+= 	${PREFIX}/freeswitch/recordings
+INSTALLATION_DIRS+= 	share/freeswitch/scripts
+INSTALLATION_DIRS+=	share/freeswitch/grammar
+INSTALLATION_DIRS+= 	freeswitch/modules
+INSTALLATION_DIRS+= 	freeswitch/sounds
+INSTALLATION_DIRS+= 	freeswitch/recordings
 
 .include "../../mk/bsd.prefs.mk"
 
-FREESWITCH_USER?=		freeswitch
-FREESWITCH_GROUP?=		freeswitch
-PKG_GROUPS=			${FREESWITCH_GROUP}
-PKG_USERS=			${FREESWITCH_USER}:${FREESWITCH_GROUP}
-PKG_GECOS.${FREESWITCH_USER}=	FreeSWITCH
-PKG_GROUPS_VARS=		FREESWITCH_GROUP
-PKG_USERS_VARS=			FREESWITCH_USER
+FS_USER?=		freeswitch
+FS_GROUP?=		freeswitch
+PKG_USERS_VARS=		FS_USER
+PKG_GROUPS_VARS=	FS_GROUP
+PKG_GROUPS=		${FS_GROUP}
+PKG_USERS=		${FS_USER}:${FS_GROUP}
 
-FREESWITCH_CONFDIR?=	${PREFIX}/etc/freeswitch
-FREESWITCH_DATADIR?=	${PREFIX}/freeswitch
-FREESWITCH_SHAREDIR?=	${PREFIX}/share/freeswitch
-FREESWITCH_LOGDIR?=	${VARBASE}/log/freeswitch
-FREESWITCH_DBDIR?=	${VARBASE}/db/freeswitch
+PKG_GECOS.${FS_USER}=		FreeSWITCH
+PKG_SHELL.${NGINX_USER}=	${NOLOGIN}
+
+MAKE_DIRS+=		${VARBASE}/log/freeswitch
+MAKE_DIRS+=		${VARBASE}/db/freeswitch
+MAKE_DIRS_PERMS+=	${VARBASE}/log/freeswitch ${FS_USER} ${FS_GROUP} 0644
+MAKE_DIRS_PERMS+=	${VARBASE}/db/freeswitch ${FS_USER} ${FS_GROUP} 0755
+OWN_DIRS=		${PREFIX}/freeswitch
+OWN_DIRS+=		${PREFIX}/share/freeswitch
+OWN_DIRS_PERMS+=	${PREFIX}/freeswitch ${FS_USER} ${FS_GROUP} 0755
+OWN_DIRS_PERMS+=	${PREFIX}/share/freeswitch ${FS_USER} ${FS_GROUP} 0755
 
 PKG_SYSCONFSUBDIR=      freeswitch
-PKG_SYSCONFDIR_PERMS=   ${FREESWITCH_USER} ${FREESWITCH_GROUP} 0755
+PKG_SYSCONFDIR_PERMS=   ${FS_USER} ${FS_GROUP} 0755
 
 BUILDLINK_TRANSFORM+= rm:-Werror
 
