@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.3 2014/08/22 01:37:13 schmonz Exp $
 
-SHA1 (mlmmj-1.2.18.1.tar.bz2) = 7e607de4391dbc12c5ad99fe92603730137e5c24
-RMD160 (mlmmj-1.2.18.1.tar.bz2) = a1827f576b2136d1e98f63f8c5f841d974852a19
-Size (mlmmj-1.2.18.1.tar.bz2) = 240942 bytes
+SHA1 (mlmmj-1.3.0.tar.bz2) = e11652dfe1b74f87034914eb79302944cfb89b4f
+RMD160 (mlmmj-1.3.0.tar.bz2) = 6353f546342593adc76d17e178f702dc340a1586
+SHA512 (mlmmj-1.3.0.tar.bz2) = c704d89f8a96c0ffc751a744ffdefb5e4304ab74be89292f06ce0c337b8ff1cc5a91737c8b1bd96fe3e993338986fa42bf360cfefc508e1eac74ab88ffda2494
+Size (mlmmj-1.3.0.tar.bz2) = 292519 bytes
