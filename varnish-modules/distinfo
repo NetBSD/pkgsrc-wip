@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (varnish-modules/0.12.1.zip) = 7512a6c9cc41c5bc01b1f6bb6aa87c50ad556893
+RMD160 (varnish-modules/0.12.1.zip) = 05380db0236b0db54e122844abe7df30db724b30
+SHA512 (varnish-modules/0.12.1.zip) = 07a2e01adc0dcaea6a96c3f8b8cef9aa24296ae4fca7f6491e5e6db26c5e9e009baf7f6eccd0ab4c24cfea91b465bd81ce6b9f41cab6c7a27cf467ee28810098
+Size (varnish-modules/0.12.1.zip) = 110195 bytes
+SHA1 (patch-configure.ac-rst2man) = 91947f4d74c9f97c482512bd3c6e67e35245ac07

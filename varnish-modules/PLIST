@@ -1,0 +1,21 @@
+@comment $NetBSD$
+lib/varnish/vmods/libvmod_bodyaccess.la
+lib/varnish/vmods/libvmod_cookie.la
+lib/varnish/vmods/libvmod_header.la
+lib/varnish/vmods/libvmod_saintmode.la
+lib/varnish/vmods/libvmod_softpurge.la
+lib/varnish/vmods/libvmod_tcp.la
+lib/varnish/vmods/libvmod_var.la
+lib/varnish/vmods/libvmod_vsthrottle.la
+lib/varnish/vmods/libvmod_xkey.la
+man/man3/vmod_bodyaccess.3
+man/man3/vmod_cookie.3
+man/man3/vmod_header.3
+man/man3/vmod_saintmode.3
+man/man3/vmod_softpurge.3
+man/man3/vmod_tcp.3
+man/man3/vmod_var.3
+man/man3/vmod_vsthrottle.3
+man/man3/vmod_xkey.3
+share/doc/varnish-modules/LICENSE
+share/doc/varnish-modules/README.rst

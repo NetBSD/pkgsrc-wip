@@ -1,0 +1,21 @@
+$NetBSD$
+
+Allow passing in location of rst2man.
+
+--- configure.ac.orig	2017-05-24 08:46:02.000000000 +0000
++++ configure.ac
+@@ -18,7 +18,13 @@ AX_PTHREAD(,[AC_MSG_ERROR([Could not con
+ AX_CODE_COVERAGE
+ 
+ # Check for rst utilities
+-AC_CHECK_PROGS(RST2MAN, [rst2man rst2man.py], "no")
++AC_ARG_WITH([rst2man],
++  AS_HELP_STRING([--with-rst2man=PATH], [Location of rst2man (auto)]),
++  [RST2MAN="$withval"],
++  AC_CHECK_PROGS(RST2MAN, [rst2man rst2man.py], [no]))
++if test "x$RST2MAN" = "xno"; then
++  AC_CHECK_PROGS(RST2MAN, [rst2man rst2man.py], "no")
++fi
+ if test "x$RST2MAN" = "xno"; then
+ 	AC_MSG_WARN([rst2man not found - not building man pages])
+ 	RST2MAN=: # no-op
