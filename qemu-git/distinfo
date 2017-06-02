@@ -7,7 +7,6 @@ Size (qemu-2.8.1.tar.bz2) = 28366270 bytes
 SHA1 (patch-configure) = 9a36da2b276df7231821291520b2617959c30e93
 SHA1 (patch-contrib_ivshmem-client_Makefile.objs) = 84c86619bba6ff1b6ca3875e176c5e0b084ed853
 SHA1 (patch-contrib_ivshmem-server_Makefile.objs) = 146a59da648864ff43d6e5807e8e3f94c2242338
-SHA1 (patch-disas_libvixl_Makefile.objs) = 5bc8da5c29c95d18d415fad5936e7c2bf9d48b57
 SHA1 (patch-qemu-nbd.c) = 191b4082aedd0e5b8cc03aa20bc13b415a9df5b4
 SHA1 (patch-util_main-loop.c) = 06ef4669bd63cf05b0c57ceda639b09101471e12
 SHA1 (patch-util_systemd.c) = 85cd7fbfd064c05d31c1bc64ff9485ae57615ca0
