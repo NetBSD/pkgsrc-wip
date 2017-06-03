@@ -28,7 +28,7 @@ do-install:
 .if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
 QUAKE_ARCH!=	uname -m
 .else
-QUAKE_ARCH=	${MACHINE_ARCH}
+QUAKE_ARCH=	${MACHINE_ARCH:i386=x86}
 .endif
 
 PLIST_SUBST+=	QUAKE_ARCH=${QUAKE_ARCH:Q}
