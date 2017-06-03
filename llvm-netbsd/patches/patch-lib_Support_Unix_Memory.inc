@@ -10,45 +10,47 @@ $NetBSD$
 +
 +  static const size_t overhead =
 +#if __NetBSD_Version__ - 0 >= 799007200
-+  sizeof(void*)
++      sizeof(void*)
 +#else
-+  0
++      0
 +#endif
-+  ;
++      ;
 +
-+  size_t NumPages = (NumBytes+overhead+PageSize-1)/PageSize;
++  size_t NumPages = (NumBytes + overhead + PageSize - 1) / PageSize;
  
    int fd = -1;
  
-@@ -195,6 +204,9 @@ Memory::AllocateRWX(size_t NumBytes, con
+@@ -195,6 +204,10 @@ Memory::AllocateRWX(size_t NumBytes, con
  #if defined(__APPLE__) && (defined(__arm__) || defined(__arm64__))
    void *pa = ::mmap(start, PageSize*NumPages, PROT_READ|PROT_EXEC,
                      flags, fd, 0);
 +#elif __NetBSD_Version__ - 0 >= 799007200
-+  void *pa = ::mmap(start, PageSize*NumPages, PROT_READ | PROT_WRITE | PROT_MPROTECT(PROT_EXEC),
-+                    flags, fd, 0);
++  void *pa =
++      ::mmap(start, PageSize * NumPages,
++             PROT_READ | PROT_WRITE | PROT_MPROTECT(PROT_EXEC), flags, fd, 0);
  #else
    void *pa = ::mmap(start, PageSize*NumPages, PROT_READ|PROT_WRITE|PROT_EXEC,
                      flags, fd, 0);
-@@ -223,19 +235,49 @@ Memory::AllocateRWX(size_t NumBytes, con
+@@ -223,19 +236,51 @@ Memory::AllocateRWX(size_t NumBytes, con
      MakeErrMsg(ErrMsg, "vm_protect RW failed");
      return MemoryBlock();
    }
 +#elif __NetBSD_Version__ - 0 >= 799007200
-+  void *codeseg = mremap(pa, PageSize*NumPages, NULL, PageSize*NumPages, MAP_REMAPDUP);
++  void *codeseg =
++      mremap(pa, PageSize * NumPages, NULL, PageSize * NumPages, MAP_REMAPDUP);
 +  if (codeseg == MAP_FAILED) {
-+    munmap(pa, PageSize*NumPages);
++    munmap(pa, PageSize * NumPages);
 +
-+    if (NearBlock) //Try again without a near hint
++    if (NearBlock) // Try again without a near hint
 +      return AllocateRWX(NumBytes, nullptr);
 +
 +    MakeErrMsg(ErrMsg, "Can't allocate RWX Memory");
 +    return MemoryBlock();
 +  }
-+  if (mprotect(codeseg, PageSize*NumPages, PROT_READ | PROT_EXEC) == -1) {
-+    munmap(pa, PageSize*NumPages);
-+    munmap(codeseg, PageSize*NumPages);
-+    if (NearBlock) //Try again without a near hint
++  if (mprotect(codeseg, PageSize * NumPages, PROT_READ | PROT_EXEC) == -1) {
++    munmap(pa, PageSize * NumPages);
++    munmap(codeseg, PageSize * NumPages);
++    if (NearBlock) // Try again without a near hint
 +      return AllocateRWX(NumBytes, nullptr);
 +
 +    MakeErrMsg(ErrMsg, "Can't allocate RWX Memory");
@@ -73,7 +75,8 @@ $NetBSD$
 +  static const size_t overhead = sizeof(void *);
 +  void *codeseg;
 +  memcpy(&codeseg, (void *)((uintptr_t)M.Address - overhead), sizeof(void *));
-+  if (0 != ::munmap(codeseg, M.Size + overhead) || 0 != ::munmap(M.Address, M.Size + overhead))
++  if (0 != ::munmap(codeseg, M.Size + overhead) ||
++      0 != ::munmap(M.Address, M.Size + overhead))
 +    return MakeErrMsg(ErrMsg, "Can't release RWX Memory");
 +#else
    if (0 != ::munmap(M.Address, M.Size))
