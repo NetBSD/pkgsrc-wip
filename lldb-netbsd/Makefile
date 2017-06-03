@@ -5,7 +5,7 @@ CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	lldb
 SVN_REPO.lldb=		http://llvm.org/svn/llvm-project/lldb/trunk
-SVN_REVISION.lldb=	304142
+SVN_REVISION.lldb=	304308
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/
@@ -72,6 +72,9 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 .  endif
 .endif
+
+#_WRAP_EXTRA_ARGS.CXX+=	-fno-omit-frame-pointer -O0 -g -ggdb -U_FORTIFY_SOURCE -fsanitize=address -fsanitize=undefined -lasan -lubsan -U__SANITIZE_ADDRESS__
+#CWRAPPERS_APPEND.cxx+=	-fno-omit-frame-pointer -O0 -g -ggdb -U_FORTIFY_SOURCE -fsanitize=address -fsanitize=undefined -lasan -lubsan -U__SANITIZE_ADDRESS__
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
