@@ -12,22 +12,22 @@ HOMEPAGE=	http://compiler-rt.llvm.org/
 COMMENT=	LLVM runtime libraries
 LICENSE=	modified-bsd OR mit
 
-WRKSRC=			${WRKDIR}/build
-
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
+
+WRKSRC=			${WRKDIR}/${PKGBASE}
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
-CMAKE_ARG_PATH=	${WRKDIR}/compiler-rt
-
 post-extract:
-	${RUN} mkdir -p ${WRKSRC}
+	${RUN} mkdir -p ${WRKDIR}/build
 
-.include "../../wip/mk/git-package.mk"
+.include "../../wip/mk/svn-package.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
 .include "../../wip/llvm-netbsd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
