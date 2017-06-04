@@ -7,9 +7,9 @@ $NetBSD$
  #endif
  
 +#if defined(__NetBSD__)
-+#define TYPE_UNWIND_PTR (void *)
++#define TYPE_UNWIND_PTR void*
 +#else
-+#define TYPE_UNWIND_PTR (uintptr_t)
++#define TYPE_UNWIND_PTR uintptr_t
 +#endif
 +
  /*
