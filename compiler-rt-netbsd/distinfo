@@ -15,3 +15,7 @@ Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
 SHA1 (patch-cmake_config-ix.cmake) = 6b0644c422eaf3e2721398c2575e31e07b535984
 SHA1 (patch-lib_asan_scripts_asan__symbolize.py) = d6c079e7092b22b5379293dbb8d1e2445e077932
 SHA1 (patch-lib_builtins_gcc__personality__v0.c) = 0a48656e68614730ea05e8fb2588434e774b3c45
+SHA1 (patch-lib_sanitizer__common_CMakeLists.txt) = 45b18179c5d1d9f284ccfe4670a989ac30d05e92
+SHA1 (patch-test_asan_lit.cfg) = 259b0e262b5975b862a51f015ec6b646ce2af10a
+SHA1 (patch-test_sanitizer__common_CMakeLists.txt) = 6af4c5ca42f17bb09823c36bf32d5576fbc0b4c8
+SHA1 (patch-test_ubsan_lit.common.cfg) = d60d738aaf8525cf3f5f028dc2fc2fe54a7d691b

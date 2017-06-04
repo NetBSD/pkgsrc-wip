@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- test/sanitizer_common/CMakeLists.txt.orig	2017-06-03 23:53:55.000000000 +0000
++++ test/sanitizer_common/CMakeLists.txt
+@@ -4,7 +4,7 @@ set(SANITIZER_COMMON_TEST_DEPS ${SANITIZ
+ set(SANITIZER_COMMON_TESTSUITES)
+ 
+ set(SUPPORTED_TOOLS)
+-if(CMAKE_SYSTEM_NAME MATCHES "Darwin|Linux|FreeBSD" AND NOT ANDROID)
++if(CMAKE_SYSTEM_NAME MATCHES "Darwin|Linux|FreeBSD|NetBSD" AND NOT ANDROID)
+   list(APPEND SUPPORTED_TOOLS asan)
+ endif()
+ if(CMAKE_SYSTEM_NAME MATCHES "Linux" AND NOT ANDROID)
