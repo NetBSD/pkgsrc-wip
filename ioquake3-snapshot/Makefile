@@ -19,6 +19,8 @@ WRKSRC=	${WRKDIR}/ioq3-${GITHUB_TAG}
 USE_TOOLS+=	gmake
 BUILD_TARGET=	release
 
+NOT_PAX_MPROTECT_SAFE=	lib/ioquake3/ioquake3.${QUAKE_ARCH}
+
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/ioquake3
 	cd ${WRKSRC} && ${GMAKE} copyfiles COPYDIR=${DESTDIR}${PREFIX}/lib/ioquake3
