@@ -1849,6 +1849,7 @@ SUBDIR+=	ltp-git
 SUBDIR+=	ltrace
 SUBDIR+=	lua-MessagePack
 SUBDIR+=	lua-lbn
+SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-mpack
 SUBDIR+=	lucene
 SUBDIR+=	lugaru
