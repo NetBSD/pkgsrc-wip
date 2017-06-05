@@ -18,7 +18,7 @@ MAKE_FILE=	makefile
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/LDoc-${PKGVERSION_NOREV}
 
-DEPENDS+=	${LUA_PKGPREFIX}-penlight-[0-9]*:../../local/lua-penlight
+DEPENDS+=	${LUA_PKGPREFIX}-penlight-[0-9]*:../../wip/lua-penlight
 
 .include "../../lang/lua/module.mk"
 
