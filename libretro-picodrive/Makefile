@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/02/05 16:57:53 wiz Exp $
 
-DISTNAME=	libretro-picodrive-20170418
+PKGNAME=	libretro-picodrive-20170418
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,13 +9,26 @@ HOMEPAGE=	https://wiki.libretro.com/index.php?title=PicoDrive
 COMMENT=	Fast MegaDrive/MegaCD/32X emulator
 LICENSE=	picodrive-license
 
-GITHUB_PROJECT=	picodrive
-GITHUB_TAG=	cbc93b68dca1d72882d07b54bbe1ef25b980558a
+PICODRIVE_TAG=	cbc93b68dca1d72882d07b54bbe1ef25b980558a
+CYCLONE_TAG=	355815ebb5b1c60916f66d043a43f3af7839589f
 
+DISTFILES+=	${PICODRIVE_TAG}.tar.gz
+SITES.${PICODRIVE_TAG}.tar.gz= \
+	${MASTER_SITE_GITHUB:=libretro/picodrive/archive/}
+
+DISTFILES+=	${CYCLONE_TAG}.tar.gz
+SITES.${CYCLONE_TAG}.tar.gz= \
+	${MASTER_SITE_GITHUB:=notaz/cyclone68000/archive/}
+
+WRKSRC=		${WRKDIR}/picodrive-${PICODRIVE_TAG}
 MAKE_FILE=	Makefile.libretro
 USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+NOT_FOR_PLATFORM=	${BIGENDIANPLATFORMS}
+
+INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 .if !empty(MACHINE_ARCH:M*arm*)
 BUILD_MAKE_FLAGS+=	ARCH=arm
@@ -26,17 +39,24 @@ BUILD_MAKE_FLAGS+=	asm_misc=1
 BUILD_MAKE_FLAGS+=	asm_cdpico=0
 BUILD_MAKE_FLAGS+=	asm_cdmemory=1
 BUILD_MAKE_FLAGS+=	asm_mix=1
-BUILD_MAKE_FLAGS+=	use_cyclone=0
-BUILD_MAKE_FLAGS+=	use_fame=1
+BUILD_MAKE_FLAGS+=	use_cyclone=1
+BUILD_MAKE_FLAGS+=	use_fame=0
 BUILD_MAKE_FLAGS+=	use_drz80=1
 BUILD_MAKE_FLAGS+=	use_cz80=0
 BUILD_MAKE_FLAGS+=	use_sh2drc=1
 BUILD_MAKE_FLAGS+=	use_svpdrc=1
+
+USE_TOOLS+=		gzcat
+
+# Cyclone.s is pre-generated because the default build process needs to
+# build a generation program, and the toolchain might not be set up to
+# properly build programs for the host machine. To regenerate
+# ${FILESDIR}/Cyclone.s.gz, go to ${WRKSRC}/cpu/cyclone, then do this:
+# `gmake CONFIG_FILE=../cyclone_config.h && gzip Cyclone.s`
+post-extract:
+	${MV} ${WRKDIR}/cyclone68000-${CYCLONE_TAG}/* ${WRKSRC}/cpu/cyclone
+	${GZCAT} ${FILESDIR}/Cyclone.s.gz >${WRKSRC}/cpu/cyclone/Cyclone.s
 .endif
-
-NOT_FOR_PLATFORM+=	${BIGENDIANPLATFORMS}
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/picodrive_libretro.so \
