@@ -21,18 +21,12 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_ARCH:M*arm*hf)
-PCSX_REARMED_PLATFORM=	${MACHINE_ARCH}-hardfloat
-.else
-PCSX_REARMED_PLATFORM=	unix
-.endif
-
-MAKE_ENV+=	platform="${PCSX_REARMED_PLATFORM}"
-
 .if !empty(MACHINE_ARCH:M*arm*)
 # only ARM-specific options for now, and options framework
 #insists on having at least one option, so only pull it in for ARM
 .include "options.mk"
+CFLAGS+=		-marm
+BUILD_MAKE_FLAGS+=	ARCH=arm
 .endif
 
 do-install:
@@ -40,5 +34,4 @@ do-install:
 	    ${DESTDIR}${PREFIX}/lib/libretro/pcsx_rearmed_libretro.so
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
