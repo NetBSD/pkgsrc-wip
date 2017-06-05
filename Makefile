@@ -1851,6 +1851,7 @@ SUBDIR+=	lua-MessagePack
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-mpack
+SUBDIR+=	lua-penlight
 SUBDIR+=	lucene
 SUBDIR+=	lugaru
 SUBDIR+=	lumberjack
