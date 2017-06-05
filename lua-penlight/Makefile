@@ -15,7 +15,7 @@ NO_BUILD=		yes
 INSTALLATION_DIRS+=	${LUA_LDIR}/pl
 WRKSRC=			${WRKDIR}/Penlight-${PKGVERSION_NOREV}
 
-DEPENDS+=	${LUA_PKGPREFIX}-luafilesystem-[0-9]*:../../local/lua-luafilesystem
+DEPENDS+=	${LUA_PKGPREFIX}-luafilesystem-[0-9]*:../../wip/lua-luafilesystem
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lua/pl/* ${DESTDIR}${PREFIX}/${LUA_LDIR}/pl
