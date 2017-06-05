@@ -2,22 +2,6 @@ $NetBSD$
 
 --- configure.orig	2017-05-26 04:41:16.000000000 +0000
 +++ configure
-@@ -3041,14 +3041,13 @@ if test "$curses" != "no" ; then
- #include <curses.h>
- #include <wchar.h>
- int main(void) {
--  const char *s = curses_version();
-   wchar_t wch = L'w';
-   setlocale(LC_ALL, "");
-   resize_term(0, 0);
-   addwstr(L"wide chars\n");
-   addnwstr(&wch, 1);
-   add_wch(WACS_DEGREE);
--  return s != 0;
-+  return 0;
- }
- EOF
-   IFS=:
 @@ -4928,6 +4927,8 @@ if test "$want_tools" = "yes" ; then
    tools="qemu-img\$(EXESUF) qemu-io\$(EXESUF) $tools"
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
