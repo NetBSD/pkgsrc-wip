@@ -4,7 +4,7 @@ DISTNAME=	retroarch-1.6.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	http://www.retroarch.com/
 COMMENT=	Official reference frontend for the libretro API
 LICENSE=	gnu-gpl-v3
