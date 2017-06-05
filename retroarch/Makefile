@@ -63,5 +63,4 @@ CONFIGURE_ARGS+=	--disable-thread_storage
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

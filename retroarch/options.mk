@@ -3,7 +3,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype
+PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype libxml2
 PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
 
 .if !empty(MACHINE_ARCH:M*arm*)
@@ -17,6 +17,14 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .if !empty(PKG_OPTIONS:Mrpi)
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
+.endif
+
+# Legacy shader support
+.if !empty(PKG_OPTIONS:Mlibxml2)
+CONFIGURE_ARGS+=	--enable-libxml2
+.include "../../textproc/libxml2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libxml2
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl2)
