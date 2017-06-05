@@ -4,9 +4,9 @@ PKGNAME=	libretro-picodrive-20170418
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia.alarie@gmail.com
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=PicoDrive
-COMMENT=	Fast MegaDrive/MegaCD/32X emulator
+COMMENT=	Libretro core for emulating Sega 8/16-bit consoles & 32X
 LICENSE=	picodrive-license
 
 PICODRIVE_TAG=	cbc93b68dca1d72882d07b54bbe1ef25b980558a

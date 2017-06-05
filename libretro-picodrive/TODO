@@ -1,10 +1,11 @@
 The upstream code has problems. They use a specific toolchain to mitigate
-that.
+the problems.
 
-I couldn't get it to start without segfaulting on NetBSD amd64 with clang
-and gcc5, same on Armbian with gcc 4.9.
+I couldn't get it to run properly on NetBSD amd64, with clang or gcc5.
 
 According to upstream it depends on gcc 4.8, which works on amd64 and ARM.
 
-(This has always been the case, and isn't just specific to this newer
-version.)
+gcc 4.9 also works on ARM.
+
+(This has always been a problem in libretro-picodrive, and isn't specific
+to this newer version.)
