@@ -101,29 +101,17 @@ PLIST.notdylib=	yes
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
-PKG_SUPPORTED_OPTIONS=	tests
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mtests)
-CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=ON
-CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=ON
-TEST_TARGET=		clang-test
+TEST_TARGET=		check-clang
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
-.include "../../devel/googletest/buildlink3.mk"
-.else
-CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
-CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
-.endif
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-netbsd
 .include "../../wip/llvm-netbsd/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
