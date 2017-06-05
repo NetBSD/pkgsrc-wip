@@ -189,6 +189,7 @@ SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
 SUBDIR+=	avr-libc
 SUBDIR+=	avrdude
+SUBDIR+=	awesome4
 SUBDIR+=	axe
 SUBDIR+=	axel
 SUBDIR+=	azureus

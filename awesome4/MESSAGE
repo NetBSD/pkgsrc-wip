@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2008/07/15 14:31:12 ahoka Exp $
+
+If you are upgrading from an older version,
+run awesome -k to check your configuration file syntax.
+
+===========================================================================
