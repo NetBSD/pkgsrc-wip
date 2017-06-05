@@ -33,12 +33,6 @@ DEPENDS+=	retroarch-assets>0:../../wip/retroarch-assets
 EGDIR=		${PREFIX}/share/examples/retroarch
 CONF_FILES+=	${EGDIR}/retroarch.cfg ${PKG_SYSCONFDIR}/retroarch.cfg
 
-SUBST_CLASSES+=		vc
-SUBST_STAGE.vc=		pre-configure
-SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
-SUBST_FILES.vc=		qb/config.libs.sh
-SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
-
 SUBST_CLASSES+=		cfg
 SUBST_STAGE.cfg=	pre-configure
 SUBST_MESSAGE.cfg=	Setting paths in sample config.

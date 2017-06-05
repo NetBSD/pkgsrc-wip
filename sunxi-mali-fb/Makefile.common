@@ -1,0 +1,57 @@
+# $NetBSD$
+
+PKGNAME=	sunxi-mali-${EGL_TYPE_SMALL}-20140326
+CATEGORIES=	graphics
+
+MAINTAINER=	nia.alarie@gmail.com
+HOMEPAGE=	https://github.com/linux-sunxi/sunxi-mali
+
+ONLY_FOR_PLATFORM=	Linux-*-*arm*
+
+MAIN_TAG=	d343311efc8db166d8371b28494f0f27b6a58724
+BINARY_TAG=	1c5063f43cdc9de341c0d63b2e3921cab86c7742
+
+DISTFILES+=	${MAIN_TAG}.tar.gz
+SITES.${MAIN_TAG}.tar.gz= \
+	${MASTER_SITE_GITHUB:=linux-sunxi/sunxi-mali/archive/}
+
+DISTFILES+=	${BINARY_TAG}.tar.gz
+SITES.${BINARY_TAG}.tar.gz= \
+	${MASTER_SITE_GITHUB:=linux-sunxi/sunxi-mali-proprietary/archive/}
+
+# The headers in the main repos are out of date...
+# See: https://github.com/libretro/RetroArch/issues/415
+# Using newer ones from Khronos.
+
+KHRONOS_GLES2_SITE=	https://www.khronos.org/registry/OpenGL/api/GLES2/
+
+DISTFILES+=	gl2.h
+SITES.gl2.h=	${KHRONOS_GLES2_SITE}
+
+DISTFILES+=	gl2ext.h
+SITES.gl2ext.h=	${KHRONOS_GLES2_SITE}
+
+DISTFILES+=		gl2platform.h
+SITES.gl2platform.h=	${KHRONOS_GLES2_SITE}
+
+USE_LANGUAGES=	# none
+NO_BUILD=	yes
+
+USE_TOOLS+=	gmake
+
+BUILD_TARGET=	config
+MAKE_ENV+=	VERSION=r3p0
+MAKE_ENV+=	ABI=armhf
+MAKE_ENV+=	EGL_TYPE=${EGL_TYPE}
+MAKE_ENV+=	prefix=${PREFIX}/sunxi-mali-${EGL_TYPE_SMALL}/
+
+INSTALLATION_DIRS+=	${PREFIX}/sunxi-mali-${EGL_TYPE_SMALL}/lib
+INSTALLATION_DIRS+=	${PREFIX}/sunxi-mali-${EGL_TYPE_SMALL}/include
+
+WRKSRC=		${WRKDIR}/sunxi-mali-${MAIN_TAG}
+
+post-extract:
+	${MV} ${WRKDIR}/sunxi-mali-proprietary-${BINARY_TAG}/* ${WRKSRC}/lib/mali
+	${MV} ${WRKDIR}/*.h ${WRKSRC}/include/GLES2
+
+.include "../../mk/bsd.pkg.mk"

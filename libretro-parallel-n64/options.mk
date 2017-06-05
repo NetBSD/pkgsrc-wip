@@ -9,7 +9,7 @@ PKG_OPTIONS_GROUP.graphics=	opengl
 .if !empty(MACHINE_ARCH:M*arm*)
 PKG_OPTIONS_GROUP.graphics+=	rpi
 PKG_SUPPORTED_OPTIONS+=	dynarec
-PKG_SUGGESTED_OPTIONS+=	rpi dynarec
+PKG_SUGGESTED_OPTIONS+=	dynarec
 N64_DYNAREC_ARCH=	arm
 .elif !empty(MACHINE_ARCH:Mi386)
 PKG_SUPPORTED_OPTIONS+=	dynarec
@@ -23,7 +23,28 @@ N64_DYNAREC_ARCH=	x86_64
 PKG_SUGGESTED_OPTIONS+=	opengl
 .endif
 
+.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
+PKG_OPTIONS_GROUP.graphics+=	sunxi-mali-fb
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*)
+PKG_SUGGESTED_OPTIONS+=	rpi
+.endif
+
 .include "../../mk/bsd.options.mk"
+
+#
+# Enable use of the Linux binary Mali GPU driver (framebuffer version)
+#
+.if !empty(PKG_OPTIONS:Msunxi-mali-fb)
+.include "../../wip/sunxi-mali-fb/buildlink3.mk"
+BUILD_MAKE_FLAGS+=	FORCE_GLES=1
+BUILD_MAKE_FLAGS+=	HAVE_NEON=1
+.endif
+
+.if !empty(PKG_OPTIONS:Msunxi-mali-fb) || ${N64_DYNAREC_ARCH} == "arm"
+CFLAGS+=		-marm
+.endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -35,5 +56,6 @@ MAKE_ENV+=	platform=rpi
 .endif
 
 .if !empty(PKG_OPTIONS:Mdynarec)
-MAKE_ENV+=	WITH_DYNAREC=${N64_DYNAREC_ARCH}
+BUILD_MAKE_FLAGS+=	WITH_DYNAREC=${N64_DYNAREC_ARCH}
 .endif
+

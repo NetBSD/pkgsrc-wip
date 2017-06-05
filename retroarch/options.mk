@@ -8,6 +8,13 @@ PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
 
 .if !empty(MACHINE_ARCH:M*arm*)
 PKG_SUPPORTED_OPTIONS+=	rpi
+.endif
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
+PKG_SUPPORTED_OPTIONS+=	sunxi-mali-fb
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*)
 PKG_SUGGESTED_OPTIONS+=	rpi
 .endif
 
@@ -17,9 +24,30 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .if !empty(PKG_OPTIONS:Mrpi)
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
+SUBST_CLASSES+=		vc
+SUBST_STAGE.vc=		pre-configure
+SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
+SUBST_FILES.vc=		qb/config.libs.sh
+SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
+CONFIGURE_ARGS+=	--enable-opengles
+CONFIGURE_ARGS+=	--disable-opengl
 .endif
 
+#
+# Enable use of the Linux binary Mali GPU driver (framebuffer version)
+#
+.if !empty(PKG_OPTIONS:Msunxi-mali-fb)
+.include "../../wip/sunxi-mali-fb/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-floathard
+CONFIGURE_ARGS+=	--enable-neon
+CONFIGURE_ARGS+=	--enable-opengles
+CONFIGURE_ARGS+=	--enable-mali_fbdev
+CONFIGURE_ARGS+=	--disable-opengl
+.endif
+
+#
 # Legacy shader support
+#
 .if !empty(PKG_OPTIONS:Mlibxml2)
 CONFIGURE_ARGS+=	--enable-libxml2
 .include "../../textproc/libxml2/buildlink3.mk"

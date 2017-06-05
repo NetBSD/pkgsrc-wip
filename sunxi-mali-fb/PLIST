@@ -1,0 +1,21 @@
+@comment $NetBSD$
+sunxi-mali-fb/include/EGL/egl.h
+sunxi-mali-fb/include/EGL/eglext.h
+sunxi-mali-fb/include/EGL/eglplatform.h
+sunxi-mali-fb/include/GLES/gl.h
+sunxi-mali-fb/include/GLES/glext.h
+sunxi-mali-fb/include/GLES/glplatform.h
+sunxi-mali-fb/include/GLES2/gl2.h
+sunxi-mali-fb/include/GLES2/gl2ext.h
+sunxi-mali-fb/include/GLES2/gl2platform.h
+sunxi-mali-fb/include/KHR/khrplatform.h
+sunxi-mali-fb/lib/libEGL.so
+sunxi-mali-fb/lib/libEGL.so.1
+sunxi-mali-fb/lib/libEGL.so.1.4
+sunxi-mali-fb/lib/libGLESv1_CM.so
+sunxi-mali-fb/lib/libGLESv1_CM.so.1
+sunxi-mali-fb/lib/libGLESv1_CM.so.1.1
+sunxi-mali-fb/lib/libGLESv2.so
+sunxi-mali-fb/lib/libGLESv2.so.2
+sunxi-mali-fb/lib/libGLESv2.so.2.0
+sunxi-mali-fb/lib/libMali.so
