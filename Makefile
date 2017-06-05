@@ -1850,6 +1850,7 @@ SUBDIR+=	ltrace
 SUBDIR+=	lua-MessagePack
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
+SUBDIR+=	lua-luafilesystem
 SUBDIR+=	lua-mpack
 SUBDIR+=	lua-penlight
 SUBDIR+=	lucene
