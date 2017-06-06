@@ -18,7 +18,8 @@ PKG_SUPPORTED_OPTIONS+=	sunxi-mali-fb
 PKG_SUGGESTED_OPTIONS+=	rpi
 .endif
 
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa
+PKG_SUPPORTED_OPTIONS.Linux+=	udev
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
 
 .include "../../mk/bsd.options.mk"
 
@@ -43,6 +44,16 @@ CONFIGURE_ARGS+=	--enable-neon
 CONFIGURE_ARGS+=	--enable-opengles
 CONFIGURE_ARGS+=	--enable-mali_fbdev
 CONFIGURE_ARGS+=	--disable-opengl
+.endif
+
+.if !empty(PKG_OPTIONS:Mudev)
+# To support keyboard callback interface in udev, the libxkbcommon package
+# (version 0.3 and up) is required. It is used to translate raw evdev events
+# to printable characters. It does not depend on Xorg, but it depends on X11
+# keyboard layout files being installed.
+.include "../../x11/libxkbcommon/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-udev
 .endif
 
 #
