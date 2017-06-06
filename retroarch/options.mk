@@ -7,15 +7,16 @@ PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype libxml2
 PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
 
 .if !empty(MACHINE_ARCH:M*arm*)
-PKG_SUPPORTED_OPTIONS+=	rpi
+PKG_OPTIONS_OPTIONAL_GROUPS+=	gles
+PKG_OPTIONS_GROUP.gles+=	rpi
 .endif
 
 .if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
-PKG_SUPPORTED_OPTIONS+=	sunxi-mali-fb
+PKG_OPTIONS_GROUP.gles+=	sunxi-mali-fb
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*)
-PKG_SUGGESTED_OPTIONS+=	rpi
+PKG_SUGGESTED_OPTIONS+=		rpi
 .endif
 
 PKG_SUPPORTED_OPTIONS.Linux+=	udev
