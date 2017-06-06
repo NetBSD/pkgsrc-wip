@@ -24,6 +24,9 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
+TEST_TARGET=		check-compiler-rt
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
