@@ -94,8 +94,8 @@ CONFIGURE_ARGS+=	--without-ldap
 .if !empty(PKG_OPTIONS:Mspeex)
 .include "../../audio/speex/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-speex
-CONFIGURE_ARGS+=	--with-speexdsp
+CONFIGURE_ARGS+=        --with-speex=${BUILDLINK_PREFIX.speex}
+CONFIGURE_ARGS+=        --with-speexdsp=${BUILDLINK_PREFIX.speexdsp}
 PLIST.speex=		yes
 .else
 CONFIGURE_ARGS+=	--without-speex

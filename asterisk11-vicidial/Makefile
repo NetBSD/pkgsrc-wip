@@ -5,6 +5,7 @@
 #       to find out the current sound file versions
 
 DISTNAME=	asterisk-11.22.0-vici
+PKGNAME=	asterisk-11.22.0
 CATEGORIES=	comms net audio
 MASTER_SITES=   http://download.vicidial.com/required-apps/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/
@@ -41,6 +42,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
+CONFIGURE_ARGS+=	--with-sqlite3=${PREFIX}
 # XXX remove when lang/lua gets builtin.mk
 CONFIGURE_ARGS+=	--without-lua
 
@@ -48,7 +50,7 @@ CONFIGURE_ARGS+=	--without-lua
     (empty(OS_VERSION:M6.99.[4-9]?) && empty(OS_VERSION:M[7-9].*)))
 CONFIGURE_ARGS+=	--without-srtp
 .else
-CONFIGURE_ARGS+=	--with-srtp
+CONFIGURE_ARGS+=        --with-srtp=${BUILDLINK_PREFIX.srtp}
 PLIST.srtp=		YES
 .include "../../comms/srtp/buildlink3.mk"
 .endif
