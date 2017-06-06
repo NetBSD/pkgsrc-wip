@@ -16,6 +16,12 @@ MAKE_FILE=	makefile.libretro
 
 USE_LANGUAGES=	c c++
 
+.include "../../mk/endian.mk"
+
+.if ${MACHINE_ENDIAN} == "big"
+BUILD_MAKE_FLAGS+=	ENDIANNESS_DEFINES=-DWORDS_BIGENDIAN
+.endif
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:

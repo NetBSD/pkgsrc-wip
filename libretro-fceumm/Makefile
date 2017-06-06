@@ -17,6 +17,10 @@ USE_TOOLS+=	gmake
 
 CFLAGS+=	-DHAVE_ASPRINTF
 
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=	-DMSB_FIRST
+.endif
+
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:

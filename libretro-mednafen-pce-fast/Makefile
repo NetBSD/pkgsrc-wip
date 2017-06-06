@@ -19,15 +19,12 @@ PKGCONFIG_OVERRIDE+=	mednafen/tremor/vorbisidec.pc.in
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/endian.mk"
 
-.if !empty(MACHINE_ARCH:M*arm*hf)
-MEDNAFEN_PLATFORM=	${MACHINE_ARCH}-hardfloat
-.else
-MEDNAFEN_PLATFORM=	unix
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=	-DMSB_FIRST
+CFLAGS+=	-DBYTE_ORDER=BIG_ENDIAN
 .endif
-
-MAKE_ENV+=	platform="${MEDNAFEN_PLATFORM}"
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/mednafen_pce_fast_libretro.so \

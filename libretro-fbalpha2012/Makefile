@@ -3,6 +3,7 @@
 DISTNAME=	libretro-fbalpha2012-20170322
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+
 COMMENT=	Libretro core based on the FB Alpha arcade emulator
 LICENSE=	no-commercial-use
 
@@ -16,6 +17,12 @@ USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/svn-current/trunk
 
 MAKE_FILE=	makefile.libretro
+
+.include "../../mk/endian.mk"
+
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=	-DMSB_FIRST
+.endif
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 

@@ -3,6 +3,7 @@
 DISTNAME=	libretro-mame2003-20170306
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=MAME_2003
 COMMENT=	Libretro core based on the Multiple Arcade Machine Emulator (v0.78)
 LICENSE=	no-commercial-use
@@ -14,9 +15,13 @@ EXTRACT_SUFX=	.zip
 
 USE_TOOLS=	gmake
 
-INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
+.include "../../mk/endian.mk"
 
-#NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
+.if ${MACHINE_ENDIAN} == "big"
+BUILD_MAKE_FLAGS+=	BIGENDIAN=1
+.endif
+
+INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/mame2003_libretro.so \
