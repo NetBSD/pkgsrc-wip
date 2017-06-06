@@ -1,0 +1,3 @@
+An alternative package that uses this one's Makefile.common and
+installs the X11 version instead of the framebuffer version should
+be imported.
