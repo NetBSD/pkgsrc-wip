@@ -58,4 +58,3 @@ MAKE_ENV+=	platform=rpi
 .if !empty(PKG_OPTIONS:Mdynarec)
 BUILD_MAKE_FLAGS+=	WITH_DYNAREC=${N64_DYNAREC_ARCH}
 .endif
-
