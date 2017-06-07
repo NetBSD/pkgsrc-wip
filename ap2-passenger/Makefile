@@ -6,6 +6,9 @@ COMMENT=		Passenger module for running Rails and Rack applications on Apache2
 
 BUILDLINK_DEPMETHOD.libeio=	build
 BUILDLINK_DEPMETHOD.curl=	build
+
+RUBY_VERSIONS_ACCEPTED=	22 23   # www/ruby-rack via wip/ruby-passenger
+
 .include "../../wip/ruby-passenger/Makefile.common"
 
 PKG_APACHE_ACCEPTED=	apache24 apache22
