@@ -2,7 +2,20 @@ $NetBSD$
 
 --- lib/builtins/atomic.c.orig	2017-06-04 14:47:39.000000000 +0000
 +++ lib/builtins/atomic.c
-@@ -45,6 +45,65 @@
+@@ -32,10 +32,12 @@
+ 
+ // Clang objects if you redefine a builtin.  This little hack allows us to
+ // define a function with the same name as an intrinsic.
++#ifdef __clang__
+ #pragma redefine_extname __atomic_load_c SYMBOL_NAME(__atomic_load)
+ #pragma redefine_extname __atomic_store_c SYMBOL_NAME(__atomic_store)
+ #pragma redefine_extname __atomic_exchange_c SYMBOL_NAME(__atomic_exchange)
+ #pragma redefine_extname __atomic_compare_exchange_c SYMBOL_NAME(__atomic_compare_exchange)
++#endif
+ 
+ /// Number of locks.  This allocates one page on 32-bit platforms, two on
+ /// 64-bit.  This can be specified externally if a different trade between
+@@ -45,6 +47,65 @@
  #endif
  static const long SPINLOCK_MASK = SPINLOCK_COUNT - 1;
  
@@ -68,7 +81,7 @@ $NetBSD$
  ////////////////////////////////////////////////////////////////////////////////
  // Platform-specific lock implementation.  Falls back to spinlocks if none is
  // defined.  Each platform should define the Lock type, and corresponding
-@@ -57,14 +116,14 @@ static const long SPINLOCK_MASK = SPINLO
+@@ -57,14 +118,14 @@ static const long SPINLOCK_MASK = SPINLO
  #include <sys/umtx.h>
  typedef struct _usem Lock;
  __inline static void unlock(Lock *l) {
@@ -85,7 +98,7 @@ $NetBSD$
          0, __ATOMIC_ACQUIRE, __ATOMIC_RELAXED)) {
      _umtx_op(l, UMTX_OP_SEM_WAIT, 0, 0, 0);
      old = 1;
-@@ -90,13 +149,13 @@ static Lock locks[SPINLOCK_COUNT]; // in
+@@ -90,13 +151,13 @@ static Lock locks[SPINLOCK_COUNT]; // in
  typedef _Atomic(uintptr_t) Lock;
  /// Unlock a lock.  This is a release operation.
  __inline static void unlock(Lock *l) {
@@ -101,7 +114,7 @@ $NetBSD$
          __ATOMIC_RELAXED))
      old = 0;
  }
-@@ -125,10 +184,10 @@ static __inline Lock *lock_for_pointer(v
+@@ -125,10 +186,10 @@ static __inline Lock *lock_for_pointer(v
  /// Macros for determining whether a size is lock free.  Clang can not yet
  /// codegen __atomic_is_lock_free(16), so for now we assume 16-byte values are
  /// not lock free.
@@ -116,7 +129,7 @@ $NetBSD$
  #define IS_LOCK_FREE_16 0
  
  /// Macro that calls the compiler-generated lock-free versions of functions
-@@ -161,7 +220,7 @@ static __inline Lock *lock_for_pointer(v
+@@ -161,7 +222,7 @@ static __inline Lock *lock_for_pointer(v
  /// pointer only.
  void __atomic_load_c(int size, void *src, void *dest, int model) {
  #define LOCK_FREE_ACTION(type) \
@@ -125,7 +138,7 @@ $NetBSD$
      return;
    LOCK_FREE_CASES();
  #undef LOCK_FREE_ACTION
-@@ -175,7 +234,7 @@ void __atomic_load_c(int size, void *src
+@@ -175,7 +236,7 @@ void __atomic_load_c(int size, void *src
  /// pointer only.
  void __atomic_store_c(int size, void *dest, void *src, int model) {
  #define LOCK_FREE_ACTION(type) \
@@ -134,7 +147,7 @@ $NetBSD$
      return;
    LOCK_FREE_CASES();
  #undef LOCK_FREE_ACTION
-@@ -193,7 +252,7 @@ void __atomic_store_c(int size, void *de
+@@ -193,7 +254,7 @@ void __atomic_store_c(int size, void *de
  int __atomic_compare_exchange_c(int size, void *ptr, void *expected,
      void *desired, int success, int failure) {
  #define LOCK_FREE_ACTION(type) \
@@ -143,7 +156,7 @@ $NetBSD$
        *(type*)desired, success, failure)
    LOCK_FREE_CASES();
  #undef LOCK_FREE_ACTION
-@@ -213,7 +272,7 @@ int __atomic_compare_exchange_c(int size
+@@ -213,7 +274,7 @@ int __atomic_compare_exchange_c(int size
  /// with respect to the target address.
  void __atomic_exchange_c(int size, void *ptr, void *val, void *old, int model) {
  #define LOCK_FREE_ACTION(type) \
@@ -152,7 +165,7 @@ $NetBSD$
          model);\
      return;
    LOCK_FREE_CASES();
-@@ -247,7 +306,7 @@ void __atomic_exchange_c(int size, void 
+@@ -247,7 +308,7 @@ void __atomic_exchange_c(int size, void 
  #define OPTIMISED_CASE(n, lockfree, type)\
  type __atomic_load_##n(type *src, int model) {\
    if (lockfree)\
@@ -161,7 +174,7 @@ $NetBSD$
    Lock *l = lock_for_pointer(src);\
    lock(l);\
    type val = *src;\
-@@ -260,7 +319,7 @@ OPTIMISED_CASES
+@@ -260,7 +321,7 @@ OPTIMISED_CASES
  #define OPTIMISED_CASE(n, lockfree, type)\
  void  __atomic_store_##n(type *dest, type val, int model) {\
    if (lockfree) {\
@@ -170,7 +183,7 @@ $NetBSD$
      return;\
    }\
    Lock *l = lock_for_pointer(dest);\
-@@ -275,7 +334,7 @@ OPTIMISED_CASES
+@@ -275,7 +336,7 @@ OPTIMISED_CASES
  #define OPTIMISED_CASE(n, lockfree, type)\
  type __atomic_exchange_##n(type *dest, type val, int model) {\
    if (lockfree)\
@@ -179,7 +192,7 @@ $NetBSD$
    Lock *l = lock_for_pointer(dest);\
    lock(l);\
    type tmp = *dest;\
-@@ -290,7 +349,7 @@ OPTIMISED_CASES
+@@ -290,7 +351,7 @@ OPTIMISED_CASES
  int __atomic_compare_exchange_##n(type *ptr, type *expected, type desired,\
      int success, int failure) {\
    if (lockfree)\
@@ -188,7 +201,7 @@ $NetBSD$
          success, failure);\
    Lock *l = lock_for_pointer(ptr);\
    lock(l);\
-@@ -312,7 +371,7 @@ OPTIMISED_CASES
+@@ -312,7 +373,7 @@ OPTIMISED_CASES
  #define ATOMIC_RMW(n, lockfree, type, opname, op) \
  type __atomic_fetch_##opname##_##n(type *ptr, type val, int model) {\
    if (lockfree) \
