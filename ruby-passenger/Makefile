@@ -4,6 +4,8 @@ PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 
 COMMENT=		Modules for running Ruby on Rails and Rack applications
 
+RUBY_VERSIONS_ACCEPTED=	22 23	# www/ruby-rack
+
 .include "Makefile.common"
 
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
@@ -12,8 +14,6 @@ DEPENDS+=		${RUBY_PKGPREFIX}-rack-[0-9]*:../../www/ruby-rack
 .if ${RUBY_VERSION_DEFAULT} == 18
 DEPENDS+=		${RUBY_PKGPREFIX}-rubygems>=1.2.0:../../misc/rubygems
 .endif
-
-RUBY_VERSIONS_ACCEPTED=	22 23	# www/ruby-rack
 
 INSTALL_ENV+=		FS_PREFIX=${PREFIX}
 INSTALL_ENV+=		FS_DOCDIR=${PREFIX}/share/doc
