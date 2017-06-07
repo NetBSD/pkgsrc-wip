@@ -1,7 +1,5 @@
 @comment $NetBSD$
 bin/retroarch
-bin/retroarch-cg2glsl
-man/man6/retroarch-cg2glsl.6
 man/man6/retroarch.6
 share/applications/retroarch.desktop
 share/examples/retroarch/retroarch.cfg

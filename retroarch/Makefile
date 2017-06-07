@@ -24,9 +24,6 @@ CONFIGURE_ENV+= MAN_DIR=${PREFIX}/${PKGMANDIR}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-REPLACE_PYTHON=	tools/cg2glsl.py
-
 DEPENDS+=	libretro-core-info>0:../../wip/libretro-core-info
 DEPENDS+=	retroarch-assets>0:../../wip/retroarch-assets
 
@@ -54,7 +51,6 @@ CONFIGURE_ARGS+=	--disable-thread_storage
 .endif
 
 .include "options.mk"
-.include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
