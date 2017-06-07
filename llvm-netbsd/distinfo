@@ -14,4 +14,4 @@ RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
 Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
 SHA1 (patch-include_llvm_ADT_Triple.h) = be08dde07a038259a3314ec7791d2ccf8a682c0c
 SHA1 (patch-include_llvm_Support_Memory.h) = 8828c30722635d2db04f886383d3ce910adb88a0
-SHA1 (patch-lib_Support_Unix_Memory.inc) = 2c9a1359c8af2b0a7c329dddf64f7feef465919c
+SHA1 (patch-lib_Support_Unix_Memory.inc) = f6e3d81caa1d9575cd5868472808713fc2434e0f

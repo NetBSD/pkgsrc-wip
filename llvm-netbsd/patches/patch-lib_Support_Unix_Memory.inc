@@ -2,7 +2,7 @@ $NetBSD$
 
 --- lib/Support/Unix/Memory.inc.orig	2016-12-16 22:52:53.000000000 +0000
 +++ lib/Support/Unix/Memory.inc
-@@ -195,14 +195,14 @@ Memory::AllocateRWX(size_t NumBytes, con
+@@ -195,9 +195,10 @@ Memory::AllocateRWX(size_t NumBytes, con
  #if defined(__APPLE__) && (defined(__arm__) || defined(__arm64__))
    void *pa = ::mmap(start, PageSize*NumPages, PROT_READ|PROT_EXEC,
                      flags, fd, 0);
@@ -16,12 +16,7 @@ $NetBSD$
  #endif
    if (pa == MAP_FAILED) {
      if (NearBlock) //Try again without a near hint
-       return AllocateRWX(NumBytes, nullptr);
--
-     MakeErrMsg(ErrMsg, "Can't allocate RWX Memory");
-     return MemoryBlock();
-   }
-@@ -223,10 +223,35 @@ Memory::AllocateRWX(size_t NumBytes, con
+@@ -223,10 +224,35 @@ Memory::AllocateRWX(size_t NumBytes, con
      MakeErrMsg(ErrMsg, "vm_protect RW failed");
      return MemoryBlock();
    }
@@ -57,7 +52,7 @@ $NetBSD$
    result.Size = NumPages*PageSize;
  
    return result;
-@@ -236,6 +261,9 @@ bool Memory::ReleaseRWX(MemoryBlock &M, 
+@@ -236,6 +262,9 @@ bool Memory::ReleaseRWX(MemoryBlock &M, 
    if (M.Address == nullptr || M.Size == 0) return false;
    if (0 != ::munmap(M.Address, M.Size))
      return MakeErrMsg(ErrMsg, "Can't release RWX Memory");
