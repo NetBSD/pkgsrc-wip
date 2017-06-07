@@ -249,6 +249,7 @@ SUBDIR+=	bogomips
 SUBDIR+=	boinc-git
 SUBDIR+=	bonnie++-current
 SUBDIR+=	boo
+SUBDIR+=	boost-libs-2017Q1
 SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
 SUBDIR+=	bowtie
