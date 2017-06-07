@@ -3584,7 +3584,6 @@ SUBDIR+=	py-scimath
 SUBDIR+=	py-sciproc
 SUBDIR+=	py-scipy-data_fitting
 SUBDIR+=	py-scitools
-SUBDIR+=	py-scp
 SUBDIR+=	py-screenutils
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-scs
