@@ -28,9 +28,6 @@ CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
 CMAKE_ARG_PATH=	${WRKDIR}/compiler-rt
 
-TEST_TARGET=		check-compiler-rt
-TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
-
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
