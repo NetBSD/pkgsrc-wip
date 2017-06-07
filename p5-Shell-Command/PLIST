@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${PERL5_SUB_INSTALLVENDORLIB}/Shell/Command.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Shell/Command/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Shell::Command.3
