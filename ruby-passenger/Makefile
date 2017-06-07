@@ -13,6 +13,8 @@ DEPENDS+=		${RUBY_PKGPREFIX}-rack-[0-9]*:../../www/ruby-rack
 DEPENDS+=		${RUBY_PKGPREFIX}-rubygems>=1.2.0:../../misc/rubygems
 .endif
 
+RUBY_VERSIONS_ACCEPTED=	22 23	# www/ruby-rack
+
 INSTALL_ENV+=		FS_PREFIX=${PREFIX}
 INSTALL_ENV+=		FS_DOCDIR=${PREFIX}/share/doc
 INSTALL_ENV+=		RUBYLIBDIR=${PREFIX}/${RUBY_VENDORLIB_BASE}
