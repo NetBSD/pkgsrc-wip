@@ -30,9 +30,9 @@ CONF_FILES+=	${EGDIR}/environment-sample.mk	  ${WRKDIR_FOR_MAKE}/environment.mk
 CONF_FILES+=	${EGDIR}/check-update-sample.sh   ${WRKDIR_FOR_MAKE}/check-update.sh
 CONF_FILES+=	${EGDIR}/cd-and-sh-sample         ${WRKDIR_FOR_MAKE}/cd-and-sh
 
+BUILD_DEFS+=	VARBASE
+
 # see INSTALL file also
-OWN_DIRS+=	${WRKDIR_FOR_MAKE}
-OWN_DIRS+=	${WRKDIR_FOR_MAKE}/htdocs
 OWN_DIRS_PERMS+=${WRKDIR_FOR_MAKE}        ${SHAREOWN} ${SHAREGRP} 0755
 OWN_DIRS_PERMS+=${WRKDIR_FOR_MAKE}/htdocs ${SHAREOWN} ${SHAREGRP} 0755
 
