@@ -6,6 +6,7 @@ SHA512 (retroarch-1.6.0.tar.gz) = 4cb180d78885103b8b607414fbac6d859ba916b2b7e77f
 Size (retroarch-1.6.0.tar.gz) = 16299774 bytes
 SHA1 (patch-Makefile) = 0a573beb9a95ab822eaa4056ccd260a0961b2d7b
 SHA1 (patch-Makefile.common) = 35ba9348f382c4c892ffd3e04729d5066d34977f
+SHA1 (patch-frontend_drivers_platform__linux.c) = 1a7c56461c05c2da905141cffd129c4cda0aa7d7
 SHA1 (patch-frontend_frontend__driver.c) = 1a92efc8ae1f4308afc4f21159c4cf467b6bba06
 SHA1 (patch-griffin_griffin.c) = 805a94274ad4a2118e9b2690bbc522caaa7551fc
 SHA1 (patch-qb_qb.libs.sh) = bd92a7016e45fd6ee5a47300516c4028227384b2
