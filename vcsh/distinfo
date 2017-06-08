@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (vcsh/v1.20151229.zip) = 26132f5c5dd73857f8b513f733ed1dc6b6c50d68
+RMD160 (vcsh/v1.20151229.zip) = f2c9218483c9eb5253c62858b8a97bb765d4b3f8
+SHA512 (vcsh/v1.20151229.zip) = 04c6f8315e0746457976fdc0524d991fcf1fde77ef049e5d337b0ac677a7aa41bc20c596bdb7c85bf5e424394832cfef5d8fc0e3a26d6d86d8b1b6ccd8717581
+Size (vcsh/v1.20151229.zip) = 44281 bytes
+SHA1 (patch-100-init.t) = 7967fecceed1b67febdcf08c58a4976cbda4175f
+SHA1 (patch-Makefile) = 41aa1ed3b44c940b582e197ba2e995bfafaafa25

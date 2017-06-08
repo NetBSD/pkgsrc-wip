@@ -1,0 +1,35 @@
+$NetBSD$
+
+Move man pages from share/man/ to man/
+
+--- Makefile.orig	2015-12-29 19:24:22.000000000 +0000
++++ Makefile
+@@ -12,8 +12,8 @@ all: $(all)
+ install: all
+ 	install -d $(DESTDIR)$(PREFIX)/bin
+ 	install -m 0755 $(self) $(DESTDIR)$(PREFIX)/bin
+-	install -d $(DESTDIR)$(PREFIX)/share/man/man1
+-	install -m 0644 $(manpages) $(DESTDIR)$(PREFIX)/share/man/man1
++	install -d $(DESTDIR)$(PREFIX)/man/man1
++	install -m 0644 $(manpages) $(DESTDIR)$(PREFIX)/man/man1
+ 	install -d $(DESTDIR)$(DOCDIR)
+ 	install -m 0644 README.md $(DESTDIR)$(DOCDIR)
+ 	install -m 0644 doc/hooks $(DESTDIR)$(DOCDIR)
+@@ -24,7 +24,7 @@ clean:
+ 
+ uninstall:
+ 	rm -rf $(DESTDIR)$(PREFIX)/bin/$(self)
+-	rm -rf $(DESTDIR)$(PREFIX)/share/man/man1/$(self).1
++	rm -rf $(DESTDIR)$(PREFIX)/man/man1/$(self).1
+ 	rm -rf $(DESTDIR)$(DOCDIR)
+ 	rm -rf $(DESTDIR)$(ZSHDIR)/_$(self)
+ 
+@@ -32,7 +32,7 @@ uninstall:
+ # If PREFIX=/usr/local and that's empty...
+ purge: uninstall
+ 	rmdir -p --ignore-fail-on-non-empty $(DESTDIR)$(PREFIX)/bin/
+-	rmdir -p --ignore-fail-on-non-empty $(DESTDIR)$(PREFIX)/share/man/man1/
++	rmdir -p --ignore-fail-on-non-empty $(DESTDIR)$(PREFIX)/man/man1/
+ 	rmdir -p --ignore-fail-on-non-empty $(DESTDIR)$(DOCDIR)
+ 	rmdir -p --ignore-fail-on-non-empty $(DESTDIR)$(ZSHDIR)
+ 
