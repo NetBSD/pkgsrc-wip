@@ -2,10 +2,10 @@
 
 DISTNAME=	libretro-glsl-shaders-20170606
 CATEGORIES=	emulators
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=libretro/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
-MAINTAINER=     nia.alarie@gmail.com
-COMMENT=        Libretro GLSL shaders
+MAINTAINER=	nia.alarie@gmail.com
+COMMENT=	Libretro GLSL shaders
 
 GITHUB_PROJECT=	glsl-shaders
 GITHUB_TAG=	6815399965a466b601df12e47c03367ff6d26df6
@@ -124,7 +124,7 @@ SHADER_DIRS+=	xsoft
 SHADER_DIRS+=	xsoft/shaders
 
 .for i in ${SHADER_DIRS}
-INSTALLATION_DIRS+=     share/libretro/shaders/${i}
+INSTALLATION_DIRS+=	share/libretro/shaders/${i}
 .endfor
 
 do-install:
