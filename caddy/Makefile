@@ -14,6 +14,8 @@ GO_DIST_BASE=	caddy-${GITHUB_TAG}*
 GO_SRCPATH=	github.com/mholt/caddy
 GO_BUILD_PATTERN= ${GO_SRCPATH}/caddy
 
+EXTRACT_USING=		bsdtar
+
 INSTALLATION_DIRS=	bin
 
 do-install:
