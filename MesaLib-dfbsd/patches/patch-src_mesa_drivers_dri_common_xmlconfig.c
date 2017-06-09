@@ -3,7 +3,7 @@ $NetBSD: patch-src_mesa_drivers_dri_common_xmlconfig.c,v 1.3 2016/02/23 11:16:55
 PR pkg/50202.
 Provide compat strndup for older Darwin.
 
---- src/mesa/drivers/dri/common/xmlconfig.c.orig	2016-11-10 22:05:17.000000000 +0000
+--- src/mesa/drivers/dri/common/xmlconfig.c.orig	2017-05-10 14:13:57.000000000 +0000
 +++ src/mesa/drivers/dri/common/xmlconfig.c
 @@ -50,12 +50,17 @@ extern char *program_invocation_name, *p
  #    define GET_PROGRAM_NAME() program_invocation_short_name
@@ -23,7 +23,7 @@ Provide compat strndup for older Darwin.
  #elif defined(__NetBSD__) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106000100)
  #    include <stdlib.h>
  #    define GET_PROGRAM_NAME() getprogname()
-@@ -111,6 +116,24 @@ static const char *__getProgramName () {
+@@ -115,6 +120,24 @@ __getProgramName()
  #    endif
  #endif
  
@@ -46,9 +46,9 @@ Provide compat strndup for older Darwin.
 +#endif
 +
  /** \brief Find an option in an option cache with the name as key */
- static uint32_t findOption (const driOptionCache *cache, const char *name) {
-     uint32_t len = strlen (name);
-@@ -939,7 +962,7 @@ static void parseOneConfigFile (XML_Pars
+ static uint32_t
+ findOption(const driOptionCache *cache, const char *name)
+@@ -980,7 +1003,7 @@ parseOneConfigFile(XML_Parser p)
  }
  
  #ifndef SYSCONFDIR
@@ -56,4 +56,4 @@ Provide compat strndup for older Darwin.
 +#define SYSCONFDIR "/usr/pkg/etc"
  #endif
  
- void driParseConfigFiles (driOptionCache *cache, const driOptionCache *info,
+ void

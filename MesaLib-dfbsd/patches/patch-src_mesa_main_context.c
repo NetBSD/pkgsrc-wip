@@ -2,9 +2,9 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
 
 * Fix exit time segfault of qt5 application with modular xorg
 
---- src/mesa/main/context.c.orig	2017-02-13 11:55:49.000000000 +0000
+--- src/mesa/main/context.c.orig	2017-05-10 14:13:57.000000000 +0000
 +++ src/mesa/main/context.c
-@@ -348,11 +348,14 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
+@@ -351,11 +351,14 @@ mtx_t OneTimeLock = _MTX_INITIALIZER_NP;
   * Calls all the various one-time-fini functions in Mesa
   */
  
@@ -22,7 +22,7 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
  }
  
  /**
-@@ -367,7 +370,6 @@ one_time_fini(void)
+@@ -370,7 +373,6 @@ one_time_fini(void)
  static void
  one_time_init( struct gl_context *ctx )
  {
@@ -30,7 +30,7 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
  
     mtx_lock(&OneTimeLock);
  
-@@ -392,8 +394,6 @@ one_time_init( struct gl_context *ctx )
+@@ -395,8 +397,6 @@ one_time_init( struct gl_context *ctx )
           _mesa_ubyte_to_float_color_tab[i] = (float) i / 255.0F;
        }
  
@@ -38,4 +38,4 @@ $NetBSD: patch-src_mesa_main_context.c,v 1.3 2015/09/26 08:45:02 tnn Exp $
 -
  #if defined(DEBUG) && defined(__DATE__) && defined(__TIME__)
        if (MESA_VERBOSE != 0) {
- 	 _mesa_debug(ctx, "Mesa %s DEBUG build %s %s\n",
+          _mesa_debug(ctx, "Mesa %s DEBUG build %s %s\n",

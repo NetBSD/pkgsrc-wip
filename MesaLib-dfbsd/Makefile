@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.129 2016/10/20 12:06:06 wiz Exp $
 
-DISTNAME=	mesa-17.0.2
+DISTNAME=	mesa-17.1.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics x11
 # Waiting for 17.0.1 subdirectory to be created

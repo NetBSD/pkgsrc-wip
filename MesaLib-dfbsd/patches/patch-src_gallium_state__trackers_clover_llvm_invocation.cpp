@@ -1,6 +1,6 @@
 $NetBSD$
 
-From FreeBSD ports for graphics/libGL mesa 13.0.5
+Patch from FreeBSD ports graphics/mesa-dri 17.1.0
 
 # fix errors like the following
 #
@@ -11,7 +11,7 @@ ic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv' can not be used when 
 # /usr/bin/ld: final link failed: Bad value
 #
 
---- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2017-02-13 11:55:49.000000000 +0000
+--- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2017-05-25 07:13:13.000000000 +0000
 +++ src/gallium/state_trackers/clover/llvm/invocation.cpp
 @@ -93,6 +93,10 @@ namespace {
        return ctx;
@@ -30,7 +30,7 @@ ic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv' can not be used when 
        // class to recognize it as an OpenCL source file.
 +
 +#if defined(__FreeBSD__)
-+      std::vector<const char *> copts;
++      std::vector<const char *> copts(opts.size());
 +      std::transform(opts.begin(), opts.end(), copts.begin(), cstr);
 +#else
        const std::vector<const char *> copts =

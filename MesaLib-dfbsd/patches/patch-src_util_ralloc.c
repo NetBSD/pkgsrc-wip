@@ -6,26 +6,9 @@ https://bugs.freedesktop.org/show_bug.cgi?id=91869
 * Fix exit time segfault of qt5 application with modular xorg
 * Provide compat strnlen for older Darwin.
 
---- src/util/ralloc.c.orig	2017-02-13 11:55:50.000000000 +0000
+--- src/util/ralloc.c.orig	2017-05-10 14:13:58.000000000 +0000
 +++ src/util/ralloc.c
-@@ -325,7 +325,7 @@ ralloc_parent(const void *ptr)
- 
- static void *autofree_context = NULL;
- 
--static void
-+static void __attribute__((__destructor__))
- autofree(void)
- {
-    ralloc_free(autofree_context);
-@@ -336,7 +336,6 @@ ralloc_autofree_context(void)
- {
-    if (unlikely(autofree_context == NULL)) {
-       autofree_context = ralloc_context(NULL);
--      atexit(autofree);
-    }
-    return autofree_context;
- }
-@@ -373,7 +372,14 @@ ralloc_strndup(const void *ctx, const ch
+@@ -368,7 +368,14 @@ ralloc_strndup(const void *ctx, const ch
     if (unlikely(str == NULL))
        return NULL;
  
