@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		elixir-1.4.2
+DISTNAME=		elixir-1.4.4
 PKGREVISION=	1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elixir-lang/}
