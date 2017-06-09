@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.7 2012/10/07 16:23:16 asau Exp $
-#
 
 DISTNAME=	splix-2.0.0
 PKGREVISION=	3
@@ -18,5 +17,5 @@ MAKE_ENV+=	rastertoqpdl_CXXFLAGS=-pthread
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
