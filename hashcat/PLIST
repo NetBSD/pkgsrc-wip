@@ -252,6 +252,9 @@ share/hashcat/OpenCL/m00300_a1.cl
 share/hashcat/OpenCL/m00300_a3.cl
 share/hashcat/OpenCL/m00400.cl
 share/hashcat/OpenCL/m00500.cl
+share/hashcat/OpenCL/m00600_a0.cl
+share/hashcat/OpenCL/m00600_a1.cl
+share/hashcat/OpenCL/m00600_a3.cl
 share/hashcat/OpenCL/m00900_a0.cl
 share/hashcat/OpenCL/m00900_a1.cl
 share/hashcat/OpenCL/m00900_a3.cl
@@ -592,6 +595,15 @@ share/hashcat/OpenCL/m15000_a0.cl
 share/hashcat/OpenCL/m15000_a1.cl
 share/hashcat/OpenCL/m15000_a3.cl
 share/hashcat/OpenCL/m15100.cl
+share/hashcat/OpenCL/m15300.cl
+share/hashcat/OpenCL/m15400_a0.cl
+share/hashcat/OpenCL/m15400_a1.cl
+share/hashcat/OpenCL/m15400_a3.cl
+share/hashcat/OpenCL/m15500_a0.cl
+share/hashcat/OpenCL/m15500_a1.cl
+share/hashcat/OpenCL/m15500_a3.cl
+share/hashcat/OpenCL/m15600.cl
+share/hashcat/OpenCL/m15700.cl
 share/hashcat/OpenCL/markov_be.cl
 share/hashcat/OpenCL/markov_le.cl
 share/hashcat/hashcat.hcstat

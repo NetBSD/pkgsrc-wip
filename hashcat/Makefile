@@ -1,15 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	hashcat-3.5.0
+DISTNAME=	hashcat-3.6.0
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=hashcat/}
+MASTER_SITES=	https://hashcat.net/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/hashcat/hashcat/
+HOMEPAGE=	http://hashcat.net/
 COMMENT=	World's fastest and most advanced password recovery utility
 LICENSE=	mit
-
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_TOOLS+=	gmake gsed
 BUILD_TARGET=	hashcat
