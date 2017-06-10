@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	hashcat-utils-1.7
+DISTNAME=	hashcat-utils-1.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashcat/}
 
@@ -21,12 +21,5 @@ INSTALLATION_DIRS+=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/*.bin ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/src/*.pl ${DESTDIR}${PREFIX}/bin/
-
-#	for f in ${WRKSRC}/src/*.bin; do \
-#	${INSTALL_PROGRAM} ${f} ${DESTDIR}${PREFIX}/bin/ \
-#	done
-#	for s in ${WRKSRC}/src/*.pl; do \
-#		${INSTALL_SCRIPT} ${s} ${DESTDIR}${PREFIX}/bin/ \
-#	done
 
 .include "../../mk/bsd.pkg.mk"

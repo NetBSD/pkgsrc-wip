@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (hashcat-utils-1.7.tar.gz) = 44e56537538aa9a92d25fd5cbf7f613d3748757b
-RMD160 (hashcat-utils-1.7.tar.gz) = 2a4a72f2c0bec6a4cd7cc33a7aec1b197b7ab903
-SHA512 (hashcat-utils-1.7.tar.gz) = d4eeec504ad753388fc3736020cfed069acf3165e8eb57726f36855d9372fe0c0c0422753f0fe84e04cb67b1f4ec03b658345dda5a213646edc0e0b1ac3cdbad
-Size (hashcat-utils-1.7.tar.gz) = 38395 bytes
+SHA1 (hashcat-utils-1.8.tar.gz) = 3791a0b89f8aa7795e765755d5d3064116e8f839
+RMD160 (hashcat-utils-1.8.tar.gz) = 38411eff26b4b4cfcd7a9f8253c4a9a05e29234d
+SHA512 (hashcat-utils-1.8.tar.gz) = c096d31bb9d6421a8943ba7da6e13f4778695d8a43b7e9a8e9e302f2971973fdcebda42c91d315c787e4475d8b78bdb90b9d2a0c675c8e55f4687f222e50b4e5
+Size (hashcat-utils-1.8.tar.gz) = 40714 bytes

@@ -18,6 +18,7 @@ bin/morph.bin
 bin/permute.bin
 bin/permute_exist.bin
 bin/prepare.bin
+bin/remaining.pl
 bin/req-exclude.bin
 bin/req-include.bin
 bin/rli.bin
