@@ -1,0 +1,2 @@
+fix ffmpeg-related segfaults
+testing on ARM

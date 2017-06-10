@@ -1755,6 +1755,7 @@ SUBDIR+=	libretro-o2em
 SUBDIR+=	libretro-parallel-n64
 SUBDIR+=	libretro-pcsx-rearmed
 SUBDIR+=	libretro-picodrive
+SUBDIR+=	libretro-ppsspp
 SUBDIR+=	libretro-prboom
 SUBDIR+=	libretro-prosystem
 SUBDIR+=	libretro-snes9x2005

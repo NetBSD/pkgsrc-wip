@@ -1,0 +1,33 @@
+$NetBSD$
+
+Allow using our own flags to link to pkgsrc ffmpeg.
+
+--- Makefile.orig	2016-12-15 00:13:17.000000000 +0000
++++ Makefile
+@@ -41,7 +41,6 @@ endif
+ 
+ # Dirs
+ CORE_DIR			= ..
+-FFMPEGDIR		= $(CORE_DIR)/ffmpeg
+ LIBRETRODIR		= $(CORE_DIR)/libretro
+ COREDIR			= $(CORE_DIR)/Core
+ COMMONDIR		= $(CORE_DIR)/Common
+@@ -56,18 +55,12 @@ ifneq ($(GIT_VERSION)," unknown")
+ 	CXXFLAGS += -DGIT_VERSION=\"$(GIT_VERSION)\"
+ endif
+ CC_AS ?= $(CC)
+-FFMPEGINCFLAGS :=
+-FFMPEGLIBDIR :=
+-FFMPEGLIBS :=
+ 
+ # Unix
+ ifneq (,$(findstring unix,$(platform)))
+ 	TARGET := $(TARGET_NAME)_libretro.so
+ 	LDFLAGS += -shared -Wl,--version-script=link.T -Wl,--no-undefined
+ 
+-	FFMPEGINCFLAGS += -I$(FFMPEGDIR)/linux/$(FFMPEG_ARCH)/include
+-	FFMPEGLIBDIR := $(FFMPEGDIR)/linux/$(FFMPEG_ARCH)/lib
+-	FFMPEGLDFLAGS += -L$(FFMPEGLIBDIR) -lavformat -lavcodec -lavutil -lswresample -lswscale
+ 	fpic = -fPIC
+ 	ifneq (,$(findstring gles,$(platform)))
+ 		GLES = 1
