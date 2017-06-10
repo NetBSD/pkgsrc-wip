@@ -21,4 +21,10 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/mgba_libretro.so \
 	    ${DESTDIR}${PREFIX}/lib/libretro/mgba_libretro.so
 
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if !empty(MACHINE_ARCH:M*armv6*) || !empty(MACHINE_ARCH:M*armv7*)
+.include "options.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
