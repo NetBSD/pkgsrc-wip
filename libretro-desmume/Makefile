@@ -3,6 +3,7 @@
 DISTNAME=	libretro-desmume-20170211
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=DeSmuME
 COMMENT=	Libretro core based on the Desmume Nintendo DS emulator
 LICENSE=	gnu-gpl-v2
@@ -15,6 +16,14 @@ WRKSRC=		${WRKDIR}/desmume-${GITHUB_TAG}/desmume
 USE_TOOLS=	gmake
 
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if !empty(MACHINE_ARCH:M*arm*)
+CXXFLAGS+=		-marm
+BUILD_MAKE_FLAGS+=	DESMUME_JIT=0
+BUILD_MAKE_FLAGS+=	DESMUME_JIT_ARM=1
+.endif
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
