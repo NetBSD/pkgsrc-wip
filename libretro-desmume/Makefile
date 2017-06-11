@@ -15,9 +15,13 @@ WRKSRC=		${WRKDIR}/desmume-${GITHUB_TAG}/desmume
 
 USE_TOOLS=	gmake
 
+MAKE_FILE=	Makefile.libretro
+
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-*arm*
 
 .if !empty(MACHINE_ARCH:M*arm*)
 CXXFLAGS+=		-marm
