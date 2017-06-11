@@ -1,2 +1,4 @@
-fix ffmpeg-related segfaults
-testing on ARM
+Fix ffmpeg-related segfaults. Seems to be a conflict with retroarch as it works
+when ffmpeg is disabled in RetroArch. I tried a small hack to get it to build
+against ffmpeg3 by using some CFLAGS to redefine renamed symbols and that still
+didn't help.
