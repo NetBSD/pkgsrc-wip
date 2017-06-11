@@ -24,7 +24,7 @@ EGDIR=		${PREFIX}/share/examples/vimb
 
 MAKE_FLAGS+=	EXAMPLEPREFIX="${DESTDIR}${EGDIR}"
 MAKE_FLAGS+=	MANPREFIX="${DESTDIR}${PREFIX}/${PKGMANDIR}"
-MAKE_FLAGS+=	RUNPREFIX="${DESTDIR}${PREFIX}"
+MAKE_FLAGS+=	RUNPREFIX="${PREFIX}"
 
 # Avoid conflicts with www/vimb
 post-install:
