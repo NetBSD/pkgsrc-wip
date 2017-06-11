@@ -1,0 +1,47 @@
+# $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
+#
+# when updating this, please also update:
+# devel/include-what-you-use
+# devel/lldb
+# devel/polly
+# lang/clang
+# lang/clang-static-analyzer
+# lang/libLLVM
+# lang/libunwind
+#
+# Always update all */buildlink3.mk to require the latest stable release
+# version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
+#
+
+LLVM_VERSION=	5.0.0
+
+CATEGORIES=	lang devel
+
+SVN_REPOSITORIES=	llvm
+SVN_REPO.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
+SVN_REVISION.llvm=	304308
+
+WRKSRC=			${WRKDIR}/llvm
+
+CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
+
+# XXX perl is not added as a tool as it does not seem to be required
+REPLACE_PERL+=		utils/*.pl
+REPLACE_PERL+=		utils/codegen-diff
+REPLACE_PERL+=		utils/llvm-native-gxx
+
+REPLACE_PYTHON+=	*.py
+REPLACE_PYTHON+=	*/*.py
+REPLACE_PYTHON+=	*/*/*.py
+REPLACE_PYTHON+=	*/*/*/*.py
+REPLACE_PYTHON+=	*/*/*/*/*.py
+REPLACE_PYTHON+=	utils/Misc/zkill
+REPLACE_PYTHON+=	utils/bisect
+REPLACE_PYTHON+=	utils/clang-parse-diagnostics-file
+REPLACE_PYTHON+=	utils/git/find-rev
+REPLACE_PYTHON+=	utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest
+REPLACE_PYTHON+=	utils/llvm-build/llvm-build
+REPLACE_PYTHON+=	utils/llvm-compilers-check
+REPLACE_PYTHON+=	utils/llvm-lit/llvm-lit.in
+
+.include "../../wip/mk/svn-package.mk"

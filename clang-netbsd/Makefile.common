@@ -100,10 +100,12 @@ PLIST.notdylib=	yes
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
-CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=ON
+BUILD_DEPENDS+=		${PYPKGPREFIX}-llvm-lit-[0-9]*:../../wip/py-llvm-lit-netbsd
+CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
 CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=ON
 TEST_TARGET=		check-clang
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+CMAKE_ARGS+=		-DLLVM_LIT=llvm-lit-${PYVERSSUFFIX}
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
