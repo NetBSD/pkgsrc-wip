@@ -5,8 +5,7 @@ CATEGORIES=	lang devel
 
 SVN_REPOSITORIES=	compiler-rt
 SVN_REPO.compiler-rt=	http://llvm.org/svn/llvm-project/compiler-rt/trunk
-SVN_REVISION.compiler-rt=	304308
-
+SVN_REVISION.compiler-rt=	305178
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiler-rt.llvm.org/
 COMMENT=	LLVM runtime libraries
