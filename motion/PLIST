@@ -1,1 +1,20 @@
 @comment $NetBSD$
+bin/motion
+etc/motion/motion-dist.conf
+man/man1/motion.1
+share/doc/motion/CHANGELOG
+share/doc/motion/COPYING
+share/doc/motion/CREDITS
+share/doc/motion/README.md
+share/doc/motion/mask1.png
+share/doc/motion/motion_guide.html
+share/doc/motion/normal.jpg
+share/doc/motion/outputmotion1.jpg
+share/doc/motion/outputnormal1.jpg
+share/motion/examples/camera1-dist.conf
+share/motion/examples/camera2-dist.conf
+share/motion/examples/camera3-dist.conf
+share/motion/examples/camera4-dist.conf
+share/motion/examples/motion-dist.conf
+share/motion/examples/motion.init-FreeBSD.sh
+share/motion/examples/motion.service

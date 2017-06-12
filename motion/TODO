@@ -1,1 +1,5 @@
-track.c:9:29: fatal error: linux/videodev2.h: No such file or directory
+basic testing with a USB webcam seems to work OK.
+
+Needs testing to see if the Brooktree video cards
+still work. Also needs the database stuff testing
+and maybe ome tweaks to PLIST. 
