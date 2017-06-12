@@ -39,3 +39,152 @@ $NetBSD$
  #ifndef __GLIBC_PREREQ
  #define __GLIBC_PREREQ(x, y) 0
  #endif
+@@ -37,7 +50,7 @@
+ namespace __sanitizer {
+   extern unsigned struct_utsname_sz;
+   extern unsigned struct_stat_sz;
+-#if !SANITIZER_FREEBSD && !SANITIZER_IOS
++#if !SANITIZER_FREEBSD && !SANITIZER_IOS && !SANITIZER_NETBSD
+   extern unsigned struct_stat64_sz;
+ #endif
+   extern unsigned struct_rusage_sz;
+@@ -55,10 +68,16 @@ namespace __sanitizer {
+   extern unsigned struct_itimerspec_sz;
+   extern unsigned struct_sigevent_sz;
+   extern unsigned struct_sched_param_sz;
++#if !SANITIZER_NETBSD
+   extern unsigned struct_statfs64_sz;
++#endif
+ 
+ #if !SANITIZER_ANDROID
++#if SANITIZER_NETBSD
+   extern unsigned struct_statfs_sz;
++#else
++  extern unsigned struct_statvfs_sz;
++#endif
+   extern unsigned struct_sockaddr_sz;
+   extern unsigned ucontext_t_sz;
+ #endif // !SANITIZER_ANDROID
+@@ -121,18 +140,21 @@ namespace __sanitizer {
+ #endif  // SANITIZER_LINUX
+ 
+ #if SANITIZER_LINUX || SANITIZER_FREEBSD
+-
+ #if defined(__powerpc64__) || defined(__s390__)
+   const unsigned struct___old_kernel_stat_sz = 0;
+ #elif !defined(__sparc__)
+   const unsigned struct___old_kernel_stat_sz = 32;
+ #endif
++#endif // SANITIZER_LINUX || SANITIZER_FREEBSD
++
++#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+ 
+   extern unsigned struct_rlimit_sz;
+   extern unsigned struct_utimbuf_sz;
+   extern unsigned struct_timespec_sz;
+ 
+   struct __sanitizer_iocb {
++#if SANITIZER_LINUX || SANITIZER_FREEBSD
+     u64   aio_data;
+     u32   aio_key_or_aio_reserved1; // Simply crazy.
+     u32   aio_reserved1_or_aio_key; // Luckily, we don't need these.
+@@ -144,21 +166,53 @@ namespace __sanitizer {
+     s64   aio_offset;
+     u64   aio_reserved2;
+     u64   aio_reserved3;
++#else SANITIZER_NETBSD
++#if defined(__x86_64__)
++    u64   aio_offset;
++    u64   aio_buf;
++    u64   aio_nbytes;
++    u32   aio_fildes;
++    u32   aio_lio_opcode;
++    u64   aio_reqprio;
++    u8    aio_sigevent[32];
++    u32   _state;
++    u32   _errno;
++    u64   _retval;
++#elif defined(__i386__)
++    u64   aio_offset;
++    u32   aio_buf;
++    u32   aio_nbytes;
++    u32   aio_fildes;
++    u32   aio_lio_opcode;
++    u32   aio_reqprio;
++    u8    aio_sigevent[20];
++    u32   _state;
++    u32   _errno;
++    u32   _retval;
++#else
++#error port this to your platform
++#endif
++#endif
+   };
+ 
++#if SANITIZER_LINUX || SANITIZER_FREEBSD
+   struct __sanitizer_io_event {
+     u64 data;
+     u64 obj;
+     u64 res;
+     u64 res2;
+   };
++#endif
+ 
++#if SANITIZER_LINUX || SANITIZER_FREEBSD
+   const unsigned iocb_cmd_pread = 0;
+   const unsigned iocb_cmd_pwrite = 1;
+   const unsigned iocb_cmd_preadv = 7;
+   const unsigned iocb_cmd_pwritev = 8;
++#endif
+ 
+   struct __sanitizer___sysctl_args {
++#if SANITIZER_LINUX || SANITIZER_FREEBSD
+     int *name;
+     int nlen;
+     void *oldval;
+@@ -166,10 +220,21 @@ namespace __sanitizer {
+     void *newval;
+     uptr newlen;
+     unsigned long ___unused[4];
++#else
++    int          *name;
++    unsigned int  namelen;
++    void         *oldp;
++    size_t       *oldlenp;
++    void         *newp;
++    size_t        newlen;
++#endif
+   };
+ 
++#if SANITIZER_LINUX || SANITIZER_FREEBSD
+   const unsigned old_sigset_t_sz = sizeof(unsigned long);
++#endif
+ 
++#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+   struct __sanitizer_sem_t {
+ #if SANITIZER_ANDROID && defined(_LP64)
+     int data[4];
+@@ -179,6 +244,14 @@ namespace __sanitizer {
+     uptr data[4];
+ #elif SANITIZER_FREEBSD
+     u32 data[4];
++#elif SANITIZER_NETBSD
++#if defined(__x86_64__)
++    u8 data[40];
++#elif defined(__i386__)
++    u8 data[20];
++#else
++#error port this to your platform
++#endif
+ #endif
+   };
+ #endif // SANITIZER_LINUX || SANITIZER_FREEBSD
+@@ -303,7 +376,7 @@ namespace __sanitizer {
+   #endif
+ #endif
+   };
+-#elif SANITIZER_FREEBSD
++#elif SANITIZER_FREEBSD /// XXX MARK
+   struct __sanitizer_ipc_perm {
+     unsigned int cuid;
+     unsigned int cgid;
