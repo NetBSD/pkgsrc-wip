@@ -553,6 +553,8 @@ share/libretro/shaders/scalenx/shaders/scale3x.glsl
 share/libretro/shaders/scalenx/shaders/scale3xSFX.glsl
 share/libretro/shaders/sharpen/adaptive-sharpen.glslp
 share/libretro/shaders/sharpen/shaders/adaptive-sharpen.glsl
+share/libretro/shaders/slang-conversion-template.glsl
+share/libretro/shaders/stock.glsl
 share/libretro/shaders/windowed/jinc2-sharp.glslp
 share/libretro/shaders/windowed/jinc2-sharper.glslp
 share/libretro/shaders/windowed/jinc2.glslp

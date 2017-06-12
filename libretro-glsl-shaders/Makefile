@@ -123,11 +123,18 @@ SHADER_DIRS+=	xsal/shaders
 SHADER_DIRS+=	xsoft
 SHADER_DIRS+=	xsoft/shaders
 
+INSTALLATION_DIRS+=	share/libretro/shaders
 .for i in ${SHADER_DIRS}
 INSTALLATION_DIRS+=	share/libretro/shaders/${i}
 .endfor
 
 do-install:
+.for type in glsl glslp
+	if ${LS} -1 ${WRKSRC} | ${GREP} -q .${type}$$ ; then \
+	    ${INSTALL_DATA} ${WRKSRC}/*.${type} \
+	    ${DESTDIR}${PREFIX}/share/libretro/shaders ; \
+	fi
+.endfor
 .for dir in ${SHADER_DIRS}
 .for type in glsl glslp md png
 	if ${LS} -1 ${WRKSRC}/${dir} | ${GREP} -q .${type}$$ ; then \
