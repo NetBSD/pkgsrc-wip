@@ -307,17 +307,14 @@ $NetBSD$
    // This thing depends on the platform. We are only interested in the upper
    // limit. Verified with a compiler assert in .cc.
    const int pthread_attr_t_max_sz = 128;
-@@ -571,8 +680,9 @@ namespace __sanitizer {
+@@ -571,6 +680,7 @@ namespace __sanitizer {
      char size[pthread_attr_t_max_sz]; // NOLINT
      void *align;
    };
 +#endif
  
--#if SANITIZER_ANDROID
-+#if SANITIZER_ANDROID // XXX MARKER
+ #if SANITIZER_ANDROID
  # if SANITIZER_MIPS
-   typedef unsigned long __sanitizer_sigset_t[16/sizeof(unsigned long)];
- # else
 @@ -590,6 +700,10 @@ namespace __sanitizer {
       // uint32_t * 4
       unsigned int __bits[4];
@@ -499,7 +496,7 @@ $NetBSD$
  
  #if SANITIZER_LINUX && !SANITIZER_ANDROID
    extern unsigned struct_ax25_parms_struct_sz;
-@@ -1035,17 +1192,17 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1035,10 +1192,10 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned struct_unimapinit_sz;
  #endif  // SANITIZER_LINUX && !SANITIZER_ANDROID
  
@@ -512,11 +509,68 @@ $NetBSD$
  
  #if !SANITIZER_ANDROID && !SANITIZER_MAC
    extern unsigned struct_sioc_sg_req_sz;
-   extern unsigned struct_sioc_vif_req_sz;
+@@ -1095,7 +1252,7 @@ struct __sanitizer_cookie_io_functions_t
+   extern unsigned IOCTL_TIOCSPGRP;
+   extern unsigned IOCTL_TIOCSTI;
+   extern unsigned IOCTL_TIOCSWINSZ;
+-#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
+   extern unsigned IOCTL_SIOCGETSGCNT;
+   extern unsigned IOCTL_SIOCGETVIFCNT;
  #endif
+@@ -1258,10 +1415,10 @@ struct __sanitizer_cookie_io_functions_t
+   extern unsigned IOCTL_VT_RESIZEX;
+   extern unsigned IOCTL_VT_SENDSIG;
+ #endif  // SANITIZER_LINUX
+-#if SANITIZER_LINUX || SANITIZER_FREEBSD
++#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+   extern unsigned IOCTL_MTIOCGET;
+   extern unsigned IOCTL_MTIOCTOP;
+-  extern unsigned IOCTL_SIOCADDRT;
++  extern unsigned IOCTL_SIOCADDRT;//
+   extern unsigned IOCTL_SIOCDELRT;
+   extern unsigned IOCTL_SNDCTL_DSP_GETBLKSIZE;
+   extern unsigned IOCTL_SNDCTL_DSP_GETFMTS;
+@@ -1359,7 +1516,7 @@ struct __sanitizer_cookie_io_functions_t
+   extern unsigned IOCTL_VT_RELDISP;
+   extern unsigned IOCTL_VT_SETMODE;
+   extern unsigned IOCTL_VT_WAITACTIVE;
+-#endif  // SANITIZER_LINUX || SANITIZER_FREEBSD
++#endif  // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
  
--  // ioctl request identifiers
-+  // ioctl request identifiers // XXX MARK
+ #if SANITIZER_LINUX && !SANITIZER_ANDROID
+   extern unsigned IOCTL_CYGETDEFTHRESH;
+@@ -1448,24 +1605,32 @@ struct __sanitizer_cookie_io_functions_t
+   extern unsigned IOCTL_TIOCSSERIAL;
+ #endif  // SANITIZER_LINUX && !SANITIZER_ANDROID
  
-   // A special value to mark ioctls that are not present on the target platform,
-   // when it can not be determined without including any system headers.
+-#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#if !SANITIZER_NETBSD
+   extern unsigned IOCTL_GIO_SCRNMAP;
++#endif
+   extern unsigned IOCTL_KDDISABIO;
+   extern unsigned IOCTL_KDENABIO;
+   extern unsigned IOCTL_KDGETLED;
++#if !SANITIZER_NETBSD
+   extern unsigned IOCTL_KDGETMODE;
++#endif
+   extern unsigned IOCTL_KDGKBMODE;
+   extern unsigned IOCTL_KDGKBTYPE;
+   extern unsigned IOCTL_KDMKTONE;
+   extern unsigned IOCTL_KDSETLED;
+   extern unsigned IOCTL_KDSETMODE;
+   extern unsigned IOCTL_KDSKBMODE;
++#if !SANITIZER_NETBSD
+   extern unsigned IOCTL_KIOCSOUND;
+   extern unsigned IOCTL_PIO_SCRNMAP;
+ #endif
++#endif
+ 
+   extern const int errno_EINVAL;
++#if !SANITIZER_NETBSD
+   extern const int errno_EOWNERDEAD;
++#endif
+ 
+   extern const int si_SEGV_MAPERR;
+   extern const int si_SEGV_ACCERR;
