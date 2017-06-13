@@ -404,7 +404,7 @@ $NetBSD$
      char *we_strings;
      uptr we_nbytes;
  #endif
-@@ -832,6 +946,31 @@ namespace __sanitizer {
+@@ -832,6 +946,37 @@ namespace __sanitizer {
      int _fileno;
    };
  # define SANITIZER_HAS_STRUCT_FILE 1
@@ -415,24 +415,108 @@ $NetBSD$
 +    int     _w;
 +    unsigned short _flags;
 +    short   _file;
-+    struct  __sbuf _bf;
++    struct  {
++        unsigned char *_base;
++        int     _size;
++    } _bf;
 +    int     _lbfsize;
 +    void    *_cookie;
 +    int     (*_close)(void *);
-+    ssize_t (*_read) (void *, void *, size_t);
-+    u64 (*_seek) (void *, __off_t, int);
-+    ssize_t (*_write)(void *, const void *, size_t);
-+    struct  __sbuf _ext;
++    u64 (*_read) (void *, void *, uptr);
++    u64 (*_seek) (void *, u64, int);
++    uptr (*_write)(void *, const void *, uptr);
++    struct {
++        unsigned char *_base;
++        int     _size;
++    } _ext;
 +    unsigned char *_up;
 +    int     _ur;
 +    unsigned char _ubuf[3];
 +    unsigned char _nbuf[1];
 +    int     (*_flush)(void *);
-+    char    _lb_unused[sizeof(struct __sbuf) - sizeof(int (*)(void *))];
++    char    _lb_unused[sizeof(uptr)];
 +    int     _blksize;
-+    __off_t _offset;
++    u64 _offset;
 +  };
 +# define SANITIZER_HAS_STRUCT_FILE 1
  #else
    typedef void __sanitizer_FILE;
  # define SANITIZER_HAS_STRUCT_FILE 0
+@@ -873,6 +1018,10 @@ namespace __sanitizer {
+   extern int shmctl_shm_stat;
+ #endif
+ 
++#if SANITIZER_NETBSD
++  extern unsigned struct_shminfo_sz;
++#endif
++
+ #if !SANITIZER_MAC && !SANITIZER_FREEBSD
+   extern unsigned struct_utmp_sz;
+ #endif
+@@ -923,6 +1072,7 @@ struct __sanitizer_cookie_io_functions_t
+ };
+ #endif
+ 
++#if !SANITIZER_NETBSD
+ #define IOC_NRBITS 8
+ #define IOC_TYPEBITS 8
+ #if defined(__powerpc__) || defined(__powerpc64__) || defined(__mips__) || \
+@@ -966,13 +1116,17 @@ struct __sanitizer_cookie_io_functions_t
+ #else
+ #define IOC_SIZE(nr) (((nr) >> IOC_SIZESHIFT) & IOC_SIZEMASK)
+ #endif
++#endif
+ 
+   extern unsigned struct_ifreq_sz;
+   extern unsigned struct_termios_sz;
+   extern unsigned struct_winsize_sz;
+ 
+-#if SANITIZER_LINUX
++#if SANITIZER_LINUX || SANITIZER_NETBSD
+   extern unsigned struct_arpreq_sz;
++#endif
++
++#if SANITIZER_LINUX
+   extern unsigned struct_cdrom_msf_sz;
+   extern unsigned struct_cdrom_multisession_sz;
+   extern unsigned struct_cdrom_read_audio_sz;
+@@ -1006,6 +1160,9 @@ struct __sanitizer_cookie_io_functions_t
+   extern unsigned struct_copr_debug_buf_sz;
+   extern unsigned struct_copr_msg_sz;
+   extern unsigned struct_midi_info_sz;
++#endif
++
++#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+   extern unsigned struct_mtget_sz;
+   extern unsigned struct_mtop_sz;
+   extern unsigned struct_rtentry_sz;
+@@ -1013,7 +1170,7 @@ struct __sanitizer_cookie_io_functions_t
+   extern unsigned struct_seq_event_rec_sz;
+   extern unsigned struct_synth_info_sz;
+   extern unsigned struct_vt_mode_sz;
+-#endif // SANITIZER_LINUX || SANITIZER_FREEBSD
++#endif // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+ 
+ #if SANITIZER_LINUX && !SANITIZER_ANDROID
+   extern unsigned struct_ax25_parms_struct_sz;
+@@ -1035,17 +1192,17 @@ struct __sanitizer_cookie_io_functions_t
+   extern unsigned struct_unimapinit_sz;
+ #endif  // SANITIZER_LINUX && !SANITIZER_ANDROID
+ 
+-#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
+   extern unsigned struct_audio_buf_info_sz;
+   extern unsigned struct_ppp_stats_sz;
+-#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
++#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
+ 
+ #if !SANITIZER_ANDROID && !SANITIZER_MAC
+   extern unsigned struct_sioc_sg_req_sz;
+   extern unsigned struct_sioc_vif_req_sz;
+ #endif
+ 
+-  // ioctl request identifiers
++  // ioctl request identifiers // XXX MARK
+ 
+   // A special value to mark ioctls that are not present on the target platform,
+   // when it can not be determined without including any system headers.
