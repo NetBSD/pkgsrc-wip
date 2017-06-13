@@ -318,3 +318,121 @@ $NetBSD$
  # if SANITIZER_MIPS
    typedef unsigned long __sanitizer_sigset_t[16/sizeof(unsigned long)];
  # else
+@@ -590,6 +700,10 @@ namespace __sanitizer {
+      // uint32_t * 4
+      unsigned int __bits[4];
+   };
++#elif SANITIZER_NETBSD
++  struct __sanitizer_sigset_t {
++     u32 __bits[4];
++  };
+ #endif
+ 
+   // Linux system headers define the 'sa_handler' and 'sa_sigaction' macros.
+@@ -631,7 +745,7 @@ namespace __sanitizer {
+       void (*sigaction)(int sig, void *siginfo, void *uctx);
+       void (*handler)(int sig);
+     };
+-#if SANITIZER_FREEBSD
++#if SANITIZER_FREEBSD || SANITIZER_NETBSD
+     int sa_flags;
+     __sanitizer_sigset_t sa_mask;
+ #else
+@@ -670,7 +784,7 @@ namespace __sanitizer {
+   };
+ #endif // !SANITIZER_ANDROID
+ 
+-#if SANITIZER_FREEBSD
++#if SANITIZER_FREEBSD || SANITIZER_NETBSD
+   typedef __sanitizer_sigset_t __sanitizer_kernel_sigset_t;
+ #elif defined(__mips__)
+   struct __sanitizer_kernel_sigset_t {
+@@ -717,7 +831,7 @@ namespace __sanitizer {
+   extern int af_inet6;
+   uptr __sanitizer_in_addr_sz(int af);
+ 
+-#if SANITIZER_LINUX || SANITIZER_FREEBSD
++#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+   struct __sanitizer_dl_phdr_info {
+     uptr dlpi_addr;
+     const char *dlpi_name;
+@@ -733,7 +847,7 @@ namespace __sanitizer {
+     int ai_family;
+     int ai_socktype;
+     int ai_protocol;
+-#if SANITIZER_ANDROID || SANITIZER_MAC || SANITIZER_FREEBSD
++#if SANITIZER_ANDROID || SANITIZER_MAC || SANITIZER_FREEBSD || SANITIZER_NETBSD
+     unsigned ai_addrlen;
+     char *ai_canonname;
+     void *ai_addr;
+@@ -759,7 +873,7 @@ namespace __sanitizer {
+     short revents;
+   };
+ 
+-#if SANITIZER_ANDROID || SANITIZER_MAC || SANITIZER_FREEBSD
++#if SANITIZER_ANDROID || SANITIZER_MAC || SANITIZER_FREEBSD || SANITIZER_NETBSD
+   typedef unsigned __sanitizer_nfds_t;
+ #else
+   typedef unsigned long __sanitizer_nfds_t;
+@@ -779,7 +893,7 @@ namespace __sanitizer {
+     int (*gl_lstat)(const char *, void *);
+     int (*gl_stat)(const char *, void *);
+   };
+-# elif SANITIZER_FREEBSD
++# elif SANITIZER_FREEBSD || SANITIZER_NETBSD
+   struct __sanitizer_glob_t {
+     uptr gl_pathc;
+     uptr gl_matchc;
+@@ -793,9 +907,9 @@ namespace __sanitizer {
+     int (*gl_lstat)(const char*, void* /* struct stat* */);
+     int (*gl_stat)(const char*, void* /* struct stat* */);
+   };
+-# endif  // SANITIZER_FREEBSD
++# endif  // SANITIZER_FREEBSD || SANITIZER_NETBSD
+ 
+-# if SANITIZER_LINUX || SANITIZER_FREEBSD
++# if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+   extern int glob_nomatch;
+   extern int glob_altdirfunc;
+ # endif
+@@ -807,7 +921,7 @@ namespace __sanitizer {
+     uptr we_wordc;
+     char **we_wordv;
+     uptr we_offs;
+-#if SANITIZER_FREEBSD
++#if SANITIZER_FREEBSD || SANITIZER_NETBSD
+     char *we_strings;
+     uptr we_nbytes;
+ #endif
+@@ -832,6 +946,31 @@ namespace __sanitizer {
+     int _fileno;
+   };
+ # define SANITIZER_HAS_STRUCT_FILE 1
++#elif SANITIZER_NETBSD
++  struct __sanitizer_FILE {
++    unsigned char *_p;
++    int     _r;
++    int     _w;
++    unsigned short _flags;
++    short   _file;
++    struct  __sbuf _bf;
++    int     _lbfsize;
++    void    *_cookie;
++    int     (*_close)(void *);
++    ssize_t (*_read) (void *, void *, size_t);
++    u64 (*_seek) (void *, __off_t, int);
++    ssize_t (*_write)(void *, const void *, size_t);
++    struct  __sbuf _ext;
++    unsigned char *_up;
++    int     _ur;
++    unsigned char _ubuf[3];
++    unsigned char _nbuf[1];
++    int     (*_flush)(void *);
++    char    _lb_unused[sizeof(struct __sbuf) - sizeof(int (*)(void *))];
++    int     _blksize;
++    __off_t _offset;
++  };
++# define SANITIZER_HAS_STRUCT_FILE 1
+ #else
+   typedef void __sanitizer_FILE;
+ # define SANITIZER_HAS_STRUCT_FILE 0
