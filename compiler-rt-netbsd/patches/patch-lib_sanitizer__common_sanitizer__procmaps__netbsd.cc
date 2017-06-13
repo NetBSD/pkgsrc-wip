@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_procmaps_netbsd.cc.orig	2017-06-04 10:44:01.380040884 +0000
+--- lib/sanitizer_common/sanitizer_procmaps_netbsd.cc.orig	2017-06-13 19:04:08.673975123 +0000
 +++ lib/sanitizer_common/sanitizer_procmaps_netbsd.cc
-@@ -0,0 +1,78 @@
+@@ -0,0 +1,79 @@
 +//===-- sanitizer_procmaps_freebsd.cc -------------------------------------===//
 +//
 +// This file is distributed under the University of Illinois Open Source
@@ -10,7 +10,7 @@ $NetBSD$
 +//
 +//===----------------------------------------------------------------------===//
 +//
-+// Information about the process mappings (FreeBSD-specific parts).
++// Information about the process mappings (NetBSD-specific parts).
 +//===----------------------------------------------------------------------===//
 +
 +#include "sanitizer_platform.h"
@@ -20,7 +20,6 @@ $NetBSD$
 +
 +#include <unistd.h>
 +#include <sys/sysctl.h>
-+#include <sys/user.h>
 +
 +namespace __sanitizer {
 +
@@ -45,7 +44,9 @@ $NetBSD$
 +
 +bool MemoryMappingLayout::Next(uptr *start, uptr *end, uptr *offset,
 +                               char filename[], uptr filename_size,
-+                               uptr *protection) {
++                               uptr *protection, ModuleArch *arch, u8 *uuid) {
++  CHECK(!arch && "not implemented");
++  CHECK(!uuid && "not implemented");
 +  char *last = proc_self_maps_.data + proc_self_maps_.len;
 +  if (current_ >= last) return false;
 +  uptr dummy;
