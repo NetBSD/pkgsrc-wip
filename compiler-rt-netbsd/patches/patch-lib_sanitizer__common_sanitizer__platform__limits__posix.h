@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2017-06-12 15:01:29.910328073 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2017-06-12 15:01:29.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_posix.h
 @@ -18,18 +18,31 @@
  #include "sanitizer_internal_defs.h"
@@ -92,7 +92,7 @@ $NetBSD$
      s64   aio_offset;
      u64   aio_reserved2;
      u64   aio_reserved3;
-+#else SANITIZER_NETBSD
++#elif SANITIZER_NETBSD
 +#if defined(__x86_64__)
 +    u64   aio_offset;
 +    u64   aio_buf;
@@ -142,17 +142,28 @@ $NetBSD$
      int *name;
      int nlen;
      void *oldval;
-@@ -166,10 +220,21 @@ namespace __sanitizer {
+@@ -166,10 +220,32 @@ namespace __sanitizer {
      void *newval;
      uptr newlen;
      unsigned long ___unused[4];
 +#else
-+    int          *name;
-+    unsigned int  namelen;
-+    void         *oldp;
-+    size_t       *oldlenp;
-+    void         *newp;
-+    size_t        newlen;
++#if defined(__x86_64__)
++    u64   name;
++    u32   namelen;
++    u64   oldp;
++    u64   oldlenp;
++    u64   newp;
++    u64   newlen;
++#elif defined(__i386__)
++    u32   name;
++    u32   namelen;
++    u32   oldp;
++    u32   oldlenp;
++    u32   newp;
++    u32   newlen;
++#else
++#error port this
++#endif
 +#endif
    };
  
@@ -164,7 +175,7 @@ $NetBSD$
    struct __sanitizer_sem_t {
  #if SANITIZER_ANDROID && defined(_LP64)
      int data[4];
-@@ -179,6 +244,14 @@ namespace __sanitizer {
+@@ -179,6 +255,14 @@ namespace __sanitizer {
      uptr data[4];
  #elif SANITIZER_FREEBSD
      u32 data[4];
@@ -179,12 +190,49 @@ $NetBSD$
  #endif
    };
  #endif // SANITIZER_LINUX || SANITIZER_FREEBSD
-@@ -303,7 +376,7 @@ namespace __sanitizer {
+@@ -303,7 +387,7 @@ namespace __sanitizer {
    #endif
  #endif
    };
 -#elif SANITIZER_FREEBSD
-+#elif SANITIZER_FREEBSD /// XXX MARK
++#elif SANITIZER_FREEBSD || SANITIZER_NETBSD
    struct __sanitizer_ipc_perm {
      unsigned int cuid;
      unsigned int cgid;
+@@ -351,6 +435,9 @@ namespace __sanitizer {
+ # endif
+     void *ifa_dstaddr; // (struct sockaddr *)
+     void *ifa_data;
++#if SANITIZER_NETBSD
++    unsigned int ifa_addrflags;
++#endif
+   };
+ #endif  // !SANITIZER_ANDROID
+ 
+@@ -381,7 +468,7 @@ namespace __sanitizer {
+     char *pw_passwd;
+     int pw_uid;
+     int pw_gid;
+-#if SANITIZER_MAC || SANITIZER_FREEBSD
++#if SANITIZER_MAC || SANITIZER_FREEBSD || SANITIZER_NETBSD
+     long pw_change;
+     char *pw_class;
+ #endif
+@@ -390,7 +477,7 @@ namespace __sanitizer {
+ #endif
+     char *pw_dir;
+     char *pw_shell;
+-#if SANITIZER_MAC || SANITIZER_FREEBSD
++#if SANITIZER_MAC || SANITIZER_FREEBSD || SANITIZER_NETBSD
+     long pw_expire;
+ #endif
+ #if SANITIZER_FREEBSD
+@@ -447,7 +534,7 @@ namespace __sanitizer {
+   };
+ #endif
+ 
+-#if SANITIZER_MAC || SANITIZER_FREEBSD
++#if SANITIZER_MAC || SANITIZER_FREEBSD // XXX MARKER
+   struct __sanitizer_msghdr {
+     void *msg_name;
+     unsigned msg_namelen;
