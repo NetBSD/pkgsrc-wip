@@ -1,11 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	translate-toolkit-2.0.0
-DISTNAME=	translate-toolkit-2.0.0
+PKGNAME=	translate-toolkit-2.1.0
+DISTNAME=	translate-toolkit-2.1.0
 GITHUB_PROJECT=	translate
 CATEGORIES=	misc
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
-MASTER_SITES=	https://github.com/translate/translate/releases/download/2.0.0/
+MASTER_SITES=	https://github.com/translate/translate/releases/download/2.1.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -737,9 +737,6 @@ ${PYSITELIB}/translate/misc/quote.pyo
 ${PYSITELIB}/translate/misc/selector.py
 ${PYSITELIB}/translate/misc/selector.pyc
 ${PYSITELIB}/translate/misc/selector.pyo
-${PYSITELIB}/translate/misc/sparse.py
-${PYSITELIB}/translate/misc/sparse.pyc
-${PYSITELIB}/translate/misc/sparse.pyo
 ${PYSITELIB}/translate/misc/test_dictutils.py
 ${PYSITELIB}/translate/misc/test_dictutils.pyc
 ${PYSITELIB}/translate/misc/test_dictutils.pyo
