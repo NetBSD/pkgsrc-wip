@@ -2,7 +2,7 @@ $NetBSD: patch-docs_man_man1_ansible-galaxy.1.asciidoc.in,v 1.0 2016/02/24 22:43
 
 Fix hardcoded paths.
 
---- docs/man/man1/ansible-galaxy.1.asciidoc.in.orig	2016-01-14 22:33:27.000000000 +0000
+--- docs/man/man1/ansible-galaxy.1.asciidoc.in.orig	2017-06-01 17:00:04.000000000 +0000
 +++ docs/man/man1/ansible-galaxy.1.asciidoc.in
 @@ -72,7 +72,7 @@ Don't download roles listed as dependenc
  *-p* 'ROLES_PATH', *--roles-path=*'ROLES_PATH'::
@@ -22,7 +22,7 @@ Fix hardcoded paths.
  
  INIT
  ----
-@@ -141,7 +141,7 @@ OPTIONS
+@@ -154,7 +154,7 @@ OPTIONS
  *-p* 'ROLES_PATH', *--roles-path=*'ROLES_PATH'::
  
  The path to the directory containing your roles. The default is the *roles_path*
@@ -31,7 +31,7 @@ Fix hardcoded paths.
  
  
  SEARCH
-@@ -198,7 +198,7 @@ OPTIONS
+@@ -211,7 +211,7 @@ OPTIONS
  *-p* 'ROLES_PATH', *--roles-path=*'ROLES_PATH'::
  
  The path to the directory containing your roles. The default is the *roles_path* 

@@ -2,9 +2,9 @@ $NetBSD: patch-lib_ansible_cli_galaxy.py,v 1.0 2016/02/24 22:44:30 tty Exp $
 
 Fix hardcoded path.
 
---- lib/ansible/cli/galaxy.py.orig	2016-05-25 13:00:55.000000000 +0000
+--- lib/ansible/cli/galaxy.py.orig	2017-06-01 17:00:04.000000000 +0000
 +++ lib/ansible/cli/galaxy.py
-@@ -115,7 +115,7 @@ class GalaxyCLI(CLI):
+@@ -120,7 +120,7 @@ class GalaxyCLI(CLI):
              # NOTE: while the option type=str, the default is a list, and the
              # callback will set the value to a list.
              self.parser.add_option('-p', '--roles-path', dest='roles_path', action="callback", callback=CLI.expand_paths, type=str, default=C.DEFAULT_ROLES_PATH,

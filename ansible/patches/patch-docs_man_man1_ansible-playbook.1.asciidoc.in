@@ -2,9 +2,9 @@ $NetBSD: patch-docs_man_man1_ansible-playbook.1.asciidoc.in,v 1.1 2016/03/01 12:
 
 Fix hardcoded paths.
 
---- docs/man/man1/ansible-playbook.1.asciidoc.in.orig	2016-02-25 03:00:56.000000000 +0000
+--- docs/man/man1/ansible-playbook.1.asciidoc.in.orig	2017-06-01 17:00:04.000000000 +0000
 +++ docs/man/man1/ansible-playbook.1.asciidoc.in
-@@ -95,7 +95,7 @@ Show help page and exit
+@@ -100,7 +100,7 @@ Show help page and exit.
  
  *-i* 'PATH', *--inventory=*'PATH'::
  
@@ -13,7 +13,7 @@ Fix hardcoded paths.
  Alternatively, you can use a comma-separated list of hosts or a single host with a trailing comma 'host,'.
  
  *-l* 'SUBSET', *--limit=*'SUBSET'::
-@@ -118,7 +118,7 @@ List all tasks that would be executed; d
+@@ -123,7 +123,7 @@ List all tasks that would be executed; d
  *-M* 'DIRECTORY', *--module-path=*'DIRECTORY'::
  
  The 'DIRECTORY' search path to load modules from. The default is
@@ -22,7 +22,7 @@ Fix hardcoded paths.
  environment variable.
  
  *--private-key=*'PRIVATE_KEY_FILE'::
-@@ -222,11 +222,11 @@ Many more are available for most options
+@@ -241,11 +241,11 @@ Many more are available for most options
  FILES
  -----
  

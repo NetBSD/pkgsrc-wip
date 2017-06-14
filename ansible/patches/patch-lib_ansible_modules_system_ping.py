@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_ansible_modules_core_system_ping.py,v 1.0 2016/02/24 22:44:41 tty Exp $
+$NetBSD$
 
 Fix hardcoded path.
 
---- lib/ansible/modules/core/system/ping.py.orig	2016-02-24 13:04:03.000000000 +0000
-+++ lib/ansible/modules/core/system/ping.py
-@@ -27,7 +27,7 @@ short_description: Try to connect to hos
+--- ./lib/ansible/modules/system/ping.py.orig	2017-06-01 17:00:05.000000000 +0000
++++ ./lib/ansible/modules/system/ping.py
+@@ -33,7 +33,7 @@ short_description: Try to connect to hos
  description:
     - A trivial test module, this module always returns C(pong) on successful
       contact. It does not make sense in playbooks, but it is useful from
