@@ -436,7 +436,7 @@ $NetBSD$
 +    int     _blksize;
 +    u64 _offset;
 +  };
-+# define SANITIZER_HAS_STRUCT_FILE 1
++# define SANITIZER_HAS_STRUCT_FILE 0 // not ported
  #else
    typedef void __sanitizer_FILE;
  # define SANITIZER_HAS_STRUCT_FILE 0
@@ -455,7 +455,7 @@ $NetBSD$
  };
  #endif
  
-+#if !SANITIZER_NETBSD
++#if 1 // !SANITIZER_NETBSD
  #define IOC_NRBITS 8
  #define IOC_TYPEBITS 8
  #if defined(__powerpc__) || defined(__powerpc64__) || defined(__mips__) || \

@@ -6,7 +6,7 @@ $NetBSD$
  #include "unwind-ehabi-helpers.h"
  #endif
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && !defined(__clang__)
 +#define TYPE_UNWIND_PTR void*
 +#else
 +#define TYPE_UNWIND_PTR uintptr_t
