@@ -35,7 +35,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 PLIST.doc=	yes
 
 pre-build:
-		${MKDIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 		cd ${WRKSRC}/docs && ${MAKE} man
 		${INSTALL_MAN} ${WRKSRC}/docs/_build/man/translatetoolkit.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
