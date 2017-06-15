@@ -15,6 +15,11 @@ NO_BUILD=	yes
 USE_TOOLS+=	perl
 REPLACE_PERL+=	install.pl
 
+WRKSRC=		${WRKDIR}
+BUILD_DEFS+=	VARBASE
+
+INTERACTIVE_STAGE= configure install
+
 DEPENDS+=	p5-DBI>=1.6:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql>=1.6:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Digest-MD5>=2.5:../../security/p5-Digest-MD5
@@ -27,12 +32,6 @@ DEPENDS+=	p5-Net-Server>=2.0:../../net/p5-Net-Server
 DEPENDS+=	p5-Mail-Sendmail>=0.7:../../mail/p5-Mail-Sendmail
 DEPENDS+=	p5-Unicode-Map>=0.1:../../converters/p5-Unicode-Map
 DEPENDS+=	p5-Jcode>=1.6:../../converters/p5-Jcode
-	# Needed for Super List Loader:
-DEPENDS+=	p5-Spreadsheet-WriteExcel>=2.4:../../math/p5-Spreadsheet-WriteExcel
-DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.2:../../math/p5-Spreadsheet-ReadSXC
-DEPENDS+=	p5-Spreadsheet-ParseExcel>=0.6:../../math/p5-Spreadsheet-ParseExcel
-DEPENDS+=	p5-Spreadsheet-Read>=0.7:../../math/p5-Spreadsheet-Read
-DEPENDS+=	p5-Spreadsheet-XLSX>=0.1:../../math/p5-Spreadsheet-XLSX
 DEPENDS+=	p5-OLE-Storage_Lite>=0.1:../../devel/p5-OLE-Storage_Lite
 DEPENDS+=	p5-Proc-ProcessTable>=0.5:../../devel/p5-Proc-ProcessTable
 DEPENDS+=	p5-IO-stringy>=2.1:../../devel/p5-IO-stringy
@@ -57,22 +56,30 @@ DEPENDS+=	p5-Crypt-Eksblowfish>=0.0:../../security/p5-Crypt-Eksblowfish
 DEPENDS+=	p5-IO-tty>=1.1:../../devel/p5-IO-Tty
 DEPENDS+=	p5-MIME-Base64>=3.1:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net-SFTP-Foreign>=1.8:../../wip/p5-Net-SFTP-Foreign
-
-WRKSRC=		${WRKDIR}
-BUILD_DEFS+=	VARBASE
+# Needed for Super List Loader:
+DEPENDS+=	p5-Spreadsheet-WriteExcel>=2.4:../../math/p5-Spreadsheet-WriteExcel
+DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.2:../../math/p5-Spreadsheet-ReadSXC
+DEPENDS+=	p5-Spreadsheet-ParseExcel>=0.6:../../math/p5-Spreadsheet-ParseExcel
+DEPENDS+=	p5-Spreadsheet-Read>=0.7:../../math/p5-Spreadsheet-Read
+DEPENDS+=	p5-Spreadsheet-XLSX>=0.1:../../math/p5-Spreadsheet-XLSX	
 
 do-install:
 	cd ${WRKSRC}; \
 	${BUILDLINK_PREFIX.perl}/bin/perl install.pl \
-	--no-prompt \
-	--debug \
-	--conffile=${PREFIX}/etc/astguiclient.conf \
-	--home=${PREFIX}/share/vicidial \
-	--logs=${VARBASE}/log/vicidial \
-	--agi=${PREFIX}/libexec/agi-bin \
-	--web=${PREFIX}/share/vicidial/www \
-	--sounds=${VARBASE}/lib/asterisk/sounds \
-	--monitor=${VARBASE}/spool/asterisk/monitorDONE;
+		#--no-prompt \
+		--debug \
+		--conffile=/etc/astguiclient.conf \
+		--home=${PREFIX}/share/vicidial \
+		--logs=${VARBASE}/log/vicidial \
+		--agi=${VARBASE}/lib/asterisk/agi-bin \
+		--web=${PREFIX}/share/httpd/htdocs \
+		--sounds=${VARBASE}/lib/asterisk/sounds \
+		--monitor=${VARBASE}/spool/asterisk/monitor \
+		--DONEmonitor=${VARBASE}/spool/asterisk/monitorDONE \
+		--copy_sample_conf_files \
+		--asterisk_version=11.X
+	${CP} -R ${WRKSRC}/extras  ${PREFIX}/share/vicidial/extras
 
+.include "../../wip/p5-Asterisk-vicidial/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.0 2017/06/15 $
+
+There are some perl scripts you might want to run to populate the MySQL
+database, which is neccesary to use this GUI client for asterisk.
+
+Please check the steps needed to properly configure astGUIclient in:
+${WRKSRC}/docs/SCRATCH_INSTALL.txt or
+${WRKSRC}/docs/BASE_INSTALL.txt (summarized).
+
+It also contains optional dependencies you might want to check.
+
+Also, you should install the asterisk and asterisk-perl versions supported 
+by this package, imported as: 
+
+* wip/asterisk11-vicidial
+
+This was tested using Apache v2.4 using www/ap-php. 
+
+===========================================================================
