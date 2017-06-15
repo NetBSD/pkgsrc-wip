@@ -2752,7 +2752,6 @@ SUBDIR+=	ptpd
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
 SUBDIR+=	pudb
-SUBDIR+=	pulledpork
 SUBDIR+=	pulseaudio-git
 SUBDIR+=	pure
 SUBDIR+=	purple-facebook
