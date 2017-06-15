@@ -4112,7 +4112,6 @@ SUBDIR+=	smw
 SUBDIR+=	snark
 SUBDIR+=	sndio
 SUBDIR+=	snes9express
-SUBDIR+=	snort
 SUBDIR+=	snotes
 SUBDIR+=	socklog
 SUBDIR+=	softflowd
