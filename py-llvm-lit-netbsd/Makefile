@@ -14,9 +14,5 @@ PYSETUPSUBDIR=	utils/lit
 
 INSTALLATION_DIRS=	bin
 
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/utils/lit/lit.py \
-		${DESTDIR}${PREFIX}/bin/llvm-lit-${PYVERSSUFFIX}
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

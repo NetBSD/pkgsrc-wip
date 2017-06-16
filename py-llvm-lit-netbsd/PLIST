@@ -1,6 +1,5 @@
 @comment $NetBSD$
 bin/lit
-bin/llvm-lit-${PYVERSSUFFIX}
 ${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/dependency_links.txt
