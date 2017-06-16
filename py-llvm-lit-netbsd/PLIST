@@ -1,12 +1,12 @@
 @comment $NetBSD$
 bin/lit
 bin/llvm-lit-${PYVERSSUFFIX}
-${PYSITELIB}/lit-0.6.0.dev0${EGG_FILE}/PKG-INFO
-${PYSITELIB}/lit-0.6.0.dev0${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/lit-0.6.0.dev0${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/lit-0.6.0.dev0${EGG_FILE}/entry_points.txt
-${PYSITELIB}/lit-0.6.0.dev0${EGG_FILE}/not-zip-safe
-${PYSITELIB}/lit-0.6.0.dev0${EGG_FILE}/top_level.txt
+${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/lit-0.6.0.dev0${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/lit/BooleanExpression.py
 ${PYSITELIB}/lit/BooleanExpression.pyc
 ${PYSITELIB}/lit/BooleanExpression.pyo

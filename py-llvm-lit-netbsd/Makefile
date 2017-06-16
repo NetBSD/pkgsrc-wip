@@ -18,6 +18,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/lit/lit.py \
 		${DESTDIR}${PREFIX}/bin/llvm-lit-${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
