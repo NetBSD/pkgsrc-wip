@@ -433,6 +433,7 @@ include/llvm/DebugInfo/CodeView/FunctionId.h
 include/llvm/DebugInfo/CodeView/LazyRandomTypeCollection.h
 include/llvm/DebugInfo/CodeView/Line.h
 include/llvm/DebugInfo/CodeView/RecordSerialization.h
+include/llvm/DebugInfo/CodeView/StringsAndChecksums.h
 include/llvm/DebugInfo/CodeView/SymbolDeserializer.h
 include/llvm/DebugInfo/CodeView/SymbolDumpDelegate.h
 include/llvm/DebugInfo/CodeView/SymbolDumper.h
@@ -449,6 +450,7 @@ include/llvm/DebugInfo/CodeView/TypeDeserializer.h
 include/llvm/DebugInfo/CodeView/TypeDumpVisitor.h
 include/llvm/DebugInfo/CodeView/TypeIndex.h
 include/llvm/DebugInfo/CodeView/TypeIndexDiscovery.h
+include/llvm/DebugInfo/CodeView/TypeName.h
 include/llvm/DebugInfo/CodeView/TypeRecord.h
 include/llvm/DebugInfo/CodeView/TypeRecordBuilder.h
 include/llvm/DebugInfo/CodeView/TypeRecordMapping.h
@@ -1031,6 +1033,8 @@ include/llvm/Target/TargetRegisterInfo.h
 include/llvm/Target/TargetSchedule.td
 include/llvm/Target/TargetSelectionDAG.td
 include/llvm/Target/TargetSubtargetInfo.h
+include/llvm/Testing/Support/Error.h
+include/llvm/Testing/Support/SupportHelpers.h
 include/llvm/ToolDrivers/llvm-lib/LibDriver.h
 include/llvm/Transforms/Coroutines.h
 include/llvm/Transforms/GCOVProfiler.h
