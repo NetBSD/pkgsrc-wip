@@ -11,6 +11,7 @@ PKG_SUGGESTED_OPTIONS+=	dynarec
 
 .if !empty(MACHINE_ARCH:M*armv7*)
 PKG_SUPPORTED_OPTIONS+=	simd
+PKG_SUGGESTED_OPTIONS+=	simd
 .endif
 
 .include "../../mk/bsd.options.mk"
