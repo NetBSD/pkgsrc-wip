@@ -3263,6 +3263,7 @@ SUBDIR+=	py-lzma
 SUBDIR+=	py-m2ext
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
+SUBDIR+=	py-mailcap-fix
 SUBDIR+=	py-mailingstats
 SUBDIR+=	py-mailq
 SUBDIR+=	py-mark
