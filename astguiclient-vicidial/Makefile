@@ -62,6 +62,9 @@ DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.2:../../math/p5-Spreadsheet-ReadSXC
 DEPENDS+=	p5-Spreadsheet-ParseExcel>=0.6:../../math/p5-Spreadsheet-ParseExcel
 DEPENDS+=	p5-Spreadsheet-Read>=0.7:../../math/p5-Spreadsheet-Read
 DEPENDS+=	p5-Spreadsheet-XLSX>=0.1:../../math/p5-Spreadsheet-XLSX	
+# PHP dependencies :
+DEPENDS+=	php56-mysql>=5.6:../../databases/php-mysql
+DEPENDS+=	php56-mysqli>=5.6:../../databases/php-mysqli
 
 do-install:
 	cd ${WRKSRC}; \
@@ -80,6 +83,8 @@ do-install:
 		--asterisk_version=11.X
 	${CP} -R ${WRKSRC}/extras  ${PREFIX}/share/vicidial/extras
 
+.include "../../lang/php56/buildlink3.mk"
+.include "../../databases/mysql55-server/buildlink3.mk"
 .include "../../wip/p5-Asterisk-vicidial/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
