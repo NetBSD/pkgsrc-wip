@@ -177,7 +177,78 @@ $NetBSD$
    if (::environ != 0) {
      uptr NameLen = internal_strlen(name);
      for (char **Env = ::environ; *Env != 0; Env++) {
-@@ -604,7 +639,9 @@ uptr internal_getppid() {
+@@ -541,6 +576,8 @@ void BlockingMutex::Lock() {
+   while (atomic_exchange(m, MtxSleeping, memory_order_acquire) != MtxUnlocked) {
+ #if SANITIZER_FREEBSD
+     _umtx_op(m, UMTX_OP_WAIT_UINT, MtxSleeping, 0, 0);
++#elif SANITIZER_NETBSD
++    sched_yield(); /* No userspace futex-like synchromization */
+ #else
+     internal_syscall(SYSCALL(futex), (uptr)m, FUTEX_WAIT, MtxSleeping, 0, 0, 0);
+ #endif
+@@ -554,6 +591,8 @@ void BlockingMutex::Unlock() {
+   if (v == MtxSleeping) {
+ #if SANITIZER_FREEBSD
+     _umtx_op(m, UMTX_OP_WAKE, 1, 0, 0);
++#elif SANITIZER_NETBSD
++    continue; /* No userspace futex-like synchromization */
+ #else
+     internal_syscall(SYSCALL(futex), (uptr)m, FUTEX_WAKE, 1, 0, 0, 0);
+ #endif
+@@ -569,6 +608,17 @@ void BlockingMutex::CheckLocked() {
+ // The actual size of this structure is specified by d_reclen.
+ // Note that getdents64 uses a different structure format. We only provide the
+ // 32-bit syscall here.
++#if SANITIZER_NETBSD
++// struct dirent is different for Linux and us. At this moment, we use only
++// d_fileno (Linux call this d_ino), d_reclen, and d_name.
++struct linux_dirent {
++  u64  d_ino;     // d_fileno
++  u16  d_reclen;
++  u16  d_namlen;  // not used
++  u8   d_type;    // not used
++  char d_name[NAME_MAX + 1];
++};
++#else
+ struct linux_dirent {
+ #if SANITIZER_X32 || defined(__aarch64__)
+   u64 d_ino;
+@@ -583,16 +633,34 @@ struct linux_dirent {
+ #endif
+   char               d_name[256];
+ };
++#endif
+ 
+ // Syscall wrappers.
+ uptr internal_ptrace(int request, int pid, void *addr, void *data) {
++#if SANITIZER_NETBSD
++// XXX We need additional work for ptrace:
++//   - for request, we use PT_FOO whereas Linux uses PTRACE_FOO
++//   - data is int for us, but void * for Linux
++//   - Linux sometimes uses data in the case where we use addr instead
++// At this moment, this function is used only within
++// "#if SANITIZER_LINUX && defined(__x86_64__)" block in
++// sanitizer_stoptheworld_linux_libcdep.cc.
++  return internal_syscall_ptr(SYSCALL(ptrace), request, pid, (uptr)addr,
++                          (uptr)data);
++#else
+   return internal_syscall(SYSCALL(ptrace), request, pid, (uptr)addr,
+                           (uptr)data);
++#endif
+ }
+ 
+ uptr internal_waitpid(int pid, int *status, int options) {
++#if SANITIZER_NETBSD
++  return internal_syscall(SYSCALL(wait4), pid, status, options,
++                          NULL /* rusage */);
++#else
+   return internal_syscall(SYSCALL(wait4), pid, (uptr)status, options,
+                           0 /* rusage */);
++#endif
+ }
+ 
+ uptr internal_getpid() {
+@@ -604,7 +672,9 @@ uptr internal_getppid() {
  }
  
  uptr internal_getdents(fd_t fd, struct linux_dirent *dirp, unsigned int count) {
@@ -188,7 +259,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(getdirentries), fd, (uptr)dirp, count, NULL);
  #elif SANITIZER_USES_CANONICAL_LINUX_SYSCALLS
    return internal_syscall(SYSCALL(getdents64), fd, (uptr)dirp, count);
-@@ -614,7 +651,11 @@ uptr internal_getdents(fd_t fd, struct l
+@@ -614,7 +684,11 @@ uptr internal_getdents(fd_t fd, struct l
  }
  
  uptr internal_lseek(fd_t fd, OFF_T offset, int whence) {
@@ -200,7 +271,7 @@ $NetBSD$
  }
  
  #if SANITIZER_LINUX
-@@ -706,7 +747,7 @@ int internal_sigaction_syscall(int signu
+@@ -706,7 +780,7 @@ int internal_sigaction_syscall(int signu
  
  uptr internal_sigprocmask(int how, __sanitizer_sigset_t *set,
      __sanitizer_sigset_t *oldset) {
@@ -209,7 +280,7 @@ $NetBSD$
    return internal_syscall(SYSCALL(sigprocmask), how, set, oldset);
  #else
    __sanitizer_kernel_sigset_t *k_set = (__sanitizer_kernel_sigset_t *)set;
-@@ -829,8 +870,12 @@ uptr GetPageSize() {
+@@ -829,8 +903,12 @@ uptr GetPageSize() {
  }
  
  uptr ReadBinaryName(/*out*/char *buf, uptr buf_len) {
@@ -224,3 +295,42 @@ $NetBSD$
    const char *default_module_name = "kern.proc.pathname";
    size_t Size = buf_len;
    bool IsErr = (sysctl(Mib, ARRAY_SIZE(Mib), buf, &Size, NULL, 0) != 0);
+@@ -1474,6 +1552,8 @@ SignalContext::WriteFlag SignalContext::
+   static const uptr PF_WRITE = 1U << 1;
+ #if SANITIZER_FREEBSD
+   uptr err = ucontext->uc_mcontext.mc_err;
++#elif SANITIZER_NETBSD
++  uptr err = ucontext->uc_mcontext.__gregs[_REG_ERR];
+ #else
+   uptr err = ucontext->uc_mcontext.gregs[REG_ERR];
+ #endif
+@@ -1520,6 +1600,11 @@ void GetPcSpBp(void *context, uptr *pc, 
+   *pc = ucontext->uc_mcontext.mc_rip;
+   *bp = ucontext->uc_mcontext.mc_rbp;
+   *sp = ucontext->uc_mcontext.mc_rsp;
++# elif SANITIZER_NETBSD
++  ucontext_t *ucontext = (ucontext_t*)context;
++  *pc = ucontext->uc_mcontext.__gregs[_REG_RIP];
++  *bp = ucontext->uc_mcontext.__gregs[_REG_RBP];
++  *sp = ucontext->uc_mcontext.__gregs[_REG_RSP];
+ # else
+   ucontext_t *ucontext = (ucontext_t*)context;
+   *pc = ucontext->uc_mcontext.gregs[REG_RIP];
+@@ -1532,6 +1617,11 @@ void GetPcSpBp(void *context, uptr *pc, 
+   *pc = ucontext->uc_mcontext.mc_eip;
+   *bp = ucontext->uc_mcontext.mc_ebp;
+   *sp = ucontext->uc_mcontext.mc_esp;
++# if SANITIZER_NETBSD
++  ucontext_t *ucontext = (ucontext_t*)context;
++  *pc = ucontext->uc_mcontext.r_eip;
++  *bp = ucontext->uc_mcontext.r_ebp;
++  *sp = ucontext->uc_mcontext.r_esp;
+ # else
+   ucontext_t *ucontext = (ucontext_t*)context;
+   *pc = ucontext->uc_mcontext.gregs[REG_EIP];
+@@ -1606,4 +1696,4 @@ uptr FindAvailableMemoryRange(uptr size,
+ 
+ } // namespace __sanitizer
+ 
+-#endif // SANITIZER_FREEBSD || SANITIZER_LINUX
++#endif // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
