@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-snes9x2005-20170218
+DISTNAME=	libretro-snes9x2005-20170618
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=Snes9x_2005
@@ -8,7 +8,7 @@ COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 LICENSE=	no-commercial-use
 
 GITHUB_PROJECT=	snes9x2005
-GITHUB_TAG=	dc596c886e0ec2728dc353dd7862cdf1e5a5ff44
+GITHUB_TAG=	1aecedc999445e9a27e04f665fd562b576775d08
 
 USE_TOOLS=	gmake
 
