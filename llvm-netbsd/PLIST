@@ -358,6 +358,7 @@ include/llvm/CodeGen/MachineSSAUpdater.h
 include/llvm/CodeGen/MachineScheduler.h
 include/llvm/CodeGen/MachineTraceMetrics.h
 include/llvm/CodeGen/MachineValueType.h
+include/llvm/CodeGen/MacroFusion.h
 include/llvm/CodeGen/PBQP/CostAllocator.h
 include/llvm/CodeGen/PBQP/Graph.h
 include/llvm/CodeGen/PBQP/Math.h
@@ -444,8 +445,6 @@ include/llvm/DebugInfo/CodeView/SymbolVisitorCallbackPipeline.h
 include/llvm/DebugInfo/CodeView/SymbolVisitorCallbacks.h
 include/llvm/DebugInfo/CodeView/SymbolVisitorDelegate.h
 include/llvm/DebugInfo/CodeView/TypeCollection.h
-include/llvm/DebugInfo/CodeView/TypeDatabase.h
-include/llvm/DebugInfo/CodeView/TypeDatabaseVisitor.h
 include/llvm/DebugInfo/CodeView/TypeDeserializer.h
 include/llvm/DebugInfo/CodeView/TypeDumpVisitor.h
 include/llvm/DebugInfo/CodeView/TypeIndex.h
