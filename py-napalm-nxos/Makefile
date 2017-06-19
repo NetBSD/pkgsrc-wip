@@ -17,5 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-scp-[0-9]*:../../net/py-scp
 
+post-install:
+	rm -rf ${DESTDIR}/${PREFIX}/${PYSITELIB}/test/
+
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
