@@ -835,6 +835,7 @@ SUBDIR+=	fswebcam
 SUBDIR+=	ftgl
 SUBDIR+=	ftpd-tls
 SUBDIR+=	ftpsesame
+SUBDIR+=	fuse-encfs
 SUBDIR+=	fuse-google-drive-git
 SUBDIR+=	fuse-mp3fs
 SUBDIR+=	fuse-smbfs
