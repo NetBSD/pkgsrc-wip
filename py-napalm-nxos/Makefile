@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-napalm-base>=0.18.0:../../wip/py-napalm-base
 DEPENDS+=	${PYPKGPREFIX}-nxos-[0-9]*:../../wip/py-nxos
 DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-scp-[0-9]*:../../wip/py-scp
+DEPENDS+=	${PYPKGPREFIX}-scp-[0-9]*:../../net/py-scp
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
