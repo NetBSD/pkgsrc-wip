@@ -25,15 +25,3 @@ ${PYSITELIB}/napalm_iosxr/templates/set_ntp_servers.j2
 ${PYSITELIB}/napalm_iosxr/templates/set_probes.j2
 ${PYSITELIB}/napalm_iosxr/templates/set_users.j2
 ${PYSITELIB}/napalm_iosxr/templates/snmp_config.j2
-${PYSITELIB}/test/unit/TestIOSXRDriver.py
-${PYSITELIB}/test/unit/TestIOSXRDriver.pyc
-${PYSITELIB}/test/unit/TestIOSXRDriver.pyo
-${PYSITELIB}/test/unit/__init__.py
-${PYSITELIB}/test/unit/__init__.pyc
-${PYSITELIB}/test/unit/__init__.pyo
-${PYSITELIB}/test/unit/conftest.py
-${PYSITELIB}/test/unit/conftest.pyc
-${PYSITELIB}/test/unit/conftest.pyo
-${PYSITELIB}/test/unit/test_getters.py
-${PYSITELIB}/test/unit/test_getters.pyc
-${PYSITELIB}/test/unit/test_getters.pyo

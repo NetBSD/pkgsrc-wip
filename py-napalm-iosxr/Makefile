@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 
 # Mistakenly installed, prone to name conflicts (e.g. with napalm-base)
 post-install:
-	rm -f ${DESTDIR}/${PREFIX}/${PYSITELIB}/test/__init__.*
+	rm -rf ${DESTDIR}/${PREFIX}/${PYSITELIB}/test/
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
