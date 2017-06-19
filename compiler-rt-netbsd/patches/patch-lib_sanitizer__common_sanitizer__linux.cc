@@ -191,7 +191,7 @@ $NetBSD$
  #if SANITIZER_FREEBSD
      _umtx_op(m, UMTX_OP_WAKE, 1, 0, 0);
 +#elif SANITIZER_NETBSD
-+    continue; /* No userspace futex-like synchromization */
++    /* No userspace futex-like synchromization */
  #else
      internal_syscall(SYSCALL(futex), (uptr)m, FUTEX_WAKE, 1, 0, 0, 0);
  #endif
@@ -320,11 +320,11 @@ $NetBSD$
    *pc = ucontext->uc_mcontext.mc_eip;
    *bp = ucontext->uc_mcontext.mc_ebp;
    *sp = ucontext->uc_mcontext.mc_esp;
-+# if SANITIZER_NETBSD
++# elif SANITIZER_NETBSD
 +  ucontext_t *ucontext = (ucontext_t*)context;
-+  *pc = ucontext->uc_mcontext.r_eip;
-+  *bp = ucontext->uc_mcontext.r_ebp;
-+  *sp = ucontext->uc_mcontext.r_esp;
++  *pc = ucontext->uc_mcontext.__gregs[_REG_EIP];
++  *bp = ucontext->uc_mcontext.__gregs[_REG_EBP];
++  *sp = ucontext->uc_mcontext.__gregs[_REG_ESP];
  # else
    ucontext_t *ucontext = (ucontext_t*)context;
    *pc = ucontext->uc_mcontext.gregs[REG_EIP];
