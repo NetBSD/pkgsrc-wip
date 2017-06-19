@@ -14,5 +14,7 @@ PYSETUPSUBDIR=	utils/lit
 
 INSTALLATION_DIRS=	bin
 
+EGG_NAME=	lit-0.6.0.dev0
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
