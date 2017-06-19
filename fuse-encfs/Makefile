@@ -19,6 +19,8 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
 
+TEST_TARGET=	test
+
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
