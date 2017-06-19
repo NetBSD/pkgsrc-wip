@@ -15,9 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-napalm-base>=0.18.0:../../wip/py-napalm-base
 DEPENDS+=	${PYPKGPREFIX}-IOSXR>=0.20:../../wip/py-IOSXR
 DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 
-# Mistakenly installed, prone to name conflicts (e.g. with napalm-base)
-post-install:
-	rm -rf ${DESTDIR}/${PREFIX}/${PYSITELIB}/test/
-
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
