@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSUFFIX=${PYVERSUFFIX}
 
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.13.0:../../security/py-paramiko
-DEPENDS+=	${PYPKGPREFIX}-scp>=0.10.0:../../wip/py-scp
+DEPENDS+=	${PYPKGPREFIX}-scp>=0.10.0:../../net/py-scp
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYDISTUTILSPKG=	yes
