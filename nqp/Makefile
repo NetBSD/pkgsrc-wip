@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2015/10/10 01:57:53 ryoon Exp $
 
-DISTNAME=	nqp-2017.01
+DISTNAME=	nqp-2017.06
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/nqp/
 
@@ -22,5 +22,6 @@ CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--backends=moar
 
+BUILDLINK_API_DEPENDS.MoarVM+=  MoarVM>=2017.06
 .include "../../devel/MoarVM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
