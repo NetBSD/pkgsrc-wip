@@ -19,6 +19,7 @@ SHA1 (patch-lib_asan_scripts_asan__symbolize.py) = d6c079e7092b22b5379293dbb8d1e
 SHA1 (patch-lib_builtins_gcc__personality__v0.c) = 66c36733afc7043f662328303de2573fd9005bf3
 SHA1 (patch-lib_interception_interception.h) = f18c140feec3c88fec57ac7ba1fbedb03db2bac6
 SHA1 (patch-lib_interception_interception__linux.h) = 2f37344082e935a99fc04203453d387fe78bd6d3
+SHA1 (patch-lib_safestack_safestack.cc) = 6ccd97d3253eb3e284fc8375e651f2527317d88a
 SHA1 (patch-lib_sanitizer__common_CMakeLists.txt) = 45b18179c5d1d9f284ccfe4670a989ac30d05e92
 SHA1 (patch-lib_sanitizer__common_sanitizer__common__interceptors.inc) = da22dbf5942941b0f8be6e1075ea6d71f14a9069
 SHA1 (patch-lib_sanitizer__common_sanitizer__libignore.cc) = 4b711c72fb64752eb17cc8e0b810526f33d64023
