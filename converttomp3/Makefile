@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	id3v2-[0-9]*:../../audio/id3v2
 DEPENDS+=	lame-[0-9]*:../../audio/lame
+DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
 DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 
 USE_LANGUAGES=			# none
@@ -28,6 +29,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ConvertToMP3.py \
 	  ${DESTDIR}${PREFIX}/bin/converttomp3
 
-.include "../../audio/py-mutagen/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -9,6 +9,8 @@ HOMEPAGE=	http://jak-linux.org/projects/dir2ogg
 COMMENT=	Command-line {wav,mp3,m4a} to ogg converter
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
+
 USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	${WRKSRC}/dir2ogg
@@ -20,6 +22,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dir2ogg ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/dir2ogg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
-.include "../../audio/py-mutagen/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
