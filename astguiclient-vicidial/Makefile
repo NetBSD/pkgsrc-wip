@@ -13,7 +13,10 @@ COMMENT=	Asterisk GUI client, VICIdial
 
 NO_BUILD=	yes
 USE_TOOLS+=	perl
+
 REPLACE_PERL+=	install.pl
+REPLACE_PERL+=	bin/*.pl
+REPLACE_PERL+=	extras/*.pl
 
 WRKSRC=		${WRKDIR}
 BUILD_DEFS+=	VARBASE
@@ -65,13 +68,21 @@ DEPENDS+=	p5-Spreadsheet-XLSX>=0.1:../../math/p5-Spreadsheet-XLSX
 # PHP dependencies :
 DEPENDS+=	php56-mysql>=5.6:../../databases/php-mysql
 DEPENDS+=	php56-mysqli>=5.6:../../databases/php-mysqli
+	
+SUBST_CLASSES+=			fix-conf-path
+SUBST_STAGE.fix-conf-path=	post-extract
+SUBST_MESSAGE.fix-conf-path=	Fixing configuration file path.
+SUBST_FILES.fix-conf-path=	bin/*.pl
+SUBST_FILES.fix-conf-path+=	extras/*.pl
+SUBST_SED.fix-conf-path=	-e 's,/etc/astguiclient.conf,${PREFIX}/etc/astguiclient.conf,g'	
+SUBST_SED.fix-conf-path+=	-e 's,/etc/asterisk,${PREFIX}/etc/asterisk,g'	
 
 do-install:
 	cd ${WRKSRC}; \
 	${BUILDLINK_PREFIX.perl}/bin/perl install.pl \
 		#--no-prompt \
 		--debug \
-		--conffile=/etc/astguiclient.conf \
+		--conffile=${PREFIX}/etc/astguiclient.conf \
 		--home=${PREFIX}/share/vicidial \
 		--logs=${VARBASE}/log/vicidial \
 		--agi=${VARBASE}/lib/asterisk/agi-bin \
