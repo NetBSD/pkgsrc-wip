@@ -23,6 +23,7 @@ BUILD_DEFS+=	VARBASE
 
 INTERACTIVE_STAGE= configure install
 
+	# Perl dependencies :
 DEPENDS+=	p5-DBI>=1.6:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql>=1.6:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Digest-MD5>=2.5:../../security/p5-Digest-MD5
@@ -59,23 +60,34 @@ DEPENDS+=	p5-Crypt-Eksblowfish>=0.0:../../security/p5-Crypt-Eksblowfish
 DEPENDS+=	p5-IO-tty>=1.1:../../devel/p5-IO-Tty
 DEPENDS+=	p5-MIME-Base64>=3.1:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net-SFTP-Foreign>=1.8:../../wip/p5-Net-SFTP-Foreign
-# Needed for Super List Loader:
+	# Needed for Super List Loader:
 DEPENDS+=	p5-Spreadsheet-WriteExcel>=2.4:../../math/p5-Spreadsheet-WriteExcel
 DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.2:../../math/p5-Spreadsheet-ReadSXC
 DEPENDS+=	p5-Spreadsheet-ParseExcel>=0.6:../../math/p5-Spreadsheet-ParseExcel
 DEPENDS+=	p5-Spreadsheet-Read>=0.7:../../math/p5-Spreadsheet-Read
 DEPENDS+=	p5-Spreadsheet-XLSX>=0.1:../../math/p5-Spreadsheet-XLSX	
-# PHP dependencies :
+	# PHP dependencies :
 DEPENDS+=	php56-mysql>=5.6:../../databases/php-mysql
 DEPENDS+=	php56-mysqli>=5.6:../../databases/php-mysqli
-	
+	# Networking dependencies :
+DEPENDS+=	wget>=1.19:../../net/wget
+DEPENDS+=	ap24-php56>=5.6:../../www/ap-php
+
 SUBST_CLASSES+=			fix-conf-path
 SUBST_STAGE.fix-conf-path=	post-extract
 SUBST_MESSAGE.fix-conf-path=	Fixing configuration file path.
-SUBST_FILES.fix-conf-path=	bin/*.pl
-SUBST_FILES.fix-conf-path+=	extras/*.pl
+SUBST_FILES.fix-conf-path=	*.pl
+SUBST_FILES.fix-conf-path+=	*/*.pl
+SUBST_FILES.fix-conf-path+=	*/*/*.pl
+SUBST_FILES.fix-conf-path+=	agi/*.agi
+SUBST_FILES.fix-conf-path+=	*/*/*.php
+SUBST_FILES.fix-conf-path+=	*/*/*/*.php
 SUBST_SED.fix-conf-path=	-e 's,/etc/astguiclient.conf,${PREFIX}/etc/astguiclient.conf,g'	
 SUBST_SED.fix-conf-path+=	-e 's,/etc/asterisk,${PREFIX}/etc/asterisk,g'	
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/apache2,${PREFIX}/share/httpd,g'	
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/bin/sox,${PREFIX}/bin/sox,g'	
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/bin/lame,${PREFIX}/bin/lame,g'	
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/mysql/bin,${PREFIX}/bin/mysql,g'	
 
 do-install:
 	cd ${WRKSRC}; \
@@ -94,8 +106,9 @@ do-install:
 		--asterisk_version=11.X
 	${CP} -R ${WRKSRC}/extras  ${PREFIX}/share/vicidial/extras
 
-.include "../../lang/php56/buildlink3.mk"
 .include "../../databases/mysql55-server/buildlink3.mk"
+.include "../../audio/sox/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 .include "../../wip/p5-Asterisk-vicidial/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
