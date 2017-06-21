@@ -35,11 +35,13 @@ $NetBSD$
  const int PTHREAD_MUTEX_RECURSIVE = 1;
  const int PTHREAD_MUTEX_RECURSIVE_NP = 1;
  #else
-@@ -100,8 +112,10 @@ const int PTHREAD_MUTEX_RECURSIVE_NP = 2
+@@ -100,8 +112,12 @@ const int PTHREAD_MUTEX_RECURSIVE_NP = 2
  #endif
  const int EINVAL = 22;
  const int EBUSY = 16;
-+#if !SANITIZER_NETBSD
++#if SANITIZER_NETBSD
++const int EOWNERDEAD = -1;
++#else
  const int EOWNERDEAD = 130;
 -#if !SANITIZER_FREEBSD && !SANITIZER_MAC
 +#endif
@@ -47,7 +49,7 @@ $NetBSD$
  const int EPOLL_CTL_ADD = 1;
  #endif
  const int SIGILL = 4;
-@@ -110,7 +124,7 @@ const int SIGFPE = 8;
+@@ -110,7 +126,7 @@ const int SIGFPE = 8;
  const int SIGSEGV = 11;
  const int SIGPIPE = 13;
  const int SIGTERM = 15;
@@ -56,7 +58,7 @@ $NetBSD$
  const int SIGBUS = 10;
  const int SIGSYS = 12;
  #else
-@@ -154,7 +168,7 @@ struct sigaction_t {
+@@ -154,7 +170,7 @@ struct sigaction_t {
      sighandler_t sa_handler;
      sigactionhandler_t sa_sigaction;
    };
@@ -65,7 +67,7 @@ $NetBSD$
    int sa_flags;
    __sanitizer_sigset_t sa_mask;
  #elif SANITIZER_MAC
-@@ -173,7 +187,7 @@ struct sigaction_t {
+@@ -173,7 +189,7 @@ struct sigaction_t {
  const sighandler_t SIG_DFL = (sighandler_t)0;
  const sighandler_t SIG_IGN = (sighandler_t)1;
  const sighandler_t SIG_ERR = (sighandler_t)-1;
@@ -74,7 +76,7 @@ $NetBSD$
  const int SA_SIGINFO = 0x40;
  const int SIG_SETMASK = 3;
  #elif defined(__mips__)
-@@ -289,7 +303,7 @@ void ScopedInterceptor::DisableIgnores()
+@@ -289,7 +305,7 @@ void ScopedInterceptor::DisableIgnores()
  }
  
  #define TSAN_INTERCEPT(func) INTERCEPT_FUNCTION(func)
@@ -83,7 +85,7 @@ $NetBSD$
  # define TSAN_INTERCEPT_VER(func, ver) INTERCEPT_FUNCTION(func)
  #else
  # define TSAN_INTERCEPT_VER(func, ver) INTERCEPT_FUNCTION_VER(func, ver)
-@@ -466,7 +480,7 @@ static void SetJmp(ThreadState *thr, upt
+@@ -466,7 +482,7 @@ static void SetJmp(ThreadState *thr, upt
  static void LongJmp(ThreadState *thr, uptr *env) {
  #ifdef __powerpc__
    uptr mangled_sp = env[0];
@@ -92,30 +94,7 @@ $NetBSD$
    uptr mangled_sp = env[2];
  #elif defined(SANITIZER_LINUX)
  # ifdef __aarch64__
-@@ -1045,7 +1059,9 @@ static int cond_wait(ThreadState *thr, u
-     res = call_pthread_cancel_with_cleanup(
-         fn, c, m, t, (void (*)(void *arg))cond_mutex_unlock, &arg);
-   }
-+#if !SANITIZER_NETBSD
-   if (res == errno_EOWNERDEAD) MutexRepair(thr, pc, (uptr)m);
-+#endif
-   MutexPostLock(thr, pc, (uptr)m, MutexFlagDoPreLockOnPostLock);
-   return res;
- }
-@@ -1131,10 +1147,12 @@ TSAN_INTERCEPTOR(int, pthread_mutex_dest
- TSAN_INTERCEPTOR(int, pthread_mutex_trylock, void *m) {
-   SCOPED_TSAN_INTERCEPTOR(pthread_mutex_trylock, m);
-   int res = REAL(pthread_mutex_trylock)(m);
-+#if !SANITIZER_NETBSD
-   if (res == EOWNERDEAD)
-     MutexRepair(thr, pc, (uptr)m);
-   if (res == 0 || res == EOWNERDEAD)
-     MutexPostLock(thr, pc, (uptr)m, MutexFlagTryLock);
-+#endif
-   return res;
- }
- 
-@@ -1348,7 +1366,7 @@ TSAN_INTERCEPTOR(int, __fxstat, int vers
+@@ -1348,7 +1364,7 @@ TSAN_INTERCEPTOR(int, __fxstat, int vers
  #endif
  
  TSAN_INTERCEPTOR(int, fstat, int fd, void *buf) {
@@ -124,7 +103,7 @@ $NetBSD$
    SCOPED_TSAN_INTERCEPTOR(fstat, fd, buf);
    if (fd > 0)
      FdAccess(thr, pc, fd);
-@@ -1929,7 +1947,7 @@ TSAN_INTERCEPTOR(int, sigaction, int sig
+@@ -1929,7 +1945,7 @@ TSAN_INTERCEPTOR(int, sigaction, int sig
    sigactions[sig].sa_flags = *(volatile int*)&act->sa_flags;
    internal_memcpy(&sigactions[sig].sa_mask, &act->sa_mask,
        sizeof(sigactions[sig].sa_mask));
@@ -133,7 +112,7 @@ $NetBSD$
    sigactions[sig].sa_restorer = act->sa_restorer;
  #endif
    sigaction_t newact;
-@@ -2291,7 +2309,7 @@ struct ScopedSyscall {
+@@ -2291,7 +2307,7 @@ struct ScopedSyscall {
    }
  };
  
@@ -142,7 +121,7 @@ $NetBSD$
  static void syscall_access_range(uptr pc, uptr p, uptr s, bool write) {
    TSAN_SYSCALL();
    MemoryAccessRange(thr, pc, p, s, write);
-@@ -2571,7 +2589,9 @@ void InitializeInterceptors() {
+@@ -2571,7 +2587,9 @@ void InitializeInterceptors() {
  #endif
    TSAN_INTERCEPT(on_exit);
    TSAN_INTERCEPT(__cxa_atexit);
