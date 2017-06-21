@@ -142,3 +142,13 @@ $NetBSD$
  static void syscall_access_range(uptr pc, uptr p, uptr s, bool write) {
    TSAN_SYSCALL();
    MemoryAccessRange(thr, pc, p, s, write);
+@@ -2571,7 +2589,9 @@ void InitializeInterceptors() {
+ #endif
+   TSAN_INTERCEPT(on_exit);
+   TSAN_INTERCEPT(__cxa_atexit);
++#if !SANITIZER_NETBSD
+   TSAN_INTERCEPT(_exit);
++#endif
+ 
+ #ifdef NEED_TLS_GET_ADDR
+   TSAN_INTERCEPT(__tls_get_addr);
