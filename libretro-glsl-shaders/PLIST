@@ -7,6 +7,8 @@ share/libretro/shaders/anti-aliasing/aa-shader-4.0-level2.glslp
 share/libretro/shaders/anti-aliasing/aa-shader-4.0.glslp
 share/libretro/shaders/anti-aliasing/advanced-aa.glslp
 share/libretro/shaders/anti-aliasing/fxaa.glslp
+share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0-level2/aa-shader-4.0-level2-pass1.glsl
+share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0-level2/aa-shader-4.0-level2-pass2.glsl
 share/libretro/shaders/anti-aliasing/shaders/aa-shader-4.0.glsl
 share/libretro/shaders/anti-aliasing/shaders/advanced-aa.glsl
 share/libretro/shaders/anti-aliasing/shaders/fxaa.glsl
@@ -211,6 +213,12 @@ share/libretro/shaders/crt/shaders/gtu-famicom/scaleY.glsl
 share/libretro/shaders/crt/shaders/gtu-v050/pass1.glsl
 share/libretro/shaders/crt/shaders/gtu-v050/pass2.glsl
 share/libretro/shaders/crt/shaders/gtu-v050/pass3.glsl
+share/libretro/shaders/crt/shaders/metacrt/Image.glsl
+share/libretro/shaders/crt/shaders/metacrt/basilica.png
+share/libretro/shaders/crt/shaders/metacrt/bufC.glsl
+share/libretro/shaders/crt/shaders/metacrt/bufD.glsl
+share/libretro/shaders/crt/shaders/metacrt/gradient.png
+share/libretro/shaders/crt/shaders/metacrt/woodgrain.png
 share/libretro/shaders/crt/shaders/phosphorlut/luts/aperture-grille.png
 share/libretro/shaders/crt/shaders/phosphorlut/luts/shadowmask.png
 share/libretro/shaders/crt/shaders/phosphorlut/luts/slotmask.png
