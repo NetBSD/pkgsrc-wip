@@ -25,7 +25,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=		gmake makeinfo sed:run tar:build
+USE_TOOLS+=		gmake makeinfo gsed tar:build
 
 GNU_CONFIGURE=		yes
 ## Build outside ${WRKSRC}
