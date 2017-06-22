@@ -3,6 +3,7 @@ share/libretro/shaders/3dfx/3dfx_4x1.glslp
 share/libretro/shaders/3dfx/shaders/3dfx_pass_0.glsl
 share/libretro/shaders/3dfx/shaders/3dfx_pass_1.glsl
 share/libretro/shaders/3dfx/shaders/3dfx_pass_2.glsl
+share/libretro/shaders/anti-aliasing/aa-shader-4.0-level2.glslp
 share/libretro/shaders/anti-aliasing/aa-shader-4.0.glslp
 share/libretro/shaders/anti-aliasing/advanced-aa.glslp
 share/libretro/shaders/anti-aliasing/fxaa.glslp
@@ -15,6 +16,7 @@ share/libretro/shaders/blurs/blur5fast-horizontal.glsl
 share/libretro/shaders/blurs/blur5fast-vertical.glsl
 share/libretro/shaders/blurs/blur9fast-horizontal.glsl
 share/libretro/shaders/blurs/blur9fast-vertical.glsl
+share/libretro/shaders/blurs/sharpsmoother.glsl
 share/libretro/shaders/borders/1080p/bigblur.glslp
 share/libretro/shaders/borders/1080p/border-1080p.png
 share/libretro/shaders/borders/1080p/color-grid.glslp
@@ -139,6 +141,7 @@ share/libretro/shaders/crt/crtglow_lanczos.glslp
 share/libretro/shaders/crt/crtsim.glslp
 share/libretro/shaders/crt/gtu-famicom.glslp
 share/libretro/shaders/crt/gtuv50.glslp
+share/libretro/shaders/crt/metacrt.glslp
 share/libretro/shaders/crt/phosphorlut.glslp
 share/libretro/shaders/crt/shaders/crt-aperture.glsl
 share/libretro/shaders/crt/shaders/crt-caligari.glsl
@@ -507,13 +510,17 @@ share/libretro/shaders/omniscale/omniscale-legacy.glslp
 share/libretro/shaders/omniscale/omniscale.glslp
 share/libretro/shaders/omniscale/shaders/omniscale-legacy.glsl
 share/libretro/shaders/omniscale/shaders/omniscale.glsl
+share/libretro/shaders/pal/pal-r57shell.glslp
 share/libretro/shaders/pal/pal.glslp
+share/libretro/shaders/pal/shaders/pal-r57shell.glsl
 share/libretro/shaders/pal/shaders/pal-singlepass.glsl
 share/libretro/shaders/presets/c64-monitor.glslp
 share/libretro/shaders/presets/crt-royale-kurozumi.glslp
 share/libretro/shaders/presets/crtsim-grungy.glslp
 share/libretro/shaders/presets/nes-color-decoder+colorimetry+pixellate.glslp
 share/libretro/shaders/presets/nes-color-decoder+pixellate.glslp
+share/libretro/shaders/presets/xsoft+scalefx-level2aa+sharpsmoother.glslp
+share/libretro/shaders/presets/xsoft+scalefx-level2aa.glslp
 share/libretro/shaders/reshade/lut.glslp
 share/libretro/shaders/reshade/shaders/LUT/16.png
 share/libretro/shaders/reshade/shaders/LUT/32.png
