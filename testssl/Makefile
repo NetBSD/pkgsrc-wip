@@ -13,9 +13,6 @@ LICENSE=	gnu-gpl-v2
 GITHUB_PROJECT=	testssl.sh
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-#WRKSRC=		${WRKDIR}/testssl.sh-2.8
-#USE_LANGUAGES=	# none
-
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 NO_BUILD=	yes
