@@ -4262,6 +4262,7 @@ SUBDIR+=	teng
 SUBDIR+=	tengwar-ttf
 SUBDIR+=	tenmado
 SUBDIR+=	termit
+SUBDIR+=	testssl
 SUBDIR+=	tetrinet
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
