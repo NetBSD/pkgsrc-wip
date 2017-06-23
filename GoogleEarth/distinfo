@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2015/03/02 20:04:13 tnn2 Exp $
+$NetBSD$
 
-SHA1 (google-earth-stable_7.1.4.1529_amd64.deb) = ddce175fcb5cb41448377bc692ca248885b7aa15
-RMD160 (google-earth-stable_7.1.4.1529_amd64.deb) = 61d837dc288aa8e0fd164a156bae0c2b4496c3de
-Size (google-earth-stable_7.1.4.1529_amd64.deb) = 46385468 bytes
+SHA1 (google-earth-stable_7.1.8.3036_amd64.deb) = f02bad883d13db6e87bae7a38c59e386acd1d4ab
+RMD160 (google-earth-stable_7.1.8.3036_amd64.deb) = 095b50672bba60cd53c967ec006d6cfee5432e83
+SHA512 (google-earth-stable_7.1.8.3036_amd64.deb) = 4dd8c29247a85df903ef0e4552081f6b25abae5020ce3ce59277fa1ab566fa429a0e674674e844bf12fa9747a1becff3ad124f1325755771359ffadcbed1e9e2
+Size (google-earth-stable_7.1.8.3036_amd64.deb) = 45349754 bytes

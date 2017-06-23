@@ -25,17 +25,17 @@ EMUL_MODULES.linux=	fontconfig glx gstreamer gtk2 lsb qt4 webp xslt
 
 ONLY_FOR_PLATFORM=	NetBSD-[0-9]*-x86_64 Linux-[0-9]*-x86_64
 
-GE_VERSION=		7.1.4.1529
+GE_VERSION=		7.1.8.3036
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 EXTRACT_CMD=		ar x "$$extract_file"
 
 INSTALLATION_DIRS=	bin share
 
-USE_TOOLS+=		pax lzcat tar
+USE_TOOLS+=		pax xzcat tar
 
 post-extract:
-	cd ${WRKDIR} && mkdir -p ${WRKSRC} && ${LZCAT} data.tar.lzma | ${TAR} -C ${WRKSRC} -xf -
+	cd ${WRKDIR} && mkdir -p ${WRKSRC} && ${XZCAT} data.tar.xz | ${TAR} -C ${WRKSRC} -xf -
 
 do-build:
 	printf '#! /bin/sh\nLD_LIBRARY_PATH=${PREFIX}/share/google/earth/free exec ${PREFIX}/share/google/earth/free/googleearth-bin "$$@"\n' > \
