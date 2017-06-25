@@ -1,6 +1,8 @@
 $NetBSD$
 
---- basepkg.sh.orig	2017-05-11 08:08:35.000000000 +0000
+* REPLACE_SH is not worked in my case.
+
+--- basepkg.sh.orig	2017-06-24 13:49:07.000000000 +0000
 +++ basepkg.sh
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env sh

@@ -2,7 +2,7 @@
 
 DEPENDS+=	pkg_install>=20160410:../../pkgtools/pkg_install
 
-DISTNAME=	basepkg-0.991
+DISTNAME=	basepkg-0.992
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=user340/}
 
@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}/basepkg-0.991
+WRKSRC=		${WRKDIR}/basepkg-0.992
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	share/basepkg
