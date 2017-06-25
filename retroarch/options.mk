@@ -3,26 +3,52 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
-PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype libxml2
+PKG_SUPPORTED_OPTIONS+=	sdl2 alsa ffmpeg freetype libxml2 udev
 PKG_SUGGESTED_OPTIONS+=	sdl2 ffmpeg freetype
+PKG_OPTIONS_OPTIONAL_GROUPS+=	gl
+PKG_OPTIONS_GROUP.gl+=		opengl
 
 .if !empty(MACHINE_ARCH:M*arm*)
-PKG_OPTIONS_OPTIONAL_GROUPS+=	gles
-PKG_OPTIONS_GROUP.gles+=	rpi
+CONFIGURE_ARGS+=		--enable-floathard
+PKG_OPTIONS_GROUP.gl+=		rpi
+PKG_SUPPORTED_OPTIONS+=		simd
 .endif
 
-.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
-PKG_OPTIONS_GROUP.gles+=	sunxi-mali-fb
+.if !empty(MACHINE_ARCH:M*armv7*)
+PKG_SUGGESTED_OPTIONS+=		simd
+.endif
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-*armv7*)
+CONFIGURE_ARGS+=		--enable-neon
+PKG_OPTIONS_GROUP.gl+=		sunxi-mali-fb
+PKG_SUPPORTED_OPTIONS+=		sunxi-g2d
+PKG_SUGGESTED_OPTIONS+=		sunxi-g2d
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*)
 PKG_SUGGESTED_OPTIONS+=		rpi
+.else
+PKG_SUGGESTED_OPTIONS+=		opengl
 .endif
 
-PKG_SUPPORTED_OPTIONS.Linux+=	udev
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa udev
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(MACHINE_ARCH:M*arm*)
+.if !empty(PKG_OPTIONS:Msimd)
+CONFIGURE_ARGS+=	--enable-neon
+.else
+CONFIGURE_ARGS+=	--disable-neon
+.endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mopengl)
+CONFIGURE_ARGS+=	--enable-opengl
+.include "../../graphics/MesaLib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-opengl
+.endif
 
 .if !empty(PKG_OPTIONS:Mrpi)
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
@@ -32,7 +58,13 @@ SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		qb/config.libs.sh
 SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 CONFIGURE_ARGS+=	--enable-opengles
-CONFIGURE_ARGS+=	--disable-opengl
+.endif
+
+#
+# Enable use of the blobless unaccelerated Linux sunxi g2d driver
+#
+.if !empty(PKG_OPTIONS:Msunxi-g2d)
+CONFIGURE_ARGS+=	--enable-sunxi
 .endif
 
 #
@@ -40,11 +72,8 @@ CONFIGURE_ARGS+=	--disable-opengl
 #
 .if !empty(PKG_OPTIONS:Msunxi-mali-fb)
 .include "../../wip/sunxi-mali-fb/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-floathard
-CONFIGURE_ARGS+=	--enable-neon
 CONFIGURE_ARGS+=	--enable-opengles
 CONFIGURE_ARGS+=	--enable-mali_fbdev
-CONFIGURE_ARGS+=	--disable-opengl
 .endif
 
 .if !empty(PKG_OPTIONS:Mudev)
