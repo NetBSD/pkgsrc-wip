@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.25 2016/02/25 08:27:03 jperkin Exp $
 #
-DISTNAME=	scite374
-PKGNAME=	scite-3.7.4
+DISTNAME=	scite375
+PKGNAME=	scite-3.7.5
 #PKGREVISION=	0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}

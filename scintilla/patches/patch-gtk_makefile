@@ -1,5 +1,7 @@
---- gtk/makefile.orig	2016-12-01 09:53:41.000000000 +0000
-+++ gtk/makefile	2017-01-03 23:11:02.512337723 +0000
+$NetBSD$
+
+--- gtk/makefile.orig	2017-05-24 01:26:25.000000000 +0000
++++ gtk/makefile	2017-06-18 13:36:02.221339873 +0000
 @@ -9,14 +9,7 @@
  srcdir ?= .
  
@@ -28,7 +30,7 @@
  vpath %.h $(srcdir) $(srcdir)/../src $(srcdir)/../include $(srcdir)/../lexlib
 @@ -98,7 +92,7 @@
  
- LEXOBJS:=$(addsuffix .o,$(basename $(notdir $(wildcard $(srcdir)/../lexers/Lex*.cxx))))
+ LEXOBJS:=$(addsuffix .o,$(basename $(sort $(notdir $(wildcard $(srcdir)/../lexers/Lex*.cxx)))))
  
 -all: $(COMPLIB)
 +all: $(COMPLIB) $(LEXERLIB)
