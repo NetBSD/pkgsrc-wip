@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mednafen-wswan-20170321
+DISTNAME=	libretro-mednafen-wswan-20170621
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ COMMENT=	Libretro core based on the Mednafen Wonderswan emulator
 LICENSE=	gnu-gpl-v2
 
 GITHUB_PROJECT=	beetle-wswan-libretro
-GITHUB_TAG=	a5e6485791df67de92fa070b6612b260a0d05ec2
+GITHUB_TAG=	59f31b2c54037c2177ffbde40118f8d8f33c674b
 
 USE_TOOLS=	gmake
 USE_LANGUAGES=	c c++
