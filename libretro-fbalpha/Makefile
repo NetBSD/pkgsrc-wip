@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-fbalpha-20170415
+DISTNAME=	libretro-fbalpha-0.2.97.39
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 HOMEPAGE=	https://wiki.libretro.com/index.php?title=Final_Burn_Alpha
@@ -8,7 +8,7 @@ COMMENT=	Libretro core based on the FB Alpha arcade emulator
 LICENSE=	no-commercial-use
 
 GITHUB_PROJECT=	fbalpha
-GITHUB_TAG=	v0.2.97.39
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_TOOLS=	gmake
 

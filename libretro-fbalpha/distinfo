@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libretro-fbalpha-20170415.tar.gz) = 763510a2071b47d4fa48ac94a7ce22aff71d6977
-RMD160 (libretro-fbalpha-20170415.tar.gz) = 380f8a8fcbd27b87f945a196549e1ba07149fd3c
-SHA512 (libretro-fbalpha-20170415.tar.gz) = 6fd2352570a7652cbe5116a3b2ad0f62957d3d305e9ff20bc3111c26abd5ef2bbbbc814eff4312b39dc866283d7acce2245834e1bced90b9b02113c2f006322a
-Size (libretro-fbalpha-20170415.tar.gz) = 8312397 bytes
+SHA1 (libretro-fbalpha-0.2.97.39.tar.gz) = 763510a2071b47d4fa48ac94a7ce22aff71d6977
+RMD160 (libretro-fbalpha-0.2.97.39.tar.gz) = 380f8a8fcbd27b87f945a196549e1ba07149fd3c
+SHA512 (libretro-fbalpha-0.2.97.39.tar.gz) = 6fd2352570a7652cbe5116a3b2ad0f62957d3d305e9ff20bc3111c26abd5ef2bbbbc814eff4312b39dc866283d7acce2245834e1bced90b9b02113c2f006322a
+Size (libretro-fbalpha-0.2.97.39.tar.gz) = 8312397 bytes
