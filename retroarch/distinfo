@@ -5,4 +5,5 @@ RMD160 (retroarch-1.6.1.tar.gz) = 3b301a4e17fd156e5ffcce61a0b5c19811705184
 SHA512 (retroarch-1.6.1.tar.gz) = d97c88fa1c748629c53948c153a3b96278da02a6fa503a5f3aa1fe46c75af532d2739eef44f6c028118c71d6cfc38c3a886643e7d2c36ad4eb93eba4608fff8a
 Size (retroarch-1.6.1.tar.gz) = 16358704 bytes
 SHA1 (patch-Makefile) = 0a573beb9a95ab822eaa4056ccd260a0961b2d7b
+SHA1 (patch-frontend_drivers_platform__unix.c) = ad47823cdec50cc36e97f78b540d35a5ccf2d994
 SHA1 (patch-qb_qb.libs.sh) = bd92a7016e45fd6ee5a47300516c4028227384b2
