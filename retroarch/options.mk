@@ -19,7 +19,6 @@ PKG_SUGGESTED_OPTIONS+=		simd
 .endif
 
 .if !empty(MACHINE_PLATFORM:MLinux-*-*armv7*)
-CONFIGURE_ARGS+=		--enable-neon
 PKG_OPTIONS_GROUP.gl+=		sunxi-mali-fb
 PKG_SUPPORTED_OPTIONS+=		sunxi-g2d
 PKG_SUGGESTED_OPTIONS+=		sunxi-g2d
