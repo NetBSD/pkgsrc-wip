@@ -32,6 +32,7 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__linux.h) = 88b1ebffc90f47b1dfd4e21e
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cc) = 3f2be0e646495cbd7988782d8a57da6c4b022401
 SHA1 (patch-lib_sanitizer__common_sanitizer__netbsd.h) = c1c19a402137e21ddc5bb48f8825400a34f010cc
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform.h) = 47360a8352cc34fddc71c8f71081d7d589a63dad
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = cb3ae73d6ea041180116112c2a6b081a13155e60
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = d4c0c967b53dbdf86090c7f0fba9b808302cca77
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.h) = 01eba8683f70398c8f4be6bc6de165ffd7bf27fa
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps.h) = ec0b5c576463639a3ee66c33ff7e9d94076f40df
