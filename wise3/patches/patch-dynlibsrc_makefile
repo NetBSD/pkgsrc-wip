@@ -1,0 +1,34 @@
+$NetBSD$
+
+--- dynlibsrc/makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ dynlibsrc/makefile
+@@ -85,9 +85,9 @@ DYNHELPEROBJ = packaln.o \
+ CC = cc
+ INCFLAGS = -I../base/
+ #CFLAGS = -Wall -g -pedantic -c  -DUNIX -I../base/
+-CFLAGS =  -Wall -pthread -g3 -DCOMPILE_VERBOSITY -DPTHREAD -O2 -c  -DUNIX -I../base/ `glib-config --cflags`
+-#CFLAGS =  -Wall -g3 -pg -DPTHREAD -O2  -c  -DUNIX -I../base/ `glib-config --cflags`
+-#CFLAGS =   -O2 -c -pthread  -DUNIX  -I../base/ `glib-config --cflags`
++CFLAGS =  -Wall -pthread -g3 -DCOMPILE_VERBOSITY -DPTHREAD -O2 -c  -DUNIX -I../base/
++#CFLAGS =  -Wall -g3 -pg -DPTHREAD -O2  -c  -DUNIX -I../base/
++#CFLAGS =   -O2 -c -pthread  -DUNIX  -I../base/
+ #CFLAGS =   -O -c -DUNIX -DNOERROR -I../base/
+ LFLAGS =  -g -L../base/ -lm 
+ AR_OPTIONS = ru
+@@ -149,13 +149,13 @@ test_shadowindex : test_shadowindex.o sh
+ 	$(CC) -g -o test_shadowindex test_shadowindex.o shadowseqindex.o shadowseq.o ./libdyna.a ../base/libwisebase.a -lm
+ 
+ test_seqhash : test_seqhash.o subseqhash.o hsp.o hitlist.o hspscaninterface.o hsplookupscan.o libdyna.a
+-	$(CC) -g -o test_seqhash `glib-config --libs` test_seqhash.o subseqhash.o hsp.o  hitlist.o hspscaninterface.o hsplookupscan.o libdyna.a ../base/libwisebase.a -lm  
++	$(CC) -g -o test_seqhash test_seqhash.o subseqhash.o hsp.o  hitlist.o hspscaninterface.o hsplookupscan.o libdyna.a ../base/libwisebase.a -lm  
+ 
+ test_hsp : test_hsp.o codon.o sequence.o hsp.o compmat.o probability.o 
+-	$(CC) -g -o test_hsp test_hsp.o codon.o sequence.o hsp.o compmat.o probability.o  ../base/libwisebase.a -lm `glib-config --libs`
++	$(CC) -g -o test_hsp test_hsp.o codon.o sequence.o hsp.o compmat.o probability.o  ../base/libwisebase.a -lm
+ 
+ test_topscore : test_topscore.o codon.o sequence.o hsp.o compmat.o probability.o 
+-	$(CC) -g -o test_topscore test_topscore.o codon.o sequence.o hsp.o compmat.o probability.o  ../base/libwisebase.a -lm `glib-config --libs`
++	$(CC) -g -o test_topscore test_topscore.o codon.o sequence.o hsp.o compmat.o probability.o  ../base/libwisebase.a -lm
+ 
+ 
+ testgendb : probability.o genomicdb.o genomic.o testgendb.o sequence.o codon.o sequencedb.o complexsequence.o complexevalset.o

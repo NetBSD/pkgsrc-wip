@@ -1,0 +1,138 @@
+$NetBSD$
+
+--- models/makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ models/makefile
+@@ -110,10 +110,10 @@ gw21 : $(MODELOBJ) $(GENEWISEMODEL) gene
+ pwise : $(MODELOBJ) threestatemat.o threestatedisplay.o
+ 
+ test : test.o proteinsw.o protprotdis.o
+-	$(CC) -o test test.o proteinsw.o protprotdis.o  -ldyna_glib -ldyna -lwisebase ../dynlibsrc/matrix.o $(LFLAGS)
++	$(CC) -o test test.o proteinsw.o protprotdis.o -ldyna -lwisebase ../dynlibsrc/matrix.o $(LFLAGS)
+ 
+ testanc : testanc.o proteinsw.o abc.o pba.o sw_wrap.o
+-	$(CC) -o testanc testanc.o proteinsw.o abc.o pba.o sw_wrap.o $(LFLAGS) -lhmmer -ldyna_glib -ldyna -lwisebase  $(EXTRALIBS)
++	$(CC) -o testanc testanc.o proteinsw.o abc.o pba.o sw_wrap.o $(LFLAGS) -lhmmer -ldyna -lwisebase  $(EXTRALIBS)
+ 
+ test_tf : test_transfactor.o transfactor.o pwmdna.o
+ 	$(CC) -o test_tf test_transfactor.o transfactor.o pwmdna.o $(LFLAGS) -ldyna -lwisebase 
+@@ -129,10 +129,10 @@ motifdiff : motifdiff.o transfactor.o tr
+ 
+ 
+ cdtest : cdtest.o cdna2genomic.o d2d_display.o
+-	$(CC) -o cdtest cdtest.o cdna2genomic.o d2d_display.o  -ldyna_glib -ldyna -lwisebase $(LFLAGS)
++	$(CC) -o cdtest cdtest.o cdna2genomic.o d2d_display.o -ldyna -lwisebase $(LFLAGS)
+ 
+ prob2bits : prob2bits.o
+-	$(CC) -o prob2bits  $(LFLAGS) -ldyna_glib -ldyna -lwisebase 
++	$(CC) -o prob2bits  $(LFLAGS) -ldyna -lwisebase 
+ 
+ quick :
+ 	cc -O -c -I../dynlibsrc/ -I../base/ genewise6.c
+@@ -179,74 +179,74 @@ fivestarscan.o : fivestarscan.c
+ 	$(CC) $(CFLAGS) fivestarscan.c -I../base/ -I../dynlibsrc/ -I../HMMer2/ -I.
+ 
+ oldpostwise : oldpostwise.o $(NEWG) 
+-	$(CC) -g -o oldpostwise oldpostwise.o $(NEWG) $(LFLAGS) -lhmmer -ldyna_glib -ldyna -lwisebase  
++	$(CC) -g -o oldpostwise oldpostwise.o $(NEWG) $(LFLAGS) -lhmmer -ldyna -lwisebase  
+ 
+ testdna : testdna.o dnaalign.o seqaligndisplay.o 
+-	$(CC) -o testdna testdna.o dnaalign.o seqaligndisplay.o $(LFLAGS) -ldyna_glib -ldyna -lwisebase  $(EXTRALIBS)
++	$(CC) -o testdna testdna.o dnaalign.o seqaligndisplay.o $(LFLAGS) -ldyna -lwisebase  $(EXTRALIBS)
+ 
+ dnal : dnal.o dnaalign.o seqaligndisplay.o 
+-	$(CC) -o dnal dnal.o dnaalign.o seqaligndisplay.o $(LFLAGS) -ldyna_glib -ldyna -lwisebase  $(EXTRALIBS)
++	$(CC) -o dnal dnal.o dnaalign.o seqaligndisplay.o $(LFLAGS) -ldyna -lwisebase  $(EXTRALIBS)
+ 
+ foldback : foldback.o foldbackmat.o seqaligndisplay.o 
+-	$(CC) -o foldback  foldback.o foldbackmat.o seqaligndisplay.o $(LFLAGS) -ldyna_glib -ldyna -lwisebase  $(EXTRALIBS)
++	$(CC) -o foldback  foldback.o foldbackmat.o seqaligndisplay.o $(LFLAGS) -ldyna -lwisebase  $(EXTRALIBS)
+ 
+ psw : psw.o seqaligndisplay.o proteinsw.o sw_wrap.o abc.o pba.o
+-	$(CC) -o psw psw.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o   $(LFLAGS) -ldyna_glib -ldyna -lwisebase  $(EXTRALIBS)
++	$(CC) -o psw psw.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o   $(LFLAGS) -ldyna -lwisebase  $(EXTRALIBS)
+ 
+ scanwisep.o : scanwisep.c
+-	$(CC) $(CFLAGS) $(INCFLAGS) -I../external/mott `glib-config --cflags` $?
++	$(CC) $(CFLAGS) $(INCFLAGS) -I../external/mott $?
+ 
+ hsp2aln_sw.o : hsp2aln_sw.c
+-	$(CC) $(CFLAGS) $(INCFLAGS) `glib-config --cflags` $?
++	$(CC) $(CFLAGS) $(INCFLAGS) $?
+ 
+ scanwisep_mysql.o : scanwisep.c
+ 	$(CC)  $(CFLAGS) -DSCAN_MYSQL -I../corba -I../external/mott -I../mysql/protein_index/ -I/usr/local/mysql/include scanwisep.c 
+ 
+ scanwisep_mysql : scanwisep_mysql.o seqaligndisplay.o proteinsw.o sw_wrap.o abc.o pba.o hsp2aln_sw.o
+-	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o ../mysql/protein_index/mysql_protein_index.o  $(LFLAGS) -L../external/mott -L/usr/local/mysql/lib -ldyna_glib -ldyna ott -lwisebase -lmysqlclient -lm $(EXTRALIBS) -lpthread -lZ
++	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o ../mysql/protein_index/mysql_protein_index.o  $(LFLAGS) -L../external/mott -L/usr/local/mysql/lib -ldyna ott -lwisebase -lmysqlclient -lm $(EXTRALIBS) -lpthread -lZ
+ 
+ 
+ scanwisep_corba.o : scanwisep.c
+ 	$(CC)  $(CFLAGS) -DSCAN_CORBA -I../corba -I../external/mott `orbit-config --cflags server` scanwisep.c 
+ 
+ scanwisep_corba : scanwisep_corba.o seqaligndisplay.o proteinsw.o sw_wrap.o abc.o pba.o hsp2aln_sw.o
+-	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   ../corba/hspscan_corba-common.o ../corba/hspscan_corba-stubs.o   ../corba/corba_singleton.o ../corba/hspscan_corba_wrapper.o $(LFLAGS) -L../external/mott -ldyna_glib -ldyna -lmott -lwisebase  $(EXTRALIBS) `orbit-config --libs server` -lpthread 
++	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   ../corba/hspscan_corba-common.o ../corba/hspscan_corba-stubs.o   ../corba/corba_singleton.o ../corba/hspscan_corba_wrapper.o $(LFLAGS) -L../external/mott -ldyna -lmott -lwisebase  $(EXTRALIBS) `orbit-config --libs server` -lpthread 
+ 
+ 
+ scanwisep_wiseserver.o : scanwisep.c
+ 	$(CC)  $(CFLAGS) $(INCFLAGS)  -o scanwisep_wiseserver.o -DSCAN_WISESERVER -I../network -I../socket -I../external/mott scanwisep.c 
+ 
+ scanwise : scanwisep_wiseserver.o seqaligndisplay.o proteinsw.o sw_wrap.o abc.o pba.o hsp2aln_sw.o
+-	$(CC) -o scanwise scanwisep_wiseserver.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   ../network/net_hspscan.o ../network/client_multihspscan.o  $(LFLAGS) -L../external/mott -L../socket -lmott -ldyna_glib -ldyna -lwisesocket -lwisebase  $(EXTRALIBS) -lpthread 
++	$(CC) -o scanwise scanwisep_wiseserver.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   ../network/net_hspscan.o ../network/client_multihspscan.o  $(LFLAGS) -L../external/mott -L../socket -lmott -ldyna -lwisesocket -lwisebase  $(EXTRALIBS) -lpthread 
+ 
+ scanwisep_compress.o : scanwisep.c
+ 	$(CC)  $(CFLAGS) -DSCAN_COMPRESS -I../dnaindex -I../network -I../socket -I../external/mott scanwisep.c 
+ 
+ scanwisep_compress : scanwisep_compress.o seqaligndisplay.o proteinsw.o sw_wrap.o abc.o pba.o hsp2aln_sw.o
+-	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   ../dnaindex/compressed_protein_index.o ../dnaindex/singleseqspace.o  ../dnaindex/kmer_direct.o  ../dnaindex/kmer_index_interface.o  $(LFLAGS) -L../external/mott -L../socket -lmott -ldyna_glib -ldyna -lwisesocket -lwisebase  $(EXTRALIBS) -lpthread 
++	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   ../dnaindex/compressed_protein_index.o ../dnaindex/singleseqspace.o  ../dnaindex/kmer_direct.o  ../dnaindex/kmer_index_interface.o  $(LFLAGS) -L../external/mott -L../socket -lmott -ldyna -lwisesocket -lwisebase  $(EXTRALIBS) -lpthread 
+ 
+ 
+ 
+ scanwisep : scanwisep.o seqaligndisplay.o proteinsw.o sw_wrap.o abc.o pba.o hsp2aln_sw.o
+-	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   $(LFLAGS)  -L../external/mott -lmott -ldyna_glib -ldyna  -lwisebase  $(EXTRALIBS) `glib-config --libs` -lpthread
++	$(CC) -o scanwisep scanwisep.o sw_wrap.o seqaligndisplay.o proteinsw.o abc.o pba.o hsp2aln_sw.o   $(LFLAGS)  -L../external/mott -lmott -ldyna  -lwisebase  $(EXTRALIBS) -lpthread
+ 
+ test_gwhsp : test_gwhsp.o genewisehsp.o
+-	$(CC) -o test_gwhsp test_gwhsp.o genewisehsp.o $(LFLAGS) -ldyna_glib -ldyna_glib -ldyna_glib -ldyna -lwisebase  $(EXTRALIBS) `glib-config --libs` -lpthread
++	$(CC) -o test_gwhsp test_gwhsp.o genewisehsp.o $(LFLAGS) -ldyna -lwisebase  $(EXTRALIBS) -lpthread
+ 
+ localcishit.o : localcishit.c
+-	$(CC) $(CFLAGS) $(INCFLAGS) `glib-config --cflags` $?
++	$(CC) $(CFLAGS) $(INCFLAGS) $?
+ 
+ promoterwise.o : promoterwise.c  
+-	$(CC) $(CFLAGS) $(INCFLAGS) `glib-config --cflags` $?
++	$(CC) $(CFLAGS) $(INCFLAGS) $?
+ 
+ promoterwise : promoterwise.o localdba.o localcishit.o localcispara.o dbadisplay.o motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o pairwiseshortdna.o
+-	$(CC) -g -o promoterwise promoterwise.o localdba.o  localcishit.o localcispara.o dbadisplay.o  motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o  pairwiseshortdna.o $(LFLAGS)  -ldyna -lwisebase  $(EXTRALIBS) `glib-config --libs` -lpthread
++	$(CC) -g -o promoterwise promoterwise.o localdba.o  localcishit.o localcispara.o dbadisplay.o  motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o  pairwiseshortdna.o $(LFLAGS)  -ldyna -lwisebase  $(EXTRALIBS) -lpthread
+ 
+ test_deng : test_deng.o localdba.o localcishit.o localcispara.o dbadisplay.o motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o pairwiseshortdna.o dnaprofile.o dnaprofiledp.o dnaprofileengine.o
+-	$(CC) -o test_deng test_deng.o  localdba.o localcishit.o localcispara.o dbadisplay.o motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o pairwiseshortdna.o dnaprofile.o dnaprofiledp.o dnaprofileengine.o $(LFLAGS)  -ldyna -lwisebase  $(EXTRALIBS) `glib-config --libs` -lpthread
++	$(CC) -o test_deng test_deng.o  localdba.o localcishit.o localcispara.o dbadisplay.o motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o pairwiseshortdna.o dnaprofile.o dnaprofiledp.o dnaprofileengine.o $(LFLAGS)  -ldyna -lwisebase  $(EXTRALIBS) -lpthread
+ 
+ promotercluster : promotercluster.o localdba.o localcishit.o localcispara.o dbadisplay.o motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o pairwiseshortdna.o dnaprofile.o dnaprofiledp.o dnaprofileengine.o
+-	$(CC) -o promotercluster promotercluster.o  localdba.o localcishit.o localcispara.o dbadisplay.o motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o pairwiseshortdna.o dnaprofile.o dnaprofiledp.o dnaprofileengine.o $(LFLAGS)  -ldyna -lwisebase  $(EXTRALIBS) `glib-config --libs` -lpthread
++	$(CC) -o promotercluster promotercluster.o  localdba.o localcishit.o localcispara.o dbadisplay.o motifmatrix.o motifmatrixdp.o transfactor.o pwmdna.o pairwiseshortdna.o dnaprofile.o dnaprofiledp.o dnaprofileengine.o $(LFLAGS)  -ldyna -lwisebase  $(EXTRALIBS) -lpthread
+ 
+ dnawise : dnawise.o dnahmm.o dnahmmdp.o seqaligndisplay.o 
+ 	$(CC) -o dnawise dnawise.o dnahmm.o dnahmmdp.o  seqaligndisplay.o $(LFLAGS)  -ldyna -lwisebase  -lpthread
+@@ -355,11 +355,11 @@ HMMER_DEFINE =
+ CC = cc
+ #CFLAGS = -c -O2  -pg -I../base/ -I../dynlibsrc/
+ #CFLAGS = -c -O2 -DPTHREAD -DHAS_PTHREAD_SETSCOPE  -DUNIX  -I../base/ -I../dynlibsrc/ -I.
+-CFLAGS = -c -g3 -O2  -DUNIX  -I../base/ -I../dynlibsrc/ -I. -pthread `glib-config --cflags`
+-#CFLAGS = -c  -g -DHAS_PTHREAD_SETSCOPE -DUNIX -I../base/ -I../dynlibsrc/ `glib-config --cflags`
++CFLAGS = -c -g3 -O2  -DUNIX  -I../base/ -I../dynlibsrc/ -I. -pthread
++#CFLAGS = -c  -g -DHAS_PTHREAD_SETSCOPE -DUNIX -I../base/ -I../dynlibsrc/
+ #LFLAGS =  -L../base/ -L../dynlibsrc/ -L../HMMer2/  
+ 
+-LFLAGS =  -L../base/ -L../dynlibsrc/ -L$(HMMER_LIBS) -lpthread `glib-config --libs`
++LFLAGS =  -L../base/ -L../dynlibsrc/ -L$(HMMER_LIBS) -lpthread
+ AR_OPTIONS = ru
+ 
+ RANLIB_NEEDED = 0

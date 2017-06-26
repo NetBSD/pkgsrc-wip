@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- network/makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ network/makefile
+@@ -3,8 +3,8 @@
+ 
+ CC = cc
+ INCFLAGS = -I../base/  -I../socket -I../dynlibsrc -I../dnaindex
+-CFLAGS =    -O2  -c -pthread  -DUNIX  -I../base/ -I../socket -I../dynlibsrc -I../dnaindex `glib-config --cflags`
+-LFLAGS =  -g -L../base/ -L../socket -L../dynlibsrc -L../dnaindex -lm `glib-config --libs`
++CFLAGS =    -O2  -c -pthread  -DUNIX  -I../base/ -I../socket -I../dynlibsrc -I../dnaindex
++LFLAGS =  -g -L../base/ -L../socket -L../dynlibsrc -L../dnaindex -lm
+ AR_OPTIONS = ru
+ 
+ RANLIB_NEEDED = 0

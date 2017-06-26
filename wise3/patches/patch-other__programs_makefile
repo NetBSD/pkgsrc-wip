@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- other_programs/makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ other_programs/makefile
+@@ -3,8 +3,8 @@
+ .SUFFIXES :  .dy
+ 
+ CC = cc
+-CFLAGS =   -g3 -c -pthread  -DUNIX  -I../base/ -I../dynlibsrc `glib-config --cflags`
+-LFLAGS =  -g -L../base/ -L../dynlibsrc  -lm `glib-config --libs`
++CFLAGS =   -g3 -c -pthread  -DUNIX  -I../base/ -I../dynlibsrc
++LFLAGS =  -g -L../base/ -L../dynlibsrc  -lm
+ AR_OPTIONS = ru
+ 
+ RANLIB_NEEDED = 0

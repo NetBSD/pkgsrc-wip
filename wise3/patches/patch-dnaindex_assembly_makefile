@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- dnaindex/assembly/makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ dnaindex/assembly/makefile
+@@ -26,10 +26,10 @@ arraymatcher : arraymatcher.o assemblygr
+ 
+ 
+ CC = cc
+-CFLAGS = -Wall -pthread -c  -DHAS_PTHREAD_SETSCOPE -g -DUNIX -I../../base/ -I../../dynlibsrc/ -I../ -I../../models/ `glib-config --cflags`
++CFLAGS = -Wall -pthread -c  -DHAS_PTHREAD_SETSCOPE -g -DUNIX -I../../base/ -I../../dynlibsrc/ -I../ -I../../models/
+ 
+ 
+-LFLAGS =  -g -L../../base/ -L../../dynlibsrc/ -lpthread `glib-config --libs` -lm
++LFLAGS =  -g -L../../base/ -L../../dynlibsrc/ -lpthread -lm
+ 
+ 
+ .c.o :

@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- snp/makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ snp/makefile
+@@ -5,9 +5,9 @@
+ CC = cc
+ #CFLAGS = -c -O2  -pg -I../base/ -I../dynlibsrc/
+ #CFLAGS = -c -O2 -DPTHREAD -DHAS_PTHREAD_SETSCOPE  -DUNIX  -I../base/ -I../dynlibsrc/ -I.
+-CFLAGS = -c -g3 -O2  -DUNIX  -I../base/ -I../dynlibsrc/ -I. -pthread `glib-config --cflags`
++CFLAGS = -c -g3 -O2  -DUNIX  -I../base/ -I../dynlibsrc/ -I. -pthread
+ 
+-LFLAGS =  -g -L../base/ -L../dynlibsrc/ -lpthread `glib-config --libs` -lpthread -lm
++LFLAGS =  -g -L../base/ -L../dynlibsrc/ -lpthread -lpthread -lm
+ AR_OPTIONS = ru
+ 
+ RANLIB_NEEDED = 0

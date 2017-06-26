@@ -1,0 +1,16 @@
+$NetBSD$
+
+SHA1 (master.zip) = 7a14d11aaf5117e7ee88fdd8630ff5e923e0af59
+RMD160 (master.zip) = 22d6e16dd5fa8bd7eaedb310c1d0f1fe84d6a3c4
+SHA512 (master.zip) = 40d2e5c41b3975eed13f27dc173505ed870756be751c862b03390d162334466447630c895cf1bfecaf9d47219c6004548efab1d77d011f8a29dd728511220877
+Size (master.zip) = 23258620 bytes
+SHA1 (patch-corba_makefile) = cb6b6477ebf2d415769d654c662b3b011de00c50
+SHA1 (patch-dnaindex_assembly_makefile) = 6a800b22cec96fc5f0a84bd234cff00ba61ab041
+SHA1 (patch-dnaindex_makefile) = b207b7892de1a0a1daaae1e19177d53b26754e85
+SHA1 (patch-dynlibsrc_makefile) = 2689b17b6bf6c4a8017e50c9c0a6aeaa34743331
+SHA1 (patch-dynlibsrc_subseqhash.h) = 17b704f3e7e889131f2260f4965d95570b027c33
+SHA1 (patch-makefile) = d3e3f04b8145d0303e3fe15ad8703b6f417b0031
+SHA1 (patch-models_makefile) = c9de700daf9b005477a54f93db73e7836e74a8a2
+SHA1 (patch-network_makefile) = 2677b51978f0a84fd7a2785b4444d76f1cacfb3c
+SHA1 (patch-other__programs_makefile) = d17504de849801e48d09d70543038ef5856cb5d4
+SHA1 (patch-snp_makefile) = 02a4401e3ac7a512fc423ddd05dcc7649b0bd9b4

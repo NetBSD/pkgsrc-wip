@@ -1,0 +1,39 @@
+$NetBSD$
+
+--- dnaindex/makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ dnaindex/makefile
+@@ -26,17 +26,17 @@ ASSEMBLY_OBJ  = kmer_assembly.o \
+ all: $(ASSEMBLY_OBJ)
+ 
+ find_single_kmers : find_single_kmers.o dnamapping.o
+-	$(CC) -o find_single_kmers find_single_kmers.o dnamapping.o -ldyna -lwisebase $(LFLAGS) `glib-config --libs`
++	$(CC) -o find_single_kmers find_single_kmers.o dnamapping.o -ldyna -lwisebase $(LFLAGS)
+ 
+ kwise : kwise.o $(ASSEMBLY_OBJ)
+-	$(CC) -o kwise kwise.o $(ASSEMBLY_OBJ)  -ldyna -lwisebase $(LFLAGS) `glib-config --libs`
++	$(CC) -o kwise kwise.o $(ASSEMBLY_OBJ)  -ldyna -lwisebase $(LFLAGS)
+ 
+ arraymatcher : arraymatcher.o $(ASSEMBLY_OBJ) 
+-	$(CC) -o arraymatcher arraymatcher.o $(ASSEMBLY_OBJ)  -ldyna -lwisebase $(LFLAGS) `glib-config --libs`
++	$(CC) -o arraymatcher arraymatcher.o $(ASSEMBLY_OBJ)  -ldyna -lwisebase $(LFLAGS)
+ 
+ 
+ findbad_kmer : findbad_kmer.o $(ASSEMBLY_OBJ)
+-	$(CC) -o findbad_kmer findbad_kmer.o $(ASSEMBLY_OBJ)  -ldyna -lwisebase $(LFLAGS) `glib-config --libs`
++	$(CC) -o findbad_kmer findbad_kmer.o $(ASSEMBLY_OBJ)  -ldyna -lwisebase $(LFLAGS)
+ 
+ make_shotgun : make_shotgun.o shotgun.o
+ 	$(CC) -o make_shotgun make_shotgun.o shotgun.o -ldyna -lwisebase $(LFLAGS)
+@@ -72,10 +72,10 @@ show_euler : show_euler.o eulerindex.o s
+ 	$(CC) -o show_euler show_euler.o eulerindex.o singleseqspace.o -ldyna -lwisebase $(LFLAGS)
+ 
+ CC = cc
+-CFLAGS = -pthread -c  -DHAS_PTHREAD_SETSCOPE -g -DUNIX -I../base/ -I../dynlibsrc/ `glib-config --cflags`
++CFLAGS = -pthread -c  -DHAS_PTHREAD_SETSCOPE -g -DUNIX -I../base/ -I../dynlibsrc/
+ 
+ 
+-LFLAGS =  -g -L../base/ -L../dynlibsrc/ -lpthread `glib-config --libs` -lm
++LFLAGS =  -g -L../base/ -L../dynlibsrc/ -lpthread -lm
+ 
+ 
+ .c.o :

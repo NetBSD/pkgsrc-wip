@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- makefile.orig	2014-06-19 15:10:23.000000000 +0000
++++ makefile
+@@ -22,7 +22,7 @@
+ # Change the cc line to gcc if you get compiler errors
+ # Most likely you have a non ANSI C compiler
+ # CC =  /opt/intel_cc_80/bin/icc
+-CC = cc
++CC = gcc
+ 
+ # These are the CFLAGS to use. These days Wise2 is inherently
+ # pthreaded, and everything is compiled with threads. However
+@@ -37,7 +37,7 @@ CC = cc
+ # CFLAGS = -c -O3 -pthread `glib-config --cflags`
+ 
+ # normal linux/bsd/mac flags
+-CFLAGS = -c -O3  `glib-config --cflags`
++CFLAGS = -c -O3
+ 
+ 
+ EXTRALIBS = -lm
