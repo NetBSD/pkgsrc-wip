@@ -1,0 +1,24 @@
+Dynamic polymorphism in C++ requires that objects (such as instances
+of classes derived from an abstract base) be accessed through an
+indirection pointer because their actual type and size are not known
+at the point of usage. As a consequence, regular containers cannot
+store polymorphic objects directly: the usual workaround is to have
+containers of pointers to heap-allocated elements.
+
+When the particular traversal order is not relevant to the user
+application, Boost.PolyCollection proposes an alternative data
+structure that restores memory contiguity and packs elements according
+to their concrete type. Three container class templates are provided:
+
+- boost::base_collection
+- boost::function_collection
+- boost::any_collection
+
+respectively dealing with three different types of dynamic polymorphism available in C++:
+
+- Classic base/derived or OOP polymorphism.
+- Function wrapping in the spirit of std::function.
+- So-called duck typing as implemented by Boost.TypeErasure.
+
+The interface of these containers closely follows that of standard
+containers.
