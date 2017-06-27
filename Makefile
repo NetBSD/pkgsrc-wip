@@ -589,6 +589,7 @@ SUBDIR+=	drpython
 SUBDIR+=	drumpiler
 SUBDIR+=	ds2
 SUBDIR+=	dscan
+SUBDIR+=	dsk2rom
 SUBDIR+=	dspdfviewer
 SUBDIR+=	dssi
 SUBDIR+=	dtc
