@@ -26,6 +26,15 @@ $NetBSD$
  #define UNWIND_STOP _URC_END_OF_STACK
  #define UNWIND_CONTINUE _URC_NO_REASON
  #else
+@@ -95,7 +96,7 @@ uptr Unwind_GetIP(struct _Unwind_Context
+   // Clear the Thumb bit.
+   return val & ~(uptr)1;
+ #else
+-  return _Unwind_GetIP(ctx);
++  return (uptr)_Unwind_GetIP(ctx);
+ #endif
+ }
+ 
 @@ -165,4 +166,4 @@ void BufferedStackTrace::SlowUnwindStack
  
  }  // namespace __sanitizer
