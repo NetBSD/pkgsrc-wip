@@ -213,15 +213,6 @@ $NetBSD$
  #else
  CHECK_SIZE_AND_OFFSET(ifaddrs, ifa_dstaddr);
  #endif // SANITIZER_LINUX
-@@ -1281,7 +1294,7 @@ CHECK_SIZE_AND_OFFSET(cookie_io_function
- CHECK_SIZE_AND_OFFSET(cookie_io_functions_t, close);
- #endif
- 
--#if SANITIZER_LINUX || SANITIZER_FREEBSD
-+#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
- CHECK_TYPE_SIZE(sem_t);
- #endif
- 
 @@ -1289,4 +1302,4 @@ CHECK_TYPE_SIZE(sem_t);
  COMPILER_CHECK(ARM_VFPREGS_SIZE == ARM_VFPREGS_SIZE_ASAN);
  #endif
