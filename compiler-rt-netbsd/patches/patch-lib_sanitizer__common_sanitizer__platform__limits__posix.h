@@ -174,7 +174,7 @@ $NetBSD$
    struct __sanitizer_sem_t {
  #if SANITIZER_ANDROID && defined(_LP64)
      int data[4];
-@@ -179,6 +254,14 @@ namespace __sanitizer {
+@@ -179,9 +254,17 @@ namespace __sanitizer {
      uptr data[4];
  #elif SANITIZER_FREEBSD
      u32 data[4];
@@ -188,7 +188,11 @@ $NetBSD$
 +#endif
  #endif
    };
- #endif // SANITIZER_LINUX || SANITIZER_FREEBSD
+-#endif // SANITIZER_LINUX || SANITIZER_FREEBSD
++#endif // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+ 
+ #if SANITIZER_ANDROID
+   struct __sanitizer_mallinfo {
 @@ -324,14 +407,37 @@ namespace __sanitizer {
      unsigned long shm_dtime;
      unsigned long shm_ctime;
@@ -196,11 +200,11 @@ $NetBSD$
 +
 +#elif SANITIZER_NETBSD
 +  struct __sanitizer_ipc_perm {
-+    unsigned int uid;
-+    unsigned int gid;
-+    unsigned int cuid;
-+    unsigned int cgid;
-+    unsigned short mode;
++    u32 uid;
++    u32 gid;
++    u32 cuid;
++    u32 cgid;
++    u32 mode;
 +    unsigned short _seq;
 +    long _key;
 +  };
@@ -208,12 +212,12 @@ $NetBSD$
 +  struct __sanitizer_shmid_ds {
 +    __sanitizer_ipc_perm shm_perm;
 +    unsigned long shm_segsz;
-+    unsigned int shm_lpid;
-+    unsigned int shm_cpid;
-+    int shm_nattch;
-+    unsigned long shm_atime;
-+    unsigned long shm_dtime;
-+    unsigned long shm_ctime;
++    u32 shm_lpid;
++    u32 shm_cpid;
++    unsigned int shm_nattch;
++    u64 shm_atime;
++    u64 shm_dtime;
++    u64 shm_ctime;
 +    void *_shm_internal;
 +  };
  #endif
