@@ -296,6 +296,15 @@ $NetBSD$
  #elif SANITIZER_ANDROID || defined(__x86_64__)
    struct __sanitizer_dirent {
      unsigned long long d_ino;
+@@ -523,7 +642,7 @@ namespace __sanitizer {
+ #endif
+ 
+ // 'clock_t' is 32 bits wide on x64 FreeBSD
+-#if SANITIZER_FREEBSD
++#if SANITIZER_FREEBSD || SANITIZER_NETBSD
+   typedef int __sanitizer_clock_t;
+ #elif defined(__x86_64__) && !defined(_LP64)
+   typedef long long __sanitizer_clock_t;
 @@ -531,7 +650,7 @@ namespace __sanitizer {
    typedef long __sanitizer_clock_t;
  #endif
