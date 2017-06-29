@@ -29,6 +29,10 @@ lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.dd-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.dyndd-x86_64.so
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.lsan-i386.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.lsan-x86_64.a
+lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.msan-x86_64.a
+lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.msan-x86_64.a.syms
+lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.msan_cxx-x86_64.a
+lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.msan_cxx-x86_64.a.syms
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.profile-i386.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.profile-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.safestack-i386.a
@@ -51,3 +55,4 @@ lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_c
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-x86_64.a
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-x86_64.a.syms
 lib/clang/${PKGVERSION}/lib/${COMPILER_RT_OS_DIR}/libclang_rt.ubsan_standalone_cxx-x86_64.so
+lib/clang/${PKGVERSION}/msan_blacklist.txt
