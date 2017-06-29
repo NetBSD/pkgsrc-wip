@@ -4,5 +4,6 @@ SHA1 (libretro-mgba-0.5.2.tar.gz) = 22b09272efb13429be89bf468cdcad9ae6fa4379
 RMD160 (libretro-mgba-0.5.2.tar.gz) = 96ec87c5faae7bf1c54f0d0152a78d618fc0a43b
 SHA512 (libretro-mgba-0.5.2.tar.gz) = 8d3ef901bae9b503f8d5afff63c23be9af4b519f86cc6f3656c51374756107e4852bc0472cb7393cb04c8f0ff2f134367a81e32a5ff3dab8ae0c6cbd7d3858da
 Size (libretro-mgba-0.5.2.tar.gz) = 5343635 bytes
+SHA1 (patch-CMakeLists.txt) = 40a122b32f2ac964218364869630682a84ebd920
 SHA1 (patch-src_util_common.h) = 8fc1fd5d204c0919b924a8461cba27be4751b84d
 SHA1 (patch-src_util_math.h) = a3f7e4412e5df4d2119a13fd9e4122f3d0f6bf23

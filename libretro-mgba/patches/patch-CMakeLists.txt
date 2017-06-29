@@ -1,0 +1,15 @@
+$NetBSD$
+
+vfs-dirent peeks into non-standard structures and is not needed for libretro.
+
+--- CMakeLists.txt.orig	2016-12-31 09:45:51.000000000 +0000
++++ CMakeLists.txt
+@@ -185,7 +185,7 @@ elseif(UNIX)
+ 		set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread")
+ 	endif()
+ 
+-	list(APPEND CORE_VFS_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/util/vfs/vfs-fd.c ${CMAKE_CURRENT_SOURCE_DIR}/src/util/vfs/vfs-dirent.c)
++	list(APPEND CORE_VFS_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/util/vfs/vfs-fd.c)
+ 	file(GLOB OS_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/platform/posix/*.c)
+ 	source_group("POSIX-specific code" FILES ${OS_SRC})
+ endif()
