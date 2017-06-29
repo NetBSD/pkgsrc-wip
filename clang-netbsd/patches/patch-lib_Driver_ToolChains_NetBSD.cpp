@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/Driver/ToolChains/NetBSD.cpp.orig	2017-06-19 16:00:32.334614385 +0000
+--- lib/Driver/ToolChains/NetBSD.cpp.orig	2017-03-18 00:58:03.000000000 +0000
 +++ lib/Driver/ToolChains/NetBSD.cpp
 @@ -15,6 +15,7 @@
  #include "clang/Driver/Compilation.h"
@@ -27,7 +27,7 @@ $NetBSD$
      if (Args.hasArg(options::OPT_pthread))
        CmdArgs.push_back("-lpthread");
      CmdArgs.push_back("-lc");
-@@ -410,3 +414,16 @@ void NetBSD::addLibStdCxxIncludePaths(co
+@@ -410,3 +414,17 @@ void NetBSD::addLibStdCxxIncludePaths(co
    addLibStdCXXIncludePaths(getDriver().SysRoot, "/usr/include/g++", "", "", "",
                             "", DriverArgs, CC1Args);
  }
@@ -41,6 +41,7 @@ $NetBSD$
 +    Res |= SanitizerKind::Leak;
 +    Res |= SanitizerKind::Thread;
 +    Res |= SanitizerKind::SafeStack;
++    Res |= SanitizerKind::Memory;
 +  }
 +  return Res;
 +}
