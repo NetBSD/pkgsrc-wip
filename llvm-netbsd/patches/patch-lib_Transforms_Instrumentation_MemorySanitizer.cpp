@@ -21,7 +21,7 @@ $NetBSD$
    &FreeBSD_X86_64_MemoryMapParams,
  };
  
-+static const PlatformMemoryMapParams FreeBSD_X86_MemoryMapParams = {
++static const PlatformMemoryMapParams NetBSD_X86_MemoryMapParams = {
 +  nullptr,
 +  &NetBSD_X86_64_MemoryMapParams,
 +};
