@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-glsl-shaders-20170619
+DISTNAME=	libretro-glsl-shaders-20170624
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -8,7 +8,7 @@ MAINTAINER=	nia.alarie@gmail.com
 COMMENT=	Libretro GLSL shaders
 
 GITHUB_PROJECT=	glsl-shaders
-GITHUB_TAG=	302ac3d48d8fd5d053f021c11da39e5a25b11b6d
+GITHUB_TAG=	7816a476c2189f9c316e031e3b67965fae6aea93
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
@@ -39,9 +39,9 @@ SHADER_DIRS+=	crt/shaders/crt-royale
 SHADER_DIRS+=	crt/shaders/crt-royale/src
 SHADER_DIRS+=	crt/shaders/crtsim
 SHADER_DIRS+=	crt/shaders/glow
-SHADER_DIRS+=	crt/shaders/metacrt
 SHADER_DIRS+=	crt/shaders/gtu-famicom
 SHADER_DIRS+=	crt/shaders/gtu-v050
+SHADER_DIRS+=	crt/shaders/metacrt
 SHADER_DIRS+=	crt/shaders/phosphorlut
 SHADER_DIRS+=	crt/shaders/phosphorlut/luts
 SHADER_DIRS+=	cubic
@@ -66,9 +66,9 @@ SHADER_DIRS+=	handheld/console-border/old
 SHADER_DIRS+=	handheld/console-border/resources
 SHADER_DIRS+=	handheld/console-border/shader-files
 SHADER_DIRS+=	handheld/lcd-shader
+SHADER_DIRS+=	handheld/lcd-shader/backup
 SHADER_DIRS+=	handheld/lcd-shader/backup-2
 SHADER_DIRS+=	handheld/lcd-shader/backup-3
-SHADER_DIRS+=	handheld/lcd-shader/backup
 SHADER_DIRS+=	handheld/shaders
 SHADER_DIRS+=	handheld/shaders/color
 SHADER_DIRS+=	handheld/shaders/gameboy

@@ -420,10 +420,8 @@ share/libretro/shaders/hqx/resources/hq2x.png
 share/libretro/shaders/hqx/resources/hq3x.png
 share/libretro/shaders/hqx/resources/hq4x.png
 share/libretro/shaders/hqx/shader-files/hq2x-halphon.glsl
-share/libretro/shaders/hqx/shader-files/hq2x.glsl
-share/libretro/shaders/hqx/shader-files/hq3x.glsl
-share/libretro/shaders/hqx/shader-files/hq4x.glsl
-share/libretro/shaders/hqx/shader-files/pass1.glsl
+share/libretro/shaders/hqx/shader-files/hqx-pass1.glsl
+share/libretro/shaders/hqx/shader-files/hqx-pass2.glsl
 share/libretro/shaders/hqx/single-pass/hq2x.glslp
 share/libretro/shaders/hqx/single-pass/hq3x.glslp
 share/libretro/shaders/hqx/single-pass/hq4x.glslp
@@ -481,7 +479,6 @@ share/libretro/shaders/nnedi3/shaders/nnedi3-nns64-win8x4-pass1-rgb.glsl
 share/libretro/shaders/nnedi3/shaders/nnedi3-nns64-win8x4-pass2-luma.glsl
 share/libretro/shaders/nnedi3/shaders/nnedi3-nns64-win8x4-pass2-rgb.glsl
 share/libretro/shaders/nnedi3/shaders/rgb-to-yuv.glsl
-share/libretro/shaders/nnedi3/shaders/slang-conversion-template.glsl
 share/libretro/shaders/nnedi3/shaders/yuv-to-rgb-2x.glsl
 share/libretro/shaders/nnedi3/shaders/yuv-to-rgb-4x.glsl
 share/libretro/shaders/ntsc/artifact-colors.glslp
@@ -561,6 +558,10 @@ share/libretro/shaders/scalefx/shaders/scalefx-pass2.glsl
 share/libretro/shaders/scalefx/shaders/scalefx-pass3.glsl
 share/libretro/shaders/scalefx/shaders/scalefx-pass4-hybrid.glsl
 share/libretro/shaders/scalefx/shaders/scalefx-pass4.glsl
+share/libretro/shaders/scalenx/scale2x.glslp
+share/libretro/shaders/scalenx/scale2xSFX.glslp
+share/libretro/shaders/scalenx/scale2xplus.glslp
+share/libretro/shaders/scalenx/scale3x.glslp
 share/libretro/shaders/scalenx/shaders/scale2x.glsl
 share/libretro/shaders/scalenx/shaders/scale2xSFX.glsl
 share/libretro/shaders/scalenx/shaders/scale2xplus.glsl
