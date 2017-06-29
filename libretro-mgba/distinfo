@@ -1,9 +1,8 @@
 $NetBSD$
 
-SHA1 (libretro-mgba-20170329-1e95e8913a3d98b897573be1f0b5906394671b10.tar.gz) = a88829f56260928dc6c64cf0409f8fdca00e697c
-RMD160 (libretro-mgba-20170329-1e95e8913a3d98b897573be1f0b5906394671b10.tar.gz) = e09d1f63c24d805f80c8f6174733aad0af1e6a50
-SHA512 (libretro-mgba-20170329-1e95e8913a3d98b897573be1f0b5906394671b10.tar.gz) = e22163068b1c66800cbc52b355f2deb9774cf195a9c6cc6e3ab363467ecf6431f3b546cc43eea7d3076d0fa08dda12be1b99e3fe7b046ae3a4513722e44ef297
-Size (libretro-mgba-20170329-1e95e8913a3d98b897573be1f0b5906394671b10.tar.gz) = 5354237 bytes
-SHA1 (patch-Makefile.libretro) = 3dcd5b1952d3884dae6fbe123093bfff98003a3d
+SHA1 (libretro-mgba-0.5.2.tar.gz) = 22b09272efb13429be89bf468cdcad9ae6fa4379
+RMD160 (libretro-mgba-0.5.2.tar.gz) = 96ec87c5faae7bf1c54f0d0152a78d618fc0a43b
+SHA512 (libretro-mgba-0.5.2.tar.gz) = 8d3ef901bae9b503f8d5afff63c23be9af4b519f86cc6f3656c51374756107e4852bc0472cb7393cb04c8f0ff2f134367a81e32a5ff3dab8ae0c6cbd7d3858da
+Size (libretro-mgba-0.5.2.tar.gz) = 5343635 bytes
 SHA1 (patch-src_util_common.h) = 8fc1fd5d204c0919b924a8461cba27be4751b84d
 SHA1 (patch-src_util_math.h) = a3f7e4412e5df4d2119a13fd9e4122f3d0f6bf23

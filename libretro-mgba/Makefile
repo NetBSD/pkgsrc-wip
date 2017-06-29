@@ -1,30 +1,39 @@
 # $NetBSD$
 
-DISTNAME=	libretro-mgba-20170329
+DISTNAME=	libretro-mgba-0.5.2
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 
-HOMEPAGE=	https://wiki.libretro.com/index.php?title=MGBA
+HOMEPAGE=	https://mgba.io/
 COMMENT=	Libretro core based on the mGBA emulator
 LICENSE=	mpl-2.0
 
 GITHUB_PROJECT=	mgba
-GITHUB_TAG=	1e95e8913a3d98b897573be1f0b5906394671b10
 
-USE_TOOLS=	gmake
+WRKSRC=		${WRKDIR}/mgba-${PKGVERSION_NOREV}
 
-MAKE_FILE=	Makefile.libretro
+USE_CMAKE=	yes
+
+CMAKE_ARGS+=	-DUSE_CLI_DEBUGGER=OFF
+CMAKE_ARGS+=	-DUSE_GDB_STUB=OFF
+
+CMAKE_ARGS+=	-DUSE_FFMPEG=OFF
+CMAKE_ARGS+=	-DUSE_ZLIB=OFF
+CMAKE_ARGS+=	-DUSE_MINIZIP=OFF
+CMAKE_ARGS+=	-DUSE_PNG=OFF
+CMAKE_ARGS+=	-DUSE_LIBZIP=OFF
+CMAKE_ARGS+=	-DUSE_MAGICK=OFF
+CMAKE_ARGS+=	-DUSE_LZMA=OFF
+CMAKE_ARGS+=	-DUSE_EPOXY=OFF
+
+CMAKE_ARGS+=	-DBUILD_QT=OFF
+CMAKE_ARGS+=	-DBUILD_SDL=OFF
+CMAKE_ARGS+=	-DBUILD_GL=OFF
+
+CMAKE_ARGS+=	-DBUILD_LIBRETRO=ON
+CMAKE_ARGS+=	-DSKIP_LIBRARY=ON
+CMAKE_ARGS+=	-DLIBRETRO_LIBDIR=${PREFIX}/lib/libretro
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/mgba_libretro.so \
-	    ${DESTDIR}${PREFIX}/lib/libretro/mgba_libretro.so
-
-.include "../../mk/bsd.fast.prefs.mk"
-
-.if !empty(MACHINE_ARCH:M*armv6*) || !empty(MACHINE_ARCH:M*armv7*)
-.include "options.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
