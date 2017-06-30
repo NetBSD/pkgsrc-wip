@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	translate-toolkit-2.1.0
+DISTNAME=	translate-toolkit-2.2.3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=translate/}
 GITHUB_PROJECT=	translate
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://toolkit.translatehouse.org/
