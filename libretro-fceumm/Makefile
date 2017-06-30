@@ -17,6 +17,8 @@ USE_TOOLS+=	gmake
 
 CFLAGS+=	-DHAVE_ASPRINTF
 
+.include "../../mk/endian.mk"
+
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-DMSB_FIRST
 .endif
