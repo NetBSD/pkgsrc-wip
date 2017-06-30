@@ -158,6 +158,7 @@ include/llvm/Analysis/BlockFrequencyInfoImpl.h
 include/llvm/Analysis/BranchProbabilityInfo.h
 include/llvm/Analysis/CFG.h
 include/llvm/Analysis/CFGPrinter.h
+include/llvm/Analysis/CFLAliasAnalysisUtils.h
 include/llvm/Analysis/CFLAndersAliasAnalysis.h
 include/llvm/Analysis/CFLSteensAliasAnalysis.h
 include/llvm/Analysis/CGSCCPassManager.h
@@ -385,6 +386,7 @@ include/llvm/CodeGen/ScheduleHazardRecognizer.h
 include/llvm/CodeGen/SchedulerRegistry.h
 include/llvm/CodeGen/ScoreboardHazardRecognizer.h
 include/llvm/CodeGen/SelectionDAG.h
+include/llvm/CodeGen/SelectionDAGAddressAnalysis.h
 include/llvm/CodeGen/SelectionDAGISel.h
 include/llvm/CodeGen/SelectionDAGNodes.h
 include/llvm/CodeGen/SelectionDAGTargetInfo.h
@@ -467,6 +469,7 @@ include/llvm/DebugInfo/DWARF/DWARFAcceleratorTable.h
 include/llvm/DebugInfo/DWARF/DWARFAttribute.h
 include/llvm/DebugInfo/DWARF/DWARFCompileUnit.h
 include/llvm/DebugInfo/DWARF/DWARFContext.h
+include/llvm/DebugInfo/DWARF/DWARFDataExtractor.h
 include/llvm/DebugInfo/DWARF/DWARFDebugAbbrev.h
 include/llvm/DebugInfo/DWARF/DWARFDebugArangeSet.h
 include/llvm/DebugInfo/DWARF/DWARFDebugAranges.h
@@ -966,7 +969,7 @@ include/llvm/Support/SaveAndRestore.h
 include/llvm/Support/ScaledNumber.h
 include/llvm/Support/ScopedPrinter.h
 include/llvm/Support/Signals.h
-include/llvm/Support/Solaris.h
+include/llvm/Support/Solaris/sys/regset.h
 include/llvm/Support/SourceMgr.h
 include/llvm/Support/SpecialCaseList.h
 include/llvm/Support/StringPool.h

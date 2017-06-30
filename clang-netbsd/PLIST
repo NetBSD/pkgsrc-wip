@@ -173,6 +173,7 @@ include/clang/Basic/BuiltinsLe64.def
 include/clang/Basic/BuiltinsMips.def
 include/clang/Basic/BuiltinsNEON.def
 include/clang/Basic/BuiltinsNVPTX.def
+include/clang/Basic/BuiltinsNios2.def
 include/clang/Basic/BuiltinsPPC.def
 include/clang/Basic/BuiltinsSystemZ.def
 include/clang/Basic/BuiltinsWebAssembly.def
@@ -305,6 +306,7 @@ include/clang/Frontend/LogDiagnosticPrinter.h
 include/clang/Frontend/MigratorOptions.h
 include/clang/Frontend/MultiplexConsumer.h
 include/clang/Frontend/PCHContainerOperations.h
+include/clang/Frontend/PrecompiledPreamble.h
 include/clang/Frontend/PreprocessorOutputOptions.h
 include/clang/Frontend/SerializedDiagnosticPrinter.h
 include/clang/Frontend/SerializedDiagnosticReader.h
