@@ -1,16 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	caddy-20170530
+DISTNAME=	caddy-${GITHUB_TAG:S/v//}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mholt/}
-GITHUB_TAG=	20a047f
+GITHUB_TAG=	v0.10.4
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=mholt/caddy/}
 COMMENT=	general-purpose web server
 LICENSE=	apache-2.0
 
-GO_DIST_BASE=	caddy-${GITHUB_TAG}*
+GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/mholt/caddy
 GO_BUILD_PATTERN= ${GO_SRCPATH}/caddy
 
