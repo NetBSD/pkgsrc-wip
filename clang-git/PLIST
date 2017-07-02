@@ -8,6 +8,7 @@ bin/clang-cpp
 bin/clang-format
 bin/clang-import-test
 bin/clang-offload-bundler
+bin/clang-rename
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
 include/clang-c/CXErrorCode.h
@@ -489,6 +490,10 @@ include/clang/Tooling/FixIt.h
 include/clang/Tooling/JSONCompilationDatabase.h
 include/clang/Tooling/Refactoring.h
 include/clang/Tooling/Refactoring/AtomicChange.h
+include/clang/Tooling/Refactoring/Rename/RenamingAction.h
+include/clang/Tooling/Refactoring/Rename/USRFinder.h
+include/clang/Tooling/Refactoring/Rename/USRFindingAction.h
+include/clang/Tooling/Refactoring/Rename/USRLocFinder.h
 include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
@@ -621,4 +626,6 @@ share/clang/clang-format-diff.py
 share/clang/clang-format-sublime.py
 share/clang/clang-format.el
 share/clang/clang-format.py
+share/clang/clang-rename.el
+share/clang/clang-rename.py
 share/clang/git-clang-format
