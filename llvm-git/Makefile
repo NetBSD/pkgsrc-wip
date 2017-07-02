@@ -1,23 +1,8 @@
 # $NetBSD: Makefile.common,v 1.7 2015/07/20 05:49:53 adam Exp $
-#
-# when updating this, please also update:
-# devel/include-what-you-use
-# devel/lldb
-# devel/polly
-# lang/clang
-# lang/clang-static-analyzer
-# lang/libLLVM
-# lang/libunwind
-#
-# Always update all */buildlink3.mk to require the latest stable release
-# version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
-#
 
-PKGNAME=	llvm-5.0.0
-CATEGORIES=	lang devel
+.include "Makefile.common"
 
-GIT_REPOSITORIES=	llvm
-GIT_REPO.llvm=		git://github.com/llvm-mirror/llvm.git
+PKGNAME=	llvm-${LLVM_VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://llvm.org/
@@ -29,7 +14,6 @@ USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PYTHON_FOR_BUILD_ONLY=	yes
 
-WRKSRC=			${WRKDIR}/${PKGBASE}
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
@@ -42,27 +26,6 @@ CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
 #CMAKE_ARGS+=	-DLLVM_LINK_LLVM_DYLIB=ON
 
 CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
-
-CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
-
-# XXX perl is not added as a tool as it does not seem to be required
-REPLACE_PERL+=		utils/*.pl
-REPLACE_PERL+=		utils/codegen-diff
-REPLACE_PERL+=		utils/llvm-native-gxx
-
-REPLACE_PYTHON+=	*.py
-REPLACE_PYTHON+=	*/*.py
-REPLACE_PYTHON+=	*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*/*.py
-REPLACE_PYTHON+=	utils/Misc/zkill
-REPLACE_PYTHON+=	utils/bisect
-REPLACE_PYTHON+=	utils/clang-parse-diagnostics-file
-REPLACE_PYTHON+=	utils/git/find-rev
-REPLACE_PYTHON+=	utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest
-REPLACE_PYTHON+=	utils/llvm-build/llvm-build
-REPLACE_PYTHON+=	utils/llvm-compilers-check
-REPLACE_PYTHON+=	utils/llvm-lit/llvm-lit.in
 
 TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
