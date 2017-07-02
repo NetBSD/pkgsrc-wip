@@ -634,7 +634,6 @@ SUBDIR+=	edb-debugger
 SUBDIR+=	edb-debugger-git
 SUBDIR+=	edbrowse
 SUBDIR+=	edelib
-SUBDIR+=	editorconfig-core
 SUBDIR+=	edje
 SUBDIR+=	eduke32
 SUBDIR+=	eet
