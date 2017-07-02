@@ -15,6 +15,7 @@ share/nqp/lib/Perl6/Ops.moarvm
 share/nqp/lib/Perl6/Optimizer.moarvm
 share/nqp/lib/Perl6/Pod.moarvm
 share/nqp/lib/Perl6/World.moarvm
+share/perl6/bin/install-dist.pl
 share/perl6/dist/3FD70CCCD6914FAEC84AFAE6F97AF461A3EE1588
 share/perl6/precomp/.lock
 share/perl6/repo.lock
@@ -60,4 +61,3 @@ share/perl6/version
 @pkgdir share/perl6/site/bin
 @pkgdir share/perl6/resources
 @pkgdir share/perl6/lib
-@pkgdir share/perl6/bin
