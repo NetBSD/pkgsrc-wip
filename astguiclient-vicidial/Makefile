@@ -12,16 +12,17 @@ HOMEPAGE=	https://sourceforge.net/projects/astguiclient/
 COMMENT=	Asterisk GUI client, VICIdial
 
 NO_BUILD=	yes
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl pax
 
 REPLACE_PERL+=	install.pl
 REPLACE_PERL+=	bin/*.pl
 REPLACE_PERL+=	extras/*.pl
+REPLACE_PERL+=	agi/*.agi
 
 WRKSRC=		${WRKDIR}
 BUILD_DEFS+=	VARBASE
 
-INTERACTIVE_STAGE= configure install
+INTERACTIVE_STAGE=	configure install
 
 	# Perl dependencies :
 DEPENDS+=	p5-DBI>=1.6:../../databases/p5-DBI
@@ -65,13 +66,12 @@ DEPENDS+=	p5-Spreadsheet-WriteExcel>=2.4:../../math/p5-Spreadsheet-WriteExcel
 DEPENDS+=	p5-Spreadsheet-ReadSXC>=0.2:../../math/p5-Spreadsheet-ReadSXC
 DEPENDS+=	p5-Spreadsheet-ParseExcel>=0.6:../../math/p5-Spreadsheet-ParseExcel
 DEPENDS+=	p5-Spreadsheet-Read>=0.7:../../math/p5-Spreadsheet-Read
-DEPENDS+=	p5-Spreadsheet-XLSX>=0.1:../../math/p5-Spreadsheet-XLSX	
+DEPENDS+=	p5-Spreadsheet-XLSX>=0.1:../../math/p5-Spreadsheet-XLSX
 	# PHP dependencies :
 DEPENDS+=	php56-mysql>=5.6:../../databases/php-mysql
 DEPENDS+=	php56-mysqli>=5.6:../../databases/php-mysqli
 	# Networking dependencies :
 DEPENDS+=	wget>=1.19:../../net/wget
-DEPENDS+=	ap24-php56>=5.6:../../www/ap-php
 
 SUBST_CLASSES+=			fix-conf-path
 SUBST_STAGE.fix-conf-path=	post-extract
@@ -82,12 +82,12 @@ SUBST_FILES.fix-conf-path+=	*/*/*.pl
 SUBST_FILES.fix-conf-path+=	agi/*.agi
 SUBST_FILES.fix-conf-path+=	*/*/*.php
 SUBST_FILES.fix-conf-path+=	*/*/*/*.php
-SUBST_SED.fix-conf-path=	-e 's,/etc/astguiclient.conf,${PREFIX}/etc/astguiclient.conf,g'	
-SUBST_SED.fix-conf-path+=	-e 's,/etc/asterisk,${PREFIX}/etc/asterisk,g'	
-SUBST_SED.fix-conf-path+=	-e 's,/usr/local/apache2,${PREFIX}/share/httpd,g'	
-SUBST_SED.fix-conf-path+=	-e 's,/usr/local/bin/sox,${PREFIX}/bin/sox,g'	
-SUBST_SED.fix-conf-path+=	-e 's,/usr/local/bin/lame,${PREFIX}/bin/lame,g'	
-SUBST_SED.fix-conf-path+=	-e 's,/usr/local/mysql/bin,${PREFIX}/bin/mysql,g'	
+SUBST_SED.fix-conf-path=	-e 's,/etc/astguiclient.conf,${PREFIX}/etc/astguiclient.conf,g'
+SUBST_SED.fix-conf-path+=	-e 's,/etc/asterisk,${PREFIX}/etc/asterisk,g'
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/apache2,${PREFIX}/share/httpd,g'
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/bin/sox,${PREFIX}/bin/sox,g'
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/bin/lame,${PREFIX}/bin/lame,g'
+SUBST_SED.fix-conf-path+=	-e 's,/usr/local/mysql/bin,${PREFIX}/bin/mysql,g'
 
 do-install:
 	cd ${WRKSRC}; \
@@ -103,12 +103,13 @@ do-install:
 		--monitor=${VARBASE}/spool/asterisk/monitor \
 		--DONEmonitor=${VARBASE}/spool/asterisk/monitorDONE \
 		--copy_sample_conf_files \
-		--asterisk_version=11.X
-	${CP} -R ${WRKSRC}/extras  ${PREFIX}/share/vicidial/extras
+		--asterisk_version=11.
+	cd ${WRKSRC}/extras && ${PAX} -wr * ${PREFIX}/share/vicidial/extras
+	#${CP} -R ${WRKSRC}/extras  ${PREFIX}/share/vicidial/extras
 
+.include "options.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../databases/mysql55-server/buildlink3.mk"
-.include "../../audio/sox/buildlink3.mk"
-.include "../../audio/lame/buildlink3.mk"
 .include "../../wip/p5-Asterisk-vicidial/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

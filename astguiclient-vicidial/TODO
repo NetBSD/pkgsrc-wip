@@ -1,8 +1,6 @@
-* The install script is better used in interactive mode. If you want
-  to avoid this, please review the install script help by executing:
-   << perl install.pl --help  >>
 * This software is installed by the PERL script provided by upstream.
   Meaning, after running this script, ${MAKE} deinstall will not work
   if you have the need to deinstall the files. Thus, you'll have to
   manually delete the files.
-* The PLIST is empty for the same reason previously stated.
+* Only tested on FreeBSD 11 x86_64.
+* Document options in mk/defaults/options.description. 

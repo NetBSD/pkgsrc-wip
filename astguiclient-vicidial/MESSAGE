@@ -8,13 +8,11 @@ Please check the steps needed to properly configure astGUIclient in:
 ${WRKSRC}/docs/SCRATCH_INSTALL.txt or
 ${WRKSRC}/docs/BASE_INSTALL.txt (summarized).
 
+You should install the Asterisk version supported for this vicidial
+package to work properly:
+	> wip/asterisk-vicidial
+
 It also contains optional dependencies you might want to check.
-
-Also, you should install the asterisk and asterisk-perl versions supported 
-by this package, imported as: 
-
-* wip/asterisk11-vicidial
-
-This was tested using Apache v2.4 using www/ap-php. 
+Most of them are included in the options of this package.
 
 ===========================================================================
