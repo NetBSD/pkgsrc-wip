@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libretro-fmsx-20170223
+DISTNAME=	libretro-fmsx-20170703
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 
@@ -9,7 +9,7 @@ COMMENT=	Libretro core for emulation of the MSX family of home computers
 LICENSE=	no-commercial-use
 
 GITHUB_PROJECT=	fmsx-libretro
-GITHUB_TAG=	a58af0d162fd80852903ec87cd271b3220fdca22
+GITHUB_TAG=	7c0c7333a02ebe885c2f469a4dac362faaf23189
 
 USE_TOOLS=	gmake
 
