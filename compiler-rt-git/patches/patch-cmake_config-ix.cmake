@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/config-ix.cmake.orig	2017-07-03 15:33:06.516370306 +0000
+--- cmake/config-ix.cmake.orig	2017-07-03 15:33:06.000000000 +0000
 +++ cmake/config-ix.cmake
 @@ -441,7 +441,7 @@ set(COMPILER_RT_SANITIZERS_TO_BUILD ${AL
  list_replace(COMPILER_RT_SANITIZERS_TO_BUILD all "${ALL_SANITIZERS}")

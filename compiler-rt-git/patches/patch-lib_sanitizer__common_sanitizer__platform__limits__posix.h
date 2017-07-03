@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2017-07-03 15:33:06.559211156 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_posix.h
 @@ -18,18 +18,31 @@
  #include "sanitizer_internal_defs.h"
@@ -18,11 +18,11 @@ $NetBSD$
 -#include <sys/_types.h>
 +#elif SANITIZER_NETBSD
 +#if defined(__x86_64__)
-+# define GET_LINK_MAP_BY_DLOPEN_HANDLE(handle) \
-+    ((link_map*)((handle) == nullptr ? nullptr : ((char*)(handle) + 608)))
++#define GET_LINK_MAP_BY_DLOPEN_HANDLE(handle) \
++  ((link_map *)((handle) == nullptr ? nullptr : ((char *)(handle) + 608)))
 +#elif defined(__i386__)
-+# define GET_LINK_MAP_BY_DLOPEN_HANDLE(handle) \
-+    ((link_map*)((handle) == nullptr ? nullptr : ((char*)(handle) + 324)))
++#define GET_LINK_MAP_BY_DLOPEN_HANDLE(handle) \
++  ((link_map *)((handle) == nullptr ? nullptr : ((char *)(handle) + 324)))
 +#else
 +#error Port sanitizer_platform_limits_posix.h.
 +#endif
@@ -73,7 +73,7 @@ $NetBSD$
  #elif !defined(__sparc__)
    const unsigned struct___old_kernel_stat_sz = 32;
  #endif
-+#endif // SANITIZER_LINUX || SANITIZER_FREEBSD
++#endif  // SANITIZER_LINUX || SANITIZER_FREEBSD
 +
 +#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
  
@@ -92,27 +92,27 @@ $NetBSD$
      u64   aio_reserved3;
 +#elif SANITIZER_NETBSD
 +#if defined(__x86_64__)
-+    u64   aio_offset;
-+    u64   aio_buf;
-+    u64   aio_nbytes;
-+    u32   aio_fildes;
-+    u32   aio_lio_opcode;
-+    u64   aio_reqprio;
-+    u8    aio_sigevent[32];
-+    u32   _state;
-+    u32   _errno;
-+    u64   _retval;
++    u64 aio_offset;
++    u64 aio_buf;
++    u64 aio_nbytes;
++    u32 aio_fildes;
++    u32 aio_lio_opcode;
++    u64 aio_reqprio;
++    u8 aio_sigevent[32];
++    u32 _state;
++    u32 _errno;
++    u64 _retval;
 +#elif defined(__i386__)
-+    u64   aio_offset;
-+    u32   aio_buf;
-+    u32   aio_nbytes;
-+    u32   aio_fildes;
-+    u32   aio_lio_opcode;
-+    u32   aio_reqprio;
-+    u8    aio_sigevent[20];
-+    u32   _state;
-+    u32   _errno;
-+    u32   _retval;
++    u64 aio_offset;
++    u32 aio_buf;
++    u32 aio_nbytes;
++    u32 aio_fildes;
++    u32 aio_lio_opcode;
++    u32 aio_reqprio;
++    u8 aio_sigevent[20];
++    u32 _state;
++    u32 _errno;
++    u32 _retval;
 +#else
 +#error port this to your platform
 +#endif
@@ -147,19 +147,19 @@ $NetBSD$
      unsigned long ___unused[4];
 +#else
 +#if defined(__x86_64__)
-+    u64   name;
-+    u32   namelen;
-+    u64   oldp;
-+    u64   oldlenp;
-+    u64   newp;
-+    u64   newlen;
++    u64 name;
++    u32 namelen;
++    u64 oldp;
++    u64 oldlenp;
++    u64 newp;
++    u64 newlen;
 +#elif defined(__i386__)
-+    u32   name;
-+    u32   namelen;
-+    u32   oldp;
-+    u32   oldlenp;
-+    u32   newp;
-+    u32   newlen;
++    u32 name;
++    u32 namelen;
++    u32 oldp;
++    u32 oldlenp;
++    u32 newp;
++    u32 newlen;
 +#else
 +#error port this
 +#endif
@@ -189,11 +189,11 @@ $NetBSD$
  #endif
    };
 -#endif // SANITIZER_LINUX || SANITIZER_FREEBSD
-+#endif // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
++#endif  // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
  
  #if SANITIZER_ANDROID
    struct __sanitizer_mallinfo {
-@@ -324,14 +407,37 @@ namespace __sanitizer {
+@@ -324,14 +407,39 @@ namespace __sanitizer {
      unsigned long shm_dtime;
      unsigned long shm_ctime;
    };
@@ -223,17 +223,19 @@ $NetBSD$
  #endif
  
 -#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
-+#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && \
++    !SANITIZER_ANDROID
    extern unsigned struct_msqid_ds_sz;
    extern unsigned struct_mq_attr_sz;
    extern unsigned struct_timex_sz;
    extern unsigned struct_statvfs_sz;
 -#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
-+#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) &&
++        // !SANITIZER_ANDROID
  
    struct __sanitizer_iovec {
      void *iov_base;
-@@ -351,6 +457,9 @@ namespace __sanitizer {
+@@ -351,6 +459,9 @@ namespace __sanitizer {
  # endif
      void *ifa_dstaddr; // (struct sockaddr *)
      void *ifa_data;
@@ -243,7 +245,7 @@ $NetBSD$
    };
  #endif  // !SANITIZER_ANDROID
  
-@@ -376,13 +485,24 @@ namespace __sanitizer {
+@@ -376,13 +487,24 @@ namespace __sanitizer {
    const int __sanitizer_XDR_FREE = 2;
  #endif
  
@@ -270,7 +272,7 @@ $NetBSD$
      char *pw_class;
  #endif
  #if !(SANITIZER_ANDROID && (SANITIZER_WORDSIZE == 32))
-@@ -390,8 +510,8 @@ namespace __sanitizer {
+@@ -390,8 +512,8 @@ namespace __sanitizer {
  #endif
      char *pw_dir;
      char *pw_shell;
@@ -281,7 +283,7 @@ $NetBSD$
  #endif
  #if SANITIZER_FREEBSD
      int pw_fields;
-@@ -405,12 +525,6 @@ namespace __sanitizer {
+@@ -405,12 +527,6 @@ namespace __sanitizer {
      char **gr_mem;
    };
  
@@ -294,7 +296,7 @@ $NetBSD$
    struct __sanitizer_timeb {
      __sanitizer_time_t time;
      unsigned short millitm;
-@@ -447,7 +561,7 @@ namespace __sanitizer {
+@@ -447,7 +563,7 @@ namespace __sanitizer {
    };
  #endif
  
@@ -303,7 +305,7 @@ $NetBSD$
    struct __sanitizer_msghdr {
      void *msg_name;
      unsigned msg_namelen;
-@@ -497,6 +611,16 @@ namespace __sanitizer {
+@@ -497,6 +613,16 @@ namespace __sanitizer {
      unsigned short d_reclen;
      // more fields that we don't care about
    };
@@ -311,7 +313,7 @@ $NetBSD$
 +  struct __sanitizer_dirent {
 +    u64 d_fileno;
 +    u16 d_reclen;
-+#if 0 // not needed here?
++#if 0  // not needed here?
 +    u16 d_namlen;
 +    u8  d_type;
 +    u8  d_name[512];
@@ -320,7 +322,7 @@ $NetBSD$
  #elif SANITIZER_ANDROID || defined(__x86_64__)
    struct __sanitizer_dirent {
      unsigned long long d_ino;
-@@ -523,7 +647,7 @@ namespace __sanitizer {
+@@ -523,7 +649,7 @@ namespace __sanitizer {
  #endif
  
  // 'clock_t' is 32 bits wide on x64 FreeBSD
@@ -329,7 +331,7 @@ $NetBSD$
    typedef int __sanitizer_clock_t;
  #elif defined(__x86_64__) && !defined(_LP64)
    typedef long long __sanitizer_clock_t;
-@@ -531,7 +655,7 @@ namespace __sanitizer {
+@@ -531,7 +657,7 @@ namespace __sanitizer {
    typedef long __sanitizer_clock_t;
  #endif
  
@@ -338,7 +340,7 @@ $NetBSD$
    typedef int __sanitizer_clockid_t;
  #endif
  
-@@ -562,8 +686,22 @@ namespace __sanitizer {
+@@ -562,8 +688,22 @@ namespace __sanitizer {
    typedef struct {
      unsigned long fds_bits[1024 / (8 * sizeof(long))];
    } __sanitizer___kernel_fd_set;
@@ -361,7 +363,7 @@ $NetBSD$
    // This thing depends on the platform. We are only interested in the upper
    // limit. Verified with a compiler assert in .cc.
    const int pthread_attr_t_max_sz = 128;
-@@ -571,6 +709,7 @@ namespace __sanitizer {
+@@ -571,6 +711,7 @@ namespace __sanitizer {
      char size[pthread_attr_t_max_sz]; // NOLINT
      void *align;
    };
@@ -369,18 +371,18 @@ $NetBSD$
  
  #if SANITIZER_ANDROID
  # if SANITIZER_MIPS
-@@ -590,6 +729,10 @@ namespace __sanitizer {
+@@ -590,6 +731,10 @@ namespace __sanitizer {
       // uint32_t * 4
       unsigned int __bits[4];
    };
 +#elif SANITIZER_NETBSD
 +  struct __sanitizer_sigset_t {
-+     u32 __bits[4];
++    u32 __bits[4];
 +  };
  #endif
  
    // Linux system headers define the 'sa_handler' and 'sa_sigaction' macros.
-@@ -622,6 +765,15 @@ namespace __sanitizer {
+@@ -622,6 +767,15 @@ namespace __sanitizer {
      uptr sa_flags;
      void (*sa_restorer)();
    };
@@ -396,7 +398,7 @@ $NetBSD$
  #else // !SANITIZER_ANDROID
    struct __sanitizer_sigaction {
  #if defined(__mips__) && !SANITIZER_FREEBSD
-@@ -640,6 +792,7 @@ namespace __sanitizer {
+@@ -640,6 +794,7 @@ namespace __sanitizer {
  #else
      __sanitizer_sigset_t sa_mask;
  #endif
@@ -404,7 +406,7 @@ $NetBSD$
  #ifndef __mips__
  #if defined(__sparc__)
  #if __GLIBC_PREREQ (2, 20)
-@@ -670,7 +823,7 @@ namespace __sanitizer {
+@@ -670,7 +825,7 @@ namespace __sanitizer {
    };
  #endif // !SANITIZER_ANDROID
  
@@ -413,7 +415,7 @@ $NetBSD$
    typedef __sanitizer_sigset_t __sanitizer_kernel_sigset_t;
  #elif defined(__mips__)
    struct __sanitizer_kernel_sigset_t {
-@@ -717,7 +870,7 @@ namespace __sanitizer {
+@@ -717,7 +872,7 @@ namespace __sanitizer {
    extern int af_inet6;
    uptr __sanitizer_in_addr_sz(int af);
  
@@ -422,7 +424,7 @@ $NetBSD$
    struct __sanitizer_dl_phdr_info {
      uptr dlpi_addr;
      const char *dlpi_name;
-@@ -733,7 +886,7 @@ namespace __sanitizer {
+@@ -733,7 +888,7 @@ namespace __sanitizer {
      int ai_family;
      int ai_socktype;
      int ai_protocol;
@@ -431,7 +433,7 @@ $NetBSD$
      unsigned ai_addrlen;
      char *ai_canonname;
      void *ai_addr;
-@@ -759,7 +912,7 @@ namespace __sanitizer {
+@@ -759,7 +914,7 @@ namespace __sanitizer {
      short revents;
    };
  
@@ -440,28 +442,28 @@ $NetBSD$
    typedef unsigned __sanitizer_nfds_t;
  #else
    typedef unsigned long __sanitizer_nfds_t;
-@@ -779,7 +932,7 @@ namespace __sanitizer {
+@@ -779,7 +934,7 @@ namespace __sanitizer {
      int (*gl_lstat)(const char *, void *);
      int (*gl_stat)(const char *, void *);
    };
 -# elif SANITIZER_FREEBSD
-+# elif SANITIZER_FREEBSD || SANITIZER_NETBSD
++#elif SANITIZER_FREEBSD || SANITIZER_NETBSD
    struct __sanitizer_glob_t {
      uptr gl_pathc;
      uptr gl_matchc;
-@@ -793,9 +946,9 @@ namespace __sanitizer {
+@@ -793,9 +948,9 @@ namespace __sanitizer {
      int (*gl_lstat)(const char*, void* /* struct stat* */);
      int (*gl_stat)(const char*, void* /* struct stat* */);
    };
 -# endif  // SANITIZER_FREEBSD
-+# endif  // SANITIZER_FREEBSD || SANITIZER_NETBSD
++#endif  // SANITIZER_FREEBSD || SANITIZER_NETBSD
  
 -# if SANITIZER_LINUX || SANITIZER_FREEBSD
-+# if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
++#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
    extern int glob_nomatch;
    extern int glob_altdirfunc;
  # endif
-@@ -807,7 +960,7 @@ namespace __sanitizer {
+@@ -807,7 +962,7 @@ namespace __sanitizer {
      uptr we_wordc;
      char **we_wordv;
      uptr we_offs;
@@ -470,81 +472,137 @@ $NetBSD$
      char *we_strings;
      uptr we_nbytes;
  #endif
-@@ -832,6 +985,37 @@ namespace __sanitizer {
+@@ -832,6 +987,37 @@ namespace __sanitizer {
      int _fileno;
    };
  # define SANITIZER_HAS_STRUCT_FILE 1
 +#elif SANITIZER_NETBSD
 +  struct __sanitizer_FILE {
 +    unsigned char *_p;
-+    int     _r;
-+    int     _w;
++    int _r;
++    int _w;
 +    unsigned short _flags;
-+    short   _file;
-+    struct  {
-+        unsigned char *_base;
-+        int     _size;
++    short _file;
++    struct {
++      unsigned char *_base;
++      int _size;
 +    } _bf;
-+    int     _lbfsize;
-+    void    *_cookie;
-+    int     (*_close)(void *);
-+    u64 (*_read) (void *, void *, uptr);
-+    u64 (*_seek) (void *, u64, int);
++    int _lbfsize;
++    void *_cookie;
++    int (*_close)(void *);
++    u64 (*_read)(void *, void *, uptr);
++    u64 (*_seek)(void *, u64, int);
 +    uptr (*_write)(void *, const void *, uptr);
 +    struct {
-+        unsigned char *_base;
-+        int     _size;
++      unsigned char *_base;
++      int _size;
 +    } _ext;
 +    unsigned char *_up;
-+    int     _ur;
++    int _ur;
 +    unsigned char _ubuf[3];
 +    unsigned char _nbuf[1];
-+    int     (*_flush)(void *);
-+    char    _lb_unused[sizeof(uptr)];
-+    int     _blksize;
++    int (*_flush)(void *);
++    char _lb_unused[sizeof(uptr)];
++    int _blksize;
 +    u64 _offset;
 +  };
-+# define SANITIZER_HAS_STRUCT_FILE 0 // not ported
++#define SANITIZER_HAS_STRUCT_FILE 0  // not ported
  #else
    typedef void __sanitizer_FILE;
  # define SANITIZER_HAS_STRUCT_FILE 0
-@@ -864,7 +1048,7 @@ namespace __sanitizer {
+@@ -864,7 +1050,8 @@ namespace __sanitizer {
    extern int ptrace_geteventmsg;
  #endif
  
 -#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
-+#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && \
++    !SANITIZER_ANDROID
    extern unsigned struct_shminfo_sz;
    extern unsigned struct_shm_info_sz;
    extern int shmctl_ipc_stat;
-@@ -923,6 +1107,7 @@ struct __sanitizer_cookie_io_functions_t
+@@ -923,6 +1110,7 @@ struct __sanitizer_cookie_io_functions_t
  };
  #endif
  
-+#if 1 // !SANITIZER_NETBSD
++#if 1  // !SANITIZER_NETBSD
  #define IOC_NRBITS 8
  #define IOC_TYPEBITS 8
  #if defined(__powerpc__) || defined(__powerpc64__) || defined(__mips__) || \
-@@ -966,13 +1151,17 @@ struct __sanitizer_cookie_io_functions_t
+@@ -966,39 +1154,43 @@ struct __sanitizer_cookie_io_functions_t
  #else
  #define IOC_SIZE(nr) (((nr) >> IOC_SIZESHIFT) & IOC_SIZEMASK)
  #endif
 +#endif
  
-   extern unsigned struct_ifreq_sz;
-   extern unsigned struct_termios_sz;
-   extern unsigned struct_winsize_sz;
- 
--#if SANITIZER_LINUX
-+#if SANITIZER_LINUX || SANITIZER_NETBSD
-   extern unsigned struct_arpreq_sz;
-+#endif
+-  extern unsigned struct_ifreq_sz;
+-  extern unsigned struct_termios_sz;
+-  extern unsigned struct_winsize_sz;
++extern unsigned struct_ifreq_sz;
++extern unsigned struct_termios_sz;
++extern unsigned struct_winsize_sz;
 +
-+#if SANITIZER_LINUX
-   extern unsigned struct_cdrom_msf_sz;
-   extern unsigned struct_cdrom_multisession_sz;
-   extern unsigned struct_cdrom_read_audio_sz;
-@@ -1006,6 +1195,9 @@ struct __sanitizer_cookie_io_functions_t
++#if SANITIZER_LINUX || SANITIZER_NETBSD
++extern unsigned struct_arpreq_sz;
++#endif
+ 
+ #if SANITIZER_LINUX
+-  extern unsigned struct_arpreq_sz;
+-  extern unsigned struct_cdrom_msf_sz;
+-  extern unsigned struct_cdrom_multisession_sz;
+-  extern unsigned struct_cdrom_read_audio_sz;
+-  extern unsigned struct_cdrom_subchnl_sz;
+-  extern unsigned struct_cdrom_ti_sz;
+-  extern unsigned struct_cdrom_tocentry_sz;
+-  extern unsigned struct_cdrom_tochdr_sz;
+-  extern unsigned struct_cdrom_volctrl_sz;
+-  extern unsigned struct_ff_effect_sz;
+-  extern unsigned struct_floppy_drive_params_sz;
+-  extern unsigned struct_floppy_drive_struct_sz;
+-  extern unsigned struct_floppy_fdc_state_sz;
+-  extern unsigned struct_floppy_max_errors_sz;
+-  extern unsigned struct_floppy_raw_cmd_sz;
+-  extern unsigned struct_floppy_struct_sz;
+-  extern unsigned struct_floppy_write_errors_sz;
+-  extern unsigned struct_format_descr_sz;
+-  extern unsigned struct_hd_driveid_sz;
+-  extern unsigned struct_hd_geometry_sz;
+-  extern unsigned struct_input_absinfo_sz;
+-  extern unsigned struct_input_id_sz;
+-  extern unsigned struct_mtpos_sz;
+-  extern unsigned struct_termio_sz;
+-  extern unsigned struct_vt_consize_sz;
+-  extern unsigned struct_vt_sizes_sz;
+-  extern unsigned struct_vt_stat_sz;
++extern unsigned struct_cdrom_msf_sz;
++extern unsigned struct_cdrom_multisession_sz;
++extern unsigned struct_cdrom_read_audio_sz;
++extern unsigned struct_cdrom_subchnl_sz;
++extern unsigned struct_cdrom_ti_sz;
++extern unsigned struct_cdrom_tocentry_sz;
++extern unsigned struct_cdrom_tochdr_sz;
++extern unsigned struct_cdrom_volctrl_sz;
++extern unsigned struct_ff_effect_sz;
++extern unsigned struct_floppy_drive_params_sz;
++extern unsigned struct_floppy_drive_struct_sz;
++extern unsigned struct_floppy_fdc_state_sz;
++extern unsigned struct_floppy_max_errors_sz;
++extern unsigned struct_floppy_raw_cmd_sz;
++extern unsigned struct_floppy_struct_sz;
++extern unsigned struct_floppy_write_errors_sz;
++extern unsigned struct_format_descr_sz;
++extern unsigned struct_hd_driveid_sz;
++extern unsigned struct_hd_geometry_sz;
++extern unsigned struct_input_absinfo_sz;
++extern unsigned struct_input_id_sz;
++extern unsigned struct_mtpos_sz;
++extern unsigned struct_termio_sz;
++extern unsigned struct_vt_consize_sz;
++extern unsigned struct_vt_sizes_sz;
++extern unsigned struct_vt_stat_sz;
+ #endif  // SANITIZER_LINUX
+ 
+ #if SANITIZER_LINUX || SANITIZER_FREEBSD
+@@ -1006,6 +1198,9 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned struct_copr_debug_buf_sz;
    extern unsigned struct_copr_msg_sz;
    extern unsigned struct_midi_info_sz;
@@ -554,38 +612,41 @@ $NetBSD$
    extern unsigned struct_mtget_sz;
    extern unsigned struct_mtop_sz;
    extern unsigned struct_rtentry_sz;
-@@ -1013,7 +1205,7 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1013,7 +1208,7 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned struct_seq_event_rec_sz;
    extern unsigned struct_synth_info_sz;
    extern unsigned struct_vt_mode_sz;
 -#endif // SANITIZER_LINUX || SANITIZER_FREEBSD
-+#endif // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
++#endif  // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
  
  #if SANITIZER_LINUX && !SANITIZER_ANDROID
    extern unsigned struct_ax25_parms_struct_sz;
-@@ -1035,10 +1227,10 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1035,10 +1230,12 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned struct_unimapinit_sz;
  #endif  // SANITIZER_LINUX && !SANITIZER_ANDROID
  
 -#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
-+#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && \
++    !SANITIZER_ANDROID
    extern unsigned struct_audio_buf_info_sz;
    extern unsigned struct_ppp_stats_sz;
 -#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
-+#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#endif  // (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) &&
++        // !SANITIZER_ANDROID
  
  #if !SANITIZER_ANDROID && !SANITIZER_MAC
    extern unsigned struct_sioc_sg_req_sz;
-@@ -1095,7 +1287,7 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1095,7 +1292,8 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned IOCTL_TIOCSPGRP;
    extern unsigned IOCTL_TIOCSTI;
    extern unsigned IOCTL_TIOCSWINSZ;
 -#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
-+#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && \
++    !SANITIZER_ANDROID
    extern unsigned IOCTL_SIOCGETSGCNT;
    extern unsigned IOCTL_SIOCGETVIFCNT;
  #endif
-@@ -1258,10 +1450,10 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1258,10 +1456,10 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned IOCTL_VT_RESIZEX;
    extern unsigned IOCTL_VT_SENDSIG;
  #endif  // SANITIZER_LINUX
@@ -594,11 +655,11 @@ $NetBSD$
    extern unsigned IOCTL_MTIOCGET;
    extern unsigned IOCTL_MTIOCTOP;
 -  extern unsigned IOCTL_SIOCADDRT;
-+  extern unsigned IOCTL_SIOCADDRT;//
++  extern unsigned IOCTL_SIOCADDRT;  //
    extern unsigned IOCTL_SIOCDELRT;
    extern unsigned IOCTL_SNDCTL_DSP_GETBLKSIZE;
    extern unsigned IOCTL_SNDCTL_DSP_GETFMTS;
-@@ -1359,7 +1551,7 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1359,7 +1557,7 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned IOCTL_VT_RELDISP;
    extern unsigned IOCTL_VT_SETMODE;
    extern unsigned IOCTL_VT_WAITACTIVE;
@@ -607,12 +668,13 @@ $NetBSD$
  
  #if SANITIZER_LINUX && !SANITIZER_ANDROID
    extern unsigned IOCTL_CYGETDEFTHRESH;
-@@ -1448,21 +1640,27 @@ struct __sanitizer_cookie_io_functions_t
+@@ -1448,21 +1646,28 @@ struct __sanitizer_cookie_io_functions_t
    extern unsigned IOCTL_TIOCSSERIAL;
  #endif  // SANITIZER_LINUX && !SANITIZER_ANDROID
  
 -#if (SANITIZER_LINUX || SANITIZER_FREEBSD) && !SANITIZER_ANDROID
-+#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && !SANITIZER_ANDROID
++#if (SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD) && \
++    !SANITIZER_ANDROID
 +#if !SANITIZER_NETBSD
    extern unsigned IOCTL_GIO_SCRNMAP;
 +#endif

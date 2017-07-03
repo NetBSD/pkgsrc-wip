@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_syscall_generic.inc.orig	2017-07-03 15:33:06.561978756 +0000
+--- lib/sanitizer_common/sanitizer_syscall_generic.inc.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_syscall_generic.inc
 @@ -11,13 +11,37 @@
  //

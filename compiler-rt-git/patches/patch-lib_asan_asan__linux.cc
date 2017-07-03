@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/asan/asan_linux.cc.orig	2017-07-03 15:33:06.521305430 +0000
+--- lib/asan/asan_linux.cc.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/asan/asan_linux.cc
-@@ -13,13 +13,14 @@
+@@ -13,7 +13,7 @@
  //===----------------------------------------------------------------------===//
  
  #include "sanitizer_common/sanitizer_platform.h"
@@ -11,21 +11,22 @@ $NetBSD$
  
  #include "asan_interceptors.h"
  #include "asan_internal.h"
- #include "asan_thread.h"
+@@ -21,6 +21,7 @@
  #include "sanitizer_common/sanitizer_flags.h"
  #include "sanitizer_common/sanitizer_freebsd.h"
-+#include "sanitizer_common/sanitizer_netbsd.h"
  #include "sanitizer_common/sanitizer_libc.h"
++#include "sanitizer_common/sanitizer_netbsd.h"
  #include "sanitizer_common/sanitizer_procmaps.h"
  
+ #include <sys/time.h>
 @@ -42,6 +43,10 @@
  #if SANITIZER_ANDROID || SANITIZER_FREEBSD
  #include <ucontext.h>
  extern "C" void* _DYNAMIC;
 +#elif SANITIZER_NETBSD
++#include <link_elf.h>
 +#include <ucontext.h>
-+#include <link_elf.h>   
-+extern Elf_Dyn  _DYNAMIC;
++extern Elf_Dyn _DYNAMIC;
  #else
  #include <sys/ucontext.h>
  #include <link.h>
@@ -50,4 +51,4 @@ $NetBSD$
  } // namespace __asan
  
 -#endif // SANITIZER_FREEBSD || SANITIZER_LINUX
-+#endif // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
++#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD

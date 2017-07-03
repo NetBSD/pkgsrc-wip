@@ -1,8 +1,8 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_procmaps_netbsd.cc.orig	2017-07-03 15:46:54.034469045 +0000
+--- lib/sanitizer_common/sanitizer_procmaps_netbsd.cc.orig	2017-07-03 18:33:56.810198571 +0000
 +++ lib/sanitizer_common/sanitizer_procmaps_netbsd.cc
-@@ -0,0 +1,79 @@
+@@ -0,0 +1,78 @@
 +//===-- sanitizer_procmaps_freebsd.cc -------------------------------------===//
 +//
 +// This file is distributed under the University of Illinois Open Source
@@ -18,14 +18,14 @@ $NetBSD$
 +#include "sanitizer_common.h"
 +#include "sanitizer_procmaps.h"
 +
-+#include <unistd.h>
 +#include <sys/sysctl.h>
++#include <unistd.h>
 +
 +namespace __sanitizer {
 +
 +void ReadProcMaps(ProcSelfMapsBuff *proc_maps) {
 +  struct kinfo_vmentry *kiv;
-+  const int Mib[] = { CTL_VM, VM_PROC, VM_PROC_MAP, getpid(), sizeof(*kiv) };
++  const int Mib[] = {CTL_VM, VM_PROC, VM_PROC_MAP, getpid(), sizeof(*kiv)};
 +  size_t Size = 0;
 +  int Err = sysctl(Mib, __arraycount(Mib), NULL, &Size, NULL, 0);
 +  CHECK_EQ(Err, 0);
@@ -37,7 +37,7 @@ $NetBSD$
 +  Err = sysctl(Mib, __arraycount(Mib), VmMap, &Size, NULL, 0);
 +  CHECK_EQ(Err, 0);
 +
-+  proc_maps->data = (char*)VmMap;
++  proc_maps->data = (char *)VmMap;
 +  proc_maps->mmaped_size = MmapedSize;
 +  proc_maps->len = Size;
 +}
@@ -54,7 +54,7 @@ $NetBSD$
 +  if (!end) end = &dummy;
 +  if (!offset) offset = &dummy;
 +  if (!protection) protection = &dummy;
-+  struct kinfo_vmentry *VmEntry = (struct kinfo_vmentry*)current_;
++  struct kinfo_vmentry *VmEntry = (struct kinfo_vmentry *)current_;
 +
 +  *start = (uptr)VmEntry->kve_start;
 +  *end = (uptr)VmEntry->kve_end;
@@ -69,9 +69,8 @@ $NetBSD$
 +    *protection |= kProtectionExecute;
 +
 +  if (filename != NULL && filename_size > 0) {
-+    internal_snprintf(filename,
-+                      Min(filename_size, (uptr)PATH_MAX),
-+                      "%s", VmEntry->kve_path);
++    internal_snprintf(filename, Min(filename_size, (uptr)PATH_MAX), "%s",
++                      VmEntry->kve_path);
 +  }
 +
 +  current_ += sizeof(*VmEntry);

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/asan/asan_interceptors.cc.orig	2017-07-03 15:33:06.520942325 +0000
+--- lib/asan/asan_interceptors.cc.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/asan/asan_interceptors.cc
 @@ -424,6 +424,11 @@ INTERCEPTOR(int, swapcontext, struct uco
  }

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_procmaps_common.cc.orig	2017-07-03 15:33:06.559737270 +0000
+--- lib/sanitizer_common/sanitizer_procmaps_common.cc.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_procmaps_common.cc
 @@ -12,7 +12,7 @@
  
@@ -16,4 +16,4 @@ $NetBSD$
  } // namespace __sanitizer
  
 -#endif // SANITIZER_FREEBSD || SANITIZER_LINUX
-+#endif // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
++#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD

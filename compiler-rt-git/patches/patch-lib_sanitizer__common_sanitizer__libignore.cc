@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_libignore.cc.orig	2017-07-03 15:33:06.556851079 +0000
+--- lib/sanitizer_common/sanitizer_libignore.cc.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_libignore.cc
 @@ -9,7 +9,7 @@
  
@@ -16,4 +16,4 @@ $NetBSD$
  } // namespace __sanitizer
  
 -#endif // #if SANITIZER_FREEBSD || SANITIZER_LINUX
-+#endif // #if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
++#endif  // #if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD

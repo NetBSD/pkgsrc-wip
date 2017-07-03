@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_procmaps.h.orig	2017-07-03 15:33:06.559675042 +0000
+--- lib/sanitizer_common/sanitizer_procmaps.h.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_procmaps.h
 @@ -20,7 +20,7 @@
  
@@ -25,7 +25,7 @@ $NetBSD$
    // FIXME: Hide implementation details for different platforms in
    // platform-specific files.
 -# if SANITIZER_FREEBSD || SANITIZER_LINUX
-+# if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
++#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
    ProcSelfMapsBuff proc_self_maps_;
    const char *current_;
  

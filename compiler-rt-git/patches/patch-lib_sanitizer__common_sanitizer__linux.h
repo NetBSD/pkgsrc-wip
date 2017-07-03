@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_linux.h.orig	2017-07-03 15:33:06.557405759 +0000
+--- lib/sanitizer_common/sanitizer_linux.h.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux.h
 @@ -14,7 +14,7 @@
  #define SANITIZER_LINUX_H

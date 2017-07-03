@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/asan/scripts/asan_symbolize.py.orig	2017-07-03 15:33:06.524556193 +0000
+--- lib/asan/scripts/asan_symbolize.py.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/asan/scripts/asan_symbolize.py
 @@ -280,7 +280,7 @@ def BreakpadSymbolizerFactory(binary):
  def SystemSymbolizerFactory(system, addr, binary, arch):

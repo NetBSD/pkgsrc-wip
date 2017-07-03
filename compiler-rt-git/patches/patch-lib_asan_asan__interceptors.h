@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/asan/asan_interceptors.h.orig	2017-07-03 15:33:06.521004205 +0000
+--- lib/asan/asan_interceptors.h.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/asan/asan_interceptors.h
 @@ -34,7 +34,7 @@
  # define ASAN_INTERCEPT_FORK 0
