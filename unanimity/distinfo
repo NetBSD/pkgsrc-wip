@@ -5,3 +5,6 @@ RMD160 (unanimity-2016.09.13-054c59530f7ee7c3ce0adde4524f367e8d0244cd.tar.gz) = 
 SHA512 (unanimity-2016.09.13-054c59530f7ee7c3ce0adde4524f367e8d0244cd.tar.gz) = af65bc699af545141496e996900d7fae8a65b1060907fc0c1070109c46eca2fbf787ea085905e7344ebf0f2a3fde7de9901a8dd0796eb3ecd01f03e06c8b15f9
 Size (unanimity-2016.09.13-054c59530f7ee7c3ce0adde4524f367e8d0244cd.tar.gz) = 5423410 bytes
 SHA1 (patch-cmake_uny-gitsha1.cmake) = 0323b8dda91693bd02af715efe9b4f6bc2837263
+SHA1 (patch-src_align_AffineAlignment.cpp) = 019c0029b9fdacdbb72b4e7c8c1d861be7904a9f
+SHA1 (patch-src_align_LinearAlignment.cpp) = 568aaded0adbf7d36df9ee4ec07c725b3b764d0e
+SHA1 (patch-src_align_PairwiseAlignment.cpp) = 8a1809e9942fffa2d77ef28cfc97b804dc13f9a3
