@@ -1,10 +1,10 @@
 # $NetBSD$
-VERSION=	1.2.11
+VERSION=	1.2.11n
 PKGNAME=	libevhtp-${VERSION}
 CATEGORIES=	www
 GITHUB_TAG=	${VERSION}
 DISTNAME=	${GITHUB_TAG}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ellzey/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=criticalstack/}
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	https://github.com/ellzey/libevhtp
