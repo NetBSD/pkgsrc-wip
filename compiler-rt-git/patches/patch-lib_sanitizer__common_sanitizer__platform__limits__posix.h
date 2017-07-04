@@ -489,7 +489,7 @@ $NetBSD$
 +    } _bf;
 +    int _lbfsize;
 +    void *_cookie;
-+    int (*_close)(void *);
++    int (*_close)(void *ptr);
 +    u64 (*_read)(void *, void *, uptr);
 +    u64 (*_seek)(void *, u64, int);
 +    uptr (*_write)(void *, const void *, uptr);
@@ -501,7 +501,7 @@ $NetBSD$
 +    int _ur;
 +    unsigned char _ubuf[3];
 +    unsigned char _nbuf[1];
-+    int (*_flush)(void *);
++    int (*_flush)(void *ptr);
 +    char _lb_unused[sizeof(uptr)];
 +    int _blksize;
 +    u64 _offset;

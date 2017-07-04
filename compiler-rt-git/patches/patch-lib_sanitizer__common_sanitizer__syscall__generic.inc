@@ -38,7 +38,7 @@ $NetBSD$
 +# else
 +#  define internal_syscall_ptr  syscall
 +# endif
-+#elif (SANITIZER_FREEBSD || SANITIZER_MAC) && defined(__x86_64__)
++#elif defined(__x86_64__) && (SANITIZER_FREEBSD || SANITIZER_MAC)
  # define internal_syscall __syscall
  # else
  # define internal_syscall syscall

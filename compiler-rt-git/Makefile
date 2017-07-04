@@ -38,6 +38,7 @@ post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
 .include "../../wip/mk/git-package.mk"
+.include "../../devel/googletest/buildlink3.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm-git
 .include "../../wip/llvm-git/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
