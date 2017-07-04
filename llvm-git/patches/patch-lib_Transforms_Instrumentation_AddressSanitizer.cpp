@@ -1,12 +1,12 @@
 $NetBSD$
 
---- lib/Transforms/Instrumentation/AddressSanitizer.cpp.orig	2017-05-24 03:56:48.000000000 +0000
+--- lib/Transforms/Instrumentation/AddressSanitizer.cpp.orig	2017-07-04 15:51:35.232369546 +0000
 +++ lib/Transforms/Instrumentation/AddressSanitizer.cpp
 @@ -80,6 +80,7 @@ static const uint64_t kMIPS64_ShadowOffs
  static const uint64_t kAArch64_ShadowOffset64 = 1ULL << 36;
  static const uint64_t kFreeBSD_ShadowOffset32 = 1ULL << 30;
  static const uint64_t kFreeBSD_ShadowOffset64 = 1ULL << 46;
-+static const uint64_t kNetBSD_ShadowOffset64 = 1ULL << 40;
++static const uint64_t kNetBSD_ShadowOffset64 = 1ULL << 46;
  static const uint64_t kPS4CPU_ShadowOffset64 = 1ULL << 40;
  static const uint64_t kWindowsShadowOffset32 = 3ULL << 28;
  // The shadow memory space is dynamically allocated.
