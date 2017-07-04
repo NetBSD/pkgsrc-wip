@@ -2615,6 +2615,7 @@ SUBDIR+=	peercoin
 SUBDIR+=	pentagram
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
+SUBDIR+=	pev
 SUBDIR+=	pgp6
 SUBDIR+=	pgplot
 SUBDIR+=	pgstudio

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (pev-0.80.tar.gz) = 18dcb65269344b5047504cca8598477b33532bab
+RMD160 (pev-0.80.tar.gz) = 01ed4fa37c5349397dbd8aa3b592b9657e63acf8
+SHA512 (pev-0.80.tar.gz) = d0c8ff8fcd60470899d5dbccfd7a7e4d960da007f42be9c7eab6b22a3d7cf4dde3c3d5cd9c7d70e369164503fb124640cf508ceda3d4792244cf33d11ab83321
+Size (pev-0.80.tar.gz) = 921102 bytes
+SHA1 (patch-src_plugins.c) = 15a776eb72335f2dc3a0ff28eeb4b0d48fbf3af4
