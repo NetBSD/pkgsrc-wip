@@ -17,6 +17,7 @@ SHA1 (patch-lib_asan_asan__interceptors.cc) = 9786a54c62e081c7194efa26139f8539ad
 SHA1 (patch-lib_asan_asan__interceptors.h) = 520419376759f2991c6f74f4c2a5ef62851d7838
 SHA1 (patch-lib_asan_asan__linux.cc) = 31dd5c3978d64ccc28c8af037a967c2360d71cff
 SHA1 (patch-lib_asan_asan__malloc__linux.cc) = 8125ba85983cab81779a2ebe0849ba3e65040eb4
+SHA1 (patch-lib_asan_asan__mapping.h) = 73f5f33e946868b4780864e633916376b11b16f1
 SHA1 (patch-lib_asan_asan__stack.h) = 58aa9e67cf2a92863fd3bd545074dff136bed7c5
 SHA1 (patch-lib_asan_scripts_asan__symbolize.py) = 95024c8d49fdcbdbf5ccc9013e54ad9b3f469e14
 SHA1 (patch-lib_interception_interception.h) = e6826deb85420ac5c7d9594d5d4364767d22389f
