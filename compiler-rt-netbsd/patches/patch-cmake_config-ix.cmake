@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/config-ix.cmake.orig	2017-06-19 18:04:05.000000000 +0000
+--- cmake/config-ix.cmake.orig	2017-07-04 05:53:17.000000000 +0000
 +++ cmake/config-ix.cmake
 @@ -441,7 +441,7 @@ set(COMPILER_RT_SANITIZERS_TO_BUILD ${AL
  list_replace(COMPILER_RT_SANITIZERS_TO_BUILD all "${ALL_SANITIZERS}")
@@ -20,15 +20,7 @@ $NetBSD$
    set(COMPILER_RT_ASAN_HAS_STATIC_RUNTIME TRUE)
  else()
    set(COMPILER_RT_ASAN_HAS_STATIC_RUNTIME FALSE)
-@@ -476,42 +476,42 @@ else()
- endif()
- 
- if (COMPILER_RT_HAS_SANITIZER_COMMON AND LSAN_SUPPORTED_ARCH AND
--    OS_NAME MATCHES "Darwin|Linux|FreeBSD")
-+    OS_NAME MATCHES "Darwin|Linux|FreeBSD|NetBSD")
-   set(COMPILER_RT_HAS_LSAN TRUE)
- else()
-   set(COMPILER_RT_HAS_LSAN FALSE)
+@@ -483,35 +483,35 @@ else()
  endif()
  
  if (COMPILER_RT_HAS_SANITIZER_COMMON AND MSAN_SUPPORTED_ARCH AND
