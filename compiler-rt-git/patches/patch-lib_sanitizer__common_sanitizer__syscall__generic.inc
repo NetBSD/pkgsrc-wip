@@ -31,7 +31,7 @@ $NetBSD$
 +//   - internal_syscall     for 32-bit length (int, pid_t)
 +//   - internal_syscall64   for 64-bit length (off_t)
 +//   - internal_syscall_ptr for pointer and (s)size_t
-+# define  internal_syscall      syscall                                                                                               
++# define  internal_syscall      syscall
 +# define  internal_syscall64    __syscall
 +# if SANITIZER_WORDSIZE == 64
 +#  define internal_syscall_ptr  __syscall

@@ -39,5 +39,5 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__posix.cc) = a561675ba1a7ef3b71d5c0a
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps.h) = 2bc9a7c32f0a7d18fe4d0d465b9b42547abbd989
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__common.cc) = 5a407e496f92dfd2dd78a3b2582d7c695e2547fb
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__netbsd.cc) = 83f8088cb990ebc5a85e319f1d4990d04196d67a
-SHA1 (patch-lib_sanitizer__common_sanitizer__syscall__generic.inc) = 34bf19462835dd65d33dec1224fde9c61aa94cff
+SHA1 (patch-lib_sanitizer__common_sanitizer__syscall__generic.inc) = 16756d53b0df8d5fa3fc5a10ca02b0be2664628b
 SHA1 (patch-lib_sanitizer__common_sanitizer__unwind__linux__libcdep.cc) = cf7e016fff0f57e7bcae93696ec05e5cff7b7093
