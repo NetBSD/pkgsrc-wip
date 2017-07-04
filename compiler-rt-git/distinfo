@@ -34,6 +34,7 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__platform.h) = ffb31dccce9824c81f368
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = b985ae53dafddfc5b4112eae65cab49176fc1989
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = 216496ec38f40a1c1d6905e006039860c4c1d48d
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.h) = e08fe4e4ec66fa79c803b9c64014b921b37c01df
+SHA1 (patch-lib_sanitizer__common_sanitizer__posix.cc) = a561675ba1a7ef3b71d5c0af6521fb6a0f91f205
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps.h) = 2bc9a7c32f0a7d18fe4d0d465b9b42547abbd989
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__common.cc) = 5a407e496f92dfd2dd78a3b2582d7c695e2547fb
 SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__netbsd.cc) = 83f8088cb990ebc5a85e319f1d4990d04196d67a
