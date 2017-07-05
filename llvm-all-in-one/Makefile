@@ -150,12 +150,21 @@ post-extract:
 	${RUN} ln -sf ${WRKDIR}/openmp ${WRKDIR}/llvm/projects/openmp
 	${RUN} ln -sf ${WRKDIR}/libcxx ${WRKDIR}/llvm/projects/libcxx
 	${RUN} ln -sf ${WRKDIR}/clang ${WRKDIR}/llvm/tools/clang
-	${RUN} ln -sf ${WRKDIR}/llgo ${WRKDIR}/llvm/tools/llgo
+# Currently errors for missing includes (wrong setup?)
+#	${RUN} ln -sf ${WRKDIR}/llgo ${WRKDIR}/llvm/tools/llgo
 	${RUN} ln -sf ${WRKDIR}/lld ${WRKDIR}/llvm/tools/lld
 	${RUN} ln -sf ${WRKDIR}/lldb ${WRKDIR}/llvm/tools/lldb
-	${RUN} ln -sf ${WRKDIR}/clang-tools-extra ${WRKDIR}/llvm/tools/extra
+# Currently broken in this setup too - missing includes
+#	${RUN} ln -sf ${WRKDIR}/clang-tools-extra ${WRKDIR}/llvm/tools/extra
+# Missing X flag?
+#	${RUN} chmod +x ${WRKDIR}/llgo/third_party/gofrontend/install-sh
 
 .include "../../wip/mk/svn-package.mk"
+.include "../../devel/libatomic_ops/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
