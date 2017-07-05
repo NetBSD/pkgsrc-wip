@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-pandas>=0.18.1:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-dask>=0.11.0:../../wip/py-dask
 DEPENDS+=	${PYPKGPREFIX}-gatspy>=0.3:../../wip/py-gatspy
-DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.18.0:../../wip/py-scikit-learn
+DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.18.0:../../math/py-scikit-learn
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.7.1:../../wip/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-xarray>=0.8.2:../../wip/py-xarray
 

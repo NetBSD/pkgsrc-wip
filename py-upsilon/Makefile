@@ -11,7 +11,7 @@ COMMENT=	Automated Classification of Periodic Variable Stars
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.17:../../wip/py-scikit-learn
+DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.17:../../math/py-scikit-learn
 
 USE_LANGUAGES=	# none
 

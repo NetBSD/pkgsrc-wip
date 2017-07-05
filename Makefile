@@ -3563,7 +3563,6 @@ SUBDIR+=	py-scalpy
 SUBDIR+=	py-scanless
 SUBDIR+=	py-scikit-aero
 SUBDIR+=	py-scikit-image
-SUBDIR+=	py-scikit-learn
 SUBDIR+=	py-scikit-monaco
 SUBDIR+=	py-scikit-nano
 SUBDIR+=	py-scikits-bvp_solver
