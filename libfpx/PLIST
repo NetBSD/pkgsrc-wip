@@ -1,4 +1,8 @@
 @comment $NetBSD$
 include/fpxlib.h
 lib/libfpx.la
+share/doc/libfpx/AUTHORS
+share/doc/libfpx/ChangeLog
+share/doc/libfpx/README
 share/doc/libfpx/copyright-notice
+share/doc/libfpx/readme.txt
