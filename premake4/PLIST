@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/04 16:23:02 nros Exp $
+@comment $NetBSD$
 bin/premake4
+share/doc/premake4/license.lua
+share/doc/premake4/license.premake4
