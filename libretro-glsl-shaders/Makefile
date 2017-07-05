@@ -10,6 +10,7 @@ COMMENT=	Libretro GLSL shaders
 GITHUB_PROJECT=	glsl-shaders
 GITHUB_TAG=	7816a476c2189f9c316e031e3b67965fae6aea93
 
+EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 

@@ -8,6 +8,7 @@ COMMENT=		Assets for RetroArch
 
 GITHUB_TAG=		92c58f06ce92e5bb5df17b1dc8ab4844eb839fd5
 
+EXTRACT_USING=		bsdtar
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
 
