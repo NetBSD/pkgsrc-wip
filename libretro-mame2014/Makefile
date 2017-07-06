@@ -16,6 +16,8 @@ USE_TOOLS=	gmake
 
 USE_LANGUAGES=	c c++
 
+PYTHON_VERSIONS_ACCEPTED=	27
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
