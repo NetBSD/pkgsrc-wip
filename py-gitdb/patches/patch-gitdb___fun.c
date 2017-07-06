@@ -2,6 +2,7 @@ $NetBSD$
 
 PyMODINIT_FUNC usually is a "PyObject*" and clang does not like
 functions of that type returning nothing.
+https://github.com/gitpython-developers/gitdb/issues/40
 
 --- gitdb/_fun.c.orig	2014-05-04 19:42:31.000000000 +0000
 +++ gitdb/_fun.c
