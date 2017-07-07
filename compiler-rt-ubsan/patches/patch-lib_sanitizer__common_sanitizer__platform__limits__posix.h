@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2017-07-03 15:33:06.000000000 +0000
+--- lib/sanitizer_common/sanitizer_platform_limits_posix.h.orig	2017-07-07 07:44:02.474288555 +0000
 +++ lib/sanitizer_common/sanitizer_platform_limits_posix.h
 @@ -18,18 +18,31 @@
  #include "sanitizer_internal_defs.h"
@@ -696,5 +696,5 @@ $NetBSD$
  #endif
 +#endif
  
-   extern const int errno_EINVAL;
-   extern const int errno_EOWNERDEAD;
+   extern const int si_SEGV_MAPERR;
+   extern const int si_SEGV_ACCERR;

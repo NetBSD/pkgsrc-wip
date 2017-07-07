@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/sanitizer_common/sanitizer_netbsd.h.orig	2017-07-03 18:33:56.808690628 +0000
+--- lib/sanitizer_common/sanitizer_netbsd.h.orig	2017-07-07 07:50:25.380441934 +0000
 +++ lib/sanitizer_common/sanitizer_netbsd.h
 @@ -0,0 +1,20 @@
 +//===-- sanitizer_freebsd.h -------------------------------------*- C++ -*-===//

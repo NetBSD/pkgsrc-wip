@@ -5,7 +5,7 @@ CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	compiler-rt
 GIT_REPO.compiler-rt=	https://github.com/llvm-mirror/compiler-rt.git
-GIT_REVISION.compiler-rt=	6ee59ff2a0b91f2224d38adb3fdb2dd5aefc107b
+GIT_REVISION.compiler-rt=	9e2c69ffc25e56881e2a4805ac765110dec265dc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiler-rt.llvm.org/
