@@ -117,7 +117,7 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 # Not complete, not everything works
 .for _test_ in check-llvm check-clang check-lldb check-compiler-rt check-lld check-libcxx check-unwind check-polly check-libomptarget
-${_test_}:
+${_test_}: build
 	${RUN}${_ULIMIT_CMD} cd ${TEST_DIRS} && ${TEST_MAKE_CMD} ${_test_}
 .endfor
 
