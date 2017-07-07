@@ -11,3 +11,5 @@ $Id: TODO,v 1.9 2014/10/02 09:31:55 thomasklausner Exp $
     http://wiki.swftools.org/viewgit/?a=commitdiff&p=swftools-git%20&h=9dff415641fd3de8e8c4cfd572db43c087eb99a7
     (gfximage_rescale)
   I'm not sure whether it is consciously or not.
+* This package has known vulnerabilities, please investigate and fix if possible:
+    CVE-2017-10976
