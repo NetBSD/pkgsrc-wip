@@ -33,3 +33,5 @@ SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__netbsd.cc) = 67e12a7c98a5
 SHA1 (patch-lib_sanitizer__common_sanitizer__syscall__generic.inc) = b9ab90fafcb14d589e02a2062fe7e978d6b7edbb
 SHA1 (patch-lib_sanitizer__common_sanitizer__unwind__linux__libcdep.cc) = cf7e016fff0f57e7bcae93696ec05e5cff7b7093
 SHA1 (patch-lib_ubsan_ubsan__platform.h) = 5714b6b7cde91828375ad25fee1c8b9a8e9a200d
+SHA1 (patch-test_ubsan_TestCases_Float_cast-overflow.cpp) = f5cce8ef94b37a27610aa952d5ddc97b5638f7f4
+SHA1 (patch-test_ubsan_lit.common.cfg) = 65e809e0683c4197edbc8ea8d869bbfca6e46f57
