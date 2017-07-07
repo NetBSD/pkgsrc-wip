@@ -1,0 +1,34 @@
+$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
+
+SHA1 (cfe-3.6.2.src.tar.xz) = 7ba809c9c17819a16b668640a642ed134d7052f0
+RMD160 (cfe-3.6.2.src.tar.xz) = 10d913b4d5317f8c2520e5fc6117df30937317a8
+Size (cfe-3.6.2.src.tar.xz) = 8617576 bytes
+SHA1 (compiler-rt-3.6.2.src.tar.xz) = c6c52d2923a60f1a2ca2f22fea1770fd2e25728d
+RMD160 (compiler-rt-3.6.2.src.tar.xz) = 9b68a32d49d4bef4603d550934192f39fea42895
+Size (compiler-rt-3.6.2.src.tar.xz) = 1128080 bytes
+SHA1 (libcxx-3.6.2.src.tar.xz) = 6c5aee9f05ecf17d1e3ecb1add34a33a5a904469
+RMD160 (libcxx-3.6.2.src.tar.xz) = 42b8832d01d4e6b553babc93cb5dbd4ce2bb1931
+Size (libcxx-3.6.2.src.tar.xz) = 944020 bytes
+SHA1 (llvm-3.6.2.src.tar.xz) = 7a00257eb2bc9431e4c77c3a36b033072c54bc7e
+RMD160 (llvm-3.6.2.src.tar.xz) = 521cbc5fe2925ea3c6e90c7a31f752a04045c972
+Size (llvm-3.6.2.src.tar.xz) = 12802380 bytes
+SHA1 (patch-cmake_config-ix.cmake) = d0b0de34e0e4ff5feb262dac19a78082e0afc921
+SHA1 (patch-lib_interception_interception.h) = e6826deb85420ac5c7d9594d5d4364767d22389f
+SHA1 (patch-lib_interception_interception__linux.cc) = 9748f01fb3621c51197a435422e658b9f694dc01
+SHA1 (patch-lib_interception_interception__linux.h) = 8ab24466d85d19d0c5dd35c5867a7cc958009143
+SHA1 (patch-lib_sanitizer__common_CMakeLists.txt) = 2ffbb5737ae8cfb230e12eed87e38c209311168e
+SHA1 (patch-lib_sanitizer__common_sanitizer__internal__defs.h) = 3e2f5c06d54209d981835d11e272f7cff9086ffb
+SHA1 (patch-lib_sanitizer__common_sanitizer__libignore.cc) = 57eb2b213bd0eb664524aa0e047d5e73d4956ad2
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cc) = 1a158f3d3d20f3f59a8cbb62790dec58c24ed902
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux.h) = bdec0460d99a5f05b6e54d075032ead845a1c984
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cc) = b9bf8727fe9bf471e749c2176829f7b9a74c2be9
+SHA1 (patch-lib_sanitizer__common_sanitizer__netbsd.h) = 851d900d3edad48af9e325945830022f7f346438
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform.h) = ffb31dccce9824c81f3686de47c4b1e79bda3e1e
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__interceptors.h) = b985ae53dafddfc5b4112eae65cab49176fc1989
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.cc) = 9093a94b1ebc727c83cc169edc1bf6996e05dc17
+SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__posix.h) = 78f0ee62291b5f43ca68da577017e3aef7d83f7a
+SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps.h) = 2bc9a7c32f0a7d18fe4d0d465b9b42547abbd989
+SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__common.cc) = 5a407e496f92dfd2dd78a3b2582d7c695e2547fb
+SHA1 (patch-lib_sanitizer__common_sanitizer__procmaps__netbsd.cc) = 67e12a7c98a520f9fca9c6970a1e009d726aa5d6
+SHA1 (patch-lib_sanitizer__common_sanitizer__syscall__generic.inc) = b9ab90fafcb14d589e02a2062fe7e978d6b7edbb
+SHA1 (patch-lib_sanitizer__common_sanitizer__unwind__linux__libcdep.cc) = cf7e016fff0f57e7bcae93696ec05e5cff7b7093
