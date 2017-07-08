@@ -2,7 +2,7 @@ $NetBSD$
 
 --- lib/sanitizer_common/sanitizer_syscall_generic.inc.orig	2017-07-03 15:33:06.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_syscall_generic.inc
-@@ -11,13 +11,37 @@
+@@ -11,13 +11,38 @@
  //
  //===----------------------------------------------------------------------===//
  
@@ -18,6 +18,7 @@ $NetBSD$
 +# define SYS_sigprocmask SYS___sigprocmask14
 +# define SYS_nanosleep SYS___nanosleep50
 +#endif
++
 +#if SANITIZER_FREEBSD || SANITIZER_MAC || SANITIZER_NETBSD
  # define SYSCALL(name) SYS_ ## name
  #else
