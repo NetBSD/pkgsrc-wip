@@ -8,5 +8,5 @@ share/doc/naev/README
 share/doc/naev/TODO
 share/appdata/naev.appdata.xml
 share/naev/naev-confupdate.sh
-share/${PKGNAME}/ndata-${PKGVERSION}.zip
+share/naev/ndata
 share/pixmaps/naev.png
