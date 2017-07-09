@@ -113,7 +113,28 @@ CMAKE_ARGS+=	-DLIBCXX_INCLUDE_TESTS=ON
 
 CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 
+.include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang)
+# command to check if clang is using libc++ or libstdc++
+LIBCPP_CHECK_SH=	printf "\#include <ciso646>\n\#ifdef _LIBCPP_VERSION\nYES\n\#endif" | ${CLANGBASE}/bin/clang++ -x c++ -E - 2>&1 | grep YES || true
+.else
+LIBCPP_CHECK_SH=	echo NO
+.endif
+
+# patch NetBSD::GetCXXStdlibType
+.if ${OPSYS} == "NetBSD" && empty(LIBCPP_CHECK_SH:sh:MYES)
+SUBST_CLASSES+=			libcxx
+SUBST_STAGE.libcxx=		pre-configure
+SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ (matching the host compiler)
+SUBST_FILES.libcxx+=		${WRKDIR}/clang/lib/Driver/ToolChains/NetBSD.cpp
+SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
+
+CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
+.endif
+
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+TEST_ENV+=		VERBOSE=1
 
 # Not complete, not everything works
 .for _test_ in check-llvm check-clang check-lldb check-compiler-rt check-lld check-libcxx check-unwind check-polly check-libomptarget check-sanitizer
