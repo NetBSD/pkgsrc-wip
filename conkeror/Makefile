@@ -2,7 +2,7 @@
 
 PKGNAME=	conkeror-1.0.3
 DISTNAME=	11121bed996ce84e3536c3c8266cdf3164e02b5a
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://repo.or.cz/conkeror.git/snapshot/
 DIST_SUBDIR=	conkeror
@@ -14,7 +14,7 @@ LICENSE=	mpl-1.1
 
 WRKSRC=	${WRKDIR}/conkeror-11121be
 
-DEPENDS+=	firefox-[0-9]*:../../www/firefox
+DEPENDS+=	firefox45-[0-9]*:../../www/firefox45
 
 INSTALL_MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
